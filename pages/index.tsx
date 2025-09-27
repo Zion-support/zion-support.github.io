@@ -112,29 +112,30 @@ export default function Home(): JSX.Element {
 		delay: 0.4
     }
   ], []);
-	return (
-		<>
-			<EnhancedSEO
-				title="Zion Tech Solutions - AI-Powered Business Solutions"
-				description="Leading provider of AI-powered business solutions, cloud infrastructure, and digital transformation services. Transform your business with cutting-edge technology."
-				keywords={[
-					'AI solutions',
-					'cloud infrastructure', 
-					'digital transformation',
-					'business automation',
-					'technology consulting',
-					'machine learning',
-					'artificial intelligence',
-					'cloud computing',
-					'enterprise solutions'
-				]}
-			/>
-			<div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
+  
+  return (
+    <>
+      <EnhancedSEO
+        title="Zion Tech Solutions - AI-Powered Business Solutions"
+        description="Leading provider of AI-powered business solutions, cloud infrastructure, and digital transformation services. Transform your business with cutting-edge technology."
+        keywords={[
+          'AI solutions',
+          'cloud infrastructure', 
+          'digital transformation',
+          'business automation',
+          'technology consulting',
+          'machine learning',
+          'artificial intelligence',
+          'cloud computing',
+          'enterprise solutions'
+        ]}
+      />
+      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
         
         {/* Hero Section */}
         <section 
           ref={heroRef}
-          className="relative py-20 px-4 sm: px-6, lg:px-8 min-h-screen flex items-center"
+          className="relative py-20 px-4 sm:px-6 lg:px-8 min-h-screen flex items-center"
         >
           {/* Animated background elements */}
           <motion.div 

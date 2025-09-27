@@ -1,14 +1,14 @@
 import Head from "next/head";
 import Link from "next/link";
 
-export default function Custom404() {return (
+export default function Custom404() {
+  return (
     <>
-      
       <Head>
-        <title>404 - PageNotFound | ZionApp</title>
-        <metaname="description" content="Thepageyou"relookingfor doesn"texist." />
-			</Head>
-			<divstyle={{ 
+        <title>404 - Page Not Found | ZionApp</title>
+        <meta name="description" content="The page you're looking for doesn't exist." />
+      </Head>
+      <div style={{ 
         display: "flex",
         flexDirection: "column",
         alignItems: "center",

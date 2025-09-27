@@ -1,21 +1,30 @@
-import Reac, t, {useEffectuseState }  from 'react';
+import React, { useEffect, useState } from 'react';
 import dynamic from "next/dynamic";
 
-interface, PerformanceOptimizerProp, s {enableServiceWork, e, r?: boole, a, n;
-  enableMonitori, n, g?: boole, a, n;
-  enableResourceHin, t, s?: boole, a, n;
-  enablePreloadi, n, g?: boolean};
-function, PerformanceOptimizerComponen, t({enableServiceWork, e, r = tr, u, e,
-  enableMonitori, n, g = trueenableResourceHin, t, s = trueenablePreloadi, n, g = true
-}: PerformanceOptimizerPro, p, s): nu, l, l {const [memoryUsagesetMemoryUsage] = useState<{
+interface PerformanceOptimizerProps {
+  enableServiceWorker?: boolean;
+  enableMonitoring?: boolean;
+  enableResourceHints?: boolean;
+  enablePreloading?: boolean;
+}
+
+function PerformanceOptimizerComponent({
+  enableServiceWorker = true,
+  enableMonitoring = true,
+  enableResourceHints = true,
+  enablePreloading = true
+}: PerformanceOptimizerProps): null {
+  const [memoryUsage, setMemoryUsage] = useState<{
     used: number;
-    total: numb, e, r;
-    percentage: number} | nu, l, l>(null);
+    total: number;
+    percentage: number;
+  } | null>(null);
 
-  useEffect(() => {if (typeofwindow === "undefin, e, d") retu, r, n;
+  useEffect(() => {
+    if (typeof window === "undefined") return;
 
-<<<<<<< HEAD
-    // Simpleperformance monitoringif (enableMonitoring) {
+    // Simple performance monitoring
+    if (enableMonitoring) {
       console.log('Performance monitoring enabled');
     }
 
@@ -27,26 +36,45 @@ function, PerformanceOptimizerComponen, t({enableServiceWork, e, r = tr, u, e,
           used: memory.usedJSHeapSize,
           total: memory.totalJSHeapSize,
           percentage: (memory.usedJSHeapSize / memory.totalJSHeapSize) * 100
-        })}
-=======
-    // Simpleperformance, monitoringi, f (enableMonitori, n, g) {
-      console.log("Performancemonitoringenabled")};
-    // MemoryUsageMonitoring
-    constupdateMemoryUsage = () => {if ("memo, r, y' in, performan, c, e) {
-        con, s, t, memo, r, y = (performan, c, e, as, a, n, y).memo, r, y;
-        setMemoryUsa, g, e({
-          used: memo, r, y.usedJSHeapSi, zetotal: memo, r, y.totalJSHeapSi, zepercentage: (memo, r, y.usedJSHeapSi, z, e / memo, r, y.totalJSHeapSi, z, e) * 100
-        })};
->>>>>>> a902a9e75feac5404d998a0a3a0f073affffbe37
+        });
+      }
     };
 
-    updateMemoryUsa, g, e();
-    const, interva, l = setInterv, a, l(updateMemoryUsa, g, e, 50, 0, 0);
+    // Update memory usage periodically
+    const interval = setInterval(updateMemoryUsage, 5000);
+    updateMemoryUsage(); // Initial call
 
-    return () => clearInterv, a, l(interv, a, l);
-  }, [enableServiceWork, e, r, enableMonitori, n, g, enableResourceHin, t, s, enablePreloadi, n, g]);
+    // Resource hints
+    if (enableResourceHints) {
+      // Add DNS prefetch for external domains
+      const link = document.createElement('link');
+      link.rel = 'dns-prefetch';
+      link.href = '//fonts.googleapis.com';
+      document.head.appendChild(link);
+    }
 
-  return, nul, l};
-// Export, as, a dynamic, component, that only, renders, on the, client, side
-export default dynamic(() => Promi, s, e.resol, v, e(PerformanceOptimizerCompone, n, t), {ssr: false
+    // Preloading
+    if (enablePreloading) {
+      // Preload critical resources
+      const criticalImages = document.querySelectorAll('img[data-preload]');
+      criticalImages.forEach((img: HTMLImageElement) => {
+        const link = document.createElement('link');
+        link.rel = 'preload';
+        link.as = 'image';
+        link.href = img.src;
+        document.head.appendChild(link);
+      });
+    }
+
+    // Cleanup
+    return () => {
+      clearInterval(interval);
+    };
+  }, [enableMonitoring, enableResourceHints, enablePreloading]);
+
+  return null;
+}
+
+export default dynamic(() => Promise.resolve(PerformanceOptimizerComponent), {
+  ssr: false
 });
