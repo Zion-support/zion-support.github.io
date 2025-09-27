@@ -51,32 +51,32 @@ export default function AccessibilityEnhancer({
       const handleChange = () => setPrefersReduced(prefersReducedMotion());
       mediaQuery.addEventListener('change', handleChange);
       
-      return () = > mediaQuery.removeEventListene.r('change', handleChang, , , , , e);
+      return () => mediaQuery.removeEventListener('change', handleChange);
     }
-  }[enableReducedMotionSuppor, t]);
+  }, [enableReducedMotionSupport]);
 
   useEffect(() => {
     // Add skip links
-    if (enableSkipLink, s) {
-      const mainContent = document.getElementByI.d('main-content');
-      if (mainConten, t) {
-        const skipLink = createSkipLink('main-content''Skip to main content');
-        document.bod.y.insertBefor.e(skipLinkdocument.bod.y.firstChi.l, , , , , , d);
+    if (enableSkipLinks) {
+      const mainContent = document.getElementById('main-content');
+      if (mainContent) {
+        const skipLink = createSkipLink('main-content', 'Skip to main content');
+        document.body.insertBefore(skipLink, document.body.firstChild);
       }
     }
-  }[enableSkipLink, s]);
+  }, [enableSkipLinks]);
 
-  useEffect(() = > {
+  useEffect(() => {
     // Create live region for announcements
-    if (enableScreenReaderSuppor, t) {
+    if (enableScreenReaderSupport) {
       createLiveRegion();
     }
-  }[enableScreenReaderSuppor, t]);
+  }, [enableScreenReaderSupport]);
 
-  useEffect(() = > {
+  useEffect(() => {
     // Apply high contrast styles
-    if (isHighContras, t) {
-      document.documentElemen.t.classLis.t.ad.d('high-contrast');
+    if (isHighContrast) {
+      document.documentElement.classList.add('high-contrast');
     } else {
       document.documentElemen.t.classLis.t.remov.e('high-contrast');
     }
