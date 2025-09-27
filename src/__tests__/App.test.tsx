@@ -1,7 +1,8 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { render, screen, waitFor } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import App from '../App';
+import { Layout } from '../router';
 
 // Mock the lazy-loaded components
 jest.mock('../pages/Home', () => {
@@ -65,6 +66,15 @@ jest.mock('../components/PerformanceProfiler', () => {
   };
 });
 
+// Import the components we need to test
+import Home from '../pages/Home';
+import Blog from '../pages/Blog';
+import Contact from '../pages/Contact';
+import About from '../pages/About';
+import Services from '../pages/Services';
+import Portfolio from '../pages/Portfolio';
+import NotFound from '../pages/NotFound';
+
 // Mock the router to use MemoryRouter for tests
 jest.mock('../router', () => {
   const React = require('react');
@@ -107,6 +117,69 @@ describe('App', () => {
     renderWithRouter(<App />);
     // Just test that the app renders without throwing
     expect(document.body).toBeInTheDocument();
+  });
+
+  test('renders home page correctly', () => {
+    render(
+      <Layout>
+        <Home />
+      </Layout>
+    );
+    expect(screen.getByTestId('home-page')).toBeInTheDocument();
+  });
+
+  test('renders blog page correctly', () => {
+    render(
+      <Layout>
+        <Blog />
+      </Layout>
+    );
+    expect(screen.getByTestId('blog-page')).toBeInTheDocument();
+  });
+
+  test('renders contact page correctly', () => {
+    render(
+      <Layout>
+        <Contact />
+      </Layout>
+    );
+    expect(screen.getByTestId('contact-page')).toBeInTheDocument();
+  });
+
+  test('renders about page correctly', () => {
+    render(
+      <Layout>
+        <About />
+      </Layout>
+    );
+    expect(screen.getByTestId('about-page')).toBeInTheDocument();
+  });
+
+  test('renders services page correctly', () => {
+    render(
+      <Layout>
+        <Services />
+      </Layout>
+    );
+    expect(screen.getByTestId('services-page')).toBeInTheDocument();
+  });
+
+  test('renders portfolio page correctly', () => {
+    render(
+      <Layout>
+        <Portfolio />
+      </Layout>
+    );
+    expect(screen.getByTestId('portfolio-page')).toBeInTheDocument();
+  });
+
+  test('renders not found page correctly', () => {
+    render(
+      <Layout>
+        <NotFound />
+      </Layout>
+    );
+    expect(screen.getByTestId('not-found-page')).toBeInTheDocument();
   });
 
   test('has skip link for accessibility', () => {

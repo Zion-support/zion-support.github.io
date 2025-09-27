@@ -192,12 +192,6 @@ export class ResourcePreloader {
   }
 }
 
-interface MetricSummary {
-  count: number;
-  total: number;
-  avg: number;
-}
-
 // Performance Metrics Collector
 export class PerformanceMetricsCollector {
   private static instance: PerformanceMetricsCollector;
@@ -267,10 +261,11 @@ export class PerformanceMetricsCollector {
       this.customMetrics.set(categoryKey, { count: 0, total: 0 });
     }
     
-    const summary = this.customMetrics.get(categoryKey) as MetricSummary;
-    summary.count++;
-    summary.total += value;
-    summary.avg = summary.total / summary.count;
+    const summary = this.customMetrics.get(categoryKey);
+    const typedSummary = summary as { count: number; total: number; avg: number };
+    typedSummary.count++;
+    typedSummary.total += value;
+    typedSummary.avg = typedSummary.total / typedSummary.count;
   }
 }
 

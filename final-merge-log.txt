@@ -1,3 +1,0 @@
-nohup: ignoring input
-=== Final Merge Fix Process ===
-Handling local changes...
