@@ -1,15 +1,7 @@
 import React from 'react';
-import { render, screen, waitFor } from '@testing-library/react';
-import { MemoryRouter } from 'react-router-dom';
+import { render, screen } from '@testing-library/react';
 import App from '../App';
 import { Layout } from '../router';
-import Home from '../pages/Home';
-import Blog from '../pages/Blog';
-import Contact from '../pages/Contact';
-import About from '../pages/About';
-import Services from '../pages/Services';
-import Portfolio from '../pages/Portfolio';
-import NotFound from '../pages/NotFound';
 
 // Mock the lazy-loaded components
 jest.mock('../pages/Home', () => {
@@ -73,67 +65,21 @@ jest.mock('../components/PerformanceProfiler', () => {
   };
 });
 
-// Mock Layout dependencies
-jest.mock('../components/Header', () => {
-  return function MockHeader() {
-    return <header data-testid="header">Header</header>;
-  };
-});
+// Import the components we need to test
+import Home from '../pages/Home';
+import Blog from '../pages/Blog';
+import Contact from '../pages/Contact';
+import About from '../pages/About';
+import Services from '../pages/Services';
+import Portfolio from '../pages/Portfolio';
+import NotFound from '../pages/NotFound';
 
-jest.mock('../components/Footer', () => {
-  return function MockFooter() {
-    return <footer data-testid="footer">Footer</footer>;
-  };
-});
-
-jest.mock('../components/SkipLink', () => {
-  return function MockSkipLink() {
-    return <a href="#main-content">Skip to main content</a>;
-  };
-});
-
-jest.mock('../components/ScrollToTop', () => {
-  return function MockScrollToTop() {
-    return null;
-  };
-});
-
-jest.mock('../components/LoadingSpinner', () => {
-  return function MockLoadingSpinner() {
-    return <div data-testid="loading-spinner">Loading...</div>;
-  };
-});
-
-// Simple test layout component for testing
-const TestLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => (
-  <div className="test-layout">
-    <header data-testid="header">Header</header>
-    <main id="main-content" role="main">
-      <a href="#main-content">Skip to main content</a>
-      {children}
-    </main>
-    <footer data-testid="footer">Footer</footer>
-  </div>
-);
-// Mock the router components but keep Layout available
+// Mock the router to use MemoryRouter for tests
 jest.mock('../router', () => {
   const React = jest.requireActual('react');
   const { MemoryRouter, Routes, Route } = jest.requireActual('react-router-dom');
   
-  // Mock Layout component with accessibility features
-  const MockLayout = ({ children }: { children: React.ReactNode }) => (
-    <div className="min-h-screen bg-white">
-      <header data-testid="header">Header</header>
-      <main id="main-content" role="main">
-        <a href="#main-content">Skip to main content</a>
-        {children}
-      </main>
-      <footer data-testid="footer">Footer</footer>
-    </div>
-  );
-  
   return {
-    Layout: MockLayout,
     AppRouter: () => {
       const [initialRoute] = React.useState(window.location.pathname || '/');
       
@@ -236,11 +182,7 @@ describe('App', () => {
   });
 
   test('has skip link for accessibility', () => {
-    render(
-      <Layout>
-        <Home />
-      </Layout>
-    );
+    renderWithRouter(<App />);
     const skipLinks = screen.getAllByText('Skip to main content');
     expect(skipLinks.length).toBeGreaterThan(0);
     skipLinks.forEach(skipLink => {
@@ -249,11 +191,7 @@ describe('App', () => {
   });
 
   test('has main content with correct id', () => {
-    render(
-      <Layout>
-        <Home />
-      </Layout>
-    );
+    renderWithRouter(<App />);
     const mainContent = screen.getByRole('main');
     expect(mainContent).toHaveAttribute('id', 'main-content');
   });

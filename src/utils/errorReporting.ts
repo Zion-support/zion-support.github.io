@@ -285,6 +285,13 @@ class ErrorReporter {
     this.isReporting = true;
     
     try {
+      // Prevent infinite recursion by checking if this is an error reporting error
+      if (report.error.message.includes('Failed to send error report') || 
+          report.error.message.includes('error-reporting') ||
+          report.error.message.includes('Maximum call stack size exceeded')) {
+        return;
+      }
+
       // Only send to monitoring service if we're not in a test environment
       if (typeof window !== 'undefined' && process.env.NODE_ENV !== 'test') {
         await fetch('/api/error-reporting', {

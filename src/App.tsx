@@ -9,8 +9,12 @@ import { performanceOptimizer } from './utils/optimization';
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
 import { analytics } from './utils/analytics';
 import { seoOptimizer } from './utils/seoOptimization';
-import { securityManager } from './utils/securityEnhancements';
+import { securityEnhancer } from './utils/securityEnhancements';
+import { cacheManager } from './utils/cacheManager';
+import { apiClient } from './utils/apiClient';
+import { notificationManager } from './utils/notificationManager';
 import './index.css';
+import './styles/notifications.css';
 
 export default function App(): React.JSX.Element {
   // Initialize performance optimizations
@@ -74,17 +78,81 @@ export default function App(): React.JSX.Element {
     analytics.trackPageView();
 
     // Initialize enhanced SEO optimizer
-    seoOptimizer.updatePageSEO({
+    seoOptimizer.updateSEO({
       title: seoData.title,
       description: seoData.description,
       keywords: seoData.keywords,
-      image: seoData.ogImage,
-      url: seoData.ogUrl,
-      type: 'website'
+      ogTitle: seoData.title,
+      ogDescription: seoData.description,
+      ogImage: seoData.ogImage,
+      ogType: seoData.ogType,
+      twitterCard: seoData.twitterCard,
+      twitterTitle: seoData.title,
+      twitterDescription: seoData.description,
+      twitterImage: seoData.ogImage,
+      structuredData: Array.isArray(seoData.structuredData) ? seoData.structuredData[0] : seoData.structuredData
     });
 
     // Initialize enhanced security features
-    securityManager.monitorSecurityEvents();
+    securityEnhancer.configure({
+      enableCSP: true,
+      enableHSTS: true,
+      enableClickjackingProtection: true,
+      enableXSSProtection: true,
+      enableContentTypeSniffingProtection: true,
+      allowedOrigins: [
+        window.location.origin,
+        'https://fonts.googleapis.com',
+        'https://fonts.gstatic.com',
+        'https://cdn.jsdelivr.net'
+      ],
+      reportUri: '/api/security/reports'
+    });
+
+    // Set up security violation handler
+    securityEnhancer.setViolationHandler((violation) => {
+      console.warn('Security violation detected:', violation);
+      analytics.trackEvent('security_violation', {
+        type: violation.type,
+        source: violation.source,
+        blockedURI: violation.blockedURI
+      });
+      
+      // Show security notification
+      notificationManager.error('Security Violation', `Blocked ${violation.type} from ${violation.source}`);
+    });
+
+    // Initialize cache manager
+    cacheManager.configure({
+      maxSize: 100,
+      ttl: 10 * 60 * 1000, // 10 minutes
+      storageType: 'localStorage',
+      enableCompression: true,
+      enableEncryption: false
+    });
+
+    // Initialize API client
+    apiClient.configure({
+      baseURL: '/api',
+      timeout: 30000,
+      retries: 3,
+      enableCaching: true,
+      enableLogging: process.env.NODE_ENV === 'development'
+    });
+
+    // Initialize notification manager
+    notificationManager.configure({
+      position: 'top-right',
+      duration: 5000,
+      maxNotifications: 5,
+      enableSound: true,
+      enableVibration: true,
+      enableBrowserNotifications: true,
+      theme: 'auto'
+    });
+
+    // Show welcome notification
+    notificationManager.info('Welcome to Zion Tech Group', 'Your advanced technology solutions platform is ready!');
 
     // Preload critical resources
     preloadResource('/og-image.png', 'image');
