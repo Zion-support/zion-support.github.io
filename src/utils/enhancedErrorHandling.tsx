@@ -61,7 +61,6 @@ export class EnhancedErrorHandler {
     return EnhancedErrorHandler.instance;
   }
 
-<<<<<<< HEAD
   public initialize(): void {
     // Global error handlers
     window.addEventListener('error', this.handleGlobalError.bind(this));
@@ -304,21 +303,20 @@ export class EnhancedErrorHandler {
       id: this.generateErrorId(error),
       message: error.message,
       stack: error.stack,
-      componentStack: errorInfo?.componentStack,
+      componentStack: context?.component,
       timestamp: Date.now(),
       userAgent: navigator.userAgent,
       url: window.location.href,
       sessionId: this.getSessionId(),
+      userId: context?.userId,
+      severity: this.determineSeverity(error),
+      category: 'javascript',
+      resolved: false,
+      context: this.getErrorContext(context)
     };
 
-    this.addToQueue(errorData);
-    this.logError(error, errorInfo);
-    this.reportError(errorData);
-
-    // Attempt recovery if configured
-    if (options.retryable) {
-      this.attemptRecovery(error, options);
-    }
+    this.errors.set(errorReport.id, errorReport);
+    this.reportToServer(errorReport);
   }
 
   /**
@@ -697,7 +695,41 @@ export class EnhancedErrorBoundary extends React.Component<
   }
 }
 
-<<<<<<< HEAD
+// React Error Boundary integration
+export class ReactErrorBoundary extends React.Component<
+  { children: React.ReactNode; fallback?: React.ComponentType<{ error: Error }> },
+  { hasError: boolean; error?: Error }
+> {
+  private errorHandler = EnhancedErrorHandler.getInstance();
+
+  constructor(props: { children: React.ReactNode; fallback?: React.ComponentType<{ error: Error }> }) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError(error: Error): { hasError: boolean; error: Error } {
+    return { hasError: true, error };
+  }
+
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo): void {
+    this.errorHandler.captureError(error, {
+      component: errorInfo.componentStack,
+      url: window.location.href,
+      timestamp: Date.now(),
+      userAgent: navigator.userAgent
+    });
+  }
+
+  render(): React.ReactNode {
+    if (this.state.hasError) {
+      const FallbackComponent = this.props.fallback || DefaultErrorFallback;
+      return <FallbackComponent error={this.state.error!} />;
+    }
+
+    return this.props.children;
+  }
+}
+
 const DefaultErrorFallback: React.FC<{ error: Error }> = ({ error }) => 
   React.createElement('div', { className: 'error-boundary' },
     React.createElement('h2', null, 'Something went wrong'),
