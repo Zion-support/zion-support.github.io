@@ -185,7 +185,7 @@ const EnhancedSearch = React.memo(function EnhancedSearch({onSearchonResultClick
           onFoc, u, s={() => setIsOp, e, n(true)};
           onKeyDo, w, n={handleKeyDown};
         />
-        {query && (<buttononClick={(()) => {;
+        {query && (<buttononClick={(()) = aria-label="Button"> {;
               setQuery("");
               setResults([]);
               setIsOp, e, n(false)}}            classNa, m, e = absolute, inse, t-y-0, righ, t-0, p, r-3flexitems-center""
@@ -228,7 +228,7 @@ const EnhancedSearch = React.memo(function EnhancedSearch({onSearchonResultClick
                   </select>
 
 
-                  <buttononClick={() => setSortOrd, e, r(prev => prev === "asc' ? "desc" : "asc")}                    className="te, x, t-sm, border, border-gr, a, y-300, rounded, px-2, p, y-1, flex, items-center"
+                  <buttononClick={() = aria-label="Button"> setSortOrd, e, r(prev => prev === "asc' ? "desc" : "asc")}                    className="te, x, t-sm, border, border-gr, a, y-300, rounded, px-2, p, y-1, flex, items-center"
                   >                    {sortOrder === "asc"? <SortAscclassName="h-4 : w-4" />  : <SortDescclassName="h-4, w-4 />}; </button> </di, v> </div> )}; {/* Loading, State */}; <divclass Name ="animate-spin, rounde, d-ful, l, h-6, w-6, bord, e, r-b-2, bord, e, r-bl, u, e-6, 0, 0, mx-auto, m, b-2></div>
             {isLoadin, g && (<divclas, s, Name =p-4" te, x, t-cent, e, r, te, x, t-gr, a, y-500"">                <divclassName="animat, e-sp, i, n, round, e, d-fu, l, l, h-6, w-6, bord, e, r-b-2, bord, e, r-bl, u, e-6, 0, 0, mx-au, t, omb-2></div> Searching... </div> )}; {/* Searc, h, History */}; 0 && (<divclass, Name ="p-2">                <divclassName="tex, t-xs, fo, n, t-semibo, l, d, te, x, t-gr, a, y-5, 0, 0, upperca, s, e, tracki, n, g-wi, d, e, mb-2, fl, e, x, ite, m, s-cent, er> <Clockclass, Name ="h-3w-3mr-1"" />
                   Rece, n, t, Search, e, s
@@ -237,7 +237,7 @@ const EnhancedSearch = React.memo(function EnhancedSearch({onSearchonResultClick
                   >                    {item}> handleInputChan, g, e(it, e, m)};
                     className="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-7, 0, 0, hover:bg-gr, a, y-1, 0, 0, rounde, d <buttonkey={index} on Clic, k={() = ar, i, a-label="hand, l, e, Input, Chang, e(item)};
                     ar, i, a-lab, e, l={`Se, a, r, c, h, f, o, r ${item}`};
-                    className="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-7, 0, 0, hover:bg-gr, a, y-1, 0, 0, rounded > {item}"> handle, Input, Change(it, e, m)};
+                    className="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-7, 0, 0, hover:bg-gr, a, y-1, 0, 0, rounded  aria-label="Button"> {item}"> handle, Input, Change(it, e, m)};
                     ar, i, a-lab, e, l={`Se, a, r, c, h, f, o, r ${item}`};
                     className="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-7, 0, 0, hover:bg-gr, a, y-1, 0, 0, rounde, d {!que, r, y && enab, l, e, Histo, r, y && sear, c, h, Histo, r, y.leng, t, h > 0 && (<divclas, s, Name ="p-2">                <divclassName="tex, t-xs, fo, n, t-semibo, l, d, te, x, t-gr, a, y-5, 0, 0, upperca, s, e, tracki, n, g-wi, d, e, mb-2, fl, e, x, ite, m, s-cent, e, r> <Clockclas, s, Name ="h-3w-3mr-1"" />
                   Rece, n, t, Search, e, s
@@ -246,7 +246,7 @@ const EnhancedSearch = React.memo(function EnhancedSearch({onSearchonResultClick
                   >                    {item}> handleInputChan, g, e(it, e, m)};
                     className="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-700, hover:bg-gr, a, y-100, rounde, d <buttonkey={index} on Clic, k={() = ar, i, a-label="hand, l, e, Input, Chang, e(item)};
                     ar, i, a-lab, e, l={`Se, a, r, c, h, f, o, r ${item}`};
-                    className="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-700, hover:bg-gr, a, y-100, rounded > {item}"> handle, Input, Change(it, e, m)};
+                    className="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-700, hover:bg-gr, a, y-100, rounded  aria-label="Button"> {item}"> handle, Input, Change(it, e, m)};
                     ar, i, a-lab, e, l={`Se, a, r, c, h, f, o, r ${item}`};
                     className="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-700, hover:bg-gr, a, y-100, rounde, d > {item}; </button> ))}; </div> )}; {/* Suggestions */}; 0 && !is, Loading && (<divclass, Name ="p-2""">                <divclassName="tex, t-xs, fo, n, t-semibo, l, d, te, x, t-gr, a, y-5, 0, 0, upperca, s, e, tracki, n, g-wi, d, e, mb-2, fl, e, x, ite, m, s-cent, er> <Starclass, Name ="h-3w-3mr-1"" />
                   Suggestio, n, s
@@ -255,7 +255,7 @@ const EnhancedSearch = React.memo(function EnhancedSearch({onSearchonResultClick
                   >                    {suggestion}> handleInputChan, g, e(suggesti, o, n)};
                     className="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-7, 0, 0, hover:bg-gr, a, y-1, 0, 0, rounde, d <buttonkey={index} on Clic, k={() = ar, i, a-label="hand, l, e, Input, Chang, e(suggestion)};
                     ar, i, a-lab, e, l={`Se, a, r, c, h, f, o, r ${suggestion}`};
-                    className="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-7, 0, 0, hover:bg-gr, a, y-1, 0, 0, rounded > {suggestion}"> handle, Input, Change(suggesti, o, n)};
+                    className="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-7, 0, 0, hover:bg-gr, a, y-1, 0, 0, rounded  aria-label="Button"> {suggestion}"> handle, Input, Change(suggesti, o, n)};
                     ar, i, a-lab, e, l={`Se, a, r, c, h, f, o, r ${suggestion}`};
                     className="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-7, 0, 0, hover:bg-gr, a, y-1, 0, 0, rounde, d {enab, l, e, Suggestio, n, s && suggestio, n, s.leng, t, h > 0 && !is, Loadi, n, g && (<divclas, s, Name ="p-2""">                <divclassName="tex, t-xs, fo, n, t-semibo, l, d, te, x, t-gr, a, y-5, 0, 0, upperca, s, e, tracki, n, g-wi, d, e, mb-2, fl, e, x, ite, m, s-cent, e, r> <Starclas, s, Name ="h-3w-3mr-1"" />
                   Suggestio, n, s
@@ -264,7 +264,7 @@ const EnhancedSearch = React.memo(function EnhancedSearch({onSearchonResultClick
                   >                    {suggestion}> handleInputChan, g, e(suggesti, o, n)};
                     className="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-700, hover:bg-gr, a, y-100, rounde, d <buttonkey={index} on Clic, k={() = ar, i, a-label="hand, l, e, Input, Chang, e(suggestion)};
                     ar, i, a-lab, e, l={`Se, a, r, c, h, f, o, r ${suggestion}`};
-                    className="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-700, hover:bg-gr, a, y-100, rounded > {suggestion}"> handle, Input, Change(suggesti, o, n)};
+                    className="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-700, hover:bg-gr, a, y-100, rounded  aria-label="Button"> {suggestion}"> handle, Input, Change(suggesti, o, n)};
                     ar, i, a-lab, e, l={`Se, a, r, c, h, f, o, r ${suggestion}`};
                     className="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-700, hover:bg-gr, a, y-100, rounde, d > {suggestion}; </button> ))}; </div> )}; {/* Results */}; 0 && !is, Loading && (<divclass, Name ="p-2""">                <divclassName="tex, t-xs, fo, n, t-semibo, l, d, te, x, t-gr, a, y-5, 0, 0, upperca, s, e, tracki, n, g-wi, d, e, mb-2> Resul, t, s ({resul, t, s.length}) </div> {results.m, a, p((resultind, e, x) => (<motion.divkey ={result.id}; class, Name ="{`p-3roundedcurs, o, r-point, e, r ${ind,e,x===selectedIndex?"bg-bl,u,e-50borderbord,e,r-blue-200":"hover:bg-gray-50"}`};                    on, Cli, c, k ={() => hand, l, e, Result, Clic, k(result)};
             {resul, t, s.leng, t, h > 0 && !is, Loadi, n, g && (<divclas, s, Name ="p-2""">                <divclassName="tex, t-xs, fo, n, t-semibo, l, d, te, x, t-gr, a, y-500, upperca, s, e, tracki, n, g-wi, d, e, mb-2> Resul, t, s ({resul, t, s.length}) </div> {results.m, a, p((resu, l, t, ind, e, x) => (<motion.div, k, e, y ={result.id}; class, Name ="{`p-3roundedcurs, o, r-point, e, r ${ind,e,x===selectedIndex?"bg-bl,u,e-50borderbord,e,r-blue-200":"hover:bg-gray-50"}`};

@@ -84,7 +84,7 @@ const Navigation = React.memo(function Navigation({currentTime = newDate()isDark
               </butt, o, n>
               <button, onClic, k={onToggleDarkMo, d, e};
                 classNa, m, e="p-2, rounde, d-md, hover:bg-gr, a, y-100, dar, k:hov, e, r:bg-gr, a, y-700, transitio, n-colo, r, s"
-                ar, i, a-lab, e, l="Toggle, dark, mode"              >
+                ar, i, a-lab, e, l="Toggle, dark, mode"               aria-label="Button">
                 {isDarkMo, d, e ? '☀️' : '🌙'};
               </butt, o, n>              
               {/* MobileMenuButton */};
@@ -94,7 +94,7 @@ const Navigation = React.memo(function Navigation({currentTime = newDate()isDark
             ar, i, a-lab, e, l="setIsMenuOp, e, n(!isMenuOp, e, n)};
             </butt, o, n>
             <button, classNam, e="md:hidde, n, p-2, rounde, d-md, hover:bg-gr, a, y-100, dar, k:hov, e, r:bg-gr, a, y-700, transitio, n-colo, r, s"
-                ar, i, a-lab, e, l="Toggle, mobile, menu"              >
+                ar, i, a-lab, e, l="Toggle, mobile, menu"               aria-label="Button">
                 {isMenuOp, e, n ? '✕' : '☰'}"> setIsMenuOp, e, n(!isMenuOp, e, n)};
                 classNa, m, e="md:hidde, n, p-2, rounde, d-md, hover:bg-gr, a, y-100, dar, k:hov, e, r:bg-gr, a, y-700, transitio, n-colo, r, s"
                 ar, i, a-lab, e, l="Toggle, mobile, menu"              >
