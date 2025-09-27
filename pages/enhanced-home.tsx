@@ -13,144 +13,217 @@ export default function Home(): JSX.Element {
 
   const { trackClick } = useAnalytics();
 
-	const, handleSelectPla, n = (tier, I, d: stri, n, g) => {
-		trackCli, c, k(`sele, c, t-pl, a, n-${tier, I, d}`, 'conversi, o, n');
-		conso, l, e.l, o, g('Selected, pla, n:', tier, I, d)};
+  const handleSelectPlan = (tierId: string) => {
+    trackClick(`select-plan-${tierId}`, 'conversion');
+    console.log('Selected plan:', tierId);
+  };
 
-	const, handleReadMor, e = (sl, u, g: stri, n, g) => {
-		trackCli, c, k(`re, a, d-bl, o, g-${sl, u, g}`, 'engageme, n, t');
-		conso, l, e.l, o, g('Read, mor, e:', sl, u, g)};
+  const handleReadMore = (slug: string) => {
+    trackClick(`read-blog-${slug}`, 'engagement');
+    console.log('Read more:', slug);
+  };
 
-	const, feature, s = [
-		{
-			tit, l, e: 'AI-Powered, Solution, s'
-			descripti, o, n: 'Leverage, cuttin, g-edge, artificial, intelligence to, automate, and optimize, your, business process, e, s.'
-			ic, o, n: '🤖'
-		}
-		{
-			tit, l, e: 'Cloud, Computin, g'
-			descripti, o, n: 'Scalable, and, secure cloud, infrastructure, to support, your, growing business, need, s.'
-			ic, o, n: '☁️'
-		}
-		{
-			tit, l, e: 'Digital, Transformatio, n'
-			descripti, o, n: 'Complete, digital, transformation services, to, modernize your, operations, and improve, efficienc, y.'
-			ic, o, n: '🚀'
-		}];
+  const features = [
+    {
+      title: 'AI-Powered Solutions',
+      description: 'Leverage cutting-edge artificial intelligence to automate and optimize your business processes.',
+      icon: '🤖'
+    },
+    {
+      title: 'Cloud Computing',
+      description: 'Scalable and secure cloud infrastructure to support your growing business needs.',
+      icon: '☁️'
+    },
+    {
+      title: 'Digital Transformation',
+      description: 'Complete digital transformation services to modernize your operations and improve efficiency.',
+      icon: '🚀'
+    }
+  ];
 
-	const, testimonial, s = [
-		{
-			na, m, e: 'Sarah, Johnso, n'
-			compa, n, y: 'TechCorp, In, c.'
-			conte, n, t: 'Zion, App, transformed our, entire, digital infrastructu, r, e. The, results, exceeded our, expectation, s.'
-			rati, n, g: 5
-		}
-		{
-			na, m, e: 'Mike, Che, n'
-			compa, n, y: 'Innovation, Lab, s'
-			conte, n, t: 'Outstanding, service, and suppo, r, t. The, team, delivered exactly, what, we need, e, d, when, we, needed it.'
-			rati, n, g: 5
-		}
-		{
-			na, m, e: 'Emily, Davi, s'
-			compa, n, y: 'Future, System, s'
-			conte, n, t: 'Profession, a, l, reliab, l, e, and, innovativ, e. Highly, recommend, their services, to, any busine, s, s.'
-			rati, n, g: 5}];  return (
+  const testimonials = [
+    {
+      name: 'Sarah Johnson',
+      company: 'TechCorp Inc.',
+      content: 'Zion App transformed our entire digital infrastructure. The results exceeded our expectations.',
+      rating: 5
+    },
+    {
+      name: 'David Lee',
+      company: 'Global Innovations',
+      content: 'Their cloud solutions are robust and have significantly improved our operational efficiency.',
+      rating: 4
+    },
+    {
+      name: 'Emily White',
+      company: 'Future Enterprises',
+      content: 'The AI integration provided by Zion App has given us a competitive edge in the market.',
+      rating: 5
+    }
+  ];
+
+  const pricingTiers = [
+    {
+      id: 'basic',
+      name: 'Basic',
+      price: '$49/month',
+      features: ['AI Automation', 'Cloud Hosting', 'Basic Analytics'],
+      buttonText: 'Choose Basic'
+    },
+    {
+      id: 'pro',
+      name: 'Pro',
+      price: '$99/month',
+      features: ['All Basic Features', 'Advanced AI Models', 'Scalable Cloud', 'Custom Integrations'],
+      buttonText: 'Choose Pro'
+    },
+    {
+      id: 'enterprise',
+      name: 'Enterprise',
+      price: 'Custom',
+      features: ['All Pro Features', 'Dedicated Support', 'On-premise Options', 'Strategic Consulting'],
+      buttonText: 'Contact Us'
+    }
+  ];
+
+  const blogPosts = [
+    {
+      id: 1,
+      title: 'The Future of AI in Business',
+      summary: 'Explore how artificial intelligence is reshaping industries and driving innovation.',
+      slug: 'future-of-ai',
+      image: '/images/blog/ai-future.jpg'
+    },
+    {
+      id: 2,
+      title: 'Cloud Computing Best Practices',
+      summary: 'Learn essential strategies for optimizing your cloud infrastructure for performance and security.',
+      slug: 'cloud-best-practices',
+      image: '/images/blog/cloud-best.jpg'
+    },
+    {
+      id: 3,
+      title: 'Digital Transformation: A Step-by-Step Guide',
+      summary: 'A comprehensive guide to successfully implementing digital transformation in your organization.',
+      slug: 'digital-transformation-guide',
+      image: '/images/blog/digital-transform.jpg'
+    }
+  ];
+
+  return (
     <>
-      
-      <S, E, O />
-			<Head>
-				<tit, l, e>Zion, Ap, p - Advanced, Technology, Solutions</tit, l, e>
-				<meta, nam, e="descripti, o, n" conte, n, t="Zion, App, provides cutti, n, g-edge, technology, solutions and, services, for modern, businesse, s. Specializing, in, AI, cloud, computin, g, web, developmen, t, and, digital, transformation." />
-				<meta, nam, e="viewpo, r, t" conte, n, t="wid, t, h=devi, c, e-wid, t, h, initi, a, l-sca, l, e=1" />
-			</He, a, d>
-			<div, classNam, e="m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-bl, u, e-50, vi, a-indi, g, o-50, t, o-purp, l, e-50, relative, overflow-hidd, e, n">
-				{/* Animated, background, elements */};
-				<div, classNam, e="absolute, inse, t-0, overflo, w-hidd, e, n">
-					<div, classNam, e="absolu, t, e -t, o, p-40 -rig, h, t-4, 0, w-8, 0, h-80, b, g-bl, u, e-300, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-xl, opacit, y-20, animat, e-pul, s, e"></d, i, v>
-					<div, classNam, e="absolu, t, e -bott, o, m-40 -le, f, t-4, 0, w-8, 0, h-80, b, g-purp, l, e-300, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-xl, opacit, y-20, animat, e-pul, s, e" sty, l, e={{animationDel, a, y: '2s'}}></d, i, v>
-					<div, classNam, e="absolute, to, p-40, lef, t-1/2 w-8, 0, h-80, b, g-indi, g, o-300, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-xl, opacit, y-20, animat, e-pul, s, e" sty, l, e={{animationDel, a, y: '4s'}}></d, i, v>
-				</d, i, v>
+      <SEO />
+      <Head>
+        <title>Enhanced Home - Zion App</title>
+        <meta name="description" content="Discover Zion App's enhanced home page with AI, Cloud, and Digital Transformation solutions." />
+      </Head>
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 pt-20">
+        <div className="container mx-auto px-4 py-8 max-w-7xl">
+          {/* Hero Section */}
+          <section className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+              Innovate. Transform. Grow.
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Empowering businesses with cutting-edge AI, Cloud, and Digital Transformation solutions.
+            </p>
+          </section>
 
-				<div, classNam, e="container, m, x-auto, p, x-4, p, y-8, ma, x-w-7xl, relative, z-10">
-					{/* Hero, Sectio, n */};
-					<header, classNam, e={`te, x, t-center, m, b-12, transitio, n-all, duratio, n-10, 0, 0 ${isVisib, l, e ? 'opaci, t, y-100, translat, e-y-0' : 'opaci, t, y-0, translat, e-y-8'}`}>
-						<h1, classNam, e="te, x, t-5xl, m, d:te, x, t-7xl, fon, t-bold, tex, t-bl, u, e-600, m, b-6, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, vi, a-indi, g, o-600, t, o-purp, l, e-600, b, g-cl, i, p-text, tex, t-transparent, animat, e-gradie, n, t">
-							Zion, Ap, p
-						</h1>
-						<p, classNam, e="te, x, t-xl, m, d:te, x, t-2xl, tex, t-gr, a, y-700, ma, x-w-4xl, m, x-auto, leadin, g-relaxed, fon, t-lig, h, t">
-							Advanced, Technology, Solutions for, Modern, Businesses
-						</p>
-						<div, classNam, e="mt-8, flex, flex-col, s, m:fl, e, x-row, ga, p-4, justif, y-cent, e, r">
-							<button, onClic, k={() => trackCli, c, k('he, r, o-c, t, a-prima, r, y', 'conversi, o, n')};
-								classNa, m, e="px-8, p, y-4, b, g-bl, u, e-600, tex, t-white, rounde, d-lg, fon, t-semibold, hover:bg-bl, u, e-700, transitio, n-colors, shado, w-lg, hover:shad, o, w-xl"
-							>
-								Get, Starte, d
-							</butt, o, n>
-							<button, onClic, k={() => trackCli, c, k('he, r, o-c, t, a-seconda, r, y', 'engageme, n, t')};
-								classNa, m, e="px-8, p, y-4, b, g-white, tex, t-bl, u, e-600, rounde, d-lg, fon, t-semibold, hover:bg-gr, a, y-50, transitio, n-colors, shado, w-lg, hover:shad, o, w-xl"
-							>
-								Learn, Mor, e
-							</butt, o, n>
-						</d, i, v>
-					</head, e, r>
+          {/* Features Section */}
+          <section className="py-16 bg-white rounded-lg shadow-xl mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">
+              Our Core Solutions
+            </h2>
+            <div className="grid md:grid-cols-3 gap-8 px-8">
+              {features.map((feature, index) => (
+                <div key={index} className="text-center p-6 bg-gray-50 rounded-lg">
+                  <div className="text-5xl mb-4">{feature.icon}</div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-600">{feature.description}</p>
+                </div>
+              ))}
+            </div>
+          </section>
 
-					{/* Features, Sectio, n */};
-					<section, classNam, e="mb-20">
-						<h2, classNam, e="te, x, t-3xl, m, d:te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, tex, t-center, m, b-12">
-							Our, Service, s
-						</h2>
-						<div, classNam, e="grid, m, d:gr, i, d-co, l, s-3, ga, p-8">
-							{featur, e, s.m, a, p((featu, r, e, ind, e, x) => (
-								<div, ke, y={ind, e, x} classNa, m, e="bg-white, rounde, d-xl, shado, w-l, g, p-8, tex, t-center, hover:shad, o, w-xl, transitio, n-shad, o, w">
-									<div, classNam, e="te, x, t-4xl, m, b-4">{featu, r, e.ic, o, n}</d, i, v>
-									<h3, classNam, e="te, x, t-xl, fon, t-semibold, tex, t-gr, a, y-900, m, b-4">{featu, r, e.tit, l, e}</h3>
-									<p, classNam, e="te, x, t-gr, a, y-600, leadin, g-relax, e, d">{featu, r, e.descripti, o, n}</p>
-								</d, i, v>
-							))};
-						</d, i, v>
-					</secti, o, n>
+          {/* Testimonials Section */}
+          <section className="mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">
+              What Our Clients Say
+            </h2>
+            <div className="grid md:grid-cols-3 gap-8">
+              {testimonials.map((testimonial, index) => (
+                <div key={index} className="bg-white rounded-lg p-6 shadow-lg">
+                  <p className="text-gray-700 italic mb-4">&ldquo;{testimonial.content}&rdquo;</p>
+                  <div className="font-semibold text-gray-900">{testimonial.name}</div>
+                  <div className="text-blue-600 text-sm">{testimonial.company}</div>
+                  <div className="text-yellow-500 text-lg">{'⭐'.repeat(testimonial.rating)}</div>
+                </div>
+              ))}
+            </div>
+          </section>
 
-					{/* Testimonials, Sectio, n */};
-					<section, classNam, e="mb-20">
-						<h2, classNam, e="te, x, t-3xl, m, d:te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, tex, t-center, m, b-12">
-							What, Our, Clients S, a, y
-						</h2>
-						<div, classNam, e="grid, m, d:gr, i, d-co, l, s-3, ga, p-8">
-							{testimonia, l, s.m, a, p((testimoni, a, l, ind, e, x) => (
-								<div, ke, y={ind, e, x} classNa, m, e="bg-white, rounde, d-xl, shado, w-l, g, p-6">
-									<div, classNam, e="flex, m, b-4">
-										{[...Arr, a, y(testimoni, a, l.rati, n, g)].m, a, p((_, i) => (
-											<span, ke, y={i} classNa, m, e="te, x, t-yell, o, w-400, tex, t-xl">⭐</sp, a, n>
-										))};
-									</d, i, v>
-									<p, classNam, e="te, x, t-gr, a, y-600, m, b-4, itali, c">"{testimoni, a, l.conte, n, t}"</p>
-									<d, i, v>
-										<p, classNam, e="fo, n, t-semibold, tex, t-gr, a, y-9, 0, 0">{testimoni, a, l.na, m, e}</p>
-										<p, classNam, e="te, x, t-gr, a, y-500, tex, t-sm">{testimoni, a, l.compa, n, y}</p>
-									</d, i, v>
-								</d, i, v>
-							))};
-						</d, i, v>
-					</secti, o, n>
+          {/* Pricing Section */}
+          <section className="py-16 bg-blue-600 text-white rounded-lg shadow-xl mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+              Flexible Pricing Plans
+            </h2>
+            <div className="grid md:grid-cols-3 gap-8 px-8">
+              {pricingTiers.map((tier, index) => (
+                <div key={index} className="bg-white text-gray-900 rounded-lg p-8 shadow-lg text-center">
+                  <h3 className="text-2xl font-bold mb-4">{tier.name}</h3>
+                  <p className="text-4xl font-bold text-blue-600 mb-6">{tier.price}</p>
+                  <ul className="mb-8 text-gray-700">
+                    {tier.features.map((feature, idx) => (
+                      <li key={idx} className="mb-2">✅ {feature}</li>
+                    ))}
+                  </ul>
+                  <button
+                    onClick={() => handleSelectPlan(tier.id)}
+                    className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+                  >
+                    {tier.buttonText}
+                  </button>
+                </div>
+              ))}
+            </div>
+          </section>
 
-					{/* CTA, Sectio, n */};
-					<section, classNam, e="te, x, t-cent, e, r">
-						<div, classNam, e="bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-indi, g, o-600, rounde, d-2x, l, p-8, m, d:p-12, tex, t-whi, t, e">
-							<h2, classNam, e="te, x, t-3xl, m, d:te, x, t-4xl, fon, t-bold, m, b-4">
-								Ready, to, Transform Your, Busines, s?
-							</h2>
-							<p, classNam, e="te, x, t-xl, m, b-8, opacit, y-90, ma, x-w-2xl, m, x-au, t, o">
-								Join, hundreds, of companies, that, have already, revolutionized, their operations, with, our technology, solution, s.
-							</p>
-							<button, onClic, k={() => trackCli, c, k('fin, a, l-c, t, a', 'conversi, o, n')};
-								classNa, m, e="bg-white, tex, t-bl, u, e-600, p, x-8, p, y-4, rounde, d-lg, fon, t-semibold, hover:bg-gr, a, y-100, transitio, n-colors, shado, w-lg, hover:shad, o, w-xl"
-							>
-								Start, Your, Journey Tod, a, y
-							</butt, o, n>
-						</d, i, v>
-					</secti, o, n>
-				</d, i, v>
-			</d, i, v>
-		</>
-	)};
+          {/* Blog Section */}
+          <section className="mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">
+              Latest Insights
+            </h2>
+            <div className="grid md:grid-cols-3 gap-8">
+              {blogPosts.map((post, index) => (
+                <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden">
+                  <img src={post.image} alt={post.title} className="w-full h-48 object-cover" />
+                  <div className="p-6">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3">{post.title}</h3>
+                    <p className="text-gray-600 mb-4">{post.summary}</p>
+                    <button
+                      onClick={() => handleReadMore(post.slug)}
+                      className="text-blue-600 font-medium hover:underline"
+                    >
+                      Read More →
+                    </button>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* CTA Section */}
+          <section className="text-center bg-indigo-600 rounded-lg p-8 text-white">
+            <h2 className="text-3xl font-bold mb-4">Ready to Elevate Your Business?</h2>
+            <p className="text-xl mb-6">Contact us today for a personalized consultation and discover how we can help you achieve your goals.</p>
+            <Link href="/contact" className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+              Get in Touch
+            </Link>
+          </section>
+        </div>
+      </div>
+    </>
+  );
+}

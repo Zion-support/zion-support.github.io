@@ -54,7 +54,7 @@ const About = React.memo(function About(): JSX.Element {
 		},
 		{
 			title: 'Client Success',
-			description: 'Your success is our success. We\'re committed to delivering solutions that drive real business value and growth.',
+			description: 'Your success is our success. We&apos;re committed to delivering solutions that drive real business value and growth.',
 			icon: '🎯',
 			color: 'green'
 		},
@@ -112,7 +112,7 @@ const About = React.memo(function About(): JSX.Element {
 							About Zion App
 						</h1>
 						<p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-							We're a team of passionate technologists dedicated to transforming businesses through innovative solutions and cutting-edge technology.
+                We&apos;re a team of passionate technologists dedicated to transforming businesses through innovative solutions and cutting-edge technology.
 						</p>
 					</header>
 

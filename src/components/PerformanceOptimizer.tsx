@@ -1,4 +1,3 @@
-import { useMemo, useCallback } from 'react';
 import React, { useEffect, useState } from 'react';
 import dynamic from 'next/dynamic';
 
@@ -15,29 +14,75 @@ function PerformanceOptimizerComponent({
   enableResourceHints = true,
   enablePreloading = true
 }: PerformanceOptimizerProps): null {
-  const [memoryUsagesetMemoryUsage] = useState<{
-    used: number;
-    total: number;
-    percentage: number;
+  const [memoryUsage, setMemoryUsage] = useState<{
+    totalJSHeapSize: number;
+    usedJSHeapSize: number;
+    jsHeapSizeLimit: number;
   } | null>(null);
 
-    // Simpleperformance, monitoringi, f (enableMonitori, n, g) {
-      conso, l, e.l, o, g('Performancemonitoringenabl, e, d')};
-    // Memory, Usage, Monitoring
-    const, updateMemoryUsag, e = () => {if ('memo, r, y' in, performan, c, e) {
-        con, s, t, memo, r, y = (performan, c, e, as, a, n, y).memo, r, y;
-        setMemoryUsa, g, e({
-          us, e, d: memo, r, y.usedJSHeapSi, z, e
-          tot, a, l: memo, r, y.totalJSHeapSi, z, e
-          percenta, g, e: (memo, r, y.usedJSHeapSi, z, e / memo, r, y.totalJSHeapSi, z, e) * 1, 0, 0
-        })}};
+  useEffect(() => {
+    // Service Worker Registration
+    if (enableServiceWorker && 'serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+          .then(registration => {
+            console.log('Service Worker registered with scope:', registration.scope);
+          })
+          .catch(error => {
+            console.error('Service Worker registration failed:', error);
+          });
+      });
+    }
 
-    updateMemoryUsa, g, e();
-    const, interva, l = setInterv, a, l(updateMemoryUsa, g, e, 50, 0, 0);
+    // Performance Monitoring (simplified)
+    if (enableMonitoring && typeof window !== 'undefined' && (window as any).performance && (window as any).performance.memory) {
+      const updateMemory = () => {
+        setMemoryUsage((window.performance as any).memory);
+      };
+      const intervalId = setInterval(updateMemory, 5000); // Update every 5 seconds
+      return () => clearInterval(intervalId);
+    }
+  }, [enableServiceWorker, enableMonitoring]);
 
-    return () => clearInterv, a, l(interv, a, l)}, [enableServiceWork, e, r, enableMonitori, n, g, enableResourceHin, t, s, enablePreloadi, n, g]);
+  useEffect(() => {
+    // Resource Hints (Preconnect, Preload, Prefetch)
+    if (enableResourceHints && typeof document !== 'undefined') {
+      // Example: Preconnect to a CDN
+      const preconnectLink = document.createElement('link');
+      preconnectLink.rel = 'preconnect';
+      preconnectLink.href = 'https://cdn.example.com';
+      document.head.appendChild(preconnectLink);
 
-  return, nul, l};
-// Export, as, a dynamic, component, that only, renders, on the, client, side
-export default dynamic(() => Promi, s, e.resol, v, e(PerformanceOptimizerCompone, n, t), {
-  s, s, r: fal, s, e});
+      // Example: Preload a critical font
+      const preloadLink = document.createElement('link');
+      preloadLink.rel = 'preload';
+      preloadLink.href = '/fonts/inter-var-latin.woff2';
+      preloadLink.as = 'font';
+      preloadLink.type = 'font/woff2';
+      preloadLink.crossOrigin = 'anonymous';
+      document.head.appendChild(preloadLink);
+    }
+  }, [enableResourceHints]);
+
+  useEffect(() => {
+    // Preloading (e.g., for next page)
+    if (enablePreloading && typeof window !== 'undefined') {
+      // This would typically involve more advanced logic, e.g., based on user intent
+      // For demonstration, we'll just log
+      console.log('Preloading enabled for potential next navigations.');
+    }
+  }, [enablePreloading]);
+
+  // You could render a small overlay for memory usage in dev mode
+  // if (enableMonitoring && memoryUsage && process.env.NODE_ENV === 'development') {
+  //   return (
+  //     <div style={{ position: 'fixed', bottom: 10, left: 10, background: 'rgba(0,0,0,0.7)', color: 'white', padding: '5px 10px', borderRadius: '5px', fontSize: '12px', zIndex: 9999 }}>
+  //       Memory: {(memoryUsage.usedJSHeapSize / 1024 / 1024).toFixed(2)}MB / {(memoryUsage.totalJSHeapSize / 1024 / 1024).toFixed(2)}MB
+  //     </div>
+  //   );
+  // }
+
+  return null; // This component doesn't render anything visible
+}
+
+export default PerformanceOptimizerComponent;

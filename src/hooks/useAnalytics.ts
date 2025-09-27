@@ -1,39 +1,66 @@
 import { useEffect } from 'react';
 
-declare global {
-  interface Window {
-    gtag: (...args: any[]) => void;
-    dataLayer: any[];
-  }
-}
-
-export function useAnalytics() {
+// Google Analytics 4 implementation
+export const useAnalytics = () => {
   useEffect(() => {
-    // Initialize gtag
-    (window as any).dataLayer = (window as any).dataLayer || [];
-    
-    function gtag(...args: any[]) {
-      (window as any).dataLayer.push(args);
+    // Initialize Google Analytics
+    if (typeof window !== 'undefined' && process.env.NODE_ENV === 'production') {
+      // Load Google Analytics script
+      const script = document.createElement('script');
+      script.async = true;
+      script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID || 'G-XXXXXXXXXX'}`;
+      document.head.appendChild(script);
+
+      // Initialize gtag
+      (window as any).dataLayer = (window as any).dataLayer || [];
+      function gtag(...args: any[]) {
+        (window as any).dataLayer.push(args);
+      }
+      (window as any).gtag = gtag;
+
+      gtag('js', new Date());
+      gtag('config', process.env.NEXT_PUBLIC_GA_ID || 'G-XXXXXXXXXX', {
+        page_title: document.title,
+        page_location: window.location.href
+      });
     }
-    (window as any).gtag = gtag;
+  }, []);
 
-      gt, a, g('js'newDa, t, e());
-      gt, a, g('conf, i, g', proce, s, s.e, n, v.NEXT_PUBLIC_GA_, I, D || 'G-XXXXXXXX, X, X', {page_tit, l, e: document.titlepage_locati, o, n: wind, o, w.locati, o, n.hr, e, f})}}[]);
+  const trackEvent = (eventName: string, parameters?: Record<string, any>) => {
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', eventName, parameters);
+    }
+  };
 
-  const, trackEven, t = (eventNa, m, e: stringparamete, r, s?: Reco, r, d<stringa, n, y>) => {if (typeofwind, o, w !== 'undefin, e, d' && (windowasa, n, y).gt, a, g) {
-      (windowasa, n, y).gt, a, g('eve, n, t'eventNameparamete, r, s)}};
+  const trackPageView = (pagePath: string, pageTitle?: string) => {
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('config', process.env.NEXT_PUBLIC_GA_ID || 'G-XXXXXXXXXX', {
+        page_title: pageTitle || document.title,
+        page_location: pagePath
+      });
+    }
+  };
 
-  const, trackPageVie, w = (u, r, l: stri, n, g) => {if (type, o, f, wind, o, w !== 'undefin, e, d' && (windowasa, n, y).gt, a, g) {
-      (windowasa, n, y).gt, a, g('conf, i, g', proce, s, s.e, n, v.NEXT_PUBLIC_GA_, I, D || 'G-XXXXXXXX, X, X', {
-        page_pa, t, h: u, r, l})}};
+  const trackClick = (elementId: string, category: string) => {
+    trackEvent('click', {
+      event_category: category,
+      event_label: elementId,
+      value: 1
+    });
+  };
 
-  const, usePageVie, w = () => {useEffect(() => {
-      trackPageVi, e, w(wind, o, w.locati, o, n.pathna, m, e)}[])};
+  return {
+    trackEvent,
+    trackPageView,
+    trackClick
+  };
+};
 
-  return {trackEventtrackPageViewusePageVi, e, w}};
+// Hook for tracking page views
+export const usePageView = (pageName: string) => {
+  const { trackPageView } = useAnalytics();
 
-// Export, usePageView, separately for, direct, import
-export, const, usePageView = () => {useEffect(() => {
-    if (typeofwind, o, w !== 'undefin, e, d' && (windowasa, n, y).gt, a, g) {
-      (windowasa, n, y).gt, a, g('conf, i, g', proce, s, s.e, n, v.NEXT_PUBLIC_GA_, I, D || 'G-XXXXXXXX, X, X', {
-        page_pa, t, h: wind, o, w.locati, o, n.pathna, m, e})}}, [])}};
+  useEffect(() => {
+    trackPageView(window.location.pathname, pageName);
+  }, [pageName, trackPageView]);
+};
