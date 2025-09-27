@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
-import { PerformanceDashboard } from '../src/components/PerformanceDashboard';
+import PerformanceDashboard from '../src/components/PerformanceDashboard';
 import { SecurityDashboard } from '../src/components/SecurityDashboard';
 import { AnalyticsDashboard } from '../src/components/AnalyticsDashboard';
 import EnhancedDashboard from '../src/components/EnhancedDashboard';
@@ -16,6 +16,10 @@ import AdvancedPerformanceOptimizer from '../src/components/AdvancedPerformanceO
 import AdvancedAnalyticsInsights from '../src/components/AdvancedAnalyticsInsights';
 import AdvancedErrorMonitoring from '../src/components/AdvancedErrorMonitoring';
 import AdvancedSystemMonitor from '../src/components/AdvancedSystemMonitor';
+import AdvancedSecurityEnhancements from '../src/components/AdvancedSecurityEnhancements';
+import EnhancedUserExperience from '../src/components/EnhancedUserExperience';
+import SecurityMonitor from '../src/components/SecurityMonitor';
+import EnhancedAnalytics from '../src/components/EnhancedAnalytics';
 
 type DashboardTab = 'comprehensive' | 'analytics' | 'performance' | 'security' | 'enhanced' | 'search' | 'advanced-analytics' | 'advanced-performance' | 'advanced-security' | 'accessibility' | 'system-monitor' | 'security-enhancements' | 'performance-optimizer' | 'user-experience' | 'error-handler' | 'analytics-insights' | 'new-performance' | 'new-security' | 'new-analytics' | 'error-monitoring' | 'advanced-system-monitor';
 
@@ -50,20 +54,20 @@ const Dashboard: React.FC = () => {
     avgSessionDuration: 180,
     conversionRate: 12.5,
     topPages: [
-      { page: '/', views: 25000, bounceRate: 28.5 },
-      { page: '/services', views: 18000, bounceRate: 32.1 },
-      { page: '/blog', views: 15000, bounceRate: 45.2 }
+      { page: '/', views: 25000, bounceRate: 28.5, avgTime: 120 },
+      { page: '/services', views: 18000, bounceRate: 32.1, avgTime: 95 },
+      { page: '/blog', views: 15000, bounceRate: 45.2, avgTime: 180 }
     ],
     trafficSources: [
-      { source: 'Organic Search', visitors: 25000, percentage: 55.6 },
-      { source: 'Direct', visitors: 12000, percentage: 26.7 },
-      { source: 'Social Media', visitors: 8000, percentage: 17.8 }
+      { source: 'Organic Search', visitors: 25000, percentage: 55.6, conversionRate: 12.5 },
+      { source: 'Direct', visitors: 12000, percentage: 26.7, conversionRate: 15.2 },
+      { source: 'Social Media', visitors: 8000, percentage: 17.8, conversionRate: 8.9 }
     ],
-    deviceTypes: [
-      { device: 'Desktop', count: 25000, percentage: 55.6 },
-      { device: 'Mobile', count: 15000, percentage: 33.3 },
-      { device: 'Tablet', count: 5000, percentage: 11.1 }
-    ],
+                deviceTypes: [
+                  { device: 'Desktop', count: 25000, percentage: 55.6 },
+                  { device: 'Mobile', count: 15000, percentage: 33.3 },
+                  { device: 'Tablet', count: 5000, percentage: 11.1 }
+                ],
     geographicData: [
       { country: 'United States', visitors: 18000, percentage: 40.0 },
       { country: 'Canada', visitors: 9000, percentage: 20.0 },
@@ -156,8 +160,21 @@ const Dashboard: React.FC = () => {
           <div className="p-8">
             <h1 className="text-3xl font-bold text-gray-900 mb-8">Advanced Security Monitor</h1>
             <AdvancedSecurityMonitor 
-              onSecurityAlert={(alert) => console.log('Security alert:', alert)}
-              showDashboard={true}
+              metrics={{
+                totalThreats: 0,
+                blockedRequests: 0,
+                suspiciousActivity: 0,
+                securityScore: 95,
+                lastScan: new Date(),
+                vulnerabilities: [],
+                recentEvents: [],
+                cspViolations: 0,
+                xssAttempts: 0,
+                sqlInjectionAttempts: 0,
+                bruteForceAttempts: 0,
+                rateLimitHits: 0
+              }}
+              onThreatDetected={(event) => console.log('Security threat detected:', event)}
             />
           </div>
         );
@@ -167,7 +184,6 @@ const Dashboard: React.FC = () => {
             <h1 className="text-3xl font-bold text-gray-900 mb-8">Accessibility Auditor</h1>
             <AdvancedAccessibilityAuditor 
               onAuditComplete={(results) => console.log('Accessibility audit complete:', results)}
-              showDashboard={true}
             />
           </div>
         );
@@ -232,11 +248,7 @@ const Dashboard: React.FC = () => {
                 </button>
               </div>
             </div>
-            <PerformanceDashboard 
-              refreshInterval={isRealTime ? 5000 : 30000}
-              enableAlerts={true}
-              onAlert={(alert) => console.log('Performance alert:', alert)}
-            />
+            <PerformanceDashboard />
           </div>
         );
       case 'new-security':
@@ -369,13 +381,7 @@ const Dashboard: React.FC = () => {
                 </button>
               </div>
             </div>
-            <AdvancedPerformanceOptimizer 
-              enableRealTime={true}
-              refreshInterval={1000}
-              enableAutoOptimization={true}
-              onOptimization={(rule) => console.log('Optimization applied:', rule)}
-              onPerformanceChange={(metrics) => console.log('Performance changed:', metrics)}
-            />
+            <AdvancedPerformanceOptimizer />
           </div>
         );
       case 'analytics-insights':
@@ -393,7 +399,44 @@ const Dashboard: React.FC = () => {
               </div>
             </div>
             <AdvancedAnalyticsInsights 
-              data={sampleAnalyticsData}
+              data={{
+                pageViews: 125000,
+                uniqueVisitors: 45000,
+                bounceRate: 35.2,
+                avgSessionDuration: 180,
+                conversionRate: 12.5,
+                topPages: [
+                  { page: '/', views: 25000, bounceRate: 28.5, avgTime: 120 },
+                  { page: '/services', views: 18000, bounceRate: 32.1, avgTime: 95 },
+                  { page: '/blog', views: 15000, bounceRate: 45.2, avgTime: 180 }
+                ],
+                trafficSources: [
+                  { source: 'Organic Search', visitors: 25000, percentage: 55.6, conversionRate: 12.5 },
+                  { source: 'Direct', visitors: 12000, percentage: 26.7, conversionRate: 15.2 },
+                  { source: 'Social Media', visitors: 8000, percentage: 17.8, conversionRate: 8.9 }
+                ],
+                deviceTypes: [
+                  { device: 'Desktop', visitors: 25000, percentage: 55.6 },
+                  { device: 'Mobile', visitors: 15000, percentage: 33.3 },
+                  { device: 'Tablet', visitors: 5000, percentage: 11.1 }
+                ],
+                userBehavior: [
+                  { action: 'page_view', count: 1250, trend: 'up' },
+                  { action: 'click', count: 890, trend: 'stable' },
+                  { action: 'scroll', count: 2100, trend: 'down' }
+                ],
+                performance: {
+                  pageLoadTime: 1.2,
+                  firstContentfulPaint: 0.8,
+                  largestContentfulPaint: 1.5,
+                  cumulativeLayoutShift: 0.1,
+                  firstInputDelay: 50
+                },
+                realTime: [
+                  { activeUsers: 45, currentPage: '/', location: 'US', device: 'desktop' },
+                  { activeUsers: 23, currentPage: '/services', location: 'CA', device: 'mobile' }
+                ]
+              }}
               enableRealTime={true}
               refreshInterval={30000}
               onInsightAction={(insight) => console.log('Insight action:', insight)}
