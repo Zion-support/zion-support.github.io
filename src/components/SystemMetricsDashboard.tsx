@@ -12,9 +12,9 @@ export const SystemMetricsDashboard: React.FC<SystemMetricsDashboardProps> = ({
   isVisible = false,
   onClose
 }) => {
-  const [performanceMetrics, setPerformanceMetrics] = useState<any>(null);
-  const [accessibilityMetrics, setAccessibilityMetrics] = useState<any>(null);
-  const [securityMetrics, setSecurityMetrics] = useState<any>(null);
+  const [performanceMetrics, setPerformanceMetrics] = useState<Record<string, number> | null>(null);
+  const [accessibilityMetrics, setAccessibilityMetrics] = useState<Record<string, number> | null>(null);
+  const [securityMetrics, setSecurityMetrics] = useState<Record<string, number> | null>(null);
   const [activeTab, setActiveTab] = useState<'performance' | 'accessibility' | 'security'>('performance');
 
   useEffect(() => {

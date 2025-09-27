@@ -464,7 +464,7 @@ class AdvancedAccessibilityManager {
   private announcePageLoad(): void {
     // Wait for page to be fully loaded
     setTimeout(() => {
-      const title = document.title;
+      // const title = document.title;
       const heading = document.querySelector('h1')?.textContent || 'Page';
       this.announce(`Page loaded: ${heading}`);
     }, 1000);

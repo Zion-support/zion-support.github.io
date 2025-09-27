@@ -252,7 +252,7 @@ class SecurityEnhancer {
         }
         
         if (csrfToken) {
-          (init.headers as any)['X-CSRF-Token'] = csrfToken;
+          (init.headers as Record<string, string>)['X-CSRF-Token'] = csrfToken;
         }
       }
       
@@ -347,7 +347,7 @@ class SecurityEnhancer {
     let clickCount = 0;
     let lastClickTime = 0;
     
-    document.addEventListener('click', (event) => {
+    document.addEventListener('click', () => {
       const now = Date.now();
       
       if (now - lastClickTime < 100) {
@@ -364,14 +364,15 @@ class SecurityEnhancer {
     });
 
     // Monitor for console access attempts
-    const originalConsole = console;
-    Object.keys(console).forEach(key => {
-      const originalMethod = (console as any)[key];
-      (console as any)[key] = (...args: any[]) => {
-        this.recordSecurityEvent('suspicious', `Console access: ${key}`, 'low', 'console');
-        return originalMethod.apply(console, args);
-      };
-    });
+    // Note: Console monitoring is disabled to avoid infinite loops
+    // const originalConsole = console;
+    // Object.keys(console).forEach(key => {
+    //   const originalMethod = (console as any)[key];
+    //   (console as any)[key] = (...args: any[]) => {
+    //     this.recordSecurityEvent('suspicious', `Console access: ${key}`, 'low', 'console');
+    //     return originalMethod.apply(console, args);
+    //   };
+    // });
   }
 
   private monitorNetworkRequests(): void {
@@ -534,4 +535,5 @@ Security Report:
   }
 }
 
+export { SecurityEnhancer };
 export default SecurityEnhancer;

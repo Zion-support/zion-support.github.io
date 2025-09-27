@@ -275,7 +275,7 @@ export default function App(): React.JSX.Element {
         clicks,
         userAgent: navigator.userAgent,
         viewport: `${window.innerWidth}x${window.innerHeight}`,
-        connection: (navigator as any).connection?.effectiveType || 'unknown'
+        connection: (navigator as Navigator & { connection?: { effectiveType?: string } }).connection?.effectiveType || 'unknown'
       });
     };
 
