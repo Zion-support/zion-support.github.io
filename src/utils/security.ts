@@ -53,9 +53,9 @@ export class SecurityManager {
     // Check if the page is being framed
     if (window.top !== window.self) {
       // Allow framing from same origin
-      if (window.top.location.origin !== window.location.origin) {
+      if (window.top && window.top.location.origin !== window.location.origin) {
         // Redirect to prevent clickjacking
-        window.top.location = window.location;
+        window.top.location.href = window.location.href;
       }
     }
   }
@@ -97,8 +97,8 @@ export class SecurityManager {
 
   public sanitizeHTML(html: string): string {
     // Basic HTML sanitization
-    const allowedTags = ['b', 'i', 'em', 'strong', 'p', 'br', 'a'];
-    const allowedAttributes = ['href', 'title'];
+    // const allowedTags = ['b', 'i', 'em', 'strong', 'p', 'br', 'a'];
+    // const allowedAttributes = ['href', 'title'];
     
     // Remove script tags and dangerous attributes
     let sanitized = html

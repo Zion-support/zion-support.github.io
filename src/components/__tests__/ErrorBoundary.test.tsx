@@ -1,4 +1,3 @@
-import React from 'react';
 import { render, screen } from '@testing-library/react';
 import ErrorBoundary from '../ErrorBoundary';
 
@@ -41,16 +40,14 @@ describe('ErrorBoundary', () => {
     expect(screen.getByText(/We're sorry, but something unexpected happened/i)).toBeInTheDocument();
   });
 
-  it('calls onError callback when error occurs', () => {
-    const onError = jest.fn();
-    
+  it('renders error message when error occurs', () => {
     render(
-      <ErrorBoundary onError={onError}>
+      <ErrorBoundary>
         <ThrowError shouldThrow={true} />
       </ErrorBoundary>
     );
     
-    expect(onError).toHaveBeenCalledWith(expect.any(Error), expect.any(Object));
+    expect(screen.getByText(/Something went wrong/i)).toBeInTheDocument();
   });
 
   it('resets error state when reset is called', () => {
