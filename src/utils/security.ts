@@ -1,10 +1,17 @@
-/**
- * Security utilities for protecting against common web vulnerabilities
- */
-
+// Enhanced security utilities
 export class SecurityManager {
   private static instance: SecurityManager;
-  private cspViolations: string[] = [];
+  private cspViolations: Array<{
+    timestamp: number;
+    violation: string;
+    source: string;
+    blockedURI: string;
+  }> = [];
+  private suspiciousActivities: Array<{
+    timestamp: number;
+    type: string;
+    details: Record<string, unknown>;
+  }> = [];
 
   public static getInstance(): SecurityManager {
     if (!SecurityManager.instance) {
@@ -14,136 +21,265 @@ export class SecurityManager {
   }
 
   public initialize(): void {
-    this.setupCSPReporting();
+    this.setupCSPViolationReporting();
     this.setupXSSProtection();
     this.setupClickjackingProtection();
-    this.setupSecureHeaders();
+    this.monitorSuspiciousActivity();
   }
 
-  private setupCSPReporting(): void {
+  private setupCSPViolationReporting(): void {
     // Report CSP violations
     document.addEventListener('securitypolicyviolation', (event) => {
-      const violation = {
-        blockedURI: event.blockedURI,
-        violatedDirective: event.violatedDirective,
-        originalPolicy: event.originalPolicy,
-        timestamp: new Date().toISOString()
-      };
-      
-      this.cspViolations.push(JSON.stringify(violation));
-      
-      // Send violation to server
-      this.reportCSPViolation(violation);
+      this.cspViolations.push({
+        timestamp: Date.now(),
+        violation: event.violatedDirective,
+        source: event.sourceFile || 'unknown',
+        blockedURI: event.blockedURI || 'unknown'
+      });
+
+      // Log in development
+      if (process.env.NODE_ENV === 'development') {
+        console.warn('CSP Violation:', {
+          violatedDirective: event.violatedDirective,
+          source: event.sourceFile,
+          blockedURI: event.blockedURI
+        });
+      }
+
+      // Report to analytics in production
+      if (process.env.NODE_ENV === 'production') {
+        this.reportSecurityEvent('csp_violation', {
+          violatedDirective: event.violatedDirective,
+          source: event.sourceFile,
+          blockedURI: event.blockedURI
+        });
+      }
     });
   }
 
   private setupXSSProtection(): void {
-    // Sanitize user input
-    const sanitizeInput = (input: string): string => {
-      const div = document.createElement('div');
-      div.textContent = input;
-      return div.innerHTML;
-    };
+    // Monitor for potential XSS attempts
+    const originalCreateElement = document.createElement;
+    document.createElement = function(tagName: string) {
+      const element = originalCreateElement.call(this, tagName);
+      
+      // Check for suspicious attributes
+      const suspiciousPatterns = [
+        /javascript:/i,
+        /data:text\/html/i,
+        /vbscript:/i,
+        /on\w+\s*=/i
+      ];
 
-    // Add to global scope for use throughout the app
-    (window as typeof window & { sanitizeInput: (input: string) => string }).sanitizeInput = sanitizeInput;
+      // Monitor attribute changes
+      const observer = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
+          if (mutation.type === 'attributes') {
+            const attrValue = element.getAttribute(mutation.attributeName!);
+            if (attrValue && suspiciousPatterns.some(pattern => pattern.test(attrValue))) {
+              console.warn('Potential XSS attempt detected:', {
+                tagName: element.tagName,
+                attribute: mutation.attributeName,
+                value: attrValue
+              });
+            }
+          }
+        });
+      });
+
+      observer.observe(element, { attributes: true });
+      
+      return element;
+    };
   }
 
   private setupClickjackingProtection(): void {
-    // Check if the page is being framed
+    // Prevent clickjacking by checking if the page is in a frame
     if (window.top !== window.self) {
-      // Allow framing from same origin
-      if (window.top && window.top.location.origin !== window.location.origin) {
+      // Page is in a frame - check if it's allowed
+      const allowedFraming = window.location.hostname === 'ziontechgroup.com' || 
+                            window.location.hostname === 'app.ziontechgroup.com';
+      
+      if (!allowedFraming) {
         // Redirect to prevent clickjacking
-        window.top.location.href = window.location.href;
+        if (window.top) {
+          window.top.location.href = window.location.href;
+        }
       }
     }
   }
 
-  private setupSecureHeaders(): void {
-    // Add security headers via meta tags
-    const securityHeaders = [
-      { name: 'X-Content-Type-Options', content: 'nosniff' },
-      { name: 'X-Frame-Options', content: 'DENY' },
-      { name: 'X-XSS-Protection', content: '1; mode=block' },
-      { name: 'Referrer-Policy', content: 'strict-origin-when-cross-origin' },
-      { name: 'Permissions-Policy', content: 'camera=(), microphone=(), geolocation=()' }
-    ];
+  private monitorSuspiciousActivity(): void {
+    // Monitor for suspicious user behavior
+    let rapidClicks = 0;
+    let lastClickTime = 0;
 
-    securityHeaders.forEach(header => {
-      let meta = document.querySelector(`meta[http-equiv="${header.name}"]`) as HTMLMetaElement;
-      if (!meta) {
-        meta = document.createElement('meta');
-        meta.setAttribute('http-equiv', header.name);
-        document.head.appendChild(meta);
+    document.addEventListener('click', (event) => {
+      const now = Date.now();
+      
+      // Detect rapid clicking (potential bot behavior)
+      if (now - lastClickTime < 100) {
+        rapidClicks++;
+        if (rapidClicks > 10) {
+          this.suspiciousActivities.push({
+            timestamp: now,
+            type: 'rapid_clicking',
+            details: { count: rapidClicks, target: event.target }
+          });
+        }
+      } else {
+        rapidClicks = 0;
       }
-      meta.content = header.content;
+      
+      lastClickTime = now;
+    });
+
+    // Monitor for suspicious navigation patterns
+    let navigationCount = 0;
+    const navigationStart = Date.now();
+
+    window.addEventListener('beforeunload', () => {
+      const timeOnPage = Date.now() - navigationStart;
+      if (timeOnPage < 1000 && navigationCount > 5) {
+        this.suspiciousActivities.push({
+          timestamp: Date.now(),
+          type: 'rapid_navigation',
+          details: { count: navigationCount, timeOnPage }
+        });
+      }
     });
   }
 
-  private async reportCSPViolation(violation: { blockedURI: string; violatedDirective: string; originalPolicy: string; timestamp: string }): Promise<void> {
-    try {
-      await fetch('/api/security/csp-violation', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(violation),
-      });
-    } catch (error) {
-      console.error('Failed to report CSP violation:', error);
+  public sanitizeInput(input: string): string {
+    // Basic input sanitization
+    return input
+      .replace(/[<>]/g, '') // Remove potential HTML tags
+      .replace(/javascript:/gi, '') // Remove javascript: protocols
+      .replace(/on\w+\s*=/gi, '') // Remove event handlers
+      .trim();
+  }
+
+  public validateInput(input: string, type: 'email' | 'url' | 'text'): boolean {
+    switch (type) {
+      case 'email':
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input);
+      case 'url':
+        try {
+          new URL(input);
+          return true;
+        } catch {
+          return false;
+        }
+      case 'text':
+        return input.length > 0 && input.length < 1000;
+      default:
+        return false;
     }
   }
 
-  public sanitizeHTML(html: string): string {
-    // Basic HTML sanitization
-    // const allowedTags = ['b', 'i', 'em', 'strong', 'p', 'br', 'a'];
-    // const allowedAttributes = ['href', 'title'];
-    
-    // Remove script tags and dangerous attributes
-    let sanitized = html
-      .replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '')
-      .replace(/on\w+="[^"]*"/gi, '')
-      .replace(/javascript:/gi, '');
-    
-    return sanitized;
-  }
-
-  public validateInput(input: string, type: 'email' | 'url' | 'phone' | 'text'): boolean {
-    const patterns = {
-      email: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-      url: /^https?:\/\/.+/,
-      phone: /^\+?[\d\s\-()]+$/,
-      text: /^[a-zA-Z0-9\s\-_.,!?]+$/
-    };
-
-    return patterns[type].test(input);
-  }
-
-  public generateSecureToken(length: number = 32): string {
-    const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-    let result = '';
-    const array = new Uint8Array(length);
+  public generateCSRFToken(): string {
+    const array = new Uint8Array(32);
     crypto.getRandomValues(array);
+    return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('');
+  }
+
+  public verifyCSRFToken(token: string, sessionToken: string): boolean {
+    return token === sessionToken;
+  }
+
+  public hashPassword(password: string): Promise<string> {
+    // This would typically use a proper hashing library like bcrypt
+    // For demonstration, we'll use a simple hash
+    const encoder = new TextEncoder();
+    const data = encoder.encode(password + 'salt');
+    return crypto.subtle.digest('SHA-256', data).then(hash => {
+      return Array.from(new Uint8Array(hash))
+        .map(b => b.toString(16).padStart(2, '0'))
+        .join('');
+    });
+  }
+
+  public rateLimitCheck(identifier: string, maxRequests: number, windowMs: number): boolean {
+    const now = Date.now();
+    const key = `rate_limit_${identifier}`;
     
-    for (let i = 0; i < length; i++) {
-      result += chars[array[i] % chars.length];
+    let requests = JSON.parse(localStorage.getItem(key) || '[]') as number[];
+    requests = requests.filter(time => now - time < windowMs);
+    
+    if (requests.length >= maxRequests) {
+      return false;
     }
     
-    return result;
+    requests.push(now);
+    localStorage.setItem(key, JSON.stringify(requests));
+    return true;
   }
 
-  public hashString(input: string): Promise<string> {
-    return crypto.subtle.digest('SHA-256', new TextEncoder().encode(input))
-      .then(hashBuffer => {
-        const hashArray = Array.from(new Uint8Array(hashBuffer));
-        return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+  private reportSecurityEvent(type: string, details: Record<string, unknown>): void {
+    // In production, this would send data to a security monitoring service
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'security_event', {
+        event_category: 'Security',
+        event_label: type,
+        custom_map: details
       });
+    }
   }
 
-  public getCSPViolations(): string[] {
-    return [...this.cspViolations];
+  public getSecurityReport(): {
+    cspViolations: number;
+    suspiciousActivities: number;
+    recentViolations: Array<{ timestamp: number; type: string; details: Record<string, unknown> }>;
+  } {
+    const now = Date.now();
+    const last24Hours = 24 * 60 * 60 * 1000;
+    
+    const recentViolations = this.cspViolations.filter(v => now - v.timestamp < last24Hours);
+    const recentActivities = this.suspiciousActivities.filter(a => now - a.timestamp < last24Hours);
+    
+    return {
+      cspViolations: recentViolations.length,
+      suspiciousActivities: recentActivities.length,
+      recentViolations: recentViolations.slice(-10).map(v => ({ 
+        timestamp: v.timestamp, 
+        type: v.violation, 
+        details: { source: v.source, blockedURI: v.blockedURI } 
+      })) // Last 10 violations
+    };
+  }
+
+  public cleanup(): void {
+    this.cspViolations = [];
+    this.suspiciousActivities = [];
   }
 }
+
+// Content Security Policy configuration
+export const generateCSPHeader = (): string => {
+  return [
+    "default-src 'self'",
+    "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com",
+    "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
+    "font-src 'self' https://fonts.gstatic.com",
+    "img-src 'self' data: https:",
+    "connect-src 'self' https://www.google-analytics.com",
+    "frame-ancestors 'self'",
+    "base-uri 'self'",
+    "form-action 'self'",
+    "object-src 'none'",
+    "media-src 'self'",
+    "worker-src 'self'"
+  ].join('; ');
+};
+
+// Security headers configuration
+export const securityHeaders = {
+  'Content-Security-Policy': generateCSPHeader(),
+  'X-Frame-Options': 'SAMEORIGIN',
+  'X-Content-Type-Options': 'nosniff',
+  'X-XSS-Protection': '1; mode=block',
+  'Referrer-Policy': 'strict-origin-when-cross-origin',
+  'Permissions-Policy': 'geolocation=(), microphone=(), camera=()'
+};
 
 export const securityManager = SecurityManager.getInstance();

@@ -309,7 +309,7 @@ export class AccessibilityManager {
     if (event.key === 'Tab') {
       this.handleTabNavigation(event);
     } else if (event.key === 'Escape') {
-      this.handleEscapeKey(event);
+      this.handleEscapeKey();
     } else if (event.key === 'Enter' || event.key === ' ') {
       this.handleActivation(event);
     }
