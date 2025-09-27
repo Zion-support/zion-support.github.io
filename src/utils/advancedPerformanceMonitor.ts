@@ -140,7 +140,7 @@ class AdvancedPerformanceMonitor {
         metrics.firstInputDelay = entry.startTime;
         break;
       case 'layout-shift':
-        metrics.cumulativeLayoutShift += (entry as any).value;
+        metrics.cumulativeLayoutShift += (entry as PerformanceEntry & { value: number }).value;
         break;
     }
   }
@@ -164,7 +164,7 @@ class AdvancedPerformanceMonitor {
   private observeMemoryUsage(): void {
     const checkMemory = () => {
       if ('memory' in performance) {
-        const memory = (performance as any).memory;
+        const memory = (performance as Performance & { memory: { usedJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
         const metrics = this.getCurrentMetrics();
         metrics.memoryUsage = memory.usedJSHeapSize / memory.jsHeapSizeLimit;
       }
@@ -217,8 +217,8 @@ class AdvancedPerformanceMonitor {
 
   private sendMetricsToAnalytics(metrics: PerformanceMetrics): void {
     // Send to analytics service
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'performance_metrics', {
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      (window as { gtag: (...args: unknown[]) => void }).gtag('event', 'performance_metrics', {
         load_time: metrics.loadTime,
         fcp: metrics.firstContentfulPaint,
         lcp: metrics.largestContentfulPaint,

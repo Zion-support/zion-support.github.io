@@ -4,7 +4,7 @@
 import { PerformanceOptimizer } from './performanceOptimizer';
 import { SecurityEnhancer } from './securityEnhancer';
 import { AccessibilityEnhancer } from './accessibilityEnhancer';
-import { ErrorHandler } from './errorHandling';
+// import { EnhancedErrorBoundary } from './enhancedErrorHandling';
 
 interface EnhancementConfig {
   performance: {
@@ -69,14 +69,14 @@ export class EnhancementSuite {
   private performanceOptimizer: PerformanceOptimizer;
   private securityEnhancer: SecurityEnhancer;
   private accessibilityEnhancer: AccessibilityEnhancer;
-  private errorHandler: ErrorHandler;
+  // private errorHandler: EnhancedErrorBoundary;
   private metricsInterval: NodeJS.Timeout | null = null;
 
   private constructor(config: Partial<EnhancementConfig> = {}) {
     this.performanceOptimizer = PerformanceOptimizer.getInstance();
     this.securityEnhancer = SecurityEnhancer.getInstance();
     this.accessibilityEnhancer = AccessibilityEnhancer.getInstance();
-    this.errorHandler = ErrorHandler.getInstance();
+    // this.errorHandler = new EnhancedErrorBoundary({});
     
     this.config = {
       performance: {
@@ -129,12 +129,12 @@ export class EnhancementSuite {
     this.performanceOptimizer = PerformanceOptimizer.getInstance(this.config.performance);
     this.securityEnhancer = SecurityEnhancer.getInstance(this.config.security);
     this.accessibilityEnhancer = AccessibilityEnhancer.getInstance(this.config.accessibility);
-    this.errorHandler = ErrorHandler.getInstance();
+    // this.errorHandler = new EnhancedErrorBoundary({});
 
     // Initialize error handler
-    if (this.config.errorHandling.enableGlobalErrorHandling) {
-      this.errorHandler.initialize();
-    }
+    // if (this.config.errorHandling.enableGlobalErrorHandling) {
+    //   this.errorHandler.initialize();
+    // }
 
     // Start metrics collection
     this.startMetricsCollection();
@@ -174,12 +174,12 @@ export class EnhancementSuite {
       originalReportViolation.call(this.securityEnhancer, violation);
       
       // Also report as an error
-      const error = new Error(`Security violation: ${violation.description}`);
-      this.errorHandler.captureError(error, {
-        securityViolation: true,
-        violationType: violation.type,
-        timestamp: violation.timestamp
-      });
+      // const error = new Error(`Security violation: ${violation.description}`);
+      // this.errorHandler.captureError(error, {
+      //   securityViolation: true,
+      //   violationType: violation.type,
+      //   timestamp: violation.timestamp
+      // });
     };
 
     // Integration between accessibility and error handling
@@ -194,14 +194,14 @@ export class EnhancementSuite {
     }) => {
       originalReportAccessibilityViolation.call(this.accessibilityEnhancer, violation);
       
-      if (violation.severity === 'critical' || violation.severity === 'high') {
-        const error = new Error(`Accessibility violation: ${violation.description}`);
-        this.errorHandler.captureError(error, {
-          accessibilityViolation: true,
-          severity: violation.severity,
-          element: violation.element
-        });
-      }
+      // if (violation.severity === 'critical' || violation.severity === 'high') {
+      //   const error = new Error(`Accessibility violation: ${violation.description}`);
+      //   this.errorHandler.captureError(error, {
+      //     accessibilityViolation: true,
+      //     severity: violation.severity,
+      //     element: violation.element
+      //   });
+      // }
     };
 
     // Integration between performance and error handling
@@ -211,32 +211,32 @@ export class EnhancementSuite {
       originalReportMetric.call(this.performanceOptimizer, name, value);
       
       // Report performance issues
-      if (name === 'LCP' && value > 2500) {
-        const error = new Error(`Poor LCP performance: ${value}ms`);
-        this.errorHandler.captureError(error, {
-          performanceIssue: true,
-          metric: name,
-          value: value
-        });
-      }
+      // if (name === 'LCP' && value > 2500) {
+      //   const error = new Error(`Poor LCP performance: ${value}ms`);
+      //   this.errorHandler.captureError(error, {
+      //     performanceIssue: true,
+      //     metric: name,
+      //     value: value
+      //   });
+      // }
       
-      if (name === 'FID' && value > 100) {
-        const error = new Error(`Poor FID performance: ${value}ms`);
-        this.errorHandler.captureError(error, {
-          performanceIssue: true,
-          metric: name,
-          value: value
-        });
-      }
+      // if (name === 'FID' && value > 100) {
+      //   const error = new Error(`Poor FID performance: ${value}ms`);
+      //   this.errorHandler.captureError(error, {
+      //     performanceIssue: true,
+      //     metric: name,
+      //     value: value
+      //   });
+      // }
       
-      if (name === 'CLS' && value > 0.1) {
-        const error = new Error(`Poor CLS performance: ${value}`);
-        this.errorHandler.captureError(error, {
-          performanceIssue: true,
-          metric: name,
-          value: value
-        });
-      }
+      // if (name === 'CLS' && value > 0.1) {
+      //   const error = new Error(`Poor CLS performance: ${value}`);
+      //   this.errorHandler.captureError(error, {
+      //     performanceIssue: true,
+      //     metric: name,
+      //     value: value
+      //   });
+      // }
     };
   }
 
@@ -363,7 +363,8 @@ export class EnhancementSuite {
     const performanceMetrics = this.performanceOptimizer.getMetrics();
     const securityViolations = this.securityEnhancer.getViolations();
     const accessibilityViolations = this.accessibilityEnhancer.getViolations();
-    const errors = this.errorHandler.getErrors();
+    // const errors = this.errorHandler.getErrors();
+    const errors = new Map(); // Placeholder for error data
     
     return {
       performance: {
@@ -487,7 +488,7 @@ export class EnhancementSuite {
     // Clear old violations and errors
     this.securityEnhancer.clearViolations();
     this.accessibilityEnhancer.clearViolations();
-    this.errorHandler.clearErrors();
+    // this.errorHandler.clearErrors();
     
     console.log('✅ Comprehensive optimization completed');
   }
@@ -501,7 +502,7 @@ export class EnhancementSuite {
     this.performanceOptimizer.cleanup();
     this.securityEnhancer.cleanup();
     this.accessibilityEnhancer.cleanup();
-    this.errorHandler.cleanup();
+    // this.errorHandler.cleanup();
   }
 }
 

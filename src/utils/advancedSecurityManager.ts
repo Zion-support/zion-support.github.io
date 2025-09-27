@@ -10,7 +10,7 @@ interface SecurityEvent {
   timestamp: number;
   userAgent: string;
   url: string;
-  metadata?: Record<string, any>;
+  metadata?: Record<string, unknown>;
 }
 
 interface SecurityConfig {
@@ -54,7 +54,15 @@ class AdvancedSecurityManager {
     this.setupSecurityHeaders();
   }
 
-  public getSecurityReport(): any {
+  public getSecurityReport(): {
+    totalEvents: number;
+    criticalEvents: number;
+    highEvents: number;
+    mediumEvents: number;
+    lowEvents: number;
+    lastEvent: Date | null;
+    securityScore: number;
+  } {
     const criticalEvents = this.events.filter(e => e.severity === 'critical');
     const highEvents = this.events.filter(e => e.severity === 'high');
     
@@ -142,7 +150,7 @@ class AdvancedSecurityManager {
     }
   }
 
-  private handleBeforeUnload(event: BeforeUnloadEvent): void {
+  private handleBeforeUnload(): void {
     this.logEvent('page_unload', 'info', 'Page unload detected');
   }
 
@@ -204,7 +212,7 @@ class AdvancedSecurityManager {
     }
   }
 
-  private logEvent(type: string, severity: SecurityEvent['severity'], message: string, metadata?: Record<string, any>): void {
+  private logEvent(type: string, severity: SecurityEvent['severity'], message: string, metadata?: Record<string, unknown>): void {
     const event: SecurityEvent = {
       type,
       severity,
