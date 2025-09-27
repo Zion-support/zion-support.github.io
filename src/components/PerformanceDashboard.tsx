@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { BarChart3, Cpu, HardDrive, Network, Zap } from 'lucide-react';
+import { BarChart3, Cpu, HardDrive, Network, Zap, Trash2, Download } from 'lucide-react';
+import { serviceWorkerPerformanceMonitor, ServiceWorkerMetrics } from '../utils/serviceWorkerPerformance';
 
 interface PerformanceMetrics {
   loadTime: number;
@@ -10,6 +11,8 @@ interface PerformanceMetrics {
   cacheHitRate: number;
   bundleSize: number;
   lighthouseScore: number;
+  swCacheSize: number;
+  offlineTime: number;
 }
 
 export const PerformanceDashboard: React.FC = () => {
@@ -21,27 +24,42 @@ export const PerformanceDashboard: React.FC = () => {
     networkRequests: 0,
     cacheHitRate: 0,
     bundleSize: 0,
-    lighthouseScore: 0
+    lighthouseScore: 0,
+    swCacheSize: 0,
+    offlineTime: 0
   });
 
   useEffect(() => {
-    // Simulate performance monitoring
+    // Subscribe to service worker performance metrics
+    const unsubscribe = serviceWorkerPerformanceMonitor.subscribe((swMetrics: ServiceWorkerMetrics) => {
+      setMetrics(prev => ({
+        ...prev,
+        swCacheSize: swMetrics.cacheSize,
+        offlineTime: swMetrics.offlineTime,
+        cacheHitRate: swMetrics.cacheHitRate,
+        networkRequests: swMetrics.networkRequests,
+        loadTime: swMetrics.loadTime
+      }));
+    });
+
+    // Simulate other performance metrics
     const updateMetrics = () => {
-      setMetrics({
-        loadTime: Math.random() * 2000 + 500,
+      setMetrics(prev => ({
+        ...prev,
         renderTime: Math.random() * 100 + 10,
         memoryUsage: Math.random() * 50 + 10,
-        networkRequests: Math.floor(Math.random() * 20) + 5,
-        cacheHitRate: Math.random() * 30 + 70,
         bundleSize: Math.random() * 500 + 200,
         lighthouseScore: Math.random() * 20 + 80
-      });
+      }));
     };
 
     updateMetrics();
     const interval = setInterval(updateMetrics, 5000);
 
-    return () => clearInterval(interval);
+    return () => {
+      clearInterval(interval);
+      unsubscribe();
+    };
   }, []);
 
   const getScoreColor = (score: number) => {
@@ -159,9 +177,56 @@ export const PerformanceDashboard: React.FC = () => {
                 </div>
               </div>
 
+              {/* Service Worker Cache */}
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-2">
+                  <HardDrive className="w-4 h-4 text-indigo-500" />
+                  <span className="text-sm text-gray-600">SW Cache</span>
+                </div>
+                <span className="text-sm font-medium">
+                  {metrics.swCacheSize} items
+                </span>
+              </div>
+
+              {/* Offline Time */}
+              {metrics.offlineTime > 0 && (
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-2">
+                    <Network className="w-4 h-4 text-red-500" />
+                    <span className="text-sm text-gray-600">Offline</span>
+                  </div>
+                  <span className="text-sm font-medium">
+                    {(metrics.offlineTime / 1000).toFixed(1)}s
+                  </span>
+                </div>
+              )}
+
               {/* Bundle Size */}
               <div className="text-xs text-gray-500 pt-2 border-t">
                 Bundle Size: {metrics.bundleSize.toFixed(0)}KB
+              </div>
+
+              {/* Action Buttons */}
+              <div className="flex gap-2 pt-2">
+                <button
+                  onClick={() => serviceWorkerPerformanceMonitor.clearCache()}
+                  className="flex-1 bg-red-100 hover:bg-red-200 text-red-700 text-xs py-2 px-3 rounded transition-colors flex items-center justify-center gap-1"
+                  title="Clear Cache"
+                >
+                  <Trash2 className="w-3 h-3" />
+                  Clear Cache
+                </button>
+                <button
+                  onClick={() => {
+                    const urls = ['/', '/about', '/services', '/contact'];
+                    serviceWorkerPerformanceMonitor.preloadResources(urls);
+                  }}
+                  className="flex-1 bg-blue-100 hover:bg-blue-200 text-blue-700 text-xs py-2 px-3 rounded transition-colors flex items-center justify-center gap-1"
+                  title="Preload Resources"
+                >
+                  <Download className="w-3 h-3" />
+                  Preload
+                </button>
               </div>
             </div>
           </motion.div>
