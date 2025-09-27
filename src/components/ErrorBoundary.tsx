@@ -45,24 +45,16 @@ class ErrorBoundary extends Component<Props, State> {
             </p>
             <div className="space-y-2">
               <button
-                onClick={() = aria-label="window.location.reload()}
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                onClick={() => window.location.reload()}
                 aria-label="Refresh the page to try again"
-              >
-                Refresh Page"> window.location.reload()}
                 className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
-                aria-label="Refresh the page to try again"
               >
                 Refresh Page
               </button>
               <button
-                onClick={() = aria-label="this.setState({ hasError: false })}
-                className="w-full bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
+                onClick={() => this.setState({ hasError: false })}
                 aria-label="Try to continue without refreshing"
-              >
-                Try Again"> this.setState({ hasError: false })}
                 className="w-full bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
-                aria-label="Try to continue without refreshing"
               >
                 Try Again
               </button>
