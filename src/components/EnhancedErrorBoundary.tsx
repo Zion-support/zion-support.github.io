@@ -19,7 +19,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     this.state = {
       hasError: false,
       error: null,
-      errorInfo: null,
+      errorInfo: null
     };
   }
 
@@ -27,14 +27,14 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     return {
       hasError: true,
       error,
-      errorInfo: null,
+      errorInfo: null
     };
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
-      errorInfo,
+      errorInfo
     });
 
     // Log error to console in development
@@ -58,22 +58,22 @@ class EnhancedErrorBoundary extends Component<Props, State> {
         fetch('/api/error-reporting', {
           method: 'POST',
           headers: {
-            'Content-Type': 'application/json',
-          },
+            'Content-Type': 'application/json'
+    },
           body: JSON.stringify({
             error: {
               message: error.message,
               stack: error.stack,
-              name: error.name,
-            },
+              name: error.name
+    },
             errorInfo: {
-              componentStack: errorInfo.componentStack,
-            },
+              componentStack: errorInfo.componentStack
+    },
             timestamp: new Date().toISOString(),
             userAgent: navigator.userAgent,
-            url: window.location.href,
-          }),
-        }).catch(console.error);
+            url: window.location.href
+    })
+    }).catch(console.error);
       }
     } catch (e) {
       console.error('Failed to log error to service:', e);
@@ -84,7 +84,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     this.setState({
       hasError: false,
       error: null,
-      errorInfo: null,
+      errorInfo: null
     });
   };
 

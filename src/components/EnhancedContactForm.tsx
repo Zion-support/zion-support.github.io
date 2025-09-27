@@ -202,8 +202,8 @@ export const EnhancedContactForm: React.FC = () => {
 							name="name"
 							value={formData.name}
 							onChange={handleInputChange}
-							className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200 ${
-								errors.name ? 'border-red-300 bg-red-50' : 'border-gray-300'
+							className = {`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200 ${
+								errors.name ? 'border-red-300 bg-red-50' : 'border-gray-300'}
 							}`}
 							placeholder="John Doe"
 						/>
@@ -219,8 +219,8 @@ export const EnhancedContactForm: React.FC = () => {
 							name="email"
 							value={formData.email}
 							onChange={handleInputChange}
-							className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200 ${
-								errors.email ? 'border-red-300 bg-red-50' : 'border-gray-300'
+							className = {`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200 ${
+								errors.email ? 'border-red-300 bg-red-50' : 'border-gray-300'}
 							}`}
 							placeholder="john@company.com"
 						/>
@@ -239,8 +239,8 @@ export const EnhancedContactForm: React.FC = () => {
 							name="company"
 							value={formData.company}
 							onChange={handleInputChange}
-							className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200 ${
-								errors.company ? 'border-red-300 bg-red-50' : 'border-gray-300'
+							className = {`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200 ${
+								errors.company ? 'border-red-300 bg-red-50' : 'border-gray-300'}
 							}`}
 							placeholder="Your Company"
 						/>
@@ -273,8 +273,8 @@ export const EnhancedContactForm: React.FC = () => {
 							name="service"
 							value={formData.service}
 							onChange={handleInputChange}
-							className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200 ${
-								errors.service ? 'border-red-300 bg-red-50' : 'border-gray-300'
+							className = {`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200 ${
+								errors.service ? 'border-red-300 bg-red-50' : 'border-gray-300'}
 							}`}
 						>
 							<option value="">Select a service</option>
@@ -295,8 +295,8 @@ export const EnhancedContactForm: React.FC = () => {
 							name="budget"
 							value={formData.budget}
 							onChange={handleInputChange}
-							className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200 ${
-								errors.budget ? 'border-red-300 bg-red-50' : 'border-gray-300'
+							className = {`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200 ${
+								errors.budget ? 'border-red-300 bg-red-50' : 'border-gray-300'}
 							}`}
 						>
 							<option value="">Select budget</option>
@@ -317,8 +317,8 @@ export const EnhancedContactForm: React.FC = () => {
 							name="timeline"
 							value={formData.timeline}
 							onChange={handleInputChange}
-							className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200 ${
-								errors.timeline ? 'border-red-300 bg-red-50' : 'border-gray-300'
+							className = {`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200 ${
+								errors.timeline ? 'border-red-300 bg-red-50' : 'border-gray-300'}
 							}`}
 						>
 							<option value="">Select timeline</option>
@@ -342,8 +342,8 @@ export const EnhancedContactForm: React.FC = () => {
 						value={formData.message}
 						onChange={handleInputChange}
 						rows={6}
-						className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200 resize-none ${
-							errors.message ? 'border-red-300 bg-red-50' : 'border-gray-300'
+						className = {`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200 resize-none ${
+							errors.message ? 'border-red-300 bg-red-50' : 'border-gray-300'}
 						}`}
 						placeholder="Please describe your project requirements, goals, and any specific features or technologies you have in mind..."
 					/>
