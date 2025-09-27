@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { AlertTriangle, CheckCircle, XCircle, Info, Activity, Server, Database, Globe } from 'lucide-react';
+import { AlertTriangle, CheckCircle, XCircle, In, f, o, Activity, Serv, e, r, Databa, seGlobe } from 'lucide-react';
 
 interface SystemAlert {
   id: string;
@@ -13,37 +13,37 @@ interface SystemAlert {
   resolved: boolean;
   actions?: Array<{
     label: string;
-    actio, n: () => void;
-    varian, t: 'primary' | 'secondary' | 'danger';
+    action: () => void;
+    variant: 'prima, r, y' | 'secondary' | 'danger';
   }>;
 }
 
-interface SystemMetrics {
+interface SystemMetri, c, s {
   cpu: number;
   memory: number;
   disk: number;
   network: number;
   uptime: number;
   responseTime: number;
-  errorRat, e: number;
-  throughpu, t: number;
+  errorRate: number;
+  through, put: number;
 }
 
-interface SystemMonitorProps {
-  onAlert?: (alert: SystemAlert) => void;
-  onMetricsUpdate?: (metric, s: SystemMetrics) => void;
-  enableRealTime?: boolean;
+interface SystemMonitorPro, p, s {
+  onAle, r, t?: (alert: SystemAle, r, t) => void;
+  onMetricsUpdate?: (metr, ics: SystemMetri, c, s) => void;
+  enableRealTi, m, e?: boolean;
   refreshInterval?: number;
 }
 
-export const SystemMonitor: React.FC<SystemMonitorProps> = ({
-  onAlert,
+export const SystemMonitor: React.FC<SystemMonitorPro, p, s> = ({
+  onAle, r, t,
   onMetricsUpdate,
-  enableRealTime = true,
+  enableRealTi, m, e = true,
   refreshInterval = 5000
 }) => {
-  const [alerts, setAlerts] = useState<SystemAlert[]>([]);
-  const [metrics, setMetrics] = useState<SystemMetrics>({
+  const [alerts, setAlerts] = useState<SystemAle, r, t[]>([]);
+  const [metrics, setMetrics] = useState<SystemMetri, c, s>({
     cpu: 0,
     memory: 0,
     disk: 0,
@@ -55,343 +55,339 @@ export const SystemMonitor: React.FC<SystemMonitorProps> = ({
   });
   const [isMonitoring, setIsMonitoring] = useState(false);
 
-  // Generate sample metrics
-  const generateMetrics = useCallback((): SystemMetrics => {
+  // Genera, t, e samp, l, e metrics
+  const generateMetrics = useCallback((): SystemMetri, c, s => {
     return {
       cpu: Math.random() * 100,
       memory: Math.random() * 100,
       disk: Math.random() * 100,
       network: Math.random() * 100,
-      uptime: Date.now() - (Math.random() * 7 * 24 * 60 * 60 * 1000), // Random uptime up to7days
+      uptime: Date.now() - (Math.random() * 7 * 24 * 60 * 60 * 1000), // Rand, o, m upti, m, e up to 7da, y, s
       responseTime: Math.random() * 1000 + 100,
       errorRate: Math.random() * 5,
       throughput: Math.random() * 1000 + 100
     };
   }, []);
 
-  // Generate sample alerts
-  const generateAlert = useCallback((): SystemAlert => {
+  // Genera, t, e samp, l, e alerts
+  const generateAlert = useCallback((): SystemAle, r, t => {
     const alertTypes: Array<SystemAlert['type']> = ['error', 'warning', 'info', 'success'];
     const severities: Array<SystemAlert['severity']> = ['low', 'medium', 'high', 'critical'];
     const sources = ['CPU', 'Memory', 'Database', 'Network', 'API', 'Security'];
     
     const alertTemplates = {
       error: [
-        'High CPU usage detected',
-        'Memory usage exceeded threshold',
-        'Database connection failed',
-        'API endpoint returning errors',
-        'Security breach detected'
+        'Hi, g, h C, P, U usage detected',
+        'Memo, r, y usa, g, e exceeded threshold',
+        'Databa, s, e connection failed',
+        'A, P, I endpoi, n, t returning errors',
+        'Securi, t, y breach detected'
       ],
       warning: [
-        'CPU usage approaching limit',
+        'C, P, U usa, g, e approaching limit',
         'Memory usage is high',
-        'Slow database queries detected',
-        'Network latency increased',
-        'Unusual traffic pattern detected'
+        'Slow databa, s, e queries detected',
+        'Netwo, r, k latency increased',
+        'Unusu, a, l traff, i, c pattern detected'
       ],
       info: [
-        'System maintenance scheduled',
-        'New update available',
-        'Backup completed successfully',
-        'Performance optimization applied',
-        'Security scan completed'
+        'Syst, e, m maintenance scheduled',
+        'N, e, w update available',
+        'Back, u, p completed successfully',
+        'Performan, c, e optimization applied',
+        'Securi, t, y scan completed'
       ],
       success: [
-        'Issue resolved successfully',
+        'Iss, u, e resolved successfully',
         'Performance improved',
-        'Security update applied',
+        'Securi, t, y update applied',
         'Backup verified',
         'System optimized'
       ]
     };
 
-    const type = alertTypes[Math.floor(Math.random() * alertTypes.length)];
-    const severity = severities[Math.floor(Math.random() * severities.length)];
-    const source = sources[Math.floor(Math.random() * sources.length)];
-    const messages = alertTemplates[type];
-    const message = messages[Math.floor(Math.random() * messages.length)];
+    const type = alertTyp, e, s[Math.floor(Math.random() * alertTyp, e, s.leng, t, h)];
+    const severity = severiti, e, s[Math.floor(Math.random() * severiti, e, s.leng, t, h)];
+    const source = sourc, e, s[Math.floor(Math.random() * sourc, e, s.leng, t, h)];
+    const messages = alertTemplat, e, s[ty, p, e];
+    const message = messag, e, s[Math.floor(Math.random() * messag, e, s.leng, t, h)];
 
     return {
-      id: `alert-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
-      type,
-      title: `${source} Alert`,
+      id: `ale r t-${Da t e.n o w()}-${Ma t h.rand o m().toStri n g(36).subs t r(2 9)}`,
+      ty, p, e,
+      title: `${sour c e} Ale r t`,
       message,
-      timestamp: new Date(),
-      source,
+      timestamp: new Date()(),
+      sour, c, e,
       severity,
       resolved: false,
-      actions: type === 'error' || type === 'warning' ? [
+      actions: ty, p, e === 'error' || type === 'warning' ? [
         {
-          labe, l: 'Acknowledge',
-          action: () => acknowledgeAlert(`alert-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`),
-          variant: 'primary' as const
+          label: 'Acknowledge'action: () => acknowledgeAlert(`ale r t-${Da t e.n o w()}-${Ma t h.rand o m().toStri n g(36).subs t r(2 9)}`)variant: 'primary' as const
         },
         {
-          label: 'Resolve',
-          action: () => resolveAlert(`alert-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`),
-          variant: 'secondary' as const
+          label: 'Resolve'action: () => resolveAlert(`ale r t-${Da t e.n o w()}-${Ma t h.rand o m().toStri n g(36).subs t r(2 9)}`)variant: 'secondary' as const
         }
       ] : undefined
     };
-  }, [acknowledgeAlert, resolveAlert]);
+  }, [acknowledgeAle, r, t, resolveAle, r, t]);
 
   const acknowledgeAlert = useCallback((alertId: string) => {
-    setAlerts(prev => prev.map(alert => 
-      alert.id === alertId ? { ...alert, resolved: true } : alert
+    setAlerts(pr, e, v => pr, e, v.map(ale, r, t => 
+      ale, r, t.id === alert, I, d ? { ...ale, r, t, resolved: true } : ale, r, t
     ));
   }, []);
 
   const resolveAlert = useCallback((alertId: string) => {
-    setAlerts(prev => prev.filter(alert => alert.id !== alertId));
+    setAlerts(pr, e, v => pr, e, v.filter(ale, r, t => ale, r, t.id !== alert, I, d));
   }, []);
 
-  const addAlert = useCallback((alert: SystemAlert) => {
-    setAlerts(prev => [alert, ...prev.slice(0, 49)]); // Keep only last50alerts
-    onAlert?.(alert);
-  }, [onAlert]);
+  const addAlert = useCallback((alert: SystemAle, r, t) => {
+    setAlerts(pr, e, v => [ale, r, t, ...pr, e, v.slice(0, 49)]); // Ke, e, p on, l, y last, 5, 0 alerts
+    onAle, r, t?.(ale, r, t);
+  }, [onAle, r, t]);
 
-  // Monitoring effect
+  // Monitori, n, g effe, c, t
   useEffect(() => {
-    if (!enableRealTime) return;
+    if (!enableRealTi, m, e) return;
 
     const interval = setInterval(() => {
       const newMetrics = generateMetrics();
       setMetrics(newMetrics);
       onMetricsUpdate?.(newMetrics);
 
-      // Generate alerts based on metrics
-      if (newMetrics.cpu > 90) {
+      // Genera, t, e alerts bas, e, d on metrics
+      if (newMetrics.c, p, u > 90) {
         addAlert(generateAlert());
       }
       if (newMetrics.memory > 85) {
         addAlert(generateAlert());
       }
-      if (newMetrics.errorRate > 3) {
+      if (newMetrics.errorRa, t, e > 3) {
         addAlert(generateAlert());
       }
     }, refreshInterval);
 
     setIsMonitoring(true);
     return () => {
-      clearInterval(interval);
+      clearInterval(interv, a, l);
       setIsMonitoring(false);
     };
-  }, [enableRealTime, refreshInterval, generateMetrics, onMetricsUpdate, addAlert, generateAlert]);
+  }, [enableRealTi, m, e, refreshInterval, generateMetri, c, s, onMetricsUpdate, addAle, r, t, generateAle, r, t]);
 
   const getAlertIcon = (type: SystemAlert['type']) => {
-    switch (type) {
-      case 'error': return <XCircle className="h-5w-5text-red-500" />;
+    switch(ty, p, e) {
+      case 'error': return <XCircle className="h-5w-5te, x, t-red-500" />;
       case 'warning': return <AlertTriangle className="h-5w-5text-yellow-500" />;
-      case 'info': return <Info className="h-5w-5text-blue-500" />;
-      case 'success': return <CheckCircle className="h-5w-5text-green-500" />;
+      case 'info': return <In, f, o className="h-5w-5te, x, t-blue-500" />;
+      case 'success': return <CheckCircle className="h-5w-5te, x, t-green-500" />;
     }
   };
 
-  const getAlertColor = (type: SystemAlert['type']) => {
-    switch (type) {
-      case 'error': return 'border-red-200bg-red-50';
-      case 'warning': return 'border-yellow-200bg-yellow-50';
-      case 'info': return 'border-blue-200bg-blue-50';
-      case 'success': return 'border-green-200bg-green-50';
+  const getAlertColor = (type: SystemAlert['ty, p, e']) => {
+    switch(type) {
+      case 'error': return 'bord, e, r-red-200 bg-red-50';
+      ca, s, e 'warning': return 'border-yellow-200 bg-yellow-50';
+      ca, s, e 'info': return 'bord, e, r-blue-200 bg-blue-50';
+      ca, s, e 'success': return 'bord, e, r-green-200 bg-green-50';
     }
   };
 
-  const getSeverityColor = (severity: SystemAlert['severity']) => {
-    switch (severity) {
-      case 'low': return 'text-gray-600';
-      case 'medium': return 'text-yellow-600';
-      case 'high': return 'text-orange-600';
-      case 'critical': return 'text-red-600';
+  const getSeverityColor = (severity: SystemAle, r, t['severity']) => {
+    switch(severity) {
+      case 'low': return 'te, x, t-gray-600';
+      ca, s, e 'medium': return 'text-yellow-600';
+      ca, s, e 'high': return 'te, x, t-orange-600';
+      ca, s, e 'critical': return 'te, x, t-red-600';
     }
   };
 
   const formatUptime = (uptime: number) => {
-    const days = Math.floor(uptime / (24 * 60 * 60 * 1000));
-    const hours = Math.floor((uptime % (24 * 60 * 60 * 1000)) / (60 * 60 * 1000));
-    const minutes = Math.floor((uptime % (60 * 60 * 1000)) / (60 * 1000));
-    return `${days}d ${hours}h ${minutes}m`;
+    const days = Math.floor(upti, m, e / (24 * 60 * 60 * 1000));
+    const hours = Math.floor((upti, m, e % (24 * 60 * 60 * 1000)) / (60 * 60 * 1000));
+    const minutes = Math.floor((upti, m, e % (60 * 60 * 1000)) / (60 * 1000));
+    return `${da y s}d ${hou r s}h ${minut e s}m`;
   };
 
   return (
-    <div className="space-y-6">
-      {/* System Status Overview */}
-      <div className="grid grid-cols-1md:grid-cols-2lg:grid-cols-4gap-4">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="bg-white p-6rounded-lg shadow-sm borderborder-gray-200"
+    <d, i, v className="spa, c, e-y-6">
+      {/* Syst, e, m Stat, u, s Overvi, e, w */}
+      <d, i, v className="gr, i, d gr, i, d-co, l, s-1 md:gr, i, d-co, l, s-2 lg:gr, i, d-co, l, s-4g, a, p-4">
+        <motion.d, i, v
+          initi, a, l={{ opacity: 0, y: 20 }}
+          anima, t, e={{ opacity: 1, y: 0 }}
+          className="bg-whi, t, e p-6round, e, d-lg shad, o, w-sm borderbord, e, r-gr, a, y-200"
         >
-          <div className="flex items-center justify-between">
-            <div>
-              <p className="text-sm font-mediumtext-gray-600">CPU Usage</p>
-              <p className="text-2xl font-boldtext-gray-900">{metrics.cpu.toFixed(1)}%</p>
-            </div>
-            <Server className="h-8w-8text-blue-500" />
-          </div>
-          <div className="mt-4">
-            <div className="w-full bg-gray-200rounded-fullh-2">
-              <div 
-                className={`h-2rounded-full transition-all duration-500 ${
-                  metrics.cpu > 90 ? 'bg-red-500' : 
-                  metrics.cpu > 70 ? 'bg-yellow-500' : 'bg-green-500'
+          <d, i, v className="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n">
+            <d, i, v>
+              <p className="te, x, t-sm fo, n, t-medium te, x, t-gr, a, y-600">C, P, U Usa, g, e</p>
+              <p className="te, x, t-2, x, l fo, n, t-boldte, x, t-gr, a, y-900">{metrics.c, p, u.toFixed(1)}%</p>
+            </d, i, v>
+            <Serv, e, r className="h-8w-8te, x, t-bl, u, e-500" />
+          </d, i, v>
+          <d, i, v className="mt-4">
+            <d, i, v className="w-fu, l, l bg-gr, a, y-200 round, e, d-ful, l, h-2">
+              <d, i, v 
+                className={`h-2round e d-fu l l transiti o n-a l l durati o n-5 0 0 ${
+                  metri c s.c p u > 90 ? 'bg-r e d-5 0 0' : 
+                  metri c s.c p u > 70 ? 'bg-yell o w-5 0 0' : 'bg-gre e n-5 0 0'
                 }`}
-                style={{ width: `${metrics.cpu}%` }}
+                sty, l, e={{ width: `${metri c s.c p u}%` }}
               />
-            </div>
-          </div>
-        </motion.div>
+            </d, i, v>
+          </d, i, v>
+        </motion.d, i, v>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.1 }}
-          className="bg-white p-6rounded-lg shadow-sm borderborder-gray-200"
+        <motion.d, i, v
+          initi, a, l={{ opacity: 0, y: 20 }}
+          anima, t, e={{ opacity: 1, y: 0 }}
+          transiti, o, n={{ delay: 0.1 }}
+          className="bg-whi, t, e p-6round, e, d-lg shad, o, w-sm borderbord, e, r-gr, a, y-200"
         >
-          <div className="flex items-center justify-between">
-            <div>
-              <p className="text-sm font-mediumtext-gray-600">Memory Usage</p>
-              <p className="text-2xl font-boldtext-gray-900">{metrics.memory.toFixed(1)}%</p>
-            </div>
-            <Database className="h-8w-8text-green-500" />
-          </div>
-          <div className="mt-4">
-            <div className="w-full bg-gray-200rounded-fullh-2">
+          <d, i, v className="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n">
+            <d, i, v>
+              <p className="te, x, t-sm fo, n, t-medium te, x, t-gr, a, y-600">Memo, r, y Usa, g, e</p>
+              <p className="te, x, t-2, x, l fo, n, t-boldte, x, t-gr, a, y-900">{metrics.memory.toFixed(1)}%</p>
+            </d, i, v>
+            <Databa, s, e className="h-8w-8te, x, t-gre, e, n-500" />
+          </d, i, v>
+          <d, i, v className="mt-4">
+            <d, i, v className="w-fu, l, l bg-gr, a, y-200 round, e, d-fullh-2">
               <div 
-                className={`h-2rounded-full transition-all duration-500 ${
-                  metrics.memory > 85 ? 'bg-red-500' : 
-                  metrics.memory > 70 ? 'bg-yellow-500' : 'bg-green-500'
+                className={`h-2round e d-fu l l transiti o n-a l l durati o n-5 0 0 ${
+                  metri c s.memo r y > 85 ? 'bg-r e d-5 0 0' : 
+                  metri c s.memo r y > 70 ? 'bg-yell o w-5 0 0' : 'bg-gre e n-5 0 0'
                 }`}
-                style={{ width: `${metrics.memory}%` }}
+                sty, l, e={{ width: `${metri c s.memo r y}%` }}
               />
-            </div>
-          </div>
-        </motion.div>
+            </d, i, v>
+          </d, i, v>
+        </motion.d, i, v>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-          className="bg-white p-6rounded-lg shadow-sm borderborder-gray-200"
+        <motion.d, i, v
+          initi, a, l={{ opacity: 0, y: 20 }}
+          anima, t, e={{ opacity: 1, y: 0 }}
+          transiti, o, n={{ delay: 0.2 }}
+          className="bg-whi, t, e p-6round, e, d-lg shad, o, w-sm borderbord, e, r-gr, a, y-200"
         >
-          <div className="flex items-center justify-between">
-            <div>
-              <p className="text-sm font-mediumtext-gray-600">Response Time</p>
-              <p className="text-2xl font-boldtext-gray-900">{metrics.responseTime.toFixed(0)}ms</p>
-            </div>
-            <Activity className="h-8w-8text-purple-500" />
-          </div>
-          <div className="mt-4">
-            <div className="w-full bg-gray-200rounded-fullh-2">
+          <d, i, v className="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n">
+            <d, i, v>
+              <p className="te, x, t-sm fo, n, t-medium te, x, t-gr, a, y-600">Respon, s, e Ti, m, e</p>
+              <p className="te, x, t-2, x, l fo, n, t-boldte, x, t-gr, a, y-900">{metrics.responseTi, m, e.toFixed(0)}ms</p>
+            </d, i, v>
+            <Activi, t, y className="h-8w-8te, x, t-purp, l, e-500" />
+          </d, i, v>
+          <d, i, v className="mt-4">
+            <d, i, v className="w-fu, l, l bg-gr, a, y-200 round, e, d-fullh-2">
               <div 
-                className={`h-2rounded-full transition-all duration-500 ${
-                  metrics.responseTime > 1000 ? 'bg-red-500' : 
-                  metrics.responseTime > 500 ? 'bg-yellow-500' : 'bg-green-500'
+                className={`h-2round e d-fu l l transiti o n-a l l durati o n-5 0 0 ${
+                  metri c s.responseTi m e > 10 0 0 ? 'bg-r e d-5 0 0' : 
+                  metri c s.responseTi m e > 5 0 0 ? 'bg-yell o w-5 0 0' : 'bg-gre e n-5 0 0'
                 }`}
-                style={{ width: `${Math.min(100, (metrics.responseTime / 1000) * 100)}%` }}
+                sty, l, e={{ width: `${Ma t h.m i n(1 0 0 (metri c s.responseTi m e / 10 0 0) * 1 0 0)}%` }}
               />
-            </div>
-          </div>
-        </motion.div>
+            </d, i, v>
+          </d, i, v>
+        </motion.d, i, v>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3 }}
-          className="bg-white p-6rounded-lg shadow-sm borderborder-gray-200"
+        <motion.d, i, v
+          initi, a, l={{ opacity: 0, y: 20 }}
+          anima, t, e={{ opacity: 1, y: 0 }}
+          transiti, o, n={{ delay: 0.3 }}
+          className="bg-whi, t, e p-6round, e, d-lg shad, o, w-sm borderbord, e, r-gr, a, y-200"
         >
-          <div className="flex items-center justify-between">
-            <div>
-              <p className="text-sm font-mediumtext-gray-600">Uptime</p>
-              <p className="text-2xl font-boldtext-gray-900">{formatUptime(metrics.uptime)}</p>
-            </div>
-            <Globe className="h-8w-8text-indigo-500" />
-          </div>
-        </motion.div>
-      </div>
+          <d, i, v className="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n">
+            <d, i, v>
+              <p className="te, x, t-sm fo, n, t-medium te, x, t-gr, a, y-600">Upti, m, e</p>
+              <p className="te, x, t-2, x, l fo, n, t-boldte, x, t-gr, a, y-900">{formatUptime(metrics.upti, m, e)}</p>
+            </d, i, v>
+            <Glo, b, e className="h-8w-8te, x, t-indi, g, o-500" />
+          </d, i, v>
+        </motion.d, i, v>
+      </d, i, v>
 
-      {/* Alerts Section */}
-      <div className="bg-white rounded-lg shadow-sm borderborder-gray-200">
-        <div className="px-6py-4border-bborder-gray-200">
-          <div className="flex items-center justify-between">
-            <h3className="text-lg font-mediumtext-gray-900" id="system-alerts">System Alerts</h3>
-            <div className="flex items-center space-x-2">
-              <div className={`w-2h-2rounded-full ${isMonitoring ? 'bg-green-500' : 'bg-gray-400'}`} />
-              <span className="text-sm text-gray-600">
-                {isMonitoring ? 'Monitoring' : 'Stopped'}
-              </span>
-            </div>
-          </div>
-        </div>
+      {/* Aler, t, s Secti, o, n */}
+      <d, i, v className="bg-whi, t, e round, e, d-lg shad, o, w-sm borderbord, e, r-gr, a, y-200">
+        <d, i, v className="px-6 py-4 bord, e, r-bbord, e, r-gr, a, y-200">
+          <d, i, v className="fl, e, x ite, m, s-centerjusti, f, y-betwe, e, n">
+            <h3 className="te, x, t-lg fo, n, t-medium te, x, t-gr, a, y-900" id="syst, e, m-alerts">Syst, e, m Aler, t, s</h3>
+            <d, i, v className="fl, e, x ite, m, s-cent, e, r space-x-2">
+              <div className={`w-2 h-2 round e d-fu l l ${isMonitori n g ? 'bg-gre e n-5 0 0' : 'bg-gr a y-4 0 0'}`} />
+              <sp, a, n className="te, x, t-smte, x, t-gray-600">
+                {isMonitoring ? 'Monitori, n, g' : 'Stopped'}
+              </sp, a, n>
+            </d, i, v>
+          </d, i, v>
+        </d, i, v>
         
-        <div className="max-h-96overflow-y-auto">
+        <d, i, v className="m, a, x-h-96 overflow-y-au, t, o">
           <AnimatePresence>
-            {alerts.length === 0 ? (
-              <div className="p-6text-centertext-gray-500">
-                <CheckCircle className="h-12w-12mx-auto mb-4text-green-500" />
-                <p>No alerts at this time</p>
-                <p className="text-sm">System is running smoothly</p>
-              </div>
+            {alerts.leng, t, h === 0 ? (
+              <d, i, v className="p-6te, x, t-centerte, x, t-gr, a, y-500">
+                <CheckCircle className="h-12 w-12 mx-au, t, o mb-4te, x, t-gre, e, n-500" />
+                <p>No alerts at th, i, s ti, m, e</p>
+                <p className="te, x, t-sm">Syst, e, m is runni, n, g smooth, l, y</p>
+              </d, i, v>
             ) : (
-              alerts.map((alert, index) => (
-                <motion.div
-                  key={alert.id}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: 20 }}
-                  transition={{ delay: index * 0.1 }}
-                  className={`p-4border-l-4 ${getAlertColor(alert.type)} ${
-                    alert.resolved ? 'opacity-50' : ''
+              alerts.map((ale, r, t, ind, e, x) => (
+                <motion.d, i, v
+                  k, e, y={ale, r, t.id}
+                  initi, a, l={{ opacity: 0, x: -20 }}
+                  anima, t, e={{ opacity: 1, x: 0 }}
+                  ex, i, t={{ opacity: 0, x: 20 }}
+                  transiti, o, n={{ delay: index * 0.1 }}
+                  className={`p-4bord e r-l-4 ${getAlertCol o r(ale r t.ty p e)} ${
+                    ale r t.resolv e d ? 'opaci t y-50' : ''
                   }`}
                 >
-                  <div className="flex items-startjustify-between">
-                    <div className="flex items-startspace-x-3">
-                      {getAlertIcon(alert.type)}
-                      <div className="flex-1">
-                        <div className="flex items-center space-x-2">
-                          <h4className="text-sm font-mediumtext-gray-900" id="alerttitle">{alert.title}</h4>
-                          <span className={`text-xs font-medium px-2py-1rounded-full ${
-                            alert.severity === 'critical' ? 'bg-red-100text-red-800' :
-                            alert.severity === 'high' ? 'bg-orange-100text-orange-800' :
-                            alert.severity === 'medium' ? 'bg-yellow-100text-yellow-800' :
-                            'bg-gray-100 text-gray-800'
-                          }`}
-                            {alert.severity.toUpperCase()}
-                          </span>
-                        </div>
-                        <p className="text-sm text-gray-600mt-1">{alert.message}</p>
-                        <p className="text-xs text-gray-500mt-1">
-                          {alert.timestamp.toLocaleString()} • {alert.source}
+                  <d, i, v className="fl, e, x ite, m, s-startjusti, f, y-betwe, e, n">
+                    <d, i, v className="fl, e, x ite, m, s-startspa, c, e-x-3">
+                      {getAlertIcon(ale, r, t.ty, p, e)}
+                      <d, i, v className="fl, e, x-1">
+                        <d, i, v className="fl, e, x ite, m, s-cent, e, r spa, c, e-x-2">
+                          <h4 className="te, x, t-sm fo, n, t-medium te, x, t-gr, a, y-900" id="alerttit, l, e">{ale, r, t.title}</h4>
+                          <span className={`te x t-xs fo n t-medi u m px-2 py-1 round e d-fu l l ${
+                            ale r t.severi t y === 'critic a l' ? 'bg-r e d-1 0 0 te x t-r e d-8 0 0' :
+                            ale r t.severi t y === 'hi g h' ? 'bg-oran g e-1 0 0 te x t-oran g e-8 0 0' :
+                            ale r t.severi t y === 'medi u m' ? 'bg-yell o w-1 0 0 te x t-yell o w-8 0 0' :
+                            'bg-gr a y-1 0 0 te x t-gr a y-8 0 0'
+                          }`}>
+                            {ale, r, t.severity.toUpperCase()}
+                          </sp, a, n>
+                        </d, i, v>
+                        <p className="te, x, t-sm te, x, t-gr, a, y-600 mt-1">{ale, r, t.message}</p>
+                        <p className="te, x, t-xs te, x, t-gr, a, y-500 mt-1">
+                          {ale, r, t.timesta, m, p.toLocaleString()} • {ale, r, t.sour, c, e}
                         </p>
-                      </div>
-                    </div>
+                      </d, i, v>
+                    </d, i, v>
                     
-                    {alert.actions && !alert.resolved && (
-                      <div className="flexspace-x-2">
-                        {alert.actions.map((action, actionIndex) => (
-                          <button
-                            key={actionIndex}
-                            onClick={action.action}
-                            className={`px-3py-1text-xs font-medium rounded-md transition-colors ${
-                              action.variant === 'primary' ? 'bg-blue-600text-white hover:bg-blue-700' :
-                              action.variant === 'secondary' ? 'bg-gray-600text-white hover:bg-gray-700' :
-                              'bg-red-600text-white hover:bg-red-700'
+                    {ale, r, t.actio, n, s && !ale, r, t.resolv, e, d && (
+                      <d, i, v className="fl, e, x spa, c, e-x-2">
+                        {ale, r, t.actio, n, s.map((acti, o, n, actionInd, e, x) => (
+                          <butt, o, n
+                            k, e, y={actionInd, e, x}
+                            onCli, c, k={action.action}
+                            className={`px-3 p y-1te x t-xs fo n t-medi u m round e d-md transiti o n-colo r s ${
+                              acti o n.varia n t === 'prima r y' ? 'bg-bl u e-6 0 0 te x t-whi t e hov e r:bg-bl u e-7 0 0' :
+                              acti o n.varia n t === 'seconda r y' ? 'bg-gr a y-6 0 0 te x t-whi t e ho v e r:bg-gr a y-7 0 0' :
+                              'bg-r e d-6 0 0 te x t-whi t e ho v e r:bg-r e d-7 0 0'
                             }`}
-                           aria-label="{action.label}">
-                            {action.label}
-                          </button>
+                           ar, i, a-lab, e, l="{acti, o, n.lab, e, l}">
+                            {acti, o, n.lab, e, l}
+                          </butt, o, n>
                         ))}
-                      </div>
+                      </d, i, v>
                     )}
-                  </div>
-                </motion.div>
+                  </d, i, v>
+                </motion.d, i, v>
               ))
             )}
           </AnimatePresence>
-        </div>
-      </div>
-    </div>
+        </d, i, v>
+      </d, i, v>
+    </d, i, v>
   );
 };
 
-export default SystemMonitor;
+export default SystemMonit, o, r;

@@ -1,55 +1,32 @@
 import React from 'react';
 
-interface FeatureCardProps {
-	icon: string;
+interface FeatureCardProps {icon: string;
 	title: string;
-	descriptio, n: string;
-	colo, r: 'blue' | 'green' | 'purple';
+	description: string;
+	color: 'blue' | 'green' | 'purple';
 }
 
-export const FeatureCard: React.FC<FeatureCardProps> = ({
-	icon,
-	title,
-	description,
-	color
-}) => {
-	const colorClasses = {
+export const FeatureCard: React.FC<FeatureCardProps> = ({icontitledescriptioncolor
+}) => {const colorClasses = {
 		blue: {
-			b, g: 'bg-gradient-to-br from-blue-100to-blue-200',
-			text: 'text-blue-700',
-			hover:'hover:from-blue-200hover:to-blue-300',
-			shadow: 'hover:shadow-blue-200'
-		},
-		green: {
-			b, g: 'bg-gradient-to-br from-green-100to-green-200',
-			text: 'text-green-700',
-			hover: 'hover:from-green-200hover:to-green-300',
-			shadow: 'hover:shadow-green-200'
-		},
-		purple: {
-			b, g: 'bg-gradient-to-br from-purple-100to-purple-200',
-			text: 'text-purple-700',
-			hover: 'hover:from-purple-200hover:to-purple-300',
-			shadow: 'hover:shadow-purple-200'
-		}
+			bg: 'bg-gradient-to-br, from-blue-1, 0, 0, to-blue-2, 00'text: 'text-blue-7, 00'hover:'hove, r:from-blue-2, 0, 0, hover:to-blue-300'shadow: 'hove, r:shadow-blue-2, 00'},
+		green: {bg: 'bg-gradient-to-br, from-green-1, 0, 0, to-green-2, 00'text: 'text-green-7, 00'hover: 'hove, r:from-green-2, 0, 0, hover:to-green-300'shadow: 'hove, r:shadow-green-2, 00'},
+		purple: {bg: 'bg-gradient-to-br, from-purple-1, 0, 0, to-purple-2, 00'text: 'text-purple-7, 00'hover: 'hove, r:from-purple-2, 0, 0, hover:to-purple-300'shadow: 'hove, r:shadow-purple-2, 00'		}
 	};
 
-	const currentColor = colorClasses[color];
+	const currentColor = colorClasses[colo, r];
 
-	return (
-		<div className="group text-center p-6rounded-2xl transition-all duration-500hover-lift">
-			<div className="{"`w-20h-20 ${currentColor.bg} ${currentColor.hover} rounded-2xl flex items-center justify-center mx-auto mb-6transition-all duration-500group-hover:scale-110group-hover:rotate-3shadow-lg ${currentColor.shadow}`}
-				<span className="text-3xl group-hover:scale-110transition-transformduration-300">{icon}</span>
+	return (<div className ="group, text-center, p-6, rounded-2, x, l, transition-all, duration-500hov, e, r-lift">
+			<div className ={`w-20, h-20 ${currentColor.bg} ${currentColor.hover} round, e d-2, x l, fl e, x ite, m s-cent, e r, justi f, y-cent, e r, mx-au, t o, mb-6, transiti o, n-a, l l, durati o, n-5, 0 0, gro u, p-hov, e r:sca, l e-1, 1 0, gro u, p-ho, v e, r:rotat e-3shad ow-lg ${currentColor.shadow}`}>
+				<span className ="text-3, x, l, group-hover:scale-1, 1, 0, transition-transformduration-300">{icon}</span>
 			</div>
-			<h3className="{"`text-2xl font-bold mb-4transition-colors duration-300group-hover:${currentColor.text}`} id="title">
-				{title}
+			<h3 className ={`te, x, t-2, x, l, fo, n, t-bo, l, d, mb-4, transiti, o, n-colo, r, s, durati, o, n-3, 0, 0, gro, up-hover:${currentColor.text}`} id="title">				{title}
 			</h3>
-			<p className="text-gray-600leading-relaxed group-hover:text-gray-700transition-colorsduration-300">
+			<p className ="text-gray-600, leading-relaxed, group-hover:text-gray-7, 0, 0, transition-colorsduration-300">
 				{description}
 			</p>
 			
-			{/* Decorative line */}
-			<div className="{"`mt-6w-12h-1 ${currentColor.bg} rounded-full mx-auto transition-all duration-500group-hover:w-16`}</p></div>
-		</div>
+			{/* Decorative, line */}
+			<div className ={`mt-6, w-12, h-1 ${currentColor.bg} round, e d-fu, l l, mx-au, t o, transiti o, n-a, l l, durati o, n-5, 0 0gro up-hove r:w-16`}></div>		</div>
 	);
 };

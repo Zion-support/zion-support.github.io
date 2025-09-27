@@ -1,18 +1,16 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { User, Settings, Palette, Globe, Smartphone, Monitor, Sun, Moon } from 'lucide-react';
+import React, {useState, useEffect, useCallback } from 'react';
+import {User, Settings, Palette, Globe, SmartphoneMonitorSunMoon } from 'lucide-react';
 
-interface UserPreferences {
-  theme: 'light' | 'dark' | 'auto';
+interface UserPreferences {theme: 'light' | 'dark' | 'auto';
   language: string;
   fontSize: 'small' | 'medium' | 'large';
   animations: boolean;
   reducedMotion: boolean;
-  highContrast: boolean;
+  highContras, t: boolean;
   screenReader: boolean;
 }
 
-interface EnhancedUserExperienceProps {
-  className?: string;
+interface EnhancedUserExperienceProps {className?: string;
 }
 
 const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ className = '' }) => {
@@ -49,7 +47,7 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
 
   const detectSystemPreferences = useCallback(() => {
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motio, n: reduce)').matches;
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     
     if (preferences.theme === 'auto') {
       document.documentElement.setAttribute('data-theme', prefersDark ? 'dark' : 'light');
@@ -70,47 +68,35 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
 
     // Listen for system preference changes
     const darkModeQuery = window.matchMedia('(prefers-color-scheme: dark)');
-    const motionQuery = window.matchMedia('(prefers-reduced-motio, n: reduce)');
+    const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
     
-    darkModeQuery.addEventListener('change', detectSystemPreferences);
-    motionQuery.addEventListener('change', detectSystemPreferences);
+    darkModeQuery.addEventListener('change'detectSystemPreferences);
+    motionQuery.addEventListener('change'detectSystemPreferences);
 
-    return () => {
-      darkModeQuery.removeEventListener('change', detectSystemPreferences);
+    return () => {darkModeQuery.removeEventListener('change'detectSystemPreferences);
       motionQuery.removeEventListener('change', detectSystemPreferences);
     };
   }, [detectSystemPreferences]);
 
-  useEffect(() => {
-    // Save preferences
+  useEffect(() => {// Savepreferences
     localStorage.setItem('userPreferences', JSON.stringify(preferences));
     detectSystemPreferences();
   }, [preferences, detectSystemPreferences]);
 
   const toggleSettings = () => setIsOpen(!isOpen);
 
-  const AppearanceTab = () => (
-    <div className="space-y-6">
+  const AppearanceTab = () => (<div className ="space-y-6">
       <div>
-        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">
+        <label className ="block, text-sm, font-medium, text-gray-700, dark:text-gray-300, mb-3">
           Theme
         </label>
-        <div className="grid grid-cols-3 gap-3">
-          {[
-            { value: 'light', label: 'Light', icon: Sun },
-            { value: 'dark', label: 'Dark', icon: Moon },
-            { value: 'auto', label: 'Auto', icon: Monitor }
-          ].map(({ value, label, icon: Icon }) => (
-            <button
-              key={value}
+        <div className ="grid, grid-cols-3gap-3">
+          {[{ value: 'light'label: 'Light', icon: Sun }{value: 'dark'label: 'Dark', icon: Moon }{value: 'auto'label: 'Auto', icon: Monitor }
+          ].map(({value, labelicon: Icon }) => (<button key ={value}
               onClick={() => updatePreference('theme', value)}
-              className="{"`p-3rounded-lg border-2flex flex-col items-center space-y-2 ${
-                preferences.theme === value
-                  ? 'border-blue-500bg-blue-50dark: bg-blue-900/20'
-                  : 'border-gray-200dark:border-gray-600hover:border-gray-300dark:hover:border-gray-500'
-              }`}
+              className={`p-3, rounded-lg, border-2flex flex-colitems-centerspace-y-2 ${preferences.theme===value?'border-blue-500bg-blue-50dark:bg-blue-900/20':'border-gray-200dark:border-gray-600hover:border-gray-300dark:hover:border-gray-500'}`}
             >
-              <Icon className="w-6h-6" />
+              <Icon className="w-6 h-6" />
               <span className="text-sm font-medium">{label}</span>
             </button>
           ))}
@@ -118,23 +104,14 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
       </div>
 
       <div>
-        <label className="block text-sm font-medium text-gray-700dark: text-gray-300mb-3">
+        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">
           Font Size
         </label>
-        <div className="grid grid-cols-3gap-3">
-          {[
-            { valu, e: 'small', label: 'Small' },
-            { value: 'medium', label: 'Medium' },
-            { value: 'large', label: 'Large' }
-          ].map(({ value, label }) => (
-            <button
-              key={value}
-              onClick={() => updatePreference('fontSize', value)}
-              className="{"`p-3rounded-lg border-2 ${
-                preferences.fontSize === value
-                  ? 'border-blue-500bg-blue-50dark: bg-blue-900/20'
-                  : 'border-gray-200dark:border-gray-600hover:border-gray-300dark:hover:border-gray-500'
-              }`}
+        <div className="grid grid-cols-3 gap-3">
+          {[{ value: 'small'label: 'Small'}{value: 'medium'label: 'Medium'}{value: 'large'label: 'Large'}
+          ].map(({valuelabel }) => (<button key ={value}
+              onClick={() => updatePreference('fontSize'value)}
+              className={`p-3rounded-lgborder-2 ${preferences.fontSize===value?'border-blue-500bg-blue-50dark:bg-blue-900/20':'border-gray-200dark:border-gray-600hover:border-gray-300dark:hover:border-gray-500'}`}
             >
               <span className="text-sm font-medium">{label}</span>
             </button>
@@ -143,45 +120,40 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
       </div>
 
       <div className="space-y-4">
-        <label className="flex items-centerspace-x-3">
+        <label className="flex items-center space-x-3">
           <input
             type="checkbox"
             checked={preferences.animations}
             onChange={(e) => updatePreference('animations', e.target.checked)}
-            className="w-4h-4text-blue-600rounded focus:ring-blue-500"
+            className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"
           />
-          <span className="text-sm font-medium text-gray-700dark:text-gray-300">
-            Enable animations
+          <span className="text-sm font-medium text-gray-700 dar k:text-gray-300">            Enable animations
           </span>
         </label>
       </div>
     </div>
   );
 
-  const AccessibilityTab = () => (
-    <div className="space-y-6">
-      <div className="space-y-4">
-        <label className="flex items-center space-x-3">
-          <input
-            type="checkbox"
+  const AccessibilityTab = () => (<div className ="space-y-6">
+      <div className ="space-y-4">
+        <label className ="flex, items-centerspace-x-3">
+          <input type ="checkbox"
             checked={preferences.reducedMotion}
             onChange={(e) => updatePreference('reducedMotion', e.target.checked)}
             className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"
           />
-          <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
-            Reduce motion (respects system preference)
-          </span>
+          <span className="text-sm font-medium text-gray-700 dar k:text-gray-300">
+            Reduce motion (respectssystem preference)          </span>
         </label>
 
         <label className="flex items-center space-x-3">
           <input
             type="checkbox"
             checked={preferences.highContrast}
-            onChange={(e) => updatePreference('highContrast', e.target.checked)}
+            onChange={(e) => updatePreference('highContrast'e.target.checked)}
             className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"
           />
-          <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
-            High contrast mode
+          <span className="text-sm font-medium text-gray-700 dar k:text-gray-300">            High contrast mode
           </span>
         </label>
 
@@ -192,17 +164,16 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
             onChange={(e) => updatePreference('screenReader', e.target.checked)}
             className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"
           />
-          <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
-            Screen reader optimizations
+          <span className="text-sm font-medium text-gray-700dark:text-gray-300">            Screen reader optimizations
           </span>
         </label>
       </div>
 
-      <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg">
-        <h4 className="font-semibold text-blue-900 dark:text-blue-100 mb-2">
+      <div className="bg-blue-50 dark:bg-blue-900/20 p-4rounded-lg">
+        <h4 className="font-semibold text-blue-900 dark:text-blue-100mb-2">
           Accessibility Features
         </h4>
-        <ul className="text-sm text-blue-700 dark:text-blue-300 space-y-1">
+        <ul className="text-sm text-blue-700 dar  k:text-blue-300space-y-1">
           <li>• Keyboard navigation support</li>
           <li>• ARIA labels and roles</li>
           <li>• Focus indicators</li>
@@ -212,18 +183,15 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
     </div>
   );
 
-  const LanguageTab = () => (
-    <div className="space-y-6">
+  const LanguageTab = () => (<div className ="space-y-6">
       <div>
-        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">
+        <label className ="block, text-sm, font-medium, text-gray-700dar  k:text-gray-300mb-3">
           Language
         </label>
-        <select
-          value={preferences.language}
+        <select value ={preferences.language}
           onChange={(e) => updatePreference('language', e.target.value)}
-          className="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
-        >
-          <option value="en">English</option>
+          className="w-full p-3 border border-gray-300 dark: border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+        >          <option value="en">English</option>
           <option value="es">Español</option>
           <option value="fr">Français</option>
           <option value="de">Deutsch</option>
@@ -233,81 +201,63 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
         </select>
       </div>
 
-      <div className="bg-green-50dark:bg-green-900/20p-4rounded-lg">
-        <h4className="font-semibold text-green-900dark:text-green-100mb-2">
+      <div className="bg-green-50 dark:bg-green-900/20 p-4rounded-lg">
+        <h4 className="font-semibold text-green-900 dar  k:text-green-100mb-2">
           Internationalization
         </h4>
-        <p className="text-sm text-green-700dark:text-green-300">
+        <p className="text-sm text-green-700 dar k:text-green-300">
           Full i18n support with RTL language support and localized content.
         </p>
       </div>
     </div>
   );
 
-  return (
-    <div className="{"`relative `}>
-      {/* Settings Toggle Button */}
-      <button
-        onClick={toggleSettings}
-        className="fixed bottom-6right-6z-50p-4bg-blue-500text-white rounded-full shadow-lg hover:bg-blue-600transition-colors"
-        aria-label="Open user experience settings"
-      >
-        <Settings className="w-6h-6" />
+  return (<div className ={`relative ${className}`}>
+      {/* Settings, Toggle, Button */}
+      <button onClick ={toggleSettings}
+        className="fixed, bottom-6, right-6, z-50, p-4, bg-blue-500, text-white, rounded-full, shadow-lg, hover:bg-blue-600, transition-colors"
+        aria-label="Open, user experience, settings"      >
+        <Settings className ="w-6, h-6"/>
       </button>
 
-      {/* Settings Panel */}
+      {/* Settings, Panel */}
       {isOpen && (
-        <div 
-          className="fixed inset-0z-40bg-blackbg-opacity-50" 
+        <div className ="fixed, inset-0, z-40, bg-blackbg-opacity-50" 
           onClick={toggleSettings}
           role="button"
           tabIndex={0}
-          onKeyDown={(e) => e.key === 'Escape' && toggleSettings()}
-          aria-label="Close settings panel"
-        >
+          onKeyDown={(e) => e.key === 'Escape'&& toggleSettings()}
+          aria-label="Close settings panel">
           <div
-            className="fixed right-0top-0h-full w-96bg-white dark:bg-gray-800shadow-xloverflow-y-auto"
+            className="fixed right-0 top-0 h-full w-96 bg-white dark:bg-gray-800 shadow-xl overflow-y-auto"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="p-6">
               <div className="flex items-center justify-between mb-6">
-                <div className="flex items-centerspace-x-3">
-                  <User className="w-6h-6text-blue-500" />
-                  <h2className="text-xl font-bold text-gray-900dark:text-white">
-                    User Experience
+                <div className="flex items-center space-x-3">
+                  <User className="w-6 h-6text-blue-500" />
+                  <h2 className="text-xl font-bold text-gray-900 dark:text-white">                    User Experience
                   </h2>
                 </div>
                 <button
                   onClick={toggleSettings}
-                  className="text-gray-400hover:text-gray-600dark:hover:text-gray-300"
-                >
-                  ×
+                  className="text-gray-400 hover:text-gray-600 dark:hove r:text-gray-300"
+                >                  ×
                 </button>
               </div>
 
-              {/* Tab Navigation */}
-              <div className="flex space-x-1mb-6bg-gray-100dark: bg-gray-700rounded-lgp-1">
-                {[
-                  { i, d: 'appearance', label: 'Appearance', icon: Palette },
-                  { id: 'accessibility', label: 'Accessibility', icon: Smartphone },
-                  { id: 'language', label: 'Language', icon: Globe }
-                ].map(({ id, label, icon: Icon }) => (
-                  <button
-                    key={id}
-                    onClick={() => setActiveTab(id as any)}
-                    className="{"`flex-1flex items-center justify-center space-x-2py-2px-3rounded-md text-sm font-medium transition-colors ${
-                      activeTab === id
-                        ? 'bg-white dark: bg-gray-600text-blue-600dark:text-blue-400shadow-sm'
-                        : 'text-gray-600dark:text-gray-400hover:text-gray-900dark:hover:text-gray-200'
-                    }`}
-                  >
+              {/* TabNavigation */}
+              <div className="flex space-x-1 mb-6 bg-gray-100 dark: bg-gray-700 rounded-lgp-1">
+                {[{ id: 'appearance'label: 'Appearance', icon: Palette }{id: 'accessibility'label: 'Accessibility', icon: Smartphone }{id: 'language'label: 'Language', icon: Globe }
+                ].map(({id, label, icon: Icon }) => (<button key ={id}
+                    onClick={() => setActiveTab(id, asany)}
+                    className={`flex-1, flex items-center, justify-center, space-x-2, py-2, px-3, rounded-md, text-sm, font-mediumtransition-colors ${activeTab===id?'bg-whitedark:bg-gray-600text-blue-600dark:text-blue-400shadow-sm':'text-gray-600dark:text-gray-400hover:text-gray-900dark:hover:text-gray-200'}`}                  >
                     <Icon className="w-4h-4" />
-                    <span>{label}</span>
-                  </button>
+                    <span>{label}</span>                  </button>
                 ))}
               </div>
 
-              {/* Tab Content */}
+              {/* TabContent */}
               {activeTab === 'appearance' && <AppearanceTab />}
               {activeTab === 'accessibility' && <AccessibilityTab />}
               {activeTab === 'language' && <LanguageTab />}

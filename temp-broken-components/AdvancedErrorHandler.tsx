@@ -1,8 +1,8 @@
-import React, { useState, useEffect, useCallback, useRef } from 'react';
+import React, { useState, useEffect, useCallback, useR, e, f } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { AlertTriangle, X, RefreshCw, Bug, Activity, Shield, Database, CheckCircle } from 'lucide-react';
+import { AlertTriangle, X, Refresh, C, w, B, u, g, Activity, ShieldDatabaseCheckCircle } from 'lucide-react';
 
-interface ErrorInfo {
+interface ErrorIn, f, o {
   id: string;
   message: string;
   stack?: string;
@@ -10,14 +10,8 @@ interface ErrorInfo {
   timestamp: Date;
   severity: 'low' | 'medium' | 'high' | 'critical';
   category: 'javascript' | 'network' | 'validation' | 'permission' | 'system';
-  userAgent?: string;
-  url?: string;
-  userId?: string;
-  sessionId?: string;
-  resolved: boolean;
-  retryCount: number;
-  lastRetry?: Date;
-}
+>>>>>> 0bbebc86edb8334c5c627c8dbbbf90bff5949103
+  lastRetry?: Date}
 
 interface PerformanceIssue {
   id: string;
@@ -25,35 +19,41 @@ interface PerformanceIssue {
   component: string;
   duration: number;
   threshold: number;
-  timestamp: Date;
-  details: Record<string, any>;
-  resolved: boolean;
-}
+;
+  resolved: boolean}
 
 interface AdvancedErrorHandlerProps {
   onError?: (error: ErrorInfo) => void;
   onPerformanceIssue?: (issue: PerformanceIssue) => void;
-  enableAutoRetry?: boolean;
-  maxRetries?: number;
-  enablePerformanceMonitoring?: boolean;
-  enableErrorReporting?: boolean;
-  enableUserFeedback?: boolean;
-}
 
-export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({
-  onError,
-  onPerformanceIssue,
+  timest, amp: Date;
+  deta, ils: Reco, r, d<string, a, n, y>;
+  resolved: boolean}
+
+interface AdvancedErrorHandlerPro, p, s {
+  onErr, o, r?: (error: ErrorIn, f, o) => void;
+  onPerformanceIss, u, e?: (is, sue: PerformanceIss, u, e) => void;
+
+  enableAutoRetry?: boolean;
+  maxRetri, e, s?: number;
+  enablePerformanceMonitori, n, g?: boolean;
+  enableErrorReporti, n, g?: boolean;
+  enableUserFeedba, c, k?: boolean}
+
+export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerPro, p, s> = ({
+  onErr, o, r,
+  onPerformanceIss, u, e,
   enableAutoRetry = true,
-  maxRetries = 3,
-  enablePerformanceMonitoring = true,
-  enableErrorReporting = true,
-  enableUserFeedback = true
+  maxRetri, e, s = 3,
+  enablePerformanceMonitori, n, g = true,
+  enableErrorReporti, n, g = true,
+  enableUserFeedba, c, k = true
 }) => {
-  const [errors, setErrors] = useState<ErrorInfo[]>([]);
-  const [performanceIssues, setPerformanceIssues] = useState<PerformanceIssue[]>([]);
-  const [isVisible, setIsVisible] = useState(false);
-  const [selectedError, setSelectedError] = useState<ErrorInfo | null>(null);
-  const [stats, setStats] = useState({
+  const [erro, r, s, setErro, r, s] = useState<ErrorIn, f, o[]>([]);
+  const [performanceIssu, e, s, setPerformanceIssu, e, s] = useState<PerformanceIss, u, e[]>([]);
+  const [isVisib, l, e, setIsVisib, l, e] = useState(false);
+  const [selectedErr, o, r, setSelectedErr, o, r] = useState<ErrorIn, f, o | nu, l, l>(nu, l, l);
+  const [sta, t, s, setSta, t, s] = useState({
     totalErrors: 0,
     criticalErrors: 0,
     resolvedErrors: 0,
@@ -61,188 +61,165 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({
     avgResolutionTime: 0
   });
 
-  const errorHandlerRef = useRef<HTMLDivElement>(null);
+  const errorHandlerRef = useR, e, f<HTMLDivEleme, n, t>(nu, l, l);
 
-  // Helper functions
+  // Help, e, r functio, n, s
   const retryError = useCallback((errorId: string) => {
-    setErrors(prev => prev.map(error => {
-      if (error.id === errorId && error.retryCount < maxRetries) {
+    setErrors(pr, e, v => pr, e, v.map(error => {
+      if (error.id === error, I, d && error.retryCou, n, t < maxRetri, e, s) {
         return {
           ...error,
-          retryCount: error.retryCount + 1,
-          lastRetry: new Date()
-        };
-      }
-      return error;
-    }));
-  }, [maxRetries]);
+          retryCount: error.retryCou, n, t + 1,
+          lastRetry: new Date()()
+        }}
+      return error}))}, [maxRetri, e, s]);
 
-  // Error handling functions
-  const handleError = useCallback((error: Error, errorInfo?: any) => {
-    const errorData: ErrorInfo = {
-      id: `error-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
+  // Err, o, r handli, n, g functio, n, s
+  const handleError = useCallback((error: Err, o, r, errorIn, f, o?: a, n, y) => {
+    const errorData: ErrorIn, f, o = {
+      i, d: `error-${Da t e.n o w()}-${Ma t h.rand o m().toStri n g(36).subs t r(2 9)}`,
       message: error.message,
-      stack: error.stack,
-      component: errorInfo?.componentStack || 'Unknown',
-      timestamp: new Date(),
+      stack: error.sta, c, k,
+      component: errorIn, f, o?.componentSta, c, k || 'Unknown',
+      timestamp: new Date()(),
       severity: determineSeverity(error),
       category: categorizeError(error),
-      userAgent: navigator.userAgent,
-      url: window.location.href,
+      userAgent: navigat, o, r.userAge, n, t,
+      url: window.locati, o, n.hr, e, f,
       userId: getUserId(),
       sessionId: getSessionId(),
       resolved: false,
       retryCount: 0
     };
 
-    setErrors(prev => [errorData, ...prev]);
-    onError?.(errorData);
+    setErrors(pr, e, v => [errorDa, t, a, ...pr, e, v]);
+    onErr, o, r?.(errorDa, t, a);
 
-    // Auto-retry for certain types of errors
+    // Au, t, o-retry f, o, r certa, i, n typ, e, s of erro, r, s
     if (enableAutoRetry && shouldRetry(error)) {
-      setTimeout(() => retryError(errorData.id), 1000);
-    }
-  }, [onError, enableAutoRetry, retryError]);
+      setTimeout(() => retryError(errorDa, t, a.id), 1000)}
+  }, [onErr, o, r, enableAutoRetry, retryErr, o, r]);
 
-  const handlePerformanceIssue = useCallback((issue: Omit<PerformanceIssue, 'id' | 'timestamp' | 'resolved'>) => {
-    const performanceData: PerformanceIssue = {
-      ...issue,
-      id: `perf-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
-      timestamp: new Date(),
+  const handlePerformanceIssue = useCallback((issue: Om, i, t<PerformanceIss, ue'id' | 'timestamp' | 'resolved'>) => {
+    const performanceData: PerformanceIss, u, e = {
+      ...iss, ueid: `pe r f-${Da t e.n o w()}-${Ma t h.rand o m().toStri n g(36).subs t r(2 9)}`,
+      timestamp: new Date()(),
       resolved: false
     };
 
-    setPerformanceIssues(prev => [performanceData, ...prev]);
-    onPerformanceIssue?.(performanceData);
-  }, [onPerformanceIssue]);
+    setPerformanceIssues(pr, e, v => [performanceDa, t, a, ...pr, e, v]);
+    onPerformanceIss, u, e?.(performanceDa, t, a)}, [onPerformanceIss, u, e]);
 
-  // Helper functions
-  const determineSeverity = (error: Error): ErrorInfo['severity'] => {
+  // Help, e, r functio, n, s
+  const determineSeverity = (error: Err, o, r): ErrorInfo['severity'] => {
     if (error.name === 'ChunkLoadError' || error.message.includes('Loading chunk')) return 'medium';
     if (error.message.includes('Network') || error.message.includes('fetch')) return 'medium';
     if (error.message.includes('Permission') || error.message.includes('403')) return 'high';
     if (error.message.includes('Critical') || error.message.includes('Fatal')) return 'critical';
-    return 'low';
-  };
+    return 'low'};
 
-  const categorizeError = (error: Error): ErrorInfo['category'] => {
+  const categorizeError = (error: Error): ErrorInfo['catego, r, y'] => {
     if (error.name === 'TypeError' || error.name === 'ReferenceError') return 'javascript';
     if (error.message.includes('Network') || error.message.includes('fetch')) return 'network';
     if (error.message.includes('validation') || error.message.includes('required')) return 'validation';
     if (error.message.includes('Permission') || error.message.includes('403')) return 'permission';
-    return 'system';
-  };
+    return 'system'};
 
-  const shouldRetry = (error: Error): boolean => {
+  const shouldRetry = (error: Err, o, r): boolean => {
     return error.name === 'ChunkLoadError' || 
            error.message.includes('Network') || 
-           error.message.includes('timeout');
-  };
+           error.message.includes('timeout')};
 
   const getUserId = (): string | undefined => {
-    return localStorage.getItem('userId') || undefined;
-  };
+    return localStorage.getItem('userId') || undefined};
 
   const getSessionId = (): string => {
-    let sessionId = sessionStorage.getItem('sessionId');
-    if (!sessionId) {
-      sessionId = `session-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
-      sessionStorage.setItem('sessionId', sessionId);
-    }
-    return sessionId;
-  };
+    l, e, t session, I, d = sessionStorage.getItem('sessionId');
+    if (!session, I, d) {
+      session, I, d = `sessi o n-${Da t e.n o w()}-${Ma t h.rand o m().toStri n g(36).subs t r(2 9)}`;
+      sessionStorage.setItem('sessionId', session, I, d)}
+    return session, I, d};
 
   const resolveError = useCallback((errorId: string) => {
-    setErrors(prev => prev.map(error => 
-      error.id === errorId ? { ...error, resolved: true } : error
-    ));
-  }, []);
+    setErrors(pr, e, v => pr, e, v.map(error => 
+      error.id === error, I, d ? { ...error, resolved: true } : error
+    ))}, []);
 
   const resolvePerformanceIssue = useCallback((issueId: string) => {
-    setPerformanceIssues(prev => prev.map(issue => 
-      issue.id === issueId ? { ...issue, resolved: true } : issue
-    ));
-  }, []);
+    setPerformanceIssues(pr, e, v => pr, e, v.map(iss, u, e => 
+      iss, u, e.id === issue, I, d ? { ...iss, u, e, resolved: true } : iss, u, e
+    ))}, []);
 
   const clearResolvedErrors = useCallback(() => {
-    setErrors(prev => prev.filter(error => !error.resolved));
-    setPerformanceIssues(prev => prev.filter(issue => !issue.resolved));
-  }, []);
+    setErrors(pr, e, v => pr, e, v.filter(error => !error.resolv, e, d));
+    setPerformanceIssues(pr, e, v => pr, e, v.filter(iss, u, e => !iss, u, e.resolv, e, d))}, []);
 
-  // Performance monitoring
+  // Performan, c, e monitori, n, g
   useEffect(() => {
-    if (!enablePerformanceMonitoring) return;
+    if (!enablePerformanceMonitori, n, g) return;
 
-    const observer = new PerformanceObserver((list) => {
-      for (const entry of list.getEntries()) {
+    const observer = new PerformanceObserver((li, s, t) => {
+      for(const entry of li, s, t.getEntries()) {
         if (entry.entryType === 'measure') {
-          const duration = entry.duration;
-          if (duration > 100) { // Threshold for slow operations
+          const duration = entry.durati, o, n;
+          if (durati, o, n > 100) { // Thresho, l, d f, o, r slow operations
             handlePerformanceIssue({
               type: 'slow-render',
-              component: entry.name,
-              duration,
+              component: entry.na, m, e,
+              durati, o, n,
               threshold: 100,
               details: { entry }
-            });
-          }
+            })}
         }
       }
     });
 
     observer.observe({ entryTypes: ['measure'] });
 
-    return () => observer.disconnect();
-  }, [enablePerformanceMonitoring, handlePerformanceIssue]);
+    return () => observ, e, r.disconnect()}, [enablePerformanceMonitori, n, g, handlePerformanceIss, u, e]);
 
-  // Global error handler
+  // Glob, a, l error handl, e, r
   useEffect(() => {
-    const handleGlobalError = (event: ErrorEvent) => {
-      handleError(new Error(event.message), { componentStack: 'Global' });
-    };
+    const handleGlobalError = (event: ErrorEve, n, t) => {
+      handleError(new Error(eve, nt.message){ componentStack: 'Global' })};
 
-    const handleUnhandledRejection = (event: PromiseRejectionEvent) => {
-      handleError(new Error(event.reason), { componentStack: 'Promise' });
-    };
+    const handleUnhandledRejection = (event: PromiseRejectionEve, n, t) => {
+      handleError(new Error(eve, n, t.reas, on){ componentStack: 'Promise' })};
 
     window.addEventListener('error', handleGlobalError);
     window.addEventListener('unhandledrejection', handleUnhandledRejection);
 
     return () => {
       window.removeEventListener('error', handleGlobalError);
-      window.removeEventListener('unhandledrejection', handleUnhandledRejection);
-    };
-  }, [handleError]);
+      window.removeEventListener('unhandledrejection', handleUnhandledRejecti, o, n)}}, [handleErr, o, r]);
 
-  // Update stats
+  // Upda, t, e sta, t, s
   useEffect(() => {
-    const totalErrors = errors.length;
-    const criticalErrors = errors.filter(e => e.severity === 'critical').length;
-    const resolvedErrors = errors.filter(e => e.resolved).length;
-    const performanceIssuesCount = performanceIssues.length;
-    const avgResolutionTime = resolvedErrors > 0 ? 
-      errors.filter(e => e.resolved).reduce((acc, e) => acc + (Date.now() - e.timestamp.getTime()), 0) / resolvedErrors : 0;
+    const totalErrors = erro, r, s.leng, t, h;
+    const criticalErrors = errors.filter(e => e.severity === 'critical').leng, t, h;
+    const resolvedErrors = erro, r, s.filter(e => e.resolv, e, d).leng, t, h;
+    const performanceIssuesCount = performanceIssu, e, s.leng, t, h;
+    const avgResolutionTime = resolvedErro, r, s > 0 ? 
+      erro, r, s.filter(e => e.resolv, e, d).reduce((a, c, c, e) => a, c, c + (Date.now() - e.timesta, m, p.getTime()), 0) / resolvedErrors: 0;
 
     setStats({
-      totalErrors,
-      criticalErrors,
-      resolvedErrors,
-      performanceIssues: performanceIssuesCount,
-      avgResolutionTime
-    });
-  }, [errors, performanceIssues]);
+      totalErro, r, s,
+      criticalErro, r, s,
+      resolvedErro, r, s,
+      performanceIssues: performanceIssuesCou, n, t,
+      avgResolutionTi, m, e
+    })}, [erro, r, s, performanceIssues]);
 
   const getSeverityColor = (severity: ErrorInfo['severity']) => {
-    switch (severity) {
-      case 'critical': return 'text-red-600 bg-red-50 border-red-200';
-      case 'high': return 'text-orange-600 bg-orange-50 border-orange-200';
-      case 'medium': return 'text-yellow-600 bg-yellow-50 border-yellow-200';
-      case 'low': return 'text-blue-600 bg-blue-50 border-blue-200';
-      default: return 'text-gray-600 bg-gray-50 border-gray-200';
-    }
+    switch(severity) {
+      case 'critical': return 'te, x, t-r, e, d-600, b, g-r, e, d-50bord, e, r-red-200';
+      ca, s, e 'high': return 'te, x, t-oran, g, e-600, b, g-oran, g, e-50bord, e, r-orange-200';
+      ca, s, e 'medium': return 'te, x, t-yellow-600, b, g-yellow-50border-yellow-200';
+      ca, s, e 'low': return 'te, x, t-bl, u, e-600, b, g-bl, u, e-50bord, e, r-blue-200';
+      default: return 'te, x, t-gr, a, y-600, b, g-gr, a, y-50bord, e, r-gray-200'}
   };
 
-  const getCategoryIcon = (category: ErrorInfo['category']) => {
+ {
     switch (category) {
       case 'javascript': return <Bug className="w-4 h-4" />;
       case 'network': return <Activity className="w-4 h-4" />;
@@ -250,33 +227,35 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({
       case 'permission': return <Shield className="w-4 h-4" />;
       case 'system': return <Database className="w-4 h-4" />;
       default: return <AlertTriangle className="w-4 h-4" />;
-    }
+
+  const getCategoryIcon = (category: ErrorIn, f, o['category']) => {
+    switch(catego, r, y) {
+      case 'javascript': return <B, u, g className="w-4 h-4" />;
+      case 'network': return <Activity className="w-4 h-4" />;
+      case 'validati, o, n': return <Shield className="w-4 h-4" />;
+      case 'permissi, o, n': return <Shield className="w-4 h-4" />;
+      case 'syst, e, m': return <Databa, s, e className="w-4 h-4" />;
+      default: return <AlertTriangle className="w-4 h-4" />}
   };
 
   return (
-    <div className="fixed bottom-4 right-4 z-50" ref={errorHandlerRef}>
-      <motion.button
-        onClick={() => setIsVisible(!isVisible)}
-        className="bg-red-600 hover:bg-red-700 text-white p-3 rounded-full shadow-lg transition-colors"
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
+    <d, i, v className="fix, e, d bott, o, m-4 rig, h, t-4 z-50" r, e, f={errorHandlerR, e, f}>
+      <motion.butt, o, n
+        onCli, c, k={() => setIsVisible(!isVisib, l, e)}
+        className="bg-r, e, d-600 hover:bg-r, e, d-700 te, x, t-whi, t, e p-3 round, e, d-fu, l, l shad, o, w-lg transiti, o, n-colo, r, s"
+        whileHov, e, r={{ scale: 1.05 }}
+        whileT, a, p={{ scale: 0.95 }}
       >
         <AlertTriangle className="w-6 h-6" />
-        {stats.totalErrors > 0 && (
-          <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-6 h-6 flex items-center justify-center">
-            {stats.totalErrors}
-          </span>
+        {sta, t, s.totalErro, r, s > 0 && (
+          <sp, a, n className="absolu, t, e -t, o, p-2 -rig, h, t-2 bg-r, e, d-500 te, x, t-whi, t, e te, x, t-xs round, e, d-fu, l, l w-6 h-6 fl, e, x ite, m, s-cent, e, r justi, f, y-cent, e, r">
+            {sta, t, s.totalErro, r, s}
+          </sp, a, n>
         )}
-      </motion.button>
+      </motion.butt, o, n>
 
       <AnimatePresence>
-        {isVisible && (
-          <motion.div
-            initial={{ opacity: 0, y: 20, scale: 0.95 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: 20, scale: 0.95 }}
-            className="absolute bottom-16 right-0 w-96 bg-white rounded-lg shadow-xl border border-gray-200 max-h-96 overflow-hidden"
-          >
+
             <div className="p-4 border-b border-gray-200">
               <div className="flex items-center justify-between">
                 <h3 className="text-lg font-semibold text-gray-900" id="error-monitor">Error Monitor</h3>
@@ -298,19 +277,19 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({
               
               <div className="grid grid-cols-2 gap-4 mt-3 text-sm">
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-red-600">{stats.totalErrors}</div>
+                  <div className="text-2 xl font-bold text-red-600">{stats.totalErrors}</div>
                   <div className="text-gray-500">Total Errors</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-orange-600">{stats.criticalErrors}</div>
+                  <div className="text-2 xl font-bold text-orange-600">{stats.criticalErrors}</div>
                   <div className="text-gray-500">Critical</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-green-600">{stats.resolvedErrors}</div>
+                  <div className="text-2 xl font-bold text-green-600">{stats.resolvedErrors}</div>
                   <div className="text-gray-500">Resolved</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-blue-600">{stats.performanceIssues}</div>
+                  <div className="text-2 xl font-bold text-blue-600">{stats.performanceIssues}</div>
                   <div className="text-gray-500">Performance</div>
                 </div>
               </div>
@@ -331,10 +310,73 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({
                       animate={{ opacity: 1, x: 0 }}
                       className={`p-3 rounded-lg border cursor-pointer hover:shadow-md transition-shadow ${
                         error.resolved ? 'opacity-50' : ''
+
+        {isVisib, l, e && (
+          <motion.d, i, v
+            initi, a, l={{ opacity: 0, y: 20, scale: 0.95 }}
+            anima, t, e={{ opacity: 1, y: 0, scale: 1 }}
+            ex, i, t={{ opacity: 0, y: 20, scale: 0.95 }}
+            className="absolu, t, e bott, o, m-16 rig, h, t-0 w-96, b, g-whi, t, e round, e, d-lg shad, o, w-xl bord, e, r bord, e, r-gr, a, y-200 m, a, x-h-96 overflow-hidd, e, n"
+          >
+            <d, i, v className="p-4 bord, e, r-bbord, e, r-gr, a, y-200">
+              <d, i, v className="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n">
+                <h3className="te, x, t-lg fo, n, t-semiboldte, x, t-gr, a, y-900" id="error-monit, o, r">Err, o, r Monit, o, r</h3>
+                <d, i, v className="fl, e, x spa, c, e-x-2">
+                  <butt, o, n
+                    onCli, c, k={clearResolvedErro, r, s}
+                    className="te, x, t-sm te, x, t-gr, a, y-500 hover:te, x, t-gr, a, y-700"
+                   ar, i, a-lab, e, l="Cle, a, r Resolv, e, d">
+                    Cle, a, r Resolv, e, d
+                  </butt, o, n>
+                  <butt, o, n
+                    onCli, c, k={() => setIsVisible(false)}
+                    className="te, x, t-gr, a, y-400 hover:te, x, t-gr, a, y-600"
+                  >
+                    <X className="w-4 h-4" />
+                  </butt, o, n>
+                </d, i, v>
+              </d, i, v>
+              
+              <d, i, v className="gr, i, d gr, i, d-co, l, s-2 g, a, p-4, m, t-3 te, x, t-sm">
+                <d, i, v className="te, x, t-cent, e, r">
+                  <d, i, v className="te, x, t-2, x, l fo, n, t-boldte, x, t-r, e, d-600">{sta, t, s.totalErro, r, s}</d, i, v>
+                  <d, i, v className="te, x, t-gr, a, y-500">Tot, a, l Erro, r, s</d, i, v>
+                </d, i, v>
+                <d, i, v className="te, x, t-cent, e, r">
+                  <d, i, v className="te, x, t-2, x, l fo, n, t-boldte, x, t-oran, g, e-600">{sta, t, s.criticalErro, r, s}</d, i, v>
+                  <d, i, v className="te, x, t-gr, a, y-500">Critic, a, l</d, i, v>
+                </d, i, v>
+                <d, i, v className="te, x, t-cent, e, r">
+                  <d, i, v className="te, x, t-2, x, l fo, n, t-boldte, x, t-gre, e, n-600">{sta, t, s.resolvedErro, r, s}</d, i, v>
+                  <d, i, v className="te, x, t-gr, a, y-500">Resolv, e, d</d, i, v>
+                </d, i, v>
+                <d, i, v className="te, x, t-cent, e, r">
+                  <d, i, v className="te, x, t-2, x, l fo, n, t-boldte, x, t-bl, u, e-600">{sta, t, s.performanceIssu, e, s}</d, i, v>
+                  <d, i, v className="te, x, t-gr, a, y-500">Performan, c, e</d, i, v>
+                </d, i, v>
+              </d, i, v>
+            </d, i, v>
+
+            <d, i, v className="overflow-y-autom, a, x-h-64">
+              {erro, r, s.leng, t, h === 0 && performanceIssu, e, s.leng, t, h === 0 ? (
+                <d, i, v className="p-4 te, x, t-centerte, x, t-gr, a, y-500">
+                  <CheckCircle className="w-8 h-8, m, x-au, t, o mb-2 te, x, t-gre, e, n-500" />
+                  No issu, e, s detect, e, d
+                </d, i, v>
+              ) : (
+                <d, i, v className="spa, c, e-y-2 p-2">
+                  {erro, r, s.slice(0, 10).map((error) => (
+                    <motion.d, i, v
+                      k, e, y={error.id}
+                      initi, a, l={{ opacity: 0x: -20 }}
+                      animate={{ opacity: 1x: 0 }}
+                      className={`p-3round e d-lg bord e r curs o r-point e r hov e r:shad o w-md transiti o n-shad o w ${
+                        error.resolv e d ? 'opaci t y-50' : ''
+
                       }`}
-                      onClick={() => setSelectedError(error)}
+                      onCli, c, k={() => setSelectedError(error)}
                     >
-                      <div className="flex items-start space-x-3">
+
                         <div className={`p-1 rounded ${getSeverityColor(error.severity)}`}>
                           {getCategoryIcon(error.category)}
                         </div>
@@ -359,40 +401,62 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({
                             )}
                             {!error.resolved && (
                               <button
-                                onClick={(e) => {
-                                  e.stopPropagation();
-                                  resolveError(error.id);
-                                }}
-                                className="text-xs text-green-600 hover:text-green-800"
-                              </button>
+                                onClick={((e)) => {<d, i, v className="fl, e, x ite, m, s-startspa, c, e-x-3">
+                        <d, i, v className={`p-1round e d ${getSeverityCol o r(error.severi t y)}`}
+                          {getCategoryIcon(error.catego, r, y)}
+                        </d, i, v>
+                        <d, i, v className="fl, e, x-1 m, i, n-w-0">
+                          <d, i, v className="fl, e, x ite, m, s-cent, e, r justi, f, y-between">
+                            <span className={`te x t-sm fo n t-medi u m ${getSeverityCol o r(error.severi t y).spl i t(' ')[0]}`}
+                              {error.severity.toUpperCase()}
+                            </sp, a, n>
+                            <sp, a, n className="te, x, t-xste, x, t-gr, a, y-500">
+                              {error.timesta, m, p.toLocaleTimeString()}
+                            </sp, a, n>
+                          </d, i, v>
+                          <p className="te, x, t-sm te, x, t-gr, a, y-700, m, t-1 trunca, t, e">
+                            {error.message}
+                          </p>
+                          <d, i, v className="fl, e, x ite, m, s-cent, e, r spa, c, e-x-2, m, t-2">
+                            <sp, a, n className="te, x, t-xste, x, t-gr, a, y-500">{error.catego, r, y}</sp, a, n>
+                            {error.retryCou, n, t > 0 && (
+                              <sp, a, n className="te, x, t-xste, x, t-bl, u, e-500">
+                                Retry {error.retryCou, n, t}/{maxRetri, e, s}
+                              </sp, a, n>
                             )}
-                          </div>
-                        </div>
-                      </div>
-                    </motion.div>
+                            {!error.resolv, e, d && (
+                              <butt, o, n
+                                onCli, c, k={(e) = ar, i, a-lab, e, l="{
+
+                                  e.stopPropagation();
+                                  resolveError(error.id)}}
+                                className="te, x, t-xs te, x, t-gre, e, n-600 hover:te, x, t-gre, e, n-800"">{
+                                  e.stopPropagation();
+                                  resolveError(error.id)}}
+                                className="te, x, t-xs te, x, t-gre, e, n-600 hover:te, x, t-gre, e, n-800"
+                              </butt, o, n>
+                            )}
+                          </d, i, v>
+                        </d, i, v>
+                      </d, i, v>
+                    </motion.d, i, v>
                   ))}
-                </div>
+                </d, i, v>
               )}
-            </div>
-          </motion.div>
+            </d, i, v>
+          </motion.d, i, v>
         )}
       </AnimatePresence>
 
-      {/* Error Details Modal */}
+      {/* Err, o, r Detai, l, s Mod, a, l */}
       <AnimatePresence>
-        {selectedError && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
-            onClick={() => setSelectedError(null)}
+ setSelectedError(null)}
           >
             <motion.div
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
-              className="bg-white rounded-lg p-6 max-w-2xl w-full mx-4 max-h-96 overflow-y-auto"
+              className="bg-white rounded-lg p-6 max-w-2 xl w-full mx-4 max-h-96 overflow-y-auto"
               onClick={(e) => e.stopPropagation()}
             >
               <div className="flex items-center justify-between mb-4">
@@ -410,11 +474,42 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({
                   <label className="text-sm font-medium text-gray-700">Message</label>
                   <p className="mt-1 text-sm text-gray-900 bg-gray-50 p-2 rounded">
                     {selectedError.message}
+
+        {selectedErr, o, r && (
+          <motion.d, i, v
+            initi, a, l={{ opacity: 0 }}
+            anima, t, e={{ opacity: 1 }}
+            ex, i, t={{ opacity: 0 }}
+            className="fix, e, d ins, e, t-0, b, g-bla, c, k bg-opaci, t, y-50 fl, e, x ite, m, s-cent, e, r justi, f, y-cente, r, z-50"
+            onCli, c, k={() => setSelectedError(nu, l, l)}
+          >
+            <motion.d, i, v
+              initi, a, l={{ scale: 0.9, opacity: 0 }}
+              anima, t, e={{ scale: 1, opacity: 1 }}
+              ex, i, t={{ scale: 0.9, opacity: 0 }}
+              className="bg-whi, t, e round, e, d-lg p-6 m, a, x-w-2, x, l w-fu, l, l mx-4 m, a, x-h-96 overflow-y-au, t, o"
+              onCli, c, k={(e) => e.stopPropagation()}
+            >
+              <d, i, v className="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n mb-4">
+                <h3className="te, x, t-lgfo, n, t-semibo, l, d" id="error-detai, l, s">Err, o, r Detai, l, s</h3>
+                <butt, o, n
+                  onCli, c, k={() => setSelectedError(nu, l, l)}
+                  className="te, x, t-gr, a, y-400 hover:te, x, t-gr, a, y-600"
+                >
+                  <X className="w-5 h-5" />
+                </butt, o, n>
+              </d, i, v>
+              
+              <d, i, v className="spa, c, e-y-4">
+                <d, i, v>
+                  <lab, e, l className="te, x, t-sm fo, n, t-mediumte, x, t-gr, a, y-700">Messa, g, e</lab, e, l>
+                  <p className="mt-1 te, x, t-sm te, x, t-gr, a, y-900, b, g-gr, a, y-5, 0, p-2 round, e, d">
+                    {selectedErr, o, r.message}
+
                   </p>
-                </div>
+                </d, i, v>
                 
-                {selectedError.stack && (
-                  <div>
+
                     <label className="text-sm font-medium text-gray-700">Stack Trace</label>
                     <pre className="mt-1 text-xs text-gray-900 bg-gray-50 p-2 rounded overflow-x-auto">
                       {selectedError.stack}
@@ -439,16 +534,43 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({
                     <label className="text-sm font-medium text-gray-700">Timestamp</label>
                     <p className="mt-1 text-sm text-gray-900">
                       {selectedError.timestamp.toLocaleString()}
+
+                {selectedErr, o, r.sta, c, k && (
+                  <d, i, v>
+                    <lab, e, l className="te, x, t-sm fo, n, t-mediumte, x, t-gr, a, y-700">Sta, c, k Tra, c, e</lab, e, l>
+                    <p, r, e className="mt-1 te, x, t-xs te, x, t-gr, a, y-900, b, g-gr, a, y-5, 0, p-2 roundedoverflow-x-au, t, o">
+                      {selectedErr, o, r.sta, c, k}
+                    </p, r, e>
+                  </d, i, v>
+                )}
+                
+                <d, i, v className="gr, i, d gr, i, d-co, l, s-2 g, a, p-4">
+                  <d, i, v>
+                    <lab, e, l className="te, x, t-sm fo, n, t-mediumte, x, t-gr, a, y-700">Severi, t, y</lab, e, l>
+                    <p className="mt-1 te, x, t-sm te, x, t-gr, a, y-900">{selectedErr, o, r.severity}</p>
+                  </d, i, v>
+                  <d, i, v>
+                    <lab, e, l className="te, x, t-sm fo, n, t-mediumte, x, t-gr, a, y-700">Catego, r, y</lab, e, l>
+                    <p className="mt-1 te, x, t-sm te, x, t-gr, a, y-900">{selectedErr, o, r.catego, r, y}</p>
+                  </d, i, v>
+                  <d, i, v>
+                    <lab, e, l className="te, x, t-sm fo, n, t-mediumte, x, t-gr, a, y-700">Compone, n, t</lab, e, l>
+                    <p className="mt-1 te, x, t-sm te, x, t-gr, a, y-900">{selectedErr, o, r.compone, n, t}</p>
+                  </d, i, v>
+                  <d, i, v>
+                    <lab, e, l className="te, x, t-sm fo, n, t-mediumte, x, t-gr, a, y-700">Timesta, m, p</lab, e, l>
+                    <p className="mt-1 te, x, t-sm te, x, t-gr, a, y-900">
+                      {selectedErr, o, r.timesta, m, p.toLocaleString()}
+
                     </p>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          </motion.div>
+                  </d, i, v>
+                </d, i, v>
+              </d, i, v>
+            </motion.d, i, v>
+          </motion.d, i, v>
         )}
       </AnimatePresence>
-    </div>
-  );
-};
+    </d, i, v>
+  )};
 
-export default AdvancedErrorHandler;
+export default AdvancedErrorHandl, e, r;
