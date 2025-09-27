@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { BarChart3, Activity, Zap, TrendingUp, AlertCircle } from 'lucide-react';
 
 interface PerformanceData {
@@ -11,6 +11,16 @@ interface PerformanceData {
   loadTime: number;
   memoryUsage: number;
   renderTime: number;
+}
+
+interface PerformanceMemory {
+  usedJSHeapSize: number;
+  totalJSHeapSize: number;
+  jsHeapSizeLimit: number;
+}
+
+interface PerformanceWithMemory extends Performance {
+  memory?: PerformanceMemory;
 }
 
 interface ComponentPerformance {
@@ -30,25 +40,51 @@ const PerformanceProfiler: React.FC = () => {
   
   const observerRef = useRef<PerformanceObserver | null>(null);
 
-  useEffect(() => {
-    // Only show in development or when explicitly enabled
-    const shouldShow = process.env.NODE_ENV === 'development' || 
-                      localStorage.getItem('showPerformanceProfiler') === 'true';
+  const collectPerformanceData = useCallback(() => {
+    const now = Date.now();
     
-    if (!shouldShow) return;
-
-    if (isProfiling) {
-      startProfiling();
-    }
-
-    return () => {
-      if (observerRef.current) {
-        observerRef.current.disconnect();
-      }
+    // Get Core Web Vitals
+    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    const paintEntries = performance.getEntriesByType('paint');
+    const fcpEntry = paintEntries.find(entry => entry.name === 'first-contentful-paint');
+    
+    const fcp = fcpEntry ? fcpEntry.startTime : 0;
+    const lcp = performance.getEntriesByName('largest-contentful-paint')[0]?.startTime || performance.now();
+    const fidEntry = performance.getEntriesByName('first-input')[0] as PerformanceEntry & { processingStart?: number };
+    const fid = fidEntry?.processingStart || 0;
+    const clsEntry = performance.getEntriesByName('layout-shift')[0] as PerformanceEntry & { value?: number };
+    const cls = clsEntry?.value || 0;
+    const ttfb = navigation ? navigation.responseStart - navigation.requestStart : 0;
+    const loadTime = navigation ? navigation.loadEventEnd - navigation.fetchStart : 0;
+    
+    // Get memory usage if available
+    const memory = (performance as PerformanceWithMemory).memory;
+    const memoryUsage = memory ? memory.usedJSHeapSize / 1024 / 1024 : 0;
+    
+    // Calculate render time (simplified)
+    const renderTime = performance.now();
+    
+    const newData: PerformanceData = {
+      timestamp: now,
+      fcp,
+      lcp,
+      fid,
+      cls,
+      ttfb,
+      loadTime,
+      memoryUsage,
+      renderTime
     };
-  }, [isProfiling]);
 
-  const startProfiling = () => {
+    setPerformanceData(prev => {
+      const updated = [...prev, newData];
+      // Keep only data within selected time range
+      const cutoff = now - getTimeRangeMs(selectedTimeRange);
+      return updated.filter(data => data.timestamp > cutoff);
+    });
+  }, [selectedTimeRange]);
+
+  const startProfiling = useCallback(() => {
     // Clear existing data
     setPerformanceData([]);
     setComponentData([]);
@@ -83,49 +119,24 @@ const PerformanceProfiler: React.FC = () => {
       clearInterval(interval);
       clearTimeout(timeout);
     };
-  };
+  }, [selectedTimeRange, collectPerformanceData]);
 
-  const collectPerformanceData = () => {
-    const now = Date.now();
-    
-    // Get Core Web Vitals
-    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-    const paintEntries = performance.getEntriesByType('paint');
-    const fcpEntry = paintEntries.find(entry => entry.name === 'first-contentful-paint');
-    
-    const fcp = fcpEntry ? fcpEntry.startTime : 0;
-    const lcp = performance.now(); // Simplified LCP
-    const fid = 0; // Would need to measure this
-    const cls = 0; // Would need to measure this
-    const ttfb = navigation ? navigation.responseStart - navigation.requestStart : 0;
-    const loadTime = navigation ? navigation.loadEventEnd - navigation.fetchStart : 0;
-    
-    // Get memory usage
-    const memoryUsage = (performance as any).memory ? 
-      (performance as any).memory.usedJSHeapSize / 1024 / 1024 : 0; // MB
-    
-    // Calculate render time (simplified)
-    const renderTime = performance.now() - (performanceData[performanceData.length - 1]?.timestamp || now);
+  useEffect(() => {
+    if (isProfiling) {
+      startProfiling();
+    }
 
-    const newData: PerformanceData = {
-      timestamp: now,
-      fcp,
-      lcp,
-      fid,
-      cls,
-      ttfb,
-      loadTime,
-      memoryUsage,
-      renderTime
+    return () => {
+      if (observerRef.current) {
+        observerRef.current.disconnect();
+      }
     };
+  }, [isProfiling, startProfiling]);
 
-    setPerformanceData(prev => {
-      const updated = [...prev, newData];
-      // Keep only data within selected time range
-      const cutoff = now - getTimeRangeMs(selectedTimeRange);
-      return updated.filter(data => data.timestamp > cutoff);
-    });
-  };
+  // Only render in development mode
+  if (process.env.NODE_ENV !== 'development') {
+    return null;
+  }
 
   const updateComponentPerformance = (componentName: string, duration: number) => {
     setComponentData(prev => {
@@ -235,7 +246,7 @@ const PerformanceProfiler: React.FC = () => {
         </button>
         <select
           value={selectedTimeRange}
-          onChange={(e) => setSelectedTimeRange(e.target.value as any)}
+          onChange={(e) => setSelectedTimeRange(e.target.value as '1m' | '5m' | '15m' | '1h')}
           className="px-2 py-1 border border-gray-300 rounded text-sm"
         >
           <option value="1m">1 minute</option>
