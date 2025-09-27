@@ -183,9 +183,8 @@ export default function Services(): JSX.Element {
 					<main>
 						{/* Services Grid */}
 						<section className="mb-20">
-			<div className="grid grid-cols-1 md: grid-cols-2,
-		lg:grid-cols-3 gap-8">
-								{SERVICES.map((service ,, index) => (
+			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+								{SERVICES.map((service, index) => (
 			<div
 										key={service.id}
 										className={`transform transition-all duration-700 delay-${index * 100} ${

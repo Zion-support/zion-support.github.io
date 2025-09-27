@@ -262,16 +262,16 @@ const Dashboard: React.FC = () => {
           </div>
         );
       case 'advanced-analytics':
-	return (
-			<div className="p-8">
-			<div className="flex justify-between items-center mb-8">
+        return (
+          <div className="p-8">
+            <div className="flex justify-between items-center mb-8">
               <h1 className="text-3xl font-bold text-gray-900">Advanced Analytics Dashboard</h1>
-			<div className="flex items-center space-x-4">
+              <div className="flex items-center space-x-4">
                 <label className="flex items-center">
                   <input
                     type="checkbox"
                     checked={isRealTime}
-                   ,, onChange={(e) => setIsRealTime(e.target.checked)}
+                    onChange={(e) => setIsRealTime(e.target.checked)}
                     className="mr-2"
                   />
                   Real-time Updates
@@ -336,16 +336,16 @@ const Dashboard: React.FC = () => {
           </div>
         );
       case 'system-monitor':
-	return (
-			<div className="p-8">
-			<div className="flex justify-between items-center mb-8">
+        return (
+          <div className="p-8">
+            <div className="flex justify-between items-center mb-8">
               <h1 className="text-3xl font-bold text-gray-900">System Monitor</h1>
-			<div className="flex items-center space-x-4">
+              <div className="flex items-center space-x-4">
                 <label className="flex items-center">
                   <input
                     type="checkbox"
                     checked={isRealTime}
-                   ,, onChange={(e) => setIsRealTime(e.target.checked)}
+                    onChange={(e) => setIsRealTime(e.target.checked)}
                     className="mr-2"
                   />
                   Real-time Monitoring

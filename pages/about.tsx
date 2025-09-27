@@ -84,22 +84,22 @@ export default function About(): JSX.Element {
 
   return (
     <>
+      <SEO />
       <Head>
         <title>About Us - Zion App</title>
         <meta name="description" content="Learn about Zion App's mission, values, and commitment to delivering cutting-edge technology solutions." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 pt-20">
-			<div className="container mx-auto px-4 py-8 max-w-7xl">
-				<nav className="mb-8">
-					<Link href="/" className="text-blue-600 hover: text-blue-800 font-medium transition-colors">
-							← Back to Home
-						</Link>
-					</nav>
+        <div className="container mx-auto px-4 py-8 max-w-7xl">
+          <nav className="mb-8">
+            <Link href="/" className="text-blue-600 hover:text-blue-800 font-medium transition-colors">
+              ← Back to Home
+            </Link>
+          </nav>
 
 					<header className="text-center mb-16">
-						<h1 className="text-5xl,
-		md:text-6xl font-bold text-blue-600 mb-4 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+						<h1 className="text-5xl md:text-6xl font-bold text-blue-600 mb-4 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
 							About Zion App
 						</h1>
 						<p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -285,8 +285,7 @@ export default function About(): JSX.Element {
 									</Link>
 									<button 
 										onClick={() => trackClick('learn-more-button', 'cta')}
-										className="group border-2 border-white text-white px-10 py-4 rounded-xl font-semibold hover: bg-white hover:text-blue-600 transition-all duration-300 transform,
-		hover:-translate-y-1 text-lg"
+										className="group border-2 border-white text-white px-10 py-4 rounded-xl font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300 transform hover:-translate-y-1 text-lg"
 									>
 										<span className="flex items-center justify-center gap-2">
 											Learn More

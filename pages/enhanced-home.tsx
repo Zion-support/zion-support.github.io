@@ -31,17 +31,17 @@ export default function Home(): JSX.Element {
 		// Handle blog navigation logic here
 		console.log('Read more:', slug);
 	};
-	return (
-		<>
-			<SEO />
-			<Head>
-				<title>Zion App - Advanced Technology Solutions</title>
-				<meta name="description" content="Zion App provides cutting-edge technology solutions and services for modern businesses. Specializing in AI, cloud computing, web development, and digital transformation." />
-				<meta name="viewport" content="width=device-width, initial-scale=1" />
-			</Head>
-			<div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 relative overflow-hidden">
-				{/* Animated background elements */}
-			<div className="absolute inset-0 overflow-hidden">
+  return (
+    <>
+      <SEO />
+      <Head>
+        <title>Zion App - Advanced Technology Solutions</title>
+        <meta name="description" content="Zion App provides cutting-edge technology solutions and services for modern businesses. Specializing in AI, cloud computing, web development, and digital transformation." />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 relative overflow-hidden">
+        {/* Animated background elements */}
+        <div className="absolute inset-0 overflow-hidden">
 			<div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
 			<div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse" style={{animationDelay: '2s'}}></div>
 			<div className="absolute top-40 left-1/2 w-80 h-80 bg-indigo-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse" style={{animationDelay: '4s'}}></div>
