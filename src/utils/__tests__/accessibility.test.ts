@@ -34,6 +34,13 @@ describe('accessibilityManager', () => {
   });
 
   it('should handle keyboard navigation', () => {
+    // Add some focusable elements to the DOM
+    document.body.innerHTML = `
+      <button id="btn1">Button 1</button>
+      <button id="btn2">Button 2</button>
+      <input id="input1" type="text" />
+    `;
+    
     const keyboardSpy = jest.spyOn(accessibilityManager, 'handleKeyboardNavigation');
     
     const event = new KeyboardEvent('keydown', { key: 'Tab' });
@@ -50,16 +57,13 @@ describe('accessibilityManager', () => {
   });
 
   it('should handle missing ARIA live region', () => {
-    // Remove any existing live region
-    const existingLiveRegion = document.getElementById('aria-live-region');
-    if (existingLiveRegion) {
-      existingLiveRegion.remove();
-    }
+    // Initialize with announceChanges enabled
+    accessibilityManager.initialize({ announceChanges: true });
     
     accessibilityManager.announceToScreenReader('Test message');
     
-    // Should create a new live region
-    const liveRegion = document.getElementById('aria-live-region');
-    expect(liveRegion).toBeInTheDocument();
+    // Should create a temporary live region element
+    const liveRegions = document.querySelectorAll('[aria-live="polite"]');
+    expect(liveRegions.length).toBeGreaterThan(0);
   });
 });

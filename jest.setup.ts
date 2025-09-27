@@ -33,7 +33,11 @@ global.ResizeObserver = jest.fn().mockImplementation(() => ({
 
 // Mock Performance API
 Object.defineProperty(global, 'performance', {
+  writable: true,
   value: {
+    now: jest.fn(() => Date.now()),
+    mark: jest.fn(),
+    measure: jest.fn(),
     getEntriesByType: jest.fn().mockReturnValue([
       {
         type: 'navigate',
@@ -43,13 +47,15 @@ Object.defineProperty(global, 'performance', {
         firstContentfulPaint: 600,
       }
     ]),
-    mark: jest.fn(),
-    measure: jest.fn(),
+    getEntriesByName: jest.fn(() => []),
     clearMarks: jest.fn(),
     clearMeasures: jest.fn(),
-    now: jest.fn().mockReturnValue(1000),
-  },
-  writable: true,
+    memory: {
+      usedJSHeapSize: 1000000,
+      totalJSHeapSize: 2000000,
+      jsHeapSizeLimit: 4000000
+    }
+  }
 });
 
 // Mock window.performance
@@ -57,6 +63,13 @@ Object.defineProperty(window, 'performance', {
   value: global.performance,
   writable: true,
 });
+
+// Mock PerformanceObserver
+global.PerformanceObserver = jest.fn().mockImplementation(() => ({
+  observe: jest.fn(),
+  disconnect: jest.fn(),
+  takeRecords: jest.fn(() => [])
+}));
 
 // Setup testing library matchers
 import '@testing-library/jest-dom';

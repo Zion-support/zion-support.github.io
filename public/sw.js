@@ -1,31 +1,28 @@
-const CACHE_NAME = 'zion-website-v1';
-const urlsToCache = [
+// Service Worker for Zion Tech Group Website
+const CACHE_NAME = 'zion-tech-group-v1';
+const STATIC_CACHE_URLS = [
   '/',
-  '/static/js/bundle.js',
-  '/static/css/main.css',
-  '/manifest.json'
+  '/about',
+  '/services',
+  '/portfolio',
+  '/blog',
+  '/contact',
+  '/offline.html'
 ];
 
-// Install event - cache resources
+// Install event - cache static assets
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then((cache) => {
         console.log('Opened cache');
-        return cache.addAll(urlsToCache);
+        return cache.addAll(STATIC_CACHE_URLS);
+      })
+      .catch((error) => {
+        console.error('Failed to cache static assets:', error);
       })
   );
-});
-
-// Fetch event - serve from cache when offline
-self.addEventListener('fetch', (event) => {
-  event.respondWith(
-    caches.match(event.request)
-      .then((response) => {
-        // Return cached version or fetch from network
-        return response || fetch(event.request);
-      })
-  );
+  self.skipWaiting();
 });
 
 // Activate event - clean up old caches
@@ -42,4 +39,106 @@ self.addEventListener('activate', (event) => {
       );
     })
   );
+  self.clients.claim();
+});
+
+// Fetch event - serve from cache, fallback to network
+self.addEventListener('fetch', (event) => {
+  // Skip non-GET requests
+  if (event.request.method !== 'GET') {
+    return;
+  }
+
+  // Skip cross-origin requests
+  if (!event.request.url.startsWith(self.location.origin)) {
+    return;
+  }
+
+  event.respondWith(
+    caches.match(event.request)
+      .then((response) => {
+        // Return cached version or fetch from network
+        if (response) {
+          return response;
+        }
+
+        return fetch(event.request).then((response) => {
+          // Check if we received a valid response
+          if (!response || response.status !== 200 || response.type !== 'basic') {
+            return response;
+          }
+
+          // Clone the response
+          const responseToCache = response.clone();
+
+          // Cache the response for future use
+          caches.open(CACHE_NAME)
+            .then((cache) => {
+              cache.put(event.request, responseToCache);
+            });
+
+          return response;
+        });
+      })
+      .catch(() => {
+        // If both cache and network fail, show offline page for navigation requests
+        if (event.request.destination === 'document') {
+          return caches.match('/offline.html');
+        }
+      })
+  );
+});
+
+// Background sync for form submissions
+self.addEventListener('sync', (event) => {
+  if (event.tag === 'contact-form') {
+    event.waitUntil(
+      // Handle offline form submissions here
+      console.log('Processing offline contact form submissions')
+    );
+  }
+});
+
+// Push notifications (if needed in the future)
+self.addEventListener('push', (event) => {
+  if (event.data) {
+    const data = event.data.json();
+    const options = {
+      body: data.body,
+      icon: '/icon-192x192.png',
+      badge: '/badge-72x72.png',
+      vibrate: [100, 50, 100],
+      data: {
+        dateOfArrival: Date.now(),
+        primaryKey: 1
+      },
+      actions: [
+        {
+          action: 'explore',
+          title: 'View Details',
+          icon: '/icon-192x192.png'
+        },
+        {
+          action: 'close',
+          title: 'Close',
+          icon: '/icon-192x192.png'
+        }
+      ]
+    };
+
+    event.waitUntil(
+      self.registration.showNotification(data.title, options)
+    );
+  }
+});
+
+// Handle notification clicks
+self.addEventListener('notificationclick', (event) => {
+  event.notification.close();
+
+  if (event.action === 'explore') {
+    event.waitUntil(
+      clients.openWindow('/')
+    );
+  }
 });
