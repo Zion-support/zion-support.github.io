@@ -7,8 +7,7 @@ const, cartUtil, s = {addIt, e, m: (ca, r, t, it, e, m) => {
           : cartIt, e, m
       )
     };
-    return [...ca, r, t, {...it, e, m, quanti, t, y: 1 }];
-  },
+    return [...ca, r, t, {...it, e, m, quanti, t, y: 1 }]},
 
   removeIt, e, m: (ca, r, t, item, I, d) => {retu, r, n, ca, r, t.filt, e, r(it, e, m => it, e, m.id !== item, I, d)
   },

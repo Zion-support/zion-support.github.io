@@ -31,5 +31,4 @@
       succe, s, s: true, processe, d: even, t, s.length, timestam, p: Da, t, e.n, o, w()
     })} cat, c, h (err, o, r) {
     conso, l, e.err, o, r('Analytics, API, error:', err, o, r);
-    r, e, s.stat, u, s(5, 0, 0).js, o, n({ err, o, r: 'Internal, server, error' })};
-};
+    r, e, s.stat, u, s(5, 0, 0).js, o, n({ err, o, r: 'Internal, server, error' })}};

@@ -42,5 +42,4 @@ export default async function, handle, r(r, e, q: NextApiReque, s, t, r, e, s: N
     // using, libraries, like Sharp, or, ImageMagick
     r, e, s.stat, u, s(2, 0, 0).se, n, d(Buff, e, r.fr, o, m(imageBuff, e, r))} cat, c, h (err, o, r) {
     conso, l, e.err, o, r('Image, optimization, error:', err, o, r);
-    r, e, s.stat, u, s(5, 0, 0).js, o, n({ err, o, r: 'Internal, server, error' })};
-};
+    r, e, s.stat, u, s(5, 0, 0).js, o, n({ err, o, r: 'Internal, server, error' })}};

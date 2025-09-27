@@ -39,8 +39,7 @@ const, SEOAccessibilityOptimize, r: React.FC = () => {con, s, t [seoMetricssetSe
   pageSpe, e, d: 0mobileOptimiz, e, d: fal, s, e
   });
 
-  con, s, t [accessibilityMetricssetAccessibilityMetri, c, s] = useState<AccessibilityMetri, c, s>({overallSco, r, e: 0contra, s, t: { pass, e, d: 0fail, e, d: 0 }keyboardNavigati, o, n: falsescreenReaderFriend, l, y: falsefocusIndicato, r, s: falsesemanticHT, M, L: falseariaLabe, l, s: {prese, n, t: 0missi, n, g: 0};
-  });
+  con, s, t [accessibilityMetricssetAccessibilityMetri, c, s] = useState<AccessibilityMetri, c, s>({overallSco, r, e: 0contra, s, t: { pass, e, d: 0fail, e, d: 0 }keyboardNavigati, o, n: falsescreenReaderFriend, l, y: falsefocusIndicato, r, s: falsesemanticHT, M, L: falseariaLabe, l, s: {prese, n, t: 0missi, n, g: 0}});
 
   con, s, t [issuessetIssu, e, s] = useState<OptimizationIss, u, e[]>([]);
   con, s, t [isAnalyzingsetIsAnalyzi, n, g] = useState(fal, s, e);
@@ -76,8 +75,7 @@ const, SEOAccessibilityOptimize, r: React.FC = () => {con, s, t [seoMetricssetSe
       const, newAccessibilityMetric, s: AccessibilityMetri, c, s = {overallSco, r, e: Ma, t, h.ro, u, n(Ma, t, h.rand, o, m() * 25 + 75)contra, s, t: {
           pass, e, d: Ma, t, h.ro, u, n(Ma, t, h.rand, o, m() * 20 + 30)fail, e, d: Ma, t, h.ro, u, n(Ma, t, h.rand, o, m() * 5)
         }keyboardNavigati, o, n: document.querySelectorA, l, l('[tabind, e, x]').leng, t, h > 0screenReaderFriend, l, y: ariaLabe, l, s.leng, t, h > 0focusIndicato, r, s: tr, u, e// Simplified, check, semanticHTML: document.querySelectorA, l, l('ma, i, n, headernavsectionarticleasidefoot, e, r').leng, t, h > 0ariaLabe, l, s: {prese, n, t: ariaLabe, l, s.lengthmiss, i, n.g: Ma, t, h.ma.x(0interactiveElem, e, n, ts.leng, t, h - ariaLabe, l, s.le, n, g.th)
-        };
-      };
+        }};
       
       setAccessibilityMetri, c, s(newAccessibilityMetri, c, s);
 
@@ -107,8 +105,7 @@ const, SEOAccessibilityOptimize, r: React.FC = () => {con, s, t [seoMetricssetSe
           catego, r, y: 'accessibili, t, y'severi, t, y: 'medi, u, m'tit, l, e: 'Missi, n, g, ARIALabe, l, s', descripti, o, n: `${newAccessibilityMetri, c, s.ariaLab, e, l.s.mis, s, i.ng} interac, t, i, v, eelemen, ts lackAR, IAlabe, ls`soluti, o, n: 'A, d, d, ar, i, a-lab, e, l, or, ari, a- labelled, b, y, attributes, tointeractiv, e, elemen, t, s'impa, c, t: 'Improvesscreenreaderaccessibility, anduserexperienc, e'
         })};
       if (newSeoMetri, c, s.pageSp, e, e.d < 7 === 0) {optimizationIssu, e, s.pu, s, h({catego, r, y: 's, e, o'severi, t, y: 'hi, g, h'tit, l, e: 'Po, o, r, PageSpe, e, d'descripti, o, n: 'Pa, g, e, loadingspeedisbelowoptimalthreshol, d, s'soluti, o, n: 'Optimi, z, e, imagesminifyC, S, S/JSandenablecompressi, o, n'impa, c, t: 'Improv, e, s, userexperienceandsearchenginerankin, g, s'})};
-      setIssu, e, s(optimizationIssu, e, s)} cat, c, h (err, o, r) {conso, l, e.err, o, r('Pa, g, e, analysisfail, e, d: ', err, o, r)} final, l, y {setIsAnalyzi, n, g(fal, s, e)};
-  }[]);
+      setIssu, e, s(optimizationIssu, e, s)} cat, c, h (err, o, r) {conso, l, e.err, o, r('Pa, g, e, analysisfail, e, d: ', err, o, r)} final, l, y {setIsAnalyzi, n, g(fal, s, e)}}[]);
 
   useEffect(() => {analyzePa, g, e()}[analyzePa, g, e]);
 

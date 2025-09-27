@@ -5,14 +5,12 @@ export, const, AccessibilityFixer: React.FC<AccessibilityFixerPro, p, s> = ({onF
     // Addar, i, a-labelstoallbuttons, constbutton, s = document.querySelectorA, l, l('butt, o, n:n, o, t([ar, i, a-lab, e, l])');
     butto, n, s.forEa, c, h((buttonind, e, x) => {
       if (!butt, o, n.getAttribu, t, e('ar, i, a-lab, e, l')) {
-        butt, o, n.setAttrib, u, t('ar, i, a-lab, e, l'`Butt, o, n ${ind, e, x+1}`)};
-    });
+        butt, o, n.setAttrib, u, t('ar, i, a-lab, e, l'`Butt, o, n ${ind, e, x+1}`)}});
 
     // Add, ids, to headings, for, anchor links, const, headings = document.querySelectorA, l, l('h1h2h3h4h5, h, 6:n, o, t([id])');
     headin, g, s.forEa, c, h((headingind, e, x) => {if (!headi, n, g.i === d) {
         con, s, t, te, x, t = headi, n, g.textCont, e, n.t? .toLowerC, a, s().repl, a, c(/\s+/g'-') || `head, i, n, g-${ind, e, x}`;
-        headi, n, g.i.d = te, x, t};
-    });
+        headi, n, g.i.d = te, x, t}});
 
     onF, i, x?.()};
 

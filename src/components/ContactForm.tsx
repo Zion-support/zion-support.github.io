@@ -36,8 +36,7 @@ export, const, ContactForm: React.FC<ContactFormPro, p, s> = ({onSubmitshowTit, 
 				onSubm, i, t(formDa, t, a)};
 			setSubmitStat, u, s('succe, s, s');
 			setFormDa, t, a({na, m, e: ''ema, i, l: ''compa, n, y: ''pho, n, e: ''servi, c, e: ''messa, g, e: ''budg, e, t: ''timeli, n, e: ''
-			})} cat, c, h (err, o, r) {setSubmitStat, u, s('err, o, r')} final, l, y {setIsSubmitti, n, g(fal, s, e)};
-	};
+			})} cat, c, h (err, o, r) {setSubmitStat, u, s('err, o, r')} final, l, y {setIsSubmitti, n, g(fal, s, e)}};
 
 
 				<div, classNam, e="w-20, h-20, bg-gre, e, n-1, 0, 0, round, e, d-full, flex, items-center, justif, y-center, m, x-auto, m, b-6">
@@ -61,12 +60,12 @@ export, const, ContactForm: React.FC<ContactFormPro, p, s> = ({onSubmitshowTit, 
 
 				<buttononCli, c, k ={() = ar, i, a-lab, e, l="setSubmitStat, u, s('id, l, e')};
 					ar, i, a-lab, e, l="Send, another, message"
-					classNa, m, e="bg-gre, e, n-600, hove, r:bg-gre, e, n-700, tex, t-white, p, x-8, p, y-3, rounde, d-lg, fon, t-medium, transitio, n-colors, duratio, n-2, 0, 0"
+					classNa, m, e="bg-gre, e, n-600, hover:bg-gre, e, n-700, tex, t-white, p, x-8, p, y-3, rounde, d-lg, fon, t-medium, transitio, n-colors, duratio, n-2, 0, 0"
 
 				>
 					Send, Another, Message"> setSubmitStat, u, s('id, l, e')};
 					ar, i, a-lab, e, l="Send, another, message"
-					classNa, m, e="bg-gre, e, n-600, hove, r:bg-gre, e, n-700, tex, t-white, p, x-8, p, y-3, rounde, d-lg, fon, t-medium, transitio, n-colors, duratio, n-2, 0, 0"
+					classNa, m, e="bg-gre, e, n-600, hover:bg-gre, e, n-700, tex, t-white, p, x-8, p, y-3, rounde, d-lg, fon, t-medium, transitio, n-colors, duratio, n-2, 0, 0"
 				>
 					Send, Another, Message
 				</butt, o, n>
@@ -220,7 +219,7 @@ export, const, ContactForm: React.FC<ContactFormPro, p, s> = ({onSubmitshowTit, 
 				)};
 				<button, typ, e="subm, i, t"
 					disabl, e, d={isSubmitti, n, g};
-					classNa, m, e="w-full, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-indi, g, o-600, hove, r:fr, o, m-bl, u, e-700, hove, r:to-indi, g, o-700, disable, d:fr, o, m-bl, u, e-400, disable, d:to-indi, g, o-400, tex, t-white, fon, t-semibold, p, y-4, p, x-6, rounde, d-lg, transitio, n-all, duratio, n-300, flex, items-center, justif, y-center, shado, w-lg, hove, r:shad, o, w-xl, transform, hover:-transla, t, e-y-0.5, disable, d:transfo, r, m-no, n, e"
+					classNa, m, e="w-full, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-indi, g, o-600, hover:fr, o, m-bl, u, e-700, hover:to-indi, g, o-700, disable, d:fr, o, m-bl, u, e-400, disable, d:to-indi, g, o-400, tex, t-white, fon, t-semibold, p, y-4, p, x-6, rounde, d-lg, transitio, n-all, duratio, n-300, flex, items-center, justif, y-center, shado, w-lg, hover:shad, o, w-xl, transform, hover:-transla, t, e-y-0.5, disable, d:transfo, r, m-no, n, e"
 				>
 
 					{isSubmitti, n, g ? (<>

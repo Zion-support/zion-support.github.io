@@ -30,13 +30,11 @@ export, const, AccessibilityEnhancements: React.FC<AccessibilityEnhancementsPro,
   const, updateSetting, s = useCallba, c, k((newSettin, g, s: Parti, a, l<AccessibilitySettin, g, s>) => {con, s, t, updatedSettin, g, s = { ...settin, g, s  ...newSettin, g, s };
     setSettin, g, s(updatedSettin, g, s);
     
-    if (onSettingsChan, g, e) {onSettingsChan, g, e(updatedSettin, g, s)};
-  }[settingsonSettingsChan, g, e]);
+    if (onSettingsChan, g, e) {onSettingsChan, g, e(updatedSettin, g, s)}}[settingsonSettingsChan, g, e]);
 
   const, handleKeyDow, n = useCallba, c, k((eve, n, t: KeyboardEve, n, t) => {if (eve, n, t.altK, e, y && eve, n, t.k, e, y === 'a') {
       eve, n, t.preventDefau, l, t();
-      setIsOp, e, n(!isOp, e, n)};
-  }[isOp, e, n]);
+      setIsOp, e, n(!isOp, e, n)}}[isOp, e, n]);
 
   useEffect(() => {document.addEventListen, e, r('keydo, w, n'handleKeyDo, w, n);
     return () => document.removeEventListen, e, r('keydo, w, n', handleKeyDo, w, n)}, [handleKeyDo, w, n]);
@@ -65,7 +63,7 @@ export, const, AccessibilityEnhancements: React.FC<AccessibilityEnhancementsPro,
             <h4, classNam, e="fo, n, t-semibold, tex, t-gr, a, y-800, m, b-3">Accessibility, Feature, s</h4>
             
             <div, classNam, e="spa, c, e-y-3">
-              <label, classNam, e="flex, item, s-center, justif, y-betwee, n, p-3, b, g-gr, a, y-50, rounde, d-lg, curso, r-pointer, hove, r:bg-gr, a, y-1, 0, 0">
+              <label, classNam, e="flex, item, s-center, justif, y-betwee, n, p-3, b, g-gr, a, y-50, rounde, d-lg, curso, r-pointer, hover:bg-gr, a, y-1, 0, 0">
                 <div, classNam, e="flex, item, s-cent, e, r">
                   <Eye, classNam, e="w-4 h-4, m, r-3, tex, t-bl, u, e-5, 0, 0" />
                   <span, classNam, e="te, x, t-sm, fon, t-medium, tex, t-gr, a, y-7, 0, 0">High, Contrast, Mode</sp, a, n>                </d, i, v>
@@ -74,7 +72,7 @@ export, const, AccessibilityEnhancements: React.FC<AccessibilityEnhancementsPro,
                   classNa, m, e="w-4 h-4, tex, t-bl, u, e-600, rounded, focus:ri, n, g-bl, u, e-5, 0, 0"
                 />              </lab, e, l>
 
-              <label, classNam, e="flex, item, s-center, justif, y-betwee, n, p-3, b, g-gr, a, y-50, rounde, d-lg, curso, r-pointer, hove, r:bg-gr, a, y-1, 0, 0">
+              <label, classNam, e="flex, item, s-center, justif, y-betwee, n, p-3, b, g-gr, a, y-50, rounde, d-lg, curso, r-pointer, hover:bg-gr, a, y-1, 0, 0">
                 <div, classNam, e="flex, item, s-cent, e, r">
                   <Volume2, classNam, e="w-4 h-4, m, r-3, te, x t-gre, e, n-5, 0, 0" />
                   <span, classNam, e="te, x, t-sm, fon, t-medium, tex, t-gr, a, y-7, 0, 0">Large, Tex, t</sp, a, n>                </d, i, v>
@@ -83,7 +81,7 @@ export, const, AccessibilityEnhancements: React.FC<AccessibilityEnhancementsPro,
                   classNa, m, e="w-4 h-4, tex, t-bl, u, e-600, rounded, focus:ri, n, g-bl, u, e-5, 0, 0"
                 />              </lab, e, l>
 
-              <label, classNam, e="flex, item, s-center, justif, y-betwee, n, p-3, b, g-gr, a, y-50, rounde, d-lg, curso, r-pointer, hove, r:bg-gr, a, y-1, 0, 0">
+              <label, classNam, e="flex, item, s-center, justif, y-betwee, n, p-3, b, g-gr, a, y-50, rounde, d-lg, curso, r-pointer, hover:bg-gr, a, y-1, 0, 0">
                 <div, classNam, e="flex, item, s-cent, e, r">
                   <MousePointer, classNam, e="w-4 h-4, m, r-3, te, x t-purp, l, e-5, 0, 0" />
                   <span, classNam, e="te, x, t-sm, fon, t-medium, tex, t-gr, a, y-7, 0, 0">Reduced, Motio, n</sp, a, n>                </d, i, v>
@@ -92,7 +90,7 @@ export, const, AccessibilityEnhancements: React.FC<AccessibilityEnhancementsPro,
                   classNa, m, e="w-4 h-4, tex, t-bl, u, e-600, rounded, focus:ri, n, g-bl, u, e-5, 0, 0"
                 />              </lab, e, l>
 
-              <label, classNam, e="flex, item, s-center, justif, y-betwee, n, p-3, b, g-gr, a, y-50, rounde, d-lg, curso, r-pointer, hove, r:bg-gr, a, y-1, 0, 0">
+              <label, classNam, e="flex, item, s-center, justif, y-betwee, n, p-3, b, g-gr, a, y-50, rounde, d-lg, curso, r-pointer, hover:bg-gr, a, y-1, 0, 0">
                 <div, classNam, e="flex, item, s-cent, e, r">
                   <Keyboard, classNam, e="w-4 h-4, m, r-3, te, x t-oran, g, e-5, 0, 0" />
                   <span, classNam, e="te, x, t-sm, fon, t-medium, tex, t-gr, a, y-7, 0, 0">Keyboard, Navigatio, n</sp, a, n>                </d, i, v>
@@ -101,7 +99,7 @@ export, const, AccessibilityEnhancements: React.FC<AccessibilityEnhancementsPro,
                   classNa, m, e="w-4 h-4, tex, t-bl, u, e-600, rounded, focus:ri, n, g-bl, u, e-5, 0, 0"
                 />              </lab, e, l>
 
-              <label, classNam, e="flex, item, s-center, justif, y-betwee, n, p-3, b, g-gr, a, y-50, rounde, d-lg, curso, r-pointer, hove, r:bg-gr, a, y-1, 0, 0">
+              <label, classNam, e="flex, item, s-center, justif, y-betwee, n, p-3, b, g-gr, a, y-50, rounde, d-lg, curso, r-pointer, hover:bg-gr, a, y-1, 0, 0">
                 <div, classNam, e="flex, item, s-cent, e, r">
                   <Accessibility, classNam, e="w-4 h-4, m, r-3, te, x t-indi, g, o-5, 0, 0" />
                   <span, classNam, e="te, x, t-sm, fon, t-medium, tex, t-gr, a, y-7, 0, 0">Screen, Reader, Support</sp, a, n>                </d, i, v>
@@ -110,7 +108,7 @@ export, const, AccessibilityEnhancements: React.FC<AccessibilityEnhancementsPro,
                   classNa, m, e="w-4 h-4, tex, t-bl, u, e-600, rounded, focus:ri, n, g-bl, u, e-5, 0, 0"
                 />              </lab, e, l>
 
-              <label, classNam, e="flex, item, s-center, justif, y-betwee, n, p-3, b, g-gr, a, y-50, rounde, d-lg, curso, r-pointer, hove, r:bg-gr, a, y-1, 0, 0">
+              <label, classNam, e="flex, item, s-center, justif, y-betwee, n, p-3, b, g-gr, a, y-50, rounde, d-lg, curso, r-pointer, hover:bg-gr, a, y-1, 0, 0">
                 <div, classNam, e="flex, item, s-cent, e, r">
                   <CheckCircle, classNam, e="w-4 h-4, m, r-3, te, x t-te, a, l-5, 0, 0" />
                   <span, classNam, e="te, x, t-sm, fon, t-medium, tex, t-gr, a, y-7, 0, 0">Focus, Indicator, s</sp, a, n>                </d, i, v>
@@ -119,7 +117,7 @@ export, const, AccessibilityEnhancements: React.FC<AccessibilityEnhancementsPro,
                   classNa, m, e="w-4 h-4, tex, t-bl, u, e-600, rounded, focus:ri, n, g-bl, u, e-5, 0, 0"
                 />              </lab, e, l>
 
-              <label, classNam, e="flex, item, s-center, justif, y-betwee, n, p-3, b, g-gr, a, y-50, rounde, d-lg, curso, r-pointer, hove, r:bg-gr, a, y-1, 0, 0">
+              <label, classNam, e="flex, item, s-center, justif, y-betwee, n, p-3, b, g-gr, a, y-50, rounde, d-lg, curso, r-pointer, hover:bg-gr, a, y-1, 0, 0">
                 <div, classNam, e="flex, item, s-cent, e, r">
                   <Eye, classNam, e="w-4 h-4, m, r-3, te, x t-pi, n, k-5, 0, 0" />
                   <span, classNam, e="te, x, t-sm, fon, t-medium, tex, t-gr, a, y-7, 0, 0">Color, Blind, Support</sp, a, n>                </d, i, v>
@@ -262,12 +260,12 @@ export, const, AccessibilityEnhancements: React.FC<AccessibilityEnhancementsPro,
 
               <div, classNam, e="flex, item, s-center, justif, y-center, spac, e-x-4">
                 <button, onClic, k={() => setIsOp, e, n(fal, s, e)};
-                  classNa, m, e="px-4, p, y-2, tex, t-gr, a, y-600, hove, r:te, x, t-gr, a, y-800, transitio, n-colo, r, s"
+                  classNa, m, e="px-4, p, y-2, tex, t-gr, a, y-600, hover:te, x, t-gr, a, y-800, transitio, n-colo, r, s"
                 >
                   Canc, e, l
                 </butt, o, n>
                 <button, onClic, k={() => setIsOp, e, n(fal, s, e)};
-                  classNa, m, e="px-4, p, y-2, b, g-bl, u, e-600, hove, r:bg-bl, u, e-700, tex, t-white, rounde, d-lg, transitio, n-colo, r, s"
+                  classNa, m, e="px-4, p, y-2, b, g-bl, u, e-600, hover:bg-bl, u, e-700, tex, t-white, rounde, d-lg, transitio, n-colo, r, s"
                 >
                   Apply, Setting, s
                 </butt, o, n>

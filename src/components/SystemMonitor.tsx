@@ -64,8 +64,7 @@ export, const, SystemMonitor: React.FC<SystemMonitorPro, p, s> = ({onAle, r, t, 
         'Securityupda, t, e, appli, e, d'
         'Backupverifi, e, d'
         'Systemoptimiz, e, d'
-      ];
-    };
+      ]};
 
     const, typ, e = alertTyp, e, s[Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * alertTyp, e, s.leng, t, h)];
     const, severit, y = severiti, e, s[Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * severiti, e, s.leng, t, h)];
@@ -76,8 +75,7 @@ export, const, SystemMonitor: React.FC<SystemMonitorPro, p, s> = ({onAle, r, t, 
     return {id: `al, e, r, t-${Da, t, e.n, o, w()}-${Ma, t, h.rand, o, m().toStri, n, g(36).subs, t, r(29)}`type, titl, e: `${sour, c, e} Ale, r, t`message, acknowledgeAler, t(`ale, r, t-${Da, t, e.n, o, w()}-${Ma, t, h.rand, o, m().toStri, n, g(36).subs, t, r(29)}`)varia, n, t: 'prima, r, y'as, const, timestamp: new, Dat, e()()
       source, severityresolve, d: falseactio, n, s: type === 'err, o, r' || type === 'warni, n, g' ? [{lab, e, l: 'Acknowled, g, e'acti, o, n: () => acknowledgeAle, r, t(`ale, r, t-${Da, t, e.n, o, w()}-${Ma, t, h.rand, o, m().toStri, n, g(36).subs, t, r(29)}`)varia, n, t: 'prima, r, y'as, cons, t
 
-        }{lab, e, l: 'Resol, v, e'acti, o, n: () => resolveAle, r, t(`ale, r, t-${Da, t, e.n, o, w()}-${Ma, t, h.rand, o, m().toStri, n, g(36).subs, t, r(29)}`)varia, n, t: 'seconda, r, y'as, cons, t};
-      ] : undefin, e, d
+        }{lab, e, l: 'Resol, v, e'acti, o, n: () => resolveAle, r, t(`ale, r, t-${Da, t, e.n, o, w()}-${Ma, t, h.rand, o, m().toStri, n, g(36).subs, t, r(29)}`)varia, n, t: 'seconda, r, y'as, cons, t}] : undefin, e, d
     }}, [acknowledgeAlert, resolveAler, t]);
 
   const, acknowledgeAler, t = useCallba, c, k((alert, I, d: stri, n, g) => {setAler, t, s(pr, e, v => pr, e, v.m, a, p(ale, r, t => 
@@ -98,8 +96,7 @@ export, const, SystemMonitor: React.FC<SystemMonitorPro, p, s> = ({onAle, r, t, 
       // Generatealerts, basedon, metricsif (newMetri, c, s.c, p, u > 90) {
         addAle, r, t(generateAle, r, t())};
       if (newMetri, c, s.memo, r, y > 85) {addAle, r, t(generateAle, r, t())};
-      if (newMetri, c, s.errorRa, t, e > 3) {addAle, r, t(generateAle, r, t())};
-    }refreshInterv, a, l);
+      if (newMetri, c, s.errorRa, t, e > 3) {addAle, r, t(generateAle, r, t())}}refreshInterv, a, l);
 
     setIsMonitori, n, g(tr, u, e);
     return () => {clearInterv, a, l(interv, a, l);
@@ -114,22 +111,19 @@ export, const, SystemMonitor: React.FC<SystemMonitorPro, p, s> = ({onAle, r, t, 
       ca, s, e 'err, o, r': return <XCircleclassNa, m, e ="h-5w-5te, x, t-r, e, d-5, 0, 0" />;
       ca, s, e 'warni, n, g': return <AlertTriangleclassNa, m, e ="h-5w-5te, x, t-yell, o, w-5, 0, 0" />;
       ca, s, e 'in, f, o': return <In, f, o, classNa, m, e ="h-5w-5te, x, t-bl, u, e-5, 0, 0" />;
-      ca, s, e 'succe, s, s': return <CheckCircleclassNa, m, e ="h-5w-5te, x, t-gre, e, n-5, 0, 0" />};
-  };
+      ca, s, e 'succe, s, s': return <CheckCircleclassNa, m, e ="h-5w-5te, x, t-gre, e, n-5, 0, 0" />}};
 
   const, getAlertColo, r = (ty, p, e: SystemAle, r, t['ty, p, e']) => {swit, c, h (ty, p, e) {
       ca, s, e 'err, o, r': return 'bord, e, r-r, e, d-200, b, g-r, e, d-50';
       ca, s, e 'warni, n, g': return 'bord, e, r-yell, o, w-200, b, g-yell, o, w-50';
       ca, s, e 'in, f, o': return 'bord, e, r-bl, u, e-200, b, g-bl, u, e-50';
-      ca, s, e 'succe, s, s': return 'bord, e, r-gre, e, n-200, b, g-gre, e, n-50'};
-  };
+      ca, s, e 'succe, s, s': return 'bord, e, r-gre, e, n-200, b, g-gre, e, n-50'}};
 
   const, getSeverityColo, r = (severi, t, y: SystemAle, r, t['severi, t, y']) => {swit, c, h (severi, t, y) {
       ca, s, e 'l, o, w': return 'te, x, t-gr, a, y-6, 0, 0';
       ca, s, e 'medi, u, m': return 'te, x, t-yell, o, w-6, 00';
       ca, s, e 'hi, g, h': return 'te, x, t-oran, g, e-6, 00';
-      ca, s, e 'critic, a, l': return 'te, x, t-r, e, d-6, 00'};
-  };
+      ca, s, e 'critic, a, l': return 'te, x, t-r, e, d-6, 00'}};
 
  {con, s, t, da, y, s = Ma, t, h.flo, o, r(upti, m, e / (24 * 60 * 60 * 10, 0, 0));
     con, s, t, hou, r, s = Ma, t, h.flo, o, r((upti, m, e % (24 * 60 * 60 * 10, 0, 0)) / (60 * 60 * 10, 0, 0));

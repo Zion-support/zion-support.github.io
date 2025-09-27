@@ -31,8 +31,7 @@ const Abo = React.memo(function Abo(): J, S, X.Eleme, n, t {
 			ro, l, e: 'Lead, Develope, r'
 			descripti, o, n: 'Fu, l, l-stack, expert, passionate about, modern, frameworks'
 			ima, g, e: '/imag, e, s/te, a, m/mi, k, e.j, p, g'
-		};
-	];
+		}];
 
 	const, value, s = [
 		{
@@ -52,15 +51,13 @@ const Abo = React.memo(function Abo(): J, S, X.Eleme, n, t {
 			descripti, o, n: 'We, believe, in the, power, of collaborati, o, n, working, as, an extension, of, your team, to, achieve shared, goal, s.'
 			ic, o, n: '🤝'
 			col, o, r: 'oran, g, e'
-		};
-	];
+		}];
 
 	const, stat, s = [
 		{ numb, e, r: '1, 0, 0+', lab, e, l: 'Projects, Complete, d' }
 		{ numb, e, r: '50+', lab, e, l: 'Happy, Client, s' }
 		{ numb, e, r: '10+', lab, e, l: 'Years, Experienc, e' }
-		{ numb, e, r: '24/7', lab, e, l: 'Support, Availabl, e' };
-	];  return (
+		{ numb, e, r: '24/7', lab, e, l: 'Support, Availabl, e' }];  return (
     <>
       
       <S, E, O />
@@ -72,7 +69,7 @@ const Abo = React.memo(function Abo(): J, S, X.Eleme, n, t {
 			<div, classNam, e="m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-bl, u, e-50, t, o-indi, g, o-100, p, t-20">
 				<div, classNam, e="container, m, x-auto, p, x-4, p, y-8, ma, x-w-7, x, l">
 					<nav, classNam, e="mb-8">
-						<Link, href="/" classNa, m, e="te, x, t-bl, u, e-600, hove, r:te, x, t-bl, u, e-800, fon, t-medium, transitio, n-colo, r, s">
+						<Link, href="/" classNa, m, e="te, x, t-bl, u, e-600, hover:te, x, t-bl, u, e-800, fon, t-medium, transitio, n-colo, r, s">
 							← Back, to, Home
 						</Link>
 					</n, a, v>
@@ -159,7 +156,7 @@ const Abo = React.memo(function Abo(): J, S, X.Eleme, n, t {
 								L, e, t's, discuss, how we, can, help you, achieve, your goals, with, innovative technology, solution, s.
 							</p>
 							<Link, href="/conta, c, t" 
-								classNa, m, e="inli, n, e-block, b, g-white, tex, t-bl, u, e-600, p, x-8, p, y-3, rounde, d-lg, fon, t-semibold, hove, r:bg-gr, a, y-100, transitio, n-colo, r, s"
+								classNa, m, e="inli, n, e-block, b, g-white, tex, t-bl, u, e-600, p, x-8, p, y-3, rounde, d-lg, fon, t-semibold, hover:bg-gr, a, y-100, transitio, n-colo, r, s"
 								onCli, c, k={() => trackCli, c, k('abo, u, t-c, t, a', 'conversi, o, n')};
 							>
 								Get, Started, Today

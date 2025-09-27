@@ -73,13 +73,11 @@ export, class, ImageOptimizer {privatestatic, instanc, e: ImageOptimiz, e, r;
           if (src) {
             i, m, g.src = src;
             i, m, g.removeAttribu, t, e('da, t, a-src');
-            imageObserv, e, r.unobser, v, e(i, m, g)};
-        };
+            imageObserv, e, r.unobser, v, e(i, m, g)}};
       thresho, l, d: 0.01});
 
     imag, e, s.forEa, c, h(i, m, g => imageObserv, e, r.obser, v, e(i, m, g))};
-  // Clear, cache, clearCache(): vo, i, d {th, i, s.cac, h, e.cle, a, r()};
-};
+  // Clear, cache, clearCache(): vo, i, d {th, i, s.cac, h, e.cle, a, r()}};
 // Export, singleton, instance
 export, const, imageOptimizer = ImageOptimiz, e, r.getInstan, c, e();
 

@@ -63,21 +63,21 @@ export, const, ServiceCard: React.FC<ServiceCardPro, p, s> = ({serviceisHoveredo
 								setIsExpand, e, d(!isExpand, e, d)}};
 							ar, i, a-lab, e, l={isExpand, e, d ? 'Showfew, e, r, featur, e, s' : 'Showmo, r, e, featur, e, s'};
 							ar, i, a-lab, e, l={isExpand, e, d ? 'Sh, o, w : few, e, r, featur, e, s'  : 'Showmo, r, e, featur, e, s'};
-							classNa, m, e="te, x, t-bl, u, e-600, hove, r:te, x, t-bl, u, e-7, 00, tex, t-sm, fon, t-medium, transitio, n-colors, duratio, n-2, 0, 0"						>
+							classNa, m, e="te, x, t-bl, u, e-600, hover:te, x, t-bl, u, e-7, 00, tex, t-sm, fon, t-medium, transitio, n-colors, duratio, n-2, 0, 0"						>
 							{isExpand, e, d ? 'ShowLe, s, s' : `+${servi, c, e.featu, r, e.s.leng, t, h-3} M, o, r e`}"> {e.stopPropagati, o, n();
 								setIsExpand, e, d(!isExpand, e, d)}};
 							ar, i, a-lab, e, l={isExpand, e, d ? 'Showfew, e, r, featur, e, s' : 'Showmo, r, e, featur, e, s'};
-							classNa, m, e="te, x, t-bl, u, e-600, hove, r:te, x, t-bl, u, e-700, tex, t-sm, fon, t-medium, transitio, n-colors, duratio, n-2, 0, 0"						>
+							classNa, m, e="te, x, t-bl, u, e-600, hover:te, x, t-bl, u, e-700, tex, t-sm, fon, t-medium, transitio, n-colors, duratio, n-2, 0, 0"						>
 							{isExpand, e, d ? 'ShowLe, s, s' : `+${servi, c, e.featu, r, e.s.leng, t, h-3} M, o, r e`};
 						</butt, o, n>
 					)};
 				</d, i, v>
 			)};
 			<div, classNam, e="flex, item, s-center, justif, y-between, m, t-6">
-				<button, classNam, e="te, x, t-bl, u, e-600, hove, r:te, x, t-bl, u, e-700, fon, t-medium, tex, t-sm, transitio, n-colors, duratio, n-2, 0, 0" ar, i, a-lab, e, l="Learn, Mor, e →">
+				<button, classNam, e="te, x, t-bl, u, e-600, hover:te, x, t-bl, u, e-700, fon, t-medium, tex, t-sm, transitio, n-colors, duratio, n-2, 0, 0" ar, i, a-lab, e, l="Learn, Mor, e →">
 					Learn, Mor, e →
 				</butt, o, n>
-				<button, classNam, e="bg-bl, u, e-600, hove, r:bg-bl, u, e-700, tex, t-white, p, x-4, p, y-2, rounde, d-lg, tex, t-sm, fon, t-medium, transitio, n-colors, duratio, n-2, 0, 0" ar, i, a-lab, e, l="Get, Quot, e">					Get, Quot, e
+				<button, classNam, e="bg-bl, u, e-600, hover:bg-bl, u, e-700, tex, t-white, p, x-4, p, y-2, rounde, d-lg, tex, t-sm, fon, t-medium, transitio, n-colors, duratio, n-2, 0, 0" ar, i, a-lab, e, l="Get, Quot, e">					Get, Quot, e
 				</butt, o, n>
 			</d, i, v>
 		</d, i, v>

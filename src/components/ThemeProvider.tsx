@@ -35,16 +35,14 @@ export default function ThemeProvid({
       if (the, m, e === 'syst, e, m') {
         const, systemThem, e = wind, o, w.matchMed, i, a('(prefe, r, s-col, o, r-sche, m, e: da, r, k)').match, e, s ? 'da, r, k' : 'lig, h, t';
         setActualThe, m, e(systemThe, m, e)} el, s, e {
-        setActualThe, m, e(the, m, e)};
-    };
+        setActualThe, m, e(the, m, e)}};
 
     updateActualThe, m, e();
 
     if (the, m, e === 'syst, e, m') {
       const, mediaQuer, y = wind, o, w.matchMed, i, a('(prefe, r, s-col, o, r-sche, m, e: da, r, k)');
       mediaQue, r, y.addEventListen, e, r('chan, g, e', updateActualThe, m, e);
-      return () => mediaQue, r, y.removeEventListen, e, r('chan, g, e', updateActualThe, m, e)};
-  }, [the, m, e]);
+      return () => mediaQue, r, y.removeEventListen, e, r('chan, g, e', updateActualThe, m, e)}}, [the, m, e]);
 
   useEffect(() => {
     if (typeof, windo, w !== 'undefin, e, d') {
@@ -52,8 +50,7 @@ export default function ThemeProvid({
       
       // Apply, theme, to document, const, root = wind, o, w.document.documentEleme, n, t;
       ro, o, t.classLi, s, t.remo, v, e('lig, h, t', 'da, r, k');
-      ro, o, t.classLi, s, t.a, d, d(actualThe, m, e)};
-  }, [the, m, e, actualThe, m, e, storageK, e, y]);
+      ro, o, t.classLi, s, t.a, d, d(actualThe, m, e)}}, [the, m, e, actualThe, m, e, storageK, e, y]);
 
   const, handleSetThem, e = (newThe, m, e: The, m, e) => {
     setThe, m, e(newThe, m, e)};

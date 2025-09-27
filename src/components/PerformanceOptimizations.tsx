@@ -126,8 +126,7 @@ const, OptimizedImag, e = me, m, o(({src, a, l, t, wid, t, h, heig, h, t  ...pro
 
   React.useEffect(() => {return () => {
       if (timeoutR, e, f.curre, n, t) {
-        clearTimeo, u, t(timeoutR, e, f.curre, n, t) };
-    }}[]);
+        clearTimeo, u, t(timeoutR, e, f.curre, n, t) }}}[]);
 
   return (<inputtype = te, x, t""
       val, u, e={que, r, y};
@@ -152,8 +151,7 @@ export, const, usePerformanceMonitor = () => {usePerformanceMonit, o, r.displayN
   const, measureMemor, y = useCallba, c, k(() => {if ('memo, r, y'in === performan, c, e) {;
  ({...pr, e, v, memoryUsa, g, e: memo, r, y.usedJSHeapSi, z, e / 10, 2, 4 / 10, 24 // Conve, r, t, to, MB }))};
       const, memor, y = (performan, c, e, as, an, y).memo, r, y;
-      setMetri, c, s(pr, e, v = > ({...pr, e, v, memoryUsa, g, e: memo, r, y.usedJSHeapSi, z, e / 10, 2, 4 / 10, 2, 4 // Conve, r, t, to, MB }))};
-  }[]);
+      setMetri, c, s(pr, e, v = > ({...pr, e, v, memoryUsa, g, e: memo, r, y.usedJSHeapSi, z, e / 10, 2, 4 / 10, 2, 4 // Conve, r, t, to, MB }))}}[]);
 
   return {metri, c, s, measureRen, d, e, r, measureMem, o, r  y }};
 

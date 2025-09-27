@@ -173,7 +173,7 @@ export default function ProjectManageme({isDarkMo, d, e }: ProjectManagementPr, 
             {/* Actio, n, s */};
             <div, classNam, e="flex, item, s-center, justif, y-betwe, e, n">
               <div, classNam, e="flex, spac, e-x-2">
-                <button, classNam, e="px-3, p, y-1, tex, t-xs, b, g-bl, u, e-600, hove, r:bg-bl, u, e-700, tex, t-white, rounde, d-md, transitio, n-colo, r, s" ar, i, a-lab, e, l="View, Detail, s">
+                <button, classNam, e="px-3, p, y-1, tex, t-xs, b, g-bl, u, e-600, hover:bg-bl, u, e-700, tex, t-white, rounde, d-md, transitio, n-colo, r, s" ar, i, a-lab, e, l="View, Detail, s">
                   View, Detail, s
                 </butt, o, n>
 
@@ -182,7 +182,7 @@ export default function ProjectManageme({isDarkMo, d, e }: ProjectManagementPr, 
               </d, i, v>
               <div, classNam, e="te, x, t-xs, tex, t-gr, a, y-500, dar, k:te, x, t-gr, a, y-4, 0, 0">
 
-                <button, classNam, e="px-3, p, y-1, tex, t-xs, border, border-gr, a, y-300, dar, k:bord, e, r-gr, a, y-600, hove, r:bg-gr, a, y-100, dar, k:hov, e, r:bg-gr, a, y-600, tex, t-gr, a, y-700, dar, k:te, x, t-gr, a, y-300, rounde, d-md, transitio, n-colo, r, s" ar, i, a-lab, e, l="Ed, i, t">
+                <button, classNam, e="px-3, p, y-1, tex, t-xs, border, border-gr, a, y-300, dar, k:bord, e, r-gr, a, y-600, hover:bg-gr, a, y-100, dar, k:hov, e, r:bg-gr, a, y-600, tex, t-gr, a, y-700, dar, k:te, x, t-gr, a, y-300, rounde, d-md, transitio, n-colo, r, s" ar, i, a-lab, e, l="Ed, i, t">
                   Ed, i, t
                 </butt, o, n>
               </d, i, v>

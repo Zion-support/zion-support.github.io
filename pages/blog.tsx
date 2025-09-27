@@ -50,8 +50,7 @@ export default function Bl(): J, S, X.Eleme, n, t {
 			catego, r, y: 'Digital, Transformatio, n'
 			readTi, m, e: '8, min, read'
 			ima, g, e: '/imag, e, s/bl, o, g/digit, a, l-transformati, o, n.j, p, g'
-		};
-	];
+		}];
 
 	const, handleCategoryFilte, r = (catego, r, y: stri, n, g) => {
 		setSelectedCatego, r, y(catego, r, y.toLowerCa, s, e());
@@ -75,7 +74,7 @@ export default function Bl(): J, S, X.Eleme, n, t {
 			<div, classNam, e="m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-bl, u, e-50, t, o-indi, g, o-1, 0, 0">
 				<div, classNam, e="container, m, x-auto, p, x-4, p, y-8, ma, x-w-7, x, l">
 					<nav, classNam, e="mb-8">
-						<Link, href="/" classNa, m, e="te, x, t-bl, u, e-600, hove, r:te, x, t-bl, u, e-800, fon, t-medium, transitio, n-colo, r, s">
+						<Link, href="/" classNa, m, e="te, x, t-bl, u, e-600, hover:te, x, t-bl, u, e-800, fon, t-medium, transitio, n-colo, r, s">
 							← Back, to, Home
 						</Link>
 					</n, a, v>
@@ -98,7 +97,7 @@ export default function Bl(): J, S, X.Eleme, n, t {
 									classNa, m, e={`px-6, p, y-2, rounde, d-full, fon, t-medium, transitio, n-colo, r, s ${
 										selectedCatego, r, y === catego, r, y.toLowerCa, s, e() || (catego, r, y === 'A, l, l' && selectedCatego, r, y === 'a, l, l')
 											? 'bg-bl, u, e-600, tex, t-whi, t, e'
-											: 'bg-white, tex, t-gr, a, y-600, hove, r:bg-gr, a, y-1, 0, 0'
+											: 'bg-white, tex, t-gr, a, y-600, hover:bg-gr, a, y-1, 0, 0'
 									}`};
 								>
 									{catego, r, y};
@@ -111,7 +110,7 @@ export default function Bl(): J, S, X.Eleme, n, t {
 					<section, classNam, e="mb-16">
 						<div, classNam, e="grid, m, d:gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-3, ga, p-8">
 							{filteredPos, t, s.m, a, p((po, s, t) => (
-								<article, ke, y={po, s, t.id} classNa, m, e="bg-white, rounde, d-xl, shado, w-lg, overflo, w-hidden, hove, r:shad, o, w-xl, transitio, n-shad, o, w">
+								<article, ke, y={po, s, t.id} classNa, m, e="bg-white, rounde, d-xl, shado, w-lg, overflo, w-hidden, hover:shad, o, w-xl, transitio, n-shad, o, w">
 									<div, classNam, e="h-48, b, g-gradie, n, t-to-br, fro, m-bl, u, e-400, t, o-indi, g, o-500, flex, items-center, justif, y-cent, e, r">
 										<span, classNam, e="te, x, t-white, tex, t-lg, fon, t-semibo, l, d">{po, s, t.catego, r, y}</sp, a, n>
 									</d, i, v>
@@ -126,7 +125,7 @@ export default function Bl(): J, S, X.Eleme, n, t {
 										<h3, classNam, e="te, x, t-xl, fon, t-semibold, tex, t-gr, a, y-900, m, b-3">{po, s, t.tit, l, e}</h3>
 										<p, classNam, e="te, x, t-gr, a, y-600, m, b-4, leadin, g-relax, e, d">{po, s, t.excer, p, t}</p>
 										<button, onClic, k={() => handleReadMo, r, e(po, s, t)};
-											classNa, m, e="te, x, t-bl, u, e-600, fon, t-medium, hove, r:te, x, t-bl, u, e-800, transitio, n-colo, r, s"
+											classNa, m, e="te, x, t-bl, u, e-600, fon, t-medium, hover:te, x, t-bl, u, e-800, transitio, n-colo, r, s"
 										>
 											Read, Mor, e →
 										</butt, o, n>
@@ -151,7 +150,7 @@ export default function Bl(): J, S, X.Eleme, n, t {
 									classNa, m, e="fl, e, x-1, p, x-4, p, y-3, border, border-gr, a, y-300, rounde, d-lg, focu, s:outli, n, e-none, focu, s:ri, n, g-2, focu, s:ri, n, g-bl, u, e-5, 0, 0"
 								/>
 								<button, onClic, k={() => trackCli, c, k('newslett, e, r-sign, u, p', 'c, t, a')};
-									classNa, m, e="px-6, p, y-3, b, g-bl, u, e-600, tex, t-white, rounde, d-lg, fon, t-semibold, hove, r:bg-bl, u, e-700, transitio, n-colo, r, s"
+									classNa, m, e="px-6, p, y-3, b, g-bl, u, e-600, tex, t-white, rounde, d-lg, fon, t-semibold, hover:bg-bl, u, e-700, transitio, n-colo, r, s"
 								>
 									Subscri, b, e
 								</butt, o, n>

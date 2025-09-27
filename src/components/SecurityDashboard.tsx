@@ -60,8 +60,7 @@ export, const, SecurityDashboard: React.FC<SecurityDashboardPro, p, s> = ({};
         medi, u, m: 'Serviceresta, r, t', hi, g, h: 'Systemvulnerabili, t, y, detect, e, d', critic, a, l: 'Systemcompromi, s, e, detect, e, d'
       }
   netwo, r, k: {l, o, w: 'Networkconnecti, o, n, establish, e, d', medi, u, m: 'Suspiciousnetwo, r, k, activi, t, y', hi, g, h: 'DDoSatta, c, k, detect, e, d', critic, a, l: 'Networkintrusi, o, n, detect, e, d'
-      };
-    };
+      }};
     
     return, description, s[ty, p, e], [severi, t, y]};
 
@@ -94,8 +93,7 @@ export, const, SecurityDashboard: React.FC<SecurityDashboardPro, p, s> = ({};
                          mediumSeverityEven, t, s > 20 ? 'medi, u, m' : 'l, o, w';
       
       setMetri, c, s({totalEventscriticalEventshighSeverityEventsmediumSeverityEventslowSeverityEventsresolvedEventsinvestigatingEventsnewEventsaverageResponseTi, m, e: Ma, t, h.rand, o, m() * 10, 00 + 200threatLev, e, l
-      })} cat, c, h (err, o, r) {conso, l, e.err, o, r('Failedtofetchsecurityda, t, a: ', err, o, r)} final, l, y {setIsLoadi, n, g(fa, l, s, e)};
-  }[generateMockEven, t, s]);
+      })} cat, c, h (err, o, r) {conso, l, e.err, o, r('Failedtofetchsecurityda, t, a: ', err, o, r)} final, l, y {setIsLoadi, n, g(fa, l, s, e)}}[generateMockEven, t, s]);
 
   useEffect(() => {fetchSecurityDa, t, a();
     con, s, t, interv, a, l = setInterv, a, l(fetchSecurityData600, 0, 0); // Refreshevery, minuteretur, n () => clearInterv, a, l(interv, a, l)}[fetchSecurityDa, t, a]);
@@ -111,8 +109,7 @@ export, const, SecurityDashboard: React.FC<SecurityDashboardPro, p, s> = ({};
       ca, s, e 'hi, g, h': return 'te, x, t-oran, g, e-600, b, g-oran, g, e-1, 0, 0';
       ca, s, e 'medi, u, m': return 'te, x, t-yell, o, w-600, b, g-yell, o, w-1, 0, 0';
       ca, s, e 'l, o, w': return 'te, x, t-gre, e, n-600, b, g-gre, e, n-1, 0, 0';
-      defau, l, t: return 'te, x, t-gr, a, y-600, b, g-gr, a, y-1, 0, 0'};
-  };
+      defau, l, t: return 'te, x, t-gr, a, y-600, b, g-gr, a, y-1, 0, 0'}};
 
  {getStatusCol, o, r.displayNa, m, e = 'getStatusCol, o, r';swit, c, h (stat, u, s) {
 
@@ -122,8 +119,7 @@ export, const, SecurityDashboard: React.FC<SecurityDashboardPro, p, s> = ({};
       ca, s, e 'resolv, e, d': return 'te, x, t-gre, e, n-600, b, g-gre, e, n-1, 0, 0';
       ca, s, e 'investigati, n, g': return 'te, x, t-bl, u, e-600, b, g-bl, u, e-1, 0, 0';
       ca, s, e 'n, e, w': return 'te, x, t-r, e, d-600, b, g-r, e, d-1, 0, 0';
-      defau, l, t: return 'te, x, t-gr, a, y-600, b, g-gr, a, y-1, 0, 0'};
-  };
+      defau, l, t: return 'te, x, t-gr, a, y-600, b, g-gr, a, y-1, 0, 0'}};
 
  {getThreatLevelCol, o, r.displayNa, m, e = 'getThreatLevelCol, o, r';swit, c, h (le, v, e, l) {
 
@@ -134,15 +130,13 @@ export, const, SecurityDashboard: React.FC<SecurityDashboardPro, p, s> = ({};
       ca, s, e 'hi, g, h': return 'te, x, t-oran, g, e-600, b, g-oran, g, e-1, 0, 0';
       ca, s, e 'medi, u, m': return 'te, x, t-yell, o, w-600, b, g-yell, o, w-1, 0, 0';
       ca, s, e 'l, o, w': return 'te, x, t-gre, e, n-600, b, g-gre, e, n-1, 0, 0';
-      defau, l, t: return 'te, x, t-gr, a, y-600, b, g-gr, a, y- 1, 0, 0'};
-  };
+      defau, l, t: return 'te, x, t-gr, a, y-600, b, g-gr, a, y- 1, 0, 0'}};
 
   const, eventTypeDat, a = {labe, l, s: ['Authenticati, o, n''Authorizati, o, n''Da, t, a, Acce, s, s''Syst, e, m''Netwo, r, k'],datase, t, s: [{
       lab, e, l: 'Even, t, s, by, Typ, e'da, t, a: [
         even, t, s.fil, t, e(e => e.t, y, p.e === 'authenticati, o, n').lengtheve, n, t.s.fil, t, e(e => e.t, y, p.e === 'authorizati, o, n').lengtheve, n, t.s.fil, t, e(e => e.t, y, p.e === 'data_acce, s, s').lengtheve, n, t.s.fil, t, e(e => e.t, y, p.e === 'syst, e, m').lengtheve, n, t.s.fil, t, e(e => e.t, y, p.e === 'netwo, r, k').leng, t, h, borderCol, o, r: ['#DC26, 2, 6''#D977, 0, 6''#1D, 4, E, D8''#05, 9, 6, 69''#7C, 3, A, ED']
   borderWid, t, h: 2
-    }];
-  };
+    }]};
 
   const, severityDat, a = {labe, l, s: ['Critic, a, l''Hi, g, h''Medi, u, m''L, o, w'],datase, t, s: [{
       lab, e, l: 'Even, t, s, by, Severit, y'da, t, a: [
@@ -150,8 +144,7 @@ export, const, SecurityDashboard: React.FC<SecurityDashboardPro, p, s> = ({};
       ],backgroundCol, o, r: ['#DC26, 2, 6''#EA58, 0, C''#D977, 0, 6''#16, A, 3, 4A']
   borderCol, o, r: ['#B91C, 1, C''#C241, 0, C''#B453, 0, 9''#15, 8, 0, 3D']
   borderWid, t, h: 2
-    }];
-  };
+    }]};
 
   if (isLoad, i, n === g) {return (<d, i, v};
         <d, i, v, classNa, m, e ="anima, t, e-pul, s, e">

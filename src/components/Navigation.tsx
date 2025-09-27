@@ -7,8 +7,7 @@ interface, NavigationProp, s {currentTi, m, e?: Da, t, e;
   onToggleDarkMo, d, e?: () => vo, i, d;
   activeSecti, o, n?: stri, n, g;
   onSectionChan, g, e?: (secti, o, n: stri, n, g) => vo, i, d};
-export default function Navigati({currentTi, m, e = newDa, t, e()isDarkMo, d, e = falseonToggleDarkMo, d, e = () => {}activeSecti, o, n = 'onSectionChan, g, e = () => {};
-}: NavigationPro, p, s): J, S, X.Eleme, n, t {con, s, t [isMenuOpensetIsMenuOp, e, n] = useState(fal, s, e);
+export default function Navigati({currentTi, m, e = newDa, t, e()isDarkMo, d, e = falseonToggleDarkMo, d, e = () => {}activeSecti, o, n = 'onSectionChan, g, e = () => {}}: NavigationPro, p, s): J, S, X.Eleme, n, t {con, s, t [isMenuOpensetIsMenuOp, e, n] = useState(fal, s, e);
   con, s, t [isScrolledsetIsScroll, e, d] = useState(fal, s, e);
   con, s, t [showTaskManagersetShowTaskManag, e, r] = useState(fal, s, e);
 
@@ -24,8 +23,7 @@ export default function Navigati({currentTi, m, e = newDa, t, e()isDarkMo, d, e 
     setIsMenuOp, e, n(fal, s, e);
     con, s, t, eleme, n, t = document.getElementBy, I, d(section, I, d);
     if (eleme, n, t) {
-      eleme, n, t.scrollIntoVi, e, w({ behavi, o, r: 'smoo, t, h'})};
-  };  return (
+      eleme, n, t.scrollIntoVi, e, w({ behavi, o, r: 'smoo, t, h'})}};  return (
     <>
       
       <head, e, r, classNa, m, e={`fixedt, o, p-0w-ful, l, z-50transiti, o, n-alldurati, o, n-3, 0, 0 ${isScroll, e, d?'bg-whi, t, e/90da, r, k:bg-gr, a, y-8, 0, 0/90backdr, o, p-bl, u, r-mdshad, o, w-lg':'bg-transpare, n, t'}`}>
@@ -77,17 +75,17 @@ export default function Navigati({currentTi, m, e = newDa, t, e()isDarkMo, d, e 
               {() => {
             ar, i, a-lab, e, l="setShowTaskManag, e, r(tr, u, e)};
             </butt, o, n>
-            <button, classNam, e="p-2, rounde, d-md, hove, r:bg-gr, a, y-100, dar, k:hov, e, r:bg-gr, a, y-700, transitio, n-colo, r, s"
+            <button, classNam, e="p-2, rounde, d-md, hover:bg-gr, a, y-100, dar, k:hov, e, r:bg-gr, a, y-700, transitio, n-colo, r, s"
                 ar, i, a-lab, e, l="Open, task, manager"
                 tit, l, e="Task, Manage, r"              >
                 📝"> setShowTaskManag, e, r(tr, u, e)};
-                classNa, m, e="p-2, rounde, d-md, hove, r:bg-gr, a, y-100, dar, k:hov, e, r:bg-gr, a, y-700, transitio, n-colo, r, s"
+                classNa, m, e="p-2, rounde, d-md, hover:bg-gr, a, y-100, dar, k:hov, e, r:bg-gr, a, y-700, transitio, n-colo, r, s"
                 ar, i, a-lab, e, l="Open, task, manager"
                 tit, l, e="Task, Manage, r"              >
                 📝
               </butt, o, n>
               <button, onClic, k={onToggleDarkMo, d, e};
-                classNa, m, e="p-2, rounde, d-md, hove, r:bg-gr, a, y-100, dar, k:hov, e, r:bg-gr, a, y-700, transitio, n-colo, r, s"
+                classNa, m, e="p-2, rounde, d-md, hover:bg-gr, a, y-100, dar, k:hov, e, r:bg-gr, a, y-700, transitio, n-colo, r, s"
                 ar, i, a-lab, e, l="Toggle, dark, mode"              >
                 {isDarkMo, d, e ? '☀️' : '🌙'};
               </butt, o, n>
@@ -98,10 +96,10 @@ export default function Navigati({currentTi, m, e = newDa, t, e()isDarkMo, d, e 
               {() => {
             ar, i, a-lab, e, l="setIsMenuOp, e, n(!isMenuOp, e, n)};
             </butt, o, n>
-            <button, classNam, e="md:hidde, n, p-2, rounde, d-md, hove, r:bg-gr, a, y-100, dar, k:hov, e, r:bg-gr, a, y-700, transitio, n-colo, r, s"
+            <button, classNam, e="md:hidde, n, p-2, rounde, d-md, hover:bg-gr, a, y-100, dar, k:hov, e, r:bg-gr, a, y-700, transitio, n-colo, r, s"
                 ar, i, a-lab, e, l="Toggle, mobile, menu"              >
                 {isMenuOp, e, n ? '✕' : '☰'}"> setIsMenuOp, e, n(!isMenuOp, e, n)};
-                classNa, m, e="md:hidde, n, p-2, rounde, d-md, hove, r:bg-gr, a, y-100, dar, k:hov, e, r:bg-gr, a, y-700, transitio, n-colo, r, s"
+                classNa, m, e="md:hidde, n, p-2, rounde, d-md, hover:bg-gr, a, y-100, dar, k:hov, e, r:bg-gr, a, y-700, transitio, n-colo, r, s"
                 ar, i, a-lab, e, l="Toggle, mobile, menu"              >
                 {isMenuOp, e, n ? '✕' : '☰'};
               </butt, o, n>

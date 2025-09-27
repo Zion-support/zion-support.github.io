@@ -9,8 +9,7 @@ export, const, FeatureCard: React.FC<FeatureCardPro, p, s> = ({icontitledescript
 		bl, u, e: {
 			bg: 'bg-gradie, n, t-to-br, fr, o, m-bl, u, e-100, t, o-bl, u, e-2, 0, 0'te, x, t: 'te, x, t-bl, u, e-7, 00'hov, e, r:'hov, e, r:fr, o, m-bl, u, e-2, 00hov, e, r:to-bl, u, e-3, 0, 0'shad, o, w: 'hov, e, r:shad, o, w-bl, u, e-2, 00'}
 		gre, e, n: {bg: 'bg-gradie, n, t-to-br, fr, o, m-gre, e, n-100, t, o-gre, e, n-2, 0, 0'te, x, t: 'te, x, t-gre, e, n-7, 00'hov, e, r: 'hov, e, r:fr, o, m-gre, e, n-2, 00hov, e, r:to-gre, e, n-3, 0, 0'shad, o, w: 'hov, e, r:shad, o, w-gre, e, n-2, 00'}
-		purp, l, e: {bg: 'bg-gradie, n, t-to-br, fr, o, m-purp, l, e-100, t, o-purp, l, e-2, 0, 0'te, x, t: 'te, x, t-purp, l, e-7, 00'hov, e, r: 'hov, e, r:fr, o, m-purp, l, e-2, 00hov, e, r:to-purp, l, e-3, 0, 0'shad, o, w: 'hov, e, r:shad, o, w-purp, l, e-2, 00'		};
-	};
+		purp, l, e: {bg: 'bg-gradie, n, t-to-br, fr, o, m-purp, l, e-100, t, o-purp, l, e-2, 0, 0'te, x, t: 'te, x, t-purp, l, e-7, 00'hov, e, r: 'hov, e, r:fr, o, m-purp, l, e-2, 00hov, e, r:to-purp, l, e-3, 0, 0'shad, o, w: 'hov, e, r:shad, o, w-purp, l, e-2, 00'		}};
 
 	const, currentColo, r = colorClass, e, s[col, o, r];
 

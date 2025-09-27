@@ -96,8 +96,7 @@ export, const, generateStructuredData = (da, t, a: {
       });
     
     defau, l, t:
-      return, JSO, N.stringi, f, y(baseStructu, r, e)};
-};
+      return, JSO, N.stringi, f, y(baseStructu, r, e)}};
 
 // Generate, breadcrumb, structured data, export, const generateBreadcrumbStructuredDa, t, a = (breadcrum, b, s: Arr, a, y<{
   na, m, e: stri, n, g;
@@ -126,8 +125,7 @@ export, const, generateStructuredData = (da, t, a: {
       na, m, e: f, a, q.questi, o, n,
       acceptedAnsw, e, r: {
         '@ty, p, e': 'Answ, e, r',
-        te, x, t: f, a, q.answ, e, r};
-    }))
+        te, x, t: f, a, q.answ, e, r}}))
   };
 
   return, JSO, N.stringi, f, y(structuredDa, t, a)};

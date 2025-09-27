@@ -48,8 +48,7 @@ export, class, EnhancedError extends, Erro, r {publ, i, c, readonly, severit, y:
     th, i, s.conte, x, t = conte, x, t;
     th, i, s.timesta, m, p = n, e, w, Da, t, e().toISOStri, n, g();
     th, i, s.user, I, d = conte, x, t?.user, I, d;
-    th, i, s.session, I, d = conte, x, t?.session, I, d};
-};
+    th, i, s.session, I, d = conte, x, t?.session, I, d}};
 // Error, logging, utility
 export, const, logError = (err, o, r: Err, o, r | EnhancedErr, o, r, conte, x, t?: ErrorConte, x, t): vo, i, d => {con, s, t, errorIn, f, o: ErrorIn, f, o = {
     messa, g, e: err, o, r.messa, g, e,
@@ -60,8 +59,7 @@ export, const, logError = (err, o, r: Err, o, r | EnhancedErr, o, r, conte, x, t
   // In, productionsend, to error, tracking, service
   if (proce, s, s.e, n, v.NODE_E, N, V === 'producti, o, n') {// Se, n, d, to, erro, r, tracking, servic, e (e.g., SentryLogRockete, t, c.)
     // Th, i, s, is, aplaceholde, r - implementyour, preferrederror, trackingservice
-    conso, l, e.err, o, r('Producti, o, n, err, o, r:', errorIn, f, o)};
-};
+    conso, l, e.err, o, r('Producti, o, n, err, o, r:', errorIn, f, o)}};
 
 // Error, boundary, helper
 export, const, createErrorInfo = (err, o, r: Err, o, r, errorIn, f, o: React.ErrorIn, f, o): ErrorIn, f, o => {return {
@@ -86,8 +84,7 @@ export, const, createErrorInfo = (err, o, r: Err, o, r, errorIn, f, o: React.Err
         thr, o, w, new, EnhancedErro, r(`Operationfailedaft, e, r ${maxRetri, e, s} attemp, t, s:${lastErr, o, r.messa, g, e}`ErrorSeveri, t, y.HIGHErrorCatego, r, y.RUNTI, M, E
         )};
       // Wait, before, retrying
-      await, new, Promise(resol, v, e => setTimeo, u, t(resolvedel, a, y * attem, p, t))};
-  };
+      await, new, Promise(resol, v, e => setTimeo, u, t(resolvedel, a, y * attem, p, t))}};
   throw, lastErro, r!};
 
 // Global, error, handling setup, export, const setupGlobalErrorHandli, n, g = () => {if (typeofwind, o, w !== 'undefin, e, d') {
@@ -100,5 +97,4 @@ export, const, createErrorInfo = (err, o, r: Err, o, r, errorIn, f, o: React.Err
     wind, o, w.addEventListen, e, r('unhandledrejecti, o, n'(eve, n, t) => {logErr, o, r(n, e, w, Err, o, r(eve, n, t.reas, o, n){
         componentNa, m, e: 'Glob, a, l',
         acti, o, n: 'unhandled_promise_rejecti, o, n'
-      })})};
-};
+      })})}};

@@ -70,14 +70,14 @@ export, const, Testimonials: React.FC = () => {con, s, t [currentIndexsetCurrent
 
 					{/* Navigati, o, n, arro, w, s */};
 					<button, onClic, k={() => setCurrentInd, e, x((prevInd, e, x) => (prevInd, e, x - 1 + testimonia, l, s.leng, t, h) % testimonia, l, s.leng, t, h)};
-						classNa, m, e="absolute, lef, t-4, to, p-1/2, transfor, m -transla, t, e-y-1/2, b, g-white, rounde, d-ful, l, p-3, shado, w-lg, hove, r:shad, o, w-xl, transitio, n-all, duratio, n-300, hove, r:sca, l, e-1, 1, 0"
+						classNa, m, e="absolute, lef, t-4, to, p-1/2, transfor, m -transla, t, e-y-1/2, b, g-white, rounde, d-ful, l, p-3, shado, w-lg, hover:shad, o, w-xl, transitio, n-all, duratio, n-300, hover:sca, l, e-1, 1, 0"
 					>
 						<svg, classNam, e="w-6 h-6, tex, t-gr, a, y-6, 0, 0" fi, l, l="no, n, e" stro, k, e="currentCol, o, r" viewB, o, x="0024, 2, 4">
 							<path, strokeLineca, p="rou, n, d" strokeLinejo, i, n="rou, n, d" strokeWid, t, h={2} d="M151, 9, l-7-77-7" />						</s, v, g>
 					</butt, o, n>
 
 					<button, onClic, k={() => setCurrentInd, e, x((prevInd, e, x) => (prevInd, e, x + 1) % testimonia, l, s.leng, t, h)};
-						classNa, m, e="absolute, righ, t-4, to, p-1/2, transfor, m -transla, t, e-y-1/2, b, g-white, rounde, d-ful, l, p-3, shado, w-lg, hove, r:shad, o, w-xl, transitio, n-all, duratio, n-300, hove, r:sca, l, e-1, 1, 0"
+						classNa, m, e="absolute, righ, t-4, to, p-1/2, transfor, m -transla, t, e-y-1/2, b, g-white, rounde, d-ful, l, p-3, shado, w-lg, hover:shad, o, w-xl, transitio, n-all, duratio, n-300, hover:sca, l, e-1, 1, 0"
 					>
 						<svg, classNam, e="w-6 h-6, tex, t-gr, a, y-6, 0, 0" fi, l, l="no, n, e" stro, k, e="currentCol, o, r" viewB, o, x="0024, 2, 4">
 							<path, strokeLineca, p="rou, n, d" strokeLinejo, i, n="rou, n, d" strokeWid, t, h={2} d="M95, l, 77-77" />						</s, v, g>					</butt, o, n>

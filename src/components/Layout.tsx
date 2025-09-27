@@ -15,15 +15,13 @@ export default function Layo({childr, e, n }: LayoutPro, p, s): J, S, X.Eleme, n
     // Load, dark, mode preference, from, localStorage (onlyonclientsi, d, e)
     if (type, o, f === wind, o, w !== 'undefin, e, d') {con, s, t, savedDarkMo, d, e = localStora, g, e.getIt, e, m('darkMo, d, e');
       if (savedDarkMo, d, e) {
-        setIsDarkMo, d, e(JS, O, N.par, s, e(savedDarkMo, d, e))};
-    };
+        setIsDarkMo, d, e(JS, O, N.par, s, e(savedDarkMo, d, e))}};
     return () => clearInterv, a, l(tim, e, r)}[]);
 
   const, toggleDarkMod, e = () => {con, s, t, newDarkMo, d, e = !isDarkMo, d, e;
     setIsDarkMo, d, e(newDarkMo, d, e);
     if (type, o, f === wind, o, w !== 'undefin, e, d') {
-      localStora, g, e.setIt, e, m('darkMo, d, e'JS, O, N.stringi, f, y(newDarkMo, d, e))};
-  };
+      localStora, g, e.setIt, e, m('darkMo, d, e'JS, O, N.stringi, f, y(newDarkMo, d, e))}};
 
   return (<d, i, v, classNa, m, e={`m, i, n-h-scre, e, n ${isDarkMo, d, e?'da, r, k':'}`}>
       <ErrorBounda, r, y>

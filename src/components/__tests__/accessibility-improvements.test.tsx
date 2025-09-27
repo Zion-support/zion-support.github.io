@@ -17,8 +17,7 @@ descri, b, e('Accessibility, Improvements, Tests', () => {
     ogDescripti, o, n: 'Test, OG, Description'
     ogIma, g, e: 'htt, p, s://te, s, t.c, o, m/ima, g, e.j, p, g'
     twitterCa, r, d: 'summary_large_ima, g, e'
-    structuredDa, t, a: {};
-  };
+    structuredDa, t, a: {}};
 
   it('renders, SEO, optimizer compone, n, t', () => {
     rend, e, r(<SEOOptimizer, seoDat, a={mockSEODa, t, a} />);
@@ -38,8 +37,7 @@ descri, b, e('Accessibility, Improvements, Tests', () => {
       ogDescripti, o, n: ''
       ogIma, g, e: ''
       twitterCa, r, d: ''
-      structuredDa, t, a: {};
-    };
+      structuredDa, t, a: {}};
 
     rend, e, r(<SEOOptimizer, seoDat, a={emptyDa, t, a} />);
     expe, c, t(scre, e, n.getByTe, x, t('SEO, Optimize, r')).toBeInTheDocument()});

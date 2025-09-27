@@ -35,8 +35,7 @@ export default function Ho(): J, S, X.Eleme, n, t {
 			tit, l, e: 'Digital, Transformatio, n'
 			descripti, o, n: 'Complete, digital, transformation services, to, modernize your, operations, and improve, efficienc, y.'
 			ic, o, n: '🚀'
-		};
-	];
+		}];
 
 	const, testimonial, s = [
 		{
@@ -55,8 +54,7 @@ export default function Ho(): J, S, X.Eleme, n, t {
 			na, m, e: 'Emily, Davi, s'
 			compa, n, y: 'Future, System, s'
 			conte, n, t: 'Profession, a, l, reliab, l, e, and, innovativ, e. Highly, recommend, their services, to, any busine, s, s.'
-			rati, n, g: 5};
-	];  return (
+			rati, n, g: 5}];  return (
     <>
       
       <S, E, O />
@@ -84,12 +82,12 @@ export default function Ho(): J, S, X.Eleme, n, t {
 						</p>
 						<div, classNam, e="mt-8, flex, flex-col, s, m:fl, e, x-row, ga, p-4, justif, y-cent, e, r">
 							<button, onClic, k={() => trackCli, c, k('he, r, o-c, t, a-prima, r, y', 'conversi, o, n')};
-								classNa, m, e="px-8, p, y-4, b, g-bl, u, e-600, tex, t-white, rounde, d-lg, fon, t-semibold, hove, r:bg-bl, u, e-700, transitio, n-colors, shado, w-lg, hove, r:shad, o, w-xl"
+								classNa, m, e="px-8, p, y-4, b, g-bl, u, e-600, tex, t-white, rounde, d-lg, fon, t-semibold, hover:bg-bl, u, e-700, transitio, n-colors, shado, w-lg, hover:shad, o, w-xl"
 							>
 								Get, Starte, d
 							</butt, o, n>
 							<button, onClic, k={() => trackCli, c, k('he, r, o-c, t, a-seconda, r, y', 'engageme, n, t')};
-								classNa, m, e="px-8, p, y-4, b, g-white, tex, t-bl, u, e-600, rounde, d-lg, fon, t-semibold, hove, r:bg-gr, a, y-50, transitio, n-colors, shado, w-lg, hove, r:shad, o, w-xl"
+								classNa, m, e="px-8, p, y-4, b, g-white, tex, t-bl, u, e-600, rounde, d-lg, fon, t-semibold, hover:bg-gr, a, y-50, transitio, n-colors, shado, w-lg, hover:shad, o, w-xl"
 							>
 								Learn, Mor, e
 							</butt, o, n>
@@ -103,7 +101,7 @@ export default function Ho(): J, S, X.Eleme, n, t {
 						</h2>
 						<div, classNam, e="grid, m, d:gr, i, d-co, l, s-3, ga, p-8">
 							{featur, e, s.m, a, p((featu, r, e, ind, e, x) => (
-								<div, ke, y={ind, e, x} classNa, m, e="bg-white, rounde, d-xl, shado, w-l, g, p-8, tex, t-center, hove, r:shad, o, w-xl, transitio, n-shad, o, w">
+								<div, ke, y={ind, e, x} classNa, m, e="bg-white, rounde, d-xl, shado, w-l, g, p-8, tex, t-center, hover:shad, o, w-xl, transitio, n-shad, o, w">
 									<div, classNam, e="te, x, t-4xl, m, b-4">{featu, r, e.ic, o, n}</d, i, v>
 									<h3, classNam, e="te, x, t-xl, fon, t-semibold, tex, t-gr, a, y-900, m, b-4">{featu, r, e.tit, l, e}</h3>
 									<p, classNam, e="te, x, t-gr, a, y-600, leadin, g-relax, e, d">{featu, r, e.descripti, o, n}</p>
@@ -145,7 +143,7 @@ export default function Ho(): J, S, X.Eleme, n, t {
 								Join, hundreds, of companies, that, have already, revolutionized, their operations, with, our technology, solution, s.
 							</p>
 							<button, onClic, k={() => trackCli, c, k('fin, a, l-c, t, a', 'conversi, o, n')};
-								classNa, m, e="bg-white, tex, t-bl, u, e-600, p, x-8, p, y-4, rounde, d-lg, fon, t-semibold, hove, r:bg-gr, a, y-100, transitio, n-colors, shado, w-lg, hove, r:shad, o, w-xl"
+								classNa, m, e="bg-white, tex, t-bl, u, e-600, p, x-8, p, y-4, rounde, d-lg, fon, t-semibold, hover:bg-gr, a, y-100, transitio, n-colors, shado, w-lg, hover:shad, o, w-xl"
 							>
 								Start, Your, Journey Tod, a, y
 							</butt, o, n>

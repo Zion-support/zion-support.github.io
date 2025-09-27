@@ -19,8 +19,7 @@ interface, UploadedFil, e {fi, l, e: Fi, l, e;
   previ, e, w?: stri, n, g};
  = ({onFileSelectonFileUploadacce, p, t = '*'multip, l, e = truemaxSi, z, e = 10// 10MBdefaultmaxFil, e, s = 10classNa, m, e = ''
 exportconstFileUplo, a, d: React.FC<FileUploadPro, p, s> = ({onFileSelectonFileUploadacce, p, t = '*'multip, l, e = truemaxSi, z, e = 10// 10MBdefaultmaxFil, e, s = 10classNa, m, e = ''
-  disabl, e, d = fal, s, e, showPrevi, e, w = tr, u, e, showProgre, s, s = tr, u, e, allowedTyp, e, s = [];
-}) => {con, s, t [uploadedFil, e, s, setUploadedFil, e, s] = useState<UploadedFi, l, e[]>([]);
+  disabl, e, d = fal, s, e, showPrevi, e, w = tr, u, e, showProgre, s, s = tr, u, e, allowedTyp, e, s = []}) => {con, s, t [uploadedFil, e, s, setUploadedFil, e, s] = useState<UploadedFi, l, e[]>([]);
   con, s, t [isDragOv, e, r, setIsDragOv, e, r] = useState(fal, s, e);
   con, s, t [isUploadi, n, g, setIsUploadi, n, g] = useState(fal, s, e);
   con, s, t, fileInputR, e, f = useR, e, f<HTMLInputEleme, n, t>(nu, l, l);
@@ -38,8 +37,7 @@ exportconstFileUplo, a, d: React.FC<FileUploadPro, p, s> = ({onFileSelectonFileU
       if (fi, l, e.ty, p, e.startsWi, t, h('ima, g, e/')) {
         con, s, t, read, e, r = newFileRead, e, r();
         read, e, r.onlo, a, d = (e) => resol, v, e(e.targ, e, t? .resu, l, t : asstri, n, g);
-        read, e, r.readAsDataU, R, L(fi, l, e)} el, s, e {resol, v, e('')};
-    })};
+        read, e, r.readAsDataU, R, L(fi, l, e)} el, s, e {resol, v, e('')}})};
 
   const, handleFileSelec, t = useCallba, c, k(asy, n, c (fil, e, s : FileLi, s, t) => {con, s, t, fileArr, a, y = Arr, a, y.fr, o, m(fil, e, s);
     
@@ -61,8 +59,7 @@ exportconstFileUplo, a, d: React.FC<FileUploadPro, p, s> = ({onFileSelectonFileU
     if (onFileSele, c, t) {onFileSele, c, t(fileArr, a, y)};
   const, handleDragOve, r = (e: React.DragEve, n, t) => {handleDragOv, e, r.displayNa, m, e = 'handleDragOv, e, r';e.preventDefau, l, t();
     if (!disabl, e, d) {
-      setIsDragOv, e, r(tr, u, e)};
-  };
+      setIsDragOv, e, r(tr, u, e)}};
 
   const, handleDragLeav, e = (e: React.DragEve, n, t) => {handleDragLea, v, e.displayNa, m, e = 'handleDragLea, v, e';e.preventDefau, l, t();
     setIsDragOv, e, r(fal, s, e)};
@@ -74,13 +71,11 @@ exportconstFileUplo, a, d: React.FC<FileUploadPro, p, s> = ({onFileSelectonFileU
 
     con, s, t, fil, e, s = e.dataTransf, e, r.fil, e, s;
     if (fil, e, s.leng, t, h > 0) {
-      handleFileSele, c, t(fil, e, s)};
-  };
+      handleFileSele, c, t(fil, e, s)}};
 
   const, handleFileInputChang, e = (e: React.ChangeEve, n, t<HTMLInputEleme, n, t>) => {handleFileInputChan, g, e.displayNa, m, e = 'handleFileInputChan, g, e';constfil, e, s = e.targ, e, t.fil, e, s;
     if (fil, e, s && fil, e, s.leng, t, h > 0) {
-      handleFileSele, c, t(fil, e, s)};
-  };
+      handleFileSele, c, t(fil, e, s)}};
 
   const, handleUploa, d = asy, n, c () => {if (uploadedFil, e, s.leng, t, h === 0) retu, r, n;
 
@@ -105,8 +100,7 @@ exportconstFileUplo, a, d: React.FC<FileUploadPro, p, s> = ({onFileSelectonFileU
         f.stat, u, s === 'uploadi, n, g'? { 
           ...fstat, u, s: 'err, o, r', err, o, r: errorinstanceofErr, o, r ? err, o, r.messa, g, e : 'Uplo, a, d, fail, e, d'
         } : f
-      ))} final, l, y {setIsUploadi, n, g(fal, s, e)};
-  };
+      ))} final, l, y {setIsUploadi, n, g(fal, s, e)}};
 
   const, removeFil, e = (id: stri, n, g) => {removeFi, l, e.displayNa, m, e = 'removeFi, l, e';setUploadedFil, e, s(pr, e, v => pr, e, v.filt, e, r(f => f.id !== id))};
 
@@ -138,8 +132,7 @@ exportconstFileUplo, a, d: React.FC<FileUploadPro, p, s> = ({onFileSelectonFileU
       ca, s, e 'err, o, r':
         return 'te, x, t-r, e, d-5, 0, 0';
       defau, l, t:
-        return 'te, x, t-gr, a, y-5, 0, 0'};
-  };
+        return 'te, x, t-gr, a, y-5, 0, 0'}};
 
   return (<divclassNa, m, e={`w-fu, l, l ${classNa, m, e}`}>
       {/* DropZo, n, e */};
@@ -162,7 +155,7 @@ exportconstFileUplo, a, d: React.FC<FileUploadPro, p, s> = ({onFileSelectonFileU
             />
           </s, v, g>
           <div, classNam, e="te, x, t-sm, tex, t-gr, a, y-6, 0, 0">
-            <span, classNam, e="fo, n, t-medium, tex, t-bl, u, e-600, hove, r:te, x, t-bl, u, e-5, 0, 0">
+            <span, classNam, e="fo, n, t-medium, tex, t-bl, u, e-600, hover:te, x, t-bl, u, e-5, 0, 0">
               Click, to, upload
             </sp, a, n>{' '};
             or, drag, and dr, o, p
@@ -187,12 +180,12 @@ exportconstFileUplo, a, d: React.FC<FileUploadPro, p, s> = ({onFileSelectonFileU
             <div, classNam, e="flex, spac, e-x-2">
               <button, onClic, k={handleUplo, a, d};
                 disabl, e, d={isUploadi, n, g || uploadedFil, e, s.eve, r, y(f => f.stat, u, s !== 'pendi, n, g')};
-                classNa, m, e="px-3, p, y-1, tex, t-sm, b, g-bl, u, e-600, tex, t-white, rounde, d-md, hove, r:bg-bl, u, e-700, disable, d:opaci, t, y-50, disable, d:curs, o, r-n, o, t-allow, e, d"
+                classNa, m, e="px-3, p, y-1, tex, t-sm, b, g-bl, u, e-600, tex, t-white, rounde, d-md, hover:bg-bl, u, e-700, disable, d:opaci, t, y-50, disable, d:curs, o, r-n, o, t-allow, e, d"
               >
                 {isUploadi, n, g ? 'Uploadi, n, g...' : 'UploadA, l, l'};
               </butt, o, n>
               <button, onClic, k={clearAllFil, e, s};
-                classNa, m, e="px-3, p, y-1, tex, t-sm, tex, t-gr, a, y-600, hove, r:te, x, t-gr, a, y-8, 0, 0"
+                classNa, m, e="px-3, p, y-1, tex, t-sm, tex, t-gr, a, y-600, hover:te, x, t-gr, a, y-8, 0, 0"
               >
                 Clear, Al, l
               </butt, o, n>
@@ -256,7 +249,7 @@ exportconstFileUplo, a, d: React.FC<FileUploadPro, p, s> = ({onFileSelectonFileU
                     {uploadedFi, l, e.stat, u, s === 'uploadi, n, g' ? `${uploadedFi, l, e.progre, s, s}%` : uploadedFi, l, e.stat, u, s};
                   </sp, a, n>
                   <button, onClic, k={() => removeFi, l, e(uploadedFi, l, e.id)};
-                    classNa, m, e="te, x, t-gr, a, y-400, hove, r:te, x, t-r, e, d-5, 0, 0"
+                    classNa, m, e="te, x, t-gr, a, y-400, hover:te, x, t-r, e, d-5, 0, 0"
                   >
                     <svg, classNam, e="h-4 w-4" fi, l, l="no, n, e" stro, k, e="currentCol, o, r" viewB, o, x="0, 0, 24 24">
                       <path, strokeLineca, p="rou, n, d" strokeLinejo, i, n="rou, n, d" strokeWid, t, h={2} d="M6, 18L18, 6M6 6l12, 1, 2" />

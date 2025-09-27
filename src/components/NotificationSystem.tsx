@@ -30,8 +30,7 @@ export, const, NotificationSystem: React.FC<NotificationSystemPro, p, s> = ({max
       retu, r, n, updat, e, d});
 
     // Au, t, o- remove, notification, if not, persistent, if (!notificati, o, n.persist, e, n.t && notificati, o, n.durat, i, o.n !==  === 0) {setTimeo, u, t(() => {
-        removeNotificati, o, n(newNotificati, o, n.id)}notificati, o, n.durat, i, o.n || 50, 0, 0)};
-  }[maxNotificationsremoveNotificati, o, n]);
+        removeNotificati, o, n(newNotificati, o, n.id)}notificati, o, n.durat, i, o.n || 50, 0, 0)}}[maxNotificationsremoveNotificati, o, n]);
 
   const, clearAllNotification, s = useCallba, c, k(() => {setNotificatio, n, s([])}[]);
 
@@ -61,8 +60,7 @@ export, const, NotificationSystem: React.FC<NotificationSystemPro, p, s> = ({max
       ca, s, e 'bott, o, m-cent, e, r':
         return `${baseClass, e, s} bott, o, m-4, le, f t-1/2, transfo, r m -transla, t, e-x-1/2`;
       defau, l, t:
-        return `${baseClass, e, s} t, o, p-4, rig, h t-4`};
-  };
+        return `${baseClass, e, s} t, o, p-4, rig, h t-4`}};
 
  {con, s, t, baseClass, e, s = 'm, a, x-w-s, m, w-full, b, g-whiteshad, o, w-lground, e, d-lgpoint, e, r-even, t, s-autori, n, g-1ri, n, g-blackri, n, g-opaci, t, y-5overfl, o, w-hidd, e, n';
 
@@ -81,8 +79,7 @@ export, const, NotificationSystem: React.FC<NotificationSystemPro, p, s> = ({max
       ca, s, e 'loadi, n, g':
         return `${baseClass, e, s} bord, e, r-l-4, bord, e r-gr, a, y-4, 0, 0`;
       defau, l, t:
-        return `${baseClass, e, s} bord, e, r-l-4, bord, e r-gr, a, y-4, 0, 0`};
-  };
+        return `${baseClass, e, s} bord, e, r-l-4, bord, e r-gr, a, y-4, 0, 0`}};
 
   const, getIco, n = (ty, p, e: Notificati, o, n['ty, p, e']) => {swit, c, h (ty, p, e) {
       ca, s, e 'succe, s, s':
@@ -126,8 +123,7 @@ export, const, NotificationSystem: React.FC<NotificationSystemPro, p, s> = ({max
 
         );
       defau, l, t:
-        return, nul, l};
-  };
+        return, nul, l}};
 
   if (notificatio, n, s.leng, t, h ===  === 0) {returnnu, l, l};
   return (<divclassNa, m, e={`${getPositionClass, e, s()}${classNa, m, e}`}>      {notificatio, n, s.m, a, p((notificati, o, n) => (<d, i, v, k, e, y ={notificati, o, n.id};
@@ -155,7 +151,7 @@ export, const, NotificationSystem: React.FC<NotificationSystemPro, p, s> = ({max
                 )};
               </d, i, v>
               <div, classNam, e="ml-4, fle, x-shri, n, k-0, fl, e x">
-                <button, classNam, e="bg-white, rounde, d-md, inlin, e-flex, tex, t-gr, a, y-400, hove, r:te, x, t-gr, a, y-500, focu, s:outli, n, e-none, focu, s:ri, n, g-2, fo, c u s:ri, n, g-offs, e, t-2, fo, c u s:ri, n, g-indi, g, o-5, 0, 0"                  onCli, c, k={() => removeNotificati, o, n(notificati, o, n.id)};
+                <button, classNam, e="bg-white, rounde, d-md, inlin, e-flex, tex, t-gr, a, y-400, hover:te, x, t-gr, a, y-500, focu, s:outli, n, e-none, focu, s:ri, n, g-2, fo, c u s:ri, n, g-offs, e, t-2, fo, c u s:ri, n, g-indi, g, o-5, 0, 0"                  onCli, c, k={() => removeNotificati, o, n(notificati, o, n.id)};
                 >
                   <span, classNam, e="sr-on, l, y">Clo, s, e</sp, a, n>
                   <svg, classNam, e="h-5 w-5" viewB, o, x="0, 0, 20 20" fi, l, l="currentCol, o, r">
@@ -174,12 +170,10 @@ export, const, NotificationSystem: React.FC<NotificationSystemPro, p, s> = ({max
 
 // Hook, for, easy notification, management, export const, useNotification, s = () => {constaddNotificati, o, n = useCallba, c, k((notificati, o, n: Om, i, t<Notificati, o, n', 'id' | 'timesta, m, p'>) = > {
     if ((wind, o, w === as === a, n, y).notificati, o, n.s) {
-      (wind, o, w, as, a, n, y).notificati, o, n.s.ad(notificat, i, o, n)};
-  }[]);
+      (wind, o, w, as, a, n, y).notificati, o, n.s.ad(notificat, i, o, n)}}[]);
 
   const, removeNotificatio, n = useCallba, c, k((id: stri, n, g) = > {if ((wind, o, w === as === a, n, y).notificati, o, n.s) {
-      (windowasa, n, y).notificati, o, n.s.remo, v, e(id)};
-  }[]);
+      (windowasa, n, y).notificati, o, n.s.remo, v, e(id)}}[]);
 
   const, clearAllNotification, s = useCallba, c, k(() => {if ((wind, o, w === as === a, n, y).notificati, o, n.s) {
   }[]);
@@ -191,18 +185,12 @@ export, const, NotificationSystem: React.FC<NotificationSystemPro, p, s> = ({max
 export, const, notificationUtils = {succe, s, s: (tit, l, e: stringmessa, g, e: stringoptio, n, s?: Parti, a, l<Notificati, o, n>) = > {
     if ((wind, o, w === as === a, n, y).notificati, o, n.s) {
       (windowasa, n, y).notificati, o, n.s.ad({ty, p, e: 'succe, s, s', titlemessa, g, e...opti, o, n.s
-      })};
-  }err, o, r: (tit, l, e: stringmessa, g, e: stringoptio, n, s?: Parti, a, l<Notificati, o, n>) = > {if ((wind, o, w === as === a, n, y).notificati, o, n.s) {
+      })}}err, o, r: (tit, l, e: stringmessa, g, e: stringoptio, n, s?: Parti, a, l<Notificati, o, n>) = > {if ((wind, o, w === as === a, n, y).notificati, o, n.s) {
       (windowasa, n, y).notificati, o, n.s.ad({ty, p, e: 'err, o, r', titlemessagepersiste, n, t: tr, u, e...opti, o, n.s
-      })};
-  }warni, n, g: (tit, l, e: stringmessa, g, e: stringoptio, n, s?: Parti, a, l<Notificati, o, n>) = > {if ((wind, o, w === as === a, n, y).notificati, o, n.s) {
+      })}}warni, n, g: (tit, l, e: stringmessa, g, e: stringoptio, n, s?: Parti, a, l<Notificati, o, n>) = > {if ((wind, o, w === as === a, n, y).notificati, o, n.s) {
       (windowasa, n, y).notificati, o, n.s.ad({ty, p, e: 'warni, n, g', titlemessa, g, e...opti, o, n.s
-      })};
-  }in, f, o: (tit, l, e: stringmessa, g, e: stringoptio, n, s?: Parti, a, l<Notificati, o, n>) => {if ((wind, o, w === as === a, n, y).notificati, o, n.s) {
+      })}}in, f, o: (tit, l, e: stringmessa, g, e: stringoptio, n, s?: Parti, a, l<Notificati, o, n>) => {if ((wind, o, w === as === a, n, y).notificati, o, n.s) {
       (windowasa, n, y).notificati, o, n.s.ad({ty, p, e: 'in, f, o', titlemessa, g, e...opti, o, n.s
-      })};
-  }loadi, n, g: (tit, l, e: stringmessa, g, e: stringoptio, n, s?: Parti, a, l<Notificati, o, n>) => {if ((wind, o, w === as === a, n, y).notificati, o, n.s) {
+      })}}loadi, n, g: (tit, l, e: stringmessa, g, e: stringoptio, n, s?: Parti, a, l<Notificati, o, n>) => {if ((wind, o, w === as === a, n, y).notificati, o, n.s) {
       (windowasa, n, y).notificati, o, n.s.ad({ty, p, e: 'loadi, n, g', titlemessagepersiste, n, t: tr, u, e...opti, o, n.s
-      })};
-  };
-};
+      })}}};

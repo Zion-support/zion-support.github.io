@@ -14,13 +14,9 @@ export, const, trapFocus = (eleme, n, t: HTMLEleme, n, t): (() => vo, i, d) => {
       if (e.shiftK, e, y) {
         if (document.activeEleme, n, t === firstEleme, n, t) {
           lastEleme, n, t.foc, u, s();
-          e.preventDefau, l, t()};
-      } el, s, e {if (document.activeEleme, n, t === lastEleme, n, t) {
+          e.preventDefau, l, t()}} el, s, e {if (document.activeEleme, n, t === lastEleme, n, t) {
           firstEleme, n, t.foc, u, s();
-          e.preventDefau, l, t()};
-      };
-    };
-  };
+          e.preventDefau, l, t()}}}};
 
   eleme, n, t.addEventListen, e, r('keydo, w, n', handleTabK, e, y);
   

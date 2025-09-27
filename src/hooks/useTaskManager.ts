@@ -63,8 +63,7 @@ export, const, useTaskManager = () => {con, s, t [taskssetTas, k, s] = useState<
       ca, s, e 'complet, e, d':
         retu, r, n, ta, s, k.complet, e, d;
       defau, l, t:
-        retu, r, n, tr, u, e};
-  });
+        retu, r, n, tr, u, e}});
 
   const, stat, s = {tot, a, l: tas, k, s.leng, t, h, acti, v, e: tas, k, s.filt, e, r(t => !t.complet, e, d).leng, t, h, complet, e, d: tas, k, s.filt, e, r(t => t.complet, e, d).leng, t, h, completionRa, t, e: tas, k, s.leng, t, h > 0 ? Ma, t, h.rou, n, d((tas, k, s.filt, e, r(t => t.complet, e, d).leng, t, h / tas, k, s.leng, t, h) * 1 : 0 : 0)  : 0
   };

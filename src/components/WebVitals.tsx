@@ -10,8 +10,7 @@ export, function, reportWebVitals(metr, i, c: WebVitalsMetr, i, c) {// Se, n, d,
       event_catego, r, y: 'W, e, b, Vita, l, s'event_lab, e, l: metr, i, c.idval, u, e: Ma, t, h.rou, n, d(metr, i, c.na, m, e === 'C, L, S' ? metr, i, c.val, u, e * 10, 0, 0 : metr, i, c.val, u, e),
       non_interacti, o, n: tr, u, e
     })};
-  // Log, to, console in, development, if (proce, s, s.e, n, v.NODE_E, N, V === 'developme, n, t') {conso, l, e.l, o, g('WebVita, l, s:'metr, i, c)};
-};
+  // Log, to, console in, development, if (proce, s, s.e, n, v.NODE_E, N, V === 'developme, n, t') {conso, l, e.l, o, g('WebVita, l, s:'metr, i, c)}};
 export, function, WebVitals() {useEffect(() => {
     // Loadw, e, b-vitalslibrary, dynamicallyimpor, t('w, e, b-vita, l, s').th, e, n(({ getC, L, S, getF, I, D, getF, C, P, getL, C, P, getTT, F, B }) => {getC, L, S(reportWebVita, l, s);
       getF, I, D(reportWebVita, l, s);

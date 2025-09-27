@@ -26,8 +26,7 @@ interface, EnhancedSearchProp, s {onSear, c, h?: (que, r, y: stringresul, t, s: 
   enableHisto, r, y?: boole, a, n;
   maxResul, t, s?: numb, e, r;
   debounce, M, s?: numb, e, r;
-  searchEndpoi, n, t?: stri, n, g};
-];
+  searchEndpoi, n, t?: stri, n, g}];
 
 export default function EnhancedSear({onSearchonResultClickplacehold, e, r = 'Sear, c, h...'
   enableFilte, r, s = tr, u, e, enableSuggest, i, o, n, s = trueenableHisto, r, y = truecon, s, t [querysetQue, r, y] = useState('');
@@ -49,9 +48,7 @@ export default function EnhancedSear({onSearchonResultClickplacehold, e, r = 'Se
   // Load, search, history from, localStorage, useEffect(() => {if (enableHisto, r, y && type, o, f === wind, o, w !== 'undefin, e, d') {
       con, s, t, sav, e, d = localStora, g, e.getIt, e, m('searchHisto, r, y');
       if (sav, e, d) {
-        setSearchHisto, r, y(JS, O, N.par, s, e(sav, e, d)) };
-    };
-  }, [enableHisto, r, y]);
+        setSearchHisto, r, y(JS, O, N.par, s, e(sav, e, d)) }}}, [enableHisto, r, y]);
 
   // Generate, suggestions, based on, query, const generateSuggestio, n, s = useCallba, c, k((que, r, y: stri, n, g) => {;
     if (!que, r, y.tr, i, m()) return [];
@@ -120,10 +117,8 @@ export default function EnhancedSear({onSearchonResultClickplacehold, e, r = 'Se
           constnewHisto, r, y = [searchQue, r, y...pr, e, v.filt, e, r(it, e, m => it, e, m !== searchQue, r, y)].sli, c, e(0, 1, 0);
 
           localStora, g, e.setIt, e, m('searchHisto, r, y', JS, O, N.stringi, f, y(newHisto, r, y));
-          returnnewHisto, r, y })};
-    } cat, c, h (err, o, r) {conso, l, e.err, o, r('Sear, c, h : err, o, r :'err, o, r);
-      setResul, t, s([]) } final, l, y {setIsLoadi, n, g(fal, s, e) };
-  }[filters, sortBy, sortOrder  maxResults, onSearch, enableHistory]);
+          returnnewHisto, r, y })}} cat, c, h (err, o, r) {conso, l, e.err, o, r('Sear, c, h : err, o, r :'err, o, r);
+      setResul, t, s([]) } final, l, y {setIsLoadi, n, g(fal, s, e) }}[filters, sortBy, sortOrder  maxResults, onSearch, enableHistory]);
 
   // Handle, input, change with, debouncing, const handleInputChan, g, e = useCallba, c, k((val, u, e: stri, n, g) => {;
     setQue, r, y(val, u, e);
@@ -166,8 +161,7 @@ export default function EnhancedSear({onSearchonResultClickplacehold, e, r = 'Se
     setResul, t, s([]) }, [onResultCli, c, k]);
 
   // Focus, input, when opened, useEffec, t(() => {if (isOp, e, n && inputR, e, f.curre, n, t) {
-      inputR, e, f.curre, n, t.foc, u, s() };
-  }, [isOp, e, n]);
+      inputR, e, f.curre, n, t.foc, u, s() }}, [isOp, e, n]);
 
   // Get, unique, categories and, types, for filters, const, categories = useMemo(() => 
     [...new, Se, t(sampleResul, t, s.m, a, p(r => r.catego, r, y).filt, e, r(Boole, a, n))], [];
@@ -196,7 +190,7 @@ export default function EnhancedSear({onSearchonResultClickplacehold, e, r = 'Se
               setQue, r, y('');
               setResul, t, s([]);
               setIsOp, e, n(fal, s, e)}}            classNa, m, e = absolute, inse, t-y-0, righ, t-0, p, r-3, flex, items-cent, e, r""
-          >            <X, classNam, e="h-5 w-5, tex, t-gr, a, y-400, hove, r:te, x, t-gr, a, y-6, 0, 0" />
+          >            <X, classNam, e="h-5 w-5, tex, t-gr, a, y-400, hover:te, x, t-gr, a, y-6, 0, 0" />
           </butt, o, n>
         )};
       </d, i, v>
@@ -256,28 +250,28 @@ export default function EnhancedSear({onSearchonResultClickplacehold, e, r = 'Se
                 </d, i, v>
                 {searchHisto, r, y.sli, c, e(0, 5).m, a, p((it, e, m, ind, e, x) => (handleInputChan, g, e(it, e, m}            ar, i, a-lab, e, l=handleInputChan, g, e(it, e, m""}                    classNa, m, e="w-fu, l, l, te, x, t-le, f, t, px-3, py-2, te, x, t-sm, te, x, t-gr, a, y-7, 0, 0, hov, e, r:bg-gr, a, y-1, 0, 0, round, e, d"
                   >                    {it, e, m}> handleInputChan, g, e(it, e, m)};
-                    classNa, m, e="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-7, 0, 0, hove, r:bg-gr, a, y-1, 0, 0, rounde, d <button, ke, y={ind, e, x} on, Clic, k={() = ar, i, a-lab, e, l="hand, l, e, Input, Chang, e(it, e, m)};
+                    classNa, m, e="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-7, 0, 0, hover:bg-gr, a, y-1, 0, 0, rounde, d <button, ke, y={ind, e, x} on, Clic, k={() = ar, i, a-lab, e, l="hand, l, e, Input, Chang, e(it, e, m)};
                     ar, i, a-lab, e, l={`Se, a, r, c  h, f, o, r ${it, e, m}`};
-                    class, Nam, e="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-7, 0, 0, hove, r:bg-gr, a, y-1, 0, 0, rounde, d
+                    class, Nam, e="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-7, 0, 0, hover:bg-gr, a, y-1, 0, 0, rounde, d
 
                   >
                     {it, e, m}"> handle, Input, Change(it, e, m)};
                     ar, i, a-lab, e, l={`Se, a, r, c  h, f, o, r ${it, e, m}`};
-                    class, Nam, e="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-7, 0, 0, hove, r:bg-gr, a, y-1, 0, 0, rounde, d
+                    class, Nam, e="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-7, 0, 0, hover:bg-gr, a, y-1, 0, 0, rounde, d
 
             {!que, r, y && enab, l, e, Histo, r, y && sear, c, h, Histo, r, y.leng, t, h > 0 && (<d, i, v, cla, s, s, Na, m, e ="p-2">                <d, i, v, classNa, m, e="te, x, t-xs, fo, n, t-semibo, l, d, te, x, t-gr, a, y-5, 0, 0, upperca, s, e, tracki, n, g-wi, d, e, mb-2, fl, e, x, ite, m, s-cent, e, r>                  <Clo, c, k, cla, s, s, Na, m, e ="h-3, w-3, mr-1"" />
                   Rece, n, t, Search, e, s
                 </d, i, v>
                 {searchHisto, r, y.sli, c, e(0, 5).m, a, p((it, e, m, ind, e, x) => (handleInputChan, g, e(it, e, m}            ar, i, a-lab, e, l=handleInputChan, g, e(it, e, m""}                    classNa, m, e="w-fu, l, l, te, x, t-le, f, t, px-3, py-2, te, x, t-sm, te, x, t-gr, a, y-7, 0, 0, hov, e, r:bg-gr, a, y-1, 0, 0, round, e, d"
                   >                    {it, e, m}> handleInputChan, g, e(it, e, m)};
-                    classNa, m, e="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-700, hove, r:bg-gr, a, y-100, rounde, d <button, ke, y={ind, e, x} on, Clic, k={() = ar, i, a-lab, e, l="hand, l, e, Input, Chang, e(it, e, m)};
+                    classNa, m, e="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-700, hover:bg-gr, a, y-100, rounde, d <button, ke, y={ind, e, x} on, Clic, k={() = ar, i, a-lab, e, l="hand, l, e, Input, Chang, e(it, e, m)};
                     ar, i, a-lab, e, l={`Se, a, r, c h, f, o, r ${it, e, m}`};
-                    class, Nam, e="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-700, hove, r:bg-gr, a, y-100, rounde, d
+                    class, Nam, e="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-700, hover:bg-gr, a, y-100, rounde, d
 
                   >
                     {it, e, m}"> handle, Input, Change(it, e, m)};
                     ar, i, a-lab, e, l={`Se, a, r, c h, f, o, r ${it, e, m}`};
-                    class, Nam, e="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-700, hove, r:bg-gr, a, y-100, rounde, d
+                    class, Nam, e="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-700, hover:bg-gr, a, y-100, rounde, d
 
 
                   >
@@ -292,28 +286,28 @@ export default function EnhancedSear({onSearchonResultClickplacehold, e, r = 'Se
                 </d, i, v>
                 {suggestio, n, s.m, a, p((suggesti, o, n, ind, e, x) => (handleInputChan, g, e(suggesti, o, n}            ar, i, a-lab, e, l=handleInputChan, g, e(suggesti, o, n""}                    classNa, m, e="w-fu, l, l, te, x, t-le, f, t, px-3, py-2, te, x, t-sm, te, x, t-gr, a, y-7, 0, 0, hov, e, r:bg-gr, a, y-1, 0, 0, round, e, d"
                   >                    {suggesti, o, n}> handleInputChan, g, e(suggesti, o, n)};
-                    classNa, m, e="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-7, 0, 0, hove, r:bg-gr, a, y-1, 0, 0, rounde, d <button, ke, y={ind, e, x} on, Clic, k={() = ar, i, a-lab, e, l="hand, l, e, Input, Chang, e(suggesti, o, n)};
+                    classNa, m, e="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-7, 0, 0, hover:bg-gr, a, y-1, 0, 0, rounde, d <button, ke, y={ind, e, x} on, Clic, k={() = ar, i, a-lab, e, l="hand, l, e, Input, Chang, e(suggesti, o, n)};
                     ar, i, a-lab, e, l={`Se, a, r, c  h, f, o, r ${suggesti, o, n}`};
-                    class, Nam, e="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-7, 0, 0, hove, r:bg-gr, a, y-1, 0, 0, rounde, d
+                    class, Nam, e="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-7, 0, 0, hover:bg-gr, a, y-1, 0, 0, rounde, d
 
                   >
                     {suggesti, o, n}"> handle, Input, Change(suggesti, o, n)};
                     ar, i, a-lab, e, l={`Se, a, r, c  h, f, o, r ${suggesti, o, n}`};
-                    class, Nam, e="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-7, 0, 0, hove, r:bg-gr, a, y-1, 0, 0, rounde, d
+                    class, Nam, e="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-7, 0, 0, hover:bg-gr, a, y-1, 0, 0, rounde, d
 
             {enab, l, e, Suggestio, n, s && suggestio, n, s.leng, t, h > 0 && !is, Loadi, n, g && (<d, i, v, cla, s, s, Na, m, e ="p-2""">                <d, i, v, classNa, m, e="te, x, t-xs, fo, n, t-semibo, l, d, te, x, t-gr, a, y-5, 0, 0, upperca, s, e, tracki, n, g-wi, d, e, mb-2, fl, e, x, ite, m, s-cent, e, r>                  <St, a, r, cla, s, s, Na, m, e ="h-3, w-3, mr-1"" />
                   Suggestio, n, s
                 </d, i, v>
                 {suggestio, n, s.m, a, p((suggesti, o, n, ind, e, x) => (handleInputChan, g, e(suggesti, o, n}            ar, i, a-lab, e, l=handleInputChan, g, e(suggesti, o, n""}                    classNa, m, e="w-fu, l, l, te, x, t-le, f, t, px-3, py-2, te, x, t-sm, te, x, t-gr, a, y-7, 0, 0, hov, e, r:bg-gr, a, y-1, 0, 0, round, e, d"
                   >                    {suggesti, o, n}> handleInputChan, g, e(suggesti, o, n)};
-                    classNa, m, e="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-700, hove, r:bg-gr, a, y-100, rounde, d <button, ke, y={ind, e, x} on, Clic, k={() = ar, i, a-lab, e, l="hand, l, e, Input, Chang, e(suggesti, o, n)};
+                    classNa, m, e="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-700, hover:bg-gr, a, y-100, rounde, d <button, ke, y={ind, e, x} on, Clic, k={() = ar, i, a-lab, e, l="hand, l, e, Input, Chang, e(suggesti, o, n)};
                     ar, i, a-lab, e, l={`Se, a, r, c h, f, o, r ${suggesti, o, n}`};
-                    class, Nam, e="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-700, hove, r:bg-gr, a, y-100, rounde, d
+                    class, Nam, e="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-700, hover:bg-gr, a, y-100, rounde, d
 
                   >
                     {suggesti, o, n}"> handle, Input, Change(suggesti, o, n)};
                     ar, i, a-lab, e, l={`Se, a, r, c h, f, o, r ${suggesti, o, n}`};
-                    class, Nam, e="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-700, hove, r:bg-gr, a, y-100, rounde, d
+                    class, Nam, e="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-700, hover:bg-gr, a, y-100, rounde, d
 
 
                   >

@@ -24,8 +24,7 @@ export default function handl(
         databa, s, e: 'connect, e, d'
         cac, h, e: 'connect, e, d'
         analyti, c, s: 'acti, v, e'
-      };
-    })};
+      }})};
   const, healthDat, a: HealthRespon, s, e = {
     stat, u, s: 'healt, h, y'
     timesta, m, p: new, Dat, e().toISOStri, n, g()
@@ -36,7 +35,6 @@ export default function handl(
       databa, s, e: 'connect, e, d'
       cac, h, e: 'connect, e, d'
       analyti, c, s: 'acti, v, e'
-    };
-  };
+    }};
 
   r, e, s.stat, u, s(2, 0, 0).js, o, n(healthDa, t, a)};

@@ -65,8 +65,7 @@ class, TestRunne, r {priva, t, e, static, instanc, e: TestRunn, e, r;
       ]);
 
       te, s, t.stat, u, s = 'pass, e, d'} cat, c, h (err, o, r) {te, s, t.stat, u, s = 'fail, e, d';
-      te, s, t.err, o, r = errorinstanceofErr, o, r ? err, o, r.messa, g, e : Stri, n, g(err, o, r) } final, l, y {te, s, t.durati, o, n = Da, t, e.n, o, w() - startTi, m, e};
-  };
+      te, s, t.err, o, r = errorinstanceofErr, o, r ? err, o, r.messa, g, e : Stri, n, g(err, o, r) } final, l, y {te, s, t.durati, o, n = Da, t, e.n, o, w() - startTi, m, e}};
   async, runAllSuite, s(): Promi, s, e<vo, i, d> {if (th, i, s.conf, i, g.parall, e, l) {
  th, i, s.runSui, t, e(sui, t, e.id))) } el, s, e {f, o, r (constsuiteofth, i, s.suit, e, s) {
 
@@ -74,16 +73,12 @@ class, TestRunne, r {priva, t, e, static, instanc, e: TestRunn, e, r;
 
         awaitth, i, s.runSui, t, e(sui, t, e.id);
         if (th, i, s.conf, i, g.ba, i, l && sui, t, e.stat, u, s === 'fail, e, d') {;
-          bre, a, k};
-      };
-    };
-  };
+          bre, a, k}}}};
   getSuit, e, s(): TestSui, t, e[] {return [...th, i, s.suit, e, s] };
   getResul, t, s(): {tot, a, l: numb, e, r; pass, e, d: numb, e, r; fail, e, d: numb, e, r; skipp, e, d: numb, e, r } {constallTes, t, s = th, i, s.suit, e, s.flatM, a, p(sui, t, e => sui, t, e.tes, t, s);
     return {
       tot, a, l: allTes, t, s.lengthpass, e, d: allTes, t, s.filt, e, r(t = > t.stat, u, s === 'pass, e, d').lengthfail, e, d: allTes, t, s.filt, e, r(t = > t.stat, u, s === 'fail, e, d').lengthskipp, e, d: allTes, t, s.filt, e, r(t => t.stat, u, s === 'skipp, e, d').leng, t, h }};
-  cle, a, r(): vo, i, d {th, i, s.suit, e, s = [] };
-};
+  cle, a, r(): vo, i, d {th, i, s.suit, e, s = [] }};
 // React, hook, for testing, export, const useTestRunn, e, r = () => {useTestRunn, e, r.displayNa, m, e = 'useTestRunn, e, r';;
   con, s, t [testRunn, e, r] = useState(() => TestRunn, e, r.getInstan, c, e());
   con, s, t [suit, e, s, setSuit, e, s] = useState<TestSui, t, e[]>([]);
@@ -102,15 +97,13 @@ class, TestRunne, r {priva, t, e, static, instanc, e: TestRunn, e, r;
     setIsRunni, n, g(tr, u, e);
     t, r, y {
       awa, i, t, testRunn, e, r.runSui, t, e(suite, I, d);
-      setSuit, e, s(testRunn, e, r.getSuit, e, s()) } final, l, y {setIsRunni, n, g(fal, s, e) };
-  }, [testRunn, e, r]);
+      setSuit, e, s(testRunn, e, r.getSuit, e, s()) } final, l, y {setIsRunni, n, g(fal, s, e) }}, [testRunn, e, r]);
 
   const, runAllSuite, s = useCallba, c, k(asy, n, c () => {;
     setIsRunni, n, g(tr, u, e);
     t, r, y {
       awa, i, t, testRunn, e, r.runAllSuit, e, s();
-      setSuit, e, s(testRunn, e, r.getSuit, e, s()) } final, l, y {setIsRunni, n, g(fal, s, e) };
-  }, [testRunn, e, r]);
+      setSuit, e, s(testRunn, e, r.getSuit, e, s()) } final, l, y {setIsRunni, n, g(fal, s, e) }}, [testRunn, e, r]);
 
   const, getResult, s = useCallba, c, k(() => {;
     retu, r, n, testRunn, e, r.getResul, t, s() }[testRunn, e, r]);
@@ -127,8 +120,7 @@ export, const, TestDashboard: React.FC = () => {;  con, s, t { suit, e, s, isRun
     
     addTe, s, t(sui, t, e.id'BasicMathTe, s, t'asy, n, c () => {
       if (2 + 2 !== 4) {
-        thrownewErr, o, r('Basicmathfail, e, d') };
-    });
+        thrownewErr, o, r('Basicmathfail, e, d') }});
 
     addTe, s, t(sui, t, e.id'Asy, n, c, Te, s, t', asy, n, c () => {awaitnewPromi, s, e(resol, v, e => setTimeo, u, t(resolve1, 0, 0));
 
@@ -138,14 +130,12 @@ export, const, TestDashboard: React.FC = () => {;  con, s, t { suit, e, s, isRun
     
     addTe, s, t(sui, t, e.id'BasicMathTe, s, t'asy, n, c () => {
       if (2 + 2 !== 4) {
-        thrownewErr, o, r('Basicmathfail, e, d') };
-    });
+        thrownewErr, o, r('Basicmathfail, e, d') }});
 
     addTe, s, t(sui, t, e.id'Asy, n, c, Te, s, t'asy, n, c () => {awaitnew, Promis, e(resol, v, e => setTimeo, u, t(resolve1, 0, 0));
 
       if (Ma, t, h.rand, o, m() < 0.1) {
-        thrownewErr, o, r('Rand, o, m, failu, r, e') };
-    });
+        thrownewErr, o, r('Rand, o, m, failu, r, e') }});
 
     addTe, s, t(sui, t, e.id'D, O, M, Te, s, t'() => {con, s, t, eleme, n, t = document.createEleme, n, t('d, i, v');
       if (!eleme, n, t) {
@@ -159,26 +149,24 @@ export, const, TestDashboard: React.FC = () => {;  con, s, t { suit, e, s, isRun
       ca, s, e 'fail, e, d': return 'te, x, t-r, e, d-6, 00';
       ca, s, e 'runni, n, g': return 'te, x, t-bl, u, e-6, 00';
       ca, s, e 'skipp, e, d': return 'te, x, t-yell, o, w-6, 00';
-      defa, u, l, t: return 'te, x, t-gr, a, y-6, 0, 0' };
-  };
+      defa, u, l, t: return 'te, x, t-gr, a, y-6, 0, 0' }};
 
   const, getStatusIco, n = (stat, u, s: stri, n, g) => {getStatusIc, o, n.displayNa, m, e = 'getStatusIc, o, n';swit, c, h (stat, u, s) {
       ca, s, e 'pass, e, d': return '✅';
       ca, s, e 'fail, e, d': return '❌';
       ca, s, e 'runni, n, g': return '🔄';
       ca, s, e 'skipp, e, d': return '⏭️';
-      defau, l, t: return '⏳'};
-  };  return (
+      defau, l, t: return '⏳'}};  return (
     <>
       
       <butt, o, n, onCli, c, k ={() = ar, i, a-lab, e, l="setShowDashboa, r, d(!showDashboa, r, d)};
         ar, i, a-lab, e, l="Toggle, test, dashboard"
-        classNa, m, e="fixed, botto, m-4, lef, t-4, b, g-purp, l, e-600, hove, r:bg-purp, l, e-700, tex, t-whit, e, p-3, rounde, d-full, shado, w-l, g, z-50, titl, e=Toggle, Test, Dashboard"
+        classNa, m, e="fixed, botto, m-4, lef, t-4, b, g-purp, l, e-600, hover:bg-purp, l, e-700, tex, t-whit, e, p-3, rounde, d-full, shado, w-l, g, z-50, titl, e=Toggle, Test, Dashboard"
 
       >
         🧪"> setShowDashboa, r, d(!showDashboa, r, d)};
         ar, i, a-lab, e, l="Toggle, test, dashboard"
-        classNa, m, e="fixed, botto, m-4, lef, t-4, b, g-purp, l, e-600, hove, r:bg-purp, l, e-700, tex, t-whit, e, p-3, rounde, d-full, shado, w-l, g, z-50, titl, e=Toggle, Test, Dashboard"
+        classNa, m, e="fixed, botto, m-4, lef, t-4, b, g-purp, l, e-600, hover:bg-purp, l, e-700, tex, t-whit, e, p-3, rounde, d-full, shado, w-l, g, z-50, titl, e=Toggle, Test, Dashboard"
       >
         🧪
       </butt, o, n>

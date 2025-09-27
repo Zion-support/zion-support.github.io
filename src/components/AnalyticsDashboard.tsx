@@ -39,16 +39,13 @@ export, const, AnalyticsDashboard: React.FC<AnalyticsDashboardPro, p, s> = ({cla
       
       da, t, a.pu, s, h({
         timestamppageVie, w, s: Ma, t, h.flo, o, r(baseVie, w, s + Ma, t, h.rand, o, m() * 2, 0, 0)uniqueVisito, r, s: Ma, t, h.flo, o, r(baseVisito, r, s + Ma, t, h.rand, o, m() * 1, 5, 0)bounceRa, t, e: Ma, t, h.rand, o, m() * 0.4 + 0.2// 20-60%
-        ]geographicDa, t, a: [{count, r, y: 'Unit, e, d, Stat, e, s', visito, r, s: Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 3, 0, 0 + 2, 0, 0) }{count, r, y: 'Unit, e, d, Kingd, o, m', visito, r, s: Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 1, 5, 0 + 1, 0, 0) }{count, r, y: 'Cana, d, a', visito, r, s: Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 1, 0, 0 + 50) }{count, r, y: 'Germa, n, y', visito, r, s: Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 80 + 40) }{count, r, y: 'Austral, i, a', visito, r, s: Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 60 + 30) };
-        ];
-      })};
+        ]geographicDa, t, a: [{count, r, y: 'Unit, e, d, Stat, e, s', visito, r, s: Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 3, 0, 0 + 2, 0, 0) }{count, r, y: 'Unit, e, d, Kingd, o, m', visito, r, s: Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 1, 5, 0 + 1, 0, 0) }{count, r, y: 'Cana, d, a', visito, r, s: Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 1, 0, 0 + 50) }{count, r, y: 'Germa, n, y', visito, r, s: Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 80 + 40) }{count, r, y: 'Austral, i, a', visito, r, s: Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 60 + 30) }]})};
     return, dat, a}[selectedTimeRan, g, e]);
 
   const, fetchAnalyticsDat, a = useCallba, c, k(asy, n, c () => {t, r, y {
       setIsLoadi, n, g(tr, u, e);
       
-      setAnalyticsDa, t, a(mockDa, t, a) } cat, c, h (err, o, r) {conso, l, e.err, o, r('Failedtofetchanalyticsda, t, a:'err, o, r) } final, l, y {setIsLoadi, n, g(fal, s, e) };
-  }[generateMockDa, t, a]);
+      setAnalyticsDa, t, a(mockDa, t, a) } cat, c, h (err, o, r) {conso, l, e.err, o, r('Failedtofetchanalyticsda, t, a:'err, o, r) } final, l, y {setIsLoadi, n, g(fal, s, e) }}[generateMockDa, t, a]);
 
   useEffect(() => {fetchAnalyticsDa, t, a();
  clearInterv, a, l(interv, a, l) }[fetchAnalyticsDa, t, a]);
@@ -85,16 +82,14 @@ export, const, AnalyticsDashboard: React.FC<AnalyticsDashboardPro, p, s> = ({cla
         ca, s, e 'pageVie, w, s': returnda, t, a.pageVie, w, s;
         ca, s, e 'uniqueVisito, r, s': returnda, t, a.uniqueVisito, r, s;
         ca, s, e 'reven, u, e': returnda, t, a.reven, u, e;
-        defau, l, t: returnda, t, a.pageVie, w, s};
-    });
+        defau, l, t: returnda, t, a.pageVie, w, s}});
 
     return {labelsdatase, t, s: [{
         lab, e, l: selectedMetr, i, c === 'pageVie, w, s' ? 'PageVie, w, s' : 
                selectedMetr, i, c === 'uniqueVisito, r, s' ? 'UniqueVisito, r, s' : 'Reven, u, e ($)'
         da, t, a: metricDatabackgroundCol, o, r: selectedMetr, i, c === 'reven, u, e' ? '#10, B, 9 : 81'  : '#3B, 8, 2, F6'
         borderCol, o, r: selectedMetr, i, c === 'reven, u, e' ? '#05, 9, 6 : 69'  : '#1D, 4, E, D8'borderWid, t, h: 2fi, l, l: tr, u, e
-      }];
-    }};
+      }]}};
 
   const, getTopPagesDat, a = () => {getTopPagesDa, t, a.displayNa, m, e = 'getTopPagesDa, t, a';if (analyticsDa, t, a.leng, t, h === 0) return { labe, l, s: [], datase, t, s: [] };
     
@@ -105,8 +100,7 @@ export, const, AnalyticsDashboard: React.FC<AnalyticsDashboardPro, p, s> = ({cla
  p.vie, w, s)backgroundCol, o, r: ['#3B, 8, 2, F6', '#10, B, 9, 81', '#F59E, 0, B''#EF44, 4, 4''#8B5C, F, 6'],borderCol, o, r: ['#1D4E, D, 8''#0596, 6, 9''#D977, 0, 6''#DC26, 2, 6''#7C3A, E, D']
         lab, e, l: 'PageVie, w, s'da, t, a: sortedPag, e, s.m, a, p(p => p.vie, w, s)backgroundCol, o, r: ['#3B, 8, 2, F6', '#10, B, 9, 81', '#F59E, 0, B''#EF44, 4, 4''#8B5C, F, 6'],borderCol, o, r: ['#1D4E, D, 8''#0596, 6, 9''#D977, 0, 6''#DC26, 2, 6''#7C3A, E, D']
         borderWid, t, h: 2
-      }];
-    }};
+      }]}};
 
  {getTrafficSourcesDa, t, a.displayNa, m, e = 'getTrafficSourcesDa, t, a';if (analyticsDa, t, a.leng, t, h === 0) return { labe, l, s: [],datase, t, s: [] };
 
@@ -121,8 +115,7 @@ export, const, AnalyticsDashboard: React.FC<AnalyticsDashboardPro, p, s> = ({cla
  s.visito, r, s)backgroundCol, o, r: ['#3B82, F, 6''#10B9, 8, 1''#F59E, 0, B''#EF44, 4, 4''#8B5C, F, 6'],borderCol, o, r: ['#1D4E, D, 8''#0596, 6, 9''#D977, 0, 6''#DC26, 2, 6''#7C3A, E, D']
         da, t, a: sortedSourc, e, s.m, a, p(s => s.visito, r, s)backgroundCol, o, r: ['#3B82, F, 6''#10B9, 8, 1''#F59E, 0, B''#EF44, 4, 4''#8B5C, F, 6'],borderCol, o, r: ['#1D4E, D, 8''#0596, 6, 9''#D977, 0, 6''#DC26, 2, 6''#7C3A, E, D']
         borderWid, t, h: 2
-      }];
-    }};
+      }]}};
 
   const, getDeviceTypesDat, a = () => {getDeviceTypesDa, t, a.displayNa, m, e = 'getDeviceTypesDa, t, a';if (analyticsDa, t, a.leng, t, h === 0) return { labe, l, s: [], datase, t, s: [] };
     
@@ -134,8 +127,7 @@ export, const, AnalyticsDashboard: React.FC<AnalyticsDashboardPro, p, s> = ({cla
  Ma, t, h.rou, n, d(d.percenta, g, e * 1, 0, 0))backgroundCol, o, r: ['#3B82, F, 6''#10B9, 8, 1''#F59E, 0, B'],borderCol, o, r: ['#1D4E, D, 8''#0596, 6, 9''#D977, 0, 6']
         da, t, a: latestDa, t, a.deviceTyp, e, s.m, a, p(d => Ma, t, h.rou, n, d(d.percenta, g, e * 1, 0, 0))backgroundCol, o, r: ['#3B, 8, 2, F  6''#10B9, 8, 1''#F59E, 0, B'],borderCol, o, r: ['#1D4E, D, 8''#0596, 6, 9''#D977, 0, 6']
         borderWid, t, h: 2
-      }];
-    }};
+      }]}};
 
 
         <div, class, Name=anima, t, e-pul, s, e">

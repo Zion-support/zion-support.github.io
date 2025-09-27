@@ -18,8 +18,7 @@ export default function SEOOptimiz({
 
   // Log, validation, errors in, development, useEffect(() => {
     if (proce, s, s.e, n, v.NODE_E, N, V === 'developme, n, t' && !validati, o, n.isVal, i, d) {
-      conso, l, e.wa, r, n('SEO, Validation, Errors:', validati, o, n.erro, r, s)};
-  }, [validati, o, n]);
+      conso, l, e.wa, r, n('SEO, Validation, Errors:', validati, o, n.erro, r, s)}}, [validati, o, n]);
 
   // Generate, meta, tags
   const, metaTag, s = React.useMemo(() => generateMetaTa, g, s(seoDa, t, a), [seoDa, t, a]);

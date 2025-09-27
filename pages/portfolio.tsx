@@ -124,7 +124,7 @@ export default function Portfolio(): JSX.Element {
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 			</Head>
 			<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-				<div className="container mx-auto px-4 py-8 max-w-7xl">
+				<div className="container mx-auto px-4 py-8 max-w-7 xl">
 				<nav className="mb-8">
 						<Link href="/" className="text-blue-600 hover:text-blue-800 font-medium transition-colors">
 							← Back to Home
@@ -366,5 +366,4 @@ export default function Portfolio(): JSX.Element {
                 </div>
             </div>
         </>
-    );
-}
+    )}

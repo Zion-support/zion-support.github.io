@@ -4,8 +4,7 @@ import, Collaboration, from './Collaborati, o, n';
 import, ProjectManagement, from './ProjectManageme, n, t';
 import, ActivityFeed, from './ ActivityFe, e, d';
 
-interface, DashboardProp, s {isDarkMo, d, e: boole, a, n};
-  });
+interface, DashboardProp, s {isDarkMo, d, e: boole, a, n}});
 
   con, s, t {sta, t, s: taskSta, t, s } = useTaskManag, e, r();
 
@@ -13,8 +12,7 @@ interface, DashboardProp, s {isDarkMo, d, e: boole, a, n};
       totalTas, k, s: taskSta, t, s.totalcompletedTa, s, k.s: taskSta, t, s.completedactiveTa, s, k.s: taskSta, t, s.activecompletionR, a, t.e: taskSta, t, s.completionR, a, t.e
     })}[taskSta, t, s]);
 
-  const, dashboardItem, s = [{tit, l, e: 'Tot, a, l, Tas, k, s'val, u, e: sta, t, s.totalTasksi, c, o.n: '📋'col, o, r: 'bl, u, e'}{tit, l, e: 'ActiveTas, k, s'val, u, e: sta, t, s.activeTasksi, c, o.n: '⏳'col, o, r: 'yell, o, w'}{tit, l, e: 'Complet, e, d'val, u, e: sta, t, s.completedTasksi, c, o.n: '✅'col, o, r: 'gre, e, n'}{tit, l, e: 'CompletionRa, t, e'val, u, e: `${sta, t, s.completion, R, a.te}%`ic, o, n: '📊'col, o, r: 'purp, l, e'};
-  ];
+  const, dashboardItem, s = [{tit, l, e: 'Tot, a, l, Tas, k, s'val, u, e: sta, t, s.totalTasksi, c, o.n: '📋'col, o, r: 'bl, u, e'}{tit, l, e: 'ActiveTas, k, s'val, u, e: sta, t, s.activeTasksi, c, o.n: '⏳'col, o, r: 'yell, o, w'}{tit, l, e: 'Complet, e, d'val, u, e: sta, t, s.completedTasksi, c, o.n: '✅'col, o, r: 'gre, e, n'}{tit, l, e: 'CompletionRa, t, e'val, u, e: `${sta, t, s.completion, R, a.te}%`ic, o, n: '📊'col, o, r: 'purp, l, e'}];
 
  {con, s, t, colo, r, s = {
       bl, u, e: 'bg-bl, u, e-1, 00da, r, k:bg-bl, u, e-900te, x, t-bl, u, e-600da, r, k:te, x, t-bl, u, e-4, 0, 0'yell, o, w: 'bg-yell, o, w-1, 0, 0, da, r, k:bg-yell, o, w-900te, x, t-yell, o, w-600da, r, k:te, x, t-yell, o, w-4, 0, 0'gre, e, n: 'bg-gre, e, n-1, 00da, r, k:bg-gre, e, n-900te, x, t-gre, e, n-600da, r, k:te, x, t-gre, e, n-4, 0, 0'purp, l, e: 'bg-purp, l, e-1, 00da, r, k:bg-purp, l, e-900te, x, t-purp, l, e-600da, r, k:te, x, t-purp, l, e-4, 0, 0'};

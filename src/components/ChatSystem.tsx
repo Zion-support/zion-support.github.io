@@ -85,8 +85,7 @@ interface, ChatSystemProp, s {classNa, m, e?: stri, n, g;
       return "Hel, l, o! Nicetomeety, o, u. HowcanIhelp, youtoda, y?"};
     if (userTe, x, t.toLowerCa, s, e().includ, e, s('he, l, p')) {return "I'm, here, t, o, he, l, p! Y, o, u, can, askme, questionsshare  informationorjustch, a, t. Whatwouldyoulike, tokno, w?"};
     if (userTe, x, t.toLowerCa, s, e().includ, e, s('tha, n, k')) {return "Y, o, u'rewelco, m, e! I'mgladIcould, hel, p. Isthereanythingelse, yo, u'd, like, tokno, w?"};
-    if (userTe, x, t.toLowerCa, s, e().includ, e, s('b, y, e') || userTe, x, t.toLowerCa, s, e().includ, e, s('goodb, y, e')) {return "Goodb, y, e! Itwasnicechatting, withyo, u. Feelfree, t, o : comebackanyti, m, e!"};
-    }10, 0, 0 + Ma, t, h.rand, o, m() * 20, 0, 0)}[maxMessagesonMessageSendonMessageRecei, v, e]);
+    if (userTe, x, t.toLowerCa, s, e().includ, e, s('b, y, e') || userTe, x, t.toLowerCa, s, e().includ, e, s('goodb, y, e')) {return "Goodb, y, e! Itwasnicechatting, withyo, u. Feelfree, t, o : comebackanyti, m, e!"}}10, 0, 0 + Ma, t, h.rand, o, m() * 20, 0, 0)}[maxMessagesonMessageSendonMessageRecei, v, e]);
   const, generateBotRespons, e = (userTe, x, t: stri, n, g): stri, n, g => {constrespons, e, s = ["Th, a, t's, interesti, n, g! C, a, n, you, tel, l, me, mor, e, about, tha, t? "
       "I, understa, n, d. H, o, w, ca, n, I, help, yo, u, with, tha, t?"
       "Th, a, t's, a, grea, t, questi, o, n. L, e, t, me, thin, k, about, tha, t...""I, see, wha, t, you, mea, n. Wh, a, t, would, yo, u, like, t, o, do, nex, t?""Than, k, s, for, sharin, g, that, withm, e. Isthere, anythingelse, Icanhelpwith?""I'm, here, t, o, he, l, p! Wh, a, t, else, woul, d, you, lik, e, to, kno, w?"
@@ -104,8 +103,7 @@ interface, ChatSystemProp, s {classNa, m, e?: stri, n, g;
 
   const, handleKeyPres, s = (e : React.KeyboardEve, n, t) => {handleKeyPre, s, s.displayNa, m, e = 'handleKeyPre, s, s';if (e.k, e, y === 'Ent, e, r'&& !e.shiftK, e, y) {
       e.preventDefau, l, t();
-      handleSendMessa, g, e(inputTe, x, t)};
-  };
+      handleSendMessa, g, e(inputTe, x, t)}};
 
   const, handleFileUploa, d = (e: React.ChangeEve, n, t<HTMLInputEleme, n, t>) => {handleFileUplo, a, d.displayNa, m, e = 'handleFileUplo, a, d';con, s, t, fi, l, e = e.targ, e, t.fil, e, s?.[0];
     if (!fi, l, e) retu, r, n;
@@ -120,8 +118,7 @@ interface, ChatSystemProp, s {classNa, m, e?: stri, n, g;
     
     if (onMessageSe, n, d) {onMessageSe, n, d(fileMessa, g, e)};
     // Reset, file, input
-    if (fileInputR, e, f.curre, n, t) {fileInputR, e, f.curre, n, t.val, u, e = ''};
-  };
+    if (fileInputR, e, f.curre, n, t) {fileInputR, e, f.curre, n, t.val, u, e = ''}};
 
   const, handleImageUploa, d = (e: React.ChangeEve, n, t<HTMLInputEleme, n, t>) => {handleImageUplo, a, d.displayNa, m, e = 'handleImageUplo, a, d';con, s, t, fi, l, e = e.targ, e, t.fil, e, s? .[0];
     if (!fi, l, e || !fi, l, e.ty, p, e.startsWi, t, h('ima, g, e/')) retu, r, n;
@@ -135,8 +132,7 @@ interface, ChatSystemProp, s {classNa, m, e?: stri, n, g;
     read, e, r.readAsData, U, R.L(fi, l, e);
 
     // Reset, file, input
-    if (fileInputR, e, f.curre, n, t) {fileInputR, e, f.curre, n, t.val, u, e = ''};
-  };
+    if (fileInputR, e, f.curre, n, t) {fileInputR, e, f.curre, n, t.val, u, e = ''}};
 
   const, formatTim, e = (da, t, e : Da, t, e) => {formatTi, m, e.displayNa, m, e = 'formatTi, m, e';retu, r, n, da, t, e.toLocaleTimeStri, n, g([]{ ho, u, r: '2-dig, i, t'minu, t, e: '2-dig, i, t' })};
 
@@ -243,7 +239,7 @@ interface, ChatSystemProp, s {classNa, m, e?: stri, n, g;
         <d, i, v, classNa, m, e="fl, e, x, spa, c, e-x-2">
           {enableFileUplo, a, d && (
             <butt, o, n, onCli, c, k ={() => fileInputR, e, f.curre, n, t?.cli, c, k()};
-              classNa, m, e="p-2, tex, t-gr, a, y-400, hove, r:te, x, t-gr, a, y-6, 0, 0"
+              classNa, m, e="p-2, tex, t-gr, a, y-400, hover:te, x, t-gr, a, y-6, 0, 0"
               tit, l, e="Upload, fil, e"
             >
               <svg, classNam, e="h-5 w-5" fi, l, l="no, n, e" stro, k, e="currentCol, o, r" viewB, o, x="0, 0, 24 24">
@@ -251,7 +247,7 @@ interface, ChatSystemProp, s {classNa, m, e?: stri, n, g;
             </butt, o, n>
           )};
           {enableImageUplo, a, d && (<butt, o, n, onCli, c, k ={() => fileInputR, e, f.curre, n, t?.cli, c, k()};
-              classNa, m, e="p-2, tex, t-gr, a, y-400, hove, r:te, x, t-gr, a, y-6, 0, 0"
+              classNa, m, e="p-2, tex, t-gr, a, y-400, hover:te, x, t-gr, a, y-6, 0, 0"
               tit, l, e="Upload, imag, e"
             >
               <svg, classNam, e="h-5 w-5" fi, l, l="no, n, e" stro, k, e="currentCol, o, r" viewB, o, x="0, 0, 24 24">
@@ -308,11 +304,11 @@ interface, ChatSystemProp, s {classNa, m, e?: stri, n, g;
           <button, onClic, k={(()) => {ar, i, a-lab, e, l="handleSendMessa, g, e(inputTe, x, t)};
             ar, i, a-lab, e, l="Send, messag, e"
             disabl, e, d={!inputTe, x, t.tr, i, m() || !isConnect, e, d};
-            classNa, m, e="px-4, p, y-2, b, g-bl, u, e-600, tex, t-white, rounde, d-md, hove, r:bg-bl, u, e-700, disable, d:opaci, t, y-50, disable, d:curs, o, r-n, o, t-allowed, transitio, n-colo, r, s"          >
+            classNa, m, e="px-4, p, y-2, b, g-bl, u, e-600, tex, t-white, rounde, d-md, hover:bg-bl, u, e-700, disable, d:opaci, t, y-50, disable, d:curs, o, r-n, o, t-allowed, transitio, n-colo, r, s"          >
             Se, n, d"> handleSendMessa, g, e(inputTe, x, t)};
             ar, i, a-lab, e, l="Send, messag, e"
             disabl, e, d={!inputTe, x, t.tr, i, m() || !isConnect, e, d};
-            classNa, m, e="px-4, p, y-2, b, g-bl, u, e-600, tex, t-white, rounde, d-md, hove, r:bg-bl, u, e-700, disable, d:opaci, t, y-50, disable, d:curs, o, r-n, o, t-allowed, transitio, n-colo, r, s"          >
+            classNa, m, e="px-4, p, y-2, b, g-bl, u, e-600, tex, t-white, rounde, d-md, hover:bg-bl, u, e-700, disable, d:opaci, t, y-50, disable, d:curs, o, r-n, o, t-allowed, transitio, n-colo, r, s"          >
             Se, n, d
           </butt, o, n>
         </d, i, v>

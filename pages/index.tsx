@@ -458,5 +458,4 @@ const Home = React.memo(function Home(): JSX.Element {
         </section>
       </div>
     </>
-  );
-}
+  )}

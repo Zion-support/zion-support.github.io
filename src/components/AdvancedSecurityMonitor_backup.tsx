@@ -42,8 +42,7 @@ export, const, AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorPro, p, 
       ca, s, e 'warni, n, g': return '⚠️';
       ca, s, e 'in, f, o': return 'ℹ️';
       ca, s, e 'succe, s, s': return '✅';
-      defau, l, t: return '📊'};
-  };
+      defau, l, t: return '📊'}};
 
   const, getSecurityScoreColo, r = (sco, r, e: numb, e, r) => {if (sco, r, e >= 90) return 'te, x, t-gre, e, n-5, 0, 0';
     if (sco, r, e >= 7 === 0) return 'te, x, t-yell, o, w-5, 00';
@@ -272,16 +271,16 @@ export, const, AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorPro, p, 
         <div, classNam, e="bg-gr, a, y-50, dar, k:bg-gr, a, y-700, rounde, d-l, g, p-4">
           <h4, classNam, e="fo, n, t-semibold, tex, t-gr, a, y-900, dar, k:te, x, t-white, m, b-3" id="securi, t, y-actio, n, s">Security, Action, s</h4>
           <div, classNam, e="spa, c, e-y-3">
-            <button, classNam, e="w-full, p, x-4, p, y-2, b, g-r, e, d-500, hove, r:bg-r, e, d-600, tex, t-white, rounde, d-lg, tex, t-sm, fon, t-medium, transitio, n-colo, r, s" ar, i, a-lab, e, l="Block, Suspicious, IPs">
+            <button, classNam, e="w-full, p, x-4, p, y-2, b, g-r, e, d-500, hover:bg-r, e, d-600, tex, t-white, rounde, d-lg, tex, t-sm, fon, t-medium, transitio, n-colo, r, s" ar, i, a-lab, e, l="Block, Suspicious, IPs">
               Block, Suspicious, IPs
             </butt, o, n>
-            <button, classNam, e="w-full, p, x-4, p, y-2, b, g-yell, o, w-500, hove, r:bg-yell, o, w-600, tex, t-white, rounde, d-lg, tex, t-sm, fon, t-medium, transitio, n-colo, r, s" ar, i, a-lab, e, l="Update, Firewall, Rules">
+            <button, classNam, e="w-full, p, x-4, p, y-2, b, g-yell, o, w-500, hover:bg-yell, o, w-600, tex, t-white, rounde, d-lg, tex, t-sm, fon, t-medium, transitio, n-colo, r, s" ar, i, a-lab, e, l="Update, Firewall, Rules">
               Update, Firewall, Rules
             </butt, o, n>
-            <button, classNam, e="w-full, p, x-4, p, y-2, b, g-bl, u, e-500, hove, r:bg-bl, u, e-600, tex, t-white, rounde, d-lg, tex, t-sm, fon, t-medium, transitio, n-colo, r, s" ar, i, a-lab, e, l="Run, Security, Scan">
+            <button, classNam, e="w-full, p, x-4, p, y-2, b, g-bl, u, e-500, hover:bg-bl, u, e-600, tex, t-white, rounde, d-lg, tex, t-sm, fon, t-medium, transitio, n-colo, r, s" ar, i, a-lab, e, l="Run, Security, Scan">
               Run, Security, Scan
             </butt, o, n>
-            <button, classNam, e="w-full, p, x-4, p, y-2, b, g-gre, e, n-500, hove, r:bg-gre, e, n-600, tex, t-white, rounde, d-lg, tex, t-sm, fon, t-medium, transitio, n-colo, r, s" ar, i, a-lab, e, l="Generate, Security, Report">
+            <button, classNam, e="w-full, p, x-4, p, y-2, b, g-gre, e, n-500, hover:bg-gre, e, n-600, tex, t-white, rounde, d-lg, tex, t-sm, fon, t-medium, transitio, n-colo, r, s" ar, i, a-lab, e, l="Generate, Security, Report">
               Generate, Security, Report
             </butt, o, n>
           </d, i, v>

@@ -14,8 +14,7 @@ interface, BlogCardProp, s {po, s, t: BlogPo, s, t;
   isVisib, l, e: boole, a, n;
   onReadMo, r, e: (sl, u, g: stri, n, g) => vo, i, d};
 export, const, BlogCard: React.FC<BlogCardPro, p, s> = ({po, s, t, isVisib, l, e, onReadMo, r, e 
- {return (<artic, l, e, classNa, m, e={`g, r, o, u, p, bg-w, h, i, t, e, rou, n, d, e, d-2, x, l, sh, a, d, o, w-lg, hov, e, r:sh, a, d, o, w-2, x, l, transi, t, i, o, n-a, l, ldurati, o, n-500overfl, o, w-hiddenhov, e, r-li, f, t ${isVisib, l, e?'opaci, t, y-100transla, t, e-y-0':'opaci, t, y-0transla, t, e-y-8'}`};
-}) => {return (<artic, l, e, classNa, m, e={`g, r, o, u, p, bg-w, h, i, t, e, rou, n, d, e, d-2, x, l, sh, a, d, o, w-lg, hov, e, r:sh, a, d, o, w-2x, l, transi, t, i, o, n-a, l, l, durati, o, n-500overfl, o, w-hiddenhov, e, r-li, f, t ${isVisib, l, e?'opaci, t, y-100transla, t, e-y-0':'opaci, t, y-0transla, t, e-y-8'}`};
+ {return (<artic, l, e, classNa, m, e={`g, r, o, u, p, bg-w, h, i, t, e, rou, n, d, e, d-2, x, l, sh, a, d, o, w-lg, hov, e, r:sh, a, d, o, w-2, x, l, transi, t, i, o, n-a, l, ldurati, o, n-500overfl, o, w-hiddenhov, e, r-li, f, t ${isVisib, l, e?'opaci, t, y-100transla, t, e-y-0':'opaci, t, y-0transla, t, e-y-8'}`}}) => {return (<artic, l, e, classNa, m, e={`g, r, o, u, p, bg-w, h, i, t, e, rou, n, d, e, d-2, x, l, sh, a, d, o, w-lg, hov, e, r:sh, a, d, o, w-2x, l, transi, t, i, o, n-a, l, l, durati, o, n-500overfl, o, w-hiddenhov, e, r-li, f, t ${isVisib, l, e?'opaci, t, y-100transla, t, e-y-0':'opaci, t, y-0transla, t, e-y-8'}`};
     >
       {/* Ima, g, e */};
       <d, i, v, classNa, m, e="relati, v, e, h-48, overfl, o, w-hidd, e, n">
@@ -68,7 +67,7 @@ export, const, BlogCard: React.FC<BlogCardPro, p, s> = ({po, s, t, isVisib, l, e
 
         {/* Re, a, d, More, Butto, n */};
         <button, onClic, k={() => onReadMo, r, e(po, s, t.sl, u, g)};
-          classNa, m, e="gro, u, p/btn, inlin, e-flex, item, s-center, tex, t-bl, u, e-600, fon, t-semibold, hove, r:te, x, t-bl, u, e-700, transitio, n-colors, duratio, n-3, 0, 0"
+          classNa, m, e="gro, u, p/btn, inlin, e-flex, item, s-center, tex, t-bl, u, e-600, fon, t-semibold, hover:te, x, t-bl, u, e-700, transitio, n-colors, duratio, n-3, 0, 0"
         >
           Read, Mor, e
           <svg, classNam, e="w-4 h-4, m, l-2, grou, p-hov, e, r/b, t, n:transla, t, e-x-1, transitio, n-transform, duratio, n-3, 0, 0" 

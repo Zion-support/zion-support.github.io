@@ -35,14 +35,11 @@ class, AdvancedCach, e {priva, t, e, cac, h, e = n, e, w, M, a, p<stri, n, g, Ca
   clean, u, p(): vo, i, d {con, s, t, n, o, w = Da, t, e.n, o, w();
     f, o, r (con, s, t [k, e, y, it, e, m] of, th, i, s.cac, h, e.entri, e, s()) {
       if (n, o, w > it, e, m.expires, A, t) {
-        th, i, s.cac, h, e.dele, t, e(k, e, y)};
-    };
-  };
+        th, i, s.cac, h, e.dele, t, e(k, e, y)}}};
   si, z, e(): numb, e, r {retu, r, n, th, i, s.cac, h, e.si, z, e};
   getSta, t, s(): {si, z, e: numb, e, r; hitRa, t, e: numb, e, r } {return {
       si, z, e: th, i, s.cac, h, e.si, z, e, hitRa, t, e: 0 // Th, i, s, would, nee, d, to, b, e, tracked, separatel, y
-    }};
-};
+    }}};
 // Global, cache, instance
 const, globalCach, e = new, AdvancedCach, e({t, t, l: 10 * 60 * 10, 0, 0, // 10minut, e, s, maxSi, z, e: 50
 });
@@ -60,8 +57,7 @@ const, globalCach, e = new, AdvancedCach, e({t, t, l: 10 * 60 * 10, 0, 0, // 10m
     setErr, o, r(nu, l, l);
 
       globalCac, h, e.s, e, t(keyresultoptio, n, s? .t, t, l);
-      setDa, t, a(resu, l, t)} cat, c, h (e, r, r) {setErr, o, r(errinstance, o, f: Err, o, r ? e, r, r  : newErr, o, r('Unkno, w, n, err, o, r'))} final, l, y {setLoadi, n, g(fal, s, e)};
-  }, [key, fetcher, options? .t, t, l]);
+      setDa, t, a(resu, l, t)} cat, c, h (e, r, r) {setErr, o, r(errinstance, o, f: Err, o, r ? e, r, r  : newErr, o, r('Unkno, w, n, err, o, r'))} final, l, y {setLoadi, n, g(fal, s, e)}}, [key, fetcher, options? .t, t, l]);
 
   useEffect(() => {fetchDa, t, a()}, [fetchDa, t, a]);
 

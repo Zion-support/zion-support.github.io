@@ -40,8 +40,7 @@ export default function Servic(): J, S, X.Eleme, n, t {
 				'Improve, customer, experience with, intelligent, interactions'
 				'Reduce, operational, costs through, automatio, n'
 				'Make, dat, a-driven, decisions, with predictive, analytic, s'
-			];
-		}
+			]}
 		'clo, u, d': {
 			tit, l, e: 'Cloud, Solution, s'
 			descripti, o, n: 'Scalable, secure, and reliable, cloud, infrastructure tailored, to, your business, need, s.'
@@ -60,8 +59,7 @@ export default function Servic(): J, S, X.Eleme, n, t {
 				'Improve, reliability, and upti, m, e'
 				'Enable, global, accessibility'
 				'Simplify, maintenance, and updat, e, s'
-			];
-		}
+			]}
 		'w, e, b-d, e, v': {
 			tit, l, e: 'Web, Developmen, t'
 			descripti, o, n: 'Modern, responsive, web applications, built, with the, latest, technologies and, best, practices.'
@@ -80,8 +78,7 @@ export default function Servic(): J, S, X.Eleme, n, t {
 				'Fast, loading, times'
 				'Search, engine, optimization'
 				'Mobi, l, e-first, design, approach'
-			];
-		}
+			]}
 		'mobi, l, e': {
 			tit, l, e: 'Mobile, Developmen, t'
 			descripti, o, n: 'Native, and, cross-platform, mobile, applications that, deliver, exceptional user, experience, s.'
@@ -100,8 +97,7 @@ export default function Servic(): J, S, X.Eleme, n, t {
 				'Improve, customer, engagement'
 				'Enable, offline, functionality'
 				'Faster, time, to mark, e, t'
-			];
-		}
+			]}
 		'da, t, a-analyti, c, s': {
 			tit, l, e: 'Data, Analytic, s'
 			descripti, o, n: 'Transform, your, data into, actionable, insights with, advanced, analytics and, visualization, tools.'
@@ -120,8 +116,7 @@ export default function Servic(): J, S, X.Eleme, n, t {
 				'Improve, operational, efficiency'
 				'Enhance, customer, understanding'
 				'Drive, revenue, growth'
-			];
-		}
+			]}
 		'cybersecuri, t, y': {
 			tit, l, e: 'Cybersecuri, t, y'
 			descripti, o, n: 'Comprehensive, security, solutions to, protect, your digital, assets, and ensure, complianc, e.'
@@ -140,9 +135,7 @@ export default function Servic(): J, S, X.Eleme, n, t {
 				'Reduce, security, risks and, vulnerabilitie, s'
 				'Build, customer, trust and, confidenc, e'
 				'Minimize, potential, financial loss, e, s'
-			];
-		};
-	};
+			]}};
 
 	return (
 		<d, i, v>
@@ -164,7 +157,7 @@ export default function Servic(): J, S, X.Eleme, n, t {
 			<div, classNam, e="m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-bl, u, e-50, t, o-indi, g, o-100, p, t-20">
 			<div, classNam, e="container, m, x-auto, p, x-4, p, y-8, ma, x-w-7, x, l">
 				<nav, classNam, e="mb-8">
-					<Link, href="/" classNa, m, e="te, x, t-bl, u, e-600, hove, r: te, x, t-bl, u, e-800, fon, t-medium, transitio, n-colo, r, s">
+					<Link, href="/" classNa, m, e="te, x, t-bl, u, e-600, hover: te, x, t-bl, u, e-800, fon, t-medium, transitio, n-colo, r, s">
 							← Back, to, Home
 						</Link>
 					</n, a, v>
@@ -215,7 +208,7 @@ export default function Servic(): J, S, X.Eleme, n, t {
 										</d, i, v>
 										<butt, o, n
 										,, onCli, c, k={() => setSelectedServi, c, e(nu, l, l)};
-											classNa, m, e="te, x, t-gr, a, y-400, hove, r:te, x, t-gr, a, y-600, transitio, n-colo, r, s"
+											classNa, m, e="te, x, t-gr, a, y-400, hover:te, x, t-gr, a, y-600, transitio, n-colo, r, s"
 										>
 											<svg, classNam, e="w-6 h-6" fi, l, l="no, n, e" stro, k, e="currentCol, o, r" viewB, o, x="0, 0, 24 24">
 												<path, strokeLineca, p="rou, n, d" strokeLinejo, i, n="rou, n, d" strokeWid, t, h={2} d="M6, 18L18, 6M6 6l12, 1, 2" />
@@ -281,21 +274,21 @@ export default function Servic(): J, S, X.Eleme, n, t {
 								</p>
 							</d, i, v>
 			<div, classNam, e="grid, gri, d-co, l, s-1, m, d:gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-4, ga, p-8">
-			<div, classNam, e="te, x, t-cente, r, p-6, b, g-white, rounde, d-2, xl, shadow-lg, hove, r:shad, o, w-xl, transitio, n-shad, o, w">
+			<div, classNam, e="te, x, t-cente, r, p-6, b, g-white, rounde, d-2, xl, shadow-lg, hover:shad, o, w-xl, transitio, n-shad, o, w">
 			<div, classNam, e="w-1, 6, h-16, b, g-bl, u, e-100, rounde, d-full, flex, items-center, justif, y-center, m, x-auto, m, b-4">
 										<span, classNam, e="te, x, t-2, x, l">👥</sp, a, n>
 									</d, i, v>
 									<h3, classNam, e="te, x, t-xl, fon, t-semibold, tex, t-gr, a, y-800, m, b-2">Expert, Tea, m</h3>
 									<p, classNam, e="te, x, t-gr, a, y-6, 0, 0">Certified, professionals, with years, of, experience in, cuttin, g-edge, technologie, s</p>
 								</d, i, v>
-			<div, classNam, e="te, x, t-cente, r, p-6, b, g-white, rounde, d-2, xl, shadow-lg, hove, r:shad, o, w-xl, transitio, n-shad, o, w">
+			<div, classNam, e="te, x, t-cente, r, p-6, b, g-white, rounde, d-2, xl, shadow-lg, hover:shad, o, w-xl, transitio, n-shad, o, w">
 			<div, classNam, e="w-1, 6, h-16, b, g-gre, e, n-100, rounde, d-full, flex, items-center, justif, y-center, m, x-auto, m, b-4">
 										<span, classNam, e="te, x, t-2, x, l">📈</sp, a, n>
 									</d, i, v>
 									<h3, classNam, e="te, x, t-xl, fon, t-semibold, tex, t-gr, a, y-800, m, b-2">Proven, Result, s</h3>
 									<p, classNam, e="te, x, t-gr, a, y-6, 0, 0">Track, record, of successful, projects, and satisfied, clients, across industri, e, s</p>
 								</d, i, v>
-			<div, classNam, e="te, x, t-cente, r, p-6, b, g-white, rounde, d-2, xl, shadow-lg, hove, r:shad, o, w-xl, transitio, n-shad, o, w">
+			<div, classNam, e="te, x, t-cente, r, p-6, b, g-white, rounde, d-2, xl, shadow-lg, hover:shad, o, w-xl, transitio, n-shad, o, w">
 			<div, classNam, e="w-1, 6, h-16, b, g-purp, l, e-100, rounde, d-full, flex, items-center, justif, y-center, m, x-auto, m, b-4">
 										<span, classNam, e="te, x, t-2, x, l">🔄</sp, a, n>
 									</d, i, v>
@@ -330,7 +323,7 @@ export default function Servic(): J, S, X.Eleme, n, t {
 			<div, classNam, e="flex, fle, x-c, o, l, sm:fl, e, x-row, ga, p-6, justif, y-cent, e, r">
 					<Link, href="/conta, c, t">
 										<button, onClic, k={() => trackCli, c, k('g, e, t-quo, t, e-butt, o, n', 'c, t, a')};
-											classNa, m, e="group, b, g-white, tex, t-bl, u, e-600, p, x-10, p, y-4, rounde, d-xl, fon, t-semibold, hove, r: bg-gr, a, y-100, transitio, n-all, duratio, n-300, shado, w-xl, hove, r:shad, o, w-2, xl, transform, hov, e, r:-transla, t, e-y-1, tex, t-lg"
+											classNa, m, e="group, b, g-white, tex, t-bl, u, e-600, p, x-10, p, y-4, rounde, d-xl, fon, t-semibold, hover: bg-gr, a, y-100, transitio, n-all, duratio, n-300, shado, w-xl, hover:shad, o, w-2, xl, transform, hov, e, r:-transla, t, e-y-1, tex, t-lg"
 										>
 											<span, classNam, e="flex, item, s-center, justif, y-center, ga, p-2">
 												Get, a, Quote
@@ -341,7 +334,7 @@ export default function Servic(): J, S, X.Eleme, n, t {
 										</butt, o, n>
 									</Link>
 									<button, onClic, k={() => trackCli, c, k('schedu, l, e-consultati, o, n-butt, o, n', 'c, t, a')};
-										classNa, m, e="group, borde, r-2, borde, r-white, tex, t-white, p, x-10, p, y-4, rounde, d-xl, fon, t-semibold, hove, r: bg-white, hove, r:te, x, t-bl, u, e-600, transitio, n-all, duratio, n-300, transfor, m, hov, e, r:-transla, t, e-y-1, tex, t-lg"
+										classNa, m, e="group, borde, r-2, borde, r-white, tex, t-white, p, x-10, p, y-4, rounde, d-xl, fon, t-semibold, hover: bg-white, hover:te, x, t-bl, u, e-600, transitio, n-all, duratio, n-300, transfor, m, hov, e, r:-transla, t, e-y-1, tex, t-lg"
 									>
 										<span, classNam, e="flex, item, s-center, justif, y-center, ga, p-2">
 											Schedule, Consultatio, n

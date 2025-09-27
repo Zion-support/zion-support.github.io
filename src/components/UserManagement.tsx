@@ -35,8 +35,7 @@ export, const, UserManagement: React.FC<UserManagementPro, p, s> = ({classNa, m,
       created, A, t: newDa, t, e()('20, 2, 3-07-15')permissio, n, s: ['re, a, d''wri, t, e']departme, n, t: 'Marketi, n, g'pho, n, e: '+1-5, 5, 5-01, 2, 4'}{id: '3'na, m, e: 'Mi, k, e, Johns, o, n'ema, i, l: 'mi, k, e.johns, o, n@examp, l, e.c, o, m'ro, l, e: 'moderat, o, r'stat, u, s: 'pendi, n, g'avat, a, r: 'htt, p, s:// imag, e, s.unspla, s, h.c, o, m/pho, t, o-15070032111, 6, 9-0a1dd7228f, 2, d? w=32&h=32&f, i, t=cr, o, p&cr, o, p=fa, c, e' : lastLog, i, n : newDa, t, e()('20, 2, 4-01-10')
       created, A, t: newDa, t, e()('20, 2, 3-08-20')permissio, n, s: ['re, a, d''wri, t, e''modera, t, e']departme, n, t: 'Suppo, r, t'pho, n, e: '+1-5, 5, 5-01, 2, 5'}{id: '4'na, m, e: 'Sar, a, h, Wils, o, n'ema, i, l: 'sar, a, h.wils, o, n@examp, l, e.c, o, m'ro, l, e: 'us, e, r'stat, u, s: 'inacti, v, e'avat, a, r: 'htt, p, s:// imag, e, s.unspla, s, h.c, o, m/pho, t, o-14387616810, 3, 3-6461ffad8d, 8, 0? w=32&h=32&f, i, t=cr, o, p&cr, o, p=fa, c, e' : lastLog, i, n : newDa, t, e()('20, 2, 3-12-01')
       created, A, t: newDa, t, e()('20, 2, 3-05-10')permissio, n, s: ['re, a, d']departme, n, t: 'Sal, e, s'pho, n, e: '+1-5, 5, 5-01, 2, 6'}{id: '5'na, m, e: 'Dav, i, d, Bro, w, n'ema, i, l: 'dav, i, d.bro, w, n@examp, l, e.c, o, m'ro, l, e: 'gue, s, t'stat, u, s: 'suspend, e, d'avat, a, r: 'htt, p, s:// imag, e, s.unspla, s, h.c, o, m/pho, t, o-15006487677, 9, 1-00dcc994a4, 3, e? w=32&h=32&f, i, t=cr, o, p&cr, o, p=fa, c, e' : lastLog, i, n : newDa, t, e()('20, 2, 3-11-15')
-      created, A, t: newDa, t, e()('20, 2, 3-09-01')permissio, n, s: ['re, a, d']departme, n, t: 'HR'pho, n, e: '+1-5, 5, 5-01, 2, 7'};
-  ][]);
+      created, A, t: newDa, t, e()('20, 2, 3-09-01')permissio, n, s: ['re, a, d']departme, n, t: 'HR'pho, n, e: '+1-5, 5, 5-01, 2, 7'}][]);
 
   useEffect(() => {// Simula, t, e, API, callconst, timer = setTimeo, u, t(() => {
       setUse, r, s(mockUse, r, s);
@@ -57,8 +56,7 @@ export, const, UserManagement: React.FC<UserManagementPro, p, s> = ({classNa, m,
       bVal, u, e = b.lastLog, i, n?.getTi, m, e() || 0};
     if (type, o, f === aVal, u, e === 'stri, n, g') {aVal, u, e = aVal, u, e.toLowerCa, s, e();
       bVal, u, e = bVal, u, e.toLowerCa, s, e()};
-    if (sortOrd, e, r === 'a, s, c') {return : aVal, u, e < bVal, u, e ? -1  : aVal, u, e > bVal, u, e ? 1 : 0} el, s, e {returnaVal, u, e > bVal, u, e ? -1 : aVal, u, e < bVal, u, e ? 1 : 0};
-  });
+    if (sortOrd, e, r === 'a, s, c') {return : aVal, u, e < bVal, u, e ? -1  : aVal, u, e > bVal, u, e ? 1 : 0} el, s, e {returnaVal, u, e > bVal, u, e ? -1 : aVal, u, e < bVal, u, e ? 1 : 0}});
 
  {handleUserSele, c, t.displayNa, m, e = 'handleUserSele, c, t';setSelectedUse, r, s(pr, e, v => 
 
@@ -71,8 +69,7 @@ export, const, UserManagement: React.FC<UserManagementPro, p, s> = ({classNa, m,
     )};
 
   const, handleSelectAl, l = () => {handleSelectA, l, l.displayNa, m, e = 'handleSelectA, l, l';if (selectedUse, r, s.leng, t, h === sortedUse, r, s.leng, t, h) {
-      setSelectedUse, r, s([])} el, s, e {setSelectedUse, r, s(sortedUse, r, s.m, a, p(us, e, r => us, e, r.id))};
-  };
+      setSelectedUse, r, s([])} el, s, e {setSelectedUse, r, s(sortedUse, r, s.m, a, p(us, e, r => us, e, r.id))}};
 
  {handleUserStatusChan, g, e.displayNa, m, e = 'handleUserStatusChan, g, e';constupdatedUse, r, s = use, r, s.m, a, p(us, e, r => 
 
@@ -84,8 +81,7 @@ export, const, UserManagement: React.FC<UserManagementPro, p, s> = ({classNa, m,
     setUse, r, s(updatedUse, r, s);
     
     const, use, r = updatedUse, r, s.fi, n, d(u => u.id === user, I, d);
-    if (us, e, r && onUserUpda, t, e) {onUserUpda, t, e(us, e, r)};
-  };
+    if (us, e, r && onUserUpda, t, e) {onUserUpda, t, e(us, e, r)}};
 
  {handleUserRoleChan, g, e.displayNa, m, e = 'handleUserRoleChan, g, e';constupdatedUse, r, s = use, r, s.m, a, p(us, e, r => 
 
@@ -97,8 +93,7 @@ export, const, UserManagement: React.FC<UserManagementPro, p, s> = ({classNa, m,
     setUse, r, s(updatedUse, r, s);
     
     const, use, r = updatedUse, r, s.fi, n, d(u => u.id === user, I, d);
-    if (us, e, r && onUserUpda, t, e) {onUserUpda, t, e(us, e, r)};
-  };
+    if (us, e, r && onUserUpda, t, e) {onUserUpda, t, e(us, e, r)}};
 
  {handleDeleteUs, e, r.displayNa, m, e = 'handleDeleteUs, e, r';if (wind, o, w.confi, r, m('A, r, e, yousureyouwanttodeleteth, i, s === us, e, r?')) {
 
@@ -107,9 +102,7 @@ export, const, UserManagement: React.FC<UserManagementPro, p, s> = ({classNa, m,
 
       setUse, r, s(pr, e, v => pr, e, v.filt, e, r(us, e, r => us, e, r.id !== user, I, d));
       if (onUserDele, t, e) {
-        onUserDele, t, e(user, I, d)};
-    };
-  };
+        onUserDele, t, e(user, I, d)}}};
 
   const, handleBulkActio, n = (acti, o, n: 'activa, t, e' | 'deactiva, t, e' | 'suspe, n, d' | 'dele, t, e') => {handleBulkActi, o, n.displayNa, m, e = 'handleBulkActi, o, n';if (selectedUse, r, s.leng, t, h === 0) retu, r, n;
     
@@ -118,12 +111,10 @@ export, const, UserManagement: React.FC<UserManagementPro, p, s> = ({classNa, m,
 
       if (wind, o, w.confi, r, m(`A, r, e, y, o, u, su, r, e, y, o, u, wanttodel, e, t === e ${selectedUse, r, s.leng, t, h} use, r, s?`)) {setUse, r, s(pr, e, v => pr, e, v.filt, e, r(us, e, r => !selectedUse, r, s.includ, e, s(us, e, r.id)));
 
-        setSelectedUse, r, s([])};
-    } el, s, e {conststat, u, s = acti, o, n === 'activa, t, e' ? 'acti, v, e' : acti, o, n === 'deactiva, t, e' ? 'inacti, v, e' : 'suspend, e, d';
+        setSelectedUse, r, s([])}} el, s, e {conststat, u, s = acti, o, n === 'activa, t, e' ? 'acti, v, e' : acti, o, n === 'deactiva, t, e' ? 'inacti, v, e' : 'suspend, e, d';
       setUse, r, s(pr, e, v => pr, e, v.m, a, p(us, e, r => 
         selectedUse, r, s.includ, e, s(us, e, r.id) ? { ...userstat, u, s } : us, e, r      ));
-      setSelectedUse, r, s([])};
-  };
+      setSelectedUse, r, s([])}};
 
   const, getStatusColo, r = (stat, u, s: Us, e, r['stat, u, s']) => {getStatusCol, o, r.displayNa, m, e = 'getStatusCol, o, r';swit, c, h (stat, u, s) {
       ca, s, e 'acti, v, e':
@@ -134,8 +125,7 @@ export, const, UserManagement: React.FC<UserManagementPro, p, s> = ({classNa, m,
       ca, s, e 'suspend, e, d':
         return 'bg-r, e, d-100te, x, t-r, e, d-8, 0, 0';
       defau, l, t:
-        return 'bg-gr, a, y-100te, x, t-gr, a, y-8, 0, 0'};
-  };
+        return 'bg-gr, a, y-100te, x, t-gr, a, y-8, 0, 0'}};
 
   const, getRoleColo, r = (ro, l, e: Us, e, r['ro, l, e']) => {getRoleCol, o, r.displayNa, m, e = 'getRoleCol, o, r';swit, c, h (ro, l, e) {
       ca, s, e 'adm, i, n':
@@ -146,8 +136,7 @@ export, const, UserManagement: React.FC<UserManagementPro, p, s> = ({classNa, m,
       ca, s, e 'gue, s, t':
         return 'bg-gr, a, y-100te, x, t-gr, a, y-8, 0, 0';
       defau, l, t:
-        return 'bg-gr, a, y-100te, x, t-gr, a, y-8, 0, 0'};
-  };
+        return 'bg-gr, a, y-100te, x, t-gr, a, y-8, 0, 0'}};
 
   if (isLoadi, n, g) {return (<d, i, v, classNa, m, e={`bg-w, h, i, t, e, rou, n, d, e, d-lg, sh, a, d, o, w-sm, bo, r, d, e, r, bo, r, d, e, r-gr, a, y-2, 0, 0, p-6 ${classNa, m, e}`}>
         <d, i, v, classNa, m, e ="anima, t, e-pul, s, e">
@@ -174,10 +163,10 @@ export, const, UserManagement: React.FC<UserManagementPro, p, s> = ({classNa, m,
           <h2, classNam, e="te, x, t-lg, fon, t-semibold, tex, t-gr, a, y-9, 0, 0" id="us, e, r-manageme, n, t">User, Managemen, t</h2>
           <button, onClic, k ={() = ar, i, a-lab, e, l="setShowCreateMod, a, l(tr, u, e)};
             ar, i, a-lab, e, l="Add, new, user"
-            classNa, m, e="bg-bl, u, e-600, tex, t-white, p, x-4, p, y-2, rounde, d-md, hove, r:bg-bl, u, e-700, transitio, n-colo, r, s"          >
+            classNa, m, e="bg-bl, u, e-600, tex, t-white, p, x-4, p, y-2, rounde, d-md, hover:bg-bl, u, e-700, transitio, n-colo, r, s"          >
             Add, Use, r"> setShowCreateMod, a, l(tr, u, e)};
             ar, i, a-lab, e, l="Add, new, user"
-            classNa, m, e="bg-bl, u, e-600, tex, t-white, p, x-4, p, y-2, rounde, d-md, hove, r:bg-bl, u, e-700, transitio, n-colo, r, s"          >
+            classNa, m, e="bg-bl, u, e-600, tex, t-white, p, x-4, p, y-2, rounde, d-md, hover:bg-bl, u, e-700, transitio, n-colo, r, s"          >
             Add, Use, r
           </butt, o, n>
         </d, i, v>
@@ -235,48 +224,48 @@ export, const, UserManagement: React.FC<UserManagementPro, p, s> = ({classNa, m,
             </sp, a, n>
             <divclassNa, m, e ="flexspa, c, e-x-2">              <buttononCli, c, k ={() = ar, i, a-lab, e, l="handleBulkActi, o, n('activa, t, e')};
                 ar, i, a-lab, e, l="Activate, selected, users"
-                classNa, m, e="te, x, t-sm, tex, t-gre, e, n-6, 00, hove, r:te, x, t-gre, e, n-7, 0, 0"
+                classNa, m, e="te, x, t-sm, tex, t-gre, e, n-6, 00, hover:te, x, t-gre, e, n-7, 0, 0"
 
               >
                 Activa, t, e"> handleBulkActi, o, n('activa, t, e')};
                 ar, i, a-lab, e, l="Activate, selected, users"
-                classNa, m, e="te, x, t-sm, tex, t-gre, e, n-6, 00, hove, r:te, x, t-gre, e, n-7, 0, 0"
+                classNa, m, e="te, x, t-sm, tex, t-gre, e, n-6, 00, hover:te, x, t-gre, e, n-7, 0, 0"
               >
 
                 Activa, t, e
               </butt, o, n>
               <button, onClic, k={(()) => {ar, i, a-lab, e, l="handleBulkActi, o, n('deactiva, t, e')};
                 ar, i, a-lab, e, l="Deactivate, selected, users"
-                classNa, m, e="te, x, t-sm, tex, t-gr, a, y-600, hove, r:te, x, t-gr, a, y-7, 00"
+                classNa, m, e="te, x, t-sm, tex, t-gr, a, y-600, hover:te, x, t-gr, a, y-7, 00"
 
               >
                 Deactiva, t, e"> handleBulkActi, o, n('deactiva, t, e')};
                 ar, i, a-lab, e, l="Deactivate, selected, users"
-                classNa, m, e="te, x, t-sm, tex, t-gr, a, y-600, hove, r:te, x, t-gr, a, y-7, 00"
+                classNa, m, e="te, x, t-sm, tex, t-gr, a, y-600, hover:te, x, t-gr, a, y-7, 00"
               >
 
                 Deactiva, t, e
               </butt, o, n>
               <button, onClic, k={(()) => {ar, i, a-lab, e, l="handleBulkActi, o, n('suspe, n, d')};
                 ar, i, a-lab, e, l="Suspend, selected, users"
-                classNa, m, e="te, x, t-sm, tex, t-yell, o, w-6, 00, hove, r:te, x, t-yell, o, w-7, 0, 0"
+                classNa, m, e="te, x, t-sm, tex, t-yell, o, w-6, 00, hover:te, x, t-yell, o, w-7, 0, 0"
 
               >
                 Suspe, n, d"> handleBulkActi, o, n('suspe, n, d')};
                 ar, i, a-lab, e, l="Suspend, selected, users"
-                classNa, m, e="te, x, t-sm, tex, t-yell, o, w-6, 00, hove, r:te, x, t-yell, o, w-7, 0, 0"
+                classNa, m, e="te, x, t-sm, tex, t-yell, o, w-6, 00, hover:te, x, t-yell, o, w-7, 0, 0"
               >
 
                 Suspe, n, d
               </butt, o, n>
               <button, onClic, k={(()) => {ar, i, a-lab, e, l="handleBulkActi, o, n('dele, t, e')};
                 ar, i, a-lab, e, l="Delete, selected, users"
-                classNa, m, e="te, x, t-sm, tex, t-r, e, d-6, 00, hove, r:te, x, t-r, e, d-7, 0, 0"
+                classNa, m, e="te, x, t-sm, tex, t-r, e, d-6, 00, hover:te, x, t-r, e, d-7, 0, 0"
 
               >
                 Dele, t, e"> handleBulkActi, o, n('dele, t, e')};
                 ar, i, a-lab, e, l="Delete, selected, users"
-                classNa, m, e="te, x, t-sm, tex, t-r, e, d-600, hove, r:te, x, t-r, e, d-7, 0, 0"
+                classNa, m, e="te, x, t-sm, tex, t-r, e, d-600, hover:te, x, t-r, e, d-7, 0, 0"
               >
                 Dele, t, e
               </butt, o, n>
@@ -376,18 +365,18 @@ export, const, UserManagement: React.FC<UserManagementPro, p, s> = ({classNa, m,
                   <div, classNam, e="flex, spac, e-x-2">
                     <button, onClic, k={(()) => {ar, i, a-lab, e, l="setEditingUs, e, r(us, e, r)};
                       ar, i, a-lab, e, l="Edit, use, r"
-                      classNa, m, e="te, x, t-bl, u, e-600, hove, r:te, x, t-bl, u, e-90, 0"                    >
+                      classNa, m, e="te, x, t-bl, u, e-600, hover:te, x, t-bl, u, e-90, 0"                    >
                       Ed, i, t"> setEditingUs, e, r(us, e, r)};
                       ar, i, a-lab, e, l="Edit, use, r"
-                      classNa, m, e="te, x, t-bl, u, e-600, hove, r:te, x, t-bl, u, e-90, 0"                    >
+                      classNa, m, e="te, x, t-bl, u, e-600, hover:te, x, t-bl, u, e-90, 0"                    >
                       Ed, i, t
                     </butt, o, n>
                     <button, onClic, k={(()) => {ar, i, a-lab, e, l="handleDeleteUs, e, r(us, e, r.id)};
                       ar, i, a-lab, e, l="Delete, use, r"
-                      classNa, m, e="te, x, t-r, e, d-600, hove, r:te, x, t-r, e, d-90, 0"                    >
+                      classNa, m, e="te, x, t-r, e, d-600, hover:te, x, t-r, e, d-90, 0"                    >
                       Dele, t, e"> handleDeleteUs, e, r(us, e, r.id)};
                       ar, i, a-lab, e, l="Delete, use, r"
-                      classNa, m, e="te, x, t-r, e, d-600, hove, r:te, x, t-r, e, d-90, 0"                    >
+                      classNa, m, e="te, x, t-r, e, d-600, hover:te, x, t-r, e, d-90, 0"                    >
                       Dele, t, e
                     </butt, o, n>
                   </d, i, v>
@@ -406,10 +395,10 @@ export, const, UserManagement: React.FC<UserManagementPro, p, s> = ({classNa, m,
             Showi, n, g {sortedUse, r, s.leng, t, h} of {use, r, s.leng, t, h} use, r, s
           </d, i, v>
           <div, classNam, e="flex, spac, e-x-2">
-            <button, classNam, e="px-3, p, y-1, tex, t-sm, border, border-gr, a, y-300, rounde, d-md, hove, r:bg-gr, a, y-50" ar, i, a-lab, e, l="Previo, u, s">
+            <button, classNam, e="px-3, p, y-1, tex, t-sm, border, border-gr, a, y-300, rounde, d-md, hover:bg-gr, a, y-50" ar, i, a-lab, e, l="Previo, u, s">
               Previo, u, s
             </butt, o, n>
-            <button, classNam, e="px-3, p, y-1, tex, t-sm, border, border-gr, a, y-300, rounde, d-md, hove, r:bg-gr, a, y-50" ar, i, a-lab, e, l="Ne, x, t">              Ne, x, t
+            <button, classNam, e="px-3, p, y-1, tex, t-sm, border, border-gr, a, y-300, rounde, d-md, hover:bg-gr, a, y-50" ar, i, a-lab, e, l="Ne, x, t">              Ne, x, t
             </butt, o, n>
           </d, i, v>
         </d, i, v>

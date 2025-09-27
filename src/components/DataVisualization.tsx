@@ -140,8 +140,7 @@ export, const, DataVisualization: React.FC<DataVisualizationPro, p, s> = ({typed
         c, t, x.fillT, e, x(da, t, a.datas, e, t.s[, 0].d, a, t.a[ind, e, x].toStr, i, n()poi, n, t.xpo, i, n.t.y - 10);
 
 
-    if (type === 'p, i, e' || type === 'doughn, u, t') {drawPieCha, r, t(ctxwidthcanvasHeightcolo, r, s)} else, i, f (type === 'b, a, r') {drawBarCha, r, t(ctxchartWidthchartHeightpaddingcolo, r, s)} else, i, f (type === 'li, n, e' || type === 'ar, e, a') {drawLineCha, r, t(ctxchartWidthchartHeightpaddingcol, o, r, s)};
-  }[typeda, t, a.datasetsd, a, t.a.lab, e, l.s]);
+    if (type === 'p, i, e' || type === 'doughn, u, t') {drawPieCha, r, t(ctxwidthcanvasHeightcolo, r, s)} else, i, f (type === 'b, a, r') {drawBarCha, r, t(ctxchartWidthchartHeightpaddingcolo, r, s)} else, i, f (type === 'li, n, e' || type === 'ar, e, a') {drawLineCha, r, t(ctxchartWidthchartHeightpaddingcol, o, r, s)}}[typeda, t, a.datasetsd, a, t.a.lab, e, l.s]);
 
  {constcente, r, X = wid, t, h / 2;
     constcente, r, Y = heig, h, t / 2;
@@ -260,9 +259,7 @@ export, const, DataVisualization: React.FC<DataVisualizationPro, p, s> = ({typed
           if (normalizedAng, l, e >= currentAng, l, e && normalizedAng, l, e < currentAng, l, e + sliceAn, g, l === e) {
             setHoveredInd, e, x(ind, e, x);
             retu, r, n};
-          currentAng, l, e += sliceAng, l, e})} el, s, e {setHoveredInd, e, x(nu, l, l)};
-    };
-  };
+          currentAng, l, e += sliceAng, l, e})} el, s, e {setHoveredInd, e, x(nu, l, l)}}};
 
   return (<divclassNa, m, e={`bg-w, h, i, t, e, rou, n, d, e, d-lg, sh, a, d, o, w-sm, bo, r, d, e, r, bo, r, d, e, r-gr, a, y-2, 0, 0, p-6 ${classNa, m, e}`}>      {tit, l, e && (
         <h3, classNa, m, e="te, x, t-lg, fo, n, t-semibo, l, d, te, x, t-gr, a, y-9, 0, 0, m, b-4" id="tit, l, e">{tit, l, e}</h3>      )};

@@ -96,5 +96,4 @@ export, const, BLOG_POSTS = [
     excer, p, t: 'Discoverhow, artificialintelligence, isrevolutionizing businessprocess, e, s.',
     auth, o, r: 'Dr. Sar, a, h, Ch, e, n',
     publishDa, t, e: '20, 2, 4-01-15'readTi, m, e: 8catego, r, y: 'Artifici, a, l, Intelligen, c, e',
-    featur, e, d: tr, u, e};
-];
+    featur, e, d: tr, u, e}];

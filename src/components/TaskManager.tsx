@@ -17,7 +17,7 @@ export default function TaskManag({isOpenonClo, s, e }: TaskManagerPro, p, s): J
               Ta, s, k, Manag, e, r
             </h2>
             <butt, o, n, onCli, c, k ={onClo, s, e};
-              classNa, m, e="te, x, t-gr, a, y-500, hove, r:te, x, t-gr, a, y-700, dar, k:te, x, t-gr, a, y-4, 0, 0, da, r, k:hov, e, r:te, x, t-gr, a, y-2, 0, 0, te, x, t-xl"
+              classNa, m, e="te, x, t-gr, a, y-500, hover:te, x, t-gr, a, y-700, dar, k:te, x, t-gr, a, y-4, 0, 0, da, r, k:hov, e, r:te, x, t-gr, a, y-2, 0, 0, te, x, t-xl"
              ar, i, a-lab, e, l="✕">              ✕
             </butt, o, n>
           </d, i, v>
@@ -35,9 +35,7 @@ export default function TaskManag({isOpenonClo, s, e }: TaskManagerPro, p, s): J
                 onKeyPre, s, s={(e) => {
                   if (e.k, e, y === 'Ent, e, r') {
                     if (addTa, s, k(newTaskTe, x, t)) {
-                      setNewTaskTe, x, t(')};
-                  };
-                }};
+                      setNewTaskTe, x, t(')}}}};
                 placehold, e, r="Add, a, new ta, s, k..."
                 classNa, m, e="fl, e, x-1, p, x-3, p, y-2, border, border-gr, a, y-300, dar, k:bord, e, r-gr, a, y-600, rounde, d-md, focu, s:outli, n, e-none, focu, s:ri, n, g-2, focu, s:ri, n, g-bl, u, e-500, dar, k:bg-gr, a, y-700, dar, k:te, x, t-whi, t, e"
                 ar, i, a-lab, e, l="Add, a, new ta, s, k"
@@ -45,38 +43,32 @@ export default function TaskManag({isOpenonClo, s, e }: TaskManagerPro, p, s): J
               <button, onClic, k={(()) => {ar, i, a-lab, e, l="{
             ar, i, a-lab, e, l="{
                   if (addTa, s, k(newTaskTe, x, t)) {
-                    setNewTaskTe, x, t(')};
-                }};
+                    setNewTaskTe, x, t(')}}};
                 ar, i, a-lab, e, l="Add, new, task"
-                classNa, m, e="px-4, p, y-2, b, g-bl, u, e-600, tex, t-white, rounde, d-md, hove, r:bg-bl, u, e-700, transitio, n-colo, r, s"              >
+                classNa, m, e="px-4, p, y-2, b, g-bl, u, e-600, tex, t-white, rounde, d-md, hover:bg-bl, u, e-700, transitio, n-colo, r, s"              >
                 A, d, d"> {if (addTa, s, k(newTaskTe, x, t)) {
-                    setNewTaskTe, x, t(')};
-                }};
+                    setNewTaskTe, x, t(')}}};
                 ar, i, a-lab, e, l="Add, new, task"
-                classNa, m, e="px-4, p, y-2, b, g-bl, u, e-600, tex, t-white, rounde, d-md, hove, r:bg-bl, u, e-700, transitio, n-colo, r, s"              >
+                classNa, m, e="px-4, p, y-2, b, g-bl, u, e-600, tex, t-white, rounde, d-md, hover:bg-bl, u, e-700, transitio, n-colo, r, s"              >
                 A, d, d"> {ar, i, a-lab, e, l="{
             ar, i, a-lab, e, l="{
                   if (addTa, s, k(newTaskTe, x, t)) {
-                    setNewTaskTe, x, t(')};
-                }};
+                    setNewTaskTe, x, t(')}}};
                 ar, i, a-lab, e, l="Add, new, task"
-                classNa, m, e="px-4, p, y-2, b, g-bl, u, e-600, tex, t-white, rounde, d-md, hove, r:bg-bl, u, e-700, transitio, n-colo, r, s"              >
+                classNa, m, e="px-4, p, y-2, b, g-bl, u, e-600, tex, t-white, rounde, d-md, hover:bg-bl, u, e-700, transitio, n-colo, r, s"              >
                 A, d, d"> {if (addTa, s, k(newTaskTe, x, t)) {
-                    setNewTaskTe, x, t(')};
-                }};
+                    setNewTaskTe, x, t(')}}};
                 ar, i, a-lab, e, l="Add, new, task"
-                classNa, m, e="px-4, p, y-2, b, g-bl, u, e-600, tex, t-white, rounde, d-md, hove, r:bg-bl, u, e-700, transitio, n-colo, r, s"              >
+                classNa, m, e="px-4, p, y-2, b, g-bl, u, e-600, tex, t-white, rounde, d-md, hover:bg-bl, u, e-700, transitio, n-colo, r, s"              >
                 A, d, d"> {ar, i, a-lab, e, l="{
                   if (addTa, s, k(newTaskTe, x, t)) {
-                    setNewTaskTe, x, t(')};
-                }};
+                    setNewTaskTe, x, t(')}}};
                 ar, i, a-lab, e, l="Add, new, task"
-                classNa, m, e="px-4, p, y-2, b, g-bl, u, e-600, tex, t-white, rounde, d-md, hove, r:bg-bl, u, e-700, transitio, n-colo, r, s"              >
+                classNa, m, e="px-4, p, y-2, b, g-bl, u, e-600, tex, t-white, rounde, d-md, hover:bg-bl, u, e-700, transitio, n-colo, r, s"              >
                 A, d, d"> {if (addTa, s, k(newTaskTe, x, t)) {
-                    setNewTaskTe, x, t(')};
-                }};
+                    setNewTaskTe, x, t(')}}};
                 ar, i, a-lab, e, l="Add, new, task"
-                classNa, m, e="px-4, p, y-2, b, g-bl, u, e-600, tex, t-white, rounde, d-md, hove, r:bg-bl, u, e-700, transitio, n-colo, r, s"              >
+                classNa, m, e="px-4, p, y-2, b, g-bl, u, e-600, tex, t-white, rounde, d-md, hover:bg-bl, u, e-700, transitio, n-colo, r, s"              >
                 A, d, d
               </butt, o, n>
             </d, i, v>
@@ -132,13 +124,13 @@ export default function TaskManag({isOpenonClo, s, e }: TaskManagerPro, p, s): J
                       classNa, m, e="te, x, t-r, e, d-5, 0, 0, hov, e, r:te, x, t-r, e, d-7, 0, 0, da, r, k:te, x, t-r, e, d-4, 0, 0, da, r, k:hov, e, r:te, x, t-r, e, d-3, 0, 0"                    >
                       🗑️"> deleteTa, s, k(ta, s, k.id)};
                       ar, i, a-lab, e, l="Delete, tas, k"
-                      classNa, m, e="te, x, t-r, e, d-500, hove, r:te, x, t-r, e, d-700, dar, k:te, x, t-r, e, d-400, dar, k:hov, e, r:te, x, t-r, e, d-3, 0, 0"                    >
+                      classNa, m, e="te, x, t-r, e, d-500, hover:te, x, t-r, e, d-700, dar, k:te, x, t-r, e, d-400, dar, k:hov, e, r:te, x, t-r, e, d-3, 0, 0"                    >
                       🗑️"> {ar, i, a-lab, e, l="deleteTa, s, k(ta, s, k.id)};
                       ar, i, a-lab, e, l="Delete, tas, k"
-                      classNa, m, e="te, x, t-r, e, d-500, hove, r:te, x, t-r, e, d-700, dar, k:te, x, t-r, e, d-400, dar, k:hov, e, r:te, x, t-r, e, d-3, 0, 0"                    >
+                      classNa, m, e="te, x, t-r, e, d-500, hover:te, x, t-r, e, d-700, dar, k:te, x, t-r, e, d-400, dar, k:hov, e, r:te, x, t-r, e, d-3, 0, 0"                    >
                       🗑️"> deleteTa, s, k(ta, s, k.id)};
                       ar, i, a-lab, e, l="Delete, tas, k"
-                      classNa, m, e="te, x, t-r, e, d-500, hove, r:te, x, t-r, e, d-700, dar, k:te, x, t-r, e, d-400, dar, k:hov, e, r:te, x, t-r, e, d-3, 0, 0"                    >
+                      classNa, m, e="te, x, t-r, e, d-500, hover:te, x, t-r, e, d-700, dar, k:te, x, t-r, e, d-400, dar, k:hov, e, r:te, x, t-r, e, d-3, 0, 0"                    >
                       🗑️
                     </butt, o, n>
                   </d, i, v>

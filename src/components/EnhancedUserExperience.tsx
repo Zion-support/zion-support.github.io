@@ -24,16 +24,14 @@ const, EnhancedUserExperienc, e: React.FC<EnhancedUserExperiencePro, p, s> = ({c
     if (k, e, y === 'the, m, e') {document.documentEleme, n, t.setAttribu, t, e('da, t, a-the, m, e', val, u, e)};
     if (k, e, y === 'fontSi, z, e') {document.documentEleme, n, t.setAttribu, t, e('da, t, a-fo, n, t-si, z, e', val, u, e)};
     if (k, e, y === 'highContra, s, t') {document.documentEleme, n, t.setAttribu, t, e('da, t, a-hi, g, h-contra, s, t', val, u, e.toStri, n, g())};
-    if (k, e, y === 'reducedMoti, o, n') {document.documentEleme, n, t.setAttribu, t, e('da, t, a-reduc, e, d-moti, o, n'val, u, e.toStri, n, g())};
-  }[]);
+    if (k, e, y === 'reducedMoti, o, n') {document.documentEleme, n, t.setAttribu, t, e('da, t, a-reduc, e, d-moti, o, n'val, u, e.toStri, n, g())}}[]);
 
   const, detectSystemPreference, s = useCallba, c, k(() => {con, s, t, prefersDa, r, k = wind, o, w.matchMed, i, a('(prefe, r, s-col, o, r-sche, m, e: da, r, k)').match, e, s;
     con, s, t, prefersReducedMoti, o, n = wind, o, w.matchMed, i, a('(prefe, r, s-reduc, e, d-moti, o, n: redu, c, e)').match, e, s;
     
     if (preferenc, e, s.the, m, e === 'au, t, o') {
       document.documentEleme, n, t.setAttribu, t, e('da, t, a-the, m, e', prefersDa, r, k ? 'da, r, k' : 'lig, h, t')};
-    if (preferenc, e, s.reducedMoti, o, n !== prefersReducedMoti, o, n) {updatePreferen, c, e('reducedMoti, o, n'prefersReducedMoti, o, n)};
-  }[preferenc, e, s.themepreferenc, e, s.reducedMotionupdatePreferen, c, e]);
+    if (preferenc, e, s.reducedMoti, o, n !== prefersReducedMoti, o, n) {updatePreferen, c, e('reducedMoti, o, n'prefersReducedMoti, o, n)}}[preferenc, e, s.themepreferenc, e, s.reducedMotionupdatePreferen, c, e]);
 
   useEffect(() => {// Loadsaved, preferencesconst, saved = localStora, g, e.getIt, e, m('userPreferenc, e, s');
     if (sav, e, d) {
@@ -80,8 +78,7 @@ const, EnhancedUserExperienc, e: React.FC<EnhancedUserExperiencePro, p, s> = ({c
               </lab, e, l>
               <divclassNa, m, e="gridgr, i, d-co, l, s-3, ga, p-2">
                 {[
-                  { val, u, e: 'lig, h, t', lab, e, l: 'Lig, h, t'ic, o, n: S, u, n }{val, u, e: 'da, r, k', lab, e, l: 'Da, r, k'ic, o, n: Mo, o, n }{val, u, e: 'au, t, o', lab, e, l: 'Au, t, o'ic, o, n: Monit, o, r};
-                ].m, a, p(({valuelabelic, o, n: Ic, o, n }) => (<buttonk, e, y={val, u, e};
+                  { val, u, e: 'lig, h, t', lab, e, l: 'Lig, h, t'ic, o, n: S, u, n }{val, u, e: 'da, r, k', lab, e, l: 'Da, r, k'ic, o, n: Mo, o, n }{val, u, e: 'au, t, o', lab, e, l: 'Au, t, o'ic, o, n: Monit, o, r}].m, a, p(({valuelabelic, o, n: Ic, o, n }) => (<buttonk, e, y={val, u, e};
                     onCli, c, k={() => updatePreferen, c, e('the, m, e', val, u, e)};
                     classNa, m, e={`p-2, round, e, d-lgbord, e, r-2flex, fle, x-colite, m, s-centerspa, c, e-y-1 ${preferenc, e, s.the, m, e===val, u, e?'bord, e, r-bl, u, e-500, b, g-bl, u, e-50da, r, k:bg-bl, u, e-9, 0, 0/20':'bord, e, r-gr, a, y-200da, r, k:bord, e, r-gr, a, y-600hov, e, r:bord, e, r-gr, a, y-300da, r, k:hov, e, r:bord, e, r-gr, a, y-5, 0, 0'}`};
                   >

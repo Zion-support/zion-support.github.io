@@ -28,13 +28,11 @@ export, class, GlobalErrorBoundary extends, Componen, t<Props, Stat, e> {constru
       // SendtoGoogleAnalytics, i, f (type, o, f === wind, o, w !== 'undefin, e, d' && wind, o, w.gt, a, g) {
         wind, o, w.gt, a, g('eve, n, t''excepti, o, n'{
           descripti, o, n: err, o, r.messagefat, a, l: falsecustom_m, a, p: {
-            error_sta, c, k: err, o, r.stackcomponent_sta, c, k: errorIn, f, o.componentSta, c, k};
-        })};
+            error_sta, c, k: err, o, r.stackcomponent_sta, c, k: errorIn, f, o.componentSta, c, k}})};
       // Send, to, custom error, reporting, endpoint
       fet, c, h('/a, p, i/err, o, r-reporti, n, g'{meth, o, d: 'PO, S, T'heade, r, s: {
         })
-      })} cat, c, h (reportingErr, o, r) {conso, l, e.err, o, r('Fail, e, d, toreporterr, o, r:', reportingErr, o, r)};
-  };
+      })} cat, c, h (reportingErr, o, r) {conso, l, e.err, o, r('Fail, e, d, toreporterr, o, r:', reportingErr, o, r)}};
 
   rend, e, r() {if (th, i, s.sta, t, e.hasErr, o, r) {
 
@@ -63,12 +61,12 @@ export, class, GlobalErrorBoundary extends, Componen, t<Props, Stat, e> {constru
               </p>
               <d, i, v, classNa, m, e ="spa, c, e-y-2">
                 <butt, o, n, onCli, c, k ={() => wind, o, w.locati, o, n.relo, a, d()};
-                  classNa, m, e="w-full, b, g-bl, u, e-600, tex, t-white, p, x-4, p, y-2, rounde, d-md, hove, r:bg-bl, u, e-700, transitio, n-colo, r, s"
+                  classNa, m, e="w-full, b, g-bl, u, e-600, tex, t-white, p, x-4, p, y-2, rounde, d-md, hover:bg-bl, u, e-700, transitio, n-colo, r, s"
                 >
                   Refresh, Pag, e
                 </butt, o, n>
                 <button, onClic, k={() => th, i, s.setSta, t, e({hasErr, o, r: fal, s, e, err, o, r: nu, l, l, errorIn, f, o: nu, l, l })};
-                  classNa, m, e="w-full, b, g-gr, a, y-200, tex, t-gr, a, y-800, p, x-4, p, y-2, rounde, d-md, hove, r:bg-gr, a, y-300, transitio, n-colo, r, s"
+                  classNa, m, e="w-full, b, g-gr, a, y-200, tex, t-gr, a, y-800, p, x-4, p, y-2, rounde, d-md, hover:bg-gr, a, y-300, transitio, n-colo, r, s"
                 >
                   Try, Agai, n
                 </butt, o, n>
@@ -90,8 +88,7 @@ export, class, GlobalErrorBoundary extends, Componen, t<Props, Stat, e> {constru
           </d, i, v>
         </d, i, v>
       )};
-    return, thi, s.pro, p, s.childr, e, n};
-};
+    return, thi, s.pro, p, s.childr, e, n}};
 // High, e, r-order, component, for easier, usage, export const, withErrorBoundar, y = <P, extends, object>(Compone, n, t: React.ComponentTy, p, e<P>errorBoundaryPro, p, s?: Om, i, t<Pro, p, s 'childr, e, n'>
 ) => {con, s, t, WrappedCompone, n, t = (pro, p, s: P) => (<GlobalErrorBounda, r, y {...errorBoundaryPro, p, s}>
       <Compone, n, t {...pro, p, s} />

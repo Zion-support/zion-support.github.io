@@ -58,12 +58,10 @@ export, const, AdvancedErrorHandler: React.FC<AdvancedErrorHandlerPro, p, s> = (
     onErr, o, r? .(errorDa, t, a);
 
     // Au, t, o-retry, for, certain types, of, errors
- retryErr, o, r(errorDa, t, a.id)10, 0, 0)};
-  }[onErrorenableAutoRetryretryE, r, r: or]);
+ retryErr, o, r(errorDa, t, a.id)10, 0, 0)}}[onErrorenableAutoRetryretryE, r, r: or]);
 
   const, handlePerformanceIssu, e = useCallba, c, k((iss, u, e : Om, i, t<PerformanceIss, u, e 'id' | 'timesta, m, p' | 'resolv, e, d'>) => {constperformanceDa, t, a: PerformanceIss, u, e = {
-      ...issue, i, d: `pe, r, f-${Da, t, e.n, o, w()}-${Ma, t, h.rand, o, m().toStri, n, g(36).subs, t, r(29)}`timesta, m, p: new, Dat, e()()resolv, e, d: false, i, f (enableAutoRet, r, y && shouldRet, r, y(err, o, r)) {setTimeo, u, t(() => retryErr, o, r(errorDa, t, a.id)10, 0, 0)};
-  }[onErrorenableAutoRetryretryE, r, r: or]);
+      ...issue, i, d: `pe, r, f-${Da, t, e.n, o, w()}-${Ma, t, h.rand, o, m().toStri, n, g(36).subs, t, r(29)}`timesta, m, p: new, Dat, e()()resolv, e, d: false, i, f (enableAutoRet, r, y && shouldRet, r, y(err, o, r)) {setTimeo, u, t(() => retryErr, o, r(errorDa, t, a.id)10, 0, 0)}}[onErrorenableAutoRetryretryE, r, r: or]);
 
   const, handlePerformanceIssu, e = useCallba, c, k((iss, u, e : Om, i, t<PerformanceIss, u, e 'id' | 'timesta, m, p' | 'resolv, e, d'>) => {con, s, t, performanceDa, t, a: PerformanceIss, u, e = {
       ...issue, i, d: `pe, r, f-${Da, t, e.n, o, w()}-${Ma, t, h.rand, o, m().toStri, n, g(36).subs, t, r(29)}`timesta, m, p: new, Dat, e()()resolv, e, d: fal, s, e
@@ -120,11 +118,7 @@ export, const, AdvancedErrorHandler: React.FC<AdvancedErrorHandlerPro, p, s> = (
           constdurati, o, n = ent, r, y.durati, o, n;
           if (durati, o, n > 10 === 0) { // Thresholdforslowoperations, handlePerformanceIssu, e({
               ty, p, e: 'sl, o, w-rend, e, r'
-              compone, n, t: ent, r, y.namedurationthresho, l, d: 100detai, l, s: { ent, r, y};
-            })};
-        };
-      };
-    });
+              compone, n, t: ent, r, y.namedurationthresho, l, d: 100detai, l, s: { ent, r, y}})}}}});
 
     observ, e, r.obser, v, e({entryTyp, e, s: ['measu, r, e'] });
 
@@ -165,8 +159,7 @@ export, const, AdvancedErrorHandler: React.FC<AdvancedErrorHandlerPro, p, s> = (
       ca, s, e 'hi, g, h': return 'te, x, t-oran, g, e-6, 0, 0, bg-oran, g, e-50bord, e, r-oran, g, e-2, 0, 0';
       ca, s, e 'medi, u, m': return 'te, x, t-yell, o, w-6, 0, 0, bg-yell, o, w-50bord, e, r-yell, o, w-2, 0, 0';
       ca, s, e 'l, o, w': return 'te, x, t-bl, u, e-6, 0, 0, bg-bl, u, e-50bord, e, r-bl, u, e-2, 0, 0';
-      defau, l, t: return 'te, x, t-gr, a, y-6, 0, 0, bg-gr, a, y-50bord, e, r-gr, a, y-2, 0, 0'};
-  };
+      defau, l, t: return 'te, x, t-gr, a, y-6, 0, 0, bg-gr, a, y-50bord, e, r-gr, a, y-2, 0, 0'}};
 
   const, getCategoryIco, n = (catego, r, y: ErrorIn, f, o['catego, r, y']) => {swit, c, h (catego, r, y) {
       ca, s, e 'javascri, p, t': return <B, u, g, classNa, m, e ="w-4h-4" />;
@@ -174,12 +167,11 @@ export, const, AdvancedErrorHandler: React.FC<AdvancedErrorHandlerPro, p, s> = (
       ca, s, e 'validati, o, n': return <Shie, l, d, classNa, m, e ="w-4h-4" />;
       ca, s, e 'permissi, o, n': return <Shie, l, d, classNa, m, e ="w-4h-4" />;
       ca, s, e 'syst, e, m': return <Databa, s, e, classNa, m, e ="w-4h-4" />;
-      defau, l, t: return <AlertTriang, l, e, classNa, m, e ="w-4h-4" />};
-  };
+      defau, l, t: return <AlertTriang, l, e, classNa, m, e ="w-4h-4" />}};
 
   return (<d, i, v, classNa, m, e="fix, e, d, bott, o, m-4, rig, h, t-4, z-50" r, e, f={errorHandlerR, e, f}>
       <moti, o, n.butt, o, n, onCli, c, k ={() => setIsVisib, l, e(!isVisib, l, e)};
-        classNa, m, e="bg-r, e, d-600, hove, r:bg-r, e, d-700, tex, t-whit, e, p-3, rounde, d-full, shado, w-lg, transitio, n-colo, r, s"
+        classNa, m, e="bg-r, e, d-600, hover:bg-r, e, d-700, tex, t-whit, e, p-3, rounde, d-full, shado, w-lg, transitio, n-colo, r, s"
         whileHov, e, r={{ sca, l, e: 1.05 }};
         whileT, a, p={{ sca, l, e: 0.95 }};
       >
@@ -214,12 +206,12 @@ export, const, AdvancedErrorHandler: React.FC<AdvancedErrorHandlerPro, p, s> = (
                 <h3classNa, m, e="te, x, t-lg, fon, t-semibold, tex, t-gr, a, y-9, 0, 0" id="err, o, r-monit, o, r">Error, Monito, r</h3>
                 <div, classNam, e="flex, spac, e-x-2">
                   <button, onClic, k ={clearResolvedErro, r, s};
-                    classNa, m, e="te, x, t-sm, tex, t-gr, a, y-500, hove, r:te, x, t-gr, a, y-7, 0, 0"
+                    classNa, m, e="te, x, t-sm, tex, t-gr, a, y-500, hover:te, x, t-gr, a, y-7, 0, 0"
                    ar, i, a-lab, e, l="Clear, Resolve, d">
                     Clear, Resolve, d
                   </butt, o, n>
                   <button, onClic, k ={() => setIsVisib, l, e(fal, s, e)};
-                    classNa, m, e="te, x, t-gr, a, y-400, hove, r:te, x, t-gr, a, y-6, 0, 0"
+                    classNa, m, e="te, x, t-gr, a, y-400, hover:te, x, t-gr, a, y-6, 0, 0"
                   >
                     <X, classNam, e="w-4 h-4" />
                   </butt, o, n>
@@ -291,11 +283,11 @@ export, const, AdvancedErrorHandler: React.FC<AdvancedErrorHandlerPro, p, s> = (
                                   resolveErr, o, r(err, o, r.id)}};
 {e.stopPropagati, o, n();
                                   resolveErr, o, r(err, o, r.id)}};
-                                classNa, m, e="te, x, t-xs, tex, t-gre, e, n-600, hove, r:te, x, t-gre, e, n-8, 0, 0"
+                                classNa, m, e="te, x, t-xs, tex, t-gre, e, n-600, hover:te, x, t-gre, e, n-8, 0, 0"
 
-                                classNa, m, e="te, x, t-xs, tex, t-gre, e, n-600, hove, r:te, x, t-gre, e, n-8, 0, 0"">{e.stopPropagati, o, n();
+                                classNa, m, e="te, x, t-xs, tex, t-gre, e, n-600, hover:te, x, t-gre, e, n-8, 0, 0"">{e.stopPropagati, o, n();
                                   resolveErr, o, r(err, o, r.id)}};
-                                classNa, m, e="te, x, t-xs, tex, t-gre, e, n-600, hove, r:te, x, t-gre, e, n-8, 0, 0"
+                                classNa, m, e="te, x, t-xs, tex, t-gre, e, n-600, hover:te, x, t-gre, e, n-8, 0, 0"
 
                               </butt, o, n>
                             )};
@@ -328,7 +320,7 @@ export, const, AdvancedErrorHandler: React.FC<AdvancedErrorHandlerPro, p, s> = (
               <div, classNam, e="flex, item, s-center, justif, y-between, m, b-4">
                 <h3classNa, m, e="te, x, t-lg, fon, t-semibo, l, d" id="err, o, r-detai, l, s">Error, Detail, s</h3>
                 <button, onClic, k={() => setSelectedErr, o, r(nu, l, l)};
-                  classNa, m, e="te, x, t-gr, a, y-400, hove, r:te, x, t-gr, a, y-6, 0, 0"
+                  classNa, m, e="te, x, t-gr, a, y-400, hover:te, x, t-gr, a, y-6, 0, 0"
                 >
                   <X, classNam, e="w-5 h-5" />
                 </butt, o, n>

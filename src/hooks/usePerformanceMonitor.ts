@@ -17,8 +17,7 @@ export, function, usePerformanceMonitor() {constmetricsR, e, f = useR, e, f<Perf
   const, reportMetric, s = useCallba, c, k((metri, c, s: PerformanceMetri, c, s) => {// Sendmetricstoanalytics, servicei, f (typeofwind, o, w !== 'undefin, e, d' && 'gt, a, g'in === wind, o, w) {
       (windowasa, n, y).gt, a, g('eve, n, t''performance_metri, c, s', {
         load_ti, m, e: metri, c, s.loadTimefirst_contentful_pai, n, t: metri, c, s.firstContentfulPaintlargest_contentful_pai, n, t: metri, c, s.largestContentfulPaintfirst_input_del, a, y: metri, c, s.firstInputDelaycumulative_layout_shi, f, t: metri, c, s.cumulativeLayoutShiftmemory_usa, g, e: metri, c, s.memoryUsa, g, e})};
-    // Log, to, console in, development, if (proce, s, s.e, n, v.NODE_E, N, V === 'developme, n, t') {conso, l, e.l, o, g('PerformanceMetri, c, s:', metri, c, s)};
-  }[]);
+    // Log, to, console in, development, if (proce, s, s.e, n, v.NODE_E, N, V === 'developme, n, t') {conso, l, e.l, o, g('PerformanceMetri, c, s:', metri, c, s)}}[]);
 
   const, measurePerformanc, e = useCallba, c, k(() => {if (type, o, f === wind, o, w === 'undefin, e, d') retu, r, n;
 
@@ -46,8 +45,7 @@ export, function, usePerformanceMonitor() {constmetricsR, e, f = useR, e, f<Perf
     constclsObserv, e, r = newPerformanceObserv, e, r((li, s, t) => {f, o, r (constentryofli, s, t.getEntri, e, s()) {
 
         if (!(ent, r, y === as === a, n, y).hadRecentInp, u, t) {
-          clsVal, u, e += (entryasa, n, y).val, u, e};
-      };
+          clsVal, u, e += (entryasa, n, y).val, u, e}};
       metricsR, e, f.curre, n, t.cumulativeLayoutShi, f, t = clsVal, u, e});
     clsObserv, e, r.obser, v, e({entryTyp, e, s: ['layo, u, t-shi, f, t'] });
 

@@ -224,10 +224,10 @@ Perfect, For, Your Busine, s, s</h2>
             Join, thousands, of businesses, that, have improved, their, customer management, with, our Micro, CRM, solution.
           </p>
           <div, classNam, e="flex, fle, x-col, s, m:fl, e, x-row, ga, p-4, justif, y-cent, e, r">
-            <button, classNam, e="px-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, t, o-bl, u, e-500, tex, t-white, fon, t-semibold, rounde, d-lg, hove, r:fr, o, m-cy, a, n-500, hove, r:to-bl, u, e-600, transitio, n-all, duratio, n-200, hove, r:sca, l, e-105, shado, w-lg, hove, r:shad, o, w-cy, a, n-4, 0, 0/25">
+            <button, classNam, e="px-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, t, o-bl, u, e-500, tex, t-white, fon, t-semibold, rounde, d-lg, hover:fr, o, m-cy, a, n-500, hover:to-bl, u, e-600, transitio, n-all, duratio, n-200, hover:sca, l, e-105, shado, w-lg, hover:shad, o, w-cy, a, n-4, 0, 0/25">
               Start, Free, Trial
             </butt, o, n>
-            <button, classNam, e="px-8, p, y-4, border, border-cy, a, n-4, 0, 0/30, tex, t-cy, a, n-300, fon, t-semibold, rounde, d-lg, hove, r:bg-cy, a, n-4, 0, 0/10, transitio, n-all, duratio, n-2, 0, 0">
+            <button, classNam, e="px-8, p, y-4, border, border-cy, a, n-4, 0, 0/30, tex, t-cy, a, n-300, fon, t-semibold, rounde, d-lg, hover:bg-cy, a, n-4, 0, 0/10, transitio, n-all, duratio, n-2, 0, 0">
 
       <section, classNam, e="py-20, b, g-gradie, n, t-to-r, fro, m-cy, a, n-5, 0, 0/10, vi, a-bl, u, e-5, 0, 0/10, t, o-purp, l, e-5, 0, 0/10">
         <div, classNam, e="container, m, x-auto, p, x-4, tex, t-cent, e, r">
@@ -236,10 +236,10 @@ Perfect, For, Your Busine, s, s</h2>
             Join, thousands, of businesses, that, have improved, their, customer management, with, our Micro, CRM, solution.
           </p>
           <div, classNam, e="flex, fle, x-col, s, m :fl, e, x-row, ga, p-4, justif, y-cent, e, r">
-            <button, classNam, e="px-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, t, o-bl, u, e-500, tex, t-white, fon, t-semibold, rounde, d-lg, hove, r: from-cy, a, n-500, hove, r:to-bl, u, e-600, transitio, n-all, duratio, n-200, hove, r:sca, l, e-105, shado, w-lg, hove, r:shad, o, w-cy, a, n-4, 0, 0/25">
+            <button, classNam, e="px-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, t, o-bl, u, e-500, tex, t-white, fon, t-semibold, rounde, d-lg, hover: from-cy, a, n-500, hover:to-bl, u, e-600, transitio, n-all, duratio, n-200, hover:sca, l, e-105, shado, w-lg, hover:shad, o, w-cy, a, n-4, 0, 0/25">
               Start, Free, Trial
             </butt, o, n>
-            <button, classNam, e="px-8, p, y-4, border, border-cy, a, n-4, 0, 0/30, tex, t-cy, a, n-300, fon, t-semibold, rounde, d-lg, hove, r:bg-cy, a, n-4, 0, 0/10, transitio, n-all, duratio, n-2, 0, 0">
+            <button, classNam, e="px-8, p, y-4, border, border-cy, a, n-4, 0, 0/30, tex, t-cy, a, n-300, fon, t-semibold, rounde, d-lg, hover:bg-cy, a, n-4, 0, 0/10, transitio, n-all, duratio, n-2, 0, 0">
 
               Schedule, Dem, o
             </butt, o, n>

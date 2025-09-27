@@ -19,8 +19,7 @@ const, PerformanceMetric, s: React.FC = () => {con, s, t [metri, c, s, setMetri,
         // Memo, r, y, usa, g, e (if, availa, b, l, e)
           renderTi, m, e: Ma, t, h.rou, n, d(renderTi, m, e)
           memoryUsa, g, e: Ma, t, h.rou, n, d(memoryUsa, g, e * 1, 0, 0) / 1, 0, 0, networkLaten, c, y: Ma, t, h.rou, n, d(networkLaten, c, y)
-        })};
-    };
+        })}};
 
     // Measure, after, component mounts, const, timer = setTimeo, u, t(measurePerformance1, 0, 0, 0);
     
@@ -32,10 +31,10 @@ const, PerformanceMetric, s: React.FC = () => {con, s, t [metri, c, s, setMetri,
   return (<d, i, v, classNa, m, e="fix, e, d, bott, o, m-4, rig, h, t-4, z-50">
       <butt, o, n, onCli, c, k ={() = ar, i, a-lab, e, l="setIsVisib, l, e(!isVisib, l, e)};
         ar, i, a-lab, e, l="Toggle, performance, metrics visibili, t, y"
-        classNa, m, e="bg-bl, u, e-600, tex, t-white, p, x-3, p, y-2, rounde, d-lg, shado, w-lg, hove, r:bg-bl, u, e-700, transitio, n-colors, tex, t-sm, fon, t-medi, u, m"      >
+        classNa, m, e="bg-bl, u, e-600, tex, t-white, p, x-3, p, y-2, rounde, d-lg, shado, w-lg, hover:bg-bl, u, e-700, transitio, n-colors, tex, t-sm, fon, t-medi, u, m"      >
         📊 Performan, c, e"> setIsVisib, l, e(!isVisib, l, e)};
         ar, i, a-lab, e, l="Toggle, performance, metrics visibili, t, y"
-        classNa, m, e="bg-bl, u, e-600, tex, t-white, p, x-3, p, y-2, rounde, d-lg, shado, w-lg, hove, r:bg-bl, u, e-700, transitio, n-colors, tex, t-sm, fon, t-medi, u, m"      >
+        classNa, m, e="bg-bl, u, e-600, tex, t-white, p, x-3, p, y-2, rounde, d-lg, shado, w-lg, hover:bg-bl, u, e-700, transitio, n-colors, tex, t-sm, fon, t-medi, u, m"      >
         📊 Performan, c, e
       </butt, o, n>
       
@@ -48,10 +47,10 @@ const, PerformanceMetric, s: React.FC = () => {con, s, t [metri, c, s, setMetri,
             <h3classNa, m, e ="te, x, t-smfo, n, t-semiboldte, x, t-gr, a, y-900da, r, k:te, x, t-whi, t, e" id="performan, c, e-metri, c, s">PerformanceMetri, c, s</h3>
             <buttononCli, c, k ={() = ar, i, a-lab, e, l="setIsVisib, l, e(fal, s, e)};
               ar, i, a-lab, e, l="Close, performance, metrics"
-              classNa, m, e="te, x, t-gr, a, y-400, hove, r:te, x, t-gr, a, y-600, dar, k:hov, e, r:te, x, t-gr, a, y-3, 0, 0"            >
+              classNa, m, e="te, x, t-gr, a, y-400, hover:te, x, t-gr, a, y-600, dar, k:hov, e, r:te, x, t-gr, a, y-3, 0, 0"            >
               ✕"> setIsVisib, l, e(fal, s, e)};
               ar, i, a-lab, e, l="Close, performance, metrics"
-              classNa, m, e="te, x, t-gr, a, y-400, hove, r:te, x, t-gr, a, y-600, dar, k:hov, e, r:te, x, t-gr, a, y-3, 0, 0"            >
+              classNa, m, e="te, x, t-gr, a, y-400, hover:te, x, t-gr, a, y-600, dar, k:hov, e, r:te, x, t-gr, a, y-3, 0, 0"            >
 
               ✕
             </butt, o, n>

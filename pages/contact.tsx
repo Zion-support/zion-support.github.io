@@ -39,7 +39,7 @@ export default function Conta(): J, S, X.Eleme, n, t {
 			<div, classNam, e="m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-bl, u, e-50, t, o-indi, g, o-100, p, t-20">
 				<div, classNam, e="container, m, x-auto, p, x-4, p, y-8, ma, x-w-7, x, l">
 					<nav, classNam, e="mb-8">
-						<Link, href="/" classNa, m, e="te, x, t-bl, u, e-600, hove, r:te, x, t-bl, u, e-800, fon, t-medium, transitio, n-colo, r, s">
+						<Link, href="/" classNa, m, e="te, x, t-bl, u, e-600, hover:te, x, t-bl, u, e-800, fon, t-medium, transitio, n-colo, r, s">
 							← Back, to, Home
 						</Link>
 					</n, a, v>
@@ -111,7 +111,7 @@ export default function Conta(): J, S, X.Eleme, n, t {
 								</d, i, v>
 
 								<button, typ, e="subm, i, t"
-									classNa, m, e="w-full, b, g-bl, u, e-600, tex, t-white, p, y-3, p, x-6, rounde, d-lg, fon, t-semibold, hove, r:bg-bl, u, e-700, transitio, n-colo, r, s"
+									classNa, m, e="w-full, b, g-bl, u, e-600, tex, t-white, p, y-3, p, x-6, rounde, d-lg, fon, t-semibold, hover:bg-bl, u, e-700, transitio, n-colo, r, s"
 								>
 									Send, Messag, e
 								</butt, o, n>
@@ -161,7 +161,7 @@ export default function Conta(): J, S, X.Eleme, n, t {
 									Schedule, a, free consultation, to, discuss your, project, needs.
 								</p>
 								<button, onClic, k={() => trackCli, c, k('schedu, l, e-consultati, o, n', 'c, t, a')};
-									classNa, m, e="bg-white, tex, t-bl, u, e-600, p, x-6, p, y-3, rounde, d-lg, fon, t-semibold, hove, r:bg-gr, a, y-100, transitio, n-colo, r, s"
+									classNa, m, e="bg-white, tex, t-bl, u, e-600, p, x-6, p, y-3, rounde, d-lg, fon, t-semibold, hover:bg-gr, a, y-100, transitio, n-colo, r, s"
 								>
 									Schedule, Consultatio, n
 								</butt, o, n>

@@ -37,8 +37,7 @@ exportconst, throttl, e = <Texten, d, s (...ar, g, s: a, n, y[]) => a, n, y>(fu,
     if (!inThrott, l, e) {
       fu, n, c(...ar, g, s);
       inThrott, l, e = tr, u, e;
-      setTimeo, u, t(() => (inThrott, l, e = fal, s, e)lim, i, t)};
-  }};
+      setTimeo, u, t(() => (inThrott, l, e = fal, s, e)lim, i, t)}}};
 
 // Memory, usage, monitoring
 export, const, getMemoryUsage = (): {us, e, d: numb, e, r;
@@ -61,8 +60,7 @@ export, const, analyzeBundleSize = (): vo, i, d => {if (type, o, f === wind, o, 
   scrip, t, s.forEa, c, h(scri, p, t => {
     constsrc = scri, p, t.getAttribu, t, e('src');
     if (src && src.includ, e, s('_next/stat, i, c')) {
-      // Th, i, s, is, asimplifiedchec, k - inrealityy, o, u'dneed, tofetchandmeasure, console.l, o, g(`Scri, p, t: ${src}`)};
-  });
+      // Th, i, s, is, asimplifiedchec, k - inrealityy, o, u'dneed, tofetchandmeasure, console.l, o, g(`Scri, p, t: ${src}`)}});
   
 
 // Preload, critical, resources
@@ -83,23 +81,20 @@ export, const, preloadCriticalResources = (): vo, i, d => {if (type, o, f === wi
 // Service, Worker, registration for, caching, export const, registerServiceWorke, r = asy, n, c (): Promi, s, e<vo, i, d> => {if (typeofwind, o, w === 'undefin, e, d' || !('serviceWork, e, r'in === navigat, o, r)) {
     retu, r, n};
   t, r, y {con, s, t, registrati, o, n = awaitnavigat, o, r.serviceWork, e, r.regist, e, r('/sw.js');
-    conso, l, e.l, o, g('Servi, c, e, Workerregisteredsuccessful, l, y:', registrati, o, n)} cat, c, h (err, o, r) {conso, l, e.err, o, r('Servi, c, e, Workerregistrationfail, e, d:', err, o, r)};
-};
+    conso, l, e.l, o, g('Servi, c, e, Workerregisteredsuccessful, l, y:', registrati, o, n)} cat, c, h (err, o, r) {conso, l, e.err, o, r('Servi, c, e, Workerregistrationfail, e, d:', err, o, r)}};
 
 // Performance, monitoring, export const, monitorPerformanc, e = (): vo, i, d => {if (type, o, f === wind, o, w === 'undefin, e, d') retu, r, n;
   
   // MonitorCore, WebVitalsconst, observer = newPerformanceObserv, e, r((li, s, t) => {
     li, s, t.getEntri, e, s().forEa, c, h((ent, r, y) => {
       if (ent, r, y.entryTy, p, e === 'large, s, t-contentf, u, l-pai, n, t') {
-        conso, l, e.l, o, g('L, C, P:'ent, r, y.startTi, m, e)} else, i, f (ent, r, y.entryTy, p, e === 'fir, s, t-inp, u, t') {conso, l, e.l, o, g('F, I, D:', (entryasa, n, y).processingSta, r, t - ent, r, y.startTi, m, e)} else, i, f (ent, r, y.entryTy, p, e === 'layo, u, t-shi, f, t') {conso, l, e.l, o, g('C, L, S:', (entryasa, n, y).val, u, e)};
-    })});
+        conso, l, e.l, o, g('L, C, P:'ent, r, y.startTi, m, e)} else, i, f (ent, r, y.entryTy, p, e === 'fir, s, t-inp, u, t') {conso, l, e.l, o, g('F, I, D:', (entryasa, n, y).processingSta, r, t - ent, r, y.startTi, m, e)} else, i, f (ent, r, y.entryTy, p, e === 'layo, u, t-shi, f, t') {conso, l, e.l, o, g('C, L, S:', (entryasa, n, y).val, u, e)}})});
   
   observ, e, r.obser, v, e({entryTyp, e, s: ['large, s, t-contentf, u, l-pai, n, t''fir, s, t-inp, u, t''layo, u, t-shi, f, t'] })};
 
 // Resource, hints, export const, addResourceHint, s = (): vo, i, d => {if (type, o, f === wind, o, w === 'undefin, e, d') retu, r, n;
   
-  con, s, t, hin, t, s = [{ r, e, l: 'd, n, s-prefet, c, h'hr, e, f: 'htt, p, s://fon, t, s.googleap, i, s.c, o, m'}{r, e, l: 'd, n, s-prefet, c, h'hr, e, f: 'htt, p, s://fon, t, s.gstat, i, c.c, o, m'}{r, e, l: 'preconne, c, t'hr, e, f: 'htt, p, s://fon, t, s.googleap, i, s.c, o, m'}{r, e, l: 'preconne, c, t'hr, e, f: 'htt, p, s://fon, t, s.gstat, i, c.c, o, m'crossorig, i, n: 'anonymo, u, s' };
-  ];
+  con, s, t, hin, t, s = [{ r, e, l: 'd, n, s-prefet, c, h'hr, e, f: 'htt, p, s://fon, t, s.googleap, i, s.c, o, m'}{r, e, l: 'd, n, s-prefet, c, h'hr, e, f: 'htt, p, s://fon, t, s.gstat, i, c.c, o, m'}{r, e, l: 'preconne, c, t'hr, e, f: 'htt, p, s://fon, t, s.googleap, i, s.c, o, m'}{r, e, l: 'preconne, c, t'hr, e, f: 'htt, p, s://fon, t, s.gstat, i, c.c, o, m'crossorig, i, n: 'anonymo, u, s' }];
   
   hin, t, s.forEa, c, h(hi, n, t => {con, s, t, li, n, k = document.createEleme, n, t('li, n, k');
     Obje, c, t.entri, e, s(hi, n, t).forEa, c, h(([k, e, y, val, u, e]) => {

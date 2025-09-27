@@ -12,8 +12,7 @@ const Dashboard = React.memo(function Dashboard(): JSX.Element {
 
   const handleTabChange = (tab: string) => {
     setActiveTab(tab);
-    trackClick(`dashboard-tab-${tab}`, 'navigation');
-  };
+    trackClick(`dashboard-tab-${tab}`, 'navigation')};
 
   const renderDashboard = () => {
     switch (activeTab) {
@@ -21,7 +20,7 @@ const Dashboard = React.memo(function Dashboard(): JSX.Element {
         return (
           <div className="p-8">
             <div className="flex justify-between items-center mb-8">
-              <h1 className="text-3xl font-bold text-gray-900">Dashboard Overview</h1>
+              <h1 className="text-3 xl font-bold text-gray-900">Dashboard Overview</h1>
               <div className="flex items-center space-x-4">
                 <label className="flex items-center">
                   <input
@@ -41,7 +40,7 @@ const Dashboard = React.memo(function Dashboard(): JSX.Element {
                 <div className="flex items-center justify-between">
                   <div>
                     <p className="text-gray-600 text-sm">Total Users</p>
-                    <p className="text-2xl font-bold text-gray-900">1,234</p>
+                    <p className="text-2 xl font-bold text-gray-900">1,234</p>
                   </div>
                   <div className="bg-blue-100 p-3 rounded-full">
                     <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -55,7 +54,7 @@ const Dashboard = React.memo(function Dashboard(): JSX.Element {
                 <div className="flex items-center justify-between">
                   <div>
                     <p className="text-gray-600 text-sm">Active Sessions</p>
-                    <p className="text-2xl font-bold text-gray-900">567</p>
+                    <p className="text-2 xl font-bold text-gray-900">567</p>
                   </div>
                   <div className="bg-green-100 p-3 rounded-full">
                     <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -69,7 +68,7 @@ const Dashboard = React.memo(function Dashboard(): JSX.Element {
                 <div className="flex items-center justify-between">
                   <div>
                     <p className="text-gray-600 text-sm">Revenue</p>
-                    <p className="text-2xl font-bold text-gray-900">$12,345</p>
+                    <p className="text-2 xl font-bold text-gray-900">$12,345</p>
                   </div>
                   <div className="bg-yellow-100 p-3 rounded-full">
                     <svg className="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -83,7 +82,7 @@ const Dashboard = React.memo(function Dashboard(): JSX.Element {
                 <div className="flex items-center justify-between">
                   <div>
                     <p className="text-gray-600 text-sm">Conversion Rate</p>
-                    <p className="text-2xl font-bold text-gray-900">3.2%</p>
+                    <p className="text-2 xl font-bold text-gray-900">3.2%</p>
                   </div>
                   <div className="bg-purple-100 p-3 rounded-full">
                     <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -116,7 +115,7 @@ const Dashboard = React.memo(function Dashboard(): JSX.Element {
       case 'analytics':
         return (
           <div className="p-8">
-            <h1 className="text-3xl font-bold text-gray-900 mb-8">Analytics Dashboard</h1>
+            <h1 className="text-3 xl font-bold text-gray-900 mb-8">Analytics Dashboard</h1>
             <div className="bg-white rounded-xl shadow-lg p-8">
               <p className="text-gray-600">Analytics features coming soon...</p>
             </div>
@@ -126,7 +125,7 @@ const Dashboard = React.memo(function Dashboard(): JSX.Element {
       case 'performance':
         return (
           <div className="p-8">
-            <h1 className="text-3xl font-bold text-gray-900 mb-8">Performance Dashboard</h1>
+            <h1 className="text-3 xl font-bold text-gray-900 mb-8">Performance Dashboard</h1>
             <div className="bg-white rounded-xl shadow-lg p-8">
               <p className="text-gray-600">Performance monitoring features coming soon...</p>
             </div>
@@ -136,13 +135,12 @@ const Dashboard = React.memo(function Dashboard(): JSX.Element {
       default:
         return (
           <div className="p-8">
-            <h1 className="text-3xl font-bold text-gray-900 mb-8">Dashboard</h1>
+            <h1 className="text-3 xl font-bold text-gray-900 mb-8">Dashboard</h1>
             <div className="bg-white rounded-xl shadow-lg p-8">
               <p className="text-gray-600">Select a tab to view dashboard content.</p>
             </div>
           </div>
-        );
-    }
+        )}
   };
 
   return (
@@ -156,7 +154,7 @@ const Dashboard = React.memo(function Dashboard(): JSX.Element {
       <div className="min-h-screen bg-gray-50">
         {/* Navigation */}
         <nav className="bg-white shadow-sm border-b">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7 xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between h-16">
               <div className="flex">
                 <div className="flex-shrink-0 flex items-center">
@@ -206,7 +204,7 @@ const Dashboard = React.memo(function Dashboard(): JSX.Element {
 
         {/* Footer */}
         <footer className="bg-white border-t">
-          <div className="max-w-7xl mx-auto py-4 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7 xl mx-auto py-4 px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between items-center">
               <div>
                 <p className="text-sm text-gray-500">© 2024 Zion Tech Solutions. All rights reserved.</p>
@@ -219,5 +217,4 @@ const Dashboard = React.memo(function Dashboard(): JSX.Element {
         </footer>
       </div>
     </>
-  );
-}
+  )}

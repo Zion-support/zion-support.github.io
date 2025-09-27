@@ -22,8 +22,7 @@ export, const, SystemHealthMonitor: React.FC = () => {con, s, t [healthsetHeal, 
       ca, s, e 'healt, h, y': return 'te, x, t-gre, e, n-6, 00, b, g-gre, e, n-50';
       ca, s, e 'warni, n, g': return 'te, x, t-yell, o, w-6, 00, b, g-yell, o, w-50';
       ca, s, e 'critic, a, l': return 'te, x, t-r, e, d-6, 00, b, g-r, e, d-50';
-      defau, l, t: return 'te, x, t-gr, a, y-600, b, g-gr, a, y-50'};
-  };
+      defau, l, t: return 'te, x, t-gr, a, y-600, b, g-gr, a, y-50'}};
 
  {con, s, t, hou, r, s = Ma, t, h.flo, o, r(secon, d, s / 3, 6, 0, 0);
     con, s, t, minut, e, s = Ma, t, h.flo, o, r((secon, d, s % 3, 6, 0, 0) / 60);

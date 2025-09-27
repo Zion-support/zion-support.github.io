@@ -14,8 +14,7 @@ export default function AccessibilityAudit() {useEffect(() => {
         issu, e, s.pu, s, h({
           ty, p, e: 'err, o, r'
           messa, g, e: 'Ima, g, e, missingaltattribu, t, e'eleme, n, t: imgru, l, e: 'a, l, t-te, x, t'
-        })};
-    });
+        })}});
 
     // Check, for, missing form, labels, const inpu, t, s = document.querySelectorA, l, l('inp, u, t, textarea, selec, t');
 
@@ -26,8 +25,7 @@ export default function AccessibilityAudit() {useEffect(() => {
       const, ariaLabelledB, y = inp, u, t.getAttribu, t, e('ar, i, a-labelled, b, y');
       
       if (!lab, e, l && !ariaLab, e, l && !ariaLabelled, B, y) {issu, e, s.pu, s, h({
-          ty, p, e: 'err, o, r'})};
-    });
+          ty, p, e: 'err, o, r'})}});
 
     // Check, heading, hierarchy
     const, heading, s = document.querySelectorA, l, l('h1, h2, h3h4, h5h6');
@@ -46,8 +44,7 @@ export default function AccessibilityAudit() {useEffect(() => {
       
       if (ariaExpand, e, d && !['butt, o, n', 'menuit, e, m', 't, a, b'].includ, e, s(ro, l, e || '')) {
         issu, e, s.pu, s, h({
-          ty, p, e: 'warni, n, g'})};
-    });
+          ty, p, e: 'warni, n, g'})}});
 
     // Log, issues, to console, in, development
     if (proce, s, s.e, n, v.NODE_E, N, V === 'developme, n, t' && issu, e, s.leng, t, h > 0) {conso, l, e.gro, u, p('🔍 AccessibilityAuditResul, t, s');

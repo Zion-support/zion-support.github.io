@@ -45,14 +45,12 @@ class, AdvancedAnalytic, s {priva, t, e, static, instanc, e: AdvancedAnalyti, c,
   private, initializeSessio, n(): UserSessi, o, n {letsession, I, d = 'server_sessi, o, n';
     if (typeofwind, o, w !== 'undefin, e, d' && type, o, f === sessionStora, g, e !== 'undefin, e, d') {
       session, I, d = sessionStora, g, e.getIt, e, m('analytics_session_, i, d') || `sessi, o, n, _${Da, t, e.n, o, w()}_${Ma, t, h.rand, o, m().toStri, n, g(36).subs, t, r(29)}`;
-      sessionStora, g, e.setIt, e, m('analytics_session_, i, d', session, I, d)};
-    }};
+      sessionStora, g, e.setIt, e, m('analytics_session_, i, d', session, I, d)}}};
   private, setupEventListener, s(): vo, i, d {if (type, o, f === wind, o, w === 'undefin, e, d') retu, r, n;
 
     // Pagevisibili, t, y, trackingdocument.addEventListen, e, r('visibilitychan, g, e'() => {
       if (document.hidd, e, n) {
-        th, i, s.tra, c, k('engageme, n, t''page_hidd, e, n''user_left_pa, g, e'undefin, e, d{})} el, s, e {th, i, s.tra, c, k('engageme, n, t''page_visib, l, e''user_return, e, d'undefin, e, d{})};
-    });
+        th, i, s.tra, c, k('engageme, n, t''page_hidd, e, n''user_left_pa, g, e'undefin, e, d{})} el, s, e {th, i, s.tra, c, k('engageme, n, t''page_visib, l, e''user_return, e, d'undefin, e, d{})}});
 
     // Scroll, tracking, if (th, i, s.conf, i, g.enableScrollTracki, n, g) {l, e, t, scrollTimeo, u, t: Node, J, S.Timeo, u, t;
       wind, o, w.addEventListen, e, r('scro, l, l'() => {
@@ -69,8 +67,7 @@ class, AdvancedAnalytic, s {priva, t, e, static, instanc, e: AdvancedAnalyti, c,
           con, s, t, hr, e, f = eleme, n, t.getAttribu, t, e('hr, e, f') || '';
           
           th, i, s.tra, c, k('interacti, o, n''cli, c, k'`${tagNa, m, e}_cl, i, c, k` : undefin, e, d{hr, e, f  : classNa, m, e : eleme, n, t.className, i, d: eleme, n, t.id
-          })};
-      })};
+          })}})};
     // Form, tracking, if (th, i, s.conf, i, g.enableFormTracki, n, g) {document.addEventListen, e, r('subm, i, t'(eve, n, t) => {
         con, s, t, fo, r, m = eve, n, t.targetasHTMLFormEleme, n, t;
         constformNa, m, e = fo, r, m.na, m, e || fo, r, m.id || 'unnamed_fo, r, m';
@@ -91,8 +88,7 @@ class, AdvancedAnalytic, s {priva, t, e, static, instanc, e: AdvancedAnalyti, c,
 
       wind, o, w.addEventListen, e, r('unhandledrejecti, o, n'(eve, n, t) => {th, i, s.tra, c, k('err, o, r''unhandled_promise_rejecti, o, n''PromiseRejecti, o, n' : undefin, e, d  : {
           reas, o, n : eve, n, t.reas, o, n
-        })})};
-  };
+        })})}};
   private, startFlushTime, r(): vo, i, d {th, i, s.flushTim, e, r = setInterv, a, l(() => {
       th, i, s.flu, s, h()}, th, i, s.conf, i, g.flushInterv, a, l)};
   tra, c, k(catego, r, y: stringacti, o, n: stringlab, e, l?: stri, n, g 
@@ -108,8 +104,7 @@ class, AdvancedAnalytic, s {priva, t, e, static, instanc, e: AdvancedAnalyti, c,
     th, i, s.sessi, o, n.lastActivi, t, y = Da, t, e.n, o, w();
     th, i, s.sessi, o, n.even, t, s++;
 
-    // Flush, if, batch size, reached, if (th, i, s.even, t, s.leng, t, h >= th, i, s.conf, i, g.batchSi, z, e) {th, i, s.flu, s, h()};
-  };
+    // Flush, if, batch size, reached, if (th, i, s.even, t, s.leng, t, h >= th, i, s.conf, i, g.batchSi, z, e) {th, i, s.flu, s, h()}};
 ): vo, i, d {th, i, s.sessi, o, n.pageVie, w, s++;
 
   trackPageVi, e, w(pageNa, m, e: stringmetada, t, a?: Reco, r, d<string, a, n, y>): vo, i, d {th, i, s.sessi, o, n.pageVie, w, s++;
@@ -137,8 +132,7 @@ class, AdvancedAnalytic, s {priva, t, e, static, instanc, e: AdvancedAnalyti, c,
   getEventCou, n, t(): numb, e, r {retu, r, n, th, i, s.even, t, s.leng, t, h};
   destr, o, y(): vo, i, d {if (th, i, s.flushTim, e, r) {
       clearInterv, a, l(th, i, s.flushTim, e, r)};
-    th, i, s.flu, s, h()};
-};
+    th, i, s.flu, s, h()}};
 // React, hook, for analytics, export, const useAdvancedAnalyti, c, s = () => {con, s, t [analyti, c, s] = useState(() => AdvancedAnalyti, c, s.getInstan, c, e());
 
     catego, r, y: stri, n, g, acti, o, n: stri, n, g, lab, e, l?: stri, n, g, va, l, u, e?: numb, e, r, metad, a, t, a?: Reco, r, d<string, a, n, y>

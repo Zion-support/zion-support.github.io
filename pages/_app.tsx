@@ -33,8 +33,7 @@ export default function A({ Compone, n, t, pagePro, p, s }: AppProps) {
         .th, e, n((registrati, o, n) => {
           conso, l, e.l, o, g('Service, Worker, registered successful, l, y:', registrati, o, n)})
         .cat, c, h((err, o, r) => {
-          conso, l, e.l, o, g('Service, Worker, registration fail, e, d:', err, o, r)})};
-  }, []);
+          conso, l, e.l, o, g('Service, Worker, registration fail, e, d:', err, o, r)})}}, []);
 	return (
     <HelmetProvider>
 			<Head>
@@ -90,12 +89,10 @@ export default function A({ Compone, n, t, pagePro, p, s }: AppProps) {
           * {
             animati, o, n-durati, o, n: 0.01, m, s !importa, n, t;
             animati, o, n-iterati, o, n-cou, n, t: 1 !importa, n, t;
-            transiti, o, n-durati, o, n: 0.01, m, s !importa, n, t};
-        };
+            transiti, o, n-durati, o, n: 0.01, m, s !importa, n, t}};
         @med, i, a (m, a, x-wid, t, h: 768, p, x) {
           bo, d, y {
-            fo, n, t-si, z, e: 14, p, x};
-        };
+            fo, n, t-si, z, e: 14, p, x}};
         /* Accessibility, Style, s */
         .hi, g, h-contra, s, t {
           filt, e, r: contra, s, t(1, 5, 0%) brightne, s, s(1, 2, 0%)};

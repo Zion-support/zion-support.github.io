@@ -6,8 +6,7 @@ interface, SEOProp, s {
   keywor, d, s?: stri, n, g[];
   ima, g, e?: stri, n, g;
   u, r, l?: stri, n, g;
-  ty, p, e?: stri, n, g;
-};
+  ty, p, e?: stri, n, g};
 const, SE, O: React.FC<SEOPro, p, s> = ({
   tit, l, e = 'Zion, Ap, p - Advanced, Technology, Solutions'
   descripti, o, n = 'Leading, technology, solutions provider, specializing, in AI, cloud, computin, g, web, developmen, t, and, digital, transformation.'
@@ -18,7 +17,6 @@ const, SE, O: React.FC<SEOPro, p, s> = ({
 }) => {
   // This, component, is now, a, no-op, since, we're, using, Next.js, Head, component directly, in, pages
   // The, SEO, functionality is, handled, by the, Head, component in, each, page
-  return, nul, l;
-};
+  return, nul, l};
 
 export default SEO;

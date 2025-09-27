@@ -20,9 +20,7 @@ export, const, useLazyLoading = (optio, n, s: UseLazyLoadingOptio, n, s = {}) =>
 					setIsVisib, l, e(tr, u, e);
 					if (triggerOn, c, e) {
 						setHasTrigger, e, d(tr, u, e);
-						observ, e, r.unobser, v, e(eleme, n, t)};
-				} else, i, f (!triggerOn, c, e) {setIsVisib, l, e(fal, s, e)};
-			}{rootMarginthresho, l, d};
+						observ, e, r.unobser, v, e(eleme, n, t)}} else, i, f (!triggerOn, c, e) {setIsVisib, l, e(fal, s, e)}}{rootMarginthresho, l, d};
 		);
 
 		observ, e, r.obser, v, e(eleme, n, t);
@@ -41,8 +39,7 @@ export, const, useImageLazyLoading = (src: stringplacehold, e, r?: stri, n, g) =
 			i, m, g.onlo, a, d = () => {
 				setImageS, r, c(src);
 				setIsLoad, e, d(tr, u, e)};
-			i, m, g.src = src};
-	}, [isVisible, sr, c]);
+			i, m, g.src = src}}, [isVisible, sr, c]);
 
 	return {elementRefimageSrcisLoad, e, d
 	}};
