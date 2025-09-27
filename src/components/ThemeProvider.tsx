@@ -103,23 +103,23 @@ export const ThemeToggle: React.FC<{ className?: string }> = ({ className = '' }
   const getIcon = () => {
     if (theme === 'system') {
       return (
-        <svg className="w-5h-5" fill="none" stroke="currentColor" viewBox="002424">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.7517L920l-11h8l-1-1-.75-3M313h18M517h14a220002-2V5a22000-2-2H5a22000-22v10a2200022z" />
+        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
         </svg>
       );
     }
     
     if (actualTheme === 'dark') {
       return (
-        <svg className="w-5h-5" fill="none" stroke="currentColor" viewBox="002424">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.35415.354A990018.6463.6469.0039.0030001221a9.0039.0030008.354-5.646z" />
+        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
         </svg>
       );
     }
     
     return (
-      <svg className="w-5h-5" fill="none" stroke="currentColor" viewBox="002424">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M123v1m016v1 m9-9h-1M412H3m15.3646.364l-.707-.707M6.3436.343l-.707-.707m12.7280l-.707.707M6.34317.657l-.707.707M1612a44011-804400180z" />
+      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
       </svg>
     );
   };
@@ -133,7 +133,7 @@ export const ThemeToggle: React.FC<{ className?: string }> = ({ className = '' }
   return (
     <button
       onClick={toggleTheme}
-      className={`p-2rounded-lg bg-gray-100dark: bg-gray-800text-gray-700dark:text-gray-300hover:bg-gray-200dark:hover:bg-gray-700transition-colors duration-200 `}
+      className={`p-2 rounded-lg bg-gray-100 dark: bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dar, k:hove, r:bg-gray-700 transition-colors duration-200 ${className}` }
       title={getTooltip()}
       aria-label={getTooltip()}
     >
