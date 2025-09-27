@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
-import Head from 'next/head';
-import SEO from '../src/components/SEO';
-import { useAnalytics } from '../src/hooks/useAnalytics';
+import React from "react";
+import Head from "next/head";
+import { useState } from "react";
+import SEO from "../src/components/SEO";
+import { useAnalytics } from "../src/hooks/useAnalytics";
 
 const Dashboard = React.memo(function Dashboard(): JSX.Element {
-  const [activeTab, setActiveTab] = useState('overview');
+  const [activeTab, setActiveTab] = useState("overview");
   const [isRealTime, setIsRealTime] = useState(false);
 
   // Analytics tracking
@@ -13,10 +14,9 @@ const Dashboard = React.memo(function Dashboard(): JSX.Element {
   const handleTabChange = (tab: string) => {
     setActiveTab(tab);
     trackClick(`dashboard-tab-${tab}`, 'navigation')};
-
   const renderDashboard = () => {
     switch (activeTab) {
-      case 'overview':
+      case "overview":
         return (
           <div className="p-8">
             <div className="flex justify-between items-center mb-8">
@@ -106,8 +106,7 @@ const Dashboard = React.memo(function Dashboard(): JSX.Element {
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Performance Metrics</h3>
                 <div className="h-64 bg-gray-100 rounded-lg flex items-center justify-center">
                   <p className="text-gray-500">Chart placeholder</p>
-                </div>
-              </div>
+                </div>              </div>
             </div>
           </div>
         );
@@ -140,15 +139,16 @@ const Dashboard = React.memo(function Dashboard(): JSX.Element {
               <p className="text-gray-600">Select a tab to view dashboard content.</p>
             </div>
           </div>
-        )}
-  };
+        )}  };
 
   return (
     <>
-      <SEO />
+      <SEO 
+        title="Dashboard - Zion Tech Group"
+        description="Access your dashboard and manage your account"
+        keywords="dashboard, analytics, management"
+      />
       <Head>
-        <title>Dashboard - Zion App</title>
-        <meta name="description" content="Access your Zion App dashboard for analytics, performance metrics, and system monitoring." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <div className="min-h-screen bg-gray-50">
@@ -193,12 +193,7 @@ const Dashboard = React.memo(function Dashboard(): JSX.Element {
                   </button>
                 </div>
               </div>
-            </div>
-          </div>
-        </nav>
-
-        {/* Main Content */}
-        <main>
+            </div>          </div>
           {renderDashboard()}
         </main>
 

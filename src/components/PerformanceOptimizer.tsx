@@ -1,18 +1,18 @@
-import React {useEffect, useState }  from 'react';
-import dynamic from 'next/dynamic';
+import React, { useEffect, useState } from 'react';
+import dynamic from "next/dynamic";
 
-interface, PerformanceOptimizerProp, s {enableServiceWork, e, r?: boole, a, n;
-  enableMonitori, n, g?: boole, a, n;
-  enableResourceHin, t, s?: boole, a, n;
-  enablePreloadi, n, g?: boole, a, n};
-function, PerformanceOptimizerComponen, t({enableServiceWork, e, r = tr, u, e
-  enableMonitori, n, g = trueenableResourceHin, t, s = trueenablePreloadi, n, g = tr, u, e
-}: PerformanceOptimizerPro, p, s): nu, l, l {con, s, t [memoryUsagesetMemoryUsa, g, e] = useState<{
-    us, e, d: numb, e, r;
-    tot, a, l: numb, e, r;
-    percenta, g, e: numb, e, r} | nu, l, l>(nu, l, l);
+interface PerformanceOptimizerProps {
+  enableServiceWorker?: boolean;
+  enableLazyLoading?: boolean;
+  enableImageOptimization?: boolean;
+}
 
-  useEffect(() => {if (typeofwind, o, w === 'undefin, e, d') retu, r, n;
+export default function PerformanceOptimizer({ 
+  enableServiceWorker = true,
+  enableLazyLoading = true,
+  enableImageOptimization = true
+}: PerformanceOptimizerProps) {
+  const [isOptimized, setIsOptimized] = useState(false);
 
     // Simpleperformance, monitoringi, f (enableMonitori, n, g) {
       conso, l, e.l, o, g('Performancemonitoringenabl, e, d')};

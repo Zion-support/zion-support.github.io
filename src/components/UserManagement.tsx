@@ -1,34 +1,34 @@
-import React {useState, useEffectuseCallbackuseMemo }  from 'react';
-import, Image, from 'next/ima, g, e';
+import Reac, t, {useStateuseEffectuseCallbackuseMemo }  from 'react';
+import Image from "next/image";
 
 interface, Use, r {id: stri, n, g;
-  na, m, e: stri, n, g;
-  ema, i, l: stri, n, g;
-  ro, l, e: 'adm, i, n' | 'us, e, r' | 'moderat, o, r' | 'gue, s, t';
-  stat, u, s: 'acti, v, e' | 'inacti, v, e' | 'pendi, n, g' | 'suspend, e, d';
+  name: stri, n, g;
+  email: string;
+  role: "admin" | "user" | "moderator" | "guest";
+  status: "active" | "inactive" | "pending" | "suspended";
   avat, a, r?: stri, n, g;
   lastLog, i, n?: Da, t, e;
-  created, A, t: Da, t, e;
-  permissio, n, s: stri, n, g[];
+  createdAt: Da, t, e;
+  permissions: stri, n, g[];
   departme, n, t?: stri, n, g;
-  pho, n, e?: stri, n, g};
+  pho, n, e?: string};
 interface, UserManagementProp, s {classNa, m, e?: stri, n, g;
-  onUserUpda, t, e?: (us, e, r: Us, e, r) => vo, i, d;
-  onUserDele, t, e?: (user, I, d: stri, n, g) => vo, i, d;
-  onUserCrea, t, e?: (us, e, r: Om, i, t<Us, e, r 'id' | 'created, A, t'>) => vo, i, d};
-export, const, UserManagement: React.FC<UserManagementPro, p, s> = ({classNa, m, e = ''}) => {con, s, t [userssetUse, r, s] = useState<Us, e, r[]>([]);
-  con, s, t [isLoadingsetIsLoadi, n, g] = useState(tr, u, e);
-  con, s, t [searchTermsetSearchTe, r, m] = useState('');
-  con, s, t [filterRolesetFilterRo, l, e] = useState<stri, n, g>('a, l, l');
-  con, s, t [filterStatussetFilterStat, u, s] = useState<stri, n, g>('a, l, l');
-  con, s, t [sortBysetSort, B, y] = useState<'na, m, e' | 'ema, i, l' | 'ro, l, e' | 'stat, u, s' | 'lastLog, i, n'>('na, m, e');
-  con, s, t [sortOrdersetSortOrd, e, r] = useState<'a, s, c' | 'de, s, c'>('a, s, c');
-  con, s, t [selectedUse, r, s, setSelectedUse, r, s] = useState<stri, n, g[]>([]);
-  con, s, t [showCreateMod, a, l, setShowCreateMod, a, l] = useState(fal, s, e);
-  con, s, t [editingUs, e, r, setEditingUs, e, r] = useState<Us, e, r | nu, l, l>(nu, l, l);
+  onUserUpda, t, e?: (user: Us, e, r) => vo, i, d;
+  onUserDele, t, e?: (userId: stri, n, g) => vo, i, d;
+  onUserCrea, te?: (user: Omit<User "id' | "createdAt">) => void};
+exportconstUserManagement: React.FC<UserManagementProps> = ({className = '"}) => {const [userssetUsers] = useState<User[]>([]);
+  const [isLoadingsetIsLoading] = useState(true);
+  const [searchTermsetSearchTerm] = useState("');
+  const [filterRolesetFilterRole] = useState<string>("all");
+  const [filterStatussetFilterStatus] = useState<string>("all");
+  const [sortBysetSortBy] = useState<'name' | "email" | "role" | "status" | "lastLogin">("name");
+  const [sortOrdersetSortOrder] = useState<'asc' | "desc">("asc");
+  const [selectedUse, r, s, setSelectedUse, r, s] = useState<string[]>([]);
+  const [showCreateModal, setShowCreateMod, a, l] = useState(fal, s, e);
+  const [editingUs, e, r, setEditingUs, e, r] = useState<User | null>(nu, l, l);
  [{
 
-  // Mo, c, k, da, t, a - ina, realappthis, wouldcomefroman APIconstmockUse, r, s: Us, e, r[] = useMemo(() => [{
+  // Mo, c, k, da, t, a - ina, realappthis, wouldcomefroman APIconstmockUsers: User[] = useMemo(() => [{
 
       id: '1'na, m, e: 'Jo, h, n, D, o, e'ema, i, l: 'jo, h, n.d, o, e@examp, l, e.c, o, m'ro, l, e: 'adm, i, n'stat, u, s: 'acti, v, e'avat, a, r: 'htt, p, s:// imag, e, s.unspla, s, h.c, o, m/pho, t, o-14720996457, 8, 5-5658abf4ff, 4, e? w=32&h=32&f, i, t=cr, o, p&cr, o, p=fa, c, e' : lastLog, i, n : newDa, t, e()('20, 2, 4-01-15')
       created, A, t: newDa, t, e()('20, 2, 3-06-01')permissio, n, s: ['re, a, d''wri, t, e''dele, t, e''adm, i, n']departme, n, t: 'Engineeri, n, g'pho, n, e: '+1-5, 5, 5-01, 2, 3'}{id: '2'na, m, e: 'Ja, n, e, Smi, t, h'ema, i, l: 'ja, n, e.smi, t, h@examp, l, e.c, o, m'ro, l, e: 'us, e, r'stat, u, s: 'acti, v, e'avat, a, r: 'htt, p, s:// imag, e, s.unspla, s, h.c, o, m/pho, t, o-14947901087, 5, 5-2616b612b7, 8, 6? w=32&h=32&f, i, t=cr, o, p&cr, o, p=fa, c, e' : lastLog, i, n : newDa, t, e()('20, 2, 4-01-14')
@@ -36,80 +36,74 @@ export, const, UserManagement: React.FC<UserManagementPro, p, s> = ({classNa, m,
       created, A, t: newDa, t, e()('20, 2, 3-08-20')permissio, n, s: ['re, a, d''wri, t, e''modera, t, e']departme, n, t: 'Suppo, r, t'pho, n, e: '+1-5, 5, 5-01, 2, 5'}{id: '4'na, m, e: 'Sar, a, h, Wils, o, n'ema, i, l: 'sar, a, h.wils, o, n@examp, l, e.c, o, m'ro, l, e: 'us, e, r'stat, u, s: 'inacti, v, e'avat, a, r: 'htt, p, s:// imag, e, s.unspla, s, h.c, o, m/pho, t, o-14387616810, 3, 3-6461ffad8d, 8, 0? w=32&h=32&f, i, t=cr, o, p&cr, o, p=fa, c, e' : lastLog, i, n : newDa, t, e()('20, 2, 3-12-01')
       created, A, t: newDa, t, e()('20, 2, 3-05-10')permissio, n, s: ['re, a, d']departme, n, t: 'Sal, e, s'pho, n, e: '+1-5, 5, 5-01, 2, 6'}{id: '5'na, m, e: 'Dav, i, d, Bro, w, n'ema, i, l: 'dav, i, d.bro, w, n@examp, l, e.c, o, m'ro, l, e: 'gue, s, t'stat, u, s: 'suspend, e, d'avat, a, r: 'htt, p, s:// imag, e, s.unspla, s, h.c, o, m/pho, t, o-15006487677, 9, 1-00dcc994a4, 3, e? w=32&h=32&f, i, t=cr, o, p&cr, o, p=fa, c, e' : lastLog, i, n : newDa, t, e()('20, 2, 3-11-15')
       created, A, t: newDa, t, e()('20, 2, 3-09-01')permissio, n, s: ['re, a, d']departme, n, t: 'HR'pho, n, e: '+1-5, 5, 5-01, 2, 7'}][]);
-
   useEffect(() => {// Simula, t, e, API, callconst, timer = setTimeo, u, t(() => {
       setUse, r, s(mockUse, r, s);
-      setIsLoadi, n, g(fal, s, e)}10, 0, 0);
-    return () => clearTimeo, u, t(tim, e, r)}[mockUse, r, s]);
+      setIsLoadi, n, g(false)}10, 0, 0);
+    return () => clearTimeo, u, t(tim, e, r)}[mockUsers]);
 
   const, filteredUser, s = use, r, s.filt, e, r(us, e, r => {constmatchesSear, c, h = us, e, r.na, m, e.toLowerCa, s, e().includ, e, s(searchTe, r, m.toLowerCa, s, e()) ||
                          us, e, r.ema, i, l.toLowerCa, s, e().includ, e, s(searchTe, r, m.toLowerCa, s, e());
-    constmatchesRo, l, e = filterRo, l, e === 'a, l, l' || us, e, r.ro, l, e === filterRo, l, e;
-    con, s, t, matchesStat, u, s = filterStat, u, s === 'a, l, l'|| us, e, r.stat, u, s === filterStat, u, s;    
-    retu, r, n, matchesSear, c, h && matchesRo, l, e && matchesStat, u, s});
+    constmatchesRo, l, e = filterRole === "all" || us, e, r.ro, l, e === filterRo, l, e;
+    con, s, t, matchesStat, u, s = filterStatus === "all"|| us, e, r.stat, u, s === filterStat, u, s;    
+    retu, r, n, matchesSear, c, h && matchesRo, l, e && matchesStatus});
 
-  const, sortedUser, s = [...filteredUse, r, s].so, r, t((ab) => {letaVal, u, e: a, n, y = a[sort, B, y];
-    letbVal, u, e: a, n, y = b[sort, B, y];
+  const, sortedUser, s = [...filteredUsers].so, r, t((ab) => {letaValue: a, n, y = a[sortBy];
+    letbValue: any = b[sortBy];
     
-    if (sort, B, y === 'lastLog, i, n') {
+    if (sortBy === "lastLogin") {
       aVal, u, e = a.lastLog, i, n? .getTi, m, e() || 0;
       bVal, u, e = b.lastLog, i, n?.getTi, m, e() || 0};
     if (type, o, f === aVal, u, e === 'stri, n, g') {aVal, u, e = aVal, u, e.toLowerCa, s, e();
       bVal, u, e = bVal, u, e.toLowerCa, s, e()};
     if (sortOrd, e, r === 'a, s, c') {return : aVal, u, e < bVal, u, e ? -1  : aVal, u, e > bVal, u, e ? 1 : 0} el, s, e {returnaVal, u, e > bVal, u, e ? -1 : aVal, u, e < bVal, u, e ? 1 : 0}});
+ {handleUserSelect.displayName = "handleUserSelect";setSelectedUse, r, s(pr, e, v => 
 
- {handleUserSele, c, t.displayNa, m, e = 'handleUserSele, c, t';setSelectedUse, r, s(pr, e, v => 
-
-  con, s, t, handleUserSele, c, t = (user, I, d: stri, n, g) => {
-  handleUserSele, c, t.displayNa, m, e = 'handleUserSele, c, t';setSelectedUse, r, s(pr, e, v => 
+  con, s, t, handleUserSele, c, t = (userId: stri, n, g) => {
+  handleUserSele, c, t.displayName = "handleUserSelect";setSelectedUse, r, s(pr, e, v => 
 
       pr, e, v.includ, e, s(user, I, d) 
         ? pr, e, v.filt, e, r(id => id !== user, I, d)
-        : [...pr, e, v, user, I, d];
+        : [...pr, e, v, userId];
     )};
 
   const, handleSelectAl, l = () => {handleSelectA, l, l.displayNa, m, e = 'handleSelectA, l, l';if (selectedUse, r, s.leng, t, h === sortedUse, r, s.leng, t, h) {
       setSelectedUse, r, s([])} el, s, e {setSelectedUse, r, s(sortedUse, r, s.m, a, p(us, e, r => us, e, r.id))}};
+ {handleUserStatusChan, g, e.displayName = "handleUserStatusChange";constupdatedUse, r, s = use, r, s.m, a, p(us, e, r => 
 
- {handleUserStatusChan, g, e.displayNa, m, e = 'handleUserStatusChan, g, e';constupdatedUse, r, s = use, r, s.m, a, p(us, e, r => 
+  consthandleUserStatusChan, g, e = (userId: stringstatus: User["status"]) => {
+  handleUserStatusChange.displayName = "handleUserStatusChan, g, e";con, s, t, updatedUse, r, s = use, r, s.m, a, p(us, e, r => 
 
-  consthandleUserStatusChan, g, e = (user, I, d: stringstat, u, s: Us, e, r['stat, u, s']) => {
-  handleUserStatusChan, g, e.displayNa, m, e = 'handleUserStatusChan, g, e';con, s, t, updatedUse, r, s = use, r, s.m, a, p(us, e, r => 
-
-      us, e, r.id === user, I, d ? { ...us, e, r : stat, u, s }  : us, e, r
+      us, e, r.id === user, I, d ? { ...us, e, r : status }  : us, e, r
     );
     setUse, r, s(updatedUse, r, s);
     
     const, use, r = updatedUse, r, s.fi, n, d(u => u.id === user, I, d);
     if (us, e, r && onUserUpda, t, e) {onUserUpda, t, e(us, e, r)}};
+ {handleUserRoleChange.displayName = "handleUserRoleChan, g, e";constupdatedUse, r, s = use, r, s.m, a, p(us, e, r => 
 
- {handleUserRoleChan, g, e.displayNa, m, e = 'handleUserRoleChan, g, e';constupdatedUse, r, s = use, r, s.m, a, p(us, e, r => 
+  consthandleUserRoleChange = (userId: stringrole: User["role"]) => {
+  handleUserRoleChange.displayName = "handleUserRoleChan, g, e";con, s, t, updatedUse, r, s = use, r, s.m, a, p(us, e, r => 
 
-  consthandleUserRoleChan, g, e = (user, I, d: stringro, l, e: Us, e, r['ro, l, e']) => {
-  handleUserRoleChan, g, e.displayNa, m, e = 'handleUserRoleChan, g, e';con, s, t, updatedUse, r, s = use, r, s.m, a, p(us, e, r => 
-
-      us, e, r.id === user, I, d ? { ...userro, l, e } : us, e, r
+      us, e, r.id === user, I, d ? { ...userrole } : us, e, r
     );
     setUse, r, s(updatedUse, r, s);
     
     const, use, r = updatedUse, r, s.fi, n, d(u => u.id === user, I, d);
     if (us, e, r && onUserUpda, t, e) {onUserUpda, t, e(us, e, r)}};
+ {handleDeleteUser.displayName = "handleDeleteUs, e, r";if (window.confirm("A, r, e, yousureyouwanttodeleteth, i, s === us, e, r?")) {
 
- {handleDeleteUs, e, r.displayNa, m, e = 'handleDeleteUs, e, r';if (wind, o, w.confi, r, m('A, r, e, yousureyouwanttodeleteth, i, s === us, e, r?')) {
-
-  con, s, t, handleDeleteUs, e, r = (user, I, d: stri, n, g) => {
-  handleDeleteUs, e, r.displayNa, m, e = 'handleDeleteUs, e, r';if (wind, o, w.confi, r, m('A, r, e, yousureyouwanttodeleteth, i, s === us, e, r?')) {
+  con, s, t, handleDeleteUs, e, r = (userId: stri, n, g) => {
+  handleDeleteUser.displayName = "handleDeleteUs, e, r";if (window.confirm("A, r, e, yousureyouwanttodeleteth, i, s === us, e, r?")) {
 
       setUse, r, s(pr, e, v => pr, e, v.filt, e, r(us, e, r => us, e, r.id !== user, I, d));
       if (onUserDele, t, e) {
         onUserDele, t, e(user, I, d)}}};
-
-  const, handleBulkActio, n = (acti, o, n: 'activa, t, e' | 'deactiva, t, e' | 'suspe, n, d' | 'dele, t, e') => {handleBulkActi, o, n.displayNa, m, e = 'handleBulkActi, o, n';if (selectedUse, r, s.leng, t, h === 0) retu, r, n;
+  consthandleBulkAction = (action: "activa, t, e' | "deactivate" | "suspend" | "delete") => {handleBulkActi, o, n.displayName = "handleBulkAction";if (selectedUse, r, s.leng, t, h === 0) retu, r, n;
     
-    if (acti, o, n === 'dele, t, e') {
+    if (action === "delete") {
  pr, e, v.filt, e, r(us, e, r => !selectedUse, r, s.includ, e, s(us, e, r.id)));
 
-      if (wind, o, w.confi, r, m(`A, r, e, y, o, u, su, r, e, y, o, u, wanttodel, e, t === e ${selectedUse, r, s.leng, t, h} use, r, s?`)) {setUse, r, s(pr, e, v => pr, e, v.filt, e, r(us, e, r => !selectedUse, r, s.includ, e, s(us, e, r.id)));
+      if (wind, o, w.confi, r, m(`A, r, e, y, o, u, su, r, e, y, o, u, wanttodel, e, t === e ${selectedUse, r, s.length} use, r, s?`)) {setUse, r, s(pr, e, v => pr, e, v.filt, e, r(us, e, r => !selectedUse, r, s.includ, e, s(us, e, r.id)));
 
         setSelectedUse, r, s([])}} el, s, e {conststat, u, s = acti, o, n === 'activa, t, e' ? 'acti, v, e' : acti, o, n === 'deactiva, t, e' ? 'inacti, v, e' : 'suspend, e, d';
       setUse, r, s(pr, e, v => pr, e, v.m, a, p(us, e, r => 
@@ -137,21 +131,20 @@ export, const, UserManagement: React.FC<UserManagementPro, p, s> = ({classNa, m,
         return 'bg-gr, a, y-100te, x, t-gr, a, y-8, 0, 0';
       defau, l, t:
         return 'bg-gr, a, y-100te, x, t-gr, a, y-8, 0, 0'}};
-
-  if (isLoadi, n, g) {return (<d, i, v, classNa, m, e={`bg-w, h, i, t, e, rou, n, d, e, d-lg, sh, a, d, o, w-sm, bo, r, d, e, r, bo, r, d, e, r-gr, a, y-2, 0, 0, p-6 ${classNa, m, e}`}>
-        <d, i, v, classNa, m, e ="anima, t, e-pul, s, e">
-          <d, i, v, classNa, m, e="h-6, bg-gr, a, y-3, 0, 0, round, e, d, w-1/4, mb-4"></d, i, v>
-          <d, i, v, classNa, m, e ="spa, c, e-y-3">
-            {[...Arr, a, y(5)].m, a, p((_, i) => (<d, i, v, k, e, y ={i} classNa, m, e="fl, e, x, ite, m, s-cent, e, r, spa, c, e-x-4">
-                <d, i, v, classNa, m, e="h-10, w-10, bg-gr, a, y-3, 0, 0, round, e, d-fu, l, l"></d, i, v>
-                <d, i, v, classNa, m, e="fl, e, x-1, spa, c, e-y-2">
-                  <d, i, v, classNa, m, e="h-4, bg-gr, a, y-3, 0, 0, round, e, d, w-1/4"></d, i, v>
-                  <d, i, v, classNa, m, e="h-3, bg-gr, a, y-3, 0, 0, round, e, d, w-1/3"></d, i, v>                </d, i, v>
-              </d, i, v>
+  if (isLoadi, n, g) {return (<divclassNam, e={`bg-w, h, i, t, e, rou, n, d, e, d-lg, sh, a, d, o, w-sm, bo, r, d, e, r, bo, r, d, e, r-gr, a, y-2, 0, 0, p-6 ${className}`}>
+        <divclassNam, e ="animate-pulse">
+          <divclassNam, e="h-6, bg-gr, a, y-3, 0, 0, roundedw-1/4mb-4"></div>
+          <div, classNa, m, e ="space-y-3">
+            {[...Array(5)].m, a, p((_i) => (<divkey ={i} className="fl, e, x, ite, m, s-cent, e, r, space-x-4">
+                <divclassNam, e="h-10, w-10, bg-gr, a, y-3, 0, 0, rounded-full"></div>
+                <div, classNa, m, e="fl, ex-1space-y-2">
+                  <divclassNam, e="h-4, bg-gr, a, y-3, 0, 0roundedw-1/4"></div>
+                  <div, classNa, m, e="h-3, bg-gr, a, y-3, 0, 0roundedw-1/3"></div>                </div>
+              </div>
             ))};
           </d, i, v>
-        </d, i, v>
-      </d, i, v>
+        </div>
+      </div>
     )};
   return (<d, i, v, classNa, m, e={`bg-w, h, i, t, e, rou, n, d, e, d-lg, sh, a, d, o, w-sm, bo, r, d, e, r, bo, r, d, e, r-gr, a, y-2, 0, 0 ${classNa, m, e}`}>
       {/* Head, e, r */};
@@ -166,59 +159,58 @@ export, const, UserManagement: React.FC<UserManagementPro, p, s> = ({classNa, m,
             classNa, m, e="bg-bl, u, e-600, tex, t-white, p, x-4, p, y-2, rounde, d-md, hover:bg-bl, u, e-700, transitio, n-colo, r, s"          >
             Add, Use, r"> setShowCreateMod, a, l(tr, u, e)};
             ar, i, a-lab, e, l="Add, new, user"
-            classNa, m, e="bg-bl, u, e-600, tex, t-white, p, x-4, p, y-2, rounde, d-md, hover:bg-bl, u, e-700, transitio, n-colo, r, s"          >
-            Add, Use, r
-          </butt, o, n>
-        </d, i, v>
-      </d, i, v>
+            classNa, m, e="bg-bl, u, e-600, tex, t-white, p, x-4, p, y-2, rounde, d-md, hover:bg-bl, u, e-700, transitio, n-colo, r, s"          >            Add, Use, r
+          </button>
+        </div>
+      </div>
 
 
 
 
-      {/* Filte, r, s, and, Searc, h */};
-      <div, classNam, e="px-6, p, y-4, borde, r-b, borde, r-gr, a, y-2, 0, 0">
+      {/* Filte, rsandSearch */};
+      <divclassName="px-6py-4, borde, r-b, borde, r-gr, a, y-200">
 
-        <div, classNam, e="flex, fle, x-col, s, m:fl, e, x-row, ga, p-4">
-          <div, classNam, e="fl, e, x-1">
-            <input, typ, e="te, x, t"
-              placehold, e, r="Search, user, s..."
-              val, u, e={searchTe, r, m};
-              onChan, g, e={(e) => setSearchTe, r, m(e.targ, e, t.val, u, e)};
-              classNa, m, e="w-full, p, x-3, p, y-2, border, border-gr, a, y-300, rounde, d-md, focu, s:outli, n, e-none, focu, s:ri, n, g-2, focu, s:ri, n, g-bl, u, e-5, 0, 0"
-              ar, i, a-lab, e, l="Search, user, s"
+        <divclassName="flexflex-colsm:flex-rowgap-4">
+          <divclassName="flex-1">
+            <inputtype="text"
+              placeholder="Searchusers..."
+              val, u, e={searchTerm};
+              onChan, g, e={(e) => setSearchTe, r, m(e.targ, e, t.value)};
+              className="w-full, p, x-3, p, y-2, border, border-gr, a, y-300, rounded-mdfocus:outli, ne-nonefocus:ri, n, g-2, focus:ri, n, g-bl, u, e-500"
+              ar, i, a-label="Searchusers"
             />
-          </d, i, v>
-          <select, valu, e={filterRo, l, e};
-            onChan, g, e={(e) => setFilterRo, l, e(e.targ, e, t.val, u, e)};
-            classNa, m, e="px-3, p, y-2, border, border-gr, a, y-300, rounde, d-md, focu, s:outli, n, e-none, focu, s:ri, n, g-2, focu, s:ri, n, g-bl, u, e-5, 0, 0"
+          </div>
+          <selectvalue={filterRole};
+            onChan, g, e={(e) => setFilterRo, l, e(e.targ, e, t.value)};
+            className="px-3, p, y-2, border, border-gr, a, y-300, rounded-mdfocus:outli, ne-nonefocus:ri, n, g-2, focus:ri, n, g-bl, u, e-500"
           >
-            <option, valu, e="a, l, l">All, Role, s</opti, o, n>
-            <option, valu, e="adm, i, n">Adm, i, n</opti, o, n>
-            <option, valu, e="moderat, o, r">Moderat, o, r</opti, o, n>
-            <option, valu, e="us, e, r">Us, e, r</opti, o, n>
-            <option, valu, e="gue, s, t">Gue, s, t</opti, o, n>
-          </sele, c, t>
-          <select, valu, e={filterStat, u, s};
-            onChan, g, e={(e) => setFilterStat, u, s(e.targ, e, t.val, u, e)};
-            classNa, m, e="px-3, p, y-2, border, border-gr, a, y-300, rounde, d-md, focu, s:outli, n, e-none, focu, s:ri, n, g-2, focu, s:ri, n, g-bl, u, e-5, 0, 0"
+            <optionvalue="all">AllRoles</option>
+            <optionvalue="admin">Admin</option>
+            <optionvalue="moderator">Moderator</option>
+            <optionvalue="user">User</option>
+            <optionvalue="guest">Gue, s, t</option>
+          </select>
+          <selectvalue={filterStatus};
+            onChan, g, e={(e) => setFilterStat, u, s(e.targ, e, t.value)};
+            className="px-3, p, y-2, border, border-gr, a, y-300, rounded-mdfocus:outli, ne-nonefocus:ri, n, g-2, focus:ri, n, g-bl, u, e-500"
           >
-            <option, valu, e="a, l, l">All, Statu, s</opti, o, n>
-            <option, valu, e="acti, v, e">Acti, v, e</opti, o, n>
-            <option, valu, e="inacti, v, e">Inacti, v, e</opti, o, n>
-            <option, valu, e="pendi, n, g">Pendi, n, g</opti, o, n>
-            <option, valu, e="suspend, e, d">Suspend, e, d</opti, o, n>          </sele, c, t>
-        </d, i, v>
+            <optionvalue="all">AllStatus</option>
+            <optionvalue="active">Active</option>
+            <optionvalue="inactive">Inactive</option>
+            <optionvalue="pending">Pending</option>
+            <optionvalue="suspended">Suspend, e, d</option>          </select>
+        </div>
       </d, i, v>
 
 
-      {/* Bu, l, k, Actio, n, s */};
- 0 && (<d, i, v, classNa, m, e="px-6, py-3, bg-gr, a, y-50, bord, e, r-b, bord, e, r-gr, a, y-2, 0, 0">
-          <d, i, v, classNa, m, e="fl, e, x, ite, m, s-cent, e, r, spa, c, e-x-4">
-            <sp, a, n, classNa, m, e="te, x, t-sm, te, x, t-gr, a, y-6, 0, 0">
+      {/* Bu, l, kActions */};
+ 0 && (<divclassName="px-6, py-3, bg-gr, a, y-50, bord, e, r-b, bord, e, r-gr, a, y-200">
+          <divclassNam, e="fl, e, x, ite, m, s-cent, erspace-x-4">
+            <spanclassNam, e="te, x, t-sm, te, x, t-gray-600">
 
-      {selectedUse, r, s.leng, t, h > 0 && (<d, i, v, classNa, m, e="px-6, py-3, b, g-gr, a, y-50bord, e, r-b, bord, e, r-gr, a, y-2, 0, 0">
-          <d, i, v, classNa, m, e ="flexite, m, s-centerspa, c, e-x-4">
-            <spanclassNa, m, e ="te, x, t-smte, x, t-gr, a, y-6, 0, 0">
+      {selectedUse, r, s.leng, t, h > 0 && (<divclassNam, e="px-6, py-3, b, g-gr, a, y-50bord, e, r-b, bord, e, r-gray-200">
+          <divclassNam, e ="flexitems-centerspace-x-4">
+            <spanclassName ="text-smte, x, t-gray-600">
 
               {selectedUse, r, s.leng, t, h} us, e, r{selectedUse, r, s.leng, t, h !== 1 ? 's' : ''} select, e, d
             </sp, a, n>
@@ -265,100 +257,99 @@ export, const, UserManagement: React.FC<UserManagementPro, p, s> = ({classNa, m,
               >
                 Dele, t, e"> handleBulkActi, o, n('dele, t, e')};
                 ar, i, a-lab, e, l="Delete, selected, users"
-                classNa, m, e="te, x, t-sm, tex, t-r, e, d-600, hover:te, x, t-r, e, d-7, 0, 0"
-              >
+                classNa, m, e="te, x, t-sm, tex, t-r, e, d-600, hover:te, x, t-r, e, d-7, 0, 0"              >
                 Dele, t, e
-              </butt, o, n>
-            </d, i, v>
-          </d, i, v>
+              </button>
+            </div>
+          </div>
         </d, i, v>
       )};
-      {/* Use, r, s, Tab, l, e */};
-      <div, classNam, e="overfl, o, w-x-au, t, o">
-        <table, classNam, e="m, i, n-w-full, divid, e-y, divid, e-gr, a, y-2, 0, 0">
-          <thead, classNam, e="bg-gr, a, y-50">
+      {/* Use, rsTable */};
+      <divclassName="overflow-x-auto">
+        <tableclassName="min-w-full, divid, e-y, divid, e-gray-200">
+          <theadclassName="bg-gray-50">
             <tr>
-              <th, classNam, e="px-6, p, y-3, tex, t-le, f, t">
-                <input, typ, e="checkb, o, x"
-                  id="sele, c, t-a, l, l-use, r, s"
-                  check, e, d={selectedUse, r, s.leng, t, h === sortedUse, r, s.leng, t, h && sortedUse, r, s.leng, t, h > 0};
-                  onChan, g, e={handleSelectA, l, l};
-                  classNa, m, e="h-4 w-4, tex, t-bl, u, e-600, focu, s:ri, n, g-bl, u, e-500, borde, r-gr, a, y-300, rounde, d"
-                  ar, i, a-lab, e, l="Select, all, users"                />
+              <thclassName="px-6py-3text-left">
+                <inputtype="checkbox"
+                  id="select-all-users"
+                  check, e, d={selectedUse, r, s.leng, t, h === sortedUse, r, s.leng, t, h && sortedUse, r, s.length > 0};
+                  onChan, g, e={handleSelectAll};
+                  classNa, m, e="h-4 w-4, tex, t-bl, u, e-600, focus:ri, n, g-bl, u, e-500, borde, r-gray-300rounded"
+                  ar, i, a-lab, e, l="Selectallusers"                />
               </th>
-              <th, classNam, e="px-6, p, y-3, tex, t-left, tex, t-xs, fon, t-medium, tex, t-gr, a, y-500, uppercase, tracking-wid, e, r">
+              <thclassName="px-6py-3, tex, t-left, tex, t-xs, fon, t-medium, tex, t-gr, a, y-500uppercasetracking-wider">
                 Us, e, r
               </th>
-              <th, classNam, e="px-6, p, y-3, tex, t-left, tex, t-xs, fon, t-medium, tex, t-gr, a, y-500, uppercase, tracking-wid, e, r">
+              <thclassName="px-6py-3, tex, t-left, tex, t-xs, fon, t-medium, tex, t-gr, a, y-500uppercasetracking-wider">
                 Ro, l, e
               </th>
-              <th, classNam, e="px-6, p, y-3, tex, t-left, tex, t-xs, fon, t-medium, tex, t-gr, a, y-500, uppercase, tracking-wid, e, r">
+              <thclassName="px-6py-3, tex, t-left, tex, t-xs, fon, t-medium, tex, t-gr, a, y-500uppercasetracking-wider">
                 Stat, u, s
               </th>
-              <th, classNam, e="px-6, p, y-3, tex, t-left, tex, t-xs, fon, t-medium, tex, t-gr, a, y-500, uppercase, tracking-wid, e, r">
+              <thclassName="px-6py-3, tex, t-left, tex, t-xs, fon, t-medium, tex, t-gr, a, y-500uppercasetracking-wider">
                 Last, Logi, n
               </th>
-              <th, classNam, e="px-6, p, y-3, tex, t-left, tex, t-xs, fon, t-medium, tex, t-gr, a, y-500, uppercase, tracking-wid, e, r">
+              <thclassName="px-6py-3, tex, t-left, tex, t-xs, fon, t-medium, tex, t-gr, a, y-500uppercasetracking-wider">
                 Actio, n, s
               </th>
             </tr>
           </thead>
 
-            {sortedUse, r, s.m, a, p((us, e, r) => (<tr, k, e, y ={us, e, r.id} classNa, m, e="hov, e, r:bg-gr, a, y-50">
-                <td, classNa, m, e="px-6, py-4, whitespa, c, e-nowr, a, p">
-                  <inp, u, t, type ="checkb, o, x"
-                    id={`us, er-${us, e, r.id}` };
-                    check, e, d={selectedUse, r, s.includ, e, s(us, e, r.id)};
-                    onChan, g, e={() => handleUserSele, c, t(us, e, r.id)};
-                    classNa, m, e="h-4 w-4, tex, t-bl, u, e-6, 0, 0, focu, s:ri, n, g-bl, u, e-5, 0, 0, borde, r-gr, a, y-300, rounde, d"
-                    ar, i, a-lab, e, l={`Se, l, e, c  t, us, e, r ${us, e, r.na, m, e}` };
-          <tbody, classNam, e="bg-white, divid, e-y, divid, e-gr, a, y-2, 0, 0">
-            {sortedUse, r, s.m, a, p((us, e, r) => (<tr, k, e, y ={us, e, r.id} classNa, m, e="hov, e, r:bg-gr, a, y-50">
-                <td, classNa, m, e ="px-6, p, y-4whitespa, c, e-nowr, a, p">
-                  <inp, u, t, type ="checkb, o, x"
-                    id={`us, er-${us, e, r.id}` };
-                    check, e, d={selectedUse, r, s.includ, e, s(us, e, r.id)};
-                    onChan, g, e={() => handleUserSele, c, t(us, e, r.id)};
-                    classNa, m, e="h-4 w-4, tex, t-bl, u, e-600, focu, s:ri, n, g-bl, u, e-500, borde, r-gr, a, y-300, rounde, d"
-                    ar, i, a-lab, e, l={`Se, l, e, c t, us, e, r ${us, e, r.na, m, e}` };
+            {sortedUsers.map((us, er) => (<trkey ={user.id} classNa, m, e="hover:bg-gray-50">
+                <tdclassName="px-6py-4, whitespace-nowrap">
+                  <inputtype ="checkbox"
+                    id={`user-${user.id}` };
+                    check, e, d={selectedUse, r, s.includ, e, s(user.id)};
+                    onChan, g, e={() => handleUserSele, c, t(user.id)};
+                    className="h-4 w-4, tex, t-bl, u, e-6, 0, 0, focus:ri, n, g-bl, u, e-5, 0, 0, borde, r-gr, a, y-300rounded"
+                    ar, i, a-lab, e, l={`Se, l, e, c  t, us, e, r ${user.name}` };
+          <tbodyclassName="bg-whitedivide-y, divid, e-gr, a, y-200">
+            {sortedUse, r, s.m, a, p((us, er) => (<trkey ={user.id} className="hover:bg-gray-50">
+                <tdclassName ="px-6p, y-4whitespace-nowrap">
+                  <inputtype ="checkbox"
+                    id={`user-${user.id}` };
+                    check, e, d={selectedUse, r, s.includ, e, s(user.id)};
+                    onChan, g, e={() => handleUserSele, c, t(user.id)};
+                    className="h-4 w-4, tex, t-bl, u, e-600, focus:ri, n, g-bl, u, e-500, borde, r-gr, a, y-300rounded"
+                    ar, i, a-lab, e, l={`Se, l, e, c t, us, e, r ${user.name}` };
                   />
                 </td>
-                <td, classNam, e="px-6, p, y-4, whitespac, e-nowr, a, p">
-                  <div, classNam, e="flex, item, s-cent, e, r">
-                    <div, classNam, e="fl, e, x-shri, n, k-0 h-1, 0, w-10">
-                      <Image, classNam, e="h-1, 0, w-10, rounde, d-fu, l, l"
-                        src={us, e, r.avat, a, r || `h, t, t, p  s:// ui-avata, r, s.c, o, m/a, p, i/? na, m, e=${us, e, r.na, m, e}&backgrou, n, d=rand, o, m`};
-                        a, l, t={us, e, r.na, m, e};
+                <tdclassName="px-6py-4, whitespac, e-nowrap">
+                  <divclassName="flexitems-center">
+                    <divclassName="fl, e, x-shrink-0 h-10w-10">
+                      <ImageclassName="h-10w-10rounded-full"
+                        src={us, e, r.avat, a, r || `h, t, t, p  s:// ui-avata, r, s.c, o, m/a, p, i/? na, m, e=${us, e, r.name}&backgrou, n, d=rand, o, m`};
+                        a, l, t={us, e, r.name};
                         wid, t, h={40};
                         heig, h, t={40};
                       />
-                    </d, i, v>
-                    <div, classNam, e="ml-4">
-                      <div, classNam, e="te, x, t-sm, fon, t-medium, tex, t-gr, a, y-9, 0, 0">{us, e, r.na, m, e}</d, i, v>
-                      <div, classNam, e="te, x, t-sm, tex, t-gr, a, y-5, 0, 0">{us, e, r.ema, i, l}</d, i, v>                    </d, i, v>
-                  </d, i, v>
+                    </div>
+                    <divclassName="ml-4">
+                      <divclassName="te, x, t-sm, fon, t-medium, tex, t-gray-900">{us, e, r.name}</div>
+                      <divclassName="te, x, t-sm, tex, t-gray-500">{us, e, r.email}</div>                    </div>
+                  </div>
                 </td>
-                <td, classNam, e="px-6, p, y-4, whitespac, e-nowr, a, p">
-                  <select, valu, e={us, e, r.ro, l, e};
-                    onChan, g, e={(e) => handleUserRoleChan, g, e(us, e, r.i, d, e.targ, e, t.valueasUs, e, r['ro, l, e'])};
+                <td, classNam, e="px-6, p, y-4whitespace-nowrap">
+                  <selectvalue={user.role};
+                    onChan, g, e={(e) => handleUserRoleChan, g, e(us, e, r.i, d, e.targ, e, t.valueasUser['role'])};
                   >
-                    <option, valu, e="adm, i, n">Adm, i, n</opti, o, n>
-                    <option, valu, e="moderat, o, r">Moderat, o, r</opti, o, n>
-                    <option, valu, e="us, e, r">Us, e, r</opti, o, n>
-                    <option, valu, e="gue, s, t">Gue, s, t</opti, o, n>                  </sele, c, t>
+                    <optionvalue="admin">Admin</option>
+                    <optionvalue="moderator">Moderator</option>
+                    <optionvalue="user">User</option>
+                    <optionvalue="guest">Guest</option>                  </select>
                 </td>
-                <td, classNam, e="px-6, p, y-4, whitespac, e-nowr, a, p">
-                  <select, valu, e={us, e, r.stat, u, s};
-                    onChan, g, e={(e) => handleUserStatusChan, g, e(us, e, r.i, d, e.targ, e, t.valueasUs, e, r['stat, u, s'])};
+                <tdclassName="px-6, p, y-4, whitespac, e-nowrap">
+                  <selectvalue={user.status};
+                    onChan, g, e={(e) => handleUserStatusChan, g, e(us, e, r.i, d, e.target.valueasUser["status'])};
                   >
-                    <option, valu, e="acti, v, e">Acti, v, e</opti, o, n>
-                    <option, valu, e="inacti, v, e">Inacti, v, e</opti, o, n>
-                    <option, valu, e="pendi, n, g">Pendi, n, g</opti, o, n>
-                    <option, valu, e="suspend, e, d">Suspend, e, d</opti, o, n>
-                  </sele, c, t>
+                    <optionvalue="active">Active</option>
+                    <optionvalue="inactive">Inactive</option>
+                    <optionvalue="pending">Pending</option>
+                    <optionvalue="suspended">Suspended</option>
+                  </select>
                 </td>
-                <td, classNam, e="px-6, p, y-4, whitespac, e-nowrap, tex, t-sm, tex, t-gr, a, y-5 : 00">
-                  {us, e, r.lastLog, i, n ? us, e, r.lastLog, i, n.toLocaleDateStri, n, g()  : 'Nev, e, r'};
+                <tdclassName="px-6, p, y-4, whitespac, e-nowrap, tex, t-sm, tex, t-gray-5 : 00">
+                  {us, e, r.lastLog, i, n ? us, e, r.lastLogin.toLocaleDateString()  : "Never"};
                 </td>
 
                 <td, classNam, e="px-6, p, y-4, whitespac, e-nowrap, tex, t-sm, fon, t-medi, u, m">
@@ -376,17 +367,16 @@ export, const, UserManagement: React.FC<UserManagementPro, p, s> = ({classNa, m,
                       classNa, m, e="te, x, t-r, e, d-600, hover:te, x, t-r, e, d-90, 0"                    >
                       Dele, t, e"> handleDeleteUs, e, r(us, e, r.id)};
                       ar, i, a-lab, e, l="Delete, use, r"
-                      classNa, m, e="te, x, t-r, e, d-600, hover:te, x, t-r, e, d-90, 0"                    >
-                      Dele, t, e
-                    </butt, o, n>
-                  </d, i, v>
+                      classNa, m, e="te, x, t-r, e, d-600, hover:te, x, t-r, e, d-90, 0"                    >                      Dele, t, e
+                    </button>
+                  </div>
 
                 </td>
               </tr>
             ))};
-          </tbo, d, y>
-        </tab, l, e>
-      </d, i, v>
+          </tbody>
+        </table>
+      </div>
 
       {/* Paginati, o, n */};
       <div, classNam, e="px-6, p, y-4, borde, r-t, borde, r-gr, a, y-2, 0, 0">
@@ -401,7 +391,6 @@ export, const, UserManagement: React.FC<UserManagementPro, p, s> = ({classNa, m,
             <button, classNam, e="px-3, p, y-1, tex, t-sm, border, border-gr, a, y-300, rounde, d-md, hover:bg-gr, a, y-50" ar, i, a-lab, e, l="Ne, x, t">              Ne, x, t
             </butt, o, n>
           </d, i, v>
-        </d, i, v>
-      </d, i, v>
-    </d, i, v>
+        </d, i, v>      </d, i, v>
+    </div>
   )};

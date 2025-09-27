@@ -1,7 +1,7 @@
 import React, { useState  useEffect  useCallback } from 'react';
-import { motion  AnimatePresence } from 'framer-motion';
-import { BarChartBarXAxisYAxisCartesianGridTooltipResponsiveContainerLineChartLinePieChartPieCell } from 'recharts';
-import { ActivityZapShieldEye } from 'lucide-react';
+import { motion  AnimatePresence  } from "framer-motion";
+import { BarChartBarXAxisYAxisCartesianGridTooltipResponsiveContainerLineChartLinePieChartPieCell  } from "recharts";
+import { ActivityZapShieldEye  } from "lucide-react";
 
 interface ChartData {
   name: string;
@@ -109,21 +109,15 @@ export const ComprehensiveAnalyticsDashboard: React.FC<ComprehensiveAnalyticsDas
     )}
 
   const performanceData: ChartData[] = [
-    { name: 'Page Speed'value: data.performance.pageSpeedcolor: '#10B981' },
-    { name: 'Load Time'value: data.performance.loadTime / 100color: '#F59E0B' },
-    { name: 'Bounce Rate'value: data.performance.bounceRatecolor: '#EF4444' },
+    { name: 'Page Speed'value: data.performance.pageSpeedcolor: '#10B981' }{ name: 'Load Time'value: data.performance.loadTime / 100color: '#F59E0B' }{ name: 'Bounce Rate'value: data.performance.bounceRatecolor: '#EF4444' },
     { name: 'Conversion'value: data.performance.conversionRate * 10color: '#8B5CF6' }
   ];
 
   const securityData: ChartData[] = [
-    { name: 'Security Score'value: data.security.scorecolor: '#10B981' },
-    { name: 'Threats'value: data.security.threats * 20color: '#EF4444' },
-    { name: 'Vulnerabilities'value: data.security.vulnerabilities * 10color: '#F59E0B' }
+    { name: 'Security Score'value: data.security.scorecolor: '#10B981' }{ name: 'Threats'value: data.security.threats * 20color: '#EF4444' }{ name: 'Vulnerabilities'value: data.security.vulnerabilities * 10color: '#F59E0B' }
   ];
 
-  const seoAccessibilityData: ChartData[] = [
-    { name: 'SEO Score'value: data.seo.scorecolor: '#3B82F6' },
-    { name: 'Accessibility'value: data.accessibility.scorecolor: '#8B5CF6' }
+  const seoAccessibilityData: ChartData[] = [{ name: 'SEO Score'value: data.seo.scorecolor: '#3B82F6' }{ name: 'Accessibility'value: data.accessibility.scorecolor: '#8B5CF6' }
   ];
 
   return (
@@ -141,10 +135,7 @@ export const ComprehensiveAnalyticsDashboard: React.FC<ComprehensiveAnalyticsDas
         <CardContent>
           <div className="flex space-x-1 mb-6 bg-gray-100 p-1 rounded-lg">
             {[
-              { id: 'overview'label: 'Overview'icon: Activity },
-              { id: 'performance'label: 'Performance'icon: Zap },
-              { id: 'security'label: 'Security'icon: Shield },
-              { id: 'seo'label: 'SEO & A11y'icon: Eye }
+              { id: 'overview'label: 'Overview'icon: Activity }{ id: 'performance'label: 'Performance'icon: Zap }{ id: 'security'label: 'Security'icon: Shield }{ id: 'seo'label: 'SEO & A11y'icon: Eye }
             ].map(({ idlabelicon: Icon }) => (
               <button
                 key={id}

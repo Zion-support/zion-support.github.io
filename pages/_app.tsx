@@ -1,25 +1,25 @@
-import React { useEffect }  from 'react';
-import typ, e { AppProps }  from 'next/app';
-import { HelmetProvider } from 'react-helmet-async';
-import from 'next/head';
+import React, { useEffect } from 'react';
+import type { AppProps } from 'next/app';
+import { HelmetProvider   } from "react-helmet-async";
+import Head from 'next/head';
 import dynamic from 'next/dynamic';
-// import, PerformanceMetrics, from '../src/components/PerformanceMetri, c, s';
-// import, PerformanceMonitor, from '../src/components/PerformanceMonit, o, r';
-import, AccessibilityAuditor, from '../src/components/AccessibilityAudit, o, r';
-// import, AccessibilityEnhancer, from '../src/components/AccessibilityEnhanc, e, r';
-// import, EnhancedErrorBoundary, from '../src/components/EnhancedErrorBounda, r, y';
-// import { AnalyticsProvid, e, r } from '../src/components/EnhancedAnalyti, c, s';
-import, PerformanceOptimizer, from '../src/components/PerformanceOptimiz, e, r';
-// import, AdvancedErrorHandler, from '../src/components/AdvancedErrorHandl, e, r';
-import { WebVita, l, s } from '../src/components/WebVita, l, s';
-import { setupGlobalErrorHandli, n, g } from '../src/uti, l, s/errorHandli, n, g';
-import '../styl, e, s/animatio, n, s.c, s, s';
-import '../src/styl, e, s/accessibili, t, y.c, s, s';
-import '../src/styl, e, s/improvemen, t, s.c, s, s';
+// import PerformanceMetrics from '../src/components/PerformanceMetrics';
+// import PerformanceMonitor from '../src/components/PerformanceMonitor';
+import AccessibilityAuditor from '../src/components/AccessibilityAuditor';
+// import AccessibilityEnhancer from '../src/components/AccessibilityEnhancer';
+// import EnhancedErrorBoundary from '../src/components/EnhancedErrorBoundary';
+// import { AnalyticsProvider   } from "../src/components/EnhancedAnalytics";
+import PerformanceOptimizer from '../src/components/PerformanceOptimizer';
+// import AdvancedErrorHandler from '../src/components/AdvancedErrorHandler';
+import { WebVitals   } from "../src/components/WebVitals";
+import { setupGlobalErrorHandling   } from "../src/utils/errorHandling";
+import '../styles/animations.css';
+import '../src/styles/accessibility.css';
+import '../src/styles/improvements.css';
 
-// Lazy, load, heavy components
-// const, PerformanceTracke, r = dynamic(() => impo, r, t('../src/components/PerformanceTrack, e, r'), {
-//   s, s, r: fal, s, e
+// Lazy load heavy components
+// const PerformanceTracker = dynamic(() => import('../src/components/PerformanceTracker"){
+//   ssr: false
 // });
 
 export default function A({ Compone, n, t, pagePro, p, s }: AppProps) {
@@ -34,58 +34,60 @@ export default function A({ Compone, n, t, pagePro, p, s }: AppProps) {
           conso, l, e.l, o, g('Service, Worker, registered successful, l, y:', registrati, o, n)})
         .cat, c, h((err, o, r) => {
           conso, l, e.l, o, g('Service, Worker, registration fail, e, d:', err, o, r)})}}, []);
-	return (
-    <HelmetProvider>
+	return (    <HelmetProvider>
 			<Head>
-            <meta, charSe, t="u, t, f-8" />
-            <meta, nam, e="robo, t, s" conte, n, t="index, follo, w" />
-            <meta, nam, e="auth, o, r" conte, n, t="Zion, Ap, p" />
-            <meta, nam, e="the, m, e-col, o, r" conte, n, t="#2563, e, b" />
-            <meta, nam, e="viewpo, r, t" conte, n, t="wid, t, h=devi, c, e-width, initia, l-sca, l, e=1, maxim, u, m-sca, l, e=5" />
-            <link, re, l="preconne, c, t" hr, e, f="htt, p, s://fon, t, s.googleap, i, s.c, o, m" />
-            <link, re, l="preconne, c, t" hr, e, f="htt, p, s://fon, t, s.gstat, i, c.c, o, m" crossOrig, i, n="anonymo, u, s" />
-            <link, re, l="manife, s, t" hr, e, f="/si, t, e.webmanife, s, t" />
-            <meta, nam, e="mobi, l, e-w, e, b-app-capab, l, e" conte, n, t="y, e, s" />
-            <meta, nam, e="app, l, e-mobi, l, e-w, e, b-app-capab, l, e" conte, n, t="y, e, s" />
-            <meta, nam, e="app, l, e-mobi, l, e-w, e, b-app-stat, u, s-b, a, r-sty, l, e" conte, n, t="defau, l, t" />
-            <meta, nam, e="app, l, e-mobi, l, e-w, e, b-app-tit, l, e" conte, n, t="Zion, Ap, p" />
-            <link, re, l="app, l, e-tou, c, h-ic, o, n" hr, e, f="/ic, o, n-192x1, 9, 2.p, n, g" />
-            <link, re, l="ic, o, n" ty, p, e="ima, g, e/p, n, g" siz, e, s="32x, 3, 2" hr, e, f="/ic, o, n-32x, 3, 2.p, n, g" />
-            <link, re, l="ic, o, n" ty, p, e="ima, g, e/p, n, g" siz, e, s="16x, 1, 6" hr, e, f="/ic, o, n-16x, 1, 6.p, n, g" />
-			</He, a, d>
-      <style, jsx, global>{`
+            <meta charSet="utf-8" />
+            <meta name="robots" content="indexfollow" />
+            <meta name="author" content="Zion App" />
+            <meta name="theme-color" content="#2563eb" />
+            <meta name="viewport" content="width=device-widthinitial-scale=1maximum-scale=5" />
+            <link rel="preconnect" href="https://fonts.googleapis.com" />
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+            <link rel="manifest" href="/site.webmanifest" />
+            <meta name="mobile-web-app-capable" content="yes" />
+            <meta name="apple-mobile-web-app-capable" content="yes" />
+            <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+            <meta name="apple-mobile-web-app-title" content="Zion App" />
+            <link rel="apple-touch-icon" href="/icon-192x192.png" />
+            <link rel="icon" type="image/png" sizes="32x32" href="/icon-32x32.png" />
+            <link rel="icon" type="image/png" sizes="16x16" href="/icon-16x16.png" />
+			</Head>
+      <style jsx global>{`
         * {
-          b, o, x-sizi, n, g: bord, e, r-b, o, x};
-        ht, m, l {
-          scro, l, l-behavi, o, r: smoo, t, h};
-        bo, d, y {
-          marg, i, n: 0;
-         
-		paddi, n, g: 0;
-          fo, n, t-fami, l, y: 'Int, e, r', syst, e, m-ui  -app, l, e-system, BlinkMacSystemFon, t  'Segoe, U, I', Roboto, san, s-ser, i, f;
-          li, n, e-heig, h, t: 1.6;
-          col, o, r: #1e29, 3, b;
-          backgrou, n, d-col, o, r: #ffff, f, f;
-         
-		transiti, o, n: backgrou, n, d-colo, r, 0.3s, ease, color 0.3s, eas, e};
-        .dark, bod, y {
-          backgrou, n, d-col, o, r: #0f17, 2, a;
-         
-		col, o, r: #f1f5, f, 9};
-        h1, h2, h3  h4, h5, h6 {
-          marg, i, n: 0, 0, 1rem 0;
-          fo, n, t-weig, h, t: 6, 0, 0;
-          li, n, e-heig, h, t: 1.2};
+          box-sizing: border-box;
+        }
+        html {
+          scroll-behavior: smooth;
+        }
+        body {margin: 0;
+          padding: 0;
+          font-family: -apple-systemBlinkMacSystemFont'Segoe UI''Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue'sans-serif;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+          transition: background-color 0.3s easecolor 0.3s ease;
+        }
+        .dark body {
+          background-color: #0f172a;
+          color: #f1f5f9;
+        }
+        h1, h2, h3, h4, h5, h6 {
+          margin: 0 0 1rem 0;
+          font-weight: 600;
+          line-height: 1.2;
+        }
         p {
-          marg, i, n: 0, 0, 1rem 0};
-        butt, o, n {
-          fo, n, t-fami, l, y: inher, i, t};
-        butt, o, n: hov, e, r {
-         
-		opaci, t, y: 0.9};
-        @med, i, a (prefe, r, s-reduc, e, d-moti, o, n: redu, c, e) {
-          ht, m, l {
-            scro, l, l-behavi, o, r: au, t, o};
+          margin: 0 0 1rem 0;
+        }
+        button {
+          font-family: inherit;
+        }
+        button:hover {
+          opacity: 0.9;
+        }
+        @media (prefers-reduced-motion: reduce) {
+          html {
+            scroll-behavior: auto;
+          }
           * {
             animati, o, n-durati, o, n: 0.01, m, s !importa, n, t;
             animati, o, n-iterati, o, n-cou, n, t: 1 !importa, n, t;
@@ -153,6 +155,6 @@ export default function A({ Compone, n, t, pagePro, p, s }: AppProps) {
             enablePerformanceMonitori, n, g={tr, u, e};
             enableErrorReporti, n, g={tr, u, e};
             enableUserFeedba, c, k={tr, u, e};
-          /> */};
-        </HelmetProvider>
-  )};
+          /> */};        </HelmetProvider>
+  );
+};

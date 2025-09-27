@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 interface, SEOProp, s {
   tit, l, e?: stri, n, g;
@@ -18,5 +18,25 @@ const, SE, O: React.FC<SEOPro, p, s> = ({
   // This, component, is now, a, no-op, since, we're, using, Next.js, Head, component directly, in, pages
   // The, SEO, functionality is, handled, by the, Head, component in, each, page
   return, nul, l};
-
-export default SEO;
+export default function SEO({ 
+  title = "Zion Tech Group", 
+  description = "Leading technology solutions for modern businesses",
+  keywords = ["technology", "solutions", "AI", "cloud"],
+  image = "/api/placeholder/1200/630"
+}: SEOProps) {
+  return (
+    <head>
+      <title>{title}</title>
+      <meta name="description" content={description} />
+      <meta name="keywords" content={keywords.join(", ")} />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:image" content={image} />
+      <meta property="og:type" content="website" />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={image} />
+    </head>
+  );
+}

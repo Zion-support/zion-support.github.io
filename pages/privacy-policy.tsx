@@ -1,62 +1,16 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
-import { useState, useEffect } from 'react';
-// import { ErrorBoundary } from '../src/components/ErrorBoundary';
-import { usePageView, useAnalytics } from '../src/hooks/useAnalytics';
+import SEO from '../src/components/SEO';
+import { useAnalytics } from '../src/hooks/useAnalytics';
 
 export default function PrivacyPolicy(): JSX.Element {
-	const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
 
-	useEffect(() => {
-		setIsVisible(true)}, []);
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
 
-	// Analytics tracking
-	usePageView('privacy-policy');
-	const { trackClick } = useAnalytics();
-
-	const sections = [
-		{
-			title: 'Information We Collect',
-			content: 'We collect information you provide directly to us  such as when you create an account  contact us  or use our services. This may include your name  email address  phone number  company information  and any other information you choose to provide.'
-		},
-		{
-			title: 'How We Use Your Information',
-			content: 'We use the information we collect to provide  maintain  and improve our services  communicate with you  process transactions  and comply with legal obligations. We may also use your information to send you technical notices  updates  and promotional materials.'
-		},
-		{
-			title: 'Information Sharing',
-			content: 'We do not sell  trade  or otherwise transfer your personal information to third parties without your consent  except as described in this policy. We may share your information with service providers who assist us in operating our website and conducting our business.'
-		},
-		{
-			title: 'Data Security',
-			content: 'We implement appropriate security measures to protect your personal information against unauthorized access  alteration  disclosure  or destruction. However  no method of transmission over the internet or electronic storage is 100% secure.'
-		},
-		{
-			title: 'Cookies and Tracking',
-			content: 'We use cookies and similar tracking technologies to enhance your experience on our website. You can control cookie settings through your browser preferences. Some features of our website may not function properly if cookies are disabled.'
-		},
-		{
-			title: 'Your Rights',
-			content: 'You have the right to access  update  or delete your personal information. You may also opt out of certain communications from us. To exercise these rights  please contact us using the information provided in the Contact section.'
-		},
-		{
-			title: 'Data Retention',
-			content: 'We retain your personal information for as long as necessary to fulfill the purposes outlined in this privacy policy  unless a longer retention period is required or permitted by law. We will securely delete or anonymize your information when it is no longer needed.'
-		},
-		{
-			title: 'International Transfers',
-			content: 'Your information may be transferred to and processed in countries other than your own. We ensure that such transfers comply with applicable data protection laws and implement appropriate safeguards to protect your information.'
-		},
-		{
-			title: 'Children\'s Privacy',
-			content: 'Our services are not directed to children under 13 years of age. We do not knowingly collect personal information from children under 13. If we become aware that we have collected personal information from a child under 13, we will take steps to delete such information.'
-		},
-		{
-			title: 'Changes to This Policy',
-			content: 'We may update this privacy policy from time to time. We will notify you of any changes by posting the new privacy policy on this page and updating the "Last Updated" date. Your continued use of our services after any changes constitutes acceptance of the updated policy.'
-		}
-	];
+  const { trackClick } = useAnalytics();
 
   return (
 		<>

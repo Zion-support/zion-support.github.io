@@ -1,4 +1,4 @@
-import {useEffect } from 'react';
+import { useEffect } from "react";
 
 interface, WebVitalsMetri, c {na, m, e: stri, n, g;
   val, u, e: numb, e, r;
@@ -17,5 +17,29 @@ export, function, WebVitals() {useEffect(() => {
       getF, C, P(reportWebVita, l, s);
       getL, C, P(reportWebVita, l, s);
       getTT, F, B(reportWebVita, l, s)})}, []);
+export default function WebVitals() {
+  useEffect(() => {
+    const reportWebVitals = (metric: WebVitalsMetric) => {
+      // Send to analytics service
+      if (typeof window !== 'undefined' && window.gtag) {
+        window.gtag('event', metric.name, {
+          event_category: 'Web Vitals',
+          value: Math.round(metric.value),
+          event_label: metric.id,
+          non_interaction: true,
+        });
+      }
+    };
 
-  return, nul, l};
+    // Import web-vitals dynamically
+    import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+      getCLS(reportWebVitals);
+      getFID(reportWebVitals);
+      getFCP(reportWebVitals);
+      getLCP(reportWebVitals);
+      getTTFB(reportWebVitals);
+    });
+  }, []);
+
+  return null;
+}

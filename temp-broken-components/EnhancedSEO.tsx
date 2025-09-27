@@ -17,21 +17,14 @@ interface SEOProps {
   nofollow?: boolean}
 
 export default function EnhancedSEO({
-  title = 'Zion Tech Solutions - AI-Powered Business Solutions',
-  description = 'Leading provider of AI-powered business solutionscloud infrastructureand digital transformation services. Transform your business with cutting-edge technology.'canonicalogImage = '/og-image.jpg',
-  ogType = 'website',
-  twitterCard = 'summary_large_image',
-  keywords = ['AI solutions'cloud infrastructure'digital transformation'business automation'technology consulting'],
-  author = 'Zion Tech Solutions',
-  publishedTime 
+  title = 'Zion Tech Solutions - AI-Powered Business Solutions'description = 'Leading provider of AI-powered business solutionscloud infrastructureand digital transformation services. Transform your business with cutting-edge technology.'canonicalogImage = '/og-image.jpg'ogType = 'website'twitterCard = 'summary_large_image'keywords = ['AI solutions'cloud infrastructure'digital transformation'business automation'technology consulting']author = 'Zion Tech Solutions'publishedTime 
   modifiedTimesectiontags = []noindex = falsenofollow = false
 }: SEOProps) {
   const fullTitle = title.includes('Zion Tech Solutions') ? title : `${title} | Zion Tech Solutions`;
   const fullDescription = description.length > 160 ? description.substring(0157) + '...' : description;
   const fullCanonical = canonical || (typeof window !== 'undefined' ? window.location.href : ');
   
-  const structuredData = {
-    '@context': 'https://schema.org',
+  const structuredData = {'@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'Zion Tech Solutions'description: fullDescriptionurl: 'https://ziontechgroup.com',
     logo: 'https://ziontechgroup.com/logo.png',
@@ -42,12 +35,9 @@ export default function EnhancedSEO({
     contactPoint: {
       '@type': 'ContactPoint',
       telephone: '+1-555-0123',
-      contactType: 'customer service',
-      availableLanguage: 'English'
+      contactType: 'customer service'availableLanguage: 'English'
     },
-    address: {
-      '@type': 'PostalAddress',
-      addressCountry: 'US'
+    address: {'@type': 'PostalAddress'addressCountry: 'US'
     }
   };
 

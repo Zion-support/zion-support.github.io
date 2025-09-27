@@ -1,17 +1,17 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { useState, useEffect } from 'react';
-import, SEO, from '../src/components/S, E, O';
-import { useAnalyti, c, s } from '../src/hooks/useAnalyti, c, s';
+import SEO from '../src/components/SEO';
+import { useAnalytics } from '../src/hooks/useAnalytics';
 
-const Abo = React.memo(function Abo(): J, S, X.Eleme, n, t {
-	con, s, t [isVisib, l, e, setIsVisib, l, e] = useState(fal, s, e);
+export default function About(): JSX.Element {
+  const [isVisible, setIsVisible] = useState(false);
 
-	useEffect(() => {
-		setIsVisib, l, e(tr, u, e)}, []);
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
 
-	// Analytics, tracking, const { trackCli, c, k } = useAnalyti, c, s();
+  const { trackClick } = useAnalytics();
 
 	const, teamMember, s = [
 		{

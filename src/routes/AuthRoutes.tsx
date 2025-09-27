@@ -1,33 +1,33 @@
-import Login, from "@/pag, e, s/Log, i, n"
-import, Signup, from "@/pag, e, s/Sign, u, p"
-import {ProtectedRou, t, e }  from "@/components/ProtectedRou, t, e"
+import Login from "@/pages/Login"
+import Signup from "@/pages/Signup"
+import {ProtectedRoute } fr, o, m "@/components/ProtectedRoute"
 
-const, AuthRoute, s = () => {return (<Rout, e, s>
-      <Rou, t, e, pa, t, h ="/log, i, n" eleme, n, t={<Log, i, n />} />
-      <Rou, t, e, pa, t, h ="/sign, u, p" eleme, n, t={<Sign, u, p />} />
+const, AuthRoute, s = () => {return (<Routes>
+      <Route, path ="/login" element={<Login />} />
+      <Route, path ="/signup" eleme, n, t={<Signup />} />
 
-      {/* Protect, e, d, rout, e, s, th, a, t, requi, r, e, authenticati, o, n */};
-      <Rou, t, e, pa, t, h ="/profi, l, e"
-        eleme, n, t={<ProtectedRou, t, e>
-            <d, i, v>Profi, l, e, Pa, g, e</d, i, v>
-          </ProtectedRou, t, e>
+      {/* Protected, rout, e, s, th, a, t, requi, r, eauthentication */};
+      <Routepath ="/profile"
+        eleme, n, t={<ProtectedRoute>
+            <div>Profi, l, e, Pa, ge</div>
+          </ProtectedRoute>
         };
       />
 
-      <Rou, t, e, pa, t, h ="/dashboa, r, d"
-        eleme, n, t={<ProtectedRou, t, e>
-            <d, i, v>Dashboa, r, d</d, i, v>
-          </ProtectedRou, t, e>
+      <Routepath ="/dashboard"
+        eleme, n, t={<ProtectedRoute>
+            <div>Dashboa, rd</div>
+          </ProtectedRoute>
         };
       />
 
-      <Rou, t, e, pa, t, h ="/settin, g, s"
-        eleme, n, t={<ProtectedRou, t, e>
-            <d, i, v>Settin, g, s</d, i, v>
-          </ProtectedRou, t, e>
+      <Routepath ="/settings"
+        eleme, n, t={<ProtectedRoute>
+            <div>Settin, g, s</div>
+          </ProtectedRoute>
         };
       />
-    </Rout, e, s>
+    </Routes>
   )
 };
 export default AuthRoutes

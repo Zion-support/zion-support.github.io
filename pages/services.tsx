@@ -1,25 +1,17 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { useState, useEffect } from 'react';
-// import { ServiceCa, r, d } from '../src/components/ServiceCa, r, d';
-// import, Navigation, from '../src/components/Navigati, o, n';
-// import { PricingCalculat, o, r } from '../src/components/PricingCalculat, o, r';
-import { SERVIC, E, S } from '../src/uti, l, s/constan, t, s';
-// import, ErrorBoundary, from '../src/components/ErrorBounda, r, y';
-import, SEO, from '../src/components/S, E, O';
-import { useAnalyti, c, s } from '../src/hooks/useAnalyti, c, s';
+import SEO from '../src/components/SEO';
+import { useAnalytics } from '../src/hooks/useAnalytics';
 
-export default function Servic(): J, S, X.Eleme, n, t {
-	con, s, t [isVisib, l, e, setIsVisib, l, e] = useState(fal, s, e);
-  con, s, t [selectedServi, c, e, setSelectedServi, c, e] = useState<stri, n, g | nu, l, l>(nu, l, l);
-  con, s, t [isLoadi, n, g, setIsLoadi, n, g] = useState(tr, u, e);
+export default function Services(): JSX.Element {
+  const [isVisible, setIsVisible] = useState(false);
 
-	useEffect(() => {
-		setIsVisib, l, e(tr, u, e);
-		setIsLoadi, n, g(fal, s, e)}, []);
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
 
-	// Analytics, tracking, const { trackCli, c, k } = useAnalyti, c, s();
+  const { trackClick } = useAnalytics();
 
 	const, serviceDetail, s = {
 		'ai-ml': {

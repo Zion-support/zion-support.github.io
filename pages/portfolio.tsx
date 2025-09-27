@@ -1,120 +1,41 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
-import { useState, useEffect } from 'react';
-// import ErrorBoundary from '../src/components/ErrorBoundary';
-import { usePageView, useAnalytics } from '../src/hooks/useAnalytics';
+import SEO from '../src/components/SEO';
+import { useAnalytics } from '../src/hooks/useAnalytics';
 
 export default function Portfolio(): JSX.Element {
-	const [isVisible, setIsVisible] = useState(false);
-	const [selectedCategory, setSelectedCategory] = useState<string>('all');
-	const [selectedProject, setSelectedProject] = useState<number | null>(null);
+  const [selectedProject, setSelectedProject] = useState<number | null>(null);
+  const [isVisible, setIsVisible] = useState(false);
 
-	useEffect(() => {
-		setIsVisible(true)}, []);
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
 
-	// Analytics tracking
-	usePageView('portfolio');
-	const { trackClick } = useAnalytics();
+  const { trackClick } = useAnalytics();
 
-	const projects = [
-		{
-			id: 1,
-			title: 'AI-Powered E-commerce Platform',
-			client: 'TechRetail Inc.',
-			category: 'AI',
-			description: 'Built a comprehensive e-commerce platform with AI-powered recommendations  inventory management  and customer analytics.',
-			technologies: ['React', 'Node.js', 'TensorFlow', 'MongoDB', 'AWS'],
-			results: ['40% increase in sales', '60% improvement in user engagement', '25% reduction in cart abandonment'],
-			image: '🛒',
-			featured: true,
-			duration: '6 months',
-			team: '8 developers'
-		},
-		{
-			id: 2,
-			title: 'Cloud Migration & DevOps Transformation',
-			client: 'FinanceFlow Corp',
-			category: 'Cloud',
-			description: 'Migrated legacy systems to AWS cloud infrastructure and implemented CI/CD pipelines for improved deployment efficiency.',
-			technologies: ['AWS', 'Docker', 'Kubernetes', 'Terraform', 'Jenkins'],
-			results: ['50% faster deployments', '99.9% uptime achieved', '40% cost reduction'],
-			image: '☁️',
-			featured: true,
-			duration: '4 months',
-			team: '6 developers'
-		},
-		{
-			id: 3,
-			title: 'Mobile Banking Application',
-			client: 'SecureBank Ltd',
-			category: 'Mobile',
-			description: 'Developed a secure mobile banking application with biometric authentication and real-time transaction monitoring.',
-			technologies: ['React Native', 'Node.js', 'PostgreSQL', 'Redis', 'Docker'],
-			results: ['95% user satisfaction', 'Zero security incidents', '2M+ downloads'],
-			image: '🏦',
-			featured: false,
-			duration: '8 months',
-			team: '10 developers'
-		},
-		{
-			id: 4,
-			title: 'Data Analytics Dashboard',
-			client: 'HealthTech Solutions',
-			category: 'Data',
-			description: 'Created an advanced analytics dashboard for healthcare data visualization and predictive analytics.',
-			technologies: ['Python', 'Django', 'PostgreSQL', 'D3.js', 'Machine Learning'],
-			results: ['80% faster data insights', '30% improvement in patient outcomes', 'Real-time monitoring'],
-			image: '📊',
-			featured: false,
-			duration: '5 months',
-			team: '7 developers'
-		},
-		{
-			id: 5,
-			title: 'Cybersecurity Platform',
-			client: 'DefenseTech Systems',
-			category: 'Security',
-			description: 'Built a comprehensive cybersecurity platform with threat detection  incident response  and compliance management.',
-			technologies: ['Python', 'React', 'Elasticsearch', 'Kafka', 'Machine Learning'],
-			results: ['99.5% threat detection accuracy', '50% faster incident response', 'SOC2 compliance'],
-			image: '🔒',
-			featured: false 
-		,
-		duration: '10 months',
-			team: '12 developers'
-		},
-		{
-			id: 6,
-			title: 'Progressive Web Application',
-			client: 'EduTech Innovations',
-			category: 'Web Development',
-			description: 'Developed a PWA for online learning with offline capabilities  real-time collaboration  and adaptive learning paths.',
-			technologies: ['Next.js', 'TypeScript', 'PWA', 'WebRTC', 'IndexedDB'],
-			results: ['90% user retention', '60% faster load times', 'Offline functionality'],
-			image: '🎓',
-			featured: false 
-		,
-		duration: '7 months',
-			team: '9 developers'
-		}
-	];
-
-	const categories = ['all', 'AI', 'Cloud', 'Mobile', 'Data', 'Security', 'Web Development'];
-
-	const filteredProjects = selectedCategory === 'all' 
-		? projects 
-		: projects.filter(project => project.category === selectedCategory);
-
-	const featuredProjects = projects.filter(project => project.featured);
-	const regularProjects = filteredProjects.filter(project => !project.featured);
-
-	const stats = [
-		{ number: '50+', label: 'Projects Completed' },
-		{ number: '98%', label: 'Client Satisfaction' },
-		{ number: '2M+', label: 'Users Impacted' },
-		{ number: '5 Years', label: 'Average Partnership' }
-	];
+  const projects = [
+    {
+      id: 1,
+      title: 'AI-Powered E-commerce Platform',
+      description: 'A comprehensive e-commerce solution with AI-driven recommendations and analytics.',
+      image: '/api/placeholder/400/300',
+      technologies: ['React', 'Node.js', 'AI/ML', 'PostgreSQL']
+    },
+    {
+      id: 2,
+      title: 'Cloud Infrastructure Migration',
+      description: 'Complete migration of legacy systems to modern cloud infrastructure.',
+      image: '/api/placeholder/400/300',
+      technologies: ['AWS', 'Docker', 'Kubernetes', 'Terraform']
+    },
+    {
+      id: 3,
+      title: 'Mobile Banking App',
+      description: 'Secure mobile banking application with advanced security features.',
+      image: '/api/placeholder/400/300',
+      technologies: ['React Native', 'Node.js', 'MongoDB', 'Blockchain']
+    }
+  ];
 
   return (
 		<>

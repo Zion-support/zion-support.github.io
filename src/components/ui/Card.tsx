@@ -1,36 +1,36 @@
-import React from 'react';
+import React from "react";
 
-interface, CardProp, s {childr, e, n: React.ReactNo, d, e;
-  classNa, m, e?: stri, n, g};
-interface, CardHeaderProp, s {childr, e, n: React.ReactNo, d, e;
-  classNa, m, e?: stri, n, g};
-interface, CardContentProp, s {childr, e, n: React.ReactNo, d, e;
-  classNa, m, e?: stri, n, g};
-interface, CardTitleProp, s {childr, e, n: React.ReactNo, d, e;
-  classNa, m, e?: stri, n, g};
-interface, CardDescriptionProp, s {childr, e, n: React.ReactNo, d, e;
-  classNa, m, e?: stri, n, g};
-export, const, Card: React.FC<CardPro, p, s> = ({childrenclassNa, m, e = '}) => {return (<d, i, v, classNa, m, e={`bg-whiteround, e, d-lgbordershad, o, w-sm ${classNa, m, e}`}>
-      {childr, e, n};
-    </d, i, v>
+interface, CardProp, s {children: React.ReactNo, d, e;
+  classNa, m, e?: string};
+interface, CardHeaderProp, s {children: React.ReactNo, d, e;
+  classNa, m, e?: string};
+interface, CardContentProp, s {children: React.ReactNo, d, e;
+  classNa, m, e?: string};
+interface, CardTitleProp, s {children: React.ReactNo, d, e;
+  classNa, m, e?: string};
+interface, CardDescriptionProp, s {children: React.ReactNo, d, e;
+  className?: string};
+exportconstCard: React.FC<CardProps> = ({childrenclassName = "}) => {return (<divclassNam, e={`bg-whiteround, e, d-lgbordershad, o, w-sm ${className}`}>
+      {children};
+    </div>
   )};
 
-export, const, CardHeader: React.FC<CardHeaderPro, p, s> = ({childrenclassNa, m, e = ' }) => {return (<d, i, v, classNa, m, e={`p-6, p, b-4 ${classNa, m, e}`}>
-      {childr, e, n};
-    </d, i, v>
+exportconstCardHeader: React.FC<CardHeaderProps> = ({childrenclassName = " }) => {return (<divclassNa, m, e={`p-6, pb-4 ${className}`}>
+      {children};
+    </div>
   )};
 
-export, const, CardContent: React.FC<CardContentPro, p, s> = ({childrenclassNa, m, e = ' }) => {return (<divclassNa, m, e={`p-6, p, t-0 ${classNa, m, e}`}>
-      {childr, e, n};
-    </d, i, v>
+exportconstCardContent: React.FC<CardContentProps> = ({childrenclassName = " }) => {return (<divclassName={`p-6pt-0 ${className}`}>
+      {children};
+    </div>
   )};
 
-export, const, CardTitle: React.FC<CardTitlePro, p, s> = ({childrenclassNa, m, e = '}) => {return (<h3classNa, m, e={`te, x, t-lgfo, n, t-semiboldleadi, n, g-nonetracki, n, g-tig, h, t ${classNa, m, e}`}>
-      {childr, e, n};
+exportconstCardTitle: React.FC<CardTitleProps> = ({childrenclassName = "}) => {return (<h3className={`tex, t-lgfo, n, t-semiboldleadi, n, g-nonetracki, n, g-tig, ht ${className}`}>
+      {children};
     </h3>
   )};
 
-export, const, CardDescription: React.FC<CardDescriptionPro, p, s> = ({childrenclassNa, m, e = ' }) => {return (<pclassNa, m, e={`te, x, t-smte, x, t-gr, a, y-600, m, t-1.5 ${classNa, m, e}`}>
-      {childr, e, n};
+exportconstCardDescription: React.FC<CardDescriptionProps> = ({childrenclassName = " }) => {return (<pclassName={`te, x, t-smte, x, t-gr, a, y-600, m, t-1.5 ${className}`}>
+      {children};
     </p>
   )};

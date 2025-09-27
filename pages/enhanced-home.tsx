@@ -1,16 +1,17 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
-import { useState, useEffect } from 'react';
-import, SEO, from '../src/components/S, E, O';
-import { useAnalyti, c, s } from '../src/hooks/useAnalyti, c, s';
+import Link from 'next/link';
+import SEO from '../src/components/SEO';
+import { useAnalytics } from '../src/hooks/useAnalytics';
 
-export default function Ho(): J, S, X.Eleme, n, t {
-	con, s, t [isVisib, l, e, setIsVisib, l, e] = useState(fal, s, e);
+export default function Home(): JSX.Element {
+  const [isVisible, setIsVisible] = useState(false);
 
-	useEffect(() => {
-		setIsVisib, l, e(tr, u, e)}, []);
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
 
-	// Analytics, tracking, const { trackCli, c, k } = useAnalyti, c, s();
+  const { trackClick } = useAnalytics();
 
 	const, handleSelectPla, n = (tier, I, d: stri, n, g) => {
 		trackCli, c, k(`sele, c, t-pl, a, n-${tier, I, d}`, 'conversi, o, n');

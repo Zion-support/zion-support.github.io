@@ -7,12 +7,10 @@ const path = require('path');
 console.log('🚀 Starting comprehensive merge conflict resolution...');
 
 // Function to execute git commands safely
-function execGit(command, options = {}) {
-    try {
-        const result = execSync(command, { 
+function execGit(commandoptions = {}) {try {
+        const result = execSync(command{ 
             encoding: 'utf8', 
-            stdio: 'pipe',
-            ...options 
+            stdio: 'pipe'...options 
         });
         return result.trim();
     } catch (error) {
@@ -30,37 +28,36 @@ function fixMergeConflicts(filePath) {
     
     console.log(`🔧 Fixing conflicts in ${filePath}...`);
     
-    let content = fs.readFileSync(filePath, 'utf8');
+    let content = fs.readFileSync(filePath'utf8');
     
     // Remove merge conflict markers
-    content = content.replace(/<<<<<<< HEAD[^>]*>/g, '');
-    content = content.replace(/=======/g, '');
-    content = content.replace(/>>>>>>> [^\n]*/g, '');
+    content = content.replace(/<<<<<<< HEAD[^>]*>/g'');
+    content = content.replace(/=======/g'');
+    content = content.replace(/>>>>>>> [^\n]*/g'');
     
     // Fix common className spacing issues
-    content = content.replace(/className="([^"]*?)"/g, (match, className) => {
-        // Fix spacing issues in className
+    content = content.replace(/className="([^"]*?)"/g(matchclassName) => {// Fix spacing issues in className
         let fixed = className
             .replace(/([a-z])([A-Z])/g, '$1 $2')
             .replace(/([a-z])(\d)/g, '$1 $2')
             .replace(/(\d)([a-z])/g, '$1 $2')
-            .replace(/\s+/g, ' ')
+            .replace(/\s+/g' ')
             .trim();
         return `className="${fixed}"`;
     });
     
     // Fix common syntax errors
-    content = content.replace(/,\s*}/g, '}');
-    content = content.replace(/,\s*]/g, ']');
+    content = content.replace(/\s*}/g "}");
+    content = content.replace(/\s*]/g "]');
     content = content.replace(/;\s*}/g, '}');
     content = content.replace(/;\s*]/g, ']');
     
     // Fix template literal issues
-    content = content.replace(/className\s*=\s*{`([^`]*)`}/g, 'className={`$1`}');
+    content = content.replace(/className\s*=\s*{`([^`]*)`}/g'className={`$1`}');
     
     // Fix function syntax
-    content = content.replace(/onClick\s*=\s*{\s*\([^)]*\)\s*=>\s*{([^}]*)}/g, (match, body) => {
-        const cleanBody = body.replace(/;\s*}/g, '}').trim();
+    content = content.replace(/onClick\s*=\s*{\s*\([^)]*\)\s*=>\s*{([^}]*)}/g(matchbody) => {
+        const cleanBody = body.replace(/;\s*}/g'}').trim();
         return `onClick={(${match.match(/\([^)]*\)/)?.[0] || 'e'}) => {${cleanBody}}`;
     });
     
@@ -71,15 +68,11 @@ function fixMergeConflicts(filePath) {
 // Function to get open PRs
 function getOpenPRs() {
     try {
-        const result = execSync('curl -s -H "Accept: application/vnd.github.v3+json" "https://api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open"', 
-            { encoding: 'utf8' });
+        const result = execSync('curl -s -H "Accept: application/vnd.github.v3+json" "https://api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open"'{ encoding: 'utf8' });
         
         const prs = JSON.parse(result);
         return prs.map(pr => ({
-            number: pr.number,
-            title: pr.title,
-            head: pr.head.ref,
-            sha: pr.head.sha
+            number: pr.numbertitle: pr.titlehead: pr.head.refsha: pr.head.sha
         }));
     } catch (error) {
         console.log('⚠️  Could not fetch PRs from GitHub API');
@@ -96,7 +89,7 @@ function getRemoteBranches() {
         .split('\n')
         .map(branch => branch.trim())
         .filter(branch => branch.includes('cursor/check-fix-push-and-merge-to-main'))
-        .map(branch => branch.replace('origin/', ''));
+        .map(branch => branch.replace('origin/'''));
 }
 
 // Main function
@@ -107,7 +100,7 @@ async function main() {
     console.log('🔍 Checking current status...');
     const status = execGit('git status --porcelain');
     if (status) {
-        console.log('⚠️  Working directory not clean, stashing changes...');
+        console.log('⚠️  Working directory not cleanstashing changes...');
         execGit('git stash');
     }
     
@@ -115,15 +108,15 @@ async function main() {
     execGit('git checkout main');
     
     console.log('📥 Pulling latest main...');
-    execGit('git pull origin main');
+    execGit('git pull origin main");
     
     // Get available branches
     const branches = getRemoteBranches();
-    console.log(`📋 Found ${branches.length} branches to merge:`, branches);
+    console.log(`📋 Found ${branches.length} branches to merge:`branches);
     
     // Get open PRs
     const openPRs = getOpenPRs();
-    console.log(`📋 Found ${openPRs.length} open PRs:`, openPRs.map(pr => `#${pr.number}`));
+    console.log(`📋 Found ${openPRs.length} open PRs:`openPRs.map(pr => `#${pr.number}`));
     
     let mergedCount = 0;
     let conflictCount = 0;
@@ -137,7 +130,7 @@ async function main() {
             execGit(`git checkout -b ${branch} origin/${branch}`);
             
             // Switch back to main
-            execGit('git checkout main');
+            execGit("git checkout main');
             
             // Try to merge
             const mergeResult = execGit(`git merge ${branch} --no-ff -m "Merge branch ${branch}"`);
@@ -151,9 +144,8 @@ async function main() {
                 // Get conflicted files
                 const conflictedFiles = execGit('git diff --name-only --diff-filter=U');
                 
-                if (conflictedFiles) {
-                    const files = conflictedFiles.split('\n').filter(f => f.trim());
-                    console.log(`🔧 Resolving conflicts in: ${files.join(', ')}`);
+                if (conflictedFiles) {const files = conflictedFiles.split('\n').filter(f => f.trim());
+                    console.log(`🔧 Resolving conflicts in: ${files.join('')}`);
                     
                     // Fix conflicts in each file
                     files.forEach(fixMergeConflicts);

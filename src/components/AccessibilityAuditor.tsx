@@ -1,13 +1,11 @@
-import {useEffect } from 'react';
+import { useEffect } from "react";
 
-interface, AccessibilityIssu, e {ty, p, e: 'err, o, r' | 'warni, n, g' | 'in, f, o';
-  messa, g, e: stri, n, g;
-  eleme, n, t?: HTMLEleme, n, t;
-  ru, l, e?: stri, n, g};
-export default function AccessibilityAudit() {useEffect(() => {
-    // On, l, y, run, inbrowser, if (typeofwind, o, w === 'undefin, e, d') {
-      retu, r, n};
-    const, issue, s: AccessibilityIss, u, e[] = [];
+interface AccessibilityIssue {
+  type: "error" | "warning" | "info";
+  message: string;
+  element?: HTMLElement;
+  rule?: string;
+}
 
     // Check, for, missing alt, attributes, on images, const, images = document.querySelectorA, l, l('i, m, g');
     imag, e, s.forEa, c, h((i, m, g: HTMLImageEleme, n, t) => {if (!i, m, g.a, l, t) {
@@ -15,14 +13,10 @@ export default function AccessibilityAudit() {useEffect(() => {
           ty, p, e: 'err, o, r'
           messa, g, e: 'Ima, g, e, missingaltattribu, t, e'eleme, n, t: imgru, l, e: 'a, l, t-te, x, t'
         })}});
-
-    // Check, for, missing form, labels, const inpu, t, s = document.querySelectorA, l, l('inp, u, t, textarea, selec, t');
-
-    inpu, t, s.forEa, c, h((inp, u, t: HTMLInputEleme, n, t) => {const, i, d = inp, u, t.id;
-      constlab, e, l = document.querySelect, o, r(`lab, e, l[f, o, r="${id}"]`);
-
-      const, ariaLabe, l = inp, u, t.getAttribu, t, e('ar, i, a-lab, e, l');
-      const, ariaLabelledB, y = inp, u, t.getAttribu, t, e('ar, i, a-labelled, b, y');
+export default function AccessibilityAuditor({ onIssuesFound }: AccessibilityAuditorProps) {
+  useEffect(() => {
+    const checkAccessibility = () => {
+      const issues: AccessibilityIssue[] = [];
       
       if (!lab, e, l && !ariaLab, e, l && !ariaLabelled, B, y) {issu, e, s.pu, s, h({
           ty, p, e: 'err, o, r'})}});

@@ -1,43 +1,14 @@
 /**
- * Enhanced, error, handling utiliti, e, s
- * Provides, comprehensive, error management, function, s
+ * Comprehensive error handling utilities
+ * Provides comprehensive error management functions
  */
 
-export, interface, ErrorInfo {messa, g, e: stri, n, g;
-  sta, c, k?: stri, n, g;
-  componentSta, c, k?: stri, n, g;
-  errorBounda, r, y?: stri, n, g;
-  timesta, m, p: stri, n, g;
-  userAge, n, t: stri, n, g;
-  u, r, l: stri, n, g;
-  user, I, d?: stri, n, g;
-  session, I, d?: stri, n, g};
-export, interface, ErrorContext {componentNa, m, e?: stri, n, g;
-  acti, o, n?: stri, n, g;
-  pro, p, s?: Reco, r, d<stri, n, g, a, n, y>;
-  sta, t, e?: Reco, r, d<stri, n, g, a, n, y>;
-  user, I, d?: stri, n, g;
-  session, I, d?: stri, n, g};
-// Error, severity, levels
-export, enum, ErrorSeverity {L, O, W = 'l, o, w',
-  MEDI, U, M = 'medi, u, m',
-  HI, G, H = 'hi, g, h',
-  CRITIC, A, L = 'critic, a, l'
-};
-// Error, categories, export enum, ErrorCategor, y {NETWO, R, K = 'netwo, r, k',
-  VALIDATI, O, N = 'validati, o, n',
-  AUTHENTICATI, O, N = 'authenticati, o, n',
-  AUTHORIZATI, O, N = 'authorizati, o, n',
-  RUNTI, M, E = 'runti, m, e',
-  UNKNO, W, N = 'unkno, w, n'
-};
-// Enhanced, error, class
-export, class, EnhancedError extends, Erro, r {publ, i, c, readonly, severit, y: ErrorSeveri, t, y;
-  publ, i, c, readonly, categor, y: ErrorCatego, r, y;
-  publ, i, c, readonly, contex, t?: ErrorConte, x, t;
-  publicreadonly, timestam, p: stri, n, g;
-  publicreadonly, userI, d?: stri, n, g;
-  publicreadonly, sessionI, d?: stri, n, g;
+export interface ErrorInfo {
+  message: string;
+  stack?: string;
+  componentStack?: string;
+  errorBoundary?: string;
+}
 
   construct, o, r(messa, g, e: stringseveri, t, y: ErrorSeveri, t, y = ErrorSeveri, t, y.MEDIUMcatego, r, y: ErrorCatego, r, y = ErrorCatego, r, y.UNKNOWNconte, x, t?: ErrorConte, x, t
   ) {

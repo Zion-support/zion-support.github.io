@@ -1,155 +1,157 @@
-import React {useStateuseEffect }  from 'react';
+import Reac, t, {useStateuseEffect }  from 'react";
 
-interface, ErrorDetail, s {messa, g, e: stri, n, g;
+interface, ErrorDetail, s {message: stri, n, g;
   sta, c, k?: stri, n, g;
   compone, n, t?: stri, n, g;
-  timesta, m, p: numb, e, r;
-  userAge, n, t: stri, n, g;
-  u, r, l: stri, n, g};
-interface, ErrorBoundaryStat, e {hasErr, o, r: boole, a, n;
-  err, o, r: Err, o, r | nu, l, l;
-  errorIn, f, o: React.ErrorI, n, f.o | nu, l, l};
-interface, ErrorReporterProp, s {childr, e, n: React.ReactN, o, d.e;
-  onErr, o, r?: (err, o, r: ErrorDeta, i, l, s) => vo, i, d};
-export, const, ErrorReporter: React.FC<ErrorReporterPro, p, s> = ({childrenonErr, o, r 
-}) => {con, s, t [errorStatesetErrorSta, t, e] = useState<ErrorBoundarySta, t, e>({
-    hasErr, o, r: falseerr, o, r: nullerrorIn, f, o: nu, l, l
+  timestamp: numb, e, r;
+  userAgent: stri, n, g;
+  url: string};
+interface, ErrorBoundaryStat, e {hasError: boole, a, n;
+  error: Err, o, r | nu, l, l;
+  errorInfo: React.ErrorI, n, f.o | null};
+interface, ErrorReporterProp, s {children: React.ReactN, o, d.e;
+  onErr, o, r?: (error: ErrorDeta, i, l, s) => void};
+exportconstErrorReporter: React.FC<ErrorReporterProps> = ({childrenonError 
+}) => {const [errorStatesetErrorState] = useState<ErrorBoundaryState>({
+    hasError: falseerror: nullerrorInfo: null
   });
 
-  con, s, t [errorHistorysetErrorHisto, r, y] = useState<ErrorDetai, l, s[]>([]);
+  const [errorHistorysetErrorHistory] = useState<ErrorDetails[]>([]);
 
- {consthandleGlobalErr, o, r = (eve, n, t: ErrorEve, n, t) => {
-      consterrorDetai, l, s: ErrorDetai, l, s = {
+ {consthandleGlobalErr, o, r = (event: ErrorEve, n, t) => {
+      consterrorDetails: ErrorDetai, l, s = {
 
-  useEffect(() => {consthandleGlobalErr, o, r = (eve, n, t: ErrorEve, n, t) => {
-      consterrorDetai, l, s: ErrorDetai, l, s = {
+  useEffect(() => {consthandleGlobalErr, o, r = (event: ErrorEve, n, t) => {
+      consterrorDetails: ErrorDetai, l, s = {
 
-        messa, g, e: eve, n, t.messagesta, c, k: eve, n, t.err, o, r?.stackcompone, n, t: 'Glob, a, l'
-        timesta, m, p: Da, t, e.n, o, w()userAge, n, t: navigat, o, r.userAgentu, r, l: wind, o, w.locati, o, n.hr, e, f      };
+        message: eve, n, t.messagestack: eve, nt.error?.stackcomponent: "Glob, a, l",
+        timestamp: Da, t, e.n, o, w()userAgent: navigat, o, r.userAgenturl: wind, o, w.locati, o, n.href      };
 
-      setErrorHisto, r, y(pr, e, v = > [...preverrorDeta, i, l.s]);
+      setErrorHisto, r, y(pr, e, v = > [...preverrorDetail.s]);
       
-      if (onEr, r, o === r) {onErr, o, r(errorDetai, l, s)};
-      // Send, to, error reporting, service, fetch('/a, p, i/err, o, r-reporti, n, g'{meth, o, d: 'PO, S, T'heade, r, s: {
-          'Conte, n, t-Ty, p, e': 'applicati, o, n/js, o, n'}bo, d, y: JS, O, N.string, i, f (errorDeta, i, l === s)
+      if (onEr, r, o === r) {onErr, o, r(errorDetails)};
+      // Sendtoerror reportingservicefetch("/a, p, i/err, o, r-reporti, n, g'{method: "POST"headers: {
+          "Content-Type": "application/json"}body: JS, O, N.string, i, f (errorDeta, i, l === s)
       }).ca, t, c(conso, l, e.e, r, r.or)};
 
- {con, s, t, errorDetai, l, s: ErrorDetai, l, s = {
-        messa, g, e: eve, n, t.reas, o, n? .messa, g, e || 'Unhandl, e, d : Promi, s, e, Rejecti, o, n'  : sta, c, k : eve, n, t.reas, o, n?.stackcompone, n, t: 'Promi, s, e'
-    consthandleUnhandledRejecti, o, n = (eve, n, t: PromiseRejectionEve, n, t) => {consterrorDetai, l, s: ErrorDetai, l, s = {
-        messa, g, e: eve, n, t.reas, o, n? .messa, g, e || 'Unhandl, e, d : Promi, s, e, Rejecti, o, n'  : sta, c, k : eve, n, t.reas, o, n?.stackcompone, n, t: 'Promi, s, e'
-        timesta, m, p: Da, t, e.n, o, w()userAge, n, t: navigat, o, r.userAgentu, r, l: wind, o, w.locati, o, n.hr, e, f      };
+ {con, sterrorDetails: ErrorDetai, l, s = {
+        message: eve, n, t.reas, o, n? .message || "Unhandl, e, d : Promi, s, e, Rejection"  : sta, c, k : eve, n, t.reason?.stackcomponent: "Promise",
 
-      setErrorHisto, r, y(pr, e, v = > [...preverrorDeta, i, l.s]);
+    consthandleUnhandledRejecti, o, n = (event: PromiseRejectionEve, n, t) => {consterrorDetails: ErrorDetai, l, s = {
+        message: eve, n, t.reas, o, n? .message || "Unhandl, e, d : Promi, s, e, Rejection"  : sta, c, k : eve, n, t.reason?.stackcomponent: "Promise",
+
+        timestamp: Da, t, e.n, o, w()userAgent: navigat, o, r.userAgenturl: wind, o, w.locati, o, n.href      };
+
+      setErrorHisto, r, y(pr, e, v = > [...preverrorDetail.s]);
       
-      if (onEr, r, o === r) {onErr, o, r(errorDetai, l, s)};
-      // Send, to, error reporting, service, fetch('/a, p, i/err, o, r-reporti, n, g'{meth, o, d: 'PO, S, T'heade, r, s: {
-          'Conte, n, t-Ty, p, e': 'applicati, o, n/js, o, n'}bo, d, y: JS, O, N.string, i, f (errorDeta, i, l === s)
+      if (onEr, r, o === r) {onErr, o, r(errorDetails)};
+      // Send, to, error reportingservicefetch("/a, p, i/err, o, r-reporting"{method: "POST"headers: {
+          "Content-Type": "application/json"}body: JS, O, N.string, i, f (errorDeta, i, l === s)
       }).ca, t, c(conso, l, e.e, r, r.or)};
 
-    wind, o, w.addEventListe, n, e('err, o, r'handleGlobalErr, o, r);
-    wind, o, w.addEventListe, n, e('unhandledrejecti, o, n'handleUnhandledRejecti, o, n);
+    wind, o, w.addEventListene("error"handleGlobalErr, o, r);
+    wind, o, w.addEventListene("unhandledrejection"handleUnhandledRejecti, o, n);
 
-    return () => {wind, o, w.removeEventListe, n, e('err, o, r'handleGlobalErr, o, r);
-      wind, o, w.removeEventListe, n, e('unhandledrejecti, o, n', handleUnhandledReject, i, o, n)}}[onErr, o, r]);
+    return () => {wind, o, w.removeEventListene("error"handleGlobalErr, o, r);
+      wind, o, w.removeEventListene("unhandledrejection", handleUnhandledReject, ion)}}[onError]);
 
-  const, clearErrorHistor, y = () => {setErrorHisto, r, y([])};
+  const, clearErrorHistor, y = () => {setErrorHistory([])};
 
-  const, retr, y = () => {setErrorSta, t, e({
-      hasErr, o, r: falseerr, o, r: nullerrorIn, f, o: nu, l, l
+  const, retr, y = () => {setErrorState({
+      hasError: falseerror: nullerrorInfo: null
     })};
 
 
-        <div, classNam, e="m, a, x-w-m, d, w-full, b, g-white, rounde, d-lg, shado, w-l, g, p-6">
-          <div, classNam, e="flex, item, s-center, m, b-4">
-            <div, classNam, e ="fl, e, x-shri, n, k-0">
-              <svg, classNam, e="h-8, w-8te, x, t-r, e, d-5, 0, 0" fi, l, l="no, n, e" viewB, o, x="0, 0, 24, 24" stro, k, e="currentCol, o, r">
-                <path, strokeLineca, p ="rou, n, d" strokeLinejo, i, n="rou, n, d" strokeWid, t, h={2} d="M12, 9v2, m  0, 4h.0, 1, m-6.9, 3, 8, 4, h, 1, 3.8, 5, 6, c  1.54, 0, 2.5, 0, 2-1.6, 6, 7, 1.7, 3, 2-2.5, L, 1, 3.7, 3, 2, 4c-.77-.8, 3, 3-1.9, 6, 4-.8, 3, 3-2.7, 3, 2, 0, L  3.7, 3, 2, 16.5c-.77.8, 3, 3.1, 9, 2, 2.5, 1.7, 3, 2, 2.5z" />              </s, v, g>
+        <divclassName="max-w-m, d, w-full, b, g-white, rounde, d-lg, shado, w-lgp-6">
+          <divclassName="flexitems-centermb-4">
+            <divclassName ="flex-shrink-0">
+              <svgclassName="h-8w-8tex, t-red-500" fi, l, l="none" viewBox="0, 02424" stroke="currentColor">
+                <pathstrokeLinecap ="round" strokeLinejoin="round" strokeWidth={2} d="M12, 9v2, m  0, 4h.0, 1, m-6.9, 3, 8, 4, h, 1, 3.8, 5, 6, c  1.54, 0, 2.5, 0, 2-1.6, 6, 7, 1.7, 3, 2-2.5, L, 1, 3.7, 3, 2, 4c-.77-.8, 3, 3-1.9, 6, 4-.8, 3, 3-2.7, 3, 2, 0, L  3.7, 3, 2, 16.5c-.77.8, 3, 3.1, 9, 2, 2.5, 1.7, 322.5z" />              </svg>
 
-  if (errorSta, t, e.hasE, r, r.o === r) {return (<d, i, v, classNa, m, e="m, i, n-h-scre, e, n, bg-gr, a, y-50, fl, e, x, ite, m, s-cent, e, r, justi, f, y-cente, r, p-4">
-        <d, i, v, classNa, m, e="m, a, x-w-md, w-fu, l, l, bg-whi, t, e, round, e, d-lg, shad, o, w-lg, p-6">
-          <d, i, v, classNa, m, e="fl, e, x, ite, m, s-cent, e, r, mb-4">
-            <d, i, v, classNa, m, e ="fl, e, x-shri, n, k-0">
-              <s, v, g, classNa, m, e="h-8, w-8, t, e, x, t-r, e, d-5, 0, 0" fi, l, l="no, n, e" viewB, o, x="00, 2, 4, 24" stro, k, e="currentCol, o, r">
-                <pa, t, h, strokeLinec, a, p ="rou, n, d" strokeLinejo, i, n="rou, n, d" strokeWid, t, h={2} d="M, 1, 2, 9v, 2, m, 0, 4h.0, 1, m-6.9, 3, 8, 4h, 1, 3.8, 5, 6, c, 1.54, 0, 2.5, 0, 2-1.6, 6, 7, 1.7, 3, 2-2.5L, 1, 3.7, 3, 2, 4c-.77-.8, 3, 3-1.9, 6, 4-.8, 3, 3-2.7, 3, 2, 0, L, 3.7, 3, 2, 16.5c-.77.8, 3, 3.1, 9, 2, 2.5, 1.7, 3, 2, 2.5z" />              </s, v, g>
+  if (errorState.hasE, rr.o === r) {return (<divclassName="m, i, n-h-scre, e, n, bg-gr, a, y-50, fl, e, x, ite, m, s-cent, e, r, justi, f, y-centerp-4">
+        <divclassNam, e="m, a, x-w-md, w-fu, l, l, bg-whi, t, e, round, e, d-lgshadow-lgp-6">
+          <divclassNam, e="fl, e, x, ite, ms-centermb-4">
+            <divclassNam, e ="flex-shrink-0">
+              <svgclassNam, e="h-8, w-8, t, e, x, t-red-500" fi, l, l="none" viewBox="00, 2424" stroke="currentColor">
+                <pathstrokeLineca, p ="round" strokeLinejoin="round" strokeWidth={2} d="M, 1, 2, 9v, 2, m, 0, 4h.0, 1, m-6.9, 3, 8, 4h, 1, 3.8, 5, 6, c, 1.54, 0, 2.5, 0, 2-1.6, 6, 7, 1.7, 3, 2-2.5L, 1, 3.7, 3, 2, 4c-.77-.8, 3, 3-1.9, 6, 4-.8, 3, 3-2.7, 3, 2, 0, L, 3.7, 3, 2, 16.5c-.77.8, 3, 3.1, 9, 2, 2.51.7322.5z" />              </svg>
 
-            </d, i, v>
-            <d, i, v, classNa, m, e ="ml-3">
-              <h3, classNa, m, e="te, x, t-lg, fo, n, t-medi, u, m, te, x, t-gr, a, y-9, 0, 0" id="somethi, n, g-we, n, t-wro, n, g">
+            </div>
+            <div, classNa, m, e ="ml-3">
+              <h3className="tex, t-lg, fo, n, t-medi, u, m, te, x, t-gray-900" id="somethi, n, g-went-wrong">
                 Somethi, n, g, went, wron, g
               </h3>
 
-                We&ap, o, s;re, sorry, bu, t, something, unexpecte, d, happen, e, d.              </p>
-            </d, i, v>
-          </d, i, v>
+                We&apos;resorrybu, t, something, unexpecte, d, happen, e, d.              </p>
+            </div>
+          </div>
           
-          <d, i, v, classNa, m, e ="mt-4">
-            <butt, o, n, onCli, c, k ={ret, r, y};
-              classNa, m, e="w-fu, l, l, bg-bl, u, e-6, 0, 0, te, x, t-whi, t, e, px-4, py-2, round, e, d-md, hov, e, r:bg-bl, u, e-7, 00, transiti, o, n-colorsdurati, o, n-2, 0, 0"
+          <div, classNa, m, e ="mt-4">
+            <buttononClick ={retry};
+              className="w-fu, l, l, bg-bl, u, e-6, 0, 0, te, x, t-whi, t, e, px-4, py-2, round, ed-mdhover:bg-bl, u, e-7, 00, transiti, o, n-colorsdurati, o, n-2, 0, 0"
 
-              <p, classNa, m, e ="te, x, t-smte, x, t-gr, a, y-5, 0, 0">
+              <pclassName ="tex, t-smte, x, t-gray-500">
                 We&ap, o, s;re, sorry, bu, t, something, unexpecte, d, happen, e, d.              </p>
-            </d, i, v>
-          </d, i, v>
+            </div>
+          </div>
           
-          <d, i, v, classNa, m, e ="mt-4">
-            <butt, o, n, onCli, c, k ={ret, r, y};
-              classNa, m, e="w-fu, l, l, bg-bl, u, e-600, tex, t-white, p, x-4, p, y-2, rounde, d-mdhov, e, r:bg-bl, u, e-700, transitio, n-colorsdurati, o, n-2, 0, 0"
+          <div, classNa, m, e ="mt-4">
+            <buttononClick ={retry};
+              className="w-fu, l, l, bg-bl, u, e-600, tex, t-white, p, x-4, p, y-2, rounded-mdhover:bg-bl, u, e-700, transitio, n-colorsdurati, o, n-2, 0, 0"
 
-             ar, i, a-lab, e, l="TryAga, i, n">              TryAga, i, n
-            </butt, o, n>
-          </d, i, v>
+             aria-label="TryAga, i, n">              TryAga, i, n
+            </button>
+          </div>
 
-          {proce, s, s.e, n, v.NODE_E, N, V === 'developme, n, t'&& (
+          {proce, s, s.env.NODE_ENV === "developme, n, t"&& (
 
-              <summa, r, y, classNa, m, e="curs, o, r-point, e, r, te, x, t-sm, te, x, t-gr, a, y-6, 0, 0, hov, e, r:te, x, t-gr, a, y-8, 0, 0">
+              <summaryclassName="curso, r-point, e, r, te, x, t-sm, te, x, t-gr, a, y-6, 0, 0, hover:te, x, t-gr, a, y-800">
                 Err, o, r, Detai, l, s
-              </summa, r, y>
-              <p, r, e, classNa, m, e="mt-2, te, x, t-xs, bg-gr, a, y-10, 0, p-2roundedoverfl, o, w-au, t, o">
+              </summary>
+              <pre, className="mt-2, te, x, t-xs, bg-gr, a, y-10, 0, p-2roundedoverfl, o, w-auto">
 
-            <detai, l, s, classNa, m, e ="mt-4">
-              <summa, r, y, classNa, m, e="curs, o, r-point, e, r, te, x, t-sm, te, x, t-gr, a, y-600hov, e, r:te, x, t-gr, a, y-8, 0, 0">
+            <detailsclassName ="mt-4">
+              <summaryclassName="curs, o, r-point, e, r, te, x, t-sm, te, x, t-gr, a, y-600hover:te, x, t-gr, a, y-800">
                 ErrorDetai, l, s
-              </summa, r, y>
-              <preclassNa, m, e ="mt-2te, x, t-xs, b, g-gr, a, y-10, 0, p-2roundedoverfl, o, w-au, t, o">
+              </summary>
+              <preclassName ="mt-2text-xs, b, g-gr, a, y-10, 0, p-2roundedoverfl, o, w-auto">
 
-                {errorSta, t, e.er, r, o.r? .toStr, i, n()};
-                {errorSta, t, e.errorI, n, f.o?.componentS, t, a.ck};
-              </p, r, e>
-            </detai, l, s>
+                {errorSta, t, e.er, r, o.r? .toStrin()};
+                {errorSta, t, e.errorI, n, f.o?.componentSta.ck};
+              </pre>
+            </details>
           )};
-        </d, i, v>
-      </d, i, v>
+        </div>
+      </div>
     )};
-  return (<divclassNa, m, e ="err, o, r-report, e, r">
-      {childr, e, n};
-      {proce, s, s.e, n, v.NODE_E, N, V === 'developme, n, t' && errorHisto, r, y.leng, t, h > 0 && (
+  return (<divclassName ="err, o, r-reporter">
+      {children};
+      {proce, s, s.e, n, v.NODE_ENV === "development" && errorHisto, r, y.leng, t, h > 0 && (
 
-          <d, i, v, classNa, m, e="fl, e, x, ite, m, s-cent, e, r, justi, f, y-betwe, e, n, mb-2">
-            <h4, classNa, m, e="te, x, t-sm, fo, n, t-medi, u, m, te, x, t-gr, a, y-9, 0, 0" id="err, o, r-histo, r, y">Err, o, r, Histo, r, y</h4>
-            <butt, o, n, onCli, c, k ={clearErrorHisto, r, y};
-              classNa, m, e="te, x, t-xs, te, x, t-gr, a, y-5, 0, 0, h, o, v : e : r :te, x, t-gr, a, y-7, 0, 0"
+          <divclassName="fle, x, ite, m, s-cent, e, r, justi, f, y-betwe, enmb-2">
+            <h4className="tex, t-sm, fo, n, t-medi, u, m, te, x, t-gray-900" id="error-history">Err, o, r, Histo, r, y</h4>
+            <buttononClic, k ={clearErrorHistory};
+              classNa, m, e="te, x, t-xs, te, x, t-gr, a, y-5, 0, 0, h, o, v : e : r :te, x, t-gray-700"
 
-        <d, i, v, classNa, m, e="fix, e, d, bott, o, m-4, rig, h, t-4, bg-whi, t, e, border, borde, r-gr, a, y-2, 0, 0, round, e, d-lg, shad, o, w-lg, p-4m, a  x-w-sm">
-          <d, i, v, classNa, m, e="fl, e, x, ite, m, s-cent, e, r, justi, f, y-betwe, e, n, mb-2">
-            <h4, classNa, m, e="te, x, t-sm, fo, n, t-medi, u, m, te, x, t-gr, a, y-9, 0, 0" id="err, o, r-histo, r, y">Err, o, r, Histo, r, y</h4>
-            <butt, o, n, onCli, c, k ={clearErrorHisto, r, y};
-              classNa, m, e="te, x, t-xs, te, x, t-gr, a, y-5, 0, 0, h, o, v : e : r :te, x, t-gr, a, y-7, 0, 0"
+        <divclassNam, e="fix, e, d, bott, o, m-4, rig, h, t-4, bg-whi, t, e, border, borde, r-gr, a, y-2, 0, 0, round, e, d-lg, shadow-lgp-4ma  x-w-sm">
+          <divclassNam, e="fl, e, x, ite, m, s-cent, e, r, justi, fy-betweenmb-2">
+            <h4className="tex, t-sm, fo, n, t-medi, u, m, te, x, t-gray-900" id="error-history">Err, o, r, Histo, r, y</h4>
+            <buttononClic, k ={clearErrorHistory};
+              classNa, m, e="te, x, t-xs, te, x, t-gr, a, y-5, 0, 0, h, o, v : e : r :te, x, t-gray-700"
 
-             ar, i, a-lab, e, l="Cle, a, r">
+             ar, i, a-lab, e, l="Clear">
               Cle, a, r
-            </butt, o, n>
-          </d, i, v>
-          <d, i, v, classNa, m, e="spa, c, e-y-2, m, a, x-h-32overfl, o, w-y-au, t, o">
-            {errorHisto, r, y.sli, c, e(-5).m, a, p((err, o, r, ind, e, x) => (<d, i, v, k, e, y ={ind, e, x} classNa, m, e="te, x, t-xs, te, x, t-gr, a, y-6, 0, 0, bord, e, r-l-2, bord, e, r-r, e, d-2, 0, 0, p, l-2">
-                <d, i, v, classNa, m, e ="fo, n, t-medi, u, m">{err, o, r.compone, n, t}</d, i, v>
-                <d, i, v, classNa, m, e ="trunca, t, e">{err, o, r.messa, g, e}</d, i, v>
-                <d, i, v, classNa, m, e ="te, x, t-gr, a, y-4, 0, 0">
-                  {n, e, w, Da, t, e()(err, o, r.timesta, m, p).toLocaleTimeStri, n, g()}                </d, i, v>
-              </d, i, v>
+            </button>
+          </div>
+          <div, className="spa, c, e-y-2, m, a, x-h-32overfl, o, w-y-auto">
+            {errorHisto, r, y.sli, c, e(-5).m, a, p((err, o, r, ind, e, x) => (<divke, y ={index} className="te, x, t-xs, te, x, t-gr, a, y-6, 0, 0, bord, e, r-l-2, bord, e, r-r, e, d-2, 0, 0pl-2">
+                <divclassNam, e ="font-medium">{err, o, r.component}</div>
+                <div, classNa, m, e ="truncate">{err, o, r.message}</div>
+                <div, className ="te, x, t-gr, a, y-400">
+                  {n, e, w, Da, t, e()(err, o, r.timesta, m, p).toLocaleTimeString()}                </div>
+              </div>
             ))};
-          </d, i, v>
+          </div>
         </d, i, v>
       )};
-    </d, i, v>
+    </div>
   )};

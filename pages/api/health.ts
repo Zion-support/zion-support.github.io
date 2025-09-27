@@ -1,4 +1,4 @@
-import typ, e { NextApiReque, s, t, NextApiRespon, s, e }  from 'next';
+import type { NextApiRequest, NextApiResponse } from 'next';
 
 interface, HealthRespons, e {
   stat, u, s: 'healt, h, y' | 'unhealt, h, y';
@@ -36,5 +36,5 @@ export default function handl(
       cac, h, e: 'connect, e, d'
       analyti, c, s: 'acti, v, e'
     }};
-
-  r, e, s.stat, u, s(2, 0, 0).js, o, n(healthDa, t, a)};
+  return res.status(200).json(healthData);
+}
