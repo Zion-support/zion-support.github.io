@@ -39,6 +39,25 @@ export interface ErrorReport {
   url: string;
   userId?: string;
   sessionId?: string;
+  severity?: 'low' | 'medium' | 'high' | 'critical';
+  category?: string;
+  resolved?: boolean;
+  context?: ErrorContext;
+  occurrences?: number;
+  firstSeen?: number;
+  lastSeen?: number;
+}
+
+export interface ErrorInfo {
+  message: string;
+  stack?: string;
+  componentStack?: string;
+  timestamp: number;
+  userAgent: string;
+  url: string;
+  userId?: string;
+  sessionId?: string;
+  firstSeen?: number;
 }
 
 export interface ErrorRecoveryOptions {
@@ -53,6 +72,9 @@ export class EnhancedErrorHandler {
   private errorQueue: ErrorInfo[] = [];
   private maxQueueSize = 50;
   private isReporting = false;
+  private errors = new Map<string, ErrorReport>();
+  private maxErrors = 100;
+  private reportEndpoint = '/api/errors';
 
   static getInstance(): EnhancedErrorHandler {
     if (!EnhancedErrorHandler.instance) {
@@ -79,6 +101,9 @@ export class EnhancedErrorHandler {
       id: this.generateErrorId(event.error),
       message: event.message,
       stack: event.error?.stack,
+      timestamp: Date.now(),
+      userAgent: navigator.userAgent,
+      url: window.location.href,
       context: this.getErrorContext(),
       severity: this.determineSeverity(event.error),
       category: 'javascript',
@@ -96,6 +121,9 @@ export class EnhancedErrorHandler {
       id: this.generateErrorId(event.reason),
       message: event.reason?.message || 'Unhandled Promise Rejection',
       stack: event.reason?.stack,
+      timestamp: Date.now(),
+      userAgent: navigator.userAgent,
+      url: window.location.href,
       context: this.getErrorContext(),
       severity: this.determineSeverity(event.reason),
       category: 'javascript',
@@ -113,6 +141,9 @@ export class EnhancedErrorHandler {
       const errorReport: ErrorReport = {
         id: this.generateErrorId(event),
         message: `Resource loading error: ${(event.target as HTMLImageElement)?.src || (event.target as HTMLLinkElement)?.href}`,
+        timestamp: Date.now(),
+        userAgent: navigator.userAgent,
+        url: window.location.href,
         context: this.getErrorContext({
           resourceType: (event.target as HTMLElement)?.tagName,
           resourceUrl: (event.target as HTMLImageElement)?.src || (event.target as HTMLLinkElement)?.href
@@ -139,6 +170,9 @@ export class EnhancedErrorHandler {
           const errorReport: ErrorReport = {
             id: this.generateErrorId(response),
             message: `Network error: ${response.status} ${response.statusText}`,
+            timestamp: Date.now(),
+            userAgent: navigator.userAgent,
+            url: window.location.href,
             context: this.getErrorContext({
               url: args[0].toString(),
               method: args[1]?.method || 'GET',
@@ -161,6 +195,9 @@ export class EnhancedErrorHandler {
         const errorReport: ErrorReport = {
           id: this.generateErrorId(error),
           message: `Fetch error: ${error instanceof Error ? error.message : 'Unknown error'}`,
+          timestamp: Date.now(),
+          userAgent: navigator.userAgent,
+          url: window.location.href,
           context: this.getErrorContext({
             url: args[0].toString(),
             method: args[1]?.method || 'GET'
@@ -195,6 +232,9 @@ export class EnhancedErrorHandler {
         const errorReport: ErrorReport = {
           id: EnhancedErrorHandler.getInstance().generateErrorId(this),
           message: `XHR error: ${(this as ExtendedXMLHttpRequest)._method} ${(this as ExtendedXMLHttpRequest)._url}`,
+          timestamp: Date.now(),
+          userAgent: navigator.userAgent,
+          url: window.location.href,
           context: EnhancedErrorHandler.getInstance().getErrorContext({
             url: (this as ExtendedXMLHttpRequest)._url,
             method: (this as ExtendedXMLHttpRequest)._method,
@@ -220,7 +260,7 @@ export class EnhancedErrorHandler {
     const existingError = this.errors.get(errorReport.id);
     
     if (existingError) {
-      existingError.occurrences++;
+      existingError.occurrences = (existingError.occurrences || 1) + 1;
       existingError.lastSeen = Date.now();
       this.errors.set(errorReport.id, existingError);
     } else {
@@ -240,7 +280,7 @@ export class EnhancedErrorHandler {
     // Cleanup old errors
     if (this.errors.size > this.maxErrors) {
       const oldestErrors = Array.from(this.errors.entries())
-        .sort(([, a], [, b]) => a.firstSeen - b.firstSeen)
+        .sort(([, a], [, b]) => (a.firstSeen || 0) - (b.firstSeen || 0))
         .slice(0, 100);
       
       oldestErrors.forEach(([id]) => this.errors.delete(id));
@@ -586,15 +626,16 @@ export class EnhancedErrorBoundary extends React.Component<
   }
 
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo): void {
-    const { onError, maxRetries = 3 } = this.props;
+    const { onError } = this.props;
     
     this.setState({ errorInfo });
     
     // Capture error with enhanced handler
-    this.errorHandler.captureError(error, errorInfo, {
-      retryable: this.state.retryCount < maxRetries,
-      maxRetries,
-      retryDelay: 1000,
+    this.errorHandler.captureError(error, {
+      component: errorInfo.componentStack || undefined,
+      url: window.location.href,
+      timestamp: Date.now(),
+      userAgent: navigator.userAgent
     });
 
     // Call custom error handler
@@ -713,7 +754,7 @@ export class ReactErrorBoundary extends React.Component<
 
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo): void {
     this.errorHandler.captureError(error, {
-      component: errorInfo.componentStack,
+      component: errorInfo.componentStack || undefined,
       url: window.location.href,
       timestamp: Date.now(),
       userAgent: navigator.userAgent
