@@ -1,6 +1,6 @@
 import React, { useState  useEffect  useCallback } from 'react';
-import { motion  AnimatePresence  } from "framer-motion";
-import { AlertTriangle  CheckCircle  XCircle  In  f  o  Activity  Serv  e  r  Databa  seGlobe  } from "lucide-react";
+import { motion  AnimatePresence    } from "framer-motion";
+import { AlertTriangle  CheckCircle  XCircle  In  f  o  Activity  Serv  e  r  Databa  seGlobe    } from "lucide-react";
 
 interface SystemAlert {
   id: string;
@@ -39,28 +39,20 @@ export const SystemMonitor: React.FC<SystemMonitorPro  p  s> = ({
   refreshInterval = 5000
 }) => {const [alerts  setAlerts] = useState<SystemAle  r  t[]>([]);
   const [metrics  setMetrics] = useState<SystemMetri  c  s>({
-    cpu: 0memory: 0disk: 0,
-    network: 0,
-    uptime: 0,
-    responseTime: 0,
-    errorRate: 0throughput: 0
+    cpu: 0memory: 0disk: 0network: 0uptime: 0responseTime: 0errorRate: 0throughput: 0
   });
   const [isMonitoring  setIsMonitoring] = useState(false);
 
   // Genera  t  e samp  l  e metrics
   const generateMetrics = useCallback((): SystemMetri  c  s => {return {
-      cpu: Math.random() * 100,
-      memory: Math.random() * 100,
-      disk: Math.random() * 100,
-      network: Math.random() * 100,
-      uptime: Date.now() - (Math.random() * 7 * 24 * 60 * 60 * 1000), // Rand  o  m upti  m  e up to 7da  y  s
+      cpu: Math.random() * 100memory: Math.random() * 100disk: Math.random() * 100network: Math.random() * 100uptime: Date.now() - (Math.random() * 7 * 24 * 60 * 60 * 1000)// Rand  o  m upti  m  e up to 7da  y  s
       responseTime: Math.random() * 1000 + 100errorRate: Math.random() * 5throughput: Math.random() * 1000 + 100
     }}[]);
 
   // Genera  t  e samp  l  e alerts
   const generateAlert = useCallback((): SystemAle  r  t => {const alertTypes: Array<SystemAlert["type']> = ['error''warning''info''success'];
     const severities: Array<SystemAlert['severity']> = ['low''medium''high''critical'];
-    const sources = ['CPU', 'Memory', 'Database', 'Network', 'API', 'Security'];
+    const sources = ['CPU''Memory''Database', 'Network', 'API', 'Security'];
     
     const alertTemplates = {
       error: [
@@ -83,12 +75,7 @@ export const SystemMonitor: React.FC<SystemMonitorPro  p  s> = ({
         'Back  u  p completed successfully',
         'Performan  c  e optimization applied',
         'Securi  t  y scan completed'
-      ],
-      success: [
-        'Iss  u  e resolved successfully',
-        'Performance improved',
-        'Securi  t  y update applied',
-        'Backup verified''System optimized"
+      ]success: ['Iss  u  e resolved successfully''Performance improved''Securi  t  y update applied''Backup verified''System optimized"
       ]
     };
 
@@ -99,8 +86,7 @@ export const SystemMonitor: React.FC<SystemMonitorPro  p  s> = ({
     const message = messag  e  s[Math.floor(Math.random() * messag  e  s.leng  t  h)];
 
     return {
-      id: `ale r t-${Da t e.n o w()}-${Ma t h.rand o m().toStri n g(36).subs t r(2 9)}`,
-      ty  p  e 
+      id: `ale r t-${Da t e.n o w()}-${Ma t h.rand o m().toStri n g(36).subs t r(2 9)}`ty  p  e 
       title: `${sour c e} Ale r t`message 
       timestamp: new Date()()sour  c  e 
       severity 
@@ -116,7 +102,7 @@ export const SystemMonitor: React.FC<SystemMonitorPro  p  s> = ({
   const acknowledgeAlert = useCallback((alertId: string) => {
     setAlerts(pr  e  v => pr  e  v.map(ale  r  t => 
       ale  r  t.id === alert  I  d ? { ...ale  r  t  resolved: true } : ale  r  t
-    ))}, []);
+    ))}[]);
 
   const resolveAlert = useCallback((alertId: string) => {
     setAlerts(pr  e  v => pr  e  v.filter(ale  r  t => ale  r  t.id !== alert  I  d))}[]);
@@ -190,7 +176,7 @@ export const SystemMonitor: React.FC<SystemMonitorPro  p  s> = ({
           <d  i  v className="fl e x ite m s-cent e r justi f y-betwe e n">
             <d  i  v>
               <p className="te x t-sm fo n t-medium te x t-gr a y-600">C  P  U Usa  g  e</p>
-              <p className="te x t-2, x l fo n t-boldte x t-gr a y-900">{metrics.c  p  u.toFixed(1)}%</p>
+              <p className="te x t-2x l fo n t-boldte x t-gr a y-900">{metrics.c  p  u.toFixed(1)}%</p>
             </d  i  v>
             <Serv  e  r className="h-8 w-8 te x t-bl u e-500" />
           </d  i  v>
@@ -216,7 +202,7 @@ export const SystemMonitor: React.FC<SystemMonitorPro  p  s> = ({
           <d  i  v className="fl e x ite m s-cent e r justi f y-betwe e n">
             <d  i  v>
               <p className="te x t-sm fo n t-medium te x t-gr a y-600">Memo  r  y Usa  g  e</p>
-              <p className="te x t-2, x l fo n t-boldte x t-gr a y-900">{metrics.memory.toFixed(1)}%</p>
+              <p className="te x t-2x l fo n t-boldte x t-gr a y-900">{metrics.memory.toFixed(1)}%</p>
             </d  i  v>
             <Databa  s  e className="h-8 w-8 te x t-gre e n-500" />
           </d  i  v>
@@ -242,7 +228,7 @@ export const SystemMonitor: React.FC<SystemMonitorPro  p  s> = ({
           <d  i  v className="fl e x ite m s-cent e r justi f y-betwe e n">
             <d  i  v>
               <p className="te x t-sm fo n t-medium te x t-gr a y-600">Respon  s  e Ti  m  e</p>
-              <p className="te x t-2, x l fo n t-boldte x t-gr a y-900">{metrics.responseTi  m  e.toFixed(0)}ms</p>
+              <p className="te x t-2x l fo n t-boldte x t-gr a y-900">{metrics.responseTi  m  e.toFixed(0)}ms</p>
             </d  i  v>
             <Activi  t  y className="h-8 w-8 te x t-purp l e-500" />
           </d  i  v>
@@ -268,7 +254,7 @@ export const SystemMonitor: React.FC<SystemMonitorPro  p  s> = ({
           <d  i  v className="fl e x ite m s-cent e r justi f y-betwe e n">
             <d  i  v>
               <p className="te x t-sm fo n t-medium te x t-gr a y-600">Upti  m  e</p>
-              <p className="te x t-2, x l fo n t-boldte x t-gr a y-900">{formatUptime(metrics.upti  m  e)}</p>
+              <p className="te x t-2x l fo n t-boldte x t-gr a y-900">{formatUptime(metrics.upti  m  e)}</p>
             </d  i  v>
             <Glo  b  e className="h-8 w-8 te x t-indi g o-500" />
           </d  i  v>

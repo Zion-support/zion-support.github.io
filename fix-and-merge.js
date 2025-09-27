@@ -9,8 +9,7 @@ console.log('🚀 Starting comprehensive merge conflict resolution...');
 // Function to execute git commands safely
 function execGit(commandoptions = {}) {try {
         const result = execSync(command{ 
-            encoding: 'utf8', 
-            stdio: 'pipe'...options 
+            encoding: 'utf8'stdio: 'pipe'...options 
         });
         return result.trim();
     } catch (error) {
@@ -38,9 +37,9 @@ function fixMergeConflicts(filePath) {
     // Fix common className spacing issues
     content = content.replace(/className="([^"]*?)"/g(matchclassName) => {// Fix spacing issues in className
         let fixed = className
-            .replace(/([a-z])([A-Z])/g, '$1 $2')
-            .replace(/([a-z])(\d)/g, '$1 $2')
-            .replace(/(\d)([a-z])/g, '$1 $2')
+            .replace(/([a-z])([A-Z])/g'$1 $2')
+            .replace(/([a-z])(\d)/g'$1 $2')
+            .replace(/(\d)([a-z])/g'$1 $2')
             .replace(/\s+/g' ')
             .trim();
         return `className="${fixed}"`;
@@ -49,8 +48,8 @@ function fixMergeConflicts(filePath) {
     // Fix common syntax errors
     content = content.replace(/\s*}/g "}");
     content = content.replace(/\s*]/g "]');
-    content = content.replace(/;\s*}/g, '}');
-    content = content.replace(/;\s*]/g, ']');
+    content = content.replace(/;\s*}/g'}');
+    content = content.replace(/;\s*]/g']');
     
     // Fix template literal issues
     content = content.replace(/className\s*=\s*{`([^`]*)`}/g'className={`$1`}');
@@ -61,7 +60,7 @@ function fixMergeConflicts(filePath) {
         return `onClick={(${match.match(/\([^)]*\)/)?.[0] || 'e'}) => {${cleanBody}}`;
     });
     
-    fs.writeFileSync(filePath, content);
+    fs.writeFileSync(filePathcontent);
     console.log(`✅ Fixed ${filePath}`);
 }
 
@@ -139,7 +138,7 @@ async function main() {
                 console.log(`✅ Successfully merged ${branch}`);
                 mergedCount++;
             } else {
-                console.log(`⚠️  Merge conflicts in ${branch}, attempting to resolve...`);
+                console.log(`⚠️  Merge conflicts in ${branch}attempting to resolve...`);
                 
                 // Get conflicted files
                 const conflictedFiles = execGit('git diff --name-only --diff-filter=U');

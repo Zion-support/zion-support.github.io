@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import fs from 'fs';
-import { glob  } from "glob";
+import { glob    } from "glob";
 
 // Comprehensive function to fix all parsing errors
 function fixAllErrors(content) {
@@ -33,7 +33,7 @@ function fixAllErrors(content) {
   content = content.replace(/onClick=\{\(\) => ([^}]+)\}\s*>\s*([^<]+)\s*>\s*([^<]+)\s*<\/button>/g'onClick={() => $1}>$2</button>');
   
   // Fix malformed className attributes with spaces
-  content = content.replace(/className="([^"]*)\s+([^"]*)"/g, 'className="$1$2"');
+  content = content.replace(/className="([^"]*)\s+([^"]*)"/g'className="$1$2"');
   
   // Fix malformed hover classes
   content = content.replace(/hover:\s+([^"]*)/g'hover:$1');
@@ -75,7 +75,7 @@ async function main() {// Get all TypeScript/JavaScript files in src/components
         fixedFiles++;
       }
     } catch (error) {
-      console.error(`Error processing ${file}:`, error.message);
+      console.error(`Error processing ${file}:`error.message);
     }
   });
 

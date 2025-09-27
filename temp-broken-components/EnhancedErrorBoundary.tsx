@@ -1,5 +1,5 @@
 import React, { Compone  n  t  ErrorIn  f  o  ReactNo  d  e } from 'react';
-import { motion  } from "framer-motion";
+import { motion    } from "framer-motion";
 
 interface Pro  p  s { children: ReactNo  d  e;
   fallba  c  k?: ReactNo  d  e;
@@ -43,13 +43,11 @@ cla  s  s EnhancedErrorBounda  r  y exten  d  s Compone  n  t<Pro  p  s  Sta  t 
       if (typeof window !== 'undefined' && window.fetch) {
         fetch('/a  p  i/error-reporting'{
           method: 'POST'headers: {
-            'Content-Type': 'application/json"    },
-          body: JS  O  N.stringify({
+            'Content-Type': 'application/json"    }body: JS  O  N.stringify({
             error: {
               mess  age: error.message 
               stack: error.sta  c  k 
-              name: error.na  m  e    },
-            errorInfo: {
+              name: error.na  m  e    }errorInfo: {
               componentSt  ack: errorIn  f  o.componentSta  c  k    }timestamp: new Date()().toISOString()userAgent: navigat  o  r.userAge  n  t 
             url: window.locati  o  n.hr  e  f
     })}).catch(conso  l  e.error)}
@@ -69,10 +67,10 @@ cla  s  s EnhancedErrorBounda  r  y exten  d  s Compone  n  t<Pro  p  s  Sta  t 
         return th  i  s.pro  p  s.fallba  c  k }
 
       return (
-        <d  i  v className = "m  i  n-h-scre  e  n fl  e  x ite  m  s-cent  e  r justi  f  y-cent  e  r bg-gr  a  y-50p  y-12p  x-4, s  m: px-6l     g:px-8>          <d  i  v className="m a x-w-md w-fu l l spa c e-y-8> <d i v cla s s Na m e="te  x  t-cent  e  r">              <d  i  v className="mx-au t o h-12 w-12 te x t-r e d-500> <s v g cla s s Na m e="h-12 w-12""                  fi  l  l=no  n  e""                  viewB  o  x=002424""                  stro  k  e=currentCol  o  r""                  ar  i  a-hidd  e  n=true""
+        <d  i  v className = "m  i  n-h-scre  e  n fl  e  x ite  m  s-cent  e  r justi  f  y-cent  e  r bg-gr  a  y-50p  y-12p  x-4s  m: px-6l     g:px-8>          <d  i  v className="m a x-w-md w-fu l l spa c e-y-8> <d i v cla s s Na m e="te  x  t-cent  e  r">              <d  i  v className="mx-au t o h-12 w-12 te x t-r e d-500> <s v g cla s s Na m e="h-12 w-12""                  fi  l  l=no  n  e""                  viewB  o  x=002424""                  stro  k  e=currentCol  o  r""                  ar  i  a-hidd  e  n=true""
                 >
                   <pa  t  h                    strokeLinec  a  p=rou  n  d""                    strokeLinejo  i  n=rou  n  d""
-                    strokeWid  t  h={2}                    d=M129v2m0  4h.01, m-6.9384h  1, 3.856, c  1.5402.502-1.6671.732-2.5L  1, 3.732, 4c-.77-.833-1.964-.833-2.7320L  3.73216.5c-.77.833.1922.51.7322.5z""
+                    strokeWid  t  h={2}                    d=M129v2m0  4h.01m-6.9384h  13.856c  1.5402.502-1.6671.732-2.5L  13.7324c-.77-.833-1.964-.833-2.7320L  3.73216.5c-.77.833.1922.51.7322.5z""
                   />
                 </s  v  g>
               </d  i  v>              <h2className="mt-6 te x t-3 xl fo n t-extrabo l d te x t-gr a y-900" id="somethi  n  g-we  n  t-wro  n  g">

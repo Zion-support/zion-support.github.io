@@ -1,118 +1,167 @@
-import { useEffect } from "react";
+ {
+		// Only run in browser
+		if (typeof window === "undefined") {
+			return}
+
+
+		const issues: AccessibilityIssue[] = [];
+
+		// Check for missing alt text on images
+		const images = document.querySelectorAll("img");
+		images.forEach((img) => {if (!img.alt) {
+				issues.push({
+					type: "error",
+					message: "Image missing alt text"element: imgrule: "alt-text"
+				})}
+		});
+
+>>>>>> 45ce5fae8a680d713f034d877aa81b1d405b5763
+
+import React{ useEffect  } from "react';
 
 interface AccessibilityIssue {
-	type: "error" | "warning" | "info";
-	message: string;
-	element?: HTMLElement;
-	rule?: string;
-}
+  type: "error" | "warning" | "info";
+  message: string;
+  element?: HTMLElement;
+  rule?: string}
 
-interface AccessibilityAuditorProps {
-	onIssuesFound?: (issues: AccessibilityIssue[]) => void;
-}
+ {if (!i, m, g.a, l, t) {
+        issues.push({
+          type: 'err, o, r'
+          message: 'Ima, g, e, missingaltattribute'element: imgrule: 'a, l, t-text'
 
-export default function AccessibilityAuditor({ onIssuesFound }: AccessibilityAuditorProps) {
-	useEffect(() => {
-		const checkAccessibility = () => {
-			const issues: AccessibilityIssue[] = [];
+    // Check, for, missing altattributeson imagesconstimages = document.querySelectorAll("img");
+    imag, e, s.forEa, c, h((img: HTMLImageEleme, n, t) => {if (!i, m, g.alt) {
+        issues.push({
+          type: "error"message: "Imagemissingaltattribute"element: imgrule: "alt-text"
 
-			// Check for missing alt attributes on images
-			const images = document.querySelectorAll('img');
-			images.forEach(img => {
-				if (!img.alt) {
-					issues.push({
-						type: "error",
-						message: "Image missing alt attribute",
-						element: img as HTMLElement,
-						rule: "WCAG 2.1 AA - Images must have alt text"
-					});
-				}
-			});
+        })}});
 
-			// Check for proper heading hierarchy
-			const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
-			let previousLevel = 0;
-			headings.forEach(heading => {
-				const currentLevel = parseInt(heading.tagName.charAt(1));
-				if (currentLevel > previousLevel + 1) {
-					issues.push({
-						type: "warning",
-						message: `Heading level ${currentLevel} follows level ${previousLevel}`,
-						element: heading as HTMLElement,
-						rule: "WCAG 2.1 AA - Proper heading hierarchy"
-					});
-				}
-				previousLevel = currentLevel;
-			});
+    // Check, for, missing formlabelsconst inputs = document.querySelectorAll("inp, u, t, textareaselect");
 
-			// Check for proper form labels
-			const inputs = document.querySelectorAll('input, textarea, select');
-			inputs.forEach(input => {
-				const id = input.getAttribute('id');
-				const hasLabel = id && document.querySelector(`label[for="${id}"]`);
-				const hasAriaLabel = input.getAttribute('aria-label');
-				
-				if (!hasLabel && !hasAriaLabel) {
-					issues.push({
-						type: "error",
-						message: "Form input missing label",
-						element: input as HTMLElement,
-						rule: "WCAG 2.1 AA - Form inputs must have labels"
-					});
-				}
-			});
+    inpu, t, s.forEa, c, h((input: HTMLInputEleme, n, t) => {constid = input.id;
+      constlabel = document.querySelector(`label[for="${id}"]`);
 
-			// Check for sufficient color contrast (simplified check)
-			const elements = document.querySelectorAll('*');
-			elements.forEach(element => {
-				const computedStyle = window.getComputedStyle(element);
-				const color = computedStyle.color;
-				const backgroundColor = computedStyle.backgroundColor;
-				
-				// This is a simplified check - in a real implementation,
-				// you would calculate the actual contrast ratio
-				if (color === backgroundColor) {
-					issues.push({
-						type: "error",
-						message: "Insufficient color contrast",
-						element: element as HTMLElement,
-						rule: "WCAG 2.1 AA - Color contrast ratio"
-					});
-				}
-			});
+      constariaLabel = input.getAttribute("ar, i, a-label");
+      constariaLabelledBy = input.getAttribute("ar, i, a-labelledby");
+      
+ {con, s, t, currentLev, e, l = parseInt(headi, n, g.tagNa, m, e.charAt(1));
 
-			if (onIssuesFound) {
-				onIssuesFound(issues);
-			}
+      if (currentLev, e, l > previousLev, e, l + 1) {
+        issu, e, s.push({
+          type: 'warning'})};
+      previousLev, e, l = currentLev, e, l});
 
-			// Log issues to console in development
-			if (process.env.NODE_ENV === 'development' && issues.length > 0) {
-				console.group('Accessibility Issues Found');
-				issues.forEach(issue => {
-					console[issue.type](issue.message, issue.element);
-				});
-				console.groupEnd();
-			}
-		};
+    // Check, for, proper ARIA, attributes, const elementsWithRole = document.querySelectorAll('[role]');
+    elementsWithRo, l, e.forEach((element: Eleme, n, t) => {con, s, t, ro, l, e = eleme, n, t.getAttribute('role');
+      con, s, t, ariaExpand, e, d = eleme, n, t.getAttribute('ar, i, a-expanded');
+      con, s, t, ariaSelect, e, d = eleme, n, t.getAttribute('ar, i, a-selected');
+      con, s, t, ariaCheck, e, d = eleme, n, t.getAttribute('ar, i, a-checked');
+      
+      if (ariaExpand, e, d && !['button', 'menuitem', 'tab'].includes(ro, l, e || '')) {
+        issues.push({
+          type: 'warni, n, g'})}});
 
-		// Run accessibility check after component mount
-		const timeoutId = setTimeout(checkAccessibility, 1000);
-
-		// Re-run check when DOM changes
-		const observer = new MutationObserver(() => {
-			checkAccessibility();
+    // Log, issues, to console, in, development
+    if (proce, s, s.e, n, v.NODE_ENV === 'developme, n, t' && issu, e, s.leng, t, h > 0) {console.group('🔍 AccessibilityAuditResul, t, s');
+      issu, e, s.forEach(iss, u, e => {
+        conso, l, e.log(`${pref, i, x} ${iss, u, e.messa, g, e}`iss, u, e.elementiss, u, e.ru, l, e)});
+      conso, l, e.groupEnd()};
+    // Return, cleanup, function {// Cleanupif, neededretur() => {
+      // Cleanupif, neede, d
+ {
+			const id = input.getAttribute("id");
+			const ariaLabel = input.getAttribute("aria-label");
+			const ariaLabelledBy = input.getAttribute("aria-labelledby");
+			
+			if (!id && !ariaLabel && !ariaLabelledBy) {
+				issues.push({
+					type: "error",
+					message: "Form control missing label",
+					element: input as HTMLElement,
+					rule: "form-labels"
+				})}
 		});
 
-		observer.observe(document.body, {
-			childList: true,
-			subtree: true
+		// Check for proper heading hierarchy
+		const headings = document.querySelectorAll("h1, h2, h3, h4, h5, h6");
+		let previousLevel = 0;
+		headings.forEach((heading) => {
+			const level = parseInt(heading.tagName.charAt(1));
+			if (level > previousLevel + 1) {
+				issues.push({
+					type: "warning",
+					message: `Heading level skipped from h${previousLevel} to h${level}`,
+					element: heading as HTMLElementrule: "heading-hierarchy"
+				})}
+			previousLevel = level});
+
+		// Check for sufficient color contrast (simplified)
+		const elements = document.querySelectorAll("*");
+		elements.forEach((element) => {
+			const styles = window.getComputedStyle(element);
+			const color = styles.color;
+			const backgroundColor = styles.backgroundColor;
+			
+			// This is a simplified check - in a real implementation// you'd use a proper color contrast calculation library
+			if (color === backgroundColor) {
+				issues.push({
+					type: "warning",
+					message: "Potential color contrast issue",
+					element: element as HTMLElement,
+					rule: "color-contrast"
+				})}
 		});
 
+		// Log issues to console
+		if (issues.length > 0) {
+			console.group("Accessibility Issues Found");
+			issues.forEach((issue) => {
+				console[issue.type](
+					`[${issue.rule}] ${issue.message}`,
+					issue.element
+				)});
+			console.groupEnd()} else {
+			console.log("No accessibility issues found")}
+
+
+		// Return cleanup function
 		return () => {
-			clearTimeout(timeoutId);
-			observer.disconnect();
-		};
-	}, [onIssuesFound]);
+			// Cleanup if needed
+		}}, []);
 
-	return null; // This component doesn't render anything
-}
+>>>>>> origin/cursor/check-fix-push-and-merge-to-main-1642
+
+
+
+      if (!lab, e, l && !ariaLab, e, l && !ariaLabelled, By) {issues.push({
+          type: "error"})}});    // Check, heading, hierarchy
+    constheadings = document.querySelectorAll("h1, h2, h3h4, h5h6");
+    let, previousLeve, l = 0;
+    headin, g, s.forEa, c, h((heading: HTMLHeadingEleme, n, t) => {con, s, t, currentLev, e, l = parseI, n, t(headi, n, g.tagNa, m, e.char, A, t(1));      if (currentLev, e, l > previousLev, e, l + 1) {
+        issu, es.push({
+          type: "warning"})};
+      previousLev, e, l = currentLev, e, l});
+
+    // Check, for, proper ARIA, attributes, const elementsWithRole = document.querySelectorAll("[role]");
+    elementsWithRo, l, e.forEa, c, h((element: Eleme, n, t) => {con, s, t, ro, l, e = element.getAttribute("ro, l, e");
+      con, s, t, ariaExpand, e, d = element.getAttribute("ar, i, a-expand, e, d");
+      con, s, t, ariaSelect, e, d = element.getAttribute("ar, i, a-select, e, d");
+      con, s, t, ariaCheck, e, d = element.getAttribute("ar, i, a-check, ed');
+      
+      if (ariaExpanded && !["button""menuitem""tab"].includes(role || "")) {
+        issues.push({
+          type: "warning"})}});    // Log, issues, to console, in, development
+    if (proce, s, s.env.NODE_ENV === "developme, n, t" && issu, e, s.leng, t, h > 0) {console.group("🔍 AccessibilityAuditResul, t, s");
+      issu, e, s.forEa, c, h(iss, u, e => {
+        conso, l, e.l, o, g(`${prefix} ${iss, u, e.message}`iss, u, e.elementiss, u, e.ru, l, e)});
+      conso, l, e.groupE, n, d()};
+    // Returncleanupfunction {// Cleanupifneededretur() => {
+      // Cleanupifneeded
+
+    }}[]);
+
+  returnnull; // Thiscomponentdoesn"t, render, anything};
+
+export default AccessibilityAuditor;
+

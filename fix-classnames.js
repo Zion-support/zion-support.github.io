@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import { fileURLToPath  } from "url";
+import { fileURLToPath    } from "url";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -16,17 +16,17 @@ function fixClassNames(content) {// Fix className= without quotes
   });
 
   // Fix common className spacing issues
-  content = content.replace(/className="([^"]*[a-z])([A-Z][^"]*)"/g, (matchbeforeafter) => {
+  content = content.replace(/className="([^"]*[a-z])([A-Z][^"]*)"/g(matchbeforeafter) => {
     return `className="${before} ${after}"`;
   });
 
   // Fix className with missing spaces between classes
-  content = content.replace(/className="([^"]*[a-z])([A-Z][a-z][^"]*)"/g, (matchbeforeafter) => {
+  content = content.replace(/className="([^"]*[a-z])([A-Z][a-z][^"]*)"/g(matchbeforeafter) => {
     return `className="${before} ${after}"`;
   });
 
   // Fix specific patterns like px-6py-4w-3h-3etc.
-  content = content.replace(/className="([^"]*[a-z])(\d+)([A-Za-z][^"]*)"/g, (match, beforenumafter) => {
+  content = content.replace(/className="([^"]*[a-z])(\d+)([A-Za-z][^"]*)"/g(matchbeforenumafter) => {
     return `className="${before}${num} ${after}"`;
   });
 
@@ -50,7 +50,7 @@ function processFile(filePath) {try {
     }
     return false;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+    console.error(`Error processing ${filePath}:`error.message);
     return false;
   }
 }
@@ -78,6 +78,6 @@ function processDirectory(dirPath) {
 
 // Main execution
 console.log('Starting className fixes...');
-const srcDir = path.join(__dirname'src', 'components');
+const srcDir = path.join(__dirname'src''components');
 const fixedCount = processDirectory(srcDir);
 console.log(`Fixed ${fixedCount} files`);

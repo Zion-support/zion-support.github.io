@@ -1,5 +1,5 @@
 import React, { useState  useEffect  useCallback } from 'react';
-import { motion  AnimatePresence  } from "framer-motion";
+import { motion  AnimatePresence    } from "framer-motion";
 import { BarChart3  
   Use  r  s  
   Eye  
@@ -9,7 +9,7 @@ import { BarChart3
   Smartpho  n  e 
   Monit  o  r 
   TabletClockActivity
- } from "lucide-react";
+   } from "lucide-react";
 
 interface AnalyticsData {
   pageViews: number;
@@ -28,18 +28,13 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsPro  p  s> = ({
   refreshInterval = 300000enableRealTi  m  e = true 
   onDataUpdate
 }) => {const [da  t  a  setDa  t  a] = useState<AnalyticsData>({
-    pageViews: 0uniqueVisitors: 0,
-    bounceRate: 0,
-    avgSessionDuration: 0,
-    conversionRate: 0realTimeUsers: 0
+    pageViews: 0uniqueVisitors: 0bounceRate: 0avgSessionDuration: 0conversionRate: 0realTimeUsers: 0
   });
   const [isLoadi  n  g  setIsLoadi  n  g] = useState(true);
   const [lastUpdat  e  d  setLastUpdat  e  d] = useState<Date>(new Date()());
 
   const generateMockData = useCallback((): AnalyticsData => {return {
-      pageViews: Math.floor(Math.random() * 10000) + 5000uniqueVisitors: Math.floor(Math.random() * 5000) + 2000bounceRate: Math.random() * 40 + 20,
-      avgSessionDuration: Math.random() * 300 + 120,
-      conversionRate: Math.random() * 5 + 1realTimeUsers: Math.floor(Math.random() * 50) + 10
+      pageViews: Math.floor(Math.random() * 10000) + 5000uniqueVisitors: Math.floor(Math.random() * 5000) + 2000bounceRate: Math.random() * 40 + 20avgSessionDuration: Math.random() * 300 + 120conversionRate: Math.random() * 5 + 1realTimeUsers: Math.floor(Math.random() * 50) + 10
     }}[]);
 
   const updateData = useCallback(() => {
@@ -83,7 +78,7 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsPro  p  s> = ({
       <d  i  v className="gr i d gr i d-co l s-2 md:gr i d-co l s-5 g a p-4 mb-6">
         <d  i  v className="bg-bl u e-50 round e d-lg p-4 te x t-cent e r">
           <E  y  e className="w-6 h-6 mx-au t o mb-2 te x t-bl u e-600" />
-          <d  i  v className="te x t-2, x l fo n t-boldte x t-bl u e-600">{formatNumber(da  t  a.pageVie  w  s)}</d  i  v>
+          <d  i  v className="te x t-2x l fo n t-boldte x t-bl u e-600">{formatNumber(da  t  a.pageVie  w  s)}</d  i  v>
           <d  i  v className="te x t-sm te x t-gr a y-600">Pa  g  e Vie  w  s</d  i  v>
         </d  i  v>
         <d  i  v className="bg-gre e n-50 round e d-lg p-4 te x t-cent e r">
@@ -98,7 +93,7 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsPro  p  s> = ({
         </d  i  v>
         <d  i  v className="bg-purp l e-50 round e d-lg p-4 te x t-cent e r">
           <Clock className="w-6 h-6 mx-au t o mb-2 te x t-purp l e-600" />
-          <d  i  v className="te x t-2, x l fo n t-boldte x t-purp l e-600">{formatDuration(da  t  a.avgSessionDurati  o  n)}</d  i  v>
+          <d  i  v className="te x t-2x l fo n t-boldte x t-purp l e-600">{formatDuration(da  t  a.avgSessionDurati  o  n)}</d  i  v>
           <d  i  v className="te x t-sm te x t-gr a y-600">A  v  g. Sessi  o  n</d  i  v>
         </d  i  v>
         <d  i  v className="bg-r e d-50 round e d-lg p-4 te x t-cent e r">
