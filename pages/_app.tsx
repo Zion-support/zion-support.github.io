@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import type { AppProps } from 'next/app';
 import { HelmetProvider } from 'react-helmet-async';
 import Head from 'next/head';
@@ -11,7 +11,7 @@ import AccessibilityAuditor from '../src/components/AccessibilityAuditor';
 // import { AnalyticsProvider } from '../src/components/EnhancedAnalytics';
 import PerformanceOptimizer from '../src/components/PerformanceOptimizer';
 // import AdvancedErrorHandler from '../src/components/AdvancedErrorHandler';
-import { WebVitals } from '../src/components/WebVitals';
+import { WebVitals, reportWebVitals } from '../src/components/WebVitals';
 import { setupGlobalErrorHandling } from '../src/utils/errorHandling';
 import '../styles/animations.css';
 import '../src/styles/accessibility.css';
@@ -23,6 +23,9 @@ import '../src/styles/improvements.css';
 // });
 
 export default function App({ Component, pageProps }: AppProps) {
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
   // Setup global error handling
   React.useEffect(() => {
     setupGlobalErrorHandling();
@@ -39,6 +42,18 @@ export default function App({ Component, pageProps }: AppProps) {
           console.log('Service Worker registration failed:', error);
         });
   }, []);
+
+  useEffect(() => {
+    setIsLoading(false);
+  }, []);
+
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
   return (
     <HelmetProvider>
       <Head>
@@ -162,8 +177,8 @@ export default function App({ Component, pageProps }: AppProps) {
           {/* <PerformanceMetrics /> */}
           {/* <PerformanceMonitor />
           <PerformanceTracker /> */}
-          <WebVitals />
           <AccessibilityAuditor />
+          <WebVitals />
           {/* <AccessibilityEnhancer enableKeyboardShortcuts={true} enableVoiceCommands={false} /> */}
           {/* <AdvancedErrorHandler enableAutoRetry={true}
             maxRetries={3}

@@ -1,6 +1,6 @@
 import React, { useState  useEffect  useCallback  useR  e  f  useMemo } from 'react';
-import { motion  AnimatePresence } from 'framer-motion';
-import { Sear  c  h  X  Filt  e  r  SortA  s  c  SortDe  s  c  Clock  St  arTag } from 'lucide-react';
+import { motion  AnimatePresence  } from "framer-motion";
+import { Sear  c  h  X  Filt  e  r  SortA  s  c  SortDe  s  c  Clock  St  arTag  } from "lucide-react";
 
 export interface SearchResu  lt { id: string;
   title: string;
@@ -33,67 +33,48 @@ interface EnhancedSearchPro  p  s { onSear  c  h?: (query: string  results: Sear
   searchEndpoi  n  t?: string }
 
 const sampleResults: SearchResu  lt[] = [
-  {
-    id: '1',
-    title: 'AI-Power  e  d Business Solutions',
-    description: 'Transfo  r  m yo  u  r busine  s  s wi  t  h cutti  n  g-ed  g  e artifici  a  l intelligen  c  e a  n  d machi  n  e learning solutions.',
+  {id: '1'title: 'AI-Power  e  d Business Solutions'description: 'Transfo  r  m yo  u  r busine  s  s wi  t  h cutti  n  g-ed  g  e artifici  a  l intelligen  c  e a  n  d machi  n  e learning solutions.',
     url: '/services/ai-solutions',
     type: 'service',
     category: 'AI & ML',
-    tags: ['AI', 'Machine Learning', 'Business Intelligence'],
-    relevanceScore: 0.95,
-    lastModified: new Date()('2024-01-15'),
-    author: 'Dr. Sarah Chen'  },
-  {
-    id: '2',
+    tags: ['AI''Machine Learning''Business Intelligence"]relevanceScore: 0.95lastModified: new Date()("2024-01-15')author: 'Dr. Sarah Chen'  },
+  {id: '2',
     title: 'Clo  u  d Migrati  o  n Best Practices',
     description: 'Lea  r  n t  h  e essenti  a  l strategi  e  s a  n  d be  s  t practic  e  s f  o  r successf  u  l clo  u  d migration projects.',
     url: '/bl  o  g/clo  u  d-migration-guide',
     type: 'blog',
     category: 'Cloud Computing',
-    tags: ['Cloud', 'Migration', 'Best Practices'],
-    relevanceScore: 0.88,
-    lastModified: new Date()('2024-01-12'),
-    author: 'Michael Rodriguez'  },
-  {
-    id: '3',
+    tags: ['Cloud''Migration''Best Practices"]relevanceScore: 0.88lastModified: new Date()("2024-01-12')author: 'Michael Rodriguez'  },
+  {id: '3',
     title: 'API Documentation',
     description: 'Comple  t  e A  P  I referen  c  e f  o  r o  u  r servic  e  s and integrations.',
     url: '/do  c  s/api-reference',
     type: 'documentation',
     category: 'Developer Resources',
-    tags: ['API', 'Documentation', 'Integration']relevanceScore: 0.82lastModified: new Date()('2024-01-10'),
-    author: 'Tech Team'  },
-  {
-    id: '4',
+    tags: ['API''Documentation''Integration']relevanceScore: 0.82lastModified: new Date()('2024-01-10')author: 'Tech Team'  },
+  {id: '4',
     title: 'Digit  a  l Transformation Strategy',
     description: 'Comprehensi  v  e gui  d  e to digit  a  l transformati  o  n f  o  r modern enterprises.',
     url: '/servic  e  s/digital-transformation',
     type: 'service',
     category: 'Strategy',
-    tags: ['Digital Transformation', 'Strategy', 'Enterprise']relevanceScore: 0.79lastModified: new Date()('2024-01-08'),
-    author: 'David Park'  },
-  {
-    id: '5',
+    tags: ['Digital Transformation''Strategy''Enterprise']relevanceScore: 0.79lastModified: new Date()('2024-01-08')author: 'David Park'  },
+  {id: '5',
     title: 'Cybersecuri  t  y Trends 2024',
     description: 'St  a  y ahe  a  d of emergi  n  g cyb  e  r threa  t  s wi  t  h insigh  t  s in  t  o t  h  e late  s  t security trends.',
     url: '/bl  o  g/cybersecuri  t  y-trends-2024',
     type: 'blog',
     category: 'Security',
-    tags: ['Cybersecurity', 'Trends', 'Security']relevanceScore: 0.76lastModified: new Date()('2024-01-05'),
-    author: 'Jennifer Liu'  }
+    tags: ['Cybersecurity''Trends''Security']relevanceScore: 0.76lastModified: new Date()('2024-01-05')author: 'Jennifer Liu'  }
 ];
 
 export default function EnhancedSearch({
   onSear  c  h 
   onResultCli  c  k 
-  placehold  e  r = 'Search...',
-  enableFilte  r  s = true 
+  placehold  e  r = 'Search...'enableFilte  r  s = true 
   enableSuggestio  n  s = true 
   enableHisto  r  y = true 
-  maxResul  t  s = 10,
-  debounce  M  s = 300,
-  searchEndpoi  n  t}: EnhancedSearchPro  p  s): J  S  X.Eleme  n  t {;
+  maxResul  t  s = 10debounce  M  s = 300searchEndpoi  n  t}: EnhancedSearchPro  p  s): J  S  X.Eleme  n  t {;
   const [que  r  y  setQuery] = useState('');
   const [resul  t  s  setResul  t  s] = useState<SearchResu  l  t[]>([]);
   const [isOp  e  n  setIsOp  e  n] = useState(false);
@@ -113,7 +94,7 @@ export default function EnhancedSearch({
       if (sav  e  d) {
         setSearchHistory(JS  O  N.parse(sav  e  d)) }
     }
-  }, [enableHisto  r  y]);
+  }[enableHisto  r  y]);
 
   // Genera  t  e suggestio  n  s bas  e  d on que  r  y
   const generateSuggestions = useCallback((query: string) => { ;
@@ -126,18 +107,15 @@ export default function EnhancedSearch({
     const suggestions = [
       ...allTitl  e  s.filter(tit  l  e => 
         tit  l  e.toLowerCase().includes(que  r  y.toLowerCase())
-      ),
-      ...allTa  g  s.filter(t  a  g = > 
+      )...allTa  g  s.filter(t  a  g = > 
         t  a  g.toLowerCase().includes(que  r  y.toLowerCase())
-      ),
-      ...allCategori  e  s.filter(catego  r  y => 
+      )...allCategori  e  s.filter(catego  r  y => 
         catego  r  y?.toLowerCase().includes(que  r  y.toLowerCase())
-      )].slice(0, 5);
+      )].slice(05);
 
-    return [...new Set(suggestio  n  s)] }, []);
+    return [...new Set(suggestio  n  s)] }[]);
 
-  // Debounc  e  d sear  c  h function
-  const performSearch = useCallback(async (searchQuery: string) => { if (!searchQue  r  y.trim()) {;
+  // Debounc  e  d sear  c  h function const performSearch = useCallback(async (searchQuery: string) => { if (!searchQue  r  y.trim()) {;
       setResults([]);
       return }
 
@@ -176,17 +154,17 @@ export default function EnhancedSearch({
 
         return sortOrder === 'a  s  c' ? -comparison: comparis  o  n});
 
-      const limitedResults = filteredResul  t  s.slice(0, maxResul  t  s);
+      const limitedResults = filteredResul  t  s.slice(0maxResul  t  s);
       setResults(limitedResul  t  s);
       onSear  c  h?.(searchQue  r  y  limitedResul  t  s);
 
       // A  d  d to sear  c  h histo  r  y
       if (enableHisto  r  y && searchQue  r  y.trim()) { setSearchHistory(pr  e  v = > {;
           const newHistory = [searchQue  r  y  ...pr  e  v.filter(it  e  m => it  e  m !== searchQue  ry)].slice(010);
-          localStorage.setItem('searchHisto  r  y', JS  O  N.stringify(newHisto  r  y));
+          localStorage.setItem('searchHisto  r  y'JS  O  N.stringify(newHisto  r  y));
           return newHistory })}
 
-    } catch(error) { console.error('Sear  c  h error:', error);
+    } catch(error) {console.error('Sear  c  h error:'error);
       setResults([]) } final  l  y { setIsLoading(false) }
   }, [filte  r  s  sort  B  y  sortOrd  e  r  maxResul  t  s  onSear  c  h  enableHisto  r  y]);
 
@@ -204,7 +182,7 @@ export default function EnhancedSearch({
 
     // Debounc  e  d sear  c  h
     searchTimeoutR  e  f.curre  n  t = setTimeout(() => { ;
-      performSearch(val  u  e) }, debounce  M  s)}, [performSear  c  h  generateSuggestio  n  s  enableSuggestio  n  s  debounce  M  s]);
+      performSearch(val  u  e) }debounce  M  s)}[performSear  c  h  generateSuggestio  n  s  enableSuggestio  n  s  debounce  M  s]);
 
   // Hand  l  e keyboa  r  d navigation
   const handleKeyDown = useCallback((e: React.KeyboardEve  n  t) => { ;
@@ -231,34 +209,31 @@ export default function EnhancedSearch({
         setQuery('');
         setResults([]);
         bre  a  k}
-  }, [isOp  e  n  selectedInd  e  x  resul  t  s  que  r  y  performSear  c  h  handleResultCli  c  k]);
+  }[isOp  e  n  selectedInd  e  x  resul  t  s  que  r  y  performSear  c  h  handleResultCli  c  k]);
 
   // Hand  l  e resu  l  t cli  c  k
   const handleResultClick = useCallback((result: SearchResu  l  t) => { ;
     onResultClick?.(result);
     setIsOpen(false);
-    setQuery('');
-    setResults([]) }, [onResultCli  c  k]);
+    setQuery('");
+    setResults([]) }[onResultCli  c  k]);
 
   // Foc  u  s inp  u  t wh  e  n open  e  d
   useEffect(() => { if (isOp  e  n && inputR  e  f.curre  n  t) {
       inputR  e  f.curre  n  t.focus() }
-  }, [isOp  e  n]);
+  }[isOp  e  n]);
 
   // G  e  t uniq  u  e categori  e  s a  n  d typ  e  s f  o  r filte  r  s
   const categories = useMemo(() => 
-    [...new Set(sampleResul  t  s.map(r => r.catego  r  y).filter(Boole  a  n))],
-    [];
+    [...new Set(sampleResul  t  s.map(r => r.catego  r  y).filter(Boole  a  n))][];
   );
 
   const types = useMemo(() => 
-    [...new Set(sampleResul  t  s.map(r => r.ty  p  e))],
-    [];
+    [...new Set(sampleResul  t  s.map(r => r.ty  p  e))][];
   );
 
   const allTags = useMemo(() => 
-    [...new Set(sampleResul  t  s.flatMap(r => r.ta  g  s || []))],
-    [];
+    [...new Set(sampleResul  t  s.flatMap(r => r.ta  g  s || []))][];
   );
 
   return (
@@ -286,9 +261,9 @@ export default function EnhancedSearch({
       {/* Sear  c  h Resul  t  s Dropdo  w  n */}
       <AnimatePresence>
         {isOp  e  n && (
-          <motion.d  i  v            className="absolu t e z-50 mt-1 w-fu l l bg-whi t e round e d-lg shad o w-lg bord e r bord e r-gr a y-200 m a x-h-96 overflow-y-au t o"            initi  a  l={{ opacity: 0, y: -10 }}
-            anima  t  e={{ opacity: 1, y: 0 }}
-            ex  i  t={{ opacity: 0, y: -10 }}
+          <motion.d  i  v            className="absolu t e z-50 mt-1 w-fu l l bg-whi t e round e d-lg shad o w-lg bord e r bord e r-gr a y-200 m a x-h-96 overflow-y-au t o"            initi  a  l={{ opacity: 0y: -10 }}
+            anima  t  e={{ opacity: 1y: 0 }}
+            ex  i  t={{ opacity: 0y: -10 }}
             transiti  o  n = {{ duration: 0.2 }}
           >
             {/* Filte  r  s */}
@@ -325,7 +300,7 @@ export default function EnhancedSearch({
                   >                    {sortOrder === 'asc' ? <SortA  s  c className="h-4 w-4" /> : <SortDe  s  c className="h-4 w-4 />} </butt o n> </d i v> </d i v> )} {/* Loadi n g Sta t e */} {is Loadi n g && ( <d i v cla s s Na m e=p-4" te  x  t-cent  e  r te  x  t-gr  a  y-500"">                <d  i  v className="anima t e-sp i n round e d-fu l l h-6 w-6 bord e r-b-2 bord e r-bl u e-600 mx-au t o mb-2></d i v> Searchi n g... </d i v> )} {/* Sear c h Histo r y */} {!que r y && enab l e Histo r y && sear c h Histo r y.leng t h > 0 && ( <d i v cla s s Na m e="p-2">                <d  i  v className="te x t-xs fo n t-semibo l d te x t-gr a y-500 upperca s e tracki n g-wi d e mb-2 fl e x ite m s-cent e r> <Clock cla s s Na m e="h-3 w-3 mr-1"" />
                   Rece  n  t Search  e  s
                 </d  i  v>
-                {searchHisto  r  y.slice(0, 5).map((it  e  m  ind  e  x) => (
+                {searchHisto  r  y.slice(05).map((it  e  m  ind  e  x) => (
  handleInputChange(it  e  m}            ar  i  a-lab  e  l=handleInputChange(it  e  m""}                    className="w-fu l l te x t-le f t px-3 py-2 te x t-sm te x t-gr a y-700 hover:bg-gr a y-100 round e d"
                   >                    {it  e  m}> handleInputChange(it  e  m)}
                     className="w-fu l l te x t-le f t px-3 py-2 te x t-sm te x t-gr a y-700 hover:bg-gr a y-100 round e d <butt o n k e y={ind e x} on Cli c k={() = ar i a-lab e l="hand  l  e Inp  u  t Change(it  e  m)}
@@ -378,7 +353,7 @@ export default function EnhancedSearch({
                           {resu  l  t.catego  r  y && (                            <sp  a  n className="te x t-xs px-2 py-1 bg-bl u e-100 te x t-bl u e-600 round e d">                              {resu  l  t.catego  r  y}
                             </sp  a  n>
                           )}
-                          {resu  l  t.ta  g  s?.slice(0, 2).map(t  a  g => (                            <sp  a  n k  e  y={t  a  g} className="te x t-xs px-2 py-1 bg-gre e n-100 te x t-gre e n-600 round e d fl e x ite m s-cent e r">                              <T  a  g className="h-3 w-3 mr-1" />
+                          {resu  l  t.ta  g  s?.slice(02).map(t  a  g => (                            <sp  a  n k  e  y={t  a  g} className="te x t-xs px-2 py-1 bg-gre e n-100 te x t-gre e n-600 round e d fl e x ite m s-cent e r">                              <T  a  g className="h-3 w-3 mr-1" />
                               {t  a  g}
                             </sp  a  n>
                           ))}

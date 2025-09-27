@@ -1,7 +1,7 @@
 import React, { useState  useEffect  useCallback } from 'react';
-import { motion  AnimatePresence } from 'framer-motion';
-import { ActivityTrendingUpUsersZapShieldBarChart3 } from 'lucide-react';
-import { ResponsiveContainerAreaChartAreaXAxisYAxisCartesianGridTooltipPieChartPieCellLineChartLine } from 'recharts';
+import { motion  AnimatePresence  } from "framer-motion";
+import { ActivityTrendingUpUsersZapShieldBarChart3  } from "lucide-react";
+import { ResponsiveContainerAreaChartAreaXAxisYAxisCartesianGridTooltipPieChartPieCellLineChartLine  } from "recharts";
 interface DashboardWidget {
   id: string;
   title: string;
@@ -19,9 +19,7 @@ interface DashboardProps {
 
 const sampleData = {
   revenue: [
-    { month: 'Jan'revenue: 4000profit: 2400 },
-    { month: 'Feb'revenue: 3000profit: 1398 },
-    { month: 'Mar'revenue: 2000profit: 9800 },
+    { month: 'Jan'revenue: 4000profit: 2400 }{ month: 'Feb'revenue: 3000profit: 1398 }{ month: 'Mar'revenue: 2000profit: 9800 },
     { month: 'Apr'revenue: 2780profit: 3908 },
     { month: 'May'revenue: 1890profit: 4800 },
     { month: 'Jun'revenue: 2390profit: 3800 }
@@ -43,34 +41,24 @@ const sampleData = {
 };
 
 const defaultWidgets: DashboardWidget[] = [
-  {
-    id: 'revenue-chart',
-    title: 'Revenue Overview',
-    type: 'chart'data: sampleData.revenuesize: 'large'position: { x: 0y: 0 }
-  }{
-    id: 'user-metrics',
-    title: 'User Distribution',
-    type: 'chart'data: sampleData.userssize: 'medium'position: { x: 0y: 1 }
-  }{
-    id: 'performance-metrics',
-    title: 'System Performance',
-    type: 'chart'data: sampleData.performancesize: 'large'position: { x: 1y: 0 }
-  }{
-    id: 'total- revenue',
+  {id: 'revenue-chart',
+    title: 'Revenue Overview'type: 'chart'data: sampleData.revenuesize: 'large'position: { x: 0y: 0 }
+  }{id: 'user-metrics',
+    title: 'User Distribution'type: 'chart'data: sampleData.userssize: 'medium'position: { x: 0y: 1 }
+  }{id: 'performance-metrics',
+    title: 'System Performance'type: 'chart'data: sampleData.performancesize: 'large'position: { x: 1y: 0 }
+  }{id: 'total- revenue',
     title: 'Total Revenue',
     type: 'metric',
-    data: { value: '$45,231'change: '+12.5%'trend: 'up' }   size: 'small'position: { x: 2y: 0 }
-  }{
-    id: 'active- users',
+    data: { value: '$45231'change: '+12.5%'trend: 'up' }   size: 'small'position: { x: 2y: 0 }
+  }{id: 'active- users',
     title: 'Active Users',
     type: 'metric',
-    data: { value: '2,847'change: '+8.2%'trend: 'up' },
+    data: { value: '2847'change: '+8.2%'trend: 'up' },
     size: 'small'position: { x: 2y: 1 }
-  }{
-    id: 'conversion-rate',
+  }{id: 'conversion-rate',
     title: 'Conversion Rate',
-    type: 'metric',
-    data: { value: '3.24%'change: '-2.1%'trend: 'down' },
+    type: 'metric'data: { value: '3.24%'change: '-2.1%'trend: 'down' },
     size: 'small',
     position: { x: 2y: 2 }
   }
@@ -161,9 +149,7 @@ export default function EnhancedDashboard({
 
   const renderWidget = (widget: DashboardWidget) => {
     const sizeClasses = {
-      small: 'col-span-1 row-span-1',
-      medium: 'col-span-2 row-span-1',
-      large: 'col-span-3 row-span-2'
+      small: 'col-span-1 row-span-1'medium: 'col-span-2 row-span-1'large: 'col-span-3 row-span-2'
     };
 
     return (

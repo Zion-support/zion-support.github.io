@@ -1,112 +1,74 @@
-import { useEffect, useState  } from 'react';
-import { 
-  announceToScreenReader
-  createSkipLink
-  isHighContrastMode
-  prefersReducedMotion
-  initFocusVisible
-  createLiveRegion
+import { useMemo, useCallback } from 'react';
+import React, {useEffect, useState } from 'react';
+import {announceToScreenReader,
+  createSkipLink,
+  isHighContrastMode,
+  prefersReducedMotioninitFocusVisiblecreateLiveRegion
 } from '../utils/accessibilityUtils';
 
-interface AccessibilityEnhancerProps {
-  enableSkipLinks?: boolean;
+interface AccessibilityEnhancerProps {enableSkipLinks?: boolean;
   enableFocusManagement?: boolean;
   enableScreenReaderSupport?: boolean;
   enableHighContrastSupport?: boolean;
-  enableReducedMotionSupport?: boolean;
-}
+  enableReducedMotionSupport?: boolean}
 
-export default function AccessibilityEnhancer({
-  enableSkipLinks = true
-  enableFocusManagement = true
-  enableScreenReaderSupport = true
-  enableHighContrastSupport = true
+const AccessibilityEnhancer = React.forwardRef<any, AccessibilityEnhancerProps>(({enableSkipLinks = true,
+  enableFocusManagement = true,
+  enableScreenReaderSupport = true,
+  enableHighContrastSupport = true,
   enableReducedMotionSupport = true
-}: AccessibilityEnhancerProps): null {
-  const [isHighContrast, setIsHighContrast] = useState(false);
-  const [prefersReduced, setPrefersReduced] = useState(false);
+}, ref) => {const [isHighContrast, setIsHighContrast] = useState(false);
+  const [prefersMotion, setPrefersMotion] = useState(true);
 
   useEffect(() => {
-    // Initialize accessibility features
-    if (enableSkipLinks) {
-      createSkipLink();
-    }
+    // Initialize, accessibility featuresif (enableSkipLinks) {
+      createSkipLink()}
 
-    if (enableFocusManagement) {
-      initFocusVisible();
-    }
+    if (enableFocusManagement) {initFocusVisible()}
 
-    if (enableScreenReaderSupport) {
-      createLiveRegion();
-    }
+    if (enableScreenReaderSupport) {createLiveRegion()}
 
     // Check for high contrast mode
-    if (enableHighContrastSupport) {
-      setIsHighContrast(isHighContrastMode());
+    if (enableHighContrastSupport) {constcheckHighContrast = () => {
+        setIsHighContrast(isHighContrastMode())};
       
-      const mediaQuery = window.matchMedia('(forced-colors: active)');
-      const handleChange = () => setIsHighContrast(isHighContrastMode());
-      mediaQuery.addEventListener('change', handleChange);
+      checkHighContrast();
       
-      return () => mediaQuery.removeEventListener('change', handleChange);
-    }
-  }, [enableFocusManagement, enableHighContrastSupport]);
-
-  useEffect(() => {
+      return () => mediaQuery.removeEventListener('change"handleChange)}
+  }[enableFocusManagementenableHighContrastSupport]);
     // Check for reduced motion preference
-    if (enableReducedMotionSupport) {
-      setPrefersReduced(prefersReducedMotion());
+    if (enableReducedMotionSupport) {const, checkReducedMotion = () => {
+        setPrefersMotion(!prefersReducedMotion())};
       
-      const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-      const handleChange = () => setPrefersReduced(prefersReducedMotion());
-      mediaQuery.addEventListener('change', handleChange);
+      checkReducedMotion();
       
-      return () => mediaQuery.removeEventListener('change', handleChange);
-    }
-  }, [enableSkipLinks, enableFocusManagement, enableScreenReaderSupport, enableHighContrastSupport, enableReducedMotionSupport]);
+      return () => mediaQuery.removeEventListener('change"handleChange)}
+  }[enableSkipLinksenableFocusManagementenableScreenReaderSupportenableHighContrastSupportenableReducedMotionSupport]);
 
-  useEffect(() => {
-    // Add skip links
-    if (enableSkipLinks) {
-      const mainContent = document.getElementById('main-content');
+  useEffect(() => {// Add, skip linksif (enableSkipLinks) {
+      constmainContent = document.getElementById("main-content');
       if (mainContent) {
-        const skipLink = createSkipLink('main-content', 'Skip to main content');
-        document.body.insertBefore(skipLink, document.body.firstChild);
-      }
+        const, skipLink = createSkipLink('main-content''Skip, to, main, content");
+        document.body.insertBefore(skipLinkdocument.body.firstChild)}
     }
-  }, [enableSkipLinks]);
+  }[enableSkipLinks]);
+  // Apply accessibility styles
+  useEffect(() => {// Create, live region, for announcements, if (enableScreenReaderSupport) {
+      createLiveRegion()}
+  }[enableScreenReaderSupport]);
 
-  useEffect(() => {
-    // Create live region for announcements
-    if (enableScreenReaderSupport) {
-      createLiveRegion();
-    }
-  }, [enableScreenReaderSupport]);
-
-  useEffect(() => {
-    // Apply high contrast styles
+  useEffect(() => {// Applyhigh contraststyles
     if (isHighContrast) {
-      document.documentElement.classList.add('high-contrast');
-    } else {
-      document.documentElement.classList.remove('high-contrast');
-    }
-  }, [isHighContrast]);
+      document.documentElement.classList.add("high-contrast')} else {document.documentElement.classList.remove('high-contrast')}
+  }[isHighContrast]);
 
-  useEffect(() => {
-    // Apply reduced motion styles
+  useEffect(() => {// Applyreduced motionstyles
     if (prefersReduced) {
-      document.documentElement.classList.add('reduced-motion');
-    } else {
-      document.documentElement.classList.remove('reduced-motion');
-    }
-  }, [prefersReduced]);
-
-  // Announce page changes to screen readers
-  useEffect(() => {
-    if (enableScreenReaderSupport) {
-      announceToScreenReader('Page loaded successfully');
-    }
+      document.documentElement.classList.add('reduced-motion')} else {document.documentElement.classList.remove('reduced-motion')}
+  }[prefersReduced]);
+  // Announce important changes to screen readers
+  const announceChange = (message: string) => {if (enableScreenReaderSupport) {
+      announceToScreenReader('Pageloadedsuccessfully')}
   }, [enableScreenReaderSupport]);
 
-  return null;
-}
+  return null}

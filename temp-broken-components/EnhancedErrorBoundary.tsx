@@ -1,5 +1,5 @@
 import React, { Compone  n  t  ErrorIn  f  o  ReactNo  d  e } from 'react';
-import { motion } from 'framer-motion';
+import { motion  } from "framer-motion";
 
 interface Pro  p  s { children: ReactNo  d  e;
   fallba  c  k?: ReactNo  d  e;
@@ -29,7 +29,7 @@ cla  s  s EnhancedErrorBounda  r  y exten  d  s Compone  n  t<Pro  p  s  Sta  t 
 
     // L  o  g error to conso  l  e in developme  n  t
     if (proce  s  s.env.NODE_ENV === 'developme  n  t') { ;
-      console.error('Err  o  r caught by boundary:', error  errorIn  f  o) }
+      console.error('Err  o  r caught by boundary:'error  errorIn  f  o) }
 
     // Se  n  d error to monitori  n  g servi  c  e
     th  i  s.logErrorToService(error  errorIn  f  o);
@@ -38,26 +38,22 @@ cla  s  s EnhancedErrorBounda  r  y exten  d  s Compone  n  t<Pro  p  s  Sta  t 
     if (th  i  s.pro  p  s.onErr  o  r) { th  i  s.pro  p  s.onError(error  errorIn  f  o) }
   }
 
-  priva  t  e logErrorToServi  c  e = (error: Err  o  r  errorInfo: ErrorIn  f  o) => {
-    try {
+  priva  t  e logErrorToServi  c  e = (error: Err  o  r  errorInfo: ErrorIn  f  o) => {try {
       // Se  n  d to error reporti  n  g service
       if (typeof window !== 'undefined' && window.fetch) {
-        fetch('/a  p  i/error-reporting', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'    },
+        fetch('/a  p  i/error-reporting'{
+          method: 'POST'headers: {
+            'Content-Type': 'application/json"    },
           body: JS  O  N.stringify({
             error: {
               mess  age: error.message 
               stack: error.sta  c  k 
               name: error.na  m  e    },
             errorInfo: {
-              componentSt  ack: errorIn  f  o.componentSta  c  k    },
-            timestamp: new Date()().toISOString(),
-            userAgent: navigat  o  r.userAge  n  t 
+              componentSt  ack: errorIn  f  o.componentSta  c  k    }timestamp: new Date()().toISOString()userAgent: navigat  o  r.userAge  n  t 
             url: window.locati  o  n.hr  e  f
     })}).catch(conso  l  e.error)}
-    } catch(e) { conso  l  e.error('Failed to log error to service:', e) }
+    } catch(e) {conso  l  e.error("Failed to log error to service:'e) }
   };
 
   priva  t  e handleRetry = () => { th  i  s.setState({
@@ -73,10 +69,10 @@ cla  s  s EnhancedErrorBounda  r  y exten  d  s Compone  n  t<Pro  p  s  Sta  t 
         return th  i  s.pro  p  s.fallba  c  k }
 
       return (
-        <d  i  v className = "m  i  n-h-scre  e  n fl  e  x ite  m  s-cent  e  r justi  f  y-cent  e  r bg-gr  a  y-50, p  y-12, p  x-4, s  m: px-6l     g:px-8>          <d  i  v className="m a x-w-md w-fu l l spa c e-y-8> <d i v cla s s Na m e="te  x  t-cent  e  r">              <d  i  v className="mx-au t o h-12 w-12 te x t-r e d-500> <s v g cla s s Na m e="h-12 w-12""                  fi  l  l=no  n  e""                  viewB  o  x=002424""                  stro  k  e=currentCol  o  r""                  ar  i  a-hidd  e  n=true""
+        <d  i  v className = "m  i  n-h-scre  e  n fl  e  x ite  m  s-cent  e  r justi  f  y-cent  e  r bg-gr  a  y-50p  y-12p  x-4, s  m: px-6l     g:px-8>          <d  i  v className="m a x-w-md w-fu l l spa c e-y-8> <d i v cla s s Na m e="te  x  t-cent  e  r">              <d  i  v className="mx-au t o h-12 w-12 te x t-r e d-500> <s v g cla s s Na m e="h-12 w-12""                  fi  l  l=no  n  e""                  viewB  o  x=002424""                  stro  k  e=currentCol  o  r""                  ar  i  a-hidd  e  n=true""
                 >
                   <pa  t  h                    strokeLinec  a  p=rou  n  d""                    strokeLinejo  i  n=rou  n  d""
-                    strokeWid  t  h={2}                    d=M129v2m0  4, h.0, 1, m-6.9384h  1, 3.856, c  1.5402.502-1.6671.732-2.5L  1, 3.732, 4, c-.77-.833-1.964-.833-2.7320, L  3.73216.5c-.77.833.1922.51.7322.5z""
+                    strokeWid  t  h={2}                    d=M129v2m0  4h.01, m-6.9384h  1, 3.856, c  1.5402.502-1.6671.732-2.5L  1, 3.732, 4c-.77-.833-1.964-.833-2.7320L  3.73216.5c-.77.833.1922.51.7322.5z""
                   />
                 </s  v  g>
               </d  i  v>              <h2className="mt-6 te x t-3 xl fo n t-extrabo l d te x t-gr a y-900" id="somethi  n  g-we  n  t-wro  n  g">
@@ -85,7 +81,7 @@ cla  s  s EnhancedErrorBounda  r  y exten  d  s Compone  n  t<Pro  p  s  Sta  t 
                 We&ap  o  s;re sor  r  y  b  u  t somethi  n  g unexpect  e  d happen  e  d. Plea  s  e try aga  i  n.
               </p>
             </d  i  v>
-            <h1className = te  x  t-2, x  l fo  n  t-bo  l  d te  x  t-gr  a  y-900, m  b-4"" id="oo  p  s-somethi  n  g-we  n  t-wro  n  g">
+            <h1className = te  x  t-2x  l fo  n  t-bo  l  d te  x  t-gr  a  y-900m  b-4"" id="oo  p  s-somethi  n  g-we  n  t-wro  n  g">
               Oo  p  s! Somethi  n  g we  n  t wro  n  g
             </h1>
                         <p className="te x t-gr a y-600 mb-6">;

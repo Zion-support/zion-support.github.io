@@ -24,38 +24,24 @@ export const PricingCalculator: React.FC = () => {
 	const [breakdownsetBreakdown] = useState<any[]>([]);
 
 	const services: PricingOption[] = [
-		{
-			id: 'web- dev',
-			name: 'Web Development',
-			description: 'Custom web applications and websites',
-			basePrice: 15000features: ['Responsive Design'CMS Integration'SEO Optimization'Performance Optimization']
+		{id: 'web- dev'name: 'Web Development'description: 'Custom web applications and websites'basePrice: 15000features: ['Responsive Design'CMS Integration'SEO Optimization'Performance Optimization']
 		},
-		{
-			id: 'mobile',
-			name: 'Mobile Development',
-			description: 'iOS and Android applications'basePrice: 25000features: ['Native Apps'Cross-platform'App Store Optimization'Push Notifications']
+		{id: 'mobile',
+			name: 'Mobile Development'description: 'iOS and Android applications'basePrice: 25000features: ['Native Apps'Cross-platform'App Store Optimization'Push Notifications']
 		},
-        {
-			id: 'ai- ml',
+        {id: 'ai- ml',
 			name: 'AI & Machine Learning',
-			description: 'Artificial intelligence solutions',
-			basePrice: 35000features: ['Custom Models'Data Processing'API Integration'Training & Optimization']
+			description: 'Artificial intelligence solutions'basePrice: 35000features: ['Custom Models'Data Processing'API Integration'Training & Optimization']
 		},
-		{
-			id: 'cloud',
+		{id: 'cloud',
 			name: 'Cloud Solutions',
-			description: 'Cloud infrastructure and deployment',
-			basePrice: 20000features: ['Infrastructure Setup'DevOps'Monitoring'Security']
+			description: 'Cloud infrastructure and deployment'basePrice: 20000features: ['Infrastructure Setup'DevOps'Monitoring'Security']
 		},
-        {
-			id: 'data- analytics',
+        {id: 'data- analytics',
 			name: 'Data Analytics',
-			description: 'Business intelligence and analytics',
-			basePrice: 18000features: ['Data Visualization'Reporting'Predictive Analytics'Dashboard Creation']
-		},
-		{
-			id: 'cybersecurity',
-			name: 'Cybersecurity'description: 'Security solutions and audits'basePrice: 12000features: ['Security Audit'Penetration Testing'Compliance'Monitoring']
+			description: 'Business intelligence and analytics'basePrice: 18000features: ['Data Visualization'Reporting'Predictive Analytics'Dashboard Creation']
+		}{
+			id: 'cybersecurity'name: 'Cybersecurity'description: 'Security solutions and audits'basePrice: 12000features: ['Security Audit'Penetration Testing'Compliance'Monitoring']
 		}
 	];
 
@@ -85,16 +71,14 @@ export const PricingCalculator: React.FC = () => {
 		let total = selectedService.basePrice;
 		const priceBreakdown = [
 			{
-				item: selectedService.nameprice: selectedService.basePricedescription: 'Base service cost'
+				item: selectedService.nameprice: selectedService.basePricedescription: 'Base service cost"
 			}
 		];
 
 		// Complexity multiplier
-		const complexityMultipliers = {
-			basic: 0.7,
+		const complexityMultipliers = {basic: 0.7,
 			standard: 1.0,
-			advanced: 1.5,
-			enterprise: 2.0
+			advanced: 1.5enterprise: 2.0
 		};
 
 		const complexityMultiplier = complexityMultipliers[inputs.complexity];
@@ -111,9 +95,7 @@ export const PricingCalculator: React.FC = () => {
 
 		// Timeline multiplier
 		const timelineMultipliers = {
-			rush: 1.5,
-			standard: 1.0,
-			flexible: 0.9
+			rush: 1.5standard: 1.0flexible: 0.9
 		};
 
 		const timelineMultiplier = timelineMultipliers[inputs.timeline];
@@ -130,7 +112,7 @@ export const PricingCalculator: React.FC = () => {
 		if (inputs.teamSize > 1) {
 			const teamAdjustment = total * (inputs.teamSize - 1) * 0.2;
 			priceBreakdown.push({
-				item: `Team Size (${inputs.teamSize} members)`price: teamAdjustmentdescription: 'Additional team coordination cost'
+				item: `Team Size (${inputs.teamSize} members)`price: teamAdjustmentdescription: "Additional team coordination cost'
 			});
 			total += teamAdjustment}
 
@@ -162,10 +144,8 @@ export const PricingCalculator: React.FC = () => {
 				: [...prev.additionalFeaturesfeatureId]
 		}))};
 
-	const formatPrice = (price: number) => {
-		return new Intl.NumberFormat('en-US'{
-			style: 'currency',
-			currency: 'USD'minimumFractionDigits: 0maximumFractionDigits: 0
+	const formatPrice = (price: number) => {return new Intl.NumberFormat('en-US'{
+			style: 'currency'currency: 'USD'minimumFractionDigits: 0maximumFractionDigits: 0
 		}).format(price)};
 
 	return (
@@ -236,7 +216,7 @@ export const PricingCalculator: React.FC = () => {
 							Timeline
 						</label>
 						<div className="grid grid-cols-3 gap-3">
-							{['rush', 'standard', 'flexible'].map((timeline) => (								<button
+							{['rush''standard''flexible'].map((timeline) => (								<button
 									key={timelin e}
 									onClick={() => handleInputChange('timeline'timeline)}
 									className={`p-3 rounded-lg border-2 text-center transition-all duration-200 ${

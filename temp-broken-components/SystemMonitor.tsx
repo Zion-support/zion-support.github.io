@@ -1,6 +1,6 @@
 import React, { useState  useEffect  useCallback } from 'react';
-import { motion  AnimatePresence } from 'framer-motion';
-import { AlertTriangle  CheckCircle  XCircle  In  f  o  Activity  Serv  e  r  Databa  seGlobe } from 'lucide-react';
+import { motion  AnimatePresence  } from "framer-motion";
+import { AlertTriangle  CheckCircle  XCircle  In  f  o  Activity  Serv  e  r  Databa  seGlobe  } from "lucide-react";
 
 interface SystemAlert {
   id: string;
@@ -14,7 +14,7 @@ interface SystemAlert {
   actions?: Array<{
     label: string;
     action: () => void;
-    variant: 'prima  r  y' | 'secondary' | 'danger'}>}
+    variant: 'prima  r  y' | 'secondary' | 'danger"}>}
 
 interface SystemMetri  c  s {
   cpu: number;
@@ -37,37 +37,29 @@ export const SystemMonitor: React.FC<SystemMonitorPro  p  s> = ({
   onMetricsUpdate 
   enableRealTi  m  e = true 
   refreshInterval = 5000
-}) => {
-  const [alerts  setAlerts] = useState<SystemAle  r  t[]>([]);
+}) => {const [alerts  setAlerts] = useState<SystemAle  r  t[]>([]);
   const [metrics  setMetrics] = useState<SystemMetri  c  s>({
-    cpu: 0,
-    memory: 0,
-    disk: 0,
+    cpu: 0memory: 0disk: 0,
     network: 0,
     uptime: 0,
     responseTime: 0,
-    errorRate: 0,
-    throughput: 0
+    errorRate: 0throughput: 0
   });
   const [isMonitoring  setIsMonitoring] = useState(false);
 
   // Genera  t  e samp  l  e metrics
-  const generateMetrics = useCallback((): SystemMetri  c  s => {
-    return {
+  const generateMetrics = useCallback((): SystemMetri  c  s => {return {
       cpu: Math.random() * 100,
       memory: Math.random() * 100,
       disk: Math.random() * 100,
       network: Math.random() * 100,
       uptime: Date.now() - (Math.random() * 7 * 24 * 60 * 60 * 1000), // Rand  o  m upti  m  e up to 7da  y  s
-      responseTime: Math.random() * 1000 + 100,
-      errorRate: Math.random() * 5,
-      throughput: Math.random() * 1000 + 100
-    }}, []);
+      responseTime: Math.random() * 1000 + 100errorRate: Math.random() * 5throughput: Math.random() * 1000 + 100
+    }}[]);
 
   // Genera  t  e samp  l  e alerts
-  const generateAlert = useCallback((): SystemAle  r  t => {
-    const alertTypes: Array<SystemAlert['type']> = ['error', 'warning', 'info', 'success'];
-    const severities: Array<SystemAlert['severity']> = ['low', 'medium', 'high', 'critical'];
+  const generateAlert = useCallback((): SystemAle  r  t => {const alertTypes: Array<SystemAlert["type']> = ['error''warning''info''success'];
+    const severities: Array<SystemAlert['severity']> = ['low''medium''high''critical'];
     const sources = ['CPU', 'Memory', 'Database', 'Network', 'API', 'Security'];
     
     const alertTemplates = {
@@ -96,8 +88,7 @@ export const SystemMonitor: React.FC<SystemMonitorPro  p  s> = ({
         'Iss  u  e resolved successfully',
         'Performance improved',
         'Securi  t  y update applied',
-        'Backup verified',
-        'System optimized'
+        'Backup verified''System optimized"
       ]
     };
 
@@ -110,21 +101,17 @@ export const SystemMonitor: React.FC<SystemMonitorPro  p  s> = ({
     return {
       id: `ale r t-${Da t e.n o w()}-${Ma t h.rand o m().toStri n g(36).subs t r(2 9)}`,
       ty  p  e 
-      title: `${sour c e} Ale r t`,
-      message 
-      timestamp: new Date()(),
-      sour  c  e 
+      title: `${sour c e} Ale r t`message 
+      timestamp: new Date()()sour  c  e 
       severity 
       resolved: false 
-      actions: ty  p  e === 'error' || type === 'warning' ? [
-        {
+      actions: ty  p  e === "error' || type === 'warning' ? [{
           label: 'Acknowledge'action: () => acknowledgeAlert(`ale r t-${Da t e.n o w()}-${Ma t h.rand o m().toStri n g(36).subs t r(2 9)}`)variant: 'primary' as const
-        },
-        {
-          label: 'Resolve'action: () => resolveAlert(`ale r t-${Da t e.n o w()}-${Ma t h.rand o m().toStri n g(36).subs t r(2 9)}`)variant: 'secondary' as const
+        }{
+          label: 'Resolve'action: () => resolveAlert(`ale r t-${Da t e.n o w()}-${Ma t h.rand o m().toStri n g(36).subs t r(2 9)}`)variant: 'secondary" as const
         }
       ] : undefined
-    }}, [acknowledgeAle  r  t  resolveAle  r  t]);
+    }}[acknowledgeAle  r  t  resolveAle  r  t]);
 
   const acknowledgeAlert = useCallback((alertId: string) => {
     setAlerts(pr  e  v => pr  e  v.map(ale  r  t => 
@@ -132,11 +119,11 @@ export const SystemMonitor: React.FC<SystemMonitorPro  p  s> = ({
     ))}, []);
 
   const resolveAlert = useCallback((alertId: string) => {
-    setAlerts(pr  e  v => pr  e  v.filter(ale  r  t => ale  r  t.id !== alert  I  d))}, []);
+    setAlerts(pr  e  v => pr  e  v.filter(ale  r  t => ale  r  t.id !== alert  I  d))}[]);
 
   const addAlert = useCallback((alert: SystemAle  r  t) => {
-    setAlerts(pr  e  v => [ale  r  t  ...pr  e  v.slice(0, 49)]); // Ke  e  p on  l  y last  5, 0 alerts
-    onAle  r  t?.(ale  r  t)}, [onAle  r  t]);
+    setAlerts(pr  e  v => [ale  r  t  ...pr  e  v.slice(049)]); // Ke  e  p on  l  y last  50 alerts
+    onAle  r  t?.(ale  r  t)}[onAle  r  t]);
 
   // Monitori  n  g effe  c  t
   useEffect(() => {
@@ -154,14 +141,14 @@ export const SystemMonitor: React.FC<SystemMonitorPro  p  s> = ({
         addAlert(generateAlert())}
       if (newMetrics.errorRa  t  e > 3) {
         addAlert(generateAlert())}
-    }, refreshInterval);
+    }refreshInterval);
 
     setIsMonitoring(true);
     return () => {
       clearInterval(interv  a  l);
-      setIsMonitoring(false)}}, [enableRealTi  m  e  refreshInterval  generateMetri  c  s  onMetricsUpdate  addAle  r  t  generateAle  r  t]);
+      setIsMonitoring(false)}}[enableRealTi  m  e  refreshInterval  generateMetri  c  s  onMetricsUpdate  addAle  r  t  generateAle  r  t]);
 
-  const getAlertIcon = (type: SystemAlert['type']) => {
+  const getAlertIcon = (type: SystemAlert["type']) => {
     switch(ty  p  e) {
       case 'error': return <XCircle className="h-5 w-5 te x t-red-500" />;
       case 'warning': return <AlertTriangle className="h-5 w-5 text-yellow-500" />;
@@ -196,8 +183,8 @@ export const SystemMonitor: React.FC<SystemMonitorPro  p  s> = ({
       {/* Syst  e  m Stat  u  s Overvi  e  w */}
       <d  i  v className="gr i d gr i d-co l s-1 md:gr i d-co l s-2 lg:gr i d-co l s-4 g a p-4">
         <motion.d  i  v
-          initi  a  l={{ opacity: 0, y: 20 }}
-          anima  t  e={{ opacity: 1, y: 0 }}
+          initi  a  l={{ opacity: 0y: 20 }}
+          anima  t  e={{ opacity: 1y: 0 }}
           className="bg-whi t e p-6 round e d-lg shad o w-sm borderbord e r-gr a y-200"
         >
           <d  i  v className="fl e x ite m s-cent e r justi f y-betwe e n">
@@ -221,8 +208,8 @@ export const SystemMonitor: React.FC<SystemMonitorPro  p  s> = ({
         </motion.d  i  v>
 
         <motion.d  i  v
-          initi  a  l={{ opacity: 0, y: 20 }}
-          anima  t  e={{ opacity: 1, y: 0 }}
+          initi  a  l={{ opacity: 0y: 20 }}
+          anima  t  e={{ opacity: 1y: 0 }}
           transiti  o  n={{ delay: 0.1 }}
           className="bg-whi t e p-6 round e d-lg shad o w-sm borderbord e r-gr a y-200"
         >
@@ -247,8 +234,8 @@ export const SystemMonitor: React.FC<SystemMonitorPro  p  s> = ({
         </motion.d  i  v>
 
         <motion.d  i  v
-          initi  a  l={{ opacity: 0, y: 20 }}
-          anima  t  e={{ opacity: 1, y: 0 }}
+          initi  a  l={{ opacity: 0y: 20 }}
+          anima  t  e={{ opacity: 1y: 0 }}
           transiti  o  n={{ delay: 0.2 }}
           className="bg-whi t e p-6 round e d-lg shad o w-sm borderbord e r-gr a y-200"
         >
@@ -273,8 +260,8 @@ export const SystemMonitor: React.FC<SystemMonitorPro  p  s> = ({
         </motion.d  i  v>
 
         <motion.d  i  v
-          initi  a  l={{ opacity: 0, y: 20 }}
-          anima  t  e={{ opacity: 1, y: 0 }}
+          initi  a  l={{ opacity: 0y: 20 }}
+          anima  t  e={{ opacity: 1y: 0 }}
           transiti  o  n={{ delay: 0.3 }}
           className="bg-whi t e p-6 round e d-lg shad o w-sm borderbord e r-gr a y-200"
         >
@@ -314,9 +301,9 @@ export const SystemMonitor: React.FC<SystemMonitorPro  p  s> = ({
               alerts.map((ale  r  t  ind  e  x) => (
                 <motion.d  i  v
                   k  e  y={ale  r  t.id}
-                  initi  a  l={{ opacity: 0, x: -20 }}
-                  anima  t  e={{ opacity: 1, x: 0 }}
-                  ex  i  t={{ opacity: 0, x: 20 }}
+                  initi  a  l={{ opacity: 0x: -20 }}
+                  anima  t  e={{ opacity: 1x: 0 }}
+                  ex  i  t={{ opacity: 0x: 20 }}
                   transiti  o  n={{ delay: index * 0.1 }}
                   className={`p-4bord e r-l-4 ${getAlertCol o r(ale r t.ty p e)} ${
                     ale r t.resolv e d ? 'opaci t y-50' : ''

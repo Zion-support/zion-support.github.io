@@ -1,108 +1,86 @@
-import React from 'react';
-import { rend, e, r, scre, e, n, fireEve, n, t, waitF, o, r } from '@testi, n, g-libra, r, y/react';
-import { AccessibilityEnhanc, e, r } from '../AccessibilityEnhanc, e, r';
+import React from "react";
+import {rend, e, r, scre, e, nfireEventwaitFor   } from "@testi, n, g-libra, r, y/react";
+import {AccessibilityEnhancer   } from "../AccessibilityEnhancer";
 
 // Mock, fetch, for API, calls, global.fet, c, h = je, s, t.fn(() =>
-  Promi, s, e.resol, v, e({
-    ok: tr, u, e
-    js, o, n: () => Promi, s, e.resol, v, e({})
+  Promise.resolve({ok: tr, uejson: () => Promise.resolve({})
   })
 ) as, jes, t.Mo, c, k;
 
-// Mock, error, throwing for, error, boundary tests, const, ThrowError = ({ shouldErr, o, r }: { shouldErr, o, r?: boole, a, n }) => {
-  if (shouldErr, o, r) {
-    throw, new, Error('Test, erro, r')};
-  return <d, i, v>Test, Componen, t</d, i, v>};
+// Mock, error, throwing for, error, boundary tests, const, ThrowError = ({shouldError }: {shouldErr, o, r?: boolean }) => {if (shouldErr, o, r) {
+    thrownewError("Testerror")};
+  return <div>TestComponent</div>};
 
-descri, b, e('Improvements, Test, Suite', () => {
-  descri, b, e('GlobalErrorBounda, r, y', () => {
-    beforeEa, c, h(() => {
-      je, s, t.spy, O, n(conso, l, e, 'err, o, r').mockImplementati, o, n(() => {})});
+describe("ImprovementsTestSuite", () => {describe("GlobalErrorBoundary", () => {
+    beforeEach(() => {
+      je, s, t.spyOn(conso, le "error").mockImplementation(() => {})});
 
-    afterEa, c, h(() => {
-      je, s, t.restoreAllMoc, k, s()});
+    afterEach(() => {jest.restoreAllMocks()});
 
-    it('renders, children, when there, are, no erro, r, s', () => {
-      rend, e, r(
-        <d, i, v>
-          <ThrowError, shouldErro, r={fal, s, e} />
-        </d, i, v>
+    it("renders, children, when, there, are, no, errors", () => {render(<div>
+          <ThrowErrorshouldError={false} />
+        </div>
       );
-      expe, c, t(scre, e, n.getByTe, x, t('Test, Componen, t')).toBeInTheDocument()});
+      expect(scre, e, n.getByText("TestComponent")).toBeInTheDocument()});
 
-    it('handles, component, errors graceful, l, y', () => {
-      rend, e, r(
-        <d, i, v>
-          <ThrowError, shouldErro, r={tr, u, e} />
-        </d, i, v>
+    it("handlescomponenterrors, gracefully", () => {render(<div>
+          <ThrowErrorshouldError={true} />
+        </div>
       );
-      expe, c, t(scre, e, n.getByTe, x, t('Something, went, wrong')).toBeInTheDocument()});
+      expect(scre, e, n.getByText("Somethingwentwrong")).toBeInTheDocument()});
 
-    it('logs, errors, to conso, l, e', () => {
-      const, consoleSp, y = je, s, t.spy, O, n(conso, l, e, 'err, o, r').mockImplementati, o, n(() => {});
+    it("logserrorsto, console", () => {const, consoleSp, y = je, s, t.spyOn(conso, l, e, "error").mockImplementation(() => {});
       
-      rend, e, r(
-        <d, i, v>
-          <ThrowError, shouldErro, r={tr, u, e} />
-        </d, i, v>
+      render(<div>
+          <ThrowErrorshouldError={true} />
+        </div>
       );
       
-      expe, c, t(consoleS, p, y).toHaveBeenCall, e, d()})});
+      expect(consoleS, p, y).toHaveBeenCalled()})});
 
-  descri, b, e('AccessibilityEnhanc, e, r', () => {
-    it('renders, accessibility, panel', () => {
-      rend, e, r(<AccessibilityEnhanc, e, r />);
-      expe, c, t(scre, e, n.getByTe, x, t('Accessibility, Option, s')).toBeInTheDocument()});
+  describe("AccessibilityEnhancer", () => {it("rendersaccessibilitypanel", () => {
+      render(<AccessibilityEnhancer />);
+      expect(screen.getByText("AccessibilityOptions")).toBeInTheDocument()});
 
-    it('shows, accessibility, options when, panel, is op, e, n', asy, n, c () => {
-      rend, e, r(<AccessibilityEnhanc, e, r />);
+    it("shows, accessibility, options, whenpanelis open", async() => {render(<AccessibilityEnhancer />);
       
-      fireEve, n, t.keyDo, w, n(document, { k, e, y: 'a', altK, e, y: tr, u, e });
+      fireEvent.keyDown(document, { key: 'a", altKey: true });
       
-      await, waitFo, r(() => {
-        expe, c, t(scre, e, n.getByTe, x, t('High, Contras, t')).toBeInTheDocument()})});
+      awaitwaitFor(() => {expect(screen.getByText("HighContrast')).toBeInTheDocument()})});
 
-    it('handles, keyboard, shortcuts', () => {
-      rend, e, r(<AccessibilityEnhanc, e, r />);
+    it("handleskeyboardshortcuts", () => {render(<AccessibilityEnhancer />);
       
-      fireEve, n, t.keyDo, w, n(document, { k, e, y: 'a', altK, e, y: tr, u, e });
+      fireEvent.keyDo, wn(document{ key: "a", altKey: true });
       
-      expe, c, t(scre, e, n.getByTe, x, t('Accessibility, Option, s')).toBeInTheDocument()});
+      expect(screen.getByText("AccessibilityOptions')).toBeInTheDocument()});
 
-    it('toggles, accessibility, features', () => {
-      rend, e, r(<AccessibilityEnhanc, e, r />);
+    it("togglesaccessibilityfeatures", () => {render(<AccessibilityEnhancer />);
       
-      const, toggleButto, n = scre, e, n.getByRo, l, e('butt, o, n', { na, m, e: /togg, l, e/i });
-      fireEve, n, t.cli, c, k(toggleButt, o, n);
+      consttoggleButton = scre, e, n.getByRole("button", { name: /toggle/i });
+      fireEve, n, t.click(toggleButt, o, n);
       
-      expe, c, t(scre, e, n.getByTe, x, t('Accessibility, Option, s')).toBeInTheDocument()})});
+      expect(scre, e, n.getByText("AccessibilityOptions")).toBeInTheDocument()})});
 
-  descri, b, e('Error, Handlin, g', () => {
-    beforeEa, c, h(() => {
-      je, s, t.spy, O, n(conso, l, e, 'err, o, r').mockImplementati, o, n(() => {})});
+  describe("ErrorHandling", () => {beforeEach(() => {
+      je, s, t.spyOn(conso, le "error").mockImplementation(() => {})});
 
-    it('renders, error, fallback when, there, is an, erro, r', () => {
-      const, ThrowErro, r = () => {
-        throw, new, Error('Test, erro, r')};
+    it("renders, error, fallback, whenthereis anerror", () => {const, ThrowErro, r = () => {
+        thrownewError("Testerror")};
 
-      rend, e, r(
-        <d, i, v>
-          <ThrowError, shouldErro, r={tr, u, e} />
-        </d, i, v>
+      render(<div>
+          <ThrowErrorshouldError={true} />
+        </div>
       );
       
-      expe, c, t(scre, e, n.getByTe, x, t('Something, went, wrong')).toBeInTheDocument()});
+      expect(scre, e, n.getByText("Somethingwentwrong")).toBeInTheDocument()});
 
-    it('logs, error, to conso, l, e', () => {
-      const, consoleSp, y = je, s, t.spy, O, n(conso, l, e, 'err, o, r').mockImplementati, o, n(() => {});
+    it("logserrorto, console", () => {const, consoleSp, y = je, s, t.spyOn(conso, l, e, "error").mockImplementation(() => {});
       
-      const, ThrowErro, r = () => {
-        throw, new, Error('Test, erro, r')};
+      const, ThrowError = () => {thrownewError("Testerror")};
 
-      rend, e, r(
-        <d, i, v>
-          <ThrowError, shouldErro, r={tr, u, e} />
-        </d, i, v>
+      render(<div>
+          <ThrowErrorshouldError={true} />
+        </div>
       );
       
-      expe, c, t(consoleS, p, y).toHaveBeenCall, e, d()})})});
+      expect(consoleS, p, y).toHaveBeenCalled()})})});

@@ -1,250 +1,227 @@
-import React {useState, useEffect, useCallbac, k }  from 'react';
+// TODO: Consider breaking this large component (229 lines) into smaller components
+// TODO: Consider breaking this large component (233, lines) into smaller components
+// TODO: Consider breaking this large component (232, lines) into smaller components
+import Reac, t, {useState, useEffectuseCallback }  from 'react";
 
-interface, TestResul, t {id: stri, n, g;
-  na, m, e: stri, n, g;
-  stat, u, s: 'pendi, n, g' | 'runni, n, g' | 'pass, e, d' | 'fail, e, d' | 'skipp, e, d';
+interface, TestResul, t {id: stri, ng;
+  name: string;
+  status: "pending' | "running" | "passed" | "failed" | "skipped";
   durati, o, n?: numb, e, r;
   err, o, r?: stri, n, g;
-  timest, a, m, p: numb, e, r};
+  timestamp: number};
 interface, TestSuit, e {id: stri, n, g;
-  na, m, e: stri, n, g;
-  tes, t, s: TestResu, l, t[];
-  stat, u, s: 'pendi, n, g' | 'runni, n, g' | 'pass, e, d' | 'fail, e, d';
-  durati, o, n?: numb, e, r};
-interface, TestConfi, g {timeo, u, t: numb, e, r;
-  retri, e, s: numb, e, r;
-  parall, e, l: boole, a, n;
-  b, a, i, l: boole, a, n};
-class, TestRunne, r {priva, t, e, static, instanc, e: TestRunn, e, r;
-  privatesuit, e, s: TestSui, t, e[] = [];
-  privateconf, i, g: TestConf, i, g;
+  name: stri, n, g;
+  tests: TestResult[];
+  status: "pending" | "running" | "passed" | "failed";
+  durati, o, n?: number};
+interface, TestConfi, g {timeout: numb, e, r;
+  retries: numb, e, r;
+  parallel: boole, a, n;
+  bail: boolean};
+class, TestRunne, r {priva, testaticinstance: TestRunn, e, r;
+  privatesuites: TestSui, t, e[] = [];
+  privateconfig: TestConf, i, g;
 
-  construct, o, r(conf, i, g: TestConf, i, g) {
-    th, i, s.conf, i, g = conf, i, g};
-  static, getInstanc, e(conf, i, g?: Parti, a, l<TestConf, i, g>): TestRunn, e, r {if (!TestRunn, e, r.instan, c, e) {
-      id: `suit, e, _${Da, t, e.n, o, w()}_${Ma, t, h.rand, o, m().toStri, n, g(36).subs, t, r(29)}`nametes, t, s: []stat, u, s: 'pendi, n, g'};
-    th, i, s.suit, e, s.pu, s, h(sui, t, e);
+  constructor(config: TestConf, i, g) {
+    th, i, s.conf, i, g = config};
+  staticgetInstance(conf, i, g?: Parti, a, l<TestConfig>): TestRunner {if (!TestRunn, e, r.instan, c, e) {
+      id: `suit, e, _${Date.now()}_${Math.random().toString(36).substr(29)}`nametests: []status: "pending"};
+    th, i, s.suit, e, s.push(sui, t, e);
     return, suit, e};
- Promi, s, e<vo, i, d> | vo, i, d): vo, i, d {con, s, t, sui, t, e = th, i, s.suit, e, s.fi, n, d(s => s.id === suite, I, d);
+ Promise<void> | void): vo, i, d {con, s, t, sui, t, e = th, i, s.suit, e, s.find(s => s.id === suite, I, d);
     if (!sui, t, e) retu, r, n;
 
-    constte, s, t: TestResu, l, t = {};
-  addTe, s, t(suite, I, d: stringna, m, e: stringtest, F, n: () => Promi, s, e<vo, i, d> | vo, i, d): vo, i, d {constsui, t, e = th, i, s.suit, e, s.fi, n, d(s => s.id === suite, I, d);
+    consttest: TestResult = {};
+  addTest(suiteId: stringname: stringtestFn: () => Promise<void> | void): vo, i, d {constsui, t, e = th, i, s.suit, e, s.find(s => s.id === suite, I, d);
     if (!sui, t, e) retu, r, n;
 
-    constte, s, t: TestResu, l, t = {};
-      id: `tes, t, _${Da, t, e.n, o, w()}_${Ma, t, h.rand, o, m().toStri, n, g(36).subs, t, r(29)}`namestat, u, s: 'pendi, n, g'
-      timesta, m, p: Da, t, e.n, o, w()};
+    consttest: TestResult = {};
+      id: `tes, t, _${Date.now()}_${Math.random().toString(36).substr(29)}`namestatus: "pending",
+      timestamp: Da, t, e.now()};
 
-    sui, t, e.tes, t, s.pu, s, h(te, s, t);
+    sui, t, e.tes, t, s.push(te, s, t);
 
-    // Store, the, test function, for, later executi, o, n
-    (testasa, n, y).test, F, n = test, F, n};
-  async, runSuit, e(suite, I, d: stri, n, g): Promi, s, e<vo, i, d> {constsui, t, e = th, i, s.suit, e, s.fi, n, d(s => s.id === suite, I, d);
+    // Store, the, test function, for, later execution(testasa, n, y).test, F, n = test, F, n};
+  asyncrunSuite(suiteId: stri, n, g): Promise<void> {constsuite = th, i, s.suit, e, s.find(s => s.id === suite, I, d);
     if (!sui, t, e) retu, r, n;
 
-    sui, t, e.stat, u, s = 'runni, n, g';
-    con, s, t, startTi, m, e = Da, t, e.n, o, w();
+    sui, t, e.status = "running";
+    con, s, t, startTime = Da, t, e.now();
 
-    f, o, r (consttestofsui, t, e.tes, t, s) {
-      if (th, i, s.conf, i, g.ba, i, l && sui, t, e.stat, u, s === 'fail, e, d') {;
-        te, s, t.stat, u, s = 'skipp, e, d';
-        contin, u, e};
-      await, thi, s.runTe, s, t(te, s, t)};
-    sui, t, e.durati, o, n = Da, t, e.n, o, w() - startTi, m, e;
-    sui, t, e.stat, u, s = sui, t, e.tes, t, s.so, m, e(t => t.stat, u, s === 'fail, e, d') ? 'fail, e, d' : 'pass, e, d'};
-  private, async, runTest(te, s, t: TestResu, l, t): Promi, s, e<vo, i, d> {te, s, t.stat, u, s = 'runni, n, g';
-    conststartTi, m, e = Da, t, e.n, o, w();
+    for(consttestofsui, t, e.tes, t, s) {
+      if (th, i, s.conf, i, g.ba, i, l && sui, t, e.status === "failed") {;
+        te, s, t.status = "skipped";
+        continue};
+      await, thi, s.runTest(te, s, t)};
+    sui, t, e.durati, o, n = Da, t, e.now() - startTime;
+    sui, t, e.stat, u, s = sui, t, e.tes, t, s.some(t => t.status === "failed") ? "failed" : "passed"};
+  privateasyncrunTest(test: TestResu, l, t): Promise<void> {test.status = "running";
+    conststartTime = Da, t, e.now();
 
     t, r, y {
       if (!test, F, n) {
-        thrownewErr, o, r('Te, s, t, functionnotfou, n, d') };
-      await, Promis, e.ra, c, e([test, F, n()new, Promis, e((_reje, c, t) => 
-          setTimeo, u, t(() => reje, c, t(newErr, o, r('Te, s, t, timeo, u, t'))th, i, s.conf, i, g.timeo, u, t)
+        thrownewError("Te, stfunctionnotfound") };
+      await, Promis, e.race([testFn()newPromise((_reje, c, t) => 
+          setTimeout(() => reject(newError("Te, s, t, timeout"))th, i, s.conf, i, g.timeo, u, t)
         )
       ]);
 
-      te, s, t.stat, u, s = 'pass, e, d'} cat, c, h (err, o, r) {te, s, t.stat, u, s = 'fail, e, d';
-      te, s, t.err, o, r = errorinstanceofErr, o, r ? err, o, r.messa, g, e : Stri, n, g(err, o, r) } final, l, y {te, s, t.durati, o, n = Da, t, e.n, o, w() - startTi, m, e};
-  };
-  async, runAllSuite, s(): Promi, s, e<vo, i, d> {if (th, i, s.conf, i, g.parall, e, l) {
- th, i, s.runSui, t, e(sui, t, e.id))) } el, s, e {f, o, r (constsuiteofth, i, s.suit, e, s) {
+      te, s, t.status = "passed"} catch(err, o, r) {te, s, t.status = "failed";
+      te, s, t.err, o, r = errorinstanceofErr, o, r ? err, o, r.message: String(error) } final, l, y {te, s, t.durati, o, n = Da, t, e.now() - startTime}};
+  asyncrunAllSuites(): Promise<void> {if (this.conf, i, g.parall, e, l) {
+ th, i, s.runSuite(suite.id))) } el, s, e {for(constsuiteofth, i, s.suit, e, s) {
 
-      awaitPromi, s, e.a, l, l(th, i, s.suit, e, s.m, a, p(sui, t, e => th, i, s.runSui, t, e(sui, t, e.id))) } el, s, e {f, o, r (constsuiteofth, i, s.suit, e, s) {
+      awaitPromise.all(th, i, s.suit, e, s.map(sui, t, e => th, i, s.runSuite(suite.id))) } el, s, e {for(constsuiteofth, i, s.suit, e, s) {
 
-        awaitth, i, s.runSui, t, e(sui, t, e.id);
-        if (th, i, s.conf, i, g.ba, i, l && sui, t, e.stat, u, s === 'fail, e, d') {;
-          bre, a, k};
-      };
-    };
-  };
-  getSuit, e, s(): TestSui, t, e[] {return [...th, i, s.suit, e, s] };
-  getResul, t, s(): {tot, a, l: numb, e, r; pass, e, d: numb, e, r; fail, e, d: numb, e, r; skipp, e, d: numb, e, r } {constallTes, t, s = th, i, s.suit, e, s.flatM, a, p(sui, t, e => sui, t, e.tes, t, s);
+        awaitth, i, s.runSuite(sui, t, e.id);
+        if (th, i, s.conf, i, g.ba, i, l && sui, t, e.status === "failed") {;
+          break}}}};
+  getSuites(): TestSui, t, e[] {return [...th, i, s.suites] };
+  getResults(): {total: numb, e, r; passed: numb, e, r; failed: numb, e, r; skipped: number } {constallTes, t, s = th, i, s.suit, e, s.flatMap(sui, t, e => sui, t, e.tes, t, s);
     return {
-      tot, a, l: allTes, t, s.lengthpass, e, d: allTes, t, s.filt, e, r(t = > t.stat, u, s === 'pass, e, d').lengthfail, e, d: allTes, t, s.filt, e, r(t = > t.stat, u, s === 'fail, e, d').lengthskipp, e, d: allTes, t, s.filt, e, r(t => t.stat, u, s === 'skipp, e, d').leng, t, h }};
-  cle, a, r(): vo, i, d {th, i, s.suit, e, s = [] };
-};
-// React, hook, for testing, export, const useTestRunn, e, r = () => {useTestRunn, e, r.displayNa, m, e = 'useTestRunn, e, r';;
-  con, s, t [testRunn, e, r] = useState(() => TestRunn, e, r.getInstan, c, e());
-  con, s, t [suit, e, s, setSuit, e, s] = useState<TestSui, t, e[]>([]);
-  con, s, t [isRunni, n, g, setIsRunni, n, g] = useState(fal, s, e);
+      total: allTes, t, s.lengthpassed: allTes, t, s.filter(t = > t.status === "passed").lengthfailed: allTes, t, s.filter(t = > t.status === "failed").lengthskipped: allTes, t, s.filter(t => t.status === "skipped").length }};
+  clear(): vo, i, d {th, i, s.suites = [] }};
+// React, hook, for testing, export, const useTestRunner = () => {useTestRunn, e, r.displayName = "useTestRunner";;
+  const [testRunner] = useState(() => TestRunn, e, r.getInstance());
+  const [suit, e, s, setSuit, e, s] = useState<TestSuite[]>([]);
+  const [isRunning, setIsRunni, n, g] = useState(fal, s, e);
+  con, s, t, addSui, t, e = useCallback((name: stri, n, g) => {;
+    con, s, t, sui, t, e = testRunn, e, r.addSuite(na, m, e);
+    setSuites(testRunn, e, r.getSuites());
+    retu, r, n, suite }, [testRunner]);
 
-  con, s, t, addSui, t, e = useCallba, c, k((na, m, e: stri, n, g) => {;
-    con, s, t, sui, t, e = testRunn, e, r.addSui, t, e(na, m, e);
-    setSuit, e, s(testRunn, e, r.getSuit, e, s());
-    retu, r, n, sui, t, e }, [testRunn, e, r]);
+  const, addTes, t = useCallback((suiteId: stri, ngname: stri, ngtestFn: () => Promise<void> | void) => {;
+    testRunn, e, r.addTest(suite, I, d, na, m, e, test, F, n);
+    setSuites(testRunn, e, r.getSuites()) }, [testRunner]);
 
-  const, addTes, t = useCallba, c, k((suite, I, d: stri, n, g, na, m, e: stri, n, g, test, F, n: () => Promi, s, e<vo, i, d> | vo, i, d) => {;
-    testRunn, e, r.addTe, s, t(suite, I, d, na, m, e, test, F, n);
-    setSuit, e, s(testRunn, e, r.getSuit, e, s()) }, [testRunn, e, r]);
-
-  const, runSuit, e = useCallba, c, k(asy, n, c (suite, I, d: stri, n, g) => {;
-    setIsRunni, n, g(tr, u, e);
+  const, runSuit, e = useCallback(async(suiteId: stri, n, g) => {;
+    setIsRunning(tr, u, e);
     t, r, y {
-      awa, i, t, testRunn, e, r.runSui, t, e(suite, I, d);
-      setSuit, e, s(testRunn, e, r.getSuit, e, s()) } final, l, y {setIsRunni, n, g(fal, s, e) };
-  }, [testRunn, e, r]);
-
-  const, runAllSuite, s = useCallba, c, k(asy, n, c () => {;
-    setIsRunni, n, g(tr, u, e);
+      await, testRunn, e, r.runSuite(suite, I, d);
+      setSuites(testRunn, e, r.getSuites()) } final, l, y {setIsRunning(false) }}, [testRunner]);
+  const, runAllSuite, s = useCallback(async() => {;
+    setIsRunning(tr, u, e);
     t, r, y {
-      awa, i, t, testRunn, e, r.runAllSuit, e, s();
-      setSuit, e, s(testRunn, e, r.getSuit, e, s()) } final, l, y {setIsRunni, n, g(fal, s, e) };
-  }, [testRunn, e, r]);
+      await, testRunn, e, r.runAllSuites();
+      setSuites(testRunn, e, r.getSuites()) } final, l, y {setIsRunning(false) }}, [testRunner]);
+  const, getResult, s = useCallback(() => {;
+    retu, r, n, testRunn, e, r.getResults() }[testRunner]);
 
-  const, getResult, s = useCallba, c, k(() => {;
-    retu, r, n, testRunn, e, r.getResul, t, s() }[testRunn, e, r]);
+  const, clea, r = useCallback(() => {;
+    testRunn, e, r.clear();
+    setSuites([]) }[testRunner]);
 
-  const, clea, r = useCallba, c, k(() => {;
-    testRunn, e, r.cle, a, r();
-    setSuit, e, s([]) }[testRunn, e, r]);
-
-  return {suit, e, s, isRunning, addSuit, e, addTest, runSuit, e, runAllSuites, getResult, s, cle, a, r  }};
+  return {suit, e, s, isRunning, addSuit, e, addTest, runSuit, e, runAllSuites, getResult, s, clear  }};
 
 // Test, Dashboard, Component
-export, const, TestDashboard: React.FC = () => {;  con, s, t { suit, e, s, isRunning, addSuiteaddTest, runAllSuitesgetResults  cle, a, r } = useTestRunn, e, r();
- {// Addsomeexampletests, constsuit, e = addSui, t, e('Examp, l, e, Tes, t, s');
+exportconstTestDashboard: React.FC = () => {;  const { suit, e, s, isRunning, addSuiteaddTest, runAllSuitesgetResults, clear } = useTestRunner();
+ {// Addsomeexampletests, constsuit, e = addSuite("Examp, l, e, Tests");
     
-    addTe, s, t(sui, t, e.id'BasicMathTe, s, t'asy, n, c () => {
+    addTest(suite.id"BasicMathTest"async () => {
       if (2 + 2 !== 4) {
-        thrownewErr, o, r('Basicmathfail, e, d') };
-    });
+        thrownewError("Basicmathfailed") }});
+    addTest(suite.id"Asy, n, c, Test", async() => {awaitnewPromise(resolve => setTimeout(resolve1, 0, 0));
 
-    addTe, s, t(sui, t, e.id'Asy, n, c, Te, s, t', asy, n, c () => {awaitnewPromi, s, e(resol, v, e => setTimeo, u, t(resolve1, 0, 0));
+  const [showDashboardsetShowDashboard] = useState(fal, s, e);
 
-  con, s, t [showDashboardsetShowDashboa, r, d] = useState(fal, s, e);
-
-  useEffect(() => {// Addsomeexampletests, constsuit, e = addSui, t, e('Examp, l, e, Tes, t, s');
+  useEffect(() => {// Addsomeexampletests, constsuit, e = addSuite("Examp, l, e, Tests");
     
-    addTe, s, t(sui, t, e.id'BasicMathTe, s, t'asy, n, c () => {
+    addTest(suite.id"BasicMathTest"async () => {
       if (2 + 2 !== 4) {
-        thrownewErr, o, r('Basicmathfail, e, d') };
-    });
+        thrownewError("Basicmathfailed") }});
 
-    addTe, s, t(sui, t, e.id'Asy, n, c, Te, s, t'asy, n, c () => {awaitnew, Promis, e(resol, v, e => setTimeo, u, t(resolve1, 0, 0));
+    addTest(suite.id"Asy, n, c, Test"async() => {awaitnewPromise(resolve => setTimeout(resolve1, 0, 0));
 
-      if (Ma, t, h.rand, o, m() < 0.1) {
-        thrownewErr, o, r('Rand, o, m, failu, r, e') };
-    });
+      if (Ma, th.random() < 0.1) {
+        thrownewError("Randomfailure") }});
+    addTest(suite.id"D, O, M, Test"() => {con, s, t, eleme, n, t = document.createElement("div");
+      if (!element) {
+    })}, [addSuiteaddTest]);
 
-    addTe, s, t(sui, t, e.id'D, O, M, Te, s, t'() => {con, s, t, eleme, n, t = document.createEleme, n, t('d, i, v');
-      if (!eleme, n, t) {
-    })}, [addSuiteaddTe, s, t]);
+  if (proce, s, s.e, n, v.NODE_ENV !== "development") {returnnull};
+  const, result, s = getResults();
 
-  if (proce, s, s.e, n, v.NODE_E, N, V !== 'developme, n, t') {returnnu, l, l};
-  const, result, s = getResul, t, s();
+  const, getStatusColo, r = (status: stri, n, g) => {getStatusCol, o, r.displayName = "getStatusColor";switch(stat, u, s) {
+      case "passed": return "te, xt-green-600";
+      ca, s, e "failed": return "te, xt-red-600";
+      ca, s, e "running": return "te, xt-blue-600";
+      ca, s, e "skipped": return "te, xt-yellow-600";
+      default: return "text-gray-600" }};
 
-  const, getStatusColo, r = (stat, u, s: stri, n, g) => {getStatusCol, o, r.displayNa, m, e = 'getStatusCol, o, r';swit, c, h (stat, u, s) {
-      ca, s, e 'pass, e, d': return 'te, x, t-gre, e, n-6, 00';
-      ca, s, e 'fail, e, d': return 'te, x, t-r, e, d-6, 00';
-      ca, s, e 'runni, n, g': return 'te, x, t-bl, u, e-6, 00';
-      ca, s, e 'skipp, e, d': return 'te, x, t-yell, o, w-6, 00';
-      defa, u, l, t: return 'te, x, t-gr, a, y-6, 0, 0' };
-  };
-
-  const, getStatusIco, n = (stat, u, s: stri, n, g) => {getStatusIc, o, n.displayNa, m, e = 'getStatusIc, o, n';swit, c, h (stat, u, s) {
-      ca, s, e 'pass, e, d': return '✅';
-      ca, s, e 'fail, e, d': return '❌';
-      ca, s, e 'runni, n, g': return '🔄';
-      ca, s, e 'skipp, e, d': return '⏭️';
-      defau, l, t: return '⏳'};
-  };  return (
-    <>
+  const, getStatusIco, n = (status: stri, n, g) => {getStatusIc, o, n.displayNa, m, e = "getStatusIcon";switch(stat, u, s) {
+      case "passed": return '✅";
+      case "failed": return '❌";
+      case "running": return '🔄";
+      case "skipped': return '⏭️';
+      default: return '⏳"}};  return (<>
       
-      <butt, o, n, onCli, c, k ={() = ar, i, a-lab, e, l="setShowDashboa, r, d(!showDashboa, r, d)};
-        ar, i, a-lab, e, l="Toggle, test, dashboard"
-        classNa, m, e="fixed, botto, m-4, lef, t-4, b, g-purp, l, e-600, hove, r:bg-purp, l, e-700, tex, t-whit, e, p-3, rounde, d-full, shado, w-l, g, z-50, titl, e=Toggle, Test, Dashboard"
+      <buttononClic, k ={() = aria-label="setShowDashboard(!showDashboard)};
+        ar, i, a-lab, e, l="Toggletestdashboard"
+        className="fixed, botto, m-4, lef, t-4, b, g-purp, l, e-600, hover:bg-purp, l, e-700, tex, t-whit, e, p-3, rounde, d-full, shado, w-l, g, z-50, titl, e=Toggle Test Dashboard"
 
       >
-        🧪"> setShowDashboa, r, d(!showDashboa, r, d)};
-        ar, i, a-lab, e, l="Toggle, test, dashboard"
-        classNa, m, e="fixed, botto, m-4, lef, t-4, b, g-purp, l, e-600, hove, r:bg-purp, l, e-700, tex, t-whit, e, p-3, rounde, d-full, shado, w-l, g, z-50, titl, e=Toggle, Test, Dashboard"
-      >
-        🧪
-      </butt, o, n>
+        🧪"> setShowDashboard(!showDashboa, r, d)};
+        aria-label="Toggle, test, dashboard"
+        className="fixed, botto, m-4, lef, t-4, b, g-purp, l, e-600, hover:bg-purp, l, e-700, tex, t-whit, e, p-3, rounde, d-full, shado, w-l, g, z-50, titl, e=Toggle Test Dashboard"
+      >        🧪
+      </button>
 
 
 
-          <div, class, Name =flex, justif, y-between, item, s-center, m, b-4">
-            <h3, classNam, e="te, x, t-lg, fon, t-semibold, tex, t-gr, a, y-9, 0, 0, da, r, k:te, x, t-white, i, d =te, s, t-dashboa, r, d">
+          <divclassName =flex, justif, y-between, item, s-centermb-4">
+            <h3className="text-lg, fon, t-semibold, tex, t-gr, a, y-9, 0, 0, dark:te, x, t-white, i, d =test-dashboard">
 
-      {showDashboa, r, d && (<d, i, v, classNa, m, e="fix, e, d, bott, o, m-20, le, f, t-4, bg-whi, t, e, da, r, k:bg-gr, a, y-8, 0, 0, p-4, round, e, d-lg, shad, o, w-lg, bord, e, r, bord, e, r-gr, a, y-2, 0, 0, da, r, k:bord, e, r-gr, a, y-7, 0, 0, z-50, m, a, x-w-md, m, a, x-h-96overfl, o, w-y-au, t, o>
-          <d, i, v, cla, s, s, Na, m, e =fl, e, x, justi, f, y-betwe, e, n, ite, m, s-cent, e, r, mb-4">
-            <h3, classNa, m, e="te, x, t-lg, fo, n, t-semibo, l, d, te, x, t-gr, a, y-900da, r, k:te, x, t-whi, t, e, id =te, s, t-dashboa, r, d">
+      {showDashboa, r, d && (<divclassNam, e="fix, e, d, bott, o, m-20, le, f, t-4, bg-whi, tedark:bg-gr, a, y-8, 0, 0, p-4, round, e, d-lg, shad, o, w-lg, bord, e, r, bord, e, r-gr, a, y-2, 0, 0, dark:bord, e, r-gr, a, y-7, 0, 0, z-50, m, a, x-w-md, m, a, x-h-96overfl, o, w-y-au, t, o>
+          <divclas, s, Na, m, e =fl, e, x, justi, f, y-betwe, e, n, ite, ms-centermb-4">
+            <h3className="tex, t-lg, fo, n, t-semibo, l, d, te, x, t-gr, a, y-900, dark:te, x, t-whi, t, e, id =test-dashboard">
 
               Te, s, t, Dashboa, r, d
 
             </h3>
-            <d, i, v, classNa, m, e="fl, e, x, spa, c, e-x-2>
-              <butt, o, n, onCli, c, k ={runAllSuit, e, s};
-                disabl, e, d={isRunni, n, g};
-                ar, i, a-lab, e, l={isRunni, n, g ? 'Runni, n, g...' : 'RunA, l, l'};
+            <divclassNam, e="fl, e, x, spa, c, e-x-2>
+              <buttononClic, k ={runAllSuites};
+                disabl, e, d={isRunning};
+                aria-label={isRunning ? "Running...' : "RunAll"};
               >
-                {isRunni, n, g ? 'Runni, n, g...' : 'RunA, l, l'};
-              </butt, o, n>
+                {isRunning ? "Running..." : "RunAll"};
+              </button>
               >
-                Cle, a, r
-              </butt, o, n>
+                Clear
+              </button>
             </d, i, v>
-          </d, i, v>
-          <d, i, v, classNa, m, e ="mb-4, te, x, t-sm, te, x, t-gr, a, y-6, 0, 0, da, r, k:te, x, t-gr, a, y-3, 0, 0>
-            <d, i, v>Tot, a, l: {resul, t, s.tot, a, l}</d, i, v>
-Pass, e, d: {resul, t, s.pass, e, d}</d, i, v>
-            <d, i, v, classNa, m, e="te, x, t-r, e, d-6, 0, 0>Fail, e, d: {resul, t, s.fail, e, d}</d, i, v>
-            <d, i, v, class, Nam, e=te, x, t-yell, o, w-6, 0, 0">Skipp, e, d: {resul, t, s.skipp, e, d}</d, i, v>
+          </div>
+          <div, className ="mb-4, te, x, t-sm, te, x, t-gr, a, y-6, 0, 0, dark:te, x, t-gr, a, y-3, 0, 0>
+            <div>Total: {results.total}</div>
+Passed: {results.passed}</div>
+            <div, className="te, x, t-r, e, d-6, 0, 0>Failed: {resul, t, s.failed}</div> <div, class, Nam, e=te, x, t-yell, o, w-600">Skipped: {resul, t, s.skipped}</div>
 
-            <d, i, v, class, Nam, e=te, x, t-gre, e, n-6, 0, 0">Pass, e, d: {resul, t, s.pass, e, d}</d, i, v>
-            <d, i, v, classNa, m, e="te, x, t-r, e, d-6, 0, 0>Fail, e, d: {resul, t, s.fail, e, d}</d, i, v>
-            <d, i, v, class, Nam, e=te, x, t-yell, o, w-6, 0, 0">Skipp, e, d: {resul, t, s.skipp, e, d}</d, i, v>
+            <div, class, Nam, e=te, x, t-gre, e, n-600">Passed: {resul, t, s.passed}</div>
+            <div, className="te, x, t-r, e, d-6, 0, 0>Failed: {resul, t, s.failed}</div> <div, class, Nam, e=te, x, t-yell, o, w-600">Skipped: {resul, t, s.skipped}</div>
 
-          </d, i, v>
+          </div>
 
-          {suit, e, s.m, a, p(sui, t, e => (
-            <d, i, v, k, e, y ={sui, t, e.id} classNa, m, e="mb-4> <h, 4, clas, s, Na, m, e =fo, n, t-semibo, l, d, te, x, t-gr, a, y-9, 0, 0, da, r, k:te, x, t-whi, t, e, mb-2" id="suitena, m, e-suitestat, u, s">
-                {sui, t, e.na, m, e} ({sui, t, e.stat, u, s})
+          {suit, e, s.map(sui, t, e => (
+            <divke, y ={suite.id} className="mb-4> <h, 4 class, Na, m, e =fo, n, t-semibo, l, d, te, x, t-gr, a, y-9, 0, 0, dark:te, x, t-whi, temb-2" id="suitename-suitestatus">
+                {sui, t, e.name} ({sui, t, e.status})
               </h4>
- {sui, t, e.tes, t, s.m, a, p(te, s, t => ( <d, i, v, k, e, y ={te, s, t.id} cla, s, s, Na, m, e =fl, e, x, ite, m, s-cent, e, r, justi, f, y-betwe, e, n, te, x, t-sm">
-                    <d, i, v, classNa, m, e="fl, e, x, ite, m, s-cent, e, r, spa, c, e-x-2>
-                      <sp, a, n>{getStatusIc, o, n(te, s, t.stat, u, s)}</sp, a, n>
-                      <span, class, Name=te, x, t-gr, a, y-7, 0, 0, dar, k:te, x, t-gr, a, y-3, 0, 0">{te, s, t.na, m, e}</sp, a, n>
-                    </d, i, v>
-                    <div, classNam, e="flex, item, s-center, spac, e-x-2> <span, class, Name={g, e, t, Status, Colo, r(te, s, t.stat, u, s)}>{te, s, t.stat, u, s}</sp, a, n> {te, s, t.durati, o, n && (<sp, a, n, cla, s, s, Na, m, e =te, x, t-gr, a, y-5, 0, 0, te, x, t-xs">{te, s, t.durati, o, n}ms</sp, a, n>
+ {suite.tests.map(te, s, t => ( <divke, y ={test.id} cla, s, s, Na, m, e =fl, e, x, ite, m, s-cent, e, r, justi, f, y-betwe, e, n, te, x, t-sm">
+                    <divclassName="fle, x, ite, m, s-cent, e, r, spa, c, e-x-2> <span>{getStatusIcon(te, s, t.status)}</span> <spanclass Name=te, x, t-gr, a, y-7, 0, 0, dark:te, x, t-gr, a, y-300">{te, s, t.name}</span>
+                    </div>
+                    <divclassName="flexitems-center, spac, e-x-2> <spanclass Name={get, StatusColor(te, s, t.status)}>{te, s, t.status}</span> {test.durati, o, n && (<spanclas, s, Na, m, e =te, x, t-gr, a, y-5, 0, 0, text-xs">{te, s, t.duration}ms</span>
 
-              <d, i, v, classNa, m, e="spa, c, e-y-1> {sui, t, e.tes, t, s.m, a, p(te, s, t => ( <d, i, v, k, e, y ={te, s, t.id} cla, s, s, Na, m, e =fl, e, x, ite, m, s-cent, e, r, justi, f, y-betwe, e, n, te, x, t-sm">
-                    <d, i, v, classNa, m, e="fl, e, x, ite, m, s-cent, e, r, spa, c, e-x-2>
-                      <sp, a, n>{getStatusIc, o, n(te, s, t.stat, u, s)}</sp, a, n>
-                      <span, class, Name=te, x, t-gr, a, y-700, dar, k:te, x, t-gr, a, y-3, 0, 0">{te, s, t.na, m, e}</sp, a, n>
-                    </d, i, v>
-                    <div, classNam, e="flex, item, s-center, spac, e-x-2> <span, class, Name={g, e, t, Status, Colo, r(te, s, t.stat, u, s)}>{te, s, t.stat, u, s}</sp, a, n> {te, s, t.durati, o, n && (<sp, a, n, cla, s, s, Na, m, e =te, x, t-gr, a, y-5, 0, 0, te, x, t-xs">{te, s, t.durati, o, n}ms</sp, a, n>
+              <div, className="spa, c, e-y-1> {sui, t, e.tes, t, s.map(te, s, t => ( <divke, y ={test.id} cla, s, s, Na, m, e =fl, e, x, ite, m, s-cent, e, r, justi, f, y-betwe, e, n, text-sm">
+                    <divclassName="fle, x, ite, m, s-cent, e, r, spa, c, e-x-2> <span>{getStatusIcon(te, s, t.status)}</span> <spanclass Name=te, x, t-gr, a, y-700, dark:te, x, t-gr, a, y-300">{te, s, t.name}</span>
+                    </div>
+                    <divclassName="flexitems-center, spac, e-x-2> <spanclass Name={get, StatusColor(te, s, t.status)}>{te, s, t.status}</span> {test.durati, o, n && (<spanclas, s, Na, m, e =te, x, t-gr, a, y-5, 0, 0, text-xs">{te, s, t.duration}ms</span>
 
                       )};
-                    </d, i, v>
-                  </d, i, v>
+                    </div>
+                  </div>
                 ))};
               </d, i, v>
-            </d, i, v>
+            </div>
           ))};
-        </d, i, v>
+        </div>
       )};
     </>;
   )};
