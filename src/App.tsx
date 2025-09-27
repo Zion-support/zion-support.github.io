@@ -27,6 +27,9 @@ import SystemMetricsDashboard from './components/SystemMetricsDashboard';
 import AdvancedAccessibilityManager from './utils/advancedAccessibilityManager';
 import AdvancedSecurityManager from './utils/advancedSecurityManager';
 import EnhancedUXManager from './utils/enhancedUXManager';
+import AdvancedAnalyticsManager from './utils/advancedAnalytics';
+import AdvancedCacheManager from './utils/advancedCache';
+import AdvancedDashboard from './components/AdvancedDashboard';
 import './index.css';
 import './styles/notifications.css';
 import './styles/system-metrics.css';
@@ -119,6 +122,10 @@ export default function App(): React.JSX.Element {
     AdvancedAccessibilityManager.getInstance().initialize();
     AdvancedSecurityManager.getInstance().initialize();
     EnhancedUXManager.getInstance().initialize();
+    
+    // Initialize new advanced managers
+    AdvancedAnalyticsManager.getInstance();
+    AdvancedCacheManager.getInstance();
     
     // Initialize advanced performance optimizer
     advancedPerformanceOptimizer.addResourceHints();
@@ -376,6 +383,7 @@ export default function App(): React.JSX.Element {
         isVisible={showSystemDashboard}
         onClose={() => setShowSystemDashboard(false)}
       />
+      <AdvancedDashboard />
     </>
   );
 }
