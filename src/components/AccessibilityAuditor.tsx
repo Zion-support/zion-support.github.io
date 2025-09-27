@@ -17,7 +17,9 @@ export default function AccessibilityAuditor() {useEffect(() => {
     images.forEach((img: HTMLImageElement) => {if (!img.alt) {
         issues.push({
           type: 'error',
-          message: 'Image, missingaltattribute'element: imgrule: 'alt-text'
+          message: 'Image missing alt attribute',
+          element: img,
+          rule: 'alt-text'
         })}
     });
 

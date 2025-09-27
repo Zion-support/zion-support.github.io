@@ -82,7 +82,7 @@ export default function Home(): JSX.Element {
       })}
   }, []);
 
-	const, features = useMemo(() => [
+	const features = useMemo(() => [
     {
       title: "AI-Powered Solutions",
       description: "Leverage cutting-edge artificial intelligence to transform your business operations and drive innovation.",
@@ -108,28 +108,27 @@ export default function Home(): JSX.Element {
       title: "24/7 Support",
       description: "Round-the-clock technical support and monitoring to ensure your systems run smoothly.",
       icon: "🛡️",
-      color: "blue" as const 
-     ,
+      color: "blue" as const,
 		delay: 0.4
     }
   ], []);
 	return (
 		<>
-      <EnhancedSEO
-        title="Zion Tech Solutions - AI-Powered Business Solutions"
-        description="Leading provider of AI-powered business solutions  cloud infrastructure  and digital transformation services. Transform your business with cutting-edge technology."
-        keywords={[
-          'AI solutions',
-          'cloud infrastructure', 
-          'digital transformation',
-          'business automation',
-          'technology consulting',
-          'machine learning',
-          'artificial intelligence',
-          'cloud computing',
-          'enterprise solutions'
-        ]}
-      />
+			<EnhancedSEO
+				title="Zion Tech Solutions - AI-Powered Business Solutions"
+				description="Leading provider of AI-powered business solutions, cloud infrastructure, and digital transformation services. Transform your business with cutting-edge technology."
+				keywords={[
+					'AI solutions',
+					'cloud infrastructure', 
+					'digital transformation',
+					'business automation',
+					'technology consulting',
+					'machine learning',
+					'artificial intelligence',
+					'cloud computing',
+					'enterprise solutions'
+				]}
+			/>
 			<div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
         
         {/* Hero Section */}

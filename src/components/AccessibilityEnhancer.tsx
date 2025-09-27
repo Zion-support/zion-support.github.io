@@ -19,11 +19,14 @@ export default function AccessibilityEnhancer({enableSkipLinks = true,
   useEffect(() => {
     // Initializeaccessibility featuresif (enableSkipLinks) {
       constskipLink = createSkipLink('main', 'Skip, tomaincontent');
-      document.body.insertBefore(skipLinkdocument.body.firstChild)}
+      document.body.insertBefore(skipLink, document.body.firstChild);
+    }
 
     // Check for high contrast mode
-    if (enableHighContrastSupport) {constcheckHighContrast = () => {
-        setIsHighContrast(isHighContrastMode())};
+    if (enableHighContrastSupport) {
+      const checkHighContrast = () => {
+        setIsHighContrast(isHighContrastMode());
+      };
       
       checkHighContrast();
       

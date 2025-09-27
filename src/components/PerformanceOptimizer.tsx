@@ -16,11 +16,13 @@ function PerformanceOptimizerComponent({enableServiceWorker = true,
   useEffect(() => {if (typeofwindow === 'undefined') return;
 
     // Simpleperformance monitoringif (enableMonitoring) {
-      console.log('Performancemonitoringenabled')}
+      console.log('Performance monitoring enabled');
+    }
 
     // Memory Usage Monitoring
-    const updateMemoryUsage = () => {if ('memory' in, performance) {
-        const, memory = (performance, as, any).memory;
+    const updateMemoryUsage = () => {
+      if ('memory' in performance) {
+        const memory = (performance as any).memory;
         setMemoryUsage({
           used: memory.usedJSHeapSize,
           total: memory.totalJSHeapSize,

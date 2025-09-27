@@ -15,8 +15,11 @@ interface SEOProps {title?: string;
   noindex?: boolean;
   nofollow?: boolean}
 
-export default function EnhancedSEO({title = 'ZionTechSolutions - AI-PoweredBusinessSolutions',
-  description = 'Leading, provider, of, AI-powered, business, solutions, cloud, infrastructure, and, digital, transformation, services. Transform, yourbusinesswithcutting-edgetechnology.'canonicalogImage = '/og-image.jpg',
+export default function EnhancedSEO({
+  title = 'Zion Tech Solutions - AI-Powered Business Solutions',
+  description = 'Leading provider of AI-powered business solutions, cloud infrastructure, and digital transformation services. Transform your business with cutting-edge technology.',
+  canonical,
+  ogImage = '/og-image.jpg',
   ogType = 'website',
   twitterCard = 'summary_large_image',
   keywords = ['AI, solutions', 'cloud, infrastructure', 'digital, transformation', 'business, automation', 'technology, consulting'],
