@@ -11,16 +11,22 @@ import './index.css';
 
 export default function App(): React.JSX.Element {
   useEffect(() => {
-    // Initialize accessibility features
-    accessibilityManager.addSkipLink();
+    // Initialize enhanced accessibility features
+    accessibilityManager.initialize({
+      announceChanges: true,
+      reducedMotion: true,
+      highContrast: true
+    });
     accessibilityManager.announceToScreenReader('Zion website loaded successfully');
     
-    // Start performance monitoring
+    // Start enhanced performance monitoring
     performanceMonitor.startMeasure('app-render');
     performanceMonitor.reportCoreWebVitals();
     
     return () => {
       performanceMonitor.endMeasure('app-render');
+      accessibilityManager.cleanup();
+      performanceMonitor.cleanup();
     };
   }, []);
 
