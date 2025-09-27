@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useWebVitals } from '../hooks/useWebVitals';
+import { motion, AnimatePresence } from 'framer-motion';
 
 interface PerformanceMetrics {
   loadTime: number;

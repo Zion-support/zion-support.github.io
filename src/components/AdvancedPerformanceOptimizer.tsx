@@ -1,4 +1,6 @@
+import React, { useState, useEffect } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/Card';
+import { Zap, CheckCircle, AlertTriangle, XCircle, TrendingUp, TrendingDown, Activity, Clock, HardDrive, Wifi, Database, BarChart3, Cpu, Battery } from 'lucide-react';
 
 interface PerformanceMetrics {
   loadTime: number;
@@ -62,16 +64,18 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ cla
             </div>
             <div className="flex space-x-2">
               <button
-                onClick={measurePerformance}
-                disabled={isAnalyzing}
+                onClick={() => console.log('Measuring performance...')}
+                disabled={false}
                 className="px-4 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600 disabled:opacity-50 transition-colors"
-                {isAnalyzing ? 'Analyzing...' : 'Measure'}
+              >
+                Measure
               </button>
               <button
-                onClick={performOptimization}
-                disabled={isOptimizing || optimizations.length === 0}
+                onClick={() => console.log('Optimizing...')}
+                disabled={false}
                 className="px-4 py-2 bg-yellow-500 text-white rounded-lg hover:bg-yellow-600 disabled:opacity-50 transition-colors"
-                {isOptimizing ? 'Optimizing...' : 'Optimize'}
+              >
+                Optimize
               </button>
             </div>
           </CardTitle>
@@ -198,6 +202,19 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ cla
                     {suggestion.priority.toUpperCase()}
                   </span>
                 </div>
+                <h4 className="font-semibold text-gray-900 mb-1">{suggestion.title}</h4>
+                <p className="text-sm text-gray-600 mb-2">{suggestion.description}</p>
+                <div className="text-xs text-gray-500">
+                  <strong>Impact:</strong> {suggestion.impact}
+                </div>
+                <div className="text-xs text-gray-500 mt-1">
+                  <strong>Implementation:</strong> {suggestion.implementation}
+                </div>
+              </div>
+            ))}
+          </div>
+        </CardContent>
+      </Card>
     </div>
   );
 };
