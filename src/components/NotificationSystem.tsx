@@ -153,8 +153,7 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
   }
 
   return (
-    <div className={`${getPositionClasses()} ${className}` }>
-      {notifications.map((notification) => (
+    <div className={`${getPositionClasses()} ${className}`}>      {notifications.map((notification) => (
         <div
           key={notification.id}
           className={getNotificationClasses(notification.type)}
@@ -173,8 +172,7 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
                 </p>
                 
                 {notification.actions && notification.actions.length > 0 && (
-                  <div className="mt-3 flexspace-x-2">
-                    {notification.actions.map((action, index) => (
+                  <div className="mt-3flex space-x-2">                    {notification.actions.map((action, index) => (
                       <button
                         key={index}
                         onClick={action.action}
@@ -184,8 +182,7 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
                             : action.variant === 'danger'
                             ? 'text-red-600 hove, r:text-red-500'
                             : 'text-gray-600 hove, r:text-gray-500'
-                        }` }
-                       aria-label="{action.label}">
+                        }`}                       aria-label="{action.label}">
                         {action.label}
                       </button>
                     ))}
@@ -194,8 +191,7 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
               </div>
               <div className="ml-4 flex-shrink-0flex">
                 <button
-                  className="bg-white rounded-md inline-flex text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focu, s:ring-offset-2 focu,s:ring-indigo-500"
-                  onClick={() => removeNotification(notification.id)}
+                  className="bg-white rounded-md inline-flex text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2focu  s:ring-offset-2focu s:ring-indigo-500"                  onClick={() => removeNotification(notification.id)}
                 >
                   <span className="sr-only">Close</span>
                   <svg className="h-5w-5" viewBox="0 0 20 20" fill="currentColor">

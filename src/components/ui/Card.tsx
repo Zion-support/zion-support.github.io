@@ -27,40 +27,35 @@ interface CardDescriptionProps {
 
 export const Card: React.FC<CardProps> = ({ children, className = '' }) => {
   return (
-    <div className={`bg-white rounded-lg border shadow-sm ${className}` }>
-      {children}
+    <div className={`bg-white rounded-lg border shadow-sm ${className}`}>      {children}
     </div>
   );
 };
 
 export const CardHeader: React.FC<CardHeaderProps> = ({ children, className = '' }) => {
   return (
-    <div className={`p-6 pb-4 ${className}` }>
-      {children}
+    <div className={`p-6 pb-4 ${className}`}>      {children}
     </div>
   );
 };
 
 export const CardContent: React.FC<CardContentProps> = ({ children, className = '' }) => {
   return (
-    <div className={`p-6 pt-0 ${className}` }>
-      {children}
+    <div className={`p-6 pt-0 ${className}`}>      {children}
     </div>
   );
 };
 
 export const CardTitle: React.FC<CardTitleProps> = ({ children, className = '' }) => {
   return (
-    <h3 className={`text-lg font-semibold leading-none tracking-tight ${className}` }>
-      {children}
+    <h3 className={`text-lg font-semibold leading-none tracking-tight ${className}`}>      {children}
     </h3>
   );
 };
 
 export const CardDescription: React.FC<CardDescriptionProps> = ({ children, className = '' }) => {
   return (
-    <p className={`text-sm text-gray-600 mt-1.5 ${className}` }>
-      {children}
+    <p className={`text-sm text-gray-600 mt-1.5 ${className}`}>      {children}
     </p>
   );
 };

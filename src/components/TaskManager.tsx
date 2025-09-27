@@ -79,7 +79,7 @@ export default function TaskManager({ isOpen, onClose }: TaskManagerProps): JSX.
                   filter === filterType
                     ? 'bg-blue-600 text-white'
                     : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
-                }` }
+                }`}
               >
                 {filterType.charAt(0).toUpperCase() + filterType.slice(1)}
               </button>
@@ -101,7 +101,7 @@ export default function TaskManager({ isOpen, onClose }: TaskManagerProps): JSX.
                       task.completed
                         ? 'bg-gray-100 dark:bg-gray-700 border-gray-200 dark:border-gray-600'
                         : 'bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-600'
-                    }` }
+                    }`}
                   >
                     <input
                       type="checkbox"
@@ -116,7 +116,7 @@ export default function TaskManager({ isOpen, onClose }: TaskManagerProps): JSX.
                         task.completed
                           ? 'line-through text-gray-500 dark:text-gray-400'
                           : 'text-gray-900 dark:text-white'
-                      }` }
+                      }`}
                     >
                       {task.text}
                     </span>

@@ -196,7 +196,7 @@ export const AdvancedForm: React.FC<AdvancedFormProps> = ({
 
       case 'checkbox':
         return (
-          <div className="flexitems-center">
+          <div className="flex items-center">
             <input
               type="checkbox"
               name={field.name}
@@ -217,7 +217,7 @@ export const AdvancedForm: React.FC<AdvancedFormProps> = ({
         return (
           <div className="space-y-2">
             {field.options?.map(option => (
-              <div key={option.value} className="flexitems-center">
+              <div key={option.value} className="flex items-center">
                 <input
                   type="radio"
                   name={field.name}
@@ -256,8 +256,7 @@ export const AdvancedForm: React.FC<AdvancedFormProps> = ({
   };
 
   return (
-    <form ref={formRef} onSubmit={handleSubmit} className={`space-y-6 ${className}` }>
-      {fields.map(field => (
+    <form ref={formRef} onSubmit={handleSubmit} className={`space-y-6 ${className}`}>      {fields.map(field => (
         <div key={field.name} className="space-y-2">
           {field.type !== 'checkbox' && field.type !== 'radio' && (
             <label className="block text-sm font-medium text-gray-700">
@@ -271,22 +270,20 @@ export const AdvancedForm: React.FC<AdvancedFormProps> = ({
           {renderField(field)}
           
           {touched[field.name] && errors[field.name] && (
-            <p className="text-sm text-red-600 flexitems-center">
-              <svg className="w-4 h-4mr-1" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
-              </svg>
+            <p className="text-sm text-red-600 flex items-center">
+              <svg className="w-4h-4mr-1" fill="currentColor" viewBox="002020">
+                <path fillRule="evenodd" d="M1810 a88011-16088001160 zm-74 a11011-201100120 zm-1-9a11000-11v4a1101020V 6 a11000-1-1z" clipRule="evenodd" />              </svg>
               {errors[field.name]}
             </p>
           )}
         </div>
       ))}
 
-      <div className="flexspace-x-4">
+      <div className="flex space-x-4">
         <button
           type="submit"
           disabled={isLoading}
-          className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disable, d:opacity-50 disable, d:cursor-not-allowed transition-colorsduration-200"
-        >
+          className="flex-1bg-blue-600 text-white px-4py-2rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2focus:ring-blue-500 focus:ring-offset-2disable  d:opacity-50 disable  d:cursor-not-allowed transition-colorsduration-200"        >
           {isLoading ? (
             <div className="flex items-centerjustify-center">
               <svg className="animate-spin -ml-1 mr-3 h-5 w-5text-white" fill="none" viewBox="0 0 24 24">
@@ -305,8 +302,7 @@ export const AdvancedForm: React.FC<AdvancedFormProps> = ({
             type="button"
             onClick={handleReset}
             disabled={isLoading}
-            className="px-4 py-2 border border-gray-300 text-gray-700 rounded-md hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disable, d:opacity-50 disable, d:cursor-not-allowed transition-colorsduration-200"
-           aria-label="{resetText}">
+            className="px-4py-2border border-gray-300 text-gray-700 rounded-md hover:bg-gray-50 focus:outline-none focus:ring-2focus:ring-blue-500 focus:ring-offset-2disable  d:opacity-50 disable  d:cursor-not-allowed transition-colorsduration-200"           aria-label="{resetText}">
             {resetText}
           </button>
         )}

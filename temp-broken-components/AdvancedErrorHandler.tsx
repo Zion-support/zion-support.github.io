@@ -66,13 +66,12 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({
 
   const getCategoryIcon = (category: ErrorInfo['category']) => {
     switch (category) {
-      case 'javascript': return <Bug className="w-4 h-4" />;
-      case 'network': return <Activity className="w-4 h-4" />;
-      case 'validation': return <Shield className="w-4 h-4" />;
-      case 'permission': return <Shield className="w-4 h-4" />;
-      case 'system': return <Database className="w-4 h-4" />;
-      default: return <AlertTriangle className="w-4 h-4" />;
-    }
+      case 'javascript': return <Bug className="w-4h-4" />;
+      case 'network': return <Activity className="w-4h-4" />;
+      case 'validation': return <Shield className="w-4h-4" />;
+      case 'permission': return <Shield className="w-4h-4" />;
+      case 'system': return <Database className="w-4h-4" />;
+      default: return <AlertTriangle className="w-4h-4" />;    }
   };
 
   return (

@@ -28,7 +28,7 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
 				isHovered
 					? 'border-blue-500 bg-blue-50 shadow-lg transform -translate-y-1'
 					: 'border-gray-200 bg-white hover:border-blue-300 hover:shadow-md'
-			}` }
+			}`}
 			onMouseEnter={onMouseEnter}
 			onMouseLeave={onMouseLeave}
 		>

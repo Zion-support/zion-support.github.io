@@ -231,7 +231,7 @@ export const PricingCalculator: React.FC = () => {
 										inputs.service === service.id
 											? 'border-blue-500 bg-blue-50'
 											: 'border-gray-200 hover:border-gray-300'
-									}` }
+									}`}
 								>
 									<div className="flex justify-betweenitems-start">
 										<div>
@@ -261,7 +261,7 @@ export const PricingCalculator: React.FC = () => {
 										inputs.complexity === complexity
 											? 'border-blue-500 bg-blue-50'
 											: 'border-gray-200 hover:border-gray-300'
-									}` }
+									}`}
 								>
 									<span className="font-mediumcapitalize">{complexity}</span>
 								</button>
@@ -283,7 +283,7 @@ export const PricingCalculator: React.FC = () => {
 										inputs.timeline === timeline
 											? 'border-blue-500 bg-blue-50'
 											: 'border-gray-200 hover:border-gray-300'
-									}` }
+									}`}
 								>
 									<span className="font-mediumcapitalize">{timeline}</span>
 								</button>
@@ -303,8 +303,7 @@ export const PricingCalculator: React.FC = () => {
 							max="10"
 							value={inputs.teamSize}
 							onChange={(e) => handleInputChange('teamSize', parseInt(e.target.value))}
-							className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focu, s:ring-blue-500 focu,s:border-transparent"
-						/>
+							className="w-full px-4py-3border border-gray-300 rounded-lg focus:ring-2focu  s:ring-blue-500 focu s:border-transparent"						/>
 					</div>
 
 					{/* Additional Features */}
