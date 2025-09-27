@@ -21,7 +21,7 @@ export class Cache<T> {
     this.cache.set(key, item);
   }
 
-  get<T>(key: string): T | null {
+  get(key: string): T | null {
     const item = this.cache.get(key);
     if (!item) return null;
 
@@ -30,7 +30,7 @@ export class Cache<T> {
       return null;
     }
 
-    return item.data as T;
+    return item.data;
   }
 
   has(key: string): boolean {
@@ -81,9 +81,9 @@ export const fetchWithCache = async <T>(
   const cacheKey = `api:${url}:${JSON.stringify(options)}`;
 
   // Check cache first
-  const cached = cache.get<T>(cacheKey);
+  const cached = cache.get(cacheKey);
   if (cached) {
-    return cached;
+    return cached as T;
   }
 
   // Fetch from API
@@ -109,7 +109,7 @@ export const memoize = <T extends (...args: any[]) => any>(
     const key = keyGenerator ? keyGenerator(...args) : `memo:${fn.name}:${JSON.stringify(args)}`;
 
     if (cache.has(key)) {
-      return cache.get(key);
+      return cache.get(key) as ReturnType<T>;
     }
 
     const result = fn(...args);
