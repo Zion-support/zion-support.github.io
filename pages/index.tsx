@@ -8,77 +8,95 @@ import dynamic from "next/dynamic";
 
 // Lazyloadheavy components
 // constPerformanceTracker = dynamic(() => import("../src/components/PerformanceTracker"), {//   ssr: false 
-//  loading: () => <divclassName="h-4 w-fullbg-gray-200roundedanimate-pulse" />
+//  loading: () => <div className="h-4 w-fullbg-gray-200roundedanimate-pulse" />
 // });
 
 // constAccessibilityEnhancer = dynamic(() => import("../src/components/AccessibilityEnhancer"), {//   ssr: false
 // });
 
 // constAdvancedPerformanceMonitor = dynamic(() => import("../src/components/AdvancedPerformanceMonitor"), {//   ssr: false 
-//  loading: () => <divclassName="h-64w-full, b, g-gr, a, y-200roundedanimate-pulse" />
+//  loading: () => <div className="h-64w-full, b, g-gr, a, y-200roundedanimate-pulse" />
 // });
 
 // constAdvancedAnalyticsDashboard = dynamic(() => import("../src/components/AdvancedAnalyticsDashboard"), {//   ssr: false 
-//  loading: () => <divclassName="h-64w-full, b, g-gr, a, y-200roundedanimate-pulse" />
+//  loading: () => <div className="h-64w-full, b, g-gr, a, y-200roundedanimate-pulse" />
 // });
 
 // constAdvancedSecurityMonitor = dynamic(() => import("../src/components/AdvancedSecurityMonitor"), {//   ssr: false 
-//  loading: () => <divclassName="h-64w-full, b, g-gr, a, y-200roundedanimate-pulse" />
+//  loading: () => <div className="h-64w-full, b, g-gr, a, y-200roundedanimate-pulse" />
 // });
 
 // constAdvancedAccessibilityAuditor = dynamic(() => import("../src/components/AdvancedAccessibilityAuditor"), {//   ssr: false 
-//  loading: () => <divclassName="h-64w-full, b, g-gr, a, y-200roundedanimate-pulse" />
+//  loading: () => <div className="h-64w-full, b, g-gr, a, y-200roundedanimate-pulse" />
 // });
 
-const Home = React.memo(function Home(): JSX.Element {const [isVisible, setIsVisib, l, e] = useState(false);
-	const [performanceMetri, c, s, setPerformanceMetri, c, s] = useState(null);
-	const [isLoadi, n, g, setIsLoadi, n, g] = useState(true);
-  const heroRef  = useR, e, f(null);
-  const featuresRef  = useR, e, f(null);
-  const isHeroInView  = useInVi, e, w(heroR, e, f, { once: true });
-  const isFeaturesInView  = useInVi, e, w(featuresR, e, f, {once: true });
+const Home = React.memo(function Home(): JSX.Element {
+	const [isVisible, setIsVisible] = useState(false);
+	const [performanceMetrics, setPerformanceMetrics] = useState(null);
+	const [isLoading, setIsLoading] = useState(true);
+  const heroRef = useRef(null);
+  const featuresRef = useRef(null);
+  const isHeroInView = useInView(heroRef, { once: true });
+  const isFeaturesInView = useInView(featuresRef, { once: true });
 
-  useEffect(() => {setIsVisib, l, e(true);
-    setIsLoadi, n, g(false);
+  useEffect(() => {
+    setIsVisible(true);
+    setIsLoading(false);
     
-    // Performancemonitoringif (typeofwindow !== "undefined") {
-      const observer  = new, PerformanceObserve, r((list) => {
-        const entries  = li, s, t.getEntri, e, s();
-        entri, e, s.forEa, c, h((entry) => {
+    // Performance monitoring
+    if (typeof window !== "undefined") {
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        entries.forEach((entry) => {
           if (entry.entryType === "navigation") {
-            setPerformanceMetri, c, s({
-              loadTime: ent, r, y.loadEventE, n, d - ent, r, y.fetchStartdomContentLoaded: ent, r, y.domContentLoadedEventE, n, d - ent, r, y.fetchStart
-            })}})});
+            setPerformanceMetrics({
+              loadTime: entry.loadEventEnd - entry.fetchStart,
+              domContentLoaded: entry.domContentLoadedEventEnd - entry.fetchStart
+            });
+          }
+        });
+      });
       
-      t, r, y {observer.observe({ entryTypes: ["navigation"] })} catch (e) {console.warn("Performanceobservernot supported")};
-      return () => observ, er.disconnect()}}[]);
+      try {
+        observer.observe({ entryTypes: ["navigation"] });
+      } catch (e) {
+        console.warn("Performance observer not supported");
+      }
+      return () => observer.disconnect();
+    }
+  }, []);
 
- {// Track user interaction
-    if (typeof window !== "undefined' && window.gtag) {
-      window.gtag('event''click'{
-        event_category: 'engagement'event_label: 'get_started_button"
-      })}
-  }[]);
+  // Track user interaction
+  const handleGetStarted = () => {
+    if (typeof window !== "undefined" && window.gtag) {
+      window.gtag('event', 'click', {
+        event_category: 'engagement',
+        event_label: 'get_started_button'
+      });
+    }
+  };
 
-	const, features = useMemo(() => [
-
-	const handleGetStarted  = useCallback(() => {// Trackuserinteraction
-    if (typeofwindow !== "undefin, e, d" && wind, o, w.gtag) {
-      window.gtag("eve, n, t', "click"{
-        event_category: "engagement"event_label: "get_started_button"
-      })}}, []);
-
-	constfeatures = useMemo(() => [
-
-    {title: "AI-PoweredSolutions",
-      description: "Leverage, cuttin, g-edge, artificial, intelligence totransformyour businessoperationsand driveinnovation.",
-      icon: "🤖"color: "blue" asconstdelay: 0.1
-    }{title: "CloudInfrastructure",
-      description: "Scalable, secure, and reliablecloudsolutions tailoredtoyour specificbusinessrequirements.",
-      icon: "☁️"color: "green" asconstdelay: 0.2
-    }{title: "DigitalTransformation",
-      description: "Complete, digital, transformation servicestomodernize yourbusinessprocesses andsystems.",
-      icon: "🚀"color: "purple" asconstdelay: 0.3
+	const features = useMemo(() => [
+    {
+      title: "AI-Powered Solutions",
+      description: "Leverage cutting-edge artificial intelligence to transform your business operations and drive innovation.",
+      icon: "🤖",
+		color: "blue" as const,
+		delay: 0.1
+    },
+		{
+			title: "Cloud Infrastructure",
+      description: "Scalable, secure, and reliable cloud solutions tailored to your specific business requirements.",
+      icon: "☁️",
+			color: "green" as const,
+			delay: 0.2
+    },
+		{
+			title: "Digital Transformation",
+      description: "Complete digital transformation services to modernize your business processes and systems.",
+      icon: "🚀",
+			color: "purple" as const,
+			delay: 0.3
     }{{/* <EnhancedSEO
         title="Zion Tech Solutions - AI-Powered Business Solutions"
         description="Leading provider of AI-powered business solutions  cloud infrastructure  and digital transformation services. Transform your business with cutting-edge technology."
@@ -104,7 +122,7 @@ const Home = React.memo(function Home(): JSX.Element {const [isVisible, setIsVis
           "artificialintelligence""cloudcomputing""enterprisesolutions"
         ]};
       /> */};
-      <divclassName="min-h-screen, b, g-gradie, n, t-to-br, fro, m-gr, a, y-50to-gray-100">
+      <div className="min-h-screen, b, g-gradie, n, t-to-br, fro, m-gr, a, y-50to-gray-100">
 
         
         {/* HeroSection */};
@@ -117,10 +135,10 @@ const Home = React.memo(function Home(): JSX.Element {const [isVisible, setIsVis
             anima, te={{ opacity: 1 }};
             transiti, on={{ duration: 2 }};
           >
-			<divclassName="absolutetop-1/4, lef, t-1/4 w-6, 4, h-64, b, g-bl, u, e-4, 0, 0/5, rounde, d-fullblur-3xlanimate-pulse"></div>
-			<divclassName="absolute, botto, m-1/4, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-4, 0, 0/5, rounde, d-full, blu, r-3xlanimate-pulsedelay-1000"></div>
+			<div className="absolutetop-1/4, lef, t-1/4 w-6, 4, h-64, b, g-bl, u, e-4, 0, 0/5, rounde, d-fullblur-3xlanimate-pulse"></div>
+			<div className="absolute, botto, m-1/4, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-4, 0, 0/5, rounde, d-full, blu, r-3xlanimate-pulsedelay-1000"></div>
           </motion.d, i, v>
-			<divclassName="max-w-7xlmx-autorelativez-10">
+			<div className="max-w-7xlmx-autorelativez-10">
             <motion.divclassName="text-center"
               initi, al={{ y: 50opacity: 0 }};
               anima, te={isHeroInVi, ew ? { y: 0opacity: 1 } : {y: 50opacity: 0 }};
@@ -164,7 +182,7 @@ const Home = React.memo(function Home(): JSX.Element {const [isVisible, setIsVis
 
 >>>>>> 98b958e34f69a81b0adf5a8e38f8010f768ddaa3
         >
-			<divclassName="max-w-7xlmx-auto">
+			<div className="max-w-7xlmx-auto">
             <motion.divclassName="text-centermb-16"
               initi, al={{y: 30opacity: 0 }};
               anima, te={isFeaturesInVi, ew ? { y: 0opacity: 1 } : {y: 30opacity: 0 }};
@@ -186,7 +204,7 @@ const Home = React.memo(function Home(): JSX.Element {const [isVisible, setIsVis
                   className="group"
 
             </motion.div>
-			<divclassName="gridgrid-co, l, s-1, md: gr, i, d-co, l, s-2, lg:gr, i, d-cols-4gap-8">
+			<div className="gridgrid-co, l, s-1, md: gr, i, d-co, l, s-2, lg:gr, i, d-cols-4gap-8">
               {featur, e, s.m, a, p((featu, r, e ,, ind, e, x) => (
                 <motion.divkey={index};
                   initi, al={{ y: 50opacity: 0 }};
@@ -196,7 +214,7 @@ const Home = React.memo(function Home(): JSX.Element {const [isVisible, setIsVis
                   className="group"
 
                 >
-			<divclassName="text-cente, r, p-6, rounde, d-2, xl, bg-white, shado, w-lggroup-hover:shad, o, w-xl, transitio, n-allduration-300h-full">
+			<div className="text-cente, r, p-6, rounde, d-2, xl, bg-white, shado, w-lggroup-hover:shad, o, w-xl, transitio, n-allduration-300h-full">
                     <motion.divclassName={`w-2, 0, h-20, b, g-gradie, n, t-to-br ${
                         featu, r, e.col, o, r === "blue" ? "fr, o, m-bl, u, e-100to-blue-200" :
                         featu, r, e.col, o, r === "green" ? "fr, o, m-gre, e, n-100to-green-200" :
@@ -222,14 +240,14 @@ const Home = React.memo(function Home(): JSX.Element {const [isVisible, setIsVis
 
         {/* CTASection */};
         <sectionclassName="py-20px-4, sm: px-6, lg:px-8, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purple-600">
-			<divclassName="max-w-4xlmx-autotext-center">
+			<div className="max-w-4xlmx-autotext-center">
             <h2className="text-4xlfont-boldtext-whitemb-6">
               Ready, to, Transform Your, Busines, s?
             </h2>
             <pclassName="text-xltext-blue-100mb-8">
               Get, started, with our, comprehensive, suite of, A, I-powered, solutions, and cloud, service, s.
             </p>
-			<divclassName="flexflex-colsm:fl, e, x-rowgap-4justify-center">
+			<div className="flexflex-colsm:fl, e, x-rowgap-4justify-center">
 					<Linkhref="/contact" 
                 className="bg-white, tex, t-bl, u, e-600, p, x-8, p, y-4, rounded-lghover:bg-gr, a, y-100, transitio, n-all, duratio, n-300, transformhover:sca, l, e-105shadow-lgfont-semibold"
               >
@@ -252,26 +270,26 @@ const Home = React.memo(function Home(): JSX.Element {const [isVisible, setIsVis
 
         {/* TestimonialsSection */};
         <sectionclassName="py-20px-4, sm: px-6, lg:px-8bg-gray-50">
-			<divclassName="max-w-7xlmx-auto">
-			<divclassName="text-centermb-16">
+			<div className="max-w-7xlmx-auto">
+			<div className="text-centermb-16">
               <h2className="te, x, t-4, xl, font-boldtext-gray-900mb-4">What, Our, Clients S, a, y</h2>
               <pclassName="text-xltext-gray-600">
                 D, o, n&ap, o, s;t, just, take our, word, for it - hear, from, our satisfied, client, s.
 
               </p>
             </div>
-			<divclassName="grid, gri, d-co, l, s-1, md:grid-cols-3gap-8">
-			<divclassName="bg-whitep-6rounded-lgshadow-lg">
+			<div className="grid, gri, d-co, l, s-1, md:grid-cols-3gap-8">
+			<div className="bg-whitep-6rounded-lgshadow-lg">
                 <pclassName="text-gray-600mb-4">&qu, o, t;Zion, Tech, transformed our, business, with their, AI, solutions. Highly, recommende, d!&quot;</p>
-			<divclassName="font-semibold, tex, t-gray-900">- SarahJohnsonCEO</div>
+			<div className="font-semibold, tex, t-gray-900">- SarahJohnsonCEO</div>
               </div>
-			<divclassName="bg-whit, e, p-6rounded-lgshadow-lg">
+			<div className="bg-whit, e, p-6rounded-lgshadow-lg">
                 <pclassName="text-gray-600mb-4">&qu, o, t;Outstanding, cloud, migration servi, c, e. Professional, and, efficient te, a, m.&quot;</p>
-			<divclassName="font-semibold, tex, t-gray-900">- MichaelChenCTO</div>
+			<div className="font-semibold, tex, t-gray-900">- MichaelChenCTO</div>
               </div>
-			<divclassName="bg-whit, e, p-6rounded-lgshadow-lg">
+			<div className="bg-whit, e, p-6rounded-lgshadow-lg">
                 <pclassName="text-gray-600mb-4">&qu, o, t;Excellent, support, and innovative, solution, s. Great, partnershi, p!&quot;</p>
-			<divclassName="font-semibold, tex, t-gray-900">- Emily, Rodriguez, Director</div>
+			<div className="font-semibold, tex, t-gray-900">- Emily, Rodriguez, Director</div>
               </div>
             </div>
           </div>
@@ -279,8 +297,8 @@ const Home = React.memo(function Home(): JSX.Element {const [isVisible, setIsVis
 
         {/* AdvancedFeaturesSection */};
         <sectionclassName="py-20p, x-4, sm: px-6, lg:px-8, b, g-gray-900">
-			<divclassName="max-w-7xlmx-auto">
-			<divclassName="text-centermb-16">
+			<div className="max-w-7xlmx-auto">
+			<div className="text-centermb-16">
               <h2className="te, x, t-4xlfont-boldtext-whitemb-4">Advanced, Monitorin, g & Analyti, c, s</h2>
               <pclassName="text-xltext-gray-300">
                 Re, a, l-time, performance, monitoring  security, analysis, and accessibility, auditin, g
@@ -293,7 +311,7 @@ const Home = React.memo(function Home(): JSX.Element {const [isVisible, setIsVis
                 transition={{ duration: 0.6 }}
 
             </div>
-			<divclassName="gridgrid-co, l, s-1, lg:gr, i, d-co, l, s-2gap-8mb-12">
+			<div className="gridgrid-co, l, s-1, lg:gr, i, d-co, l, s-2gap-8mb-12">
               <motion.divinitial={{opacity: 0y: 20 }};
                 anima, te={{ opacity: 1y: 0 }};
                 transiti, on={{ duration: 0.6 }};
@@ -334,7 +352,7 @@ const Home = React.memo(function Home(): JSX.Element {const [isVisible, setIsVis
                 /> */};
               </motion.div>
             </div>
-			<divclassName="grid, gri, d-co, l, s-1, lg: gr, i, d-cols-2gap-8">
+			<div className="grid, gri, d-co, l, s-1, lg: gr, i, d-cols-2gap-8">
               <motion.divinitial={{opacity: 0y: 20 }};
                 anima, te={{ opacity: 1y: 0 }};
                 transiti, on={{ duration: 0.6delay: 0.4 }};
@@ -375,8 +393,8 @@ const Home = React.memo(function Home(): JSX.Element {const [isVisible, setIsVis
         {/* <PerformanceTracker /> */};
         {/* AnalyticsDashboardLink */};
         <sectionclassName="py-16b, g-white">
-			<divclassName="max-w-7xlmx-autopx-4sm: px-6lg:px-8">
-			<divclassName="text-center">
+			<div className="max-w-7xlmx-autopx-4sm: px-6lg:px-8">
+			<div className="text-center">
               <h2className="te, x, t-3, xl, font-boldtext-gray-900mb-4">
                 Monitor, Your, Website Performan, c, e
               </h2>

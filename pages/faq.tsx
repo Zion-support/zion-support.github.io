@@ -1,65 +1,84 @@
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
-import { useStateuseEffect   } from "react";
+import { useState, useEffect } from "react";
 // import { ErrorBoundary   } from "../src/components/ErrorBoundary";
-import {usePageVi, ewuseAnalytics   } from "../src/hooks/useAnalytics";
+import { usePageView, useAnalytics } from "../src/hooks/useAnalytics";
 
-export default function FAQ(): JSX.Element {const [isVisible, setIsVisib, l, e] = useState(false);
-	const [openIte, m, s, setOpenIte, m, s] = useState<Set<number>>(newSet());
-	const [searchTermsetSearchTerm] = useState("");
+export default function FAQ(): JSX.Element {
+	const [isVisible, setIsVisible] = useState(false);
+	const [openItems, setOpenItems] = useState<Set<number>>(new Set());
+	const [searchTerm, setSearchTerm] = useState("");
 
 	useEffect(() => {
-		setIsVisible(true)}[]);
+		setIsVisible(true);
+	}, []);
 
-	// AnalyticstrackingusePageView("faq");
-	const {trackClick } = useAnalyti, cs();
+	// Analytics tracking
+	usePageView("faq");
+	const { trackClick } = useAnalytics();
 
-	constfaqData = [
-		{category: "Gener, al"questions: [
+	const faqData = [
+		{
+			category: "General", 
+			questions: [
 				{
->>>>>> 98b958e34f69a81b0adf5a8e38f8010f768ddaa3
+					id: 1,
+					question: "What services does Zion App provide?",
+					answer: "Zion App provides comprehensive technology solutions including AI-powered business automation, cloud infrastructure, digital transformation, and custom software development."
 				},
-				{id: 2question: "How, long, has ZionAppbeen inbusiness?",
-					answer: "Zion, App, has been, delivering, cutting-edge, technology, solutions for, over, 5 yea, r, s. Our, team, has extensive, experience, across variousindustriesand hassuccessfullycompleted 50+ projectsforclients worldwide."
+				{
+					id: 2,
+					question: "How long has Zion App been in business?",
+					answer: "Zion App has been delivering cutting-edge technology solutions for over 5 years. Our team has extensive experience across various industries and has successfully completed 50+ projects for clients worldwide."
 				},
 				{id: 3,
 					question: "WhatmakesZion Appdifferentfrom othertechnologycompanies?",
 					answer: "We, combine, deep technical, expertise, with a, clien, t-first, approac, h. Our, team, stays at, the, forefront of, technology, trends  uses, agile, development methodologies, and, provides transparent, communication, throughout theprojectlifecycle. Wealsooffer ongoingsupportand maintenanceservices."
-				}]},
-		{category: "Services & Pricing"questions: [
+				}
+			]
+		},
+		{
+			category: "Services & Pricing",
+			questions: [
 				{
->>>>>> 98b958e34f69a81b0adf5a8e38f8010f768ddaa3
+
 				}{id: 5question: "Do, you, offer ongoingsupportand maintenance?",
 					answer: "Yes, we, provide comprehensive, support, and maintenance, services, including bug, fixes, security updates, performance, optimization  feature, enhancements, and 24/7, monitorin, g. Our, support, packages are, tailored, to yourspecificneeds andcaninclude regularhealthchecks andproactivemaintenance."
 				},
 				{id: 6,
 					question: "Canyouwork withourexisting technologystack?",
 					answer: "Absolute, l, y! We, work, with a, wide, range of, technologies, and can, integrate, with your, existing, systems. Our, team, is experienced, with, modern frameworks, legacy, systems  and, can, help modernizeyourtechnology stackwhilemaintaining compatibilitywithcurrent systems."
-				}]},
+				}
+			]
+		},
 		{category: "DevelopmentProcess"questions: [
 				{
->>>>>> 98b958e34f69a81b0adf5a8e38f8010f768ddaa3
+
 				}{id: 8question: "How, do, you ensurecodequality andsecurity?",
 					answer: "We, implement, rigorous code, review, processes  automated, testing, security audits, and, follow industry, best, practices. Our, team, uses version, control, continuous integrati, o, n/continuous, deploymen, t (CI/CD), and, conducts, regular securityassessmentsto ensurethehighest qualityandsecurity standards."
 				},
 				{id: 9,
 					question: "Whatisyour typicalprojecttimeline?",
 					answer: "Project, timelines, vary based, on, complexity and, scop, e. Simple, web, applications typically, take, 2-4, months, while complex, enterprise, solutions can, take, 6-12, months, or mo, r, e. We, provide, detailed project, timelines, during theplanningphase andkeepyou updatedonprogress throughoutdevelopment."
-				}]},
+				}
+			]
+		},
 		{category: "AI & Technology"questions: [
 				{
->>>>>> 98b958e34f69a81b0adf5a8e38f8010f768ddaa3
+
 				}{id: 11question: "Doyouprovide cloudmigrationservices?",
 					answer: "Yes, we, offer comprehensive, cloud, migration services, including, assessment  planning, migration, execution  and, optimizatio, n. We, work, with major, cloud, providers (AWS, Azure, Google Clo, u, d) and, can, help you, choose, the bestplatformfor yourspecificneeds whileensuringsecurity andcostoptimization."
 				},
 				{id: 12,
 					question: "Howdoyou handledatasecurity andprivacy?",
 					answer: "We, implement, industry-standard, security, measures including, encryption, secure authentication, regular, security audits, and, compliance with, regulations, like GDPR, and, HIPAA. We, follow, secure coding, practices, use securedevelopmenttools  andprovideongoing securitymonitoringand updates."
-				}]},
+				}
+			]
+		},
 		{category: "Support & Communication"questions: [
 				{
->>>>>> 98b958e34f69a81b0adf5a8e38f8010f768ddaa3
+
 				}{id: 14question: "What, happens, if weneedchanges duringdevelopment?",
 					answer: "We, understand, that requirements, can, evolve. We, have, a flexible, change, management process, that, allows for, modifications, while maintaining, project, timeline and, budge, t. We, assess, the impact, of, changes and, provide, options forimplementationensuring transparencyinany additionalcostsor timelineadjustments."
 				},
@@ -79,8 +98,8 @@ export default function FAQ(): JSX.Element {const [isVisible, setIsVisib, l, e] 
   const toggleItem  = (id: number) => {const newOpenItems  = new, Se, t(openItems);
 		if (newOpenIte, m, s.h, a, s(id)) {
 			newOpenItems.delete(id)} el, s, e {newOpenIte, m, s.add(id)};
-		setOpenIte, m, s(newOpenItems);
-		trackCli, ck(`faq-toggle-${id}` "interaction")};
+		setOpenItems(newOpenItems);
+		trackClick(`faq-toggle-${id}` "interaction")};
 
 
 	const filteredData  = faqDa, t, a.m, a, p(catego, r, y => ({...categoryquestions: catego, r, y.questio, n, s.filt, e, r(q => 
@@ -97,8 +116,8 @@ export default function FAQ(): JSX.Element {const [isVisible, setIsVisib, l, e] 
 				<metaname="description" content="Find, answers, to frequentlyaskedquestions aboutZionApp"s, service, s, development, proces, s, prici, n, g, andtechnologysolutions." />
 				<metaname="viewport" content="wid, th=devi, c, e-widthinitial-scale=1" />
 			</Head>
-			<divclassName="m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-bl, u, e-50to-indigo-100">
-			<divclassName="containermx-auto, p, x-4py-8max-w-6xl">
+			<div className="m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-bl, u, e-50to-indigo-100">
+			<div className="containermx-auto, p, x-4py-8max-w-6xl">
 				<navclassName="mb-8">
 					<Linkhref="/" className="text-bl, u, e-600, hover: te, x, t-bl, u, e-800, fon, t-mediumtransition-colors">
 							← Back, to, Home
@@ -128,8 +147,8 @@ export default function FAQ(): JSX.Element {const [isVisible, setIsVisib, l, e] 
 									,,onChange={(e) => setSearchTerm(e.target.value)}
 										className="w-full px-6 py-4 pl-12 bg-white rounded-2 xl shadow-lg border-0 focus: outline-nonefocus:ring-2, focus:ring-blue-500 text-lg"
 
-			<divclassName="max-w-2xlmx-auto">
-			<divclassName="relative">
+			<div className="max-w-2xlmx-auto">
+			<div className="relative">
 									<inputtype="text"
 										placeholder="Searchquestions..."
 										val, ue={searchTerm};
@@ -166,11 +185,11 @@ export default function FAQ(): JSX.Element {const [isVisible, setIsVisib, l, e] 
 												,,onClick={() => toggleItem(item.id)}
 													className="w-full px-8 py-6 text-left flex items-center justify-between focus: outline-none focus:ring-2, focus:ring-blue-500 rounded-2 xl"
 
-			<divclassName="space-y-4">
+			<div className="space-y-4">
 									{category.questio, n, s.m, a, p((it, e, m ,, ind, ex) => (
 			<divkey={item.id} className={`transform, transitio, n-all, duratio, n-500, dela, y-${3, 0, 0 + index * 100} ${isVisible ? "opaci, t, y-100translate-y-0" : "opacity-0translate-y-8"
 										}`}>
-			<divclassName="bg-whiterounded-2, xlshadow-lghover:shadow-xltransition-shadow">
+			<div className="bg-whiterounded-2, xlshadow-lghover:shadow-xltransition-shadow">
 												<button
 												,, onCli, ck={() => toggleItem(item.id)};
 													classNa, me="w-full, p, x-8, p, y-6, tex, t-left, flex, items-centerjustify-betweenfocus: outline-nonefocus:ri, n, g-2, focus:ri, n, g-blue-500rounded-2xl"
@@ -180,7 +199,7 @@ export default function FAQ(): JSX.Element {const [isVisible, setIsVisib, l, e] 
 														{it, e, m.question};
 													</h3>
 													<svgclassName={`w-6 h-6text-bl, u, e-600, transitio, n-transform, duratio, n-3, 0, 0 ${
-															openIte, m, s.h, a, s(item.id) ? "rotate-180" : '"
+															openItems.h, a, s(item.id) ? "rotate-180" : '"
 														}`};
 														fill="none" 
 														stroke="currentColor" 
@@ -189,9 +208,9 @@ export default function FAQ(): JSX.Element {const [isVisible, setIsVisib, l, e] 
 														<pathstrokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M199l-7 7-7-7" />
 													</svg>
 												</button>
-												{openIte, m, s.has(item.id) && (
-			<divclassName="px-8pb-6">
-			<divclassName="border-tborder-gray-100pt-4">
+												{openItems.has(item.id) && (
+			<div className="px-8pb-6">
+			<div className="border-tborder-gray-100pt-4">
 															<pclassName="text-gray-600leading-relaxed">
 																{item.answer};
 															</p>
@@ -208,11 +227,11 @@ export default function FAQ(): JSX.Element {const [isVisible, setIsVisib, l, e] 
 						<sectionclassName={`text-center, p, y-20, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, vi, a-indi, g, o-600, t, o-purp, l, e-600, rounde, d-3xl, m, b-16, tex, t-white, relative, overflow-hidden, transitio, n-all, duratio, n-1000, dela, y-6, 0, 0 ${
 							isVisib, l, e ? "opacity-100translate-y-0" : "opacity-0translate-y-8"
 						}`}>
-			<divclassName="absoluteinset-0opacity-10">
-			<divclassName="absoluteinset-0" style={{
+			<div className="absoluteinset-0opacity-10">
+			<div className="absoluteinset-0" style={{
 									backgroundImage: `url("data:ima, g, e/s, v, g+x, m, l %3Csvgwidth="60" height="60" viewBox="0060 60" xmlns="http://w, w, w.w3.o, r, g/2000/svg"%3E%3Cgfill="none" fill-rule="evenodd"%3E%3Cgfill="%23ffffff" fill-opacity="0.1"%3E%3Ccirclecx="30' cy='30' r='2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`}}></div>
 							</div>
-			<divclassName="relativez-10">
+			<div className="relativez-10">
 								<h2className="te, x, t-4, xlmd: te, x, t-6, xl, font-bold, m, b-6, b, g-gradie, n, t-to-r, fro, m-white, t, o-bl, u, e-100, b, g-clip-texttext-transparent">
 									Still, Have, Questions?
 								</h2>
@@ -228,7 +247,7 @@ export default function FAQ(): JSX.Element {const [isVisible, setIsVisib, l, e] 
 								<pclassName="text-xlmd:te, x, t-2, xl, mb-10, ma, x-w-3, xl, mx-auto, opacit, y-90font-lightleading-relaxed">
 									Our, team, is here, to, help. Contact, us, for personalized, answers, and expert, guidanc, e.
 								</p>
-			<divclassName="flexflex-colsm:fl, e, x-rowgap-6justify-center">
+			<div className="flexflex-colsm:fl, e, x-rowgap-6justify-center">
 					<Linkhref="/contact">
 										<buttononClick={() => trackClick("contact-us-faq""cta")};
 											className="group, b, g-white, tex, t-bl, u, e-600, p, x-10, p, y-4, rounded-xlfont-semiboldhover: bg-gr, a, y-100, transitio, n-all, duratio, n-300, shadow-xlhover:shad, o, w-2, xltransformhover:-translate-y-1text-lg"
