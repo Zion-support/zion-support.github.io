@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import Head from 'next/head';
-import { generateMetaTags, generateStructuredDatavalidateSEODataSEOData } from '../utils/seoUtils';
+import { generateMetaTags, generateStructuredData, validateSEOData, SEOData } from '../utils/seoUtils';
 
 interface SEOOptimizerProps {
   seoData: SEOData;
@@ -15,15 +15,16 @@ export default function SEOOptimizer({
 }: SEOOptimizerProps): JSX.Element {
   // Validate SEO data if enabled
   const validation = React.useMemo(() => 
-    enableValidation ? validateSEOData(seoData) : { isValid: true, errors: [] }[enableValidationseoData]
+    enableValidation ? validateSEOData(seoData) : { isValid: true, errors: [] },
+    [enableValidation, seoData]
   );
 
   // Log validation errors in development
   useEffect(() => {
     if (process.env.NODE_ENV === 'development' && !validation.isValid) {
-      console.warn('SEO Validation Errors:'validation.errors);
+      console.warn('SEO Validation Errors:', validation.errors);
     }
-  }[validation]);
+  }, [validation]);
 
   // Generate structured data
   const structuredData = enableStructuredData && seoData.structuredData
@@ -32,11 +33,6 @@ export default function SEOOptimizer({
 
   return (
     <Head>
-      <title>{seoData.title}</title>
-      <meta name="description" content={seoData.description} />
-      <meta name="keywords" content={seoData.keywords?.join(', ')} />
-      <link rel="canonical" href={seoData.canonical} />
-      
       {/* Basic meta tags */}
       <title>{seoData.title}</title>
       <meta name="description" content={seoData.description} />
@@ -44,11 +40,6 @@ export default function SEOOptimizer({
       <link rel="canonical" href={seoData.canonical} />
       
       {/* Open Graph tags */}
-      {seoData.ogImage && (
-        <meta property="og:image" content={seoData.ogImage} />
-      )}
-      
-      {/* Twitter Card tags */}
       <meta property="og:title" content={seoData.ogTitle || seoData.title} />
       <meta property="og:description" content={seoData.ogDescription || seoData.description} />
       <meta property="og:type" content={seoData.ogType || 'website'} />

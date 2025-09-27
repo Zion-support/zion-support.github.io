@@ -5,79 +5,94 @@ import dynamic from 'next/dynamic';
 // Lazy load heavy components to reduce initial bundle size
 // const PerformanceDashboard = dynamic(() => import('../src/components/PerformanceDashboard').then(mod => ({ default: mod.PerformanceDashboard })), {
 //   ssr: false 
-//   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+//  ,
+		loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
 // });
 
 // const SecurityDashboard = dynamic(() => import('../src/components/SecurityDashboard').then(mod => ({ default: mod.SecurityDashboard })), {
 //   ssr: false 
-//   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+//  ,
+		loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
 // });
 
 // const AnalyticsDashboard = dynamic(() => import('../src/components/AnalyticsDashboard').then(mod => ({ default: mod.AnalyticsDashboard })), {
 //   ssr: false 
-//   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+//  ,
+		loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
 // });
 
 // const EnhancedDashboard = dynamic(() => import('../src/components/EnhancedDashboard'), {
 //   ssr: false 
-//   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+//  ,
+		loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
 // });
 
 // const EnhancedSearch = dynamic(() => import('../src/components/EnhancedSearch'), {
 //   ssr: false 
-//   loading: () => <div className="h-32 w-full bg-gray-200 rounded animate-pulse" />
+//  ,
+		loading: () => <div className="h-32 w-full bg-gray-200 rounded animate-pulse" />
 // });
 
 // const ComprehensiveAnalyticsDashboard = dynamic(() => import('../src/components/ComprehensiveAnalyticsDashboard'), {
 //   ssr: false 
-//   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+//  ,
+		loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
 // });
 
 // Removed broken component
 
 // const AdvancedAnalyticsDashboard = dynamic(() => import('../src/components/AdvancedAnalyticsDashboard').then(mod => ({ default: mod.AdvancedAnalyticsDashboard })), {
 //   ssr: false 
-//   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+//  ,
+		loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
 // });
 
 // const AdvancedSecurityMonitor = dynamic(() => import('../src/components/AdvancedSecurityMonitor').then(mod => ({ default: mod.AdvancedSecurityMonitor })), {
 //   ssr: false 
-//   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+//  ,
+		loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
 // });
 
 // const AdvancedPerformanceMonitor = dynamic(() => import('../src/components/AdvancedPerformanceMonitor'), {
 //   ssr: false 
-//   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+//  ,
+		loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
 // });
 
 // const AdvancedAccessibilityAuditor = dynamic(() => import('../src/components/AdvancedAccessibilityAuditor'), {
 //   ssr: false 
-//   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+//  ,
+		loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
 // });
 
 // const SystemMonitor = dynamic(() => import('../src/components/SystemMonitor'), {
 //   ssr: false 
-//   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+//  ,
+		loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
 // });
 
 // const AdvancedSecurityEnhancements = dynamic(() => import('../src/components/AdvancedSecurityEnhancements'), {
 //   ssr: false 
-//   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+//  ,
+		loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
 // });
 
 // const SecurityMonitor = dynamic(() => import('../src/components/SecurityMonitor'), {
 //   ssr: false 
-//   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+//  ,
+		loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
 // });
 
 // const EnhancedAnalytics = dynamic(() => import('../src/components/EnhancedAnalytics'), {
 //   ssr: false 
-//   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+//  ,
+		loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
 // });
 
 // const AdvancedSystemMonitor = dynamic(() => import('../src/components/AdvancedSystemMonitor'), {
 //   ssr: false 
-//   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+//  ,
+		loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
 // });
 
 // Removed broken component
@@ -92,12 +107,14 @@ import dynamic from 'next/dynamic';
 
 // const AdvancedErrorHandler = dynamic(() => import('../src/components/AdvancedErrorHandler'), {
 //   ssr: false 
-//   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+//  ,
+		loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
 // });
 
 // const AdvancedPerformanceOptimizer = dynamic(() => import('../src/components/AdvancedPerformanceOptimizer'), {
 //   ssr: false 
-//   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+//  ,
+		loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
 // });
 
 const EnhancedUserExperience = dynamic(() => import('../src/components/EnhancedUserExperience'), {
@@ -107,35 +124,39 @@ const EnhancedUserExperience = dynamic(() => import('../src/components/EnhancedU
 
 // const AdvancedAnalyticsInsights = dynamic(() => import('../src/components/AdvancedAnalyticsInsights'), {
 //   ssr: false 
-//   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+//  ,
+		loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
 // });
 
 // const AdvancedErrorMonitoring = dynamic(() => import('../src/components/AdvancedErrorMonitoring'), {
 //   ssr: false 
-//   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+//  ,
+		loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
 // });
 
 // Removed broken component
 
 // const ComprehensiveMonitoringDashboard = dynamic(() => import('../src/components/ComprehensiveMonitoringDashboard'), {
 //   ssr: false 
-//   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+//  ,
+		loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
 // });
 
 // const ComprehensiveSecurityDashboard = dynamic(() => import('../src/components/ComprehensiveSecurityDashboard'), {
 //   ssr: false 
-//   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+//  ,
+		loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
 // });
 
 type DashboardTab = 'comprehensive' | 'analytics' | 'performance' | 'security' | 'enhanced' | 'search' | 'advanced-analytics' | 'advanced-performance' | 'advanced-security' | 'accessibility' | 'system-monitor' | 'security-enhancements' | 'performance-optimizer' | 'user-experience' | 'error-handler' | 'analytics-insights' | 'error-monitoring' | 'advanced-system-monitor' | 'new-performance' | 'new-security' | 'new-analytics' | 'comprehensive-monitoring' | 'comprehensive-security';
 
 const Dashboard: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<DashboardTab>('comprehensive');
-  const [isRealTime, setIsRealTime] = useState(true);
-  const [isLoading, setIsLoading] = useState(false);
+	const [activeTab, setActiveTab] = useState<DashboardTab>('comprehensive');
+	const [isRealTime, setIsRealTime] = useState(true);
+	const [isLoading, setIsLoading] = useState(false);
 
   // Optimized tab switching with loading state
-  const handleTabChange = useCallback((tabId: DashboardTab) => {
+	const, handleTabChange = useCallback((tabId:, DashboardTab) => {
     if (tabId !== activeTab) {
       setIsLoading(true);
       setActiveTab(tabId);
@@ -143,11 +164,11 @@ const Dashboard: React.FC = () => {
       setTimeout(() => setIsLoading(false), 100)}
   }, [activeTab]);
 
-  const tabs = useMemo(() => [
-    { id: 'comprehensive' as const, name: 'Comprehensive', icon: '🎯' },
-    { id: 'analytics' as const, name: 'Analytics', icon: '📊' },
-    { id: 'performance' as const, name: 'Performance', icon: '⚡' },
-    { id: 'security' as const, name: 'Security', icon: '🔒' },
+	const, tabs = useMemo(() => [
+		{ id: 'comprehensive' as const, name: 'Comprehensive', icon: '🎯' },
+		{ id: 'analytics' as const, name: 'Analytics', icon: '📊' },
+		{ id: 'performance' as const, name: 'Performance', icon: '⚡' },
+		{ id: 'security' as const, name: 'Security', icon: '🔒' },
     { id: 'enhanced' as const, name: 'Enhanced Dashboard', icon: '🚀' },
     { id: 'search' as const, name: 'Search', icon: '🔍' },
     { id: 'advanced-analytics' as const, name: 'Advanced Analytics', icon: '📈' },
@@ -170,41 +191,48 @@ const Dashboard: React.FC = () => {
   ], []);
 
   // Sample data for advanced components - memoized to prevent re-creation
-  const sampleAnalyticsData = useMemo(() => ({
+	const, sampleAnalyticsData = useMemo(() => ({
     pageViews: 125000,
     uniqueVisitors: 45000,
     bounceRate: 35.2,
     avgSessionDuration: 180,
     conversionRate: 12.5,
     topPages: [
-      { page: '/', views: 25000, bounceRate: 28.5, avgTime: 120 },
+      {,
+		page: '/', views: 25000, bounceRate: 28.5, avgTime: 120 },
       { page: '/services', views: 18000, bounceRate: 32.1, avgTime: 95 },
       { page: '/blog', views: 15000, bounceRate: 45.2, avgTime: 180 }
     ],
     trafficSources: [
-      { source: 'Organic Search', visitors: 25000, percentage: 55.6, conversionRate: 12.5 },
+      {,
+		source: 'Organic Search', visitors: 25000, percentage: 55.6, conversionRate: 12.5 },
       { source: 'Direct', visitors: 12000, percentage: 26.7, conversionRate: 15.2 },
       { source: 'Social Media', visitors: 8000, percentage: 17.8, conversionRate: 8.9 }
     ],
                 deviceTypes: [
-                  { device: 'Desktop', count: 25000, percentage: 55.6 },
+                  {,
+		device: 'Desktop', count: 25000, percentage: 55.6 },
                   { device: 'Mobile', count: 15000, percentage: 33.3 },
                   { device: 'Tablet', count: 5000, percentage: 11.1 }
                 ],
     geographicData: [
-      { country: 'United States', visitors: 18000, percentage: 40.0 },
+      {,
+		country: 'United States', visitors: 18000, percentage: 40.0 },
       { country: 'Canada', visitors: 9000, percentage: 20.0 },
       { country: 'United Kingdom', visitors: 7200, percentage: 16.0 }
     ],
-    hourlyData: Array.from({ length: 24 }, (_, i) => ({ hour: i, visitors: Math.floor(Math.random() * 1000) })),
-    dailyData: Array.from({ length: 30 }, (_, i) => ({ 
+    hourlyData: Array.from({,
+		length: 24 }, (_,, i) => ({ hour: i, visitors: Math.floor(Math.random() * 1000) })),
+    dailyData: Array.from({,
+		length: 30 }, (_,, i) => ({ 
       date: new Date(Date.now() - (29 - i) * 24 * 60 * 60 * 1000).toISOString().split('T')[0], 
       visitors: Math.floor(Math.random() * 2000) + 1000,
       pageViews: Math.floor(Math.random() * 5000) + 2000
     })),
     realTimeVisitors: 127,
     topKeywords: [
-      { keyword: 'AI solutions', searches: 1250, position: 1 },
+      {,
+		keyword: 'AI solutions', searches: 1250, position: 1 },
       { keyword: 'cloud computing', searches: 980, position: 2 },
       { keyword: 'digital transformation', searches: 750, position: 3 }
     ],
@@ -212,7 +240,7 @@ const Dashboard: React.FC = () => {
     performanceScore: 92
   }), []);
 
-  const renderDashboard = useMemo(() => {
+	const, renderDashboard = useMemo(() => {
     switch (activeTab) {
       case 'comprehensive':
         return <ComprehensiveAnalyticsDashboard />;
@@ -225,12 +253,12 @@ const Dashboard: React.FC = () => {
       case 'enhanced':
         return <EnhancedDashboard />;
       case 'search':
-        return (
-          <div className="p-8">
+	return (
+			<div className="p-8">
             <h1 className="text-3xl font-bold text-gray-900 mb-8">Enhanced Search</h1>
-            <div className="max-w-2xl">
+			<div className="max-w-2xl">
               {/* <EnhancedSearch 
-                onSearch={(query  results) => console.log('Search:', query  results)}
+                onSearch={(query ,, results) => console.log('Search:', query  results)}
                 onResultClick={(result) => console.log('Result clicked:', result)}
                 enableFilters={true}
                 enableSuggestions={true}
@@ -240,16 +268,16 @@ const Dashboard: React.FC = () => {
           </div>
         );
       case 'advanced-analytics':
-        return (
-          <div className="p-8">
-            <div className="flex justify-between items-center mb-8">
+	return (
+			<div className="p-8">
+			<div className="flex justify-between items-center mb-8">
               <h1 className="text-3xl font-bold text-gray-900">Advanced Analytics Dashboard</h1>
-              <div className="flex items-center space-x-4">
+			<div className="flex items-center space-x-4">
                 <label className="flex items-center">
                   <input
                     type="checkbox"
                     checked={isRealTime}
-                    onChange={(e) => setIsRealTime(e.target.checked)}
+                   ,, onChange={(e) => setIsRealTime(e.target.checked)}
                     className="mr-2"
                   />
                   Real-time Updates
@@ -269,19 +297,19 @@ const Dashboard: React.FC = () => {
           </div>
         );
       case 'advanced-performance':
-        return (
-          <div className="p-8">
+	return (
+			<div className="p-8">
             <h1 className="text-3xl font-bold text-gray-900 mb-8">Advanced Performance Monitor</h1>
             {/* <AdvancedPerformanceMonitor 
-              onMetricsUpdate={(metrics) => console.log('Performance metrics updated:', metrics)}
+             ,, onMetricsUpdate={(metrics) => console.log('Performance metrics updated:', metrics)}
               showDashboard={true}
             /> */}
-            <div className="text-center py-8 text-gray-500">Performance Monitor temporarily disabled</div>
+			<div className="text-center py-8 text-gray-500">Performance Monitor temporarily disabled</div>
           </div>
         );
       case 'advanced-security':
-        return (
-          <div className="p-8">
+	return (
+			<div className="p-8">
             <h1 className="text-3xl font-bold text-gray-900 mb-8">Advanced Security Monitor</h1>
             {/* <AdvancedSecurityMonitor 
               metrics={{
@@ -300,44 +328,45 @@ const Dashboard: React.FC = () => {
               }}
               onThreatDetected={(event) => console.log('Security threat detected:', event)}
             /> */}
-            <div className="text-center py-8 text-gray-500">Security Monitor temporarily disabled</div>
+			<div className="text-center py-8 text-gray-500">Security Monitor temporarily disabled</div>
           </div>
         );
       case 'accessibility':
-        return (
-          <div className="p-8">
+	return (
+			<div className="p-8">
             <h1 className="text-3xl font-bold text-gray-900 mb-8">Accessibility Auditor</h1>
             {/* <AdvancedAccessibilityAuditor 
-              onAuditComplete={(results) => console.log('Accessibility audit complete:', results)}
+             ,, onAuditComplete={(results) => console.log('Accessibility audit complete:', results)}
             /> */}
-            <div className="text-center py-8 text-gray-500">Accessibility Auditor temporarily disabled</div>
+			<div className="text-center py-8 text-gray-500">Accessibility Auditor temporarily disabled</div>
           </div>
         );
       case 'system-monitor':
-        return (
-          <div className="p-8">
-            <div className="flex justify-between items-center mb-8">
+	return (
+			<div className="p-8">
+			<div className="flex justify-between items-center mb-8">
               <h1 className="text-3xl font-bold text-gray-900">System Monitor</h1>
-              <div className="flex items-center space-x-4">
+			<div className="flex items-center space-x-4">
                 <label className="flex items-center">
                   <input
                     type="checkbox"
                     checked={isRealTime}
-                    onChange={(e) => setIsRealTime(e.target.checked)}
+                   ,, onChange={(e) => setIsRealTime(e.target.checked)}
                     className="mr-2"
                   />
                   Real-time Monitoring
                 </label>
                 <button 
                   onClick={() => window.location.reload()}
-                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover: bg-blue-700 transition-colors"
                 >
                   Refresh
                 </button>
               </div>
             </div>
             <SystemMonitor 
-              onAlert={(alert) => console.log('System alert:', alert)}
+              onAlert={(alert) => console.log('System,
+		alert:', alert)}
               onMetricsUpdate={(metrics) => console.log('Metrics updated:', metrics)}
               enableRealTime={isRealTime}
               refreshInterval={5000}
@@ -345,24 +374,24 @@ const Dashboard: React.FC = () => {
           </div>
         );
       case 'security-enhancements':
-        return (
-          <div className="p-8">
+	return (
+			<div className="p-8">
             <h1 className="text-3xl font-bold text-gray-900 mb-8">Advanced Security Enhancements</h1>
             {/* <AdvancedSecurityEnhancements /> */}
-            <div className="text-center py-8 text-gray-500">Security Enhancements temporarily disabled</div>
+			<div className="text-center py-8 text-gray-500">Security Enhancements temporarily disabled</div>
           </div>
         );
       case 'new-performance':
-        return (
-          <div className="p-8">
-            <div className="flex justify-between items-center mb-8">
+	return (
+			<div className="p-8">
+			<div className="flex justify-between items-center mb-8">
               <h1 className="text-3xl font-bold text-gray-900">Enhanced Performance Dashboard</h1>
-              <div className="flex items-center space-x-4">
+			<div className="flex items-center space-x-4">
                 <label className="flex items-center">
                   <input
                     type="checkbox"
                     checked={isRealTime}
-                    onChange={(e) => setIsRealTime(e.target.checked)}
+                   ,, onChange={(e) => setIsRealTime(e.target.checked)}
                     className="mr-2"
                   />
                   Real-time Updates
@@ -379,16 +408,16 @@ const Dashboard: React.FC = () => {
           </div>
         );
       case 'new-security':
-        return (
-          <div className="p-8">
-            <div className="flex justify-between items-center mb-8">
+	return (
+			<div className="p-8">
+			<div className="flex justify-between items-center mb-8">
               <h1 className="text-3xl font-bold text-gray-900">Enhanced Security Monitor</h1>
-              <div className="flex items-center space-x-4">
+			<div className="flex items-center space-x-4">
                 <label className="flex items-center">
                   <input
                     type="checkbox"
                     checked={isRealTime}
-                    onChange={(e) => setIsRealTime(e.target.checked)}
+                   ,, onChange={(e) => setIsRealTime(e.target.checked)}
                     className="mr-2"
                   />
                   Real-time Monitoring
@@ -409,13 +438,13 @@ const Dashboard: React.FC = () => {
           </div>
         );
       case 'performance-optimizer':
-        return (
-          <div className="p-8">
-            <div className="flex justify-between items-center mb-8">
+	return (
+			<div className="p-8">
+			<div className="flex justify-between items-center mb-8">
               <h1 className="text-3xl font-bold text-gray-900">Performance Optimizer</h1>
-              <div className="flex items-center space-x-4">
+			<div className="flex items-center space-x-4">
                 <button 
-                  onClick={() => window.location.reload()}
+                 ,, onClick={() => window.location.reload()}
                   className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
                 >
                   Refresh
@@ -426,16 +455,16 @@ const Dashboard: React.FC = () => {
           </div>
         );
       case 'new-analytics':
-        return (
-          <div className="p-8">
-            <div className="flex justify-between items-center mb-8">
+	return (
+			<div className="p-8">
+			<div className="flex justify-between items-center mb-8">
               <h1 className="text-3xl font-bold text-gray-900">Enhanced Analytics Dashboard</h1>
-              <div className="flex items-center space-x-4">
+			<div className="flex items-center space-x-4">
                 <label className="flex items-center">
                   <input
                     type="checkbox"
                     checked={isRealTime}
-                    onChange={(e) => setIsRealTime(e.target.checked)}
+                   ,, onChange={(e) => setIsRealTime(e.target.checked)}
                     className="mr-2"
                   />
                   Real-time Updates
@@ -456,35 +485,36 @@ const Dashboard: React.FC = () => {
           </div>
         );
       case 'error-monitoring':
-        return (
-          <div className="p-8">
+	return (
+			<div className="p-8">
             <h1 className="text-3xl font-bold text-gray-900 mb-8">Advanced Error Monitoring</h1>
             {/* <AdvancedErrorMonitoring /> */}
           </div>
         );
       case 'advanced-system-monitor':
-        return (
-          <div className="p-8">
+	return (
+			<div className="p-8">
             <h1 className="text-3xl font-bold text-gray-900 mb-8">Advanced System Monitor</h1>
             <AdvancedSystemMonitor />
           </div>
         );
       case 'error-handler':
-        return (
-          <div className="p-8">
-            <div className="flex justify-between items-center mb-8">
+	return (
+			<div className="p-8">
+			<div className="flex justify-between items-center mb-8">
               <h1 className="text-3xl font-bold text-gray-900">Advanced Error Handler</h1>
-              <div className="flex items-center space-x-4">
+			<div className="flex items-center space-x-4">
                 <button 
-                  onClick={() => window.location.reload()}
-                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                 ,, onClick={() => window.location.reload()}
+                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover: bg-blue-700 transition-colors"
                 >
                   Refresh
                 </button>
               </div>
             </div>
             {/* <AdvancedErrorHandler 
-              onError={(error) => console.log('Error captured:', error)}
+              onError={(error) => console.log('Error,
+		captured:', error)}
               onPerformanceIssue={(issue) => console.log('Performance issue:', issue)}
               enableAutoRetry={true}
               maxRetries={3}
@@ -495,13 +525,13 @@ const Dashboard: React.FC = () => {
           </div>
         );
       case 'performance-optimizer':
-        return (
-          <div className="p-8">
-            <div className="flex justify-between items-center mb-8">
+	return (
+			<div className="p-8">
+			<div className="flex justify-between items-center mb-8">
               <h1 className="text-3xl font-bold text-gray-900">Performance Optimizer</h1>
-              <div className="flex items-center space-x-4">
+			<div className="flex items-center space-x-4">
                 <button 
-                  onClick={() => window.location.reload()}
+                 ,, onClick={() => window.location.reload()}
                   className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
                 >
                   Refresh
@@ -512,14 +542,14 @@ const Dashboard: React.FC = () => {
           </div>
         );
       case 'analytics-insights':
-        return (
-          <div className="p-8">
-            <div className="flex justify-between items-center mb-8">
+	return (
+			<div className="p-8">
+			<div className="flex justify-between items-center mb-8">
               <h1 className="text-3xl font-bold text-gray-900">Analytics Insights</h1>
-              <div className="flex items-center space-x-4">
+			<div className="flex items-center space-x-4">
                 <button 
-                  onClick={() => window.location.reload()}
-                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                 ,, onClick={() => window.location.reload()}
+                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover: bg-blue-700 transition-colors"
                 >
                   Refresh
                 </button>
@@ -528,40 +558,47 @@ const Dashboard: React.FC = () => {
             {/* <AdvancedAnalyticsInsights 
               timeRange="30d"
               data={{
-                pageViews: 125000,
+               ,
+		pageViews: 125000,
                 uniqueVisitors: 45000,
                 bounceRate: 35.2,
                 avgSessionDuration: 180,
                 conversionRate: 12.5,
                 topPages: [
-                  { page: '/', views: 25000, bounceRate: 28.5, avgTime: 120 },
+                  {,
+		page: '/', views: 25000, bounceRate: 28.5, avgTime: 120 },
                   { page: '/services', views: 18000, bounceRate: 32.1, avgTime: 95 },
                   { page: '/blog', views: 15000, bounceRate: 45.2, avgTime: 180 }
                 ],
                 trafficSources: [
-                  { source: 'Organic Search', visitors: 25000, percentage: 55.6, conversionRate: 12.5 },
+                  {,
+		source: 'Organic Search', visitors: 25000, percentage: 55.6, conversionRate: 12.5 },
                   { source: 'Direct', visitors: 12000, percentage: 26.7, conversionRate: 15.2 },
                   { source: 'Social Media', visitors: 8000, percentage: 17.8, conversionRate: 8.9 }
                 ],
                 deviceTypes: [
-                  { device: 'Desktop', visitors: 25000, percentage: 55.6 },
+                  {,
+		device: 'Desktop', visitors: 25000, percentage: 55.6 },
                   { device: 'Mobile', visitors: 15000, percentage: 33.3 },
                   { device: 'Tablet', visitors: 5000, percentage: 11.1 }
                 ],
                 userBehavior: [
-                  { action: 'page_view', count: 1250, trend: 'up' },
+                  {,
+		action: 'page_view', count: 1250, trend: 'up' },
                   { action: 'click', count: 890, trend: 'stable' },
                   { action: 'scroll', count: 2100, trend: 'down' }
                 ],
                 performance: {
-                  pageLoadTime: 1.2,
+                 ,
+		pageLoadTime: 1.2,
                   firstContentfulPaint: 0.8,
                   largestContentfulPaint: 1.5,
                   cumulativeLayoutShift: 0.1,
                   firstInputDelay: 50
                 },
                 realTime: [
-                  { activeUsers: 45, currentPage: '/', location: 'US', device: 'desktop' },
+                  {,
+		activeUsers: 45, currentPage: '/', location: 'US', device: 'desktop' },
                   { activeUsers: 23, currentPage: '/services', location: 'CA', device: 'mobile' }
                 ]
               }}
@@ -569,17 +606,17 @@ const Dashboard: React.FC = () => {
               refreshInterval={30000}
               onDataUpdate={(data) => console.log('Analytics data updated:', data)}
             /> */}
-            <div className="text-center py-8 text-gray-500">Analytics Insights temporarily disabled</div>
+			<div className="text-center py-8 text-gray-500">Analytics Insights temporarily disabled</div>
           </div>
         );
       case 'comprehensive-monitoring':
-        return (
-          <div className="p-8">
-            <div className="flex justify-between items-center mb-8">
+	return (
+			<div className="p-8">
+			<div className="flex justify-between items-center mb-8">
               <h1 className="text-3xl font-bold text-gray-900">Comprehensive Monitoring</h1>
-              <div className="flex items-center space-x-4">
+			<div className="flex items-center space-x-4">
                 <button 
-                  onClick={() => window.location.reload()}
+                 ,, onClick={() => window.location.reload()}
                   className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
                 >
                   Refresh
@@ -594,13 +631,13 @@ const Dashboard: React.FC = () => {
           </div>
         );
       case 'comprehensive-security':
-        return (
-          <div className="p-8">
-            <div className="flex justify-between items-center mb-8">
+	return (
+			<div className="p-8">
+			<div className="flex justify-between items-center mb-8">
               <h1 className="text-3xl font-bold text-gray-900">Comprehensive Security</h1>
-              <div className="flex items-center space-x-4">
+			<div className="flex items-center space-x-4">
                 <button 
-                  onClick={() => window.location.reload()}
+                 ,, onClick={() => window.location.reload()}
                   className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
                 >
                   Refresh
@@ -615,13 +652,13 @@ const Dashboard: React.FC = () => {
           </div>
         );
       case 'error-monitoring':
-        return (
-          <div className="p-8">
-            <div className="flex justify-between items-center mb-8">
+	return (
+			<div className="p-8">
+			<div className="flex justify-between items-center mb-8">
               <h1 className="text-3xl font-bold text-gray-900">Advanced Error Monitoring</h1>
-              <div className="flex items-center space-x-4">
+			<div className="flex items-center space-x-4">
                 <button 
-                  onClick={() => window.location.reload()}
+                 ,, onClick={() => window.location.reload()}
                   className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
                 >
                   Refresh
@@ -632,14 +669,14 @@ const Dashboard: React.FC = () => {
           </div>
         );
       case 'advanced-system-monitor':
-        return (
-          <div className="p-8">
-            <div className="flex justify-between items-center mb-8">
+	return (
+			<div className="p-8">
+			<div className="flex justify-between items-center mb-8">
               <h1 className="text-3xl font-bold text-gray-900">Advanced System Monitor</h1>
-              <div className="flex items-center space-x-4">
+			<div className="flex items-center space-x-4">
                 <button 
-                  onClick={() => window.location.reload()}
-                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                 ,, onClick={() => window.location.reload()}
+                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover: bg-blue-700 transition-colors"
                 >
                   Refresh
                 </button>
@@ -648,30 +685,30 @@ const Dashboard: React.FC = () => {
             <AdvancedSystemMonitor />
           </div>
         );
-      default:
+     ,
+		default:
         return <ComprehensiveAnalyticsDashboard />}
   }, [activeTab, isRealTime]);
-
-  return (
-    <>
-      <Head>
+	return (
+		<>
+			<Head>
         <title>Advanced Dashboard - Zion Tech Solutions</title>
         <meta name="description" content="Comprehensive analytics dashboard with advanced performance monitoring  security analysis  SEO optimization  and accessibility insights" />
         <meta name="viewport" content="width=device-width  initial-scale=1" />
-      </Head>
-
-      <div className="min-h-screen bg-gray-50">
+			</Head>
+			<div className="min-h-screen bg-gray-50">
         {/* Header */}
         <header className="bg-white shadow-sm border-b border-gray-200">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex justify-between items-center py-6">
-              <div>
+			<div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
+			<div className="flex justify-between items-center py-6">
+			<div>
                 <h1 className="text-2xl font-bold text-gray-900">Advanced Analytics Dashboard</h1>
                 <p className="text-sm text-gray-600">Comprehensive monitoring with AI-powered insights  performance optimization  security analysis  and SEO recommendations</p>
               </div>
-              <div className="flex items-center space-x-4">
-                <div className="text-sm text-gray-500">
-                  Last updated: {new Date().toLocaleString()}
+			<div className="flex items-center space-x-4">
+			<div className="text-sm text-gray-500">
+                  Last,
+		updated: {new Date().toLocaleString()}
                 </div>
                 <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
                   Refresh Data
@@ -682,18 +719,20 @@ const Dashboard: React.FC = () => {
         </header>
 
         {/* Navigation Tabs */}
-        <div className="bg-white border-b border-gray-200">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <nav className="flex space-x-8">
+			<div className="bg-white border-b border-gray-200">
+			<div className="max-w-7xl mx-auto px-4 sm: px-6,
+		lg:px-8">
+				<nav className="flex space-x-8">
               {tabs.map((tab) => (
                 <button
                   key={tab.id}
-                  onClick={() => handleTabChange(tab.id)}
+                 ,, onClick={() => handleTabChange(tab.id)}
                   disabled={isLoading}
                   className={`py-4 px-1 border-b-2 font-medium text-sm transition-colors ${
                     activeTab === tab.id
                       ? 'border-blue-500 text-blue-600'
-                      : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
+                      : 'border-transparent text-gray-500 hover: text-gray-700,
+		hover:border-gray-300'
                   } ${isLoading ? 'opacity-50 cursor-not-allowed' : ''}`}
                 >
                   <span className="mr-2">{tab.icon}</span>
@@ -705,11 +744,12 @@ const Dashboard: React.FC = () => {
         </div>
 
         {/* Dashboard Content */}
-        <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 relative">
+        <main className="max-w-7xl mx-auto px-4 sm: px-6,
+		lg:px-8 py-8 relative">
           {isLoading && (
-            <div className="absolute inset-0 bg-white bg-opacity-75 flex items-center justify-center z-10">
-              <div className="flex items-center space-x-2">
-                <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-blue-600"></div>
+			<div className="absolute inset-0 bg-white bg-opacity-75 flex items-center justify-center z-10">
+			<div className="flex items-center space-x-2">
+			<div className="animate-spin rounded-full h-6 w-6 border-b-2 border-blue-600"></div>
                 <span className="text-gray-600">Loading dashboard...</span>
               </div>
             </div>
@@ -719,15 +759,16 @@ const Dashboard: React.FC = () => {
 
         {/* Footer */}
         <footer className="bg-white border-t border-gray-200 mt-12">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-            <div className="text-center text-sm text-gray-500">
+			<div className="max-w-7xl mx-auto px-4 sm: px-6,
+		lg:px-8 py-6">
+			<div className="text-center text-sm text-gray-500">
               <p>&copy; 2024 Zion Tech Solutions. All rights reserved.</p>
               <p className="mt-1">Dashboard powered by advanced analytics and monitoring systems.</p>
             </div>
           </div>
         </footer>
       </div>
-    </>
+		</>
   )};
 
 export default Dashboard;
