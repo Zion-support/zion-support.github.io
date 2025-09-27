@@ -57,7 +57,7 @@ describe('PerformanceMonitor', () => {
   });
 
   it('handles missing performance API gracefully', () => {
-    // @ts-ignore
+      // @ts-expect-error - Testing behavior when performance API is not available
     delete window.performance;
     
     render(<PerformanceMonitor show={true} />);

@@ -39,4 +39,4 @@ global.ResizeObserver = jest.fn().mockImplementation(() => ({
 }));
 
 // Setup testing library matchers
-require('@testing-library/jest-dom');
+import '@testing-library/jest-dom';
