@@ -269,7 +269,11 @@ export const TestDashboard: React.FC = () => {
   return (
     <>
       <button
-        onClick={() => setShowDashboard(!showDashboard)}
+        onClick={() = aria-label="setShowDashboard(!showDashboard)}
+        className="fixed bottom-4 left-4 bg-purple-600 hover:bg-purple-700 text-white p-3 rounded-full shadow-lg z-50"
+        title="Toggle Test Dashboard"
+      >
+        🧪"> setShowDashboard(!showDashboard)}
         className="fixed bottom-4 left-4 bg-purple-600 hover:bg-purple-700 text-white p-3 rounded-full shadow-lg z-50"
         title="Toggle Test Dashboard"
       >
@@ -279,7 +283,7 @@ export const TestDashboard: React.FC = () => {
       {showDashboard && (
         <div className="fixed bottom-20 left-4 bg-white dark:bg-gray-800 p-4 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 z-50 max-w-md max-h-96 overflow-y-auto">
           <div className="flex justify-between items-center mb-4">
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+            <h3 className="text-lg font-semibold text-gray-900 dark:text-white" id="test-dashboard">
               Test Dashboard
             </h3>
             <div className="flex space-x-2">
@@ -287,13 +291,13 @@ export const TestDashboard: React.FC = () => {
                 onClick={runAllSuites}
                 disabled={isRunning}
                 className="bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 text-white px-3 py-1 rounded text-sm"
-              >
+               aria-label="{isRunning ? 'Running...' : 'Run All'}">
                 {isRunning ? 'Running...' : 'Run All'}
               </button>
               <button
                 onClick={clear}
                 className="bg-red-600 hover:bg-red-700 text-white px-3 py-1 rounded text-sm"
-              >
+               aria-label="Clear">
                 Clear
               </button>
             </div>
@@ -308,7 +312,7 @@ export const TestDashboard: React.FC = () => {
 
           {suites.map(suite => (
             <div key={suite.id} className="mb-4">
-              <h4 className="font-semibold text-gray-900 dark:text-white mb-2">
+              <h4 className="font-semibold text-gray-900 dark:text-white mb-2" id="suitename-suitestatus">
                 {suite.name} ({suite.status})
               </h4>
               <div className="space-y-1">

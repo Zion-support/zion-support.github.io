@@ -156,7 +156,7 @@ export const EnhancedContactForm: React.FC = () => {
 						<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
 					</svg>
 				</div>
-				<h3 className="text-2xl font-bold text-green-800 mb-4">Message Sent Successfully!</h3>
+				<h3 className="text-2xl font-bold text-green-800 mb-4" id="message-sent-successfully">Message Sent Successfully!</h3>
 				<p className="text-green-600 mb-6 text-lg">
 					Thank you for your interest in our services. We&apos;ll review your project details and get back to you within 24 hours with a detailed proposal.
 				</p>
@@ -170,7 +170,10 @@ export const EnhancedContactForm: React.FC = () => {
 					</ul>
 				</div>
 				<button
-					onClick={() => setSubmitStatus('idle')}
+					onClick={() = aria-label="setSubmitStatus('idle')}
+					className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-lg font-medium transition-colors duration-200"
+				>
+					Send Another Message"> setSubmitStatus('idle')}
 					className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-lg font-medium transition-colors duration-200"
 				>
 					Send Another Message
@@ -182,7 +185,7 @@ export const EnhancedContactForm: React.FC = () => {
 	return (
 		<div className="bg-white rounded-2xl shadow-xl p-8">
 			<div className="mb-8">
-				<h3 className="text-3xl font-bold text-gray-800 mb-3">Start Your Project</h3>
+				<h3 className="text-3xl font-bold text-gray-800 mb-3" id="start-your-project">Start Your Project</h3>
 				<p className="text-gray-600 text-lg">
 					Tell us about your project and we&apos;ll provide a detailed proposal tailored to your needs.
 				</p>

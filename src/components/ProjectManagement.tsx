@@ -114,10 +114,10 @@ export default function ProjectManagement({ isDarkMode }: ProjectManagementProps
         : 'bg-white border-gray-200 hover:border-gray-300'
     }`}>
       <div className="flex items-center justify-between mb-6">
-        <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
+        <h3 className="text-xl font-semibold text-gray-900 dark:text-white" id="project-management">
           Project Management
         </h3>
-        <button className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm rounded-md transition-colors">
+        <button className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm rounded-md transition-colors" aria-label="+ New Project">
           + New Project
         </button>
       </div>
@@ -127,7 +127,14 @@ export default function ProjectManagement({ isDarkMode }: ProjectManagementProps
         {['all', 'planning', 'in-progress', 'review', 'completed'].map((status) => (
           <button
             key={status}
-            onClick={() => setSelectedStatus(status)}
+            onClick={() = aria-label="setSelectedStatus(status)}
+            className={`px-3 py-1 rounded-md text-sm font-medium transition-colors ${
+              selectedStatus === status
+                ? 'bg-blue-600 text-white'
+                : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
+            }`}
+          >
+            {status === 'all' ? 'All' : status.charAt(0).toUpperCase() + status.slice(1)}"> setSelectedStatus(status)}
             className={`px-3 py-1 rounded-md text-sm font-medium transition-colors ${
               selectedStatus === status
                 ? 'bg-blue-600 text-white'
@@ -173,7 +180,7 @@ export default function ProjectManagement({ isDarkMode }: ProjectManagementProps
             <div className="flex items-start justify-between mb-3">
               <div className="flex-1">
                 <div className="flex items-center space-x-2 mb-1">
-                  <h4 className="font-semibold text-gray-900 dark:text-white">
+                  <h4 className="font-semibold text-gray-900 dark:text-white" id="projectname">
                     {project.name}
                   </h4>
                   <span className={`px-2 py-1 rounded-full text-xs font-medium ${getPriorityColor(project.priority)}`}>
@@ -210,10 +217,10 @@ export default function ProjectManagement({ isDarkMode }: ProjectManagementProps
             {/* Actions */}
             <div className="flex items-center justify-between">
               <div className="flex space-x-2">
-                <button className="px-3 py-1 text-xs bg-blue-600 hover:bg-blue-700 text-white rounded-md transition-colors">
+                <button className="px-3 py-1 text-xs bg-blue-600 hover:bg-blue-700 text-white rounded-md transition-colors" aria-label="View Details">
                   View Details
                 </button>
-                <button className="px-3 py-1 text-xs border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 rounded-md transition-colors">
+                <button className="px-3 py-1 text-xs border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 rounded-md transition-colors" aria-label="Edit">
                   Edit
                 </button>
               </div>

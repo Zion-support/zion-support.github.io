@@ -67,7 +67,7 @@ export default function Dashboard({ isDarkMode }: DashboardProps): JSX.Element {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <div className="mb-8">
-        <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
+        <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-2" id="enhanced-dashboard">
           Enhanced Dashboard
         </h2>
         <p className="text-gray-600 dark:text-gray-300">
@@ -84,7 +84,7 @@ export default function Dashboard({ isDarkMode }: DashboardProps): JSX.Element {
               ? 'bg-gray-800 border-gray-700 hover:border-gray-600' 
               : 'bg-white border-gray-200 hover:border-gray-300'
           }`}>
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
+            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4" id="task-overview">
               Task Overview
             </h3>
             <div className="grid grid-cols-2 gap-4 mb-4">
@@ -133,7 +133,7 @@ export default function Dashboard({ isDarkMode }: DashboardProps): JSX.Element {
 
       {/* Quick Actions */}
       <div className="mt-8">
-        <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
+        <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4" id="quick-actions">
           Quick Actions
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">

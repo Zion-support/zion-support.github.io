@@ -1,6 +1,25 @@
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
-import dynamic from 'next/dynamic';
+import PerformanceDashboard from '../src/components/PerformanceDashboard';
+import { SecurityDashboard } from '../src/components/SecurityDashboard';
+import { AnalyticsDashboard } from '../src/components/AnalyticsDashboard';
+import EnhancedDashboard from '../src/components/EnhancedDashboard';
+import EnhancedSearch from '../src/components/EnhancedSearch';
+import ComprehensiveAnalyticsDashboard from '../src/components/ComprehensiveAnalyticsDashboard';
+import { AdvancedPerformanceMonitor } from '../src/components/AdvancedPerformanceMonitor';
+import { AdvancedAnalyticsDashboard } from '../src/components/AdvancedAnalyticsDashboard';
+import { AdvancedSecurityMonitor } from '../src/components/AdvancedSecurityMonitor';
+import { AdvancedAccessibilityAuditor } from '../src/components/AdvancedAccessibilityAuditor';
+import SystemMonitor from '../src/components/SystemMonitor';
+import AdvancedErrorHandler from '../src/components/AdvancedErrorHandler';
+import AdvancedPerformanceOptimizer from '../src/components/AdvancedPerformanceOptimizer';
+import AdvancedAnalyticsInsights from '../src/components/AdvancedAnalyticsInsights';
+import AdvancedErrorMonitoring from '../src/components/AdvancedErrorMonitoring';
+import AdvancedSystemMonitor from '../src/components/AdvancedSystemMonitor';
+import AdvancedSecurityEnhancements from '../src/components/AdvancedSecurityEnhancements';
+import EnhancedUserExperience from '../src/components/EnhancedUserExperience';
+import SecurityMonitor from '../src/components/SecurityMonitor';
+import EnhancedAnalytics from '../src/components/EnhancedAnalytics';
 
 // Lazy load heavy components for better performance
 const PerformanceDashboard = dynamic(() => import('../src/components/PerformanceDashboard').then(mod => ({ default: mod.PerformanceDashboard })), {
@@ -75,7 +94,7 @@ const AdvancedAnalyticsInsights = dynamic(() => import('../src/components/Advanc
   loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-slate-600"></div></div>
 });
 
-type DashboardTab = 'comprehensive' | 'analytics' | 'performance' | 'security' | 'enhanced' | 'search' | 'advanced-analytics' | 'advanced-performance' | 'advanced-security' | 'accessibility' | 'system-monitor' | 'security-enhancements' | 'performance-optimizer' | 'user-experience' | 'error-handler' | 'analytics-insights' | 'new-performance' | 'new-security' | 'new-analytics';
+type DashboardTab = 'comprehensive' | 'analytics' | 'performance' | 'security' | 'enhanced' | 'search' | 'advanced-analytics' | 'advanced-performance' | 'advanced-security' | 'accessibility' | 'system-monitor' | 'security-enhancements' | 'performance-optimizer' | 'user-experience' | 'error-handler' | 'analytics-insights' | 'new-performance' | 'new-security' | 'new-analytics' | 'error-monitoring' | 'advanced-system-monitor';
 
 const Dashboard: React.FC = () => {
   const [activeTab, setActiveTab] = useState<DashboardTab>('comprehensive');
@@ -93,14 +112,11 @@ const Dashboard: React.FC = () => {
     { id: 'advanced-security' as const, name: 'Advanced Security', icon: '🛡️' },
     { id: 'accessibility' as const, name: 'Accessibility', icon: '♿' },
     { id: 'system-monitor' as const, name: 'System Monitor', icon: '📊' },
-    { id: 'security-enhancements' as const, name: 'Security Enhancements', icon: '🔐' },
-    { id: 'performance-optimizer' as const, name: 'Performance Optimizer', icon: '⚡️' },
-    { id: 'user-experience' as const, name: 'User Experience', icon: '👤' },
-    { id: 'new-performance' as const, name: 'New Performance', icon: '⚡️' },
-    { id: 'new-security' as const, name: 'New Security', icon: '🛡️' },
-    { id: 'new-analytics' as const, name: 'New Analytics', icon: '📊' },
     { id: 'error-handler' as const, name: 'Error Handler', icon: '🚨' },
-    { id: 'analytics-insights' as const, name: 'Analytics Insights', icon: '💡' }
+    { id: 'performance-optimizer' as const, name: 'Performance Optimizer', icon: '⚙️' },
+    { id: 'analytics-insights' as const, name: 'Analytics Insights', icon: '💡' },
+    { id: 'error-monitoring' as const, name: 'Error Monitoring', icon: '🐛' },
+    { id: 'advanced-system-monitor' as const, name: 'System Monitor', icon: '🖥️' }
   ];
 
   // Sample data for advanced components
@@ -111,20 +127,20 @@ const Dashboard: React.FC = () => {
     avgSessionDuration: 180,
     conversionRate: 12.5,
     topPages: [
-      { page: '/', views: 25000, bounceRate: 28.5 },
-      { page: '/services', views: 18000, bounceRate: 32.1 },
-      { page: '/blog', views: 15000, bounceRate: 45.2 }
+      { page: '/', views: 25000, bounceRate: 28.5, avgTime: 120 },
+      { page: '/services', views: 18000, bounceRate: 32.1, avgTime: 95 },
+      { page: '/blog', views: 15000, bounceRate: 45.2, avgTime: 180 }
     ],
     trafficSources: [
-      { source: 'Organic Search', visitors: 25000, percentage: 55.6 },
-      { source: 'Direct', visitors: 12000, percentage: 26.7 },
-      { source: 'Social Media', visitors: 8000, percentage: 17.8 }
+      { source: 'Organic Search', visitors: 25000, percentage: 55.6, conversionRate: 12.5 },
+      { source: 'Direct', visitors: 12000, percentage: 26.7, conversionRate: 15.2 },
+      { source: 'Social Media', visitors: 8000, percentage: 17.8, conversionRate: 8.9 }
     ],
-    deviceTypes: [
-      { device: 'Desktop', count: 25000, percentage: 55.6 },
-      { device: 'Mobile', count: 15000, percentage: 33.3 },
-      { device: 'Tablet', count: 5000, percentage: 11.1 }
-    ],
+                deviceTypes: [
+                  { device: 'Desktop', count: 25000, percentage: 55.6 },
+                  { device: 'Mobile', count: 15000, percentage: 33.3 },
+                  { device: 'Tablet', count: 5000, percentage: 11.1 }
+                ],
     geographicData: [
       { country: 'United States', visitors: 18000, percentage: 40.0 },
       { country: 'Canada', visitors: 9000, percentage: 20.0 },
@@ -217,8 +233,21 @@ const Dashboard: React.FC = () => {
           <div className="p-8">
             <h1 className="text-3xl font-bold text-gray-900 mb-8">Advanced Security Monitor</h1>
             <AdvancedSecurityMonitor 
-              onSecurityAlert={(alert) => console.log('Security alert:', alert)}
-              showDashboard={true}
+              metrics={{
+                totalThreats: 0,
+                blockedRequests: 0,
+                suspiciousActivity: 0,
+                securityScore: 95,
+                lastScan: new Date(),
+                vulnerabilities: [],
+                recentEvents: [],
+                cspViolations: 0,
+                xssAttempts: 0,
+                sqlInjectionAttempts: 0,
+                bruteForceAttempts: 0,
+                rateLimitHits: 0
+              }}
+              onThreatDetected={(event) => console.log('Security threat detected:', event)}
             />
           </div>
         );
@@ -228,7 +257,6 @@ const Dashboard: React.FC = () => {
             <h1 className="text-3xl font-bold text-gray-900 mb-8">Accessibility Auditor</h1>
             <AdvancedAccessibilityAuditor 
               onAuditComplete={(results) => console.log('Accessibility audit complete:', results)}
-              showDashboard={true}
             />
           </div>
         );
@@ -293,11 +321,7 @@ const Dashboard: React.FC = () => {
                 </button>
               </div>
             </div>
-            <PerformanceDashboard 
-              refreshInterval={isRealTime ? 5000 : 30000}
-              enableAlerts={true}
-              onAlert={(alert) => console.log('Performance alert:', alert)}
-            />
+            <PerformanceDashboard />
           </div>
         );
       case 'new-security':
@@ -330,6 +354,23 @@ const Dashboard: React.FC = () => {
             />
           </div>
         );
+      case 'performance-optimizer':
+        return (
+          <div className="p-8">
+            <div className="flex justify-between items-center mb-8">
+              <h1 className="text-3xl font-bold text-gray-900">Performance Optimizer</h1>
+              <div className="flex items-center space-x-4">
+                <button 
+                  onClick={() => window.location.reload()}
+                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  Refresh
+                </button>
+              </div>
+            </div>
+            <AdvancedPerformanceOptimizer />
+          </div>
+        );
       case 'new-analytics':
         return (
           <div className="p-8">
@@ -358,6 +399,20 @@ const Dashboard: React.FC = () => {
               enableRealTime={isRealTime}
               onDataUpdate={(data) => console.log('Analytics data updated:', data)}
             />
+          </div>
+        );
+      case 'error-monitoring':
+        return (
+          <div className="p-8">
+            <h1 className="text-3xl font-bold text-gray-900 mb-8">Advanced Error Monitoring</h1>
+            <AdvancedErrorMonitoring />
+          </div>
+        );
+      case 'advanced-system-monitor':
+        return (
+          <div className="p-8">
+            <h1 className="text-3xl font-bold text-gray-900 mb-8">Advanced System Monitor</h1>
+            <AdvancedSystemMonitor />
           </div>
         );
       case 'error-handler':
@@ -402,32 +457,6 @@ const Dashboard: React.FC = () => {
             <AdvancedPerformanceOptimizer />
           </div>
         );
-      case 'user-experience':
-        return (
-          <div className="p-8">
-            <h1 className="text-3xl font-bold text-gray-900 mb-8">User Experience Settings</h1>
-            <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-6">
-              <p className="text-gray-600 dark:text-gray-400 mb-4">
-                Use the settings button in the bottom-right corner to customize your experience.
-              </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                <div className="bg-white dark:bg-gray-700 p-4 rounded-lg">
-                  <h3 className="font-semibold text-gray-900 dark:text-white mb-2">Theme Settings</h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">Customize light, dark, or auto theme</p>
-                </div>
-                <div className="bg-white dark:bg-gray-700 p-4 rounded-lg">
-                  <h3 className="font-semibold text-gray-900 dark:text-white mb-2">Accessibility</h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">High contrast, reduced motion, and screen reader support</p>
-                </div>
-                <div className="bg-white dark:bg-gray-700 p-4 rounded-lg">
-                  <h3 className="font-semibold text-gray-900 dark:text-white mb-2">Language</h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">Multi-language support with RTL support</p>
-                </div>
-              </div>
-            </div>
-            <EnhancedUserExperience />
-          </div>
-        );
       case 'analytics-insights':
         return (
           <div className="p-8">
@@ -443,11 +472,82 @@ const Dashboard: React.FC = () => {
               </div>
             </div>
             <AdvancedAnalyticsInsights 
-              data={sampleAnalyticsData}
+              data={{
+                pageViews: 125000,
+                uniqueVisitors: 45000,
+                bounceRate: 35.2,
+                avgSessionDuration: 180,
+                conversionRate: 12.5,
+                topPages: [
+                  { page: '/', views: 25000, bounceRate: 28.5, avgTime: 120 },
+                  { page: '/services', views: 18000, bounceRate: 32.1, avgTime: 95 },
+                  { page: '/blog', views: 15000, bounceRate: 45.2, avgTime: 180 }
+                ],
+                trafficSources: [
+                  { source: 'Organic Search', visitors: 25000, percentage: 55.6, conversionRate: 12.5 },
+                  { source: 'Direct', visitors: 12000, percentage: 26.7, conversionRate: 15.2 },
+                  { source: 'Social Media', visitors: 8000, percentage: 17.8, conversionRate: 8.9 }
+                ],
+                deviceTypes: [
+                  { device: 'Desktop', visitors: 25000, percentage: 55.6 },
+                  { device: 'Mobile', visitors: 15000, percentage: 33.3 },
+                  { device: 'Tablet', visitors: 5000, percentage: 11.1 }
+                ],
+                userBehavior: [
+                  { action: 'page_view', count: 1250, trend: 'up' },
+                  { action: 'click', count: 890, trend: 'stable' },
+                  { action: 'scroll', count: 2100, trend: 'down' }
+                ],
+                performance: {
+                  pageLoadTime: 1.2,
+                  firstContentfulPaint: 0.8,
+                  largestContentfulPaint: 1.5,
+                  cumulativeLayoutShift: 0.1,
+                  firstInputDelay: 50
+                },
+                realTime: [
+                  { activeUsers: 45, currentPage: '/', location: 'US', device: 'desktop' },
+                  { activeUsers: 23, currentPage: '/services', location: 'CA', device: 'mobile' }
+                ]
+              }}
               enableRealTime={true}
               refreshInterval={30000}
               onInsightAction={(insight) => console.log('Insight action:', insight)}
             />
+          </div>
+        );
+      case 'error-monitoring':
+        return (
+          <div className="p-8">
+            <div className="flex justify-between items-center mb-8">
+              <h1 className="text-3xl font-bold text-gray-900">Advanced Error Monitoring</h1>
+              <div className="flex items-center space-x-4">
+                <button 
+                  onClick={() => window.location.reload()}
+                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  Refresh
+                </button>
+              </div>
+            </div>
+            <AdvancedErrorMonitoring />
+          </div>
+        );
+      case 'advanced-system-monitor':
+        return (
+          <div className="p-8">
+            <div className="flex justify-between items-center mb-8">
+              <h1 className="text-3xl font-bold text-gray-900">Advanced System Monitor</h1>
+              <div className="flex items-center space-x-4">
+                <button 
+                  onClick={() => window.location.reload()}
+                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  Refresh
+                </button>
+              </div>
+            </div>
+            <AdvancedSystemMonitor />
           </div>
         );
       default:
