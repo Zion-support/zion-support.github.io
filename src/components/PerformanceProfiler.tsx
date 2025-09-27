@@ -40,6 +40,11 @@ const PerformanceProfiler: React.FC = () => {
   
   const observerRef = useRef<PerformanceObserver | null>(null);
 
+  // Only render in development mode
+  if (process.env.NODE_ENV !== 'development') {
+    return null;
+  }
+
   const collectPerformanceData = useCallback(() => {
     const now = Date.now();
     
@@ -49,19 +54,19 @@ const PerformanceProfiler: React.FC = () => {
     const fcpEntry = paintEntries.find(entry => entry.name === 'first-contentful-paint');
     
     const fcp = fcpEntry ? fcpEntry.startTime : 0;
-    const lcp = performance.now(); // Simplified LCP
-    const fid = 0; // Would need to measure this
-    const cls = 0; // Would need to measure this
+    const lcp = performance.getEntriesByName('largest-contentful-paint')[0]?.startTime || performance.now();
+    const fid = performance.getEntriesByName('first-input')[0]?.processingStart || 0;
+    const cls = performance.getEntriesByName('layout-shift')[0]?.value || 0;
     const ttfb = navigation ? navigation.responseStart - navigation.requestStart : 0;
     const loadTime = navigation ? navigation.loadEventEnd - navigation.fetchStart : 0;
     
-    // Get memory usage
-    const memoryUsage = (performance as PerformanceWithMemory).memory ? 
-      (performance as PerformanceWithMemory).memory!.usedJSHeapSize / 1024 / 1024 : 0; // MB
+    // Get memory usage if available
+    const memory = (performance as PerformanceWithMemory).memory;
+    const memoryUsage = memory ? memory.usedJSHeapSize / 1024 / 1024 : 0;
     
     // Calculate render time (simplified)
-    const renderTime = performance.now() - (performanceData[performanceData.length - 1]?.timestamp || now);
-
+    const renderTime = performance.now();
+    
     const newData: PerformanceData = {
       timestamp: now,
       fcp,
@@ -80,7 +85,7 @@ const PerformanceProfiler: React.FC = () => {
       const cutoff = now - getTimeRangeMs(selectedTimeRange);
       return updated.filter(data => data.timestamp > cutoff);
     });
-  }, [performanceData, selectedTimeRange]);
+  }, [selectedTimeRange]);
 
   const startProfiling = useCallback(() => {
     // Clear existing data
@@ -120,12 +125,6 @@ const PerformanceProfiler: React.FC = () => {
   }, [selectedTimeRange, collectPerformanceData]);
 
   useEffect(() => {
-    // Only show in development or when explicitly enabled
-    const shouldShow = process.env.NODE_ENV === 'development' || 
-                      localStorage.getItem('showPerformanceProfiler') === 'true';
-    
-    if (!shouldShow) return;
-
     if (isProfiling) {
       startProfiling();
     }
