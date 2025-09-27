@@ -7,16 +7,6 @@ import '@testing-library/jest-dom';
   disconnect: jest.fn(),
 }));
 
-// Mock PerformanceObserver
-global.PerformanceObserver = class PerformanceObserver {
-  constructor() {}
-  disconnect() {}
-  observe() {}
-  unobserve() {}
-  takeRecords() { return []; }
-  static readonly supportedEntryTypes: readonly string[] = [];
-} as unknown as typeof PerformanceObserver;
-
 // Mock window.scrollTo
 Object.defineProperty(window, 'scrollTo', {
   value: () => {},
@@ -51,11 +41,12 @@ if (!window.performance) {
 
 // Mock PerformanceObserver
 global.PerformanceObserver = class PerformanceObserver {
-  constructor() {}
+  static readonly supportedEntryTypes: readonly string[] = [];
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  constructor(_callback: PerformanceObserverCallback) {}
   disconnect() {}
   observe() {}
   takeRecords() { return []; }
-  static readonly supportedEntryTypes: readonly string[] = [];
 } as unknown as typeof PerformanceObserver;
 
 // Mock matchMedia
