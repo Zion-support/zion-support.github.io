@@ -297,7 +297,7 @@ export class AdvancedAnalytics {
             largestContentfulPaint: 0, // Will be updated by observer
             firstInputDelay: 0, // Will be updated by observer
             cumulativeLayoutShift: 0, // Will be updated by observer
-            timeToInteractive: navigation.domInteractive - navigation.navigationStart,
+            timeToInteractive: navigation.domInteractive - navigation.fetchStart,
             resourceLoadTimes: this.getResourceLoadTimes()
           };
 
@@ -586,8 +586,8 @@ export class AdvancedAnalytics {
     // Performance summary
     const performanceEvents = this.events.filter(e => e.name === 'page_performance');
     const averageLoadTime = performanceEvents.reduce((acc, e) => acc + (e.value || 0), 0) / performanceEvents.length;
-    const averageFCP = performanceEvents.reduce((acc, e) => acc + parseFloat(e.customDimensions?.firstContentfulPaint || '0'), 0) / performanceEvents.length;
-    const averageLCP = performanceEvents.reduce((acc, e) => acc + parseFloat(e.customDimensions?.largestContentfulPaint || '0'), 0) / performanceEvents.length;
+    const averageFCP = performanceEvents.reduce((acc, e) => acc + parseFloat(String(e.customDimensions?.firstContentfulPaint || '0')), 0) / performanceEvents.length;
+    const averageLCP = performanceEvents.reduce((acc, e) => acc + parseFloat(String(e.customDimensions?.largestContentfulPaint || '0')), 0) / performanceEvents.length;
 
     return {
       totalEvents: this.events.length,
