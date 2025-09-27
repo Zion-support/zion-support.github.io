@@ -45,7 +45,6 @@ const SystemDashboard: React.FC = () => {
 
     const updateMetrics = () => {
       // Get performance metrics
-      const performanceEntries = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       const paintEntries = performance.getEntriesByType('paint');
       const fcpEntry = paintEntries.find(entry => entry.name === 'first-contentful-paint');
       

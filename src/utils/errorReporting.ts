@@ -2,6 +2,16 @@
  * Enhanced error reporting and monitoring utilities
  */
 
+interface PerformanceMemory {
+  usedJSHeapSize: number;
+  totalJSHeapSize: number;
+  jsHeapSizeLimit: number;
+}
+
+interface PerformanceWithMemory extends Performance {
+  memory?: PerformanceMemory;
+}
+
 export interface ErrorContext {
   userId?: string;
   sessionId: string;
@@ -14,10 +24,10 @@ export interface ErrorContext {
     height: number;
   };
   performance?: {
-    memory?: any;
+    memory?: PerformanceMemory;
     timing?: PerformanceNavigationTiming;
   };
-  customData?: Record<string, any>;
+  customData?: Record<string, unknown>;
 }
 
 export interface ErrorReport {
@@ -26,7 +36,7 @@ export interface ErrorReport {
     name: string;
     message: string;
     stack?: string;
-    cause?: any;
+    cause?: Error | unknown;
   };
   context: ErrorContext;
   severity: 'low' | 'medium' | 'high' | 'critical';
@@ -78,7 +88,7 @@ class ErrorReporter {
     return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
   }
 
-  private getErrorContext(customData?: Record<string, any>): ErrorContext {
+  private getErrorContext(customData?: Record<string, unknown>): ErrorContext {
     const context: ErrorContext = {
       sessionId: this.sessionId,
       timestamp: new Date().toISOString(),
@@ -95,8 +105,8 @@ class ErrorReporter {
     if (window.performance) {
       context.performance = {};
       
-      if ((window.performance as any).memory) {
-        context.performance.memory = (window.performance as any).memory;
+      if ((window.performance as PerformanceWithMemory).memory) {
+        context.performance.memory = (window.performance as PerformanceWithMemory).memory;
       }
 
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
@@ -226,7 +236,7 @@ class ErrorReporter {
       category?: ErrorReport['category'];
       severity?: ErrorReport['severity'];
       tags?: string[];
-      customData?: Record<string, any>;
+      customData?: Record<string, unknown>;
     } = {}
   ) {
     const report: ErrorReport = {
@@ -235,7 +245,7 @@ class ErrorReporter {
         name: error.name,
         message: error.message,
         stack: error.stack,
-        cause: (error as any).cause
+        cause: (error as Error & { cause?: unknown }).cause
       },
       context: this.getErrorContext(options.customData),
       category: options.category || 'javascript',
@@ -273,7 +283,7 @@ class ErrorReporter {
         },
         body: JSON.stringify(report),
       });
-    } catch (error) {
+    } catch {
       // Fallback: store in localStorage for later retry
       try {
         const storedReports = JSON.parse(localStorage.getItem('errorReports') || '[]');

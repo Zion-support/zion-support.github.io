@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { Eye, EyeOff, Volume2, MousePointer, Keyboard, CheckCircle, XCircle, AlertTriangle } from 'lucide-react';
 
 interface AccessibilityTest {
@@ -15,7 +15,7 @@ const AccessibilityTester: React.FC = () => {
   const [tests, setTests] = useState<AccessibilityTest[]>([]);
   const [isRunning, setIsRunning] = useState(false);
 
-  const accessibilityTests: Omit<AccessibilityTest, 'status'>[] = [
+  const accessibilityTests: Omit<AccessibilityTest, 'status'>[] = useMemo(() => [
     {
       id: 'color-contrast',
       name: 'Color Contrast',
@@ -76,12 +76,12 @@ const AccessibilityTester: React.FC = () => {
       description: 'Text scales properly up to 200%',
       category: 'contrast'
     }
-  ];
+  ], []);
 
   useEffect(() => {
     // Initialize tests
     setTests(accessibilityTests.map(test => ({ ...test, status: 'pending' as const })));
-  }, []);
+  }, [accessibilityTests]);
 
   const runTests = async () => {
     setIsRunning(true);

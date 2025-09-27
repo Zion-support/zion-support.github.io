@@ -1,6 +1,16 @@
 import { useEffect, useRef, useState } from 'react';
 import { performanceMonitor } from '../utils/performanceMonitor';
 
+interface PerformanceMemory {
+  usedJSHeapSize: number;
+  totalJSHeapSize: number;
+  jsHeapSizeLimit: number;
+}
+
+interface PerformanceWithMemory extends Performance {
+  memory?: PerformanceMemory;
+}
+
 interface PerformanceMetrics {
   renderTime: number | null;
   mountTime: number | null;
@@ -39,7 +49,7 @@ export const usePerformance = (componentName: string) => {
     // Track updates
     updateCount.current += 1;
     setMetrics(prev => ({ ...prev, updateCount: updateCount.current }));
-  });
+  }, [setMetrics]);
 
   const startRender = () => {
     renderStartTime.current = performance.now();
@@ -52,8 +62,8 @@ export const usePerformance = (componentName: string) => {
   };
 
   const getMemoryUsage = () => {
-    if ('memory' in performance && (performance as any).memory) {
-      const memory = (performance as any).memory;
+    if ('memory' in performance && (performance as PerformanceWithMemory).memory) {
+      const memory = (performance as PerformanceWithMemory).memory!;
       return {
         used: memory.usedJSHeapSize,
         total: memory.totalJSHeapSize,
