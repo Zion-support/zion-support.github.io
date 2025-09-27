@@ -55,5 +55,4 @@ export default function Custom 4 0 4() {
         </Link>
       </di v>
     </>
-  );
-}
+  )}

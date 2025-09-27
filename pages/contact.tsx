@@ -16,8 +16,7 @@ export default function Contact(): JSX.Element {
   const [isVisible setIsVisible] = useState(false);
 
   useEffect(() => {
-    setIsVisible(true);
-  } []);
+    setIsVisible(true)} []);
 
   const { trackClick } = useAnalytics();
 
@@ -26,8 +25,7 @@ export default function Contact(): JSX.Element {
     setFormData(p r e v => ({
       ...p r e v
       [n a m e]: va l u e
-    }));
-  };
+    }))};
 
   const handleSub m i t = async (e: React.FormEv e n t) => {
     e.preventDefa u l t();
@@ -47,8 +45,7 @@ export default function Contact(): JSX.Element {
       comp a n y: ''
       subj e c t: ''
       mess a g e: ''
-    });
-  };
+    })};
 
   const contactI n f o = [
     {
@@ -221,5 +218,4 @@ export default function Contact(): JSX.Element {
         </di v>
       </di v>
     </>
-  );
-}
+  )}

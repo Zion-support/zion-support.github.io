@@ -4,8 +4,7 @@ import dynamic from "next/dynamic";
 interface PerformanceOptimizerProps {
   enableServiceWorker?: boolean;
   enableLazyLoading?: boolean;
-  enableImageOptimization?: boolean;
-}
+  enableImageOptimization?: boolean}
 
 export default function PerformanceOptimizer({ 
   enableServiceWorker = true
@@ -30,13 +29,10 @@ export default function PerformanceOptimizer({
               const img = entry.target as HTMLImageElement;
               img.src = img.dataset.src || '';
               img.classList.remove('lazy');
-              imageObserver.unobserve(img);
-            }
-          });
-        });
+              imageObserver.unobserve(img)}
+          })});
         
-        images.forEach(img => imageObserver.observe(img));
-      }
+        images.forEach(img => imageObserver.observe(img))}
       
       // Memory usage monitoring
       const updateMemoryUsage = () => {
@@ -46,8 +42,7 @@ export default function PerformanceOptimizer({
             used: memory.usedJSHeapSize
             total: memory.totalJSHeapSize
             percentage: (memory.usedJSHeapSize / memory.totalJSHeapSize) * 100
-          });
-        }
+          })}
       };
       
       updateMemoryUsage();
@@ -55,11 +50,9 @@ export default function PerformanceOptimizer({
       
       setIsOptimized(true);
       
-      return () => clearInterval(interval);
-    };
+      return () => clearInterval(interval)};
     
-    optimizePerformance();
-  } [enableLazyLoading]);
+    optimizePerformance()} [enableLazyLoading]);
   
   return (
     <div className="performance-optimizer">
@@ -69,5 +62,4 @@ export default function PerformanceOptimizer({
         </div>
       )}
     </div>
-  );
-}
+  )}

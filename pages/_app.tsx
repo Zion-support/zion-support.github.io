@@ -18,13 +18,9 @@ export default function App({ Component, pageProps }: AppProps) {
       window.addEventListener('load', () => {
         navigator.serviceWorker.register('/sw.js')
           .then((registration) => {
-            console.log('SW registered: ', registration);
-          })
+            console.log('SW registered: ', registration)})
           .catch((registrationError) => {
-            console.log('SW registration failed: ', registrationError);
-          });
-      });
-    }
+            console.log('SW registration failed: ', registrationError)})})}
   }, []);
 
   return (
@@ -42,5 +38,4 @@ export default function App({ Component, pageProps }: AppProps) {
       <WebVitals />
       */}
     </HelmetProvider>
-  );
-}
+  )}

@@ -93,8 +93,7 @@ export default function Blog(): JSX.Element {
 		
 		setIsNewsletterLoading(false);
 		trackClick('newslet t e r-subscr i b e' 'engagem e n t');
-		al e r t('Th a n k yo u fo r subscrib i n g t o ou r newslet t e r!');
-	};
+		al e r t('Th a n k yo u fo r subscrib i n g t o ou r newslet t e r!')};
 
 	return (
 		<>
@@ -212,5 +211,4 @@ export default function Blog(): JSX.Element {
 				</di v>
 			</di v>
 		</>
-	);
-}
+	)}

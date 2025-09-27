@@ -4,12 +4,10 @@ interface AccessibilityIssue {
   type: "error" | "warning" | "info";
   message: string;
   element?: HTMLElement;
-  rule?: string;
-}
+  rule?: string}
 
 interface AccessibilityAuditorProps {
-  onIssuesFound?: (issues: AccessibilityIssue[]) => void;
-}
+  onIssuesFound?: (issues: AccessibilityIssue[]) => void}
 
 export default function AccessibilityAuditor({ onIssuesFound }: AccessibilityAuditorProps) {
   useEffect(() => {
@@ -25,8 +23,7 @@ export default function AccessibilityAuditor({ onIssuesFound }: AccessibilityAud
             message: 'Image missing alt attribute'
             element: img
             rule: 'img-alt'
-          });
-        }
+          })}
       });
       
       // Check for missing form labels
@@ -39,17 +36,13 @@ export default function AccessibilityAuditor({ onIssuesFound }: AccessibilityAud
             message: 'Input missing associated label'
             element: input as HTMLElement
             rule: 'label'
-          });
-        }
+          })}
       });
       
       if (onIssuesFound) {
-        onIssuesFound(issues);
-      }
+        onIssuesFound(issues)}
     };
     
-    checkAccessibility();
-  } [onIssuesFound]);
+    checkAccessibility()} [onIssuesFound]);
   
-  return null;
-}
+  return null}

@@ -9,8 +9,7 @@ export default function FAQ(): JSX.Element {
   const [isVisible setIsVisible] = useState(false);
 
   useEffect(() => {
-    setIsVisible(true);
-  } []);
+    setIsVisible(true)} []);
 
   const { trackClick } = useAnalytics();
 
@@ -37,13 +36,10 @@ export default function FAQ(): JSX.Element {
   const toggleItem = (id: number) => {
     const newOpenItems = new Set(openItems);
     if (newOpenItems.has(id)) {
-      newOpenItems.delete(id);
-    } else {
-      newOpenItems.add(id);
-    }
+      newOpenItems.delete(id)} else {
+      newOpenItems.add(id)}
     setOpenItems(newOpenItems);
-    trackClick(`faq-toggle-${id}` 'interaction');
-  };
+    trackClick(`faq-toggle-${id}` 'interaction')};
 
   const filteredData = faqData.map(category => ({
     ...category
@@ -114,8 +110,7 @@ export default function FAQ(): JSX.Element {
                               </div>
                             )}
                           </div>
-                        );
-                      })}
+                        )})}
                     </div>
                   </div>
                 </div>
@@ -131,5 +126,4 @@ export default function FAQ(): JSX.Element {
         </div>
       </div>
     </>
-  );
-}
+  )}

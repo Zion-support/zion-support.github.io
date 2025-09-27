@@ -1,16 +1,14 @@
 // API endpoint for security events
 export default async function handler(req: any, res: any) {
   if (req.method !== "POST") {
-    return res.status(405).json({ error: "Method not allowed" });
-  }
+    return res.status(405).json({ error: "Method not allowed" })}
 
   try {
     const { securityEvent } = req.body;
 
     // Validate the request
     if (!securityEvent || !securityEvent.type) {
-      return res.status(400).json({ error: "Invalid security event data" });
-    }
+      return res.status(400).json({ error: "Invalid security event data" })}
 
     // Process security event
     console.log("Security event received:", {
@@ -35,9 +33,7 @@ export default async function handler(req: any, res: any) {
       success: true,
       eventId: `sec_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
       timestamp: Date.now()
-    });
-  } catch (error) {
+    })} catch (error) {
     console.error("Security API error:", error);
-    res.status(500).json({ error: "Internal server error" });
-  }
+    res.status(500).json({ error: "Internal server error" })}
 }

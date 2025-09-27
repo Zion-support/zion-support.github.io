@@ -1,16 +1,14 @@
 // API endpoint for analytics events
 export default async function handler(req: any, res: any) {
   if (req.method !== "POST") {
-    return res.status(405).json({ error: "Method not allowed" });
-  }
+    return res.status(405).json({ error: "Method not allowed" })}
 
   try {
     const { events, session } = req.body;
 
     // Validate the request
     if (!events || !Array.isArray(events)) {
-      return res.status(400).json({ error: "Invalid events data" });
-    }
+      return res.status(400).json({ error: "Invalid events data" })}
 
     // Process analytics events
     console.log("Analytics events received:", events.length);
@@ -26,9 +24,7 @@ export default async function handler(req: any, res: any) {
       success: true,
       processed: events.length,
       timestamp: Date.now()
-    });
-  } catch (error) {
+    })} catch (error) {
     console.error("Analytics API error:", error);
-    res.status(500).json({ error: "Internal server error" });
-  }
+    res.status(500).json({ error: "Internal server error" })}
 }

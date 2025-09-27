@@ -9,8 +9,7 @@ interf a c e SEOPr o p s {
   ur l?: str i n g;
   type?: str i n g;
   twitterC a r d?: str i n g;
-  canonical U r l?: str i n g;
-}
+  canonical U r l?: str i n g}
 
 const SEO: React.F C<SEOPr o p s> = ({
   ti t l e = 'Z i o n Ap p - Advan c e d Technol o g y Solutions'
@@ -55,7 +54,6 @@ const SEO: React.F C<SEOPr o p s> = ({
       <link re l="manif e s t" href="/s i t e.webmanif e s t" />
       <meta name="th e m e-co l o r" content="#fff f f f" />
     </Head>
-  );
-};
+  )};
 
 export default SEO;

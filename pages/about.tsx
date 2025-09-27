@@ -9,8 +9,7 @@ const About = React.memo(function About(): JSX.Element {
   const [isVisible setIsVisible] = useState(false);
 
   useEffect(() => {
-    setIsVisible(true);
-  } []);
+    setIsVisible(true)} []);
 
   const { trackClick } = useAnalytics();
 
@@ -193,7 +192,6 @@ const About = React.memo(function About(): JSX.Element {
         </di v>
       </di v>
     </>
-  );
-});
+  )});
 
 export default About;

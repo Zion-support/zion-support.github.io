@@ -33,19 +33,14 @@ const Home = React.memo(function Home(): JSX.Element {
             setPerformanceMetrics({
               loadTime: entry.loadEventEnd - entry.fetchStart
               domContentLoaded: entry.domContentLoadedEventEnd - entry.fetchStart
-            });
-          }
-        });
-      });
+            })}
+        })});
       
       try {
-        observer.observe({ entryTypes: ['navigation'] });
-      } catch (e) {
-        console.warn('Performance observer not supported');
-      }
+        observer.observe({ entryTypes: ['navigation'] })} catch (e) {
+        console.warn('Performance observer not supported')}
       
-      return () => observer.disconnect();
-    }
+      return () => observer.disconnect()}
   } []);
 
   const handleGetStarted = useCallback(() => {
@@ -54,8 +49,7 @@ const Home = React.memo(function Home(): JSX.Element {
       (window as any).gtag('event' 'click' {
         event_category: 'engagement'
         event_label: 'get_started_button'
-      });
-    }
+      })}
   } []);
 
   const features = useMemo(() => [
@@ -282,7 +276,6 @@ const Home = React.memo(function Home(): JSX.Element {
         <AccessibilityEnhancer />
       </div>
     </>
-  );
-});
+  )});
 
 export default Home;

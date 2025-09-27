@@ -9,9 +9,7 @@ interface HealthResponse {
   services: {
     database: "connected" | "disconnected";
     cache: "connected" | "disconnected";
-    analytics: "active" | "inactive";
-  };
-}
+    analytics: "active" | "inactive"}}
 
 export default function handler(
   req: NextApiRequest,
@@ -29,8 +27,7 @@ export default function handler(
         cache: "disconnected",
         analytics: "inactive"
       }
-    });
-  }
+    })}
 
   try {
     // Basic health checks
@@ -52,8 +49,7 @@ export default function handler(
     res.setHeader('Pragma', 'no-cache');
     res.setHeader('Expires', '0');
 
-    return res.status(200).json(healthResponse);
-  } catch (error) {
+    return res.status(200).json(healthResponse)} catch (error) {
     console.error("Health check failed:", error);
     return res.status(500).json({
       status: "unhealthy",
@@ -66,6 +62,5 @@ export default function handler(
         cache: "disconnected",
         analytics: "inactive"
       }
-    });
-  }
+    })}
 }

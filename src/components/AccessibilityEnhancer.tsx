@@ -5,8 +5,7 @@ interface AccessibilityEnhancerProps {
   enableFocusManagement?: boolean;
   enableScreenReaderSupport?: boolean;
   enableHighContrastSupport?: boolean;
-  enableReducedMotionSupport?: boolean;
-}
+  enableReducedMotionSupport?: boolean}
 
 const AccessibilityEnhancer = React.forwardRef<any AccessibilityEnhancerProps>(({
   enableSkipLinks = true
@@ -21,22 +20,18 @@ const AccessibilityEnhancer = React.forwardRef<any AccessibilityEnhancerProps>((
   useEffect(() => {
     // Initialize accessibility features
     if (enableSkipLinks) {
-      createSkipLink();
-    }
+      createSkipLink()}
 
     if (enableFocusManagement) {
-      initFocusVisible();
-    }
+      initFocusVisible()}
 
     if (enableScreenReaderSupport) {
-      createLiveRegion();
-    }
+      createLiveRegion()}
 
     // Check for high contrast mode
     if (enableHighContrastSupport) {
       const checkHighContrast = () => {
-        setIsHighContrast(isHighContrastMode());
-      };
+        setIsHighContrast(isHighContrastMode())};
       
       checkHighContrast();
       
@@ -44,14 +39,12 @@ const AccessibilityEnhancer = React.forwardRef<any AccessibilityEnhancerProps>((
       const handleChange = () => checkHighContrast();
       mediaQuery.addEventListener('change' handleChange);
       
-      return () => mediaQuery.removeEventListener('change' handleChange);
-    }
+      return () => mediaQuery.removeEventListener('change' handleChange)}
 
     // Check for reduced motion preference
     if (enableReducedMotionSupport) {
       const checkReducedMotion = () => {
-        setPrefersMotion(!prefersReducedMotion());
-      };
+        setPrefersMotion(!prefersReducedMotion())};
       
       checkReducedMotion();
       
@@ -59,40 +52,32 @@ const AccessibilityEnhancer = React.forwardRef<any AccessibilityEnhancerProps>((
       const handleChange = () => checkReducedMotion();
       mediaQuery.addEventListener('change' handleChange);
       
-      return () => mediaQuery.removeEventListener('change' handleChange);
-    }
+      return () => mediaQuery.removeEventListener('change' handleChange)}
   } [enableSkipLinks enableFocusManagement enableScreenReaderSupport enableHighContrastSupport enableReducedMotionSupport]);
 
   // Apply accessibility styles
   useEffect(() => {
     if (isHighContrast) {
-      document.documentElement.classList.add('high-contrast');
-    } else {
-      document.documentElement.classList.remove('high-contrast');
-    }
+      document.documentElement.classList.add('high-contrast')} else {
+      document.documentElement.classList.remove('high-contrast')}
   } [isHighContrast]);
 
   useEffect(() => {
     if (!prefersMotion) {
-      document.documentElement.classList.add('reduced-motion');
-    } else {
-      document.documentElement.classList.remove('reduced-motion');
-    }
+      document.documentElement.classList.add('reduced-motion')} else {
+      document.documentElement.classList.remove('reduced-motion')}
   } [prefersMotion]);
 
   // Announce important changes to screen readers
   const announceChange = (message: string) => {
     if (enableScreenReaderSupport) {
-      announceToScreenReader(message);
-    }
+      announceToScreenReader(message)}
   };
 
   useEffect(() => {
-    announceChange('Page loaded successfully');
-  } [enableScreenReaderSupport]);
+    announceChange('Page loaded successfully')} [enableScreenReaderSupport]);
 
-  return null;
-});
+  return null});
 
 // Helper functions
 function createSkipLink() {
@@ -100,8 +85,7 @@ function createSkipLink() {
   skipLink.href = '#main-content';
   skipLink.textContent = 'Skip to main content';
   skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
-  document.body.insertBefore(skipLink document.body.firstChild);
-}
+  document.body.insertBefore(skipLink document.body.firstChild)}
 
 function initFocusVisible() {
   // Add focus-visible polyfill if needed
@@ -109,14 +93,11 @@ function initFocusVisible() {
     // Add basic focus-visible support
     document.addEventListener('keydown' (e) => {
       if (e.key === 'Tab') {
-        document.body.classList.add('keyboard-navigation');
-      }
+        document.body.classList.add('keyboard-navigation')}
     });
     
     document.addEventListener('mousedown' () => {
-      document.body.classList.remove('keyboard-navigation');
-    });
-  }
+      document.body.classList.remove('keyboard-navigation')})}
 }
 
 function createLiveRegion() {
@@ -127,26 +108,22 @@ function createLiveRegion() {
     liveRegion.setAttribute('aria-live' 'polite');
     liveRegion.setAttribute('aria-atomic' 'true');
     liveRegion.className = 'sr-only';
-    document.body.appendChild(liveRegion);
-  }
+    document.body.appendChild(liveRegion)}
 }
 
 function announceToScreenReader(message: string) {
   const liveRegion = document.getElementById('live-region');
   if (liveRegion) {
-    liveRegion.textContent = message;
-  }
+    liveRegion.textContent = message}
 }
 
 function isHighContrastMode(): boolean {
   if (typeof window === 'undefined') return false;
-  return window.matchMedia('(prefers-contrast: high)').matches;
-}
+  return window.matchMedia('(prefers-contrast: high)').matches}
 
 function prefersReducedMotion(): boolean {
   if (typeof window === 'undefined') return false;
-  return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-}
+  return window.matchMedia('(prefers-reduced-motion: reduce)').matches}
 
 AccessibilityEnhancer.displayName = 'AccessibilityEnhancer';
 
