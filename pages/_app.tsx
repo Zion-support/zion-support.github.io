@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
 import type { AppProps } from 'next/app';
-import { HelmetProvider  } from "react-helmet-async";
+import { HelmetProvider   } from "react-helmet-async";
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
 import AccessibilityAuditor from '../src/components/AccessibilityAuditor';
 import PerformanceOptimizer from '../src/components/PerformanceOptimizer';
-import { WebVitals  } from "../src/components/WebVitals";import '../styles/animations.css';
+import { WebVitals   } from "../src/components/WebVitals";import '../styles/animations.css';
 import '../src/styles/accessibility.css';
 import '../src/styles/improvements.css';
 
@@ -20,7 +20,7 @@ export default function App({ ComponentpageProps }: AppProps) {
           console.log('Service Worker registered successfully:'registration)})
         .catch((error) => {
           console.log('Service Worker registration failed:'error)})}
-  }, []);
+  }[]);
 
   return (
     <HelmetProvider>
@@ -29,7 +29,7 @@ export default function App({ ComponentpageProps }: AppProps) {
         <meta name="robots" content="indexfollow" />
         <meta name="author" content="Zion App" />
         <meta name="theme-color" content="#2563eb" />
-        <meta name="viewport" content="width=device-widthinitial-scale=1,maximum-scale=5" />
+        <meta name="viewport" content="width=device-widthinitial-scale=1maximum-scale=5" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="manifest" href="/site.webmanifest" />
@@ -47,9 +47,9 @@ export default function App({ ComponentpageProps }: AppProps) {
         html {
           scroll-behavior: smooth}
         body {margin: 0;          padding: 0;
-          font-family: -apple-systemBlinkMacSystemFont'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue'sans-serif;          -webkit-font-smoothing: antialiased;
+          font-family: -apple-systemBlinkMacSystemFont'Segoe UI''Roboto''Oxygen''Ubuntu''Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue'sans-serif;          -webkit-font-smoothing: antialiased;
           -moz-osx-font-smoothing: grayscale;
-          transition: background-color 0.3s ease, color 0.3s ease}
+          transition: background-color 0.3s easecolor 0.3s ease}
         .dark body {
           background-color: #0f172a;
           color: #f1f5f9}
@@ -113,7 +113,7 @@ export default function App({ ComponentpageProps }: AppProps) {
           padding: 0;
           margin: -1px;
           overflow: hidden;
-          clip: rect(0, 0, 00);
+          clip: rect(0, 000);
           white-space: nowrap;
           border: 0}
       `}</style>

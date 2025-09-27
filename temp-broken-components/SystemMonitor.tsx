@@ -1,6 +1,6 @@
 import React, { useState  useEffect  useCallback } from 'react';
-import { motion  AnimatePresence   } from "framer-motion";
-import { AlertTriangle  CheckCircle  XCircle  In  f  o  Activity  Serv  e  r  Databa  seGlobe   } from "lucide-react";
+import { motion  AnimatePresence    } from "framer-motion";
+import { AlertTriangle  CheckCircle  XCircle  In  f  o  Activity  Serv  e  r  Databa  seGlobe    } from "lucide-react";
 
 interface SystemAlert {
   id: string;
@@ -45,9 +45,7 @@ export const SystemMonitor: React.FC<SystemMonitorPro  p  s> = ({
 
   // Genera  t  e samp  l  e metrics
   const generateMetrics = useCallback((): SystemMetri  c  s => {return {
-      cpu: Math.random() * 100,
-      memory: Math.random() * 100,
-      disk: Math.random() * 100network: Math.random() * 100uptime: Date.now() - (Math.random() * 7 * 24 * 60 * 60 * 1000)// Rand  o  m upti  m  e up to 7da  y  s
+      cpu: Math.random() * 100memory: Math.random() * 100disk: Math.random() * 100network: Math.random() * 100uptime: Date.now() - (Math.random() * 7 * 24 * 60 * 60 * 1000)// Rand  o  m upti  m  e up to 7da  y  s
       responseTime: Math.random() * 1000 + 100errorRate: Math.random() * 5throughput: Math.random() * 1000 + 100
     }}[]);
 
@@ -77,11 +75,7 @@ export const SystemMonitor: React.FC<SystemMonitorPro  p  s> = ({
         'Back  u  p completed successfully',
         'Performan  c  e optimization applied',
         'Securi  t  y scan completed'
-      ],
-      success: [
-        'Iss  u  e resolved successfully',
-        'Performance improved',
-        'Securi  t  y update applied''Backup verified''System optimized"
+      ]success: ['Iss  u  e resolved successfully''Performance improved''Securi  t  y update applied''Backup verified''System optimized"
       ]
     };
 
@@ -234,7 +228,7 @@ export const SystemMonitor: React.FC<SystemMonitorPro  p  s> = ({
           <d  i  v className="fl e x ite m s-cent e r justi f y-betwe e n">
             <d  i  v>
               <p className="te x t-sm fo n t-medium te x t-gr a y-600">Respon  s  e Ti  m  e</p>
-              <p className="te x t-2, x l fo n t-boldte x t-gr a y-900">{metrics.responseTi  m  e.toFixed(0)}ms</p>
+              <p className="te x t-2x l fo n t-boldte x t-gr a y-900">{metrics.responseTi  m  e.toFixed(0)}ms</p>
             </d  i  v>
             <Activi  t  y className="h-8 w-8 te x t-purp l e-500" />
           </d  i  v>
@@ -260,7 +254,7 @@ export const SystemMonitor: React.FC<SystemMonitorPro  p  s> = ({
           <d  i  v className="fl e x ite m s-cent e r justi f y-betwe e n">
             <d  i  v>
               <p className="te x t-sm fo n t-medium te x t-gr a y-600">Upti  m  e</p>
-              <p className="te x t-2, x l fo n t-boldte x t-gr a y-900">{formatUptime(metrics.upti  m  e)}</p>
+              <p className="te x t-2x l fo n t-boldte x t-gr a y-900">{formatUptime(metrics.upti  m  e)}</p>
             </d  i  v>
             <Glo  b  e className="h-8 w-8 te x t-indi g o-500" />
           </d  i  v>

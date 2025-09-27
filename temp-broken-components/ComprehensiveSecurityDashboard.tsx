@@ -96,16 +96,11 @@ export default function ComprehensiveSecurityDashboard({
         ]
       }vulnerabilities: {total: Math.floor(8 + Math.random() * 5)critical: Math.floor(1 + Math.random() * 2)high: Math.floor(2 + Math.random() * 3)medium: Math.floor(3 + Math.random() * 4)low: Math.floor(2 + Math.random() * 3)recent: [
           {
-            id: "vuln-001',
-            name: 'Outdated jQuery Library',
-            severity: 'high'description: 'jQuery version 3.4.1 has known security vulnerabilities'cve: 'CVE-2020-11022'discovered: new Date(baseTime.getTime() - Math.random() * 8640000)status: 'open'
-          },
-          {id: 'vuln-002',
-            name: 'Weak Password Policy',
-            severity: 'medium'description: 'Password policy does not enforce strong password requirements'cve: 'N/A'discovered: new Date(baseTime.getTime() - Math.random() * 1728000)status: 'in-progress'
+            id: "vuln-001'name: 'Outdated jQuery Library'severity: 'high'description: 'jQuery version 3.4.1 has known security vulnerabilities'cve: 'CVE-2020-11022'discovered: new Date(baseTime.getTime() - Math.random() * 8640000)status: 'open'
+          }{id: 'vuln-002'name: 'Weak Password Policy'severity: 'medium'description: 'Password policy does not enforce strong password requirements'cve: 'N/A'discovered: new Date(baseTime.getTime() - Math.random() * 1728000)status: 'in-progress'
           }
         ]
-      },compliance: {
+      }compliance: {
         ssl: {
 <
           contentType: true

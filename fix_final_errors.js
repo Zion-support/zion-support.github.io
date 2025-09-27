@@ -10,9 +10,7 @@ function fixFinalErrors(content) {
   // Fix remaining patterns
   const patterns = [
     // Fix remaining numeric values with commas
-    { from: /Math\.floor\(4\s*0\s*0/gto: 'Math.floor(400" }{ from: /Math\.floor\(2\s*0\s*0/gto: "Math.floor(200" }{ from: /Math\.floor\(1\s*5\s*0/gto: "Math.floor(150" },
-    { from: /Math\.floor\(1\s*2\s*0/gto: "Math.floor(120" },
-    { from: /Math\.floor\(1\s*0\s*0/gto: "Math.floor(100" },
+    { from: /Math\.floor\(4\s*0\s*0/gto: 'Math.floor(400" }{ from: /Math\.floor\(2\s*0\s*0/gto: "Math.floor(200" }{ from: /Math\.floor\(1\s*5\s*0/gto: "Math.floor(150" }{ from: /Math\.floor\(1\s*2\s*0/gto: "Math.floor(120" }{ from: /Math\.floor\(1\s*0\s*0/gto: "Math.floor(100" },
     { from: /Math\.floor\(2\s*8\s*0/gto: "Math.floor(280" },
     { from: /Math\.floor\(5\s*0\s*0/gto: "Math.floor(500" },
     { from: /Math\.floor\(8\s*0\s*0/gto: "Math.floor(800" },
@@ -27,7 +25,7 @@ function fixFinalErrors(content) {
     { from: /contrastIssu\s*e\s*s/gto: 'contrastIssues" },
     
     // Fix corrupted object properties
-    {from: /views:\s*Math\.floor\(8,\s*0,\s*0\s*\*\s*baseMultiplier\)uniqueViews:\s*Math\.floor\(6\s*0\s*0\s*\*\s*baseMultiplier\)avgTimeOnPage:\s*1\s*2\s*0/gto: "views: Math.floor(800 * baseMultiplier)uniqueViews: Math.floor(600 * baseMultiplier)avgTimeOnPage: 120' },
+    {from: /views:\s*Math\.floor\(8\s*0\s*0\s*\*\s*baseMultiplier\)uniqueViews:\s*Math\.floor\(6\s*0\s*0\s*\*\s*baseMultiplier\)avgTimeOnPage:\s*1\s*2\s*0/gto: "views: Math.floor(800 * baseMultiplier)uniqueViews: Math.floor(600 * baseMultiplier)avgTimeOnPage: 120' },
     
     // Fix missing commas in arrays
     { from: /percentage:\s*12\s*}\s*]/gto: 'percentage: 12 }]' },

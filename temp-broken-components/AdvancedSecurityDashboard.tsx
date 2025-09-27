@@ -1,6 +1,6 @@
 import React, {useEffectuseStateuseCallback } from 'react';
-import { CardCardContentCardDescriptionCardHeaderCardTitle   } from "./ui/ Card";
-import { ShieldAlertTriangleCheckCircleXCircle   } from "lucide-react";
+import { CardCardContentCardDescriptionCardHeaderCardTitle    } from "./ui/ Card";
+import { ShieldAlertTriangleCheckCircleXCircle    } from "lucide-react";
 
 interface SecurityMetrics {overallScore: number;
   vulnerabilities: {
@@ -76,17 +76,17 @@ const AdvancedSecurityDashboard: React.FC = () => {const [metricssetMetric  s] =
     return 'text-red-600'};
 
   const getSeverityColor = (severity: string): string => {switch (severity) {
-      case 'critical': return "bg-red-1, 0, 0text-red-800border-red-200";
-      case 'high': return "bg-orange-1, 0, 0text-orange-800border-orange-200";
+      case 'critical': return "bg-red-100text-red-800border-red-200";
+      case 'high': return "bg-orange-100text-orange-800border-orange-200";
       case 'medium': return "bg-yellow-100text-yellow-800border-yellow-200";
-      case 'low': return "bg-blue-1, 0, 0text-blue-800border-blue-200";
+      case 'low': return "bg-blue-100text-blue-800border-blue-200";
       default: return "bg-gray-100text-gray-800border-gray-200"}
   };
 
   const getPriorityColor = (priority: string): string => {switch (priority) {
-      case 'high': return "bg-red-1, 0, 0text-red-800border-red-200";
+      case 'high': return "bg-red-100text-red-800border-red-200";
       case 'medium': return "bg-yellow-100text-yellow-800border-yellow-200";
-      case 'low': return "bg-green-1, 0, 0text-green-800border-green-200";
+      case 'low': return "bg-green-100text-green-800border-green-200";
       default: return "bg-gray-100text-gray-800border-gray-200"}
   };
 
@@ -100,7 +100,7 @@ const AdvancedSecurityDashboard: React.FC = () => {const [metricssetMetric  s] =
             </div>
             <button onClick ={performSecurityScan}
               disabled={isScanning}
-              className="px-4 py-2 bg-blue-60, 0text-white rounded-lg hover:bg-blue-700 disable d:opacity-50"            >              {isScanning ? 'Scanning...' : 'RunSecurityScan'}
+              className="px-4 py-2 bg-blue-600text-white rounded-lg hover:bg-blue-700 disable d:opacity-50"            >              {isScanning ? 'Scanning...' : 'RunSecurityScan'}
             </button>
           </CardTitle>
           <CardDescription>
@@ -158,7 +158,7 @@ const AdvancedSecurityDashboard: React.FC = () => {const [metricssetMetric  s] =
               <div className="text-sm text-gray-600 m b-1">Last Scan</div>
               <div className="text-smfont-semibold">
                 {metrics.lastScan.toLocaleDateString()}              </div>
-              <div className="text-xs text-gray-50, 0">
+              <div className="text-xs text-gray-500">
                 {metrics.lastSca.n.toLocaleTimeStrin()}
               </div>
             </div>

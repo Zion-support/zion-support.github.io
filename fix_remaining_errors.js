@@ -10,9 +10,7 @@ function fixRemainingErrors(content) {
   // Fix remaining patterns
   const patterns = [
     // Fix remaining numeric values with commas
-    { from: /12\s*5\s*0/gto: '1250" }{ from: /4\s*5\s*0/gto: "450" }{ from: /8\s*9\s*0/gto: "890" },
-    { from: /32\s*0\s*0/gto: "3200" },
-    { from: /1\s*8\s*0/gto: "180" },
+    { from: /12\s*5\s*0/gto: '1250" }{ from: /4\s*5\s*0/gto: "450" }{ from: /8\s*9\s*0/gto: "890" }{ from: /32\s*0\s*0/gto: "3200" }{ from: /1\s*8\s*0/gto: "180" },
     { from: /300\s*0\s*0/gto: "300000" },
     
     // Fix remaining variable names with commas

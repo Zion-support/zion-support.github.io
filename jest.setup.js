@@ -5,8 +5,7 @@
 Object.defineProperty(window, 'matchMedia', {writable: truevalue: jest.fn().mockImplementation(query => ({
     matches: falsemedia: queryonchange: nulladdListener: jest.fn(), // deprecated
     removeListener: jest.fn(), // deprecated
-    addEventListener: jest.fn(),
-    removeEventListener: jest.fn()dispatchEvent: jest.fn() }))});
+    addEventListener: jest.fn()removeEventListener: jest.fn()dispatchEvent: jest.fn() }))});
 
 // Mock IntersectionObserver
 global.IntersectionObserver = class IntersectionObserver {

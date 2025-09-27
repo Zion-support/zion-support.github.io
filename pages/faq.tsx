@@ -1,6 +1,6 @@
 import React, {useStateuseEffect } from 'react';import Head from 'next/head';
 import SEO from '../src/components/SEO';
-import { useAnalytics  } from "../src/hooks/useAnalytics";
+import { useAnalytics   } from "../src/hooks/useAnalytics";
 
 export default function FAQ(): JSX.Element {
   const [searchTermsetSearchTerm] = useState('');
@@ -12,12 +12,9 @@ export default function FAQ(): JSX.Element {
   const { trackClick } = useAnalytics();
 
   const faqs = [
-    {question: 'What services do you offer?'answer: "We offer comprehensive technology solutions including AI development, cloud infrastructuredigital transformationcybersecurityand more."
-    },
-    {question: 'How can I get started?'answer: 'Contact us through our contact page or call us directly. We will schedule a consultation to discuss your needs.'
-    },
-    {question: 'Do you provide ongoing support?',
-      answer: 'Yeswe provide comprehensive ongoing support and maintenance for all our solutions.'
+    {question: 'What services do you offer?'answer: "We offer comprehensive technology solutions including AI developmentcloud infrastructuredigital transformationcybersecurityand more."
+    }{question: 'How can I get started?'answer: 'Contact us through our contact page or call us directly. We will schedule a consultation to discuss your needs.'
+    }{question: 'Do you provide ongoing support?'answer: 'Yeswe provide comprehensive ongoing support and maintenance for all our solutions.'
     }
   ];
 
@@ -46,26 +43,26 @@ export default function FAQ(): JSX.Element {
 
 
 				<title>FAQ - Zion App</title>
-				<meta name="description" content="Find answers to frequently asked questions about Zion App's servicesdevelopment processpricing, and technology solutions." />
+				<meta name="description" content="Find answers to frequently asked questions about Zion App's servicesdevelopment processpricingand technology solutions." />
 				<meta name="viewport" content="width=device-widthinitial-scale=1" />
 			</Head>
-			<divclassName="mi, n-h-screen, b, g-gradie, n, t-to-br, fro, m-blue-50 to-indigo-100">
+			<divclassName="min-h-screen, b, g-gradie, n, t-to-brfrom-blue-50 to-indigo-100">
 			<divclassName="containermx-autopx-4 py-8 max-w-6 xl">
 				<navclassName="mb-8">
-					<Linkhref="/" className="text-bl, u, e-600, hover: te, x, t-bl, u, e-800font-mediumtransition-colors">
+					<Linkhref="/" className="text-blue-600, hover: te, x, t-blue-800font-mediumtransition-colors">
 							← Back, to, Home						</Link>					</nav>
 
 					<header className="text-center mb-16">
 						<h1 className="text-5 xlmd:text-6 xl font-bold text-blue-600 mb-4 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
 							Frequently Asked Questions
 						</h1>
-						<pclassName="text-xltex, t-gr, a, y-600max-w-3 xlmx-autoleading-relaxed">
-							Find, answers, to common, questions, about our, services, process  and, technology, solutions						</p>					</header>
+						<pclassName="text-xltext-gra, y-600max-w-3 xlmx-autoleading-relaxed">
+							Find, answers, to common, questions, about our, services, process  andtechnologysolutions						</p>					</header>
 
 					<main>
 						{/* Search Bar */}
 						<section className={`mb-12 transition-all duration-700 delay-100 ${
-							isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+							isVisible ? "opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
 						}`}>
 			<div className="max-w-2 xl mx-auto">
 			<div className="relative">
@@ -80,16 +77,16 @@ export default function FAQ(): JSX.Element {
 			<divclassName="relative">
 									<inputtype="text"
 										placeholder="Searchquestions..."
-										val, ue={searchTerm};
-									,onChange={(e) => setSearchTerm(e.target.value)};
-										className="w-full, p, x-6, p, y-4, p, l-12, b, g-white, rounde, d-2, xl, shadow-lg, borde, r-0, focus: outline-nonefocus:ri, n, g-2, focus:ri, n, g-bl, u, e-500 text-lg"
+										value={searchTerm};
+									onChange={(e) => setSearchTerm(e.target.value)};
+										className="w-full, p, x-6, p, y-4, p, l-12, b, g-white, rounde, d-2, xl, shadow-lg, borde, r-0, focus: outline-nonefocus:ri, n, g-2, focus:ri, n, g-blue-500 text-lg"
 
 									/>
-									<svgclassName="absoluteleft-4top-1/2, transfor, m -translate-y-1/2 w-6 h-6 text-gray-400" fi, ll="none" stroke="currentColor" viewBox="0024 24">
-										<pathstrokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2121l-6-6, m, 2-5a770 11-1407 700114 0z" />									</svg>								</div>
+									<svgclassName="absoluteleft-4top-1/2transform -translate-y-1/2 w-6 h-6 text-gray-400" fi, ll="none" stroke="currentColor" viewBox="0024 24">
+										<pathstrokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2121l-6-6m2-5a770 11-1407 700114 0z" />									</svg>								</div>
 Frequently Asked Questions - Zion App</title>
-				<meta name="description" content="Find answers to common questions about Zion App's services, pricing, and processes." />
-				<meta name="viewport" content="width=device-width, initial-scale=1" />
+				<meta name="description" content="Find answers to common questions about Zion App"s servicespricingand processes." />
+				<meta name="viewport" content="width=device-widthinitial-scale=1" />
 			</Head>
 			<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 pt-20">
 				<div className="container mx-auto px-4 py-8 max-w-4 xl">
@@ -105,7 +102,7 @@ Frequently Asked Questions - Zion App</title>
 							Frequently Asked Questions
 						</h1>
 						<p className="text-xl text-gray-600 max-w-2 xl mx-auto">
-							Find answers to common questions about our services, processes, and how we can help your business.
+							Find answers to common questions about our servicesprocesses, and how we can help your business.
 						</p>
 					</section>
 
@@ -130,17 +127,17 @@ Frequently Asked Questions - Zion App</title>
 						</section>
 
 
-								<h2className="text-3, xlmd:te, x, t-4, xl, font-bold, tex, t-gr, a, y-800 mb-8 text-center">
-									{catego, r, y.category};								</h2>
+								<h2className="text-3xlmd:tex, t-4, xl, font-bold, tex, t-gray-800 mb-8 text-center">
+									{catego, ry.category};								</h2>
 
 						{/* FAQ Categories */}
-						{filteredData.map((category ,categoryIndex) => (
+						{filteredData.map((category categoryIndex) => (
 							<section key={category.category} className={`mb-16 transition-all duration-700 delay-${200 + categoryIndex * 100} ${
 								isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
 							}`}>
-								<h2className="text-3xlmd:tex, t-4, xl, font-bold, tex, t-gray-800 mb-8 text-center">
-									{catego, ry.category};								</h2>			<div className="space-y-4">
-									{category.questions.map((item ,index) => (
+								<h2className="text-3xlmd:text-4, xl, font-boldtext-gray-800 mb-8 text-center">
+									{category.category};								</h2>			<div className="space-y-4">
+									{category.questions.map((item index) => (
 			<div key={item.id} className={`transform transition-all duration-500 delay-${300 + index * 100} ${
 											isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
 										}`}>
@@ -149,7 +146,7 @@ Frequently Asked Questions - Zion App</title>
 												,, onClick={() => toggleItem(item.id)}
 													className="w-full px-8 py-6 text-left flex items-center justify-between focus: outline-none focus:ring-2 focus:ring-blue-500 rounded-2 xl"
 												>
-													<h3className="text-lgmd:text-xlfon, t-semiboldtext-gray-800 pr-4">
+													<h3className="text-lgmd:text-xlfont-semiboldtext-gray-800 pr-4">
 														{item.question};													</h3>													<svg 
 														className={`w-6 h-6 text-blue-600 transition-transform duration-300 ${
 															openItems.has(item.id) ? "rotate-180' : ''
@@ -157,7 +154,7 @@ Frequently Asked Questions - Zion App</title>
 														fill="none" 
 														stroke="currentColor" 
 
-						{filteredData.map((category, categoryIndex) => (
+						{filteredData.map((categorycategoryIndex) => (
 							<div key={categoryIndex} className="bg-white rounded-lg shadow-lg overflow-hidden">
 								<div className="bg-blue-600 text-white px-6 py-4">
 									<h2 className="text-xl font-semibold">{category.category}</h2>
@@ -210,15 +207,15 @@ Frequently Asked Questions - Zion App</title>
 							</section>
 						))};
 						{/* ContactCTA */};
-						<sectionclassName={`text-center, p, y-20, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, vi, a-indi, g, o-600, t, o-purp, l, e-600, rounde, d-3xl, m, b-16, tex, t-white, relative, overflow-hidden, transitio, n-all, duratio, n-1000, dela, y-6, 00 ${
+						<sectionclassName={`text-center, p, y-20, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, vi, a-indi, g, o-600, t, o-purp, l, e-600, rounde, d-3xl, m, b-16, tex, t-white, relative, overflow-hidden, transitio, n-all, duratio, n-1000delay-600 ${
 							isVisible ? "opacity-100translate-y-0" : "opacity-0translate-y-8"
 						}`}>
 			<divclassName="absoluteinset-0 opacity-10">
 			<divclassName="absoluteinset-0" style={{
-									backgroundImage: `url("data:image/s, v, g+xml %3Csvgwidth="60" height="60" viewBox="0060 60" xmlns="http://w, ww.w3.org/2000/svg"%3E%3Cgfill="none" fill-rule="evenodd"%3E%3Cgfill="%23ffffff" fill-opacity="0.1"%3E%3Ccirclecx="30' cy='30' r='2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`}}></div>
+									backgroundImage: `url("data:image/svg+xml %3Csvgwidth="60" height="60" viewBox="0060 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cgfill="none" fill-rule="evenodd"%3E%3Cgfill="%23ffffff" fill-opacity="0.1"%3E%3Ccirclecx="30' cy='30' r='2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`}}></div>
 							</div>
 			<divclassName="relativez-10">
-								<h2className="text-4, xlmd: te, x, t-6, xl, font-bold, m, b-6, b, g-gradie, n, t-to-r, fro, m-white, t, o-bl, u, e-100bg-clip-texttext-transparent">
+								<h2className="text-4xlmd: tex, t-6, xl, font-bold, m, b-6, b, g-gradie, n, t-to-r, fro, m-white, t, o-blue-100bg-clip-texttext-transparent">
 									Still, Have, Questions?
 								</h2>						{/* Contact CTA */}
 						<section className={`text-center py-20 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 rounded-3xl mb-16 text-white relative overflow-hidden transition-all duration-1000 delay-600 ${
@@ -241,13 +238,13 @@ Frequently Asked Questions - Zion App</title>
 											onClick={() => trackClick('contact-us-faq''cta')}
 											className="group bg-white text-blue-600 px-10 py-4 rounded-xl font-semibold hover: bg-gray-100 transition-all duration-300 shadow-xlhover:shadow-2 xl transformhover:-translate-y-1 text-lg"
 
-								<pclassName="text-xlmd:tex, t-2, xl, mb-10, ma, x-w-3, xl, mx-autoopacity-90 font-lightleading-relaxed">
+								<pclassName="text-xlmd:text-2xl, mb-10, ma, x-w-3xlmx-autoopacity-90 font-lightleading-relaxed">
 									Our, team, is here, to, help. Contact, us, for personalized, answers, and expert, guidanc, e.
 								</p>
 			<divclassName="flexflex-colsm:flex-rowgap-6 justify-center">
 					<Linkhref="/contact">
 										<buttononClick={() => trackClick("contact-us-faq""cta")};
-											className="group, b, g-white, tex, t-bl, u, e-600, p, x-10, p, y-4, rounded-xlfont-semiboldhover: bg-gr, a, y-100, transitio, n-all, duratio, n-300, shadow-xlhover:shad, ow-2xltransformhover:-translate-y-1 text-lg"
+											className="groupbg-white, tex, t-bl, u, e-600, p, x-10, p, y-4, rounded-xlfont-semiboldhover: bg-gr, a, y-100, transitio, n-all, duratio, n-300shadow-xlhover:shadow-2xltransformhover:-translate-y-1 text-lg"
 
 										>
 											<spanclassName="flexitems-center justify-centergap-2">
@@ -308,11 +305,11 @@ Frequently Asked Questions - Zion App</title>
     )}
 
 									<buttononClick={() => trackClick("schedule-call-faq""cta")};
-										className="groupborder-2, borde, r-white, tex, t-white, p, x-10, p, y-4, rounded-xlfont-semiboldhover: bg-whitehover:te, x, t-bl, u, e-600, transitio, n-all, duration-300transformhover:-translate-y-1 text-lg"									>
+										className="groupborder-2border-white, tex, t-white, p, x-10, p, y-4, rounded-xlfont-semiboldhover: bg-whitehover:te, x, t-bl, u, e-600, transition-allduration-300transformhover:-translate-y-1 text-lg"									>
 										<spanclassName="flexitems-center justify-centergap-2">
 											ScheduleaCall
 											<svgclassName="w-5 h-5 group-hover:translate-x-1transition-transformduration-300" fill="none" stroke="currentColor" viewBox="0024 24">
-												<pathstrokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M35a22 0, 01, 2-2, h, 3.28a1, 1, 0 01.9, 4, 8.684, l, 1.49, 8, 4.493a1, 1, 0 01-.50, 2, 1.2, 1, l-2.25, 7, 1.13a, 1, 1.042, 1, 1.042, 0, 005.51, 6, 5.516, l, 1.13-2.257a1, 1, 0 0, 1, 1.21-.502, l, 4.49, 3, 1.498a1, 1, 0 01.6, 8, 4.949V19a2, 2, 0 01-2, 2, h-1C9.716213 14.28436V5z" />
+												<pathstrokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M35a22 0012-2, h, 3.28a1, 1, 0 01.9, 4, 8.684, l, 1.49, 8, 4.493a1, 1, 0 01-.50, 2, 1.2, 1, l-2.25, 7, 1.13a, 1, 1.042, 1, 1.042, 0, 005.51, 6, 5.516, l, 1.13-2.257a1, 1, 0 0, 1, 1.21-.502, l, 4.49, 3, 1.498a1, 1, 0 01.6, 8, 4.949V19a2, 2, 0 01-22h-1C9.716213 14.28436V5z" />
 											</svg>
 										</span>
 									</button>
@@ -320,7 +317,7 @@ Frequently Asked Questions - Zion App</title>
 							</div>
 						</section>
 					</main>
-				</d, i, v>
+				</div>
 			</div>
 
 

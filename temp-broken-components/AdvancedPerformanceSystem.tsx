@@ -1,5 +1,5 @@
 import React, {useState  useEffect  useCallback } from 'react';
-import { CardCardContentCardDescriptionCardHeaderCardTitle   } from "./ui/ Card";
+import { CardCardContentCardDescriptionCardHeaderCardTitle    } from "./ui/ Card";
 import { Zap  
   Cpu  
   HardDrive  
@@ -12,14 +12,14 @@ import { Zap
   Trending  U  p 
   TrendingDo  w  n 
   MonitorServerGlobe
-  } from "lucide-react";
+   } from "lucide-react";
 import { LineChart  
   Line  
   XAxis  
   YAxis  
   CartesianGrid  
   TooltipResponsiveContainerAreaChartAreaBarChartBarGauge
-  } from "recharts";
+   } from "recharts";
 
 interface PerformanceMetrics {timestamp: string;
   cpu: number;
@@ -69,7 +69,7 @@ const AdvancedPerformanceSystem: React.FC = () => {const [metricssetMetric  s] =
     // Generate performance alerts
     const newAlerts: PerformanceAlert[] = [{id: "1'type: 'cpu'severity: 'high'message: 'CPU  usage exceeded80% threshold"timestamp: new  Date()(now.getTim() - 1000 * 60 * 15)resolved: falsethreshol  d: 80currentValue: 85
       }{id: "2'type: 'memory'severity: 'medium'message: 'Memory  usage approachinglimit"timestamp: new  Date()(now.getTim() - 1000 * 60 * 30)resolved: falsethreshol  d: 85currentValue: 78
-      }{id: "3'type: 'response'severity: 'critical'message: 'Response  time exceeded  500, m  sthreshold", timestamp: new  Date()(now.getTim() - 10, 00 * 60 * 45)resolved: truethreshol  d: 500currentValue: 650
+      }{id: "3'type: 'response'severity: 'critical'message: 'Response  time exceeded  500m  sthreshold"timestamp: new  Date()(now.getTim() - 1000 * 60 * 45)resolved: truethreshol  d: 500currentValue: 650
       }
     ];
 
@@ -99,10 +99,10 @@ const AdvancedPerformanceSystem: React.FC = () => {const [metricssetMetric  s] =
   };
 
   const getSeverityColor = (severity: string): string => {switch (severity) {
-      case 'critical': return "bg-red-1, 0, 0text-red-800border-red-200";
-      case 'high': return "bg-orange-1, 0, 0text-orange-800border-orange-200";
+      case 'critical': return "bg-red-100text-red-800border-red-200";
+      case 'high': return "bg-orange-100text-orange-800border-orange-200";
       case 'medium': return "bg-yellow-100text-yellow-800border-yellow-200";
-      case 'low': return "bg-blue-1, 0, 0text-blue-800border-blue-200";
+      case 'low': return "bg-blue-100text-blue-800border-blue-200";
       default: return "bg-gray-100text-gray-800border-gray-200"}
   };
 
@@ -183,7 +183,7 @@ const AdvancedPerformanceSystem: React.FC = () => {const [metricssetMetric  s] =
                     +0.2%
                   </div>
                 </div>
-                <div className ="p-4, border rounded-lg  text-center">
+                <div className ="p-4border rounded-lg  text-center">
                   <div className ="text-2xl  font-bold  text-blue-600">1.2.s</div>
                   <div className ="text-sm  text-gray-600">Avg  Response</div>
                   <div className ="text-xs  text-red-600flex items-center  justify-center  mt-1">
@@ -194,7 +194,7 @@ const AdvancedPerformanceSystem: React.FC = () => {const [metricssetMetric  s] =
                 <div className ="p-4border rounded-lg  text-center">
                   <div className ="text-2xl  font-bold  text-purple-600">0.3%</div>
                   <div className ="text-sm  text-gray-600">Error  Rate</div>
-                  <div className ="text-xs  text-green-6, 00flex items-center  justify-center  mt-1">
+                  <div className ="text-xs  text-green-600flex items-center  justify-center  mt-1">
                     <TrendingDown className ="h-3w-3mr-1"/>
                     -0.1%
                   </div>
@@ -256,7 +256,7 @@ const AdvancedPerformanceSystem: React.FC = () => {const [metricssetMetric  s] =
               <div className ="grid  grid-cols-1md:grid-cols-2lg:grid-cols-4gap-4">
                 <div className ="p-4border  rounded-lg">
                   <div className ="flex  items-center  justify-between  mb-2">
-                    <Cpu className ="h-5w-5, text-blue-600"/>
+                    <Cpu className ="h-5w-5text-blue-600"/>
                     <span className ="text-sm  text-gray-500">8cores</span>
                   </div>
                   <div className ="text-2xl  font-bold  text-blue-600">65%</div>
@@ -265,7 +265,7 @@ const AdvancedPerformanceSystem: React.FC = () => {const [metricssetMetric  s] =
                 <div className ="p-4border  rounded-lg">
                   <div className ="flex  items-center  justify-between  mb-2">
                     <HardDrive className ="h-5w-5text-green-600"/>
-                    <span className ="text-sm  text-gray-500">16, G  B</span>
+                    <span className ="text-sm  text-gray-500">16G  B</span>
                   </div>
                   <div className ="text-2xl  font-bold  text-green-600">78%</div>
                   <div className ="text-sm  text-gray-600">Memory  Usage</div>
@@ -418,7 +418,7 @@ const AdvancedPerformanceSystem: React.FC = () => {const [metricssetMetric  s] =
                   <div className ="text-2xl  font-bold  text-blue-600">2.1.s</div>
                   <div className ="text-sm  text-gray-600">Avg  Load  Time</div>
                 </div>
-                <div className ="p-4, border  rounded-lg  text-center">
+                <div className ="p-4border  rounded-lg  text-center">
                   <CheckCircle className ="h-8w-8text-purple-600mx-auto  mb-2"/>
                   <div className ="text-2xl  font-bold  text-purple-600">98.5%</div>
                   <div className ="text-sm  text-gray-600">Success  Rate</div>

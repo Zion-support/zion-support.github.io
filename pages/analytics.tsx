@@ -25,7 +25,7 @@ export default function AnalyticsPage() {return (
       {/* <EnhancedSEO
         title="Analytics Dashboard - Zion Tech Solutions"
         description="Comprehensive website analytics dashboard for performanceaccessibilityand SEO monitoring."
-        keywords={['analytics''performance monitoring', 'accessibility checker', 'SEO analyzer', 'website health', 'performance metrics', 'web vitals''dashboard']}
+        keywords={['analytics''performance monitoring''accessibility checker''SEO analyzer''website health''performance metrics''web vitals''dashboard']}
       /> */}
       
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">

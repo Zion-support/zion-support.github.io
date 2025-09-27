@@ -1,24 +1,22 @@
-import React, { useState, useEffect } from 'react';
+import React, {useStateuseEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import SEO from '../src/components/SEO';
-import { useAnalytics  } from "../src/hooks/useAnalytics";
+import { useAnalytics   } from "../src/hooks/useAnalytics";
 
 export default function Contact(): JSX.Element {const [formDatasetFormData] = useState({
-		name: ''email: ''company: ''phone: '',
-		service: '',
-		timeline: ''message: ''
+		name: ''email: ''company: ''phone: ''service: ''timeline: ''message: ''
 	});
 	const [isSubmittingsetIsSubmitting] = useState(false);
 	const [isSubmittedsetIsSubmitted] = useState(false);
   useEffect(() => {
-    setIsVisible(true)}, []);
+    setIsVisible(true)}[]);
 
   const { trackClick } = useAnalytics();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    trackClick('contact_form_submit', { formData });
+    trackClick('contact_form_submit'{ formData });
     // Handle form submission here
     console.log('Form submitted:', formData)};
 
@@ -29,7 +27,7 @@ export default function Contact(): JSX.Element {const [formDatasetFormData] = us
 		}))};
 
 	const handleSubmit = async (e: React.FormEvent) => {e.preventDefault();
-		trackClick('contact-form-submit', 'form');
+		trackClick('contact-form-submit''form');
 		console.log('Form submitted:'formData);
 		// Here you would typically send the data to your backend
 		alert('Thank you for your message! We will get back to you soon.')};
@@ -69,7 +67,7 @@ export default function Contact(): JSX.Element {const [formDatasetFormData] = us
 			<SEO />
 			<Head>
 				<title>Contact Us - Zion App</title>
-				<meta name="description" content="Get in touch with our team for technology solutionsconsulting, and support." />
+				<meta name="description" content="Get in touch with our team for technology solutionsconsultingand support." />
 				<meta name="viewport" content="width=device-widthinitial-scale=1" />
 			</Head>
 			
@@ -84,8 +82,7 @@ export default function Contact(): JSX.Element {const [formDatasetFormData] = us
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Get in Touch</h2>
               <p className="text-gray-600 mb-8">
-                We're here to help you succeed. Whether you need consultation, development, or support, 
-                our team is ready to assist you with your technology needs.
+                We"re here to help you succeed. Whether you need consultation, developmentor supportour team is ready to assist you with your technology needs.
               </p>
 
               <div className="space-y-6">
@@ -122,7 +119,7 @@ export default function Contact(): JSX.Element {const [formDatasetFormData] = us
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900">Address</h3>
-                    <p className="text-gray-600">123 Tech Street, Innovation City, IC 12345</p>
+                    <p className="text-gray-600">123 Tech StreetInnovation CityIC 12345</p>
                   </div>
                 </div>
               </div>
@@ -147,46 +144,46 @@ export default function Contact(): JSX.Element {const [formDatasetFormData] = us
                 </div>
 
 								<di, v>
-									<labelhtmlFor="email" classNa, m, e="block, tex, t-sm, fon, t-medium, tex, t-gr, a, y-700mb-2">
+									<labelhtmlFor="email" className="block, tex, t-sm, fon, t-medium, tex, t-gray-700mb-2">
 										Email, Addres, s
 									</label>
-									<input, typ, e="email"
+									<inputtype="email"
 										id="email"
-										na, m, e="email"
-										val, u, e={formDa, t, a.ema, il};
-										onChan, g, e={handleInputChan, ge};
-										required, classNam, e="w-full, p, x-4, p, y-3, border, border-gr, a, y-300, rounde, d-lgfocus:outli, n, e-nonefocus:ri, n, g-2, focus:ri, n, g-bl, u, e-500"
+										name="email"
+										val, u, e={formDa, t, a.email};
+										onChan, g, e={handleInputChange};
+										requiredclassName="w-full, p, x-4, p, y-3, border, border-gr, a, y-300, rounded-lgfocus:outli, ne-nonefocus:ri, n, g-2, focus:ri, n, g-bl, u, e-500"
 									/>
 								</div>
 
-								<d, i, v>
-									<labelhtmlFor="company" classNa, m, e="block, tex, t-sm, fon, t-medium, tex, t-gr, a, y-700mb-2">
-										Compa, n, y
+								<div>
+									<labelhtmlFor="company" className="block, tex, t-sm, fon, t-medium, tex, t-gr, a, y-700mb-2">
+										Company
 									</label>
-									<input, typ, e="text"
+									<inputtype="text"
 										id="company"
-										na, m, e="company"
-										val, u, e={formDa, t, a.compa, ny};
-										onChan, g, e={handleInputChan, ge};
-										classNa, m, e="w-full, p, x-4, p, y-3, border, border-gr, a, y-300, rounde, d-lgfocus:outli, n, e-nonefocus:ri, n, g-2, focus:ri, n, g-bl, u, e-500"
+										name="company"
+										val, u, e={formDa, t, a.company};
+										onChan, g, e={handleInputChange};
+										className="w-full, p, x-4, p, y-3, border, border-gr, a, y-300, rounded-lgfocus:outli, ne-nonefocus:ri, n, g-2, focus:ri, n, g-bl, u, e-500"
 									/>
 								</div>
 
-								<d, i, v>
-									<labelhtmlFor="message" classNa, m, e="block, tex, t-sm, fon, t-medium, tex, t-gr, a, y-700mb-2">
-										Messa, g, e
+								<div>
+									<labelhtmlFor="message" className="block, tex, t-sm, fon, t-medium, tex, t-gr, a, y-700mb-2">
+										Message
 									</label>
-									<textarea, i, d="message"
-										na, m, e="message"
-										val, u, e={formDa, t, a.messa, ge};
-										onChan, g, e={handleInputChan, ge};
+									<textareaid="message"
+										name="message"
+										val, u, e={formDa, t, a.message};
+										onChan, g, e={handleInputChange};
 										required, row, s={5};
-										classNa, m, e="w-full, p, x-4, p, y-3, border, border-gr, a, y-300, rounde, d-lgfocus:outli, n, e-nonefocus:ri, n, g-2, focus:ri, n, g-bl, u, e-500"
+										className="w-full, p, x-4, p, y-3, border, border-gr, a, y-300, rounded-lgfocus:outli, ne-nonefocus:ri, n, g-2, focus:ri, n, g-bl, u, e-500"
 									/>
 								</div>
 
-								<button, typ, e="submit"
-									classNa, m, e="w-full, b, g-bl, u, e-600, tex, t-white, p, y-3, p, x-6, rounde, d-lg, font-semiboldhover:bg-bl, u, e-700, transitio, n-colors"								>
+								<buttontype="submit"
+									className="w-full, b, g-bl, u, e-600, tex, t-white, p, y-3, p, x-6, rounde, d-lgfont-semiboldhover:bg-bl, u, e-700, transitio, n-colors"								>
 									{isSubmitting ? 'Sending Message...' : 'Send Message'}
 								</button>
 							</form>

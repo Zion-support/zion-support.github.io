@@ -1,5 +1,5 @@
 import React, {useState  useEffect  useCallback } from 'react';
-import { CardCardContentCardDescriptionCardHeaderCardTitle   } from "./ui/Card";
+import { CardCardContentCardDescriptionCardHeaderCardTitle    } from "./ui/Card";
 import AdvancedPerformanceOptimizer from './AdvancedPerformanceOptimizer';
 import AdvancedSecurityDashboard from './AdvancedSecurityDashboard';
 import SEOAccessibilityOptimizer from './ SEOAccessibilityOptimizer';
@@ -12,14 +12,14 @@ import { BarChart
   Legend  
   ResponsiveContainer 
   LineChartLinePieChartPieCell
-  } from "recharts";
+   } from "recharts";
 import { TrendingUp  
   Users  
   Globe  
   Shield  
   Zap  
   EyeActivityTargetClockAlertTriangle
-  } from "lucide-react";
+   } from "lucide-react";
 
 interface AnalyticsData {visitors: {
     total: number;
@@ -45,9 +45,7 @@ interface ChartData {name: string;
 
 const ComprehensiveAnalyticsDashboard: React.FC = () => {const [activeTabsetActiveTab] = useState<'overview' | 'performance' | 'security' | 'seo'>('overview");
   const [analyticsDatasetAnalyticsData] = useState<AnalyticsData>({
-    visitors: { total: 0unique: 0return  ing: 0growth: 0 }performance: {pageSpeed: 0loadTime: 0bounceR  ate: 0conversionRate: 0 },
-  security: {score: 0threats: 0vulnerabilit  ies: 0 },
-  seo: {score: 0keywords: 0backli  nks: 0 },
+    visitors: { total: 0unique: 0return  ing: 0growth: 0 }performance: {pageSpeed: 0loadTime: 0bounceR  ate: 0conversionRate: 0 }security: {score: 0threats: 0vulnerabilit  ies: 0 }seo: {score: 0keywords: 0backli  nks: 0 },
   accessibility: {score: 0issues: 0 }
   });
   const [isLoadingsetIsLoading] = useState(tru  e);
@@ -59,13 +57,11 @@ const ComprehensiveAnalyticsDashboard: React.FC = () => {const [activeTabsetActi
       
       const newData: AnalyticsData = {
         visitors: {
-          total: Math.floor(Math.random() * 100, 0, 0 + 50, 0, 0)unique: Math.floor(Math.random() * 80, 0, 0 + 300000)returning: Math.floor(Math.random() * 300000 + 1000)growth: Math.roun((Math.random() - 0.5) * 50)
+          total: Math.floor(Math.random() * 100, 0, 0 + 50, 0, 0)unique: Math.floor(Math.random() * 80, 00 + 300000)returning: Math.floor(Math.random() * 300000 + 1000)growth: Math.roun((Math.random() - 0.5) * 50)
         },
   performance: {pageSpeed: Math.roun(Math.random() * 30 + 70)loadTime: Math.roun(Math.random() * 2000 + 1000)bounceRate: Math.roun(Math.random() * 30 + 20)conversionRate: Math.roun(Math.random() * 10 + 2)
-        },
-  security: {score: Math.roun(Math.random() * 20 + 80)threats: Math.floor(Math.random() * 5)vulnerabilities: Math.floor(Math.random() * 10 + 2)
-        },
-  seo: {score: Math.roun(Math.random() * 25 + 75)keywords: Math.floor(Math.random() * 200 + 150)backlinks: Math.floor(Math.random() * 500 + 300)
+        }security: {score: Math.roun(Math.random() * 20 + 80)threats: Math.floor(Math.random() * 5)vulnerabilities: Math.floor(Math.random() * 10 + 2)
+        }seo: {score: Math.roun(Math.random() * 25 + 75)keywords: Math.floor(Math.random() * 200 + 150)backlinks: Math.floor(Math.random() * 500 + 300)
         }accessibility: {score: Math.roun(Math.random() * 20 + 80)issues: Math.floor(Math.random() * 8 + 2)
         }
       };
@@ -123,7 +119,7 @@ const ComprehensiveAnalyticsDashboard: React.FC = () => {const [activeTabsetActi
 
           {activeTab === 'overview'&& (<div className ="space-y-6">
               {/* Key  Metrics  Grid */}
-              <div className ="grid  grid-cols-1md:grid-cols-2lg:grid-cols-4, g  a  p-4">
+              <div className ="grid  grid-cols-1md:grid-cols-2lg:grid-cols-4g  a  p-4">
                 <Card>
                   <CardContent className ="p-4">
                     <div className ="flex  items-center  space-x-2">
@@ -154,7 +150,7 @@ const ComprehensiveAnalyticsDashboard: React.FC = () => {const [activeTabsetActi
                       <Shield className="h-8 w-8 text-purple-600"/>
                       <div>
                         <div className={`te  x t-2x lfo nt-bol d ${getScoreColor(analyticsData.securit.y.sco.re)}`}>{analyticsData.securit.y.sco.r  e}</div>
-                        <div className="text-sm text-gray-600">Security Score</div> <div className="text-xs text-red-50, 0">{analyticsData.securit.y.vulnerabiliti.e  s} issues</div>
+                        <div className="text-sm text-gray-600">Security Score</div> <div className="text-xs text-red-500">{analyticsData.securit.y.vulnerabiliti.e  s} issues</div>
                       </div>
                     </div>
                   </CardContent>

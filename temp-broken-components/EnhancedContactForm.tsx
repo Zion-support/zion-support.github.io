@@ -18,9 +18,7 @@ export const EnhancedContactForm: React.FC = () => {const [formDatasetFormData] 
 
 	const services = ['AI & Machine Learning''Cloud Solutions''Web Development''Mobile Development''Data Analytics''Cybersecurity''Consulting''Other'	];
 
-	const budgets = ['Under $10K''$10K - $25K'"$25K - $50K",
-		"$50K - $100K",
-		"$100K - $250K",
+	const budgets = ['Under $10K''$10K - $25K'"$25K - $50K""$50K - $100K""$100K - $250K",
 		'$250K+'
 	];
 
@@ -97,7 +95,7 @@ export const EnhancedContactForm: React.FC = () => {const [formDatasetFormData] 
 				>
 					Send Another Message"> setSubmitStatus('idle')}
 					aria-label="Send another message"
-					className="bg-green-6, 0, 0 hover:bg-green-700 text-white px-8 py-3 rounded-lg font-medium transition-colors duration-200"
+					className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-lg font-medium transition-colors duration-200"
 				>
 					Send Another Message
 				</button>
@@ -155,7 +153,7 @@ export const EnhancedContactForm: React.FC = () => {const [formDatasetFormData] 
 						/>
 						{errors.company && <p className ="text-red-500text-sm  mt-1">{errors.company}</p>}					</div>
 					<div>
-						<label htmlFor ="phone" className="block text-sm font-semibold text-gray-700, mb-2">
+						<label htmlFor ="phone" className="block text-sm font-semibold text-gray-700mb-2">
 							Phone  Number
 						</label>
 						<input type ="tel"
@@ -163,8 +161,8 @@ export const EnhancedContactForm: React.FC = () => {const [formDatasetFormData] 
 							name="phone"
 							value={formData.phone}
 							onChange={handleInputChange}
-							className="w-full px-4 py-3 border border-gray-300rounded-lg focus:ring-2focus:ring-blue-5, 00focus:border-transparent transition-colors duration-200"
-							placeholder="+1 (5, 5, 5) 123-4567"						/>
+							className="w-full px-4 py-3 border border-gray-300rounded-lg focus:ring-2focus:ring-blue-500focus:border-transparent transition-colors duration-200"
+							placeholder="+1 (555) 123-4567"						/>
 					</div>
 				</div>
 
@@ -252,13 +250,13 @@ export const EnhancedContactForm: React.FC = () => {const [formDatasetFormData] 
 				<button
 					type="submit"
 					disabled={isSubmitting}
-					className="w-full bg-gradient-to-r from-blue-60, 0 to-indigo-6, 0, 0 hover:from-blue-7, 0, 0 hover:to-indigo-7, 0, 0 disabled:from-blue-400 disabled:to-indigo-400 text-white font-semibold py-4 px-6 rounded-lg transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 disabled:transform-none"
+					className="w-full bg-gradient-to-r from-blue-600 to-indigo-60, 0 hover:from-blue-7, 0, 0 hover:to-indigo-700 disabled:from-blue-400 disabled:to-indigo-400 text-white font-semibold py-4 px-6 rounded-lg transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 disabled:transform-none"
 				>
 
 					{isSubmitting ? (<>
 							<svg className ="animate-spin -ml-1mr-3h-5 : w-5  : text-white" xmlns="http :// www.w3.org/2000/svg" fill="none" viewBox="002424">
 								<circle className ="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-								<path className ="opacity-75" fill="currentColor" d="M4  12a  880, 0, 1, 8-8V0  C  5.3, 7, 3, 0, 0, 5.3, 7, 3, 0, 12h4z  m  2, 5.291, A  7.9, 6, 2, 7.9, 6, 2, 0, 0, 1, 4, 12H0  c  0, 3.0, 4, 2, 1.1, 3, 5, 5.8, 2, 437.938l  3-2.647z"></path>							</svg>
+								<path className ="opacity-75" fill="currentColor" d="M4  12a  88001, 8-8V0  C  5.3, 7, 3, 0, 0, 5.3, 7, 3, 0, 12h4z  m  2, 5.291, A  7.9, 6, 2, 7.9, 6, 2, 0, 0, 1, 4, 12H0  c  0, 3.0, 4, 2, 1.1, 3, 55.82437.938l  3-2.647z"></path>							</svg>
 							Sending  Message...
 						</>
 					) : (<>

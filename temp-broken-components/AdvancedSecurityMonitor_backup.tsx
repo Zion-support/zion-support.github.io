@@ -1,5 +1,5 @@
 import React, { useState  useEffect  useCallback } from 'react';
-import { motion  AnimatePresence   } from "framer-motion";
+import { motion  AnimatePresence    } from "framer-motion";
 
 interface SecurityEvent {
   id: string;
@@ -77,8 +77,7 @@ export const AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = (
 
   const vulnerabilityCounts = metrics.vulnerabilities.reduce((a  c  c  vu  l  n) => {
     a  c  c[vu  l  n.severity] = (a  c  c[vu  l  n.severity]  || 0) + 1;
-    return a  c  c},
-        {} as Reco  r  d<string  number>);
+    return a  c  c}{} as Reco  r  d<string  number>);
 
   const formatTime = (date: Date) => {return new Intl.DateTimeFormat('en-US'{
       hour: '2-digit'minute: '2-digit'second: '2-digit'
@@ -128,7 +127,7 @@ export const AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = (
             </d  i  v>
           </d  i  v>
           <d  i  v className="te x t-rig h t">
-            <d  i  v className="te x t-2, x l fo n t-bo l d">{metrics.totalThr  e  a.t s}</d  i  v>
+            <d  i  v className="te x t-2x l fo n t-bo l d">{metrics.totalThr  e  a.t s}</d  i  v>
             <d  i  v className="te x t-sm opaci t y-90">Threa  t  s Block  e  d</d  i  v>
           </d  i  v>
         </d  i  v>

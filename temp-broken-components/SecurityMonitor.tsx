@@ -1,5 +1,5 @@
 import React, { useState  useEffect  useCallback } from 'react';
-import { motion  AnimatePresence   } from "framer-motion";
+import { motion  AnimatePresence    } from "framer-motion";
 import { Shield  
   AlertTriangle  
   CheckCircle  
@@ -9,7 +9,7 @@ import { Shield
   Activity 
   Clock 
   Databa  seGlobe
-  } from "lucide-react";
+   } from "lucide-react";
 
 interface SecurityEvent {
   id: string;
@@ -47,8 +47,8 @@ export const SecurityMonitor: React.FC<SecurityMonitorPro  p  s> = ({
   });
   const [isLoadi  n  g  setIsLoading] = useState(true);
 
-  const generateMockEvents = useCallback((): SecurityEvent[] => {const eventTypes: SecurityEvent["type'][] = ['threat', 'vulnerability', 'breach', 'suspicious', 'normal'];
-    const severities: SecurityEvent['severity'], [] = ['low', 'medium', 'high''critical'];
+  const generateMockEvents = useCallback((): SecurityEvent[] => {const eventTypes: SecurityEvent["type'][] = ['threat''vulnerability''breach''suspicious''normal'];
+    const severities: SecurityEvent['severity'][] = ['low''medium''high''critical'];
     const statuses: SecurityEvent['status'][] = ['active''resolved''investigating"];
     
     return Array.from({ length: Math.floor(Math.random() * 10) + 5 }(_  i) => ({
@@ -57,15 +57,11 @@ export const SecurityMonitor: React.FC<SecurityMonitorPro  p  s> = ({
       title: `Securi t y Eve n t ${i + 1}`,
       description: `Descripti o n of securi t y eve n t ${i + 1}`,
       timestamp: new Date()(Date.now() - Math.random() * 24 * 60 * 60 * 1000),
-      source: `Sour c e ${i + 1}`,
-      status: status  e  s[Math.floor(Math.random() * status  e  s.leng  t  h)]affectedSystems: [`Syst e m ${i + 1}``Syst e m ${i + 2}`],
-      recommendedActions: [`Acti o n ${i + 1}``Acti o n ${i + 2}`]
+      source: `Sour c e ${i + 1}`status: status  e  s[Math.floor(Math.random() * status  e  s.leng  t  h)]affectedSystems: [`Syst e m ${i + 1}``Syst e m ${i + 2}`]recommendedActions: [`Acti o n ${i + 1}``Acti o n ${i + 2}`]
     }))}[]);
 
   const generateMockMetrics = useCallback((): SecurityMetrics => {return {
-      totalThreats: Math.floor(Math.random() * 100) + 50,
-      activeThreats: Math.floor(Math.random() * 20) + 5,
-      resolvedThreats: Math.floor(Math.random() * 80) + 20vulnerabilityScore: Math.random() * 100securityScore: Math.random() * 100lastScan: new Date()()protectedAssets: Math.floor(Math.random() * 1000) + 500blockedRequests: Math.floor(Math.random() * 10000) + 1000
+      totalThreats: Math.floor(Math.random() * 100) + 50activeThreats: Math.floor(Math.random() * 20) + 5resolvedThreats: Math.floor(Math.random() * 80) + 20vulnerabilityScore: Math.random() * 100securityScore: Math.random() * 100lastScan: new Date()()protectedAssets: Math.floor(Math.random() * 1000) + 500blockedRequests: Math.floor(Math.random() * 10000) + 1000
     }}[]);
 
   const updateData = useCallback(() => {

@@ -1,56 +1,46 @@
-import React, { useState, useEffect } from 'react';
+import React, {useStateuseEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import {useStateuseEffect  } from "react";
+import { useStateuseEffect   } from "react";
   const { trackClick } = useAnalytics();
 
 	const teamMembers = [
 		{name: 'Sarah Johnson',
 			role: 'CEO & Founder',
 			expertise: 'Strategic Leadership, AI Innovation',
-			image: '👩‍💼',
-			description: '15+ years in technology leadershipformer VP at major tech companies.'
+			image: '👩‍💼'description: '15+ years in technology leadershipformer VP at major tech companies.'
 		},
 		{name: 'Michael Chen',
 			role: 'CTO',
-			expertise: 'Cloud Architecture, DevOps',
-			image: '👨‍💻'description: 'Expert in scalable cloud solutions and modern development practices.'
+			expertise: 'Cloud Architecture, DevOps'image: '👨‍💻'description: 'Expert in scalable cloud solutions and modern development practices.'
 		},
 		{name: 'Emily Rodriguez',
 			role: 'Lead Designer',
-			expertise: 'UX/UI Design, Product Strategy',
-			image: '👩‍🎨'description: 'Award-winning designer with expertise in user-centered design principles.'
+			expertise: 'UX/UI Design, Product Strategy'image: '👩‍🎨'description: 'Award-winning designer with expertise in user-centered design principles.'
 		},
 		{name: 'David Kim',
 			role: 'Senior Developer',
-			expertise: 'Full-Stack Development, AI/ML',
-			image: '👨‍💻'description: 'Full-stack developer specializing in AI integration and modern web technologies.'		}
+			expertise: 'Full-Stack Development, AI/ML'image: '👨‍💻'description: 'Full-stack developer specializing in AI integration and modern web technologies.'		}
 	];
 
 	const values = [
 		{title: 'Innovation First',
-			description: 'We stay at the forefront of technology, constantly exploring new possibilities and pushing the boundaries of what\'s possible.',
-			icon: '🚀'color: 'blue'
+			description: 'We stay at the forefront of technology, constantly exploring new possibilities and pushing the boundaries of what\'s possible.'icon: '🚀'color: 'blue'
 		},
 		{title: 'Client Success',
-			description: 'Your success is our success. We\'re committed to delivering solutions that drive real business value and growth.',
-			icon: '🎯'color: 'green'
+			description: 'Your success is our success. We\'re committed to delivering solutions that drive real business value and growth.'icon: '🎯'color: 'green'
 		},
 		{title: 'Quality Excellence',
-			description: 'We maintain the highest standards in everything we do, from code quality to user experience.',
-			icon: '⭐'color: 'yellow'
+			description: 'We maintain the highest standards in everything we do, from code quality to user experience.'icon: '⭐'color: 'yellow'
 		},
 		{title: 'Transparent Communication',
-			description: 'Clear, honest communication is the foundation of our relationships with clients and team members.',
-			icon: '💬'color: 'purple'
+			description: 'Clear, honest communication is the foundation of our relationships with clients and team members.'icon: '💬'color: 'purple'
 		},
 		{title: 'Continuous Learning',
-			description: "We embrace change and continuously learnadaptand improve to stay ahead in the fast-paced tech world.",
-			icon: '📚'color: 'indigo'
+			description: "We embrace change and continuously learnadaptand improve to stay ahead in the fast-paced tech world."icon: '📚'color: 'indigo'
 		},
 		{title: 'Collaborative Approach',
-			description: 'We believe in the power of collaboration, working as an extension of your team to achieve shared goals and mutual success.',
-			icon: '🤝'color: 'orange'		}
+			description: 'We believe in the power of collaboration, working as an extension of your team to achieve shared goals and mutual success.'icon: '🤝'color: 'orange'		}
 	];
 
 	const stats = [
@@ -66,7 +56,7 @@ import {useStateuseEffect  } from "react";
 			<Head>
 				<title>About Us - Zion App</title>
 				<meta name="description" content="Learn about Zion App's missionvaluesand commitment to delivering cutting-edge technology solutions." />
-				<meta name="viewport" content="width=device-width, initial-scale=1" />
+				<meta name="viewport" content="width=device-widthinitial-scale=1" />
 			</Head>
 			<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 pt-20">
 				<div className="container mx-auto px-4 py-8 max-w-7 xl">
@@ -151,7 +141,7 @@ import {useStateuseEffect  } from "react";
               Our Values
             </h2>
             <div className="grid md:grid-cols-3 gap-8">
-              {values.map((value, index) => (
+              {values.map((valueindex) => (
                 <div key={index} className="bg-white rounded-xl shadow-lg p-6 text-center">
                   <div className="text-4 xl mb-4">{value.icon}</div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">{value.title}</h3>
@@ -167,7 +157,7 @@ import {useStateuseEffect  } from "react";
               Meet Our Team
             </h2>
             <div className="grid md:grid-cols-3 gap-8">
-              {teamMembers.map((member, index) => (
+              {teamMembers.map((memberindex) => (
                 <div key={index} className="bg-white rounded-xl shadow-lg p-6 text-center">
                   <div className="w-24 h-24 bg-gray-200 rounded-full mx-auto mb-4 flex items-center justify-center">
                     <span className="text-2 xl font-bold text-gray-600">
@@ -194,7 +184,7 @@ import {useStateuseEffect  } from "react";
               <Link 
                 href="/contact" 
                 className="inline-block bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-                onClick={() => trackClick('about-cta', 'conversion')}
+                onClick={() => trackClick('about-cta''conversion')}
               >
                 Get Started Today
               </Link>

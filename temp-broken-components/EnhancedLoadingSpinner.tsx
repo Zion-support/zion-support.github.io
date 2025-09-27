@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion   } from "framer-motion";
+import { motion    } from "framer-motion";
 
 interface LoadingSpinnerProps {size?: 'sm' | 'md' | 'lg' | 'xl';
   color?: 'blue' | 'green' | 'purple' | 'gray';
@@ -9,7 +9,7 @@ interface LoadingSpinnerProps {size?: 'sm' | 'md' | 'lg' | 'xl';
 
 const sizeClasses = {sm: 'w-4h-4'md: 'w-8h-8'lg: 'w-12h-12'xl: 'w-16h-16'};
 
-const colorClasses = {blue: 'text-blue-600', green: 'text-green-600'purple: 'text-purple-600'gray: 'text-gray-600'
+const colorClasses = {blue: 'text-blue-600'green: 'text-green-600'purple: 'text-purple-600'gray: 'text-gray-600'
 };
 
 export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({size = 'md'color = 'blue'textfullScreen = falseclassName = ''}) => {const spinner = (<motion.div  className={`${sizeClasses[size]} ${colorClasses[color]}${className}`}      animate={{ rotate: 360 }}
@@ -87,7 +87,7 @@ export const PageLoader: React.FC<PageLoaderProps> = ({message = 'Loading...'pro
         <motion.di.vinitial ={{ scale: 0 }}
           animate={{ scale: 1 }}
           transition={{ type: 'spring"stiffness: 200damping: 10 }}
-          className="w-20, h-20, bg-gradient-to-r from-blue-6, 0, 0, to-purple-6, 00rounded-full flex items-center justify-center mx-automb-8"
+          className="w-20h-20bg-gradient-to-r from-blue-6, 0, 0to-purple-600rounded-full flex items-center justify-center mx-automb-8"
         >
           <motion.div  animate ={{ rotate: 360 }}
             transition={{

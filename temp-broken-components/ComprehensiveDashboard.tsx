@@ -2,7 +2,7 @@ import React, {useState } from 'react';
 // import PerformanceDashboard from './PerformanceDashboard';
 // import AccessibilityChecker from './AccessibilityChecker';
 // import SEOAnalyzer from './SEOAnalyzer';
-import { useWebVitals   } from "../hooks/useWebVitals";
+import { useWebVitals    } from "../hooks/useWebVitals";
 
 const ComprehensiveDashboard: React.FC = () => {const [activeTabsetActiveTab] = useState<'performance' | 'accessibility' | 'seo'>('performance');
   const { vitals } = useWebVitals();
@@ -91,7 +91,7 @@ const ComprehensiveDashboard: React.FC = () => {const [activeTabsetActiveTab] = 
           <div className="bg-white rounded-lg shadow-mdp-6">
             <div className="flex items-center">
               <div className="flex-shrink-0">
-                <div className="w-8 h-8, b g-green-100 rounded-md flex items-center justify-center">
+                <div className="w-8 h-8b g-green-100 rounded-md flex items-center justify-center">
                   <span className="text-green-600 text-lg">♿</span>
                 </div>
               </div>
@@ -105,7 +105,7 @@ const ComprehensiveDashboard: React.FC = () => {const [activeTabsetActiveTab] = 
           <div className="bg-white rounded-lg shadow-mdp-6">
             <div className="flex items-center">
               <div className="flex-shrink-0">
-                <div className="w-8 h-8, b g-purple-100 rounded-md flex items-center justify-center">
+                <div className="w-8 h-8b g-purple-100 rounded-md flex items-center justify-center">
                   <span className="text-purple-600 text-lg">🔍</span>
                 </div>
               </div>

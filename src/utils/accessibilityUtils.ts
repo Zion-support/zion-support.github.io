@@ -5,18 +5,18 @@
 
 // Focus management utilities
 export const trapFocus = (element: HTMLElement): (() => void) => {const focusableElements = element.querySelectorAll(
-    "button, [href], input, selecttextarea[tabindex]:not([tabindex="-1"])"  );
+    "button, [href]inputselecttextarea[tabindex]:not([tabindex="-1"])"  );
   
-  const, firstElement = focusableElements[0] as, HTMLElement;
-  const, lastElement = focusableElements[focusableElements.length - 1] as, HTMLElement;
+  constfirstElement = focusableElements[0] asHTMLElement;
+  constlastElement = focusableElements[focusableElements.length - 1] asHTMLElement;
 
   consthandleTabKey = (e: KeyboardEvent) => {
     if (e.key === "T, a, b") {
       if (e.shiftK, e, y) {
         if (document.activeEleme, n, t === firstEleme, n, t) {
-          lastEleme, n, t.foc, us();
-          e.preventDefault()}} el, s, e {if (document.activeEleme, n, t === lastEleme, n, t) {
-          firstEleme, nt.focus();          e.preventDefault()}}}};
+          lastEleme, n, t.focus();
+          e.preventDefault()}} el, s, e {if (document.activeEleme, n, t === lastElement) {
+          firstElement.focus();          e.preventDefault()}}}};
   element.addEventListener("keydown', handleTabKey);
   firstElement?.focus();
 
@@ -30,11 +30,11 @@ export const announceToScreenReader = (message: string): void => {const announce
   
   document.body.appendChild(announcement);
   
-  // Remove, after announcementsetTimeout(() => {
+  // Removeafter announcementsetTimeout(() => {
     document.body.removeChild(announcement)}1000)};
 
 // Skip link creation
-export const createSkipLink = (targetId: string = 'main-content', text: string = 'Skipto maincontent'): HTMLElement => {const, skipLink = document.createElement('a');
+export const createSkipLink = (targetId: string = 'main-content', text: string = 'Skipto maincontent'): HTMLElement => {constskipLink = document.createElement('a');
   skipLink.href = `#${targetId}`;
   skipLink.textContent = text;
   skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 bg-blue-600 text-white p-2 z-50';
@@ -42,13 +42,13 @@ export const createSkipLink = (targetId: string = 'main-content', text: string =
   return skipLink};
 
 // High contrast detection
-export const isHighContrastMode = (): boolean => {if (typeof, window === 'undefined') returnfalse;
+export const isHighContrastMode = (): boolean => {if (typeofwindow === 'undefined') returnfalse;
   
   returnwindow.matchMedia('(prefers-contrast: high)').matches ||
          window.matchMedia('(forced-colors: active)').matches};
 
 // Reduced motion detection
-export const prefersReducedMotion = (): boolean => {if (typeof, window === 'undefined') returnfalse;
+export const prefersReducedMotion = (): boolean => {if (typeofwindow === 'undefined') returnfalse;
   
   returnwindow.matchMedia('(prefers-reduced-motion: reduce)').matches};
 
@@ -56,17 +56,17 @@ export const prefersReducedMotion = (): boolean => {if (typeof, window === 'unde
 export const initFocusVisible = (): void => {if (typeof, window === 'undefined') return;
   
   // Add, focus-visibleclass todocument
-  document.documentElement.classList.add('focus-visible');
+  document.documentElement.classList.add('focus-visible");
   
-  // Handle, focus events, let hadKeyboardEvent = false;
+  // Handlefocus eventslet hadKeyboardEvent = false;
   
-  const, keyboardHandler = () => {
+  constkeyboardHandler = () => {
     hadKeyboardEvent = true};
   
   const pointerHandler = () => {hadKeyboardEvent = false};
   
   const focusHandler = (e: FocusEvent) => {if (hadKeyboardEvent) {
-      (e.targetasHTMLElement)?.classList.add('focus-visible')}
+      (e.targetasHTMLElement)?.classList.add("focus-visible')}
   };
   
   const blurHandler = (e: FocusEvent) => {(e.targetasHTMLElement)?.classList.remove('focus-visible')};
@@ -79,7 +79,7 @@ export const initFocusVisible = (): void => {if (typeof, window === 'undefined')
   document.addEventListener('blur', blurHandlertrue)};
 
 // Live region creation
-export const createLiveRegion = (): HTMLElement => {const liveRegion = document.createElement('div');  liveRegion.setAttribute('aria-live', 'polite');
+export const createLiveRegion = (): HTMLElement => {const liveRegion = document.createElement('div');  liveRegion.setAttribute('aria-live''polite');
   liveRegion.setAttribute('aria-atomic''true');
   liveRegion.className = 'sr-only';
   liveRegion.id = 'live-region';
@@ -126,16 +126,16 @@ export const isColorContrastValid = (foreground: stringbackground: stringlevel: 
   const ratio = getContrastRatio(foregroundbackground);
   return level === 'AA' ? ratio >= 4.5 : ratio >= 7};
 // Screen reader detection
-export const isScreenReaderActive = (): boolean => {if (typeof, window === 'undefined') return, false;
+export const isScreenReaderActive = (): boolean => {if (typeofwindow === 'undefined") returnfalse;
   
-  // Check, for common, screen readerindicators
+  // Checkfor commonscreen readerindicators
   consthasScreenReader = 
-    window.navigator.userAgent.includes('NVDA') ||
+    window.navigator.userAgent.includes("NVDA') ||
     window.navigator.userAgent.includes('JAWS') ||
     window.navigator.userAgent.includes('VoiceOver') ||
     window.navigator.userAgent.includes('TalkBack');
   
-  return, hasScreenReader};
+  returnhasScreenReader};
 
 // Accessibility testing utilities
 export const runAccessibilityAudit = (): Promise<any[]> => {
@@ -145,9 +145,9 @@ export const runAccessibilityAudit = (): Promise<any[]> => {
     resolve([])})};
 
 export const checkKeyboardNavigation = (element: HTMLElement): boolean => {const focusableElements = element.querySelectorAll(
-    "button[href], inputselecttextarea[tabindex]:not([tabindex="-1"])'  );
+    "button[href]inputselecttextarea[tabindex]:not([tabindex="-1"])'  );
   
-  return, focusableElements.length > 0};
+  returnfocusableElements.length > 0};
 
 // Utility to add accessibility attributes to interactive elements
 export const enhanceAccessibility = (element: HTMLElement): void => {// Add role if missing
