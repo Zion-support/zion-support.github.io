@@ -7287,3 +7287,8 @@
 2025-09-27 10:20:00 - Resolving conflicts in src/routes/DashboardRoutes.tsx for branch backup-main-20250926-070240
 2025-09-27 10:20:00 - Resolving conflicts in src/routes/ErrorRoutes.tsx for branch backup-main-20250926-070240
 2025-09-27 10:20:00 - Resolving conflicts in zion-website/pnpm-lock.yaml for branch backup-main-20250926-070240
+2025-09-27 10:20:06 - Merge conflicts detected in backup-main-20250926-071541
+2025-09-27 10:20:06 - Resolving conflicts in App.tsx for branch backup-main-20250926-071541
+2025-09-27 10:20:06 - Resolving conflicts in eslint.config.js for branch backup-main-20250926-071541
+2025-09-27 10:20:06 - Resolving conflicts in package.json for branch backup-main-20250926-071541
+2025-09-27 10:20:06 - Resolving conflicts in src/pages/Home.tsx for branch backup-main-20250926-071541
