@@ -169,14 +169,6 @@ export const AdvancedAnalytics: React.FC = () => {
                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
             >
-              {getMetricTitle(metric)}"> setSelectedMetric(metric)}
-              aria-label={`Select ${metric} metric`}
-              className={`px-4 py-2 rounded-lg font-medium transition-colors duration-200 ${
-                selectedMetric === metric
-                  ? 'bg-blue-600 text-white'
-                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-              }`}
-            >
               {getMetricTitle(metric)}
             </button>
           ))}

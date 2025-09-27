@@ -1,25 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
-import PerformanceDashboard from '../src/components/PerformanceDashboard';
-import { SecurityDashboard } from '../src/components/SecurityDashboard';
-import { AnalyticsDashboard } from '../src/components/AnalyticsDashboard';
-import EnhancedDashboard from '../src/components/EnhancedDashboard';
-import EnhancedSearch from '../src/components/EnhancedSearch';
-import ComprehensiveAnalyticsDashboard from '../src/components/ComprehensiveAnalyticsDashboard';
-import { AdvancedPerformanceMonitor } from '../src/components/AdvancedPerformanceMonitor';
-import { AdvancedAnalyticsDashboard } from '../src/components/AdvancedAnalyticsDashboard';
-import { AdvancedSecurityMonitor } from '../src/components/AdvancedSecurityMonitor';
-import { AdvancedAccessibilityAuditor } from '../src/components/AdvancedAccessibilityAuditor';
-import SystemMonitor from '../src/components/SystemMonitor';
-import AdvancedErrorHandler from '../src/components/AdvancedErrorHandler';
-import AdvancedPerformanceOptimizer from '../src/components/AdvancedPerformanceOptimizer';
-import AdvancedAnalyticsInsights from '../src/components/AdvancedAnalyticsInsights';
-import AdvancedErrorMonitoring from '../src/components/AdvancedErrorMonitoring';
-import AdvancedSystemMonitor from '../src/components/AdvancedSystemMonitor';
-import AdvancedSecurityEnhancements from '../src/components/AdvancedSecurityEnhancements';
-import EnhancedUserExperience from '../src/components/EnhancedUserExperience';
-import SecurityMonitor from '../src/components/SecurityMonitor';
-import EnhancedAnalytics from '../src/components/EnhancedAnalytics';
+import dynamic from 'next/dynamic';
 
 // Lazy load heavy components for better performance
 const PerformanceDashboard = dynamic(() => import('../src/components/PerformanceDashboard').then(mod => ({ default: mod.PerformanceDashboard })), {
@@ -92,6 +73,14 @@ const EnhancedUserExperience = dynamic(() => import('../src/components/EnhancedU
 
 const AdvancedAnalyticsInsights = dynamic(() => import('../src/components/AdvancedAnalyticsInsights'), {
   loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-slate-600"></div></div>
+});
+
+const AdvancedErrorMonitoring = dynamic(() => import('../src/components/AdvancedErrorMonitoring'), {
+  loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-gray-600"></div></div>
+});
+
+const AdvancedSystemMonitor = dynamic(() => import('../src/components/AdvancedSystemMonitor'), {
+  loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-gray-600"></div></div>
 });
 
 type DashboardTab = 'comprehensive' | 'analytics' | 'performance' | 'security' | 'enhanced' | 'search' | 'advanced-analytics' | 'advanced-performance' | 'advanced-security' | 'accessibility' | 'system-monitor' | 'security-enhancements' | 'performance-optimizer' | 'user-experience' | 'error-handler' | 'analytics-insights' | 'new-performance' | 'new-security' | 'new-analytics' | 'error-monitoring' | 'advanced-system-monitor';
