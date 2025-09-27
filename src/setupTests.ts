@@ -53,6 +53,14 @@ if (!window.performance) {
   });
 }
 
+// Mock PerformanceObserver
+global.PerformanceObserver = class PerformanceObserver {
+  constructor(callback: PerformanceObserverCallback) {}
+  disconnect() {}
+  observe(options?: PerformanceObserverInit) {}
+  takeRecords() { return []; }
+};
+
 // Mock matchMedia
 Object.defineProperty(window, 'matchMedia', {
   value: (query: string) => ({
