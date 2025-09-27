@@ -1,6 +1,19 @@
 // Enhanced error handling utilities
 import React from 'react';
 
+// Extended XMLHttpRequest interface for error tracking
+interface ExtendedXMLHttpRequest extends XMLHttpRequest {
+  _method?: string;
+  _url?: string;
+}
+
+// Error object interface for better type safety
+interface ErrorLike {
+  message?: string;
+  stack?: string;
+  toString(): string;
+}
+
 export interface ErrorContext {
   userId?: string;
   sessionId?: string;
@@ -161,9 +174,9 @@ export class EnhancedErrorHandler {
     const originalOpen = originalXHR.prototype.open;
     const originalSend = originalXHR.prototype.send;
 
-    originalXHR.prototype.open = function(method: string, url: string, ...args: any[]) {
-      (this as any)._method = method;
-      (this as any)._url = url;
+    originalXHR.prototype.open = function(method: string, url: string, ...args: unknown[]) {
+      (this as ExtendedXMLHttpRequest)._method = method;
+      (this as ExtendedXMLHttpRequest)._url = url;
       return originalOpen.apply(this, [method, url, ...args] as Parameters<typeof originalOpen>);
     };
 
@@ -171,10 +184,10 @@ export class EnhancedErrorHandler {
       this.addEventListener('error', () => {
         const errorReport: ErrorReport = {
           id: EnhancedErrorHandler.getInstance().generateErrorId(this),
-          message: `XHR error: ${(this as any)._method} ${(this as any)._url}`,
+          message: `XHR error: ${(this as ExtendedXMLHttpRequest)._method} ${(this as ExtendedXMLHttpRequest)._url}`,
           context: EnhancedErrorHandler.getInstance().getErrorContext({
-            url: (this as any)._url,
-            method: (this as any)._method,
+            url: (this as ExtendedXMLHttpRequest)._url,
+            method: (this as ExtendedXMLHttpRequest)._method,
             status: this.status,
             statusText: this.statusText
           }),
@@ -239,8 +252,8 @@ export class EnhancedErrorHandler {
   }
 
   private generateErrorId(error: Error | Event | unknown): string {
-    const message = (error as any)?.message || error?.toString() || 'unknown';
-    const stack = (error as any)?.stack || '';
+    const message = (error as ErrorLike)?.message || error?.toString() || 'unknown';
+    const stack = (error as ErrorLike)?.stack || '';
     return btoa(message + stack).replace(/[^a-zA-Z0-9]/g, '').substring(0, 16);
   }
 
@@ -254,7 +267,7 @@ export class EnhancedErrorHandler {
   }
 
   private determineSeverity(error: Error | Event | unknown): 'low' | 'medium' | 'high' | 'critical' {
-    const message = (error as any)?.message || error?.toString() || '';
+    const message = (error as ErrorLike)?.message || error?.toString() || '';
     
     if (message.includes('ChunkLoadError') || message.includes('Loading chunk')) {
       return 'medium'; // Chunk loading errors are usually recoverable
@@ -407,10 +420,11 @@ export const withErrorBoundary = <P extends object>(
   Component: React.ComponentType<P>,
   fallback?: React.ComponentType<{ error: Error }>
 ) => {
-  const WrappedComponent = (props: P) => 
-    React.createElement(ReactErrorBoundary, { fallback, children: null },
-      React.createElement(Component, props)
-    );
+  const WrappedComponent = (props: P) => (
+    <ReactErrorBoundary fallback={fallback}>
+      <Component {...props} />
+    </ReactErrorBoundary>
+  );
   
   WrappedComponent.displayName = `withErrorBoundary(${Component.displayName || Component.name})`;
   return WrappedComponent;

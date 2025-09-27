@@ -16,6 +16,7 @@ import { seoManager, seoAnalytics, performanceSEO } from './utils/seoEnhanced';
 import { accessibilityManager } from './utils/accessibility';
 import { securityManager } from './utils/security';
 import { PerformanceMonitor, ResourceMonitor, MemoryMonitor } from './utils/performance';
+import { performanceOptimizer } from './utils/optimization';
 import './index.css';
 
 // Lazy load components for better performance
@@ -62,6 +63,10 @@ export default function App(): React.JSX.Element {
     performanceSEO.optimizeImages();
     performanceSEO.preloadCriticalResources();
     performanceSEO.optimizeFonts();
+    
+    // Initialize advanced performance optimizer
+    performanceOptimizer.preloadCriticalResources();
+    performanceOptimizer.optimizeImages();
 
     // Set default SEO data
     seoManager.updateSEO({

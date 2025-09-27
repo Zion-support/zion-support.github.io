@@ -11,7 +11,8 @@ module.exports = {
     '^.+\\.(ts|tsx)$': ['ts-jest', {
       tsconfig: {
         jsx: 'react-jsx'
-      }
+      },
+      useESM: true
     }],
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
@@ -28,10 +29,5 @@ module.exports = {
   coverageReporters: ['text', 'lcov', 'html'],
   passWithNoTests: true,
   verbose: true,
-  extensionsToTreatAsEsm: ['.ts', '.tsx'],
-  globals: {
-    'ts-jest': {
-      useESM: true
-    }
-  }
+  extensionsToTreatAsEsm: ['.ts', '.tsx']
 };
