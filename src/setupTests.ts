@@ -23,7 +23,7 @@ global.PerformanceObserver = class {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   observe(_options?: PerformanceObserverInit) {}
   takeRecords() { return []; }
-} as unknown as typeof PerformanceObserver;
+} as PerformanceObserver;
 
 // Mock window.scrollTo
 Object.defineProperty(window, 'scrollTo', {

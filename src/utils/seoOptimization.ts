@@ -486,7 +486,7 @@ export const {
 // Global type declarations for analytics
 declare global {
   interface Window {
-    gtag?: (...args: unknown[]) => void;
+    gtag?: (command: string, targetId: string, config?: Record<string, unknown>) => void;
     dataLayer?: unknown[];
   }
 }

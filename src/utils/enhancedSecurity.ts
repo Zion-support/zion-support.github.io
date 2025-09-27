@@ -36,7 +36,7 @@ interface SecurityEvent {
   type: 'xss' | 'csrf' | 'clickjacking' | 'data-exfiltration' | 'injection';
   severity: 'low' | 'medium' | 'high' | 'critical';
   timestamp: number;
-  details: Record<string, any>;
+  details: Record<string, unknown>;
   userAgent: string;
   url: string;
 }
@@ -129,10 +129,10 @@ class EnhancedSecurityManager {
         severity: 'medium',
         timestamp: Date.now(),
         details: {
-          violatedDirective: (event as any).violatedDirective,
-          blockedURI: (event as any).blockedURI,
-          sourceFile: (event as any).sourceFile,
-          lineNumber: (event as any).lineNumber
+          violatedDirective: (event as SecurityPolicyViolationEvent).violatedDirective,
+          blockedURI: (event as SecurityPolicyViolationEvent).blockedURI,
+          sourceFile: (event as SecurityPolicyViolationEvent).sourceFile,
+          lineNumber: (event as SecurityPolicyViolationEvent).lineNumber
         },
         userAgent: navigator.userAgent,
         url: window.location.href
@@ -162,7 +162,13 @@ class EnhancedSecurityManager {
     
     Object.defineProperty(Element.prototype, 'innerHTML', {
       set: function(value: string) {
-        const sanitized = this.sanitizeHTML(value);
+        // Basic HTML sanitization - in production, use a proper library like DOMPurify
+        const sanitized = value
+          .replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '')
+          .replace(/<iframe\b[^<]*(?:(?!<\/iframe>)<[^<]*)*<\/iframe>/gi, '')
+          .replace(/javascript:/gi, '')
+          .replace(/on\w+\s*=/gi, '');
+        
         if (originalInnerHTML?.set) {
           originalInnerHTML.set.call(this, sanitized);
         }
@@ -283,7 +289,7 @@ class EnhancedSecurityManager {
             details: {
               type: 'integrity_violation',
               element: target.tagName,
-              src: (element as any).src || (element as any).href
+              src: (element as HTMLImageElement).src || (element as HTMLAnchorElement).href
             },
             userAgent: navigator.userAgent,
             url: window.location.href
@@ -429,10 +435,10 @@ class EnhancedSecurityManager {
    */
   private setupDataLeakMonitoring(): void {
     // Monitor for sensitive data in URLs
-    if (window.location.search.includes('password') || 
-        window.location.search.includes('token') ||
-        window.location.hash.includes('password') ||
-        window.location.hash.includes('token')) {
+    if ((window.location.search && window.location.search.includes('password')) || 
+        (window.location.search && window.location.search.includes('token')) ||
+        (window.location.hash && window.location.hash.includes('password')) ||
+        (window.location.hash && window.location.hash.includes('token'))) {
       this.logSecurityEvent({
         type: 'data-exfiltration',
         severity: 'high',
