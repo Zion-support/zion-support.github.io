@@ -1,0 +1,55 @@
+
+export interface Job {
+<<<<<<< HEAD
+export interface Job {,
+id: string,
+=======
+export interface Job {
+  id: string,
+>>>>>>> origin/backup-main-20250926-044137
+  title: string,
+  description: string,
+  company_name?: string,
+  budget?: string,
+  client_id: string}
+,
+<<<<<<< HEAD
+export interface ApplyToJobModalProps {,
+job: Job,
+  isOpen: boolean,
+export interface ApplyToJobModalProps {,
+job: Job,
+=======
+export interface ApplyToJobModalProps {
+  job: Job,
+  isOpen: boolean,
+export interface ApplyToJobModalProps {
+  job: Job,
+>>>>>>> origin/backup-main-20250926-044137
+  isOpen: boolean,
+  onClose: () => void,
+  onApplySuccess?: (jobId: string) => Promise<void>}
+,
+<<<<<<< HEAD
+export interface Job {,
+id: string,
+=======
+export interface Job {
+  id: string,
+>>>>>>> origin/backup-main-20250926-044137
+  title: string,
+  description: string,
+  company_name?: string,
+  budget?: string,
+  client_id: string}
+,
+<<<<<<< HEAD
+export interface ApplyToJobModalProps {,
+job: Job,
+=======
+export interface ApplyToJobModalProps {
+  job: Job,
+>>>>>>> origin/backup-main-20250926-044137
+  isOpen: boolean,
+  onClose: () => void,
+  onApplySuccess?: (jobId: string) => Promise<void>}

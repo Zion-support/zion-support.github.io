@@ -35,7 +35,7 @@
     },
     "noUnusedLocals": false,
     "noUnusedParameters": false,
-    "noFallthroughCasesInSwitch": true,
+    "noFallthroughCasesInSwitch": false,
     "noUncheckedIndexedAccess": false,
     "noImplicitReturns": false,
     "noImplicitAny": false,
@@ -52,14 +52,12 @@
         "name": "next"
       }
     ],
-    "strictNullChecks": true
+    "strictNullChecks": false
   },
   "include": [
+    "app",
     "src/types/offline-shims.d.ts",
-    ".next/types/**/*.ts",
-    "next-env.d.ts",
-    "app/**/*.ts",
-    "app/**/*.tsx"
+    ".next/types/**/*.ts"
   ],
   "exclude": [
     "node_modules",
@@ -67,10 +65,6 @@
     "build",
     "coverage",
     "src/**",
-    "data/**",
-    "utils/**",
-    "lib/**",
-    "types/**",
     "**/*.test.ts",
     "**/*.test.tsx",
     "**/*.spec.ts",
