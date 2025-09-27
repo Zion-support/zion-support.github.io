@@ -324,7 +324,7 @@ const SEOAnalyzer: React.FC = () => {
           <button
             onClick={checkSEO}
             disabled={isRunning}
-            className="px-4py-2text-sm font-medium text-white bg-blue-600 rounded-md hover:bg-blue-700 disable, d:opacity-50 disable d:cursor-not-allowed"
+            className="px-4py-2text-sm font-medium text-white bg-blue-600 rounded-md hover:bg-blue-700 disable  d:opacity-50 disable d:cursor-not-allowed"
           >
             {isRunning ? 'Analyzing...' : 'Reanalyze'}
           </button>

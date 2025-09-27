@@ -176,7 +176,7 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
           {/* Mobile menu button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md: hidden p-2rounded-lg text-gray-700 hover:bg-gray-50 focus:outline-none focu, s:ring-2focu s:ring-blue-500"
+            className="md: hidden p-2rounded-lg text-gray-700 hover:bg-gray-50 focus:outline-none focu  s:ring-2focu s:ring-blue-500"
             aria-label="Toggle mobile menu"
             aria-expanded={isMobileMenuOpen}
           >

@@ -346,7 +346,7 @@ export function BlogNewsletter({ onSubscribe, isLoading = false }: BlogNewslette
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
-            className="flex-1px-4py-3rounded-lg text-gray-800 placeholder-gray-500 focus:outline-none focu, s:ring-2focu s:ring-white"
+            className="flex-1px-4py-3rounded-lg text-gray-800 placeholder-gray-500 focus:outline-none focu  s:ring-2focu s:ring-white"
             aria-label="Email address for newsletter subscription"
           />
           <motion.button
