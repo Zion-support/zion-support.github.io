@@ -13,6 +13,7 @@ import { SecurityManager } from './utils/securityEnhancements';
 import { cacheManager } from './utils/cacheManager';
 import { apiClient } from './utils/apiClient';
 import { notificationManager } from './utils/notificationManager';
+import { userFeedback } from './utils/userFeedbackManager';
 import './index.css';
 import './styles/notifications.css';
 
@@ -73,6 +74,9 @@ export default function App(): React.JSX.Element {
     // Initialize advanced performance optimizer
     performanceOptimizer.preloadCriticalResources();
     performanceOptimizer.optimizeImages();
+    performanceOptimizer.addResourceHints();
+    performanceOptimizer.optimizeCriticalCSS();
+    performanceOptimizer.setupWebVitalsMonitoring();
 
     // Initialize analytics system
     analytics.initialize();
@@ -122,6 +126,12 @@ export default function App(): React.JSX.Element {
 
     // Show welcome notification
     notificationManager.info('Welcome to Zion Tech Group', 'Your advanced technology solutions platform is ready!');
+
+    // Show welcome feedback
+    userFeedback.showSuccess(
+      'Welcome!',
+      'Zion Tech Group is now ready with enhanced performance optimizations and user experience features.'
+    );
 
     // Preload critical resources
     preloadResource('/og-image.png', 'image');
