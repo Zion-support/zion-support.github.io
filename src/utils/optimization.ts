@@ -32,6 +32,10 @@ interface PerformanceWithMemory extends Performance {
   };
 }
 
+interface FirstInputEntry extends PerformanceEntry {
+  processingStart: number;
+}
+
 export class PerformanceOptimizer {
   private static instance: PerformanceOptimizer;
   private metrics: PerformanceMetrics;
@@ -190,7 +194,8 @@ export class PerformanceOptimizer {
       new PerformanceObserver((list) => {
         const entries = list.getEntries();
         entries.forEach(entry => {
-          console.log('FID:', entry.processingStart - entry.startTime);
+          const firstInputEntry = entry as FirstInputEntry;
+          console.log('FID:', firstInputEntry.processingStart - firstInputEntry.startTime);
         });
       }).observe({ entryTypes: ['first-input'] });
     } catch (error) {
@@ -251,15 +256,15 @@ export class PerformanceOptimizer {
   private monitorMemoryUsage(): void {
     if ('memory' in performance) {
       const memory = (performance as PerformanceWithMemory).memory;
-      this.metrics.memoryUsage = memory.usedJSHeapSize;
+      this.metrics.memoryUsage = memory?.usedJSHeapSize || 0;
       
       // Log memory usage every 30 seconds
       setInterval(() => {
         const currentMemory = (performance as PerformanceWithMemory).memory;
         console.log('Memory usage:', {
-          used: currentMemory.usedJSHeapSize,
-          total: currentMemory.totalJSHeapSize,
-          limit: currentMemory.jsHeapSizeLimit
+          used: currentMemory?.usedJSHeapSize || 0,
+          total: currentMemory?.totalJSHeapSize || 0,
+          limit: currentMemory?.jsHeapSizeLimit || 0
         });
       }, 30000);
     }

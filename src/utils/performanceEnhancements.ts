@@ -192,6 +192,12 @@ export class ResourcePreloader {
   }
 }
 
+interface MetricSummary {
+  count: number;
+  total: number;
+  avg: number;
+}
+
 // Performance Metrics Collector
 export class PerformanceMetricsCollector {
   private static instance: PerformanceMetricsCollector;
@@ -261,7 +267,7 @@ export class PerformanceMetricsCollector {
       this.customMetrics.set(categoryKey, { count: 0, total: 0 });
     }
     
-    const summary = this.customMetrics.get(categoryKey);
+    const summary = this.customMetrics.get(categoryKey) as MetricSummary;
     summary.count++;
     summary.total += value;
     summary.avg = summary.total / summary.count;
@@ -373,10 +379,10 @@ export class MemoryMonitor {
     if ('memory' in performance) {
       const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
       const usage = {
-        used: memory.usedJSHeapSize,
-        total: memory.totalJSHeapSize,
-        limit: memory.jsHeapSizeLimit,
-        usagePercent: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100
+        used: memory?.usedJSHeapSize || 0,
+        total: memory?.totalJSHeapSize || 0,
+        limit: memory?.jsHeapSizeLimit || 0,
+        usagePercent: memory ? (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100 : 0
       };
 
       console.log('Memory Usage:', {
