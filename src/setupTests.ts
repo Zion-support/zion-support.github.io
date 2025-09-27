@@ -1,20 +1,25 @@
 import '@testing-library/jest-dom';
 
+// Global declarations for test environment
+declare const global: any;
+declare const jest: any;
+
 // Mock IntersectionObserver
-(global as unknown as { IntersectionObserver: jest.Mock }).IntersectionObserver = jest.fn().mockImplementation(() => ({
+(global as any).IntersectionObserver = jest.fn().mockImplementation(() => ({
   observe: jest.fn(),
   unobserve: jest.fn(),
   disconnect: jest.fn(),
 }));
 
 // Mock PerformanceObserver
-global.PerformanceObserver = class PerformanceObserver {
-  constructor() {}
+(global as any).PerformanceObserver = class PerformanceObserver {
+  static readonly supportedEntryTypes: readonly string[] = [];
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  constructor(_callback: PerformanceObserverCallback) {}
   disconnect() {}
   observe() {}
   unobserve() {}
   takeRecords() { return []; }
-  static readonly supportedEntryTypes: readonly string[] = [];
 } as unknown as typeof PerformanceObserver;
 
 // Mock window.scrollTo
@@ -48,15 +53,6 @@ if (!window.performance) {
     writable: true
   });
 }
-
-// Mock PerformanceObserver
-global.PerformanceObserver = class PerformanceObserver {
-  constructor() {}
-  disconnect() {}
-  observe() {}
-  takeRecords() { return []; }
-  static readonly supportedEntryTypes: readonly string[] = [];
-} as unknown as typeof PerformanceObserver;
 
 // Mock matchMedia
 Object.defineProperty(window, 'matchMedia', {
