@@ -91,7 +91,7 @@ export const SystemHealthMonitor: React.FC = () => {
           <div className="text-2xl font-boldtext-gray-900">
             {health.cpuUsage.toFixed(1)}%
           </div>
-          <div className="w-full bg-gray-200 rounded-fullh-2">
+          <div className="w-full bg-gray-200 rounded-full h-2">
             <div 
               className="bg-blue-600 h-2 rounded-full transition-allduration-300"
               style={{ width: `${health.cpuUsage}%` }}
@@ -104,7 +104,7 @@ export const SystemHealthMonitor: React.FC = () => {
           <div className="text-2xl font-boldtext-gray-900">
             {health.memoryUsage.toFixed(1)}%
           </div>
-          <div className="w-full bg-gray-200 rounded-fullh-2">
+          <div className="w-full bg-gray-200 rounded-full h-2">
             <div 
               className="bg-green-600 h-2 rounded-full transition-allduration-300"
               style={{ width: `${health.memoryUsage}%` }}

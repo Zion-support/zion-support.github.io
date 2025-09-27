@@ -34,7 +34,7 @@ export const ErrorReporter: React.FC<ErrorReporterProps> = ({
 
   useEffect(() => {
     const handleGlobalError = (event: ErrorEvent) => {
-      const errorDetail, s: ErrorDetails = {
+      const errorDetails: ErrorDetails = {
         messag, e: event.message,
         stack: event.error?.stack,
         component: 'Global',
@@ -60,7 +60,7 @@ export const ErrorReporter: React.FC<ErrorReporterProps> = ({
     };
 
     const handleUnhandledRejection = (event: PromiseRejectionEvent) => {
-      const errorDetail, s: ErrorDetails = {
+      const errorDetails: ErrorDetails = {
         messag, e: event.reason?.message || 'Unhandled Promise Rejection',
         stack: event.reason?.stack,
         component: 'Promise',
