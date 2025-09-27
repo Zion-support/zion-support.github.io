@@ -7261,3 +7261,9 @@
 2025-09-27 10:19:47 - Resolving conflicts in src/App.tsx for branch backup-main-20250926-065458
 2025-09-27 10:19:47 - Resolving conflicts in src/components/Header.tsx for branch backup-main-20250926-065458
 2025-09-27 10:19:47 - Resolving conflicts in src/main.tsx for branch backup-main-20250926-065458
+2025-09-27 10:19:53 - Merge conflicts detected in backup-main-20250926-065940
+2025-09-27 10:19:53 - Resolving conflicts in package.json for branch backup-main-20250926-065940
+2025-09-27 10:19:53 - Resolving conflicts in src/components/Footer.tsx for branch backup-main-20250926-065940
+2025-09-27 10:19:53 - Resolving conflicts in src/main.tsx for branch backup-main-20250926-065940
+2025-09-27 10:19:53 - Resolving conflicts in src/pages/Home.tsx for branch backup-main-20250926-065940
+2025-09-27 10:19:53 - Resolving conflicts in zion-website/.eslintrc.json for branch backup-main-20250926-065940

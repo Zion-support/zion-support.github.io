@@ -1,4 +1,3 @@
-// Minimal ambient types to satisfy tsconfig for CI
-/// <reference types="node" />
-/// <reference types="react" />
-/// <reference types="react-dom" />
+// Empty root types to satisfy TypeScript include without scanning non-existent src
+// Add shared ambient types here if needed in the future.
+
