@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState  useEffect  useCallback } from 'react';
+import { motion  AnimatePresence } from 'framer-motion';
 import { ActivityTrendingUpUsersZapShieldBarChart3 } from 'lucide-react';
 import { ResponsiveContainerAreaChartAreaXAxisYAxisCartesianGridTooltipPieChartPieCellLineChartLine } from 'recharts';
 interface DashboardWidget {
@@ -150,7 +150,7 @@ export default function EnhancedDashboard({
 
   const renderMetric = (data: any) => (
     <div className="text-center">
-      <div className="text-3xl font-bold text-gray-900mb-2">{data.value}</div>
+      <div className="text-3 xl font-bold text-gray-900 mb-2">{data.value}</div>
       <div className={`flex items-center justify-center text-sm ${
         data.trend === 'up' ? 'text-green-600' : 'text-red-600'
       }`}>
@@ -220,20 +220,20 @@ export default function EnhancedDashboard({
     <div className={`min-h-screen bg-gray-50 ${isFullscreen ? 'fixed inset-0 z-50' : '}`}>      <div className="p-6">
         <div className="flex justify-between items-center mb-8">
           <div>
-            <h1 className="text-3xl font-boldtext-gray-900" id="dashboard">Dashboard</h1>
+            <h1 className="text-3 xl font-boldtext-gray-900" id="dashboard">Dashboard</h1>
             <p className="text-gray-600">Monitor your business metrics and performance</p>
           </div>
           <div className="flex space-x-4">
-            <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700transition-colors" aria-label="Export Data">
+            <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors" aria-label="Export Data">
               Export Data
             </button>
-            <button className="bg-gray-200 text-gray-700 px-4 py-2 rounded-lg hove r:bg-gray-300transition-colors" aria-label="Settings">
+            <button className="bg-gray-200 text-gray-700 px-4 py-2 rounded-lg hove r:bg-gray-300 transition-colors" aria-label="Settings">
               Settings
             </button>
           </div>
         </div>
 
-        <div className="grid grid-cols-3 gap-6auto-rows-min">
+        <div className="grid grid-cols-3 gap-6 auto-rows-min">
           {dashboardWidgets.map(renderWidget)}        </div>
       </div>
 
@@ -248,14 +248,14 @@ export default function EnhancedDashboard({
             onClick={() => setIsFullscreen(false)}
           >
             <motion.div
-              className="bg-white rounded-lg p-8 max-w-6xl max-h-[90vh] overflow-auto"
+              className="bg-white rounded-lg p-8 max-w-6 xl max-h-[90 vh] overflow-auto"
               initial={{ scale: 0.9opacity: 0 }}
               animate={{ scale: 1opacity: 1 }}
               exit={{ scale: 0.9opacity: 0 }}
               onClick={(e) => e.stopPropagation()}
             >
               <div className="flex justify-between items-center mb-6">
-                <h2 className="text-2xl font-bold text-gray-900" id="dashboard-widgets-find-widget-selected-widget-title">{dashboardWidgets.find(w => w.id === selectedWidget)?.title}</h2>
+                <h2 className="text-2 xl font-bold text-gray-900" id="dashboard-widgets-find-widget-selected-widget-title">{dashboardWidgets.find(w => w.id === selectedWidget)?.title}</h2>
                 <button
                   onClick={() => setIsFullscreen(false)}
                   className="text-gray-400 hover:text-gray-600"

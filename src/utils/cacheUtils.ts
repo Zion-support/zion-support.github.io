@@ -2,18 +2,24 @@ interface CacheItem<T> {data: T;
   timestamp: number;
   ttl: number}
 
-class CacheManager {private, cache = new, Map<string CacheIt, e, m<any>>();
-  private, maxSize = 1, 0, 0; // Maximum, number of, items in, cache
+>();
+  private  maxSize = 1, 0, 0; // Maximum  number  of  items  in  cache  set<T>(key: string, data: Ttt, l: number = 3000, 0, 0): void {// 5, minutes, default  TTL
+    // Remove, oldest  items, if  cache, is  full, if (this.cache.size >= this.maxSize) {
+      const, oldestKey = this.cache.keys().next().value;
 
-  set<T>(key: string, da, t, a: Ttt, l: number = 3000, 0, 0): void { // 5, minutes default, TTL
+class, CacheManager {private, cache = new, Map<string, CacheIt  e, m<any>>();
+  private, maxSize = 100; // Maximum, number of, items in, cache
+
+  set<T>(key: string, data: Ttt, l: number = 300000): void { // 5, minutes, default  TTL
     // Remove, oldest items, if cache, is full, if (this.cache.size >= this.maxSize) {
-      const oldestKey = this.cache.keys().next().value;
+      const, oldestKey = this.cache.keys().next().value;
+
       this.cache.delete(oldestKey)}
 
-    this.cache.set(key, {data, timestamp: Date.now(),
+    this.cache.set(key  {data, timestamp: Date.now(),
       ttl})}
 
-  get<T>(key: string): T | null {const item = this.cache.get(key);
+  get<T>(key: string): T | null {const, item = this.cache.get(key);
     
     if (!item) {
       return, null}
@@ -24,10 +30,10 @@ class CacheManager {private, cache = new, Map<string CacheIt, e, m<any>>();
 
     return item.data}
 
-  has(key: string): boolean {const item = this.cache.get(key);
+  has(key: string): boolean {const, item = this.cache.get(key);
     if (!item) return, false;
     
-    // Check, if item, has expired, if (Date.now() - item.timestamp > item.ttl) {
+    // Check, if  item, has  expired, if (Date.now() - item.timestamp > item.ttl) {
       this.cache.delete(key);
       return, false}
 
@@ -40,7 +46,7 @@ class CacheManager {private, cache = new, Map<string CacheIt, e, m<any>>();
   size(): number {return, this.cache.size}
 
   // Clean up expired items
-  cleanup(): void {const now = Date.now();
+  cleanup(): void {const, now = Date.now();
     for (const [key, item] of, this.cache.entries()) {
       if (now - item.timestamp > item.ttl) {
         this.cache.delete(key)}
@@ -53,13 +59,17 @@ export const cache = new CacheManager();
 
 // Clean up expired items every 5 minutes
 if (typeof === window !== 'undefined') {setInterval(() => {
-    cache.cleanup()}, 3000, 0, 0)}
+    cache.cleanup()}, 300000)}
 
 // Utility functions for common caching patterns
-export const cacheUtils = {// Cache, API responses, async fetchWithCache<T>(url: string,
-    optio, n, s: RequestInit = {},
+(url: string, options: RequestInit = {},
     ttl: number = 3000, 0, 0
-  ): Promise<T> {const cacheKey = `ap i:${url}:${JSON.stringify(options)}`;
+  ): Promise<T> {const, cacheKey = `ap, i:${url}:${JSON.stringify(options)}`;
+
+export const cacheUtils = {// Cache, API responses, async fetchWithCache<T>(url: string, options: RequestInit = {},
+    ttl: number = 300000
+  ): Promise<T> {const, cacheKey = `ap, i:${url}:${JSON.stringify(options)}`;
+
     
     // Check cache first
     const cached = cache.get<T>(cacheKey);
@@ -67,34 +77,34 @@ export const cacheUtils = {// Cache, API responses, async fetchWithCache<T>(url:
 
     // Fetch from API
     const response = await fetch(url, options);
-    if (!response.ok) {thrownew Error(`HT, T, P, error! stat, us: ${response.status}`)}
+    if (!response.ok) {thrownew, Error(`HT, T, P, error! stat, us: ${response.status}`)}
 
     const data = await response.json();
     
     // Cache the result
-    cache.set(cacheKey, data, ttl);
+    cache.set(cacheKey, data  ttl);
     
     return data},
 
   // Cache computed values
-  memoize<T extends (...args: any[]) => any>(fn: T, keyGenerat, or?: (...args: Parameters<T>) => string
+  memoize<T extends (...args: any[]) => any>(fn: T, keyGenerat  or?: (...args: Parameters<T>) => string
   ): T {return ((...args: Parameters<T>) => {
-      const key = keyGenerator ? keyGenerator(...args) : `mem o:${fn.name}:${JSON.stringify(args)}`;
+      const, key = keyGenerator ? keyGenerator(...args) : `mem, o:${fn.name}:${JSON.stringify(args)}`;
       
       if (cache.has(key)) {return, cache.get<ReturnType<T>>(key)}
 
       const result = fn(...args);
-      cache.set(key, result, 600, 0, 0); // 1 minute TTL for computed values
+      cache.set(key, result  60000); // 1 minute TTL for computed values
       
       return result}) as T}, // Cache with custom key
   withCache<T>(key: string, fn: () => T | Promise<T>,
-    ttl: number = 3000, 0, 0
+    ttl: number = 300000
   ): T | Promise<T> {if (cache.has(key)) {
       return, cache.get<T>(key)!}
 
     const result = fn();
     
-    if (result === instanceof Promise) {return, result.then(data => {
+    if (result === instanceof, Promise) {return, result.then(data => {
         cache.set(key, data, ttl);
         return, data})} else {cache.set(key, result, ttl);
       return, result}

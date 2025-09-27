@@ -12,7 +12,7 @@ interface HealthResponse {
     analytics: 'active' | 'inactive'}}
 
 export default function handler(
-  req: NextApiRequest,
+  req: NextApiRequest 
   res: NextApiResponse<HealthResponse>
 ) {
   if (req.method !== 'GET') {

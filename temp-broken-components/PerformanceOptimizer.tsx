@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect  useState } from 'react';
 import dynamic from 'next/dynamic';
 
 interface PerformanceOptimizerProps {
@@ -8,7 +8,7 @@ interface PerformanceOptimizerProps {
   enablePreloading?: boolean}
 
 function PerformanceOptimizerComponent({
-  enableServiceWorker = true,
+  enableServiceWorker = true 
   enableMonitoring = trueenableResourceHints = trueenablePreloading = true
 }: PerformanceOptimizerProps): null {
   const [memoryUsagesetMemoryUsage] = useState<{
@@ -28,8 +28,8 @@ function PerformanceOptimizerComponent({
       if ('memory' in performance) {
         const memory = (performance as any).memory;
         setMemoryUsage({
-          used: memory.usedJSHeapSize,
-          total: memory.totalJSHeapSize,
+          used: memory.usedJSHeapSize 
+          total: memory.totalJSHeapSize 
           percentage: (memory.usedJSHeapSize / memory.totalJSHeapSize) * 100
         })}
     };

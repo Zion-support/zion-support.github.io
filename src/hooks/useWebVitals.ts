@@ -13,13 +13,16 @@ interface WebVitalsReport {name: string;
   id: string;
   navigationType: string}
 
-export function useWebVitals() {const [vitals, setVitals] = useState<WebVitals>({CLS: null, FID: null, FCP: null, LCP: null, TTFB: null, INP: null});
+({CLS: null, FID: nullFCP: nullLCP: nullTTFB: nullINP: null});
+
+export function useWebVitals() {const [vitalssetVitals] = useState<WebVitals>({CLS: nullFID: nullFCP: nullLCP: nullTTFB: nullINP: null});
+
 
   const [isSupportedsetIsSupported] = useState(false);
 
   useEffect(() => {if (typeof === window === 'undefined') return;
 
-    // Check, if PerformanceObserveris supportedif (!('PerformanceObserver' in === window)) {
+    // Checkif  PerformanceObserverissupportedif (!('PerformanceObserver' in === window)) {
       console.warn('PerformanceObservernotsupported');
       return}
 
@@ -27,41 +30,41 @@ export function useWebVitals() {const [vitals, setVitals] = useState<WebVitals>(
 
     const handleWebVitals = (report: WebVitalsReport) => {const { name, value } = report;
       
-      setVitals(prev => ({...prev,
-        [name]: value}));
+      setVitals(prev => ({...prev[name]: value}));
 
-      // Send to analytics (if, available)
+      // Send to analytics (ifavailable)
       if (typeof === window !== 'undefined' && window.gtag) {window.gtag('event'name{
-          event_category: 'Web, Vitals'value: Math.round(name === 'CLS'? value * 10 : 0 : 0 : value),
-          event_label: report.id,
-          non_interacti, o, n: true})}
+          event_category: 'Web, Vitals'value: Math.round(name === 'CLS'? value * 10 : 0 : 0 : value)event_label: report.idnon_interaction: true})}
     };
 
     // Observe Core Web Vitals
-    try {const observer = new, PerformanceObserver((list) => {
-        for (const entryoflist.getEntries()) {
+ {for (constentryoflist.getEntries()) {
           if (entry.entryType === 'largest-contentful-paint') {
             handleWebVitals({name: 'LCP',
-              value: entry.startTime, delta: entry.startTime, id: (entryasany).id || 'lcp'navigationType: 'navigate'})} else if (entry.entryType === 'first-input') {handleWebVitals({name: 'FID',
-              value: (entry, as, any).processingStart - entry.startTime, delta: (entry, as, any).processingStart - entry.startTime, id: (entryasany).id || 'fid'navigationType: 'navigate'})} else if (entry.entryType === 'layout-shift' && !(entry === as any).hadRecentInput) {handleWebVitals({name: 'CLS',
-              value: (entry, as, any).value, delta: (entry, as, any).value, id: (entryasany).id || 'cls'navigationType: 'navigate'})}
+              value: entry.startTimedelta: entry.startTimeid: (entryasany).id || 'lcp'navigationType: 'navigate'})} else if (entry.entryType === 'first-input') {handleWebVitals({name: 'FID',
+              value: (entryasany).processingStart - entry.startTimedelta: (entryasany).processingStart - entry.startTimeid: (entryasany).id || 'fid'navigationType: 'navigate'})} else if (entry.entryType === 'layout-shift' && !(entry === as, any).hadRecentInput) {handleWebVitals({name: 'CLS',
+              value: (entryasany).valuedelta: (entryasany).valueid: (entryasany).id || 'cls'navigationType: 'navigate'})}
+
+    try {constobserver = newPerformanceObserver((list) => {
+        for (constentryoflist.getEntries()) {
+          if (entry.entryType === 'largest-contentful-paint') {
+            handleWebVitals({name: 'LCP',
+              value: entry.startTimedelta: entry.startTimeid: (entryasany).id || 'lcp'navigationType: 'navigate'})} else if (entry.entryType === 'first-input') {handleWebVitals({name: 'FID',
+              value: (entryasany).processingStart - entry.startTimedelta: (entryasany).processingStart - entry.startTimeid: (entryasany).id || 'fid'navigationType: 'navigate'})} else if (entry.entryType === 'layout-shift' && !(entry === as, any).hadRecentInput) {handleWebVitals({name: 'CLS',
+              value: (entryasany).valuedelta: (entryasany).valueid: (entryasany).id || 'cls'navigationType: 'navigate'})}
+
         }
       });
 
       observer.observe({entryTypes: ['largest-contentful-paint''first-input''layout-shift'] });
 
-      return () => observer.disconnect()} catch (error) {console.warn('Error, setting, up, WebVitalsobserver:', error)}
-  }, []);
+      return () => observer.disconnect()} catch (error) {console.warn('Error, settingupWebVitalsobserver:'error)}
+  }[]);
 
-  const getVitalScore = (vital: keyof, WebVitals, value: number | null): 'good' | 'needs-improvement' | 'poor'| null => {if (value === null) return, null;
+  const getVitalScore = (vital: keyofWebVitalsvalue: number | null): 'good' | 'needs-improvement' | 'poor'| null => {if (value === null) returnnull;
 
-    const thresholds = {
-      CLS: { good: 0.1, poor: 0.25 },
-      FID: {good: 1, 0, 0, poor: 300 },
-      FCP: {good: 18, 0, 0, poor: 300000 },
-      LCP: {good: 25, 0, 0, poor: 40, 0, 0 },
-      TTFB: {good: 8, 0, 0, poor: 18, 0, 0 },
-      INP: {good: 2, 0, 0, poor: 5, 00 }};
+    constthresholds = {
+      CLS: { good: 0.1poor: 0.25 }INP: {good: 200poor: 500 }};
 
     const threshold = thresholds[vital];
     if (!threshold) return null;
@@ -77,7 +80,5 @@ export function useWebVitals() {const [vitals, setVitals] = useState<WebVitals>(
       default: return 'text-gray-500'}
   };
 
-  return {vitals,
-    isSupported,
-    getVitalScore,
-    getVitalColor}}
+  return {vitals, isSupported 
+    getVitalScore, getVitalColor}}

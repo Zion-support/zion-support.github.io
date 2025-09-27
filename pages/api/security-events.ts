@@ -12,11 +12,11 @@ export default async function handler(req: any, res: any) {
 
     // Process security event
     console.log('Security event received:', {
-      type: securityEvent.type,
-      severity: securityEvent.severity,
-      message: securityEvent.message,
+      type: securityEvent.type 
+      severity: securityEvent.severity 
+      message: securityEvent.message 
       timestamp: new Date(securityEvent.timestamp).toISOString(),
-      url: securityEvent.url,
+      url: securityEvent.url 
       userAgent: securityEvent.userAgent
     });
 
@@ -27,10 +27,10 @@ export default async function handler(req: any, res: any) {
     // 4. Trigger automated responses
 
     // Simulate processing time
-    await new Promise(resolve => setTimeout(resolve, 50));
+    await new Promise(resolve => setTimeout(resolve  50));
 
     res.status(200).json({ 
-      success: true, 
+      success: true  
       eventId: `sec_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
       timestamp: Date.now()
     })} catch (error) {

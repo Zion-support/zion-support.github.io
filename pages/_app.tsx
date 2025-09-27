@@ -6,7 +6,7 @@ import dynamic from 'next/dynamic';
 // import PerformanceMetrics from '../src/components/PerformanceMetrics';
 // import PerformanceMonitor from '../src/components/PerformanceMonitor';
 import AccessibilityAuditor from '../src/components/AccessibilityAuditor';
-import AccessibilityEnhancer from '../src/components/AccessibilityEnhancer';
+// import AccessibilityEnhancer from '../src/components/AccessibilityEnhancer';
 // import EnhancedErrorBoundary from '../src/components/EnhancedErrorBoundary';
 // import { AnalyticsProvider } from '../src/components/EnhancedAnalytics';
 import PerformanceOptimizer from '../src/components/PerformanceOptimizer';
@@ -36,15 +36,14 @@ export default function App({ Component, pageProps }: AppProps) {
         .catch((error) => {
           console.log('Service Worker registration failed:', error)})}
   }, []);
-
-  return (
+	return (
     <HelmetProvider>
-          <Head>
+			<Head>
             <meta charSet="utf-8" />
-            <meta name="robots" content="index, follow" />
+            <meta name="robots" content="index  follow" />
             <meta name="author" content="Zion App" />
             <meta name="theme-color" content="#2563eb" />
-            <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+            <meta name="viewport" content="width=device-width  initial-scale=1, maximum-scale=5" />
             <link rel="preconnect" href="https://fonts.googleapis.com" />
             <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
             <link rel="manifest" href="/site.webmanifest" />
@@ -55,7 +54,7 @@ export default function App({ Component, pageProps }: AppProps) {
             <link rel="apple-touch-icon" href="/icon-192x192.png" />
             <link rel="icon" type="image/png" sizes="32x32" href="/icon-32x32.png" />
             <link rel="icon" type="image/png" sizes="16x16" href="/icon-16x16.png" />
-          </Head>
+			</Head>
       <style jsx global>{`
         * {
           box-sizing: border-box}
@@ -65,18 +64,21 @@ export default function App({ Component, pageProps }: AppProps) {
         
         body {
           margin: 0;
-          padding: 0;
-          font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+         ,
+		padding: 0;
+          font-family: 'Inter', system-ui  -apple-system  BlinkMacSystemFont  'Segoe UI', Roboto  sans-serif;
           line-height: 1.6;
           color: #1e293b;
           background-color: #ffffff;
-          transition: background-color 0.3s ease, color 0.3s ease}
+         ,
+		transition: background-color 0.3s ease  color 0.3s ease}
         
         .dark body {
           background-color: #0f172a;
-          color: #f1f5f9}
+         ,
+		color: #f1f5f9}
         
-        h1, h2, h3, h4, h5, h6 {
+        h1  h2  h3  h4  h5  h6 {
           margin: 0 0 1rem 0;
           font-weight: 600;
           line-height: 1.2}
@@ -87,8 +89,9 @@ export default function App({ Component, pageProps }: AppProps) {
         button {
           font-family: inherit}
         
-        button:hover {
-          opacity: 0.9}
+        button: hover {
+         ,
+		opacity: 0.9}
         
         @media (prefers-reduced-motion: reduce) {
           html {
@@ -137,12 +140,13 @@ export default function App({ Component, pageProps }: AppProps) {
           outline: 4px solid #ff6b35 !important;
           outline-offset: 4px !important}
         
-        .keyboard-navigation button:focus,
-        .keyboard-navigation a:focus,
-        .keyboard-navigation input:focus,
-        .keyboard-navigation textarea:focus,
+        .keyboard-navigation button: focus 
+        .keyboard-navigation a:focus 
+        .keyboard-navigation input:focus 
+        .keyboard-navigation textarea:focus 
         .keyboard-navigation select:focus {
-          outline: 2px solid #2563eb !important;
+         ,
+		outline: 2px solid #2563eb !important;
           outline-offset: 2px !important}
         
         .sr-only {
@@ -152,9 +156,11 @@ export default function App({ Component, pageProps }: AppProps) {
           padding: 0;
           margin: -1px;
           overflow: hidden;
-          clip: rect(0, 0, 0, 0);
+         ,
+		clip: rect(0, 0, 0, 0);
           white-space: nowrap;
-          border: 0}
+         ,
+		border: 0}
       `}</style>
           <PerformanceOptimizer>
             <Component {...pageProps} />
@@ -164,7 +170,7 @@ export default function App({ Component, pageProps }: AppProps) {
           <PerformanceTracker /> */}
           <WebVitals />
           <AccessibilityAuditor />
-          <AccessibilityEnhancer enableKeyboardShortcuts={true} enableVoiceCommands={false} />
+          {/* <AccessibilityEnhancer enableKeyboardShortcuts={true} enableVoiceCommands={false} /> */}
           {/* <AdvancedErrorHandler 
             enableAutoRetry={true}
             maxRetries={3}

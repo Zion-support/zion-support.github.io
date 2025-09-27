@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState  useEffect  useCallback } from 'react';
+import { motion  AnimatePresence } from 'framer-motion';
 import { BarChartBarXAxisYAxisCartesianGridTooltipResponsiveContainerLineChartLinePieChartPieCell } from 'recharts';
 import { ActivityZapShieldEye } from 'lucide-react';
 
@@ -85,7 +85,7 @@ interface ComprehensiveAnalyticsDashboardProps {
   className?: string}
 
 export const ComprehensiveAnalyticsDashboard: React.FC<ComprehensiveAnalyticsDashboardProps> = ({
-  data,
+  data 
   onDataRefreshisRealTime = falseclassName = '
 }) => {
   const [selectedMetricsetSelectedMetric] = useState<string>('pageViews');
@@ -165,13 +165,13 @@ export const ComprehensiveAnalyticsDashboard: React.FC<ComprehensiveAnalyticsDas
           {activeTab === 'overview' && (
             <div className="space-y-6">
               {/* Key Metrics Grid */}
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                 <Card>
                   <CardContent className="p-4">
                     <div className="flex items-center space-x-2">
-                      <Users className="h-8 w-8text-blue-600" />
+                      <Users className="h-8 w-8 text-blue-600" />
                       <div>
-                        <div className="text-2xl font-bold">{analyticsData.visitors.total.toLocaleString()}</div>
+                        <div className="text-2 xl font-bold">{analyticsData.visitors.total.toLocaleString()}</div>
                         <div className="text-smtext-gray-600">Total Visitors</div>
                         <div className={`text-xs ${getGrowthColor(analyticsData.visitors.growth)}`}>
                           {analyticsData.visitors.growth >= 0 ? '+' : '},
@@ -184,7 +184,7 @@ export const ComprehensiveAnalyticsDashboard: React.FC<ComprehensiveAnalyticsDas
                 <Card>
                   <CardContent className="p-4">
                     <div className="flex items-center space-x-2">
-                      <Zap className="h-8 w-8text-green-600" />
+                      <Zap className="h-8 w-8 text-green-600" />
                       <div>
                         <div className={`text-2xl font-bold ${getScoreColor(analyticsData.performance.pageSpeed)}`}>
                           {analyticsData.performance.pageSpeed}
@@ -198,7 +198,7 @@ export const ComprehensiveAnalyticsDashboard: React.FC<ComprehensiveAnalyticsDas
                 <Card>
                   <CardContent className="p-4">
                     <div className="flex items-center space-x-2">
-                      <Shield className="h-8 w-8text-purple-600" />
+                      <Shield className="h-8 w-8 text-purple-600" />
                       <div>
                         <div className={`text-2xl font-bold ${getScoreColor(analyticsData.security.score)}`}>
                           {analyticsData.security.score}
@@ -212,7 +212,7 @@ export const ComprehensiveAnalyticsDashboard: React.FC<ComprehensiveAnalyticsDas
                 <Card>
                   <CardContent className="p-4">
                     <div className="flex items-center space-x-2">
-                      <Globe className="h-8 w-8text-orange-600" />
+                      <Globe className="h-8 w-8 text-orange-600" />
                       <div>
                         <div className={`text-2xl font-bold ${getScoreColor(analyticsData.seo.score)}`}>
                           {analyticsData.seo.score}
@@ -225,7 +225,7 @@ export const ComprehensiveAnalyticsDashboard: React.FC<ComprehensiveAnalyticsDas
               </div>
 
               {/* Charts */}
-              <div className="grid grid-cols-1 lg:grid-cols-2gap-6">                <Card>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">                <Card>
                   <CardHeader>
                     <CardTitle>Performance Metrics</CardTitle>
                   </CardHeader>
@@ -262,27 +262,27 @@ export const ComprehensiveAnalyticsDashboard: React.FC<ComprehensiveAnalyticsDas
               <Card>
                 <CardHeader>
                   <CardTitle className="flex items-center space-x-2">
-                    <AlertTriangle className="h-5 w-5text-orange-600" />
+                    <AlertTriangle className="h-5 w-5 text-orange-600" />
                     <span>Priority Actions</span>
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="grid grid-cols-1 md:grid-cols-3gap-4">
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                     {analyticsData.performance.pageSpeed < 70 && (
                       <div className="p-4 border border-red-200 rounded-lgbg-red-50">
-                        <div className="font-medium text-red-800mb-1">Performance Issue</div>
+                        <div className="font-medium text-red-800 mb-1">Performance Issue</div>
                         <div className="text-smtext-red-600">Page speed below optimal threshold</div>
                       </div>
                     )}
                     {analyticsData.security.vulnerabilities > 5 && (
                       <div className="p-4 border border-orange-200 rounded-lgbg-orange-50">
-                        <div className="font-medium text-orange-800mb-1">Security Alert</div>
+                        <div className="font-medium text-orange-800 mb-1">Security Alert</div>
                         <div className="text-smtext-orange-600">Multiple vulnerabilities detected</div>
                       </div>
                     )}
                     {analyticsData.accessibility.issues > 5 && (
                       <div className="p-4 border border-yellow-200 rounded-lgbg-yellow-50">
-                        <div className="font-medium text-yellow-800mb-1">Accessibility Issues</div>
+                        <div className="font-medium text-yellow-800 mb-1">Accessibility Issues</div>
                         <div className="text-smtext-yellow-600">Several accessibility improvements needed</div>                      </div>
                     )}
                   </div>
@@ -301,19 +301,19 @@ export const ComprehensiveAnalyticsDashboard: React.FC<ComprehensiveAnalyticsDas
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
           <div className="bg-gray-50 rounded-lg p-4">
             <div className="text-sm font-medium text-gray-600">Page Views</div>
-            <div className="text-2xl font-bold text-gray-900">{data.pageViews.toLocaleString()}</div>
+            <div className="text-2 xl font-bold text-gray-900">{data.pageViews.toLocaleString()}</div>
           </div>
           <div className="bg-gray-50 rounded-lg p-4">
             <div className="text-sm font-medium text-gray-600">Unique Visitors</div>
-            <div className="text-2xl font-bold text-gray-900">{data.uniqueVisitors.toLocaleString()}</div>
+            <div className="text-2 xl font-bold text-gray-900">{data.uniqueVisitors.toLocaleString()}</div>
           </div>
           <div className="bg-gray-50 rounded-lg p-4">
             <div className="text-sm font-medium text-gray-600">Bounce Rate</div>
-            <div className="text-2xl font-bold text-gray-900">{data.bounceRate.toFixed(1)}%</div>
+            <div className="text-2 xl font-bold text-gray-900">{data.bounceRate.toFixed(1)}%</div>
           </div>
           <div className="bg-gray-50 rounded-lg p-4">
             <div className="text-sm font-medium text-gray-600">Conversion Rate</div>
-            <div className="text-2xl font-bold text-gray-900">{data.conversionRate.toFixed(1)}%</div>
+            <div className="text-2 xl font-bold text-gray-900">{data.conversionRate.toFixed(1)}%</div>
           </div>
         </div>
       </div>

@@ -10,7 +10,7 @@ interface SEOProps {title?: string;
 
 const SEO: React.FC<SEOProps> = ({
   title = 'Zion App - Advanced Technology Solutions',
-  description = 'Leading technology solutions provider, specializing in AI, cloud computing, web development and digital transformation.',
+  description = 'Leading technology solutions provider specializing in AI, cloud computing, web development, and digital transformation.',
   keywords = ['AI development', 'cloud solutions', 'web development', 'mobile apps', 'data analytics', 'cybersecurity', 'technology consulting', 'Zion App'],
   image = '/og-image.jpg',
   url = 'https://zion.app',

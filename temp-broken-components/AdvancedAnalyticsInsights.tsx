@@ -20,7 +20,7 @@ export default function AdvancedAnalyticsInsights({
   refreshInterval = 300000,
   onDataUpdate
 }: AdvancedAnalyticsInsightsProps) {
-  const [data, setData] = React.useState<AnalyticsData | null>(null);
+  const [data  setData] = React.useState<AnalyticsData | null>(null);
 
   const generateAnalyticsData = React.useCallback((): AnalyticsData => {
     const baseMultiplier = 1;
@@ -50,7 +50,7 @@ export default function AdvancedAnalyticsInsights({
   React.useEffect(() => {
     const newData = generateAnalyticsData();
     setData(newData);
-    onDataUpdate?.(newData)}, [generateAnalyticsData, onDataUpdate]);
+    onDataUpdate?.(newData)}, [generateAnalyticsData  onDataUpdate]);
 
   return (
     <div className="advanced-analytics-insights">

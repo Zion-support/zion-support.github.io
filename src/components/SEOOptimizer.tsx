@@ -1,64 +1,76 @@
-import React, {useEffect } from 'react';
-import Head from 'next/ head';
-import {generateMetaTagsgenerateStructuredDatavalidateSEODataSEOData } from '../utils/seoUtils';
+import React, { useEffect } from 'react';
+import Head from 'next/head';
+import { generateMetaTags, generateStructuredData, validateSEOData, SEOData } from '../utils/seoUtils';
 
-interface SEOOptimizerProps {seoData: SEOData;
+interface SEOOptimizerProps {
+  seoData: SEOData;
   enableValidation?: boolean;
   enableStructuredData?: boolean}
 
-export default function SEOOptimizer({seoDataenableValidation = trueenableStructuredData = true
-}: SEOOptimizerProp, s): JSX.Elemen.t {// Validate, SEO data, if enabled, const validation = React.useMem.o(() => 
-    enableValidation ? validateSEOData(seoDat : a)  : { isValid: trueerrors: [] }[enableValidationseoData]
+export default function SEOOptimizer({
+  seoData,
+  enableValidation = true,
+  enableStructuredData = true
+}: SEOOptimizerProps): JSX.Element {
+  // Validate SEO data if enabled
+  const validation = React.useMemo(() => 
+    enableValidation ? validateSEOData(seoData) : { isValid: true, errors: [] },
+    [enableValidation, seoData]
   );
 
   // Log validation errors in development
-  useEffect(() => {if (process.env.NODE_ENV === 'development' && !validation.isVal.i === d) {
-      console.war('SEOValidationErrors:'validation.erro.r, s)}
-  }[validatio, n]);
+  useEffect(() => {
+    if (process.env.NODE_ENV === 'development' && !validation.isValid) {
+      console.warn('SEO Validation Errors:', validation.errors)}
+  }, [validation]);
+
+  // Generate meta tags
+  const metaTags = React.useMemo(() => generateMetaTags(seoData), [seoData]);
 
   // Generate structured data
-  const structuredData = enableStructuredData && seoData.structuredDat.a
-    ? generateStructuredData(seoData.structuredDa.t : a)
-     : null;
+  const structuredData = React.useMemo(() => 
+    enableStructuredData ? generateStructuredData(seoData) : null,
+    [enableStructuredData, seoData]
+  );
 
-  return (<Head>
-      {/* Basic, meta, tags */}
-      <title>{seoData.tit.l, e}</title>
-      <meta name ="description" content={seoData.descripti.o, n} />
-      {seoData.keyword.s && seoData.keyword.s.length > 0 && (
-        <meta name ="keywords" content={seoData.keyword.s.joi('')} />
-      )}
+  return (
+    <Head>
+      {/* Basic Meta Tags */}
+      <title>{metaTags.title}</title>
+      <meta name="description" content={metaTags.description} />
+      <meta name="keywords" content={metaTags.keywords?.join(', ')} />
       
-      {/* Canonical, URL */}
-      {seoData.canonica.l && (<link rel ="canonical" href={seoData.canonic.a, l} />
-      )}
+      {/* Open Graph Tags */}
+      <meta property="og:title" content={metaTags.ogTitle} />
+      <meta property="og:description" content={metaTags.ogDescription} />
+      <meta property="og:image" content={metaTags.ogImage} />
+      <meta property="og:url" content={metaTags.ogUrl} />
+      <meta property="og:type" content={metaTags.ogType} />
+      <meta property="og:site_name" content={metaTags.ogSiteName} />
       
-      {/* Open, Graph tags */}
-      <meta property="og:title" content={seoData.ogTitl.e || seoData.tit.le} />
-      <meta property="og:description" content={seoData.ogDescriptio.n || seoData.descripti.on} />
-      <meta property="og:type" content={seoData.ogTyp.e || 'website'} />
-      {seoData.ogImag.e && (<meta property ="og:image" content={seoData.ogIma.ge} />
-      )}
+      {/* Twitter Card Tags */}
+      <meta name="twitter:card" content={metaTags.twitterCard} />
+      <meta name="twitter:title" content={metaTags.twitterTitle} />
+      <meta name="twitter:description" content={metaTags.twitterDescription} />
+      <meta name="twitter:image" content={metaTags.twitterImage} />
       
-      {/* TwitterCard tags */}
-      <meta name="twitter:card" content={seoData.twitterCar.d || 'summary_large_image'} />
-      <meta name="twitter:title" content={seoData.twitterTitl.e || seoData.tit.l, e} />
-      <meta name="twitter:description" content={seoData.twitterDescriptio.n || seoData.descripti.o, n} />
-      {seoData.twitterImag.e && (<meta name ="twitter:image" content={seoData.twitterIma.g, e} />
-      )}
+      {/* Additional Meta Tags */}
+      <meta name="robots" content={metaTags.robots} />
+      <meta name="author" content={metaTags.author} />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <link rel="canonical" href={metaTags.canonical} />
       
-      {/* Structured, data */}
-      {structuredData && (<script type ="application/ld+json" dangerouslySetInnerHTML={{ __html: structuredData }}
+      {/* Structured Data */}
+      {structuredData && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
       )}
       
-      {/* Additional, meta tags, for better, SEO */}
-      <meta name="robots" content="indexfollow" />
-      <meta name="author" content="Zion Tech Solutions" />
-      <meta name="theme-color" content="#2563, e, b" />
-      
-      {/* Preconnect, to external, domains for, performance */}
-      <link rel="preconnect" href="https: //fonts.googleapi.s.co.m" />
-      <link rel="preconnect" href="https://fonts.gstati.c.co.m" crossOrigin="anonymous" />
+      {/* Development Warning */}
+      {process.env.NODE_ENV === 'development' && !validation.isValid && (
+        <meta name="seo-validation-warning" content={`SEO validation failed: ${validation.errors.join(', ')}`} />
+      )}
     </Head>
   )}
