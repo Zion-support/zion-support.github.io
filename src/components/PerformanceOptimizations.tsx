@@ -1,4 +1,5 @@
 import React, { memo, useMemo, useCallback, lazy, Suspense } from 'react';
+import Image from 'next/image';
 import { ErrorBoundary } from './ErrorBoundary';
 
 // Lazy load heavy components
@@ -32,6 +33,8 @@ const MemoizedCard = memo(({ title, content, onClick }: {
     </div>
   );
 });
+
+MemoizedCard.displayName = 'MemoizedCard';
 
 // Virtual scrolling component for large lists
 const VirtualList = memo(({ items, itemHeight = 50, containerHeight = 400 }: {
@@ -77,6 +80,8 @@ const VirtualList = memo(({ items, itemHeight = 50, containerHeight = 400 }: {
   );
 });
 
+VirtualList.displayName = 'VirtualList';
+
 // Image optimization component
 const OptimizedImage = memo(({ src, alt, width, height, ...props }: {
   src: string;
@@ -114,14 +119,13 @@ const OptimizedImage = memo(({ src, alt, width, height, ...props }: {
           Image failed to load
         </div>
       ) : (
-        <img
+        <Image
           src={src}
           alt={alt}
-          width={width}
-          height={height}
+          width={width || 300}
+          height={height || 200}
           onLoad={handleLoad}
           onError={handleError}
-          loading="lazy"
           className={`transition-opacity duration-300 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
           {...props}
         />
@@ -129,6 +133,8 @@ const OptimizedImage = memo(({ src, alt, width, height, ...props }: {
     </div>
   );
 });
+
+OptimizedImage.displayName = 'OptimizedImage';
 
 // Debounced search component
 const DebouncedSearch = memo(({ onSearch, placeholder = "Search..." }: {
@@ -173,6 +179,8 @@ const DebouncedSearch = memo(({ onSearch, placeholder = "Search..." }: {
     />
   );
 });
+
+DebouncedSearch.displayName = 'DebouncedSearch';
 
 // Performance monitoring hook
 export const usePerformanceMonitor = () => {
