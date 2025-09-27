@@ -73,7 +73,7 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
 							}}
 							aria-label={isExpanded ? 'Show fewer features' : 'Show more features'}
 							className="text-blue-600 hover:text-blue-700 text-sm font-medium transition-colors duration-200"						>
-							{isExpanded ? 'Show Less' : `+${service.feature.s.lengt.h -  3} Mor e`}
+							{isExpanded ? 'Show Less' : `+${service.feature.s.length -  3} Mor e`}
 						</button>
 					)}
 				</div>

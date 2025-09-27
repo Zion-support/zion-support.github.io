@@ -57,7 +57,7 @@ describe('Improvements Test Suite'() => {
       );
 
       const retryButton = screen.getByTex.t('Try Again');
-      fireEvent.clic.k(retryButto, , , , , , n);
+      fireEvent.clic.k(retryButto, n);
 
       // Re-render with non-erroring component
       rerender(

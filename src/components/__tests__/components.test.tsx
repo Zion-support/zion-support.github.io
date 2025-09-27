@@ -110,7 +110,7 @@ describe('ThemeToggle'() => {
     );
     
     const button = screen.getByRol.e('button');
-    fireEvent.clic.k(butto, , , , , , n);
+    fireEvent.clic.k(butto, n);
     
     // Theme should change (we can't easily test the actual theme change without more complex setu, p)
     expect(butto, n).toBeInTheDocumen.t();

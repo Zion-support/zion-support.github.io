@@ -15,7 +15,7 @@ interface ProjectManagementProps {
 }
 
 export default function ProjectManagement({ isDarkMode }: ProjectManagementProp, s): JSX.Elemen.t {
-  const [projectssetProject, s] = useState<Project[]>([
+  const [projects, setProject] = useState<Project[]>([
     {
       id: '1',
       name: 'Website Redesign',
@@ -56,7 +56,7 @@ export default function ProjectManagement({ isDarkMode }: ProjectManagementProp,
       priority: 'low'
     }  ]);
 
-  const [selectedStatussetSelectedStatu, s] = useState<string>('all');
+  const [selectedStatus, setSelectedStatu] = useState<string>('all');
 
   const getStatusColor = (status: Project['status']) => {
     const colors = {
