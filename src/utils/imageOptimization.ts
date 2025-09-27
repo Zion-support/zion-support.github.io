@@ -40,17 +40,18 @@ export class ImageOptimizer {
       if (width) params.set("w", width.toString());
       if (height) params.set("h", height.toString());
       params.set("q", quality.toString());
-      if (format !== "webp") params.set("f", format);
+      params.set("f", format);
       if (blur) params.set("blur", "1");
 
-      const optimizedUrl = `/api/image?url=${encodeURIComponent(src)}&${params.toString()}`;
+      const optimizedUrl = `/api/image-optimization?url=${encodeURIComponent(src)}&${params.toString()}`;
       this.cache.set(cacheKey, optimizedUrl);
       return optimizedUrl;
     }
 
-    // For local images, return as-is for now
-    this.cache.set(cacheKey, src);
-    return src;
+    // For local images, use Next.js Image component optimization
+    const optimizedUrl = src;
+    this.cache.set(cacheKey, optimizedUrl);
+    return optimizedUrl;
   }
 
   // Generate responsive image sources
@@ -60,7 +61,6 @@ export class ImageOptimizer {
     media?: string;
   }[] {
     const sizes = [320, 640, 768, 1024, 1280, 1920];
-    
     return sizes.map((width, index) => ({
       src: this.generateOptimizedUrl(src, { ...options, width }),
       width,
@@ -73,9 +73,10 @@ export class ImageOptimizer {
     const canvas = document.createElement("canvas");
     canvas.width = width;
     canvas.height = height;
-    
     const ctx = canvas.getContext("2d");
+    
     if (ctx) {
+      // Create a simple gradient placeholder
       const gradient = ctx.createLinearGradient(0, 0, width, height);
       gradient.addColorStop(0, "#f0f0f0");
       gradient.addColorStop(1, "#e0e0e0");
@@ -92,11 +93,32 @@ export class ImageOptimizer {
       .replace(/[^a-zA-Z0-9\s]/g, " ")
       .split(/\s+/)
       .filter(word => word.length > 0)
-      .slice(0, 3);
+      .map(word => word.toLowerCase());
     
     const baseAlt = words.join(" ");
     return context ? `${baseAlt} - ${context}` : baseAlt;
   }
+
+  // Preload critical images
+  preloadImage(src: string, options: ImageOptimizationOptions = {}): Promise<void> {
+    return new Promise((resolve, reject) => {
+      const img = new Image();
+      img.onload = () => resolve();
+      img.onerror = reject;
+      img.src = this.generateOptimizedUrl(src, options);
+    });
+  }
+
+  // Clear cache
+  clearCache(): void {
+    this.cache.clear();
+  }
+
+  // Get cache size
+  getCacheSize(): number {
+    return this.cache.size;
+  }
 }
 
-export default ImageOptimizer;
+// Export singleton instance
+export const imageOptimizer = ImageOptimizer.getInstance();

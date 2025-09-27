@@ -1,5 +1,4 @@
 import Head from "next/head";
-// import dynamic from "next/dynamic";
 // import EnhancedSEO from "../src/components/EnhancedSEO";
 
 // L a z y l o a d th e comprehens i v e dashbo a r d

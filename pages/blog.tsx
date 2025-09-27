@@ -1,12 +1,20 @@
 import React, { useState } from 'react';
+<<<<<<< HEAD
 import Head from 'next/head';
+=======
+>>>>>>> 285e4888d7fa2bcb810a95a09b2bd5b0625fd5ad
 import Link from 'next/link';
 import { blogPosts } from '../src/data/blogPosts';
 import { useAnalytics } from '../src/hooks/useAnalytics';
 
+<<<<<<< HEAD
 export default function Blog(): React.JSX.Element {
   const [selectedCategory, setSelectedCategory] = useState('All');
 
+=======
+export default function Blog(): JSX.Element {
+  const [isNewsletterLoading, setIsNewsletterLoading] = useState(false);
+>>>>>>> 285e4888d7fa2bcb810a95a09b2bd5b0625fd5ad
   const { trackClick } = useAnalytics();
 
   const categories = ['All', ...Array.from(new Set(blogPosts.map(post => post.category)))];
