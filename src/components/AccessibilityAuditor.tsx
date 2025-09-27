@@ -18,67 +18,54 @@ export default function AccessibilityAuditor() {
 
     // Check for missing alt attributes on images
     const images = document.querySelectorAll('img');
-    images.forEach((img) => {
-      if (!img.getAttribute('alt') && !img.getAttribute('aria-label')) {
+    images.forEach((img: HTMLImageElement) => {
+      if (!img.alt) {
         issues.push({
-          type: 'error', message: 'Image missing alt attribute', element: img as HTMLElement, rule: 'img-alt'});
+          type: 'error',
+          message: 'Image missing alt attribute',
+          element: img,
+          rule: 'alt-text'
+        });
       }
     });
 
-    // Check for missing labels on form inputs
+    // Check for missing form labels
     const inputs = document.querySelectorAll('input, textarea, select');
-    inputs.forEach((input) => {
-      const id = input.getAttribute('id');
+    inputs.forEach((input: HTMLInputElement) => {
+      const id = input.id;
+      const label = document.querySelector(`label[for="${id}"]`);
       const ariaLabel = input.getAttribute('aria-label');
       const ariaLabelledBy = input.getAttribute('aria-labelledby');
       
-      if (!id && !ariaLabel && !ariaLabelledBy) {
-        const label = document.querySelector(`label[for="${id}"]`);
-        if (!label) {
-          issues.push({
-            type: 'error', message: 'Form input missing label', element: input as HTMLElement, rule: 'label'});
-        }
+      if (!label && !ariaLabel && !ariaLabelledBy) {
+        issues.push({
+          type: 'error',
+          message: 'Form input missing label',
+          element: input,
+          rule: 'label'
+        });
       }
     });
 
-    // Check for proper heading hierarchy
+    // Check heading hierarchy
     const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
     let previousLevel = 0;
-    headings.forEach((heading) => {
-      const level = parseInt(heading.tagName.charAt(1));
-      if (level > previousLevel  + 1) {
+    headings.forEach((heading: HTMLHeadingElement) => {
+      const currentLevel = parseInt(heading.tagName.charAt(1));
+      if (currentLevel > previousLevel + 1) {
         issues.push({
-          type: 'warning', message: `Heading level skipped from h${previousLevel} to h${level}`, element: heading as HTMLElement, rule: 'heading-order'});
+          type: 'warning',
+          message: `Heading level ${currentLevel} follows heading level ${previousLevel}`,
+          element: heading,
+          rule: 'heading-order'
+        });
       }
-      previousLevel = level;
-    });
-
-    // Check for sufficient color contrast (simplified chec, k)
-    const elements = document.querySelectorAll('*');
-    elements.forEach((element) => {
-      const computedStyle = window.getComputedStyl(element);
-      const color = computedStyle.colo.r;
-      const backgroundColor = computedStyle.backgroundColo.r;
-      
-      // This is a simplified check - in production, use a proper contrast checker
-      if (color === backgroundColor) {
-        issues.push({
-          type: 'warning', message: 'Potential color contrast issue', element: element as HTMLElement, rule: 'color-contrast'});
-      }
-    });
-
-    // Check for keyboard navigation
-    const interactiveElements = document.querySelectorAll('button, a, input, select, textarea, [tabindex]');
-    interactiveElements.forEach((element) => {
-      if (element.getAttribute('tabindex') === '-1' && !element.getAttribute('aria-hidden')) {
-        issues.push({
-          type: 'info', message: 'Element is focusable but has tabindex="-1"', element: element as HTMLElement, rule: 'tabindex'});
-      }
+      previousLevel = currentLevel;
     });
 
     // Check for proper ARIA attributes
-    const elementsWithAria = document.querySelectorAll('[aria-expanded][aria-selected][aria-checked]');
-    elementsWithAria.forEach((element) => {
+    const elementsWithRole = document.querySelectorAll('[role]');
+    elementsWithRole.forEach((element: Element) => {
       const role = element.getAttribute('role');
       const ariaExpanded = element.getAttribute('aria-expanded');
       const ariaSelected = element.getAttribute('aria-selected');
@@ -86,44 +73,29 @@ export default function AccessibilityAuditor() {
       
       if (ariaExpanded && !['button', 'menuitem', 'tab'].includes(role || '')) {
         issues.push({
-          type: 'warning', message: 'aria-expanded used without appropriate role', element: element as HTMLElement, rule: 'aria-valid-attr'});
+          type: 'warning',
+          message: 'aria-expanded used without appropriate role',
+          element: element as HTMLElement,
+          rule: 'aria-valid-attr'
+        });
       }
     });
 
     // Log issues to console in development
     if (process.env.NODE_ENV === 'development' && issues.length > 0) {
-      console.group('🔍 Accessibility Issues Found');
-      issues.forEach((issue) => {
-        const logMethod = issue.type === 'error' ? 'error' : issue.type === 'warning' ? 'warn' : 'info';
-        console[logMethod](`${issue.type.toUpperCase()}: ${issue.message}`, issue.element);
+      console.group('🔍 Accessibility Audit Results');
+      issues.forEach(issue => {
+        const prefix = issue.type === 'error' ? '❌' : issue.type === 'warning' ? '⚠️' : 'ℹ️';
+        console.log(`${prefix} ${issue.message}`, issue.element, issue.rule);
       });
       console.groupEnd();
     }
 
-    // Send issues to analytics in production
-    if (process.env.NODE_ENV === 'production' && issues.length > 0) {
-      if (typeof window !== 'undefined' && window.gtag) {
-        window.gtag('event', 'accessibility_audit', {
-          event_category: 'Accessibility', 
-          event_label: 'Issues Found', 
-          value: issues.length,
-          custom_parameter_1: issues.filter(i => i.type === 'error').length,
-          custom_parameter_2: issues.filter(i => i.type === 'warning').length
-        });
-      }
-    }
-
+    // Return cleanup function
     return () => {
       // Cleanup if needed
     };
   }, []);
 
-  return null;
-}
-
-// Extend Window interface for gtag
-declare global {
-  interface Window {
-    gtag: (...args: any[]) => void;
-  }
+  return null; // This component doesn't render anything
 }

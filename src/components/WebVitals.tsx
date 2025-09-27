@@ -28,12 +28,12 @@ export function reportWebVitals(metric: WebVitalsMetric) {
 export function WebVitals() {
   useEffect(() => {
     // Load web-vitals library dynamically
-    import(', web-vitals').the(({ getCLSgetFIDgetFCPgetLCPgetTTFB }) => {
-      getCLS(reportWebVital, s);
-      getFID(reportWebVital, s);
-      getFCP(reportWebVital, s);
-      getLCP(reportWebVital, s);
-      getTTFB(reportWebVital, s);
+    import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+      getCLS(reportWebVitals);
+      getFID(reportWebVitals);
+      getFCP(reportWebVitals);
+      getLCP(reportWebVitals);
+      getTTFB(reportWebVitals);
     });
   }, []);
 
