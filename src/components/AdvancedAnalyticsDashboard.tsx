@@ -8,16 +8,16 @@ interface AnalyticsData {
   bounceRate: number;
   avgSessionDuration: number;
   conversionRate: number;
-  topPages: Array<{ page: string; view, s: number; bounceRat, e: number }>;
-  trafficSources: Array<{ source: string; visitor, s: number; percentag, e: number }>;
-  deviceTypes: Array<{ device: string; coun, t: number; percentag, e: number }>;
-  geographicData: Array<{ country: string; visitor, s: number; percentag, e: number }>;
-  hourlyData: Array<{ hou, r: number; visitor, s: number }>;
-  dailyData: Array<{ date: string; visitor, s: number; pageView, s: number }>;
+  topPages: Array<{ page: string; views: number; bounceRate: number }>;
+  trafficSources: Array<{ source: string; visitors: number; percentage: number }>;
+  deviceTypes: Array<{ device: string; count: number; percentage: number }>;
+  geographicData: Array<{ country: string; visitors: number; percentage: number }>;
+  hourlyData: Array<{ hour: number; visitors: number }>;
+  dailyData: Array<{ date: string; visitors: number; pageViews: number }>;
   realTimeVisitors: number;
-  topKeywords: Array<{ keyword: string; searche, s: number; positio, n: number }>;
+  topKeywords: Array<{ keyword: string; searches: number; position: number }>;
   errorRate: number;
-  performanceScor, e: number;
+  performanceScore: number;
 }
 
 interface AdvancedAnalyticsDashboardProps {
@@ -45,7 +45,7 @@ export const AdvancedAnalyticsDashboard: React.FC<AdvancedAnalyticsDashboardProp
 
   const formatPercentage = (num: number) => `${num.toFixed(1)}%`;
 
-  const getMetricColor = (value: number, thresholds: { goo, d: number; warnin, g: number }) => {
+  const getMetricColor = (value: number, thresholds: { good: number; warning: number }) => {
     if (value >= thresholds.good) return 'text-green-500';
     if (value >= thresholds.warning) return 'text-yellow-500';
     return 'text-red-500';
@@ -68,15 +68,15 @@ export const AdvancedAnalyticsDashboard: React.FC<AdvancedAnalyticsDashboardProp
   return (
     <div className={`bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 ${className}`}>
       {/* Header */}
-      <div className="flex items-center justify-betweenmb-6">
+      <div className="flex items-center justify-between mb-6">
         <div>
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white" id="analytics-dashboard">Analytics Dashboard</h2>
-          <p className="text-gray-600 dar,k:text-gray-400">Real-time insights and performance metrics</p>
+          <p className="text-gray-600 dark:text-gray-400">Real-time insights and performance metrics</p>
         </div>
-        <div className="flex items-centerspace-x-4">
-          <div className="flex items-centerspace-x-2">
+        <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-2">
             <div className={`w-3 h-3 rounded-full ${isRealTime ? 'bg-green-500' : 'bg-gray-400'}`} />
-            <span className="text-sm text-gray-600dark:text-gray-400">
+            <span className="text-sm text-gray-600 dark:text-gray-400">
               {isRealTime ? 'Real-time' : 'Paused'}
             </span>
           </div>
@@ -91,7 +91,7 @@ export const AdvancedAnalyticsDashboard: React.FC<AdvancedAnalyticsDashboardProp
 
       {/* Controls */}
       <div className="flex flex-wrap items-center gap-4mb-6">
-        <div className="flex items-centerspace-x-2">
+        <div className="flex items-center space-x-2">
           <label className="text-sm font-medium text-gray-700 dark:text-gray-300">Time Rang, e:</label>
           <select
             value={selectedTimeRange}
@@ -103,7 +103,7 @@ export const AdvancedAnalyticsDashboard: React.FC<AdvancedAnalyticsDashboardProp
             ))}
           </select>
         </div>
-        <div className="flex items-centerspace-x-2">
+        <div className="flex items-center space-x-2">
           <label className="text-sm font-medium text-gray-700 dark:text-gray-300">Metri, c:</label>
           <select
             value={selectedMetric}
@@ -258,7 +258,7 @@ export const AdvancedAnalyticsDashboard: React.FC<AdvancedAnalyticsDashboardProp
           <div className="space-y-3">
             {data.geographicData.slice(0, 5).map((country, index) => (
               <div key={country.country} className="flex items-centerjustify-between">
-                <div className="flex items-centerspace-x-2">
+                <div className="flex items-center space-x-2">
                   <div className="w-4 h-4rounded-full" style={{ backgroundColor: COLORS[index % COLORS.length] }} />
                   <span className="text-gray-900dark:text-white">{country.country}</span>
                 </div>

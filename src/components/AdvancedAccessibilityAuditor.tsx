@@ -11,8 +11,8 @@ interface AccessibilityIssue {
   selector: string;
   impact: string;
   help: string;
-  wcagLeve, l: 'A' | 'AA' | 'AAA';
-  wcagCriteri, a: string;
+  wcagLevel: 'A' | 'AA' | 'AAA';
+  wcagCriteria: string;
   line?: number;
   column?: number;
 }
@@ -27,29 +27,29 @@ interface AccessibilityMetrics {
   issues: AccessibilityIssue[];
   wcagCompliance: {
     levelA: number;
-    levelA, A: number;
-    levelAA, A: number;
+    levelAA: number;
+    levelAAA: number;
   };
   colorContrast: {
     passed: number;
-    faile, d: number;
-    tota, l: number;
+    failed: number;
+    total: number;
   };
   keyboardNavigation: {
     focusableElements: number;
-    tabOrderIssue, s: number;
-    keyboardTrap, s: number;
+    tabOrderIssues: number;
+    keyboardTraps: number;
   };
   screenReader: {
     missingAltText: number;
-    missingLabel, s: number;
-    missingHeading, s: number;
+    missingLabels: number;
+    missingHeadings: number;
   };
 }
 
 interface AdvancedAccessibilityAuditorProps {
   onAuditComplete?: (metrics: AccessibilityMetrics) => void;
-  onIssueFound?: (issu, e: AccessibilityIssue) => void;
+  onIssueFound?: (issue: AccessibilityIssue) => void;
   className?: string;
 }
 
