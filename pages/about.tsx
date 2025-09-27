@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react';
 import SEO from '../src/components/SEO';
 import { useAnalytics } from '../src/hooks/useAnalytics';
 
-const About = React.memo(function About(): JSX.Element {
+const About = (): JSX.Element => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -89,9 +89,9 @@ const About = React.memo(function About(): JSX.Element {
     <>
       <SEO />
       <Head>
-        <title>About Us - Zion App</title>
-        <meta name="description" content="Learn about Zion App's mission, values and commitment to delivering cutting-edge technology solutions." />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>About U s - Z i o n Ap p</title>
+        <meta name="description" content="Le a r n ab o u t Z i o n Ap p's miss i o n values an d commitm e n t t o deliver i n g cutt i n g-e d g e technol o g y soluti o n s." />
+        <meta name="viewp o r t" content="wi d t h=dev i c e-wi d t h init i a l-sc a l e=1" />
       </Head>
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 pt-20">
         <div className="container mx-auto px-4 py-8 max-w-7xl">
@@ -110,7 +110,7 @@ const About = React.memo(function About(): JSX.Element {
             </p>
           </header>
 
-          {/* Mission Section */}
+          {/* Miss i o n Sect i o n */}
           <section className="mb-20">
             <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12">
               <div className="text-center mb-12">
@@ -188,6 +188,6 @@ const About = React.memo(function About(): JSX.Element {
       </div>
     </>
   );
-});
+};
 
 export default About;

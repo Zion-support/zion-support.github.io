@@ -1,6 +1,5 @@
-import React, { useState, useEffect, useMemo, useCallback } from 'react';
+import React, { useState } from 'react';
 import Head from 'next/head';
-import dynamic from 'next/dynamic';
 import { useAnalytics } from '../src/hooks/useAnalytics';
 
 // Lazy load heavy components to reduce initial bundle size
@@ -17,8 +16,6 @@ import { useAnalytics } from '../src/hooks/useAnalytics';
 export default function Dashboard(): JSX.Element {
   const [activeTab, setActiveTab] = useState('comprehensive');
   const [isRealTime, setIsRealTime] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
   const { trackClick } = useAnalytics();
 
   const handleTabChange = (tab: string) => {
@@ -29,29 +26,15 @@ export default function Dashboard(): JSX.Element {
   const renderDashboard = () => {
     switch (activeTab) {
       case 'comprehensive':
-        return (
-          <div className="p-8">
-            <h1 className="text-3xl font-bold text-gray-900 mb-8">Comprehensive Analytics Dashboard</h1>
-            <div className="bg-white rounded-xl shadow-lg p-8">
-              <p className="text-gray-600">Comprehensive analytics features coming soon...</p>
-            </div>
-          </div>
-        );
+        return <div className="p-8">Comprehensive Analytics Dashboard (temporarily disabled)</div>;
       case 'analytics':
-        return <div>Analytics Dashboard (temporarily disabled)</div>;
+        return <div className="p-8">Analytics Dashboard (temporarily disabled)</div>;
       case 'performance':
-        return <div>Performance Dashboard (temporarily disabled)</div>;
+        return <div className="p-8">Performance Dashboard (temporarily disabled)</div>;
       case 'security':
-        return <div>Security Dashboard (temporarily disabled)</div>;
+        return <div className="p-8">Security Dashboard (temporarily disabled)</div>;
       case 'enhanced':
-        return (
-          <div className="p-8">
-            <h1 className="text-3xl font-bold text-gray-900 mb-8">Enhanced Dashboard</h1>
-            <div className="bg-white rounded-xl shadow-lg p-8">
-              <p className="text-gray-600">Enhanced dashboard features coming soon...</p>
-            </div>
-          </div>
-        );
+        return <div className="p-8">Enhanced Dashboard (temporarily disabled)</div>;
       case 'search':
         return (
       <div className="p-8">
@@ -160,12 +143,9 @@ export default function Dashboard(): JSX.Element {
                   <p className="text-gray-500">Chart placeholder</p>
                 </div>              </div>
             </div>
-            <SystemMonitor 
-              onAlert={(alert) => console.log('System alert:', alert)}
-              onMetricsUpdate={(metrics) => console.log('Metrics updated:', metrics)}
-              enableRealTime={isRealTime}
-              refreshInterval={5000}
-            />
+            <div className="p-4 bg-gray-100 rounded">
+              System Monitor (temporarily disabled)
+            </div>
           </div>
         );
       case 'security-enhancements':
@@ -225,11 +205,9 @@ export default function Dashboard(): JSX.Element {
                 </button>
               </div>
             </div>
-            <SecurityMonitor 
-              refreshInterval={isRealTime ? 5000 : 30000}
-              enableAlerts={true}
-              onSecurityAlert={(alert) => console.log('Security alert:', alert)}
-            />
+            <div className="p-4 bg-gray-100 rounded">
+              Security Monitor (temporarily disabled)
+            </div>
           </div>
         );
       case 'performance-optimizer':
@@ -272,11 +250,9 @@ export default function Dashboard(): JSX.Element {
                 </button>
               </div>
             </div>
-            <EnhancedAnalytics 
-              refreshInterval={isRealTime ? 10000 : 60000}
-              enableRealTime={isRealTime}
-              onDataUpdate={(data) => console.log('Analytics data updated:', data)}
-            />
+            <div className="p-4 bg-gray-100 rounded">
+              Enhanced Analytics (temporarily disabled)
+            </div>
           </div>
         );
       case 'error-monitoring':
@@ -290,8 +266,8 @@ export default function Dashboard(): JSX.Element {
         return (
       <div className="p-8">
             <h1 className="text-3xl font-bold text-gray-900 mb-8">Advanced System Monitor</h1>
-            <div className="bg-white rounded-xl shadow-lg p-8">
-              <p className="text-gray-600">Advanced System Monitor features coming soon...</p>
+            <div className="p-4 bg-gray-100 rounded">
+              Advanced System Monitor (temporarily disabled)
             </div>
           </div>
         );
@@ -440,11 +416,11 @@ export default function Dashboard(): JSX.Element {
             /> */}
           </div>
         );
-      case 'error-monitoring':
+      case 'error-monitoring-v2':
         return (
       <div className="p-8">
       <div className="flex justify-between items-center mb-8">
-              <h1 className="text-3xl font-bold text-gray-900">Advanced Error Monitoring</h1>
+              <h1 className="text-3xl font-bold text-gray-900">Advanced Error Monitoring V2</h1>
       <div className="flex items-center space-x-4">
                 <button 
                   onClick={() => window.location.reload()}
@@ -457,11 +433,11 @@ export default function Dashboard(): JSX.Element {
             {/* <AdvancedErrorMonitoring /> */}
           </div>
         );
-      case 'advanced-system-monitor':
+      case 'advanced-system-monitor-v2':
         return (
       <div className="p-8">
       <div className="flex justify-between items-center mb-8">
-              <h1 className="text-3xl font-bold text-gray-900">Advanced System Monitor</h1>
+              <h1 className="text-3xl font-bold text-gray-900">Advanced System Monitor V2</h1>
       <div className="flex items-center space-x-4">
                 <button 
                   onClick={() => window.location.reload()}
@@ -471,26 +447,26 @@ export default function Dashboard(): JSX.Element {
                 </button>
               </div>
             </div>
-            <div className="bg-white rounded-xl shadow-lg p-8">
-              <p className="text-gray-600">Advanced System Monitor features coming soon...</p>
+            <div className="p-4 bg-gray-100 rounded">
+              Advanced System Monitor (temporarily disabled)
             </div>
           </div>
         );
 
-      case 'analytics':
+      case 'analytics-v2':
         return (
       <div className="p-8">
-            <h1 className="text-3 xl font-bold text-gray-900 mb-8">Analytics Dashboard</h1>
+            <h1 className="text-3xl font-bold text-gray-900 mb-8">Analytics Dashboard V2</h1>
       <div className="bg-white rounded-xl shadow-lg p-8">
               <p className="text-gray-600">Analytics features coming soon...</p>
             </div>
           </div>
         );
 
-      case 'performance':
+      case 'performance-v2':
         return (
       <div className="p-8">
-            <h1 className="text-3 xl font-bold text-gray-900 mb-8">Performance Dashboard</h1>
+            <h1 className="text-3xl font-bold text-gray-900 mb-8">Performance Dashboard V2</h1>
       <div className="bg-white rounded-xl shadow-lg p-8">
               <p className="text-gray-600">Performance monitoring features coming soon...</p>
             </div>
@@ -561,7 +537,6 @@ export default function Dashboard(): JSX.Element {
           </div>
         </nav>
 
-        {/* Main Content */}
         <main>
           {renderDashboard()}
         </main>
@@ -581,4 +556,5 @@ export default function Dashboard(): JSX.Element {
         </footer>
       </div>
     </>
-  )}
+  );
+}

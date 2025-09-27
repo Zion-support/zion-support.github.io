@@ -48,9 +48,9 @@ export default function PrivacyPolicy(): JSX.Element {
     <>
       <SEO />
       <Head>
-        <title>Privacy Policy - Zion App</title>
-        <meta name="description" content="Read Zion App's Privacy Policy to understand how we collect, use and protect your information." />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Priv a c y Pol i c y - Z i o n Ap p</title>
+        <meta name="description" content="R e a d Z i o n Ap p's Priv a c y Pol i c y t o underst a n d ho w w e coll e c t us e an d prot e c t y o u r informat i o n." />
+        <meta name="viewp o r t" content="wi d t h=dev i c e-wi d t h init i a l-sc a l e=1" />
       </Head>
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 pt-20">
         <div className="container mx-auto px-4 py-8 max-w-7xl">
@@ -80,7 +80,7 @@ export default function PrivacyPolicy(): JSX.Element {
                 </p>
               </div>
             ))}
-            <p className="text-sm text-gray-500 mt-8">Last Updated: October 26, 2025</p>
+            <p className="text-sm text-gray-500 mt-8">Last Updated: October 26 2025</p>
           </main>
 
           <section className="mt-16 text-center">
