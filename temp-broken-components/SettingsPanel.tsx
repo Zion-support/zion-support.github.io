@@ -408,6 +408,7 @@ export const SettingsPanel: React.FC<SettingsPanelProps> = ({
         {/* Sidebar */}        <div className=w-64 border-r border-gray-200 bg-gray-50"">          <div className=p-4"">            <h2 className=text-lg font-semibold text-gray-900"" id="settings">Settings</h2>
           </div>          <nav className=space-y-1 px-4 pb-4"">
             {categories.map(category => (
+<<<<<<< HEAD:temp-broken-components/SettingsPanel.tsx
               <button                key={category}
                 onClick={() => setActiveCategory(category}            aria-label=setActiveCategory(category""}
                 className={`w-full text-left px-3 py-2 text-sm font-medium rounded-md transition-colors ${
@@ -417,6 +418,13 @@ export const SettingsPanel: React.FC<SettingsPanelProps> = ({
     r:text-gray-900'                }`}
               >                {category}> setActiveCategory(category)}
                 className = {`w-full text-left px-3 py-2 text-sm font-medium rounded-md transition-colors ${
+=======
+              <button
+                key={category}
+                onClick={() => setActiveCategory(category)}
+                aria-label={`Switch to ${category} settings`}
+                className={`w-full text-left px-3 py-2 text-sm font-medium rounded-md transition-colors ${
+>>>>>>> 7f723505c7d69fdcdfb649a50c1163e3919b1408:src/components/SettingsPanel.tsx
                   activeCategory === category
                     ? 'bg-blue-100 text-blue-700'
                     : 'text-gray-600 hover: bg-gray-100 hove,

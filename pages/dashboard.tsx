@@ -1,15 +1,113 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
 
-// Lazy load heavy components for better performance
+// Lazy load heavy components to reduce initial bundle size
 const PerformanceDashboard = dynamic(() => import('../src/components/PerformanceDashboard').then(mod => ({ default: mod.PerformanceDashboard })), {
-  loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div></div>
+  ssr: false,
+  loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
 });
 
+<<<<<<< HEAD
 // const SecurityDashboard = dynamic(() => import('../src/components/SecurityDashboard').then(mod => ({ default: mod.SecurityDashboard })), {
 //   loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-red-600"></div></div>
 // });
+=======
+const SecurityDashboard = dynamic(() => import('../src/components/SecurityDashboard').then(mod => ({ default: mod.SecurityDashboard })), {
+  ssr: false,
+  loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+});
+
+const AnalyticsDashboard = dynamic(() => import('../src/components/AnalyticsDashboard').then(mod => ({ default: mod.AnalyticsDashboard })), {
+  ssr: false,
+  loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+});
+
+const EnhancedDashboard = dynamic(() => import('../src/components/EnhancedDashboard'), {
+  ssr: false,
+  loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+});
+
+const EnhancedSearch = dynamic(() => import('../src/components/EnhancedSearch'), {
+  ssr: false,
+  loading: () => <div className="h-32 w-full bg-gray-200 rounded animate-pulse" />
+});
+
+const ComprehensiveAnalyticsDashboard = dynamic(() => import('../src/components/ComprehensiveAnalyticsDashboard'), {
+  ssr: false,
+  loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+});
+
+const AdvancedPerformanceMonitor = dynamic(() => import('../src/components/AdvancedPerformanceMonitor').then(mod => ({ default: mod.AdvancedPerformanceMonitor })), {
+  ssr: false,
+  loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+});
+
+const AdvancedAnalyticsDashboard = dynamic(() => import('../src/components/AdvancedAnalyticsDashboard').then(mod => ({ default: mod.AdvancedAnalyticsDashboard })), {
+  ssr: false,
+  loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+});
+
+const AdvancedSecurityMonitor = dynamic(() => import('../src/components/AdvancedSecurityMonitor').then(mod => ({ default: mod.AdvancedSecurityMonitor })), {
+  ssr: false,
+  loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+});
+
+const AdvancedAccessibilityAuditor = dynamic(() => import('../src/components/AdvancedAccessibilityAuditor').then(mod => ({ default: mod.AdvancedAccessibilityAuditor })), {
+  ssr: false,
+  loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+});
+
+const SystemMonitor = dynamic(() => import('../src/components/SystemMonitor'), {
+  ssr: false,
+  loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+});
+
+const AdvancedSecurityEnhancements = dynamic(() => import('../src/components/AdvancedSecurityEnhancements'), {
+  ssr: false,
+  loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+});
+
+const SecurityMonitor = dynamic(() => import('../src/components/SecurityMonitor'), {
+  ssr: false,
+  loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+});
+
+const EnhancedAnalytics = dynamic(() => import('../src/components/EnhancedAnalytics'), {
+  ssr: false,
+  loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+});
+
+const AdvancedErrorHandler = dynamic(() => import('../src/components/AdvancedErrorHandler'), {
+  ssr: false,
+  loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+});
+
+const AdvancedPerformanceOptimizer = dynamic(() => import('../src/components/AdvancedPerformanceOptimizer'), {
+  ssr: false,
+  loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+});
+
+const EnhancedUserExperience = dynamic(() => import('../src/components/EnhancedUserExperience'), {
+  ssr: false,
+  loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+});
+
+const AdvancedAnalyticsInsights = dynamic(() => import('../src/components/AdvancedAnalyticsInsights'), {
+  ssr: false,
+  loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+});
+
+const AdvancedErrorMonitoring = dynamic(() => import('../src/components/AdvancedErrorMonitoring'), {
+  ssr: false,
+  loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+});
+
+const AdvancedSystemMonitor = dynamic(() => import('../src/components/AdvancedSystemMonitor'), {
+  ssr: false,
+  loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+});
+>>>>>>> 7f723505c7d69fdcdfb649a50c1163e3919b1408
 
 // const AnalyticsDashboard = dynamic(() => import('../src/components/AnalyticsDashboard').then(mod => ({ default: mod.AnalyticsDashboard })), {
 //   loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-green-600"></div></div>
@@ -75,30 +173,40 @@ const AdvancedAnalyticsInsights = dynamic(() => import('../src/components/Advanc
   loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-slate-600"></div></div>
 });
 
-// New components from the comprehensive improvements branch
-const SEOOptimizer = dynamic(() => import('../src/components/SEOOptimizer'), {
-  loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-gray-600"></div></div>
+const ComprehensiveMonitoringDashboard = dynamic(() => import('../src/components/ComprehensiveMonitoringDashboard'), {
+  loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-indigo-600"></div></div>
 });
 
-const AdvancedCacheManager = dynamic(() => import('../src/components/AdvancedCacheManager'), {
-  loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-gray-600"></div></div>
+const ComprehensiveSecurityDashboard = dynamic(() => import('../src/components/ComprehensiveSecurityDashboard'), {
+  loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-red-600"></div></div>
 });
 
-const RealTimeAnalytics = dynamic(() => import('../src/components/RealTimeAnalytics'), {
-  loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-gray-600"></div></div>
+const AdvancedErrorMonitoring = dynamic(() => import('../src/components/AdvancedErrorMonitoring'), {
+  loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-red-600"></div></div>
 });
 
-const AccessibilityEnhancements = dynamic(() => import('../src/components/AccessibilityEnhancements'), {
-  loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-gray-600"></div></div>
+const AdvancedSystemMonitor = dynamic(() => import('../src/components/AdvancedSystemMonitor'), {
+  loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div></div>
 });
 
-type DashboardTab = 'comprehensive' | 'analytics' | 'performance' | 'security' | 'enhanced' | 'search' | 'advanced-analytics' | 'advanced-performance' | 'advanced-security' | 'accessibility' | 'system-monitor' | 'security-enhancements' | 'performance-optimizer' | 'user-experience' | 'error-handler' | 'analytics-insights' | 'seo-optimizer' | 'cache-manager' | 'real-time-analytics' | 'accessibility-enhancements' | 'new-performance' | 'new-security' | 'new-analytics';
+type DashboardTab = 'comprehensive' | 'analytics' | 'performance' | 'security' | 'enhanced' | 'search' | 'advanced-analytics' | 'advanced-performance' | 'advanced-security' | 'accessibility' | 'system-monitor' | 'security-enhancements' | 'performance-optimizer' | 'user-experience' | 'error-handler' | 'analytics-insights' | 'error-monitoring' | 'advanced-system-monitor' | 'new-performance' | 'new-security' | 'new-analytics' | 'comprehensive-monitoring' | 'comprehensive-security';
 
 const Dashboard: React.FC = () => {
   const [activeTab, setActiveTab] = useState<DashboardTab>('comprehensive');
   const [isRealTime, setIsRealTime] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
 
-  const tabs = [
+  // Optimized tab switching with loading state
+  const handleTabChange = useCallback((tabId: DashboardTab) => {
+    if (tabId !== activeTab) {
+      setIsLoading(true);
+      setActiveTab(tabId);
+      // Simulate loading time for better UX
+      setTimeout(() => setIsLoading(false), 100);
+    }
+  }, [activeTab]);
+
+  const tabs = useMemo(() => [
     { id: 'comprehensive' as const, name: 'Comprehensive', icon: '🎯' },
     { id: 'analytics' as const, name: 'Analytics', icon: '📊' },
     { id: 'performance' as const, name: 'Performance', icon: '⚡' },
@@ -111,21 +219,21 @@ const Dashboard: React.FC = () => {
     { id: 'accessibility' as const, name: 'Accessibility', icon: '♿' },
     { id: 'system-monitor' as const, name: 'System Monitor', icon: '📊' },
     { id: 'security-enhancements' as const, name: 'Security Enhancements', icon: '🔐' },
-    { id: 'performance-optimizer' as const, name: 'Performance Optimizer', icon: '⚡️' },
+    { id: 'performance-optimizer' as const, name: 'Performance Optimizer', icon: '⚙️' },
     { id: 'user-experience' as const, name: 'User Experience', icon: '👤' },
+    { id: 'error-monitoring' as const, name: 'Error Monitoring', icon: '🚨' },
+    { id: 'advanced-system-monitor' as const, name: 'Advanced System Monitor', icon: '🔧' },
     { id: 'new-performance' as const, name: 'New Performance', icon: '⚡️' },
     { id: 'new-security' as const, name: 'New Security', icon: '🛡️' },
     { id: 'new-analytics' as const, name: 'New Analytics', icon: '📊' },
     { id: 'error-handler' as const, name: 'Error Handler', icon: '🚨' },
     { id: 'analytics-insights' as const, name: 'Analytics Insights', icon: '💡' },
-    { id: 'seo-optimizer' as const, name: 'SEO Optimizer', icon: '🔍' },
-    { id: 'cache-manager' as const, name: 'Cache Manager', icon: '💾' },
-    { id: 'real-time-analytics' as const, name: 'Real-Time Analytics', icon: '📊' },
-    { id: 'accessibility-enhancements' as const, name: 'Accessibility', icon: '♿' }
-  ];
+    { id: 'comprehensive-monitoring' as const, name: 'Comprehensive Monitoring', icon: '📊' },
+    { id: 'comprehensive-security' as const, name: 'Comprehensive Security', icon: '🛡️' }
+  ], []);
 
-  // Sample data for advanced components
-  const sampleAnalyticsData = {
+  // Sample data for advanced components - memoized to prevent re-creation
+  const sampleAnalyticsData = useMemo(() => ({
     pageViews: 125000,
     uniqueVisitors: 45000,
     bounceRate: 35.2,
@@ -165,9 +273,9 @@ const Dashboard: React.FC = () => {
     ],
     errorRate: 0.5,
     performanceScore: 92
-  };
+  }), []);
 
-  const renderDashboard = () => {
+  const renderDashboard = useMemo(() => {
     switch (activeTab) {
       case 'comprehensive':
         return <ComprehensiveAnalyticsDashboard />;
@@ -345,6 +453,23 @@ const Dashboard: React.FC = () => {
             />
           </div>
         );
+      case 'performance-optimizer':
+        return (
+          <div className="p-8">
+            <div className="flex justify-between items-center mb-8">
+              <h1 className="text-3xl font-bold text-gray-900">Performance Optimizer</h1>
+              <div className="flex items-center space-x-4">
+                <button 
+                  onClick={() => window.location.reload()}
+                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  Refresh
+                </button>
+              </div>
+            </div>
+            <AdvancedPerformanceOptimizer />
+          </div>
+        );
       case 'new-analytics':
         return (
           <div className="p-8">
@@ -373,6 +498,20 @@ const Dashboard: React.FC = () => {
               enableRealTime={isRealTime}
               onDataUpdate={(data) => console.log('Analytics data updated:', data)}
             />
+          </div>
+        );
+      case 'error-monitoring':
+        return (
+          <div className="p-8">
+            <h1 className="text-3xl font-bold text-gray-900 mb-8">Advanced Error Monitoring</h1>
+            <AdvancedErrorMonitoring />
+          </div>
+        );
+      case 'advanced-system-monitor':
+        return (
+          <div className="p-8">
+            <h1 className="text-3xl font-bold text-gray-900 mb-8">Advanced System Monitor</h1>
+            <AdvancedSystemMonitor />
           </div>
         );
       case 'error-handler':
@@ -414,33 +553,13 @@ const Dashboard: React.FC = () => {
                 </button>
               </div>
             </div>
-            <AdvancedPerformanceOptimizer />
-          </div>
-        );
-      case 'user-experience':
-        return (
-          <div className="p-8">
-            <h1 className="text-3xl font-bold text-gray-900 mb-8">User Experience Settings</h1>
-            <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-6">
-              <p className="text-gray-600 dark:text-gray-400 mb-4">
-                Use the settings button in the bottom-right corner to customize your experience.
-              </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                <div className="bg-white dark:bg-gray-700 p-4 rounded-lg">
-                  <h3 className="font-semibold text-gray-900 dark:text-white mb-2">Theme Settings</h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">Customize light, dark, or auto theme</p>
-                </div>
-                <div className="bg-white dark:bg-gray-700 p-4 rounded-lg">
-                  <h3 className="font-semibold text-gray-900 dark:text-white mb-2">Accessibility</h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">High contrast, reduced motion, and screen reader support</p>
-                </div>
-                <div className="bg-white dark:bg-gray-700 p-4 rounded-lg">
-                  <h3 className="font-semibold text-gray-900 dark:text-white mb-2">Language</h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">Multi-language support with RTL support</p>
-                </div>
-              </div>
-            </div>
-            <EnhancedUserExperience />
+            <AdvancedPerformanceOptimizer 
+              enableRealTime={true}
+              refreshInterval={1000}
+              enableAutoOptimization={true}
+              onOptimization={(rule) => console.log('Optimization applied:', rule)}
+              onPerformanceChange={(metrics) => console.log('Performance changed:', metrics)}
+            />
           </div>
         );
       case 'analytics-insights':
@@ -458,56 +577,92 @@ const Dashboard: React.FC = () => {
               </div>
             </div>
             <AdvancedAnalyticsInsights 
-              data={sampleAnalyticsData}
-              enableRealTime={true}
+              timeRange="30d"
               refreshInterval={30000}
-              onInsightAction={(insight) => console.log('Insight action:', insight)}
+              onDataUpdate={(data) => console.log('Analytics data updated:', data)}
             />
           </div>
         );
-      case 'seo-optimizer':
+      case 'comprehensive-monitoring':
         return (
-          <div className="p-6">
-            <SEOOptimizer
-              seoData={{
-                title: 'Dashboard - Zion Tech Solutions',
-                description: 'Comprehensive dashboard for monitoring analytics, performance, and security metrics',
-                keywords: ['dashboard', 'analytics', 'performance', 'security', 'monitoring'],
-                canonical: 'https://ziontechgroup.com/dashboard',
-                ogImage: 'https://ziontechgroup.com/og-dashboard.jpg',
-                twitterCard: 'summary_large_image',
-                structuredData: {
-                  '@context': 'https://schema.org',
-                  '@type': 'WebPage',
-                  name: 'Dashboard',
-                  description: 'Comprehensive dashboard for monitoring analytics, performance, and security metrics'
-                }
-              }}
+          <div className="p-8">
+            <div className="flex justify-between items-center mb-8">
+              <h1 className="text-3xl font-bold text-gray-900">Comprehensive Monitoring</h1>
+              <div className="flex items-center space-x-4">
+                <button 
+                  onClick={() => window.location.reload()}
+                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  Refresh
+                </button>
+              </div>
+            </div>
+            <ComprehensiveMonitoringDashboard 
+              refreshInterval={5000}
+              enableRealTimeUpdates={true}
+              onMetricsUpdate={(metrics) => console.log('Metrics updated:', metrics)}
             />
           </div>
         );
-      case 'cache-manager':
+      case 'comprehensive-security':
         return (
-          <div className="p-6">
-            <AdvancedCacheManager />
+          <div className="p-8">
+            <div className="flex justify-between items-center mb-8">
+              <h1 className="text-3xl font-bold text-gray-900">Comprehensive Security</h1>
+              <div className="flex items-center space-x-4">
+                <button 
+                  onClick={() => window.location.reload()}
+                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  Refresh
+                </button>
+              </div>
+            </div>
+            <ComprehensiveSecurityDashboard 
+              refreshInterval={10000}
+              enableRealTimeMonitoring={true}
+              onSecurityUpdate={(metrics) => console.log('Security metrics updated:', metrics)}
+            />
           </div>
         );
-      case 'real-time-analytics':
+      case 'error-monitoring':
         return (
-          <div className="p-6">
-            <RealTimeAnalytics />
+          <div className="p-8">
+            <div className="flex justify-between items-center mb-8">
+              <h1 className="text-3xl font-bold text-gray-900">Advanced Error Monitoring</h1>
+              <div className="flex items-center space-x-4">
+                <button 
+                  onClick={() => window.location.reload()}
+                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  Refresh
+                </button>
+              </div>
+            </div>
+            <AdvancedErrorMonitoring />
           </div>
         );
-      case 'accessibility-enhancements':
+      case 'advanced-system-monitor':
         return (
-          <div className="p-6">
-            <AccessibilityEnhancements />
+          <div className="p-8">
+            <div className="flex justify-between items-center mb-8">
+              <h1 className="text-3xl font-bold text-gray-900">Advanced System Monitor</h1>
+              <div className="flex items-center space-x-4">
+                <button 
+                  onClick={() => window.location.reload()}
+                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  Refresh
+                </button>
+              </div>
+            </div>
+            <AdvancedSystemMonitor />
           </div>
         );
       default:
         return <ComprehensiveAnalyticsDashboard />;
     }
-  };
+  }, [activeTab, isRealTime, sampleAnalyticsData]);
 
   return (
     <>
@@ -545,12 +700,13 @@ const Dashboard: React.FC = () => {
               {tabs.map((tab) => (
                 <button
                   key={tab.id}
-                  onClick={() => setActiveTab(tab.id)}
+                  onClick={() => handleTabChange(tab.id)}
+                  disabled={isLoading}
                   className={`py-4 px-1 border-b-2 font-medium text-sm transition-colors ${
                     activeTab === tab.id
                       ? 'border-blue-500 text-blue-600'
                       : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
-                  }`}
+                  } ${isLoading ? 'opacity-50 cursor-not-allowed' : ''}`}
                 >
                   <span className="mr-2">{tab.icon}</span>
                   {tab.name}
@@ -561,8 +717,16 @@ const Dashboard: React.FC = () => {
         </div>
 
         {/* Dashboard Content */}
-        <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          {renderDashboard()}
+        <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 relative">
+          {isLoading && (
+            <div className="absolute inset-0 bg-white bg-opacity-75 flex items-center justify-center z-10">
+              <div className="flex items-center space-x-2">
+                <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-blue-600"></div>
+                <span className="text-gray-600">Loading dashboard...</span>
+              </div>
+            </div>
+          )}
+          {renderDashboard}
         </main>
 
         {/* Footer */}

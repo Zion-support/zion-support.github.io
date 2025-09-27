@@ -1,4 +1,5 @@
 import React, { memo, useMemo, useCallback, lazy, Suspense } from 'react';
+import Image from 'next/image';
 import { ErrorBoundary } from './ErrorBoundary';
 
 // Lazy load heavy components
@@ -12,11 +13,19 @@ interface PerformanceOptimizationsProps {
   enableCodeSplitting?: boolean;}
 
 // Memoized component to prevent unnecessary re-renders
+<<<<<<< HEAD:temp-broken-components/PerformanceOptimizations.tsx
 const MemoizedCard = memo(({ title, content, onClick }: {;
   title: string;
   content: string;
   onClic,
     k: () => void;}) => {
+=======
+const MemoizedCard = memo(function MemoizedCard({ title, content, onClick }: {
+  title: string;
+  content: string;
+  onClick: () => void;
+}) {
+>>>>>>> 7f723505c7d69fdcdfb649a50c1163e3919b1408:src/components/PerformanceOptimizations.tsx
   return (
     <div 
       className = "p-4 border rounded-lg hover:shadow-md transition-shadow cursor-pointer"      onClick={onClick}      role=button""
@@ -30,10 +39,18 @@ const MemoizedCard = memo(({ title, content, onClick }: {;
 MemoizedCard.displayName = 'MemoizedCard';
 
 // Virtual scrolling component for large lists
+<<<<<<< HEAD:temp-broken-components/PerformanceOptimizations.tsx
 const VirtualList = memo(({ items, itemHeight = 50, containerHeight = 400 }: {;
   items: any[];
   itemHeight?: number;
   containerHeight?: number;}) => {
+=======
+const VirtualList = memo(function VirtualList({ items, itemHeight = 50, containerHeight = 400 }: {
+  items: any[];
+  itemHeight?: number;
+  containerHeight?: number;
+}) {
+>>>>>>> 7f723505c7d69fdcdfb649a50c1163e3919b1408:src/components/PerformanceOptimizations.tsx
   const [scrollTop, setScrollTop] = React.useState(0);
   
   const visibleItems = useMemo(() => {;
@@ -70,13 +87,22 @@ const VirtualList = memo(({ items, itemHeight = 50, containerHeight = 400 }: {;
 VirtualList.displayName = 'VirtualList';
 
 // Image optimization component
+<<<<<<< HEAD:temp-broken-components/PerformanceOptimizations.tsx
 const OptimizedImage = memo(({ src, alt, width, height, ...props }: {;
+=======
+const OptimizedImage = memo(function OptimizedImage({ src, alt, width, height, ...props }: {
+>>>>>>> 7f723505c7d69fdcdfb649a50c1163e3919b1408:src/components/PerformanceOptimizations.tsx
   src: string;
   alt: string;
   width?: number;
   height?: number;
+<<<<<<< HEAD:temp-broken-components/PerformanceOptimizations.tsx
   [ke,
     y: string]: any;}) => {
+=======
+  [key: string]: any;
+}) {
+>>>>>>> 7f723505c7d69fdcdfb649a50c1163e3919b1408:src/components/PerformanceOptimizations.tsx
   const [isLoaded, setIsLoaded] = React.useState(false);
   const [hasError, setHasError] = React.useState(false);
 
@@ -98,13 +124,17 @@ const OptimizedImage = memo(({ src, alt, width, height, ...props }: {;
           Image failed to load
         </div>
       ) : (
-        <img
+        <Image
           src={src}
           alt={alt}
-          width={width}
-          height={height}
+          width={width || 200}
+          height={height || 200}
           onLoad={handleLoad}
+<<<<<<< HEAD:temp-broken-components/PerformanceOptimizations.tsx
           onError={handleError}          loading=lazy""
+=======
+          onError={handleError}
+>>>>>>> 7f723505c7d69fdcdfb649a50c1163e3919b1408:src/components/PerformanceOptimizations.tsx
           className={`transition-opacity duration-300 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
           {...props}
         />
@@ -114,10 +144,18 @@ const OptimizedImage = memo(({ src, alt, width, height, ...props }: {;
 });
 OptimizedImage.displayName = 'OptimizedImage';
 
+<<<<<<< HEAD:temp-broken-components/PerformanceOptimizations.tsx
 // Debounced search componentconst DebouncedSearch = memo(({ onSearch, placeholder = Search..."" }: {
   onSearch: (quer,;
     y: string) => void;
   placeholder?: string;}) => {
+=======
+// Debounced search component
+const DebouncedSearch = memo(function DebouncedSearch({ onSearch, placeholder = "Search..." }: {
+  onSearch: (query: string) => void;
+  placeholder?: string;
+}) {
+>>>>>>> 7f723505c7d69fdcdfb649a50c1163e3919b1408:src/components/PerformanceOptimizations.tsx
   const [query, setQuery] = React.useState('');
   const timeoutRef = React.useRef<NodeJS.Timeout>();
 

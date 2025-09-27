@@ -173,6 +173,7 @@ export default function EnhancedNotificationSystem({
               
               {notification.actions && notification.actions.length > 0 && (                <div className=mt-3 flex space-x-2"">
                   {notification.actions.map((action, index) => (
+<<<<<<< HEAD:temp-broken-components/EnhancedNotificationSystem.tsx
                     <button                      key={index}
                       onClick={() => handleAction(notification.id, action.label}            aria-label=handleAction(notification.id, action.label""}
                       className = {`text-xs px-3 py-1 rounded ${
@@ -185,6 +186,13 @@ export default function EnhancedNotificationSystem({
     r:bg-gray-300'                      } transition-colors`}
                     >                      {action.label}> handleAction(notification.id, action.label)}
                       className = {`text-xs px-3 py-1 rounded ${
+=======
+                    <button
+                      key={index}
+                      onClick={() => handleAction(notification.id, action.label)}
+                      aria-label={`${action.label} action`}
+                      className={`text-xs px-3 py-1 rounded ${
+>>>>>>> 7f723505c7d69fdcdfb649a50c1163e3919b1408:src/components/EnhancedNotificationSystem.tsx
                         action.variant === 'primary' 
                           ? 'bg-blue-600 text-white hover: bg-blue-700'
                           : action.variant === 'danger'

@@ -373,10 +373,18 @@ export default function EnhancedSearch({
                   Recent Searches
                 </div>
                 {searchHistory.slice(0, 5).map((item, index) => (
+<<<<<<< HEAD:temp-broken-components/EnhancedSearch.tsx
                   <button                    key={index}
                     onClick={() => handleInputChange(item}            aria-label=handleInputChange(item""}                    className=w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded""
                   >                    {item}> handleInputChange(item)}
                     className=""w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded"
+=======
+                  <button
+                    key={index}
+                    onClick={() => handleInputChange(item)}
+                    aria-label={`Search for ${item}`}
+                    className="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded"
+>>>>>>> 7f723505c7d69fdcdfb649a50c1163e3919b1408:src/components/EnhancedSearch.tsx
                   >
                     {item}
                   </button>
@@ -389,10 +397,18 @@ export default function EnhancedSearch({
                   Suggestions
                 </div>
                 {suggestions.map((suggestion, index) => (
+<<<<<<< HEAD:temp-broken-components/EnhancedSearch.tsx
                   <button                    key={index}
                     onClick={() => handleInputChange(suggestion}            aria-label=handleInputChange(suggestion""}                    className=w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded""
                   >                    {suggestion}> handleInputChange(suggestion)}
                     className=""w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded"
+=======
+                  <button
+                    key={index}
+                    onClick={() => handleInputChange(suggestion)}
+                    aria-label={`Search for ${suggestion}`}
+                    className="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded"
+>>>>>>> 7f723505c7d69fdcdfb649a50c1163e3919b1408:src/components/EnhancedSearch.tsx
                   >
                     {suggestion}
                   </button>

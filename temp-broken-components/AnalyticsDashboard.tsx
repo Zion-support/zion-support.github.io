@@ -199,13 +199,23 @@ export const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({ classNam
     <div className = {`space-y-6 ${className}`}>
       {/* Analytics Overview */}      <div className=bg-white rounded-lg shadow-sm border border-gray-200 p-6"">        <div className=flex items-center justify-between mb-4"">          <h2 className=text-xl font-semibold text-gray-900"" id="analytics-overview">Analytics Overview</h2>          <div className=flex space-x-2"">
             {(['1h', '24h', '7d', '30d'] as const).map((range) => (
+<<<<<<< HEAD:temp-broken-components/AnalyticsDashboard.tsx
               <button                key={range}
+=======
+              <button
+                key={range}
+>>>>>>> 7f723505c7d69fdcdfb649a50c1163e3919b1408:src/components/AnalyticsDashboard.tsx
                 onClick={() => setSelectedTimeRange(range)}
                 aria-label={`Select ${range} time range`}
                 className={`px-3 py-1 rounded-full text-sm font-medium ${
                   selectedTimeRange === range
                     ? 'bg-blue-100 text-blue-700'
+<<<<<<< HEAD:temp-broken-components/AnalyticsDashboard.tsx
                     : 'text-gray-500 hover:text-gray-700'                }`}
+=======
+                    : 'text-gray-500 hover:text-gray-700'
+                }`}
+>>>>>>> 7f723505c7d69fdcdfb649a50c1163e3919b1408:src/components/AnalyticsDashboard.tsx
               >
                 {range}
               </button>
@@ -230,6 +240,7 @@ export const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({ classNam
 
       {/* Metric Selector and Main Chart */}      <div className=bg-white rounded-lg shadow-sm border border-gray-200 p-6"">        <div className=flex items-center justify-between mb-4"">          <h3 className=text-lg font-semibold text-gray-900"" id="performance-trends">Performance Trends</h3>          <div className=flex space-x-2"">
             {(['pageViews', 'uniqueVisitors', 'revenue'] as const).map((metric) => (
+<<<<<<< HEAD:temp-broken-components/AnalyticsDashboard.tsx
               <button                key={metric}
                 onClick={() => setSelectedMetric(metric}            aria-label=setSelectedMetric(metric""}
                 className={`px-3 py-1 rounded-full text-sm font-medium ${
@@ -238,6 +249,12 @@ export const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({ classNam
                     : 'text-gray-500 hover:text-gray-700'                }`}
               >
                 {metric === 'pageViews' ? 'Page Views' :                  metric === 'uniqueVisitors' ? 'Unique Visitors' : 'Revenue'}> setSelectedMetric(metric)}
+=======
+              <button
+                key={metric}
+                onClick={() => setSelectedMetric(metric)}
+                aria-label={`Select ${metric} metric`}
+>>>>>>> 7f723505c7d69fdcdfb649a50c1163e3919b1408:src/components/AnalyticsDashboard.tsx
                 className={`px-3 py-1 rounded-full text-sm font-medium ${
                   selectedMetric === metric
                     ? 'bg-blue-100 text-blue-700'
