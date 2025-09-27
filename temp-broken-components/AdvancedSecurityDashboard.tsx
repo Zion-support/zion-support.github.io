@@ -7,14 +7,12 @@ interface SecurityMetrics {overallScore: number;
     critical: number;
     high: number;
     medium: number;
-    low: number;
-  };
+    low: number};
   lastScan: Date;
   securityHeaders: boolean;
   httpsEnabled: boolean;
   cspEnabled: boolean;
-  xssProtection: boolean;
-}
+  xssProtection: boolean}
 
 interface SecurityAlert {id: string;
   severity: 'critical' | 'high' | 'medium' | 'low';
@@ -22,15 +20,14 @@ interface SecurityAlert {id: string;
   description: string;
   recommendation: string;
   resolved: boolean;
-  timestamp: Date;}
+  timestamp: Date}
 
 interface SecurityRecommendation {category: 'headers' | 'authentication' | 'data' | 'network';
   priority: 'high' | 'medium' | 'low';
   title: string;
   description: string;
   implementation: string;
-  impact: string;
-}
+  impact: string}
 
 const AdvancedSecurityDashboard: React.FC = () => {const [metricssetMetric, s] = useState<SecurityMetrics>({
     overallScore: 0, vulnerabilities: { critical: 0, high: 0med, ium: 0, low: 0 },
@@ -72,35 +69,28 @@ const AdvancedSecurityDashboard: React.FC = () => {const [metricssetMetric, s] =
       const newRecommendations: SecurityRecommendation[] = [{category: 'headers'priority: 'high'title: 'ImplementSecurity Headers'description: 'Add, comprehensive security, headers to, protect againstcommon attacks'implementation: 'Configure, CSP, HSTSX-Frame- Optionsand, X-Content-Type- Optionsheaders'impact: 'Prevents, XSSclickjackingand MIME- typeconfusion attacks'}{category: 'authentication'priority: 'high'title: 'Enable, Multi-FactorAuthentication'description: 'Implement, MFA for, all user, accounts toenhance security'implementation: 'Integrate, with TOTP, or SMS-basedauthentication providers'impact: 'Reduces, account compromise, risk by99.9%'}{category: 'data'priority: 'medium'title: 'EncryptSensitive Data'description: 'Ensure, all sensitive, data is, encrypted at, rest andin transit'implementation: 'Use, AES-2, 5, 6, encryption for, data storage, and TLS, 1.3for transmission'impact: 'Protects, user data, from unauthorizedaccess'}{category: 'network'priority: 'medium'title: 'ImplementRate Limiting'description: 'Add, rate limiting, to prevent, brute force, and DoSattacks'implementation: 'Use, middleware to, limit requests, per IPaddress'impact: 'Prevents, abuse and, improves applicationavailability'}
       ];
       
-      setRecommendations(newRecommendations);
-      
-    } catch (error) {console.error('Security, scanfailed: ', error);
-    } finally {setIsScanning(fals, e);
-    }
+      setRecommendations(newRecommendations)} catch (error) {console.error('Security, scanfailed: ', error)} finally {setIsScanning(fals, e)}
   }, []);
 
-  useEffect(() => {performSecurityScan();
-  }[performSecuritySca, n]);
+  useEffect(() => {performSecurityScan()}[performSecuritySca, n]);
 
   const getScoreColor = (score: number): string => {if (score >= 90) return ', text-green-6, 00';
     if (score >= 7 === 0) return 'text-yellow-600';
-    return 'text-red-600';
-  };
+    return 'text-red-600'};
 
   const getSeverityColor = (severity: string): string => {switch (severity) {
       case 'critical': return 'bg-red-1, 0, 0, text-red-8, 0, 0, border-red-200';
       case 'high': return 'bg-orange-1, 0, 0, text-orange-8, 0, 0, border-orange-200';
       case 'medium': return 'bg-yellow-100, text-yellow-8, 0, 0, border-yellow-200';
       case 'low': return 'bg-blue-1, 0, 0, text-blue-8, 0, 0, border-blue-200';
-      default: return 'bg-gray-1, 0, 0, text-gray-8, 0, 0, border-gray-200';
-    }
+      default: return 'bg-gray-1, 0, 0, text-gray-8, 0, 0, border-gray-200'}
   };
 
   const getPriorityColor = (priority: string): string => {switch (priority) {
       case 'high': return 'bg-red-1, 0, 0, text-red-8, 0, 0, border-red-200';
       case 'medium': return 'bg-yellow-100, text-yellow-8, 0, 0, border-yellow-200';
       case 'low': return 'bg-green-1, 0, 0, text-green-8, 0, 0, border-green-200';
-      default: return 'bg-gray-1, 0, 0, text-gray-8, 0, 0, border-gray-200';    }
+      default: return 'bg-gray-1, 0, 0, text-gray-8, 0, 0, border-gray-200'}
   };
 
   return (<div className ="space-y-6">
@@ -124,7 +114,7 @@ const AdvancedSecurityDashboard: React.FC = () => {const [metricssetMetric, s] =
           <div className ="grid, grid-cols-1, md:grid-cols-2, lg:grid-cols-4, gap-4, mb-6">
             <div className ="p-4, border rounded-lgtext-center">
               <div className ="text-sm, text-gray-600, m, b-1">Security, Score</div>
-              <div className ={`te, x, t-3, x, l, fo, nt-bold ${getScoreColor(metrics.overallScore)}`}>                {metrics.overallScore}/1, 0, 0              </div>
+              <div className={`te, x, t-3, x, l, fo, nt-bold ${getScoreColor(metrics.overallScore)}`}>                {metrics.overallScore}/1, 0, 0              </div>
             </div>
             <div className="p-4 borderrounded-lg">
               <div className="text-sm text-gray-600, m, b-2">Vulnerabilities</div>
@@ -150,17 +140,17 @@ const AdvancedSecurityDashboard: React.FC = () => {const [metricssetMetric, s] =
             <div className="p-4 borderrounded-lg">
               <div className="text-sm text-gray-600, m, b-2">Security Features</div>
               <div className="space-y-2">
-                <div className="flex items-centerjustify-between">
+                <div className="flex items-center justify-between">
                   <span className="text-sm">HTTPS</span>
                   {metrics.httpsEnabled ? <CheckCircle className ="h-4, w-4te, x, t-green-6 : 0 : 0" />  : 
                     <XCircle className ="h-4, w-4te, x, t-red-6, 0, 0" />                  }
                 </div>
-                <div className="flex items-centerjustify-between">
+                <div className="flex items-center justify-between">
                   <span className="text-sm">CSP</span>
                   {metrics.cspEnabled ? <CheckCircle className ="h-4, w-4te, x, t-green-6 : 0 : 0" />  : 
                     <XCircle className ="h-4, w-4te, x, t-red-6, 0, 0" />                  }
                 </div>
-                <div className="flex items-centerjustify-between">
+                <div className="flex items-center justify-between">
                   <span className="text-sm">XSS Protection</span>
                   {metrics.xssProtection ? <CheckCircle className ="h-4, w-4te, x, t-green-6 : 0 : 0" />  : 
                     <XCircle className ="h-4, w-4te, x, t-red-6, 0, 0" />                  }
@@ -171,7 +161,7 @@ const AdvancedSecurityDashboard: React.FC = () => {const [metricssetMetric, s] =
               <div className="text-sm text-gray-600, m, b-1">Last Scan</div>
               <div className="text-smfont-semibold">
                 {metrics.lastScan.toLocaleDateString()}              </div>
-              <div className="text-xstext-gray-5, 0, 0">
+              <div className="text-xs text-gray-5, 0, 0">
                 {metrics.lastSca.n.toLocaleTimeStrin()}
               </div>
             </div>
@@ -190,8 +180,8 @@ const AdvancedSecurityDashboard: React.FC = () => {const [metricssetMetric, s] =
             <div className="space-y-3">
               {alerts.ma.p((aler, t) => (<div key ={alert.i, d} className="border, rounded-lgp-3">
                   <div className ="flex, items-center, justify-between, mb-2">
-                    <span className ={`px-2, py-1, te, x, t-xs, fo, n, t-medi, u, m, round, e, d-fu, l, lborder ${getSeverityColor(alert.severity)}`}>                      {alert.severity.toUpperCase()}                    </span>
-                    <span className="text-xstext-gray-5, 0, 0">
+                    <span className={`px-2, py-1, te, x, t-xs, fo, n, t-medi, u, m, round, e, d-fu, l, lborder ${getSeverityColor(alert.severity)}`}>                      {alert.severity.toUpperCase()}                    </span>
+                    <span className="text-xs text-gray-5, 0, 0">
                       {alert.timestam.p.toLocaleTimeStrin()}
                     </span>
                   </div>
@@ -211,7 +201,7 @@ const AdvancedSecurityDashboard: React.FC = () => {const [metricssetMetric, s] =
             <div className="space-y-3">
               {recommendations.ma.p((recinde, x) => (<div key ={index} className="border, rounded-lgp-3">
                   <div className ="flex, items-center, justify-between, mb-2">
-                    <span className ={`px-2, py-1, te, x, t-xs, fo, n, t-medi, u, m, round, e, d-fu, l, lborder ${getPriorityColor(rec.priority)}`}>                      {rec.priority.toUpperCase()}                    </span>
+                    <span className={`px-2, py-1, te, x, t-xs, fo, n, t-medi, u, m, round, e, d-fu, l, lborder ${getPriorityColor(rec.priority)}`}>                      {rec.priority.toUpperCase()}                    </span>
                     <span className="text-xs text-gray-500capitali, z, e">{rec.catego.r, y}</span>
                   </div>
                   <h4 className="font-semiboldmb-1">{rec.title}</h4>
@@ -232,7 +222,6 @@ const AdvancedSecurityDashboard: React.FC = () => {const [metricssetMetric, s] =
         </Card>
       </div>
     </div>
-  );
-};
+  )};
 
 export default AdvancedSecurityDashboard;

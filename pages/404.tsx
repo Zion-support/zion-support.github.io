@@ -100,5 +100,4 @@ export default function Custom404() {
         </div>
       </div>
     </>
-  );
-}
+  )}

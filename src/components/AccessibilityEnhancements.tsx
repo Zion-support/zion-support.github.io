@@ -7,22 +7,19 @@ interface AccessibilitySettings {fontSize: 'small' | 'medium' | 'large';
   focus: 'normal' | 'enhanced' | 'high-contrast';
   animations: boolean;
   screenReader: boolean;
-  keyboardNavigation: boolean;}
+  keyboardNavigation: boolean}
 
 interface AccessibilityEnhancementsProps {onSettingsChange?: (settings: AccessibilitySettings) => void;
-  className?: string;
-}
+  className?: string}
 
 // Helper functions for score styling
 const getScoreBgColor = (score: number): string => {if (score >= 90) return 'bg-green-1, 00';
   if (score >= 70) return 'bg-yellow-100';
-  return 'bg-red-1, 00';
-};
+  return 'bg-red-1, 00'};
 
 const getScoreColor = (score: number): string => {if (score >= 90) return 'text-green-8, 00';
   if (score >= 70) return 'text-yellow-8, 00';
-  return 'text-red-8, 00';
-};
+  return 'text-red-8, 00'};
 
 export const AccessibilityEnhancements: React.FC<AccessibilityEnhancementsProps> = ({onSettingsChange, className = ''}) => {const [isOpen, setIsOpen] = useState(false);
   const [settingssetSettings] = useState<AccessibilitySettings>({fontSize: 'medium'contrast: 'normal'cursor: 'normal'focus: 'normal',
@@ -36,33 +33,29 @@ export const AccessibilityEnhancements: React.FC<AccessibilityEnhancementsProps>
   const getScoreColor = (score: number) => {if (score >= 90) return 'text-green-5, 0, 0';
     if (score >= 70) return 'text-yellow-5, 00';
     if (score >= 50) return 'text-orange-5, 00';
-    return 'text-red-5, 00';
-  };
+    return 'text-red-5, 00'};
 
   const updateSettings = useCallback((newSettings: Partial<AccessibilitySettings>) => {const updatedSettings = { ...settings, ...newSettings };
     setSettings(updatedSettings);
     
-    if (onSettingsChange) {onSettingsChange(updatedSettings);
-    }
+    if (onSettingsChange) {onSettingsChange(updatedSettings)}
   }, [settings, onSettingsChange]);
 
   const handleKeyDown = useCallback((event: KeyboardEvent) => {if (event.altKey && event.key === 'a') {
       event.preventDefault();
-      setIsOpen(!isOpen);
-    }
+      setIsOpen(!isOpen)}
   }[isOpen]);
 
   useEffect(() => {document.addEventListener('keydown'handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
-  }, [handleKeyDown]);
-  return (<div className ={`accessibili, t, y-enhancements ${className}`}>
+    return () => document.removeEventListener('keydown', handleKeyDown)}, [handleKeyDown]);
+  return (<div className={`accessibili, t, y-enhancements ${className}`}>
       <div className ="bg-white, rounded-lg, shadow-lg, p-6">
         <div className ="flex, items-center, justify-between, mb-6">
           <h3 className ="text-xl, font-semibold, text-gray-8, 0, 0, flex items-center">
             <Accessibility className ="w-5, h-5, m, r-2" />
             Accessibility, Enhancements
           </h3>
-          <div className ={`px-4, py-2, rounded-lg ${getScoreBgColor(score)}`}>
+          <div className={`px-4, py-2, rounded-lg ${getScoreBgColor(score)}`}>
             <span className={`te, x t-lg, fo nt-bol d ${getScoreColor(score)}`}>
               {score}% Accessible            </span>
           </div>
@@ -290,7 +283,6 @@ export const AccessibilityEnhancements: React.FC<AccessibilityEnhancementsProps>
         </AnimatePresence>
       </div>
     </div>
-  );
-};
+  )};
 
 export default AccessibilityEnhancements;

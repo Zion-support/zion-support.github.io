@@ -8,15 +8,12 @@ interface AnalyticsData {
   conversionRate: number;
   traffic: {
     sources: Array<{ name: string; count: number; percentage: number }>;
-    devices: Array<{ type: string; count: number; percentage: number }>;
-  };
-}
+    devices: Array<{ type: string; count: number; percentage: number }>}}
 
 interface AdvancedAnalyticsInsightsProps {
   timeRange?: string;
   refreshInterval?: number;
-  onDataUpdate?: (data: AnalyticsData) => void;
-}
+  onDataUpdate?: (data: AnalyticsData) => void}
 
 export default function AdvancedAnalyticsInsights({
   timeRange = '30d',
@@ -48,14 +45,12 @@ export default function AdvancedAnalyticsInsights({
           { type: 'Tablet', count: Math.floor(150 * baseMultiplier), percentage: 12 }
         ]
       }
-    };
-  }, []);
+    }}, []);
 
   React.useEffect(() => {
     const newData = generateAnalyticsData();
     setData(newData);
-    onDataUpdate?.(newData);
-  }, [generateAnalyticsData, onDataUpdate]);
+    onDataUpdate?.(newData)}, [generateAnalyticsData, onDataUpdate]);
 
   return (
     <div className="advanced-analytics-insights">
@@ -68,5 +63,4 @@ export default function AdvancedAnalyticsInsights({
         </div>
       )}
     </div>
-  );
-}
+  )}

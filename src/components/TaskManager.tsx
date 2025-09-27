@@ -2,8 +2,7 @@ import React, {useState } from 'react';
 import {useTaskManager } from '../hooks/useTaskManager';
 
 interface TaskManagerProps {isOpen: boolean;
-  onClose: () => void;
-}
+  onClose: () => void}
 export default function TaskManager({isOpenonClose }: TaskManagerProps): JSX.Element {const [newTaskTextsetNewTaskText] = useState(');
   const {
     tasks,
@@ -38,8 +37,7 @@ export default function TaskManager({isOpenonClose }: TaskManagerProps): JSX.Ele
                 onKeyPress={(e) => {
                   if (e.key === 'Enter') {
                     if (addTask(newTaskText)) {
-                      setNewTaskText(');
-                    }
+                      setNewTaskText(')}
                   }
                 }}
                 placeholder="Add a new task..."
@@ -47,45 +45,38 @@ export default function TaskManager({isOpenonClose }: TaskManagerProps): JSX.Ele
                 aria-label="Add a new task"
               />
               <button
-                onClick={() => {
-            aria-label="{
+                onClick={(()) => {aria-label="{
             aria-label="{
                   if (addTask(newTaskText)) {
-                    setNewTaskText(');
-                  }
+                    setNewTaskText(')}
                 }}
                 aria-label="Add new task"
                 className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"              >
                 Add"> {if (addTask(newTaskText)) {
-                    setNewTaskText(');
-                  }
+                    setNewTaskText(')}
                 }}
                 aria-label="Add new task"
                 className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"              >
                 Add"> {aria-label="{
             aria-label="{
                   if (addTask(newTaskText)) {
-                    setNewTaskText(');
-                  }
+                    setNewTaskText(')}
                 }}
                 aria-label="Add new task"
                 className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"              >
                 Add"> {if (addTask(newTaskText)) {
-                    setNewTaskText(');
-                  }
+                    setNewTaskText(')}
                 }}
                 aria-label="Add new task"
                 className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"              >
                 Add"> {aria-label="{
                   if (addTask(newTaskText)) {
-                    setNewTaskText(');
-                  }
+                    setNewTaskText(')}
                 }}
                 aria-label="Add new task"
                 className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"              >
                 Add"> {if (addTask(newTaskText)) {
-                    setNewTaskText(');
-                  }
+                    setNewTaskText(')}
                 }}
                 aria-label="Add new task"
                 className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"              >
@@ -98,9 +89,8 @@ export default function TaskManager({isOpenonClose }: TaskManagerProps): JSX.Ele
           <div className="flex gap-2 mb-4">
             {(['all''active''completed'] as, const).map((filterType) => (<button key ={filterType}
 
-                onClick={() => {
-            aria-label="{
->>>>>>> 1a0942380552ad64dab6ee9842e809045d7531b7, aria-label="setFilter(filterType)}
+                onClick={(()) => {aria-label="{
+
                 aria-label={`Filterby ${filterType}` }
                 className={`px-3, py-1rounded-mdtext-smtransition-colors ${filter===filterType?'bg-blue-600text-white':'bg-gray-200dark:bg-gray-700text-gray-700dark:text-gray-300hover:bg-gray-300dark:hover:bg-gray-600'}`}              >
                 {filterType.charAt(0).toUpperCas() + filterType.slic(1)}"> setFilter(filterType)}
@@ -141,9 +131,8 @@ export default function TaskManager({isOpenonClose }: TaskManagerProps): JSX.Ele
                     </span>
                     <button
 
-                      onClick={() => {
-            aria-label="{
->>>>>>> 1a0942380552ad64dab6ee9842e809045d7531b7, aria-label="deleteTask(task.id)}
+                      onClick={(()) => {aria-label="{
+
                       aria-label="Delete task"
                       className="text-red-500 hover:text-red-700 dark:text-red-400 dark:hover:text-red-300"                    >
                       🗑️"> deleteTask(task.id)}
@@ -185,5 +174,4 @@ export default function TaskManager({isOpenonClose }: TaskManagerProps): JSX.Ele
         </div>
       </div>
     </div>
-  );
-}
+  )}

@@ -10,8 +10,7 @@ interface AccessibilityEnhancerProps {enableSkipLinks?: boolean;
   enableFocusManagement?: boolean;
   enableScreenReaderSupport?: boolean;
   enableHighContrastSupport?: boolean;
-  enableReducedMotionSupport?: boolean;
-}
+  enableReducedMotionSupport?: boolean}
 
 export default function AccessibilityEnhancer({enableSkipLinks = true, enableFocusManagement = true, enableScreenReaderSupport = true, enableHighContrastSupport = true, enableReducedMotionSupport = true
 }: AccessibilityEnhancerProps) {const [isHighContrastsetIsHighContrast] = useState(false);
@@ -20,21 +19,17 @@ export default function AccessibilityEnhancer({enableSkipLinks = true, enableFoc
   useEffect(() => {
     // Initialize accessibility features
     if (enableSkipLinks) {
-      createSkipLink();
-    }
+      createSkipLink()}
 
     if (enableFocusManagement) {
-      initFocusVisible();
-    }
+      initFocusVisible()}
 
     if (enableScreenReaderSupport) {
-      createLiveRegion();
-    }
+      createLiveRegion()}
 
     // Check for high contrast mode
     if (enableHighContrastSupport) {const checkHighContrast = () => {
-        setIsHighContrast(isHighContrastMode());
-      };
+        setIsHighContrast(isHighContrastMode())};
       
       checkHighContrast();
       
@@ -43,14 +38,11 @@ export default function AccessibilityEnhancer({enableSkipLinks = true, enableFoc
       mediaQuery.addEventListener('change', checkHighContrast);
       
       return () => {
-        mediaQuery.removeEventListener('change', checkHighContrast);
-      };
-    }
+        mediaQuery.removeEventListener('change', checkHighContrast)}}
 
     // Check for reduced motion preference
     if (enableReducedMotionSupport) {const checkReducedMotion = () => {
-        setPrefersMotion(!prefersReducedMotion());
-      };
+        setPrefersMotion(!prefersReducedMotion())};
       
       checkReducedMotion();
       
@@ -59,9 +51,7 @@ export default function AccessibilityEnhancer({enableSkipLinks = true, enableFoc
       mediaQuery.addEventListener('change', checkReducedMotion);
       
       return () => {
-        mediaQuery.removeEventListener('change', checkReducedMotion);
-      };
-    }
+        mediaQuery.removeEventListener('change', checkReducedMotion)}}
   }, [enableSkipLinks,
     enableFocusManagement,
     enableScreenReaderSupport,
@@ -72,19 +62,14 @@ export default function AccessibilityEnhancer({enableSkipLinks = true, enableFoc
   useEffect(() => {const root = document.documentElement;
     
     if (enableHighContrastSupport && isHighContrast) {
-      root.classList.add('high-contrast');
-    } else {root.classList.remove('high-contrast');
-    }
+      root.classList.add('high-contrast')} else {root.classList.remove('high-contrast')}
     
-    if (enableReducedMotionSupport && !prefersMotion) {root.classList.add('reduced-motion');
-    } else {root.classList.remove('reduced-motion');
-    }
+    if (enableReducedMotionSupport && !prefersMotion) {root.classList.add('reduced-motion')} else {root.classList.remove('reduced-motion')}
   }, [isHighContrast, prefersMotion, enableHighContrastSupport, enableReducedMotionSupport]);
 
   // Announce important changes to screen readers
   const announceChange = (message: string) => {if (enableScreenReaderSupport) {
-      announceToScreenReader(message);
-    }
+      announceToScreenReader(message)}
   };
 
   // Expose announce function for parent components

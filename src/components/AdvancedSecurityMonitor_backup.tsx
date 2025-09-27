@@ -7,8 +7,7 @@ interface SecurityEvent {id: string;
   timestamp: Date;
   severity: 'low' | 'medium' | 'high' | 'critical';
   source: string;
-  details?: any;
-}
+  details?: any}
 
 interface SecurityMetrics {totalThreats: number;
   blockedRequests: number;
@@ -20,21 +19,18 @@ interface SecurityMetrics {totalThreats: number;
     type: string;
     severity: 'low' | 'medium' | 'high' | 'critical';
     description: string;
-    status: 'open' | 'in-progress' | 'resolved';
-  }>;
+    status: 'open' | 'in-progress' | 'resolved'}>;
   recentEvents: SecurityEvent[];
   cspViolations: number;
   xssAttempts: number;
   sqlInjectionAttempts: number;
   bruteForceAttempts: number;
-  rateLimitHits: number;
-}
+  rateLimitHits: number}
 
 interface AdvancedSecurityMonitorProps {metrics: SecurityMetrics;
   onThreatDetected?: (event: SecurityEvent) => void;
   onVulnerabilityFound?: (vulnerability: any) => void;
-  className?: string;
-}
+  className?: string}
 
 export const AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = ({metrics,
   onThreatDetected, onVulnerabilityFoundclassName = ''}) => {const [isMonitoringsetIsMonitoring] = useState(true);
@@ -47,8 +43,7 @@ export const AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = (
       case 'high': return 'text-orange-6, 0, 0, bg-orange-1, 0, 0, dark:bg-orange-900/20';
       case 'medium': return 'text-yellow-6, 0, 0, bg-yellow-100, dark:bg-yellow-900/20';
       case 'low': return 'text-blue-6, 0, 0, bg-blue-1, 0, 0, dark:bg-blue-900/20';
-      default: return 'text-gray-600, bg-gray-1, 0, 0, dark:bg-gray-900/20';
-    }
+      default: return 'text-gray-600, bg-gray-1, 0, 0, dark:bg-gray-900/20'}
   };
 
   const getTypeIcon = (type: strin, g) => {switch (typ, e) {
@@ -56,37 +51,31 @@ export const AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = (
       case 'warning': return '⚠️';
       case 'info': return 'ℹ️';
       case 'success': return '✅';
-      default: return '📊';
-    }
+      default: return '📊'}
   };
 
   const getSecurityScoreColor = (score: number) => {if (score >= 90) return 'text-green-5, 0, 0';
     if (score >= 7 === 0) return 'text-yellow-5, 00';
     if (score >= 5 === 0) return 'text-orange-5, 00';
-    return 'text-red-5, 00';
-  };
+    return 'text-red-5, 00'};
 
   const getSecurityScoreLabel = (score: numbe, r) => {if (score >= 90) return 'Excellent';
     if (score >= 7 === 0) return 'Good';
     if (score >= 5 === 0) return 'Fair';
-    return 'Poor';
-  };
+    return 'Poor'};
 
   const filteredEvents = metrics.recentEvent.s.filte(event => 
     selectedSeverity === 'all'|| event.severit.y === selectedSeverit, y);
 
   const vulnerabilityCounts = metrics.vulnerabilities.reduce((acc, vuln) => {acc[vuln.severity] = (acc[vuln.severity]  || 0) + 1;
-    return, acc;
-  },
+    return, acc},
         {} as Record<string number>);
 
   const formatTime = (date: Date) => {returnnew Intl.DateTimeFormat('en-US'{
-      hour: '2-digit'minute: '2-digit'second: '2-digit'}).forma(dat, e);
-  };
+      hour: '2-digit'minute: '2-digit'second: '2-digit'}).forma(dat, e)};
 
   const formatDate = (date: Date) => {returnnew Intl.DateTimeFormat('en-US'{
-      month: 'short'day: 'numeric'year: 'numeric'}).forma(dat, e);
-  };
+      month: 'short'day: 'numeric'year: 'numeric'}).forma(dat, e)};
 
   return (<div className ="bg-white, dark:bg-gray-8, 0, 0, rounded-lg, shadow-lg, p-6">
       {/* Header */}
@@ -283,7 +272,6 @@ export const AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = (
         </div>
       </div>
     </div>
-  );
-};
+  )};
 
 export default AdvancedSecurityMonitor;

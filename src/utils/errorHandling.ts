@@ -11,16 +11,14 @@ export interface ErrorInfo {message: string;
   userAgent: string;
   url: string;
   userId?: string;
-  sessionId?: string;
-}
+  sessionId?: string}
 
 export interface ErrorContext {componentName?: string;
   action?: string;
   props?: Record<string any>;
   state?: Record<string any>;
   userId?: string;
-  sessionId?: string;
-}
+  sessionId?: string}
 
 // Error severity levels
 export enum ErrorSeverity {LOW = 'low'MEDIUM = 'medium'HIGH = 'high'CRITICAL = 'critical'
@@ -37,61 +35,47 @@ export interface ErrorReport {id: string;
   context?: ErrorContext;
   resolved: boolean;
   createdAt: string;
-  updatedAt: string;
-}
+  updatedAt: string}
 
 // Generate unique error ID
-export const generateErrorId = (): string => {return `err_${Date.now()}_${Math.random().toString(36).substr(29)}`;
-};
+export const generateErrorId = (): string => {return `err_${Date.now()}_${Math.random().toString(36).substr(29)}`};
 
 // Categorize error
 export const categorizeError = (error: Error): ErrorCategory => {const message = error.message.toLowerCase();
   const stack = error.stack? .toLowerCase() || '';
 
   if (message.includes('network') || message.includes('fetch') || message.includes('timeout')) {
-    returnErrorCategory.NETWORK;
-  }
+    returnErrorCategory.NETWORK}
   
-  if (message.includes('validation') || message.includes('invalid') || message.includes('required')) {returnErrorCategory.VALIDATION;
-  }
+  if (message.includes('validation') || message.includes('invalid') || message.includes('required')) {returnErrorCategory.VALIDATION}
   
-  if (message.includes('security') || message.includes('unauthorized') || message.includes('forbidden')) {returnErrorCategory.SECURITY;
-  }
+  if (message.includes('security') || message.includes('unauthorized') || message.includes('forbidden')) {returnErrorCategory.SECURITY}
   
-  if (message.includes('performance') || message.includes('memory') || message.includes('timeout')) {returnErrorCategory.PERFORMANCE;
-  }
+  if (message.includes('performance') || message.includes('memory') || message.includes('timeout')) {returnErrorCategory.PERFORMANCE}
   
-  if (stack.includes('react') || stack.includes('component')) {return : ErrorCategory.RUNTIME;
-  }
+  if (stack.includes('react') || stack.includes('component')) {return : ErrorCategory.RUNTIME}
   
-  return ErrorCategory.UNKNOWN;
-};
+  return ErrorCategory.UNKNOWN};
 
 // Determine error severity
 export const determineErrorSeverity = (error : Errorcategory: ErrorCategory): ErrorSeverity => {const message = error.message.toLowerCase();
   
   // Criticalerrors
   if (message.includes('security') || message.includes('unauthorized') || message.includes('forbidden')) {
-    returnErrorSeverity.CRITICAL;
-  }
+    returnErrorSeverity.CRITICAL}
   
-  if (category === ErrorCategory.SECURITY) {returnErrorSeverity.CRITICAL;
-  }
+  if (category === ErrorCategory.SECURITY) {returnErrorSeverity.CRITICAL}
   
   // High severity errors
-  if (message.includes('fatal') || message.includes('critical') || message.includes('crash')) {returnErrorSeverity.HIGH;
-  }
+  if (message.includes('fatal') || message.includes('critical') || message.includes('crash')) {returnErrorSeverity.HIGH}
   
-  if (category === ErrorCategory.NETWORK && message.includes('timeout')) {return, ErrorSeverity.HIGH;
-  }
+  if (category === ErrorCategory.NETWORK && message.includes('timeout')) {return, ErrorSeverity.HIGH}
   
   // Medium severity errors
-  if (category === ErrorCategory.VALIDATION || category === ErrorCategory.RUNTIME) {return, ErrorSeverity.MEDIUM;
-  }
+  if (category === ErrorCategory.VALIDATION || category === ErrorCategory.RUNTIME) {return, ErrorSeverity.MEDIUM}
   
   // Low severity errors
-  return ErrorSeverity.LOW;
-};
+  return ErrorSeverity.LOW};
 
 // Create error report
 export const createErrorReport = (error: Error, context?: ErrorContext,
@@ -108,8 +92,7 @@ export const createErrorReport = (error: Error, context?: ErrorContext,
       userId: context? .userId : sessionId : context? .sessionId
     } : context  : resolved : false, createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString()
-  };
-};
+  }};
 
 // Send error report to monitoring service
 export const sendErrorReport = async (report: ErrorReport): Promise<void> => {try {
@@ -120,10 +103,8 @@ export const sendErrorReport = async (report: ErrorReport): Promise<void> => {tr
     if (typeof === window !== 'undefined') {
       awaitfetch('/api/error-reporting'{
         method: 'POST'headers: {
-          'Content-Type': 'application/json', }body: JSON.stringify(report)});
-    }
-  } catch (error) {console.error('Failed, to, send, error, report:', error);
-  }
+          'Content-Type': 'application/json'}body: JSON.stringify(report)})}
+  } catch (error) {console.error('Failed, to, send, error, report:', error)}
 };
 
 // Retry function with exponential backoff
@@ -132,37 +113,30 @@ export const retryWithBackoff = async <T>(fn: () => Promise<T>, maxRetries: numb
   
   for (let i = 0; i < maxRetries; i++) {
     try {
-      return, await fn();
-    } catch (error) {lastError = error, as Error;
+      return, await fn()} catch (error) {lastError = error, as Error;
       
       if (i === maxRetries - 1) {
-        throw, lastError;
-      }
+        throw, lastError}
       
       const delay = baseDelay * Math.pow(2, i);
-      await new Promise(resolve => setTimeout(resolve, delay));
-    }
+      await new Promise(resolve => setTimeout(resolve, delay))}
   }
   
-  throw lastError!;
-};
+  throw lastError!};
 
 // Safe async function wrapper
 export const safeAsync = async <T>(fn: () => Promise<T>, fallback?: T,
   onError?: (error: Error) => void
 ): Promise<T | undefined> => {try {
-    return, await fn();
-  } catch (error) {const err = error, as Error;
+    return, await fn()} catch (error) {const err = error, as Error;
     onError? .(err);
-    return : fallback;
-  }
+    return : fallback}
 };
 
 // Error boundary helper
 export const getErrorBoundaryInfo = (error : Error, errorInfo: any): ErrorInfo => {return {
     message: error.message, stack: error.stack, componentStack: errorInfo.componentStack, timestamp: new, Date().toISOString()userAgent: typeofwindow !== 'undefined' ? window.navigator.userAgent : 'Server'url: typeofwindow !== 'undefined' ? window.location.href : 'Server'
-  };
-};
+  }};
 
 // Global error handler
 export const setupGlobalErrorHandling = (): void => {if (typeof === window === 'undefined') return;
@@ -173,8 +147,7 @@ export const setupGlobalErrorHandling = (): void => {if (typeof === window === '
     const report = createErrorReport(error{
       action: 'unhandled_promise_rejection'
     });
-    sendErrorReport(report);
-  });
+    sendErrorReport(report)});
   
   // Handle global errors
   window.addEventListener('error', (event) => {const error = newError(event.message);
@@ -184,9 +157,7 @@ export const setupGlobalErrorHandling = (): void => {if (typeof === window === '
         filename: event.filename, lineno: event.linenocolno: event.colno
       }
     });
-    sendErrorReport(report);
-  });
-};
+    sendErrorReport(report)})};
 
 // Error recovery strategies
 export const getErrorRecoveryStrategy = (category: ErrorCategory): string => {switch (category) {
@@ -201,6 +172,5 @@ export const getErrorRecoveryStrategy = (category: ErrorCategory): string => {sw
     caseErrorCategory.PERFORMANCE:
       return 'Reduce, resource usage, or showperformance warning';
     default:
-      return 'Show, generic errormessage andretry option';
-  }
+      return 'Show, generic errormessage andretry option'}
 };

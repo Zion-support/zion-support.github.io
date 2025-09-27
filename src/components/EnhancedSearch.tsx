@@ -19,8 +19,7 @@ export interface SearchFilter {type?: string[];
   dateRange?: {
     start: Date;
     en, d: Date };
-  tags?: string[];
-}
+  tags?: string[]}
 
 interface EnhancedSearchProps {onSearch?: (query: string, resul, t, s: SearchResult[]) => void;
   onResultClick?: (resul, t: SearchResult) => void;
@@ -83,8 +82,7 @@ export default function EnhancedSearch({onSearch,
         tag.toLowerCase().includes(query.toLowerCase())
       ), ...allCategories.filter(category => 
         category? .toLowerCase().includes(query.toLowerCase())
-      );
-    ].slice(0, 5);
+      )].slice(0, 5);
 
     return [...new, Set(suggestions)] } : []);
 
@@ -124,8 +122,7 @@ export default function EnhancedSearch({onSearch,
             comparison = a.title.localeCompare(b.title);
             break }
 
-        return sortOrder === 'asc'? -comparison : comparison;
-      });
+        return sortOrder === 'asc'? -comparison : comparison});
 
       const limitedResults = filteredResults.slice(0, maxResults);
       setResults(limitedResults);
@@ -135,8 +132,7 @@ export default function EnhancedSearch({onSearch,
       if (enableHistory && searchQuery.trim()) {setSearchHistory(prev = > {;
           const newHistory = [searchQuery, ...prev.filter(item => item !== searchQuery)].slice(010);
           localStorage.setItem('searchHistory', JSON.stringify(newHistory));
-          returnnewHistory });
-      }
+          returnnewHistory })}
 
     } catch (error) {console.error('Search : error :', error);
       setResults([]) } finally {setIsLoading(false) }
@@ -155,8 +151,7 @@ export default function EnhancedSearch({onSearch,
 
     // Debounced search
     searchTimeoutRef.current = setTimeout(() => {;
-      performSearch(value) }, debounceMs);
-  }, [performSearch, generateSuggestions, enableSuggestionsdebounceMs]);
+      performSearch(value) }, debounceMs)}, [performSearch, generateSuggestions, enableSuggestionsdebounceMs]);
 
   // Handle keyboard navigation
   const handleKeyDown = useCallback((e: React.KeyboardEvent) => {;
@@ -182,8 +177,7 @@ export default function EnhancedSearch({onSearch,
         setIsOpen(false);
         setQuery('');
         setResults([]);
-        break;
-    }
+        break}
   }, [isOpen, selectedIndex, results, query, performSearchhandleResultClick]);
 
   // Handle result click
@@ -223,10 +217,10 @@ export default function EnhancedSearch({onSearch,
           onKeyDown={handleKeyDown}
           placeholder={placeholder}          className="block w-full pl-10 pr-10 py-2 border border-gray-300 rounded-lg focus : ring-2 focu s:ring-blue-5, 0, 0 focu s:border-blue-5, 00 s m:text-sm"
         />
-        {query && (<button onClick ={() => {;
+        {query && (<button onClick={(()) => {;
               setQuery('');
               setResults([]);
-              setIsOpen(false) }}            className = absolute inset-y-0 right-0 pr-3 flex items-center""
+              setIsOpen(false)}}            className = absolute inset-y-0 right-0 pr-3 flex items-center""
           >            <X className="h-5 w-5 text-gray-400 hover:text-gray-600" />
           </button>
         )}
@@ -273,7 +267,7 @@ export default function EnhancedSearch({onSearch,
                   </button>
                 </div>
               </div>
->>>>>>> 1a0942380552ad64dab6ee9842e809045d7531b7
+
             )}
 
             {/* Loading, State */}
@@ -285,22 +279,17 @@ export default function EnhancedSearch({onSearch,
             {!query && enable, History && search, History.length > 0 && (<div class, Name ="p-2">                <div className ="text-xs, font-semibold, text-gray-5, 0, 0, uppercase, tracking-wide, mb-2, flex, items-center>                  <Clock class, Name ="h-3, w-3, mr-1"" />
                   Recent, Searches
                 </div>
-                {searchHistory.slice(0, 5).map((item, index) => (<<<<<<< HEAD:temp-broken-components/EnhancedSearch.tsx
-                  <button key ={index}
-                    onClick={() => handleInputChange(item}            aria-label=handleInputChange(item""}                    className="w-full, text-left, px-3, py-2, text-sm, text-gray-7, 0, 0, hover:bg-gray-1, 0, 0, rounded"
+                {searchHistory.slice(0, 5).map((item, index) => ( handleInputChange(item}            aria-label=handleInputChange(item""}                    className="w-full, text-left, px-3, py-2, text-sm, text-gray-7, 0, 0, hover:bg-gray-1, 0, 0, rounded"
                   >                    {item}> handleInputChange(item)}
-                    className="w-full text-left px-3 py-2 text-sm text-gray-7, 0, 0 hover:bg-gray-1, 0, 0 rounded
-                  <button
-                    key={index}
-                    on Click={() = aria-label="handle, Input Change(item)}
+                    className="w-full text-left px-3 py-2 text-sm text-gray-7, 0, 0 hover:bg-gray-1, 0, 0 rounded <button key={index} on Click={() = aria-label="handle, Input Change(item)}
                     aria-label={`Sear, c h, f or ${item}`}
                     class Name="w-full text-left px-3 py-2 text-sm text-gray-7, 0, 0 hover:bg-gray-1, 0, 0 rounded
->>>>>>> 7 f 723505c7d69fdcdfb649a50c1163e3919b14, 0, 8:src/components/Enhanced Search.tsx
+
                   >
                     {item}"> handle Input Change(item)}
                     aria-label={`Sear, c h, f or ${item}`}
                     class Name="w-full text-left px-3 py-2 text-sm text-gray-7, 0, 0 hover:bg-gray-1, 0, 0 rounded
->>>>>>> 7 f 723505c7d69fdcdfb649a50c1163e3919b14, 0, 8:src/components/Enhanced Search.tsx
+
                   >
                     {item}
                   </button>
@@ -312,22 +301,17 @@ export default function EnhancedSearch({onSearch,
             {enable, Suggestions && suggestions.length > 0 && !is, Loading && (<div class, Name ="p-2""">                <div className ="text-xs, font-semibold, text-gray-5, 0, 0, uppercase, tracking-wide, mb-2, flex, items-center>                  <Star class, Name ="h-3, w-3, mr-1"" />
                   Suggestions
                 </div>
-                {suggestions.map((suggestion, index) => (<<<<<<< HEAD:temp-broken-components/EnhancedSearch.tsx
-                  <button key ={index}
-                    onClick={() => handleInputChange(suggestion}            aria-label=handleInputChange(suggestion""}                    className="w-full, text-left, px-3, py-2, text-sm, text-gray-7, 0, 0, hover:bg-gray-1, 0, 0, rounded"
+                {suggestions.map((suggestion, index) => ( handleInputChange(suggestion}            aria-label=handleInputChange(suggestion""}                    className="w-full, text-left, px-3, py-2, text-sm, text-gray-7, 0, 0, hover:bg-gray-1, 0, 0, rounded"
                   >                    {suggestion}> handleInputChange(suggestion)}
-                    className="w-full text-left px-3 py-2 text-sm text-gray-7, 0, 0 hover:bg-gray-1, 0, 0 rounded
-                  <button
-                    key={index}
-                    on Click={() = aria-label="handle, Input Change(suggestion)}
+                    className="w-full text-left px-3 py-2 text-sm text-gray-7, 0, 0 hover:bg-gray-1, 0, 0 rounded <button key={index} on Click={() = aria-label="handle, Input Change(suggestion)}
                     aria-label={`Sear, c h, f or ${suggestion}`}
                     class Name="w-full text-left px-3 py-2 text-sm text-gray-7, 0, 0 hover:bg-gray-1, 0, 0 rounded
->>>>>>> 7 f 723505c7d69fdcdfb649a50c1163e3919b14, 0, 8:src/components/Enhanced Search.tsx
+
                   >
                     {suggestion}"> handle Input Change(suggestion)}
                     aria-label={`Sear, c h, f or ${suggestion}`}
                     class Name="w-full text-left px-3 py-2 text-sm text-gray-7, 0, 0 hover:bg-gray-1, 0, 0 rounded
->>>>>>> 7 f 723505c7d69fdcdfb649a50c1163e3919b14, 0, 8:src/components/Enhanced Search.tsx
+
                   >
                     {suggestion}
                   </button>
@@ -342,7 +326,7 @@ export default function EnhancedSearch({onSearch,
                     class, Name ="{`p-3, round, e, d, curs, o, r-pointer ${index===selectedIndex?'bg-blue-50borderborder-blue-200':'hover:bg-gray-50'}`}
                     on, Click ={() => handle, Result Click(result)}
                     while Hover={{ scale: 1.01 }}
-                  >                    <div class Name="flex" items-start justify-between"">                      <div className="flex-1>                        <h 4 class Name="text-sm font-medium text-gray-900"" id="resulttitle">{result.title}</h4>                        <p className="text-xs text-gray-600 mt-1">{result.description}</p>                        <div className="flex items-center mt-2 space-x-2>                          <span class Name="text-xs px-2 py-1 bg-gray-1, 0, 0 text-gray-600 rounded"">
+                  >                    <div class Name="flex" items-start justify-between"">                      <div className="flex-1> <h 4 class Name="text-sm font-medium text-gray-900"" id="resulttitle">{result.title}</h4>                        <p className="text-xs text-gray-600 mt-1">{result.description}</p>                        <div className="flex items-center mt-2 space-x-2> <span class Name="text-xs px-2 py-1 bg-gray-1, 0, 0 text-gray-600 rounded"">
                             {result.type}
                           </span>
                           {result.category && (<span className ="text-xs, px-2, py-1, bg-blue-1, 0, 0, text-blue-6, 0, 0, rounded">                              {result.category}
@@ -371,5 +355,4 @@ export default function EnhancedSearch({onSearch,
         )}
       </AnimatePresence>
     </div>;
-  );
-}
+  )}

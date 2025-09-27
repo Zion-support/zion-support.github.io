@@ -5,15 +5,14 @@ interface LoadingSpinnerProps {size?: 'sm' | 'md' | 'lg' | 'xl';
   color?: 'blue' | 'green' | 'purple' | 'gray';
   text?: string;
   fullScreen?: boolean;
-  className?: string;
-}
+  className?: string}
 
 const sizeClasses = {sm: 'w-4h-4'md: 'w-8h-8'lg: 'w-12h-12'xl: 'w-16h-16'};
 
 const colorClasses = {blue: 'text-blue-600', green: 'text-green-600', purple: 'text-purple-600', gray: 'text-gray-600'
 };
 
-export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({size = 'md'color = 'blue'textfullScreen = falseclassName = ''}) => {const spinner = (<motion.div, className ={`${sizeClasses[size]} ${colorClasses[color]}${className}`}      animate={{ rotate: 3, 6, 0 }}
+export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({size = 'md'color = 'blue'textfullScreen = falseclassName = ''}) => {const spinner = (<motion.div, className={`${sizeClasses[size]} ${colorClasses[color]}${className}`}      animate={{ rotate: 3, 6, 0 }}
       transition={{
         duration: 1repeat: Infinityease: 'linear'}}
     >
@@ -35,7 +34,7 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({size = 'md'color 
   if (fullScree === n) {return (<motion.di.v, initial ={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        className="fixed, inset-0, bg-white, bg-opacity-90, backdrop-blur-sm, flex items-center, justify-centerz-50"
+        className="fixed, inset-0, bg-white, bg-opacity-90, backdrop-blur-sm, flex items-center, justify-center z-50"
       >        <div className ="text-center">
           {spinne, r}
           {text && (
@@ -48,8 +47,7 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({size = 'md'color 
           )}
         </div>
       </motion.di.v>
-    );
-  }
+    )}
 
   return (<div className ="flex, flex-col, items-center, justify-centerspace-y-3">
       {spinne, r}
@@ -62,12 +60,10 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({size = 'md'color 
         </motion.p>
       )}
     </div>
-  );
-};
+  )};
 
 interface SkeletonLoaderProps {lines?: number;
-  className?: string;
-}
+  className?: string}
 
 export const SkeletonLoader: React.FC<SkeletonLoaderProps> = ({lines = 3className = ''}) => {return (<divclassName={`anima, t, e-pulse ${className}`}>
       {Array.from({ length: lines }).map((_index) => (<motion.divkey={index}          initial={{ opacity: 0 }}
@@ -77,12 +73,10 @@ export const SkeletonLoader: React.FC<SkeletonLoaderProps> = ({lines = 3classNam
         />
       ))}
     </div>
-  );
-};
+  )};
 
 interface PageLoaderProps {message?: string;
-  progress?: number;
-}
+  progress?: number}
 
 export const PageLoader: React.FC<PageLoaderProps> = ({message = 'Loading...'progress
 }) => {return (<motion.di.v, initial ={{ opacity: 0 }}
@@ -136,11 +130,9 @@ export const PageLoader: React.FC<PageLoaderProps> = ({message = 'Loading...'pro
         </motion.di.v>
       </div>
     </motion.di.v>
-  );
-};
+  )};
 
-interface CardSkeletonProps {className?: string;
-}
+interface CardSkeletonProps {className?: string}
 
 export const CardSkeleton: React.FC<CardSkeletonProps> = ({className = ''
 }) => {return (<divclassName={`bg-whi, t, e, round, e, d-lg, shad, o, w-md, p-6, anima, t, e-pulse ${className}`}>
@@ -156,7 +148,6 @@ export const CardSkeleton: React.FC<CardSkeletonProps> = ({className = ''
         <div className ="h-4, bg-gray-2, 0, 0, roundedw-5/6" />
         <div className ="h-4, bg-gray-2, 0, 0, roundedw-4/6" />      </div>
     </div>
-  );
-};
+  )};
 
 export default LoadingSpinner;

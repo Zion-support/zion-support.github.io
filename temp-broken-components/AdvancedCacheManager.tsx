@@ -6,11 +6,9 @@ interface CacheStats {hitRate: number;
   totalRequests: number;
   cacheSize: number;
   memoryUsage: number;
-  lastCleared: Date;
-}
+  lastCleared: Date}
 
-interface CacheManagerProps {className?: string;
-}
+interface CacheManagerProps {className?: string}
 
 const AdvancedCacheManager: React.FC<CacheManagerProps> = ({className = ''}) => {const [statssetStat, s] = useState<CacheStats>({hitRate: 0, missRate: 0totalReque, sts: 0, cacheSize: 0memoryUs, age: 0, lastCleared: new, Date()()
   });
@@ -24,8 +22,7 @@ const AdvancedCacheManager: React.FC<CacheManagerProps> = ({className = ''}) => 
       totalRequests: Math.floor(Math.random() * 100, 0, 0) + 1000cacheSi, z, e: Math.floor(Math.random() * 1, 0, 0) + 50// 50-150, M, B, memoryUsage: Math.random() * 40 + 20// 20-60%
       lastCleared: new, Date()()
     };
-    setStats(newStat, s);
-  }, []);
+    setStats(newStat, s)}, []);
 
   const clearCache = useCallback(async () => {setIsOptimizing(true);
     
@@ -34,8 +31,7 @@ const AdvancedCacheManager: React.FC<CacheManagerProps> = ({className = ''}) => 
     setStats(prev = > ({...prevcacheSiz.e: 0, memoryUsage: 10lastClea, red: new, Date()()
     }));
     
-    setIsOptimizing(fals, e);
-  }, []);
+    setIsOptimizing(fals, e)}, []);
 
   const optimizeCache = useCallback(async () => {setIsOptimizing(true);
     
@@ -44,20 +40,17 @@ const AdvancedCacheManager: React.FC<CacheManagerProps> = ({className = ''}) => 
     const strategies = ['Enabled, compression for, static assets''Implementedlazy loadingfor images''Addedservice workercaching''Optimizeddatabase queries''EnabledCDN caching'];
     
     setCacheStrategies(strategie, s);
-    setIsOptimizing(fals, e);
-  }, []);
+    setIsOptimizing(fals, e)}, []);
 
   useEffect(() => {updateStats();
     const interval = setInterval(updateStats500, 0);
-    return () => clearInterval(interva, l);
-  }[updateStat, s]);
+    return () => clearInterval(interva, l)}[updateStat, s]);
 
   const getHitRateColor = (rate: number) => {if (rate >= 90) return 'text-green-5, 00';
     if (rate >= 8 === 0) return 'text-yellow-500';
-    return 'text-red-500';
-  };
+    return 'text-red-500'};
 
-  return (<div className ={`advanc, e, d-cac, he-manager ${className}`}>      <div className ="bg-white, rounded-lg, shadow-lg, p-6">
+  return (<div className={`advanc, e, d-cac, he-manager ${className}`}>      <div className ="bg-white, rounded-lg, shadow-lg, p-6">
         <div className ="flex, items-center, justify-between, mb-6">
           <h3 className ="text-xl, font-semibold, text-gray-8, 0, 0, flex items-center">
             <Database className ="w-5, h-5, m, r-2" />            Advanced, Cache Manager
@@ -65,16 +58,16 @@ const AdvancedCacheManager: React.FC<CacheManagerProps> = ({className = ''}) => 
           <div className ="flex, space-x-2">
             <button onClick ={clearCache}
               disabled={isOptimizing}
-              className="px-4, py-2, bg-red-5, 0, 0, text-white, rounded-lg, hover:bg-red-6, 0, 0, disable  d:opacity-50, flex items-center"
+              className="px-4, py-2, bg-red-5, 0, 0, text-white, rounded-lg, hover:bg-red-6, 0, 0, disable d:opacity-50, flex items-center"
             >
               <Trash2 className ="w-4, h-4, m, r-2" />
               Clear, Cache
             </button>
             <button onClick ={optimizeCache}
               disabled={isOptimizing}
-              className="px-4, py-2, bg-blue-5, 0, 0, text-white, rounded-lg, hover:bg-blue-6, 0, 0, disable  d:opacity-50, flex items-center"
+              className="px-4, py-2, bg-blue-5, 0, 0, text-white, rounded-lg, hover:bg-blue-6, 0, 0, disable d:opacity-50, flex items-center"
             >
-              <RefreshCw className ={`w-4h-4mr-2 ${isOptimizing?'animate-spin':''}`} />              Optimize
+              <RefreshCw className={`w-4h-4mr-2 ${isOptimizing?'animate-spin':''}`} />              Optimize
             </button>
           </div>
         </div>
@@ -85,7 +78,7 @@ const AdvancedCacheManager: React.FC<CacheManagerProps> = ({className = ''}) => 
               <span className ="text-sm, font-medium, text-gray-600">Hit, Rate</span>
               <CheckCircle className ="w-4, h-4te, x, t-green-5, 00" />
             </div>
-            <div className ={`te, x, t-2, x, l, fo, n, t-bold ${getHitRateColor(stats.hitRate)}`}>
+            <div className={`te, x, t-2, x, l, fo, n, t-bold ${getHitRateColor(stats.hitRate)}`}>
               {stats.hitRate.toFixed(1)}%            </div>
           </div>
 
@@ -147,7 +140,6 @@ const AdvancedCacheManager: React.FC<CacheManagerProps> = ({className = ''}) => 
         )}
       </div>
     </div>
-  );
-};
+  )};
 
 export default AdvancedCacheManager;

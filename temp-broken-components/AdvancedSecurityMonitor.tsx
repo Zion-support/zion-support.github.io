@@ -5,12 +5,10 @@ interface SecurityMetrics {
   activeThreats: number;
   blockedRequests: number;
   securityScore: number;
-  lastScan: Date;
-}
+  lastScan: Date}
 
 interface AdvancedSecurityMonitorProps {
-  onSecurityUpdate?: (metrics: SecurityMetrics) => void;
-}
+  onSecurityUpdate?: (metrics: SecurityMetrics) => void}
 
 export const AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = ({
   onSecurityUpdate
@@ -27,12 +25,10 @@ export const AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = (
     };
 
     setMetrics(newMetrics);
-    onSecurityUpdate?.(newMetrics);
-  }, [onSecurityUpdate]);
+    onSecurityUpdate?.(newMetrics)}, [onSecurityUpdate]);
 
   React.useEffect(() => {
-    updateSecurityMetrics();
-  }, [updateSecurityMetrics]);
+    updateSecurityMetrics()}, [updateSecurityMetrics]);
 
   return (
     <div className="advanced-security-monitor">
@@ -45,7 +41,6 @@ export const AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = (
         </div>
       )}
     </div>
-  );
-};
+  )};
 
 export default AdvancedSecurityMonitor;

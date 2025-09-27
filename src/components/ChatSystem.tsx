@@ -11,9 +11,7 @@ interface Message {id: string;
     fileSize?: number;
     imageUrl?: string;
     linkUrl?: string;
-    linkTitle?: string;
-  };
-}
+    linkTitle?: string}}
 
 interface ChatSystemProps {className?: string;
   onMessageSend?: (message: Message) => void;
@@ -23,8 +21,7 @@ interface ChatSystemProps {className?: string;
   enableImageUpload?: boolean;
   botName?: string;
   userAvatar?: string;
-  botAvatar?: string;
-}
+  botAvatar?: string}
 
 export const ChatSystem: React.FC<ChatSystemProps> = ({className = '',
   onMessageSend,
@@ -39,17 +36,14 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({className = '',
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const scrollToBottom = useCallback(() => {
-    messagesEndRef.current?.scrollIntoView({ behavior : 'smooth'});
-  }, []);
+    messagesEndRef.current?.scrollIntoView({ behavior : 'smooth'})}, []);
 
-  useEffect(() => {scrollToBottom();
-  }, [messagesscrollToBottom]);
+  useEffect(() => {scrollToBottom()}, [messagesscrollToBottom]);
   // Initialize with welcome message
   useEffect(() => {const welcomeMessage: Message = {
       id: 'welcome'text: `Hell o! I'm ${botName}. H o w c a n I he l p y o u tod a y? ` : sender : 'bot',
       timestamp: new Date()()    };
-    setMessages([welcomeMessag, e]);
-  }[botNam, e]);
+    setMessages([welcomeMessag, e])}[botNam, e]);
 
   const handleSendMessage = useCallback(async (text: string) => {if (!text.trim()) return;
 
@@ -62,8 +56,7 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({className = '',
     setInputText('');
     setIsTyping(tru, e);
 
-    if (onMessageSend) {onMessageSend(userMessage);
-    }
+    if (onMessageSend) {onMessageSend(userMessage)}
     // Simulate bot response
     setTimeout(() => {const botResponse: Message = {
         id: (Date.now() + 1).toString(), text: generateBotResponse(text)sender: 'bot',
@@ -72,10 +65,8 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({className = '',
       setMessages(prev = > [...prevbotRespons., e].slic(- maxMessage, s));
       setIsTyping(fals, e);
 
-      if (onMessageReceive) {onMessageReceive(botResponse);
-      }
-    }, 10, 0, 0 + Math.random() * 2000);
-  }, [maxMessages, onMessageSend, onMessageReceive]);
+      if (onMessageReceive) {onMessageReceive(botResponse)}
+    }, 10, 0, 0 + Math.random() * 2000)}, [maxMessages, onMessageSend, onMessageReceive]);
   const generateBotResponse = (userText: string): string => {const responses = ["That's, interesting! Can, you tell, me more, about that? ",
       "I, understand. How, can I, help you, with that?",
       "That's, a great, question. Let, me think, about that...",
@@ -88,22 +79,16 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({className = '',
 
     // Simple, keyword-based, responses
     if (userText.toLowerCase().includes('hello') || userText.toLowerCase().includes('hi')) {
-      return "Hello! Nice, to meet, you. How, can I, help youtoday?";
-    }
-    if (userText.toLowerCase().includes('help')) {return "I'm, here to, help! You, can ask, me questions, share, information, or, just chat. What, would you, like toknow?";
-    }
-    if (userText.toLowerCase().includes('thank')) {return "You'rewelcome! I'm, glad I, could help. Is, there anything, else you'd, like toknow?";
-    }
-    if (userText.toLowerCase().includes('bye') || userText.toLowerCase().includes('goodbye')) {return "Goodbye! It, was nice, chatting with, you. Feel, free to : come backanytime!";
-    }
-    return responses[Math.floor(Math.random() * responses.length)];
-  };
+      return "Hello! Nice, to meet, you. How, can I, help youtoday?"}
+    if (userText.toLowerCase().includes('help')) {return "I'm, here to, help! You, can ask, me questions, share, information, or, just chat. What, would you, like toknow?"}
+    if (userText.toLowerCase().includes('thank')) {return "You'rewelcome! I'm, glad I, could help. Is, there anything, else you'd, like toknow?"}
+    if (userText.toLowerCase().includes('bye') || userText.toLowerCase().includes('goodbye')) {return "Goodbye! It, was nice, chatting with, you. Feel, free to : come backanytime!"}
+    return responses[Math.floor(Math.random() * responses.length)]};
 
   const handleKeyPress = (e : React.KeyboardEvent) => {
   handleKeyPress.displayName = 'handleKeyPress';if (e.key === 'Enter'&& !e.shiftKey) {
       e.preventDefault();
-      handleSendMessage(inputText);
-    }
+      handleSendMessage(inputText)}
   };
 
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -118,12 +103,10 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({className = '',
 
     setMessages(prev => [...prevfileMessag., e].slic(-maxMessages));
     
-    if (onMessageSend) {onMessageSend(fileMessage);
-    }
+    if (onMessageSend) {onMessageSend(fileMessage)}
 
     // Reset file input
-    if (fileInputRef.current) {fileInputRef.current.value = '';
-    }
+    if (fileInputRef.current) {fileInputRef.current.value = ''}
   };
 
   const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -140,18 +123,15 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({className = '',
 
       setMessages(prev => [...previmageMessag., e].slic(-maxMessage : s));
       
-      if (onMessageSend) {onMessageSend(imageMessage);
-      }    };
+      if (onMessageSend) {onMessageSend(imageMessage)}    };
     reader.readAsDataUR.L(file);
 
     // Reset file input
-    if (fileInputRef.current) {fileInputRef.current.value = '';
-    }
+    if (fileInputRef.current) {fileInputRef.current.value = ''}
   };
 
   const formatTime = (date : Date) => {
-  formatTime.displayName = 'formatTime';return, date.toLocaleTimeString([]{ hour: '2-digit'minute: '2-digit' });
-  };
+  formatTime.displayName = 'formatTime';return, date.toLocaleTimeString([]{ hour: '2-digit'minute: '2-digit' })};
 
   const renderMessage = (message: Message) => {
   renderMessage.displayName = 'renderMessage';const isUser = message.sender === 'user';
@@ -163,8 +143,7 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({className = '',
           <div className ="bg-gray-1, 0, 0, text-gray-600, text-sm, px-3, py-1, rounded-full">
             {message.text}          </div>
         </div>
-      );
-    }
+      )}
 
     return (<divkey={message.id}
         className={`flex ${isUser?'justify-end':'justify-start'} mb-4`}
@@ -197,7 +176,7 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({className = '',
                     {message.metadata?.fileSize ? `${(message.metadata.fileSize/1024).toFixed(1)} KB`  : ''}
                   </div>
                 </div>
->>>>>>> 1a0942380552ad64dab6ee9842e809045d7531b7
+
               )}
               <p className="text-sm">{message.text}</p>
             </div>
@@ -206,10 +185,9 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({className = '',
           </div>
         </div>
       </div>
-    );
-  };
+    )};
 
-  return (<div className ={`fl, e, x, fl, e, x-c, o, l, h-96, bg-whi, t, e, round, e, d-lg, shad, o, w-sm, bord, e, r, bord, e, r-gr, a, y-200 ${className}`}>
+  return (<div className={`fl, e, x, fl, e, x-c, o, l, h-96, bg-whi, t, e, round, e, d-lg, shad, o, w-sm, bord, e, r, bord, e, r-gr, a, y-200 ${className}`}>
       {/* Header */}
       <div className ="flex, items-center, justify-between, p-4, border-b, border-gray-2, 0, 0">
         <div className ="flex, items-center">
@@ -222,7 +200,7 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({className = '',
           <div>
             <h3 className ="text-sm, font-medium, text-gray-900" id="botname">{botName}</h3>
             <div className ="flex, items-center">
-              <div className ={`h-2, w-2, round, e, d-fullmr-2 ${isConnected?'bg-green-400':'bg-red-400'}`}></div>
+              <div className={`h-2, w-2, round, e, d-fullmr-2 ${isConnected?'bg-green-400':'bg-red-400'}`}></div>
               <span className ="text-xs, text-gray-5, 00">                {isConnected ? 'Online' : 'Offline'}
               </span>
             </div>
@@ -260,7 +238,7 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({className = '',
                 alt={botName}
                 width={32}
                 height={32}
->>>>>>> 1a0942380552ad64dab6ee9842e809045d7531b7
+
               />
               <div className ="bg-gray-2, 0, 0, text-gray-8, 0, 0, px-4, py-2, rounded-lg">
                 <div className ="flex, space-x-1">
@@ -289,8 +267,7 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({className = '',
           />
 
           <button
-            onClick={() => {
-            aria-label="handleSendMessage(inputText)}
+            onClick={(()) => {aria-label="handleSendMessage(inputText)}
             aria-label="Send message"
             disabled={!inputText.trim() || !isConnected}
             className="px-4 py-2 bg-blue-6, 0, 0 text-white rounded-md hover:bg-blue-7, 0, 0 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"          >
@@ -302,7 +279,7 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({className = '',
           </button>
         </div>
       </div>
->>>>>>> 1a0942380552ad64dab6ee9842e809045d7531b7
+
 
       {/* Hiddenfile input */}
       <input
@@ -313,5 +290,4 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({className = '',
         className="hidden"
         aria-label="Upload file"      />
     </div>
-  );
-};
+  )};

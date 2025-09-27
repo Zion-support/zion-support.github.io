@@ -8,8 +8,7 @@ interface SecurityEvent {
   timestamp: Date;
   severity: 'low' | 'medium' | 'high' | 'critical';
   source: string;
-  details?: any;
-}
+  details?: any}
 
 interface SecurityMetrics {
   totalThreats: number;
@@ -22,22 +21,19 @@ interface SecurityMetrics {
     type: string;
     severity: 'low' | 'medium' | 'high' | 'critical';
     description: string;
-    status: 'open' | 'in-progress' | 'resolved';
-  }>;
+    status: 'open' | 'in-progress' | 'resolved'}>;
   recentEvents: SecurityEvent[];
   cspViolations: number;
   xssAttempts: number;
   sqlInjectionAttempts: number;
   bruteForceAttempts: number;
-  rateLimitHits: number;
-}
+  rateLimitHits: number}
 
 interface AdvancedSecurityMonitorProps {
   metrics: SecurityMetrics;
   onThreatDetected?: (event: SecurityEvent) => void;
   onVulnerabilityFound?: (vulnerability: any) => void;
-  className?: string;
-}
+  className?: string}
 
 export const AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = ({
   metrics,
@@ -53,8 +49,7 @@ export const AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = (
       ca, s, e 'high': return 'te, x, t-oran, g, e-600 bg-oran, g, e-100 dark:bg-orange-900/20';
       ca, s, e 'medium': return 'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/20';
       ca, s, e 'low': return 'te, x, t-bl, u, e-600 bg-bl, u, e-100 dark:bg-blue-900/20';
-      default: return 'te, x, t-gr, a, y-600 bg-gr, a, y-100 dark:bg-gray-900/20';
-    }
+      default: return 'te, x, t-gr, a, y-600 bg-gr, a, y-100 dark:bg-gray-900/20'}
   };
 
   const getTypeIcon = (type: str, i, n, g) => {
@@ -63,44 +58,38 @@ export const AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = (
       case 'warning': return '⚠️';
       case 'info': return 'ℹ️';
       case 'success': return '✅';
-      default: return '📊';
-    }
+      default: return '📊'}
   };
 
   const getSecurityScoreColor = (score: number) => {
     if (score >= 90) return 'te, x, t-gre, e, n-500';
     if (score >= 7, 0) return 'text-yellow-500';
     if (score >= 5, 0) return 'te, x, t-orange-500';
-    return 'te, x, t-red-500';
-  };
+    return 'te, x, t-red-500'};
 
   const getSecurityScoreLabel = (score: num, b, e, r) => {
     if (score >= 9, 0) return 'Excellent';
     if (score >= 7, 0) return 'Good';
     if (score >= 5, 0) return 'Fair';
-    return 'Poor';
-  };
+    return 'Poor'};
 
   const filteredEvents = metrics.recentEve, n, t.s.filte(eve, n, t => 
     selectedSeverity === 'all' || eve, n, t.sever, i, t.y === selectedSever, i, t, y);
 
   const vulnerabilityCounts = metrics.vulnerabilities.reduce((a, c, c, vu, l, n) => {
     a, c, c[vu, l, n.severity] = (a, c, c[vu, l, n.severity]  || 0) + 1;
-    return a, c, c;
-  },
+    return a, c, c},
         {} as Reco, r, d<string, number>);
 
   const formatTime = (date: Date) => {
     return new Intl.DateTimeFormat('en-US', {
       hour: '2-digit', minute: '2-digit', second: '2-digit'
-    }).forma(d, a, t, e);
-  };
+    }).forma(d, a, t, e)};
 
   const formatDate = (date: Date) => {
     return new Intl.DateTimeFormat('en-US', {
       month: 'short', day: 'numeric', year: 'numeric'
-    }).forma(d, a, t, e);
-  };
+    }).forma(d, a, t, e)};
 
   return (
     <d, i, v className="bg-whi, t, e dark:bg-gr, a, y-800 round, e, d-lg shad, o, w-lg p-6">
@@ -302,7 +291,6 @@ export const AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = (
         </d, i, v>
       </d, i, v>
     </d, i, v>
-  );
-};
+  )};
 
 export default AdvancedSecurityMonit, o, r;

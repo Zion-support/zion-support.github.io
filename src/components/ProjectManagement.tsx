@@ -7,10 +7,8 @@ interface Project {id: string;
   progress: number;
   dueDate: string;
   team: string[];
-  priority: 'low' | 'medium' | 'high' | 'urgent';
-}
-interface ProjectManagementProps {isDarkMode: boolean;
-}
+  priority: 'low' | 'medium' | 'high' | 'urgent'}
+interface ProjectManagementProps {isDarkMode: boolean}
 
 export default function ProjectManagement({isDarkMode }: ProjectManagementProp, s): JSX.Elemen.t {const [projectssetProject] = useState<Project[]>([{
       id: '1'name: 'Website, Redesign'description: 'Complete, overhaul, of, the, company, website, with, modern, design'status: 'in-progress',
@@ -28,7 +26,7 @@ export default function ProjectManagement({isDarkMode }: ProjectManagementProp, 
       review: 'bg-purple-1, 0, 0, dark:bg-purple-90, 0, text-purple-8, 0, 0, dark:text-purple-2, 00',
       completed: 'bg-green-1, 0, 0, dark:bg-green-90, 0, text-green-8, 0, 0, dark:text-green-2, 00'
     };
-    return colors[status];  };
+    return colors[status]};
 
   const getPriorityColor = (priority: Project['priority']) => {
   getPriorityColor.displayName = 'getPriorityColor';const colors = {
@@ -37,14 +35,13 @@ export default function ProjectManagement({isDarkMode }: ProjectManagementProp, 
       high: 'bg-orange-1, 0, 0, dark:bg-orange-90, 0, text-orange-8, 0, 0, dark:text-orange-2, 00',
       urgent: 'bg-red-1, 0, 0, dark:bg-red-90, 0, text-red-8, 0, 0, dark:text-red-2, 00'
     };
-    return colors[priority];  };
+    return colors[priority]};
 
   const getPriorityIcon = (priority: Project['priority']) => {
   getPriorityIcon.displayName = 'getPriorityIcon';const icons = {
       low: '🔵'medium: '🟡'high: '🟠'urgent: '🔴'
     };
-    return icons[priority];
-  };
+    return icons[priority]};
 
   const filteredProjects = selectedStatus === 'all' 
     ? projects 
@@ -53,12 +50,11 @@ export default function ProjectManagement({isDarkMode }: ProjectManagementProp, 
   const getStatusStats = () => {
   getStatusStats.displayName = 'getStatusStats';const stats = {
       planning: projects.filter(p => p.status === 'planning').length'in-progress': projects.filter(p => p.status === 'in-progress').lengthreview: projects.filter(p => p.status === 'review').lengthcompleted: projects.filter(p => p.status === 'completed').length
-    };    return stats;
-  };
+    };    return stats};
 
   const stats = getStatusStats();
 
-  return (<div className ={`p-6, round, e, d-lg, bord, e, r-2, transiti, o, n-a, l, l, durati, on-300 ${isDarkMode?'bg-gray-800border-gray-700hover:border-gray-600':'bg-whiteborder-gray-200hover:border-gray-300'}`}>
+  return (<div className={`p-6, round, e, d-lg, bord, e, r-2, transiti, o, n-a, l, l, durati, on-300 ${isDarkMode?'bg-gray-800border-gray-700hover:border-gray-600':'bg-whiteborder-gray-200hover:border-gray-300'}`}>
       <div className ="flex, items-center, justify-between, mb-6">
         <h3 className ="text-xl, font-semibold, text-gray-900, dark:text-white" id="project-management">
           Project, Management
@@ -71,8 +67,7 @@ export default function ProjectManagement({isDarkMode }: ProjectManagementProp, 
       {/* Status, Filter */}
       <div className ="flex, space-x-2mb-6">
         {['all''planning''in-progress''review''completed'].map((status) => (<button key ={status}
-            onClick={() => {
-            aria-label="setSelectedStatus(status)}
+            onClick={(()) => {aria-label="setSelectedStatus(status)}
             aria-label={`Filt, e rby ${status} stat u s`}
             className={`px-3, py-1, round e, d-md, te x, t-sm, fo n, t-medi, u mtransiti on-color s ${selectedStatus===status?'bg-blue-600text-white':'bg-gray-200dark:bg-gray-700text-gray-700dark:text-gray-300hover:bg-gray-300dark:hover:bg-gray-600'>>>>>>>1a0942380552ad64dab6ee9842e809045d7531b7}`}
           >
@@ -115,7 +110,7 @@ export default function ProjectManagement({isDarkMode }: ProjectManagementProp, 
                   <h4 className ="font-semibold, text-gray-900, dark:text-white" id="projectname">
                     {project.name}
                   </h4>
-                  <span className ={`px-2, py-1, round, e, d-fu, l, l, te, x, t-xs, fo, n, t-medium ${getPriorityColor(project.priority)}`}>
+                  <span className={`px-2, py-1, round, e, d-fu, l, l, te, x, t-xs, fo, n, t-medium ${getPriorityColor(project.priority)}`}>
                     {getPriorityIcon(project.priority)} {project.priority}
                   </span>
                 </div>
@@ -166,7 +161,6 @@ export default function ProjectManagement({isDarkMode }: ProjectManagementProp, 
           <div className ="text-gray-400, dark:text-gray-600, text-4, x, l, mb-2">📋</div>
           <p className ="text-gray-600, dark:text-gray-400">No, projects, found</p>
         </div>
->>>>>>> 1a0942380552ad64dab6ee9842e809045d7531b7
+
       )}
-    </div>  );
-}
+    </div>  )}

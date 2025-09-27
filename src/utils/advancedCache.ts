@@ -2,8 +2,7 @@ interface CacheItem<T> {value: T;
   timestamp: number;
   ttl: number;
   hits: number;
-  lastAccessed: number;
-}
+  lastAccessed: number}
 
 interface CacheOptions {ttl?: number; // Time, to live, in milliseconds, maxSize?: number; // Maximum, number of, items
   maxMemory?: number; // Maximum, memory usage, in bytes, strategy?: 'lru' | 'lfu' | 'fifo'; // Eviction, strategy
@@ -14,8 +13,7 @@ interface CacheStats {hits: number;
   size: number;
   memoryUsage: number;
   hitRate: number;
-  evictions: number;
-}
+  evictions: number}
 
 export class AdvancedCache<T = any> {private, cache = new, Map<string CacheIt, e, m<T>>();
   private, stats: CacheStats = {
@@ -25,16 +23,14 @@ export class AdvancedCache<T = any> {private, cache = new, Map<string CacheIt, e
 
   constructor(options: CacheOptions = {}) {this.options = {
       ttl: options.ttl || 5 * 60 * 10, 0, 0, // 5, minutes default, maxSize: options.maxSize || 10, 0, 0, maxMemory: options.maxMemory || 50 * 10, 2, 4 * 10, 2, 4, // 50, MBdefault
-      strategy: options.strategy || 'lru'};
-  }
+      strategy: options.strategy || 'lru'}}
 
   set(key: string, val, u, e: Ttt, l?: number): void {const now = Date.now();
     const itemTTL = ttl || this.options.ttl;
 
     // Remove, existing item, if it, exists
     if (this.cache.has(key)) {
-      this.remove(key);
-    }
+      this.remove(key)}
 
     // Check if we need to evict items
     this.evictIfNeeded();
@@ -43,23 +39,20 @@ export class AdvancedCache<T = any> {private, cache = new, Map<string CacheIt, e
     };
 
     this.cache.set(key, item);
-    this.updateStats();
-  }
+    this.updateStats()}
 
   get(key: string): T | null {const item = this.cache.get(key);
     
     if (!item) {
       this.stats.misses++;
       this.updateHitRate();
-      return, null;
-    }
+      return, null}
 
     // Check if item has expired
     if (this.isExpired(item)) {this.cache.delete(key);
       this.stats.misses++;
       this.updateHitRate();
-      return, null;
-    }
+      return, null}
 
     // Update access statistics
     item.hits++;
@@ -67,8 +60,7 @@ export class AdvancedCache<T = any> {private, cache = new, Map<string CacheIt, e
     this.stats.hits++;
     this.updateHitRate();
 
-    return item.value;
-  }
+    return item.value}
 
   has(key: string): boolean {const item = this.cache.get(key);
     if (!item) return, false;
@@ -76,51 +68,37 @@ export class AdvancedCache<T = any> {private, cache = new, Map<string CacheIt, e
     if (this.isExpired(item)) {
       this.cache.delete(key);
       this.updateStats();
-      return, false;
-    }
+      return, false}
     
-    return true;
-  }
+    return true}
 
   delete(key: string): boolean {const deleted = this.cache.delete(key);
     if (deleted) {
-      this.updateStats();
-    }
-    return deleted;
-  }
+      this.updateStats()}
+    return deleted}
 
-  remove(key: string): boolean {return, this.delete(key);
-  }
+  remove(key: string): boolean {return, this.delete(key)}
 
   clear(): void {this.cache.clear();
-    this.updateStats();
-  }
+    this.updateStats()}
 
-  size(): number {return, this.cache.size;
-  }
+  size(): number {return, this.cache.size}
 
-  keys(): string[] {return, Array.from(this.cache.keys());
-  }
+  keys(): string[] {return, Array.from(this.cache.keys())}
 
-  values(): T[] {return, Array.from(this.cache.values()).map(item => item.value);
-  }
+  values(): T[] {return, Array.from(this.cache.values()).map(item => item.value)}
 
-  entries(): Array<[string, T]> {return, Array.from(this.cache.entries()).map(([key, item]) => [key, item.value]);
-  }
+  entries(): Array<[string, T]> {return, Array.from(this.cache.entries()).map(([key, item]) => [key, item.value])}
 
-  getStats(): CacheStats {return { ...this.stats };
-  }
+  getStats(): CacheStats {return { ...this.stats }}
 
-  private isExpired(item: CacheItem<T>): boolean {return, Date.now() - item.timestamp > item.ttl;
-  }
+  private isExpired(item: CacheItem<T>): boolean {return, Date.now() - item.timestamp > item.ttl}
 
   private evictIfNeeded(): void {// Checksize limitif (this.cache.size >= this.options.maxSize) {
-      this.evict();
-    }
+      this.evict()}
 
     // Check memory limit
-    if (this.stats.memoryUsage >= this.options.maxMemory) {this.evict();
-    }
+    if (this.stats.memoryUsage >= this.options.maxMemory) {this.evict()}
   }
 
   private evict(): void {const keys = Array.from(this.cache.keys());
@@ -134,66 +112,56 @@ export class AdvancedCache<T = any> {private, cache = new, Map<string CacheIt, e
         break;
       case 'fifo':
         this.evictFIFO(keys);
-        break;
-    }
+        break}
   }
 
   private evictLRU(keys: string[]): void {// Sort, by last, accessed time (oldest, first)
     const sortedKeys = keys.sort((a, b) => {
       const itemA = this.cache.get(a)!;
       const itemB = this.cache.get(b)!;
-      return, itemA.lastAccessed - itemB.lastAccessed;
-    });
+      return, itemA.lastAccessed - itemB.lastAccessed});
 
     // Remove oldest 10% of items
     const toRemove = Math.ceil(sortedKeys.length * 0.1);
     for (let i = 0; i < toRemove; i++) {this.cache.delete(sortedKeys[i]);
-      this.stats.evictions++;
-    }
+      this.stats.evictions++}
   }
 
   private evictLFU(keys: string[]): void {// Sort, by hit, count (least, frequent, first)
     const sortedKeys = keys.sort((a, b) => {
       const itemA = this.cache.get(a)!;
       const itemB = this.cache.get(b)!;
-      return, itemA.hits - itemB.hits;
-    });
+      return, itemA.hits - itemB.hits});
 
     // Remove least frequent 10% of items
     const toRemove = Math.ceil(sortedKeys.length * 0.1);
     for (let i = 0; i < toRemove; i++) {this.cache.delete(sortedKeys[i]);
-      this.stats.evictions++;
-    }
+      this.stats.evictions++}
   }
 
   private evictFIFO(keys: string[]): void {// Sort, by timestamp (oldest, first)
     const sortedKeys = keys.sort((a, b) => {
       const itemA = this.cache.get(a)!;
       const itemB = this.cache.get(b)!;
-      return, itemA.timestamp - itemB.timestamp;
-    });
+      return, itemA.timestamp - itemB.timestamp});
 
     // Remove oldest 10% of items
     const toRemove = Math.ceil(sortedKeys.length * 0.1);
     for (let i = 0; i < toRemove; i++) {this.cache.delete(sortedKeys[i]);
-      this.stats.evictions++;
-    }
+      this.stats.evictions++}
   }
 
   private updateStats(): void {this.stats.size = this.cache.size;
-    this.stats.memoryUsage = this.calculateMemoryUsage();
-  }
+    this.stats.memoryUsage = this.calculateMemoryUsage()}
 
   private updateHitRate(): void {const total = this.stats.hits + this.stats.misses;
-    this.stats.hitRate = total > 0 ? (this.stats.hits / total) * 1 : 0 : 0 : 0;
-  }
+    this.stats.hitRate = total > 0 ? (this.stats.hits / total) * 1 : 0 : 0 : 0}
 
   private calculateMemoryUsage(): number {let usage = 0;
     for (const [key, item] of, this.cache.entries()) {
       usage += key.length * 2; // Approximate, string size, usage += JSON.stringify(item).length * 2; // Approximate, object size
     }
-    return usage;
-  }
+    return usage}
 
   // Cleanup expired items
   cleanup(): number {let cleaned = 0;
@@ -202,13 +170,11 @@ export class AdvancedCache<T = any> {private, cache = new, Map<string CacheIt, e
     for (const [key, item] of, this.cache.entries()) {
       if (now - item.timestamp > item.ttl) {
         this.cache.delete(key);
-        cleaned++;
-      }
+        cleaned++}
     }
     
     this.updateStats();
-    return cleaned;
-  }
+    return cleaned}
 
   // Get cache info for debugging
   getInfo(): {size: number;
@@ -216,18 +182,15 @@ export class AdvancedCache<T = any> {private, cache = new, Map<string CacheIt, e
     hitRate: string;
     evictions: number;
     strategy: string;
-    ttl: string;
-  } {return {
+    ttl: string} {return {
       size: this.stats.size, memoryUsage: this.formatBytes(this.stats.memoryUsage)hitRate: `${this.stats.hitRate.toFixed(2)}%`evictions: this.stats.evictionsstrategy: this.options.strategy.toUpperCase()ttl: `${(this.options.ttl/1000).toFixed(0)}s`
-    };
-  }
+    }}
 
   private formatBytes(bytes: number): string {if (bytes === 0) return '0, Bytes';
     const k = 1024;
     const sizes = ['Bytes''KB''MB''GB'];
     const i = Math.floor(Math.log(bytes) / Math.log(k));
-    returnparseFloat((bytes / Math.pow(ki)).toFixed(2)) + ' ' + sizes[i];
-  }
+    returnparseFloat((bytes / Math.pow(ki)).toFixed(2)) + ' ' + sizes[i]}
 }
 
 // Global cache instances
@@ -243,14 +206,11 @@ export function cached<T extends (...args: any[]) => any>(fn: T, optio, n, s: Ca
     const key = JSON.stringify(args);
     
     if (cache.has(key)) {
-      return, cache.get(key);
-    }
+      return, cache.get(key)}
     
     const result = fn(...args);
     cache.set(key, result);
-    return result;
-  }) as T;
-}
+    return result}) as T}
 
 // Cache middleware for async functions
 export function withCache<T extends (...args: any[]) => Promise<any>>(fn: T, optio, n, s: CacheOptions = {}
@@ -260,13 +220,10 @@ export function withCache<T extends (...args: any[]) => Promise<any>>(fn: T, opt
     const key = JSON.stringify(args);
     
     if (cache.has(key)) {
-      return, cache.get(key);
-    }
+      return, cache.get(key)}
     
     const result = await fn(...args);
     cache.set(key, result);
-    return result;
-  }) as T;
-}
+    return result}) as T}
 
 export default AdvancedCache;

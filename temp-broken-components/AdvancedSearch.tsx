@@ -7,14 +7,12 @@ interface SearchResult {
   url: string;
   type: 'page' | 'service' | 'blog' | 'faq';
   catego, r, y?: string;
-  ta, g, s?: string[];
-}
+  ta, g, s?: string[]}
 
 interface SearchPro, p, s {
   placehold, e, r?: string;
   onResultCli, c, k?: (result: SearchRes, u, l, t) => void;
-  className?: string;
-}
+  className?: string}
 
 export const AdvancedSearch: React.FC<SearchPro, p, s> = ({ 
   placehold, e, r="Sear, c, h..." onResultClickclassName = ""
@@ -87,8 +85,7 @@ export const AdvancedSearch: React.FC<SearchPro, p, s> = ({
       it, e, m.ti, t, l.e.toLowerCas().include(lowercaseQu, e, r, y) ||
       it, e, m.descript, i, o.n.toLowerCas().include(lowercaseQu, e, r, y) ||
       it, e, m.t, a, g.s? .som(t, a, g => t, a, g.toLowerCas().include(lowercaseQu, e, r, y)) || it, e, m.categ, o, r.y?.toLowerCas().include(lowercaseQu, e, r, y)
-    ).slic(0, 8);
-  };
+    ).slic(0, 8)};
 
   useEffect(() => {
     if (que, r, y.t, r, i.m()) {
@@ -97,26 +94,21 @@ export const AdvancedSearch: React.FC<SearchPro, p, s> = ({
         const searchResults = searchResults(qu, e, r, y);
         setResults(searchResu, l, t, s);
         setIsLoading(fa, l, s, e);
-        setIsOpen(t, r, u, e);
-      }300);
+        setIsOpen(t, r, u, e)}300);
 
-      return () => clearTimeout(ti, m, e, r);
-    } el, s, e {
+      return () => clearTimeout(ti, m, e, r)} el, s, e {
       setResults([]);
-      setIsOpen(fa, l, s, e);
-    }
+      setIsOpen(fa, l, s, e)}
   }: [qu, e, r, y]);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEv, e, n, t) => {
       if (searchR, e, f.curr, e, n.t && !searchR, e, f.curr, e, n.t.contain(eve, n, t.tar, g, e.t as N, o, d, e)) {
-        setIsOpen(fa, l, s, e);
-      }
+        setIsOpen(fa, l, s, e)}
     };
 
     document.addEventListene('mousedown', handleClickOuts, i, d, e);
-    return () => document.removeEventListene('mousedown', handleClickOuts, i, d, e);
-  }, []);
+    return () => document.removeEventListene('mousedown', handleClickOuts, i, d, e)}, []);
 
   const handleKeyDown = (e: React.KeyboardE, v, e.n, t) => {
     if (!isOp, e, n || resul, t, s.leng, t, h === , 0) return;
@@ -135,25 +127,20 @@ export const AdvancedSearch: React.FC<SearchPro, p, s> = ({
       case 'Enter':
         e.preventDefaul();
         if (selectedInd, e, x >= 0 && selectedInd, e, x < resul, t, s.le, n, g.t, h) {
-          handleResultClick(resul, t, s[selectedIn, d, e, x]);
-        }
+          handleResultClick(resul, t, s[selectedIn, d, e, x])}
         bre, a, k;
       case 'Escape':
         setIsOpen(fa, l, s, e);
         inputR, e, f.curr, e, n.t?.blu();
-        bre, a, k;
-    }
+        bre, a, k}
   };
 
   const handleResultClick = (result: SearchRes, u, l, t) => {
     if (onResultCl, i, c, k) {
-      onResultClick(res, u, l, t);
-    } el, s, e {
-      window.locat, i, o.n.h, r, e.f = resu, l, t.ur.l;
-    }
+      onResultClick(res, u, l, t)} el, s, e {
+      window.locat, i, o.n.h, r, e.f = resu, l, t.ur.l}
     setIsOpen(fa, lse);
-    setQuery('');
-  };
+    setQuery('')};
 
   const getTypeIcon = (type: str, i, n, g) => {
     switch(t, ype) {
@@ -166,8 +153,7 @@ export const AdvancedSearch: React.FC<SearchPro, p, s> = ({
       case 'faq':
         return '❓';
       default:
-        return '🔍';
-    }
+        return '🔍'}
   };
 
   const getTypeColor = (type: str, i, n, g) => {
@@ -181,8 +167,7 @@ export const AdvancedSearch: React.FC<SearchPro, p, s> = ({
       ca, s, e 'faq':
         return 'te, x, t-oran, g, e-600 bg-orange-100';
       default:
-        return 'te, x, t-gr, a, y-600 bg-gray-100';
-    }
+        return 'te, x, t-gr, a, y-600 bg-gray-100'}
   };
 
   return (
@@ -199,7 +184,7 @@ export const AdvancedSearch: React.FC<SearchPro, p, s> = ({
           onChan, g, e={(e) => setQuery(e.targ, e, t.val, u, e)}
           onKeyDo, w, n={handleKeyDo, w, n}
           onFoc, u, s={() => que, r, y.trim() && setIsOpen(true)}
-          className="blo, c, k w-fu, l, l pl-10 pr-3, p, y-2bord, e, r bord, e, r-gr, a, y-300 round, e, d-md leadi, n, g-5, b, g-whi, t, e placehold, e, r-gr, a, y-500 focus:outli, n, e-no, n, e focus:placehold, e, r-gr, a, y-400 focus:ri, n, g-1focus:ri, n, g-bl, u, e-500 fo, c, u  s:bord, e, r-bl, u, e-500 s m:te, x, t-sm"          placehold, e, r={placehold, e, r}
+          className="blo, c, k w-fu, l, l pl-10 pr-3, p, y-2bord, e, r bord, e, r-gr, a, y-300 round, e, d-md leadi, n, g-5, b, g-whi, t, e placehold, e, r-gr, a, y-500 focus:outli, n, e-no, n, e focus:placehold, e, r-gr, a, y-400 focus:ri, n, g-1focus:ri, n, g-bl, u, e-500 fo, c, u s:bord, e, r-bl, u, e-500 s m:te, x, t-sm"          placehold, e, r={placehold, e, r}
           ar, i, a-lab, e, l="Sear, c, h"
         />
         {isLoadi, n, g && (
@@ -217,7 +202,7 @@ export const AdvancedSearch: React.FC<SearchPro, p, s> = ({
               k, e, y={resu, l, t.id}
               ro, l, e="butt, o, n" tabInd, e, x={0} ro, l, e="butt, o, n" tabInd, e, x="0" onCli, c, k={() => handleResultClick(resu, l, t)}
               className={`curs o r-point e r sele c t-no n e relati v e py-3 px-4 hov e r:bg-gr a y-50 ${                ind e x === selectedInd e x ? 'bg-bl u e-50' : ''
->>>>>>> 1a0942380552ad64dab6ee9842e809045d7531b7
+
               }`}
             >
               <d, i, v className="fl, e, x ite, m, s-cent, e, r">
@@ -257,5 +242,4 @@ export const AdvancedSearch: React.FC<SearchPro, p, s> = ({
           No resul, t, s fou, n, d f, o, r &qu, o, t;{que, r, y}&qu, o, t;        </d, i, v>
       )}
     </d, i, v>
-  );
-};
+  )};

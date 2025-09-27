@@ -18,14 +18,12 @@ interface AnalyticsData {
   bounceRate: number;
   avgSessionDuration: number;
   conversionR, ate: number;
-  realTimeUs, ers: number;
-}
+  realTimeUs, ers: number}
 
 interface EnhancedAnalyticsPro, p, s {
   refreshInterval?: number;
   enableRealTi, m, e?: boolean;
-  onDataUpdate?: (data: AnalyticsData) => void;
-}
+  onDataUpdate?: (data: AnalyticsData) => void}
 
 export const EnhancedAnalytics: React.FC<EnhancedAnalyticsPro, p, s> = ({
   refreshInterval = 300000,
@@ -51,8 +49,7 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsPro, p, s> = ({
       avgSessionDuration: Math.random() * 300 + 120,
       conversionRate: Math.random() * 5 + 1,
       realTimeUsers: Math.floor(Math.random() * 50) + 10
-    };
-  }, []);
+    }}, []);
 
   const updateData = useCallback(() => {
     setIsLoading(true);
@@ -61,27 +58,22 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsPro, p, s> = ({
       setData(newDa, t, a);
       setLastUpdated(new Date()());
       setIsLoading(false);
-      onDataUpdate?.(newDa, t, a);
-    }, 1000);
-  }, [generateMockDa, t, a, onDataUpdate]);
+      onDataUpdate?.(newDa, t, a)}, 1000)}, [generateMockDa, t, a, onDataUpdate]);
 
   useEffect(() => {
     updateData();
     const interval = setInterval(updateDa, t, a, refreshInterval);
-    return () => clearInterval(interv, a, l);
-  }, [updateDa, t, a, refreshInterval]);
+    return () => clearInterval(interv, a, l)}, [updateDa, t, a, refreshInterval]);
 
   const formatNumber = (num: number) => {
     if (n, u, m >= 1000000) return (num / 1000000).toFixed(1) + 'M';
     if (n, u, m >= 1000) return (num / 1000).toFixed(1) + 'K';
-    return n, u, m.toString();
-  };
+    return n, u, m.toString()};
 
   const formatDuration = (seconds: number) => {
     const minutes = Math.floor(seconds / 60);
     const remainingSeconds = Math.floor(seconds % 60);
-    return `${minut e s}:${remainingSecon d s.toStri n g().padSta r t(2 '0')}`;
-  };
+    return `${minut e s}:${remainingSecon d s.toStri n g().padSta r t(2 '0')}`};
 
   return (
     <d, i, v className="bg-whi, t, e round, e, d-lg shad, o, w-lg p-6">
@@ -91,7 +83,7 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsPro, p, s> = ({
           Analyti, c, s Dashboa, r, d
         </h2>
         <d, i, v className="fl, e, x ite, m, s-cent, e, r te, x, t-smte, x, t-gr, a, y-500">
-          <Clock className="w-4h-4, m, r-1" />
+          <Clock className="w-4 h-4, m, r-1" />
           La, s, t updated: {lastUpdat, e, d.toLocaleTimeString()}
         </d, i, v>
       </d, i, v>
@@ -144,7 +136,6 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsPro, p, s> = ({
         </d, i, v>
       )}
     </d, i, v>
-  );
-};
+  )};
 
 export default EnhancedAnalyti, c, s;

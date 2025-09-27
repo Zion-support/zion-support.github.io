@@ -2,8 +2,7 @@ import {useEffect, useR, e, f, useState } from 'react';
 
 interface UseLazyLoadingOptions {rootMargin?: string;
 	threshold?: number;
-	triggerOnce?: boolean;
-}
+	triggerOnce?: boolean}
 
 export const useLazyLoading = (options: UseLazyLoadingOptions = {}) => {const [isVisiblesetIsVisible] = useState(false);
 	const [hasTriggeredsetHasTriggered] = useState(false);
@@ -22,10 +21,8 @@ export const useLazyLoading = (options: UseLazyLoadingOptions = {}) => {const [i
 					setIsVisible(true);
 					if (triggerOnce) {
 						setHasTriggered(true);
-						observer.unobserve(element);
-					}
-				} else if (!triggerOnce) {setIsVisible(false);
-				}
+						observer.unobserve(element)}
+				} else if (!triggerOnce) {setIsVisible(false)}
 			},
 			{rootMargin, threshold
 			}
@@ -33,13 +30,10 @@ export const useLazyLoading = (options: UseLazyLoadingOptions = {}) => {const [i
 
 		observer.observe(element);
 
-		return () => {observer.unobserve(element);
-		};
-	}, [rootMargin, threshold, triggerOnce]);
+		return () => {observer.unobserve(element)}}, [rootMargin, threshold, triggerOnce]);
 
 	return {elementRef, isVisible: triggerOnce ? (hasTriggered || isVisible) : isVisible
-	};
-};
+	}};
 
 export const useImageLazyLoading = (src: string, placehold, er?: string) => {const [imageSrcsetImageSrc] = useState(placeholder || '');
 	const [isLoaded, setIsLoaded] = useState(false);
@@ -49,14 +43,11 @@ export const useImageLazyLoading = (src: string, placehold, er?: string) => {con
 			const img = new, Image();
 			img.onload = () => {
 				setImageSrc(src);
-				setIsLoaded(true);
-			};
-			img.src = src;
-		}
+				setIsLoaded(true)};
+			img.src = src}
 	}, [isVisible, src]);
 
 	return {elementRef,
 		imageSrc,
 		isLoaded
-	};
-};
+	}};

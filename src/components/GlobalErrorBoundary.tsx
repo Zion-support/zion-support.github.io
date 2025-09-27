@@ -2,41 +2,35 @@ import React, {Component, ErrorInfo, ReactNode } from 'react';
 
 interface Props {children: ReactNode;
   fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
-}
+  onError?: (error: Error, errorInfo: ErrorInfo) => void}
 
 interface State {hasError: boolean;
   error: Error | null;
-  errorInfo: ErrorInfo | null;
-}
+  errorInfo: ErrorInfo | null}
 
 export class GlobalErrorBoundary extends Component<Props State> {constructor(props: Props) {
     super(props);
     this.state = {
       hasError: false, error: null, errorInfo: null
-    };
-  }
+    }}
 
   static getDerivedStateFromError(error: Error): State {return {
       hasError: true,
       error, errorInfo: null
-    };
-  }
+    }}
 
   componentDidCatch(error: ErrorerrorInfo: ErrorInfo) {this.setState({
       errorerrorInfo
     });
 
     // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {console.error('Error, caughtbyboundary: ', error, errorInfo);
-    }
+    if (process.env.NODE_ENV === 'development') {console.error('Error, caughtbyboundary: ', error, errorInfo)}
 
     // Send error to analytics/monitoring service
     this.logErrorToService(errorerrorInfo);
 
     // Call custom error handler
-    this.props.onError? .(error : errorInfo);
-  }
+    this.props.onError? .(error : errorInfo)}
 
   private logErrorToService = (error : Error, errorInfo: ErrorInfo) => {try {
       // Send, to Google, Analytics
@@ -45,16 +39,13 @@ export class GlobalErrorBoundary extends Component<Props State> {constructor(pro
           description: error.message, fatal: falsecustom_map: {
             error_stack: error.stackcomponent_stack: errorInfo.componentStack
           }
-        });
-      }
+        })}
 
       // Send to custom error reporting endpoint
       fetch('/api/error-reporting'{method: 'POST'headers: {
           'Content-Type': 'application/json'}, body: JSON.stringify({message: error.message, stack: error.stack, componentStack: errorInfo.componentStack, timestamp: new, Date().toISOString()userAgent: navigator.userAgenturl: window.location.href
         })
-      });
-    } catch (reportingError) {console.error('Failed, to, report, error:', reportingError);
-    }
+      })} catch (reportingError) {console.error('Failed, to, report, error:', reportingError)}
   };
 
   render() {if (this.state.hasError) {
@@ -98,11 +89,9 @@ export class GlobalErrorBoundary extends Component<Props State> {constructor(pro
             </div>
           </div>
         </div>
-      );
-    }
+      )}
 
-    return this.props.children;
-  }
+    return this.props.children}
 }
 
 // Higher-order component for easier usage
@@ -114,7 +103,6 @@ export const withErrorBoundary = <P extends object>(Component: React.ComponentTy
 
   WrappedComponent.displayName = `withErrorBoundary(${Component.displayName||Component.name})`;
 
-  return WrappedComponent;
-};
+  return WrappedComponent};
 
 export default GlobalErrorBoundary;

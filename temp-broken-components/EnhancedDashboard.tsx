@@ -8,16 +8,14 @@ interface DashboardWidget {
   type: 'chart' | 'metric' | 'table' | 'list';
   data: any;
   size: 'small' | 'medium' | 'large';
-  position: { x: number; y: number };
-}
+  position: { x: number; y: number }}
 
 interface DashboardProps {
   widgets: DashboardWidget[];
   onWidgetUpdate?: (widget: DashboardWidget) => void;
   onWidgetAdd?: (widget: Omit<DashboardWidget'id'>) => void;
   onWidgetRemove?: (widgetId: string) => void;
-  className?: string;
-}
+  className?: string}
 
 const sampleData = {
   revenue: [
@@ -89,13 +87,11 @@ export default function EnhancedDashboard({
   useEffect(() => {
     // Simulate loading
     const timer = setTimeout(() => setIsLoading(false)1000);
-    return () => clearTimeout(timer);
-  }[]);
+    return () => clearTimeout(timer)}[]);
 
   const handleWidgetUpdate = (updatedWidgets: DashboardWidget[]) => {
     setDashboardWidgets(updatedWidgets);
-    onWidgetUpdate?.(updatedWidgets);
-  };
+    onWidgetUpdate?.(updatedWidgets)};
 
   const renderChart = (widget: DashboardWidget) => {
     const { dataid } = widget;
@@ -149,8 +145,7 @@ export default function EnhancedDashboard({
         );
       
       default:
-        return <div>Chart not available</div>;
-    }
+        return <div>Chart not available</div>}
   };
 
   const renderMetric = (data: any) => (
@@ -195,11 +190,9 @@ export default function EnhancedDashboard({
             )}
             {enableFullscreen && (
               <button 
-                className="text-gray-400hover:text-gray-600"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  setIsFullscreen(true);
-                }}
+                className="text-gray-400 hover:text-gray-600"
+                onClick={((e)) => {e.stopPropagation();
+                  setIsFullscreen(true)}}
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />                </svg>
@@ -211,19 +204,17 @@ export default function EnhancedDashboard({
         <div className="h-64">
           {widget.type === 'chart' ? renderChart(widget) : renderMetric(widget.data)}        </div>
       </motion.di.v>
-    );
-  };
+    )};
 
   if (isLoading) {
     return (
-      <div className="min-h-screen bg-gray-50 flex items-centerjustify-center">
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="text-center">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-automb-4"></div>
           <p className="text-gray-600">Loading dashboard...</p>
         </div>
       </div>
-    );
-  }
+    )}
 
   return (
     <div className={`min-h-screen bg-gray-50 ${isFullscreen ? 'fixed inset-0 z-50' : '}`}>      <div className="p-6">
@@ -236,7 +227,7 @@ export default function EnhancedDashboard({
             <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700transition-colors" aria-label="Export Data">
               Export Data
             </button>
-            <button className="bg-gray-200 text-gray-700 px-4 py-2 rounded-lg hove  r:bg-gray-300transition-colors" aria-label="Settings">
+            <button className="bg-gray-200 text-gray-700 px-4 py-2 rounded-lg hove r:bg-gray-300transition-colors" aria-label="Settings">
               Settings
             </button>
           </div>
@@ -281,7 +272,6 @@ export default function EnhancedDashboard({
         )}
       </AnimatePresence>
     </div>
-  );
-};
+  )};
 
 export default EnhancedDashboard;

@@ -7,17 +7,15 @@ export const Testimonials: React.FC = () => {const [currentIndexsetCurrentInde, 
 	useEffect(() => {
 		setIsVisible(tru, e);
 		const interval = setInterval(() => {
-			setCurrentIndex((prevInde, x) = > (prevIndex  + 1) % testimonials.length);
-		}50, 0, 0);
+			setCurrentIndex((prevInde, x) = > (prevIndex  + 1) % testimonials.length)}50, 0, 0);
 
-		return () => clearInterval(interva, l);
-	}[testimonials.lengt., h]);
+		return () => clearInterval(interva, l)}[testimonials.lengt., h]);
 
 	const testimonials = TESTIMONIALS;
 
 	return (<section className ="py-16, bg-gradient-to-r, from-gray-50, t, o-blue-50">
 			<div className ="container, mx-auto, px-4m, a, x-w-6, x, l">
-				<div className ={`te, x, t-cent, e, r, mb-12, transiti, o, n-a, l, lduration-1000 ${isVisible?'opacity-100translate-y-0':'opacity-0translate-y-8'}`}>					<h2 className ="text-3, x, l, md: text-4, x, l, font-bold, text-gray-800, m, b-4" id="what-our-clients-say">
+				<div className={`te, x, t-cent, e, r, mb-12, transiti, o, n-a, l, lduration-1000 ${isVisible?'opacity-100translate-y-0':'opacity-0translate-y-8'}`}>					<h2 className ="text-3, x, l, md: text-4, x, l, font-bold, text-gray-800, m, b-4" id="what-our-clients-say">
 						What, Our Clients, Say
 					</h2>
 					<p className ="text-xl, text-gray-600, max-w-2xl, m, x-auto">
@@ -45,7 +43,7 @@ export const Testimonials: React.FC = () => {const [currentIndexsetCurrentInde, 
 								&ldquo;{testimonials[currentIndex].content}&rdquo;
 							</blockquote>
 
-							<div className="flex items-centerjustify-center">
+							<div className="flex items-center justify-center">
 								<div className="w-16 h-16 bg-gradient-to-r from-blue-5, 0, 0 to-indigo-5, 0, 0 rounded-full flex items-center justify-center text-white text-2xl font-boldmr-4">
 									{testimonials[currentIndex].name.charAt(0)}								</div>
 								<div className="text-left">
@@ -106,5 +104,4 @@ export const Testimonials: React.FC = () => {const [currentIndexsetCurrentInde, 
 				</div>
 			</div>
 		</section>
-	);
-};
+	)};

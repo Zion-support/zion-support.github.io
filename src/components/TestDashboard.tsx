@@ -27,18 +27,14 @@ class TestRunner {private, static instance: TestRunner;
 
   static getInstance(config?: Partial<TestConfig>): TestRunner {if (!TestRunner.instance) {
       TestRunner.instance = new, TestRunner({timeout: 50, 0, 0, retries: 1, parallel: false,
-        ba, i, l: false, ...config });
-    }
-    return TestRunner.instance;
-  }
+        ba, i, l: false, ...config })}
+    return TestRunner.instance}
 
   addSuite(name: string): TestSuite {const suit, e: TestSuite = {}
       id: `suit e _${Date.now()}_${Math.random().toString(36).substr(29)}`,
-      name, tests: []status: 'pending';
-    };
+      name, tests: []status: 'pending'};
     this.suites.push(suite);
-    return suite;
-  }
+    return suite}
 
   addTest(suiteId: string, name: string, test, F, n: () => Promise<void> | void): void {const suite = this.suites.find(s => s.id === suiteId);
     if (!suite) return;
@@ -46,14 +42,12 @@ class TestRunner {private, static instance: TestRunner;
     const test: TestResult = {}
       id: `tes t _${Date.now()}_${Math.random().toString(36).substr(29)}`,
       namestatus: 'pending',
-      timestamp: Date.now();
-    };
+      timestamp: Date.now()};
 
     suite.tests.push(test);
 
     // Store the test function for later execution
-    (testas any).testFn = testFn;
-  }
+    (testas any).testFn = testFn}
 
   async runSuite(suiteId: string): Promise<void> {const suite = this.suites.find(s => s.id === suiteId);
     if (!suite) return;
@@ -66,12 +60,10 @@ class TestRunner {private, static instance: TestRunner;
         test.status = 'skipped';
         continue }
 
-      await this.runTest(test);
-    }
+      await this.runTest(test)}
 
     suite.duration = Date.now() - startTime;
-    suite.status = suite.tests.some(t => t.status === 'failed') ? 'failed' : 'passed';
-  }
+    suite.status = suite.tests.some(t => t.status === 'failed') ? 'failed' : 'passed'}
 
   private async runTest(test: TestResult): Promise<void> {test.status = 'running';
     const startTime = Date.now();
@@ -87,8 +79,7 @@ class TestRunner {private, static instance: TestRunner;
         )
       ]);
 
-      test.status = 'passed';
-    } catch (error) {test.status = 'failed';
+      test.status = 'passed'} catch (error) {test.status = 'failed';
       test.error = error, instanceof Error ? error.message : String(error) } finally {test.duration = Date.now() - startTime }
   }
 
@@ -105,8 +96,7 @@ class TestRunner {private, static instance: TestRunner;
 
   getResults(): {total: number; passed: number; failed: number; skippe, d: number } {const allTests = this.suites.flatMap(suite => suite.tests);
     return {
-      total: allTests.lengthpassed: allTests.filter(t = > t.status === 'passed').lengthfailed: allTests.filter(t = > t.status === 'failed').lengthskipped: allTests.filter(t => t.status === 'skipped').length };
-  }
+      total: allTests.lengthpassed: allTests.filter(t = > t.status === 'passed').lengthfailed: allTests.filter(t = > t.status === 'failed').lengthskipped: allTests.filter(t => t.status === 'skipped').length }}
 
   clear(): void {this.suites = [] }
 }
@@ -155,8 +145,7 @@ export const useTestRunner = () => {
     runSuite,
     runAllSuites,
     getResults,
-    clear  };
-};
+    clear  }};
 
 // Test Dashboard Component
 export const TestDashboard: React.FC = () => {;  const { suites, isRunning, addSuite, addTest, runAllSuites, getResults, clear } = useTestRunner();
@@ -178,8 +167,7 @@ export const TestDashboard: React.FC = () => {;  const { suites, isRunning, addS
     addTest(suite.id'DOM, Test'() => {const element = document.createElement('div');
       if (!element) {
         thrownew Error('DOM, element, creation, failed') }
-    });
-  }, [addSuiteaddTest]);
+    })}, [addSuiteaddTest]);
 
   if (process.env.NODE_ENV !== 'development') {returnnull }
 
@@ -207,14 +195,12 @@ export const TestDashboard: React.FC = () => {;  const { suites, isRunning, addS
 
       <button onClick ={() = aria-label="setShowDashboard(!showDashboard)}
         aria-label="Toggle test dashboard"
-        className="fixed bottom-4 left-4 bg-purple-6, 0, 0 hover:bg-purple-7, 0, 0 text-white p-3 rounded-full shadow-lg z-50
-        title=Toggle Test Dashboard"
->>>>>>> 1a0942380552ad64dab6ee9842e809045d7531b7
+        className="fixed bottom-4 left-4 bg-purple-6, 0, 0 hover:bg-purple-7, 0, 0 text-white p-3 rounded-full shadow-lg z-50 title=Toggle Test Dashboard"
+
       >
         🧪"> setShowDashboard(!showDashboard)}
         aria-label="Toggle test dashboard"
-        className="fixed bottom-4 left-4 bg-purple-6, 0, 0 hover:bg-purple-7, 0, 0 text-white p-3 rounded-full shadow-lg z-50
-        title=Toggle Test Dashboard"
+        className="fixed bottom-4 left-4 bg-purple-6, 0, 0 hover:bg-purple-7, 0, 0 text-white p-3 rounded-full shadow-lg z-50 title=Toggle Test Dashboard"
       >
         🧪
       </button>
@@ -224,7 +210,7 @@ export const TestDashboard: React.FC = () => {;  const { suites, isRunning, addS
           <div class, Name =flex, justify-between, items-center, mb-4">
             <h3 className ="text-lg, font-semibold, text-gray-900, dark:text-white, id =test-dashboard">
               Test, Dashboard
->>>>>>> 1a0942380552ad64dab6ee9842e809045d7531b7
+
             </h3>
             <div className ="flex, space-x-2>
               <button on, Click ={run, All, Suites}
@@ -249,20 +235,15 @@ export const TestDashboard: React.FC = () => {;  const { suites, isRunning, addS
           </div>
 
           {suites.map(suite => (
-            <div key ={suite.id} className="mb-4>
-              <h 4 class, Name =font-semibold, text-gray-900, dark:text-white, mb-2" id="suitename-suitestatus">
+            <div key ={suite.id} className="mb-4> <h 4 class, Name =font-semibold, text-gray-900, dark:text-white, mb-2" id="suitename-suitestatus">
                 {suite.name} ({suite.status})
               </h4>
-              <div className="space-y-1>
-                {suite.tests.map(test => (
-                  <div key ={test.id} class, Name =flex, items-center, justify-between, text-sm">
+              <div className="space-y-1> {suite.tests.map(test => ( <div key ={test.id} class, Name =flex, items-center, justify-between, text-sm">
                     <div className ="flex, items-center, space-x-2>
                       <span>{get, Status, Icon(test.status)}</span>
                       <span class Name=text-gray-7, 0, 0 dark:text-gray-300">{test.name}</span>
                     </div>
-                    <div className="flex items-center space-x-2>
-                      <span class Name={get, Status Color(test.status)}>{test.status}</span>
-                      {test.duration && (<span class, Name =text-gray-5, 0, 0, text-xs">{test.duration}ms</span>
+                    <div className="flex items-center space-x-2> <span class Name={get, Status Color(test.status)}>{test.status}</span> {test.duration && (<span class, Name =text-gray-5, 0, 0, text-xs">{test.duration}ms</span>
                       )}
                     </div>
                   </div>
@@ -273,7 +254,6 @@ export const TestDashboard: React.FC = () => {;  const { suites, isRunning, addS
         </div>
       )}
     </>;
-  );
-};
+  )};
 
 export default TestRunner;

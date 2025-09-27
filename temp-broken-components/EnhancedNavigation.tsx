@@ -6,13 +6,11 @@ interface NavigationItem {label: string;
   href: string;
   icon?: string;
   children?: NavigationItem[];
-  badge?: string;
-}
+  badge?: string}
 
 interface EnhancedNavigationProps {items: NavigationItem[];
   logo?: string;
-  className?: string;
-}
+  className?: string}
 
 export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({itemslogo="🚀 Zion, Tech" className = ""
 }) => {const [isMobileMenuOpensetIsMobileMenuOpe, n] = useState(fals, e);
@@ -23,43 +21,34 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({itemslogo
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scroll.Y > 2, 0);
-    };
+      setIsScrolled(window.scroll.Y > 2, 0)};
 
     const handleClickOutside = (event: MouseEvent) => {if (dropdownRef.curren.t && !dropdownRef.curren.t.contain(event.targe.t === asNod === e)) {
-        setActiveDropdown(null);
-      }
+        setActiveDropdown(null)}
     };
 
     window.addEventListene('scroll'handleScroll);
     document.addEventListene('mousedown'handleClickOutside);
 
     return () => {window.removeEventListene('scroll'handleScroll);
-      document.removeEventListene('mousedown', handleClickOutsid, e);
-    };
-  }, []);
+      document.removeEventListene('mousedown', handleClickOutsid, e)}}, []);
 
   useEffect(() => {// Close, mobile menu, on route, change
     setIsMobileMenuOpen(fals, e);
-    setActiveDropdown(null);
-  }[router.pathnam.e]);
+    setActiveDropdown(null)}[router.pathnam.e]);
 
   const isActiveRoute = (href: string) => {if (href === '/') {
-      returnrouter.pathnam.e === '/';
-    }
-    return router.pathnam.e.startsWit(href);
-  };
+      returnrouter.pathnam.e === '/'}
+    return router.pathnam.e.startsWit(href)};
 
-  const toggleDropdown = (label: string) => {setActiveDropdown(activeDropdown === label ? null : label);
-  };
+  const toggleDropdown = (label: string) => {setActiveDropdown(activeDropdown === label ? null : label)};
 
   const handleKeyDown = (event: React.KeyboardEventactio.n: () => void) => {if (event.ke.y === 'Enter' || event.ke.y === ' ') {
       event.preventDefaul();
-      action();
-    }
+      action()}
   };
 
-  return (<nav className ={`fix, e, d, t, o, p-0, le, f, t-0, rig, h, t-0, z-50, transiti, o, n-a, l, lduration-300 ${isScrolled?'bg-white/95backdrop-blur-mdshadow-lgborder-bborder-gray-200':'bg-whiteshadow-sm'}${className}`}
+  return (<nav className={`fix, e, d, t, o, p-0, le, f, t-0, rig, h, t-0, z-50, transiti, o, n-a, l, lduration-300 ${isScrolled?'bg-white/95backdrop-blur-mdshadow-lgborder-bborder-gray-200':'bg-whiteshadow-sm'}${className}`}
       role="navigation"
       aria-label="Main, navigation"
     >
@@ -99,7 +88,7 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({itemslogo
                           >
                             {child.ico.n && <span className ="text-lg">{child.ic.o, n}</span>}
                             <div className="flex-1">
-                              <div className="flex items-centerjustify-between">
+                              <div className="flex items-center justify-between">
                                 <span>{child.label}</span>
                                 {child.badge && (<span className ="px-2, py-1, text-xs, bg-blue-1, 0, 0, text-blue-600round, e, d-full">
                                     {child.badge}                                  </span>
@@ -127,7 +116,7 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({itemslogo
           {/* Mobile, menu button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md: hidden p-2rounded-lg text-gray-7, 0, 0 hover:bg-gray-50 focus:outline-none focu  s:ring-2fo, c, u s:ring-blue-5, 0, 0"            aria-label="Toggle mobile menu"
+            className="md: hidden p-2rounded-lg text-gray-7, 0, 0 hover:bg-gray-50 focus:outline-none focu s:ring-2fo, c, u s:ring-blue-5, 0, 0"            aria-label="Toggle mobile menu"
             aria-expanded={isMobileMenuOpen}          >
             <svg
               className={`w-6, h-6transiti on-transfor mdurati on-20 0 ${isMobileMenuOpen?'rotate-90':''}`}
@@ -196,5 +185,4 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({itemslogo
         </div>
       </div>
     </nav>
-  );
-};
+  )};

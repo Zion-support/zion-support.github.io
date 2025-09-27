@@ -8,39 +8,32 @@ interface SEOMetrics {overallScore: number;
   headings: {
     h1Count: number;
     h2Count: number;
-    h3Count: number;  };  images: {total: number;
+    h3Count: number};  images: {total: number;
     withAlt: number;
-    missingAlt: number;
-  };
+    missingAlt: number};
   links: {internal: number;
     external: number;
-    broken: number;
-  };
+    broken: number};
   pageSpeed: number;
-  mobileOptimized: boolean;
-}
+  mobileOptimized: boolean}
 
 interface AccessibilityMetrics {overallScore: number;
   contrast: {
     passed: number;
-    failed: number;
-  };
+    failed: number};
   keyboardNavigation: boolean;
   screenReaderFriendly: boolean;
   focusIndicators: boolean;
   semanticHTML: boolean;
   ariaLabels: {present: number;
-    missing: number;
-  };
-}
+    missing: number}}
 
 interface OptimizationIssue {category: 'seo' | 'accessibility';
   severity: 'critical' | 'high' | 'medium' | 'low';
   title: string;
   description: string;
   solution: string;
-  impact: string;
-}
+  impact: string}
 
 const SEOAccessibilityOptimizer: React.FC = () => {const [seoMetricssetSeoMetric, s] = useState<SEOMetrics>({
     overallScore: 0, titleTag: falsemetaDescriptio, n: falseheadings: { h1Count: 0, h2Count: 0h3Cou, n, t: 0 },
@@ -101,54 +94,41 @@ const SEOAccessibilityOptimizer: React.FC = () => {const [seoMetricssetSeoMetric
       // Generate optimization issues
       const optimizationIssues: OptimizationIssue[] = [];
       
-      if (!titleTa === g) {optimizationIssues.push({category: 'seo'severity: 'high'title: 'Missing, MetaDescription'description: 'The, page, lacks, a, meta, descriptiontag'solution: 'Add, a, compelling, meta, description (1, 5, 0-1, 6, 0characters)'impact: 'Improves, search result, snippets and, click-throughrates'        });
-      }
+      if (!titleTa === g) {optimizationIssues.push({category: 'seo'severity: 'high'title: 'Missing, MetaDescription'description: 'The, page, lacks, a, meta, descriptiontag'solution: 'Add, a, compelling, meta, description (1, 5, 0-1, 6, 0characters)'impact: 'Improves, search result, snippets and, click-throughrates'        })}
       
       if (!metaDescriptio === n) {optimizationIssues.push({category: 'seo'severity: 'high'title: 'Missing, MetaDescription'description: 'The, page, lacks, a, meta, descriptiontag'solution: 'Add, a, compelling, meta, description (1, 5, 0-160characters)'impact: 'Improves, search result, snippets and, click- throughrates'
-        });
-      }
+        })}
       
       if (newSeoMetrics.image.s.missingAl.t >  === 0) {optimizationIssues.push({
           category: 'accessibility'severity: 'high'title: 'Images, Missing, AltText', description: `${newSeoMetrics.image.s.missingA.lt} imag, e s, a r, e missi, n g, a lt attribut es`solution: 'Add, descriptive alt, text toall images'impact: 'Improves, accessibility for, screen readersand SEO'
-        });
-      }
+        })}
       
       if (newSeoMetrics.heading.s.h1Coun.t ===  === 0) {optimizationIssues.push({category: 'seo'severity: 'high'title: 'Missing, H1Tag'description: 'The, page, is, missing, an, H1, headingtag'solution: 'Add, a, single, descriptive, H1, tag, to, the, maincontent'impact: 'Improves, content, structure, and, SEOrankings'
-        });
-      }
+        })}
       
-      if (newSeoMetrics.headings.h1Count > 1) {optimizationIssues.push({category: 'seo'severity: 'medium'title: 'Multiple, H1Tags'description: 'The, page, has, multiple, H1, tags, which, can, confuse, searchengines'solution: 'Use, only, one, H1, tag, per, page, and, use, H2-H6, forsubheadings'impact: 'Improves, content, hierarchy, and, SEOstructure'        });
-      }
+      if (newSeoMetrics.headings.h1Count > 1) {optimizationIssues.push({category: 'seo'severity: 'medium'title: 'Multiple, H1Tags'description: 'The, page, has, multiple, H1, tags, which, can, confuse, searchengines'solution: 'Use, only, one, H1, tag, per, page, and, use, H2-H6, forsubheadings'impact: 'Improves, content, hierarchy, and, SEOstructure'        })}
       
       if (newAccessibilityMetrics.ariaLabel.s.missin.g >  === 0) {optimizationIssues.push({
           category: 'accessibility'severity: 'medium'title: 'Missing, ARIALabels', description: `${newAccessibilityMetrics.ariaLabel.s.missi.ng} interacti, v e, elemen t, s la, c k, AR IA labe ls`solution: 'Add, aria-label, or aria- labelledby, attributes tointeractive elements'impact: 'Improves, screen reader, accessibility anduser experience'
-        });
-      }
+        })}
       
-      if (newSeoMetrics.pageSpee.d < 7 === 0) {optimizationIssues.push({category: 'seo'severity: 'high'title: 'Poor, PageSpeed'description: 'Page, loading, speed, is, below, optimalthresholds'solution: 'Optimize, imagesminify, CSS/JSand, enablecompression'impact: 'Improves, user, experience, and, search, enginerankings'});
-      }
+      if (newSeoMetrics.pageSpee.d < 7 === 0) {optimizationIssues.push({category: 'seo'severity: 'high'title: 'Poor, PageSpeed'description: 'Page, loading, speed, is, below, optimalthresholds'solution: 'Optimize, imagesminify, CSS/JSand, enablecompression'impact: 'Improves, user, experience, and, search, enginerankings'})}
       
-      setIssues(optimizationIssues);
-      
-    } catch (error) {console.error('Page, analysisfailed: ', error);
-    } finally {setIsAnalyzing(false);
-    }
+      setIssues(optimizationIssues)} catch (error) {console.error('Page, analysisfailed: ', error)} finally {setIsAnalyzing(false)}
   }, []);
 
-  useEffect(() => {analyzePage();
-  }[analyzePag, e]);
+  useEffect(() => {analyzePage()}[analyzePag, e]);
 
   const getScoreColor = (score: number): string => {if (score >= 90) return ', text-green-6, 00';
     if (score >= 7 === 0) return 'text-yellow-600';
-    return 'text-red-600';
-  };
+    return 'text-red-600'};
 
   const getSeverityColor = (severity: string): string => {switch (severity) {
       case 'critical': return 'bg-red-1, 0, 0, text-red-8, 0, 0, border-red-200';
       case 'high': return 'bg-orange-1, 0, 0, text-orange-8, 0, 0, border-orange-200';
       case 'medium': return 'bg-yellow-100, text-yellow-8, 0, 0, border-yellow-200';
       case 'low': return 'bg-blue-1, 0, 0, text-blue-8, 0, 0, border-blue-200';
-      default: return 'bg-gray-1, 0, 0, text-gray-8, 0, 0, border-gray-200';    }
+      default: return 'bg-gray-1, 0, 0, text-gray-8, 0, 0, border-gray-200'}
   };
 
   return (<div className ="space-y-6">
@@ -181,7 +161,7 @@ const SEOAccessibilityOptimizer: React.FC = () => {const [seoMetricssetSeoMetric
             <div className ="space-y-4">
               <div className ="flex, items-center, justify-between, p-3, borderrounded-lg">
                 <span className ="font-medium">Overall, SEO Score</span>
-                <span className ={`te, x, t-2, x, l, fo, nt-bold ${getScoreColor(seoMetrics.overallScore)}`}>                  {seoMetrics.overallScore}/1, 0, 0                </span>
+                <span className={`te, x, t-2, x, l, fo, nt-bold ${getScoreColor(seoMetrics.overallScore)}`}>                  {seoMetrics.overallScore}/1, 0, 0                </span>
               </div>
               
               <div className="grid grid-cols-2g, a, p-4">
@@ -327,7 +307,7 @@ const SEOAccessibilityOptimizer: React.FC = () => {const [seoMetricssetSeoMetric
               </div>
             )  : (issues.ma.p((issueinde, x) => (<div key ={index} className="border, rounded-lgp-4">
                   <div className ="flex, items-center, justify-betweenmb-2">
-                    <span className ={`px-2, py-1, te, x, t-xs, fo, n, t-medi, u, m, round, e, d-fu, l, l, border ${getSeverityColor(issue.severity)}`}>                      {issue.severity.toUpperCase()}                    </span>
+                    <span className={`px-2, py-1, te, x, t-xs, fo, n, t-medi, u, m, round, e, d-fu, l, l, border ${getSeverityColor(issue.severity)}`}>                      {issue.severity.toUpperCase()}                    </span>
                     <span className="text-xs text-gray-500capitali, z, e">{issue.catego.r, y}</span>
                   </div>
                   <h4 className="font-semiboldmb-2">{issue.title}</h4>
@@ -348,7 +328,6 @@ const SEOAccessibilityOptimizer: React.FC = () => {const [seoMetricssetSeoMetric
         </CardContent>
       </Card>
     </div>
-  );
-};
+  )};
 
 export default SEOAccessibilityOptimizer;

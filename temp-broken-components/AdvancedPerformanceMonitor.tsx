@@ -8,12 +8,10 @@ interface PerformanceMetrics {
   cumulativeLayoutShift: number;
   memoryUsage?: number;
   networkLatency: number;
-  renderTime: number;
-}
+  renderTime: number}
 
 interface AdvancedPerformanceMonitorProps {
-  onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
-}
+  onMetricsUpdate?: (metrics: PerformanceMetrics) => void}
 
 export const AdvancedPerformanceMonitor: React.FC<AdvancedPerformanceMonitorProps> = ({
   onMetricsUpdate
@@ -34,15 +32,12 @@ export const AdvancedPerformanceMonitor: React.FC<AdvancedPerformanceMonitorProp
       };
 
       setMetrics(newMetrics);
-      onMetricsUpdate?.(newMetrics);
-    } catch (error) {
-      console.error('Error collecting performance metrics:', error);
-    }
+      onMetricsUpdate?.(newMetrics)} catch (error) {
+      console.error('Error collecting performance metrics:', error)}
   }, [onMetricsUpdate]);
 
   React.useEffect(() => {
-    collectMetrics();
-  }, [collectMetrics]);
+    collectMetrics()}, [collectMetrics]);
 
   return (
     <div className="advanced-performance-monitor">
@@ -54,7 +49,6 @@ export const AdvancedPerformanceMonitor: React.FC<AdvancedPerformanceMonitorProp
         </div>
       )}
     </div>
-  );
-};
+  )};
 
 export default AdvancedPerformanceMonitor;

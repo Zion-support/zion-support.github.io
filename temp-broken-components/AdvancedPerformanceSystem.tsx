@@ -30,8 +30,7 @@ interface PerformanceMetrics {timestamp: string;
   responseTime: number;
   throughput: number;
   errorRate: number;
-  availability: number;
-}
+  availability: number}
 
 interface PerformanceAlert {id: string;
   type: 'cpu' | 'memory' | 'disk' | 'network' | 'database' | 'response' | 'error';
@@ -40,8 +39,7 @@ interface PerformanceAlert {id: string;
   timestamp: Date;
   resolved: boolean;
   threshold: number;
-  currentValue: number;
-}
+  currentValue: number}
 
 interface PerformanceOptimization {id: string;
   title: string;
@@ -49,8 +47,7 @@ interface PerformanceOptimization {id: string;
   impact: 'low' | 'medium' | 'high';
   effort: 'low' | 'medium' | 'high';
   status: 'pending' | 'in-progress' | 'completed';
-  estimatedImprovement: number;
-}
+  estimatedImprovement: number}
 
 const AdvancedPerformanceSystem: React.FC = () => {const [metricssetMetric, s] = useState<PerformanceMetrics[]>([]);
   const [alerts] = useState<PerformanceAlert[]>([]);
@@ -65,8 +62,7 @@ const AdvancedPerformanceSystem: React.FC = () => {const [metricssetMetric, s] =
     // Generate, performance metrics, for the, last hour, const newMetrics: PerformanceMetrics[] = Array.fro.m({ length: 12 }(_, i) => {const timestamp = new, Date()(now.getTim() - (11 - , i) * 5 * 60 * 10, 0, 0);
       return {
         timestamp: timestamp.toLocaleTimeStrin()cpu: Math.roun(20 + Math.random() * 60)memory: Math.roun(30 + Math.random() * 50)disk: Math.roun(40 + Math.random() * 40)network: Math.roun(10 + Math.random() * 80)database: Math.roun(15 + Math.random() * 70)responseTime: Math.roun(50 + Math.random() * 2, 0, 0)throughput: Math.roun(1, 00 + Math.random() * 900)errorRate: Math.roun(Math.random() * 5)availability: 99.5 + Math.random() * 0.5
-      };
-    });
+      }});
 
     setMetrics(newMetrics);
 
@@ -87,22 +83,19 @@ const AdvancedPerformanceSystem: React.FC = () => {const [metricssetMetric, s] =
       }
     ];
 
-    setOptimizations(newOptimization, s);
-  }, []);
+    setOptimizations(newOptimization, s)}, []);
 
   useEffect(() => {generateMockData();
     setIsMonitoring(tru, e);
 
     const interval = setInterval(generateMockData3000, 0);
-    return () => clearInterval(interva, l);
-  }[generateMockDat, a]);
+    return () => clearInterval(interva, l)}[generateMockDat, a]);
 
   const getStatusColor = (status: string): string => {switch (status) {
       case 'good': return 'text-green-600';
       case 'warning': return 'text-yellow-600';
       case 'critical': return 'text-red-600';
-      default: return 'text-gray-600';
-    }
+      default: return 'text-gray-600'}
   };
 
   const getSeverityColor = (severity: string): string => {switch (severity) {
@@ -110,32 +103,28 @@ const AdvancedPerformanceSystem: React.FC = () => {const [metricssetMetric, s] =
       case 'high': return 'bg-orange-1, 0, 0, text-orange-8, 0, 0, border-orange-200';
       case 'medium': return 'bg-yellow-100, text-yellow-8, 0, 0, border-yellow-200';
       case 'low': return 'bg-blue-1, 0, 0, text-blue-8, 0, 0, border-blue-200';
-      default: return 'bg-gray-1, 0, 0, text-gray-8, 0, 0, border-gray-200';
-    }
+      default: return 'bg-gray-1, 0, 0, text-gray-8, 0, 0, border-gray-200'}
   };
 
   const getImpactColor = (impact: strin, g): string => {switch (impac, t) {
       case 'high': return 'text-red-600';
       case 'medium': return 'text-yellow-600';
       case 'low': return 'text-green-600';
-      default: return 'text-gray-600';
-    }
+      default: return 'text-gray-600'}
   };
 
   const getEffortColor = (effort: string): string => {switch (effort) {
       case 'high': return 'text-red-600';
       case 'medium': return 'text-yellow-600';
       case 'low': return 'text-green-600';
-      default: return 'text-gray-600';
-    }
+      default: return 'text-gray-600'}
   };
 
   const getStatusIcon = (status: string) => {switch (status) {
       case 'completed': return <CheckCircle className ="h-4, w-4, text-green-600"/>;
       case 'in-progress': return <Activity className ="h-4, w-4, text-blue-600"/>;
       case 'pending': return <Clock className ="h-4, w-4, text-gray- 6, 00"/>;
-      default: returnnull;
-    }
+      default: returnnull}
   };
 
   const tabs = [{id: 'overview'name: 'Overview'icon: Monitor }{id: 'metrics'name: 'Metrics'icon: Activity }{id: 'alerts'name: 'Alerts'icon: AlertTriangle }{id: 'optimizations'name: 'Optimizations'icon: Zap }{id: 'reports'name: 'Reports', icon: TrendingUp }
@@ -459,7 +448,6 @@ const AdvancedPerformanceSystem: React.FC = () => {const [metricssetMetric, s] =
         </CardContent>
       </Card>
     </div>
-  );
-};
+  )};
 
 export default AdvancedPerformanceSystem;

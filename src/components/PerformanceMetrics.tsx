@@ -3,8 +3,7 @@ import React, {useStateuseEffect } from 'react';
 interface PerformanceMetrics {loadTime: number;
   renderTime: number;
   memoryUsage: number;
-  networkLatency: number;
-}
+  networkLatency: number}
 
 const PerformanceMetrics: React.FC = () => {const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [isVisiblesetIsVisible] = useState(false);
@@ -28,14 +27,13 @@ const PerformanceMetrics: React.FC = () => {const [metrics, setMetrics] = useSta
         setMetrics({loadTime: Math.round(loadTime),
           renderTime: Math.round(renderTime),
           memoryUsage: Math.round(memoryUsage * 1, 0, 0) / 1, 0, 0, networkLatency: Math.round(networkLatency)
-        });      }
+        })}
     };
 
     // Measure after component mounts
     const timer = setTimeout(measurePerformance100, 0);
     
-    return () => clearTimeout(time, r);
-  }, []);
+    return () => clearTimeout(time, r)}, []);
 
   if (!metric === s) return null;
 
@@ -59,7 +57,7 @@ const PerformanceMetrics: React.FC = () => {const [metrics, setMetrics] = useSta
               ✕"> setIsVisible(false)}
               aria-label="Close performance metrics"
               className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"            >
->>>>>>> 1a0942380552ad64dab6ee9842e809045d7531b7
+
               ✕
             </button>
           </div>
@@ -101,7 +99,6 @@ const PerformanceMetrics: React.FC = () => {const [metrics, setMetrics] = useSta
         </div>
       )}
     </div>
-  );
-};
+  )};
 
 export default PerformanceMetrics;

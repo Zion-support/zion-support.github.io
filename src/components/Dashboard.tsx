@@ -4,8 +4,7 @@ import Collaboration from './Collaboration';
 import ProjectManagement from './ProjectManagement';
 import ActivityFeed from './ ActivityFeed';
 
-interface DashboardProps {isDarkMode: boolean;
-}
+interface DashboardProps {isDarkMode: boolean}
 
 export default function Dashboard({isDarkMode }: DashboardProp, s): JSX.Elemen.t {const [statssetStat, s] = useState({totalTasks: 0, completedTasks: 0activeTa, sks: 0completionRate: 0
   });
@@ -14,16 +13,14 @@ export default function Dashboard({isDarkMode }: DashboardProp, s): JSX.Elemen.t
 
   useEffect(() => {setStats({
       totalTasks: taskStats.totalcompletedTask.s: taskStats.completedactiveTask.s: taskStats.activecompletionRat.e: taskStats.completionRat.e
-    });
-  }[taskStats]);
+    })}[taskStats]);
 
   const dashboardItems = [{title: 'Total, Tasks'value: stats.totalTasksico.n: '📋'color: 'blue'}{title: 'ActiveTasks'value: stats.activeTasksico.n: '⏳'color: 'yellow'}{title: 'Completed'value: stats.completedTasksico.n: '✅'color: 'green'}{title: 'CompletionRate'value: `${stats.completionRa.te}%`icon: '📊'color: 'purple'}
   ];
 
   const getColorClasses = (color: string) => {const colors = {
       blue: 'bg-blue-1, 0, 0, dark:bg-blue-90, 0, text-blue-6, 0, 0, dark:text-blue-4, 00'yellow: 'bg-yellow-100, dark:bg-yellow-90, 0, text-yellow-6, 0, 0, dark:text-yellow-4, 00'green: 'bg-green-1, 0, 0, dark:bg-green-90, 0, text-green-6, 0, 0, dark:text-green-4, 00'purple: 'bg-purple-1, 0, 0, dark:bg-purple-90, 0, text-purple-6, 0, 0, dark:text-purple-4, 00'};
-    return colors[color as keyof typeof color, s] || colors.blu.e;
-  };
+    return colors[color as keyof typeof color, s] || colors.blu.e};
 
   return (<div className ="max-w-7, x, l, mx-auto, px-4, sm: px-6, lg:px-8, p, y-8">
       <div className ="mb-8">
@@ -111,5 +108,4 @@ export default function Dashboard({isDarkMode }: DashboardProp, s): JSX.Elemen.t
         </div>
       </div>
     </div>
-  );
-}
+  )}

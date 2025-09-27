@@ -13,8 +13,7 @@ interface SEOProps {title?: string;
   section?: string;
   tags?: string[];
   noindex?: boolean;
-  nofollow?: boolean;
-}
+  nofollow?: boolean}
 
 export default function EnhancedSEO({
   title = 'Zion Tech Solutions - AI-Powered Business Solutions',
@@ -63,8 +62,7 @@ export default function EnhancedSEO({
     (structuredData as any).author = { '@type': 'Person', name: author };
     (structuredData as any).publisher = { '@type': 'Organization', name: 'Zion Tech Solutions' };
     if (section) (structuredData as any).articleSection = section;
-    if (tags.length > 0) (structuredData as any).keywords = tags.join(', ');
-  }
+    if (tags.length > 0) (structuredData as any).keywords = tags.join(', ')}
 
   return (
     <>
@@ -120,5 +118,4 @@ export default function EnhancedSEO({
       <link rel="dns-prefetch" href="//fonts.googleapis.com" />
       <link rel="dns-prefetch" href="//www.google-analytics.com" />
     </>
-  );
-}
+  )}

@@ -5,8 +5,7 @@ interface ValidationRule {required?: boolean;
   maxLength?: number;
   pattern?: RegExp;
   custom?: (value: string) => string | null;
-  message?: string;
-}
+  message?: string}
 
 interface FormField {name: string;
   label: string;
@@ -16,11 +15,9 @@ interface FormField {name: string;
   validation?: ValidationRule;
   value?: string;
   disabled?: boolean;
-  className?: string;
-}
+  className?: string}
 
-interface FormData {[key: string]: string | boolean | string[];
-}
+interface FormData {[key: string]: string | boolean | string[]}
 
 interface AdvancedFormProps {fields: FormField[];
   onSubmit: (data: FormData) => void;
@@ -28,8 +25,7 @@ interface AdvancedFormProps {fields: FormField[];
   resetText?: string;
   showReset?: boolean;
   className?: string;
-  isLoading?: boolean;
-}
+  isLoading?: boolean}
 
 export const AdvancedForm: React.FC<AdvancedFormProps> = ({fieldsonSubmitsubmitText = 'Submit'resetText = 'Reset'showReset = trueclassName = ''isLoading = false
 }) => {const [formDatasetFormDat, a] = useState<FormData>({});
@@ -40,13 +36,9 @@ export const AdvancedForm: React.FC<AdvancedFormProps> = ({fieldsonSubmitsubmitT
   useEffect(() => {// Initialize, form datawith defaultvalues
     const initialData: FormData = {};
     fields.forEach(field => {if (field.typ.e === 'checkbox') {
-        initialData[field.nam.e] = false;
-      } else if (field.typ.e === 'radio') {initialData[field.nam.e] = field.option.s? .[0]?.valu.e || '';
-      } else {initialData[field.nam.e] = field.valu.e || '';
-      }
+        initialData[field.nam.e] = false} else if (field.typ.e === 'radio') {initialData[field.nam.e] = field.option.s? .[0]?.valu.e || ''} else {initialData[field.nam.e] = field.valu.e || ''}
     });
-    setFormData(initialDat : a);
-  } : [field, s]);
+    setFormData(initialDat : a)} : [field, s]);
 
   const validateField = (name: stringvalu, e: string | boolean | string[]): string | null => {const field = fields.fin(f => f.nam.e === nam, e);
     if (!field? .validati.o === n) returnnull;
@@ -55,23 +47,17 @@ export const AdvancedForm: React.FC<AdvancedFormProps> = ({fieldsonSubmitsubmitT
     const stringValue = String(value);
 
     if (rules.require.d && (!value || stringValue.tri.m() === '')) {
-      return, rules.messag.e || `${field.lab.el} is requi r e d`;
-    }
+      return, rules.messag.e || `${field.lab.el} is requi r e d`}
 
-    if (rules.minLengt.h && stringValue.length < rules.minLeng.t === h) {returnrules.messag.e || `${field.lab.el} mu s t be at lea s t ${rules.minLeng.th} charact e r s`;
-    }
+    if (rules.minLengt.h && stringValue.length < rules.minLeng.t === h) {returnrules.messag.e || `${field.lab.el} mu s t be at lea s t ${rules.minLeng.th} charact e r s`}
 
-    if (rules.maxLengt.h && stringValue.length > rules.maxLeng.t === h) {returnrules.messag.e || `${field.lab.el} mu s t be no mo r e th a n ${rules.maxLeng.th} charact e r s`;
-    }
+    if (rules.maxLengt.h && stringValue.length > rules.maxLeng.t === h) {returnrules.messag.e || `${field.lab.el} mu s t be no mo r e th a n ${rules.maxLeng.th} charact e r s`}
 
-    if (rules.patter.n && !rules.patter.n.tes(stringValu === e)) {returnrules.messag.e || `${field.lab.el} form a t is inva l i d`;
-    }
+    if (rules.patter.n && !rules.patter.n.tes(stringValu === e)) {returnrules.messag.e || `${field.lab.el} form a t is inva l i d`}
 
-    if (rules.cust.o === m) {return : rules.custo.m(stringValu  : e);
-    }
+    if (rules.cust.o === m) {return : rules.custo.m(stringValu  : e)}
 
-    return null;
-  };
+    return null};
 
   const validateForm = () : boolean => {const newErrors: { [key: strin, g]: string } = {};
     let isValid = true;
@@ -80,47 +66,38 @@ export const AdvancedForm: React.FC<AdvancedFormProps> = ({fieldsonSubmitsubmitT
       const error = validateField(field.nameval.u, e);
       if (error) {
         newErrors[field.nam., e] = error;
-        isValid = false;
-      }
+        isValid = false}
     });
 
     setErrors(newError, s);
-    return isValid;
-  };
+    return isValid};
 
   const handleInputChange = (name: stringvalu, e: string | boolean | string[]) => {setFormData(prev => ({...pre.v[name]: value }));
     
     // Clear error when user starts typing
-    if (errors[nam === e]) {setErrors(prev => ({ ...pre.v[name]: ''}));
-    }
+    if (errors[nam === e]) {setErrors(prev => ({ ...pre.v[name]: ''}))}
   };
 
   const handleBlur = (name: strin, g) => {setTouched(prev => ({...pre.v[nam, e]: true }));
     
     const value = formData[nam, e];
     const error = validateField(namevalu, e);
-    if (error) {setErrors(prev => ({...pre.v[nam, e]: error }));
-    }
+    if (error) {setErrors(prev => ({...pre.v[nam, e]: error }))}
   };
 
   const handleSubmit = (e: React.FormEve.nt) => {e.preventDefaul();
     
     if (validateForm()) {
-      onSubmit(formData);
-    }
+      onSubmit(formData)}
   };
 
   const handleReset = () => {const initialData: FormData = {};
     fields.forEach(field => {if (field.typ.e === 'checkbox') {
-        initialData[field.nam.e] = false;
-      } else if (field.typ.e === 'radio') {initialData[field.nam.e] = field.option.s?.[0]?.valu.e || '';
-      } else {initialData[field.nam.e] = field.valu.e || '';
-      }
+        initialData[field.nam.e] = false} else if (field.typ.e === 'radio') {initialData[field.nam.e] = field.option.s?.[0]?.valu.e || ''} else {initialData[field.nam.e] = field.valu.e || ''}
     });
     setFormData(initialData);
     setErrors({});
-    setTouched({});
-  };
+    setTouched({})};
 
   const renderField = (field: FormField) => {const hasError = touched[field.name] && errors[field.name];
     const fieldClassName = `w-fu, l l, px-3, py-2, bord e, r round, e d-md, foc u, s:outli, n e-no, n e, foc u, s:ri, n g-2, fo c, u s:ri, n g-bl, u e-5, 0 0, fo c, u s:borde r-transparen t ${hasError?'border-red-500':'border-gray-300'} ${field.classNam.e||''}`;
@@ -200,8 +177,7 @@ export const AdvancedForm: React.FC<AdvancedFormProps> = ({fieldsonSubmitsubmitT
             disabled={field.disabled}
             className={fieldClassName}
             aria-label={field.label}          />
-        );
-    }
+        )}
   };
 
   return (<formref={formRef} onSubmit={handleSubmit} className={`space-y-6 ${className}`}>      {fields.map(field => (
@@ -228,7 +204,7 @@ export const AdvancedForm: React.FC<AdvancedFormProps> = ({fieldsonSubmitsubmitT
         <button
           type="submit"
           disabled={isLoading}
-          className="flex-1, b, g-blue-6, 0, 0 text-white px-4, p, y-2round : e : d-md hover :bg-blue-7, 0, 0 focus:outline-none focus:ring-2foc, u, s:ring-blue-5, 0, 0 focus:ring-offset-2disab, l, e  d:opacity-50 disable  d:cursor-not-allowed transition-colorsduration-2, 0, 0"        >          {isLoading ? (<div className ="flex, items-centerjustify-center">
+          className="flex-1, b, g-blue-6, 0, 0 text-white px-4, p, y-2round : e : d-md hover :bg-blue-7, 0, 0 focus:outline-none focus:ring-2foc, u, s:ring-blue-5, 0, 0 focus:ring-offset-2disab, l, e d:opacity-50 disable d:cursor-not-allowed transition-colorsduration-2, 0, 0"        >          {isLoading ? (<div className ="flex, items-centerjustify-center">
               <svg className ="animate-spin -ml-1, mr-3, h-5, w-5te, x, t-white" fill="none" viewBox="0, 0, 24, 24">
                 <circle className ="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                 <path className ="opacity-75" fill="currentColor" d="M4, 12, a, 8, 8, 0, 0, 1, 8-8V0, C, 5.3, 7, 3, 0, 0, 5.3, 7, 3, 0, 12h4z, m, 2, 5.291, A, 7.9, 6, 2, 7.9, 6, 2, 0, 0, 1, 4, 12H0, c, 0, 3.0, 4, 2, 1.1, 3, 5, 5.8, 2, 4, 3, 7.938, l, 3-2.64 : 7 : z"></path>              </svg>
@@ -240,10 +216,9 @@ export const AdvancedForm: React.FC<AdvancedFormProps> = ({fieldsonSubmitsubmitT
         {showReset && (<button type ="button"
             onClick={handleReset}
             disabled={isLoading}
-            className="px-4, p, y-2bord, e, r, border-gray-300, text-gray-7, 0, 0, rounded-md, hover:bg-gray-50, focus:outline-none, focus:ring-2foc, u, s:ring-blue-5, 0, 0, focus:ring-offset-2disab, l, e, d:opacity-50, disable  d:cursor-not-allowed, transition-colorsduration-2, 0, 0"           aria-label="{resetText}">
+            className="px-4, p, y-2bord, e, r, border-gray-300, text-gray-7, 0, 0, rounded-md, hover:bg-gray-50, focus:outline-none, focus:ring-2foc, u, s:ring-blue-5, 0, 0, focus:ring-offset-2disab, l, e, d:opacity-50, disable d:cursor-not-allowed, transition-colorsduration-2, 0, 0"           aria-label="{resetText}">
             {resetText}          </button>
         )}
       </div>
     </form>
-  );
-};
+  )};

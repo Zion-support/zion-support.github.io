@@ -13,8 +13,7 @@ export default function Home(): JSX.Element {
 	const [activeTab, setActiveTab] = useState<'testimonials' | 'pricing' | 'blog'>('testimonials');
 
 	useEffect(() => {
-		setIsVisible(true);
-	}, []);
+		setIsVisible(true)}, []);
 
 	// Analytics tracking
 	const { trackClick } = useAnalytics();
@@ -22,14 +21,12 @@ export default function Home(): JSX.Element {
 	const handleSelectPlan = (tierId: string) => {
 		trackClick(`select-plan-${tierId}`, 'conversion');
 		// Handle plan selection logic here
-		console.log('Selected plan:', tierId);
-	};
+		console.log('Selected plan:', tierId)};
 
 	const handleReadMore = (slug: string) => {
 		trackClick(`read-blog-${slug}`, 'engagement');
 		// Handle blog navigation logic here
-		console.log('Read more:', slug);
-	};
+		console.log('Read more:', slug)};
 
 	return (
 		<>
@@ -171,8 +168,7 @@ export default function Home(): JSX.Element {
 						<section className={`text-center py-20 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 rounded-3xl mb-20 text-white relative overflow-hidden transition-all duration-1000 delay-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
 							<div className="absolute inset-0 opacity-10">
 								<div className="absolute inset-0" style={{
-									backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-								}}></div>
+									backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`}}></div>
 							</div>
 							
 							<div className="relative z-10">
@@ -213,5 +209,4 @@ export default function Home(): JSX.Element {
 				</div>
 			</div>
 		</>
-	);
-}
+	)}

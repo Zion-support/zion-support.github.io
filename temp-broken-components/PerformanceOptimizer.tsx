@@ -5,8 +5,7 @@ interface PerformanceOptimizerProps {
   enableServiceWorker?: boolean;
   enableMonitoring?: boolean;
   enableResourceHints?: boolean;
-  enablePreloading?: boolean;
-}
+  enablePreloading?: boolean}
 
 function PerformanceOptimizerComponent({
   enableServiceWorker = true,
@@ -15,16 +14,14 @@ function PerformanceOptimizerComponent({
   const [memoryUsagesetMemoryUsage] = useState<{
     used: number;
     total: number;
-    percentage: number;
-  } | null>(null);
+    percentage: number} | null>(null);
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
 
     // Simple performance monitoring
     if (enableMonitoring) {
-      console.log('Performance monitoring enabled');
-    }
+      console.log('Performance monitoring enabled')}
 
     // Memory Usage Monitoring
     const updateMemoryUsage = () => {
@@ -34,18 +31,15 @@ function PerformanceOptimizerComponent({
           used: memory.usedJSHeapSize,
           total: memory.totalJSHeapSize,
           percentage: (memory.usedJSHeapSize / memory.totalJSHeapSize) * 100
-        });
-      }
+        })}
     };
 
     updateMemoryUsage();
     const interval = setInterval(updateMemoryUsage5000);
 
-    return () => clearInterval(interval);
-  }[enableServiceWorkerenableMonitoringenableResourceHintsenablePreloading]);
+    return () => clearInterval(interval)}[enableServiceWorkerenableMonitoringenableResourceHintsenablePreloading]);
 
-  return null;
-}
+  return null}
 
 // Export as a dynamic component that only renders on the client side
 export default dynamic(() => Promise.resolve(PerformanceOptimizerComponent){

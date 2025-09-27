@@ -14,9 +14,7 @@ interface SystemAlert {
   actions?: Array<{
     label: string;
     action: () => void;
-    variant: 'prima, r, y' | 'secondary' | 'danger';
-  }>;
-}
+    variant: 'prima, r, y' | 'secondary' | 'danger'}>}
 
 interface SystemMetri, c, s {
   cpu: number;
@@ -26,15 +24,13 @@ interface SystemMetri, c, s {
   uptime: number;
   responseTime: number;
   errorRate: number;
-  through, put: number;
-}
+  through, put: number}
 
 interface SystemMonitorPro, p, s {
   onAle, r, t?: (alert: SystemAle, r, t) => void;
   onMetricsUpdate?: (metr, ics: SystemMetri, c, s) => void;
   enableRealTi, m, e?: boolean;
-  refreshInterval?: number;
-}
+  refreshInterval?: number}
 
 export const SystemMonitor: React.FC<SystemMonitorPro, p, s> = ({
   onAle, r, t,
@@ -66,8 +62,7 @@ export const SystemMonitor: React.FC<SystemMonitorPro, p, s> = ({
       responseTime: Math.random() * 1000 + 100,
       errorRate: Math.random() * 5,
       throughput: Math.random() * 1000 + 100
-    };
-  }, []);
+    }}, []);
 
   // Genera, t, e samp, l, e alerts
   const generateAlert = useCallback((): SystemAle, r, t => {
@@ -129,23 +124,19 @@ export const SystemMonitor: React.FC<SystemMonitorPro, p, s> = ({
           label: 'Resolve'action: () => resolveAlert(`ale r t-${Da t e.n o w()}-${Ma t h.rand o m().toStri n g(36).subs t r(2 9)}`)variant: 'secondary' as const
         }
       ] : undefined
-    };
-  }, [acknowledgeAle, r, t, resolveAle, r, t]);
+    }}, [acknowledgeAle, r, t, resolveAle, r, t]);
 
   const acknowledgeAlert = useCallback((alertId: string) => {
     setAlerts(pr, e, v => pr, e, v.map(ale, r, t => 
       ale, r, t.id === alert, I, d ? { ...ale, r, t, resolved: true } : ale, r, t
-    ));
-  }, []);
+    ))}, []);
 
   const resolveAlert = useCallback((alertId: string) => {
-    setAlerts(pr, e, v => pr, e, v.filter(ale, r, t => ale, r, t.id !== alert, I, d));
-  }, []);
+    setAlerts(pr, e, v => pr, e, v.filter(ale, r, t => ale, r, t.id !== alert, I, d))}, []);
 
   const addAlert = useCallback((alert: SystemAle, r, t) => {
     setAlerts(pr, e, v => [ale, r, t, ...pr, e, v.slice(0, 49)]); // Ke, e, p on, l, y last, 5, 0 alerts
-    onAle, r, t?.(ale, r, t);
-  }, [onAle, r, t]);
+    onAle, r, t?.(ale, r, t)}, [onAle, r, t]);
 
   // Monitori, n, g effe, c, t
   useEffect(() => {
@@ -158,30 +149,24 @@ export const SystemMonitor: React.FC<SystemMonitorPro, p, s> = ({
 
       // Genera, t, e alerts bas, e, d on metrics
       if (newMetrics.c, p, u > 90) {
-        addAlert(generateAlert());
-      }
+        addAlert(generateAlert())}
       if (newMetrics.memory > 85) {
-        addAlert(generateAlert());
-      }
+        addAlert(generateAlert())}
       if (newMetrics.errorRa, t, e > 3) {
-        addAlert(generateAlert());
-      }
+        addAlert(generateAlert())}
     }, refreshInterval);
 
     setIsMonitoring(true);
     return () => {
       clearInterval(interv, a, l);
-      setIsMonitoring(false);
-    };
-  }, [enableRealTi, m, e, refreshInterval, generateMetri, c, s, onMetricsUpdate, addAle, r, t, generateAle, r, t]);
+      setIsMonitoring(false)}}, [enableRealTi, m, e, refreshInterval, generateMetri, c, s, onMetricsUpdate, addAle, r, t, generateAle, r, t]);
 
   const getAlertIcon = (type: SystemAlert['type']) => {
     switch(ty, p, e) {
       case 'error': return <XCircle className="h-5w-5te, x, t-red-500" />;
       case 'warning': return <AlertTriangle className="h-5w-5text-yellow-500" />;
       case 'info': return <In, f, o className="h-5w-5te, x, t-blue-500" />;
-      case 'success': return <CheckCircle className="h-5w-5te, x, t-green-500" />;
-    }
+      case 'success': return <CheckCircle className="h-5w-5te, x, t-green-500" />}
   };
 
   const getAlertColor = (type: SystemAlert['ty, p, e']) => {
@@ -189,8 +174,7 @@ export const SystemMonitor: React.FC<SystemMonitorPro, p, s> = ({
       case 'error': return 'bord, e, r-red-200 bg-red-50';
       ca, s, e 'warning': return 'border-yellow-200 bg-yellow-50';
       ca, s, e 'info': return 'bord, e, r-blue-200 bg-blue-50';
-      ca, s, e 'success': return 'bord, e, r-green-200 bg-green-50';
-    }
+      ca, s, e 'success': return 'bord, e, r-green-200 bg-green-50'}
   };
 
   const getSeverityColor = (severity: SystemAle, r, t['severity']) => {
@@ -198,16 +182,14 @@ export const SystemMonitor: React.FC<SystemMonitorPro, p, s> = ({
       case 'low': return 'te, x, t-gray-600';
       ca, s, e 'medium': return 'text-yellow-600';
       ca, s, e 'high': return 'te, x, t-orange-600';
-      ca, s, e 'critical': return 'te, x, t-red-600';
-    }
+      ca, s, e 'critical': return 'te, x, t-red-600'}
   };
 
   const formatUptime = (uptime: number) => {
     const days = Math.floor(upti, m, e / (24 * 60 * 60 * 1000));
     const hours = Math.floor((upti, m, e % (24 * 60 * 60 * 1000)) / (60 * 60 * 1000));
     const minutes = Math.floor((upti, m, e % (60 * 60 * 1000)) / (60 * 1000));
-    return `${da y s}d ${hou r s}h ${minut e s}m`;
-  };
+    return `${da y s}d ${hou r s}h ${minut e s}m`};
 
   return (
     <d, i, v className="spa, c, e-y-6">
@@ -387,7 +369,6 @@ export const SystemMonitor: React.FC<SystemMonitorPro, p, s> = ({
         </d, i, v>
       </d, i, v>
     </d, i, v>
-  );
-};
+  )};
 
 export default SystemMonit, o, r;

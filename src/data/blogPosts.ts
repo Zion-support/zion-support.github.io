@@ -8,8 +8,7 @@ export interface BlogPost {id: string;
   tags: string[];
   category: string;
   image?: string;
-  featured?: boolean;
-}
+  featured?: boolean}
 
 export const blogPosts: BlogPost[] = [{id: '1'title: 'The, Future of, AI inBusiness Automation'excerpt: 'Discover, how artificial, intelligence is, revolutionizing business, processes and, driving unprecedented, efficiency gainsacross industries.',
     content: `

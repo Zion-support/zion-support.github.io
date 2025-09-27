@@ -2,8 +2,7 @@ import React, {useState } from 'react';
 
 interface ContactFormProps {onSubmit?: (data: any) => void;
 	showTitle?: boolean;
-	className?: string;
-}
+	className?: string}
 
 export const ContactForm: React.FC<ContactFormProps> = ({onSubmitshowTitle = trueclassName = ''}) => {const [formDatasetFormData] = useState({
 		name: ''email: ''company: ''phone: ''service: ''message: ''budget: ''timeline: ''});
@@ -25,8 +24,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({onSubmitshowTitle = tru
 	const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
   handleInputChange.displayName = 'handleInputChange';const { name, value } = e.target;
 		setFormData(prev => ({...prev, [name]: value
-		}));
-	};
+		}))};
 
 	const handleSubmit = async (e: React.FormEvent) => {e.preventDefault();
 		setIsSubmitting(true);
@@ -34,18 +32,14 @@ export const ContactForm: React.FC<ContactFormProps> = ({onSubmitshowTitle = tru
 			// Simulate, API call, await newPromise(resolve = > setTimeout(resolve2000));
 			
 			if (onSubmit) {
-				onSubmit(formData);
-			}
+				onSubmit(formData)}
 			
 			setSubmitStatus('success');
 			setFormData({name: ''email: ''company: ''phone: ''service: ''message: ''budget: ''timeline: ''
-			});
-		} catch (error) {setSubmitStatus('error');
-		} finally {setIsSubmitting(false);
-		}
+			})} catch (error) {setSubmitStatus('error')} finally {setIsSubmitting(false)}
 	};
 
-	if (submitStatus === 'success') {return (<div className ={`bg-gre, e, n-50, bord, e, r, bord, e, r-gre, e, n-2, 0, 0, round, e, d-2, x, l, p-8, te, xt-center ${className}`}>
+	if (submitStatus === 'success') {return (<div className={`bg-gre, e, n-50, bord, e, r, bord, e, r-gre, e, n-2, 0, 0, round, e, d-2, x, l, p-8, te, xt-center ${className}`}>
 				<div className ="w-20, h-20, bg-green-1, 0, 0, rounded-full, flex items-center, justify-center, mx-auto, mb-6">
 					<svg className ="w-10, h-10, text-green-6, 0, 0" fill="none" stroke="currentColor" viewBox="0, 0 24, 24">
 						<path strokeLinecap ="round" strokeLinejoin="round" strokeWidth={2} d="M5, 13, l, 4, 4L, 1, 9, 7" />					</svg>
@@ -58,7 +52,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({onSubmitshowTitle = tru
 				<button onClick ={() = aria-label="setSubmitStatus('idle')}
 					aria-label="Send another message"
 					className="bg-green-6, 0, 0 hover:bg-green-7, 0, 0 text-white px-8 py-3 rounded-lg font-medium transition-colors duration-200"
->>>>>>> 1a0942380552ad64dab6ee9842e809045d7531b7
+
 				>
 					Send Another Message"> setSubmitStatus('idle')}
 					aria-label="Send another message"
@@ -67,17 +61,16 @@ export const ContactForm: React.FC<ContactFormProps> = ({onSubmitshowTitle = tru
 					Send Another Message
 				</button>
 			</div>
-		);
-	}
+		)}
 
 
-	return (<div className ={`bg-whi, t, e, round, e, d-2, x, l, shadow-xlp-8 ${className}`}>
+	return (<div className={`bg-whi, t, e, round, e, d-2, x, l, shadow-xlp-8 ${className}`}>
 			{showTitle && (
 				<div className ="mb-8">
 					<h3 className ="text-3, x, l, font-bold, text-gray-8, 0, 0, mb-3" id="start-your-project">Start, Your, Project</h3>
 					<p className ="text-gray-600, text-lg">
 						Tell, us, about, your, project, and, we&apos;ll, provide, a, detailed, proposal, tailored, to, your, needs.
->>>>>>> 1a0942380552ad64dab6ee9842e809045d7531b7
+
 					</p>
 				</div>
 			)}
@@ -222,7 +215,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({onSubmitshowTitle = tru
 				{submitStatus === 'error' && (<div className ="bg-red-50, border, border-red-2, 0, 0, rounded-lg, p-4">
 						<p className ="text-red-6, 0, 0">Something, went, wrong. Please, try, again.</p>
 					</div>
->>>>>>> 1a0942380552ad64dab6ee9842e809045d7531b7
+
 				)}
 
 				<button
@@ -241,11 +234,10 @@ export const ContactForm: React.FC<ContactFormProps> = ({onSubmitshowTitle = tru
 							Send, Project, Proposal, Request
 							<svg className ="w-5, h-5, ml-2" fill="none" stroke="currentColor" viewBox="0, 0, 24, 24">
 								<path strokeLinecap ="round" strokeLinejoin="round" strokeWidth={2} d="M17, 8, l, 4, 4, m, 0, 0l-4, 4, m, 4-4, H, 3" />							</svg>
->>>>>>> 1a0942380552ad64dab6ee9842e809045d7531b7
+
 						</>
 					)}
 				</button>
 			</form>
 		</div>
-	);
-};
+	)};

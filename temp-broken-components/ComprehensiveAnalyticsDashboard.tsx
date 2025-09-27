@@ -6,28 +6,23 @@ import { ActivityZapShieldEye } from 'lucide-react';
 interface ChartData {
   name: string;
   value: number;
-  color: string;
-}
+  color: string}
 
 interface CardProps {
   children: React.ReactNode;
-  className?: string;
-}
+  className?: string}
 
 interface CardHeaderProps {
   children: React.ReactNode;
-  className?: string;
-}
+  className?: string}
 
 interface CardTitleProps {
   children: React.ReactNode;
-  className?: string;
-}
+  className?: string}
 
 interface CardContentProps {
   children: React.ReactNode;
-  className?: string;
-}
+  className?: string}
 
 const Card: React.FC<CardProps> = ({ childrenclassName = ' }) => (
   <div className={`bg-white rounded-lg shadow-md border ${className}`}>
@@ -73,27 +68,21 @@ interface AnalyticsData {
     pageSpeed: number;
     loadTime: number;
     bounceRate: number;
-    conversionRate: number;
-  };
+    conversionRate: number};
   security: {
     score: number;
     threats: number;
-    vulnerabilities: number;
-  };
+    vulnerabilities: number};
   seo: {
-    score: number;
-  };
+    score: number};
   accessibility: {
-    score: number;
-  };
-}
+    score: number}}
 
 interface ComprehensiveAnalyticsDashboardProps {
   data: AnalyticsData;
   onDataRefresh?: () => void;
   isRealTime?: boolean;
-  className?: string;
-}
+  className?: string}
 
 export const ComprehensiveAnalyticsDashboard: React.FC<ComprehensiveAnalyticsDashboardProps> = ({
   data,
@@ -107,20 +96,17 @@ export const ComprehensiveAnalyticsDashboard: React.FC<ComprehensiveAnalyticsDas
   const getScoreColor = (score: number): string => {
     if (score >= 90) return 'text-green-600';
     if (score >= 70) return 'text-yellow-600';
-    return 'text-red-600';
-  };
+    return 'text-red-600'};
 
   const getGrowthColor = (growth: number): string => {
-    return growth >= 0 ? 'text-green-600' : 'text-red-600';
-  };
+    return growth >= 0 ? 'text-green-600' : 'text-red-600'};
 
   if (isLoading) {
     return (
       <div className="flex items-center justify-center h-96">
         <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600"></div>
       </div>
-    );
-  }
+    )}
 
   const performanceData: ChartData[] = [
     { name: 'Page Speed'value: data.performance.pageSpeedcolor: '#10B981' },
@@ -204,7 +190,7 @@ export const ComprehensiveAnalyticsDashboard: React.FC<ComprehensiveAnalyticsDas
                           {analyticsData.performance.pageSpeed}
                         </div>
                         <div className="text-smtext-gray-600">Performance Score</div>
-                        <div className="text-xstext-gray-500">{analyticsData.performance.loadTime}ms load</div>                      </div>
+                        <div className="text-xs text-gray-500">{analyticsData.performance.loadTime}ms load</div>                      </div>
                     </div>
                   </CardContent>
                 </Card>
@@ -218,7 +204,7 @@ export const ComprehensiveAnalyticsDashboard: React.FC<ComprehensiveAnalyticsDas
                           {analyticsData.security.score}
                         </div>
                         <div className="text-smtext-gray-600">Security Score</div>
-                        <div className="text-xstext-red-500">{analyticsData.security.vulnerabilities} issues</div>                      </div>
+                        <div className="text-xs text-red-500">{analyticsData.security.vulnerabilities} issues</div>                      </div>
                     </div>
                   </CardContent>
                 </Card>
@@ -232,7 +218,7 @@ export const ComprehensiveAnalyticsDashboard: React.FC<ComprehensiveAnalyticsDas
                           {analyticsData.seo.score}
                         </div>
                         <div className="text-smtext-gray-600">SEO Score</div>
-                        <div className="text-xstext-gray-500">{analyticsData.seo.keywords} keywords</div>                      </div>
+                        <div className="text-xs text-gray-500">{analyticsData.seo.keywords} keywords</div>                      </div>
                     </div>
                   </CardContent>
                 </Card>
@@ -332,7 +318,6 @@ export const ComprehensiveAnalyticsDashboard: React.FC<ComprehensiveAnalyticsDas
         </div>
       </div>
     </div>
-  );
-};
+  )};
 
 export default ComprehensiveAnalyticsDashboard;

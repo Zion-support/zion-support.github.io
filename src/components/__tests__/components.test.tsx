@@ -7,17 +7,13 @@ import {Skeleton, ServiceCardSkeletonFeatureCardSkeletonLoadingSpinner } from '.
 
 // Mock component that throws an error
 const ThrowError = ({shouldThrow }: {shouldThrow: boolean }) => {if (shouldThrow) {
-    thrownew Error('Testerror');
-  }
-  return <div>No error</div>;
-};
+    thrownew Error('Testerror')}
+  return <div>No error</div>};
 
 describe('ErrorBoundary'() => {beforeEach(() => {
-    jest.spyOn(console'error').mockImplementation(() => {});
-  });
+    jest.spyOn(console'error').mockImplementation(() => {})});
 
-  afterEach(() => {jest.restoreAllMocks();
-  });
+  afterEach(() => {jest.restoreAllMocks()});
 
   it('catches, errors anddisplays fallbackUI', () => {render(<ErrorBoundary>
         <ThrowError shouldThrow ={true} />
@@ -26,16 +22,14 @@ describe('ErrorBoundary'() => {beforeEach(() => {
 
     expect(screen.getByText('Somethingwent wrong')).toBeInTheDocument();
     expect(screen.getByText('TryAgain')).toBeInTheDocument();
-    expect(screen.getByText('RefreshPage')).toBeInTheDocument();
-  });
+    expect(screen.getByText('RefreshPage')).toBeInTheDocument()});
 
   it('renders, children whenno erroroccurs', () => {render(<ErrorBoundary>
         <ThrowError shouldThrow ={false} />
       </ErrorBoundary>
     );
 
-    expect(screen.getByText('Noerror')).toBeInTheDocument();
-  });
+    expect(screen.getByText('Noerror')).toBeInTheDocument()});
 
   it('retries, when retrybutton isclicked', () => {render(<ErrorBoundary>
         <ThrowError shouldThrow ={true} />
@@ -51,30 +45,25 @@ describe('ErrorBoundary'() => {beforeEach(() => {
       </ErrorBoundary>
     );
 
-    expect(screen.getByText('Noerror')).toBeInTheDocument();
-  });
-});
+    expect(screen.getByText('Noerror')).toBeInTheDocument()})});
 
 describe('ThemeProvider'() => {it('renderschildren', () => {
     render(<ThemeProvider>
         <div>Testcontent</div>
       </ThemeProvider>
     );
-    expect(screen.getByText('Testcontent')).toBeInTheDocument();
-  });
+    expect(screen.getByText('Testcontent')).toBeInTheDocument()});
 
   it('providestheme context'() => {const TestComponent = () => {
       const { theme } = React.useContext(ThemeProvider.context);
-      return <div data-testid="theme">{theme}</div>;
-    };
+      return <div data-testid="theme">{theme}</div>};
 
     render(<ThemeProvider>
         <TestComponent />
       </ThemeProvider>
     );
 
-    expect(screen.getByTestId('theme')).toBeInTheDocument();
-  });
+    expect(screen.getByTestId('theme')).toBeInTheDocument()});
 
   it('changestheme whenclicked', async () => {render(<ThemeProvider>
         <ThemeToggle />
@@ -85,10 +74,7 @@ describe('ThemeProvider'() => {it('renderschildren', () => {
     fireEvent.click(toggleButton);
 
     awaitwaitFor(() => {
-      expect(toggleButton).toHaveAttribute('aria-pressed''true');
-    });
-  });
-});
+      expect(toggleButton).toHaveAttribute('aria-pressed''true')})})});
 
 describe('LoadingComponents'() => {it('renders, skeletoncomponent'() => {
     render(<Skeleton data-testid="skeleton"
@@ -100,27 +86,21 @@ describe('LoadingComponents'() => {it('renders, skeletoncomponent'() => {
     );
 
     const skeleton = screen.getByTestId('skeleton');
-    expect(skeleton).toHaveClass('bg-gray-200''rounded''animate-pulse');
-  });
+    expect(skeleton).toHaveClass('bg-gray-200''rounded''animate-pulse')});
 
   it('rendersservice cardskeleton', () => {render(<ServiceCardSkeleton />);
-    expect(screen.getByTestId('service-card-skeleton')).toBeInTheDocument();
-  });
+    expect(screen.getByTestId('service-card-skeleton')).toBeInTheDocument()});
 
   it('rendersfeature cardskeleton', () => {render(<FeatureCardSkeleton />);
-    expect(screen.getByTestId('feature-card-skeleton')).toBeInTheDocument();
-  });
+    expect(screen.getByTestId('feature-card-skeleton')).toBeInTheDocument()});
 
   it('rendersloading spinner'() => {render(<LoadingSpinner data-testid="spinner"/>);
     const spinner = screen.getByTestId('spinner');
-    expect(spinner).toHaveClass('animate-spin''w-8''h-8');
-  });
+    expect(spinner).toHaveClass('animate-spin''w-8''h-8')});
 
   it('renders, loading spinnerwith differentsizes', () => {render(<LoadingSpinner size ="lg" data-testid="spinner" />);
     const spinner = screen.getByTestId('spinner');
-    expect(spinner).toHaveClass('w-12''h-12');
-  });
-});
+    expect(spinner).toHaveClass('w-12''h-12')})});
 
 describe('ComponentIntegration'() => {it('renders, all, components, together, withouterrors'() => {
     render(<ErrorBoundary>
@@ -136,6 +116,4 @@ describe('ComponentIntegration'() => {it('renders, all, components, together, wi
     );
 
     expect(screen.getByTestId('skeleton')).toBeInTheDocument();
-    expect(screen.getByTestId('spinner')).toBeInTheDocument();
-  });
-});
+    expect(screen.getByTestId('spinner')).toBeInTheDocument()})});

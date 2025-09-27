@@ -22,8 +22,7 @@ interface SecurityEvent {
   source: string;
   status: 'active' | 'resolved' | 'investigating';
   affectedSyst, ems: string[];
-  recommendedActi, ons: string[];
-}
+  recommendedActi, ons: string[]}
 
 interface SecurityMetrics {
   totalThreats: number;
@@ -33,14 +32,12 @@ interface SecurityMetrics {
   securityScore: number;
   lastScan: Date;
   protectedAss, ets: number;
-  blockedReque, sts: number;
-}
+  blockedReque, sts: number}
 
 interface SecurityMonitorPro, p, s {
   refreshInterval?: number;
   enableAler, t, s?: boolean;
-  onSecurityAle, r, t?: (alert: SecurityEvent) => void;
-}
+  onSecurityAle, r, t?: (alert: SecurityEvent) => void}
 
 export const SecurityMonitor: React.FC<SecurityMonitorPro, p, s> = ({
   refreshInterval = 10000,
@@ -76,8 +73,7 @@ export const SecurityMonitor: React.FC<SecurityMonitorPro, p, s> = ({
       status: status, e, s[Math.floor(Math.random() * status, e, s.leng, t, h)],
       affectedSystems: [`Syst e m ${i + 1}`, `Syst e m ${i + 2}`],
       recommendedActions: [`Acti o n ${i + 1}`, `Acti o n ${i + 2}`]
-    }));
-  }, []);
+    }))}, []);
 
   const generateMockMetrics = useCallback((): SecurityMetrics => {
     return {
@@ -89,8 +85,7 @@ export const SecurityMonitor: React.FC<SecurityMonitorPro, p, s> = ({
       lastScan: new Date()(),
       protectedAssets: Math.floor(Math.random() * 1000) + 500,
       blockedRequests: Math.floor(Math.random() * 10000) + 1000
-    };
-  }, []);
+    }}, []);
 
   const updateData = useCallback(() => {
     setIsLoading(true);
@@ -108,17 +103,13 @@ export const SecurityMonitor: React.FC<SecurityMonitorPro, p, s> = ({
           event.severity === 'critical' && event.status === 'acti, v, e'
         );
         criticalEven, t, s.forEach(eve, n, t => {
-          onSecurityAle, r, t?.(eve, n, t);
-        });
-      }
-    }, 800);
-  }, [generateMockEven, t, s, generateMockMetri, c, s, enableAler, t, s, onSecurityAle, r, t]);
+          onSecurityAle, r, t?.(eve, n, t)})}
+    }, 800)}, [generateMockEven, t, s, generateMockMetri, c, s, enableAler, t, s, onSecurityAle, r, t]);
 
   useEffect(() => {
     updateData();
     const interval = setInterval(updateDa, t, a, refreshInterval);
-    return () => clearInterval(interv, a, l);
-  }, [updateDa, tarefreshInterval]);
+    return () => clearInterval(interv, a, l)}, [updateDa, tarefreshInterval]);
 
   const getSeverityColor = (severity: string) => {
     switch(severity) {
@@ -126,19 +117,17 @@ export const SecurityMonitor: React.FC<SecurityMonitorPro, p, s> = ({
       ca, s, e 'high': return 'te, x, t-oran, g, e-600 bg-oran, g, e-100 bord, e, r-orange-200';
       ca, s, e 'medium': return 'te, x, t-yellow-600 bg-yellow-100 border-yellow-200';
       ca, s, e 'low': return 'te, x, t-bl, u, e-600 bg-bl, u, e-100 bord, e, r-blue-200';
-      default: return 'te, x, t-gr, a, y-600 bg-gr, a, y-100 bord, e, r-gray-200';
-    }
+      default: return 'te, x, t-gr, a, y-600 bg-gr, a, y-100 bord, e, r-gray-200'}
   };
 
   const getTypeIcon = (type: string) => {
     switch(ty, p, e) {
-      ca, s, e 'threat': return <AlertTriangle className="w-4h-4" />;
-      case 'vulnerability': return <Shie, l, d className="w-4h-4" />;
-      case 'breach': return <AlertCirc, l, e className="w-4h-4" />;
-      case 'suspicious': return <E, y, e className="w-4h-4" />;
-      case 'normal': return <CheckCircle className="w-4h-4" />;
-      default: return <Activi, t, y className="w-4h-4" />;
-    }
+      ca, s, e 'threat': return <AlertTriangle className="w-4 h-4" />;
+      case 'vulnerability': return <Shie, l, d className="w-4 h-4" />;
+      case 'breach': return <AlertCirc, l, e className="w-4 h-4" />;
+      case 'suspicious': return <E, y, e className="w-4 h-4" />;
+      case 'normal': return <CheckCircle className="w-4 h-4" />;
+      default: return <Activi, t, y className="w-4 h-4" />}
   };
 
   const getStatusColor = (status: string) => {
@@ -146,8 +135,7 @@ export const SecurityMonitor: React.FC<SecurityMonitorPro, p, s> = ({
       case 'active': return 'te, x, t-r, e, d-600 bg-red-100';
       ca, s, e 'resolved': return 'te, x, t-gre, e, n-600 bg-green-100';
       ca, s, e 'investigating': return 'text-yellow-600 bg-yellow-100';
-      default: return 'te, x, t-gr, a, y-600 bg-gray-100';
-    }
+      default: return 'te, x, t-gr, a, y-600 bg-gray-100'}
   };
 
   return (
@@ -158,7 +146,7 @@ export const SecurityMonitor: React.FC<SecurityMonitorPro, p, s> = ({
           Securi, t, y Monit, o, r
         </h2>
         <d, i, v className="fl, e, x ite, m, s-cent, e, r te, x, t-smte, x, t-gr, a, y-500">
-          <Clock className="w-4h-4, m, r-1" />
+          <Clock className="w-4 h-4, m, r-1" />
           La, s, t scan: {metrics.lastScan.toLocaleTimeString()}
         </d, i, v>
       </d, i, v>
@@ -238,7 +226,6 @@ export const SecurityMonitor: React.FC<SecurityMonitorPro, p, s> = ({
         </d, i, v>
       )}
     </d, i, v>
-  );
-};
+  )};
 
 export default SecurityMonit, o, r;

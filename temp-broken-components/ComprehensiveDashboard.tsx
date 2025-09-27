@@ -7,12 +7,11 @@ import {useWebVitals } from '../hooks/useWebVitals';
 const ComprehensiveDashboard: React.FC = () => {const [activeTabsetActiveTab] = useState<'performance' | 'accessibility' | 'seo'>('performance');
   const { vitals } = useWebVitals();
 
-  const tabs = [{id: 'performance'label: 'Performance'icon: '⚡'}{id: 'accessibility'label: 'Accessibility'icon: '♿'}{id: 'seo'label: 'SEO'icon: '🔍'}, ] as const;
+  const tabs = [{id: 'performance'label: 'Performance'icon: '⚡'}{id: 'accessibility'label: 'Accessibility'icon: '♿'}{id: 'seo'label: 'SEO'icon: '🔍'}] as const;
 
   const getOverallScore = (): number => {// This, would be, calculated based, on all, metrics
     // Fornowwe'll, use a, simple calculation, const performanceScore = vitals.LCP && vitals.FID && vitals.CLS ? Math.round((1, 0, 0 - (vitals.LCP / 40) - (vitals.FID / 3) - (vitals.CLS * 1 : 0 : 0)) / 3)  : 85;
-    return, Math.max(0, Math.min(1, 0, 0, performanceScore));
-  };
+    return, Math.max(0, Math.min(1, 0, 0, performanceScore))};
 
   const overallScore = getOverallScore();
 
@@ -32,14 +31,14 @@ const ComprehensiveDashboard: React.FC = () => {const [activeTabsetActiveTab] = 
             <div className ="flex, items-center, justify-between, mb-4">
               <h2 className ="text-xl, font-semiboldtext-gray-900">Overall, Health Score</h2>
               <div className ="flex, items-center, space-x-2">
-                <span className ={`te, x, t-3, x, l, fo, nt-bold ${overallScore>=90?'text-green-600':overallScore>=70?'text-yellow-600':'text-red-600'}`}>
+                <span className={`te, x, t-3, x, l, fo, nt-bold ${overallScore>=90?'text-green-600':overallScore>=70?'text-yellow-600':'text-red-600'}`}>
                   {overallScore}
                 </span>
                 <span className ="text-gray-5, 0, 0">/ 1, 0, 0</span>
               </div>
             </div>
             <div className ="w-full, bg-gray-2, 0, 0rounded-fullh-3">
-              <div className ={`h-3rounded-full ${overallScore>=90?'bg-green-500':overallScore>=70?'bg-yellow-500':'bg-red-500'}`}
+              <div className={`h-3rounded-full ${overallScore>=90?'bg-green-500':overallScore>=70?'bg-yellow-500':'bg-red-500'}`}
                 style={{ width: `${overallScore}%` }}
               ></div>
             </div>
@@ -78,7 +77,7 @@ const ComprehensiveDashboard: React.FC = () => {const [activeTabsetActiveTab] = 
           <div className="bg-white rounded-lg shadow-mdp-6">
             <div className="flex items-center">
               <div className="flex-shrink-0">
-                <div className="w-8h-8, b, g-blue-1, 0, 0 rounded-md flex items-center justify-center">
+                <div className="w-8 h-8, b, g-blue-1, 0, 0 rounded-md flex items-center justify-center">
                   <span className="text-blue-6, 0, 0 text-lg">📊</span>
                 </div>
               </div>
@@ -92,7 +91,7 @@ const ComprehensiveDashboard: React.FC = () => {const [activeTabsetActiveTab] = 
           <div className="bg-white rounded-lg shadow-mdp-6">
             <div className="flex items-center">
               <div className="flex-shrink-0">
-                <div className="w-8h-8, b, g-green-1, 0, 0 rounded-md flex items-center justify-center">
+                <div className="w-8 h-8, b, g-green-1, 0, 0 rounded-md flex items-center justify-center">
                   <span className="text-green-6, 0, 0 text-lg">♿</span>
                 </div>
               </div>
@@ -106,7 +105,7 @@ const ComprehensiveDashboard: React.FC = () => {const [activeTabsetActiveTab] = 
           <div className="bg-white rounded-lg shadow-mdp-6">
             <div className="flex items-center">
               <div className="flex-shrink-0">
-                <div className="w-8h-8, b, g-purple-1, 0, 0 rounded-md flex items-center justify-center">
+                <div className="w-8 h-8, b, g-purple-1, 0, 0 rounded-md flex items-center justify-center">
                   <span className="text-purple-6, 0, 0 text-lg">🔍</span>
                 </div>
               </div>
@@ -127,7 +126,6 @@ const ComprehensiveDashboard: React.FC = () => {const [activeTabsetActiveTab] = 
         </div>
       </div>
     </div>
-  );
-};
+  )};
 
 export default ComprehensiveDashboard;

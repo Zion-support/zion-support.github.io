@@ -140,8 +140,7 @@ const Dashboard: React.FC = () => {
       setIsLoading(true);
       setActiveTab(tabId);
       // Simulate loading time for better UX
-      setTimeout(() => setIsLoading(false), 100);
-    }
+      setTimeout(() => setIsLoading(false), 100)}
   }, [activeTab]);
 
   const tabs = useMemo(() => [
@@ -650,8 +649,7 @@ const Dashboard: React.FC = () => {
           </div>
         );
       default:
-        return <ComprehensiveAnalyticsDashboard />;
-    }
+        return <ComprehensiveAnalyticsDashboard />}
   }, [activeTab, isRealTime]);
 
   return (
@@ -730,7 +728,6 @@ const Dashboard: React.FC = () => {
         </footer>
       </div>
     </>
-  );
-};
+  )};
 
 export default Dashboard;

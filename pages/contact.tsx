@@ -22,8 +22,7 @@ export default function Contact(): JSX.Element {
 	const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
 	useEffect(() => {
-		setIsVisible(true);
-	}, []);
+		setIsVisible(true)}, []);
 
 	// Analytics tracking
 	const { trackClick } = useAnalytics();
@@ -33,8 +32,7 @@ export default function Contact(): JSX.Element {
 		setFormData(prev => ({
 			...prev,
 			[name]: value
-		}));
-	};
+		}))};
 
 	const handleSubmit = async (e: React.FormEvent) => {
 		e.preventDefault();
@@ -58,12 +56,9 @@ export default function Contact(): JSX.Element {
 				message: '',
 				budget: '',
 				timeline: ''
-			});
-		} catch (error) {
-			setSubmitStatus('error');
-		} finally {
-			setIsSubmitting(false);
-		}
+			})} catch (error) {
+			setSubmitStatus('error')} finally {
+			setIsSubmitting(false)}
 	};
 
 	const contactInfo = [
@@ -392,5 +387,4 @@ export default function Contact(): JSX.Element {
 				</div>
 			</div>
 		</>
-	);
-}
+	)}

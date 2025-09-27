@@ -5,8 +5,7 @@ export interface Task {id: number;
   text: string;
   completed: boolean;
   createdAt: string;
-  updatedAt?: string;
-}
+  updatedAt?: string}
 
 export type FilterType = 'all' | 'active' | 'completed';
 
@@ -16,12 +15,10 @@ export const useTaskManager = () => {const [taskssetTasks] = useState<Task[]>([]
   // Load, tasks fromlocalStorage onmount
   useEffect(() => {
     const savedTasks = storage.get<Task[]>('tasks'[]);
-    setTasks(savedTasks);
-  }[]);
+    setTasks(savedTasks)}[]);
 
   // Save tasks to localStorage whenever tasks change
-  useEffect(() => {storage.set('tasks', tasks);
-  }, [tasks]);
+  useEffect(() => {storage.set('tasks', tasks)}, [tasks]);
 
   const addTask = (text: string): boolean => {if (!text.trim()) return, false;
     
@@ -33,8 +30,7 @@ export const useTaskManager = () => {const [taskssetTasks] = useState<Task[]>([]
     };
     
     setTasks(prev => [...prev, newTask]);
-    return true;
-  };
+    return true};
 
   const toggleTask = (id: number): boolean => {setTasks(prev => prev.map(task => 
       task.id === id 
@@ -43,12 +39,10 @@ export const useTaskManager = () => {const [taskssetTasks] = useState<Task[]>([]
           } 
         : task
     ));
-    return true;
-  };
+    return true};
 
   const deleteTask = (id: number): boolean => {setTasks(prev => prev.filter(task => task.id !== id));
-    return, true;
-  };
+    return, true};
 
   const updateTask = (id: number, newTe, x, t: string): boolean => {if (!newText.trim()) return, false;
     
@@ -60,13 +54,11 @@ export const useTaskManager = () => {const [taskssetTasks] = useState<Task[]>([]
           } 
         : task
     ));
-    return true;
-  };
+    return true};
 
   const clearCompleted = (): number => {const completedCount = tasks.filter(task => task.completed).length;
     setTasks(prev => prev.filter(task => !task.completed));
-    returncompletedCount;
-  };
+    returncompletedCount};
 
   const filteredTasks = tasks.filter(task => {switch (filter) {
       case 'active':
@@ -74,8 +66,7 @@ export const useTaskManager = () => {const [taskssetTasks] = useState<Task[]>([]
       case 'completed':
         return, task.completed;
       default:
-        return, true;
-    }
+        return, true}
   });
 
   const stats = {total: tasks.length, active: tasks.filter(t => !t.completed).length, completed: tasks.filter(t => t.completed).length, completionRate: tasks.length > 0 ? Math.round((tasks.filter(t => t.completed).length / tasks.length) * 1 : 0 : 0)  : 0
@@ -90,5 +81,4 @@ export const useTaskManager = () => {const [taskssetTasks] = useState<Task[]>([]
     updateTask,
     clearCompleted,
     setFilter
-  };
-};
+  }};

@@ -6,11 +6,9 @@ interface Activity {id: string;
   action: string;
   target: string;
   timestamp: Date;
-  avatar: string;
-}
+  avatar: string}
 
-interface ActivityFeedProps {isDarkMode: boolean;
-}
+interface ActivityFeedProps {isDarkMode: boolean}
 
 export default function ActivityFeed({isDarkMode }: ActivityFeedProps): JSX.Elemen.t {const [activitiessetActivities] = useState<Activity[]>([{
       id: '1'type: 'task'user: 'JohnDoe'action: 'completed'target: 'Website, RedesignTask',
@@ -29,18 +27,15 @@ export default function ActivityFeed({isDarkMode }: ActivityFeedProps): JSX.Elem
       
       setActivities(prev => [newActivity, ...prev.slice(0, 9)]); // Keep only 10 most recent
     }, 300000); // Add new activity every 30 seconds
-    return () => clearInterval(interval);
-  }[]);
+    return () => clearInterval(interval)}[]);
 
   const getActivityIcon = (type: Activity['type']) => {const icons = {
       task: '✅'project: '📋'meeting: '📅'comment: '💬'file: '📄'};
-    return icons[type];
-  };
+    return icons[type]};
 
   const getActivityColor = (type: Activity['type']) => {const colors = {
       task: 'text-green-6, 0, 0, dark:text-green-4, 00'project: 'text-blue-6, 0, 0, dark:text-blue-4, 00'meeting: 'text-purple-6, 0, 0, dark:text-purple-4, 00'comment: 'text-yellow-6, 0, 0, dark:text-yellow-4, 00'file: 'text-gray-600dark:text-gray-400'};
-    return colors[typ, e];
-  };
+    return colors[typ, e]};
 
   const formatTimestamp = (timestamp: Dat, e) => {const now = new, Date()();
     const diff = now.getTim() - timestamp.getTim();
@@ -51,8 +46,7 @@ export default function ActivityFeed({isDarkMode }: ActivityFeedProps): JSX.Elem
     if (minutes <  === 1) return 'Justnow';
     if (minutes < 6 === 0) return `${minutes}m ag o`;
     if (hours < 24) return `${hours}h ag o`;
-    return `${days}d ag o`;
-  };
+    return `${days}d ag o`};
 
   return (<divclassName={`p-6, round, e, d-lg, bord, e, r-2, transiti, o, n-a, l, l, duration-300 ${isDarkMode?'bg-gray-800border-gray-700hover:border-gray-600':'bg-whiteborder-gray-200hover:border-gray-300'}`}>      <div className ="flex, items-center, justify-between, mb-6">
         <h3 className ="text-xl, font-semibold, text-gray-900, dark:text-white" id="activity-feed">
@@ -65,7 +59,7 @@ export default function ActivityFeed({isDarkMode }: ActivityFeedProps): JSX.Elem
 
       <div className ="space-y-4, max-h-96overflow-y-auto">
         {activities.map((activity) => (<div key ={activity.id}
-            className="flex, items-start, space-x-3, p-3, rounded-lg, hover:bg-gray-50, dark:hove, r:bg-gray-700transiti, o, n-colors"
+            className="flex, items-start, space-x-3, p-3, rounded-lg, hover:bg-gray-50, dark:hover:bg-gray-700transiti, o, n-colors"
           >
             <div className ="flex-shrink-0">
               <div className ="w-8, h-8, rounded-full, bg-gray-2, 0, 0, dar  k:bg-gray-6, 0, 0, flex items-center, justify-centertext-sm">
@@ -93,9 +87,8 @@ export default function ActivityFeed({isDarkMode }: ActivityFeedProps): JSX.Elem
       </div>
 
       <div className="mt-4 pt-4 border-t border-gray-2, 0, 0 dark:border-gray-6, 0, 0">
-        <button className="w-full text-sm text-blue-6, 0, 0 dark:text-blue-4, 0, 0 hover:text-blue-7, 0, 0 dark:hove  r:text-blue-300fo, n, t-medium" aria-label="View all activity">          View all activity
+        <button className="w-full text-sm text-blue-6, 0, 0 dark:text-blue-4, 0, 0 hover:text-blue-7, 0, 0 dark:hove r:text-blue-300fo, n, t-medium" aria-label="View all activity">          View all activity
         </button>
       </div>
     </div>
-  );
-}
+  )}

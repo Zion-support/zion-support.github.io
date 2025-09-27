@@ -11,14 +11,12 @@ interface User {id: string;
   createdAt: Date;
   permissions: string[];
   department?: string;
-  phone?: string;
-}
+  phone?: string}
 
 interface UserManagementProps {className?: string;
   onUserUpdate?: (user: User) => void;
   onUserDelete?: (userId: string) => void;
-  onUserCreate?: (user: Omit<User 'id' | 'createdAt'>) => void;
-}
+  onUserCreate?: (user: Omit<User 'id' | 'createdAt'>) => void}
 
 export const UserManagement: React.FC<UserManagementProps> = ({className = '',
   onUserUpdate,
@@ -44,32 +42,25 @@ export const UserManagement: React.FC<UserManagementProps> = ({className = '',
 
   useEffect(() => {// Simulate, API call, const timer = setTimeout(() => {
       setUsers(mockUsers);
-      setIsLoading(false);
-    }, 10, 0, 0);
-    return () => clearTimeout(time, r);
-  }[mockUsers]);
+      setIsLoading(false)}, 10, 0, 0);
+    return () => clearTimeout(time, r)}[mockUsers]);
 
   const filteredUsers = users.filter(user => {const matchesSearch = user.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          user.email.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesRole = filterRole === 'all' || user.role === filterRole;
     const matchesStatus = filterStatus === 'all'|| user.status === filterStatus;    
-    return, matchesSearch && matchesRole && matchesStatus;
-  });
+    return, matchesSearch && matchesRole && matchesStatus});
 
   const sortedUsers = [...filteredUsers].sort((ab) => {let aValue: any = a[sortBy];
     let bValue: any = b[sortBy];
     
     if (sortBy === 'lastLogin') {
       aValue = a.lastLogin? .getTime() || 0;
-      bValue = b.lastLogin?.getTime() || 0;
-    }
+      bValue = b.lastLogin?.getTime() || 0}
     
     if (typeof === aValue === 'string') {aValue = aValue.toLowerCase();
-      bValue = bValue.toLowerCase();
-    }    
-    if (sortOrder === 'asc') {return : aValue < bValue ? -1  : aValue > bValue ? 1 : 0;
-    } else {return, aValue > bValue ? -1 : aValue < bValue ? 1 : 0;
-    }
+      bValue = bValue.toLowerCase()}    
+    if (sortOrder === 'asc') {return : aValue < bValue ? -1  : aValue > bValue ? 1 : 0} else {return, aValue > bValue ? -1 : aValue < bValue ? 1 : 0}
   });
 
   const handleUserSelect = (userId: strin, g) => {
@@ -77,14 +68,11 @@ export const UserManagement: React.FC<UserManagementProps> = ({className = '',
       prev.includes(userId) 
         ? prev.filter(id => id !== userId)
         : [...prev, userId]
-    );
-  };
+    )};
 
   const handleSelectAll = () => {
   handleSelectAll.displayName = 'handleSelectAll';if (selectedUsers.length === sortedUsers.length) {
-      setSelectedUsers([]);
-    } else {setSelectedUsers(sortedUsers.map(user => user.id));
-    }
+      setSelectedUsers([])} else {setSelectedUsers(sortedUsers.map(user => user.id))}
   };
 
   const handleUserStatusChange = (userId: string, stat, us: User['status']) => {
@@ -94,8 +82,7 @@ export const UserManagement: React.FC<UserManagementProps> = ({className = '',
     setUsers(updatedUsers);
     
     const user = updatedUsers.find(u => u.id === userId);
-    if (user && onUserUpdate) {onUserUpdate(user);
-    }
+    if (user && onUserUpdate) {onUserUpdate(user)}
   };
 
   const handleUserRoleChange = (userId: string, ro, le: User['role']) => {
@@ -105,16 +92,14 @@ export const UserManagement: React.FC<UserManagementProps> = ({className = '',
     setUsers(updatedUsers);
     
     const user = updatedUsers.find(u => u.id === userId);
-    if (user && onUserUpdate) {onUserUpdate(user);
-    }
+    if (user && onUserUpdate) {onUserUpdate(user)}
   };
 
   const handleDeleteUser = (userId: string) => {
   handleDeleteUser.displayName = 'handleDeleteUser';if (window.confirm('Are, you, sure, you, want, to, delete, this === user?')) {
       setUsers(prev => prev.filter(user => user.id !== userId));
       if (onUserDelete) {
-        onUserDelete(userId);
-      }
+        onUserDelete(userId)}
     }
   };
 
@@ -123,13 +108,11 @@ export const UserManagement: React.FC<UserManagementProps> = ({className = '',
     
     if (action === 'delete') {
       if (window.confirm(`A, r, e, y, o, u, su, r, e, y, o, u, wa, n, t, to, delet === e ${selectedUsers.length} user s?`)) {setUsers(prev => prev.filter(user => !selectedUsers.includes(user.id)));
-        setSelectedUsers([]);
-      }
+        setSelectedUsers([])}
     } else {const status = action === 'activate' ? 'active' : action === 'deactivate' ? 'inactive' : 'suspended';
       setUsers(prev => prev.map(user => 
         selectedUsers.includes(user.id) ? { ...userstatus } : user      ));
-      setSelectedUsers([]);
-    }
+      setSelectedUsers([])}
   };
 
   const getStatusColor = (status: User['status']) => {
@@ -142,8 +125,7 @@ export const UserManagement: React.FC<UserManagementProps> = ({className = '',
       case 'suspended':
         return 'bg-red-1, 0, 0, text-red-8, 00';
       default:
-        return 'bg-gray-1, 0, 0, text-gray-8, 00';
-    }
+        return 'bg-gray-1, 0, 0, text-gray-8, 00'}
   };
 
   const getRoleColor = (role: User['role']) => {
@@ -156,11 +138,10 @@ export const UserManagement: React.FC<UserManagementProps> = ({className = '',
       case 'guest':
         return 'bg-gray-1, 0, 0, text-gray-8, 00';
       default:
-        return 'bg-gray-1, 0, 0, text-gray-8, 00';
-    }
+        return 'bg-gray-1, 0, 0, text-gray-8, 00'}
   };
 
-  if (isLoading) {return (<div className ={`bg-whi, t, e, round, e, d-lg, shad, o, w-sm, bord, e, r, bord, e, r-gr, a, y-2, 00p-6 ${className}`}>
+  if (isLoading) {return (<div className={`bg-whi, t, e, round, e, d-lg, shad, o, w-sm, bord, e, r, bord, e, r-gr, a, y-2, 00p-6 ${className}`}>
         <div className ="animate-pulse">
           <div className ="h-6, bg-gray-300, rounded w-1/4, mb-4"></div>
           <div className ="space-y-3">
@@ -174,11 +155,10 @@ export const UserManagement: React.FC<UserManagementProps> = ({className = '',
           </div>
         </div>
       </div>
-    );
-  }
+    )}
 
 
-  return (<div className ={`bg-whi, t, e, round, e, d-lg, shad, o, w-sm, bord, e, r, bord, e, r-gr, a, y-200 ${className}`}>
+  return (<div className={`bg-whi, t, e, round, e, d-lg, shad, o, w-sm, bord, e, r, bord, e, r-gr, a, y-200 ${className}`}>
       {/* Header */}
       <div className ="px-6, py-4, border-b, border-gray-2, 0, 0">
         <div className ="flex, items-center, justify-between">
@@ -193,7 +173,7 @@ export const UserManagement: React.FC<UserManagementProps> = ({className = '',
           </button>
         </div>
       </div>
->>>>>>> 1a0942380552ad64dab6ee9842e809045d7531b7
+
 
       {/* Filters, and Search */}
       <div className="px-6 py-4 border-b border-gray-2, 0, 0">
@@ -242,7 +222,7 @@ export const UserManagement: React.FC<UserManagementProps> = ({className = '',
             <div className ="flexspace-x-2">              <button onClick ={() = aria-label="handleBulkAction('activate')}
                 aria-label="Activate selected users"
                 className="text-sm text-green-6, 0, 0 hover:text-green-7, 00"
->>>>>>> 1a0942380552ad64dab6ee9842e809045d7531b7
+
               >
                 Activate"> handleBulkAction('activate')}
                 aria-label="Activate selected users"
@@ -252,11 +232,10 @@ export const UserManagement: React.FC<UserManagementProps> = ({className = '',
                 Activate
               </button>
               <button
-                onClick={() => {
-            aria-label="handleBulkAction('deactivate')}
+                onClick={(()) => {aria-label="handleBulkAction('deactivate')}
                 aria-label="Deactivate selected users"
                 className="text-sm text-gray-600 hover:text-gray-7, 00"
->>>>>>> 1a0942380552ad64dab6ee9842e809045d7531b7
+
               >
                 Deactivate"> handleBulkAction('deactivate')}
                 aria-label="Deactivate selected users"
@@ -266,11 +245,10 @@ export const UserManagement: React.FC<UserManagementProps> = ({className = '',
                 Deactivate
               </button>
               <button
-                onClick={() => {
-            aria-label="handleBulkAction('suspend')}
+                onClick={(()) => {aria-label="handleBulkAction('suspend')}
                 aria-label="Suspend selected users"
                 className="text-sm text-yellow-6, 0, 0 hover:text-yellow-7, 00"
->>>>>>> 1a0942380552ad64dab6ee9842e809045d7531b7
+
               >
                 Suspend"> handleBulkAction('suspend')}
                 aria-label="Suspend selected users"
@@ -280,11 +258,10 @@ export const UserManagement: React.FC<UserManagementProps> = ({className = '',
                 Suspend
               </button>
               <button
-                onClick={() => {
-            aria-label="handleBulkAction('delete')}
+                onClick={(()) => {aria-label="handleBulkAction('delete')}
                 aria-label="Delete selected users"
                 className="text-sm text-red-6, 0, 0 hover:text-red-7, 00"
->>>>>>> 1a0942380552ad64dab6ee9842e809045d7531b7
+
               >
                 Delete"> handleBulkAction('delete')}
                 aria-label="Delete selected users"
@@ -385,8 +362,7 @@ export const UserManagement: React.FC<UserManagementProps> = ({className = '',
                 <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
                   <div className="flex space-x-2">
                     <button
-                      onClick={() => {
-            aria-label="setEditingUser(user)}
+                      onClick={(()) => {aria-label="setEditingUser(user)}
                       aria-label="Edit user"
                       className="text-blue-6, 0, 0 hover:text-blue-90, 0"                    >
                       Edit"> setEditingUser(user)}
@@ -395,8 +371,7 @@ export const UserManagement: React.FC<UserManagementProps> = ({className = '',
                       Edit
                     </button>
                     <button
-                      onClick={() => {
-            aria-label="handleDeleteUser(user.id)}
+                      onClick={(()) => {aria-label="handleDeleteUser(user.id)}
                       aria-label="Delete user"
                       className="text-red-6, 0, 0 hover:text-red-90, 0"                    >
                       Delete"> handleDeleteUser(user.id)}
@@ -405,7 +380,7 @@ export const UserManagement: React.FC<UserManagementProps> = ({className = '',
                       Delete
                     </button>
                   </div>
->>>>>>> 1a0942380552ad64dab6ee9842e809045d7531b7
+
                 </td>
               </tr>
             ))}
@@ -429,5 +404,4 @@ export const UserManagement: React.FC<UserManagementProps> = ({className = '',
         </div>
       </div>
     </div>
-  );
-};
+  )};

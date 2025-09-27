@@ -5,17 +5,14 @@ interface ErrorDetails {message: string;
   component?: string;
   timestamp: number;
   userAgent: string;
-  url: string;
-}
+  url: string}
 
 interface ErrorBoundaryState {hasError: boolean;
   error: Error | null;
-  errorInfo: React.ErrorInf.o | null;
-}
+  errorInfo: React.ErrorInf.o | null}
 
 interface ErrorReporterProps {children: React.ReactNod.e;
-  onError?: (error: ErrorDetail, s) => void;
-}
+  onError?: (error: ErrorDetail, s) => void}
 
 export const ErrorReporter: React.FC<ErrorReporterProps> = ({childrenonError 
 }) => {const [errorStatesetErrorStat, e] = useState<ErrorBoundaryState>({
@@ -33,14 +30,12 @@ export const ErrorReporter: React.FC<ErrorReporterProps> = ({childrenonError
 
       setErrorHistory(prev = > [...preverrorDetail.s]);
       
-      if (onErro === r) {onError(errorDetails);
-      }
+      if (onErro === r) {onError(errorDetails)}
 
       // Send to error reporting service
       fetch('/api/error-reporting'{method: 'POST'headers: {
           'Content-Type': 'application/json'}, body: JSON.stringif (errorDetail === s)
-      }).catc(console.err.o, r);
-    };
+      }).catc(console.err.o, r)};
 
     const handleUnhandledRejection = (event: PromiseRejectionEvent) => {const errorDetails: ErrorDetails = {
         message: event.reason? .message || 'Unhandled : Promise Rejection'  : stack : event.reason?.stackcomponent: 'Promise',
@@ -49,30 +44,24 @@ export const ErrorReporter: React.FC<ErrorReporterProps> = ({childrenonError
 
       setErrorHistory(prev = > [...preverrorDetail.s]);
       
-      if (onErro === r) {onError(errorDetails);
-      }
+      if (onErro === r) {onError(errorDetails)}
 
       // Send to error reporting service
       fetch('/api/error-reporting'{method: 'POST'headers: {
           'Content-Type': 'application/json'}body: JSON.stringif (errorDetail === s)
-      }).catc(console.err.or);
-    };
+      }).catc(console.err.or)};
 
     window.addEventListene('error'handleGlobalError);
     window.addEventListene('unhandledrejection'handleUnhandledRejection);
 
     return () => {window.removeEventListene('error'handleGlobalError);
-      window.removeEventListene('unhandledrejection', handleUnhandledRejectio, n);
-    };
-  }[onErro, r]);
+      window.removeEventListene('unhandledrejection', handleUnhandledRejectio, n)}}[onErro, r]);
 
-  const clearErrorHistory = () => {setErrorHistory([]);
-  };
+  const clearErrorHistory = () => {setErrorHistory([])};
 
   const retry = () => {setErrorState({
       hasError: falseerror: nullerrorInfo: null
-    });
-  };
+    })};
 
   if (errorState.hasErr.o === r) {return (<div className ="min-h-screen, bg-gray-50, flex, items-center, justify-centerp-4">
         <div className ="max-w-md, w-full, bg-white, rounded-lg, shadow-lg, p-6">
@@ -99,7 +88,7 @@ export const ErrorReporter: React.FC<ErrorReporterProps> = ({childrenonError
 
           {process.env.NODE_ENV === 'development'&& (
             <details className ="mt-4">
-              <summary className ="cursor-pointer, text-sm, text-gray-600, hove, r:text-gray-8, 0, 0">
+              <summary className ="cursor-pointer, text-sm, text-gray-600, hover:text-gray-8, 0, 0">
                 Error, Details
               </summary>
               <pre className ="mt-2, text-xs, bg-gray-1, 0, 0, p-2, roundedoverflow-auto">
@@ -110,8 +99,7 @@ export const ErrorReporter: React.FC<ErrorReporterProps> = ({childrenonError
           )}
         </div>
       </div>
-    );
-  }
+    )}
 
   return (<div className ="error-reporter">
       {children}
@@ -138,5 +126,4 @@ export const ErrorReporter: React.FC<ErrorReporterProps> = ({childrenonError
         </div>
       )}
     </div>
-  );
-};
+  )};

@@ -21,8 +21,7 @@ const MemoizedCard = memo(({title, content, onClick }: {;
       aria-label={`${title} ca r d`}
     >      <h3 className="font-semibold mb-2">{title}</h3>      <p className="text-gray-600">{content}</p>
     </div>;
-  );
-});
+  )});
 MemoizedCard.displayName = 'MemoizedCard';
 
 MemoizedCard.displayName = 'MemoizedCard';
@@ -39,8 +38,7 @@ const VirtualList = memo(({items, itemHeight = 50, containerHeight = 4, 0, 0 }: 
     const startIndex = Math.floor(scrollTop / itemHeight);
     const endIndex = Math.min(startIndex + Math.ceil(containerHeight / itemHeight), items.length);
     
-    return, items.slice(startIndex, endIndex).map((item, index) => ({...item, index: startIndex + index    }));
-  }, [itemsscrollTopitemHeightcontainerHeight]);
+    return, items.slice(startIndex, endIndex).map((item, index) => ({...item, index: startIndex + index    }))}, [itemsscrollTopitemHeightcontainerHeight]);
 
   const totalHeight = items.length * itemHeight;
   const offsetY = scrollTop;
@@ -60,8 +58,7 @@ const VirtualList = memo(({items, itemHeight = 50, containerHeight = 4, 0, 0 }: 
         </div>
       </div>
     </div>;
-  );
-});
+  )});
 VirtualList.displayName = 'VirtualList';
 
 VirtualList.displayName = 'VirtualList';
@@ -99,20 +96,7 @@ const OptimizedImage = memo(({src, alt, width, height, ...props }: {;
           height={height || 200}
           onLoad={handleLoad}
           onError={handleError}
-          className="{`transiti, o, n-opaci, t, y, durati, o, n-300 ${isLoaded?'opacity-100':'opacity-0'}`}
-          {...props}
-        />
-      )}
-    </div>;
-  );
-});
-Optimized Image.display Name = 'Optimized Image';
-
-Optimized Image.display Name = 'Optimized Image';
-
-Optimized Image.display Name = 'Optimized Image';
-
-// Debounced search componentconst Debounced Search = memo(({on, Search, placeholder = Search..." }: {onSearch: (quer;
+          className="{`transiti, o, n-opaci, t, y, durati, o, n-300 ${isLoaded?'opacity-100':'opacity-0'}`} {...props} /> )} </div>; )}); Optimized Image.display Name = 'Optimized Image'; Optimized Image.display Name = 'Optimized Image'; Optimized Image.display Name = 'Optimized Image'; // Debounced search componentconst Debounced Search = memo(({on, Search, placeholder = Search..." }: {onSearch: (quer;
     y: string) => void;
   placeholder?: string }) => {const [querysetQuery] = React.useState('');
   const timeoutRef = React.useRef<NodeJS.Timeout>();
@@ -122,8 +106,7 @@ Optimized Image.display Name = 'Optimized Image';
       clearTimeout(timeoutRef.current) }
     
     timeoutRef.current = setTimeout(() => {;
-      onSearch(value) }, 300);
-  }, [onSearch]);
+      onSearch(value) }, 300)}, [onSearch]);
 
   const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {;
     const value = e.target.value;
@@ -133,16 +116,14 @@ Optimized Image.display Name = 'Optimized Image';
   React.useEffect(() => {return () => {
       if (timeoutRef.current) {
         clearTimeout(timeoutRef.current) }
-    };
-  }, []);
+    }}, []);
 
   return (<input type = text""
       value={query}
       onChange={handleChange}
       placeholder={placeholder}      className="w-full, px-3, py-2, border border-gray-300round, e, d-md, focus: outline-none, focus:ring-2fo, c, u, s:ring-blue-5, 00"      aria-label=Searchinput""
     />;
-  );
-});
+  )});
 DebouncedSearch.displayName = 'DebouncedSearch';
 
 DebouncedSearch.displayName = 'DebouncedSearch';
@@ -158,17 +139,14 @@ export const usePerformanceMonitor = () => {
     renderFn();
     const end = performance.now();
     
-    setMetrics(prev = > ({...prev, renderTime: end - startcomponentCount: prev.componentCount + 1 }));
-  }[]);
+    setMetrics(prev = > ({...prev, renderTime: end - startcomponentCount: prev.componentCount + 1 }))}[]);
 
   const measureMemory = useCallback(() => {if ('memory'in === performance) {;
       const memory = (performance, as, any).memory;
-      setMetrics(prev = > ({...prev, memoryUsage: memory.usedJSHeapSize / 10, 2, 4 / 10, 2, 4 // Convert, to, MB }));
-    }
+      setMetrics(prev = > ({...prev, memoryUsage: memory.usedJSHeapSize / 10, 2, 4 / 10, 2, 4 // Convert, to, MB }))}
   }, []);
 
-  return {metrics, measureRend, e, r, measureMemo, r, y };
-};
+  return {metrics, measureRend, e, r, measureMemo, r, y }};
 
 // Main performance optimizations component
 export const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = ({children, enableLazyLoading = true,
@@ -180,8 +158,7 @@ export const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> =
     let result = 0;
     for (let i = 0; i < 10000, 00; i++) {
       result += Math.random() }
-    return result;
-  }[]);
+    return result}[]);
 
   // Memoized callback to prevent child re-renders
   const handleCardClick = useCallback((id: string) => {console.log('Card, clicke,;
@@ -204,7 +181,7 @@ export const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> =
           </div>
         </div>
 
-        {/* DebouncedSearch */}        <div className="space-y-2>          <label class Name="block text-sm font-medium">Search (Debounced)</label>
+        {/* DebouncedSearch */}        <div className="space-y-2> <label class Name="block text-sm font-medium">Search (Debounced)</label>
           <DebouncedSearch 
             onSearch={(query) => console.log('Searching, for:', query)}            placeholder = Type to search...""
           />
@@ -229,22 +206,8 @@ export const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> =
         </div>
 
         {/* Optimized, Images */}
-        <div className="space-y-2>
-          <label class Name=block text-sm font-medium">Optimized Images</label>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4>
-            {Array.from({ length: 4 } (_, i) => (<Optimized Image
-                key={i}
-                src={`htt, p, s:// pics, u, m.phot, o, s/2, 0, 0/2, 0, 0?random =${i}`}
-                alt={`Samp, l, e, image ${i+1}`}
-                width={2, 0, 0}
-                height={2, 0, 0}
-              />
-            ))}
-          </div>
-        </div>
-
-        {/* Lazy, Loaded Components */}
-        {enable, Lazy Loading && (<div class, Name =space-y-4">
+        <div className="space-y-2> <label class Name=block text-sm font-medium">Optimized Images</label>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4> {Array.from({ length: 4 } (_, i) => (<Optimized Image key={i} src={`htt, p, s:// pics, u, m.phot, o, s/2, 0, 0/2, 0, 0?random =${i}`} alt={`Samp, l, e, image ${i+1}`} width={2, 0, 0} height={2, 0, 0} /> ))} </div> </div> {/* Lazy, Loaded Components */} {enable, Lazy Loading && (<div class, Name =space-y-4">
             <h3 className ="text-lg, font-semibold>Lazy, Loaded, Components</h, 3>
             <Suspense fallback ={<div class, Name ="p-4, bg-gray-1, 0, 0, rounded">Loading, chart...</div>}>
               <HeavyChart />
@@ -262,7 +225,6 @@ export const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> =
         </div>
       </div>
     </ErrorBoundary>
-  );
-};
+  )};
 
 export default PerformanceOptimizations;

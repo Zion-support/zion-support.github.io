@@ -56,20 +56,14 @@ export default function Home(): JSX.Element {
           if (entry.entryType === 'navigation') {
             setPerformanceMetrics({
               loadTime: entry.loadEventEnd - entry.fetchStart,
-              domContentLoaded: entry.domContentLoadedEventEnd - entry.fetchStart,
-            });
-          }
-        });
-      });
+              domContentLoaded: entry.domContentLoadedEventEnd - entry.fetchStart})}
+        })});
       
       try {
-        observer.observe({ entryTypes: ['navigation'] });
-      } catch (e) {
-        console.warn('Performance observer not supported');
-      }
+        observer.observe({ entryTypes: ['navigation'] })} catch (e) {
+        console.warn('Performance observer not supported')}
       
-      return () => observer.disconnect();
-    }
+      return () => observer.disconnect()}
   }, []);
 
   const handleGetStarted = useCallback(() => {
@@ -78,8 +72,7 @@ export default function Home(): JSX.Element {
       window.gtag('event', 'click', {
         event_category: 'engagement',
         event_label: 'get_started_button'
-      });
-    }
+      })}
   }, []);
 
   const features = useMemo(() => [
@@ -319,8 +312,7 @@ export default function Home(): JSX.Element {
               >
                 {/* <AdvancedPerformanceMonitor 
                   onMetricsUpdate={(metrics) => {
-                    console.log('Performance metrics updated:', metrics);
-                  }}
+                    console.log('Performance metrics updated:', metrics)}}
                   className="h-full"
                 /> */}
               </motion.div>
@@ -415,8 +407,7 @@ export default function Home(): JSX.Element {
               >
                 {/* <AdvancedAccessibilityAuditor 
                   onAuditComplete={(metrics) => {
-                    console.log('Accessibility audit completed:', metrics);
-                  }}
+                    console.log('Accessibility audit completed:', metrics)}}
                   className="h-full"
                 /> */}
               </motion.div>
@@ -449,5 +440,4 @@ export default function Home(): JSX.Element {
         </section>
       </div>
     </>
-  );
-}
+  )}

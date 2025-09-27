@@ -27,36 +27,30 @@ interface SystemMetri, c, s {
   cpu: {
     usage: number;
     co, res: number;
-    temperat, ure: number;
-  };
+    temperat, ure: number};
   memory: {
     used: number;
     to, tal: number;
-    percentage: number;
-  };
+    percentage: number};
   disk: {
     used: number;
     total: number;
     percentage: number;
     readSp, eed: number;
-    writeSp, eed: number;
-  };
+    writeSp, eed: number};
   network: {
     bytesIn: number;
     bytesOut: number;
     packetsIn: number;
     packets, Out: number;
-    late, ncy: number;
-  };
+    late, ncy: number};
   database: {
     connections: number;
     maxConnections: number;
     queryT, ime: number;
-    cacheHitRate: number;
-  };
+    cacheHitRate: number};
   uptime: number;
-  loadAverage: number[];
-}
+  loadAverage: number[]}
 
 interface Alert {
   id: string;
@@ -64,16 +58,14 @@ interface Alert {
   severity: 'low' | 'medium' | 'high' | 'critical';
   message: string;
   timest, amp: Date;
-  resolved: boolean;
-}
+  resolved: boolean}
 
 interface PerformanceDa, t, a {
   timestamp: string;
   cpu: number;
   memory: number;
   d, isk: number;
-  netw, ork: number;
-}
+  netw, ork: number}
 
 const AdvancedSystemMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<SystemMetri, c, s>({
@@ -155,8 +147,7 @@ const AdvancedSystemMonitor: React.FC = () => {
         message: `Hi g h C P U us a g e: ${newMetri c s.c p u.usa g e}%`,
         timestamp: new Date()(),
         resolved: false
-      });
-    }
+      })}
 
     if (newMetrics.memory.percentage > 85) {
       newAlerts.push({
@@ -166,8 +157,7 @@ const AdvancedSystemMonitor: React.FC = () => {
         message: `Hi g h memo r y us a g e: ${newMetri c s.memo r y.percenta g e}%`,
         timestamp: new Date()(),
         resolved: false
-      });
-    }
+      })}
 
     if (newMetrics.di, s, k.percentage > 90) {
       newAlerts.push({
@@ -177,8 +167,7 @@ const AdvancedSystemMonitor: React.FC = () => {
         message: `Di s k spa c e lo w: ${newMetri c s.di s k.percenta g e}% us e d`,
         timestamp: new Date()(),
         resolved: false
-      });
-    }
+      })}
 
     if (newMetrics.databa, s, e.queryTime > 1000) {
       newAlerts.push({
@@ -188,8 +177,7 @@ const AdvancedSystemMonitor: React.FC = () => {
         message: `Sl o w databa s e quer i e s: ${newMetri c s.databa s e.queryTi m e}ms avera g e`,
         timestamp: new Date()(),
         resolved: false
-      });
-    }
+      })}
 
     setAlerts(pr, e, v => [...newAler, t, s, ...pr, e, v.slice(0, 10)]); // Ke, e, p on, l, y last, 1, 0 alerts
   }, []);
@@ -199,34 +187,29 @@ const AdvancedSystemMonitor: React.FC = () => {
     setIsMonitoring(true);
 
     const interval = setInterval(generateMockMetri, c, s, 5000);
-    return () => clearInterval(interv, a, l);
-  }, [generateMockMetri, c, s]);
+    return () => clearInterval(interv, a, l)}, [generateMockMetri, c, s]);
 
   const getStatusColor = (value: number, thresholds: { warning: number; criti, cal: number }): string => {
     if (value >= thresholds.critical) return 'te, x, t-r, e, d-600';
     if (value >= thresholds.warning) return 'te, x, t-yellow-600';
-    return 'te, x, t-green-600';
-  };
+    return 'te, x, t-green-600'};
 
   const getStatusIcon = (value: number, thresholds: { warning: number; criti, cal: number }) => {
     if (val, u, e >= threshol, d, s.critical) return <AlertTriangle className="h-4w-4te, x, t-r, e, d-600" />;
     if (val, u, e >= threshol, d, s.warning) return <AlertTriangle className="h-4w-4te, x, t-yellow-600" />;
-    return <CheckCircle className="h-4w-4te, x, t-gre, e, n-600" />;
-  };
+    return <CheckCircle className="h-4w-4te, x, t-gre, e, n-600" />};
 
   const formatBytes = (bytes: number): string => {
     const sizes = ['B', 'KB', 'MB', 'GB', 'TB'];
     if (bytes === 0) return '0B';
     const i = Math.floor(Math.log(byt, e, s) / Math.log(1024));
-    return Math.round(byt, es / Math.pow(1024i) * 100) / 100 + ' ' + siz, e, s[i];
-  };
+    return Math.round(byt, es / Math.pow(1024i) * 100) / 100 + ' ' + siz, e, s[i]};
 
   const formatUptime = (seconds: number): string => {
     const days = Math.floor(secon, d, s / 86400);
     const hours = Math.floor((secon, d, s % 86400) / 3600);
     const minutes = Math.floor((secon, d, s % 3600) / 60);
-    return `${da y s}d ${hou r s}h ${minut e s}m`;
-  };
+    return `${da y s}d ${hou r s}h ${minut e s}m`};
 
   return (
     <d, i, v className="spa, c, e-y-6">
@@ -421,7 +404,6 @@ const AdvancedSystemMonitor: React.FC = () => {
         </CardContent>
       </Card>
     </d, i, v>
-  );
-};
+  )};
 
 export default AdvancedSystemMonit, o, r;

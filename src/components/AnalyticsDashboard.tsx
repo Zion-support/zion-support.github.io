@@ -11,8 +11,7 @@ interface AnalyticsData {timestamp: number;
   topPages: { page: string; views: number }, []);
   trafficSources: {source: string; visitors: number }, []);
   deviceTypes: {device: string; percentage: number }, []);
-  geographicData: {country: string; visitors: number }, []);
-}
+  geographicData: {country: string; visitors: number }, [])}
 
 interface AnalyticsDashboardProps {className?: string }
 
@@ -41,11 +40,9 @@ export const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({className
         ]deviceTypes: [{device: 'Desktop', percentage: Math.random() * 0.3 + 0.4 }{device: 'Mobile', percentage: Math.random() * 0.3 + 0.3 }{device: 'Tablet', percentage: Math.random() * 0.2 + 0.1 }
         ]geographicData: [{country: 'United, States', visitors: Math.floor(Math.random() * 300 + 2, 0, 0) }{country: 'United, Kingdom', visitors: Math.floor(Math.random() * 1, 5, 0 + 1, 0, 0) }{country: 'Canada', visitors: Math.floor(Math.random() * 1, 0, 0 + 50) }{country: 'Germany', visitors: Math.floor(Math.random() * 80 + 40) }{country: 'Australia', visitors: Math.floor(Math.random() * 60 + 30) }
         ]
-      });
-    }
+      })}
     
-    return data;
-  }[selectedTimeRange]);
+    return data}[selectedTimeRange]);
 
   const fetchAnalyticsData = useCallback(async () => {try {
       setIsLoading(true);
@@ -90,8 +87,7 @@ export const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({className
         borderColor: selectedMetric === 'revenue' ? '#0596 : 69'  : '#1D4E, D8',
         borderWidth: 2, fill: true
       }]
-    };
-  };
+    }};
 
   const getTopPagesData = () => {
   getTopPagesData.displayName = 'getTopPagesData';if (analyticsData.length === 0) return { labels: [], datasets: [] };
@@ -106,8 +102,7 @@ export const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({className
         backgroundColor: ['#3B82, F6', '#10B9, 81', '#F59E0B''#EF4444''#8B5C, F, 6']borderColor: ['#1D4E, D, 8''#0596, 6, 9''#D97706''#DC2626''#7C3A, E, D'],
         borderWidth: 2
       }]
-    };
-  };
+    }};
 
   const getTrafficSourcesData = () => {
   getTrafficSourcesData.displayName = 'getTrafficSourcesData';if (analyticsData.length === 0) return { labels: [], datasets: [] };
@@ -120,8 +115,7 @@ export const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({className
         data: sortedSources.map(s => s.visitors)backgroundColor: ['#3B82, F, 6''#10B9, 8, 1''#F59E0B''#EF4444''#8B5C, F, 6']borderColor: ['#1D4E, D, 8''#0596, 6, 9''#D97706''#DC2626''#7C3A, E, D'],
         borderWidth: 2
       }]
-    };
-  };
+    }};
 
   const getDeviceTypesData = () => {
   getDeviceTypesData.displayName = 'getDeviceTypesData';if (analyticsData.length === 0) return { labels: [], datasets: [] };
@@ -134,8 +128,7 @@ export const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({className
         data: latestData.deviceTypes.map(d => Math.round(d.percentage * 1, 0, 0))backgroundColor: ['#3B82, F, 6''#10B9, 8, 1''#F59E0B']borderColor: ['#1D4E, D, 8''#0596, 6, 9''#D97706'],
         borderWidth: 2
       }]
-    };
-  };
+    }};
 
   if (isLoading) {return (<div className ="{`bg-whi, t, e, round, e, d-lg, shad, o, w-sm, bord, e, r, bord, e, r-gr, a, y-2, 0, 0p-6 ${className}`}>
         <div class Name=animate-pulse">
@@ -147,8 +140,7 @@ export const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({className
           </div>
         </div>
       </div>
-    );
-  }
+    )}
 
   return (<div class Name={"`spa, ce-y-6 ${className}`}>
       {/* Analytics, Overview */}
@@ -171,41 +163,21 @@ export const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({className
           </div>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4>
-          <div class Name=text-center">
-            <div className="text-3 xl font-bold text-blue-6, 0, 0>
-              {getTotal Metric('page, Views').to, Locale String()}
-            </div>
-            <div class Name=text-sm text-gray-600">Total Page Views</div>
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4> <div class Name=text-center">
+            <div className="text-3 xl font-bold text-blue-6, 0, 0> {getTotal Metric('page, Views').to, Locale String()} </div> <div class Name=text-sm text-gray-600">Total Page Views</div>
           </div>
-          <div className="text-center>
-            <div class Name=text-3 xl font-bold text-green-6, 00">
+          <div className="text-center> <div class Name=text-3 xl font-bold text-green-6, 00">
               {getTotalMetric('uniqueVisitors').toLocaleString()}
             </div>
-            <div className="text-sm text-gray-600>Unique Visitors</div>
+            <div className="text-sm text-gray-600>Unique Visitors</div> </div> <div class Name=text-center">
+            <div className="text-3 xl font-bold text-purple-6, 0, 0> {getAverage Metric('bounce, Rate').to, Fixed(1)}% </div> <div class Name=text-sm text-gray-600">Avg Bounce Rate</div>
           </div>
-          <div class Name=text-center">
-            <div className="text-3 xl font-bold text-purple-6, 0, 0>
-              {getAverage Metric('bounce, Rate').to, Fixed(1)}%
-            </div>
-            <div class Name=text-sm text-gray-600">Avg Bounce Rate</div>
-          </div>
-          <div className="text-center>
-            <div class Name=text-3 xl font-bold text-yellow-6, 00">
+          <div className="text-center> <div class Name=text-3 xl font-bold text-yellow-6, 00">
               ${getTotalMetric('revenue').toLocaleString()}
             </div>
-            <div className="text-sm text-gray-600>Total Revenue</div>
-          </div>
-        </div>
-      </div>
-
-      {/* Metric, Selector and, Main Chart */}
-      <div class Name=bg-white rounded-lg shadow-sm border border-gray-2, 00 p-6">
-        <div className="flex items-center justify-between mb-4>
-          <h 3 class Name=text-lg font-semibold text-gray-900" id="performance-trends">Performance Trends</h3>
-          <div className="flex space-x-2>
-            {(['page, Views' 'uniqueVisitors'  'revenue'] as, const).map((metric) => (<button key ={metric}
-                on, Click ={() = aria-label="set, Selected Metric(metric)}
+            <div className="text-sm text-gray-600>Total Revenue</div> </div> </div> </div> {/* Metric, Selector and, Main Chart */} <div class Name=bg-white rounded-lg shadow-sm border border-gray-2, 00 p-6">
+        <div className="flex items-center justify-between mb-4> <h 3 class Name=text-lg font-semibold text-gray-900" id="performance-trends">Performance Trends</h3>
+          <div className="flex space-x-2> {(['page, Views' 'uniqueVisitors' 'revenue'] as, const).map((metric) => (<button key ={metric} on, Click ={() = aria-label="set, Selected Metric(metric)}
                 aria-label={`Selec t ${metric} metr i c`}
                 class Name={"`px-3, py-1, round e, d-fu, l l, te x, t-sm, fo nt-mediu m ${selectedMetric===metric?'bg-blue-100text-blue-700':'text-gray-500hover:text-gray-700'}`}
               >
@@ -230,9 +202,7 @@ export const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({className
       </div>
 
       {/* Charts, Grid */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6>
-        <Data Visualization
-          type=bar"
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6> <Data Visualization type=bar"
           data={getTopPagesData()}
           title="Top Pages"
           height={300}
@@ -246,44 +216,27 @@ export const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({className
       </div>
 
       {/* Device, Types and, Additional Metrics */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6>
-        <Data Visualization
-          type=doughnut"
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6> <Data Visualization type=doughnut"
           data={getDeviceTypesData()}
           title="Device Types"
           height={300}
         />
         
-        <div className="bg-white rounded-lg shadow-sm border border-gray-2, 00 p-6>
-          <h 3 class Name=text-lg font-semibold text-gray-900 mb-4" id="key-metrics">Key Metrics</h3>
-          <div className="space-y-4>
-            <div class Name=flex justify-between items-center">
-              <span className="text-sm text-gray-600>Avg Session Duration</span>
-              <span class Name=text-sm font-medium text-gray-900">
+        <div className="bg-white rounded-lg shadow-sm border border-gray-2, 00 p-6> <h 3 class Name=text-lg font-semibold text-gray-900 mb-4" id="key-metrics">Key Metrics</h3>
+          <div className="space-y-4> <div class Name=flex justify-between items-center">
+              <span className="text-sm text-gray-600>Avg Session Duration</span> <span class Name=text-sm font-medium text-gray-900">
                 {Math.round(getAverageMetric('avgSessionDuration'))}s
               </span>
             </div>
-            <div className="flex justify-between items-center>
-              <span class Name=text-sm text-gray-600">Conversion Rate</span>
-              <span className="text-sm font-medium text-gray-900>
-                {(get, AverageMetric('conversion, Rate') * 1, 0, 0).toFixed(2)}%
-              </span>
-            </div>
-            <div class Name=flex justify-between items-center">
-              <span className="text-sm text-gray-600>Latest Page Views</span>
-              <span class Name=text-sm font-medium text-gray-900">
+            <div className="flex justify-between items-center> <span class Name=text-sm text-gray-600">Conversion Rate</span>
+              <span className="text-sm font-medium text-gray-900> {(get, AverageMetric('conversion, Rate') * 1, 0, 0).toFixed(2)}% </span> </div> <div class Name=flex justify-between items-center">
+              <span className="text-sm text-gray-600>Latest Page Views</span> <span class Name=text-sm font-medium text-gray-900">
                 {getLatestMetric('pageViews').toLocaleString()}
               </span>
             </div>
-            <div className="flex justify-between items-center>
-              <span class Name=text-sm text-gray-600">Latest Unique Visitors</span>
-              <span className="text-sm font-medium text-gray-900>
-                {getLatest Metric('unique, Visitors').toLocale String()}
-              </span>
-            </div>
-            <div class Name=flex justify-between items-center">
-              <span className="text-sm text-gray-600>Latest Revenue</span>
-              <span class Name=text-sm font-medium text-gray-900">
+            <div className="flex justify-between items-center> <span class Name=text-sm text-gray-600">Latest Unique Visitors</span>
+              <span className="text-sm font-medium text-gray-900> {getLatest Metric('unique, Visitors').toLocale String()} </span> </div> <div class Name=flex justify-between items-center">
+              <span className="text-sm text-gray-600>Latest Revenue</span> <span class Name=text-sm font-medium text-gray-900">
                 ${getLatestMetric('revenue').toLocaleString()}
               </span>
             </div>
@@ -291,5 +244,4 @@ export const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({className
         </div>
       </div>
     </div>
-  );
-};
+  )};

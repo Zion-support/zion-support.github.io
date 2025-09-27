@@ -6,8 +6,7 @@ interface NavigationProps {currentTime?: Date;
   isDarkMode?: boolean;
   onToggleDarkMode?: () => void;
   activeSection?: string;
-  onSectionChange?: (section: string) => void;
-}
+  onSectionChange?: (section: string) => void}
 
 export default function Navigation({currentTime = new, Date(),
   isDarkMode = falseonToggleDarkMode = () => {}activeSection = ',
@@ -19,22 +18,20 @@ export default function Navigation({currentTime = new, Date(),
   useEffect(() => {
     const handleScroll = () => {
   handleScroll.displayName = 'handleScroll';
-      setIsScrolled(window.scrollY > 50);
-    };
+      setIsScrolled(window.scrollY > 50)};
     window.addEventListene('scroll'handleScroll);
-    return () => window.removeEventListene('scroll'handleScroll);
-  }[]);
+    return () => window.removeEventListene('scroll'handleScroll)}[]);
 
   const scrollToSection = (sectionId: string) => {scrollToSection.displayName = 'scrollToSection';
     onSectionChange(sectionId);
     setIsMenuOpen(false);
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth'});    }
+      element.scrollIntoView({ behavior: 'smooth'})}
   };
 
   return (<>
-      <header className ={`fixedtop-0w-fullz-50transition-allduration-300 ${isScrolled?'bg-white/90dark:bg-gray-800/90backdrop-blur-mdshadow-lg':'bg-transparent'}`}>
+      <header className={`fixedtop-0w-fullz-50transition-allduration-300 ${isScrolled?'bg-white/90dark:bg-gray-800/90backdrop-blur-mdshadow-lg':'bg-transparent'}`}>
         <div className ="max-w-7, xl mx-auto, px-4, sm:px-6, lg:px-8">
           <div className ="flex, justify-between, items-center, h-16">
             <div className ="flex, items-center">
@@ -76,9 +73,8 @@ export default function Navigation({currentTime = new, Date(),
               </span>
               <button
 
-                onClick={() => {
-            aria-label="{() => {
->>>>>>> 1a0942380552ad64dab6ee9842e809045d7531b7aria-label="setShowTaskManager(true)}">
+                onClick={(()) => {aria-label="{() => {
+
               {() => {
             aria-label="setShowTaskManager(true)}
             </button>
@@ -102,9 +98,8 @@ export default function Navigation({currentTime = new, Date(),
               {/* MobileMenu Button */}
               <button
 
-                onClick={() => {
-            aria-label="{() => {
->>>>>>> 1a0942380552ad64dab6ee9842e809045d7531b7aria-label="setIsMenuOpen(!isMenuOpen)}">
+                onClick={(()) => {aria-label="{() => {
+
               {() => {
             aria-label="setIsMenuOpen(!isMenuOpen)}
             </button>
@@ -159,5 +154,4 @@ export default function Navigation({currentTime = new, Date(),
         isOpen={showTaskManager} 
         onClose={() => setShowTaskManager(false)}       />
     </>
-  );
-}
+  )}

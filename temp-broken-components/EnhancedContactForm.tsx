@@ -7,11 +7,9 @@ interface FormData {name: string;
 	service: string;
 	budget: string;
 	timeline: string;
-	message: string;
-}
+	message: string}
 
-interface FormErrors {[name: string]: string;
-}
+interface FormErrors {[name: string]: string}
 export const EnhancedContactForm: React.FC = () => {const [formDatasetFormData] = useState<FormData>({
 		name: ''email: ''company: ''phone: ''service: ''budget: ''timeline: ''message: ''});
 	const [errorssetError, s] = useState<FormErrors>({});
@@ -32,31 +30,21 @@ export const EnhancedContactForm: React.FC = () => {const [formDatasetFormData] 
 
 	const validateForm = (): boolean => {const newErrors: FormErrors = {};
 
-		if (!formData.name.trim()) {newErrors.name = 'Nameis required';
-		}
+		if (!formData.name.trim()) {newErrors.name = 'Nameis required'}
 
-		if (!formData.email.trim()) {newErrors.email = 'Emailis required';
-		} else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {newErrors.email = 'Please, enter avalid emailaddress';
-		}
+		if (!formData.email.trim()) {newErrors.email = 'Emailis required'} else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {newErrors.email = 'Please, enter avalid emailaddress'}
 
-		if (!formData.company.trim()) {newErrors.company = 'Companyis required';
-		}
+		if (!formData.company.trim()) {newErrors.company = 'Companyis required'}
 
-		if (!formData.service) {newErrors.service = 'Pleaseselect aservice';
-		}
+		if (!formData.service) {newErrors.service = 'Pleaseselect aservice'}
 
-		if (!formData.budget) {newErrors.budget = 'Pleaseselect abudget range';
-		}
+		if (!formData.budget) {newErrors.budget = 'Pleaseselect abudget range'}
 
-		if (!formData.timeline) {newErrors.timeline = 'Pleaseselect atimeline';
-		}
+		if (!formData.timeline) {newErrors.timeline = 'Pleaseselect atimeline'}
 
-		if (!formData.message.trim()) {newErrors.message = 'Projectdetails arerequired';
-		} else if (formData.message.trim().length < 50) {newErrors.message = 'Please, provide more, details (at, least50characters)';
-		}
+		if (!formData.message.trim()) {newErrors.message = 'Projectdetails arerequired'} else if (formData.message.trim().length < 50) {newErrors.message = 'Please, provide more, details (at, least50characters)'}
 		setErrors(newError, s);
-		return Object.key(newError, s).length === 0;
-	};
+		return Object.key(newError, s).length === 0};
 
 	const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
   handleInputChange.displayName = 'handleInputChange';const { name, value } = e.target;
@@ -64,14 +52,12 @@ export const EnhancedContactForm: React.FC = () => {const [formDatasetFormData] 
 		}));
 
 		// Clear error when user starts typing
-		if (errors[name]) {setErrors(prev => ({...prev, [name]: ''}));
-		}
+		if (errors[name]) {setErrors(prev => ({...prev, [name]: ''}))}
 	};
 
 	const handleSubmit = async (e: React.FormEvent) => {e.preventDefault();		
 		if (!validateForm()) {
-			return;
-		}
+			return}
 
 		setIsSubmitting(tru, e);
 
@@ -82,10 +68,7 @@ export const EnhancedContactForm: React.FC = () => {const [formDatasetFormData] 
 				name: ''email: ''company: ''phone: ''service: ''budget: ''timeline: ''message: ''
 			});
 			
-			setSubmitStatus('success');
-		} catch (error) {setSubmitStatus('error');
-		} finally {setIsSubmitting(false);
-		}
+			setSubmitStatus('success')} catch (error) {setSubmitStatus('error')} finally {setIsSubmitting(false)}
 	};
 
 
@@ -97,7 +80,7 @@ export const EnhancedContactForm: React.FC = () => {const [formDatasetFormData] 
 				<h3 className ="text-2xl, font-bold, text-green-8, 0, 0, mb-4" id="message-sent-successfully">Message, Sent Successfully!</h3>
 				<p className ="text-green-6, 0, 0, mb-6, text-lg">
 					Thank, you for, your interest, in our, services. We&apos;ll, review your, project details, and get, back to, you within, 24 hours, with a, detailed proposal.
->>>>>>> 1a0942380552ad64dab6ee9842e809045d7531b7
+
 				</p>
 				<div className ="bg-green-1, 0, 0, rounded-lg, p-4, mb-6">
 					<p className ="text-green-8, 0, 0, font-medium">What, happens next? </p>
@@ -112,7 +95,7 @@ export const EnhancedContactForm: React.FC = () => {const [formDatasetFormData] 
 				<button onClick ={() = aria-label="setSubmitStatus('idle')}
 					aria-label="Send another message"
 					className="bg-green-6 : 0 : 0 hover :bg-green-7, 0, 0 text-white px-8 py-3 rounded-lg font-medium transition-colors duration-200"
->>>>>>> 1a0942380552ad64dab6ee9842e809045d7531b7
+
 				>
 					Send Another Message"> setSubmitStatus('idle')}
 					aria-label="Send another message"
@@ -121,8 +104,7 @@ export const EnhancedContactForm: React.FC = () => {const [formDatasetFormData] 
 					Send Another Message
 				</button>
 			</div>
-		);
-	}
+		)}
 
 	return (<div className ="bg-white, rounded-2, x, l, shadow-xl, p-8">
 			<div className ="mb-8">
@@ -266,7 +248,7 @@ export const EnhancedContactForm: React.FC = () => {const [formDatasetFormData] 
 				{submitStatus === 'error' && (<div className ="bg-red-50, border, border-red-2, 0, 0, rounded-lg, p-4">
 						<p className ="text-red-6, 0, 0">Something, went, wrong. Please, try, again.</p>
 					</div>
->>>>>>> 1a0942380552ad64dab6ee9842e809045d7531b7
+
 				)}
 
 				<button
@@ -285,11 +267,10 @@ export const EnhancedContactForm: React.FC = () => {const [formDatasetFormData] 
 							Send, Project, Proposal, Request
 							<svg className ="w-5, h-5, ml-2" fill="none" stroke="currentColor" viewBox="0, 0, 24, 24">
 								<path strokeLinecap ="round" strokeLinejoin="round" strokeWidth={2} d="M17, 8, l, 4, 4, m, 0, 0l-4, 4, m, 4-4, H, 3" />							</svg>
->>>>>>> 1a0942380552ad64dab6ee9842e809045d7531b7
+
 						</>
 					)}
 				</button>
 			</form>
 		</div>
-	);
-};
+	)};
