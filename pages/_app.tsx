@@ -125,11 +125,9 @@ export default function App({ Component, pageProps }: AppProps) {
           padding: 0;
           margin: -1px;
           overflow: hidden;
-         ,
-		clip: rect(0, 0, 0, 0);
+          clip: rect(0, 0, 0, 0);
           white-space: nowrap;
-         ,
-		border: 0}
+          border: 0;
       `}</style>
       <PerformanceOptimizer>
         <Component {...pageProps} />
