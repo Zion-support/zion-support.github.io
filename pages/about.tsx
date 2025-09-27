@@ -51,44 +51,38 @@ const About = React.memo(function About(): JSX.Element {
       description: 'We stay at the forefront of technology, constantly exploring new possibilities and pushing the boundaries of what\'s possible.',
       icon: '🚀',
       color: 'blue'
-    }
+    },
     {
-      title: 'Cli e n t Succ e s s'
-      description: 'Y o u r succ e s s i s ou r succ e s s. W e&a p o s;r e commit t e d t o deliver i n g soluti o n s t h a t dr i v e r e a l busin e s s va l u e an d gro w t h.'
-      icon: '🎯'
-      color: 'gr e e n'
-    }
+      title: 'Client Success',
+      description: 'Your success is our success. We\'re committed to delivering solutions that drive real business value and growth.',
+      icon: '🎯',
+      color: 'green'
+    },
     {
-      title: 'Qual i t y Excelle n c e'
-      description: 'W e maint a i n th e high e s t standa r d s i n everyth i n g w e d o from c o d e qual i t y t o u s e r experie n c e.'
-      icon: '⭐'
-      color: 'yel l o w'
-    }
+      title: 'Quality Excellence',
+      description: 'We maintain the highest standards in everything we do from code quality to user experience.',
+      icon: '⭐',
+      color: 'yellow'
+    },
     {
-      title: 'Transpar e n t Communicat i o n'
-      description: 'Cl e a r hon e s t communicat i o n i s th e foundat i o n o f ou r relationsh i p s w i t h clie n t s an d t e a m memb e r s.'
-      icon: '💬'
-      color: 'pur p l e'
-    }
+      title: 'Transparent Communication',
+      description: 'Clear honest communication is the foundation of our relationships with clients and team members.',
+      icon: '💬',
+      color: 'purple'
+    },
     {
-      title: 'Continu o u s Learn i n g'
-      description: 'W e embr a c e cha n g e an d continuou s l y le a r n ad a p t an d impr o v e t o s t a y ahead i n th e f a s t-pa c e d t e c h wo r l d.'
-      icon: '📚'
-      color: 'ind i g o'
-    }
-    {
-      title: 'Collaborat i v e Appro a c h'
-      description: 'W e beli e v e i n th e po w e r o f collaborat i o n work i n g a s a n extens i o n o f y o u r t e a m t o achi e v e sha r e d go a l s an d mut u a l succ e s s.'
-      icon: '🤝'
-      color: 'ora n g e'
+      title: 'Continuous Learning',
+      description: 'We embrace change and continuously learn adapt and improve to stay ahead in the fast-paced tech world.',
+      icon: '📚',
+      color: 'indigo'
     }
   ];
 
-  const st a t s = [
-    { number: '10 0+' la b e l: 'Proje c t s Comple t e d' }
-    { number: '5 0+' la b e l: 'Ha p p y Clie n t s' }
-    { number: '1 0+' la b e l: 'Ye a r s Experie n c e' }
-    { number: '2 4/7' la b e l: 'Supp o r t Availa b l e' }
+  const stats = [
+    { number: '100+', label: 'Projects Completed' },
+    { number: '50+', label: 'Happy Clients' },
+    { number: '10+', label: 'Years Experience' },
+    { number: '24/7', label: 'Support Available' }
   ];
 
   return (

@@ -60,14 +60,14 @@ export default function Contact(): JSX.Element {
     {
       icon: '📞',
       title: 'Call Us',
-      details: '+1 (555) 123-4567'
-      description: 'Mo n-Fr i from 9a m t o 6p m ES T'
-    }
+      details: '+1 (555) 123-4567',
+      description: 'Mon-Fri from 9am to 6pm EST'
+    },
     {
-      icon: '📍'
-      title: 'Vi s i t U s'
-      details: '12 3 T e c h Str e e t Silicon Val l e y C A 94 0 0 0'
-      description: 'C o m e sa y he l l o a t ou r off i c e'
+      icon: '📍',
+      title: 'Visit Us',
+      details: '123 Tech Street Silicon Valley CA 94000',
+      description: 'Come say hello at our office'
     }
   ];
 
