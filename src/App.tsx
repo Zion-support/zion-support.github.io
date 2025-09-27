@@ -93,7 +93,7 @@ export default function App(): React.JSX.Element {
     });
 
     // Initialize enhanced security features
-    securityManager.monitorSecurityEvents();
+    securityManagerInstance.monitorSecurityEvents();
 
     // Initialize cache manager
     cacheManager.configure({
