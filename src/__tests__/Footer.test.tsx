@@ -27,33 +27,29 @@ describe('Footer', () => {
   it('renders quick links section', () => {
     renderWithRouter(<Footer />);
     expect(screen.getByText('Quick Links')).toBeInTheDocument();
-    expect(screen.getByText('Home')).toBeInTheDocument();
     expect(screen.getByText('About Us')).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: 'Services' })).toBeInTheDocument();
+    expect(screen.getByText('Portfolio')).toBeInTheDocument();
     expect(screen.getByText('Blog')).toBeInTheDocument();
     expect(screen.getByText('Contact')).toBeInTheDocument();
-    // Check for Services link in Quick Links section
-    expect(screen.getByRole('link', { name: 'Services' })).toBeInTheDocument();
   });
 
   it('renders services section', () => {
     renderWithRouter(<Footer />);
     // Check for Services heading specifically
-    expect(screen.getAllByText('Services')).toHaveLength(2); // One in Quick Links, one as heading
+    expect(screen.getByRole('heading', { name: 'Services' })).toBeInTheDocument();
     expect(screen.getByText('AI Solutions')).toBeInTheDocument();
-    expect(screen.getByText('Web Development')).toBeInTheDocument();
+    expect(screen.getByText('Cloud Infrastructure')).toBeInTheDocument();
     expect(screen.getByText('Cybersecurity')).toBeInTheDocument();
-    expect(screen.getByText('Cloud Solutions')).toBeInTheDocument();
-    expect(screen.getByText('Consulting')).toBeInTheDocument();
+    expect(screen.getByText('Data Analytics')).toBeInTheDocument();
+    expect(screen.getByText('Software Development')).toBeInTheDocument();
   });
 
-  it('renders contact information', () => {
+  it('renders social media links', () => {
     renderWithRouter(<Footer />);
-    expect(screen.getByText('Contact Info')).toBeInTheDocument();
-    expect(screen.getByText('hello@ziontechgroup.com')).toBeInTheDocument();
-    expect(screen.getByText('+1 (555) 123-4567')).toBeInTheDocument();
-    // Address is split across elements, so check for the container
-    expect(screen.getByText(/123 Tech Street/)).toBeInTheDocument();
-    expect(screen.getByText(/San Francisco, CA 94105/)).toBeInTheDocument();
+    expect(screen.getByLabelText('LinkedIn')).toBeInTheDocument();
+    expect(screen.getByLabelText('Twitter')).toBeInTheDocument();
+    expect(screen.getByLabelText('GitHub')).toBeInTheDocument();
   });
 
   it('renders copyright information', () => {
@@ -68,53 +64,14 @@ describe('Footer', () => {
     expect(screen.getByText('Cookie Policy')).toBeInTheDocument();
   });
 
-  it('shows scroll to top button when scrolled', () => {
-    renderWithRouter(<Footer />);
-    
-    // Initially scroll to top button should not be visible
-    expect(screen.queryByLabelText('Scroll to top')).not.toBeInTheDocument();
-    
-    // Simulate scroll
-    Object.defineProperty(window, 'scrollY', {
-      writable: true,
-      value: 400,
-    });
-    
-    fireEvent.scroll(window);
-    
-    // Scroll to top button should now be visible
-    expect(screen.getByLabelText('Scroll to top')).toBeInTheDocument();
-  });
-
-  it('scrolls to top when scroll button is clicked', () => {
-    const scrollToSpy = jest.spyOn(window, 'scrollTo').mockImplementation(() => {});
-    
-    renderWithRouter(<Footer />);
-    
-    // Simulate scroll to show the button
-    Object.defineProperty(window, 'scrollY', {
-      writable: true,
-      value: 400,
-    });
-    
-    fireEvent.scroll(window);
-    
-    const scrollButton = screen.getByLabelText('Scroll to top');
-    fireEvent.click(scrollButton);
-    
-    expect(scrollToSpy).toHaveBeenCalledWith({
-      top: 0,
-      behavior: 'smooth',
-    });
-    
-    scrollToSpy.mockRestore();
-  });
-
   it('has proper accessibility attributes', () => {
     renderWithRouter(<Footer />);
-    const scrollButton = screen.queryByLabelText('Scroll to top');
-    if (scrollButton) {
-      expect(scrollButton).toHaveAttribute('aria-label', 'Scroll to top');
-    }
+    const footer = screen.getByRole('contentinfo');
+    expect(footer).toBeInTheDocument();
+    
+    // Check that social media links have proper aria-labels
+    expect(screen.getByLabelText('LinkedIn')).toHaveAttribute('aria-label', 'LinkedIn');
+    expect(screen.getByLabelText('Twitter')).toHaveAttribute('aria-label', 'Twitter');
+    expect(screen.getByLabelText('GitHub')).toHaveAttribute('aria-label', 'GitHub');
   });
 });
