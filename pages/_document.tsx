@@ -34,9 +34,15 @@ export default function Document() {
                 window.addEventListener('load', function() {
                   navigator.serviceWorker.register('/sw.js')
                     .then(function(registration) {
-                      console.log('SW registered: 'registration)})
+                      console.log('SW registered: ', registration);
+                    })
                     .catch(function(registrationError) {
->>>>>> cursor/check-fix-push-and-merge-to-main-94f6
+                      console.log('SW registration failed: ', registrationError);
+                    });
+                });
+              }
+            `
+          }}
         />
       </Head>
       <body>
