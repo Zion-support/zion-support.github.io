@@ -27,15 +27,15 @@ export default function App({ Component, pageProps }: AppProps) {
     <HelmetProvider>
       <Head>
         <title>Zion App - Advanced Technology Solutions</title>
-        <meta name="description" content="Leading provider of AI-powered business solutions cloud infrastructure and digital transformation services." />
+        <meta name="description" content="Leading provider of AI-powered business solutions, cloud infrastructure and digital transformation services." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Component {...pageProps} />
-      {/* Temporarily disabled for build
+      {/* Temporarilydisabled forbuild
       <AccessibilityAuditor />
       <PerformanceOptimizer />
       <WebVitals />
-      */}
+        */}
     </HelmetProvider>
   )}
