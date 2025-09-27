@@ -254,8 +254,17 @@ export class PerformanceOptimizer {
 
   private async loadComponent(componentName: string, element: HTMLElement): Promise<void> {
     try {
-      // Dynamic import for code splitting
-      const module = await import(`../components/${componentName}.tsx`);
+      // Use a more targeted approach for dynamic imports to avoid conflicts
+      // Only load components that are not already statically imported
+      const loadableComponents = ['LazyModal', 'LazyChart', 'LazyEditor']; // Only truly lazy components
+      
+      if (!loadableComponents.includes(componentName)) {
+        console.warn(`Component ${componentName} is statically imported and should not be dynamically loaded`);
+        return;
+      }
+      
+      // Dynamic import for truly lazy components only
+      const module = await import(`../components/lazy/${componentName}.tsx`);
       // Component would be used for rendering in a real implementation
       const Component = module.default || module[componentName];
       

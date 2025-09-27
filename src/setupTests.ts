@@ -51,9 +51,11 @@ if (!window.performance) {
 
 // Mock PerformanceObserver
 global.PerformanceObserver = class PerformanceObserver {
-  constructor(callback: PerformanceObserverCallback) {}
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  constructor(_callback: PerformanceObserverCallback) {}
   disconnect() {}
-  observe(options?: PerformanceObserverInit) {}
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  observe(_options?: PerformanceObserverInit) {}
   takeRecords() { return []; }
 };
 

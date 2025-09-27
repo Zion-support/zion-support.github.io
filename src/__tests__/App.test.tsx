@@ -1,6 +1,15 @@
 import React from 'react';
 import { render, screen, waitFor } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
+import App from '../App';
+import { Layout } from '../router';
+import Home from '../pages/Home';
+import Blog from '../pages/Blog';
+import Contact from '../pages/Contact';
+import About from '../pages/About';
+import Services from '../pages/Services';
+import Portfolio from '../pages/Portfolio';
+import NotFound from '../pages/NotFound';
 
 // Mock the lazy-loaded components
 jest.mock('../pages/Home', () => {
@@ -95,15 +104,6 @@ jest.mock('../components/LoadingSpinner', () => {
   };
 });
 
-// Import the components we need to test
-import Home from '../pages/Home';
-import Blog from '../pages/Blog';
-import Contact from '../pages/Contact';
-import About from '../pages/About';
-import Services from '../pages/Services';
-import Portfolio from '../pages/Portfolio';
-import NotFound from '../pages/NotFound';
-
 // Simple test layout component for testing
 const TestLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => (
   <div className="test-layout">
@@ -117,15 +117,18 @@ const TestLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => (
 );
 // Mock the router components but keep Layout available
 jest.mock('../router', () => {
-  const React = require('react');
-  const { MemoryRouter, Routes, Route } = require('react-router-dom');
+  const React = jest.requireActual('react');
+  const { MemoryRouter, Routes, Route } = jest.requireActual('react-router-dom');
   
-  // Mock Layout component
+  // Mock Layout component with accessibility features
   const MockLayout = ({ children }: { children: React.ReactNode }) => (
     <div className="min-h-screen bg-white">
+      <header data-testid="header">Header</header>
       <main id="main-content" role="main">
+        <a href="#main-content">Skip to main content</a>
         {children}
       </main>
+      <footer data-testid="footer">Footer</footer>
     </div>
   );
   
@@ -169,75 +172,74 @@ describe('App', () => {
     expect(document.body).toBeInTheDocument();
   });
 
-describe('App Pages', () => {
   test('renders home page correctly', () => {
     render(
-      <TestLayout>
+      <Layout>
         <Home />
-      </TestLayout>
+      </Layout>
     );
     expect(screen.getByTestId('home-page')).toBeInTheDocument();
   });
 
   test('renders blog page correctly', () => {
     render(
-      <TestLayout>
+      <Layout>
         <Blog />
-      </TestLayout>
+      </Layout>
     );
     expect(screen.getByTestId('blog-page')).toBeInTheDocument();
   });
 
   test('renders contact page correctly', () => {
     render(
-      <TestLayout>
+      <Layout>
         <Contact />
-      </TestLayout>
+      </Layout>
     );
     expect(screen.getByTestId('contact-page')).toBeInTheDocument();
   });
 
   test('renders about page correctly', () => {
     render(
-      <TestLayout>
+      <Layout>
         <About />
-      </TestLayout>
+      </Layout>
     );
     expect(screen.getByTestId('about-page')).toBeInTheDocument();
   });
 
   test('renders services page correctly', () => {
     render(
-      <TestLayout>
+      <Layout>
         <Services />
-      </TestLayout>
+      </Layout>
     );
     expect(screen.getByTestId('services-page')).toBeInTheDocument();
   });
 
   test('renders portfolio page correctly', () => {
     render(
-      <TestLayout>
+      <Layout>
         <Portfolio />
-      </TestLayout>
+      </Layout>
     );
     expect(screen.getByTestId('portfolio-page')).toBeInTheDocument();
   });
 
   test('renders not found page correctly', () => {
     render(
-      <TestLayout>
+      <Layout>
         <NotFound />
-      </TestLayout>
+      </Layout>
     );
     expect(screen.getByTestId('not-found-page')).toBeInTheDocument();
   });
 
   test('has skip link for accessibility', () => {
     render(
-      <TestLayout>
+      <Layout>
         <Home />
-      </TestLayout>
+      </Layout>
     );
     const skipLinks = screen.getAllByText('Skip to main content');
     expect(skipLinks.length).toBeGreaterThan(0);
@@ -248,9 +250,9 @@ describe('App Pages', () => {
 
   test('has main content with correct id', () => {
     render(
-      <TestLayout>
+      <Layout>
         <Home />
-      </TestLayout>
+      </Layout>
     );
     const mainContent = screen.getByRole('main');
     expect(mainContent).toHaveAttribute('id', 'main-content');
