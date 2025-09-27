@@ -115,4 +115,72 @@
   .skip-link:focus {
     top: 6px;
   }
+
+  /* Accessibility enhancements */
+  .accessibility-enhanced.reduced-motion * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .accessibility-enhanced.high-contrast {
+    filter: contrast(150%) brightness(1.2);
+  }
+
+  .accessibility-controls {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .accessibility-btn {
+    background: #1e40af;
+    color: white;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-weight: 600;
+    transition: all 0.2s;
+  }
+
+  .accessibility-btn:hover {
+    background: #1d4ed8;
+    transform: scale(1.05);
+  }
+
+  .accessibility-btn:focus {
+    outline: 2px solid #60a5fa;
+    outline-offset: 2px;
+  }
+
+  /* Focus indicators */
+  .focus-visible:focus-visible {
+    outline: 2px solid #60a5fa;
+    outline-offset: 2px;
+  }
+
+  /* High contrast mode */
+  @media (prefers-contrast: high) {
+    .card {
+      border: 2px solid #ffffff;
+    }
+    
+    .btn-primary {
+      border: 2px solid #ffffff;
+    }
+    
+    .btn-secondary {
+      border: 2px solid #ffffff;
+    }
+  }
+
+  /* Reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
 }
