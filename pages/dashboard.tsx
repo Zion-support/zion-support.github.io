@@ -1,4 +1,4 @@
-import React, { useState  useEffect  useMemo  useCallback } from 'react';
+import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
 
@@ -101,7 +101,7 @@ import dynamic from 'next/dynamic';
 // });
 
 const EnhancedUserExperience = dynamic(() => import('../src/components/EnhancedUserExperience'), {
-  ssr: false 
+  ssr: false,
   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
 });
 
@@ -130,9 +130,9 @@ const EnhancedUserExperience = dynamic(() => import('../src/components/EnhancedU
 type DashboardTab = 'comprehensive' | 'analytics' | 'performance' | 'security' | 'enhanced' | 'search' | 'advanced-analytics' | 'advanced-performance' | 'advanced-security' | 'accessibility' | 'system-monitor' | 'security-enhancements' | 'performance-optimizer' | 'user-experience' | 'error-handler' | 'analytics-insights' | 'error-monitoring' | 'advanced-system-monitor' | 'new-performance' | 'new-security' | 'new-analytics' | 'comprehensive-monitoring' | 'comprehensive-security';
 
 const Dashboard: React.FC = () => {
-  const [activeTab  setActiveTab] = useState<DashboardTab>('comprehensive');
-  const [isRealTime  setIsRealTime] = useState(true);
-  const [isLoading  setIsLoading] = useState(false);
+	const [activeTab, setActiveTab] = useState<DashboardTab>('comprehensive');
+	const [isRealTime, setIsRealTime] = useState(true);
+	const [isLoading, setIsLoading] = useState(false);
 
   // Optimized tab switching with loading state
   const handleTabChange = useCallback((tabId: DashboardTab) => {
@@ -143,30 +143,30 @@ const Dashboard: React.FC = () => {
       setTimeout(() => setIsLoading(false), 100)}
   }, [activeTab]);
 
-  const tabs = useMemo(() => [
-    { id: 'comprehensive' as const  name: 'Comprehensive', icon: '🎯' },
-    { id: 'analytics' as const  name: 'Analytics', icon: '📊' },
-    { id: 'performance' as const  name: 'Performance', icon: '⚡' },
-    { id: 'security' as const  name: 'Security', icon: '🔒' },
-    { id: 'enhanced' as const  name: 'Enhanced Dashboard', icon: '🚀' },
-    { id: 'search' as const  name: 'Search', icon: '🔍' },
-    { id: 'advanced-analytics' as const  name: 'Advanced Analytics', icon: '📈' },
-    { id: 'advanced-performance' as const  name: 'Advanced Performance', icon: '⚡️' },
-    { id: 'advanced-security' as const  name: 'Advanced Security', icon: '🛡️' },
-    { id: 'accessibility' as const  name: 'Accessibility', icon: '♿' },
-    { id: 'system-monitor' as const  name: 'System Monitor', icon: '📊' },
-    { id: 'security-enhancements' as const  name: 'Security Enhancements', icon: '🔐' },
-    { id: 'performance-optimizer' as const  name: 'Performance Optimizer', icon: '⚙️' },
-    { id: 'user-experience' as const  name: 'User Experience', icon: '👤' },
-    { id: 'error-monitoring' as const  name: 'Error Monitoring', icon: '🚨' },
-    { id: 'advanced-system-monitor' as const  name: 'Advanced System Monitor', icon: '🔧' },
-    { id: 'new-performance' as const  name: 'New Performance', icon: '⚡️' },
-    { id: 'new-security' as const  name: 'New Security', icon: '🛡️' },
-    { id: 'new-analytics' as const  name: 'New Analytics', icon: '📊' },
-    { id: 'error-handler' as const  name: 'Error Handler', icon: '🚨' },
-    { id: 'analytics-insights' as const  name: 'Analytics Insights', icon: '💡' },
-    { id: 'comprehensive-monitoring' as const  name: 'Comprehensive Monitoring', icon: '📊' },
-    { id: 'comprehensive-security' as const  name: 'Comprehensive Security', icon: '🛡️' }
+	const tabs = useMemo(() => [
+		{ id: 'comprehensive' as const, name: 'Comprehensive', icon: '🎯' },
+		{ id: 'analytics' as const, name: 'Analytics', icon: '📊' },
+		{ id: 'performance' as const, name: 'Performance', icon: '⚡' },
+		{ id: 'security' as const, name: 'Security', icon: '🔒' },
+    { id: 'enhanced' as const, name: 'Enhanced Dashboard', icon: '🚀' },
+    { id: 'search' as const, name: 'Search', icon: '🔍' },
+    { id: 'advanced-analytics' as const, name: 'Advanced Analytics', icon: '📈' },
+    { id: 'advanced-performance' as const, name: 'Advanced Performance', icon: '⚡️' },
+    { id: 'advanced-security' as const, name: 'Advanced Security', icon: '🛡️' },
+    { id: 'accessibility' as const, name: 'Accessibility', icon: '♿' },
+    { id: 'system-monitor' as const, name: 'System Monitor', icon: '📊' },
+    { id: 'security-enhancements' as const, name: 'Security Enhancements', icon: '🔐' },
+    { id: 'performance-optimizer' as const, name: 'Performance Optimizer', icon: '⚙️' },
+    { id: 'user-experience' as const, name: 'User Experience', icon: '👤' },
+    { id: 'error-monitoring' as const, name: 'Error Monitoring', icon: '🚨' },
+    { id: 'advanced-system-monitor' as const, name: 'Advanced System Monitor', icon: '🔧' },
+    { id: 'new-performance' as const, name: 'New Performance', icon: '⚡️' },
+    { id: 'new-security' as const, name: 'New Security', icon: '🛡️' },
+    { id: 'new-analytics' as const, name: 'New Analytics', icon: '📊' },
+    { id: 'error-handler' as const, name: 'Error Handler', icon: '🚨' },
+    { id: 'analytics-insights' as const, name: 'Analytics Insights', icon: '💡' },
+    { id: 'comprehensive-monitoring' as const, name: 'Comprehensive Monitoring', icon: '📊' },
+    { id: 'comprehensive-security' as const, name: 'Comprehensive Security', icon: '🛡️' }
   ], []);
 
   // Sample data for advanced components - memoized to prevent re-creation

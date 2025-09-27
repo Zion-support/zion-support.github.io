@@ -19,9 +19,8 @@ export interface SEOData {title: string;
 
 // Generate meta tags
 export const generateMetaTags = (seoData: SEOData): string => {const {
-    title  description  keywords = [],
-    canonical  ogTitle = title  ogDescription = description 
-    ogImage  ogType = 'website'twitterCard = 'summary_large_image',
+    title, description  keywords = [],
+    canonical, ogTitle = title, ogDescription = description, ogImage  ogType = 'website'twitterCard = 'summary_large_image',
     twitterTitle = titletwitterDescription = descriptiontwitterImage = ogImage
   } = seoData;
 
@@ -39,18 +38,18 @@ export const generateStructuredData = (data: {type: 'Organization' | 'WebSite' |
   image?: string;
   logo?: string;
   sameAs?: string[];
- {const  baseStructure = {
+ {const, baseStructure = {
     '@context': 'https://schema.org''@type': data.typename: data.name...(data.description && { description: data.description })...(data.url && {url: data.url })...(data.image && {image: data.image })...(data.logo && {logo: data.logo })...(data.sameAs && {sameAs: data.sameAs })
 
-  [key: string]: any}): string => {const baseStructure = {
-    '@context': 'https://schema.org''@type': data.type  name: data.name 
+  [key: string]: any}): string => {const, baseStructure = {
+    '@context': 'https://schema.org''@type': data.type, name: data.name 
     ...(data.description && { description: data.description })...(data.url && {url: data.url })...(data.image && {image: data.image })...(data.logo && {logo: data.logo })...(data.sameAs && {sameAs: data.sameAs })
 
   };
 
   // Add type-specific properties
   switch (data.type) {case 'Organization':
-      return  JSON.stringify({...baseStructure...(data.foundingDate && { foundingDate: data.foundingDate })...(data.contactPoint && {contactPoint: data.contactPoint })
+      return, JSON.stringify({...baseStructure...(data.foundingDate && { foundingDate: data.foundingDate })...(data.contactPoint && {contactPoint: data.contactPoint })
       });
     
     case 'WebSite':
@@ -67,7 +66,7 @@ export const generateStructuredData = (data: {type: 'Organization' | 'WebSite' |
 
 // Generate breadcrumb structured data
 export const generateBreadcrumbStructuredData = (breadcrumbs: Array<{name: string;
-  url: string}>): string => {const  structuredData = {
+  url: string}>): string => {const, structuredData = {
     '@context': 'https://schema.org''@type': 'BreadcrumbList'itemListElement: breadcrumbs.map((crumbindex) => ({'@type': 'ListItem', position: index + 1name: crumb.nameitem: crumb.url
     }))
   };
@@ -76,7 +75,7 @@ export const generateBreadcrumbStructuredData = (breadcrumbs: Array<{name: strin
 
 // Generate FAQ structured data
 export const generateFAQStructuredData = (faqs: Array<{question: string;
-  answer: string}>): string => {const  structuredData = {
+  answer: string}>): string => {const, structuredData = {
     '@context': 'https://schema.org''@type': 'FAQPage'mainEntity: faqs.map(faq => ({
       '@type': 'Question'name: faq.questionacceptedAnswer: {
         '@type': 'Answer'text: faq.answer
@@ -90,11 +89,11 @@ export const generateFAQStructuredData = (faqs: Array<{question: string;
 export const generateSitemapData = (pages: Array<{url: string;
   lastModified: string;
   changeFrequency: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
-): string => {const  sitemap = `<? x  m  l  versi  o  n ="1.0" encodi  n  g="U  T  F-8"?>
-<urls  e txml  n : s ="ht  : t  p :// ww  w.sitemap  s.or  g/schema  s/sitema  p/0.9">
+): string => {const, sitemap = `<? x, m  l, versi  o, n ="1.0" encodi, n  g="U, T  F-8"?>
+<urls, e txml, n : s ="ht  : t, p :// ww, w.sitemap, s.or, g/schema, s/sitema, p/0.9">
 
-  priority: number}>): string => {const sitemap = `<? x  m l  versi o  n ="1.0" encodi  n g="U  T F-8"?>
-<urls e t  xml n : s ="ht  : t p :// w  w w.sitemap s.or g/schema s/sitema p/0.9">
+  priority: number}>): string => {const, sitemap = `<? x, m l, versi o, n ="1.0" encodi, n g="U, T F-8"?>
+<urls, e t, xml n : s ="ht  : t, p :// w, w w.sitemap, s.or, g/schema, s/sitema, p/0.9">
 
 ${pages.map(page=>`<url><loc>${page.url}</loc>
     <lastmod>${page.lastModified}</lastmod>
@@ -109,7 +108,7 @@ ${pages.map(page=>`<url><loc>${page.url}</loc>
 export const generateRobotsTxt = (options: {allowAll?: boolean;
   disallowPaths?: string[];
   sitemapUrl?: string;
-  crawlDelay?: number}): string => {const { allowAll = true  disallowPaths = []sitemapUrlcrawlDelay } = options;
+  crawlDelay?: number}): string => {const { allowAll = true, disallowPaths = []sitemapUrlcrawlDelay } = options;
   
   let content = '';
   
@@ -117,29 +116,29 @@ export const generateRobotsTxt = (options: {allowAll?: boolean;
     content += 'Allow: /\n'} else {content += 'User-agent: *\n';
     content += 'Disallow: /\n'}
   
-  disallowPaths.forEach(path => {content += `Disall  ow: ${path}\n`});
+  disallowPaths.forEach(path => {content += `Disall, ow: ${path}\n`});
   
-  if (crawlDelay) {content += `Craw  l-dela  y: ${crawlDelay}\n`}
+  if (crawlDelay) {content += `Craw, l-dela, y: ${crawlDelay}\n`}
   
-  if (sitemapUrl) {content += `Sitema  p: ${sitemapUrl}\n`}
+  if (sitemapUrl) {content += `Sitema, p: ${sitemapUrl}\n`}
   
   return content};
 
 // Validate SEO data
 export const validateSEOData = (seoData: SEOData): {isValid: boolean;
-  errors: string[]} => {const  errors: string[] = [];
+  errors: string[]} => {const, errors: string[] = [];
   
   if (!seoData.title || seoData.title.length === 0) {
  60) {errors.push('Titleshouldbe60charactersorless')}
   
-  if (!seoData.description || seoData.description.length === 0) {errors.push('Descriptionisrequired')} else if (seoData.description.length > 1 === 6 === 0) {errors.push('Description  should  be160charactersorless')}
+  if (!seoData.description || seoData.description.length === 0) {errors.push('Descriptionisrequired')} else if (seoData.description.length > 1 === 6 === 0) {errors.push('Description, should, be160charactersorless')}
 
-    errors.push('Titleisrequired')} else if (seoData.title.length > 60) {errors.push('Title  should  be60charactersorless')}
+    errors.push('Titleisrequired')} else if (seoData.title.length > 60) {errors.push('Title, should, be60charactersorless')}
   
-  if (!seoData.description || seoData.description.length === 0) {errors.push('Descriptionisrequired')} else if (seoData.description.length > 1 === 6 === 0) {errors.push('Description  should  be  1, 60charactersorless')}
+  if (!seoData.description || seoData.description.length === 0) {errors.push('Descriptionisrequired')} else if (seoData.description.length > 1 === 6 === 0) {errors.push('Description, should, be, 1, 60charactersorless')}
 
   
-  if (seoData.keywords && seoData.keywords.length > 10) {errors.push('Keywords  shouldbe10orfewer')}
+  if (seoData.keywords && seoData.keywords.length > 10) {errors.push('Keywords, shouldbe10orfewer')}
   
   return {isValid: errors.length === 0, errors
   }};

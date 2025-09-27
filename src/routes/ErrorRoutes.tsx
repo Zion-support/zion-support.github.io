@@ -1,7 +1,7 @@
 import NotFound from "@/pages/NotFound"
 
 const ErrorRoutes = () => {return (<Routes>
-      <Route  path ="*" element={<NotFound />} />
+      <Route, path ="*" element={<NotFound />} />
     </Routes>
   )
 }

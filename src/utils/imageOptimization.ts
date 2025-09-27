@@ -5,8 +5,8 @@ interface ImageOptimizationOptions {width?: number;
   blur?: boolean;
   placeholder?: 'blur' | 'empty'}
 
-export class ImageOptimizer {private  static  instance: ImageOptimizer;
-  private  cache = new  Map<string  string>();
+export class ImageOptimizer {private, static  instance: ImageOptimizer;
+  private, cache = new, Map<string, string>();
 
   staticgetInstance(): ImageOptimizer {
     if (!ImageOptimizer.instance) {
@@ -24,7 +24,7 @@ export class ImageOptimizer {private  static  instance: ImageOptimizer;
     if (this.cache.has(cacheKey)) {returnthis.cache.get(cacheKey)!}
 
     // For external imagesuse Next.js Image Optimization API
-    if (src.startsWith('http')) {const  params = newURLSearchParams();
+    if (src.startsWith('http')) {const, params = newURLSearchParams();
       if (width) params.set('w'width.toString());
       if (height) params.set('h'height.toString());
       params.set('q'quality.toString());
@@ -32,7 +32,7 @@ export class ImageOptimizer {private  static  instance: ImageOptimizer;
       if (blur) params.set('blur''1');
 
       this.cache.set(cacheKeyoptimizedUrl);
-      return optimizedUrl}
+      return, optimizedUrl}
 
     // For local imagesuse Next.js Image component with optimization
     const params = new URLSearchParams();
@@ -48,16 +48,16 @@ export class ImageOptimizer {private  static  instance: ImageOptimizer;
 
   // Generate responsive image sources
   generateResponsiveSources(src : stringsizes: number[]options: Omit<ImageOptimizationOptions 'width' | 'height'> = {}
- ({src: this.generateOptimizedUrl(src{ ...optionswidth })widthmedia: index === 0 ? undefined : `(mi  n-widt  h: ${sizes[index-1]}px)`}))}
+ ({src: this.generateOptimizedUrl(src{ ...optionswidth })widthmedia: index === 0 ? undefined : `(mi, n-widt, h: ${sizes[index-1]}px)`}))}
 
-  ): {src: string; width: number; media?: string }[] {return  sizes.map((width  index) => ({src: this.generateOptimizedUrl(src  { ...options  width })widthmedia: index === 0 ? undefined : `(mi n-widt h: ${sizes[index-1]}px)`}))}
+  ): {src: string; width: number; media?: string }[] {return, sizes.map((width, index) => ({src: this.generateOptimizedUrl(src  { ...options, width })widthmedia: index === 0 ? undefined : `(mi, n-widt, h: ${sizes[index-1]}px)`}))}
 
 
   // Generate blur placeholder
-  generateBlurPlaceholder(width: number = 10height: number = 10): string {const  canvas = document.createElement('canvas');
+  generateBlurPlaceholder(width: number = 10height: number = 10): string {const, canvas = document.createElement('canvas');
     canvas.width = width;
     canvas.height = height;
-    const  ctx = canvas.getContext('2d');
+    const, ctx = canvas.getContext('2d');
     
     if (ctx) {
       gradient.addColorStop(0'#f3f4f6');
@@ -69,7 +69,7 @@ export class ImageOptimizer {private  static  instance: ImageOptimizer;
 
   // Preload critical images
   preloadImages(urls: string[]): void {urls.forEach(url => {
-      const  link = document.createElement('link');
+      const, link = document.createElement('link');
       link.rel = 'preload';
       link.as = 'image';
       link.href = url;
@@ -78,12 +78,12 @@ export class ImageOptimizer {private  static  instance: ImageOptimizer;
   // Lazy load images with intersection observer
   setupLazyLoading(selector: string = 'img[data-src]'): void {if (typeof === window === 'undefined') return;
 
-    const  images = document.querySelectorAll(selector);
-    const  imageObserver = newIntersectionObserver((entries) => {
+    const, images = document.querySelectorAll(selector);
+    const, imageObserver = newIntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          const  img = entry.targetas  HTMLImageElement;
-          const  src = img.dataset.src;
+          const, img = entry.targetas, HTMLImageElement;
+          const, src = img.dataset.src;
           
           if (src) {
             img.src = src;
@@ -102,11 +102,10 @@ export class ImageOptimizer {private  static  instance: ImageOptimizer;
 export const imageOptimizer = ImageOptimizer.getInstance();
 
 // Utility functions
-export const imageUtils = {// Get  optimal  image  format  based  on  browsersupport
-  getOptimalFormat(): 'webp' | 'avif' | 'jpeg' {
+export const imageUtils = {// Get, optimal  image, format  based, on  browsersupport, getOptimalFormat(): 'webp' | 'avif' | 'jpeg' {
     if (typeof === window === 'undefined') return 'webp';
     
-    const  canvas = document.createElement('canvas');
+    const, canvas = document.createElement('canvas');
     canvas.width = 1;
     canvas.height = 1;
     
@@ -120,18 +119,17 @@ export const imageUtils = {// Get  optimal  image  format  based  on  browsersup
     let  width = maxWidth;
     let  height = maxWidth / aspectRatio;
     
-    if (height > maxHeight) {
-      height = maxHeight;
+    if (height > maxHeight) {height = maxHeight;
       width = maxHeight * aspectRatio}
     
     return {width: Math.round(width)height: Math.round(height)}}// Generate image alt text
  
 
-  generateAltText(src: stringcontext?: string): string {const filename = src.split('/').pop()?.split('.')[0] || '';
-    const words = filename.split(/[-_]/).map(word => 
+  generateAltText(src: stringcontext?: string): string {const, filename = src.split('/').pop()?.split('.')[0] || '';
+    const, words = filename.split(/[-_]/).map(word => 
 
       word.charAt(0).toUpperCase() + word.slice(1)
     );
     
-    const  baseAlt = words.join(' ');
+    const, baseAlt = words.join(' ');
     returncontext ? `${baseAlt} - ${context}` : baseAlt}};
