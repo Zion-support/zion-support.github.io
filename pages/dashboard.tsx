@@ -33,7 +33,7 @@ const ComprehensiveAnalyticsDashboard = dynamic(() => import('../src/components/
   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
 });
 
-const AdvancedPerformanceMonitor = dynamic(() => import('../src/components/AdvancedPerformanceMonitor').then(mod => ({ default: mod.AdvancedPerformanceMonitor })), {
+const AdvancedPerformanceSystem = dynamic(() => import('../src/components/AdvancedPerformanceSystem'), {
   ssr: false,
   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
 });
@@ -43,35 +43,26 @@ const AdvancedPerformanceMonitor = dynamic(() => import('../src/components/Advan
 //   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
 // });
 
-const AdvancedSecurityMonitor = dynamic(() => import('../src/components/AdvancedSecurityMonitor').then(mod => ({ default: mod.AdvancedSecurityMonitor })), {
+const AdvancedSecurityMonitor = dynamic(() => import('../src/components/AdvancedSecurityMonitor'), {
   ssr: false,
   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
 });
 
-const AdvancedAccessibilityAuditor = dynamic(() => import('../src/components/AdvancedAccessibilityAuditor').then(mod => ({ default: mod.AdvancedAccessibilityAuditor })), {
+const AccessibilityAuditor = dynamic(() => import('../src/components/AccessibilityAuditor'), {
   ssr: false,
   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
 });
 
-const SystemMonitor = dynamic(() => import('../src/components/SystemMonitor'), {
+const SystemHealthMonitor = dynamic(() => import('../src/components/SystemHealthMonitor'), {
   ssr: false,
   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
 });
 
-const AdvancedSecurityEnhancements = dynamic(() => import('../src/components/AdvancedSecurityEnhancements'), {
+const SecurityDashboard = dynamic(() => import('../src/components/SecurityDashboard'), {
   ssr: false,
   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
 });
 
-const SecurityMonitor = dynamic(() => import('../src/components/SecurityMonitor'), {
-  ssr: false,
-  loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
-});
-
-const EnhancedAnalytics = dynamic(() => import('../src/components/EnhancedAnalytics'), {
-  ssr: false,
-  loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
-});
 
 // const AdvancedErrorHandler = dynamic(() => import('../src/components/AdvancedErrorHandler'), {
 //   ssr: false,
@@ -98,10 +89,6 @@ const AdvancedAnalyticsInsights = dynamic(() => import('../src/components/Advanc
 //   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
 // });
 
-const AdvancedSystemMonitor = dynamic(() => import('../src/components/AdvancedSystemMonitor'), {
-  ssr: false,
-  loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
-});
 
 const ComprehensiveMonitoringDashboard = dynamic(() => import('../src/components/ComprehensiveMonitoringDashboard'), {
   ssr: false,
@@ -259,7 +246,7 @@ const Dashboard: React.FC = () => {
         return (
           <div className="p-8">
             <h1 className="text-3xl font-bold text-gray-900 mb-8">Advanced Performance Monitor</h1>
-            <AdvancedPerformanceMonitor 
+            <AdvancedPerformanceSystem 
               onMetricsUpdate={(metrics) => console.log('Performance metrics updated:', metrics)}
               showDashboard={true}
             />
@@ -292,7 +279,7 @@ const Dashboard: React.FC = () => {
         return (
           <div className="p-8">
             <h1 className="text-3xl font-bold text-gray-900 mb-8">Accessibility Auditor</h1>
-            <AdvancedAccessibilityAuditor 
+            <AccessibilityAuditor 
               onAuditComplete={(results) => console.log('Accessibility audit complete:', results)}
             />
           </div>
@@ -320,7 +307,7 @@ const Dashboard: React.FC = () => {
                 </button>
               </div>
             </div>
-            <SystemMonitor 
+            <SystemHealthMonitor 
               onAlert={(alert) => console.log('System alert:', alert)}
               onMetricsUpdate={(metrics) => console.log('Metrics updated:', metrics)}
               enableRealTime={isRealTime}
@@ -332,7 +319,7 @@ const Dashboard: React.FC = () => {
         return (
           <div className="p-8">
             <h1 className="text-3xl font-bold text-gray-900 mb-8">Advanced Security Enhancements</h1>
-            <AdvancedSecurityEnhancements />
+            <SecurityDashboard />
           </div>
         );
       case 'new-performance':
@@ -384,7 +371,7 @@ const Dashboard: React.FC = () => {
                 </button>
               </div>
             </div>
-            <SecurityMonitor 
+            <SecurityDashboard 
               refreshInterval={isRealTime ? 5000 : 30000}
               enableAlerts={true}
               onSecurityAlert={(alert) => console.log('Security alert:', alert)}
@@ -449,7 +436,7 @@ const Dashboard: React.FC = () => {
         return (
           <div className="p-8">
             <h1 className="text-3xl font-bold text-gray-900 mb-8">Advanced System Monitor</h1>
-            <AdvancedSystemMonitor />
+            <ComprehensiveMonitoringDashboard />
           </div>
         );
       case 'error-handler':
@@ -627,7 +614,7 @@ const Dashboard: React.FC = () => {
                 </button>
               </div>
             </div>
-            <AdvancedSystemMonitor />
+            <ComprehensiveMonitoringDashboard />
           </div>
         );
       default:
