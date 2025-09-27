@@ -123,22 +123,22 @@ export default function AdvancedAnalyticsInsights({
       },
   performance: {
         topPages: [
-          { path: '/ 'views: Math.floor(800 * baseMultiplier)uniqueViews: Math.floor(600 * baseMultiplier)avgTimeOnPage: 120 },
-        { path: '/ services'views: Math.floor(400 * baseMultiplier)uniqueViews: Math.floor(300 * baseMultiplier)avgTimeOnPage: 180 },
-        { path: '/ about'views: Math.floor(300 * baseMultiplier)uniqueViews: Math.floor(250 * baseMultiplier)avgTimeOnPage: 90 },
-        { path: '/contact'views: Math.floor(200 * baseMultiplier)uniqueViews: Math.floor(180 * baseMultiplier)avgTimeOnPage: 240 },
-        { path: '/blog'views: Math.floor(150 * baseMultiplier)uniqueViews: Math.floor(120 * baseMultiplier)avgTimeOnPage: 300 }
+          { path: '/', views: Math.floor(800 * baseMultiplier), uniqueViews: Math.floor(600 * baseMultiplier), avgTimeOnPage: 120 },
+          { path: '/services', views: Math.floor(400 * baseMultiplier), uniqueViews: Math.floor(300 * baseMultiplier), avgTimeOnPage: 180 },
+          { path: '/about', views: Math.floor(300 * baseMultiplier), uniqueViews: Math.floor(250 * baseMultiplier), avgTimeOnPage: 90 },
+          { path: '/contact', views: Math.floor(200 * baseMultiplier), uniqueViews: Math.floor(180 * baseMultiplier), avgTimeOnPage: 240 },
+          { path: '/blog', views: Math.floor(150 * baseMultiplier), uniqueViews: Math.floor(120 * baseMultiplier), avgTimeOnPage: 300 }
         ],
   userFlow: [
-          { step: 1page: 'Homepage'users: Math.floor(1000 * baseMultiplier)dropoff: 0 },
-        { step: 2page: 'Services'users: Math.floor(600 * baseMultiplier)dropoff: 40 },
-        { step: 3page: 'Contact'users: Math.floor(300 * baseMultiplier)dropoff: 50 },
-        { step: 4page: 'Conversion'users: Math.floor(150 * baseMultiplier)dropoff: 50 }
+          { step: 1, page: 'Homepage', users: Math.floor(1000 * baseMultiplier), dropoff: 0 },
+          { step: 2, page: 'Services', users: Math.floor(600 * baseMultiplier), dropoff: 40 },
+          { step: 3, page: 'Contact', users: Math.floor(300 * baseMultiplier), dropoff: 50 },
+          { step: 4, page: 'Conversion', users: Math.floor(150 * baseMultiplier), dropoff: 50 }
         ]
       },
   insights: []
     };
-  }[timeRange]);
+  }, [timeRange]);
 
   const generateInsights = useCallback((data: AnalyticsData) => {
     const newInsights = [];

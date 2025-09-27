@@ -96,7 +96,7 @@ export default function AccessibilityEnhancer({
     } else {
       root.classList.remove('reduced-motion');
     }
-  }[isHighContrastprefersMotionenableHighContrastSupportenableReducedMotionSupport]);
+  }, [isHighContrast, prefersMotion, enableHighContrastSupport, enableReducedMotionSupport]);
 
   // Announce important changes to screen readers
   const announceChange = (message: string) => {
