@@ -18,6 +18,7 @@ export const dbPool = new Pool({
 })
 // Graceful shutdown
 process.on('SIGINT', async () => {
+  // // // console.log('Closing database pool...')
   await dbPool.end()
   process.exit(0)
 })
