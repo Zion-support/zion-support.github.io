@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Volume2, Eye, MousePointer, Type, Contrast, ZoomIn } from 'lucide-react';
+import { Volume2, Eye, MousePointer, Type, Contrast, ZoomIn, Accessibility } from 'lucide-react';
 
 interface AccessibilitySettings {
   fontSize: 'small' | 'medium' | 'large';
@@ -16,6 +16,19 @@ interface AccessibilityEnhancementsProps {
   onSettingsChange?: (settings: AccessibilitySettings) => void;
   className?: string;
 }
+
+// Helper functions for score styling
+const getScoreBgColor = (score: number): string => {
+  if (score >= 90) return 'bg-green-100';
+  if (score >= 70) return 'bg-yellow-100';
+  return 'bg-red-100';
+};
+
+const getScoreColor = (score: number): string => {
+  if (score >= 90) return 'text-green-800';
+  if (score >= 70) return 'text-yellow-800';
+  return 'text-red-800';
+};
 
 export const AccessibilityEnhancements: React.FC<AccessibilityEnhancementsProps> = ({
   onSettingsChange,
