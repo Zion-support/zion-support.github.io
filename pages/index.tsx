@@ -25,7 +25,10 @@ const AccessibilityEnhancer = dynamic(() => import('../src/components/Accessibil
 //   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
 // });
 
-// Removed corrupted component
+// const AdvancedSecurityMonitor = dynamic(() => import('../src/components/AdvancedSecurityMonitor'), {
+//   ssr: false,
+//   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+// });
 
 // const AdvancedAccessibilityAuditor = dynamic(() => import('../src/components/AdvancedAccessibilityAuditor'), {
 //   ssr: false,
@@ -380,10 +383,29 @@ export default function Home(): JSX.Element {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
               >
-                <div className="bg-red-50 border border-red-200 rounded-lg p-6 h-full">
-                  <h3 className="text-lg font-semibold text-red-900 mb-4">Security Monitor</h3>
-                  <p className="text-red-700">Security monitoring component is being rebuilt. Coming soon!</p>
-                </div>
+                <AdvancedSecurityMonitor 
+                  metrics={{
+                    totalThreats: 47,
+                    blockedRequests: 1234,
+                    suspiciousActivity: 23,
+                    securityScore: 87,
+                    lastScan: new Date(),
+                    vulnerabilities: [
+                      { id: '1', type: 'XSS', severity: 'high', description: 'Potential XSS vulnerability in contact form', status: 'open' },
+                      { id: '2', type: 'CSRF', severity: 'medium', description: 'Missing CSRF token on login form', status: 'in-progress' }
+                    ],
+                    recentEvents: [
+                      { id: '1', type: 'threat', message: 'Blocked suspicious request from IP 192.168.1.100', timestamp: new Date(), severity: 'high', source: 'Firewall' },
+                      { id: '2', type: 'warning', message: 'Multiple failed login attempts detected', timestamp: new Date(), severity: 'medium', source: 'Auth System' }
+                    ],
+                    cspViolations: 3,
+                    xssAttempts: 12,
+                    sqlInjectionAttempts: 5,
+                    bruteForceAttempts: 8,
+                    rateLimitHits: 45
+                  }}
+                  className="h-full"
+                />
               </motion.div>
               
               <motion.div
