@@ -19,7 +19,6 @@ const MemoizedCard = memo(({ title, content, onClick }: {;
   content: string;
   onClic,
     k: () => void;}) => {
-=======
 const MemoizedCard = memo(function MemoizedCard({ title, content, onClick }: {
   title: string;
   content: string;
@@ -44,7 +43,6 @@ const VirtualList = memo(({ items, itemHeight = 50, containerHeight = 400 }: {;
   items: any[];
   itemHeight?: number;
   containerHeight?: number;}) => {
-=======
 const VirtualList = memo(function VirtualList({ items, itemHeight = 50, containerHeight = 400 }: {
   items: any[];
   itemHeight?: number;
@@ -89,7 +87,6 @@ VirtualList.displayName = 'VirtualList';
 // Image optimization component
 <<<<<<< HEAD:temp-broken-components/PerformanceOptimizations.tsx
 const OptimizedImage = memo(({ src, alt, width, height, ...props }: {;
-=======
 const OptimizedImage = memo(function OptimizedImage({ src, alt, width, height, ...props }: {
 >>>>>>> 7f723505c7d69fdcdfb649a50c1163e3919b1408:src/components/PerformanceOptimizations.tsx
   src: string;
@@ -99,7 +96,6 @@ const OptimizedImage = memo(function OptimizedImage({ src, alt, width, height, .
 <<<<<<< HEAD:temp-broken-components/PerformanceOptimizations.tsx
   [ke,
     y: string]: any;}) => {
-=======
   [key: string]: any;
 }) {
 >>>>>>> 7f723505c7d69fdcdfb649a50c1163e3919b1408:src/components/PerformanceOptimizations.tsx
@@ -132,7 +128,6 @@ const OptimizedImage = memo(function OptimizedImage({ src, alt, width, height, .
           onLoad={handleLoad}
 <<<<<<< HEAD:temp-broken-components/PerformanceOptimizations.tsx
           onError={handleError}          loading=lazy""
-=======
           onError={handleError}
 >>>>>>> 7f723505c7d69fdcdfb649a50c1163e3919b1408:src/components/PerformanceOptimizations.tsx
           className={`transition-opacity duration-300 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
@@ -149,7 +144,6 @@ OptimizedImage.displayName = 'OptimizedImage';
   onSearch: (quer,;
     y: string) => void;
   placeholder?: string;}) => {
-=======
 // Debounced search component
 const DebouncedSearch = memo(function DebouncedSearch({ onSearch, placeholder = "Search..." }: {
   onSearch: (query: string) => void;

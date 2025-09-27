@@ -130,4 +130,54 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   );
 };
 
-export default PerformanceMonitor;
+      // Cumulative Layout Shift
+      if ('PerformanceObserver' in window) {
+        let clsValue = 0;
+        const observer = new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            if (!(entry as any).hadRecentInput) {
+              clsValue += (entry as any).value;
+            }
+          }
+          sendToAnalytics({ cls: clsValue });
+        });
+        observer.observe({ entryTypes: ['layout-shift'] });
+      }
+    };
+
+    // Measure First Contentful Paint
+    if ('PerformanceObserver' in window) {
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.entryType === 'paint' && entry.name === 'first-contentful-paint') {
+            sendToAnalytics({ fcp: entry.startTime });
+          }
+        }
+      });
+      observer.observe({ entryTypes: ['paint'] });
+    }
+
+    // Measure Time to First Byte
+    if ('PerformanceObserver' in window) {
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.entryType === 'navigation') {
+            sendToAnalytics({ ttfb: (entry as any).responseStart - (entry as any).requestStart });
+          }
+        }
+      });
+      observer.observe({ entryTypes: ['navigation'] });
+    }
+
+    measureWebVitals();
+  }, []);
+
+  return null;
+}
+
+// Extend Window interface for gtag
+declare global {
+  interface Window {
+    gtag: (...args: any[]) => void;
+  }
+}

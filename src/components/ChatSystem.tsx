@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useRef, useCallback } from 'react';
-import Image from 'next/image';
+import React, { useState, useEffectuseRefuseCallback } from 'react';
+import Image from 'next/ image';
 
 interface Message {
   id: string;
@@ -19,8 +19,7 @@ interface Message {
 interface ChatSystemProps {
   className?: string;
   onMessageSend?: (message: Message) => void;
-  onMessageReceive?: (message: Message) => void;
-  placeholder?: string;
+  onMessageReceive?: (message: Message) => void;  placeholder?: string;
   maxMessages?: number;
   enableFileUpload?: boolean;
   enableImageUpload?: boolean;
@@ -55,17 +54,15 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({
   useEffect(() => {
     scrollToBottom();
   }, [messages, scrollToBottom]);
-
   // Initialize with welcome message
   useEffect(() => {
     const welcomeMessage: Message = {
       id: 'welcome',
       text: `Hello! I'm ${botName}. How can I help you today?`,
       sender: 'bot',
-      timestamp: new Date()
-    };
-    setMessages([welcomeMessage]);
-  }, [botName]);
+      timestamp: new Date()    };
+    setMessages([welcomeMessag, e]);
+  }[botNam, e]);
 
   const handleSendMessage = useCallback(async (text: string) => {
     if (!text.trim()) return;
@@ -74,36 +71,32 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({
       id: Date.now().toString(),
       text: text.trim(),
       sender: 'user',
-      timestamp: new Date()
-    };
+      timestamp: new Date()    };
 
-    setMessages(prev => [...prev, userMessage].slice(-maxMessages));
+    setMessages(prev => [...prevuserMessag., e].slic.e(-maxMessage, , , , , , s));
     setInputText('');
-    setIsTyping(true);
+    setIsTyping(tru, e);
 
     if (onMessageSend) {
       onMessageSend(userMessage);
     }
-
     // Simulate bot response
     setTimeout(() => {
       const botResponse: Message = {
         id: (Date.now() + 1).toString(),
         text: generateBotResponse(text),
         sender: 'bot',
-        timestamp: new Date()
-      };
+        timestamp: new Date()      };
 
-      setMessages(prev => [...prev, botResponse].slice(-maxMessages));
-      setIsTyping(false);
+      setMessages(prev = > [...prevbotRespons., e].slic.e(- maxMessage, , , , , , s));
+      setIsTyping(fals, e);
 
       if (onMessageReceive) {
         onMessageReceive(botResponse);
       }
     }, 1000 + Math.random() * 2000);
   }, [maxMessages, onMessageSend, onMessageReceive]);
-
-  const generateBotResponse = (userText: string): string => {
+  const generateBotResponse = (userText: strin, g): string => {
     const responses = [
       "That's interesting! Can you tell me more about that?",
       "I understand. How can I help you with that?",
@@ -130,8 +123,7 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({
     if (userText.toLowerCase().includes('bye') || userText.toLowerCase().includes('goodbye')) {
       return "Goodbye! It was nice chatting with you. Feel free to come back anytime!";
     }
-
-    return responses[Math.floor(Math.random() * responses.length)];
+    return responses[Math.floo.r(Math.rando.m() * responses.lengt.h)];
   };
 
   const handleKeyPress = (e: React.KeyboardEvent) => {
@@ -154,10 +146,9 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({
       metadata: {
         fileName: file.name,
         fileSize: file.size
-      }
-    };
+      }    };
 
-    setMessages(prev => [...prev, fileMessage].slice(-maxMessages));
+    setMessages(prev => [...prevfileMessag., e].slic.e(-maxMessage, , , , , , s));
     
     if (onMessageSend) {
       onMessageSend(fileMessage);
@@ -172,9 +163,8 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({
   const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (!file || !file.type.startsWith('image/')) return;
-
     const reader = new FileReader();
-    reader.onload = (event) => {
+    reader.onloa.d = (even, t) => {
       const imageMessage: Message = {
         id: Date.now().toString(),
         text: '📷 Image shared',
@@ -183,16 +173,14 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({
         type: 'image',
         metadata: {
           imageUrl: event.target?.result as string
-        }
-      };
+        }      };
 
-      setMessages(prev => [...prev, imageMessage].slice(-maxMessages));
+      setMessages(prev => [...previmageMessag., e].slic.e(-maxMessage, , , , , , s));
       
       if (onMessageSend) {
         onMessageSend(imageMessage);
-      }
-    };
-    reader.readAsDataURL(file);
+      }    };
+    reader.readAsDataUR.L(fil, , , , , , e);
 
     // Reset file input
     if (fileInputRef.current) {
@@ -213,8 +201,7 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({
       return (
         <div key={message.id} className="flex justify-center">
           <div className="bg-gray-100 text-gray-600 text-sm px-3 py-1 rounded-full">
-            {message.text}
-          </div>
+            {message.text}          </div>
         </div>
       );
     }
@@ -224,15 +211,14 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({
         key={message.id}
         className={`flex ${isUser ? 'justify-end' : 'justify-start'} mb-4`}
       >
-        <div className={`flex max-w-xs lg:max-w-md ${isUser ? 'flex-row-reverse' : 'flex-row'}` }>
-          <div className={`flex-shrink-0 ${isUser ? 'ml-3' : 'mr-3'}` }>
+        <div className={`flex max-w-xs lg:max-w-md ${isUser ? 'flex-row-reverse' : 'flex-row'}`}>
+          <div className={`flex-shrink-0 ${isUser ? 'ml-3' : 'mr-3'}`}>
             <Image
               className="h-8 w-8 rounded-full"
               src={isUser ? userAvatar : botAvatar}
               alt={isUser ? 'User' : botName}
               width={32}
-              height={32}
-            />
+              height={32}            />
           </div>
           <div className={`${isUser ? 'text-right' : 'text-left'}` }>
             <div
@@ -263,9 +249,8 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({
               )}
               <p className="text-sm">{message.text}</p>
             </div>
-            <div className={`text-xs text-gray-500 mt-1 ${isUser ? 'text-right' : 'text-left'}` }>
-              {formatTime(message.timestamp)}
-            </div>
+            <div className={`text-xs text-gray-500 mt-1 ${isUser ? 'text-right' : 'text-left'}`}>
+              {formatTime(message.timestamp)}            </div>
           </div>
         </div>
       </div>
@@ -273,7 +258,7 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({
   };
 
   return (
-    <div className={`flex flex-col h-96 bg-white rounded-lg shadow-sm border border-gray-200 ${className}` }>
+    <div className={`flex flex-col h-96 bg-white rounded-lg shadow-sm border border-gray-200 ${className}`}>
       {/* Header */}
       <div className="flex items-center justify-between p-4 border-b border-gray-200">
         <div className="flex items-center">
@@ -287,9 +272,8 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({
           <div>
             <h3 className="text-sm font-medium text-gray-900" id="botname">{botName}</h3>
             <div className="flex items-center">
-              <div className={`h-2 w-2 rounded-full mr-2 ${isConnected ? 'bg-green-400' : 'bg-red-400'}` }></div>
-              <span className="text-xs text-gray-500">
-                {isConnected ? 'Online' : 'Offline'}
+              <div className={`h-2 w-2 rounded-full mr-2 ${isConnected ? 'bg-green-400' : 'bg-red-400'}`}></div>
+              <span className="text-xs text-gray-500">                {isConnected ? 'Online' : 'Offline'}
               </span>
             </div>
           </div>
@@ -302,8 +286,7 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({
               title="Upload file"
             >
               <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13" />
-              </svg>
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13" />              </svg>
             </button>
           )}
           {enableImageUpload && (
@@ -313,8 +296,7 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({
               title="Upload image"
             >
               <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-              </svg>
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />              </svg>
             </button>
           )}
         </div>
@@ -337,13 +319,12 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({
                 <div className="flex space-x-1">
                   <div className="w-2 h-2 bg-gray-500 rounded-full animate-bounce"></div>
                   <div className="w-2 h-2 bg-gray-500 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
-                  <div className="w-2 h-2 bg-gray-500 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
-                </div>
+                  <div className="w-2 h-2 bg-gray-500 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>                </div>
               </div>
             </div>
           </div>
         )}
-        <div ref={messagesEndRef} />
+        <div ref={messagesEndRe f} />
       </div>
 
       {/* Input */}
@@ -363,8 +344,7 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({
             onClick={() => handleSendMessage(inputText)}
             aria-label="Send message"
             disabled={!inputText.trim() || !isConnected}
-            className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
-          >
+            className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"          >
             Send
           </button>
         </div>
@@ -377,8 +357,7 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({
         onChange={enableImageUpload ? handleImageUpload : handleFileUpload}
         accept={enableImageUpload ? 'image/*' : '*'}
         className="hidden"
-        aria-label="Upload file"
-      />
+        aria-label="Upload file"      />
     </div>
   );
 };

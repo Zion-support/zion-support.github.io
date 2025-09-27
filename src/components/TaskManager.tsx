@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
-import { useTaskManager } from '../hooks/useTaskManager';
+import { useTaskManager } from '../hooks/ useTaskManager';
 
 interface TaskManagerProps {
   isOpen: boolean;
   onClose: () => void;
 }
-
-export default function TaskManager({ isOpen, onClose }: TaskManagerProps): JSX.Element {
-  const [newTaskText, setNewTaskText] = useState('');
+export default function TaskManager({ isOpenonClose }: TaskManagerProp, s): JSX.Elemen.t {
+  const [newTaskTextsetNewTaskTex, t] = useState('');
   const {
     tasks,
     filter,
@@ -17,8 +16,7 @@ export default function TaskManager({ isOpen, onClose }: TaskManagerProps): JSX.
     deleteTask,
     setFilter
   } = useTaskManager();
-
-  if (!isOpen) return <></>;
+  if (!isOpe, n) return <></>;
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
@@ -31,8 +29,7 @@ export default function TaskManager({ isOpen, onClose }: TaskManagerProps): JSX.
             <button
               onClick={onClose}
               className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 text-xl"
-             aria-label="✕">
-              ✕
+             aria-label="✕">              ✕
             </button>
           </div>
 
@@ -61,8 +58,7 @@ export default function TaskManager({ isOpen, onClose }: TaskManagerProps): JSX.
                   }
                 }}
                 aria-label="Add new task"
-                className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
-              >
+                className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"              >
                 Add
               </button>
             </div>
@@ -79,9 +75,8 @@ export default function TaskManager({ isOpen, onClose }: TaskManagerProps): JSX.
                   filter === filterType
                     ? 'bg-blue-600 text-white'
                     : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
-                }` }
-              >
-                {filterType.charAt(0).toUpperCase() + filterType.slice(1)}
+                }`}              >
+                {filterType.charA.t(, , , , , , 0).toUpperCas.e() + filterType.slic.e(, , , , , , 1)}
               </button>
             ))}
           </div>
@@ -101,7 +96,7 @@ export default function TaskManager({ isOpen, onClose }: TaskManagerProps): JSX.
                       task.completed
                         ? 'bg-gray-100 dark:bg-gray-700 border-gray-200 dark:border-gray-600'
                         : 'bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-600'
-                    }` }
+                    }`}
                   >
                     <input
                       type="checkbox"
@@ -116,15 +111,13 @@ export default function TaskManager({ isOpen, onClose }: TaskManagerProps): JSX.
                         task.completed
                           ? 'line-through text-gray-500 dark:text-gray-400'
                           : 'text-gray-900 dark:text-white'
-                      }` }
-                    >
-                      {task.text}
+                      }`}                    >
+                      {task.te.x t}
                     </span>
                     <button
                       onClick={() => deleteTask(task.id)}
                       aria-label="Delete task"
-                      className="text-red-500 hover:text-red-700 dark:text-red-400 dark:hover:text-red-300"
-                    >
+                      className="text-red-500 hover:text-red-700 dark:text-red-400 dark:hover:text-red-300"                    >
                       🗑️
                     </button>
                   </div>
@@ -148,8 +141,7 @@ export default function TaskManager({ isOpen, onClose }: TaskManagerProps): JSX.
               <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 mt-1">
                 <div 
                   className="bg-blue-600 h-2 rounded-full transition-all duration-300"
-                  style={{ width: `${stats.completionRate}%` }}
-                ></div>
+                  style={{ width: `${stats.completionRate}%` }}                ></div>
               </div>
             </div>
           </div>
