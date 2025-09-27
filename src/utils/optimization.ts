@@ -19,23 +19,6 @@ interface OptimizationConfig {
   enableCompression: boolean;
 }
 
-interface LayoutShiftEntry extends PerformanceEntry {
-  value: number;
-  hadRecentInput?: boolean;
-}
-
-interface PerformanceWithMemory extends Performance {
-  memory?: {
-    usedJSHeapSize: number;
-    totalJSHeapSize: number;
-    jsHeapSizeLimit: number;
-  };
-}
-
-interface FirstInputEntry extends PerformanceEntry {
-  processingStart: number;
-}
-
 export class PerformanceOptimizer {
   private static instance: PerformanceOptimizer;
   private metrics: PerformanceMetrics;
@@ -255,12 +238,24 @@ export class PerformanceOptimizer {
    */
   private monitorMemoryUsage(): void {
     if ('memory' in performance) {
-      const memory = (performance as PerformanceWithMemory).memory;
+      const memory = (performance as Performance & {
+        memory?: {
+          usedJSHeapSize: number;
+          totalJSHeapSize: number;
+          jsHeapSizeLimit: number;
+        };
+      }).memory;
       this.metrics.memoryUsage = memory?.usedJSHeapSize || 0;
       
       // Log memory usage every 30 seconds
       setInterval(() => {
-        const currentMemory = (performance as PerformanceWithMemory).memory;
+        const currentMemory = (performance as Performance & {
+          memory?: {
+            usedJSHeapSize: number;
+            totalJSHeapSize: number;
+            jsHeapSizeLimit: number;
+          };
+        }).memory;
         console.log('Memory usage:', {
           used: currentMemory?.usedJSHeapSize || 0,
           total: currentMemory?.totalJSHeapSize || 0,
