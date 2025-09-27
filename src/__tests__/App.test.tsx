@@ -1,6 +1,5 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import { BrowserRouter } from 'react-router-dom';
 import App from '../App';
 
 // Mock the lazy-loaded components
@@ -48,7 +47,7 @@ jest.mock('../pages/NotFound', () => {
 
 const renderWithRouter = (ui: React.ReactElement, { route = '/' } = {}) => {
   window.history.pushState({}, 'Test page', route);
-  return render(ui, { wrapper: BrowserRouter });
+  return render(ui);
 };
 
 describe('App', () => {
