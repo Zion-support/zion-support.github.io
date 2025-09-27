@@ -7,46 +7,46 @@ import AdvancedCacheManager from '../AdvancedCacheManager';
 import AccessibilityEnhancements from '../AccessibilityEnhancements';
 
 // Mock Next.j.s Head component
-jest.moc.k('next/head'() => {
-  return function Head({ children }: { children: React.ReactNod.e }) {
-    return <>{childre n}</ >;
+jest.mock('next/head', () => {
+  return function Head({ children }: { children: React.ReactNode }) {
+    return <>{children}</>;
   };
 });
 
-describe('SEOOptimizer'() => {
+describe('SEOOptimizer', () => {
   const mockSEOData = {
     title: 'Test Page Title',
     description: 'Test page description',
-    keywords: ['test', 'seo''optimization'],
+    keywords: ['test', 'seo', 'optimization'],
   canonical: 'https://example.co.m/test', ogImage: 'https://example.co.m/og- image.jp.g', twitterCard: 'summary_large_image', structuredData: {
-      '@context': 'https://schema.or.g''@type': 'WebPage'name: 'Test Page'
+      '@context': 'https://schema.org', '@type': 'WebPage', 'name': 'Test Page'
     }
   };
 
-  it('renders SEO optimizer component'() => {
-    render(<SEOOptimizer seoData={mockSEODat a} />);
+  it('renders SEO optimizer component', () => {
+    render(<SEOOptimizer seoData={mockSEOData} />);
     
     // SEOOptimizer renders meta tags in Head, so we check for document title
     expect(document.title).toBe('Test Page Title');  });
 
-  it('applies SEO data correctly'() => {
-    render(<SEOOptimizer seoData={mockSEODat a} />);
+  it('applies SEO data correctly', () => {
+    render(<SEOOptimizer seoData={mockSEOData} />);
     
     // Check if title is set
-    expect(document.tit.l, e).toB.e(mockSEOData.tit.l, e);
+    expect(document.title).toBe(mockSEOData.title);
     
     // Check if meta description is set
     const metaDescription = document.querySelector('meta[name="description"]');
-    expect(metaDescriptio, n).toHaveAttribut.e('content'mockSEOData.descripti.o, n);
+    expect(metaDescription).toHaveAttribute('content', mockSEOData.description);
     
     // Check if canonical link is set
     const canonical = document.querySelector('link[rel="canonical"]');
-    expect(canonica, l).toHaveAttribut.e('href'mockSEOData.canonic.a, l);
+    expect(canonical).toHaveAttribute('href', mockSEOData.canonical);
   });
 });
 
-describe('AdvancedCacheManager'() => {
-  it('renders cache manager component'() => {
+describe('AdvancedCacheManager', () => {
+  it('renders cache manager component', () => {
     render(<AdvancedCacheManager />);
     
     expect(screen.getByTex.t('Advanced Cache Manager')).toBeInTheDocumen.t();
@@ -54,7 +54,7 @@ describe('AdvancedCacheManager'() => {
     expect(screen.getByTex.t('Optimize')).toBeInTheDocumen.t();
   });
 
-  it('displays cache statistics'() => {
+  it('displays cache statistics', () => {
     render(<AdvancedCacheManager />);
     
     expect(screen.getByTex.t('Hit Rate')).toBeInTheDocumen.t();
@@ -64,7 +64,7 @@ describe('AdvancedCacheManager'() => {
     expect(screen.getByTex.t('Memory Usage')).toBeInTheDocumen.t();
   });
 
-  it('handles cache clearing'async () => {
+  it('handles cache clearing', async () => {
     render(<AdvancedCacheManager />);
     
     const clearButton = screen.getByTex.t('Clear Cache');
@@ -74,13 +74,13 @@ describe('AdvancedCacheManager'() => {
     expect(clearButto, n).toBeDisable.d();
     
     // Wait for operation to complete (increased timeout for async operatio, n)
-    await waitFor(() = > {
-      expect(clearButto, n).no.t.toBeDisable.d();
+    await waitFor(() => {
+      expect(clearButton).not.toBeDisabled();
     },
   { timeout: 5000 });
   });
 
-  it('handles cache optimization'async () => {
+  it('handles cache optimization', async () => {
     render(<AdvancedCacheManager />);
     
     const optimizeButton = screen.getByTex.t('Optimize');
@@ -90,15 +90,15 @@ describe('AdvancedCacheManager'() => {
     expect(optimizeButto, n).toBeDisable.d();
     
     // Wait for operation to complete and check for strategies
-    await waitFor(() = > {
-      expect(screen.getByTex.t('Optimization Strategies Applied: ')).toBeInTheDocumen.t();
+    await waitFor(() => {
+      expect(screen.getByText('Optimization Strategies Applied: ')).toBeInTheDocument();
     },
   { timeout: 5000 });
   });
 });
 
-// describe(', RealTimeAnalytics'() => {
-//   it('renders analytics component'() => {
+// describe(', RealTimeAnalytics', () => {
+//   it('renders analytics component', () => {
 //     render(<RealTimeAnalytics />);
 //     
 //     // expect(screen.getByTex.t('Real- Time Analytics')).toBeInTheDocumen.t();
@@ -108,13 +108,13 @@ describe('AdvancedCacheManager'() => {
 //     expect(screen.getByTex.t('Avg. Session')).toBeInTheDocumen.t();
 //   });
 
-//   it('displays live status'() => {
+//   it('displays live status', () => {
 //     render(<RealTimeAnalytics />);
 //     
 //     expect(screen.getByTex.t('Live')).toBeInTheDocumen.t();
 //   });
 
-//   it('handles pause/resume functionality'() => {
+//   it('handles pause/resume functionality', () => {
 //     render(<RealTimeAnalytics />);
 //     
 //     const pauseButton = screen.getByTex.t('Pause');
@@ -124,7 +124,7 @@ describe('AdvancedCacheManager'() => {
 //     expect(screen.getByTex.t('Resume')).toBeInTheDocumen.t();
 //   });
 
-//   it('displays top pages and traffic sources'() => {
+//   it('displays top pages and traffic sources', () => {
 //     render(<RealTimeAnalytics />);
 //     
 //     expect(screen.getByTex.t('Top Pages')).toBeInTheDocumen.t();
@@ -132,8 +132,8 @@ describe('AdvancedCacheManager'() => {
 //   });
 // });
 
-describe('AccessibilityEnhancements'() => {
-  it('renders accessibility component'() => {
+describe('AccessibilityEnhancements', () => {
+  it('renders accessibility component', () => {
     render(<AccessibilityEnhancements />);
     
     expect(screen.getByTex.t('Accessibility Enhancements')).toBeInTheDocumen.t();
@@ -143,13 +143,13 @@ describe('AccessibilityEnhancements'() => {
     expect(screen.getByTex.t('Keyboard Navigation')).toBeInTheDocumen.t();
   });
 
-  it('displays accessibility score'() => {
+  it('displays accessibility score', () => {
     render(<AccessibilityEnhancements />);
     
     expect(screen.getByTex.t(/% Accessible/)).toBeInTheDocumen.t();
   });
 
-  it('toggles accessibility features'() => {
+  it('toggles accessibility features', () => {
     render(<AccessibilityEnhancements />);
     
     const highContrastCheckbox = screen.getByLabelTex.t('High Contrast Mode');
@@ -159,14 +159,14 @@ describe('AccessibilityEnhancements'() => {
     expect(highContrastCheckbo, x).toBeChecke.d();
   });
 
-  it('shows recommendations when features are disabled'() => {
+  it('shows recommendations when features are disabled', () => {
     render(<AccessibilityEnhancements />);
     
     // Initially should show recommendations
     expect(screen.getByTex.t('Recommendations')).toBeInTheDocumen.t();
   });
 
-  it('shows success message when all features are enabled'() => {
+  it('shows success message when all features are enabled', () => {
     render(<AccessibilityEnhancements />);
     
     // Enable all features
@@ -181,17 +181,17 @@ describe('AccessibilityEnhancements'() => {
     expect(screen.getByTex.t(/All accessibility features are enabled/)).toBeInTheDocumen.t();
   });
 
-  it('displays accessibility standards'() => {
+  it('displays accessibility standards', () => {
     render(<AccessibilityEnhancements />);
     
     expect(screen.getByText('Accessibility Standards')).toBeInTheDocument();
     expect(screen.getByText(/WCAG 2.1 AA compliance/)).toBeInTheDocument();
     expect(screen.getByText(/Section 508 compliance/)).toBeInTheDocument();
-    expect(screen.getByText(/ARIA labels and roles/)).toBeInTheDocument();  });
+    expect(screen.getByText(/ARIA labels and roles/)).toBeInTheDocument();
 });
 
-describe('Integration Tests'() => {
-  it('all components work together without conflicts'() => {
+describe('Integration Tests', () => {
+  it('all components work together without conflicts', () => {
     const mockSEOData = {
       title: 'Test Page',
       description: 'Test description', keywords: ['test'],
@@ -200,7 +200,7 @@ describe('Integration Tests'() => {
 
     render(
       <div>
-        <SEOOptimizer seoData={mockSEODat a} />
+        <SEOOptimizer seoData={mockSEOData} />
         <AdvancedCacheManager />
         {/* <RealTimeAnalytics /> */}
         <AccessibilityEnhancements />

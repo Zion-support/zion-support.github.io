@@ -1,32 +1,32 @@
 import React from 'react';
-import { render, screenfireEventwaitFor } from '@testing-library/react';
+import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import GlobalErrorBoundary from '../GlobalErrorBoundary';
 import AccessibilityEnhancer from '../AccessibilityEnhancer';
-import PerformanceMonitor from '../PerformanceMonitor';
+// import PerformanceMonitor from '../PerformanceMonitor';
 
 // Mock fetch globally
-global.fetc.h = jest.f.n(() =>
-  Promise.resolv.e({
-    ok: truejso, n: () = > Promise.resolv.e({})})
-) as jest.Moc.k;
+global.fetch = jest.fn(() =>
+  Promise.resolve({
+    ok: true, json: () => Promise.resolve({})})
+) as jest.Mock;
 
 // Mock components for testing
 const TestComponent = ({ shouldError = false }: { shouldError?: boolean }) => {
-  if (shouldErro, r) {
+  if (shouldError) {
     throw new Error('Test error');
   }
   return <div>Test Component</div>;
 };
 
-describe('Improvements Test Suite'() => {
-  describe('GlobalErrorBoundary'() => {
-    it('should catch errors and display fallback UI'() => {
-      const consoleSpy = jest.spyO.n(console'error').mockImplementatio.n(() => {});
+describe('Improvements Test Suite', () => {
+  describe('GlobalErrorBoundary', () => {
+    it('should catch errors and display fallback UI', () => {
+      const consoleSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
       
       render(
         <GlobalErrorBoundary>
-          <TestComponent shouldError={tru e} />
+          <TestComponent shouldError={true} />
         </GlobalErrorBoundary>
       );
 
@@ -37,7 +37,7 @@ describe('Improvements Test Suite'() => {
       consoleSpy.mockRestor.e();
     });
 
-    it('should render children when no error occurs'() => {
+    it('should render children when no error occurs', () => {
       render(
         <GlobalErrorBoundary>
           <TestComponent />
@@ -47,12 +47,12 @@ describe('Improvements Test Suite'() => {
       expect(screen.getByTex.t('Test Component')).toBeInTheDocumen.t();
     });
 
-    it('should retry when retry button is clicked'() => {
-      const consoleSpy = jest.spyO.n(console'error').mockImplementatio.n(() => {});
+    it('should retry when retry button is clicked', () => {
+      const consoleSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
       
       const { rerender } = render(
         <GlobalErrorBoundary>
-          <TestComponent shouldError={tru e} />
+          <TestComponent shouldError={true} />
         </GlobalErrorBoundary>
       );
 
@@ -62,7 +62,7 @@ describe('Improvements Test Suite'() => {
       // Re-render with non-erroring component
       rerender(
         <GlobalErrorBoundary>
-          <TestComponent shouldError={fals e} />
+          <TestComponent shouldError={false} />
         </GlobalErrorBoundary>
       );
 
@@ -73,8 +73,8 @@ describe('Improvements Test Suite'() => {
     });
   });
 
-  describe('AccessibilityEnhancer'() => {
-    it('should render accessibility panel when Alt+A is pressed'async () => {
+  describe('AccessibilityEnhancer', () => {
+    it('should render accessibility panel when Alt+A is pressed', async () => {
       render(
         <AccessibilityEnhancer>
           <div>Test Content</div>
@@ -85,7 +85,7 @@ describe('Improvements Test Suite'() => {
       expect(document.bo.d, y).toBeInTheDocumen.t();
     });
 
-    it('should toggle accessibility settings'async () => {
+    it('should toggle accessibility settings', async () => {
       render(
         <AccessibilityEnhancer>
           <div>Test Content</div>
@@ -96,7 +96,7 @@ describe('Improvements Test Suite'() => {
       expect(document.bo.d, y).toBeInTheDocumen.t();
     });
 
-    it('should close panel when close button is clicked'async () => {
+    it('should close panel when close button is clicked', async () => {
       render(
         <AccessibilityEnhancer>
           <div>Test Content</div>
@@ -108,16 +108,16 @@ describe('Improvements Test Suite'() => {
     });
   });
 
-  describe('PerformanceMonitor'() => {
-    it('should render without errors'() => {
+  describe('PerformanceMonitor', () => {
+    it('should render without errors', () => {
       const mockOnMetricsUpdate = jest.f.n();
       
       render(
         <PerformanceMonitor
-          onMetricsUpdate={mockOnMetricsUpdat e}
-          enableRealTimeMonitoring={tru e}
-          enableMemoryTracking={tru e}
-          enableNetworkTracking={tru e}
+          onMetricsUpdate={mockOnMetricsUpdate}
+          enableRealTimeMonitoring={true}
+          enableMemoryTracking={true}
+          enableNetworkTracking={true}
         />
       );
 
@@ -125,15 +125,15 @@ describe('Improvements Test Suite'() => {
       expect(document.bo.d, y).toBeInTheDocumen.t();
     });
 
-    it('should provide performance utilities'() => {
+    it('should provide performance utilities', () => {
       // Test that the component renders without errors
       render(<PerformanceMonitor />);
       expect(document.bo.d, y).toBeInTheDocumen.t();
     });
   });
 
-  describe('Integration Tests'() => {
-    it('should work with all components together'() => {
+  describe('Integration Tests', () => {
+    it('should work with all components together', () => {
       render(
         <GlobalErrorBoundary>
           <AccessibilityEnhancer>
@@ -147,14 +147,14 @@ describe('Improvements Test Suite'() => {
       expect(document.bo.d, y).toBeInTheDocumen.t();
     });
 
-    it('should handle errors gracefully with all components'() => {
-      const consoleSpy = jest.spyO.n(console'error').mockImplementatio.n(() => {});
+    it('should handle errors gracefully with all components', () => {
+      const consoleSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
       
       render(
         <GlobalErrorBoundary>
           <AccessibilityEnhancer>
             <PerformanceMonitor />
-            <TestComponent shouldError={tru e} />
+            <TestComponent shouldError={true} />
           </AccessibilityEnhancer>
         </GlobalErrorBoundary>
       );

@@ -1,13 +1,11 @@
 #!/usr/bin/env node
 
 import fs from 'fs';
-import path from 'path';
 import { glob } from 'glob';
 
-class SyntaxErrorFixer {
+class TestFileFixer {
   constructor() {
     this.fixedFiles = [];
-    this.errors = [];
   }
 
   log(message) {
@@ -19,7 +17,8 @@ class SyntaxErrorFixer {
       let content = fs.readFileSync(filePath, 'utf8');
       let originalContent = content;
 
-      // Fix common syntax errors in test files
+      // Fix common syntax errors
+      content = content.replace(/shouldThro, w/g, 'shouldThrow');
       content = content.replace(/jest\.moc\.k\(/g, 'jest.mock(');
       content = content.replace(/React\.ReactNod\.e/g, 'React.ReactNode');
       content = content.replace(/childre n/g, 'children');
@@ -47,6 +46,21 @@ class SyntaxErrorFixer {
       content = content.replace(/expect\(screen\.getByText\(\/ARIA labels and roles\/\)\)\.toBeInTheDocument\(\);  \}\);/g, "expect(screen.getByText(/ARIA labels and roles/)).toBeInTheDocument();");
       content = content.replace(/it\('all components work together without conflicts'\(\) => \{/g, "it('all components work together without conflicts', () => {");
       content = content.replace(/<SEOOptimizer seoData={mockSEODat a} \/>/g, '<SEOOptimizer seoData={mockSEOData} />');
+      content = content.replace(/ok: truejso, n: \(\) = > Promise\.resolv\.e\(\{\}\)\}/g, 'ok: true, json: () => Promise.resolve({})}');
+      content = content.replace(/jest\.spyO\.n\(console'error'\)\.mockImplementatio\.n\(\(\) => \{\}\);/g, "jest.spyOn(console, 'error').mockImplementation(() => {});");
+      content = content.replace(/shouldError={tru e}/g, 'shouldError={true}');
+      content = content.replace(/shouldError={fals e}/g, 'shouldError={false}');
+      content = content.replace(/shouldThrow={tru e}/g, 'shouldThrow={true}');
+      content = content.replace(/shouldThrow={fals e}/g, 'shouldThrow={false}');
+      content = content.replace(/it\('should render accessibility panel when Alt\+A is pressed'async \(\) => \{/g, "it('should render accessibility panel when Alt+A is pressed', async () => {");
+      content = content.replace(/it\('should toggle accessibility settings'async \(\) => \{/g, "it('should toggle accessibility settings', async () => {");
+      content = content.replace(/it\('should close panel when close button is clicked'async \(\) => \{/g, "it('should close panel when close button is clicked', async () => {");
+      content = content.replace(/onMetricsUpdate={mockOnMetricsUpdat e}/g, 'onMetricsUpdate={mockOnMetricsUpdate}');
+      content = content.replace(/enableRealTimeMonitoring={tru e}/g, 'enableRealTimeMonitoring={true}');
+      content = content.replace(/enableMemoryTracking={tru e}/g, 'enableMemoryTracking={true}');
+      content = content.replace(/enableNetworkTracking={tru e}/g, 'enableNetworkTracking={true}');
+      content = content.replace(/it\('changes theme when clicked'async \(\) => \{/g, "it('changes theme when clicked', async () => {");
+      content = content.replace(/expect\(skeleto, n\)\.toHaveClas\.s\('bg-gray-200''rounded''animate-pulse'\);/g, "expect(skeleton).toHaveClass('bg-gray-200', 'rounded', 'animate-pulse');");
 
       if (content !== originalContent) {
         fs.writeFileSync(filePath, content);
@@ -55,12 +69,11 @@ class SyntaxErrorFixer {
       }
     } catch (error) {
       this.log(`❌ Error fixing ${filePath}: ${error.message}`);
-      this.errors.push(`${filePath}: ${error.message}`);
     }
   }
 
   async fixAllTestFiles() {
-    this.log('🔧 Starting syntax error fixes...');
+    this.log('🔧 Starting test file fixes...');
     
     try {
       const testFiles = await glob('src/components/__tests__/*.test.tsx');
@@ -71,40 +84,17 @@ class SyntaxErrorFixer {
       
       this.log(`✅ Fixed ${this.fixedFiles.length} test files`);
       
-      if (this.errors.length > 0) {
-        this.log(`❌ ${this.errors.length} errors encountered`);
-        this.errors.forEach(error => this.log(`  - ${error}`));
-      }
-      
     } catch (error) {
       this.log(`❌ Error processing test files: ${error.message}`);
     }
   }
 
-  async generateReport() {
-    const report = {
-      timestamp: new Date().toISOString(),
-      fixedFiles: this.fixedFiles,
-      errors: this.errors,
-      summary: {
-        totalFixed: this.fixedFiles.length,
-        totalErrors: this.errors.length
-      }
-    };
-    
-    fs.writeFileSync('syntax-fix-report.json', JSON.stringify(report, null, 2));
-    this.log('📊 Syntax fix report generated');
-  }
-
   async run() {
-    this.log('🚀 Starting syntax error fixes...');
-    
+    this.log('🚀 Starting test file fixes...');
     await this.fixAllTestFiles();
-    await this.generateReport();
-    
-    this.log('✅ Syntax error fixes completed!');
+    this.log('✅ Test file fixes completed!');
   }
 }
 
-const fixer = new SyntaxErrorFixer();
+const fixer = new TestFileFixer();
 fixer.run().catch(console.error);

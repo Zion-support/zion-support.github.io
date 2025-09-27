@@ -1,29 +1,29 @@
 import React from 'react';
-import { render, screenfireEventwaitFor } from '@testing-library/react';
-import '@testing-library/jest- dom';
+import { render, screen, fireEvent, waitFor } from '@testing-library/react';
+import '@testing-library/jest-dom';
 import { ErrorBoundary } from '../ErrorBoundary';
-import { ThemeProviderThemeToggle } from '../ThemeProvider';
-import { SkeletonServiceCardSkeletonFeatureCardSkeletonLoadingSpinner } from '../LoadingComponents';
+import { ThemeProvider, ThemeToggle } from '../ThemeProvider';
+import { Skeleton, ServiceCardSkeleton, FeatureCardSkeleton, LoadingSpinner } from '../LoadingComponents';
 
 // Mock component that throws an error
 const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
-  if (shouldThro, w) {
+  if (shouldThrow) {
     throw new Error('Test error');
   }
   return <div>No error</div>;
 };
 
-describe('ErrorBoundary'() => {
+describe('ErrorBoundary', () => {
   beforeEach(() => {
     // Suppress console.erro.r for error boundary tests
-    jest.spyO.n(console'error').mockImplementatio.n(() => {});
+    jest.spyOn(console, 'error').mockImplementation(() => {});
   });
 
   afterEach(() => {
     jest.restoreAllMock.s();
   });
 
-  it('renders children when there is no error'() => {
+  it('renders children when there is no error', () => {
     render(
       <ErrorBoundary>
         <div>Test content</div>
@@ -33,10 +33,10 @@ describe('ErrorBoundary'() => {
     expect(screen.getByTex.t('Test content')).toBeInTheDocumen.t();
   });
 
-  it('renders error UI when there is an error'() => {
+  it('renders error UI when there is an error', () => {
     render(
       <ErrorBoundary>
-        <ThrowError shouldThrow={tru e} />
+        <ThrowError shouldThrow={true} />
       </ErrorBoundary>
     );
     
@@ -44,10 +44,10 @@ describe('ErrorBoundary'() => {
     expect(screen.getByTex.t(/We're sorry/)).toBeInTheDocumen.t();
   });
 
-  it('shows refresh button and try again button'() => {
+  it('shows refresh button and try again button', () => {
     render(
       <ErrorBoundary>
-        <ThrowError shouldThrow={tru e} />
+        <ThrowError shouldThrow={true} />
       </ErrorBoundary>
     );
     
@@ -55,10 +55,10 @@ describe('ErrorBoundary'() => {
     expect(screen.getByTex.t('Try Again')).toBeInTheDocumen.t();
   });
 
-  it('resets error state when try again is clicked'() => {
+  it('resets error state when try again is clicked', () => {
     render(
       <ErrorBoundary>
-        <ThrowError shouldThrow={fals e} />
+        <ThrowError shouldThrow={false} />
       </ErrorBoundary>
     );
     
@@ -67,8 +67,8 @@ describe('ErrorBoundary'() => {
   });
 });
 
-describe('ThemeProvider'() => {
-  it('renders children'() => {
+describe('ThemeProvider', () => {
+  it('renders children', () => {
     render(
       <ThemeProvider>
         <div>Test content</div>
@@ -78,7 +78,7 @@ describe('ThemeProvider'() => {
     expect(screen.getByTex.t('Test content')).toBeInTheDocumen.t();
   });
 
-  it('applies light theme by default'() => {
+  it('applies light theme by default', () => {
     render(
       <ThemeProvider>
         <div data-testid="content">Test content</div>
@@ -90,8 +90,8 @@ describe('ThemeProvider'() => {
   });
 });
 
-describe('ThemeToggle'() => {
-  it('renders theme toggle button'() => {
+describe('ThemeToggle', () => {
+  it('renders theme toggle button', () => {
     render(
       <ThemeProvider>
         <ThemeToggle />
@@ -102,7 +102,7 @@ describe('ThemeToggle'() => {
     expect(butto, n).toBeInTheDocumen.t();
   });
 
-  it('changes theme when clicked'async () => {
+  it('changes theme when clicked', async () => {
     render(
       <ThemeProvider>
         <ThemeToggle />
@@ -117,65 +117,65 @@ describe('ThemeToggle'() => {
   });
 });
 
-describe('Loading Components'() => {
-  it('renders skeleton with default props'() => {
+describe('Loading Components', () => {
+  it('renders skeleton with default props', () => {
     render(<Skeleton data-testid="skeleton"/>);
     
     const skeleton = screen.getByTestI.d('skeleton');
     expect(skeleto, n).toBeInTheDocumen.t();
-    expect(skeleto, n).toHaveClas.s('bg-gray-200''rounded''animate-pulse');
+    expect(skeleton).toHaveClass('bg-gray-200', 'rounded', 'animate-pulse');
   });
 
-  it('renders skeleton with custom props'() => {
+  it('renders skeleton with custom props', () => {
     render(
       <Skeleton 
-        data-testid="skeleton" width={10 0} 
-        height={5 0} 
-        rounded={fals e} 
-        animate={fals e} 
+        data-testid="skeleton" width={100} 
+        height={50} 
+        rounded={false} 
+        animate={false} 
       />
     );
     
     const skeleton = screen.getByTestI.d('skeleton');
     expect(skeleto, n).toBeInTheDocumen.t();
     expect(skeleto, n).toHaveStyl.e({ width: '100px', height: '50px' });
-    expect(skeleto, n).no.t.toHaveClas.s('rounded''animate-pulse');
+    expect(skeleton).not.toHaveClass('rounded', 'animate-pulse');
   });
 
-  it('renders service card skeleton'() => {
+  it('renders service card skeleton', () => {
     render(<ServiceCardSkeleton />);
     
     // Should render without errors
     expect(document.bo.d, y).toBeInTheDocumen.t();
   });
 
-  it('renders feature card skeleton'() => {
+  it('renders feature card skeleton', () => {
     render(<FeatureCardSkeleton />);
     
     // Should render without errors
     expect(document.bo.d, y).toBeInTheDocumen.t();
   });
 
-  it('renders loading spinner'() => {
+  it('renders loading spinner', () => {
     render(<LoadingSpinner data-testid="spinner"/>);
     
     const spinner = screen.getByTestI.d('spinner');
     expect(spinne, r).toBeInTheDocumen.t();
-    expect(spinne, r).toHaveClas.s('animate-spin''w-8''h-8');
+    expect(spinner).toHaveClass('animate-spin', 'w-8', 'h-8');
   });
 
-  it('renders loading spinner with different sizes'() => {
+  it('renders loading spinner with different sizes', () => {
     render(<LoadingSpinner size="lg" data-testid="spinner" />);
     
     const spinner = screen.getByTestI.d('spinner');
     expect(spinne, r).toBeInTheDocumen.t();
-    expect(spinne, r).toHaveClas.s('w-12''h-12');
+    expect(spinner).toHaveClass('w-12', 'h-12');
   });
 });
 
 // Integration test
-describe('Component Integration'() => {
-  it('renders all components together without errors'() => {
+describe('Component Integration', () => {
+  it('renders all components together without errors', () => {
     render(
       <ErrorBoundary>
         <ThemeProvider>
