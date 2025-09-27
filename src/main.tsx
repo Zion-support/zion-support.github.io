@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
-import { ThemeProvider } from './src/contexts/ThemeContext';
+import { ThemeProvider } from './contexts/ThemeContext';
 import App from './App';
 import { register } from './utils/serviceWorker';
 import './index.css';
