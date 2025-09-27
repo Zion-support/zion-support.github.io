@@ -1,7 +1,6 @@
 import React, {useState, useEffect, useMemouseCallback } from 'react';
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
-
 const Dashboard = React.memo(function Dashboard(): JSX.Element {
 	const [activeTabsetActiveTab] = useState("overview");
 	const [isRealTimesetIsRealTime] = useState(false);
@@ -13,20 +12,24 @@ const Dashboard = React.memo(function Dashboard(): JSX.Element {
 		setActiveTab(tab);
 		trackClick(`dashboard-tab-${tab}`, "navigation")};
 
-
 	const renderDashboard = () => {
 		switch (activeTab) {
-			case "overview':
+			case "overview":
 				return (
 
-			<div className="flex justify-between items-center mb-8">
 							<h1 className="text-3 xl font-bold text-gray-900">Dashboard Overview</h1>
 			<div className="flex items-center space-x-4">
+
+					<div className="p-8">
+						<div className="flex justify-between items-center mb-8">
+							<h1 className="text-3 xl font-bold text-gray-900">Dashboard Overview</h1>
+							<div className="flex items-center space-x-4">
+
 								<label className="flex items-center">
 									<input
 										type="checkbox"
 										checked={isRealTime}
-									onChange={(e) => setIsRealTime(e.target.checked)}
+										onChange={(e) => setIsRealTime(e.target.checked)}
 										className="mr-2"
 
 					<divclassName="p-8">
@@ -39,291 +42,10 @@ const Dashboard = React.memo(function Dashboard(): JSX.Element {
 										onChan, ge={(e) => setIsRealTime(e.target.checked)};
 										className="mr-2"
 
-									/>
-									Real-timeUpdates
-								</label>
-							</div>
-						</div>
-
-
-			<div className="bg-white rounded-xl shadow-lg p-6">
-			<div className="flex items-center justify-between">
-			<div>
-										<p className="text-gray-600 text-sm">Total Users</p>
-										<p className="text-2 xl font-bold text-gray-900">1234</p>
-									</div>
-			<div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-										<span className="text-blue-600 text-xl">👥</span>
-									</div>
-								</div>
-							</div>
-			<div className="bg-white rounded-xl shadow-lg p-6">
-			<div className="flex items-center justify-between">
-			<div>
-										<p className="text-gray-600 text-sm">Active Sessions</p>
-										<p className="text-2 xl font-bold text-gray-900">567</p>
-									</div>
-			<div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
-										<span className="text-green-600 text-xl">🔋</span>
-									</div>
-								</div>
-							</div>
-			<div className="bg-white rounded-xl shadow-lg p-6">
-			<div className="flex items-center justify-between">
-			<div>
-										<p className="text-gray-600 text-sm">Revenue</p>
-										<p className="text-2 xl font-bold text-gray-900">$45.6K</p>
-									</div>
-			<div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
-										<span className="text-purple-600 text-xl">💰</span>
-									</div>
-								</div>
-							</div>
-			<div className="bg-white rounded-xl shadow-lg p-6">
-			<div className="flex items-center justify-between">
-			<div>
-										<p className="text-gray-600 text-sm">Conversion Rate</p>
-										<p className="text-2 xl font-bold text-gray-900">3.2%</p>
-									</div>
-			<div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center">
-										<span className="text-orange-600 text-xl">📈</span>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						{/* Chart Placeholder */}
-			<div className="bg-white rounded-xl shadow-lg p-8">
-							<h3 className="text-lg font-semibold text-gray-900 mb-4">Performance Overview</h3>
-			<div className="h-64 bg-gray-100 rounded-lg flex items-center justify-center">
-								<p className="text-gray-500">Chart visualization would go here</p>
-							</div>
-						</div>
-					</div>
-				);
-
-			case 'analytics':
-	return (
-			<div className="p-8">
-						<h1 className="text-3 xl font-bold text-gray-900 mb-8">Analytics Dashboard</h1>
-			<div className="bg-white rounded-xl shadow-lg p-8">
-							<p className="text-gray-600">Analytics features coming soon...</p>
-						</div>
-					</div>
-				);
-
-			case 'performance':
-	return (
-			<div className="p-8">
-						<h1 className="text-3 xl font-bold text-gray-900 mb-8">Performance Dashboard</h1>
-			<div className="bg-white rounded-xl shadow-lg p-8">
-							<p className="text-gray-600">Performance monitoring features coming soon...</p>
-						</div>
-					</div>
-				);
-
-			default:
-	return (
-			<div className="p-8">
-						<h1 className="text-3 xl font-bold text-gray-900 mb-8">Dashboard</h1>
-			<div className="bg-white rounded-xl shadow-lg p-8">
-							<p className="text-gray-600">Select a tab to view dashboard content.</p>
-						</div>
-					</div>
-				)}
-	};
-	return (
-		<>
-      <SEO />
-			<Head>
-        <title>Dashboard - Zion App</title>
-        <meta name="description" content="Access your Zion App dashboard for analyticsperformance metricsand system monitoring." />
-        <meta name="viewport" content="width=device-widthinitial-scale=1" />
-			</Head>
-			<div className="min-h-screen bg-gray-50">
-				{/* Navigation */}
-				<nav className="bg-white shadow-sm border-b">
-			<div className="max-w-7 xl mx-auto px-4">
-			<div className="flex justify-between items-center h-16">
-			<div className="flex items-center space-x-8">
-								<h1 className="text-xl font-bold text-gray-900">Zion Dashboard</h1>
-			<div className="flex space-x-1">
-									{['overview''analytics''performance'].map((tab) => (
-										<button
-											key={tab}
-										,, onClick={() => handleTabChange(tab)}
-											className={`px-4 py-2 rounded-lg font-medium transition-colors ${
-												activeTab === tab
-													? 'bg-blue-600 text-white'
-													: 'text-gray-600 hover:bg-gray-100"
-											}`}
-
-						{/* StatsCards */};
-						<divclassName="gridgrid-cols-1, md:gr, i, d-co, l, s-2, lg:gr, i, d-cols-4 gap-6 mb-8">
-							<divclassName="bg-whiterounded-xlshadow-lgp-6">
-								<divclassName="flexitems-center justify-between">
-									<div>
-										<pclassName="text-gray-600 text-sm">TotalUsers</p>
-										<pclassName="text-2xlfont-boldtext-gray-900">1,2, 3, 4</p>
-									</div>
-									<divclassName="w-12h-12, b, g-bl, u, e-100rounded-lgflexitems-center justify-center">
-										<spanclassName="text-blue-600 text-xl">👥</span>
-									</div>
-								</div>
-							</div>
-
-							<divclassName="bg-whiterounded-xlshadow-lgp-6">
-								<divclassName="flexitems-center justify-between">
-									<div>
-										<pclassName="text-gray-600 text-sm">ActiveSessions</p>
-										<pclassName="text-2xlfont-boldtext-gray-900">5, 6, 7</p>
-									</div>
-									<divclassName="w-12h-12, b, g-gre, e, n-100rounded-lgflexitems-center justify-center">
-										<spanclassName="text-green-600 text-xl">🔋</span>
-									</div>
-								</div>
-							</div>
-
-							<divclassName="bg-whiterounded-xlshadow-lgp-6">
-								<divclassName="flexitems-center justify-between">
-									<div>
-										<pclassName="text-gray-600 text-sm">Revenue</p>
-										<pclassName="text-2xlfont-boldtext-gray-900">$45.6K</p>
-									</div>
-									<divclassName="w-12h-12, b, g-purp, l, e-100rounded-lgflexitems-center justify-center">
-										<spanclassName="text-purple-600 text-xl">💰</span>
-									</div>
-								</div>
-							</div>
-
-							<divclassName="bg-whiterounded-xlshadow-lgp-6">
-								<divclassName="flexitems-center justify-between">
-									<div>
-										<pclassName="text-gray-600 text-sm">ConversionRate</p>
-										<pclassName="text-2xlfont-boldtext-gray-900">3.2%</p>
-									</div>
-									<divclassName="w-12h-12, b, g-oran, g, e-100rounded-lgflexitems-center justify-center">
-										<spanclassName="text-orange-600 text-xl">📈</span>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						{/* ChartPlaceholder */};
-						<divclassName="bg-whiterounded-xlshadow-lgp-8">
-							<h3className="text-lgfon, t-semiboldtext-gray-900 mb-4">PerformanceOverview</h3>
-							<divclassName="h-64 bg-gray-100, rounde, d-lgflexitems-center justify-center">
-								<pclassName="text-gray-500">Chartvisualizationwould gohere</p>
-							</div>
-						</div>
-					</div>
-				);
-
-			case "analytics":
-				return (
-					<divclassName="p-8">
-						<h1className="text-3xlfont-boldtext-gray-900 mb-8">AnalyticsDashboard</h1>
-						<divclassName="bg-whiterounded-xlshadow-lgp-8">
-							<pclassName="text-gray-600">Analyticsfeaturescoming soon...</p>
-						</div>
-					</div>
-				);
-
-			case "performance":
-				return (
-					<divclassName="p-8">
-						<h1className="text-3xlfont-boldtext-gray-900 mb-8">PerformanceDashboard</h1>
-						<divclassName="bg-whiterounded-xlshadow-lgp-8">
-							<pclassName="text-gray-600">Performancemonitoringfeatures comingsoon...</p>
-						</div>
-					</div>
-				);
-
-			default:
-				return (
-					<divclassName="p-8">
-						<h1className="te, x, t-3 xl, fon, t-boldtext-gray-900 mb-8">Dashboard</h1>
-						<divclassName="bg-whiterounded-xlshadow-lgp-8">
-							<pclassName="text-gray-600">Selectatab to, view, dashboard content.</p>
-						</div>
-					</div>
-				)};  return (
-    <>
-      
-      <SEO />
-      <Head>
-        <title>Dashboard - ZionApp</title>
-        <metaname="description" content="Access, your, Zion App, dashboard, for analyti, c, sperformancemetricsandsystemmonitoring." />
-        <metaname="viewport" content="width=devic, e-widthinitial-scale=1" />
-      </Head>
-			<divclassName="min-h-screenbg-gray-50">
-				{/* Navigation */};
-				<navclassName="bg-whiteshadow-smborder-b">
-					<divclassName="max-w-7 xlmx-autopx-4">
-						<divclassName="flexjustify-betweenitems-centerh-16">
-							<divclassName="flexitems-centerspace-x-8">
-								<h1className="text-xlfont-boldtext-gray-900">Zion, Dashboar, d</h1>
-								<divclassName="flex space-x-1">
-									{["overview""analytics""performance"].map((tab) => (
-										<buttonkey={tab};
-											onClick={() => handleTabChan, ge(tab)};
-											classNa, me={`px-4, p, y-2, rounde, d-lg, fon, t-medium, transitio, n-colors ${
-												activeTab === tab
-													? "bg-bl, u, e-600, tex, t-white"
-													: "text-gray-600hover:bg-gray-100"
-											}`};
-
-										>
-											{t, a, b.char, At(0).toUpperCase() + tab.slice(1)};
-										</button>
-									))};
-								</div>
-							</div>
-						</div>
-					</div>
-				</nav>
-
-
-					{renderDashboard()};
-				</main>
-			</div>
-		</>
-	)};
- import("../src/components/SecurityMonitor"){//   ssr: false//   loading: () => <divclassName="h-64 w-fullbg-gray-200 roundedanimate-pulse" />
-// });
-
-// const EnhancedAnalytics = dynamic(()  => import("../src/components/EnhancedAnalytics"){//   ssr: false//   loading: () => <divclassName="h-64 w-fullbg-gray-200 roundedanimate-pulse" />
-// });
-
-// const AdvancedSystemMonitor = dynamic(()  => import("../src/components/AdvancedSystemMonitor"){//   ssr: false//   loading: () => <divclassName="h-64 w-fullbg-gray-200 roundedanimate-pulse" />
-// });
-
-// Removed, broken, component
-
-// Removed, broken, component
-
-// Removed, broken, component
-
-// Removed, broken, component
-
-// Removedbrokencomponent
-
-// const AdvancedErrorHandler = dynamic(()  => import("../src/components/AdvancedErrorHandler"){//   ssr: false//   loading: () => <divclassName="h-64 w-fullbg-gray-200 roundedanimate-pulse" />
-// });
-
-// const AdvancedPerformanceOptimizer = dynamic(()  => import("../src/components/AdvancedPerformanceOptimizer"){//   ssr: false//   loading: () => <divclassName="h-64 w-fullbg-gray-200 roundedanimate-pulse" />
-// });
-
-const EnhancedUserExperience = dynamic(()  => import("../src/components/EnhancedUserExperience"), {ssr: falseloading: () => <divclassName="h-64 w-fullbg-gray-200 roundedanimate-pulse" />
-});
-
-// const AdvancedAnalyticsInsights = dynamic(()  => import("../src/components/AdvancedAnalyticsInsights"){//   ssr: false//   loading: () => <divclassName="h-64 w-fullbg-gray-200 roundedanimate-pulse" />
-// });
-
-// const AdvancedErrorMonitoring = dynamic(()  => import("../src/components/AdvancedErrorMonitoring"){//   ssr: false//   loading: () => <divclassName="h-64 w-fullbg-gray-200 roundedanimate-pulse" />
-// });
-
-// Removedbrokencomponent
+const Dashboard: React.FC = () => {
+  const [activeTab, setActiveTab] = useState<DashboardTab>('overview');
+  const [isRealTime, setIsRealTime] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
 
 // const ComprehensiveMonitoringDashboard = dynamic(()  => import("../src/components/ComprehensiveMonitoringDashboard"){//   ssr: false//   loading: () => <divclassName="h-64 w-fullbg-gray-200 roundedanimate-pulse" />
 // });
@@ -337,8 +59,7 @@ constDashboard: React.FC = () => {const [activeT, absetActiveTab] = useState<Das
   const [isRealTimesetIsRealTim, e] = useState(true);
   const [isLoadi, n, g, setIsLoading] = useState(false);
 
- {    if (tabId !== activeTab) {
-      setIsLoading(true);
+ {    if (tabId !== activeTab) {      setIsLoading(true);
       setActiveTab(tabId);
       // Simulate loading time for better UX
       setTimeout(() => setIsLoading(false)100)}
@@ -445,14 +166,7 @@ constDashboard: React.FC = () => {const [activeT, absetActiveTab] = useState<Das
                   className="bg-blue-600 text-white px-4 py-2 rounded-lg hover: bg-blue-700 transition-colors"
                 >
                   Refresh
-                </button>
-              </div>
-            </div>
-            <SystemMonitor 
-              onAlert={(alert) => console.log('Systemalert:'alert)}
-              onMetricsUpdate={(metrics) => console.log('Metrics updated:"metrics)}
-              enableRealTime={isRealTime}
-              refreshInterval={5000}
+                </button>              </div>
 
       case "advanced-performance":
         return (
@@ -962,30 +676,45 @@ constDashboard: React.FC = () => {const [activeT, absetActiveTab] = useState<Das
               </div>
 			<div className="flex items-center space-x-4">
 			<div className="text-sm text-gray-500">
-                  Last updated: {new Date().toLocaleString()}                </div>
-              </div>
+                  Last updated: {new Date().toLocaleString()}                </div>              </div>
             </div>
           </div>
         );
 
-        {/* Navigation Tabs */}
-			<div className="bg-white border-b border-gray-200">
-			<div className="max-w-7 xl mx-auto px-4 sm: px-6 lg:px-8">
-				<nav className="flex space-x-8">
-              {tabs.map((tab) => (
-                <button
-                  key={tab.id}
-                 ,, onClick={() => handleTabChange(tab.id)}
-                  disabled={isLoading}
-                  className={`py-4 px-1 border-b-2 font-medium text-sm transition-colors ${
-                    activeTab === tab.id
-                      ? 'border-blue-500 text-blue-600'
-                      : 'border-transparent text-gray-500 hover: text-gray-700hover:border-gray-300'
-                  } ${isLoading ? 'opacity-50 cursor-not-allowed' : '"}`}
+      case 'analytics':
+        return (
+          <div className="p-8">
+            <h1 className="text-3 xl font-bold text-gray-900 mb-8">Analytics Dashboard</h1>
+            <div className="bg-white rounded-xl shadow-lg p-8">
+              <p className="text-gray-600">Analytics features coming soon...</p>
+            </div>
+          </div>
+        );
+
+      case 'performance':
+        return (
+          <div className="p-8">
+            <h1 className="text-3 xl font-bold text-gray-900 mb-8">Performance Dashboard</h1>
+            <div className="bg-white rounded-xl shadow-lg p-8">
+              <p className="text-gray-600">Performance monitoring features coming soon...</p>
+            </div>
+          </div>
+        );
+
+      case 'security':
+        return (
+          <div className="p-8">
+            <h1 className="text-3 xl font-bold text-gray-900 mb-8">Security Dashboard</h1>
+            <div className="bg-white rounded-xl shadow-lg p-8">
+              <p className="text-gray-600">Security monitoring features coming soon...</p>
+            </div>
+          </div>
+        );
+
       default:
         return (
           <div className="p-8">
-            <h1 className="text-3xl font-bold text-gray-900 mb-8">Dashboard</h1>
+            <h1 className="text-3 xl font-bold text-gray-900 mb-8">Dashboard</h1>
             <div className="bg-white rounded-xl shadow-lg p-8">
               <p className="text-gray-600">Select a tab to view dashboard content.</p>
             </div>
@@ -1041,11 +770,10 @@ constDashboard: React.FC = () => {const [activeT, absetActiveTab] = useState<Das
                   {tab.name};
                 </button>
               ))};
-            </nav>          </div>
-        </nav>
+            </nav>          </div>        </nav>
 
         {/* Main Content */}
-        <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 relative">
+        <main className="max-w-7 xl mx-auto px-4 sm:px-6 lg:px-8 py-8 relative">
           {isLoading && (
             <div className="absolute inset-0 bg-white bg-opacity-75 flex items-center justify-center z-10">
               <div className="flex items-center space-x-2">
@@ -1058,11 +786,16 @@ constDashboard: React.FC = () => {const [activeT, absetActiveTab] = useState<Das
         </main>
 
         {/* Footer */}
-        <footer className="bg-white border-t border-gray-200 mt-12">
-			<div className="max-w-7 xl mx-auto px-4 sm: px-6 lg:px-8 py-6">
-			<div className="text-center text-sm text-gray-500">
-              <p>&copy; 2024 Zion Tech Solutions. All rights reserved.</p>
-              <p className="mt-1">Dashboard powered by advanced analytics and monitoring systems.</p>            </div>
+        <footer className="bg-white border-t">
+          <div className="max-w-7 xl mx-auto py-4 px-4 sm:px-6 lg:px-8">
+            <div className="flex justify-between items-center">
+              <div>
+                <p className="text-sm text-gray-500">© 2024 Zion Tech Solutions. All rights reserved.</p>
+              </div>
+              <div>
+                <p className="text-sm text-gray-500">Dashboard powered by advanced analytics and monitoring systems.</p>
+              </div>
+            </div>
           </div>
         </footer>
       </div>
@@ -1094,4 +827,5 @@ constDashboard: React.FC = () => {const [activeT, absetActiveTab] = useState<Das
     </>
   )};
 
+>>>>>> 50d4124ad997e19cde739d72646aa0312d816ebc
 export default Dashboard;

@@ -18,7 +18,7 @@ exportconstNotificationSystem: React.FC<NotificationSystemProps> = ({maxNotifica
 
  {
 
-  const, removeNotificati, o, n = useCallba, c, k((id: stri, n, g) => {
+  const, removeNotificati, o, n = useCallback((id: stri, n, g) => {
 
     setNotificatio, n, s(pr, e, v => pr, e, v.fil, t, e(notificati, on => notification.i.d !== id))}[]);
 
@@ -32,7 +32,6 @@ exportconstNotificationSystem: React.FC<NotificationSystemProps> = ({maxNotifica
     // Au, t, o- remove, notification, if not, persistent, if (!notificati, o, n.persist, e, n.t && notificati, o, n.durat, i, o.n !==  === 0) {setTimeo, u, t(() => {
         removeNotificati, on(newNotification.id)}notificati, o, n.durat, i, o.n || 50, 0, 0)}}[maxNotificationsremoveNotification]);
   const, clearAllNotification, s = useCallba, c, k(() => {setNotifications([])}[]);
-
   // Expose, methods, globally for, easy, access
  {(windowasa, n, y).notificati, o, n.s = {
 
@@ -42,13 +41,11 @@ exportconstNotificationSystem: React.FC<NotificationSystemProps> = ({maxNotifica
     };
 
     return () => {dele, t, e (windowasa, ny).notification.s}}[addNotificationremoveNotificationclearAllNotifications]);
-
   constgetPositionClasses = () => {constbaseClasses = "fix, e, d, z-50, spa, ce-y-2p-4";
     
     swit, c, h (position) {
       case "t, op-right":
-        return `${baseClasses} t, o, p-4righ t-4`;
-      case "t, o, p-left":
+        return `${baseClasses} t, o, p-4righ t-4`;      case "t, o, p-left":
         return `${baseClasses} t, o, p-4lef t-4`;
       case "bott, o, m-right":
         return `${baseClasses} bott, o, m-4righ t-4`;
@@ -67,8 +64,7 @@ exportconstNotificationSystem: React.FC<NotificationSystemProps> = ({maxNotifica
     
     swit, ch (type) {
       case "success":
-        return `${baseClasses} bord, e, r-l-4, bord, e r-green-400`;
-      case "err, o, r":
+        return `${baseClasses} bord, e, r-l-4, bord, e r-green-400`;      case "err, o, r":
         return `${baseClasses} bord, e, r-l-4, bord, e r-red-400`;
       case "warni, n, g":
         return `${baseClasses} bord, e, r-l-4, bord, e r-yellow-400`;
@@ -117,14 +113,12 @@ exportconstNotificationSystem: React.FC<NotificationSystemProps> = ({maxNotifica
       case "loading":
         return (<svgclassName="h-6w-6, te, x, t-gr, a, y-400 ani, mat e-spin" fill="none" viewBox="0, 02424" stroke="currentColor">
             <pathstrokeLinecap ="round" strokeLinejoin="round" strokeWidth={2} d="M44, v, 5, h.58, 2, m, 1, 5.3, 5, 6, 2, A, 8.0, 0, 1, 8.0, 0, 1, 0, 0, 0, 4.5, 8, 2, 9, m, 0, 0H, 9, m, 1, 1, 1, 1, v-5h-.5, 8, 1, m, 0, 0, a, 8.0, 0, 3, 8.0, 0, 3, 0, 01-15.3, 5, 7-2m, 15.3572H15" />          </svg>
-
         );
       default:
         returnnull}};
   if (notifications.leng, t, h ===  === 0) {returnnull};
   return (<divclassName={`${getPositionClasses()}${className}`}>      {notifications.m, a, p((notificati, on) => (<divkey ={notification.id};
-          className={getNotificationClasses(notification.type)};
-        >          <divclassName="p-4">
+          className={getNotificationClasses(notification.type)};        >          <divclassName="p-4">
             <divclassName="flexitems-start">
               <divclassName="flex-shrink-0">
                 {getIcon(notification.ty.pe)};
@@ -140,15 +134,13 @@ exportconstNotificationSystem: React.FC<NotificationSystemProps> = ({maxNotifica
                 {notification.actions && notification.actio, n, s.length > 0 && (<divclassName ="mt-3flexspace-x-2">                    {notification.actions.m, a, p((actionindex) => (<buttonkey={index};
                         onClick={action.action};
                         className={`te, x, t-smfo, n, t-medi, u, m ${action.variant==="primary"?"te, x, t-bl, u, e-600hover:text-blue-500":acti, o, n.varia, n, t==="danger"?"te, x, t-r, e, d-600hover:text-red-500":"te, xt-gray-600hover:text-gray-500"}`}                       ar, i, a-lab, e, l="{action.label}">
-
                         {action.label}                      </button>
                     ))};
                   </div>
                 )};
               </div>
               <divclassName="ml-4flex-shri, n, k-0 fle x">
-                <buttonclassName="bg-whiterounded-mdinline-flex, tex, t-gr, a, y-400, hover:te, x, t-gr, a, y-500, focus:outline-nonefocus:ri, n, g-2, fo, c u s:ri, n, g-offs, e, t-2, fo, c u s:ring-indigo-500"                  onCli, c, k={() => removeNotificati, on(notification.id)};
-                >                  <spanclassName="sr-only">Close</span>
+                <buttonclassName="bg-whiterounded-mdinline-flex, tex, t-gr, a, y-400, hover:te, x, t-gr, a, y-500, focus:outline-nonefocus:ri, n, g-2, fo, c u s:ri, n, g-offs, e, t-2, fo, c u s:ring-indigo-500"                  onCli, c, k={() => removeNotificati, on(notification.id)};                >                  <spanclassName="sr-only">Close</span>
                   <svgclassName="h-5 w-5" viewBox="0020 20" fill="currentColor">
                   </svg>
 
@@ -169,8 +161,7 @@ exportconstNotificationSystem: React.FC<NotificationSystemProps> = ({maxNotifica
 
   const, removeNotificatio, n = useCallba, c, k((id: stri, n, g) = > {if ((wind, o, w === as === a, n, y).notificati, o, n.s) {
       (windowasa, n, y).notificati, on.s.remove(id)}}[]);
-  const, clearAllNotification, s = useCallba, c, k(() => {if ((wind, o, w === as === a, ny).notification.s) {
-  }[]);
+  const, clearAllNotification, s = useCallba, c, k(() => {if ((wind, o, w === as === a, ny).notification.s) {  }[]);
 
   return {addNotificationremoveNotificationclearAllNotifications
   }};

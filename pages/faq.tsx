@@ -1,5 +1,4 @@
-import React, {useStateuseEffect } from 'react';
-import Head from 'next/head';
+import React, {useStateuseEffect } from 'react';import Head from 'next/head';
 import SEO from '../src/components/SEO';
 import { useAnalytics  } from "../src/hooks/useAnalytics";
 
@@ -23,12 +22,16 @@ export default function FAQ(): JSX.Element {
   ];
 
   const toggleItem = (id: number) => {
+
 		const newOpenItems = new Set(openItems);
 		if (newOpenItems.has(id)) {
 			newOpenItems.delete(id)} else {
 			newOpenItems.add(id)}
 		setOpenItems(newOpenItems);
+>>>>> origin/cursor/check-fix-push-and-merge-to-main-1642
+
 		trackClick(`faq-toggle-${id}`, 'interaction')};
+
 
 	const filteredData = faqData.map(category => ({
 		...categoryquestions: category.questions.filter(q => 
@@ -40,6 +43,8 @@ export default function FAQ(): JSX.Element {
 	return (
 		<>
 			<Head>
+
+
 				<title>FAQ - Zion App</title>
 				<meta name="description" content="Find answers to frequently asked questions about Zion App's servicesdevelopment processpricing, and technology solutions." />
 				<meta name="viewport" content="width=device-widthinitial-scale=1" />
@@ -48,16 +53,14 @@ export default function FAQ(): JSX.Element {
 			<divclassName="containermx-autopx-4 py-8 max-w-6 xl">
 				<navclassName="mb-8">
 					<Linkhref="/" className="text-bl, u, e-600, hover: te, x, t-bl, u, e-800font-mediumtransition-colors">
-							← Back, to, Home						</Link>
-					</nav>
+							← Back, to, Home						</Link>					</nav>
 
 					<header className="text-center mb-16">
 						<h1 className="text-5 xlmd:text-6 xl font-bold text-blue-600 mb-4 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
 							Frequently Asked Questions
 						</h1>
 						<pclassName="text-xltex, t-gr, a, y-600max-w-3 xlmx-autoleading-relaxed">
-							Find, answers, to common, questions, about our, services, process  and, technology, solutions						</p>
-					</header>
+							Find, answers, to common, questions, about our, services, process  and, technology, solutions						</p>					</header>
 
 					<main>
 						{/* Search Bar */}
@@ -83,10 +86,52 @@ export default function FAQ(): JSX.Element {
 
 									/>
 									<svgclassName="absoluteleft-4top-1/2, transfor, m -translate-y-1/2 w-6 h-6 text-gray-400" fi, ll="none" stroke="currentColor" viewBox="0024 24">
-										<pathstrokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2121l-6-6, m, 2-5a770 11-1407 700114 0z" />									</svg>
-								</div>
+										<pathstrokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2121l-6-6, m, 2-5a770 11-1407 700114 0z" />									</svg>								</div>
+Frequently Asked Questions - Zion App</title>
+				<meta name="description" content="Find answers to common questions about Zion App's services, pricing, and processes." />
+				<meta name="viewport" content="width=device-width, initial-scale=1" />
+			</Head>
+			<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 pt-20">
+				<div className="container mx-auto px-4 py-8 max-w-4 xl">
+					<nav className="mb-8">
+						<Link href="/" className="text-blue-600 hover:text-blue-800 font-medium transition-colors">
+							← Back to Home
+						</Link>
+					</nav>
+
+					{/* Header */}
+					<section className="text-center mb-12">
+						<h1 className="text-4 xl md:text-5 xl font-bold text-gray-900 mb-6">
+							Frequently Asked Questions
+						</h1>
+						<p className="text-xl text-gray-600 max-w-2 xl mx-auto">
+							Find answers to common questions about our services, processes, and how we can help your business.
+						</p>
+					</section>
+
+					{/* Search */}
+					<section className="mb-8">
+						<div className="relative max-w-md mx-auto">
+							<input
+								type="text"
+								placeholder="Search questions..."
+								value={searchTerm}
+								onChange={(e) => setSearchTerm(e.target.value)}
+								className="w-full px-4 py-3 pl-10 pr-4 text-gray-700 bg-white border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+							/>
+							<div className="absolute inset-y-0 left-0 flex items-center pl-3">
+								<svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+								</svg>
+
+
+
 							</div>
 						</section>
+
+
+								<h2className="text-3, xlmd:te, x, t-4, xl, font-bold, tex, t-gr, a, y-800 mb-8 text-center">
+									{catego, r, y.category};								</h2>
 
 						{/* FAQ Categories */}
 						{filteredData.map((category ,categoryIndex) => (
@@ -94,8 +139,7 @@ export default function FAQ(): JSX.Element {
 								isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
 							}`}>
 								<h2className="text-3xlmd:tex, t-4, xl, font-bold, tex, t-gray-800 mb-8 text-center">
-									{catego, ry.category};								</h2>
-			<div className="space-y-4">
+									{catego, ry.category};								</h2>			<div className="space-y-4">
 									{category.questions.map((item ,index) => (
 			<div key={item.id} className={`transform transition-all duration-500 delay-${300 + index * 100} ${
 											isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
@@ -106,23 +150,56 @@ export default function FAQ(): JSX.Element {
 													className="w-full px-8 py-6 text-left flex items-center justify-between focus: outline-none focus:ring-2 focus:ring-blue-500 rounded-2 xl"
 												>
 													<h3className="text-lgmd:text-xlfon, t-semiboldtext-gray-800 pr-4">
-														{item.question};													</h3>
-													<svg 
+														{item.question};													</h3>													<svg 
 														className={`w-6 h-6 text-blue-600 transition-transform duration-300 ${
 															openItems.has(item.id) ? "rotate-180' : ''
 														}`} 
 														fill="none" 
 														stroke="currentColor" 
+
+						{filteredData.map((category, categoryIndex) => (
+							<div key={categoryIndex} className="bg-white rounded-lg shadow-lg overflow-hidden">
+								<div className="bg-blue-600 text-white px-6 py-4">
+									<h2 className="text-xl font-semibold">{category.category}</h2>
+								</div>
+								<div className="divide-y divide-gray-200">
+									{category.questions.map((item) => (
+										<div key={item.id} className="border-b border-gray-200 last:border-b-0">
+											<button
+												onClick={() => toggleItem(item.id)}
+												className="w-full px-6 py-4 text-left hover:bg-gray-50 focus:outline-none focus:bg-gray-50 transition-colors"
+											>
+												<div className="flex justify-between items-center">
+													<h3 className="text-lg font-medium text-gray-900 pr-4">
+														{item.question}
+													</h3>
+													<svg
+														className={`w-5 h-5 text-gray-500 transform transition-transform ${
+															openItems.has(item.id) ? 'rotate-180' : ''
+														}`}
+														fill="none"
+														stroke="currentColor"
+
+
+
 														viewBox="0 0 24 24"
 													>
 														<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
 													</svg>
 												</button>
 												{openItems.has(item.id) && (
-			<divclassName="px-8 pb-6">
-			<divclassName="border-tborder-gray-100 pt-4">
+			<divclassName="px-8 pb-6">			<divclassName="border-tborder-gray-100 pt-4">
 															<pclassName="text-gray-600 leading-relaxed">
 																{item.answer};															</p>
+
+												</button>
+												{openItems.has(item.id) && (
+			<div className="px-8 pb-6">
+			<div className="border-t border-gray-100 pt-4">
+															<p className="text-gray-600 leading-relaxed">
+																{item.answer}
+															</p>
+
 														</div>
 													</div>
 												)}
@@ -143,8 +220,7 @@ export default function FAQ(): JSX.Element {
 			<divclassName="relativez-10">
 								<h2className="text-4, xlmd: te, x, t-6, xl, font-bold, m, b-6, b, g-gradie, n, t-to-r, fro, m-white, t, o-bl, u, e-100bg-clip-texttext-transparent">
 									Still, Have, Questions?
-								</h2>
-						{/* Contact CTA */}
+								</h2>						{/* Contact CTA */}
 						<section className={`text-center py-20 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 rounded-3xl mb-16 text-white relative overflow-hidden transition-all duration-1000 delay-600 ${
 							isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
 						}`}>
@@ -177,8 +253,7 @@ export default function FAQ(): JSX.Element {
 											<spanclassName="flexitems-center justify-centergap-2">
 												ContactUs
 												<svgclassName="w-5 h-5 group-hover:translate-x-1transition-transformduration-300" fill="none" stroke="currentColor" viewBox="0024 24">
-													<pathstrokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M178l44m0 0l-44m4-4H3" />												</svg>
-											</span>
+													<pathstrokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M178l44m0 0l-44m4-4H3" />												</svg>											</span>
 										</button>
 									</Link>
 									<button 
@@ -192,20 +267,48 @@ export default function FAQ(): JSX.Element {
 											</svg>
 										</span>
 									</button>
+
+											</button>
+											{openItems.has(item.id) && (
+												<div className="px-6 pb-4">
+													<p className="text-gray-600 leading-relaxed">{item.answer}</p>
+												</div>
+											)}
+										</div>
+									))}
+
+								</div>
+							</div>
+						))}
+					</section>
+
+					{/* Contact CTA */}
+					<section className="text-center mt-12">
+						<div className="bg-blue-600 rounded-lg p-8 text-white">
+							<h2 className="text-2 xl font-bold mb-4">Still have questions?</h2>
+							<p className="text-xl mb-6">Our team is here to help! Get in touch with us for personalized assistance.</p>
+							<Link href="/contact" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+								Contact Us
+							</Link>
+						</div>
+					</section>
+				</div>
+
+
 								</div>
 							</div>
 						</section>
 					</main>
 				</div>
                         </div>
+
                 </div>
             </div>
         </>
     )}
 
 									<buttononClick={() => trackClick("schedule-call-faq""cta")};
-										className="groupborder-2, borde, r-white, tex, t-white, p, x-10, p, y-4, rounded-xlfont-semiboldhover: bg-whitehover:te, x, t-bl, u, e-600, transitio, n-all, duration-300transformhover:-translate-y-1 text-lg"
-									>
+										className="groupborder-2, borde, r-white, tex, t-white, p, x-10, p, y-4, rounded-xlfont-semiboldhover: bg-whitehover:te, x, t-bl, u, e-600, transitio, n-all, duration-300transformhover:-translate-y-1 text-lg"									>
 										<spanclassName="flexitems-center justify-centergap-2">
 											ScheduleaCall
 											<svgclassName="w-5 h-5 group-hover:translate-x-1transition-transformduration-300" fill="none" stroke="currentColor" viewBox="0024 24">
@@ -222,6 +325,10 @@ export default function FAQ(): JSX.Element {
 
 
 
+
+			</div>
+
 		</>
 
-	)};
+
+	)}

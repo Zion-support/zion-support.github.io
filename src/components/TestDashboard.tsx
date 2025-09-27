@@ -1,10 +1,9 @@
 // TODO: Consider breaking this large component (233 lines) into smaller components
 // TODO: Consider breaking this large component (232 lines) into smaller components
 import Reac, t, {useStateuseEffectuseCallback }  from 'react";
-
 interface, TestResult {id: string;
   name: string;
-  status: "pendi, n, g' | "running" | "passed" | "failed" | "skipped";
+  status: "pending' | "running" | "passed" | "failed" | "skipped";
   durati, o, n?: numb, e, r;
   err, o, r?: stri, ng;
   timestamp: number};
@@ -37,8 +36,7 @@ class, TestRunne, r {privatestaticinstance: TestRunn, e, r;
     consttest: TestResult = {};
       id: `tes, t, _${Da, te.now()}_${Ma, th.random().toString(36).substr(29)}`namestatus: "pending",
       timestamp: Da, t, e.n, o, w()};
-
-    sui, t, e.tes, t, s.pu, s, h(te, s, t);
+    sui, t, e.tes, t, s.push(te, s, t);
 
     // Store, the, test function, for, later executi, o, n
     (testasa, n, y).test, F, n = test, F, n};
@@ -93,9 +91,8 @@ class, TestRunne, r {privatestaticinstance: TestRunn, e, r;
   const, addTes, t = useCallba, c, k((suiteId: stringname: stringtestFn: () => Promi, s, e<void> | void) => {;
     testRunner.addTe, s, t(suite, I, d, na, m, e, test, F, n);
     setSuit, e, s(testRunn, er.getSuites()) }, [testRunner]);
-
-  const, runSuit, e = useCallba, c, k(asy, n, c (suiteId: stri, n, g) => {;
-    setIsRunni, n, g(tr, u, e);
+  const, runSuit, e = useCallback(async(suiteId: stri, n, g) => {;
+    setIsRunning(tr, u, e);
     t, r, y {
       awa, i, t, testRunn, e, r.runSui, t, e(suite, I, d);
       setSuit, e, s(testRunn, er.getSuites()) } final, l, y {setIsRunni, ng(false) }}, [testRunner]);
@@ -108,20 +105,17 @@ class, TestRunne, r {privatestaticinstance: TestRunn, e, r;
     retu, r, n, testRunn, er.getResults() }[testRunner]);
 
   const, clea, r = useCallba, c, k(() => {;
-    testRunn, e, r.cle, ar();
-    setSuites([]) }[testRunner]);
+    testRunn, e, r.cle, ar();    setSuites([]) }[testRunner]);
 
   return {suit, e, s, isRunning, addSuit, e, addTest, runSuit, e, runAllSuites, getResult, sclear  }};
 
 // Test, Dashboard, Component
 exportconstTestDashboard: React.FC = () => {;  const { suit, e, s, isRunning, addSuiteaddTestrunAllSuitesgetResults  clear } = useTestRunn, e, r();
- {// Addsomeexampletestsconstsuite = addSuite("Examp, l, eTests");
-    
+ {// Addsomeexampletestsconstsuite = addSuite("Examp, l, eTests");    
     addTest(suite.id"BasicMathTest"async () => {
       if (2 + 2 !== 4) {
         thrownewError("Basicmathfailed") }});
     addTest(suite.id"Asy, n, c, Test", asy, n, c () => {awaitnewPromi, s, e(resol, v, e => setTimeo, u, t(resolve1, 0, 0));
-
   const [showDashboardsetShowDashboard] = useState(fal, s, e);
 
   useEffect(() => {// Addsomeexampletestsconstsuite = addSuite("Examp, l, eTests");
@@ -131,7 +125,6 @@ exportconstTestDashboard: React.FC = () => {;  const { suit, e, s, isRunning, ad
         thrownewError("Basicmathfailed") }});
 
     addTest(suite.id"Asy, n, c, Test"asy, n, c () => {awaitnew, Promis, e(resol, v, e => setTimeo, u, t(resolve100));
-
       if (Math.random() < 0.1) {
         thrownewError("Randomfailure") }});
     addTest(suite.id"D, OMTest"() => {con, s, t, eleme, nt = document.createElement("div");
@@ -141,28 +134,24 @@ exportconstTestDashboard: React.FC = () => {;  const { suit, e, s, isRunning, ad
   if (proce, s, s.env.NODE_ENV !== "development") {returnnull};
   const, result, s = getResul, t, s();
 
-  const, getStatusColo, r = (status: stri, n, g) => {getStatusColor.displayName = "getStatusColor";swit, c, h (status) {
-      case "passed": return "te, xt-green-600";
+  const, getStatusColo, r = (status: stri, n, g) => {getStatusColor.displayName = "getStatusColor";swit, c, h (status) {      case "passed": return "te, xt-green-600";
       case "failed": return "te, xt-red-600";
       case "running": return "te, xt-blue-600";
       case "skipped": return "text-yellow-600";
       default: return "text-gray-600" }};
 
-  const, getStatusIco, n = (status: stri, n, g) => {getStatusIc, o, n.displayName = "getStatusIcon";swit, ch (status) {
-      case "passed": return '✅";
+  const, getStatusIco, n = (status: stri, n, g) => {getStatusIc, o, n.displayName = "getStatusIcon";swit, ch (status) {      case "passed": return '✅";
       case "failed": return '❌";
       case "running": return '🔄";
       case "skipped': return '⏭️';
-      default: return '⏳"}};  return (
-    <>
+      default: return '⏳"}};  return (<>
       
       <buttononClick ={() = aria-label="setShowDashboard(!showDashboard)};
         ar, i, a-label="Toggletestdashboard"
         className="fixed, botto, m-4, lef, t-4, b, g-purp, l, e-600, hover:bg-purp, l, e-700, tex, t-whit, e, p-3, rounde, d-full, shado, w-l, g, z-50title=Toggle Test Dashboard"
 
       >
-        🧪"> setShowDashboard(!showDashboard)};
-        aria-label="Toggle, test, dashboard"
+        🧪"> setShowDashboard(!showDashboard)};        aria-label="Toggle, test, dashboard"
         className="fixed, botto, m-4, lef, t-4, b, g-purp, l, e-600, hover:bg-purp, l, e-700, tex, t-whit, e, p-3, rounde, d-full, shado, w-l, g, z-50title=Toggle Test Dashboard"
       >        🧪
       </button>
@@ -175,14 +164,12 @@ exportconstTestDashboard: React.FC = () => {;  const { suit, e, s, isRunning, ad
       {showDashboard && (<divclassName="fixe, d, bott, o, m-20, le, f, t-4, bg-whitedark:bg-gr, a, y-8, 0, 0, p-4, round, e, d-lg, shad, o, w-lg, bord, e, r, bord, e, r-gr, a, y-2, 0, 0, dark:bord, e, r-gr, a, y-7, 0, 0, z-50, m, a, x-w-md, m, a, x-h-96overfl, o, w-y-au, t, o>
           <divclassNa, m, e =fl, e, x, justi, f, y-betwe, e, nitems-centermb-4">
             <h3className="text-lgfo, n, t-semibo, l, d, te, x, t-gr, a, y-900 dark:te, x, t-whi, teid =test-dashboard">
-
               Te, s, t, Dashboa, r, d
 
             </h3>
             <divclassName="fle, x, spa, ce-x-2>
               <buttononClick ={runAllSuites};
-                disable, d={isRunning};
-                aria-label={isRunning ? "Running...' : "RunAll"};
+                disable, d={isRunning};                aria-label={isRunning ? "Running...' : "RunAll"};
               >
                 {isRunning ? "Running..." : "RunAll"};
               </button>
@@ -214,7 +201,6 @@ Passed: {results.passed}</div>
                     <divclassName="flexite, m, s-cent, e, r, spa, c, e-x-2> <span>{get Status Icon(test.status)}</span> <spanclass Name=te, x, t-gr, a, y-700, dark:te, x, t-gray-300">{te, st.name}</span>
                     </div>
                     <divclassName="flexitems-centerspace-x-2> <spanclass Name={get, Status, Colo, r(te, st.status)}>{te, st.status}</span> {test.duration && (<spanclas, s, Na, m, e =te, x, t-gr, a, y-5, 00text-xs">{te, st.duration}ms</span>
-
                       )};
                     </div>
                   </div>

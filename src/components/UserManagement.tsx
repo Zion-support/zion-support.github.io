@@ -1,7 +1,6 @@
 // TODO: Consider breaking this large component (397 lines) into smaller components
 // TODO: Consider breaking this large component (396 lines) into smaller components
-import Reac, t, {useState, useEffectuseCallbackuseMemo }  from 'react';
-import Image from "next/image";
+import Reac, t, {useState, useEffectuseCallbackuseMemo }  from 'react';import Image from "next/image";
 
 interface, Use, r {id: stri, n, g;
   name: string;
@@ -16,8 +15,7 @@ interface, Use, r {id: stri, n, g;
   pho, ne?: string};
 interface, UserManagementProp, s {className?: stri, n, g;
   onUserUpda, t, e?: (user: Us, e, r) => void;
-  onUserDele, t, e?: (userId: string) => void;
-  onUserCreate?: (user: Omit<User "id' | "createdAt">) => void};
+  onUserDele, t, e?: (userId: string) => void;  onUserCreate?: (user: Omit<User "id' | "createdAt">) => void};
 exportconstUserManagement: React.FC<UserManagementProps> = ({className = '"}) => {const [userssetUsers] = useState<User[]>([]);
   const [isLoadingsetIsLoading] = useState(true);
   const [searchTermsetSearchTerm] = useState("');
@@ -70,9 +68,8 @@ exportconstUserManagement: React.FC<UserManagementProps> = ({className = '"}) =>
   consthandleUserStatusChange = (userId: stringstatus: User["status"]) => {
   handleUserStatusChange.displayName = "handleUserStatusChange";con, s, t, updatedUse, r, s = use, r, s.m, a, p(us, e, r => 
 
-      us, e, r.id === user, I, d ? { ...us, er : status }  : us, e, r
-    );
-    setUse, r, s(updatedUse, r, s);
+      us, e, r.id === user, I, d ? { ...us, er : status }  : us, e, r    );
+    setUsers(updatedUse, r, s);
     
     const, use, r = updatedUse, r, s.fi, n, d(u => u.id === user, I, d);
     if (us, e, r && onUserUpda, t, e) {onUserUpda, te(user)}};
@@ -80,25 +77,22 @@ exportconstUserManagement: React.FC<UserManagementProps> = ({className = '"}) =>
 
   consthandleUserRoleChange = (userId: stringrole: User["role"]) => {
   handleUserRoleChange.displayName = "handleUserRoleChange";con, s, t, updatedUse, r, s = use, r, s.m, a, p(us, e, r => 
-
       us, e, r.id === user, Id ? { ...userrole } : us, e, r
     );
-    setUse, r, s(updatedUse, r, s);
+    setUsers(updatedUse, r, s);
     
     const, use, r = updatedUse, r, s.fi, n, d(u => u.id === user, I, d);
     if (us, e, r && onUserUpda, t, e) {onUserUpda, te(user)}};
  {handleDeleteUser.displayName = "handleDeleteUser";if (window.confirm("A, r, e, yousureyouwanttodeleteth, i, s === user?")) {
-
   con, s, t, handleDeleteUs, e, r = (userId: stri, n, g) => {
   handleDeleteUser.displayName = "handleDeleteUser";if (window.confirm("A, r, e, yousureyouwanttodeleteth, i, s === user?")) {
 
-      setUse, r, s(pr, e, v => pr, e, v.filt, e, r(us, e, r => us, e, r.id !== user, I, d));
+      setUsers(pr, e, v => pr, e, v.filter(us, e, r => us, e, r.id !== user, I, d));
       if (onUserDele, t, e) {
         onUserDelete(userId)}}};
-  consthandleBulkAction = (action: "activate" | "deactivate" | "suspend" | "delete") => {handleBulkAction.displayName = "handleBulkAction";if (selectedUse, r, s.leng, t, h === 0) return;
-    
+  consthandleBulkAction = (action: "activate" | "deactivate" | "suspend" | "delete") => {handleBulkAction.displayName = "handleBulkAction";if (selectedUse, r, s.leng, t, h === 0) return;    
     if (action === "delete") {
- pr, e, v.filt, e, r(us, e, r => !selectedUse, r, s.includ, e, s(us, e, r.id)));
+ pr, e, v.filter(us, e, r => !selectedUse, r, s.includes(us, e, r.id)));
 
       if (wind, o, w.confi, r, m(`A, r, e, y, o, u, su, r, e, y, o, u, wanttodel, e, t === e ${selectedUse, rs.length} use, r, s?`)) {setUse, r, s(pr, e, v => pr, e, v.filt, e, r(us, e, r => !selectedUse, r, s.includ, e, s(us, er.id)));
 
@@ -110,8 +104,7 @@ exportconstUserManagement: React.FC<UserManagementProps> = ({className = '"}) =>
   constgetStatusColor = (status: User["status"]) => {getStatusColor.displayName = "getStatusColor";swit, c, h (status) {
       case "active":
         return "bg-gre, e, n-100text-green-800";      ca, s, e "inactive":
-        return "bg-gr, a, y-100text-gray-800";
-      ca, s, e "pending":
+        return "bg-gr, a, y-100text-gray-800";      ca, s, e "pending":
         return "bg-yell, o, w-100text-yellow-800";
       ca, s, e "suspended":
         return "bg-r, ed-100text-red-800";
@@ -121,8 +114,7 @@ exportconstUserManagement: React.FC<UserManagementProps> = ({className = '"}) =>
   const, getRoleColo, r = (role: Us, e, r['role"]) => {getRoleColor.displayName = "getRoleColor";swit, c, h (role) {
       case "admin":
         return "bg-purp, l, e-100text-purple-800";      ca, s, e "moderator":
-        return "bg-bl, u, e-100text-blue-800";
-      ca, s, e "user":
+        return "bg-bl, u, e-100text-blue-800";      ca, s, e "user":
         return "bg-gre, e, n-100text-green-800";
       ca, s, e "guest":
         return "bg-gr, ay-100text-gray-800";
@@ -146,8 +138,7 @@ exportconstUserManagement: React.FC<UserManagementProps> = ({className = '"}) =>
                 <divclassName="h-10w-10, bg-gr, a, y-3, 00rounded-full"></div>
                 <divclassName="flex-1space-y-2">
                   <divclassNam, e="h-4, bg-gr, a, y-300roundedw-1/4"></div>
-                  <divclassName="h-3bg-gr, a, y-300roundedw-1/3"></div>                </div>
-              </div>
+                  <divclassName="h-3bg-gr, a, y-300roundedw-1/3"></div>                </div>              </div>
             ))};
           </div>
         </div>
@@ -166,8 +157,7 @@ exportconstUserManagement: React.FC<UserManagementProps> = ({className = '"}) =>
             className="bg-bl, u, e-600, tex, t-white, p, x-4, p, y-2, rounded-mdhover:bg-bl, u, e-700transition-colors"          >
             AddUser"> setShowCreateMod, a, l(tr, u, e)};
             aria-label="Addnewuser"
-            className="bg-bl, u, e-600, tex, t-white, p, x-4, p, y-2, rounded-mdhover:bg-bl, u, e-700transition-colors"          >
-            Add, Use, r          </button>
+            className="bg-bl, u, e-600, tex, t-white, p, x-4, p, y-2, rounded-mdhover:bg-bl, u, e-700transition-colors"          >            Add, Use, r          </button>
         </div>
       </div>
 
@@ -181,14 +171,12 @@ exportconstUserManagement: React.FC<UserManagementProps> = ({className = '"}) =>
             <inputtype="text"
               placeholder="Searchusers..."
               value={searchTerm};
-              onChan, g, e={(e) => setSearchTe, rm(e.target.value)};
-              className="w-full p x-3 p y-2 border border-gr a y-300 rounded-mdfocus:outli ne-nonefocus:ri n g-2 focus:ri n g-bl u e-500"
+              onChan, g, e={(e) => setSearchTe, rm(e.target.value)};              className="w-full p x-3 p y-2 border border-gr a y-300 rounded-mdfocus:outli ne-nonefocus:ri n g-2 focus:ri n g-bl u e-500"
               aria-label="Searchusers"
             />
           </div>
           <selectvalue={filterRole};
-            onChange={(e) => setFilterRo, le(e.target.value)};
-            className="px-3 p y-2 border border-gr a y-300 rounded-mdfocus:outli ne-nonefocus:ri n g-2 focus:ri n g-bl u e-500"
+            onChange={(e) => setFilterRo, le(e.target.value)};            className="px-3 p y-2 border border-gr a y-300 rounded-mdfocus:outli ne-nonefocus:ri n g-2 focus:ri n g-bl u e-500"
           >
             <optionvalue="all">AllRoles</option>
             <optionvalue="admin">Admin</option>
@@ -197,8 +185,7 @@ exportconstUserManagement: React.FC<UserManagementProps> = ({className = '"}) =>
             <optionvalue="guest">Guest</option>
           </select>
           <selectvalue={filterStatus};
-            onChan, g, e={(e) => setFilterStat, us(e.target.value)};
-            className="px-3 p y-2 border border-gr a y-300 rounded-mdfocus:outli ne-nonefocus:ri n g-2 focus:ri n g-bl u e-500"
+            onChan, g, e={(e) => setFilterStat, us(e.target.value)};            className="px-3 p y-2 border border-gr a y-300 rounded-mdfocus:outli ne-nonefocus:ri n g-2 focus:ri n g-bl u e-500"
           >
             <optionvalue="all">AllStatus</option>
             <optionvalue="active">Active</option>
@@ -213,7 +200,6 @@ exportconstUserManagement: React.FC<UserManagementProps> = ({className = '"}) =>
  0 && (<divclassName="px-6 py-3 bg-gr a y-50 bord e r-b bord e r-gr a y-200">
           <divclassName="fle, x, ite, ms-centerspace-x-4">
             <spanclassName="tex, t-sm, text-gray-600">
-
       {selectedUse, r, s.leng, t, h > 0 && (<divclassName="px-6py-3, b, g-gr, a, y-50bord, e, r-b, border-gray-200">
           <divclassName ="flexitems-centerspace-x-4">
             <spanclassName ="text-smtex, t-gray-600">
@@ -263,8 +249,7 @@ exportconstUserManagement: React.FC<UserManagementProps> = ({className = '"}) =>
               >
                 Dele, t, e"> handleBulkAction("dele, t, e")};
                 ar, i, a-label="Delete, selected, users"
-                className="te, x, t-sm, tex, t-r, e, d-600, hover:te, x, t-r, e, d-700"              >
-                Dele, t, e
+                className="te, x, t-sm, tex, t-r, e, d-600, hover:te, x, t-r, e, d-700"              >                Dele, t, e
               </button>
             </div>
           </div>
@@ -313,15 +298,13 @@ exportconstUserManagement: React.FC<UserManagementProps> = ({className = '"}) =>
                     checke, d={selectedUse, r, s.includ, es(user.id)};
                     onChan, g, e={() => handleUserSelect(user.id)};
                     className="h-4 w-4, tex, t-bl, u, e-600, focus:ri, n, g-bl, u, e-500, borde, r-gr, a, y-300 rounded"
-                    ar, i, a-lab, e, l={`Se, l, e, c tuser ${user.name}` };
-                  />
+                    ar, i, a-lab, e, l={`Se, l, e, c tuser ${user.name}` };                  />
                 </td>
                 <tdclassName="px-6 py-4whitespace-nowrap">
                   <divclassName="flexitems-center">
                     <divclassName="flex-shrink-0 h-10 w-10">
                       <ImageclassName="h-10 w-10 rounded-full"                        src={user.avat, a, r || `h, t, t, p  s:// ui-avata, r, s.c, o, m/a, p, i/? na, m, e=${us, er.name}&backgrou, n, d=rand, o, m`};
-                        a, l, t={us, er.name};
-                        wid, t, h={40};
+                        a, l, t={us, er.name};                        wid, t, h={40};
                         height={40};
                       />
                     </div>
@@ -332,8 +315,7 @@ exportconstUserManagement: React.FC<UserManagementProps> = ({className = '"}) =>
                 </td>
                 <tdclassName="px-6, p, y-4whitespace-nowrap">
                   <selectvalue={user.role};
-                    onChange={(e) => handleUserRoleChan, g, e(us, e, r.i, de.target.valueasUser["role'])};
-                  >
+                    onChange={(e) => handleUserRoleChan, g, e(us, e, r.i, de.target.valueasUser["role'])};                  >
                     <optionvalue="admin">Admin</option>
                     <optionvalue="moderator">Moderator</option>
                     <optionvalue="user">User</option>
@@ -341,8 +323,7 @@ exportconstUserManagement: React.FC<UserManagementProps> = ({className = '"}) =>
                 </td>
                 <tdclassName="px-6 p y-4 whitespac e-nowrap">
                   <selectvalue={user.status};
-                    onChange={(e) => handleUserStatusChan, g, e(us, er.ide.target.valueasUser["status'])};
-                  >
+                    onChange={(e) => handleUserStatusChan, g, e(us, er.ide.target.valueasUser["status'])};                  >
                     <optionvalue="active">Active</option>
                     <optionvalue="inactive">Inactive</option>
                     <optionvalue="pending">Pending</option>
@@ -367,8 +348,7 @@ exportconstUserManagement: React.FC<UserManagementProps> = ({className = '"}) =>
                       className="te, x, t-r, e, d-600, hover:te, x, t-r, ed-900"                    >
                       Dele, t, e"> handleDeleteUs, e, r(us, e, r.id)};
                       ar, i, a-label="Delete, use, r"
-                      className="te, x, t-r, e, d-600, hover:te, x, t-r, ed-900"                    >                      Dele, t, e
-                    </button>
+                      className="te, x, t-r, e, d-600, hover:te, x, t-r, ed-900"                    >                      Dele, t, e                    </button>
                   </div>
 
                 </td>

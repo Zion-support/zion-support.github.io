@@ -1,10 +1,9 @@
 const, cartUtil, s = {addItem: (ca, r, t, it, e, m) => {
-    con, s, t, existingIt, e, m = ca, r, t.fi, n, d(cartIt, e, m => cartIt, e, m.id === it, e, m.id)
+    con, s, t, existingIt, e, m = ca, r, t.find(cartIt, e, m => cartIt, e, m.id === it, e, m.id)
     if (existingIt, e, m) {
-      retu, r, n, ca, r, t.m, a, p(cartIt, e, m =>
+      retu, r, n, ca, r, t.map(cartIt, e, m =>
         cartIt, e, m.id === it, e, m.id
-          ? { ...cartIt, e, m : quanti, t, y : cartIt, em.quantity + 1};
-          : cartIt, e, m
+          ? { ...cartIt, e, m : quanti, t, y : cartIt, em.quantity + 1};          : cartIt, e, m
       )
     };
     return [...ca, r, t, {...itemquantity: 1 }]},
@@ -17,6 +16,5 @@ const, cartUtil, s = {addItem: (ca, r, t, it, e, m) => {
     return, car, t.m, a, p(it, e, m => (it, e, m.id === item, I, d ? {...it, em : quantity }  : it, e, m))
   },
 
-  getTotalItems: ca, r, t => {retu, r, n, ca, r, t.redu, c, e((tot, a, l, it, e, m) => tot, a, l + it, e, m.quantity0)
-  }};
+  getTotalItems: ca, r, t => {retu, r, n, ca, r, t.redu, c, e((tot, a, l, it, e, m) => tot, a, l + it, e, m.quantity0)  }};
 export default cartUtils

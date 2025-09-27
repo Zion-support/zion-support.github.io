@@ -1,5 +1,4 @@
 import { useEffect  } from "react";
-
 interface WebVitalsMetric {
   name: string;
   value: number;
@@ -19,8 +18,7 @@ exportfunctionWebVitals() {useEffect(() => {
       getF, I, D(reportWebVita, l, s);
       getF, C, P(reportWebVita, l, s);
       getL, C, P(reportWebVita, l, s);
-      getTTFB(reportWebVitals)})}[]);
-  // Log to console in development
+      getTTFB(reportWebVitals)})}[]);  // Log to console in development
   if (process.env.NODE_ENV === "development') {console.log('Web Vitals:'metric)}
 }
 
@@ -35,4 +33,22 @@ export function WebVitals() {useEffect(() => {
 
   return null}
 
+ {
+		// Only run in browser
+		if (typeof window === "undefined") {
+			return}
+
+		// Import web-vitals dynamically to avoid SSR issues
+		import("web-vitals").then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+			getCLS(reportWebVitals);
+			getFID(reportWebVitals);
+			getFCP(reportWebVitals);
+			getLCP(reportWebVitals);
+			getTTFB(reportWebVitals)})}, []);
+
+	return null; // This component doesn't render anything
+}
+
+
 export default WebVitals;
+

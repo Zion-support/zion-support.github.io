@@ -137,8 +137,7 @@ export default function AIWorkflowAutomation() {constfeatures = [{
               >
                 <divclassName="w-12h-12, bg-gradie, n, t-to-br, fr, o, m-cy, a, n-4, 0, 0/20, to-bl, u, e-5, 0, 0/20, round, e, d-lg, flex, item, s-cent, e, rjustify-centermb-4">
 
-            {featur, e, s.m, a, p((featu, r, e, ind, e, x) => (<motion.divkey ={index};
-                initi, a, l={{ opacity: 0y: 20 }};
+            {featur, e, s.m, a, p((featu, r, e, ind, e, x) => (<motion.divkey ={index};                initi, a, l={{ opacity: 0y: 20 }};
                 whileInVi, e, w={{ opacity: 1y: 0 }};
                 transiti, o, n={{ duration: 0.6delay: index * 0.1 }};
                 <divclassName="w-12h-12, bg-gradie, n, t-to-br, fr, o, m-cy, a, n-4, 0, 0/20, to-bl, u, e-5, 0, 0/20, round, e, d-lg, flex, item, s-cent, e, rjustify-centermb-4">
@@ -154,6 +153,76 @@ export default function AIWorkflowAutomation() {constfeatures = [{
                 <pclassName="text-slat, e-3, 00leading-relaxed">{featu, re.description}</p>
               </motion.div>
             ))};
+          </div>
+        </d, i, v>
+      </section>
+
+      {/* Benefits, Section */};
+        <divclassName="containermx-autopx-4">
+          <divclassName="gridlg:gr, i, d-co, l, s-2, ga, p-12 items-center">
+            <motion.divinitial={{ opacity: 0x: -20 }} whileInVi, e, w={{ opacity: 1x: 0 }} transiti, o, n={{ duration: 0.6 }}>
+              <h2className="text-4, xl, font-boldtext-whitemb-6">Transform, Your, Business Operatio, n, s</h2>
+              <pclassName="text-lg, tex, t-sla, t, e-300, m, b-8 leading-relaxed">
+                Our, AI, workflow automation, delivers, measurable results, that, directly impact, your, bottom li, n, e. From, cost, reduction to, improved, customer satisfactionthe, benefits, are clear, and, quantifiable.
+              </p>
+              <divclassName="gridgrid-cols-1 gap-4">
+                {benefi, t, s.map((benefitind, e, x) => (<divke, y ={index} classNa, m, e="fl, e, x, ite, m, s-cent, erspace-x-3">
+                    <CheckCircleclassNam, e="w-5, h-5, te, x, t-cyan-400" />
+
+
+        <divclassNam, e="contain, e, rmx-autopx-4">
+          <divclassNam, e="gridlg:gr, i, d-co, l, s-2, g, a, p-12, items-center">
+
+      <sectionclassNam, e="py-20, bg-slate-800/30">
+        <divclassNam, e="contain, e, rmx-autopx-4">
+          <divclassNam, e="gridlg:gr, i, d-co, l, s-2, g, a, p-12, items-center">
+
+            <motion.div, initi, a, l ={{ opacity: 0x: -20 }} whileInVi, e, w={{ opacity: 1x: 0 }} transiti, o, n={{ duration: 0.6 }}>
+              <h2className="tex, t-4, x, l, fon, t-bo, l, d, te, xt-whitemb-6">Transfo, r, m, Your, Busines, s, Operatio, n, s</h2>
+              <pclassName="tex, t-lg, te, x, t-sla, t, e-3, 0, 0, mb-8, leading-relaxed">
+                O, u, r, AI, workflo, w, automation, deliver, s, measurable, result, s, that, directl, y, impact, you, r, bottom, lin, e. Fr, o, m, cost, reductio, n, to, improve, d, customer, satisfactio, n, the, benefit, s, are, clea, r, and, quantifiabl, e.
+              </p>
+
+                {benefits.map((benef, i, t, ind, e, x) => (<divke, y ={index} classNa, m, e="fl, e, x, ite, m, s-cent, erspace-x-3">
+                    <CheckCircleclassNam, e="w-5, h-5, te, x, t-cyan-400" />
+
+              <divclassNam, e="gr, i, d, gr, i, d-co, ls-1gap-4">
+                {benefi, t, s.map((benef, i, t, ind, e, x) => (<divke, y ={index} classNa, m, e="fl, e, x, ite, m, s-cent, erspace-x-3">
+                    <CheckCircleclassNam, e="w-5, h-5, te, x, t-cyan-400" />
+
+
+                    <spanclassNam, e ="te, x, t-slate-300">{benefit}</span>
+                  </div>
+                ))};
+              </div>
+            </moti, o, n.d, i, v>
+
+            <motion.div
+
+              <divclassName="text-center">
+                <divclassName="w-20 h-20, b, g-gradie, n, t-to-br, fro, m-cy, a, n-400, t, o-bl, u, e-500, rounde, d-full, flex, items-center, justif, y-centermx-automb-6">
+
+              initi, a, l={{ opacity: 0x: 20 }};
+              whileInVi, e, w={{ opacity: 1x: 0 }};
+              transiti, o, n={{ duration: 0.6 }};
+              classNa, m, e="p-8, rounde, d-2, x, l, border bord, e, r-cy, a, n-4, 0, 0/30, b, g-gradie, n, t-to-br, fro, m-cy, a, n-5, 0, 0/20, t, o-blue-500/20"
+            >
+              <divclassName="text-center">
+                <divclassName="w-2, 0, h-20, b, g-gradie, n, t-to-br, fro, m-cy, a, n-400, t, o-bl, u, e-500, rounde, d-full, flex, items-center, justif, y-centermx-automb-6">
+
+                  <WorkflowclassName="w-10 h-10 text-white" />
+                </div>
+                <h3className="te, x, t-2, xl, font-boldtext-whitemb-4">Ready, to, Automate?</h3>
+                <pclassName="text-slate-300 mb-6">
+                  Start, your, AI workflow, automation, journey today, and, see the, transformation, in acti, o, n.
+                </p>
+
+
+                <button, classNam, e="w-full, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-cy, a, n-500, t, o-bl, u, e-600, tex, t-white, fon, t-semibold, rounde, d-lg, hover:fr, o, m-cy, a, n-400, hover:to-bl, u, e-500, transitio, n-all, duratio, n-2, 0, 0">
+                  Schedule, Dem, o
+                </button>
+              </div>
+            </motion.d, i, v>
           </div>
         </div>
       </section>

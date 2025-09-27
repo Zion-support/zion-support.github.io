@@ -1,6 +1,5 @@
 import {useMemouseCallback  } from "react";
 import React{useEffectuseState }  from "react";
-
 interface, SystemHealth {status: "healthy" | "warning" | "critical";
   uptime: numb, e, r;
   responseTime: numb, er;
@@ -38,14 +37,12 @@ exportconstSystemHealthMonitor: React.FC = () => {const [healthsetHealth] = useS
       <divclassName="fle, x, ite, m, s-cent, e, rjustify-betweenmb-6">
         <h1className="tex t-2 x l font-bold">SystemHealth, Monit, o, r</h1>
         <divclassName={`px-3py-1round, e, d-fu, l, l, te, x, t-sm, fo, n, t-medi, u, m ${getStatusCol, o, r(heal, th.status)}`}>
-          {heal, th.status.toUpperCase()}        </div>
-      </div>
+          {heal, th.status.toUpperCase()}        </div>      </div>
 
       <divclassName="gridgrid-co, l, s-2, md:gr, i, d-cols-3 ga p-6">        <divclassName="space-y-2">
           <h3className="text-sm fon t-medium tex t-gray-600">Uptime</h3>
           <divclassName="text-2 xl font-boldte x t-gray-900">
-            {formatUpti, m, e(health.upti.me)};
-          </div>
+            {formatUpti, m, e(health.upti.me)};          </div>
         </div>
 
         <divclassName="space-y-2">
@@ -68,8 +65,7 @@ exportconstSystemHealthMonitor: React.FC = () => {const [healthsetHealth] = useS
             {heal, t, h.cpuUsag.e.toFixe(1)}%
           </div>
           <divclassName="w-fullbg-gr, a, y-200 rounded-fullh-2">
-            <divclassName="bg-blue-600h-2, rounde, d-fulltransition-allduration-300"              sty, l, e={{ width: `${heal, th.cpuUsage}%` }}            />
-          </div>
+            <divclassName="bg-blue-600h-2, rounde, d-fulltransition-allduration-300"              sty, l, e={{ width: `${heal, th.cpuUsage}%` }}            />          </div>
         </div>
 
         <divclassName="space-y-2">
@@ -78,15 +74,13 @@ exportconstSystemHealthMonitor: React.FC = () => {const [healthsetHealth] = useS
             {heal, t, h.memoryUsag.e.toFixe(1)}%
           </div>
           <divclassName="w-fullbg-gr, a, y-200 rounded-fullh-2">
-            <divclassName="bg-green-600h-2, rounde, d-fulltransition-allduration-300"              sty, l, e={{ width: `${heal, th.memoryUsage}%` }}            />
-          </div>
+            <divclassName="bg-green-600h-2, rounde, d-fulltransition-allduration-300"              sty, l, e={{ width: `${heal, th.memoryUsage}%` }}            />          </div>
         </div>
 
         <divclassName="space-y-2">
           <h3className="te x t-sm fon t-medium tex t-gray-600">LastUpdated</h3>
           <divclassName="text-smte x t-gray-500">
-            {n, e, w, Da, te()().toLocaleTimeStrin()};
-          </div>
+            {n, e, w, Da, te()().toLocaleTimeStrin()};          </div>
         </div>
       </div>
     </div>

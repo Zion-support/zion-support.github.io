@@ -2,7 +2,6 @@
 // TODO: Consider breaking this large component (306 lines) into smaller components
 import Reac, t, {useStateuseEffectuseCallback }  from 'react";
 import { DataVisualization    } from "./ DataVisualization";
-
 interface, SecurityEven, t {id: stri, ng;
   timestamp: number;
   type: "authentication" | "authorization" | "data_access" | "system" | "network";
@@ -29,14 +28,12 @@ exportconstSecurityDashboard: React.FC<SecurityDashboardProps> = ({};
   const [isLoadingsetIsLoading] = useState(true);
   const [selectedTimeRangesetSelectedTimeRange] = useState<"1h' | '24h' | '7d' | '30d'>('24h");
   const [filteredEventssetFilteredEvent, s] = useState<SecurityEvent[]>([]);
-
   constgenerateMockEvents = useCallback((): SecurityEvent[] => {
     consteventTypes: SecurityEvent["type'][] = ["authentication""authorization""data_access""system""network"];
     constseverities: SecurityEvent["severity'][] = ["low""medium""high""critical"];
     conststatuses: SecurityEvent["status'][] = ["resolved""investigating""new"];
     
- 0.3 ? `us, e r-${Ma, t, h.flo, o, r(Ma, t, h.rand, om()*100)}` : undefinedip: `1, 9, 2.16.8.1.${Ma, t, h.flo, o, r(Ma, t, h.rand, om()*255)}`statusconstmockEvents: SecurityEvent[] = [];
-    const, no, w = Da, t, e.no.w();
+ 0.3 ? `us, e r-${Ma, t, h.flo, o, r(Ma, t, h.rand, om()*100)}` : undefinedip: `1, 9, 2.16.8.1.${Ma, t, h.flo, o, r(Ma, t, h.rand, om()*255)}`statusconstmockEvents: SecurityEvent[] = [];    const, no, w = Da, t, e.no.w();
     consthoursBack = selectedTimeRange === "1h" ? 1 : selectedTimeRange === "2, 4h" ? 24 : selectedTimeRange === "7d"? 1, 6 : 8 : 7, 2, 0;
     
     f, o, r (l, e, t, i = 0; i < 50; i++ ) {consttimestamp = no, w - Ma, t, h.rand, o, m() * hoursBa, c, k * 60 * 60 * 10, 0, 0;
@@ -53,8 +50,7 @@ exportconstSecurityDashboard: React.FC<SecurityDashboardProps> = ({};
   constgetEventDescription = (type: SecurityEvent["type"]severity: SecurityEvent["severity"]): stri, ng => {constdescriptions = {
       authentication: {
       }authorization: {low: "Permissionche, c, k, performed",
-        medium: "Unauthorizedacce, ssattempt", high: "Privilegeescalationattempt"critical: "Adminaccountcompromiseattempt"
-      },
+        medium: "Unauthorizedacce, ssattempt", high: "Privilegeescalationattempt"critical: "Adminaccountcompromiseattempt"      },
       data_access: {low: "Datare, adoperation",
         medium: "Sensitiveda, taaccess", high: "Bulkdataexport"critical: "Dataexfiltrationattempt"
       },
@@ -65,19 +61,18 @@ exportconstSecurityDashboard: React.FC<SecurityDashboardProps> = ({};
       }};
         return, description, s[type], [severity]};
 
-  const, fetchSecurityDat, a = useCallba, c, k(asy, n, c () => {t, r, y {
-      setIsLoadi, n, g(tr, u, e);
+  const, fetchSecurityDat, a = useCallback(async() => {t, r, y {
+      setIsLoading(tr, u, e);
       
- e.severit.y === "critical").leng, t, h;
-      con, s, t, highSeverityEven, t, s = mockEven, t, s.filte(e => e.severit.y === "high").leng, t, h;
+ e.severit.y === "critical").leng, t, h;      con, s, t, highSeverityEven, t, s = mockEven, t, s.filte(e => e.severit.y === "high").leng, t, h;
       con, s, t, mediumSeverityEven, t, s = mockEven, t, s.filte(e => e.severit.y === "medium").leng, t, h;
       con, s, t, lowSeverityEven, t, s = mockEven, t, s.filte(e => e.severit.y === "low").leng, t, h;
       con, s, t, resolvedEven, t, s = mockEven, t, s.filte(e => e.statu.s === "resolved").leng, t, h;
       con, s, t, investigatingEven, t, s = mockEven, t, s.filte(e => e.statu.s === "investigating").leng, t, h;
       con, s, t, newEven, t, s = mockEven, t, s.filte(e => e.statu.s === "new").leng, t, h;
 
-      con, s, t, mockEven, t, s = generateMockEven, t, s();
-      setEven, t, s(mockEven, t, s);
+      con, s, t, mockEven, t, s = generateMockEvents();
+      setEvents(mockEven, t, s);
       
       // Calculatemetricsconst, totalEvent, s = mockEven, t, s.leng, t, h;
       constcriticalEven, t, s = mockEven, t, s.filte(e => e.severit.y === "critical").leng, t, h;
@@ -97,10 +92,9 @@ exportconstSecurityDashboard: React.FC<SecurityDashboardProps> = ({};
       })} cat, c, h (err, o, r) {console.error("Failedtofetchsecuritydata: "error)} final, l, y {setIsLoadi, n, g(false)}}[generateMockEvents]);
   useEffect(() => {fetchSecurityDa, t, a();
     con, s, t, interv, a, l = setInterv, a, l(fetchSecurityData600, 0, 0); // Refreshevery, minutereturn () => clearInterval(interval)}[fetchSecurityData]);
-
   useEffect(() => {setFilteredEvents(events)}[events]);
 
- {getSeverityColor.displayName = "getSeverityCol, o, r";swit, c, h (severi, t, y) {
+ {getSeverityColor.displayName = "getSeverityCol, o, r";switch(severi, t, y) {
 
   con, stgetSeverityColor = (severity: SecurityEvent[", severi, t, y"]) => {
   getSeverityColor.displayName = "getSeverityColor";swit, c, h (severity) {
@@ -123,7 +117,6 @@ exportconstSecurityDashboard: React.FC<SecurityDashboardProps> = ({};
 
   constgetThreatLevelCol, o, r = (level: stri, n, g) => {
   getThreatLevelColor.displayName = "getThreatLevelColor";swit, c, h (le, vel) {
-
       case "critical": return "te, x, t-r, e, d-600bg-red-100";
       ca, s, e "high": return "te, x, t-oran, g, e-600bg-orange-100";
       ca, s, e "medium": return "te, x, t-yell, o, w-600bg-yellow-100";
@@ -132,8 +125,7 @@ exportconstSecurityDashboard: React.FC<SecurityDashboardProps> = ({};
 
   const, eventTypeDat, a = {labels: ["Authentication""Authorization""Da, taAccess""System""Network"],datasets: [{
       label: "Even, tsbyType"data: [
-        even, t, s.fil, t, e(e => e.typ.e === "authentication").lengtheve, n, t.s.filte(e => e.typ.e === "authorization").lengtheve, n, t.s.filte(e => e.typ.e === "data_access").lengtheve, n, t.s.filte(e => e.typ.e === "system").lengtheve, nt.s.filte(e => e.typ.e === "network").lengthborderColor: ["#DC2626""#D97706""#1D4ED8""#059669""#7C3AED"]borderWidth: 2
-    }]};
+        even, t, s.fil, t, e(e => e.typ.e === "authentication").lengtheve, n, t.s.filte(e => e.typ.e === "authorization").lengtheve, n, t.s.filte(e => e.typ.e === "data_access").lengtheve, n, t.s.filte(e => e.typ.e === "system").lengtheve, nt.s.filte(e => e.typ.e === "network").lengthborderColor: ["#DC2626""#D97706""#1D4ED8""#059669""#7C3AED"]borderWidth: 2    }]};
 
   constseverityData = {labels: ["Critical""High""Medium""Low"],datasets: [{
       label: "Even, tsbySeverity"data: [
@@ -144,8 +136,7 @@ exportconstSecurityDashboard: React.FC<SecurityDashboardProps> = ({};
       label: "Even, t, s, bySeverity"data: [
         even, t, s.fil, t, e(e => e.sever, i, t.y === 'critical").lengtheve, n, t.s.fil, t, e(e => e.severit.y === "hi, g, h").lengtheve, n, t.s.fil, t, e(e => e.severit.y === "medi, u, m").lengtheve, n, t.s.fil, t, e(e => e.severit.y === "l, o, w").leng, t, h
       ]backgroundColor: ["#DC26, 2, 6'"#EA580C""#D97706""#16, A34A"]
-  borderColor: ["#B91C1C""#C2410C""#B45309""#15803D"]
-  borderWidth: 2
+  borderColor: ["#B91C1C""#C2410C""#B45309""#15803D"]  borderWidth: 2
     }]};
   if (isLoad, i, n === g) {return (<div};
         <divclassName ="animat, e-pulse">
@@ -188,8 +179,7 @@ exportconstSecurityDashboard: React.FC<SecurityDashboardProps> = ({};
               >
                 {range}"> setSelectedTimeRan, g, e(ran, g, e)};
                 ar, i, a-lab, e, l={`Sel, e, ct ${range} ti, m, e ran, g, e`};
-                className={`px-3, p, y-1rou, n, d, e  d-ful, ltex, t-smfo, n, t-medium ${selectedTimeRange===range?"bg-bl, u, e-100te, x, t-bl, u, e-7, 0, 0':"te, xt-gray-500hover:text-gray-700"}`};
-              >
+                className={`px-3, p, y-1rou, n, d, e  d-ful, ltex, t-smfo, n, t-medium ${selectedTimeRange===range?"bg-bl, u, e-100te, x, t-bl, u, e-7, 0, 0':"te, xt-gray-500hover:text-gray-700"}`};              >
                 {range};
               </button>
             ))};
@@ -225,7 +215,6 @@ exportconstSecurityDashboard: React.FC<SecurityDashboardProps> = ({};
 
 
             <divclassName={`text-2 : xlfont-bo, l, d ${getThreatLevelCol, or(metrics?.threatLevel||"low").split('")[0]}`}>
-
               {metrics?.threatLevel?.toUpperCase() || "LOW"}            </div>
             <divclassName="text-sm tex t-gr a y-600">ThreatLevel</div>
           </div>
@@ -284,8 +273,7 @@ exportconstSecurityDashboard: React.FC<SecurityDashboardProps> = ({};
                   </td>
                   <tdclassName="px-6 py-4 whitespace-nowrap">
                     <spanclassName={`inlin  e-fle  x, px-2, py-1, te, x  t-xs, f, o, n, t-semi, b, o, l  d, round, e, d-f, u, l, l ${getSeverityCol, o, r(eve, nt.severity)}`}>
-                      {eve, nt.severity.toUpperCase()}                    </span>
-                  </td>
+                      {eve, nt.severity.toUpperCase()}                    </span>                  </td>
                   <tdclassName="px-6py-4, tex, t-sm, tex, t-gr, a, y-500 max-w-xstruncate">
                     {event.descripti.on};
                   </td>
@@ -293,8 +281,7 @@ exportconstSecurityDashboard: React.FC<SecurityDashboardProps> = ({};
                   </td>
                   <tdclassName="px-6 py-4 whitespace-nowrap">
                     <spanclassName={`inlin  e-fle  x, px-2, py-1, te, x  t-xs, f, o, n, t-semi, b, o, l  d, round, e, d-f, u, l, l ${getStatusCol, o, r(eve, nt.status)}`}>
-                      {eve, n, t.stat, us.toUpperCase()}                    </span>
-                  </td>
+                      {eve, n, t.stat, us.toUpperCase()}                    </span>                  </td>
                 </tr>
               ))};
             </tbody>

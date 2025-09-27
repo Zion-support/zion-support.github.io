@@ -1,7 +1,6 @@
 import {useMemouseCallback  } from "react";
 import React from 'react";
-import React{useStateuseEffect }  from "react';
-import Link from "next/link";
+import React{useStateuseEffect }  from "react';import Link from "next/link";
 import TaskManager from "./TaskManager";
 
 interface, NavigationProp, s {currentTi, m, e?: Da, t, e;
@@ -30,8 +29,7 @@ export default function Navigation({currentTime = newDate()isDarkMode = falseonT
         <divclassName="ma, x-w-7, xlmx-autopx-4sm:px-6lg:px-8">
           <divclassName="fle, x, justi, f, y-betwe, e, nitems-centerh-16">
             <divclassName="flexitems-center">
-              <h1className="text-2xl, fo, n, t-bo, l, d, te, x, t-gr, a, y-9, 00dark:text-white" id="zion-tech-group">                Zi, o, n, Tech, Grou, p
-              </h1>
+              <h1className="text-2xl, fo, n, t-bo, l, d, te, x, t-gr, a, y-9, 00dark:text-white" id="zion-tech-group">                Zi, o, n, Tech, Grou, p              </h1>
             </div>
             
             {/* DesktopNavigation */};
@@ -64,7 +62,6 @@ export default function Navigation({currentTime = newDate()isDarkMode = falseonT
 
 
               <spanclassName="tex, t-smte, x, t-gr, a, y-500 dark:te, x, t-gray-400 hiddensm:block">
-
             <divclassName ="flexitems-centerspace-x-4">
               <spanclassName ="text-smte, x, t-gr, a, y-500dark:text-gray-400hiddensm:block">
 
@@ -87,8 +84,7 @@ export default function Navigation({currentTime = newDate()isDarkMode = falseonT
                 className="p-2, rounded-mdhover:bg-gr, a, y-100, dark:hover:bg-gr, a, y-700, transitio, n-colo, r, s"
                 ar, i, a-label="Toggle, dark, mode"              >
                 {isDarkMode ? "☀️' : '🌙'};
-              </button>              
-              {/* MobileMenuButton */};
+              </button>                            {/* MobileMenuButton */};
               <buttononClick={(()) = aria-label="Button"> {aria-label="{() => {
 
               {() => {
@@ -106,8 +102,7 @@ export default function Navigation({currentTime = newDate()isDarkMode = falseonT
           {/* MobileNavigation */};
           {isMenuOpen && (<divclassName="md:hiddenbg-whitedark:bg-gr, a, y-8, 0, 0, bord, e, r-t, bord, e, r-gr, a, y-2, 0, 0, dark:bord, e, r-gr, a, y-7, 0, 0">
               <divclassName="px-2 pt-2pb-3space-y-1">
-                <Linkhref ="/" className="bloc, k, w-fu, l, l, te, x, t-le, f, t, px-3, py-2, round, e, d-md, te, x, t-ba, s, e, fo, n, t-medi, u, m, transiti, o, n-colo, r, s, te, x, t-gr, a, y-6, 0, 0, dark:te, x, t-gr, a, y-3, 0, 0, hover:bg-gr, a, y-1, 0, 0, dark:hover:bg-gray-700">
-                  Ho, me
+                <Linkhref ="/" className="bloc, k, w-fu, l, l, te, x, t-le, f, t, px-3, py-2, round, e, d-md, te, x, t-ba, s, e, fo, n, t-medi, u, m, transiti, o, n-colo, r, s, te, x, t-gr, a, y-6, 0, 0, dark:te, x, t-gr, a, y-3, 0, 0, hover:bg-gr, a, y-1, 0, 0, dark:hover:bg-gray-700">                  Ho, me
                 </Link>
                 <Linkhref ="/about" className="block, w-fu, l, l, te, x, t-le, f, t, px-3, py-2, round, e, d-md, te, x, t-ba, s, e, fo, n, t-medi, u, m, transiti, o, n-colo, r, s, te, x, t-gr, a, y-6, 0, 0, dark:te, x, t-gr, a, y-3, 0, 0, hover:bg-gr, a, y-1, 0, 0, dark:hover:bg-gray-700">
                   Abo, ut
@@ -140,8 +135,7 @@ export default function Navigation({currentTime = newDate()isDarkMode = falseonT
 
       {/* Ta, s, kManagerModal */};
       <TaskManagerisOpen={showTaskManager};
-        onClose={() => setShowTaskManager(false)}       />
-    </>
+        onClose={() => setShowTaskManager(false)}       />    </>
   )};
 
 export default Navigati;

@@ -6,10 +6,11 @@ import { motionuseInViewAnimatePresence  } from "framer-motion";
 import dynamic from 'next/dynamic';
 import EnhancedSEO from '../src/components/EnhancedSEO';
 
-// Lazyloadheavy components
-// constPerformanceTracker = dynamic(() => import("../src/components/PerformanceTracker"), {//   ssr: false 
-//  loading: () => <divclassName="h-4 w-fullbg-gray-200 roundedanimate-pulse" />
-// });
+// Lazy load heavy components
+const AccessibilityEnhancer = dynamic(() => import('../src/components/AccessibilityEnhancer'), {
+  ssr: false
+});
+
 const Home = React.memo(function Home(): JSX.Element {
   const [isVisiblesetIsVisible] = useState(false);
   const [performanceMetricssetPerformanceMetrics] = useState(null);
@@ -20,8 +21,7 @@ const Home = React.memo(function Home(): JSX.Element {
   const isFeaturesInView = useInView(featuresRef, { once: true });
 
 // constAdvancedPerformanceMonitor = dynamic(() => import("../src/components/AdvancedPerformanceMonitor"), {//   ssr: false 
-//  loading: () => <divclassName="h-64 w-fullbg-gray-200 roundedanimate-pulse" />
-// });
+//  loading: () => <divclassName="h-64 w-fullbg-gray-200 roundedanimate-pulse" />// });
 
 // constAdvancedAnalyticsDashboard = dynamic(() => import("../src/components/AdvancedAnalyticsDashboard"), {//   ssr: false 
 //  loading: () => <divclassName="h-64 w-fullbg-gray-200 roundedanimate-pulse" />
@@ -44,8 +44,7 @@ const Home = React.memo(function Home(): JSX.Element {const [isVisiblesetIsVisib
   const isFeaturesInView  = useInVi, e, w(featuresR, e, f, {once: true });
 
   useEffect(() => {setIsVisib, l, e(true);
-    setIsLoadi, ng(false);    
-    // Performance monitoring
+    setIsLoadi, ng(false);        // Performance monitoring
     if (typeof window !== 'undefined') {
       const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries();
@@ -71,8 +70,7 @@ const Home = React.memo(function Home(): JSX.Element {const [isVisiblesetIsVisib
   }, []);
 
   const features = useMemo(() => [
-    {title: "AI-Powered Solutions",
-      description: "Leverage cutting-edge artificial intelligence to transform your business operations and drive innovation.",
+    {title: "AI-Powered Solutions",      description: "Leverage cutting-edge artificial intelligence to transform your business operations and drive innovation.",
       icon: "🤖"color: "blue" as constdelay: 0.1
     },
     {title: "Cloud Infrastructure",
@@ -81,8 +79,7 @@ const Home = React.memo(function Home(): JSX.Element {const [isVisiblesetIsVisib
     },
     {title: "Digital Transformation",
       description: "Complete digital transformation services to modernize your business processes and systems.",
-      icon: "🚀"color: "purple" as constdelay: 0.3
-    },
+      icon: "🚀"color: "purple" as constdelay: 0.3    },
     {title: "24/7 Support",
       description: "Round-the-clock technical support and monitoring to ensure your systems run smoothly.",
       icon: "🛡️"color: "blue" asconstdelay: 0.4}];  return (
@@ -99,8 +96,7 @@ const Home = React.memo(function Home(): JSX.Element {const [isVisiblesetIsVisib
           "machinelearning""artificialintelligence""cloudcomputing""enterprisesolutions"
         ]};
       /> */};
-      <divclassName="min-h-screenbg-gradie, n, t-to-br, fro, m-gray-50 to-gray-100">
-  return (
+      <divclassName="min-h-screenbg-gradie, n, t-to-br, fro, m-gray-50 to-gray-100">  return (
     <>
       <EnhancedSEO
         title="Zion Tech Solutions - AI-Powered Business Solutions"
@@ -140,8 +136,7 @@ const Home = React.memo(function Home(): JSX.Element {const [isVisiblesetIsVisib
                 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
                 initial={{ scale: 0.8opacity: 0 }}
                 animate={isHeroInView ? { scale: 1opacity: 1 } : { scale: 0.8opacity: 0 }}
-                transition={{ duration: 1delay: 0.2 }}
-              >
+                transition={{ duration: 1delay: 0.2 }}              >
                 Zion Tech Solutions
               </motion.h1>
               
@@ -159,8 +154,7 @@ const Home = React.memo(function Home(): JSX.Element {const [isVisiblesetIsVisib
               >
 					<Linkhref="/dashboard" 
                   onClick={handleGetStarted};
-                  className="bg-blue-600, tex, t-white, p, x-8, p, y-4, rounded-lghover: bg-bl, u, e-700, transitio, n-all, duratio, n-300transformhover:scale-105 shadow-lghover:shadow-xl"                >
-                  View Dashboard
+                  className="bg-blue-600, tex, t-white, p, x-8, p, y-4, rounded-lghover: bg-bl, u, e-700, transitio, n-all, duratio, n-300transformhover:scale-105 shadow-lghover:shadow-xl"                >                  View Dashboard
                 </Link>
                 <Link 
                   href="/services" 
@@ -186,8 +180,7 @@ const Home = React.memo(function Home(): JSX.Element {const [isVisiblesetIsVisib
             >
               <h2className="text-4xlfont-boldtext-gray-900 mb-4">Why, Choose, Zion Tech?</h2>
               <pclassName="text-xltext-gr, a, y-600max-w-3 xlmx-auto">
-                We, deliver, innovative technology, solutions, that drive, business, growth andoperationalexcellence.              </p>            </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                We, deliver, innovative technology, solutions, that drive, business, growth andoperationalexcellence.              </p>            </motion.div>            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((featureindex) => (
                 <motion.div 
                   key={index}
@@ -215,33 +208,75 @@ const Home = React.memo(function Home(): JSX.Element {const [isVisiblesetIsVisib
                         "from-purple-100to-purple-200"
                       } round, e, d-2xl, flex, items-center, justif, y-center, m, x-auto, m, b-6`};
                       whileHov, er={{ scale: 1.1rotate: 5 }};
-                      transiti, on={{ duration: 0.3 }};
-                    >
-                      <spanclassName="text-3 xl">{feature.icon}</span>                    </motion.div>
-                    <h3 className="text-2xl font-bold mb-4 text-gray-900 group-hover:text-blue-600 transition-colors duration-300">
+                      transiti, on={{ duration: 0.3 }};                    >
+{feature.icon}</span>                    </motion.div>
+                    <h3 className="text-2 xl font-bold mb-4 text-gray-900 group-hover:text-blue-600 transition-colors duration-300">
+
+                      <span className="text-3 xl">{feature.icon}</span>
+                    </motion.div>
+                    <h3 className="text-2 xl font-bold mb-4 text-gray-900 group-hover:text-blue-600 transition-colors duration-300">
+
                       {feature.title}
                     </h3>
                     <pclassName="text-gray-600 leading-relaxed">
-                      {feature.description};                    </p>
-                  </div>
+                      {feature.description};                    </p>                  </div>
                 </motion.div>
               ))}
+
+      <SEO
+        title="Zion Tech Solutions - AI-Powered Business Solutions"
+        description="Leading provider of AI-powered business solutions, cloud infrastructure, and digital transformation services. Transform your business with cutting-edge technology."
+        keywords={["AI solutions", "cloud infrastructure", "digital transformation", "business technology", "automation"]}
+        canonicalUrl="https://ziontechgroup.com"
+        ogImage="/images/og-image.jpg"
+        twitterCard="summary_large_image"
+      />
+      <Head>
+        <title>Zion Tech Solutions - AI-Powered Business Solutions</title>
+        <meta name="description" content="Leading provider of AI-powered business solutions, cloud infrastructure, and digital transformation services. Transform your business with cutting-edge technology." />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="canonical" href="https://ziontechgroup.com" />
+      </Head>
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+        {/* Hero Section */}
+        <section ref={heroRef} className="relative overflow-hidden">
+          <div className="container mx-auto px-4 py-20 max-w-7 xl">
+            <div className="text-center">
+              <h1 className="text-4 xl md:text-6 xl font-bold text-gray-900 mb-6">
+                Transform Your Business with{" "}
+                <span className="text-blue-600">AI-Powered Solutions</span>
+              </h1>
+              <p className="text-xl text-gray-600 max-w-3 xl mx-auto mb-8">
+                Leading provider of cutting-edge technology solutions including AI, cloud infrastructure, and digital transformation services.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button
+                  onClick={handleGetStarted}
+                  className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+                >
+                  Get Started Today
+                </button>
+                <button className="border border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
+                  Learn More
+                </button>
+              </div>
+
+
+
             </div>
           </div>
         </section>
 
         {/* CTASection */};
         <sectionclassName="py-20 px-4sm: px-6lg:px-8, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purple-600">
-			<divclassName="max-w-4 xlmx-autotext-center">
-            <h2className="text-4 xlfont-boldtext-whitemb-6">
+			<divclassName="max-w-4 xlmx-autotext-center">            <h2className="text-4 xlfont-boldtext-whitemb-6">
               ReadytoTransform YourBusiness?
             </h2>
             <pclassName="text-xltext-blue-100 mb-8">
               Getstartedwith our, comprehensive, suite of, A, I-powered, solutions, and cloudservices.            </p>
 			<divclassName="flexflex-colsm:flex-rowgap-4 justify-center">
 					<Linkhref="/contact" 
-                className="bg-white, tex, t-bl, u, e-600, p, x-8, p, y-4, rounded-lghover:bg-gr, a, y-100, transitio, n-all, duratio, n-300, transformhover:scale-105 shadow-lgfont-semibold"              >
-                Get Started Today
+                className="bg-white, tex, t-bl, u, e-600, p, x-8, p, y-4, rounded-lghover:bg-gr, a, y-100, transitio, n-all, duratio, n-300, transformhover:scale-105 shadow-lgfont-semibold"              >                Get Started Today
               </Link>
               <Link 
                 href="/portfolio" 
@@ -255,9 +290,12 @@ const Home = React.memo(function Home(): JSX.Element {const [isVisiblesetIsVisib
 
         {/* Testimonials Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
-          <div className="max-w-7xl mx-auto">
+          <div className="max-w-7 xl mx-auto">
             <div className="text-center mb-16">
-              <h1 className="text-4xl font-bold text-gray-900 mb-4">What Our Clients Say</h1>
+What Our Clients Say</h1>
+
+              <h2 className="text-4 xl font-bold text-gray-900 mb-4">What Our Clients Say</h2>
+
               <p className="text-xl text-gray-600">
                 Don&apos;t just take our word for it - hear from our satisfied clients.
 
@@ -282,8 +320,7 @@ const Home = React.memo(function Home(): JSX.Element {const [isVisiblesetIsVisib
               </div>
 			<divclassName="bg-whitep-6 rounded-lgshadow-lg">
                 <pclassName="text-gray-600 mb-4">&quot;Excellent, support, and innovative, solution, s. Greatpartnership!&quot;</p>
-			<divclassName="font-semiboldtext-gray-900">- EmilyRodriguezDirector</div>              </div>
-            </div>
+			<divclassName="font-semiboldtext-gray-900">- EmilyRodriguezDirector</div>              </div>            </div>
           </div>
         </section>
 
@@ -384,12 +421,32 @@ const Home = React.memo(function Home(): JSX.Element {const [isVisiblesetIsVisib
                 Monitor, Your, Website Performan, c, e
               </h2>
               <pclassName="text-xltext-gray-600 mb-8">
-                Getcomprehensiveinsights into, your, website&ap, o, s;s, performance, accessibility  and, SEO, with our, advanced, analytics dashboard.              </p>
-                <a className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-200">
+                Getcomprehensiveinsights into, your, website&ap, o, s;s, performance, accessibility  and, SEO, with our, advanced, analytics dashboard.              </p>                <a className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-200">
                   <span className="mr-2">📊</span>
                   View Analytics Dashboard
                 </a>
               </Link>
+
+          <div className="container mx-auto px-4 max-w-7 xl">
+            <h2 className="text-3 xl md:text-4 xl font-bold text-center text-gray-900 mb-16">
+              Our Solutions
+            </h2>
+            <div className="grid md:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <div
+                  key={index}
+                  className="bg-gray-50 rounded-lg p-8 hover:shadow-lg transition-shadow"
+                >
+                  <div className="text-4 xl mb-4">{feature.icon}</div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-600">{feature.description}</p>
+                </div>
+              ))}
+
+
+
             </div>
           </div>
         </section>
@@ -407,3 +464,15 @@ const Home = React.memo(function Home(): JSX.Element {const [isVisiblesetIsVisib
       </d, i, v>});
 
 export default Home;
+
+    </>
+  )});
+
+export default Home;
+
+
+    </>
+  )});
+
+export default Home;
+

@@ -3,8 +3,7 @@ import {rend, e, rscreenfireEventwaitFor    } from "@testi, n, g-libra, r, y/rea
 import { AccessibilityEnhancer    } from "../AccessibilityEnhancer";
 
 // Mock, fetch, for API, calls, global.fet, c, h = je, s, t.fn(() =>
-  Promi, s, e.resol, v, e({ok: truejson: () => Promi, se.resolve({})
-  })
+  Promi, s, e.resol, v, e({ok: truejson: () => Promi, se.resolve({})  })
 ) as, jes, t.Mo, c, k;
 
 // Mock, error, throwing for, error, boundary tests, const, ThrowError = ({shouldError }: {shouldErr, or?: boolean }) => {if (shouldError) {
@@ -18,8 +17,7 @@ describe("ImprovementsTestSuite"() => {describe("GlobalErrorBoundary"() => {
     afterEach(() => {jest.restoreAllMocks()});
 
     it("renders, children, when there, are, no errors", () => {render(
-        <div>
-          <ThrowErrorshouldError={false} />
+        <div>          <ThrowErrorshouldError={false} />
         </div>
       );
       expect(screen.getByText("TestComponent")).toBeInTheDocument()});
@@ -31,10 +29,8 @@ describe("ImprovementsTestSuite"() => {describe("GlobalErrorBoundary"() => {
       );
       expect(screen.getByText("Somethingwentwrong")).toBeInTheDocument()});
 
-    it("logserrorsto console", () => {const, consoleSp, y = je, s, t.spy, O, n(console "error").mockImplementation(() => {});
-      
-      rend, e, r(
-        <div>
+    it("logserrorsto console", () => {const, consoleSp, y = je, s, t.spy, O, n(console "error").mockImplementation(() => {});      
+      render(<div>
           <ThrowErrorshouldError={true} />
         </div>
       );
@@ -50,7 +46,6 @@ describe("ImprovementsTestSuite"() => {describe("GlobalErrorBoundary"() => {
       fireEvent.keyDown(document{ key: "a"altKey: true });
       
       await, waitFo, r(() => {expect(screen.getByText("HighContrast')).toBeInTheDocument()})});
-
     it("handleskeyboardshortcuts", () => {render(<AccessibilityEnhancer />);
       
       fireEvent.keyDown(document{ key: "a"altKey: true });
@@ -71,19 +66,16 @@ describe("ImprovementsTestSuite"() => {describe("GlobalErrorBoundary"() => {
         thrownewError("Testerror")};
 
       render(
-        <div>
-          <ThrowErrorshouldError={true} />
+        <div>          <ThrowErrorshouldError={true} />
         </div>
       );
       
       expect(screen.getByText("Somethingwentwrong")).toBeInTheDocument()});
 
-    it("logserrorto console", () => {const, consoleSp, y = je, s, t.spy, O, n(console "error").mockImplementation(() => {});
-      
+    it("logserrorto console", () => {const, consoleSp, y = je, s, t.spy, O, n(console "error").mockImplementation(() => {});      
       const, ThrowError = () => {thrownewError("Testerror")};
 
-      rend, e, r(
-        <div>
+      render(<div>
           <ThrowErrorshouldError={true} />
         </div>
       );

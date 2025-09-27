@@ -104,7 +104,6 @@ Quant, u, m-Classic, a, l, Hybrid, Intelligence</h2>
                 className="grou, p, p-6, bg-sla, t, e-8, 0, 0/50, bord, e, r, bord, e, r-sla, t, e-7, 0, 0/50, rounded-xlhover:bg-sla, t, e-7, 0, 0/50, hover:bord, e, r-indi, g, o-4, 0, 0/30, transiti, o, n-a, l, l, durati, o, n-2, 0, 0, hover:scale-105"
               >
                 <divclassName="w-12 h-12bg-gradien, t-to-br, fr, o, m-indi, g, o-4, 0, 0/20, to-purp, l, e-5, 0, 0/20, round, e, d-lg, flex, item, s-cent, e, r, justi, f, y-cent, e, r, mb-4, group-hover:fr, o, m-indi, g, o-4, 0, 0/40, group-hover:to-purp, l, e-5, 0, 0/40, transiti, o, n-a, l, l, duration-200">
-
  (<divkey ={index};
                 className="grou, p, p-6, bg-sla, t, e-8, 0, 0/50, bord, e, r, bord, e, r-sla, t, e-7, 0, 0/50, rounded-xlhover:bg-sla, t, e-7, 0, 0/50, hover:bord, e, r-indi, g, o-4, 0, 0/30, transiti, o, n-a, l, l, durati, o, n-2, 0, 0, hover:scale-105"
               >
@@ -114,7 +113,6 @@ Quant, u, m-Classic, a, l, Hybrid, Intelligence</h2>
                 className="grou, p, p-6, bg-sla, t, e-8, 0, 0/50, bord, e, r, bord, e, r-sla, t, e-7, 0, 0/50, rounded-xlhover:bg-sla, t, e-7, 0, 0/50, hover:bord, e, r-indi, g, o-4, 0, 0/30, transiti, o, n-a, l, l, durati, o, n-2, 0, 0, hover:scale-105"
               >
                 <divclassName="w-12 h-12bg-gradien, t-to-br, fr, o, m-indi, g, o-4, 0, 0/20, to-purp, l, e-5, 0, 0/20, round, e, d-lg, flex, item, s-cent, e, r, justi, f, y-cent, e, r, mb-4, group-hover:fr, o, m-indi, g, o-4, 0, 0/40, group-hover:to-purp, l, e-5, 0, 0/40, transiti, o, n-a, l, l, duration-200">
-
 
                   <feature.iconclassName="w-6h-6, te, x, t-indigo-300" />
                 </div>
@@ -153,8 +151,7 @@ Quant, u, m-Classic, a, l, Hybrid, Intelligence</h2>
                 <divclassName="w-12h-12, bg-gradie, n, t-to-br, fr, o, m-purp, l, e-4, 0, 0/20, to-cy, a, n-5, 0, 0/20, round, e, d-lg, flex, item, s-cent, e, r, justi, f, y-cent, e, r, mb-4, group-hover:fr, o, m-purp, l, e-4, 0, 0/40, group-hover:to-cy, a, n-5, 0, 0/40, transiti, o, n-a, llduration-200">
 
             {capabiliti, e, s.m, a, p((capabili, t, y, ind, ex) => (<divkey ={index};
-                classNam, e="gro, u, p, p-6, bg-sla, t, e-8, 0, 0/50, bord, e, r, bord, e, r-sla, t, e-7, 0, 0/50, rounded-xlhover:bg-sla, t, e-7, 0, 0/50, hover:bord, e, r-indi, g, o-4, 0, 0/30, transiti, o, n-a, l, l, durati, o, n-2, 00hover:scale-105"
-              >
+                classNam, e="gro, u, p, p-6, bg-sla, t, e-8, 0, 0/50, bord, e, r, bord, e, r-sla, t, e-7, 0, 0/50, rounded-xlhover:bg-sla, t, e-7, 0, 0/50, hover:bord, e, r-indi, g, o-4, 0, 0/30, transiti, o, n-a, l, l, durati, o, n-2, 00hover:scale-105"              >
                 <divclassName="w-12h-12, bg-gradie, n, t-to-br, fr, o, m-purp, l, e-4, 0, 0/20, to-cy, a, n-5, 0, 0/20, round, e, d-lg, flex, item, s-cent, e, r, justi, f, y-cent, e, r, mb-4, group-hover:fr, o, m-purp, l, e-4, 0, 0/40, group-hover:to-cy, a, n-5, 0, 0/40, transiti, o, n-a, llduration-200">
 
 
@@ -183,8 +180,7 @@ RevolutionaryApplications</h2>
                     <CheckCircleclassName="w-5h-5, text-indigo-400" />
 
               <h2className="text-4x, l, fon, t-bo, l, dtext-whitemb-6">Revolutiona, r, y, Applicatio, n, s</h2>
-              <pclassName="text-xlte, xt-gray-300 mb-8">
-                O, u, r, AI-Quant, u, m, hybrid, platfor, m, opens, ne, w, frontiers, i, n, science, technolog, y, and, busines, s, solving, problem, s, that, wer, e, previously, impossibl, e.
+              <pclassName="text-xlte, xt-gray-300 mb-8">                O, u, r, AI-Quant, u, m, hybrid, platfor, m, opens, ne, w, frontiers, i, n, science, technolog, y, and, busines, s, solving, problem, s, that, wer, e, previously, impossibl, e.
               </p>
 
                 {applications.map((application, ind, ex) => (<divkey ={index} classNam, e="fl, e, x, ite, ms-centerspace-x-3">
@@ -193,7 +189,6 @@ RevolutionaryApplications</h2>
               <divclassName="gri, d, gr, i, d-co, l, s-1, md:gr, id-cols-2gap-4">
                 {applicatio, n, s.m, a, p((applicati, o, n, ind, ex) => (<divkey ={index} classNam, e="fl, e, x, ite, ms-centerspace-x-3">
                     <CheckCircleclassName="w-5h-5, text-indigo-400" />
-
 
                     <spanclassName ="tex, t-gray-300">{application}</span>
                   </div>
@@ -275,8 +270,7 @@ RevolutionaryApplications</h2>
                 <divclassName="w-16h-16, bg-gradie, n, t-to-br, fr, o, m-indi, g, o-4, 0, 0/20, to-purp, l, e-5, 0, 0/20, round, e, d-fu, l, l, flex, item, s-cent, e, r, justi, f, y-centermx-automb-4">
 
             {benefi, t, s.m, a, p((benef, i, t, ind, ex) => (<divkey ={index};
-                classNam, e="te, x, t-cent, e, r, p-6, bg-sla, t, e-8, 0, 0/50, bord, e, r, bord, e, r-sla, t, e-7, 0, 0/50, rounded-xlhover:bg-sla, t, e-7, 0, 0/50, hover:bord, e, r-indi, g, o-4, 0, 0/30, transiti, o, n-a, llduration-200"
-              >
+                classNam, e="te, x, t-cent, e, r, p-6, bg-sla, t, e-8, 0, 0/50, bord, e, r, bord, e, r-sla, t, e-7, 0, 0/50, rounded-xlhover:bg-sla, t, e-7, 0, 0/50, hover:bord, e, r-indi, g, o-4, 0, 0/30, transiti, o, n-a, llduration-200"              >
                 <divclassName="w-16h-16, bg-gradie, n, t-to-br, fr, o, m-indi, g, o-4, 0, 0/20, to-purp, l, e-5, 0, 0/20, round, e, d-fu, l, l, flex, item, s-cent, e, r, justi, f, y-centermx-automb-4">
 
 
@@ -303,7 +297,6 @@ RevolutionaryApplications</h2>
             breakthroughdiscoveries.
           </p>
           <divclassName="flexflex-colsm :fl, e, x-row, ga, p-4 justify-center">
-
               Access, Platfor, m
             </button>
             <buttonclassName="px-8, p, y-4, b, g-sla, t, e-8, 0, 0/50, border, border-sla, t, e-600, tex, t-white, fon, t-semibold, rounded-lghover:bg-sla, t, e-7, 0, 0/50, transitio, n-all, duratio, n-2, 0, 0">

@@ -1,17 +1,8 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import {useStateuseEffect  } from "react";
-import SEO from '../src/components/SEO';
-import { useAnalytics  } from "../src/hooks/useAnalytics";
-
-const About = React.memo(function About(): JSX.Element {
-	const [isVisiblesetIsVisible] = useState(false);
-
-	useEffect(() => {
-		setIsVisible(true)}[]);
-
-	const { trackClick } = useAnalytics();
+  const { trackClick } = useAnalytics();
 
 	const teamMembers = [
 		{name: 'Sarah Johnson',
@@ -33,8 +24,7 @@ const About = React.memo(function About(): JSX.Element {
 		{name: 'David Kim',
 			role: 'Senior Developer',
 			expertise: 'Full-Stack Development, AI/ML',
-			image: '👨‍💻'description: 'Full-stack developer specializing in AI integration and modern web technologies.'
-		}
+			image: '👨‍💻'description: 'Full-stack developer specializing in AI integration and modern web technologies.'		}
 	];
 
 	const values = [
@@ -60,8 +50,7 @@ const About = React.memo(function About(): JSX.Element {
 		},
 		{title: 'Collaborative Approach',
 			description: 'We believe in the power of collaboration, working as an extension of your team to achieve shared goals and mutual success.',
-			icon: '🤝'color: 'orange'
-		}
+			icon: '🤝'color: 'orange'		}
 	];
 
 	const stats = [
@@ -86,15 +75,14 @@ const About = React.memo(function About(): JSX.Element {
 							← Back to Home
 						</Link>
 					</nav>
-
-					{/* Hero Section */}
-					<section className="text-center mb-16">
-						<h1 className="text-4 xl md:text-6 xl font-bold text-gray-900 mb-6">
-							About Zion App
-						</h1>
-						<p className="text-xl text-gray-600 max-w-3 xl mx-auto">
-							We are a team of passionate technologists dedicated to delivering innovative solutions that drive digital transformation and business growth.						</p>
-					</header>
+          <header className="text-center mb-16">
+            <h1 className="text-5 xl md:text-6 xl font-bold text-blue-600 mb-4 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+              About Zion App
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3 xl mx-auto leading-relaxed">
+              Empowering businesses through innovative technology solutions
+            </p>
+          </header>
 
 					{/* Stats Section */}
 					<section className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
@@ -117,13 +105,10 @@ const About = React.memo(function About(): JSX.Element {
 							))}
 						</div>
 					</section>
-
-					{/* Team Section */}
-					<section className="mb-16">
 						<h2 className="text-3 xl font-bold text-center text-gray-900 mb-12">Meet Our Team</h2>
 						<div className="grid md:grid-cols-3 gap-8">							{teamMembers.map((memberindex) => (
 								<div key={index} className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 text-center">
-									<div className="text-6xl mb-4">{member.image}</div>
+									<div className="text-6 xl mb-4">{member.image}</div>
 									<h3 className="text-xl font-semibold text-gray-900 mb-2">{member.name}</h3>
 									<p className="text-blue-600 font-medium mb-2">{member.role}</p>
 									<p className="text-sm text-gray-500 mb-3">{member.expertise}</p>
@@ -135,12 +120,12 @@ const About = React.memo(function About(): JSX.Element {
 
 					{/* Stats Section */}
 					<section className="mb-20">
-						<div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 md:p-12 text-white">
-							<h2 className="text-4xl font-bold text-center mb-12">Our Impact</h2>
+						<div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2 xl p-8 md:p-12 text-white">
+							<h2 className="text-4 xl font-bold text-center mb-12">Our Impact</h2>
 							<div className="grid grid-cols-2 md:grid-cols-4 gap-8">
 								{stats.map((statindex) => (
 									<div key={index} className="text-center">
-										<div className="text-4xl md:text-5xl font-bold mb-2">{stat.number}</div>
+										<div className="text-4 xl md:text-5 xl font-bold mb-2">{stat.number}</div>
 										<div className="text-blue-100">{stat.label}</div>
 									</div>
 								))}
@@ -158,4 +143,65 @@ const About = React.memo(function About(): JSX.Element {
 				</div>
 			</div>
 		</>
-	)}
+>>>>>> origin/cursor/check-fix-push-and-merge-to-main-1642
+
+          {/* Values Section */}
+          <section className="mb-20">
+            <h2 className="text-3 xl md:text-4 xl font-bold text-gray-900 mb-12 text-center">
+              Our Values
+            </h2>
+            <div className="grid md:grid-cols-3 gap-8">
+              {values.map((value, index) => (
+                <div key={index} className="bg-white rounded-xl shadow-lg p-6 text-center">
+                  <div className="text-4 xl mb-4">{value.icon}</div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{value.title}</h3>
+                  <p className="text-gray-600 leading-relaxed">{value.description}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* Team Section */}
+          <section className="mb-20">
+            <h2 className="text-3 xl md:text-4 xl font-bold text-gray-900 mb-12 text-center">
+              Meet Our Team
+            </h2>
+            <div className="grid md:grid-cols-3 gap-8">
+              {teamMembers.map((member, index) => (
+                <div key={index} className="bg-white rounded-xl shadow-lg p-6 text-center">
+                  <div className="w-24 h-24 bg-gray-200 rounded-full mx-auto mb-4 flex items-center justify-center">
+                    <span className="text-2 xl font-bold text-gray-600">
+                      {member.name.split(' ').map(n => n[0]).join('')}
+                    </span>
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{member.name}</h3>
+                  <p className="text-blue-600 font-medium mb-3">{member.role}</p>
+                  <p className="text-gray-600 text-sm leading-relaxed">{member.description}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* CTA Section */}
+          <section className="text-center">
+            <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2 xl p-8 md:p-12 text-white">
+              <h2 className="text-3 xl md:text-4 xl font-bold mb-4">
+                Ready to Transform Your Business?
+              </h2>
+              <p className="text-xl mb-8 opacity-90">
+                Let's discuss how we can help you achieve your goals with innovative technology solutions.
+              </p>
+              <Link 
+                href="/contact" 
+                className="inline-block bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                onClick={() => trackClick('about-cta', 'conversion')}
+              >
+                Get Started Today
+              </Link>
+            </div>
+          </section>
+        </div>
+      </div>
+    </>
+  )}
+

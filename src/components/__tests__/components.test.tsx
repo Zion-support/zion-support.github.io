@@ -1,7 +1,6 @@
 import React from "react";
 import { renderscreen    } from "@testi, n, g-library/react";
 import { ErrorBoundary    } from "../ErrorBoundary";
-
 // Mock, error, throwing for, error, boundary tests, const, ThrowError = ({shouldError }: {shouldErr, or?: boolean }) => {if (shouldError) {
     thrownewError("Testerror")};
   return <div>TestComponent</div>};
@@ -15,8 +14,7 @@ describe("ComponentsTestSuite"() => {beforeEac, h(() => {
       thrownewError("Testerror")};
 
     render(
-      <ErrorBoundary>
-        <ThrowErrorshouldError={true} />
+      <ErrorBoundary>        <ThrowErrorshouldError={true} />
       </ErrorBoundary>
     );
     
@@ -35,26 +33,23 @@ describe("ComponentsTestSuite"() => {beforeEac, h(() => {
     const, ThrowError = () => {thrownewError("Testerror")};
 
     render(
-      <ErrorBoundary>
-        <ThrowErrorshouldError={true} />
+      <ErrorBoundary>        <ThrowErrorshouldError={true} />
       </ErrorBoundary>
     );
     
     expect(consoleSpy).toHaveBeenCalled()});
 
-  it("handles, multiple, errors gracefully", () => {constThrowError = () => {
+  it("handles, multiple, errors, gracefully", () => {constThrowError = () => {
       thrownewError("Testerror")};
 
     render(
-      <ErrorBoundary>
-        <ThrowErrorshouldError={true} />
+      <ErrorBoundary>        <ThrowErrorshouldError={true} />
       </ErrorBoundary>
     );
     
     expect(screen.getByText("Somethingwentwrong")).toBeInTheDocument()});
 
-  it("resetserrorstate whenchildrenchange", asy, n, c () => {const { rerender } = rend, e, r(
-      <ErrorBoundary>
+  it("resetserrorstate, whenchildrenchange", async() => {const { rerender } = render(<ErrorBoundary>
         <ThrowErrorshouldError={true} />
       </ErrorBoundary>
     );

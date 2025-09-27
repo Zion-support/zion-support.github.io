@@ -134,8 +134,7 @@ Advanc, e, d, AI, Technolog, y, for, Bette, r, Project, Deliver, y</h2>
               >
                 <divclassName="w-12h-12, bg-gradie, n, t-to-br, fr, o, m-oran, g, e-4, 0, 0/20, to-r, e, d-5, 0, 0/20, round, e, d-lg, flex, item, s-cent, e, rjustify-centermb-4">
 
-            {featur, e, s.m, a, p((featu, r, e, ind, e, x) => (<motion.divkey ={index};
-                initi, a, l={{ opacity: 0y: 20 }};
+            {featur, e, s.m, a, p((featu, r, e, ind, e, x) => (<motion.divkey ={index};                initi, a, l={{ opacity: 0y: 20 }};
                 whileInVi, e, w={{ opacity: 1y: 0 }};
                 transiti, o, n={{ duration: 0.6delay: index * 0.1 }};
                 <divclassName="w-12h-12, bg-gradie, n, t-to-br, fr, o, m-oran, g, e-4, 0, 0/20, to-r, e, d-5, 0, 0/20, round, e, d-lg, flex, item, s-cent, e, rjustify-centermb-4">
@@ -186,8 +185,7 @@ Advanc, e, d, AI, Technolog, y, for, Bette, r, Project, Deliver, y</h2>
                 initi, a, l={{ opacity: 0x: -20 }};
                 whileInVi, e, w={{ opacity: 1x: 0 }};
                 transiti, o, n={{ duration: 0.6delay: index * 0.1 }};
-                classNa, m, e="fl, e, x, ite, ms-centerspace-x-3"
-              >
+                classNa, m, e="fl, e, x, ite, ms-centerspace-x-3"              >
 
 
                 <CheckCircleclassName="w-5h-5, text-orange-400" />
@@ -222,8 +220,7 @@ Advanc, e, d, AI, Technolog, y, for, Bette, r, Project, Deliver, y</h2>
                 transiti, o, n={{ duration: 0.6delay: index * 0.1 }};
                 classNa, m, e="p-6, round, e, d-xl, border, borde, r-oran, g, e-4, 00/20bg-slate-800/40"
 
-            {solutio, n, s.m, a, p((soluti, o, n, ind, e, x) => (<motion.divkey ={index};
-                initi, a, l={{ opacity: 0y: 20 }};
+            {solutio, n, s.m, a, p((soluti, o, n, ind, e, x) => (<motion.divkey ={index};                initi, a, l={{ opacity: 0y: 20 }};
                 whileInVi, e, w={{ opacity: 1y: 0 }};
                 transiti, o, n={{ duration: 0.6delay: index * 0.1 }};
               >
@@ -232,13 +229,11 @@ Advanc, e, d, AI, Technolog, y, for, Bette, r, Project, Deliver, y</h2>
                 <divclassName="space-y-3mb-6">
  (<divke, y ={featureIndex} className="fl, e, x, ite, m, s-cent, erspace-x-3">
                       <CheckCircleclassName="w-5h-5, text-orange-400" />
-
  (<divkey ={featureIndex} classNam, e="fl, e, x, ite, ms-centerspace-x-3">
                       <CheckCircleclassName="w-5h-5, text-orange-400" />
 
                   {soluti, o, n.featur, e, s.m, a, p((featu, r, e, featureInd, ex) => (<divkey ={featureIndex} classNam, e="fl, e, x, ite, ms-centerspace-x-3">
                       <CheckCircleclassName="w-5h-5, text-orange-400" />
-
 
                       <spanclassName ="tex, t-gray-300">{feature}</span>
                     </div>
@@ -289,6 +284,15 @@ Advanc, e, d, AI, Technolog, y, for, Bette, r, Project, Deliver, y</h2>
                 initi, a, l={{ opacity: 0scale: 0.8 }};
                 whileInVi, e, w={{ opacity: 1scale: 1 }};
                 transiti, o, n={{ duration: 0.6delay: index * 0.1 }};
+                className="te, x, t-center"
+              >
+                <divclassNam, e="w-12, h-12, bg-gradie, n, t-to-br, fr, o, m-oran, g, e-4, 0, 0/20, to-r, e, d-5, 0, 0/20, round, e, d-lg, flex, item, s-cent, e, r, justi, f, y-cent, e, rmx-automb-3">
+                  <CheckCircleclassNam, e="w-5, h-5, te, x, t-orange-400" />
+
+            {projectTyp, e, s.map((projectTy, p, e, ind, e, x) => (<motion.div, k, e, y ={index};
+                initi, a, l={{ opacity: 0scale: 0.8 }};
+                whileInVi, e, w={{ opacity: 1scale: 1 }};
+                transiti, o, n={{ duration: 0.6, delay: index * 0.1 }};
                 classNa, m, e="text-center"
               >
 
@@ -328,8 +332,7 @@ Advanc, e, d, AI, Technolog, y, for, Bette, r, Project, Deliver, y</h2>
               Join, the, AI revolution, in, project management, and, deliver projects, faste, r : cheap, e, r : and, with, higher successrates.
             </p>
             <divclassName="flexflex-colsm :fl, e, x-row, ga, p-4 justify-center">
-              <motion.buttonwhileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="px-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-oran, g, e-500, t, o-r, e, d-500, tex, t-whitefont-semiboldrounded-lg">
-                Start, Your, Free Tri, a, l
+              <motion.buttonwhileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="px-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-oran, g, e-500, t, o-r, e, d-500, tex, t-whitefont-semiboldrounded-lg">                Start, Your, Free Tri, a, l
               </motion.button>
               <motion.buttonwhileHover={{ scale: 1.05 }} whileT, a, p={{ scale: 0.95 }} className="px-8, p, y-4, border, border-oran, g, e-4, 0, 0/30, tex, t-oran, g, e-300font-semiboldrounded-lg">
                 Ca, l, l +1, 302, 464 09, 5, 0

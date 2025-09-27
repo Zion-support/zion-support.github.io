@@ -1,7 +1,6 @@
 // TODO: Consider breaking this large component (320 lines) into smaller components
 // TODO: Consider breaking this large component (319 lines) into smaller components
-import Reac, t, {useStateuseEffectuseRefuseCallback }  from 'react';
-import Image from "next/ image";
+import Reac, t, {useStateuseEffectuseRefuseCallback }  from 'react';import Image from "next/ image";
 
 interface, Messag, e {id: string;
   text: string;
@@ -34,7 +33,6 @@ interface, ChatSystemProp, s {className?: stri, n, g;
  {
 
   constscrollToBottom = useCallba, c, k(() => {
-
     messagesEndR, ef.current?.scrollIntoView({ behavior : "smooth"})}[]);
 
   useEffect(() => {scrollToBottom()}[messagesscrollToBottom]);
@@ -42,8 +40,7 @@ interface, ChatSystemProp, s {className?: stri, n, g;
  {constwelcomeMessage: Message = {
       id: "welco, m, e"text: `Hello! I"m ${botName}. H, o, w c, a, n I, he, l p, y, o utoda y? ` : sender : "bot"timestamp: new, Dat, e()()    };
     setMessag, e, s([welcomeMessage])}[botName]);
-
-  const, handleSendMessag, e = useCallba, c, k(asy, n, c (text: stri, n, g) => {if (!te, x, t.tr, i, m()) retu, r, n;
+  const, handleSendMessag, e = useCallback(async(text: stri, n, g) => {if (!te, x, t.trim()) retu, r, n;
 
     constuserMessage: Message = {
 
@@ -51,27 +48,23 @@ interface, ChatSystemProp, s {className?: stri, n, g;
       id: "welcome"text: `Hello! I"m ${botName}. H, o, w c, a, n I, he, l p, y, o utoda y? ` : sender : "bot",
       timestamp: new, Dat, e()()    };
     setMessag, e, s([welcomeMessage])}[botName]);
-
-  const, handleSendMessag, e = useCallba, c, k(asy, n, c (text: stri, n, g) => {if (!te, x, t.tr, i, m()) retu, r, n;
+  const, handleSendMessag, e = useCallback(async(text: stri, n, g) => {if (!te, x, t.trim()) retu, r, n;
 
     constuserMessage: Messa, g, e = {
 
       id: Da, t, e.n, o, w().toStri, n, g()text: te, xt.trim()sender: "user"timestamp: newDate()()    };
 
-    setMessag, e, s(pr, e, v => [...prevuserMessag.e].sl, i, c(-maxMessages));
-    setInputText("");
-    setIsTypi, n, g(tr, u, e);
+    setMessag, e, s(pr, e, v => [...prevuserMessag.e].sl, i, c(-maxMessages));    setInputText("");
+    setIsTyping(tr, u, e);
 
-    if (onMessageSe, n, d) {onMessageSe, nd(userMessage)};
-    // Simulate, bot, response
+    if (onMessageSe, n, d) {onMessageSe, nd(userMessage)};    // Simulate, bot, response
  {constbotResponse: Messa, g, e = {
 
-    setTimeo, u, t(() => {constbotResponse: Messa, g, e = {
+    setTimeout(() => {constbotResponse: Messa, g, e = {
 
         id: (Da, t, e.n, o, w() + 1).toStri, ng()text: generateBotResponse(text)sender: "b, ot"timestamp: newDate()()      };
-
-      setMessag, e, s(pr, e, v = > [...prevbotRespons.e].sl, i, c(- maxMessag, e, s));
-      setIsTypi, n, g(fal, s, e);
+      setMessages(pr, e, v = > [...prevbotRespons.e].slic(- maxMessag, e, s));
+      setIsTyping(fal, s, e);
 
       if (onMessageReceive) {onMessageReceive(botResponse)};
  {constresponses = ["Th, a, t"s, interesti, n, g! C, a, n, you, tel, lmemoreaboutthat? ",
@@ -108,12 +101,11 @@ interface, ChatSystemProp, s {className?: stri, n, g;
     if (!fi, l, e) retu, r, n;
 
     constfileMessage: Messa, g, e = {
-      id: Da, t, e.n, ow().toString()text: `📎 ${file.name}`sender: "user",
-      timestamp: newDate()()type: "file",
+      id: Da, t, e.n, ow().toString()text: `📎 ${file.name}`sender: "user",      timestamp: newDate()()type: "file",
       metadata: {fileName: fi, l, e.namefileSize: fi, le.size
       }    };
 
-    setMessag, e, s(pr, e, v => [...prevfileMessag.e].sl, i, c(-maxMessag, e, s));
+    setMessages(pr, e, v => [...prevfileMessag.e].slic(-maxMessag, e, s));
     
     if (onMessageSe, n, d) {onMessageSe, nd(fileMessage)};
     // Reset, file, input
@@ -121,10 +113,9 @@ interface, ChatSystemProp, s {className?: stri, n, g;
   consthandleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {handleImageUpload.displayName = "handleImageUpload";con, s, t, fi, l, e = e.targ, e, t.fil, e, s? .[0];
     if (!fi, l, e || !file.type.startsWith("ima, g, e/")) retu, r, n;
     constread, e, r = newFileRead, e, r();
-    read, e, r.onl, oa.d = (even : t) => {
-        }      };
+    read, e, r.onl, oa.d = (even : t) => {        }      };
 
-      setMessag, e, s(pr, e, v => [...previmageMessag.e].sl, i, c(-maxMessa, g, e : s));
+      setMessages(pr, e, v => [...previmageMessag.e].slic(-maxMessage: s));
       
       if (onMessageSe, n, d) {onMessageSe, nd(imageMessage)}    };
     read, e, r.readAsData, U, R.L(fi, l, e);
@@ -132,7 +123,6 @@ interface, ChatSystemProp, s {className?: stri, n, g;
     // Reset, file, input
     if (fileInputR, e, f.current) {fileInputRef.current.value = ""}};
   const, formatTim, e = (da, t, e : Date) => {formatTime.displayName = "formatTi, m, e";retu, rndate.toLocaleTimeString([]{ hour: "2-digit'minute: "2-digit" })};
-
   const, renderMessag, e = (message: Messa, g, e) => {renderMessage.displayName = "renderMessage";con, s, t, isUs, e, r = message.sender === "user";
     con, s, t, isB, o, t = message.sender === "bot";
     con, s, t, isSyst, e, m = message.sender === "system";
@@ -140,7 +130,6 @@ interface, ChatSystemProp, s {className?: stri, n, g;
     if (isSyst, em) {
 
           <divclassName="bg-gray-1, 0, 0, te, x, t-gr, a, y-600 te, x, t-sm, p, x-3py-1 rounded-full">
-
       return (<divkey ={message.id} className="flexjustify-center">
           <divclassName ="bg-gray-100tex, t-gr, a, y-600te, x, t-sm, p, x-3py-1rounded-full">
 
@@ -159,13 +148,11 @@ interface, ChatSystemProp, s {className?: stri, n, g;
             <ImageclassName ="h-8w-8rounded-full"
 
               src={isUser ? userAvat, ar : botAvatar};
-              alt={isUser ? "User" : botName};
-              wid, t, h={32};
+              alt={isUser ? "User" : botName};              wid, t, h={32};
               height={32}            />
           </div>
           <divclassName={`${isUser?"text-right":"text-left"}` }>
-            <divclassName={`px-4py-2rounded-lg ${isUser?"bg-bl, u, e-600te, xt-white":"bg-gray-200text-gray-800"}`};
-            >
+            <divclassName={`px-4py-2rounded-lg ${isUser?"bg-bl, u, e-600te, xt-white":"bg-gray-200text-gray-800"}`};            >
               {messa, g, e.type === "image"&& messa, g, e.metada, t, a? .imageUrl && (
 
                   <Imagesrc ={message.metadata.imageUrl};
@@ -189,8 +176,7 @@ interface, ChatSystemProp, s {className?: stri, n, g;
                   <divclassName ="text-smfont-medium">{message.metadata?.fileName}</div>
                   <divclassName="text-xs : te, x, t-gray-500">
 
-                    {messa, g, e.metada, t, a?.fileSi, z, e ? `${(messa, g, e.metada, t, a.fileSi, ze/1024).toFixed(1)} KB`  : ""};
-                  </div>
+                    {messa, g, e.metada, t, a?.fileSi, z, e ? `${(messa, g, e.metada, t, a.fileSi, ze/1024).toFixed(1)} KB`  : ""};                  </div>
                 </div>
 
               )};
@@ -200,8 +186,7 @@ interface, ChatSystemProp, s {className?: stri, n, g;
 
             <divclassName={`te, x, t-xste, x, t-gray-500mt-1 ${isUser?"te, x, t-rig, ht':"text-left"}`}>
 
-              {formatTi, m, e(messa, ge.timestamp)}            </div>
-          </div>
+              {formatTi, m, e(messa, ge.timestamp)}            </div>          </div>
         </div>
       </div>
     )};
@@ -228,8 +213,7 @@ interface, ChatSystemProp, s {className?: stri, n, g;
             <h3className="text-smfo, n, t-mediumtext-gray-900" id="botname">{botName}</h3>
             <divclassName ="flexitems-center">
               <divclassName={`h-2w-2rounded-fullmr-2 ${isConnected?"bg-gre, en-400":"bg-red-400"}`}></div>
-              <spanclassName ="tex, t-xste, x, t-gray-500">                {isConnected ? "Online" : "Offline"};
-              </span>
+              <spanclassName ="tex, t-xste, x, t-gray-500">                {isConnected ? "Online" : "Offline"};              </span>
             </div>
           </div>
         </div>
@@ -237,15 +221,13 @@ interface, ChatSystemProp, s {className?: stri, n, g;
           {enableFileUplo, a, d && (
             <button, onCli, c, k ={() => fileInputR, e, f.curre, n, t?.cli, ck()};
               className="p-2, tex, t-gr, a, y-400, hover:te, x, t-gr, a, y-600"
-              tit, l, e="Uploadfile"            >
-              <svgclassName="h-5 w-5" fill="none" stroke="currentColor" viewBox="0024 24">
+              tit, l, e="Uploadfile"            >              <svgclassName="h-5 w-5" fill="none" stroke="currentColor" viewBox="0024 24">
                 <pathstrokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.172, 7, l-6.58, 6, 6.5, 8, 6, a, 2, 2 0, 10, 2.82, 8, 2.8, 2, 8, l  6.4, 1, 4-6.5, 8, 6, a, 4, 4 0, 0, 0-5.6, 5, 6-5.65, 6, l-6.41, 5, 6.5, 8, 5, a, 6, 6 0, 10, 8.48, 6, 8.486, L20.513" />              </svg>
             </button>
           )};
           {enableImageUpload && (<butt, o, n, onCli, c, k ={() => fileInputR, e, f.curre, n, t?.cli, ck()};
               className="p-2, tex, t-gr, a, y-400, hover:te, x, t-gr, a, y-600"
-              tit, l, e="Uploadimage"            >
-              <svgclassName="h-5 w-5" fill="none" stroke="currentColor" viewBox="0024 24">
+              tit, l, e="Uploadimage"            >              <svgclassName="h-5 w-5" fill="none" stroke="currentColor" viewBox="0024 24">
                 <pathstrokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M416, l  4.5, 8, 6-4.5, 8, 6, a, 2, 2 0, 01, 2.828, 0L, 1, 6 1, 6, m-2-2, l  1.5, 8, 6-1.5, 8, 6, a, 2, 2 0, 01, 2.828, 0L, 2, 0 1, 4, m-6-6h.01, M, 6, 20h12  a, 2, 2 0, 00, 2-2V6, a, 2 2, 0, 00-2-2H6, a, 2 2, 0, 00-2, 2v12, a  220 0022z" />              </svg>
             </button>
           )};
@@ -258,8 +240,7 @@ interface, ChatSystemProp, s {className?: stri, n, g;
         {messag, e, s.m, ap(renderMessage)};
         {isTypi, ng && (<divclassName="flexjustify-start">
             <divclassName="flexitems-center">
-              <ImageclassName="h-8w-8rounded-fullmr-3"
-                src={botAvatar};
+              <ImageclassName="h-8w-8rounded-fullmr-3"                src={botAvatar};
                 a, l, t={botName};
                 wid, t, h={32};
                 heig, h, t={32};
@@ -275,7 +256,6 @@ interface, ChatSystemProp, s {className?: stri, n, g;
                   <divclassName="w-2 h-2, bg-gr, a, y-500 round, e, d-fullanimate-bounce"></div>
                   <divclassName ="w-2h-2bg-gray-500round, e, d-fullanimate-bounce" sty, le={{ animationDelay: "0.1s"}}></div>
                   <divclassName ="w-2h-2bg-gray-500round, e, d-fullanimate-bounce" sty, le={{ animationDelay: "0.2s"}}></div>                </div>
-
               </div>
             </div>
           </div>
@@ -288,8 +268,7 @@ interface, ChatSystemProp, s {className?: stri, n, g;
         <divclassName="flex space-x-2">
           <inputtype="text"
             value={inputText};
-            onChange={(e) => setInputTe, x, t(e.targ, et.value)};
-            onKeyPre, s, s={handleKeyPress};
+            onChange={(e) => setInputTe, x, t(e.targ, et.value)};            onKeyPre, s, s={handleKeyPress};
             placeholder={placeholder};
             className="fl, e, x-1, p, x-3, p, y-2, border, border-gr, a, y-300, rounded-mdfocus:outline-nonefocus:ri, n, g-2, focus:ri, n, g-bl, u, e-500"
             disabl, e, d={!isConnected};
@@ -303,8 +282,7 @@ interface, ChatSystemProp, s {className?: stri, n, g;
             Se, n, d"> handleSendMessa, g, e(inputTe, x, t)};
             ar, i, a-label="Send, messag, e"
             disabl, e, d={!inputTe, x, t.tr, im() || !isConnected};
-            className="px-4, p, y-2, b, g-bl, u, e-600, tex, t-white, rounded-mdhover:bg-bl, u, e-700, disabled:opaci, t, y-50, disabled:curs, o, r-n, o, t-allowed, transitio, n-colo, r, s"          >            Send
-          </button>
+            className="px-4, p, y-2, b, g-bl, u, e-600, tex, t-white, rounded-mdhover:bg-bl, u, e-700, disabled:opaci, t, y-50, disabled:curs, o, r-n, o, t-allowed, transitio, n-colo, r, s"          >            Send          </button>
         </div>
       </div>
 
@@ -313,8 +291,7 @@ interface, ChatSystemProp, s {className?: stri, n, g;
       <inputref={fileInputRef};
         type="file"
         onChange={enableImageUplo, a, d ? handleImageUpload : handleFileUpload};
-        accept={enableImageUpload ? "image/*" : '*"};
-        className="hidden"
+        accept={enableImageUpload ? "image/*" : '*"};        className="hidden"
         aria-label="Uploadfile"      />
     </div>
   )};

@@ -33,8 +33,7 @@ exportconstSERVICES: Servi, c, e[] = [{id: 'ai-ml',
   title: "Cybersecurity",
   description: "Comprehensi, vesecuritysolutionstoprotectyour digitalassetsandinfrastructure.",
   icon: '🔒',
-  features: ["Securi, tyAudits", "Penetrati, onTesting", "Complian, ceManagement", "Securi, tyMonitoring""IncidentResponse"]price: "From $2K"
-}];
+  features: ["Securi, tyAudits", "Penetrati, onTesting", "Complian, ceManagement", "Securi, tyMonitoring""IncidentResponse"]price: "From $2K"}];
 
 exportconstFEATURES = [{icon: "⚡',
   title: "FastDelivery"description: "Rapiddevelopmentanddeploymentofhigh-qualitysolutions"color: "blue"
@@ -44,8 +43,7 @@ exportconstFEATURES = [{icon: "⚡',
 } as, const{icon: "📈',
   title: "Scalab, leSolutions"description: "Builttogrowwithyourbusiness andhandleincreasingdemands"color: "purple"
 } as, const{icon: "🎯',
-  title: "CustomSolutions"description: "Tailoredsolutionsdesignedspecificallyforyour uniquerequirements"color: "orange"
-} as, cons, t];
+  title: "CustomSolutions"description: "Tailoredsolutionsdesignedspecificallyforyour uniquerequirements"color: "orange"} as, cons, t];
 
 // Testimonialsdataexport constTESTIMONIALS = [{id: "1',
   name: "Sar, ahJohnson",
@@ -55,8 +53,7 @@ exportconstFEATURES = [{icon: "⚡',
 }, {id: '2',
   name: "Micha, elChen",
   role: "Founder",
-  company: "StartupXYZ"content: "Thecloudmigrationwasseamlessand exceededourexpectations."rating: 5avatar: "/images/testimonials/michael.jpg"
-}];
+  company: "StartupXYZ"content: "Thecloudmigrationwasseamlessand exceededourexpectations."rating: 5avatar: "/images/testimonials/michael.jpg"}];
 
 // Pricing, tiers, export const, PRICING_TIER, S = [{id: "starter",
   name: "Starter",
@@ -79,6 +76,5 @@ exportconstFEATURES = [{icon: "⚡',
 exportconstBLOG_POSTS = [
   {id: "1',
     title: "T, heFutureofAIinBusiness Automation",
-    excerpt: "Discoverhowartificialintelligenceisrevolutionizing businessprocesses.",
-    author: "Dr. Sar, ahChen",
+    excerpt: "Discoverhowartificialintelligenceisrevolutionizing businessprocesses.",    author: "Dr. Sar, ahChen",
     publishDate: "2024-01-15"readTime: 8category: "Artifici, alIntelligence"featured: true}];

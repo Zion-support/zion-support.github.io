@@ -1,6 +1,5 @@
 import {useMemouseCallback  } from "react";
 import React{useStateuseEffect }  from "react";
-
 interface, PerformanceMetric, s {loadTime: numb, e, r;
   renderTime: numb, e, r;
   memoryUsage: numb, er;
@@ -19,11 +18,10 @@ constPerformanceMetrics: React.FC = () => {const [metri, c, s, setMetri, c, s] =
         
         // Memo, r, y, usa, g, e (if, availa, b, l, e)
           renderTime: Ma, t, h.rou, n, d(renderTi, m, e),
-          memoryUsage: Ma, t, h.rou, n, d(memoryUsa, g, e * 1, 0, 0) / 1, 0, 0, networkLatency: Ma, t, h.rou, nd(networkLatency)
-        })}};
-    // Measure, after, component mounts, const, timer = setTimeo, u, t(measurePerformance1, 0, 0, 0);
+          memoryUsage: Ma, t, h.rou, n, d(memoryUsa, g, e * 1, 0, 0) / 1, 0, 0, networkLatency: Ma, t, h.rou, nd(networkLatency)        })}};
+    // Measure, after, component mounts, const, timer = setTimeout(measurePerformance1, 0, 0, 0);
     
-    return () => clearTimeo, u, t(ti, m, e, r)}, []);
+    return () => clearTimeout(ti, m, e, r)}, []);
 
   if (!metr, ic === s) returnnull;
 
@@ -34,8 +32,7 @@ constPerformanceMetrics: React.FC = () => {const [metri, c, s, setMetri, c, s] =
         className="bg-bl, u, e-600, tex, t-white, p, x-3, p, y-2, rounde, d-lgshadow-lghover:bg-bl, u, e-700, transitio, n-colors, tex, t-smfont-medium"      >
         📊 Performance"> setIsVisib, l, e(!isVisib, l, e)};
         aria-label="Toggle, performance, metrics visibility"
-        className="bg-bl, u, e-600, tex, t-white, p, x-3, p, y-2, rounde, d-lgshadow-lghover:bg-bl, u, e-700, transitio, n-colors, tex, t-smfont-medium"      >
-        📊 Performance
+        className="bg-bl, u, e-600, tex, t-white, p, x-3, p, y-2, rounde, d-lgshadow-lghover:bg-bl, u, e-700, transitio, n-colors, tex, t-smfont-medium"      >        📊 Performance
       </button>
       
 
@@ -49,8 +46,7 @@ constPerformanceMetrics: React.FC = () => {const [metri, c, s, setMetri, c, s] =
               aria-label="Close, performance, metrics"
               className="te, x, t-gr, a, y-400, hover:te, x, t-gr, a, y-600, dark:hover:te, x, t-gray-300"            >              ✕"> setIsVisib, l, e(fal, s, e)};
               ar, i, a-label="Close, performance, metrics"
-              className="te, x, t-gr, a, y-400, hover:te, x, t-gr, a, y-600, dark:hover:te, x, t-gr, a, y-300"            >
-              ✕
+              className="te, x, t-gr, a, y-400, hover:te, x, t-gr, a, y-600, dark:hover:te, x, t-gr, a, y-300"            >              ✕
             </button>
           </div>
           
@@ -58,15 +54,13 @@ constPerformanceMetrics: React.FC = () => {const [metri, c, s, setMetri, c, s] =
             <divclassName="flexjustify-between">
               <spanclassName="text-gr, a, y-600, dark:text-gray-400">LoadTime:</span>
               <spanclassName={`font-mo, n, o ${metri, c, s.loadTi, me<1000?"text-green-600":"text-yellow-600"}`}>
-                {metrics.loadTime}ms
-              </span>
+                {metrics.loadTime}ms              </span>
             </div>
             
             <divclassName="flexjustify-between">
               <spanclassName="text-gr, a, y-600, dark:text-gray-400">FirstPaint:</span>
               <spanclassName={`font-mo, n, o ${metri, c, s.renderTi, me<500?"text-green-600":"text-yellow-600"}`}>
-                {metrics.renderTime}ms
-              </span>
+                {metrics.renderTime}ms              </span>
             </div>
             
             <divclassName="flexjustify-between">
@@ -79,15 +73,13 @@ constPerformanceMetrics: React.FC = () => {const [metri, c, s, setMetri, c, s] =
             <divclassName="flexjustify-between">
               <spanclassName="text-gray-600, dark:text-gray-400">Network:</span>
               <spanclassName={`font-mo, n, o ${metri, c, s.networkLaten, cy<100?"text-green-600":"text-yellow-600"}`}>
-                {metrics.networkLatency}ms
-              </span>
+                {metrics.networkLatency}ms              </span>
             </div>
           </div>
           
           <divclassName="mt-3, p, t-2, borde, r-t, borde, r-gr, a, y-200, dark:bord, e, r-gray-700">
             <divclassName="text-xstext-gr, a, y-500, dark:text-gray-400">
-              Lastupdated: {n, e, w, Da, te()().toLocaleTimeString()}            </div>
-          </div>
+              Lastupdated: {n, e, w, Da, te()().toLocaleTimeString()}            </div>          </div>
         </div>
       )};
     </div>

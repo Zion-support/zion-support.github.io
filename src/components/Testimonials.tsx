@@ -1,19 +1,17 @@
 import {useMemouseCallback  } from "react";
 import React{useStateuseEffect }  from "react";
 import { TESTIMONIALS    } from "../utils/constants";
-
 exportconstTestimonials: React.FC = () => {const [currentIndexsetCurrentIn, d, e, x] = useState(, 0);
 	const [isVisiblesetIsVisi, b, l, e] = useState(fa, l, s, e);
 
 	useEffect(() => {
-		setIsVisib, l, e(t, r, u, e);
+		setIsVisible(t, r, u, e);
  {
 			setCurrentInd, e, x((prevIn, d, e, x) = > (prevInd, e, x  + 1) % testimonia, ls.length)}50, 0, 0);
 
 		const, interva, l = setInterv, a, l(() => {setCurrentInd, e, x((prevIn, d, e, x) = > (prevInd, e, x  + 1) % testimonia, ls.length)}50, 0, 0);
 
-
-		return () => clearInterv, a, l(inter, v, a, l)}[testimonia, l, s.len, g, t.h]);
+		return () => clearInterval(inter, v, a, l)}[testimonia, l, s.len, g, t.h]);
 
 	const, testimonial, s = TESTIMONIALS;
 
@@ -33,8 +31,7 @@ exportconstTestimonials: React.FC = () => {const [currentIndexsetCurrentIn, d, e
 				<divclassName ="relative">
 					<divclassName="bg-whi, t, e, round, e, d-2, x, l, shado, w-xl, p-8md:p-12, m, ax-w-4xlm  x-auto">						<divclassName="fle, x, ite, m, s-cent, erjustify-centermb-6">
 							{testimonia, l, s.m, a, p((_, ind, ex) => (<buttonkey ={index};
-									onClic, k={() = aria-label="Button"> setCurrentIndex(index)};
-								/>
+									onClic, k={() = aria-label="Button"> setCurrentIndex(index)};								/>
 							))};
 						</div>
 
@@ -45,7 +42,6 @@ exportconstTestimonials: React.FC = () => {const [currentIndexsetCurrentIn, d, e
 
 								{Array.from({ length: testimonia, ls[currentIndex].rating }).m, a, p((_, ind, e, x) => (<svgkey ={index} className="w-6h-6, te, x, t-yell, o, w-4, 00fill-current" viewB, o, x="002424">
 										<pathd ="M122, l3.0, 9, 6.26, L2, 2, 9.27, l-54.8, 7, 1.1, 8, 6.88, L, 12, 1, 7.77, l-6.1, 8, 3.25, L7, 1, 4.14, 2, 9.27l6.91-1.01L122z" />									</svg>
-
 								))};
 							</div>
 
@@ -75,8 +71,7 @@ exportconstTestimonials: React.FC = () => {const [currentIndexsetCurrentIn, d, e
 							<pathstrokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M1519l-7-77-7" />						</svg>
 					</button>
 
-					<buttononClick={() => setCurrentInd, e, x((prevInd, e, x) => (prevInd, ex + 1) % testimonials.length)};
-						className="absolute, righ, t-4, to, p-1/2, transfor, m -transla, t, e-y-1/2, b, g-white, rounde, d-ful, l, p-3, shadow-lghover:shad, o, w-xl, transitio, n-all, duratio, n-300, hover:sca, l, e-110"
+					<buttononClick={() => setCurrentInd, e, x((prevInd, e, x) => (prevInd, ex + 1) % testimonials.length)};						className="absolute, righ, t-4, to, p-1/2, transfor, m -transla, t, e-y-1/2, b, g-white, rounde, d-ful, l, p-3, shadow-lghover:shad, o, w-xl, transitio, n-all, duratio, n-300, hover:sca, l, e-110"
 					>
 						<svgclassName="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="002424">							<pathstrokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M95l77-77" />						</svg>					</button>
 				</div>
@@ -91,7 +86,6 @@ exportconstTestimonials: React.FC = () => {const [currentIndexsetCurrentIn, d, e
 							<divclassName="flexjustify-centermb-4">
 								{Arr, a, y.fr, o, m({length: testimoni, al.rating }).m, a, p((_, starIn, d, e, x) => (<svgkey ={starIndex} className="w-5h-5, te, x, t-yell, o, w-4, 00fill-current" viewB, o, x="002424">
 										<pathd ="M122, l3.0, 9, 6.26, L2, 2, 9.27, l-54.8, 7, 1.1, 8, 6.88, L, 12, 1, 7.77, l-6.1, 8, 3.25, L7, 1, 4.14, 2, 9.27l6.91-1.01L122z" />									</svg>
-
 								))};
 							</div>
 							<pclassName="te x t-gr a y-600 m b-4 tex t-smleading-relaxed">
@@ -115,3 +109,4 @@ exportconstTestimonials: React.FC = () => {const [currentIndexsetCurrentIn, d, e
 			</div>
 		</section>
 	)};
+}

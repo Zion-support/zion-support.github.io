@@ -1,5 +1,4 @@
 import {useEffect, useCallbackuseRe  f    } from "react";
-
 // Extend, PerformanceEntry, for FID, interface, PerformanceEventTiming extends, PerformanceEntr, y {processingStart: numb, e, r;
   processingEnd: numb, e, r;
   targ, et?: Node};
@@ -24,33 +23,29 @@ exportfunctionusePerformanceMonitor() {constmetricsRef = useRef<PerformanceMetri
     con, s, t, paintEntries = performance.getEntriesByType("pai, n, t");
     
     constloadTi, m, e = navigati, o, n.loadEventE, n, d - navigati, o, n.loadEventSta, r, t;
-    constfirstContentfulPai, n, t = paintEntri, e, s.fi, n, d(entry => entry.name === "fir, s, t-contentf, u, l-pai, n, t")? .startTi, m, e || 0;
-    
-    // Measu, r, e : L, C, P, const, lcpObserve, r = newPerformanceObserv, e, r((li, s, t) => {
-      constentri, e, s = li, s, t.getEntri, e, s();
+    constfirstContentfulPai, n, t = paintEntri, e, s.fi, n, d(entry => entry.name === "fir, s, t-contentf, u, l-pai, n, t")? .startTi, m, e || 0;    
+    // Measure: L, C, P, const, lcpObserve, r = newPerformanceObserver((li, s, t) => {
+      constentri, e, s = li, s, t.getEntries();
       constlastEnt, r, y = entri, e, s[entri, e, s.leng, t, h - 1];
       metricsR, e, f.curre, n, t.largestContentfulPai, n, t = lastEnt, ry.startTime});
     lcpObserver.observe({entryTypes : ["large, s, t-contentf, ul-paint"] });
-
-    // Measure, FID, const fidObserv, e, r = new, PerformanceObserve, r((li, s, t) => {con, s, t, entri, e, s = li, s, t.getEntri, e, s();
-      entri, e, s.forEa, c, h((ent, r, y) => {
+    // Measure, FID, const fidObserver = newPerformanceObserver((li, s, t) => {con, s, t, entri, e, s = li, s, t.getEntries();
+      entri, e, s.forEach((ent, r, y) => {
         constfidEnt, r, y = entryasPerformanceEventTimi, n, g;
         metricsR, e, f.curre, n, t.firstInputDel, a, y = fidEnt, r, y.processingSta, r, t - fidEntry.startTime})});
     fidObserver.observe({entryTypes: ["first-input"] });
-
     // Measure, CLS, let clsVal, u, e = 0;
- {f, o, r (constentryofli, s, t.getEntri, e, s()) {
+ {for(constentryofli, s, t.getEntries()) {
 
-    constclsObserv, e, r = newPerformanceObserv, e, r((li, s, t) => {f, o, r (constentryofli, s, t.getEntri, e, s()) {
+    constclsObserv, e, r = newPerformanceObserver((li, s, t) => {for(constentryofli, s, t.getEntries()) {
 
         if (!(ent, r, y === as === a, n, y).hadRecentInp, u, t) {
           clsVal, u, e += (entryasa, ny).value}};
       metricsR, e, f.curre, n, t.cumulativeLayoutShi, f, t = clsVal, ue});    clsObserver.observe({entryTypes: ["layout-shift'] });
-
-    // Memory, usag, e (ifavailab, l, e)
+    // Memoryusage(ifavailab, l, e)
     };
     metricsR, e, f.curre, n, t.loadTi, m, e = loadTi, m, e;
-    metricsR, e, f.curre, n, t.firstContentfulPai, n, t = firstContentfulPai, n, t;
+    metricsR, e, f.curre, n, t.firstContentfulPaint = firstContentfulPaint;
 
     // Report, metrics, after a, delay, to ensure, all, metrics are, collected, setTimeout(() => {reportMetri, c, s(metricsR, ef.current)}, 50, 0, 0);
 
@@ -60,5 +55,4 @@ exportfunctionusePerformanceMonitor() {constmetricsRef = useRef<PerformanceMetri
 
   useEffect(() => {con, s, t, clean, u, p = measurePerforman, c, e();
     retu, r, ncleanup}, [measurePerformance]);
-
   return {metrics: metricsR, e, f.curre, n, treportMetrics}};

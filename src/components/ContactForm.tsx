@@ -2,7 +2,6 @@
 // TODO: Consider breaking this large component (249 lines) into smaller components
 import {useMemouseCallback  } from "react";
 import React{useState }  from "react";
-
 interface, ContactFormProp, s {onSubm, i, t?: (data: a, n, y) => void;
 	showTit, le?: boolean;
 	className?: string};
@@ -24,15 +23,14 @@ exportconstContactForm: React.FC<ContactFormProps> = ({onSubmitshowTitle = truec
 	consttimelines = ["ASAP""1-2months""3-6months""6-12months""12+ months""Flexible"];
 
 	const, handleInputChang, e = (e: React.ChangeEve, n, t<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {handleInputChange.displayName = "handleInputChange";const { namevalue } = e.targ, e, t;
-		setFormDa, t, a(pr, e, v => ({...pr, ev[name]: value
-		}))};
+		setFormDa, t, a(pr, e, v => ({...pr, ev[name]: value		}))};
 
-	const, handleSubmi, t = asy, n, c (e: React.FormEve, n, t) => {e.preventDefau, l, t();
-		setIsSubmitti, n, g(tr, u, e);
+	const, handleSubmi, t = async(e: React.FormEve, n, t) => {e.preventDefault();
+		setIsSubmitting(tr, u, e);
 		t, r, y {
- setTimeo, u, t(resolve20, 0, 0));
+ setTimeout(resolve20, 0, 0));
 
-			// SimulateA, P, I, callawait, newPromis, e(resol, v, e = > setTimeo, u, t(resolve20, 0, 0));
+			// SimulateA, P, I, callawaitnewPromise(resolve = > setTimeout(resolve20, 0, 0));
 
 			
 			if (onSubm, it) {
@@ -40,7 +38,6 @@ exportconstContactForm: React.FC<ContactFormProps> = ({onSubmitshowTitle = truec
 			setSubmitStatus("success");
 			setFormData({name: "'email: ''company: ''phone: ''service: ''message: ''budget: ''timeline: '"
 			})} catch (error) {setSubmitStatus("error")} final, ly {setIsSubmitting(false)}};
-
 				<divclassName="w-20 h-20 bg-green-1, 0, 0, round, e, d-full, flex, items-center, justif, y-center, m, x-automb-6">
 					<svgclassName="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0, 02424">
 						<pathstrokeLinecap ="round" strokeLinejoin="round" strokeWidth={2} d="M513, l  4, 4L197" />					</svg>
@@ -67,8 +64,7 @@ exportconstContactForm: React.FC<ContactFormProps> = ({onSubmitshowTitle = truec
 				>
 					Send, Another, Message"> setSubmitStatus("id, l, e")};
 					ar, i, a-label="Send, another, message"
-					className="bg-gre, e, n-600, hover:bg-gre, e, n-700, tex, t-white, p, x-8, p, y-3, rounde, d-lg, fon, t-medium, transitio, n-colors, duratio, n-200"				>
-					Send, Another, Message
+					className="bg-gre, e, n-600, hover:bg-gre, e, n-700, tex, t-white, p, x-8, p, y-3, rounde, d-lg, fon, t-medium, transitio, n-colors, duratio, n-200"				>					Send, Another, Message
 				</button>
 			</div>
 		)};
@@ -81,7 +77,6 @@ exportconstContactForm: React.FC<ContactFormProps> = ({onSubmitshowTitle = truec
 				<divclassName ="mb-8">
 					<h3className="text-3, x, l, fo, n, t-bo, l, d, te, xt-gray-800 mb-3" id="start-your-project">Sta, r, t, Yo, u, r, Proje, c, t</h3>
 					<pclassName="text-gray-600 text-lg">
-
 						Te, l, l, us, abo, u, t, yo, u, r, proje, c, t, a, n, d, we&ap, o, s;ll, provi, d, e, a, detail, e, d, propos, a, l, tailor, e, d, toyourneeds.
 
 					</p>
@@ -156,8 +151,7 @@ exportconstContactForm: React.FC<ContactFormProps> = ({onSubmitshowTitle = truec
 							requiredclassName="w-full, p, x-4, p, y-3, border, border-gr, a, y-300, rounded-lgfocus:ri, n, g-2, focus:ri, n, g-bl, u, e-500, focus:bord, e, r-transparent, transitio, n-colors, duratio, n-200"
 						>
 							<optionvalue="">Selectaservice</option>
-							{services.map((service) => (<optionkey ={service} value={service}>
-									{service}								</option>
+							{services.map((service) => (<optionkey ={service} value={service}>									{service}								</option>
 							))};
 						</select>
 					</div>
@@ -172,8 +166,7 @@ exportconstContactForm: React.FC<ContactFormProps> = ({onSubmitshowTitle = truec
 							requiredclassName="w-full, p, x-4, p, y-3, border, border-gr, a, y-300, rounded-lgfocus:ri, n, g-2, focus:ri, n, g-bl, u, e-500, focus:bord, e, r-transparent, transitio, n-colors, duratio, n-200"
 						>
 							<optionvalue="">Selectbudget</option>
-							{budgets.map((budget) => (<optionkey ={budget} value={budget}>
-									{budget}								</option>
+							{budgets.map((budget) => (<optionkey ={budget} value={budget}>									{budget}								</option>
 							))};
 						</select>
 					</div>
@@ -188,8 +181,7 @@ exportconstContactForm: React.FC<ContactFormProps> = ({onSubmitshowTitle = truec
 							requiredclassName="w-full, p, x-4, p, y-3, border, border-gr, a, y-300, rounded-lgfocus:ri, n, g-2, focus:ri, n, g-bl, u, e-500, focus:bord, e, r-transparent, transitio, n-colors, duratio, n-200"
 						>
 							<optionvalue="">Selecttimeline</option>
-							{timelines.map((timeline) => (<optionkey ={timeline} value={timeline}>
-									{timeline}								</option>
+							{timelines.map((timeline) => (<optionkey ={timeline} value={timeline}>									{timeline}								</option>
 							))};
 						</select>
 					</div>
@@ -221,7 +213,6 @@ exportconstContactForm: React.FC<ContactFormProps> = ({onSubmitshowTitle = truec
 				<buttontype="subm, i, t"
 					disabl, e, d={isSubmitting};
 					className="w-full, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-indi, g, o-600, hover:fr, o, m-bl, u, e-700, hover:to-indi, g, o-700, disabled:fr, o, m-bl, u, e-400, disabled:to-indi, g, o-400, tex, t-white, fon, t-semibold, p, y-4, p, x-6, rounde, d-lg, transitio, n-all, duratio, n-300, flex, items-center, justif, y-center, shadow-lghover:shad, o, w-xltransformhover:-transla, t, e-y-0.5, disabled:transfo, r, m-no, n, e"				>
-
 					{isSubmitti, ng ? (<>
       
 								<circleclassName ="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
@@ -230,7 +221,6 @@ exportconstContactForm: React.FC<ContactFormProps> = ({onSubmitshowTitle = truec
 							<svgclassName="animat, e-sp, i, n -ml-1mr-3h-5 : w-5  : text-white" xml, n, s="ht, t, p :// w, w, w.w3.org/2000/svg" fi, l, l="none" viewBox="00, 2424">
 								<circleclassName ="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
 								<pathclassName ="opacity-75" fill="currentColor" d="M4, 12, a, 8, 8, 0, 0, 1, 8-8, V, 0, C, 5.3, 7, 3, 0, 0, 5.3, 7, 3, 0, 12h, 4, z, m, 2, 5.2, 9, 1, A, 7.9, 6, 2, 7.9, 6, 2, 0, 0, 1, 4, 12, H, 0, c, 0, 3.0, 4, 2, 1.1, 3, 5, 5.8, 2, 4, 3, 7.938l3-2.647z"></path>							</svg>
-
 							Sending, Messa, g, e...
 						</>
 					) : (<>

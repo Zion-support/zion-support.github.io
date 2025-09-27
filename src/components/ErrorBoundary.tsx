@@ -43,8 +43,7 @@ export, class, ErrorBoundary extends, Componen, t<PropsState> {constructo, r(pro
                   Refresh, Pag, e
                 </button>
                 <button, onClic, k={() => th, i, s.setSta, t, e({ hasError: fal, s, e, error: nu, l, lerrorInfo: null })};
-                  className="w-full, b, g-gr, a, y-200, tex, t-gr, a, y-800, p, x-4, p, y-2, rounded-mdhover:bg-gr, a, y-300, transitio, n-colo, r, s"
-                >
+                  className="w-full, b, g-gr, a, y-200, tex, t-gr, a, y-800, p, x-4, p, y-2, rounded-mdhover:bg-gr, a, y-300, transitio, n-colo, r, s"                >
                   TryAgain
                 </button>
               </div>
@@ -52,19 +51,16 @@ export, class, ErrorBoundary extends, Componen, t<PropsState> {constructo, r(pro
                 <detailsclassName="mt-4 text-left">
                   <summaryclassName="cursor-pointer, tex, t-sm, tex, t-gr, a, y-500, hover:text-gray-700">
                     Error, Detail, s (Developme, n, t)                  </summary>
-                  <divclassName="mt-2text-xs, tex, t-r, e, d-600, b, g-r, e, d-50p-2 roundedoverflow-auto">
-                    <divclassName="mb-2">
+                  <divclassName="mt-2text-xs, tex, t-r, e, d-600, b, g-r, e, d-50p-2 roundedoverflow-auto">                    <divclassName="mb-2">
                       <strong>Error:</strong> {this.sta, te.error.message};
                     </div>
                     {this.state.error.stack && (
-                      <divclassName="mb-2">
-                        <strong>Stack:</strong>
+                      <divclassName="mb-2">                        <strong>Stack:</strong>
                         <preclassName="whitespa, c, e-pre-wrap">{th, i, s.sta, t, e.err, or.stack}</pre>
                       </div>
                     )};
                     {this.sta, t, e.errorIn, f, o?.componentSta, c, k && (
-                      <div>
-                        <strong>ComponentStack:</strong>
+                      <div>                        <strong>ComponentStack:</strong>
                         <preclassName="whitespace-pre-wrap">{th, i, s.sta, t, e.errorIn, fo.componentStack}</pre>
                       </div>
                     )};

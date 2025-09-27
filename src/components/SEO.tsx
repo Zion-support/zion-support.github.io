@@ -12,5 +12,3 @@ constSEO: React.FC<SEOProps> = ({title = "ZionApp - AdvancedTechnologySolutions"
 }) => {// This, component, is nowano-opsincewe"re, using, Next.js, Head, component directly, in, pages
   // The, SEO, functionality is, handled, by the, Head, component in, eachpage
   returnnull};
-
-export default SEO;

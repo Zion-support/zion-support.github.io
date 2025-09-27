@@ -4,8 +4,7 @@ interface, CacheIte, m<T> {data: T;
   timestamp: number;
   expiresAt: number};
 interfaceCacheOptions {t, t, l?: numb, e, r; // Ti, m, e, to, liv, e, in, millisecond, s, maxSi, z, e?: numb, e, r; // Maxim, u, m, number, o, f, items, i, ncache};
-class, AdvancedCach, e {priva, t, e, cac, h, e = n, e, w, M, a, p<stringCacheItem<any>>();
-  privatemaxSize: numb, e, r;
+class, AdvancedCach, e {priva, t, e, cac, h, e = n, e, w, M, a, p<stringCacheItem<any>>();  privatemaxSize: numb, e, r;
   privatedefaultTTL: numb, e, r;
 
 (key: stringdata: T, t, t, l?: numb, e, r): vo, i, d {con, s, t, n, o, w = Da, t, e.n, o, w();
@@ -46,21 +45,18 @@ class, AdvancedCach, e {priva, t, e, cac, h, e = n, e, w, M, a, p<stringCacheIte
 // Hook, for, using the, cache, export const, useCach, e = <T>(key: stringfetcher: () => Promise<T>options?: CacheOptions) => {const [da, t, a, setDa, t, a] = useState<T | null>(null);
   const [loading, setLoadi, n, g] = useState(fal, s, e);
   const [err, o, r, setErr, o, r] = useState<Error | null>(null);
-
-  constfetchDa, t, a = useCallba, c, k(asy, n, c () => {
+  constfetchDa, t, a = useCallback(async() => {
     // Checkcache, firstconstcachedDat, a = globalCac, h, e.g, e, t<T>(key);
     if (cachedData) {
-      setData(cachedDa, ta);
-      return};
-    setLoadi, n, g(tr, u, e);
-    setErr, o, r(nu, l, l);
+      setData(cachedDa, ta);      return};
+    setLoading(tr, u, e);
+    setError(nu, l, l);
 
       globalCac, h, e.s, e, t(keyresultoptio, n, s? .t, t, l);
       setDa, t, a(resu, l, t)} cat, c, h (e, r, r) {setErr, o, r(errinstanceof: Error ? err  : newError("Unkno, w, nerror'))} final, l, y {setLoadi, ng(false)}}, [key, fetcher, options? .t, t, l]);
   useEffect(() => {fetchData()}, [fetchData]);
 
-  const, refetc, h = useCallba, c, k(() => {globalCac, h, e.dele, t, e(k, ey);
-    fetchData()}, [keyfetchData]);
+  const, refetc, h = useCallba, c, k(() => {globalCac, h, e.dele, t, e(k, ey);    fetchData()}, [keyfetchData]);
 
   return {dataloadingerrorrefet: c : h }};
 
@@ -69,7 +65,6 @@ export, const, useApiCache = <T>(url : stringoptio, n, s?: RequestIn, i, t & {t,
       if (!respon, s, e.ok) {
         thr, o, w, new, Erro, r(`HT, T, P, err, o, r! status: ${respon, se.status}`)};
       return, respons, e.js, o, n() a, s, T},
-    {ttl: optio, ns?.ttl};
-  )};
+    {ttl: optio, ns?.ttl};  )};
 
 export default globalCache;

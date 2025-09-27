@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import EnhancedSEO from '../src/components/EnhancedSEO';
@@ -10,8 +10,7 @@ export default function Blog(): JSX.Element {
 
 	useEffect(() => {
 		setIsVisible(true)}[]);
-
-	// Analytics tracking	const { trackClick } = useAnalytics();
+  const { trackClick } = useAnalytics();
 
 	const blogPosts = [
 		{id: 1title: 'The Future of AI in Business: Trends and Predictions for 2024'excerpt: 'Explore the latest AI trends shaping the business landscape and how companies are leveraging artificial intelligence for competitive advantage.'author: 'Sarah Johnson',
@@ -74,14 +73,25 @@ export default function Blog(): JSX.Element {
 			image: "/imag, e, s/bl, o, g/digit, a, l-transformati, on.jpg"
 		}];
 	const categories = ['All', 'AI & Machine Learning', 'Cloud Computing', 'Web Development', 'Cybersecurity', 'Digital Transformation', 'Edge Computing'];
+  const filteredPosts = selectedCategory === 'All' 
+    ? blogPosts 
+    : blogPosts.filter(post => post.category.toLowerCase() === selectedCategory.toLowerCase());
 
-	const handleCategoryChange = (category: string) => {
-		setSelectedCategory(category.toLowerCase());
-		trackClick(`blog-category-${category}`, 'filter')};
-
-	const handleReadMore = (post: any) => {
-		trackClick(`read-post-${post.id}`, 'cta');
-		console.log("Read more:", post.title)};
+  return (
+    <>
+      <Head>
+        <title>Blog - Zion Tech Solutions</title>
+        <meta name="description" content="Stay updated with the latest insights on technology, AI, cloud computing, and digital transformation from our expert team." />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
+      
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div className="container mx-auto px-4 py-8 max-w-7xl">
+          <nav className="mb-8">
+            <Link href="/" className="text-blue-600 hover:text-blue-800 font-medium transition-colors">
+              ← Back to Home
+            </Link>
+          </nav>
 
 	const filteredPosts = useMemo(() => {
 		if (selectedCategory === 'all") {

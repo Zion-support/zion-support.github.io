@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "timestamp": "2025-09-27T07:29:17.817Z",
+=======
+  "timestamp": "2025-09-27T07:36:17.154Z",
+>>>>>>> 0384e90fdce842a76ef3ba4a07588e80299a3727
   "fixedFiles": [
     "src/components/UserManagement.tsx",
     "src/components/Testimonials.tsx",

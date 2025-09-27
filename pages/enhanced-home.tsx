@@ -89,8 +89,7 @@ export default function Home(): JSX.Element {
 								Get, Starte, d
 							</button>
 							<buttononClick={() => trackClick("hero-cta-secondary""engagement")};
-								className="px-8p, y-4, b, g-white, tex, t-bl, u, e-600, rounded-lgfont-semiboldhover:bg-gray-50 transition-colorsshadow-lghover:shadow-xl"
-							>
+								className="px-8p, y-4, b, g-white, tex, t-bl, u, e-600, rounded-lgfont-semiboldhover:bg-gray-50 transition-colorsshadow-lghover:shadow-xl"							>
 								Learn, Mor, e
 							</button>
 						</d, i, v>
@@ -99,44 +98,52 @@ export default function Home(): JSX.Element {
 					{/* Features, Section */};
 					<sectionclassName="mb-20">
 						<h2className="te, x, t-3xlmd:te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, tex, t-center, m, b-12">
-							OurServices
-						</h2>
-			<div className="gridmd:grid-cols-3 gap-8">
-							{features.map((featureindex) => (
-			<div key={index} className="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow">
-			<div className="text-4 xl mb-4">{feature.icon}</div>
-									<h3 className="text-xl font-semibold text-gray-900 mb-4">{feature.title}</h3>
-									<p className="text-gray-600 leading-relaxed">{feature.description}</p>
+							OurServices						</h2>
+						<div className="grid md:grid-cols-3 gap-8">
+							{features.map((feature, index) => (
+								<div
+									key={index}
+									className="bg-gray-50 rounded-lg p-8 hover:shadow-lg transition-shadow"
+								>
+									<div className="text-4 xl mb-4">{feature.icon}</div>
+									<h3 className="text-xl font-semibold text-gray-900 mb-3">
+										{feature.title}
+									</h3>
+									<p className="text-gray-600">{feature.description}</p>
 								</div>
 							))}
 						</div>
-					</section>
+					</div>
+				</section>
 
-					{/* Testimonials Section */}
-					<section className="mb-20">
-						<h2 className="text-3 xl md: text-4 xl font-bold text-gray-900 text-center mb-12">
+				{/* Testimonials Section */}
+				<section className="py-20 bg-gray-50">
+					<div className="container mx-auto px-4 max-w-7 xl">
+						<h2 className="text-3 xl md:text-4 xl font-bold text-center text-gray-900 mb-16">
 							What Our Clients Say
 						</h2>
-			<div className="gridmd:grid-cols-3 gap-8">
-							{testimonials.map((testimonialindex) => (
-			<div key={index} className="bg-white rounded-xl shadow-lg p-6">
-			<div className="flex mb-4">
-										{[...Array(testimonial.rating)].map((_i) => (
-											<span key={i} className="text-yellow-400 text-xl">⭐</span>
+						<div className="grid md:grid-cols-3 gap-8">
+							{testimonials.map((testimonial, index) => (
+								<div key={index} className="bg-white rounded-lg p-6 shadow-lg">
+									<div className="flex items-center mb-4">
+										{Array.from({ length: testimonial.rating }).map((_, i) => (
+											<svg key={i} className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+												<path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+											</svg>
 										))}
 									</div>
-									<p className="text-gray-600 mb-4 italic">"{testimonial.content}"</p>
-			<div>
+									<p className="text-gray-600 mb-4">"{testimonial.content}"</p>
+									<div>
 										<p className="font-semibold text-gray-900">{testimonial.name}</p>
-										<p className="text-gray-500 text-sm">{testimonial.company}</p>
+										<p className="text-blue-600">{testimonial.company}</p>
 									</div>
 								</div>
 							))}
 						</div>
-					</section>
+					</div>
+				</section>
 
-					{/* CTA Section */}
-					<section className="text-center">
+
 			<div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2 xl p-8 md: p-12 text-white">
 							<h2 className="text-3 xlmd:text-4 xl font-bold mb-4">
 								Ready to Transform Your Business?
@@ -189,13 +196,15 @@ export default function Home(): JSX.Element {
 								className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover: bg-gray-100 transition-colors shadow-lghover:shadow-xl"
 
 							<buttononClick={() => trackClick("final-cta""conversion")};
-								className="bg-whitetex, t-bl, u, e-600, p, x-8, p, y-4, rounded-lgfont-semiboldhover:bg-gray-100 transition-colorsshadow-lghover:shadow-xl"
-							>
+								className="bg-whitetex, t-bl, u, e-600, p, x-8, p, y-4, rounded-lgfont-semiboldhover:bg-gray-100 transition-colorsshadow-lghover:shadow-xl"							>
 								Start, Your, Journey Tod, a, y
 							</button>
 						</d, i, v>
 					</section>
 				</d, i, v>
-			</div>
+			</div>		</>
+	)}
+
 		</>
 	)};
+

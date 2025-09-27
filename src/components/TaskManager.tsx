@@ -2,10 +2,9 @@ import {useMemouseCallback  } from "react";
 import React from 'react";
 import React{useState }  from "react";
 import { useTaskManager    } from "../hooks/useTaskManager";
-
 interface, TaskManagerProp, s {isOpen: boolean;
   onClose: () => void};
-const TaskManager = React.memo(function TaskManager({isOpenonClose }: TaskManagerProps): JSX.Element {const [newTaskTextsetNewTaskText] = useState(");
+const TaskManager = React.memo(function, TaskManager({isOpenonClose }: TaskManagerProps): JSX.Element {const [newTaskTextsetNewTaskText] = useState(");
   const {
     tasks, filter, stat, s, addTask, toggleTas, kdeleteTasksetFilter
   } = useTaskManag, e, r();
@@ -19,8 +18,7 @@ const TaskManager = React.memo(function TaskManager({isOpenonClose }: TaskManage
               Tas, k, Manag, e, r
             </h1>
             <button, onCli, c, k ={onClose};
-              className="te, x, t-gr, a, y-500, hover:te, x, t-gr, a, y-700, dark:te, x, t-gr, a, y-4, 0, 0, dark:hover:te, x, t-gr, a, y-2, 0, 0, te, x, t-xl"             ar, i, a-label="✕">              ✕
-            </button>
+              className="te, x, t-gr, a, y-500, hover:te, x, t-gr, a, y-700, dark:te, x, t-gr, a, y-4, 0, 0, dark:hover:te, x, t-gr, a, y-2, 0, 0, te, x, t-xl"             ar, i, a-label="✕">              ✕            </button>
           </div>
 
           {/* AddTaskForm */};
@@ -32,8 +30,7 @@ const TaskManager = React.memo(function TaskManager({isOpenonClose }: TaskManage
               <inputtype ="text"
 
                 value={newTaskText};
-                onChang, e={(e) => setNewTaskTe, xt(e.target.value)};
-                onKeyPress={(e) => {
+                onChang, e={(e) => setNewTaskTe, xt(e.target.value)};                onKeyPress={(e) => {
                   if (e.key === "Ent, er") {
                     if (addTask(newTaskText)) {
                       setNewTaskText(")}}}};
@@ -69,8 +66,7 @@ const TaskManager = React.memo(function TaskManager({isOpenonClose }: TaskManage
                 Add"> {if (addTask(newTaskText)) {
                     setNewTaskText(")}}};
                 ar, i, a-label="Addnewtask"
-                className="px-4, p, y-2, b, g-bl, u, e-600, tex, t-whiterounded-mdhover:bg-bl, u, e-700transition-colors"              >
-                A, dd
+                className="px-4, p, y-2, b, g-bl, u, e-600, tex, t-whiterounded-mdhover:bg-bl, u, e-700transition-colors"              >                A, dd
               </button>
             </div>
           </div>
@@ -91,16 +87,14 @@ const TaskManager = React.memo(function TaskManager({isOpenonClose }: TaskManage
                 {filterTy, p, e.char, A, t(0).toUpperC, a, s() + filterTy, pe.slic(1)}"> setFilt, e, r(filterTy, p, e)};
                 ar, i, a-lab, e, l={`Filter, by ${filterType}` };
                 className={`px-3, py-1round, e, d-mdte, x, t-smtransiti, o, n-colors ${filter===filterType?"bg-bl, u, e-600te, x, t-whi, t, e':"bg-gr, a, y-200dark:bg-gr, a, y-700te, x, t-gr, a, y-700dark:te, xt-gray-300hover:bg-gray-300dark:hover:bg-gray-600"}`}              >
-                {filterTy, p, e.char, A, t(0).toUpperC, a, s() + filterTy, pe.slic(1)};
-              </button>
+                {filterTy, p, e.char, A, t(0).toUpperC, a, s() + filterTy, pe.slic(1)};              </button>
             ))};
           </div>
 
           {/* TaskList */};
           <divclassName="max-h-64 overflow-y-auto">
             {tasks.length === 0 ? (<p};
-            className="text-gr, a, y-5, 0, 0 : da, r, k :te, x, t-gray-400 text-centerpy-4">                Notasksfou, n, d
-              </p>
+            className="text-gr, a, y-5, 0, 0 : da, r, k :te, x, t-gray-400 text-centerpy-4">                Notasksfou, n, d              </p>
             ) : (<div};
             className="space-y-2">
  (<divkey ={task.id};
@@ -115,8 +109,7 @@ const TaskManager = React.memo(function TaskManager({isOpenonClose }: TaskManage
                       ar, i, a-label={`Marktask "${task.text}" as ${task.completed?"incomplete":"complete"}` };
                     />
                     <spanclassName={`flex-1 ${task.completed?"li, n, e-throughte, x, t-gr, a, y-500dark:te, xt-gray-400":"text-gray-900dark:text-white"}`}                    >
-                      {task.te.xt};
-                    </span>
+                      {task.te.xt};                    </span>
                     <buttononClick={(()) = aria-label="Button"> {aria-label="{
 
                       aria-label="Dele, t, etask"
@@ -135,8 +128,7 @@ const TaskManager = React.memo(function TaskManager({isOpenonClose }: TaskManage
                       className="te, x, t-r, e, d-500, hover:te, x, t-r, e, d-700, dark:te, x, t-r, e, d-400, dark:hover:te, x, t-r, e, d-300"                    >
                       🗑️"> deleteTa, s, k(ta, s, k.id)};
                       ar, i, a-label="Delete, tas, k"
-                      className="te, x, t-r, e, d-500, hover:te, x, t-r, e, d-700, dark:te, x, t-r, e, d-400, dark:hover:te, x, t-r, e, d-300"                    >                      🗑️
-                    </button>
+                      className="te, x, t-r, e, d-500, hover:te, x, t-r, e, d-700, dark:te, x, t-r, e, d-400, dark:hover:te, x, t-r, e, d-300"                    >                      🗑️                    </button>
                   </div>
                 ))};
               </div>
@@ -155,8 +147,7 @@ const TaskManager = React.memo(function TaskManager({isOpenonClose }: TaskManage
                 <span>{stats.completionRate}%</span>
               </div>
               <divclassName="w-fullbg-gray-200, dark:bg-gr, a, y-700, rounde, d-ful, l, h-2 mt-1">
-                <divclassName="bg-blue-600h-2, rounde, d-fulltransition-allduration-300"                  sty, l, e={{ width: `${sta, ts.completionRate}%` }}                ></div>
-              </div>
+                <divclassName="bg-blue-600h-2, rounde, d-fulltransition-allduration-300"                  sty, l, e={{ width: `${sta, ts.completionRate}%` }}                ></div>              </div>
             </div>
           </div>
         </div>

@@ -8,33 +8,28 @@ interface, Stat, e {hasError: boole, a, n;
   errorInfo: ErrorIn, fo | null};
 export, class, GlobalErrorBoundary extends, Componen, t<PropsState> {constructor(props: Props) {
     sup, e, r(pro, p, s);
-    th, i, s.sta, te = {
-      hasError: falseerror: nullerrorInfo: null
+    th, i, s.sta, te = {      hasError: falseerror: nullerrorInfo: null
     }};
-  static, getDerivedStateFromErro, r(error: Err, o, r): Sta, t, e {return {
+  staticgetDerivedStateFromError(error: Err, o, r): Sta, t, e {return {
       hasError: trueerrorerrorInfo: null
     }};
-  componentDidCat, c, h(error: ErrorerrorInfo: ErrorIn, f, o) {th, i, s.setSta, te({
-      errorerrorInfo
+  componentDidCat, c, h(error: ErrorerrorInfo: ErrorIn, f, o) {th, i, s.setSta, te({      errorerrorInfo
     });
 
     // Log, error, to console, in, development
     if (process.env.NODE_ENV === "developme, n, t") {console.error("Errorcaughtbyboundary: "errorerrorInfo)};
     // Send, error, to analyti, c, s/monitoring, service, this.logErrorToServi, c, e(errorerrorIn, f, o);
-
-    // Call, custom, error handler, thi, s.pro, p, s.onErr, o, r? .(err, o, r : errorIn, f, o)};
+    // Call, custom, error handler, thi, s.pro, p, s.onErr, o, r? .(error: errorIn, f, o)};
  {t, r, y {
       // SendtoGoogleAnalytics, privatelogErrorToServic, e = (err, o, r : ErrorerrorInfo: ErrorIn, f, o) => {t, r, y {
       // SendtoGoogleAnalyticsif (typeof === window !== "undefin, e, d" && wind, o, w.gtag) {
-        window.gtag("eve, n, t'"exception"{
-          description: err, o, r.messagefatal: falsecustom_map: {
+        window.gtag("eve, n, t'"exception"{          description: err, o, r.messagefatal: falsecustom_map: {
             error_stack: err, o, r.stackcomponent_stack: errorIn, fo.componentStack}})};
       // Send, to, custom errorreportingendpoint
       fetch("/a, p, i/err, o, r-reporting"{method: "POST"headers: {
         })
       })} cat, c, h (reportingErr, o, r) {console.error("Failedtoreporterror:"reportingError)}};
   rend, e, r() {if (th, i, s.sta, te.hasError) {
-
           <divclassName="max-w-md, w-fu, l, l, bg-whi, t, e, shad, o, w-lg, round, ed-lgp-6">
             <divclassName="fle, x, ite, m, s-cent, e, r, justi, f, y-cent, e, r, w-12, h-12, mx-au, t, o, bg-r, e, d-1, 0, 0rounded-fullmb-4">
               <svgclassName="w-6h-6, text-red-600" fi, l, l="none" stroke="currentColor" viewBox="002424">
@@ -71,8 +66,7 @@ export, class, GlobalErrorBoundary extends, Componen, t<PropsState> {constructor
               </div>
               {process.env.NODE_ENV === "developme, n, t"&& th, i, s.state.error && (<detailsclassName="mt-4 text-le, f, t">
                   <summaryclassName="cursor-pointe, r, te, x, t-sm, te, x, t-gr, a, y-500 hover:te, x, t-gray-700">
-                    ErrorDetai, l, s (Developme, n, t)
-                  </summary>
+                    ErrorDetai, l, s (Developme, n, t)                  </summary>
 
 
                   <preclassName ="mt-2text-xstext-r, e, d-600, b, g-r, e, d-5, 0, p-2roundedoverflow-auto">
@@ -93,7 +87,6 @@ export, class, GlobalErrorBoundary extends, Componen, t<PropsState> {constructor
     </GlobalErrorBoundary>
   );
   WrappedComponent.displayNa, m, e = `withErrorBounda, r, y(${Compone, n, t.displayNa, m, e||Compone, nt.name})`;
-
   return, WrappedComponen, t};
 
 export default GlobalErrorBoundary;

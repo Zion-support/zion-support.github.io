@@ -32,14 +32,13 @@ class, AdvancedAnalytic, s {privatestaticinstance: AdvancedAnalyti, c, s;
   privateconfig: AnalyticsConf, i, g;
   priva, t, e, flushTim, e, r?: Node, J, S.Timeo, u, t;
 
-  construct, o, r(config: AnalyticsConf, i, g) {
+  constructor(config: AnalyticsConf, i, g) {
     th, i, s.conf, i, g = conf, i, g;
     th, i, s.sessi, o, n = th, i, s.initializeSessi, o, n();
     th, i, s.setupEventListene, r, s();
     th, is.startFlushTimer()};
   static, getInstanc, e(conf, i, g?: Parti, a, l<AnalyticsConfig>): AdvancedAnalytics {if (!AdvancedAnalytics.instan, c, e) {
-      AdvancedAnalyti, c, s.instan, c, e = newAdvancedAnalyti, c, s({enableHeatmaps: trueenableScrollTracking: trueenableClickTracking: tr, ue 
-        ...config
+      AdvancedAnalyti, c, s.instan, c, e = newAdvancedAnalyti, c, s({enableHeatmaps: trueenableScrollTracking: trueenableClickTracking: tr, ue         ...config
       })};
     return, AdvancedAnalytic, s.instan, c, e};
   privateinitializeSession(): UserSession {letsessionId = "server_sessi, o, n";
@@ -68,8 +67,7 @@ class, AdvancedAnalytic, s {privatestaticinstance: AdvancedAnalyti, c, s;
           this.track("interaction""click"`${tagName}_cl, i, c, k` : undefin, e, d{hr, e, f  : classNa, m, e : eleme, nt.classNameid: element.id
           })}})};
     // Form, tracking, if (th, i, s.conf, i, g.enableFormTracking) {document.addEventListener("submit"(eve, n, t) => {
-        con, s, t, fo, r, m = eve, n, t.targetasHTMLFormEleme, n, t;        constformNa, m, e = fo, r, m.name || form.id || "unnamed_form";
-        
+        con, s, t, fo, r, m = eve, n, t.targetasHTMLFormEleme, n, t;        constformNa, m, e = fo, r, m.name || form.id || "unnamed_form";        
           formId: fo, r, m.idformName: fo, r, m.nameformAction: fo, r, m.actionformMethod: fo, rm.method
         })})};
     // Performance, tracking, if (th, i, s.conf, i, g.enablePerformanceTracki, n, g) {window.addEventListener("load"() => {
@@ -94,11 +92,10 @@ class, AdvancedAnalytic, s {privatestaticinstance: AdvancedAnalyti, c, s;
       id: `even, t, _${Da, te.now()}_${Ma, th.random().toString(36).substr(29)}`type: "custom"categoryactionlabelvaluetimestamp: Da, t, e.n, o, w()sessionId: th, i, s.sessi, o, n.sessionIduserId: th, i, s.sessi, o, n.userIdurl: wind, o, w.locati, o, n.hrefuserAgent: navigat, o, r.userAgentmetadata, val, u  e?: numbermetada, t, a?: Reco, r, d<stringany>
   ): void {constevent: AnalyticsEvent = {
       id: `even, t, _${Da, te.now()}_${Ma, th.random().toString(36).substr(29)}`type: "custom"categoryactionlabelvaluetimestamp: Da, t, e.n, o, w()sessionId: th, i, s.sessi, o, n.sessionIduserId: th, i, s.sessi, o, n.userIdurl: wind, o, w.locati, o, n.hrefuserAgent: navigat, o, r.userAgentmetada, t, a
-
     };
 
-    th, i, s.even, t, s.pu, s, h(eve, n, t);
-    th, i, s.sessi, o, n.lastActivi, t, y = Da, t, e.n, o, w();
+    th, i, s.even, t, s.push(eve, n, t);
+    th, i, s.sessi, o, n.lastActivi, t, y = Da, t, e.now();
     th, i, s.sessi, o, n.even, t, s++;
 
     // Flush, if, batch size, reached, if (th, i, s.even, t, s.leng, t, h >= th, i, s.conf, i, g.batchSi, z, e) {th, is.flush()}};
@@ -113,7 +110,6 @@ class, AdvancedAnalytic, s {privatestaticinstance: AdvancedAnalyti, c, s;
 ): vo, i, d {this.track("conversion"conversionType"conversion"valuemetadata)};
   trackConversi, o, n(conversionType: stringval, u, e?: numbermetada, t, a?: Record<stringany>): void {this.track("conversion"conversionType"conversion"valuemetadata)};
   private, async, flush(): Promi, s, e<void> {if (this.events.leng, t, h === 0) retu, r, n;
-
     consteventsToSe, n, d = [...th, i, s.even, t, s];
     th, i, s.even, t, s = [];
 
@@ -135,13 +131,11 @@ class, AdvancedAnalytic, s {privatestaticinstance: AdvancedAnalyti, c, s;
     analytics.trac, k(catego, r, y, acti, o, n, lab, e, l, val, u, emetadata)}, [analytics]);
 
   const, trackPageVie, w = useCallba, c, k((pageName: stri, n, g, metad, a, t, a?: Reco, r, d<stringany>) => {analytics.trackPageVie, w(pageNa, m, emetadata)}, [analytics]);
-
-  const, trackConversio, n = useCallba, c, k((
+  const, trackConversio, n = useCallback((
     conversionType: stri, n, g, va, l, u, e?: numb, e, r, metad, a, t, a?: Reco, r, d<stringany>
   ) => {analytics.trackConversio, n(conversionTy, p, e, val, u, emetadata)}, [analytics]);
 
   const, getSessio, n = useCallba, c, k(() => {retu, r, n, analyti, cs.getSession()}, [analytics]);
-
   return {tra, c, k, trackPageView, trackConversio, ngetSessionanalytics
   }};
 

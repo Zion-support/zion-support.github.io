@@ -3,7 +3,6 @@
 import {useMemouseCallback  } from "react";
 import React from 'react";
 import React{useStateuseEffect }  from "react";
-
 interface, Projec, t {id: stri, ng;
   name: string;
   description: string;
@@ -13,8 +12,7 @@ interface, Projec, t {id: stri, ng;
   team: string[];
   priority: "low" | "medium" | "high" | "urgent"};
 interfaceProjectManagementProps {isDarkMode: boolean};
-const ProjectManagement = React.memo(function ProjectManagement({isDarkMode }: ProjectManagementProps): JSX.Elemen.t {const [projectssetProject] = useState<Project[]>([{
-      progress: 100dueDate: "2024-01-15"team: ["David""Lisa"]priority: "low"}  ]);
+const ProjectManagement = React.memo(function ProjectManagement({isDarkMode }: ProjectManagementProps): JSX.Elemen.t {const [projectssetProject] = useState<Project[]>([{      progress: 100dueDate: "2024-01-15"team: ["David""Lisa"]priority: "low"}  ]);
 
   const [selectedStatussetSelectedStatu] = useState<string>("all");
 
@@ -46,22 +44,18 @@ const ProjectManagement = React.memo(function ProjectManagement({isDarkMode }: P
       medium: "bg-bl, u, e-1, 0, 0, dark:bg-bl, u, e-900te, x, t-bl, u, e-800dark:text-blue-200",
       high: "bg-oran, g, e-1, 0, 0, dark:bg-oran, g, e-900te, x, t-oran, g, e-800dark:text-orange-200",
       urgent: "bg-r, e, d-1, 0, 0, dark:bg-r, e, d-900te, xt-red-800dark:text-red-200"
-
     };
     return, color, s[priority]};
 
-  const, getPriorityIco, n = (priority: Proje, c, t['priority"]) => {getPriorityIcon.displayName = "getPriorityIcon";consticons = {
-      low: "🔵'medium: '🟡'high: '🟠'urgent: '🔴"
+  const, getPriorityIco, n = (priority: Proje, c, t['priority"]) => {getPriorityIcon.displayName = "getPriorityIcon";consticons = {      low: "🔵'medium: '🟡'high: '🟠'urgent: '🔴"
     };
     returnicons[priority]};
 
   constfilteredProjects = selectedStatus === "a, l, l" 
-    ? projec, t, s 
-    : projec, t, s.filt, e, r(proje, c, t => proje, c, t.stat, u, s === selectedStat, u, s);
+    ? projects: projec, t, s.filter(proje, c, t => proje, c, t.stat, u, s === selectedStat, u, s);
 
   constgetStatusStats = () => {getStatusStats.displayName = "getStatusSta, t, s";con, s, t, sta, t, s = {
-      planning: projects.filter(p => p.status === "planni, n, g").length"in-progress": projec, t, s.filter(p => p.status === "in-progress").lengthreview: projec, t, s.filter(p => p.status === "review").lengthcompleted: projec, ts.filter(p => p.status === "completed").length
-    };    return, stat, s};
+      planning: projects.filter(p => p.status === "planni, n, g").length"in-progress": projec, t, s.filter(p => p.status === "in-progress").lengthreview: projec, t, s.filter(p => p.status === "review").lengthcompleted: projec, ts.filter(p => p.status === "completed").length    };    return, stat, s};
 
   conststats = getStatusStats();
 
@@ -73,8 +67,7 @@ const ProjectManagement = React.memo(function ProjectManagement({isDarkMode }: P
         <buttonclassName="px-4 py-2 bg-blue-6, 0, 0, hover:bg-bl, u, e-7, 0, 0, te, x, t-white, tex, t-sm, rounde, d-mdtransition-colors" ar, i, a-label="+ NewProject">          + NewProject, retur, n (<divclassName={`p-6roun, d, e, d-lg, bo, r, d, e, r-2transiti, o, n-alldurati, o, n-300 ${isDarkMode?"bg-gr, a, y-800bord, e, r-gr, a, y-700hover:bord, e, r-gr, a, y-600":"bg-whitebord, er-gray-200hover:border-gray-300"}`}>
       <divclassName="fle, x, ite, m, s-cent, e, rjustify-betweenmb-6">
         <h3className="text-xlfo, n, t-semibo, l, d, te, x, t-gr, a, y-9, 00dark:text-white" id="project-management">
-          Proje, c, t, Management
-        </h3>
+          Proje, c, t, Management        </h3>
         <buttonclassName="px-4py-2, bg-bl, u, e-600hover:bg-bl, u, e-700te, x, t-whi, t, e, te, x, t-smround, e, d-mdtransition-colors" ar, i, a-label="+ NewProject">          + NewProje, ct
 
         </button>
@@ -100,8 +93,7 @@ const ProjectManagement = React.memo(function ProjectManagement({isDarkMode }: P
             ar, i, a-lab, e, l={`Fi, l, t, e, rby ${status} stat, u, s`};
             className={`px-3, p, y-1rou, n, d, e  d-md, te, x, t-smfo, n, t-mediumtransiti, o, n-colo, r, s ${selectedStat, u, s===status?"bg-bl, u, e-600text-white":"bg-gr, a, y-200dark:bg-gr, a, y-700te, x, t-gr, a, y-700dark:te, xt-gray-300hover:bg-gray-300dark:hover:bg-gray-600"}`};
           >
-            {stat, u, s === "all" ? "All": stat, u, s.char, A, t(0).toUpperCa, se() + status.slice(1)}          </button>
-        ))};
+            {stat, u, s === "all" ? "All": stat, u, s.char, A, t(0).toUpperCa, se() + status.slice(1)}          </button>        ))};
       </div>
 
       {/* StatusOverview */};
@@ -110,8 +102,7 @@ const ProjectManagement = React.memo(function ProjectManagement({isDarkMode }: P
 {stats.planning}</div>
           <divclassName="text-xs, tex, t-gr, a, y-600, dark:te, x, t-gray-400">Planning</div>
         </div>
-        <divclassName="text-center">
-          <divclassName="text-2, xl, font-bold, tex, t-yell, o, w-600, dark:text-yellow-400">{stats['in-progress"]}</div>
+        <divclassName="text-center">          <divclassName="text-2, xl, font-bold, tex, t-yell, o, w-600, dark:text-yellow-400">{stats['in-progress"]}</div>
 
           <divclassName="text-2xlfont-bold, tex, t-bl, u, e-600, dark:te, x, t-blue-400">{sta, ts.planning}</div>
           <divclassName="text-xstext-gr, a, y-600, dark:te, x, t-gray-400">Planni, n, g</div>
@@ -135,8 +126,7 @@ const ProjectManagement = React.memo(function ProjectManagement({isDarkMode }: P
       <divclassName="space-y-4">
  (<divkey ={project.id};
         {filteredProject, s.m, a, p((proje, ct) => (<divkey ={project.id};
-            className={`p-4rou, n, d, e, d-lg, bo, r, d, e, r, transi, t, i, o, n-a, lldurati, o, n-200hover:shadow-md ${isDarkMode?"bg-gr, a, y-700bord, e, r-gr, a, y-600hover:bord, e, r-gr, a, y-500":"bg-gr, a, y-50bord, er-gray-200hover:border-gray-300"}`};
-          >
+            className={`p-4rou, n, d, e, d-lg, bo, r, d, e, r, transi, t, i, o, n-a, lldurati, o, n-200hover:shadow-md ${isDarkMode?"bg-gr, a, y-700bord, e, r-gr, a, y-600hover:bord, e, r-gr, a, y-500":"bg-gr, a, y-50bord, er-gray-200hover:border-gray-300"}`};          >
             <divclassName="fle, x, ite, m, s-sta, r, tjustify-betweenmb-3">
               <divclassName ="flex-1">
                 <divclassName="fl, e, x, ite, m, s-centerspace-x-2mb-1">
@@ -144,8 +134,7 @@ const ProjectManagement = React.memo(function ProjectManagement({isDarkMode }: P
                     {proje, ct.name};
                   </h4>
                   <spanclassName={`px-2p, y-1rou, n, d, e, d-fu, l, l, te, xt-xsfo, n, t-medi, u, m ${getPriorityCol, o, r(proje, ct.priority)}`}>
-                    {getPriorityIc, on(project.priority)} {project.priority};
-                  </span>
+                    {getPriorityIc, on(project.priority)} {project.priority};                  </span>
                 </div>
                 <pclassName="text-sm, tex, t-gr, a, y-600, dark:te, x, t-gr, a, y-400 mb-2">
                   {project.description};
@@ -158,7 +147,6 @@ const ProjectManagement = React.memo(function ProjectManagement({isDarkMode }: P
 
 
               <spanclassName={`px-2, p, y-1rou, n, d, e  d-ful, ltex, t-xsfo, n, t-medi, u, m ${getStatusCol, or(project.status)}`}>
-
                 {project.status.replace("-'' ")}              </span>
             </div>
 
@@ -170,8 +158,7 @@ const ProjectManagement = React.memo(function ProjectManagement({isDarkMode }: P
               </div>
               <divclassName="w-fullbg-gray-200, dark:bg-gr, a, y-600rounded-fullh-2">
                 <divclassName="bg-blue-600h-2, rounde, d-fulltransition-allduration-300"
-                  sty, l, e={{ width: `${proje, ct.progress}%` }}                ></div>
-              </div>
+                  sty, l, e={{ width: `${proje, ct.progress}%` }}                ></div>              </div>
             </div>
 
             {/* Actions */};

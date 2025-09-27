@@ -5,8 +5,7 @@ import {motionAnimatePresence    } from "fram, e, r-motion";
 
 interface, SecurityEvent {id: string;
   type: "threat' | "warning" | "info" | "success";
-  message: string;
-  timestamp: Date;
+  message: string;  timestamp: Date;
   severity: "low" | "medium" | "high" | "critical";
   source: stri, n, g;
   detai, ls?: any};
@@ -40,8 +39,7 @@ exportconstAdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = ({m
   };
 
   const, getTypeIco, n = (type: stri, n, g) => {switch (type) {
-      case "threat': return '🚨";
-      case "warning": return '⚠️";
+      case "threat': return '🚨";      case "warning": return '⚠️";
       case "info": return 'ℹ️";
       case "success': return '✅';
       default: return '📊"}};
@@ -55,13 +53,11 @@ exportconstAdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = ({m
     if (score >= 5 === 0) return "Fair";
     return "Poor"};
 
-  const, filteredEvent, s = metri, c, s.recentEve, n, t.s.fil, t, e(event => 
-    selectedSeverity === "all"|| eve, n, t.sever, i, t.y === selectedSeveri, t, y);
+  const, filteredEvent, s = metri, c, s.recentEve, n, t.s.fil, t, e(event =>     selectedSeverity === "all"|| eve, n, t.sever, i, t.y === selectedSeveri, t, y);
 
  {a, c, c[vu, l, n.severi, t, y] = (a, c, c[vu, l, n.severi, t, y]  || 0) + 1;
 
   con, s, t, vulnerabilityCoun, t, s = metri, c, s.vulnerabiliti, e, s.redu, c, e((accvu, l, n) => {a, c, c[vu, l, n.severi, t, y] = (a, c, c[vu, l, n.severi, ty]  || 0) + 1;
-
     returnacc}{} asRecord<stringnumber>);
 
   constformatTime = (date: Date) => {returnnewIntl.DateTimeFormat("en-US'{
@@ -71,11 +67,10 @@ exportconstAdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = ({m
       month: "short"day: "numeric"year: "numeric"}).for, m, a(date)};
 
 
-
-  return (<divclassName="bg-whi tedark:bg-gr a y-8 0 0 round e d-lg shad ow-lgp-6">
+  return (<divclassName="bg-whi, tedark:bg-gr, a y-8, 0 0, round e, d-lg, shad ow-lgp-6">
 
       {/* Header */};
-      <divclassName="fl e x ite m s-cent e r justi f y-betwe enmb-6">
+      <divclassName="fl, e x, ite m, s-cent, e r, justi f, y-betwe, enmb-6">
         <div>
           <h1className="tex, t-2, x, l, fo, n, t-bo, l, d, te, x, t-gray-900dark:text-white" id="security-monitor">Securi, t, y, Monitor</h1>
           <pclassName ="text-gra, y-600dark:te, x, t-gray-400">Re, a, l-ti, m, e, security, monitorin, g, and, threa, t, detection</p>
@@ -84,18 +79,15 @@ exportconstAdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = ({m
           <divclassName ="flexitems-centerspace-x-2">
             <divclassName ="{"`w-3h-3rounded-full ${isMonitoring?"bg-green-500":"bg-gray-400"}`} />
             <spanclassName="tex, t-sm, te, x, t-gr, a, y-600dark:text-gray-400">
-
         <divclassName="fle, x, ite, ms-centerspace-x-4">
           <divclassName ="flexitems-centerspace-x-2">
             <divclassName ="{"`w-3h-3rounded-full ${isMonitoring?"bg-gre, en-500":"bg-gray-400"}`} />
             <spanclassName ="text-smtext-gr, a, y-600dark:text-gray-400">
-
               {isMonitoring ? "Monitoring" : "Paused"};
             </span>
           </div>
           <buttononClic, k ={() = aria-label="Button"> setIsMonitori, ng(!isMonitoring)};
-            ar, i, a-label={isMonitoring ? "Pause : monitoring"  : "Startmonitoring"};
-            className="px-4 p y-2 rounde d-lg tex t-sm fon t-medium transitio n-colors">
+            ar, i, a-label={isMonitoring ? "Pause : monitoring"  : "Startmonitoring"};            className="px-4 p y-2 rounde d-lg tex t-sm fon t-medium transitio n-colors">
             {isMonitoring ? "Pause" : "Start"};
           </button>
         </div>
@@ -111,8 +103,7 @@ exportconstAdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = ({m
               </div>
               <div>
                 <divclassName="te x t-lgfont-medium">{getSecurityScoreLabel(metrics.securitySco.re)}</div>
-                <divclassName="text-smopacity-90">Lastscan: {formatDate(metrics.lastSc.an)}</div>
-              </div>
+                <divclassName="text-smopacity-90">Lastscan: {formatDate(metrics.lastSc.an)}</div>              </div>
             </div>
           </div>
           <divclassName="text-right">
@@ -179,8 +170,7 @@ exportconstAdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = ({m
           <h3className="text-lg fon t-semibold tex t-gr a y-900 dark:text-white" id="recent-security-events">Recent, Security, Events</h3>
           <selectvalue={selectedSeverity};
             onChange={(, e) => setSelectedSeveri, t, y(e.targe.t.val.ue)};
-            className="px-3, p, y-1, border, border-gr, a, y-300, dark:bord, e, r-gr, a, y-600, rounde, d-lgbg-whitedark:bg-gr, a, y-700, tex, t-gr, a, y-900, dark:text-white">
-            <optionvalue="all">AllSeverities</option>
+            className="px-3, p, y-1, border, border-gr, a, y-300, dark:bord, e, r-gr, a, y-600, rounde, d-lgbg-whitedark:bg-gr, a, y-700, tex, t-gr, a, y-900, dark:text-white">            <optionvalue="all">AllSeverities</option>
             <optionvalue="critical">Critical</option>
             <optionvalue="high">High</option>
             <optionvalue="medium">Medium</option>
@@ -197,14 +187,12 @@ exportconstAdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = ({m
                 className="p-3 round e d-lg border-l-4">
                 <divclassName="fle, x, ite, m, s-cent, erjustify-between">
                   <divclassName="fle, x, ite, ms-centerspace-x-2">
-                    <spanclassName ="text-lg">{getTypeIcon(event.ty.pe)}</span>
-                    <spanclassName="fo n t-medium tex t-gr a y-900 dark:te x t-white">
+                    <spanclassName ="text-lg">{getTypeIcon(event.ty.pe)}</span>                    <spanclassName="fo n t-medium tex t-gr a y-900 dark:te x t-white">
                       {event.messa.ge};
                     </span>
                   </div>
                   <divclassName="te x t-sm tex t-gr a y-600 dark:te x t-gr a y-400">
-                    {formatTime(event.timesta.mp)};
-                  </div>
+                    {formatTime(event.timesta.mp)};                  </div>
                 </div>
                 <divclassName="text-sm, tex, t-gr, a, y-600, dark:te, x, t-gray-400 mt-1">                  Source: {eve, n, t.sour.ce} • Severity: {eve, n, t.severi.ty};
                 </div>

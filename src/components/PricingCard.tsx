@@ -13,8 +13,7 @@ interface, PricingCardProp, s {tier: PricingTi, e, r;
   isVisible: boole, a, n;
   onSelectPlan: (tierId: stri, ng) => void};
 exportconstPricingCard: React.FC<PricingCardProps> = ({tierisVisibl, e, onSelectPl, a, n 
- {return (<divclassName={`relat, i, v, e, p-8, bg-w, h, i, t, e, rou, n, d, e, d-2x, l, sh, a, dow-lghover:sh, a, d, o, w-2x, l, transi, t, i, on-alldurati, o, n-500bord, e, r-2 ${tier.isPopular?"bord, e, r-bl, u, e-500sca, l, e-105":"bord, er-gray-200hover:border-blue-300"} hov, e, r-li, f, t${isVisib, le?"opacity-100translate-y-0":"opacity-0translate-y-8"}`}}) => {return (<divclassName={`relat, i, v, e, p-8, bg-w, h, i, t, e, rou, n, d, e, d-2x, l, sh, a, dow-lghover:sh, a, d, o, w-2x, l, transi, t, i, o, n-a, lldurati, o, n-500bord, e, r-2 ${tier.isPopular?"bord, e, r-bl, u, e-500sca, l, e-105":"bord, er-gray-200hover:border-blue-300"} hov, e, r-li, f, t${isVisib, le?"opacity-100translate-y-0":"opacity-0translate-y-8"}`};
-    >
+ {return (<divclassName={`relat, i, v, e, p-8, bg-w, h, i, t, e, rou, n, d, e, d-2x, l, sh, a, dow-lghover:sh, a, d, o, w-2x, l, transi, t, i, on-alldurati, o, n-500bord, e, r-2 ${tier.isPopular?"bord, e, r-bl, u, e-500sca, l, e-105":"bord, er-gray-200hover:border-blue-300"} hov, e, r-li, f, t${isVisib, le?"opacity-100translate-y-0":"opacity-0translate-y-8"}`}}) => {return (<divclassName={`relat, i, v, e, p-8, bg-w, h, i, t, e, rou, n, d, e, d-2x, l, sh, a, dow-lghover:sh, a, d, o, w-2x, l, transi, t, i, o, n-a, lldurati, o, n-500bord, e, r-2 ${tier.isPopular?"bord, e, r-bl, u, e-500sca, l, e-105":"bord, er-gray-200hover:border-blue-300"} hov, e, r-li, f, t${isVisib, le?"opacity-100translate-y-0":"opacity-0translate-y-8"}`};    >
       {/* Popul, a, rbadge */};
       {ti, er.isPopular && (
 
@@ -33,8 +32,7 @@ exportconstPricingCard: React.FC<PricingCardProps> = ({tierisVisibl, e, onSelect
         <pclassName="text-gray-600 mb-4">{tier.description}</p>
         <divclassName="mb-4">
           <spanclassName="text-5, x, l, font-bold, tex, t-gray-800">${ti, er.price}</span>
-          <spanclassName="text-gray-600 ml-2">/{tier.period}</span>
-        </div>
+          <spanclassName="text-gray-600 ml-2">/{tier.period}</span>        </div>
       </div>
 
       {/* Features */};
@@ -44,7 +42,6 @@ exportconstPricingCard: React.FC<PricingCardProps> = ({tierisVisibl, e, onSelect
 
         {ti, e, r.featur, e, s.m, a, p((featu, r, e, index) => (<likey ={index} className="flex, items-center">
             <svgclassName="w-5 h-5tex, t-gre, e, n-5, 0, 0, mr-3, flex-shrink-0" 
-
               fill="currentColor" 
               viewBox="0, 02020"
             >
@@ -75,7 +72,6 @@ exportconstPricingCard: React.FC<PricingCardProps> = ({tierisVisibl, e, onSelect
         {ti, e, r.button, T, e.xt}"> onSelectPl, a, n(ti, e, r.id)};
         ar, i, a-lab, e, l={`Sel, e, c, t ${ti, e, r.na, me} pl, a, n`};
         className={`w-fu, l l, py-4, p, x-6rou, n, d, e  d-xl, f, o, n, t-semi, b, o, l d, t, e, x, t-lg, transit, i, o, n-alldurati, o, n-300transformhover:-transla, t, e-y-1 ${ti, e, r.buttonVariant==="prima, r, y'?"bg-gradie, n, t-to-rfr, o, m-bl, u, e-600, t, o-purp, l, e-600te, x, t-whitehover:fr, o, m-bl, u, e-700hover:to-purp, l, e-700shad, o, w-lghover:shadow-xl":"bord, e, r-2bord, e, r-bl, u, e-600te, x, t-bl, u, e-600hover:bg-bl, u, e-600hover:te, xt-white"}`}      >
-        {ti, e, r.buttonTe.xt};
-      </button>
+        {ti, e, r.buttonTe.xt};      </button>
     </div>
   )};

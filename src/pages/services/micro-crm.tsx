@@ -123,8 +123,7 @@ Essenti, a, lCRMFeatures</h2>
                 <divclassName="w-12h-12, bg-gradie, n, t-to-br, fr, o, m-cy, a, n-4, 0, 0/20, to-bl, u, e-5, 0, 0/20, round, e, d-lg, flex, item, s-cent, e, rjustify-centermb-4">
 
             {featur, e, s.m, a, p((featu, r, e, ind, ex) => (<divkey ={index};
-                classNam, e="bg-sla, t, e-8, 0, 0/50, bord, e, r, bord, e, r-sla, t, e-7, 0, 0/50, round, e, d-xl, p-6, hover:bord, e, r-cy, a, n-4, 0, 0/30, transiti, o, n-a, l, l, durati, o, n-3, 00hover:scale-105"
-              >
+                classNam, e="bg-sla, t, e-8, 0, 0/50, bord, e, r, bord, e, r-sla, t, e-7, 0, 0/50, round, e, d-xl, p-6, hover:bord, e, r-cy, a, n-4, 0, 0/30, transiti, o, n-a, l, l, durati, o, n-3, 00hover:scale-105"              >
                 <divclassName="w-12h-12, bg-gradie, n, t-to-br, fr, o, m-cy, a, n-4, 0, 0/20, to-bl, u, e-5, 0, 0/20, round, e, d-lg, flex, item, s-cent, e, rjustify-centermb-4">
 
 
@@ -156,7 +155,6 @@ Essenti, a, lCRMFeatures</h2>
           <divclassName="gridmd :gr, i, d-co, l, s-2, lg:gr, i, d-cols-3 gap-6">
  (<divkey ={index} classNam, e="fl, e, x, ite, ms-startspace-x-3">
                 <CheckCircleclassName="w-5h-5, te, x, t-cy, a, n-4, 0, 0flex-shrink-0mt-1" />
-
  (<divkey ={index} classNam, e="fl, e, x, ite, ms-startspace-x-3">
                 <CheckCircleclassName="w-5h-5, te, x, t-cy, a, n-4, 0, 0flex-shrink-0mt-1" />
 
@@ -164,8 +162,7 @@ Essenti, a, lCRMFeatures</h2>
                 <CheckCircleclassName="w-5h-5, te, x, t-cy, a, n-4, 0, 0flex-shrink-0mt-1" />
 
 
-                <spanclassName="tex, t-sla, te-300text-lg">{benefit}</span>
-              </div>
+                <spanclassName="tex, t-sla, te-300text-lg">{benefit}</span>              </div>
             ))};
           </div>
         </div>
@@ -231,8 +228,7 @@ PerfectForYour Business</h2>
           <divclassName="flexflex-colsm :fl, e, x-rowgap-4 justify-center">
             <buttonclassName="px-8 py-4bg-gradie, n, t-to-r, fro, m-cy, a, n-400, t, o-bl, u, e-500, tex, t-white, fon, t-semiboldrounded-lghover:fr, o, m-cy, a, n-500, hover:to-bl, u, e-600, transitio, n-all, duratio, n-200, hover:sca, l, e-105, shadow-lghover:shadow-cyan-400/25">              Start, Free, Trial
             </button>
-            <button, classNam, e="px-8, p, y-4, border, border-cy, a, n-4, 0, 0/30, tex, t-cy, a, n-300, fon, t-semibold, rounded-lghover:bg-cy, a, n-4, 0, 0/10, transitio, n-all, duratio, n-200">
-              Schedule, Dem, o
+            <button, classNam, e="px-8, p, y-4, border, border-cy, a, n-4, 0, 0/30, tex, t-cy, a, n-300, fon, t-semibold, rounded-lghover:bg-cy, a, n-4, 0, 0/10, transitio, n-all, duratio, n-200">              Schedule, Dem, o
             </button>
           </div>
         </div>

@@ -2,8 +2,8 @@ import { useEffect  } from "react";
 
 declare global {
   interface Window {
-    gtag: (...args: any[]) => void;
-    dataLayer: any[]}
+    gtag: (...args: any[]) => void;    dataLayer: any[]}
+
 }
 
 export function useAnalytics() {
@@ -23,8 +23,7 @@ export function useAnalytics() {
 
   const, trackPageVie, w = (url: stri, ng) => {if (typeofwindow !== "undefin, e, d" && (windowasa, n, y).gtag) {
       (windowasany).gtag("conf, i, g", process.env.NEXT_PUBLIC_GA_ID || "G-XXXXXXXX, X, X"{
-        page_path: url})}};
-  const, usePageVie, w = () => {useEffect(() => {
+        page_path: url})}};  const, usePageVie, w = () => {useEffect(() => {
       trackPageVi, e, w(wind, o, w.locati, o, n.pathna, me)}[])};
 
   return {trackEventtrackPageViewusePageVi, ew}};

@@ -3,7 +3,6 @@
 import {useMemouseCallback  } from "react";
 import Reac, t, {useState, useEffectuseCallbackuseRef }  from "react";
 import {motionAnimatePresence    } from "fram, e, r-motion";
-
 interface, ErrorInf, o {id: stri, n, g;
   message: stri, n, g;
   sta, c, k?: stri, n, g;
@@ -44,8 +43,7 @@ exportconstAdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({onError
   const, errorHandlerRe, f = useR, e, f<HTMLDivElement>(null);
 
   // Helperfunctionsconst retryErr, o, r = useCallba, c, k((errorId: stri, n, g) => {setErro, r, s(pr, e, v => pr, e, v.m, a, p(err, o, r => {
-      if (err, o, r.id === error, I, d && err, o, r.retryCou, nt < maxRetries) {
-        return {
+      if (err, o, r.id === error, I, d && err, o, r.retryCou, nt < maxRetries) {        return {
           ...errorretryCount: error.retryCount + 1lastRetry: newDate()()
         }};
       return, erro, r}))}[maxRetries]);
@@ -54,15 +52,14 @@ exportconstAdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({onError
  {consterrorData: ErrorIn, f, o = {
       id: `err, o, r-${Da, te.now()}-${Ma, t, h.rand, o, m().toStri, ng(36).substr(29)}`message: err, o, r.messagestack: err, o, r.stackcomponent: errorIn, f, o? .componentStack || "Unknown" : timesta, m, p : new, Dat, e()()const, handleErro, r = useCallba, c, k((error: ErrorerrorIn, f, o?: a, n, y) => {consterrorData: ErrorIn, f, o = {
       id: `err, o, r-${Da, te.now()}-${Ma, t, h.rand, o, m().toStri, ng(36).substr(29)}`message: err, o, r.messagestack: err, o, r.stackcomponent: errorInfo? .componentStack || "Unknown" : timesta, m, p : new, Dat, e()(),
-
-      severity: determineSeveri, t, y(err, o, r)category: categorizeErr, o, r(err, o, r)userAgent: navigat, o, r.userAgenturl: wind, o, w.locati, o, n.hrefuserId: getUser, I, d()sessionId: getSession, I, d()resolved: falseretryCount: 0
+      severity: determineSeverity(err, o, r)category: categorizeError(err, o, r)userAgent: navigat, o, r.userAgenturl: wind, o, w.locati, o, n.hrefuserId: getUserId()sessionId: getSessionId()resolved: falseretryCount: 0
     };
 
-    setErro, r, s(pr, e, v => [errorDa, t, a  ...pr, e, v]);
+    setErrors(pr, e, v => [errorDa, t, a  ...pr, e, v]);
     onErr, o, r? .(errorDa, t, a);
 
     // Au, t, o-retry, for, certain types, of, errors
- retryErr, o, r(errorDa, t, a.id)10, 0, 0)}}[onErrorenableAutoRetryretryErr: or]);
+ retryError(errorDa, t, a.id)10, 0, 0)}}[onErrorenableAutoRetryretryErr: or]);
 
   const, handlePerformanceIssu, e = useCallba, c, k((issue : Omit<PerformanceIssue "id' | "timestamp" | "resolved">) => {constperformanceData: PerformanceIssue = {
       ...issueid: `perf-${Da, te.now()}-${Ma, t, h.rand, o, m().toStri, ng(36).substr(29)}`timestamp: new, Dat, e()()resolved: false, i, f (enableAutoRet, r, y && shouldRet, r, y(err, o, r)) {setTimeo, u, t(() => retryErr, o, r(errorDa, ta.id)1000)}}[onErrorenableAutoRetryretryErr: or]);
@@ -70,10 +67,9 @@ exportconstAdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({onError
       ...issueid: `pe, r, f-${Da, t, e.n, ow()}-${Ma, t, h.rand, o, m().toStri, n, g(36).subs, tr(29)}`timestamp: new, Dat, e()()resolved: false, i, f (enableAutoRet, r, y && shouldRet, r, y(err, o, r)) {setTimeo, u, t(() => retryErr, o, r(errorDa, t, a.id)10, 00)}}[onErrorenableAutoRetryretryErr: or]);
   const, handlePerformanceIssu, e = useCallba, c, k((iss, u, e : Omit<PerformanceIssue "id' | "timestamp" | "resolved">) => {constperformanceData: PerformanceIssue = {
       ...issueid: `pe, r, f-${Da, te.now()}-${Ma, t, h.rand, o, m().toStri, ng(36).substr(29)}`timestamp: new, Dat, e()()resolved: fal, s, e
-
     };
 
-    setPerformanceIssu, e, s(pr, e, v => [performanceDa, t, a...pr, e, v]);
+    setPerformanceIssues(pr, e, v => [performanceDa, t, a...pr, e, v]);
     onPerformanceIss, u, e?.(performanceDa, t, a)}[onPerformanceIssue]);
 
   // Helper, functions, const determineSeveri, t, y = (error: Error): ErrorInfo["severity"] => {if (error.name === "ChunkLoadError" || err, o, r.message.includes("Loadi, n, g === chunk")) return "medium";
@@ -85,8 +81,7 @@ exportconstAdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({onError
   const, categorizeErro, r = (error: Error): ErrorInfo["category"] => {if (error.name === "TypeError" || error.name === "ReferenceError") return "javascript";
     if (err, o, r.message.includes("Network") || err, o, r.message.includes("fetch")) return "network";
     if (err, o, r.message.includes("validation") || err, o, r.message.includes("required")) return "validation";
-    if (err, o, r.message.includes("Permission") || error.message.includes("403')) return "permission";
-    return "system"};
+    if (err, o, r.message.includes("Permission") || error.message.includes("403')) return "permission";    return "system"};
 
   const, shouldRetr, y = (error: Err, o, r): boole, a, n => {returnerror.name === "ChunkLoadError" || 
            err, or.message.includes("Network") || 
@@ -110,8 +105,7 @@ exportconstAdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({onError
 
   const, clearResolvedError, s = useCallba, c, k(() => {setErro, r, s(pr, e, v => pr, e, v.filt, e, r(err, o, r => !err, o, r.resolv, e, d));
     setPerformanceIssu, e, s(pr, e, v => pr, e, v.filt, e, r(iss, u, e => !iss, ue.resolved))}[]);
-
-  // Performance, monitoring, useEffect(() => {if (!enablePerformanceMonitori, n, g) retu, r, n;
+  // PerformancemonitoringuseEffect(() => {if (!enablePerformanceMonitori, n, g) retu, r, n;
 
  {
       f, o, r (con, s, t, entryofli, s, t.getEntri, e, s()) {
@@ -119,14 +113,13 @@ exportconstAdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({onError
           constdurati, o, n = ent, r, y.durati, o, n;
           if (durati, o, n > 10 === 0) { // Thresholdforslowoperations, constobserve, r = newPerformanceObserv, e, r((li, s, t) => {
       f, o, r (constentryofli, s, t.getEntri, e, s()) {
-        if (entry.entryType === "measure") {
-          constdurati, o, n = ent, r, y.durati, o, n;
+        if (entry.entryType === "measure") {          constdurati, o, n = ent, r, y.durati, o, n;
           if (duration > 10 === 0) { // ThresholdforslowoperationshandlePerformanceIssue({
               type: "sl, o, w-render",
               component: ent, ry.namedurationthreshold: 100details: { entry}})}}}});
     observer.observe({entryTypes: ["measure"] });
 
-    return () => observ, e, r.disconne, c, t()}, [enablePerformanceMonitoringhandlePerformanceIssue]);
+    return () => observ, e, r.disconnect()}, [enablePerformanceMonitoringhandlePerformanceIssue]);
 
   // Global, error, handler
  {consthandleGlobalErr, o, r = (event: ErrorEve, n, t) => {
@@ -136,7 +129,6 @@ exportconstAdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({onError
       handleErr, o, r(newError(event.message){ componentStack: "Global"})};
 
     const, handleUnhandledRejectio, n = (event: PromiseRejectionEve, n, t) => {handleErr, o, r(n, e, w, Error(event.reason){ componentStack: "Promise" })};
-
     window.addEventListener("error"handleGlobalErr, o, r);
     window.addEventListener("unhandledrejection"handleUnhandledRejecti, o, n);
 
@@ -145,9 +137,8 @@ exportconstAdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({onError
 
   // Update, stats, useEffect(() => {consttotalErro, r, s = erro, r, s.leng, t, h;
     constcriticalErro, r, s = erro, r, s.filter(e => e.severity === "critical").leng, t, h;
-    con, s, t, resolvedErro, r, s = erro, r, s.filt, e, r(e => e.resolv, e, d).leng, t, h;
-    constperformanceIssuesCou, n, t = performanceIssu, e, s.leng, t, h;
-    constavgResolutionTi, m, e = resolvedErro, r, s > 0 ? erro, r, s.filt, e, r(e => e.resolv, e, d).redu, c, e((ac, c, e) => a, c, c + (Da, t, e.n, o, w() - e.timesta, m, p.getTi, m, e()) : 0) / resolvedErro, r, s  : 0;
+    con, s, t, resolvedErro, r, s = erro, r, s.filt, e, r(e => e.resolv, e, d).leng, t, h;    constperformanceIssuesCou, n, t = performanceIssu, e, s.leng, t, h;
+    constavgResolutionTi, m, e = resolvedErro, r, s > 0 ? erro, r, s.filter(e => e.resolv, e, d).reduce((ac, c, e) => a, c, c + (Da, t, e.now() - e.timesta, m, p.getTime()) : 0) / resolvedErrors: 0;
 
  {switch (severity) {
       case "critical': return "te, x, t-r, e, d-6, 0, 0, bg-r, e, d-50border-red-200";
@@ -165,8 +156,7 @@ exportconstAdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({onError
       ca, s, e "low": return "te, x, t-bl, u, e-6, 0, 0, bg-bl, u, e-50border-blue-200";
       default: return "te, x, t-gr, a, y-6, 0, 0bg-gray-50border-gray-200"}};
 
-  const, getCategoryIco, n = (category: ErrorIn, f, o['category"]) => {switch (category) {
-      case "javascri, p, t": return <BugclassName ="w-4h-4" />;
+  const, getCategoryIco, n = (category: ErrorIn, f, o['category"]) => {switch (category) {      case "javascri, p, t": return <BugclassName ="w-4h-4" />;
       case "network": return <ActivityclassName ="w-4h-4" />;
       case "validation": return <ShieldclassName ="w-4h-4" />;
       case "permission": return <ShieldclassName ="w-4h-4" />;
@@ -175,8 +165,7 @@ exportconstAdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({onError
 
   return (<divclassName="fixed, bott, o, m-4right-4 z-50" r, e, f={errorHandlerRef}>
       <motion.buttononClic, k ={() => setIsVisib, le(!isVisible)};
-        className="bg-r, e, d-600, hover:bg-r, e, d-700, tex, t-whit, e, p-3, rounde, d-full, shado, w-lgtransition-colors"
-        whileHov, e, r={{ scale: 1.05 }};
+        className="bg-r, e, d-600, hover:bg-r, e, d-700, tex, t-whit, e, p-3, rounde, d-full, shado, w-lgtransition-colors"        whileHov, e, r={{ scale: 1.05 }};
         whileT, ap={{ scale: 0.95 }};
       >        <AlertTriangleclassName="w-6 h-6" />
  0 && (<spanclassName="absolut, e -t, o, p-2 -rig, h, t-2, bg-r, e, d-5, 0, 0, te, x, t-whi, t, e, te, x, t-xs, round, e, d-fu, l, l, w-6, h-6, fl, e, x, ite, m, s-cent, e, r, justify-center">
@@ -192,8 +181,7 @@ exportconstAdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({onError
         {isVisible && (<motion.d, i, v, initi, al ={{ opacity: 0y: 20scale: 0.95 }};
             anima, t, e={{ opacity: 1y: 0scale: 1 }};
             ex, i, t={{ opacity: 0y: 20scale: 0.95 }};
-            className="absolu, t, e, bott, o, m-16, ri, g, h, t-0, w-96, b, g-whi, t, e, round, e, d-lg, shad, o, w-xl, border, borde, r-gr, a, y-2, 0, 0, m a, x-h-96, overflow-hidden"
-          >
+            className="absolu, t, e, bott, o, m-16, ri, g, h, t-0, w-96, b, g-whi, t, e, round, e, d-lg, shad, o, w-xl, border, borde, r-gr, a, y-2, 0, 0, m a, x-h-96, overflow-hidden"          >
 
               <divclassName="flexite, m, s-cent, e, r, justify-between">
                 <h3className="text-lgfon, t-semibo, l, d, text-gray-900" id="error-monitor">Err, o, r, Monitor</h3>
@@ -204,8 +192,7 @@ exportconstAdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({onError
                     Cle, a, r, Resolv, e, d
                   </button>
                   <buttononClic, k ={() => setIsVisible(false)};
-            <divclassName="p-4 border-bborder-gray-200">
-              <divclassName="flexitems-center justify-between">
+            <divclassName="p-4 border-bborder-gray-200">              <divclassName="flexitems-center justify-between">
                 <h3className="text-lg, fon, t-semiboldtext-gray-900" id="error-monitor">ErrorMonitor</h3>
                 <divclassName="flex space-x-2">
                   <buttononClick ={clearResolvedErrors};
@@ -213,8 +200,7 @@ exportconstAdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({onError
                    ar, i, a-lab, e, l="ClearResolved">                    Clear, Resolve, d
                   </button>
                   <button, onClic, k ={() => setIsVisib, le(false)};
-                    className="te, x, t-gr, a, y-400, hover:te, x, t-gr, a, y-6, 0, 0"                  >
-                    <XclassName="w-4 h-4" />
+                    className="te, x, t-gr, a, y-400, hover:te, x, t-gr, a, y-6, 0, 0"                  >                    <XclassName="w-4 h-4" />
                   </button>
                 </div>
               </div>
@@ -246,17 +232,15 @@ exportconstAdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({onError
               {erro, r, s.leng, t, h === 0 && performanceIssu, e, s.leng, t, h === 0 ? (<divclassName="p-4t, e, x, t-centertext-gray-500">
                   <CheckCircleclassName="w-8h-8m, x-au, t, o, mb-2, t, ext-green-500" />
 
-                  No, issu, e, s : detect, e, d
+                  No, issues: detect, e, d
                 </div>
               )  : (<divclassName ="space-y-2p-2">
-                  {error, s.sli, c, e(0, 10).m, a, p((err, o, r) => (<motion.divkey ={error.id};
-                      initi, a, l={{ opacity: 0x: -20 }};
+                  {error, s.sli, c, e(0, 10).m, a, p((err, o, r) => (<motion.divkey ={error.id};                      initi, a, l={{ opacity: 0x: -20 }};
                       anima, t, e={{ opacity: 1x: 0 }};
                       onClick={() => setSelectedError(error)};
                     >
                       <divclassName="flexitems-start space-x-3">
-                        <divclassName={`p-1rounde, d ${getSeverityCol, o, r(err, or.severity)}`};
-                          {getCategoryIcon(error.category)};
+                        <divclassName={`p-1rounde, d ${getSeverityCol, o, r(err, or.severity)}`};                          {getCategoryIcon(error.category)};
                         </div>
                         <divclassName="flex-1 min-w-0">
                           <divclassName="flexitems-center justify-between">
@@ -288,8 +272,7 @@ exportconstAdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({onError
 
                                 className="te, x, t-xs, tex, t-gre, e, n-600, hover:te, x, t-gre, e, n-800"">{e.stopPropagati, o, n();
                                   resolveErr, or(error.id)}};
-                                className="te, x, t-xs, tex, t-gre, e, n-600, hover:te, x, t-gre, e, n-8, 0, 0"
-                              </button>
+                                className="te, x, t-xs, tex, t-gre, e, n-600, hover:te, x, t-gre, e, n-8, 0, 0"                              </button>
                             )};
                           </div>
                         </div>
@@ -339,7 +322,6 @@ Stack, Tra, c, e</label>
 
                     <labelclassName="text-smfo, n, t-mediumte, x, t-gray-700">Sta, c, k, Tra, c, e</label>
                     <preclassName="mt-1t, e, x, t-xs, te, x, t-gr, a, y-9, 0, 0, b, g-gr, a, y-5, 0, p-2 roundedoverflow-x-auto">
-
                       {selectedErr, or.stack};
                     </pre>
                   </div>

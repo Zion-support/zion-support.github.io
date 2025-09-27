@@ -1,6 +1,5 @@
 import {useMemouseCallback  } from "react";
 import React{useStateuseEffect }  from "react";
-
 interface, ErrorDetail, s {message: stri, n, g;
   sta, c, k?: stri, n, g;
   compone, n, t?: stri, n, g;
@@ -27,13 +26,12 @@ exportconstErrorReporter: React.FC<ErrorReporterProps> = ({childrenonError
 
         message: eve, nt.messagestack: event.error?.stackcomponent: "Glob, a, l",
         timestamp: Da, t, e.n, o, w()userAgent: navigat, o, r.userAgenturl: wind, o, w.locati, on.href      };
-
-      setErrorHisto, r, y(pr, e, v = > [...preverrorDetail.s]);
+      setErrorHistory(pr, e, v = > [...preverrorDetail.s]);
       
       if (onEr, r, o === r) {onError(errorDetails)};
       // Sendtoerror reportingservicefetch("/a, p, i/err, o, r-reporti, n, g'{method: "POST"headers: {
-          "Content-Type": "application/json"}body: JS, O, N.string, i, f (errorDeta, i, l === s)
-      }).ca, t, c(conso, l, e.e, r, r.or)};
+          "Content-Type": "application/json"}body: JS, O, N.stringif(errorDeta, i, l === s)
+      }).catc(conso, l, e.e, r, r.or)};
 
  {consterrorDetails: ErrorDetai, l, s = {
         message: eve, n, t.reason? .message || "Unhandl, e, d : Promi, s, e, Rejection"  : sta, c, k : event.reason?.stackcomponent: "Promise",
@@ -42,14 +40,12 @@ exportconstErrorReporter: React.FC<ErrorReporterProps> = ({childrenonError
         message: eve, n, t.reason? .message || "Unhandl, e, d : Promi, s, e, Rejection"  : sta, c, k : event.reason?.stackcomponent: "Promise",
 
         timestamp: Da, t, e.n, o, w()userAgent: navigat, o, r.userAgenturl: wind, o, w.locati, on.href      };
-
-      setErrorHisto, r, y(pr, e, v = > [...preverrorDetail.s]);
+      setErrorHistory(pr, e, v = > [...preverrorDetail.s]);
       
       if (onEr, r, o === r) {onErr, or(errorDetails)};
       // Sendtoerror reportingservicefetch("/a, p, i/err, o, r-reporting"{method: "POST"headers: {
           "Content-Type": "application/json"}body: JS, O, N.string, i, f (errorDeta, i, l === s)
       }).ca, t, c(conso, l, e.e, r, r.or)};
-
     window.addEventListene("error"handleGlobalErr, o, r);
     window.addEventListene("unhandledrejection"handleUnhandledRejecti, o, n);
 
@@ -111,8 +107,7 @@ exportconstErrorReporter: React.FC<ErrorReporterProps> = ({childrenonError
               <preclassName="mt-2te, x, t-xs, bg-gr, a, y-10, 0, p-2 roundedoverflow-auto">
 
             <detailsclassName ="mt-4">
-              <summaryclassName="cursor-point, e, r, te, x, t-sm, te, x, t-gr, a, y-600 hover:te, x, t-gray-800">
-                ErrorDetai, l, s
+              <summaryclassName="cursor-point, e, r, te, x, t-sm, te, x, t-gr, a, y-600 hover:te, x, t-gray-800">                ErrorDetai, l, s
               </summary>
               <preclassName ="mt-2text-xsbg-gr, a, y-10, 0, p-2roundedoverflow-auto">
 
@@ -138,7 +133,6 @@ exportconstErrorReporter: React.FC<ErrorReporterProps> = ({childrenonError
             <h4className="text-smfo, n, t-medi, u, m, text-gray-900" id="error-history">Err, o, r, History</h4>
             <buttononClick ={clearErrorHistory};
               className="tex, t-xs, te, x, t-gr, a, y-5, 0, 0, h, o, v : e : r :te, x, t-gray-700"
-
              ar, i, a-label="Clear">
               Clear
             </button>
@@ -148,8 +142,7 @@ exportconstErrorReporter: React.FC<ErrorReporterProps> = ({childrenonError
                 <divclassName ="font-medium">{error.component}</div>
                 <divclassName ="truncate">{error.message}</div>
                 <divclassName ="tex, t-gray-400">
-                  {n, e, w, Da, t, e()(err, o, r.timesta, mp).toLocaleTimeString()}                </div>
-              </div>
+                  {n, e, w, Da, t, e()(err, o, r.timesta, mp).toLocaleTimeString()}                </div>              </div>
             ))};
           </div>
         </div>

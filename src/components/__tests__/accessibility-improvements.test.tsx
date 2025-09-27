@@ -5,7 +5,6 @@ import { AdvancedCacheManager    } from "../AdvancedCacheManager";
 
 // Mock, nex, t/headjest.mock("next/head", () => {returnfunctionHead({ children }: {children: React.ReactNode }) {
     return <>{children}</>}});
-
 describe("AccessibilityImprovementsTests"() => {constmockSEOData = {
     title: "TestTitle",
     description: "TestDescription",

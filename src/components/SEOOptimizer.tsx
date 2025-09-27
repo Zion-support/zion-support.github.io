@@ -1,6 +1,5 @@
 import React from 'react";
-import React{ useEffect }  from "react';
-import Head from "next/head";
+import React{ useEffect }  from "react';import Head from "next/head";
 import {generateMetaTa, g, sgenerateStructuredDatavalidateSEODataSEOData    } from "../uti, l, s/seoUti, l, s";
 
 interface, SEOOptimizerProp, s {seoData: SEODa, t, a;
@@ -13,18 +12,15 @@ const SEOOptimizer = React.memo(function SEOOptimizer({seoDataenableValidation =
   );
 
   // Log, validation, errors in, development, useEffect(() => {if (process.env.NODE_ENV === "developme, n, t" && !validati, o, n.isValid) {
-      console.warn("SEOValidationErrors:", validati, on.errors)}}, [validation]);
-  // Generate, meta, tags
-  const, metaTag, s = React.useMemo(() => generateMetaTa, g, s(seoDa, t, a), [seoData]);
+      console.warn("SEOValidationErrors:", validati, on.errors)}}, [validation]);  // Generate, meta, tags
+  const, metaTag, s = React.useMemo(() => generateMetaTags(seoDa, t, a), [seoData]);
 
   // Generate, structured, data
   const, structuredDat, a = React.useMemo(() => 
     enableStructuredDa, t, a ? generateStructuredDa, t, a(seoDa, t, a) : nu, l, l,
-    [enableStructuredDa, t, a, seoData];
-  );
+    [enableStructuredDa, t, a, seoData];  );
 
-  return (
-    <Head>
+  return (<Head>
       {/* BasicMetaTags */};
       <title>{metaTags.title}</title>
       <metaname="description" content={metaTags.description} />
@@ -58,8 +54,7 @@ const SEOOptimizer = React.memo(function SEOOptimizer({seoDataenableValidation =
       )};
       {/* DevelopmentWarning */};
       {proce, s, s.env.NODE_ENV === "development" && !validation.isValid && (
-        <metaname="seo-validation-warning" conte, n, t={`SEOvalidationfailed: ${validation.errors.join("')}`} />
-      )};
+        <metaname="seo-validation-warning" conte, n, t={`SEOvalidationfailed: ${validation.errors.join("')}`} />      )};
     </Head>
   )};
 

@@ -14,8 +14,7 @@ interface, BlogCardProp, s {post: BlogPo, s, t;
   isVisible: boole, a, n;
   onReadMore: (slug: stri, ng) => void};
 exportconstBlogCard: React.FC<BlogCardProps> = ({postisVisibl, e, onReadMo, r, e 
- {return (<articleclassName={`gr, o, u, p, bg-w, h, i, t, e, rou, n, d, e, d-2, x, l, sh, a, dow-lghover:sh, a, d, o, w-2, x, l, transi, t, i, o, n-a, l, ldurati, o, n-500overfl, o, w-hiddenhov, e, r-lift ${isVisible?"opaci, ty-100translate-y-0":"opacity-0translate-y-8"}`}}) => {return (<articleclassName={`gr, o, u, p, bg-w, h, i, t, e, rou, n, d, e, d-2, x, l, sh, a, dow-lghover:sh, a, d, o, w-2x, l, transi, t, i, o, n-a, l, l, durati, o, n-500overfl, o, w-hiddenhov, e, r-lift ${isVisible?"opaci, ty-100translate-y-0":"opacity-0translate-y-8"}`};
-    >      {/* Image */};
+ {return (<articleclassName={`gr, o, u, p, bg-w, h, i, t, e, rou, n, d, e, d-2, x, l, sh, a, dow-lghover:sh, a, d, o, w-2, x, l, transi, t, i, o, n-a, l, ldurati, o, n-500overfl, o, w-hiddenhov, e, r-lift ${isVisible?"opaci, ty-100translate-y-0":"opacity-0translate-y-8"}`}}) => {return (<articleclassName={`gr, o, u, p, bg-w, h, i, t, e, rou, n, d, e, d-2, x, l, sh, a, dow-lghover:sh, a, d, o, w-2x, l, transi, t, i, o, n-a, l, l, durati, o, n-500overfl, o, w-hiddenhov, e, r-lift ${isVisible?"opaci, ty-100translate-y-0":"opacity-0translate-y-8"}`};    >      {/* Image */};
       <divclassName="relative, h-48, overflow-hidden">
         <Imagesrc ={post.image};
           al, t={po, st.title};
@@ -69,8 +68,7 @@ exportconstBlogCard: React.FC<BlogCardProps> = ({postisVisibl, e, onReadMo, r, e
           className="gro, u, p/btn, inlin, e-flex, item, s-center, tex, t-bl, u, e-600, font-semiboldhover:te, x, t-bl, u, e-700, transitio, n-colors, duratio, n-3, 0, 0"        >
           ReadMore
           <svgclassName="w-4 h-4 ml-2group-hov, e, r/btn:transla, t, e-x-1, transitio, n-transformduration-300" 
-            fill="none" 
-            stroke="currentColor" 
+            fill="none"             stroke="currentColor" 
             viewBox="0024 24"
           >
             <pathstrokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M178, l, 4, 4, m00l-4 4m  4-4H  3" />

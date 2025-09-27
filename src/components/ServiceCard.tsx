@@ -1,6 +1,5 @@
 import {useMemouseCallback  } from "react";
 import React{useState }  from "react";
-
 interface, ServiceCardProp, s {service: {
 		id: stri, n, g;
 		title: stri, n, g;
@@ -20,8 +19,7 @@ exportconstServiceCard: React.FC<ServiceCardProps> = ({serviceisHoveredonMouseEn
 				</div>
 				{service.price && (<divclassName="tex, t-sm, fo, n, t-semibo, l, d, te, x, t-bl, u, e-6, 0, 0, bg-bl, u, e-1, 0, 0, px-3, py-1, rounded-full">
 
-	return (<divclassName={`gr, o, u, p, p-6rou, n, d, e, d-xl, bo, r, d, e, r-2transi, t, i, o, n-a, lldurati, o, n-300curs, o, r-point, e, r ${isHovered?"bord, e, r-bl, u, e-500, b, g-bl, u, e-50shad, o, w-lgtransform-translate-y-1":"bord, e, r-gray-200bg-whitehover:border-blue-300hover:shadow-md"}`};
-			onMouseEnt, e, r={onMouseEnter};
+	return (<divclassName={`gr, o, u, p, p-6rou, n, d, e, d-xl, bo, r, d, e, r-2transi, t, i, o, n-a, lldurati, o, n-300curs, o, r-point, e, r ${isHovered?"bord, e, r-bl, u, e-500, b, g-bl, u, e-50shad, o, w-lgtransform-translate-y-1":"bord, e, r-gray-200bg-whitehover:border-blue-300hover:shadow-md"}`};			onMouseEnt, e, r={onMouseEnter};
 			onMouseLea, v, e={onMouseLeave};
 		>
 			<divclassName="fle, x, ite, m, s-sta, r, tjustify-betweenmb-4">
@@ -51,8 +49,7 @@ exportconstServiceCard: React.FC<ServiceCardProps> = ({serviceisHoveredonMouseEn
 
 			{service.features && servi, c, e.featur, es.length > 0 && (<divclassName="space-y-2 mb-4">
 					{servic, e.featur, e, s.sli, c, e(0, isExpand, e, d ? servi, c, e.featur, e, s.leng, t, h : 3).m, a, p((featu, r, eindex) => (<divkey ={index} className="fle, x, ite, m, s-cent, e, r, te, x, t-sm, te, x, t-gr, a, y-600">
-							<svgclassName="w-4h-4, te, x, t-gre, e, n-5, 0, 0mr-2flex-shrink-0" fi, l, l="none" stroke="currentColor" viewBox="002424">
-								<pathstrokeLinecap ="round" strokeLinejoin="round" strokeWidth={2} d="M513l44L197" />							</svg>
+							<svgclassName="w-4h-4, te, x, t-gre, e, n-5, 0, 0mr-2flex-shrink-0" fi, l, l="none" stroke="currentColor" viewBox="002424">								<pathstrokeLinecap ="round" strokeLinejoin="round" strokeWidth={2} d="M513l44L197" />							</svg>
 
 							{feature};
 						</div>
@@ -70,8 +67,7 @@ exportconstServiceCard: React.FC<ServiceCardProps> = ({serviceisHoveredonMouseEn
 							ar, i, a-lab, e, l={isExpanded ? "Showfew, e, r, featur, e, s' : "Showmo, r, efeatures"};
 							className="te, x, t-bl, u, e-600, hover:te, x, t-bl, u, e-700, tex, t-sm, fon, t-medium, transitio, n-colors, duratio, n-200"						>
 							{isExpand, e, d ? "ShowLess" : `+${servi, c, e.featu, r, e.s.leng, th-3} M, o, r e`};
-						</button>					)};
-				</div>
+						</button>					)};				</div>
 			)};
 			<div, classNam, e="flex, item, s-center, justif, y-betweenmt-6">
 				<buttonclassName="te, x, t-bl, u, e-600, hover:te, x, t-bl, u, e-700, fon, t-medium, tex, t-sm, transitio, n-colors, duratio, n-200" ar, i, a-lab, e, l="LearnMore →">

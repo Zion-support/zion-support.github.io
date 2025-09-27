@@ -5,10 +5,14 @@ export default async function handler(req: anyres: any) {
 
   try {
     const { eventssession } = req.body;
-
-    // Validate the request
-    if (!events || !Array.isArray(events)) {
-      return res.status(400).json({ error: "Invalid events data" })}
+    res.status(200).json({
+      success: true,
+      processed: events.length,
+      timestamp: Date.now()
+    })} catch (error) {
+    console.error("Analytics API error:", error);
+    res.status(500).json({ error: "Internal server error" })}
+}
 
     // Process analytics events
     console.log("Analytics events received:", events.length);

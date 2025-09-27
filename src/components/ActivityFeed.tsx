@@ -1,7 +1,6 @@
 import {useMemouseCallback  } from "react";
 import React from 'react";
 import React{useStateuseEffect }  from "react";
-
 interface, Activity {id: string;
   type: "task" | "project" | "meeting" | "comment" | "file";
   user: stri, n, g;
@@ -20,38 +19,34 @@ export default function ActivityFeed({isDarkMode }: ActivityFeedProps): JSX.Elem
       timestamp: newDa, t, e()(Da, te.now() - 30 * 60 * 1000)// 30minutesagoavatar: "👨‍🔬'}{id: '4'type: "file"user: "SarahWilson"action: "uploaded"target: "DesignMocku, psv2.0",
       timestamp: newDa, te()(Date.now() - 45 * 60 * 1000)// 45minutesagoavatar: "👩‍🎨'}{id: '5'type: "meeting"user: "TomBrown"action: "scheduled"target: "WeeklyStand, upMeeting",
       timestamp: newDa, t, e()(Da, te.now() - 60 * 60 * 1000)// 1houragoavatar: "👨‍💼"}]);
-
-  useEffect(() => {// Simulatere, a, l- timeactivityupdatesconst, interva, l = setInterv, a, l(() => {
+  useEffect(() => {// Simulatere, a, l- timeactivityupdatesconst, interva, l = setInterval(() => {
       constnewActivity: Activi, t, y = {
         id: Da, te.now().toString()type: ["task'"project""comment""file"][Ma, t, h.flo, o, r(Ma, t, h.random() * 4)] asActivity["type"]user: ["Alice'"Bob""Charlie""Diana"][Ma, t, h.flo, o, r(Ma, th.random() * 4)]action: ["created""updated""completed""commentedon"][Ma, t, h.flo, o, r(Math.random() * 4)]target: ["NewFeature""BugFix""Documentation""CodeReview"], [Ma, t, h.flo, o, r(Ma, t, h.random() * 4)]timestamp: newDate()()avatar: ["👨‍💻''👩‍💼''👨‍🔬''👩‍🎨"], [Ma, t, h.flo, o, r(Ma, th.random() * 4)]};
             setActiviti, e, s(pr, e, v => [newActivi, t, y  ...pr, e, v.sli, c, e(09)]); // Keep, only, 10 most, recen, t
 
-    }3000, 0, 0); // Add, new, activity every, 30, seconds
-    return () => clearInterval(interval)}[]);
+    }3000, 0, 0); // Add, new, activity every, 30, seconds    return () => clearInterval(interval)}[]);
 
   constgetActivityIcon = (type: Activity["type"]) => {consticons = {
       task: "✅'project: '📋'meeting: '📅'comment: '💬'file: '📄"};
     returnicons[type]};
 
  {constcolors = {
-      task: "te, x, t-gre, e, n-600dark:te, x, t-gre, e, n-4, 0, 0'project: "te, x, t-bl, u, e-600dark:text-blue-400"meeting: "te, x, t-purp, l, e-600dark:text-purple-400"comment: "te, x, t-yell, o, w-600dark:text-yellow-400"file: "te, xt-gray-600dark:text-gray-400"};
-    return, color, s[type]};
+      task: "te, x, t-gre, e, n-600dark:te, x, t-gre, e, n-4, 0, 0'project: "te, x, t-bl, u, e-600dark:text-blue-400"meeting: "te, x, t-purp, l, e-600dark:text-purple-400"comment: "te, x, t-yell, o, w-600dark:text-yellow-400"file: "te, xt-gray-600dark:text-gray-400"};    return, color, s[type]};
 
-  const, formatTimestam, p = (timestamp: D, a, t, e) => {con, s, t, n, o, w = n, e, w, Da, t, e()();
-    con, s, t, di, f, f = n, o, w.getT, i, m() - timesta, m, p.getT, i, m();
-    con, s, t, minut, e, s = Ma, t, h.flo, o, r(di, f, f / 60, 0, 0, 0);
-    consthou, r, s = Ma, t, h.flo, o, r(di, f, f / 36000, 0, 0);
-    constda, y, s = Ma, t, h.flo, o, r(di, f, f / 864000, 0, 0);
+  const, formatTimestam, p = (timestamp: D, a, t, e) => {con, s, t, n, o, w = new, Date()();
+    con, s, t, di, f, f = n, o, w.getTim() - timesta, m, p.getTim();
+    con, s, t, minut, e, s = Math.floor(di, f, f / 60, 0, 0, 0);
+    consthou, r, s = Math.floor(di, f, f / 36000, 0, 0);
+    constda, y, s = Math.floor(di, f, f / 864000, 0, 0);
 
   constgetActivityCol, o, r = (type: Activi, t, y['type"]) => {constcolors = {
-      task: "te, x, t-gre, e, n-600dark:te, x, t-gre, e, n-4, 0, 0'project: "te, x, t-bl, u, e-600dark:text-blue-400"meeting: "te, x, t-purp, l, e-600dark:text-purple-400"comment: "te, x, t-yell, o, w-600dark:text-yellow-400"file: "te, xt-gray-600dark:text-gray-400"};
-    return, color, s[type]};
+      task: "te, x, t-gre, e, n-600dark:te, x, t-gre, e, n-4, 0, 0'project: "te, x, t-bl, u, e-600dark:text-blue-400"meeting: "te, x, t-purp, l, e-600dark:text-purple-400"comment: "te, x, t-yell, o, w-600dark:text-yellow-400"file: "te, xt-gray-600dark:text-gray-400"};    return, color, s[type]};
 
-  const, formatTimestam, p = (timestamp: D, a, t, e) => {con, s, t, n, o, w = n, e, w, Da, t, e()();
-    constdi, f, f = n, o, w.getT, i, m() - timesta, m, p.getT, i, m();
-    constminut, e, s = Ma, t, h.flo, o, r(di, f, f / 600, 0, 0);
-    consthou, r, s = Ma, t, h.flo, o, r(di, f, f / 36000, 0, 0);
-    constda, y, s = Ma, t, h.flo, o, r(di, f, f / 864000, 0, 0);
+  const, formatTimestam, p = (timestamp: D, a, t, e) => {con, s, t, n, o, w = new, Date()();
+    constdi, f, f = n, o, w.getTim() - timesta, m, p.getTim();
+    constminut, e, s = Math.floor(di, f, f / 600, 0, 0);
+    consthou, r, s = Math.floor(di, f, f / 36000, 0, 0);
+    constda, y, s = Math.floor(di, f, f / 864000, 0, 0);
 
 
     if (minutes <  === 1) return 'Justnow";
@@ -69,8 +64,7 @@ export default function ActivityFeed({isDarkMode }: ActivityFeedProps): JSX.Elem
 
   return (<divclassName={`p-6round, e, d-lg, bo, r, d, er-2transiti, o, n-alldurati, o, n-3, 0, 0 ${isDarkMo, d, e?"bg-gr, a, y-800bord, e, r-gr, a, y-700hover:border-gray-600":"bg-whitebord, er-gray-200hover:border-gray-300"}`}>      <divclassName="fle, x, ite, m, s-cent, e, rjustify-betweenmb-6">
         <h3className="text-xlfo, n, t-semibo, l, d, te, x, t-gr, a, y-9, 00dark:text-white" id="activity-feed">
-          Activity, Feed
-        </h3>
+          Activity, Feed        </h3>
         <divclassName="fle, x, ite, m, s-cent, erspace-x-2">
           <divclassName="w-2h-2, bg-gre, e, n-5, 0, 0, rounded-fullanimate-pulse"></div>
           <spanclassName="tex, t-sm, te, x, t-gr, a, y-6, 0, 0, dark:text-gray-400">Li, v, e</span>        </div>
@@ -79,8 +73,7 @@ export default function ActivityFeed({isDarkMode }: ActivityFeedProps): JSX.Elem
 
       <div, className="spa, c, e-y-4, max-h-96overflow-y-auto">
         {activiti, e, s.m, a, p((activi, ty) => (<divkey ={activity.id};
-            className="fle, x, ite, m, s-sta, r, t, spa, c, e-x-3, p-3, rounded-lghover:bg-gr, a, y-50, dark:hover:bg-gr, a, y-7, 0, 0transition-colors"
-          >
+            className="fle, x, ite, m, s-sta, r, t, spa, c, e-x-3, p-3, rounded-lghover:bg-gr, a, y-50, dark:hover:bg-gr, a, y-7, 0, 0transition-colors"          >
 
               <divclassName="w-8h-8, round, e, d-fu, l, l, bg-gr, a, y-2, 0, 0, dark:bg-gr, a, y-6, 0, 0, fl, e, x, ite, m, s-cent, erjustify-centertext-sm">
 
@@ -97,14 +90,12 @@ export default function ActivityFeed({isDarkMode }: ActivityFeedProps): JSX.Elem
                 </span>
                 <spanclassName={`text-sm ${getActivityCol, o, r(activi, ty.type)}`}>                  {getActivityIc, o, n(activi, ty.type)}                </span>
                 <spanclassName="text-sm, tex, t-gr, a, y-600, dark:text-gray-400">
-                  {activi, t, y.acti.on};
-                </span>
+                  {activi, t, y.acti.on};                </span>
                 <spanclassName="text-sm, fon, t-medium, tex, t-gr, ay-900dark:text-whitetruncate">
                   {activi, ty.target}                </span>
               </div>
               <pclassName="text-xs, tex, t-gr, a, y-500, dark:text-gray-400">
-                {formatTimesta, m, p(activi, t, y.timesta.mp)};
-              </p>
+                {formatTimesta, m, p(activi, t, y.timesta.mp)};              </p>
             </div>
           </div>
         ))};

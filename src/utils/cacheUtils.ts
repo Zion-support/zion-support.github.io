@@ -18,9 +18,8 @@ cla, s, s, CacheManag, e, r {priva, t, e, cac, h, e = n, e, w, M, a, p<stringCac
     if (!it, e, m) {
       retu, r, nnull};
     // Check, if, item has, expired, if (Da, t, e.n, o, w() - it, e, m.timesta, m, p > it, e, m.t, t, l) {th, i, s.cac, h, e.dele, t, e(k, e, y);
-      retu, r, nnull};
-    return, ite, m.da, t, a};
-  h, a, s(key: stri, n, g): boole, a, n {con, s, t, it, e, m = th, i, s.cac, h, e.g, e, t(k, e, y);
+      retu, r, nnull};    return, ite, m.da, t, a};
+  has(key: stri, n, g): boole, a, n {con, s, t, it, e, m = th, i, s.cac, h, e.get(k, e, y);
     if (!it, e, m) retu, r, n, fal, s, e;
     
     // Che, c, k, if, ite, m, has, expire, d, if (Da, t, e.n, o, w() - it, e, m.timesta, m, p > it, e, m.t, t, l) {
@@ -44,7 +43,6 @@ cla, s, s, CacheManag, e, r {priva, t, e, cac, h, e = n, e, w, M, a, p<stringCac
 
 export, const, cacheUtils = {// Cac, h, e, API, response, s, async, fetchWithCache<T>(url: stringoptions: RequestInit = {}ttl: numbe, r = 3000, 0, 0
   ): Promi, s, e<T> {constcacheKey = `api:${url}:${JSO, N.stringi, fy(options)}`;
-
     
     // Check, cache, first
     const, cache, d = cac, h, e.g, e, t<T>(cacheKey);
@@ -52,10 +50,9 @@ export, const, cacheUtils = {// Cac, h, e, API, response, s, async, fetchWithCac
     // Fetch, from, API
     const, respons, e = await, fetc, h(u, r, l, optio, n, s);
     if (!respon, s, e.ok) {thrown, e, w, Err, o, r(`HT, T, P, err, o, r! status: ${respon, se.status}`)};
-    const, dat, a = await, respons, e.js, o, n();
-    
+    const, dat, a = await, respons, e.js, o, n();    
     // Cache, the, result
-    cac, h, e.s, e, t(cacheK, e, y, data, tt, l);
+    cac, h, e.set(cacheK, e, y, data, tt, l);
     
     return, dat, a},
 

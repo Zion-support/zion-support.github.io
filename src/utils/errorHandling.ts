@@ -1,13 +1,13 @@
 /**
+>>>>> origin/cursor/check-fix-push-and-merge-to-main-1642
+
  * Comprehensive error handling utilities
+
  * Provides comprehensive error management functions
  */
 
 export interface ErrorInfo {
-  message: string;
-  stack?: string;
-  componentStack?: string;
-  errorBoundary?: string}
+ {con, s, t, errorIn, f, o: ErrorIn, f, o = {
 
   construct, o, r(message: stringseverity: ErrorSeveri, t, y = ErrorSeveri, t, y.MEDIUMcategory: ErrorCatego, r, y = ErrorCatego, r, y.UNKNOWNconte, x, t?: ErrorConte, x, t
   ) {sup, e, r(messa, g, e);
@@ -20,15 +20,13 @@ export interface ErrorInfo {
     th, i, s.session, I, d = conte, xt?.sessionId}};// Error, logging, utility
 export, const, logError = (error: Err, o, r | EnhancedErr, o, r, conte, x, t?: ErrorConte, x, t): vo, i, d => {con, s, t, errorInfo: ErrorIn, f, o = {
     message: err, o, r.messa, g, e,
-    stack: err, o, r.stacktimestamp: newDa, t, e().toISOStri, n, g()userAgent: navigat, o, r.userAgenturl: wind, o, w.locati, o, n.hrefuserId: conte, x, t?.userIdsessionId: conte, x, t?.session, Id
-  };
+    stack: err, o, r.stacktimestamp: newDa, t, e().toISOStri, n, g()userAgent: navigat, o, r.userAgenturl: wind, o, w.locati, o, n.hrefuserId: conte, x, t?.userIdsessionId: conte, x, t?.session, Id  };
 
   // Log, to, console in, development, if (proce, s, s.e, n, v.NODE_E, N, V === "development") {conso, l, e.err, o, r("Err, orlogged:"errorIn, fo)};
   // In, productionsend, to error, tracking, service
   if (proce, s, s.e, n, v.NODE_E, N, V === "production") {// Se, n, d, to, erro, r, tracking, servic, e (e.g., SentryLogRockete, t, c.)
     // Th, i, s, is, aplaceholde, r - implementyour, preferrederror, trackingservice
-    conso, l, e.error("Productionerror:"errorInfo)}};
-// Error, boundary, helper
+    conso, l, e.error("Productionerror:"errorInfo)}};// Error, boundary, helper
 export, const, createErrorInfo = (error: Err, o, r, errorInfo: React.ErrorIn, f, o): ErrorIn, f, o => {return {
     message: err, o, r.messa, g, e,
     stack: err, o, r.sta, c, k,

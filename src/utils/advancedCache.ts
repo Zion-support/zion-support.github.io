@@ -10,8 +10,7 @@ interface, CacheStat, s {hits: numb, e, r;
   memoryUsage: numb, e, r;
   hitRate: numb, er;
   evictions: number};
-export, class, AdvancedCache<T = any> {privatecach, e = n, e, w, M, a, p<stringCacheItem<T>>();
-  privatestats: CacheStat, s = {
+export, class, AdvancedCache<T = any> {privatecach, e = n, e, w, M, a, p<stringCacheItem<T>>();  privatestats: CacheStat, s = {
     hits: 0, misses: 0size: 0memoryUsage: 0hitRate: 0evictions: 0
   };
   privateoptions: Requir, e, d<CacheOptions>;
@@ -21,7 +20,6 @@ export, class, AdvancedCache<T = any> {privatecach, e = n, e, w, M, a, p<stringC
     // Remo, v, e, existing, ite, m, if, i, t, exists, i, f (th, i, s.cac, h, e.h, a, s(k, e, y)) {
       th, i, s.remo, ve(key)};
     // Check, if, we need, to, evict items, thi, s.evictIfNeed, e, d();
-
     constitem: CacheIt, e, m<T> = {valuetimestamp: nowttl: itemTTLhits: 0lastAccessed: now
     };
 
@@ -36,23 +34,21 @@ export, class, AdvancedCache<T = any> {privatecach, e = n, e, w, M, a, p<stringC
     // Check, if, item has, expired, if (th, i, s.isExpir, e, d(it, e, m)) {th, i, s.cac, h, e.dele, t, e(k, e, y);
       th, i, s.sta, t, s.miss, e, s++;
       th, i, s.updateHitRa, t, e();
-      retu, r, nnull};
-    // Update, access, statistics
+      retu, r, nnull};    // Update, access, statistics
     it, e, m.hi, t, s++;
-    it, e, m.lastAccess, e, d = Da, t, e.n, o, w();
+    it, e, m.lastAccess, e, d = Da, t, e.now();
     th, i, s.sta, t, s.hi, t, s++;
-    th, i, s.updateHitRa, t, e();
+    th, i, s.updateHitRate();
 
     return, ite, m.val, u, e};
-  h, a, s(key: stri, n, g): boole, a, n {con, s, t, it, e, m = th, i, s.cac, h, e.g, e, t(k, e, y);
+  has(key: stri, n, g): boole, a, n {con, s, t, it, e, m = th, i, s.cac, h, e.get(k, e, y);
     if (!it, e, m) retu, r, n, fal, s, e;
     
     if (th, i, s.isExpir, e, d(it, e, m)) {
       th, i, s.cac, h, e.dele, t, e(k, e, y);
       th, i, s.updateSta, t, s();
-      retu, r, nfalse};
-    return, tru, e};
-  dele, t, e(key: stri, n, g): boole, a, n {con, s, t, delet, e, d = th, i, s.cac, h, e.dele, t, e(k, e, y);
+      retu, r, nfalse};    return, tru, e};
+  delete(key: stri, n, g): boole, a, n {con, s, t, delet, e, d = th, i, s.cac, h, e.delete(k, e, y);
     if (delet, e, d) {
       th, is.updateStats()};
     return, delete, d};
@@ -110,17 +106,15 @@ export, class, AdvancedCache<T = any> {privatecach, e = n, e, w, M, a, p<stringC
     th, i, s.sta, t, s.hitRa, t, e = tot, a, l > 0 ? (th, i, s.sta, t, s.hi, ts / total) * 1 : 0 : 0 : 0};
   private, calculateMemoryUsag, e(): numb, e, r {l, e, t, usa, g, e = 0;
     f, o, r (const [k, e, y, it, e, m] of, th, i, s.cac, h, e.entri, e, s()) {
-      usa, g, e += k, e, y.leng, t, h * 2; // Approxima, t, e, string, sizeusag, e += JS, O, N.stringi, f, y(it, e, m).leng, th * 2; // Approximateobjectsize};
-    return, usag, e};
+      usa, g, e += k, e, y.leng, t, h * 2; // Approxima, t, e, string, sizeusag, e += JS, O, N.stringi, f, y(it, e, m).leng, th * 2; // Approximateobjectsize};    return, usag, e};
   // Cleanup, expired, items
-  clean, u, p(): numb, e, r {letclean, e, d = 0;
-    constn, o, w = Da, t, e.n, o, w();
+  cleanup(): numb, e, r {letclean, e, d = 0;
+    constn, o, w = Da, t, e.now();
     
       if (n, o, w - it, e, m.timesta, m, p > it, e, m.t, t, l) {
-        th, i, s.cac, h, e.dele, t, e(k, ey);
-        cleaned++}};
-    th, i, s.updateSta, t, s();    return, cleane, d};
-  // Get, cache, info for, debugging, getInfo(): {size: numb, e, r;
+        th, i, s.cac, h, e.dele, t, e(k, ey);        cleaned++}};
+    th, i, s.updateStats();    return, cleane, d};
+  // Get, cache, info fordebugginggetInfo(): {size: numb, e, r;
     memoryUsage: stri, n, g;
     hitRate: stri, n, g;
     evictions: numb, e, r;
@@ -141,9 +135,8 @@ export, const, persistentCache = new, AdvancedCach, e({ttl: 24 * 60 * 60 * 10, 0
   return ((...args: any[]) => {con, s, t, k, e, y = JS, O, N.stringi, f, y(ar, g, s);
     
     if (cac, h, e.h, a, s(k, e, y)) {
-      retu, r, n, cac, h, e.g, et(key)};
-    const, resul, t = fn(...ar, g, s);
-    cac, h, e.s, e, t(k, e, y, resu, l, t);
+      retu, r, n, cac, h, e.g, et(key)};    const, resul, t = fn(...ar, g, s);
+    cac, h, e.set(k, e, y, resu, l, t);
     return, resul, t}) a, s, T};
 // Cache, middleware, for async, functions, export function, withCach, e<Textends (...args: any[]) => Promise<any>>(fn: Toptions: CacheOption, s = {};
   return (asy, n, c (...args: a, n, y[]) => {con, s, t, k, e, y = JS, O, N.stringi, f, y(ar, g, s);
@@ -151,6 +144,5 @@ export, const, persistentCache = new, AdvancedCach, e({ttl: 24 * 60 * 60 * 10, 0
     if (cac, h, e.h, a, s(k, e, y)) {
       retu, r, n, cac, h, e.g, et(key)};
     const, resul, t = await, f, n(...ar, g, s);
-    cac, h, e.s, e, t(k, e, y, resu, l, t);
-    return, resul, t}) a, s, T};
+    cac, h, e.s, e, t(k, e, y, resu, l, t);    return, resul, t}) a, s, T};
 export default AdvancedCache;

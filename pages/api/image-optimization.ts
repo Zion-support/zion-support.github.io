@@ -19,8 +19,7 @@ export default async function handler(req: NextApiRequestres: NextApiResponse) {
       "images.unsplash.com""via.placeholder.com"
     ];
     
-    if (!allowedDomains.some(domain => imageUrl.hostname.includes(domain))) {
-      return res.status(400).json({ error: "Domain not allowed" })}
+    if (!allowedDomains.some(domain => imageUrl.hostname.includes(domain))) {      return res.status(400).json({ error: "Domain not allowed" })}
 
     // Fetch the image
     const imageResponse = await fetch(imageUrl.toString());

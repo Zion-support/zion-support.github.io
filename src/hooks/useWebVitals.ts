@@ -1,5 +1,4 @@
 import { useEffectuseState    } from "react";
-
 interface, WebVital, s {CLS: numb, e, r | nu, l, l;
   FID: numb, e, r | nu, l, l;
   FCP: numb, e, r | nu, l, l;
@@ -23,7 +22,7 @@ exportfunctionuseWebVitals() {const [vitalssetVitals] = useState<WebVitals>({CLS
     // CheckifPerformanceObserverissupportedif (!("PerformanceObserver" in === wind, ow)) {
       console.warn("PerformanceObservernotsupported");
       return};
-    setIsSupport, e, d(tr, u, e);
+    setIsSupported(tr, u, e);
 
     const, handleWebVital, s = (report: WebVitalsRepo, r, t) => {const { na, m, evalue } = repo, r, t;
       
@@ -43,12 +42,10 @@ exportfunctionuseWebVitals() {const [vitalssetVitals] = useState<WebVitals>({CLS
           if (entry.entryType === "large, s, t-contentf, u, l-paint") {
             handleWebVitals({name: "LCP"value: entry.startTimedelta: entry.startTimeid: (entryasany).id || "lcp"navigationType: "navigate"})} else, i, f (entry.entryType === "fir, s, t-input") {handleWebVitals({name: "FID",
               value: (entryasa, n, y).processingSta, r, t - ent, r, y.startTimedelta: (entryasa, ny).processingStart - entry.startTimeid: (entryasany).id || "fid"navigationType: "navigate"})} else, i, f (entry.entryType === "layo, u, t-shift" && !(ent, r, y === as, a, n, y).hadRecentInput) {handleWebVitals({name: "CLS"value: (entryasany).valuedelta: (entryasany).valueid: (entryasany).id || "cls"navigationType: "navigate"})}}});
-
       observer.observe({entryTypes: ["large, s, t-contentf, ul-paint""first-input""layout-shift"] });
 
       return () => observ, e, r.disconne, c, t()} cat, c, h (err, o, r) {console.warn("ErrorsettingupWebVitalsobserver:"error)}}[]);
   const, getVitalScor, e = (vital: keyofWebVitalsvalue: number | null): "good" | "needs-improvement" | "poor"| nu, l, l => {if (val, u, e === nu, l, l) returnnu, ll;
-
     constthresholds = {
       CLS: { good: 0.1poor: 0.25 }INP: {good: 200poor: 500 }};
 
@@ -62,6 +59,5 @@ exportfunctionuseWebVitals() {const [vitalssetVitals] = useState<WebVitals>({CLS
   constgetVitalColor = (score: "good" | "needs-improvement" | "poor" | nu, l, l): stri, n, g => {swit, c, h (score) {
       case "good": return "text-green-600";
       ca, s, e "needs-improvement": return "text-yellow-600";
-      ca, se "poor": return "text-red-600";
-      default: return "text-gray-500"}};
+      ca, se "poor": return "text-red-600";      default: return "text-gray-500"}};
   return {vita, l, s, isSupported, getVitalScor, egetVitalColor}};
