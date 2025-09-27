@@ -1,98 +1,244 @@
-import React, { useState, useEffect } from 'react';
-import Head from 'next/head';
+import React from 'react';
 import Link from 'next/link';
-import SEO from '../src/components/SEO';
-import { useAnalytics } from '../src/hooks/useAnalytics';
+import { Shield, Eye, Lock, Database, UserCheck, AlertTriangle } from 'lucide-react';
 
-export default function PrivacyPolicy(): JSX.Element {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
-
-  const { trackClick } = useAnalytics();
-
+export default function PrivacyPolicy() {
   const sections = [
     {
-      title: 'Information We Collect',
-      content: 'We collect information you provide directly to us such as when you create an account contact us or use our services. This may include your name email address phone number company information and any other information you choose to provide.'
+      icon: <Eye className="h-6 w-6" />,
+      title: "Information We Collect",
+      content: [
+        "Personal information you provide directly (name, email, phone number)",
+        "Usage data and analytics information",
+        "Cookies and similar tracking technologies",
+        "Device and browser information",
+        "Location data (with your consent)"
+      ]
     },
     {
-      title: 'How We Use Your Information',
-      content: 'We use the information we collect to provide maintain and improve our services communicate with you process transactions and comply with legal obligations. We may also use your information to send you technical notices updates and promotional materials.'
+      icon: <Database className="h-6 w-6" />,
+      title: "How We Use Your Information",
+      content: [
+        "To provide and improve our services",
+        "To communicate with you about our services",
+        "To personalize your experience",
+        "To analyze usage patterns and trends",
+        "To ensure security and prevent fraud"
+      ]
     },
     {
-      title: 'Information Sharing and Disclosure',
-      content: 'We do not share or sell your personal information to third parties for their marketing purposes without your explicit consent. We may share information with service providers who perform services on our behalf or if required by law.'
+      icon: <Lock className="h-6 w-6" />,
+      title: "Data Security",
+      content: [
+        "We implement industry-standard security measures",
+        "Data is encrypted in transit and at rest",
+        "Regular security audits and updates",
+        "Limited access to personal information",
+        "Secure data storage and backup systems"
+      ]
     },
     {
-      title: 'Data Security',
-      content: 'We implement reasonable security measures to protect your information from unauthorized access disclosure alteration and destruction. However no method of transmission over the Internet or electronic storage is 100% secure.'
+      icon: <UserCheck className="h-6 w-6" />,
+      title: "Your Rights",
+      content: [
+        "Access to your personal data",
+        "Correction of inaccurate information",
+        "Deletion of your data (right to be forgotten)",
+        "Data portability",
+        "Opt-out of marketing communications"
+      ]
     },
     {
-      title: 'Your Choices',
-      content: 'You have the right to access update or delete your personal information. You can also opt-out of receiving promotional communications from us at any time by following the unsubscribe instructions in those communications.'
+      icon: <Shield className="h-6 w-6" />,
+      title: "Third-Party Services",
+      content: [
+        "We may use third-party analytics services",
+        "Payment processors for transactions",
+        "Cloud storage providers",
+        "Marketing and communication tools",
+        "All third parties are required to maintain similar privacy standards"
+      ]
     },
     {
-      title: 'Changes to This Privacy Policy',
-      content: 'We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date. We encourage you to review this Privacy Policy periodically for any changes.'
-    },
-    {
-      title: 'Contact Us',
-      content: 'If you have any questions about this Privacy Policy please contact us at privacy@zionapp.com.'
+      icon: <AlertTriangle className="h-6 w-6" />,
+      title: "Policy Updates",
+      content: [
+        "We may update this policy from time to time",
+        "Significant changes will be communicated to you",
+        "Continued use constitutes acceptance of changes",
+        "Previous versions are available upon request",
+        "Effective date of current policy: January 1, 2024"
+      ]
     }
   ];
 
   return (
-    <>
-      <SEO />
-      <Head>
-        <title>Priv a c y Pol i c y - Z i o n Ap p</title>
-        <meta name="description" content="R e a d Z i o n Ap p's Priv a c y Pol i c y t o underst a n d ho w w e coll e c t us e an d prot e c t y o u r informat i o n." />
-        <meta name="viewp o r t" content="wi d t h=dev i c e-wi d t h init i a l-sc a l e=1" />
-      </Head>
-      <di v classN a m e="mi n-h-scr e e n b g-gradi e n t-t o-b r from-b l u e-5 0 t o-ind i g o-10 0 p t-2 0">
-        <di v classN a m e="contai n e r m x-a u t o p x-4 p y-8 ma x-w-7x l">
-          <na v classN a m e="m b-8">
-            <Link href="/" classN a m e="t e x t-b l u e-60 0 ho v e r:t e x t-b l u e-80 0 f o n t-med i u m transit i o n-col o r s">
-              ← B a c k t o H o m e
+    <div className="min-h-screen bg-gray-50">
+      {/* Navigation */}
+      <nav className="bg-white shadow-sm border-b">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center py-4">
+            <Link href="/" className="text-2xl font-bold text-blue-600">
+              Zion Tech
             </Link>
-          </nav>
-
-          <hea d e r classN a m e="t e x t-cen t e r m b-1 6">
-            <h 1 classN a m e="t e x t-5x l m d:t e x t-6x l f o n t-b o l d t e x t-b l u e-60 0 m b-4 b g-gradi e n t-t o-r from-b l u e-60 0 t o-ind i g o-60 0 b g-c l i p-t e x t t e x t-transpar e n t">
-              Priv a c y Pol i c y
-            </h 1>
-            <p classN a m e="t e x t-x l t e x t-g r a y-60 0 ma x-w-3x l m x-a u t o lead i n g-rela x e d">
-              Y o u r priv a c y i s import a n t t o u s. T h i s pol i c y expla i n s ho w w e han d l e y o u r d a t a.
-            </p>
-          </hea d e r>
-
-          <m a i n classN a m e="b g-wh i t e roun d e d-2x l sha d o w-l g p-8">
-            {secti o n s.ma p((sect i o n in d e x) => (
-              <di v ke y={in d e x} classN a m e="m b-8 l a s t:m b-0">
-                <h 2 classN a m e="t e x t-2x l f o n t-b o l d t e x t-g r a y-90 0 m b-4 bor d e r-b p b-2">
-                  {sect i o n.title}
-                </h 2>
-                <p classN a m e="t e x t-g r a y-70 0 lead i n g-rela x e d">
-                  {sect i o n.cont e n t}
-                </p>
-              </di v>
-            ))}
-            <p classN a m e="t e x t-s m t e x t-g r a y-50 0 m t-8">L a s t Upda t e d: Octo b e r 2 6 2 0 2 5</p>
-          </m a i n>
-
-          <sect i o n classN a m e="m t-1 6 t e x t-cen t e r">
-            <di v classN a m e="b g-b l u e-60 0 roun d e d-2x l p-8 t e x t-wh i t e">
-              <h 2 classN a m e="t e x t-3x l f o n t-b o l d m b-4">Questi o n s About Y o u r Priv a c y?</h 2>
-              <p classN a m e="t e x t-x l m b-6">Contact ou r priv a c y t e a m fo r an y conce r n s o r inquir i e s.</p>
-              <Link href="/cont a c t" classN a m e="b g-wh i t e t e x t-b l u e-60 0 p x-8 p y-3 roun d e d-l g f o n t-semib o l d ho v e r:b g-g r a y-10 0 transit i o n-col o r s">
-                Contact U s
+            <div className="flex space-x-8">
+              <Link href="/" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">
+                Home
               </Link>
-            </di v>
-          </sect i o n>
-        </di v>
-      </di v>
-    </>
-  )}
+              <Link href="/about" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">
+                About
+              </Link>
+              <Link href="/services" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">
+                Services
+              </Link>
+              <Link href="/portfolio" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">
+                Portfolio
+              </Link>
+              <Link href="/contact" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">
+                Contact
+              </Link>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        {/* Header */}
+        <header className="text-center mb-16">
+          <Link href="/" className="text-blue-600 hover:text-blue-800 font-medium transition-colors">
+            ← Back to Home
+          </Link>
+          
+          <header className="text-center mb-16">
+            <h1 className="text-5xl md:text-6xl font-bold text-blue-600 mb-4 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+              Privacy Policy
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              Your privacy is important to us. This policy explains how we handle your data.
+            </p>
+          </header>
+        </header>
+
+        {/* Introduction */}
+        <div className="bg-white rounded-2xl shadow-lg p-8 mb-12">
+          <div className="flex items-center mb-6">
+            <Shield className="h-8 w-8 text-blue-600 mr-3" />
+            <h2 className="text-2xl font-bold text-gray-900">Our Commitment to Privacy</h2>
+          </div>
+          <p className="text-gray-600 leading-relaxed mb-4">
+            At Zion Tech Solutions, we are committed to protecting your privacy and ensuring the security of your personal information. 
+            This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.
+          </p>
+          <p className="text-gray-600 leading-relaxed">
+            By using our services, you agree to the collection and use of information in accordance with this policy. 
+            If you do not agree with the terms of this Privacy Policy, please do not access or use our services.
+          </p>
+        </div>
+
+        {/* Privacy Sections */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+          {sections.map((section, index) => (
+            <div key={index} className="bg-white rounded-2xl shadow-lg p-6">
+              <div className="flex items-center mb-4">
+                <div className="bg-blue-100 p-3 rounded-lg mr-4">
+                  {section.icon}
+                </div>
+                <h3 className="text-xl font-bold text-gray-900">{section.title}</h3>
+              </div>
+              <ul className="space-y-3">
+                {section.content.map((item, itemIndex) => (
+                  <li key={itemIndex} className="flex items-start">
+                    <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                    <span className="text-gray-600 leading-relaxed">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+
+        {/* Contact Information */}
+        <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 text-white mb-12">
+          <h2 className="text-2xl font-bold mb-6">Questions About Your Privacy?</h2>
+          <p className="text-blue-100 mb-6 leading-relaxed">
+            If you have any questions about this Privacy Policy or our data practices, please don't hesitate to contact us. 
+            We're here to help and ensure your privacy concerns are addressed.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <h3 className="font-semibold mb-2">Contact Information</h3>
+              <p className="text-blue-100">Email: privacy@ziontech.com</p>
+              <p className="text-blue-100">Phone: +1 (555) 123-4567</p>
+            </div>
+            <div>
+              <h3 className="font-semibold mb-2">Data Protection Officer</h3>
+              <p className="text-blue-100">Email: dpo@ziontech.com</p>
+              <p className="text-blue-100">Available Monday-Friday, 9 AM - 5 PM EST</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Legal Information */}
+        <div className="bg-white rounded-2xl shadow-lg p-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">Legal Information</h2>
+          <div className="prose prose-gray max-w-none">
+            <p className="text-gray-600 leading-relaxed mb-4">
+              This Privacy Policy is effective as of January 1, 2024, and will remain in effect except with respect to any changes 
+              in its provisions in the future, which will be in effect immediately after being posted on this page.
+            </p>
+            <p className="text-gray-600 leading-relaxed mb-4">
+              We reserve the right to update or change our Privacy Policy at any time and you should check this Privacy Policy periodically. 
+              Your continued use of our services after we post any modifications to the Privacy Policy on this page will constitute 
+              your acknowledgment of the modifications and your consent to abide and be bound by the modified Privacy Policy.
+            </p>
+            <p className="text-gray-600 leading-relaxed">
+              If we make any material changes to this Privacy Policy, we will notify you either through the email address you have 
+              provided us, or by placing a prominent notice on our website.
+            </p>
+          </div>
+        </div>
+      </main>
+
+      {/* Footer */}
+      <footer className="bg-white border-t">
+        <div className="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-4">Zion Tech</h3>
+              <p className="text-gray-600">
+                Transforming businesses through innovative technology solutions.
+              </p>
+            </div>
+            <div>
+              <h4 className="text-sm font-semibold text-gray-900 mb-4">Services</h4>
+              <ul className="space-y-2">
+                <li><Link href="/services" className="text-gray-600 hover:text-blue-600">Web Development</Link></li>
+                <li><Link href="/services" className="text-gray-600 hover:text-blue-600">Mobile Apps</Link></li>
+                <li><Link href="/services" className="text-gray-600 hover:text-blue-600">Cloud Solutions</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="text-sm font-semibold text-gray-900 mb-4">Company</h4>
+              <ul className="space-y-2">
+                <li><Link href="/about" className="text-gray-600 hover:text-blue-600">About Us</Link></li>
+                <li><Link href="/portfolio" className="text-gray-600 hover:text-blue-600">Portfolio</Link></li>
+                <li><Link href="/contact" className="text-gray-600 hover:text-blue-600">Contact</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="text-sm font-semibold text-gray-900 mb-4">Legal</h4>
+              <ul className="space-y-2">
+                <li><Link href="/privacy-policy" className="text-gray-600 hover:text-blue-600">Privacy Policy</Link></li>
+                <li><Link href="/terms-of-service" className="text-gray-600 hover:text-blue-600">Terms of Service</Link></li>
+                <li><Link href="/contact" className="text-gray-600 hover:text-blue-600">Contact</Link></li>
+              </ul>
+            </div>
+          </div>
+          <div className="border-t mt-8 pt-8 text-center">
+            <p className="text-gray-500">&copy; 2024 Zion Tech Solutions. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+}

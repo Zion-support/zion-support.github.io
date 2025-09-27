@@ -1,143 +1,382 @@
-import React, { useState, useEffect } from 'react';
-import Head from 'next/head';
+import React, { useState } from 'react';
 import Link from 'next/link';
-import SEO from '../src/components/SEO';
-import { useAnalytics } from '../src/hooks/useAnalytics';
+import { ExternalLink, Github, Eye, Filter, Search, ArrowRight, Star, Users, Calendar } from 'lucide-react';
 
-export default function Portfolio(): JSX.Element {
-  const [selectedProject, setSelectedProject] = useState<number | null>(null);
-  const [isVisible, setIsVisible] = useState(false);
+export default function Portfolio() {
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchTerm, setSearchTerm] = useState('');
 
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
-
-  const { trackClick } = useAnalytics();
+  const categories = [
+    { id: 'all', name: 'All Projects' },
+    { id: 'web', name: 'Web Development' },
+    { id: 'mobile', name: 'Mobile Apps' },
+    { id: 'ecommerce', name: 'E-commerce' },
+    { id: 'saas', name: 'SaaS Platforms' },
+    { id: 'enterprise', name: 'Enterprise Solutions' }
+  ];
 
   const projects = [
     {
       id: 1,
-      title: 'AI-Powered E-commerce Platform',
-      description: 'A comprehensive e-commerce solution with AI-driven recommendations and analytics.',
-      image: '/api/placeholder/400/300',
-      technologies: ['React', 'Node.js', 'AI/ML', 'PostgreSQL']
+      title: "E-Commerce Platform",
+      category: "ecommerce",
+      description: "A comprehensive e-commerce solution with advanced inventory management, payment processing, and analytics dashboard.",
+      image: "/api/placeholder/600/400",
+      technologies: ["React", "Node.js", "PostgreSQL", "Stripe"],
+      client: "RetailCorp",
+      duration: "4 months",
+      team: "8 developers",
+      rating: 5,
+      liveUrl: "https://example.com",
+      githubUrl: "https://github.com/example",
+      featured: true
     },
     {
       id: 2,
-      title: 'Cloud Infrastructure Migration',
-      description: 'Complete migration of legacy systems to modern cloud infrastructure.',
-      image: '/api/placeholder/400/300',
-      technologies: ['AWS', 'Docker', 'Kubernetes', 'Terraform']
+      title: "Mobile Banking App",
+      category: "mobile",
+      description: "Secure mobile banking application with biometric authentication, real-time transactions, and financial analytics.",
+      image: "/api/placeholder/600/400",
+      technologies: ["React Native", "Node.js", "MongoDB", "AWS"],
+      client: "FinanceBank",
+      duration: "6 months",
+      team: "12 developers",
+      rating: 5,
+      liveUrl: "https://example.com",
+      githubUrl: "https://github.com/example",
+      featured: true
     },
     {
       id: 3,
-      title: 'Mobile Banking App',
-      description: 'Secure mobile banking application with advanced security features.',
-      image: '/api/placeholder/400/300',
-      technologies: ['React Native', 'Node.js', 'MongoDB', 'Blockchain']
+      title: "SaaS Analytics Dashboard",
+      category: "saas",
+      description: "Real-time analytics platform for businesses to track performance metrics, user behavior, and revenue insights.",
+      image: "/api/placeholder/600/400",
+      technologies: ["Vue.js", "Python", "ClickHouse", "Docker"],
+      client: "DataCorp",
+      duration: "3 months",
+      team: "6 developers",
+      rating: 4,
+      liveUrl: "https://example.com",
+      githubUrl: "https://github.com/example",
+      featured: false
+    },
+    {
+      id: 4,
+      title: "Enterprise CRM System",
+      category: "enterprise",
+      description: "Comprehensive customer relationship management system with advanced automation and reporting capabilities.",
+      image: "/api/placeholder/600/400",
+      technologies: ["Angular", "Java", "MySQL", "Redis"],
+      client: "TechCorp",
+      duration: "8 months",
+      team: "15 developers",
+      rating: 5,
+      liveUrl: "https://example.com",
+      githubUrl: "https://github.com/example",
+      featured: false
+    },
+    {
+      id: 5,
+      title: "Restaurant Management Platform",
+      category: "web",
+      description: "Complete restaurant management solution with online ordering, table reservations, and kitchen display systems.",
+      image: "/api/placeholder/600/400",
+      technologies: ["React", "Express.js", "MongoDB", "Socket.io"],
+      client: "RestaurantChain",
+      duration: "5 months",
+      team: "10 developers",
+      rating: 4,
+      liveUrl: "https://example.com",
+      githubUrl: "https://github.com/example",
+      featured: false
+    },
+    {
+      id: 6,
+      title: "Fitness Tracking App",
+      category: "mobile",
+      description: "Comprehensive fitness tracking application with workout plans, nutrition tracking, and social features.",
+      image: "/api/placeholder/600/400",
+      technologies: ["Flutter", "Firebase", "TensorFlow", "Google Fit"],
+      client: "FitLife",
+      duration: "4 months",
+      team: "7 developers",
+      rating: 5,
+      liveUrl: "https://example.com",
+      githubUrl: "https://github.com/example",
+      featured: false
     }
   ];
 
-  const stats = [
-    { number: '50+', label: 'Projects Completed' },
-    { number: '25+', label: 'Happy Clients' },
-    { number: '5+', label: 'Years Experience' },
-    { number: '99%', label: 'Client Satisfaction' }
-  ];
+  const filteredProjects = projects.filter(project => {
+    const matchesCategory = selectedCategory === 'all' || project.category === selectedCategory;
+    const matchesSearch = project.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         project.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         project.technologies.some(tech => tech.toLowerCase().includes(searchTerm.toLowerCase()));
+    return matchesCategory && matchesSearch;
+  });
 
   return (
-    <>
-      <SEO />
-      <Head>
-        <title>Portfolio - Z i o n Ap p</title>
-        <meta name="description" content="Expl o r e ou r portfo l i o o f success f u l proje c t s an d c a s e stud i e s acr o s s A I cl o u d comput i n g mob i l e developm e n t an d m o r e." />
-        <meta name="viewp o r t" content="wi d t h=dev i c e-wi d t h init i a l-sc a l e=1" />
-      </Head>
-      <di v classN a m e="mi n-h-scr e e n b g-gradi e n t-t o-b r from-b l u e-5 0 t o-ind i g o-10 0 p t-2 0">
-        <di v classN a m e="contai n e r m x-a u t o p x-4 p y-8 ma x-w-7x l">
-          <na v classN a m e="m b-8">
-            <Link href="/" classN a m e="t e x t-b l u e-60 0 ho v e r:t e x t-b l u e-80 0 f o n t-med i u m transit i o n-col o r s">
-              ← B a c k t o H o m e
+    <div className="min-h-screen bg-gray-50">
+      {/* Navigation */}
+      <nav className="bg-white shadow-sm border-b">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center py-4">
+            <Link href="/" className="text-2xl font-bold text-blue-600">
+              Zion Tech
             </Link>
-          </nav>
+            <div className="flex space-x-8">
+              <Link href="/" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">
+                Home
+              </Link>
+              <Link href="/about" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">
+                About
+              </Link>
+              <Link href="/services" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">
+                Services
+              </Link>
+              <Link href="/portfolio" className="text-blue-600 font-medium">
+                Portfolio
+              </Link>
+              <Link href="/contact" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">
+                Contact
+              </Link>
+            </div>
+          </div>
+        </div>
+      </nav>
 
-          <hea d e r classN a m e="t e x t-cen t e r m b-1 6">
-            <h 1 classN a m e="t e x t-5x l m d:t e x t-6x l f o n t-b o l d t e x t-b l u e-60 0 m b-4 b g-gradi e n t-t o-r from-b l u e-60 0 t o-ind i g o-60 0 b g-c l i p-t e x t t e x t-transpar e n t">
-              Ou r Portfolio
-            </h 1>
-            <p classN a m e="t e x t-x l t e x t-g r a y-60 0 ma x-w-3x l m x-a u t o lead i n g-rela x e d">
-              Showcas i n g ou r success f u l proje c t s an d th e imp a c t w e&a p o s;v e m a d e fo r ou r clie n t s
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        {/* Header */}
+        <header className="text-center mb-16">
+          <Link href="/" className="text-blue-600 hover:text-blue-800 font-medium transition-colors">
+            ← Back to Home
+          </Link>
+          
+          <header className="text-center mb-16">
+            <h1 className="text-5xl md:text-6xl font-bold text-blue-600 mb-4 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+              Our Portfolio
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              Showcasing our successful projects and the impact we&apos;ve made for our clients
             </p>
-          </hea d e r>
+          </header>
+        </header>
 
-          <m a i n>
-            {/* St a t s Sect i o n */}
-            <sect i o n classN a m e={`m b-1 6 transit i o n-al l durat i o n-70 0 de l a y-10 0 ${
-              isVisible ? 'opac i t y-10 0 transl a t e-y-0' : 'opac i t y-0 transl a t e-y-8'
-            }`}>
-              <di v classN a m e="g r i d g r i d-c o l s-2 m d:g r i d-c o l s-4 ga p-8">
-                {st a t s.ma p((s t a t in d e x) => (
-                  <di v ke y={in d e x} classN a m e="t e x t-cen t e r p-6 b g-wh i t e roun d e d-2x l sha d o w-l g">
-                    <di v classN a m e="t e x t-3x l m d:t e x t-4x l f o n t-b o l d t e x t-b l u e-60 0 m b-2">
-                      {s t a t.number}
-                    </di v>
-                    <di v classN a m e="t e x t-g r a y-60 0 f o n t-med i u m">
-                      {s t a t.la b e l}
-                    </di v>
-                  </di v>
-                ))}
-              </di v>
-            </sect i o n>
+        {/* Filters and Search */}
+        <div className="mb-12">
+          <div className="flex flex-col md:flex-row gap-6 items-center justify-between mb-8">
+            {/* Search */}
+            <div className="relative w-full md:w-96">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
+              <input
+                type="text"
+                placeholder="Search projects..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+              />
+            </div>
 
-            {/* Proje c t s G r i d */}
-            <sect i o n classN a m e="g r i d g r i d-c o l s-1 m d:g r i d-c o l s-2 l g:g r i d-c o l s-3 ga p-8">
-              {proje c t s.ma p((proj e c t) => (
-                <di v
-                  ke y={proj e c t.i d}
-                  classN a m e="b g-wh i t e roun d e d-2x l sha d o w-l g overf l o w-hid d e n ho v e r:sha d o w-x l transit i o n-sha d o w cur s o r-poin t e r"
-                  onCl i c k={() => setSelectedProject(selectedProject === proj e c t.i d ? null : proj e c t.i d)}
+            {/* Category Filter */}
+            <div className="flex flex-wrap gap-2">
+              {categories.map((category) => (
+                <button
+                  key={category.id}
+                  onClick={() => setSelectedCategory(category.id)}
+                  className={`px-4 py-2 rounded-lg font-medium transition-colors ${
+                    selectedCategory === category.id
+                      ? 'bg-blue-600 text-white'
+                      : 'bg-white text-gray-700 border border-gray-300 hover:bg-gray-50'
+                  }`}
                 >
-                  <im g
-                    sr c={proj e c t.image}
-                    al t={proj e c t.title}
-                    classN a m e="w-f u l l h-4 8 object-co v e r"
-                  />
-                  <di v classN a m e="p-6">
-                    <h 3 classN a m e="t e x t-x l f o n t-b o l d t e x t-g r a y-90 0 m b-3">
-                      {proj e c t.title}
-                    </h 3>
-                    <p classN a m e="t e x t-g r a y-60 0 m b-4">
-                      {proj e c t.description}
-                    </p>
-                    <di v classN a m e="f l e x f l e x-w r a p ga p-2">
-                      {proj e c t.technolog i e s.ma p((t e c h in d e x) => (
-                        <s p a n
-                          ke y={in d e x}
-                          classN a m e="p x-3 p y-1 b g-b l u e-10 0 t e x t-b l u e-80 0 t e x t-s m roun d e d-f u l l"
-                        >
-                          {t e c h}
-                        </s p a n>
-                      ))}
-                    </di v>
-                  </di v>
-                </di v>
+                  {category.name}
+                </button>
               ))}
-            </sect i o n>
+            </div>
+          </div>
+        </div>
 
-            {/* CT A Sect i o n */}
-            <sect i o n classN a m e="m t-1 6 t e x t-cen t e r">
-              <di v classN a m e="b g-wh i t e roun d e d-2x l sha d o w-l g p-8">
-                <h 2 classN a m e="t e x t-3x l f o n t-b o l d t e x t-g r a y-90 0 m b-4">Re a d y t o St a r t Y o u r Proj e c t?</h 2>
-                <p classN a m e="t e x t-x l t e x t-g r a y-60 0 m b-8">
-                  Le t&a p o s;s disc u s s ho w w e ca n br i n g y o u r vis i o n t o l i f e w i t h ou r expert i s e.
-                </p>
-                <Link href="/cont a c t" classN a m e="b g-b l u e-60 0 t e x t-wh i t e p x-8 p y-3 roun d e d-l g f o n t-semib o l d ho v e r:b g-b l u e-70 0 transit i o n-col o r s">
-                  Ge t a F r e e Consultat i o n
-                </Link>
-              </di v>
-            </sect i o n>
-          </m a i n>
-        </di v>
-      </di v>
-    </>
-  )}
+        {/* Projects Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {filteredProjects.map((project) => (
+            <div
+              key={project.id}
+              className={`bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden ${
+                project.featured ? 'ring-2 ring-blue-500' : ''
+              }`}
+            >
+              {project.featured && (
+                <div className="bg-blue-600 text-white px-3 py-1 text-sm font-medium">
+                  Featured Project
+                </div>
+              )}
+              
+              <div className="relative">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-48 object-cover"
+                />
+                <div className="absolute top-4 right-4 flex space-x-2">
+                  {project.liveUrl && (
+                    <a
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-white bg-opacity-90 p-2 rounded-full hover:bg-opacity-100 transition-colors"
+                    >
+                      <ExternalLink className="h-4 w-4 text-gray-700" />
+                    </a>
+                  )}
+                  {project.githubUrl && (
+                    <a
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-white bg-opacity-90 p-2 rounded-full hover:bg-opacity-100 transition-colors"
+                    >
+                      <Github className="h-4 w-4 text-gray-700" />
+                    </a>
+                  )}
+                </div>
+              </div>
+
+              <div className="p-6">
+                <div className="flex items-center justify-between mb-2">
+                  <span className="text-sm font-medium text-blue-600 bg-blue-100 px-2 py-1 rounded">
+                    {categories.find(cat => cat.id === project.category)?.name}
+                  </span>
+                  <div className="flex items-center">
+                    <Star className="h-4 w-4 text-yellow-400 fill-current" />
+                    <span className="ml-1 text-sm text-gray-600">{project.rating}</span>
+                  </div>
+                </div>
+
+                <h3 className="text-xl font-bold text-gray-900 mb-3">{project.title}</h3>
+                <p className="text-gray-600 mb-4 leading-relaxed">{project.description}</p>
+
+                <div className="mb-4">
+                  <div className="flex flex-wrap gap-2">
+                    {project.technologies.map((tech, index) => (
+                      <span
+                        key={index}
+                        className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="border-t pt-4">
+                  <div className="grid grid-cols-2 gap-4 text-sm text-gray-600">
+                    <div className="flex items-center">
+                      <Users className="h-4 w-4 mr-2" />
+                      {project.team}
+                    </div>
+                    <div className="flex items-center">
+                      <Calendar className="h-4 w-4 mr-2" />
+                      {project.duration}
+                    </div>
+                  </div>
+                  <div className="mt-2 text-sm text-gray-500">
+                    Client: {project.client}
+                  </div>
+                </div>
+
+                <div className="mt-6 flex space-x-3">
+                  {project.liveUrl && (
+                    <a
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1 bg-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-blue-700 transition-colors text-center flex items-center justify-center"
+                    >
+                      <Eye className="h-4 w-4 mr-2" />
+                      View Live
+                    </a>
+                  )}
+                  {project.githubUrl && (
+                    <a
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1 border border-gray-300 text-gray-700 py-2 px-4 rounded-lg font-medium hover:bg-gray-50 transition-colors text-center flex items-center justify-center"
+                    >
+                      <Github className="h-4 w-4 mr-2" />
+                      Code
+                    </a>
+                  )}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {filteredProjects.length === 0 && (
+          <div className="text-center py-12">
+            <Filter className="h-12 w-12 text-gray-400 mx-auto mb-4" />
+            <h3 className="text-lg font-medium text-gray-900 mb-2">No projects found</h3>
+            <p className="text-gray-600">Try adjusting your search or filter criteria.</p>
+          </div>
+        )}
+
+        {/* CTA Section */}
+        <section className="mt-20 text-center">
+          <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 md:p-12 text-white">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Start Your Project?</h2>
+            <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
+              Let&apos;s work together to bring your vision to life with cutting-edge technology solutions.
+            </p>
+            <Link
+              href="/contact"
+              className="bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors duration-300 inline-flex items-center"
+            >
+              Start Your Project
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
+          </div>
+        </section>
+      </main>
+
+      {/* Footer */}
+      <footer className="bg-white border-t">
+        <div className="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-4">Zion Tech</h3>
+              <p className="text-gray-600">
+                Transforming businesses through innovative technology solutions.
+              </p>
+            </div>
+            <div>
+              <h4 className="text-sm font-semibold text-gray-900 mb-4">Services</h4>
+              <ul className="space-y-2">
+                <li><Link href="/services" className="text-gray-600 hover:text-blue-600">Web Development</Link></li>
+                <li><Link href="/services" className="text-gray-600 hover:text-blue-600">Mobile Apps</Link></li>
+                <li><Link href="/services" className="text-gray-600 hover:text-blue-600">Cloud Solutions</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="text-sm font-semibold text-gray-900 mb-4">Company</h4>
+              <ul className="space-y-2">
+                <li><Link href="/about" className="text-gray-600 hover:text-blue-600">About Us</Link></li>
+                <li><Link href="/portfolio" className="text-gray-600 hover:text-blue-600">Portfolio</Link></li>
+                <li><Link href="/contact" className="text-gray-600 hover:text-blue-600">Contact</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="text-sm font-semibold text-gray-900 mb-4">Connect</h4>
+              <p className="text-gray-600 mb-2">hello@ziontech.com</p>
+              <p className="text-gray-600">+1 (555) 123-4567</p>
+            </div>
+          </div>
+          <div className="border-t mt-8 pt-8 text-center">
+            <p className="text-gray-500">&copy; 2024 Zion Tech Solutions. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+}
