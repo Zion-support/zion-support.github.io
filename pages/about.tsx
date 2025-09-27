@@ -1,144 +1,61 @@
-import React from "react";
-import Head from "next/head";
-import Link from "next/link";
-import { useState, useEffect } from "react";
-import SEO from "../src/components/SEO";
-import { useAnalytics } from "../src/hooks/useAnalytics";
+import React, { useState, useEffect } from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import SEO from '../src/components/SEO';
+import { useAnalytics } from '../src/hooks/useAnalytics';
 
-const About = React.memo(function About(): JSX.Element {
-	const [isVisible, setIsVisible] = useState(false);
+export default function About(): JSX.Element {
+  const [isVisible, setIsVisible] = useState(false);
 
-	useEffect(() => {
-		setIsVisible(true);
-	}, []);
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
 
-	// Analytics tracking
-	const { trackClick } = useAnalytics();
+  const { trackClick } = useAnalytics();
 
-	const teamMembers = [
-		{
-			name: "John Smith",
-			role: "CEO & Founder",
-			description: "Visionary leader with 15+ years in tech innovation",
-			image: "/images/team/john.jpg"
-		},
-		{
-			name: "Sarah Johnson",
-			role: "CTO",
-			description: "Technical architect specializing in scalable solutions",
-			image: "/images/team/sarah.jpg"
-		},
-		{
-			name: "Mike Chen",
-			role: "Lead Developer",
-			description: "Full-stack expert passionate about modern frameworks",
-			image: "/images/team/mike.jpg"
-		}
-	];
-
-	const values = [
-		{
-			title: "Innovation First",
-			description: "We stay at the forefront of technology, constantly exploring new possibilities and pushing boundaries.",
-			icon: '🚀',
-			color: "blue"
-		},
-		{
-			title: "Client Success",
-			description: "Your success is our success. We measure our achievements by the value we deliver to our clients.",
-			icon: '🎯',
-			color: "green"
-		},
-		{
-			title: "Collaborative Approach",
-			description: "We believe in the power of collaboration, working as an extension of your team to achieve shared goals.",
-			icon: '🤝',
-			color: "orange"
-		}
-	];
-
-	const stats = [
-		{ number: "100+", label: "Projects Completed" },
-		{ number: "50+", label: "Happy Clients" },
-		{ number: "10+", label: "Years Experience" },
-		{ number: "24/7", label: "Support Available" }
-	];
-
-	return (
-		<>
-			<SEO />
-			<Head>
-				<title>About Us - Zion App</title>
-				<meta name="description" content="Learn about Zion App's mission, values, and commitment to delivering cutting-edge technology solutions." />
-				<meta name="viewport" content="width=device-width, initial-scale=1" />
-			</Head>
-			<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 pt-20">
-				<div className="container mx-auto px-4 py-8 max-w-7xl">
-					<nav className="mb-8">
-						<Link href="/" className="text-blue-600 hover:text-blue-800 font-medium transition-colors">
-							← Back to Home
-						</Link>
-					</nav>
-
-					{/* Hero Section */}
-					<section className="text-center mb-16">
-						<h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-							About Zion App
-						</h1>
-						<p className="text-xl text-gray-600 max-w-3xl mx-auto">
-							We are a team of passionate technologists dedicated to delivering innovative solutions that drive digital transformation and business growth.
-						</p>
-					</section>
-
-					{/* Stats Section */}
-					<section className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
-						{stats.map((stat, index) => (
-							<div key={index} className="text-center">
-								<div className="text-3xl font-bold text-blue-600 mb-2">{stat.number}</div>
-								<div className="text-gray-600">{stat.label}</div>
-							</div>
-						))}
-					</section>
-
-					{/* Values Section */}
-					<section className="mb-16">
-						<h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Our Values</h2>
-						<div className="grid md:grid-cols-3 gap-8">
-							{values.map((value, index) => (
-								<div key={index} className="bg-white rounded-lg p-6 shadow-lg">
-									<div className="text-4xl mb-4">{value.icon}</div>
-									<h3 className="text-xl font-semibold text-gray-900 mb-3">{value.title}</h3>
-									<p className="text-gray-600">{value.description}</p>
-								</div>
-							))}
-						</div>
-					</section>
-
-					{/* Team Section */}
-					<section className="mb-16">
-						<h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Meet Our Team</h2>
-						<div className="grid md:grid-cols-3 gap-8">
-							{teamMembers.map((member, index) => (
-								<div key={index} className="bg-white rounded-lg p-6 shadow-lg text-center">
-									<div className="w-24 h-24 bg-gray-200 rounded-full mx-auto mb-4"></div>
-									<h3 className="text-xl font-semibold text-gray-900 mb-2">{member.name}</h3>
-									<p className="text-blue-600 font-medium mb-3">{member.role}</p>
-									<p className="text-gray-600">{member.description}</p>
-								</div>
-							))}
-						</div>
-					</section>
-
-					{/* CTA Section */}
-					<section className="text-center bg-blue-600 rounded-lg p-8 text-white">
-						<h2 className="text-3xl font-bold mb-4">Ready to Work With Us?</h2>
-						<p className="text-xl mb-6">Let's discuss how we can help transform your business with cutting-edge technology.</p>
-						<Link href="/contact" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-							Get Started Today
-						</Link>
-					</section>
-				</div>
-			</div>
-		</>
-	);
-}
+  return (
+    <>
+      <SEO 
+        title='About Us - Zion Tech Group'
+        description='Learn about Zion Tech Group and our mission to transform businesses through technology.'
+        keywords='about, company, mission, technology'
+      />
+      <Head>
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
+      </Head>
+      <main className='min-h-screen bg-gray-50'>
+        <div className='container mx-auto px-4 py-20'>
+          <h1 className='text-4xl font-bold text-center mb-8'>About Zion Tech Group</h1>
+          <div className='max-w-4xl mx-auto'>
+            <p className='text-xl text-gray-600 mb-8'>
+              We are a leading technology company dedicated to transforming businesses through innovative solutions.
+            </p>
+            <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
+              <div className='bg-white p-6 rounded-lg shadow-md'>
+                <h2 className='text-2xl font-bold mb-4'>Our Mission</h2>
+                <p className='text-gray-600'>
+                  To empower businesses with cutting-edge technology solutions that drive growth and innovation.
+                </p>
+              </div>
+              <div className='bg-white p-6 rounded-lg shadow-md'>
+                <h2 className='text-2xl font-bold mb-4'>Our Vision</h2>
+                <p className='text-gray-600'>
+                  To be the global leader in technology transformation and digital innovation.
+                </p>
+              </div>
+            </div>
+            <div className='text-center mt-12'>
+              <Link 
+                href='/contact'
+                className='bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors'
+                onClick={() => trackClick('about-contact', 'navigation')}
+              >
+                Get In Touch
+              </Link>
+            </div>
+          </div>
+        </div>
+      </main>
+    </>
+  );
+};
