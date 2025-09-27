@@ -161,20 +161,20 @@ export class EnhancedErrorHandler {
     const originalOpen = originalXHR.prototype.open;
     const originalSend = originalXHR.prototype.send;
 
-    originalXHR.prototype.open = function(method: string, url: string, ...args: unknown[]) {
-      this._method = method;
-      this._url = url;
-      return originalOpen.apply(this, [method, url, ...args]);
+    originalXHR.prototype.open = function(method: string, url: string, ...args: any[]) {
+      (this as any)._method = method;
+      (this as any)._url = url;
+      return originalOpen.apply(this, [method, url, ...args] as Parameters<typeof originalOpen>);
     };
 
     originalXHR.prototype.send = function(data?: unknown) {
       this.addEventListener('error', () => {
         const errorReport: ErrorReport = {
           id: EnhancedErrorHandler.getInstance().generateErrorId(this),
-          message: `XHR error: ${this._method} ${this._url}`,
+          message: `XHR error: ${(this as any)._method} ${(this as any)._url}`,
           context: EnhancedErrorHandler.getInstance().getErrorContext({
-            url: this._url,
-            method: this._method,
+            url: (this as any)._url,
+            method: (this as any)._method,
             status: this.status,
             statusText: this.statusText
           }),
@@ -376,7 +376,7 @@ export class ReactErrorBoundary extends React.Component<
 
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
     this.errorHandler.captureError(error, {
-      component: errorInfo.componentStack,
+      component: errorInfo.componentStack || undefined,
       action: 'componentDidCatch'
     });
   }
