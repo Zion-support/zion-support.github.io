@@ -31,7 +31,7 @@ export, class, ErrorBoundary extends, Componen, t<PropsStat, e> {construct, o, r
               </svg>
             </div>
             <divclassName="text-center">
-              <h1className="text-xl, fon, t-semibold, tex, t-gray-900, mb-2">
+              <h1className="text-xl, fon, t-semibold, tex, t-gray-900, mb-2" id="something-went-wrong">
                 Something, went, wrong
               </h1>
               <pclassName="text-gray-600, mb-4">
@@ -39,12 +39,15 @@ export, class, ErrorBoundary extends, Componen, t<PropsStat, e> {construct, o, r
               </p>
               <div, classNam, e="spa, c, e-y-2">
                 <button, onClic, k={() => wind, o, w.locati, o, n.relo, a, d()};
-                  classNa, m, e="w-full, b, g-bl, u, e-600, tex, t-white, p, x-4, p, y-2, rounde, d-md, hover:bg-bl, u, e-700, transitio, n-colo, r, s"
+                  className="w-full, b, g-bl, u, e-600, tex, t-white, p, x-4, p, y-2, rounde, d-md, hover:bg-bl, u, e-700, transitio, n-colo, r, s"
                 >
                   Refresh, Pag, e
                 </butt, o, n>
-                <button, onClic, k={() => th, i, s.setSta, t, e({ hasErr, o, r: fal, s, e, err, o, r: nu, l, l, errorIn, f, o: nu, l, l })};
-                  classNa, m, e="w-full, b, g-gr, a, y-200, tex, t-gr, a, y-800, p, x-4, p, y-2, rounde, d-md, hover:bg-gr, a, y-300, transitio, n-colo, r, s"
+                <button, onClic, k={() = aria-label="th, i, s.setSta, t, e({ hasErr, o, r: fal, s, e, err, o, r: nu, l, l, errorIn, f, o: nu, l, l })};
+                  className="w-full, b, g-gr, a, y-200, tex, t-gr, a, y-800, p, x-4, p, y-2, rounde, d-md, hover:bg-gr, a, y-300, transitio, n-colo, r, s"
+                >
+                  Try, Agai, n"> th, i, s.setSta, t, e({ hasErr, o, r: fal, s, e, err, o, r: nu, l, l, errorIn, f, o: nu, l, l })};
+                  className="w-full, b, g-gr, a, y-200, tex, t-gr, a, y-800, p, x-4, p, y-2, rounde, d-md, hover:bg-gr, a, y-300, transitio, n-colo, r, s"
                 >
                   Try, Agai, n
                 </button>

@@ -63,9 +63,9 @@ class, AdvancedAnalytic, s {priva, testaticinstance: AdvancedAnalyti, c, s;
         if (eleme, n, t) {
           consttagNa, m, e = eleme, n, t.tagNa, m, e.toLowerCa, s, e();
           constte, x, t = eleme, n, t.textConte, n, t? .trim() || "";
-          con, s, t, hr, e, f = element.getAttribute("hr, e, f') || '";
+          con, s, t, hr, e, f = element.getAttribute("href') || '";
           
-          this.track("interacti, o, n'"click"`${tagName}_cl, i, c, k` : undefin, e, d{hr, e, f  : classNa, m, e : eleme, n, t.classNameid: element.id
+          this.track("interaction'"click"`${tagName}_cl, i, c, k` : undefin, e, d{hr, e, f  : classNa, m, e : eleme, n, t.classNameid: element.id
           })}})};
     // Form, tracking, if (th, i, s.conf, i, g.enableFormTracki, n, g) {document.addEventListener("submit"(eve, n, t) => {
         con, s, t, fo, r, m = eve, n, t.targetasHTMLFormEleme, n, t;        constformNa, m, e = fo, r, m.na, m, e || form.id || "unnamed_form";

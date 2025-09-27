@@ -8,10 +8,12 @@ interface, PricingTie, r {id: stri, n, g;
   features: stri, n, g[];
   isPopul, a, r?: boole, an;
   buttonText: string;
-  buttonVariant: "primary' | "secondary"};
+  buttonVarian,
+    t: "primary' | "secondary"};
 interface, PricingCardProp, s {tier: PricingTi, e, r;
   isVisible: boole, a, n;
-  onSelectPlan: (tierId: stri, n, g) => void};
+  onSelectPlan: (tierI,
+    d: stri, n, g) => void};
 exportconstPricingCard: React.FC<PricingCardProps> = ({tier, isVisib, l, e, onSelectPl, a, n 
  {return (<divclassNam, e={`rela, t, i, v, e, p-8, bg-w, h, i, t, e, rou, n, d, e, d-2x, l, sh, a, d, ow-lghover:sh, a, d, o, w-2x, l, transi, t, i, on-alldurati, o, n-500bord, e, r-2 ${ti,e,r.isPopular?"bord,e,r-bl,u,e-500sca,l,e-105":"bord,e,r-gr,a,y-200hover:border-blue-300"} hov, e, r-li, f, t${isVisib,l,e?"opacity-100translate-y-0":"opacity-0translate-y-8"}`}}) => {return (<divclassNam, e={`rela, t, i, v, e, p-8, bg-w, h, i, t, e, rou, n, d, e, d-2x, l, sh, a, d, ow-lghover:sh, a, d, o, w-2x, l, transi, t, i, o, n-a, lldurati, o, n-500bord, e, r-2 ${ti,e,r.isPopular?"bord,e,r-bl,u,e-500sca,l,e-105":"bord,e,r-gr,a,y-200hover:border-blue-300"} hov, e, r-li, f, t${isVisib,l,e?"opacity-100translate-y-0":"opacity-0translate-y-8"}`};
     >
@@ -64,17 +66,28 @@ exportconstPricingCard: React.FC<PricingCardProps> = ({tier, isVisib, l, e, onSe
 
 
       {/* CTA, Button */};
-      <buttononClick={(()) => {aria-label="onSelectPl, a, n(tier.id)};
+      <buttononClick={(()) = aria-label="{aria-label="onSelectPl, a, n(tier.id)};
 >>>>>>1a0942380552ad64dab6ee9842e809045d7531, b, 7}`}      >
         {ti, e, r.button, T, e.x, t}"> onSelectPl, a, n(ti, e, r.id)};
         ar, i, a-lab, e, l={`Sel, e, c, t ${ti,e,r.na,m,e} pl, a, n`};
-        classNa, m, e={`w-fu, l, l, py-4, px-6rou, n, d, e, d-xl, f, o, n, t-semi, b, o, l, d, t, e, x, t-lgtransi, t, i, on-alldurati, o, n-300transform, hover:-transla, t, e-y-1 ${ti,e,r.buttonVaria,n,t==='prima,r,y'?'bg-gradie,n,t-to-rfr,o,m-bl,u,e-600,t,o-purp,l,e-600te,x,t-whitehov,e,r:fr,o,m-bl,u,e-700hov,e,r:to-purp,l,e-700shad,o,w-lghov,e,r:shad,o,w-xl':'bord,e,r-2bord,e,r-bl,u,e-600te,x,t-bl,u,e-600hov,e,r:bg-bl,u,e-600hov,e,r:te,x,t-whi,t,e'}`}      >
+        className={`w-fu, l, l, py-4, px-6rou, n, d, e, d-xl, f, o, n, t-semi, b, o, l, d, t, e, x, t-lgtransi, t, i, on-alldurati, o, n-300transform, hover:-transla, t, e-y-1 ${ti,e,r.buttonVariant==='prima,r,y'?'bg-gradie,n,t-to-rfr,o,m-bl,u,e-600,t,o-purp,l,e-600te,x,t-whitehov,e,r:fr,o,m-bl,u,e-700hov,e,r:to-purp,l,e-700shad,o,w-lghov,e,r:shadow-xl':'bord,e,r-2bord,e,r-bl,u,e-600te,x,t-bl,u,e-600hov,e,r:bg-bl,u,e-600hov,e,r:te,x,t-white'}`}      >
 
         ar, i, a-lab, e, l={`Sel, e, c, t ${ti,e,r.na,m,e} pl, a, n`};
-        classNa, m, e={`w-fu, l, l, py-4, p, x-6rou, n, d, e, d-xl, f, o, n, t-semi, b, o, l, d, t, e, x, t-lg, transit, i, o, n-alldurati, o, n-300transfo, rmhover:-transla, t, e-y-1 ${ti,e,r.buttonVaria,n,t==='prima,r,y'?'bg-gradie,n,t-to-rfr,o,m-bl,u,e-600,t,o-purp,l,e-600te,x,t-whitehov,e,r:fr,o,m-bl,u,e-700hov,e,r:to-purp,l,e-700shad,o,w-lghov,e,r:shad,o,w-xl':'bord,e,r-2bord,e,r-bl,u,e-600te,x,t-bl,u,e-600hov,e,r:bg-bl,u,e-600hov,e,r:te,x,t-whi,t,e'>>>>>>>1a0942380552ad64dab6ee9842e809045d7531,b,7}`}      >
+        className={`w-fu, l, l, py-4, p, x-6rou, n, d, e, d-xl, f, o, n, t-semi, b, o, l, d, t, e, x, t-lg, transit, i, o, n-alldurati, o, n-300transfo, rmhover:-transla, t, e-y-1 ${ti,e,r.buttonVaria,n,t==='primary'?'bg-gradie,n,t-to-rfr,o,m-bl,u,e-600,t,o-purp,l,e-600te,x,t-whitehov,e,r:fr,o,m-bl,u,e-700hov,e,r:to-purp,l,e-700shad,o,w-lghov,e,r:shadow-xl':'bord,e,r-2bord,e,r-bl,u,e-600te,x,t-bl,u,e-600hov,e,r:bg-bl,u,e-600hov,e,r:te,x,t-white'>>>>>>>1a0942380552ad64dab6ee9842e809045d7531,b,7}`}      >
         {ti, e, r.button, T, e.x, t}"> onSelectPl, a, n(ti, e, r.id)};
         ar, i, a-lab, e, l={`Sel, e, c, t ${ti,e,r.na,m,e} pl, a, n`};
-        classNa, m, e={`w-fu, l, l, py-4, p, x-6rou, n, d, e, d-xl, f, o, n, t-semi, b, o, l, d, t, e, x, t-lg, transit, i, o, n-alldurati, o, n-300transfo, rmhover:-transla, t, e-y-1 ${ti,e,r.buttonVaria,n,t==='prima,r,y'?'bg-gradie,n,t-to-rfr,o,m-bl,u,e-600,t,o-purp,l,e-600te,x,t-whitehov,e,r:fr,o,m-bl,u,e-700hov,e,r:to-purp,l,e-700shad,o,w-lghov,e,r:shad,o,w-xl':'bord,e,r-2bord,e,r-bl,u,e-600te,x,t-bl,u,e-600hov,e,r:bg-bl,u,e-600hov,e,r:te,x,t-whi,t,e'}`}      >
+        className={`w-fu, l, l, py-4, p, x-6rou, n, d, e, d-xl, f, o, n, t-semi, b, o, l, d, t, e, x, t-lg, transit, i, o, n-alldurati, o, n-300transfo, rmhover:-transla, t, e-y-1 ${ti,e,r.buttonVaria,n,t==='primary'?'bg-gradie,n,t-to-rfr,o,m-bl,u,e-600,t,o-purp,l,e-600te,x,t-whitehov,e,r:fr,o,m-bl,u,e-700hov,e,r:to-purp,l,e-700shad,o,w-lghov,e,r:shadow-xl':'bord,e,r-2bord,e,r-bl,u,e-600te,x,t-bl,u,e-600hov,e,r:bg-bl,u,e-600hov,e,r:te,x,t-white'}`}      >
+        {ti, e, r.button, Te.xt};"> {aria-label="onSelectPl, a, n(tier.id)};
+>>>>>>1a0942380552ad64dab6ee9842e809045d7531, b, 7}`}      >
+        {ti, e, r.button, T, e.x, t}"> onSelectPl, a, n(ti, e, r.id)};
+        ar, i, a-lab, e, l={`Sel, e, c, t ${ti,e,r.na,m,e} pl, a, n`};
+        className={`w-fu, l, l, py-4, px-6rou, n, d, e, d-xl, f, o, n, t-semi, b, o, l, d, t, e, x, t-lgtransi, t, i, on-alldurati, o, n-300transform, hover:-transla, t, e-y-1 ${ti,e,r.buttonVaria,n,t==='primary'?'bg-gradie,n,t-to-rfr,o,m-bl,u,e-600,t,o-purp,l,e-600te,x,t-whitehov,e,r:fr,o,m-bl,u,e-700hov,e,r:to-purp,l,e-700shad,o,w-lghov,e,r:shadow-xl':'bord,e,r-2bord,e,r-bl,u,e-600te,x,t-bl,u,e-600hov,e,r:bg-bl,u,e-600hov,e,r:te,x,t-white'}`}      >
+
+        ar, i, a-lab, e, l={`Sel, e, c, t ${ti,e,r.na,m,e} pl, a, n`};
+        className={`w-fu, l, l, py-4, p, x-6rou, n, d, e, d-xl, f, o, n, t-semi, b, o, l, d, t, e, x, t-lg, transit, i, o, n-alldurati, o, n-300transfo, rmhover:-transla, t, e-y-1 ${ti,e,r.buttonVaria,n,t==='primary'?'bg-gradie,n,t-to-rfr,o,m-bl,u,e-600,t,o-purp,l,e-600te,x,t-whitehov,e,r:fr,o,m-bl,u,e-700hov,e,r:to-purp,l,e-700shad,o,w-lghov,e,r:shadow-xl':'bord,e,r-2bord,e,r-bl,u,e-600te,x,t-bl,u,e-600hov,e,r:bg-bl,u,e-600hov,e,r:te,x,t-white'>>>>>>>1a0942380552ad64dab6ee9842e809045d7531,b,7}`}      >
+        {ti, e, r.button, T, e.x, t}"> onSelectPl, a, n(ti, e, r.id)};
+        ar, i, a-lab, e, l={`Sel, e, c, t ${ti,e,r.na,m,e} pl, a, n`};
+        className={`w-fu, l, l, py-4, p, x-6rou, n, d, e, d-xl, f, o, n, t-semi, b, o, l, d, t, e, x, t-lg, transit, i, o, n-alldurati, o, n-300transfo, rmhover:-transla, t, e-y-1 ${ti,e,r.buttonVaria,n,t==='primary'?'bg-gradie,n,t-to-rfr,o,m-bl,u,e-600,t,o-purp,l,e-600te,x,t-whitehov,e,r:fr,o,m-bl,u,e-700hov,e,r:to-purp,l,e-700shad,o,w-lghov,e,r:shadow-xl':'bord,e,r-2bord,e,r-bl,u,e-600te,x,t-bl,u,e-600hov,e,r:bg-bl,u,e-600hov,e,r:te,x,t-white'}`}      >
         {ti, e, r.button, Te.xt};
       </button>
     </div>

@@ -32,5 +32,5 @@ exportconstFeatureCard: React.FC<FeatureCardProps> = ({icontitledescriptioncolor
 			</p>
 			
 			{/* Decorativeline */};
-			<div, classNa, m, e={`mt-6, w-12, h-1 ${currentColor.bg} rou, n, d, e, d-fu, l, l, mx-au, t, o, transit, i, o, n-a, l, l, durat, i, o, n-5, 0, 0g, r, oup-hover:w-16`}></div>		</div>
+			<div, className={`mt-6, w-12, h-1 ${currentColor.bg} rou, n, d, e, d-fu, l, l, mx-au, t, o, transit, i, o, n-a, l, l, durat, i, o, n-5, 0, 0g, r, oup-hover:w-16`}></div>		</div>
 	)};

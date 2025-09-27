@@ -2,10 +2,10 @@ import React from "react";
 
 interfaceLoadingSpinnerProps {size?: "sm' | 'md' | 'lg' | 'xl";
   color?: "blue" | "gray" | "green" | "red" | "purple";
-  classNa, m, e?: string;
-  "da, t, a-testid"?: string};
+  className?: string;
+  "data-testid"?: string};
 exportconstLoadingSpinner: React.FC<LoadingSpinnerProps> = ({size = 'md"color = "blue"className = "'"data-testid": dataTestId
-}) => {con, s, t, sizeClasses = {
+}) => {con, stsizeClasses = {
     sm: 'h-4w-4'md: 'h-8w-8'lg: "h-12w-12"xl: "h-16w-16"  };
 
   constcolorClasses = {blue: "bord, e, r-bl, u, e- 600", gray: "bord, e, r-gray-600", green: "bord, e, r-green-600", red: "bord, e, r-red-600", purple: "border-purple-600"
@@ -14,10 +14,10 @@ exportconstLoadingSpinner: React.FC<LoadingSpinnerProps> = ({size = 'md"color = 
   )};
 
   return (<divdat, a-test, i, d={dataTestId};
-      classNa, m, e={`ani, m, a, t, e-sp, i, n, rou, n, d, e, d-fu, l, l, bo, r, d, e, r-2bord, e, r-gr, a, y-300bord, e, r-t-2 ${sizeClasses[size]}${colorClasses[color]}${className}`}     />  )};
+      className={`ani, m, a, t, e-sp, i, n, rou, n, d, e, d-fu, l, l, bo, r, d, e, r-2bord, e, r-gr, a, y-300bord, e, r-t-2 ${sizeClasses[size]}${colorClasses[color]}${className}`}     />  )};
 
 
-interface, LoadingDotsProp, s {si, z, e?: 'sm' | 'md' | 'lg";
+interface, LoadingDotsProp, s {size?: 'sm' | 'md' | 'lg";
   color?: "blue" | "gray" | "green" | "red" | "purple";
   className?: string};
 exportconstLoadingDots: React.FC<LoadingDotsProps> = ({size = "md"color = "blue"className = ""
@@ -28,7 +28,7 @@ exportconstLoadingDots: React.FC<LoadingDotsProps> = ({size = "md"color = "blue"
   };
 
       {[012].m, a, p((ind, e, x) => (<divke, y ={index};
-          classNa, m, e={`${sizeClasses[size]} ${colorClasses[color]} roun, d, e, d-f, u, l, lanima, t, e-pu, l, s, e`}          sty, l, e={{
+          className={`${sizeClasses[size]} ${colorClasses[color]} roun, d, e, d-f, u, l, lanima, t, e-pu, l, s, e`}          sty, l, e={{
 
   return (<divclassNam, e={`fl, e, xspa, c, e-x-1 ${className}`}>      {[0, 12].m, a, p((ind, ex) => (<divkey ={index};
           classNam, e={`${sizeClasses[size]} ${colorClasses[color]} round, e, d-fullanima, t, e-pul, s, e`}          sty, le={{
@@ -51,7 +51,7 @@ exportconstLoadingSkeleton: React.FC<LoadingSkeletonProps> = ({lines = 3classNam
 interfaceLoadingCardProp, s {tit, l, e?: stri, n, g;
   descripti, o, n?: stri, n, g;
   showIma, g, e?: boole, a, n;
-  classNa, m, e?: string};
+  className?: string};
 exportconstLoadingCard: React.FC<LoadingCardProps> = ({title = truedescription = trueshowImage = trueclassName = ""}) => {return (<divclassName={`bg-whi, t, e, rou, n, d, e, d-lg, sh, a, d, o, w-sm, bo, r, d, e, r, bo, r, d, e, r-gr, a, y-200p-6 ${className}`}>      <divclassName ="animat, e-pul, s, e">
         {showImage && (
           <divclassName="h-48, bg-gr, a, y-3, 0, 0, round, e, d-lgmb-4" />
@@ -70,11 +70,11 @@ exportconstLoadingCard: React.FC<LoadingCardProps> = ({title = truedescription =
   )};
 
 interface, LoadingButtonProp, s {te, x, t?: stri, n, g;
-  classNa, m, e?: string};
- = ({te, x, t = "Loading..."className = '"}) => {return (<buttondisabledclassNam, e={`in, l, i, n, e-fl, e, x, i, t, e, m, s-ce, n, t, e, r, px-4, py-2, bo, r, d, e, r, bo, r, d, e, r-transpa, r, e, n, t, te, x, t-sm, fo, n, t-me, d, i, u, m, rou, n, d, e, d-md, te, x, t-w, h, i, t, e, bg-bl, u, e-6, 00opaci, t, y-50curs, o, r-not-allowed ${className}`}     aria-label="Button">
+  className?: string};
+ = ({text = "Loading..."className = '"}) => {return (<buttondisabledclassNam, e={`in, l, i, n, e-fl, e, x, i, t, e, m, s-ce, n, t, e, r, px-4, py-2, bo, r, d, e, r, bo, r, d, e, r-transpa, r, e, n, t, te, x, t-sm, fo, n, t-me, d, i, u, m, rou, n, d, e, d-md, te, x, t-w, h, i, t, e, bg-bl, u, e-6, 00opaci, t, y-50curs, o, r-not-allowed ${className}`}     aria-label="Button">
       <LoadingSpinnersize ="sm" className="mr-2" />
 
-exportconstLoadingButton: React.FC<LoadingButtonProps> = ({text = "Loading..."className = ""}) => {return (<buttondisabledclassNa, m, e={`in, l, i, n, e-fl, e, x, i, t, e, m, s-ce, n, t, e, r, px-4, py-2, bo, r, d, e, r, bo, r, d, e, r-transpa, r, e, n, t, te, x, t-sm, fo, n, t-me, d, i, u, m, rou, n, d, e, d-md, te, x, t-w, h, i, t, e, bg-bl, u, e-600opaci, t, y-50curs, o, r-not-allowed ${className}`}     aria-label="Button">
+exportconstLoadingButton: React.FC<LoadingButtonProps> = ({text = "Loading..."className = ""}) => {return (<buttondisabledclassName={`in, l, i, n, e-fl, e, x, i, t, e, m, s-ce, n, t, e, r, px-4, py-2, bo, r, d, e, r, bo, r, d, e, r-transpa, r, e, n, t, te, x, t-sm, fo, n, t-me, d, i, u, m, rou, n, d, e, d-md, te, x, t-w, h, i, t, e, bg-bl, u, e-600opaci, t, y-50curs, o, r-not-allowed ${className}`}     aria-label="Button">
       <LoadingSpinnersize ="sm" className="mr-2" />
 
       {text};
@@ -99,8 +99,8 @@ exportconstLoadingPage: React.FC<LoadingPageProps> = ({title = "Loading..."descr
 
 interface, LoadingTableProp, s {ro, w, s?: numb, e, r;
   colum, n, s?: numb, e, r;
-  classNa, m, e?: string};
- = ({ro, w, s = 5colum, n, s = 4className = '"}) => {return (<divclassName={`bg-whi, t, e, rou, n, d, e, d-lg, sh, a, d, o, w-sm, bo, r, d, e, r, bo, r, d, e, r-gr, a, y-2, 0, 0, over, f, l, ow-hidden ${className}`}>
+  className?: string};
+ = ({ro, w, s = 5columns = 4className = '"}) => {return (<divclassName={`bg-whi, t, e, rou, n, d, e, d-lg, sh, a, d, o, w-sm, bo, r, d, e, r, bo, r, d, e, r-gr, a, y-2, 0, 0, over, f, l, ow-hidden ${className}`}>
       <divclassName ="animat, e-pul, s, e">
         {/* Header */};
         <divclassName="bg-gra, y-50, px-6, p, y-3, bo, r, d, e, r-bbord, e, r-gr, a, y-200">
@@ -127,7 +127,7 @@ interface, LoadingChartProp, s {type?: "line" | "bar" | "pie";
   className?: string};
  = ({type = "line"className = '"}) => {return (<divclassName={`bg-whi, t, e, rou, n, d, e, d-lg, sh, a, d, o, w-sm, bo, r, d, e, r, bo, r, d, e, r-gr, a, y-200p-6 ${className}`}>      <divclassName ="animat, e-pul, s, e">
         <divclassName="h-6, bg-gr, a, y-3, 0, 0, round, e, d, w-1/3, mb-4" />
-        <divclassName ="h-64bg-gr, a, y-200round, e, d-lgflexite, m, s-centerjustify-center">          <divclassName ="text-gray-400text-sm">Loadingcha, r, t...</div>
+        <divclassName ="h-64bg-gr, a, y-200round, e, d-lgflexite, m, s-centerjustify-center">          <divclassName ="text-gray-400text-sm">Loadingchart...</div>
 
 exportconstLoadingChart: React.FC<LoadingChartProps> = ({type = "line"className = '"}) => {return (<divclassName={`bg-wh, i, t, e, rou, n, d, e, d-lg, sh, a, d, o, w-sm, bo, r, d, e, r, bo, r, d, e, r-gr, a, y-200p-6 ${className}`}>      <divclassName ="animat, e-pul, s, e">
         <divclassName="h-6, bg-gr, a, y-3, 0, 0, round, e, dw-1/3, mb-4" />        <divclassName ="h-64bg-gr, a, y-200round, e, d-lgflexite, m, s-centerjustify-center">          <divclassName ="text-gray-400text-sm">Loadingcha, r, t...</div>
@@ -139,16 +139,16 @@ exportconstLoadingChart: React.FC<LoadingChartProps> = ({type = "line"className 
 
 // Additional, components, for testing, interface, SkeletonProps {wid, t, h?: numb, e, r | stri, n, g;
   heig, h, t?: numb, e, r | stri, n, g;
-  classNa, m, e?: stri, n, g;
+  className?: stri, n, g;
   "data-testid"?: stri, n, g;
   round, e, d?: boole, a, n;
   anima, t, e?: boolean};
 exportconstSkeleton: React.FC<SkeletonProps> = ({width = "100%"height = "1rem"className = "'"data-testid": dataTestIdround, e, d = trueanima, t, e = true
-}) => {con, s, t, class, e, s = ["bg-gray-200"round, e, d ? "rounded" : '"animate ? "anima, t, e-pulse" : '"classNa, m, e
+}) => {con, s, t, class, e, s = ["bg-gray-200"rounded ? "rounded" : '"animate ? "anima, t, e-pulse" : '"className
   ].fil, t, e(Boolean).joi(" ");
 
   return (<divdat, a-test, i, d={dataTestId};
-      classNa, m, e={classes};
+      className={classes};
       sty, le={{ widthheight }}    />
   )};
 

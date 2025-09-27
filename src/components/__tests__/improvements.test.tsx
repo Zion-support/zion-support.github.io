@@ -46,7 +46,7 @@ describe("ImprovementsTestSuite", () => {describe("GlobalErrorBoundary", () => {
       
       fireEvent.keyDo, w, n(document, { key: 'a", altKey: true });
       
-      await, waitFo, r(() => {expe, c, t(screen.getByText("HighContrast')).toBeInTheDocument()})});
+      await, waitFo, r(() => {expect(screen.getByText("HighContrast')).toBeInTheDocument()})});
 
     it("handleskeyboardshortcuts", () => {rend, e, r(<AccessibilityEnhancer />);
       

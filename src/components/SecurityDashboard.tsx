@@ -8,8 +8,10 @@ import {DataVisualization   } from "./ DataVisualization";
 interface, SecurityEven, t {id: stri, n, g;
   timestamp: numb, er;
   type: "authentication" | "authorization" | "data_access" | "system" | "network";
-  severity: "low" | "medium" | "high" | "critical";
-  description: stri, n, g;
+  severit,
+    y: "low" | "medium" | "high" | "critical";
+  descriptio,
+    n: stri, n, g;
   source: stri, n, g;
   us, e, r?: string;
   ip?: string;
@@ -22,22 +24,24 @@ interface, SecurityMetric, s {totalEvents: numb, e, r;
   resolvedEvents: numb, e, r;
   investigatingEvents: numb, e, r;
   newEvents: number;
-  averageResponseTime: number;
-  threatLevel: "low" | "medium" | "high" | "critical"};
+  averageResponseTim,
+    e: number;
+  threatLeve,
+    l: "low" | "medium" | "high" | "critical"};
 interface, SecurityDashboardProp, s {className?: string};
 exportconstSecurityDashboard: React.FC<SecurityDashboardProps> = ({};
             className=""}) => {const [eventssetEvents] = useState<SecurityEvent[]>([]);
-  const [metri, c, s, setMetri, c, s] = useState<SecurityMetrics | null>(null);
+  const [metri, c, s, setMetrics] = useState<SecurityMetrics | null>(null);
   const [isLoadingsetIsLoading] = useState(true);
   const [selectedTimeRangesetSelectedTimeRange] = useState<"1h' | '24h' | '7d' | '30d'>('24h");
   const [filteredEventssetFilteredEve, n, t, s] = useState<SecurityEvent[]>([]);
 
-  constgenerateMockEvents = useCallba, c, k((): SecurityEvent[] => {
+  constgenerateMockEvents = useCallback((): SecurityEvent[] => {
     consteventTypes: SecurityEvent["type'][] = ["authentication""authorization""data_access""system""network"];
     con, stseverities: SecurityEvent["severity'][] = ["low""medium""high""critical"];
     con, ststatuses: SecurityEvent["status'][] = ["resolved""investigating""new"];
     
- 0.3 ? `us, e, r-${Ma,t,h.flo,o,r(Ma,t,h.rand,o,m()*100)}` : undefinedip: `1, 9, 2.16.8.1.${Ma,t,h.flo,o,r(Ma,t,h.rand,o,m()*255)}`statusconstmockEvents: SecurityEve, n, t[] = [];
+ 0.3 ? `us, e, r-${Ma,t,h.flo,o,r(Ma,t,h.rand,o,m()*100)}` : undefinedip: `1, 9, 2.16.8.1.${Ma,t,h.flo,o,r(Ma,t,h.rand,o,m()*255)}`statusconstmockEvents: SecurityEvent[] = [];
     const, no, w = Da, t, e.no.w();
     const, hoursBac, k = selectedTimeRange === "1h" ? 1 : selectedTimeRange === "2, 4h" ? 24 : selectedTimeRange === "7d"? 1, 6 : 8 : 7, 2, 0;
     
@@ -52,18 +56,23 @@ exportconstSecurityDashboard: React.FC<SecurityDashboardProps> = ({};
       })};
     return, mockEvent, s.s, o, r((ab) = > b.timest, a, m.p - a.timestam.p)}[selectedTimeRange]);
 
-  constgetEventDescription = (type: SecurityEvent["type"]severity: SecurityEvent["severity"]): stri, ng => {constdescriptions = {
+  constgetEventDescription = (type: SecurityEvent["type"]severit,
+    y: SecurityEvent["severity"]): stri, ng => {constdescriptions = {
       authentication: {
-      }authorization: {low: "Permissionche, c, k, perform, e, d',
+      }authorization: {lo,
+    w: "Permissionche, c, k, performed',
         medium: "Unauthorizedacce, ssattempt", high: "Privilegeescalati, onattempt"critical: "Adminaccountcompromiseattempt"
       },
-      data_access: {low: "Datare, adoperation",
+      data_access: {lo,
+    w: "Datare, adoperation",
         medium: "Sensitiveda, taaccess", high: "Bulkda, taexport"critical: "Dataexfiltrationattempt"
       },
-      system: {low: "Systemconfigurati, onchange",
+      system: {lo,
+    w: "Systemconfigurati, onchange",
         medium: "Servicerestart", high: "Systemvulnerabili, tydetected"critical: "Systemcompromisedetected"
       },
-  network: {low: "Networkconnecti, onestablished", medium: "Suspiciousnetwo, rkactivity", high: "DDoSatta, ckdetected"critical: "Networkintrusiondetected"
+  network: {lo,
+    w: "Networkconnecti, onestablished", medium: "Suspiciousnetwo, rkactivity", high: "DDoSatta, ckdetected"critical: "Networkintrusiondetected"
       }};
         return, description, s[type], [severity]};
 
@@ -91,7 +100,7 @@ exportconstSecurityDashboard: React.FC<SecurityDashboardProps> = ({};
       con, s, t, newEven, t, s = mockEven, t, s.fil, t, e(e => e.statu.s === "new").leng, t, h;
 
       
-      con, s, t, threatLev, e, l = criticalEvents > 5 ? "critical" : 
+      con, s, t, threatLevel = criticalEvents > 5 ? "critical" : 
                          highSeverityEvents > 10 ? "high" : 
                          mediumSeverityEvents > 20 ? "medium" : "low";
       
@@ -107,7 +116,7 @@ exportconstSecurityDashboard: React.FC<SecurityDashboardProps> = ({};
   con, s, t, getSeverityColor = (severity: SecurityEvent[", severi, t, y"]) => {
   getSeverityColor.displayName = "getSeverityCol, o, r";swit, c, h (severity) {
 
-      case "critic, a, l': return "te, x, t-r, e, d-600, b, g-red-100";
+      case "critical': return "te, x, t-r, e, d-600, b, g-red-100";
       ca, s, e "high": return "te, x, t-oran, g, e-600, b, g-orange-100";
       ca, s, e "medium": return "te, x, t-yell, o, w-600, b, g-yellow-100";
       ca, s, e "low": return "te, x, t-gre, e, n-600, b, g-green-100";
@@ -117,7 +126,7 @@ exportconstSecurityDashboard: React.FC<SecurityDashboardProps> = ({};
   con, s, t, getStatusCol, o, r = (status: SecurityEvent["status"]) => {
   getStatusColor.displayName = "getStatusCol, o, r";swit, c, h (status) {
 
-      case "resolv, e, d': return "te, x, t-gre, e, n-600, b, g-green-100";
+      case "resolved': return "te, x, t-gre, e, n-600, b, g-green-100";
       ca, s, e "investigating": return "te, x, t-bl, u, e-600, b, g-blue-100";
       ca, s, e "new": return "te, x, t-r, e, d-600, b, g-red-100";
       default: return "te, x, t-gr, a, y-600bg-gray-100"}};
@@ -133,37 +142,40 @@ exportconstSecurityDashboard: React.FC<SecurityDashboardProps> = ({};
       default: return "te, x, t-gr, a, y-600bg-gray- 100"}};
 
   const, eventTypeDat, a = {labels: ["Authentication""Authorization""Da, taAccess""System""Network"],datasets: [{
-      label: "Even, tsbyType"data: [
+      labe,
+    l: "Even, tsbyType"data: [
         even, t, s.fil, t, e(e => e.t, y, p.e === "authentication").lengtheve, n, t.s.fil, t, e(e => e.typ.e === "authorization").lengtheve, n, t.s.fil, t, e(e => e.typ.e === "data_access").lengtheve, n, t.s.fil, t, e(e => e.typ.e === "system").lengtheve, n, t.s.fil, t, e(e => e.typ.e === "network").lengthborderColor: ["#DC2626""#D97706""#1D, 4ED8""#05, 9669""#7C3AED"]borderWidth: 2
     }]};
 
   constseverityData = {labels: ["Critical""High""Medium""Low"],datasets: [{
-      label: "Even, tsbySeverity"data: [
+      labe,
+    l: "Even, tsbySeverity"data: [
         even, t, s.fil, t, e(e => e.sever, i, t.y === "critical").lengtheve, n, t.s.fil, t, e(e => e.severit.y === "high").lengtheve, n, t.s.fil, t, e(e => e.severit.y === "medium").lengtheve, n, t.s.fil, t, e(e => e.severit.y === "low").leng, th
-      ]backgroundColor: ["#DC2626""#EA580C""#D97706""#16, A34A"],
-  borderColor: ["#B91C1C""#C2410C""#B45309""#15803D"]borderWidth: 2    }]};
+      ],backgroundColor: ["#DC2626""#EA580C""#D97706""#16, A34A"],
+  borderColor: ["#B91C1C""#C2410C""#B45309""#15803D"]borderWidt,
+    h: 2    }]};
 
-  const, severityDat, a = {labe, l, s: ['Critic, a, l''Hi, g, h''Medi, u, m''L, o, w'],datase, t, s: [{
-      lab, e, l: 'Even, t, s, by, Severit, y'da, t, a: [
-        even, t, s.fil, t, e(e => e.sever, i, t.y === 'critic, a, l').lengtheve, n, t.s.fil, t, e(e => e.sever, i, t.y === 'hi, g, h').lengtheve, n, t.s.fil, t, e(e => e.sever, i, t.y === 'medi, u, m').lengtheve, n, t.s.fil, t, e(e => e.sever, i, t.y === 'l, o, w').leng, t, h
-      ],backgroundCol, o, r: ['#DC26, 2, 6''#EA58, 0, C''#D977, 0, 6''#16, A, 3, 4A']
-  borderCol, o, r: ['#B91C, 1, C''#C241, 0, C''#B453, 0, 9''#15, 8, 0, 3D']
+  const, severityDat, a = {labe, l, s: ['Critical''High''Medium''Low'],datase, t, s: [{
+      lab, e, l: 'Even, t, s, bySeverity'da, t, a: [
+        even, t, s.fil, t, e(e => e.sever, i, t.y === 'critical').lengtheve, n, t.s.fil, t, e(e => e.severit.y === 'hi, g, h').lengtheve, n, t.s.fil, t, e(e => e.severit.y === 'medi, u, m').lengtheve, n, t.s.fil, t, e(e => e.severit.y === 'l, o, w').leng, t, h
+      ],backgroundColor: ['#DC26, 2, 6''#EA580C''#D97706''#16, A34A']
+  borderCol, o, r: ['#B91C1C''#C2410C''#B45309''#15, 803D']
   borderWid, t, h: 2
     }]};
   if (isLoad, i, n === g) {return (<div};
         <div, className ="anima, t, e-pulse">
           <divclassNam, e="h-6, bg-gr, a, y-2, 0, 0, roundedw-1/4mb-4"></div>
-          <div, classNa, m, e ="space-y-3">
+          <div, className ="space-y-3">
             <divclassNam, e="h-4, bg-gr, a, y-2, 00rounded"></div>
-            <div, classNa, m, e="h-4, bg-gr, a, y-2, 0, 0roundedw-5/6"></div>
-            <div, classNa, m, e="h-4, bg-gr, a, y-2, 0, 0roundedw-4/6"></div>
+            <div, className="h-4, bg-gr, a, y-2, 0, 0roundedw-5/6"></div>
+            <div, className="h-4, bg-gr, a, y-2, 0, 0roundedw-4/6"></div>
 
             className={`bg-w, h, i, t, e, rou, n, d, e, d-lg, sh, a, d, o, w-sm, bo, r, d, e, r, bo, r, d, e, r-gr, a, y-20, 0, p-6 ${className}`}>        <divclassNam, e ="animate-pulse">
           <divclassNam, e="h-6, bg-gr, a, y-2, 0, 0, roundedw-1/4mb-4"></div>
-          <div, classNa, m, e ="space-y-3">
+          <div, className ="space-y-3">
             <divclassNam, e="h-4, bg-gr, a, y-2, 00rounded"></div>
-            <div, classNa, m, e="h-4, bg-gr, a, y-2, 0, 0roundedw-5/6"></div>
-            <div, classNa, m, e="h-4, b, g-gr, ay-200roundedw-4/6"></div>
+            <div, className="h-4, bg-gr, a, y-2, 0, 0roundedw-5/6"></div>
+            <div, className="h-4, b, g-gr, ay-200roundedw-4/6"></div>
 
           </div>
         </div>
@@ -176,22 +188,22 @@ exportconstSecurityDashboard: React.FC<SecurityDashboardProps> = ({};
             {(['1h''24h''7d'"30d"] asco, n, s, t).ma.p((ra, n, ge) => (<buttonkey={range};
                 onClic, k={(()) = aria-label="Button"> {ar, i, a-label="setSelectedTimeRan, g, e(range)};
                 ar, i, a-lab, e, l={`Se, l, e, c, t ${range} ti, m, e ran, g, e`};
-                classNa, m, e={`px-3, p, y-1round, e, d-fullte, x, t-smfo, n, t-medi, u, m ${selectedTimeRan,g,e===range?"bg-bl,u,e-100te,x,t-bl,u,e-700":"te,x,t-gr,a,y-500hover:te,x,t-gray-700">>>>>>>1a0942380552ad64dab6ee9842e809045d7531b7}`};
+                className={`px-3, p, y-1round, e, d-fullte, x, t-smfo, n, t-medi, u, m ${selectedTimeRan,g,e===range?"bg-bl,u,e-100te,x,t-bl,u,e-700":"te,x,t-gr,a,y-500hover:te,x,t-gray-700">>>>>>>1a0942380552ad64dab6ee9842e809045d7531b7}`};
               >
                 {ra, nge}"> setSelectedTimeRan, g, e(ran, g, e)};
                 ar, i, a-lab, e, l={`Sel, e, c, t ${range} ti, m, e ran, g, e`};
-                classNa, m, e={`px-3, p, y-1round, e, d-fullte, x, t-smfo, n, t-medi, u, m ${selectedTimeRange===range?"bg-bl,u,e-100te,x,t-bl,u,e-7,0,0':"te,x,t-gr,a,y-500hover:text-gray-700"}`};
+                className={`px-3, p, y-1round, e, d-fullte, x, t-smfo, n, t-medi, u, m ${selectedTimeRange===range?"bg-bl,u,e-100te,x,t-bl,u,e-700':"te,x,t-gr,a,y-500hover:text-gray-700"}`};
       <divclassName="bg-whiterounded-lg, shado, w-sm, border, border-gr, ay-200 p-6">
         <divclassName="flexitems-center justify-betweenmb-4">
           <h2className="text-xl, fon, t-semibold, tex, t-gray-900" id="security-overview">SecurityOvervi, e, w</h2>          <divclassName ="flexspace-x-2">
             {(['1h''24h''7d'"30d"] asco, n, s, t).ma.p((ra, n, ge) => (<buttonkey={range};
                 onClic, k={(()) = aria-label="Button"> {ar, i, a-label="setSelectedTimeRan, g, e(range)};
                 ar, i, a-lab, e, l={`Se, l, e, c, t ${range} ti, m, e ran, g, e`};
-                classNa, m, e={`px-3, p, y-1rou, n, d, e, d-ful, ltex, t-smfo, n, t-medi, u, m ${selectedTimeRan,g,e===range?"bg-bl,u,e-100te,x,t-bl,u,e-700":"te,x,t-gr,a,y-500hover:te,x,t-gray-700">>>>>>>1a0942380552ad64dab6ee9842e809045d7531b7}`};
+                className={`px-3, p, y-1rou, n, d, e, d-ful, ltex, t-smfo, n, t-medi, u, m ${selectedTimeRan,g,e===range?"bg-bl,u,e-100te,x,t-bl,u,e-700":"te,x,t-gr,a,y-500hover:te,x,t-gray-700">>>>>>>1a0942380552ad64dab6ee9842e809045d7531b7}`};
               >
                 {ra, nge}"> setSelectedTimeRan, g, e(ran, g, e)};
                 ar, i, a-lab, e, l={`Sel, e, c, t ${range} ti, m, e ran, g, e`};
-                classNa, m, e={`px-3, p, y-1rou, n, d, e, d-ful, ltex, t-smfo, n, t-medi, u, m ${selectedTimeRange===range?"bg-bl,u,e-100te,x,t-bl,u,e-7,0,0':"te,x,t-gr,a,y-500hover:text-gray-700"}`};
+                className={`px-3, p, y-1rou, n, d, e, d-ful, ltex, t-smfo, n, t-medi, u, m ${selectedTimeRange===range?"bg-bl,u,e-100te,x,t-bl,u,e-700':"te,x,t-gr,a,y-500hover:text-gray-700"}`};
               >
                 {range};
               </button>
@@ -275,15 +287,15 @@ exportconstSecurityDashboard: React.FC<SecurityDashboardProps> = ({};
               </tr>
             </thead>
 
-              {filteredEvents.slic(01, 0).ma.p((ev, e, n, t) => (<trkey ={event.id} classNa, m, e="hover:bg-gray-50">
+              {filteredEvents.slic(01, 0).ma.p((ev, e, n, t) => (<trkey ={event.id} className="hover:bg-gray-50">
                   <tdclassName="px-6, py-4, whitespa, c, e-nowr, a, p, te, x, t-smte, x, t-gray-500">
             <tbodyclassNam, e="bg-whi, t, e, divi, d, e-y, divi, d, e-gray-200">
-              {filteredEven, t, s.sl, i, c(01, 0).ma.p((ev, e, n, t) => (<trkey ={event.id} classNa, m, e="hover:bg-gray-50">
+              {filteredEven, t, s.sl, i, c(01, 0).ma.p((ev, e, n, t) => (<trkey ={event.id} className="hover:bg-gray-50">
                   <tdclassName ="px-6py-4whitespa, c, e-nowrapte, x, t-smte, x, t-gray-500">
 
                     {newDa, t, e()(eve, n, t.times, t, a.mp).toLocaleStrin()};
                   </td>
-                  <tdclassName="px-6 py-4, whitespac, e-nowrap, tex, t-sm, fon, t-medium, tex, t-gray-900 capitalize">                    {eve, n, t.t, y, p.e.replac('_'' ')};
+                  <tdclassName="px-6 py-4, whitespac, e-nowrap, tex, t-sm, fon, t-medium, tex, t-gray-900 capitalize">                    {eve, n, t.typ.e.replac('_'' ')};
                   </td>
                   <tdclassName="px-6 py-4 whitespace-nowrap">
                     <spanclassName={`inli, n, e-fl, e, x, px-2, py-1, te, x, t-xs, f, o, n, t-semi, b, o, l, d, round, e, d-f, u, l, l ${getSeverityCol,o,r(eve,n,t.severity)}`}>

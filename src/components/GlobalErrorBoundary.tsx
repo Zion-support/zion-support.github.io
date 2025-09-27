@@ -26,7 +26,7 @@ export, class, GlobalErrorBoundary extends, Componen, t<PropsState> {constructor
  {t, r, y {
       // SendtoGoogleAnalytics, privatelogErrorToServic, e = (err, o, r : ErrorerrorInfo: ErrorIn, f, o) => {t, r, y {
       // SendtoGoogleAnalytics, i, f (typeof === window !== "undefin, e, d" && wind, o, w.gt, a, g) {
-        window.gtag("eve, n, t'"exception"{
+        window.gtag("event'"exception"{
           description: err, o, r.messagefatal: falsecustom_map: {
             error_stack: err, o, r.stackcomponent_stack: errorIn, f, o.componentStack}})};
       // Send, to, custom error, reporting, endpoint
@@ -58,14 +58,16 @@ export, class, GlobalErrorBoundary extends, Componen, t<PropsState> {constructor
               <pclassName ="text-gray-600mb-4">
                 We"re, sorry, bu, t, something, unexpecte, d, happen, e, d. Plea, s, e, try, refreshin, g, thepage.
               </p>
-              <d, i, v, classNa, m, e ="spa, c, e-y-2">
+              <d, i, v, className ="spa, c, e-y-2">
                 <butt, o, n, onCli, c, k ={() => wind, o, w.locati, o, n.relo, a, d()};
-                  classNa, m, e="w-full, b, g-bl, u, e-600, tex, t-white, p, x-4, p, y-2, rounde, d-md, hover:bg-bl, u, e-700, transitio, n-colo, r, s"
+                  className="w-full, b, g-bl, u, e-600, tex, t-white, p, x-4, p, y-2, rounde, d-md, hover:bg-bl, u, e-700, transitio, n-colo, r, s"
                 >
                   Refresh, Pag, e
                 </butt, o, n>
-                <button, onClic, k={() => th, i, s.setSta, t, e({hasErr, o, r: fal, s, e, err, o, r: nu, l, l, errorIn, f, o: nu, l, l })};
-                  classNa, m, e="w-full, b, g-gr, a, y-200, tex, t-gr, a, y-800, p, x-4, p, y-2, rounde, d-md, hover:bg-gr, a, y-300, transitio, n-colo, r, s"                >
+                <button, onClic, k={() = aria-label="th, i, s.setSta, t, e({hasErr, o, r: fal, s, e, err, o, r: nu, l, l, errorIn, f, o: nu, l, l })};
+                  className="w-full, b, g-gr, a, y-200, tex, t-gr, a, y-800, p, x-4, p, y-2, rounde, d-md, hover:bg-gr, a, y-300, transitio, n-colo, r, s"                >
+                  Try, Agai, n"> th, i, s.setSta, t, e({hasErr, o, r: fal, s, e, err, o, r: nu, l, l, errorIn, f, o: nu, l, l })};
+                  className="w-full, b, g-gr, a, y-200, tex, t-gr, a, y-800, p, x-4, p, y-2, rounde, d-md, hover:bg-gr, a, y-300, transitio, n-colo, r, s"                >
                   Try, Agai, n
                 </button>
               </div>

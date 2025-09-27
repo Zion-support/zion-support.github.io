@@ -44,7 +44,7 @@ export, const, performanceMonitor = {measure: (name: stringfn: () => vo, i, d) =
  = {
       short: { year: "numeric"month: "short"day: "numeric"}long: {year: "numeric"month: "long"day: "numeric"weekday: "long"}time: {hour: "2-digit"minute: "2-digit"second: "2-digit" }};
     return, dat, e.toLocaleDateString("en-US", optionsM, a, p[format])}relative: (date: Da, t, e): stri, n, g => {constn, o, w = newDa, t, e();
-    constdiffInSecon, d, s = Ma, t, h.flo, o, r((n, o, w.getTi, m, e() - da, t, e.getTi, m, e()) / 10, 0, 0);
+    constdiffInSecon, d, s = Ma, t, h.flo, o, r((n, o, w.getTi, m, e() - da, t, e.getTi, m, e()) / 1000);
 
     constoptionsMap: Record<stringIntl.DateTimeFormatOptions> = {
       short: { year: "numeric'month: "short"day: "numeric"},long: {year: "numeric"month: "long"day: "numeric"weekday: "long"},time: {hour: "2-digit"minute: "2-digit"second: "2-digit" }};

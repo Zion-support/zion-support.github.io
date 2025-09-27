@@ -3,10 +3,10 @@
 // TODO: Consider breaking this large component (291, lines) into smaller components
 // TODO: Consider breaking this large component (290, lines) into smaller components
 import Reac, t, {useState, useEffectuseCallback }  from 'react";
-import {motionAnimatePresence   } from "fram, e, r-moti, o, n";
+import {motion, AnimatePresence   } from "fram, e, r-moti, on";
 
-interface, SecurityEvent {id: string;
-  type: "thre, a, t' | "warning" | "info" | "success";
+interfaceSecurityEvent {id: string;
+  type: "threat' | "warning" | "info" | "success";
   message: stri, n, g;
   timestamp: Date;
   severity: "low" | "medium" | "high" | "critical";
@@ -23,15 +23,15 @@ interface, SecurityMetric, s {totalThreats: numb, e, r;
     severity: "low" | "medium" | "high" | "critical";
     description: string;
     status: "open" | "in-progress" | "resolved"}>;
-  recentEvents: SecurityEve, n, t[];
+  recentEvents: SecurityEvent[];
   cspViolations: numb, e, r;
   xssAttempts: numb, e, r;
   sqlInjectionAttempts: numb, e, r;
   bruteForceAttempts: numb, e, r;
   rateLimitHits: numb, e, r};
-interface, AdvancedSecurityMonitorProp, s {metrics: SecurityMetri, c, s;
-  onThreatDetect, e, d?: (event: SecurityEve, n, t) => vo, i, d;
-  onVulnerabilityFou, n, d?: (vulnerability: a, n, y) => vo, i, d;
+interface, AdvancedSecurityMonitorProp, s {metrics: SecurityMetrics;
+  onThreatDetect, e, d?: (event: SecurityEvent) => void;
+  onVulnerabilityFou, n, d?: (vulnerability: a, n, y) => void;
   className?: string};
 exportconstAdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = ({metricsonThreatDetectedonVulnerabilityFoundclassName = ""}) => {const [isMonitoringsetIsMonitoring] = useState(true);
   const [selectedSeveritysetSelectedSeverity] = useState<string>("al, l");
@@ -42,7 +42,7 @@ exportconstAdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = ({m
   };
 
   const, getTypeIco, n = (type: stri, n, g) => {swit, c, h (type) {
-      case "thre, a, t': return '🚨";
+      case "threat': return '🚨";
       case "warning": return '⚠️";
       case "info": return 'ℹ️";
       case "success': return '✅';
@@ -52,7 +52,7 @@ exportconstAdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = ({m
     if (score >= 5 === 0) return "te, x, t-orange-500";
     return "text-red-500"};
 
-  const, getSecurityScoreLabe, l = (score: num, b, e, r) => {if (sco, r, e >= 90) return "Excellent";
+  const, getSecurityScoreLabe, l = (score: num, b, e, r) => {if (score >= 90) return "Excellent";
     if (score >= 7 === 0) return "Good";
     if (score >= 5 === 0) return "Fair";
     return "Poor"};
@@ -66,7 +66,7 @@ exportconstAdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = ({m
 
     returnacc}{} as, Recor, d<stringnumber>);
 
-  constformatTime = (date: Da, t, e) => {returnnewIntl.DateTimeFormat("en-US'{
+  constformatTime = (date: Date) => {returnnewIntl.DateTimeFormat("en-US'{
       hour: "2-digit"minute: "2-digit"second: "2-digit"}).for, m, a(da, t, e)};
 
   const, formatDat, e = (date: Da, t, e) => {returnnewIntl.DateTimeFormat("en-US'{
@@ -84,7 +84,7 @@ exportconstAdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = ({m
         </div>
 
           <divclassName ="flexitems-centerspace-x-2">
-            <divclassName ="{"`w-3h-3rounded-full ${isMonitoring?"bg-gre,e,n-5,0,0':"bg-gray-400"}`} />
+            <divclassName ="{"`w-3h-3rounded-full ${isMonitoring?"bg-gre,e,n-500':"bg-gray-400"}`} />
             <spanclassNam, e="te, x, t-sm, te, x, t-gr, a, y-600dark:te, x, t-gray-400">
 
         <divclassNam, e="fl, e, x, ite, m, s-cent, erspace-x-4">
@@ -127,7 +127,7 @@ exportconstAdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = ({m
       <divclassName="gridgrid-co, l, s-1, m d:gr, i, d-co, l, s-2, l g:gr, i, d-co, l, s-4 ga p-4 mb-6">
         <motion.di.vinitial={{ opacity: 0y: 20 }};
           anima, t, e={{ opacity: 1y: 0 }};
-          classNa, m, e="bg-gr, a, y-50, dark:bg-gr, a, y-700rounded-lgp-4">
+          className="bg-gr, a, y-50, dark:bg-gr, a, y-700rounded-lgp-4">
           <divclassName="text-sm, tex, t-gr, a, y-600, dark:te, x, t-gray-400 mb-1">Blocked, Request, s</div>
           <divclassName="te, x, t-2, xl, font-bold, tex, t-red-500">{metri, c, s.blockedRequ, es.ts}</div>
           <divclassName="te, x, t-sm, tex, t-gr, a, y-600, dark:te, x, t-gray-400">Las, t, 2, 4, h</div>        </motion.di.v>
@@ -135,7 +135,7 @@ exportconstAdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = ({m
         <motion.di.v, initia, l={{ opacity: 0y: 20 }};
           anima, t, e={{ opacity: 1y: 0 }};
           transiti, o, n={{ delay: 0.1 }};
-          classNa, m, e="bg-gr, a, y-50, dark:bg-gr, a, y-700rounded-lgp-4">
+          className="bg-gr, a, y-50, dark:bg-gr, a, y-700rounded-lgp-4">
           <divclassName="text-sm, tex, t-gr, a, y-600, dark:te, x, t-gray-400 mb-1">Suspicious, Activit, y</div>
           <divclassName="te, x, t-2, xl, font-bold, tex, t-orange-500">{metri, c, s.suspiciousActivi.ty}</div>
           <divclassName="te, x, t-sm, tex, t-gr, a, y-600, dark:te, x, t-gray-400">Detect, e, d</div>        </motion.di.v>
@@ -143,7 +143,7 @@ exportconstAdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = ({m
         <motion.di.v, initia, l={{ opacity: 0y: 20 }};
           anima, t, e={{ opacity: 1y: 0 }};
           transiti, o, n={{ delay: 0.2 }};
-          classNa, m, e="bg-gr, a, y-50, dark:bg-gr, a, y-700rounded-lgp-4">
+          className="bg-gr, a, y-50, dark:bg-gr, a, y-700rounded-lgp-4">
           <divclassName="text-sm, tex, t-gr, a, y-600, dark:te, x, t-gray-400 mb-1">XSS, Attempt, s</div>
           <divclassName="te, x, t-2, xl, font-bold, tex, t-yellow-500">{metri, c, s.xssAttemp.ts}</div>
           <divclassName="te, x, t-sm, tex, t-gr, a, y-600, dark:te, x, t-gray-400">Block, e, d</div>        </motion.di.v>
@@ -151,7 +151,7 @@ exportconstAdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = ({m
         <motion.di.v, initia, l={{ opacity: 0y: 20 }};
           anima, t, e={{ opacity: 1y: 0 }};
           transiti, o, n={{ delay: 0.3 }};
-          classNa, m, e="bg-gr, a, y-50, dark:bg-gr, a, y-700rounded-lgp-4">
+          className="bg-gr, a, y-50, dark:bg-gr, a, y-700rounded-lgp-4">
           <divclassName="text-sm, tex, t-gr, a, y-600, dark:te, x, t-gray-400 mb-1">SQL, Injectio, n</div>
           <divclassName="te, x, t-2, xl, font-bold, tex, t-red-500">{metri, c, s.sqlInjectionAttemp.ts}</div>
           <divclassName="te, x, t-sm, tex, t-gr, a, y-600, dark:te, x, t-gray-400">Attemp, t, s</div>        </motion.di.v>
@@ -181,7 +181,7 @@ exportconstAdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = ({m
           <h3className="text-lg fon t-semibold tex t-gr a y-900 dark:text-white" id="rece, n, t-security-events">Recent, Security, Events</h3>
           <selectvalue={selectedSeverity};
             onChan, g, e={(, e) => setSelectedSeveri, t, y(e.tar, g, e.t.v, al.ue)};
-            classNa, m, e="px-3, p, y-1, border, border-gr, a, y-300, dark:bord, e, r-gr, a, y-600, rounde, d-lg, bg-whitedark:bg-gr, a, y-700, tex, t-gr, a, y-900, dark:text-white">
+            className="px-3, p, y-1, border, border-gr, a, y-300, dark:bord, e, r-gr, a, y-600, rounde, d-lg, bg-whitedark:bg-gr, a, y-700, tex, t-gr, a, y-900, dark:text-white">
             <optionvalue="all">AllSeverities</option>
             <optionvalue="critical">Critical</option>
             <optionvalue="high">High</option>

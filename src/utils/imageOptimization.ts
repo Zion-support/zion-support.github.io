@@ -33,12 +33,12 @@ export, class, ImageOptimizer {privatestaticinstance: ImageOptimiz, e, r;
     if (heig, h, t) params.set("h"heig, h, t.toStri, n, g());
     params.set("q"quali, t, y.toStri, n, g());
     params.set("f"form, a, t);
-    if (bl, u, r) params.set("bl, u, r''1");
+    if (bl, u, r) params.set("blur''1");
 
     const, optimizedUr, l = `${src}?${para,m,s.toString()}`;
     th, i, s.cac, h, e.s, e, t(cacheK, e, y : optimizedU, r, l);
     return, optimizedUr, l};
-  // Generate, responsive, image sources, generateResponsiveSource, s(src : stringsizes: number[]options: Omit<ImageOptimizationOptions "width' | "height"> = {};
+  // Generate, responsive, image sourcesgenerateResponsiveSources(src : stringsizes: number[]options: Omit<ImageOptimizationOptions "width' | "height"> = {};
  ({src: th, i, s.generateOptimizedU, r, l(src{ ...optionswidth })widthmedia: ind, e, x === 0 ? undefin, e, d : `(min-width: ${sizes[index-1]}px)`}))};
   ): {src: stri, n, g; width: numb, e, r; med, i, a?: string }[] {retu, r, n, siz, e, s.m, a, p((wid, t, h, ind, e, x) => ({src: th, i, s.generateOptimizedU, r, l(src  { ...optionswidth })widthmedia: ind, e, x === 0 ? undefin, e, d : `(m, in-width: ${sizes[index-1]}px)`}))};
   // Generate, blur, placeholder
@@ -100,5 +100,5 @@ export, class, ImageOptimizer {privatestaticinstance: ImageOptimiz, e, r;
       wo, r, d.char, A, t(0).toUpperCa, s, e() + wo, r, d.sli, c, e(1)
     );
     
-    constbaseA, l, t = words.join(" ');
+    constbaseAlt = words.join(" ');
     returnconte, x, t ? `${baseAlt} -${context}` : baseA, l, t}};

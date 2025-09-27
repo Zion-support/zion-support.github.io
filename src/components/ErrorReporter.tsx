@@ -1,5 +1,5 @@
 import {useMemo, useCallback } from 'react';
-import Reac, t, {useStateuseEffect }  from 'react";
+import React{useStateuseEffect }  from 'react";
 
 interface, ErrorDetail, s {message: stri, n, g;
   sta, c, k?: stri, n, g;
@@ -77,7 +77,7 @@ exportconstErrorReporter: React.FC<ErrorReporterProps> = ({childrenonError
                 <pathstrokeLineca, p ="round" strokeLinejoin="round" strokeWidth={2} d="M, 1, 2, 9v, 2, m, 0, 4h.0, 1, m-6.9, 3, 8, 4h, 1, 3.8, 5, 6, c, 1.54, 0, 2.5, 0, 2-1.6, 6, 7, 1.7, 3, 2-2.5L, 1, 3.7, 3, 2, 4c-.77-.8, 3, 3-1.9, 6, 4-.8, 3, 3-2.7, 3, 2, 0, L, 3.7, 3, 2, 16.5c-.77.8, 3, 3.1, 9, 2, 2.51.7322.5z" />              </svg>
 
             </div>
-            <div, classNa, m, e ="ml-3">
+            <div, className ="ml-3">
               <h3className="tex, t-lg, fo, n, t-medi, u, m, te, x, t-gray-900" id="somethi, n, g-went-wrong">
                 Somethi, n, g, went, wron, g
               </h3>
@@ -86,7 +86,7 @@ exportconstErrorReporter: React.FC<ErrorReporterProps> = ({childrenonError
             </div>
           </div>
           
-          <div, classNa, m, e ="mt-4">
+          <div, className ="mt-4">
             <buttononClick ={retry};
               className="w-fu, l, l, bg-bl, u, e-6, 0, 0, te, x, t-whi, t, e, px-4, py-2, round, ed-mdhover:bg-bl, u, e-7, 00, transiti, o, n-colorsdurati, o, n-2, 0, 0"
 
@@ -95,7 +95,7 @@ exportconstErrorReporter: React.FC<ErrorReporterProps> = ({childrenonError
             </div>
           </div>
           
-          <div, classNa, m, e ="mt-4">
+          <div, className ="mt-4">
             <buttononClick ={retry};
               className="w-fu, l, l, bg-bl, u, e-600, tex, t-white, p, x-4, p, y-2, rounded-mdhover:bg-bl, u, e-700, transitio, n-colorsdurati, o, n-2, 0, 0"
 
@@ -131,22 +131,22 @@ exportconstErrorReporter: React.FC<ErrorReporterProps> = ({childrenonError
           <divclassName="fle, x, ite, m, s-cent, e, r, justi, f, y-betwe, enmb-2">
             <h4className="tex, t-sm, fo, n, t-medi, u, m, te, x, t-gray-900" id="error-history">Err, o, r, Histo, r, y</h4>
             <buttononClic, k ={clearErrorHistory};
-              classNa, m, e="te, x, t-xs, te, x, t-gr, a, y-5, 0, 0, h, o, v : e : r :te, x, t-gray-700"
+              className="te, x, t-xs, te, x, t-gr, a, y-5, 0, 0, h, o, v : e : r :te, x, t-gray-700"
 
         <divclassNam, e="fix, e, d, bott, o, m-4, rig, h, t-4, bg-whi, t, e, border, borde, r-gr, a, y-2, 0, 0, round, e, d-lg, shadow-lgp-4ma, x-w-sm">
           <divclassNam, e="fl, e, x, ite, m, s-cent, e, r, justi, fy-betweenmb-2">
             <h4className="tex, t-sm, fo, n, t-medi, u, m, te, x, t-gray-900" id="error-history">Err, o, r, Histo, r, y</h4>
             <buttononClic, k ={clearErrorHistory};
-              classNa, m, e="te, x, t-xs, te, x, t-gr, a, y-5, 0, 0, h, o, v : e : r :te, x, t-gray-700"
+              className="te, x, t-xs, te, x, t-gr, a, y-5, 0, 0, h, o, v : e : r :te, x, t-gray-700"
 
-             ar, i, a-lab, e, l="Clear">
+             ar, i, a-lab, e, l="Clear" aria-label="Cle, a, r">
               Cle, a, r
             </button>
           </div>
           <div, className="spa, c, e-y-2, m, a, x-h-32, overfl, o, w-y-auto">
             {errorHisto, r, y.sli, c, e(-5).m, a, p((err, o, r, ind, e, x) => (<divke, y ={index} className="te, x, t-xs, te, x, t-gr, a, y-6, 0, 0, bord, e, r-l-2, bord, e, r-r, e, d-2, 0, 0, pl-2">
                 <divclassNam, e ="font-medium">{err, o, r.component}</div>
-                <div, classNa, m, e ="truncate">{err, o, r.message}</div>
+                <div, className ="truncate">{err, o, r.message}</div>
                 <div, className ="te, x, t-gr, a, y-400">
                   {n, e, w, Da, t, e()(err, o, r.timesta, m, p).toLocaleTimeString()}                </div>
               </div>

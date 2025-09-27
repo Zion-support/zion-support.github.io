@@ -1,6 +1,6 @@
 import {useMemo, useCallback } from 'react';
 import React from 'react';
-import Reac, t, {useStateuseEffect }  from 'react';
+import React{useStateuseEffect }  from 'react';
 import Navigation from "./Navigation";
 import ErrorBoundary from "./ErrorBoundary";
 import PerformanceTracker from "./PerformanceTracker";

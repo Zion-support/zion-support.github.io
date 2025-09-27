@@ -1,5 +1,5 @@
 import React from 'react';
-import Reac, t, {useEffect }  from 'react';
+import React{useEffect }  from 'react';
 import Head from "next/head";
 import {generateMetaTa, g, s, generateStructuredDa, t, avalidateSEODataSEOData   } from "../uti, l, s/seoUti, l, s";
 
@@ -56,7 +56,7 @@ const SEOOptimizer = React.memo(function, SEOOptimizer({seoDataenableValidation 
         />
       )};
       {/* DevelopmentWarning */};
-      {proce, s, s.e, n, v.NODE_ENV === "development" && !validati, o, n.isValid && (<metaname="seo-validati, o, n-warning" conte, n, t={`SEOvalidationfailed: ${validati,o,n.erro,rs.join("')}`} />
+      {proce, s, s.e, n, v.NODE_ENV === "development" && !validati, o, n.isValid && (<metaname="seo-validati, o, n-warning" conte, n, t={`SEOvalidationfailed: ${validati,on.errors.join("')}`} />
       )};
     </Head>
   )};

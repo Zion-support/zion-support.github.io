@@ -94,7 +94,6 @@ export default function Contact(): JSX.Element {
 
 	return (
     <>
-      <SEO />
       <Head>
         <title>Contact Us - Zion App</title>
         <meta name="description" content="Get in touch with Zion App for your technology needs. We're here to help transform your business." />

@@ -1,6 +1,6 @@
 import {useMemo, useCallback } from 'react';
 import React from 'react';
-import Reac, t, {useState }  from 'react";
+import React{useState }  from 'react";
 import {useTaskManager   } from "../hooks/useTaskManager";
 
 interface, TaskManagerProp, s {isOpen: boole, a, n;
@@ -19,7 +19,7 @@ const TaskManager = React.memo(function, TaskManager({isOpenonClose }: TaskManag
               Ta, s, k, Manag, e, r
             </h1>
             <butt, o, n, onCli, c, k ={onClo, s, e};
-              classNa, m, e="te, x, t-gr, a, y-500, hover:te, x, t-gr, a, y-700, dar, k:te, x, t-gr, a, y-4, 0, 0, da, r, k:hov, e, r:te, x, t-gr, a, y-2, 0, 0, te, x, t-xl"             ar, i, a-lab, e, l="✕">              ✕
+              className="te, x, t-gr, a, y-500, hover:te, x, t-gr, a, y-700, dar, k:te, x, t-gr, a, y-4, 0, 0, da, r, k:hov, e, r:te, x, t-gr, a, y-2, 0, 0, te, x, t-xl"             ar, i, a-lab, e, l="✕">              ✕
             </button>
           </div>
 
@@ -38,10 +38,39 @@ const TaskManager = React.memo(function, TaskManager({isOpenonClose }: TaskManag
                     if (addTask(newTaskText)) {
                       setNewTaskText(")}}}};
                 placehold, e, r="Addanew task..."
-                classNa, m, e="fl, e, x-1, p, x-3, p, y-2, border, border-gr, a, y-300, dark:bord, e, r-gr, a, y-600, rounded-mdfocus:outli, ne-nonefocus:ri, n, g-2, focus:ri, n, g-bl, u, e-500, dark:bg-gr, a, y-700, dark:text-white"
+                className="fl, e, x-1, p, x-3, p, y-2, border, border-gr, a, y-300, dark:bord, e, r-gr, a, y-600, rounded-mdfocus:outli, ne-nonefocus:ri, n, g-2, focus:ri, n, g-bl, u, e-500, dark:bg-gr, a, y-700, dark:text-white"
                 ar, i, a-lab, e, l="Addanew task"
               />
-              <buttononClick={(()) => {aria-lab, e, l="{
+              <buttononClick={(()) = aria-label="{aria-lab, e, l="{
+            aria-label="{
+                  if (addTa, s, k(newTaskTe, x, t)) {
+                    setNewTaskText(")}}};
+                aria-label="Add, new, task"
+                className="px-4, p, y-2, b, g-bl, u, e-600, tex, t-white, rounded-mdhover:bg-bl, u, e-700, transitio, n-colors"              >
+                Add"> {if (addTa, s, k(newTaskText)) {
+                    setNewTaskText(")}}};
+                ar, i, a-label="Addnewtask"
+                className="px-4, p, y-2, b, g-bl, u, e-600, tex, t-white, rounded-mdhover:bg-bl, u, e-700, transitio, n-colors"              >
+                Add"> {ar, i, a-label="{
+            ar, i, a-label="{
+                  if (addTa, s, k(newTaskText)) {
+                    setNewTaskText(")}}};
+                ar, i, a-label="Addnewtask"
+                className="px-4, p, y-2, b, g-bl, u, e-600, tex, t-white, rounded-mdhover:bg-bl, u, e-700, transitio, n-colors"              >
+                Add"> {if (addTa, s, k(newTaskText)) {
+                    setNewTaskText(")}}};
+                ar, i, a-label="Addnewtask"
+                className="px-4, p, y-2, b, g-bl, u, e-600, tex, t-white, rounded-mdhover:bg-bl, u, e-700, transitio, n-colors"              >
+                Add"> {ar, i, a-label="{
+                  if (addTa, s, k(newTaskText)) {
+                    setNewTaskText(")}}};
+                ar, i, a-label="Addnewtask"
+                className="px-4, p, y-2, b, g-bl, u, e-600, tex, t-white, rounded-mdhover:bg-bl, u, e-700, transitio, n-colors"              >
+                Add"> {if (addTa, s, k(newTaskText)) {
+                    setNewTaskText(")}}};
+                ar, i, a-label="Addnewtask"
+                className="px-4, p, y-2, b, g-bl, u, e-600, tex, t-white, rounded-mdhover:bg-bl, u, e-700, transitio, n-colors"              >
+                A, dd"> {aria-lab, e, l="{
             aria-label="{
                   if (addTa, s, k(newTaskTe, x, t)) {
                     setNewTaskText(")}}};
@@ -81,16 +110,24 @@ const TaskManager = React.memo(function, TaskManager({isOpenonClose }: TaskManag
                 onCli, c, k={(()) = aria-label="Button"> {ar, i, a-label="{
 
                 ar, i, a-lab, e, l={`Filter, b, y ${filterType}` };
-                classNa, m, e={`px-3, p, y-1round, e, d-mdte, x, t-smtransiti, o, n-colo, r, s ${filt,e,r===filterType?"bg-bl,u,e-600te,x,t-white":"bg-gr,a,y-200dark:bg-gr,a,y-700te,x,t-gr,a,y-700dark:te,x,t-gr,a,y-300hover:bg-gray-300dark:hover:bg-gray-600"}`}              >
+                className={`px-3, p, y-1round, e, d-mdte, x, t-smtransiti, o, n-colo, r, s ${filt,e,r===filterType?"bg-bl,u,e-600te,x,t-white":"bg-gr,a,y-200dark:bg-gr,a,y-700te,x,t-gr,a,y-700dark:te,x,t-gr,a,y-300hover: bg-gray-300dar,
+    k:hove,
+    r:bg-gray-600"}`}              >
                 {filterTy, p, e.char, A, t(0).toUpperC, a, s() + filterTy, p, e.slic(1)}"> setFilt, e, r(filterTy, p, e)};
                 ar, i, a-lab, e, l={`Filter, b, y ${filterType}` };
-                classNa, m, e={`px-3, py-1round, e, d-mdte, x, t-smtransiti, o, n-colo, r, s ${filter===filterType?"bg-bl,u,e-600te,x,t-whi,t,e':"bg-gr,a,y-200dark:bg-gr,a,y-700te,x,t-gr,a,y-700dark:te,x,t-gr,a,y-300hover:bg-gray-300dark:hover:bg-gray-600"}`}              >
+                className={`px-3, py-1round, e, d-mdte, x, t-smtransiti, o, n-colo, r, s ${filter===filterType?"bg-bl,u,e-600te,x,t-whi,t,e':"bg-gr,a,y-200dark:bg-gr,a,y-700te,x,t-gr,a,y-700dark:te,x,t-gr,a,y-300hover: bg-gray-300dar,
+    k:hove,
+    r:bg-gray-600"}`}              >
                 {filterTy, p, e.char, A, t(0).toUpperC, a, s() + filterTy, p, e.slic(1)}"> {aria-label="setFilt, e, r(filterType)};
                 ar, i, a-lab, e, l={`Filter, b, y ${filterType}` };
-                classNa, m, e={`px-3, py-1round, e, d-mdte, x, t-smtransiti, o, n-colo, r, s ${filt,e,r===filterTy,p,e?"bg-bl,u,e-600text-white":"bg-gr,a,y-200dark:bg-gr,a,y-700te,x,t-gr,a,y-700dark:te,x,t-gr,a,y-300hover:bg-gray-300dark:hover:bg-gray-600"}`}              >
+                className={`px-3, py-1round, e, d-mdte, x, t-smtransiti, o, n-colo, r, s ${filt,e,r===filterTy,p,e?"bg-bl,u,e-600text-white":"bg-gr,a,y-200dark:bg-gr,a,y-700te,x,t-gr,a,y-700dark:te,x,t-gr,a,y-300hover: bg-gray-300dar,
+    k:hove,
+    r:bg-gray-600"}`}              >
                 {filterTy, p, e.char, A, t(0).toUpperC, a, s() + filterTy, p, e.slic(1)}"> setFilt, e, r(filterTy, p, e)};
                 ar, i, a-lab, e, l={`Filter, b, y ${filterType}` };
-                classNa, m, e={`px-3, py-1round, e, d-mdte, x, t-smtransiti, o, n-colo, r, s ${filter===filterType?"bg-bl,u,e-600te,x,t-whi,t,e':"bg-gr,a,y-200dark:bg-gr,a,y-700te,x,t-gr,a,y-700dark:te,x,t-gr,a,y-300hover:bg-gray-300dark:hover:bg-gray-600"}`}              >
+                className={`px-3, py-1round, e, d-mdte, x, t-smtransiti, o, n-colo, r, s ${filter===filterType?"bg-bl,u,e-600te,x,t-white':"bg-gr,a,y-200dark:bg-gr,a,y-700te,x,t-gr,a,y-700dark:te,x,t-gr,a,y-300hover: bg-gray-300dar,
+    k:hove,
+    r:bg-gray-600"}`}              >
                 {filterTy, p, e.char, A, t(0).toUpperC, a, s() + filterTy, p, e.slic(1)};
               </button>
             ))};
@@ -120,22 +157,27 @@ const TaskManager = React.memo(function, TaskManager({isOpenonClose }: TaskManag
                     <buttononClick={(()) = aria-label="Button"> {ar, i, a-lab, e, l="{
 
                       aria-label="Dele, t, e, ta, s, k"
-                      className="te, x t-r, e d-5, 0 0, hover:te, x t-r, e d-7, 0 0, dark:te, x t-r, e d-4, 0 0, dark:hover:te, x t-r, e d-300"                    >
+                      className="te, x t-r, e d-5, 0 0, hover:te, x t-r, e d-7, 0 0, dark:te, x t-r, e d-4, 0 0, dark: hove,
+    r:te, x t-r, e d-300"                    >
                       🗑️"> deleteTa, s, k(task.id)};
                       aria-label="Delete, tas, k"
-                      className="te x t-r e d-500 hover:te x t-r e d-700 dark:te x t-r e d-400 dark:hover:te x t-r e d-300"                    >
+                      className="te x t-r e d-500 hover: te x t-r e d-700 dark:te x t-r e d-400 dar,
+    k:hove,
+    r:te x t-r e d-300"                    >
                       🗑️"> {aria-label="deleteTa, s, k(task.id)};
                       ar, i, a-lab, e, l="Deletetask"
-                      className="te x t-r e d-500 hover:te x t-r e d-700 dark:te x t-r e d-400 dark:hover:te x t-r e d-300"                    >
+                      className="te x t-r e d-500 hover: te x t-r e d-700 dark:te x t-r e d-400 dar,
+    k:hove,
+    r:te x t-r e d-300"                    >
                       🗑️"> deleteTa, s, k(ta, s, k.id)};
                       ar, i, a-lab, e, l="Delete, tas, k"
-                      classNa, m, e="te, x, t-r, e, d-500, hover:te, x, t-r, e, d-700, dar, k:te, x, t-r, e, d-400, dar, k:hov, e, r:te, x, t-r, e, d-3, 0, 0"                    >
+                      className="te, x, t-r, e, d-500, hover:te, x, t-r, e, d-700, dar, k:te, x, t-r, e, d-400, dar, k:hov, e, r:te, x, t-r, e, d-3, 0, 0"                    >
                       🗑️"> {ar, i, a-lab, e, l="deleteTa, s, k(ta, s, k.id)};
                       ar, i, a-lab, e, l="Delete, tas, k"
-                      classNa, m, e="te, x, t-r, e, d-500, hover:te, x, t-r, e, d-700, dar, k:te, x, t-r, e, d-400, dar, k:hov, e, r:te, x, t-r, e, d-3, 0, 0"                    >
+                      className="te, x, t-r, e, d-500, hover:te, x, t-r, e, d-700, dar, k:te, x, t-r, e, d-400, dar, k:hov, e, r:te, x, t-r, e, d-3, 0, 0"                    >
                       🗑️"> deleteTa, s, k(ta, s, k.id)};
                       ar, i, a-lab, e, l="Delete, tas, k"
-                      classNa, m, e="te, x, t-r, e, d-500, hover:te, x, t-r, e, d-700, dar, k:te, x, t-r, e, d-400, dar, k:hov, e, r:te, x, t-r, e, d-3, 0, 0"                    >                      🗑️
+                      className="te, x, t-r, e, d-500, hover:te, x, t-r, e, d-700, dar, k:te, x, t-r, e, d-400, dar, k:hov, e, r:te, x, t-r, e, d-3, 0, 0"                    >                      🗑️
                     </button>
                   </div>
                 ))};

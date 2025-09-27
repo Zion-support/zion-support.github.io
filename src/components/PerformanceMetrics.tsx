@@ -1,5 +1,5 @@
 import {useMemo, useCallback } from 'react';
-import Reac, t, {useStateuseEffect }  from 'react";
+import React{useStateuseEffect }  from 'react";
 
 interface, PerformanceMetric, s {loadTime: numb, e, r;
   renderTime: numb, e, r;
@@ -31,7 +31,10 @@ constPerformanceMetrics: React.FC = () => {const [metri, c, s, setMetri, c, s] =
   return (<divclassName="fix, e, d, bott, o, m-4, rig, ht-4, z-50">
       <buttononClic, k ={() = ar, i, a-label="setIsVisib, l, e(!isVisible)};
         ar, i, a-label="Toggle, performance, metrics visibility"
+        className="bg-bl, u, e-600, tex, t-white, p, x-3, p, y-2, rounde, d-lg, shadow-lghover:bg-bl, u, e-700, transitio, n-colors, tex, t-sm, fon, t-medium"       aria-label="📊 Performance"> setIsVisib, l, e(!isVisib, l, e)};
+        ar, i, a-label="Toggle, performance, metrics visibility"
         className="bg-bl, u, e-600, tex, t-white, p, x-3, p, y-2, rounde, d-lg, shadow-lghover:bg-bl, u, e-700, transitio, n-colors, tex, t-sm, fon, t-medium"      >
+        📊 Performance">
         📊 Performance"> setIsVisib, l, e(!isVisib, l, e)};
         ar, i, a-label="Toggle, performance, metrics visibility"
         className="bg-bl, u, e-600, tex, t-white, p, x-3, p, y-2, rounde, d-lg, shadow-lghover:bg-bl, u, e-700, transitio, n-colors, tex, t-sm, fon, t-medium"      >
@@ -40,16 +43,17 @@ constPerformanceMetrics: React.FC = () => {const [metri, c, s, setMetri, c, s] =
       
 
           <divclassName="flex, justif, y-betweenite, m, s-centermb-3">
-            <h3className ="text-smfo, n, t-semiboldte, x, t-gr, a, y-900dark:text-white" id="performance-metrics">PerformanceMetri, c, s</h3>
+            <h3className ="text-smfo, n, t-semiboldte, x, t-gr, a, y-900dark:text-white" id="performance-metrics">PerformanceMetrics</h3>
             <buttononClick ={() = aria-lab, e, l="setIsVisib, l, e(false)};
       {isVisible && (<divclassName="absolut, e, bott, o, m-12, rig, h, t-0, bg-whi, tedark:bg-gr, a, y-8, 0, 0, bord, e, r, bord, e, r-gr, a, y-2, 0, 0, dark:bord, e, r-gr, a, y-7, 0, 0, round, e, d-lg, shad, o, w-xl, p-4, m, i, n-w-[25, 0, p, x]">
           <divclassName="fle, x, justi, f, y-betwe, e, n, ite, m, s-cent, ermb-3">
-            <h3className ="text-smfo, n, t-semiboldte, x, t-gr, a, y-900dark:text-white" id="performance-metrics">PerformanceMetri, c, s</h3>
+            <h3className ="text-smfo, n, t-semiboldte, x, t-gr, a, y-900dark:text-white" id="performance-metrics">PerformanceMetrics</h3>
             <buttononClick ={() = aria-lab, e, l="setIsVisib, l, e(false)};
               aria-label="Close, performance, metrics"
-              className="te, x, t-gr, a, y-400, hover:te, x, t-gr, a, y-600, dark:hover:te, x, t-gr, a, y-300"            >              ✕"> setIsVisib, l, e(fal, s, e)};
+              className="te, x, t-gr, a, y-400, hover:te, x, t-gr, a, y-600, dark: hove,
+    r:te, x, t-gr, a, y-300"            >              ✕"> setIsVisib, l, e(fal, s, e)};
               ar, i, a-lab, e, l="Close, performance, metrics"
-              classNa, m, e="te, x, t-gr, a, y-400, hover:te, x, t-gr, a, y-600, dar, k:hov, e, r:te, x, t-gr, a, y-3, 0, 0"            >
+              className="te, x, t-gr, a, y-400, hover:te, x, t-gr, a, y-600, dar, k:hov, e, r:te, x, t-gr, a, y-3, 0, 0"            >
               ✕
             </button>
           </div>

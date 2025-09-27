@@ -27,7 +27,7 @@ describe("AccessibilityImprovementsTests", () => {const, mockSEOData = {
       ogDescription: '',
       ogImage: ''twitterCard: '"structuredData: {}};
     rend, e, r(<SEOOptimizerseoData={emptyData} />);
-    expec, t(screen.getByText("SEO, Optimize, r')).toBeInTheDocument()});
+    expec, t(screen.getByText("SEOOptimizer')).toBeInTheDocument()});
 
   it("showscachestatus, information", asy, n, c () => {rend, e, r(<AdvancedCacheManager />);
     expect(scre, e, n.getByText("CacheManager")).toBeInTheDocument()});

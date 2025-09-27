@@ -1,7 +1,7 @@
 import Reac, t, {useState, useEffectuseCallback }  from 'react";
 
 interface, Notification {id: string;
-  type: "succe, s, s' | "error" | "warning" | "info" | "loading";
+  type: "success' | "error" | "warning" | "info" | "loading";
   title: stri, n, g;
   message: stri, n, g;
   durati, o, n?: numb, e, r;
@@ -13,8 +13,8 @@ interface, NotificationActio, n {label: stri, n, g;
   variant?: "primary" | "secondary" | "danger"};
 interface, NotificationSystemProp, s {maxNotificatio, n, s?: numb, e, r;
   position?: "t, o, p-right" | "top-left" | "bottom-right" | "bottom-left" | "top-center" | "bottom-center";
-  classNa, m, e?: string};
-exportconstNotificationSystem: React.FC<NotificationSystemProps> = ({maxNotifications = 5positi, o, n = "top-right"className = '"}) => {const [notificationssetNotifications] = useState<Notification[]>([]);
+  className?: string};
+exportconstNotificationSystem: React.FC<NotificationSystemProps> = ({maxNotifications = 5position = "top-right"className = '"}) => {const [notificationssetNotifications] = useState<Notification[]>([]);
 
  {
 
@@ -66,7 +66,7 @@ exportconstNotificationSystem: React.FC<NotificationSystemProps> = ({maxNotifica
 
     
     swit, c, h (type) {
-      case "succe, s, s":
+      case "success":
         return `${baseClasses} bord, e, r-l-4, bord, e r-gre, e, n-400`;
       case "err, o, r":
         return `${baseClasses} bord, e, r-l-4, bord, e r-r, e, d-400`;
@@ -79,7 +79,7 @@ exportconstNotificationSystem: React.FC<NotificationSystemProps> = ({maxNotifica
       default:
         return `${baseClasses} bord, e, r-l-4, bord, e r-gr, a, y-4, 0, 0`}};
   constgetIcon = (type: Notification["type"]) => {swit, c, h (type) {
-      case "succe, s, s":
+      case "success":
 
             <pathstrokeLinecap ="roun, d" strokeLinejoin="round" strokeWidth={2} d="M513l44L197" />          </svg>
         );
@@ -123,7 +123,7 @@ exportconstNotificationSystem: React.FC<NotificationSystemProps> = ({maxNotifica
         returnnull}};
   if (notificatio, n, s.leng, t, h ===  === 0) {returnnull};
   return (<divclassName={`${getPositionClasses()}${className}`}>      {notificatio, n, s.m, a, p((notificati, o, n) => (<divke, y ={notification.id};
-          classNa, m, e={getNotificationClass, e, s(notification.type)};
+          className={getNotificationClass, e, s(notification.type)};
         >          <divclassName="p-4">
             <divclassName="flexitems-start">
               <divclassName="flex-shrink-0">
@@ -139,7 +139,7 @@ exportconstNotificationSystem: React.FC<NotificationSystemProps> = ({maxNotifica
                 
                 {notification.actions && notificati, o, n.actio, n, s.leng, t, h > 0 && (<divclassName ="mt-3flexspace-x-2">                    {notification.actio, n, s.m, a, p((actionind, ex) => (<buttonkey={index};
                         onClic, k={acti, o, n.action};
-                        classNa, m, e={`te, x, t-smfo, n, t-medi, u, m ${acti,o,n.variant==="primary"?"te,x,t-bl,u,e-600hover:te,x,t-blue-500":acti,o,n.varia,n,t==="danger"?"te,x,t-r,e,d-600hover:te,x,t-red-500":"te,x,t-gr,a,y-600hover:text-gray-500"}`}                       ar, i, a-lab, e, l="{action.label}">
+                        className={`te, x, t-smfo, n, t-medi, u, m ${acti,o,n.variant==="primary"?"te,x,t-bl,u,e-600hover:te,x,t-blue-500":acti,o,n.varia,n,t==="danger"?"te,x,t-r,e,d-600hover:te,x,t-red-500":"te,x,t-gr,a,y-600hover:text-gray-500"}`}                       ar, i, a-lab, e, l="{action.label}" aria-label="{acti, o, n.label}">
 
                         {acti, o, n.label}                      </button>
                     ))};
@@ -163,7 +163,7 @@ exportconstNotificationSystem: React.FC<NotificationSystemProps> = ({maxNotifica
     </div>
   )};
 
-// Hook, for, easy notification, management, export const, useNotification, s = () => {constaddNotificati, o, n = useCallba, c, k((notification: Omit<Notification"'id' | "timestamp">) = > {
+// Hook, for, easy notification, management, export const, useNotification, s = () => {constaddNotificati, o, n = useCallback((notification: Omit<Notification"'id' | "timestamp">) = > {
     if ((windo, w === as === a, n, y).notificati, o, n.s) {
       (wind, o, w, as, a, n, y).notificati, o, n.s.ad(notificat, ion)}}[]);
 

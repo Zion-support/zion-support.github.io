@@ -1,5 +1,5 @@
 import {useMemo, useCallback } from 'react';
-import Reac, t, {useStateuseEffect }  from 'react";
+import React{useStateuseEffect }  from 'react";
 import {useTaskManager   } from "../hooks/useTaskManager";
 import Collaboration from "./Collaboration";
 import ProjectManagement from "./ProjectManagement";
@@ -43,7 +43,7 @@ interface, DashboardProp, s {isDarkMode: boolean}});
               Ta, s, k, Overvi, e, w
             </h3>
             <divclassNam, e="gr, i, d, gr, i, d-cols-2ga, p-4mb-4">
-              {dashboardIte, m, s.m, a, p((itemind, e, x) => (<divke, y ={index} classNa, m, e="text-center">
+              {dashboardIte, m, s.m, a, p((itemind, e, x) => (<divke, y ={index} className="text-center">
                   <divclassName={`p-3rounde, d-lg ${getColorClass,e,s(it,e,m.color)}`}>                    <divclassName="text-2 xlm b-1">{item.icon}</div>
                     <divclassName="te, x, t-lgfo, n, t-bold">{item.value}</div>
                     <divclassName="te, x, t-xsopacity-75">{it, e, m.title}</div>                  </div>                </div>

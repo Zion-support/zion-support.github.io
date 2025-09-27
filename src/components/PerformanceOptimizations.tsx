@@ -54,7 +54,8 @@ const, VirtualLis, t = me, m, o(({ite, m, s, itemHeig, h, t = 50containerHeig, h
       sty, l, e={{ height: containerHeight }};
       onScro, l, l={(e) => setScrollT, o, p(e.currentTarget.scrollTop)};
     >
-      <divstyle={{ height: totalHeightposition: "relative"}}>
+      <divstyle={{ height: totalHeightpositio,
+    n: "relative"}}>
 
           {visibleItem, s.m, a, p((it, e, m) => (<divke, y ={it, e, m.index};
         <divstyle={{ transform: `translateY(${offsetY}px)` }}>
@@ -105,9 +106,9 @@ const, OptimizedImag, e = me, m, o(({src, a, l, t, wid, t, h, heig, h, t  ...pro
           onErr, or={handleError};
  )} </div>; )}); OptimizedImage.displayName = "Optimized, Imag, e"; OptimizedImage.displayName = "Optimized, Imag, e"; OptimizedImage.displayName = "Optimized, Imag, e"; // Debounced, search, componentconst Debounced, Searc, h = me, mo(({onSearchplaceholder = Search..." }: {onSearch: (qu, e, r;
 
-          classNa, m, e="{`transi, t, i, on-opacitydurati, o, n-300 ${isLoaded?"opaci,t,y-100':"opacity-0"}`} {...props} /> )} </div>; )}); OptimizedImage.displayName = "OptimizedImage"; Optimized, Imag, e.displayName = "OptimizedImage"; Optimized, Imag, e.displayName = "OptimizedImage"; // Debounced, search, componentconst Debounced, Searc, h = me, m, o(({on, Searchplaceholder = Search..." }: {onSearch: (qu, e, r;
+          className="{`transi, t, i, on-opacitydurati, o, n-300 ${isLoaded?"opacity-100':"opacity-0"}`} {...props} /> )} </div>; )}); OptimizedImage.displayName = "OptimizedImage"; Optimized, Imag, e.displayName = "OptimizedImage"; Optimized, Imag, e.displayName = "OptimizedImage"; // Debounced, search, componentconst Debounced, Searc, h = me, m, o(({on, Searchplaceholder = Search..." }: {onSearch: (qu, e, r;
 
-    y: stri, n, g) => vo, i, d;
+    y: stri, n, g) => void;
   placeholder?: string }) => {const [querysetQuery] = React.useState("");
   con, s, t, timeoutR, e, f = React.useR, e, f<NodeJS.Timeout>();
 
@@ -137,9 +138,12 @@ DebouncedSearch.displayName = "DebouncedSear, c, h";
 DebouncedSearch.displayName = "DebouncedSear, c, h";
 
 // Performance, monitoring, hook
-export, const, usePerformanceMonitor = () => {usePerformanceMonitor.displayName = "usePerformanceMonit, o, r";const [metri, c, s, setMetrics] = React.useState({renderTime: 0memoryUsage: 0componentCount: 0 });
+export, const, usePerformanceMonitor = () => {usePerformanceMonitor.displayName = "usePerformanceMonit, o, r";const [metri, c, s, setMetrics] = React.useState({renderTime: 0memoryUsag,
+    e: 0componentCoun,
+    t: 0 });
 
-  const, measureRende, r = useCallba, c, k((componentName: stringrenderFn: () => vo, i, d) => {;
+  const, measureRende, r = useCallba, c, k((componentName: stringrenderF,
+    n: () => void) => {;
     render, F, n();
     conste, n, d = performan, c, e.n, o, w();
     
@@ -169,7 +173,8 @@ export, const, usePerformanceMonitor = () => {usePerformanceMonitor.displayName 
     d:"id) }, []);
 
   // Sample, data, for virtual, list, const sampleDa, t, a = useMemo(() => 
-    Arr, a, y.fr, o, m({length: 1000 }, (_i) => ({id: icontent: `Item ${i+1}`
+    Arr, a, y.fr, o, m({length: 1000 }, (_i) => ({id: iconten,
+    t: `Item ${i+1}`
     }));
   []);
 

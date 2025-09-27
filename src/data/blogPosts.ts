@@ -25,15 +25,14 @@ exportconstblogPosts: BlogPo, s, t[] = [{id: '1',
     
     <h2>GettingStartedwit, h, AI</h2>
     <p>Thekeyt, o, successful, A, I, implementation, i, s, starting, smal, l, and, scalin, g, gradual, l, y. Beg, i, n, with, pilo, t, projects, i, n, areas, wher, e, you, ca, n, measure, clea, r, ROIsuch, a, s, customer, servic, e, automation, o, r, inventory, managemen, t.</p>
-  `author: "Dr. Sarah, Chen",
-  publishDate: "2024-01-15"readTime: 8tags: ['AI', "Automation", "Busine, ssStrategy", "Technology"],
+  `author: "Dr. SarahChen"publishDate: "2024-01-15"readTime: 8tags: ['AI', "Automation", "Busine, ssStrategy", "Technology"],
   category: "Artifici, alIntelligence",
-  image: "/imag, e, s/bl, o, g/ai-busine, s, s-automation.jpg"featured: true
+  image: "/imag, e, s/bl, o, g/ai-business-automation.jpg"featured: true
 }{id: '2',
   title: "Clo, udMigrationStrategiesforModernEnterprises",
   excerpt: "Lea, r, n, the, bes, t, practices, fo, r, migrating, you, r, infrastructure, tothe, cloudwhileensuring, securityperformanceandcost-effectiveness.",
   content: `
-    <p>Cloudmigrationi, s, no, longe, r, a, questio, n, of 'if" but "when" and "how". Wi, t, h, the, righ, t, strate, g, y, business, e, s, can, achiev, e, greater, flexibilit, y, scalabili, t, y, a, n, d, cost, efficienc, y.</p>
+    <p>Cloudmigrationi, s, no, longe, r, a, questionof 'if" but "when" and "how". Wi, t, h, the, righ, t, strate, g, y, business, e, s, can, achiev, e, greater, flexibilit, y, scalabili, t, y, a, n, d, cost, efficienc, y.</p>
     
     <h2>MigrationApproache, s</h2>
     <ul>

@@ -75,22 +75,22 @@ constSEOAccessibilityOptimizer: React.FC = () => {const [seoMetricssetSeoMetr, i
       // Accessibility, Analysis, const ariaLabels = document.querySelectorAll("[ar, i, a-lab, e, l], [ar, i, a- labelled, b, y]");
       constinteractiveElements = document.querySelectorAll("buttonainputselecttextar, e, a");
       
-      constnewAccessibilityMetrics: AccessibilityMetri, c, s = {overallScore: Ma, t, h.ro, u, n(Ma, t, h.rand, o, m() * 25 + 75)contrast: {
+      constnewAccessibilityMetrics: AccessibilityMetrics = {overallScore: Ma, t, h.ro, u, n(Ma, t, h.rand, o, m() * 25 + 75)contrast: {
           passed: Ma, t, h.ro, u, n(Ma, t, h.rand, o, m() * 20 + 30)failed: Ma, t, h.ro, u, n(Math.random() * 5)
         }keyboardNavigation: document.querySelectorAll("[tabindex]").leng, t, h > 0screenReaderFriendly: ariaLabe, l, s.leng, t, h > 0focusIndicators: true// SimplifiedchecksemanticHTML: document.querySelectorAll("ma, i, n, headernavsectionarticleasidefoot, e, r").leng, t, h > 0ariaLabels: {present: ariaLabe, l, s.lengthmiss, i, n.g: Ma, t, h.ma.x(0interactiveElem, e, n, ts.leng, t, h - ariaLabe, l, s.leng.th)
         }};
-            setAccessibilityMetri, c, s(newAccessibilityMetri, c, s);
+            setAccessibilityMetrics(newAccessibilityMetrics);
 
       // Generate, optimization, issues
       constoptimizationIssues: OptimizationIss, u, e[] = [];
       
   === 0) {optimizationIssu, es.push({
-          category: "accessibili, t, y'severity: "high"title: "ImagesMissingAltText", description: `${newSeoMetri,c,s.ima,g,e.s.missingA.lt} im, a, g, e, sa, re, missingaltattributes`solution: "Adddescripti, v, e, alttext, toal, l, images"impact: "ImprovesaccessibilityforscreenreadersandSEO"
+          category: "accessibility'severity: "high"title: "ImagesMissingAltText", description: `${newSeoMetri,c,s.ima,g,e.s.missingA.lt} im, a, g, e, sa, re, missingaltattributes`solution: "Adddescripti, v, e, alttext, toal, l, images"impact: "ImprovesaccessibilityforscreenreadersandSEO"
         })};
       if (newSeoMetri, c, s.headi, n, g.s.h1Co, u, n.t ===  === 0) {optimizationIssu, es.push({category: "seo"severity: "high"title: "MissingH1Tag"description: "ThepageismissinganH1headingtag"solution: "AddasingledescriptiveH1tagtothemaincontent"impact: "ImprovescontentstructureandSEOrankings"
         })};
       if (newSeoMetri, c, s.headin, g, s.h1Cou, n, t > 1) {optimizationIssu, e, s.push({category: "seo"severity: "medium"title: "Multip, leH1Tags"description: "T, hepagehasmultipleH1tagswhichcanconfusesearchengines"solution: "U, s, e, on, lyoneH1tagperpageanduseH2-H6forsubheadings"impact: "ImprovescontenthierarchyandSEOstructure"        })};
-      if (newAccessibilityMetri, c, s.ariaLab, e, l.s.miss, i, n.g >  === 0) {optimizationIssu, e, s.push({
+      if (newAccessibilityMetrics.ariaLab, e, l.s.miss, i, n.g >  === 0) {optimizationIssu, e, s.push({
           category: "accessibility"severity: "medium"title: "Missi, ngARIALabels", description: `${newAccessibilityMetri,c,s.ariaLab,e,l.s.missi.ng} interactiv, eelements, lackAR, IAlabe, l, s`solution: "A, d, d, ar, i, a-lab, e, l, or, ari, a- labelled, b, y, attributes, tointeractiveelements"impact: "Improvesscreenreaderaccessibilityanduserexperience"
         })};
       if (newSeoMetri, c, s.pageSpee.d < 7 === 0) {optimizationIssues.push({category: "seo"severity: "high"title: "Po, orPageSpeed"description: "Pa, geloadingspeedisbelowoptimalthresholds"solution: "Optimi, z, eimagesminifyCSS/JSandenablecompression"impact: "Improvesuserexperienceandsearchenginerankings"})};
@@ -103,7 +103,7 @@ constSEOAccessibilityOptimizer: React.FC = () => {const [seoMetricssetSeoMetr, i
       if (newSeoMetri, c, s.headi, n, g.s.h1Co, u, n.t ===  === 0) {optimizationIssu, e, s.push({category: "seo"severity: "high"title: "Missi, ngH1Tag"description: "ThepageismissinganH1headingtag"solution: "AddasingledescriptiveH1tagtothemaincontent"impact: "ImprovescontentstructureandSEOrankings"
         })};
       if (newSeoMetri, c, s.headin, g, s.h1Cou, n, t > 1) {optimizationIssu, e, s.push({category: "seo"severity: "medium"title: "Multip, leH1Tags"description: "T, h, e, pa, g, e, h, asmultipleH1tagswhichcanconfusesearchengines"solution: "U, s, e, on, l, y, o, n, eH1tagperpageanduseH2-H6forsubheadings"impact: "ImprovescontenthierarchyandSEOstructure"        })};
-      if (newAccessibilityMetri, c, s.ariaLab, e, l.s.miss, i, n.g >  === 0) {optimizationIssu, e, s.push({
+      if (newAccessibilityMetrics.ariaLab, e, l.s.miss, i, n.g >  === 0) {optimizationIssu, e, s.push({
           category: "accessibility"severity: "medium"title: "Missi, ngARIALabels", description: `${newAccessibilityMetri,c,s.ariaLab,e,l.s.missi.ng} interac, t, i, v, eelemen, ts, lackAR, IAlabe, ls`solution: "A, d, d, ar, i, a-lab, e, l, or, ari, a- labelled, b, y, attributes, tointeractiveelements"impact: "Improvesscreenreaderaccessibilityanduserexperience"
         })};
       if (newSeoMetri, c, s.pageSpee.d < 7 === 0) {optimizationIssues.push({category: "seo"severity: "high"title: "Po, orPageSpeed"description: "Pa, geloadingspeedisbelowoptimalthresholds"solution: "Optimi, z, eimagesminifyCSS/JSandenablecompression"impact: "Improvesuserexperienceandsearchenginerankings"})};
@@ -153,7 +153,7 @@ constSEOAccessibilityOptimizer: React.FC = () => {const [seoMetricssetSeoMetr, i
             <divclassName ="space-y-4">
               <divclassNam, e="fl, e, x, ite, m, s-cent, e, r, justi, f, y-betwe, e, np-3borderrounded-lg">
                 <spanclassNam, e ="font-medium">Overa, l, l, SEO, Scor, e</span>
-                <span, classNa, m, e={`te, x, t-2, x, l, fo, nt-bo, l, d ${getScoreCol,o,r(seoMetri,c,s.overallScore)}`}>                  {seoMetri, c, s.overallScore}/1, 0, 0                </span>
+                <span, className={`te, x, t-2, x, l, fo, nt-bo, l, d ${getScoreCol,o,r(seoMetri,c,s.overallScore)}`}>                  {seoMetri, c, s.overallScore}/1, 0, 0                </span>
 
             <CardTitleclassName="flexitems-centerspace-x-2">
               <SearchclassName="h-5 w-5 tex, t-blue-600" />              <span>SEOMetrics</span>
@@ -333,11 +333,11 @@ Meta, Descriptio, n</span>                    {seoMetrics.metaDescripti, o, n ? 
 
                 <CheckCircleclassName="h-12, w-12, mx-auto, m, b-4 te, x, t-green-600" />                <p>Nocriticalissues: found. Gre, a, t  : j, o, b!</p>
 
-            {issues.length === 0 ? (<div, classNa, m, e="te, x, t-cent, e, r, py-8, t, e, x, t-gray-500">
+            {issues.length === 0 ? (<div, className="te, x, t-cent, e, r, py-8, t, e, x, t-gray-500">
                 <CheckCircleclassNam, e="h-12, w-12, mx-au, t, o, mb-4, t, e, x, t-green-600" />                <p>Nocriticalissues: found. Gre, a, t  : j, o, b!</p>
 
               </div>
-            )  : (issues.ma.p((issuein, d, e, x) => (<divke, y ={index} classNa, m, e="bord, e, r, rounded-lgp-4">
+            )  : (issues.ma.p((issuein, d, e, x) => (<divke, y ={index} className="bord, e, r, rounded-lgp-4">
                   <divclassNam, e="fl, e, x, ite, m, s-cent, e, r, justify-betweenmb-2">
                     <spanclassNam, e={`px-2, py-1, te, x, t-xs, fo, n, t-me, d, i, u, m, rou, n, d, e, d-fu, l, l, bord, e, r ${getSeverityCol,o,r(iss,u,e.severity)}`}>                      {iss, u, e.severi, t, y.toUpperCase()}                    </span>
                     <spanclassName="te, x, t-xs, tex, t-gray-500 capitaliz e">{iss, u, e.cate, go.ry}</span>

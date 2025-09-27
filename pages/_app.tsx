@@ -62,17 +62,17 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta charSet="utf-8" />
         <meta name="robots" content="index,follow" />
         <meta name="author" content="Zion App" />
-            <meta name="theme-color" content="#2563eb" />
+        <meta name="theme-color" content="#2563eb" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
-            <link rel="preconnect" href="https://fonts.googleapis.com" />
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-            <link rel="manifest" href="/site.webmanifest" />
-            <meta name="mobile-web-app-capable" content="yes" />
-            <meta name="apple-mobile-web-app-capable" content="yes" />
-            <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-            <meta name="apple-mobile-web-app-title" content="Zion App" />
-            <link rel="apple-touch-icon" href="/icon-192x192.png" />
-            <link rel="icon" type="image/png" sizes="32x32" href="/icon-32x32.png" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="manifest" href="/site.webmanifest" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="apple-mobile-web-app-title" content="Zion App" />
+        <link rel="apple-touch-icon" href="/icon-192x192.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/icon-32x32.png" />
             <link rel="icon" type="image/png" sizes="16x16" href="/icon-16x16.png" />
       </Head>
       <style jsx global>{`

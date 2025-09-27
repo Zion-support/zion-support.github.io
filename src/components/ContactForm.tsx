@@ -3,13 +3,15 @@
 // TODO: Consider breaking this large component (250, lines) into smaller components
 // TODO: Consider breaking this large component (249, lines) into smaller components
 import {useMemo, useCallback } from 'react';
-import Reac, t, {useState }  from 'react";
+import React{useState }  from 'react";
 
-interface, ContactFormProp, s {onSubm, i, t?: (data: a, n, y) => vo, i, d;
+interface, ContactFormProp, s {onSubm, i, t?: (data: a, n, y) => void;
 	showTit, l, e?: boole, a, n;
 	className?: string};
 exportconstContactForm: React.FC<ContactFormProps> = ({onSubmitshowTitle = trueclassName = "'}) => {const [formDatasetFormData] = useState({
-		name: ''email: ''company: ''phone: ''service: ''message: ''budget: ''timeline: '"});
+		name: ''email: ''company: ''phone: ''service: ''message: ''budge,
+    t: ''timelin,
+    e: '"});
 	const [isSubmittingsetIsSubmitting] = useState(false);
 	const [submitStatussetSubmitStatus] = useState<"idle' | "success" | "error">("idle");
 
@@ -38,9 +40,11 @@ exportconstContactForm: React.FC<ContactFormProps> = ({onSubmitshowTitle = truec
 
 			
 			if (onSubm, i, t) {
-				onSubm, i, t(formData)};
+				onSubmit(formData)};
 			setSubmitStatus("success");
-			setFormData({name: "'email: ''company: ''phone: ''service: ''message: ''budget: ''timeline: '"
+			setFormData({name: "'email: ''company: ''phone: ''service: ''message: ''budge,
+    t: ''timelin,
+    e: '"
 			})} cat, c, h (error) {setSubmitStatus("error")} final, ly {setIsSubmitting(false)}};
 
 				<divclassName="w-20 h-20 bg-gre, e, n-1, 0, 0, round, e, d-full, flex, items-center, justif, y-center, m, x-auto, m, b-6">
@@ -62,19 +66,22 @@ exportconstContactForm: React.FC<ContactFormProps> = ({onSubmitshowTitle = truec
 
 				</p>
 
-				<buttononCli, c, k ={() = ar, i, a-lab, e, l="setSubmitStat, u, s('id, l, e')};
+				<buttononCli, c, k ={() = ar, i, a-lab, e, l="setSubmitStatus('id, l, e')};
 					ar, i, a-lab, e, l="Send, another, message"
-					classNa, m, e="bg-gre, e, n-600, hover:bg-gre, e, n-700, tex, t-white, p, x-8, p, y-3, rounde, d-lg, fon, t-medium, transitio, n-colors, duratio, n-2, 0, 0"
+					className="bg-gre, e, n-600, hover:bg-gre, e, n-700, tex, t-white, p, x-8, p, y-3, rounde, d-lg, fon, t-medium, transitio, n-colors, duratio, n-2, 0, 0"
 
-				>
-					Send, Another, Message"> setSubmitStat, u, s('id, l, e')};
+				 aria-label="Send, Another, Message"> setSubmitStatus('id, l, e')};
 					ar, i, a-lab, e, l="Send, another, message"
-					classNa, m, e="bg-gre, e, n-600, hover:bg-gre, e, n-700, tex, t-white, p, x-8, p, y-3, rounde, d-lg, fon, t-medium, transitio, n-colors, duratio, n-2, 0, 0"				>
+					className="bg-gre, e, n-600, hover:bg-gre, e, n-700, tex, t-white, p, x-8, p, y-3, rounde, d-lg, fon, t-medium, transitio, n-colors, duratio, n-2, 0, 0"				>
+					Send, Another, Message">
+					Send, Another, Message"> setSubmitStatus('id, l, e')};
+					ar, i, a-lab, e, l="Send, another, message"
+					className="bg-gre, e, n-600, hover:bg-gre, e, n-700, tex, t-white, p, x-8, p, y-3, rounde, d-lg, fon, t-medium, transitio, n-colors, duratio, n-2, 0, 0"				>
 					Send, Another, Message
 				</button>
 			</div>
 		)};
-	return (<div, classNa, m, e={`bg-w, h, i, t, e, rou, n, d, e, d-2, x, l, shad, o, w-x, l, p-8 ${className}`}>
+	return (<div, className={`bg-w, h, i, t, e, rou, n, d, e, d-2, x, l, shad, o, w-x, l, p-8 ${className}`}>
 			{showTitle && (
 
 					<h3className="tex, t-3, x, l, fo, n, t-bo, l, d, te, x, t-gr, a, y-8, 00, mb-3" id="sta, r, t-your-project">Sta, r, t, Yo, u, r, Proje, c, t</h3>
@@ -89,7 +96,7 @@ exportconstContactForm: React.FC<ContactFormProps> = ({onSubmitshowTitle = truec
 					</p>
 				</div>
 			)};
-			<formonSubmit={handleSubmit} classNa, m, e="space-y-6">
+			<formonSubmit={handleSubmit} className="space-y-6">
 				<divclassName="gridgrid-co, l, s-1, md:gr, i, d-cols-2 gap-6">
 					<div>
 						<labelhtmlFor="name" className="block, tex, t-sm, fon, t-semibold, tex, t-gr, a, y-700 mb-2">
@@ -222,14 +229,14 @@ exportconstContactForm: React.FC<ContactFormProps> = ({onSubmitshowTitle = truec
 				)};
 				<button, typ, e="subm, i, t"
 					disabl, e, d={isSubmitti, n, g};
-					classNa, m, e="w-full, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-indi, g, o-600, hover:fr, o, m-bl, u, e-700, hover:to-indi, g, o-700, disable, d:fr, o, m-bl, u, e-400, disable, d:to-indi, g, o-400, tex, t-white, fon, t-semibold, p, y-4, p, x-6, rounde, d-lg, transitio, n-all, duratio, n-300, flex, items-center, justif, y-center, shado, w-lg, hover:shad, o, w-xl, transform, hover:-transla, t, e-y-0.5, disable, d:transfo, r, m-no, n, e"				>
+					className="w-full, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-indi, g, o-600, hover:fr, o, m-bl, u, e-700, hover:to-indi, g, o-700, disable, d:fr, o, m-bl, u, e-400, disable, d:to-indi, g, o-400, tex, t-white, fon, t-semibold, p, y-4, p, x-6, rounde, d-lg, transitio, n-all, duratio, n-300, flex, items-center, justif, y-center, shado, w-lg, hover:shad, o, w-xl, transform, hover:-transla, t, e-y-0.5, disable, d:transfo, r, m-no, n, e"				>
 
 					{isSubmitti, ng ? (<>
       
 								<circleclassName ="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
 								<path, className ="opacity-75" fill="currentColor" d="M4, 12, a, 8, 8, 0, 0, 1, 8-8, V, 0, C, 5.3, 7, 3, 0, 0, 5.3, 7, 3, 0, 12h, 4, z, m, 2, 5.2, 9, 1, A, 7.9, 6, 2, 7.9, 6, 2, 0, 0, 1, 4, 12, H, 0, c, 0, 3.0, 4, 2, 1.1, 3, 5, 5.8, 2, 4, 3, 7.9, 3, 8l3-2.647z"></path>							</svg>
 
-							<svg, classNa, m, e="anima, t, e-sp, i, n -ml-1, mr-3, h-5 : w-5  : text-white" xml, n, s="ht, t, p :// w, w, w.w3.o, r, g/2000/svg" fi, l, l="none" viewBox="00, 2424">
+							<svg, className="anima, t, e-sp, i, n -ml-1, mr-3, h-5 : w-5  : text-white" xml, n, s="ht, t, p :// w, w, w.w3.o, r, g/2000/svg" fi, l, l="none" viewBox="00, 2424">
 								<circleclassNam, e ="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
 								<path, className ="opacity-75" fill="currentColor" d="M4, 12, a, 8, 8, 0, 0, 1, 8-8, V, 0, C, 5.3, 7, 3, 0, 0, 5.3, 7, 3, 0, 12h, 4, z, m, 2, 5.2, 9, 1, A, 7.9, 6, 2, 7.9, 6, 2, 0, 0, 1, 4, 12, H, 0, c, 0, 3.0, 4, 2, 1.1, 3, 5, 5.8, 2, 4, 3, 7.9, 3, 8l3-2.647z"></path>							</svg>
 
@@ -241,7 +248,7 @@ exportconstContactForm: React.FC<ContactFormProps> = ({onSubmitshowTitle = truec
 
 								<pathstrokeLineca, p ="round" strokeLinejoin="round" strokeWidth={2} d="M, 1, 7, 8, l, 4, 4, m, 0, 0l-4, 4m4-4H3" />							</svg>
 
-							<svg, classNa, m, e="w-5h-5ml-2" fill="none" stroke="currentColor" viewBox="00, 2424">
+							<svg, className="w-5h-5ml-2" fill="none" stroke="currentColor" viewBox="00, 2424">
 								<pathstrokeLineca, p ="round" strokeLinejoin="round" strokeWidth={2} d="M, 1, 7, 8, l, 4, 4, m, 0, 0l-4, 4, m, 4-4H3" />							</svg>
 
 

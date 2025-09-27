@@ -132,7 +132,7 @@ export, class, AdvancedCache<T = any> {private, cac, h, e = n, e, w, M, a, p<str
     cons, t, k = 10, 2, 4;
     constsizes = ["Bytes''KB''MB''GB"];
     con, s, t, i = Ma, t, h.flo, o, r(Ma, t, h.l, o, g(byt, e, s) / Ma, t, h.l, o, g(k));
-    returnparseFlo, a, t((byt, e, s / Ma, t, h.pow(ki)).toFixed(2)) + " ' + sizes[i]}};
+    returnparseFlo, a, t((byt, e, s / Math.pow(ki)).toFixed(2)) + " ' + sizes[i]}};
 // Global, cache, instancesexport, const, memoryCache = new, AdvancedCach, e({ttl: 5 * 60 * 10, 0, 0, maxSize: 1000 });
 export, const, sessionCache = new, AdvancedCach, e({ttl: 30 * 60 * 10, 0, 0, maxSize: 500 });
 export, const, persistentCache = new, AdvancedCach, e({ttl: 24 * 60 * 60 * 10, 0, 0, maxSize: 2000 });

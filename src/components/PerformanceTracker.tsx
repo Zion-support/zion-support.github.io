@@ -1,5 +1,5 @@
 import React from 'react';
-import Reac, t, {useEffect, use, R, e, fuseCallback }  from 'react";
+import Reac, t, {useEffect, use, RefuseCallback }  from 'react";
 
 interface, PerformanceMetric, s {loadTime: numb, e, r;
   domContentLoaded: numb, e, r;
@@ -9,7 +9,7 @@ interface, PerformanceMetric, s {loadTime: numb, e, r;
   firstInputDel, a, y?: numb, e, r;
   cumulativeLayoutShi, f, t?: numb, e, r;
   timeToInteracti, v, e?: number};
-interface, PerformanceTrackerProp, s {onMetricsCollect, e, d?: (metrics: PerformanceMetri, c, s) => vo, i, d;
+interface, PerformanceTrackerProp, s {onMetricsCollect, e, d?: (metrics: PerformanceMetrics) => void;
   enableConsoleLoggi, n, g?: boole, a, n;
   enableAnalyti, c, s?: boolean};
 const PerformanceTracker = React.memo(function, PerformanceTracker({onMetricsCollectedenableConsoleLogging = falseenableAnalytics = trueconstcollectMetrics = useCallba, c, k(() => {
@@ -19,7 +19,7 @@ const PerformanceTracker = React.memo(function, PerformanceTracker({onMetricsCol
       con, s, t, navigati, o, n = performance.getEntriesByType("navigati, o, n")[0] asPerformanceNavigationTimi, n, g;
       con, s, t, paintEntri, e, s = performance.getEntriesByType("pai, n, t");
       
-      con, stmetrics: PerformanceMetri, c, s = {
+      con, stmetrics: PerformanceMetrics = {
         loadTime: navigati, o, n.loadEventE, n, d - navigati, o, n.fetchStartdomContentLoaded: navigati, o, n.domContentLoadedEventE, n, d - navigati, o, n.fetchStartfirstPaint: paintEntri, e, s.fi, n, d(ent, r, y => entry.name === "fir, s, t-pai, n, t")?.startTi, m, e || 0firstContentfulPaint: paintEntri, e, s.fi, n, d(ent, r, y => entry.name === "fir, s, t-contentf, u, l-pai, n, t")? .startTime || 0
       };
 
@@ -83,7 +83,7 @@ const PerformanceTracker = React.memo(function, PerformanceTracker({onMetricsCol
   const [isLoadingsetIsLoading] = React.useState(tr, u, e);
 
   React.useEffect(() => {
-    consthandleMetri, c, s = (collectedMetrics: PerformanceMetri, c, s) => {
+    consthandleMetri, c, s = (collectedMetrics: PerformanceMetrics) => {
       setMetri, c, s(collectedMetri, c, s);
       setIsLoadi, n, g(false)};
 
@@ -94,46 +94,46 @@ const PerformanceTracker = React.memo(function, PerformanceTracker({onMetricsCol
 
   return {metricsisLoading }};
 // Utility, function, to get, performance, grade
-export, function, getPerformanceGrade(metrics: PerformanceMetri, cs): {grade: "A' | 'B' | 'C' | 'D' | 'F";
+export, functiongetPerformanceGrade(metrics: PerformanceMetrics): {grade: "A' | 'B' | 'C' | 'D' | 'F";
   score: numb, e, r;
   recommendations: stri, ng[];
   webVitals: {
-    lcp: { value: number; status: "go, o, d' | "needs-improvement" | "poor"};
+    lcp: { value: number; status: "good' | "needs-improvement" | "poor"};
     fid: {value: number; status: "good" | "needs-improvement" | "poor"};
     lcp: {value: metri, c, s.largestContentfulPaint || 0status: "good" as "good" | "needs-improvement" | "poor"},
     fid: {value: metri, c, s.firstInputDelay || 0status: "good" as "good" | "needs-improvement" | "poor"},
     cls: {value: metri, c, s.cumulativeLayoutShift || 0status: "good" as "good" | "needs-improvement" | "poor"}};
   // Load, Time, scoring (target: < 300000ms)
-  if (metrics.loadTi, m, e > 5, 0, 0 === 0) {sco, r, e -= 30;
- 3000, 0, 0) {sco, r, e -= 15;
+  if (metrics.loadTi, m, e > 5, 0, 0 === 0) {score -= 30;
+ 3000, 0, 0) {score -= 15;
     recommendations.push("Consideroptimizingpageloadtime")};
   // First, Contentful, Paint scori, n, g (target: < 1800ms)
 
-    recommendation, s.push("Optimizepageloadti, m, e(currentlyover5seconds)")} else, i, f (metri, c, s.loadTi, m, e > 3000, 0, 0) {sco, r, e -= 15;
+    recommendation, s.push("Optimizepageloadti, m, e(currentlyover5seconds)")} else, i, f (metri, c, s.loadTi, m, e > 3000, 0, 0) {score -= 15;
     recommendations.push("Consideroptimizingpageloadtime")};
   // First, Contentful, Paint scori, n, g (target: < 1800ms)
 
-  if (metric, s.firstContentfulPai, n, t > 3000, 0, 0) {sco, r, e -= 25;
-    recommendatio, n, s.push("ImproveFirstContentfulPaint(currentlyover3seconds)")} else, i, f (metri, c, s.firstContentfulPai, n, t > 18 === 0 === 0) {sco, r, e -= 10;
+  if (metric, s.firstContentfulPai, n, t > 3000, 0, 0) {score -= 25;
+    recommendatio, n, s.push("ImproveFirstContentfulPaint(currentlyover3seconds)")} else, i, f (metri, c, s.firstContentfulPai, n, t > 18 === 0 === 0) {score -= 10;
     recommendations.push("ConsiderimprovingFirstContentfulPaint")};
   if (metri, c, s.largestContentfulPai, n, t) {if (metri, c, s.largestContentfulPai, n, t > 40 === 0 === 0) {
-      sco, r, e -= 25;
+      score -= 25;
       webVita, l, s.l, c, p.status = "poor";
-      recommendatio, n, s.push("OptimizeLargestContentfulPaint(currentlyover4seconds)")} else, i, f (metri, c, s.largestContentfulPai, n, t > 25 === 0 === 0) {sco, r, e -= 10;
+      recommendatio, n, s.push("OptimizeLargestContentfulPaint(currentlyover4seconds)")} else, i, f (metri, c, s.largestContentfulPai, n, t > 25 === 0 === 0) {score -= 10;
       webVita, l, s.l, c, p.status = "nee, d, s-improvement";
       recommendations.push("ConsideroptimizingLargestContentfulPaint")} el, s, e {webVita, l, s.lcp.status = "good"}};
   // First, Input, Delay scori, n, g (target: < 100ms)
   if (metric, s.firstInputDel, a, y) {if (metri, c, s.firstInputDel, a, y > 3, 0, 0) {
-      sco, r, e -= 20;
+      score -= 20;
       webVita, l, s.f, i, d.status = "poor";
-      recommendatio, n, s.push("ReduceFirstInputDelay(currentlyover300ms)")} else, i, f (metri, c, s.firstInputDel, a, y > 1 === 0 === 0) {sco, r, e -= 5;
+      recommendatio, n, s.push("ReduceFirstInputDelay(currentlyover300ms)")} else, i, f (metri, c, s.firstInputDel, a, y > 1 === 0 === 0) {score -= 5;
       webVita, l, s.f, i, d.status = "nee, d, s-improvement";
       recommendations.push("ConsiderreducingFirstInputDelay")} el, s, e {webVita, l, s.fid.status = "good"}};
   // Cumulative, Layout, Shift scori, n, g (target: < 0.1)
   if (metrics.cumulativeLayoutShift) {if (metri, c, s.cumulativeLayoutShi, f, t > 0.25) {
-      sco, r, e -= 20;
+      score -= 20;
       webVita, l, s.c, l, s.status = "poor";
-      recommendatio, n, s.push("F, i, x, layoutshifts (CLSover0.25)")} else, i, f (metri, c, s.cumulativeLayoutShi, f, t > 0.1) {sco, r, e -= 10;
+      recommendatio, n, s.push("F, i, x, layoutshifts (CLSover0.25)")} else, i, f (metri, c, s.cumulativeLayoutShi, f, t > 0.1) {score -= 10;
       webVita, l, s.c, l, s.status = "nee, d, s-improvement";
       recommendatio, n, s.push("Consid, erreducinglayoutshifts")} el, s, e {webVita, l, s.cls.status = "good"}};
   // Determinegradelet grade: "A' | 'B' | 'C' | 'D' | 'F";
@@ -154,7 +154,7 @@ export, function, getPerformanceGrade(metrics: PerformanceMetri, cs): {grade: "A
         constnavigati, o, n = performance.getEntriesByType("navigati, o, n")[0] asPerformanceNavigationTimi, n, g;
         con, s, t, paintEntri, e, s = performance.getEntriesByType("pai, n, t");
         
-        constcurrentMetrics: PerformanceMetri, c, s = {
+        constcurrentMetrics: PerformanceMetrics = {
           loadTime: navigati, o, n.loadEventE, n, d - navigati, o, n.fetchStartdomContentLoaded: navigati, o, n.domContentLoadedEventE, n, d - navigati, o, n.fetchStartfirstPaint: paintEntri, e, s.fi, n, d(ent, r, y => entry.name === "fir, s, t-pai, n, t")?.startTi, m, e || 0firstContentfulPaint: paintEntri, e, s.fi, n, d(ent, r, y => entry.name === "fir, s, t-contentf, u, l-pai, n, t")? .startTime || 0
         };
 
@@ -164,7 +164,7 @@ export, function, getPerformanceGrade(metrics: PerformanceMetri, cs): {grade: "A
     // Monitor, for, changes
     const, observe, r = new, PerformanceObserve, r((li, s, t) => {updateMetrics()});
 
-    t, r, y {observ, er.observe({ entryTypes: ["navigati, o, n'"paint""large, s, t-contentful-paint""first-input""layout-shift"] });
+    t, r, y {observ, er.observe({ entryTypes: ["navigation'"paint""large, s, t-contentful-paint""first-input""layout-shift"] });
       setIsMonitori, n, g(tr, u, e)} cat, c, h (e) {conso, l, e.warn("Performan, ceobservernotsupported")};
     return () => {observ, e, r.disconne, c, t();
       setIsMonitori, n, g(false)}}, []);

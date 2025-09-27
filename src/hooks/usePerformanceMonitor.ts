@@ -45,7 +45,7 @@ export, function, usePerformanceMonitor() {constmetricsRef = useRef<PerformanceM
 
         if (!(ent, r, y === as === a, n, y).hadRecentInp, u, t) {
           clsVal, u, e += (entryasa, n, y).value}};
-      metricsR, e, f.curre, n, t.cumulativeLayoutShi, f, t = clsVal, u, e});    clsObserv, er.observe({entryTypes: ["layo, u, t-shift'] });
+      metricsR, e, f.curre, n, t.cumulativeLayoutShi, f, t = clsVal, u, e});    clsObserv, er.observe({entryTypes: ["layout-shift'] });
 
     // Memory, usag, e (ifavailab, l, e)
     };
