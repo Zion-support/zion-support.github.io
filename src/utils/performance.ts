@@ -18,6 +18,7 @@ export class PerformanceMonitor {
   private static instance: PerformanceMonitor;
   private metrics: Map<string, number> = new Map();
   private observers: PerformanceObserver[] = [];
+  private intervalId: NodeJS.Timeout | null = null;
 
   private constructor() {
     this.initializeObservers();
@@ -238,7 +239,7 @@ export class ResourceMonitor {
     averageLoadTime: number;
     slowestResource: string;
   }> {
-    const metrics: Record<string, any> = {};
+    const metrics: Record<string, unknown> = {};
     
     this.resourceTimings.forEach((timings, domain) => {
       const totalSize = timings.reduce((sum, timing) => sum + (timing.transferSize || 0), 0);
@@ -280,7 +281,7 @@ export class MemoryMonitor {
   public startMonitoring(intervalMs: number = 5000): void {
     if ('memory' in performance) {
       const interval = setInterval(() => {
-        const memory = (performance as any).memory;
+        const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
         this.memoryHistory.push({
           timestamp: Date.now(),
           usedJSHeapSize: memory.usedJSHeapSize,
@@ -295,12 +296,12 @@ export class MemoryMonitor {
       }, intervalMs);
 
       // Store interval ID for cleanup
-      (this as any).intervalId = interval;
+      this.intervalId = interval;
     }
   }
 
   public getMemoryMetrics(): {
-    current: any;
+    current: number;
     average: number;
     peak: number;
     trend: 'increasing' | 'decreasing' | 'stable';
@@ -319,9 +320,9 @@ export class MemoryMonitor {
   }
 
   public stopMonitoring(): void {
-    if ((this as any).intervalId) {
-      clearInterval((this as any).intervalId);
-      (this as any).intervalId = null;
+    if (this.intervalId) {
+      clearInterval(this.intervalId);
+      this.intervalId = null;
     }
   }
 }

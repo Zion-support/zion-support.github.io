@@ -1,4 +1,6 @@
 // Enhanced error handling utilities
+import React from 'react';
+
 export interface ErrorContext {
   userId?: string;
   sessionId?: string;
@@ -7,7 +9,7 @@ export interface ErrorContext {
   timestamp: number;
   component?: string;
   action?: string;
-  additionalData?: Record<string, any>;
+  additionalData?: Record<string, unknown>;
 }
 
 export interface ErrorReport {
@@ -87,10 +89,10 @@ export class EnhancedErrorHandler {
     if (event.target !== window) {
       const errorReport: ErrorReport = {
         id: this.generateErrorId(event),
-        message: `Resource loading error: ${(event.target as any)?.src || (event.target as any)?.href}`,
+        message: `Resource loading error: ${(event.target as HTMLImageElement | HTMLLinkElement)?.src || (event.target as HTMLLinkElement)?.href}`,
         context: this.getErrorContext({
-          resourceType: (event.target as any)?.tagName,
-          resourceUrl: (event.target as any)?.src || (event.target as any)?.href
+          resourceType: (event.target as HTMLElement)?.tagName,
+          resourceUrl: (event.target as HTMLImageElement | HTMLLinkElement)?.src || (event.target as HTMLLinkElement)?.href
         }),
         severity: 'medium',
         category: 'resource',
@@ -159,13 +161,13 @@ export class EnhancedErrorHandler {
     const originalOpen = originalXHR.prototype.open;
     const originalSend = originalXHR.prototype.send;
 
-    originalXHR.prototype.open = function(method: string, url: string, ...args: any[]) {
+    originalXHR.prototype.open = function(method: string, url: string, ...args: unknown[]) {
       this._method = method;
       this._url = url;
       return originalOpen.apply(this, [method, url, ...args]);
     };
 
-    originalXHR.prototype.send = function(data?: any) {
+    originalXHR.prototype.send = function(data?: unknown) {
       this.addEventListener('error', () => {
         const errorReport: ErrorReport = {
           id: EnhancedErrorHandler.getInstance().generateErrorId(this),
@@ -236,13 +238,13 @@ export class EnhancedErrorHandler {
     }
   }
 
-  private generateErrorId(error: any): string {
+  private generateErrorId(error: Error | Event | unknown): string {
     const message = error?.message || error?.toString() || 'unknown';
     const stack = error?.stack || '';
     return btoa(message + stack).replace(/[^a-zA-Z0-9]/g, '').substring(0, 16);
   }
 
-  private getErrorContext(additionalData?: Record<string, any>): ErrorContext {
+  private getErrorContext(additionalData?: Record<string, unknown>): ErrorContext {
     return {
       url: window.location.href,
       userAgent: navigator.userAgent,
@@ -251,7 +253,7 @@ export class EnhancedErrorHandler {
     };
   }
 
-  private determineSeverity(error: any): 'low' | 'medium' | 'high' | 'critical' {
+  private determineSeverity(error: Error | Event | unknown): 'low' | 'medium' | 'high' | 'critical' {
     const message = error?.message || error?.toString() || '';
     
     if (message.includes('ChunkLoadError') || message.includes('Loading chunk')) {
@@ -363,7 +365,7 @@ export class ReactErrorBoundary extends React.Component<
 > {
   private errorHandler = EnhancedErrorHandler.getInstance();
 
-  constructor(props: any) {
+  constructor(props: { children: React.ReactNode; fallback?: React.ComponentType<{ error: Error }> }) {
     super(props);
     this.state = { hasError: false };
   }
@@ -382,37 +384,36 @@ export class ReactErrorBoundary extends React.Component<
   render() {
     if (this.state.hasError) {
       const FallbackComponent = this.props.fallback || DefaultErrorFallback;
-      return <FallbackComponent error={this.state.error!} />;
+      return React.createElement(FallbackComponent, { error: this.state.error! });
     }
 
     return this.props.children;
   }
 }
 
-const DefaultErrorFallback: React.FC<{ error: Error }> = ({ error }) => (
-  <div className="error-boundary">
-    <h2>Something went wrong</h2>
-    <p>We're sorry, but something unexpected happened.</p>
-    {process.env.NODE_ENV === 'development' && (
-      <details>
-        <summary>Error Details</summary>
-        <pre>{error.message}</pre>
-        <pre>{error.stack}</pre>
-      </details>
-    )}
-  </div>
-);
+const DefaultErrorFallback: React.FC<{ error: Error }> = ({ error }) => 
+  React.createElement('div', { className: 'error-boundary' },
+    React.createElement('h2', null, 'Something went wrong'),
+    React.createElement('p', null, 'We\'re sorry, but something unexpected happened.'),
+    process.env.NODE_ENV === 'development' && React.createElement('details', null,
+      React.createElement('summary', null, 'Error Details'),
+      React.createElement('pre', null, error.message),
+      React.createElement('pre', null, error.stack)
+    )
+  );
 
 // Utility functions
 export const withErrorBoundary = <P extends object>(
   Component: React.ComponentType<P>,
   fallback?: React.ComponentType<{ error: Error }>
 ) => {
-  return (props: P) => (
-    <ReactErrorBoundary fallback={fallback}>
-      <Component {...props} />
-    </ReactErrorBoundary>
-  );
+  const WrappedComponent = (props: P) => 
+    React.createElement(ReactErrorBoundary, { fallback },
+      React.createElement(Component, props)
+    );
+  
+  WrappedComponent.displayName = `withErrorBoundary(${Component.displayName || Component.name})`;
+  return WrappedComponent;
 };
 
 export const enhancedErrorHandler = EnhancedErrorHandler.getInstance();

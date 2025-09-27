@@ -10,7 +10,7 @@ export class SecurityManager {
   private suspiciousActivities: Array<{
     timestamp: number;
     type: string;
-    details: any;
+    details: Record<string, unknown>;
   }> = [];
 
   public static getInstance(): SecurityManager {
@@ -213,7 +213,7 @@ export class SecurityManager {
     return true;
   }
 
-  private reportSecurityEvent(type: string, details: any): void {
+  private reportSecurityEvent(type: string, details: Record<string, unknown>): void {
     // In production, this would send data to a security monitoring service
     if (typeof gtag !== 'undefined') {
       gtag('event', 'security_event', {
@@ -227,7 +227,7 @@ export class SecurityManager {
   public getSecurityReport(): {
     cspViolations: number;
     suspiciousActivities: number;
-    recentViolations: any[];
+    recentViolations: Array<{ timestamp: number; type: string; details: Record<string, unknown> }>;
   } {
     const now = Date.now();
     const last24Hours = 24 * 60 * 60 * 1000;

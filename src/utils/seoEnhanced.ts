@@ -369,7 +369,7 @@ export class AdvancedSEOAnalytics {
 
   public generateSEOReport(): {
     topPages: Array<{ url: string; views: number }>;
-    engagementMetrics: Record<string, any>;
+    engagementMetrics: Record<string, unknown>;
     recommendations: string[];
   } {
     const topPages = Array.from(this.pageViews.entries())
