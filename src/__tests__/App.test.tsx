@@ -115,6 +115,59 @@ const TestLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => (
     <footer data-testid="footer">Footer</footer>
   </div>
 );
+// Mock the router components but keep Layout available
+jest.mock('../router', () => {
+  const React = require('react');
+  const { MemoryRouter, Routes, Route } = require('react-router-dom');
+  
+  // Mock Layout component
+  const MockLayout = ({ children }: { children: React.ReactNode }) => (
+    <div className="min-h-screen bg-white">
+      <main id="main-content" role="main">
+        {children}
+      </main>
+    </div>
+  );
+  
+  return {
+    Layout: MockLayout,
+    AppRouter: () => {
+      const [initialRoute] = React.useState(window.location.pathname || '/');
+      
+      return (
+        <MemoryRouter initialEntries={[initialRoute]}>
+          <main id="main-content" role="main">
+            <Routes>
+              <Route path="/" element={<div data-testid="home-page">Home Page</div>} />
+              <Route path="/blog" element={<div data-testid="blog-page">Blog Page</div>} />
+              <Route path="/contact" element={<div data-testid="contact-page">Contact Page</div>} />
+              <Route path="/about" element={<div data-testid="about-page">About Page</div>} />
+              <Route path="/services" element={<div data-testid="services-page">Services Page</div>} />
+              <Route path="/portfolio" element={<div data-testid="portfolio-page">Portfolio Page</div>} />
+              <Route path="*" element={<div data-testid="not-found-page">Not Found Page</div>} />
+            </Routes>
+          </main>
+        </MemoryRouter>
+      );
+    }
+  };
+});
+
+const renderWithRouter = (ui: React.ReactElement, { route = '/' } = {}) => {
+  // Set the window location for the mocked router
+  Object.defineProperty(window, 'location', {
+    value: { pathname: route },
+    writable: true
+  });
+  return render(ui);
+};
+
+describe('App', () => {
+  test('renders without crashing', () => {
+    renderWithRouter(<App />);
+    // Just test that the app renders without throwing
+    expect(document.body).toBeInTheDocument();
+  });
 
 describe('App Pages', () => {
   test('renders home page correctly', () => {
