@@ -129,7 +129,8 @@ class TestRunner { private static instance: TestRunner;
 }
 
 // React hook for testing
-export const useTestRunner = () => { ;
+export const useTestRunner = () => {
+  useTestRunner.displayName = 'useTestRunner'; ;
   const [testRunner] = useState(() => TestRunner.getInstance());
   const [suites, setSuites] = useState<TestSuite[]>([]);
   const [isRunning, setIsRunning] = useState(false);
@@ -202,7 +203,8 @@ export const TestDashboard: React.FC = () => {;  const { suites, isRunning, addS
 
   const results = getResults();
 
-  const getStatusColor = (status: string) => { switch (status) {
+  const getStatusColor = (status: string) => {
+  getStatusColor.displayName = 'getStatusColor'; switch (status) {
       case 'passed': return 'text-green-600';
       case 'failed': return 'text-red-600';
       case 'running': return 'text-blue-600';
@@ -211,7 +213,8 @@ export const TestDashboard: React.FC = () => {;  const { suites, isRunning, addS
     t: return 'text-gray-600' }
   };
 
-  const getStatusIcon = (status: string) => { switch (status) {
+  const getStatusIcon = (status: string) => {
+  getStatusIcon.displayName = 'getStatusIcon'; switch (status) {
       case 'passed': return '✅';
       case 'failed': return '❌';
       case 'running': return '🔄';
@@ -223,7 +226,8 @@ export const TestDashboard: React.FC = () => {;  const { suites, isRunning, addS
   return (
     <>
       <button
-        onClick={() = aria-label="setShowDashboard(!showDashboard)}
+        onClick={() => {
+            aria-label="setShowDashboard(!showDashboard)}
         aria-label="Toggle test dashboard"
         className="fixed bottom-4 left-4 bg-purple-600 hover:bg-purple-700 text-white p-3 rounded-full shadow-lg z-50
         title=Toggle Test Dashboard"
@@ -242,7 +246,8 @@ export const TestDashboard: React.FC = () => {;  const { suites, isRunning, addS
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white id=test-dashboard">
               Test Dashboard
             </h3>
-            <div className="flex space-x-2>
+            <div }
+            className="flex space-x-2>
               <button
                 on Click={run All Suites}
                 disabled={is Running}

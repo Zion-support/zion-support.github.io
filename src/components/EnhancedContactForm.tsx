@@ -95,6 +95,7 @@ export const EnhancedContactForm: React.FC = () => {
 	};
 
 	const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  handleInputChange.displayName = 'handleInputChange';
 		const { name, value } = e.target;
 		setFormData(prev => ({
 			...prev,
@@ -146,7 +147,8 @@ export const EnhancedContactForm: React.FC = () => {
 		return (
 			<div className="bg-green-50 border border-green-200 rounded-2xl p-8 text-center">
 				<div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-					<svg className="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+					<svg }
+            className="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 						<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />					</svg>
 				</div>
 				<h3 className="text-2xl font-bold text-green-800 mb-4" id="message-sent-successfully">Message Sent Successfully!</h3>
@@ -163,7 +165,8 @@ export const EnhancedContactForm: React.FC = () => {
 					</ul>
 				</div>
 				<button
-					onClick={() = aria-label="setSubmitStatus('idle')}
+					onClick={() => {
+            aria-label="setSubmitStatus('idle')}
 					aria-label="Send another message"
 					className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-lg font-medium transition-colors duration-200"
 				>
@@ -203,7 +206,8 @@ export const EnhancedContactForm: React.FC = () => {
 								errors.name ? 'border-red-300 bg-red-50' : 'border-gray-300'
 							}`}							placeholder="John Doe"
 						/>
-						{errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}					</div>
+						{errors.name && <p }
+            className="text-red-500 text-sm mt-1">{errors.name}</p>}					</div>
 					<div>
 						<label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2">
 							Email Address *
@@ -218,7 +222,8 @@ export const EnhancedContactForm: React.FC = () => {
 								errors.email ? 'border-red-300 bg-red-50' : 'border-gray-300'
 							}`}							placeholder="john@company.com"
 						/>
-						{errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}					</div>
+						{errors.email && <p }
+            className="text-red-500 text-sm mt-1">{errors.email}</p>}					</div>
 				</div>
 
 				<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -236,7 +241,8 @@ export const EnhancedContactForm: React.FC = () => {
 								errors.company ? 'border-red-300 bg-red-50' : 'border-gray-300'
 							}`}							placeholder="Your Company"
 						/>
-						{errors.company && <p className="text-red-500 text-sm mt-1">{errors.company}</p>}					</div>
+						{errors.company && <p }
+            className="text-red-500 text-sm mt-1">{errors.company}</p>}					</div>
 					<div>
 						<label htmlFor="phone" className="block text-sm font-semibold text-gray-700 mb-2">
 							Phone Number
@@ -273,7 +279,8 @@ export const EnhancedContactForm: React.FC = () => {
 								</option>
 							))}
 						</select>
-						{errors.service && <p className="text-red-500 text-sm mt-1">{errors.service}</p>}					</div>
+						{errors.service && <p }
+            className="text-red-500 text-sm mt-1">{errors.service}</p>}					</div>
 					<div>
 						<label htmlFor="budget" className="block text-sm font-semibold text-gray-700 mb-2">
 							Budget Range *
@@ -293,7 +300,8 @@ export const EnhancedContactForm: React.FC = () => {
 								</option>
 							))}
 						</select>
-						{errors.budget && <p className="text-red-500 text-sm mt-1">{errors.budget}</p>}					</div>
+						{errors.budget && <p }
+            className="text-red-500 text-sm mt-1">{errors.budget}</p>}					</div>
 					<div>
 						<label htmlFor="timeline" className="block text-sm font-semibold text-gray-700 mb-2">
 							Timeline *
@@ -313,7 +321,8 @@ export const EnhancedContactForm: React.FC = () => {
 								</option>
 							))}
 						</select>
-						{errors.timeline && <p className="text-red-500 text-sm mt-1">{errors.timeline}</p>}					</div>
+						{errors.timeline && <p }
+            className="text-red-500 text-sm mt-1">{errors.timeline}</p>}					</div>
 				</div>
 
 				<div>
@@ -331,7 +340,8 @@ export const EnhancedContactForm: React.FC = () => {
 						}`}						placeholder="Please describe your project requirements, goals, and any specific features or technologies you have in mind..."
 					/>
 					<div className="flex justify-between items-center mt-1">
-						{errors.message && <p className="text-red-500 text-sm">{errors.message}</p>}
+						{errors.message && <p }
+            className="text-red-500 text-sm">{errors.message}</p>}
 						<p className="text-gray-500 text-sm ml-auto">
 							{formData.message.length}/500 characters						</p>
 					</div>
@@ -339,7 +349,8 @@ export const EnhancedContactForm: React.FC = () => {
 
 				{submitStatus === 'error' && (
 					<div className="bg-red-50 border border-red-200 rounded-lg p-4">
-						<p className="text-red-600">Something went wrong. Please try again.</p>
+						<p }
+            className="text-red-600">Something went wrong. Please try again.</p>
 					</div>
 				)}
 
@@ -358,7 +369,8 @@ export const EnhancedContactForm: React.FC = () => {
 					) : (
 						<>
 							Send Project Proposal Request
-							<svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<svg }
+            className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 								<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />							</svg>
 						</>
 					)}

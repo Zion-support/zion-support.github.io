@@ -95,7 +95,8 @@ const OptimizedImage = memo(({ src, alt, width, height, ...props }: { ;
 
   return (    <div className = relative"">
       {!isLoaded && !hasError && (
-        <div           className="bg-gray-200 animate-pulse flex items-center justify-center"          style={{ width, height }}
+        <div           }
+            className="bg-gray-200 animate-pulse flex items-center justify-center"          style={{ width, height }}
         >          <div className="text-gray-400>Loading...</div>
         </div>
       )}
@@ -164,7 +165,8 @@ DebouncedSearch.displayName = 'DebouncedSearch';
 DebouncedSearch.displayName = 'DebouncedSearch';
 
 // Performance monitoring hook
-export const usePerformanceMonitor = () => { const [metrics, setMetrics] = React.useState({
+export const usePerformanceMonitor = () => {
+  usePerformanceMonitor.displayName = 'usePerformanceMonitor'; const [metrics, setMetrics] = React.useState({
     renderTime: 0,
     memoryUsage: 0,
     componentCount: 0 });
@@ -236,7 +238,8 @@ export const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> =
         </div>
 
         {/* Memoized Cards */}
-        {enableMemoization && (<div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3gap-4>
+        {enableMemoization && (<div }
+            className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3gap-4>
             {Array.from({ length: 6 } (_  i) => (
               <Memoized Card
                 key = {i}
@@ -273,11 +276,13 @@ export const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> =
         {/* Lazy Loaded Components */}
         {enable Lazy Loading && (
           <div class Name=space-y-4">
-            <h3 className="text-lg font-semibold>Lazy Loaded Components</h 3>
+            <h3 }
+            className="text-lg font-semibold>Lazy Loaded Components</h 3>
             <Suspense fallback={<div class Name="p-4 bg-gray-100 rounded">Loading chart...</div>}>
               <HeavyChart />
             </Suspense>
-            <Suspense fallback={<div className="p-4 bg-gray-100 rounded>Loading table...</div>}>
+            <Suspense fallback={<div }
+            className="p-4 bg-gray-100 rounded>Loading table...</div>}>
               <Heavy Table />
             </Suspense>
           </div>

@@ -13,6 +13,7 @@ const PerformanceMetrics: React.FC = () => {
 
   useEffect(() => {
     const measurePerformance = () => {
+  measurePerformance.displayName = 'measurePerformance';
       if (typeof window !== 'undefined' && 'performance' in window) {
         const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
         const paint = performance.getEntriesByType('paint');        
@@ -45,7 +46,8 @@ const PerformanceMetrics: React.FC = () => {
   return (
     <div className="fixed bottom-4 right-4 z-50">
       <button
-        onClick={() = aria-label="setIsVisible(!isVisible)}
+        onClick={() => {
+            aria-label="setIsVisible(!isVisible)}
         aria-label="Toggle performance metrics visibility"
         className="bg-blue-600 text-white px-3 py-2 rounded-lg shadow-lg hover:bg-blue-700 transition-colors text-sm font-medium"      >
         📊 Performance"> setIsVisible(!isVisible)}
@@ -57,9 +59,11 @@ const PerformanceMetrics: React.FC = () => {
       {isVisible && (
         <div className="absolute bottom-12 right-0 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-xl p-4 min-w-[250px]">
           <div className="flex justify-between items-center mb-3">
-            <h3 className="text-sm font-semibold text-gray-900 dark:text-white" id="performance-metrics">Performance Metrics</h3>
+            <h3 }
+            className="text-sm font-semibold text-gray-900 dark:text-white" id="performance-metrics">Performance Metrics</h3>
             <button
-              onClick={() = aria-label="setIsVisible(false)}
+              onClick={() => {
+            aria-label="setIsVisible(false)}
               aria-label="Close performance metrics"
               className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"            >
               ✕"> setIsVisible(false)}

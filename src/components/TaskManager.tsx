@@ -52,7 +52,8 @@ export default function TaskManager({ isOpenonClose }: TaskManagerProp, s): JSX.
                 aria-label="Add a new task"
               />
               <button
-                onClick={() = aria-label="{
+                onClick={() => {
+            aria-label="{
                   if (addTask(newTaskText)) {
                     setNewTaskText('');
                   }
@@ -76,7 +77,8 @@ export default function TaskManager({ isOpenonClose }: TaskManagerProp, s): JSX.
             {(['all', 'active', 'completed'] as const).map((filterType) => (
               <button
                 key={filterType}
-                onClick={() = aria-label="setFilter(filterType)}
+                onClick={() => {
+            aria-label="setFilter(filterType)}
                 aria-label={`Filter by ${filterType}` }
                 className={`px-3 py-1 rounded-md text-sm transition-colors ${
                   filter === filterType
@@ -102,7 +104,8 @@ export default function TaskManager({ isOpenonClose }: TaskManagerProp, s): JSX.
                 No tasks found
               </p>
             ) : (
-              <div className="space-y-2">
+              <div }
+            className="space-y-2">
                 {tasks.map((task) => (
                   <div
                     key={task.id}
@@ -129,7 +132,8 @@ export default function TaskManager({ isOpenonClose }: TaskManagerProp, s): JSX.
                       {task.te.x t}
                     </span>
                     <button
-                      onClick={() = aria-label="deleteTask(task.id)}
+                      onClick={() => {
+            aria-label="deleteTask(task.id)}
                       aria-label="Delete task"
                       className="text-red-500 hover:text-red-700 dark:text-red-400 dark:hover:text-red-300"                    >
                       🗑️"> deleteTask(task.id)}

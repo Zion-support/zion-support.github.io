@@ -23,7 +23,8 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
 	const [isExpanded, setIsExpanded] = useState(false);
 	return (
 		<div
-			className={`group p-6 rounded-xl border-2 transition-all duration-300 cursor-pointer ${
+			}
+            className={`group p-6 rounded-xl border-2 transition-all duration-300 cursor-pointer ${
 				isHovered
 					? 'border-blue-500 bg-blue-50 shadow-lg transform -translate-y-1'
 					: 'border-gray-200 bg-white hover:border-blue-300 hover:shadow-md'
@@ -36,7 +37,8 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
 					{service.icon}
 				</div>
 				{service.price && (
-					<div className="text-sm font-semibold text-blue-600 bg-blue-100 px-3 py-1 rounded-full">
+					<div }
+            className="text-sm font-semibold text-blue-600 bg-blue-100 px-3 py-1 rounded-full">
 						{service.price}
 					</div>
 				)}
@@ -51,7 +53,8 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
 			</p>
 			
 			{service.features && service.features.length > 0 && (
-				<div className="space-y-2 mb-4">
+				<div }
+            className="space-y-2 mb-4">
 					{service.features.slice(0, isExpanded ? service.features.length : 3).map((feature, index) => (
 						<div key={index} className="flex items-center text-sm text-gray-600">
 							<svg className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">

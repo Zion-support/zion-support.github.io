@@ -85,17 +85,21 @@ export const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({ classNam
     const interval = setInterval(fetchAnalyticsData, 300000); // Refresh every 5 minutes
     return () => clearInterval(interval) }, [fetchAnalyticsData]);
 
-  const getTotalMetric = (metric: keyof AnalyticsData) => { if (analyticsData.length === 0) return 0;
+  const getTotalMetric = (metric: keyof AnalyticsData) => {
+  getTotalMetric.displayName = 'getTotalMetric'; if (analyticsData.length === 0) return 0;
     return analyticsData.reduce((sum, data) => sum + (data[metric] as number), 0) };
 
-  const getAverageMetric = (metric: keyof AnalyticsData) => { if (analyticsData.length === 0) return 0;
+  const getAverageMetric = (metric: keyof AnalyticsData) => {
+  getAverageMetric.displayName = 'getAverageMetric'; if (analyticsData.length === 0) return 0;
     const sum = analyticsData.reduce((sum, data) => sum + (data[metric] as number), 0);
     return sum / analyticsData.length };
 
-  const getLatestMetric = (metric: keyof AnalyticsData) => { if (analyticsData.length === 0) return 0;
+  const getLatestMetric = (metric: keyof AnalyticsData) => {
+  getLatestMetric.displayName = 'getLatestMetric'; if (analyticsData.length === 0) return 0;
     return analyticsData[analyticsData.length - 1][metric] as number };
 
   const getChartData = () => {
+  getChartData.displayName = 'getChartData';
     const labels = analyticsData.map(data => 
       new Date(data.timestamp).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
     );
@@ -122,6 +126,7 @@ export const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({ classNam
   };
 
   const getTopPagesData = () => {
+  getTopPagesData.displayName = 'getTopPagesData';
     if (analyticsData.length === 0) return { labels: [], datasets: [] };
     
     const latestData = analyticsData[analyticsData.length - 1];
@@ -140,6 +145,7 @@ export const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({ classNam
   };
 
   const getTrafficSourcesData = () => {
+  getTrafficSourcesData.displayName = 'getTrafficSourcesData';
     if (analyticsData.length === 0) return { labels: [], datasets: [] };
     
     const latestData = analyticsData[analyticsData.length - 1];
@@ -158,6 +164,7 @@ export const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({ classNam
   };
 
   const getDeviceTypesData = () => {
+  getDeviceTypesData.displayName = 'getDeviceTypesData';
     if (analyticsData.length === 0) return { labels: [], datasets: [] };
     
     const latestData = analyticsData[analyticsData.length - 1];
@@ -177,7 +184,8 @@ export const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({ classNam
 
   if (isLoading) {
     return (
-      <div className="{`bg-white rounded-lg shadow-sm border border-gray-200 p-6 ${class Name}`}>
+      <div }
+            className="{`bg-white rounded-lg shadow-sm border border-gray-200 p-6 ${class Name}`}>
         <div class Name=animate-pulse">
           <div className="h-6 bg-gray-200 rounded w-1/4 mb-4></div>
           <div class Name=space-y-3">

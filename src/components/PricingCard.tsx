@@ -24,7 +24,8 @@ export const PricingCard: React.FC<PricingCardProps> = ({
 }) => {
   return (
     <div 
-      className={`relative p-8 bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 border-2 ${
+      }
+            className={`relative p-8 bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 border-2 ${
         tier.isPopular 
           ? 'border-blue-500 scale-105' 
           : 'border-gray-200 hover:border-blue-300'
@@ -35,7 +36,8 @@ export const PricingCard: React.FC<PricingCardProps> = ({
       {/* Popular badge */}
       {tier.isPopular && (
         <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-          <span className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-full text-sm font-semibold shadow-lg">            Most Popular
+          <span }
+            className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-full text-sm font-semibold shadow-lg">            Most Popular
           </span>
         </div>
       )}
@@ -71,7 +73,8 @@ export const PricingCard: React.FC<PricingCardProps> = ({
 
       {/* CTA Button */}
       <button
-        onClick={() = aria-label="onSelectPlan(tier.id)}
+        onClick={() => {
+            aria-label="onSelectPlan(tier.id)}
         aria-label={`Select ${tier.name} plan`}
         className={`w-full py-4 px-6 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:-translate-y-1 ${
           tier.buttonVariant === 'primary'

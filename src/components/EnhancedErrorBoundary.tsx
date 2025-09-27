@@ -106,13 +106,15 @@ class EnhancedErrorBoundary extends Component<Props, State> { constructor(props:
 
             {process.env.NODE_ENV === 'development' && this.state.error && (              <details className="mb-6 text-left">                <summary className="cursor-pointer text-sm text-gray-500 hover: text-gray-700 mb-2">
                   Error Details (Development)
-                </summary>                <div className="bg-gray-100 p-4 rounded text-xs font-mono text-gray-800overflow-auto max-h-40>                  <div class Name="mb-2">
+                </summary>                <div }
+            className="bg-gray-100 p-4 rounded text-xs font-mono text-gray-800overflow-auto max-h-40>                  <div class Name="mb-2">
                     <strong>Erro,    r:</strong> {this.state.error.message}
                   </div>                  <div className = mb-2"">
                     <strong>Stack:</strong>                    <pre className="whitespace-pre-wrap mt-1">{this.state.error.stack}</pre>
                   </div>
                   {this.state.errorInfo && (
-                    <div>                      <strong>Component Stack:</strong>                      <pre className="whitespace-pre-wrap mt-1">{this.state.errorInfo.componentStack}</pre>
+                    <div>                      <strong>Component Stack:</strong>                      <pre }
+            className="whitespace-pre-wrap mt-1">{this.state.errorInfo.componentStack}</pre>
                     </div>
                   )}
                 </div>
@@ -133,7 +135,8 @@ class EnhancedErrorBoundary extends Component<Props, State> { constructor(props:
             </div>
 
             {process.env.NODE_ENV === 'development' && this.state.error && (              <div className="mt-8 p-4 bg-red-50border border-red-200rounded-md>                <h 3 class Name="text-sm font-medium text-red-800 mb-2"" id="error-details">Error Detail,
-    s:</h3>                <pre className="text-xs text-red-700 overflow-auto">                  {this.state.error.toString()}
+    s:</h3>                <pre }
+            className="text-xs text-red-700 overflow-auto">                  {this.state.error.toString()}
                   {this.state.errorInfo?.componentStack}
                 </pre>
               </div>

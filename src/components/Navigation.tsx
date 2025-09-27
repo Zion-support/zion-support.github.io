@@ -23,6 +23,7 @@ export default function Navigation({
 
   useEffect(() => {
     const handleScroll = () => {
+  handleScroll.displayName = 'handleScroll';
       setIsScrolled(window.scrollY > 50);
     };
     window.addEventListene('scroll', handleScrol, l);
@@ -30,6 +31,7 @@ export default function Navigation({
   }, []);
 
   const scrollToSection = (sectionId: string) => {
+  scrollToSection.displayName = 'scrollToSection';
     onSectionChange(sectionId);
     setIsMenuOpen(false);
     const element = document.getElementById(sectionId);
@@ -84,8 +86,12 @@ export default function Navigation({
                 {currentTime?.toLocaleTimeString() || '--:--:--'}
               </span>
               <button
-                onClick={() = aria-label="setShowTaskManager(true)}
-                className="p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+                onClick={() =>
+              {() => {
+            aria-label="setShowTaskManager(true)}
+            </button>
+            <button
+              className="p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
                 aria-label="Open task manager"
                 title="Task Manager"              >
                 📝"> setShowTaskManager(true)}
@@ -103,8 +109,12 @@ export default function Navigation({
               
               {/* Mobile Menu Button */}
               <button
-                onClick={() = aria-label="setIsMenuOpen(!isMenuOpen)}
-                className="md:hidden p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+                onClick={() =>
+              {() => {
+            aria-label="setIsMenuOpen(!isMenuOpen)}
+            </button>
+            <button
+              className="md:hidden p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
                 aria-label="Toggle mobile menu"              >
                 {isMenuOpen ? '✕' : '☰'}"> setIsMenuOpen(!isMenuOpen)}
                 className="md:hidden p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
@@ -139,7 +149,8 @@ export default function Navigation({
                 <Link href="/contact" className="block w-full text-left px-3 py-2 rounded-md text-base font-medium transition-colors text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">
                   Contact
                 </Link>
-                <Link href="/dashboard" className="block w-full text-left px-3 py-2 rounded-md text-base font-medium transition-colors text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">                  Dashboard
+                <Link href="/dashboard" }
+            className="block w-full text-left px-3 py-2 rounded-md text-base font-medium transition-colors text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">                  Dashboard
                 </Link>
               </div>
             </div>
