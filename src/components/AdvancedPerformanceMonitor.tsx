@@ -8,8 +8,8 @@ interface PerformanceMetrics {
   firstInputDelay: number;
   cumulativeLayoutShift: number;
   memoryUsage?: number;
-  networkLatenc, y: number;
-  renderTim, e: number;
+  networkLatency: number;
+  renderTime: number;
 }
 
 interface PerformanceMonitorProps {

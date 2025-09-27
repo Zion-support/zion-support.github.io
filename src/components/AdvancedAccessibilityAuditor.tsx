@@ -27,29 +27,29 @@ interface AccessibilityMetrics {
   issues: AccessibilityIssue[];
   wcagCompliance: {
     levelA: number;
-    levelA, A: number;
-    levelAA, A: number;
+    levelAA: number;
+    levelAAA: number;
   };
   colorContrast: {
     passed: number;
-    faile, d: number;
-    tota, l: number;
+    failed: number;
+    total: number;
   };
   keyboardNavigation: {
     focusableElements: number;
-    tabOrderIssue, s: number;
-    keyboardTrap, s: number;
+    tabOrderIssues: number;
+    keyboardTraps: number;
   };
   screenReader: {
     missingAltText: number;
-    missingLabel, s: number;
-    missingHeading, s: number;
+    missingLabels: number;
+    missingHeadings: number;
   };
 }
 
 interface AdvancedAccessibilityAuditorProps {
   onAuditComplete?: (metrics: AccessibilityMetrics) => void;
-  onIssueFound?: (issu, e: AccessibilityIssue) => void;
+  onIssueFound?: (issue: AccessibilityIssue) => void;
   className?: string;
 }
 
@@ -321,8 +321,8 @@ export const AdvancedAccessibilityAuditor: React.FC<AdvancedAccessibilityAuditor
           <button
             onClick={auditAccessibility}
             disabled={isAuditing}
-            className="px-4py-2bg-blue-500 hover:bg-blue-600 disable, d:bg-gray-400 text-white rounded-lg text-sm font-mediumtransition-colors"
-           aria-label="{isAuditing ? 'Auditing...' : 'Run Audit'}">
+            className="px-4 py-2 bg-blue-500 hover:bg-blue-600 disabled:bg-gray-400 text-white rounded-lg text-sm font-medium transition-colors"
+            aria-label={isAuditing ? 'Auditing...' : 'Run Audit'}>
             {isAuditing ? 'Auditing...' : 'Run Audit'}
           </button>
         </div>
@@ -331,12 +331,12 @@ export const AdvancedAccessibilityAuditor: React.FC<AdvancedAccessibilityAuditor
       {metrics && (
         <>
           {/* Accessibility Score */}
-          <div className="bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg p-6text-whitemb-6">
+          <div className="bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg p-6 text-white mb-6">
             <div className="flex items-center justify-between">
               <div>
-                <h3 className="text-lg font-semiboldmb-2" id="accessibility-score">Accessibility Score</h3>
+                <h3 className="text-lg font-semibold mb-2" id="accessibility-score">Accessibility Score</h3>
                 <div className="flex items-center space-x-4">
-                  <div className={`text-4xl font-bold ${getScoreColor(metrics.score)}`}
+                  <div className={`text-4xl font-bold ${getScoreColor(metrics.score)}`}>
                     {metrics.score}
                   </div>
                   <div>
@@ -450,26 +450,26 @@ export const AdvancedAccessibilityAuditor: React.FC<AdvancedAccessibilityAuditor
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     exit={{ opacity: 0, x: 20 }}
-                    className={`p-4rounded-lg border-l-4 ${getSeverityColor(issue.severity)}`}
+                    className={`p-4 rounded-lg border-l-4 ${getSeverityColor(issue.severity)}`}
                   >
-                    <div className="flex items-startjustify-between">
+                    <div className="flex items-start justify-between">
                       <div className="flex-1">
-                        <div className="flex items-center space-x-2mb-2">
+                        <div className="flex items-center space-x-2 mb-2">
                           <span className="font-semibold text-gray-900 dark:text-white">
                             {issue.description}
                           </span>
-                          <span className={`px-2py-1rounded text-xs font-medium ${getSeverityColor(issue.severity)}`}
+                          <span className={`px-2 py-1 rounded text-xs font-medium ${getSeverityColor(issue.severity)}`}>
                             {issue.severity}
                           </span>
                         </div>
                         <div className="text-sm text-gray-600 dark:text-gray-400 mb-2">
                           {issue.impact}
                         </div>
-                        <div className="text-sm text-gray-600 dark: text-gray-400 mb-2">
-                          <strong>Hel, p:</strong> {issue.help}
+                        <div className="text-sm text-gray-600 dark:text-gray-400 mb-2">
+                          <strong>Help:</strong> {issue.help}
                         </div>
                         <div className="text-xs text-gray-500 dark:text-gray-500">
-                          Elemen, t: {issue.element} • Selector: {issue.selector} • WCAG {issue.wcagLevel} ({issue.wcagCriteria})
+                          Element: {issue.element} • Selector: {issue.selector} • WCAG {issue.wcagLevel} ({issue.wcagCriteria})
                         </div>
                       </div>
                     </div>
