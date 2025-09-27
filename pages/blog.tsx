@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Head from 'next/head';
 import Link from 'next/link';
 import { blogPosts } from '../src/data/blogPosts';
 import { useAnalytics } from '../src/hooks/useAnalytics';
