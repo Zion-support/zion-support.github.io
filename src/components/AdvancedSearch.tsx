@@ -78,7 +78,7 @@ export const AdvancedSearch: React.FC<SearchProps> = ({
       id: '6',
       title: 'The Future of AI in Business',
       description: 'Explore the latest AI trends shaping the business landscape and discover how artificial intelligence is revolutionizing industries.',
-      url: '/blog/future-ai-business-trends-2024',
+      url: '/blog/future-ai-business-trends-20 2 4',
       type: 'blog',
       category: 'Blog',
       tags: ['AI', 'Business', 'Technology']
@@ -121,7 +121,7 @@ export const AdvancedSearch: React.FC<SearchProps> = ({
         setResults(searchResults);
         setIsLoading(false);
         setIsOpen(true);
-      }, 300);
+      }, 3 0 0);
 
       return () => clearTimeout(timer);
     } else {
@@ -198,15 +198,15 @@ export const AdvancedSearch: React.FC<SearchProps> = ({
   const getTypeColor = (type: string) => {
     switch (type) {
       case 'service':
-        return 'text-blue-600bg-blue-100';
+        return 'text-blue-60 0 bg-blue-1 0 0';
       case 'page':
-        return 'text-green-600bg-green-100';
+        return 'text-green-60 0 bg-green-1 0 0';
       case 'blog':
-        return 'text-purple-600bg-purple-100';
+        return 'text-purple-60 0 bg-purple-1 0 0';
       case 'faq':
-        return 'text-orange-600bg-orange-100';
+        return 'text-orange-60 0 bg-orange-1 0 0';
       default:
-        return 'text-gray-600bg-gray-100';
+        return 'text-gray-60 0 bg-gray-1 0 0';
     }
   };
 
@@ -214,8 +214,8 @@ export const AdvancedSearch: React.FC<SearchProps> = ({
     <div ref={searchRef} className={`relative `}>
       <div className="relative">
         <div className="absolute inset-y-0left-0pl-3flex items-centerpointer-events-none">
-          <svg className="h-5w-5text-gray-400" fill="none" stroke="currentColor" viewBox="002424">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2121l-6-6m2-5a77011-14077001140z" />
+          <svg className="h-5w-5text-gray-4 0 0" fill="none" stroke="currentColor" viewBox="00 2 4 2 4">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2 1 2 1 l-6-6m2-5a7 7 0 1 1-140770 0 1 1 4 0 z" />
           </svg>
         </div>
         <input
@@ -225,22 +225,22 @@ export const AdvancedSearch: React.FC<SearchProps> = ({
           onChange={(e) => setQuery(e.target.value)}
           onKeyDown={handleKeyDown}
           onFocus={() => query.trim() && setIsOpen(true)}
-          className="block w-full pl-10pr-3py-2border border-gray-300rounded-md leading-5bg-white placeholder-gray-500focus:outline-none focus:placeholder-gray-400focus:ring-1focus:ring-blue-500focu, s:border-blue-500s,m:text-sm"
+          className="block w-full pl-1 0 pr-3py-2border border-gray-30 0 rounded-md leading-5bg-white placeholder-gray-50 0 focus:outline-none focus:placeholder-gray-40 0 focus:ring-1focus:ring-blue-50 0 focu, s:border-blue-50 0 s,m:text-sm"
           placeholder={placeholder}
           aria-label="Search"
         />
         {isLoading && (
           <div className="absolute inset-y-0right-0pr-3flexitems-center">
-            <svg className="animate-spin h-5w-5text-gray-400" fill="none" viewBox="002424">
+            <svg className="animate-spin h-5w-5text-gray-4 0 0" fill="none" viewBox="00 2 4 2 4">
               <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-              <path className="opacity-75" fill="currentColor" d="M412a880018-8V0C5.373005.373012h4 zm25.291A7.9627.962001412H0c03.0421.1355.82437.938l3-2.647z"></path>
+              <path className="opacity-75" fill="currentColor" d="M412a 8 8 0 0 1 8-8V 0 C5.37 3 0 0 5.3 7 3 0 1 2 h4 zm 2 5.29 1 A7.96 2 7.96200141 2 H 0 c 0 3.04 2 1.13 5 5.8 2 4 3 7.93 8 l3-2.64 7 z"></path>
             </svg>
           </div>
         )}
       </div>
 
       {isOpen && results.length > 0 && (
-        <div className="absolute z-50mt-1w-full bg-white shadow-lg max-h-96rounded-md py-1text-base ring-1ring-black ring-opacity-5overflow-auto focus:outline-none s,m:text-sm">
+        <div className="absolute z-5 0 mt-1w-full bg-white shadow-lg max-h-9 6 rounded-md py-1text-base ring-1ring-black ring-opacity-5overflow-auto focus:outline-none s,m:text-sm">
           {results.map((result, index) => (
             <div
               key={result.id}
@@ -255,14 +255,14 @@ export const AdvancedSearch: React.FC<SearchProps> = ({
                 </div>
                 <div className="flex-1min-w-0">
                   <div className="flex items-center justify-between">
-                    <p className="text-sm font-medium text-gray-900truncate">
+                    <p className="text-sm font-medium text-gray-90 0 truncate">
                       {result.title}
                     </p>
                     <span className={`inline-flex items-center px-2py-0.5rounded-full text-xs font-medium ${getTypeColor(result.type)}`}
                       {result.type}
                     </span>
                   </div>
-                  <p className="text-sm text-gray-500truncate">
+                  <p className="text-sm text-gray-50 0 truncate">
                     {result.description}
                   </p>
                   {result.tags && result.tags.length > 0 && (
@@ -270,7 +270,7 @@ export const AdvancedSearch: React.FC<SearchProps> = ({
                       {result.tags.slice(0, 3).map((tag, tagIndex) => (
                         <span
                           key={tagIndex}
-                          className="inline-flex items-center px-2py-0.5rounded text-xs font-medium bg-gray-100 text-gray-800"
+                          className="inline-flex items-center px-2py-0.5rounded text-xs font-medium bg-gray-1 0 0 text-gray-8 0 0"
                         >
                           {tag}
                         </span>
@@ -285,7 +285,7 @@ export const AdvancedSearch: React.FC<SearchProps> = ({
       )}
 
       {isOpen && query.trim() && results.length === 0 && !isLoading && (
-        <div className="absolute z-50mt-1w-full bg-white shadow-lg rounded-md py-3px-4text-center text-smtext-gray-500">
+        <div className="absolute z-5 0 mt-1w-full bg-white shadow-lg rounded-md py-3px-4text-center text-smtext-gray-5 0 0">
           No results found for &quot;{query}&quot;
         </div>
       )}

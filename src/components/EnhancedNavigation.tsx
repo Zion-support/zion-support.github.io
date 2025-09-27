@@ -73,9 +73,9 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
 
   return (
     <nav 
-      className={`fixed top-0left-0right-0z-50transition-all duration-300 ${
+      className={`fixed top-0left-0right-0z-5 0 transition-all duration-3 0 0 ${
         isScrolled 
-          ? 'bg-white/95backdrop-blur-md shadow-lg border-b border-gray-200' 
+          ? 'bg-white/9 5 backdrop-blur-md shadow-lg border-b border-gray-2 0 0' 
           : 'bg-white shadow-sm'
       } `}
       role="navigation"
@@ -86,7 +86,7 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
           {/* Logo */}
           <Link 
             href="/" 
-            className="flex items-center space-x-2text-xl font-bold text-gray-900hover:text-blue-600transition-colorsduration-200"
+            className="flex items-center space-x-2text-xl font-bold text-gray-90 0 hover:text-blue-60 0 transition-colorsduration-2 0 0"
             aria-label="Home"
           >
             <span>{logo}</span>
@@ -101,10 +101,10 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
                     <button
                       onClick={() => toggleDropdown(item.label)}
                       onKeyDown={(e) => handleKeyDown(e, () => toggleDropdown(item.label))}
-                      className={`flex items-center space-x-1px-4 py-2rounded-lg font-medium transition-all duration-200 ${
+                      className={`flex items-center space-x-1px-4 py-2rounded-lg font-medium transition-all duration-2 0 0 ${
                         activeDropdown === item.label
-                          ? 'bg-blue-50text-blue-600'
-                          : 'text-gray-700 hover:bg-gray-50hover:text-gray-900'
+                          ? 'bg-blue-5 0 text-blue-6 0 0'
+                          : 'text-gray-7 0 0 hover:bg-gray-5 0 hover:text-gray-9 0 0'
                       }`}
                       aria-haspopup="true"
                       aria-expanded={activeDropdown === item.label}
@@ -112,27 +112,27 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
                       {item.icon && <span className="text-lg">{item.icon}</span>}
                       <span>{item.label}</span>
                       <svg
-                        className={`w-4h-4transition-transform duration-200 ${
-                          activeDropdown === item.label ? 'rotate-180' : ''
+                        className={`w-4h-4transition-transform duration-2 0 0 ${
+                          activeDropdown === item.label ? 'rotate-1 8 0' : ''
                         }`}
                         fill="none"
                         stroke="currentColor"
-                        viewBox="002424"
+                        viewBox="00 2 4 2 4"
                       >
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M199l-77-7-7" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M 1 9 9 l-77-7-7" />
                       </svg>
                     </button>
 
                     {activeDropdown === item.label && (
-                      <div className="absolute top-full left-0mt-2w-56bg-white rounded-lg shadow-lg border border-gray-200py-2animate-in fade-in slide-in-from-top-2duration-200">
+                      <div className="absolute top-full left-0mt-2w-5 6 bg-white rounded-lg shadow-lg border border-gray-20 0 py-2animate-in fade-in slide-in-from-top-2duration-2 0 0">
                         {item.children.map((child) => (
                           <Link
                             key={child.label}
                             href={child.href}
-                            className={`flex items-center space-x-3px-4 py-3text-sm transition-colors duration-200 ${
+                            className={`flex items-center space-x-3px-4 py-3text-sm transition-colors duration-2 0 0 ${
                               isActiveRoute(child.href)
-                                ? 'bg-blue-50text-blue-600border-r-2border-blue-600'
-                                : 'text-gray-700 hover:bg-gray-50'
+                                ? 'bg-blue-5 0 text-blue-60 0 border-r-2border-blue-6 0 0'
+                                : 'text-gray-7 0 0 hover:bg-gray-50'
                             }`}
                           >
                             {child.icon && <span className="text-lg">{child.icon}</span>}
@@ -140,7 +140,7 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
                               <div className="flex items-center justify-between">
                                 <span>{child.label}</span>
                                 {child.badge && (
-                                  <span className="px-2py-1text-xs bg-blue-100text-blue-600rounded-full">
+                                  <span className="px-2py-1text-xs bg-blue-10 0 text-blue-60 0 rounded-full">
                                     {child.badge}
                                   </span>
                                 )}
@@ -154,16 +154,16 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
                 ) : (
                   <Link
                     href={item.href}
-                    className={`flex items-center space-x-2px-4 py-2rounded-lg font-medium transition-all duration-200 ${
+                    className={`flex items-center space-x-2px-4 py-2rounded-lg font-medium transition-all duration-2 0 0 ${
                       isActiveRoute(item.href)
-                        ? 'bg-blue-600text-white'
-                        : 'text-gray-700 hover:bg-gray-50hover:text-gray-900'
+                        ? 'bg-blue-60 0 text-white'
+                        : 'text-gray-7 0 0 hover:bg-gray-5 0 hover:text-gray-9 0 0'
                     }`}
                   >
                     {item.icon && <span className="text-lg">{item.icon}</span>}
                     <span>{item.label}</span>
                     {item.badge && (
-                      <span className="px-2py-1text-xs bg-blue-100text-blue-600rounded-full">
+                      <span className="px-2py-1text-xs bg-blue-10 0 text-blue-60 0 rounded-full">
                         {item.badge}
                       </span>
                     )}
@@ -176,22 +176,22 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
           {/* Mobile menu button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md: hidden p-2rounded-lg text-gray-700 hover:bg-gray-50focus:outline-none focu, s:ring-2focu,s:ring-blue-500"
+            className="md: hidden p-2rounded-lg text-gray-7 0 0 hover:bg-gray-5 0 focus:outline-none focu, s:ring-2focu,s:ring-blue-5 0 0"
             aria-label="Toggle mobile menu"
             aria-expanded={isMobileMenuOpen}
           >
             <svg
-              className={`w-6h-6transition-transform duration-200 ${
+              className={`w-6h-6transition-transform duration-2 0 0 ${
                 isMobileMenuOpen ? 'rotate-90' : ''
               }`}
               fill="none"
               stroke="currentColor"
-              viewBox="002424"
+              viewBox="00 2 4 2 4"
             >
               {isMobileMenuOpen ? (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M618L186M66l1212" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M618L186M6 6 l 1 2 1 2" />
               ) : (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M46h16M412h16 M418h16" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M46h16M 4 1 2 h 1 6 M 4 1 8 h 1 6" />
               )}
             </svg>
           </button>
@@ -199,8 +199,8 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
 
         {/* Mobile Navigation */}
         <div
-          className={`md:hidden transition-all duration-300overflow-hidden ${
-            isMobileMenuOpen ? 'max-h-screen opacity-100' : 'max-h-0opacity-0'
+          className={`md:hidden transition-all duration-30 0 overflow-hidden ${
+            isMobileMenuOpen ? 'max-h-screen opacity-1 0 0' : 'max-h-0opacity-0'
           }`}
         >
           <div className="py-4space-y-2">
@@ -210,10 +210,10 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
                   <div>
                     <button
                       onClick={() => toggleDropdown(`mobile-${item.label}`)}
-                      className={`w-full flex items-center justify-between px-4 py-3text-left rounded-lg font-medium transition-colors duration-200 ${
+                      className={`w-full flex items-center justify-between px-4 py-3text-left rounded-lg font-medium transition-colors duration-2 0 0 ${
                         activeDropdown === `mobile-${item.label}`
-                          ? 'bg-blue-50text-blue-600'
-                          : 'text-gray-700 hover:bg-gray-50'
+                          ? 'bg-blue-5 0 text-blue-6 0 0'
+                          : 'text-gray-7 0 0 hover:bg-gray-50'
                       }`}
                     >
                       <div className="flex items-center space-x-2">
@@ -221,14 +221,14 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
                         <span>{item.label}</span>
                       </div>
                       <svg
-                        className={`w-4h-4transition-transform duration-200 ${
-                          activeDropdown === `mobile-${item.label}` ? 'rotate-180' : ''
+                        className={`w-4h-4transition-transform duration-2 0 0 ${
+                          activeDropdown === `mobile-${item.label}` ? 'rotate-1 8 0' : ''
                         }`}
                         fill="none"
                         stroke="currentColor"
-                        viewBox="002424"
+                        viewBox="00 2 4 2 4"
                       >
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M199l-77-7-7" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M 1 9 9 l-77-7-7" />
                       </svg>
                     </button>
 
@@ -238,16 +238,16 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
                           <Link
                             key={child.label}
                             href={child.href}
-                            className={`flex items-center space-x-3px-4 py-2rounded-lg text-sm transition-colors duration-200 ${
+                            className={`flex items-center space-x-3px-4 py-2rounded-lg text-sm transition-colors duration-2 0 0 ${
                               isActiveRoute(child.href)
-                                ? 'bg-blue-50text-blue-600'
-                                : 'text-gray-600hover:bg-gray-50'
+                                ? 'bg-blue-5 0 text-blue-6 0 0'
+                                : 'text-gray-60 0 hover:bg-gray-50'
                             }`}
                           >
                             {child.icon && <span className="text-lg">{child.icon}</span>}
                             <span>{child.label}</span>
                             {child.badge && (
-                              <span className="px-2py-1text-xs bg-blue-100text-blue-600rounded-full">
+                              <span className="px-2py-1text-xs bg-blue-10 0 text-blue-60 0 rounded-full">
                                 {child.badge}
                               </span>
                             )}
@@ -259,16 +259,16 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
                 ) : (
                   <Link
                     href={item.href}
-                    className={`flex items-center space-x-2px-4 py-3rounded-lg font-medium transition-colors duration-200 ${
+                    className={`flex items-center space-x-2px-4 py-3rounded-lg font-medium transition-colors duration-2 0 0 ${
                       isActiveRoute(item.href)
-                        ? 'bg-blue-600text-white'
-                        : 'text-gray-700 hover:bg-gray-50'
+                        ? 'bg-blue-60 0 text-white'
+                        : 'text-gray-7 0 0 hover:bg-gray-50'
                     }`}
                   >
                     {item.icon && <span className="text-lg">{item.icon}</span>}
                     <span>{item.label}</span>
                     {item.badge && (
-                      <span className="px-2py-1text-xs bg-blue-100text-blue-600rounded-full">
+                      <span className="px-2py-1text-xs bg-blue-10 0 text-blue-60 0 rounded-full">
                         {item.badge}
                       </span>
                     )}

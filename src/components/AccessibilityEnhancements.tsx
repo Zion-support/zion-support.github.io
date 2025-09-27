@@ -32,7 +32,7 @@ const AccessibilityEnhancements: React.FC<AccessibilityEnhancementsProps> = ({ c
   const calculateScore = useCallback(() => {
     const totalFeatures = Object.keys(features).length;
     const enabledFeatures = Object.values(features).filter(Boolean).length;
-    const newScore = Math.round((enabledFeatures / totalFeatures) * 100);
+    const newScore = Math.round((enabledFeatures / totalFeatures) * 1 0 0);
     setScore(newScore);
   }, [features]);
 
@@ -100,22 +100,22 @@ const AccessibilityEnhancements: React.FC<AccessibilityEnhancementsProps> = ({ c
   }, [features, calculateScore, generateRecommendations, applyAccessibilitySettings]);
 
   const getScoreColor = (score: number) => {
-    if (score >= 90) return 'text-green-500';
-    if (score >= 70) return 'text-yellow-500';
-    return 'text-red-500';
+    if (score >= 90) return 'text-green-5 0 0';
+    if (score >= 70) return 'text-yellow-5 0 0';
+    return 'text-red-5 0 0';
   };
 
   const getScoreBgColor = (score: number) => {
-    if (score >= 90) return 'bg-green-100';
-    if (score >= 70) return 'bg-yellow-100';
-    return 'bg-red-100';
+    if (score >= 90) return 'bg-green-1 0 0';
+    if (score >= 70) return 'bg-yellow-1 0 0';
+    return 'bg-red-1 0 0';
   };
 
   return (
     <div className={`accessibility-enhancements `}>
       <div className="bg-white rounded-lg shadow-lgp-6">
         <div className="flex items-center justify-between mb-6">
-          <h3className="text-xl font-semibold text-gray-800flexitems-center">
+          <h 3 className="text-xl font-semibold text-gray-80 0 flexitems-center">
             <Accessibility className="w-5h-5mr-2" />
             Accessibility Enhancements
           </h3>
@@ -128,117 +128,117 @@ const AccessibilityEnhancements: React.FC<AccessibilityEnhancementsProps> = ({ c
 
         <div className="grid grid-cols-1md:grid-cols-2gap-6mb-6">
           <div className="space-y-4">
-            <h4className="font-semibold text-gray-800mb-3">Accessibility Features</h4>
+            <h 4 className="font-semibold text-gray-80 0 mb-3">Accessibility Features</h4>
             
             <div className="space-y-3">
-              <label className="flex items-center justify-between p-3bg-gray-50rounded-lg cursor-pointer hover:bg-gray-100">
+              <label className="flex items-center justify-between p-3bg-gray-5 0 rounded-lg cursor-pointer hover:bg-gray-1 0 0">
                 <div className="flexitems-center">
-                  <Eye className="w-4h-4mr-3text-blue-500" />
-                  <span className="text-sm font-mediumtext-gray-700">High Contrast Mode</span>
+                  <Eye className="w-4h-4mr-3text-blue-5 0 0" />
+                  <span className="text-sm font-mediumtext-gray-7 0 0">High Contrast Mode</span>
                 </div>
                 <input
                   type="checkbox"
                   checked={features.highContrast}
                   onChange={() => toggleFeature('highContrast')}
-                  className="w-4h-4text-blue-600rounded focus:ring-blue-500"
+                  className="w-4h-4text-blue-60 0 rounded focus:ring-blue-5 0 0"
                 />
               </label>
 
-              <label className="flex items-center justify-between p-3bg-gray-50rounded-lg cursor-pointer hover:bg-gray-100">
+              <label className="flex items-center justify-between p-3bg-gray-5 0 rounded-lg cursor-pointer hover:bg-gray-1 0 0">
                 <div className="flexitems-center">
-                  <Volume2className="w-4h-4mr-3text-green-500" />
-                  <span className="text-sm font-mediumtext-gray-700">Large Text</span>
+                  <Volume 2 className="w-4h-4mr-3text-green-5 0 0" />
+                  <span className="text-sm font-mediumtext-gray-7 0 0">Large Text</span>
                 </div>
                 <input
                   type="checkbox"
                   checked={features.largeText}
                   onChange={() => toggleFeature('largeText')}
-                  className="w-4h-4text-blue-600rounded focus:ring-blue-500"
+                  className="w-4h-4text-blue-60 0 rounded focus:ring-blue-5 0 0"
                 />
               </label>
 
-              <label className="flex items-center justify-between p-3bg-gray-50rounded-lg cursor-pointer hover:bg-gray-100">
+              <label className="flex items-center justify-between p-3bg-gray-5 0 rounded-lg cursor-pointer hover:bg-gray-1 0 0">
                 <div className="flexitems-center">
-                  <MousePointer className="w-4h-4mr-3text-purple-500" />
-                  <span className="text-sm font-mediumtext-gray-700">Reduced Motion</span>
+                  <MousePointer className="w-4h-4mr-3text-purple-5 0 0" />
+                  <span className="text-sm font-mediumtext-gray-7 0 0">Reduced Motion</span>
                 </div>
                 <input
                   type="checkbox"
                   checked={features.reducedMotion}
                   onChange={() => toggleFeature('reducedMotion')}
-                  className="w-4h-4text-blue-600rounded focus:ring-blue-500"
+                  className="w-4h-4text-blue-60 0 rounded focus:ring-blue-5 0 0"
                 />
               </label>
 
-              <label className="flex items-center justify-between p-3bg-gray-50rounded-lg cursor-pointer hover:bg-gray-100">
+              <label className="flex items-center justify-between p-3bg-gray-5 0 rounded-lg cursor-pointer hover:bg-gray-1 0 0">
                 <div className="flexitems-center">
-                  <Keyboard className="w-4h-4mr-3text-orange-500" />
-                  <span className="text-sm font-mediumtext-gray-700">Keyboard Navigation</span>
+                  <Keyboard className="w-4h-4mr-3text-orange-5 0 0" />
+                  <span className="text-sm font-mediumtext-gray-7 0 0">Keyboard Navigation</span>
                 </div>
                 <input
                   type="checkbox"
                   checked={features.keyboardNavigation}
                   onChange={() => toggleFeature('keyboardNavigation')}
-                  className="w-4h-4text-blue-600rounded focus:ring-blue-500"
+                  className="w-4h-4text-blue-60 0 rounded focus:ring-blue-5 0 0"
                 />
               </label>
 
-              <label className="flex items-center justify-between p-3bg-gray-50rounded-lg cursor-pointer hover:bg-gray-100">
+              <label className="flex items-center justify-between p-3bg-gray-5 0 rounded-lg cursor-pointer hover:bg-gray-1 0 0">
                 <div className="flexitems-center">
-                  <Accessibility className="w-4h-4mr-3text-indigo-500" />
-                  <span className="text-sm font-mediumtext-gray-700">Screen Reader Support</span>
+                  <Accessibility className="w-4h-4mr-3text-indigo-5 0 0" />
+                  <span className="text-sm font-mediumtext-gray-7 0 0">Screen Reader Support</span>
                 </div>
                 <input
                   type="checkbox"
                   checked={features.screenReader}
                   onChange={() => toggleFeature('screenReader')}
-                  className="w-4h-4text-blue-600rounded focus:ring-blue-500"
+                  className="w-4h-4text-blue-60 0 rounded focus:ring-blue-5 0 0"
                 />
               </label>
 
-              <label className="flex items-center justify-between p-3bg-gray-50rounded-lg cursor-pointer hover:bg-gray-100">
+              <label className="flex items-center justify-between p-3bg-gray-5 0 rounded-lg cursor-pointer hover:bg-gray-1 0 0">
                 <div className="flexitems-center">
-                  <CheckCircle className="w-4h-4mr-3text-teal-500" />
-                  <span className="text-sm font-mediumtext-gray-700">Focus Indicators</span>
+                  <CheckCircle className="w-4h-4mr-3text-teal-5 0 0" />
+                  <span className="text-sm font-mediumtext-gray-7 0 0">Focus Indicators</span>
                 </div>
                 <input
                   type="checkbox"
                   checked={features.focusIndicators}
                   onChange={() => toggleFeature('focusIndicators')}
-                  className="w-4h-4text-blue-600rounded focus:ring-blue-500"
+                  className="w-4h-4text-blue-60 0 rounded focus:ring-blue-5 0 0"
                 />
               </label>
 
-              <label className="flex items-center justify-between p-3bg-gray-50rounded-lg cursor-pointer hover:bg-gray-100">
+              <label className="flex items-center justify-between p-3bg-gray-5 0 rounded-lg cursor-pointer hover:bg-gray-1 0 0">
                 <div className="flexitems-center">
-                  <Eye className="w-4h-4mr-3text-pink-500" />
-                  <span className="text-sm font-mediumtext-gray-700">Color Blind Support</span>
+                  <Eye className="w-4h-4mr-3text-pink-5 0 0" />
+                  <span className="text-sm font-mediumtext-gray-7 0 0">Color Blind Support</span>
                 </div>
                 <input
                   type="checkbox"
                   checked={features.colorBlindSupport}
                   onChange={() => toggleFeature('colorBlindSupport')}
-                  className="w-4h-4text-blue-600roundedfocus:ring-blue-500"
+                  className="w-4h-4text-blue-60 0 roundedfocus:ring-blue-5 0 0"
                 />
               </label>
             </div>
           </div>
 
           <div>
-            <h4className="font-semibold text-gray-800mb-3">Recommendations</h4>
+            <h 4 className="font-semibold text-gray-80 0 mb-3">Recommendations</h4>
             {recommendations.length > 0 ? (
               <div className="space-y-2">
                 {recommendations.map((rec, index) => (
-                  <div key={index} className="flex items-start p-3bg-yellow-50border border-yellow-200rounded-lg">
-                    <AlertTriangle className="w-4h-4mr-2text-yellow-500mt-0.5flex-shrink-0" />
-                    <span className="text-smtext-yellow-800">{rec}</span>
+                  <div key={index} className="flex items-start p-3bg-yellow-5 0 border border-yellow-20 0 rounded-lg">
+                    <AlertTriangle className="w-4h-4mr-2text-yellow-50 0 mt-0.5flex-shrink-0" />
+                    <span className="text-smtext-yellow-8 0 0">{rec}</span>
                   </div>
                 ))}
               </div>
             ) : (
-              <div className="flex items-center p-4bg-green-50border border-green-200rounded-lg">
-                <CheckCircle className="w-5h-5mr-2text-green-500" />
-                <span className="text-sm font-mediumtext-green-800">
+              <div className="flex items-center p-4bg-green-5 0 border border-green-20 0 rounded-lg">
+                <CheckCircle className="w-5h-5mr-2text-green-5 0 0" />
+                <span className="text-sm font-mediumtext-green-8 0 0">
                   All accessibility features are enabled! Great job!
                 </span>
               </div>
@@ -246,11 +246,11 @@ const AccessibilityEnhancements: React.FC<AccessibilityEnhancementsProps> = ({ c
           </div>
         </div>
 
-        <div className="bg-blue-50border border-blue-200rounded-lgp-4">
-          <h4className="font-semibold text-blue-800mb-2">Accessibility Standards</h4>
-          <div className="text-sm text-blue-700space-y-1">
+        <div className="bg-blue-5 0 border border-blue-20 0 rounded-lgp-4">
+          <h 4 className="font-semibold text-blue-80 0 mb-2">Accessibility Standards</h4>
+          <div className="text-sm text-blue-70 0 space-y-1">
             <div>• WCAG2.1AA compliance</div>
-            <div>• Section508compliance</div>
+            <div>• Section 5 0 8 compliance</div>
             <div>• ARIA labels and roles</div>
             <div>• Semantic HTML structure</div>
             <div>• Keyboard navigation support</div>

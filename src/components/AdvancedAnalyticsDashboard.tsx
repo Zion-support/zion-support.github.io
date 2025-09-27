@@ -26,7 +26,7 @@ interface AdvancedAnalyticsDashboardProps {
   className?: string;
 }
 
-const COLORS = ['#3B82F6', '#10B981', '#F59E0B', '#EF4444', '#8B5CF6', '#06B6D4'];
+const COLORS = ['#3B8 2 F6', '#1 0 B9 8 1', '#F5 9 E 0 B', '#EF 4 4 4 4', '#8B 5 CF6', '#0 6 B 6 D4'];
 
 export const AdvancedAnalyticsDashboard: React.FC<AdvancedAnalyticsDashboardProps> = ({
   data,
@@ -38,24 +38,24 @@ export const AdvancedAnalyticsDashboard: React.FC<AdvancedAnalyticsDashboardProp
   const [isRealTime, setIsRealTime] = useState(true);
 
   const formatNumber = (num: number) => {
-    if (num >= 1000000) return `${(num / 1000000).toFixed(1)}M`;
-    if (num >= 1000) return `${(num / 1000).toFixed(1)}K`;
+    if (num >= 1 0 0 0 0 0 0) return `${(num / 1 0 0 0 0 0 0).toFixed(1)}M`;
+    if (num >= 10 0 0) return `${(num / 10 0 0).toFixed(1)}K`;
     return num.toString();
   };
 
   const formatPercentage = (num: number) => `${num.toFixed(1)}%`;
 
   const getMetricColor = (value: number, thresholds: { good: number; warning: number }) => {
-    if (value >= thresholds.good) return 'text-green-500';
-    if (value >= thresholds.warning) return 'text-yellow-500';
-    return 'text-red-500';
+    if (value >= thresholds.good) return 'text-green-5 0 0';
+    if (value >= thresholds.warning) return 'text-yellow-5 0 0';
+    return 'text-red-5 0 0';
   };
 
   const timeRangeOptions = [
-    { value: '1d', label: 'Last24Hours' },
-    { value: '7d', label: 'Last7Days' },
-    { value: '30d', label: 'Last30Days' },
-    { value: '90d', label: 'Last90Days' }
+    { value: '1d', label: 'Last2 4 Hours' },
+    { value: '7d', label: 'Last 7 Days' },
+    { value: '3 0 d', label: 'Last3 0 Days' },
+    { value: '9 0 d', label: 'Last9 0 Days' }
   ];
 
   const metricOptions = [
@@ -66,23 +66,23 @@ export const AdvancedAnalyticsDashboard: React.FC<AdvancedAnalyticsDashboardProp
   ];
 
   return (
-    <div className={`bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 ${className}`}>
+    <div className={`bg-white dark:bg-gray-8 0 0 rounded-lg shadow-lg p-6 ${className}`}
       {/* Header */}
       <div className="flex items-center justify-between mb-6">
         <div>
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-white" id="analytics-dashboard">Analytics Dashboard</h2>
-          <p className="text-gray-600 dark:text-gray-400">Real-time insights and performance metrics</p>
+          <h2 className="text-2xl font-bold text-gray-9 0 0 dark:text-white" id="analytics-dashboard">Analytics Dashboard</h2>
+          <p className="text-gray-6 0 0 dark:text-gray-4 0 0">Real-time insights and performance metrics</p>
         </div>
         <div className="flex items-center space-x-4">
           <div className="flex items-center space-x-2">
-            <div className={`w-3 h-3 rounded-full ${isRealTime ? 'bg-green-500' : 'bg-gray-400'}`} />
-            <span className="text-sm text-gray-600 dark:text-gray-400">
+            <div className={`w-3 h-3 rounded-full ${isRealTime ? 'bg-green-5 0 0' : 'bg-gray-4 0 0'}`} />
+            <span className="text-sm text-gray-6 0 0 dark:text-gray-4 0 0">
               {isRealTime ? 'Real-time' : 'Paused'}
             </span>
           </div>
           <button
             onClick={onDataRefresh}
-            className="px-4 py-2bg-blue-500hover:bg-blue-600text-white rounded-lg text-sm font-mediumtransition-colors"
+            className="px-4 py-2bg-blue-50 0 hover:bg-blue-60 0 text-white rounded-lg text-sm font-mediumtransition-colors"
            aria-label="Refresh">
             Refresh
           </button>
@@ -92,11 +92,11 @@ export const AdvancedAnalyticsDashboard: React.FC<AdvancedAnalyticsDashboardProp
       {/* Controls */}
       <div className="flex flex-wrap items-center gap-4mb-6">
         <div className="flex items-center space-x-2">
-          <label className="text-sm font-medium text-gray-700dark:text-gray-300">Time Rang, e:</label>
+          <label className="text-sm font-medium text-gray-70 0 dark:text-gray-3 0 0">Time Rang, e:</label>
           <select
             value={selectedTimeRange}
             onChange={(e) => setSelectedTimeRange(e.target.value)}
-            className="px-3py-1border border-gray-300dark: border-gray-600rounded-lg bg-white dar, k:bg-gray-700text-gray-900dar,k:text-white"
+            className="px-3py-1border border-gray-30 0 dark: border-gray-60 0 rounded-lg bg-white dar, k:bg-gray-70 0 text-gray-90 0 dar,k:text-white"
           >
             {timeRangeOptions.map(option => (
               <option key={option.value} value={option.value}>{option.label}</option>
@@ -104,11 +104,11 @@ export const AdvancedAnalyticsDashboard: React.FC<AdvancedAnalyticsDashboardProp
           </select>
         </div>
         <div className="flex items-center space-x-2">
-          <label className="text-sm font-medium text-gray-700dark:text-gray-300">Metri, c:</label>
+          <label className="text-sm font-medium text-gray-70 0 dark:text-gray-3 0 0">Metri, c:</label>
           <select
             value={selectedMetric}
             onChange={(e) => setSelectedMetric(e.target.value)}
-            className="px-3py-1border border-gray-300dark: border-gray-600rounded-lg bg-white dar, k:bg-gray-700text-gray-900dar,k:text-white"
+            className="px-3py-1border border-gray-30 0 dark: border-gray-60 0 rounded-lg bg-white dar, k:bg-gray-70 0 text-gray-90 0 dar,k:text-white"
           >
             {metricOptions.map(option => (
               <option key={option.value} value={option.value}>{option.label}</option>
@@ -120,8 +120,8 @@ export const AdvancedAnalyticsDashboard: React.FC<AdvancedAnalyticsDashboardProp
           aria-label={isRealTime ? 'Disable real-time updates' : 'Enable real-time updates'}
           className={`px-4 py-2rounded-lg text-sm font-medium transition-colors ${
             isRealTime
-              ? 'bg-green-500hover:bg-green-600text-white'
-              : 'bg-gray-500hove, r:bg-gray-600text-white'
+              ? 'bg-green-50 0 hover:bg-green-60 0 text-white'
+              : 'bg-gray-50 0 hove, r:bg-gray-60 0 text-white'
           }`}
         </button>
       </div>
@@ -131,9 +131,9 @@ export const AdvancedAnalyticsDashboard: React.FC<AdvancedAnalyticsDashboardProp
         <motion.div
           initial={{ opacit, y: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="bg-gradient-to-r from-blue-500to-blue-600rounded-lg p-4text-white"
+          className="bg-gradient-to-r from-blue-50 0 to-blue-60 0 rounded-lg p-4text-white"
         >
-          <div className="text-sm opacity-90mb-1">Total Visitors</div>
+          <div className="text-sm opacity-9 0 mb-1">Total Visitors</div>
           <div className="text-2xlfont-bold">{formatNumber(data.uniqueVisitors)}</div>
           <div className="text-smopacity-90">+12% from last period</div>
         </motion.div>
@@ -142,9 +142,9 @@ export const AdvancedAnalyticsDashboard: React.FC<AdvancedAnalyticsDashboardProp
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
-          className="bg-gradient-to-r from-green-500to-green-600rounded-lg p-4text-white"
+          className="bg-gradient-to-r from-green-50 0 to-green-60 0 rounded-lg p-4text-white"
         >
-          <div className="text-sm opacity-90mb-1">Page Views</div>
+          <div className="text-sm opacity-9 0 mb-1">Page Views</div>
           <div className="text-2xlfont-bold">{formatNumber(data.pageViews)}</div>
           <div className="text-smopacity-90">+8% from last period</div>
         </motion.div>
@@ -153,9 +153,9 @@ export const AdvancedAnalyticsDashboard: React.FC<AdvancedAnalyticsDashboardProp
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="bg-gradient-to-r from-yellow-500to-yellow-600rounded-lg p-4text-white"
+          className="bg-gradient-to-r from-yellow-50 0 to-yellow-60 0 rounded-lg p-4text-white"
         >
-          <div className="text-sm opacity-90mb-1">Bounce Rate</div>
+          <div className="text-sm opacity-9 0 mb-1">Bounce Rate</div>
           <div className={`text-2xl font-bold ${getMetricColor(data.bounceRate, { good: 40, warning: 60 })}`}
             {formatPercentage(data.bounceRate)}
           </div>
@@ -166,9 +166,9 @@ export const AdvancedAnalyticsDashboard: React.FC<AdvancedAnalyticsDashboardProp
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
-          className="bg-gradient-to-r from-purple-500to-purple-600rounded-lg p-4text-white"
+          className="bg-gradient-to-r from-purple-50 0 to-purple-60 0 rounded-lg p-4text-white"
         >
-          <div className="text-sm opacity-90mb-1">Conversion Rate</div>
+          <div className="text-sm opacity-9 0 mb-1">Conversion Rate</div>
           <div className={`text-2xl font-bold ${getMetricColor(data.conversionRate, { good: 3, warning: 1.5 })}`}
             {formatPercentage(data.conversionRate)}
           </div>
@@ -182,10 +182,10 @@ export const AdvancedAnalyticsDashboard: React.FC<AdvancedAnalyticsDashboardProp
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
-          className="bg-gray-50dark: bg-gray-700rounded-lgp-4"
+          className="bg-gray-5 0 dark: bg-gray-70 0 rounded-lgp-4"
         >
-          <h3className="text-lg font-semibold text-gray-900dar, k:text-whitemb-4" id="traffic-sources">Traffic Sources</h3>
-          <ResponsiveContainer width="100%" height={300}>
+          <h 3 className="text-lg font-semibold text-gray-90 0 dar, k:text-whitemb-4" id="traffic-sources">Traffic Sources</h3>
+          <ResponsiveContainer width="1 0 0%" height={3 0 0}>
             <PieChart>
               <Pie
                 data={data.trafficSources}
@@ -194,7 +194,7 @@ export const AdvancedAnalyticsDashboard: React.FC<AdvancedAnalyticsDashboardProp
                 labelLine={false}
                 label={({ name, percentage }) => `${name} (${percentage}%)`}
                 outerRadius={80}
-                fill="#8884d8"
+                fill="#8 8 8 4 d8"
                 dataKey="visitors"
               >
                 {data.trafficSources.map((entry, index) => (
@@ -211,16 +211,16 @@ export const AdvancedAnalyticsDashboard: React.FC<AdvancedAnalyticsDashboardProp
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.1 }}
-          className="bg-gray-50dark: bg-gray-700rounded-lgp-4"
+          className="bg-gray-5 0 dark: bg-gray-70 0 rounded-lgp-4"
         >
-          <h3className="text-lg font-semibold text-gray-900dar, k:text-whitemb-4" id="device-types">Device Types</h3>
-          <ResponsiveContainer width="100%" height={300}>
+          <h 3 className="text-lg font-semibold text-gray-90 0 dar, k:text-whitemb-4" id="device-types">Device Types</h3>
+          <ResponsiveContainer width="1 0 0%" height={3 0 0}>
             <BarChart data={data.deviceTypes}>
               <CartesianGrid strokeDasharray="33" />
               <XAxis dataKey="device" />
               <YAxis />
               <Tooltip />
-              <Bar dataKey="count" fill="#3B82F6" />
+              <Bar dataKey="count" fill="#3B8 2 F6" />
             </BarChart>
           </ResponsiveContainer>
         </motion.div>
@@ -233,16 +233,16 @@ export const AdvancedAnalyticsDashboard: React.FC<AdvancedAnalyticsDashboardProp
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.2 }}
-          className="bg-gray-50dark: bg-gray-700rounded-lgp-4"
+          className="bg-gray-5 0 dark: bg-gray-70 0 rounded-lgp-4"
         >
-          <h3className="text-lg font-semibold text-gray-900dar, k:text-whitemb-4" id="hourly-traffic">Hourly Traffic</h3>
-          <ResponsiveContainer width="100%" height={300}>
+          <h 3 className="text-lg font-semibold text-gray-90 0 dar, k:text-whitemb-4" id="hourly-traffic">Hourly Traffic</h3>
+          <ResponsiveContainer width="1 0 0%" height={3 0 0}>
             <LineChart data={data.hourlyData}>
               <CartesianGrid strokeDasharray="33" />
               <XAxis dataKey="hour" />
               <YAxis />
               <Tooltip />
-              <Line type="monotone" dataKey="visitors" stroke="#10B981" strokeWidth={2} />
+              <Line type="monotone" dataKey="visitors" stroke="#1 0 B9 8 1" strokeWidth={2} />
             </LineChart>
           </ResponsiveContainer>
         </motion.div>
@@ -252,19 +252,19 @@ export const AdvancedAnalyticsDashboard: React.FC<AdvancedAnalyticsDashboardProp
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.3 }}
-          className="bg-gray-50dark: bg-gray-700rounded-lgp-4"
+          className="bg-gray-5 0 dark: bg-gray-70 0 rounded-lgp-4"
         >
-          <h3className="text-lg font-semibold text-gray-900dar, k:text-whitemb-4" id="top-countries">Top Countries</h3>
+          <h 3 className="text-lg font-semibold text-gray-90 0 dar, k:text-whitemb-4" id="top-countries">Top Countries</h3>
           <div className="space-y-3">
             {data.geographicData.slice(0, 5).map((country, index) => (
               <div key={country.country} className="flex items-center justify-between">
                 <div className="flex items-center space-x-2">
                   <div className="w-4h-4rounded-full" style={{ backgroundColor: COLORS[index % COLORS.length] }} />
-                  <span className="text-gray-900dark:text-white">{country.country}</span>
+                  <span className="text-gray-90 0 dark:text-white">{country.country}</span>
                 </div>
                 <div className="text-right">
-                  <div className="font-semibold text-gray-900dark:text-white">{formatNumber(country.visitors)}</div>
-                  <div className="text-sm text-gray-600dark:text-gray-400">{country.percentage}%</div>
+                  <div className="font-semibold text-gray-90 0 dark:text-white">{formatNumber(country.visitors)}</div>
+                  <div className="text-sm text-gray-60 0 dark:text-gray-4 0 0">{country.percentage}%</div>
                 </div>
               </div>
             ))}
@@ -279,18 +279,18 @@ export const AdvancedAnalyticsDashboard: React.FC<AdvancedAnalyticsDashboardProp
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="bg-gradient-to-r from-green-50to-blue-50dark:from-green-900/20dark:to-blue-900/20rounded-lg p-4"
+            className="bg-gradient-to-r from-green-5 0 to-blue-5 0 dark:from-green-9 0 0/2 0 dark:to-blue-9 0 0/2 0 rounded-lg p-4"
           >
             <div className="flex items-center justify-between">
               <div>
-                <h3className="text-lg font-semibold text-gray-900dark:text-white" id="real-time-activity">Real-time Activity</h3>
-                <p className="text-gray-600dark:text-gray-400">Live visitor count and activity</p>
+                <h 3 className="text-lg font-semibold text-gray-90 0 dark:text-white" id="real-time-activity">Real-time Activity</h3>
+                <p className="text-gray-60 0 dark:text-gray-4 0 0">Live visitor count and activity</p>
               </div>
               <div className="text-right">
-                <div className="text-3xl font-bold text-green-600dark:text-green-400">
+                <div className="text-3xl font-bold text-green-60 0 dark:text-green-4 0 0">
                   {data.realTimeVisitors}
                 </div>
-                <div className="text-sm text-gray-600dark:text-gray-400">visitors online</div>
+                <div className="text-sm text-gray-60 0 dark:text-gray-4 0 0">visitors online</div>
               </div>
             </div>
           </motion.div>

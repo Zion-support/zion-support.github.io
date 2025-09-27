@@ -69,14 +69,14 @@ interface AnalyticsData {
 }
 
 interface AdvancedAnalyticsInsightsProps {
-  timeRange?: '7d' | '30d' | '90d' | '1y';
+  timeRange?: '7d' | '3 0 d' | '9 0 d' | '1y';
   refreshInterval?: number;
   onDataUpdate?: (data: AnalyticsData) => void;
 }
 
 export default function AdvancedAnalyticsInsights({
-  timeRange = '30d',
-  refreshInterval = 30000,
+  timeRange = '3 0 d',
+  refreshInterval = 3 0 0 0 0,
   onDataUpdate
 }: AdvancedAnalyticsInsightsProps) {
   const [data, setData] = useState<AnalyticsData | null>(null);
@@ -91,52 +91,52 @@ export default function AdvancedAnalyticsInsights({
   }>>([]);
 
   const generateMockData = useCallback((): AnalyticsData => {
-    const baseMultiplier = timeRange === '7d' ? 1 : timeRange === '30d' ? 4 : timeRange === '90d' ? 12 : 48;
+    const baseMultiplier = timeRange === '7d' ? 1 : timeRange === '3 0 d' ? 4 : timeRange === '9 0 d' ? 12 : 48;
     
     return {
       overview: {
-        totalSessions: Math.floor(1250 * baseMultiplier),
-        uniqueUsers: Math.floor(890 * baseMultiplier),
-        pageViews: Math.floor(3200 * baseMultiplier),
+        totalSessions: Math.floor(12 5 0 * baseMultiplier),
+        uniqueUsers: Math.floor(8 9 0 * baseMultiplier),
+        pageViews: Math.floor(32 0 0 * baseMultiplier),
         bounceRate: 0.35 + (Math.random() - 0.5) * 0.1,
-        avgSessionDuration: 180 + (Math.random() - 0.5) * 60,
+        avgSessionDuration: 1 8 0 + (Math.random() - 0.5) * 60,
         conversionRate: 0.12 + (Math.random() - 0.5) * 0.05
       },
       traffic: {
         sources: [
-          { name: 'Direct', count: Math.floor(450 * baseMultiplier), percentage: 36 },
-          { name: 'Google', count: Math.floor(380 * baseMultiplier), percentage: 30 },
-          { name: 'Social Media', count: Math.floor(200 * baseMultiplier), percentage: 16 },
-          { name: 'Email', count: Math.floor(120 * baseMultiplier), percentage: 10 },
-          { name: 'Referral', count: Math.floor(100 * baseMultiplier), percentage: 8 }
+          { name: 'Direct', count: Math.floor(4 5 0 * baseMultiplier), percentage: 36 },
+          { name: 'Google', count: Math.floor(3 8 0 * baseMultiplier), percentage: 30 },
+          { name: 'Social Media', count: Math.floor(2 0 0 * baseMultiplier), percentage: 16 },
+          { name: 'Email', count: Math.floor(1 2 0 * baseMultiplier), percentage: 10 },
+          { name: 'Referral', count: Math.floor(1 0 0 * baseMultiplier), percentage: 8 }
         ],
         devices: [
-          { type: 'Desktop', count: Math.floor(600 * baseMultiplier), percentage: 48 },
-          { type: 'Mobile', count: Math.floor(500 * baseMultiplier), percentage: 40 },
-          { type: 'Tablet', count: Math.floor(150 * baseMultiplier), percentage: 12 }
+          { type: 'Desktop', count: Math.floor(6 0 0 * baseMultiplier), percentage: 48 },
+          { type: 'Mobile', count: Math.floor(5 0 0 * baseMultiplier), percentage: 40 },
+          { type: 'Tablet', count: Math.floor(1 5 0 * baseMultiplier), percentage: 12 }
         ],
         countries: [
-          { name: 'United States', count: Math.floor(400 * baseMultiplier), percentage: 32 },
-          { name: 'United Kingdom', count: Math.floor(200 * baseMultiplier), percentage: 16 },
-          { name: 'Canada', count: Math.floor(150 * baseMultiplier), percentage: 12 },
-          { name: 'Germany', count: Math.floor(120 * baseMultiplier), percentage: 10 },
-          { name: 'Australia', count: Math.floor(100 * baseMultiplier), percentage: 8 },
-          { name: 'Others', count: Math.floor(280 * baseMultiplier), percentage: 22 }
+          { name: 'United States', count: Math.floor(4 0 0 * baseMultiplier), percentage: 32 },
+          { name: 'United Kingdom', count: Math.floor(2 0 0 * baseMultiplier), percentage: 16 },
+          { name: 'Canada', count: Math.floor(1 5 0 * baseMultiplier), percentage: 12 },
+          { name: 'Germany', count: Math.floor(1 2 0 * baseMultiplier), percentage: 10 },
+          { name: 'Australia', count: Math.floor(1 0 0 * baseMultiplier), percentage: 8 },
+          { name: 'Others', count: Math.floor(2 8 0 * baseMultiplier), percentage: 22 }
         ]
       },
       performance: {
         topPages: [
-          { path: '/', views: Math.floor(800 * baseMultiplier), uniqueViews: Math.floor(600 * baseMultiplier), avgTimeOnPage: 120 },
-          { path: '/services', views: Math.floor(400 * baseMultiplier), uniqueViews: Math.floor(300 * baseMultiplier), avgTimeOnPage: 180 },
-          { path: '/about', views: Math.floor(300 * baseMultiplier), uniqueViews: Math.floor(250 * baseMultiplier), avgTimeOnPage: 90 },
-          { path: '/contact', views: Math.floor(200 * baseMultiplier), uniqueViews: Math.floor(180 * baseMultiplier), avgTimeOnPage: 240 },
-          { path: '/blog', views: Math.floor(150 * baseMultiplier), uniqueViews: Math.floor(120 * baseMultiplier), avgTimeOnPage: 300 }
+          { path: '/', views: Math.floor(8 0 0 * baseMultiplier), uniqueViews: Math.floor(6 0 0 * baseMultiplier), avgTimeOnPage: 1 2 0 },
+          { path: '/services', views: Math.floor(4 0 0 * baseMultiplier), uniqueViews: Math.floor(3 0 0 * baseMultiplier), avgTimeOnPage: 1 8 0 },
+          { path: '/about', views: Math.floor(3 0 0 * baseMultiplier), uniqueViews: Math.floor(2 5 0 * baseMultiplier), avgTimeOnPage: 90 },
+          { path: '/contact', views: Math.floor(2 0 0 * baseMultiplier), uniqueViews: Math.floor(1 8 0 * baseMultiplier), avgTimeOnPage: 2 4 0 },
+          { path: '/blog', views: Math.floor(1 5 0 * baseMultiplier), uniqueViews: Math.floor(1 2 0 * baseMultiplier), avgTimeOnPage: 3 0 0 }
         ],
         userFlow: [
-          { step: 1, page: 'Homepage', users: Math.floor(1000 * baseMultiplier), dropoff: 0 },
-          { step: 2, page: 'Services', users: Math.floor(600 * baseMultiplier), dropoff: 40 },
-          { step: 3, page: 'Contact', users: Math.floor(300 * baseMultiplier), dropoff: 50 },
-          { step: 4, page: 'Conversion', users: Math.floor(150 * baseMultiplier), dropoff: 50 }
+          { step: 1, page: 'Homepage', users: Math.floor(10 0 0 * baseMultiplier), dropoff: 0 },
+          { step: 2, page: 'Services', users: Math.floor(6 0 0 * baseMultiplier), dropoff: 40 },
+          { step: 3, page: 'Contact', users: Math.floor(3 0 0 * baseMultiplier), dropoff: 50 },
+          { step: 4, page: 'Conversion', users: Math.floor(1 5 0 * baseMultiplier), dropoff: 50 }
         ]
       },
       insights: []
@@ -151,7 +151,7 @@ export default function AdvancedAnalyticsInsights({
       newInsights.push({
         type: 'negative' as const,
         title: 'High Bounce Rate',
-        description: `Your bounce rate is ${(data.overview.bounceRate * 100).toFixed(1)}%, which is above the recommended40%.`,
+        description: `Your bounce rate is ${(data.overview.bounceRate * 1 0 0).toFixed(1)}%, which is above the recommended 4 0%.`,
         impact: 'Users are leaving your site quickly, indicating poor user experience or irrelevant content.',
         recommendation: 'Improve page load speed, enhance content relevance, and optimize user experience.'
       });
@@ -159,7 +159,7 @@ export default function AdvancedAnalyticsInsights({
       newInsights.push({
         type: 'positive' as const,
         title: 'Excellent Bounce Rate',
-        description: `Your bounce rate is ${(data.overview.bounceRate * 100).toFixed(1)}%, which is excellent.`,
+        description: `Your bounce rate is ${(data.overview.bounceRate * 1 0 0).toFixed(1)}%, which is excellent.`,
         impact: 'Users are engaged and finding value in your content.',
         recommendation: 'Continue creating high-quality, relevant content and maintain current UX practices.'
       });
@@ -174,7 +174,7 @@ export default function AdvancedAnalyticsInsights({
         impact: 'Users are not spending enough time on your site to engage with content.',
         recommendation: 'Add more engaging content, improve navigation, and optimize page structure.'
       });
-    } else if (data.overview.avgSessionDuration > 300) {
+    } else if (data.overview.avgSessionDuration > 3 0 0) {
       newInsights.push({
         type: 'positive' as const,
         title: 'Long Session Duration',
@@ -189,7 +189,7 @@ export default function AdvancedAnalyticsInsights({
       newInsights.push({
         type: 'negative' as const,
         title: 'Low Conversion Rate',
-        description: `Conversion rate is ${(data.overview.conversionRate * 100).toFixed(1)}%.`,
+        description: `Conversion rate is ${(data.overview.conversionRate * 1 0 0).toFixed(1)}%.`,
         impact: 'Very few visitors are taking desired actions on your site.',
         recommendation: 'Improve call-to-action placement, optimize landing pages, and enhance user experience.'
       });
@@ -197,7 +197,7 @@ export default function AdvancedAnalyticsInsights({
       newInsights.push({
         type: 'positive' as const,
         title: 'High Conversion Rate',
-        description: `Conversion rate is ${(data.overview.conversionRate * 100).toFixed(1)}%.`,
+        description: `Conversion rate is ${(data.overview.conversionRate * 1 0 0).toFixed(1)}%.`,
         impact: 'Your site is effectively converting visitors into customers.',
         recommendation: 'Scale successful strategies and identify what drives conversions.'
       });
@@ -221,7 +221,7 @@ export default function AdvancedAnalyticsInsights({
       newInsights.push({
         type: 'positive' as const,
         title: 'Strong Homepage Performance',
-        description: `Your homepage accounts for ${((topPage.views / data.overview.pageViews) * 100).toFixed(1)}% of page views.`,
+        description: `Your homepage accounts for ${((topPage.views / data.overview.pageViews) * 1 0 0).toFixed(1)}% of page views.`,
         impact: 'Your homepage is effectively attracting and retaining visitors.',
         recommendation: 'Use homepage success patterns to improve other pages.'
       });
@@ -254,31 +254,31 @@ export default function AdvancedAnalyticsInsights({
   }, [loadData, refreshInterval]);
 
   const formatNumber = (num: number) => {
-    if (num >= 1000000) return (num / 1000000).toFixed(1) + 'M';
-    if (num >= 1000) return (num / 1000).toFixed(1) + 'K';
+    if (num >= 1 0 0 0 0 0 0) return (num / 1 0 0 0 0 0 0).toFixed(1) + 'M';
+    if (num >= 10 0 0) return (num / 10 0 0).toFixed(1) + 'K';
     return num.toString();
   };
 
   const getInsightIcon = (type: string) => {
     switch (type) {
-      case 'positive': return <TrendingUp className="h-5w-5text-green-600" />;
-      case 'negative': return <TrendingDown className="h-5w-5text-red-600" />;
-      default: return <Activity className="h-5w-5text-blue-600" />;
+      case 'positive': return <TrendingUp className="h-5w-5text-green-6 0 0" />;
+      case 'negative': return <TrendingDown className="h-5w-5text-red-6 0 0" />;
+      default: return <Activity className="h-5w-5text-blue-6 0 0" />;
     }
   };
 
   const getInsightColor = (type: string) => {
     switch (type) {
-      case 'positive': return 'border-green-200bg-green-50';
-      case 'negative': return 'border-red-200bg-red-50';
-      default: return 'border-blue-200bg-blue-50';
+      case 'positive': return 'border-green-20 0 bg-green-50';
+      case 'negative': return 'border-red-20 0 bg-red-50';
+      default: return 'border-blue-20 0 bg-blue-50';
     }
   };
 
   if (isLoading) {
     return (
       <div className="flex items-center justify-center h-64">
-        <div className="animate-spin rounded-full h-12w-12border-b-2border-blue-600"></div>
+        <div className="animate-spin rounded-full h-1 2 w-1 2 border-b-2border-blue-6 0 0"></div>
       </div>
     );
   }
@@ -290,18 +290,18 @@ export default function AdvancedAnalyticsInsights({
       {/* Header */}
       <div className="flex items-center justify-between">
         <div>
-          <h2className="text-2xl font-bold text-gray-900">Analytics Insights</h2>
-          <p className="text-gray-600">Comprehensive analytics and performance insights</p>
+          <h 2 className="text-2xl font-bold text-gray-9 0 0">Analytics Insights</h2>
+          <p className="text-gray-6 0 0">Comprehensive analytics and performance insights</p>
         </div>
         <div className="flex items-center space-x-2">
           <select
             value={timeRange}
             onChange={(e) => setTimeRange(e.target.value as any)}
-            className="px-3py-1border border-gray-300rounded-md text-sm"
+            className="px-3py-1border border-gray-30 0 rounded-md text-sm"
           >
-            <option value="7d">Last7days</option>
-            <option value="30d">Last30days</option>
-            <option value="90d">Last90days</option>
+            <option value="7d">Last 7 days</option>
+            <option value="3 0 d">Last3 0 days</option>
+            <option value="9 0 d">Last9 0 days</option>
             <option value="1y">Last year</option>
           </select>
         </div>
@@ -354,7 +354,7 @@ export default function AdvancedAnalyticsInsights({
             <Target className="h-4w-4text-muted-foreground" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">{(data.overview.conversionRate * 100).toFixed(1)}%</div>
+            <div className="text-2xl font-bold">{(data.overview.conversionRate * 1 0 0).toFixed(1)}%</div>
             <p className="text-xs text-muted-foreground">
               +2.1% from last period
             </p>
@@ -374,7 +374,7 @@ export default function AdvancedAnalyticsInsights({
               {data.traffic.sources.map((source, index) => (
                 <div key={index} className="flex items-center justify-between">
                   <div className="flex items-center space-x-2">
-                    <div className="w-3h-3rounded-full bg-blue-500"></div>
+                    <div className="w-3 h-3 rounded-full bg-blue-5 0 0"></div>
                     <span className="text-sm font-medium">{source.name}</span>
                   </div>
                   <div className="text-right">
@@ -397,9 +397,9 @@ export default function AdvancedAnalyticsInsights({
               {data.traffic.devices.map((device, index) => (
                 <div key={index} className="flex items-center justify-between">
                   <div className="flex items-center space-x-2">
-                    {device.type === 'Desktop' && <Monitor className="h-4w-4text-blue-600" />}
-                    {device.type === 'Mobile' && <Smartphone className="h-4w-4text-green-600" />}
-                    {device.type === 'Tablet' && <Tablet className="h-4w-4text-purple-600" />}
+                    {device.type === 'Desktop' && <Monitor className="h-4w-4text-blue-6 0 0" />}
+                    {device.type === 'Mobile' && <Smartphone className="h-4w-4text-green-6 0 0" />}
+                    {device.type === 'Tablet' && <Tablet className="h-4w-4text-purple-6 0 0" />}
                     <span className="text-sm font-medium">{device.type}</span>
                   </div>
                   <div className="text-right">
@@ -424,8 +424,8 @@ export default function AdvancedAnalyticsInsights({
             {data.performance.topPages.map((page, index) => (
               <div key={index} className="flex items-center justify-between p-4border rounded-lg">
                 <div className="flex items-center space-x-4">
-                  <div className="w-8h-8rounded-full bg-blue-100flex items-center justify-center">
-                    <span className="text-sm font-bold text-blue-600">{index + 1}</span>
+                  <div className="w-8h-8rounded-full bg-blue-10 0 flex items-center justify-center">
+                    <span className="text-sm font-bold text-blue-6 0 0">{index + 1}</span>
                   </div>
                   <div>
                     <div className="font-medium">{page.path}</div>
@@ -467,15 +467,15 @@ export default function AdvancedAnalyticsInsights({
                     <div className="flex items-start space-x-3">
                       {getInsightIcon(insight.type)}
                       <div className="flex-1">
-                        <h4className="font-semibold text-sm">{insight.title}</h4>
-                        <p className="text-sm text-gray-600mt-1">{insight.description}</p>
+                        <h 4 className="font-semibold text-sm">{insight.title}</h4>
+                        <p className="text-sm text-gray-60 0 mt-1">{insight.description}</p>
                         <div className="mt-2">
-                          <p className="text-xs font-medium text-gray-700">Impact:</p>
-                          <p className="text-xs text-gray-600">{insight.impact}</p>
+                          <p className="text-xs font-medium text-gray-7 0 0">Impact:</p>
+                          <p className="text-xs text-gray-6 0 0">{insight.impact}</p>
                         </div>
                         <div className="mt-2">
-                          <p className="text-xs font-medium text-gray-700">Recommendation:</p>
-                          <p className="text-xs text-gray-600">{insight.recommendation}</p>
+                          <p className="text-xs font-medium text-gray-7 0 0">Recommendation:</p>
+                          <p className="text-xs text-gray-6 0 0">{insight.recommendation}</p>
                         </div>
                       </div>
                     </div>

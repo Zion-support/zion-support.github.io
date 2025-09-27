@@ -156,8 +156,8 @@ export const AdvancedForm: React.FC<AdvancedFormProps> = ({
 
   const renderField = (field: FormField) => {
     const hasError = touched[field.name] && errors[field.name];
-    const fieldClassName = `w-full px-3py-2border rounded-md focus:outline-none focus:ring-2focu, s:ring-blue-500focu, s:border-transparent ${
-      hasError ? 'border-red-500' : 'border-gray-300'
+    const fieldClassName = `w-full px-3py-2border rounded-md focus:outline-none focus:ring-2focu, s:ring-blue-50 0 focu, s:border-transparent ${
+      hasError ? 'border-red-5 0 0' : 'border-gray-3 0 0'
     } ${field.className || ''}`;
 
     switch (field.type) {
@@ -205,9 +205,9 @@ export const AdvancedForm: React.FC<AdvancedFormProps> = ({
               onChange={(e) => handleInputChange(field.name, e.target.checked)}
               onBlur={() => handleBlur(field.name)}
               disabled={field.disabled}
-              className="h-4w-4text-blue-600focus:ring-blue-500border-gray-300rounded"
+              className="h-4w-4text-blue-60 0 focus:ring-blue-50 0 border-gray-30 0 rounded"
             />
-            <label htmlFor={`${field.name}-checkbox`} className="ml-2text-smtext-gray-700">
+            <label htmlFor={`${field.name}-checkbox`} className="ml-2text-smtext-gray-7 0 0">
               {field.label}
             </label>
           </div>
@@ -227,9 +227,9 @@ export const AdvancedForm: React.FC<AdvancedFormProps> = ({
                   onChange={(e) => handleInputChange(field.name, e.target.value)}
                   onBlur={() => handleBlur(field.name)}
                   disabled={field.disabled}
-                  className="h-4w-4text-blue-600focus:ring-blue-500border-gray-300"
+                  className="h-4w-4text-blue-60 0 focus:ring-blue-50 0 border-gray-3 0 0"
                 />
-                <label htmlFor={`${field.name}-${option.value}`} className="ml-2text-smtext-gray-700">
+                <label htmlFor={`${field.name}-${option.value}`} className="ml-2text-smtext-gray-7 0 0">
                   {option.label}
                 </label>
               </div>
@@ -260,10 +260,10 @@ export const AdvancedForm: React.FC<AdvancedFormProps> = ({
       {fields.map(field => (
         <div key={field.name} className="space-y-2">
           {field.type !== 'checkbox' && field.type !== 'radio' && (
-            <label className="block text-sm font-mediumtext-gray-700">
+            <label className="block text-sm font-mediumtext-gray-7 0 0">
               {field.label}
               {field.validation?.required && (
-                <span className="text-red-500ml-1">*</span>
+                <span className="text-red-50 0 ml-1">*</span>
               )}
             </label>
           )}
@@ -271,9 +271,9 @@ export const AdvancedForm: React.FC<AdvancedFormProps> = ({
           {renderField(field)}
           
           {touched[field.name] && errors[field.name] && (
-            <p className="text-sm text-red-600flexitems-center">
-              <svg className="w-4h-4mr-1" fill="currentColor" viewBox="002020">
-                <path fillRule="evenodd" d="M1810a88011-16088001160zm-74a11011-201100120zm-1-9a11000-11v4a1101020V6a11000-1-1z" clipRule="evenodd" />
+            <p className="text-sm text-red-60 0 flexitems-center">
+              <svg className="w-4h-4mr-1" fill="currentColor" viewBox="00 2 0 2 0">
+                <path fillRule="evenodd" d="M181 0 a8 8 0 1 1-160880 0 1 1 6 0 zm-7 4 a1 1 0 1 1-2011 0 0 1 2 0 zm-1-9a1 1 0 0 0-11v4a1101020V 6 a1 1 0 0 0-1-1z" clipRule="evenodd" />
               </svg>
               {errors[field.name]}
             </p>
@@ -285,13 +285,13 @@ export const AdvancedForm: React.FC<AdvancedFormProps> = ({
         <button
           type="submit"
           disabled={isLoading}
-          className="flex-1bg-blue-600text-white px-4 py-2rounded-md hover:bg-blue-700focus:outline-none focus:ring-2focus:ring-blue-500focus:ring-offset-2disable, d:opacity-50disable, d:cursor-not-allowed transition-colorsduration-200"
+          className="flex-1bg-blue-60 0 text-white px-4 py-2rounded-md hover:bg-blue-70 0 focus:outline-none focus:ring-2focus:ring-blue-50 0 focus:ring-offset-2disable, d:opacity-5 0 disable, d:cursor-not-allowed transition-colorsduration-2 0 0"
         >
           {isLoading ? (
             <div className="flex items-center justify-center">
-              <svg className="animate-spin -ml-1mr-3h-5w-5text-white" fill="none" viewBox="002424">
+              <svg className="animate-spin -ml-1mr-3h-5w-5text-white" fill="none" viewBox="00 2 4 2 4">
                 <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                <path className="opacity-75" fill="currentColor" d="M412a880018-8V0C5.373005.373012h4 zm25.291A7.9627.962001412H0c03.0421.1355.82437.938l3-2.647z"></path>
+                <path className="opacity-75" fill="currentColor" d="M412a 8 8 0 0 1 8-8V 0 C5.37 3 0 0 5.3 7 3 0 1 2 h4 zm 2 5.29 1 A7.96 2 7.96200141 2 H 0 c 0 3.04 2 1.13 5 5.8 2 4 3 7.93 8 l3-2.64 7 z"></path>
               </svg>
               Submitting...
             </div>
@@ -305,7 +305,7 @@ export const AdvancedForm: React.FC<AdvancedFormProps> = ({
             type="button"
             onClick={handleReset}
             disabled={isLoading}
-            className="px-4 py-2border border-gray-300text-gray-700rounded-md hover:bg-gray-50focus:outline-none focus:ring-2focus:ring-blue-500focus:ring-offset-2disable, d:opacity-50disable, d:cursor-not-allowed transition-colorsduration-200"
+            className="px-4 py-2border border-gray-30 0 text-gray-70 0 rounded-md hover:bg-gray-5 0 focus:outline-none focus:ring-2focus:ring-blue-50 0 focus:ring-offset-2disable, d:opacity-5 0 disable, d:cursor-not-allowed transition-colorsduration-2 0 0"
            aria-label="{resetText}">
             {resetText}
           </button>

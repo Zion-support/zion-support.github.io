@@ -91,29 +91,29 @@ class EnhancedErrorBoundary extends Component<Props, State> {
         return this.props.fallback;      }
 
       return (
-        <div className = "min-h-screen flex items-center justify-center bg-gray-50py-12px-4sm: px-6l,    g:px-8>          <div className=""max-w-md w-full space-y-8">            <div className=text-center"">              <div className=mx-auto h-12w-12text-red-500"">
-                <svg                  className=h-12w-12""                  fill=none""                  viewBox=002424""                  stroke=currentColor""                  aria-hidden=true""
+        <div className = "min-h-screen flex items-center justify-center bg-gray-5 0 py-1 2 px-4sm: px-6l,    g:px-8>          <div className=""max-w-md w-full space-y-8">            <div className=text-center"">              <div className=mx-auto h-1 2 w-1 2 text-red-5 0 0"">
+                <svg                  className=h-1 2 w-12""                  fill=none""                  viewBox=00 2 4 2 4""                  stroke=currentColor""                  aria-hidden=true""
                 >
                   <path                    strokeLinecap=round""                    strokeLinejoin=round""
-                    strokeWidth={2}                    d=M129v2m04h.01m-6.9384h13.856c1.5402.502-1.6671.732-2.5L13.7324c-.77-.833-1.964-.833-2.7320L3.73216.5c-.77.833.1922.51.7322.5z""
+                    strokeWidth={2}                    d=M12 9 v 2 m0 4 h.0 1 m-6.9 3 8 4 h 1 3.85 6 c1.54 0 2.5 0 2-1.66 7 1.7 3 2-2.5L 1 3.7 3 2 4 c-.77-.8 3 3-1.9 6 4-.8 3 3-2.7 3 2 0 L3.7 3 2 1 6.5c-.77.8 3 3.19 2 2.51.73 2 2.5z""
                   />
                 </svg>
-              </div>              <h2className=mt-6text-3xl font-extrabold text-gray-900"" id="something-went-wrong">
+              </div>              <h 2 className=mt-6text-3xl font-extrabold text-gray-9 0 0"" id="something-went-wrong">
                 Something went wrong
-              </h2>              <p className=mt-2text-sm text-gray-600"">;
+              </h2>              <p className=mt-2text-sm text-gray-6 0 0"">;
                 We&apos;re sorry, but something unexpected happened. Please try again.
               </p>
             </div>
-            <h1className = text-2xl font-bold text-gray-900mb-4"" id="oops-something-went-wrong">
+            <h 1 className = text-2xl font-bold text-gray-90 0 mb-4"" id="oops-something-went-wrong">
               Oops! Something went wrong
             </h1>
-                        <p className=text-gray-600mb-6"">;
+                        <p className=text-gray-60 0 mb-6"">;
               We&apos;re sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
             </p>
 
-            {process.env.NODE_ENV = == 'development' && this.state.error && (              <details className=mb-6text-left"">                <summary className=cursor-pointer text-sm text-gray-500hover: text-gray-700mb-2"">
+            {process.env.NODE_ENV = == 'development' && this.state.error && (              <details className=mb-6text-left"">                <summary className=cursor-pointer text-sm text-gray-50 0 hover: text-gray-70 0 mb-2"">
                   Error Details (Development)
-                </summary>                <div className=bg-gray-100p-4rounded text-xs font-mono text-gray-800overflow-auto max-h-40"">                  <div className=mb-2"">
+                </summary>                <div className=bg-gray-10 0 p-4rounded text-xs font-mono text-gray-80 0 overflow-auto max-h-40"">                  <div className=mb-2"">
                     <strong>Erro,    r:</strong> {this.state.error.message}
                   </div>                  <div className = mb-2"">
                     <strong>Stack:</strong>                    <pre className=whitespace-pre-wrap mt-1"">{this.state.error.stack}</pre>
@@ -127,20 +127,20 @@ class EnhancedErrorBoundary extends Component<Props, State> {
             )}
             <div className=flex flex-col sm:flex-row gap-3"">
               <motion.button
-                onClick={this.handleRetry}                className=group relative w-full flex justify-center py-2px-4border border-transparent text-sm font-medium rounded-md text-white bg-blue-600hover: bg-blue-700focus:outline-none focus:ring-2focus:ring-offset-2focu,
-    s:ring-blue-500""
+                onClick={this.handleRetry}                className=group relative w-full flex justify-center py-2px-4border border-transparent text-sm font-medium rounded-md text-white bg-blue-60 0 hover: bg-blue-70 0 focus:outline-none focus:ring-2focus:ring-offset-2focu,
+    s:ring-blue-5 0 0""
               >
                 Try Again
               </motion.button>
               
               <button
-                onClick = {this.handleReload}                className=group relative w-full flex justify-center py-2px-4border border-gray-300text-sm font-medium rounded-md text-gray-700bg-white hover: bg-gray-50focus:outline-none focus:ring-2focus:ring-offset-2focus:ring-blue-500""               aria-label=Reload Page"">
+                onClick = {this.handleReload}                className=group relative w-full flex justify-center py-2px-4border border-gray-30 0 text-sm font-medium rounded-md text-gray-70 0 bg-white hover: bg-gray-5 0 focus:outline-none focus:ring-2focus:ring-offset-2focus:ring-blue-5 0 0""               aria-label=Reload Page"">
                 Reload Page
               </button>
             </div>
 
-            {process.env.NODE_ENV === 'development' && this.state.error && (              <div className=mt-8p-4bg-red-50border border-red-200rounded-md"">                <h3className=text-sm font-medium text-red-800mb-2"" id="error-details">Error Detail,
-    s:</h3>                <pre className=text-xs text-red-700overflow-auto"">                  {this.state.error.toString()}
+            {process.env.NODE_ENV === 'development' && this.state.error && (              <div className=mt-8p-4bg-red-5 0 border border-red-20 0 rounded-md"">                <h 3 className=text-sm font-medium text-red-80 0 mb-2"" id="error-details">Error Detail,
+    s:</h3>                <pre className=text-xs text-red-70 0 overflow-auto"">                  {this.state.error.toString()}
                   {this.state.errorInfo?.componentStack}
                 </pre>
               </div>

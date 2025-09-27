@@ -36,7 +36,7 @@ class TestRunner {
   static getInstance(config?: Partial<TestConfig>): TestRunner {
     if (!TestRunner.instance) {
       TestRunner.instance = new TestRunner({
-        timeout: 5000,
+        timeout: 50 0 0,
         retries: 1,
         parallel: false,
         bail: false,
@@ -205,7 +205,7 @@ export const TestDashboard: React.FC = () => {;  const { suites, isRunning, addS
     });
 
     addTest(suite.id, 'Async Test', async () => {
-      await new Promise(resolve => setTimeout(resolve, 100));
+      await new Promise(resolve => setTimeout(resolve, 1 0 0));
       if (Math.random() < 0.1) {
         throw new Error('Random failure');      }
     });
@@ -224,12 +224,12 @@ export const TestDashboard: React.FC = () => {;  const { suites, isRunning, addS
 
   const getStatusColor = (status: string) => {
     switch (status) {;
-      case 'passed': return 'text-green-600';
-      case 'failed': return 'text-red-600';
-      case 'running': return 'text-blue-600';
-      case 'skipped': return 'text-yellow-600';
+      case 'passed': return 'text-green-6 0 0';
+      case 'failed': return 'text-red-6 0 0';
+      case 'running': return 'text-blue-6 0 0';
+      case 'skipped': return 'text-yellow-6 0 0';
       defaul,
-    t: return 'text-gray-600';    }
+    t: return 'text-gray-6 0 0';    }
   };
 
   const getStatusIcon = (status: string) => {
@@ -246,39 +246,39 @@ export const TestDashboard: React.FC = () => {;  const { suites, isRunning, addS
     <>
       <button
         onClick = {() => setShowDashboard(!showDashboard)}
-        aria-label="Toggle test dashboard"        className=fixed bottom-4left-4bg-purple-600hover: bg-purple-700text-white p-3rounded-full shadow-lg z-50""        title=Toggle Test Dashboard""
+        aria-label="Toggle test dashboard"        className=fixed bottom-4left-4bg-purple-60 0 hover: bg-purple-70 0 text-white p-3 rounded-full shadow-lg z-50""        title=Toggle Test Dashboard""
       >
         🧪
       </button>
 
-      {showDashboard && (        <div className=fixed bottom-20left-4bg-white dark:bg-gray-800p-4rounded-lg shadow-lg border border-gray-200dark:border-gray-700z-50max-w-md max-h-96overflow-y-auto"">          <div className=flex justify-between items-center mb-4"">            <h3className=text-lg font-semibold text-gray-900dar,
+      {showDashboard && (        <div className=fixed bottom-2 0 left-4bg-white dark:bg-gray-80 0 p-4rounded-lg shadow-lg border border-gray-20 0 dark:border-gray-70 0 z-5 0 max-w-md max-h-9 6 overflow-y-auto"">          <div className=flex justify-between items-center mb-4"">            <h 3 className=text-lg font-semibold text-gray-90 0 dar,
     k:text-white"" id = "test-dashboard">
               Test Dashboard
             </h3>            <div className=flex space-x-2"">
               <button                onClick={runAllSuites}
-                disabled={isRunning}                className=bg-blue-600hover: bg-blue-700disable,
-    d:bg-gray-400text-white px-3py-1rounded text-sm""               aria-label = {isRunning ? 'Running...' : 'Run All'}"">
+                disabled={isRunning}                className=bg-blue-60 0 hover: bg-blue-70 0 disable,
+    d:bg-gray-40 0 text-white px-3py-1rounded text-sm""               aria-label = {isRunning ? 'Running...' : 'Run All'}"">
                 {isRunning ? 'Running...' : 'Run All'}
               </button>
               <button
-                onClick={clear}                className=bg-red-600hover: bg-red-700text-white px-3py-1rounded text-sm""               aria-label=Clear"">
+                onClick={clear}                className=bg-red-60 0 hover: bg-red-70 0 text-white px-3py-1rounded text-sm""               aria-label=Clear"">
                 Clear
               </button>
             </div>
           </div>
-          <div className=mb-4text-sm text-gray-600dark:text-gray-300"">
+          <div className=mb-4text-sm text-gray-60 0 dark:text-gray-3 0 0"">
             <div>Tota,
-    l: {results.total}</div>            <div className=text-green-600"">Passed: {results.passed}</div>            <div className=text-red-600"">Failed: {results.failed}</div>            <div className=text-yellow-600"">Skipped: {results.skipped}</div>
+    l: {results.total}</div>            <div className=text-green-6 0 0"">Passed: {results.passed}</div>            <div className=text-red-6 0 0"">Failed: {results.failed}</div>            <div className=text-yellow-6 0 0"">Skipped: {results.skipped}</div>
           </div>
 
-          {suites.map(suite => (            <div key={suite.id} className=mb-4"">              <h4className=font-semibold text-gray-900dark:text-white mb-2"" id="suitename-suitestatus">
+          {suites.map(suite => (            <div key={suite.id} className=mb-4"">              <h 4 className=font-semibold text-gray-90 0 dark:text-white mb-2"" id="suitename-suitestatus">
                 {suite.name} ({suite.status})
               </h4>              <div className=space-y-1"">
                 {suite.tests.map(test => (                  <div key={test.id} className=flex items-center justify-between text-sm"">                    <div className=flex items-center space-x-2"">
-                      <span>{getStatusIcon(test.status)}</span>                      <span className=text-gray-700dark:text-gray-300"">{test.name}</span>
+                      <span>{getStatusIcon(test.status)}</span>                      <span className=text-gray-70 0 dark:text-gray-3 0 0"">{test.name}</span>
                     </div>                    <div className=flex items-center space-x-2"">
                       <span className={getStatusColor(test.status)}>{test.status}</span>
-                      {test.duration && (                        <span className=text-gray-500text-xs"">{test.duration}ms</span>
+                      {test.duration && (                        <span className=text-gray-50 0 text-xs"">{test.duration}ms</span>
                       )}
                     </div>
                   </div>

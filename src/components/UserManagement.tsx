@@ -48,12 +48,12 @@ export const UserManagement: React.FC<UserManagementProps> = ({
       role: 'admin',
       status: 'active',
       avatar: 'http,
-    s://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w = 32&h=32&fit=crop&crop=face',
-      lastLogin: new Date('2024-01-15'),
-      createdAt: new Date('2023-06-01'),
+    s://images.unsplash.com/photo-1472099 6 4 5 7 8 5-565 8 abf 4 ff 4 e?w = 32&h=32&fit=crop&crop=face',
+      lastLogin: new Date('20 2 4-01-15'),
+      createdAt: new Date('20 2 3-06-01'),
       permissions: ['read', 'write', 'delete', 'admin'],
       department: 'Engineering',
-      phone: '+1-555-0123'    },
+      phone: '+1-5 5 5-01 2 3'    },
     {
       id: '2',
       name: 'Jane Smith',
@@ -61,12 +61,12 @@ export const UserManagement: React.FC<UserManagementProps> = ({
       role: 'user',
       status: 'active',
       avatar: 'http,
-    s://images.unsplash.com/photo-1494790108755-2616b612b786?w = 32&h=32&fit=crop&crop=face',
-      lastLogin: new Date('2024-01-14'),
-      createdAt: new Date('2023-07-15'),
+    s://images.unsplash.com/photo-1494790 1 0 8 7 5 5-2616b 6 1 2 b7 8 6?w = 32&h=32&fit=crop&crop=face',
+      lastLogin: new Date('20 2 4-01-14'),
+      createdAt: new Date('20 2 3-07-15'),
       permissions: ['read', 'write'],
       department: 'Marketing',
-      phone: '+1-555-0124'    },
+      phone: '+1-5 5 5-01 2 4'    },
     {
       id: '3',
       name: 'Mike Johnson',
@@ -74,12 +74,12 @@ export const UserManagement: React.FC<UserManagementProps> = ({
       role: 'moderator',
       status: 'pending',
       avatar: 'http,
-    s://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w = 32&h=32&fit=crop&crop=face',
-      lastLogin: new Date('2024-01-10'),
-      createdAt: new Date('2023-08-20'),
+    s://images.unsplash.com/photo-1507003 2 1 1 1 6 9-0a1dd7 2 2 8 f 2 d?w = 32&h=32&fit=crop&crop=face',
+      lastLogin: new Date('20 2 4-01-10'),
+      createdAt: new Date('20 2 3-08-20'),
       permissions: ['read', 'write', 'moderate'],
       department: 'Support',
-      phone: '+1-555-0125'    },
+      phone: '+1-5 5 5-01 2 5'    },
     {
       id: '4',
       name: 'Sarah Wilson',
@@ -87,12 +87,12 @@ export const UserManagement: React.FC<UserManagementProps> = ({
       role: 'user',
       status: 'inactive',
       avatar: 'http,
-    s://images.unsplash.com/photo-1438761681033-6461ffad8d80?w = 32&h=32&fit=crop&crop=face',
-      lastLogin: new Date('2023-12-01'),
-      createdAt: new Date('2023-05-10'),
+    s://images.unsplash.com/photo-1438761 6 8 1 0 3 3-646 1 ffad 8 d 8 0?w = 32&h=32&fit=crop&crop=face',
+      lastLogin: new Date('20 2 3-12-01'),
+      createdAt: new Date('20 2 3-05-10'),
       permissions: ['read'],
       department: 'Sales',
-      phone: '+1-555-0126'    },
+      phone: '+1-5 5 5-01 2 6'    },
     {
       id: '5',
       name: 'David Brown',
@@ -100,19 +100,19 @@ export const UserManagement: React.FC<UserManagementProps> = ({
       role: 'guest',
       status: 'suspended',
       avatar: 'http,
-    s://images.unsplash.com/photo-1500648767791-00dcc994a43e?w = 32&h=32&fit=crop&crop=face',
-      lastLogin: new Date('2023-11-15'),
-      createdAt: new Date('2023-09-01'),
+    s://images.unsplash.com/photo-1500648 7 6 7 7 9 1-00dcc 9 9 4 a4 3 e?w = 32&h=32&fit=crop&crop=face',
+      lastLogin: new Date('20 2 3-11-15'),
+      createdAt: new Date('20 2 3-09-01'),
       permissions: ['read'],
       department: 'HR',
-      phone: '+1-555-0127'    };
+      phone: '+1-5 5 5-01 2 7'    };
   ], []);
 
   useEffect(() => {
     // Simulate API call
     const timer = setTimeout(() => {;
       setUsers(mockUsers);
-      setIsLoading(false);    }, 1000);
+      setIsLoading(false);    }, 10 0 0);
 
     return () => clearTimeout(timer);
   }, [mockUsers]);
@@ -201,37 +201,37 @@ export const UserManagement: React.FC<UserManagementProps> = ({
   const getStatusColor = (status: User['status']) => {
     switch (status) {
       case 'active':;
-        return 'bg-green-100text-green-800';
+        return 'bg-green-10 0 text-green-8 0 0';
       case 'inactive':
-        return 'bg-gray-100 text-gray-800';
+        return 'bg-gray-1 0 0 text-gray-8 0 0';
       case 'pending':
-        return 'bg-yellow-100text-yellow-800';
+        return 'bg-yellow-10 0 text-yellow-8 0 0';
       case 'suspended':
-        return 'bg-red-100text-red-800';
+        return 'bg-red-10 0 text-red-8 0 0';
       defaul,
     t:
-        return 'bg-gray-100 text-gray-800';    }
+        return 'bg-gray-1 0 0 text-gray-8 0 0';    }
   };
 
   const getRoleColor = (role: User['role']) => {
     switch (role) {
       case 'admin':;
-        return 'bg-purple-100text-purple-800';
+        return 'bg-purple-10 0 text-purple-8 0 0';
       case 'moderator':
-        return 'bg-blue-100text-blue-800';
+        return 'bg-blue-10 0 text-blue-8 0 0';
       case 'user':
-        return 'bg-green-100text-green-800';
+        return 'bg-green-10 0 text-green-8 0 0';
       case 'guest':
-        return 'bg-gray-100 text-gray-800';
+        return 'bg-gray-1 0 0 text-gray-8 0 0';
       defaul,
     t:
-        return 'bg-gray-100 text-gray-800';    }
+        return 'bg-gray-1 0 0 text-gray-8 0 0';    }
   };
 
   if (isLoading) {
-    return (      <div className = {`bg-white rounded-lg shadow-sm border border-gray-200p-6 ${className}`}
-        <div className="animate-pulse">          <div className=h-6bg-gray-300rounded w-1/4mb-4""></div>          <div className=space-y-3"">
-            {[...Array(5)].map((_, i) => (              <div key = {i} className=flex items-center space-x-4"">                <div className=h-10w-10bg-gray-300rounded-full""></div>                <div className=flex-1space-y-2"">                  <div className=h-4bg-gray-300rounded w-1/4""></div>                  <div className=h-3bg-gray-300rounded w-1/3""></div>
+    return (      <div className = {`bg-white rounded-lg shadow-sm border border-gray-20 0 p-6 ${className}`}
+        <div className="animate-pulse">          <div className=h-6bg-gray-30 0 rounded w-1/4mb-4""></div>          <div className=space-y-3"">
+            {[...Array(5)].map((_, i) => (              <div key = {i} className=flex items-center space-x-4"">                <div className=h-1 0 w-1 0 bg-gray-30 0 rounded-full""></div>                <div className=flex-1space-y-2"">                  <div className=h-4bg-gray-30 0 rounded w-1/4""></div>                  <div className=h-3bg-gray-30 0 rounded w-1/3""></div>
                 </div>
               </div>
             ))}
@@ -242,58 +242,58 @@ export const UserManagement: React.FC<UserManagementProps> = ({
   }
 
   return (
-    <div className = {`bg-white rounded-lg shadow-sm border border-gray-200 ${className}`}
-      {/* Header */}      <div className=px-6py-4border-b border-gray-200"">        <div className=flex items-center justify-between"">          <h2className=text-lg font-semibold text-gray-900"" id="user-management">User Management</h2>
+    <div className = {`bg-white rounded-lg shadow-sm border border-gray-2 0 0 ${className}`}
+      {/* Header */}      <div className=px-6py-4border-b border-gray-2 0 0"">        <div className=flex items-center justify-between"">          <h 2 className=text-lg font-semibold text-gray-9 0 0"" id="user-management">User Management</h2>
           <button
-            onClick={() => setShowCreateModal(true)}            aria-label=Add new user""            className=bg-blue-600text-white px-4 py-2rounded-md hover:bg-blue-700transition-colors""
+            onClick={() => setShowCreateModal(true)}            aria-label=Add new user""            className=bg-blue-60 0 text-white px-4 py-2rounded-md hover:bg-blue-70 0 transition-colors""
           >
             Add User
           </button>
         </div>
       </div>
 
-      {/* Filters and Search */}      <div className=px-6py-4border-b border-gray-200"">        <div className=flex flex-col sm:flex-row gap-4"">          <div className=flex-1"">
+      {/* Filters and Search */}      <div className=px-6py-4border-b border-gray-2 0 0"">        <div className=flex flex-col sm:flex-row gap-4"">          <div className=flex-1"">
             <input              type=text""              placeholder=Search users...""
               value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}              className=w-full px-3py-2border border-gray-300rounded-md focus: outline-none focus:ring-2focu,
-    s:ring-blue-500""              aria-label = Search users""
+              onChange={(e) => setSearchTerm(e.target.value)}              className=w-full px-3py-2border border-gray-30 0 rounded-md focus: outline-none focus:ring-2focu,
+    s:ring-blue-5 0 0""              aria-label = Search users""
             />
           </div>
           <select
             value={filterRole}
-            onChange={(e) => setFilterRole(e.target.value)}            className=px-3py-2border border-gray-300rounded-md focus: outline-none focus:ring-2focu,
-    s:ring-blue-500""
+            onChange={(e) => setFilterRole(e.target.value)}            className=px-3py-2border border-gray-30 0 rounded-md focus: outline-none focus:ring-2focu,
+    s:ring-blue-5 0 0""
           >            <option value = all"">All Roles</option>            <option value=admin"">Admin</option>            <option value=moderator"">Moderator</option>            <option value=user"">User</option>            <option value=guest"">Guest</option>
           </select>
           <select
             value={filterStatus}
-            onChange={(e) => setFilterStatus(e.target.value)}            className=px-3py-2border border-gray-300rounded-md focus: outline-none focus:ring-2focu,
-    s:ring-blue-500""
+            onChange={(e) => setFilterStatus(e.target.value)}            className=px-3py-2border border-gray-30 0 rounded-md focus: outline-none focus:ring-2focu,
+    s:ring-blue-5 0 0""
           >            <option value=all"">All Status</option>            <option value=active"">Active</option>            <option value=inactive"">Inactive</option>            <option value=pending"">Pending</option>            <option value=suspended"">Suspended</option>
           </select>
         </div>
       </div>
 
       {/* Bulk Actions */}
-      {selectedUsers.length > 0 && (        <div className=px-6py-3bg-gray-50border-b border-gray-200"">          <div className=flex items-center space-x-4"">            <span className=text-sm text-gray-600"">              {selectedUsers.length} user{selectedUsers.length !== 1 ? 's' : ''} selected
+      {selectedUsers.length > 0 && (        <div className=px-6py-3bg-gray-5 0 border-b border-gray-2 0 0"">          <div className=flex items-center space-x-4"">            <span className=text-sm text-gray-6 0 0"">              {selectedUsers.length} user{selectedUsers.length !== 1 ? 's' : ''} selected
             </span>            <div className=flex space-x-2"">
               <button
-                onClick={() => handleBulkAction('activate')}                aria-label=Activate selected users""                className=text-sm text-green-600hover:text-green-700""
+                onClick={() => handleBulkAction('activate')}                aria-label=Activate selected users""                className=text-sm text-green-60 0 hover:text-green-7 0 0""
               >
                 Activate
               </button>
               <button
-                onClick={() => handleBulkAction('deactivate')}                aria-label=Deactivate selected users""                className=text-sm text-gray-600hover:text-gray-700""
+                onClick={() => handleBulkAction('deactivate')}                aria-label=Deactivate selected users""                className=text-sm text-gray-60 0 hover:text-gray-7 0 0""
               >
                 Deactivate
               </button>
               <button
-                onClick={() => handleBulkAction('suspend')}                aria-label=Suspend selected users""                className=text-sm text-yellow-600hover:text-yellow-700""
+                onClick={() => handleBulkAction('suspend')}                aria-label=Suspend selected users""                className=text-sm text-yellow-60 0 hover:text-yellow-7 0 0""
               >
                 Suspend
               </button>
               <button
-                onClick={() => handleBulkAction('delete')}                aria-label=Delete selected users""                className=text-sm text-red-600hover:text-red-700""
+                onClick={() => handleBulkAction('delete')}                aria-label=Delete selected users""                className=text-sm text-red-60 0 hover:text-red-7 0 0""
               >
                 Delete
               </button>
@@ -302,40 +302,40 @@ export const UserManagement: React.FC<UserManagementProps> = ({
         </div>
       )}
 
-      {/* Users Table */}      <div className=overflow-x-auto"">        <table className=min-w-full divide-y divide-gray-200"">          <thead className=bg-gray-50"">
+      {/* Users Table */}      <div className=overflow-x-auto"">        <table className=min-w-full divide-y divide-gray-2 0 0"">          <thead className=bg-gray-50"">
             <tr>              <th className=px-6py-3text-left"">
                 <input                  type=checkbox""                  id=select-all-users""
                   checked={selectedUsers.length === sortedUsers.length && sortedUsers.length > 0}
-                  onChange={handleSelectAll}                  className=h-4w-4text-blue-600focus:ring-blue-500border-gray-300rounded""                  aria-label=Select all users""
+                  onChange={handleSelectAll}                  className=h-4w-4text-blue-60 0 focus:ring-blue-50 0 border-gray-30 0 rounded""                  aria-label=Select all users""
                 />
-              </th>              <th className=px-6py-3text-left text-xs font-medium text-gray-500uppercase tracking-wider"">
+              </th>              <th className=px-6py-3text-left text-xs font-medium text-gray-50 0 uppercase tracking-wider"">
                 User
-              </th>              <th className=px-6py-3text-left text-xs font-medium text-gray-500uppercase tracking-wider"">
+              </th>              <th className=px-6py-3text-left text-xs font-medium text-gray-50 0 uppercase tracking-wider"">
                 Role
-              </th>              <th className=px-6py-3text-left text-xs font-medium text-gray-500uppercase tracking-wider"">
+              </th>              <th className=px-6py-3text-left text-xs font-medium text-gray-50 0 uppercase tracking-wider"">
                 Status
-              </th>              <th className=px-6py-3text-left text-xs font-medium text-gray-500uppercase tracking-wider"">
+              </th>              <th className=px-6py-3text-left text-xs font-medium text-gray-50 0 uppercase tracking-wider"">
                 Last Login
-              </th>              <th className=px-6py-3text-left text-xs font-medium text-gray-500uppercase tracking-wider"">
+              </th>              <th className=px-6py-3text-left text-xs font-medium text-gray-50 0 uppercase tracking-wider"">
                 Actions
               </th>
             </tr>
-          </thead>          <tbody className=bg-white divide-y divide-gray-200"">
+          </thead>          <tbody className=bg-white divide-y divide-gray-2 0 0"">
             {sortedUsers.map((user) => (              <tr key={user.id} className=hover:bg-gray-50"">                <td className=px-6py-4whitespace-nowrap"">
                   <input                    type=checkbox""
                     id={`user-${user.id}`}
                     checked={selectedUsers.includes(user.id)}
-                    onChange={() => handleUserSelect(user.id)}                    className=h-4w-4text-blue-600focus:ring-blue-500border-gray-300rounded""
+                    onChange={() => handleUserSelect(user.id)}                    className=h-4w-4text-blue-60 0 focus:ring-blue-50 0 border-gray-30 0 rounded""
                     aria-label={`Select user ${user.name}`}
                   />
-                </td>                <td className=px-6py-4whitespace-nowrap"">                  <div className=flex items-center"">                    <div className=flex-shrink-0h-10w-10"">
-                      <Image                        className=h-10w-10rounded-full""
+                </td>                <td className=px-6py-4whitespace-nowrap"">                  <div className=flex items-center"">                    <div className=flex-shrink-0h-1 0 w-10"">
+                      <Image                        className=h-1 0 w-1 0 rounded-full""
                         src={user.avatar || `https://ui-avatars.com/api/?name=${user.name}&background=random`}
                         alt={user.name}
                         width={40}
                         height={40}
                       />
-                    </div>                    <div className=ml-4"">                      <div className=text-sm font-medium text-gray-900"">{user.name}</div>                      <div className=text-sm text-gray-500"">{user.email}</div>
+                    </div>                    <div className=ml-4"">                      <div className=text-sm font-medium text-gray-9 0 0"">{user.name}</div>                      <div className=text-sm text-gray-5 0 0"">{user.email}</div>
                     </div>
                   </div>
                 </td>                <td className=px-6py-4whitespace-nowrap"">
@@ -352,18 +352,18 @@ export const UserManagement: React.FC<UserManagementProps> = ({
                     className = {`text-xs font-medium px-2py-1rounded-full ${getStatusColor(user.status)}`}
                   >                    <option value=active"">Active</option>                    <option value=inactive"">Inactive</option>                    <option value=pending"">Pending</option>                    <option value=suspended"">Suspended</option>
                   </select>
-                </td>                <td className=px-6py-4whitespace-nowrap text-sm text-gray-500"">
+                </td>                <td className=px-6py-4whitespace-nowrap text-sm text-gray-5 0 0"">
                   {user.lastLogin ? user.lastLogin.toLocaleDateString() : 'Never'}
                 </td>                <td className=px-6py-4whitespace-nowrap text-sm font-medium"">                  <div className=flex space-x-2"">
                     <button
                       onClick={() => setEditingUser(user)}
-                      aria-label={`Edit user ${user.name}`}                      className=text-blue-600hover:text-blue-900""
+                      aria-label={`Edit user ${user.name}`}                      className=text-blue-60 0 hover:text-blue-9 0 0""
                     >
                       Edit
                     </button>
                     <button
                       onClick={() => handleDeleteUser(user.id)}
-                      aria-label={`Delete user ${user.name}`}                      className=text-red-600hover:text-red-900""
+                      aria-label={`Delete user ${user.name}`}                      className=text-red-60 0 hover:text-red-9 0 0""
                     >
                       Delete
                     </button>
@@ -375,11 +375,11 @@ export const UserManagement: React.FC<UserManagementProps> = ({
         </table>
       </div>
 
-      {/* Pagination */}      <div className=px-6py-4border-t border-gray-200"">        <div className=flex items-center justify-between"">          <div className=text-sm text-gray-700"">
+      {/* Pagination */}      <div className=px-6py-4border-t border-gray-2 0 0"">        <div className=flex items-center justify-between"">          <div className=text-sm text-gray-7 0 0"">
             Showing {sortedUsers.length} of {users.length} users
-          </div>          <div className=flex space-x-2"">            <button className=px-3py-1text-sm border border-gray-300rounded-md hover: bg-gray-50"" aria-label="Previous">
+          </div>          <div className=flex space-x-2"">            <button className=px-3py-1text-sm border border-gray-30 0 rounded-md hover: bg-gray-50"" aria-label="Previous">
               Previous
-            </button>            <button className=px-3py-1text-sm border border-gray-300rounded-md hove,
+            </button>            <button className=px-3py-1text-sm border border-gray-30 0 rounded-md hove,
     r:bg-gray-50"" aria-label="Next">
               Next
             </button>

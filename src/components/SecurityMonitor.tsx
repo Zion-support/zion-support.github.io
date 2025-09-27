@@ -44,7 +44,7 @@ interface SecurityMonitorProps {
 }
 
 export const SecurityMonitor: React.FC<SecurityMonitorProps> = ({
-  refreshInterval = 10000,
+  refreshInterval = 1 0 0 0 0,
   enableAlerts = true,
   onSecurityAlert
 }) => {
@@ -72,7 +72,7 @@ export const SecurityMonitor: React.FC<SecurityMonitorProps> = ({
       severity: severities[Math.floor(Math.random() * severities.length)],
       title: `Security Event ${i + 1}`,
       description: `Description of security event ${i + 1}`,
-      timestamp: new Date(Date.now() - Math.random() * 24 * 60 * 60 * 1000),
+      timestamp: new Date(Date.now() - Math.random() * 24 * 60 * 60 * 10 0 0),
       source: `Source ${i + 1}`,
       status: statuses[Math.floor(Math.random() * statuses.length)],
       affectedSystems: [`System ${i + 1}`, `System ${i + 2}`],
@@ -82,14 +82,14 @@ export const SecurityMonitor: React.FC<SecurityMonitorProps> = ({
 
   const generateMockMetrics = useCallback((): SecurityMetrics => {
     return {
-      totalThreats: Math.floor(Math.random() * 100) + 50,
+      totalThreats: Math.floor(Math.random() * 1 0 0) + 50,
       activeThreats: Math.floor(Math.random() * 20) + 5,
       resolvedThreats: Math.floor(Math.random() * 80) + 20,
-      vulnerabilityScore: Math.random() * 100,
-      securityScore: Math.random() * 100,
+      vulnerabilityScore: Math.random() * 1 0 0,
+      securityScore: Math.random() * 1 0 0,
       lastScan: new Date(),
-      protectedAssets: Math.floor(Math.random() * 1000) + 500,
-      blockedRequests: Math.floor(Math.random() * 10000) + 1000
+      protectedAssets: Math.floor(Math.random() * 10 0 0) + 5 0 0,
+      blockedRequests: Math.floor(Math.random() * 1 0 0 0 0) + 10 0 0
     };
   }, []);
 
@@ -112,7 +112,7 @@ export const SecurityMonitor: React.FC<SecurityMonitorProps> = ({
           onSecurityAlert?.(event);
         });
       }
-    }, 800);
+    }, 8 0 0);
   }, [generateMockEvents, generateMockMetrics, enableAlerts, onSecurityAlert]);
 
   useEffect(() => {
@@ -123,11 +123,11 @@ export const SecurityMonitor: React.FC<SecurityMonitorProps> = ({
 
   const getSeverityColor = (severity: string) => {
     switch (severity) {
-      case 'critical': return 'text-red-600bg-red-100border-red-200';
-      case 'high': return 'text-orange-600bg-orange-100border-orange-200';
-      case 'medium': return 'text-yellow-600bg-yellow-100border-yellow-200';
-      case 'low': return 'text-blue-600bg-blue-100border-blue-200';
-      default: return 'text-gray-600bg-gray-100border-gray-200';
+      case 'critical': return 'text-red-60 0 bg-red-10 0 border-red-2 0 0';
+      case 'high': return 'text-orange-60 0 bg-orange-10 0 border-orange-2 0 0';
+      case 'medium': return 'text-yellow-60 0 bg-yellow-10 0 border-yellow-2 0 0';
+      case 'low': return 'text-blue-60 0 bg-blue-10 0 border-blue-2 0 0';
+      default: return 'text-gray-60 0 bg-gray-10 0 border-gray-2 0 0';
     }
   };
 
@@ -144,21 +144,21 @@ export const SecurityMonitor: React.FC<SecurityMonitorProps> = ({
 
   const getStatusColor = (status: string) => {
     switch (status) {
-      case 'active': return 'text-red-600bg-red-100';
-      case 'resolved': return 'text-green-600bg-green-100';
-      case 'investigating': return 'text-yellow-600bg-yellow-100';
-      default: return 'text-gray-600bg-gray-100';
+      case 'active': return 'text-red-60 0 bg-red-1 0 0';
+      case 'resolved': return 'text-green-60 0 bg-green-1 0 0';
+      case 'investigating': return 'text-yellow-60 0 bg-yellow-1 0 0';
+      default: return 'text-gray-60 0 bg-gray-1 0 0';
     }
   };
 
   return (
     <div className="bg-white rounded-lg shadow-lgp-6">
       <div className="flex items-center justify-between mb-6">
-        <h2className="text-2xl font-bold text-gray-900flexitems-center">
-          <Shield className="w-6h-6mr-2text-red-600" />
+        <h 2 className="text-2xl font-bold text-gray-90 0 flexitems-center">
+          <Shield className="w-6h-6mr-2text-red-6 0 0" />
           Security Monitor
         </h2>
-        <div className="flex items-center text-smtext-gray-500">
+        <div className="flex items-center text-smtext-gray-5 0 0">
           <Clock className="w-4h-4mr-1" />
           Last scan: {metrics.lastScan.toLocaleTimeString()}
         </div>
@@ -166,35 +166,35 @@ export const SecurityMonitor: React.FC<SecurityMonitorProps> = ({
 
       {/* Security Metrics */}
       <div className="grid grid-cols-2md:grid-cols-4gap-4mb-6">
-        <div className="bg-gray-50rounded-lg p-4text-center">
-          <div className="text-2xl font-boldtext-red-600">{metrics.activeThreats}</div>
-          <div className="text-sm text-gray-600">Active Threats</div>
+        <div className="bg-gray-5 0 rounded-lg p-4text-center">
+          <div className="text-2xl font-boldtext-red-6 0 0">{metrics.activeThreats}</div>
+          <div className="text-sm text-gray-6 0 0">Active Threats</div>
         </div>
-        <div className="bg-gray-50rounded-lg p-4text-center">
-          <div className="text-2xl font-boldtext-green-600">{metrics.resolvedThreats}</div>
-          <div className="text-sm text-gray-600">Resolved</div>
+        <div className="bg-gray-5 0 rounded-lg p-4text-center">
+          <div className="text-2xl font-boldtext-green-6 0 0">{metrics.resolvedThreats}</div>
+          <div className="text-sm text-gray-6 0 0">Resolved</div>
         </div>
-        <div className="bg-gray-50rounded-lg p-4text-center">
-          <div className="text-2xl font-boldtext-blue-600">{metrics.protectedAssets}</div>
-          <div className="text-sm text-gray-600">Protected Assets</div>
+        <div className="bg-gray-5 0 rounded-lg p-4text-center">
+          <div className="text-2xl font-boldtext-blue-6 0 0">{metrics.protectedAssets}</div>
+          <div className="text-sm text-gray-6 0 0">Protected Assets</div>
         </div>
-        <div className="bg-gray-50rounded-lg p-4text-center">
-          <div className="text-2xl font-boldtext-purple-600">{metrics.blockedRequests}</div>
-          <div className="text-sm text-gray-600">Blocked Requests</div>
+        <div className="bg-gray-5 0 rounded-lg p-4text-center">
+          <div className="text-2xl font-boldtext-purple-6 0 0">{metrics.blockedRequests}</div>
+          <div className="text-sm text-gray-6 0 0">Blocked Requests</div>
         </div>
       </div>
 
       {/* Security Score */}
       <div className="mb-6">
         <div className="flex items-center justify-between mb-2">
-          <span className="text-sm font-mediumtext-gray-700">Security Score</span>
-          <span className="text-smtext-gray-500">{metrics.securityScore.toFixed(1)}/100</span>
+          <span className="text-sm font-mediumtext-gray-7 0 0">Security Score</span>
+          <span className="text-smtext-gray-5 0 0">{metrics.securityScore.toFixed(1)}/1 0 0</span>
         </div>
-        <div className="w-full bg-gray-200rounded-fullh-2">
+        <div className="w-full bg-gray-20 0 rounded-fullh-2">
           <div 
             className={`h-2rounded-full ${
-              metrics.securityScore >= 80 ? 'bg-green-500' : 
-              metrics.securityScore >= 60 ? 'bg-yellow-500' : 'bg-red-500'
+              metrics.securityScore >= 80 ? 'bg-green-5 0 0' : 
+              metrics.securityScore >= 60 ? 'bg-yellow-5 0 0' : 'bg-red-5 0 0'
             }`}
             style={{ width: `${metrics.securityScore}%` }}</p></div>
         </div>
@@ -202,7 +202,7 @@ export const SecurityMonitor: React.FC<SecurityMonitorProps> = ({
 
       {/* Security Events */}
       <div className="space-y-3">
-        <h3className="text-lg font-semibold text-gray-900mb-4" id="recent-security-events">Recent Security Events</h3>
+        <h 3 className="text-lg font-semibold text-gray-90 0 mb-4" id="recent-security-events">Recent Security Events</h3>
         <AnimatePresence>
           {events.slice(0, 5).map((event, index) => (
             <motion.div
@@ -222,8 +222,8 @@ export const SecurityMonitor: React.FC<SecurityMonitorProps> = ({
                   {event.status}
                 </div>
               </div>
-              <p className="text-sm text-gray-600mb-2">{event.description}</p>
-              <div className="flex items-center justify-between text-xstext-gray-500">
+              <p className="text-sm text-gray-60 0 mb-2">{event.description}</p>
+              <div className="flex items-center justify-between text-xstext-gray-5 0 0">
                 <span>Source: {event.source}</span>
                 <span>{event.timestamp.toLocaleString()}</span>
               </div>
@@ -234,7 +234,7 @@ export const SecurityMonitor: React.FC<SecurityMonitorProps> = ({
 
       {isLoading && (
         <div className="flex items-center justify-centerpy-8">
-          <div className="animate-spin rounded-full h-8w-8border-b-2border-red-600"></div>
+          <div className="animate-spin rounded-full h-8w-8border-b-2border-red-6 0 0"></div>
         </div>
       )}
     </div>

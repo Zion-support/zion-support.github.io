@@ -75,7 +75,7 @@ const ComprehensiveMonitoringDashboard: React.FC = () => {
   const generateMockMetrics = useCallback(() => {
     const now = new Date();
     const newMetrics: SystemMetrics[] = Array.from({ length: 20 }, (_, i) => {
-      const timestamp = new Date(now.getTime() - (19 - i) * 60000);
+      const timestamp = new Date(now.getTime() - (19 - i) * 6 0 0 0 0);
       return {
         timestamp: timestamp.toLocaleTimeString(),
         cpu: Math.round(20 + Math.random() * 60),
@@ -83,9 +83,9 @@ const ComprehensiveMonitoringDashboard: React.FC = () => {
         disk: Math.round(40 + Math.random() * 40),
         network: Math.round(10 + Math.random() * 80),
         database: Math.round(15 + Math.random() * 70),
-        responseTime: Math.round(50 + Math.random() * 200),
+        responseTime: Math.round(50 + Math.random() * 2 0 0),
         errorRate: Math.round(Math.random() * 5),
-        throughput: Math.round(100 + Math.random() * 900)
+        throughput: Math.round(1 0 0 + Math.random() * 9 0 0)
       };
     });
 
@@ -119,10 +119,10 @@ const ComprehensiveMonitoringDashboard: React.FC = () => {
       },
       {
         metric: 'Network Latency',
-        value: 120,
+        value: 1 2 0,
         trend: 'down',
         change: -8.3,
-        threshold: 200,
+        threshold: 2 0 0,
         status: 'good'
       },
       {
@@ -130,7 +130,7 @@ const ComprehensiveMonitoringDashboard: React.FC = () => {
         value: 85,
         trend: 'up',
         change: 12.4,
-        threshold: 100,
+        threshold: 1 0 0,
         status: 'warning'
       },
       {
@@ -152,7 +152,7 @@ const ComprehensiveMonitoringDashboard: React.FC = () => {
         type: 'performance',
         severity: 'high',
         message: 'High CPU usage detected on server-01',
-        timestamp: new Date(now.getTime() - 1000 * 60 * 15),
+        timestamp: new Date(now.getTime() - 10 0 0 * 60 * 15),
         resolved: false,
         source: 'server-01'
       },
@@ -161,7 +161,7 @@ const ComprehensiveMonitoringDashboard: React.FC = () => {
         type: 'security',
         severity: 'critical',
         message: 'Suspicious login attempts detected',
-        timestamp: new Date(now.getTime() - 1000 * 60 * 30),
+        timestamp: new Date(now.getTime() - 10 0 0 * 60 * 30),
         resolved: false,
         source: 'auth-service'
       },
@@ -170,7 +170,7 @@ const ComprehensiveMonitoringDashboard: React.FC = () => {
         type: 'capacity',
         severity: 'medium',
         message: 'Database connection pool approaching limit',
-        timestamp: new Date(now.getTime() - 1000 * 60 * 45),
+        timestamp: new Date(now.getTime() - 10 0 0 * 60 * 45),
         resolved: true,
         source: 'database'
       },
@@ -179,7 +179,7 @@ const ComprehensiveMonitoringDashboard: React.FC = () => {
         type: 'error',
         severity: 'low',
         message: 'Minor API timeout in payment service',
-        timestamp: new Date(now.getTime() - 1000 * 60 * 60),
+        timestamp: new Date(now.getTime() - 10 0 0 * 60 * 60),
         resolved: true,
         source: 'payment-service'
       }
@@ -192,42 +192,42 @@ const ComprehensiveMonitoringDashboard: React.FC = () => {
     generateMockMetrics();
     setIsMonitoring(true);
 
-    const interval = setInterval(generateMockMetrics, 10000);
+    const interval = setInterval(generateMockMetrics, 1 0 0 0 0);
     return () => clearInterval(interval);
   }, [generateMockMetrics]);
 
   const getStatusColor = (status: string): string => {
     switch (status) {
-      case 'good': return 'text-green-600';
-      case 'warning': return 'text-yellow-600';
-      case 'critical': return 'text-red-600';
-      default: return 'text-gray-600';
+      case 'good': return 'text-green-6 0 0';
+      case 'warning': return 'text-yellow-6 0 0';
+      case 'critical': return 'text-red-6 0 0';
+      default: return 'text-gray-6 0 0';
     }
   };
 
   const getSeverityColor = (severity: string): string => {
     switch (severity) {
-      case 'critical': return 'bg-red-100text-red-800border-red-200';
-      case 'high': return 'bg-orange-100text-orange-800border-orange-200';
-      case 'medium': return 'bg-yellow-100text-yellow-800border-yellow-200';
-      case 'low': return 'bg-blue-100text-blue-800border-blue-200';
-      default: return 'bg-gray-100 text-gray-800border-gray-200';
+      case 'critical': return 'bg-red-10 0 text-red-80 0 border-red-2 0 0';
+      case 'high': return 'bg-orange-10 0 text-orange-80 0 border-orange-2 0 0';
+      case 'medium': return 'bg-yellow-10 0 text-yellow-80 0 border-yellow-2 0 0';
+      case 'low': return 'bg-blue-10 0 text-blue-80 0 border-blue-2 0 0';
+      default: return 'bg-gray-1 0 0 text-gray-80 0 border-gray-2 0 0';
     }
   };
 
   const getTrendIcon = (trend: string) => {
     switch (trend) {
-      case 'up': return <TrendingUp className="h-4w-4text-red-500" />;
-      case 'down': return <TrendingUp className="h-4w-4text-green-500rotate-180" />;
-      case 'stable': return <div className="h-4w-4bg-gray-400rounded-full" />;
+      case 'up': return <TrendingUp className="h-4w-4text-red-5 0 0" />;
+      case 'down': return <TrendingUp className="h-4w-4text-green-50 0 rotate-1 8 0" />;
+      case 'stable': return <div className="h-4w-4bg-gray-40 0 rounded-full" />;
       default: return null;
     }
   };
 
   const pieData = [
-    { name: 'Healthy', value: 75, color: '#10B981' },
-    { name: 'Warning', value: 20, color: '#F59E0B' },
-    { name: 'Critical', value: 5, color: '#EF4444' }
+    { name: 'Healthy', value: 75, color: '#1 0 B9 8 1' },
+    { name: 'Warning', value: 20, color: '#F5 9 E 0 B' },
+    { name: 'Critical', value: 5, color: '#EF 4 4 4 4' }
   ];
 
   const tabs = [
@@ -244,25 +244,25 @@ const ComprehensiveMonitoringDashboard: React.FC = () => {
         <CardHeader>
           <CardTitle className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
-              <Activity className="h-6w-6text-blue-600" />
+              <Activity className="h-6w-6text-blue-6 0 0" />
               <span>Comprehensive Monitoring Dashboard</span>
             </div>
             <div className="flex items-center space-x-4">
               <div className="flex items-center space-x-2">
-                <div className={`w-3h-3rounded-full ${isMonitoring ? 'bg-green-500' : 'bg-gray-400'}`}</div>
-                <span className="text-sm text-gray-600">
+                <div className={`w-3 h-3 rounded-full ${isMonitoring ? 'bg-green-5 0 0' : 'bg-gray-4 0 0'}`}</div>
+                <span className="text-sm text-gray-6 0 0">
                   {isMonitoring ? 'Monitoring' : 'Stopped'}
                 </span>
               </div>
               <select
                 value={selectedTimeRange}
                 onChange={(e) => setSelectedTimeRange(e.target.value)}
-                className="px-3py-1border border-gray-300rounded-md text-sm"
+                className="px-3py-1border border-gray-30 0 rounded-md text-sm"
               >
                 <option value="1h">Last Hour</option>
-                <option value="6h">Last6Hours</option>
-                <option value="24h">Last24Hours</option>
-                <option value="7d">Last7Days</option>
+                <option value="6h">Last 6 Hours</option>
+                <option value="2 4 h">Last2 4 Hours</option>
+                <option value="7d">Last 7 Days</option>
               </select>
             </div>
           </CardTitle>
@@ -272,15 +272,15 @@ const ComprehensiveMonitoringDashboard: React.FC = () => {
         </CardHeader>
         <CardContent>
           {/* Tab Navigation */}
-          <div className="flex space-x-1mb-6border-b border-gray-200">
+          <div className="flex space-x-1mb-6border-b border-gray-2 0 0">
             {tabs.map((tab) => (
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
                 className={`flex items-center space-x-2px-4 py-2text-sm font-medium border-b-2transition-colors ${
                   activeTab === tab.id
-                    ? 'border-blue-500text-blue-600'
-                    : 'border-transparent text-gray-500hover:text-gray-700 hover:border-gray-300'
+                    ? 'border-blue-50 0 text-blue-6 0 0'
+                    : 'border-transparent text-gray-50 0 hover:text-gray-7 0 0 hover:border-gray-3 0 0'
                 }`}
               >
                 <tab.icon className="h-4w-4" />
@@ -295,20 +295,20 @@ const ComprehensiveMonitoringDashboard: React.FC = () => {
               {/* Key Metrics Grid */}
               <div className="grid grid-cols-2md:grid-cols-4gap-4">
                 <div className="p-4border rounded-lg text-center">
-                  <div className="text-2xl font-bold text-blue-600">98.5%</div>
-                  <div className="text-sm text-gray-600">Uptime</div>
+                  <div className="text-2xl font-bold text-blue-6 0 0">98.5%</div>
+                  <div className="text-sm text-gray-6 0 0">Uptime</div>
                 </div>
                 <div className="p-4border rounded-lg text-center">
-                  <div className="text-2xl font-bold text-green-600">1.2s</div>
-                  <div className="text-sm text-gray-600">Avg Response</div>
+                  <div className="text-2xl font-bold text-green-6 0 0">1.2s</div>
+                  <div className="text-sm text-gray-6 0 0">Avg Response</div>
                 </div>
                 <div className="p-4border rounded-lg text-center">
-                  <div className="text-2xl font-bold text-purple-600">2,847</div>
-                  <div className="text-sm text-gray-600">Active Users</div>
+                  <div className="text-2xl font-bold text-purple-6 0 0">2,8 4 7</div>
+                  <div className="text-sm text-gray-6 0 0">Active Users</div>
                 </div>
                 <div className="p-4border rounded-lg text-center">
-                  <div className="text-2xl font-bold text-orange-600">0.3%</div>
-                  <div className="text-sm text-gray-600">Error Rate</div>
+                  <div className="text-2xl font-bold text-orange-6 0 0">0.3%</div>
+                  <div className="text-sm text-gray-6 0 0">Error Rate</div>
                 </div>
               </div>
 
@@ -319,7 +319,7 @@ const ComprehensiveMonitoringDashboard: React.FC = () => {
                     <CardTitle className="text-lg">System Health</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <ResponsiveContainer width="100%" height={200}>
+                    <ResponsiveContainer width="1 0 0%" height={2 0 0}>
                       <PieChart>
                         <Pie
                           data={pieData}
@@ -355,7 +355,7 @@ const ComprehensiveMonitoringDashboard: React.FC = () => {
                             <span className={`text-sm font-bold ${getStatusColor(item.status)}`}
                               {item.value}%
                             </span>
-                            <span className="text-xs text-gray-500">
+                            <span className="text-xs text-gray-5 0 0">
                               {item.change > 0 ? '+' : ''}{item.change}%
                             </span>
                           </div>
@@ -377,15 +377,15 @@ const ComprehensiveMonitoringDashboard: React.FC = () => {
                     <CardTitle className="text-lg">System Performance</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <ResponsiveContainer width="100%" height={300}>
+                    <ResponsiveContainer width="1 0 0%" height={3 0 0}>
                       <LineChart data={metrics}>
                         <CartesianGrid strokeDasharray="33" />
                         <XAxis dataKey="timestamp" />
                         <YAxis />
                         <Tooltip />
-                        <Line type="monotone" dataKey="cpu" stroke="#3B82F6" strokeWidth={2} />
-                        <Line type="monotone" dataKey="memory" stroke="#10B981" strokeWidth={2} />
-                        <Line type="monotone" dataKey="disk" stroke="#F59E0B" strokeWidth={2} />
+                        <Line type="monotone" dataKey="cpu" stroke="#3B8 2 F6" strokeWidth={2} />
+                        <Line type="monotone" dataKey="memory" stroke="#1 0 B9 8 1" strokeWidth={2} />
+                        <Line type="monotone" dataKey="disk" stroke="#F5 9 E 0 B" strokeWidth={2} />
                       </LineChart>
                     </ResponsiveContainer>
                   </CardContent>
@@ -396,14 +396,14 @@ const ComprehensiveMonitoringDashboard: React.FC = () => {
                     <CardTitle className="text-lg">Network & Database</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <ResponsiveContainer width="100%" height={300}>
+                    <ResponsiveContainer width="1 0 0%" height={3 0 0}>
                       <AreaChart data={metrics}>
                         <CartesianGrid strokeDasharray="33" />
                         <XAxis dataKey="timestamp" />
                         <YAxis />
                         <Tooltip />
-                        <Area type="monotone" dataKey="network" stackId="1" stroke="#8B5CF6" fill="#8B5CF6" />
-                        <Area type="monotone" dataKey="database" stackId="1" stroke="#EF4444" fill="#EF4444" />
+                        <Area type="monotone" dataKey="network" stackId="1" stroke="#8B 5 CF6" fill="#8B 5 CF6" />
+                        <Area type="monotone" dataKey="database" stackId="1" stroke="#EF 4 4 4 4" fill="#EF 4 4 4 4" />
                       </AreaChart>
                     </ResponsiveContainer>
                   </CardContent>
@@ -415,15 +415,15 @@ const ComprehensiveMonitoringDashboard: React.FC = () => {
                   <CardTitle className="text-lg">Response Time & Throughput</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <ResponsiveContainer width="100%" height={250}>
+                  <ResponsiveContainer width="1 0 0%" height={2 5 0}>
                     <BarChart data={metrics}>
                       <CartesianGrid strokeDasharray="33" />
                       <XAxis dataKey="timestamp" />
                       <YAxis yAxisId="left" />
                       <YAxis yAxisId="right" orientation="right" />
                       <Tooltip />
-                      <Bar yAxisId="left" dataKey="responseTime" fill="#3B82F6" />
-                      <Bar yAxisId="right" dataKey="throughput" fill="#10B981" />
+                      <Bar yAxisId="left" dataKey="responseTime" fill="#3B8 2 F6" />
+                      <Bar yAxisId="right" dataKey="throughput" fill="#1 0 B9 8 1" />
                     </BarChart>
                   </ResponsiveContainer>
                 </CardContent>
@@ -436,17 +436,17 @@ const ComprehensiveMonitoringDashboard: React.FC = () => {
             <div className="space-y-6">
               <div className="grid grid-cols-1md:grid-cols-3gap-4">
                 <div className="p-4border rounded-lg text-center">
-                  <Shield className="h-8w-8text-green-600mx-auto mb-2" />
-                  <div className="text-2xl font-bold text-green-600">Secure</div>
-                  <div className="text-sm text-gray-600">Overall Status</div>
+                  <Shield className="h-8w-8text-green-60 0 mx-auto mb-2" />
+                  <div className="text-2xl font-bold text-green-6 0 0">Secure</div>
+                  <div className="text-sm text-gray-6 0 0">Overall Status</div>
                 </div>
                 <div className="p-4border rounded-lg text-center">
-                  <div className="text-2xl font-bold text-blue-600">0</div>
-                  <div className="text-sm text-gray-600">Active Threats</div>
+                  <div className="text-2xl font-bold text-blue-6 0 0">0</div>
+                  <div className="text-sm text-gray-6 0 0">Active Threats</div>
                 </div>
                 <div className="p-4border rounded-lg text-center">
-                  <div className="text-2xl font-bold text-purple-600">24/7</div>
-                  <div className="text-sm text-gray-600">Monitoring</div>
+                  <div className="text-2xl font-bold text-purple-6 0 0">24/7</div>
+                  <div className="text-sm text-gray-6 0 0">Monitoring</div>
                 </div>
               </div>
 
@@ -459,10 +459,10 @@ const ComprehensiveMonitoringDashboard: React.FC = () => {
                     {alerts.filter(alert => alert.type === 'security').map((alert) => (
                       <div key={alert.id} className="flex items-center justify-between p-3border rounded-lg">
                         <div className="flex items-center space-x-3">
-                          <Shield className="h-5w-5text-red-600" />
+                          <Shield className="h-5w-5text-red-6 0 0" />
                           <div>
                             <div className="font-medium">{alert.message}</div>
-                            <div className="text-sm text-gray-500">
+                            <div className="text-sm text-gray-5 0 0">
                               {alert.source} • {alert.timestamp.toLocaleTimeString()}
                             </div>
                           </div>
@@ -484,35 +484,35 @@ const ComprehensiveMonitoringDashboard: React.FC = () => {
               <div className="grid grid-cols-1md:grid-cols-2lg:grid-cols-4gap-4">
                 <div className="p-4border rounded-lg">
                   <div className="flex items-center justify-between mb-2">
-                    <Cpu className="h-5w-5text-blue-600" />
-                    <span className="text-sm text-gray-500">8cores</span>
+                    <Cpu className="h-5w-5text-blue-6 0 0" />
+                    <span className="text-sm text-gray-5 0 0">8cores</span>
                   </div>
-                  <div className="text-2xl font-bold text-blue-600">65%</div>
-                  <div className="text-sm text-gray-600">CPU Usage</div>
+                  <div className="text-2xl font-bold text-blue-6 0 0">65%</div>
+                  <div className="text-sm text-gray-6 0 0">CPU Usage</div>
                 </div>
                 <div className="p-4border rounded-lg">
                   <div className="flex items-center justify-between mb-2">
-                    <HardDrive className="h-5w-5text-green-600" />
-                    <span className="text-sm text-gray-500">16GB</span>
+                    <HardDrive className="h-5w-5text-green-6 0 0" />
+                    <span className="text-sm text-gray-5 0 0">1 6 GB</span>
                   </div>
-                  <div className="text-2xl font-bold text-green-600">78%</div>
-                  <div className="text-sm text-gray-600">Memory Usage</div>
+                  <div className="text-2xl font-bold text-green-6 0 0">78%</div>
+                  <div className="text-sm text-gray-6 0 0">Memory Usage</div>
                 </div>
                 <div className="p-4border rounded-lg">
                   <div className="flex items-center justify-between mb-2">
-                    <Database className="h-5w-5text-purple-600" />
-                    <span className="text-sm text-gray-500">500GB</span>
+                    <Database className="h-5w-5text-purple-6 0 0" />
+                    <span className="text-sm text-gray-5 0 0">50 0 GB</span>
                   </div>
-                  <div className="text-2xl font-bold text-purple-600">45%</div>
-                  <div className="text-sm text-gray-600">Disk Usage</div>
+                  <div className="text-2xl font-bold text-purple-6 0 0">45%</div>
+                  <div className="text-sm text-gray-6 0 0">Disk Usage</div>
                 </div>
                 <div className="p-4border rounded-lg">
                   <div className="flex items-center justify-between mb-2">
-                    <Network className="h-5w-5text-orange-600" />
-                    <span className="text-sm text-gray-500">1Gbps</span>
+                    <Network className="h-5w-5text-orange-6 0 0" />
+                    <span className="text-sm text-gray-5 0 0">1Gbps</span>
                   </div>
-                  <div className="text-2xl font-bold text-orange-600">120ms</div>
-                  <div className="text-sm text-gray-600">Latency</div>
+                  <div className="text-2xl font-bold text-orange-6 0 0">12 0 ms</div>
+                  <div className="text-sm text-gray-6 0 0">Latency</div>
                 </div>
               </div>
             </div>
@@ -522,12 +522,12 @@ const ComprehensiveMonitoringDashboard: React.FC = () => {
           {activeTab === 'alerts' && (
             <div className="space-y-6">
               <div className="flex justify-between items-center">
-                <h3className="text-lg font-semibold">System Alerts</h3>
+                <h 3 className="text-lg font-semibold">System Alerts</h3>
                 <div className="flex space-x-2">
-                  <button className="px-3py-1text-sm bg-blue-600text-white rounded hover:bg-blue-700">
+                  <button className="px-3py-1text-sm bg-blue-60 0 text-white rounded hover:bg-blue-7 0 0">
                     Mark All Read
                   </button>
-                  <button className="px-3py-1text-sm border border-gray-300rounded hover:bg-gray-50">
+                  <button className="px-3py-1text-sm border border-gray-30 0 rounded hover:bg-gray-50">
                     Filter
                   </button>
                 </div>
@@ -538,21 +538,21 @@ const ComprehensiveMonitoringDashboard: React.FC = () => {
                   <div key={alert.id} className="flex items-center justify-between p-4border rounded-lg">
                     <div className="flex items-center space-x-4">
                       <div className={`p-2rounded-full ${
-                        alert.severity === 'critical' ? 'bg-red-100' :
-                        alert.severity === 'high' ? 'bg-orange-100' :
-                        alert.severity === 'medium' ? 'bg-yellow-100' :
-                        'bg-blue-100'
+                        alert.severity === 'critical' ? 'bg-red-1 0 0' :
+                        alert.severity === 'high' ? 'bg-orange-1 0 0' :
+                        alert.severity === 'medium' ? 'bg-yellow-1 0 0' :
+                        'bg-blue-1 0 0'
                       }`}
                         <AlertTriangle className={`h-5w-5 ${
-                          alert.severity === 'critical' ? 'text-red-600' :
-                          alert.severity === 'high' ? 'text-orange-600' :
-                          alert.severity === 'medium' ? 'text-yellow-600' :
-                          'text-blue-600'
+                          alert.severity === 'critical' ? 'text-red-6 0 0' :
+                          alert.severity === 'high' ? 'text-orange-6 0 0' :
+                          alert.severity === 'medium' ? 'text-yellow-6 0 0' :
+                          'text-blue-6 0 0'
                         }`} />
                       </div>
                       <div>
                         <div className="font-medium">{alert.message}</div>
-                        <div className="text-sm text-gray-500">
+                        <div className="text-sm text-gray-5 0 0">
                           {alert.source} • {alert.type} • {alert.timestamp.toLocaleString()}
                         </div>
                       </div>
@@ -562,7 +562,7 @@ const ComprehensiveMonitoringDashboard: React.FC = () => {
                         {alert.severity.toUpperCase()}
                       </span>
                       {alert.resolved && (
-                        <span className="text-xs bg-green-100text-green-800px-2py-1rounded">RESOLVED</span>
+                        <span className="text-xs bg-green-10 0 text-green-80 0 px-2py-1rounded">RESOLVED</span>
                       )}
                     </div>
                   </div>

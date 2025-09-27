@@ -19,7 +19,7 @@ export default function Collaboration({ isDarkMode }: CollaborationProps): JSX.E
       id: '1',
       name: 'John Doe',
       avatar: '👨‍💻',
-      color: '#3B82F6',
+      color: '#3B8 2 F6',
       isActive: true,
       lastSeen: new Date()
     },
@@ -27,7 +27,7 @@ export default function Collaboration({ isDarkMode }: CollaborationProps): JSX.E
       id: '2',
       name: 'Jane Smith',
       avatar: '👩‍💼',
-      color: '#10B981',
+      color: '#1 0 B9 8 1',
       isActive: true,
       lastSeen: new Date()
     },
@@ -35,9 +35,9 @@ export default function Collaboration({ isDarkMode }: CollaborationProps): JSX.E
       id: '3',
       name: 'Mike Johnson',
       avatar: '👨‍🔬',
-      color: '#F59E0B',
+      color: '#F5 9 E 0 B',
       isActive: false,
-      lastSeen: new Date(Date.now() - 5 * 60 * 1000) // 5minutes ago
+      lastSeen: new Date(Date.now() - 5 * 60 * 10 0 0) // 5minutes ago
     }
   ]);
 
@@ -53,7 +53,7 @@ export default function Collaboration({ isDarkMode }: CollaborationProps): JSX.E
         isActive: Math.random() > 0.3, // Randomly update active status
         lastSeen: new Date()
       })));
-    }, 10000); // Update every10seconds
+    }, 1 0 0 0 0); // Update every1 0 seconds
 
     return () => {
       if (intervalRef.current) {
@@ -63,26 +63,26 @@ export default function Collaboration({ isDarkMode }: CollaborationProps): JSX.E
   }, []);
 
   const getStatusColor = (isActive: boolean) => {
-    return isActive ? 'bg-green-500' : 'bg-gray-400';
+    return isActive ? 'bg-green-5 0 0' : 'bg-gray-4 0 0';
   };
 
   const getConnectionStatusColor = () => {
     switch (connectionStatus) {
       case 'connected':
-        return 'text-green-600dark: text-green-400';
+        return 'text-green-60 0 dark: text-green-4 0 0';
       case 'connecting':
-        return 'text-yellow-600dark:text-yellow-400';
+        return 'text-yellow-60 0 dark:text-yellow-4 0 0';
       case 'disconnected':
-        return 'text-red-600dark:text-red-400';
+        return 'text-red-60 0 dark:text-red-4 0 0';
       default:
-        return 'text-gray-600dark:text-gray-400';
+        return 'text-gray-60 0 dark:text-gray-4 0 0';
     }
   };
 
   const formatLastSeen = (date: Date) => {
     const now = new Date();
     const diff = now.getTime() - date.getTime();
-    const minutes = Math.floor(diff / 60000);
+    const minutes = Math.floor(diff / 6 0 0 0 0);
     
     if (minutes < 1) return 'Just now';
     if (minutes < 60) return `${minutes}m ago`;
@@ -92,17 +92,17 @@ export default function Collaboration({ isDarkMode }: CollaborationProps): JSX.E
   };
 
   return (
-    <div className={`p-6rounded-lg border-2transition-all duration-300 ${
+    <div className={`p-6rounded-lg border-2transition-all duration-3 0 0 ${
       isDarkMode 
-        ? 'bg-gray-800border-gray-700hover:border-gray-600' 
-        : 'bg-white border-gray-200hover:border-gray-300'
+        ? 'bg-gray-80 0 border-gray-70 0 hover:border-gray-6 0 0' 
+        : 'bg-white border-gray-20 0 hover:border-gray-3 0 0'
     }`}
       <div className="flex items-center justify-between mb-6">
-        <h3className="text-xl font-semibold text-gray-900dark:text-white">
+        <h 3 className="text-xl font-semibold text-gray-90 0 dark:text-white">
           Team Collaboration
         </h3>
         <div className="flex items-center space-x-2">
-          <div className={`w-3h-3rounded-full ${getStatusColor(isOnline)}`}</p></div>
+          <div className={`w-3 h-3 rounded-full ${getStatusColor(isOnline)}`}</p></div>
           <span className={`text-sm font-medium ${getConnectionStatusColor()}`}
             {connectionStatus}
           </span>
@@ -113,38 +113,38 @@ export default function Collaboration({ isDarkMode }: CollaborationProps): JSX.E
         {users.map((user) => (
           <div
             key={user.id}
-            className="flex items-center space-x-3p-3rounded-lg hover:bg-gray-50dark:hover:bg-gray-700transition-colors"
+            className="flex items-center space-x-3p-3rounded-lg hover:bg-gray-5 0 dark:hover:bg-gray-70 0 transition-colors"
           >
             <div className="relative">
-              <div className="w-10h-10rounded-full bg-gray-200dark:bg-gray-600flex items-center justify-centertext-lg">
+              <div className="w-1 0 h-1 0 rounded-full bg-gray-20 0 dark:bg-gray-60 0 flex items-center justify-centertext-lg">
                 {user.avatar}
               </div>
               <div className={`absolute -bottom-1 -right-1w-4h-4rounded-full border-2 ${
-                isDarkMode ? 'border-gray-800' : 'border-white'
+                isDarkMode ? 'border-gray-8 0 0' : 'border-white'
               } ${getStatusColor(user.isActive)}`}</p></div>
             </div>
             
             <div className="flex-1min-w-0">
               <div className="flex items-center space-x-2">
-                <p className="text-sm font-medium text-gray-900dark:text-whitetruncate">
+                <p className="text-sm font-medium text-gray-90 0 dark:text-whitetruncate">
                   {user.name}
                 </p>
                 {user.isActive && (
-                  <span className="inline-flex items-center px-2py-0.5rounded-full text-xs font-medium bg-green-100dark: bg-green-900text-green-800dark:text-green-200">
+                  <span className="inline-flex items-center px-2py-0.5rounded-full text-xs font-medium bg-green-10 0 dark: bg-green-90 0 text-green-80 0 dark:text-green-2 0 0">
                     Active
                   </span>
                 )}
               </div>
-              <p className="text-xs text-gray-500dark:text-gray-400">
+              <p className="text-xs text-gray-50 0 dark:text-gray-4 0 0">
                 {user.isActive ? 'Online now' : `Last seen ${formatLastSeen(user.lastSeen)}`}
               </p>
             </div>
 
             <div className="flex items-center space-x-2">
-              <button className="p-1rounded-md hover:bg-gray-200dark:hover:bg-gray-600transition-colors">
+              <button className="p-1rounded-md hover:bg-gray-20 0 dark:hover:bg-gray-60 0 transition-colors">
                 💬
               </button>
-              <button className="p-1rounded-md hover:bg-gray-200dark:hover:bg-gray-600transition-colors">
+              <button className="p-1rounded-md hover:bg-gray-20 0 dark:hover:bg-gray-60 0 transition-colors">
                 📞
               </button>
             </div>
@@ -152,13 +152,13 @@ export default function Collaboration({ isDarkMode }: CollaborationProps): JSX.E
         ))}
       </div>
 
-      <div className="mt-6pt-4border-t border-gray-200dark:border-gray-600">
+      <div className="mt-6pt-4border-t border-gray-20 0 dark:border-gray-6 0 0">
         <div className="flex items-center justify-between">
-          <div className="text-sm text-gray-600dark:text-gray-400">
+          <div className="text-sm text-gray-60 0 dark:text-gray-4 0 0">
             <span className="font-medium">{users.filter(u =</u.isActive).length}> of{' '}
             <span className="font-medium">{users.length}</span> team members online
           </div>
-          <button className="text-sm text-blue-600dark: text-blue-400hover:text-blue-700dark:hover:text-blue-300font-medium">
+          <button className="text-sm text-blue-60 0 dark: text-blue-40 0 hover:text-blue-70 0 dark:hover:text-blue-30 0 font-medium">
             View all
           </button>
         </div>
@@ -166,10 +166,10 @@ export default function Collaboration({ isDarkMode }: CollaborationProps): JSX.E
 
       {/* Quick Actions */}
       <div className="mt-4grid grid-cols-2gap-2">
-        <button className="px-3py-2text-sm bg-blue-600hover:bg-blue-700text-white rounded-mdtransition-colors">
+        <button className="px-3py-2text-sm bg-blue-60 0 hover:bg-blue-70 0 text-white rounded-mdtransition-colors">
           Start Meeting
         </button>
-        <button className="px-3py-2text-sm border border-gray-300dark:border-gray-600hover:bg-gray-50dark:hover:bg-gray-700text-gray-700dark:text-gray-300rounded-mdtransition-colors">
+        <button className="px-3py-2text-sm border border-gray-30 0 dark:border-gray-60 0 hover:bg-gray-5 0 dark:hover:bg-gray-70 0 text-gray-70 0 dark:text-gray-30 0 rounded-mdtransition-colors">
           Share Screen
         </button>
       </div>

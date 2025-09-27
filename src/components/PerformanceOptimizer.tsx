@@ -51,10 +51,10 @@ export default function PerformanceOptimizer({
       if (usage) {
         setMemoryUsage(usage);
       }
-    }, 1000);
+    }, 10 0 0);
 
     // Update memory usage periodically
-    const interval = setInterval(updateMemoryUsage, 5000);
+    const interval = setInterval(updateMemoryUsage, 50 0 0);
     updateMemoryUsage(); // Initial check
 
     // Cleanup

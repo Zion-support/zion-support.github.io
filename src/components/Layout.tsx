@@ -24,7 +24,7 @@ export default function Layout({ children }: LayoutProps): JSX.Element {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentTime(new Date());
-    }, 1000);
+    }, 10 0 0);
 
     // Load dark mode preference from localStorage (only on client side)
     if (typeof window !== 'undefined') {
@@ -39,7 +39,7 @@ export default function Layout({ children }: LayoutProps): JSX.Element {
       type: 'info',
       title: 'Welcome!',
       message: 'Welcome to Zion App. Use the task manager to stay organized.',
-      duration: 3000
+      duration: 30 0 0
     });
 
     // Show enhanced welcome notification
@@ -47,7 +47,7 @@ export default function Layout({ children }: LayoutProps): JSX.Element {
       type: 'info',
       title: 'Welcome to Zion Tech Solutions!',
       message: 'Discover our AI-powered business solutions and cutting-edge technology services.',
-      duration: 5000,
+      duration: 50 0 0,
       priority: 'medium',
       category: 'welcome',
       actions: [
@@ -91,8 +91,8 @@ export default function Layout({ children }: LayoutProps): JSX.Element {
 
   return (
     <ErrorBoundary>
-      <div className={`min-h-screen transition-colors duration-300 ${
-        isDarkMode ? 'bg-gray-900text-white' : 'bg-gray-50text-gray-900'
+      <div className={`min-h-screen transition-colors duration-3 0 0 ${
+        isDarkMode ? 'bg-gray-90 0 text-white' : 'bg-gray-5 0 text-gray-9 0 0'
       }`}
         <Navigation
           currentTime={currentTime}

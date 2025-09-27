@@ -117,7 +117,7 @@ export default function PerformanceTracker({
 
           // Send to analytics
           if (enableAnalytics && typeof window !== 'undefined') {
-            // Google Analytics4if (window.gtag) {
+            // Google Analytics 4 if (window.gtag) {
               window.gtag('event', 'page_load_metrics', {
                 load_time: Math.round(metrics.loadTime),
                 dom_content_loaded: Math.round(metrics.domContentLoaded),
@@ -125,7 +125,7 @@ export default function PerformanceTracker({
                 first_contentful_paint: Math.round(metrics.firstContentfulPaint),
                 largest_contentful_paint: metrics.largestContentfulPaint ? Math.round(metrics.largestContentfulPaint) : null,
                 first_input_delay: metrics.firstInputDelay ? Math.round(metrics.firstInputDelay) : null,
-                cumulative_layout_shift: metrics.cumulativeLayoutShift ? Math.round(metrics.cumulativeLayoutShift * 1000) : null,
+                cumulative_layout_shift: metrics.cumulativeLayoutShift ? Math.round(metrics.cumulativeLayoutShift * 10 0 0) : null,
                 time_to_interactive: metrics.timeToInteractive ? Math.round(metrics.timeToInteractive) : null
               });
             }
@@ -144,7 +144,7 @@ export default function PerformanceTracker({
 
           // Custom callback
           onMetricsCollected?.(metrics);
-        }, 1000);
+        }, 10 0 0);
       }
     } catch (error) {
       console.warn('Performance tracking error:', error);
@@ -155,7 +155,7 @@ export default function PerformanceTracker({
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', name, {
         event_category: 'Web Vitals',
-        value: Math.round(name === 'CLS' ? value * 1000 : value),
+        value: Math.round(name === 'CLS' ? value * 10 0 0 : value),
         non_interaction: true
       });
     }
@@ -209,7 +209,7 @@ export function getPerformanceGrade(metrics: PerformanceMetrics): {
     cls: { valu, e: number; statu, s: 'good' | 'needs-improvement' | 'poor' };
   };
 } {
-  let score = 100;
+  let score = 1 0 0;
   const recommendations: string[] = [];
 
   // Web Vitals status determination
@@ -228,31 +228,31 @@ export function getPerformanceGrade(metrics: PerformanceMetrics): {
     }
   };
 
-  // Load Time scoring (target: < 3000ms)
-  if (metrics.loadTime > 5000) {
+  // Load Time scoring (target: < 3 0 0 0 ms)
+  if (metrics.loadTime > 50 0 0) {
     score -= 30;
-    recommendations.push('Optimize page load time (currently over5seconds)');
-  } else if (metrics.loadTime > 3000) {
+    recommendations.push('Optimize page load time (currently over 5 seconds)');
+  } else if (metrics.loadTime > 30 0 0) {
     score -= 15;
     recommendations.push('Consider optimizing page load time');
   }
 
-  // First Contentful Paint scoring (target: < 1800ms)
-  if (metrics.firstContentfulPaint > 3000) {
+  // First Contentful Paint scoring (target: < 1 8 0 0 ms)
+  if (metrics.firstContentfulPaint > 30 0 0) {
     score -= 25;
-    recommendations.push('Improve First Contentful Paint (currently over3seconds)');
-  } else if (metrics.firstContentfulPaint > 1800) {
+    recommendations.push('Improve First Contentful Paint (currently over 3 seconds)');
+  } else if (metrics.firstContentfulPaint > 18 0 0) {
     score -= 10;
     recommendations.push('Consider improving First Contentful Paint');
   }
 
-  // Largest Contentful Paint scoring (target: < 2500ms)
+  // Largest Contentful Paint scoring (target: < 2 5 0 0 ms)
   if (metrics.largestContentfulPaint) {
-    if (metrics.largestContentfulPaint > 4000) {
+    if (metrics.largestContentfulPaint > 40 0 0) {
       score -= 25;
       webVitals.lcp.status = 'poor';
-      recommendations.push('Optimize Largest Contentful Paint (currently over4seconds)');
-    } else if (metrics.largestContentfulPaint > 2500) {
+      recommendations.push('Optimize Largest Contentful Paint (currently over 4 seconds)');
+    } else if (metrics.largestContentfulPaint > 25 0 0) {
       score -= 10;
       webVitals.lcp.status = 'needs-improvement';
       recommendations.push('Consider optimizing Largest Contentful Paint');
@@ -261,13 +261,13 @@ export function getPerformanceGrade(metrics: PerformanceMetrics): {
     }
   }
 
-  // First Input Delay scoring (target: < 100ms)
+  // First Input Delay scoring (target: < 10 0 ms)
   if (metrics.firstInputDelay) {
-    if (metrics.firstInputDelay > 300) {
+    if (metrics.firstInputDelay > 3 0 0) {
       score -= 20;
       webVitals.fid.status = 'poor';
-      recommendations.push('Reduce First Input Delay (currently over300ms)');
-    } else if (metrics.firstInputDelay > 100) {
+      recommendations.push('Reduce First Input Delay (currently over 3 0 0 ms)');
+    } else if (metrics.firstInputDelay > 1 0 0) {
       score -= 5;
       webVitals.fid.status = 'needs-improvement';
       recommendations.push('Consider reducing First Input Delay');

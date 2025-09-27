@@ -93,7 +93,7 @@ const ComprehensiveSecurityDashboard: React.FC = () => {
   const [vulnerabilities, setVulnerabilities] = useState<Vulnerability[]>([]);
   const [policies, setPolicies] = useState<SecurityPolicy[]>([]);
   const [isMonitoring, setIsMonitoring] = useState(false);
-  const [selectedTimeRange, setSelectedTimeRange] = useState('24h');
+  const [selectedTimeRange, setSelectedTimeRange] = useState('2 4 h');
   const [activeTab, setActiveTab] = useState('overview');
 
   const generateMockData = useCallback(() => {
@@ -106,12 +106,12 @@ const ComprehensiveSecurityDashboard: React.FC = () => {
         type: 'login_attempt',
         severity: 'high',
         description: 'Multiple failed login attempts from suspicious IP',
-        source: '192.168.1.100',
+        source: '1 9 2.1 6 8.1.1 0 0',
         target: 'admin@company.com',
-        timestamp: new Date(now.getTime() - 1000 * 60 * 15),
+        timestamp: new Date(now.getTime() - 10 0 0 * 60 * 15),
         resolved: false,
-        ipAddress: '192.168.1.100',
-        userAgent: 'Mozilla/5.0 (Windows NT10.0; Win64; x64) AppleWebKit/537.36',
+        ipAddress: '1 9 2.1 6 8.1.1 0 0',
+        userAgent: 'Mozilla/5.0 (Windows NT 1 0.0; Win 6 4; x 6 4) AppleWebKit/5 3 7.36',
         location: 'Unknown'
       },
       {
@@ -121,7 +121,7 @@ const ComprehensiveSecurityDashboard: React.FC = () => {
         description: 'Malware detected in uploaded file',
         source: 'File Upload System',
         target: 'Web Server',
-        timestamp: new Date(now.getTime() - 1000 * 60 * 30),
+        timestamp: new Date(now.getTime() - 10 0 0 * 60 * 30),
         resolved: true,
         ipAddress: '10.0.0.5',
         userAgent: 'File Upload Client',
@@ -134,10 +134,10 @@ const ComprehensiveSecurityDashboard: React.FC = () => {
         description: 'Unauthorized access attempt to restricted resource',
         source: 'External User',
         target: '/admin/dashboard',
-        timestamp: new Date(now.getTime() - 1000 * 60 * 45),
+        timestamp: new Date(now.getTime() - 10 0 0 * 60 * 45),
         resolved: false,
-        ipAddress: '203.0.113.42',
-        userAgent: 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36',
+        ipAddress: '2 0 3.0.1 1 3.42',
+        userAgent: 'Mozilla/5.0 (X 1 1; Linux x8 6 _ 6 4) AppleWebKit/5 3 7.36',
         location: 'United States'
       },
       {
@@ -147,7 +147,7 @@ const ComprehensiveSecurityDashboard: React.FC = () => {
         description: 'DDoS attack detected on main server',
         source: 'Multiple IPs',
         target: 'Web Server',
-        timestamp: new Date(now.getTime() - 1000 * 60 * 60),
+        timestamp: new Date(now.getTime() - 10 0 0 * 60 * 60),
         resolved: true,
         ipAddress: 'Multiple',
         userAgent: 'DDoS Botnet',
@@ -159,12 +159,12 @@ const ComprehensiveSecurityDashboard: React.FC = () => {
 
     // Generate metrics
     const newMetrics: SecurityMetrics = {
-      totalThreats: 1247,
-      threatsBlocked: 1189,
-      threatsResolved: 1156,
+      totalThreats: 12 4 7,
+      threatsBlocked: 11 8 9,
+      threatsResolved: 11 5 6,
       activeThreats: 33,
       securityScore: 87,
-      lastScan: new Date(now.getTime() - 1000 * 60 * 30),
+      lastScan: new Date(now.getTime() - 10 0 0 * 60 * 30),
       vulnerabilities: 12,
       patchesApplied: 8
     };
@@ -179,20 +179,20 @@ const ComprehensiveSecurityDashboard: React.FC = () => {
         severity: 'high',
         description: 'Login form vulnerable to SQL injection attacks',
         affectedSystems: ['Web Server', 'Database'],
-        discoveredAt: new Date(now.getTime() - 1000 * 60 * 60 * 2),
+        discoveredAt: new Date(now.getTime() - 10 0 0 * 60 * 60 * 2),
         patched: false,
-        cveId: 'CVE-2024-1234',
+        cveId: 'CVE-20 2 4-12 3 4',
         cvssScore: 8.2
       },
       {
         id: '2',
         name: 'Outdated SSL Certificate',
         severity: 'medium',
-        description: 'SSL certificate expired30days ago',
+        description: 'SSL certificate expired3 0 days ago',
         affectedSystems: ['Web Server'],
-        discoveredAt: new Date(now.getTime() - 1000 * 60 * 60 * 24),
+        discoveredAt: new Date(now.getTime() - 10 0 0 * 60 * 60 * 24),
         patched: true,
-        cveId: 'CVE-2024-5678',
+        cveId: 'CVE-20 2 4-56 7 8',
         cvssScore: 5.4
       },
       {
@@ -201,7 +201,7 @@ const ComprehensiveSecurityDashboard: React.FC = () => {
         severity: 'low',
         description: 'Password policy allows weak passwords',
         affectedSystems: ['User Management System'],
-        discoveredAt: new Date(now.getTime() - 1000 * 60 * 60 * 48),
+        discoveredAt: new Date(now.getTime() - 10 0 0 * 60 * 60 * 48),
         patched: false,
         cvssScore: 3.1
       }
@@ -216,7 +216,7 @@ const ComprehensiveSecurityDashboard: React.FC = () => {
         name: 'Password Policy',
         description: 'Enforce strong password requirements',
         status: 'active',
-        lastUpdated: new Date(now.getTime() - 1000 * 60 * 60 * 24),
+        lastUpdated: new Date(now.getTime() - 10 0 0 * 60 * 60 * 24),
         compliance: 95
       },
       {
@@ -224,7 +224,7 @@ const ComprehensiveSecurityDashboard: React.FC = () => {
         name: 'Data Encryption',
         description: 'Encrypt all sensitive data at rest and in transit',
         status: 'active',
-        lastUpdated: new Date(now.getTime() - 1000 * 60 * 60 * 12),
+        lastUpdated: new Date(now.getTime() - 10 0 0 * 60 * 60 * 12),
         compliance: 88
       },
       {
@@ -232,7 +232,7 @@ const ComprehensiveSecurityDashboard: React.FC = () => {
         name: 'Access Control',
         description: 'Implement role-based access control',
         status: 'pending',
-        lastUpdated: new Date(now.getTime() - 1000 * 60 * 60 * 6),
+        lastUpdated: new Date(now.getTime() - 10 0 0 * 60 * 60 * 6),
         compliance: 72
       }
     ];
@@ -244,17 +244,17 @@ const ComprehensiveSecurityDashboard: React.FC = () => {
     generateMockData();
     setIsMonitoring(true);
 
-    const interval = setInterval(generateMockData, 15000);
+    const interval = setInterval(generateMockData, 1 5 0 0 0);
     return () => clearInterval(interval);
   }, [generateMockData]);
 
   const getSeverityColor = (severity: string): string => {
     switch (severity) {
-      case 'critical': return 'bg-red-100text-red-800border-red-200';
-      case 'high': return 'bg-orange-100text-orange-800border-orange-200';
-      case 'medium': return 'bg-yellow-100text-yellow-800border-yellow-200';
-      case 'low': return 'bg-blue-100text-blue-800border-blue-200';
-      default: return 'bg-gray-100 text-gray-800border-gray-200';
+      case 'critical': return 'bg-red-10 0 text-red-80 0 border-red-2 0 0';
+      case 'high': return 'bg-orange-10 0 text-orange-80 0 border-orange-2 0 0';
+      case 'medium': return 'bg-yellow-10 0 text-yellow-80 0 border-yellow-2 0 0';
+      case 'low': return 'bg-blue-10 0 text-blue-80 0 border-blue-2 0 0';
+      default: return 'bg-gray-1 0 0 text-gray-80 0 border-gray-2 0 0';
     }
   };
 
@@ -271,15 +271,15 @@ const ComprehensiveSecurityDashboard: React.FC = () => {
   };
 
   const getSecurityScoreColor = (score: number): string => {
-    if (score >= 90) return 'text-green-600';
-    if (score >= 70) return 'text-yellow-600';
-    return 'text-red-600';
+    if (score >= 90) return 'text-green-6 0 0';
+    if (score >= 70) return 'text-yellow-6 0 0';
+    return 'text-red-6 0 0';
   };
 
   const pieData = [
-    { name: 'Blocked', value: metrics.threatsBlocked, color: '#10B981' },
-    { name: 'Resolved', value: metrics.threatsResolved, color: '#3B82F6' },
-    { name: 'Active', value: metrics.activeThreats, color: '#EF4444' }
+    { name: 'Blocked', value: metrics.threatsBlocked, color: '#1 0 B9 8 1' },
+    { name: 'Resolved', value: metrics.threatsResolved, color: '#3B8 2 F6' },
+    { name: 'Active', value: metrics.activeThreats, color: '#EF 4 4 4 4' }
   ];
 
   const tabs = [
@@ -296,25 +296,25 @@ const ComprehensiveSecurityDashboard: React.FC = () => {
         <CardHeader>
           <CardTitle className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
-              <Shield className="h-6w-6text-red-600" />
+              <Shield className="h-6w-6text-red-6 0 0" />
               <span>Comprehensive Security Dashboard</span>
             </div>
             <div className="flex items-center space-x-4">
               <div className="flex items-center space-x-2">
-                <div className={`w-3h-3rounded-full ${isMonitoring ? 'bg-green-500' : 'bg-gray-400'}`}</div>
-                <span className="text-sm text-gray-600">
+                <div className={`w-3 h-3 rounded-full ${isMonitoring ? 'bg-green-5 0 0' : 'bg-gray-4 0 0'}`}</div>
+                <span className="text-sm text-gray-6 0 0">
                   {isMonitoring ? 'Monitoring' : 'Stopped'}
                 </span>
               </div>
               <select
                 value={selectedTimeRange}
                 onChange={(e) => setSelectedTimeRange(e.target.value)}
-                className="px-3py-1border border-gray-300rounded-md text-sm"
+                className="px-3py-1border border-gray-30 0 rounded-md text-sm"
               >
                 <option value="1h">Last Hour</option>
-                <option value="24h">Last24Hours</option>
-                <option value="7d">Last7Days</option>
-                <option value="30d">Last30Days</option>
+                <option value="2 4 h">Last2 4 Hours</option>
+                <option value="7d">Last 7 Days</option>
+                <option value="3 0 d">Last3 0 Days</option>
               </select>
             </div>
           </CardTitle>
@@ -324,15 +324,15 @@ const ComprehensiveSecurityDashboard: React.FC = () => {
         </CardHeader>
         <CardContent>
           {/* Tab Navigation */}
-          <div className="flex space-x-1mb-6border-b border-gray-200">
+          <div className="flex space-x-1mb-6border-b border-gray-2 0 0">
             {tabs.map((tab) => (
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
                 className={`flex items-center space-x-2px-4 py-2text-sm font-medium border-b-2transition-colors ${
                   activeTab === tab.id
-                    ? 'border-red-500text-red-600'
-                    : 'border-transparent text-gray-500hover:text-gray-700 hover:border-gray-300'
+                    ? 'border-red-50 0 text-red-6 0 0'
+                    : 'border-transparent text-gray-50 0 hover:text-gray-7 0 0 hover:border-gray-3 0 0'
                 }`}
               >
                 <tab.icon className="h-4w-4" />
@@ -350,23 +350,23 @@ const ComprehensiveSecurityDashboard: React.FC = () => {
                   <div className={`text-4xl font-bold ${getSecurityScoreColor(metrics.securityScore)}`}
                     {metrics.securityScore}
                   </div>
-                  <div className="text-sm text-gray-600">Security Score</div>
-                  <div className="text-xs text-gray-500mt-1">Out of100</div>
+                  <div className="text-sm text-gray-6 0 0">Security Score</div>
+                  <div className="text-xs text-gray-50 0 mt-1">Out of1 0 0</div>
                 </div>
                 <div className="p-6border rounded-lg text-center">
-                  <div className="text-4xl font-bold text-green-600">{metrics.threatsBlocked}</div>
-                  <div className="text-sm text-gray-600">Threats Blocked</div>
-                  <div className="text-xs text-gray-500mt-1">Last24h</div>
+                  <div className="text-4xl font-bold text-green-6 0 0">{metrics.threatsBlocked}</div>
+                  <div className="text-sm text-gray-6 0 0">Threats Blocked</div>
+                  <div className="text-xs text-gray-50 0 mt-1">Last2 4 h</div>
                 </div>
                 <div className="p-6border rounded-lg text-center">
-                  <div className="text-4xl font-bold text-blue-600">{metrics.vulnerabilities}</div>
-                  <div className="text-sm text-gray-600">Vulnerabilities</div>
-                  <div className="text-xs text-gray-500mt-1">Found</div>
+                  <div className="text-4xl font-bold text-blue-6 0 0">{metrics.vulnerabilities}</div>
+                  <div className="text-sm text-gray-6 0 0">Vulnerabilities</div>
+                  <div className="text-xs text-gray-50 0 mt-1">Found</div>
                 </div>
                 <div className="p-6border rounded-lg text-center">
-                  <div className="text-4xl font-bold text-purple-600">{metrics.patchesApplied}</div>
-                  <div className="text-sm text-gray-600">Patches Applied</div>
-                  <div className="text-xs text-gray-500mt-1">This Week</div>
+                  <div className="text-4xl font-bold text-purple-6 0 0">{metrics.patchesApplied}</div>
+                  <div className="text-sm text-gray-6 0 0">Patches Applied</div>
+                  <div className="text-xs text-gray-50 0 mt-1">This Week</div>
                 </div>
               </div>
 
@@ -377,7 +377,7 @@ const ComprehensiveSecurityDashboard: React.FC = () => {
                     <CardTitle className="text-lg">Threat Distribution</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <ResponsiveContainer width="100%" height={200}>
+                    <ResponsiveContainer width="1 0 0%" height={2 0 0}>
                       <PieChart>
                         <Pie
                           data={pieData}
@@ -413,7 +413,7 @@ const ComprehensiveSecurityDashboard: React.FC = () => {
                             <span className={`px-2py-1text-xs font-medium rounded-full border ${getSeverityColor(event.severity)}`}
                               {event.severity.toUpperCase()}
                             </span>
-                            <span className="text-xs text-gray-500">
+                            <span className="text-xs text-gray-5 0 0">
                               {event.timestamp.toLocaleTimeString()}
                             </span>
                           </div>
@@ -430,12 +430,12 @@ const ComprehensiveSecurityDashboard: React.FC = () => {
           {activeTab === 'events' && (
             <div className="space-y-6">
               <div className="flex justify-between items-center">
-                <h3className="text-lg font-semibold">Security Events</h3>
+                <h 3 className="text-lg font-semibold">Security Events</h3>
                 <div className="flex space-x-2">
-                  <button className="px-3py-1text-sm bg-red-600text-white rounded hover:bg-red-700">
+                  <button className="px-3py-1text-sm bg-red-60 0 text-white rounded hover:bg-red-7 0 0">
                     Block All Threats
                   </button>
-                  <button className="px-3py-1text-sm border border-gray-300rounded hover:bg-gray-50">
+                  <button className="px-3py-1text-sm border border-gray-30 0 rounded hover:bg-gray-50">
                     Export
                   </button>
                 </div>
@@ -447,16 +447,16 @@ const ComprehensiveSecurityDashboard: React.FC = () => {
                     <div className="flex items-center justify-between mb-3">
                       <div className="flex items-center space-x-3">
                         <div className={`p-2rounded-full ${
-                          event.severity === 'critical' ? 'bg-red-100' :
-                          event.severity === 'high' ? 'bg-orange-100' :
-                          event.severity === 'medium' ? 'bg-yellow-100' :
-                          'bg-blue-100'
+                          event.severity === 'critical' ? 'bg-red-1 0 0' :
+                          event.severity === 'high' ? 'bg-orange-1 0 0' :
+                          event.severity === 'medium' ? 'bg-yellow-1 0 0' :
+                          'bg-blue-1 0 0'
                         }`}
                           {getTypeIcon(event.type)}
                         </div>
                         <div>
                           <div className="font-medium">{event.description}</div>
-                          <div className="text-sm text-gray-500">
+                          <div className="text-sm text-gray-5 0 0">
                             {event.source} → {event.target}
                           </div>
                         </div>
@@ -466,13 +466,13 @@ const ComprehensiveSecurityDashboard: React.FC = () => {
                           {event.severity.toUpperCase()}
                         </span>
                         {event.resolved ? (
-                          <CheckCircle className="h-4w-4text-green-600" />
+                          <CheckCircle className="h-4w-4text-green-6 0 0" />
                         ) : (
-                          <Clock className="h-4w-4text-yellow-600" />
+                          <Clock className="h-4w-4text-yellow-6 0 0" />
                         )}
                       </div>
                     </div>
-                    <div className="grid grid-cols-2md:grid-cols-4gap-4text-sm text-gray-600">
+                    <div className="grid grid-cols-2md:grid-cols-4gap-4text-sm text-gray-6 0 0">
                       <div>
                         <span className="font-medium">IP Address:</span> {event.ipAddress}
                       </div>
@@ -496,12 +496,12 @@ const ComprehensiveSecurityDashboard: React.FC = () => {
           {activeTab === 'vulnerabilities' && (
             <div className="space-y-6">
               <div className="flex justify-between items-center">
-                <h3className="text-lg font-semibold">Security Vulnerabilities</h3>
+                <h 3 className="text-lg font-semibold">Security Vulnerabilities</h3>
                 <div className="flex space-x-2">
-                  <button className="px-3py-1text-sm bg-blue-600text-white rounded hover:bg-blue-700">
+                  <button className="px-3py-1text-sm bg-blue-60 0 text-white rounded hover:bg-blue-7 0 0">
                     Scan Now
                   </button>
-                  <button className="px-3py-1text-sm border border-gray-300rounded hover:bg-gray-50">
+                  <button className="px-3py-1text-sm border border-gray-30 0 rounded hover:bg-gray-50">
                     View All
                   </button>
                 </div>
@@ -513,20 +513,20 @@ const ComprehensiveSecurityDashboard: React.FC = () => {
                     <div className="flex items-center justify-between mb-3">
                       <div>
                         <div className="font-medium">{vuln.name}</div>
-                        <div className="text-sm text-gray-500">{vuln.description}</div>
+                        <div className="text-sm text-gray-5 0 0">{vuln.description}</div>
                       </div>
                       <div className="flex items-center space-x-2">
                         <span className={`px-2py-1text-xs font-medium rounded-full border ${getSeverityColor(vuln.severity)}`}
                           {vuln.severity.toUpperCase()}
                         </span>
                         {vuln.patched ? (
-                          <CheckCircle className="h-4w-4text-green-600" />
+                          <CheckCircle className="h-4w-4text-green-6 0 0" />
                         ) : (
-                          <XCircle className="h-4w-4text-red-600" />
+                          <XCircle className="h-4w-4text-red-6 0 0" />
                         )}
                       </div>
                     </div>
-                    <div className="grid grid-cols-2md:grid-cols-4gap-4text-sm text-gray-600">
+                    <div className="grid grid-cols-2md:grid-cols-4gap-4text-sm text-gray-6 0 0">
                       <div>
                         <span className="font-medium">CVSS Score:</span> {vuln.cvssScore}
                       </div>
@@ -544,7 +544,7 @@ const ComprehensiveSecurityDashboard: React.FC = () => {
                       <span className="font-medium text-sm">Affected Systems:</span>
                       <div className="flex flex-wrap gap-1mt-1">
                         {vuln.affectedSystems.map((system, index) => (
-                          <span key={index} className="px-2py-1bg-gray-100 text-gray-700text-xs rounded">
+                          <span key={index} className="px-2py-1bg-gray-1 0 0 text-gray-70 0 text-xs rounded">
                             {system}
                           </span>
                         ))}
@@ -560,8 +560,8 @@ const ComprehensiveSecurityDashboard: React.FC = () => {
           {activeTab === 'policies' && (
             <div className="space-y-6">
               <div className="flex justify-between items-center">
-                <h3className="text-lg font-semibold">Security Policies</h3>
-                <button className="px-3py-1text-sm bg-green-600text-white rounded hover:bg-green-700">
+                <h 3 className="text-lg font-semibold">Security Policies</h3>
+                <button className="px-3py-1text-sm bg-green-60 0 text-white rounded hover:bg-green-7 0 0">
                   Add Policy
                 </button>
               </div>
@@ -572,28 +572,28 @@ const ComprehensiveSecurityDashboard: React.FC = () => {
                     <div className="flex items-center justify-between mb-3">
                       <div>
                         <div className="font-medium">{policy.name}</div>
-                        <div className="text-sm text-gray-500">{policy.description}</div>
+                        <div className="text-sm text-gray-5 0 0">{policy.description}</div>
                       </div>
                       <div className="flex items-center space-x-2">
                         <span className={`px-2py-1text-xs font-medium rounded-full ${
-                          policy.status === 'active' ? 'bg-green-100text-green-800' :
-                          policy.status === 'pending' ? 'bg-yellow-100text-yellow-800' :
-                          'bg-gray-100 text-gray-800'
+                          policy.status === 'active' ? 'bg-green-10 0 text-green-8 0 0' :
+                          policy.status === 'pending' ? 'bg-yellow-10 0 text-yellow-8 0 0' :
+                          'bg-gray-1 0 0 text-gray-8 0 0'
                         }`}
                           {policy.status.toUpperCase()}
                         </span>
-                        <div className="text-sm text-gray-600">
+                        <div className="text-sm text-gray-6 0 0">
                           {policy.compliance}% compliance
                         </div>
                       </div>
                     </div>
                     <div className="flex items-center justify-between">
-                      <div className="text-sm text-gray-500">
+                      <div className="text-sm text-gray-5 0 0">
                         Last updated: {policy.lastUpdated.toLocaleDateString()}
                       </div>
-                      <div className="w-32bg-gray-200rounded-full h-2">
+                      <div className="w-3 2 bg-gray-20 0 rounded-full h-2">
                         <div 
-                          className="bg-blue-600h-2rounded-full" 
+                          className="bg-blue-60 0 h-2rounded-full" 
                           style={{ width: `${policy.compliance}%` }}
                         ></div>
                       </div>
@@ -609,17 +609,17 @@ const ComprehensiveSecurityDashboard: React.FC = () => {
             <div className="space-y-6">
               <div className="grid grid-cols-1md:grid-cols-3gap-4">
                 <div className="p-4border rounded-lg text-center">
-                  <CheckCircle className="h-8w-8text-green-600mx-auto mb-2" />
-                  <div className="text-2xl font-bold text-green-600">95%</div>
-                  <div className="text-sm text-gray-600">Overall Compliance</div>
+                  <CheckCircle className="h-8w-8text-green-60 0 mx-auto mb-2" />
+                  <div className="text-2xl font-bold text-green-6 0 0">95%</div>
+                  <div className="text-sm text-gray-6 0 0">Overall Compliance</div>
                 </div>
                 <div className="p-4border rounded-lg text-center">
-                  <div className="text-2xl font-bold text-blue-600">12</div>
-                  <div className="text-sm text-gray-600">Standards Met</div>
+                  <div className="text-2xl font-bold text-blue-6 0 0">12</div>
+                  <div className="text-sm text-gray-6 0 0">Standards Met</div>
                 </div>
                 <div className="p-4border rounded-lg text-center">
-                  <div className="text-2xl font-bold text-yellow-600">2</div>
-                  <div className="text-sm text-gray-600">Needs Attention</div>
+                  <div className="text-2xl font-bold text-yellow-6 0 0">2</div>
+                  <div className="text-sm text-gray-6 0 0">Needs Attention</div>
                 </div>
               </div>
 
@@ -631,32 +631,32 @@ const ComprehensiveSecurityDashboard: React.FC = () => {
                   <div className="space-y-4">
                     <div className="flex items-center justify-between p-3border rounded-lg">
                       <div>
-                        <div className="font-medium">ISO27001</div>
-                        <div className="text-sm text-gray-500">Information Security Management</div>
+                        <div className="font-medium">ISO2 7 0 0 1</div>
+                        <div className="text-sm text-gray-5 0 0">Information Security Management</div>
                       </div>
                       <div className="flex items-center space-x-2">
-                        <CheckCircle className="h-5w-5text-green-600" />
-                        <span className="text-sm text-green-600">Compliant</span>
+                        <CheckCircle className="h-5w-5text-green-6 0 0" />
+                        <span className="text-sm text-green-6 0 0">Compliant</span>
                       </div>
                     </div>
                     <div className="flex items-center justify-between p-3border rounded-lg">
                       <div>
                         <div className="font-medium">GDPR</div>
-                        <div className="text-sm text-gray-500">General Data Protection Regulation</div>
+                        <div className="text-sm text-gray-5 0 0">General Data Protection Regulation</div>
                       </div>
                       <div className="flex items-center space-x-2">
-                        <CheckCircle className="h-5w-5text-green-600" />
-                        <span className="text-sm text-green-600">Compliant</span>
+                        <CheckCircle className="h-5w-5text-green-6 0 0" />
+                        <span className="text-sm text-green-6 0 0">Compliant</span>
                       </div>
                     </div>
                     <div className="flex items-center justify-between p-3border rounded-lg">
                       <div>
                         <div className="font-medium">SOC2</div>
-                        <div className="text-sm text-gray-500">Service Organization Control</div>
+                        <div className="text-sm text-gray-5 0 0">Service Organization Control</div>
                       </div>
                       <div className="flex items-center space-x-2">
-                        <Clock className="h-5w-5text-yellow-600" />
-                        <span className="text-sm text-yellow-600">In Progress</span>
+                        <Clock className="h-5w-5text-yellow-6 0 0" />
+                        <span className="text-sm text-yellow-6 0 0">In Progress</span>
                       </div>
                     </div>
                   </div>

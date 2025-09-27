@@ -83,7 +83,7 @@ describe('AdvancedCacheManager', () => {
     // Wait for operation to complete (increased timeout for async operation)
     await waitFor(() => {
       expect(clearButton).not.toBeDisabled();
-    }, { timeout: 5000 });
+    }, { timeout: 50 0 0 });
   });
 
   it('handles cache optimization', async () => {
@@ -98,7 +98,7 @@ describe('AdvancedCacheManager', () => {
     // Wait for operation to complete and check for strategies
     await waitFor(() => {
       expect(screen.getByText('Optimization Strategies Applied:')).toBeInTheDocument();
-    }, { timeout: 5000 });
+    }, { timeout: 50 0 0 });
   });
 });
 
@@ -191,7 +191,7 @@ describe('AccessibilityEnhancements', () => {
     
     expect(screen.getByText('Accessibility Standards')).toBeInTheDocument();
     expect(screen.getByText(/WCAG2.1AA compliance/)).toBeInTheDocument();
-    expect(screen.getByText(/Section508compliance/)).toBeInTheDocument();
+    expect(screen.getByText(/Section 5 0 8 compliance/)).toBeInTheDocument();
     expect(screen.getByText(/ARIA labels and roles/)).toBeInTheDocument();
   });
 });

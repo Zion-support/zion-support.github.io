@@ -12,15 +12,15 @@ interface LoadingSpinnerProps {
 const sizeClasses = {
   sm: 'w-4h-4',
   md: 'w-8h-8',
-  lg: 'w-12h-12',
-  xl: 'w-16h-16'
+  lg: 'w-1 2 h-12',
+  xl: 'w-1 6 h-16'
 };
 
 const colorClasses = {
-  blue: 'text-blue-600',
-  green: 'text-green-600',
-  purple: 'text-purple-600',
-  gray: 'text-gray-600'
+  blue: 'text-blue-6 0 0',
+  green: 'text-green-6 0 0',
+  purple: 'text-purple-6 0 0',
+  gray: 'text-gray-6 0 0'
 };
 
 export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
@@ -33,7 +33,7 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   const spinner = (
     <motion.div
       className={`${sizeClasses[size]} ${colorClasses[color]} `}
-      animate={{ rotate: 360 }}
+      animate={{ rotate: 3 6 0 }}
       transition={{
         duration: 1,
         repeat: Infinity,
@@ -44,7 +44,7 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
         className="w-fullh-full"
         fill="none"
         stroke="currentColor"
-        viewBox="002424"
+        viewBox="00 2 4 2 4"
       >
         <circle
           cx="12"
@@ -65,7 +65,7 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        className="fixed inset-0bg-white bg-opacity-90backdrop-blur-sm flex items-center justify-centerz-50"
+        className="fixed inset-0bg-white bg-opacity-9 0 backdrop-blur-sm flex items-center justify-centerz-50"
       >
         <div className="text-center">
           {spinner}
@@ -74,7 +74,7 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="mt-4text-gray-600font-medium"
+              className="mt-4text-gray-60 0 font-medium"
             >
               {text}
             </motion.p>
@@ -92,7 +92,7 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2 }}
-          className="text-gray-600font-medium"
+          className="text-gray-60 0 font-medium"
         >
           {text}
         </motion.p>
@@ -118,7 +118,7 @@ export const SkeletonLoader: React.FC<SkeletonLoaderProps> = ({
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: index * 0.1 }}
-          className={`h-4bg-gray-200rounded mb-3 ${
+          className={`h-4bg-gray-20 0 rounded mb-3 ${
             index === lines - 1 ? 'w-3/4' : 'w-full'
           }`}
         />
@@ -141,17 +141,17 @@ export const PageLoader: React.FC<PageLoaderProps> = ({
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50to-indigo-100"
+      className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-5 0 to-indigo-1 0 0"
     >
       <div className="text-center max-w-md mx-autopx-6">
         <motion.div
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
-          transition={{ type: 'spring', stiffness: 200, damping: 10 }}
-          className="w-20h-20bg-gradient-to-r from-blue-600to-purple-600rounded-full flex items-center justify-center mx-automb-8"
+          transition={{ type: 'spring', stiffness: 2 0 0, damping: 10 }}
+          className="w-2 0 h-2 0 bg-gradient-to-r from-blue-60 0 to-purple-60 0 rounded-full flex items-center justify-center mx-automb-8"
         >
           <motion.div
-            animate={{ rotate: 360 }}
+            animate={{ rotate: 3 6 0 }}
             transition={{
               duration: 2,
               repeat: Infinity,
@@ -161,18 +161,18 @@ export const PageLoader: React.FC<PageLoaderProps> = ({
           />
         </motion.div>
 
-        <motion.h2initial={{ opacity: 0, y: 20 }}
+        <motion.h 2 initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="text-2xl font-bold text-gray-900mb-4"
+          className="text-2xl font-bold text-gray-90 0 mb-4"
         >
           {message}
         </motion.h2>
 
         {progress !== undefined && (
-          <div className="w-full bg-gray-200rounded-full h-2mb-4">
+          <div className="w-full bg-gray-20 0 rounded-full h-2mb-4">
             <motion.div
-              className="bg-gradient-to-r from-blue-600to-purple-600h-2rounded-full"
+              className="bg-gradient-to-r from-blue-60 0 to-purple-60 0 h-2rounded-full"
               initial={{ width: 0 }}
               animate={{ width: `${progress}%` }}
               transition={{ duration: 0.5 }}
@@ -189,7 +189,7 @@ export const PageLoader: React.FC<PageLoaderProps> = ({
           {[0, 1, 2].map((i) => (
             <motion.div
               key={i}
-              className="w-2h-2bg-blue-600rounded-full"
+              className="w-2h-2bg-blue-60 0 rounded-full"
               animate={{
                 scale: [1, 1.2, 1],
                 opacity: [0.5, 1, 0.5]
@@ -217,16 +217,16 @@ export const CardSkeleton: React.FC<CardSkeletonProps> = ({
   return (
     <div className={`bg-white rounded-lg shadow-md p-6animate-pulse `}>
       <div className="flex items-center space-x-4mb-4">
-        <div className="w-12h-12bg-gray-200rounded-full" />
+        <div className="w-1 2 h-1 2 bg-gray-20 0 rounded-full" />
         <div className="flex-1">
-          <div className="h-4bg-gray-200rounded w-3/4mb-2" />
-          <div className="h-3bg-gray-200roundedw-1/2" />
+          <div className="h-4bg-gray-20 0 rounded w-3/4mb-2" />
+          <div className="h-3bg-gray-20 0 roundedw-1/2" />
         </div>
       </div>
       <div className="space-y-3">
-        <div className="h-4bg-gray-200roundedw-full" />
-        <div className="h-4bg-gray-200roundedw-5/6" />
-        <div className="h-4bg-gray-200roundedw-4/6" />
+        <div className="h-4bg-gray-20 0 roundedw-full" />
+        <div className="h-4bg-gray-20 0 roundedw-5/6" />
+        <div className="h-4bg-gray-20 0 roundedw-4/6" />
       </div>
     </div>
   );

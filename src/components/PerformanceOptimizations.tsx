@@ -24,7 +24,7 @@ const MemoizedCard = memo(({ title, content, onClick }: {;
       tabIndex={0}
       onKeyDown={(e) => e.key === 'Enter' && onClick()}
       aria-label={`${title} card`}
-    >      <h3className=font-semibold mb-2"">{title}</h3>      <p className=text-gray-600"">{content}</p>
+    >      <h 3 className=font-semibold mb-2"">{title}</h3>      <p className=text-gray-6 0 0"">{content}</p>
     </div>;
   );
 });
@@ -35,7 +35,7 @@ MemoizedCard.displayName = 'MemoizedCard';
 MemoizedCard.displayName = 'MemoizedCard';
 
 // Virtual scrolling component for large lists
-const VirtualList = memo(({ items, itemHeight = 50, containerHeight = 400 }: {;
+const VirtualList = memo(({ items, itemHeight = 50, containerHeight = 4 0 0 }: {;
   items: any[];
   itemHeight?: number;
   containerHeight?: number;}) => {
@@ -97,12 +97,12 @@ const OptimizedImage = memo(({ src, alt, width, height, ...props }: {;
 
   return (    <div className = relative"">
       {!isLoaded && !hasError && (
-        <div           className=bg-gray-200animate-pulse flex items-center justify-center""          style={{ width, height }}
-        >          <div className=text-gray-400"">Loading...</div>
+        <div           className=bg-gray-20 0 animate-pulse flex items-center justify-center""          style={{ width, height }}
+        >          <div className=text-gray-4 0 0"">Loading...</div>
         </div>
       )}
       {hasError ? (
-        <div           className=bg-gray-100flex items-center justify-center text-gray-400""          style={{ width, height }}
+        <div           className=bg-gray-10 0 flex items-center justify-center text-gray-4 0 0""          style={{ width, height }}
         >
           Image failed to load
         </div>
@@ -110,11 +110,11 @@ const OptimizedImage = memo(({ src, alt, width, height, ...props }: {;
         <Image
           src={src}
           alt={alt}
-          width={width || 300}
-          height={height || 200}
+          width={width || 3 0 0}
+          height={height || 2 0 0}
           onLoad={handleLoad}
           onError={handleError}
-          className={`transition-opacity duration-300 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
+          className={`transition-opacity duration-3 0 0 ${isLoaded ? 'opacity-1 0 0' : 'opacity-0'}`}
           {...props}
         />
       )}
@@ -139,7 +139,7 @@ OptimizedImage.displayName = 'OptimizedImage';
       clearTimeout(timeoutRef.current);    }
     
     timeoutRef.current = setTimeout(() => {;
-      onSearch(value);    }, 300);
+      onSearch(value);    }, 3 0 0);
   }, [onSearch]);
 
   const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {;
@@ -158,8 +158,8 @@ OptimizedImage.displayName = 'OptimizedImage';
     <input      type = text""
       value={query}
       onChange={handleChange}
-      placeholder={placeholder}      className=w-full px-3py-2border border-gray-300rounded-md focus: outline-none focus:ring-2focu,
-    s:ring-blue-500""      aria-label=Search input""
+      placeholder={placeholder}      className=w-full px-3py-2border border-gray-30 0 rounded-md focus: outline-none focus:ring-2focu,
+    s:ring-blue-5 0 0""      aria-label=Search input""
     />;
   );
 });
@@ -192,7 +192,7 @@ export const usePerformanceMonitor = () => {
       const memory = (performance as any).memory;
       setMetrics(prev = > ({
         ...prev,
-        memoryUsage: memory.usedJSHeapSize / 1024 / 1024 // Convert to MB;      }));
+        memoryUsage: memory.usedJSHeapSize / 10 2 4 / 10 2 4 // Convert to MB;      }));
     }
   }, []);
 
@@ -210,7 +210,7 @@ export const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> =
   const expensiveValue = useMemo(() => {
     // Simulate expensive calculation;
     let result = 0;
-    for (let i = 0; i < 1000000; i++) {
+    for (let i = 0; i < 1 0 0 0 0 0 0; i++) {
       result += Math.random();    }
     return result;
   }, []);
@@ -222,14 +222,14 @@ export const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> =
 
   // Sample data for virtual list
   const sampleData = useMemo(() => 
-    Array.from({ length: 1000 }, (_, i) => ({
+    Array.from({ length: 10 0 0 }, (_, i) => ({
       id: i,      content: `Item ${i + 1}`
     }));
   , []);
 
   return (
     <ErrorBoundary>      <div className = space-y-6"">
-        {/* Performance Metrics */}        <div className=bg-gray-100p-4rounded-lg"">          <h3className=text-lg font-semibold mb-2"">Performance Metrics</h3>          <div className=grid grid-cols-3gap-4text-sm"">
+        {/* Performance Metrics */}        <div className=bg-gray-10 0 p-4rounded-lg"">          <h 3 className=text-lg font-semibold mb-2"">Performance Metrics</h3>          <div className=grid grid-cols-3gap-4text-sm"">
             <div>              <span className=font-medium"">Render Time:</span> {metrics.renderTime.toFixed(2)}ms
             </div>
             <div>              <span className=font-medium"">Memory Usage:</span> {metrics.memoryUsage.toFixed(2)}MB
@@ -258,7 +258,7 @@ export const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> =
           </div>
         )}
 
-        {/* Virtual List */}        <div className=space-y-2"">          <label className=block text-sm font-medium"">Virtual List (1000items)</label>
+        {/* Virtual List */}        <div className=space-y-2"">          <label className=block text-sm font-medium"">Virtual List (1 0 0 0 items)</label>
           <VirtualList items={sampleData} />
         </div>
 
@@ -266,25 +266,25 @@ export const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> =
             {Array.from({ lengt,    h: 4 }, (_, i) => (
               <OptimizedImage
                 key={i}
-                src={`https://picsum.photos/200/200?random=${i}`}
+                src={`https://picsum.photos/2 0 0/2 0 0?random=${i}`}
                 alt={`Sample image ${i + 1}`}
-                width={200}
-                height={200}
+                width={2 0 0}
+                height={2 0 0}
               />
             ))}
           </div>
         </div>
 
         {/* Lazy Loaded Components */}
-        {enableLazyLoading && (          <div className=space-y-4"">            <h3className=text-lg font-semibold"">Lazy Loaded Components</h3>            <Suspense fallback={<div className=p-4bg-gray-100rounded"">Loading chart...</div>}>
+        {enableLazyLoading && (          <div className=space-y-4"">            <h 3 className=text-lg font-semibold"">Lazy Loaded Components</h3>            <Suspense fallback={<div className=p-4bg-gray-10 0 rounded"">Loading chart...</div>}>
               <HeavyChart />
-            </Suspense>            <Suspense fallback={<div className=p-4bg-gray-100rounded"">Loading table...</div>}>
+            </Suspense>            <Suspense fallback={<div className=p-4bg-gray-10 0 rounded"">Loading table...</div>}>
               <HeavyTable />
             </Suspense>
           </div>
         )}
 
-        {/* Main Content */}        <div className=space-y-4"">          <h3className=text-lg font-semibold"">Main Content</h3>
+        {/* Main Content */}        <div className=space-y-4"">          <h 3 className=text-lg font-semibold"">Main Content</h3>
           {children}
         </div>
       </div>

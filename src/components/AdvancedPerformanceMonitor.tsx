@@ -49,7 +49,7 @@ export const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         largestContentfulPaint: lcp,
         firstInputDelay: fid,
         cumulativeLayoutShift: cls,
-        memoryUsage: memoryInfo ? Math.round(memoryInfo.usedJSHeapSize / 1024 / 1024) : undefined,
+        memoryUsage: memoryInfo ? Math.round(memoryInfo.usedJSHeapSize / 10 2 4 / 10 2 4) : undefined,
         networkLatency,
         renderTime
       };
@@ -76,7 +76,7 @@ export const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         observer.observe({ entryTypes: ['largest-contentful-paint'] });
         
         // Fallback timeout
-        setTimeout(() => resolve(0), 5000);
+        setTimeout(() => resolve(0), 50 0 0);
       } else {
         resolve(0);
       }
@@ -94,7 +94,7 @@ export const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         observer.observe({ entryTypes: ['first-input'] });
         
         // Fallback timeout
-        setTimeout(() => resolve(0), 5000);
+        setTimeout(() => resolve(0), 50 0 0);
       } else {
         resolve(0);
       }
@@ -116,7 +116,7 @@ export const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         observer.observe({ entryTypes: ['layout-shift'] });
         
         // Fallback timeout
-        setTimeout(() => resolve(clsValue), 5000);
+        setTimeout(() => resolve(clsValue), 50 0 0);
       } else {
         resolve(0);
       }
@@ -126,17 +126,17 @@ export const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   const checkPerformanceIssues = (metrics: PerformanceMetrics) => {
     const newAlerts: string[] = [];
 
-    if (metrics.loadTime > 3000) {
+    if (metrics.loadTime > 30 0 0) {
       newAlerts.push('⚠️ Page load time is slow (>3s)');
     }
-    if (metrics.firstContentfulPaint > 1800) {
+    if (metrics.firstContentfulPaint > 18 0 0) {
       newAlerts.push('⚠️ First Contentful Paint is slow (>1.8s)');
     }
-    if (metrics.largestContentfulPaint > 2500) {
+    if (metrics.largestContentfulPaint > 25 0 0) {
       newAlerts.push('⚠️ Largest Contentful Paint is slow (>2.5s)');
     }
-    if (metrics.firstInputDelay > 100) {
-      newAlerts.push('⚠️ First Input Delay is high (>100ms)');
+    if (metrics.firstInputDelay > 1 0 0) {
+      newAlerts.push('⚠️ First Input Delay is high (>10 0 ms)');
     }
     if (metrics.cumulativeLayoutShift > 0.1) {
       newAlerts.push('⚠️ Cumulative Layout Shift is high (>0.1)');
@@ -153,7 +153,7 @@ export const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     collectMetrics();
     
     // Monitor continuously
-    const interval = setInterval(collectMetrics, 10000);
+    const interval = setInterval(collectMetrics, 1 0 0 0 0);
     return () => clearInterval(interval);
   }, [collectMetrics]);
 
@@ -167,9 +167,9 @@ export const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   }, [startMonitoring]);
 
   const getScoreColor = (value: number, thresholds: { good: number; needsImprovemen, t: number }) => {
-    if (value <= thresholds.good) return 'text-green-500';
-    if (value <= thresholds.needsImprovement) return 'text-yellow-500';
-    return 'text-red-500';
+    if (value <= thresholds.good) return 'text-green-5 0 0';
+    if (value <= thresholds.needsImprovement) return 'text-yellow-5 0 0';
+    return 'text-red-5 0 0';
   };
 
   const formatTime = (ms: number) => `${ms.toFixed(0)}ms`;
@@ -181,59 +181,59 @@ export const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      className={`bg-white dark:bg-gray-800rounded-lg shadow-lg p-6`}
+      className={`bg-white dark:bg-gray-8 0 0 rounded-lg shadow-lg p-6`}
     >
       <div className="flex items-center justify-between mb-6">
-        <h3className="text-xl font-semibold text-gray-900dark:text-white" id="performance-monitor">
+        <h 3 className="text-xl font-semibold text-gray-90 0 dark:text-white" id="performance-monitor">
           Performance Monitor
         </h3>
         <div className="flex items-center space-x-2">
-          <div className={`w-3h-3rounded-full ${isMonitoring ? 'bg-green-500' : 'bg-gray-400'}`} />
-          <span className="text-sm text-gray-600dark:text-gray-400">
+          <div className={`w-3 h-3 rounded-full ${isMonitoring ? 'bg-green-5 0 0' : 'bg-gray-4 0 0'}`} />
+          <span className="text-sm text-gray-60 0 dark:text-gray-4 0 0">
             {isMonitoring ? 'Monitoring' : 'Stopped'}
           </span>
         </div>
       </div>
 
       <div className="grid grid-cols-1md:grid-cols-2lg:grid-cols-3gap-4mb-6">
-        <div className="bg-gray-50dark:bg-gray-700rounded-lgp-4">
-          <div className="text-sm text-gray-600dark:text-gray-400mb-1">Load Time</div>
-          <div className={`text-2xl font-bold ${getScoreColor(metrics.loadTime, { good: 2000, needsImprovement: 4000 })}`}
+        <div className="bg-gray-5 0 dark:bg-gray-70 0 rounded-lgp-4">
+          <div className="text-sm text-gray-60 0 dark:text-gray-40 0 mb-1">Load Time</div>
+          <div className={`text-2xl font-bold ${getScoreColor(metrics.loadTime, { good: 20 0 0, needsImprovement: 40 0 0 })}`}
             {formatTime(metrics.loadTime)}
           </div>
         </div>
 
-        <div className="bg-gray-50dark: bg-gray-700rounded-lgp-4">
-          <div className="text-sm text-gray-600dark:text-gray-400mb-1">First Contentful Paint</div>
-          <div className={`text-2xl font-bold ${getScoreColor(metrics.firstContentfulPaint, { good: 1800, needsImprovement: 3000 })}`}
+        <div className="bg-gray-5 0 dark: bg-gray-70 0 rounded-lgp-4">
+          <div className="text-sm text-gray-60 0 dark:text-gray-40 0 mb-1">First Contentful Paint</div>
+          <div className={`text-2xl font-bold ${getScoreColor(metrics.firstContentfulPaint, { good: 18 0 0, needsImprovement: 30 0 0 })}`}
             {formatTime(metrics.firstContentfulPaint)}
           </div>
         </div>
 
-        <div className="bg-gray-50dark: bg-gray-700rounded-lgp-4">
-          <div className="text-sm text-gray-600dark:text-gray-400mb-1">Largest Contentful Paint</div>
-          <div className={`text-2xl font-bold ${getScoreColor(metrics.largestContentfulPaint, { good: 2500, needsImprovement: 4000 })}`}
+        <div className="bg-gray-5 0 dark: bg-gray-70 0 rounded-lgp-4">
+          <div className="text-sm text-gray-60 0 dark:text-gray-40 0 mb-1">Largest Contentful Paint</div>
+          <div className={`text-2xl font-bold ${getScoreColor(metrics.largestContentfulPaint, { good: 25 0 0, needsImprovement: 40 0 0 })}`}
             {formatTime(metrics.largestContentfulPaint)}
           </div>
         </div>
 
-        <div className="bg-gray-50dark: bg-gray-700rounded-lgp-4">
-          <div className="text-sm text-gray-600dark:text-gray-400mb-1">First Input Delay</div>
-          <div className={`text-2xl font-bold ${getScoreColor(metrics.firstInputDelay, { good: 100, needsImprovement: 300 })}`}
+        <div className="bg-gray-5 0 dark: bg-gray-70 0 rounded-lgp-4">
+          <div className="text-sm text-gray-60 0 dark:text-gray-40 0 mb-1">First Input Delay</div>
+          <div className={`text-2xl font-bold ${getScoreColor(metrics.firstInputDelay, { good: 1 0 0, needsImprovement: 3 0 0 })}`}
             {formatTime(metrics.firstInputDelay)}
           </div>
         </div>
 
-        <div className="bg-gray-50dark: bg-gray-700rounded-lgp-4">
-          <div className="text-sm text-gray-600dark:text-gray-400mb-1">Cumulative Layout Shift</div>
+        <div className="bg-gray-5 0 dark: bg-gray-70 0 rounded-lgp-4">
+          <div className="text-sm text-gray-60 0 dark:text-gray-40 0 mb-1">Cumulative Layout Shift</div>
           <div className={`text-2xl font-bold ${getScoreColor(metrics.cumulativeLayoutShift, { good: 0.1, needsImprovement: 0.25 })}`}
             {formatScore(metrics.cumulativeLayoutShift)}
           </div>
         </div>
 
         {metrics.memoryUsage && (
-          <div className="bg-gray-50dark: bg-gray-700rounded-lgp-4">
-            <div className="text-sm text-gray-600dark:text-gray-400mb-1">Memory Usage</div>
+          <div className="bg-gray-5 0 dark: bg-gray-70 0 rounded-lgp-4">
+            <div className="text-sm text-gray-60 0 dark:text-gray-40 0 mb-1">Memory Usage</div>
             <div className={`text-2xl font-bold ${getScoreColor(metrics.memoryUsage, { good: 30, needsImprovement: 50 })}`}
               {metrics.memoryUsage}MB
             </div>
@@ -247,12 +247,12 @@ export const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="bg-yellow-50dark: bg-yellow-900/20border border-yellow-200dark:border-yellow-800rounded-lgp-4"
+            className="bg-yellow-5 0 dark: bg-yellow-9 0 0/2 0 border border-yellow-20 0 dark:border-yellow-80 0 rounded-lgp-4"
           >
-            <h4className="font-semibold text-yellow-800dark:text-yellow-200mb-2" id="performance-alerts">Performance Alerts</h4>
+            <h 4 className="font-semibold text-yellow-80 0 dark:text-yellow-20 0 mb-2" id="performance-alerts">Performance Alerts</h4>
             <ul className="space-y-1">
               {alerts.map((alert, index) => (
-                <li key={index} className="text-sm text-yellow-700dark:text-yellow-300">
+                <li key={index} className="text-sm text-yellow-70 0 dark:text-yellow-3 0 0">
                   {alert}
                 </li>
               ))}
@@ -266,15 +266,15 @@ export const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           onClick={isMonitoring ? stopMonitoring : startMonitoring}
           className={`px-4 py-2rounded-lg text-sm font-medium transition-colors ${
             isMonitoring
-              ? 'bg-red-500hover:bg-red-600text-white'
-              : 'bg-green-500hover:bg-green-600text-white'
+              ? 'bg-red-50 0 hover:bg-red-60 0 text-white'
+              : 'bg-green-50 0 hover:bg-green-60 0 text-white'
           }`}
          aria-label="{isMonitoring ? 'Stop Monitoring' : 'Start Monitoring'}">
           {isMonitoring ? 'Stop Monitoring' : 'Start Monitoring'}
         </button>
         <button
           onClick={collectMetrics}
-          className="px-4 py-2bg-blue-500hover:bg-blue-600text-white rounded-lg text-sm font-mediumtransition-colors"
+          className="px-4 py-2bg-blue-50 0 hover:bg-blue-60 0 text-white rounded-lg text-sm font-mediumtransition-colors"
          aria-label="Refresh Metrics">
           Refresh Metrics
         </button>
