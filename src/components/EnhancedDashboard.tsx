@@ -1,6 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Activity, TrendingUp, Users, Zap, Shield, BarChart3 } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
 
 interface DashboardWidget {
   id: string;
@@ -21,7 +19,7 @@ interface DashboardProps {
 
 const sampleData = {
   revenue: [
-    { mont, h: 'Jan', revenue: 4000, profit: 2400 },
+    { month: 'Jan', revenue: 4000, profit: 2400 },
     { month: 'Feb', revenue: 3000, profit: 1398 },
     { month: 'Mar', revenue: 2000, profit: 9800 },
     { month: 'Apr', revenue: 2780, profit: 3908 },
@@ -29,18 +27,18 @@ const sampleData = {
     { month: 'Jun', revenue: 2390, profit: 3800 },
   ],
   users: [
-    { nam, e: 'Active Users', value: 400, color: '#0088 FE' },
-    { name: 'New Users', value: 300, color: '#00 C49 F' },
-    { name: 'Returning Users', value: 300, color: '#FFBB 28' },
-    { name: 'Inactive Users', value: 200, color: '#FF 8042' },
+    { name: 'Active Users', value: 400, color: '#0088FE' },
+    { name: 'New Users', value: 300, color: '#00C49F' },
+    { name: 'Returning Users', value: 300, color: '#FFBB28' },
+    { name: 'Inactive Users', value: 200, color: '#FF8042' },
   ],
   performance: [
-    { tim, e: '0, 0:00', cpu: 20, memory: 40, disk: 10 },
-    { time: '0, 4:00', cpu: 25, memory: 45, disk: 12 },
-    { time: '0, 8:00', cpu: 60, memory: 70, disk: 15 },
-    { time: '1, 2:00', cpu: 80, memory: 85, disk: 20 },
-    { time: '1, 6:00', cpu: 70, memory: 75, disk: 18 },
-    { time: '2, 0:00', cpu: 50, memory: 60, disk: 14 },
+    { time: '00:00', cpu: 20, memory: 40, disk: 10 },
+    { time: '04:00', cpu: 25, memory: 45, disk: 12 },
+    { time: '08:00', cpu: 60, memory: 70, disk: 15 },
+    { time: '12:00', cpu: 80, memory: 85, disk: 20 },
+    { time: '16:00', cpu: 70, memory: 75, disk: 18 },
+    { time: '20:00', cpu: 50, memory: 60, disk: 14 },
   ]
 };
 
@@ -55,253 +53,147 @@ const defaultWidgets: DashboardWidget[] = [
   },
   {
     id: 'user-metrics',
-    title: 'User Distribution',
-    type: 'chart',
+    title: 'User Metrics',
+    type: 'metric',
     data: sampleData.users,
     size: 'medium',
-    position: { x: 0, y: 1 }
+    position: { x: 1, y: 0 }
   },
   {
-    id: 'performance-metrics',
+    id: 'performance-chart',
     title: 'System Performance',
     type: 'chart',
     data: sampleData.performance,
     size: 'large',
-    position: { x: 1, y: 0 }
-  },
-  {
-    id: 'total-revenue',
-    title: 'Total Revenue',
-    type: 'metric',
-    data: { valu, e: '$45,231', change: '+12.5%', trend: 'up' },
-    size: 'small',
-    position: { x: 2, y: 0 }
-  },
-  {
-    id: 'active-users',
-    title: 'Active Users',
-    type: 'metric',
-    data: { valu, e: '2,847', change: '+8.2%', trend: 'up' },
-    size: 'small',
-    position: { x: 2, y: 1 }
-  },
-  {
-    id: 'conversion-rate',
-    title: 'Conversion Rate',
-    type: 'metric',
-    data: { valu, e: '3.24%', change: '-2.1%', trend: 'down' },
-    size: 'small',
-    position: { x: 2, y: 2 }
+    position: { x: 0, y: 1 }
   }
 ];
 
-export default function EnhancedDashboard({
+export const EnhancedDashboard: React.FC<DashboardProps> = ({
   widgets = defaultWidgets,
-  enableDragDrop = true,
-  enableResize = true,
-  enableFullscreen = true,
-  onWidgetUpdate
-}: DashboardProps): JSX.Element {
-  const [dashboardWidgets, setDashboardWidgets] = useState<DashboardWidget[]>(widgets);
+  onWidgetUpdate,
+  onWidgetAdd,
+  onWidgetRemove,
+  className = ''
+}) => {
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [selectedWidget, setSelectedWidget] = useState<string | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => {
-    // Simulate loading
-    const timer = setTimeout(() => setIsLoading(false), 1000);
-    return () => clearTimeout(timer);
-  }, []);
-
-  const handleWidgetUpdate = (updatedWidgets: DashboardWidget[]) => {
-    setDashboardWidgets(updatedWidgets);
-    onWidgetUpdate?.(updatedWidgets);
+  const handleWidgetClick = (widgetId: string) => {
+    setSelectedWidget(selectedWidget === widgetId ? null : widgetId);
   };
-
-  const renderChart = (widget: DashboardWidget) => {
-    const { data, id } = widget;
-    
-    switch (id) {
-      case 'revenue-chart':
-        return (
-          <ResponsiveContainer width="100%" height="100%">
-            <AreaChart data={data}>
-              <CartesianGrid strokeDasharray="33" />
-              <XAxis dataKey="month" />
-              <YAxis />
-              <Tooltip />
-              <Area type="monotone" dataKey="revenue" stackId="1" stroke="#8884 d8" fill="#8884 d8" />
-              <Area type="monotone" dataKey="profit" stackId="1" stroke="#82 ca 9 d" fill="#82 ca 9 d" />
-            </AreaChart>
-          </ResponsiveContainer>
-        );
-      
-      case 'user-metrics':
-        return (
-          <ResponsiveContainer width="100%" height="100%">
-            <PieChart>
-              <Pie
-                data={data}
-                cx="50%"
-                cy="50%"
-                labelLine={false}
-                label={({ name, percent }) => `${name} ${(percent * 100).toFixed(0)}%`}
-                outerRadius={80}
-                fill="#8884 d8"
-                dataKey="value"
-              >
-                {data.map((entry: any, index: number) => (
-                  <Cell key={`cell-${index}` } fill={entry.color} />
-                ))}
-              </Pie>
-              <Tooltip />
-            </PieChart>
-          </ResponsiveContainer>
-        );
-      
-      case 'performance-metrics':
-        return (
-          <ResponsiveContainer width="100%" height="100%">
-            <LineChart data={data}>
-              <CartesianGrid strokeDasharray="33" />
-              <XAxis dataKey="time" />
-              <YAxis />
-              <Tooltip />
-              <Line type="monotone" dataKey="cpu" stroke="#8884 d8" strokeWidth={2} />
-              <Line type="monotone" dataKey="memory" stroke="#82 ca 9 d" strokeWidth={2} />
-              <Line type="monotone" dataKey="disk" stroke="#ffc658" strokeWidth={2} />
-            </LineChart>
-          </ResponsiveContainer>
-        );
-      
-      default:
-        return <div>Chart not available</div>;
-    }
-  };
-
-  const renderMetric = (data: any) => (
-    <div className="text-center">
-      <div className="text-3xl font-bold text-gray-900 mb-2">{data.value}</div>
-      <div className={`flex items-center justify-center text-sm ${
-        data.trend === 'up' ? 'text-green-600' : 'text-red-600'
-      }`}>
-        <span className="mr-1">{data.trend === 'up' ? '↗' : '↘'}</span>
-        {data.change}
-      </div>
-    </div>
-  );
 
   const renderWidget = (widget: DashboardWidget) => {
-    const sizeClasses = {
-      smal, l: 'col-span-1row-span-1',
-      medium: 'col-span-2row-span-1',
-      large: 'col-span-3row-span-2'
-    };
-
+    const isSelected = selectedWidget === widget.id;
+    
     return (
-      <motion.div
+      <div
         key={widget.id}
-        className={`bg-white rounded-lg shadow-lg p-6 ${sizeClasses[widget.size]} ${
-          selectedWidget === widget.id ? 'ring-2 ring-blue-500' : ''
+        className={`bg-white rounded-lg shadow-md p-4 cursor-pointer transition-all duration-200 hover:shadow-lg ${
+          isSelected ? 'ring-2 ring-blue-500' : ''
         }`}
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.3 }}
-        whileHover={{ scale: 1.02 }}
-        onClick={() => setSelectedWidget(widget.id)}
+        onClick={() => handleWidgetClick(widget.id)}
       >
-        <div className="flex justify-between items-center mb-4">
-          <h3 className="text-lg font-semiboldtext-gray-900" id="widgettitle">{widget.title}</h3>
+        <div className="flex items-center justify-between mb-4">
+          <h3 className="text-lg font-semibold">{widget.title}</h3>
           <div className="flex space-x-2">
-            {enableResize && (
-              <button className="text-gray-400 hover:text-gray-600">
-                <svg className="w-4h-4" fill="none" stroke="currentColor" viewBox="002424">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M48V4m00h4M44 l55 m 11-1V 4 m00 h-4m40 l-55M416v 4 m00 h4 m-40 l5-5m 115 l-5-5m55 v-4m04 h-4" />
-                </svg>
-              </button>
-            )}
-            {enableFullscreen && (
-              <button 
-                className="text-gray-400 hover:text-gray-600"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  setIsFullscreen(true);
-                }}
-              >
-                <svg className="w-4h-4" fill="none" stroke="currentColor" viewBox="002424">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M48V4m00h4M44 l55 m 11-1V 4 m00 h-4m40 l-55M416v 4 m00 h4 m-40 l5-5m 115 l-5-5m55 v-4m04 h-4" />
-                </svg>
-              </button>
-            )}
+            <div className="w-5 h-5 bg-blue-500 rounded" />
+            {widget.size === 'large' && <div className="w-5 h-5 bg-green-500 rounded" />}
           </div>
         </div>
-        
-        <div className="h-64">
-          {widget.type === 'chart' ? renderChart(widget) : renderMetric(widget.data)}
-        </div>
-      </motion.div>
+
+        {widget.type === 'metric' && (
+          <div className="grid grid-cols-2 gap-4">
+            {widget.data.map((item: any, index: number) => (
+              <div key={index} className="text-center">
+                <div className="text-2xl font-bold text-gray-900">{item.value}</div>
+                <div className="text-sm text-gray-600">{item.name}</div>
+              </div>
+            ))}
+          </div>
+        )}
+
+        {widget.type === 'chart' && (
+          <div className="h-48 bg-gray-50 rounded-lg flex items-center justify-center">
+            <div className="text-center">
+              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-2">
+                <div className="w-6 h-6 bg-blue-500 rounded" />
+              </div>
+              <p className="text-sm text-gray-600">Chart Visualization</p>
+              <p className="text-xs text-gray-500">{widget.data.length} data points</p>
+            </div>
+          </div>
+        )}
+
+        {widget.type === 'table' && (
+          <div className="space-y-2">
+            {widget.data.slice(0, 3).map((item: any, index: number) => (
+              <div key={index} className="flex justify-between text-sm">
+                <span>{item.name || item.month || item.time}</span>
+                <span className="font-medium">{item.value || item.revenue}</span>
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
     );
   };
 
-  if (isLoading) {
-    return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2border-blue-600 mx-automb-4"></div>
-          <p className="text-gray-600">Loading dashboard...</p>
-        </div>
-      </div>
-    );
-  }
-
   return (
-    <div className={`min-h-screen bg-gray-50 ${isFullscreen ? 'fixed inset-0 z-50' : ''}`}>
+    <div className={`min-h-screen bg-gray-50 ${isFullscreen ? 'fixed inset-0 z-50' : ''} ${className}`}>
       <div className="p-6">
         <div className="flex justify-between items-center mb-8">
           <div>
-            <h 1 className="text-3xl font-boldtext-gray-900" id="dashboard">Dashboard</h1>
-            <p className="text-gray-600">Monitor your business metrics and performance</p>
+            <h1 className="text-3xl font-bold text-gray-900">Enhanced Dashboard</h1>
+            <p className="text-gray-600 mt-2">Comprehensive analytics and monitoring</p>
           </div>
           <div className="flex space-x-4">
-            <button className="bg-blue-600 text-white px-4py-2rounded-lg hover:bg-blue-700 transition-colors" aria-label="Export Data">
-              Export Data
-            </button>
-            <button className="bg-gray-200 text-gray-700 px-4py-2rounded-lg hover:bg-gray-300 transition-colors" aria-label="Settings">
-              Settings
-            </button>
-          </div>        </div>
-
-        {/* Widgets Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {widgets.map(widget => (
-            <motion.div
-              key={widget.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6"
+            <button
+              onClick={() => setIsFullscreen(!isFullscreen)}
+              className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
             >
-              <div className="flex justify-between items-center mb-6">
-                <h2 className="text-2xl font-bold text-gray-900" id="dashboard-widgets-find-widget-selected-widget-title">{dashboardWidgets.find(w => w.id === selectedWidget)?.title}</h2>
-                <button
-                  onClick={() => setIsFullscreen(false)}
-                  className="text-gray-400 hover:text-gray-600"
-                >
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                </button>              </div>
-              
-              <div className="text-center">
-                <div className="text-3xl font-bold text-blue-600 mb-2">
-                  {widget.data?.value || '0'}
-                </div>
-                <p className="text-gray-600 dark:text-gray-400">
-                  {widget.data?.label || 'No data'}
-                </p>
-              </div>
-            </motion.div>
-          ))}
+              {isFullscreen ? 'Exit Fullscreen' : 'Fullscreen'}
+            </button>
+            {onWidgetAdd && (
+              <button
+                onClick={() => onWidgetAdd({
+                  title: 'New Widget',
+                  type: 'metric',
+                  data: [],
+                  size: 'medium',
+                  position: { x: 0, y: 0 }
+                })}
+                className="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700"
+              >
+                Add Widget
+              </button>
+            )}
+          </div>
         </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {widgets.map(renderWidget)}
+        </div>
+
+        {selectedWidget && (
+          <div className="mt-8 bg-white rounded-lg shadow-md p-6">
+            <h3 className="text-lg font-semibold mb-4">Widget Details</h3>
+            <p className="text-gray-600">
+              Selected widget: <strong>{selectedWidget}</strong>
+            </p>
+            {onWidgetRemove && (
+              <button
+                onClick={() => {
+                  onWidgetRemove(selectedWidget);
+                  setSelectedWidget(null);
+                }}
+                className="mt-4 px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700"
+              >
+                Remove Widget
+              </button>
+            )}
+          </div>
+        )}
       </div>
     </div>
   );
