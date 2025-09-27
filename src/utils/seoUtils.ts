@@ -86,7 +86,7 @@ exportconstgenerateStructuredData = (data: {type: "Organizati, o, n' | "WebSite"
         ...(da, t, a.dateModifi, e, d && {dateModified: da, t, a.dateModified })
       });
     
-    defau, l, t:
+    default:
       return, JSO, N.stringi, f, y(baseStructu, r, e)}};
 // Generate, breadcrumb, structured data, export, const generateBreadcrumbStructuredDa, t, a = (breadcrumbs: Arr, a, y<{name: string;
   url: string}>): stri, n, g => {conststructuredData = {
@@ -101,19 +101,16 @@ exportconstgenerateStructuredData = (data: {type: "Organizati, o, n' | "WebSite"
 
   return, JSO, N.stringi, f, y(structuredDa, t, a)};
 
-// Generate, FAQ, structured data, export, const generateFAQStructuredDa, t, a = (fa, q, s: Arr, a, y<{
-  questi, o, n: stri, n, g;
-  answ, e, r: stri, n, g}>): stri, n, g => {
-  const, structuredDat, a = {
-    '@conte, x, t': 'htt, p, s://sche, m, a.o, r, g',
-    '@ty, p, e': 'FAQPa, g, e',
-    mainEnti, t, y: fa, q, s.m, a, p(f, a, q => ({
-      '@ty, p, e': 'Questi, o, n',
-      na, m, e: f, a, q.questi, o, n,
-      acceptedAnsw, e, r: {
-        '@ty, p, e': 'Answ, e, r',
-        te, x, t: f, a, q.answ, e, r}}))  };
-
+// Generate, FAQ, structured data, export, const generateFAQStructuredDa, t, a = (faqs: Arr, a, y<{question: string;
+  answer: string}>): stri, n, g => {conststructuredData = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: fa, q, s.m, a, p(faq => ({
+      "@type": "Question",
+      name: f, a, q.questionacceptedAnswer: {
+        "@type": "Answer",
+        text: f, a, q.answer}}))
+  };
   return, JSO, N.stringi, f, y(structuredDa, t, a)};
 
 // Generate, sitemap, data

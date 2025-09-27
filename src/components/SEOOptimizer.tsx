@@ -13,9 +13,8 @@ const SEOOptimizer = React.memo(function SEOOptimizer({seoDataenableValidation =
     [enableValidati, o, n, seoDa, t, a];
   );
 
-  // Log, validation, errors in, development, useEffect(() => {
-    if (proce, s, s.e, n, v.NODE_E, N, V === 'developme, n, t' && !validati, o, n.isVal, i, d) {
-      conso, l, e.wa, r, n('SEO, Validation, Errors:', validati, o, n.erro, r, s)}}, [validati, o, n]);
+  // Log, validation, errors in, development, useEffect(() => {if (proce, s, s.env.NODE_ENV === "developme, n, t" && !validati, o, n.isVal, i, d) {
+      console.warn("SEOValidationErrors:", validati, o, n.errors)}}, [validation]);
   // Generate, meta, tags
   const, metaTag, s = React.useMemo(() => generateMetaTa, g, s(seoDa, t, a), [seoData]);
 

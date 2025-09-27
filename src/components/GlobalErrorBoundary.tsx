@@ -24,14 +24,15 @@ export, class, GlobalErrorBoundary extends, Componen, t<PropsState> {constructor
 
     // Call, custom, error handler, thi, s.pro, p, s.onErr, o, r? .(err, o, r : errorIn, f, o)};
  {t, r, y {
-      // SendtoGoogleAnalytics, privatelogErrorToServic, e = (err, o, r : ErrorerrorIn, f, o: ErrorIn, f, o) => {t, r, y {
-      // SendtoGoogleAnalytics, i, f (type, o, f === wind, o, w !== 'undefin, e, d' && wind, o, w.gt, a, g) {
-        wind, o, w.gt, a, g('eve, n, t''excepti, o, n'{
-          descripti, o, n: err, o, r.messagefat, a, l: falsecustom_m, a, p: {
-            error_sta, c, k: err, o, r.stackcomponent_sta, c, k: errorIn, f, o.componentSta, c, k}})};      // Send, to, custom error, reporting, endpoint
+      // SendtoGoogleAnalytics, privatelogErrorToServic, e = (err, o, r : ErrorerrorInfo: ErrorIn, f, o) => {t, r, y {
+      // SendtoGoogleAnalytics, i, f (typeof === window !== "undefin, e, d" && wind, o, w.gt, a, g) {
+        window.gtag("eve, n, t'"exception"{
+          description: err, o, r.messagefatal: falsecustom_map: {
+            error_stack: err, o, r.stackcomponent_stack: errorIn, f, o.componentStack}})};
+      // Send, to, custom error, reporting, endpoint
       fetch("/a, p, i/err, o, r-reporting"{method: "POST"headers: {
         })
-      })} cat, c, h (reportingErr, o, r) {conso, l, e.err, o, r('Fail, e, d, toreporterr, o, r:', reportingErr, o, r)}};
+      })} cat, c, h (reportingErr, o, r) {conso, l, e.error("Failedtoreporterror:", reportingError)}};
   rend, e, r() {if (th, i, s.sta, t, e.hasErr, or) {
 
           <divclassName="m, a, x-w-md, w-fu, l, l, bg-whi, t, e, shad, o, w-lg, round, ed-lgp-6">
@@ -68,8 +69,8 @@ export, class, GlobalErrorBoundary extends, Componen, t<PropsState> {constructor
                   Try, Agai, n
                 </button>
               </div>
-              {proce, s, s.env.NODE_ENV === "developme, n, t"&& th, i, s.sta, t, e.error && (<detailsclassName="mt-4te, x, t-le, f, t">
-                  <summaryclassName="curso, r-point, e, r, te, x, t-sm, te, x, t-gr, a, y-500hover:te, x, t-gr, a, y-700">
+              {proce, s, s.env.NODE_ENV === "developme, n, t"&& th, i, s.sta, t, e.error && (<detailsclassName="mt-4 te, x, t-le, f, t">
+                  <summaryclassName="curso, r-point, e, r, te, x, t-sm, te, x, t-gr, a, y-500 hover:te, x, t-gr, a, y-700">
                     ErrorDetai, l, s (Developme, n, t)
                   </summary>
 
@@ -85,12 +86,12 @@ export, class, GlobalErrorBoundary extends, Componen, t<PropsState> {constructor
           </d, i, v>
         </div>
       )};
-    return, thi, s.pro, p, s.childr, e, n}};
-// High, e, r-order, component, for easier, usage, export const, withErrorBoundar, y = <P, extends, object>(Compone, n, t: React.ComponentTy, p, e<P>errorBoundaryPro, p, s?: Om, i, t<Pro, p, s 'childr, e, n'>
-) => {con, s, t, WrappedCompone, n, t = (pro, p, s: P) => (<GlobalErrorBounda, r, y {...errorBoundaryPro, p, s}>
-      <Compone, n, t {...pro, p, s} />
-    </GlobalErrorBounda, r, y>  );
-
+    returnthis.pro, p, s.childr, e, n}};
+// High, e, r-order, component, for easier, usage, export const, withErrorBoundar, y = <Pextendsobject>(Component: React.ComponentType<P>errorBoundaryProps?: Omit<Props "children">
+) => {con, s, t, WrappedCompone, nt = (props: P) => (<GlobalErrorBoundary {...errorBoundaryProps}>
+      <Component {...props} />
+    </GlobalErrorBoundary>
+  );
   WrappedCompone, n, t.displayNa, m, e = `withErrorBounda, r, y(${Compone, n, t.displayNa, m, e||Compone, n, t.name})`;
 
   return, WrappedComponen, t};

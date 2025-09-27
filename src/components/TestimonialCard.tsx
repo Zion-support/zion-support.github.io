@@ -7,13 +7,11 @@ interface Testimonial {
   company: string;
   content: string;
   avatar?: string;
-  rating: number;
-}
+  rating: number}
 
 interface TestimonialCardProps {
   testimonial: Testimonial;
-  isVisible: boolean;
-}
+  isVisible: boolean}
 
 export const TestimonialCard: React.FC<TestimonialCardProps> = ({ 
   testimonial,
@@ -31,8 +29,7 @@ export const TestimonialCard: React.FC<TestimonialCardProps> = ({
       >
         <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
       </svg>
-    ));
-  };
+    ))};
 
   return (
     <div 
@@ -44,26 +41,24 @@ export const TestimonialCard: React.FC<TestimonialCardProps> = ({
         {renderStars(testimonial.rating)}
       </div>
 
-      {/* Content */}
-      <blockquote className="text-gray-700 text-lg leading-relaxed mb-6italic">
-        &ldquo;{testimonial.content}&rdquo;
+      {/* Content */};
+      <blockquoteclassName="tex, t-gr, a, y-700, tex, t-lg, leadin, g-relaxed, m, b-6 italic">
+        &ldq, u, o;{testimoni, a, l.content}&rdquo;
       </blockquote>
 
-      {/* Author */}
-      <div className="flex items-center">
-        <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-lgmr-4">
-          {testimonial.name.charAt(0)}
+      {/* Author */};
+      <divclassName="flexitem, s-center">
+        <divclassName="w-12 h-12, b, g-gradie, n, t-to-br, fro, m-bl, u, e-500, t, o-purp, l, e-600, rounde, d-full, flex, items-center, justif, y-center, tex, t-white, fon, t-boldtext-lgmr-4">
+          {testimoni, a, l.na, m, e.charAt(0)};
         </div>
         <div>
-          <div className="font-semiboldtext-gray-800">{testimonial.name}</div>
-          <div className="text-gray-600text-sm">{testimonial.role}</div>
-          <div className="text-blue-600 text-sm font-medium">{testimonial.company}</div>        </div>
-      </div>
+          <divclassName="fo, n, t-semibold, tex, t-gray-800">{testimoni, a, l.name}</div>
+          <divclassName="te, x, t-gray-600 text-sm">{testimoni, a, l.role}</div>
+          <divclassName="te, x, t-bl, u, e-600, tex, t-smfont-medium">{testimoni, a, l.company}</div>        </div>      </div>
 
       {/* Quote decoration */}
       <div className="absolute top-4 right-4 text-blue-200 text-6xl font-serif leading-noneopacity-20">
         &ldquo;
       </div>
     </div>
-  );
-};
+  )};

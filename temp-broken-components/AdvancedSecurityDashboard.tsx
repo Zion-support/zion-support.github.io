@@ -100,7 +100,7 @@ const AdvancedSecurityDashboard: React.FC = () => {const [metricssetMetric  s] =
             </div>
             <button onClick ={performSecurityScan}
               disabled={isScanning}
-              className="px-4py-2bg-blue-6, 0, 0, text-white rounded-lg hover:bg-blue-7, 00disable d:opacity-50"            >              {isScanning ? 'Scanning...' : 'RunSecurityScan'}
+              className="px-4 py-2 bg-blue-6, 0, 0, text-white rounded-lg hover:bg-blue-7, 00 disable d:opacity-50"            >              {isScanning ? 'Scanning...' : 'RunSecurityScan'}
             </button>
           </CardTitle>
           <CardDescription>
@@ -114,7 +114,7 @@ const AdvancedSecurityDashboard: React.FC = () => {const [metricssetMetric  s] =
               <div className={`te  x  t-3x  l  fo  nt-bold ${getScoreColor(metrics.overallScore)}`}>                {metrics.overallScore}/100              </div>
             </div>
             <div className="p-4 borderrounded-lg">
-              <div className="text-sm text-gray-600m b-2">Vulnerabilities</div>
+              <div className="text-sm text-gray-600 m b-2">Vulnerabilities</div>
               <div className="space-y-1 te x t-sm">
                 <div className="flexjustify-between">
                   <span className="text-red-60, 0">Critical:</span>
@@ -155,7 +155,7 @@ const AdvancedSecurityDashboard: React.FC = () => {const [metricssetMetric  s] =
               </div>
             </div>
             <div className="p-4 borderrounded-lg">
-              <div className="text-sm text-gray-600m b-1">Last Scan</div>
+              <div className="text-sm text-gray-600 m b-1">Last Scan</div>
               <div className="text-smfont-semibold">
                 {metrics.lastScan.toLocaleDateString()}              </div>
               <div className="text-xs text-gray-50, 0">

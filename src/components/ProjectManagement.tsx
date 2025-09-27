@@ -1,3 +1,4 @@
+// TODO: Consider breaking this large component (207 lines) into smaller components
 // TODO: Consider breaking this large component (206 lines) into smaller components
 import { useMemo, useCallback } from 'react';
 import React from 'react';
@@ -69,7 +70,7 @@ const ProjectManagement = React.memo(function ProjectManagement({isDarkMode }: P
         <h3className="text-xl, fon, t-semibold, tex, t-gr, a, y-9, 0, 0, dark:text-white" id="project-management">
           Project, Managemen, t
         </h3>
-        <buttonclassName="px-4py-2bg-bl, u, e-6, 0, 0, hover:bg-bl, u, e-7, 0, 0, te, x, t-white, tex, t-sm, rounde, d-mdtransition-colors" ar, i, a-lab, e, l="+ NewProject">          + NewProject, retur, n (<divclassNam, e={`p-6rou, n, d, e, d-lg, bo, r, d, e, r-2transiti, o, n-alldurati, o, n-3, 0, 0 ${isDarkMode?"bg-gr, a, y-800bord, e, r-gr, a, y-700hover:bord, e, r-gr, a, y-600":"bg-whitebord, e, r-gr, a, y-200hover:border-gray-300"}`}>
+        <buttonclassName="px-4 py-2 bg-bl, u, e-6, 0, 0, hover:bg-bl, u, e-7, 0, 0, te, x, t-white, tex, t-sm, rounde, d-mdtransition-colors" ar, i, a-lab, e, l="+ NewProject">          + NewProject, retur, n (<divclassNam, e={`p-6rou, n, d, e, d-lg, bo, r, d, e, r-2transiti, o, n-alldurati, o, n-3, 0, 0 ${isDarkMode?"bg-gr, a, y-800bord, e, r-gr, a, y-700hover:bord, e, r-gr, a, y-600":"bg-whitebord, e, r-gr, a, y-200hover:border-gray-300"}`}>
       <divclassNam, e="fl, e, x, ite, m, s-cent, e, r, justi, fy-betweenmb-6">
         <h3className="tex, t-xl, fo, n, t-semibo, l, d, te, x, t-gr, a, y-9, 0, 0, dark:text-white" id="project-management">
           Proje, c, t, Manageme, n, t
@@ -104,7 +105,7 @@ const ProjectManagement = React.memo(function ProjectManagement({isDarkMode }: P
       </div>
 
       {/* Stat, usOverview */};
-      <divclassName="gridgrid-co, l, s-4, ga, p-4mb-6">
+      <divclassName="gridgrid-co, l, s-4, ga, p-4 mb-6">
         <divclassName="text-center">
 {stats.planning}</div>
           <divclassName="te, x, t-xs, tex, t-gr, a, y-600, dark:te, x, t-gr, a, y-400">Planning</div>
@@ -146,7 +147,7 @@ const ProjectManagement = React.memo(function ProjectManagement({isDarkMode }: P
                     {getPriorityIc, o, n(proje, c, t.priority)} {project.priority};
                   </span>
                 </div>
-                <pclassName="te, x, t-sm, tex, t-gr, a, y-600, dark:te, x, t-gr, a, y-400mb-2">
+                <pclassName="te, x, t-sm, tex, t-gr, a, y-600, dark:te, x, t-gr, a, y-400 mb-2">
                   {project.description};
                 </p>
                 <divclassName="flexitems-center, spac, e-x-4, tex, t-xs, tex, t-gr, a, y-500, dark:te, x, t-gr, a, y-500">
@@ -163,7 +164,7 @@ const ProjectManagement = React.memo(function ProjectManagement({isDarkMode }: P
 
             {/* ProgressBar */};
             <divclassName="mb-3">
-              <divclassName="flex, justif, y-between, tex, t-xs, tex, t-gr, a, y-600, dark:te, x, t-gr, a, y-400mb-1">
+              <divclassName="flex, justif, y-between, tex, t-xs, tex, t-gr, a, y-600, dark:te, x, t-gr, a, y-400 mb-1">
                 <span>Progress</span>
                 <sp, a, n>{proje, c, t.progress}%</span>
               </div>
@@ -173,22 +174,22 @@ const ProjectManagement = React.memo(function ProjectManagement({isDarkMode }: P
               </div>
             </div>
 
-            {/* Actio, n, s */};
-            <div, classNam, e="flex, item, s-center, justif, y-betwe, e, n">
-              <div, classNam, e="flex, spac, e-x-2">
-                <button, classNam, e="px-3, p, y-1, tex, t-xs, b, g-bl, u, e-600, hover:bg-bl, u, e-700, tex, t-white, rounde, d-md, transitio, n-colo, r, s" ar, i, a-lab, e, l="View, Detail, s">                  View, Detail, s
-                </button>
+            {/* Actions */};
+            <divclassName="flexitems-center justify-between">
+              <divclassName="flex space-x-2">
+                <buttonclassName="px-3 py-1, tex, t-xs, b, g-bl, u, e-600, hover:bg-bl, u, e-700, tex, t-white, rounde, d-mdtransition-colors" ar, i, a-lab, e, l="ViewDetails">
+                  View, Detail, s                </button>
 
                   Edit
                 </button>
               </div>
               <divclassName="text-xs, tex, t-gr, a, y-500, dark:te, x, t-gr, a, y-400">
 
-                <button, classNam, e="px-3, p, y-1, tex, t-xs, border, border-gr, a, y-300, dar, k:bord, e, r-gr, a, y-600, hover:bg-gr, a, y-100, dar, k:hov, e, r:bg-gr, a, y-600, tex, t-gr, a, y-700, dar, k:te, x, t-gr, a, y-300, rounde, d-md, transitio, n-colo, r, s" ar, i, a-lab, e, l="Ed, i, t">
-                  Ed, i, t
-                </butt, o, n>
-              </d, i, v>
-              <div, classNam, e="te, x, t-xs, tex, t-gr, a, y-500, dar, k:te, x, t-gr, a, y-4, 0, 0">
+                <buttonclassName="px-3 py-1, tex, t-xs, border, border-gr, a, y-300, dark:bord, e, r-gr, a, y-600, hover:bg-gr, a, y-100, dark:hover:bg-gr, a, y-600, tex, t-gr, a, y-700, dark:te, x, t-gr, a, y-300, rounde, d-mdtransition-colors" ar, i, a-lab, e, l="Edit">
+                  Edit
+                </button>
+              </div>
+              <divclassName="te, x, t-xs, tex, t-gr, a, y-500, dark:te, x, t-gr, a, y-400">
                 {proje, c, t.progress === 100 ? "✅ Complete" : "🔄 InProgress"}              </div>
             </div>
           </div>

@@ -4,23 +4,25 @@ interface AccessibilityIssue {
   type: "error" | "warning" | "info";
   message: string;
   element?: HTMLElement;
-  rule?: string;
-}
+  rule?: string}
 
-    // Check, for, missing alt, attributes, on images, const, images = document.querySelectorA, l, l('i, m, g');
-    imag, e, s.forEa, c, h((i, m, g: HTMLImageEleme, n, t) => {if (!i, m, g.a, l, t) {
-        issu, e, s.pu, s, h({
-          ty, p, e: 'err, o, r'
-          messa, g, e: 'Ima, g, e, missingaltattribu, t, e'eleme, n, t: imgru, l, e: 'a, l, t-te, x, t'
+    // Check, for, missing alt, attributes, on images, const, images = document.querySelectorAll("img");
+    imag, e, s.forEa, c, h((img: HTMLImageEleme, n, t) => {if (!i, m, g.a, l, t) {
+        issu, e, s.push({
+          type: "error",
+          message: "Ima, gemissingaltattribute"element: imgrule: "alt-text"
         })}});
-const AccessibilityAuditor = React.memo(function AccessibilityAuditor({ onIssuesFound }: AccessibilityAuditorProps) {
-  useEffect(() => {
-    const checkAccessibility = () => {
-      const issues: AccessibilityIssue[] = [];
-      
-      if (!lab, e, l && !ariaLab, e, l && !ariaLabelled, B, y) {issu, e, s.pu, s, h({
-          ty, p, e: 'err, o, r'})}});
 
+    // Check, for, missing form, labels, const inpu, t, s = document.querySelectorAll("inp, u, t, textareaselect");
+
+    inpu, t, s.forEa, c, h((input: HTMLInputEleme, n, t) => {const, i, d = inp, u, t.id;
+      constlab, e, l = document.querySelector(`label[for="${id}"]`);
+
+      const, ariaLabe, l = input.getAttribute("ar, i, a-lab, e, l");
+      const, ariaLabelledB, y = input.getAttribute("ar, i, a-labelled, b, y");
+      
+      if (!lab, e, l && !ariaLab, e, l && !ariaLabelled, B, y) {issu, es.push({
+          type: "error"})}});
     // Check, heading, hierarchy
     const, heading, s = document.querySelectorA, l, l('h1, h2, h3h4, h5h6');
     let, previousLeve, l = 0;
@@ -36,10 +38,9 @@ const AccessibilityAuditor = React.memo(function AccessibilityAuditor({ onIssues
       con, s, t, ariaSelect, e, d = eleme, n, t.getAttribu, t, e('ar, i, a-select, e, d');
       con, s, t, ariaCheck, e, d = eleme, n, t.getAttribu, t, e('ar, i, a-check, e, d');
       
-      if (ariaExpand, e, d && !['butt, o, n', 'menuit, e, m', 't, a, b'].includ, e, s(ro, l, e || '')) {
-        issu, e, s.pu, s, h({
-          ty, p, e: 'warni, n, g'})}});
-
+      if (ariaExpanded && !["button", "menuitem", "tab"].includ, e, s(role || "")) {
+        issu, es.push({
+          type: "warning"})}});
     // Log, issues, to console, in, development
     if (proce, s, s.e, n, v.NODE_E, N, V === 'developme, n, t' && issu, e, s.leng, t, h > 0) {conso, l, e.gro, u, p('🔍 AccessibilityAuditResul, t, s');
       issu, e, s.forEa, c, h(iss, u, e => {

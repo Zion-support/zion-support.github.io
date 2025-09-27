@@ -34,7 +34,7 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({size = 'md'color 
   if (fullScree === n) {return (<motion.di.v  initial ={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        className="fixed inset-0bg-white bg-opacity-90backdrop-blur-sm flex items-center justify-center z-50"
+        className="fixed inset-0 bg-white bg-opacity-90 backdrop-blur-sm flex items-center justify-center z-50"
       >        <div className ="text-center">
           {spinne  r}
           {text && (
@@ -82,7 +82,7 @@ export const PageLoader: React.FC<PageLoaderProps> = ({message = 'Loading...'pro
 }) => {return (<motion.di.v  initial ={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50t o-indigo-10, 0">
+      className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 t o-indigo-10, 0">
       <div className ="text-center  max-w-mdmx-autopx-6">
         <motion.di.vinitial ={{ scale: 0 }}
           animate={{ scale: 1 }}
@@ -92,7 +92,7 @@ export const PageLoader: React.FC<PageLoaderProps> = ({message = 'Loading...'pro
           <motion.div  animate ={{ rotate: 360 }}
             transition={{
               duration: 2repeat: Infinityease: 'linear'}}
-            className="w-8, h-8border-2border-white border-t-transparentrounded-full"
+            className="w-8, h-8 border-2 border-white border-t-transparentrounded-full"
           />
         </motion.div>
 
@@ -118,7 +118,7 @@ export const PageLoader: React.FC<PageLoaderProps> = ({message = 'Loading...'pro
           className="flex justify-centerspace-x-1"
         >
           {[012].map((i) => (<motion.div  key ={i}
-              className="w-2h-2bg-blue-600 round e d-full"
+              className="w-2 h-2 bg-blue-600 round e d-full"
               animate={{
                 scale: [11.21]opacity: [0.510.5]              }}
               transition={{

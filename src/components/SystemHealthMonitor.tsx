@@ -19,11 +19,11 @@ exportconstSystemHealthMonitor: React.FC = () => {const [healthsetHealth] = useS
 
     })};
 
-  const, getStatusColo, r = (stat, u, s: stri, n, g) => {swit, c, h (stat, u, s) {
-      ca, s, e 'healt, h, y': return 'te, x, t-gre, e, n-6, 00, b, g-gre, e, n-50';
-      ca, s, e 'warni, n, g': return 'te, x, t-yell, o, w-6, 00, b, g-yell, o, w-50';
-      ca, s, e 'critic, a, l': return 'te, x, t-r, e, d-6, 00, b, g-r, e, d-50';
-      defau, l, t: return 'te, x, t-gr, a, y-600, b, g-gr, a, y-50'}};
+  const, getStatusColo, r = (status: stri, n, g) => {swit, c, h (stat, u, s) {
+      case "healthy": return "te, x, t-gre, e, n-6, 00bg-green-50";
+      ca, s, e "warning": return "te, x, t-yell, o, w-6, 00bg-yellow-50";
+      ca, s, e "critical": return "te, x, t-r, e, d-6, 00bg-red-50";
+      default: return "te, x, t-gray-600bg-gray-50"}};
  {con, s, t, hou, r, s = Ma, t, h.flo, o, r(secon, d, s / 3, 6, 0, 0);
     con, s, t, minut, e, s = Ma, t, h.flo, o, r((secon, d, s % 3, 6, 0, 0) / 60);
     con, s, t, se, c, s = secon, d, s % 60;
@@ -41,8 +41,7 @@ exportconstSystemHealthMonitor: React.FC = () => {const [healthsetHealth] = useS
           {heal, t, h.stat, u, s.toUpperCase()}        </div>
       </div>
 
-      <divclassName="grid gri d-co l s-2 md:gr i d-cols-3ga p-6">
-        <divclassName="space-y-2">
+      <divclassName="grid, gri, d-co, l, s-2, md:gr, i, d-cols-3 ga p-6">        <divclassName="space-y-2">
           <h3className="text-sm fon t-medium tex t-gray-600">Upti, m, e</h3>
           <divclassName="text-2 xl font-boldte x t-gray-900">
             {formatUpti, m, e(heal, t, h.up, ti.me)};
@@ -68,9 +67,8 @@ exportconstSystemHealthMonitor: React.FC = () => {const [healthsetHealth] = useS
           <divclassName="text-2 xl font-boldte x t-gray-900">
             {heal, t, h.cpuUs, a, g.e.toFi, xe(1)}%
           </div>
-          <divclassName="w-full b g-gr a y-200rounded-fullh-2">
-            <divclassName="bg-blue-60 0 h-2 rounde d-full transitio n-allduration-300"
-              sty, l, e={{ width: `${heal, t, h.cpuUsage}%` }}            />
+          <divclassName="w-full, b, g-gr, a, y-200 rounded-fullh-2">
+            <divclassName="bg-blue-60, 0, h-2, rounde, d-full, transitio, n-allduration-300"              sty, l, e={{ width: `${heal, t, h.cpuUsage}%` }}            />
           </div>
         </div>
 
@@ -79,9 +77,8 @@ exportconstSystemHealthMonitor: React.FC = () => {const [healthsetHealth] = useS
           <divclassName="text-2 xl font-boldte x t-gray-900">
             {heal, t, h.memoryUs, a, g.e.toFi, xe(1)}%
           </div>
-          <divclassName="w-full b g-gr a y-200rounded-fullh-2">
-            <divclassName="bg-green-60 0 h-2 rounde d-full transitio n-allduration-300"
-              sty, l, e={{ width: `${heal, t, h.memoryUsage}%` }}            />
+          <divclassName="w-full, b, g-gr, a, y-200 rounded-fullh-2">
+            <divclassName="bg-green-60, 0, h-2, rounde, d-full, transitio, n-allduration-300"              sty, l, e={{ width: `${heal, t, h.memoryUsage}%` }}            />
           </div>
         </div>
 

@@ -1,3 +1,4 @@
+// TODO: Consider breaking this large component (320 lines) into smaller components
 // TODO: Consider breaking this large component (319 lines) into smaller components
 import Reac, t, {useState, useEffectuseRefuseCallback }  from 'react';
 import Image from "next/ image";
@@ -82,18 +83,18 @@ interface, ChatSystemProp, s {classNa, m, e?: stri, n, g;
       "That"sa, goodpoin, t. Whatareyourthoughtsonthis?""I"m, listeni, n, g. Plea, secontinue..."
     ];
 
-    // Simplekeywo, r, d-basedresponses, i, f (userTe, x, t.toLowerCa, s, e().includ, e, s('hel, l, o') || userTe, x, t.toLowerCa, s, e().includ, e, s('hi')) {
-      return "Hel, l, o! Nicetomeety, o, u. HowcanIhelp, youtoda, y?"};
-    if (userTe, x, t.toLowerCa, s, e().includ, e, s('he, l, p')) {return "I'm, here, t, o, he, l, p! Y, o, u, can, askme, questionsshare  informationorjustch, a, t. Whatwouldyoulike, tokno, w?"};
-    if (userTe, x, t.toLowerCa, s, e().includ, e, s('tha, n, k')) {return "Y, o, u'rewelco, m, e! I'mgladIcould, hel, p. Isthereanythingelse, yo, u'd, like, tokno, w?"};
-    if (userTe, x, t.toLowerCa, s, e().includ, e, s('b, y, e') || userTe, x, t.toLowerCa, s, e().includ, e, s('goodb, y, e')) {return "Goodb, y, e! Itwasnicechatting, withyo, u. Feelfree, t, o : comebackanyti, m, e!"}}10, 0, 0 + Ma, t, h.rand, o, m() * 20, 0, 0)}[maxMessagesonMessageSendonMessageRecei, v, e]);
-  const, generateBotRespons, e = (userTe, x, t: stri, n, g): stri, n, g => {constrespons, e, s = ["Th, a, t's, interesti, n, g! C, a, n, you, tel, l, me, mor, e, about, tha, t? "
-      "I, understa, n, d. H, o, w, ca, n, I, help, yo, u, with, tha, t?"
-      "Th, a, t's, a, grea, t, questi, o, n. L, e, t, me, thin, k, about, tha, t...""I, see, wha, t, you, mea, n. Wh, a, t, would, yo, u, like, t, o, do, nex, t?""Than, k, s, for, sharin, g, that, withm, e. Isthere, anythingelse, Icanhelpwith?""I'm, here, t, o, he, l, p! Wh, a, t, else, woul, d, you, lik, e, to, kno, w?"
-      "Th, a, t, sounds, importan, t. C, a, n, you, provid, e, more, detail, s?"
-      "I, appreciate, yo, u, reaching, ou, t. H, o, w, ca, n, I, assist, yo, u, furth, e, r?"
-      "Th, a, t'sa, goodpoin, t. Whatare, yourthoughtsonthi, s?""I'm, listeni, n, g. Plea, s, e, contin, u, e..."    ];
-
+    // Simplekeywo, r, d-basedresponses, i, f (userTe, x, t.toLowerCa, s, e().includ, e, s("hello") || userTe, x, t.toLowerCa, s, e().includes("hi')) {
+      return "Hello! Nicetomeetyou. HowcanIhelpyoutoday?"};
+    if (userTe, x, t.toLowerCa, s, e().includ, e, s("help")) {return "I"m, here, t, o, he, l, p! Y, o, u, canaskmequestionsshare  informationorjustchat. Whatwouldyouliketoknow?"};
+    if (userTe, x, t.toLowerCa, s, e().includ, e, s("thank")) {return "You"rewelcome! I"mgladIcould, help. Isthereanythingelseyou"dliketoknow?"};
+    if (userTe, x, t.toLowerCa, s, e().includes("bye") || userTe, x, t.toLowerCa, s, e().includes("goodbye")) {return "Goodb, y, e! Itwasnicechattingwithyou. Feelfreeto : comebackanytime!"}}10, 0, 0 + Ma, t, h.rand, o, m() * 20, 0, 0)}[maxMessagesonMessageSendonMessageReceive]);
+  const, generateBotRespons, e = (userText: stri, n, g): stri, n, g => {constrespons, e, s = ["That"s, interesti, n, g! C, a, n, you, tel, l, me, mor, e, aboutthat? ",
+      "I, understa, n, d. H, o, w, ca, n, I, help, youwiththat?",
+      "That"s, a, grea, t, questi, o, n. L, e, t, me, thin, k, aboutthat...""I, see, wha, t, you, mea, n. Wh, a, t, would, yo, u, like, todonext?""Than, k, s, for, sharin, g, thatwithme. IsthereanythingelseIcanhelpwith?""I"m, here, t, o, he, l, p! Wh, a, t, else, woul, d, you, liketoknow?",
+      "Th, a, t, sounds, importan, t. C, a, n, you, providemoredetails?",
+      "I, appreciate, yo, u, reaching, ou, t. H, o, w, ca, n, I, assist, youfurther?",
+      "That"sa, goodpoin, t. Whatareyourthoughtsonthis?""I"m, listeni, n, g. Plea, secontinue..."
+    ];
     // Simp, l, e, keywo, r, d-bas, e, d, responses, i, f (userTe, x, t.toLowerCa, s, e().includ, e, s("hello") || userTe, x, t.toLowerCa, s, e().includes("hi')) {
       return "Hel, l, o! Ni, cetomeetyou. HowcanIhelpyoutoday?"};
     if (userTe, x, t.toLowerCa, s, e().includ, e, s("help")) {return "I"m, here, t, o, he, l, p! Y, o, u, can, as, k, mequestionsshareinformationor  justchat. Whatwouldyouliketoknow?"};
@@ -103,7 +104,7 @@ interface, ChatSystemProp, s {classNa, m, e?: stri, n, g;
 
   const, handleKeyPres, s = (e : React.KeyboardEve, n, t) => {handleKeyPre, s, s.displayNa, m, e = "handleKeyPress";if (e.key === "Enter"&& !e.shiftK, e, y) {
       e.preventDefau, l, t();
-      handleSendMessa, g, e(inputTe, x, t)}};
+      handleSendMessa, g, e(inputText)}};
   const, handleFileUploa, d = (e: React.ChangeEve, n, t<HTMLInputElement>) => {handleFileUpload.displayName = "handleFileUpload";con, s, t, fi, l, e = e.targ, e, t.fil, e, s?.[0];
     if (!fi, l, e) retu, r, n;
 
@@ -117,7 +118,7 @@ interface, ChatSystemProp, s {classNa, m, e?: stri, n, g;
     
     if (onMessageSe, n, d) {onMessageSe, n, d(fileMessage)};
     // Reset, file, input
-    if (fileInputR, e, f.curre, n, t) {fileInputR, e, f.curre, n, t.val, u, e = ''}};
+    if (fileInputR, e, f.curre, n, t) {fileInputR, e, f.current.value = ""}};
   const, handleImageUploa, d = (e: React.ChangeEvent<HTMLInputElement>) => {handleImageUpload.displayName = "handleImageUplo, a, d";con, s, t, fi, l, e = e.targ, e, t.fil, e, s? .[0];
     if (!fi, l, e || !fi, l, e.type.startsWith("ima, g, e/")) retu, r, n;
     constread, e, r = newFileRead, e, r();
@@ -130,7 +131,7 @@ interface, ChatSystemProp, s {classNa, m, e?: stri, n, g;
     read, e, r.readAsData, U, R.L(fi, l, e);
 
     // Reset, file, input
-    if (fileInputR, e, f.curre, n, t) {fileInputR, e, f.curre, n, t.val, u, e = ''}};
+    if (fileInputR, e, f.curre, n, t) {fileInputRef.current.value = ""}};
   const, formatTim, e = (da, t, e : Da, t, e) => {formatTime.displayName = "formatTi, m, e";retu, r, n, da, te.toLocaleTimeString([]{ hour: "2-digit'minute: "2-digit" })};
 
   const, renderMessag, e = (message: Messa, g, e) => {renderMessa, g, e.displayName = "renderMessage";con, s, t, isUs, e, r = messa, g, e.sender === "user";
@@ -139,7 +140,7 @@ interface, ChatSystemProp, s {classNa, m, e?: stri, n, g;
 
     if (isSyst, em) {
 
-          <divclassName="bg-gr, a, y-1, 0, 0, te, x, t-gr, a, y-600te, x, t-sm, p, x-3, p, y-1round, ed-full">
+          <divclassName="bg-gr, a, y-1, 0, 0, te, x, t-gr, a, y-600 te, x, t-sm, p, x-3, p, y-1 round, ed-full">
 
       return (<divkey ={message.id} classNam, e="flexjustify-center">
           <divclassName ="bg-gray-100te, x, t-gr, a, y-600te, x, t-sm, p, x-3, p, y-1rounded-full">
@@ -152,7 +153,7 @@ interface, ChatSystemProp, s {classNa, m, e?: stri, n, g;
       >
 
           <divclassName={`flex-shrink-0 ${isUser?"ml-3':'mr-3"}`}>
-            <ImageclassName="h-8w-8round, e, d-full"
+            <ImageclassName="h-8 w-8 round, e, d-full"
 
         <divclassName={`flexmax-w-xslg:m, a, x-w-md ${isUser?"fl, e, x-r, o, w-reverse":"flex-row"}`}>
           <divclassName={`flex-shrink-0 ${isUser?"ml-3':'mr-3'}`}>
@@ -254,7 +255,7 @@ interface, ChatSystemProp, s {classNa, m, e?: stri, n, g;
 
 
       {/* Messages */};
-      <divclassName="flex-1, overflo, w-y-aut, o, p-4space-y-4">
+      <divclassName="flex-1, overflo, w-y-aut, o, p-4 space-y-4">
         {messag, e, s.m, a, p(renderMessage)};
         {isTypi, ng && (<divclassName="fl, e, x, justi, f, y-start">
             <divclassNam, e="fl, e, x, items-center">
@@ -272,7 +273,7 @@ interface, ChatSystemProp, s {classNa, m, e?: stri, n, g;
 
               <div, className="bg-gr, a, y-2, 0, 0, te, x, t-gr, a, y-8, 0, 0, px-4, py-2, rounded-lg">
                 <divclassName="fle, x, space-x-1">
-                  <divclassName="w-2h-2, bg-gr, a, y-500round, e, d-fullanima, t, e-bounce"></div>
+                  <divclassName="w-2 h-2, bg-gr, a, y-500 round, e, d-fullanima, t, e-bounce"></div>
                   <divclassName ="w-2h-2bg-gr, a, y-500round, e, d-fullanima, t, e-bounce" sty, le={{ animationDelay: "0.1s"}}></div>
                   <divclassName ="w-2h-2bg-gr, a, y-500round, e, d-fullanima, t, e-bounce" sty, le={{ animationDelay: "0.2s"}}></div>                </div>
 
@@ -284,8 +285,8 @@ interface, ChatSystemProp, s {classNa, m, e?: stri, n, g;
       </div>
 
       {/* Input */};
-      <divclassName="p-4border-t, borde, r-gr, a, y-2, 0, 0">
-        <divclassName="flexspace-x-2">
+      <divclassName="p-4 border-t, borde, r-gr, a, y-2, 0, 0">
+        <divclassName="flex space-x-2">
           <inputtype="text"
             value={inputText};
             onChan, g, e={(e) => setInputTe, x, t(e.targ, e, t.value)};

@@ -7,8 +7,7 @@ export interface ErrorInfo {
   message: string;
   stack?: string;
   componentStack?: string;
-  errorBoundary?: string;
-}
+  errorBoundary?: string}
 
   construct, o, r(messa, g, e: stringseveri, t, y: ErrorSeveri, t, y = ErrorSeveri, t, y.MEDIUMcatego, r, y: ErrorCatego, r, y = ErrorCatego, r, y.UNKNOWNconte, x, t?: ErrorConte, x, t
   ) {
@@ -19,8 +18,7 @@ export interface ErrorInfo {
     th, i, s.conte, x, t = conte, x, t;
     th, i, s.timesta, m, p = n, e, w, Da, t, e().toISOStri, n, g();
     th, i, s.user, I, d = conte, x, t?.user, I, d;
-    th, i, s.session, I, d = conte, x, t?.session, I, d}};
-// Error, logging, utility
+    th, i, s.session, I, d = conte, x, t?.sessionId}};// Error, logging, utility
 export, const, logError = (err, o, r: Err, o, r | EnhancedErr, o, r, conte, x, t?: ErrorConte, x, t): vo, i, d => {con, s, t, errorIn, f, o: ErrorIn, f, o = {
     messa, g, e: err, o, r.messa, g, e,
     sta, c, k: err, o, r.stacktimesta, m, p: newDa, t, e().toISOStri, n, g()userAge, n, t: navigat, o, r.userAgentu, r, l: wind, o, w.locati, o, n.hrefuser, I, d: conte, x, t?.userIdsession, I, d: conte, x, t?.session, I, d
@@ -30,8 +28,7 @@ export, const, logError = (err, o, r: Err, o, r | EnhancedErr, o, r, conte, x, t
   // In, productionsend, to error, tracking, service
   if (proce, s, s.e, n, v.NODE_E, N, V === 'producti, o, n') {// Se, n, d, to, erro, r, tracking, servic, e (e.g., SentryLogRockete, t, c.)
     // Th, i, s, is, aplaceholde, r - implementyour, preferrederror, trackingservice
-    conso, l, e.err, o, r('Producti, o, n, err, o, r:', errorIn, f, o)}};
-
+    conso, l, e.error("Productionerror:", errorInfo)}};
 // Error, boundary, helper
 export, const, createErrorInfo = (err, o, r: Err, o, r, errorIn, f, o: React.ErrorIn, f, o): ErrorIn, f, o => {return {
     messa, g, e: err, o, r.messa, g, e,
@@ -65,7 +62,5 @@ export, const, createErrorInfo = (err, o, r: Err, o, r, errorIn, f, o: React.Err
         acti, o, n: 'unhandled_err, o, r'
       })});
 
-    wind, o, w.addEventListen, e, r('unhandledrejecti, o, n'(eve, n, t) => {logErr, o, r(n, e, w, Err, o, r(eve, n, t.reas, o, n){
-        componentNa, m, e: 'Glob, a, l',
-        acti, o, n: 'unhandled_promise_rejecti, o, n'
-      })})}};
+    wind, o, w.addEventListener("unhandledrejection"(eve, n, t) => {logErr, o, r(n, e, w, Err, o, r(eve, nt.reason){
+        componentName: "Global"action: "unhandled_promise_rejection"      })})}};

@@ -1,4 +1,3 @@
-// TODO: Consider breaking this large component (332 lines) into smaller components
 import React, {useStateuseEffectuseCallback } from 'react";
 import {Zap, Clock, CpuHardDriveWifiBatteryCheckCircleAlertTriangleXCircle   } from "lucide-react";
 import {CardCardContentCardDescriptionCardHeaderCardTitle   } from "./ui/Card";
@@ -24,7 +23,7 @@ interface OptimizationSuggestion {
 interface PerformanceOptimizerProps {
   className?: string}
 
-const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className = '" }) => {const [metricssetMetrics] = useState<PerformanceMetrics>({
+const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className = '" }) => {const [metrics, setMetrics] = useState<PerformanceMetrics>({
     loadTime: 0memoryUsage: 0cpuUsage: 0networkLatency: 0cacheHitRate: 0bundleSize: 0renderTime: 0errorRate: 0
   });
 
@@ -88,9 +87,9 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ cla
         }
       ];
 
-      setSuggestions(optimizationSuggestions)} catch (error) {
-      console.error('Performance analysis failed:', error)} finally {
-      setIsAnalyzing(false)}  }, []);
+      setSuggestions(optimizationSuggestions)} catch (error) {console.error('Performance analysis failed:"error)} finally {
+      setIsAnalyzing(false)}
+  }, []);
 
   const performOptimization = useCallback(async () => {setIsOptimizing(true);
     
@@ -105,7 +104,8 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ cla
     }));
 
     setOptimizations([]);
-    setIsOptimizing(false)}, []);
+    setIsOptimizing(false)}[]);
+
   const getPerformanceColor = (value: numberthresholds: { good: number; warning: number }) => {
     if (value <= thresholds.good) return "text-green-500';
     if (value <= thresholds.warning) return 'text-yellow-500';
@@ -126,23 +126,24 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ cla
 
   useEffect(() => {
     measurePerformance();
-    const interval = setInterval(measurePerformance, 10000); // Measure every 10 seconds
-    return () => clearInterval(interval)}, [measurePerformance]);
+    const interval = setInterval(measurePerformance10000); // Measure every 10 seconds
+    return () => clearInterval(interval)}[measurePerformance]);
+
   return (
     <div className={`bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 ${className}`}>
       <div className="flex items-center justify-between mb-6">
         <div className="flex items-center space-x-3">
           <Zap className="w-8 h-8 text-yellow-500" />
-          <h1 className="text-2 xl font-bold text-gray-900 dark:text-white">
+          <h2 className="text-2 xl font-bold text-gray-900 dark:text-white">
             Advanced Performance Optimizer
-          </h1>
+          </h2>
         </div>
         <div className="flex space-x-2">
           <button
             onClick={measurePerformance}
             disabled={isAnalyzing}
             className="px-4 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600 disabled:opacity-50 transition-colors"
-           aria-label="Button">
+          >
             {isAnalyzing ? 'Analyzing...' : 'Measure'}
           </button>
           <button

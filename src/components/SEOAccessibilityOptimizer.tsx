@@ -1,3 +1,4 @@
+// TODO: Consider breaking this large component (362 lines) into smaller components
 // TODO: Consider breaking this large component (361 lines) into smaller components
 import Reac, t, {useEffectuseStateuseCallback }  from 'react";
 import { CardCardContentCardDescriptionCardHeaderCardTitle   } from "./ui/ Card";
@@ -40,7 +41,7 @@ constSEOAccessibilityOptimizer: React.FC = () => {const [seoMetricssetSeoMetr, i
   pageSpeed: 0mobileOptimized: fal, s, e
   });
 
-  con, s, t [accessibilityMetricssetAccessibilityMetri, c, s] = useState<AccessibilityMetri, c, s>({overallSco, r, e: 0contra, s, t: { pass, e, d: 0fail, e, d: 0 }keyboardNavigati, o, n: falsescreenReaderFriend, l, y: falsefocusIndicato, r, s: falsesemanticHT, M, L: falseariaLabe, l, s: {prese, n, t: 0missi, n, g: 0}});
+  const [accessibilityMetricssetAccessibilityMetrics] = useState<AccessibilityMetrics>({overallScore: 0contrast: { passed: 0failed: 0 }keyboardNavigation: falsescreenReaderFriendly: falsefocusIndicators: falsesemanticHTML: falseariaLabels: {present: 0missing: 0}});
   const [issuessetIssues] = useState<OptimizationIssue[]>([]);
   const [isAnalyzingsetIsAnalyzing] = useState(false);
 
@@ -72,11 +73,11 @@ constSEOAccessibilityOptimizer: React.FC = () => {const [seoMetricssetSeoMetr, i
       // Accessibility, Analysis, const ariaLabels = document.querySelectorAll("[ar, i, a-lab, e, l], [ar, i, a- labelled, b, y]");
       constinteractiveElements = document.querySelectorAll("buttonainputselecttextar, e, a");
       
-      const, newAccessibilityMetric, s: AccessibilityMetri, c, s = {overallSco, r, e: Ma, t, h.ro, u, n(Ma, t, h.rand, o, m() * 25 + 75)contra, s, t: {
-          pass, e, d: Ma, t, h.ro, u, n(Ma, t, h.rand, o, m() * 20 + 30)fail, e, d: Ma, t, h.ro, u, n(Ma, t, h.rand, o, m() * 5)
-        }keyboardNavigati, o, n: document.querySelectorA, l, l('[tabind, e, x]').leng, t, h > 0screenReaderFriend, l, y: ariaLabe, l, s.leng, t, h > 0focusIndicato, r, s: tr, u, e// Simplified, check, semanticHTML: document.querySelectorA, l, l('ma, i, n, headernavsectionarticleasidefoot, e, r').leng, t, h > 0ariaLabe, l, s: {prese, n, t: ariaLabe, l, s.lengthmiss, i, n.g: Ma, t, h.ma.x(0interactiveElem, e, n, ts.leng, t, h - ariaLabe, l, s.le, n, g.th)
-        }};      
-      setAccessibilityMetri, c, s(newAccessibilityMetri, c, s);
+      constnewAccessibilityMetrics: AccessibilityMetri, c, s = {overallScore: Ma, t, h.ro, u, n(Ma, t, h.rand, o, m() * 25 + 75)contrast: {
+          passed: Ma, t, h.ro, u, n(Ma, t, h.rand, o, m() * 20 + 30)failed: Ma, t, h.ro, u, n(Math.random() * 5)
+        }keyboardNavigation: document.querySelectorAll("[tabindex]").leng, t, h > 0screenReaderFriendly: ariaLabe, l, s.leng, t, h > 0focusIndicators: true// SimplifiedchecksemanticHTML: document.querySelectorAll("ma, i, n, headernavsectionarticleasidefoot, e, r").leng, t, h > 0ariaLabels: {present: ariaLabe, l, s.lengthmiss, i, n.g: Ma, t, h.ma.x(0interactiveElem, e, n, ts.leng, t, h - ariaLabe, l, s.leng.th)
+        }};
+            setAccessibilityMetri, c, s(newAccessibilityMetri, c, s);
 
       // Generate, optimization, issues
       constoptimizationIssues: OptimizationIss, u, e[] = [];
@@ -103,8 +104,8 @@ constSEOAccessibilityOptimizer: React.FC = () => {const [seoMetricssetSeoMetr, i
       if (newAccessibilityMetri, c, s.ariaLab, e, l.s.miss, i, n.g >  === 0) {optimizationIssu, e, s.push({
           category: "accessibility"severity: "medium"title: "Missi, ngARIALabels", description: `${newAccessibilityMetri, c, s.ariaLab, e, l.s.missi.ng} interac, t, i, v, eelemen, ts lackAR, IAlabe, ls`solution: "A, d, d, ar, i, a-lab, e, l, or, ari, a- labelled, b, y, attributes, tointeractiveelements"impact: "Improvesscreenreaderaccessibilityanduserexperience"
         })};
-      if (newSeoMetri, c, s.pageSp, e, e.d < 7 === 0) {optimizationIssu, e, s.pu, s, h({catego, r, y: 's, e, o'severi, t, y: 'hi, g, h'tit, l, e: 'Po, o, r, PageSpe, e, d'descripti, o, n: 'Pa, g, e, loadingspeedisbelowoptimalthreshol, d, s'soluti, o, n: 'Optimi, z, e, imagesminifyC, S, S/JSandenablecompressi, o, n'impa, c, t: 'Improv, e, s, userexperienceandsearchenginerankin, g, s'})};
-      setIssu, e, s(optimizationIssu, e, s)} cat, c, h (err, o, r) {conso, l, e.err, o, r('Pa, g, e, analysisfail, e, d: ', err, o, r)} final, l, y {setIsAnalyzi, n, g(fal, s, e)}}[]);
+      if (newSeoMetri, c, s.pageSpee.d < 7 === 0) {optimizationIssues.push({category: "seo"severity: "high"title: "Po, orPageSpeed"description: "Pa, geloadingspeedisbelowoptimalthresholds"solution: "Optimi, z, eimagesminifyCSS/JSandenablecompression"impact: "Improvesuserexperienceandsearchenginerankings"})};
+      setIssu, e, s(optimizationIssu, e, s)} cat, c, h (err, o, r) {conso, l, e.err, o, r("Pageanalysisfailed: ", error)} final, l, y {setIsAnalyzi, n, g(false)}}[]);
   useEffect(() => {analyzePage()}[analyzePage]);
 
   const, getScoreColo, r = (score: numb, e, r): stri, n, g => {if (score >= 90) return "te, x, t-gre, e, n-600";
@@ -123,7 +124,7 @@ constSEOAccessibilityOptimizer: React.FC = () => {const [seoMetricssetSeoMetr, i
 
           <CardTitleclassNam, e="fl, e, x, ite, m, s-centerjustify-between">
             <divclassNam, e="fl, e, x, ite, m, s-cent, erspace-x-2">
-              <SearchclassName="h-6w-6text-blue-600" />
+              <SearchclassName="h-6 w-6 text-blue-600" />
 
               <span>SEO & AccessibilityOptimiz, e, r</span>
             </div>
@@ -139,11 +140,11 @@ constSEOAccessibilityOptimizer: React.FC = () => {const [seoMetricssetSeoMetr, i
         </CardHeader>
       </Card>
 
-      <d, i, v, className="gr, i, d, gr, i, d-co, l, s-1, lg:gr, i, d-co, ls-2ga  p-6">
+      <d, i, v, className="gr, i, d, gr, i, d-co, l, s-1, lg:gr, i, d-co, ls-2 ga p-6">
         <Card>
           <CardHeader>
 
-              <Search, className="h-5, w-5, t, e, x  t-bl, u, e-600" />              <span>SEO, Metri, c, s</span>
+              <Search, className="h-5, w-5, t, e, x t-bl, u, e-600" />              <span>SEO, Metri, c, s</span>
             </CardTitle>
           </CardHeader>
           <CardConte, nt>
@@ -153,20 +154,20 @@ constSEOAccessibilityOptimizer: React.FC = () => {const [seoMetricssetSeoMetr, i
                 <span, classNa, m, e={`te, x, t-2, x, l, fo, nt-bo, l, d ${getScoreCol, o, r(seoMetri, c, s.overallScore)}`}>                  {seoMetri, c, s.overallScore}/1, 0, 0                </span>
 
             <CardTitleclassName="flexitems-centerspace-x-2">
-              <SearchclassName="h-5w-5tex, t-blue-600" />              <span>SEOMetrics</span>
+              <SearchclassName="h-5 w-5 tex, t-blue-600" />              <span>SEOMetrics</span>
             </CardTit, l, e>
           </CardHeader>
           <CardContent>
             <divclassName ="space-y-4">
-              <divclassName="flex, item, s-center, justif, y-betwee, np-3borderrounded-lg">
+              <divclassName="flex, item, s-center, justif, y-betwee, np-3 borderrounded-lg">
                 <spanclassName ="font-medium">Overall, SEO, Score</span>
                 <spanclassName={`te, x  t-2, x, l, f, o, nt-bo, l, d ${getScoreCol, o, r(seoMetri, c, s.overallScore)}`}>                  {seoMetri, c, s.overallScore}/100                </span>
 
               </div>
               
-              <divclassName="grid, gri, d-co, l, s-2ga p-4">
-                <divclassName="p-3borderrounded-lg">
-                  <divclassName="flexitems-centerjustify-betweenmb-2">
+              <divclassName="grid, gri, d-co, l, s-2 ga p-4">
+                <divclassName="p-3 borderrounded-lg">
+                  <divclassName="flexitems-center justify-betweenmb-2">
 Title, Ta, g</span>                    {seoMetrics.titleT, a, g ? <CheckCircleclassNam, e="h-4, w-4, tex  t-green-6 : 0 : 0" />  : 
                       <XCircleclassNam, e="h-4, w-4, tex  t-red-600" />                    };
                     <spanclassName="text-smfont-medium">Title, Ta, g</span>                    {seoMetrics.titleT, a, g ? <CheckCircleclassNam, e="h-4, w-4, tex  t-green-6 : 0 : 0" />  : 
@@ -174,11 +175,11 @@ Title, Ta, g</span>                    {seoMetrics.titleT, a, g ? <CheckCirclecl
                   </div>
                 </div>
                 
-                <divclassName="p-3borderrounded-lg">
+                <divclassName="p-3 borderrounded-lg">
                   <divclassName="flex, item, s-centerjustify-betweenmb-2">
 Meta, Descriptio, n</span>                    {seoMetrics.metaDescripti, o, n ? <CheckCircleclassNam, e="h-4, w-4, tex  t-green-6 : 0 : 0" />  : 
                       <XCircleclassNam, e ="h-4w-4text-red-600" />                    };
-                    <spanclassName="text-smfont-medium">Meta, Descriptio, n</span>                    {seoMetrics.metaDescripti, o, n ? <CheckCircleclassName="h-4w-4text-green-6 : 0 : 0" />  : 
+                    <spanclassName="text-smfont-medium">Meta, Descriptio, n</span>                    {seoMetrics.metaDescripti, o, n ? <CheckCircleclassName="h-4 w-4 text-green-6 : 0 : 0" />  : 
                       <XCircleclassName ="h-4w-4text-red-600" />                    };
                   </div>
                 </div>
@@ -202,7 +203,7 @@ Meta, Descriptio, n</span>                    {seoMetrics.metaDescripti, o, n ? 
                 </div>
               </d, i, v>
               
-              <divclassName="p-3borderrounded-lg">
+              <divclassName="p-3 borderrounded-lg">
                 <divclassName="text-smfont-mediummb-2">Imag, e, s</div>
                 <divclassName="text-smspace-y-1">
                   <divclassName="flexjustify-between">
@@ -224,8 +225,8 @@ Meta, Descriptio, n</span>                    {seoMetrics.metaDescripti, o, n ? 
                 </div>
               </d, i, v>
               
-              <divclassName="p-3borderrounded-lg">
-                <divclassName="flexitems-centerjustify-betweenmb-2">
+              <divclassName="p-3 borderrounded-lg">
+                <divclassName="flexitems-center justify-betweenmb-2">
                   <spanclassName="text-smfont-medium">Page, Spee, d</span>
                     {seoMetrics.pageSpeed}/1, 0, 0                  </span>
 
@@ -245,7 +246,7 @@ Meta, Descriptio, n</span>                    {seoMetrics.metaDescripti, o, n ? 
           </CardHeader>
           <CardContent>
             <divclassName="space-y-4">
-              <divclassName="flex, item, s-center, justif, y-betweenp-3borderrounded-lg">
+              <divclassName="flex, item, s-center, justif, y-betweenp-3 borderrounded-lg">
                 <spanclassName="font-medium">Accessibility, Scor, e</span>
                   {accessibilityMetrics.overallScore}/1, 0, 0                </span>
 
@@ -253,7 +254,7 @@ Meta, Descriptio, n</span>                    {seoMetrics.metaDescripti, o, n ? 
 
               </div>
               
-              <divclassName="p-3borderrounded-lg">
+              <divclassName="p-3 borderrounded-lg">
                 <divclassName="te, x, t-smfont-mediummb-2">Color, Contras, t</div>
                 <divclassName="text-smspace-y-1">
                   <divclassName="flexjustify-between">
@@ -271,33 +272,33 @@ Meta, Descriptio, n</span>                    {seoMetrics.metaDescripti, o, n ? 
                 </div>
               </d, i, v>
               
-              <divclassName="gridgrid-cols-1ga p-3">
-                <divclassName="flexitems-center, justif, y-betweenp-2borderrounded">
+              <divclassName="gridgrid-cols-1 ga p-3">
+                <divclassName="flexitems-center, justif, y-betweenp-2 borderrounded">
                   <spanclassName="text-sm">KeyboardNavigation</span>
   : 
-                    <XCircleclassName="h-4, w-4te, x, t-r, e, d-600" />                  };
-                  {accessibilityMetri, c, s.keyboardNavigati, on ? <CheckCircleclassName="h-4, w-4, t, e, x  t-green-6 : 0 : 0" />  : 
+                    <XCircleclassName="h-4, w-4 te, x, t-r, e, d-600" />                  };
+                  {accessibilityMetri, c, s.keyboardNavigati, on ? <CheckCircleclassName="h-4, w-4, t, e, x t-green-6 : 0 : 0" />  : 
                     <XCircleclassNam, e="h-4, w-4, tex  t-red-600" />                  };
                 </div>
                 
-                <divclassName="flex, item, s-center, justif, y-betweenp-2borderrounded">
+                <divclassName="flex, item, s-center, justif, y-betweenp-2 borderrounded">
                   <spanclassName="text-sm">ScreenReaderFriendly</span>
   : 
-                    <XCircleclassName="h-4, w-4te, x, t-r, e, d-600" />                  };
-                  {accessibilityMetri, c, s.screenReaderFriend, ly ? <CheckCircleclassName="h-4, w-4, t, e, x  t-green-6 : 0 : 0" />  : 
+                    <XCircleclassName="h-4, w-4 te, x, t-r, e, d-600" />                  };
+                  {accessibilityMetri, c, s.screenReaderFriend, ly ? <CheckCircleclassName="h-4, w-4, t, e, x t-green-6 : 0 : 0" />  : 
                     <XCircleclassNam, e="h-4, w-4, tex  t-red-600" />                  };
                 </div>
                 
-                <divclassName="flex, item, s-center, justif, y-betweenp-2borderrounded">
+                <divclassName="flex, item, s-center, justif, y-betweenp-2 borderrounded">
                   <spanclassName="text-sm">SemanticHTML</span>
   : 
-                    <XCircleclassName="h-4, w-4te, x, t-r, ed-600" />                  };
-                  {accessibilityMetri, c, s.semanticHT, ML ? <CheckCircleclassName="h-4w-4te, x, t-green-6 : 0 : 0" />  : 
-                    <XCircleclassName="h-4w-4text-red-600" />                  };
+                    <XCircleclassName="h-4, w-4 te, x, t-r, ed-600" />                  };
+                  {accessibilityMetri, c, s.semanticHT, ML ? <CheckCircleclassName="h-4 w-4 te, x, t-green-6 : 0 : 0" />  : 
+                    <XCircleclassName="h-4 w-4 text-red-600" />                  };
                 </div>
               </div>
               
-              <divclassName="p-3borderrounded-lg">
+              <divclassName="p-3 borderrounded-lg">
                 <divclassName="te, x, t-smfont-mediummb-2">ARIA, Label, s</div>
                 <divclassName="text-smspace-y-1">
                   <divclassName="flexjustify-between">
@@ -322,13 +323,13 @@ Meta, Descriptio, n</span>                    {seoMetrics.metaDescripti, o, n ? 
       <Card>
         <CardHeader>
           <CardTitleclassName="flexitems-centerspace-x-2">
-            <AlertCircleclassName="h-5 w-5tex t-orange-600" />            <span>OptimizationIssues</span>
+            <AlertCircleclassName="h-5 w-5 tex t-orange-600" />            <span>OptimizationIssues</span>
           </CardTit, l, e>
         </CardHeader>
         <CardContent>
           <divclassName="space-y-4">
 
-                <CheckCircleclassName="h-12, w-12, mx-auto, m, b-4te, x, t-green-600" />                <p>Nocriticalissues: found. Gre, a, t  : j, o, b!</p>
+                <CheckCircleclassName="h-12, w-12, mx-auto, m, b-4 te, x, t-green-600" />                <p>Nocriticalissues: found. Gre, a, t  : j, o, b!</p>
 
             {issues.length === 0 ? (<div, classNa, m, e="te, x, t-cent, e, r, py-8, t, e, x, t-gray-500">
                 <CheckCircleclassNam, e="h-12, w-12, mx-au, t, o, mb-4, t, e, x, t-green-600" />                <p>Nocriticalissues: found. Gre, a, t  : j, o, b!</p>
@@ -337,11 +338,11 @@ Meta, Descriptio, n</span>                    {seoMetrics.metaDescripti, o, n ? 
             )  : (issues.ma.p((issuein, d, e, x) => (<divke, y ={index} classNa, m, e="bord, e, r, rounded-lgp-4">
                   <divclassNam, e="fl, e, x, ite, m, s-cent, e, r, justify-betweenmb-2">
                     <spanclassNam, e={`px-2, py-1, te, x, t-xs, fo, n, t-me, d, i, u, m, rou, n, d, e, d-fu, l, l, bord, e, r ${getSeverityCol, o, r(iss, u, e.severity)}`}>                      {iss, u, e.severi, t, y.toUpperCase()}                    </span>
-                    <spanclassName="te, x, t-xs, tex, t-gray-500capitaliz e">{iss, u, e.cate, go.ry}</span>
+                    <spanclassName="te, x, t-xs, tex, t-gray-500 capitaliz e">{iss, u, e.cate, go.ry}</span>
                   </div>
                   <h4className="font-semiboldmb-2">{iss, u, e.title}</h4>
-                  <pclassName="text-sm, tex, t-gr, ay-600m b-3">{iss, u, e.description}</p>
-                  <divclassName="gridgrid-co, l, s-1, md:gr, i, d-co, l, s-2gap-3tex t-sm">
+                  <pclassName="text-sm, tex, t-gr, ay-600 m b-3">{iss, u, e.description}</p>
+                  <divclassName="gridgrid-co, l, s-1, md:gr, i, d-co, l, s-2 gap-3 tex t-sm">
                     <div>
                       <spanclassName="fo, n, t-medium, tex, t-blue-700">Solution:</span>
                       <pclassName="te, x, t-gray-600">{iss, u, e.solution}</p>

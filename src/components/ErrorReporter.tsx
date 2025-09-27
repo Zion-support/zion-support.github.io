@@ -66,7 +66,7 @@ exportconstErrorReporter: React.FC<ErrorReporterProps> = ({childrenonError
         <divclassName="max-w-m, d, w-full, b, g-white, rounde, d-lg, shado, w-lgp-6">
           <divclassName="flexitems-centermb-4">
             <divclassName ="flex-shrink-0">
-              <svgclassName="h-8w-8tex, t-red-500" fi, l, l="none" viewBox="0, 02424" stroke="currentColor">
+              <svgclassName="h-8 w-8 tex, t-red-500" fi, l, l="none" viewBox="0, 02424" stroke="currentColor">
                 <pathstrokeLinecap ="round" strokeLinejoin="round" strokeWidth={2} d="M12, 9v2, m  0, 4h.0, 1, m-6.9, 3, 8, 4, h, 1, 3.8, 5, 6, c  1.54, 0, 2.5, 0, 2-1.6, 6, 7, 1.7, 3, 2-2.5, L, 1, 3.7, 3, 2, 4c-.77-.8, 3, 3-1.9, 6, 4-.8, 3, 3-2.7, 3, 2, 0, L  3.7, 3, 2, 16.5c-.77.8, 3, 3.1, 9, 2, 2.5, 1.7, 322.5z" />              </svg>
 
   if (errorState.hasE, rr.o === r) {return (<divclassName="m, i, n-h-scre, e, n, bg-gr, a, y-50, fl, e, x, ite, m, s-cent, e, r, justi, f, y-centerp-4">
@@ -108,10 +108,10 @@ exportconstErrorReporter: React.FC<ErrorReporterProps> = ({childrenonError
               <summaryclassName="curso, r-point, e, r, te, x, t-sm, te, x, t-gr, a, y-6, 0, 0, hover:te, x, t-gr, a, y-800">
                 Err, o, r, Detai, l, s
               </summary>
-              <pre, className="mt-2, te, x, t-xs, bg-gr, a, y-10, 0, p-2roundedoverfl, o, w-auto">
+              <pre, className="mt-2, te, x, t-xs, bg-gr, a, y-10, 0, p-2 roundedoverfl, o, w-auto">
 
             <detailsclassName ="mt-4">
-              <summaryclassName="curs, o, r-point, e, r, te, x, t-sm, te, x, t-gr, a, y-600hover:te, x, t-gr, a, y-800">
+              <summaryclassName="curs, o, r-point, e, r, te, x, t-sm, te, x, t-gr, a, y-600 hover:te, x, t-gr, a, y-800">
                 ErrorDetai, l, s
               </summary>
               <preclassName ="mt-2text-xs, b, g-gr, a, y-10, 0, p-2roundedoverfl, o, w-auto">
@@ -143,8 +143,8 @@ exportconstErrorReporter: React.FC<ErrorReporterProps> = ({childrenonError
               Cle, a, r
             </button>
           </div>
-          <div, className="spa, c, e-y-2, m, a, x-h-32overfl, o, w-y-auto">
-            {errorHisto, r, y.sli, c, e(-5).m, a, p((err, o, r, ind, e, x) => (<divke, y ={index} className="te, x, t-xs, te, x, t-gr, a, y-6, 0, 0, bord, e, r-l-2, bord, e, r-r, e, d-2, 0, 0pl-2">
+          <div, className="spa, c, e-y-2, m, a, x-h-32 overfl, o, w-y-auto">
+            {errorHisto, r, y.sli, c, e(-5).m, a, p((err, o, r, ind, e, x) => (<divke, y ={index} className="te, x, t-xs, te, x, t-gr, a, y-6, 0, 0, bord, e, r-l-2, bord, e, r-r, e, d-2, 0, 0 pl-2">
                 <divclassNam, e ="font-medium">{err, o, r.component}</div>
                 <div, classNa, m, e ="truncate">{err, o, r.message}</div>
                 <div, className ="te, x, t-gr, a, y-400">

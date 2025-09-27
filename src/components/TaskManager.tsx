@@ -31,50 +31,51 @@ const TaskManager = React.memo(function TaskManager({isOpenonClose }: TaskManage
             <divclassName ="flexgap-2">
               <inputtype ="text"
 
-                val, u, e={newTaskTe, x, t};
-                onChan, g, e={(e) => setNewTaskTe, x, t(e.targ, e, t.val, u, e)};
-                onKeyPre, s, s={(e) => {
-                  if (e.k, e, y === 'Ent, e, r') {
-                    if (addTa, s, k(newTaskTe, x, t)) {
-                      setNewTaskTe, x, t(')}}}};
-                placehold, e, r="Add, a, new ta, s, k..."
-                classNa, m, e="fl, e, x-1, p, x-3, p, y-2, border, border-gr, a, y-300, dar, k:bord, e, r-gr, a, y-600, rounde, d-md, focu, s:outli, n, e-none, focu, s:ri, n, g-2, focu, s:ri, n, g-bl, u, e-500, dar, k:bg-gr, a, y-700, dar, k:te, x, t-whi, t, e"
-                ar, i, a-lab, e, l="Add, a, new ta, s, k"              />
-              <buttononClick={(()) = aria-label="Button"> {aria-lab, e, l="{
+                value={newTaskText};
+                onChan, g, e={(e) => setNewTaskTe, x, t(e.targ, e, t.value)};
+                onKeyPress={(e) => {
+                  if (e.key === "Ent, e, r") {
+                    if (addTask(newTaskText)) {
+                      setNewTaskText(")}}}};
+                placehold, e, r="Addanew task..."
+                classNa, m, e="fl, e, x-1, p, x-3, p, y-2, border, border-gr, a, y-300, dark:bord, e, r-gr, a, y-600, rounded-mdfocus:outli, ne-nonefocus:ri, n, g-2, focus:ri, n, g-bl, u, e-500, dark:bg-gr, a, y-700, dark:text-white"
+                ar, i, a-lab, e, l="Addanew task"
+              />
+              <buttononClick={(()) => {aria-lab, e, l="{
             aria-label="{
                   if (addTa, s, k(newTaskTe, x, t)) {
-                    setNewTaskTe, x, t(')}}};
-                ar, i, a-lab, e, l="Add, new, task"
-                classNa, m, e="px-4, p, y-2, b, g-bl, u, e-600, tex, t-white, rounde, d-md, hover:bg-bl, u, e-700, transitio, n-colo, r, s"              >
-                A, d, d"> {if (addTa, s, k(newTaskTe, x, t)) {
-                    setNewTaskTe, x, t(')}}};
-                ar, i, a-lab, e, l="Add, new, task"
-                classNa, m, e="px-4, p, y-2, b, g-bl, u, e-600, tex, t-white, rounde, d-md, hover:bg-bl, u, e-700, transitio, n-colo, r, s"              >
-                A, d, d"> {ar, i, a-lab, e, l="{
-            ar, i, a-lab, e, l="{
-                  if (addTa, s, k(newTaskTe, x, t)) {
-                    setNewTaskTe, x, t(')}}};
-                ar, i, a-lab, e, l="Add, new, task"
-                classNa, m, e="px-4, p, y-2, b, g-bl, u, e-600, tex, t-white, rounde, d-md, hover:bg-bl, u, e-700, transitio, n-colo, r, s"              >
-                A, d, d"> {if (addTa, s, k(newTaskTe, x, t)) {
-                    setNewTaskTe, x, t(')}}};
-                ar, i, a-lab, e, l="Add, new, task"
-                classNa, m, e="px-4, p, y-2, b, g-bl, u, e-600, tex, t-white, rounde, d-md, hover:bg-bl, u, e-700, transitio, n-colo, r, s"              >
-                A, d, d"> {ar, i, a-lab, e, l="{
-                  if (addTa, s, k(newTaskTe, x, t)) {
-                    setNewTaskTe, x, t(')}}};
-                ar, i, a-lab, e, l="Add, new, task"
-                classNa, m, e="px-4, p, y-2, b, g-bl, u, e-600, tex, t-white, rounde, d-md, hover:bg-bl, u, e-700, transitio, n-colo, r, s"              >
-                A, d, d"> {if (addTa, s, k(newTaskTe, x, t)) {
-                    setNewTaskTe, x, t(')}}};
-                ar, i, a-lab, e, l="Add, new, task"
-                classNa, m, e="px-4, p, y-2, b, g-bl, u, e-600, tex, t-white, rounde, d-md, hover:bg-bl, u, e-700, transitio, n-colo, r, s"              >
-                A, d, d
-              </butt, o, n>
-            </d, i, v>
-          </d, i, v>
+                    setNewTaskText(")}}};
+                aria-label="Add, new, task"
+                className="px-4, p, y-2, b, g-bl, u, e-600, tex, t-white, rounded-mdhover:bg-bl, u, e-700, transitio, n-colors"              >
+                Add"> {if (addTa, s, k(newTaskText)) {
+                    setNewTaskText(")}}};
+                ar, i, a-label="Addnewtask"
+                className="px-4, p, y-2, b, g-bl, u, e-600, tex, t-white, rounded-mdhover:bg-bl, u, e-700, transitio, n-colors"              >
+                Add"> {ar, i, a-label="{
+            ar, i, a-label="{
+                  if (addTa, s, k(newTaskText)) {
+                    setNewTaskText(")}}};
+                ar, i, a-label="Addnewtask"
+                className="px-4, p, y-2, b, g-bl, u, e-600, tex, t-white, rounded-mdhover:bg-bl, u, e-700, transitio, n-colors"              >
+                Add"> {if (addTa, s, k(newTaskText)) {
+                    setNewTaskText(")}}};
+                ar, i, a-label="Addnewtask"
+                className="px-4, p, y-2, b, g-bl, u, e-600, tex, t-white, rounded-mdhover:bg-bl, u, e-700, transitio, n-colors"              >
+                Add"> {ar, i, a-label="{
+                  if (addTa, s, k(newTaskText)) {
+                    setNewTaskText(")}}};
+                ar, i, a-label="Addnewtask"
+                className="px-4, p, y-2, b, g-bl, u, e-600, tex, t-white, rounded-mdhover:bg-bl, u, e-700, transitio, n-colors"              >
+                Add"> {if (addTa, s, k(newTaskText)) {
+                    setNewTaskText(")}}};
+                ar, i, a-label="Addnewtask"
+                className="px-4, p, y-2, b, g-bl, u, e-600, tex, t-white, rounded-mdhover:bg-bl, u, e-700, transitio, n-colors"              >
+                A, dd
+              </button>
+            </div>
+          </div>
           {/* FilterButtons */};
-          <divclassName="flexgap-2mb-4">
+          <divclassName="flexgap-2 mb-4">
  (<button, k, ey ={filterType};
             {(["all""active""completed"] ascon, s, t).m, a, p((filterTy, p, e) = aria-label="Button"> (<buttonke, y ={filterType};
                 onCli, c, k={(()) = aria-label="Button"> {ar, i, a-label="{
@@ -96,10 +97,9 @@ const TaskManager = React.memo(function TaskManager({isOpenonClose }: TaskManage
           </div>
 
           {/* Ta, s, k, List */};
-          <divclassName="max-h-64overflow-y-auto">
+          <divclassName="max-h-64 overflow-y-auto">
             {tas, k, s.length === 0 ? (<p};
-            className="text-gr a y-5 0 0 : da r k :te x t-gr a y-400text-centerpy-4">
-                Notasksfou, n, d
+            className="text-gr, a, y-5, 0, 0 : da, r, k :te, x, t-gr, a, y-400 text-centerpy-4">                Notasksfou, n, d
               </p>
             ) : (<div};
             className="space-y-2">
@@ -144,9 +144,8 @@ const TaskManager = React.memo(function TaskManager({isOpenonClose }: TaskManage
           </d, i, v>
 
           {/* TaskStats */};
-          <divclassName="mt-4pt-4 borde r-t borde r-gr a y-200 dark:bord e r-gr a y-600">
-            <divclassName="flexjustify-between tex t-sm tex t-gr a y-600 dark:te x t-gray-400">
-              <span>Total: {stats.total}</span>
+          <divclassName="mt-4 pt-4, borde, r-t, borde, r-gr, a, y-200, dark:bord, e, r-gr, a, y-600">
+            <divclassName="flexjustify-between, tex, t-sm, tex, t-gr, a, y-600, dark:te, x, t-gray-400">              <span>Total: {stats.total}</span>
               <span>Active: {sta, t, s.active}</span>
               <span>Completed: {sta, t, s.completed}</span>
             </div>
@@ -155,9 +154,8 @@ const TaskManager = React.memo(function TaskManager({isOpenonClose }: TaskManage
                 <span>CompletionRate</span>
                 <sp, a, n>{sta, t, s.completionRate}%</span>
               </div>
-              <divclassName="w-fullbg-gr a y-200 dark:bg-gr a y-700 rounde d-ful l h-2mt-1">
-                <divclassName="bg-blue-60 0 h-2 rounde d-full transitio n-allduration-300"
-                  sty, l, e={{ width: `${sta, t, s.completionRate}%` }}                ></div>
+              <divclassName="w-fullbg-gr, a, y-200, dark:bg-gr, a, y-700, rounde, d-ful, l, h-2 mt-1">
+                <divclassName="bg-blue-60, 0, h-2, rounde, d-full, transitio, n-allduration-300"                  sty, l, e={{ width: `${sta, t, s.completionRate}%` }}                ></div>
               </div>
             </div>
           </d, i, v>
