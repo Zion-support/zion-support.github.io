@@ -22,17 +22,29 @@ export default defineConfig({
     terserOptions: {
       compress: {
         drop_console: true,
-        drop_debugger: true
+        drop_debugger: true,
+        pure_funcs: ['console.log', 'console.info', 'console.debug']
       }
-    }
+    },
+    target: 'esnext',
+    cssCodeSplit: true,
+    assetsInlineLimit: 4096
   },
   server: {
     port: 3000,
     hmr: {
       overlay: false
-    }
+    },
+    cors: true
   },
   optimizeDeps: {
-    include: ['react', 'react-dom', 'react-router-dom']
+    include: ['react', 'react-dom', 'react-router-dom'],
+    exclude: ['@vite/client', '@vite/env']
+  },
+  esbuild: {
+    target: 'esnext',
+    minifyIdentifiers: true,
+    minifySyntax: true,
+    minifyWhitespace: true
   }
 })
