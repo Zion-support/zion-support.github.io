@@ -4,7 +4,7 @@ import Link from 'next/link';
 import SEO from '../src/components/SEO';
 import { useAnalytics } from '../src/hooks/useAnalytics';
 
-export default function Contact(): JSX.Element {
+export default function Contact(): React.JSX.Element {
   const [formData, setFormData] = useState({
     name: '',
     email: '',

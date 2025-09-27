@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { blogPosts } from '../src/data/blogPosts';
 import { useAnalytics } from '../src/hooks/useAnalytics';
 
-export default function Blog(): JSX.Element {
+export default function Blog(): React.JSX.Element {
   const [selectedCategory, setSelectedCategory] = useState('All');
 
   const { trackClick } = useAnalytics();

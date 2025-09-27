@@ -2,7 +2,7 @@ import React from "react";
 import Head from "next/head";
 import { useState } from "react";
 import SEO from "../src/components/SEO";
-const Dashboard = React.memo(function Dashboard(): JSX.Element {
+const Dashboard = React.memo(function Dashboard(): React.JSX.Element {
 	const [isRealTime, setIsRealTime] = useState(false);
 
 

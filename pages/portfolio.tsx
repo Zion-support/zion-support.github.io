@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import { usePageView, useAnalytics } from "../src/hooks/useAnalytics";
 
-export default function Portfolio(): JSX.Element {
+export default function Portfolio(): React.JSX.Element {
 	const [selectedProject, setSelectedProject] = useState<number | null>(null);
 
 	useEffect(() => {

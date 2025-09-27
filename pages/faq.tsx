@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { usePageView, useAnalytics } from "../src/hooks/useAnalytics";
 
-export default function FAQ(): JSX.Element {
+export default function FAQ(): React.JSX.Element {
 	const [openItems, setOpenItems] = useState<Set<number>>(new Set());
 	const [searchTerm, setSearchTerm] = useState("");
 

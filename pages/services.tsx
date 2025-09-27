@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { usePageView, useAnalytics } from "../src/hooks/useAnalytics";
 
-export default function Services(): JSX.Element {
+export default function Services(): React.JSX.Element {
 	const [selectedService, setSelectedService] = useState<string | null>(null);
 
 	// Analytics tracking

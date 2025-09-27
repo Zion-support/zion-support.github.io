@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import SEO from "../src/components/SEO";
-export default function Home(): JSX.Element {
+export default function Home(): React.JSX.Element {
 
 	const features = [
 		{

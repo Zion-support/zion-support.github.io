@@ -3,7 +3,7 @@ import Head from "next/head";
 import Link from "next/link";
 import { usePageView } from "../src/hooks/useAnalytics";
 
-export default function PrivacyPolicy(): JSX.Element {
+export default function PrivacyPolicy(): React.JSX.Element {
 	// Analytics tracking
 	usePageView("privacy-policy");
 

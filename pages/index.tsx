@@ -6,7 +6,7 @@ import { motion, useInView } from "framer-motion";
 // import { AnimatePresence } from "framer-motion";
 // import dynamic from "next/dynamic";
 
-const Home = React.memo(function Home(): JSX.Element {
+const Home = React.memo(function Home(): React.JSX.Element {
 	// const [isVisible, setIsVisible] = useState(false);
 	const [performanceMetrics, setPerformanceMetrics] = useState(null);
 	const [isLoading, setIsLoading] = useState(true);

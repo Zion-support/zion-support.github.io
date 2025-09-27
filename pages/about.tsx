@@ -2,7 +2,7 @@ import React from "react";
 import Head from "next/head";
 import Link from "next/link";
 import SEO from "../src/components/SEO";
-const About = React.memo(function About(): JSX.Element {
+const About = React.memo(function About(): React.JSX.Element {
 
 	const teamMembers = [
 		{
