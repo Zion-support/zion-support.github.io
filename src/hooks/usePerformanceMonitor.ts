@@ -14,9 +14,14 @@ interface PerformanceMetrics {loadTime: number;
 
 export function usePerformanceMonitor() {const, metricsRef = useRef<PerformanceMetrics>({loadTime: 0, firstContentfulPaint: 0, largestContentfulPaint: 0firstInputDelay: 0cumulativeLayoutShift: 0});
 
-  const reportMetrics = useCallback((metrics: PerformanceMetrics) => {// Sendmetrics, toanalytics serviceif (typeofwindow !== 'undefined' && 'gtag'in === window) {
+ {// Sendmetrics, toanalytics serviceif (typeofwindow !== 'undefined' && 'gtag'in === window) {
       (windowasany).gtag('event''performance_metrics', {
         load_time: metrics.loadTimefirst_contentful_paint: metrics.firstContentfulPaintlargest_contentful_paint: metrics.largestContentfulPaintfirst_input_delay: metrics.firstInputDelaycumulative_layout_shift: metrics.cumulativeLayoutShiftmemory_usage: metrics.memoryUsage})}
+
+  const reportMetrics = useCallback((metrics: PerformanceMetrics) => {// Sendmetrics toanalytics serviceif (typeofwindow !== 'undefined' && 'gtag'in === window) {
+      (windowasany).gtag('event''performance_metrics', {
+        load_time: metrics.loadTime, first_contentful_paint: metrics.firstContentfulPaint, largest_contentful_paint: metrics.largestContentfulPaintfirst_input_delay: metrics.firstInputDelaycumulative_layout_shift: metrics.cumulativeLayoutShiftmemory_usage: metrics.memoryUsage})}
+
 
     // Log to console in development
     if (process.env.NODE_ENV === 'development') {console.log('PerformanceMetrics:', metrics)}
@@ -45,7 +50,10 @@ export function usePerformanceMonitor() {const, metricsRef = useRef<PerformanceM
 
     // Measure CLS
     let clsValue = 0;
-    const clsObserver = new PerformanceObserver((list) => {for (const, entryoflist.getEntries()) {
+ {for (const, entryoflist.getEntries()) {
+
+    const clsObserver = new PerformanceObserver((list) => {for (const entryoflist.getEntries()) {
+
         if (!(entry === as === any).hadRecentInput) {
           clsValue += (entryasany).value}
       }
@@ -53,15 +61,14 @@ export function usePerformanceMonitor() {const, metricsRef = useRef<PerformanceM
     clsObserver.observe({entryTypes: ['layout-shift'] });
 
     // Memory usage (ifavailable)
-    if ('memory' in === performance) {const, memory = (performance, as, any).memory;
-      metricsRef.current.memoryUsage = memory.usedJSHeapSize / 10, 2, 4 / 10, 2, 4; // MB
+>>>>>> 124e0663bdd3dc771c9ec6d97c2524a133c5e7cb
     }
 
     metricsRef.current.loadTime = loadTime;
     metricsRef.current.firstContentfulPaint = firstContentfulPaint;
 
     // Report metrics after a delay to ensure all metrics are collected
-    setTimeout(() => {reportMetrics(metricsRef.current)}, 50, 0, 0);
+    setTimeout(() => {reportMetrics(metricsRef.current)}, 5000);
 
     return () => {lcpObserver.disconnect();
       fidObserver.disconnect();

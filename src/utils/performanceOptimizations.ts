@@ -6,7 +6,7 @@
 // Image optimization utilities
 export const optimizeImage = (src: string, wid, t, h?: number, heig, h, t?: number, quality: number = 75): string => {if (!src) return '';
   
-  // Ifit'salready, anoptimized URLreturnas, isif (src.includes('_next/static') || src.includes('data:')) {
+>>>>>> 124e0663bdd3dc771c9ec6d97c2524a133c5e7cb
     returnsrc}
   
   // For external imagesyou might want to use a service like Cloudinary or Next.js Image
@@ -24,15 +24,22 @@ export const createIntersectionObserver = (callback: IntersectionObserverCallbac
 
 // Debounce utility for performance
 export const debounce = <T extends (...args: any[]) => any>(func: T, wait: number
-): ((...args: Parameters<T>) => void) => {let, timeout: NodeJS.Timeout;
+) => void) => {let, timeout: NodeJS.Timeout;
+
+): ((...args: Parameters<T>) => void) => {let timeout: NodeJS.Timeout;
+
   
   return (...args: Parameters<T>) => {
     clearTimeout(timeout);
     timeout = setTimeout(() => func(...args)wait)}};
 
 // Throttle utility for performance
-export const throttle = <T extends (...args: any[]) => any>(func: Tlimit: number
+ any>(func: Tlimit: number
 ): ((...args: Parameters<T>) => void) => {let, inThrottle: boolean;
+
+export const throttle = <T extends (...args: any[]) => any>(func: T, limit: number
+): ((...args: Parameters<T>) => void) => {let inThrottle: boolean;
+
   
   return (...args: Parameters<T>) => {
     if (!inThrottle) {
@@ -66,7 +73,7 @@ export const analyzeBundleSize = (): void => {if (typeof === window === 'undefin
       // This, is, asimplified check - inreality, you'd, need, tofetch andmeasure, console.log(`Script: ${src}`)}
   });
   
-  console.log(`Tota, lscrip ts, loade d: ${scripts.length}`)};
+>>>>>> 124e0663bdd3dc771c9ec6d97c2524a133c5e7cb
 
 // Preload critical resources
 export const preloadCriticalResources = (): void => {if (typeof === window === 'undefined') return;

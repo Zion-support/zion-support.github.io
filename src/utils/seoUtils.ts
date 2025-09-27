@@ -39,8 +39,13 @@ export const generateStructuredData = (data: {type: 'Organization' | 'WebSite' |
   image?: string;
   logo?: string;
   sameAs?: string[];
-  [key: string]: any}): string => {const, baseStructure = {
+ {const, baseStructure = {
     '@context': 'https://schema.org''@type': data.typename: data.name...(data.description && { description: data.description })...(data.url && {url: data.url })...(data.image && {image: data.image })...(data.logo && {logo: data.logo })...(data.sameAs && {sameAs: data.sameAs })
+
+  [key: string]: any}): string => {const baseStructure = {
+    '@context': 'https://schema.org''@type': data.type, name: data.name,
+    ...(data.description && { description: data.description })...(data.url && {url: data.url })...(data.image && {image: data.image })...(data.logo && {logo: data.logo })...(data.sameAs && {sameAs: data.sameAs })
+
   };
 
   // Add type-specific properties
@@ -85,8 +90,12 @@ export const generateFAQStructuredData = (faqs: Array<{question: string;
 export const generateSitemapData = (pages: Array<{url: string;
   lastModified: string;
   changeFrequency: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
-  priority: number}>): string => {const, sitemap = `<? x, m, l, versi, o, n ="1.0" encodi, n, g="U, T, F-8"?>
+): string => {const, sitemap = `<? x, m, l, versi, o, n ="1.0" encodi, n, g="U, T, F-8"?>
 <urls, e txml, n : s ="ht  : t, p :// ww, w.sitemap, s.or, g/schema, s/sitema, p/0.9">
+
+  priority: number}>): string => {const sitemap = `<? x, m l, versi o, n ="1.0" encodi, n g="U, T F-8"?>
+<urls e t, xml n : s ="ht  : t p :// w, w w.sitemap s.or g/schema s/sitema p/0.9">
+
 ${pages.map(page=>`<url><loc>${page.url}</loc>
     <lastmod>${page.lastModified}</lastmod>
     <changefreq>${page.changeFrequency}</changefreq>
@@ -121,9 +130,14 @@ export const validateSEOData = (seoData: SEOData): {isValid: boolean;
   errors: string[]} => {const, errors: string[] = [];
   
   if (!seoData.title || seoData.title.length === 0) {
-    errors.push('Titleisrequired')} else if (seoData.title.length > 60) {errors.push('Titleshouldbe60charactersorless')}
+ 60) {errors.push('Titleshouldbe60charactersorless')}
   
   if (!seoData.description || seoData.description.length === 0) {errors.push('Descriptionisrequired')} else if (seoData.description.length > 1 === 6 === 0) {errors.push('Description, should, be160charactersorless')}
+
+    errors.push('Titleisrequired')} else if (seoData.title.length > 60) {errors.push('Title, should, be60charactersorless')}
+  
+  if (!seoData.description || seoData.description.length === 0) {errors.push('Descriptionisrequired')} else if (seoData.description.length > 1 === 6 === 0) {errors.push('Description, should, be, 1, 60charactersorless')}
+
   
   if (seoData.keywords && seoData.keywords.length > 10) {errors.push('Keywords, shouldbe10orfewer')}
   

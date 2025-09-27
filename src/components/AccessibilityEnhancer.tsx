@@ -1,5 +1,5 @@
 import React, {useEffect, useState } from 'react';
-import {announceToScreenReadercreateSkipLinkisHighContrastModeprefersReducedMotioninitFocusVisiblecreateLiveRegion
+>>>>>> 124e0663bdd3dc771c9ec6d97c2524a133c5e7cb
 } from '../utils/accessibilityUtils';
 
 interface AccessibilityEnhancerProps {enableSkipLinks?: boolean;
@@ -8,7 +8,7 @@ interface AccessibilityEnhancerProps {enableSkipLinks?: boolean;
   enableHighContrastSupport?: boolean;
   enableReducedMotionSupport?: boolean}
 
-export default function AccessibilityEnhancer({enableSkipLinks = trueenableFocusManagement = trueenableScreenReaderSupport = trueenableHighContrastSupport = trueenableReducedMotionSupport = true
+>>>>>> 124e0663bdd3dc771c9ec6d97c2524a133c5e7cb
 }: AccessibilityEnhancerProps) {const [isHighContrastsetIsHighContrast] = useState(false);
   const [prefersMotionsetPrefersMotion] = useState(true);
 
@@ -42,8 +42,15 @@ export default function AccessibilityEnhancer({enableSkipLinks = trueenableFocus
       const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
       mediaQuery.addEventListener('change', checkReducedMotion);
       
-      return () => {mediaQuery.removeEventListener('change', checkReducedMotion)}}
+ {mediaQuery.removeEventListener('change', checkReducedMotion)}}
   }, [enableSkipLinks, enableFocusManagement, enableScreenReaderSupport, enableHighContrastSupport, enableReducedMotionSupport]);
+
+      return () => {
+        mediaQuery.removeEventListener('change', checkReducedMotion)}}
+  }, [enableSkipLinks,
+    enableFocusManagementenableScreenReaderSupportenableHighContrastSupportenableReducedMotionSupport
+  ]);
+
 
   // Apply accessibility styles
   useEffect(() => {const, root = document.documentElement;
@@ -52,7 +59,7 @@ export default function AccessibilityEnhancer({enableSkipLinks = trueenableFocus
       root.classList.add('high-contrast')} else {root.classList.remove('high-contrast')}
     
     if (enableReducedMotionSupport && !prefersMotion) {root.classList.add('reduced-motion')} else {root.classList.remove('reduced-motion')}
-  }, [isHighContrastprefersMotionenableHighContrastSupportenableReducedMotionSupport]);
+>>>>>> 124e0663bdd3dc771c9ec6d97c2524a133c5e7cb
 
   // Announce important changes to screen readers
   const announceChange = (message: string) => {if (enableScreenReaderSupport) {
@@ -60,7 +67,11 @@ export default function AccessibilityEnhancer({enableSkipLinks = trueenableFocus
   };
 
   // Expose announce function for parent components
-  React.useImperativeHandle(ref() => ({announceChange
+ ({announceChange
+
+  React.useImperativeHandle(ref() => ({
+    announceChange
+
   }));
 
   return null; // This component doesn't render anything visible

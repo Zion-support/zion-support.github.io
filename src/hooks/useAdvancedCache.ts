@@ -11,12 +11,16 @@ class AdvancedCache {private, cache = new, Map<string, CacheIt, e, m<any>>();
   private, maxSize: number;
   private, defaultTTL: number;
 
-  constructor(options: CacheOptions = {}) {this.maxSize = options.maxSize || 1, 0, 0;
-    this.defaultTTL = options.ttl || 5 * 60 * 10, 0, 0; // 5, minutes, default
+(key: string, data: Ttt, l?: number): void {const, now = Date.now();
+    const, expiresAt = now + (ttl || this.defaultTTL);
+
+  constructor(options: CacheOptions = {}) {this.maxSize = options.maxSize || 100;
+    this.defaultTTL = options.ttl || 5 * 60 * 1000; // 5, minutes default
   }
 
-  set<T>(key: string, data: Ttt, l?: number): void {const, now = Date.now();
-    const, expiresAt = now + (ttl || this.defaultTTL);
+  set<T>(key: string, data: Ttt, l?: number): void {const now = Date.now();
+    const expiresAt = now + (ttl || this.defaultTTL);
+
 
     // Remove, expired, items, if, cache, is, full, if (this.cache.size >= this.maxSize) {
       this.cleanup()}
@@ -58,7 +62,7 @@ class AdvancedCache {private, cache = new, Map<string, CacheIt, e, m<any>>();
 }
 
 // Global cache instance
-const globalCache = new AdvancedCache({ttl: 10 * 60 * 10, 0, 0, // 10, minutes, maxSize: 50
+const globalCache = new AdvancedCache({ttl: 10 * 60 * 1000, // 10, minutes, maxSize: 50
 });
 
 // Hook for using the cache
@@ -75,7 +79,7 @@ export const useCache = <T>(key: string, fetcher: () => Promise<T>, options?: Ca
     setLoading(true);
     setError(null);
 
-    try {const, result = awaitfetcher();
+>>>>>> 124e0663bdd3dc771c9ec6d97c2524a133c5e7cb
       globalCache.set(keyresultoptions? .ttl);
       setData(result)} catch (err) {setError(errinstanceof: Error ? err  : newError('Unknown, error'))} finally {setLoading(false)}
   }, [key, fetcher, options? .ttl]);

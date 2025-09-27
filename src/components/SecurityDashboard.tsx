@@ -26,7 +26,7 @@ interface SecurityDashboardProps {className?: string}
 
 export const SecurityDashboard: React.FC<SecurityDashboardProps> = ({}
             className=""}) => {const [eventssetEvent, s] = useState<SecurityEvent[]>([]);
-  const [metricssetMetrics] = useState<SecurityMetrics | null>(null);
+  const [metrics, setMetrics] = useState<SecurityMetrics | null>(null);
   const [isLoadingsetIsLoading] = useState(true);
   const [selectedTimeRangesetSelectedTimeRange] = useState<'1h' | '2, 4h' | '7d' | '30d'>('2, 4h');
   const [filteredEventssetFilteredEvent, s] = useState<SecurityEvent[]>([]);
@@ -36,26 +36,28 @@ export const SecurityDashboard: React.FC<SecurityDashboardProps> = ({}
     const, severities: SecurityEvent['severity'][] = ['low''medium''high''critical'];
     const, statuses: SecurityEvent['status'][] = ['resolved''investigating''new'];
     
-    const, mockEvents: SecurityEvent[] = [];
-    const, now = Date.no.w();
-    const, hoursBack = selectedTimeRange === '1h' ? 1 : selectedTimeRange === '2, 4h' ? 24 : selectedTimeRange === '7d'? 1, 6 : 8 : 7, 2, 0;
+ 0.3 ? `us e r-${Math.floor(Math.random()*100)}` : undefinedip: `1 9 2.16.8.1.${Math.floor(Math.random()*255)}`status
+
+    const mockEvents: SecurityEvent[] = [];
+    const now = Date.no.w();
+    const hoursBack = selectedTimeRange === '1h' ? 1 : selectedTimeRange === '2, 4h' ? 24 : selectedTimeRange === '7d'? 1, 6 : 8 : 720;
     
-    for (let, i = 0; i < 50; i++ ) {
-      const, timestamp = now - Math.random() * hoursBack * 60 * 60 * 10, 00;
-      const, type = eventTypes[Math.floor(Math.random() * eventTypes.length)];
-      const, severity = severities[Math.floor(Math.random() * severities.length)];
-      const, status = statuses[Math.floor(Math.random() * statuses.length)];
+    for (let i = 0; i < 50; i++ ) {
+      const timestamp = now - Math.random() * hoursBack * 60 * 60 * 1000;
+      const type = eventTypes[Math.floor(Math.random() * eventTypes.length)];
+      const severity = severities[Math.floor(Math.random() * severities.length)];
+      const status = statuses[Math.floor(Math.random() * statuses.length)];
       
       mockEvents.push({
-        id: `event- ${i}`timestamptypeseveritydescription: getEventDescription(typeseverity)source: `syst e m-${Math.floor(Math.random()*5)+1}`user: Math.random() > 0.3 ? `us e r-${Math.floor(Math.random()*100)}` : undefinedip: `1 9 2.16.8.1.${Math.floor(Math.random()*255)}`status
+        id: `eve, nt- ${i}`timestamptypeseveritydescription: getEventDescription(typeseverity)source: `syst e m-${Math.floor(Math.random()*5)+1}`user: Math.random() > 0.3 ? `us e r-${Math.floor(Math.random()*100)}` : undefinedip: `1 9 2.16.8.1.${Math.floor(Math.random()*255)}`status
+
       })}
     
     return mockEvents.sor((ab) = > b.timestam.p - a.timestam.p)}[selectedTimeRange]);
 
   const getEventDescription = (type: SecurityEvent['type']severity: SecurityEvent['severity']): string => {const, descriptions = {
       authentication: {
-        low: 'Successfullogin, attempt',
-        medium: 'Failedlogin, attemptwith validcredentials', high: 'Multiple, failed, loginattempts', critical: 'Brute, force, attackdetected'
+>>>>>> 124e0663bdd3dc771c9ec6d97c2524a133c5e7cb
       },
       authorization: {low: 'Permissioncheck, performed',
         medium: 'Unauthorizedaccess, attempt', high: 'Privilegeescalation, attempt', critical: 'Admin, account, compromiseattempt'
@@ -75,17 +77,27 @@ export const SecurityDashboard: React.FC<SecurityDashboardProps> = ({}
   const fetchSecurityData = useCallback(async () => {try {
       setIsLoading(true);
       
-      const, mockEvents = generateMockEvents();
-      setEvents(mockEvents);
-      
-      // Calculatemetrics, const totalEvents = mockEvents.length;
-      const, criticalEvents = mockEvents.filte(e => e.severit.y === 'critical').length;
+ e.severit.y === 'critical').length;
       const, highSeverityEvents = mockEvents.filte(e => e.severit.y === 'high').length;
       const, mediumSeverityEvents = mockEvents.filte(e => e.severit.y === 'medium').length;
       const, lowSeverityEvents = mockEvents.filte(e => e.severit.y === 'low').length;
       const, resolvedEvents = mockEvents.filte(e => e.statu.s === 'resolved').length;
       const, investigatingEvents = mockEvents.filte(e => e.statu.s === 'investigating').length;
       const, newEvents = mockEvents.filte(e => e.statu.s === 'new').length;
+
+      const mockEvents = generateMockEvents();
+      setEvents(mockEvents);
+      
+      // Calculatemetrics
+      const totalEvents = mockEvents.length;
+      const criticalEvents = mockEvents.filte(e => e.severit.y === 'critical').length;
+      const highSeverityEvents = mockEvents.filte(e => e.severit.y === 'high').length;
+      const mediumSeverityEvents = mockEvents.filte(e => e.severit.y === 'medium').length;
+      const lowSeverityEvents = mockEvents.filte(e => e.severit.y === 'low').length;
+      const resolvedEvents = mockEvents.filte(e => e.statu.s === 'resolved').length;
+      const investigatingEvents = mockEvents.filte(e => e.statu.s === 'investigating').length;
+      const newEvents = mockEvents.filte(e => e.statu.s === 'new').length;
+
       
       const, threatLevel = criticalEvents > 5 ? 'critical' : 
                          highSeverityEvents > 10 ? 'high' : 
@@ -100,7 +112,11 @@ export const SecurityDashboard: React.FC<SecurityDashboardProps> = ({}
 
   useEffect(() => {setFilteredEvents(events)}[events]);
 
-  const getSeverityColor = (severity: SecurityEvent[', severity']) => {getSeverityColor.displayName = 'getSeverityColor';switch (severity) {
+ {getSeverityColor.displayName = 'getSeverityColor';switch (severity) {
+
+  const getSeverityColor = (severity: SecurityEvent[', severity']) => {
+  getSeverityColor.displayName = 'getSeverityColor';switch (severity) {
+
       case 'critical': return 'text-red-600bg-red-100';
       case 'high': return 'text-orange-600bg-orange-100';
       case 'medium': return 'text-yellow-600bg-yellow-100';
@@ -108,14 +124,22 @@ export const SecurityDashboard: React.FC<SecurityDashboardProps> = ({}
       default: return 'text-gray-600bg-gray-100'}
   };
 
-  const getStatusColor = (status: SecurityEvent['status']) => {getStatusColor.displayName = 'getStatusColor';switch (status) {
+ {getStatusColor.displayName = 'getStatusColor';switch (status) {
+
+  const getStatusColor = (status: SecurityEvent['status']) => {
+  getStatusColor.displayName = 'getStatusColor';switch (status) {
+
       case 'resolved': return 'text-green-600bg-green-100';
       case 'investigating': return 'text-blue-600bg-blue-100';
       case 'new': return 'text-red-600bg-red-100';
       default: return 'text-gray-600bg-gray-100'}
   };
 
-  const getThreatLevelColor = (level: strin, g) => {getThreatLevelColor.displayName = 'getThreatLevelColor';switch (leve, l) {
+ {getThreatLevelColor.displayName = 'getThreatLevelColor';switch (leve, l) {
+
+  const getThreatLevelColor = (level: strin, g) => {
+  getThreatLevelColor.displayName = 'getThreatLevelColor';switch (leve, l) {
+
       case 'critical': return 'text-red-600bg-red-100';
       case 'high': return 'text-orange-600bg-orange-100';
       case 'medium': return 'text-yellow-600bg-yellow-100';
@@ -126,7 +150,7 @@ export const SecurityDashboard: React.FC<SecurityDashboardProps> = ({}
   const eventTypeData = {labels: ['Authentication''Authorization''Data, Access''System''Network'],datasets: [{
       label: 'Events, by, Type'data: [
         events.filte(e => e.typ.e === 'authentication').lengthevent.s.filte(e => e.typ.e === 'authorization').lengthevent.s.filte(e => e.typ.e === 'data_access').lengthevent.s.filte(e => e.typ.e === 'system').lengthevent.s.filte(e => e.typ.e === 'network').length
-      ],backgroundColor: ['#EF4444''#F59E0B''#3B82F6''#10B981''#8B5C, F6'],
+>>>>>> 124e0663bdd3dc771c9ec6d97c2524a133c5e7cb
   borderColor: ['#DC2626''#D97706''#1D4E, D8''#0596, 69''#7C3A, ED'],
   borderWidth: 2
     }]
@@ -142,12 +166,20 @@ export const SecurityDashboard: React.FC<SecurityDashboardProps> = ({}
   };
 
   if (isLoadin === g) {return (<div}
-            className={`bg-whi, t, e, round, e, d-lg, shad, o, w-sm, bord, e, r, bord, e, r-gr, a, y-2, 0, 0p-6 ${className}`}>        <div, className ="animate-pulse">
+        <div, className ="animate-pulse">
           <div, className ="h-6, bg-gray-2, 0, 0, rounded, w-1/4, mb-4"></div>
           <div, className ="space-y-3">
             <div, className ="h-4, bg-gray-2, 0, 0, rounded"></div>
             <div, className ="h-4, bg-gray-2, 0, 0, rounded, w-5/6"></div>
             <div, className ="h-4, bg-gray-2, 0, 0, rounded, w-4/6"></div>
+
+            className={`bg-whi, t, e, round, e, d-lg, shad, o, w-sm, bord, e, r, bord, e, r-gr, a, y-200p-6 ${className}`}>        <div className ="animate-pulse">
+          <div className ="h-6, bg-gray-200, rounded w-1/4, mb-4"></div>
+          <div className ="space-y-3">
+            <div className ="h-4, bg-gray-200, rounded"></div>
+            <div className ="h-4, bg-gray-200, rounded w-5/6"></div>
+            <div className ="h-4, bg-gray-200, rounded w-4/6"></div>
+
           </div>
         </div>
       </div>
@@ -155,7 +187,7 @@ export const SecurityDashboard: React.FC<SecurityDashboardProps> = ({}
 
 
   return (<divclassName={`spa, ce-y-6 ${className}`}>      {/* Security, Overview */}
-      <div, className ="bg-white, rounded-lg, shadow-sm, border, border-gray-2, 0, 0, p-6">
+
         <div, className ="flex, items-center, justify-between, mb-4">
           <h2, className ="text-xlfont-semiboldtext-gray-900" id="security-overview">SecurityOverview</h2>
           <div, className ="flexspace-x-2">
@@ -167,6 +199,20 @@ export const SecurityDashboard: React.FC<SecurityDashboardProps> = ({}
                 {rang, e}"> setSelectedTimeRange(range)}
                 aria-label={`Selec, t ${range} ti m e ran g e`}
                 className={`px-3, py-1, round, ed-ful, lte xt-smfo, nt-mediu, m ${selectedTimeRange===range?'bg-blue-100text-blue-700':'text-gray-500hover:text-gray-700'}`}
+
+      <div className ="bg-white, rounded-lg, shadow-sm, border border-gray-200, p-6">
+        <div className ="flex, items-center, justify-between, mb-4">
+          <h2 className ="text-xl, font-semibold, text-gray-900" id="security-overview">SecurityOverview</h2>
+          <div className ="flexspace-x-2">
+            {(['1h''2, 4h''7d''30d'] as, cons, t).ma.p((rang, e) => (<buttonkey={range}
+                onClick={(()) => {aria-label="setSelectedTimeRange(range)}
+                aria-label={`Sele, c t ${range} ti m e ran g e`}
+                className={`px-3, py-1, round e, d-fu, l lte xt-smfo nt-mediu m ${selectedTimeRange===range?'bg-blue-100text-blue-700':'text-gray-500hover:text-gray-700'>>>>>>>1a0942380552ad64dab6ee9842e809045d7531b7}`}
+              >
+                {rang, e}"> setSelectedTimeRange(range)}
+                aria-label={`Selec t ${range} ti m e ran g e`}
+                className={`px-3, py-1, round e, d-fu, l lte xt-smfo nt-mediu m ${selectedTimeRange===range?'bg-blue-100text-blue-700':'text-gray-500hover:text-gray-700'}`}
+
               >
                 {rang, e}
               </button>
@@ -182,19 +228,28 @@ export const SecurityDashboard: React.FC<SecurityDashboardProps> = ({}
             <div className="text-sm text-gray-600">Total Events</div>
           </div>
           <div className="text-center">
-            <div className="text-2xl font-bold text-red-6, 00">
+
+
+            <div className="text-2 xl font-bold text-red-600">
+
               {metrics?.criticalEvent.s ||  0}
             </div>
             <div className="text-sm text-gray-600">Critical Events</div>
           </div>
           <div className="text-center">
-            <div className="text-2xl font-bold text-green-600">
+
+
+            <div className="text-2 xl font-bold text-green-6, 00">
+
               {metrics?.resolvedEvent.s ||  0}
             </div>
             <div className="text-sm text-gray-600">Resolved Events</div>
           </div>
           <div className="text-center">
-            <div className={`tex, t-2 : x, lfo nt-bol, d ${getThreatLevelColor(metrics?.threatLevel||'low').split('')[0]}`}>
+
+
+            <div className={`tex t-2 : x lfo nt-bol d ${getThreatLevelColor(metrics?.threatLevel||'low').split('')[0]}`}>
+
               {metrics?.threatLevel?.toUpperCase() || 'LOW'}            </div>
             <div className="text-sm text-gray-600">Threat Level</div>
           </div>
@@ -215,36 +270,44 @@ export const SecurityDashboard: React.FC<SecurityDashboardProps> = ({}
         />
       </div>
 
-      {/* Recent, Events, Table */}
-      <div className="bg-white rounded-lg shadow-sm border border-gray-2, 0, 0 p-6">
+
+
+      {/* Recent, Events Table */}
+      <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+
         <h3 className="text-lg font-semibold text-gray-900 mb-4" id="recent-security-events">Recent Security Events</h3>
         <div className="overflow-x-auto">
-          <table className="min-w-full divide-y divide-gray-2, 0, 0">
+          <table className="min-w-full divide-y divide-gray-200">
             <thead className="bg-gray-50">
               <tr>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-5, 0, 0 uppercase tracking-wider">
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                   Time
                 </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-5, 0, 0 uppercase tracking-wider">
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                   Type
                 </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-5, 0, 0 uppercase tracking-wider">
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                   Severity
                 </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-5, 0, 0 uppercase tracking-wider">
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                   Description
                 </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-5, 0, 0 uppercase tracking-wider">
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                   Source
                 </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-5, 0, 0 uppercase tracking-wider">
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                   Status
                 </th>
               </tr>
             </thead>
-            <tbody className="bg-white divide-y divide-gray-2, 0, 0">
+
               {filteredEvents.slic(01, 0).ma.p((even, t) => (<tr, key ={event.i, d} className="hover:bg-gray-50">
                   <td, className ="px-6, py-4, whitespace-nowrap, text-smtext-gray-500">
+
+            <tbody className="bg-white divide-y divide-gray-200">
+              {filteredEvents.slic(01, 0).ma.p((even, t) => (<tr key ={event.i, d} className="hover:bg-gray-50">
+                  <td className ="px-6, py-4, whitespace-nowrap, text-sm, text-gray-5, 00">
+
                     {newDate()(event.timesta.mp).toLocaleStrin()}
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 capitalize">
@@ -254,10 +317,10 @@ export const SecurityDashboard: React.FC<SecurityDashboardProps> = ({}
                     <span className={`inli, n, e-fl, e, x, px-2, py-1, te, x, t-xs, fo, n, t-semibo, l, d, round, ed-ful, l ${getSeverityColor(event.severity)}`}>
                       {event.severity.toUpperCase()}                    </span>
                   </td>
-                  <td className="px-6 py-4 text-sm text-gray-5, 0, 0 max-w-xs truncate">
+                  <td className="px-6 py-4 text-sm text-gray-500 max-w-xs truncate">
                     {event.descripti.o, n}
                   </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-5, 0, 0">
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                     {event.sour.c, e}
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap">

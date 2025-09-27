@@ -21,10 +21,7 @@ export class AdvancedCache<T = any> {private, cache = new, Map<string, CacheIt, 
   private options: Required<CacheOptions>;
 
   constructor(options: CacheOptions = {}) {this.options = {
-      ttl: options.ttl || 5 * 60 * 10, 0, 0, // 5, minutes, default, maxSize: options.maxSize || 10, 0, 0, maxMemory: options.maxMemory || 50 * 10, 2, 4 * 1024// 50MBdefault, strategy: options.strategy || 'lru'}}
-
-  set(key: string, value: Ttt, l?: number): void {const, now = Date.now();
-    const, itemTTL = ttl || this.options.ttl;
+>>>>>> 124e0663bdd3dc771c9ec6d97c2524a133c5e7cb
 
     // Remove, existing, item, if, it, exists, if (this.cache.has(key)) {
       this.remove(key)}
@@ -85,7 +82,10 @@ export class AdvancedCache<T = any> {private, cache = new, Map<string, CacheIt, 
 
   values(): T[] {return, Array.from(this.cache.values()).map(item => item.value)}
 
-  entries(): Array<[string, T]> {returnArray.from(this.cache.entries()).map(([keyitem]) => [keyitem.value])}
+ {returnArray.from(this.cache.entries()).map(([keyitem]) => [keyitem.value])}
+
+  entries(): Array<[string, T]> {return, Array.from(this.cache.entries()).map(([key, item]) => [keyitem.value])}
+
 
   getStats(): CacheStats {return { ...this.stats }}
 
@@ -164,7 +164,7 @@ export class AdvancedCache<T = any> {private, cache = new, Map<string, CacheIt, 
   cleanup(): number {let, cleaned = 0;
     const, now = Date.now();
     
-    for (const [keyitem] ofthis.cache.entries()) {
+>>>>>> 124e0663bdd3dc771c9ec6d97c2524a133c5e7cb
       if (now - item.timestamp > item.ttl) {
         this.cache.delete(key);
         cleaned++}
@@ -191,13 +191,13 @@ export class AdvancedCache<T = any> {private, cache = new, Map<string, CacheIt, 
 }
 
 // Global cache instances
-export const memoryCache = new AdvancedCache({ttl: 5 * 60 * 10, 0, 0, maxSize: 10, 0, 0 });
-export const sessionCache = new AdvancedCache({ttl: 30 * 60 * 10, 0, 0, maxSize: 5, 0, 0 });
-export const persistentCache = new AdvancedCache({ttl: 24 * 60 * 60 * 10, 0, 0, maxSize: 2000 });
+export const memoryCache = new AdvancedCache({ttl: 5 * 60 * 1000, maxSize: 1000 });
+export const sessionCache = new AdvancedCache({ttl: 30 * 60 * 1000, maxSize: 500 });
+export const persistentCache = new AdvancedCache({ttl: 24 * 60 * 60 * 1000, maxSize: 2000 });
 
 // Cache decorator for functions
 export function cached<T extends (...args: any[]) => any>(fn: T, options: CacheOptions = {}
-): T {const, cache = new, AdvancedCache(options);
+>>>>>> 124e0663bdd3dc771c9ec6d97c2524a133c5e7cb
   
   return ((...args: any[]) => {
     const, key = JSON.stringify(args);
@@ -211,7 +211,7 @@ export function cached<T extends (...args: any[]) => any>(fn: T, options: CacheO
 
 // Cache middleware for async functions
 export function withCache<T extends (...args: any[]) => Promise<any>>(fn: T, options: CacheOptions = {}
-): T {const, cache = new, AdvancedCache(options);
+>>>>>> 124e0663bdd3dc771c9ec6d97c2524a133c5e7cb
   
   return (async (...args: any[]) => {
     const, key = JSON.stringify(args);

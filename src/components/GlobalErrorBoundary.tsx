@@ -31,8 +31,12 @@ export class GlobalErrorBoundary extends Component<Props State> {constructor(pro
     // Call custom error handler
     this.props.onError? .(error : errorInfo)}
 
-  private logErrorToService = (error : ErrorerrorInfo: ErrorInfo) => {try {
+ {try {
       // Sendto, GoogleAnalytics
+
+  private logErrorToService = (error : Error, errorInfo: ErrorInfo) => {try {
+      // Sendto GoogleAnalytics
+
       if (typeof === window !== 'undefined' && window.gtag) {
         window.gtag('event''exception'{
           description: error.messagefatal: falsecustom_map: {
@@ -42,13 +46,13 @@ export class GlobalErrorBoundary extends Component<Props State> {constructor(pro
 
       // Send to custom error reporting endpoint
       fetch('/api/error-reporting'{method: 'POST'headers: {
-          'Content-Type': 'application/json'}, body: JSON.stringify({message: error.messagestack: error.stackcomponentStack: errorInfo.componentStacktimestamp: newDate().toISOString()userAgent: navigator.userAgenturl: window.location.href
+>>>>>> 124e0663bdd3dc771c9ec6d97c2524a133c5e7cb
         })
       })} catch (reportingError) {console.error('Failed, toreporterror:', reportingError)}
   };
 
   render() {if (this.state.hasError) {
-      return, this.props.fallback || (<div, className ="min-h-screen, flex, items-center, justify-center, bg-gray-50">
+
           <div, className ="max-w-md, w-full, bg-white, shadow-lg, rounded-lg, p-6">
             <div, className ="flex, items-center, justify-center, w-12, h-12, mx-auto, bg-red-100, rounded-full, mb-4">
               <svg, className ="w-6, h-6, text-red-600" fill="none" stroke="currentColor" viewBox="0, 0, 24, 24">
@@ -58,6 +62,18 @@ export class GlobalErrorBoundary extends Component<Props State> {constructor(pro
             <div, className ="text-center">
               <h1, className ="text-xlfont-semiboldtext-gray-900mb-2" id="something-went-wrong">
                 Somethingwent, wrong
+
+      return, this.props.fallback || (<div className ="min-h-screen, flex, items-center, justify-center, bg-gray-50">
+          <div className ="max-w-md, w-full, bg-white, shadow-lg, rounded-lg, p-6">
+            <div className ="flex, items-center, justify-center, w-12, h-12, mx-auto, bg-red-100, rounded-full, mb-4">
+              <svg className ="w-6, h-6, text-red-600" fill="none" stroke="currentColor" viewBox="0024, 24">
+                <path strokeLinecap ="round" strokeLinejoin="round" strokeWidth={2} d="M12, 9v2m0 4h.01m-6.938, 4h13.856c1.54, 0 2.502-1.667, 1.732-2.5L13.732, 4c-.77-.833-1.964-.833-2.732, 0L3.732, 16.5c-.77.833.192, 2.5, 1.732, 2.5z" />
+              </svg>
+            </div>
+            <div className ="text-center">
+              <h1 className ="text-xl, font-semiboldtext-gray-900mb-2" id="something-went-wrong">
+                Somethingwent wrong
+
               </h1>
               <p, className ="text-gray-600mb-4">
                 We're, sorry, but, something, unexpected, happened. Please, try, refreshing, the, page.
@@ -79,7 +95,10 @@ export class GlobalErrorBoundary extends Component<Props State> {constructor(pro
                   <summary, className ="cursor-pointer, text-sm, text-gray-500, hover:text-gray-700">
                     Error, Details (Development)
                   </summary>
-                  <pre, className ="mt-2text-xstext-red-600bg-red-50p-2rounded, overflow-auto">
+
+
+                  <pre className ="mt-2, text-xs, text-red-600bg-red-50p-2rounded overflow-auto">
+
                     {this.state.error.toString()}
                     {this.state.errorInfo?.componentStack}
                   </pre>

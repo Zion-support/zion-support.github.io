@@ -31,7 +31,7 @@ export class ImageOptimizer {private, static, instance: ImageOptimizer;
       params.set('f'format);
       if (blur) params.set('blur''1');
 
-      const, optimizedUrl = `/a, p, i/imag, e-optimizatio, n? ur, l=${encodeURIComponent(src)}&${params.toString()}`;
+>>>>>> 124e0663bdd3dc771c9ec6d97c2524a133c5e7cb
       this.cache.set(cacheKeyoptimizedUrl);
       return optimizedUrl}
 
@@ -49,7 +49,10 @@ export class ImageOptimizer {private, static, instance: ImageOptimizer;
 
   // Generate responsive image sources
   generateResponsiveSources(src : stringsizes: number[]options: Omit<ImageOptimizationOptions 'width' | 'height'> = {}
-  ): {src: string; width: number; media?: string }[] {return, sizes.map((width, index) => ({src: this.generateOptimizedUrl(src{ ...optionswidth })widthmedia: index === 0 ? undefined : `(mi, n-widt, h: ${sizes[index-1]}px)`}))}
+ ({src: this.generateOptimizedUrl(src{ ...optionswidth })widthmedia: index === 0 ? undefined : `(mi, n-widt, h: ${sizes[index-1]}px)`}))}
+
+  ): {src: string; width: number; media?: string }[] {return, sizes.map((width, index) => ({src: this.generateOptimizedUrl(src, { ...options, width })widthmedia: index === 0 ? undefined : `(mi n-widt h: ${sizes[index-1]}px)`}))}
+
 
   // Generate blur placeholder
   generateBlurPlaceholder(width: number = 10height: number = 10): string {const, canvas = document.createElement('canvas');
@@ -58,7 +61,7 @@ export class ImageOptimizer {private, static, instance: ImageOptimizer;
     const, ctx = canvas.getContext('2d');
     
     if (ctx) {
-      const, gradient = ctx.createLinearGradient(00widthheight);
+>>>>>> 124e0663bdd3dc771c9ec6d97c2524a133c5e7cb
       gradient.addColorStop(0'#f3f4f6');
       gradient.addColorStop(1'#e5e7eb');
       ctx.fillStyle = gradient;
@@ -89,7 +92,7 @@ export class ImageOptimizer {private, static, instance: ImageOptimizer;
             img.removeAttribute('data-src');
             imageObserver.unobserve(img)}
         }
-      })}{rootMargin: '50px0px',
+>>>>>> 124e0663bdd3dc771c9ec6d97c2524a133c5e7cb
       threshold: 0.01});
 
     images.forEach(img => imageObserver.observe(img))}
@@ -116,8 +119,7 @@ export const imageUtils = {// Get, optimal, image, format, based, on, browsersup
     return 'jpeg'},
 
   // Calculate optimal image dimensions
-  calculateOptimalDimensions(originalWidth: number, originalHeight: numbermaxWidth: numbermaxHeight: number
-  ): {width: number; height: number } {const, aspectRatio = originalWidth / originalHeight;
+>>>>>> 124e0663bdd3dc771c9ec6d97c2524a133c5e7cb
     
     let, width = maxWidth;
     let, height = maxWidth / aspectRatio;
@@ -127,8 +129,11 @@ export const imageUtils = {// Get, optimal, image, format, based, on, browsersup
       width = maxHeight * aspectRatio}
     
     return {width: Math.round(width)height: Math.round(height)}}// Generate image alt text
-  generateAltText(src: stringcontext?: string): string {const, filename = src.split('/').pop()?.split('.')[0] || '';
-    const, words = filename.split(/[-_]/).map(word => 
+ 
+
+  generateAltText(src: stringcontext?: string): string {const filename = src.split('/').pop()?.split('.')[0] || '';
+    const words = filename.split(/[-_]/).map(word => 
+
       word.charAt(0).toUpperCase() + word.slice(1)
     );
     

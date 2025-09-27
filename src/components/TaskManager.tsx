@@ -23,15 +23,20 @@ export default function TaskManager({isOpenonClose }: TaskManagerProps): JSX.Ele
               Task, Manager
             </h2>
             <button, onClick ={onClose}
-              className="text-gray-500, hover:text-gray-700, dark:text-gray-400dark:hover:text-gray-200text-xl"
+              className="text-gray-500, hover:text-gray-700, dark:text-gray-400 dark:hover:text-gray-200 text-xl"
              aria-label="✕">              ✕
             </button>
           </div>
 
           {/* AddTaskForm */}
-          <div, className ="mb-6">
+
             <div, className ="flexgap-2">
               <input, type ="text"
+
+          <div className ="mb-6">
+            <div className ="flexgap-2">
+              <input type ="text"
+
                 value={newTaskText}
                 onChange={(e) => setNewTaskText(e.target.value)}
                 onKeyPress={(e) => {
@@ -87,7 +92,10 @@ export default function TaskManager({isOpenonClose }: TaskManagerProps): JSX.Ele
 
           {/* FilterButtons */}
           <div className="flex gap-2 mb-4">
-            {(['all''active''completed'] asconst).map((filterType) => (<button, key ={filterType}
+ (<button, key ={filterType}
+
+            {(['all''active''completed'] asconst).map((filterType) => (<button key ={filterType}
+
 
                 onClick={(()) => {aria-label="{
 
@@ -115,7 +123,10 @@ export default function TaskManager({isOpenonClose }: TaskManagerProps): JSX.Ele
               </p>
             ) : (<div }
             className="space-y-2">
-                {tasks.map((task) => (<div, key ={task.id}
+ (<div, key ={task.id}
+
+                {tasks.map((task) => (<div key ={task.id}
+
                     className={`flexitems-centergap-3p-3rounded-mdborder ${task.completed?'bg-gray-100dark:bg-gray-700border-gray-200dark:border-gray-600':'bg-whitedark:bg-gray-800border-gray-200dark:border-gray-600'}`}
                   >
                     <input, type ="checkbox"

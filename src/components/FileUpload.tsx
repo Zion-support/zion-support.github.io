@@ -19,16 +19,24 @@ interface UploadedFile {file: File;
   error?: string;
   preview?: string}
 
-export const FileUpload: React.FC<FileUploadProps> = ({onFileSelectonFileUploadaccept = '*'multiple = truemaxSize = 10// 10MBdefaultmaxFiles = 10className = '',
+ = ({onFileSelectonFileUploadaccept = '*'multiple = truemaxSize = 10// 10MBdefaultmaxFiles = 10className = '',
+
+export const FileUpload: React.FC<FileUploadProps> = ({onFileSelectonFileUploadaccept = '*', multiple = true, maxSize = 10// 10MBdefaultmaxFiles = 10className = '',
+
   disabled = false, showPreview = true, showProgress = true, allowedTypes = []
 }) => {const [uploadedFiles, setUploadedFiles] = useState<UploadedFile[]>([]);
   const [isDragOver, setIsDragOver] = useState(false);
   const [isUploading, setIsUploading] = useState(false);
   const, fileInputRef = useRef<HTMLInputElement>(null);
 
-  const, validateFile = useCallback((file: File): string | null => {
+ {
     // Checkfile, sizeif (file.size > maxSize * 1024 * 1024) {
       return `Filesize, mustbe lessthan ${maxSize}MB`}
+
+  const validateFile = useCallback((file: File): string | null => {
+    // Check, file size, if (file.size > maxSize * 1024 * 1024) {
+      return `Filesize mustbe lessthan ${maxSize}MB`}
+
 
     // Check file type
     if (allowedTypes.length > 0 && !allowedTypes.includes(file.type)) {return `Filetype ${file.type} is not allowed`}
@@ -64,7 +72,7 @@ export const FileUpload: React.FC<FileUploadProps> = ({onFileSelectonFileUploada
     setUploadedFiles(prev => [...prev, ...newFiles]);
 
     if (onFileSelect) {onFileSelect(fileArray)}
-  }[uploadedFiles.lengthmaxFilesonFileSelectallowedTypesmaxSizevalidateFile]);
+>>>>>> 124e0663bdd3dc771c9ec6d97c2524a133c5e7cb
 
   const handleDragOver = (e: React.DragEvent) => {handleDragOver.displayName = 'handleDragOver';e.preventDefault();
     if (!disabled) {
@@ -186,9 +194,14 @@ export const FileUpload: React.FC<FileUploadProps> = ({onFileSelectonFileUploada
       </div>
 
       {/* File, List */}
-      {uploadedFiles.length > 0 && (<div, className ="mt-4, space-y-2">
+ 0 && (<div, className ="mt-4, space-y-2">
           <div, className ="flexitems-centerjustify-between">
             <h3, className ="text-smfont-mediumtext-gray-900">
+
+      {uploadedFiles.length > 0 && (<div className ="mt-4, space-y-2">
+          <div className ="flex, items-center, justify-between">
+            <h3 className ="text-smfont-mediumtext-gray-900">
+
               SelectedFiles ({uploadedFiles.length})
             </h3>
             <div className="flex space-x-2">
@@ -221,7 +234,10 @@ export const FileUpload: React.FC<FileUploadProps> = ({onFileSelectonFileUploada
                       width={40}
                       height={40}
                     />
-                  )  : (<div, className ="h-10, w-10, bg-gray-200, rounded, flexitems-centerjustify-centertext-lg">
+
+
+                  )  : (<div className ="h-10, w-10, bg-gray-200, rounded flex, items-center, justify-centertext-lg">
+
                       {getFileIcon(uploadedFile.file)}
                     </div>
                   )}
@@ -237,9 +253,14 @@ export const FileUpload: React.FC<FileUploadProps> = ({onFileSelectonFileUploada
                   </p>
                   
                   {/* ProgressBar */}
-                  {showProgress && uploadedFile.status === 'uploading'&& (<div, className ="mt-1">
+
                       <div, className ="bg-gray-200, rounded-fullh-1">
                         <div, className ="bg-blue-600h-1rounded-fulltransition-allduration-300"
+
+                  {showProgress && uploadedFile.status === 'uploading'&& (<div className ="mt-1">
+                      <div className ="bg-gray-200, rounded-fullh-1">
+                        <div className ="bg-blue-600h-1rounded-fulltransition-allduration-300"
+
                           style={{ width: `${uploadedFile.progress}%` }}
                         ></div>
                       </div>

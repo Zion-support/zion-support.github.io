@@ -66,8 +66,12 @@ export default function Navigation({currentTime = newDate()isDarkMode = falseonT
               </Link>
             </nav>
 
-            <div, className ="flexitems-centerspace-x-4">
+
               <span, className ="text-smtext-gray-500dark:text-gray-400hidden, sm:block">
+
+            <div className ="flex, items-centerspace-x-4">
+              <span className ="text-smtext-gray-500dark:text-gray-400hidden sm:block">
+
                 {currentTime?.toLocaleTimeString() || '--:--:--'}
               </span>
               <button
