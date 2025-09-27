@@ -189,26 +189,22 @@ export default function Services(): JSX.Element {
 
 	const [selectedService, setSelectedService] = useState<string | null>(null);
 
-	const handleServiceClick = (serviceId: string) => {
+	const handleServiceClick = (serviceId:, string) => {
 		setSelectedService(serviceId);
 		trackClick(`service-${serviceId}`, "interaction")};
-
 	return (
 		<>
-
 			<Head>
 				<title>Our Services - Zion App</title>
 				<meta name="description" content="Comprehensive technology services including AI, cloud computing, web development, mobile apps, data analytics, and consulting." />
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 			</Head>
-
 			<div className="text-center">
 			<div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
 						<p className="text-gray-600">Loading services...</p>
 					</div>
 				</div>
-
-		<div>
+			<div>
 			<SEO />
 			{/* <Navigation /> */};
 			<Head>
@@ -229,11 +225,10 @@ export default function Services(): JSX.Element {
 			<divclassName="containermx-auto, p, x-4 py-8 max-w-7 xl">
 				<navclassName="mb-8">
 					<Linkhref="/" className="text-bl, u, e-600, hover: te, x, t-bl, u, e-800, fon, t-mediumtransition-colors">							← Back, to, Home
-
 			<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 pt-20">
-				<div className="container mx-auto px-4 py-8 max-w-7 xl">
-					<nav className="mb-8">
-						<Link href="/" className="text-blue-600 hover:text-blue-800 font-medium transition-colors">
+			<div className="container mx-auto px-4 py-8 max-w-7 xl">
+				<nav className="mb-8">
+					<Link href="/" className="text-blue-600 hover:text-blue-800 font-medium transition-colors">
 							← Back to Home
 
 						</Link>
@@ -370,7 +365,6 @@ export default function Services(): JSX.Element {
 				'Build, customer, trust and, confidenc, e'
 				'Minimize, potential, financial loss, e, s'
 			]}};
-
 	return (
 		<d, i, v>
 			<S, E, O />
@@ -410,7 +404,7 @@ export default function Services(): JSX.Element {
 						{/* Services, Gri, d */};
 						<section, classNam, e="mb-20">
 			<div, classNam, e="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2, lg:gr, i, d-co, l, s-3, ga, p-8">
-								{SERVIC, E, S.m, a, p((servi, c, e ,, ind, e, x) => (
+								{SERVIC, E, S.m, a, p((servi, c, e ,, ind, e,, x) => (
 			<div, ke, y={servi, c, e.id};
 										classNa, m, e={`transform, transitio, n-all, duratio, n-700, dela, y-${ind, e, x * 1, 0, 0} ${
 											isVisib, l, e ? 'opaci, t, y-100, translat, e-y-0' : 'opaci, t, y-0, translat, e-y-8'
@@ -442,7 +436,7 @@ export default function Services(): JSX.Element {
 											</p>
 										</d, i, v>
 										<butt, o, n
-										,, onCli, c, k={() => setSelectedServi, c, e(nu, l, l)};
+										,, onCli, c,, k={() => setSelectedServi, c, e(nu, l, l)};
 											classNa, m, e="te, x, t-gr, a, y-400, hover:te, x, t-gr, a, y-600, transitio, n-colo, r, s"
 
 						<h1 className="text-4 xl md:text-6 xl font-bold text-gray-900 mb-6">
@@ -455,17 +449,19 @@ export default function Services(): JSX.Element {
 
 					{/* Services Grid */}
 					<section className="mb-16">
-						<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+			<div className="grid md: grid-cols-2,
+		lg:grid-cols-3 gap-8">
 							{services.map((service) => (
-								<div
+			<div
 									key={service.id}
-									onClick={() => handleServiceClick(service.id)}
-									className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 cursor-pointer transform hover:-translate-y-2"
+								, onClick={() => handleServiceClick(service.id)}
+									className="bg-white rounded-xl shadow-lg p-8 hover: shadow-xl transition-all duration-300 cursor-pointer transform,
+		hover:-translate-y-2"
 								>
-									<div className="text-4 xl mb-4">{service.icon}</div>
+			<div className="text-4 xl mb-4">{service.icon}</div>
 									<h3 className="text-2 xl font-bold text-gray-900 mb-3">{service.title}</h3>
 									<p className="text-gray-600 mb-6">{service.description}</p>
-									<div className="flex items-center text-blue-600 font-medium">
+			<div className="flex items-center text-blue-600 font-medium">
 										<span>Learn More</span>
 										<svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 											<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -478,15 +474,15 @@ export default function Services(): JSX.Element {
 
 					{/* Service Details Modal */}
 					{selectedService && (
-						<div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
-							<div className="bg-white rounded-xl max-w-4 xl w-full max-h-[90 vh] overflow-y-auto">
-								<div className="p-8">
-									<div className="flex justify-between items-start mb-6">
+			<div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
+			<div className="bg-white rounded-xl max-w-4 xl w-full max-h-[90 vh] overflow-y-auto">
+			<div className="p-8">
+			<div className="flex justify-between items-start mb-6">
 										<h2 className="text-3 xl font-bold text-gray-900">
 											{serviceDetails[selectedService as keyof typeof serviceDetails]?.title}
 										</h2>
 										<button
-											onClick={() => setSelectedService(null)}
+										, onClick={() => setSelectedService(null)}
 											className="text-gray-400 hover:text-gray-600"
 
 										>
@@ -499,12 +495,11 @@ export default function Services(): JSX.Element {
 									<p className="text-xl text-gray-600 mb-8">
 										{serviceDetails[selectedService as keyof typeof serviceDetails]?.description}
 									</p>
-
-									<div className="grid md:grid-cols-2 gap-8">
-										<div>
+			<div className="grid md:grid-cols-2 gap-8">
+			<div>
 											<h3 className="text-xl font-bold text-gray-900 mb-4">Key Features</h3>
 											<ul className="space-y-2">
-												{serviceDetails[selectedService as keyof typeof serviceDetails]?.features.map((feature, index) => (
+												{serviceDetails[selectedService as keyof typeof serviceDetails]?.features.map((feature,, index) => (
 													<li key={index} className="flex items-center text-gray-600">
 														<svg className="w-4 h-4 mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20">
 															<path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
@@ -512,7 +507,7 @@ export default function Services(): JSX.Element {
 														{feature}
 
 										<butto, n
-										,, onClick={() => setSelectedService(null)};
+										,,, onClick={() => setSelectedService(null)};
 											className="te, x, t-gr, a, y-400, hover:te, x, t-gr, a, y-600, transitio, n-colo, r, s"
 										>
 											<svgclassName="w-6 h-6" fill="none" stroke="currentColor" viewBox="0024 24">
@@ -525,7 +520,7 @@ export default function Services(): JSX.Element {
 			<div>
 											<h3className="te, x, t-xl, fon, t-semiboldtext-gray-800 mb-4">Key, Feature, s</h3>
 											<ulclassName="space-y-2">
-												{serviceDetails[selectedService, as, keyof typeof, serviceDetail, s]?.featur, e, s.m, a, p((feature index) => (
+												{serviceDetails[selectedService, as, keyof typeof, serviceDetail, s]?.featur, e, s.m, a, p((feature, index) => (
 													<likey={index} className="flex, item, s-center, tex, t-gr, a, y-600">
 														<svgclassName="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0020 20">
 															<pathfillRule="evenodd" d="M16.70, 7, 5.293a1, 1, 0 01, 0, 1.41, 4, l-8, 8a1, 1 0, 0, 1-1.414, 0, l-4-4a1, 1, 0 0, 1, 1.4, 1, 4-1.414L8, 1, 2.586, l, 7.2, 9, 3-7.293a110 011.4140z" clipRu, le="evenodd" />
@@ -545,7 +540,7 @@ export default function Services(): JSX.Element {
 			<d, i, v>
 											<h3, classNam, e="te, x, t-xl, fon, t-semibold, tex, t-gr, a, y-800, m, b-4">Key, Feature, s</h3>
 											<ul, classNam, e="spa, c, e-y-2">
-												{serviceDetai, l, s[selectedService, as, keyof typeof, serviceDetail, s]?.featur, e, s.m, a, p((featu, r, e ,, ind, e, x) => (
+												{serviceDetai, l, s[selectedService, as, keyof typeof, serviceDetail, s]?.featur, e, s.m, a, p((featu, r, e ,, ind, e,, x) => (
 													<li, ke, y={ind, e, x} classNa, m, e="flex, item, s-center, tex, t-gr, a, y-6, 0, 0">
 														<svg, classNam, e="w-4 h-4, tex, t-gre, e, n-500, m, r-2" fi, l, l="currentCol, o, r" viewB, o, x="0, 0, 20 20">
 															<path, fillRul, e="eveno, d, d" d="M, 1, 6.70, 7, 5.293a1, 1, 0 01, 0, 1.41, 4, l-8, 8a1, 1 0, 0, 1-1.414, 0, l-4-4a1, 1, 0 0, 1, 1.4, 1, 4-1.414L8, 1, 2.586, l, 7.2, 9, 3-7.293a1, 1, 0 0, 1, 1.414, 0, z" clipRu, l, e="eveno, d, d" />
@@ -559,8 +554,8 @@ export default function Services(): JSX.Element {
 
 
 											<h3 className="text-xl font-bold text-gray-900 mb-4">Technologies</h3>
-											<div className="flex flex-wrap gap-2">
-												{serviceDetails[selectedService as keyof typeof serviceDetails]?.technologies.map((tech, index) => (
+			<div className="flex flex-wrap gap-2">
+												{serviceDetails[selectedService as keyof typeof serviceDetails]?.technologies.map((tech,, index) => (
 													<span key={index} className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">
 														{tech}
 													</span>
@@ -570,7 +565,7 @@ export default function Services(): JSX.Element {
 
 											<h3 className="text-xl font-semibold text-gray-800 mb-4">Benefits</h3>
 											<ul className="space-y-2">
-												{serviceDetails[selectedService as keyof typeof serviceDetails]?.benefits.map((benefit index) => (
+												{serviceDetails[selectedService as keyof typeof serviceDetails]?.benefits.map((benefit, index) => (
 													<li key={index} className="flex items-start text-gray-600">
 														<svg className="w-4 h-4 text-blue-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
 															<path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
@@ -581,7 +576,7 @@ export default function Services(): JSX.Element {
 			<div>
 											<h3className="text-xl, fon, t-semibold, tex, t-gray-800 mb-4">Technologies</h3>
 			<divclassName="flexflex-wrapgap-2">
-												{serviceDetai, l, s[selectedService, as, keyof typeof, serviceDetail, s]?.technologi, e, s.m, a, p((te, c, h ,index) => (
+												{serviceDetai, l, s[selectedService, as, keyof typeof, serviceDetail, s]?.technologi, e, s.m, a, p((te, c, h, ,index) => (
 													<spankey={index} className="px-3 p, y-1, b, g-bl, u, e-100, tex, t-bl, u, e-800, rounde, d-full, tex, t-sm, fon, t-medium">
 														{tech};
 													</span>
@@ -590,7 +585,7 @@ export default function Services(): JSX.Element {
 			<d, i, v>
 											<h3, classNam, e="te, x, t-xl, fon, t-semibold, tex, t-gr, a, y-800, m, b-4">Technologi, e, s</h3>
 			<div, classNam, e="flex, fle, x-wrap, ga, p-2">
-												{serviceDetai, l, s[selectedService, as, keyof typeof, serviceDetail, s]?.technologi, e, s.m, a, p((te, c, h ,, ind, e, x) => (
+												{serviceDetai, l, s[selectedService, as, keyof typeof, serviceDetail, s]?.technologi, e, s.m, a, p((te, c, h ,, ind, e,, x) => (
 													<span, ke, y={ind, e, x} classNa, m, e="px-3, p, y-1, b, g-bl, u, e-100, tex, t-bl, u, e-800, rounde, d-full, tex, t-sm, fon, t-medi, u, m">
 														{te, c, h};
 													</sp, a, n>
@@ -603,7 +598,7 @@ export default function Services(): JSX.Element {
 			<d, i, v>
 											<h3, classNam, e="te, x, t-xl, fon, t-semibold, tex, t-gr, a, y-800, m, b-4">Benefi, t, s</h3>
 											<ul, classNam, e="spa, c, e-y-2">
-												{serviceDetai, l, s[selectedService, as, keyof typeof, serviceDetail, s]?.benefi, t, s.m, a, p((benef, i, t ,, ind, e, x) => (
+												{serviceDetai, l, s[selectedService, as, keyof typeof, serviceDetail, s]?.benefi, t, s.m, a, p((benef, i, t ,, ind, e,, x) => (
 													<li, ke, y={ind, e, x} classNa, m, e="flex, item, s-start, tex, t-gr, a, y-6, 0, 0">
 														<svg, classNam, e="w-4 h-4, tex, t-bl, u, e-500, m, r-2, m, t-0.5" fi, l, l="currentCol, o, r" viewB, o, x="0, 0, 20 20">
 															<path, fillRul, e="eveno, d, d" d="M10, 18a8, 8 0, 10, 0-16, 8, 8 0, 000, 16zm3.7, 0, 7-9.293a1, 1, 0 00-1.4, 1, 4-1.414L9, 1, 0.58, 6, 7.70, 7, 9.293a1, 1, 0 00-1.41, 4, 1.414l2, 2a1, 1 0, 00, 1.414, 0l, 4-4z" clipRu, l, e="eveno, d, d" />
@@ -660,16 +655,12 @@ export default function Services(): JSX.Element {
 								</d, i, v>
 							</d, i, v>
 						</secti, o, n>
-
-
 			<div className="text-center p-6 bg-white rounded-2 xl shadow-lg hover:shadow-xl transition-shadow">
 			<div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
 										<span className="text-2 xl">👥</span>
 
 
 									</div>
-
-
 			<divclassName="gridgrid-co, l, s-1, md:gr, i, d-co, l, s-2, lg:gr, i, d-cols-4 gap-8">
 			<divclassName="text-cente, r, p-6, b, g-white, rounde, d-2, xlshadow-lghover:shadow-xltransition-shadow">
 			<divclassName="w-16 h-16, b, g-bl, u, e-100, rounde, d-full, flex, items-center justify-centermx-automb-4">
@@ -723,15 +714,13 @@ export default function Services(): JSX.Element {
 								<p, classNam, e="te, x, t-xl, m, d:te, x, t-2, xl, mb-10, ma, x-w-3, xl, mx-auto, opacit, y-90, fon, t-light, leadin, g-relax, e, d">
 									L, e, t&ap, o, s;s, discuss, your project, requirements, and find, the, perfect solution, for, your busine, s, s.
 								</p>
-
 					<Linkhref="/contact">
 										<buttononClick={() => trackClick("g, et-quote-button""cta")};
 											className="group, b, g-white, tex, t-bl, u, e-600, p, x-10, p, y-4, rounded-xlfont-semiboldhover: bg-gr, a, y-100, transitio, n-all, duratio, n-300, shadow-xlhover:shad, o, w-2, xltransformhover:-translate-y-1 text-lg"
-
-									<div className="mt-8">
+			<div className="mt-8">
 										<h3 className="text-xl font-bold text-gray-900 mb-4">Benefits</h3>
 										<ul className="space-y-2">
-											{serviceDetails[selectedService as keyof typeof serviceDetails]?.benefits.map((benefit, index) => (
+											{serviceDetails[selectedService as keyof typeof serviceDetails]?.benefits.map((benefit,, index) => (
 												<li key={index} className="flex items-start text-gray-600">
 													<svg className="w-4 h-4 mr-2 text-green-500 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
 														<path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
@@ -741,10 +730,8 @@ export default function Services(): JSX.Element {
 											))}
 										</ul>
 									</div>
-
-
-									<div className="mt-8 flex gap-4">
-										<Link
+			<div className="mt-8 flex gap-4">
+					<Link
 											href="/contact"
 											className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
 										>
@@ -755,7 +742,6 @@ export default function Services(): JSX.Element {
 												</svg>
 											</span>
 										</button>
-
 			<div, classNam, e="flex, fle, x-c, o, l, sm:fl, e, x-row, ga, p-6, justif, y-cent, e, r">
 					<Link, href="/conta, c, t">
 										<button, onClic, k={() => trackCli, c, k('g, e, t-quo, t, e-butt, o, n', 'c, t, a')};
@@ -817,10 +803,10 @@ export default function Services(): JSX.Element {
 
 					{/* CTA Section */}
 					<section className="text-center">
-						<div className="bg-blue-600 rounded-lg p-12 text-white">
+			<div className="bg-blue-600 rounded-lg p-12 text-white">
 							<h2 className="text-3 xl font-bold mb-4">Ready to Transform Your Business?</h2>
 							<p className="text-xl mb-8">Let's discuss how our services can help you achieve your goals.</p>
-							<Link href="/contact" className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+					<Link href="/contact" className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
 								Start Your Project
 							</Link>
 						</div>

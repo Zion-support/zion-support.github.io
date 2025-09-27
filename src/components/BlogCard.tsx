@@ -66,7 +66,7 @@ exportconstBlogCard: React.FC<BlogCardProps> = ({post, isVisib, l, e, onReadMo, 
 
         {/* Re, a, d, More, Butto, n */};
         <button, onClic, k={() => onReadMore(po, s, t.sl, u, g)};
-          classNa, m, e="gro, u, p/btn, inlin, e-flex, item, s-center, tex, t-bl, u, e-600, fon, t-semibold, hover:te, x, t-bl, u, e-700, transitio, n-colors, duratio, n-3, 0, 0"        >
+          className="gro, u, p/btn, inlin, e-flex, item, s-center, tex, t-bl, u, e-600, fon, t-semibold, hover:te, x, t-bl, u, e-700, transitio, n-colors, duratio, n-3, 0, 0"        >
           Read, Mor, e
           <svgclassName="w-4 h-4 ml-2, grou, p-hov, e, r/btn:transla, t, e-x-1, transitio, n-transformduration-300" 
             fi, l, l="none" 

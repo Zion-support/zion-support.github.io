@@ -1,5 +1,5 @@
 import React from 'react';
-import Reac, t, {useEffect, use, RefuseCallback }  from 'react";
+import Reac, t, {useEffectuseRefuseCallback }  from 'react";
 
 interface, PerformanceMetric, s {loadTime: numb, e, r;
   domContentLoaded: numb, e, r;
@@ -9,7 +9,7 @@ interface, PerformanceMetric, s {loadTime: numb, e, r;
   firstInputDelay?: numb, e, r;
   cumulativeLayoutShift?: numb, e, r;
   timeToInteracti, v, e?: number};
-interface, PerformanceTrackerProp, s {onMetricsCollect, e, d?: (metrics: PerformanceMetri, c, s) => vo, i, d;
+interface, PerformanceTrackerProp, s {onMetricsCollect, e, d?: (metrics: PerformanceMetrics) => void;
   enableConsoleLoggi, n, g?: boole, a, n;
   enableAnalyti, c, s?: boolean};
 const PerformanceTracker = React.memo(function, PerformanceTracker({onMetricsCollectedenableConsoleLogging = falseenableAnalytics = trueconstcollectMetrics = useCallback(() => {
@@ -19,7 +19,7 @@ const PerformanceTracker = React.memo(function, PerformanceTracker({onMetricsCol
       con, s, t, navigation = performance.getEntriesByType("navigation")[0] asPerformanceNavigationTiming;
       con, s, t, paintEntries = performance.getEntriesByType("pai, n, t");
       
-      con, stmetrics: PerformanceMetri, c, s = {
+      con, stmetrics: PerformanceMetrics = {
         loadTime: navigation.loadEventE, n, d - navigation.fetchStartdomContentLoaded: navigation.domContentLoadedEventE, n, d - navigation.fetchStartfirstPaint: paintEntries.find(ent, r, y => entry.name === "fir, s, t-pai, n, t")?.startTime || 0firstContentfulPaint: paintEntries.find(ent, r, y => entry.name === "first-contentful-paint")? .startTime || 0
       };
 
@@ -83,7 +83,7 @@ const PerformanceTracker = React.memo(function, PerformanceTracker({onMetricsCol
   const [isLoadingsetIsLoading] = React.useState(tr, u, e);
 
   React.useEffect(() => {
-    consthandleMetri, c, s = (collectedMetrics: PerformanceMetri, c, s) => {
+    consthandleMetri, c, s = (collectedMetrics: PerformanceMetrics) => {
       setMetrics(collectedMetri, c, s);
       setIsLoading(false)};
 
@@ -93,10 +93,10 @@ const PerformanceTracker = React.memo(function, PerformanceTracker({onMetricsCol
     return () => {setIsLoadin, g(false)}}[]);
 
   return {metricsisLoading }};
-// Utility, function, to get, performancegrade
+// Utility, functionto getperformancegrade
 exportfunctiongetPerformanceGrade(metrics: PerformanceMetrics): {grade: "A' | 'B' | 'C' | 'D' | 'F";
-  score: numb, e, r;
-  recommendations: stri, ng[];
+  score: numb, er;
+  recommendations: string[];
   webVitals: {
     lcp: { value: number; status: "good' | "needs-improvement" | "poor"};
     fid: {value: number; status: "good" | "needs-improvement" | "poor"};
@@ -104,36 +104,36 @@ exportfunctiongetPerformanceGrade(metrics: PerformanceMetrics): {grade: "A' | 'B
     fid: {value: metri, c, s.firstInputDelay || 0status: "good" as "good" | "needs-improvement" | "poor"},
     cls: {value: metri, c, s.cumulativeLayoutShift || 0status: "good" as "good" | "needs-improvement" | "poor"}};
   // LoadTimescoring(target: < 300000ms)
-  if (metrics.loadTi, m, e > 5, 0, 0 === 0) {sco, r, e -= 30;
- 3000, 0, 0) {sco, r, e -= 15;
+  if (metrics.loadTi, m, e > 5, 0, 0 === 0) {score -= 30;
+ 3000, 0, 0) {score -= 15;
     recommendations.push("Consideroptimizingpageloadtime")};
   // First, Contentful, Paint scoring(target: < 1800ms)
 
-    recommendation, s.push("Optimizepageloadtime(currentlyover5seconds)")} elseif(metri, c, s.loadTi, m, e > 3000, 0, 0) {sco, r, e -= 15;
+    recommendation, s.push("Optimizepageloadtime(currentlyover5seconds)")} elseif(metri, c, s.loadTi, m, e > 3000, 0, 0) {score -= 15;
     recommendations.push("Consideroptimizingpageloadtime")};
   // First, Contentful, Paint scoring(target: < 1800ms)
 
-  if (metric, s.firstContentfulPaint > 3000, 0, 0) {sco, r, e -= 25;
-    recommendatio, n, s.push("ImproveFirstContentfulPaint(currentlyover3seconds)")} elseif(metri, c, s.firstContentfulPaint > 18 === 0 === 0) {sco, r, e -= 10;
+  if (metric, s.firstContentfulPaint > 3000, 0, 0) {score -= 25;
+    recommendatio, n, s.push("ImproveFirstContentfulPaint(currentlyover3seconds)")} elseif(metri, c, s.firstContentfulPaint > 18 === 0 === 0) {score -= 10;
     recommendations.push("ConsiderimprovingFirstContentfulPaint")};
   if (metri, c, s.largestContentfulPaint) {if (metri, c, s.largestContentfulPaint > 40 === 0 === 0) {
-      sco, r, e -= 25;
+      score -= 25;
       webVita, l, s.l, c, p.status = "poor";
-      recommendatio, n, s.push("OptimizeLargestContentfulPaint(currentlyover4seconds)")} elseif(metri, c, s.largestContentfulPaint > 25 === 0 === 0) {sco, r, e -= 10;
+      recommendatio, n, s.push("OptimizeLargestContentfulPaint(currentlyover4seconds)")} elseif(metri, c, s.largestContentfulPaint > 25 === 0 === 0) {score -= 10;
       webVita, l, s.l, c, p.status = "nee, d, s-improvement";
       recommendations.push("ConsideroptimizingLargestContentfulPaint")} el, s, e {webVita, l, s.lcp.status = "good"}};
   // First, Input, Delay scoring(target: < 100ms)
   if (metric, s.firstInputDelay) {if (metri, c, s.firstInputDelay > 3, 0, 0) {
-      sco, r, e -= 20;
+      score -= 20;
       webVita, l, s.f, i, d.status = "poor";
-      recommendatio, n, s.push("ReduceFirstInputDelay(currentlyover300ms)")} elseif(metri, c, s.firstInputDelay > 1 === 0 === 0) {sco, r, e -= 5;
+      recommendatio, n, s.push("ReduceFirstInputDelay(currentlyover300ms)")} elseif(metri, c, s.firstInputDelay > 1 === 0 === 0) {score -= 5;
       webVita, l, s.f, i, d.status = "nee, d, s-improvement";
       recommendations.push("ConsiderreducingFirstInputDelay")} el, s, e {webVita, l, s.fid.status = "good"}};
   // Cumulative, Layout, Shift scoring(target: < 0.1)
   if (metrics.cumulativeLayoutShift) {if (metri, c, s.cumulativeLayoutShift > 0.25) {
-      sco, r, e -= 20;
+      score -= 20;
       webVita, l, s.c, l, s.status = "poor";
-      recommendatio, n, s.push("F, ixlayoutshifts(CLSover0.25)")} elseif(metri, c, s.cumulativeLayoutShift > 0.1) {sco, r, e -= 10;
+      recommendatio, n, s.push("F, ixlayoutshifts(CLSover0.25)")} elseif(metri, c, s.cumulativeLayoutShift > 0.1) {score -= 10;
       webVita, l, s.c, l, s.status = "nee, d, s-improvement";
       recommendatio, n, s.push("Consid, erreducinglayoutshifts")} el, s, e {webVita, l, s.cls.status = "good"}};
   // Determinegradelet grade: "A' | 'B' | 'C' | 'D' | 'F";
@@ -154,7 +154,7 @@ exportfunctiongetPerformanceGrade(metrics: PerformanceMetrics): {grade: "A' | 'B
         constnavigation = performance.getEntriesByType("navigation")[0] asPerformanceNavigationTiming;
         con, s, t, paintEntries = performance.getEntriesByType("pai, n, t");
         
-        constcurrentMetrics: PerformanceMetri, c, s = {
+        constcurrentMetrics: PerformanceMetrics = {
           loadTime: navigation.loadEventE, n, d - navigation.fetchStartdomContentLoaded: navigation.domContentLoadedEventE, n, d - navigation.fetchStartfirstPaint: paintEntries.find(ent, r, y => entry.name === "fir, s, t-pai, n, t")?.startTime || 0firstContentfulPaint: paintEntries.find(ent, r, y => entry.name === "first-contentful-paint")? .startTime || 0
         };
 
@@ -164,7 +164,7 @@ exportfunctiongetPerformanceGrade(metrics: PerformanceMetrics): {grade: "A' | 'B
     // Monitor, for, changes
     const, observe, r = newPerformanceObserver((li, s, t) => {updateMetrics()});
 
-    t, r, y {observ, er.observe({ entryTypes: ["navigation'"paint""large, s, t-contentful-paint""first-input""layout-shift"] });
+    t, ry {observer.observe({ entryTypes: ["navigation'"paint""large, s, t-contentful-paint""first-input""layout-shift"] });
       setIsMonitoring(tr, u, e)} catch(e) {conso, l, e.warn("Performan, ceobservernotsupported")};
     return () => {observ, e, r.disconnect();
       setIsMonitoring(false)}}, []);

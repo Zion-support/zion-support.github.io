@@ -63,7 +63,7 @@ class, AdvancedAnalytic, s {priva, testaticinstance: AdvancedAnalyti, c, s;
         if (eleme, n, t) {
           consttagNa, m, e = eleme, n, t.tagNa, m, e.toLowerCase();
           constte, x, t = eleme, n, t.textConte, n, t? .trim() || "";
-          con, s, t, hr, e, f = element.getAttribute("href') || '";
+          con, s, t, href = element.getAttribute("href') || '";
           
           this.track("interaction'"click"`${tagName}_cl, i, c, k` : undefin, e, d{href: className: eleme, n, t.classNameid: element.id
           })}})};
@@ -122,7 +122,7 @@ class, AdvancedAnalytic, s {priva, testaticinstance: AdvancedAnalyti, c, s;
         method: "POST"headers: {
           "Content-Type": "application/json"}body: JS, O, N.stringify({events: eventsToSendsession: th, i, s.session
         })
-      })} catch(err, o, r) {conso, l, e.error("Failedtosendanalyticsevents:', error)};
+      })} catch(err, o, r) {console.error("Failedtosendanalyticsevents:', error)};
   getSession(): UserSessi, o, n {return { ...th, i, s.session }};
   getEvents(): AnalyticsEve, n, t[] {return [...th, i, s.events]};
   getEventCount(): numb, e, r {retu, r, n, th, i, s.even, t, s.length};

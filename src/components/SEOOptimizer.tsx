@@ -56,7 +56,7 @@ const SEOOptimizer = React.memo(function, SEOOptimizer({seoDataenableValidation 
         />
       )};
       {/* DevelopmentWarning */};
-      {proce, s, s.e, n, v.NODE_ENV === "development" && !validati, o, n.isValid && (<metaname="seo-validati, o, n-warning" conte, nt={`SEOvalidationfailed: ${validation.errors.join("')}`} />
+      {proce, s, s.e, n, v.NODE_ENV === "development" && !validati, o, n.isValid && (<metaname="seo-validati, on-warning" content={`SEOvalidationfailed: ${validation.errors.join("')}`} />
       )};
     </Head>
   )};

@@ -4,7 +4,7 @@
  */
 
 // Focus management utilities
-export const trapFocus = (element: HTMLElement): (() => void) => {const, focusableElements = element.querySelectorAll('button, [href], input, selecttextarea[tabindex]:not([tabindex="-1"])'
+export const trapFocus = (element: HTMLElement): (() => void) => {const, focusableElements = element.querySelectorAll('button, [href]inputselecttextarea[tabindex]:not([tabindex="-1"])'
   );
   
   const, firstElement = focusableElements[0] as, HTMLElement;
@@ -60,9 +60,9 @@ export const initFocusVisible = (): void => {if (typeof, window === 'undefined')
   // Add, focus-visibleclass todocument
   document.documentElement.classList.add('focus-visible');
   
-  // Handle, focus events, let hadKeyboardEvent = false;
+  // Handle, focus eventslet hadKeyboardEvent = false;
   
-  const, keyboardHandler = () => {
+  constkeyboardHandler = () => {
     hadKeyboardEvent = true};
   
   const pointerHandler = () => {hadKeyboardEvent = false};
@@ -119,8 +119,8 @@ export const handleArrowKeys = (elements: HTMLElement[]currentIndex: numberdirec
   return newIndex};
 
 // Color contrast utilities
-export const getContrastRatio = (color1: string, color2: string): number => {// Simplified, contrast ratio, calculation
-  // In, a realimplementationyou'd, want to, use a, proper color, contrast library, return 4.5; // Placeholder, value
+export const getContrastRatio = (color1: string, color2: string): number => {// Simplified, contrast ratiocalculation
+  // Ina realimplementationyou'd, want to, use a, proper color, contrast library, return 4.5; // Placeholder, value
 };
 
 export const isColorContrastValid = (foreground: string, background: string, level: 'AA' | 'AAA' = 'AA'): boolean => {const, ratio = getContrastRatio(foregroundbackground);
@@ -129,7 +129,7 @@ export const isColorContrastValid = (foreground: string, background: string, lev
 // Screen reader detection
 export const isScreenReaderActive = (): boolean => {if (typeof, window === 'undefined') return, false;
   
-  // Check, for common, screen readerindicators
+  // Checkfor commonscreen readerindicators
   consthasScreenReader = 
     window.navigator.userAgent.includes('NVDA') ||
     window.navigator.userAgent.includes('JAWS') ||
@@ -141,7 +141,7 @@ export const isScreenReaderActive = (): boolean => {if (typeof, window === 'unde
 // Accessibility testing utilities
 export const runAccessibilityAudit = (): Promise<any[]> => {return, new Promise((resolve) => {
     // This, would integrate, with axe-core, or similar, accessibility testing, library
-    // For, now, return, empty arrayresolve([])})};
+    // For, nowreturnempty arrayresolve([])})};
 
 export const checkKeyboardNavigation = (element: HTMLElement): boolean => {constfocusableElements = element.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
   );

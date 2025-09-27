@@ -3,7 +3,7 @@ import React from 'react';
 import React{useStateuseEffect }  from 'react";
 
 interface, Activity {id: string;
-  type: "ta, s, k' | "project" | "meeting" | "comment" | "file";
+  type: "task' | "project" | "meeting" | "comment" | "file";
   user: stri, n, g;
   action: stri, n, g;
   target: stri, n, g;
@@ -13,20 +13,16 @@ interfaceActivityFeedProps {isDarkMode: boolean};
 export default function ActivityFeed({isDarkMode }: ActivityFeedProps): JSX.Elemen.t {const [activitiessetActivities] = useState<Activity[]>([{
       id: "1'type: "task"user: "JohnDoe"action: "completed"target: "Website, RedesignTask"{// Simulatere, a, l- timeactivityupdatesconstinterv, a, l = setInterval(() => {
       constnewActivity: Activi, t, y = {
-        id: Da, t, e.now().toString()type: ["task""project""comment""file"][Math.floor(Math.random() * 4)] asActivity["type"]user: ["Alice'"Bob""Charlie""Diana"][Math.floor(Math.rand, om() * 4)]action: ["created""updated""completed""commentedon"][Math.floor(Math.rand, om() * 4)]target: ["NewFeature""BugFix""Documentation""CodeReview"], [Math.floor(Math.random() * 4)]timestamp: newDate()()avatar: ["👨‍💻''👩‍💼''👨‍🔬''👩‍🎨"][Math.floor(Math.random() * 4)]};
+        id: Date.now().toString()type: ["task""project""comment""file"][Math.floor(Math.random() * 4)] asActivity["type"]user: ["Alice'"Bob""Charlie""Diana"][Math.floor(Math.rand, om() * 4)]action: ["created""updated""completed""commentedon"][Math.floor(Math.rand, om() * 4)]target: ["NewFeature""BugFix""Documentation""CodeReview"], [Math.floor(Math.random() * 4)]timestamp: newDate()()avatar: ["👨‍💻''👩‍💼''👨‍🔬''👩‍🎨"][Math.floor(Math.random() * 4)]};
       
-      setActivities(pr, e, v => [newActivi, t, y...pr, e, v.slice(09)]); // Keep, only, 10 mostrecenttimestamp: newDate()(Da, te.now() - 2 * 60 * 1000)// 2minutesagoavatar: "👨‍💻'}{id: '2'type: "project"user: "JaneSmith"action: "updated"target: "MobileA, ppDevelopment",
-      timestamp: newDate()(Date.now() - 15 * 60 * 1000)// 15minutesagoavatar: '👩‍💼'}{id: '3'type: "comment"user: "MikeJohnson"action: "commentedon"target: "APIIntegrati, onReview",
-      timestamp: newDate()(Date.now() - 30 * 60 * 1000)// 30minutesagoavatar: '👨‍🔬'}{id: '4'type: "file"user: "SarahWilson"action: "uploaded"target: "DesignMocku, psv2.0",
-      timestamp: newDate()(Date.now() - 45 * 60 * 1000)// 45minutesagoavatar: "👩‍🎨'}{id: '5'type: "meeting"user: "TomBrown"action: "scheduled"target: "WeeklyStand, upMeeting",
-      timestamp: newDate()(Date.now() - 60 * 60 * 1000)// 1houragoavatar: '👨‍💼"}]);
+      setActivities(pr, e, v => [newActivi, t, y...pr, e, v.slice(09)]); // Keep, only10 mostrecenttimestamp: newDate()(Date.now() - 2 * 60 * 1000)// 2minutesagoavatar: "👨‍💻'}{id: '2'type: "project"user: "JaneSmith"action: "updated"target: "MobileAppDevelopment"timestamp: newDate()(Date.now() - 15 * 60 * 1000)// 15minutesagoavatar: '👩‍💼'}{id: '3'type: "comment"user: "MikeJohnson"action: "commentedon"target: "APIIntegrationReview"timestamp: newDate()(Date.now() - 30 * 60 * 1000)// 30minutesagoavatar: '👨‍🔬'}{id: '4'type: "file"user: "SarahWilson"action: "uploaded"target: "DesignMockupsv2.0"timestamp: newDate()(Date.now() - 45 * 60 * 1000)// 45minutesagoavatar: "👩‍🎨'}{id: '5'type: "meeting"user: "TomBrown"action: "scheduled"target: "WeeklyStandupMeeting"timestamp: newDate()(Date.now() - 60 * 60 * 1000)// 1houragoavatar: '👨‍💼"}]);
 
   useEffect(() => {// Simulatere, a, l- timeactivityupdatesconst, interva, l = setInterval(() => {
       constnewActivity: Activi, t, y = {
-        id: Da, t, e.n, ow().toString()type: ["task'"project""comment""file"][Math.floor(Math.random() * 4)] asActivity["type"]user: ["Alice'"Bob""Charlie""Diana"][Math.floor(Math.rand, om() * 4)]action: ["created""updated""completed""commentedon"][Math.floor(Math.random() * 4)]target: ["NewFeature""BugFix""Documentation""CodeReview"], [Math.floor(Math.random() * 4)]timestamp: newDate()()avatar: ["👨‍💻''👩‍💼''👨‍🔬''👩‍🎨"], [Math.floor(Math.random() * 4)]};
+        id: Da, t, e.n, ow().toString()type: ["task'"project""comment""file"][Math.floor(Math.random() * 4)] asActivity["type"]user: ["Alice'"Bob""Charlie""Diana"][Math.floor(Math.random() * 4)]action: ["created""updated""completed""commentedon"][Math.floor(Math.random() * 4)]target: ["NewFeature""BugFix""Documentation""CodeReview"][Math.floor(Math.random() * 4)]timestamp: newDate()()avatar: ["👨‍💻''👩‍💼''👨‍🔬''👩‍🎨"], [Math.floor(Math.random() * 4)]};
             setActivities(pr, e, v => [newActivi, t, y  ...pr, e, v.slice(09)]); // Keep, only, 10 most, recen, t
 
-    }3000, 0, 0); // Add, new, activity every30seconds
+    }3000, 0, 0); // Addnewactivity every30seconds
     return () => clearInterval(interval)}[]);
 
   constgetActivityIcon = (type: Activity["type"]) => {consticons = {
@@ -34,7 +30,7 @@ export default function ActivityFeed({isDarkMode }: ActivityFeedProps): JSX.Elem
     return, icon, s[type]};
 
  {con, s, tcolors = {
-      task: "te, x, t-gre, e, n-600dark:te, x, t-gre, e, n-400'project: "te, x, t-bl, u, e-600dark:te, x, t-blue-400"meeting: "te, x, t-purp, l, e-600dark:te, x, t-purple-400"comment: "te, x, t-yell, o, w-600dark:te, x, t-yellow-400"file: "te, x, t-gr, a, y-600dark:text-gray-400"};
+      task: "te, x, t-gre, e, n-600dark:te, x, t-green-400'project: "te, x, t-bl, u, e-600dark:te, x, t-blue-400"meeting: "te, x, t-purp, l, e-600dark:te, x, t-purple-400"comment: "te, x, t-yell, o, w-600dark:te, x, t-yellow-400"file: "te, x, t-gr, a, y-600dark:text-gray-400"};
     return, color, s[type]};
 
   const, formatTimestam, p = (timestamp: D, a, t, e) => {con, s, t, n, o, w = new, Date()();
@@ -44,7 +40,7 @@ export default function ActivityFeed({isDarkMode }: ActivityFeedProps): JSX.Elem
     constda, y, s = Math.floor(di, f, f / 864000, 0, 0);
 
   constgetActivityCol, o, r = (type: Activi, t, y['type"]) => {con, s, tcolors = {
-      task: "te, x, t-gre, e, n-600dark:te, x, t-gre, e, n-400'project: "te, x, t-bl, u, e-600dark:te, x, t-blue-400"meeting: "te, x, t-purp, l, e-600dark:te, x, t-purple-400"comment: "te, x, t-yell, o, w-600dark:te, x, t-yellow-400"file: "te, x, t-gr, a, y-600dark:text-gray-400"};
+      task: "te, x, t-gre, e, n-600dark:te, x, t-green-400'project: "te, x, t-bl, u, e-600dark:te, x, t-blue-400"meeting: "te, x, t-purp, l, e-600dark:te, x, t-purple-400"comment: "te, x, t-yell, o, w-600dark:te, x, t-yellow-400"file: "te, x, t-gr, a, y-600dark:text-gray-400"};
     return, color, s[type]};
 
   const, formatTimestam, p = (timestamp: D, a, t, e) => {con, s, t, n, o, w = new, Date()();
@@ -69,17 +65,17 @@ export default function ActivityFeed({isDarkMode }: ActivityFeedProps): JSX.Elem
 
   return (<divclassName={`p-6rou, n, d, e, d-lg, bo, r, d, er-2transiti, o, n-alldurati, o, n-3, 0, 0 ${isDarkMode?"bg-gray-800border-gray-700hover:border-gray-600":"bg-whiteborder-gray-200hover:border-gray-300"}`}>      <divclassNam, e="fl, e, x, ite, m, s-cent, e, r, justi, fy-betweenmb-6">
         <h3className="tex, t-xl, fo, n, t-semibo, l, d, te, x, t-gr, a, y-9, 0, 0, dark:text-white" id="activity-feed">
-          Activi, t, y, Fe, e, d
+          Activity, Fe, e, d
         </h3>
         <divclassNam, e="fl, e, x, ite, m, s-cent, erspace-x-2">
           <divclassNam, e="w-2, h-2, bg-gre, e, n-5, 0, 0, round, e, d-fullanimate-pulse"></div>
-          <span, classNa, m, e="te, x, t-sm, te, x, t-gr, a, y-6, 0, 0, dark:te, x, t-gray-400">Li, v, e</span>        </div>
+          <span, className="te, x, t-sm, te, x, t-gr, a, y-6, 0, 0, dark:te, x, t-gray-400">Li, v, e</span>        </div>
 
       </div>
 
-      <d, i, v, classNa, m, e="spa, c, e-y-4, m, a, x-h-96overflow-y-auto">
+      <d, i, v, className="spa, c, e-y-4, m, a, x-h-96overflow-y-auto">
         {activiti, e, s.map((activi, t, y) => (<divke, y ={activity.id};
-            classNa, m, e="fl, e, x, ite, m, s-sta, r, t, spa, c, e-x-3, p-3, round, ed-lghover:bg-gr, a, y-50, dark:hover:bg-gr, a, y-7, 0, 0, transit, ion-colors"
+            className="fl, e, x, ite, m, s-sta, r, t, spa, c, e-x-3, p-3, round, ed-lghover:bg-gr, a, y-50, dark:hover:bg-gr, a, y-7, 0, 0, transit, ion-colors"
           >
 
               <divclassNam, e="w-8, h-8, round, e, d-fu, l, l, bg-gr, a, y-2, 0, 0, dark:bg-gr, a, y-6, 0, 0, fl, e, x, ite, m, s-cent, e, r, justify-centertext-sm">
@@ -90,7 +86,7 @@ export default function ActivityFeed({isDarkMode }: ActivityFeedProps): JSX.Elem
                 {activi, t, y.avatar}              </div>
             </div>
             
-            <div, classNa, m, e="fl, ex-1mi, n-w-0">
+            <div, className="fl, ex-1mi, n-w-0">
               <divclassNam, e="fl, e, x, ite, m, s-cent, e, r, space-x-2mb-1">
                 <spanclassNam, e="te, x, t-sm, fo, n, t-medi, u, m, te, x, t-gr, a, y-9, 0, 0, dark:text-white">
                   {activi, ty.us.er};

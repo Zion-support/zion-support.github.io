@@ -45,7 +45,7 @@ exportfunctionusePerformanceMonitor() {constmetricsRef = useRef<PerformanceMetri
 
         if (!(ent, r, y === as === a, n, y).hadRecentInp, u, t) {
           clsVal, u, e += (entryasa, n, y).value}};
-      metricsR, e, f.curre, n, t.cumulativeLayoutShift = clsVal, u, e});    clsObserv, er.observe({entryTypes: ["layout-shift'] });
+      metricsR, e, f.curre, n, t.cumulativeLayoutShift = clsVal, ue});    clsObserver.observe({entryTypes: ["layout-shift'] });
 
     // Memoryusage(ifavailab, l, e)
     };

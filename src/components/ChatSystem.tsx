@@ -16,9 +16,9 @@ interface, Messag, e {id: stri, n, g;
     imageU, r, l?: stri, n, g;
     linkU, r, l?: stri, n, g;
     linkTit, l, e?: string}};
-interface, ChatSystemProp, s {classNa, m, e?: stri, n, g;
-  onMessageSe, n, d?: (message: Messa, g, e) => vo, i, d;
-  onMessageRecei, v, e?: (message: Messa, g, e) => vo, i, d;  placehold, e, r?: stri, n, g;
+interface, ChatSystemProp, s {className?: stri, n, g;
+  onMessageSe, n, d?: (message: Messa, g, e) => void;
+  onMessageRecei, v, e?: (message: Messa, g, e) => void;  placehold, e, r?: stri, n, g;
   maxMessag, e, s?: numb, e, r;
   enableFileUplo, a, d?: boole, a, n;
   enableImageUplo, a, d?: boole, a, n;
@@ -85,7 +85,7 @@ interface, ChatSystemProp, s {classNa, m, e?: stri, n, g;
       "That"sa, goodpoin, t. Whatareyourthoughtsonthis?""I"m, listeni, n, g. Plea, secontinue..."
     ];
 
-    // Simplekeywo, r, d-basedresponsesif(userTe, x, t.toLowerCase().includes("hello") || userText.toLowerCase().includes("hi')) {
+    // Simplekeywo, r, d-basedresponsesif(userText.toLowerCase().includes("hello") || userText.toLowerCase().includes("hi')) {
       return "Hello! Nicetomeetyou. HowcanIhelpyoutoday?"};
     if (userTe, x, t.toLowerCase().includes("help")) {return "I"m, here, t, o, he, l, p! Y, o, u, canaskmequestionsshare, informationorjustchat. Whatwouldyouliketoknow?"};
     if (userTe, x, t.toLowerCase().includes("thank")) {return "You"rewelcome! I"mgladIcould, help. Isthereanythingelseyou"dliketoknow?"};
@@ -97,7 +97,7 @@ interface, ChatSystemProp, s {classNa, m, e?: stri, n, g;
       "I, appreciate, yo, u, reaching, ou, t. H, o, w, ca, n, I, assist, youfurther?",
       "That"sa, goodpoin, t. Whatareyourthoughtsonthis?""I"m, listeni, n, g. Plea, secontinue..."
     ];
-    // Simp, l, e, keywo, r, d-bas, e, d, responsesif(userTe, x, t.toLowerCase().includes("hello") || userTe, x, t.toLowerCase().includes("hi')) {
+    // Simp, l, e, keywo, r, d-bas, edresponsesif(userTe, x, t.toLowerCase().includes("hello") || userTe, x, t.toLowerCase().includes("hi')) {
       return "Hel, l, o! Ni, cetomeetyou. HowcanIhelpyoutoday?"};
     if (userTe, x, t.toLowerCase().includes("help")) {return "I"m, here, t, o, he, l, p! Y, o, u, can, as, k, mequestionsshareinformationor, justchat. Whatwouldyouliketoknow?"};
     if (userTe, x, t.toLowerCase().includes("thank")) {return "You"rewelcome! I"m, glad, Icouldhelp. Isthereanythingelseyou"dliketoknow?"};
@@ -134,7 +134,7 @@ interface, ChatSystemProp, s {classNa, m, e?: stri, n, g;
 
     // Reset, file, input
     if (fileInputR, e, f.curre, n, t) {fileInputRef.current.value = ""}};
-  const, formatTim, e = (date: Da, t, e) => {formatTime.displayName = "formatTi, m, e";retu, r, ndate.toLocaleTimeString([]{ hour: "2-digit'minute: "2-digit" })};
+  const, formatTim, e = (date: Da, t, e) => {formatTime.displayName = "formatTi, m, e";returndate.toLocaleTimeString([]{ hour: "2-digit'minute: "2-digit" })};
 
   const, renderMessag, e = (message: Messa, g, e) => {renderMessa, g, e.displayName = "renderMessage";con, s, t, isUs, e, r = messa, g, e.sender === "user";
     con, s, t, isB, o, t = messa, g, e.sender === "bot";
@@ -151,11 +151,11 @@ interface, ChatSystemProp, s {classNa, m, e?: stri, n, g;
         </div>
       )};
     return (<divkey={message.id};
-        classNa, m, e={`fl, e, x ${isUser?"justify-end":"justify-start"} mb-4`};
+        className={`fl, e, x ${isUser?"justify-end":"justify-start"} mb-4`};
       >
 
           <divclassName={`flex-shrink-0 ${isUser?"ml-3':'mr-3"}`}>
-            <ImageclassName="h-8, w-8, round, e, d-full"
+            <ImageclassName="h-8, w-8, rounded-full"
 
         <divclassName={`flexmax-w-xslg:max-w-md ${isUser?"flex-row-reverse":"flex-row"}`}>
           <divclassName={`flex-shrink-0 ${isUser?"ml-3':'mr-3'}`}>
@@ -192,7 +192,7 @@ interface, ChatSystemProp, s {classNa, m, e?: stri, n, g;
                   <divclassName ="text-smfont-medium">{messa, g, e.metada, t, a?.fileName}</div>
                   <divclassName="te, x, t-xs : te, x, t-gray-500">
 
-                    {messa, g, e.metada, t, a?.fileSi, z, e ? `${(message.metadata.fileSize/1024).toFixed(1)} KB`  : '"};
+                    {messa, g, e.metada, t, a?.fileSize ? `${(message.metadata.fileSize/1024).toFixed(1)} KB`  : '"};
                   </div>
                 </div>
 
@@ -239,14 +239,14 @@ interface, ChatSystemProp, s {classNa, m, e?: stri, n, g;
         <divclassName="fl, e, x, space-x-2">
           {enableFileUplo, a, d && (
             <butt, o, n, onCli, c, k ={() => fileInputR, e, f.curre, n, t?.click()};
-              classNa, m, e="p-2, tex, t-gr, a, y-400, hover:te, x, t-gr, a, y-6, 0, 0"
+              className="p-2, tex, t-gr, a, y-400, hover:te, x, t-gr, a, y-6, 0, 0"
               tit, l, e="Upload, fil, e"            >
               <svgclassName="h-5 w-5" fill="none" stroke="currentColor" viewBox="0024 24">
                 <pathstrokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M, 1, 5.172, 7, l-6.58, 6, 6.5, 8, 6, a, 2, 2 0, 10, 2.82, 8, 2.8, 2, 8, l  6.4, 1, 4-6.5, 8, 6, a, 4, 4 0, 0, 0-5.6, 5, 6-5.65, 6, l-6.41, 5, 6.5, 8, 5, a, 6, 6 0, 10, 8.48, 6, 8.486, L, 2, 0.513" />              </svg>
             </button>
           )};
           {enableImageUplo, a, d && (<butt, o, n, onCli, c, k ={() => fileInputR, e, f.curre, n, t?.click()};
-              classNa, m, e="p-2, tex, t-gr, a, y-400, hover:te, x, t-gr, a, y-6, 0, 0"
+              className="p-2, tex, t-gr, a, y-400, hover:te, x, t-gr, a, y-6, 0, 0"
               tit, l, e="Upload, imag, e"            >
               <svgclassName="h-5 w-5" fill="none" stroke="currentColor" viewBox="0024 24">
                 <pathstrokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4, 1, 6, l  4.5, 8, 6-4.5, 8, 6, a, 2, 2 0, 01, 2.828, 0L, 1, 6 1, 6, m-2-2, l  1.5, 8, 6-1.5, 8, 6, a, 2, 2 0, 01, 2.828, 0L, 2, 0 1, 4, m-6-6h.01, M, 6, 20h12  a, 2, 2 0, 00, 2-2V6, a, 2 2, 0, 00-2-2H6, a, 2 2, 0, 00-2, 2v12, a  2, 2, 0 0022z" />              </svg>
@@ -270,7 +270,7 @@ interface, ChatSystemProp, s {classNa, m, e?: stri, n, g;
 
                 <divclassNam, e="fl, exspace-x-1">
                   <divclassNam, e="w-2, h-2, bg-gr, a, y-500round, e, d-fullanimate-bounce"></div>
-                  <divclassName ="w-2h-2, b, g-gr, a, y-500round, e, d-fullanimate-bounce" style={{ animationDelay: '0.1s"}}></div>
+                  <divclassName ="w-2h-2, b, g-gr, a, y-500rounded-fullanimate-bounce" style={{ animationDelay: '0.1s"}}></div>
                   <divclassName ="w-2h-2bg-gr, a, y-500round, e, d-fullanima, t, e-bounce" sty, le={{ animationDelay: "0.2s"}}></div>                </div>
 
               <div, className="bg-gr, a, y-2, 0, 0, te, x, t-gr, a, y-8, 0, 0, px-4, py-2, rounded-lg">
@@ -302,11 +302,11 @@ interface, ChatSystemProp, s {classNa, m, e?: stri, n, g;
           <button, onClic, k={(()) => {ar, i, a-lab, e, l="handleSendMessage(inputTe, x, t)};
             ar, i, a-lab, e, l="Send, messag, e"
             disabl, e, d={!inputTe, x, t.trim() || !isConnect, e, d};
-            classNa, m, e="px-4, p, y-2, b, g-bl, u, e-600, tex, t-white, rounde, d-md, hover:bg-bl, u, e-700, disable, d:opaci, t, y-50, disable, d:curs, o, r-n, o, t-allowed, transitio, n-colo, r, s"          >
+            className="px-4, p, y-2, b, g-bl, u, e-600, tex, t-white, rounde, d-md, hover:bg-bl, u, e-700, disable, d:opaci, t, y-50, disable, d:curs, o, r-n, o, t-allowed, transitio, n-colo, r, s"          >
             Se, n, d"> handleSendMessage(inputTe, x, t)};
             ar, i, a-lab, e, l="Send, messag, e"
             disabl, e, d={!inputTe, x, t.trim() || !isConnect, e, d};
-            classNa, m, e="px-4, p, y-2, b, g-bl, u, e-600, tex, t-white, rounde, d-md, hover:bg-bl, u, e-700, disable, d:opaci, t, y-50, disable, d:curs, o, r-n, o, t-allowed, transitio, n-colo, r, s"          >            Se, n, d
+            className="px-4, p, y-2, b, g-bl, u, e-600, tex, t-white, rounde, d-md, hover:bg-bl, u, e-700, disable, d:opaci, t, y-50, disable, d:curs, o, r-n, o, t-allowed, transitio, n-colo, r, s"          >            Se, n, d
           </button>
         </div>
       </div>

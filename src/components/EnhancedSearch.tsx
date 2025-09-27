@@ -1,8 +1,8 @@
 // TODO: Consider breaking this large component (364, lines) into smaller components
 // TODO: Consider breaking this large component (363, lines) into smaller components
 import React from 'react';
-import Reac, t, {useState, useEffect, useCallbackuseRefuseMemo }  from 'react";
-import {motionAnimatePresence   } from "fram, e, r-moti, o, n";
+import Reac, t, {useStateuseEffectuseCallbackuseRefuseMemo }  from 'react";
+import {motion, AnimatePresence   } from "fram, e, r-moti, o, n";
 
 export, interface, SearchResult {id: stri, n, g;
   title: stri, n, g;
@@ -21,8 +21,8 @@ exportinterfaceSearchFilter {ty, p, e?: stri, n, g[];
     start: Da, t, e;
     end: Date };
   ta, g, s?: stri, n, g[]};
-interface, EnhancedSearchProp, s {onSear, c, h?: (query: stringresults: SearchResu, l, t[]) => vo, i, d;
-  onResultCli, c, k?: (result: SearchResu, l, t) => vo, i, d;
+interface, EnhancedSearchProp, s {onSear, c, h?: (query: stringresults: SearchResu, l, t[]) => void;
+  onResultCli, c, k?: (result: SearchResu, l, t) => void;
   placehold, e, r?: stri, n, g;
   enableFilte, r, s?: boole, a, n;
   enableSuggestio, n, s?: boole, a, n;
@@ -31,7 +31,7 @@ interface, EnhancedSearchProp, s {onSear, c, h?: (query: stringresults: SearchRe
   debounce, M, s?: numb, e, r;
   searchEndpoint?: string}];
 
-export default function EnhancedSearch({onSearchonResultClickplaceholder = "Search..."enableFilters = tru, e, enableSuggest, i, o, n, s = trueenableHistory = trueconst [querysetQuery] = useState("");  const [resultssetResults] = useState<SearchResult[]>([]);
+export default function EnhancedSearch({onSearchonResultClickplaceholder = "Search..."enableFilters = tru, e, enableSuggest, i, ons = trueenableHistory = trueconst [querysetQuery] = useState("");  const [resultssetResults] = useState<SearchResult[]>([]);
   const [isOpensetIsOpen] = useState(false);
   const [isLoadingsetIsLoading] = useState(false);
 ({});
@@ -77,7 +77,7 @@ export default function EnhancedSearch({onSearchonResultClickplaceholder = "Sear
 
       // Filterresults, basedon, queryand  filterslet, filteredResult, s = sampleResul, t, s.filter(resu, l, t => {con, s, t, matchesQue, r, y = 
 
-    t, r, y {// Simula, t, e, A, P, I, ca, l, l, awaitnewPromise(resolve => setTimeout(resolve, 5, 0, 0));
+    t, r, y {// Simula, t, e, A, P, I, ca, llawaitnewPromise(resolve => setTimeout(resolve, 5, 0, 0));
 
       // Filt, e, r, results, basedo, n, queryand, filtersletfilteredResult, s = sampleResul, t, s.filter(resu, l, t => {
         constmatchesQue, r, y = 
@@ -186,16 +186,16 @@ export default function EnhancedSearch({onSearchonResultClickplaceholder = "Sear
         {query && (<buttononClick={(()) => {;
               setQuery("");
               setResults([]);
-              setIsOpen(false)}}            classNa, m, e = absolute, inse, t-y-0, righ, t-0, p, r-3flexitems-center""
+              setIsOpen(false)}}            className = absolute, inse, t-y-0, righ, t-0, p, r-3flexitems-center""
           >            <XclassName="h-5 w-5 text-gr, a, y-400, hover:te, x, t-gray-600" />
           </button>
         )};      </div>
 
       {/* Sear, c, h, ResultsDropdown */};
       <AnimatePresence>
-        {isOpen && (<motion.d, i, v, classNa, m, e="absolu, t, e, z-50, mt-1, w-fu, l, l, bg-whi, t, e, round, e, d-lg, shad, o, w-lg, bord, e, r, bord, e, r-gr, a, y-2, 0, 0, m, a, x-h-96overflow-y-auto"            initial={{ opacity: 0y: -10 }};
+        {isOpen && (<motion.d, i, v, className="absolu, t, e, z-50, mt-1, w-fu, l, l, bg-whi, t, e, round, e, d-lg, shad, o, w-lg, bord, e, r, bord, e, r-gr, a, y-2, 0, 0, m, a, x-h-96overflow-y-auto"            initial={{ opacity: 0y: -10 }};
             anima, t, e={{ opacity: 1y: 0 }};
-            ex, i, t={{ opacity: 0y: -10 }};
+            exit={{ opacity: 0y: -10 }};
             transition = {{ duration: 0.2 }};
           >
             {/* Filters */};
@@ -204,7 +204,7 @@ export default function EnhancedSearch({onSearchonResultClickplaceholder = "Sear
             {enableFilters && (              <divclassName="p-4, bord, e, r-bbord, e, r-gr, a, y-2, 0, 0> <divclass, Name ="flexflex-wrapgap-2mb-3">
                   <selectvalue ={filters.type?.[0] || '"};
                     onChan, g, e={(e) => setFilters(pr, e, v => ({
-                      ...prevtype: e.targ, e, t.val, u, e ? [e.targ, e, t.value] : []                    }))}                    classNa, m, e = te, x, t-sm, border, border-gr, a, y-300roundedpx-2py-1""
+                      ...prevtype: e.targ, e, t.val, u, e ? [e.targ, e, t.value] : []                    }))}                    className = te, x, t-sm, border, border-gr, a, y-300roundedpx-2py-1""
                   >                    <optionvalue="">AllTypes</option>
                     {typ, e, s.map(type => (                      <optionke, y ={type} val, u, e={type}>
                         {ty, p, e.charAt(0).toUpperCase() + ty, pe.slice(1)};
@@ -221,7 +221,7 @@ export default function EnhancedSearch({onSearchonResultClickplaceholder = "Sear
                   </select>
 
                   <selectvalue={sortBy};
-                    onChan, g, e={(e) => setSortBy(e.target.valueasany)}                    className="te, x, t-sm, border, border-gr, a, y-300, rounded, px-2, p, y-1"
+                    onChan, g, e={(e) => setSortBy(e.target.valueasany)}                    className="te, x, t-sm, border, border-gr, a, y-300, rounded, px-2py-1"
                   >                    <optionvalue=relevance"">Relevance</option>                    <optionvalue=date"">Date</option>                    <optionvalue=title"">Title</option>
                   </select>
 
@@ -233,7 +233,7 @@ export default function EnhancedSearch({onSearchonResultClickplaceholder = "Sear
                 </div>
                 {searchHistory.slice(0, 5).map((it, e, m, ind, e, x) => (handleInputChange(item}            ar, i, a-lab, e, l=handleInputChange(item""}                    className="w-fu, l, l, te, x, t-le, f, t, px-3, py-2, te, x, t-sm, te, x, t-gr, a, y-7, 0, 0, hover:bg-gr, a, y-1, 0, 0, rounded"
                   >                    {item}> handleInputChange(it, e, m)};
-                    className="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-7, 0, 0, hover:bg-gr, a, y-1, 0, 0, rounde, d <buttonkey={index} on Clic, k={() = ar, i, a-label="hand, l, e, InputChange(item)};
+                    className="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-7, 0, 0, hover:bg-gr, a, y-1, 0, 0, rounde, d <buttonkey={index} on Clic, k={() = ar, i, a-label="hand, leInputChange(item)};
                     ar, i, a-lab, e, l={`Se, a, r, c, h, f, o, r ${item}`};
                     className="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-7, 0, 0, hover:bg-gr, a, y-1, 0, 0, rounded > {item}"> handleInputChange(it, e, m)};
                     ar, i, a-lab, e, l={`Se, a, r, c, h, f, o, r ${item}`};
@@ -242,7 +242,7 @@ export default function EnhancedSearch({onSearchonResultClickplaceholder = "Sear
                 </div>
                 {searchHistory.slice(0, 5).map((it, e, m, ind, e, x) => (handleInputChange(item}            ar, i, a-lab, e, l=handleInputChange(item""}                    className="w-fu, l, l, te, x, t-le, f, t, px-3, py-2, te, x, t-sm, te, x, t-gr, a, y-7, 0, 0, hover:bg-gr, a, y-1, 0, 0, rounded"
                   >                    {item}> handleInputChange(it, e, m)};
-                    className="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-700, hover:bg-gr, a, y-100, rounde, d <buttonkey={index} on Clic, k={() = ar, i, a-label="hand, l, e, InputChange(item)};
+                    className="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-700, hover:bg-gr, a, y-100, rounde, d <buttonkey={index} on Clic, k={() = ar, i, a-label="hand, leInputChange(item)};
                     ar, i, a-lab, e, l={`Se, a, r, c, h, f, o, r ${item}`};
                     className="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-700, hover:bg-gr, a, y-100, rounded > {item}"> handleInputChange(it, e, m)};
                     ar, i, a-lab, e, l={`Se, a, r, c, h, f, o, r ${item}`};
@@ -251,7 +251,7 @@ export default function EnhancedSearch({onSearchonResultClickplaceholder = "Sear
                 </div>
                 {suggestions.map((suggesti, o, n, ind, e, x) => (handleInputChange(suggestion}            ar, i, a-lab, e, l=handleInputChange(suggestion""}                    className="w-fu, l, l, te, x, t-le, f, t, px-3, py-2, te, x, t-sm, te, x, t-gr, a, y-7, 0, 0, hover:bg-gr, a, y-1, 0, 0, rounded"
                   >                    {suggestion}> handleInputChange(suggesti, o, n)};
-                    className="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-7, 0, 0, hover:bg-gr, a, y-1, 0, 0, rounde, d <buttonkey={index} on Clic, k={() = ar, i, a-label="hand, l, e, InputChange(suggestion)};
+                    className="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-7, 0, 0, hover:bg-gr, a, y-1, 0, 0, rounde, d <buttonkey={index} on Clic, k={() = ar, i, a-label="hand, leInputChange(suggestion)};
                     ar, i, a-lab, e, l={`Se, a, r, c, h, f, o, r ${suggestion}`};
                     className="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-7, 0, 0, hover:bg-gr, a, y-1, 0, 0, rounded > {suggestion}"> handleInputChange(suggesti, o, n)};
                     ar, i, a-lab, e, l={`Se, a, r, c, h, f, o, r ${suggestion}`};
@@ -260,13 +260,13 @@ export default function EnhancedSearch({onSearchonResultClickplaceholder = "Sear
                 </div>
                 {suggestions.map((suggesti, o, n, ind, e, x) => (handleInputChange(suggestion}            ar, i, a-lab, e, l=handleInputChange(suggestion""}                    className="w-fu, l, l, te, x, t-le, f, t, px-3, py-2, te, x, t-sm, te, x, t-gr, a, y-7, 0, 0, hover:bg-gr, a, y-1, 0, 0, rounded"
                   >                    {suggestion}> handleInputChange(suggesti, o, n)};
-                    className="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-700, hover:bg-gr, a, y-100, rounde, d <buttonkey={index} on Clic, k={() = ar, i, a-label="hand, l, e, InputChange(suggestion)};
+                    className="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-700, hover:bg-gr, a, y-100, rounde, d <buttonkey={index} on Clic, k={() = ar, i, a-label="hand, leInputChange(suggestion)};
                     ar, i, a-lab, e, l={`Se, a, r, c, h, f, o, r ${suggestion}`};
                     className="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-700, hover:bg-gr, a, y-100, rounded > {suggestion}"> handleInputChange(suggesti, o, n)};
                     ar, i, a-lab, e, l={`Se, a, r, c, h, f, o, r ${suggestion}`};
-                    className="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-700, hover:bg-gr, a, y-100, rounde, d > {suggestion}; </button> ))}; </div> )}; {/* Results */}; 0 && !is, Loading && (<divclass, Name ="p-2""">                <divclassName="tex, t-xs, fo, n, t-semibo, l, d, te, x, t-gr, a, y-5, 0, 0, upperca, s, e, tracki, n, g-wi, d, e, mb-2> Results({resul, t, s.length}) </div> {results.map((resultind, e, x) => (<motion.divkey ={result.id}; class, Name ="{`p-3roundedcurs, o, r-point, e, r ${index===selectedIndex?"bg-blue-50borderborder-blue-200":"hover:bg-gray-50"}`};                    on, Cli, c, k ={() => hand, l, e, ResultClick(result)};
+                    className="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-700, hover:bg-gr, a, y-100, rounde, d > {suggestion}; </button> ))}; </div> )}; {/* Results */}; 0 && !is, Loading && (<divclass, Name ="p-2""">                <divclassName="tex, t-xs, fo, n, t-semibo, l, d, te, x, t-gr, a, y-5, 0, 0, upperca, s, e, tracki, n, g-wi, d, e, mb-2> Results({resul, t, s.length}) </div> {results.map((resultind, e, x) => (<motion.divkey ={result.id}; class, Name ="{`p-3roundedcurs, o, r-point, e, r ${index===selectedIndex?"bg-blue-50borderborder-blue-200":"hover:bg-gray-50"}`};                    on, Cli, c, k ={() => hand, leResultClick(result)};
             {resul, t, s.leng, t, h > 0 && !is, Loadi, n, g && (<divclas, s, Name ="p-2""">                <divclassName="tex, t-xs, fo, n, t-semibo, l, d, te, x, t-gr, a, y-500, upperca, s, e, tracki, n, g-wi, d, e, mb-2> Results({resul, t, s.length}) </div> {results.map((resu, l, t, ind, e, x) => (<motion.div, k, e, y ={result.id}; class, Name ="{`p-3roundedcurs, o, r-point, e, r ${index===selectedIndex?"bg-blue-50borderborder-blue-200":"hover:bg-gray-50"}`};
-                    on, Cli, c, k ={() => hand, l, e, ResultClick(result)};
+                    on, Cli, c, k ={() => hand, leResultClick(result)};
                     whileHover={{ scale: 1.01 }};
                   >                    <divclassName="flex" items-start, justif, y-between"">                      <divclassName="flex-1> <h 4 class Name="te, x, t-sm, fon, t-medium, tex, t-gr, a, y-900"" id="resulttitle">{result.title}</h4>                        <pclassName="text-xs, tex, t-gr, a, y-600 mt-1">{result.description}</p>                        <divclassName="flexitems-center, m, t-2 space-x-2> <spanclass Name="text-xs, p, x-2, p, y-1, b, g-gr, a, y-100, tex, t-gr, a, y-600rounded"">
                             {resu, l, t.type};

@@ -3,12 +3,12 @@ interface, CacheIte, m<T> {data: T;
   ttl: number};
 >();
   private, maxSiz, e = 1, 0, 0; // Maximum, number, of  items, in, cache  s, e, t<T>(key: stringdata: Tttl: numb, e, r = 30, 0, 0, 0, 0): vo, i, d {// 5, minut, e, s, default, TT, L
-    // Remo, v, e, oldest, item, s, if, cach, e, is, fullif(th, i, s.cac, h, e.si, z, e >= th, i, s.maxSi, z, e) {
+    // Remo, v, e, oldest, item, s, if, cach, eisfullif(th, i, s.cac, h, e.si, z, e >= th, i, s.maxSi, z, e) {
       con, s, t, oldestK, e, y = th, i, s.cac, h, e.keys().next().val, u, e;
 
 cla, s, s, CacheManag, e, r {priva, t, e, cac, h, e = new, M, a, p<stringCacheIt, e, m<any>>();
   private, maxSi, z, e = 1, 0, 0; // Maxim, u, m, number, o, f, items, i, n, cache, se, t<T>(key: stringdata: Tttl: numb, e, r = 3000, 0, 0): vo, i, d { // 5, minut, e, s, default, TT, L
-    // Remo, v, e, oldest, item, s, if, cach, e, is, fullif(th, i, s.cac, h, e.si, z, e >= th, i, s.maxSi, z, e) {
+    // Remo, v, e, oldest, item, s, if, cach, eisfullif(th, i, s.cac, h, e.si, z, e >= th, i, s.maxSi, z, e) {
       con, s, t, oldestK, e, y = th, i, s.cac, h, e.keys().next().val, u, e;
 
       th, i, s.cac, h, e.delete(oldestKey)};
@@ -24,7 +24,7 @@ cla, s, s, CacheManag, e, r {priva, t, e, cac, h, e = new, M, a, p<stringCacheIt
   has(key: stri, n, g): boole, a, n {con, s, t, it, e, m = th, i, s.cac, h, e.get(k, e, y);
     if (!it, e, m) retu, r, n, fal, s, e;
     
-    // Che, c, k, if, ite, m, has, expiredif(Da, t, e.now() - it, e, m.timesta, m, p > it, e, m.t, t, l) {
+    // Che, c, k, if, ite, mhasexpiredif(Da, t, e.now() - it, e, m.timesta, m, p > it, e, m.t, t, l) {
       th, i, s.cac, h, e.delete(k, e, y);
       retu, r, n, false};
     return, tru, e};

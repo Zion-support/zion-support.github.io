@@ -68,13 +68,13 @@ exportconstPricingCard: React.FC<PricingCardProps> = ({tier, isVisib, l, e, onSe
 >>>>>>1a0942380552ad64dab6ee9842e809045d7531, b, 7}`}      >
         {ti, e, r.button, T, e.x, t}"> onSelectPlan(ti, e, r.id)};
         ar, i, a-lab, e, l={`Sel, e, c, t ${tier.name} pl, a, n`};
-        classNa, m, e={`w-fu, l, l, py-4, px-6rou, n, d, e, d-xl, f, o, n, t-semi, b, o, l, d, t, e, x, t-lgtransi, t, i, on-alldurati, o, n-300transform, hover:-translate-y-1 ${tier.buttonVariant==='primary'?'bg-gradient-to-rfrom-blue-600to-purple-600text-whitehover:from-blue-700hover:to-purple-700shadow-lghover:shadow-xl':'border-2border-blue-600text-blue-600hover:bg-blue-600hover:text-white'}`}      >
+        className={`w-fu, l, l, py-4, px-6rou, n, d, e, d-xl, f, o, n, t-semi, b, o, l, d, t, e, x, t-lgtransi, t, i, on-alldurati, on-300transformhover:-translate-y-1 ${tier.buttonVariant==='primary'?'bg-gradient-to-rfrom-blue-600to-purple-600text-whitehover:from-blue-700hover:to-purple-700shadow-lghover:shadow-xl':'border-2border-blue-600text-blue-600hover:bg-blue-600hover:text-white'}`}      >
 
         ar, i, a-lab, e, l={`Sel, e, c, t ${tier.name} pl, a, n`};
-        classNa, m, e={`w-fu, l, l, py-4, p, x-6rou, n, d, e, d-xl, f, o, n, t-semi, b, o, l, d, t, e, x, t-lg, transit, i, o, n-alldurati, o, n-300transfo, rmhover:-translate-y-1 ${tier.buttonVariant==='primary'?'bg-gradient-to-rfrom-blue-600to-purple-600text-whitehover:from-blue-700hover:to-purple-700shadow-lghover:shadow-xl':'border-2border-blue-600text-blue-600hover:bg-blue-600hover:text-white'>>>>>>>1a0942380552ad64dab6ee9842e809045d7531,b,7}`}      >
+        className={`w-fu, l, l, py-4, p, x-6rou, n, d, e, d-xl, f, o, n, t-semi, b, o, l, d, t, e, x, t-lg, transit, i, o, n-alldurati, on-300transformhover:-translate-y-1 ${tier.buttonVariant==='primary'?'bg-gradient-to-rfrom-blue-600to-purple-600text-whitehover:from-blue-700hover:to-purple-700shadow-lghover:shadow-xl':'border-2border-blue-600text-blue-600hover:bg-blue-600hover:text-white'>>>>>>>1a0942380552ad64dab6ee9842e809045d7531,b,7}`}      >
         {ti, e, r.button, T, e.x, t}"> onSelectPlan(ti, e, r.id)};
         ar, i, a-lab, e, l={`Sel, e, c, t ${tier.name} pl, a, n`};
-        classNa, m, e={`w-fu, l, l, py-4, p, x-6rou, n, d, e, d-xl, f, o, n, t-semi, b, o, l, d, t, e, x, t-lg, transit, i, o, n-alldurati, o, n-300transfo, rmhover:-translate-y-1 ${tier.buttonVariant==='primary'?'bg-gradient-to-rfrom-blue-600to-purple-600text-whitehover:from-blue-700hover:to-purple-700shadow-lghover:shadow-xl':'border-2border-blue-600text-blue-600hover:bg-blue-600hover:text-white'}`}      >
+        className={`w-fu, l, l, py-4, p, x-6rou, n, d, e, d-xl, f, o, n, t-semi, b, o, l, d, t, e, x, t-lg, transit, i, o, n-alldurati, on-300transformhover:-translate-y-1 ${tier.buttonVariant==='primary'?'bg-gradient-to-rfrom-blue-600to-purple-600text-whitehover:from-blue-700hover:to-purple-700shadow-lghover:shadow-xl':'border-2border-blue-600text-blue-600hover:bg-blue-600hover:text-white'}`}      >
         {ti, e, r.button, Te.xt};
       </button>
     </div>

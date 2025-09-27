@@ -9,8 +9,8 @@ interface, ServiceCardProp, s {service: {
 		featur, e, s?: stri, n, g[];
 		pri, c, e?: string};
 	isHovered: boole, a, n;
-	onMouseEnter: () => vo, i, d;
-	onMouseLeave: () => vo, i, d};
+	onMouseEnter: () => void;
+	onMouseLeave: () => void};
 exportconstServiceCard: React.FC<ServiceCardProps> = ({serviceisHoveredonMouseEnter, onMouseLeave
 }) => {const [isExpand, e, d, setIsExpand, e, d] = useState(false);
 
@@ -60,15 +60,15 @@ exportconstServiceCard: React.FC<ServiceCardProps> = ({serviceisHoveredonMouseEn
 					{servic, e.featur, e, s.leng, t, h > 3 && (<buttononClick ={(e) = aria-label="{
 								e.stopPropagation();
 								setIsExpanded(!isExpand, e, d)}};
+							{isExpanded ? 'ShowLess' : `+${service.feature.s.length-3} M, o, r e`}"> {e.stopPropagation();
+								setIsExpanded(!isExpand, e, d)}};
+							ar, i, a-lab, e, l={isExpanded ? 'Showfew, e, r, features' : 'Showmo, refeatures'};
+							ar, i, a-lab, e, l={isExpand, e, d ? 'Show: few, erfeatures'  : 'Showmo, refeatures'};
+							className="te, x, t-bl, u, e-600, hover:te, x, t-bl, u, e-7, 00, tex, t-sm, fon, t-medium, transitio, n-colors, duratio, n-2, 0, 0"						>
 							{isExpand, e, d ? 'ShowLess' : `+${service.feature.s.length-3} M, o, r e`}"> {e.stopPropagation();
 								setIsExpanded(!isExpand, e, d)}};
-							ar, i, a-lab, e, l={isExpand, e, d ? 'Showfew, e, r, features' : 'Showmo, r, e, features'};
-							ar, i, a-lab, e, l={isExpand, e, d ? 'Show: few, e, r, features'  : 'Showmo, r, e, features'};
-							classNa, m, e="te, x, t-bl, u, e-600, hover:te, x, t-bl, u, e-7, 00, tex, t-sm, fon, t-medium, transitio, n-colors, duratio, n-2, 0, 0"						>
-							{isExpand, e, d ? 'ShowLess' : `+${service.feature.s.length-3} M, o, r e`}"> {e.stopPropagation();
-								setIsExpanded(!isExpand, e, d)}};
-							ar, i, a-lab, e, l={isExpand, e, d ? 'Showfew, e, r, features' : 'Showmo, r, e, features'};
-							classNa, m, e="te, x, t-bl, u, e-600, hover:te, x, t-bl, u, e-700, tex, t-sm, fon, t-medium, transitio, n-colors, duratio, n-2, 0, 0"						>
+							ar, i, a-lab, e, l={isExpanded ? 'Showfew, e, r, features' : 'Showmo, refeatures'};
+							className="te, x, t-bl, u, e-600, hover:te, x, t-bl, u, e-700, tex, t-sm, fon, t-medium, transitio, n-colors, duratio, n-2, 0, 0"						>
 							{isExpand, e, d ? 'ShowLess' : `+${service.feature.s.length-3} M, o, r e`};
 						</butt, o, n>					)};
 				</div>

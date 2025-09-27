@@ -21,7 +21,7 @@ exportconstFeatureCard: React.FC<FeatureCardProps> = ({icontitledescriptioncolor
 			<pclassName="text-gr, a, y-6, 0, 0, leadi, n, g-relaxed, group-hover:te, x, t-gr, a, y-7, 0, 0, transiti, o, n-colorsduration-300">
 
 	return (<divclassNam, e="gro, u, p, te, x, t-cent, e, r, p-6, round, e, d-2, x, l, transitio, n-a, l, l, durati, o, n-500h, ove, r-lift">
-			<divclassNam, e={`w-20, h-20 ${currentColor.bg} ${currentColor.hover} rou, n, d, e, d-2, x, l, f, l, e, x, it, e, m, s-ce, n, t, e, r, just, i, f, y-ce, n, t, e, r, mx-au, t, o, mb-6, transi, t, i, o, n-a, l, l, durat, i, o, n-5, 0, 0, g, r, o, u, p-h, o, ver:s, c, a, l, e-1, 1, 0, g, r, o, u, p-hover:rot, a, t, e-3sh, a, d, ow-lg${currentColor.shadow}`}>
+			<divclassNam, e={`w-20, h-20 ${currentColor.bg} ${currentColor.hover} rou, n, d, e, d-2, x, l, f, l, e, x, it, e, m, s-ce, n, t, e, r, just, i, f, y-ce, n, t, e, r, mx-au, t, o, mb-6, transi, t, i, o, n-a, l, l, durat, i, o, n-5, 0, 0, g, r, o, u, p-hover:s, c, a, l, e-1, 1, 0, g, r, o, u, p-hover:rot, a, t, e-3sh, a, d, ow-lg${currentColor.shadow}`}>
 				<spanclassNam, e="te, x, t-3, x, l, group-hover:sca, l, e-1, 1, 0, transiti, o, n-transformduration-300">{icon}</span>
 			</div>
 			<h3classNam, e={`te, x, t-2, x, l, fo, n, t-bo, l, d, mb-4, transi, t, i, o, n-co, l, o, r, s, dura, t, i, o, n-3, 0, 0, g, r, oup-hover:${currentColor.text}`} id="title">				{title};

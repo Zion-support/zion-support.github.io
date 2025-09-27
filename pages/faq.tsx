@@ -1,5 +1,3 @@
- {
-
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
@@ -23,7 +21,8 @@ export default function FAQ(): JSX.Element {
 			category: "General",
 			questions: [
 				{
-					id: 1,
+				,
+		id: 1,
 					question: "What services does Zion App provide?",
 					answer: "Zion App provides comprehensive technology solutions including AI-powered applications, cloud infrastructure, digital transformation, web development, mobile app development, and ongoing technical support."
 				},
@@ -43,7 +42,8 @@ export default function FAQ(): JSX.Element {
 			category: "Services",
 			questions: [
 				{
-					id: 4,
+				,
+		id: 4,
 					question: "Do you offer custom software development?",
 					answer: "Yes, we specialize in custom software development tailored to your specific business needs. Our team works closely with you to understand your requirements and deliver solutions that perfectly fit your business processes."
 				},
@@ -63,7 +63,8 @@ export default function FAQ(): JSX.Element {
 			category: "Pricing",
 			questions: [
 				{
-					id: 7,
+				,
+		id: 7,
 					question: "How do you price your services?",
 					answer: "Our pricing is based on project scope, complexity, and timeline. We offer flexible pricing models including fixed-price projects, hourly rates, and retainer agreements. Contact us for a detailed quote tailored to your specific needs."
 				},
@@ -76,7 +77,7 @@ export default function FAQ(): JSX.Element {
 		}
 	];
 
-	const toggleItem = (id: number) => {
+	const toggleItem = (id:, number) => {
 
 
 import React, { useState, useEffect } from 'react';
@@ -108,7 +109,7 @@ export default function FAQ(): JSX.Element {
     }
   ];
 
-  const toggleItem = (id: number) => {
+  const toggleItem = (id:, number) => {
 
 		const newOpenItems = new Set(openItems);
 		if (newOpenItems.has(id)) {
@@ -127,7 +128,6 @@ export default function FAQ(): JSX.Element {
 			q.answer.toLowerCase().includes(searchTerm.toLowerCase())
 		)
 	})).filter(category => category.questions.length > 0);
-
 	return (
 		<>
 			<Head>
@@ -139,7 +139,7 @@ export default function FAQ(): JSX.Element {
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 			</Head>
 			<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-				<div className="container mx-auto px-4 py-8 max-w-6 xl">
+			<div className="container mx-auto px-4 py-8 max-w-6 xl">
 				<nav className="mb-8">
 					<Link href="/" className="text-blue-600 hover: text-blue-800 font-medium transition-colors">
 							← Back to Home
@@ -166,8 +166,9 @@ export default function FAQ(): JSX.Element {
 										type="text"
 										placeholder="Search questions..."
 										value={searchTerm}
-									,, onChange={(e) => setSearchTerm(e.target.value)}
-										className="w-full px-6 py-4 pl-12 bg-white rounded-2 xl shadow-lg border-0 focus: outline-none focus:ring-2, focus:ring-blue-500 text-lg"
+									,,, onChange={(e) => setSearchTerm(e.target.value)}
+										className="w-full px-6 py-4 pl-12 bg-white rounded-2 xl shadow-lg border-0 focus: outline-none,
+		focus:ring-2, focus:ring-blue-500 text-lg"
 									/>
 									<svg className="absolute left-4 top-1/2 transform -translate-y-1/2 w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 										<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
@@ -178,9 +179,9 @@ Frequently Asked Questions - Zion App</title>
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 			</Head>
 			<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 pt-20">
-				<div className="container mx-auto px-4 py-8 max-w-4 xl">
-					<nav className="mb-8">
-						<Link href="/" className="text-blue-600 hover:text-blue-800 font-medium transition-colors">
+			<div className="container mx-auto px-4 py-8 max-w-4 xl">
+				<nav className="mb-8">
+					<Link href="/" className="text-blue-600 hover:text-blue-800 font-medium transition-colors">
 							← Back to Home
 						</Link>
 					</nav>
@@ -197,15 +198,16 @@ Frequently Asked Questions - Zion App</title>
 
 					{/* Search */}
 					<section className="mb-8">
-						<div className="relative max-w-md mx-auto">
+			<div className="relative max-w-md mx-auto">
 							<input
 								type="text"
 								placeholder="Search questions..."
 								value={searchTerm}
 								onChange={(e) => setSearchTerm(e.target.value)}
-								className="w-full px-4 py-3 pl-10 pr-4 text-gray-700 bg-white border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+								className="w-full px-4 py-3 pl-10 pr-4 text-gray-700 bg-white border border-gray-300 rounded-lg focus: outline-none focus:ring-2 focus:ring-blue-500,
+		focus:border-transparent"
 							/>
-							<div className="absolute inset-y-0 left-0 flex items-center pl-3">
+			<div className="absolute inset-y-0 left-0 flex items-center pl-3">
 								<svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 									<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
 								</svg>
@@ -220,23 +222,23 @@ Frequently Asked Questions - Zion App</title>
 									{catego, r, y.category};								</h2>
 
 						{/* FAQ Categories */}
-						{filteredData.map((category ,, categoryIndex) => (
+						{filteredData.map((category ,,, categoryIndex) => (
 							<section key={category.category} className={`mb-16 transition-all duration-700 delay-${200 + categoryIndex * 100} ${
 								isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
 							}`}>
 								<h2 className="text-3 xl md:text-4 xl font-bold text-gray-800 mb-8 text-center">
 									{category.category}
 								</h2>
-
 			<div className="space-y-4">
-									{category.questions.map((item ,, index) => (
+									{category.questions.map((item ,,, index) => (
 			<div key={item.id} className={`transform transition-all duration-500 delay-${300 + index * 100} ${
 											isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
 										}`}>
 			<div className="bg-white rounded-2 xl shadow-lg hover:shadow-xl transition-shadow">
 												<button
-												,, onClick={() => toggleItem(item.id)}
-													className="w-full px-8 py-6 text-left flex items-center justify-between focus: outline-none focus:ring-2 focus:ring-blue-500 rounded-2 xl"
+												,,, onClick={() => toggleItem(item.id)}
+													className="w-full px-8 py-6 text-left flex items-center justify-between focus: outline-none focus:ring-2,
+		focus:ring-blue-500 rounded-2 xl"
 												>
 
 														{it, e, m.question};													</h3>
@@ -252,19 +254,20 @@ Frequently Asked Questions - Zion App</title>
 														fill="none" 
 														stroke="currentColor" 
 
-						{filteredData.map((category, categoryIndex) => (
-							<div key={categoryIndex} className="bg-white rounded-lg shadow-lg overflow-hidden">
-								<div className="bg-blue-600 text-white px-6 py-4">
+						{filteredData.map((category,, categoryIndex) => (
+			<div key={categoryIndex} className="bg-white rounded-lg shadow-lg overflow-hidden">
+			<div className="bg-blue-600 text-white px-6 py-4">
 									<h2 className="text-xl font-semibold">{category.category}</h2>
 								</div>
-								<div className="divide-y divide-gray-200">
-									{category.questions.map((item) => (
-										<div key={item.id} className="border-b border-gray-200 last:border-b-0">
+			<div className="divide-y divide-gray-200">
+								, {category.questions.map((item) => (
+			<div key={item.id} className="border-b border-gray-200 last:border-b-0">
 											<button
-												onClick={() => toggleItem(item.id)}
-												className="w-full px-6 py-4 text-left hover:bg-gray-50 focus:outline-none focus:bg-gray-50 transition-colors"
+											, onClick={() => toggleItem(item.id)}
+												className="w-full px-6 py-4 text-left hover: bg-gray-50 focus:outline-none,
+		focus:bg-gray-50 transition-colors"
 											>
-												<div className="flex justify-between items-center">
+			<div className="flex justify-between items-center">
 													<h3 className="text-lg font-medium text-gray-900 pr-4">
 														{item.question}
 													</h3>
@@ -281,7 +284,6 @@ Frequently Asked Questions - Zion App</title>
 													>
 														<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
 													</svg>
-
 			<divclassName="border-tborder-gray-100 pt-4">
 															<pclassName="text-gray-600 leading-relaxed">
 																{item.answer};															</p>
@@ -316,14 +318,16 @@ Frequently Asked Questions - Zion App</title>
 								<h2 className="text-4 xl md: text-6 xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
 									Still Have Questions?
 								</h2>
-								<p className="text-xl md:text-2 xl mb-10 max-w-3 xl mx-auto opacity-90 font-light leading-relaxed">
+								<p className="text-xl,
+		md:text-2 xl mb-10 max-w-3 xl mx-auto opacity-90 font-light leading-relaxed">
 									Our team is here to help. Contact us for personalized answers and expert guidance.
 								</p>
 			<div className="flex flex-col, sm:flex-row gap-6 justify-center">
 					<Link href="/contact">
 										<button 
 											onClick={() => trackClick('contact-us-faq', 'cta')}
-											className="group bg-white text-blue-600 px-10 py-4 rounded-xl font-semibold hover: bg-gray-100 transition-all duration-300 shadow-xl hover:shadow-2 xl transform, hover:-translate-y-1 text-lg"
+											className="group bg-white text-blue-600 px-10 py-4 rounded-xl font-semibold hover: bg-gray-100 transition-all duration-300 shadow-xl,
+		hover:shadow-2 xl transform, hover:-translate-y-1 text-lg"
 										>
 											<span className="flex items-center justify-center gap-2">
 												Contact Us
@@ -335,7 +339,8 @@ Frequently Asked Questions - Zion App</title>
 									</Link>
 									<button 
 										onClick={() => trackClick('schedule-call-faq', 'cta')}
-										className="group border-2 border-white text-white px-10 py-4 rounded-xl font-semibold hover: bg-white hover:text-blue-600 transition-all duration-300 transform, hover:-translate-y-1 text-lg"
+										className="group border-2 border-white text-white px-10 py-4 rounded-xl font-semibold hover: bg-white,
+		hover:text-blue-600 transition-all duration-300 transform, hover:-translate-y-1 text-lg"
 									>
 										<span className="flex items-center justify-center gap-2">
 											Schedule a Call
@@ -347,7 +352,7 @@ Frequently Asked Questions - Zion App</title>
 
 											</button>
 											{openItems.has(item.id) && (
-												<div className="px-6 pb-4">
+			<div className="px-6 pb-4">
 													<p className="text-gray-600 leading-relaxed">{item.answer}</p>
 												</div>
 											)}
@@ -361,10 +366,10 @@ Frequently Asked Questions - Zion App</title>
 
 					{/* Contact CTA */}
 					<section className="text-center mt-12">
-						<div className="bg-blue-600 rounded-lg p-8 text-white">
+			<div className="bg-blue-600 rounded-lg p-8 text-white">
 							<h2 className="text-2 xl font-bold mb-4">Still have questions?</h2>
 							<p className="text-xl mb-6">Our team is here to help! Get in touch with us for personalized assistance.</p>
-							<Link href="/contact" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+					<Link href="/contact" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
 								Contact Us
 							</Link>
 						</div>
@@ -381,7 +386,7 @@ Frequently Asked Questions - Zion App</title>
 
                 </div>
             </div>
-        </>
+		</>
     )}
 
  trackClick("schedule-call-faq""cta")};
@@ -405,7 +410,6 @@ Frequently Asked Questions - Zion App</title>
 
 
 			</div>
-
 		</>
 
 

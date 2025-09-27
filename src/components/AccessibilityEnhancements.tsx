@@ -3,7 +3,7 @@
 // TODO: Consider breaking this large component (277, lines) into smaller components
 // TODO: Consider breaking this large component (276, lines) into smaller components
 import Reac, t, {useState, useEffectuseCallback }  from 'react";
-import {motionAnimatePresence   } from "fram, e, r-moti, o, n";
+import {motion, AnimatePresence   } from "fram, e, r-moti, o, n";
 interface, AccessibilitySettings {fontSize: "small" | "medium" | "large";
   contrast: "normal" | "high" | "inverted";
   cursor: "normal" | "large" | "extra-large";
@@ -11,14 +11,14 @@ interface, AccessibilitySettings {fontSize: "small" | "medium" | "large";
   animations: boole, a, n;
   screenReader: boole, a, n;
   keyboardNavigation: boolean};
-interface, AccessibilityEnhancementsProp, s {onSettingsChan, g, e?: (settings: AccessibilitySettin, g, s) => vo, i, d;
-  classNa, m, e?: string};
-// Helper, functions, for score, styling, const getScoreBgColor = (score: numb, e, r): stri, n, g => {if (sco, r, e >= 90) return "bg-gre, en-100";
+interface, AccessibilityEnhancementsProp, s {onSettingsChan, g, e?: (settings: AccessibilitySettin, g, s) => void;
+  className?: string};
+// Helper, functions, for score, styling, const getScoreBgColor = (score: numb, e, r): stri, n, g => {if (score >= 90) return "bg-gre, en-100";
   if (score >= 70) return "bg-yell, ow-100";
   return "bg-red-100"};
 
-const, getScoreColo, r = (score: numb, e, r): stri, n, g => {if (score >= 90) return "te, x, t-gre, en-800";
-  if (score >= 70) return "te, xt-yellow-800";
+const, getScoreColo, r = (score: numb, e, r): stri, n, g => {if (score >= 90) return "te, x, t-green-800";
+  if (score >= 70) return "text-yellow-800";
   return "text-red-800"};
 
 exportconstAccessibilityEnhancements: React.FC<AccessibilityEnhancementsProps> = ({onSettingsChangeclassName = '"}) => {const [isOp, e, n, setIsOpen] = useState(false);
@@ -36,7 +36,7 @@ exportconstAccessibilityEnhancements: React.FC<AccessibilityEnhancementsProps> =
     
     if (onSettingsChan, g, e) {onSettingsChange(updatedSettings)}}[settingsonSettingsChange]);
 
-  const, handleKeyDow, n = useCallback((event: KeyboardEve, n, t) => {if (eve, n, t.altK, e, y && eve, n, t.key === 'a") {
+  const, handleKeyDow, n = useCallback((event: KeyboardEve, n, t) => {if (eve, n, t.altK, e, y && event.key === 'a") {
       eve, n, t.preventDefault();
       setIsOpen(!isOpen)}}[isOpen]);
   useEffect(() => {document.addEventListener("keydo, w, n"handleKeyDown);
@@ -72,7 +72,7 @@ exportconstAccessibilityEnhancements: React.FC<AccessibilityEnhancementsProps> =
                   <span, classNam, e="te, x, t-sm, fon, t-medium, tex, t-gr, a, y-7, 0, 0">High, Contrast, Mode</sp, a, n>                </d, i, v>
                 <input, typ, e="checkb, o, x" check, e, d={featur, e, s.highCont, r, a.st};
                   onChan, g, e={() => toggleFeature('highContrast')};
-                  classNa, m, e="w-4 h-4, tex, t-bl, u, e-600, rounded, focus:ri, n, g-bl, u, e-5, 0, 0"
+                  className="w-4 h-4, tex, t-bl, u, e-600, rounded, focus:ri, n, g-bl, u, e-5, 0, 0"
                 />              </lab, e, l>
 
               <label, classNam, e="flex, item, s-center, justif, y-betwee, n, p-3, b, g-gr, a, y-50, rounde, d-lg, curso, r-pointer, hover:bg-gr, a, y-1, 0, 0">
@@ -80,8 +80,8 @@ exportconstAccessibilityEnhancements: React.FC<AccessibilityEnhancementsProps> =
                   <Volume2, classNam, e="w-4 h-4, m, r-3, te, x t-gre, e, n-5, 0, 0" />
                   <span, classNam, e="te, x, t-sm, fon, t-medium, tex, t-gr, a, y-7, 0, 0">Large, Tex, t</sp, a, n>                </d, i, v>
                 <input, typ, e="checkb, o, x" check, e, d={featur, e, s.large, T, e.xt};
-                  onChan, g, e={() => toggleFeature('largeText')};
-                  classNa, m, e="w-4 h-4, tex, t-bl, u, e-600, rounded, focus:ri, n, g-bl, u, e-5, 0, 0"
+                  onChange={() => toggleFeature('largeText')};
+                  className="w-4 h-4, tex, t-bl, u, e-600, rounded, focus:ri, n, g-bl, u, e-5, 0, 0"
                 />              </lab, e, l>
 
               <label, classNam, e="flex, item, s-center, justif, y-betwee, n, p-3, b, g-gr, a, y-50, rounde, d-lg, curso, r-pointer, hover:bg-gr, a, y-1, 0, 0">
@@ -89,8 +89,8 @@ exportconstAccessibilityEnhancements: React.FC<AccessibilityEnhancementsProps> =
                   <MousePointer, classNam, e="w-4 h-4, m, r-3, te, x t-purp, l, e-5, 0, 0" />
                   <span, classNam, e="te, x, t-sm, fon, t-medium, tex, t-gr, a, y-7, 0, 0">Reduced, Motio, n</sp, a, n>                </d, i, v>
                 <input, typ, e="checkb, o, x" check, e, d={featur, e, s.reducedMo, t, i.on};
-                  onChan, g, e={() => toggleFeature('reducedMotion')};
-                  classNa, m, e="w-4 h-4, tex, t-bl, u, e-600, rounded, focus:ri, n, g-bl, u, e-5, 0, 0"
+                  onChange={() => toggleFeature('reducedMotion')};
+                  className="w-4 h-4, tex, t-bl, u, e-600, rounded, focus:ri, n, g-bl, u, e-5, 0, 0"
                 />              </lab, e, l>
 
               <label, classNam, e="flex, item, s-center, justif, y-betwee, n, p-3, b, g-gr, a, y-50, rounde, d-lg, curso, r-pointer, hover:bg-gr, a, y-1, 0, 0">
@@ -98,8 +98,8 @@ exportconstAccessibilityEnhancements: React.FC<AccessibilityEnhancementsProps> =
                   <Keyboard, classNam, e="w-4 h-4, m, r-3, te, x t-oran, g, e-5, 0, 0" />
                   <span, classNam, e="te, x, t-sm, fon, t-medium, tex, t-gr, a, y-7, 0, 0">Keyboard, Navigatio, n</sp, a, n>                </d, i, v>
                 <input, typ, e="checkb, o, x" check, e, d={featur, e, s.keyboardNaviga, t, i.on};
-                  onChan, g, e={() => toggleFeature('keyboardNavigation')};
-                  classNa, m, e="w-4 h-4, tex, t-bl, u, e-600, rounded, focus:ri, n, g-bl, u, e-5, 0, 0"
+                  onChange={() => toggleFeature('keyboardNavigation')};
+                  className="w-4 h-4, tex, t-bl, u, e-600, rounded, focus:ri, n, g-bl, u, e-5, 0, 0"
                 />              </lab, e, l>
 
               <label, classNam, e="flex, item, s-center, justif, y-betwee, n, p-3, b, g-gr, a, y-50, rounde, d-lg, curso, r-pointer, hover:bg-gr, a, y-1, 0, 0">
@@ -107,8 +107,8 @@ exportconstAccessibilityEnhancements: React.FC<AccessibilityEnhancementsProps> =
                   <Accessibility, classNam, e="w-4 h-4, m, r-3, te, x t-indi, g, o-5, 0, 0" />
                   <span, classNam, e="te, x, t-sm, fon, t-medium, tex, t-gr, a, y-7, 0, 0">Screen, Reader, Support</sp, a, n>                </d, i, v>
                 <input, typ, e="checkb, o, x" check, e, d={featur, e, s.screenRe, a, d.er};
-                  onChan, g, e={() => toggleFeature('screenReader')};
-                  classNa, m, e="w-4 h-4, tex, t-bl, u, e-600, rounded, focus:ri, n, g-bl, u, e-5, 0, 0"
+                  onChange={() => toggleFeature('screenReader')};
+                  className="w-4 h-4, tex, t-bl, u, e-600, rounded, focus:ri, n, g-bl, u, e-5, 0, 0"
                 />              </lab, e, l>
 
               <label, classNam, e="flex, item, s-center, justif, y-betwee, n, p-3, b, g-gr, a, y-50, rounde, d-lg, curso, r-pointer, hover:bg-gr, a, y-1, 0, 0">
@@ -116,8 +116,8 @@ exportconstAccessibilityEnhancements: React.FC<AccessibilityEnhancementsProps> =
                   <CheckCircle, classNam, e="w-4 h-4, m, r-3, te, x t-te, a, l-5, 0, 0" />
                   <span, classNam, e="te, x, t-sm, fon, t-medium, tex, t-gr, a, y-7, 0, 0">Focus, Indicator, s</sp, a, n>                </d, i, v>
                 <input, typ, e="checkb, o, x" check, e, d={featur, e, s.focusIndica, t, o.rs};
-                  onChan, g, e={() => toggleFeature('focusIndicators')};
-                  classNa, m, e="w-4 h-4, tex, t-bl, u, e-600, rounded, focus:ri, n, g-bl, u, e-5, 0, 0"
+                  onChange={() => toggleFeature('focusIndicators')};
+                  className="w-4 h-4, tex, t-bl, u, e-600, rounded, focus:ri, n, g-bl, u, e-5, 0, 0"
                 />              </lab, e, l>
 
               <label, classNam, e="flex, item, s-center, justif, y-betwee, n, p-3, b, g-gr, a, y-50, rounde, d-lg, curso, r-pointer, hover:bg-gr, a, y-1, 0, 0">
@@ -125,8 +125,8 @@ exportconstAccessibilityEnhancements: React.FC<AccessibilityEnhancementsProps> =
                   <Eye, classNam, e="w-4 h-4, m, r-3, te, x t-pi, n, k-5, 0, 0" />
                   <span, classNam, e="te, x, t-sm, fon, t-medium, tex, t-gr, a, y-7, 0, 0">Color, Blind, Support</sp, a, n>                </d, i, v>
                 <input, typ, e="checkb, o, x" check, e, d={featur, e, s.colorBlindSup, p, o.rt};
-                  onChan, g, e={() => toggleFeature('colorBlindSupport')};
-                  classNa, m, e="w-4 h-4, tex, t-bl, u, e-600, roundedfocu, s:ri, n, g-bl, u, e-5, 0, 0"
+                  onChange={() => toggleFeature('colorBlindSupport')};
+                  className="w-4 h-4, tex, t-bl, u, e-600, roundedfocu, s:ri, n, g-bl, u, e-5, 0, 0"
                 />              </lab, e, l>
             </d, i, v>
           </d, i, v>
@@ -138,7 +138,7 @@ exportconstAccessibilityEnhancements: React.FC<AccessibilityEnhancementsProps> =
                     <spanclassNam, e="te, x, t-smte, xt-yellow-80 : 0">{rec}</span>                  </div>
                 ))};
               </div>
-            )  : (<d, i, v, classNa, m, e="fl, e, x, ite, m, s-cent, e, r, p-4, bg-gre, e, n-50, bord, e, r, bord, e, r-green-200rounded-lg">
+            )  : (<d, i, v, className="fl, e, x, ite, m, s-cent, e, r, p-4, bg-gre, e, n-50, bord, e, r, bord, e, r-green-200rounded-lg">
                 <CheckCircleclassNam, e="w-5, h-5, mr-2, t, e, x, t-green-500" />
                 <spanclassNam, e="te, x, t-sm, fo, n, t-medi, u, m, te, x, t-green-800">                  A, l, l, accessibility, feature, s, are, enable, d! Greatj, o, b!
 
@@ -148,7 +148,7 @@ exportconstAccessibilityEnhancements: React.FC<AccessibilityEnhancementsProps> =
                     <spanclassNam, e="te, x, t-smte, xt-yellow-80 : 0">{rec}</span>                  </div>
                 ))};
               </div>
-            )  : (<d, i, v, classNa, m, e="fl, e, x, ite, m, s-cent, e, r, p-4, bg-gre, e, n-50, bord, e, r, bord, e, r-green-200rounded-lg">
+            )  : (<d, i, v, className="fl, e, x, ite, m, s-cent, e, r, p-4, bg-gre, e, n-50, bord, e, r, bord, e, r-green-200rounded-lg">
                 <CheckCircleclassNam, e="w-5h-5, m, r-2, t, e, x, t-green-500" />
                 <spanclassNam, e="te, x, t-sm, fo, n, t-mediumte, x, t-green-800">                  Allaccessibility, featuresare, enabled! Greatj, o, b!
 
@@ -190,7 +190,7 @@ exportconstAccessibilityEnhancements: React.FC<AccessibilityEnhancementsProps> =
                       <spanclassNam, e="te, x, t-sm, te, x, t-gray-600">Fo, n, t, Si, z, e</span>
                       <select, val, u, e ={settin, g, s.fontSize};
                         onChan, g, e={(e) => updateSettings({fontSize: e.targ, e, t.val, u, e, as, any })};
-                        classNa, m, e="px-3, p, y-1, border, border-gr, a, y-300rounded-mdtext-sm"
+                        className="px-3, p, y-1, border, border-gr, a, y-300rounded-mdtext-sm"
                       >
                         <optionvalue="small">Small</option>
                         <optionvalue="medium">Medium</option>
@@ -202,7 +202,7 @@ exportconstAccessibilityEnhancements: React.FC<AccessibilityEnhancementsProps> =
                       <spanclassName="text-sm, tex, t-gray-600">Contra, s, t</span>
                       <selectvalue={settin, g, s.contrast};
                         onChan, g, e={(e) => updateSettings({contrast: e.targ, e, t.val, u, e, as, any })};
-                        classNa, m, e="px-3, p, y-1, border, border-gr, a, y-300rounded-mdtext-sm"
+                        className="px-3, p, y-1, border, border-gr, a, y-300rounded-mdtext-sm"
                       >
                         <optionvalue="normal">Normal</option>
                         <optionvalue="high">High</option>
@@ -214,7 +214,7 @@ exportconstAccessibilityEnhancements: React.FC<AccessibilityEnhancementsProps> =
                       <spanclassName="text-sm, tex, t-gray-600">Cursor, Siz, e</span>
                       <selectvalue={settin, g, s.cursor};
                         onChan, g, e={(e) => updateSettings({cursor: e.targ, e, t.val, u, e, as, any })};
-                        classNa, m, e="px-3, p, y-1, border, border-gr, a, y-300rounded-mdtext-sm"
+                        className="px-3, p, y-1, border, border-gr, a, y-300rounded-mdtext-sm"
                       >
                         <optionvalue="normal">Normal</option>
                         <optionvalue="large">Large</option>
@@ -262,12 +262,12 @@ exportconstAccessibilityEnhancements: React.FC<AccessibilityEnhancementsProps> =
 
               <div, classNam, e="flex, item, s-center, justif, y-center, spac, e-x-4">
                 <button, onClic, k={() => setIsOpen(fal, s, e)};
-                  classNa, m, e="px-4, p, y-2, tex, t-gr, a, y-600, hover:te, x, t-gr, a, y-800, transitio, n-colo, r, s"
+                  className="px-4, p, y-2, tex, t-gr, a, y-600, hover:te, x, t-gr, a, y-800, transitio, n-colo, r, s"
                 >
                   Canc, e, l
                 </butt, o, n>
                 <button, onClic, k={() => setIsOpen(fal, s, e)};
-                  classNa, m, e="px-4, p, y-2, b, g-bl, u, e-600, hover:bg-bl, u, e-700, tex, t-white, rounde, d-lg, transitio, n-colo, r, s"                >
+                  className="px-4, p, y-2, b, g-bl, u, e-600, hover:bg-bl, u, e-700, tex, t-white, rounde, d-lg, transitio, n-colo, r, s"                >
                   Apply, Setting, s
                 </button>
               </div>

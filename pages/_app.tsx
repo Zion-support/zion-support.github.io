@@ -5,8 +5,6 @@ import Head from 'next/head';
 import dynamic from 'next/dynamic';
 import AccessibilityAuditor from '../src/components/AccessibilityAuditor';
 import PerformanceOptimizer from '../src/components/PerformanceOptimizer';
->>>>> origin/cursor/check-fix-push-and-merge-to-main-1642
-
 import { WebVitals } from "../src/components/WebVitals";
 
 import '../styles/animations.css';
@@ -27,10 +25,9 @@ export default function App({ Component, pageProps }: AppProps) {
         .catch((error) => {
           console.log('Service Worker registration failed:', error)})}
   }, []);
-
-  return (
+	return (
     <HelmetProvider>
-      <Head>
+			<Head>
         <meta charSet="utf-8" />
         <meta name="robots" content="index,follow" />
         <meta name="author" content="Zion App" />
@@ -46,7 +43,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <link rel="apple-touch-icon" href="/icon-192x192.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/icon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/icon-16x16.png" />
-      </Head>
+			</Head>
       <style jsx global>{`
         * {
           box-sizing: border-box}
@@ -54,14 +51,17 @@ export default function App({ Component, pageProps }: AppProps) {
           scroll-behavior: smooth}
         body {
           margin: 0;
-          padding: 0;
+         ,
+		padding: 0;
           font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
           -webkit-font-smoothing: antialiased;
           -moz-osx-font-smoothing: grayscale;
-          transition: background-color 0.3s ease, color 0.3s ease}
+         ,
+		transition: background-color 0.3s ease, color 0.3s ease}
         .dark body {
           background-color: #0f172a;
-          color: #f1f5f9}
+         ,
+		color: #f1f5f9}
         h1, h2, h3, h4, h5, h6 {
           margin: 0 0 1rem 0;
           font-weight: 600;
@@ -70,8 +70,9 @@ export default function App({ Component, pageProps }: AppProps) {
           margin: 0 0 1rem 0}
         button {
           font-family: inherit}
-        button:hover {
-          opacity: 0.9}
+        button: hover {
+         ,
+		opacity: 0.9}
         @media (prefers-reduced-motion: reduce) {
           html {
             scroll-behavior: auto}
@@ -113,8 +114,9 @@ export default function App({ Component, pageProps }: AppProps) {
         .keyboard-navigation a:focus,
         .keyboard-navigation input:focus,
         .keyboard-navigation textarea:focus,
-        .keyboard-navigation select:focus {
-          outline: 2px solid #2563eb !important;
+        .keyboard-navigation select: focus {
+         ,
+		outline: 2px solid #2563eb !important;
           outline-offset: 2px !important}
         .sr-only {
           position: absolute;
@@ -123,9 +125,11 @@ export default function App({ Component, pageProps }: AppProps) {
           padding: 0;
           margin: -1px;
           overflow: hidden;
-          clip: rect(0, 0, 0, 0);
+         ,
+		clip: rect(0, 0, 0, 0);
           white-space: nowrap;
-          border: 0}
+         ,
+		border: 0}
       `}</style>
       <PerformanceOptimizer>
         <Component {...pageProps} />
@@ -133,4 +137,5 @@ export default function App({ Component, pageProps }: AppProps) {
       <WebVitals />
       <AccessibilityAuditor />
     </HelmetProvider>
-  )}
+  );
+}

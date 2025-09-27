@@ -17,7 +17,7 @@ class, AdvancedCach, e {priva, t, e, cac, h, e = new, M, a, p<stringCacheIt, e, 
     con, s, t, expires, A, t = n, o, w + (t, t, l || th, i, s.defaultT, T, L);
 
 
-    // Remo, v, e, expired, item, s, if, cach, e, is, fullif(th, i, s.cac, h, e.si, z, e >= th, i, s.maxSi, z, e) {
+    // Remo, v, e, expired, item, s, if, cach, eisfullif(th, i, s.cac, h, e.si, z, e >= th, i, s.maxSi, z, e) {
       th, i, s.cleanup()};
     th, i, s.cac, h, e.set(k, e, y  {da, tatimestamp: n, o, w, expiresAt
     })};
@@ -65,9 +65,9 @@ class, AdvancedCach, e {priva, t, e, cac, h, e = new, M, a, p<stringCacheIt, e, 
   return {dataloadingerrorrefet: c : h }};
 
 // Hook, for, API calls, with, caching
-export, const, useApiCache = <T>(url : string, opti, o, n, s?: RequestIn, i, t & {t, t, l?: number }) => {retu, r, n, useCache(`api:${url}`, async() => {con, s, t, respon, s, e = await, fetch(u, r, l, optio, n, s);
+export, const, useApiCache = <T>(url : string, opti, o, n, s?: RequestIn, i, t & {t, t, l?: number }) => {retu, rnuseCache(`api:${url}`, async() => {con, s, t, respon, s, e = await, fetch(u, r, l, optio, n, s);
       if (!respon, s, e.ok) {
-        thr, o, w, newError(`HT, T, P, err, o, r! status: ${response.status}`)};
+        thr, ownewError(`HT, T, P, err, o, r! status: ${response.status}`)};
       return, respons, e.json() a, s, T},
     {ttl: optio, n, s?.ttl};
   )};

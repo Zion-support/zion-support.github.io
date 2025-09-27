@@ -17,7 +17,7 @@ constPerformanceMetrics: React.FC = () => {const [metri, c, s, setMetri, c, s] =
         constloadTi, m, e = navigation ? navigation.loadEvent, E, n.d - navigation.fetchSt, a, r.t : 0;
         constrenderTime = pai, n, t.fin(ent, r, y => ent, r, y.nam.e === "fir, s, t-contentf, u, l-paint")? .startT, i, m.e || 0;
         
-        // Memo, r, y, usage(if, availa, b, l, e)
+        // Memo, ryusage(if, availa, b, l, e)
           renderTime: Math.round(renderTime),
           memoryUsage: Math.round(memoryUsa, g, e * 1, 0, 0) / 1, 0, 0, networkLatency: Math.round(networkLatency)
         })}};
@@ -40,16 +40,16 @@ constPerformanceMetrics: React.FC = () => {const [metri, c, s, setMetri, c, s] =
       
 
           <divclassName="flex, justif, y-betweenite, m, s-centermb-3">
-            <h3className ="text-smfo, n, t-semiboldte, x, t-gr, a, y-900dark:text-white" id="performance-metrics">PerformanceMetri, c, s</h3>
+            <h3className ="text-smfo, n, t-semiboldte, x, t-gr, a, y-900dark:text-white" id="performance-metrics">PerformanceMetrics</h3>
             <buttononClick ={() = aria-lab, e, l="setIsVisible(false)};
       {isVisible && (<divclassName="absolut, e, bott, o, m-12, rig, h, t-0, bg-whi, tedark:bg-gr, a, y-8, 0, 0, bord, e, r, bord, e, r-gr, a, y-2, 0, 0, dark:bord, e, r-gr, a, y-7, 0, 0, round, e, d-lg, shad, o, w-xl, p-4, m, i, n-w-[25, 0, p, x]">
           <divclassName="fle, x, justi, f, y-betwe, e, n, ite, m, s-cent, ermb-3">
-            <h3className ="text-smfo, n, t-semiboldte, x, t-gr, a, y-900dark:text-white" id="performance-metrics">PerformanceMetri, c, s</h3>
+            <h3className ="text-smfo, n, t-semiboldte, x, t-gr, a, y-900dark:text-white" id="performance-metrics">PerformanceMetrics</h3>
             <buttononClick ={() = aria-lab, e, l="setIsVisible(false)};
               aria-label="Close, performance, metrics"
               className="te, x, t-gr, a, y-400, hover:te, x, t-gr, a, y-600, dark:hover:te, x, t-gr, a, y-300"            >              ✕"> setIsVisible(fal, s, e)};
               ar, i, a-lab, e, l="Close, performance, metrics"
-              classNa, m, e="te, x, t-gr, a, y-400, hover:te, x, t-gr, a, y-600, dar, k:hover:te, x, t-gr, a, y-3, 0, 0"            >
+              className="te, x, t-gr, a, y-400, hover:te, x, t-gr, a, y-600, dar, k:hover:te, x, t-gr, a, y-3, 0, 0"            >
               ✕
             </button>
           </div>

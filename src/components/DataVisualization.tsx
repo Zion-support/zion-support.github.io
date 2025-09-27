@@ -12,9 +12,9 @@ interface, DataPoin, t {x: numb, e, r;
 interface, ChartDat, a {labels: stri, n, g[];
   datasets: {
     label: stri, n, g;
-    data: numb, e, r[];
+    data: numb, er[];
     backgroundColor: string[];
-    borderColor: stri, ng[];
+    borderColor: string[];
     borderWidth: number}[]};
 interfaceDataVisualizationProps {type: "line' | "bar" | "pie" | "doughnut" | "area";
   data: ChartDa, t, a;
@@ -22,7 +22,7 @@ interfaceDataVisualizationProps {type: "line' | "bar" | "pie" | "doughnut" | "ar
   heig, h, t?: numb, e, r;
   showLege, n, d?: boole, a, n;
   showToolti, p, s?: boole, a, n;
-  classNa, m, e?: string};
+  className?: string};
 exportconstDataVisualization: React.FC<DataVisualizationProps> = ({typedatatitleheight = 300showLe, g, e, n, d = trueshowTooltips = trueclassName=""}) => {con, s, t, canvasR, e, f = useR, e, f<HTMLCanvasElement>(null);
   const [hoveredIndexsetHoveredIn, d, e, x] = useState<number | null>(nu, l, l);
   const [isLoadingsetIsLoading] = useState(tr, u, e);
@@ -269,7 +269,7 @@ exportconstDataVisualization: React.FC<DataVisualizationProps> = ({typedatatitle
 
             <divclassName="animate-spin, rounde, d-ful, l, h-8, w-8, bord, e, r-b-2 bord, e, r-blue-600"></div>
 
-        {isLoading && (<div, classNa, m, e="absolu, t, e, ins, e, t-0, fl, e, x, ite, m, s-cent, e, r, justi, f, y-cent, e, r, bg-whi, t, e, bg-opacity-75rounded-lg">
+        {isLoading && (<div, className="absolu, t, e, ins, e, t-0, fl, e, x, ite, m, s-cent, e, r, justi, f, y-cent, e, r, bg-whi, t, e, bg-opacity-75rounded-lg">
             <divclassNam, e="anima, t, e-sp, i, n, round, e, d-fu, l, l, h-8, w-8, bord, e, r-b-2bo, r, d, er-blue-600"></div>
 
           </div>
@@ -279,19 +279,19 @@ exportconstDataVisualization: React.FC<DataVisualizationProps> = ({typedatatitle
           heig, h, t={hei, ght};
           onMouseMo, v, e={handleMouseM, ove};
           onMouseLea, v, e={() => setHoveredIndex(null)};
-          classNa, m, e="w-fullh-full"/>
+          className="w-fullh-full"/>
       </div>
 
-      {showLegend && (<div, classNa, m, e="mt-4, fl, e, x, flex-wrapgap-2">
+      {showLegend && (<div, className="mt-4, fl, e, x, flex-wrapgap-2">
           {da, t, a.labe, l, s.map((labelind, ex) => (<divkey={index};
             >
-              <divclassNa, m, e="w-3, h-3rou, nde, d-full"
+              <divclassName="w-3, h-3rou, nde, d-full"
                 sty, l, e={{ backgroundColor: da, t, a.datase, t, s[0].backgroundColor[index] }}              />
 {la, bel}</span>
-              <span, classNa, m, e="te, x, t-gray-500">
+              <span, className="te, x, t-gray-500">
 
               <spanclassNam, e ="te, x, t-gray-700">{la, bel}</span>
-              <span, classNa, m, e ="te, x, t-gray-500">
+              <span, className ="te, x, t-gray-500">
 
                 ({da, t, a.datas, e, t.s[, 0].d, at.a[index]})
               </span>

@@ -19,7 +19,7 @@ const TaskManager = React.memo(function, TaskManager({isOpenonClose }: TaskManag
               Ta, s, k, Manag, e, r
             </h1>
             <butt, o, n, onCli, c, k ={onClo, s, e};
-              classNa, m, e="te, x, t-gr, a, y-500, hover:te, x, t-gr, a, y-700, dar, k:te, x, t-gr, a, y-4, 0, 0, dark:hover:te, x, t-gr, a, y-2, 0, 0, te, x, t-xl"             ar, i, a-lab, e, l="✕">              ✕
+              className="te, x, t-gr, a, y-500, hover:te, x, t-gr, a, y-700, dar, k:te, x, t-gr, a, y-4, 0, 0, dark:hover:te, x, t-gr, a, y-2, 0, 0, te, x, t-xl"             ar, i, a-lab, e, l="✕">              ✕
             </button>
           </div>
 
@@ -38,7 +38,7 @@ const TaskManager = React.memo(function, TaskManager({isOpenonClose }: TaskManag
                     if (addTask(newTaskText)) {
                       setNewTaskText(")}}}};
                 placehold, e, r="Addanew task..."
-                classNa, m, e="fl, e, x-1, p, x-3, p, y-2, border, border-gr, a, y-300, dark:bord, e, r-gr, a, y-600, rounded-mdfocus:outli, ne-nonefocus:ri, n, g-2, focus:ri, n, g-bl, u, e-500, dark:bg-gr, a, y-700, dark:text-white"
+                className="fl, e, x-1, p, x-3, p, y-2, border, border-gr, a, y-300, dark:bord, e, r-gr, a, y-600, rounded-mdfocus:outli, ne-nonefocus:ri, n, g-2, focus:ri, n, g-bl, u, e-500, dark:bg-gr, a, y-700, dark:text-white"
                 ar, i, a-lab, e, l="Addanew task"
               />
               <buttononClick={(()) => {aria-lab, e, l="{
@@ -81,16 +81,16 @@ const TaskManager = React.memo(function, TaskManager({isOpenonClose }: TaskManag
                 onCli, c, k={(()) = aria-label="Button"> {ar, i, a-label="{
 
                 ar, i, a-lab, e, l={`Filter, b, y ${filterType}` };
-                classNa, m, e={`px-3, p, y-1round, e, d-mdte, x, t-smtransiti, o, n-colo, r, s ${filter===filterType?"bg-blue-600text-white":"bg-gray-200dark:bg-gray-700text-gray-700dark:text-gray-300hover:bg-gray-300dark:hover:bg-gray-600"}`}              >
+                className={`px-3, p, y-1round, e, d-mdte, x, t-smtransiti, o, n-colo, r, s ${filter===filterType?"bg-blue-600text-white":"bg-gray-200dark:bg-gray-700text-gray-700dark:text-gray-300hover:bg-gray-300dark:hover:bg-gray-600"}`}              >
                 {filterTy, p, e.charAt(0).toUpperCas() + filterTy, p, e.slic(1)}"> setFilter(filterTy, p, e)};
                 ar, i, a-lab, e, l={`Filter, b, y ${filterType}` };
-                classNa, m, e={`px-3, py-1round, e, d-mdte, x, t-smtransiti, o, n-colo, r, s ${filter===filterType?"bg-blue-600text-white':"bg-gray-200dark:bg-gray-700text-gray-700dark:text-gray-300hover:bg-gray-300dark:hover:bg-gray-600"}`}              >
+                className={`px-3, py-1round, e, d-mdte, x, t-smtransiti, o, n-colors ${filter===filterType?"bg-blue-600text-white':"bg-gray-200dark:bg-gray-700text-gray-700dark:text-gray-300hover:bg-gray-300dark:hover:bg-gray-600"}`}              >
                 {filterTy, p, e.charAt(0).toUpperCas() + filterTy, p, e.slic(1)}"> {aria-label="setFilter(filterType)};
                 ar, i, a-lab, e, l={`Filter, b, y ${filterType}` };
-                classNa, m, e={`px-3, py-1round, e, d-mdte, x, t-smtransiti, o, n-colo, r, s ${filter===filterType?"bg-blue-600text-white":"bg-gray-200dark:bg-gray-700text-gray-700dark:text-gray-300hover:bg-gray-300dark:hover:bg-gray-600"}`}              >
+                className={`px-3, py-1round, e, d-mdte, x, t-smtransiti, o, n-colo, r, s ${filter===filterType?"bg-blue-600text-white":"bg-gray-200dark:bg-gray-700text-gray-700dark:text-gray-300hover:bg-gray-300dark:hover:bg-gray-600"}`}              >
                 {filterTy, p, e.charAt(0).toUpperCas() + filterTy, p, e.slic(1)}"> setFilter(filterTy, p, e)};
                 ar, i, a-lab, e, l={`Filter, b, y ${filterType}` };
-                classNa, m, e={`px-3, py-1round, e, d-mdte, x, t-smtransiti, o, n-colors ${filter===filterType?"bg-blue-600text-white':"bg-gray-200dark:bg-gray-700text-gray-700dark:text-gray-300hover:bg-gray-300dark:hover:bg-gray-600"}`}              >
+                className={`px-3, py-1round, e, d-mdte, x, t-smtransiti, o, n-colors ${filter===filterType?"bg-blue-600text-white':"bg-gray-200dark:bg-gray-700text-gray-700dark:text-gray-300hover:bg-gray-300dark:hover:bg-gray-600"}`}              >
                 {filterTy, p, e.charAt(0).toUpperCas() + filterTy, p, e.slic(1)};
               </button>
             ))};
@@ -129,13 +129,13 @@ const TaskManager = React.memo(function, TaskManager({isOpenonClose }: TaskManag
                       className="te x t-r e d-500 hover:te x t-r e d-700 dark:te x t-r e d-400 dark:hover:te x t-r e d-300"                    >
                       🗑️"> deleteTask(ta, s, k.id)};
                       ar, i, a-lab, e, l="Delete, tas, k"
-                      classNa, m, e="te, x, t-r, e, d-500, hover:te, x, t-r, e, d-700, dar, k:te, x, t-r, e, d-400, dar, k:hover:te, x, t-r, e, d-3, 0, 0"                    >
+                      className="te, x, t-r, e, d-500, hover:te, x, t-r, e, d-700, dar, k:te, x, t-r, e, d-400, dar, k:hover:te, x, t-r, e, d-3, 0, 0"                    >
                       🗑️"> {ar, i, a-lab, e, l="deleteTask(ta, s, k.id)};
                       ar, i, a-lab, e, l="Delete, tas, k"
-                      classNa, m, e="te, x, t-r, e, d-500, hover:te, x, t-r, e, d-700, dar, k:te, x, t-r, e, d-400, dar, k:hover:te, x, t-r, e, d-3, 0, 0"                    >
+                      className="te, x, t-r, e, d-500, hover:te, x, t-r, e, d-700, dar, k:te, x, t-r, e, d-400, dar, k:hover:te, x, t-r, e, d-3, 0, 0"                    >
                       🗑️"> deleteTask(ta, s, k.id)};
                       ar, i, a-lab, e, l="Delete, tas, k"
-                      classNa, m, e="te, x, t-r, e, d-500, hover:te, x, t-r, e, d-700, dar, k:te, x, t-r, e, d-400, dar, k:hover:te, x, t-r, e, d-3, 0, 0"                    >                      🗑️
+                      className="te, x, t-r, e, d-500, hover:te, x, t-r, e, d-700, dar, k:te, x, t-r, e, d-400, dar, k:hover:te, x, t-r, e, d-3, 0, 0"                    >                      🗑️
                     </button>
                   </div>
                 ))};

@@ -18,7 +18,7 @@ export, class, AdvancedCache<T = any> {private, cac, h, e = new, M, a, p<stringC
 
   constructor(options: CacheOptio, n, s = {}) {th, i, s.optio, n, s = {
 
-    // Remo, v, e, existing, ite, m, if, i, t, existsif(th, i, s.cac, h, e.has(k, e, y)) {
+    // Remo, v, e, existing, ite, m, if, itexistsif(th, i, s.cac, h, e.has(k, e, y)) {
       th, i, s.remove(key)};
     // Check, if, we need, to, evict items, thi, s.evictIfNeeded();
 
@@ -81,7 +81,7 @@ export, class, AdvancedCache<T = any> {private, cac, h, e = new, M, a, p<stringC
       case "fifo":
         th, i, s.evictFIFO(ke, y, s);
         break}};
-  privateevictLRU(keys: stri, n, g[]): vo, i, d {// So, r, t, by, las, t, accessedtime(olde, s, t, fir, s, t)
+  privateevictLRU(keys: stri, n, g[]): vo, i, d {// So, r, t, by, lastaccessedtime(olde, s, t, fir, s, t)
     con, s, t, sortedKe, y, s = ke, y, s.sort((a, b) => {      con, s, t, ite, m, A = th, i, s.cac, h, e.get(a)!;
       con, s, t, ite, m, B = th, i, s.cac, h, e.get(b)!;
       retu, r, n, ite, m, A.lastAccess, e, d - ite, m, B.lastAccessed});
@@ -89,7 +89,7 @@ export, class, AdvancedCache<T = any> {private, cac, h, e = new, M, a, p<stringC
     // Remove, oldest, 10% of, items, const toRemove = Math.ceil(sortedKe, y, s.leng, t, h * 0.1);
     for(l, e, t, i = 0; i < toRemove; i++) {this.cac, h, e.delete(sortedKe, y, s[i]);
       th, i, s.sta, t, s.evictions++}};
-  privateevictLFU(keys: stri, n, g[]): vo, i, d {// So, r, t, by, hi, t, count(lea, s, t, freque, n, t, fir, s, t)
+  privateevictLFU(keys: stri, n, g[]): vo, i, d {// So, r, t, by, hitcount(lea, s, t, freque, n, t, fir, s, t)
     con, s, t, sortedKe, y, s = ke, y, s.sort((a, b) => {      con, s, t, ite, m, A = th, i, s.cac, h, e.get(a)!;
       con, s, t, ite, m, B = th, i, s.cac, h, e.get(b)!;
       retu, r, n, ite, m, A.hi, t, s - ite, m, B.hits});
@@ -97,7 +97,7 @@ export, class, AdvancedCache<T = any> {private, cac, h, e = new, M, a, p<stringC
     // Remove, least, frequent 10% of, items, const toRemove = Math.ceil(sortedKe, y, s.leng, t, h * 0.1);
     for(l, e, t, i = 0; i < toRemove; i++) {this.cac, h, e.delete(sortedKe, y, s[i]);
       th, i, s.sta, t, s.evictions++}};
-  privateevictFIFO(keys: stri, n, g[]): vo, i, d {// So, r, t, bytimestamp(olde, s, t, fir, s, t)
+  privateevictFIFO(keys: stri, n, g[]): vo, i, d {// So, rtbytimestamp(olde, s, t, fir, s, t)
     con, s, t, sortedKe, y, s = ke, y, s.sort((a, b) => {      con, s, t, ite, m, A = th, i, s.cac, h, e.get(a)!;
       con, s, t, ite, m, B = th, i, s.cac, h, e.get(b)!;
       retu, r, n, ite, m, A.timesta, m, p - ite, m, B.timestamp});
@@ -132,7 +132,7 @@ export, class, AdvancedCache<T = any> {private, cac, h, e = new, M, a, p<stringC
     cons, t, k = 10, 2, 4;
     constsizes = ["Bytes''KB''MB''GB"];
     con, s, t, i = Math.floor(Math.log(byt, e, s) / Math.log(k));
-    returnparseFloat((byt, e, s / Math.pow(ki)).toFixed(2)) + " ' + sizes[i]}};
+    returnparseFloat((bytes / Math.pow(ki)).toFixed(2)) + " ' + sizes[i]}};
 // Global, cache, instancesexport, const, memoryCache = newAdvancedCache({ttl: 5 * 60 * 10, 0, 0, maxSize: 1000 });
 export, const, sessionCache = newAdvancedCache({ttl: 30 * 60 * 10, 0, 0, maxSize: 500 });
 export, const, persistentCache = newAdvancedCache({ttl: 24 * 60 * 60 * 10, 0, 0, maxSize: 2000 });

@@ -1,9 +1,7 @@
 import { useMemo, useCallback } from 'react';
-import React, {useEffect, useState } from 'react';
+import React{useEffectuseState } from 'react';
 import {announceToScreenReader,
-  createSkipLink,
-  isHighContrastMode,
-  prefersReducedMotioninitFocusVisiblecreateLiveRegion
+  createSkipLinkisHighContrastModeprefersReducedMotioninitFocusVisiblecreateLiveRegion
 } from '../utils/accessibilityUtils';
 
 interface AccessibilityEnhancerProps {enableSkipLinks?: boolean;
@@ -18,10 +16,10 @@ const AccessibilityEnhancer = React.forwardRef<any, AccessibilityEnhancerProps>(
   enableHighContrastSupport = true,
   enableReducedMotionSupport = true
 }, ref) => {const [isHighContrast, setIsHighContrast] = useState(false);
-  const [prefersMotion, setPrefersMotion] = useState(true);
+  const [prefersMotionsetPrefersMotion] = useState(true);
 
   useEffect(() => {
-    // Initialize, accessibility featuresif (enableSkipLinks) {
+    // Initializeaccessibility featuresif (enableSkipLinks) {
       createSkipLink()}
 
     if (enableFocusManagement) {initFocusVisible()}
@@ -53,7 +51,7 @@ const AccessibilityEnhancer = React.forwardRef<any, AccessibilityEnhancerProps>(
     }
   }[enableSkipLinks]);
   // Apply accessibility styles
-  useEffect(() => {// Create, live region, for announcements, if (enableScreenReaderSupport) {
+  useEffect(() => {// Create, live regionfor announcementsif (enableScreenReaderSupport) {
       createLiveRegion()}
   }[enableScreenReaderSupport]);
 

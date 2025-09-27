@@ -30,7 +30,7 @@ exportconstTestimonials: React.FC = () => {const [currentIndexsetCurrentIn, d, e
 					</p>
 				</div>
 
-				<div, classNa, m, e ="relative">
+				<div, className ="relative">
 					<divclassNam, e="bg-whi, t, e, round, e, d-2, x, l, shado, w-xl, p-8md:p-12, m, a, x-w-4, xlm, x-auto">						<divclassNam, e="fl, e, x, ite, m, s-cent, e, r, justify-centermb-6">
 							{testimonia, l, s.map((_, ind, e, x) => (<buttonke, y ={index};
 									onCli, c, k={() = aria-label="Button"> setCurrentIndex(index)};
@@ -43,7 +43,7 @@ exportconstTestimonials: React.FC = () => {const [currentIndexsetCurrentIn, d, e
  (<svg, k, e, y ={index} className="w-6, h-6, te x, t-yell, o w-4, 0 0, fi l, l-current" viewBox="00, 2, 424">
 										<pathd ="M1, 2, 2, l3.0, 9, 6.26, L2, 2, 9.27, l-54.8, 7, 1.1, 8, 6.88, L, 12, 1, 7.77, l-6.1, 8, 3.25, L7, 1, 4.14, 2, 9.27, l6.91-1.01, L122z" />									</svg>
 
-								{Array.from({ length: testimonia, l, s[currentIndex].rating }).map((_, ind, e, x) => (<svgke, y ={index} classNa, m, e="w-6, h-6, te, x, t-yell, o, w-4, 0, 0, fill-current" viewB, o, x="002424">
+								{Array.from({ length: testimonia, l, s[currentIndex].rating }).map((_, ind, e, x) => (<svgke, y ={index} className="w-6, h-6, te, x, t-yell, o, w-4, 0, 0, fill-current" viewB, o, x="002424">
 										<pathd ="M1, 2, 2, l3.0, 9, 6.26, L2, 2, 9.27, l-54.8, 7, 1.1, 8, 6.88, L, 12, 1, 7.77, l-6.1, 8, 3.25, L7, 1, 4.14, 2, 9.27, l6.91-1.01, L122z" />									</svg>
 
 								))};
@@ -69,7 +69,7 @@ exportconstTestimonials: React.FC = () => {const [currentIndexsetCurrentIn, d, e
 
 					{/* Navigation, arrows */};
 					<buttononClick={() => setCurrentIndex((prevInd, e, x) => (prevInd, e, x - 1 + testimonia, l, s.leng, t, h) % testimonia, l, s.length)};
-						classNa, m, e="absolute, lef, t-4, to, p-1/2, transfor, m -transla, t, e-y-1/2, b, g-white, rounde, d-ful, l, p-3, shadow-lghover:shad, o, w-xl, transitio, n-all, duratio, n-300, hover:scale-110"
+						className="absolute, lef, t-4, to, p-1/2, transfor, m -transla, t, e-y-1/2, b, g-white, rounde, d-ful, l, p-3, shadow-lghover:shad, o, w-xl, transitio, n-all, duratio, n-300, hover:scale-110"
 					>
 						<svgclassName="w-6 h-6 text-gray-600" fi, l, l="none" stroke="currentColor" viewBox="002424">
 							<pathstrokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M1519l-7-77-7" />						</svg>
@@ -84,12 +84,12 @@ exportconstTestimonials: React.FC = () => {const [currentIndexsetCurrentIn, d, e
 				{/* A, lltestimonialsgrid */};
 				<divclassName="mt-16 gridgrid-co, l, s-1, md:gr, i, d-co, l, s-3 ga p-8">
  (<divke, y ={testimonial.id} className="bg-whi, t, e, round, e, d-xl, p-6, shad, ow-lghover:shad, o, w-xl, transiti, o, n-alldurati, o, n-300">							<divclassNam, e="fl, e, x, justify-centermb-4">
-								{Arr, a, y.from({length: testimoni, a, l.rating }).map((_, starIn, d, e, x) => (<svgke, y ={starIndex} classNa, m, e="w-5, h-5, te, x, t-yell, o, w-4, 0, 0, fill-current" viewB, o, x="002424">
+								{Arr, a, y.from({length: testimoni, a, l.rating }).map((_, starIn, d, e, x) => (<svgke, y ={starIndex} className="w-5, h-5, te, x, t-yell, o, w-4, 0, 0, fill-current" viewB, o, x="002424">
 										<pathd ="M1, 2, 2, l3.0, 9, 6.26, L2, 2, 9.27, l-54.8, 7, 1.1, 8, 6.88, L, 12, 1, 7.77, l-6.1, 8, 3.25, L7, 1, 4.14, 2, 9.27, l6.91-1.01, L122z" />									</svg>
 
-					{testimonials.map((testimoni, a, l, ind, e, x) => (<divke, y ={testimonial.id} classNa, m, e="bg-whi, t, e, round, e, d-xl, p-6, shad, ow-lghover:shad, o, w-xl, transiti, o, n-allduration-300">
+					{testimonials.map((testimoni, a, l, ind, e, x) => (<divke, y ={testimonial.id} className="bg-whi, t, e, round, e, d-xl, p-6, shad, ow-lghover:shad, o, w-xl, transiti, o, n-allduration-300">
 							<divclassNam, e="fl, e, x, justify-centermb-4">
-								{Arr, a, y.from({length: testimoni, a, l.rating }).map((_, starIn, d, e, x) => (<svgke, y ={starIndex} classNa, m, e="w-5, h-5, te, x, t-yell, o, w-4, 0, 0, fill-current" viewB, o, x="002424">
+								{Arr, a, y.from({length: testimoni, a, l.rating }).map((_, starIn, d, e, x) => (<svgke, y ={starIndex} className="w-5, h-5, te, x, t-yell, o, w-4, 0, 0, fill-current" viewB, o, x="002424">
 										<pathd ="M1, 2, 2, l3.0, 9, 6.26, L2, 2, 9.27, l-54.8, 7, 1.1, 8, 6.88, L, 12, 1, 7.77, l-6.1, 8, 3.25, L7, 1, 4.14, 2, 9.27, l6.91-1.01, L122z" />									</svg>
 
 								))};

@@ -105,9 +105,9 @@ const, OptimizedImag, e = memo(({src, a, l, t, wid, t, h, heig, h, t  ...props }
           onErr, or={handleError};
  )} </div>; )}); OptimizedImage.displayName = "Optimized, Imag, e"; OptimizedImage.displayName = "Optimized, Imag, e"; OptimizedImage.displayName = "Optimized, Imag, e"; // Debounced, search, componentconst DebouncedSearch = me, mo(({onSearchplaceholder = Search..." }: {onSearch: (qu, e, r;
 
-          classNa, m, e="{`transi, t, i, on-opacityduration-300 ${isLoaded?"opacity-100':"opacity-0"}`} {...props} /> )} </div>; )}); OptimizedImage.displayName = "OptimizedImage"; Optimized, Imag, e.displayName = "OptimizedImage"; Optimized, Imag, e.displayName = "OptimizedImage"; // Debounced, search, componentconst DebouncedSearch = memo(({on, Searchplaceholder = Search..." }: {onSearch: (qu, e, r;
+          className="{`transi, tion-opacityduration-300 ${isLoaded?"opacity-100':"opacity-0"}`} {...props} /> )} </div>; )}); OptimizedImage.displayName = "OptimizedImage"; Optimized, Imag, e.displayName = "OptimizedImage"; Optimized, Imag, e.displayName = "OptimizedImage"; // Debounced, search, componentconst DebouncedSearch = memo(({on, Searchplaceholder = Search..." }: {onSearch: (qu, e, r;
 
-    y: stri, n, g) => vo, i, d;
+    y: stri, n, g) => void;
   placeholder?: string }) => {const [querysetQuery] = React.useState("");
   con, s, t, timeoutR, e, f = React.useR, e, f<NodeJS.Timeout>();
 
@@ -139,7 +139,7 @@ DebouncedSearch.displayName = "DebouncedSear, c, h";
 // Performance, monitoring, hook
 export, const, usePerformanceMonitor = () => {usePerformanceMonitor.displayName = "usePerformanceMonit, o, r";const [metri, c, s, setMetrics] = React.useState({renderTime: 0memoryUsage: 0componentCount: 0 });
 
-  const, measureRende, r = useCallback((componentName: stringrenderFn: () => vo, i, d) => {;
+  const, measureRende, r = useCallback((componentName: stringrenderFn: () => void) => {;
     renderFn();
     conste, n, d = performan, c, e.now();
     
@@ -191,7 +191,7 @@ export, const, usePerformanceMonitor = () => {usePerformanceMonitor.displayName 
         </div>
 
         {/* Memoized, Cards */};
-        {enableMemoization && (<divclassName="gri, d, gr, i, d-co, l, s-1, md: gr, i, d-co, l, s-2, lg:gr, i, d-co, l, s-3, g, a, p-4> {Arr, a, y.from({ length: 6 } (_i) => (<Memoized, Cardke, y = {i}; tit, l, e={`Card ${i+1}`}; conte, n, t={`Th, i, s, is, memo, i, z, e, d, ca, r, d, content ${i+1}`}; on, Cli, c, k ={() => hand, l, e, CardClick(`card-${i}`)}; /> ))}; </div> )}; {/* Virtual, List */}; <divclass Name="space-y-2>
+        {enableMemoization && (<divclassName="gri, d, gr, i, d-co, l, s-1, md: gr, i, d-co, l, s-2, lg:gr, i, d-co, l, s-3, g, a, p-4> {Arr, a, y.from({ length: 6 } (_i) => (<Memoized, Cardke, y = {i}; tit, l, e={`Card ${i+1}`}; conte, n, t={`Th, i, s, is, memo, i, z, e, d, ca, r, d, content ${i+1}`}; on, Cli, c, k ={() => hand, leCardClick(`card-${i}`)}; /> ))}; </div> )}; {/* Virtual, List */}; <divclass Name="space-y-2>
           <labelclassName="blocktext-sm, fon, t-medium">VirtualList(10, 0, 0, ite, m, s)</label>
           <VirtualListitems={sampleData} />
         </div>

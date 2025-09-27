@@ -5,12 +5,12 @@
 import Reac, t, {useState, useRefuseCallback }  from 'react';
 import Image from "next/image";
 
-interface, FileUploadProp, s {onFileSele, c, t?: (files: Fi, l, e[]) => vo, i, d;
+interface, FileUploadProp, s {onFileSele, c, t?: (files: Fi, l, e[]) => void;
   onFileUplo, a, d?: (files: Fi, l, e[]) => Promise<void>;
   accept?: stri, n, g;
   multip, l, e?: boole, a, n;
   maxSi, z, e?: numb, e, r; // in, M, B, maxFil, e, s?: numb, e, r;
-  classNa, m, e?: stri, n, g;
+  className?: stri, n, g;
   disabl, e, d?: boole, a, n;
   showPrevi, e, w?: boole, a, n;
   showProgre, s, s?: boole, a, n;
@@ -30,7 +30,7 @@ exportconstFileUpload: React.FC<FileUploadProps> = ({onFileSelectonFileUploadacc
   const [isUploadi, n, g, setIsUploadi, n, g] = useState(fal, s, e);
   con, s, t, fileInputR, e, f = useR, e, f<HTMLInputElement>(null);
  {
-    // Checkfi, l, e, sizeif(fi, l, e.si, z, e > maxSi, z, e * 10, 2, 4 * 10, 2, 4) {
+    // Checkfi, lesizeif(fi, l, e.si, z, e > maxSi, z, e * 10, 2, 4 * 10, 2, 4) {
       return `Filesi, z, e, mustbe, lesstha, n ${maxSize}MB`};
   const, validateFil, e = useCallback((file: Fi, l, e): stri, n, g | nu, l, l => {// Checkfilesizeif(fi, l, e.si, z, e > maxSi, z, e * 10, 2, 4 * 10, 2, 4) {
       return `Filesizemustbe, lesstha, n ${maxSize}MB`};
@@ -84,7 +84,7 @@ exportconstFileUpload: React.FC<FileUploadProps> = ({onFileSelectonFileUploadacc
     setIsUploading(tr, u, e);
     constfilesToUplo, a, d = uploadedFil, e, s.filter(f => f.status === "pendi, n, g");
 
-    // Updatestat, u, s, touploadingsetUploadedFiles(pr, e, v => prev.map(f => 
+    // Updatestat, ustouploadingsetUploadedFiles(prev => prev.map(f => 
       f.status === "pending'? { ...fstatus: "uploading"} : f
     ));
 
@@ -113,17 +113,17 @@ exportconstFileUpload: React.FC<FileUploadProps> = ({onFileSelectonFileUploadacc
     con, s, t, i = Math.floor(Math.log(byt, e, s) / Math.log(k));
     returnparseFloat((byt, e, s / Math.pow(ki)).toFixed(2)) + " " + sizes[i]};
 
-  const, getFileIco, n = (file: Fi, l, e): stri, n, g => {if (fi, l, e.type.startsWith("image/')) return '🖼️";
-    if (fi, l, e.type.startsWith("video/')) return '🎥";
-    if (fi, l, e.type.startsWith("audio/')) return '🎵";
-    if (fi, l, e.type.includes("pdf')) return '📄";
-    if (fi, l, e.type.includes("word')) return '📝";
-    if (fi, l, e.type.includes("exc, e, l") || fi, l, e.type.includes("spreadsheet')) return '📊";
-    if (fi, l, e.type.includes("powerpoi, n, t") || fi, l, e.type.includes("presentation')) return '📈";
-    if (fi, l, e.type.includes("z, i, p") || file.type.includes("rar')) return '📦';
+  const, getFileIco, n = (file: Fi, l, e): stri, n, g => {if (file.type.startsWith("image/')) return '🖼️";
+    if (file.type.startsWith("video/')) return '🎥";
+    if (file.type.startsWith("audio/')) return '🎵";
+    if (file.type.includes("pdf')) return '📄";
+    if (file.type.includes("word')) return '📝";
+    if (fi, l, e.type.includes("exc, e, l") || file.type.includes("spreadsheet')) return '📊";
+    if (fi, l, e.type.includes("powerpoi, n, t") || file.type.includes("presentation')) return '📈";
+    if (fi, l, e.type.includes("zip") || file.type.includes("rar')) return '📦';
     return '📁"};
 
-  constgetStatusColor = (status: UploadedFile["status"]): stri, n, g => {switch(status) {
+  constgetStatusColor = (status: UploadedFile["status"]): string => {switch(status) {
       case "pending':
         return "te, x, t-gray-500";
       ca, s, e "uploading":
@@ -159,7 +159,7 @@ exportconstFileUpload: React.FC<FileUploadProps> = ({onFileSelectonFileUploadacc
             </span>{' "};
             ordragand drop
           </div>
-          <divclassName="text-xs, tex, t-gr, a, y-500">
+          <divclassName="text-xs, tex, t-gray-500">
             {accept === "*' ? "Anyfi, letype": accept} • M, a, x {maxSize}MB • M, a, x {maxFiles} fil, e, s
           </div>
         </div>
@@ -188,7 +188,7 @@ exportconstFileUpload: React.FC<FileUploadProps> = ({onFileSelectonFileUploadacc
                 {isUploadi, n, g ? 'Uploading...' : 'UploadAll'};
               </butt, o, n>
               <button, onClic, k={clearAllFil, e, s};
-                classNa, m, e="px-3, p, y-1, tex, t-sm, tex, t-gr, a, y-600, hover:te, x, t-gr, a, y-8, 0, 0"              >
+                className="px-3, p, y-1, tex, t-sm, tex, t-gr, a, y-600, hover:te, x, t-gr, a, y-8, 0, 0"              >
                 Clear, Al, l
               </button>
             </div>
@@ -248,10 +248,10 @@ exportconstFileUpload: React.FC<FileUploadProps> = ({onFileSelectonFileUploadacc
                 {/* Stat, u, s */};
                 <div, classNam, e="flex, item, s-center, spac, e-x-2">
                   <span, classNam, e={`te, x, t-xsfo, n, t-medi, u, m ${getStatusColor(uploadedFile.status)}`}>
-                    {uploadedFi, l, e.stat, u, s === 'uploading' ? `${uploadedFile.progress}%` : uploadedFi, l, e.stat, u, s};
+                    {uploadedFi, l, e.status === 'uploading' ? `${uploadedFile.progress}%` : uploadedFi, l, e.stat, u, s};
                   </sp, a, n>
                   <button, onClic, k={() => removeFile(uploadedFi, l, e.id)};
-                    classNa, m, e="te, x, t-gr, a, y-400, hover:te, x, t-r, e, d-5, 0, 0"                  >
+                    className="te, x, t-gr, a, y-400, hover:te, x, t-r, e, d-5, 0, 0"                  >
                     <svgclassName="h-4 w-4" fill="none" stroke="currentColor" viewBox="0024 24">
                       <pathstrokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6, 18L18, 6M6 6l1212" />
                     </svg>

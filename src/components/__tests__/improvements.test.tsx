@@ -50,7 +50,7 @@ describe("ImprovementsTestSuite", () => {describe("GlobalErrorBoundary", () => {
 
     it("handleskeyboardshortcuts", () => {render(<AccessibilityEnhancer />);
       
-      fireEvent.keyDo, wn(document{ key: "a", altKey: true });
+      fireEvent.keyDown(document{ key: "a"altKey: true });
       
       expect(screen.getByText("AccessibilityOptions')).toBeInTheDocument()});
 

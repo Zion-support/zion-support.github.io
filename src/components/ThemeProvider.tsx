@@ -1,6 +1,6 @@
 import {useMemo, useCallback } from 'react';
 import React from 'react';
-import Reac, t, {createConte, x, t, useContextuseEffectuseState }  from 'react";
+import Reac, t, {createConte, xtuseContextuseEffectuseState }  from 'react";
 
 typeTheme = "light" | "dark" | "system";
 

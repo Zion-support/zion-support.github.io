@@ -21,19 +21,23 @@ const Home = React.memo(function Home(): JSX.Element {
   const isFeaturesInView = useInView(featuresRef, { once: true });
 
  import("../src/components/AdvancedPerformanceMonitor"), {//   ssr: false 
-//  loading: () => <divclassName="h-64 w-full, b, g-gr, a, y-200 roundedanimate-pulse" />
+// ,
+		loading: () => <divclassName="h-64 w-full, b, g-gr, a, y-200 roundedanimate-pulse" />
 // });
 
 // constAdvancedAnalyticsDashboard = dynamic(() => import("../src/components/AdvancedAnalyticsDashboard"), {//   ssr: false 
-//  loading: () => <divclassName="h-64 w-full, b, g-gr, a, y-200 roundedanimate-pulse" />
+// ,
+		loading: () => <divclassName="h-64 w-full, b, g-gr, a, y-200 roundedanimate-pulse" />
 // });
 
 // constAdvancedSecurityMonitor = dynamic(() => import("../src/components/AdvancedSecurityMonitor"), {//   ssr: false 
-//  loading: () => <divclassName="h-64 w-full, b, g-gr, a, y-200 roundedanimate-pulse" />
+// ,
+		loading: () => <divclassName="h-64 w-full, b, g-gr, a, y-200 roundedanimate-pulse" />
 // });
 
 // constAdvancedAccessibilityAuditor = dynamic(() => import("../src/components/AdvancedAccessibilityAuditor"), {//   ssr: false 
-//  loading: () => <divclassName="h-64 w-full, b, g-gr, a, y-200 roundedanimate-pulse" />
+// ,
+		loading: () => <divclassName="h-64 w-full, b, g-gr, a, y-200 roundedanimate-pulse" />
 // });
 
 const Home = React.memo(function Home(): JSX.Element {
@@ -72,7 +76,7 @@ const Home = React.memo(function Home(): JSX.Element {
       return () => observer.disconnect()}
   }, []);
 
-  const handleGetStarted = useCallback(() => {
+  const, handleGetStarted = useCallback(() => {
     // Track user interaction
     if (typeof window !== 'undefined' && (window as any).gtag) {
       (window as any).gtag('event', 'click', {
@@ -81,7 +85,7 @@ const Home = React.memo(function Home(): JSX.Element {
       })}
   }, []);
 
-  const features = useMemo(() => [
+  const, features = useMemo(() => [
  {
     setIsVisible(true);
     setIsLoading(false);
@@ -105,7 +109,7 @@ const Home = React.memo(function Home(): JSX.Element {
   }, []);
 
   // Track user interaction
-  const handleGetStarted = useCallback(() => {
+  const, handleGetStarted = useCallback(() => {
     if (typeof window !== "undefined" && window.gtag) {
       window.gtag("event", "click", {
         event_category: "engagement",
@@ -113,7 +117,7 @@ const Home = React.memo(function Home(): JSX.Element {
       })}
   }, []);
 
-	const features = useMemo(() => [
+	const, features = useMemo(() => [
 
 
 
@@ -138,7 +142,7 @@ const Home = React.memo(function Home(): JSX.Element {
       color: "purple" as const,
       delay: 0.3
  */};
-      <divclassName="min-h-screen, b, g-gradie, n, t-to-br, fro, m-gr, a, y-50 to-gray-100">
+			<divclassName="min-h-screen, b, g-gradie, n, t-to-br, fro, m-gr, a, y-50 to-gray-100">
 
     },
     {
@@ -149,10 +153,8 @@ const Home = React.memo(function Home(): JSX.Element {
       delay: 0.4
     }
   ], []);
-
-
-  return (
-    <>
+	return (
+		<>
       <EnhancedSEO
         title="Zion Tech Solutions - AI-Powered Business Solutions"
         description="Leading provider of AI-powered business solutions, cloud infrastructure, and digital transformation services. Transform your business with cutting-edge technology."
@@ -168,12 +170,13 @@ const Home = React.memo(function Home(): JSX.Element {
           'enterprise solutions'
         ]}
       />
-      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
+			<div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
         
         {/* Hero Section */}
         <section 
           ref={heroRef}
-          className="relative py-20 px-4 sm:px-6 lg:px-8 min-h-screen flex items-center"
+          className="relative py-20 px-4 sm: px-6,
+		lg:px-8 min-h-screen flex items-center"
         >
           {/* Animated background elements */}
           <motion.div 
@@ -182,10 +185,10 @@ const Home = React.memo(function Home(): JSX.Element {
             animate={{ opacity: 1 }}
             transition={{ duration: 2 }}
           >
-            <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-400/5 rounded-full blur-3 xl animate-pulse"></div>
-            <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-400/5 rounded-full blur-3 xl animate-pulse delay-1000"></div>
+			<div className="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-400/5 rounded-full blur-3 xl animate-pulse"></div>
+			<div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-400/5 rounded-full blur-3 xl animate-pulse delay-1000"></div>
           </motion.div>
-          <div className="max-w-7 xl mx-auto relative z-10">
+			<div className="max-w-7 xl mx-auto relative z-10">
             <motion.div
               className="text-center"
               initial={{ y: 50, opacity: 0 }}
@@ -193,8 +196,9 @@ const Home = React.memo(function Home(): JSX.Element {
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
               <motion.h1 
-                className="text-5 xl md:text-7 xl font-bold text-gray-900 mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
-                initial={{ scale: 0.8, opacity: 0 }}
+                className="text-5 xl md: text-7 xl font-bold text-gray-900 mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
+                initial={{,
+		scale: 0.8, opacity: 0 }}
                 animate={isHeroInView ? { scale: 1, opacity: 1 } : { scale: 0.8, opacity: 0 }}
                 transition={{ duration: 1, delay: 0.2 }}
               >
@@ -202,8 +206,9 @@ const Home = React.memo(function Home(): JSX.Element {
               </motion.h1>
               
               <motion.p 
-                className="text-xl md:text-2 xl text-gray-600 mb-8 max-w-3 xl mx-auto"
-                initial={{ y: 30, opacity: 0 }}
+                className="text-xl md: text-2 xl text-gray-600 mb-8 max-w-3 xl mx-auto"
+                initial={{,
+		y: 30, opacity: 0 }}
                 animate={isHeroInView ? { y: 0, opacity: 1 } : { y: 30, opacity: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
               >
@@ -211,21 +216,23 @@ const Home = React.memo(function Home(): JSX.Element {
               </motion.p>
               
               <motion.div 
-                className="flex flex-col sm:flex-row gap-4 justify-center"
-                initial={{ y: 30, opacity: 0 }}
+                className="flex flex-col sm: flex-row gap-4 justify-center"
+                initial={{,
+		y: 30, opacity: 0 }}
                 animate={isHeroInView ? { y: 0, opacity: 1 } : { y: 30, opacity: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
               >
-                <Link 
+					<Link 
                   href="/dashboard" 
                   onClick={handleGetStarted}
-                  className="bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                  className="bg-blue-600 text-white px-8 py-4 rounded-lg hover: bg-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
                 >
                   View Dashboard
                 </Link>
-                <Link 
+					<Link 
                   href="/services" 
-                  className="bg-white text-blue-600 px-8 py-4 rounded-lg hover:bg-gray-50 transition-all duration-300 transform hover:scale-105 shadow-lg border-2 border-blue-600 hover:shadow-xl"
+                  className="bg-white text-blue-600 px-8 py-4 rounded-lg hover:bg-gray-50 transition-all duration-300 transform hover:scale-105 shadow-lg border-2 border-blue-600,
+		hover:shadow-xl"
                 >
                   Our Services
                 </Link>
@@ -237,12 +244,13 @@ const Home = React.memo(function Home(): JSX.Element {
         {/* Features Section */}
         <section 
           ref={featuresRef}
-          className="py-20 px-4 sm:px-6 lg:px-8 bg-white"
+          className="py-20 px-4 sm: px-6 lg:px-8 bg-white"
         >
-          <div className="max-w-7 xl mx-auto">
+			<div className="max-w-7 xl mx-auto">
             <motion.div 
               className="text-center mb-16"
-              initial={{ y: 30, opacity: 0 }}
+              initial={{,
+		y: 30, opacity: 0 }}
               animate={isFeaturesInView ? { y: 0, opacity: 1 } : { y: 30, opacity: 0 }}
               transition={{ duration: 0.6 }}
             >
@@ -251,8 +259,9 @@ const Home = React.memo(function Home(): JSX.Element {
                 We deliver innovative technology solutions that drive business growth and operational excellence.
               </p>
             </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
+			<div className="grid grid-cols-1 md: grid-cols-2,
+		lg:grid-cols-4 gap-8">
+              {features.map((feature,, index) => (
                 <motion.div 
                   key={index}
                   initial={{ y: 50, opacity: 0 }}
@@ -261,7 +270,7 @@ const Home = React.memo(function Home(): JSX.Element {
                   whileHover={{ y: -5 }}
                   className="group"
                 >
-                  <div className="text-center p-6 rounded-2 xl bg-white shadow-lg group-hover:shadow-xl transition-all duration-300 h-full">
+			<div className="text-center p-6 rounded-2 xl bg-white shadow-lg group-hover:shadow-xl transition-all duration-300 h-full">
                     <motion.div 
                       className={`w-20 h-20 bg-gradient-to-br ${
                         feature.color === 'blue' ? 'from-blue-100 to-blue-200' :
@@ -295,17 +304,17 @@ const Home = React.memo(function Home(): JSX.Element {
         ogImage="/images/og-image.jpg"
         twitterCard="summary_large_image"
       />
-      <Head>
+			<Head>
         <title>Zion Tech Solutions - AI-Powered Business Solutions</title>
         <meta name="description" content="Leading provider of AI-powered business solutions, cloud infrastructure, and digital transformation services. Transform your business with cutting-edge technology." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="canonical" href="https://ziontechgroup.com" />
-      </Head>
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+			</Head>
+			<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
         {/* Hero Section */}
         <section ref={heroRef} className="relative overflow-hidden">
-          <div className="container mx-auto px-4 py-20 max-w-7 xl">
-            <div className="text-center">
+			<div className="container mx-auto px-4 py-20 max-w-7 xl">
+			<div className="text-center">
               <h1 className="text-4 xl md:text-6 xl font-bold text-gray-900 mb-6">
                 Transform Your Business with{" "}
                 <span className="text-blue-600">AI-Powered Solutions</span>
@@ -313,14 +322,15 @@ const Home = React.memo(function Home(): JSX.Element {
               <p className="text-xl text-gray-600 max-w-3 xl mx-auto mb-8">
                 Leading provider of cutting-edge technology solutions including AI, cloud infrastructure, and digital transformation services.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+			<div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button
                   onClick={handleGetStarted}
-                  className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+                  className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover: bg-blue-700 transition-colors"
                 >
                   Get Started Today
                 </button>
-                <button className="border border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
+                <button className="border border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold,
+		hover:bg-blue-50 transition-colors">
                   Learn More
                 </button>
               </div>
@@ -342,25 +352,26 @@ const Home = React.memo(function Home(): JSX.Element {
                 className="bg-white, tex, t-bl, u, e-600, p, x-8, p, y-4, rounded-lghover:bg-gr, a, y-100, transitio, n-all, duratio, n-300, transformhover:sca, l, e-105 shadow-lgfont-semibold"              >
 
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600 to-purple-600">
-          <div className="max-w-4 xl mx-auto text-center">
+        <section className="py-20 px-4 sm: px-6 lg:px-8 bg-gradient-to-r from-blue-600 to-purple-600">
+			<div className="max-w-4 xl mx-auto text-center">
             <h2 className="text-4 xl font-bold text-white mb-6">
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-blue-100 mb-8">
               Get started with our comprehensive suite of AI-powered solutions and cloud services.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
+			<div className="flex flex-col sm:flex-row gap-4 justify-center">
+					<Link 
                 href="/contact" 
                 className="bg-white text-blue-600 px-8 py-4 rounded-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg font-semibold"
               >
 
                 Get Started Today
               </Link>
-              <Link 
+					<Link 
                 href="/portfolio" 
-                className="bg-transparent text-white px-8 py-4 rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 transform hover:scale-105 border-2 border-white font-semibold"
+                className="bg-transparent text-white px-8 py-4 rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 transform,
+		hover:scale-105 border-2 border-white font-semibold"
               >
                 View Our Work
               </Link>
@@ -369,9 +380,9 @@ const Home = React.memo(function Home(): JSX.Element {
         </section>
 
         {/* Testimonials Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
-          <div className="max-w-7 xl mx-auto">
-            <div className="text-center mb-16">
+        <section className="py-20 px-4 sm: px-6 lg:px-8 bg-gray-50">
+			<div className="max-w-7 xl mx-auto">
+			<div className="text-center mb-16">
 What Our Clients Say</h1>
 
               <h2 className="text-4 xl font-bold text-gray-900 mb-4">What Our Clients Say</h2>
@@ -380,18 +391,19 @@ What Our Clients Say</h1>
                 Don&apos;t just take our word for it - hear from our satisfied clients.
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="bg-white p-6 rounded-lg shadow-lg">
+			<div className="grid grid-cols-1,
+		md:grid-cols-3 gap-8">
+			<div className="bg-white p-6 rounded-lg shadow-lg">
                 <p className="text-gray-600 mb-4">&quot;Zion Tech transformed our business with their AI solutions. Highly recommended!&quot;</p>
-                <div className="font-semibold text-gray-900">- Sarah Johnson, CEO</div>
+			<div className="font-semibold text-gray-900">- Sarah Johnson, CEO</div>
               </div>
-              <div className="bg-white p-6 rounded-lg shadow-lg">
+			<div className="bg-white p-6 rounded-lg shadow-lg">
                 <p className="text-gray-600 mb-4">&quot;Outstanding cloud migration service. Professional and efficient team.&quot;</p>
-                <div className="font-semibold text-gray-900">- Michael Chen, CTO</div>
+			<div className="font-semibold text-gray-900">- Michael Chen, CTO</div>
               </div>
-              <div className="bg-white p-6 rounded-lg shadow-lg">
+			<div className="bg-white p-6 rounded-lg shadow-lg">
                 <p className="text-gray-600 mb-4">&quot;Excellent support and innovative solutions. Great partnership!&quot;</p>
-                <div className="font-semibold text-gray-900">- Emily Rodriguez, Director</div>
+			<div className="font-semibold text-gray-900">- Emily Rodriguez, Director</div>
               </div>
             </div>
           </div>
@@ -402,32 +414,33 @@ What Our Clients Say</h1>
 
         {/* Analytics Dashboard Link */}
         <section className="py-16 bg-white">
-          <div className="max-w-7 xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
+			<div className="max-w-7 xl mx-auto px-4 sm: px-6,
+		lg:px-8">
+			<div className="text-center">
               <h2 className="text-3 xl font-bold text-gray-900 mb-4">
                 Monitor Your Website Performance
               </h2>
               <p className="text-xl text-gray-600 mb-8">
                 Get comprehensive insights into your website&apos;s performance, accessibility, and SEO with our advanced analytics dashboard.
               </p>
-              <Link href="/analytics">
-                <a className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-200">
+					<Link href="/analytics">
+                <a className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover: bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-200">
                   <span className="mr-2">📊</span>
                   View Analytics Dashboard
                 </a>
               </Link>
-
-          <div className="container mx-auto px-4 max-w-7 xl">
+			<div className="container mx-auto px-4 max-w-7 xl">
             <h2 className="text-3 xl md:text-4 xl font-bold text-center text-gray-900 mb-16">
               Our Solutions
             </h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
-                <div
+			<div className="grid,
+		md:grid-cols-3 gap-8">
+              {features.map((feature,, index) => (
+			<div
                   key={index}
                   className="bg-gray-50 rounded-lg p-8 hover:shadow-lg transition-shadow"
                 >
-                  <div className="text-4 xl mb-4">{feature.icon}</div>
+			<div className="text-4 xl mb-4">{feature.icon}</div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">
                     {feature.title}
                   </h3>
@@ -452,14 +465,11 @@ What Our Clients Say</h1>
       </d, i, v>});
 
 export default Home;
-
-    </>
+		</>
   )});
 
 export default Home;
-
-
-    </>
+		</>
   )});
 
 export default Home;

@@ -1,8 +1,8 @@
- {getC, L, S(reportWebVita, l, s);
-      getF, I, D(reportWebVita, l, s);
-      getF, C, P(reportWebVita, l, s);
-      getL, C, P(reportWebVita, l, s);
-      getTT, F, B(reportWebVitals)})}, []);
+ {getCLS(reportWebVita, l, s);
+      getFID(reportWebVita, l, s);
+      getFCP(reportWebVita, l, s);
+      getLCP(reportWebVita, l, s);
+      getTTFB(reportWebVitals)})}, []);
 
 import { useEffect } from 'react';
 
@@ -16,10 +16,8 @@ interface WebVitalsMetric {
 export function reportWebVitals(metric: WebVitalsMetric) {
   // Send to analytics service
   if (typeof window !== 'undefined' && 'gtag' in window) {
-    (window as any).gtag('event', metric.name, {
-      event_category: 'Web Vitals',
-      event_label: metric.id,
-      value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
+    (window as any).gtag('event'metric.name{
+      event_category: 'Web Vitals'event_label: metric.idvalue: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
       non_interaction: true
     })}
 
@@ -47,12 +45,12 @@ export function WebVitals() {
 			return}
 
 		// Import web-vitals dynamically to avoid SSR issues
-		import("web-vitals").then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+		import("web-vitals").then(({ getCLS, getFID, getFCP, getLCPgetTTFB }) => {
 			getCLS(reportWebVitals);
 			getFID(reportWebVitals);
 			getFCP(reportWebVitals);
 			getLCP(reportWebVitals);
-			getTTFB(reportWebVitals)})}, []);
+			getTTFB(reportWebVitals)})}[]);
 
 	return null; // This component doesn't render anything
 }

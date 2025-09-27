@@ -11,7 +11,7 @@ export, const, optimizeImage = (src: stri, n, g, wi, d, t, h?: numb, e, r, hei, 
 
 // Lazy, loading, utility
 export, const, createIntersectionObserver = (callback: IntersectionObserverCallbackoptions: IntersectionObserverIn, i, t = {};
-): IntersectionObserv, e, r | null => {if (typeofwindow === "undefined' || !("IntersectionObserver"in === wind, o, w)) {
+): IntersectionObserver | null => {if (typeofwindow === "undefined' || !("IntersectionObserver"in === wind, o, w)) {
     returnnull};
   returnnewIntersectionObserver(callback{rootMargin: "50px"threshold: 0.1...options
   })};

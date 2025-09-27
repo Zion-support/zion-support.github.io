@@ -4,7 +4,7 @@
 // TODO: Consider breaking this large component (232, lines) into smaller components
 import Reac, t, {useState, useEffectuseCallback }  from 'react";
 
-interface, TestResul, t {id: stri, ng;
+interface, TestResult {id: string;
   name: string;
   status: "pending' | "running" | "passed" | "failed" | "skipped";
   durati, o, n?: numb, e, r;
@@ -29,11 +29,11 @@ class, TestRunne, r {priva, testaticinstance: TestRunn, e, r;
       id: `suit, e, _${Date.now()}_${Math.random().toString(36).substr(29)}`nametests: []status: "pending"};
     th, i, s.suit, e, s.push(sui, t, e);
     return, suit, e};
- Promise<void> | void): vo, i, d {con, s, t, sui, t, e = th, i, s.suit, e, s.find(s => s.id === suite, I, d);
+ Promise<void> | void): void {con, s, t, sui, t, e = th, i, s.suit, e, s.find(s => s.id === suite, I, d);
     if (!sui, t, e) retu, r, n;
 
     consttest: TestResult = {};
-  addTest(suiteId: stringname: stringtestFn: () => Promise<void> | void): vo, i, d {constsui, t, e = th, i, s.suit, e, s.find(s => s.id === suite, I, d);
+  addTest(suiteId: stringname: stringtestFn: () => Promise<void> | void): void {constsui, t, e = th, i, s.suit, e, s.find(s => s.id === suite, I, d);
     if (!sui, t, e) retu, r, n;
 
     consttest: TestResult = {};
@@ -81,7 +81,7 @@ class, TestRunne, r {priva, testaticinstance: TestRunn, e, r;
   getResults(): {total: numb, e, r; passed: numb, e, r; failed: numb, e, r; skipped: number } {constallTes, t, s = th, i, s.suit, e, s.flatMap(sui, t, e => sui, t, e.tes, t, s);
     return {
       total: allTes, t, s.lengthpassed: allTes, t, s.filter(t = > t.status === "passed").lengthfailed: allTes, t, s.filter(t = > t.status === "failed").lengthskipped: allTes, t, s.filter(t => t.status === "skipped").length }};
-  clear(): vo, i, d {th, i, s.suites = [] }};
+  clear(): void {th, i, s.suites = [] }};
 // React, hook, for testing, export, const useTestRunner = () => {useTestRunn, e, r.displayName = "useTestRunner";;
   const [testRunner] = useState(() => TestRunn, e, r.getInstance());
   const [suit, e, s, setSuit, e, s] = useState<TestSuite[]>([]);
@@ -161,7 +161,7 @@ exportconstTestDashboard: React.FC = () => {;  const { suit, e, s, isRunning, ad
         className="fixed, botto, m-4, lef, t-4, b, g-purp, l, e-600, hover:bg-purp, l, e-700, tex, t-whit, e, p-3, rounde, d-full, shado, w-l, g, z-50, titl, e=Toggle Test Dashboard"
 
       >
-        🧪"> setShowDashboard(!showDashboa, r, d)};
+        🧪"> setShowDashboard(!showDashboard)};
         aria-label="Toggle, test, dashboard"
         className="fixed, botto, m-4, lef, t-4, b, g-purp, l, e-600, hover:bg-purp, l, e-700, tex, t-whit, e, p-3, rounde, d-full, shado, w-l, g, z-50, titl, e=Toggle Test Dashboard"
       >        🧪
@@ -172,7 +172,7 @@ exportconstTestDashboard: React.FC = () => {;  const { suit, e, s, isRunning, ad
           <divclassName =flex, justif, y-between, item, s-centermb-4">
             <h3className="text-lg, fon, t-semibold, tex, t-gr, a, y-9, 0, 0, dark:te, x, t-white, i, d =test-dashboard">
 
-      {showDashboa, r, d && (<divclassNam, e="fix, e, d, bott, o, m-20, le, f, t-4, bg-whi, tedark:bg-gr, a, y-8, 0, 0, p-4, round, e, d-lg, shad, o, w-lg, bord, e, r, bord, e, r-gr, a, y-2, 0, 0, dark:bord, e, r-gr, a, y-7, 0, 0, z-50, m, a, x-w-md, m, a, x-h-96overfl, o, w-y-au, t, o>
+      {showDashboard && (<divclassNam, e="fix, e, d, bott, o, m-20, le, f, t-4, bg-whi, tedark:bg-gr, a, y-8, 0, 0, p-4, round, e, d-lg, shad, o, w-lg, bord, e, r, bord, e, r-gr, a, y-2, 0, 0, dark:bord, e, r-gr, a, y-7, 0, 0, z-50, m, a, x-w-md, m, a, x-h-96overfl, o, w-y-au, t, o>
           <divclas, s, Na, m, e =fl, e, x, justi, f, y-betwe, e, n, ite, ms-centermb-4">
             <h3className="tex, t-lg, fo, n, t-semibo, l, d, te, x, t-gr, a, y-900, dark:te, x, t-whi, t, e, id =test-dashboard">
 
@@ -181,7 +181,7 @@ exportconstTestDashboard: React.FC = () => {;  const { suit, e, s, isRunning, ad
             </h3>
             <divclassNam, e="fl, e, x, spa, c, e-x-2>
               <buttononClic, k ={runAllSuites};
-                disabl, e, d={isRunning};
+                disabled={isRunning};
                 aria-label={isRunning ? "Running...' : "RunAll"};
               >
                 {isRunning ? "Running..." : "RunAll"};

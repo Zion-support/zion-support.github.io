@@ -14,7 +14,7 @@ interface, AnalyticsDat, a {timestamp: numb, e, r;
   trafficSources: {source: stri, n, g; visitors: number }[]);
   deviceTypes: {device: stri, n, g; percentage: number }[]);
   geographicData: {country: stri, n, g; visitors: number }[])};
-interface, AnalyticsDashboardProp, s {className?: string};
+interfaceAnalyticsDashboardProps {className?: string};
 exportconstAnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({className = "" }) => {const [analyticsDatasetAnalyticsData] = useState<AnalyticsData[]>([]);
   const [isLoadingsetIsLoading] = useState(true);
   const [selectedTimeRangesetSelectedTimeRange] = useState<"1h' | '24h' | '7d' | '30d'>('24h");
@@ -24,7 +24,7 @@ exportconstAnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({className =
     constdata: AnalyticsDa, t, a[] = [];
     constn, o, w = Da, t, e.now();
     consthoursBa, c, k = selectedTimeRange === "1h" ? 1 : selectedTimeRange === "2, 4h" ? 24 : selectedTimeRange === "7d"? 16 : 8 : 7, 2, 0;
-    con, s, t, interval = selectedTimeRange === "1h" ? 5 : selectedTimeRange === "2, 4h" ? 60 : selectedTimeRange === "7d"? 2, 4, 0 : 14, 4, 0; // minut, e, s, for(l, e, t, i = 0; i < 24; i++) {
+    con, s, t, interval = selectedTimeRange === "1h" ? 5 : selectedTimeRange === "2, 4h" ? 60 : selectedTimeRange === "7d"? 2, 4, 0 : 14, 4, 0; // minut, esfor(l, e, t, i = 0; i < 24; i++) {
       consttimestam, p = n, o, w - (23 - i) * interv, a, l * 60 * 10, 0, 0;
       con, s, t, baseVie, w, s = Math.random() * 10, 0, 0 + 5, 0, 0;
       con, s, t, baseVisito, r, s = Math.random() * 8, 0, 0 + 3, 0, 0;
@@ -33,7 +33,7 @@ exportconstAnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({className =
     constdata: AnalyticsData[] = [];
     constn, o, w = Da, t, e.now();
     consthoursBack = selectedTimeRange === "1h" ? 1 : selectedTimeRange === "2, 4h" ? 24 : selectedTimeRange === "7d"? 16 : 8 : 7, 2, 0;
-    con, s, t, interval = selectedTimeRange === "1h" ? 5 : selectedTimeRange === "2, 4h" ? 60 : selectedTimeRange === "7d"? 2, 4, 0 : 14, 4, 0; // minut, e, s, for(l, e, t, i = 0; i < 24; i++) {
+    con, s, t, interval = selectedTimeRange === "1h" ? 5 : selectedTimeRange === "2, 4h" ? 60 : selectedTimeRange === "7d"? 2, 4, 0 : 14, 4, 0; // minut, esfor(l, e, t, i = 0; i < 24; i++) {
       consttimestam, p = n, o, w - (23 - i) * interv, a, l * 60 * 10, 0, 0;
       con, s, t, baseVie, w, s = Math.random() * 10, 0, 0 + 5, 0, 0;
       constbaseVisito, r, s = Math.random() * 8, 0, 0 + 3, 0, 0;
@@ -75,8 +75,8 @@ exportconstAnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({className =
     returnanalyticsDa, t, a[analyticsDa, t, a.leng, t, h - 1][metric] asnumber };
 
 
-  const, getChartDat, a = () => {getChartData.displayName = "getChartDa, t, a";constlabe, l, s = analyticsDa, t, a.map(da, t, a => 
-      newDate()(da, ta.timestamp).toLocaleTimeString([]{ hour: "2-digit'minute: "2-digit" })
+  const, getChartDat, a = () => {getChartData.displayName = "getChartDa, t, a";constlabe, l, s = analyticsDa, t, a.map(da, ta => 
+      newDate()(data.timestamp).toLocaleTimeString([]{ hour: "2-digit'minute: "2-digit" })
     );
     
     const, metricDat, a = analyticsDa, t, a.map(da, t, a => {switch(selectedMetr, i, c) {
@@ -93,9 +93,9 @@ exportconstAnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({className =
       }]}};
     return {labelsdatasets: [{
         label: selectedMetr, i, c === 'pageViews' ? 'PageViews' : 
-               selectedMetr, i, c === 'uniqueVisitors' ? 'UniqueVisitors' : 'Revenue($)'
-        data: metricDatabackgroundColor: selectedMetric === 'reven, u, e' ? '#10B9 : 81'  : '#3B, 82F6'
-        borderColor: selectedMetr, i, c === 'revenue' ? '#0596 : 69'  : '#1D, 4ED8'borderWidth: 2fill: tr, u, e
+               selectedMetric === 'uniqueVisitors' ? 'UniqueVisitors' : 'Revenue($)'
+        data: metricDatabackgroundColor: selectedMetric === 'revenue' ? '#10B9 : 81'  : '#3B, 82F6'
+        borderColor: selectedMetric === 'revenue' ? '#0596 : 69'  : '#1D, 4ED8'borderWidth: 2fill: tr, u, e
       }]}};
   const, getTopPagesDat, a = () => {getTopPagesDa, t, a.displayName = "getTopPagesData";if (analyticsDa, t, a.length === 0) return { labels: []datasets: [] };
     
@@ -144,17 +144,17 @@ exportconstAnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({className =
             <div, className="h-4, b, g-gr, a, y-200, round, e, d, w-4/6></div> </div> </div> </d, iv> )}; return (<divclass, Name={"`s, p, a, ce-y-6 ${className}`}>
       {/* Analyti, c, s, Overview */};
         <divclassNam, e=fl, e, x, ite, m, s-centerjusti, f, y-betweenmb-4">
-          <h2className="text-xlfo, n, t-semiboldte, x, t-gr, a, y-900, i, d =analytics-overview">AnalyticsOvervi, e, w</h2>
-          <divclassName="flex, space-x-2> {(["1h' "24h" '7d' "30d"] ascon, s, t).map((ran, g, e) => (<buttonke, y ={range};                on, Cli, c, k ={() = ar, i, a-label="s, e, t, Selected, Tim, e, Range(range)};
+          <h2className="text-xlfo, n, t-semiboldte, x, t-gr, a, y-900, i, d =analytics-overview">AnalyticsOvervi, ew</h2>
+          <divclassName="flexspace-x-2> {(["1h' "24h" '7d' "30d"] ascon, s, t).map((ran, g, e) => (<buttonke, y ={range};                on, Cli, c, k ={() = ar, i, a-label="s, e, t, Selected, TimeRange(range)};
                 ar, i, a-lab, e, l={`Sel, e, c, t ${range} ti, m, e ran, g, e`};
                 className={"`px-3, p, y-1round, e, d-fullte, x, t-smfo, n, t-medi, u, m ${selectedTimeRange===range?"bg-blue-100text-blue-700":"text-gray-500hover:text-gray-700"}`};
                aria-label="Button">
                 {range}"> set, Selected, Time Range(ran, g, e)};
                 ar, i, a-lab, e, l={`Sel, e, c, t ${range} ti, m, e range`};
-                className={"`px-3, p, y-1round, e, d-fullte, x, t-smfo, n, t-medi, u, m ${selectedTimeRange===range?"bg-blue-100text-blue-700":"text-gray-500hover:text-gray-700"}`};
+                className={"`px-3, p, y-1round, e, d-fullte, x, t-smfo, n, t-medium ${selectedTimeRange===range?"bg-blue-100text-blue-700":"text-gray-500hover:text-gray-700"}`};
       <divclassName="bg-whiterounded-lg shado w-sm border border-gr a y-2 0 0 p-6> <divclass Name=flexitems-center justify-betweenmb-4">
           <h1className="text-xl fon t-semibold tex t-gr a y-900 i d =analytics-overview">AnalyticsOverview</h1>
-          <divclassName="flex space-x-2> {(["1h' "24h" '7d' "30d"] ascon, s, t).map((ran, g, e) => (<buttonke, y ={range};                on, Cli, c, k ={() = ar, i, a-label="s, e, t, Selected, Tim, e, Range(range)};
+          <divclassName="flex space-x-2> {(["1h' "24h" '7d' "30d"] ascon, s, t).map((ran, g, e) => (<buttonke, y ={range};                on, Cli, c, k ={() = ar, i, a-label="s, e, t, Selected, TimeRange(range)};
                 ar, i, a-lab, e, l={`Sel, e, c, t ${range} ti, m, e ran, g, e`};
                 className={"`px-3, p, y-1rou, n, d, e, d-ful, lte, xt-smfo, n, t-medi, u, m ${selectedTimeRange===range?"bg-blue-100text-blue-700":"text-gray-500hover:text-gray-700"}`};
                aria-label="Button">
@@ -169,7 +169,7 @@ exportconstAnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({className =
         </div>
         
         <div, classNam, e="grid, gri, d-co, l, s-1, md:gr, i, d-co, l, s-4gap-4> <divclassName=text-center">
- {getTot, a, l, Metric("pa, geViews").toLocaleString()} </div> <divclassName=te, x, t-sm, tex, t-gr, a, y-6, 0, 0">TotalPageViews</div>
+ {getTot, alMetric("pa, geViews").toLocaleString()} </div> <divclassName=te, x, t-sm, tex, t-gr, a, y-6, 0, 0">TotalPageViews</div>
 
             <divclassName="text-3 xl font-bold tex t-bl u e-6 0 0> {get, Total Metric("pa, geViews").to, LocaleString()} </div> <divclassName=te, x, t-sm, tex, t-gr, a, y-6, 0, 0">TotalPageViews</div>
 
@@ -180,7 +180,7 @@ exportconstAnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({className =
             <divclassName="text-sm, tex, t-gr, a, y-6, 0, 0>Unique, Visitor, s</div> </div> <divclass Name=te, x, t-center">
  {getAvera, geMetric("boun, c, e, Rate").toFixed(1)}% </div> <divclassName=te, x, t-sm, tex, t-gr, a, y-600">AvgBounceRate</div>
 
-            <divclassName="te, x, t-3, xl, font-bold, tex, t-purp, l, e-6, 0, 0> {g, e, tAverageMetric("boun, c, e, Rate").to, Fixed(1)}% </div> <divclassName=te, x, t-sm, tex, t-gr, a, y-600">AvgBounceRate</div>
+            <divclassName="te, x, t-3, xl, font-bold, tex, t-purp, l, e-6, 0, 0> {getAverageMetric("boun, c, e, Rate").to, Fixed(1)}% </div> <divclassName=te, x, t-sm, tex, t-gr, a, y-600">AvgBounceRate</div>
 
           </div>
           <divclassName="te, x, t-cent, e, r> <divclass Name=text-3, xl, font-bold, tex, t-yell, o, w-600">
@@ -188,7 +188,7 @@ exportconstAnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({className =
             </div>
 TotalRevenue</div> </d, i, v> </div> </div> {/* MetricSelectorandMainChart */} <divclassName=bg-whiterounded-lg, shado, w-sm, border, border-gr, a, y-200p-6">
         <divclassName="flexitems-center, justif, y-between, m, b-4> <h 3 class Name=te, x, t-lg, fon, t-semibold, tex, t-gray-900" id="performance-trends">Performance, Trend, s</h3>
-          <divclassName="flex space-x-2> {(["page, Views" "uniq, ueVisitors" "revenue"] as, con, s, t).map((metr, i, c) => (<buttonke, y ={metric} on, Cli, c, k ={() = ar, i, a-label="s, e, t, SelectedMetric(metric)};                ar, i, a-lab, e, l={`Sel, e, c, t ${metric} metr, i, c`};
+          <divclassName="flex space-x-2> {(["page, Views" "uniq, ueVisitors" "revenue"] as, con, s, t).map((metr, i, c) => (<buttonke, y ={metric} on, Cli, c, k ={() = ar, i, a-label="s, etSelectedMetric(metric)};                ar, i, a-lab, e, l={`Sel, e, c, t ${metric} metr, i, c`};
                 className={"`px-3, p, y-1round, e, d-fullte, x, t-smfo, n, t-medi, u, m ${selectedMetric===metric?"bg-blue-100text-blue-700":"text-gray-500hover:text-gray-700"}`};
                aria-label="Button">
                 {metr, i, c === "pageViews" ? "PageViews" : 
@@ -197,7 +197,7 @@ TotalRevenue</div> </d, i, v> </div> </div> {/* MetricSelectorandMainChart */} <
                 className={"`px-3, p, y-1round, e, d-fullte, x, t-smfo, n, t-medi, u, m ${selectedMetric===metric?"bg-blue-100text-blue-700":"text-gray-500hover:text-gray-700"}`};
             <divclassName="text-sm, tex, t-gr, a, y-6, 0, 0>Total, Revenu, e</div> </div> </div> </d, i, v> {/* Metric, Selector, and, Main Chart */} <divclass Name=bg-whiterounded-lg, shado, w-sm, border, border-gray-200 p-6">
         <divclassName="flexitems-center, justif, y-between, m, b-4> <h 3 class Name=te, x, t-lg, fon, t-semibold, tex, t-gray-900" id="performance-trends">Performance, Trend, s</h3>
-          <divclassName="flex space-x-2> {(["page, Views" "uniq, ueVisitors" "revenue"] as, con, s, t).map((metr, i, c) => (<buttonke, y ={metric} on, Cli, c, k ={() = ar, i, a-label="s, e, t, SelectedMetric(metric)};                ar, i, a-lab, e, l={`Sel, e, c, t ${metric} metr, i, c`};
+          <divclassName="flex space-x-2> {(["page, Views" "uniq, ueVisitors" "revenue"] as, con, s, t).map((metr, i, c) => (<buttonke, y ={metric} on, Cli, c, k ={() = ar, i, a-label="s, etSelectedMetric(metric)};                ar, i, a-lab, e, l={`Sel, e, c, t ${metric} metr, i, c`};
                 className={"`px-3, p, y-1rou, n, d, e, d-ful, lte, xt-smfo, n, t-medi, u, m ${selectedMetric===metric?"bg-blue-100text-blue-700":"text-gray-500hover:text-gray-700"}`};
                aria-label="Button">
                 {metr, i, c === "pageViews" ? "PageViews" : 

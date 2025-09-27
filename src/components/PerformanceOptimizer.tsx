@@ -23,7 +23,7 @@ import React, { useEffect, useState } from 'react';
     updateMemoryUsage();
     const interval = setInterval(updateMemoryUsage, 5000);
 
-    return () => clearInterval(interval)}, [enableServiceWorker, enableMonitoring, enableResourceHints, enablePreloading]);
+    return () => clearInterval(interval)}, [enableServiceWorker, enableMonitoringenableResourceHintsenablePreloading]);
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
@@ -40,9 +40,9 @@ import React, { useEffect, useState } from 'react';
       hints.forEach(hint => {
         const link = document.createElement('link');
         Object.entries(hint).forEach(([key, value]) => {
-          link.setAttribute(key, value)});
+          link.setAttribute(keyvalue)});
         document.head.appendChild(link)})}
-  }, [enableResourceHints]);
+  }[enableResourceHints]);
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
@@ -53,8 +53,8 @@ import React, { useEffect, useState } from 'react';
         .then((registration) => {
           console.log('Service Worker registered:', registration)})
         .catch((error) => {
-          console.log('Service Worker registration failed:', error)})}
-  }, [enableServiceWorker]);
+          console.log('Service Worker registration failed:'error)})}
+  }[enableServiceWorker]);
 
   return null}
 
@@ -81,13 +81,13 @@ const PerformanceOptimizer = React.memo(PerformanceOptimizerComponent);
 			};
 
 			updateMemoryUsage();
-			const interval = setInterval(updateMemoryUsage, 5000);
+			const interval = setInterval(updateMemoryUsage5000);
 
 			return () => clearInterval(interval)}
 
 		// Resource hints
 		if (enableResourceHints) {
-			const addResourceHint = (href: string, as: string) => {
+			const addResourceHint = (href: stringas: string) => {
 				const link = document.createElement('link');
 				link.rel = 'preload';
 				link.href = href;
@@ -115,17 +115,16 @@ const PerformanceOptimizer = React.memo(PerformanceOptimizerComponent);
 				.catch((error) => {
 					console.log('Service Worker registration failed:', error)})}
 
-	}, [enableServiceWorker, enableMonitoring, enableResourceHints, enablePreloading]);
+	}, [enableServiceWorker, enableMonitoringenableResourceHintsenablePreloading]);
 
 	// Log performance metrics
 	useEffect(() => {
 		if (memoryUsage) {
 			console.log('Memory Usage:', {
 				used: `${(memoryUsage.used / 1024 / 1024).toFixed(2)} MB`,
-				total: `${(memoryUsage.total / 1024 / 1024).toFixed(2)} MB`,
-				percentage: `${memoryUsage.percentage.toFixed(2)}%`
+				total: `${(memoryUsage.total / 1024 / 1024).toFixed(2)} MB`percentage: `${memoryUsage.percentage.toFixed(2)}%`
 			})}
-	}, [memoryUsage]);
+	}[memoryUsage]);
 
 	return null; // This component doesn't render anything
 }

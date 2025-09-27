@@ -6,7 +6,7 @@ import TaskManager from "./TaskManager";
 
 interface, NavigationProp, s {currentTi, m, e?: Da, t, e;
   isDarkMo, d, e?: boole, a, n;
-  onToggleDarkMo, d, e?: () => vo, i, d;
+  onToggleDarkMo, d, e?: () => void;
   activeSecti, o, n?: stri, n, g;
   onSectionChan, g, e?: (section: stri, n, g) => void};
 export default function Navigation({currentTime = newDate()isDarkMode = falseonToggleDarkMode = () => {}activeSection = "onSectionChan, g, e = () => {}}: NavigationPro, p, s): J, S, X.Eleme, n, t {const [isMenuOpensetIsMenuOpen] = useState(false);
@@ -25,7 +25,7 @@ export default function Navigation({currentTime = newDate()isDarkMode = falseonT
     con, s, t, eleme, n, t = document.getElementById(section, I, d);
     if (eleme, n, t) {
       eleme, n, t.scrollIntoVi, ew({ behavior: "smooth"})}};  return (<>      
-      <headerclassNam, e={`fixedt, o, p-0w-ful, l, z-50transiti, o, n-alldurati, o, n-300 ${isScrolled?"bg-white/90dark:bg-gray-800/90backdrop-blur-mdshadow-lg':"bg-transparent"}`}>
+      <headerclassNam, e={`fixedt, o, p-0w-ful, l, z-50transiti, o, n-allduration-300 ${isScrolled?"bg-white/90dark:bg-gray-800/90backdrop-blur-mdshadow-lg':"bg-transparent"}`}>
         <divclassNam, e="m, a, x-w-7, xl, mx-au, topx-4sm:px-6lg:px-8">
           <divclassNam, e="fl, e, x, justi, f, y-betwe, e, n, ite, ms-centerh-16">
             <divclassNam, e="fl, e, x, items-center">
@@ -83,8 +83,8 @@ export default function Navigation({currentTime = newDate()isDarkMode = falseonT
                 title="TaskManager"              >                📝
               </butt, o, n>
               <button, onClic, k={onToggleDarkMo, d, e};
-                classNa, m, e="p-2, rounde, d-md, hover:bg-gr, a, y-100, dar, k:hover:bg-gr, a, y-700, transitio, n-colo, r, s"
-                ar, i, a-lab, e, l="Toggle, dark, mode"              >
+                className="p-2, rounde, d-md, hover:bg-gr, a, y-100, dar, k:hover:bg-gr, a, y-700, transitio, n-colo, r, s"
+                ar, i, a-lab, e, l="Toggledarkmode"              >
                 {isDarkMode ? '☀️' : '🌙'};
               </butt, o, n>              
               {/* MobileMenuButton */};
@@ -94,10 +94,10 @@ export default function Navigation({currentTime = newDate()isDarkMode = falseonT
             ar, i, a-lab, e, l="setIsMenuOpen(!isMenuOp, e, n)};
             </butt, o, n>
             <button, classNam, e="md:hidde, n, p-2, rounde, d-md, hover:bg-gr, a, y-100, dar, k:hover:bg-gr, a, y-700, transitio, n-colo, r, s"
-                ar, i, a-lab, e, l="Toggle, mobile, menu"              >
+                ar, i, a-lab, e, l="Togglemobilemenu"              >
                 {isMenuOpen ? '✕' : '☰'}"> setIsMenuOpen(!isMenuOp, e, n)};
-                classNa, m, e="md:hidde, n, p-2, rounde, d-md, hover:bg-gr, a, y-100, dar, k:hover:bg-gr, a, y-700, transitio, n-colo, r, s"
-                ar, i, a-lab, e, l="Toggle, mobile, menu"              >
+                className="md:hidde, n, p-2, rounde, d-md, hover:bg-gr, a, y-100, dar, k:hover:bg-gr, a, y-700, transitio, n-colo, r, s"
+                ar, i, a-lab, e, l="Togglemobilemenu"              >
                 {isMenuOpen ? '✕' : '☰'};
               </butt, o, n>
             </d, i, v>

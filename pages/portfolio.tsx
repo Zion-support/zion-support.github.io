@@ -26,8 +26,7 @@
       technologies: ['React Native', 'Node.js', 'MongoDB', 'Blockchain']
     }
   ];
-
-  return (
+	return (
 		<>
 			<Head>
 				<title>Portfolio - Zion App</title>
@@ -35,23 +34,22 @@
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 			</Head>
 			<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-				<div className="container mx-auto px-4 py-8 max-w-7 xl">
+			<div className="container mx-auto px-4 py-8 max-w-7 xl">
 				<nav className="mb-8">
-						<Link href="/" className="text-blue-600 hover:text-blue-800 font-medium transition-colors">
+					<Link href="/" className="text-blue-600 hover:text-blue-800 font-medium transition-colors">
 							← Back to Home
 
 	conststats = [{number: "50+'label: "ProjectsCompleted" }{number: '98%'label: "ClientSatisfaction" }{number: '2M+'label: "UsersImpacted" }{number: "5Years"label: "AveragePartnership" }];  return (
-    <>
-      
-      <Head>
+		<>
+			<Head>
         <title>Portfolio - ZionApp</title>
         <metaname="description" content="Explore, our, portfolio of, successful, projects and, case, studies across, A, I, cloud, computin, g, mobile, developmentandmore." />
         <metaname="viewport" content="wid, th=devi, c, e-widthinitial-scale=1" />
-      </Head>
+			</Head>
 			<divclassName="m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-bl, u, e-50 to-indigo-100">
 			<divclassName="containermx-auto, p, x-4 py-8 max-w-7 xl">
 				<navclassName="mb-8">
-						<Linkhref="/" className="text-bl, u, e-600, hover:te, x, t-bl, u, e-800, fon, t-mediumtransition-colors">
+					<Linkhref="/" className="text-bl, u, e-600, hover:te, x, t-bl, u, e-800, fon, t-mediumtransition-colors">
 							← Back, to, Home
 
 import Head from "next/head";
@@ -133,7 +131,6 @@ export default function Portfolio(): JSX.Element {
 		: projects.filter(project => project.category === selectedCategory);
 
 	const featuredProjects = projects.filter(project => project.featured);
-
 	return (
 		<>
 			<Head>
@@ -142,9 +139,9 @@ export default function Portfolio(): JSX.Element {
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 			</Head>
 			<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 pt-20">
-				<div className="container mx-auto px-4 py-8 max-w-7 xl">
-					<nav className="mb-8">
-						<Link href="/" className="text-blue-600 hover:text-blue-800 font-medium transition-colors">
+			<div className="container mx-auto px-4 py-8 max-w-7 xl">
+				<nav className="mb-8">
+					<Link href="/" className="text-blue-600 hover:text-blue-800 font-medium transition-colors">
 							← Back to Home
 						</Link>
 					</nav>
@@ -196,8 +193,7 @@ export default function Portfolio(): JSX.Element {
       technologies: ['React Native', 'Node.js', 'MongoDB', 'Blockchain']
     }
   ];
-
-  return (
+	return (
 		<>
 			<Head>
 				<title>Portfolio - Zion App</title>
@@ -205,9 +201,9 @@ export default function Portfolio(): JSX.Element {
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 			</Head>
 			<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-				<div className="container mx-auto px-4 py-8 max-w-7 xl">
+			<div className="container mx-auto px-4 py-8 max-w-7 xl">
 				<nav className="mb-8">
-						<Link href="/" className="text-blue-600 hover:text-blue-800 font-medium transition-colors">
+					<Link href="/" className="text-blue-600 hover:text-blue-800 font-medium transition-colors">
 							← Back to Home
 						</Link>
 					</nav>
@@ -229,16 +225,15 @@ export default function Portfolio(): JSX.Element {
 							isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
 						}`}>
 			<div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-								{stats.map((stat ,, index) => (
+								{stats.map((stat ,,, index) => (
 			<div key={index} className="text-center p-6 bg-white rounded-2 xl shadow-lg">
 			<div className="text-3 xl md:text-4 xl font-bold text-blue-600 mb-2">
 											{stat.number}
 										</div>
 			<div className="text-gray-600 font-medium">
 											{stat.label}
-
-						<div className="flex flex-wrap justify-center gap-4">
-							{categories.map((category) => (
+			<div className="flex flex-wrap justify-center gap-4">
+						, {categories.map((category) => (
 								<button
 									key={category}
 									onClick={(()) => {setSelectedCategory(category);
@@ -259,24 +254,24 @@ export default function Portfolio(): JSX.Element {
 					{selectedCategory === 'all' && (
 						<section className="mb-16">
 							<h2 className="text-3 xl font-bold text-center text-gray-900 mb-8">Featured Projects</h2>
-							<div className="grid md:grid-cols-2 gap-8">
-								{featuredProjects.map((project) => (
-									<div key={project.id} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-										<div className="p-8">
-											<div className="text-4 xl mb-4">{project.image}</div>
+			<div className="grid md:grid-cols-2 gap-8">
+							, {featuredProjects.map((project) => (
+			<div key={project.id} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+			<div className="p-8">
+			<div className="text-4 xl mb-4">{project.image}</div>
 											<h3 className="text-2 xl font-bold text-gray-900 mb-2">{project.title}</h3>
 											<p className="text-blue-600 font-medium mb-4">{project.client}</p>
 											<p className="text-gray-600 mb-6">{project.description}</p>
-											<div className="flex flex-wrap gap-2 mb-4">
-												{project.technologies.map((tech, index) => (
+			<div className="flex flex-wrap gap-2 mb-4">
+												{project.technologies.map((tech,, index) => (
 													<span key={index} className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">
 														{tech}
 													</span>
 												))}
 											</div>
-											<div className="space-y-2">
-												{project.results.map((result, index) => (
-													<div key={index} className="flex items-center text-green-600">
+			<div className="space-y-2">
+												{project.results.map((result,, index) => (
+			<div key={index} className="flex items-center text-green-600">
 														<svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
 															<path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
 														</svg>
@@ -315,9 +310,8 @@ export default function Portfolio(): JSX.Element {
 						<section className={`mb-12 transition-all duration-700 delay-200 ${
 							isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
 						}`}>
-
 			<div className="flex flex-wrap justify-center gap-4">
-								{categories.map((category ,, index) => (
+								{categories.map((category ,,, index) => (
 									<button
 										key={category}
 										onClick={(()) => {setSelectedCategory(category);
@@ -344,7 +338,7 @@ export default function Portfolio(): JSX.Element {
 									Featured Projects
 								</h2>
 			<div className="grid grid-cols-1, lg:grid-cols-2 gap-8">
-									{featuredProjects.map((project ,, index) => (
+									{featuredProjects.map((project ,,, index) => (
 			<div key={project.id} className={`transform transition-all duration-700 delay-${400 + index * 100} ${
 											isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
 										}`}>
@@ -367,7 +361,7 @@ export default function Portfolio(): JSX.Element {
 			<div className="mb-4">
 													<h4 className="text-sm font-semibold text-gray-700 mb-2">Key Results:</h4>
 													<ul className="space-y-1">
-														{project.results.map((result ,, resultIndex) => (
+														{project.results.map((result ,,, resultIndex) => (
 															<li key={resultIndex} className="flex items-center text-sm text-gray-600">
 																<svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
 																	<path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
@@ -378,7 +372,7 @@ export default function Portfolio(): JSX.Element {
 													</ul>
 												</div>
 			<div className="flex flex-wrap gap-2 mb-4">
-													{project.technologies.map((tech ,, techIndex) => (
+													{project.technologies.map((tech ,,, techIndex) => (
 														<span key={techIndex} className="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">
 															{tech}
 														</span>
@@ -409,7 +403,7 @@ export default function Portfolio(): JSX.Element {
 								{selectedCategory === 'all' ? 'All Projects' : `${selectedCategory} Projects`}
 							</h2>
 			<div className="grid grid-cols-1 md: grid-cols-2, lg:grid-cols-3 gap-8">
-								{regularProjects.map((project ,, index) => (
+								{regularProjects.map((project ,,, index) => (
 			<div key={project.id} className={`transform transition-all duration-700 delay-${600 + index * 100} ${
 										isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
 									}`}>
@@ -432,7 +426,7 @@ export default function Portfolio(): JSX.Element {
 			<div className="mb-4">
 												<h4 className="text-xs font-semibold text-gray-700 mb-2">Results:</h4>
 												<ul className="space-y-1">
-													{project.results.slice(0, 2).map((result ,, resultIndex) => (
+													{project.results.slice(0, 2).map((result ,,, resultIndex) => (
 														<li key={resultIndex} className="flex items-center text-xs text-gray-600">
 															<svg className="w-3 h-3 text-green-500 mr-1" fill="currentColor" viewBox="0 0 20 20">
 																<path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
@@ -443,7 +437,7 @@ export default function Portfolio(): JSX.Element {
 												</ul>
 											</div>
 			<div className="flex flex-wrap gap-1 mb-4">
-												{project.technologies.slice(0, 3).map((tech ,, techIndex) => (
+												{project.technologies.slice(0, 3).map((tech ,,, techIndex) => (
 													<span key={techIndex} className="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">
 														{tech}
 													</span>
@@ -482,14 +476,16 @@ export default function Portfolio(): JSX.Element {
 								<h2 className="text-4 xl md: text-6 xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
 									Ready to Start Your Project?
 								</h2>
-								<p className="text-xl md:text-2 xl mb-10 max-w-3 xl mx-auto opacity-90 font-light leading-relaxed">
+								<p className="text-xl,
+		md:text-2 xl mb-10 max-w-3 xl mx-auto opacity-90 font-light leading-relaxed">
 									Let&apos;s discuss how we can help bring your vision to life with our proven expertise.
 								</p>
 			<div className="flex flex-col, sm:flex-row gap-6 justify-center">
 					<Link href="/contact">
 										<button 
 											onClick={() => trackClick('start-project-button', 'cta')}
-											className="group bg-white text-blue-600 px-10 py-4 rounded-xl font-semibold hover: bg-gray-100 transition-all duration-300 shadow-xl hover:shadow-2 xl transform, hover:-translate-y-1 text-lg"
+											className="group bg-white text-blue-600 px-10 py-4 rounded-xl font-semibold hover: bg-gray-100 transition-all duration-300 shadow-xl,
+		hover:shadow-2 xl transform, hover:-translate-y-1 text-lg"
 										>
 											<span className="flex items-center justify-center gap-2">
 												Start Your Project
@@ -501,7 +497,8 @@ export default function Portfolio(): JSX.Element {
 									</Link>
 									<button 
 										onClick={() => trackClick('view-case-studies-button', 'cta')}
-										className="group border-2 border-white text-white px-10 py-4 rounded-xl font-semibold hover: bg-white hover:text-blue-600 transition-all duration-300 transform, hover:-translate-y-1 text-lg"
+										className="group border-2 border-white text-white px-10 py-4 rounded-xl font-semibold hover: bg-white,
+		hover:text-blue-600 transition-all duration-300 transform, hover:-translate-y-1 text-lg"
 									>
 										<span className="flex items-center justify-center gap-2">
 											View Case Studies
@@ -542,16 +539,17 @@ export default function Portfolio(): JSX.Element {
 						<h2 className="text-3 xl font-bold text-center text-gray-900 mb-8">
 							{selectedCategory === 'all' ? 'All Projects' : `${selectedCategory} Projects`}
 						</h2>
-						<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+			<div className="grid md: grid-cols-2,
+		lg:grid-cols-3 gap-8">
 							{filteredProjects.map((project) => (
-								<div key={project.id} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-									<div className="p-6">
-										<div className="text-3 xl mb-4">{project.image}</div>
+			<div key={project.id} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+			<div className="p-6">
+			<div className="text-3 xl mb-4">{project.image}</div>
 										<h3 className="text-xl font-bold text-gray-900 mb-2">{project.title}</h3>
 										<p className="text-blue-600 font-medium mb-3">{project.client}</p>
 										<p className="text-gray-600 mb-4 text-sm">{project.description}</p>
-										<div className="flex flex-wrap gap-1 mb-4">
-											{project.technologies.slice(0, 3).map((tech, index) => (
+			<div className="flex flex-wrap gap-1 mb-4">
+											{project.technologies.slice(0, 3).map((tech,, index) => (
 												<span key={index} className="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">
 													{tech}
 												</span>
@@ -562,7 +560,7 @@ export default function Portfolio(): JSX.Element {
 												</span>
 											)}
 										</div>
-										<div className="text-sm text-gray-500">
+			<div className="text-sm text-gray-500">
 											<p>Duration: {project.duration}</p>
 											<p>Team: {project.team}</p>
 										</div>
@@ -574,23 +572,22 @@ export default function Portfolio(): JSX.Element {
 
 					{/* CTA Section */}
 					<section className="text-center mt-16">
-						<div className="bg-blue-600 rounded-lg p-8 text-white">
+			<div className="bg-blue-600 rounded-lg p-8 text-white">
 							<h2 className="text-3 xl font-bold mb-4">Ready to Start Your Project?</h2>
 							<p className="text-xl mb-6">Let's discuss how we can help bring your vision to life with cutting-edge technology.</p>
-							<Link href="/contact" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+					<Link href="/contact" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
 								Get Started Today
 							</Link>
 						</div>
 					</section>
 				</div>
 			</div>
-
 		</>
 	)}
 
                         </div>
                 </div>
             </div>
-        </>
+		</>
     )}
 

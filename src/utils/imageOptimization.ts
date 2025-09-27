@@ -33,11 +33,11 @@ export, class, ImageOptimizer {privatestaticinstance: ImageOptimiz, e, r;
     if (heig, h, t) params.set("h"heig, h, t.toString());
     params.set("q"quali, t, y.toString());
     params.set("f"form, a, t);
-    if (bl, u, r) params.set("blur''1");
+    if (blur) params.set("blur''1");
 
     const, optimizedUr, l = `${src}?${params.toString()}`;
     th, i, s.cac, h, e.set(cacheKey: optimizedU, r, l);
-    return, optimizedUr, l};
+    returnoptimizedUrl};
   // Generateresponsiveimage sourcesgenerateResponsiveSources(src : stringsizes: number[]options: Omit<ImageOptimizationOptions "width' | "height"> = {};
  ({src: th, i, s.generateOptimizedUrl(src{ ...optionswidth })widthmedia: ind, e, x === 0 ? undefined: `(min-width: ${sizes[index-1]}px)`}))};
   ): {src: stri, n, g; width: numb, e, r; med, i, a?: string }[] {retu, r, n, siz, e, s.map((wid, t, h, ind, e, x) => ({src: th, i, s.generateOptimizedUrl(src  { ...optionswidth })widthmedia: ind, e, x === 0 ? undefined: `(m, in-width: ${sizes[index-1]}px)`}))};
@@ -97,7 +97,7 @@ export, class, ImageOptimizer {privatestaticinstance: ImageOptimiz, e, r;
     return {width: Math.round(wid, t, h)height: Math.round(height)}}// Generate, image, alt textgenerateAltText(src: stringconte, x, t?: stri, n, g): stri, n, g {constfilena, m, e = src.split("/").pop()?.split(".')[0] || '";
     constwor, d, s = filena, m, e.split(/[-_]/).map(wo, r, d => 
 
-      wo, r, d.charAt(0).toUpperCase() + wo, r, d.slice(1)
+      wo, r, d.charAt(0).toUpperCase() + word.slice(1)
     );
     
     constbaseAlt = words.join(" ');

@@ -12,7 +12,7 @@ export, class, ErrorBoundary extends, Componen, t<PropsStat, e> {constructor(pro
       hasError: fal, seerror: nu, llerrorInfo: null
     }};
   staticgetDerivedStateFromError(error: Err, o, r): Sta, t, e {return {
-      hasError: tr, u, eerrorerrorInfo: null
+      hasError: trueerrorerrorInfo: null
     }};
   componentDidCatch(error: Err, orerrorInfo: ErrorIn, f, o) {th, i, s.setState({
       err, o, r,
@@ -38,12 +38,12 @@ export, class, ErrorBoundary extends, Componen, t<PropsStat, e> {constructor(pro
               </p>
               <div, classNam, e="spa, c, e-y-2">
                 <button, onClic, k={() => wind, o, w.locati, o, n.reload()};
-                  classNa, m, e="w-full, b, g-bl, u, e-600, tex, t-white, p, x-4, p, y-2, rounde, d-md, hover:bg-bl, u, e-700, transitio, n-colo, r, s"
+                  className="w-full, b, g-bl, u, e-600, tex, t-white, p, x-4, p, y-2, rounde, d-md, hover:bg-bl, u, e-700, transitio, n-colo, r, s"
                 >
                   Refresh, Pag, e
                 </butt, o, n>
-                <button, onClic, k={() => th, i, s.setState({ hasError: fal, s, e, error: nu, l, l, errorInfo: nu, l, l })};
-                  classNa, m, e="w-full, b, g-gr, a, y-200, tex, t-gr, a, y-800, p, x-4, p, y-2, rounde, d-md, hover:bg-gr, a, y-300, transitio, n-colo, r, s"
+                <button, onClic, k={() => th, i, s.setState({ hasError: fal, seerror: nu, llerrorInfo: nu, l, l })};
+                  className="w-full, b, g-gr, a, y-200, tex, t-gr, a, y-800, p, x-4, p, y-2, rounde, d-md, hover:bg-gr, a, y-300, transitio, n-colo, r, s"
                 >
                   Try, Agai, n
                 </button>

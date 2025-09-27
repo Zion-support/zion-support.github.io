@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-09-27T07:36:17.154Z",
+  "timestamp": "2025-09-27T08:00:01.742Z",
   "fixedFiles": [
     "src/components/UserManagement.tsx",
     "src/components/Testimonials.tsx",
@@ -18,9 +18,7 @@
     "src/components/Navigation.tsx",
     "src/components/LoadingComponents.tsx",
     "src/components/GlobalErrorBoundary.tsx",
-    "src/components/Footer.tsx",
     "src/components/FileUpload.tsx",
-    "src/components/FeatureCard.tsx",
     "src/components/ErrorReporter.tsx",
     "src/components/ErrorBoundary.tsx",
     "src/components/EnhancedUserExperience.tsx",
@@ -30,7 +28,6 @@
     "src/components/ContactForm.tsx",
     "src/components/ChatSystem.tsx",
     "src/components/BlogCard.tsx",
-    "src/components/AnalyticsDashboard.tsx",
     "src/components/AdvancedSecurityMonitor_backup.tsx",
     "src/components/AdvancedPerformanceOptimizer.tsx",
     "src/components/AdvancedErrorHandler.tsx",
@@ -40,7 +37,7 @@
   ],
   "errors": [],
   "summary": {
-    "totalFixed": 36,
+    "totalFixed": 33,
     "totalErrors": 0
   }
 }

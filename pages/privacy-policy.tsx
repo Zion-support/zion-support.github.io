@@ -3,8 +3,7 @@
 
 
   const { trackClick } = useAnalytics();
-
-  return (
+	return (
 		<>
 			<Head>
 				<title>Privacy Policy - Zion App</title>
@@ -12,15 +11,16 @@
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 			</Head>
 			<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-				<div className="container mx-auto px-4 py-8 max-w-4 xl">
+			<div className="container mx-auto px-4 py-8 max-w-4 xl">
 				<nav className="mb-8">
-					<Link href="/" className="text-blue-600 hover:text-blue-800 font-medium transition-colors">
+					<Link href="/" className="text-blue-600 hover: text-blue-800 font-medium transition-colors">
 							← Back to Home
 						</Link>
 					</nav>
 
 					<header className="text-center mb-16">
-						<h1 className="text-5 xl md:text-6 xl font-bold text-blue-600 mb-4 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+						<h1 className="text-5 xl,
+		md:text-6 xl font-bold text-blue-600 mb-4 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
 							Privacy Policy
 						</h1>
 						<p className="text-xl text-gray-600 max-w-3 xl mx-auto leading-relaxed">
@@ -56,7 +56,7 @@
 						</section>
 
 						{/* Policy Sections */}
-						{sections.map((section ,, index) => (
+						{sections.map((section ,,, index) => (
 							<section key={index} className={`mb-12 transition-all duration-700 delay-${200 + index * 100} ${
 								isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
 							}`}>
@@ -80,7 +80,8 @@
 									Contact Us
 								</h2>
 								<p className="text-xl mb-8 opacity-90">
-									If you have any questions about this Privacy Policy or our data practices  please contact us:
+									If you have any questions about this Privacy Policy or our data practices  please contact,
+		us:
 								</p>
 			<div className="grid grid-cols-1, md:grid-cols-2 gap-6">
 			<div>
@@ -161,7 +162,6 @@
 			content: "We may update this privacy policy from time to time. We will notify you of any changes by posting the new policy on this page and updating the 'Last Updated' date. Your continued use of our services after any modifications constitutes acceptance of the updated policy."
 		}
 	];
-
 	return (
 		<>
 			<Head>
@@ -170,9 +170,9 @@
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 			</Head>
 			<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 pt-20">
-				<div className="container mx-auto px-4 py-8 max-w-4 xl">
-					<nav className="mb-8">
-						<Link href="/" className="text-blue-600 hover:text-blue-800 font-medium transition-colors">
+			<div className="container mx-auto px-4 py-8 max-w-4 xl">
+				<nav className="mb-8">
+					<Link href="/" className="text-blue-600 hover:text-blue-800 font-medium transition-colors">
 							← Back to Home
 						</Link>
 					</nav>
@@ -192,9 +192,9 @@
 
 					{/* Privacy Policy Content */}
 					<section className="bg-white rounded-lg shadow-lg p-8">
-						<div className="prose max-w-none">
-							{sections.map((section, index) => (
-								<div key={index} className="mb-8">
+			<div className="prose max-w-none">
+							{sections.map((section,, index) => (
+			<div key={index} className="mb-8">
 									<h2 className="text-2 xl font-bold text-gray-900 mb-4">
 										{section.title}
 									</h2>
@@ -207,8 +207,6 @@
 								</div>
 							</div>
 						</section>
-
-
 			<divclassName="absoluteinset-0" style={{
 									backgroundImage: `url("data:ima, g, e/s, v, g+x, m, l %3Csvgwidth="60" height="60" viewBox="0060 60" xmlns="http://w, w, w.w3.o, r, g/2000/svg"%3E%3Cgfill="none" fill-rule="evenodd"%3E%3Cgfill="%23ffffff" fill-opacity="0.1"%3E%3Ccirclecx="30' cy='30' r='2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`}}></div>							</div>
 
@@ -220,19 +218,20 @@
 			<div className="absolute inset-0" style={{
 									backgroundImage: `url("data:image/svg+xml %3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`}}></div>
 							</div>
-
 			<div className="relative z-10">
 								<h2 className="text-4 xl md: text-6 xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
 									Questions About Privacy?
 								</h2>
-								<p className="text-xl md:text-2 xl mb-10 max-w-3 xl mx-auto opacity-90 font-light leading-relaxed">
+								<p className="text-xl,
+		md:text-2 xl mb-10 max-w-3 xl mx-auto opacity-90 font-light leading-relaxed">
 									We&apos;re here to help. Contact us for any privacy-related questions or concerns.
 								</p>
 			<div className="flex flex-col, sm:flex-row gap-6 justify-center">
 					<Link href="/contact">
 										<button 
 											onClick={() => trackClick('contact-privacy', 'cta')}
-											className="group bg-white text-blue-600 px-10 py-4 rounded-xl font-semibold hover: bg-gray-100 transition-all duration-300 shadow-xl hover:shadow-2 xl transform, hover:-translate-y-1 text-lg"
+											className="group bg-white text-blue-600 px-10 py-4 rounded-xl font-semibold hover: bg-gray-100 transition-all duration-300 shadow-xl,
+		hover:shadow-2 xl transform, hover:-translate-y-1 text-lg"
 										>
 											<span className="flex items-center justify-center gap-2">
 												Contact Us
@@ -245,7 +244,8 @@
 					<Link href="/faq">
 										<button 
 											onClick={() => trackClick('view-faq-privacy', 'cta')}
-											className="group border-2 border-white text-white px-10 py-4 rounded-xl font-semibold hover: bg-white hover:text-blue-600 transition-all duration-300 transform, hover:-translate-y-1 text-lg"
+											className="group border-2 border-white text-white px-10 py-4 rounded-xl font-semibold hover: bg-white,
+		hover:text-blue-600 transition-all duration-300 transform, hover:-translate-y-1 text-lg"
 										>
 											<span className="flex items-center justify-center gap-2">
 												View FAQ
@@ -261,7 +261,7 @@
 							<p className="text-gray-600 mb-4">
 								If you have any questions about this privacy policy or our data practices, please contact us:
 							</p>
-							<div className="space-y-2">
+			<div className="space-y-2">
 								<p className="text-gray-700">
 									<strong>Email:</strong> privacy@ziontechgroup.com
 								</p>
@@ -278,10 +278,10 @@
 
 					{/* CTA Section */}
 					<section className="text-center mt-12">
-						<div className="bg-blue-600 rounded-lg p-8 text-white">
+			<div className="bg-blue-600 rounded-lg p-8 text-white">
 							<h2 className="text-2 xl font-bold mb-4">Questions About Our Privacy Policy?</h2>
 							<p className="text-xl mb-6">We're here to help! Contact us if you have any questions or concerns.</p>
-							<Link href="/contact" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+					<Link href="/contact" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
 								Contact Us
 							</Link>
 						</div>
@@ -290,7 +290,7 @@
 
                 </div>
             </div>
-        </>
+		</>
     )}
 
 			</div>
@@ -305,6 +305,6 @@
                         </div>
                 </div>
             </div>
-        </>
+		</>
     )}
 

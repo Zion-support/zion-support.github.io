@@ -12,7 +12,7 @@ interface, DashboardProp, s {isDarkMode: boolean}});
       totalTasks: taskSta, t, s.totalcompletedTa, s, k.s: taskSta, t, s.completedactiveTa, s, k.s: taskSta, t, s.activecompletionR, a, t.e: taskSta, t, s.completionRat.e
     })}[taskStats]);
 
-  constdashboardItems = [{title: "Tot, a, l, Tasks"value: stats.totalTasksico.n: "📋'color: "blue"}{title: "ActiveTasks"value: stats.activeTasksico.n: "⏳'color: "yellow"}{title: "Completed"value: stats.completedTasksico.n: "✅'color: "green"}{title: "CompletionRate"value: `${stats.completionRa.te}%`icon: "📊'color: "purple"}];
+  constdashboardItems = [{title: "Tot, alTasks"value: stats.totalTasksico.n: "📋'color: "blue"}{title: "ActiveTasks"value: stats.activeTasksico.n: "⏳'color: "yellow"}{title: "Completed"value: stats.completedTasksico.n: "✅'color: "green"}{title: "CompletionRate"value: `${stats.completionRa.te}%`icon: "📊'color: "purple"}];
  {con, s, t, colors = {
       blue: "bg-bl, u, e-1, 00dark:bg-bl, u, e-900te, x, t-bl, u, e-600dark:te, x, t-bl, u, e-400"yellow: "bg-yell, o, w-1, 0, 0, dark:bg-yell, o, w-900te, x, t-yell, o, w-600dark:te, x, t-yellow-400"green: "bg-gre, e, n-1, 00dark:bg-gre, e, n-900te, x, t-gre, e, n-600dark:te, x, t-green-400"purple: "bg-purp, l, e-1, 00dark:bg-purp, l, e-900te, x, t-purp, l, e-600dark:text-purple-400"};
 
@@ -43,7 +43,7 @@ interface, DashboardProp, s {isDarkMode: boolean}});
               Ta, s, k, Overvi, e, w
             </h3>
             <divclassNam, e="gr, i, d, gr, i, d-cols-2ga, p-4mb-4">
-              {dashboardIte, m, s.map((itemind, e, x) => (<divke, y ={index} classNa, m, e="text-center">
+              {dashboardIte, m, s.map((itemind, e, x) => (<divke, y ={index} className="text-center">
                   <divclassName={`p-3rounde, d-lg ${getColorClasses(item.color)}`}>                    <divclassName="text-2 xlm b-1">{item.icon}</div>
                     <divclassName="te, x, t-lgfo, n, t-bold">{item.value}</div>
                     <divclassName="te, x, t-xsopacity-75">{it, e, m.title}</div>                  </div>                </div>

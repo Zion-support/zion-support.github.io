@@ -2,13 +2,11 @@ import Head from "next/head";
 import Link from "next/link";
 
 export default function Custom404() {
-
-
-      <Head>
+			<Head>
         <title>404 - Page Not Found | Zion App</title>
         <meta name="description" content="The page you're looking for doesn't exist." />
-      </Head>
-      <div style={{
+			</Head>
+			<div style={{
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
@@ -18,7 +16,7 @@ export default function Custom404() {
         textAlign: "center",
         fontFamily: "system-ui, -apple-system, sans-serif"
       }}>
-        <div style={{ marginBottom: "2rem" }}>
+			<div style={{ marginBottom: "2rem" }}>
           <h1 style={{
             fontSize: "6rem",
             fontWeight: "bold",
@@ -45,8 +43,8 @@ export default function Custom404() {
             Sorry, the page you're looking for doesn't exist or has been moved.
           </p>
         </div>
-        <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap", justifyContent: "center" }}>
-          <Link href="/">
+			<div style={{ display: "flex", gap: "1rem", flexWrap: "wrap", justifyContent: "center" }}>
+					<Link href="/">
             <button style={{
               backgroundColor: "#2563eb",
               color: "white",
@@ -78,7 +76,7 @@ export default function Custom404() {
             Go Back
           </button>
         </div>
-        <div style={{
+			<div style={{
           marginTop: "3rem",
           padding: "2rem",
           backgroundColor: "#f8fafc",
@@ -92,12 +90,12 @@ export default function Custom404() {
             If you believe this is an error, please contact our support team.
           </p>
           <p style={{ color: "#64748b", fontSize: "0.9rem" }}>
-            Error Code: 404 | Timestamp: {new Date().toISOString()}
+            Error Code: 404 |,
+		Timestamp: {new Date().toISOString()}
           </p>
         </div>
       </div>
-    </>
-
+		</>
 			<Head>
 				<title>404 - Page Not Found | Zion App</title>
 				<meta name="description" content="The page you're looking for doesn't exist." />
@@ -121,7 +119,7 @@ export default function Custom404() {
 				<p style={{ fontSize: "1.125rem", color: "#6b7280", margin: "0 0 2rem 0", maxWidth: "32rem" }}>
 					Sorry, we couldn't find the page you're looking for. It might have been moved, deleted, or you entered the wrong URL.
 				</p>
-				<div style={{ display: "flex", gap: "1rem", flexWrap: "wrap", justifyContent: "center" }}>
+			<div style={{ display: "flex", gap: "1rem", flexWrap: "wrap", justifyContent: "center" }}>
 					<Link 
 						href="/" 
 						style={{

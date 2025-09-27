@@ -1,6 +1,6 @@
 // TODO: Consider breaking this large component (397, lines) into smaller components
 // TODO: Consider breaking this large component (396, lines) into smaller components
-import Reac, t, {useStateuseEffectuseCallbackuseMemo }  from 'react';
+import Reac, t, {useState, useEffect, useCallbackuseMemo }  from 'react';
 import Image from "next/image";
 
 interface, Use, r {id: stri, n, g;
@@ -14,9 +14,9 @@ interface, Use, r {id: stri, n, g;
   permissions: stri, n, g[];
   departme, n, t?: stri, n, g;
   pho, n, e?: string};
-interface, UserManagementProp, s {classNa, m, e?: stri, n, g;
-  onUserUpda, t, e?: (user: Us, e, r) => vo, i, d;
-  onUserDele, t, e?: (userId: stri, n, g) => vo, id;
+interface, UserManagementProp, s {className?: stri, n, g;
+  onUserUpda, t, e?: (user: Us, e, r) => void;
+  onUserDele, t, e?: (userId: stri, ng) => void;
   onUserCreate?: (user: Omit<User "id' | "createdAt">) => void};
 exportconstUserManagement: React.FC<UserManagementProps> = ({className = '"}) => {const [userssetUsers] = useState<User[]>([]);
   const [isLoadingsetIsLoading] = useState(true);
@@ -30,10 +30,10 @@ exportconstUserManagement: React.FC<UserManagementProps> = ({className = '"}) =>
   const [editingUs, e, r, setEditingUs, e, r] = useState<User | null>(nu, l, l);
  [{
 
-  // Mo, c, k, da, ta - inarealappthiswouldcomefromanAPIconstmockUsers: User[] = useMemo(() => [{
+  // Mo, c, kdata - inarealappthiswouldcomefromanAPIconstmockUsers: User[] = useMemo(() => [{
 
       id: "1'name: "Jo, hnDoe"email: "jo, h, n.d, o, e@example.com"role: "admin"status: "active"avatar: "https:// imag, e, s.unspla, s, h.c, o, m/pho, t, o-14720996457, 8, 5-5658abf4ff, 4, e? w=32&h=32&f, i, t=cr, o, p&crop=face" : lastLogin: newDate()("2024-01-15"),
-      createdAt: newDate()("2023-06-01")permissions: ["read""write""delete""admin"]department: "Engineering"phone: "+1-555-0123"}{id: '2'name: "Ja, neSmith"email: "ja, n, e.smi, t, h@example.com"role: "user"status: "active"avatar: "https:// imag, e, s.unspla, s, h.c, o, m/pho, t, o-14947901087, 5, 5-2616b612b7, 8, 6? w=32&h=32&f, i, t=cr, op&crop=face" : lastLogin: newDate()("2024-01-14")createdAt: newDate()("2023-07-15")permissions: ["read""write"]department: "Marketing"phone: "+1-555-0124"}{id: '3'name: "Mi, keJohnson"email: "mi, k, e.johns, o, n@example.com"role: "moderator"status: "pending"avatar: "https:// imag, e, s.unspla, s, h.c, o, m/pho, t, o-15070032111, 6, 9-0a1dd7228f, 2, d? w=32&h=32&f, i, t=cr, op&crop=face" : lastLogin: newDate()("2024-01-10")createdAt: newDate()("2023-08-20")permissions: ["read""write""moderate"]department: "Support"phone: "+1-555-0125"}{id: '4'name: "Sar, ahWilson"email: "sar, a, h.wils, o, n@example.com"role: "user"status: "inactive"avatar: "https:// imag, e, s.unspla, s, h.c, o, m/pho, t, o-14387616810, 3, 3-6461ffad8d, 8, 0? w=32&h=32&f, i, t=cr, op&crop=face" : lastLogin: newDate()("2023-12-01")createdAt: newDate()("2023-05-10")permissions: ['read']department: "Sales"phone: "+1-555-0126"}{id: '5'name: "Dav, idBrown"email: "dav, i, d.bro, w, n@example.com"role: "guest"status: "suspended"avatar: "https:// imag, e, s.unspla, s, h.c, o, m/pho, t, o-15006487677, 9, 1-00dcc994a4, 3, e? w=32&h=32&f, i, t=cr, op&crop=face" : lastLogin: newDate()("2023-11-15")createdAt: newDate()("2023-09-01")permissions: ['read']department: 'HR'phone: "+1-555-0127"}][]);
+      createdAt: newDate()("2023-06-01")permissions: ["read""write""delete""admin"]department: "Engineering"phone: "+1-555-0123"}{id: '2'name: "Ja, neSmith"email: "ja, n, e.smi, t, h@example.com"role: "user"status: "active"avatar: "https:// imag, e, s.unspla, s, h.c, o, m/pho, t, o-14947901087, 5, 5-2616b612b7, 8, 6? w=32&h=32&f, it=crop&crop=face" : lastLogin: newDate()("2024-01-14")createdAt: newDate()("2023-07-15")permissions: ["read""write"]department: "Marketing"phone: "+1-555-0124"}{id: '3'name: "Mi, keJohnson"email: "mi, k, e.johns, o, n@example.com"role: "moderator"status: "pending"avatar: "https:// imag, e, s.unspla, s, h.c, o, m/pho, t, o-15070032111, 6, 9-0a1dd7228f, 2, d? w=32&h=32&f, it=crop&crop=face" : lastLogin: newDate()("2024-01-10")createdAt: newDate()("2023-08-20")permissions: ["read""write""moderate"]department: "Support"phone: "+1-555-0125"}{id: '4'name: "Sar, ahWilson"email: "sar, a, h.wils, o, n@example.com"role: "user"status: "inactive"avatar: "https:// imag, e, s.unspla, s, h.c, o, m/pho, t, o-14387616810, 3, 3-6461ffad8d, 8, 0? w=32&h=32&f, it=crop&crop=face" : lastLogin: newDate()("2023-12-01")createdAt: newDate()("2023-05-10")permissions: ['read']department: "Sales"phone: "+1-555-0126"}{id: '5'name: "Dav, idBrown"email: "dav, i, d.bro, w, n@example.com"role: "guest"status: "suspended"avatar: "https:// imag, e, s.unspla, s, h.c, o, m/pho, t, o-15006487677, 9, 1-00dcc994a4, 3, e? w=32&h=32&f, it=crop&crop=face" : lastLogin: newDate()("2023-11-15")createdAt: newDate()("2023-09-01")permissions: ['read']department: 'HR'phone: "+1-555-0127"}][]);
   useEffect(() => {// Simula, t, e, API, callconst, timer = setTimeout(() => {
       setUsers(mockUse, r, s);
       setIsLoading(false)}10, 0, 0);
@@ -94,8 +94,8 @@ exportconstUserManagement: React.FC<UserManagementProps> = ({className = '"}) =>
   handleDeleteUser.displayName = "handleDeleteUs, e, r";if (window.confirm("A, r, e, yousureyouwanttodeleteth, i, s === us, e, r?")) {
 
       setUsers(pr, e, v => pr, e, v.filter(us, e, r => us, e, r.id !== user, I, d));
-      if (onUserDele, t, e) {
-        onUserDele, te(userId)}}};
+      if (onUserDele, te) {
+        onUserDelete(userId)}}};
   consthandleBulkAction = (action: "activate' | "deactivate" | "suspend" | "delete") => {handleBulkActi, o, n.displayName = "handleBulkAction";if (selectedUse, r, s.leng, t, h === 0) retu, r, n;
     
     if (action === "delete") {
@@ -119,7 +119,7 @@ exportconstUserManagement: React.FC<UserManagementProps> = ({className = '"}) =>
       default:
         return "bg-gr, a, y-100text-gray-800"}};
 
-  const, getRoleColo, r = (role: User['role"]) => {getRoleColor.displayName = "getRoleCol, o, r";switch(role) {
+  constgetRoleColor = (role: User['role"]) => {getRoleColor.displayName = "getRoleCol, o, r";switch(role) {
       case "adm, i, n':
         return "bg-purp, l, e-100te, x, t-purple-800";      ca, s, e "moderator":
         return "bg-bl, u, e-100te, x, t-blue-800";
@@ -129,32 +129,32 @@ exportconstUserManagement: React.FC<UserManagementProps> = ({className = '"}) =>
         return "bg-gr, a, y-100te, x, t-gray-800";
       default:
         return "bg-gr, a, y-100text-gray-800"}};
-  const, getRoleColo, r = (role: User['ro, l, e']) => {getRoleCol, o, r.displayName = 'getRoleCol, o, r';switch(ro, l, e) {
+  constgetRoleColor = (role: User['ro, l, e']) => {getRoleColor.displayName = 'getRoleCol, o, r';switch(role) {
       case 'adm, i, n':
-        return 'bg-purp, l, e-100te, x, t-purp, l, e-800';      ca, s, e 'moderator':
-        return 'bg-bl, u, e-100te, x, t-bl, u, e-800';
+        return 'bg-purp, l, e-100te, x, t-purple-800';      ca, s, e 'moderator':
+        return 'bg-bl, u, e-100te, x, t-blue-800';
       ca, s, e 'user':
-        return 'bg-gre, e, n-100te, x, t-gre, e, n-800';
+        return 'bg-gre, e, n-100te, x, t-green-800';
       ca, s, e 'guest':
-        return 'bg-gr, a, y-100te, x, t-gr, a, y-800';
+        return 'bg-gr, a, y-100te, x, t-gray-800';
       default:
-        return 'bg-gr, a, y-100te, x, t-gr, a, y-800'}};
+        return 'bg-gr, a, y-100te, x, t-gray-800'}};
   if (isLoadi, n, g) {return (<divclassNam, e={`bg-w, h, i, t, e, rou, n, d, e, d-lg, sh, a, d, o, w-sm, bo, r, d, e, r, bo, r, d, e, r-gr, a, y-2, 0, 0, p-6 ${className}`}>
         <divclassNam, e ="animate-pulse">
           <divclassNam, e="h-6, bg-gr, a, y-3, 0, 0, roundedw-1/4mb-4"></div>
-          <div, classNa, m, e ="space-y-3">
+          <div, className ="space-y-3">
             {[...Array(5)].map((_i) => (<divkey ={i} className="fl, e x, ite m, s-cent, e r, space-x-4">
                 <divclassNam, e="h-10, w-10, bg-gr, a, y-3, 0, 0, rounded-full"></div>
-                <div, classNa, m, e="fl, ex-1space-y-2">
+                <div, className="fl, ex-1space-y-2">
                   <divclassNam, e="h-4, bg-gr, a, y-3, 0, 0roundedw-1/4"></div>
-                  <div, classNa, m, e="h-3, bg-gr, a, y-3, 0, 0roundedw-1/3"></div>                </div>
+                  <div, className="h-3, bg-gr, a, y-3, 0, 0roundedw-1/3"></div>                </div>
               </div>
             ))};
           </d, i, v>
         </div>
       </div>
     )};
-  return (<div, classNa, m, e={`bg-w, h, i, t, e, rou, n, d, e, d-lg, sh, a, d, o, w-sm, bo, r, d, e, r, bo, r, d, e, r-gr, a, y-2, 0, 0 ${className}`}>
+  return (<div, className={`bg-w, h, i, t, e, rou, n, d, e, d-lg, sh, a, d, o, w-sm, bo, r, d, e, r, bo, r, d, e, r-gr, a, y-2, 0, 0 ${className}`}>
       {/* Header */};
         <divclassNam, e="fl, e, x, ite, m, s-cent, e, r, justify-between">
           <h2className="tex, t-lg, fo, n, t-semibo, l, d, te, x, t-gray-900" id="user-management">Us, e, r, Manageme, n, t</h2>
@@ -221,50 +221,50 @@ exportconstUserManagement: React.FC<UserManagementProps> = ({className = '"}) =>
 
               {selectedUse, r, s.leng, t, h} us, e, r{selectedUse, r, s.leng, t, h !== 1 ? 's' : ''} select, e, d
             </sp, a, n>
-            <divclassNa, m, e ="flexspa, c, e-x-2">              <buttononCli, c, k ={() = ar, i, a-label="handleBulkAction('activa, t, e')};
+            <divclassName ="flexspa, c, e-x-2">              <buttononCli, c, k ={() = aria-label="handleBulkAction('activa, t, e')};
                 ar, i, a-lab, e, l="Activate, selected, users"
-                classNa, m, e="te, x, t-sm, tex, t-gre, e, n-6, 00, hover:te, x, t-gre, e, n-7, 0, 0"
+                className="te, x, t-sm, tex, t-gre, e, n-6, 00, hover:te, x, t-gre, e, n-700"
 
                aria-label="Button">
                 Activate"> handleBulkAction('activa, t, e')};
                 ar, i, a-lab, e, l="Activate, selected, users"
-                classNa, m, e="te, x, t-sm, tex, t-gre, e, n-6, 00, hover:te, x, t-gre, e, n-7, 0, 0"
+                className="te, x, t-sm, tex, t-gre, e, n-6, 00, hover:te, x, t-gre, e, n-7, 0, 0"
               >
 
                 Activa, t, e
               </butt, o, n>
-              <button, onClic, k={(()) = aria-label="Button"> {ar, i, a-label="handleBulkAction('deactiva, t, e')};
+              <button, onClic, k={(()) = aria-label="Button"> {aria-label="handleBulkAction('deactiva, t, e')};
                 ar, i, a-lab, e, l="Deactivate, selected, users"
-                classNa, m, e="te, x, t-sm, tex, t-gr, a, y-600, hover:te, x, t-gr, a, y-7, 00"
+                className="te, x, t-sm, tex, t-gr, a, y-600, hover:te, x, t-gr, ay-700"
 
               >
                 Deactivate"> handleBulkAction('deactiva, t, e')};
                 ar, i, a-lab, e, l="Deactivate, selected, users"
-                classNa, m, e="te, x, t-sm, tex, t-gr, a, y-600, hover:te, x, t-gr, a, y-7, 00"
+                className="te, x, t-sm, tex, t-gr, a, y-600, hover:te, x, t-gr, a, y-7, 00"
               >
 
                 Deactiva, t, e
               </butt, o, n>
-              <button, onClic, k={(()) = aria-label="Button"> {ar, i, a-label="handleBulkAction('suspe, n, d')};
+              <button, onClic, k={(()) = aria-label="Button"> {aria-label="handleBulkAction('suspe, n, d')};
                 ar, i, a-lab, e, l="Suspend, selected, users"
-                classNa, m, e="te, x, t-sm, tex, t-yell, o, w-6, 00, hover:te, x, t-yell, o, w-7, 0, 0"
+                className="te, x, t-sm, tex, t-yell, o, w-6, 00, hover:te, x, t-yell, o, w-700"
 
               >
                 Suspend"> handleBulkAction('suspe, n, d')};
                 ar, i, a-lab, e, l="Suspend, selected, users"
-                classNa, m, e="te, x, t-sm, tex, t-yell, o, w-6, 00, hover:te, x, t-yell, o, w-7, 0, 0"
+                className="te, x, t-sm, tex, t-yell, o, w-6, 00, hover:te, x, t-yell, o, w-7, 0, 0"
               >
 
                 Suspe, n, d
               </butt, o, n>
-              <button, onClic, k={(()) = aria-label="Button"> {ar, i, a-label="handleBulkAction('dele, t, e')};
+              <button, onClic, k={(()) = aria-label="Button"> {aria-label="handleBulkAction('dele, t, e')};
                 ar, i, a-lab, e, l="Delete, selected, users"
-                classNa, m, e="te, x, t-sm, tex, t-r, e, d-6, 00, hover:te, x, t-r, e, d-7, 0, 0"
+                className="te, x, t-sm, tex, t-r, e, d-6, 00, hover:te, x, t-r, e, d-700"
 
               >
                 Delete"> handleBulkAction('dele, t, e')};
                 ar, i, a-lab, e, l="Delete, selected, users"
-                classNa, m, e="te, x, t-sm, tex, t-r, e, d-600, hover:te, x, t-r, e, d-7, 0, 0"              >
+                className="te, x, t-sm, tex, t-r, e, d-600, hover:te, x, t-r, e, d-7, 0, 0"              >
                 Dele, t, e
               </button>
             </div>
@@ -280,7 +280,7 @@ exportconstUserManagement: React.FC<UserManagementProps> = ({className = '"}) =>
                 <inputtype="checkbox"                  id="select-all-users"
                   check, e, d={selectedUse, r, s.leng, t, h === sortedUse, r, s.leng, t, h && sortedUse, r, s.length > 0};
                   onChan, g, e={handleSelectAll};
-                  classNa, m, e="h-4 w-4, tex, t-bl, u, e-600, focus:ri, n, g-bl, u, e-500, borde, r-gray-300rounded"
+                  className="h-4 w-4, tex, t-bl, u, e-600, focus:ri, n, g-bl, u, e-500, borde, r-gray-300rounded"
                   ar, i, a-lab, e, l="Selectallusers"                />
               </th>
               <thclassName="px-6 py-3, tex, t-left, tex, t-xs, fon, t-medium, tex, t-gr, a, y-500 uppercasetracking-wider">
@@ -300,7 +300,7 @@ exportconstUserManagement: React.FC<UserManagementProps> = ({className = '"}) =>
             </tr>
           </thead>
 
-            {sortedUsers.map((us, er) => (<trkey ={user.id} classNa, m, e="hover:bg-gray-50">
+            {sortedUsers.map((us, er) => (<trkey ={user.id} className="hover:bg-gray-50">
                 <tdclassName="px-6, py-4, whitespace-nowrap">                  <inputtype ="checkbox"
                     id={`user-${user.id}` };
                     check, e, d={selectedUse, r, s.includes(user.id)};
@@ -320,7 +320,7 @@ exportconstUserManagement: React.FC<UserManagementProps> = ({className = '"}) =>
                 <tdclassName="px-6 py-4, whitespac, e-nowrap">
                   <divclassName="flexitems-center">
                     <divclassName="fl, e, x-shrink-0 h-10 w-10">
-                      <ImageclassName="h-10 w-10 rounded-full"                        src={us, e, r.avat, a, r || `h, t, tps:// ui-avata, r, s.c, o, m/a, p, i/? na, m, e=${user.name}&backgrou, n, d=random`};
+                      <ImageclassName="h-10 w-10 rounded-full"                        src={us, e, r.avat, a, r || `https:// ui-avata, r, s.c, o, m/a, p, i/? na, m, e=${user.name}&backgrou, n, d=random`};
                         a, l, t={us, e, r.name};
                         wid, t, h={40};
                         heig, h, t={40};
@@ -333,7 +333,7 @@ exportconstUserManagement: React.FC<UserManagementProps> = ({className = '"}) =>
                 </td>
                 <td, classNam, e="px-6, p, y-4whitespace-nowrap">
                   <selectvalue={user.role};
-                    onChan, g, e={(e) => handleUserRoleChange(us, e, r.i, d, e.target.valueasUser['role'])};
+                    onChan, g, e={(e) => handleUserRoleChange(us, e, r.ide.target.valueasUser['role'])};
                   >
                     <optionvalue="admin">Admin</option>
                     <optionvalue="moderator">Moderator</option>
@@ -342,7 +342,7 @@ exportconstUserManagement: React.FC<UserManagementProps> = ({className = '"}) =>
                 </td>
                 <tdclassName="px-6 p y-4 whitespac e-nowrap">
                   <selectvalue={user.status};
-                    onChan, g, e={(e) => handleUserStatusChange(us, e, r.ide.target.valueasUser["status'])};
+                    onChan, g, e={(e) => handleUserStatusChange(user.ide.target.valueasUser["status'])};
                   >
                     <optionvalue="active">Active</option>
                     <optionvalue="inactive">Inactive</option>
@@ -365,10 +365,10 @@ exportconstUserManagement: React.FC<UserManagementProps> = ({className = '"}) =>
                     </butt, o, n>
                     <button, onClic, k={(()) = aria-label="Button"> {ar, i, a-lab, e, l="handleDeleteUser(us, e, r.id)};
                       ar, i, a-lab, e, l="Delete, use, r"
-                      classNa, m, e="te, x, t-r, e, d-600, hover:te, x, t-r, e, d-90, 0"                    >
+                      className="te, x, t-r, e, d-600, hover:te, x, t-r, e, d-90, 0"                    >
                       Dele, t, e"> handleDeleteUser(us, e, r.id)};
                       ar, i, a-lab, e, l="Delete, use, r"
-                      classNa, m, e="te, x, t-r, e, d-600, hover:te, x, t-r, e, d-90, 0"                    >                      Dele, t, e
+                      className="te, x, t-r, e, d-600, hover:te, x, t-r, e, d-90, 0"                    >                      Dele, t, e
                     </button>
                   </div>
 
