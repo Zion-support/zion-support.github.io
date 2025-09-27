@@ -5,7 +5,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 		return res.status(405).json({ error: "Method not allowed" });
 	}
 
-	const { url, w, h, q, f, blur } = req.query;
+	const { url } = req.query;
 
 	if (!url || typeof url !== 'string') {
 		return res.status(400).json({ error: "URL parameter is required" });

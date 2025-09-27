@@ -1,17 +1,12 @@
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { usePageView, useAnalytics } from "../src/hooks/useAnalytics";
 
 export default function FAQ(): JSX.Element {
-	const [isVisible, setIsVisible] = useState(false);
 	const [openItems, setOpenItems] = useState<Set<number>>(new Set());
 	const [searchTerm, setSearchTerm] = useState("");
-
-	useEffect(() => {
-		setIsVisible(true);
-	}, []);
 
 	// Analytics tracking
 	usePageView("faq");

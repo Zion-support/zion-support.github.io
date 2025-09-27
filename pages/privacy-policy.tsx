@@ -1,16 +1,9 @@
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
-import { useState, useEffect } from "react";
 import { usePageView, useAnalytics } from "../src/hooks/useAnalytics";
 
 export default function PrivacyPolicy(): JSX.Element {
-	const [isVisible, setIsVisible] = useState(false);
-
-	useEffect(() => {
-		setIsVisible(true);
-	}, []);
-
 	// Analytics tracking
 	usePageView("privacy-policy");
 	const { trackClick } = useAnalytics();

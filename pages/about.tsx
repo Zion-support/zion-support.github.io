@@ -1,17 +1,10 @@
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
-import { useState, useEffect } from "react";
 import SEO from "../src/components/SEO";
 import { useAnalytics } from "../src/hooks/useAnalytics";
 
 const About = React.memo(function About(): JSX.Element {
-	const [isVisible, setIsVisible] = useState(false);
-
-	useEffect(() => {
-		setIsVisible(true);
-	}, []);
-
 	// Analytics tracking
 	const { trackClick } = useAnalytics();
 
@@ -132,7 +125,7 @@ const About = React.memo(function About(): JSX.Element {
 					{/* CTA Section */}
 					<section className="text-center bg-blue-600 rounded-lg p-8 text-white">
 						<h2 className="text-3xl font-bold mb-4">Ready to Work With Us?</h2>
-						<p className="text-xl mb-6">Let's discuss how we can help transform your business with cutting-edge technology.</p>
+						<p className="text-xl mb-6">Let&apos;s discuss how we can help transform your business with cutting-edge technology.</p>
 						<Link href="/contact" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
 							Get Started Today
 						</Link>

@@ -1,21 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import SEO from '../src/components/SEO';
 import { useAnalytics } from '../src/hooks/useAnalytics';
 
 export default function Contact(): JSX.Element {
-  const [isVisible, setIsVisible] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     company: '',
     message: ''
   });
-
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
 
   const { trackClick } = useAnalytics();
 
@@ -54,7 +49,7 @@ export default function Contact(): JSX.Element {
               Contact Us
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Ready to transform your business with cutting-edge technology? Let's talk about your project.
+              Ready to transform your business with cutting-edge technology? Let&apos;s talk about your project.
             </p>
           </div>
 
@@ -62,7 +57,7 @@ export default function Contact(): JSX.Element {
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Get in Touch</h2>
               <p className="text-gray-600 mb-8">
-                We're here to help you succeed. Whether you need consultation, development, or support, 
+                We&apos;re here to help you succeed. Whether you need consultation, development, or support, 
                 our team is ready to assist you with your technology needs.
               </p>
 

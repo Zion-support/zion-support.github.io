@@ -11,10 +11,6 @@ const Dashboard = React.memo(function Dashboard(): JSX.Element {
 	// Analytics tracking
 	const { trackClick } = useAnalytics();
 
-	const handleTabChange = (tab: string) => {
-		setActiveTab(tab);
-		trackClick(`dashboard-tab-${tab}`, "navigation");
-	};
 
 	const renderDashboard = () => {
 		switch (activeTab) {

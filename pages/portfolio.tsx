@@ -62,7 +62,7 @@ export default function Portfolio(): JSX.Element {
 							Our Portfolio
 						</h1>
 						<p className="text-xl text-gray-600 max-w-3xl mx-auto">
-							Discover the innovative projects and solutions we've delivered for our clients across various industries.
+							Discover the innovative projects and solutions we&apos;ve delivered for our clients across various industries.
 						</p>
 					</section>
 

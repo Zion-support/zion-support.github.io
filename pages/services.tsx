@@ -1,16 +1,11 @@
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { usePageView, useAnalytics } from "../src/hooks/useAnalytics";
 
 export default function Services(): JSX.Element {
-	const [isVisible, setIsVisible] = useState(false);
 	const [selectedService, setSelectedService] = useState<string | null>(null);
-
-	useEffect(() => {
-		setIsVisible(true);
-	}, []);
 
 	// Analytics tracking
 	usePageView("services");
@@ -111,7 +106,7 @@ export default function Services(): JSX.Element {
 					{/* CTA Section */}
 					<section className="mt-16 text-center bg-blue-600 rounded-lg p-8 text-white">
 						<h2 className="text-3xl font-bold mb-4">Ready to Get Started?</h2>
-						<p className="text-xl mb-6">Let's discuss how our services can help transform your business.</p>
+						<p className="text-xl mb-6">Let&apos;s discuss how our services can help transform your business.</p>
 						<Link href="/contact" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
 							Contact Us Today
 						</Link>

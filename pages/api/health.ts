@@ -9,7 +9,7 @@ interface HealthResponse {
 
 export default function handler(req: NextApiRequest, res: NextApiResponse<HealthResponse>) {
 	if (req.method !== 'GET') {
-		return res.status(405).json({ error: 'Method not allowed' } as any);
+		return res.status(405).json({ error: 'Method not allowed' });
 	}
 
 	const healthResponse: HealthResponse = {

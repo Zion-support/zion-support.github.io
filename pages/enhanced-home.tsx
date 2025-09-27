@@ -1,28 +1,11 @@
 import React from "react";
 import Head from "next/head";
-import { useState, useEffect } from "react";
 import SEO from "../src/components/SEO";
 import { useAnalytics } from "../src/hooks/useAnalytics";
 
 export default function Home(): JSX.Element {
-	const [isVisible, setIsVisible] = useState(false);
-
-	useEffect(() => {
-		setIsVisible(true);
-	}, []);
-
 	// Analytics tracking
 	const { trackClick } = useAnalytics();
-
-	const handleSelectPlan = (tierId: string) => {
-		trackClick(`select-plan-${tierId}`, 'conversion');
-		console.log("Selected plan:", tierId);
-	};
-
-	const handleReadMore = (slug: string) => {
-		trackClick(`read-blog-${slug}`, 'engagement');
-		console.log("Read more:", slug);
-	};
 
 	const features = [
 		{
