@@ -1,9 +1,10 @@
 /**
- * Advanced Caching System for Zion Tech Group Website
+ * Advanced Cache Manager
+ * Provides intelligent caching with multiple strategies and automatic cleanup
  */
 
-interface CacheItem<T> {
-  data: T;
+interface CacheItem<T = any> {
+  value: T;
   timestamp: number;
   expiresAt: number;
   accessCount: number;
@@ -11,351 +12,296 @@ interface CacheItem<T> {
   size: number;
 }
 
-interface CacheOptions {
-  ttl?: number; // Time to live in milliseconds
-  maxSize?: number; // Maximum cache size in bytes
-  maxItems?: number; // Maximum number of items
-  strategy?: 'lru' | 'lfu' | 'fifo'; // Eviction strategy
+interface CacheConfig {
+  maxSize: number;
+  maxAge: number;
+  cleanupInterval: number;
+  strategy: 'lru' | 'lfu' | 'fifo';
 }
 
-class AdvancedCache<T = unknown> {
-  private cache = new Map<string, CacheItem<T>>();
-  private options: Required<CacheOptions>;
-  private currentSize = 0;
+type CacheKey = string;
 
-  constructor(options: CacheOptions = {}) {
-    this.options = {
-      ttl: options.ttl || 5 * 60 * 1000, // 5 minutes default
-      maxSize: options.maxSize || 10 * 1024 * 1024, // 10MB default
-      maxItems: options.maxItems || 1000, // 1000 items default
-      strategy: options.strategy || 'lru'
+class AdvancedCacheManager {
+  private static instance: AdvancedCacheManager;
+  private cache = new Map<CacheKey, CacheItem>();
+  private config: CacheConfig;
+  private cleanupTimer: NodeJS.Timeout | null = null;
+  private totalSize = 0;
+
+  private constructor() {
+    this.config = {
+      maxSize: 50 * 1024 * 1024, // 50MB
+      maxAge: 24 * 60 * 60 * 1000, // 24 hours
+      cleanupInterval: 60 * 60 * 1000, // 1 hour
+      strategy: 'lru',
     };
+
+    this.startCleanupTimer();
+    console.log('🗄️ Advanced Cache Manager initialized');
   }
 
-  set(key: string, data: T, customTtl?: number): boolean {
-    try {
-      const ttl = customTtl || this.options.ttl;
-      const now = Date.now();
-      const expiresAt = now + ttl;
-      
-      // Calculate size
-      const size = this.calculateSize(data);
-      
-      // Check if we need to evict items
-      this.evictIfNeeded(size);
-      
-      // Remove existing item if it exists
-      this.remove(key);
-      
-      // Add new item
-      const item: CacheItem<T> = {
-        data,
-        timestamp: now,
-        expiresAt,
-        accessCount: 0,
-        lastAccessed: now,
-        size
-      };
-      
-      this.cache.set(key, item);
-      this.currentSize += size;
-      
-      return true;
-    } catch (error) {
-      console.error('Cache set error:', error);
-      return false;
+  public static getInstance(): AdvancedCacheManager {
+    if (!AdvancedCacheManager.instance) {
+      AdvancedCacheManager.instance = new AdvancedCacheManager();
     }
+    return AdvancedCacheManager.instance;
   }
 
-  get(key: string): T | null {
+  public set<T>(key: CacheKey, value: T, ttl?: number): void {
+    const now = Date.now();
+    const expiresAt = ttl ? now + ttl : now + this.config.maxAge;
+    const size = this.calculateSize(value);
+
+    const item: CacheItem<T> = {
+      value,
+      timestamp: now,
+      expiresAt,
+      accessCount: 0,
+      lastAccessed: now,
+      size,
+    };
+
+    // Remove existing item if it exists
+    if (this.cache.has(key)) {
+      this.totalSize -= this.cache.get(key)!.size;
+    }
+
+    // Check if we need to evict items
+    while (this.totalSize + size > this.config.maxSize && this.cache.size > 0) {
+      this.evictItem();
+    }
+
+    this.cache.set(key, item);
+    this.totalSize += size;
+
+    console.log(`🗄️ Cached item: ${key} (${size} bytes)`);
+  }
+
+  public get<T>(key: CacheKey): T | null {
     const item = this.cache.get(key);
-    
+
     if (!item) {
       return null;
     }
-    
+
+    const now = Date.now();
+
     // Check if expired
-    if (Date.now() > item.expiresAt) {
-      this.remove(key);
+    if (now > item.expiresAt) {
+      this.delete(key);
       return null;
     }
-    
+
     // Update access statistics
     item.accessCount++;
-    item.lastAccessed = Date.now();
-    
-    return item.data;
+    item.lastAccessed = now;
+
+    console.log(`🗄️ Cache hit: ${key}`);
+    return item.value;
   }
 
-  has(key: string): boolean {
+  public has(key: CacheKey): boolean {
     const item = this.cache.get(key);
-    return item ? Date.now() <= item.expiresAt : false;
-  }
+    if (!item) return false;
 
-  remove(key: string): boolean {
-    const item = this.cache.get(key);
-    if (item) {
-      this.currentSize -= item.size;
-      return this.cache.delete(key);
+    // Check if expired
+    if (Date.now() > item.expiresAt) {
+      this.delete(key);
+      return false;
     }
-    return false;
+
+    return true;
   }
 
-  clear(): void {
+  public delete(key: CacheKey): boolean {
+    const item = this.cache.get(key);
+    if (!item) return false;
+
+    this.totalSize -= item.size;
+    this.cache.delete(key);
+
+    console.log(`🗄️ Deleted cache item: ${key}`);
+    return true;
+  }
+
+  public clear(): void {
     this.cache.clear();
-    this.currentSize = 0;
+    this.totalSize = 0;
+    console.log('🗄️ Cache cleared');
   }
 
-  size(): number {
-    return this.cache.size;
-  }
-
-  memoryUsage(): number {
-    return this.currentSize;
-  }
-
-  getStats(): {
-    size: number;
-    memoryUsage: number;
-    hitRate: number;
-    items: Array<{
-      key: string;
-      age: number;
-      accessCount: number;
-      size: number;
-    }>;
-  } {
+  public getStats() {
     const now = Date.now();
-    const items = Array.from(this.cache.entries()).map(([key, item]) => ({
-      key,
-      age: now - item.timestamp,
-      accessCount: item.accessCount,
-      size: item.size
-    }));
-
-    const totalAccesses = items.reduce((sum, item) => sum + item.accessCount, 0);
-    const hitRate = totalAccesses > 0 ? items.length / totalAccesses : 0;
-
+    const items = Array.from(this.cache.values());
+    
     return {
       size: this.cache.size,
-      memoryUsage: this.currentSize,
-      hitRate,
-      items
+      totalSize: this.totalSize,
+      maxSize: this.config.maxSize,
+      hitRate: this.calculateHitRate(),
+      expiredItems: items.filter(item => now > item.expiresAt).length,
+      oldestItem: Math.min(...items.map(item => item.timestamp)),
+      newestItem: Math.max(...items.map(item => item.timestamp)),
     };
   }
 
-  private calculateSize(data: T): number {
-    try {
-      return new Blob([JSON.stringify(data)]).size;
-    } catch {
-      return 1024; // Default size if calculation fails
+  public configure(config: Partial<CacheConfig>): void {
+    this.config = { ...this.config, ...config };
+    
+    if (this.cleanupTimer) {
+      clearInterval(this.cleanupTimer);
     }
+    
+    this.startCleanupTimer();
+    console.log('🗄️ Cache configuration updated:', this.config);
   }
 
-  private evictIfNeeded(newItemSize: number): void {
-    // Check if we need to evict based on size
-    if (this.currentSize + newItemSize > this.options.maxSize) {
-      this.evictBySize(newItemSize);
-    }
-    
-    // Check if we need to evict based on item count
-    if (this.cache.size >= this.options.maxItems) {
-      this.evictByCount();
-    }
-  }
+  private evictItem(): void {
+    let keyToEvict: CacheKey | null = null;
 
-  private evictBySize(newItemSize: number): void {
-    const targetSize = this.options.maxSize - newItemSize;
-    const itemsToEvict: string[] = [];
-    
-    // Sort items by eviction strategy
-    const sortedItems = this.getSortedItemsForEviction();
-    
-    let currentSize = this.currentSize;
-    for (const [key, item] of sortedItems) {
-      if (currentSize <= targetSize) break;
-      
-      itemsToEvict.push(key);
-      currentSize -= item.size;
-    }
-    
-    // Remove evicted items
-    itemsToEvict.forEach(key => this.remove(key));
-  }
-
-  private evictByCount(): void {
-    const itemsToRemove = this.cache.size - this.options.maxItems + 1;
-    const sortedItems = this.getSortedItemsForEviction();
-    
-    for (let i = 0; i < itemsToRemove && i < sortedItems.length; i++) {
-      this.remove(sortedItems[i][0]);
-    }
-  }
-
-  private getSortedItemsForEviction(): Array<[string, CacheItem<T>]> {
-    const items = Array.from(this.cache.entries());
-    
-    switch (this.options.strategy) {
+    switch (this.config.strategy) {
       case 'lru':
-        return items.sort((a, b) => a[1].lastAccessed - b[1].lastAccessed);
+        keyToEvict = this.findLRUItem();
+        break;
       case 'lfu':
-        return items.sort((a, b) => a[1].accessCount - b[1].accessCount);
+        keyToEvict = this.findLFUItem();
+        break;
       case 'fifo':
-        return items.sort((a, b) => a[1].timestamp - b[1].timestamp);
-      default:
-        return items;
+        keyToEvict = this.findFIFOItem();
+        break;
+    }
+
+    if (keyToEvict) {
+      this.delete(keyToEvict);
     }
   }
 
-  // Clean up expired items
-  cleanup(): number {
+  private findLRUItem(): CacheKey | null {
+    let oldestKey: CacheKey | null = null;
+    let oldestTime = Date.now();
+
+    for (const [key, item] of this.cache.entries()) {
+      if (item.lastAccessed < oldestTime) {
+        oldestTime = item.lastAccessed;
+        oldestKey = key;
+      }
+    }
+
+    return oldestKey;
+  }
+
+  private findLFUItem(): CacheKey | null {
+    let leastFrequentKey: CacheKey | null = null;
+    let leastFrequent = Infinity;
+
+    for (const [key, item] of this.cache.entries()) {
+      if (item.accessCount < leastFrequent) {
+        leastFrequent = item.accessCount;
+        leastFrequentKey = key;
+      }
+    }
+
+    return leastFrequentKey;
+  }
+
+  private findFIFOItem(): CacheKey | null {
+    let oldestKey: CacheKey | null = null;
+    let oldestTime = Date.now();
+
+    for (const [key, item] of this.cache.entries()) {
+      if (item.timestamp < oldestTime) {
+        oldestTime = item.timestamp;
+        oldestKey = key;
+      }
+    }
+
+    return oldestKey;
+  }
+
+  private calculateSize(value: any): number {
+    try {
+      return new Blob([JSON.stringify(value)]).size;
+    } catch {
+      return 0;
+    }
+  }
+
+  private calculateHitRate(): number {
+    const items = Array.from(this.cache.values());
+    const totalAccesses = items.reduce((sum, item) => sum + item.accessCount, 0);
+    return totalAccesses > 0 ? items.length / totalAccesses : 0;
+  }
+
+  private startCleanupTimer(): void {
+    this.cleanupTimer = setInterval(() => {
+      this.cleanup();
+    }, this.config.cleanupInterval);
+  }
+
+  private cleanup(): void {
     const now = Date.now();
-    let cleanedCount = 0;
-    
+    const expiredKeys: CacheKey[] = [];
+
     for (const [key, item] of this.cache.entries()) {
       if (now > item.expiresAt) {
-        this.remove(key);
-        cleanedCount++;
+        expiredKeys.push(key);
       }
     }
-    
-    return cleanedCount;
-  }
 
-  // Export cache data for persistence
-  export(): string {
-    const data = Array.from(this.cache.entries()).map(([key, item]) => [
-      key,
-      {
-        ...item,
-        data: JSON.stringify(item.data)
-      }
-    ]);
-    
-    return JSON.stringify(data);
-  }
+    expiredKeys.forEach(key => this.delete(key));
 
-  // Import cache data from persistence
-  import(data: string): boolean {
-    try {
-      const parsed = JSON.parse(data);
-      this.clear();
-      
-      for (const [key, item] of parsed) {
-        const cacheItem: CacheItem<T> = {
-          ...item,
-          data: JSON.parse(item.data)
-        };
-        
-        this.cache.set(key, cacheItem);
-        this.currentSize += cacheItem.size;
-      }
-      
-      return true;
-    } catch (error) {
-      console.error('Cache import error:', error);
-      return false;
+    if (expiredKeys.length > 0) {
+      console.log(`🗄️ Cleaned up ${expiredKeys.length} expired cache items`);
     }
+  }
+
+  // Memory-based caching
+  public memoize<T extends (...args: any[]) => any>(
+    fn: T,
+    keyGenerator?: (...args: Parameters<T>) => string
+  ): T {
+    return ((...args: Parameters<T>): ReturnType<T> => {
+      const key = keyGenerator ? keyGenerator(...args) : JSON.stringify(args);
+      
+      const cached = this.get<ReturnType<T>>(key);
+      if (cached !== null) {
+        return cached;
+      }
+
+      const result = fn(...args);
+      this.set(key, result);
+      return result;
+    }) as T;
+  }
+
+  // Async function caching
+  public async memoizeAsync<T extends (...args: any[]) => Promise<any>>(
+    fn: T,
+    ttl?: number,
+    keyGenerator?: (...args: Parameters<T>) => string
+  ): Promise<T> {
+    return (async (...args: Parameters<T>): Promise<Awaited<ReturnType<T>>> => {
+      const key = keyGenerator ? keyGenerator(...args) : JSON.stringify(args);
+      
+      const cached = this.get<Awaited<ReturnType<T>>>(key);
+      if (cached !== null) {
+        return cached;
+      }
+
+      const result = await fn(...args);
+      this.set(key, result, ttl);
+      return result;
+    }) as T;
+  }
+
+  public destroy(): void {
+    if (this.cleanupTimer) {
+      clearInterval(this.cleanupTimer);
+      this.cleanupTimer = null;
+    }
+    this.clear();
+    console.log('🗄️ Cache manager destroyed');
   }
 }
 
-// Specialized cache instances
-export const apiCache = new AdvancedCache({
-  ttl: 5 * 60 * 1000, // 5 minutes
-  maxSize: 5 * 1024 * 1024, // 5MB
-  maxItems: 500,
-  strategy: 'lru'
-});
-
-export const imageCache = new AdvancedCache({
-  ttl: 30 * 60 * 1000, // 30 minutes
-  maxSize: 50 * 1024 * 1024, // 50MB
-  maxItems: 100,
-  strategy: 'lru'
-});
-
-export const userDataCache = new AdvancedCache({
-  ttl: 15 * 60 * 1000, // 15 minutes
-  maxSize: 2 * 1024 * 1024, // 2MB
-  maxItems: 50,
-  strategy: 'lfu'
-});
-
-// Cache utilities
-export const cacheUtils = {
-  // Preload data into cache
-  preload: async <T>(
-    key: string,
-    fetcher: () => Promise<T>,
-    cache: AdvancedCache<T>,
-    ttl?: number
-  ): Promise<T> => {
-    const cached = cache.get(key);
-    if (cached) return cached;
-    
-    const data = await fetcher();
-    cache.set(key, data, ttl);
-    return data;
-  },
-
-  // Cache with fallback
-  getOrSet: async <T>(
-    key: string,
-    fetcher: () => Promise<T>,
-    cache: AdvancedCache<T>,
-    ttl?: number
-  ): Promise<T> => {
-    const cached = cache.get(key);
-    if (cached) return cached;
-    
-    try {
-      const data = await fetcher();
-      cache.set(key, data, ttl);
-      return data;
-    } catch (error) {
-      // Return cached data even if expired in case of network error
-      const expiredCached = cache.get(key);
-      if (expiredCached) return expiredCached;
-      throw error;
-    }
-  },
-
-  // Batch cache operations
-  batchGet: <T>(keys: string[], cache: AdvancedCache<T>): Record<string, T | null> => {
-    const result: Record<string, T | null> = {};
-    keys.forEach(key => {
-      result[key] = cache.get(key);
-    });
-    return result;
-  },
-
-  // Cache warming
-  warmCache: async <T>(
-    keys: string[],
-    fetcher: (key: string) => Promise<T>,
-    cache: AdvancedCache<T>,
-    ttl?: number
-  ): Promise<void> => {
-    const promises = keys.map(async (key) => {
-      if (!cache.has(key)) {
-        try {
-          const data = await fetcher(key);
-          cache.set(key, data, ttl);
-        } catch (error) {
-          console.warn(`Failed to warm cache for key ${key}:`, error);
-        }
-      }
-    });
-    
-    await Promise.allSettled(promises);
-  }
-};
-
-// Auto-cleanup interval
-setInterval(() => {
-  apiCache.cleanup();
-  imageCache.cleanup();
-  userDataCache.cleanup();
-}, 60000); // Clean up every minute
-
-export default AdvancedCache;
+export default AdvancedCacheManager;

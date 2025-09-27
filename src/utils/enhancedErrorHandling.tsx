@@ -109,7 +109,7 @@ export class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBo
     }
   };
 
-  private storeErrorLocally = (errorReport: any) => {
+  private storeErrorLocally = (errorReport: Record<string, unknown>) => {
     try {
       const errors = JSON.parse(localStorage.getItem('errorReports') || '[]');
       errors.push(errorReport);
@@ -163,18 +163,19 @@ export class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBo
     return sessionStorage.getItem('sessionId') || 'unknown';
   };
 
-  private getMemoryUsage = (): any => {
+  private getMemoryUsage = (): { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } | null => {
     if ('memory' in performance) {
+      const memory = (performance as Performance & { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
       return {
-        usedJSHeapSize: (performance as any).memory.usedJSHeapSize,
-        totalJSHeapSize: (performance as any).memory.totalJSHeapSize,
-        jsHeapSizeLimit: (performance as any).memory.jsHeapSizeLimit
+        usedJSHeapSize: memory.usedJSHeapSize,
+        totalJSHeapSize: memory.totalJSHeapSize,
+        jsHeapSizeLimit: memory.jsHeapSizeLimit
       };
     }
     return null;
   };
 
-  private getPerformanceMetrics = (): any => {
+  private getPerformanceMetrics = (): Record<string, number> => {
     const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
     return {
       loadTime: navigation?.loadEventEnd - navigation?.loadEventStart,

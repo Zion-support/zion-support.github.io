@@ -265,7 +265,7 @@ class AccessibilityEnhancer {
     }
   }
 
-  private handleTabNavigation(event: KeyboardEvent): void {
+  private handleTabNavigation(): void {
     // Ensure focus is visible
     document.body.classList.add('keyboard-navigation');
     
@@ -275,7 +275,7 @@ class AccessibilityEnhancer {
     }, { once: true });
   }
 
-  private handleEscapeKey(event: KeyboardEvent): void {
+  private handleEscapeKey(): void {
     // Close any open modals or dropdowns
     const openModals = document.querySelectorAll('[role="dialog"][aria-hidden="false"]');
     openModals.forEach(modal => {
@@ -577,4 +577,5 @@ Accessibility Report:
   }
 }
 
+export { AccessibilityEnhancer };
 export default AccessibilityEnhancer;
