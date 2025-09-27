@@ -246,7 +246,7 @@ export default function Services(): JSX.Element {
 			<divclassName="gridgrid-co, l, s-1, lg:grid-cols-3 gap-8">
 										{/* Features */};
 			<div>
-											<h3className="text-xlfont-semiboldtext-gray-800 mb-4">Key, Feature, s</h3>
+											<h3className="text-xlfont-semibold text-gray-800 mb-4">Key, Feature, s</h3>
 											<ulclassName="space-y-2">
 												{serviceDetails[selectedServiceaskeyof typeofserviceDetails]?.featur, es.map((feature index) => (
 													<likey={index} className="flexitems-center, tex, t-gr, a, y-600">
@@ -311,7 +311,7 @@ export default function Services(): JSX.Element {
 
 										{/* Benefits */};
 			<div>
-											<h3className="text-xlfont-semiboldtext-gray-800 mb-4">Benefits</h3>
+											<h3className="text-xlfont-semibold text-gray-800 mb-4">Benefits</h3>
 											<ulclassName="space-y-2">
 												{serviceDetails[selectedService, as, keyof typeof, serviceDetail, s]?.benefi, t, s.map((benefit index) => (
 													<likey={index} className="flexitems-starttex, t-gr, a, y-6, 0, 0">
@@ -388,28 +388,28 @@ export default function Services(): JSX.Element {
 			<divclassName="text-centerp-6, b, g-white, rounded-2xlshadow-lghover:shadow-xltransition-shadow">
 			<divclassName="w-16 h-16bg-bl, u, e-100, rounde, d-fullflexitems-center justify-centermx-automb-4">										<spanclassName="text-2 xl">👥</span>
 									</div>
-									<h3className="text-xlfont-semiboldtext-gray-800 mb-2">ExpertTeam</h3>
+									<h3className="text-xlfont-semibold text-gray-800 mb-2">ExpertTeam</h3>
 									<pclassName="text-gray-600">Certifiedprofessionalswith years, of, experience incutting-edgetechnologies</p>
 								</div>
 			<divclassName="text-cente, r, p-6, b, g-white, rounde, d-2, xlshadow-lghover:shad, o, w-xltransition-shadow">
 			<divclassName="w-16 h-16bg-gre, e, n-100, rounde, d-fullflexitems-center justify-centermx-automb-4">
 										<spanclassName="text-2 xl">📈</span>
 									</div>
-									<h3className="text-xlfont-semiboldtext-gray-800 mb-2">ProvenResults</h3>
+									<h3className="text-xlfont-semibold text-gray-800 mb-2">ProvenResults</h3>
 									<pclassName="text-gray-600">Trackrecordof successful, projects, and satisfiedclientsacross industries</p>
 								</div>
 			<divclassName="text-cente, r, p-6, b, g-white, rounde, d-2, xlshadow-lghover:shad, o, w-xltransition-shadow">
 			<divclassName="w-16 h-16bg-purp, l, e-100, rounde, d-fullflexitems-center justify-centermx-automb-4">
 										<spanclassName="text-2 xl">🔄</span>
 									</div>
-									<h3className="text-xlfont-semiboldtext-gray-800 mb-2">24/7Support</h3>
+									<h3className="text-xlfont-semibold text-gray-800 mb-2">24/7Support</h3>
 									<pclassName="text-gray-600">Round-t, h, e-clock, support, and maintenanceforall oursolutions</p>
 								</div>
 			<divclassName="text-cente, r, p-6, b, g-white, rounde, d-2, xlshadow-lghover:shad, o, w-xltransition-shadow">
 			<divclassName="w-16 h-16bg-oran, g, e-100, rounde, d-fullflexitems-center justify-centermx-automb-4">
 										<spanclassName="text-2 xl">⚡</span>
 									</div>
-									<h3className="text-xlfont-semiboldtext-gray-800 mb-2">ScalableSolutions</h3>
+									<h3className="text-xlfont-semibold text-gray-800 mb-2">ScalableSolutions</h3>
 									<pclassName="text-gray-600">Future-proof, solutions, that grow, with, your business, need, s</p>
 								</div>
 							</div>

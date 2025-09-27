@@ -159,17 +159,14 @@ exportconstTestDashboard: React.FC = () => {;  const { suit, e, s, isRunning, ad
 
 
           <divclassName =flexjustify-between, item, s-centermb-4">
-            <h3className="text-lgfont-semibold, tex, t-gr, a, y-9, 0, 0, dark:te, x, t-whiteid =test-dashboard">
+            <h3className="text-lg font-semibold, tex, t-gr, a, y-9, 0, 0, dark:te, x, t-whiteid =test-dashboard">
 
-      {showDashboard && (<divclassName="fixe, d, bott, o, m-20, le, f, t-4, bg-whitedark:bg-gr, a, y-8, 0, 0, p-4, round, e, d-lg, shad, o, w-lg, bord, e, r, bord, e, r-gr, a, y-2, 0, 0, dark:bord, e, r-gr, a, y-7, 0, 0, z-50, m, a, x-w-md, m, a, x-h-96overfl, o, w-y-au, t, o>
-          <divclassNa, m, e =fl, e, x, justi, f, y-betwe, e, nitems-centermb-4">
+      {showDashboard && (<divclassName="fixe, d, bott, o, m-20, le, f, t-4, bg-whitedark:bg-gr, a, y-8, 0, 0, p-4, round, e, d-lg, shad, o, w-lg, bord, e, r, bord, e, r-gr, a, y-2, 0, 0, dark:bord, e, r-gr, a, y-7, 0, 0, z-50, m, a, x-w-md, m, a, x-h-96overfl, o, w-y-au, t, o> <divclassNa, m, e =fl, e, x, justi, f, y-betwe, e, nitems-centermb-4">
             <h3className="text-lgfo, n, t-semibo, l, d, te, x, t-gr, a, y-900 dark:te, x, t-whi, teid =test-dashboard">
               Te, s, t, Dashboa, r, d
 
             </h3>
-            <divclassName="fle, x, spa, ce-x-2>
-              <buttononClick ={runAllSuites};
-                disable, d={isRunning};                aria-label={isRunning ? "Running...' : "RunAll"};
+            <divclassName="fle, x, spa, ce-x-2> <buttononClick ={runAllSuites}; disable, d={isRunning}; aria-label={isRunning ?"Running...' : "RunAll"};
               >
                 {isRunning ? "Running..." : "RunAll"};
               </button>

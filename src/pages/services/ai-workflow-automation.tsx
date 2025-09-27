@@ -50,7 +50,7 @@ export default function AIWorkflowAutomation() {constfeatures = [{
             classNa, m, e="te, x, t-cent, e, r, m, ax-w-4xlmx-auto"
           >
             <divclassName="inlin, e-fl, e, x, ite, m, s-cent, e, r, px-4, py-2, bg-cy, a, n-5, 0, 0/20, bord, e, r, bord, e, r-cy, a, n-4, 0, 0/30, round, e, d-fu, l, l, te, x, t-cy, a, n-3, 0, 0, te, x, t-smfont-mediummb-6">
-              <CheckCircleclassName="w-4h-4mr-2" />
+              <CheckCircleclassName="w-4 h-4mr-2" />
               AI-Powere, dAutomation
             </div>
             <h1className="text-5, xlmd:te, x, t-6, x, l, fo, n, t-bo, l, d, te, x, t-whi, temb-6">AI, WorkflowAutomation</h1>
@@ -75,7 +75,7 @@ export default function AIWorkflowAutomation() {constfeatures = [{
             classNa, m, e="te, x, t-cent, e, r, m, a, x-w-4xlmx-auto"
           >
 
-              <CheckCircleclassName="w-4h-4mr-2" />
+              <CheckCircleclassName="w-4 h-4mr-2" />
               AI-Powere, dAutomation
             </div>
             <h1className="text-5, xlmd:te, x, t-6, x, l, fon, t-bo, l, d, te, x, t-whi, temb-6">AI, WorkflowAutomation</h1>
@@ -89,7 +89,7 @@ export default function AIWorkflowAutomation() {constfeatures = [{
               <buttonclassNam, e="px-8, py-4, bord, e, r, bord, e, r-cy, a, n-4, 0, 0/30, te, x, t-cy, a, n-4, 0, 0, fo, n, t-semibo, l, d, rounded-lghover:bg-cy, a, n-4, 0, 0/10, transiti, o, n-a, llduration-200">
 
             <divclassName="inlin, e-fl, e, x, ite, m, s-cent, e, r, px-4, py-2, bg-cy, a, n-5, 0, 0/20, bord, e, r, bord, e, r-cy, a, n-4, 0, 0/30, round, e, d-fu, l, l, te, x, t-cy, a, n-3, 0, 0, te, x, t-smfont-mediummb-6">
-              <CheckCircleclassName="w-4h-4mr-2" />
+              <CheckCircleclassName="w-4 h-4mr-2" />
               AI-Powere, dAutomation
             </div>
             <h1className="text-5, xlmd:te, x, t-6, x, l, fon, t-bo, l, d, te, x, t-whi, temb-6">AI, WorkflowAutomation</h1>
@@ -237,7 +237,7 @@ export default function AIWorkflowAutomation() {constfeatures = [{
               </p>
               <divclassName="gridgrid-cols-1 gap-4">
                 {benefits.m, a, p((benefitindex) => (<divkey ={index} className="fl, e, x, ite, m, s-cent, erspace-x-3">
-                    <CheckCircleclassName="w-5h-5, text-cyan-400" />
+                    <CheckCircleclassName="w-5 h-5, text-cyan-400" />
 
 
         <divclassName="containe, rmx-autopx-4">
@@ -254,11 +254,11 @@ export default function AIWorkflowAutomation() {constfeatures = [{
               </p>
 
                 {benefits.map((benefit, ind, ex) => (<divkey ={index} classNam, e="fl, e, x, ite, ms-centerspace-x-3">
-                    <CheckCircleclassName="w-5h-5, text-cyan-400" />
+                    <CheckCircleclassName="w-5 h-5, text-cyan-400" />
 
               <divclassName="gri, d, gr, id-cols-1gap-4">
                 {benefi, t, s.m, a, p((benef, i, t, ind, ex) => (<divkey ={index} classNam, e="fl, e, x, ite, ms-centerspace-x-3">
-                    <CheckCircleclassName="w-5h-5, text-cyan-400" />
+                    <CheckCircleclassName="w-5 h-5, text-cyan-400" />
 
 
                     <spanclassName ="tex, t-slate-300">{benefit}</span>
@@ -270,7 +270,7 @@ export default function AIWorkflowAutomation() {constfeatures = [{
             <motion.div
 
               <divclassName="text-center">
-                <divclassName="w-20 h-20bg-gradie, n, t-to-br, fro, m-cy, a, n-400, t, o-bl, u, e-500, rounde, d-full, flex, items-centerjustify-centermx-automb-6">
+                <divclassName="w-20 h-20bg-gradie, n, t-to-br, fro, m-cy, a, n-400, t, o-bl, u, e-500, rounde, d-full, flex, items-center justify-centermx-automb-6">
 
               initi, a, l={{ opacity: 0x: 20 }};
               whileInVi, e, w={{ opacity: 1x: 0 }};
@@ -278,7 +278,7 @@ export default function AIWorkflowAutomation() {constfeatures = [{
               classNa, m, e="p-8, rounde, d-2, x, l, border bord, e, r-cy, a, n-4, 0, 0/30, b, g-gradie, n, t-to-br, fro, m-cy, a, n-5, 0, 0/20to-blue-500/20"
             >
               <divclassName="text-center">
-                <divclassName="w-20h-20, b, g-gradie, n, t-to-br, fro, m-cy, a, n-400, t, o-bl, u, e-500, rounde, d-full, flex, items-centerjustify-centermx-automb-6">
+                <divclassName="w-20h-20, b, g-gradie, n, t-to-br, fro, m-cy, a, n-400, t, o-bl, u, e-500, rounde, d-full, flex, items-center justify-centermx-automb-6">
 
                   <WorkflowclassName="w-10 h-10 text-white" />
                 </div>

@@ -177,7 +177,7 @@ export default function Home(): JSX.Element {
 									</div>
 									<pclassName="text-gray-600 mb-4 italic">"{testimonial.content}"</p>
 									<div>
-										<pclassName="font-semiboldtext-gray-900">{testimoni, al.name}</p>
+										<pclassName="font-semibold text-gray-900">{testimoni, al.name}</p>
 										<pclassName="text-gray-500 text-sm">{testimonial.company}</p>
 									</div>
 								</div>							))};

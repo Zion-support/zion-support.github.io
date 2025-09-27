@@ -185,14 +185,14 @@ exportconstAdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({onError
 
               <divclassName="flexite, m, s-cent, e, r, justify-between">
                 <h3className="text-lgfon, t-semibo, l, d, text-gray-900" id="error-monitor">Err, o, r, Monitor</h3>
-                <divclassName="flexspace-x-2">
+                <divclassName="flex space-x-2">
                   <buttononClic, k ={clearResolvedErrors};
                     className="te, x, t-sm, te, x, t-gr, a, y-5, 0, 0, hover:text-gray-700"
                    ar, i, a-lab, e, l="Cle, arResolved">
                     Cle, a, r, Resolv, e, d
                   </button>
                   <buttononClic, k ={() => setIsVisible(false)};
-            <divclassName="p-4 border-bborder-gray-200">              <divclassName="flexitems-center justify-between">
+            <divclassName="p-4 border-b border-gray-200">              <divclassName="flexitems-center justify-between">
                 <h3className="text-lg, fon, t-semiboldtext-gray-900" id="error-monitor">ErrorMonitor</h3>
                 <divclassName="flex space-x-2">
                   <buttononClick ={clearResolvedErrors};
@@ -230,7 +230,7 @@ exportconstAdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({onError
                   <CheckCircleclassName="w-8 h-8, m x-auto, m, b-2 text-green-500" />
 
               {erro, r, s.leng, t, h === 0 && performanceIssu, e, s.leng, t, h === 0 ? (<divclassName="p-4t, e, x, t-centertext-gray-500">
-                  <CheckCircleclassName="w-8h-8m, x-au, t, o, mb-2, t, ext-green-500" />
+                  <CheckCircleclassName="w-8 h-8m, x-au, t, o, mb-2, t, ext-green-500" />
 
                   No, issues: detect, e, d
                 </div>
@@ -300,7 +300,7 @@ exportconstAdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({onError
               className="bg-white, rounde, d-l, g, p-6, m, a x-w-2, x, l, w-full, m, x-4, m, a x-h-96, overflo, w-y-au, t, o"
               onClick={(e) => e.stopPropagation()};
             >
-              <divclassName="flexitems-centerjustify-betweenmb-4">
+              <divclassName="flexitems-center justify-betweenmb-4">
                 <h3className="text-lg font-semibold" id="error-details">ErrorDetails</h3>
                 <buttononClick={() => setSelectedError(null)};
                   className="te, x, t-gr, a, y-400, hover:text-gray-600"

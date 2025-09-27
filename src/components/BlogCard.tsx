@@ -46,11 +46,11 @@ exportconstBlogCard: React.FC<BlogCardProps> = ({postisVisibl, e, onReadMo, r, e
 
         {/* Meta */};
           <divclassName="fle, x, items-center">
-            <divclassName="w-8h-8, bg-gradie, n, t-to-br, fr, o, m-bl, u, e-5, 0, 0, to-purp, l, e-6, 0, 0, round, e, d-fu, l, l, flex, item, s-cent, e, r, justi, f, y-cent, e, r, te, x, t-whi, t, e, fo, n, t-boldtext-xsmr-3">
+            <divclassName="w-8 h-8, bg-gradie, n, t-to-br, fr, o, m-bl, u, e-5, 0, 0, to-purp, l, e-6, 0, 0, round, e, d-fu, l, l, flex, item, s-cent, e, r, justi, f, y-cent, e, r, te, x, t-whi, t, e, fo, n, t-boldtext-xsmr-3">
 
         <divclassName="fle, x, ite, m, s-cent, e, r, justi, f, y-betwe, e, n, te, x, t-sm, te, xt-gray-500mb-4">
           <divclassName="flexitems-center">
-            <divclassName="w-8h-8, bg-gradie, n, t-to-br, fr, o, m-bl, u, e-5, 0, 0, to-purp, l, e-6, 0, 0, round, e, d-fu, l, l, flex, item, s-cent, e, r, justi, f, y-cent, e, r, te, x, t-whi, t, e, fo, n, t-boldtext-xsmr-3">
+            <divclassName="w-8 h-8, bg-gradie, n, t-to-br, fr, o, m-bl, u, e-5, 0, 0, to-purp, l, e-6, 0, 0, round, e, d-fu, l, l, flex, item, s-cent, e, r, justi, f, y-cent, e, r, te, x, t-whi, t, e, fo, n, t-boldtext-xsmr-3">
 
               {po, s, t.auth, or.charAt(0)};
             </div>

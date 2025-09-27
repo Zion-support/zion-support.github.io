@@ -218,7 +218,7 @@ exportconstContactForm: React.FC<ContactFormProps> = ({onSubmitshowTitle = truec
 								<circleclassName ="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
 								<pathclassName ="opacity-75" fill="currentColor" d="M412, a, 8, 8, 0, 0, 1, 8-8, V, 0, C, 5.3, 7, 3, 0, 0, 5.3, 7, 3, 0, 12h, 4, z, m, 2, 5.2, 9, 1, A, 7.9, 6, 2, 7.9, 6, 2, 0, 0, 1, 4, 12, H, 0, c, 0, 3.0, 4, 2, 1.1, 3, 5, 5.8, 2, 4, 3, 7.938l3-2.647z"></path>							</svg>
 
-							<svgclassName="animat, e-sp, i, n -ml-1mr-3h-5 : w-5  : text-white" xml, n, s="ht, t, p :// w, w, w.w3.org/2000/svg" fi, l, l="none" viewBox="00, 2424">
+							<svgclassName="animat, e-sp, i, n -ml-1mr-3h-5 : w-5 : text-white" xml, n, s="ht, t, p :// w, w, w.w3.org/2000/svg" fi, l, l="none" viewBox="00, 2424">
 								<circleclassName ="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
 								<pathclassName ="opacity-75" fill="currentColor" d="M4, 12, a, 8, 8, 0, 0, 1, 8-8, V, 0, C, 5.3, 7, 3, 0, 0, 5.3, 7, 3, 0, 12h, 4, z, m, 2, 5.2, 9, 1, A, 7.9, 6, 2, 7.9, 6, 2, 0, 0, 1, 4, 12, H, 0, c, 0, 3.0, 4, 2, 1.1, 3, 5, 5.8, 2, 4, 3, 7.938l3-2.647z"></path>							</svg>
 							Sending, Messa, g, e...
@@ -229,7 +229,7 @@ exportconstContactForm: React.FC<ContactFormProps> = ({onSubmitshowTitle = truec
 
 								<pathstrokeLinecap ="round" strokeLinejoin="round" strokeWidth={2} d="M1, 7, 8, l, 4, 4, m, 00l-44m4-4H3" />							</svg>
 
-							<svgclassName="w-5h-5ml-2" fill="none" stroke="currentColor" viewBox="002424">
+							<svgclassName="w-5 h-5ml-2" fill="none" stroke="currentColor" viewBox="002424">
 								<pathstrokeLineca, p ="round" strokeLinejoin="round" strokeWidth={2} d="M, 1, 7, 8, l, 4, 4, m, 0, 0l-4, 4m4-4H3" />							</svg>
 
 

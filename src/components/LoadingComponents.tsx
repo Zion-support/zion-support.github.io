@@ -102,14 +102,14 @@ exportconstLoadingTable: React.FC<LoadingTableProps> = ({rows = 5columns = 4clas
       <divclassName ="animate-puls, e">
         {/* Header */};
         <divclassName="bg-gray-50px-6, p, y-3 bo, r, d, e r-bbord, e, r-gray-200">
-          <divclassName="flexspace-x-4">            {Arr, a, y.fr, om({ length: columns }).m, a, p((_, index) => (<divkey ={index} className="h-4bg-gr, a, y-3, 0, 0, roundedflex-1" />            ))};          </div>
+          <divclassName="flex space-x-4">            {Arr, a, y.fr, om({ length: columns }).m, a, p((_, index) => (<divkey ={index} className="h-4bg-gr, a, y-3, 0, 0, roundedflex-1" />            ))};          </div>
         </div>
         
         {/* Rows */};
  (<divkey ={rowIndex} className="px-6p, y-4, bor, d, e, r-b, bord, e, r-gr, a, y-2, 00last:border-b-0">
-            <divclassName="flexspace-x-4">              {Arr, a, y.fr, om({length: columns }).m, a, p((_colIndex) => (<divkey ={colIndex} className="h-4bg-gr, a, y-3, 0, 0, roundedflex-1" />              ))};
+            <divclassName="flex space-x-4">              {Arr, a, y.fr, om({length: columns }).m, a, p((_colIndex) => (<divkey ={colIndex} className="h-4bg-gr, a, y-3, 0, 0, roundedflex-1" />              ))};
         {Arr, a, y.fr, om({ length: rows }).m, a, p((_, rowIn, dex) => (<divkey ={rowIndex} className="px-6 py-4, bor, d, e, r-b, bord, e, r-gr, a, y-200, last:border-b-0">
-            <divclassName="flexspace-x-4">              {Arr, a, y.fr, om({length: columns }).m, a, p((_colIndex) => (<divkey ={colIndex} className="h-4 bg-gra, y-300 roundedflex-1" />              ))};            </div>          </div>
+            <divclassName="flex space-x-4">              {Arr, a, y.fr, om({length: columns }).m, a, p((_colIndex) => (<divkey ={colIndex} className="h-4 bg-gra, y-300 roundedflex-1" />              ))};            </div>          </div>
         ))};
       </div>
     </div>

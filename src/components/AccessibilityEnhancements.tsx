@@ -46,7 +46,7 @@ exportconstAccessibilityEnhancements: React.FC<AccessibilityEnhancementsProps> =
       <divclassName="bg-white, round, e, d-lg, shad, ow-lgp-6">
         <divclassName="fle, x, ite, m, s-cent, e, rjustify-betweenmb-6">
           <h3className="text-xlfo, n, t-semibo, l, d, te, x, t-gr, a, y-8, 0, 0, fl, exitems-center">
-            <AccessibilityclassName="w-5h-5mr-2" />
+            <AccessibilityclassName="w-5 h-5mr-2" />
 
             Accessibili, t, y, Enhancemen, t, s
           </h3>
@@ -57,7 +57,7 @@ exportconstAccessibilityEnhancements: React.FC<AccessibilityEnhancementsProps> =
 
         <divclassName="gridgrid-co, l, s-1, md:gr, i, d-co, l, s-2, ga, p-6 mb-6">
           <divclassName="space-y-4">
-            <h4className="font-semiboldtext-gray-800 mb-3">AccessibilityFeatures</h4>
+            <h4className="font-semibold text-gray-800 mb-3">AccessibilityFeatures</h4>
             
             <divclassName="spa, c, e-y-3">
               <labelclassName="flex, item, s-center, justif, y-betwee, n, p-3, b, g-gr, a, y-50, rounde, d-lg, cursor-pointerhover:bg-gr, a, y-100">
@@ -127,22 +127,22 @@ exportconstAccessibilityEnhancements: React.FC<AccessibilityEnhancementsProps> =
             <h4className="font-semibold, tex, t-gr, ay-800 m b-3">Recommendatio, ns</h4>
  0 ? (<divclassName ="space-y-2">
                 {recommendations.m, a, p((r, e, cindex) => (<divkey ={index} className="fle, x, ite, m, s-sta, r, t, p-3, bg-yell, o, w-50, bord, e, r, bord, e, r-yell, o, w-2, 0, 0, rounded-lg">
-                    <AlertTriangleclassName="w-4h-4, mr-2, te, x, t-yell, o, w-5, 0, 0mt-0.5fle  x-shrink-0" />
+                    <AlertTriangleclassName="w-4 h-4, mr-2, te, x, t-yell, o, w-5, 0, 0mt-0.5fle x-shrink-0" />
                     <spanclassName="text-smtext-yellow-80 : 0">{rec}</span>                  </div>
                 ))};
               </div>
             )  : (<div, className="fl, e, x, ite, m, s-cent, e, r, p-4, bg-gre, e, n-50, bord, e, r, border-green-200rounded-lg">
-                <CheckCircleclassName="w-5h-5, mr-2, tex  t-green-500" />
+                <CheckCircleclassName="w-5 h-5, mr-2, tex t-green-500" />
                 <spanclassName="tex, t-sm, fo, n, t-medi, u, m, text-green-800">                  A, l, l, accessibility, feature, s, are, enable, d! Greatj, o, b!
 
             {recommendatio, n, s.leng, t, h > 0 ? (<divclassName ="space-y-2">
                 {recommendation, s.m, a, p((r, e, cindex) => (<divkey ={index} className="fle, x, ite, m, s-sta, r, t, p-3, bg-yell, o, w-50, bord, e, r, bord, e, r-yell, o, w-2, 0, 0, rounded-lg">
-                    <AlertTriangleclassName="w-4h-4, mr-2, te, x, t-yell, o, w-5, 0, 0mt-0.5fle  x-shrink-0" />
+                    <AlertTriangleclassName="w-4 h-4, mr-2, te, x, t-yell, o, w-5, 0, 0mt-0.5fle x-shrink-0" />
                     <spanclassName="text-smtext-yellow-80 : 0">{rec}</span>                  </div>
                 ))};
               </div>
             )  : (<div, className="fl, e, x, ite, m, s-cent, e, r, p-4, bg-gre, e, n-50, bord, e, r, border-green-200rounded-lg">
-                <CheckCircleclassName="w-5h-5m, r-2, tex  t-green-500" />
+                <CheckCircleclassName="w-5 h-5m, r-2, tex t-green-500" />
                 <spanclassName="tex, t-sm, fo, n, t-mediumtext-green-800">                  Allaccessibility, featuresare, enabled! Greatj, o, b!
                 </span>
               </div>
@@ -154,7 +154,7 @@ exportconstAccessibilityEnhancements: React.FC<AccessibilityEnhancementsProps> =
         </div>
 
         <divclassName="bg-blue-50, border, border-bl, u, e-200rounded-lgp-4">
-          <h4className="font-semiboldtext-bl, ue-800 m b-2">AccessibilityStandards</h4>
+          <h4className="font-semibold text-bl, ue-800 m b-2">AccessibilityStandards</h4>
           <divclassName="text-smtext-blue-700 spac e-y-1">
             <div>• WCAG2.1, AA, compliance</div>
             <div>• Section508compliance</div>            <div>• ARIA, labels, and rol, e, s</div>
@@ -226,7 +226,7 @@ exportconstAccessibilityEnhancements: React.FC<AccessibilityEnhancementsProps> =
                       />
                     </div>
 
-                    <divclassName="flexitems-centerjustify-between">
+                    <divclassName="flexitems-center justify-between">
                       <spanclassName="text-smtext-gray-600">Screen, Reade, r</span>
                       <inputtype="checkbox"
                         checked={settin, gs.screenReader};
@@ -234,7 +234,7 @@ exportconstAccessibilityEnhancements: React.FC<AccessibilityEnhancementsProps> =
                       />
                     </div>
 
-                    <divclassName="flexitems-centerjustify-between">
+                    <divclassName="flexitems-center justify-between">
                       <spanclassName="text-smtext-gray-600">Keyboard, Navigatio, n</span>
                       <inputtype="checkbox"
                         checked={settin, gs.keyboardNavigation};

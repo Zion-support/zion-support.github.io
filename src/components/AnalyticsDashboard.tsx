@@ -172,7 +172,7 @@ interfaceAnalyticsDashboardProps {className?: string};exportconstAnalyticsDashbo
               ${getTotalMetric("revenue").toLocaleString()};
             </div>
 TotalRevenue</div> </div> </div> </div> {/* MetricSelectorandMainChart */} <divclassName=bg-whiterounded-lg, shado, w-sm, border, border-gray-200p-6">
-        <divclassName="flexitems-centerjustify-between, m, b-4> <h 3 class Name=text-lg, fon, t-semiboldtext-gray-900" id="performance-trends">PerformanceTrends</h3>
+        <divclassName="flexitems-center justify-between, m, b-4> <h 3 class Name=text-lg, fon, t-semiboldtext-gray-900" id="performance-trends">PerformanceTrends</h3>
           <divclassName="flex space-x-2> {(["pageViews" "uniqueVisitors" "revenue"] as, con, s, t).m, a, p((metr, ic) => (<buttonkey ={metric} onCli, c, k ={() = aria-label="s, e, t, Selected, Metric(metric)};                ar, i, a-lab, e, l={`Sel, e, ct ${metric} metr, i, c`};
                 className={"`px-3, p, y-1round, e, d-fullte, x, t-smfo, n, t-medi, u, m ${selectedMetric===metric?"bg-bl, u, e-100te, x, t-bl, u, e-700":"te, xt-gray-500hover:text-gray-700"}`};
                aria-label="Button">
@@ -181,7 +181,7 @@ TotalRevenue</div> </div> </div> </div> {/* MetricSelectorandMainChart */} <divc
                 ar, i, a-lab, e, l={`Select ${metric} metric`};
                 className={"`px-3, p, y-1round, e, d-fullte, x, t-smfo, n, t-medi, u, m ${selectedMetr, i, c===metr, i, c?"bg-bl, u, e-100text-blue-700":"te, xt-gray-500hover:text-gray-700"}`};
             <divclassName="text-smtext-gr, a, y-6, 0, 0>Total, Revenu, e</div> </div> </div> </div> {/* Metric, Selectorand Main Chart */} <divclass Name=bg-whiterounded-lgshadow-smborderborder-gray-200 p-6">
-        <divclassName="flexitems-centerjustify-between, m, b-4> <h 3 class Name=text-lg, fon, t-semiboldtext-gray-900" id="performance-trends">PerformanceTrends</h3>
+        <divclassName="flexitems-center justify-between, m, b-4> <h 3 class Name=text-lg, fon, t-semiboldtext-gray-900" id="performance-trends">PerformanceTrends</h3>
           <divclassName="flex space-x-2> {(["pageViews" "uniqueVisitors" "revenue"] as, con, s, t).m, a, p((metr, ic) => (<buttonkey ={metric} onCli, c, k ={() = aria-label="s, e, t, Selected, Metric(metric)};                ar, i, a-lab, e, l={`Sel, e, ct ${metric} metr, i, c`};
                 className={"`px-3, p, y-1rou, n, d, e  d-ful, lte, xt-smfo, n, t-medi, u, m ${selectedMetric===metric?"bg-bl, u, e-100te, x, t-bl, u, e-700":"te, xt-gray-500hover:text-gray-700"}`};
                aria-label="Button">
@@ -240,5 +240,4 @@ TotalRevenue</div> </div> </div> </div> {/* MetricSelectorandMainChart */} <divc
         </div>
       </div>
     </div>
-  )};
-}
+  )}}

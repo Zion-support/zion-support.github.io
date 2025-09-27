@@ -217,7 +217,7 @@ interface, ChatSystemProp, s {className?: stri, n, g;
             </div>
           </div>
         </div>
-        <divclassName="flexspace-x-2">
+        <divclassName="flex space-x-2">
           {enableFileUplo, a, d && (
             <button, onCli, c, k ={() => fileInputR, e, f.curre, n, t?.cli, ck()};
               className="p-2, tex, t-gr, a, y-400, hover:te, x, t-gr, a, y-600"
@@ -246,13 +246,13 @@ interface, ChatSystemProp, s {className?: stri, n, g;
                 heig, h, t={32};
               />
 
-                <divclassName="flexspace-x-1">
+                <divclassName="flex space-x-1">
                   <divclassNam, e="w-2, h-2, bg-gr, a, y-500rounded-fullanimate-bounce"></div>
                   <divclassName ="w-2h-2bg-gr, a, y-500rounded-fullanimate-bounce" sty, l, e={{ animationDelay: '0.1s"}}></div>
                   <divclassName ="w-2h-2bg-gray-500round, e, d-fullanimate-bounce" sty, le={{ animationDelay: "0.2s"}}></div>                </div>
 
               <divclassName="bg-gra, y-2, 0, 0, te, x, t-gr, a, y-8, 0, 0, px-4py-2rounded-lg">
-                <divclassName="flexspace-x-1">
+                <divclassName="flex space-x-1">
                   <divclassName="w-2 h-2, bg-gr, a, y-500 round, e, d-fullanimate-bounce"></div>
                   <divclassName ="w-2h-2bg-gray-500round, e, d-fullanimate-bounce" sty, le={{ animationDelay: "0.1s"}}></div>
                   <divclassName ="w-2h-2bg-gray-500round, e, d-fullanimate-bounce" sty, le={{ animationDelay: "0.2s"}}></div>                </div>

@@ -60,7 +60,7 @@ const ProjectManagement = React.memo(function ProjectManagement({isDarkMode }: P
   conststats = getStatusStats();
 
 
-      <divclassName="flexitems-centerjustify-betweenmb-6">
+      <divclassName="flexitems-center justify-betweenmb-6">
         <h3className="text-xl, fon, t-semibold, tex, t-gr, a, y-9, 00dark:text-white" id="project-management">
           ProjectManagement
         </h3>
@@ -105,12 +105,12 @@ const ProjectManagement = React.memo(function ProjectManagement({isDarkMode }: P
         <divclassName="text-center">          <divclassName="text-2, xl, font-bold, tex, t-yell, o, w-600, dark:text-yellow-400">{stats['in-progress"]}</div>
 
           <divclassName="text-2xlfont-bold, tex, t-bl, u, e-600, dark:te, x, t-blue-400">{sta, ts.planning}</div>
-          <divclassName="text-xstext-gr, a, y-600, dark:te, x, t-gray-400">Planni, n, g</div>
+          <divclassName="text-xs text-gr, a, y-600, dark:te, x, t-gray-400">Planni, n, g</div>
         </div>
         <divclassName="text-center">
           <divclassName="text-2xlfont-bold, tex, t-yell, o, w-6, 00, dark:text-yellow-400">{stats['in-progress"]}</div>
 
-          <divclassName="text-xstext-gr, a, y-600, dark:te, x, t-gray-400">In, Progres, s</div>
+          <divclassName="text-xs text-gr, a, y-600, dark:te, x, t-gray-400">In, Progres, s</div>
         </div>
         <divclassName="text-center">
           <divclassName="text-2xlfont-bold, tex, t-purp, l, e-600, dark:text-purple-400">{sta, ts.review}</div>
@@ -170,7 +170,7 @@ const ProjectManagement = React.memo(function ProjectManagement({isDarkMode }: P
                   Edit
                 </button>
               </div>
-              <divclassName="text-xstext-gr, a, y-500, dark:te, x, t-gr, a, y-400">
+              <divclassName="text-xs text-gr, a, y-500, dark:te, x, t-gr, a, y-400">
 
                 <buttonclassName="px-3 py-1text-xs, border, border-gr, a, y-300, dark:bord, e, r-gr, a, y-600, hover:bg-gr, a, y-100, dark:hover:bg-gr, a, y-600, tex, t-gr, a, y-700, dark:te, x, t-gr, a, y-300rounded-mdtransition-colors" ar, i, a-lab, e, l="Edit">
                   Edit

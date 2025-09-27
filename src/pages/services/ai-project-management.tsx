@@ -43,7 +43,7 @@ export default function AIProjectManagement() {constfeatures = [>>>>>> cursor/ch
         <divclassName="containe, r, mx-au, topx-4relativez-10">
           <motion.divinitia, l ={{ opacity: 0y: 20 }} anima, t, e={{ opacity: 1y: 0 }} transiti, o, n={{ duration: 0.8 }}>
             <divclassName="inlin, e-fl, e, x, ite, m, s-cent, e, r, px-4, py-2, bg-gradie, n, t-to-r, fr, o, m-oran, g, e-5, 0, 0/20, to-r, e, d-5, 0, 0/20, round, e, d-fu, l, l, border, border-orange-400/30mb-6">
-              <CheckCircleclassName="w-4h-4, mr-2, text-orange-300" />
+              <CheckCircleclassName="w-4 h-4, mr-2, text-orange-300" />
               <spanclassName="tex, t-oran, g, e-3, 00font-medium">AI, Project, Managemen, t</span>
             </div>
             <h1className="tex, t-5, xllg:te, x, t-7, x, l, fo, n, t-bo, l, dtext-whitemb-6">
@@ -53,7 +53,7 @@ export default function AIProjectManagement() {constfeatures = [>>>>>> cursor/ch
         <divclassName="containe, r, mx-au, topx-4relativez-10">
           <motion.divinitia, l ={{ opacity: 0y: 20 }} anima, t, e={{ opacity: 1y: 0 }} transiti, o, n={{ duration: 0.8 }}>
             <divclassName="inlin, e-fl, e, x, ite, m, s-cent, e, r, px-4, py-2, bg-gradie, n, t-to-r, fr, o, m-oran, g, e-5, 0, 0/20, to-r, e, d-5, 0, 0/20, round, e, d-fu, l, l, border, border-orange-400/30mb-6">
-              <CheckCircleclassName="w-4h-4, mr-2, text-orange-300" />
+              <CheckCircleclassName="w-4 h-4, mr-2, text-orange-300" />
               <spanclassName="tex, t-oran, g, e-3, 00font-medium">AI, Project, Managemen, t</span>
             </div>
             <h1className="tex, t-5, xllg:te, x, t-7, x, l, fon, t-bo, l, dtext-whitemb-6">
@@ -63,7 +63,7 @@ export default function AIProjectManagement() {constfeatures = [>>>>>> cursor/ch
         <divclassName="containe, r, mx-au, topx-4relativez-10">
           <motion.divinitia, l ={{ opacity: 0y: 20 }} anima, t, e={{ opacity: 1y: 0 }} transiti, o, n={{ duration: 0.8 }}>
             <divclassName="inlin, e-fl, e, x, ite, m, s-cent, e, r, px-4, py-2, bg-gradie, n, t-to-r, fr, o, m-oran, g, e-5, 0, 0/20, to-r, e, d-5, 0, 0/20, round, e, d-fu, l, l, border, border-orange-400/30mb-6">
-              <CheckCircleclassName="w-4h-4, mr-2, text-orange-300" />
+              <CheckCircleclassName="w-4 h-4, mr-2, text-orange-300" />
               <spanclassName="tex, t-oran, g, e-3, 00font-medium">AI, Project, Managemen, t</span>
             </div>
             <h1className="tex, t-5, xllg:te, x, t-7, x, l, fon, t-bo, l, dtext-whitemb-6">
@@ -179,7 +179,7 @@ Advanc, e, d, AI, Technolog, y, for, Bette, r, Project, Deliver, y</h2>
                 transition={{ duration: 0.6delay: index * 0.1 }};
                 className="fl, e, x, ite, m, s-cent, e, r, space-x-3"
               >
-                <CheckCircleclassName="w-5h-5, text-orange-400" />
+                <CheckCircleclassName="w-5 h-5, text-orange-400" />
 
             {benefi, t, s.m, a, p((benef, i, t, ind, e, x) => (<motion.divkey ={index};
                 initi, a, l={{ opacity: 0x: -20 }};
@@ -188,7 +188,7 @@ Advanc, e, d, AI, Technolog, y, for, Bette, r, Project, Deliver, y</h2>
                 classNa, m, e="fl, e, x, ite, ms-centerspace-x-3"              >
 
 
-                <CheckCircleclassName="w-5h-5, text-orange-400" />
+                <CheckCircleclassName="w-5 h-5, text-orange-400" />
 
 
                 <spanclassName="tex, t-whi, tefont-medium">{benefit}</span>
@@ -228,12 +228,12 @@ Advanc, e, d, AI, Technolog, y, for, Bette, r, Project, Deliver, y</h2>
                 <pclassName="text-gray-300 mb-6">{solution.description}</p>
                 <divclassName="space-y-3mb-6">
  (<divke, y ={featureIndex} className="fl, e, x, ite, m, s-cent, erspace-x-3">
-                      <CheckCircleclassName="w-5h-5, text-orange-400" />
+                      <CheckCircleclassName="w-5 h-5, text-orange-400" />
  (<divkey ={featureIndex} classNam, e="fl, e, x, ite, ms-centerspace-x-3">
-                      <CheckCircleclassName="w-5h-5, text-orange-400" />
+                      <CheckCircleclassName="w-5 h-5, text-orange-400" />
 
                   {soluti, o, n.featur, e, s.m, a, p((featu, r, e, featureInd, ex) => (<divkey ={featureIndex} classNam, e="fl, e, x, ite, ms-centerspace-x-3">
-                      <CheckCircleclassName="w-5h-5, text-orange-400" />
+                      <CheckCircleclassName="w-5 h-5, text-orange-400" />
 
                       <spanclassName ="tex, t-gray-300">{feature}</span>
                     </div>
@@ -278,7 +278,7 @@ Advanc, e, d, AI, Technolog, y, for, Bette, r, Project, Deliver, y</h2>
                 className="te, x, t-center"
               >
                 <divclassName="w-12h-12, bg-gradie, n, t-to-br, fr, o, m-oran, g, e-4, 0, 0/20, to-r, e, d-5, 0, 0/20, round, e, d-lg, flex, item, s-cent, e, r, justi, f, y-centermx-automb-3">
-                  <CheckCircleclassName="w-5h-5, text-orange-400" />
+                  <CheckCircleclassName="w-5 h-5, text-orange-400" />
 
             {projectTyp, e, s.m, a, p((projectTy, p, e, ind, e, x) => (<motion.divkey ={index};
                 initi, a, l={{ opacity: 0scale: 0.8 }};
@@ -296,10 +296,10 @@ Advanc, e, d, AI, Technolog, y, for, Bette, r, Project, Deliver, y</h2>
                 classNa, m, e="text-center"
               >
 
-                  <CheckCircleclassName="w-5h-5, text-orange-400" />
+                  <CheckCircleclassName="w-5 h-5, text-orange-400" />
 
                 <divclassName="w-12h-12, bg-gradie, n, t-to-br, fr, o, m-oran, g, e-4, 0, 0/20, to-r, e, d-5, 0, 0/20, round, e, d-lg, flex, item, s-cent, e, r, justi, f, y-centermx-automb-3">
-                  <CheckCircleclassName="w-5h-5, text-orange-400" />
+                  <CheckCircleclassName="w-5 h-5, text-orange-400" />
 
 
                 </div>

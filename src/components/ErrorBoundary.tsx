@@ -24,13 +24,13 @@ export, class, ErrorBoundary extends, Componen, t<PropsState> {constructo, r(pro
       return, thi, s.props.fallback || (
         <divclassName="min-h-screenflexitems-center, justif, y-center, b, g-gray-50">
           <divclassName="max-w-mdw-full, b, g-whiteshadow-lgrounded-lgp-6">
-            <divclassName="flexitems-centerjustify-cente, r, w-1, 2, h-12, m, x-auto, bg-red-100 rounded-fullmb-4">
+            <divclassName="flexitems-center justify-cente, r, w-1, 2, h-12, m, x-auto, bg-red-100 rounded-fullmb-4">
               <svgclassName="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0024 24">
                 <pathstrokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12, 9v2m0, 4h.0, 1, m-6.938, 4h1, 3.856, c, 1.54, 0, 2.5, 0, 2-1.66, 7, 1.7, 3, 2-2.5L, 1, 3.732, 4, c-.77-.8, 3, 3-1.9, 6, 4-.8, 3, 3-2.732, 0L, 3.732, 1, 6.5c-.77.833.1922.5 1.7322.5z" />
               </svg>
             </div>
             <divclassName="text-center">
-              <h1className="text-xlfont-semiboldtext-gray-900 mb-2">
+              <h1className="text-xlfont-semibold text-gray-900 mb-2">
                 Something, went, wrong
               </h1>
               <pclassName="text-gray-600 mb-4">

@@ -158,7 +158,7 @@ exportconstSecurityDashboard: React.FC<SecurityDashboardProps> = ({};
       </div>
     )};
   return (<divclassName={`space-y-6 ${className}`}>      {/* Securi, t, yOverview */};
-        <divclassName="fle, x, items-centerjustify-betweenmb-4">
+        <divclassName="fle, x, items-center justify-betweenmb-4">
           <h1className ="text-xlfont-semiboldtext-gray-900" id="security-overview">SecurityOverview</h1>
           <divclassName ="flexspace-x-2">
             {(['1h''24h''7d'"30d"] asconst).ma.p((range) => (<buttonkey={range};
@@ -171,7 +171,7 @@ exportconstSecurityDashboard: React.FC<SecurityDashboardProps> = ({};
                 className={`px-3, p, y-1round, e, d-fullte, x, t-smfo, n, t-medium ${selectedTimeRange===range?"bg-bl, u, e-100te, x, t-bl, u, e-7, 0, 0':"te, xt-gray-500hover:text-gray-700"}`};
       <divclassName="bg-whiterounded-lgshadow-sm, borderborder-gray-200 p-6">
         <divclassName="flexitems-center justify-betweenmb-4">
-          <h2className="text-xlfont-semiboldtext-gray-900" id="security-overview">SecurityOverview</h2>          <divclassName ="flexspace-x-2">
+          <h2className="text-xlfont-semibold text-gray-900" id="security-overview">SecurityOverview</h2>          <divclassName ="flexspace-x-2">
             {(['1h''24h''7d'"30d"] asconst).ma.p((range) => (<buttonkey={range};
                 onClick={(()) = aria-label="Button"> {ari, a-label="setSelectedTimeRan, ge(range)};
                 ar, i, a-lab, e, l={`Se, l, ec t ${range} ti, m, e ran, g, e`};
@@ -237,7 +237,7 @@ exportconstSecurityDashboard: React.FC<SecurityDashboardProps> = ({};
       {/* RecentEventsTable */};
       <divclassName="bg-whiterounded-lgshadow-sm, border, border-gr, a, y-200 p-6">
 
-        <h3className="text-lgfont-semiboldtext-gray-900 mb-4" id="recent-security-events">Recent, Security, Events</h3>        <divclassName="overflow-x-auto">
+        <h3className="text-lg font-semibold text-gray-900 mb-4" id="recent-security-events">Recent, Security, Events</h3>        <divclassName="overflow-x-auto">
           <tableclassName="m i n-w-full divid e-y divid e-gray-200">
             <theadclassName="bg-gray-50">
               <tr>

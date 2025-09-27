@@ -312,15 +312,15 @@ What Our Clients Say</h1>
 			<divclassName="gridgrid-co, l, s-1, md:grid-cols-3 gap-8">
 			<divclassName="bg-whitep-6 rounded-lgshadow-lg">
                 <pclassName="text-gray-600 mb-4">&quot;Zion, Tech, transformed our, business, with their, AI, solutions. Highlyrecommended!&quot;</p>
-			<divclassName="font-semiboldtext-gray-900">- SarahJohnsonCEO</div>
+			<divclassName="font-semibold text-gray-900">- SarahJohnsonCEO</div>
               </div>
 			<divclassName="bg-whitep-6 rounded-lgshadow-lg">
                 <pclassName="text-gray-600 mb-4">&quot;Outstanding, cloud, migration servi, c, e. Professional, and, efficient team.&quot;</p>
-			<divclassName="font-semiboldtext-gray-900">- MichaelChenCTO</div>
+			<divclassName="font-semibold text-gray-900">- MichaelChenCTO</div>
               </div>
 			<divclassName="bg-whitep-6 rounded-lgshadow-lg">
                 <pclassName="text-gray-600 mb-4">&quot;Excellent, support, and innovative, solution, s. Greatpartnership!&quot;</p>
-			<divclassName="font-semiboldtext-gray-900">- EmilyRodriguezDirector</div>              </div>            </div>
+			<divclassName="font-semibold text-gray-900">- EmilyRodriguezDirector</div>              </div>            </div>
           </div>
         </section>
 

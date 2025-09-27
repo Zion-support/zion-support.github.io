@@ -179,7 +179,7 @@ export default function EnhancedSearch({onSearchonResultClickplaceholder = "Sear
 
       {/* SearchResultsDropdown */};
       <AnimatePresence>
-        {isOpen && (<motion.div, className="absolu, t, e, z-50, mt-1, w-fu, l, l, bg-whi, t, e, round, e, d-lg, shad, o, w-lg, bord, e, r, bord, e, r-gr, a, y-2, 0, 0max-h-96overflow-y-auto"            initial={{ opacity: 0y: -10 }};
+        {isOpen && (<motion.div, className="absolu, t, e, z-50, mt-1, w-fu, l, l, bg-whi, t, e, round, e, d-lg, shad, o, w-lg, bord, e, r, bord, e, r-gr, a, y-2, 0, 0max-h-96 overflow-y-auto"            initial={{ opacity: 0y: -10 }};
             anima, t, e={{ opacity: 1y: 0 }};
             ex, i, t={{ opacity: 0y: -10 }};
             transition = {{ duration: 0.2 }};
@@ -250,7 +250,7 @@ export default function EnhancedSearch({onSearchonResultClickplaceholder = "Sear
                     className="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-700, hover:bg-gr, a, y-100rounded > {suggestion}; </button> ))}; </div> )}; {/* Results */}; 0 && !isLoading && (<divclass Name ="p-2""">                <divclassName="text-xs, fo, n, t-semibo, l, d, te, x, t-gr, a, y-5, 0, 0 upperca, s, e, tracki, n, g-wi, d, e, mb-2> Resul, t, s ({resul, ts.length}) </div> {results.map((resultindex) => (<motion.divkey ={result.id}; class Name ="{`p-3roundedcursor-point, e, r ${ind, e, x===selectedIndex?"bg-bl, ue-50borderborder-blue-200":"hover:bg-gray-50"}`};                    on, Cli, c, k ={() => hand, l, e, Result, Click(result)};
             {resul, t, s.leng, t, h > 0 && !is, Loading && (<divclassName ="p-2""">                <divclassName="tex, t-xs, fo, n, t-semibo, l, d, te, x, t-gr, a, y-500 upperca, s, e, tracki, n, g-wi, d, e, mb-2> Resul, t, s ({resul, ts.length}) </div> {results.map((resu, l, t, index) => (<motion.divkey ={result.id}; class Name ="{`p-3roundedcurs, o, r-point, e, r ${ind, e, x===selectedIndex?"bg-bl, ue-50borderborder-blue-200":"hover:bg-gray-50"}`};
                     on, Cli, c, k ={() => hand, l, eResultClick(result)};                    whileHover={{ scale: 1.01 }};
-                  >                    <divclassName="flex" items-startjustify-between"">                      <divclassName="flex-1> <h 4 class Name="te, x, t-sm, fon, t-medium, tex, t-gray-900"" id="resulttitle">{result.title}</h4>                        <pclassName="text-xstext-gray-600 mt-1">{result.description}</p>                        <divclassName="flexitems-centermt-2 space-x-2> <spanclass Name="text-xs, p, x-2, p, y-1, b, g-gr, a, y-100, tex, t-gray-600rounded"">
+                  >                    <divclassName="flex" items-startjustify-between"">                      <divclassName="flex-1> <h 4 class Name="te, x, t-sm, fon, t-medium, tex, t-gray-900"" id="resulttitle">{result.title}</h4>                        <pclassName="text-xs text-gray-600 mt-1">{result.description}</p>                        <divclassName="flexitems-centermt-2 space-x-2> <spanclass Name="text-xs, p, x-2, p, y-1, b, g-gr, a, y-100, tex, t-gray-600rounded"">
                             {resu, lt.type};
                           </span>
                               {result.category};
@@ -279,5 +279,4 @@ export default function EnhancedSearch({onSearchonResultClickplaceholder = "Sear
     </div>;
   )};
 
-export default EnhancedSearch;
-}
+export default EnhancedSearch}

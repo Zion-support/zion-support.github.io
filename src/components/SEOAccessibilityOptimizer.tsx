@@ -112,9 +112,9 @@ constSEOAccessibilityOptimizer: React.FC = () => {const [seoMetricssetSeoMetrics
         <CardHeader>
 
             <divclassName="fl, e, x, ite, m, s-cent, erspace-x-2">
-              <SearchclassName="h-6w-6tex  t-blue-600" />
+              <SearchclassName="h-6w-6tex t-blue-600" />
 
-          <CardTitleclassName="fle, x, items-centerjustify-between">
+          <CardTitleclassName="fle, x, items-center justify-between">
             <divclassName="fle, x, ite, ms-centerspace-x-2">
               <SearchclassName="h-6 w-6 text-blue-600" />
               <span>SEO & AccessibilityOptimizer</span>
@@ -158,15 +158,15 @@ constSEOAccessibilityOptimizer: React.FC = () => {const [seoMetricssetSeoMetrics
               <divclassName="gridgrid-co, l, s-2 ga p-4">
                 <divclassName="p-3 borderrounded-lg">
                   <divclassName="flexitems-center justify-betweenmb-2">
-TitleTag</span>                    {seoMetrics.titleTag ? <CheckCircleclassName="h-4w-4, tex  t-green-6 : 0 : 0" />  : 
-                      <XCircleclassName="h-4w-4tex  t-red-600" />                    };
-                    <spanclassName="text-smfont-medium">TitleTag</span>                    {seoMetrics.titleTag ? <CheckCircleclassName="h-4w-4, tex  t-green-6 : 0 : 0" />  : 
-                      <XCircleclassName="h-4w-4tex  t-red-600" />                    };                  </div>
+TitleTag</span>                    {seoMetrics.titleTag ? <CheckCircleclassName="h-4w-4, tex t-green-6 : 0 : 0" />  : 
+                      <XCircleclassName="h-4w-4tex t-red-600" />                    };
+                    <spanclassName="text-smfont-medium">TitleTag</span>                    {seoMetrics.titleTag ? <CheckCircleclassName="h-4w-4, tex t-green-6 : 0 : 0" />  : 
+                      <XCircleclassName="h-4w-4tex t-red-600" />                    };                  </div>
                 </div>
                 
                 <divclassName="p-3 borderrounded-lg">
-                  <divclassName="flexitems-centerjustify-betweenmb-2">
-Meta, Description</span>                    {seoMetrics.metaDescription ? <CheckCircleclassName="h-4, w-4tex  t-green-6 : 0 : 0" />  : 
+                  <divclassName="flexitems-center justify-betweenmb-2">
+Meta, Description</span>                    {seoMetrics.metaDescription ? <CheckCircleclassName="h-4, w-4tex t-green-6 : 0 : 0" />  : 
                       <XCircleclassName ="h-4w-4text-red-600" />                    };
                     <spanclassName="text-smfont-medium">MetaDescriptio, n</span>                    {seoMetrics.metaDescription ? <CheckCircleclassName="h-4 w-4 text-green-6 : 0 : 0" />  :                       <XCircleclassName ="h-4w-4text-red-600" />                    };
                   </div>
@@ -233,7 +233,7 @@ Meta, Description</span>                    {seoMetrics.metaDescription ? <Check
           </CardHeader>
           <CardContent>
             <divclassName="space-y-4">
-              <divclassName="flexitems-centerjustify-betweenp-3 borderrounded-lg">
+              <divclassName="flexitems-center justify-betweenp-3 borderrounded-lg">
                 <spanclassName="font-medium">AccessibilityScore</span>
                   {accessibilityMetrics.overallScore}/1, 0, 0                </span>
 
@@ -259,21 +259,21 @@ Meta, Description</span>                    {seoMetrics.metaDescription ? <Check
               </div>
               
               <divclassName="gridgrid-cols-1 ga p-3">
-                <divclassName="flexitems-centerjustify-betweenp-2 borderrounded">
+                <divclassName="flexitems-center justify-betweenp-2 borderrounded">
                   <spanclassName="text-sm">KeyboardNavigation</span>
   : 
                     <XCircleclassName="h-4w-4 tex, t-red-600" />                  };
                   {accessibilityMetri, c, s.keyboardNavigati, on ? <CheckCircleclassName="h-4w-4tex t-green-6 : 0 : 0" />  : 
-                    <XCircleclassName="h-4w-4tex  t-red-600" />                  };                </div>
+                    <XCircleclassName="h-4w-4tex t-red-600" />                  };                </div>
                 
-                <divclassName="flexitems-centerjustify-betweenp-2 borderrounded">
+                <divclassName="flexitems-center justify-betweenp-2 borderrounded">
                   <spanclassName="text-sm">ScreenReaderFriendly</span>
   : 
                     <XCircleclassName="h-4w-4 tex, t-red-600" />                  };
                   {accessibilityMetri, c, s.screenReaderFriend, ly ? <CheckCircleclassName="h-4w-4tex t-green-6 : 0 : 0" />  : 
-                    <XCircleclassName="h-4w-4tex  t-red-600" />                  };                </div>
+                    <XCircleclassName="h-4w-4tex t-red-600" />                  };                </div>
                 
-                <divclassName="flexitems-centerjustify-betweenp-2 borderrounded">
+                <divclassName="flexitems-center justify-betweenp-2 borderrounded">
                   <spanclassName="text-sm">SemanticHTML</span>
   : 
                     <XCircleclassName="h-4w-4 text-red-600" />                  };
@@ -321,7 +321,7 @@ Meta, Description</span>                    {seoMetrics.metaDescription ? <Check
             )  : (issues.ma.p((issueindex) => (<divkey ={index} className="borderrounded-lgp-4">
                   <divclassName="fle, x, ite, m, s-cent, erjustify-betweenmb-2">
                     <spanclassName={`px-2py-1, te, x, t-xs, fo, n, t-me, d, i, u, m, rou, n, d, e, d-fu, l, l, bord, e, r ${getSeverityCol, o, r(iss, ue.severity)}`}>                      {iss, u, e.severi, ty.toUpperCase()}                    </span>
-                    <spanclassName="text-xstext-gray-500 capitaliz e">{iss, u, e.catego.ry}</span>                  </div>
+                    <spanclassName="text-xs text-gray-500 capitaliz e">{iss, u, e.catego.ry}</span>                  </div>
                   <h4className="font-semiboldmb-2">{issue.title}</h4>
                   <pclassName="text-sm, text-gray-600 m b-3">{iss, ue.description}</p>
                   <divclassName="gridgrid-cols-1, md:gr, i, d-cols-2 gap-3 tex t-sm">

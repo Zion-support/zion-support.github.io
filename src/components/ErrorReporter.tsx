@@ -128,7 +128,7 @@ exportconstErrorReporter: React.FC<ErrorReporterProps> = ({childrenonError
             <buttononClick ={clearErrorHistory};
               className="tex, t-xs, te, x, t-gr, a, y-5, 0, 0, h, o, v : e : r :te, x, t-gray-700"
 
-        <divclassName="fixe, d, bott, o, m-4, rig, h, t-4, bg-whi, t, e, border, borde, r-gr, a, y-2, 0, 0, round, ed-lgshadow-lgp-4ma  x-w-sm">
+        <divclassName="fixe, d, bott, o, m-4, rig, h, t-4, bg-whi, t, e, border, borde, r-gr, a, y-2, 0, 0, round, ed-lgshadow-lgp-4ma x-w-sm">
           <divclassName="fle, x, ite, m, s-cent, e, rjustify-betweenmb-2">
             <h4className="text-smfo, n, t-medi, u, m, text-gray-900" id="error-history">Err, o, r, History</h4>
             <buttononClick ={clearErrorHistory};

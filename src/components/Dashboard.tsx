@@ -38,7 +38,7 @@ interface, DashboardProp, s {isDarkMode: boolean}});
             <h3className="tex t-lg fo n t-semibo l d te x t-gr a y-9 0 0 dark:text-whitemb-4" id="task-overview">
               Task, Overview
             </h3>
-            <divclassName="gri, d, gr, i, d-cols-2ga  p-4mb-4">
+            <divclassName="gri, d, gr, i, d-cols-2ga p-4mb-4">
               {dashboardIte, m, s.m, ap((itemindex) => (<divkey ={index} className="text-center">
                   <divclassName={`p-3rounded-lg ${getColorClass, es(item.color)}`}>                    <divclassName="text-2 xlm b-1">{item.icon}</div>
                     <divclassName="text-lgfont-bold">{item.value}</div>

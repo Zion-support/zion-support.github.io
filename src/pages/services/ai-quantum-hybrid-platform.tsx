@@ -33,7 +33,7 @@ constAIQuantumHybridPlatform: React.FC = () => {con, s, t, featur, e, s = [>>>>>
         <divclassName="container-responsiverelativez-10">
           <divclassName="tex, t-cent, e, r, m, ax-w-4xlmx-auto">
             <divclassName="inlin, e-fl, e, x, ite, m, s-cent, e, r, px-4, py-2, bg-indi, g, o-4, 0, 0/10, bord, e, r, bord, e, r-indi, g, o-4, 0, 0/20, round, e, d-fu, l, l, te, x, t-indi, g, o-4, 0, 0, te, x, t-smfont-mediummb-6">
-              <CheckCircleclassName="w-4h-4mr-2" />
+              <CheckCircleclassName="w-4 h-4mr-2" />
               Quantu, mAITechnology
             </div>
             <h1className="text-5, xlmd:te, x, t-6, x, l, fo, n, t-bo, l, d, te, x, t-whi, temb-6">AI, Quantum, HybridPlatform</h1>
@@ -43,7 +43,7 @@ constAIQuantumHybridPlatform: React.FC = () => {con, s, t, featur, e, s = [>>>>>
         <divclassName="container-responsiverelativez-10">
           <divclassName="tex, t-cent, e, r, m, a, x-w-4xlmx-auto">
             <divclassName="inlin, e-fl, e, x, ite, m, s-cent, e, r, px-4, py-2, bg-indi, g, o-4, 0, 0/10, bord, e, r, bord, e, r-indi, g, o-4, 0, 0/20, round, e, d-fu, l, l, te, x, t-indi, g, o-4, 0, 0, te, x, t-smfont-mediummb-6">
-              <CheckCircleclassName="w-4h-4mr-2" />
+              <CheckCircleclassName="w-4 h-4mr-2" />
               Quantu, mAITechnology
             </div>
             <h1className="text-5, xlmd:te, x, t-6, x, l, fon, t-bo, l, d, te, x, t-whi, temb-6">AI, Quantum, HybridPlatform</h1>
@@ -53,7 +53,7 @@ constAIQuantumHybridPlatform: React.FC = () => {con, s, t, featur, e, s = [>>>>>
         <divclassName="container-responsiverelativez-10">
           <divclassName="tex, t-cent, e, r, m, a, x-w-4xlmx-auto">
             <divclassName="inlin, e-fl, e, x, ite, m, s-cent, e, r, px-4, py-2, bg-indi, g, o-4, 0, 0/10, bord, e, r, bord, e, r-indi, g, o-4, 0, 0/20, round, e, d-fu, l, l, te, x, t-indi, g, o-4, 0, 0, te, x, t-smfont-mediummb-6">
-              <CheckCircleclassName="w-4h-4mr-2" />
+              <CheckCircleclassName="w-4 h-4mr-2" />
               Quantu, mAITechnology
             </div>
             <h1className="text-5, xlmd:te, x, t-6, x, l, fon, t-bo, l, d, te, x, t-whi, temb-6">AI, Quantum, HybridPlatform</h1>
@@ -114,7 +114,7 @@ Quant, u, m-Classic, a, l, Hybrid, Intelligence</h2>
               >
                 <divclassName="w-12 h-12bg-gradien, t-to-br, fr, o, m-indi, g, o-4, 0, 0/20, to-purp, l, e-5, 0, 0/20, round, e, d-lg, flex, item, s-cent, e, r, justi, f, y-cent, e, r, mb-4, group-hover:fr, o, m-indi, g, o-4, 0, 0/40, group-hover:to-purp, l, e-5, 0, 0/40, transiti, o, n-a, l, l, duration-200">
 
-                  <feature.iconclassName="w-6h-6, te, x, t-indigo-300" />
+                  <feature.iconclassName="w-6 h-6, te, x, t-indigo-300" />
                 </div>
                 <h3className="text-xlfo, n, t-semibo, l, d, te, xt-whitemb-3">{feature.title}</h3>
                 <pclassName="text-gray-4, 0, 0, group-hover:te, x, t-gr, a, y-3, 0, 0, transition-colors">{featu, re.description}</p>
@@ -177,18 +177,18 @@ RevolutionaryApplications</h2>
               </p>
               <divclassName="gridgrid-cols-1, md:grid-cols-2 gap-4">
                 {applicatio, n, s.m, a, p((applicationind, ex) => (<divkey ={index} classNam, e="fl, e, x, ite, ms-centerspace-x-3">
-                    <CheckCircleclassName="w-5h-5, text-indigo-400" />
+                    <CheckCircleclassName="w-5 h-5, text-indigo-400" />
 
               <h2className="text-4x, l, fon, t-bo, l, dtext-whitemb-6">Revolutiona, r, y, Applicatio, n, s</h2>
               <pclassName="text-xlte, xt-gray-300 mb-8">                O, u, r, AI-Quant, u, m, hybrid, platfor, m, opens, ne, w, frontiers, i, n, science, technolog, y, and, busines, s, solving, problem, s, that, wer, e, previously, impossibl, e.
               </p>
 
                 {applications.map((application, ind, ex) => (<divkey ={index} classNam, e="fl, e, x, ite, ms-centerspace-x-3">
-                    <CheckCircleclassName="w-5h-5, text-indigo-400" />
+                    <CheckCircleclassName="w-5 h-5, text-indigo-400" />
 
               <divclassName="gri, d, gr, i, d-co, l, s-1, md:gr, id-cols-2gap-4">
                 {applicatio, n, s.m, a, p((applicati, o, n, ind, ex) => (<divkey ={index} classNam, e="fl, e, x, ite, ms-centerspace-x-3">
-                    <CheckCircleclassName="w-5h-5, text-indigo-400" />
+                    <CheckCircleclassName="w-5 h-5, text-indigo-400" />
 
                     <spanclassName ="tex, t-gray-300">{application}</span>
                   </div>

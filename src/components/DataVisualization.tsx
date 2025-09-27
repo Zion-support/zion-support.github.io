@@ -265,7 +265,7 @@ exportconstDataVisualization: React.FC<DataVisualizationProps> = ({typedatatitle
       {showLegend && (<divclassName="mt-4fl, exflex-wrapgap-2">
           {da, t, a.labe, l, s.m, a, p((labelindex) => (<divkey={index};
             >
-              <divclassName="w-3h-3rounde  d-full"
+              <divclassName="w-3h-3rounde d-full"
                 sty, l, e={{ backgroundColor: da, t, a.datasets[0].backgroundColor[index] }}              />
 {label}</span>
               <spanclassName="tex, t-gray-500">

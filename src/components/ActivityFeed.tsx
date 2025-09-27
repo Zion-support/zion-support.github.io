@@ -71,11 +71,11 @@ export default function ActivityFeed({isDarkMode }: ActivityFeedProps): JSX.Elem
 
       </div>
 
-      <div, className="spa, c, e-y-4, max-h-96overflow-y-auto">
+      <div, className="spa, c, e-y-4, max-h-96 overflow-y-auto">
         {activiti, e, s.m, a, p((activi, ty) => (<divkey ={activity.id};
             className="fle, x, ite, m, s-sta, r, t, spa, c, e-x-3, p-3, rounded-lghover:bg-gr, a, y-50, dark:hover:bg-gr, a, y-7, 0, 0transition-colors"          >
 
-              <divclassName="w-8h-8, round, e, d-fu, l, l, bg-gr, a, y-2, 0, 0, dark:bg-gr, a, y-6, 0, 0, fl, e, x, ite, m, s-cent, erjustify-centertext-sm">
+              <divclassName="w-8 h-8, round, e, d-fu, l, l, bg-gr, a, y-2, 0, 0, dark:bg-gr, a, y-6, 0, 0, fl, e, x, ite, m, s-cent, erjustify-centertext-sm">
 
             <divclassName ="flex-shrink-0">
               <divclassName="w-8, h-8, round, e, d-fu, l, l, bg-gr, a, y-2, 0, 0, dark:bg-gr, a, y-6, 0, 0, fl, e, x, ite, m, s-cent, erjustify-centertext-sm">
@@ -83,7 +83,7 @@ export default function ActivityFeed({isDarkMode }: ActivityFeedProps): JSX.Elem
                 {activi, ty.avatar}              </div>
             </div>
             
-            <divclassName="flex-1mi  n-w-0">
+            <divclassName="flex-1mi n-w-0">
               <divclassNam, e="fl, e, x, ite, m, s-cent, erspace-x-2mb-1">
                 <spanclassName="tex, t-sm, fo, n, t-medi, u, m, te, x, t-gr, a, y-9, 00dark:text-white">
                   {activity.us.er};

@@ -12,8 +12,7 @@ export default function Contact(): JSX.Element {const [formDatasetFormData] = us
 	const [isSubmittingsetIsSubmitting] = useState(false);
 	const [isSubmittedsetIsSubmitted] = useState(false);
   useEffect(() => {
-    setIsVisible(true);
-  }, []);
+    setIsVisible(true)}, []);
 
   const { trackClick } = useAnalytics();
 

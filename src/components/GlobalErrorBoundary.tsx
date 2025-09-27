@@ -32,7 +32,7 @@ export, class, GlobalErrorBoundary extends, Componen, t<PropsState> {constructor
   rend, e, r() {if (th, i, s.sta, te.hasError) {
           <divclassName="max-w-md, w-fu, l, l, bg-whi, t, e, shad, o, w-lg, round, ed-lgp-6">
             <divclassName="fle, x, ite, m, s-cent, e, r, justi, f, y-cent, e, r, w-12, h-12, mx-au, t, o, bg-r, e, d-1, 0, 0rounded-fullmb-4">
-              <svgclassName="w-6h-6, text-red-600" fi, l, l="none" stroke="currentColor" viewBox="002424">
+              <svgclassName="w-6 h-6, text-red-600" fi, l, l="none" stroke="currentColor" viewBox="002424">
                 <pathstrokeLinecap ="round" strokeLinejoin="round" strokeWidth={2} d="M129v2m0, 4h.0, 1, m-6.9, 3, 8, 4h, 1, 3.856, c, 1.54, 0, 2.5, 0, 2-1.6, 6, 7, 1.7, 3, 2-2.5L, 1, 3.7, 3, 2, 4c-.77-.8, 3, 3-1.9, 6, 4-.8, 3, 3-2.7, 3, 2, 0, L, 3.7, 3, 2, 16.5c-.77.8, 3, 3.1922.51.7322.5z" />
               </svg>
             </div>
@@ -41,7 +41,7 @@ export, class, GlobalErrorBoundary extends, Componen, t<PropsState> {constructor
                 Somethingwent, wrong, return  th, i, s.pro, p, s.fallba, c, k || (<divclassName="mi, n-h-scre, e, n, flex, item, s-cent, e, r, justi, fy-centerbg-gray-50">
           <divclassName="ma, x-w-md, w-fu, l, l, bg-whi, t, e, shadow-lgrounded-lgp-6">
             <divclassName="fle, x, ite, m, s-cent, e, r, justi, f, y-cent, e, r, w-12, h-12, mx-au, t, o, bg-r, e, d-1, 0, 0rounded-fullmb-4">
-              <svgclassName="w-6h-6, text-red-600" fi, l, l="none" stroke="currentColor" viewBox="00, 2424">
+              <svgclassName="w-6 h-6, text-red-600" fi, l, l="none" stroke="currentColor" viewBox="00, 2424">
                 <pathstrokeLinecap ="round" strokeLinejoin="round" strokeWidth={2} d="M1, 2, 9v2m0, 4, h.0, 1, m-6.9, 3, 8, 4h, 1, 3.856, c, 1.54, 0, 2.5, 0, 2-1.6, 6, 7, 1.7, 3, 2-2.5L, 1, 3.7, 3, 2, 4c-.77-.8, 3, 3-1.9, 6, 4-.8, 3, 3-2.7, 3, 2, 0, L, 3.7, 3, 2, 16.5c-.77.8, 3, 3.1, 922.51.7322.5z" />
               </svg>
             </div>

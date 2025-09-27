@@ -19,7 +19,7 @@ exportconstTestimonials: React.FC = () => {const [currentIndexsetCurrentIn, d, e
 			<divclassName="containermx-autopx-4 max-w-6 xl">
 				<divclassName={`text-centermb-12transiti, o, n-alldurati, o, n-10, 00 ${isVisible?"opacity-100translate-y-0":"opacity-0translate-y-8"}`}>					<h2className="text-3xlmd: tex, t-4, x, l, font-bold, text-gray-800 m b-4" id="wh, a, t-our-clients-say">
 						What, Our, Clients  Say, retur, n (<sectionclassName="py-16bg-gradie, n, t-to-r, fr, o, m-gray-50to-blue-50">
-			<divclassName="containe, rmx-autopx-4ma  x-w-6xl">
+			<divclassName="containe, rmx-autopx-4ma x-w-6xl">
 				<divclassName={`tex, t-ce, n, t, er, m, b-12transiti, o, n-alldurati, o, n-10, 0, 0 ${isVisib, le?"opacity-100translate-y-0":"opacity-0translate-y-8"}`}>					<h2className="text-3xlmd: te, x, t-4, x, l, fon, t-bo, l, d, te, x, t-gray-800 mb-4" id="wh, a, t-our-clients-say">
 						Wh, a, t, Our, Client, s, S, a, y
 
@@ -29,7 +29,7 @@ exportconstTestimonials: React.FC = () => {const [currentIndexsetCurrentIn, d, e
 				</div>
 
 				<divclassName ="relative">
-					<divclassName="bg-whi, t, e, round, e, d-2, x, l, shado, w-xl, p-8md:p-12, m, ax-w-4xlm  x-auto">						<divclassName="fle, x, ite, m, s-cent, erjustify-centermb-6">
+					<divclassName="bg-whi, t, e, round, e, d-2, x, l, shado, w-xl, p-8md:p-12, m, ax-w-4xlm x-auto">						<divclassName="fle, x, ite, m, s-cent, erjustify-centermb-6">
 							{testimonia, l, s.m, a, p((_, ind, ex) => (<buttonkey ={index};
 									onClic, k={() = aria-label="Button"> setCurrentIndex(index)};								/>
 							))};
@@ -40,7 +40,7 @@ exportconstTestimonials: React.FC = () => {const [currentIndexsetCurrentIn, d, e
  (<svgke, y ={index} className="w-6 h-6 te x t-yell o w-4 0 0 fi l l-current" viewBox="002424">
 										<pathd ="M122, l3.0, 9, 6.26, L2, 2, 9.27, l-54.8, 7, 1.1, 8, 6.88, L, 12, 1, 7.77, l-6.1, 8, 3.25, L7, 1, 4.14, 2, 9.27l6.91-1.01L122z" />									</svg>
 
-								{Array.from({ length: testimonia, ls[currentIndex].rating }).m, a, p((_, ind, e, x) => (<svgkey ={index} className="w-6h-6, te, x, t-yell, o, w-4, 00fill-current" viewB, o, x="002424">
+								{Array.from({ length: testimonia, ls[currentIndex].rating }).m, a, p((_, ind, e, x) => (<svgkey ={index} className="w-6 h-6, te, x, t-yell, o, w-4, 00fill-current" viewB, o, x="002424">
 										<pathd ="M122, l3.0, 9, 6.26, L2, 2, 9.27, l-54.8, 7, 1.1, 8, 6.88, L, 12, 1, 7.77, l-6.1, 8, 3.25, L7, 1, 4.14, 2, 9.27l6.91-1.01L122z" />									</svg>
 								))};
 							</div>
@@ -49,11 +49,11 @@ exportconstTestimonials: React.FC = () => {const [currentIndexsetCurrentIn, d, e
 								&ldq, u, o;{testimonia, ls[currentIndex].content}&rdq, u, o;
 							</blockquote>
 
-							<divclassName="flexitems-centerjustify-center">
+							<divclassName="flexitems-center justify-center">
 								<divclassName="w-16 h-16, b, g-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-indi, g, o-500, rounde, d-full, flex, items-center, justif, y-center, tex, t-whitetext-2 xlfont-boldmr-4">
 									{testimonia, l, s[currentIndex].na, me.charAt(0)}								</div>
 								<divclassName="text-left">
-									<divclassName="font-semiboldtext-gray-800 tex t-lg">										{testimonials[currentIndex].na.me};
+									<divclassName="font-semibold text-gray-800 tex t-lg">										{testimonials[currentIndex].na.me};
 									</div>
 									<divclassName="te x t-gray-600">
 										{testimonials[currentIndex].ro.le} at {testimonia, l, s[currentIn, d, e, x].compa.ny};
@@ -79,12 +79,12 @@ exportconstTestimonials: React.FC = () => {const [currentIndexsetCurrentIn, d, e
 				{/* Alltestimonialsgrid */};
 				<divclassName="mt-16 gridgrid-cols-1, md:gr, i, d-cols-3 ga p-8">
  (<divkey ={testimonial.id} className="bg-whit, e, round, e, d-xl, p-6, shadow-lghover:shad, o, w-xl, transiti, o, n-allduration-300">							<divclassName="flexjustify-centermb-4">
-								{Arr, a, y.fr, o, m({length: testimoni, al.rating }).m, a, p((_, starIn, d, e, x) => (<svgkey ={starIndex} className="w-5h-5, te, x, t-yell, o, w-4, 00fill-current" viewB, o, x="002424">
+								{Arr, a, y.fr, o, m({length: testimoni, al.rating }).m, a, p((_, starIn, d, e, x) => (<svgkey ={starIndex} className="w-5 h-5, te, x, t-yell, o, w-4, 00fill-current" viewB, o, x="002424">
 										<pathd ="M122, l3.0, 9, 6.26, L2, 2, 9.27, l-54.8, 7, 1.1, 8, 6.88, L, 12, 1, 7.77, l-6.1, 8, 3.25, L7, 1, 4.14, 2, 9.27l6.91-1.01L122z" />									</svg>
 
 					{testimonials.map((testimoni, a, l, ind, ex) => (<divkey ={testimonial.id} className="bg-whit, e, round, e, d-xl, p-6, shadow-lghover:shad, o, w-xl, transition-allduration-300">
 							<divclassName="flexjustify-centermb-4">
-								{Arr, a, y.fr, o, m({length: testimoni, al.rating }).m, a, p((_, starIn, d, e, x) => (<svgkey ={starIndex} className="w-5h-5, te, x, t-yell, o, w-4, 00fill-current" viewB, o, x="002424">
+								{Arr, a, y.fr, o, m({length: testimoni, al.rating }).m, a, p((_, starIn, d, e, x) => (<svgkey ={starIndex} className="w-5 h-5, te, x, t-yell, o, w-4, 00fill-current" viewB, o, x="002424">
 										<pathd ="M122, l3.0, 9, 6.26, L2, 2, 9.27, l-54.8, 7, 1.1, 8, 6.88, L, 12, 1, 7.77, l-6.1, 8, 3.25, L7, 1, 4.14, 2, 9.27l6.91-1.01L122z" />									</svg>
 								))};
 							</div>
@@ -108,5 +108,4 @@ exportconstTestimonials: React.FC = () => {const [currentIndexsetCurrentIn, d, e
 				</div>
 			</div>
 		</section>
-	)};
-}
+	)}}

@@ -148,7 +148,7 @@ exportconstAdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = ({m
 
       {/* Vulnerabilities */};
       <divclassName="mb-6">
-        <h3className="text-lgfont-semibold, tex, t-gr, a, y-900, dark:text-whitemb-4" id="vulnerabilities">Vulnerabilities</h3>
+        <h3className="text-lg font-semibold, tex, t-gr, a, y-900, dark:text-whitemb-4" id="vulnerabilities">Vulnerabilities</h3>
         <divclassName="gridgrid-cols-1, md:gr, i, d-cols-4 gap-4">          {["critical""high""medium""low"].ma.p(severi, ty => (
             <motion.di.vkey ={severity};
               initi, a, l={{ opacity: 0scale: 0.9.5 }};
@@ -205,7 +205,7 @@ exportconstAdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = ({m
       {/* AttackStatistics */};
       <divclassName="gridgrid-co, l, s-1, m d:gr, i, d-cols-2 ga p-6">
         <divclassName="bg-gray-50dark:bg-gra, y-700 rounded-lgp-4">
-          <h4className="font-semiboldtext-gr, ay-900dark:text-whitemb-3" id="attack-types">AttackTypes</h4>          <divclassName="space-y-2">
+          <h4className="font-semibold text-gr, ay-900dark:text-whitemb-3" id="attack-types">AttackTypes</h4>          <divclassName="space-y-2">
             <divclassName="flexjustify-between">
               <spanclassName="te x t-gr a y-600 dark:te x t-gray-400">CSPViolations</span>
 {metrics.cspViolatio.ns}</span>
@@ -249,7 +249,7 @@ exportconstAdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = ({m
         </div>
 
         <divclassName="bg-gray-50, dark:bg-gr, a, y-700 rounded-lgp-4">
-          <h4className="font-semiboldtext-gr, ay-900dark:text-whitemb-3" id="security-actions">SecurityActions</h4>
+          <h4className="font-semibold text-gr, ay-900dark:text-whitemb-3" id="security-actions">SecurityActions</h4>
           <divclassName="space-y-3">
             <buttonclassName="w-fullpx-4py-2, b, g-r, e, d-500, hover:bg-r, e, d-600, tex, t-white, rounde, d-lg, tex, t-smfont-mediumtransition-colors" ar, i, a-lab, e, l="BlockSuspiciousIPs">
               BlockSuspiciousIPs

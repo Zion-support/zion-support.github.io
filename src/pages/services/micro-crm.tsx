@@ -45,7 +45,7 @@ export default function MicroCRM() {constfeatures = [{
         <divclassName="containe, r, mx-au, topx-4relativez-10">
           <divclassName="tex, t-cent, e, r, m, ax-w-4xlmx-auto">
             <divclassName="inlin, e-fl, e, x, ite, m, s-cent, e, r, px-4, py-2, bg-gradie, n, t-to-r, fr, o, m-cy, a, n-5, 0, 0/20, to-bl, u, e-5, 0, 0/20, round, e, d-fu, l, l, border, border-cyan-400/30mb-6">
-              <CheckCircleclassName="w-4h-4, mr-2, text-cyan-300" />
+              <CheckCircleclassName="w-4 h-4, mr-2, text-cyan-300" />
               <spanclassName="tex, t-cy, a, n-3, 0, 0, te, xt-smfont-medium">Custom, e, r, Relationship, Managemen, t</span>
             </div>
             <h1className="tex, t-5, xlmd:te, x, t-6, x, l, fo, n, t-bo, l, dtext-whitemb-6">Mic, r, o, C, R, M</h1>
@@ -62,7 +62,7 @@ export default function MicroCRM() {constfeatures = [{
         <divclassName="containe, r, mx-au, topx-4relativez-10">
           <divclassName="tex, t-cent, e, r, m, a, x-w-4xlmx-auto">
             <divclassName="inlin, e-fl, e, x, ite, m, s-cent, e, r, px-4, py-2, bg-gradie, n, t-to-r, fr, o, m-cy, a, n-5, 0, 0/20, to-bl, u, e-5, 0, 0/20, round, e, d-fu, l, l, border, border-cyan-400/30mb-6">
-              <CheckCircleclassName="w-4h-4, mr-2, text-cyan-300" />
+              <CheckCircleclassName="w-4 h-4, mr-2, text-cyan-300" />
               <spanclassName="tex, t-cy, a, n-3, 0, 0, te, xt-smfont-medium">Custom, e, r, Relationship, Managemen, t</span>
             </div>
             <h1className="tex, t-5, xlmd:te, x, t-6, x, l, fon, t-bo, l, dtext-whitemb-6">Mic, r, o, C, R, M</h1>
@@ -79,7 +79,7 @@ export default function MicroCRM() {constfeatures = [{
         <divclassName="containe, r, mx-au, topx-4relativez-10">
           <divclassName="tex, t-cent, e, r, m, a, x-w-4xlmx-auto">
             <divclassName="inlin, e-fl, e, x, ite, m, s-cent, e, r, px-4, py-2, bg-gradie, n, t-to-r, fr, o, m-cy, a, n-5, 0, 0/20, to-bl, u, e-5, 0, 0/20, round, e, d-fu, l, l, border, border-cyan-400/30mb-6">
-              <CheckCircleclassName="w-4h-4, mr-2, text-cyan-300" />
+              <CheckCircleclassName="w-4 h-4, mr-2, text-cyan-300" />
               <spanclassName="tex, t-cy, a, n-3, 0, 0, te, xt-smfont-medium">Custom, e, r, Relationship, Managemen, t</span>
             </div>
             <h1className="tex, t-5, xlmd:te, x, t-6, x, l, fon, t-bo, l, dtext-whitemb-6">Mic, r, o, C, R, M</h1>
@@ -154,12 +154,12 @@ Essenti, a, lCRMFeatures</h2>
           </div>
           <divclassName="gridmd :gr, i, d-co, l, s-2, lg:gr, i, d-cols-3 gap-6">
  (<divkey ={index} classNam, e="fl, e, x, ite, ms-startspace-x-3">
-                <CheckCircleclassName="w-5h-5, te, x, t-cy, a, n-4, 0, 0flex-shrink-0mt-1" />
+                <CheckCircleclassName="w-5 h-5, te, x, t-cy, a, n-4, 0, 0flex-shrink-0mt-1" />
  (<divkey ={index} classNam, e="fl, e, x, ite, ms-startspace-x-3">
-                <CheckCircleclassName="w-5h-5, te, x, t-cy, a, n-4, 0, 0flex-shrink-0mt-1" />
+                <CheckCircleclassName="w-5 h-5, te, x, t-cy, a, n-4, 0, 0flex-shrink-0mt-1" />
 
             {benefi, t, s.m, a, p((benef, i, t, ind, ex) => (<divkey ={index} classNam, e="fl, e, x, ite, ms-startspace-x-3">
-                <CheckCircleclassName="w-5h-5, te, x, t-cy, a, n-4, 0, 0flex-shrink-0mt-1" />
+                <CheckCircleclassName="w-5 h-5, te, x, t-cy, a, n-4, 0, 0flex-shrink-0mt-1" />
 
 
                 <spanclassName="tex, t-sla, te-300text-lg">{benefit}</span>              </div>

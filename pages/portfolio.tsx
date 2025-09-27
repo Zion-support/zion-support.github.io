@@ -406,7 +406,7 @@ export default function Portfolio(): JSX.Element {
 													<span className="px-2 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-medium">
 														{project.category}
 													</span>
-													<pclassName="text-xstext-gray-500 mt-1">{project.duration}</p>
+													<pclassName="text-xs text-gray-500 mt-1">{project.duration}</p>
 												</div>
 											</div>
 											<h3className="text-lg, fon, t-boldtext-gray-800 mb-3">

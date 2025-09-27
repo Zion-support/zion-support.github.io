@@ -78,7 +78,7 @@ constPerformanceMetrics: React.FC = () => {const [metri, c, s, setMetri, c, s] =
           </div>
           
           <divclassName="mt-3, p, t-2, borde, r-t, borde, r-gr, a, y-200, dark:bord, e, r-gray-700">
-            <divclassName="text-xstext-gr, a, y-500, dark:text-gray-400">
+            <divclassName="text-xs text-gr, a, y-500, dark:text-gray-400">
               Lastupdated: {n, e, w, Da, te()().toLocaleTimeString()}            </div>          </div>
         </div>
       )};

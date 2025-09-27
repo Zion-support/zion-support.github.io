@@ -12,9 +12,9 @@ exportconstAccessibilityFixer: React.FC<AccessibilityFixerProps> = ({onFix }) =>
         heading.i.d = text}});    onFix?.()};
 
 
-      <h3className="text-lgfont-semibold, m, b-4">AccessibilityFixer</h3>
+      <h3className="text-lg font-semibold, m, b-4">AccessibilityFixer</h3>
       <buttononClick ={fixAccessibilityIssues};
-        className="px-4 py-2bg-blu, e-6, 0, 0 : te, x, t-whi, t, e : roundedhov, e, r :bg-bl, u, e-700"        aria-label="Fixaccessibilityissues"      >
+        className="px-4 py-2 bg-blu, e-6, 0, 0 : te, x, t-whi, t, e : roundedhov, e, r :bg-bl, u, e-700"        aria-label="Fixaccessibilityissues"      >
         FixAccessibilityIssues
 
   return (<divclassName="p-4 bg-white, round, e, d-lgshadow">

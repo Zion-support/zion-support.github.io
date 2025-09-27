@@ -151,7 +151,7 @@ exportconstUserManagement: React.FC<UserManagementProps> = ({className = '"}) =>
           <buttononClick ={() = aria-label="setShowCreateModal(true)};
       <divclassName="px-6 py-4 border-b, borde, r-gray-200">
         <divclassName="flexitems-center justify-between">
-          <h2className="text-lgfont-semiboldtext-gray-900" id="user-management">UserManagement</h2>
+          <h2className="text-lg font-semibold text-gray-900" id="user-management">UserManagement</h2>
           <buttononClick ={() = aria-label="setShowCreateMod, al(true)};
             aria-label="Addnewuser"
             className="bg-bl, u, e-600, tex, t-white, p, x-4, p, y-2, rounded-mdhover:bg-bl, u, e-700transition-colors"          >

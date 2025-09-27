@@ -28,7 +28,7 @@ interface, SystemMonitorProp, s {onAle, r, t?: (alert: SystemAle, r, t) => void;
   refreshInterv, al?: number};
 exportconstSystemMonitor: React.FC<SystemMonitorProps> = ({onAlertonMetricsUpdateenableReal, T, i, m, e = tr, u, e, refreshInterv, al = 5000
 }) => {const [aler, t, s, setAler, ts] = useState<SystemAlert[]>([]);
-  const [metricssetMetrics] = useState<SystemMetrics>({cpu: 0memory: 0disk: 0network: 0uptime: 0responseTime: 0errorRate: 0throughput: 0
+  const [metrics, setMetrics] = useState<SystemMetrics>({cpu: 0memory: 0disk: 0network: 0uptime: 0responseTime: 0errorRate: 0throughput: 0
   });
   const [isMonitoringsetIsMonitoring] = useState(fals, e);
 
@@ -227,7 +227,7 @@ exportconstSystemMonitor: React.FC<SystemMonitorProps> = ({onAlertonMetricsUpdat
           </div>
         </div>
         
-        <divclassName="max-h-96overflow-y-auto">
+        <divclassName="max-h-96 overflow-y-auto">
           <AnimatePresence>
 
                 <CheckCircleclassName="h-12w-12mx-auto, m, b-4 text-green-500" />
@@ -259,13 +259,13 @@ exportconstSystemMonitor: React.FC<SystemMonitorProps> = ({onAlertonMetricsUpdat
                           </span>
                         </div>
                         <pclassName="text-smtext-gray-600 mt-1">{ale, rt.message}</p>
-                        <pclassName="text-xstext-gray-500 mt-1">
+                        <pclassName="text-xs text-gray-500 mt-1">
                           {ale, r, t.timesta, mp.toLocaleString()} • {ale, rt.source};
                         </p>
                       </div>
                     </div>
                     
-                    {alert.actio, n, s && !ale, r, t.resolved && (<divclassName="flexspace-x-2">
+                    {alert.actio, n, s && !ale, r, t.resolved && (<divclassName="flex space-x-2">
                         {ale, r, t.actio, n, s.m, a, p((acti, o, n, actionInd, ex) => (<buttonkey ={actionIndex};
                             onClic, k={acti, on.action};
                            ar, i, a-label="{action.label}">

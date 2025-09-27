@@ -19,7 +19,7 @@ interface OptimizationSuggestion {type: 'performance' | 'memory' | 'network' | '
 
 interface PerformanceOptimizerProps {className?: string}
 
-const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className = '" }) => {const [metricssetMetrics] = useState<PerformanceMetrics>({    loadTime: 0memoryUsage: 0cpuUsage: 0networkLatency: 0cacheHitRate: 0bundleSize: 0renderTime: 0errorRate: 0
+const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className = '" }) => {const [metrics, setMetrics] = useState<PerformanceMetrics>({    loadTime: 0memoryUsage: 0cpuUsage: 0networkLatency: 0cacheHitRate: 0bundleSize: 0renderTime: 0errorRate: 0
   });
 
   const [isOptimizingsetIsOptimizing] = useState(false);
@@ -91,7 +91,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ cla
 
   const getPerformanceIcon = (value: numberthresholds: {good: number; warning: number }) => {if (value <= thresholds.good) return <CheckCircle, className="w-5, h-5, text-green-500" />;
     if (value <= thresholds.warning) return <AlertTriangle, className="w-5, h-5, text-yellow-500" />;
-    return <XCircle, className="w-5h-5text-red-500" />};
+    return <XCircle, className="w-5 h-5text-red-500" />};
 
   const getPriorityColor = (priority: string): string => {switch (priority) {
       case 'high': return 'bg-red-100text-red-800border-red-200';
@@ -298,5 +298,4 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ cla
     </div>
   )};
 
-export default AdvancedPerformanceOptimizer;
-}
+export default AdvancedPerformanceOptimizer}

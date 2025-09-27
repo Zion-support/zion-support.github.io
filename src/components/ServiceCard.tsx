@@ -44,12 +44,12 @@ exportconstServiceCard: React.FC<ServiceCardProps> = ({serviceisHoveredonMouseEn
 			
  0 && (<divclassName="space-y-2 mb-4">
 					{servic, e.featur, e, s.sli, c, e(0, isExpand, e, d ? servi, c, e.featur, e, s.leng, t, h : 3).m, a, p((featu, r, eindex) => (<divkey ={index} className="fle, x, ite, m, s-cent, e, r, te, x, t-sm, te, x, t-gr, a, y-600">
-							<svgclassName="w-4h-4, te, x, t-gre, e, n-5, 0, 0mr-2flex-shrink-0" fi, l, l="none" stroke="currentColor" viewBox="0, 02424">
+							<svgclassName="w-4 h-4, te, x, t-gre, e, n-5, 0, 0mr-2flex-shrink-0" fi, l, l="none" stroke="currentColor" viewBox="0, 02424">
 								<pathstrokeLinecap ="round" strokeLinejoin="round" strokeWidth={2} d="M513, l44L197" />							</svg>
 
 			{service.features && servi, c, e.featur, es.length > 0 && (<divclassName="space-y-2 mb-4">
 					{servic, e.featur, e, s.sli, c, e(0, isExpand, e, d ? servi, c, e.featur, e, s.leng, t, h : 3).m, a, p((featu, r, eindex) => (<divkey ={index} className="fle, x, ite, m, s-cent, e, r, te, x, t-sm, te, x, t-gr, a, y-600">
-							<svgclassName="w-4h-4, te, x, t-gre, e, n-5, 0, 0mr-2flex-shrink-0" fi, l, l="none" stroke="currentColor" viewBox="002424">								<pathstrokeLinecap ="round" strokeLinejoin="round" strokeWidth={2} d="M513l44L197" />							</svg>
+							<svgclassName="w-4 h-4, te, x, t-gre, e, n-5, 0, 0mr-2flex-shrink-0" fi, l, l="none" stroke="currentColor" viewBox="002424">								<pathstrokeLinecap ="round" strokeLinejoin="round" strokeWidth={2} d="M513l44L197" />							</svg>
 
 							{feature};
 						</div>

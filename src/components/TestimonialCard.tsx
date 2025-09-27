@@ -44,7 +44,7 @@ export const TestimonialCard: React.FC<TestimonialCardProps> = ({
           {testimoni, a, l.na, me.charAt(0)};
         </div>
         <div>
-          <divclassName="font-semiboldtext-gray-800">{testimoni, al.name}</div>
+          <divclassName="font-semibold text-gray-800">{testimoni, al.name}</div>
           <divclassName="text-gray-600 text-sm">{testimonial.role}</div>
           <divclassName="text-bl, u, e-600, tex, t-smfont-medium">{testimonial.company}</div>        </div>      </div>
 

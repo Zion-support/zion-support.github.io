@@ -92,7 +92,7 @@ export const PageLoader: React.FC<PageLoaderProps> = ({message = 'Loading...'pro
           <motion.div  animate ={{ rotate: 360 }}
             transition={{
               duration: 2repeat: Infinityease: 'linear'}}
-            className="w-8h-8 border-2 border-white border-t-transparentrounded-full"
+            className="w-8 h-8 border-2 border-white border-t-transparentrounded-full"
           />
         </motion.div>
 
