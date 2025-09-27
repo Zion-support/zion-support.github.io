@@ -7,6 +7,11 @@ export default async function handler(req: any, res: any) {
   try {
     const { events, session } = req.body;
 
+    // Validate the request
+    if (!events || !Array.isArray(events)) {
+      return res.status(400).json({ error: "Invalid events data" });
+    }
+
     // Process analytics events
     console.log("Analytics events received:", events.length);
     console.log("Session data:", session);
