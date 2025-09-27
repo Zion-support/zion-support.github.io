@@ -1,8 +1,8 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
-import Navigation from '../src/components/Navigation';
-import ErrorBoundary from '../src/components/ErrorBoundary';
+// import Navigation from '../src/components/Navigation';
+// import ErrorBoundary from '../src/components/ErrorBoundary';
 import SEO from '../src/components/SEO';
 import { useAnalytics } from '../src/hooks/useAnalytics';
 
@@ -123,9 +123,9 @@ export default function Contact(): JSX.Element {
 	];
 
 	return (
-		<ErrorBoundary>
+		<>
 			<SEO />
-			<Navigation />
+			{/* <Navigation /> */}
 			<Head>
 				<title>Contact Us - Zion App</title>
 				<meta name="description" content="Get in touch with Zion App for your technology needs. We're here to help transform your business." />
@@ -391,6 +391,6 @@ export default function Contact(): JSX.Element {
 					</main>
 				</div>
 			</div>
-		</ErrorBoundary>
+		</>
 	);
 }

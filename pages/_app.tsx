@@ -3,11 +3,11 @@ import type { AppProps } from 'next/app';
 import { HelmetProvider } from 'react-helmet-async';
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
-import PerformanceMetrics from '../src/components/PerformanceMetrics';
+// import PerformanceMetrics from '../src/components/PerformanceMetrics';
 import PerformanceMonitor from '../src/components/PerformanceMonitor';
 import AccessibilityAuditor from '../src/components/AccessibilityAuditor';
 import AccessibilityEnhancer from '../src/components/AccessibilityEnhancer';
-import EnhancedErrorBoundary from '../src/components/EnhancedErrorBoundary';
+// import EnhancedErrorBoundary from '../src/components/EnhancedErrorBoundary';
 // import { AnalyticsProvider } from '../src/components/EnhancedAnalytics';
 import PerformanceOptimizer from '../src/components/PerformanceOptimizer';
 import AdvancedErrorHandler from '../src/components/AdvancedErrorHandler';
@@ -42,8 +42,7 @@ export default function App({ Component, pageProps }: AppProps) {
   }, []);
 
   return (
-    <EnhancedErrorBoundary>
-      <HelmetProvider>
+    <HelmetProvider>
           <Head>
             <meta charSet="utf-8" />
             <meta name="robots" content="index, follow" />
@@ -182,7 +181,7 @@ export default function App({ Component, pageProps }: AppProps) {
           <PerformanceOptimizer>
             <Component {...pageProps} />
           </PerformanceOptimizer>
-          <PerformanceMetrics />
+          {/* <PerformanceMetrics /> */}
           <PerformanceMonitor />
           <PerformanceTracker />
           <WebVitals />
@@ -196,6 +195,5 @@ export default function App({ Component, pageProps }: AppProps) {
             enableUserFeedback={true}
           />
         </HelmetProvider>
-    </EnhancedErrorBoundary>
   );
 }
