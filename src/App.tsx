@@ -9,7 +9,7 @@ import { performanceOptimizer } from './utils/optimization';
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
 import { analytics } from './utils/analytics';
 import { seoOptimizer } from './utils/seoOptimization';
-import { securityManager, SecurityManager } from './utils/securityEnhancements';
+import { securityManager } from './utils/securityEnhancements';
 import { cacheManager } from './utils/cacheManager';
 import { apiClient } from './utils/apiClient';
 import { notificationManager } from './utils/notificationManager';
@@ -41,8 +41,7 @@ export default function App(): React.JSX.Element {
     // Initialize build optimizations
     initOptimizations();
     
-    // Initialize security features
-    const securityManager = SecurityManager.getInstance();
+    // Security features are automatically initialized in SecurityManager constructor
     
     // Initialize performance monitoring
     const performanceMonitor = PerformanceMonitor.getInstance();
@@ -83,12 +82,12 @@ export default function App(): React.JSX.Element {
       description: seoData.description,
       keywords: seoData.keywords,
       image: seoData.ogImage,
-      url: window.location.href,
-      type: seoData.ogType as 'website' | 'article' | 'product'
+      type: seoData.ogType as 'website' | 'article' | 'product',
+      url: window.location.href
     });
 
     // Initialize enhanced security features
-    // SecurityManager is already initialized with default config
+    securityManager.monitorSecurityEvents();
 
     // Initialize cache manager
     cacheManager.configure({

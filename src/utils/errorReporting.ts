@@ -302,7 +302,7 @@ class ErrorReporter {
           body: JSON.stringify(report),
         });
       }
-    } catch (error) {
+    } catch {
       // Fallback: store in localStorage for later retry
       try {
         if (typeof localStorage !== 'undefined') {
