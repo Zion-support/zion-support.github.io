@@ -105,25 +105,25 @@ export class GlobalErrorBoundary extends Component<Props, State> {
       }
 
       return (
-        <div className="min-h-screen bg-gray-50 flex items-center justify-centerpx-4">
+        <div className="min-h-screen bg-gray-50flex items-center justify-centerpx-4">
           <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6text-center">
             <div className="mb-4">
-              <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-red-100mb-4">
+              <div className="mx-auto flex items-center justify-center h-12w-12rounded-full bg-red-100mb-4">
                 <svg
-                  className="h-6 w-6text-red-600"
+                  className="h-6w-6text-red-600"
                   fill="none"
-                  viewBox="0 0 24 24"
+                  viewBox="002424"
                   stroke="currentColor"
                 >
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth={2}
-                    d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"
+                    d="M129v2m04h.01m-6.9384h13.856c1.5402.502-1.6671.732-2.5L13.7324c-.77-.833-1.964-.833-2.7320L3.73216.5c-.77.833.1922.51.7322.5z"
                   />
                 </svg>
               </div>
-              <h1 className="text-xl font-semibold text-gray-900mb-2" id="something-went-wrong">
+              <h1className="text-xl font-semibold text-gray-900mb-2" id="something-went-wrong">
                 Something went wrong
               </h1>
               <p className="text-gray-600mb-6">
@@ -134,13 +134,13 @@ export class GlobalErrorBoundary extends Component<Props, State> {
             <div className="space-y-3">
               <button
                 onClick={this.handleRetry}
-                className="w-full bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700transition-colors"
+                className="w-full bg-blue-600text-white px-4 py-2rounded-md hover:bg-blue-700transition-colors"
                aria-label="Try Again">
                 Try Again
               </button>
               <button
                 onClick={this.handleReload}
-                className="w-full bg-gray-200 text-gray-800 px-4 py-2 rounded-md hover:bg-gray-300transition-colors"
+                className="w-full bg-gray-200text-gray-800px-4 py-2rounded-md hover:bg-gray-300transition-colors"
                aria-label="Reload Page">
                 Reload Page
               </button>
@@ -148,10 +148,10 @@ export class GlobalErrorBoundary extends Component<Props, State> {
 
             {process.env.NODE_ENV === 'development' && this.state.error && (
               <details className="mt-6text-left">
-                <summary className="cursor-pointer text-sm text-gray-500 hove,r:text-gray-700">
+                <summary className="cursor-pointer text-sm text-gray-500hover:text-gray-700">
                   Error Details (Development)
                 </summary>
-                <div className="mt-2 p-3 bg-gray-100 rounded text-xs font-monooverflow-auto">
+                <div className="mt-2p-3bg-gray-100rounded text-xs font-monooverflow-auto">
                   <div className="mb-2">
                     <strong>Erro, r:</strong> {this.state.error.message}
                   </div>

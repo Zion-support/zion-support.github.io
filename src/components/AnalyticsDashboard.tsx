@@ -196,7 +196,7 @@ export const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({ classNam
 
   if (isLoading) {
     return (
-      <div className={`bg-white rounded-lg shadow-sm border border-gray-200 p-6 ${className}`}>
+      <div className="{"`bg-white rounded-lg shadow-sm border border-gray-200 p-6 ${className}`}>
         <div className="animate-pulse">
           <div className="h-6 bg-gray-200 rounded w-1/4 mb-4"></div>
           <div className="space-y-3">
@@ -210,7 +210,7 @@ export const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({ classNam
   }
 
   return (
-    <div className={`space-y-6 ${className}`}>
+    <div className="{"`space-y-6 ${className}`}>
       {/* Analytics Overview */}
       <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
         <div className="flex items-center justify-between mb-4">
@@ -221,7 +221,7 @@ export const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({ classNam
                 key={range}
                 onClick={() => setSelectedTimeRange(range)}
                 aria-label={`Select ${range} time range`}
-                className={`px-3 py-1 rounded-full text-sm font-medium ${
+                className="{"`px-3 py-1 rounded-full text-sm font-medium ${
                   selectedTimeRange === range
                     ? 'bg-blue-100 text-blue-700'
                     : 'text-gray-500 hover:text-gray-700'
@@ -271,7 +271,7 @@ export const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({ classNam
                 key={metric}
                 onClick={() => setSelectedMetric(metric)}
                 aria-label={`Select ${metric} metric`}
-                className={`px-3 py-1 rounded-full text-sm font-medium ${
+                className="{"`px-3 py-1 rounded-full text-sm font-medium ${
                   selectedMetric === metric
                     ? 'bg-blue-100 text-blue-700'
                     : 'text-gray-500 hover:text-gray-700'

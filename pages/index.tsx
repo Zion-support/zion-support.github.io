@@ -6,19 +6,19 @@ import dynamic from 'next/dynamic';
 import EnhancedSEO from '../src/components/EnhancedSEO';
 
 // Lazy load heavy components
-const PerformanceTracker = dynamic(() => import('../src/components/PerformanceTracker'), {
-  ssr: false,
-  loading: () => <div className="h-4 w-full bg-gray-200 rounded animate-pulse" />
-});
+// const PerformanceTracker = dynamic(() => import('../src/components/PerformanceTracker'), {
+//   ssr: false,
+//   loading: () => <div className="h-4 w-full bg-gray-200 rounded animate-pulse" />
+// });
 
 const AccessibilityEnhancer = dynamic(() => import('../src/components/AccessibilityEnhancer'), {
   ssr: false
 });
 
-const AdvancedPerformanceMonitor = dynamic(() => import('../src/components/AdvancedPerformanceMonitor'), {
-  ssr: false,
-  loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
-});
+// const AdvancedPerformanceMonitor = dynamic(() => import('../src/components/AdvancedPerformanceMonitor'), {
+//   ssr: false,
+//   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+// });
 
 // const AdvancedAnalyticsDashboard = dynamic(() => import('../src/components/AdvancedAnalyticsDashboard'), {
 //   ssr: false,
@@ -30,10 +30,10 @@ const AdvancedSecurityMonitor = dynamic(() => import('../src/components/Advanced
   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
 });
 
-const AdvancedAccessibilityAuditor = dynamic(() => import('../src/components/AdvancedAccessibilityAuditor'), {
-  ssr: false,
-  loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
-});
+// const AdvancedAccessibilityAuditor = dynamic(() => import('../src/components/AdvancedAccessibilityAuditor'), {
+//   ssr: false,
+//   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+// });
 
 export default function Home(): JSX.Element {
   const [isVisible, setIsVisible] = useState(false);
@@ -317,12 +317,12 @@ export default function Home(): JSX.Element {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
               >
-                <AdvancedPerformanceMonitor 
+                {/* <AdvancedPerformanceMonitor 
                   onMetricsUpdate={(metrics) => {
                     console.log('Performance metrics updated:', metrics);
                   }}
                   className="h-full"
-                />
+                /> */}
               </motion.div>
               
               <motion.div
@@ -413,12 +413,12 @@ export default function Home(): JSX.Element {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.6 }}
               >
-                <AdvancedAccessibilityAuditor 
+                {/* <AdvancedAccessibilityAuditor 
                   onAuditComplete={(metrics) => {
                     console.log('Accessibility audit completed:', metrics);
                   }}
                   className="h-full"
-                />
+                /> */}
               </motion.div>
             </div>
           </div>
@@ -426,7 +426,7 @@ export default function Home(): JSX.Element {
 
         {/* Performance and Accessibility Components */}
         <AccessibilityEnhancer />
-        <PerformanceTracker />
+        {/* <PerformanceTracker /> */}
 
         {/* Analytics Dashboard Link */}
         <section className="py-16 bg-white">

@@ -4,7 +4,7 @@ import { HelmetProvider } from 'react-helmet-async';
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
 // import PerformanceMetrics from '../src/components/PerformanceMetrics';
-import PerformanceMonitor from '../src/components/PerformanceMonitor';
+// import PerformanceMonitor from '../src/components/PerformanceMonitor';
 import AccessibilityAuditor from '../src/components/AccessibilityAuditor';
 import AccessibilityEnhancer from '../src/components/AccessibilityEnhancer';
 // import EnhancedErrorBoundary from '../src/components/EnhancedErrorBoundary';
@@ -18,9 +18,9 @@ import '../src/styles/accessibility.css';
 import '../src/styles/improvements.css';
 
 // Lazy load heavy components
-const PerformanceTracker = dynamic(() => import('../src/components/PerformanceTracker'), {
-  ssr: false
-});
+// const PerformanceTracker = dynamic(() => import('../src/components/PerformanceTracker'), {
+//   ssr: false
+// });
 
 export default function App({ Component, pageProps }: AppProps) {
   // Setup global error handling
@@ -182,8 +182,8 @@ export default function App({ Component, pageProps }: AppProps) {
             <Component {...pageProps} />
           </PerformanceOptimizer>
           {/* <PerformanceMetrics /> */}
-          <PerformanceMonitor />
-          <PerformanceTracker />
+          {/* <PerformanceMonitor />
+          <PerformanceTracker /> */}
           <WebVitals />
           <AccessibilityAuditor />
           <AccessibilityEnhancer enableKeyboardShortcuts={true} enableVoiceCommands={false} />
