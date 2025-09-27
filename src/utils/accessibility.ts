@@ -337,7 +337,7 @@ export class AccessibilityManager {
     }
   }
 
-  private handleEscapeKey(_event: KeyboardEvent): void {
+  private handleEscapeKey(): void {
     // Close any open modals or dropdowns
     const modals = document.querySelectorAll('[role="dialog"], [role="alertdialog"]');
     modals.forEach(modal => {

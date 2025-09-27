@@ -3,13 +3,13 @@
  */
 
 // Lazy loading utilities
-export const lazyImport = <T extends Record<string, any>>(
+export const lazyImport = <T extends Record<string, unknown>>(
   factory: () => Promise<T>,
   name?: keyof T
-) => {
+): React.LazyExoticComponent<React.ComponentType<unknown>> => {
   return React.lazy(() =>
     factory().then((module) => ({
-      default: name ? module[name] : module.default || module,
+      default: (name ? module[name] : module.default || module) as React.ComponentType<unknown>,
     }))
   );
 };
@@ -111,7 +111,7 @@ export const optimizeTreeShaking = {
   },
   
   // Dynamic imports for code splitting
-  splitComponent: <T>(importFn: () => Promise<{ default: T }>) => {
+  splitComponent: <T extends React.ComponentType<unknown>>(importFn: () => Promise<{ default: T }>) => {
     return React.lazy(importFn);
   }
 };
@@ -119,7 +119,7 @@ export const optimizeTreeShaking = {
 // Runtime performance monitoring
 export const runtimeOptimizations = {
   // Debounce function calls
-  debounce: <T extends (...args: any[]) => any>(
+  debounce: <T extends (...args: unknown[]) => unknown>(
     func: T,
     wait: number
   ): ((...args: Parameters<T>) => void) => {
@@ -131,7 +131,7 @@ export const runtimeOptimizations = {
   },
 
   // Throttle function calls
-  throttle: <T extends (...args: any[]) => any>(
+  throttle: <T extends (...args: unknown[]) => unknown>(
     func: T,
     limit: number
   ): ((...args: Parameters<T>) => void) => {
@@ -146,9 +146,9 @@ export const runtimeOptimizations = {
   },
 
   // Memoization utility
-  memoize: <T extends (...args: any[]) => any>(fn: T): T => {
+  memoize: <T extends (...args: unknown[]) => unknown>(fn: T): T => {
     const cache = new Map();
-    return ((...args: any[]) => {
+    return ((...args: Parameters<T>) => {
       const key = JSON.stringify(args);
       if (cache.has(key)) {
         return cache.get(key);

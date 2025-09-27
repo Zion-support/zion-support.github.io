@@ -106,7 +106,7 @@ describe('useAccessibility', () => {
   });
 
   test('should handle keyboard navigation', () => {
-    const { result } = renderHook(() => useAccessibility());
+    renderHook(() => useAccessibility());
     
     // Create skip link
     const skipLink = document.createElement('a');
