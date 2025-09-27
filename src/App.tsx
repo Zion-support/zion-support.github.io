@@ -7,6 +7,9 @@ import SkipLink from './components/SkipLink';
 import LoadingSpinner from '../components/LoadingSpinner';
 import ErrorBoundary from './components/ErrorBoundary';
 import ErrorFallback from './components/ErrorFallback';
+import SystemDashboard from './components/SystemDashboard';
+import AccessibilityTester from './components/AccessibilityTester';
+import PerformanceProfiler from './components/PerformanceProfiler';
 import { initializeErrorReporting } from './utils/errorReporting';
 import { initOptimizations } from './utils/buildOptimizations';
 import { seoManager } from './utils/seoEnhanced';
@@ -81,6 +84,11 @@ export default function App(): React.JSX.Element {
           </main>
           
           <Footer />
+          
+          {/* Development Tools */}
+          <SystemDashboard />
+          <AccessibilityTester />
+          <PerformanceProfiler />
         </div>
       </Router>
     </ErrorBoundary>
