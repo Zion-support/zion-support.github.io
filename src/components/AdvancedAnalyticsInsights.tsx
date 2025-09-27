@@ -92,39 +92,73 @@ export default function AdvancedAnalyticsInsights({
     
     return {
       overview: {
-        totalSessions: Math.floo.r(1250 * baseMultiplie, , , , , , r)uniqueUsers: Math.floo.r(890 * baseMultiplie, , , , , , r)pageViews: Math.floo.r(3200 * baseMultiplie, , , , , , r)bounceRate: 0.3.5 + (Math.rando.m() - 0.5) * 0.1avgSessionDuratio.n: 180 + (Math.rando.m() - 0.5) * 60conversionRate: 0.1.2 + (Math.rando.m() - 0.5) * 0.0.5
-      }traffic: {
+        totalSessions: Math.floor(1250 * baseMultiplier),
+        uniqueUsers: Math.floor(890 * baseMultiplier),
+        pageViews: Math.floor(3200 * baseMultiplier),
+        bounceRate: 0.35 + (Math.random() - 0.5) * 0.1,
+        avgSessionDuration: 180 + (Math.random() - 0.5) * 60,
+        conversionRate: 0.12 + (Math.random() - 0.5) * 0.05
+      },
+      traffic: {
         sources: [
-          { name: 'Direct', count: Math.floo.r(450 * baseMultiplie, , , , , , r)percentage: 36 }{ name: 'Google', count: Math.floo.r(380 * baseMultiplie, , , , , , r)percentage: 30 }{ name: 'Social Media', count: Math.floo.r(200 * baseMultiplie, , , , , , r)percentage: 16 }{ name: 'Email', count: Math.floo.r(120 * baseMultiplie, , , , , , r)percentage: 10 }{ name: 'Referral', count: Math.floo.r(100 * baseMultiplie, , , , , , r)percentage: 8 }
-        ]devices: [
-          { type: 'Desktop', count: Math.floo.r(600 * baseMultiplie, , , , , , r)percentage: 48 }{ type: 'Mobile', count: Math.floo.r(500 * baseMultiplie, , , , , , r)percentage: 40 }{ type: 'Tablet', count: Math.floo.r(150 * baseMultiplie, , , , , , r)percentage: 12 }
-        ]countries: [
-          { name: 'United States', count: Math.floo.r(400 * baseMultiplie, , , , , , r)percentage: 32 }{ name: 'United Kingdom', count: Math.floo.r(200 * baseMultiplie, , , , , , r)percentage: 16 }{ name: 'Canada', count: Math.floo.r(150 * baseMultiplie, , , , , , r)percentage: 12 }{ name: 'Germany', count: Math.floo.r(120 * baseMultiplie, , , , , , r)percentage: 10 }{ name: 'Australia', count: Math.floo.r(100 * baseMultiplie, , , , , , r)percentage: 8 }{ name: 'Others', count: Math.floo.r(280 * baseMultiplie, , , , , , r)percentage: 22 }
+          { name: 'Direct', count: Math.floor(450 * baseMultiplier), percentage: 36 },
+          { name: 'Google', count: Math.floor(380 * baseMultiplier), percentage: 30 },
+          { name: 'Social Media', count: Math.floor(200 * baseMultiplier), percentage: 16 },
+          { name: 'Email', count: Math.floor(120 * baseMultiplier), percentage: 10 },
+          { name: 'Referral', count: Math.floor(100 * baseMultiplier), percentage: 8 }
+        ],
+        devices: [
+          { type: 'Desktop', count: Math.floor(600 * baseMultiplier), percentage: 48 },
+          { type: 'Mobile', count: Math.floor(500 * baseMultiplier), percentage: 40 },
+          { type: 'Tablet', count: Math.floor(150 * baseMultiplier), percentage: 12 }
+        ],
+        countries: [
+          { name: 'United States', count: Math.floor(400 * baseMultiplier), percentage: 32 },
+          { name: 'United Kingdom', count: Math.floor(200 * baseMultiplier), percentage: 16 },
+          { name: 'Canada', count: Math.floor(150 * baseMultiplier), percentage: 12 },
+          { name: 'Germany', count: Math.floor(120 * baseMultiplier), percentage: 10 },
+          { name: 'Australia', count: Math.floor(100 * baseMultiplier), percentage: 8 },
+          { name: 'Others', count: Math.floor(280 * baseMultiplier), percentage: 22 }
         ]
-      }performance: {
+      },
+      performance: {
         topPages: [
-          { path: '/ ', views: Math.floo.r(800 * baseMultiplie, , , , , , r)uniqueViews: Math.floo.r(600 * baseMultiplie, , , , , , r)avgTimeOnPage: 120 }{ path: '/ services', views: Math.floo.r(400 * baseMultiplie, , , , , , r)uniqueViews: Math.floo.r(300 * baseMultiplie, , , , , , r)avgTimeOnPage: 180 }{ path: '/ about', views: Math.floo.r(300 * baseMultiplie, , , , , , r)uniqueViews: Math.floo.r(250 * baseMultiplie, , , , , , r)avgTimeOnPage: 90 }{ path: '/contact', views: Math.floo.r(200 * baseMultiplie, , , , , , r)uniqueViews: Math.floo.r(180 * baseMultiplie, , , , , , r)avgTimeOnPage: 240 }{ path: '/blog', views: Math.floo.r(150 * baseMultiplie, , , , , , r)uniqueViews: Math.floo.r(120 * baseMultiplie, , , , , , r)avgTimeOnPage: 300 }
-        ]userFlow: [
-          { step: 1, page: 'Homepage', users: Math.floo.r(1000 * baseMultiplie, , , , , , r)dropoff: 0 }{ step: 2, page: 'Services', users: Math.floo.r(600 * baseMultiplie, , , , , , r)dropoff: 40 }{ step: 3, page: 'Contact', users: Math.floo.r(300 * baseMultiplie, , , , , , r)dropoff: 50 }{ step: 4, page: 'Conversion', users: Math.floo.r(150 * baseMultiplie, , , , , , r)dropoff: 50 }
+          { path: '/', views: Math.floor(800 * baseMultiplier), uniqueViews: Math.floor(600 * baseMultiplier), avgTimeOnPage: 120 },
+          { path: '/services', views: Math.floor(400 * baseMultiplier), uniqueViews: Math.floor(300 * baseMultiplier), avgTimeOnPage: 180 },
+          { path: '/about', views: Math.floor(300 * baseMultiplier), uniqueViews: Math.floor(250 * baseMultiplier), avgTimeOnPage: 90 },
+          { path: '/contact', views: Math.floor(200 * baseMultiplier), uniqueViews: Math.floor(180 * baseMultiplier), avgTimeOnPage: 240 },
+          { path: '/blog', views: Math.floor(150 * baseMultiplier), uniqueViews: Math.floor(120 * baseMultiplier), avgTimeOnPage: 300 }
+        ],
+        userFlow: [
+          { step: 1, page: 'Homepage', users: Math.floor(1000 * baseMultiplier), dropoff: 0 },
+          { step: 2, page: 'Services', users: Math.floor(600 * baseMultiplier), dropoff: 40 },
+          { step: 3, page: 'Contact', users: Math.floor(300 * baseMultiplier), dropoff: 50 },
+          { step: 4, page: 'Conversion', users: Math.floor(150 * baseMultiplier), dropoff: 50 }
         ]
-      }insights: []
+      },
+      insights: []
     };
-  }[timeRang, e]);
+  }, [timeRange]);
 
-  const generateInsights = useCallback((data: AnalyticsDat, , a) => {
+  const generateInsights = useCallback((data: AnalyticsData) => {
     const newInsights = [];
 
     // Bounce rate insights
-    if (data.overvie.w.bounceRat.e > 0., 5) {
-      newInsights.pus.h({
-        type: 'negative' as consttitle: 'High Bounce Rate', description: `Your bounce rate is ${(data.overvie.w.bounceRat.e * 10, , , , , , 0).toFixe.d(, , , , , , 1)}%which is above the recommended40%.`,
+    if (data.overview.bounceRate > 0.5) {
+      newInsights.push({
+        type: 'negative' as const,
+        title: 'High Bounce Rate',
+        description: `Your bounce rate is ${(data.overview.bounceRate * 100).toFixed(1)}%, which is above the recommended 40%.`,
         impact: 'Users are leaving your site quickly, indicating poor user experience or irrelevant content.',
-        recommendation: 'Improve page load speed, enhance content relevanceand optimize user experience.'
+        recommendation: 'Improve page load speed, enhance content relevance, and optimize user experience.'
       });
-    } else if (data.overvie.w.bounceRat.e < 0., 3) {
-      newInsights.pus.h({
-        type: 'positive' as consttitle: 'Excellent Bounce Rate', description: `Your bounce rate is ${(data.overvie.w.bounceRat.e * 10, , , , , , 0).toFixe.d(, , , , , , 1)}%which is excellent.`,
-        impact: 'Users are engaged and finding value in your content.', recommendation: 'Continue creating high- qualityrelevant content and maintain current UX practices.'
+    } else if (data.overview.bounceRate < 0.3) {
+      newInsights.push({
+        type: 'positive' as const,
+        title: 'Excellent Bounce Rate',
+        description: `Your bounce rate is ${(data.overview.bounceRate * 100).toFixed(1)}%, which is excellent.`,
+        impact: 'Users are engaged and finding value in your content.',
+        recommendation: 'Continue creating high-quality, relevant content and maintain current UX practices.'
       });
     }
 
