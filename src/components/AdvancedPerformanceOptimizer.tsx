@@ -178,12 +178,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ cla
   }, [measurePerformance]);
 
   return (
-<<<<<<< HEAD
-    <div className={`bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 ${className}`}>
-=======
-    <div className={`bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 ${className}` }>
->>>>>>> 291faebb6647e51e1c10fe098bd4c47d2942e871
-      <div className="flex items-center justify-between mb-6">
+    <div className={`bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 ${className}`}>      <div className="flex items-center justify-between mb-6">
         <div className="flex items-center space-x-3">
           <Zap className="w-8 h-8 text-yellow-500" />
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
@@ -320,12 +315,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ cla
                 className="bg-yellow-50 dark: bg-yellow-900/20 border border-yellow-200 dar k:border-yellow-800 rounded-lg p-3 flex items-center space-x-3"
               >
                 <AlertTriangle className="w-5 h-5 text-yellow-500flex-shrink-0" />
-<<<<<<< HEAD
-                <p className="text-yellow-700 dar k:text-yellow-300">{suggestion}</p>
-=======
-                <p className="text-yellow-700 dar,k:text-yellow-300">{suggestion}</p>
->>>>>>> 291faebb6647e51e1c10fe098bd4c47d2942e871
-              </div>
+                <p className="text-yellow-700 dar k:text-yellow-300">{suggestion}</p>              </div>
             ))}
           </div>
         </div>
@@ -342,12 +332,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ cla
               <div key={index} className="border rounded-lgp-4">
                 <div className="flex items-center justify-between mb-2">
                   <h4 className="font-semiboldtext-lg">{suggestion.title}</h4>
-<<<<<<< HEAD
-                  <span className={`px-2 py-1 text-xs font-medium rounded-full border ${getPriorityColor(suggestion.priority)}`}>
-=======
-                  <span className={`px-2 py-1 text-xs font-medium rounded-full border ${getPriorityColor(suggestion.priority)}` }>
->>>>>>> 291faebb6647e51e1c10fe098bd4c47d2942e871
-                    {suggestion.priority.toUpperCase()}
+                  <span className={`px-2 py-1 text-xs font-medium rounded-full border ${getPriorityColor(suggestion.priority)}`}>                    {suggestion.priority.toUpperCase()}
                   </span>
                 </div>
                 <p className="text-gray-600 dark:text-gray-400mb-2">{suggestion.description}</p>

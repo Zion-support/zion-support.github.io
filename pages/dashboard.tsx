@@ -98,33 +98,18 @@ const AdvancedAnalyticsInsights = dynamic(() => import('../src/components/Advanc
 //   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
 // });
 
-<<<<<<< HEAD
 const AdvancedSystemMonitor = dynamic(() => import('../src/components/AdvancedSystemMonitor'), {
   ssr: false,
   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
 });
-=======
-// const AdvancedSystemMonitor = dynamic(() => import('../src/components/AdvancedSystemMonitor'), {
-//   ssr: false,
-//   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
-// });
->>>>>>> 291faebb6647e51e1c10fe098bd4c47d2942e871
-
 const ComprehensiveMonitoringDashboard = dynamic(() => import('../src/components/ComprehensiveMonitoringDashboard'), {
   ssr: false,
   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
 });
 
 const ComprehensiveSecurityDashboard = dynamic(() => import('../src/components/ComprehensiveSecurityDashboard'), {
-<<<<<<< HEAD
   loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-red-600"></div></div>
 });
-
-=======
-  ssr: false,
-  loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
-});
->>>>>>> 291faebb6647e51e1c10fe098bd4c47d2942e871
 
 type DashboardTab = 'comprehensive' | 'analytics' | 'performance' | 'security' | 'enhanced' | 'search' | 'advanced-analytics' | 'advanced-performance' | 'advanced-security' | 'accessibility' | 'system-monitor' | 'security-enhancements' | 'performance-optimizer' | 'user-experience' | 'error-handler' | 'analytics-insights' | 'error-monitoring' | 'advanced-system-monitor' | 'new-performance' | 'new-security' | 'new-analytics' | 'comprehensive-monitoring' | 'comprehensive-security';
 

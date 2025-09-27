@@ -19,7 +19,6 @@ interface DashboardProps {
   className?: string;
 }
 
-<<<<<<< HEAD
 const sampleData = {
   revenue: [
     { mont, h: 'Jan', revenue: 4000, profit: 2400 },
@@ -270,30 +269,7 @@ export default function EnhancedDashboard({
             <button className="bg-gray-200 text-gray-700 px-4py-2rounded-lg hover:bg-gray-300 transition-colors" aria-label="Settings">
               Settings
             </button>
-          </div>
-=======
-export const EnhancedDashboard: React.FC<DashboardProps> = ({
-  widgets,
-  onWidgetUpdate,
-  onWidgetAdd,
-  onWidgetRemove,
-  className = ''
-}) => {
-  const [isLoading, setIsLoading] = useState(false);
-
-  return (
-    <div className={`min-h-screen bg-gray-50 py-8 ${className}`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="mb-8">
-          <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
-            Enhanced Dashboard
-          </h1>
-          <p className="text-gray-600 dark:text-gray-400">
-            Customizable dashboard with real-time metrics and analytics
-          </p>
->>>>>>> 291faebb6647e51e1c10fe098bd4c47d2942e871
-        </div>
+          </div>        </div>
 
         {/* Widgets Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
@@ -304,7 +280,6 @@ export const EnhancedDashboard: React.FC<DashboardProps> = ({
               animate={{ opacity: 1, y: 0 }}
               className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6"
             >
-<<<<<<< HEAD
               <div className="flex justify-between items-center mb-6">
                 <h2 className="text-2xl font-bold text-gray-900" id="dashboard-widgets-find-widget-selected-widget-title">{dashboardWidgets.find(w => w.id === selectedWidget)?.title}</h2>
                 <button
@@ -314,17 +289,7 @@ export const EnhancedDashboard: React.FC<DashboardProps> = ({
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                   </svg>
-                </button>
-=======
-              <div className="flex items-center justify-between mb-4">
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-                  {widget.title}
-                </h3>
-                <div className="flex items-center space-x-2">
-                  <Activity className="w-4 h-4 text-blue-500" />
-                </div>
->>>>>>> 291faebb6647e51e1c10fe098bd4c47d2942e871
-              </div>
+                </button>              </div>
               
               <div className="text-center">
                 <div className="text-3xl font-bold text-blue-600 mb-2">

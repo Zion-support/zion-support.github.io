@@ -53,30 +53,17 @@ export const AdvancedAnalyticsDashboard: React.FC<AdvancedAnalyticsDashboardProp
         </div>
         <div className="flex items-center space-x-4">
           <div className="flex items-center space-x-2">
-<<<<<<< HEAD
             <div className={`w-3 h-3 rounded-full ${isRealTime ? 'bg-green-500' : 'bg-gray-400'}` } />
-            <span className="text-sm text-gray-600dark:text-gray-400">
-=======
-            <div className={`w-3 h-3 rounded-full ${isRealTime ? 'bg-green-500' : 'bg-gray-400'}`} />
-            <span className="text-sm text-gray-600 dark:text-gray-400">
->>>>>>> 291faebb6647e51e1c10fe098bd4c47d2942e871
-              {isRealTime ? 'Real-time' : 'Paused'}
+            <span className="text-sm text-gray-600dark:text-gray-400">              {isRealTime ? 'Real-time' : 'Paused'}
             </span>
           </div>
           <button
             onClick={onDataRefresh}
-<<<<<<< HEAD
             className="px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg text-sm font-medium transition-colors"
-            aria-label="Refresh">
-=======
-            className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg"
-          >
->>>>>>> 291faebb6647e51e1c10fe098bd4c47d2942e871
-            Refresh
+            aria-label="Refresh">            Refresh
           </button>
         </div>
       </div>
-<<<<<<< HEAD
 
       {/* Controls */}
       <div className="flex flex-wrap items-center gap-4mb-6">
@@ -102,29 +89,8 @@ export const AdvancedAnalyticsDashboard: React.FC<AdvancedAnalyticsDashboardProp
             {metricOptions.map(option => (
               <option key={option.value} value={option.value}>{option.label}</option>
             ))}
-          </select>
-=======
-      
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
-        <div className="bg-gray-50 rounded-lg p-4">
-          <div className="text-sm font-medium text-gray-600">Page Views</div>
-          <div className="text-2xl font-bold text-gray-900">{data.pageViews.toLocaleString()}</div>
-        </div>
-        <div className="bg-gray-50 rounded-lg p-4">
-          <div className="text-sm font-medium text-gray-600">Unique Visitors</div>
-          <div className="text-2xl font-bold text-gray-900">{data.uniqueVisitors.toLocaleString()}</div>
-        </div>
-        <div className="bg-gray-50 rounded-lg p-4">
-          <div className="text-sm font-medium text-gray-600">Bounce Rate</div>
-          <div className="text-2xl font-bold text-gray-900">{data.bounceRate.toFixed(1)}%</div>
-        </div>
-        <div className="bg-gray-50 rounded-lg p-4">
-          <div className="text-sm font-medium text-gray-600">Conversion Rate</div>
-          <div className="text-2xl font-bold text-gray-900">{data.conversionRate.toFixed(1)}%</div>
->>>>>>> 291faebb6647e51e1c10fe098bd4c47d2942e871
-        </div>
+          </select>        </div>
       </div>
-<<<<<<< HEAD
 
       {/* Key Metrics */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4mb-6">
@@ -296,8 +262,6 @@ export const AdvancedAnalyticsDashboard: React.FC<AdvancedAnalyticsDashboardProp
           </motion.div>
         )}
       </AnimatePresence>
-=======
->>>>>>> 291faebb6647e51e1c10fe098bd4c47d2942e871
     </div>
   );
 };

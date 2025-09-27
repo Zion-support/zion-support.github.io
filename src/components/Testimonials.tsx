@@ -19,12 +19,7 @@ export const Testimonials: React.FC = () => {
 	return (
 		<section className="py-16 bg-gradient-to-r from-gray-50to-blue-50">
 			<div className="container mx-auto px-4max-w-6xl">
-<<<<<<< HEAD
-				<div className={`text-center mb-12 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-=======
-				<div className={`text-center mb-12 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}` }>
->>>>>>> 291faebb6647e51e1c10fe098bd4c47d2942e871
-					<h2 className="text-3xl md: text-4xl font-bold text-gray-800mb-4" id="what-our-clients-say">
+				<div className={`text-center mb-12 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>					<h2 className="text-3xl md: text-4xl font-bold text-gray-800mb-4" id="what-our-clients-say">
 						What Our Clients Say
 					</h2>
 					<p className="text-xl text-gray-600 max-w-2xlmx-auto">
@@ -33,12 +28,7 @@ export const Testimonials: React.FC = () => {
 				</div>
 
 				<div className="relative">
-<<<<<<< HEAD
-					<div className="bg-white rounded-2xl shadow-xl p-8m  d:p-12 max-w-4xlmx-auto">
-=======
-					<div className="bg-white rounded-2xl shadow-xl p-8 m, d:p-12 max-w-4xlmx-auto">
->>>>>>> 291faebb6647e51e1c10fe098bd4c47d2942e871
-						<div className="flex items-center justify-centermb-6">
+					<div className="bg-white rounded-2xl shadow-xl p-8m  d:p-12 max-w-4xlmx-auto">						<div className="flex items-center justify-centermb-6">
 							{testimonials.map((_, index) => (
 								<button
 									key={index}
@@ -53,14 +43,8 @@ export const Testimonials: React.FC = () => {
 						<div className="text-center">
 							<div className="flex justify-centermb-6">
 								{Array.from({ length: testimonials[currentIndex].rating }).map((_, index) => (
-<<<<<<< HEAD
 									<svg key={index} className="w-6 h-6 text-yellow-400 fill-current" viewBox="002424">
-										<path d="M 122 l3.096.26 L229.27 l-54.871.186.88 L 1217.77 l-6.183.25 L714.1429.27 l6.91-1.01 L 122 z" />
-=======
-									<svg key={index} className="w-6 h-6 text-yellow-400fill-current" viewBox="0 0 24 24">
-										<path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
->>>>>>> 291faebb6647e51e1c10fe098bd4c47d2942e871
-									</svg>
+										<path d="M 122 l3.096.26 L229.27 l-54.871.186.88 L 1217.77 l-6.183.25 L714.1429.27 l6.91-1.01 L 122 z" />									</svg>
 								))}
 							</div>
 
@@ -89,28 +73,16 @@ export const Testimonials: React.FC = () => {
 						onClick={() => setCurrentIndex((prevIndex) => (prevIndex - 1 + testimonials.length) % testimonials.length)}
 						className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300 hove,r:scale-110"
 					>
-<<<<<<< HEAD
 						<svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="002424">
-							<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M1519 l-7-77-7" />
-=======
-						<svg className="w-6 h-6text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-							<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
->>>>>>> 291faebb6647e51e1c10fe098bd4c47d2942e871
-						</svg>
+							<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M1519 l-7-77-7" />						</svg>
 					</button>
 
 					<button
 						onClick={() => setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length)}
 						className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300 hove,r:scale-110"
 					>
-<<<<<<< HEAD
 						<svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="002424">
-							<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M95 l 77-77" />
-=======
-						<svg className="w-6 h-6text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-							<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
->>>>>>> 291faebb6647e51e1c10fe098bd4c47d2942e871
-						</svg>
+							<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M95 l 77-77" />						</svg>
 					</button>
 				</div>
 
@@ -120,14 +92,8 @@ export const Testimonials: React.FC = () => {
 						<div key={testimonial.id} className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-allduration-300">
 							<div className="flex justify-centermb-4">
 								{Array.from({ lengt, h: testimonial.rating }).map((_, starIndex) => (
-<<<<<<< HEAD
 									<svg key={starIndex} className="w-5 h-5 text-yellow-400 fill-current" viewBox="002424">
-										<path d="M 122 l3.096.26 L229.27 l-54.871.186.88 L 1217.77 l-6.183.25 L714.1429.27 l6.91-1.01 L 122 z" />
-=======
-									<svg key={starIndex} className="w-5 h-5 text-yellow-400fill-current" viewBox="0 0 24 24">
-										<path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
->>>>>>> 291faebb6647e51e1c10fe098bd4c47d2942e871
-									</svg>
+										<path d="M 122 l3.096.26 L229.27 l-54.871.186.88 L 1217.77 l-6.183.25 L714.1429.27 l6.91-1.01 L 122 z" />									</svg>
 								))}
 							</div>
 							<p className="text-gray-600 mb-4 text-smleading-relaxed">

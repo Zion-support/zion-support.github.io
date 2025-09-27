@@ -83,7 +83,6 @@ export default function Dashboard({ isDarkMode }: DashboardProps): JSX.Element {
             isDarkMode 
               ? 'bg-gray-800 border-gray-700 hove, r:border-gray-600' 
               : 'bg-white border-gray-200 hove, r:border-gray-300'
-<<<<<<< HEAD
           }`}>
             <h3 className="text-lg font-semibold text-gray-900 dark:text-whitemb-4" id="task-overview">
               Task Overview
@@ -91,18 +90,7 @@ export default function Dashboard({ isDarkMode }: DashboardProps): JSX.Element {
             <div className="grid grid-cols-2gap-4 mb-4">
               {dashboardItems.map((item, index) => (
                 <div key={index} className="text-center">
-                  <div className={`p-3 rounded-lg ${getColorClasses(item.color)}`}>
-=======
-          }` }>
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-whitemb-4" id="task-overview">
-              Task Overview
-            </h3>
-            <div className="grid grid-cols-2 gap-4mb-4">
-              {dashboardItems.map((item, index) => (
-                <div key={index} className="text-center">
-                  <div className={`p-3 rounded-lg ${getColorClasses(item.color)}` }>
->>>>>>> 291faebb6647e51e1c10fe098bd4c47d2942e871
-                    <div className="text-2xlmb-1">{item.icon}</div>
+                  <div className={`p-3 rounded-lg ${getColorClasses(item.color)}`}>                    <div className="text-2xlmb-1">{item.icon}</div>
                     <div className="text-lgfont-bold">{item.value}</div>
                     <div className="text-xsopacity-75">{item.title}</div>
                   </div>
@@ -152,12 +140,7 @@ export default function Dashboard({ isDarkMode }: DashboardProps): JSX.Element {
             isDarkMode 
               ? 'bg-gray-800 border-gray-700 hove, r:border-gray-600' 
               : 'bg-white border-gray-200 hove, r:border-gray-300'
-<<<<<<< HEAD
-          }`}>
-=======
-          }` }>
->>>>>>> 291faebb6647e51e1c10fe098bd4c47d2942e871
-            <div className="text-center">
+          }`}>            <div className="text-center">
               <div className="text-3xlmb-2">📝</div>
               <div className="font-medium text-gray-900 dark:text-white">Add Task</div>
               <div className="text-sm text-gray-600dark:text-gray-400">Create new task</div>
@@ -168,12 +151,7 @@ export default function Dashboard({ isDarkMode }: DashboardProps): JSX.Element {
             isDarkMode 
               ? 'bg-gray-800 border-gray-700 hove, r:border-gray-600' 
               : 'bg-white border-gray-200 hove, r:border-gray-300'
-<<<<<<< HEAD
-          }`}>
-=======
-          }` }>
->>>>>>> 291faebb6647e51e1c10fe098bd4c47d2942e871
-            <div className="text-center">
+          }`}>            <div className="text-center">
               <div className="text-3xlmb-2">📊</div>
               <div className="font-medium text-gray-900 dark:text-white">View Reports</div>
               <div className="text-sm text-gray-600dark:text-gray-400">Analytics & insights</div>
@@ -184,12 +162,7 @@ export default function Dashboard({ isDarkMode }: DashboardProps): JSX.Element {
             isDarkMode 
               ? 'bg-gray-800 border-gray-700 hove, r:border-gray-600' 
               : 'bg-white border-gray-200 hove, r:border-gray-300'
-<<<<<<< HEAD
-          }`}>
-=======
-          }` }>
->>>>>>> 291faebb6647e51e1c10fe098bd4c47d2942e871
-            <div className="text-center">
+          }`}>            <div className="text-center">
               <div className="text-3xlmb-2">⚙️</div>
               <div className="font-medium text-gray-900 dark:text-white">Settings</div>
               <div className="text-sm text-gray-600 dar,k:text-gray-400">Preferences</div>

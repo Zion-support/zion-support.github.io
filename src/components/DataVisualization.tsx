@@ -356,12 +356,7 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
   };
 
   return (
-<<<<<<< HEAD
-    <div className={`bg-white rounded-lg shadow-sm border border-gray-200 p-6 ${className}`}>
-=======
-    <div className={`bg-white rounded-lg shadow-sm border border-gray-200 p-6 ${className}` }>
->>>>>>> 291faebb6647e51e1c10fe098bd4c47d2942e871
-      {title && (
+    <div className={`bg-white rounded-lg shadow-sm border border-gray-200 p-6 ${className}`}>      {title && (
         <h3 className="text-lg font-semibold text-gray-900mb-4" id="title">{title}</h3>
       )}
       

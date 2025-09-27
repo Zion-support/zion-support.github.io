@@ -38,12 +38,7 @@ export const TestimonialCard: React.FC<TestimonialCardProps> = ({
     <div 
       className={`group p-8 bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hove, r:border-blue-200 hover-lift ${
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-<<<<<<< HEAD
-      }`}
-=======
-      }` }
->>>>>>> 291faebb6647e51e1c10fe098bd4c47d2942e871
-    >
+      }`}    >
       {/* Rating */}
       <div className="flex items-center mb-4">
         {renderStars(testimonial.rating)}

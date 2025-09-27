@@ -32,12 +32,7 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
 }) => {
   const spinner = (
     <motion.div
-<<<<<<< HEAD
-      className={`${sizeClasses[size]} ${colorClasses[color]} ${className}`}
-=======
-      className={`${sizeClasses[size]} ${colorClasses[color]} ${className}` }
->>>>>>> 291faebb6647e51e1c10fe098bd4c47d2942e871
-      animate={{ rotate: 360 }}
+      className={`${sizeClasses[size]} ${colorClasses[color]} ${className}`}      animate={{ rotate: 360 }}
       transition={{
         duration: 1,
         repeat: Infinity,
@@ -115,12 +110,7 @@ export const SkeletonLoader: React.FC<SkeletonLoaderProps> = ({
   className = ''
 }) => {
   return (
-<<<<<<< HEAD
-    <div className={`animate-pulse ${className}`}>
-=======
-    <div className={`animate-pulse ${className}` }>
->>>>>>> 291faebb6647e51e1c10fe098bd4c47d2942e871
-      {Array.from({ length: lines }).map((_, index) => (
+    <div className={`animate-pulse ${className}`}>      {Array.from({ length: lines }).map((_, index) => (
         <motion.div
           key={index}
           initial={{ opacity: 0 }}
@@ -224,12 +214,7 @@ export const CardSkeleton: React.FC<CardSkeletonProps> = ({
   className = ''
 }) => {
   return (
-<<<<<<< HEAD
-    <div className={`bg-white rounded-lg shadow-md p-6 animate-pulse ${className}`}>
-=======
-    <div className={`bg-white rounded-lg shadow-md p-6 animate-pulse ${className}` }>
->>>>>>> 291faebb6647e51e1c10fe098bd4c47d2942e871
-      <div className="flex items-center space-x-4mb-4">
+    <div className={`bg-white rounded-lg shadow-md p-6 animate-pulse ${className}`}>      <div className="flex items-center space-x-4mb-4">
         <div className="w-12 h-12 bg-gray-200rounded-full" />
         <div className="flex-1">
           <div className="h-4 bg-gray-200 rounded w-3/4mb-2" />

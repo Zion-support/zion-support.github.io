@@ -204,12 +204,7 @@ export const EnhancedContactForm: React.FC = () => {
 							onChange={handleInputChange}
 							className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200 ${
 								errors.name ? 'border-red-300 bg-red-50' : 'border-gray-300'
-<<<<<<< HEAD
-							}`}
-=======
-							}` }
->>>>>>> 291faebb6647e51e1c10fe098bd4c47d2942e871
-							placeholder="John Doe"
+							}`}							placeholder="John Doe"
 						/>
 						{errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
 					</div>
@@ -225,12 +220,7 @@ export const EnhancedContactForm: React.FC = () => {
 							onChange={handleInputChange}
 							className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200 ${
 								errors.email ? 'border-red-300 bg-red-50' : 'border-gray-300'
-<<<<<<< HEAD
-							}`}
-=======
-							}` }
->>>>>>> 291faebb6647e51e1c10fe098bd4c47d2942e871
-							placeholder="john@company.com"
+							}`}							placeholder="john@company.com"
 						/>
 						{errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
 					</div>
@@ -249,12 +239,7 @@ export const EnhancedContactForm: React.FC = () => {
 							onChange={handleInputChange}
 							className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200 ${
 								errors.company ? 'border-red-300 bg-red-50' : 'border-gray-300'
-<<<<<<< HEAD
-							}`}
-=======
-							}` }
->>>>>>> 291faebb6647e51e1c10fe098bd4c47d2942e871
-							placeholder="Your Company"
+							}`}							placeholder="Your Company"
 						/>
 						{errors.company && <p className="text-red-500 text-sm mt-1">{errors.company}</p>}
 					</div>
@@ -287,12 +272,7 @@ export const EnhancedContactForm: React.FC = () => {
 							onChange={handleInputChange}
 							className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200 ${
 								errors.service ? 'border-red-300 bg-red-50' : 'border-gray-300'
-<<<<<<< HEAD
-							}`}
-=======
-							}` }
->>>>>>> 291faebb6647e51e1c10fe098bd4c47d2942e871
-						>
+							}`}						>
 							<option value="">Select a service</option>
 							{services.map((service) => (
 								<option key={service} value={service}>
@@ -313,12 +293,7 @@ export const EnhancedContactForm: React.FC = () => {
 							onChange={handleInputChange}
 							className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200 ${
 								errors.budget ? 'border-red-300 bg-red-50' : 'border-gray-300'
-<<<<<<< HEAD
-							}`}
-=======
-							}` }
->>>>>>> 291faebb6647e51e1c10fe098bd4c47d2942e871
-						>
+							}`}						>
 							<option value="">Select budget</option>
 							{budgets.map((budget) => (
 								<option key={budget} value={budget}>
@@ -339,12 +314,7 @@ export const EnhancedContactForm: React.FC = () => {
 							onChange={handleInputChange}
 							className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200 ${
 								errors.timeline ? 'border-red-300 bg-red-50' : 'border-gray-300'
-<<<<<<< HEAD
-							}`}
-=======
-							}` }
->>>>>>> 291faebb6647e51e1c10fe098bd4c47d2942e871
-						>
+							}`}						>
 							<option value="">Select timeline</option>
 							{timelines.map((timeline) => (
 								<option key={timeline} value={timeline}>
@@ -368,12 +338,7 @@ export const EnhancedContactForm: React.FC = () => {
 						rows={6}
 						className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200 resize-none ${
 							errors.message ? 'border-red-300 bg-red-50' : 'border-gray-300'
-<<<<<<< HEAD
-						}`}
-=======
-						}` }
->>>>>>> 291faebb6647e51e1c10fe098bd4c47d2942e871
-						placeholder="Please describe your project requirements, goals, and any specific features or technologies you have in mind..."
+						}`}						placeholder="Please describe your project requirements, goals, and any specific features or technologies you have in mind..."
 					/>
 					<div className="flex justify-between items-center mt-1">
 						{errors.message && <p className="text-red-500 text-sm">{errors.message}</p>}

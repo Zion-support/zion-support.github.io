@@ -28,12 +28,7 @@ export const BlogCard: React.FC<BlogCardProps> = ({
     <article 
       className={`group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden hover-lift ${
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-<<<<<<< HEAD
-      }`}
-=======
-      }` }
->>>>>>> 291faebb6647e51e1c10fe098bd4c47d2942e871
-    >
+      }`}    >
       {/* Image */}
       <div className="relative h-48 overflow-hidden">
         <Image 
@@ -62,12 +57,7 @@ export const BlogCard: React.FC<BlogCardProps> = ({
         {/* Meta */}
         <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
           <div className="flex items-center">
-<<<<<<< HEAD
-            <div className="w-8h-8bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-xsmr-3">
-=======
-            <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-xs mr-3">
->>>>>>> 291faebb6647e51e1c10fe098bd4c47d2942e871
-              {post.author.charAt(0)}
+            <div className="w-8h-8bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-xsmr-3">              {post.author.charAt(0)}
             </div>
             <span>{post.author}</span>
           </div>
@@ -85,12 +75,7 @@ export const BlogCard: React.FC<BlogCardProps> = ({
         >
           Read More
           <svg 
-<<<<<<< HEAD
-            className="w-4h-4ml-2group-hover/bt  n:translate-x-1transition-transformduration-300" 
-=======
-            className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform duration-300" 
->>>>>>> 291faebb6647e51e1c10fe098bd4c47d2942e871
-            fill="none" 
+            className="w-4h-4ml-2group-hover/bt  n:translate-x-1transition-transformduration-300"             fill="none" 
             stroke="currentColor" 
             viewBox="0 0 24 24"
           >

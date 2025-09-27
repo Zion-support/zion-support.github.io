@@ -303,12 +303,7 @@ export const PricingCalculator: React.FC = () => {
 							max="10"
 							value={inputs.teamSize}
 							onChange={(e) => handleInputChange('teamSize', parseInt(e.target.value))}
-<<<<<<< HEAD
-							className="w-full px-4py-3border border-gray-300 rounded-lg focus:ring-2focu  s:ring-blue-500 focu s:border-transparent"
-=======
-							className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focu, s:ring-blue-500 focu,s:border-transparent"
->>>>>>> 291faebb6647e51e1c10fe098bd4c47d2942e871
-						/>
+							className="w-full px-4py-3border border-gray-300 rounded-lg focus:ring-2focu  s:ring-blue-500 focu s:border-transparent"						/>
 					</div>
 
 					{/* Additional Features */}

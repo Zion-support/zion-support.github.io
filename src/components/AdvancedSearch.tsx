@@ -211,12 +211,7 @@ export const AdvancedSearch: React.FC<SearchProps> = ({
   };
 
   return (
-<<<<<<< HEAD
-    <div ref={searchRef} className={`relative ${className}`}>
-=======
-    <div ref={searchRef} className={`relative ${className}` }>
->>>>>>> 291faebb6647e51e1c10fe098bd4c47d2942e871
-      <div className="relative">
+    <div ref={searchRef} className={`relative ${className}`}>      <div className="relative">
         <div className="absolute inset-y-0 left-0 pl-3 flex items-centerpointer-events-none">
           <svg className="h-5 w-5text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
@@ -229,23 +224,12 @@ export const AdvancedSearch: React.FC<SearchProps> = ({
           onChange={(e) => setQuery(e.target.value)}
           onKeyDown={handleKeyDown}
           onFocus={() => query.trim() && setIsOpen(true)}
-<<<<<<< HEAD
-          className="block w-full pl-10 pr-3py-2border border-gray-300 rounded-md leading-5bg-white placeholder-gray-500 focus:outline-none focus:placeholder-gray-400 focus:ring-1focus:ring-blue-500 focu  s:border-blue-500 s m:text-sm"
-=======
-          className="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md leading-5 bg-white placeholder-gray-500 focus:outline-none focus:placeholder-gray-400 focus:ring-1 focus:ring-blue-500 focu, s:border-blue-500 s,m:text-sm"
->>>>>>> 291faebb6647e51e1c10fe098bd4c47d2942e871
-          placeholder={placeholder}
+          className="block w-full pl-10 pr-3py-2border border-gray-300 rounded-md leading-5bg-white placeholder-gray-500 focus:outline-none focus:placeholder-gray-400 focus:ring-1focus:ring-blue-500 focu  s:border-blue-500 s m:text-sm"          placeholder={placeholder}
           aria-label="Search"
         />
         {isLoading && (
-<<<<<<< HEAD
           <div className="absolute inset-y-0right-0pr-3flex items-center">
-            <svg className="animate-spin h-5w-5text-gray-400" fill="none" viewBox="002424">
-=======
-          <div className="absolute inset-y-0 right-0 pr-3 flexitems-center">
-            <svg className="animate-spin h-5 w-5text-gray-400" fill="none" viewBox="0 0 24 24">
->>>>>>> 291faebb6647e51e1c10fe098bd4c47d2942e871
-              <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+            <svg className="animate-spin h-5w-5text-gray-400" fill="none" viewBox="002424">              <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
               <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
             </svg>
           </div>
@@ -253,12 +237,7 @@ export const AdvancedSearch: React.FC<SearchProps> = ({
       </div>
 
       {isOpen && results.length > 0 && (
-<<<<<<< HEAD
-        <div className="absolute z-50 mt-1w-full bg-white shadow-lg max-h-96 rounded-md py-1text-base ring-1ring-black ring-opacity-5overflow-auto focus:outline-none s m:text-sm">
-=======
-        <div className="absolute z-50 mt-1 w-full bg-white shadow-lg max-h-96 rounded-md py-1 text-base ring-1 ring-black ring-opacity-5 overflow-auto focus:outline-none s,m:text-sm">
->>>>>>> 291faebb6647e51e1c10fe098bd4c47d2942e871
-          {results.map((result, index) => (
+        <div className="absolute z-50 mt-1w-full bg-white shadow-lg max-h-96 rounded-md py-1text-base ring-1ring-black ring-opacity-5overflow-auto focus:outline-none s m:text-sm">          {results.map((result, index) => (
             <div
               key={result.id}
               role="button" tabIndex={0} onClick={() => handleResultClick(result)}
@@ -275,12 +254,7 @@ export const AdvancedSearch: React.FC<SearchProps> = ({
                     <p className="text-sm font-medium text-gray-900truncate">
                       {result.title}
                     </p>
-<<<<<<< HEAD
-                    <span className={`inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium ${getTypeColor(result.type)}`}>
-=======
-                    <span className={`inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium ${getTypeColor(result.type)}` }>
->>>>>>> 291faebb6647e51e1c10fe098bd4c47d2942e871
-                      {result.type}
+                    <span className={`inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium ${getTypeColor(result.type)}`}>                      {result.type}
                     </span>
                   </div>
                   <p className="text-sm text-gray-500truncate">

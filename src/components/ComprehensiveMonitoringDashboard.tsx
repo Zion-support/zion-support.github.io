@@ -328,33 +328,11 @@ export default function ComprehensiveMonitoringDashboard({
                   alert.type === 'warning' ? 'bg-yellow-50 border-yellow-400' :
                   alert.type === 'info' ? 'bg-blue-50 border-blue-400' :
                   'bg-green-50 border-green-400'
-<<<<<<< HEAD
                 }`}
               >
                 <tab.icon className="h-4 w-4" />
                 <span>{tab.name}</span>
-              </button>
-=======
-                }` }
-              >
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center space-x-2">
-                    {alert.type === 'error' && <AlertTriangle className="h-5 w-5 text-red-600" />}
-                    {alert.type === 'warning' && <AlertTriangle className="h-5 w-5 text-yellow-600" />}
-                    {alert.type === 'info' && <Activity className="h-5 w-5 text-blue-600" />}
-                    {alert.type === 'success' && <CheckCircle className="h-5 w-5 text-green-600" />}
-                    <span className="font-medium">{alert.message}</span>
-                  </div>
-                  <button
-                    onClick={() => resolveAlert(alert.id)}
-                    className="text-gray-400 hover:text-gray-600"
-                  >
-                    <X className="h-4 w-4" />
-                  </button>
-                </div>
-              </motion.div>
->>>>>>> 291faebb6647e51e1c10fe098bd4c47d2942e871
-            ))}
+              </button>            ))}
           </motion.div>
         )}
       </AnimatePresence>

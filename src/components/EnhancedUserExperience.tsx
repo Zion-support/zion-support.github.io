@@ -108,12 +108,7 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
                 preferences.theme === value
                   ? 'border-blue-500 bg-blue-50 dark: bg-blue-900/20'
                   : 'border-gray-200 dark:border-gray-600 hover:border-gray-300 dar, k:hove, r:border-gray-500'
-<<<<<<< HEAD
-              }`}
-=======
-              }` }
->>>>>>> 291faebb6647e51e1c10fe098bd4c47d2942e871
-            >
+              }`}            >
               <Icon className="w-6h-6" />
               <span className="text-smfont-medium">{label}</span>
             </button>
@@ -138,12 +133,7 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
                 preferences.fontSize === value
                   ? 'border-blue-500 bg-blue-50 dark: bg-blue-900/20'
                   : 'border-gray-200 dark:border-gray-600 hover:border-gray-300 dar, k:hove, r:border-gray-500'
-<<<<<<< HEAD
-              }`}
-=======
-              }` }
->>>>>>> 291faebb6647e51e1c10fe098bd4c47d2942e871
-            >
+              }`}            >
               <span className="text-smfont-medium">{label}</span>
             </button>
           ))}
@@ -253,12 +243,7 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
   );
 
   return (
-<<<<<<< HEAD
-    <div className={`relative ${className}`}>
-=======
-    <div className={`relative ${className}` }>
->>>>>>> 291faebb6647e51e1c10fe098bd4c47d2942e871
-      {/* Settings Toggle Button */}
+    <div className={`relative ${className}`}>      {/* Settings Toggle Button */}
       <button
         onClick={toggleSettings}
         className="fixed bottom-6 right-6 z-50 p-4 bg-blue-500 text-white rounded-full shadow-lg hover:bg-blue-600transition-colors"
@@ -285,12 +270,7 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
               <div className="flex items-center justify-between mb-6">
                 <div className="flex items-center space-x-3">
                   <User className="w-6 h-6text-blue-500" />
-<<<<<<< HEAD
-                  <h2 className="text-xl font-bold text-gray-900 dark:text-white">
-=======
-                  <h2 className="text-xl font-bold text-gray-900dark:text-white">
->>>>>>> 291faebb6647e51e1c10fe098bd4c47d2942e871
-                    User Experience
+                  <h2 className="text-xl font-bold text-gray-900 dark:text-white">                    User Experience
                   </h2>
                 </div>
                 <button
@@ -315,12 +295,7 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
                       activeTab === id
                         ? 'bg-white dark: bg-gray-600 text-blue-600 dark:text-blue-400 shadow-sm'
                         : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dar, k:hove, r:text-gray-200'
-<<<<<<< HEAD
-                    }`}
-=======
-                    }` }
->>>>>>> 291faebb6647e51e1c10fe098bd4c47d2942e871
-                  >
+                    }`}                  >
                     <Icon className="w-4h-4" />
                     <span>{label}</span>
                   </button>

@@ -87,14 +87,8 @@ const AdvancedCacheManager: React.FC<CacheManagerProps> = ({ className = '' }) =
   };
 
   return (
-<<<<<<< HEAD
     <div className={`advanced-cache-manager ${className}`}>
-      <div className="bg-white rounded-lg shadow-lg p-6">
-=======
-    <div className={`advanced-cache-manager `}>
-      <div className="bg-white rounded-lg shadow-lgp-6">
->>>>>>> 291faebb6647e51e1c10fe098bd4c47d2942e871
-        <div className="flex items-center justify-between mb-6">
+      <div className="bg-white rounded-lg shadow-lg p-6">        <div className="flex items-center justify-between mb-6">
           <h3 className="text-xl font-semibold text-gray-800 flex items-center">
             <Database className="w-5h-5mr-2" />
             Advanced Cache Manager
@@ -113,24 +107,13 @@ const AdvancedCacheManager: React.FC<CacheManagerProps> = ({ className = '' }) =
               disabled={isOptimizing}
               className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 disable  d:opacity-50 flex items-center"
             >
-<<<<<<< HEAD
-              <RefreshCw className={`w-4 h-4 mr-2 ${isOptimizing ? 'animate-spin' : ''}`} />
-=======
-              <RefreshCw className={`w-4h-4mr-2 ${isOptimizing ? 'animate-spin' : ''}`} />
->>>>>>> 291faebb6647e51e1c10fe098bd4c47d2942e871
-              Optimize
+              <RefreshCw className={`w-4 h-4 mr-2 ${isOptimizing ? 'animate-spin' : ''}`} />              Optimize
             </button>
           </div>
         </div>
 
-<<<<<<< HEAD
         <div className="grid grid-cols-1 md:grid-cols-2 l g:grid-cols-3 gap-6 mb-6">
-          <div className="bg-gray-50 rounded-lgp-4">
-=======
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
-          <div className="bg-gray-50 rounded-lg p-4">
->>>>>>> 291faebb6647e51e1c10fe098bd4c47d2942e871
-            <div className="flex items-center justify-between mb-2">
+          <div className="bg-gray-50 rounded-lgp-4">            <div className="flex items-center justify-between mb-2">
               <span className="text-sm font-medium text-gray-600">Hit Rate</span>
               <CheckCircle className="w-4 h-4 text-green-500" />
             </div>
@@ -142,12 +125,7 @@ const AdvancedCacheManager: React.FC<CacheManagerProps> = ({ className = '' }) =
           <div className="bg-gray-50 rounded-lg p-4">
             <div className="flex items-center justify-between mb-2">
               <span className="text-sm font-medium text-gray-600">Miss Rate</span>
-<<<<<<< HEAD
-              <AlertTriangle className="w-4 h-4text-yellow-500" />
-=======
-              <AlertTriangle className="w-4 h-4 text-yellow-500" />
->>>>>>> 291faebb6647e51e1c10fe098bd4c47d2942e871
-            </div>
+              <AlertTriangle className="w-4 h-4text-yellow-500" />            </div>
             <div className="text-2xl font-bold text-red-500">
               {stats.missRate.toFixed(1)}%
             </div>
@@ -156,12 +134,7 @@ const AdvancedCacheManager: React.FC<CacheManagerProps> = ({ className = '' }) =
           <div className="bg-gray-50 rounded-lg p-4">
             <div className="flex items-center justify-between mb-2">
               <span className="text-sm font-medium text-gray-600">Total Requests</span>
-<<<<<<< HEAD
-              <HardDrive className="w-4 h-4text-blue-500" />
-=======
-              <HardDrive className="w-4 h-4 text-blue-500" />
->>>>>>> 291faebb6647e51e1c10fe098bd4c47d2942e871
-            </div>
+              <HardDrive className="w-4 h-4text-blue-500" />            </div>
             <div className="text-2xl font-bold text-gray-800">
               {stats.totalRequests.toLocaleString()}
             </div>
@@ -170,12 +143,7 @@ const AdvancedCacheManager: React.FC<CacheManagerProps> = ({ className = '' }) =
           <div className="bg-gray-50 rounded-lg p-4">
             <div className="flex items-center justify-between mb-2">
               <span className="text-sm font-medium text-gray-600">Cache Size</span>
-<<<<<<< HEAD
-              <HardDrive className="w-4 h-4text-purple-500" />
-=======
-              <HardDrive className="w-4h-4text-purple-500" />
->>>>>>> 291faebb6647e51e1c10fe098bd4c47d2942e871
-            </div>
+              <HardDrive className="w-4 h-4text-purple-500" />            </div>
             <div className="text-2xl font-bold text-gray-800">
               {stats.cacheSize} MB
             </div>
@@ -184,12 +152,7 @@ const AdvancedCacheManager: React.FC<CacheManagerProps> = ({ className = '' }) =
           <div className="bg-gray-50 rounded-lg p-4">
             <div className="flex items-center justify-between mb-2">
               <span className="text-sm font-medium text-gray-600">Memory Usage</span>
-<<<<<<< HEAD
-              <HardDrive className="w-4 h-4text-indigo-500" />
-=======
-              <HardDrive className="w-4h-4text-indigo-500" />
->>>>>>> 291faebb6647e51e1c10fe098bd4c47d2942e871
-            </div>
+              <HardDrive className="w-4 h-4text-indigo-500" />            </div>
             <div className="text-2xl font-bold text-gray-800">
               {stats.memoryUsage.toFixed(1)}%
             </div>
@@ -198,12 +161,7 @@ const AdvancedCacheManager: React.FC<CacheManagerProps> = ({ className = '' }) =
           <div className="bg-gray-50 rounded-lg p-4">
             <div className="flex items-center justify-between mb-2">
               <span className="text-sm font-medium text-gray-600">Last Cleared</span>
-<<<<<<< HEAD
-              <RefreshCw className="w-4 h-4text-gray-500" />
-=======
-              <RefreshCw className="w-4h-4text-gray-500" />
->>>>>>> 291faebb6647e51e1c10fe098bd4c47d2942e871
-            </div>
+              <RefreshCw className="w-4 h-4text-gray-500" />            </div>
             <div className="text-sm font-mediumtext-gray-800">
               {stats.lastCleared.toLocaleTimeString()}
             </div>

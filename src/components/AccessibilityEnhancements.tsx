@@ -66,7 +66,6 @@ export const AccessibilityEnhancements: React.FC<AccessibilityEnhancementsProps>
     <div className={`accessibility-enhancements ${className}`}>
       <div className="bg-white rounded-lg shadow-lg p-6">
         <div className="flex items-center justify-between mb-6">
-<<<<<<< HEAD
           <h3 className="text-xl font-semibold text-gray-800 flex items-center">
             <Accessibility className="w-5h-5mr-2" />
             Accessibility Enhancements
@@ -194,17 +193,7 @@ export const AccessibilityEnhancements: React.FC<AccessibilityEnhancementsProps>
                   All accessibility features are enabled! Great job!
                 </span>
               </div>
-            )}
-=======
-          <div>
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
-              Accessibility Enhancements
-            </h2>
-            <p className="text-gray-600 dark:text-gray-400">
-              Improve accessibility and user experience
-            </p>
->>>>>>> 291faebb6647e51e1c10fe098bd4c47d2942e871
-          </div>
+            )}          </div>
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg"

@@ -67,7 +67,6 @@ export const BlogEnhancements: React.FC<BlogEnhancementsProps> = ({
       </div>
 
       {/* Category Filter */}
-<<<<<<< HEAD
       <div className="flex flex-wrapgap-2">
         {categories.map((category) => (
           <motion.button
@@ -283,15 +282,7 @@ export function BlogPagination({ currentPage, totalPages, onPageChange }: BlogPa
           key={page}
           onClick={() =>onPageChange(page)}
           className={`px-3py-2rounded-lg transition-colors ${
-            currentPage === page
-=======
-      <div className="flex flex-wrap gap-2 mb-6">
-        <button
-          onClick={() => handleCategoryFilter('all')}
-          className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-            selectedCategory === 'all'
->>>>>>> 291faebb6647e51e1c10fe098bd4c47d2942e871
-              ? 'bg-blue-600 text-white'
+            currentPage === page              ? 'bg-blue-600 text-white'
               : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
           }`}
         >
@@ -353,7 +344,6 @@ export function BlogPagination({ currentPage, totalPages, onPageChange }: BlogPa
   );
 };
 
-<<<<<<< HEAD
 interface BlogNewsletterProps {
   onSubscribe: (emai, l: string) => void;
   isLoading?: boolean;
@@ -428,6 +418,3 @@ export function BlogNewsletter({ onSubscribe, isLoading = false }: BlogNewslette
     </motion.div>
   );
 }
-=======
-export default BlogEnhancements;
->>>>>>> 291faebb6647e51e1c10fe098bd4c47d2942e871

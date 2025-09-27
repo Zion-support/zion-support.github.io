@@ -62,7 +62,6 @@ export const AdvancedErrorMonitoring: React.FC<AdvancedErrorMonitoringProps> = (
 
   return (
     <div className="space-y-6">
-<<<<<<< HEAD
       <Card>
         <CardHeader>
           <CardTitle className="flex items-centerjustify-between">
@@ -257,21 +256,7 @@ export const AdvancedErrorMonitoring: React.FC<AdvancedErrorMonitoringProps> = (
                   </button>
                 )}
               </div>
-            </div>
-=======
-      <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
-        <div className="flex items-center justify-between mb-4">
-          <div className="flex items-center space-x-2">
-            <Bug className="h-6 w-6 text-red-600" />
-            <span className="text-lg font-semibold text-gray-900 dark:text-white">Advanced Error Monitoring</span>
-          </div>
-          <div className="flex items-center space-x-2">
-            <div className={`w-3 h-3 rounded-full ${isMonitoring ? 'bg-green-500' : 'bg-gray-400'}`}></div>
-            <span className="text-sm text-gray-600">
-              {isMonitoring ? 'Monitoring' : 'Paused'}
-            </span>
->>>>>>> 291faebb6647e51e1c10fe098bd4c47d2942e871
-          </div>
+            </div>          </div>
         </div>
         <div className="p-4">
           <div className="text-center">

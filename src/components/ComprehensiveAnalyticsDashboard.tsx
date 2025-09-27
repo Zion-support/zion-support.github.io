@@ -45,7 +45,6 @@ export const ComprehensiveAnalyticsDashboard: React.FC<ComprehensiveAnalyticsDas
 
   return (
     <div className="space-y-6">
-<<<<<<< HEAD
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center space-x-2">
@@ -212,24 +211,7 @@ export const ComprehensiveAnalyticsDashboard: React.FC<ComprehensiveAnalyticsDas
                     )}
                   </div>
                 </CardContent>
-              </Card>
-=======
-      <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
-        <div className="flex items-center justify-between mb-6">
-          <div>
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
-              Comprehensive Analytics Dashboard
-            </h2>
-            <p className="text-gray-600 dark:text-gray-400">Complete analytics and insights</p>
-          </div>
-          <div className="flex items-center space-x-4">
-            <div className="flex items-center space-x-2">
-              <div className={`w-3 h-3 rounded-full ${isRealTime ? 'bg-green-500' : 'bg-gray-400'}`} />
-              <span className="text-sm text-gray-600 dark:text-gray-400">
-                {isRealTime ? 'Real-time' : 'Paused'}
-              </span>
->>>>>>> 291faebb6647e51e1c10fe098bd4c47d2942e871
-            </div>
+              </Card>            </div>
             <button
               onClick={onDataRefresh}
               className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg"
