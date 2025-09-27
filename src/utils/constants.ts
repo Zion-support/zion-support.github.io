@@ -1,100 +1,242 @@
-export, interface, Service {id: stri, n, g;
-  tit, l, e: stri, n, g;
-  descripti, o, n: stri, n, g;
-  ic, o, n: stri, n, g;
-  featur, e, s?: stri, n, g[];
-  pri, c, e?: stri, n, g};
-export, const, SERVICES: Servi, c, e[] = [{id: 'ai-ml',
-  tit, l, e: 'AI & Machi, n, e, Learni, n, g',
-  descripti, o, n: 'Cutti, n, g-ed, g, e, artificial, intelligencesolutions, toautomate andoptimize, yourbusiness, processes.',
-  ic, o, n: '🤖',
-  featur, e, s: ['Cust, o, m, AI, Model, s', 'Machi, n, e, Learning, Pipeline, s', 'Natur, a, l, Language, Processin, g', 'Comput, e, r, Visi, o, n', 'Predicti, v, e, Analyti, c, s'],
-  pri, c, e: 'Fr, o, m $5K'
-}, {id: 'clo, u, d',
-  tit, l, e: 'Clo, u, d, Solutio, n, s',
-  descripti, o, n: 'Scalablecloud, infrastructureand, deploymentsolutions formodern, application, s.',
-  ic, o, n: '☁️',
-  featur, e, s: ['Clo, u, d, Migrati, o, n', 'DevO, p, s & CI/CD', 'Contain, e, r, Orchestrati, o, n', 'Serverle, s, s, Architectu, r, e', 'Clo, u, d, Securi, t, y'],
-  pri, c, e: 'Fr, o, m $3K'
-}, {id: 'w, e, b-d, e, v',
-  tit, l, e: 'W, e, b, Developme, n, t',
-  descripti, o, n: 'Mode, r, n, responsi, v, e, web, applicationsbuilt, withthe latesttechnologies, andbest, practices.',
-  ic, o, n: '💻',
-  featur, e, s: ['React/Ne, x, t.js, Ap, p, s', 'Progressi, v, e, Web, App, s', 'E-commer, c, e, Solutio, n, s', 'A, P, I, Developme, n, t', 'Performan, c, e, Optimizati, o, n'],
-  pri, c, e: 'Fr, o, m $2K'
-}, {id: 'mobi, l, e',
-  tit, l, e: 'Mobi, l, e, Developme, n, t',
-  descripti, o, n: 'Nati, v, e, and, cros, s-platformmobile, applicationsfor, iOSand Androidplatfor, m, s.',
-  ic, o, n: '📱',
-  featur, e, s: ['Nati, v, e, i, O, S/Andro, i, d', 'React, Native, App, s', 'Flutt, e, r, Developme, n, t', 'A, p, p, Store, Optimizatio, n', 'Pu, s, h, Notificatio, n, s'],
-  pri, c, e: 'Fr, o, m $4K'
-}, {id: 'da, t, a-analyti, c, s',
-  tit, l, e: 'Da, t, a, Analyti, c, s',
-  descripti, o, n: 'Advanc, e, d, data, analysisand, businessintelligence solutionsto, driveinformed, decisions.',
-  ic, o, n: '📊',
-  featur, e, s: ['Da, t, a, Visualizati, o, n', 'Busine, s, s, Intelligen, c, e', 'Re, a, l-ti, m, e, Dashboar, d, s', 'Da, t, a, Warehousi, n, g', 'Machi, n, e, Learning, Analytic, s'],
-  pri, c, e: 'Fr, o, m $3K'
-}, {id: 'cybersecuri, t, y',
-  tit, l, e: 'Cybersecuri, t, y',
-  descripti, o, n: 'Comprehensi, v, e, security, solutionsto, protectyour digitalassets, andinfrastructur, e.',
-  ic, o, n: '🔒',
-  featur, e, s: ['Securi, t, y, Audi, t, s', 'Penetrati, o, n, Testi, n, g', 'Complian, c, e, Manageme, n, t', 'Securi, t, y, Monitori, n, g', 'Incide, n, t, Respon, s, e'],
-  pri, c, e: 'Fr, o, m $2K'
-}];
+// Application constants
+export const APP_NAME = "Zion Tech Group";
+export const APP_VERSION = "1.0.0";
 
-export, const, FEATURES = [{ic, o, n: '⚡',
-  tit, l, e: 'Fa, s, t, Delive, r, y',
-  descripti, o, n: 'Rapiddevelopment, anddeployment, ofhigh-qualitysolutio, n, s',
-  col, o, r: 'bl, u, e'
-} as, cons, t, {ic, o, n: '🛡️',
-  tit, l, e: 'Secu, r, e & Reliab, l, e',
-  descripti, o, n: 'Enterpri, s, e-gra, d, e, security, andreliability, foryour applicatio, n, s',
-  col, o, r: 'gre, e, n'
-} as, cons, t, {ic, o, n: '📈',
-  tit, l, e: 'Scalab, l, e, Solutio, n, s',
-  descripti, o, n: 'Bui, l, t, to, growwith, yourbusiness andhandle, increasingdemand, s',
-  col, o, r: 'purp, l, e'
-} as, cons, t, {ic, o, n: '🎯',
-  tit, l, e: 'Cust, o, m, Solutio, n, s',
-  descripti, o, n: 'Tailoredsolutions, designedspecifically, foryour uniquerequiremen, t, s',
-  col, o, r: 'oran, g, e'
-} as, cons, t];
+// API endpoints
+export const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000/api";
 
-// Testimonials, data, export const, TESTIMONIAL, S = [{id: '1',
-  na, m, e: 'Sar, a, h, Johns, o, n',
-  ro, l, e: 'C, T, O',
-  compa, n, y: 'TechCo, r, p',
-  conte, n, t: 'Zi, o, n, Tech, Solution, s, transformed, ourdigital, infrastructurewith their, A, I-poweredsolutio, n, s.'rati, n, g: 5avat, a, r: '/imag, e, s/testimonia, l, s/sar, a, h.j, p, g'
-}, {id: '2',
-  na, m, e: 'Micha, e, l, Ch, e, n',
-  ro, l, e: 'Found, e, r',
-  compa, n, y: 'StartupX, Y, Z',
-  conte, n, t: 'Thecloud, migrationwas, seamlessand exceededour, expectation, s.'rati, n, g: 5avat, a, r: '/imag, e, s/testimonia, l, s/micha, e, l.j, p, g'
-}];
+// Feature flags
+export const FEATURES = {
+  ANALYTICS: true,
+  PERFORMANCE_MONITORING: true,
+  ERROR_REPORTING: true,
+  SECURITY_MONITORING: true,
+  IMAGE_OPTIMIZATION: true
+} as const;
 
-// Pricing, tiers, export const, PRICING_TIER, S = [{id: 'start, e, r',
-  na, m, e: 'Start, e, r',
-  pri, c, e: '$2,9, 9, 9',
-  descripti, o, n: 'Perfectfor, smallbusinesse, s',
-  featur, e, s: ['Bas, i, c, AI, Integratio, n', 'Clo, u, d, Set, u, p', '24/7, Suppo, r, t']popul, a, r: fal, s, e
-}{id: 'profession, a, l',
-  na, m, e: 'Profession, a, l',
-  pri, c, e: '$7,9, 9, 9',
-  descripti, o, n: 'Idealfor, growingcompanie, s',
-  featur, e, s: ['Advanc, e, d, AI, Solution, s', 'Fu, l, l, Cloud, Migratio, n', 'Priori, t, y, Suppo, r, t', 'Cust, o, m, Developme, n, t']popul, a, r: tr, u, e
-}{id: 'enterpri, s, e',
-  na, m, e: 'Enterpri, s, e',
-  pri, c, e: 'Cust, o, m',
-  descripti, o, n: 'Tailoredfor, largeorganization, s',
-  featur, e, s: ['Cust, o, m, AI, Solution, s', 'Dedicat, e, d, Te, a, m', 'Whi, t, e-lab, e, l, Optio, n, s', 'Advanc, e, d, Securi, t, y']popul, a, r: fal, s, e
-}];
+// Service interface and data
+export interface Service {
+  id: string;
+  title: string;
+  description: string;
+  icon: string;
+  features?: string[];
+  price?: string;
+}
 
-// Blog, posts, preview (importedfrom, blogPost, s.ts)
-export, const, BLOG_POSTS = [
-  {id: '1',
-    tit, l, e: 'T, h, e, Future, ofAI, inBusiness Automati, o, n',
-    excer, p, t: 'Discoverhow, artificialintelligence, isrevolutionizing businessprocess, e, s.',
-    auth, o, r: 'Dr. Sar, a, h, Ch, e, n',
-    publishDa, t, e: '20, 2, 4-01-15'readTi, m, e: 8catego, r, y: 'Artifici, a, l, Intelligen, c, e',
-    featur, e, d: tr, u, e};
+export const SERVICES: Service[] = [
+  {
+    id: 'ai-ml',
+    title: 'AI & Machine Learning',
+    description: 'Cutting-edge artificial intelligence solutions to automate and optimize your business processes.',
+    icon: '🤖',
+    features: ['Custom AI Models', 'Machine Learning Pipelines', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
+    price: 'From $5K'
+  },
+  {
+    id: 'cloud',
+    title: 'Cloud Solutions',
+    description: 'Scalable cloud infrastructure and deployment solutions for modern applications.',
+    icon: '☁️',
+    features: ['Cloud Migration', 'DevOps & CI/CD', 'Container Orchestration', 'Serverless Architecture', 'Cloud Security'],
+    price: 'From $3K'
+  },
+  {
+    id: 'web-dev',
+    title: 'Web Development',
+    description: 'Modern, responsive web applications built with the latest technologies and best practices.',
+    icon: '💻',
+    features: ['React/Next.js Apps', 'Progressive Web Apps', 'E-commerce Solutions', 'API Development', 'Performance Optimization'],
+    price: 'From $2K'
+  },
+  {
+    id: 'mobile',
+    title: 'Mobile Development',
+    description: 'Native and cross-platform mobile applications for iOS and Android.',
+    icon: '📱',
+    features: ['Native iOS/Android', 'React Native', 'Flutter Apps', 'App Store Optimization', 'Push Notifications'],
+    price: 'From $4K'
+  },
+  {
+    id: 'data-analytics',
+    title: 'Data Analytics',
+    description: 'Transform your data into actionable insights with advanced analytics and visualization.',
+    icon: '📊',
+    features: ['Data Warehousing', 'Business Intelligence', 'Real-time Analytics', 'Data Visualization', 'Predictive Modeling'],
+    price: 'From $3K'
+  },
+  {
+    id: 'cybersecurity',
+    title: 'Cybersecurity',
+    description: 'Comprehensive security solutions to protect your digital assets and infrastructure.',
+    icon: '🔒',
+    features: ['Security Audits', 'Penetration Testing', 'Security Monitoring', 'Compliance Management', 'Incident Response'],
+    price: 'From $4K'
+  }
 ];
+
+// Service features
+export const SERVICE_FEATURES = [
+  {
+    id: "1",
+    icon: "🚀",
+    title: "Fast & Scalable",
+    description: "Rapid development and deployment of high-quality solutions",
+    color: "blue"
+  },
+  {
+    id: "2", 
+    icon: "🛡️",
+    title: "Secure & Reliable",
+    description: "Enterprise-grade security and reliability",
+    color: "green"
+  },
+  {
+    id: "3",
+    icon: "⚡",
+    title: "AI-Powered",
+    description: "Advanced AI and machine learning capabilities",
+    color: "purple"
+  }
+] as const;
+
+// Navigation items
+export const NAVIGATION_ITEMS = [
+  { name: 'Home', href: '/' },
+  { name: 'Services', href: '/services' },
+  { name: 'About', href: '/about' },
+  { name: 'Contact', href: '/contact' },
+  { name: 'Blog', href: '/blog' }
+];
+
+// Social links
+export const SOCIAL_LINKS = {
+  twitter: 'https://twitter.com/ziontechgroup',
+  linkedin: 'https://linkedin.com/company/ziontechgroup',
+  github: 'https://github.com/ziontechgroup',
+  email: 'contact@ziontechgroup.com'
+};
+
+// Company information
+export const COMPANY_INFO = {
+  name: 'Zion Tech Group',
+  tagline: 'Innovative Technology Solutions',
+  description: 'Leading provider of cutting-edge technology solutions for modern businesses.',
+  address: '123 Tech Street, Innovation City, IC 12345',
+  phone: '+1 (555) 123-4567',
+  email: 'contact@ziontechgroup.com'
+};
+
+// API endpoints
+export const API_ENDPOINTS = {
+  services: '/api/services',
+  contact: '/api/contact',
+  newsletter: '/api/newsletter',
+  analytics: '/api/analytics'
+};
+
+// Testimonials data
+export const TESTIMONIALS = [
+  {
+    id: "1",
+    name: "Sarah Johnson",
+    role: "CTO",
+    company: "TechCorp",
+    content: "Zion Tech Solutions transformed our digital infrastructure with their AI-powered solutions.",
+    rating: 5,
+    avatar: "/images/testimonials/sarah.jpg"
+  },
+  {
+    id: "2",
+    name: "Michael Chen", 
+    role: "Founder",
+    company: "StartupXYZ",
+    content: "The cloud migration was seamless and exceeded our expectations.",
+    rating: 5,
+    avatar: "/images/testimonials/michael.jpg"
+  }
+] as const;
+
+// Pricing tiers
+export const PRICING_TIERS = [
+  {
+    id: "starter",
+    name: "Starter",
+    price: "$2,999",
+    description: "Perfect for small businesses",
+    features: ["Basic AI Integration", "Cloud Setup", "24/7 Support"],
+    popular: false
+  },
+  {
+    id: "professional", 
+    name: "Professional",
+    price: "$7,999",
+    description: "Ideal for growing companies",
+    features: ["Advanced AI Solutions", "Full Cloud Migration", "Priority Support", "Custom Development"],
+    popular: true
+  },
+  {
+    id: "enterprise",
+    name: "Enterprise", 
+    price: "Custom",
+    description: "Tailored for large organizations",
+    features: ["Custom AI Solutions", "Dedicated Team", "White-label Options", "Advanced Security"],
+    popular: false
+  }
+] as const;
+
+// Blog posts data
+export const BLOG_POSTS = [
+  {
+    id: "1",
+    title: "The Future of AI in Business Automation",
+    excerpt: "Discover how AI is revolutionizing business processes and automation.",
+    publishDate: "2024-01-15",
+    readTime: 8,
+    category: "Artificial Intelligence",
+    featured: true
+  }
+] as const;
+
+// Performance thresholds
+export const PERFORMANCE_THRESHOLDS = {
+  LCP: 2500, // Largest Contentful Paint (ms)
+  FID: 100,  // First Input Delay (ms)
+  CLS: 0.1,  // Cumulative Layout Shift
+  FCP: 1800, // First Contentful Paint (ms)
+  TTFB: 600  // Time to First Byte (ms)
+};
+
+// Cache durations (in milliseconds)
+export const CACHE_DURATIONS = {
+  SHORT: 5 * 60 * 1000,      // 5 minutes
+  MEDIUM: 30 * 60 * 1000,    // 30 minutes
+  LONG: 24 * 60 * 60 * 1000, // 24 hours
+  VERY_LONG: 7 * 24 * 60 * 60 * 1000 // 7 days
+} as const;
+
+// SEO defaults
+export const SEO_DEFAULTS = {
+  title: 'Zion Tech Group - Innovative Technology Solutions',
+  description: 'Leading provider of AI, cloud, web development, and cybersecurity solutions. Transform your business with cutting-edge technology.',
+  keywords: ['technology', 'AI', 'machine learning', 'cloud computing', 'web development', 'cybersecurity', 'innovation'],
+  ogType: 'website',
+  twitterCard: 'summary_large_image'
+};
+
+// Error messages
+export const ERROR_MESSAGES = {
+  NETWORK_ERROR: "Network connection failed. Please check your internet connection.",
+  SERVER_ERROR: "Server error occurred. Please try again later.",
+  VALIDATION_ERROR: "Please check your input and try again.",
+  UNAUTHORIZED: "You are not authorized to perform this action.",
+  NOT_FOUND: "The requested resource was not found."
+} as const;
+
+// Success messages
+export const SUCCESS_MESSAGES = {
+  SAVE_SUCCESS: "Changes saved successfully.",
+  DELETE_SUCCESS: "Item deleted successfully.",
+  UPDATE_SUCCESS: "Item updated successfully.",
+  CREATE_SUCCESS: "Item created successfully."
+} as const;

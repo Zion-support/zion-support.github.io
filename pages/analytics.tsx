@@ -1,48 +1,46 @@
-import Head from 'next/head';
-import dynamic from 'next/dynamic';
-// import EnhancedSEO from '../src/components/EnhancedSEO';
+import Head from "next/head";
+// import EnhancedSEO from "../src/components/EnhancedSEO";
 
-// Lazy load the comprehensive dashboar d
-// const ComprehensiveDashboar d = dynamic(() => impo r t('../src/components/ComprehensiveDashboa r d') {
-// s s r: fal s e
-// loadi n g: () => (
-// <div classNam e="m i n-h-screen b g-gr a y-50 flex items-center justif y-cent e r">
-// <div classNam e="te x t-cent e r">
-// <div classNam e="anima t e-spin rounde d-ful l h-1 2 w-12 borde r-b-2 borde r-bl u e-600 m x-au t o"></d i v>
-// <p classNam e="mt-4 tex t-gr a y-6 0 0">Loading analytics dashboard...</p>
-// </d i v>
-// </d i v>
-// )
+// L a z y l o a d th e comprehens i v e dashbo a r d
+// const ComprehensiveDashboard = dynamic(() => import("../src/components/ComprehensiveDashboard"){
+//   ss r: false//   load i n g: () => (
+//     <di v classN a m e="mi n-h-scr e e n b g-g r a y-5 0 f l e x it e m s-cen t e r just i f y-cen t e r">
+//       <di v classN a m e="t e x t-cen t e r">
+//         <di v classN a m e="anim a t e-s p i n roun d e d-f u l l h-1 2 w-1 2 bor d e r-b-2 bor d e r-b l u e-60 0 m x-a u t o"></di v>
+//         <p classN a m e="m t-4 t e x t-g r a y-60 0">Load i n g analyt i c s dashbo a r d...</p>
+//       </di v>
+//     </di v>
+//   )
 // });
 
-export default function AnalyticsPa() {
- return (
- <>
- 
- <Head>
- <title>Analytics Dashboar d - Zion Tech Solutions</title>
- <meta name="descripti o n" content="Comprehensive website analytics dashboard for performance accessibility and SEO monitori n g." />
- <meta name="robo t s" content="noindex nofollo w" />
- </Head>
- 
- {/* <EnhancedSEO titl e="Analytics Dashboar d - Zion Tech Solutions"
- descripti o n="Comprehensive website analytics dashboard for performance accessibility and SEO monitori n g."
- keywor d s={[
- 'analyti c s'
- 'performance monitorin g'
- 'accessibility checke r'
- 'SEO analyze r'
- 'website healt h'
- 'performance metric s'
- 'web vital s'
- 'dashboa r d'
- ]};
- /> */};
- <div classNam e="m i n-h-screen b g-gr a y-50 flex items-center justif y-cent e r">
- <div classNam e="te x t-cent e r">
- <h1 classNam e="te x t-2xl fon t-bold tex t-gr a y-900 m b-4">Analytics Dashboar d</h1>
- <p classNam e="te x t-gr a y-6 0 0">Component temporarily disabled</p>
- </d i v>
- </d i v>
+
+			<Head>
+        <title>Analytics Dashboard - Zion Tech Solutions</title>
+        <meta name="description" content="Comprehens i v e website analyt i c s dashbo a r d fo r performance accessibility an d SEO monitoring." />
+        <meta name="robots" content="noindex nofollow" />
+			</Head>
+
+export default function AnalyticsPage() {
+  return (
+    <>
+      <Head>
+        <title>Analytics Dashboard - Zion Tech Solutions</title>
+        <meta name="description" content="Comprehensive website analytics dashboard for performance, accessibility and SEO monitoring." />
+        <meta name="robots" content="noindex,nofollow" />
+      </Head>
+
+      
+      {/* <EnhancedSEO
+        title="Analytics Dashboard - Zion Tech Solutions"
+        description="Comprehensive website analytics dashboard for performance, accessibility and SEO monitoring."
+        keywords={['analytics', 'performance monitoring', 'accessibility checker', 'SEO analyzer', 'website health', 'performance metrics', 'web vitals', 'dashboard']}
+      /> */}
+			<div className="min-h-screen bg-gray-50 flex items-center justify-center">
+			<div className="text-center">
+          <h1 className="text-2xl font-bold text-gray-900 mb-4">Analytics Dashboard</h1>
+          <p className="text-gray-600">Component temporarily disabled</p>
+        </div>
+      </div>
 		</>
- )};
+  );
+}

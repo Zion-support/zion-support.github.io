@@ -1,174 +1,221 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { useState } from 'react';
-import from '../src/components/S, E, O';
-import { useAnalyti, c, s } from '../src/hooks/useAnalyti, c, s';
+import SEO from '../src/components/SEO';
+import { useAnalytics } from '../src/hooks/useAnalytics';
 
-export default function Conta(): J, S, X.Eleme, n, t {
-	con, s, t [formDa, t, a, setFormDa, t, a] = useState({
-		na, m, e: ''
-		ema, i, l: ''
-		compa, n, y: ''
-		messa, g, e: ''
-	});
+export default function Contact(): JSX.Element {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    company: '',
+    subject: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  // Removed unused visibility state
 
-	// Analytics, tracking, const { trackCli, c, k } = useAnalyti, c, s();
+  const { trackClick } = useAnalytics();
 
-	const, handleInputChang, e = (e: React.ChangeEve, n, t<HTMLInputEleme, n, t | HTMLTextAreaEleme, n, t>) => {
-		con, s, t { na, m, e, val, u, e } = e.targ, e, t;
-		setFormDa, t, a(pr, e, v => ({
-			...pr, e, v
-			[na, m, e]: val, u, e
-		}))};
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
 
-	const, handleSubmi, t = (e: React.FormEve, n, t) => {
-		e.preventDefau, l, t();
-		trackCli, c, k('conta, c, t-fo, r, m-subm, i, t', 'conversi, o, n');
-		conso, l, e.l, o, g('Form, submitte, d:', formDa, t, a);
-		// Handle, form, submission logic, her, e
-	};  return (
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    
+    // Simulate form submission
+    await new Promise(resolve => setTimeout(resolve, 2000));
+    
+    setIsSubmitting(false);
+    trackClick('contact-form-submit', 'conversion');
+    alert('Thank you for your message! We\'ll get back to you soon.');
+    
+    // Reset form
+    setFormData({
+      name: '',
+      email: '',
+      company: '',
+      subject: '',
+      message: ''
+    });
+  };
+
+  const contactInfo = [
+    {
+      icon: '📧',
+      title: 'Email Us',
+      details: 'hello@zionapp.com',
+      description: 'Send us an email and we\'ll respond within 24 hours.'
+    },
+    {
+      icon: '📞',
+      title: 'Call Us',
+      details: '+1 (555) 123-4567',
+      description: 'Mon-Fri from 9am to 6pm EST'
+    },
+    {
+      icon: '📍',
+      title: 'Visit Us',
+      details: '123 Tech Street Silicon Valley CA 94000',
+      description: 'Come say hello at our office'
+    }
+  ];
+
+  return (
     <>
-      
-      <S, E, O />
-			<Head>
-				<tit, l, e>Contact, U, s - Zion, Ap, p</tit, l, e>
-				<meta, nam, e="descripti, o, n" conte, n, t="Get, in, touch with, Zion, App for, your, technology nee, d, s. We're, here, to help, transform, your busine, s, s." />
-				<meta, nam, e="viewpo, r, t" conte, n, t="wid, t, h=devi, c, e-wid, t, h, initi, a, l-sca, l, e=1" />
-			</He, a, d>
-			<div, classNam, e="m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-bl, u, e-50, t, o-indi, g, o-100, p, t-20">
-				<div, classNam, e="container, m, x-auto, p, x-4, p, y-8, ma, x-w-7, x, l">
-					<nav, classNam, e="mb-8">
-						<Link, href="/" classNa, m, e="te, x, t-bl, u, e-600, hove, r:te, x, t-bl, u, e-800, fon, t-medium, transitio, n-colo, r, s">
-							← Back, to, Home
-						</Link>
-					</n, a, v>
+      <SEO />
+      <Head>
+        <title>Contact Us - Zion App</title>
+        <meta name="description" content="Get in touch with Zion App. We're here to help you transform your business with cutting-edge technology solutions." />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 pt-20">
+        <div className="container mx-auto px-4 py-8 max-w-7xl">
+          <nav className="mb-8">
+            <Link href="/" className="text-blue-600 hover:text-blue-800 font-medium transition-colors">
+              ← Back to Home
+            </Link>
+          </nav>
 
-					<header, classNam, e="te, x, t-center, m, b-16">
-						<h1, classNam, e="te, x, t-5xl, m, d:te, x, t-6xl, fon, t-bold, tex, t-bl, u, e-600, m, b-4, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-indi, g, o-600, b, g-cl, i, p-text, tex, t-transpare, n, t">
-							Contact, U, s
-						</h1>
-						<p, classNam, e="te, x, t-xl, tex, t-gr, a, y-600, ma, x-w-3xl, m, x-auto, leadin, g-relax, e, d">
-							Ready, to, transform your, busines, s? L, e, t's, start, the conversati, o, n.
-						</p>
-					</head, e, r>
+          <header className="text-center mb-16">
+            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+              Contact Us
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Ready to transform your business? Let&apos;s discuss how we can help you achieve your goals.
+            </p>
+          </header>
 
-					<div, classNam, e="grid, l, g:gr, i, d-co, l, s-2, ga, p-12">
-						{/* Contact, For, m */};
-						<div, classNam, e="bg-white, rounde, d-2xl, shado, w-x, l, p-8">
-							<h2, classNam, e="te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-900, m, b-6">Send, us, a messa, g, e</h2>
-							<form, onSubmi, t={handleSubm, i, t} classNa, m, e="spa, c, e-y-6">
-								<d, i, v>
-									<label, htmlFo, r="na, m, e" classNa, m, e="block, tex, t-sm, fon, t-medium, tex, t-gr, a, y-700, m, b-2">
-										Full, Nam, e
-									</lab, e, l>
-									<input, typ, e="te, x, t"
-										id="na, m, e"
-										na, m, e="na, m, e"
-										val, u, e={formDa, t, a.na, m, e};
-										onChan, g, e={handleInputChan, g, e};
-										required, classNam, e="w-full, p, x-4, p, y-3, border, border-gr, a, y-300, rounde, d-lg, focu, s:outli, n, e-none, focu, s:ri, n, g-2, focu, s:ri, n, g-bl, u, e-5, 0, 0"
-									/>
-								</d, i, v>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {/* Contact Form */}
+            <div className="bg-white rounded-2xl shadow-xl p-8">
+              <h2 className="text-2xl font-bold text-gray-900 mb-6">Send us a Message</h2>
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                      Full Name *
+                    </label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleInputChange}
+                      required
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      placeholder="Your full name"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                      Email Address *
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      required
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      placeholder="your.email@example.com"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
+                    Company
+                  </label>
+                  <input
+                    type="text"
+                    id="company"
+                    name="company"
+                    value={formData.company}
+                    onChange={handleInputChange}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    placeholder="Your company name"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
+                    Subject *
+                  </label>
+                  <input
+                    type="text"
+                    id="subject"
+                    name="subject"
+                    value={formData.subject}
+                    onChange={handleInputChange}
+                    required
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    placeholder="What can we help you with?"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                    Message *
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleInputChange}
+                    required
+                    rows={6}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    placeholder="Tell us about your project or question..."
+                  />
+                </div>
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  {isSubmitting ? 'Sending...' : 'Send Message'}
+                </button>
+              </form>
+            </div>
 
-								<d, i, v>
-									<label, htmlFo, r="ema, i, l" classNa, m, e="block, tex, t-sm, fon, t-medium, tex, t-gr, a, y-700, m, b-2">
-										Email, Addres, s
-									</lab, e, l>
-									<input, typ, e="ema, i, l"
-										id="ema, i, l"
-										na, m, e="ema, i, l"
-										val, u, e={formDa, t, a.ema, i, l};
-										onChan, g, e={handleInputChan, g, e};
-										required, classNam, e="w-full, p, x-4, p, y-3, border, border-gr, a, y-300, rounde, d-lg, focu, s:outli, n, e-none, focu, s:ri, n, g-2, focu, s:ri, n, g-bl, u, e-5, 0, 0"
-									/>
-								</d, i, v>
+            {/* Contact Information */}
+            <div className="space-y-8">
+              <div>
+                <h2 className="text-2xl font-bold text-gray-900 mb-6">Get in Touch</h2>
+                <p className="text-gray-600 mb-8">
+                  We&apos;re here to help you succeed. Reach out to us through any of the channels below and we&apos;ll get back to you as soon as possible.
+                </p>
+              </div>
 
-								<d, i, v>
-									<label, htmlFo, r="compa, n, y" classNa, m, e="block, tex, t-sm, fon, t-medium, tex, t-gr, a, y-700, m, b-2">
-										Compa, n, y
-									</lab, e, l>
-									<input, typ, e="te, x, t"
-										id="compa, n, y"
-										na, m, e="compa, n, y"
-										val, u, e={formDa, t, a.compa, n, y};
-										onChan, g, e={handleInputChan, g, e};
-										classNa, m, e="w-full, p, x-4, p, y-3, border, border-gr, a, y-300, rounde, d-lg, focu, s:outli, n, e-none, focu, s:ri, n, g-2, focu, s:ri, n, g-bl, u, e-5, 0, 0"
-									/>
-								</d, i, v>
+              <div className="space-y-6">
+                {contactInfo.map((info, index) => (
+                  <div key={index} className="flex items-start space-x-4 p-6 bg-white rounded-xl shadow-lg">
+                    <div className="text-3xl">{info.icon}</div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-gray-900 mb-2">{info.title}</h3>
+                      <p className="text-blue-600 font-medium mb-1">{info.details}</p>
+                      <p className="text-gray-600 text-sm">{info.description}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
 
-								<d, i, v>
-									<label, htmlFo, r="messa, g, e" classNa, m, e="block, tex, t-sm, fon, t-medium, tex, t-gr, a, y-700, m, b-2">
-										Messa, g, e
-									</lab, e, l>
-									<textarea, i, d="messa, g, e"
-										na, m, e="messa, g, e"
-										val, u, e={formDa, t, a.messa, g, e};
-										onChan, g, e={handleInputChan, g, e};
-										required, row, s={5};
-										classNa, m, e="w-full, p, x-4, p, y-3, border, border-gr, a, y-300, rounde, d-lg, focu, s:outli, n, e-none, focu, s:ri, n, g-2, focu, s:ri, n, g-bl, u, e-5, 0, 0"
-									/>
-								</d, i, v>
-
-								<button, typ, e="subm, i, t"
-									classNa, m, e="w-full, b, g-bl, u, e-600, tex, t-white, p, y-3, p, x-6, rounde, d-lg, fon, t-semibold, hove, r:bg-bl, u, e-700, transitio, n-colo, r, s"
-								>
-									Send, Messag, e
-								</butt, o, n>
-							</fo, r, m>
-						</d, i, v>
-
-						{/* Contact, Informatio, n */};
-						<div, classNam, e="spa, c, e-y-8">
-							<div, classNam, e="bg-white, rounde, d-2xl, shado, w-x, l, p-8">
-								<h2, classNam, e="te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-900, m, b-6">Get, in, touch</h2>
-								<div, classNam, e="spa, c, e-y-4">
-									<div, classNam, e="flex, item, s-cent, e, r">
-										<div, classNam, e="w-1, 2, h-12, b, g-bl, u, e-100, rounde, d-lg, flex, items-center, justif, y-center, m, r-4">
-											<span, classNam, e="te, x, t-bl, u, e-600, tex, t-xl">📧</sp, a, n>
-										</d, i, v>
-										<d, i, v>
-											<p, classNam, e="fo, n, t-semibold, tex, t-gr, a, y-9, 0, 0">Ema, i, l</p>
-											<p, classNam, e="te, x, t-gr, a, y-6, 0, 0">hel, l, o@zi, o, n.app</p>
-										</d, i, v>
-									</d, i, v>
-
-									<div, classNam, e="flex, item, s-cent, e, r">
-										<div, classNam, e="w-1, 2, h-12, b, g-bl, u, e-100, rounde, d-lg, flex, items-center, justif, y-center, m, r-4">
-											<span, classNam, e="te, x, t-bl, u, e-600, tex, t-xl">📞</sp, a, n>
-										</d, i, v>
-										<d, i, v>
-											<p, classNam, e="fo, n, t-semibold, tex, t-gr, a, y-9, 0, 0">Pho, n, e</p>
-											<p, classNam, e="te, x, t-gr, a, y-6, 0, 0">+1 (5, 5, 5) 1, 2, 3-45, 6, 7</p>
-										</d, i, v>
-									</d, i, v>
-
-									<div, classNam, e="flex, item, s-cent, e, r">
-										<div, classNam, e="w-1, 2, h-12, b, g-bl, u, e-100, rounde, d-lg, flex, items-center, justif, y-center, m, r-4">
-											<span, classNam, e="te, x, t-bl, u, e-600, tex, t-xl">📍</sp, a, n>
-										</d, i, v>
-										<d, i, v>
-											<p, classNam, e="fo, n, t-semibold, tex, t-gr, a, y-9, 0, 0">Addre, s, s</p>
-											<p, classNam, e="te, x, t-gr, a, y-6, 0, 0">123, Tech, Street, Innovation, Cit, y, IC, 1234, 5</p>
-										</d, i, v>
-									</d, i, v>
-								</d, i, v>
-							</d, i, v>
-
-							<div, classNam, e="bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-indi, g, o-600, rounde, d-2x, l, p-8, tex, t-whi, t, e">
-								<h3, classNam, e="te, x, t-xl, fon, t-bold, m, b-4">Ready, to, get start, e, d?</h3>
-								<p, classNam, e="mb-6, opacit, y-90">
-									Schedule, a, free consultation, to, discuss your, project, needs.
-								</p>
-								<button, onClic, k={() => trackCli, c, k('schedu, l, e-consultati, o, n', 'c, t, a')};
-									classNa, m, e="bg-white, tex, t-bl, u, e-600, p, x-6, p, y-3, rounde, d-lg, fon, t-semibold, hove, r:bg-gr, a, y-100, transitio, n-colo, r, s"
-								>
-									Schedule, Consultatio, n
-								</butt, o, n>
-							</d, i, v>
-						</d, i, v>
-					</d, i, v>
-				</d, i, v>
-			</d, i, v>
-		</>
-	)};
+              <div className="bg-blue-50 rounded-xl p-6">
+                <h3 className="text-lg font-semibold text-gray-900 mb-3">Response Time</h3>
+                <p className="text-gray-600 text-sm">
+                  We typically respond to all inquiries within 24 hours during business days. 
+                  For urgent matters please call us directly.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}

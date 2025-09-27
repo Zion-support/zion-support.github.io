@@ -1,170 +1,361 @@
-interface, CacheIte, m<T> {val, u, e: T;
-  timesta, m, p: numb, e, r;
-  t, t, l: numb, e, r;
-  hi, t, s: numb, e, r;
-  lastAccess, e, d: numb, e, r};
-interface, CacheOption, s {t, t, l?: numb, e, r; // Ti, m, e, to, liv, e, in, millisecond, s, maxSi, z, e?: numb, e, r; // Maxim, u, m, number, o, f, items, maxMemor, y?: numb, e, r; // Maxim, u, m, memory, usag, e, in, byte, s, strate, g, y?: 'l, r, u' | 'l, f, u' | 'fi, f, o'; // Evicti, o, n, strate, g, y};
-interface, CacheStat, s {hi, t, s: numb, e, r;
-  miss, e, s: numb, e, r;
-  si, z, e: numb, e, r;
-  memoryUsa, g, e: numb, e, r;
-  hitRa, t, e: numb, e, r;
-  evictio, n, s: numb, e, r};
-export, class, AdvancedCache<T = a, n, y> {priva, t, e, cac, h, e = n, e, w, M, a, p<stri, n, g, CacheI, t, e, m<T>>();
-  priva, t, e, sta, t, s: CacheSta, t, s = {
-    hi, t, s: 0, miss, e, s: 0, si, z, e: 0, memoryUsa, g, e: 0, hitRa, t, e: 0evictio, n, s: 0
-  };
-  private, option, s: Requir, e, d<CacheOptio, n, s>;
+/**
+ * Advanced Caching System for Zion Tech Group Website
+ */
 
-  construct, o, r(optio, n, s: CacheOptio, n, s = {}) {th, i, s.optio, n, s = {
+interface CacheItem<T> {
+  data: T;
+  timestamp: number;
+  expiresAt: number;
+  accessCount: number;
+  lastAccessed: number;
+  size: number;
+}
 
-    // Remo, v, e, existing, ite, m, if, i, t, exists, i, f (th, i, s.cac, h, e.h, a, s(k, e, y)) {
-      th, i, s.remo, v, e(k, e, y)};
-    // Check, if, we need, to, evict items, thi, s.evictIfNeed, e, d();
+interface CacheOptions {
+  ttl?: number; // Time to live in milliseconds
+  maxSize?: number; // Maximum cache size in bytes
+  maxItems?: number; // Maximum number of items
+  strategy?: 'lru' | 'lfu' | 'fifo'; // Eviction strategy
+}
 
-    const, ite, m: CacheIt, e, m<T> = {val, u, e, timesta, m, p: n, o, w, t, t, l: itemT, T, L, hi, t, s: 0lastAccess, e, d: n, o, w
+class AdvancedCache<T = unknown> {
+  private cache = new Map<string, CacheItem<T>>();
+  private options: Required<CacheOptions>;
+  private currentSize = 0;
+
+  constructor(options: CacheOptions = {}) {
+    this.options = {
+      ttl: options.ttl || 5 * 60 * 1000, // 5 minutes default
+      maxSize: options.maxSize || 10 * 1024 * 1024, // 10MB default
+      maxItems: options.maxItems || 1000, // 1000 items default
+      strategy: options.strategy || 'lru'
     };
+  }
 
-    th, i, s.cac, h, e.s, e, t(k, e, y, it, e, m);
-    th, i, s.updateSta, t, s()};
-  g, e, t(k, e, y: stri, n, g): T | nu, l, l {con, s, t, it, e, m = th, i, s.cac, h, e.g, e, t(k, e, y);
+  set(key: string, data: T, customTtl?: number): boolean {
+    try {
+      const ttl = customTtl || this.options.ttl;
+      const now = Date.now();
+      const expiresAt = now + ttl;
+      
+      // Calculate size
+      const size = this.calculateSize(data);
+      
+      // Check if we need to evict items
+      this.evictIfNeeded(size);
+      
+      // Remove existing item if it exists
+      this.remove(key);
+      
+      // Add new item
+      const item: CacheItem<T> = {
+        data,
+        timestamp: now,
+        expiresAt,
+        accessCount: 0,
+        lastAccessed: now,
+        size
+      };
+      
+      this.cache.set(key, item);
+      this.currentSize += size;
+      
+      return true;
+    } catch (error) {
+      console.error('Cache set error:', error);
+      return false;
+    }
+  }
+
+  get(key: string): T | null {
+    const item = this.cache.get(key);
     
-    if (!it, e, m) {
-      th, i, s.sta, t, s.miss, e, s++;
-      th, i, s.updateHitRa, t, e();
-      retu, r, n, nu, l, l};
-    // Check, if, item has, expired, if (th, i, s.isExpir, e, d(it, e, m)) {th, i, s.cac, h, e.dele, t, e(k, e, y);
-      th, i, s.sta, t, s.miss, e, s++;
-      th, i, s.updateHitRa, t, e();
-      retu, r, n, nu, l, l};
-    // Update, access, statistics
-    it, e, m.hi, t, s++;
-    it, e, m.lastAccess, e, d = Da, t, e.n, o, w();
-    th, i, s.sta, t, s.hi, t, s++;
-    th, i, s.updateHitRa, t, e();
-
-    return, ite, m.val, u, e};
-  h, a, s(k, e, y: stri, n, g): boole, a, n {con, s, t, it, e, m = th, i, s.cac, h, e.g, e, t(k, e, y);
-    if (!it, e, m) retu, r, n, fal, s, e;
+    if (!item) {
+      return null;
+    }
     
-    if (th, i, s.isExpir, e, d(it, e, m)) {
-      th, i, s.cac, h, e.dele, t, e(k, e, y);
-      th, i, s.updateSta, t, s();
-      retu, r, n, fal, s, e};
-    return, tru, e};
-  dele, t, e(k, e, y: stri, n, g): boole, a, n {con, s, t, delet, e, d = th, i, s.cac, h, e.dele, t, e(k, e, y);
-    if (delet, e, d) {
-      th, i, s.updateSta, t, s()};
-    return, delete, d};
-  remo, v, e(k, e, y: stri, n, g): boole, a, n {retu, r, n, th, i, s.dele, t, e(k, e, y)};
-  cle, a, r(): vo, i, d {th, i, s.cac, h, e.cle, a, r();
-    th, i, s.updateSta, t, s()};
-  si, z, e(): numb, e, r {retu, r, n, th, i, s.cac, h, e.si, z, e};
-  ke, y, s(): stri, n, g[] {retu, r, n, Arr, a, y.fr, o, m(th, i, s.cac, h, e.ke, y, s())};
-  valu, e, s(): T[] {retu, r, n, Arr, a, y.fr, o, m(th, i, s.cac, h, e.valu, e, s()).m, a, p(it, e, m => it, e, m.val, u, e)};
- {returnArr, a, y.fr, o, m(th, i, s.cac, h, e.entri, e, s()).m, a, p(([keyit, e, m]) => [keyit, e, m.val, u, e])};
-  entri, e, s(): Arr, a, y<[strin, g, T]> {returnArr, a, y.fr, o, m(th, i, s.cac, h, e.entri, e, s()).m, a, p(([keyit, e, m]) => [keyit, e, m.val, u, e])};
-  getSta, t, s(): CacheSta, t, s {return { ...th, i, s.sta, t, s }};
-  private, isExpire, d(it, e, m: CacheIt, e, m<T>): boole, a, n {returnDa, t, e.n, o, w() - it, e, m.timesta, m, p > it, e, m.t, t, l};
-  private, evictIfNeede, d(): vo, i, d {// Checksizelimit, i, f (th, i, s.cac, h, e.si, z, e >= th, i, s.optio, n, s.maxSi, z, e) {
-      th, i, s.evi, c, t()};
-    // Check, memory, limit
-    if (th, i, s.sta, t, s.memoryUsa, g, e >= th, i, s.optio, n, s.maxMemo, r, y) {th, i, s.evi, c, t()};
-  };
-  private, evic, t(): vo, i, d {constke, y, s = Arr, a, y.fr, o, m(th, i, s.cac, h, e.ke, y, s());
+    // Check if expired
+    if (Date.now() > item.expiresAt) {
+      this.remove(key);
+      return null;
+    }
     
-    swit, c, h (th, i, s.optio, n, s.strate, g, y) {
-      ca, s, e 'l, r, u':
-        th, i, s.evictL, R, U(ke, y, s);
-        bre, a, k;
-      ca, s, e 'l, f, u':
-        th, i, s.evictL, F, U(ke, y, s);
-        bre, a, k;
-      ca, s, e 'fi, f, o':
-        th, i, s.evictFI, F, O(ke, y, s);
-        bre, a, k};
-  };
-  private, evictLR, U(ke, y, s: stri, n, g[]): vo, i, d {// So, r, t, by, las, t, accessed, tim, e (olde, s, t, fir, s, t)
-    con, s, t, sortedKe, y, s = ke, y, s.so, r, t((a, b) => {
-      con, s, t, ite, m, A = th, i, s.cac, h, e.g, e, t(a)!;
-      con, s, t, ite, m, B = th, i, s.cac, h, e.g, e, t(b)!;
-      retu, r, n, ite, m, A.lastAccess, e, d - ite, m, B.lastAccess, e, d});
-
-    // Remove, oldest, 10% of, items, const toRemo, v, e = Ma, t, h.ce, i, l(sortedKe, y, s.leng, t, h * 0.1);
-    f, o, r (l, e, t, i = 0; i < toRemo, v, e; i++) {th, i, s.cac, h, e.dele, t, e(sortedKe, y, s[i]);
-      th, i, s.sta, t, s.evictio, n, s++};
-  };
-  private, evictLF, U(ke, y, s: stri, n, g[]): vo, i, d {// So, r, t, by, hi, t, cou, n, t (lea, s, t, freque, n, t, fir, s, t)
-    con, s, t, sortedKe, y, s = ke, y, s.so, r, t((a, b) => {
-      con, s, t, ite, m, A = th, i, s.cac, h, e.g, e, t(a)!;
-      con, s, t, ite, m, B = th, i, s.cac, h, e.g, e, t(b)!;
-      retu, r, n, ite, m, A.hi, t, s - ite, m, B.hi, t, s});
-
-    // Remove, least, frequent 10% of, items, const toRemo, v, e = Ma, t, h.ce, i, l(sortedKe, y, s.leng, t, h * 0.1);
-    f, o, r (l, e, t, i = 0; i < toRemo, v, e; i++) {th, i, s.cac, h, e.dele, t, e(sortedKe, y, s[i]);
-      th, i, s.sta, t, s.evictio, n, s++};
-  };
-  private, evictFIF, O(ke, y, s: stri, n, g[]): vo, i, d {// So, r, t, by, timestam, p (olde, s, t, fir, s, t)
-    con, s, t, sortedKe, y, s = ke, y, s.so, r, t((a, b) => {
-      con, s, t, ite, m, A = th, i, s.cac, h, e.g, e, t(a)!;
-      con, s, t, ite, m, B = th, i, s.cac, h, e.g, e, t(b)!;
-      retu, r, n, ite, m, A.timesta, m, p - ite, m, B.timesta, m, p});
-
-    // Remove, oldest, 10% of, items, const toRemo, v, e = Ma, t, h.ce, i, l(sortedKe, y, s.leng, t, h * 0.1);
-    f, o, r (l, e, t, i = 0; i < toRemo, v, e; i++) {th, i, s.cac, h, e.dele, t, e(sortedKe, y, s[i]);
-      th, i, s.sta, t, s.evictio, n, s++};
-  };
-  private, updateStat, s(): vo, i, d {th, i, s.sta, t, s.si, z, e = th, i, s.cac, h, e.si, z, e;
-    th, i, s.sta, t, s.memoryUsa, g, e = th, i, s.calculateMemoryUsa, g, e()};
-  private, updateHitRat, e(): vo, i, d {con, s, t, tot, a, l = th, i, s.sta, t, s.hi, t, s + th, i, s.sta, t, s.miss, e, s;
-    th, i, s.sta, t, s.hitRa, t, e = tot, a, l > 0 ? (th, i, s.sta, t, s.hi, t, s / tot, a, l) * 1 : 0 : 0 : 0};
-  private, calculateMemoryUsag, e(): numb, e, r {l, e, t, usa, g, e = 0;
-    f, o, r (con, s, t [k, e, y, it, e, m] of, th, i, s.cac, h, e.entri, e, s()) {
-      usa, g, e += k, e, y.leng, t, h * 2; // Approxima, t, e, string, sizeusag, e += JS, O, N.stringi, f, y(it, e, m).leng, t, h * 2; // Approximateobjectsi, z, e};
-    return, usag, e};
-  // Cleanup, expired, items
-  clean, u, p(): numb, e, r {letclean, e, d = 0;
-    constn, o, w = Da, t, e.n, o, w();
+    // Update access statistics
+    item.accessCount++;
+    item.lastAccessed = Date.now();
     
-      if (n, o, w - it, e, m.timesta, m, p > it, e, m.t, t, l) {
-        th, i, s.cac, h, e.dele, t, e(k, e, y);
-        clean, e, d++};
+    return item.data;
+  }
+
+  has(key: string): boolean {
+    const item = this.cache.get(key);
+    return item ? Date.now() <= item.expiresAt : false;
+  }
+
+  remove(key: string): boolean {
+    const item = this.cache.get(key);
+    if (item) {
+      this.currentSize -= item.size;
+      return this.cache.delete(key);
+    }
+    return false;
+  }
+
+  clear(): void {
+    this.cache.clear();
+    this.currentSize = 0;
+  }
+
+  size(): number {
+    return this.cache.size;
+  }
+
+  memoryUsage(): number {
+    return this.currentSize;
+  }
+
+  getStats(): {
+    size: number;
+    memoryUsage: number;
+    hitRate: number;
+    items: Array<{
+      key: string;
+      age: number;
+      accessCount: number;
+      size: number;
+    }>;
+  } {
+    const now = Date.now();
+    const items = Array.from(this.cache.entries()).map(([key, item]) => ({
+      key,
+      age: now - item.timestamp,
+      accessCount: item.accessCount,
+      size: item.size
+    }));
+
+    const totalAccesses = items.reduce((sum, item) => sum + item.accessCount, 0);
+    const hitRate = totalAccesses > 0 ? items.length / totalAccesses : 0;
+
+    return {
+      size: this.cache.size,
+      memoryUsage: this.currentSize,
+      hitRate,
+      items
     };
-    th, i, s.updateSta, t, s();
-    return, cleane, d};
-  // Get, cache, info for, debugging, getInfo(): {si, z, e: numb, e, r;
-    memoryUsa, g, e: stri, n, g;
-    hitRa, t, e: stri, n, g;
-    evictio, n, s: numb, e, r;
-    strate, g, y: stri, n, g;
-    t, t, l: stri, n, g} {return {
-      si, z, e: th, i, s.sta, t, s.sizememoryUsa, g, e: th, i, s.formatByt, e, s(th, i, s.sta, t, s.memoryUsa, g, e)hitRa, t, e: `${th, i, s.sta, t, s.hitRa, t, e.toFix, e, d(2)}%`evictio, n, s: th, i, s.sta, t, s.evictionsstrate, g, y: th, i, s.optio, n, s.strate, g, y.toUpperCa, s, e()t, t, l: `${(th, i, s.optio, n, s.t, t, l/10, 0, 0).toFix, e, d(0)}s`
-    }};
-  private, formatByte, s(byt, e, s: numb, e, r): stri, n, g {if (byt, e, s === 0) return '0, Byt, e, s';
-    cons, t, k = 10, 2, 4;
-    constsiz, e, s = ['Byt, e, s''KB''MB''GB'];
-    con, s, t, i = Ma, t, h.flo, o, r(Ma, t, h.l, o, g(byt, e, s) / Ma, t, h.l, o, g(k));
-    returnparseFlo, a, t((byt, e, s / Ma, t, h.p, o, w(ki)).toFix, e, d(2)) + ' ' + siz, e, s[i]};
+  }
+
+  private calculateSize(data: T): number {
+    try {
+      return new Blob([JSON.stringify(data)]).size;
+    } catch {
+      return 1024; // Default size if calculation fails
+    }
+  }
+
+  private evictIfNeeded(newItemSize: number): void {
+    // Check if we need to evict based on size
+    if (this.currentSize + newItemSize > this.options.maxSize) {
+      this.evictBySize(newItemSize);
+    }
+    
+    // Check if we need to evict based on item count
+    if (this.cache.size >= this.options.maxItems) {
+      this.evictByCount();
+    }
+  }
+
+  private evictBySize(newItemSize: number): void {
+    const targetSize = this.options.maxSize - newItemSize;
+    const itemsToEvict: string[] = [];
+    
+    // Sort items by eviction strategy
+    const sortedItems = this.getSortedItemsForEviction();
+    
+    let currentSize = this.currentSize;
+    for (const [key, item] of sortedItems) {
+      if (currentSize <= targetSize) break;
+      
+      itemsToEvict.push(key);
+      currentSize -= item.size;
+    }
+    
+    // Remove evicted items
+    itemsToEvict.forEach(key => this.remove(key));
+  }
+
+  private evictByCount(): void {
+    const itemsToRemove = this.cache.size - this.options.maxItems + 1;
+    const sortedItems = this.getSortedItemsForEviction();
+    
+    for (let i = 0; i < itemsToRemove && i < sortedItems.length; i++) {
+      this.remove(sortedItems[i][0]);
+    }
+  }
+
+  private getSortedItemsForEviction(): Array<[string, CacheItem<T>]> {
+    const items = Array.from(this.cache.entries());
+    
+    switch (this.options.strategy) {
+      case 'lru':
+        return items.sort((a, b) => a[1].lastAccessed - b[1].lastAccessed);
+      case 'lfu':
+        return items.sort((a, b) => a[1].accessCount - b[1].accessCount);
+      case 'fifo':
+        return items.sort((a, b) => a[1].timestamp - b[1].timestamp);
+      default:
+        return items;
+    }
+  }
+
+  // Clean up expired items
+  cleanup(): number {
+    const now = Date.now();
+    let cleanedCount = 0;
+    
+    for (const [key, item] of this.cache.entries()) {
+      if (now > item.expiresAt) {
+        this.remove(key);
+        cleanedCount++;
+      }
+    }
+    
+    return cleanedCount;
+  }
+
+  // Export cache data for persistence
+  export(): string {
+    const data = Array.from(this.cache.entries()).map(([key, item]) => [
+      key,
+      {
+        ...item,
+        data: JSON.stringify(item.data)
+      }
+    ]);
+    
+    return JSON.stringify(data);
+  }
+
+  // Import cache data from persistence
+  import(data: string): boolean {
+    try {
+      const parsed = JSON.parse(data);
+      this.clear();
+      
+      for (const [key, item] of parsed) {
+        const cacheItem: CacheItem<T> = {
+          ...item,
+          data: JSON.parse(item.data)
+        };
+        
+        this.cache.set(key, cacheItem);
+        this.currentSize += cacheItem.size;
+      }
+      
+      return true;
+    } catch (error) {
+      console.error('Cache import error:', error);
+      return false;
+    }
+  }
+}
+
+// Specialized cache instances
+export const apiCache = new AdvancedCache({
+  ttl: 5 * 60 * 1000, // 5 minutes
+  maxSize: 5 * 1024 * 1024, // 5MB
+  maxItems: 500,
+  strategy: 'lru'
+});
+
+export const imageCache = new AdvancedCache({
+  ttl: 30 * 60 * 1000, // 30 minutes
+  maxSize: 50 * 1024 * 1024, // 50MB
+  maxItems: 100,
+  strategy: 'lru'
+});
+
+export const userDataCache = new AdvancedCache({
+  ttl: 15 * 60 * 1000, // 15 minutes
+  maxSize: 2 * 1024 * 1024, // 2MB
+  maxItems: 50,
+  strategy: 'lfu'
+});
+
+// Cache utilities
+export const cacheUtils = {
+  // Preload data into cache
+  preload: async <T>(
+    key: string,
+    fetcher: () => Promise<T>,
+    cache: AdvancedCache<T>,
+    ttl?: number
+  ): Promise<T> => {
+    const cached = cache.get(key);
+    if (cached) return cached;
+    
+    const data = await fetcher();
+    cache.set(key, data, ttl);
+    return data;
+  },
+
+  // Cache with fallback
+  getOrSet: async <T>(
+    key: string,
+    fetcher: () => Promise<T>,
+    cache: AdvancedCache<T>,
+    ttl?: number
+  ): Promise<T> => {
+    const cached = cache.get(key);
+    if (cached) return cached;
+    
+    try {
+      const data = await fetcher();
+      cache.set(key, data, ttl);
+      return data;
+    } catch (error) {
+      // Return cached data even if expired in case of network error
+      const expiredCached = cache.get(key);
+      if (expiredCached) return expiredCached;
+      throw error;
+    }
+  },
+
+  // Batch cache operations
+  batchGet: <T>(keys: string[], cache: AdvancedCache<T>): Record<string, T | null> => {
+    const result: Record<string, T | null> = {};
+    keys.forEach(key => {
+      result[key] = cache.get(key);
+    });
+    return result;
+  },
+
+  // Cache warming
+  warmCache: async <T>(
+    keys: string[],
+    fetcher: (key: string) => Promise<T>,
+    cache: AdvancedCache<T>,
+    ttl?: number
+  ): Promise<void> => {
+    const promises = keys.map(async (key) => {
+      if (!cache.has(key)) {
+        try {
+          const data = await fetcher(key);
+          cache.set(key, data, ttl);
+        } catch (error) {
+          console.warn(`Failed to warm cache for key ${key}:`, error);
+        }
+      }
+    });
+    
+    await Promise.allSettled(promises);
+  }
 };
-// Global, cache, instances
-export, const, memoryCache = new, AdvancedCach, e({t, t, l: 5 * 60 * 10, 0, 0, maxSi, z, e: 10, 0, 0 });
-export, const, sessionCache = new, AdvancedCach, e({t, t, l: 30 * 60 * 10, 0, 0, maxSi, z, e: 5, 0, 0 });
-export, const, persistentCache = new, AdvancedCach, e({t, t, l: 24 * 60 * 60 * 10, 0, 0, maxSi, z, e: 20, 0, 0 });
 
-// Cache, decorator, for functions, export, function cach, e, d<T, extend(...ar, g, s: a, n, y[]) => a, n, y>(fn: T, optio, n, s: CacheOptio, n, s = {};
-  return ((...ar, g, s: a, n, y[]) => {con, s, t, k, e, y = JS, O, N.stringi, f, y(ar, g, s);
-    
-    if (cac, h, e.h, a, s(k, e, y)) {
-      retu, r, n, cac, h, e.g, e, t(k, e, y)};
-    const, resul, t = fn(...ar, g, s);
-    cac, h, e.s, e, t(k, e, y, resu, l, t);
-    return, resul, t}) a, s, T};
-// Cache, middleware, for async, functions, export function, withCach, e<T, extend, s (...ar, g, s: a, n, y[]) => Promi, s, e<a, n, y>>(fn: T, optio, n, s: CacheOptio, n, s = {};
-  return (asy, n, c (...ar, g, s: a, n, y[]) => {con, s, t, k, e, y = JS, O, N.stringi, f, y(ar, g, s);
-    
-    if (cac, h, e.h, a, s(k, e, y)) {
-      retu, r, n, cac, h, e.g, e, t(k, e, y)};
-    const, resul, t = await, f, n(...ar, g, s);
-    cac, h, e.s, e, t(k, e, y, resu, l, t);
-    return, resul, t}) a, s, T};
+// Auto-cleanup interval
+setInterval(() => {
+  apiCache.cleanup();
+  imageCache.cleanup();
+  userDataCache.cleanup();
+}, 60000); // Clean up every minute
+
 export default AdvancedCache;

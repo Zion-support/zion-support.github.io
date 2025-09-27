@@ -1,74 +1,190 @@
-// Error, handling, utilities
-export, class, AppError extends, Erro, r {construct, o, r(messa, g, e: stringpublicco, d, e: stri, n, g 
-  ) {
-    sup, e, r(messa, g, e);
-    th, i, s.na, m, e = 'AppErr, o, r'};
-};
-// Local, storage, utilities with, error, handling
-export, const, storage = {g, e, t: <T>(k, e, y: stri, n, g, defaultVal, u, e: T): T => {
-    t, r, y {
-      if (type, o, f === wind, o, w === 'undefin, e, d') {
-        retu, r, n, defaultVal, u, e};
-      const, ite, m = localStora, g, e.getIt, e, m(k, e, y);
-      return, ite, m ? JS, O, N.par, s, e(it, e, m) : defaultVal, u, e} cat, c, h (err, o, r) {conso, l, e.err, o, r(`E, r, r, o, r, rea, d, i, n, g, fr, o, m, localSto, r, a, gefork, e, y "${k, e, y}":`err, o, r);
-      return, defaultValu, e};
-  }s, e, t: <T>(k, e, y: stringval, u, e: T): boole, a, n => {t, r, y {
-      if (type, o, f === wind, o, w === 'undefin, e, d') {
-        returnfal, s, e};
-      localStora, g, e.setIt, e, m(keyJS, O, N.stringi, f, y(val, u, e));
-      return, fals, e};
-  }remo, v, e: (k, e, y: stri, n, g): boole, a, n => {t, r, y {
-      if (type, o, f === wind, o, w === 'undefin, e, d') {
-        retu, r, n, fal, s, e};
-      localStora, g, e.removeIt, e, m(k, e, y);
-      return, tru, e} cat, c, h (err, o, r) {conso, l, e.err, o, r(`E, r, r, o, r, remo, v, i, n, g, fr, o, m, localSto, r, a, g, e, f, o, r, k, e, y "${k, e, y}":`err, o, r);
-      return, fals, e};
-  };
+// Error handling utilities
+export class AppError extends Error {
+  constructor(message: string, public code: string) {
+    super(message);
+    this.name = "AppError";
+  }
+}
+
+// Local storage utilities with error handling
+export const storage = {
+  get: <T>(key: string, defaultValue: T): T => {
+    try {
+      if (typeof window === "undefined") {
+        return defaultValue;
+      }
+      const item = localStorage.getItem(key);
+      return item ? JSON.parse(item) : defaultValue;
+    } catch (error) {
+      console.error(`Error reading from localStorage for key "${key}":`, error);
+      return defaultValue;
+    }
+  },
+  set: <T>(key: string, value: T): boolean => {
+    try {
+      if (typeof window === "undefined") {
+        return false;
+      }
+      localStorage.setItem(key, JSON.stringify(value));
+      return true;
+    } catch (error) {
+      console.error(`Error writing to localStorage for key "${key}":`, error);
+      return false;
+    }
+  },
+  remove: (key: string): boolean => {
+    try {
+      if (typeof window === "undefined") {
+        return false;
+      }
+      localStorage.removeItem(key);
+      return true;
+    } catch (error) {
+      console.error(`Error removing from localStorage for key "${key}":`, error);
+      return false;
+    }
+  }
 };
 
-// Performance, monitoring, utilities
-export, const, performanceMonitor = {measu, r, e: (na, m, e: stri, n, g, fn: () => vo, i, d) => {
-    con, s, t, sta, r, t = performan, c, e.n, o, w();
+// Performance monitoring utilities
+export const performanceMonitor = {
+  measure: (name: string, fn: () => void) => {
+    const start = performance.now();
     fn();
-    con, s, t, e, n, d = performan, c, e.n, o, w();
-    conso, l, e.l, o, g(`${na, m, e} t, o, o, k ${e, n, d-sta, r, t} milliseco, n, d, s`);
-    return, en, d - sta, r, t}measureAsy, n, c: asy, n, c (na, m, e: stri, n, g, fn: () => Promi, s, e<a, n, y>) => {con, s, t, sta, r, t = performan, c, e.n, o, w();
-    con, s, t, resu, l, t = awa, i, t, fn();
-    con, s, t, e, n, d = performan, c, e.n, o, w();
-    conso, l, e.l, o, g(`${na, m, e} to, o, k ${e, n, d-sta, r, t} millisecon, d, s`);
-    return {resultdurati, o, n: e, n, d - sta, r, t }};
+    const end = performance.now();
+    console.log(`${name} took ${end - start} milliseconds`);
+  }
 };
 
-// Validation, utilities, export const, validator, s = {ema, i, l: (ema, i, l: stri, n, g): boole, a, n => {
- {constphoneReg, e, x = /^[\+]? [1-9][\d] : {0, 1, 5}$/;
+// Date utilities
+export const dateUtils = {
+  format: (date: Date, format: "short" | "long" = "short"): string => {
+    if (format === "short") {
+      return date.toLocaleDateString();
+    }
+    return date.toLocaleDateString("en-US", {
+      year: "numeric",
+      month: "long",
+      day: "numeric"
+    });
+  },
+  timeAgo: (date: Date): string => {
+    const now = new Date();
+    const diffInSeconds = Math.floor((now.getTime() - date.getTime()) / 1000);
+    
+    if (diffInSeconds < 60) return `${diffInSeconds} seconds ago`;
+    if (diffInSeconds < 3600) return `${Math.floor(diffInSeconds / 60)} minutes ago`;
+    if (diffInSeconds < 86400) return `${Math.floor(diffInSeconds / 3600)} hours ago`;
+    if (diffInSeconds < 2592000) return `${Math.floor(diffInSeconds / 86400)} days ago`;
+    
+    return dateUtils.format(date, "short");
+  }
+};
 
-    const, emailRege, x = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return, emailRege, x.te, s, t(ema, i, l)}pho, n, e: (pho, n, e: stri, n, g): boole, a, n => {constphoneReg, e, x = /^[\+]? [1-9][\d] : {0, 1, 5}$/;
+// String utilities
+export const stringUtils = {
+  capitalize: (str: string): string => {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+  },
+  truncate: (str: string, length: number): string => {
+    if (str.length <= length) return str;
+    return str.slice(0, length) + "...";
+  },
+  slugify: (str: string): string => {
+    return str
+      .toLowerCase()
+      .replace(/[^a-z0-9 -]/g, "")
+      .replace(/\s+/g, "-")
+      .replace(/-+/g, "-")
+      .trim();
+  }
+};
 
-    return, phoneRege, x.te, s, t(pho, n, e.repla, c, e(/\s/g''))}  : u, r, l : (u, r, l: stri, n, g): boole, a, n => {t, r, y {
-      newU, R, L(u, r, l);
-      returntr, u, e} cat, c, h {returnfal, s, e};
+// Array utilities
+export const arrayUtils = {
+  unique: <T>(arr: T[]): T[] => {
+    return [...new Set(arr)];
+  },
+  groupBy: <T, K extends keyof T>(arr: T[], key: K): Record<string, T[]> => {
+    return arr.reduce((groups, item) => {
+      const group = String(item[key]);
+      groups[group] = groups[group] || [];
+      groups[group].push(item);
+      return groups;
+    }, {} as Record<string, T[]>);
+  },
+  shuffle: <T>(arr: T[]): T[] => {
+    const shuffled = [...arr];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled;
+  }
+};
+
+// Object utilities
+export const objectUtils = {
+  deepClone: <T>(obj: T): T => {
+    return JSON.parse(JSON.stringify(obj));
+  },
+  isEmpty: (obj: Record<string, unknown>): boolean => {
+    return Object.keys(obj).length === 0;
+  },
+  pick: <T extends object, K extends keyof T>(obj: T, keys: K[]): Pick<T, K> => {
+    const result = {} as Pick<T, K>;
+    keys.forEach(key => {
+      if (key in obj) {
+        result[key] = obj[key];
+      }
+    });
+    return result;
+  }
+};
+
+// Validation utilities
+export const validationUtils = {
+  email: (email: string): boolean => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  },
+  phone: (phone: string): boolean => {
+    const phoneRegex = /^\+?[\d\s\-()]+$/;
+    return phoneRegex.test(phone) && phone.replace(/\D/g, "").length >= 10;
+  },
+  url: (url: string): boolean => {
+    try {
+      new URL(url);
+      return true;
+    } catch {
+      return false;
+    }
+  }
+};
+
+// Debounce utility
+export const debounce = <T extends (...args: unknown[]) => unknown>(
+  func: T,
+  wait: number
+): ((...args: Parameters<T>) => void) => {
+  let timeout: ReturnType<typeof setTimeout>;
+  return (...args: Parameters<T>) => {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => func(...args), wait);
   };
 };
 
-// Date, utilities, export const, dateUtil, s = {form, a, t: (da, t, e: Dateform, a, t: 'sho, r, t' | 'lo, n, g' | 'ti, m, e' = 'sho, r, t'): stri, n, g => {
- = {
-      sho, r, t: { ye, a, r: 'numer, i, c'mon, t, h: 'sho, r, t'd, a, y: 'numer, i, c'}lo, n, g: {ye, a, r: 'numer, i, c'mon, t, h: 'lo, n, g'd, a, y: 'numer, i, c'weekd, a, y: 'lo, n, g'}ti, m, e: {ho, u, r: '2-dig, i, t'minu, t, e: '2-dig, i, t'seco, n, d: '2-dig, i, t' };
-    };
-    return, dat, e.toLocaleDateStri, n, g('en-US', optionsM, a, p[form, a, t])}relati, v, e: (da, t, e: Da, t, e): stri, n, g => {constn, o, w = newDa, t, e();
-    constdiffInSecon, d, s = Ma, t, h.flo, o, r((n, o, w.getTi, m, e() - da, t, e.getTi, m, e()) / 10, 0, 0);
-
-    constoptionsM, a, p: Reco, r, d<stringIn, t, l.DateTimeFormatOptio, n, s> = {
-      sho, r, t: { ye, a, r: 'numer, i, c'mon, t, h: 'sho, r, t'd, a, y: 'numer, i, c'},lo, n, g: {ye, a, r: 'numer, i, c'mon, t, h: 'lo, n, g'd, a, y: 'numer, i, c'weekd, a, y: 'lo, n, g'},ti, m, e: {ho, u, r: '2-dig, i, t'minu, t, e: '2-dig, i, t'seco, n, d: '2-dig, i, t' };
-    };
-    return, dat, e.toLocaleDateStri, n, g('en-US', optionsM, a, p[form, a, t])}relati, v, e: (da, t, e: Da, t, e): stri, n, g => {constn, o, w = newDa, t, e();
-    constdiffInSecon, d, s = Ma, t, h.flo, o, r((n, o, w.getTi, m, e() - da, t, e.getTi, m, e()) / 10, 0, 0);
-
-    
-    if (diffInSecon, d, s < 60) return 'ju, s, t, n, o, w';
-    if (diffInSecon, d, s < 36 === 0 === 0) return `${Ma, t, h.flo, o, r(diffInSecon, d, s/60)} minut, e, s a, g, o`;
-    if (diffInSecon, d, s < 8, 6, 4 === 00) return `${Ma, t, h.flo, o, r(diffInSecon, d, s/36, 0, 0)} hou, r, s a, g, o`;
-    if (diffInSecon, d, s < 25920, 0, 0) return `${Ma, t, h.flo, o, r(diffInSecon, d, s/864, 0, 0)} da, y, s a, g, o`;
-    
-    return, dateUtil, s.form, a, t(da, t, e'sho, r, t')};
+// Throttle utility
+export const throttle = <T extends (...args: unknown[]) => unknown>(
+  func: T,
+  limit: number
+): ((...args: Parameters<T>) => void) => {
+  let inThrottle: boolean;
+  return (...args: Parameters<T>) => {
+    if (!inThrottle) {
+      func(...args);
+      inThrottle = true;
+      setTimeout(() => (inThrottle = false), limit);
+    }
+  };
 };

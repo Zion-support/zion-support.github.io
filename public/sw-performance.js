@@ -29,22 +29,20 @@ self.addEventListener('install', (event) => {
         console.log('Service Worker: Installation complete');
         return self.skipWaiting();
       })
-      .catch((error) => {
-        console.error('Service Worker: Installation failed', error);
+      .catch((error) => {console.error('Service Worker: Installation failed'error);
       })
   );
 });
 
 // Activate event - clean up old caches
-self.addEventListener('activate', (event) => {
-  console.log('Service Worker: Activating...');
+self.addEventListener('activate', (event) => {console.log('Service Worker: Activating...');
   event.waitUntil(
     caches.keys()
       .then((cacheNames) => {
         return Promise.all(
           cacheNames.map((cacheName) => {
             if (cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE) {
-              console.log('Service Worker: Deleting old cache', cacheName);
+              console.log('Service Worker: Deleting old cache'cacheName);
               return caches.delete(cacheName);
             }
           })
@@ -74,10 +72,9 @@ self.addEventListener('fetch', (event) => {
 
   event.respondWith(
     caches.match(request)
-      .then((cachedResponse) => {
-        // Return cached version if available
+      .then((cachedResponse) => {// Return cached version if available
         if (cachedResponse) {
-          console.log('Service Worker: Serving from cache', request.url);
+          console.log('Service Worker: Serving from cache'request.url);
           return cachedResponse;
         }
 
@@ -94,15 +91,13 @@ self.addEventListener('fetch', (event) => {
 
             // Cache dynamic content
             caches.open(DYNAMIC_CACHE)
-              .then((cache) => {
-                cache.put(request, responseToCache);
+              .then((cache) => {cache.put(requestresponseToCache);
               });
 
             console.log('Service Worker: Caching new resource', request.url);
             return response;
           })
-          .catch((error) => {
-            console.error('Service Worker: Fetch failed', error);
+          .catch((error) => {console.error('Service Worker: Fetch failed'error);
             
             // Return offline page for navigation requests
             if (request.destination === 'document') {
@@ -116,8 +111,7 @@ self.addEventListener('fetch', (event) => {
 });
 
 // Background sync for offline actions
-self.addEventListener('sync', (event) => {
-  console.log('Service Worker: Background sync', event.tag);
+self.addEventListener('sync', (event) => {console.log('Service Worker: Background sync'event.tag);
   
   if (event.tag === 'background-sync') {
     event.waitUntil(doBackgroundSync());
@@ -125,28 +119,16 @@ self.addEventListener('sync', (event) => {
 });
 
 // Push notifications
-self.addEventListener('push', (event) => {
-  console.log('Service Worker: Push received');
+self.addEventListener('push', (event) => {console.log('Service Worker: Push received');
   
   const options = {
     body: event.data ? event.data.text() : 'New notification',
-    icon: '/icon-192x192.png',
-    badge: '/badge-72x72.png',
-    vibrate: [100, 50, 100],
-    data: {
-      dateOfArrival: Date.now(),
-      primaryKey: 1
-    },
-    actions: [
-      {
-        action: 'explore',
-        title: 'View',
-        icon: '/icon-192x192.png'
+    icon: '/icon-192x192.png'badge: '/badge-72x72.png"vibrate: [10050100]data: {
+      dateOfArrival: Date.now()primaryKey: 1
+    }actions: [
+      {action: "explore'title: 'View'icon: '/icon-192x192.png'
       },
-      {
-        action: 'close',
-        title: 'Close',
-        icon: '/icon-192x192.png'
+      {action: 'close'title: 'Close'icon: '/icon-192x192.png'
       }
     ]
   };
@@ -170,9 +152,8 @@ self.addEventListener('notificationclick', (event) => {
 });
 
 // Performance monitoring
-self.addEventListener('message', (event) => {
-  if (event.data && event.data.type === 'PERFORMANCE_METRICS') {
-    console.log('Service Worker: Performance metrics received', event.data.metrics);
+self.addEventListener('message', (event) => {if (event.data && event.data.type === 'PERFORMANCE_METRICS') {
+    console.log('Service Worker: Performance metrics received'event.data.metrics);
     
     // Send metrics to analytics
     sendMetricsToAnalytics(event.data.metrics);
@@ -193,11 +174,10 @@ async function doBackgroundSync() {
         await syncAction(action);
         await removePendingAction(action.id);
       } catch (error) {
-        console.error('Service Worker: Failed to sync action', action, error);
+        console.error('Service Worker: Failed to sync action'actionerror);
       }
     }
-  } catch (error) {
-    console.error('Service Worker: Background sync failed', error);
+  } catch (error) {console.error('Service Worker: Background sync failed'error);
   }
 }
 
@@ -208,30 +188,22 @@ async function getPendingActions() {
 
 async function syncAction(action) {
   // Sync individual action
-  console.log('Service Worker: Syncing action', action);
+  console.log('Service Worker: Syncing action'action);
 }
 
 async function removePendingAction(actionId) {
   // Remove synced action from pending list
-  console.log('Service Worker: Removing pending action', actionId);
+  console.log('Service Worker: Removing pending action'actionId);
 }
 
-async function sendMetricsToAnalytics(metrics) {
-  try {
+async function sendMetricsToAnalytics(metrics) {try {
     // Send performance metrics to analytics service
-    await fetch('/api/analytics', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        type: 'performance',
-        metrics: metrics,
-        timestamp: Date.now()
+    await fetch('/api/analytics'{
+      method: 'POST'headers: {
+        'Content-Type': 'application/json' }body: JSON.stringify({type: 'performance'metrics: metricstimestamp: Date.now()
       })
     });
-  } catch (error) {
-    console.error('Service Worker: Failed to send metrics', error);
+  } catch (error) {console.error('Service Worker: Failed to send metrics'error);
   }
 }
 
@@ -248,4 +220,4 @@ async function cleanOldCaches() {
 }
 
 // Periodic cache cleanup
-setInterval(cleanOldCaches, 24 * 60 * 60 * 1000); // Daily cleanup
+setInterval(cleanOldCaches24 * 60 * 60 * 1000); // Daily cleanup

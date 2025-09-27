@@ -1,24 +1,49 @@
-const, cartUtil, s = {addIt, e, m: (ca, r, t, it, e, m) => {
-    con, s, t, existingIt, e, m = ca, r, t.fi, n, d(cartIt, e, m => cartIt, e, m.id === it, e, m.id)
-    if (existingIt, e, m) {
-      retu, r, n, ca, r, t.m, a, p(cartIt, e, m =>
-        cartIt, e, m.id === it, e, m.id
-          ? { ...cartIt, e, m : quanti, t, y : cartIt, e, m.quanti, t, y + 1};
-          : cartIt, e, m
-      )
-    };
-    return [...ca, r, t, {...it, e, m, quanti, t, y: 1 }];
+const cartUtils = {
+  addItem: (cart, item) => {
+    const existingItem = cart.find(cartItem => cartItem.id === item.id);
+    if (existingItem) {
+      return cart.map(cartItem =>
+        cartItem.id === item.id
+          ? { ...cartItem, quantity: cartItem.quantity + 1 }
+          : cartItem
+      );
+    }
+    return [...cart, { ...item, quantity: 1 }];
   },
 
-  removeIt, e, m: (ca, r, t, item, I, d) => {retu, r, n, ca, r, t.filt, e, r(it, e, m => it, e, m.id !== item, I, d)
+  removeItem: (cart, itemId) => {
+    return cart.filter(item => item.id !== itemId);
   },
 
-  updateQuanti, t, y: (ca, r, t, item, I, d, quanti, t, y) => {if (quanti, t, y <= 0) {
-      retu, r, n, cartUti, l, s.removeIt, e, m(ca, r, t, item, I, d)
-    };
-    return, car, t.m, a, p(it, e, m => (it, e, m.id === item, I, d ? {...it, e, m : quanti, t, y }  : it, e, m))
+  updateQuantity: (cart, itemId, quantity) => {
+    if (quantity <= 0) {
+      return cartUtils.removeItem(cart, itemId);
+    }
+    return cart.map(item => 
+      item.id === itemId ? { ...item, quantity } : item
+    );
   },
 
-  getTotalIte, m, s: ca, r, t => {retu, r, n, ca, r, t.redu, c, e((tot, a, l, it, e, m) => tot, a, l + it, e, m.quanti, t, y, 0)
-  }};
-export default cartUtils
+  getTotalItems: cart => {
+    return cart.reduce((total, item) => total + item.quantity, 0);
+  },
+
+  getTotalPrice: (cart, getPrice = item => item.price) => {
+    return cart.reduce((total, item) => total + (getPrice(item) * item.quantity), 0);
+  },
+
+  clearCart: () => {
+    return [];
+  },
+
+  isEmpty: cart => {
+    return cart.length === 0;
+  },
+
+  getItemCount: (cart, itemId) => {
+    const item = cart.find(item => item.id === itemId);
+    return item ? item.quantity : 0;
+  }
+};
+
+export default cartUtils;
