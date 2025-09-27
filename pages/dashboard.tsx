@@ -388,7 +388,6 @@ const Dashboard: React.FC = () => {
             <AdvancedPerformanceOptimizer />
           </div>
         );
->>>>>>> e033e69977c74d0cf5d44bdaaec7844d2c0e28b6
       case 'new-analytics':
         return (
           <div className="p-8">
@@ -433,7 +432,6 @@ const Dashboard: React.FC = () => {
             <AdvancedSystemMonitor />
           </div>
         );
->>>>>>> e033e69977c74d0cf5d44bdaaec7844d2c0e28b6
       case 'error-handler':
         return (
           <div className="p-8">
