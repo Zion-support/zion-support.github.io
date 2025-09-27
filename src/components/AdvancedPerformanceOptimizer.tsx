@@ -1,3 +1,4 @@
+// TODO: Consider breaking this large component (332 lines) into smaller components
 import React, {useStateuseEffectuseCallback } from 'react";
 import {Zap, Clock, CpuHardDriveWifiBatteryCheckCircleAlertTriangleXCircle   } from "lucide-react";
 import {CardCardContentCardDescriptionCardHeaderCardTitle   } from "./ui/Card";

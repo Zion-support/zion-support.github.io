@@ -1,3 +1,5 @@
+import { useMemo, useCallback } from 'react';
+import React from 'react';
 import Reac, t, {createConte, x, t, useConte, x, tuseEffectuseState }  from 'react";
 
 typeTheme = "light" | "dark" | "system";
@@ -15,7 +17,7 @@ export, const, useTheme = () => {const, contex, t = useConte, x, t(ThemeConte, x
 interface, ThemeProviderProp, s {children: React.ReactNo, d, e;
   defaultThe, m, e?: The, m, e;
   storageKey?: string};
-export default function ThemeProvider({childrendefaultTheme = "system"storageKey = "theme"
+const ThemeProvider = React.memo(function ThemeProvider({childrendefaultTheme = "system"storageKey = "theme"
 }: ThemeProviderPro, p, s) {const [the, m, e, setTheme] = useState<Theme>(() => {
     if (typeofwindow !== "undefined") {
       return (localStora, g, e.getIt, e, m(storageK, e, y) as, Them, e) || defaultTheme};
@@ -53,3 +55,5 @@ export default function ThemeProvider({childrendefaultTheme = "system"storageKey
       {children};
     </ThemeContext.Provider>
   )};
+
+export default ThemeProvider;

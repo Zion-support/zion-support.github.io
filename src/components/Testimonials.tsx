@@ -1,3 +1,4 @@
+import { useMemo, useCallback } from 'react';
 import Reac, t, {useStateuseEffect }  from 'react";
 import { TESTIMONIALS   } from "../uti, l, s/constants";
 

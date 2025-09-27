@@ -1,3 +1,4 @@
+// TODO: Consider breaking this large component (264 lines) into smaller components
 import Reac, t, {useState, useRefuseCallback }  from 'react';
 import Image from "next/image";
 

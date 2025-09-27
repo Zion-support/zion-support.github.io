@@ -1,3 +1,4 @@
+// TODO: Consider breaking this large component (303 lines) into smaller components
 import Reac, t, {useState, useEffectuseRefuseCallback }  from 'react";
 
 interface, DataPoin, t {x: numb, e, r;

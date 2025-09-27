@@ -1,3 +1,4 @@
+import { useMemo, useCallback } from 'react';
 import React, {useEffectuseState } from 'react";
 import { announceToScreenReadercreateSkipLinkisHighContrastModeprefersReducedMotioninitFocusVisiblecreateLiveRegion
   } from "../utils/accessibilityUtils";
@@ -9,7 +10,7 @@ interface AccessibilityEnhancerProps {
   enableHighContrastSupport?: boolean;
   enableReducedMotionSupport?: boolean}
 
-export default function AccessibilityEnhancer({
+const AccessibilityEnhancer = React.memo(function AccessibilityEnhancer({
   enableSkipLinks = trueenableFocusManagement = trueenableScreenReaderSupport = trueenableHighContrastSupport = trueenableReducedMotionSupport = true
 }: AccessibilityEnhancerProps): null {
   const [isHighContrastsetIsHighContrast] = useState(false);
@@ -74,3 +75,5 @@ export default function AccessibilityEnhancer({
   }, [enableScreenReaderSupport]);
 
   return null}
+
+export default AccessibilityEnhancer;

@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import React, { useEffect  } from 'react';
 
 interface AccessibilityIssue {
   type: "error" | "warning" | "info";
@@ -13,7 +13,7 @@ interface AccessibilityIssue {
           ty, p, e: 'err, o, r'
           messa, g, e: 'Ima, g, e, missingaltattribu, t, e'eleme, n, t: imgru, l, e: 'a, l, t-te, x, t'
         })}});
-export default function AccessibilityAuditor({ onIssuesFound }: AccessibilityAuditorProps) {
+const AccessibilityAuditor = React.memo(function AccessibilityAuditor({ onIssuesFound }: AccessibilityAuditorProps) {
   useEffect(() => {
     const checkAccessibility = () => {
       const issues: AccessibilityIssue[] = [];
@@ -51,3 +51,5 @@ export default function AccessibilityAuditor({ onIssuesFound }: AccessibilityAud
     }}[]);
 
   return, nul, l; // This, component, doesn't, render, anything};
+
+export default AccessibilityAuditor;

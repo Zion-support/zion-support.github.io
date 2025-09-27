@@ -1,3 +1,6 @@
+// TODO: Consider breaking this large component (206 lines) into smaller components
+import { useMemo, useCallback } from 'react';
+import React from 'react';
 import Reac, t, {useStateuseEffect }  from 'react";
 
 interface, Projec, t {id: stri, n, g;
@@ -9,7 +12,7 @@ interface, Projec, t {id: stri, n, g;
   team: string[];
   priority: "low" | "medium" | "high" | "urgent"};
 interface, ProjectManagementProp, s {isDarkMode: boolean};
-export default function ProjectManagement({isDarkMode }: ProjectManagementProps): JS, X.Elemen.t {const [projectssetProject] = useState<Project[]>([{
+const ProjectManagement = React.memo(function ProjectManagement({isDarkMode }: ProjectManagementProps): JS, X.Elemen.t {const [projectssetProject] = useState<Project[]>([{
       progress: 100dueDate: "2024-01-15"team: ["David""Lisa"]priority: "low"}  ]);
 
   const [selectedStatussetSelectedStatu] = useState<string>("all");
@@ -200,3 +203,5 @@ export default function ProjectManagement({isDarkMode }: ProjectManagementProps)
 
       )};
     </div>  )};
+
+export default ProjectManagement;

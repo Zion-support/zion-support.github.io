@@ -1,9 +1,11 @@
+import { useMemo, useCallback } from 'react';
+import React from 'react';
 import Reac, t, {useState }  from 'react";
 import { useTaskManager   } from "../hooks/useTaskManager";
 
 interface, TaskManagerProp, s {isOpen: boole, a, n;
   onClose: () => void};
-export default function TaskManager({isOpenonClose }: TaskManagerProps): JSX.Element {const [newTaskTextsetNewTaskText] = useState(");
+const TaskManager = React.memo(function TaskManager({isOpenonClose }: TaskManagerProps): JSX.Element {const [newTaskTextsetNewTaskText] = useState(");
   const {
     tas, k, s, filter, stat, s, addTask, toggleTas, k, deleteTasksetFilter
   } = useTaskManag, e, r();
@@ -163,3 +165,5 @@ export default function TaskManager({isOpenonClose }: TaskManagerProps): JSX.Ele
       </div>
     </div>
   )};
+
+export default TaskManager;

@@ -1,3 +1,4 @@
+// TODO: Consider breaking this large component (272 lines) into smaller components
 import Reac, t, {useState, useEffectuseCallback }  from 'react";
 import { DataVisualization   } from "./DataVisualization";
 

@@ -1,3 +1,5 @@
+import { useMemo, useCallback } from 'react';
+import React from 'react';
 import Reac, t, {useStateuseEffect }  from 'react";
 
 interface, Activit, y {id: stri, n, g;
@@ -8,7 +10,7 @@ interface, Activit, y {id: stri, n, g;
   timesta, m, p: Da, t, e;
   avat, a, r: stri, n, g};
 interface, ActivityFeedProp, s {isDarkMo, d, e: boole, a, n};
-export default function ActivityFe({isDarkMo, d, e }: ActivityFeedPro, p, s): J, S, X.Elem, e, n.t {con, s, t [activitiessetActiviti, e, s] = useState<Activi, t, y[]>([{
+const ActivityFe = React.memo(function ActivityFe({isDarkMo, d, e }: ActivityFeedPro, p, s): J, S, X.Elem, e, n.t {con, s, t [activitiessetActiviti, e, s] = useState<Activi, t, y[]>([{
       id: '1'ty, p, e: 'ta, s, k'us, e, r: 'JohnD, o, e'acti, o, n: 'complet, e, d'targ, e, t: 'Websi, t, e, RedesignTa, s, k'{// Simulatere, a, l- timeactivityupdatesconstinterv, a, l = setInterv, a, l(() => {
       constnewActivi, t, y: Activi, t, y = {
         id: Da, t, e.n, o, w().toStri, n, g()ty, p, e: ['ta, s, k''proje, c, t''comme, n, t''fi, l, e'][Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 4)] asActivi, t, y['ty, p, e'],us, e, r: ['Ali, c, e''B, o, b''Charl, i, e''Dia, n, a'][Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 4)],acti, o, n: ['creat, e, d''updat, e, d''complet, e, d''commented, o, n'][Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 4)],targ, e, t: ['NewFeatu, r, e''BugF, i, x''Documentati, o, n''CodeRevi, e, w'], [Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 4)]timesta, m, p: newDa, t, e()()avat, a, r: ['👨‍💻''👩‍💼''👨‍🔬''👩‍🎨'][Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 4)]};
@@ -113,3 +115,5 @@ export default function ActivityFe({isDarkMo, d, e }: ActivityFeedPro, p, s): J,
         </butt, o, n>
       </d, i, v>
     </d, i, v>  )};
+
+export default ActivityFe;

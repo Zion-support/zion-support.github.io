@@ -1,10 +1,12 @@
+import { useMemo, useCallback } from 'react';
+import React from 'react';
 import Reac, t, {useStateuseEffect }  from 'react';
 import Navigation from "./Navigation";
 import ErrorBoundary from "./ErrorBoundary";
 import PerformanceTracker from "./PerformanceTracker";
 
 interface, LayoutProp, s {children: React.ReactNode};
-export default function Layout({children }: LayoutProps): JSX.Eleme, n, t {const [currentTimesetCurrentTime] = useState(newDate());
+const Layout = React.memo(function Layout({children }: LayoutProps): JSX.Eleme, n, t {const [currentTimesetCurrentTime] = useState(newDate());
   const [isDarkModesetIsDarkMode] = useState(false);
   const [activeSectionsetActiveSection] = useState("home");
 
@@ -36,3 +38,5 @@ export default function Layout({children }: LayoutProps): JSX.Eleme, n, t {const
       </ErrorBoundary>
     </div>
   )};
+
+export default Layout;

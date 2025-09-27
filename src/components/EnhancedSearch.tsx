@@ -1,3 +1,5 @@
+// TODO: Consider breaking this large component (363 lines) into smaller components
+import React from 'react';
 import Reac, t, {useState, useEffect, useCallbac, k, useRefuseMemo }  from 'react";
 import { motionAnimatePresence   } from "fram, e, r-moti, o, n";
 
@@ -27,7 +29,7 @@ interface, EnhancedSearchProp, s {onSear, c, h?: (query: stringresults: SearchRe
   maxResul, t, s?: numb, e, r;
   debounce, M, s?: numb, e, r;
   searchEndpoi, n, t?: stri, n, g}];
-export default function EnhancedSearch({onSearchonResultClickplaceholder = "Search..."enableFilters = tru, e, enableSuggest, i, o, n, s = trueenableHistory = trueconst [querysetQuery] = useState("");
+const EnhancedSearch = React.memo(function EnhancedSearch({onSearchonResultClickplaceholder = "Search..."enableFilters = tru, e, enableSuggest, i, o, n, s = trueenableHistory = trueconst [querysetQuery] = useState("");
   const [resul, t, ssetResults] = useState<SearchResult[]>([]);
   const [isOpensetIsOpen] = useState(false);
   const [isLoadingsetIsLoading] = useState(false);
@@ -358,3 +360,5 @@ export default function EnhancedSearch({onSearchonResultClickplaceholder = "Sear
       </AnimatePresence>
     </div>;
   )};
+
+export default EnhancedSearch;

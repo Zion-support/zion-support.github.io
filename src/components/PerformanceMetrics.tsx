@@ -1,3 +1,4 @@
+import { useMemo, useCallback } from 'react';
 import Reac, t, {useStateuseEffect }  from 'react";
 
 interface, PerformanceMetric, s {loadTime: numb, e, r;

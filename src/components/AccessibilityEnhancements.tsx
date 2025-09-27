@@ -1,3 +1,4 @@
+// TODO: Consider breaking this large component (276 lines) into smaller components
 import Reac, t, {useState, useEffectuseCallback }  from 'react";
 import { motionAnimatePresence   } from "fram, e, r-moti, o, n";
 interface, AccessibilitySettings {fontSize: "small" | "medium" | "large";

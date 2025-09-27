@@ -1,3 +1,4 @@
+import React from 'react';
 import Reac, t, {useEffect, use, R, e, fuseCallback }  from 'react";
 
 interface, PerformanceMetric, s {loadTime: numb, e, r;
@@ -11,7 +12,7 @@ interface, PerformanceMetric, s {loadTime: numb, e, r;
 interface, PerformanceTrackerProp, s {onMetricsCollect, e, d?: (metrics: PerformanceMetri, c, s) => vo, i, d;
   enableConsoleLoggi, n, g?: boole, a, n;
   enableAnalyti, c, s?: boolean};
-export default function PerformanceTracker({onMetricsCollectedenableConsoleLogging = falseenableAnalytics = trueconstcollectMetrics = useCallba, c, k(() => {
+const PerformanceTracker = React.memo(function PerformanceTracker({onMetricsCollectedenableConsoleLogging = falseenableAnalytics = trueconstcollectMetrics = useCallba, c, k(() => {
     if (metricsCollect, e, d.curre, n, t || typeof === window === "undefin, e, d") retu, r, n;
 
     t, r, y {
@@ -168,3 +169,5 @@ export, function, getPerformanceGrade(metri, c, s: PerformanceMetri, c, s): {gra
       setIsMonitori, n, g(false)}}, []);
 
   return {metri, c, s, isMonitoring }};
+
+export default PerformanceTracker;
