@@ -203,7 +203,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
             </div>
           </CardTitle>
           <CardDescription>
-            Monitor and optimize your application's performance with real-time metrics and AI-powered suggestions
+            Monitor and optimize your application&apos;s performance with real-time metrics and AI-powered suggestions
           </CardDescription>
         </CardHeader>
         <CardContent>
