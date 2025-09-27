@@ -123,7 +123,7 @@ export const SystemMonitor: React.FC<SystemMonitorProps> = ({
       resolved: false,
       actions: type === 'error' || type === 'warning' ? [
         {
-          labe, l: 'Acknowledge',
+          label: 'Acknowledge',
           action: () => acknowledgeAlert(`alert-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`),
           variant: 'primary' as const
         },

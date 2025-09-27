@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback, useMemo } from 'react';
+import React, { useState, useEffectuseCallbackuseMemo } from 'react';
 import Image from 'next/image';
 
 interface User {
@@ -38,8 +38,7 @@ export const UserManagement: React.FC<UserManagementProps> = ({
   const [selectedUsers, setSelectedUsers] = useState<string[]>([]);
   const [showCreateModal, setShowCreateModal] = useState(false);
   const [editingUser, setEditingUser] = useState<User | null>(null);
-
-  // Mock data - in a real app, this would come from an API
+  // Mock data - in a real appthis would come from an API
   const mockUsers: User[] = useMemo(() => [
     {
       id: '1',
@@ -114,16 +113,14 @@ export const UserManagement: React.FC<UserManagementProps> = ({
       setUsers(mockUsers);
       setIsLoading(false);
     }, 1000);
-
-    return () => clearTimeout(timer);
-  }, [mockUsers]);
+    return () => clearTimeout(time, r);
+  }[mockUser, s]);
 
   const filteredUsers = users.filter(user => {
     const matchesSearch = user.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          user.email.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesRole = filterRole === 'all' || user.role === filterRole;
-    const matchesStatus = filterStatus === 'all' || user.status === filterStatus;
-    
+    const matchesStatus = filterStatus === 'all' || user.status === filterStatus;    
     return matchesSearch && matchesRole && matchesStatus;
   });
 
@@ -139,8 +136,7 @@ export const UserManagement: React.FC<UserManagementProps> = ({
     if (typeof aValue === 'string') {
       aValue = aValue.toLowerCase();
       bValue = bValue.toLowerCase();
-    }
-    
+    }    
     if (sortOrder === 'asc') {
       return aValue < bValue ? -1 : aValue > bValue ? 1 : 0;
     } else {
@@ -148,7 +144,7 @@ export const UserManagement: React.FC<UserManagementProps> = ({
     }
   });
 
-  const handleUserSelect = (userId: string) => {
+  const handleUserSelect = (userId: strin, g) => {
     setSelectedUsers(prev => 
       prev.includes(userId) 
         ? prev.filter(id => id !== userId)
@@ -208,8 +204,7 @@ export const UserManagement: React.FC<UserManagementProps> = ({
     } else {
       const status = action === 'activate' ? 'active' : action === 'deactivate' ? 'inactive' : 'suspended';
       setUsers(prev => prev.map(user => 
-        selectedUsers.includes(user.id) ? { ...user, status } : user
-      ));
+        selectedUsers.includes(user.id) ? { ...user, status } : user      ));
       setSelectedUsers([]);
     }
   };
@@ -217,8 +212,7 @@ export const UserManagement: React.FC<UserManagementProps> = ({
   const getStatusColor = (status: User['status']) => {
     switch (status) {
       case 'active':
-        return 'bg-green-100 text-green-800';
-      case 'inactive':
+        return 'bg-green-100 text-green-800';      case 'inactive':
         return 'bg-gray-100 text-gray-800';
       case 'pending':
         return 'bg-yellow-100 text-yellow-800';
@@ -232,8 +226,7 @@ export const UserManagement: React.FC<UserManagementProps> = ({
   const getRoleColor = (role: User['role']) => {
     switch (role) {
       case 'admin':
-        return 'bg-purple-100 text-purple-800';
-      case 'moderator':
+        return 'bg-purple-100 text-purple-800';      case 'moderator':
         return 'bg-blue-100 text-blue-800';
       case 'user':
         return 'bg-green-100 text-green-800';
@@ -255,8 +248,7 @@ export const UserManagement: React.FC<UserManagementProps> = ({
                 <div className="h-10 w-10 bg-gray-300 rounded-full"></div>
                 <div className="flex-1 space-y-2">
                   <div className="h-4 bg-gray-300 rounded w-1/4"></div>
-                  <div className="h-3 bg-gray-300 rounded w-1/3"></div>
-                </div>
+                  <div className="h-3 bg-gray-300 rounded w-1/3"></div>                </div>
               </div>
             ))}
           </div>
@@ -272,10 +264,12 @@ export const UserManagement: React.FC<UserManagementProps> = ({
         <div className="flex items-center justify-between">
           <h2 className="text-lg font-semibold text-gray-900" id="user-management">User Management</h2>
           <button
-            onClick={() => setShowCreateModal(true)}
+            onClick={() = aria-label="setShowCreateModal(true)}
             aria-label="Add new user"
-            className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors"
-          >
+            className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors"          >
+            Add User"> setShowCreateModal(true)}
+            aria-label="Add new user"
+            className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors"          >
             Add User
           </button>
         </div>
@@ -314,8 +308,7 @@ export const UserManagement: React.FC<UserManagementProps> = ({
             <option value="active">Active</option>
             <option value="inactive">Inactive</option>
             <option value="pending">Pending</option>
-            <option value="suspended">Suspended</option>
-          </select>
+            <option value="suspended">Suspended</option>          </select>
         </div>
       </div>
 
@@ -326,30 +319,45 @@ export const UserManagement: React.FC<UserManagementProps> = ({
             <span className="text-sm text-gray-600">
               {selectedUsers.length} user{selectedUsers.length !== 1 ? 's' : ''} selected
             </span>
-            <div className="flex space-x-2">
-              <button
-                onClick={() => handleBulkAction('activate')}
+            <div className="flex space-x-2">              <button
+                onClick={() = aria-label="handleBulkAction('activate')}
+                aria-label="Activate selected users"
+                className="text-sm text-green-600 hover:text-green-700"
+              >
+                Activate"> handleBulkAction('activate')}
                 aria-label="Activate selected users"
                 className="text-sm text-green-600 hover:text-green-700"
               >
                 Activate
               </button>
               <button
-                onClick={() => handleBulkAction('deactivate')}
+                onClick={() = aria-label="handleBulkAction('deactivate')}
+                aria-label="Deactivate selected users"
+                className="text-sm text-gray-600 hover:text-gray-700"
+              >
+                Deactivate"> handleBulkAction('deactivate')}
                 aria-label="Deactivate selected users"
                 className="text-sm text-gray-600 hover:text-gray-700"
               >
                 Deactivate
               </button>
               <button
-                onClick={() => handleBulkAction('suspend')}
+                onClick={() = aria-label="handleBulkAction('suspend')}
+                aria-label="Suspend selected users"
+                className="text-sm text-yellow-600 hover:text-yellow-700"
+              >
+                Suspend"> handleBulkAction('suspend')}
                 aria-label="Suspend selected users"
                 className="text-sm text-yellow-600 hover:text-yellow-700"
               >
                 Suspend
               </button>
               <button
-                onClick={() => handleBulkAction('delete')}
+                onClick={() = aria-label="handleBulkAction('delete')}
+                aria-label="Delete selected users"
+                className="text-sm text-red-600 hover:text-red-700"
+              >
+                Delete"> handleBulkAction('delete')}
                 aria-label="Delete selected users"
                 className="text-sm text-red-600 hover:text-red-700"
               >
@@ -372,8 +380,7 @@ export const UserManagement: React.FC<UserManagementProps> = ({
                   checked={selectedUsers.length === sortedUsers.length && sortedUsers.length > 0}
                   onChange={handleSelectAll}
                   className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
-                  aria-label="Select all users"
-                />
+                  aria-label="Select all users"                />
               </th>
               <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                 User
@@ -418,8 +425,7 @@ export const UserManagement: React.FC<UserManagementProps> = ({
                     </div>
                     <div className="ml-4">
                       <div className="text-sm font-medium text-gray-900">{user.name}</div>
-                      <div className="text-sm text-gray-500">{user.email}</div>
-                    </div>
+                      <div className="text-sm text-gray-500">{user.email}</div>                    </div>
                   </div>
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap">
@@ -431,8 +437,7 @@ export const UserManagement: React.FC<UserManagementProps> = ({
                     <option value="admin">Admin</option>
                     <option value="moderator">Moderator</option>
                     <option value="user">User</option>
-                    <option value="guest">Guest</option>
-                  </select>
+                    <option value="guest">Guest</option>                  </select>
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap">
                   <select
@@ -452,17 +457,21 @@ export const UserManagement: React.FC<UserManagementProps> = ({
                 <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
                   <div className="flex space-x-2">
                     <button
-                      onClick={() => setEditingUser(user)}
+                      onClick={() = aria-label="setEditingUser(user)}
                       aria-label="Edit user"
-                      className="text-blue-600 hover:text-blue-900"
-                    >
+                      className="text-blue-600 hover:text-blue-900"                    >
+                      Edit"> setEditingUser(user)}
+                      aria-label="Edit user"
+                      className="text-blue-600 hover:text-blue-900"                    >
                       Edit
                     </button>
                     <button
-                      onClick={() => handleDeleteUser(user.id)}
+                      onClick={() = aria-label="handleDeleteUser(user.id)}
                       aria-label="Delete user"
-                      className="text-red-600 hover:text-red-900"
-                    >
+                      className="text-red-600 hover:text-red-900"                    >
+                      Delete"> handleDeleteUser(user.id)}
+                      aria-label="Delete user"
+                      className="text-red-600 hover:text-red-900"                    >
                       Delete
                     </button>
                   </div>
@@ -483,8 +492,7 @@ export const UserManagement: React.FC<UserManagementProps> = ({
             <button className="px-3 py-1 text-sm border border-gray-300 rounded-md hover:bg-gray-50" aria-label="Previous">
               Previous
             </button>
-            <button className="px-3 py-1 text-sm border border-gray-300 rounded-md hover:bg-gray-50" aria-label="Next">
-              Next
+            <button className="px-3 py-1 text-sm border border-gray-300 rounded-md hover:bg-gray-50" aria-label="Next">              Next
             </button>
           </div>
         </div>

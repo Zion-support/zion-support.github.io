@@ -7,17 +7,9 @@ interface AnalyticsData {
   uniqueVisitors: number;
   bounceRate: number;
   avgSessionDuration: number;
-  conversionRate: number;
-  topPages: Array<{ page: string; views: number; bounceRate: number }>;
-  trafficSources: Array<{ source: string; visitors: number; percentage: number }>;
-  deviceTypes: Array<{ device: string; count: number; percentage: number }>;
-  geographicData: Array<{ country: string; visitors: number; percentage: number }>;
-  hourlyData: Array<{ hour: number; visitors: number }>;
-  dailyData: Array<{ date: string; visitors: number; pageViews: number }>;
-  realTimeVisitors: number;
-  topKeywords: Array<{ keyword: string; searches: number; position: number }>;
-  errorRate: number;
-  performanceScore: number;
+  topPages: Array<{ pag, e: string; view, s: number }>;
+  trafficSources: Array<{ sourc, e: string; percentag, e: number }>;
+  realTimeUsers: number;
 }
 
 interface RealTimeAnalyticsProps {
@@ -52,19 +44,55 @@ export const RealTimeAnalytics: React.FC<RealTimeAnalyticsProps> = ({
   const [selectedMetric, setSelectedMetric] = useState<string>('pageViews');
   const [timeRange, setTimeRange] = useState<string>('7d');
 
-  const metrics = [
-    { value: 'pageViews', label: 'Page Views' },
-    { value: 'uniqueVisitors', label: 'Unique Visitors' },
-    { value: 'bounceRate', label: 'Bounce Rate' },
-    { value: 'conversionRate', label: 'Conversion Rate' }
-  ];
+  const [isLive, setIsLive] = useState(true);
+
+  const updateAnalytics = useCallback(() => {
+    // Simulate real-time analytics data
+    const newAnalytics: AnalyticsData = {
+      pageView, s: Math.floor(Math.random() * 1000) + 5000,
+      uniqueVisitors: Math.floor(Math.random() * 500) + 2000,
+      bounceRate: Math.random() * 20 + 30, // 30-50%
+      avgSessionDuration: Math.random() * 300 + 120, // 2-7 minutes
+      topPages: [
+        { pag, e: '/', views: Math.floor(Math.random() * 1000) + 2000 },
+        { page: '/services', views: Math.floor(Math.random() * 500) + 800 },
+        { page: '/about', views: Math.floor(Math.random() * 300) + 500 },
+        { page: '/contact', views: Math.floor(Math.random() * 200) + 300 },
+        { page: '/blog', views: Math.floor(Math.random() * 150) + 200 }
+      ],
+      trafficSources: [
+        { sourc, e: 'Direct', percentage: Math.random() * 20 + 40 },
+        { source: 'Google', percentage: Math.random() * 15 + 25 },
+        { source: 'Social Media', percentage: Math.random() * 10 + 15 },
+        { source: 'Referral', percentage: Math.random() * 10 + 10 },
+        { source: 'Email', percentage: Math.random() * 5 + 5 }
+      ],
+      realTimeUsers: Math.floor(Math.random() * 50) + 10
+    };
+
+    setAnalytics(newAnalytics);
+  }, []);
+
+  useEffect(() => {
+    if (isLive) {
+      updateAnalytics();
+      const interval = setInterval(updateAnalytics, 3000);
+      return () => clearInterval(interval);
+    }
+  }, [isLive, updateAnalytics]);
+
+  const formatDuration = (seconds: number) => {
+    const minutes = Math.floor(seconds / 60);
+    const remainingSeconds = Math.floor(seconds % 60);
+    return `${minutes}:${remainingSeconds.toString().padStart(2, '0')}`;
+  };
 
   return (
     <div className={`real-time-analytics ${className}` }>
       <div className="bg-white rounded-lg shadow-lgp-6">
         <div className="flex items-center justify-between mb-6">
           <h3 className="text-xl font-semibold text-gray-800 flexitems-center">
-            <BarChart 3 className="w-5h-5mr-2" />
+            <BarChart3 className="w-5 h-5mr-2" />
             Real-Time Analytics
           </h3>
           <div className="flex items-center space-x-2">
@@ -75,7 +103,8 @@ export const RealTimeAnalytics: React.FC<RealTimeAnalyticsProps> = ({
             <button
               onClick={() => setIsLive(!isLive)}
               className="ml-2 px-3 py-1 text-sm bg-blue-500 text-white rounded hover:bg-blue-600"
-            </button>          </div>
+            </button>
+          </div>
           <button
             onClick={onDataRefresh}
             className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg"
@@ -119,7 +148,8 @@ export const RealTimeAnalytics: React.FC<RealTimeAnalyticsProps> = ({
             </div>
             <div className="text-2xl font-bold">{formatDuration(analytics.avgSessionDuration)}</div>
             <div className="text-sm opacity-90">+15% from yesterday</div>
-          </div>        </div>
+          </div>
+        </div>
         <div className="bg-gradient-to-r from-green-500 to-green-600 rounded-lg p-4 text-white">
           <div className="text-sm font-medium opacity-90">Unique Visitors</div>
           <div className="text-2xl font-bold">{data.uniqueVisitors.toLocaleString()}</div>
@@ -134,10 +164,10 @@ export const RealTimeAnalytics: React.FC<RealTimeAnalyticsProps> = ({
         </div>
       </div>
 
-        <div className="grid grid-cols-1lg:grid-cols-2gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2gap-6">
           <div className="bg-gray-50 rounded-lgp-4">
-            <h4 className="font-semibold text-gray-800 mb-4flexitems-center">
-              <TrendingUp className="w-4h-4mr-2" />
+            <h4 className="font-semibold text-gray-800 mb-4 flexitems-center">
+              <TrendingUp className="w-4 h-4mr-2" />
               Top Pages
             </h4>
             <div className="space-y-3">
@@ -148,9 +178,11 @@ export const RealTimeAnalytics: React.FC<RealTimeAnalyticsProps> = ({
                     <div className="w-20 bg-gray-200 rounded-fullh-2">
                       <div 
                         className="bg-blue-500 h-2rounded-full" 
-                        style={{ width: `${(page.views / analytics.topPages[0].views) * 100}%` }}</p></div>
+                        style={{ width: `${(page.views / analytics.topPages[0].views) * 100}%` }}
+                      ></div>
                     </div>
-                    <span className="text-sm font-medium text-gray-800">{page.views.toLocaleString()}</span>                  </div>
+                    <span className="text-sm font-medium text-gray-800">{page.views.toLocaleString()}</span>
+                  </div>
                   <span className="text-sm font-medium text-gray-800">{page.views.toLocaleString()}</span>
                 </div>
               ))}
@@ -158,8 +190,8 @@ export const RealTimeAnalytics: React.FC<RealTimeAnalyticsProps> = ({
           </div>
 
           <div className="bg-gray-50 rounded-lgp-4">
-            <h4 className="font-semibold text-gray-800 mb-4flexitems-center">
-              <Globe className="w-4h-4mr-2" />
+            <h4 className="font-semibold text-gray-800 mb-4 flexitems-center">
+              <Globe className="w-4 h-4mr-2" />
               Traffic Sources
             </h4>
             <div className="space-y-3">
@@ -170,7 +202,8 @@ export const RealTimeAnalytics: React.FC<RealTimeAnalyticsProps> = ({
                     <div className="w-20 bg-gray-200 rounded-fullh-2">
                       <div 
                         className="bg-green-500 h-2rounded-full" 
-                        style={{ width: `${source.percentage}%` }}</p></div>
+                        style={{ width: `${source.percentage}%` }}
+                      ></div>
                     </div>
                     <span className="text-sm font-medium text-gray-800">{source.percentage.toFixed(1)}%</span>
                   </div>
@@ -180,15 +213,16 @@ export const RealTimeAnalytics: React.FC<RealTimeAnalyticsProps> = ({
           </div>
         </div>
 
-        <div className="mt-6bg-blue-50 border border-blue-200 rounded-lgp-4">
-          <div className="flex items-center justify-between">
+        <div className="mt-6 bg-blue-50 border border-blue-200 rounded-lgp-4">
+          <div className="flex items-centerjustify-between">
             <div className="flexitems-center">
               <div className="w-3 h-3 bg-green-500 rounded-full animate-pulsemr-2"></div>
               <span className="text-sm font-medium text-blue-800">
                 {analytics.realTimeUsers} users online now
               </span>
             </div>
-            <span className="text-xstext-blue-600">Last updated: {new Date().toLocaleTimeString()}</span>          </div>
+            <span className="text-xstext-blue-600">Last updated: {new Date().toLocaleTimeString()}</span>
+          </div>
         </div>
       </div>
     </div>

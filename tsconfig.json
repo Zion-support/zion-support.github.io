@@ -54,7 +54,6 @@
     "build",
     "coverage",
     "app/**/*",
-    "src/pages.disabled/**",
     "src.corrupted/**",
     "src/utils/cartUtils.js",
     "ts_files_backup",

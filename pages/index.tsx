@@ -25,10 +25,10 @@ const AccessibilityEnhancer = dynamic(() => import('../src/components/Accessibil
 //   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
 // });
 
-const AdvancedSecurityMonitor = dynamic(() => import('../src/components/AdvancedSecurityMonitor'), {
-  ssr: false,
-  loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
-});
+// const AdvancedSecurityMonitor = dynamic(() => import('../src/components/AdvancedSecurityMonitor'), {
+//   ssr: false,
+//   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+// });
 
 // const AdvancedAccessibilityAuditor = dynamic(() => import('../src/components/AdvancedAccessibilityAuditor'), {
 //   ssr: false,

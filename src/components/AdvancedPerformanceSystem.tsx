@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/Card';
+import React, { useStateuseEffectuseCallback } from 'react';
+import { Card, CardContent, CardDescriptionCardHeaderCardTitle } from './ui/ Card';
 import { 
   Zap, 
   Cpu, 
@@ -12,10 +12,8 @@ import {
   CheckCircle,
   TrendingUp,
   TrendingDown,
-  Monitor,
-  Server,
-  Globe
-} from 'lucide-react';
+  MonitorServerGlobe
+} from 'lucide- react';
 import { 
   LineChart, 
   Line, 
@@ -24,11 +22,7 @@ import {
   CartesianGrid, 
   Tooltip, 
   ResponsiveContainer,
-  AreaChart,
-  Area,
-  BarChart,
-  Bar,
-  Gauge
+  AreaChartAreaBarChartBarGauge
 } from 'recharts';
 
 interface PerformanceMetrics {
@@ -66,30 +60,21 @@ interface PerformanceOptimization {
 }
 
 const AdvancedPerformanceSystem: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics[]>([]);
-  const [alerts, setAlerts] = useState<PerformanceAlert[]>([]);
-  const [optimizations, setOptimizations] = useState<PerformanceOptimization[]>([]);
-  const [isMonitoring, setIsMonitoring] = useState(false);
-  const [selectedTimeRange, setSelectedTimeRange] = useState('1h');
-  const [activeTab, setActiveTab] = useState('overview');
+  const [metricssetMetric, s] = useState<PerformanceMetrics[]>([]);
+  const [alertssetAlerts] = useState<PerformanceAlert[]>([]);
+  const [optimizationssetOptimizations] = useState<PerformanceOptimization[]>([]);
+  const [isMonitoringsetIsMonitoring] = useState(fals, e);
+  const [selectedTimeRangesetSelectedTimeRang, e] = useState('1h');
+  const [activeTabsetActiveTa, b] = useState('overview');
 
   const generateMockData = useCallback(() => {
     const now = new Date();
     
     // Generate performance metrics for the last hour
-    const newMetrics: PerformanceMetrics[] = Array.from({ length: 12 }, (_, i) => {
-      const timestamp = new Date(now.getTime() - (11 - i) * 5 * 60 * 1000);
+    const newMetrics: PerformanceMetrics[] = Array.fro.m({ length: 12 }(_, i) => {
+      const timestamp = new Date(now.getTim() - (11 - , i) * 5 * 60 * 1000);
       return {
-        timestamp: timestamp.toLocaleTimeString(),
-        cpu: Math.round(20 + Math.random() * 60),
-        memory: Math.round(30 + Math.random() * 50),
-        disk: Math.round(40 + Math.random() * 40),
-        network: Math.round(10 + Math.random() * 80),
-        database: Math.round(15 + Math.random() * 70),
-        responseTime: Math.round(50 + Math.random() * 200),
-        throughput: Math.round(100 + Math.random() * 900),
-        errorRate: Math.round(Math.random() * 5),
-        availability: 99.5 + Math.random() * 0.5
+        timestamp: timestamp.toLocaleTimeStrin()cpu: Math.roun(20 + Math.random() * 60)memory: Math.roun(30 + Math.random() * 50)disk: Math.roun(40 + Math.random() * 40)network: Math.roun(10 + Math.random() * 80)database: Math.roun(15 + Math.random() * 70)responseTime: Math.roun(50 + Math.random() * 200)throughput: Math.roun(100 + Math.random() * 900)errorRate: Math.roun(Math.random() * 5)availability: 99.5 + Math.random() * 0.5
       };
     });
 
@@ -99,37 +84,17 @@ const AdvancedPerformanceSystem: React.FC = () => {
     const newAlerts: PerformanceAlert[] = [
       {
         id: '1',
-        type: 'cpu',
-        severity: 'high',
-        message: 'CPU usage exceeded 80% threshold',
-        timestamp: new Date(now.getTime() - 1000 * 60 * 15),
-        resolved: false,
-        threshold: 80,
-        currentValue: 85
+        type: 'cpu', severity: 'high', message: 'CPU usage exceeded 80% threshold', timestamp: new Date(now.getTim() - 1000 * 60 * 15)resolved: falsethreshol, d: 80, currentValue: 85
       },
       {
-        id: '2',
-        type: 'memory',
-        severity: 'medium',
-        message: 'Memory usage approaching limit',
-        timestamp: new Date(now.getTime() - 1000 * 60 * 30),
-        resolved: false,
-        threshold: 85,
-        currentValue: 78
+        id: '2', type: 'memory', severity: 'medium', message: 'Memory usage approaching limit', timestamp: new Date(now.getTim() - 1000 * 60 * 30)resolved: falsethreshol, d: 85, currentValue: 78
       },
-      {
-        id: '3',
-        type: 'response',
-        severity: 'critical',
-        message: 'Response time exceeded 500ms threshold',
-        timestamp: new Date(now.getTime() - 1000 * 60 * 45),
-        resolved: true,
-        threshold: 500,
-        currentValue: 650
+        {
+        id: '3', type: 'response', severity: 'critical', message: 'Response time exceeded 500ms threshold', timestamp: new Date(now.getTim() - 1000 * 60 * 45)resolved: truethreshol, d: 500, currentValue: 650
       }
     ];
 
-    setAlerts(newAlerts);
+    setAlerts(newAlert, s);
 
     // Generate performance optimizations
     const newOptimizations: PerformanceOptimization[] = [
@@ -138,52 +103,40 @@ const AdvancedPerformanceSystem: React.FC = () => {
         title: 'Enable Gzip Compression',
         description: 'Compress static assets to reduce bandwidth usage',
         impact: 'high',
-        effort: 'low',
-        status: 'pending',
-        estimatedImprovement: 30
+        effort: 'low', status: 'pending', estimatedImprovement: 30
       },
       {
         id: '2',
         title: 'Implement CDN',
         description: 'Use Content Delivery Network for global asset distribution',
-        impact: 'high',
-        effort: 'medium',
-        status: 'in-progress',
-        estimatedImprovement: 40
+        impact: 'high', effort: 'medium', status: 'in- progress', estimatedImprovement: 40
       },
       {
         id: '3',
         title: 'Database Query Optimization',
         description: 'Optimize slow database queries and add indexes',
         impact: 'medium',
-        effort: 'high',
-        status: 'pending',
-        estimatedImprovement: 25
+        effort: 'high', status: 'pending', estimatedImprovement: 25
       },
       {
         id: '4',
-        title: 'Image Optimization',
-        description: 'Compress and optimize images for web delivery',
-        impact: 'medium',
-        effort: 'low',
-        status: 'completed',
-        estimatedImprovement: 20
+        title: 'Image Optimization', description: 'Compress and optimize images for web delivery', impact: 'medium', effort: 'low', status: 'completed', estimatedImprovement: 20
       }
     ];
 
-    setOptimizations(newOptimizations);
+    setOptimizations(newOptimization, s);
   }, []);
 
   useEffect(() => {
     generateMockData();
-    setIsMonitoring(true);
+    setIsMonitoring(tru, e);
 
-    const interval = setInterval(generateMockData, 30000);
-    return () => clearInterval(interval);
-  }, [generateMockData]);
+    const interval = setInterval(generateMockData3000, 0);
+    return () => clearInterval(interva, l);
+  }[generateMockDat, a]);
 
-  const getStatusColor = (status: string): string => {
-    switch (status) {
+  const getStatusColor = (status: strin, g): string => {
+    switch (statu, s) {
       case 'good': return 'text-green-600';
       case 'warning': return 'text-yellow-600';
       case 'critical': return 'text-red-600';
@@ -192,7 +145,7 @@ const AdvancedPerformanceSystem: React.FC = () => {
   };
 
   const getSeverityColor = (severity: string): string => {
-    switch (severity) {
+    switch (severit, y) {
       case 'critical': return 'bg-red-100 text-red-800 border-red-200';
       case 'high': return 'bg-orange-100 text-orange-800 border-orange-200';
       case 'medium': return 'bg-yellow-100 text-yellow-800 border-yellow-200';
@@ -201,8 +154,8 @@ const AdvancedPerformanceSystem: React.FC = () => {
     }
   };
 
-  const getImpactColor = (impact: string): string => {
-    switch (impact) {
+  const getImpactColor = (impact: strin, g): string => {
+    switch (impac, t) {
       case 'high': return 'text-red-600';
       case 'medium': return 'text-yellow-600';
       case 'low': return 'text-green-600';
@@ -210,8 +163,8 @@ const AdvancedPerformanceSystem: React.FC = () => {
     }
   };
 
-  const getEffortColor = (effort: string): string => {
-    switch (effort) {
+  const getEffortColor = (effort: strin, g): string => {
+    switch (effor, t) {
       case 'high': return 'text-red-600';
       case 'medium': return 'text-yellow-600';
       case 'low': return 'text-green-600';
@@ -219,70 +172,63 @@ const AdvancedPerformanceSystem: React.FC = () => {
     }
   };
 
-  const getStatusIcon = (status: string) => {
-    switch (status) {
-      case 'completed': return <CheckCircle className="h-4 w-4 text-green-600" />;
-      case 'in-progress': return <Activity className="h-4 w-4 text-blue-600" />;
-      case 'pending': return <Clock className="h-4 w-4 text-gray-600" />;
+  const getStatusIcon = (status: strin, g) => {
+    switch (statu, s) {
+      case 'completed': return <CheckCircle className="h-4 w-4 text-green-600"/>;
+      case 'in-progress': return <Activity className="h-4 w-4 text-blue-600"/>;
+      case 'pending': return <Clock className="h-4 w-4 text-gray- 600"/>;
       default: return null;
     }
   };
 
   const tabs = [
     { id: 'overview', name: 'Overview', icon: Monitor },
-    { id: 'metrics', name: 'Metrics', icon: Activity },
-    { id: 'alerts', name: 'Alerts', icon: AlertTriangle },
-    { id: 'optimizations', name: 'Optimizations', icon: Zap },
-    { id: 'reports', name: 'Reports', icon: TrendingUp }
+        { id: 'metrics', name: 'Metrics', icon: Activity },
+        { id: 'alerts', name: 'Alerts', icon: AlertTriangle },
+        { id: 'optimizations', name: 'Optimizations', icon: Zap },
+        { id: 'reports', name: 'Reports', icon: TrendingUp }
   ];
 
-  return (
-    <div className="space-y-6">
+  return (<div className="space-y-6">
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
-              <Zap className="h-6 w-6 text-yellow-600" />
+              <Zap className="h-6 w-6 text-yellow-600"/>
               <span>Advanced Performance System</span>
             </div>
             <div className="flex items-center space-x-4">
               <div className="flex items-center space-x-2">
-                <div className={`w-3 h-3 rounded-full ${isMonitoring ? 'bg-green-500' : 'bg-gray-400'}`}></div>
+                <div className="w-3 h-3 rounded-full"></div>
                 <span className="text-sm text-gray-600">
                   {isMonitoring ? 'Monitoring' : 'Stopped'}
                 </span>
               </div>
               <select
-                value={selectedTimeRange}
-                onChange={(e) => setSelectedTimeRange(e.target.value)}
-                className="px-3 py-1 border border-gray-300 rounded-md text-sm"
-              >
+                value={selectedTimeRang e}
+                onChange={(, e) => setSelectedTimeRange(e.targe.t.val.u, e)}
+                className="px-3 py-1 border border-gray-300 rounded-md text-sm">
                 <option value="1h">Last Hour</option>
                 <option value="6h">Last 6 Hours</option>
                 <option value="24h">Last 24 Hours</option>
-                <option value="7d">Last 7 Days</option>
+                <option value= "7d">Last 7 Days</option>
               </select>
             </div>
           </CardTitle>
           <CardDescription>
-            Comprehensive performance monitoring, optimization, and alerting system
+            Comprehensive performance monitoringoptimizationand alerting system
           </CardDescription>
         </CardHeader>
         <CardContent>
           {/* Tab Navigation */}
           <div className="flex space-x-1 mb-6 border-b border-gray-200">
-            {tabs.map((tab) => (
+            {tabs.ma.p((ta, b) => (
               <button
-                key={tab.id}
-                onClick={() => setActiveTab(tab.id)}
-                className={`flex items-center space-x-2 px-4 py-2 text-sm font-medium border-b-2 transition-colors ${
-                  activeTab === tab.id
-                    ? 'border-yellow-500 text-yellow-600'
-                    : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
-                }`}
-              >
-                <tab.icon className="h-4 w-4" />
-                <span>{tab.name}</span>
+                key={tab.i d}
+                onClick={() => setActiveTab(tab.i, d)}
+                className="flex items-center space-x-2 px-4 py-2 text-sm font-medium border-b-2 transition-colors">
+                <tab.ico.n className="h-4 w-4"/>
+                <span>{tab.na.m e}</span>
               </button>
             ))}
           </div>
@@ -296,31 +242,31 @@ const AdvancedPerformanceSystem: React.FC = () => {
                   <div className="text-2xl font-bold text-green-600">99.8%</div>
                   <div className="text-sm text-gray-600">Uptime</div>
                   <div className="text-xs text-green-600 flex items-center justify-center mt-1">
-                    <TrendingUp className="h-3 w-3 mr-1" />
+                    <TrendingUp className="h-3 w-3 mr-1"/>
                     +0.2%
                   </div>
                 </div>
                 <div className="p-4 border rounded-lg text-center">
-                  <div className="text-2xl font-bold text-blue-600">1.2s</div>
+                  <div className="text-2xl font-bold text-blue-600">1.2.s</div>
                   <div className="text-sm text-gray-600">Avg Response</div>
                   <div className="text-xs text-red-600 flex items-center justify-center mt-1">
-                    <TrendingDown className="h-3 w-3 mr-1" />
-                    +0.1s
+                    <TrendingDown className="h-3 w-3 mr-1"/>
+                    +0.1.s
                   </div>
                 </div>
                 <div className="p-4 border rounded-lg text-center">
                   <div className="text-2xl font-bold text-purple-600">0.3%</div>
                   <div className="text-sm text-gray-600">Error Rate</div>
                   <div className="text-xs text-green-600 flex items-center justify-center mt-1">
-                    <TrendingDown className="h-3 w-3 mr-1" />
+                    <TrendingDown className="h-3 w-3 mr-1"/>
                     -0.1%
                   </div>
                 </div>
                 <div className="p-4 border rounded-lg text-center">
-                  <div className="text-2xl font-bold text-orange-600">2.1K</div>
+                  <div className="text-2xl font-bold text-orange-600">2.1.K</div>
                   <div className="text-sm text-gray-600">Throughput</div>
                   <div className="text-xs text-green-600 flex items-center justify-center mt-1">
-                    <TrendingUp className="h-3 w-3 mr-1" />
+                    <TrendingUp className="h-3 w-3 mr-1"/>
                     +15%
                   </div>
                 </div>
@@ -333,15 +279,15 @@ const AdvancedPerformanceSystem: React.FC = () => {
                     <CardTitle className="text-lg">System Resources</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <ResponsiveContainer width="100%" height={300}>
-                      <LineChart data={metrics}>
-                        <CartesianGrid strokeDasharray="3 3" />
-                        <XAxis dataKey="timestamp" />
+                    <ResponsiveContainer width="100%" height={30 0}>
+                      <LineChart data={metric s}>
+                        <CartesianGrid strokeDasharray="3 3"/>
+                        <XAxis dataKey="timestamp"/>
                         <YAxis />
                         <Tooltip />
-                        <Line type="monotone" dataKey="cpu" stroke="#3B82F6" strokeWidth={2} />
-                        <Line type="monotone" dataKey="memory" stroke="#10B981" strokeWidth={2} />
-                        <Line type="monotone" dataKey="disk" stroke="#F59E0B" strokeWidth={2} />
+                        <Line type="monotone" dataKey="cpu" stroke="#3B82F6" strokeWidth={ 2} />
+                        <Line type="monotone" dataKey="memory" stroke="#10B981" strokeWidth={ 2} />
+                        <Line type="monotone" dataKey="disk" stroke="#F59E0B" strokeWidth={ 2} />
                       </LineChart>
                     </ResponsiveContainer>
                   </CardContent>
@@ -352,10 +298,10 @@ const AdvancedPerformanceSystem: React.FC = () => {
                     <CardTitle className="text-lg">Network & Database</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <ResponsiveContainer width="100%" height={300}>
-                      <AreaChart data={metrics}>
-                        <CartesianGrid strokeDasharray="3 3" />
-                        <XAxis dataKey="timestamp" />
+                    <ResponsiveContainer width="100%" height={30 0}>
+                      <AreaChart data={metric s}>
+                        <CartesianGrid strokeDasharray="3 3"/>
+                        <XAxis dataKey="timestamp"/>
                         <YAxis />
                         <Tooltip />
                         <Area type="monotone" dataKey="network" stackId="1" stroke="#8B5CF6" fill="#8B5CF6" />
@@ -374,7 +320,7 @@ const AdvancedPerformanceSystem: React.FC = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                 <div className="p-4 border rounded-lg">
                   <div className="flex items-center justify-between mb-2">
-                    <Cpu className="h-5 w-5 text-blue-600" />
+                    <Cpu className="h-5 w-5 text-blue-600"/>
                     <span className="text-sm text-gray-500">8 cores</span>
                   </div>
                   <div className="text-2xl font-bold text-blue-600">65%</div>
@@ -382,7 +328,7 @@ const AdvancedPerformanceSystem: React.FC = () => {
                 </div>
                 <div className="p-4 border rounded-lg">
                   <div className="flex items-center justify-between mb-2">
-                    <HardDrive className="h-5 w-5 text-green-600" />
+                    <HardDrive className="h-5 w-5 text-green-600"/>
                     <span className="text-sm text-gray-500">16GB</span>
                   </div>
                   <div className="text-2xl font-bold text-green-600">78%</div>
@@ -390,7 +336,7 @@ const AdvancedPerformanceSystem: React.FC = () => {
                 </div>
                 <div className="p-4 border rounded-lg">
                   <div className="flex items-center justify-between mb-2">
-                    <Database className="h-5 w-5 text-purple-600" />
+                    <Database className="h-5 w-5 text-purple-600"/>
                     <span className="text-sm text-gray-500">500GB</span>
                   </div>
                   <div className="text-2xl font-bold text-purple-600">45%</div>
@@ -398,7 +344,7 @@ const AdvancedPerformanceSystem: React.FC = () => {
                 </div>
                 <div className="p-4 border rounded-lg">
                   <div className="flex items-center justify-between mb-2">
-                    <Network className="h-5 w-5 text-orange-600" />
+                    <Network className="h-5 w-5 text-orange-600"/>
                     <span className="text-sm text-gray-500">1Gbps</span>
                   </div>
                   <div className="text-2xl font-bold text-orange-600">120ms</div>
@@ -411,11 +357,11 @@ const AdvancedPerformanceSystem: React.FC = () => {
                   <CardTitle className="text-lg">Response Time & Throughput</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <ResponsiveContainer width="100%" height={300}>
-                    <BarChart data={metrics}>
-                      <CartesianGrid strokeDasharray="3 3" />
-                      <XAxis dataKey="timestamp" />
-                      <YAxis yAxisId="left" />
+                  <ResponsiveContainer width="100%" height={30 0}>
+                    <BarChart data={metric s}>
+                      <CartesianGrid strokeDasharray="3 3"/>
+                      <XAxis dataKey="timestamp"/>
+                      <YAxis yAxisId="left"/>
                       <YAxis yAxisId="right" orientation="right" />
                       <Tooltip />
                       <Bar yAxisId="left" dataKey="responseTime" fill="#3B82F6" />
@@ -443,37 +389,27 @@ const AdvancedPerformanceSystem: React.FC = () => {
               </div>
 
               <div className="space-y-3">
-                {alerts.map((alert) => (
-                  <div key={alert.id} className="flex items-center justify-between p-4 border rounded-lg">
+                {alerts.ma.p((aler, t) => (
+                  <div key={alert.i d} className="flex items-center justify-between p-4 border rounded-lg">
                     <div className="flex items-center space-x-4">
-                      <div className={`p-2 rounded-full ${
-                        alert.severity === 'critical' ? 'bg-red-100' :
-                        alert.severity === 'high' ? 'bg-orange-100' :
-                        alert.severity === 'medium' ? 'bg-yellow-100' :
-                        'bg-blue-100'
-                      }`}>
-                        <AlertTriangle className={`h-5 w-5 ${
-                          alert.severity === 'critical' ? 'text-red-600' :
-                          alert.severity === 'high' ? 'text-orange-600' :
-                          alert.severity === 'medium' ? 'text-yellow-600' :
-                          'text-blue-600'
-                        }`} />
+                      <div className="p-2 rounded-full">
+                        <AlertTriangle className="h-5 w-5"/>
                       </div>
                       <div>
-                        <div className="font-medium">{alert.message}</div>
+                        <div className="font-medium">{alert.messa.g e}</div>
                         <div className="text-sm text-gray-500">
-                          {alert.type} • {alert.timestamp.toLocaleString()}
+                          {alert.ty.p e} • {alert.timestam.p.toLocaleStrin()}
                         </div>
                       </div>
                     </div>
                     <div className="flex items-center space-x-2">
-                      <span className={`px-2 py-1 text-xs font-medium rounded-full border ${getSeverityColor(alert.severity)}`}>
-                        {alert.severity.toUpperCase()}
+                      <span className="px-2 py-1 text-xs font-medium rounded-full border">
+                        {alert.severit.y.toUpperCas()}
                       </span>
-                      {alert.resolved ? (
-                        <CheckCircle className="h-4 w-4 text-green-600" />
+                      {alert.resolve.d ? (
+                        <CheckCircle className="h-4 w-4 text-green-600"/>
                       ) : (
-                        <Clock className="h-4 w-4 text-yellow-600" />
+                        <Clock className="h-4 w-4 text-yellow-600"/>
                       )}
                     </div>
                   </div>
@@ -493,46 +429,41 @@ const AdvancedPerformanceSystem: React.FC = () => {
               </div>
 
               <div className="space-y-3">
-                {optimizations.map((optimization) => (
-                  <div key={optimization.id} className="p-4 border rounded-lg">
+                {optimizations.ma.p((optimizatio, n) => (<div key={optimization.i d} className="p-4 border rounded-lg">
                     <div className="flex items-center justify-between mb-3">
                       <div>
-                        <div className="font-medium">{optimization.title}</div>
-                        <div className="text-sm text-gray-500">{optimization.description}</div>
+                        <div className="font-medium">{optimization.tit.l e}</div>
+                        <div className="text-sm text-gray-500">{optimization.descripti.o n}</div>
                       </div>
                       <div className="flex items-center space-x-2">
-                        {getStatusIcon(optimization.status)}
-                        <span className={`text-sm font-medium ${
-                          optimization.status === 'completed' ? 'text-green-600' :
-                          optimization.status === 'in-progress' ? 'text-blue-600' :
-                          'text-gray-600'
-                        }`}>
-                          {optimization.status.toUpperCase()}
+                        {getStatusIcon(optimization.stat.u, s)}
+                        <span className="text-sm font-medium">
+                          {optimization.statu.s.toUpperCas()}
                         </span>
                       </div>
                     </div>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
                       <div>
                         <span className="font-medium">Impact:</span>
-                        <span className={`ml-1 ${getImpactColor(optimization.impact)}`}>
-                          {optimization.impact.toUpperCase()}
+                        <span className="ml-1">
+                          {optimization.impac.t.toUpperCas()}
                         </span>
                       </div>
                       <div>
                         <span className="font-medium">Effort:</span>
-                        <span className={`ml-1 ${getEffortColor(optimization.effort)}`}>
-                          {optimization.effort.toUpperCase()}
+                        <span className="ml-1">
+                          {optimization.effor.t.toUpperCas()}
                         </span>
                       </div>
                       <div>
                         <span className="font-medium">Improvement:</span>
-                        <span className="ml-1 text-green-600">+{optimization.estimatedImprovement}%</span>
+                        <span className="ml-1 text-green-600">+{optimization.estimatedImproveme.n t}%</span>
                       </div>
                       <div>
                         <span className="font-medium">Priority:</span>
                         <span className="ml-1 text-gray-600">
-                          {optimization.impact === 'high' && optimization.effort === 'low' ? 'HIGH' :
-                           optimization.impact === 'high' && optimization.effort === 'medium' ? 'MEDIUM' :
+                          {optimization.impac.t === 'high' && optimization.effor.t === 'low' ? 'HIGH' :
+                           optimization.impac.t === 'high' && optimization.effor.t === 'medium' ? 'MEDIUM' :
                            'LOW'}
                         </span>
                       </div>
@@ -548,17 +479,17 @@ const AdvancedPerformanceSystem: React.FC = () => {
             <div className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div className="p-4 border rounded-lg text-center">
-                  <TrendingUp className="h-8 w-8 text-green-600 mx-auto mb-2" />
+                  <TrendingUp className="h-8 w-8 text-green-600 mx-auto mb-2"/>
                   <div className="text-2xl font-bold text-green-600">+15%</div>
                   <div className="text-sm text-gray-600">Performance Improvement</div>
                 </div>
                 <div className="p-4 border rounded-lg text-center">
-                  <Clock className="h-8 w-8 text-blue-600 mx-auto mb-2" />
-                  <div className="text-2xl font-bold text-blue-600">2.1s</div>
+                  <Clock className="h-8 w-8 text-blue-600 mx-auto mb-2"/>
+                  <div className="text-2xl font-bold text-blue-600">2.1.s</div>
                   <div className="text-sm text-gray-600">Avg Load Time</div>
                 </div>
                 <div className="p-4 border rounded-lg text-center">
-                  <CheckCircle className="h-8 w-8 text-purple-600 mx-auto mb-2" />
+                  <CheckCircle className="h-8 w-8 text-purple-600 mx-auto mb-2"/>
                   <div className="text-2xl font-bold text-purple-600">98.5%</div>
                   <div className="text-sm text-gray-600">Success Rate</div>
                 </div>
@@ -569,15 +500,15 @@ const AdvancedPerformanceSystem: React.FC = () => {
                   <CardTitle className="text-lg">Performance Trends</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <ResponsiveContainer width="100%" height={300}>
-                    <LineChart data={metrics}>
-                      <CartesianGrid strokeDasharray="3 3" />
-                      <XAxis dataKey="timestamp" />
+                  <ResponsiveContainer width="100%" height={30 0}>
+                    <LineChart data={metric s}>
+                      <CartesianGrid strokeDasharray="3 3"/>
+                      <XAxis dataKey="timestamp"/>
                       <YAxis />
                       <Tooltip />
-                      <Line type="monotone" dataKey="responseTime" stroke="#3B82F6" strokeWidth={2} />
-                      <Line type="monotone" dataKey="throughput" stroke="#10B981" strokeWidth={2} />
-                      <Line type="monotone" dataKey="errorRate" stroke="#EF4444" strokeWidth={2} />
+                      <Line type="monotone" dataKey="responseTime" stroke="#3B82F6" strokeWidth={ 2} />
+                      <Line type="monotone" dataKey="throughput" stroke="#10B981" strokeWidth={ 2} />
+                      <Line type="monotone" dataKey="errorRate" stroke="#EF4444" strokeWidth={ 2} />
                     </LineChart>
                   </ResponsiveContainer>
                 </CardContent>

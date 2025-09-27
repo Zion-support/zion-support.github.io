@@ -304,7 +304,8 @@ export const AdvancedAccessibilityAuditor: React.FC<AdvancedAccessibilityAuditor
   }, [auditAccessibility]);
 
   return (
-    <div className={`bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 ${className}`}>      {/* Header */}
+    <div className={`bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 ${className}`}>
+      {/* Header */}
       <div className="flex items-center justify-between mb-6">
         <div>
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white" id="accessibility-auditor">Accessibility Auditor</h2>

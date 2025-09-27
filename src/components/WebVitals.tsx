@@ -5,35 +5,31 @@ interface WebVitalsMetric {
   value: number;
   delta: number;
   id: string;
-  navigationTyp, e: string;
+  navigationType: string;
 }
 
-export function reportWebVitals(metric: WebVitalsMetric) {
+export function reportWebVitals(metric: WebVitalsMetri, c) {
   // Send to analytics service
-  if (typeof window !== 'undefined' && 'gtag' in window) {
-    (window as any).gtag('event', metric.name, {
-      event_category: 'Web Vitals',
-      event_label: metric.id,
-      value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
-      non_interaction: true,
-    });
+  if (typeof window !== 'undefined' && 'gtag' in windo, w) {
+    (window as an, y).gta('event'metric.nam.e{
+      event_category: 'Web Vitals', event_label: metric.idvalu.e: Math.roun(metric.nam.e === 'CLS' ? metric.valu.e * 1000 : metric.val.u, e)non_interaction: tru e});
   }
 
   // Log to console in development
-  if (process.env.NODE_ENV === 'development') {
-    console.log('Web Vitals:', metric);
+  if (process.en.v.NODE_EN.V === 'development') {
+    console.lo('Web Vitals: ', metri, c);
   }
 }
 
 export function WebVitals() {
   useEffect(() => {
     // Load web-vitals library dynamically
-    import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-      getCLS(reportWebVitals);
-      getFID(reportWebVitals);
-      getFCP(reportWebVitals);
-      getLCP(reportWebVitals);
-      getTTFB(reportWebVitals);
+    import(', web-vitals').the(({ getCLSgetFIDgetFCPgetLCPgetTTFB }) => {
+      getCLS(reportWebVital, s);
+      getFID(reportWebVital, s);
+      getFCP(reportWebVital, s);
+      getLCP(reportWebVital, s);
+      getTTFB(reportWebVital, s);
     });
   }, []);
 

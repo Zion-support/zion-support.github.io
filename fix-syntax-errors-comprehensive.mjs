@@ -3,111 +3,96 @@
 import fs from 'fs';
 import path from 'path';
 
-// Function to fix common syntax errors in JSX/TSX files
+const filesToFix = [
+  'src/components/PerformanceOptimizations.tsx',
+  'src/components/TestDashboard.tsx',
+  'src/components/AnalyticsDashboard.tsx',
+  'src/components/EnhancedErrorBoundary.tsx',
+  'src/components/EnhancedSearch.tsx',
+  'src/components/ErrorBoundary.tsx'
+];
+
 function fixSyntaxErrors(content) {
-  // Fix malformed className attributes
-  content = content.replace(/className="([^"]*),([^"]*)"/g, (match, before, after) => {
-    return `className="${before} ${after}"`;
-  });
+  // Fix common JSX syntax errors
+  let fixed = content;
   
-  // Fix missing spaces in className
-  content = content.replace(/className="([^"]*)([a-zA-Z])([a-zA-Z])/g, (match, before, char1, char2) => {
-    if (char1 === 'k' && char2 === ':') {
-      return `className="${before} dark:`;
-    }
-    return match;
+  // Fix className spacing issues
+  fixed = fixed.replace(/className="([^"]*?)"([^"]*?)"/g, (match, p1, p2) => {
+    const cleanP1 = p1.replace(/([a-zA-Z])([A-Z])/g, '$1 $2').replace(/([a-z])([A-Z])/g, '$1 $2');
+    const cleanP2 = p2.replace(/([a-zA-Z])([A-Z])/g, '$1 $2').replace(/([a-z])([A-Z])/g, '$1 $2');
+    return `className="${cleanP1}${cleanP2}"`;
   });
-  
-  // Fix specific patterns
-  content = content.replace(/dar,k:/g, 'dark:');
-  content = content.replace(/dar, k:/g, 'dark:');
-  content = content.replace(/dar,k:/g, 'dark:');
-  content = content.replace(/dar, k:/g, 'dark:');
-  content = content.replace(/dar,k:/g, 'dark:');
-  content = content.replace(/dar, k:/g, 'dark:');
   
   // Fix missing spaces in className attributes
-  content = content.replace(/className="([^"]*)([a-zA-Z])([a-zA-Z])([^"]*)"/g, (match, before, char1, char2, after) => {
-    if (char1 === 'k' && char2 === ':') {
-      return `className="${before} dark:${after}"`;
-    }
-    return match;
-  });
+  fixed = fixed.replace(/className="([^"]*?)([a-z])([A-Z])([^"]*?)"/g, 'className="$1$2 $3$4"');
+  fixed = fixed.replace(/className="([^"]*?)([a-z])([0-9])([^"]*?)"/g, 'className="$1$2 $3$4"');
+  fixed = fixed.replace(/className="([^"]*?)([0-9])([a-zA-Z])([^"]*?)"/g, 'className="$1$2 $3$4"');
   
-  // Fix specific malformed patterns
-  content = content.replace(/className="([^"]*)([a-zA-Z])([a-zA-Z])([^"]*)"/g, (match, before, char1, char2, after) => {
-    if (char1 === 'k' && char2 === ':') {
-      return `className="${before} dark:${after}"`;
-    }
-    return match;
-  });
+  // Fix specific common patterns
+  fixed = fixed.replace(/className="([^"]*?)space-y-2""/g, 'className="$1space-y-2"');
+  fixed = fixed.replace(/className="([^"]*?)text-sm font-medium""/g, 'className="$1text-sm font-medium"');
+  fixed = fixed.replace(/className="([^"]*?)grid grid-cols-2md: grid-cols-4gap-4""/g, 'className="$1grid grid-cols-2 md:grid-cols-4 gap-4"');
+  fixed = fixed.replace(/className="([^"]*?)block text-sm font-medium""/g, 'className="$1block text-sm font-medium"');
   
-  // Fix missing spaces in grid classes
-  content = content.replace(/grid-cols-([0-9]+)\s+([a-zA-Z]+):grid-cols-([0-9]+)/g, 'grid-cols-$1 $2:grid-cols-$3');
-  content = content.replace(/gap-([0-9]+)mb-([0-9]+)/g, 'gap-$1 mb-$2');
-  content = content.replace(/p-([0-9]+)text-white/g, 'p-$1 text-white');
-  content = content.replace(/text-([0-9]+)xlfont-bold/g, 'text-$1xl font-bold');
-  content = content.replace(/text-([0-9]+)smopacity-([0-9]+)/g, 'text-$1sm opacity-$2');
-  content = content.replace(/items-centerspace-x-([0-9]+)/g, 'items-center space-x-$1');
-  content = content.replace(/font-mediumtransition-colors/g, 'font-medium transition-colors');
-  content = content.replace(/onClick={() =>setIsRealTime/g, 'onClick={() => setIsRealTime');
+  // Fix array length syntax
+  fixed = fixed.replace(/Array\.from\(\{\s*lengt,\s*h:\s*(\d+)\s*\}/g, 'Array.from({ length: $1 }');
   
-  // Fix specific malformed className patterns
-  content = content.replace(/className="([^"]*)([a-zA-Z])([a-zA-Z])([^"]*)"/g, (match, before, char1, char2, after) => {
-    if (char1 === 'k' && char2 === ':') {
-      return `className="${before} dark:${after}"`;
-    }
-    return match;
-  });
+  // Fix malformed JSX elements
+  fixed = fixed.replace(/<h3className=/g, '<h3 className=');
+  fixed = fixed.replace(/<div className="([^"]*?)""/g, '<div className="$1"');
+  fixed = fixed.replace(/<label className="([^"]*?)""/g, '<label className="$1"');
   
-  return content;
+  // Fix switch statement syntax
+  fixed = fixed.replace(/switch\s*\(\s*([^)]+)\s*\)\s*\{;/g, 'switch ($1) {');
+  fixed = fixed.replace(/case\s*'([^']+)':\s*return\s*'([^']+)';/g, "case '$1': return '$2';");
+  fixed = fixed.replace(/default:\s*return\s*'([^']+)';\s*\}/g, "default: return '$1'; }");
+  
+  // Fix comparison operators
+  fixed = fixed.replace(/=\s*==/g, '===');
+  fixed = fixed.replace(/=\s*!=/g, '!==');
+  
+  // Fix function syntax
+  fixed = fixed.replace(/\(\s*([^)]+)\s*\)\s*=>\s*\{/g, '($1) => {');
+  fixed = fixed.replace(/\(\s*([^)]+)\s*\)\s*=>\s*\(/g, '($1) => (');
+  
+  // Fix object syntax
+  fixed = fixed.replace(/\{\s*([^}]+)\s*;\s*\}/g, '{ $1 }');
+  
+  // Fix template literals
+  fixed = fixed.replace(/`([^`]*?)\$\{([^}]+)\}([^`]*?)`/g, '`$1${$2}$3`');
+  
+  return fixed;
 }
 
-// Function to process a single file
-function processFile(filePath) {
+async function fixFile(filePath) {
   try {
+    if (!fs.existsSync(filePath)) {
+      console.log(`File not found: ${filePath}`);
+      return;
+    }
+    
     const content = fs.readFileSync(filePath, 'utf8');
-    const fixedContent = fixSyntaxErrors(content);
+    const fixed = fixSyntaxErrors(content);
     
-    if (content !== fixedContent) {
-      fs.writeFileSync(filePath, fixedContent, 'utf8');
-      console.log(`Fixed: ${filePath}`);
-      return true;
+    if (content !== fixed) {
+      fs.writeFileSync(filePath, fixed, 'utf8');
+      console.log(`Fixed syntax errors in: ${filePath}`);
+    } else {
+      console.log(`No syntax errors found in: ${filePath}`);
     }
-    return false;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false;
+    console.error(`Error fixing ${filePath}:`, error.message);
   }
 }
 
-// Function to recursively find and process TSX/JSX files
-function processDirectory(dirPath) {
-  let fixedCount = 0;
+async function main() {
+  console.log('Starting comprehensive syntax error fixes...');
   
-  try {
-    const items = fs.readdirSync(dirPath);
-    
-    for (const item of items) {
-      const fullPath = path.join(dirPath, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-        fixedCount += processDirectory(fullPath);
-      } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.jsx'))) {
-        if (processFile(fullPath)) {
-          fixedCount++;
-        }
-      }
-    }
-  } catch (error) {
-    console.error(`Error processing directory ${dirPath}:`, error.message);
+  for (const file of filesToFix) {
+    await fixFile(file);
   }
   
-  return fixedCount;
+  console.log('Syntax error fixes completed!');
 }
 
-// Main execution
-console.log('Starting comprehensive syntax error fixes...');
-const fixedCount = processDirectory('./src/components');
-console.log(`Fixed ${fixedCount} files.`);
+main().catch(console.error);

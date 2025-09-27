@@ -21,7 +21,6 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
 	onMouseLeave
 }) => {
 	const [isExpanded, setIsExpanded] = useState(false);
-
 	return (
 		<div
 			className={`group p-6 rounded-xl border-2 transition-all duration-300 cursor-pointer ${
@@ -56,21 +55,25 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
 					{service.features.slice(0, isExpanded ? service.features.length : 3).map((feature, index) => (
 						<div key={index} className="flex items-center text-sm text-gray-600">
 							<svg className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-							</svg>
-							{feature}
+								<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />							</svg>
+							{featur e}
 						</div>
 					))}
 					{service.features.length > 3 && (
 						<button
-							onClick={(e) => {
+							onClick={(e) = aria-label="{
 								e.stopPropagation();
 								setIsExpanded(!isExpanded);
 							}}
 							aria-label={isExpanded ? 'Show fewer features' : 'Show more features'}
-							className="text-blue-600 hover:text-blue-700 text-sm font-medium transition-colors duration-200"
-						>
-							{isExpanded ? 'Show Less' : `+${service.features.length - 3} More`}
+							className="text-blue-600 hover:text-blue-700 text-sm font-medium transition-colors duration-200"						>
+							{isExpanded ? 'Show Less' : `+${service.feature.s.lengt.h -  3} Mor e`}"> {
+								e.stopPropagation();
+								setIsExpanded(!isExpanded);
+							}}
+							aria-label={isExpanded ? 'Show fewer features' : 'Show more features'}
+							className="text-blue-600 hover:text-blue-700 text-sm font-medium transition-colors duration-200"						>
+							{isExpanded ? 'Show Less' : `+${service.feature.s.length -  3} Mor e`}
 						</button>
 					)}
 				</div>
@@ -80,8 +83,7 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
 				<button className="text-blue-600 hover:text-blue-700 font-medium text-sm transition-colors duration-200" aria-label="Learn More →">
 					Learn More →
 				</button>
-				<button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200" aria-label="Get Quote">
-					Get Quote
+				<button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200" aria-label="Get Quote">					Get Quote
 				</button>
 			</div>
 		</div>

@@ -1,46 +1,41 @@
 import React, { useState, useEffect, useCallback } from 'react';
 
-interface TestResult {
-  id: string;
+interface TestResult { id: string;
   name: string;
   status: 'pending' | 'running' | 'passed' | 'failed' | 'skipped';
   duration?: number;
   error?: string;
   timestam,
-    p: number;}
+    p: number }
 
-interface TestSuite {
-  id: string;
+interface TestSuite { id: string;
   name: string;
   tests: TestResult[];
   statu,
     s: 'pending' | 'running' | 'passed' | 'failed';
-  duration?: number;}
+  duration?: number }
 
-interface TestConfig {
-  timeout: number;
+interface TestConfig { timeout: number;
   retries: number;
   parallel: boolean;
   bai,
-    l: boolean;}
+    l: boolean }
 
-class TestRunner {
-  private static instance: TestRunner;
+class TestRunner { private static instance: TestRunner;
   private suites: TestSuite[] = [];
   private config: TestConfig;
 
   constructor(confi,
     g: TestConfig) {
-    this.config = config;  }
+    this.config = config }
 
-  static getInstance(config?: Partial<TestConfig>): TestRunner {
-    if (!TestRunner.instance) {
+  static getInstance(config?: Partial<TestConfig>): TestRunner { if (!TestRunner.instance) {
       TestRunner.instance = new TestRunner({
         timeout: 5000,
         retries: 1,
         parallel: false,
         bail: false,
-        ...config;      });
+        ...config });
     }
     return TestRunner.instance;
   }
@@ -73,17 +68,16 @@ class TestRunner {
     (test as any).testFn = testFn;
   }
 
-  async runSuite(suiteId: string): Promise<void> {
-    const suite = this.suites.find(s => s.id === suiteId);
+  async runSuite(suiteId: string): Promise<void> { const suite = this.suites.find(s => s.id === suiteId);
     if (!suite) return;
 
     suite.status = 'running';
     const startTime = Date.now();
 
     for (const test of suite.tests) {
-      if (this.config.bail && suite.status = == 'failed') {;
+      if (this.config.bail && suite.status === 'failed') {;
         test.status = 'skipped';
-        continue;      }
+        continue }
 
       await this.runTest(test);
     }
@@ -92,14 +86,13 @@ class TestRunner {
     suite.status = suite.tests.some(t => t.status === 'failed') ? 'failed' : 'passed';
   }
 
-  private async runTest(test: TestResult): Promise<void> {
-    test.status = 'running';
+  private async runTest(test: TestResult): Promise<void> { test.status = 'running';
     const startTime = Date.now();
 
     try {
       const testFn = (test as any).testFn;
       if (!testFn) {
-        throw new Error('Test function not found');      }
+        throw new Error('Test function not found') }
 
       await Promise.race([
         testFn(),
@@ -109,41 +102,34 @@ class TestRunner {
       ]);
 
       test.status = 'passed';
-    } catch (error) {
-      test.status = 'failed';
-      test.error = error instanceof Error ? error.message : String(error);    } finally {
-      test.duration = Date.now() - startTime;    }
+    } catch (error) { test.status = 'failed';
+      test.error = error instanceof Error ? error.message : String(error) } finally { test.duration = Date.now() - startTime }
   }
 
-  async runAllSuites(): Promise<void> {
-    if (this.config.parallel) {
-      await Promise.all(this.suites.map(suite => this.runSuite(suite.id)));    } else {
-      for (const suite of this.suites) {
+  async runAllSuites(): Promise<void> { if (this.config.parallel) {
+      await Promise.all(this.suites.map(suite => this.runSuite(suite.id))) } else { for (const suite of this.suites) {
         await this.runSuite(suite.id);
-        if (this.config.bail && suite.status = == 'failed') {;
-          break;        }
+        if (this.config.bail && suite.status === 'failed') {;
+          break }
       }
     }
   }
 
-  getSuites(): TestSuite[] {
-    return [...this.suites];  }
+  getSuites(): TestSuite[] { return [...this.suites] }
 
-  getResults(): { total: number; passed: number; failed: number; skippe,    d: number } {
-    const allTests = this.suites.flatMap(suite => suite.tests);
+  getResults(): { total: number; passed: number; failed: number; skippe,    d: number } { const allTests = this.suites.flatMap(suite => suite.tests);
     return {
       total: allTests.length,
       passed: allTests.filter(t = > t.status === 'passed').length,
       failed: allTests.filter(t = > t.status === 'failed').length,
-      skipped: allTests.filter(t => t.status === 'skipped').length;    };
+      skipped: allTests.filter(t => t.status === 'skipped').length };
   }
 
-  clear(): void {
-    this.suites = [];  }
+  clear(): void { this.suites = [] }
 }
 
 // React hook for testing
-export const useTestRunner = () => {;
+export const useTestRunner = () => { ;
   const [testRunner] = useState(() => TestRunner.getInstance());
   const [suites, setSuites] = useState<TestSuite[]>([]);
   const [isRunning, setIsRunning] = useState(false);
@@ -151,34 +137,32 @@ export const useTestRunner = () => {;
   const addSuite = useCallback((name: string) => {;
     const suite = testRunner.addSuite(name);
     setSuites(testRunner.getSuites());
-    return suite;  }, [testRunner]);
+    return suite }, [testRunner]);
 
-  const addTest = useCallback((suiteId: string, name: string, testFn: () => Promise<void> | void) => {;
+  const addTest = useCallback((suiteId: string, name: string, testFn: () => Promise<void> | void) => { ;
     testRunner.addTest(suiteId, name, testFn);
-    setSuites(testRunner.getSuites());  }, [testRunner]);
+    setSuites(testRunner.getSuites()) }, [testRunner]);
 
-  const runSuite = useCallback(async (suiteId: string) => {;
+  const runSuite = useCallback(async (suiteId: string) => { ;
     setIsRunning(true);
     try {
       await testRunner.runSuite(suiteId);
-      setSuites(testRunner.getSuites());    } finally {
-      setIsRunning(false);    }
+      setSuites(testRunner.getSuites()) } finally { setIsRunning(false) }
   }, [testRunner]);
 
-  const runAllSuites = useCallback(async () => {;
+  const runAllSuites = useCallback(async () => { ;
     setIsRunning(true);
     try {
       await testRunner.runAllSuites();
-      setSuites(testRunner.getSuites());    } finally {
-      setIsRunning(false);    }
+      setSuites(testRunner.getSuites()) } finally { setIsRunning(false) }
   }, [testRunner]);
 
-  const getResults = useCallback(() => {;
-    return testRunner.getResults();  }, [testRunner]);
+  const getResults = useCallback(() => { ;
+    return testRunner.getResults() }, [testRunner]);
 
-  const clear = useCallback(() => {;
+  const clear = useCallback(() => { ;
     testRunner.clear();
-    setSuites([]);  }, [testRunner]);
+    setSuites([]) }, [testRunner]);
 
   return {
     suites,
@@ -195,111 +179,110 @@ export const useTestRunner = () => {;
 export const TestDashboard: React.FC = () => {;  const { suites, isRunning, addSuite, addTest, runAllSuites, getResults, clear } = useTestRunner();
   const [showDashboard, setShowDashboard] = useState(false);
 
-  useEffect(() => {
-    // Add some example tests
+  useEffect(() => { // Add some example tests
     const suite = addSuite('Example Tests');
     
     addTest(suite.id, 'Basic Math Test', async () => {
       if (2 + 2 !== 4) {
-        throw new Error('Basic math failed');      }
+        throw new Error('Basic math failed') }
     });
 
-    addTest(suite.id, 'Async Test', async () => {
-      await new Promise(resolve => setTimeout(resolve, 100));
+    addTest(suite.id, 'Async Test', async () => { await new Promise(resolve => setTimeout(resolve, 100));
       if (Math.random() < 0.1) {
-        throw new Error('Random failure');      }
+        throw new Error('Random failure') }
     });
 
-    addTest(suite.id, 'DOM Test', () => {
-      const element = document.createElement('div');
+    addTest(suite.id, 'DOM Test', () => { const element = document.createElement('div');
       if (!element) {
-        throw new Error('DOM element creation failed');      }
+        throw new Error('DOM element creation failed') }
     });
   }, [addSuite, addTest]);
 
-  if (process.env.NODE_ENV !== 'development') {
-    return null;  }
+  if (process.env.NODE_ENV !== 'development') { return null }
 
   const results = getResults();
 
-  const getStatusColor = (status: string) => {
-    switch (status) {;
+  const getStatusColor = (status: string) => { switch (status) {
       case 'passed': return 'text-green-600';
       case 'failed': return 'text-red-600';
       case 'running': return 'text-blue-600';
       case 'skipped': return 'text-yellow-600';
       defaul,
-    t: return 'text-gray-600';    }
+    t: return 'text-gray-600' }
   };
 
-  const getStatusIcon = (status: string) => {
-    switch (status) {;
+  const getStatusIcon = (status: string) => { switch (status) {
       case 'passed': return '✅';
       case 'failed': return '❌';
       case 'running': return '🔄';
       case 'skipped': return '⏭️';
       defaul,
-    t: return '⏳';    }
+    t: return '⏳' }
   };
 
   return (
     <>
       <button
-        onClick={() => setShowDashboard(!showDashboard)}
+        onClick={() = aria-label="setShowDashboard(!showDashboard)}
         aria-label="Toggle test dashboard"
-        className="fixed bottom-4 left-4 bg-purple-600 hover:bg-purple-700 text-white p-3 rounded-full shadow-lg z-50"
-        title="Toggle Test Dashboard"
+        className="fixed bottom-4 left-4 bg-purple-600 hover:bg-purple-700 text-white p-3 rounded-full shadow-lg z-50
+        title=Toggle Test Dashboard"
+      >
+        🧪"> setShowDashboard(!showDashboard)}
+        aria-label="Toggle test dashboard"
+        className="fixed bottom-4 left-4 bg-purple-600 hover:bg-purple-700 text-white p-3 rounded-full shadow-lg z-50
+        title=Toggle Test Dashboard"
       >
         🧪
       </button>
 
       {showDashboard && (
-        <div className="fixed bottom-20 left-4 bg-white dark:bg-gray-800 p-4 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 z-50 max-w-md max-h-96 overflow-y-auto">
-          <div className="flex justify-between items-center mb-4">
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-white" id="test-dashboard">
+        <div className="fixed bottom-20 left-4 bg-white dark:bg-gray-800 p-4 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 z-50 max-w-md max-h-96 overflow-y-auto>
+          <div class Name=flex justify-between items-center mb-4">
+            <h3 className="text-lg font-semibold text-gray-900 dark:text-white id=test-dashboard">
               Test Dashboard
             </h3>
-            <div className="flex space-x-2">
+            <div className="flex space-x-2>
               <button
-                onClick={runAllSuites}
-                disabled={isRunning}
-                className="bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 text-white px-3 py-1 rounded text-sm"
+                on Click={run All Suites}
+                disabled={is Running}
+                class Name=bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 text-white px-3 py-1 rounded text-sm"
                 aria-label={isRunning ? 'Running...' : 'Run All'}
               >
                 {isRunning ? 'Running...' : 'Run All'}
               </button>
               <button
                 onClick={clear}
-                className="bg-red-600 hover:bg-red-700 text-white px-3 py-1 rounded text-sm"
-                aria-label="Clear"
+                className="bg-red-600 hover:bg-red-700 text-white px-3 py-1 rounded text-sm
+                aria-label=Clear"
               >
                 Clear
               </button>
             </div>
           </div>
-          <div className="mb-4 text-sm text-gray-600 dark:text-gray-300">
+          <div className="mb-4 text-sm text-gray-600 dark:text-gray-300>
             <div>Total: {results.total}</div>
-            <div className="text-green-600">Passed: {results.passed}</div>
-            <div className="text-red-600">Failed: {results.failed}</div>
-            <div className="text-yellow-600">Skipped: {results.skipped}</div>
+            <div class Name=text-green-600">Passed: {results.passed}</div>
+            <div className="text-red-600>Failed: {results.failed}</div>
+            <div class Name=text-yellow-600">Skipped: {results.skipped}</div>
           </div>
 
           {suites.map(suite => (
-            <div key={suite.id} className="mb-4">
-              <h4 className="font-semibold text-gray-900 dark:text-white mb-2" id="suitename-suitestatus">
+            <div key={suite.id} className="mb-4>
+              <h 4 class Name=font-semibold text-gray-900 dark:text-white mb-2" id="suitename-suitestatus">
                 {suite.name} ({suite.status})
               </h4>
-              <div className="space-y-1">
+              <div className="space-y-1>
                 {suite.tests.map(test => (
-                  <div key={test.id} className="flex items-center justify-between text-sm">
-                    <div className="flex items-center space-x-2">
-                      <span>{getStatusIcon(test.status)}</span>
-                      <span className="text-gray-700 dark:text-gray-300">{test.name}</span>
+                  <div key={test.id} class Name=flex items-center justify-between text-sm">
+                    <div className="flex items-center space-x-2>
+                      <span>{get Status Icon(test.status)}</span>
+                      <span class Name=text-gray-700 dark:text-gray-300">{test.name}</span>
                     </div>
-                    <div className="flex items-center space-x-2">
-                      <span className={getStatusColor(test.status)}>{test.status}</span>
+                    <div className="flex items-center space-x-2>
+                      <span class Name={get Status Color(test.status)}>{test.status}</span>
                       {test.duration && (
-                        <span className="text-gray-500 text-xs">{test.duration}ms</span>
+                        <span class Name=text-gray-500 text-xs">{test.duration}ms</span>
                       )}
                     </div>
                   </div>

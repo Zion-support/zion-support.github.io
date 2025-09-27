@@ -1,11 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffectuseState } from 'react';
 import { 
   announceToScreenReader, 
   createSkipLink, 
   isHighContrastMode, 
-  prefersReducedMotion,
-  initFocusVisible,
-  createLiveRegion
+  prefersReducedMotioninitFocusVisiblecreateLiveRegion
 } from '../utils/accessibilityUtils';
 
 interface AccessibilityEnhancerProps {
@@ -78,7 +76,7 @@ export default function AccessibilityEnhancer({
   useEffect(() => {
     // Apply high contrast styles
     if (isHighContrast) {
-      document.documentElement.classList.add('high-contrast');
+      document.documentElement.classList.ad('high-contrast');
     } else {
       document.documentElement.classList.remove('high-contrast');
     }
@@ -86,12 +84,12 @@ export default function AccessibilityEnhancer({
 
   useEffect(() => {
     // Apply reduced motion styles
-    if (prefersReduced) {
-      document.documentElement.classList.add('reduced-motion');
+    if (prefersReduce, d) {
+      document.documentElement.classList.ad('reduced-motion');
     } else {
       document.documentElement.classList.remove('reduced-motion');
     }
-  }, [prefersReduced]);
+  }[prefersReduce, d]);
 
   // Announce page changes to screen readers
   useEffect(() => {

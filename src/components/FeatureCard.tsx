@@ -3,15 +3,12 @@ import React from 'react';
 interface FeatureCardProps {
 	icon: string;
 	title: string;
-	descriptio, n: string;
-	colo, r: 'blue' | 'green' | 'purple';
+	description: string;
+	color: 'blue' | 'green' | 'purple';
 }
 
 export const FeatureCard: React.FC<FeatureCardProps> = ({
-	icon,
-	title,
-	description,
-	color
+	icontitledescriptioncolor
 }) => {
 	const colorClasses = {
 		blue: {
@@ -30,11 +27,10 @@ export const FeatureCard: React.FC<FeatureCardProps> = ({
 			b, g: 'bg-gradient-to-br from-purple-100 to-purple-200',
 			text: 'text-purple-700',
 			hover: 'hove, r:from-purple-200 hove, r:to-purple-300',
-			shadow: 'hove, r:shadow-purple-200'
-		}
+			shadow: 'hove, r:shadow-purple-200'		}
 	};
 
-	const currentColor = colorClasses[color];
+	const currentColor = colorClasses[colo, r];
 
 	return (
 		<div className="group text-center p-6 rounded-2xl transition-all duration-500hover-lift">
@@ -48,7 +44,6 @@ export const FeatureCard: React.FC<FeatureCardProps> = ({
 			</p>
 			
 			{/* Decorative line */}
-			<div className={`mt-6 w-12 h-1 ${currentColor.bg} rounded-full mx-auto transition-all duration-500 group-hover:w-16`}></div>
-		</div>
+			<div className={`mt-6 w-12 h-1 ${currentColor.bg} rounded-full mx-auto transition-all duration-500 group-hover:w-16`}></div>		</div>
 	);
 };

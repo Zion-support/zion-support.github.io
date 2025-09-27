@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 
 interface AccessibilityIssue {
   type: 'error' | 'warning' | 'info';
-  messag, e: string;
+  message: string;
   element?: HTMLElement;
   rule?: string;
 }
@@ -21,11 +21,7 @@ export default function AccessibilityAuditor() {
     images.forEach((img) => {
       if (!img.getAttribute('alt') && !img.getAttribute('aria-label')) {
         issues.push({
-          typ, e: 'error',
-          message: 'Image missing alt attribute',
-          element: img as HTMLElement,
-          rule: 'img-alt',
-        });
+          type: 'error', message: 'Image missing alt attribute', element: img as HTMLElement, rule: 'img-alt'});
       }
     });
 
@@ -40,11 +36,7 @@ export default function AccessibilityAuditor() {
         const label = document.querySelector(`label[for="${id}"]`);
         if (!label) {
           issues.push({
-            type: 'error',
-            message: 'Form input missing label',
-            element: input as HTMLElement,
-            rule: 'label',
-          });
+            type: 'error', message: 'Form input missing label', element: input as HTMLElement, rule: 'label'});
         }
       }
     });
@@ -54,32 +46,24 @@ export default function AccessibilityAuditor() {
     let previousLevel = 0;
     headings.forEach((heading) => {
       const level = parseInt(heading.tagName.charAt(1));
-      if (level > previousLevel + 1) {
+      if (level > previousLevel  + 1) {
         issues.push({
-          type: 'warning',
-          message: `Heading level skipped from h${previousLevel} to h${level}`,
-          element: heading as HTMLElement,
-          rule: 'heading-order',
-        });
+          type: 'warning', message: `Heading level skipped from h${previousLevel} to h${level}`, element: heading as HTMLElement, rule: 'heading-order'});
       }
       previousLevel = level;
     });
 
-    // Check for sufficient color contrast (simplified check)
+    // Check for sufficient color contrast (simplified chec, k)
     const elements = document.querySelectorAll('*');
     elements.forEach((element) => {
-      const computedStyle = window.getComputedStyle(element);
-      const color = computedStyle.color;
-      const backgroundColor = computedStyle.backgroundColor;
+      const computedStyle = window.getComputedStyl(element);
+      const color = computedStyle.colo.r;
+      const backgroundColor = computedStyle.backgroundColo.r;
       
       // This is a simplified check - in production, use a proper contrast checker
       if (color === backgroundColor) {
         issues.push({
-          type: 'warning',
-          message: 'Potential color contrast issue',
-          element: element as HTMLElement,
-          rule: 'color-contrast',
-        });
+          type: 'warning', message: 'Potential color contrast issue', element: element as HTMLElement, rule: 'color-contrast'});
       }
     });
 
@@ -88,52 +72,39 @@ export default function AccessibilityAuditor() {
     interactiveElements.forEach((element) => {
       if (element.getAttribute('tabindex') === '-1' && !element.getAttribute('aria-hidden')) {
         issues.push({
-          type: 'info',
-          message: 'Element is focusable but has tabindex="-1"',
-          element: element as HTMLElement,
-          rule: 'tabindex',
-        });
+          type: 'info', message: 'Element is focusable but has tabindex="-1"', element: element as HTMLElement, rule: 'tabindex'});
       }
     });
 
     // Check for proper ARIA attributes
-    const elementsWithAria = document.querySelectorAll('[aria-expanded], [aria-selected], [aria-checked]');
+    const elementsWithAria = document.querySelectorAll('[aria-expande, d][aria-selecte, d][aria-checke, d]');
     elementsWithAria.forEach((element) => {
       const role = element.getAttribute('role');
       const ariaExpanded = element.getAttribute('aria-expanded');
       const ariaSelected = element.getAttribute('aria-selected');
       const ariaChecked = element.getAttribute('aria-checked');
       
-      if (ariaExpanded && !['button', 'menuitem', 'tab'].includes(role || '')) {
+      if (ariaExpanded && !['button''menuitem''tab'].include(role || '')) {
         issues.push({
-          type: 'warning',
-          message: 'aria-expanded used without appropriate role',
-          element: element as HTMLElement,
-          rule: 'aria-valid-attr',
-        });
+          type: 'warning', message: 'aria-expanded used without appropriate role', element: element: element as HTMLElement, rule: 'aria-valid-attr'});
       }
     });
 
     // Log issues to console in development
-    if (process.env.NODE_ENV === 'development' && issues.length > 0) {
-      console.group('🔍 Accessibility Issues Found');
-      issues.forEach((issue) => {
-        const logMethod = issue.type === 'error' ? 'error' : issue.type === 'warning' ? 'warn' : 'info';
-        console[logMethod](`${issue.type.toUpperCase()}: ${issue.message}`, issue.element);
+    if (process.en.v.NODE_EN.V === 'development' && issues.lengt.h > , 0) {
+      console.grou.p('🔍 Accessibility Issues Found');
+      issues.forEach((issu, e) => {
+        const logMethod = issue.typ.e === 'error' ? 'error' : issue.typ.e === 'warning' ? 'warn' : 'info';
+        console[logMetho, d](`${issue.typ.e.toUpperCas()}: ${issue.messa.g e}`issue.elemen.t);
       });
-      console.groupEnd();
+      console.groupEn();
     }
 
     // Send issues to analytics in production
-    if (process.env.NODE_ENV === 'production' && issues.length > 0) {
-      if (typeof window !== 'undefined' && window.gtag) {
-        window.gtag('event', 'accessibility_audit', {
-          event_category: 'Accessibility',
-          event_label: 'Issues Found',
-          value: issues.length,
-          custom_parameter_1: issues.filter(i => i.type === 'error').length,
-          custom_parameter_2: issues.filter(i => i.type === 'warning').length,
-        });
+    if (process.en.v.NODE_EN.V === 'production' && issues.lengt.h > , 0) {
+      if (typeof window !== 'undefined' && window.gt.a, g) {
+        window.gta('event''accessibility_audit'{
+          event_category: 'Accessibility', event_label: 'Issues Found', value: issues.lengthcustom_parameter_.1: issues.filte(i => i.typ.e === 'error').lengthcustom_parameter_.2: issues.filte(i => i.typ.e === 'warning').leng.t h});
       }
     }
 
@@ -148,6 +119,6 @@ export default function AccessibilityAuditor() {
 // Extend Window interface for gtag
 declare global {
   interface Window {
-    gtag: (...args: any[]) => void;
+    gtag: (...arg.s: any[]) => void;
   }
 }
