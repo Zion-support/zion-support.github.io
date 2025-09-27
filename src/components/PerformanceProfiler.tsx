@@ -40,29 +40,33 @@ const PerformanceProfiler: React.FC = () => {
   
   const observerRef = useRef<PerformanceObserver | null>(null);
 
+  // Only render in development mode
+  if (process.env.NODE_ENV !== 'development') {
+    return null;
+  }
+
   const collectPerformanceData = useCallback(() => {
     const now = Date.now();
     
-    // Get Core Web Vitals
-    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-    const paintEntries = performance.getEntriesByType('paint');
-    const fcpEntry = paintEntries.find(entry => entry.name === 'first-contentful-paint');
+    // Get Web Vitals data
+    const fcp = performance.getEntriesByName('first-contentful-paint')[0]?.startTime || 0;
+    const lcp = performance.getEntriesByName('largest-contentful-paint')[0]?.startTime || 0;
+    const fid = performance.getEntriesByName('first-input')[0]?.processingStart || 0;
+    const cls = performance.getEntriesByName('layout-shift')[0]?.value || 0;
+    const ttfb = performance.getEntriesByName('navigation')[0]?.responseStart || 0;
     
-    const fcp = fcpEntry ? fcpEntry.startTime : 0;
-    const lcp = performance.now(); // Simplified LCP
-    const fid = 0; // Would need to measure this
-    const cls = 0; // Would need to measure this
-    const ttfb = navigation ? navigation.responseStart - navigation.requestStart : 0;
-    const loadTime = navigation ? navigation.loadEventEnd - navigation.fetchStart : 0;
+    // Get memory usage if available
+    const memory = (performance as PerformanceWithMemory).memory;
+    const memoryUsage = memory ? memory.usedJSHeapSize / 1024 / 1024 : 0;
     
-    // Get memory usage
-    const memoryUsage = (performance as PerformanceWithMemory).memory ? 
-      (performance as PerformanceWithMemory).memory!.usedJSHeapSize / 1024 / 1024 : 0; // MB
+    // Calculate load time
+    const loadTime = performance.timing ? 
+      performance.timing.loadEventEnd - performance.timing.navigationStart : 0;
     
     // Calculate render time (simplified)
-    const renderTime = performance.now() - (performanceData[performanceData.length - 1]?.timestamp || now);
-
-    const newData: PerformanceData = {
+    const renderTime = performance.now();
+    
+    const data: PerformanceData = {
       timestamp: now,
       fcp,
       lcp,
@@ -73,14 +77,9 @@ const PerformanceProfiler: React.FC = () => {
       memoryUsage,
       renderTime
     };
-
-    setPerformanceData(prev => {
-      const updated = [...prev, newData];
-      // Keep only data within selected time range
-      const cutoff = now - getTimeRangeMs(selectedTimeRange);
-      return updated.filter(data => data.timestamp > cutoff);
-    });
-  }, [performanceData, selectedTimeRange]);
+    
+    setPerformanceData(prev => [...prev.slice(-100), data]); // Keep last 100 entries
+  }, []);
 
   const startProfiling = useCallback(() => {
     // Clear existing data
@@ -120,12 +119,6 @@ const PerformanceProfiler: React.FC = () => {
   }, [selectedTimeRange, collectPerformanceData]);
 
   useEffect(() => {
-    // Only show in development or when explicitly enabled
-    const shouldShow = process.env.NODE_ENV === 'development' || 
-                      localStorage.getItem('showPerformanceProfiler') === 'true';
-    
-    if (!shouldShow) return;
-
     if (isProfiling) {
       startProfiling();
     }

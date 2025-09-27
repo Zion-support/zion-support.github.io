@@ -45,12 +45,7 @@ jest.mock('../pages/NotFound', () => {
   };
 });
 
-jest.mock('../components/PerformanceProfiler', () => {
-  return function MockPerformanceProfiler() {
-    return null;
-  };
-});
-
+// Mock development components
 jest.mock('../components/SystemDashboard', () => {
   return function MockSystemDashboard() {
     return null;
@@ -63,6 +58,11 @@ jest.mock('../components/AccessibilityTester', () => {
   };
 });
 
+jest.mock('../components/PerformanceProfiler', () => {
+  return function MockPerformanceProfiler() {
+    return null;
+  };
+});
 const renderWithRouter = (ui: React.ReactElement, { route = '/' } = {}) => {
   window.history.pushState({}, 'Test page', route);
   return render(ui);
@@ -122,7 +122,9 @@ describe('App', () => {
     renderWithRouter(<App />);
     const skipLinks = screen.getAllByText('Skip to main content');
     expect(skipLinks.length).toBeGreaterThan(0);
-    expect(skipLinks[0]).toHaveAttribute('href', '#main-content');
+    skipLinks.forEach(skipLink => {
+      expect(skipLink).toHaveAttribute('href', '#main-content');
+    });
   });
 
   test('has main content with correct id', () => {
