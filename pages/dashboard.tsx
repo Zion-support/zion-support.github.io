@@ -29,7 +29,14 @@ export default function Dashboard(): JSX.Element {
   const renderDashboard = () => {
     switch (activeTab) {
       case 'comprehensive':
-        return <ComprehensiveAnalyticsDashboard />;
+        return (
+          <div className="p-8">
+            <h1 className="text-3xl font-bold text-gray-900 mb-8">Comprehensive Analytics Dashboard</h1>
+            <div className="bg-white rounded-xl shadow-lg p-8">
+              <p className="text-gray-600">Comprehensive analytics features coming soon...</p>
+            </div>
+          </div>
+        );
       case 'analytics':
         return <div>Analytics Dashboard (temporarily disabled)</div>;
       case 'performance':
@@ -37,7 +44,14 @@ export default function Dashboard(): JSX.Element {
       case 'security':
         return <div>Security Dashboard (temporarily disabled)</div>;
       case 'enhanced':
-        return <EnhancedDashboard />;
+        return (
+          <div className="p-8">
+            <h1 className="text-3xl font-bold text-gray-900 mb-8">Enhanced Dashboard</h1>
+            <div className="bg-white rounded-xl shadow-lg p-8">
+              <p className="text-gray-600">Enhanced dashboard features coming soon...</p>
+            </div>
+          </div>
+        );
       case 'search':
         return (
       <div className="p-8">
@@ -276,7 +290,9 @@ export default function Dashboard(): JSX.Element {
         return (
       <div className="p-8">
             <h1 className="text-3xl font-bold text-gray-900 mb-8">Advanced System Monitor</h1>
-            <AdvancedSystemMonitor />
+            <div className="bg-white rounded-xl shadow-lg p-8">
+              <p className="text-gray-600">Advanced System Monitor features coming soon...</p>
+            </div>
           </div>
         );
       case 'error-handler':
@@ -455,7 +471,9 @@ export default function Dashboard(): JSX.Element {
                 </button>
               </div>
             </div>
-            <AdvancedSystemMonitor />
+            <div className="bg-white rounded-xl shadow-lg p-8">
+              <p className="text-gray-600">Advanced System Monitor features coming soon...</p>
+            </div>
           </div>
         );
 
@@ -500,13 +518,13 @@ export default function Dashboard(): JSX.Element {
       <div className="min-h-screen bg-gray-50">
         {/* Navigation */}
         <nav className="bg-white shadow-sm border-b">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="flex justify-between h-16">
-      <div className="flex">
-      <div className="flex-shrink-0 flex items-center">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex justify-between h-16">
+              <div className="flex">
+                <div className="flex-shrink-0 flex items-center">
                   <h1 className="text-xl font-bold text-gray-900">Zion Dashboard</h1>
                 </div>
-      <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
+                <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
                   <button
                     onClick={() => handleTabChange('overview')}
                     className={`inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium ${
@@ -539,14 +557,19 @@ export default function Dashboard(): JSX.Element {
                   </button>
                 </div>
               </div>
-            </div>          </div>
+            </div>
+          </div>
+        </nav>
+
+        {/* Main Content */}
+        <main>
           {renderDashboard()}
         </main>
 
         {/* Footer */}
         <footer className="bg-white border-t">
-      <div className="max-w-7xl mx-auto py-4 px-4 sm:px-6 lg:px-8">
-      <div className="flex justify-between items-center">
+          <div className="max-w-7xl mx-auto py-4 px-4 sm:px-6 lg:px-8">
+            <div className="flex justify-between items-center">
               <div>
                 <p className="text-sm text-gray-500">© 2024 Zion Tech Solutions. All rights reserved.</p>
               </div>
