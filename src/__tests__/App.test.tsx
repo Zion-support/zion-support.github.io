@@ -75,12 +75,22 @@ import Services from '../pages/Services';
 import Portfolio from '../pages/Portfolio';
 import NotFound from '../pages/NotFound';
 
-// Mock the router to use MemoryRouter for tests
+// Mock the router components but keep Layout available
 jest.mock('../router', () => {
   const React = require('react');
   const { MemoryRouter, Routes, Route } = require('react-router-dom');
   
+  // Mock Layout component
+  const MockLayout = ({ children }: { children: React.ReactNode }) => (
+    <div className="min-h-screen bg-white">
+      <main id="main-content" role="main">
+        {children}
+      </main>
+    </div>
+  );
+  
   return {
+    Layout: MockLayout,
     AppRouter: () => {
       const [initialRoute] = React.useState(window.location.pathname || '/');
       
