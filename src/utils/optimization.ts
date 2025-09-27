@@ -180,7 +180,7 @@ export class PerformanceOptimizer {
     new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach(entry => {
-        console.log('FID:', (entry as { processingStart: number }).processingStart - entry.startTime);
+        console.log('FID:', (entry as unknown as { processingStart: number }).processingStart - entry.startTime);
       });
     }).observe({ entryTypes: ['first-input'] });
 

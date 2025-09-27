@@ -27,6 +27,14 @@ export interface ErrorContext {
   component?: string;
   action?: string;
   additionalData?: Record<string, unknown>;
+  securityViolation?: boolean;
+  accessibilityViolation?: boolean;
+  performanceIssue?: boolean;
+  violationType?: string;
+  severity?: string;
+  metric?: string;
+  element?: string;
+  value?: number;
 }
 
 export interface ErrorReport {
@@ -231,7 +239,7 @@ export class EnhancedErrorHandler {
         EnhancedErrorHandler.getInstance().processError(errorReport);
       });
 
-      return originalSend.call(this, data);
+      return originalSend.call(this, data as Document | XMLHttpRequestBodyInit | null | undefined);
     };
   }
 
@@ -392,6 +400,20 @@ export class EnhancedErrorHandler {
   clearErrors(): void {
     this.errorQueue = [];
     this.errors.clear();
+  }
+
+  initialize(): void {
+    // Initialize error handling
+    this.initializeErrorHandling();
+  }
+
+  getErrors(): Map<string, ErrorReport> {
+    return this.errors;
+  }
+
+  cleanup(): void {
+    this.clearErrors();
+    this.isReporting = false;
   }
 }
 

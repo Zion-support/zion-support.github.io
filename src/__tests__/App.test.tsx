@@ -1,6 +1,5 @@
 import React from 'react';
-import { render, screen, waitFor } from '@testing-library/react';
-import { createMemoryRouter, RouterProvider } from 'react-router-dom';
+import { render, screen } from '@testing-library/react';
 import { Layout } from '../router';
 
 // Mock the lazy-loaded components

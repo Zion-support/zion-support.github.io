@@ -73,6 +73,11 @@ export class EnhancementSuite {
   private metricsInterval: NodeJS.Timeout | null = null;
 
   private constructor(config: Partial<EnhancementConfig> = {}) {
+    this.performanceOptimizer = PerformanceOptimizer.getInstance();
+    this.securityEnhancer = SecurityEnhancer.getInstance();
+    this.accessibilityEnhancer = AccessibilityEnhancer.getInstance();
+    this.errorHandler = EnhancedErrorHandler.getInstance();
+    
     this.config = {
       performance: {
         enableLazyLoading: true,
@@ -381,9 +386,9 @@ export class EnhancementSuite {
       },
       errors: {
         totalErrors: errors.size,
-        criticalErrors: Array.from(errors.values()).filter(e => e.severity === 'critical').length,
+        criticalErrors: Array.from(errors.values()).filter((e: { severity?: string }) => e.severity === 'critical').length,
         lastError: errors.size > 0 ? 
-          new Date(Math.max(...Array.from(errors.values()).map(e => e.lastSeen))) : null
+          new Date(Math.max(...Array.from(errors.values()).map((e: { lastSeen?: number }) => e.lastSeen || 0))) : null
       }
     };
   }
