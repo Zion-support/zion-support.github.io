@@ -129,14 +129,14 @@ export default function Dashboard(): JSX.Element {
 		}
 	};
 
-	return (
-		<>
-			<SEO />
-			<Head>
-				<title>Dashboard - Zion App</title>
-				<meta name="description" content="Access your Zion App dashboard for analytics, performance metrics, and system monitoring." />
-				<meta name="viewport" content="width=device-width, initial-scale=1" />
-			</Head>
+  return (
+    <>
+      <SEO />
+      <Head>
+        <title>Dashboard - Zion App</title>
+        <meta name="description" content="Access your Zion App dashboard for analytics, performance metrics, and system monitoring." />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
 			<div className="min-h-screen bg-gray-50">
 				{/* Navigation */}
 				<nav className="bg-white shadow-sm border-b">

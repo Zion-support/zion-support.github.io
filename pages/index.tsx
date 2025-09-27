@@ -108,8 +108,7 @@ export default function Home(): JSX.Element {
       title: "24/7 Support",
       description: "Round-the-clock technical support and monitoring to ensure your systems run smoothly.",
       icon: "🛡️",
-      color: "blue" as const 
-     ,
+      color: "blue" as const,
 		delay: 0.4
     }
   ], []);
