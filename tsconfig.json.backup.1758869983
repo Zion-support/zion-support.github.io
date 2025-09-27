@@ -48,7 +48,11 @@
     "strictNullChecks": false
   },
   "include": [
+<<<<<<< HEAD
+    "types.d.ts"
+=======
     "App.tsx"
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-621c
   ],
   "exclude": [
     "node_modules",
@@ -75,8 +79,6 @@
     "src/routes/**",
     "**/*.config.ts",
     "vite.config.ts",
-    "vitest.config.ts",
-    "src/pages/services/ai-legal-document-analysis.tsx",
-    "src/pages/services/ai-marketing-automation.tsx"
+    "vitest.config.ts"
   ]
 }
