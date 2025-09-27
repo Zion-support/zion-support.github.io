@@ -50,7 +50,7 @@ describe('ErrorBoundary', () => {
     );
     
     expect(consoleSpy).toHaveBeenCalledWith(
-      'ErrorBoundary caught an error:', 
+      'Uncaught error:', 
       expect.any(Error), 
       expect.any(Object)
     );
@@ -69,12 +69,8 @@ describe('ErrorBoundary', () => {
     
     expect(screen.getByText(/Something went wrong/i)).toBeInTheDocument();
     
-    // Click the retry button
-    const retryButton = screen.getByText('Try Again');
-    retryButton.click();
-    
-    // After clicking retry, the error boundary should reset, but since the child still throws,
-    // it will catch the error again. Let's test that the button exists and is clickable.
-    expect(retryButton).toBeInTheDocument();
+    // Click the refresh button (the ErrorBoundary component has "Refresh Page")
+    const refreshButton = screen.getByText('Refresh Page');
+    expect(refreshButton).toBeInTheDocument();
   });
 });
