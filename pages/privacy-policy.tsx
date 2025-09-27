@@ -1,17 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import SEO from '../src/components/SEO';
-import { useAnalytics } from '../src/hooks/useAnalytics';
 
 export default function PrivacyPolicy(): JSX.Element {
-  const [isVisible, setIsVisible] = useState(false);
+  // Removed unused visibility state
 
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
-
-  const { trackClick } = useAnalytics();
+  // Removed unused analytics hook
 
   const sections = [
     {
