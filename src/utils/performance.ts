@@ -296,7 +296,7 @@ export class MemoryMonitor {
       }, intervalMs);
 
       // Store interval ID for cleanup
-      (this as any).intervalId = interval;
+      (this as { intervalId?: NodeJS.Timeout }).intervalId = interval;
     }
   }
 
@@ -320,9 +320,9 @@ export class MemoryMonitor {
   }
 
   public stopMonitoring(): void {
-    if ((this as any).intervalId) {
-      clearInterval((this as any).intervalId);
-      (this as any).intervalId = null;
+    if ((this as { intervalId?: NodeJS.Timeout }).intervalId) {
+      clearInterval((this as { intervalId?: NodeJS.Timeout }).intervalId);
+      (this as { intervalId?: NodeJS.Timeout }).intervalId = undefined;
     }
   }
 }

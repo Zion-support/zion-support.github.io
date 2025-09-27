@@ -161,9 +161,9 @@ export class EnhancedErrorHandler {
     const originalOpen = originalXHR.prototype.open;
     const originalSend = originalXHR.prototype.send;
 
-    originalXHR.prototype.open = function(method: string, url: string, ...args: any[]) {
-      (this as any)._method = method;
-      (this as any)._url = url;
+    originalXHR.prototype.open = function(method: string, url: string, ...args: unknown[]) {
+      (this as { _method?: string; _url?: string })._method = method;
+      (this as { _method?: string; _url?: string })._url = url;
       return originalOpen.apply(this, [method, url, ...args] as Parameters<typeof originalOpen>);
     };
 
@@ -171,10 +171,10 @@ export class EnhancedErrorHandler {
       this.addEventListener('error', () => {
         const errorReport: ErrorReport = {
           id: EnhancedErrorHandler.getInstance().generateErrorId(this),
-          message: `XHR error: ${(this as any)._method} ${(this as any)._url}`,
+          message: `XHR error: ${(this as { _method?: string; _url?: string })._method} ${(this as { _method?: string; _url?: string })._url}`,
           context: EnhancedErrorHandler.getInstance().getErrorContext({
-            url: (this as any)._url,
-            method: (this as any)._method,
+            url: (this as { _method?: string; _url?: string })._url,
+            method: (this as { _method?: string; _url?: string })._method,
             status: this.status,
             statusText: this.statusText
           }),
@@ -239,8 +239,8 @@ export class EnhancedErrorHandler {
   }
 
   private generateErrorId(error: Error | Event | unknown): string {
-    const message = (error as any)?.message || error?.toString() || 'unknown';
-    const stack = (error as any)?.stack || '';
+    const message = (error as Error)?.message || error?.toString() || 'unknown';
+    const stack = (error as Error)?.stack || '';
     return btoa(message + stack).replace(/[^a-zA-Z0-9]/g, '').substring(0, 16);
   }
 
@@ -254,7 +254,7 @@ export class EnhancedErrorHandler {
   }
 
   private determineSeverity(error: Error | Event | unknown): 'low' | 'medium' | 'high' | 'critical' {
-    const message = (error as any)?.message || error?.toString() || '';
+    const message = (error as Error)?.message || error?.toString() || '';
     
     if (message.includes('ChunkLoadError') || message.includes('Loading chunk')) {
       return 'medium'; // Chunk loading errors are usually recoverable
@@ -408,7 +408,7 @@ export const withErrorBoundary = <P extends object>(
   fallback?: React.ComponentType<{ error: Error }>
 ) => {
   const WrappedComponent = (props: P) => 
-    React.createElement(ReactErrorBoundary, { fallback, children: null },
+    React.createElement(ReactErrorBoundary, { fallback },
       React.createElement(Component, props)
     );
   
