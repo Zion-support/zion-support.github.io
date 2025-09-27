@@ -408,9 +408,7 @@ export const withErrorBoundary = <P extends object>(
   fallback?: React.ComponentType<{ error: Error }>
 ) => {
   const WrappedComponent = (props: P) => 
-    React.createElement(ReactErrorBoundary, { fallback },
-      React.createElement(Component, props)
-    );
+    React.createElement(ReactErrorBoundary, { fallback, children: React.createElement(Component, props) });
   
   WrappedComponent.displayName = `withErrorBoundary(${Component.displayName || Component.name})`;
   return WrappedComponent;
