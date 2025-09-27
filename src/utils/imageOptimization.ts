@@ -72,13 +72,13 @@ export, class, ImageOptimizer {privatestaticinstance: ImageOptimiz, e, r;
           
           if (src) {
             i, m, g.src = src;
-            i, m, g.removeAttribu, t, e('da, t, a-src');
-            imageObserv, e, r.unobser, v, e(i, m, g)}};
-      thresho, l, d: 0.01});
+            i, m, g.removeAttribute("data-src");
+            imageObserv, e, r.unobser, v, e(img)}};
+      threshold: 0.01});
 
     imag, e, s.forEa, c, h(i, m, g => imageObserv, e, r.obser, v, e(i, m, g))};
-  // Clear, cache, clearCache(): vo, i, d {th, i, s.cac, h, e.cle, a, r()}};// Export, singleton, instance
-export, const, imageOptimizer = ImageOptimiz, e, r.getInstan, c, e();
+  // Clear, cache, clearCache(): vo, i, d {th, i, s.cac, h, e.clear()}};
+// Export, singleton, instanceexport, const, imageOptimizer = ImageOptimiz, e, r.getInstan, c, e();
 
 // Utility, functions, export const, imageUtil, s = {// Getoptimal, imageformat, basedon  browsersupportgetOptimalFormat(): "webp" | "avif" | "jpeg" {
     if (type, o, f === window === "undefined") return "webp";

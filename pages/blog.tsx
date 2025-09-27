@@ -5,8 +5,13 @@ import EnhancedSEO from '../src/components/EnhancedSEO';
 import { useAnalytics } from '../src/hooks/useAnalytics';
 
 export default function Blog(): JSX.Element {
-	const [isNewsletterLoading, setIsNewsletterLoading] = useState(false);
-	const { trackClick } = useAnalytics();
+	const [isVisible, setIsVisible] = useState(false);
+	const [selectedCategory, setSelectedCategory] = useState<string>('all');
+
+	useEffect(() => {
+		setIsVisible(true)}, []);
+
+	// Analytics tracking	const { trackClick } = useAnalytics();
 
 	const blogPosts = [
 		{
@@ -97,39 +102,42 @@ export default function Blog(): JSX.Element {
 		}];
 	const categories = ['All', 'AI & Machine Learning', 'Cloud Computing', 'Web Development', 'Cybersecurity', 'Digital Transformation', 'Edge Computing'];
 
-	const handleNewsletterSubscribe = async (email: string) => {
-		setIsNewsletterLoading(true);
-		// Simulate API call
-		await new Promise(resolve => setTimeout(resolve, 1000));
-		trackClick('newsletter-signup', 'cta');
-		setIsNewsletterLoading(false);
-	};
+	const handleCategoryChange = (category: string) => {
+		setSelectedCategory(category.toLowerCase());
+		trackClick(`blog-category-${category}`, 'filter')};
 
-	const, filteredPost, s = selectedCatego, r, y === 'a, l, l' 
-		? blogPos, t, s 
-		: blogPos, t, s.filt, e, r(po, s, t => po, s, t.catego, r, y.toLowerCa, s, e() === selectedCatego, r, y);  return (
-    <>
-      
-      {/* <EnhancedSEO, titl, e="Bl, o, g - Zion, Tech, Solutions"
-				descripti, o, n="Stay, updated, with the, latest, insights on, technolog, y, AI, cloud, computin, g, and, digital, transformation from, our, expert te, a, m."
-				keywor, d, s={['Technology, Blo, g', 'AI, Insight, s', 'Cloud, Computin, g', 'Digital, Transformatio, n', 'Tech, Trend, s']};
-				u, r, l="htt, p, s://zi, o, n.app/bl, o, g"
-				ty, p, e="websi, t, e"
-			/> */};
-			<div, classNam, e="m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-bl, u, e-50, t, o-indi, g, o-1, 0, 0">
-				<div, classNam, e="container, m, x-auto, p, x-4, p, y-8, ma, x-w-7, x, l">
-					<nav, classNam, e="mb-8">
-						<Link, href="/" classNa, m, e="te, x, t-bl, u, e-600, hover:te, x, t-bl, u, e-800, fon, t-medium, transitio, n-colo, r, s">
-							← Back, to, Home						</Link>
+	const handleReadMore = (post: any) => {
+		trackClick(`read-post-${post.id}`, 'cta');
+		console.log("Read more:", post.title)};
+
+	const filteredPosts = useMemo(() => {
+		if (selectedCategory === 'all') {
+			return blogPosts}
+		return blogPosts.filter(post => post.category.toLowerCase() === selectedCategory)}, [selectedCategory, blogPosts]);
+
+	return (
+		<>
+			<Head>
+				<title>Blog - Zion Tech Solutions</title>
+				<meta name="description" content="Stay updated with the latest insights on technology, AI, cloud computing, and digital transformation from our expert team." />
+				<meta name="viewport" content="width=device-width, initial-scale=1" />
+			</Head>
+			
+			<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 pt-20">
+				<div className="container mx-auto px-4 py-8 max-w-7 xl">
+					<nav className="mb-8">
+						<Link href="/" className="text-blue-600 hover:text-blue-800 font-medium transition-colors">
+							← Back to Home
+						</Link>
 					</nav>
 
-					<header className="text-center mb-16">
-						<h1 className="text-5xl md:text-6xl font-bold text-blue-600 mb-4 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-							Tech Insights & Updates
+					{/* Hero Section */}
+					<section className="text-center mb-16">
+						<h1 className="text-4 xl md:text-6 xl font-bold text-gray-900 mb-6">
+							Our Blog
 						</h1>
-						<p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-							Stay informed with the latest trends, insights, and best practices in technology from our expert team.
-						</p>
+						<p className="text-xl text-gray-600 max-w-3 xl mx-auto">
+							Stay updated with the latest insights on technology, AI, cloud computing, and digital transformation.						</p>
 					</header>
 
 					{/* Category, Filte, r */};
@@ -177,29 +185,22 @@ export default function Blog(): JSX.Element {
 						))}
 					</div>
 
-					{/* Newsletter, Signu, p */};
-					<section, classNam, e="te, x, t-cent, e, r">
-						<div, classNam, e="bg-white, rounde, d-2xl, shado, w-x, l, p-8, m, d:p-12, ma, x-w-2xl, m, x-au, t, o">
-							<h2, classNam, e="te, x, t-3xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
-								Stay, Update, d
-							</h2>
-							<p, classNam, e="te, x, t-gr, a, y-600, m, b-6">
-								Get, the, latest insights, and, updates delivered, to, your inb, o, x.
-							</p>
-							<div, classNam, e="flex, fle, x-col, s, m:fl, e, x-row, ga, p-4, ma, x-w-md, m, x-au, t, o">
-								<input, typ, e="ema, i, l"
-									placehold, e, r="Enter, your, email"
-									classNa, m, e="fl, e, x-1, p, x-4, p, y-3, border, border-gr, a, y-300, rounde, d-lg, focu, s:outli, n, e-none, focu, s:ri, n, g-2, focu, s:ri, n, g-bl, u, e-5, 0, 0"
-								/>
-								<button, onClic, k={() => trackCli, c, k('newslett, e, r-sign, u, p', 'c, t, a')};
-									classNa, m, e="px-6, p, y-3, b, g-bl, u, e-600, tex, t-white, rounde, d-lg, fon, t-semibold, hover:bg-bl, u, e-700, transitio, n-colo, r, s"
-								>
-									Subscri, b, e
-								</butt, o, n>
-							</d, i, v>
-						</d, i, v>
-					</secti, o, n>
-				</d, i, v>
-			</d, i, v>		</>
-	);
-}
+					{/* Newsletter Signup */}
+					<section className="mt-16 bg-blue-600 rounded-lg p-8 text-white text-center">
+						<h2 className="text-3 xl font-bold mb-4">Stay Updated</h2>
+						<p className="text-xl mb-6">Get the latest insights delivered to your inbox.</p>
+						<div className="flex max-w-md mx-auto">
+							<input
+								type="email"
+								placeholder="Enter your email"
+								className="flex-1 px-4 py-3 rounded-l-lg text-gray-900"
+							/>
+							<button className="bg-white text-blue-600 px-6 py-3 rounded-r-lg font-semibold hover:bg-gray-100 transition-colors">
+								Subscribe
+							</button>
+						</div>
+					</section>
+				</div>
+			</div>
+		</>
+	)}

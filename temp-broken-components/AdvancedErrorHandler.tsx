@@ -321,9 +321,9 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerPro  p  s> = ({
                 </d  i  v>
               </d  i  v>
               
-              <d  i  v className="gr i d gr i d-co l s-2 g a p-4m t-3 te x t-sm">
+              <d  i  v className="gr i d gr i d-co l s-2 g a p-4 m t-3 te x t-sm">
                 <d  i  v className="te x t-cent e r">
-                  <d  i  v className="te x t-2x l fo n t-boldte x t-r e d-600">{sta  t  s.totalErro  r  s}</d  i  v>
+                  <d  i  v className="te x t-2 x l fo n t-boldte x t-r e d-600">{sta  t  s.totalErro  r  s}</d  i  v>
                   <d  i  v className="te x t-gr a y-500">Tot  a  l Erro  r  s</d  i  v>
                 </d  i  v>
                 <d  i  v className="te x t-cent e r">
@@ -331,11 +331,11 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerPro  p  s> = ({
                   <d  i  v className="te x t-gr a y-500">Critic  a  l</d  i  v>
                 </d  i  v>
                 <d  i  v className="te x t-cent e r">
-                  <d  i  v className="te x t-2x l fo n t-boldte x t-gre e n-600">{sta  t  s.resolvedErro  r  s}</d  i  v>
+                  <d  i  v className="te x t-2 x l fo n t-boldte x t-gre e n-600">{sta  t  s.resolvedErro  r  s}</d  i  v>
                   <d  i  v className="te x t-gr a y-500">Resolv  e  d</d  i  v>
                 </d  i  v>
                 <d  i  v className="te x t-cent e r">
-                  <d  i  v className="te x t-2x l fo n t-boldte x t-bl u e-600">{sta  t  s.performanceIssu  e  s}</d  i  v>
+                  <d  i  v className="te x t-2 x l fo n t-boldte x t-bl u e-600">{sta  t  s.performanceIssu  e  s}</d  i  v>
                   <d  i  v className="te x t-gr a y-500">Performan  c  e</d  i  v>
                 </d  i  v>
               </d  i  v>
@@ -344,7 +344,7 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerPro  p  s> = ({
             <d  i  v className="overflow-y-autom a x-h-64">
               {erro  r  s.leng  t  h === 0 && performanceIssu  e  s.leng  t  h === 0 ? (
                 <d  i  v className="p-4 te x t-centerte x t-gr a y-500">
-                  <CheckCircle className="w-8 h-8m x-au t o mb-2 te x t-gre e n-500" />
+                  <CheckCircle className="w-8 h-8 m x-au t o mb-2 te x t-gre e n-500" />
                   No issu  e  s detect  e  d
                 </d  i  v>
               ) : (
@@ -398,7 +398,7 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerPro  p  s> = ({
                               {error.timesta  m  p.toLocaleTimeString()}
                             </sp  a  n>
                           </d  i  v>
-                          <p className="te x t-sm te x t-gr a y-700m t-1 trunca t e">
+                          <p className="te x t-sm te x t-gr a y-700 m t-1 trunca t e">
                             {error.message}
                           </p>
                           <d  i  v className="fl e x ite m s-cent e r spa c e-x-2, m t-2">
@@ -464,7 +464,7 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerPro  p  s> = ({
             initi  a  l={{ opacity: 0 }}
             anima  t  e={{ opacity: 1 }}
             ex  i  t={{ opacity: 0 }}
-            className="fix e d ins e t-0b g-bla c k bg-opaci t y-50 fl e x ite m s-cent e r justi f y-cente r z-50"
+            className="fix e d ins e t-0 b g-bla c k bg-opaci t y-50 fl e x ite m s-cent e r justi f y-cente r z-50"
             onCli  c  k={() => setSelectedError(nu  l  l)}
           >
             <motion.d  i  v
@@ -487,7 +487,7 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerPro  p  s> = ({
               <d  i  v className="spa c e-y-4">
                 <d  i  v>
                   <lab  e  l className="te x t-sm fo n t-mediumte x t-gr a y-700">Messa  g  e</lab  e  l>
-                  <p className="mt-1 te x t-sm te x t-gr a y-900b g-gr a y-50, p-2 round e d">
+                  <p className="mt-1 te x t-sm te x t-gr a y-900 b g-gr a y-50, p-2 round e d">
                     {selectedErr  o  r.message}
 
                   </p>
@@ -522,7 +522,7 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerPro  p  s> = ({
                 {selectedErr  o  r.sta  c  k && (
                   <d  i  v>
                     <lab  e  l className="te x t-sm fo n t-mediumte x t-gr a y-700">Sta  c  k Tra  c  e</lab  e  l>
-                    <p  r  e className="mt-1 te x t-xs te x t-gr a y-900b g-gr a y-50p-2 roundedoverflow-x-au t o">
+                    <p  r  e className="mt-1 te x t-xs te x t-gr a y-900 b g-gr a y-50 p-2 roundedoverflow-x-au t o">
                       {selectedErr  o  r.sta  c  k}
                     </p  r  e>
                   </d  i  v>

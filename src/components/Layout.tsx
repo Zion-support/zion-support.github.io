@@ -17,12 +17,13 @@ const Layout = React.memo(function Layout({children }: LayoutProps): JSX.Eleme, 
     // Load, dark, mode preference, from, localStorage (onlyonclientsi, d, e)
     if (type, o, f === window !== "undefined") {con, s, t, savedDarkMo, d, e = localStora, g, e.getItem("darkMode");
       if (savedDarkMo, d, e) {
-        setIsDarkMo, d, e(JS, O, N.par, s, e(savedDarkMo, d, e))}};    return () => clearInterv, a, l(tim, e, r)}[]);
+        setIsDarkMo, d, e(JS, O, N.par, s, e(savedDarkMode))}};
+    return () => clearInterv, a, l(tim, e, r)}[]);
 
   const, toggleDarkMod, e = () => {con, s, t, newDarkMo, d, e = !isDarkMo, d, e;
     setIsDarkMo, d, e(newDarkMo, d, e);
-    if (type, o, f === wind, o, w !== 'undefin, e, d') {
-      localStora, g, e.setIt, e, m('darkMo, d, e'JS, O, N.stringi, f, y(newDarkMo, d, e))}};
+    if (type, o, f === window !== "undefined") {
+      localStora, g, e.setItem("darkMode"JS, O, N.stringi, f, y(newDarkMode))}};
   return (<divclassNam, e={`m, i, n-h-screen ${isDarkMode?"dark":"}`}>
       <ErrorBoundary>
         <Navigation, currentTi, m, e ={currentTime};

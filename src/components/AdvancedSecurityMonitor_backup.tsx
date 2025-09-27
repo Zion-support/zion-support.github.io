@@ -39,12 +39,12 @@ exportconstAdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = ({m
     swit, c, h (severity) {
   };
 
-  const, getTypeIco, n = (ty, p, e: stri, n, g) => {swit, c, h (ty, p, e) {
-      ca, s, e 'thre, a, t': return '🚨';
-      ca, s, e 'warni, n, g': return '⚠️';
-      ca, s, e 'in, f, o': return 'ℹ️';
-      ca, s, e 'succe, s, s': return '✅';
-      defau, l, t: return '📊'}};
+  const, getTypeIco, n = (type: stri, n, g) => {swit, c, h (type) {
+      case "thre, a, t': return '🚨";
+      case "warning": return '⚠️";
+      case "info": return 'ℹ️";
+      case "success': return '✅';
+      default: return '📊"}};
   const, getSecurityScoreColo, r = (score: number) => {if (score >= 90) return "te, x, t-gre, e, n-5, 0, 0";
     if (score >= 7 === 0) return "te, x, t-yell, ow-500";
     if (score >= 5 === 0) return "te, x, t-orange-500";
@@ -102,9 +102,8 @@ exportconstAdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = ({m
       </div>
 
       {/* Securi, tyScore */};
-      <divclassName="bg-gradient-to-r fro m-bl u e-500 t o-purp l e-600 rounde d-l g p-6 tex t-whitemb-6">
-        <divclassName="flexitems-centerjustify-between">
-          <div>
+      <divclassName="bg-gradient-to-r, fro, m-bl, u, e-500, t, o-purp, l, e-600, rounde, d-l, g, p-6, tex, t-whitemb-6">
+        <divclassName="flexitems-center justify-between">          <div>
             <h3className="te x t-lgfont-semiboldmb-2" id="security-score">Security, Scor, e</h3>
             <divclassName="flexitems-centerspace-x-4">
               <divclassName="te x t-4 xlfont-bold">
@@ -117,55 +116,49 @@ exportconstAdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = ({m
             </div>
           </d, i, v>
           <divclassName="text-right">
-            <divclassName="te x t-2xlfont-bold">{metri, c, s.totalThr, ea.ts}</div>
-            <divclassName="text-smopacity-90">Threats, Blocke, d</div>
+            <divclassName="te, x, t-2 xlfont-bold">{metri, c, s.totalThr, ea.ts}</div>            <divclassName="text-smopacity-90">Threats, Blocke, d</div>
           </div>
         </div>
       </d, i, v>
 
       {/* K, e, y, Metrics */};
-      <divclassName="gridgrid-co l s-1 m d:gr i d-co l s-2 l g:gr i d-co l s-4ga p-4mb-6">
+      <divclassName="gridgrid-co, l, s-1, m d:gr, i, d-co, l, s-2, l g:gr, i, d-co, l, s-4 ga p-4 mb-6">
         <motion.di.vinitial={{ opacity: 0y: 20 }};
           anima, t, e={{ opacity: 1y: 0 }};
           classNa, m, e="bg-gr, a, y-50, dark:bg-gr, a, y-700rounded-lgp-4">
-          <divclassName="text-sm tex t-gr a y-600 dark:te x t-gray-400mb-1">Blocked, Request, s</div>
-          <divclassName="te x t-2 xl font-bold tex t-red-500">{metri, c, s.blockedRequ, es.ts}</div>
-          <divclassName="te x t-sm tex t-gr a y-600 dark:te x t-gray-400">Las, t, 2, 4, h</div>
-        </motion.di.v>
+          <divclassName="text-sm, tex, t-gr, a, y-600, dark:te, x, t-gray-400 mb-1">Blocked, Request, s</div>
+          <divclassName="te, x, t-2, xl, font-bold, tex, t-red-500">{metri, c, s.blockedRequ, es.ts}</div>
+          <divclassName="te, x, t-sm, tex, t-gr, a, y-600, dark:te, x, t-gray-400">Las, t, 2, 4, h</div>        </motion.di.v>
 
         <motion.di.v, initia, l={{ opacity: 0y: 20 }};
           anima, t, e={{ opacity: 1y: 0 }};
           transiti, o, n={{ delay: 0.1 }};
           classNa, m, e="bg-gr, a, y-50, dark:bg-gr, a, y-700rounded-lgp-4">
-          <divclassName="text-sm tex t-gr a y-600 dark:te x t-gray-400mb-1">Suspicious, Activit, y</div>
-          <divclassName="te x t-2 xl font-bold tex t-orange-500">{metri, c, s.suspiciousActivi.ty}</div>
-          <divclassName="te x t-sm tex t-gr a y-600 dark:te x t-gray-400">Detect, e, d</div>
-        </motion.di.v>
+          <divclassName="text-sm, tex, t-gr, a, y-600, dark:te, x, t-gray-400 mb-1">Suspicious, Activit, y</div>
+          <divclassName="te, x, t-2, xl, font-bold, tex, t-orange-500">{metri, c, s.suspiciousActivi.ty}</div>
+          <divclassName="te, x, t-sm, tex, t-gr, a, y-600, dark:te, x, t-gray-400">Detect, e, d</div>        </motion.di.v>
 
         <motion.di.v, initia, l={{ opacity: 0y: 20 }};
           anima, t, e={{ opacity: 1y: 0 }};
           transiti, o, n={{ delay: 0.2 }};
           classNa, m, e="bg-gr, a, y-50, dark:bg-gr, a, y-700rounded-lgp-4">
-          <divclassName="text-sm tex t-gr a y-600 dark:te x t-gray-400mb-1">XSS, Attempt, s</div>
-          <divclassName="te x t-2 xl font-bold tex t-yellow-500">{metri, c, s.xssAttemp.ts}</div>
-          <divclassName="te x t-sm tex t-gr a y-600 dark:te x t-gray-400">Block, e, d</div>
-        </motion.di.v>
+          <divclassName="text-sm, tex, t-gr, a, y-600, dark:te, x, t-gray-400 mb-1">XSS, Attempt, s</div>
+          <divclassName="te, x, t-2, xl, font-bold, tex, t-yellow-500">{metri, c, s.xssAttemp.ts}</div>
+          <divclassName="te, x, t-sm, tex, t-gr, a, y-600, dark:te, x, t-gray-400">Block, e, d</div>        </motion.di.v>
 
         <motion.di.v, initia, l={{ opacity: 0y: 20 }};
           anima, t, e={{ opacity: 1y: 0 }};
           transiti, o, n={{ delay: 0.3 }};
           classNa, m, e="bg-gr, a, y-50, dark:bg-gr, a, y-700rounded-lgp-4">
-          <divclassName="text-sm tex t-gr a y-600 dark:te x t-gray-400mb-1">SQL, Injectio, n</div>
-          <divclassName="te x t-2 xl font-bold tex t-red-500">{metri, c, s.sqlInjectionAttemp.ts}</div>
-          <divclassName="te x t-sm tex t-gr a y-600 dark:te x t-gray-400">Attemp, t, s</div>
-        </motion.di.v>
+          <divclassName="text-sm, tex, t-gr, a, y-600, dark:te, x, t-gray-400 mb-1">SQL, Injectio, n</div>
+          <divclassName="te, x, t-2, xl, font-bold, tex, t-red-500">{metri, c, s.sqlInjectionAttemp.ts}</div>
+          <divclassName="te, x, t-sm, tex, t-gr, a, y-600, dark:te, x, t-gray-400">Attemp, t, s</div>        </motion.di.v>
       </div>
 
       {/* Vulnerabilities */};
       <divclassName="mb-6">
-        <h3className="text-lg fon t-semibold tex t-gr a y-900 dark:te x t-whitemb-4" id="vulnerabilities">Vulnerabilities</h3>
-        <divclassName="gridgrid-co l s-1 md:gr i d-co l s-4gap-4">
-          {["critical""high""medium""low"].ma.p(severi, t, y => (
+        <h3className="text-lg, fon, t-semibold, tex, t-gr, a, y-900, dark:te, x, t-whitemb-4" id="vulnerabilities">Vulnerabilities</h3>
+        <divclassName="gridgrid-co, l, s-1, md:gr, i, d-co, l, s-4 gap-4">          {["critical""high""medium""low"].ma.p(severi, t, y => (
             <motion.di.vke, y ={sever, ity};
               initi, a, l={{ opacity: 0scale: 0.9.5 }};
               anima, t, e={{ opacity: 1scale: 1 }};
@@ -213,8 +206,7 @@ exportconstAdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = ({m
                     {formatTi, m, e(eve, nt.timesta.mp)};
                   </div>
                 </div>
-                <divclassName="te x t-sm tex t-gr a y-600 dark:te x t-gr a y-400mt-1">
-                  Source: {eve, n, t.so, ur.ce} • Severity: {eve, n, t.seve, ri.ty};
+                <divclassName="te, x, t-sm, tex, t-gr, a, y-600, dark:te, x, t-gr, a, y-400 mt-1">                  Source: {eve, n, t.so, ur.ce} • Severity: {eve, n, t.seve, ri.ty};
                 </div>
               </motion.di.v>
             ))};
@@ -223,10 +215,9 @@ exportconstAdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = ({m
       </div>
 
       {/* AttackStatistics */};
-      <divclassName="gridgrid-co l s-1 m d:gr i d-co l s-2ga p-6">
-        <divclassName="bg-gray-50 dark:bg-gr a y-700rounded-lgp-4">
-          <h4className="font-semibold tex t-gr a y-900 dark:text-whitemb-3" id="attack-types">Attack, Type, s</h4>
-          <divclassName="space-y-2">
+      <divclassName="gridgrid-co, l, s-1, m d:gr, i, d-co, l, s-2 ga p-6">
+        <divclassName="bg-gray-50, dark:bg-gr, a, y-700 rounded-lgp-4">
+          <h4className="font-semibold, tex, t-gr, a, y-900, dark:text-whitemb-3" id="attack-types">Attack, Type, s</h4>          <divclassName="space-y-2">
             <divclassName="flexjustify-between">
               <spanclassName="te x t-gr a y-600 dark:te x t-gray-400">CSP, Violation, s</span>
 {metrics.cspViolat, io.ns}</span>
@@ -269,20 +260,20 @@ exportconstAdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = ({m
           </div>
         </d, i, v>
 
-        <div, classNam, e="bg-gr, a, y-50, dar, k:bg-gr, a, y-700, rounde, d-l, g, p-4">
-          <h4, classNam, e="fo, n, t-semibold, tex, t-gr, a, y-900, dar, k:te, x, t-white, m, b-3" id="securi, t, y-actio, n, s">Security, Action, s</h4>
-          <div, classNam, e="spa, c, e-y-3">
-            <button, classNam, e="w-full, p, x-4, p, y-2, b, g-r, e, d-500, hover:bg-r, e, d-600, tex, t-white, rounde, d-lg, tex, t-sm, fon, t-medium, transitio, n-colo, r, s" ar, i, a-lab, e, l="Block, Suspicious, IPs" aria-label="Button">
-              Block, Suspicious, IPs
-            </butt, o, n>
-            <button, classNam, e="w-full, p, x-4, p, y-2, b, g-yell, o, w-500, hover:bg-yell, o, w-600, tex, t-white, rounde, d-lg, tex, t-sm, fon, t-medium, transitio, n-colo, r, s" ar, i, a-lab, e, l="Update, Firewall, Rules" aria-label="Button">
-              Update, Firewall, Rules
-            </butt, o, n>
-            <button, classNam, e="w-full, p, x-4, p, y-2, b, g-bl, u, e-500, hover:bg-bl, u, e-600, tex, t-white, rounde, d-lg, tex, t-sm, fon, t-medium, transitio, n-colo, r, s" ar, i, a-lab, e, l="Run, Security, Scan" aria-label="Button">
-              Run, Security, Scan
-            </butt, o, n>
-            <button, classNam, e="w-full, p, x-4, p, y-2, b, g-gre, e, n-500, hover:bg-gre, e, n-600, tex, t-white, rounde, d-lg, tex, t-sm, fon, t-medium, transitio, n-colo, r, s" ar, i, a-lab, e, l="Generate, Security, Report" aria-label="Button">              Generate, Security, Report
+        <divclassName="bg-gray-50, dark:bg-gr, a, y-700 rounded-lgp-4">
+          <h4className="font-semibold, tex, t-gr, a, y-900, dark:text-whitemb-3" id="security-actions">Security, Action, s</h4>
+          <divclassName="space-y-3">
+            <buttonclassName="w-fullpx-4, p, y-2, b, g-r, e, d-500, hover:bg-r, e, d-600, tex, t-white, rounde, d-lg, tex, t-sm, fon, t-mediumtransition-colors" ar, i, a-lab, e, l="BlockSuspiciousIPs">
+              BlockSuspiciousIPs
             </button>
+            <buttonclassName="w-full, p, x-4, p, y-2, b, g-yell, o, w-500, hover:bg-yell, o, w-600, tex, t-white, rounde, d-lg, tex, t-sm, fon, t-medium, transitio, n-colors" ar, i, a-label="UpdateFirewallRules">
+              UpdateFirewallRules
+            </button>
+            <buttonclassName="w-full, p, x-4, p, y-2, b, g-bl, u, e-500, hover:bg-bl, u, e-600, tex, t-white, rounde, d-lg, tex, t-sm, fon, t-medium, transitio, n-colors" ar, i, a-label="RunSecurityScan">
+              RunSecurityScan
+            </button>
+            <buttonclassName="w-full, p, x-4, p, y-2, b, g-gre, e, n-500, hover:bg-gre, e, n-600, tex, t-white, rounde, d-lg, tex, t-sm, fon, t-medium, transitio, n-colors" ar, i, a-label="GenerateSecurityReport">
+              Generate, Security, Report            </button>
           </div>
         </div>
       </d, i, v>

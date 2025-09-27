@@ -44,21 +44,14 @@ export default function Contact(): JSX.Element {
 		setFormData(prev => ({
 			...prev,
 			[name]: value
-		}));
-	};
+		}))};
 
 	const handleSubmit = async (e: React.FormEvent) => {
 		e.preventDefault();
-		setIsSubmitting(true);
-		
-		// Simulate API call
-		await new Promise(resolve => setTimeout(resolve, 2000));
-		
-		trackClick('contact-form-submit', 'conversion');
-		setIsSubmitted(true);
-		setIsSubmitting(false);
-	};
-
+		trackClick('contact-form-submit', 'form');
+		console.log('Form submitted:', formData);
+		// Here you would typically send the data to your backend
+		alert('Thank you for your message! We will get back to you soon.')};
 	if (isSubmitted) {
 		return (
 			<>
@@ -88,38 +81,38 @@ export default function Contact(): JSX.Element {
 					</div>
 				</div>
 			</>
-		);
-	}
+		)}
 
 	return (
 		<>
 			<SEO />
 			<Head>
-				<tit, l, e>Contact, U, s - Zion, Ap, p</tit, l, e>
-				<meta, nam, e="descripti, o, n" conte, n, t="Get, in, touch with, Zion, App for, your, technology nee, d, s. We're, here, to help, transform, your busine, s, s." />
-				<meta, nam, e="viewpo, r, t" conte, n, t="wid, t, h=devi, c, e-wid, t, h, initi, a, l-sca, l, e=1" />
-			</He, a, d>
-			<div, classNam, e="m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-bl, u, e-50, t, o-indi, g, o-100, p, t-20">
-				<div, classNam, e="container, m, x-auto, p, x-4, p, y-8, ma, x-w-7, x, l">
-					<nav, classNam, e="mb-8">
-						<Link, href="/" classNa, m, e="te, x, t-bl, u, e-600, hover:te, x, t-bl, u, e-800, fon, t-medium, transitio, n-colo, r, s">
-							← Back, to, Home						</Link>
+				<title>Contact Us - Zion App</title>
+				<meta name="description" content="Get in touch with our team for technology solutions, consulting, and support." />
+				<meta name="viewport" content="width=device-width, initial-scale=1" />
+			</Head>
+			
+			<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 pt-20">
+				<div className="container mx-auto px-4 py-8 max-w-7 xl">
+					<nav className="mb-8">
+						<Link href="/" className="text-blue-600 hover:text-blue-800 font-medium transition-colors">
+							← Back to Home
+						</Link>
 					</nav>
 
-					<header className="text-center mb-16">
-						<h1 className="text-5xl md:text-6xl font-bold text-blue-600 mb-4 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-							Get In Touch
+					{/* Hero Section */}
+					<section className="text-center mb-16">
+						<h1 className="text-4 xl md:text-6 xl font-bold text-gray-900 mb-6">
+							Contact Us
 						</h1>
-						<p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-							Ready to transform your business with cutting-edge technology? Let's discuss how we can help you achieve your goals.
-						</p>
+						<p className="text-xl text-gray-600 max-w-3 xl mx-auto">
+							Ready to transform your business with cutting-edge technology? Let's discuss your project and how we can help.						</p>
 					</header>
 
 					<div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
 						{/* Contact Form */}
-						<div className="bg-white rounded-2xl shadow-xl p-8">
-							<h2 className="text-3xl font-bold text-gray-900 mb-6">Send us a Message</h2>
-							<form onSubmit={handleSubmit} className="space-y-6">
+						<section className="bg-white rounded-lg shadow-lg p-8">
+							<h2 className="text-2 xl font-bold text-gray-900 mb-6">Send us a message</h2>							<form onSubmit={handleSubmit} className="space-y-6">
 								<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 									<div>
 										<label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
@@ -288,10 +281,9 @@ export default function Contact(): JSX.Element {
 						</div>
 
 						{/* Contact Information */}
-						<div className="space-y-8">
-							<div className="bg-white rounded-2xl shadow-xl p-8">
-								<h2 className="text-3xl font-bold text-gray-900 mb-6">Contact Information</h2>
-								<div className="space-y-6">
+						<section className="space-y-8">
+							<div className="bg-white rounded-lg shadow-lg p-8">
+								<h2 className="text-2 xl font-bold text-gray-900 mb-6">Get in touch</h2>								<div className="space-y-6">
 									<div className="flex items-start gap-4">
 										<div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
 											<span className="text-blue-600 text-xl">📧</span>
@@ -325,42 +317,26 @@ export default function Contact(): JSX.Element {
 								</div>
 							</div>
 
-									<div, classNam, e="flex, item, s-cent, e, r">
-										<div, classNam, e="w-1, 2, h-12, b, g-bl, u, e-100, rounde, d-lg, flex, items-center, justif, y-center, m, r-4">
-											<span, classNam, e="te, x, t-bl, u, e-600, tex, t-xl">📞</sp, a, n>
-										</d, i, v>
-										<d, i, v>
-											<p, classNam, e="fo, n, t-semibold, tex, t-gr, a, y-9, 0, 0">Pho, n, e</p>
-											<p, classNam, e="te, x, t-gr, a, y-6, 0, 0">+1 (5, 5, 5) 1, 2, 3-45, 6, 7</p>
-										</d, i, v>
-									</d, i, v>
-
-									<div, classNam, e="flex, item, s-cent, e, r">
-										<div, classNam, e="w-1, 2, h-12, b, g-bl, u, e-100, rounde, d-lg, flex, items-center, justif, y-center, m, r-4">
-											<span, classNam, e="te, x, t-bl, u, e-600, tex, t-xl">📍</sp, a, n>
-										</d, i, v>
-										<d, i, v>
-											<p, classNam, e="fo, n, t-semibold, tex, t-gr, a, y-9, 0, 0">Addre, s, s</p>
-											<p, classNam, e="te, x, t-gr, a, y-6, 0, 0">123, Tech, Street, Innovation, Cit, y, IC, 1234, 5</p>
-										</d, i, v>
-									</d, i, v>
-								</d, i, v>
-							</d, i, v>
-
-							<div, classNam, e="bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-indi, g, o-600, rounde, d-2x, l, p-8, tex, t-whi, t, e">
-								<h3, classNam, e="te, x, t-xl, fon, t-bold, m, b-4">Ready, to, get start, e, d?</h3>
-								<p, classNam, e="mb-6, opacit, y-90">
-									Schedule, a, free consultation, to, discuss your, project, needs.
-								</p>
-								<button, onClic, k={() => trackCli, c, k('schedu, l, e-consultati, o, n', 'c, t, a')};
-									classNa, m, e="bg-white, tex, t-bl, u, e-600, p, x-6, p, y-3, rounde, d-lg, fon, t-semibold, hover:bg-gr, a, y-100, transitio, n-colo, r, s"
-								>
-									Schedule, Consultatio, n
-								</butt, o, n>
-							</d, i, v>
-						</d, i, v>
-					</d, i, v>
-				</d, i, v>
-			</d, i, v>		</>
-	);
-}
+							<div className="bg-white rounded-lg shadow-lg p-8">
+								<h2 className="text-2 xl font-bold text-gray-900 mb-6">Business Hours</h2>
+								<div className="space-y-2">
+									<div className="flex justify-between">
+										<span className="text-gray-600">Monday - Friday</span>
+										<span className="text-gray-900">9:00 AM - 6:00 PM</span>
+									</div>
+									<div className="flex justify-between">
+										<span className="text-gray-600">Saturday</span>
+										<span className="text-gray-900">10:00 AM - 4:00 PM</span>
+									</div>
+									<div className="flex justify-between">
+										<span className="text-gray-600">Sunday</span>
+										<span className="text-gray-900">Closed</span>
+									</div>
+								</div>
+							</div>
+						</section>
+					</div>
+				</div>
+			</div>
+		</>
+	)}

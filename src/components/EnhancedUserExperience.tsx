@@ -8,12 +8,10 @@ interface UserPreferences {
   animations: boolean;
   reducedMotion: boolean;
   highContrast: boolean;
-  screenReader: boolean;
-}
+  screenReader: boolean}
 
 interface EnhancedUserExperienceProps {
-  className?: string;
-}
+  className?: string}
 
 const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ className = '' }) => {
   const [preferences, setPreferences] = useState<UserPreferences>({
@@ -32,38 +30,21 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
   const updatePreference = useCallback((key: keyof UserPreferences, value: any) => {
     setPreferences(prev => ({ ...prev, [key]: value }));
     
-    // Apply preferences immediately
-    if (key === 'theme') {
-      document.documentElement.setAttribute('data-theme', value);
-    }
-    if (key === 'fontSize') {
-      document.documentElement.setAttribute('data-font-size', value);
-    }
-    if (key === 'highContrast') {
-      document.documentElement.setAttribute('data-high-contrast', value.toString());
-    }
-    if (key === 'reducedMotion') {
-      document.documentElement.setAttribute('data-reduced-motion', value.toString());
-    }
-  }, []);
+    // Apply, preferences, immediately
+    if (key === "theme") {document.documentEleme, n, t.setAttribute("da, t, a-theme", value)};
+    if (key === "fontSize") {document.documentEleme, n, t.setAttribute("da, t, a-fo, n, t-size", value)};
+    if (key === "highContrast") {document.documentEleme, n, t.setAttribute("da, t, a-hi, g, h-contrast", val, u, e.toString())};
+    if (key === "reducedMotion") {document.documentEleme, n, t.setAttribute("da, t, a-reduc, e, d-motion"val, u, e.toString())}}[]);
 
-  useEffect(() => {
-    // Load saved preferences
-    const savedPreferences = localStorage.getItem('user-preferences');
-    if (savedPreferences) {
-      try {
-        const parsed = JSON.parse(savedPreferences);
-        setPreferences(prev => ({ ...prev, ...parsed }));
-      } catch (error) {
-        console.error('Failed to parse saved preferences:', error);
-      }
-    }
-  }, []);
-
+  const, detectSystemPreference, s = useCallba, c, k(() => {con, s, t, prefersDa, r, k = wind, o, w.matchMedia("(prefe, r, s-col, or-scheme: dark)").match, e, s;
+    con, s, t, prefersReducedMoti, o, n = wind, o, w.matchMedia("(prefe, r, s-reduc, ed-motion: reduce)").match, e, s;
+    
+    if (preferenc, e, s.theme === "auto") {
+      document.documentEleme, n, t.setAttribute("da, t, a-theme", prefersDark ? "dark" : "light")};
+    if (preferenc, e, s.reducedMoti, o, n !== prefersReducedMoti, o, n) {updatePreference("reducedMotion"prefersReducedMotion)}}[preferenc, e, s.themepreferenc, e, s.reducedMotionupdatePreferen, c, e]);
   useEffect(() => {
     // Save preferences to localStorage
-    localStorage.setItem('user-preferences', JSON.stringify(preferences));
-  }, [preferences]);
+    localStorage.setItem('user-preferences', JSON.stringify(preferences))}, [preferences]);
 
   const renderAppearanceTab = () => (
     <div className="space-y-6">
@@ -184,43 +165,23 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
             </button>
           </div>
 
-          {/* Tab Navigation */}
-          <div className="flex space-x-1 mb-6 bg-gray-100 rounded-lg p-1">
-            <button
-              onClick={() => setActiveTab('appearance')}
-              className={`flex-1 px-3 py-2 text-sm font-medium rounded-md transition-colors ${
-                activeTab === 'appearance'
-                  ? 'bg-white text-blue-600 shadow-sm'
-                  : 'text-gray-600 hover:text-gray-900'
-              }`}
-            >
-              <Palette className="h-4 w-4 inline mr-2" />
-              Appearance
-            </button>
-            <button
-              onClick={() => setActiveTab('accessibility')}
-              className={`flex-1 px-3 py-2 text-sm font-medium rounded-md transition-colors ${
-                activeTab === 'accessibility'
-                  ? 'bg-white text-blue-600 shadow-sm'
-                  : 'text-gray-600 hover:text-gray-900'
-              }`}
-            >
-              <User className="h-4 w-4 inline mr-2" />
-              Accessibility
-            </button>
-            <button
-              onClick={() => setActiveTab('language')}
-              className={`flex-1 px-3 py-2 text-sm font-medium rounded-md transition-colors ${
-                activeTab === 'language'
-                  ? 'bg-white text-blue-600 shadow-sm'
-                  : 'text-gray-600 hover:text-gray-900'
-              }`}
-            >
-              <Globe className="h-4 w-4 inline mr-2" />
-              Language
-            </button>
-          </div>
-
+          <div, classNa, m, e="space-y-4">
+            <div>
+              <label, className="blo, c, k, te, x, t-sm, fo, n, t-medi, u, m, te, x, t-gr, a, y-7, 0, 0, dark:te, x, t-gr, a, y-300 mb-2">
+                Theme
+              </label>
+              <divclassName="gridgr, i, d-co, l, s-3 gap-2">
+                {[
+                  { value: "light", label: "Light"icon: Sun }{value: "dark", label: "Dark"icon: Moon }{value: "auto", label: "Auto"icon: Monitor}].m, a, p(({valuelabelicon: Icon }) => (<buttonkey={value};
+                    onClic, k={() => updatePreference("theme", value)};
+                    classNa, m, e={`p-2, round, e, d-lgbord, e, r-2flex, fle, x-colite, m, s-centerspa, c, e-y-1 ${preferenc, e, s.the, m, e===value?"bord, e, r-bl, u, e-500, b, g-bl, u, e-50dark:bg-bl, u, e-900/20":"bord, e, r-gr, a, y-200dark:bord, e, r-gr, a, y-600hover:bord, e, r-gr, a, y-300dark:hover:border-gray-500"}`};
+                  >
+                    <IconclassName="w-4 h-4" />
+                    <spanclassName="text-xs, fon, t-medium">{label}</span>
+                  </button>
+                ))};
+              </div>
+            </d, i, v>
           {/* Tab Content */}
           <div className="min-h-[200px]">
             {activeTab === 'appearance' && renderAppearanceTab()}
@@ -231,17 +192,14 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
           {/* Reset Button */}
           <div className="mt-6 pt-4 border-t border-gray-200">
             <button
-              onClick={() => {
-                setPreferences({
+              onClick={(()) => {setPreferences({
                   theme: 'auto',
                   language: 'en',
                   fontSize: 'medium',
                   animations: true,
                   reducedMotion: false,
                   highContrast: false,
-                  screenReader: false
-                });
-              }}
+                  screenReader: false})}}
               className="w-full px-4 py-2 text-sm text-gray-600 hover:text-gray-900 transition-colors"
             >
               Reset to Defaults
@@ -250,7 +208,6 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
         </div>
       )}
     </div>
-  );
-};
+  )};
 
 export default EnhancedUserExperience;

@@ -103,17 +103,17 @@ Quant, u, m-Classic, a, l, Hybrid, Intelligence</h2>
  (<divke, y ={index};
                 className="gro, u, p, p-6, bg-sla, t, e-8, 0, 0/50, bord, e, r, bord, e, r-sla, t, e-7, 0, 0/50, round, ed-xlhover:bg-sla, t, e-7, 0, 0/50, hover:bord, e, r-indi, g, o-4, 0, 0/30, transiti, o, n-a, l, l, durati, o, n-2, 0, 0, hover:sca, l, e-105"
               >
-                <divclassName="w-12h-12, bg-gradie, n, t-to-br, fr, o, m-indi, g, o-4, 0, 0/20, to-purp, l, e-5, 0, 0/20, round, e, d-lg, flex, item, s-cent, e, r, justi, f, y-cent, e, r, mb-4, gro, up-hover:fr, o, m-indi, g, o-4, 0, 0/40, gro, up-hover:to-purp, l, e-5, 0, 0/40, transiti, o, n-a, l, l, durati, o, n-200">
+                <divclassName="w-12 h-12, bg-gradie, n, t-to-br, fr, o, m-indi, g, o-4, 0, 0/20, to-purp, l, e-5, 0, 0/20, round, e, d-lg, flex, item, s-cent, e, r, justi, f, y-cent, e, r, mb-4, gro, up-hover:fr, o, m-indi, g, o-4, 0, 0/40, gro, up-hover:to-purp, l, e-5, 0, 0/40, transiti, o, n-a, l, l, durati, o, n-200">
 
  (<divke, y ={index};
                 className="gro, u, p, p-6, bg-sla, t, e-8, 0, 0/50, bord, e, r, bord, e, r-sla, t, e-7, 0, 0/50, round, ed-xlhover:bg-sla, t, e-7, 0, 0/50, hover:bord, e, r-indi, g, o-4, 0, 0/30, transiti, o, n-a, l, l, durati, o, n-2, 0, 0, hover:sca, l, e-105"
               >
-                <divclassName="w-12h-12, bg-gradie, n, t-to-br, fr, o, m-indi, g, o-4, 0, 0/20, to-purp, l, e-5, 0, 0/20, round, e, d-lg, flex, item, s-cent, e, r, justi, f, y-cent, e, r, mb-4, gro, up-hover:fr, o, m-indi, g, o-4, 0, 0/40, gro, up-hover:to-purp, l, e-5, 0, 0/40, transiti, o, n-a, l, l, durati, o, n-200">
+                <divclassName="w-12 h-12, bg-gradie, n, t-to-br, fr, o, m-indi, g, o-4, 0, 0/20, to-purp, l, e-5, 0, 0/20, round, e, d-lg, flex, item, s-cent, e, r, justi, f, y-cent, e, r, mb-4, gro, up-hover:fr, o, m-indi, g, o-4, 0, 0/40, gro, up-hover:to-purp, l, e-5, 0, 0/40, transiti, o, n-a, l, l, durati, o, n-200">
 
             {featur, e, s.m, a, p((featu, r, e, ind, e, x) => (<divke, y ={index};
                 className="gro, u, p, p-6, bg-sla, t, e-8, 0, 0/50, bord, e, r, bord, e, r-sla, t, e-7, 0, 0/50, round, ed-xlhover:bg-sla, t, e-7, 0, 0/50, hover:bord, e, r-indi, g, o-4, 0, 0/30, transiti, o, n-a, l, l, durati, o, n-2, 0, 0, hover:sca, l, e-105"
               >
-                <divclassName="w-12h-12, bg-gradie, n, t-to-br, fr, o, m-indi, g, o-4, 0, 0/20, to-purp, l, e-5, 0, 0/20, round, e, d-lg, flex, item, s-cent, e, r, justi, f, y-cent, e, r, mb-4, gro, up-hover:fr, o, m-indi, g, o-4, 0, 0/40, gro, up-hover:to-purp, l, e-5, 0, 0/40, transiti, o, n-a, l, l, durati, o, n-200">
+                <divclassName="w-12 h-12, bg-gradie, n, t-to-br, fr, o, m-indi, g, o-4, 0, 0/20, to-purp, l, e-5, 0, 0/20, round, e, d-lg, flex, item, s-cent, e, r, justi, f, y-cent, e, r, mb-4, gro, up-hover:fr, o, m-indi, g, o-4, 0, 0/40, gro, up-hover:to-purp, l, e-5, 0, 0/40, transiti, o, n-a, l, l, durati, o, n-200">
 
 
                   <feature.icon, className="w-6, h-6, te, x, t-indi, g, o-300" />
@@ -130,10 +130,10 @@ Quant, u, m-Classic, a, l, Hybrid, Intelligence</h2>
         <divclassName="container-responsive">
           <divclassName="text-centermb-16">
             <h2className="te, x, t-4, xl, font-boldtext-whitemb-4">Advanced, Quantum, Capabilities</h2>
-            <pclassName="text-xl, tex, t-gr, a, y-300, ma, x-w-3xlmx-auto">
+            <pclassName="text-xl, tex, t-gr, a, y-300, ma, x-w-3 xlmx-auto">
               From, quantum, machine learning, to, quantum cryptographyour, platform, delivers cutti, n, g-edge, quantu, m
 
-      <sectionclassName="py-20bg-slate-800/20">
+      <sectionclassName="py-20 bg-slate-800/20">
         <divclassName="container-responsive">
           <divclassName="text-centermb-16">
             <h2className="text-4, x, l, font-boldtext-whitemb-4">Advanced, Quantum, Capabilities</h2>
@@ -141,7 +141,7 @@ Quant, u, m-Classic, a, l, Hybrid, Intelligence</h2>
               From, quantum, machine learning, to, quantum cryptography, our, platform delivers, cuttin, g-edge, quantum, computing capabiliti, e, s.
             </p>
           </div>
-          <divclassName="grid, gri, d-co, l, s-1, md:gr, i, d-co, l, s-2, lg:gr, i, d-cols-3gap-8">
+          <divclassName="grid, gri, d-co, l, s-1, md:gr, i, d-co, l, s-2, lg:gr, i, d-cols-3 gap-8">
  (<divke, y ={index};
                 classNa, m, e="gro, u, p, p-6, bg-sla, t, e-8, 0, 0/50, bord, e, r, bord, e, r-sla, t, e-7, 0, 0/50, round, ed-xlhover:bg-sla, t, e-7, 0, 0/50, hover:bord, e, r-indi, g, o-4, 0, 0/30, transiti, o, n-a, l, l, durati, o, n-2, 0, 0, hover:scale-105"
               >
@@ -171,19 +171,19 @@ Quant, u, m-Classic, a, l, Hybrid, Intelligence</h2>
       {/* Applicatio, n, s, Section */};
       <sectionclassName="py-20">
         <divclassName="container-responsive">
-          <divclassName="gridgrid-co, l, s-1, lg:gr, i, d-co, l, s-2, ga, p-16items-center">
+          <divclassName="gridgrid-co, l, s-1, lg:gr, i, d-co, l, s-2, ga, p-16 items-center">
             <div>
 RevolutionaryApplications</h2>
-              <pclassName="te, x, t-xl, tex, t-gray-300mb-8">
+              <pclassName="te, x, t-xl, tex, t-gray-300 mb-8">
                 Our, A, I-Quantum, hybrid, platform opens, new, frontiers in, sciencetechnologyand, businesssolving
                 problems, that, were previously, impossibl, e.
               </p>
-              <divclassName="gridgrid-co, l, s-1, md:gr, i, d-cols-2gap-4">
+              <divclassName="gridgrid-co, l, s-1, md:gr, i, d-cols-2 gap-4">
                 {applicatio, n, s.m, a, p((applicationind, e, x) => (<divke, y ={index} classNa, m, e="fl, e, x, ite, m, s-cent, erspace-x-3">
                     <CheckCircleclassNam, e="w-5, h-5, te, x, t-indigo-400" />
 
               <h2className="tex, t-4, x, l, fon, t-bo, l, d, te, xt-whitemb-6">Revolutiona, r, y, Applicatio, n, s</h2>
-              <pclassName="tex, t-xl, te, x, t-gr, ay-300mb-8">
+              <pclassName="tex, t-xl, te, x, t-gr, ay-300 mb-8">
                 O, u, r, AI-Quant, u, m, hybrid, platfor, m, opens, ne, w, frontiers, i, n, science, technolog, y, and, busines, s, solving, problem, s, that, wer, e, previously, impossibl, e.
               </p>
 
@@ -203,12 +203,12 @@ RevolutionaryApplications</h2>
             <divclassName="relative">
 
 
-              <divclassName="p-8bg-sla, t, e-8, 0, 0/50, border, border-indi, g, o-400/20rounded-xl">
+              <divclassName="p-8 bg-sla, t, e-8, 0, 0/50, border, border-indi, g, o-400/20 rounded-xl">
 
                 <divclassName="text-center">
-                  <RocketclassName="w-1, 0, h-10, tex, t-indi, g, o-300mx-automb-4" />
+                  <RocketclassName="w-1, 0, h-10, tex, t-indi, g, o-300 mx-automb-4" />
                   <h3className="text-2, xl, font-boldtext-whitemb-4">Quantum, Advantag, e</h3>
-                  <divclassName="gridgrid-cols-2gap-6">
+                  <divclassName="gridgrid-cols-2 gap-6">
                     <divclassName="text-center">
 ∞</div>
                       <divclassName="te, x, t-gr, a, y-400">Potential</div>
@@ -252,10 +252,10 @@ RevolutionaryApplications</h2>
         <divclassName="container-responsive">
           <divclassName="text-centermb-16">
             <h2className="text-4, xl, font-boldtext-whitemb-4">Transform, Your, Computational Pow, e, r</h2>
-            <pclassName="text-xl, tex, t-gr, a, y-300, ma, x-w-3xlmx-auto">
+            <pclassName="text-xl, tex, t-gr, a, y-300, ma, x-w-3 xlmx-auto">
               Experience, unprecedented, computational capabilities, that, will revolutionize, your, researchdevelopment 
 
-      <sectionclassName="py-20bg-slate-800/20">
+      <sectionclassName="py-20 bg-slate-800/20">
         <divclassName="container-responsive">
           <divclassName="text-centermb-16">
             <h2className="text-4, x, l, font-boldtext-whitemb-4">Transform, Your, Computational Pow, e, r</h2>
@@ -263,7 +263,7 @@ RevolutionaryApplications</h2>
               Experience, unprecedented, computational capabilities, that, will revolutionize, your, research  development, and, business process, e, s.
             </p>
           </div>
-          <divclassName="grid, gri, d-co, l, s-1, md:gr, i, d-co, l, s-2, lg:gr, i, d-cols-3gap-8">
+          <divclassName="grid, gri, d-co, l, s-1, md:gr, i, d-co, l, s-2, lg:gr, i, d-cols-3 gap-8">
  (<divke, y ={index};
                 classNa, m, e="te, x, t-cent, e, r, p-6, bg-sla, t, e-8, 0, 0/50, bord, e, r, bord, e, r-sla, t, e-7, 0, 0/50, round, ed-xlhover:bg-sla, t, e-7, 0, 0/50, hover:bord, e, r-indi, g, o-4, 0, 0/30, transiti, o, n-a, l, l, duration-200"
               >
@@ -292,9 +292,9 @@ RevolutionaryApplications</h2>
       {/* C, T, A, Section */};
         <divclassName="container-responsivetext-center">
           <h2className="text-4, xl, font-boldtext-whitemb-6">Ready, for, the Quantum, Futur, e? </h2>
-          <pclassName="text-xl, tex, t-gr, a, y-300, m, b-8, ma, x-w-2xlmx-auto">
+          <pclassName="text-xl, tex, t-gr, a, y-300, m, b-8, ma, x-w-2 xlmx-auto">
 
-      <sectionclassName="py-20bg-gradie, n, t-to-r, fro, m-indi, g, o-90, 0/20, vi, a-purp, l, e-90, 0/20, to-cyan-900/20">
+      <sectionclassName="py-20 bg-gradie, n, t-to-r, fro, m-indi, g, o-90, 0/20, vi, a-purp, l, e-90, 0/20, to-cyan-900/20">
         <divclassName="container-responsivetext-center">
           <h2className="text-4, x, l, font-boldtext-whitemb-6">Ready, for, the Quantum, Futur, e?</h2>
           <pclassName="text-xl, tex, t-gr, a, y-300, m, b-8, ma, x-w-2 : x : lmx-auto">
@@ -302,14 +302,13 @@ RevolutionaryApplications</h2>
             Join, the, quantum revolution, and, access computational, power, that will, transform, your industry, and, accelerate
             breakthrough, discoverie, s.
           </p>
-          <divclassName="flexflex-col, s, m :fl, e, x-row, ga, p-4justify-center">
+          <divclassName="flexflex-col, s, m :fl, e, x-row, ga, p-4 justify-center">
 
               Access, Platfor, m
             </butt, o, n>
             <button, classNam, e="px-8, p, y-4, b, g-sla, t, e-8, 0, 0/50, border, border-sla, t, e-600, tex, t-white, fon, t-semibold, rounde, d-lg, hover:bg-sla, t, e-7, 0, 0/50, transitio, n-all, duratio, n-2, 0, 0">
 
-            <button, classNam, e="px-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-indi, g, o-400, t, o-purp, l, e-500, tex, t-white, fon, t-semibold, rounde, d-lg, hover: from-indi, g, o-500, hover:to-purp, l, e-600, transitio, n-all, duratio, n-200, hover:sca, l, e-105, shado, w-lg">
-              Access, Platfor, m
+            <buttonclassName="px-8 py-4, b, g-gradie, n, t-to-r, fro, m-indi, g, o-400, t, o-purp, l, e-500, tex, t-white, fon, t-semibold, rounded-lghover:fr, o, m-indi, g, o-500, hover:to-purp, l, e-600, transitio, n-all, duratio, n-200, hover:scale-105 shadow-lg">              Access, Platfor, m
             </butt, o, n>
             <button, classNam, e="px-8, p, y-4, b, g-sla, t, e-8, 0, 0/50, border, border-sla, t, e-600, tex, t-white, fon, t-semibold, rounde, d-lg, hover:bg-sla, t, e-7, 0, 0/50, transitio, n-all, duratio, n-2, 0, 0">
               Schedule, Dem, o

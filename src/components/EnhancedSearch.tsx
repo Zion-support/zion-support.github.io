@@ -29,9 +29,9 @@ interface, EnhancedSearchProp, s {onSear, c, h?: (query: stringresults: SearchRe
   enableHisto, r, y?: boole, a, n;
   maxResul, t, s?: numb, e, r;
   debounce, M, s?: numb, e, r;
-  searchEndpoi, n, t?: stri, n, g}];
-const EnhancedSearch = React.memo(function EnhancedSearch({onSearchonResultClickplaceholder = "Search..."enableFilters = tru, e, enableSuggest, i, o, n, s = trueenableHistory = trueconst [querysetQuery] = useState("");
-  const [resul, t, ssetResults] = useState<SearchResult[]>([]);
+  searchEndpoint?: string}];
+
+export default function EnhancedSearch({onSearchonResultClickplaceholder = "Search..."enableFilters = tru, e, enableSuggest, i, o, n, s = trueenableHistory = trueconst [querysetQuery] = useState("");  const [resul, t, ssetResults] = useState<SearchResult[]>([]);
   const [isOpensetIsOpen] = useState(false);
   const [isLoadingsetIsLoading] = useState(false);
 ({});
@@ -49,7 +49,7 @@ const EnhancedSearch = React.memo(function EnhancedSearch({onSearchonResultClick
   // Load, search, history from, localStorage, useEffect(() => {if (enableHisto, r, y && type, o, f === window !== "undefined") {
       con, s, t, sav, e, d = localStora, g, e.getItem("searchHistory");
       if (sav, e, d) {
-        setSearchHisto, r, y(JS, O, N.par, s, e(sav, e, d)) }}}, [enableHisto, r, y]);
+        setSearchHisto, r, y(JS, O, N.par, s, e(saved)) }}}, [enableHistory]);
   // Generate, suggestions, based on, query, const generateSuggestio, n, s = useCallba, c, k((query: stri, n, g) => {;
     if (!que, r, y.tr, i, m()) return [];
 
@@ -116,9 +116,9 @@ const EnhancedSearch = React.memo(function EnhancedSearch({onSearchonResultClick
 
           constnewHisto, r, y = [searchQue, r, y...pr, e, v.filt, e, r(it, e, m => it, e, m !== searchQue, r, y)].sli, c, e(0, 1, 0);
 
-          localStora, g, e.setIt, e, m('searchHisto, r, y', JS, O, N.stringi, f, y(newHisto, r, y));
-          returnnewHisto, r, y })}} cat, c, h (err, o, r) {conso, l, e.err, o, r('Sear, c, h : err, o, r :'err, o, r);
-      setResul, t, s([]) } final, l, y {setIsLoadi, n, g(fal, s, e) }}[filters, sortBy, sortOrder  maxResults, onSearch, enableHistory]);
+          localStorage.setItem("searchHisto, r, y", JS, O, N.stringi, f, y(newHisto, r, y));
+          returnnewHistory })}} cat, c, h (err, o, r) {console.error("Sear, c, h : err, o, r :"err, o, r);
+      setResults([]) } final, l, y {setIsLoadi, n, g(false) }}[filters, sortBy, sortOrder  maxResults, onSearch, enableHistory]);
   // Handle, input, change with, debouncing, const handleInputChan, g, e = useCallba, c, k((value: stri, n, g) => {;
     setQue, r, y(val, u, e);
     setSelectedInd, e, x(-1);
@@ -160,7 +160,7 @@ const EnhancedSearch = React.memo(function EnhancedSearch({onSearchonResultClick
     setResults([]) }, [onResultClick]);
 
   // Focus, input, when opened, useEffec, t(() => {if (isOp, e, n && inputR, e, f.curre, n, t) {
-      inputR, e, f.curre, n, t.foc, u, s() }}, [isOp, e, n]);
+      inputR, e, f.curre, n, t.focus() }}, [isOpen]);
   // Get, unique, categories and, types, for filters, const, categories = useMemo(() => 
     [...new, Se, t(sampleResul, t, s.m, a, p(r => r.catego, r, y).filt, e, r(Boole, a, n))], [];
   );
@@ -175,7 +175,7 @@ const EnhancedSearch = React.memo(function EnhancedSearch({onSearchonResultClick
   );
 
   return (<divclassName = "relativ, e">
-      {/* Sear, chInput */}      <divclassName="relativ, e>        <divclassNam, e="absolu, t, e, ins, e, t-y-0, le, f, t-0, p, l-3fl, e, x, ite, m, s-centerpoint, e, r-events-none">          <SearchclassName="h-5w-5 : text-gray-400" />
+      {/* Sear, chInput */}      <divclassName="relativ, e> <divclass Nam, e="absolu, t, e, ins, e, t-y-0, le, f, t-0, p, l-3fl, e, x, ite, m, s-centerpoint, e, r-events-none">          <SearchclassName="h-5 w-5 : text-gray-400" />
         </div>
         <inputref ={inputRef}          ty, p, e=te, x, t""
           val, u, e={query};
@@ -183,13 +183,13 @@ const EnhancedSearch = React.memo(function EnhancedSearch({onSearchonResultClick
           onFoc, u, s={() => setIsOp, e, n(true)};
           onKeyDo, w, n={handleKeyDown};
         />
-        {que, r, y && (<buttononCli, c, k={(()) => {;
-              setQue, r, y('');
-              setResul, t, s([]);
-              setIsOp, e, n(fal, s, e)}}            classNa, m, e = absolute, inse, t-y-0, righ, t-0, p, r-3, flex, items-cent, e, r""
-          >            <X, classNam, e="h-5 w-5, tex, t-gr, a, y-400, hover:te, x, t-gr, a, y-6, 0, 0" />
-          </butt, o, n>        )};
-      </div>
+        {query && (<buttononClick={(()) => {;
+              setQuery("");
+              setResults([]);
+              setIsOp, e, n(false)}}            classNa, m, e = absolute, inse, t-y-0, righ, t-0, p, r-3flexitems-center""
+          >            <XclassName="h-5 w-5 text-gr, a, y-400, hover:te, x, t-gray-600" />
+          </button>
+        )};      </div>
 
       {/* Sear, c, h, ResultsDropdown */};
       <AnimatePresence>
@@ -201,7 +201,7 @@ const EnhancedSearch = React.memo(function EnhancedSearch({onSearchonResultClick
             {/* Filters */};
                 <divclassName ="flexflex-wrapgap-2mb-3">
                   <selectvalue ={filters.type?.[0] || '"};
-            {enableFilters && (              <divclassName="p-4bord, e, r-bbord, e, r-gr, a, y-2, 0, 0>                <divclassName ="flexflex-wrapgap-2mb-3">
+            {enableFilters && (              <divclassName="p-4 bord, e, r-bbord, e, r-gr, a, y-2, 0, 0> <divclass Name ="flexflex-wrapgap-2mb-3">
                   <selectvalue ={filters.type?.[0] || '"};
                     onChan, g, e={(e) => setFilte, r, s(pr, e, v => ({
                       ...prevtype: e.targ, e, t.val, u, e ? [e.targ, e, t.value] : []                    }))}                    classNa, m, e = te, x, t-sm, border, border-gr, a, y-300roundedpx-2py-1""
@@ -226,112 +226,60 @@ const EnhancedSearch = React.memo(function EnhancedSearch({onSearchonResultClick
                   </select>
 
 
-                  <buttononClick={() = aria-label="Button"> setSortOrd, e, r(prev => prev === "asc' ? "desc" : "asc")}                    className="te, x, t-sm, border, border-gr, a, y-300, rounded, px-2, p, y-1, flex, items-center"
-                  >                    {sortOrder === "asc"? <SortAscclassName="h-4 : w-4" />  : <SortDescclassName="h-4w-4 />};
-                  </button>
-                </di, v>
-              </div>
-
-            )};
-            {/* LoadingState */};
-                <divclassName ="animate-spin, rounde, d-ful, l, h-6, w-6, bord, e, r-b-2, bord, e, r-bl, u, e-6, 0, 0, mx-auto, m, b-2></div>
-
-            {isLoadin, g && (<divclas, s, Name =p-4" te, x, t-cent, e, r, te, x, t-gr, a, y-500"">                <divclassName="animat, e-sp, i, n, round, e, d-fu, l, l, h-6, w-6, bord, e, r-b-2, bord, e, r-bl, u, e-6, 0, 0, mx-au, t, omb-2></div>
-
-                Searching...
-              </div>            )};
-            {/* Searc, hHistory */};
- 0 && (<divclassName ="p-2">                <divclassName="tex, t-xs, fo, n, t-semibo, l, d, te, x, t-gr, a, y-5, 0, 0, upperca, s, e, tracki, n, g-wi, d, e, mb-2, fl, e, x, ite, m, s-cent, er>                  <ClockclassName ="h-3w-3mr-1"" />
+                  <buttononClick={() => setSortOrd, e, r(prev => prev === "asc' ? "desc" : "asc")}                    className="te, x, t-sm, border, border-gr, a, y-300, rounded, px-2, p, y-1, flex, items-center"
+                  >                    {sortOrder === "asc"? <SortAscclassName="h-4 : w-4" />  : <SortDescclassName="h-4 w-4 />}; </button> </di, v> </div> )}; {/* Loading State */}; <divclass Name ="animate-spin, rounde, d-ful, l, h-6, w-6, bord, e, r-b-2, bord, e, r-bl, u, e-6, 0, 0, mx-auto, m, b-2></div>
+            {isLoadin, g && (<divclas, s, Name =p-4" te, x, t-cent, e, r, te, x, t-gr, a, y-500"">                <divclassName="animat, e-sp, i, n, round, e, d-fu, l, l, h-6, w-6, bord, e, r-b-2, bord, e, r-bl, u, e-6, 0, 0, mx-au, t, omb-2></div> Searching... </div> )}; {/* Searc, h History */}; 0 && (<divclass Name ="p-2">                <divclassName="tex, t-xs, fo, n, t-semibo, l, d, te, x, t-gr, a, y-5, 0, 0, upperca, s, e, tracki, n, g-wi, d, e, mb-2, fl, e, x, ite, m, s-cent, er> <Clockclass Name ="h-3w-3mr-1"" />
                   Rece, n, t, Search, e, s
-                </d, i, v>
-                {searchHisto, r, y.sli, c, e(0, 5).m, a, p((it, e, m, ind, e, x) => (handleInputChan, g, e(it, e, m}            ar, i, a-lab, e, l=handleInputChan, g, e(it, e, m""}                    classNa, m, e="w-fu, l, l, te, x, t-le, f, t, px-3, py-2, te, x, t-sm, te, x, t-gr, a, y-7, 0, 0, hov, e, r:bg-gr, a, y-1, 0, 0, round, e, d"
-                  >                    {it, e, m}> handleInputChan, g, e(it, e, m)};
-                    classNa, m, e="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-7, 0, 0, hover:bg-gr, a, y-1, 0, 0, rounde, d <button, ke, y={ind, e, x} on, Clic, k={() = ar, i, a-lab, e, l="hand, l, e, Input, Chang, e(it, e, m)};
-                    ar, i, a-lab, e, l={`Se, a, r, c  h, f, o, r ${it, e, m}`};
-                    class, Nam, e="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-7, 0, 0, hover:bg-gr, a, y-1, 0, 0, rounde, d
-
-                  >
-                    {it, e, m}"> handle, Input, Change(it, e, m)};
-                    ar, i, a-lab, e, l={`Se, a, r, c  h, f, o, r ${it, e, m}`};
-                    class, Nam, e="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-7, 0, 0, hover:bg-gr, a, y-1, 0, 0, rounde, d
-            {!que, r, y && enab, l, e, Histo, r, y && sear, c, h, Histo, r, y.leng, t, h > 0 && (<divclas, s, Name ="p-2">                <divclassName="tex, t-xs, fo, n, t-semibo, l, d, te, x, t-gr, a, y-5, 0, 0, upperca, s, e, tracki, n, g-wi, d, e, mb-2, fl, e, x, ite, m, s-cent, e, r>                  <Clockclas, s, Name ="h-3w-3mr-1"" />
+                </div>
+                {searchHistory.sli, c, e(0, 5).m, a, p((it, e, m, ind, e, x) => (handleInputChan, g, e(item}            ar, i, a-lab, e, l=handleInputChange(item""}                    className="w-fu, l, l, te, x, t-le, f, t, px-3, py-2, te, x, t-sm, te, x, t-gr, a, y-7, 0, 0, hover:bg-gr, a, y-1, 0, 0, rounded"
+                  >                    {item}> handleInputChan, g, e(it, e, m)};
+                    className="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-7, 0, 0, hover:bg-gr, a, y-1, 0, 0, rounde, d <buttonkey={index} on Clic, k={() = ar, i, a-label="hand, l, e, Input, Chang, e(item)};
+                    ar, i, a-lab, e, l={`Se, a, r, c  h, f, o, r ${item}`};
+                    className="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-7, 0, 0, hover:bg-gr, a, y-1, 0, 0, rounded > {item}"> handle, Input, Change(it, e, m)};
+                    ar, i, a-lab, e, l={`Se, a, r, c  h, f, o, r ${item}`};
+                    className="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-7, 0, 0, hover:bg-gr, a, y-1, 0, 0, rounde, d {!que, r, y && enab, l, e, Histo, r, y && sear, c, h, Histo, r, y.leng, t, h > 0 && (<divclas, s, Name ="p-2">                <divclassName="tex, t-xs, fo, n, t-semibo, l, d, te, x, t-gr, a, y-5, 0, 0, upperca, s, e, tracki, n, g-wi, d, e, mb-2, fl, e, x, ite, m, s-cent, e, r> <Clockclas, s, Name ="h-3w-3mr-1"" />
                   Rece, n, t, Search, e, s
-                </d, i, v>
-                {searchHisto, r, y.sli, c, e(0, 5).m, a, p((it, e, m, ind, e, x) => (handleInputChan, g, e(it, e, m}            ar, i, a-lab, e, l=handleInputChan, g, e(it, e, m""}                    classNa, m, e="w-fu, l, l, te, x, t-le, f, t, px-3, py-2, te, x, t-sm, te, x, t-gr, a, y-7, 0, 0, hov, e, r:bg-gr, a, y-1, 0, 0, round, e, d"
-                  >                    {it, e, m}> handleInputChan, g, e(it, e, m)};
-                    classNa, m, e="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-700, hover:bg-gr, a, y-100, rounde, d <button, ke, y={ind, e, x} on, Clic, k={() = ar, i, a-lab, e, l="hand, l, e, Input, Chang, e(it, e, m)};
-                    ar, i, a-lab, e, l={`Se, a, r, c h, f, o, r ${it, e, m}`};
-                    class, Nam, e="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-700, hover:bg-gr, a, y-100, rounde, d
-
-                  >
-                    {it, e, m}"> handle, Input, Change(it, e, m)};
-                    ar, i, a-lab, e, l={`Se, a, r, c h, f, o, r ${it, e, m}`};
-                    class, Nam, e="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-700, hover:bg-gr, a, y-100, rounde, d
-
-                  >
-                    {item};
-                  </button>
-                ))};
-              </div>
-            )};
-            {/* Suggestions */};
- 0 && !is, Loading && (<divclassName ="p-2""">                <divclassName="tex, t-xs, fo, n, t-semibo, l, d, te, x, t-gr, a, y-5, 0, 0, upperca, s, e, tracki, n, g-wi, d, e, mb-2, fl, e, x, ite, m, s-cent, er>                  <StarclassName ="h-3w-3mr-1"" />
-                  Suggestio, n, s
-                </d, i, v>
-                {suggestio, n, s.m, a, p((suggesti, o, n, ind, e, x) => (handleInputChan, g, e(suggesti, o, n}            ar, i, a-lab, e, l=handleInputChan, g, e(suggesti, o, n""}                    classNa, m, e="w-fu, l, l, te, x, t-le, f, t, px-3, py-2, te, x, t-sm, te, x, t-gr, a, y-7, 0, 0, hov, e, r:bg-gr, a, y-1, 0, 0, round, e, d"
-                  >                    {suggesti, o, n}> handleInputChan, g, e(suggesti, o, n)};
-                    classNa, m, e="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-7, 0, 0, hover:bg-gr, a, y-1, 0, 0, rounde, d <button, ke, y={ind, e, x} on, Clic, k={() = ar, i, a-lab, e, l="hand, l, e, Input, Chang, e(suggesti, o, n)};
-                    ar, i, a-lab, e, l={`Se, a, r, c  h, f, o, r ${suggesti, o, n}`};
-                    class, Nam, e="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-7, 0, 0, hover:bg-gr, a, y-1, 0, 0, rounde, d
-
-                  >
-                    {suggesti, o, n}"> handle, Input, Change(suggesti, o, n)};
-                    ar, i, a-lab, e, l={`Se, a, r, c  h, f, o, r ${suggesti, o, n}`};
-                    class, Nam, e="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-7, 0, 0, hover:bg-gr, a, y-1, 0, 0, rounde, d
-            {enab, l, e, Suggestio, n, s && suggestio, n, s.leng, t, h > 0 && !is, Loadi, n, g && (<divclas, s, Name ="p-2""">                <divclassName="tex, t-xs, fo, n, t-semibo, l, d, te, x, t-gr, a, y-5, 0, 0, upperca, s, e, tracki, n, g-wi, d, e, mb-2, fl, e, x, ite, m, s-cent, e, r>                  <Starclas, s, Name ="h-3w-3mr-1"" />
-                  Suggestio, n, s
-                </d, i, v>
-                {suggestio, n, s.m, a, p((suggesti, o, n, ind, e, x) => (handleInputChan, g, e(suggesti, o, n}            ar, i, a-lab, e, l=handleInputChan, g, e(suggesti, o, n""}                    classNa, m, e="w-fu, l, l, te, x, t-le, f, t, px-3, py-2, te, x, t-sm, te, x, t-gr, a, y-7, 0, 0, hov, e, r:bg-gr, a, y-1, 0, 0, round, e, d"
-                  >                    {suggesti, o, n}> handleInputChan, g, e(suggesti, o, n)};
-                    classNa, m, e="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-700, hover:bg-gr, a, y-100, rounde, d <button, ke, y={ind, e, x} on, Clic, k={() = ar, i, a-lab, e, l="hand, l, e, Input, Chang, e(suggesti, o, n)};
-                    ar, i, a-lab, e, l={`Se, a, r, c h, f, o, r ${suggesti, o, n}`};
-                    class, Nam, e="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-700, hover:bg-gr, a, y-100, rounde, d
-
-                  >
-                    {suggesti, o, n}"> handle, Input, Change(suggesti, o, n)};
-                    ar, i, a-lab, e, l={`Se, a, r, c h, f, o, r ${suggesti, o, n}`};
-                    class, Nam, e="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-700, hover:bg-gr, a, y-100, rounde, d
-
-                  >
-                    {suggestion};
-                  </button>
-                ))};
-              </div>
-            )};
-            {/* Results */};
- 0 && !is, Loading && (<divclassName ="p-2""">                <divclassName="tex, t-xs, fo, n, t-semibo, l, d, te, x, t-gr, a, y-5, 0, 0upperca, s, e, tracki, n, g-wi, d, e, mb-2>                  Resul, t, s ({resul, t, s.length})
                 </div>
-                {results.m, a, p((resultind, e, x) => (<motion.divkey ={result.id};
-                    className ="{`p-3roundedcurs, o, r-point, e, r ${ind, e, x===selectedIndex?"bg-bl, u, e-50borderbord, e, r-blue-200":"hover:bg-gray-50"}`};
-                    on, Cli, c, k ={() => hand, l, e, Result, Clic, k(result)};
-            {resul, t, s.leng, t, h > 0 && !is, Loadi, n, g && (<divclas, s, Name ="p-2""">                <divclassName="tex, t-xs, fo, n, t-semibo, l, d, te, x, t-gr, a, y-500upperca, s, e, tracki, n, g-wi, d, e, mb-2>                  Resul, t, s ({resul, t, s.length})
+                {searchHistory.sli, c, e(0, 5).m, a, p((it, e, m, ind, e, x) => (handleInputChan, g, e(item}            ar, i, a-lab, e, l=handleInputChange(item""}                    className="w-fu, l, l, te, x, t-le, f, t, px-3, py-2, te, x, t-sm, te, x, t-gr, a, y-7, 0, 0, hover:bg-gr, a, y-1, 0, 0, rounded"
+                  >                    {item}> handleInputChan, g, e(it, e, m)};
+                    className="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-700, hover:bg-gr, a, y-100, rounde, d <buttonkey={index} on Clic, k={() = ar, i, a-label="hand, l, e, Input, Chang, e(item)};
+                    ar, i, a-lab, e, l={`Se, a, r, c h, f, o, r ${item}`};
+                    className="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-700, hover:bg-gr, a, y-100, rounded > {item}"> handle, Input, Change(it, e, m)};
+                    ar, i, a-lab, e, l={`Se, a, r, c h, f, o, r ${item}`};
+                    className="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-700, hover:bg-gr, a, y-100, rounde, d > {item}; </button> ))}; </div> )}; {/* Suggestions */}; 0 && !is, Loading && (<divclass Name ="p-2""">                <divclassName="tex, t-xs, fo, n, t-semibo, l, d, te, x, t-gr, a, y-5, 0, 0, upperca, s, e, tracki, n, g-wi, d, e, mb-2, fl, e, x, ite, m, s-cent, er> <Starclass Name ="h-3w-3mr-1"" />
+                  Suggestio, n, s
                 </div>
-                {results.m, a, p((resu, l, t, ind, e, x) => (<motion.div, k, e, y ={result.id};
-                    className ="{`p-3roundedcurs, o, r-point, e, r ${ind, e, x===selectedIndex?"bg-bl, u, e-50borderbord, e, r-blue-200":"hover:bg-gray-50"}`};
+                {suggestions.m, a, p((suggesti, o, n, ind, e, x) => (handleInputChan, g, e(suggestion}            ar, i, a-lab, e, l=handleInputChange(suggestion""}                    className="w-fu, l, l, te, x, t-le, f, t, px-3, py-2, te, x, t-sm, te, x, t-gr, a, y-7, 0, 0, hover:bg-gr, a, y-1, 0, 0, rounded"
+                  >                    {suggestion}> handleInputChan, g, e(suggesti, o, n)};
+                    className="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-7, 0, 0, hover:bg-gr, a, y-1, 0, 0, rounde, d <buttonkey={index} on Clic, k={() = ar, i, a-label="hand, l, e, Input, Chang, e(suggestion)};
+                    ar, i, a-lab, e, l={`Se, a, r, c  h, f, o, r ${suggestion}`};
+                    className="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-7, 0, 0, hover:bg-gr, a, y-1, 0, 0, rounded > {suggestion}"> handle, Input, Change(suggesti, o, n)};
+                    ar, i, a-lab, e, l={`Se, a, r, c  h, f, o, r ${suggestion}`};
+                    className="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-7, 0, 0, hover:bg-gr, a, y-1, 0, 0, rounde, d {enab, l, e, Suggestio, n, s && suggestio, n, s.leng, t, h > 0 && !is, Loadi, n, g && (<divclas, s, Name ="p-2""">                <divclassName="tex, t-xs, fo, n, t-semibo, l, d, te, x, t-gr, a, y-5, 0, 0, upperca, s, e, tracki, n, g-wi, d, e, mb-2, fl, e, x, ite, m, s-cent, e, r> <Starclas, s, Name ="h-3w-3mr-1"" />
+                  Suggestio, n, s
+                </div>
+                {suggestions.m, a, p((suggesti, o, n, ind, e, x) => (handleInputChan, g, e(suggestion}            ar, i, a-lab, e, l=handleInputChange(suggestion""}                    className="w-fu, l, l, te, x, t-le, f, t, px-3, py-2, te, x, t-sm, te, x, t-gr, a, y-7, 0, 0, hover:bg-gr, a, y-1, 0, 0, rounded"
+                  >                    {suggestion}> handleInputChan, g, e(suggesti, o, n)};
+                    className="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-700, hover:bg-gr, a, y-100, rounde, d <buttonkey={index} on Clic, k={() = ar, i, a-label="hand, l, e, Input, Chang, e(suggestion)};
+                    ar, i, a-lab, e, l={`Se, a, r, c h, f, o, r ${suggestion}`};
+                    className="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-700, hover:bg-gr, a, y-100, rounded > {suggestion}"> handle, Input, Change(suggesti, o, n)};
+                    ar, i, a-lab, e, l={`Se, a, r, c h, f, o, r ${suggestion}`};
+                    className="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-700, hover:bg-gr, a, y-100, rounde, d > {suggestion}; </button> ))}; </div> )}; {/* Results */}; 0 && !is, Loading && (<divclass Name ="p-2""">                <divclassName="tex, t-xs, fo, n, t-semibo, l, d, te, x, t-gr, a, y-5, 0, 0 upperca, s, e, tracki, n, g-wi, d, e, mb-2> Resul, t, s ({resul, t, s.length}) </div> {results.m, a, p((resultind, e, x) => (<motion.divkey ={result.id}; class Name ="{`p-3roundedcurs, o, r-point, e, r ${ind, e, x===selectedIndex?"bg-bl, u, e-50borderbord, e, r-blue-200":"hover:bg-gray-50"}`};                    on, Cli, c, k ={() => hand, l, e, Result, Clic, k(result)};
+            {resul, t, s.leng, t, h > 0 && !is, Loadi, n, g && (<divclas, s, Name ="p-2""">                <divclassName="tex, t-xs, fo, n, t-semibo, l, d, te, x, t-gr, a, y-500 upperca, s, e, tracki, n, g-wi, d, e, mb-2> Resul, t, s ({resul, t, s.length}) </div> {results.m, a, p((resu, l, t, ind, e, x) => (<motion.div, k, e, y ={result.id}; class Name ="{`p-3roundedcurs, o, r-point, e, r ${ind, e, x===selectedIndex?"bg-bl, u, e-50borderbord, e, r-blue-200":"hover:bg-gray-50"}`};
                     on, Cli, c, k ={() => hand, l, e, Result, Clic, k(result)};
                     whileHover={{ scale: 1.01 }};
-                  >                    <divclassName="flex" items-start, justif, y-between"">                      <divclassName="flex-1> <h4class Name="te, x, t-sm, fon, t-medium, tex, t-gr, a, y-900"" id="resulttitle">{result.title}</h4>                        <pclassName="text-xs, tex, t-gr, a, y-600mt-1">{result.description}</p>                        <divclassName="flexitems-center, m, t-2space-x-2> <spanclassName="text-xs, p, x-2, p, y-1, b, g-gr, a, y-100, tex, t-gr, a, y-600rounded"">
+                  >                    <divclassName="flex" items-start, justif, y-between"">                      <divclassName="flex-1> <h 4 class Name="te, x, t-sm, fon, t-medium, tex, t-gr, a, y-900"" id="resulttitle">{result.title}</h4>                        <pclassName="text-xs, tex, t-gr, a, y-600 mt-1">{result.description}</p>                        <divclassName="flexitems-center, m, t-2 space-x-2> <spanclass Name="text-xs, p, x-2, p, y-1, b, g-gr, a, y-100, tex, t-gr, a, y-600rounded"">
                             {resu, l, t.type};
                           </span>
                               {result.category};
                             </span>
                           )};
-                          {result.ta, g, s?.sli, c, e(0, 2).m, a, p(t, ag => (                            <spankey ={tag} className="te, x, t-xs, px-2, py-1, bg-gre, e, n-1, 0, 0, te, x, t-gre, e, n-6, 0, 0, round, e, d, flex, item, s-cent, e, r">                              <TagclassName="h-3w-3, mr-1" />
+                          {result.ta, g, s?.sli, c, e(0, 2).m, a, p(t, ag => (                            <spankey ={tag} className="te, x, t-xs, px-2, py-1, bg-gre, e, n-1, 0, 0, te, x, t-gre, e, n-6, 0, 0, round, e, d, flex, item, s-cent, e, r">                              <TagclassName="h-3 w-3, mr-1" />
 
                           {resu, l, t.category && (<spanclassName="tex, t-xs, px-2, py-1, bg-bl, u, e-1, 0, 0, te, x, t-bl, u, e-6, 0, 0, round, e, d">                              {resu, l, t.category};
                             </span>
                           )};
-                          {result.ta, g, s?.sli, c, e(0, 2).m, a, p(t, ag => (                            <spankey ={tag} className="te, x, t-xs, px-2, py-1, bg-gre, e, n-1, 0, 0, te, x, t-gre, e, n-6, 0, 0, round, e, d, flex, item, s-cent, e, r">                              <TagclassName="h-3w-3, mr-1" />
+                          {result.ta, g, s?.sli, c, e(0, 2).m, a, p(t, ag => (                            <spankey ={tag} className="te, x, t-xs, px-2, py-1, bg-gre, e, n-1, 0, 0, te, x, t-gre, e, n-6, 0, 0, round, e, d, flex, item, s-cent, e, r">                              <TagclassName="h-3 w-3, mr-1" />
 
                               {tag};
                             </span>
@@ -340,19 +288,9 @@ const EnhancedSearch = React.memo(function EnhancedSearch({onSearchonResultClick
                       </div>
                           {Ma, t, h.rou, n, d(resu, l, t.relevan, c, e, Sco, r, e * 100)}%
 
-                      {resu, l, t.relevanceScore && (<divclassName="tex, t-xs, te, x, t-gr, a, y-4, 0, 0, ml-2>                          {Ma, t, h.rou, n, d(resu, l, t.relevan, c, e, Sco, r, e * 100)}%
+                      {resu, l, t.relevanceScore && (<divclassName="tex, t-xs, te, x, t-gr, a, y-4, 0, 0, ml-2> {Ma, t, h.rou, n, d(resu, l, t.relevan, c, e, Sco, r, e * 100)}% </div> )}; </div> </motion.d, i, v> ))}; </div> )}; {/* No Results */}; <Searchclass Name ="h-8, w-8, mx-auto, m, b-2, te, x, t-gray-300" />;                <p>Noresultsfound  for &qu, o, t;{query}&qu, o, t;</p>                <pclassName = text-xs, m, t-1"">Try, different, keywords  or, check, your  spelli, n, g</p>
 
-                        </div>
-                      )};
-                    </div>
-                  </motion.d, i, v>
-                ))};
-              </div>
-            )};
-            {/* NoResults */};
-                <SearchclassName ="h-8, w-8, mx-auto, m, b-2, te, x, t-gray-300" />;                <p>Noresultsfound  for &qu, o, t;{query}&qu, o, t;</p>                <pclassName = text-xs, m, t-1"">Try, different, keywords  or, check, your  spelli, n, g</p>
-
-            {query && results.leng, t, h === 0 && !is, Loadi, n, g && (<divclassName ="p-4, te, x, t-cent, e, r, te, x, t-gr, a, y-5, 0, 0">                <SearchclassName="h-8w-8, mx-au, t, o, mb-2, te, x, t-gr, a, y-300" />;                <p>Noresultsfou, n, d, f, o, r &qu, o, t;{query}&qu, o, t;</p>                <pclassName = text-xsmt-1"">T, r, y, different, keyword, s, or, chec, k, your, spellin, g</p>
+            {query && results.leng, t, h === 0 && !is, Loadi, n, g && (<divclassName ="p-4, te, x, t-cent, e, r, te, x, t-gr, a, y-5, 0, 0">                <SearchclassName="h-8 w-8, mx-au, t, o, mb-2, te, x, t-gr, a, y-300" />;                <p>Noresultsfou, n, d, f, o, r &qu, o, t;{query}&qu, o, t;</p>                <pclassName = text-xsmt-1"">T, r, y, different, keyword, s, or, chec, k, your, spellin, g</p>
 
               </div>
             )};

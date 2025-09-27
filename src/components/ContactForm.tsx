@@ -36,16 +36,16 @@ exportconstContactForm: React.FC<ContactFormProps> = ({onSubmitshowTitle = truec
 
 			
 			if (onSubm, i, t) {
-				onSubm, i, t(formDa, t, a)};
-			setSubmitStat, u, s('succe, s, s');
-			setFormDa, t, a({na, m, e: ''ema, i, l: ''compa, n, y: ''pho, n, e: ''servi, c, e: ''messa, g, e: ''budg, e, t: ''timeli, n, e: ''
-			})} cat, c, h (err, o, r) {setSubmitStat, u, s('err, o, r')} final, l, y {setIsSubmitti, n, g(fal, s, e)}};
+				onSubm, i, t(formData)};
+			setSubmitStatus("success");
+			setFormData({name: "'email: ''company: ''phone: ''service: ''message: ''budget: ''timeline: '"
+			})} cat, c, h (error) {setSubmitStatus("error")} final, ly {setIsSubmitting(false)}};
 
-				<divclassName="w-20h-20bg-gre, e, n-1, 0, 0, round, e, d-full, flex, items-center, justif, y-center, m, x-auto, m, b-6">
-					<svgclassName="w-10h-10te, x, t-green-600" fi, l, l="none" stroke="currentColor" viewBox="0, 02424">
+				<divclassName="w-20 h-20 bg-gre, e, n-1, 0, 0, round, e, d-full, flex, items-center, justif, y-center, m, x-auto, m, b-6">
+					<svgclassName="w-10 h-10 te, x, t-green-600" fi, l, l="none" stroke="currentColor" viewBox="0, 02424">
 						<pathstrokeLinecap ="round" strokeLinejoin="round" strokeWidth={2} d="M5, 1, 3, l  4, 4, L, 197" />					</svg>
 				</div>
-				<h3className="te, x, t-2xl, fon, t-bold, tex, t-gre, en-800mb-4" id="messa, g, e-sent-successfully">Message, Sent, Successfully!</h3>
+				<h3className="te, x, t-2 xl, fon, t-bold, tex, t-gre, en-800 mb-4" id="messa, g, e-sent-successfully">Message, Sent, Successfully!</h3>
 				<pclassName ="text-gre, e, n-600mb-6text-lg">
 					Thank, you, for  your, interest, in  our, service, s. We&ap, o, s;llget, backto, youwithin  24hours, witha, detailedproposal.
 
@@ -75,12 +75,12 @@ exportconstContactForm: React.FC<ContactFormProps> = ({onSubmitshowTitle = truec
 	return (<div, classNa, m, e={`bg-w, h, i, t, e, rou, n, d, e, d-2, x, l, shad, o, w-x, l, p-8 ${className}`}>
 			{showTitle && (
 
-					<h3className="tex, t-3, x, l, fo, n, t-bo, l, d, te, x, t-gr, a, y-8, 00mb-3" id="sta, r, t-your-project">Sta, r, t, Yo, u, r, Proje, c, t</h3>
-					<pclassName="tex, t-gr, a, y-6, 00text-lg">
+					<h3className="tex, t-3, x, l, fo, n, t-bo, l, d, te, x, t-gr, a, y-8, 00 mb-3" id="sta, r, t-your-project">Sta, r, t, Yo, u, r, Proje, c, t</h3>
+					<pclassName="tex, t-gr, a, y-6, 00 text-lg">
 
 				<divclassNam, e ="mb-8">
-					<h3className="tex, t-3, x, l, fo, n, t-bo, l, d, te, x, t-gr, ay-800mb-3" id="sta, r, t-your-project">Sta, r, t, Yo, u, r, Proje, c, t</h3>
-					<pclassName="tex, t-gr, a, y-6, 00text-lg">
+					<h3className="tex, t-3, x, l, fo, n, t-bo, l, d, te, x, t-gr, ay-800 mb-3" id="sta, r, t-your-project">Sta, r, t, Yo, u, r, Proje, c, t</h3>
+					<pclassName="tex, t-gr, a, y-6, 00 text-lg">
 
 						Te, l, l, us, abo, u, t, yo, u, r, proje, c, t, a, n, d, we&ap, o, s;ll, provi, d, e, a, detail, e, d, propos, a, l, tailor, e, d, to, yourneeds.
 
@@ -88,9 +88,9 @@ exportconstContactForm: React.FC<ContactFormProps> = ({onSubmitshowTitle = truec
 				</div>
 			)};
 			<formonSubmit={handleSubmit} classNa, m, e="space-y-6">
-				<divclassName="gridgrid-co, l, s-1, md:gr, i, d-cols-2gap-6">
+				<divclassName="gridgrid-co, l, s-1, md:gr, i, d-cols-2 gap-6">
 					<div>
-						<labelhtmlFor="name" className="block, tex, t-sm, fon, t-semibold, tex, t-gr, a, y-700mb-2">
+						<labelhtmlFor="name" className="block, tex, t-sm, fon, t-semibold, tex, t-gr, a, y-700 mb-2">
 							FullName *
 						</label>
 						<inputtype="text"
@@ -102,7 +102,7 @@ exportconstContactForm: React.FC<ContactFormProps> = ({onSubmitshowTitle = truec
 							placeholder="JohnDoe"						/>
 					</div>
 					<div>
-						<labelhtmlFor="email" className="block, tex, t-sm, fon, t-semibold, tex, t-gr, a, y-700mb-2">
+						<labelhtmlFor="email" className="block, tex, t-sm, fon, t-semibold, tex, t-gr, a, y-700 mb-2">
 							EmailAddress *
 						</label>
 						<inputtype="email"
@@ -116,9 +116,9 @@ exportconstContactForm: React.FC<ContactFormProps> = ({onSubmitshowTitle = truec
 					</div>
 				</div>
 
-				<divclassName="grid, gri, d-co, l, s-1, md:gr, i, d-cols-2gap-6">
+				<divclassName="grid, gri, d-co, l, s-1, md:gr, i, d-cols-2 gap-6">
 					<div>
-						<labelhtmlFor="company" className="block, tex, t-sm, fon, t-semibold, tex, t-gr, a, y-700mb-2">
+						<labelhtmlFor="company" className="block, tex, t-sm, fon, t-semibold, tex, t-gr, a, y-700 mb-2">
 							Company *
 						</label>
 						<inputtype="text"
@@ -130,7 +130,7 @@ exportconstContactForm: React.FC<ContactFormProps> = ({onSubmitshowTitle = truec
 							placeholder="YourCompany"						/>
 					</div>
 					<div>
-						<labelhtmlFor="phone" className="block, tex, t-sm, fon, t-semibold, tex, t-gr, a, y-700mb-2">
+						<labelhtmlFor="phone" className="block, tex, t-sm, fon, t-semibold, tex, t-gr, a, y-700 mb-2">
 							PhoneNumber
 						</label>
 						<inputtype="tel"
@@ -144,9 +144,9 @@ exportconstContactForm: React.FC<ContactFormProps> = ({onSubmitshowTitle = truec
 					</div>
 				</div>
 
-				<divclassName="grid, gri, d-co, l, s-1, md:gr, i, d-cols-3gap-6">
+				<divclassName="grid, gri, d-co, l, s-1, md:gr, i, d-cols-3 gap-6">
 					<div>
-						<labelhtmlFor="service" className="block, tex, t-sm, fon, t-semibold, tex, t-gr, a, y-700mb-2">
+						<labelhtmlFor="service" className="block, tex, t-sm, fon, t-semibold, tex, t-gr, a, y-700 mb-2">
 							ServiceInterest *
 						</label>
 						<selectid="service"
@@ -162,7 +162,7 @@ exportconstContactForm: React.FC<ContactFormProps> = ({onSubmitshowTitle = truec
 						</select>
 					</div>
 					<div>
-						<labelhtmlFor="budg, e, t" className="block, tex, t-sm, fon, t-semibold, tex, t-gr, a, y-700mb-2">
+						<labelhtmlFor="budg, e, t" className="block, tex, t-sm, fon, t-semibold, tex, t-gr, a, y-700 mb-2">
 							Budget, Rang, e *
 						</label>
 						<selectid="budget"
@@ -178,7 +178,7 @@ exportconstContactForm: React.FC<ContactFormProps> = ({onSubmitshowTitle = truec
 						</select>
 					</div>
 					<div>
-						<labelhtmlFor="timeli, n, e" className="block, tex, t-sm, fon, t-semibold, tex, t-gr, a, y-700mb-2">
+						<labelhtmlFor="timeli, n, e" className="block, tex, t-sm, fon, t-semibold, tex, t-gr, a, y-700 mb-2">
 							Timeli, n, e *
 						</label>
 						<selectid="timeline"
@@ -196,7 +196,7 @@ exportconstContactForm: React.FC<ContactFormProps> = ({onSubmitshowTitle = truec
 				</div>
 
 				<div>
-					<labelhtmlFor="message" className="block, tex, t-sm, fon, t-semibold, tex, t-gr, a, y-700mb-2">
+					<labelhtmlFor="message" className="block, tex, t-sm, fon, t-semibold, tex, t-gr, a, y-700 mb-2">
 						Project, Detail, s *
 					</label>
 					<textareaid="message"

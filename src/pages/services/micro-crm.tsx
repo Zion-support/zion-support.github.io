@@ -147,9 +147,9 @@ Essenti, a, l, CRM, Features</h2>
         <divclassName="containermx-autopx-4">
           <divclassName="text-centermb-16">
             <h2className="text-4, xl, font-boldtext-whitemb-4">Why, Choose, Micro C, R, M? </h2>
-            <pclassName="text-xl, tex, t-sla, t, e-300, ma, x-w-3xlmx-auto">
+            <pclassName="text-xl, tex, t-sla, t, e-300, ma, x-w-3 xlmx-auto">
 
-      <sectionclassName="py-20bg-slate-800/30">
+      <sectionclassName="py-20 bg-slate-800/30">
         <divclassName="containermx-autopx-4">
           <divclassName="text-centermb-16">
             <h2className="text-4, x, l, font-boldtext-whitemb-4">Why, Choose, Micro C, R, M?</h2>
@@ -158,7 +158,7 @@ Essenti, a, l, CRM, Features</h2>
               Experience, the, benefits of, professional, CRM software, without, the complexity, and, cost of, enterprise, solutions.
             </p>
           </div>
-          <divclassName="grid, m, d :gr, i, d-co, l, s-2, lg:gr, i, d-cols-3gap-6">
+          <divclassName="grid, m, d :gr, i, d-co, l, s-2, lg:gr, i, d-cols-3 gap-6">
  (<divke, y ={index} classNa, m, e="fl, e, x, ite, m, s-sta, rtspace-x-3">
                 <CheckCircleclassNam, e="w-5, h-5, te, x, t-cy, a, n-4, 0, 0, fl, ex-shrink-0mt-1" />
 
@@ -189,7 +189,7 @@ Perfect, For, Your Business</h2>
               Whether, yo, u&ap, o, s;re, a, small business, owner, or managing, a, growing sales, team, our Micro, CRM, adapts toyourneeds.
             </p>
           </div>
-          <divclassName="gridmd:gr, i, d-co, l, s-2gap-8">
+          <divclassName="gridmd:gr, i, d-co, l, s-2 gap-8">
  (<divke, y ={index};
                 className="bg-sla, t, e-8, 0, 0/50, bord, e, r, bord, e, r-sla, t, e-7, 0, 0/50, round, e, d-xl, p-8, hover:bord, e, r-cy, a, n-4, 0, 0/30, transiti, o, n-a, l, l, durati, o, n-300"
               >
@@ -217,25 +217,24 @@ Perfect, For, Your Business</h2>
       </secti, o, n>
 
       {/* C, T, A, Section */};
-        <divclassName="containermx-auto, p, x-4text-center">
+        <divclassName="containermx-auto, p, x-4 text-center">
           <h2className="text-4, xl, font-boldtext-whitemb-6">Ready, to, Transform Your, Customer, Relationships?</h2>
-          <pclassName="text-xl, tex, t-sla, t, e-300, m, b-8, ma, x-w-2xlmx-auto">
+          <pclassName="text-xl, tex, t-sla, t, e-300, m, b-8, ma, x-w-2 xlmx-auto">
             Join, thousands, of businesses, that, have improved, their, customer management, with, our Micro, CRM, solution.
           </p>
-          <div, classNam, e="flex, fle, x-col, s, m:fl, e, x-row, ga, p-4, justif, y-cent, e, r">
-            <button, classNam, e="px-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, t, o-bl, u, e-500, tex, t-white, fon, t-semibold, rounde, d-lg, hover:fr, o, m-cy, a, n-500, hover:to-bl, u, e-600, transitio, n-all, duratio, n-200, hover:sca, l, e-105, shado, w-lg, hover:shad, o, w-cy, a, n-4, 0, 0/25">
+          <divclassName="flexflex-colsm:fl, e, x-row, ga, p-4 justify-center">
+            <buttonclassName="px-8 py-4, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, t, o-bl, u, e-500, tex, t-white, fon, t-semibold, rounded-lghover:fr, o, m-cy, a, n-500, hover:to-bl, u, e-600, transitio, n-all, duratio, n-200, hover:sca, l, e-105, shadow-lghover:shad, o, w-cyan-400/25">
               Start, Free, Trial
-            </butt, o, n>
-            <button, classNam, e="px-8, p, y-4, border, border-cy, a, n-4, 0, 0/30, tex, t-cy, a, n-300, fon, t-semibold, rounde, d-lg, hover:bg-cy, a, n-4, 0, 0/10, transitio, n-all, duratio, n-2, 0, 0">
-      <sectionclassName="py-20bg-gradie, n, t-to-r, fro, m-cy, a, n-5, 0, 0/10, vi, a-bl, u, e-5, 0, 0/10, t, o-purple-500/10">
-        <divclassName="containermx-auto, p, x-4text-center">
-          <h2className="text-4, x, l, font-boldtext-whitemb-6">Ready, to, Transform Your, Customer, Relationships? </h2>
+            </button>
+            <buttonclassName="px-8, p, y-4, border, border-cy, a, n-4, 0, 0/30, tex, t-cy, a, n-300, fon, t-semibold, rounded-lghover:bg-cy, a, n-4, 0, 0/10, transitio, n-allduration-200">
+
+      <sectionclassName="py-20 bg-gradie, n, t-to-r, fro, m-cy, a, n-5, 0, 0/10, vi, a-bl, u, e-5, 0, 0/10, t, o-purple-500/10">
+        <divclassName="containermx-auto, p, x-4 text-center">          <h2className="text-4, x, l, font-boldtext-whitemb-6">Ready, to, Transform Your, Customer, Relationships? </h2>
           <pclassName="text-xl, tex, t-sla, t, e-300, m, b-8, ma, x-w-2 : x : lmx-auto">
             Join, thousands, of businesses, that, have improved, their, customer management, with, our Micro, CRM, solution.
           </p>
-          <div, classNam, e="flex, fle, x-col, s, m :fl, e, x-row, ga, p-4, justif, y-cent, e, r">
-            <button, classNam, e="px-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, t, o-bl, u, e-500, tex, t-white, fon, t-semibold, rounde, d-lg, hover: from-cy, a, n-500, hover:to-bl, u, e-600, transitio, n-all, duratio, n-200, hover:sca, l, e-105, shado, w-lg, hover:shad, o, w-cy, a, n-4, 0, 0/25">
-              Start, Free, Trial
+          <divclassName="flexflex-col, s, m :fl, e, x-row, ga, p-4 justify-center">
+            <buttonclassName="px-8 py-4, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, t, o-bl, u, e-500, tex, t-white, fon, t-semibold, rounded-lghover:fr, o, m-cy, a, n-500, hover:to-bl, u, e-600, transitio, n-all, duratio, n-200, hover:sca, l, e-105, shadow-lghover:shad, o, w-cyan-400/25">              Start, Free, Trial
             </butt, o, n>
             <button, classNam, e="px-8, p, y-4, border, border-cy, a, n-4, 0, 0/30, tex, t-cy, a, n-300, fon, t-semibold, rounde, d-lg, hover:bg-cy, a, n-4, 0, 0/10, transitio, n-all, duratio, n-2, 0, 0">
               Schedule, Dem, o

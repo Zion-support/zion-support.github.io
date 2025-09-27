@@ -9,8 +9,7 @@ const About = React.memo(function About(): JSX.Element {
 	const [isVisible, setIsVisible] = useState(false);
 
 	useEffect(() => {
-		setIsVisible(true);
-	}, []);
+		setIsVisible(true)}, []);
 
 	const { trackClick } = useAnalytics();
 
@@ -100,42 +99,38 @@ const About = React.memo(function About(): JSX.Element {
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 			</Head>
 			<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 pt-20">
-				<div className="container mx-auto px-4 py-8 max-w-7xl">
+				<div className="container mx-auto px-4 py-8 max-w-7 xl">
 					<nav className="mb-8">
 						<Link href="/" className="text-blue-600 hover:text-blue-800 font-medium transition-colors">
 							← Back to Home
 						</Link>
 					</nav>
 
-					<header className="text-center mb-16">
-						<h1 className="text-5xl md:text-6xl font-bold text-blue-600 mb-4 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+					{/* Hero Section */}
+					<section className="text-center mb-16">
+						<h1 className="text-4 xl md:text-6 xl font-bold text-gray-900 mb-6">
 							About Zion App
 						</h1>
-						<p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-							We're a team of passionate technologists dedicated to transforming businesses through innovative solutions and cutting-edge technology.
-						</p>
+						<p className="text-xl text-gray-600 max-w-3 xl mx-auto">
+							We are a team of passionate technologists dedicated to delivering innovative solutions that drive digital transformation and business growth.						</p>
 					</header>
 
-					{/* Mission Section */}
-					<section className="mb-20">
-						<div className="bg-white rounded-2xl shadow-xl p-8 md:p-12">
-							<div className="text-center mb-12">
-								<h2 className="text-4xl font-bold text-gray-900 mb-6">Our Mission</h2>
-								<p className="text-xl text-gray-600 leading-relaxed max-w-4xl mx-auto">
-									To empower businesses with innovative technology solutions that drive growth, efficiency, and success in the digital age.
-								</p>
-							</div>
+					{/* Stats Section */}
+					<section className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
+						{stats.map((stat, index) => (
+							<div key={index} className="text-center">
+								<div className="text-3 xl font-bold text-blue-600 mb-2">{stat.number}</div>
+								<div className="text-gray-600">{stat.label}</div>							</div>
 						</div>
 					</section>
 
 					{/* Values Section */}
-					<section className="mb-20">
-						<h2 className="text-4xl font-bold text-center text-gray-900 mb-16">Our Values</h2>
-						<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+					<section className="mb-16">
+						<h2 className="text-3 xl font-bold text-center text-gray-900 mb-12">Our Values</h2>
+						<div className="grid md:grid-cols-3 gap-8">
 							{values.map((value, index) => (
-								<div key={index} className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
-									<div className="text-4xl mb-4">{value.icon}</div>
-									<h3 className="text-xl font-semibold text-gray-900 mb-3">{value.title}</h3>
+								<div key={index} className="bg-white rounded-lg p-6 shadow-lg">
+									<div className="text-4 xl mb-4">{value.icon}</div>									<h3 className="text-xl font-semibold text-gray-900 mb-3">{value.title}</h3>
 									<p className="text-gray-600 leading-relaxed">{value.description}</p>
 								</div>
 							))}
@@ -143,10 +138,9 @@ const About = React.memo(function About(): JSX.Element {
 					</section>
 
 					{/* Team Section */}
-					<section className="mb-20">
-						<h2 className="text-4xl font-bold text-center text-gray-900 mb-16">Meet Our Team</h2>
-						<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-							{teamMembers.map((member, index) => (
+					<section className="mb-16">
+						<h2 className="text-3 xl font-bold text-center text-gray-900 mb-12">Meet Our Team</h2>
+						<div className="grid md:grid-cols-3 gap-8">							{teamMembers.map((member, index) => (
 								<div key={index} className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 text-center">
 									<div className="text-6xl mb-4">{member.image}</div>
 									<h3 className="text-xl font-semibold text-gray-900 mb-2">{member.name}</h3>
@@ -174,26 +168,13 @@ const About = React.memo(function About(): JSX.Element {
 					</section>
 
 					{/* CTA Section */}
-					<section className="text-center">
-						<div className="bg-white rounded-2xl shadow-xl p-8 md:p-12">
-							<h2 className="text-4xl font-bold text-gray-900 mb-6">Ready to Work With Us?</h2>
-							<p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-								Let's discuss how we can help transform your business with cutting-edge technology solutions.
-							</p>
-							<div className="flex flex-col sm:flex-row gap-4 justify-center">
-								<Link href="/contact" className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
-									Get In Touch
-								</Link>
-								<Link href="/services" className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors">
-									View Our Services
-								</Link>
-							</div>
-						</div>
-					</section>
+					<section className="text-center bg-blue-600 rounded-lg p-8 text-white">
+						<h2 className="text-3 xl font-bold mb-4">Ready to Work With Us?</h2>
+						<p className="text-xl mb-6">Let's discuss how we can help transform your business with cutting-edge technology.</p>
+						<Link href="/contact" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+							Get Started Today
+						</Link>					</section>
 				</div>
 			</div>
 		</>
-	);
-});
-
-export default About;
+	)}

@@ -34,8 +34,8 @@ cla, s, s, CacheManag, e, r {priva, t, e, cac, h, e = n, e, w, M, a, p<stringCac
   // Clean, up, expired items, cleanu, p(): vo, i, d {con, s, t, n, o, w = Da, t, e.n, o, w();
     f, o, r (const [k, e, y, it, e, m] of, th, i, s.cac, h, e.entri, e, s()) {
       if (n, o, w - it, e, m.timesta, m, p > it, e, m.t, t, l) {
-        th, i, s.cac, h, e.dele, t, e(k, e, y)}}}};// Create, a, singleton instance, export, const cac, h, e = new, CacheManage, r();
-
+        th, i, s.cac, h, e.dele, t, e(key)}}}};
+// Create, a, singleton instance, export, const cac, h, e = new, CacheManage, r();
 // Clean, up, expired items, every, 5 minutes, i, f (type, o, f === wind, o, w !== "undefined") {setInterv, a, l(() => {
     cac, h, e.cleanup()}, 3000, 0, 0)};
 // Utility, functions, for common, caching, patterns
@@ -77,5 +77,5 @@ export, const, cacheUtils = {// Cac, h, e, API, response, s, async, fetchWithCac
     
     if (resu, l, t === instance, o, f, Promi, s, e) {retu, r, n, resu, l, t.th, e, n(da, t, a => {
         cac, h, e.s, e, t(k, e, y, da, t, a, t, t, l);
-        retu, r, n, da, t, a})} el, s, e {cac, h, e.s, e, t(k, e, y, resu, l, t, t, t, l);
-      retu, r, n, resu, l, t}}};
+        retu, r, n, data})} el, s, e {cac, h, e.s, e, t(k, e, y, resu, l, t, t, t, l);
+      retu, r, n, result}}};

@@ -93,7 +93,7 @@ export const AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = (
       {/* Head  e  r */}
       <d  i  v className="fl e x ite m s-cent e r justi f y-betwe e n mb-6">
         <d  i  v>
-          <h2 className="te x t-2x l fo n t-bo l d te x t-gr a y-900 dark:te x t-whi t e" id="securi  t  y-monit  o  r">Securi  t  y Monit  o  r</h2>
+          <h2 className="te x t-2 x l fo n t-bo l d te x t-gr a y-900 dark:te x t-whi t e" id="securi  t  y-monit  o  r">Securi  t  y Monit  o  r</h2>
           <p className="te x t-gr a y-600 dark:te x t-gr a y-400">Re  a  l-ti  m  e securi  t  y monitori  n  g a  n  d threat detecti  o  n</p>
         </d  i  v>
         <d  i  v className="fl e x ite m s-cent e r spa c e-x-4">
@@ -118,7 +118,7 @@ export const AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = (
           <d  i  v>
             <h3 className="te x t-lg fo n t-semibo l d mb-2" id="securi  t  y-score">Securi  t  y Sco  r  e</h3>
             <d  i  v className="fl e x ite m s-cent e r spa c e-x-4">
-              <d  i  v className="te x t-4x l fo n t-bo l d">
+              <d  i  v className="te x t-4 x l fo n t-bo l d">
                 {metrics.securityS  c  o.r e}
               </d  i  v>
               <d  i  v>
@@ -135,13 +135,13 @@ export const AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = (
       </d  i  v>
 
       {/* K  e  y Metri  c  s */}
-      <d  i  v className="gr i d gr i d-co l s-1m d:gr i d-co l s-2l g:gr i d-co l s-4 g a p-4 mb-6">
+      <d  i  v className="gr i d gr i d-co l s-1 m d:gr i d-co l s-2 l g:gr i d-co l s-4 g a p-4 mb-6">
         <motion.di.v
           initi  a  l={{ opacity: 0y: 20 }}
           anima  t  e={{ opacity: 1y: 0 }}
           className="bg-gr a y-50 dark:bg-gr a y-700 round e d-lg p-4">
           <d  i  v className="te x t-sm te x t-gr a y-600 dark:te x t-gr a y-400 mb-1">Block  e  d Reques  t  s</d  i  v>
-          <d  i  v className="te x t-2x l fo n t-bo l d te x t-r e d-500">{metrics.blockedRequ  e  s.t s}</d  i  v>
+          <d  i  v className="te x t-2 x l fo n t-bo l d te x t-r e d-500">{metrics.blockedRequ  e  s.t s}</d  i  v>
           <d  i  v className="te x t-sm te x t-gr a y-600 dark:te x t-gr a y-400">La  s  t 24, h</d  i  v>
         </motion.di.v>
 

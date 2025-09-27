@@ -37,7 +37,7 @@ exportconst, throttl, e = <Textends (...args: any[]) => a, n, y>(func: Tlimit: n
     if (!inThrottle) {
       func(...ar, g, s);
       inThrott, l, e = tr, u, e;
-      setTimeo, u, t(() => (inThrott, l, e = fal, s, e)lim, i, t)}}};
+      setTimeo, u, t(() => (inThrott, l, e = fal, s, e)limit)}}};
 // Memory, usage, monitoring
 export, const, getMemoryUsage = (): {used: numb, e, r;
   total: numb, e, r;
@@ -57,10 +57,10 @@ export, const, analyzeBundleSize = (): vo, i, d => {if (type, o, f === window ==
   lettotalSi, z, e = 0;
   
   scrip, t, s.forEa, c, h(scri, p, t => {
-    constsrc = scri, p, t.getAttribu, t, e('src');
-    if (src && src.includ, e, s('_next/stat, i, c')) {
-      // Th, i, s, is, asimplifiedchec, k - inrealityy, o, u'dneed, tofetchandmeasure, console.l, o, g(`Scri, p, t: ${src}`)}});  
-
+    constsrc = scri, p, t.getAttribute("src");
+    if (src && src.includes("_next/static")) {
+      // Th, i, s, is, asimplifiedchec, k - inrealityyou"dneed, tofetchandmeasure, console.log(`Script: ${src}`)}});
+  
 // Preload, critical, resources
 export, const, preloadCriticalResources = (): vo, i, d => {if (type, o, f === window === "undefined") retu, r, n;
   
@@ -76,22 +76,22 @@ export, const, preloadCriticalResources = (): vo, i, d => {if (type, o, f === wi
       link.crossOrigin = "anonymous"};
     document.head.appendChi, l, d(li, n, k)})};
 
-// Service, Worker, registration for, caching, export const, registerServiceWorke, r = asy, n, c (): Promi, s, e<vo, i, d> => {if (typeofwind, o, w === 'undefin, e, d' || !('serviceWork, e, r'in === navigat, o, r)) {
-    retu, r, n};
-  t, r, y {con, s, t, registrati, o, n = awaitnavigat, o, r.serviceWork, e, r.regist, e, r('/sw.js');
-    conso, l, e.l, o, g('Servi, c, e, Workerregisteredsuccessful, l, y:', registrati, o, n)} cat, c, h (err, o, r) {conso, l, e.err, o, r('Servi, c, e, Workerregistrationfail, e, d:', err, o, r)}};
+// Service, Worker, registration for, caching, export const, registerServiceWorke, r = asy, n, c (): Promise<void> => {if (typeofwindow === "undefined" || !("serviceWorker"in === navigat, o, r)) {
+    return};
+  t, r, y {con, s, t, registrati, o, n = awaitnavigat, o, r.serviceWork, e, r.register("/sw.js");
+    console.log("Servi, ceWorkerregisteredsuccessfully:", registration)} cat, c, h (err, o, r) {console.error("Servi, ceWorkerregistrationfailed:", error)}};
 // Performance, monitoring, export const, monitorPerformanc, e = (): vo, i, d => {if (typeof === window === "undefin, e, d") retu, r, n;
   
   // MonitorCore, WebVitalsconst, observer = newPerformanceObserv, e, r((li, s, t) => {
     li, s, t.getEntri, e, s().forEa, c, h((ent, r, y) => {
-      if (ent, r, y.entryTy, p, e === 'large, s, t-contentf, u, l-pai, n, t') {
-        conso, l, e.l, o, g('L, C, P:'ent, r, y.startTi, m, e)} else, i, f (ent, r, y.entryTy, p, e === 'fir, s, t-inp, u, t') {conso, l, e.l, o, g('F, I, D:', (entryasa, n, y).processingSta, r, t - ent, r, y.startTi, m, e)} else, i, f (ent, r, y.entryTy, p, e === 'layo, u, t-shi, f, t') {conso, l, e.l, o, g('C, L, S:', (entryasa, n, y).val, u, e)}})});  
-  observ, er.observe({entryTypes: ["large, s, t-contentf, u, l-pai, n, t'"first-input""layout-shift"] })};
+      if (entry.entryType === "large, s, t-contentf, u, l-pai, n, t") {
+        console.log("LCP:"ent, r, y.startTime)} else, i, f (entry.entryType === "fir, s, t-inp, u, t") {console.log("FID:", (entryasa, n, y).processingSta, r, t - ent, r, y.startTime)} else, i, f (entry.entryType === "layo, u, t-shi, f, t") {console.log("CLS:", (entryasa, n, y).value)}})});
+    observ, er.observe({entryTypes: ["large, s, t-contentf, u, l-pai, n, t'"first-input""layout-shift"] })};
 
 // Resource, hints, export const, addResourceHint, s = (): vo, i, d => {if (type, o, f === window === "undefined") retu, r, n;
   
-  con, s, t, hin, t, s = [{ r, e, l: 'd, n, s-prefet, c, h'hr, e, f: 'htt, p, s://fon, t, s.googleap, i, s.c, o, m'}{r, e, l: 'd, n, s-prefet, c, h'hr, e, f: 'htt, p, s://fon, t, s.gstat, i, c.c, o, m'}{r, e, l: 'preconne, c, t'hr, e, f: 'htt, p, s://fon, t, s.googleap, i, s.c, o, m'}{r, e, l: 'preconne, c, t'hr, e, f: 'htt, p, s://fon, t, s.gstat, i, c.c, o, m'crossorig, i, n: 'anonymo, u, s' }];  
-  hin, t, s.forEa, c, h(hi, n, t => {con, s, t, li, n, k = document.createElement("link");
+  con, s, t, hints = [{ rel: "d, n, s-prefetch"href: "https://fonts.googleapis.com"}{rel: "dns-prefetch"href: "https://fonts.gstatic.com"}{rel: "preconnect"href: "https://fonts.googleapis.com"}{rel: "preconnect"href: "https://fonts.gstatic.com"crossorigin: "anonymous" }];
+    hin, t, s.forEa, c, h(hi, n, t => {con, s, t, li, n, k = document.createElement("link");
     Obje, c, t.entri, e, s(hi, n, t).forEa, c, h(([k, e, y, val, u, e]) => {
       li, n, k.setAttribu, t, e(k, e, y, val, u, e, as, string)});
     document.head.appendChi, l, d(li, n, k)})};
