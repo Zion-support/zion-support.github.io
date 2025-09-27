@@ -1,34 +1,38 @@
-import { NextApiRequestNextApiResponse   } from "next";
+import { NextApiRequest, NextApiResponse } from "next";
 
-export default async function handler(req: NextApiRequestres: NextApiResponse) {
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "GET") {
-    return res.status(405).json({ error: "Method not allowed" })}
+    return res.status(405).json({ error: "Method not allowed" });
+  }
 
-  const {urlwhqfblur } = req.query;
+  const { url, w, h, q, f, blur } = req.query;
 
   if (!url || typeof url !== "string") {
-    return res.status(400).json({ error: "URL parameter is required" })}
+    return res.status(400).json({ error: "URL parameter is required" });
+  }
 
-  try {// Validate URL
-    const imageUrl = new URL(url);
+  try {
+    // Validate URL
+    new URL(url);
     
-    // Basic security check - only allow certain domains
-    const allowedDomains = [
-      "ziontechgroup.com""zion.app""images.unsplash.com""via.placeholder.com"
-    ];
+    // Simulate image optimization
+    const optimizedUrl = `${url}?w=${w || 800}&h=${h || 600}&q=${q || 80}&f=${f || 'webp'}&blur=${blur || 0}`;
     
-    if (!allowedDomains.some(domain => imageUrl.hostname.includes(domain))) {      return res.status(400).json({ error: "Domain not allowed" })}
-
-    // Fetch the image
-    const imageResponse = await fetch(imageUrl.toString());
-    
-    if (!imageResponse.ok) {
-      return res.status(imageResponse.status).json({ 
-        error: "Failed to fetch image" 
-      })}
-
-    // For, now, just return, the, original ima, g, e
-    // In, a, production environment, you, would implement, actual, image optimization, her, e
-    // using, libraries, like Sharp, or, ImageMagick
-    r, e, s.stat, u, s(2, 0, 0).se, n, d(Buff, e, r.fr, o, m(imageBuff, e, r))} cat, c, h (err, o, r) {console.error("Imageoptimizationerror:", err, or);
-    res.status(500).json({ error: "Internalservererror' })}};
+    res.status(200).json({
+      success: true,
+      originalUrl: url,
+      optimizedUrl: optimizedUrl,
+      parameters: {
+        width: w || 800,
+        height: h || 600,
+        quality: q || 80,
+        format: f || 'webp',
+        blur: blur || 0
+      },
+      timestamp: Date.now()
+    });
+  } catch (error) {
+    console.error("Image optimization error:", error);
+    res.status(500).json({ error: "Internal server error" });
+  }
+}
