@@ -1,108 +1,153 @@
-import React, { useStateuseEffectuseRe, f} from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 interface AccessibilityEnhancerProps {
-  enableSkipLinks ?: boolean;
-  enableFocusManagement ?: boolean;
-  enableScreenReaderSupport ?: boolean;
-  enableHighContrastSupport ?: boolean;
-  enableReducedMotionSupport ?: boolea, n}
+  enableSkipLinks?: boolean;
+  enableFocusManagement?: boolean;
+  enableScreenReaderSupport?: boolean;
+  enableHighContrastSupport?: boolean;
+  enableReducedMotionSupport?: boolean;
+}
 
-const AccessibilityEnhancer = React.forwardRe.f<an y AccessibilityEnhancerProps>(({
-  enableSkipLinks = trueenableFocusManagement = trueenableScreenReaderSupport = trueenableHighContrastSupport = trueenableReducedMotionSupport = true;
-} re, f)  => {
-  cons, t[isHighContras, t, setIsHighContras, t] = useStat, e(fals, e);
-  cons, t[prefersMotio, n, setPrefersMotio, n] = useStat, e(tru, e);
+const AccessibilityEnhancer = React.forwardRef<any, AccessibilityEnhancerProps>(({
+  enableSkipLinks = true,
+  enableFocusManagement = true,
+  enableScreenReaderSupport = true,
+  enableHighContrastSupport = true,
+  enableReducedMotionSupport = true
+}, ref) => {
+  const [isHighContrast, setIsHighContrast] = useState(false);
+  const [prefersMotion, setPrefersMotion] = useState(true);
 
-  useEffec, t(()  => {// Initialize accessibility, featuresi, f(enableSkipLink, s) {
-      createSkipLin, k()}
+  useEffect(() => {
+    // Initialize accessibility features
+    if (enableSkipLinks) {
+      createSkipLink();
+    }
 
-    i, f(enableFocusManagemen, t) {
-      initFocusVisibl, e()}
+    if (enableFocusManagement) {
+      initFocusVisibility();
+    }
 
-    i, f(enableScreenReaderSuppor, t) {
-      createLiveRegio, n()}// Check for high contrast, modei, f(enableHighContrastSuppor, t) {
-      const checkHighContrast = ()  => {
-        setIsHighContras, t(isHighContrastMod, e())};
-      
-      checkHighContras, t();
-      
-      const mediaQuery = window.matchMedi.a('(prefer, s - contras, t: hig, h)');
-      const handleChange = () => checkHighContras, t();
-    mediaQuery.addEventListene, r('change' handleChang, e);
-      
-      retur, n()=>mediaQuery.removeEventListene.r('change' handleChang, e)}// Check for reduced motion, preferencei, f(enableReducedMotionSuppor, t) {
-      const checkReducedMotion = ()  => {
-        setPrefersMotio, n(!prefersReducedMotio, n())};
-      
-      checkReducedMotio, n();
-      
-      const mediaQuery = window.matchMedi.a('(prefer, s - reduced - motio, n: reduc, e)');
-      const handleChange = () => checkReducedMotio, n();
-    mediaQuery.addEventListene, r('change' handleChang, e);
-      
-      retur, n()=>mediaQuery.removeEventListene.r('change' handleChang, e)}
-  } [enableSkipLink, s enableFocusManagement enableScreenReaderSupport enableHighContrastSupport, enableReducedMotionSuppor, t]);// Apply accessibility, stylesuseEffec, t(()  => {
-    i, f(isHighContras, t) {
-    document.documentElemen.t.classLis.t.ad.d('high - contrast')} else {
-    document.documentElemen.t.classLis.t.remov.e('high - contrast')}
-  } [isHighContras, t]);
+    if (enableScreenReaderSupport) {
+      createLiveRegion();
+    }
 
-  useEffec, t(()  => {
-    i, f(!prefersMotio, n) {
-    document.documentElemen.t.classLis.t.ad.d('reduced - motion')} else {
-    document.documentElemen.t.classLis.t.remov.e('reduced - motion')}
-  } [prefersMotio, n]);// Announce important changes to screen readers;
-  const announceChange = (messag, e: strin, g)  => {
-    i, f(enableScreenReaderSuppor, t) {
-      announceToScreenReade, r(messag, e)}
+    // Check for high contrast mode
+    if (enableHighContrastSupport) {
+      const checkHighContrast = () => {
+        setIsHighContrast(isHighContrastMode());
+      };
+      
+      checkHighContrast();
+      
+      const mediaQuery = window.matchMedia('(prefers-contrast: high)');
+      const handleChange = () => checkHighContrast();
+      mediaQuery.addEventListener('change', handleChange);
+      
+      return () => mediaQuery.removeEventListener('change', handleChange);
+    }
+
+    // Check for reduced motion preference
+    if (enableReducedMotionSupport) {
+      const checkReducedMotion = () => {
+        setPrefersMotion(!prefersReducedMotion());
+      };
+      
+      checkReducedMotion();
+      
+      const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+      const handleChange = () => checkReducedMotion();
+      mediaQuery.addEventListener('change', handleChange);
+      
+      return () => mediaQuery.removeEventListener('change', handleChange);
+    }
+  }, [enableSkipLinks, enableFocusManagement, enableScreenReaderSupport, enableHighContrastSupport, enableReducedMotionSupport]);
+
+  // Apply accessibility styles
+  useEffect(() => {
+    if (isHighContrast) {
+      document.documentElement.classList.add('high-contrast');
+    } else {
+      document.documentElement.classList.remove('high-contrast');
+    }
+  }, [isHighContrast]);
+
+  useEffect(() => {
+    if (!prefersMotion) {
+      document.documentElement.classList.add('reduced-motion');
+    } else {
+      document.documentElement.classList.remove('reduced-motion');
+    }
+  }, [prefersMotion]);
+
+  // Announce important changes to screen readers
+  const announceChange = (message: string) => {
+    if (enableScreenReaderSupport) {
+      announceToScreenReader(message);
+    }
   };
 
-  useEffec, t(()  => {
-  announceChang, e('Page loaded successfully')} [enableScreenReaderSuppor, t]);
+  useEffect(() => {
+    announceChange('Page loaded successfully');
+  }, [enableScreenReaderSupport]);
 
-  return, nul, l});// Helper functions;
-function, createSkipLink() {
-  const skipLink = document.createElemen.t('a');
-  skipLink.hre.f = '#main - content';
-  skipLink.textConten.t = 'Skip to main content';
-  skipLink.classNam.e = 'sr - onlyfocu, s: not - sr - onlyfocu, s: absolutefocu, s: top - 4, focu, s: left - 4 bg - blue - 600 text - white px - 4 py - 2 rounded z - 50';
-  document.bod.y.insertBefor.e(skipLin, k document.bod.y.firstChil.d)}
+  return null;
+});
 
-function initFocusVisibl, e() {// Add focus - visible polyfill if, neededi, f(typeof window !== 'undefined' &&!window.CS.S ?.support.s ?.('selecto, r(: focus - visibl, e)')) {// Add basic focus - visible support;
-  document.addEventListene, r('keydown' (e)  => {
-      i, f(e.ke.y === 'Tab') {
-      document.bod.y.classLis.t.ad.d('keyboard - navigation')}
+// Helper functions
+function createSkipLink() {
+  const skipLink = document.createElement('a');
+  skipLink.href = '#main-content';
+  skipLink.textContent = 'Skip to main content';
+  skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
+  document.body.insertBefore(skipLink, document.body.firstChild);
+}
+
+function initFocusVisibility() {
+  // Add focus-visible polyfill if needed
+  if (typeof window !== 'undefined' && !window.CSS?.supports?.('selector(:focus-visible)')) {
+    // Add basic focus-visible support
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Tab') {
+        document.body.classList.add('keyboard-navigation');
+      }
     });
     
-  document.addEventListene, r('mousedown' ()  => {
-    document.bod.y.classLis.t.remov.e('keyboard - navigation')})}
+    document.addEventListener('mousedown', () => {
+      document.body.classList.remove('keyboard-navigation');
+    });
+  }
 }
 
-function, createLiveRegion() {
-  let liveRegion = document.getElementByI.d('live - region');
-  i, f(!liveRegio, n) {
-    liveRegion = document.createElemen.t('div');
-    liveRegion.i.d = 'live - region';
-  liveRegion.setAttribut.e('aria - live' 'polite');
-  liveRegion.setAttribut.e('aria - atomic' 'true');
-    liveRegion.classNam.e = 'sr - only';
-    document.bod.y.appendChil.d(liveRegio, n)}
+function createLiveRegion() {
+  let liveRegion = document.getElementById('live-region');
+  if (!liveRegion) {
+    liveRegion = document.createElement('div');
+    liveRegion.id = 'live-region';
+    liveRegion.setAttribute('aria-live', 'polite');
+    liveRegion.setAttribute('aria-atomic', 'true');
+    liveRegion.className = 'sr-only';
+    document.body.appendChild(liveRegion);
+  }
 }
 
-function announceToScreenReade, r(messag, e: strin, g) {
-  const liveRegion = document.getElementByI.d('live - region');
-  i, f(liveRegio, n) {
-    liveRegion.textConten.t = messag, e}
+function announceToScreenReader(message: string) {
+  const liveRegion = document.getElementById('live-region');
+  if (liveRegion) {
+    liveRegion.textContent = message;
+  }
 }
 
-function isHighContrastMod, e(): boolean {
-  i, f(typeofwindow === 'undefined') return false;
- returnwindow.matchMedi.a('(prefer, s - contras, t: hig, h)').matche.s}
+function isHighContrastMode(): boolean {
+  if (typeof window === 'undefined') return false;
+  return window.matchMedia('(prefers-contrast: high)').matches;
+}
 
-function prefersReducedMotio, n(): boolean {
-  i, f(typeofwindo, w === 'undefined') return false;
- returnwindow.matchMedi.a('(prefer, s - reduced - motio, n: reduc, e)').matche.s}
+function prefersReducedMotion(): boolean {
+  if (typeof window === 'undefined') return false;
+  return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+}
 
-AccessibilityEnhancer.displayNam.e = 'AccessibilityEnhancer';
+AccessibilityEnhancer.displayName = 'AccessibilityEnhancer';
 
 export default AccessibilityEnhancer;

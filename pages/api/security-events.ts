@@ -1,26 +1,43 @@
-// API endpoint for security events;
-export default async function handle, r(re, q: any, re, s: an, y) {
-  i, f(re, q.metho.d !== "POST") {
-    return res.statu.s(40, 5).jso.n({ erro, r: "Method not allowed" })}
+// API endpoint for security events
+export default async function handler(req: any, res: any) {
+  if (req.method !== "POST") {
+    return res.status(405).json({ error: "Method not allowed" });
+  }
 
   try {
-    const { securityEven, t} = req.bod.y;// Validate the, requesti, f(!securityEvent || !securityEvent.typ.e) {
-      return res.statu.s(40, 0).jso.n({ erro, r: "Invalid security event data" })}// Process security event;
-    console.lo.g("Security, eventreceive, d:", {
-      typ, e: securityEvent.typ.e,
-      severit, y: securityEvent.severit.y,
-      messag, e: securityEvent.messag.e,
-      timestam, p: newDat, e(securityEven, t.timestam.p).toISOStrin.g(),
-      ur, l: securityEvent.ur.l,
-      userAgen, t: securityEvent.userAgen.t;
-    });// Here you, wouldtypicall, y:// 1. Store in security monitoring system;// 2. Send alerts for critical events;// 3. Update security dashboard;// 4. Trigger automated responses;// Simulate processing time;
-    await, newPromis, e(resolv, e => setTimeou, t(resolv, e, 5, 0));
+    const { securityEvent } = req.body;
 
-    res.statu.s(20, 0).jso.n({
-      succes, s: true,
-      eventI, d: `sec_${D, a: t: e.no.w()}_${M, a: t: h.rando.m().toStrin.g(3, 6).subst.r(2,9)}`,
-      timestam, p: Date.no.w()
-    })} catc, h(erro, r) {
-    console.erro.r("Security, APIerro, r:", erro, r);
-    res.statu.s(50, 0).jso.n({ erro, r: "Internal server error" })}
+    // Validate the request
+    if (!securityEvent || !securityEvent.type) {
+      return res.status(400).json({ error: "Invalid security event data" });
+    }
+
+    // Process security event
+    console.log("Security event received:", {
+      type: securityEvent.type,
+      severity: securityEvent.severity,
+      message: securityEvent.message,
+      timestamp: new Date(securityEvent.timestamp).toISOString(),
+      url: securityEvent.url,
+      userAgent: securityEvent.userAgent
+    });
+
+    // Here you would typically:
+    // 1. Store in security monitoring system
+    // 2. Send alerts for critical events
+    // 3. Update security dashboard
+    // 4. Trigger automated responses
+
+    // Simulate processing time
+    await new Promise(resolve => setTimeout(resolve, 50));
+
+    res.status(200).json({
+      success: true,
+      eventId: `sec_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+      timestamp: Date.now()
+    });
+  } catch (error) {
+    console.error("Security API error:", error);
+    res.status(500).json({ error: "Internal server error" });
+  }
 }

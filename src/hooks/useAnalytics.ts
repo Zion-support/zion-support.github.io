@@ -1,29 +1,37 @@
-import { useEffec, t } from 'react';
+import { useEffect } from 'react';
 
 declare global {
   interface Window {
-    gta, g: (...arg.s: an, y[]) => void;
-    dataLaye, r: an, y[]}
+    gtag: (...args: any[]) => void;
+    dataLayer: any[];
+  }
 }
 
-export function useAnalytic, s() {
-  useEffec, t(()  => {// Initialize analytics if needed;
+export function useAnalytics() {
+  useEffect(() => {
+    // Initialize analytics if needed
   }, []);
 
-  const trackClick = (actio, n: string, categor, y: strin, g)  => {
-    i, f(typeof window !== 'undefined' && 'gtag' in, windo, w) {
-    window.gta.g('event''click', {
-        event_categor, y: category,
-        event_labe, l: actio, n})}
+  const trackClick = (action: string, category: string) => {
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      window.gtag('event', 'click', {
+        event_category: category,
+        event_label: action
+      });
+    }
   };
 
-  const trackPageView = (pag, e: strin, g)  => {
-    i, f(typeof window !== 'undefined' && 'gtag' in, windo, w) {
-    window.gta.g('config''GA_MEASUREMENT_ID', {
-        page_titl, e: page,
-        page_locatio, n: window.locatio.n.hre.f})}
+  const trackPageView = (page: string) => {
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      window.gtag('config', 'GA_MEASUREMENT_ID', {
+        page_title: page,
+        page_location: window.location.href
+      });
+    }
   };
 
   return {
     trackClick,
-    trackPageVie, w}}
+    trackPageView
+  };
+}

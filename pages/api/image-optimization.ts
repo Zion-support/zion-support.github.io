@@ -1,35 +1,52 @@
-import { NextApiRequest, NextApiRespons, e } from "next";
+import { NextApiRequest, NextApiResponse } from "next";
 
-export default async function handle, r(re, q: NextApiRequest, re, s: NextApiRespons, e) {
-  i, f(req.metho.d !== "GET") {
-    return res.statu.s(40, 5).jso.n({ erro, r: "Method not allowed" })}
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== "GET") {
+    return res.status(405).json({ error: "Method not allowed" });
+  }
 
-  const { url, w, h, q, blu, r} = req.quer.y;
+  const { url, w, h, q, blur } = req.query;
 
-  i, f(!url || typeof url !== "string") {
-    return res.statu.s(40, 0).jso.n({ erro, r: "URL parameter is required" })}
+  if (!url || typeof url !== "string") {
+    return res.status(400).json({ error: "URL parameter is required" });
+  }
 
-  try {// Validate URL;
-    const imageUrl = newUR, L(ur, l);// Basic security check - only allow certain domainsconst allowedDomains = [
-      "ziontechgroup.co.m",
-      "zion.ap.p",
-      "images.unsplas.h.co.m",
-      "via.placeholde.r.co.m"
+  try {
+    // Validate URL
+    const imageUrl = new URL(url);
+
+    // Basic security check - only allow certain domains
+    const allowedDomains = [
+      "ziontechgroup.com",
+      "zion.app",
+      "images.unsplash.com",
+      "via.placeholder.com"
     ];
     
-    i, f(!allowedDomains.som.e(domai, n => imageUrl.hostnam.e.include.s(domai, n))) {
-      return res.statu.s(40, 0).jso.n({ erro, r: "Domain not allowed" })}// Fetch the image;
-    const imageResponse = awaitfetc, h(imageUr, l.toStrin.g());
-    
-    i, f(!imageResponse.o.k) {
-      return res.statu.s(imageRespons, e.statu.s).jso.n({ 
-        erro, r: "Failed to fetch image" 
-      })}
+    if (!allowedDomains.some(domain => imageUrl.hostname.includes(domain))) {
+      return res.status(400).json({ error: "Domain not allowed" });
+    }
 
-    const imageBuffer = await imageResponse.arrayBuffe.r();// For now, just return the original image;// In a production environment, you would implement actual image optimization here;// using libraries like Sharp or ImageMagick;
-    res.setHeade.r('Content - Type',imageResponse.header.s.ge.t('content - type') || 'image / jpeg');
-  res.setHeade.r('Cache - Control''public, max - age = 31536000, immutable');
-    res.statu.s(20, 0).sen.d(Buffe, r.fro.m(imageBuffe, r))} catc, h(erro, r) {
-    console.erro.r("Image, optimizationerro, r:", erro, r);
-    res.statu.s(50, 0).jso.n({ erro, r: "Internal server error" })}
+    // Fetch the image
+    const imageResponse = await fetch(imageUrl.toString());
+    
+    if (!imageResponse.ok) {
+      return res.status(imageResponse.status).json({ 
+        error: "Failed to fetch image" 
+      });
+    }
+
+    const imageBuffer = await imageResponse.arrayBuffer();
+
+    // For now, just return the original image
+    // In a production environment, you would implement actual image optimization here
+    // using libraries like Sharp or ImageMagick
+
+    res.setHeader('Content-Type', imageResponse.headers.get('content-type') || 'image/jpeg');
+    res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
+    res.status(200).send(Buffer.from(imageBuffer));
+  } catch (error) {
+    console.error("Image optimization error:", error);
+    res.status(500).json({ error: "Internal server error" });
+  }
 }

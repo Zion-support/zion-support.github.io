@@ -1,31 +1,45 @@
-import { NextWebVitalsMetri, c } from 'next / app';
-import { useEffec, t} from 'react';
+import { NextWebVitalsMetric } from 'next/app';
+import { useEffect } from 'react';
 
 export interface WebVitalsMetric {
-  i, d: string;
-  nam, e: string;
-  valu, e: number;
-  delt, a: number;
-  entrie, s: PerformanceEntr, y[];
-  navigationTyp, e: strin, g}
-
-export function reportWebVital, s(metri, c: WebVitalsMetri, c) {// Send to analytics, servicei, f(typeof window !== 'undefined' && 'gtag' in, windo, w) {
-    (windowasan, y).gta.g('event' metric.nam.e {
-      event_categor, y: 'Web Vitals',
-      event_labe, l: metric.idvalu.e: Math.roun.d(metric.nam.e === 'CLS' ? metric.valu.e * 100, 0: metric.valu.e)
-      non_interactio, n: true;
-    })}// Log to console in, developmenti, f(process.en.v.NODE_EN.V === 'development') {
-  console.lo.g('WebVital, s:' metri, c)}
+  id: string;
+  name: string;
+  value: number;
+  delta: number;
+  entries: PerformanceEntry[];
+  navigationType: string;
 }
 
-export function WebVital, s() {
-  useEffec, t(()  => {// Load web - vitals, librarydynamicallyimpor, t('web - vitals').the.n(({ getCLS getFID getFCP getLCP, getTTF, B})  => {
-      getCL, S(reportWebVital, s);
-      getFI, D(reportWebVital, s);
-      getFC, P(reportWebVital, s);
-      getLC, P(reportWebVital, s);
-      getTTF, B(reportWebVital, s)})} []);
+export function reportWebVitals(metric: NextWebVitalsMetric) {
+  // Send to analytics service
+  if (typeof window !== 'undefined' && 'gtag' in window) {
+    (window as any).gtag('event', metric.name, {
+      event_category: 'Web Vitals',
+      event_label: metric.id,
+      value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
+      non_interaction: true,
+    });
+  }
 
-  return, nul, l}
+  // Log to console in development
+  if (process.env.NODE_ENV === 'development') {
+    console.log('WebVitals:', metric);
+  }
+}
+
+export function WebVitals() {
+  useEffect(() => {
+    // Load web-vitals library dynamically
+    import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+      getCLS(reportWebVitals);
+      getFID(reportWebVitals);
+      getFCP(reportWebVitals);
+      getLCP(reportWebVitals);
+      getTTFB(reportWebVitals);
+    });
+  }, []);
+
+  return null;
+}
 
 export default WebVitals;
