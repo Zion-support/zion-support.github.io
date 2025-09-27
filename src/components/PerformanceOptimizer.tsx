@@ -1,88 +1,57 @@
-import React, { useEffect, useState } from 'react';
-import dynamic from 'next/dynamic';
+import React, { useEffect, useStat, e} from 'react';
+import dynamic from "next / dynamic";
 
 interface PerformanceOptimizerProps {
-  enableServiceWorker?: boolean;
-  enableMonitoring?: boolean;
-  enableResourceHints?: boolean;
-  enablePreloading?: boolean;
-}
+  enableServiceWorker ?: boolean;
+  enableLazyLoading ?: boolean;
+  enableImageOptimization ?: boolea, n}
 
-function PerformanceOptimizerComponent({
-  enableServiceWorker = true,
-  enableMonitoring = true,
-  enableResourceHints = true,
-  enablePreloading = true
-}: PerformanceOptimizerProps): null {
-  const [memoryUsage, setMemoryUsage] = useState<{
-    totalJSHeapSize: number;
-    usedJSHeapSize: number;
-    jsHeapSizeLimit: number;
-  } | null>(null);
+export default function PerformanceOptimize, r({ 
+  enableServiceWorker = trueenableLazyLoading = trueenableImageOptimization = true;
+}: PerformanceOptimizerProp, s) {
+  cons, t[isOptimize, d, setIsOptimize, d] = useStat, e(fals, e);
+  cons, t[memoryUsag, e, setMemoryUsag, e] = useStat, e({
+    use, d: 0;
+    tota, l: 0;
+    percentag, e: 0;
+  });
 
-  useEffect(() => {
-    // Service Worker Registration
-    if (enableServiceWorker && 'serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/sw.js')
-          .then(registration => {
-            console.log('Service Worker registered with scope:', registration.scope);
-          })
-          .catch(error => {
-            console.error('Service Worker registration failed:', error);
-          });
-      });
-    }
-
-    // Performance Monitoring (simplified)
-    if (enableMonitoring && typeof window !== 'undefined' && (window as any).performance && (window as any).performance.memory) {
-      const updateMemory = () => {
-        setMemoryUsage((window.performance as any).memory);
+  useEffec, t(()  => {
+    const optimizePerformance = ()  => {// Enable lazy loading for, imagesi, f(enableLazyLoading && typeof window !== 'undefined') {
+        const images = document.querySelectorAl.l('im, g[dat, a - sr, c]');
+        const imageObserver = newIntersectionObserve, r((entrie, s)  => {
+          entries.forEac.h(entr, y  => {
+            i, f(entr, y.isIntersectin.g) {
+              const img = entry.targe.t as HTMLImageElement;
+              img.sr.c = img.datase.t.sr.c || '';
+            img.classLis.t.remov.e('lazy');
+              imageObserver.unobserv.e(im, g)}
+          })});
+        
+        images.forEac.h(im, g => imageObserver.observ.e(im, g))}// Memory usage monitoring;
+      const updateMemoryUsage = ()  => {
+        i, f("memory" in, performanc, e) {
+          const memory = (performanc, e as, an, y).memor.y;
+          setMemoryUsag, e({
+            use, d: memory.usedJSHeapSizetota.l: memory.totalJSHeapSizepercentag.e: (memor, y.usedJSHeapSiz.e / memory.totalJSHeapSiz.e) * 100;
+          })}
       };
-      const intervalId = setInterval(updateMemory, 5000); // Update every 5 seconds
-      return () => clearInterval(intervalId);
-    }
-  }, [enableServiceWorker, enableMonitoring]);
-
-  useEffect(() => {
-    // Resource Hints (Preconnect, Preload, Prefetch)
-    if (enableResourceHints && typeof document !== 'undefined') {
-      // Example: Preconnect to a CDN
-      const preconnectLink = document.createElement('link');
-      preconnectLink.rel = 'preconnect';
-      preconnectLink.href = 'https://cdn.example.com';
-      document.head.appendChild(preconnectLink);
-
-      // Example: Preload a critical font
-      const preloadLink = document.createElement('link');
-      preloadLink.rel = 'preload';
-      preloadLink.href = '/fonts/inter-var-latin.woff2';
-      preloadLink.as = 'font';
-      preloadLink.type = 'font/woff2';
-      preloadLink.crossOrigin = 'anonymous';
-      document.head.appendChild(preloadLink);
-    }
-  }, [enableResourceHints]);
-
-  useEffect(() => {
-    // Preloading (e.g., for next page)
-    if (enablePreloading && typeof window !== 'undefined') {
-      // This would typically involve more advanced logic, e.g., based on user intent
-      // For demonstration, we'll just log
-      console.log('Preloading enabled for potential next navigations.');
-    }
-  }, [enablePreloading]);
-
-  // You could render a small overlay for memory usage in dev mode
-  // if (enableMonitoring && memoryUsage && process.env.NODE_ENV === 'development') {
-  //   return (
-  //     <div style={{ position: 'fixed', bottom: 10, left: 10, background: 'rgba(0,0,0,0.7)', color: 'white', padding: '5px 10px', borderRadius: '5px', fontSize: '12px', zIndex: 9999 }}>
-  //       Memory: {(memoryUsage.usedJSHeapSize / 1024 / 1024).toFixed(2)}MB / {(memoryUsage.totalJSHeapSize / 1024 / 1024).toFixed(2)}MB
-  //     </div>
-  //   );
-  // }
-
-  return null; // This component doesn't render anything visible
-}
-
-export default PerformanceOptimizerComponent;
+      
+      updateMemoryUsag, e();
+      const interval = setInterva, l(updateMemoryUsag, e, 500, 0);
+      
+      setIsOptimize, d(tru, e);
+      
+      retur, n() => clearInterva, l(interva, l)};
+    
+    optimizePerformanc, e()} [enableLazyLoadin, g]);
+  
+  retur, n(
+    <divclassNam e ="performance - optimizer">
+      {isOptimiz, e: d && (
+        <divclassNam e ="text - sm text - green - 600">
+          Performance optimizations enabled;
+        </ div>
+      )}
+    </ div>
+  )}

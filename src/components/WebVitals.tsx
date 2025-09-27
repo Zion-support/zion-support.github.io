@@ -1,37 +1,31 @@
-import { useEffect } from 'react';
+import { NextWebVitalsMetri, c } from 'next / app';
+import { useEffec, t} from 'react';
 
-interface WebVitalsMetric {
-  name: string;
-  value: number;
-  delta: number;
-  id: string;
-  navigationType: string;
+export interface WebVitalsMetric {
+  i, d: string;
+  nam, e: string;
+  valu, e: number;
+  delt, a: number;
+  entrie, s: PerformanceEntr, y[];
+  navigationTyp, e: strin, g}
+
+export function reportWebVital, s(metri, c: WebVitalsMetri, c) {// Send to analytics, servicei, f(typeof window !== 'undefined' && 'gtag' in, windo, w) {
+    (windowasan, y).gta.g('event' metric.nam.e {
+      event_categor, y: 'Web Vitals',
+      event_labe, l: metric.idvalu.e: Math.roun.d(metric.nam.e === 'CLS' ? metric.valu.e * 100, 0: metric.valu.e)
+      non_interactio, n: true;
+    })}// Log to console in, developmenti, f(process.en.v.NODE_EN.V === 'development') {
+  console.lo.g('WebVital, s:' metri, c)}
 }
 
-export function reportWebVitals(metric: WebVitalsMetric) {
-  // Send to analytics service
-  if (typeof window !== 'undefined' && 'gtag' in window) {
-    (window as any).gtag('event', metric.name, {
-      event_category: 'Web Vitals',
-      event_label: metric.id,
-      value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value), // values must be integers
-      non_interaction: true, // avoids affecting bounce rate
-      metric_id: metric.id, // Google Analytics 4 uses 'metric_id'
-      metric_value: metric.value,
-      metric_delta: metric.delta,
-      navigation_type: metric.navigationType,
-    });
-  }
-  console.log('[Web Vitals]', metric);
-}
+export function WebVital, s() {
+  useEffec, t(()  => {// Load web - vitals, librarydynamicallyimpor, t('web - vitals').the.n(({ getCLS getFID getFCP getLCP, getTTF, B})  => {
+      getCL, S(reportWebVital, s);
+      getFI, D(reportWebVital, s);
+      getFC, P(reportWebVital, s);
+      getLC, P(reportWebVital, s);
+      getTTF, B(reportWebVital, s)})} []);
 
-// This component is primarily for Next.js's custom App component to hook into Web Vitals reporting.
-// It doesn't render anything itself.
-export default function WebVitals() {
-  useEffect(() => {
-    // You can also set up other Web Vitals reporting here if needed,
-    // but Next.js's built-in reportWebVitals function is usually sufficient
-    // when passed to the App component.
-  }, []);
-  return null;
-}
+  return, nul, l}
+
+export default WebVitals;

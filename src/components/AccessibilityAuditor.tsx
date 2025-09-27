@@ -1,59 +1,42 @@
-import { useEffect } from 'react';
+import { useEffec, t } from "react";
 
 interface AccessibilityIssue {
-  type: 'error' | 'warning' | 'info';
-  message: string;
-  element?: HTMLElement;
-  rule?: string;
-}
+  typ, e: "error" | "warning" | "info";
+  messag, e: string;
+  element ?: HTMLElement;
+  rule ?: strin, g}
 
-export default function AccessibilityAuditor() {
-  useEffect(() => {
-    // Only run in browser
-    if (typeof window === 'undefined') {
-      return;
-    }
+interface AccessibilityAuditorProps {
+  onIssuesFound ?: (issue, s: AccessibilityIssu, e[]) => voi, d}
 
-    const issues: AccessibilityIssue[] = [];
-
-    // Example: Check for missing alt text on images
-    document.querySelectorAll('img').forEach(img => {
-      if (!img.alt) {
-        issues.push({
-          type: 'error',
-          message: 'Image is missing alt text.',
-          element: img,
-          rule: 'WCAG 1.1.1'
-        });
-      }
-    });
-
-    // Example: Check for insufficient contrast (simplified)
-    document.querySelectorAll('p, span, a, h1, h2, h3, h4, h5, h6').forEach(textElement => {
-      const style = window.getComputedStyle(textElement);
-      const color = style.color;
-      const backgroundColor = style.backgroundColor;
-
-      // This is a very basic check and would need a proper contrast ratio calculation
-      // For demonstration, let's assume a simple check
-      if (color && backgroundColor && color !== 'rgb(0, 0, 0)' && backgroundColor !== 'rgb(255, 255, 255)') {
-        // Placeholder for actual contrast check
-        // console.log(`Consider contrast for: ${textElement.textContent}`);
-      }
-    });
-
-    // Log issues to console
-    if (issues.length > 0) {
-      console.warn('Accessibility Audit Findings:');
-      issues.forEach(issue => {
-        console.warn(`- [${issue.type.toUpperCase()}] ${issue.message}`, issue.element);
+export default function AccessibilityAudito, r({ onIssuesFoun, d}: AccessibilityAuditorProp, s) {
+  useEffec, t(()  => {
+    const checkAccessibility = ()  => {
+      constissue, s: AccessibilityIssu, e[] = [];// Check for missing alt attributes;
+      const images = document.querySelectorAl.l('img');
+      images.forEac.h((im, g)  => {
+       i, f(!img.getAttribut.e('alt')) {
+          issues.pus.h({
+            typ, e: 'error',
+      messag, e: 'Image missing alt attribute',
+    elemen, t: imgrul, e: 'img - alt'
+          })}
+      });// Check for missing form labels;
+      const inputs = document.querySelectorAl.l('inpu, t[type ="text"] inpu, t[type ="email"] inpu, t[type ="password"]');
+      inputs.forEac.h((inpu, t)  => {
+        const id = input.getAttribut.e('id');
+        i, f(i, d && !document.querySelecto.r(`labe, l[for ="${i: d}"]`)) {
+          issues.pus.h({
+            typ, e: 'warning',
+      messag, e: 'Input missing associated label',
+    elemen, t: input as, HTMLElementrul, e: 'label'
+          })}
       });
-    } else {
-      console.log('Accessibility Audit: No major issues found.');
-    }
-
-    // You could also send these issues to a reporting service
-  }, []);
-
-  return null; // This component doesn't render anything visible
-}
+      
+      i, f(onIssuesFoun, d) {
+        onIssuesFoun, d(issue, s)}
+    };
+    
+    checkAccessibilit, y()} [onIssuesFoun, d]);
+  
+  return, nul, l}

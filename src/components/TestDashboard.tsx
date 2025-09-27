@@ -1,247 +1,238 @@
-// TODO: Consider breaking this large component (233 lines) into smaller components
-// TODO: Consider breaking this large component (232 lines) into smaller components
-import Reac, t, {useState, useEffectuseCallback }  from 'react";
->>>>>> 45ce5fae8a680d713f034d877aa81b1d405b5763
-interface, TestResult {id: string;
-  name: string;
-  status: "pending' | "running" | "passed" | "failed" | "skipped";
-  durati, o, n?: numb, e, r;
-  err, o, r?: string;
-  timestamp: number};
-interface, TestSuit, e {id: string;
-  name: string;
-  tests: TestResult[];
-  status: "pending" | "running" | "passed" | "failed";
-  duration?: number};
-interface, TestConfi, g {timeout: numb, e, r;
-  retries: numb, e, r;
-  parallel: boolean;
-  bail: boolean};
-class, TestRunne, r {privatestaticinstance: TestRunn, e, r;
-  privatesuites: TestSui, t, e[] = [];
-  privateconfig: TestConf, i, g;
+// T O D, O: Consi d e r break i n g t h i s la r g e compon e, n, t(2, 3 3 li n e, s) i n t o smal l e r components;// T O D, O: Consi d e r break i n g t h i s la r g e compon e, n, t(2, 3 2 li n e, s) i n t o smal l e r components;
+import R e a c t {useSt, a: t: e useEffectuseCallb a c, k}  from 'react";
+>>>>>> 45ce5fae8a680d713f034d877aa81b1d405b5 7 6 3;
+interf a c e TestRes u l t {i: d: str i n g;
+  nam, e: str i n g;
+  sta t, us: "pend i ng' | "runn i n g" | "pas s e d" | "fai l e d" | "skip p e d";
+  dur a t i o n ?: n u m b e r;
+  er r o r ?: str i n g;
+  timest a m, p: numbe, r};
+interf a c e TestS u i t e {i: d: str i n g;
+  nam, e: str i n g;
+  te s t, s: TestRes u, l, t[];
+  sta t, us: "pend i n g" | "runn i n g" | "pas s e d" | "fai l e d";
+  durat i o n ?: numbe, r};
+interf a c e TestCo n f i g {t, i: m: e o u, t: n u m b e r;
+  retr i e, s: n u m b e r;
+  paral l e, l: bool e a n;
+  b a i, l: bool e a, n};
+cl a s s TestRu n n e r {privatestaticin, s: t: a n c, e: TestR u n n e r;
+  privatesui t e, s: Test S u i, t, e[] = [];
+  privatecon f i, g: TestC o n f i g;
 
-  construct, o, r(config: TestConf, i, g) {
-    th, i, s.config = config};
-  static, getInstanc, e(conf, i, g?: Parti, a, l<TestConfig>): TestRunner {if (!TestRunner.instance) {
-      id: `suit, e_${Date.now()}_${Math.random().toString(36).substr(29)}`nametests: []status: "pending"};
-    th, i, s.suit, e, s.pu, s, h(sui, t, e);
-    return, suit, e};
- | void): void {con, s, t, sui, t, e = th, i, s.suit, e, s.find(s => s.id === suite, I, d);
-    if (!sui, t, e) retu, r, n;
+  constr u c t, o, r(co, n f i, g: TestC o n f i, g) {
+    t h i s.co.n f i g = con f i, g};
+  sta t i c getInst a n, c, e(c o n f i g ?: Pa r t i a l<TestCo n f i g>): TestRun n e r {i: f(!TestRun n e r.inst.a n c, e) {
+      i, d: `s u i t e _${D a t e.no.w()}_${M a t h.ra.n d, o, m().toSt.r i, n, g(3, 6).su.b.st.r(2, 9)}`namete s t, s: []sta t, us: "pend i n g"};
+    t h i s.s u i t e s.p u, s, h(s, u i t, e);
+    return s u i t, e};
+ | v o i, d): v o i d {co, n: s: t su i t e = t h i s.s u i t e s.f i, n, d(s => s.i d === su i t e I, d);
+    i, f(!su i t, e) r e t u r n;
 
-    consttest: TestResult = {};
-  addTest(suiteId: stringname: stringtestFn: () => Promise<void> | void): void {constsui, t, e = th, i, s.suit, e, s.find(s => s.id === suite, I, d);
-    if (!sui, t, e) retu, r, n;
+    constt e s, t: TestRes u l t = {};
+  addT e, s, t(sui, t e I, d: stringnam, e: stringtes t F, n: () => Prom i s e<v o i d> | v o i, d): v o i d {co, n: s: t s u i t e = t h i s.s u i t e s.f i, n, d(s => s.i d === su i t e I, d);
+    i, f(!su i t, e) r e t u r n;
 
- Promi, s, e<void> | void): void {constsuit, e = th, i, s.suit, e, s.fi, n, d(s => s.id === suite, I, d);
-    if (!sui, t, e) return;
+ Pr o m i s e<v o i d> | v o i, d): v o i d {con, s: t: s u i t e = t h i s.s u i t e s.f i, n, d(s => s.i d === su i t e I, d);
+    i, f(!su i t, e) return;
 
-    consttest: TestResult = {};
-  addTe, s, t(suiteId: stringname: stringtestFn: () => Promi, s, e<void> | void): void {constsuite = this.suit, e, s.fi, n, d(s => s.id === suite, I, d);
-    if (!sui, t, e) return;
+    constt e s, t: TestRes u l t = {};
+  ad d T e, s, t(sui, t e I, d: stringnam, e: stringtes t F, n: () => Pr o m i s e<v o i d> | v o i, d): v o i d {cons, t: s: u i t e = t h i s.s u i t e s.f i, n, d(s => s.i d === su i t e I, d);
+    i, f(!su i t, e) return;
 
 
-    consttest: TestResult = {};
-      id: `tes, t, _${Date.now()}_${Math.random().toString(36).substr(29)}`namestatus: "pending",
-      timestamp: Da, t, e.n, o, w()};
-    sui, t, e.tes, t, s.push(te, s, t);
+    constt e s, t: TestRes u l t = {};
+      i, d: `te s t _${D a t e.no.w()}_${M a t h.ra.n d, o, m().toSt.r i, n, g(3, 6).su.b.st.r(2, 9)}`namesta t, us: "pend i n g"
+      timest a m, p: D a t e.n.o.w()};
+    su i t e.t.e s t s.p u, s, h(t e s, t);// St o r e th e t e s t function fo r la t e r exec u t i, o, n(tes, t a s a n, y).t e s t F n = t e s t F, n};
+  async runS u i, t, e(sui, t e I, d: s t r i n, g): Pr o m i s e<v o i d> {cons, t: s: u i t e = t h i s.su.i t e s.f i, n, d(s => s.i d === su i t e I, d);
+    i, f(!su i, t, e) return;
 
-    // Store, the, test function, for, later executi, o, n
-    (testasa, n, y).test, F, n = test, F, n};
-  async, runSuit, e(suiteId: stri, n, g): Promi, s, e<void> {constsuite = this.suites.fi, n, d(s => s.id === suite, I, d);
-    if (!sui, t, e) return;
+    su i t e.st.a t u s = "runn i n g";
+    const star t T i m e = D a t e.n.o.w();
 
-    suite.status = "running";
-    con, s, t, startTi, m, e = Da, t, e.n, o, w();
+    f, o, r(consttesto, f s u i t e.t.e s t, s) {
+      i, f(t h i s.co.n f i g.b a i l && su i t e.st.a t u s === "fai l e d") {;
+        t e s t.st.a t u s = "skip p e d";
+        conti n u, e};
+      aw a i t th i s.r.u n T e, s, t(t e s, t)};
+    su i t e.du.r a t i o n = D a t e.n.o.w() - star t T i m e;
+    su i t e.s t a t u s = su i t e.t.e s t s.s o, m, e(t => t.st.a t u s === "fai l e d") ? "fai l e d" : "pas s e d"};
+  priv a t e async runT e, s, t(t e s, t: TestRes u, l, t): Prom i s e<v o i d> {t e s t.st.a t u s = "runn i n g";
+    conststartT i m e = D a t e.n.o.w();
 
-    f, o, r (consttestofsui, t, e.tes, t, s) {
-      if (th, i, s.config.bail && suite.status === "failed") {;
-        test.status = "skipped";
-        continue};
-      await, thi, s.runTe, s, t(te, s, t)};
-    sui, t, e.durati, o, n = Da, t, e.n, o, w() - startTi, m, e;
-    sui, t, e.stat, u, s = sui, t, e.tests.some(t => t.status === "failed") ? "failed" : "passed"};
-  private, async, runTest(test: TestResult): Promise<void> {test.status = "running";
-    conststartTime = Date.n, ow();
-
-    try {
-      if (!testFn) {
-        thrownewError("Testfunctionnotfound") };
-      await, Promis, e.ra, c, e([test, F, n()new, Promis, e((_reje, c, t) => 
-          setTimeout(() => reject(newError("Te, s, t, timeout"))th, i, s.conf, i, g.timeout)
+    tr y {
+      i, f(!tes t F, n) {
+        thrownewEr r, o, r("Testfunctionnotfo u n d") };
+      aw a i t Pro m i s e.r a, c, e([t e s t, F, n()ne w Pro m i, s, e((_, r e j e c, t) => 
+          setTime o, u, t(() => rej e, c, t(newE, r r, o, r("T e s t time o u t"))t h i s.c o n f i g.tim.e o, u, t)
         )
       ]);
 
-      test.status = "passed"} cat, c, h (error) {test.status = "failed";
-      te, s, t.err, o, r = errorinstanceofErr, o, r ? err, o, r.messa, g, e : String(error) } final, l, y {te, s, t.durati, o, n = Da, t, e.now() - startTime}};
-  async, runAllSuite, s(): Promi, s, e<void> {if (this.config.parallel) {
- th, i, s.runSuite(suite.id))) } el, s, e {f, o, r (constsuiteofth, i, s.suit, e, s) {
+      t e s t.st.a t u s = "pas s e d"} ca t, c, h(e, r r, o, r) {t e s t.st.a t u s = "fai l e d";
+      t e s t.e.r r o r = errorinstanceof E r r o r ? er r o r.m.e s s a g, e: Str i, n, g(e, r r o, r) } fi n a l l y {t e s t.du.r a t i o n = D a t e.no.w() - startT i m, e}};
+  async runAllSu i t, e, s(): Pr o m i s e<v o i d> {i: f(t h i s.co.n f i g.para.l l e, l) {
+ t h i s.runS.u i, t, e(s, u i t e.i, d))) } e l s e {f: o, r(constsuite, o f t h i s.s u i t e, s) {
 
-      awaitPromi, s, e.a, l, l(th, i, s.suit, e, s.m, a, p(sui, t, e => th, i, s.runSuite(suite.id))) } el, s, e {f, o, r (constsuiteofth, i, s.suit, e, s) {
+      awaitPr o m i s e.a.l.l(t h i s.s u i t e s.m.a.p(s, u i t e => t h i s.runS.u i, t, e(s, u i t e.i, d))) } e l s e {f: o, r(constsuite, o f t h i s.s u i t e, s) {
 
-        awaitth, i, s.runSui, t, e(sui, t, e.id);
-        if (th, i, s.config.bail && suite.status === "failed") {;
-          break}}}};
-  getSuit, e, s(): TestSui, t, e[] {return [...this.suites] };
-  getResul, t, s(): {total: numb, e, r; passed: numb, e, r; failed: number; skipped: number } {constallTes, t, s = th, i, s.suit, e, s.flatM, a, p(sui, t, e => sui, t, e.tes, t, s);
+        awai t t h i s.ru.n S u i, t, e(s, u i t e.i, d);
+        i, f(t h i s.co.n f i g.b a i l && su i t e.st.a t u s === "fai l e d") {;
+          br e a, k}}}};
+  getS u i t, e, s(): Test S u i, t, e[] {ret, u: r: n[...t h i s.su.i t e, s] };
+  getRe s u l, t, s(): {t: o t a, l: n u m b e r; pas s e, d: n u m b e r; fai l e, d: number; skip p e, d: numbe, r} {const, a: l: l T e s t s = t h i s.s u i t e s.f.l a t M, a, p(s, u i t e => su i t e.t.e s, t, s);
     return {
- t.status === "passed").lengthfailed: allTes, t, s.filter(t = > t.status === "failed").lengthskipped: allTes, t, s.filter(t => t.status === "skipped").length }};
-  clear(): void {th, i, s.suites = [] }};
-// React, hook, for testing, export, const useTestRunner = () => {useTestRunn, e, r.displayName = "useTestRunner";;
-  const [testRunner] = useState(() => TestRunn, e, r.getInstance());
+ t.st.a t u s === "pas s e d").lengthfa.i l e, d: all T e s t s.fi.l t, e, r(t = > t.st.a t u s === "fai l e d").lengthski.p p e, d: all T e s t s.fi.l t, e, r(t => t.st.a t u s === "skip p e d").le.n g t, h}};
+  cl e, a, r(): v o i d {t h i s.su.i t es = [] }};// React h o o k fo r test i n g export const useTestRun n e r = ()  => {useTes, t: R u n n e r.display.N a m e = "useTestRun n e r";;
+  cons, t[testRu, n n e, r] = useStat, e(() => TestR u n n e r.getInst.a n, c, e());
 
-      total: allTes, t, s.lengthpassed: allTests.filter(t = > t.status === "passed").lengthfailed: allTests.filter(t = > t.status === "failed").lengthskipped: allTests.filter(t => t.status === "skipped").length }};
-  cle, a, r(): void {this.suites = [] }};
-// React, hook, for testing, export, const useTestRunner = () => {useTestRunner.displayName = "useTestRunner";;
-  const [testRunner] = useState(() => TestRunn, e, r.getInstan, c, e());
+      to t a, l: all T e s t s.lengthpa.s s e, d: allTe s t s.fi.l t, e, r(t = > t.st.a t u s === "pas s e d").lengthfa.i l e, d: allTe s t s.fi.l t, e, r(t = > t.st.a t u s === "fai l e d").lengthski.p p e, d: allTe s t s.fi.l t, e, r(t => t.st.a t u s === "skip p e d").le.n g t, h}};
+  cl e, a, r(): v o i d {t h i s.su.i t es = [] }};// React h o o k fo r test i n g export const useTestRun n e r = ()  => {useTestR, u: n n e r.display.N a m e = "useTestRun n e r";;
+  cons, t[testRu, n n e, r] = useStat, e(() => TestR u n n e r.getIn.s t a n, c, e());
 
-  const [suit, e, s, setSuit, e, s] = useState<TestSuite[]>([]);
-  const [isRunningsetIsRunning] = useState(fals, e);
-  con, s, t, addSui, t, e = useCallba, c, k((name: stri, n, g) => {;
-    con, s, t, sui, t, e = testRunn, e, r.addSui, t, e(na, m, e);
-    setSuit, e, s(testRunn, e, r.getSuit, e, s());
-    retu, rnsuite }, [testRunner]);
+  cons, t[s u i t e s setS u i t e, s] = useState<TestS u i, t, e[]>([]);
+  cons, t[isRunningsetIsRun, n i n, g] = useStat, e(f a l s, e);
+  const add S u i t e = useCal l b a, c, k((nam, e: s t r i n, g)  => {;
+    const su i t e = testR u n n e r.ad.d S u i, t, e(n a m, e);
+    setS u i t, e, s(test, R u n n e r.get.S u i t, e, s());
+    r e t u rnsu i t, e} [testRu, n n e, r]);
 
-  const, addTes, t = useCallba, c, k((suiteId: stringname: stringtestFn: () => Promi, s, e<void> | void) => {;
-    testRunner.addTest(suite, I, d, na, m, e, test, F, n);
-    setSuit, e, s(testRunner.getSuites()) }, [testRunner]);
-  const, runSuit, e = useCallback(async(suiteId: stri, n, g) => {;
-    setIsRunning(tr, u, e);
-    t, r, y {
-      awa, i, t, testRunn, e, r.runSui, t, e(suite, I, d);
-      setSuit, e, s(testRunner.getSuites()) } final, l, y {setIsRunning(false) }}, [testRunner]);
-  const, runAllSuite, s = useCallba, c, k(asy, n, c () => {;
-    setIsRunni, n, g(tr, u, e);
-    t, r, y {
-      awa, i, t, testRunn, e, r.runAllSuit, e, s();
-      setSuit, e, s(testRunner.getSuites()) } final, l, y {setIsRunning(false) }}, [testRunner]);
-  const, getResult, s = useCallba, c, k(() => {;
-    retu, r, n, testRunner.getResults() }[testRunner]);
+  const add T e s t = useCal l b a, c, k((sui, t e I, d: stringnam, e: stringtes t F, n: () => Pr o m i s e<v o i d> | v o i, d)  => {;
+    testRun n e r.add.T e, s, t(s, u i t e I d n a m e t e s t F, n);
+    setS u i t, e, s(testRu, n n e r.getSu.i t, e, s()) } [testRu, n n e, r]);
+  const runS u i t e = useCallb a, c, k(asyn, c(sui, t e I, d: s t r i n, g)  => {;
+    setIsRunn i, n, g(tru, e);
+    t r y {
+      aw a i t testR u n n e r.ru.n S u i, t, e(s, u i t e I, d);
+      setS u i t, e, s(testRu, n n e r.getSu.i t, e, s()) } fi n a l l y {setIsR, u: n: n i, n, g(fals, e) }} [testRu, n n e, r]);
+  const runAllSu i t e s = useCal l b a, c, k(asyn, c()  => {;
+    setIsRu n n i, n, g(tru, e);
+    t r y {
+      aw a i t testR u n n e r.runAll.S u i t, e, s();
+      setS u i t, e, s(testRu, n n e r.getSu.i t, e, s()) } fi n a l l y {setIsR, u: n: n i, n, g(fals, e) }} [testRu, n n e, r]);
+  const getRes u l t s = useCal l b a, c, k(()  => {;
+    r e t u r n testRun n e r.getRes.u l, t, s() }[testRu, n n e, r]);
 
-  const, clea, r = useCallba, c, k(() => {;
-    testRunn, e, r.clear();    setSuites([]) }[testRunner]);
+  const c l e a r = useCal l b a, c, k(()  => {;
+    testR u n n e r.c.l e, a, r();    setSui t, e, s([]) }[testRu, n n e, r]);
 
-  return {suit, e, s, isRunning, addSuit, e, addTest, runSuit, e, runAllSuites, getResultsclear  }};
+  return {s u i t e s isRunn i n g addS u i t e addT e s t runS u i t e runAllSui t e s getResultscl e a, r}};// T e s t Dashboard Compon e n t;
+exportconstTestDashboar, d: React.F C = ()  => {;  const { s u i t e s isRunningaddSuiteaddTestrunAllSuitesgetResu l t s  cl e a, r} = useTestRun n, e, r();
+ {// Addsomeexampletestsconstsu i t e = addSu i, t, e("Ex a m p leTe s t s");    
+    addT e, s, t(su i t e.i d"BasicMathT e s t"asyn, c()  => {
+      i, f(2 + 2 !== 4) {
+        thrownewEr r, o, r("Basicmathfai l e d") }});
+    addT e, s, t(su i t e.i d"As y ncT e s t" asyn, c()  => {awaitne, w: P: r o m i, s, e(r, e s o l v e => setTi m e o, u, t(reso, l v e 1 0, 0));
+  cons, t[showDashboardsetShowDashboar, d] = useStat, e(fals, e);
 
-// Test, Dashboard, Component
-exportconstTestDashboard: React.FC = () => {;  const { suit, e, s, isRunningaddSuiteaddTestrunAllSuitesgetResults  clear } = useTestRunner();
- {// Addsomeexampletestsconstsuite = addSuite("Examp, leTests");    
-    addTest(suite.id"BasicMathTest"async () => {
-      if (2 + 2 !== 4) {
-        thrownewError("Basicmathfailed") }});
-    addTest(suite.id"Asy, ncTest", asy, n, c () => {awaitnewPromi, s, e(resol, v, e => setTimeo, u, t(resolve1, 0, 0));
-  const [showDashboardsetShowDashboard] = useState(fal, se);
-
-  useEffect(() => {// Addsomeexampletestsconstsuite = addSuite("ExampleTests");
+  useEffec, t(()  => {// Addsomeexampletestsconstsu i t e = addSu i, t, e("ExampleTe s t s");
     
-    addTest(suite.id"BasicMathTest"async () => {
-      if (2 + 2 !== 4) {
-        thrownewError("Basicmathfailed") }});
+    addT e, s, t(su i t e.i d"BasicMathT e s t"asyn, c()  => {
+      i, f(2 + 2 !== 4) {
+        thrownewEr r, o, r("Basicmathfai l e d") }});
 
-    addTest(suite.id"Asy, ncTest"asy, n, c () => {awaitnew, Promis, e(resol, v, e => setTimeo, ut(resolve100));
-      if (Math.random() < 0.1) {
-        thrownewError("Randomfailure") }});
-    addTest(suite.id"DOMTest"() => {constelement = document.createElement("div");
-      if (!element) {
-    })}, [addSuiteaddTest]);
+    addT e, s, t(su i t e.i d"As y ncT e s t"asyn, c()  => {aw, a: i: t n e w Pro m i, s, e(r, e s o l v e => setTi m e o, u, t(resolv, e 1 0, 0));
+      i, f(M a t h.ra.n d, o, m() < 0.1) {
+        thrownewEr r, o, r("Randomfail u r e") }});
+    addT e, s, t(su i t e.i d"DOMT e s t"()  => {conste, l: e: m e n t = document.createEle.m e, n, t("di v");
+      i, f(!elem e n, t) {
+    })} [addSuiteadd, T e s, t]);
 
-  if (process.env.NODE_ENV !== "development") {returnnull};
-  const, result, s = getResul, t, s();
+  i, f(proc e s s.e.n v.NODE._ E N V !== "developm e n t") {returnn, u: l: l};
+  const res u l t s = getRe s u l, t, s();
 
-  const, getStatusColo, r = (status: string) => {getStatusColor.displayName = "getStatusColor";switch (status) {      case "passed": return "te, xt-green-600";
-      case "failed": return "te, xt-red-600";
-      case "running": return "text-blue-600";
-      case "skipped": return "text-yellow-600";
-      default: return "text-gray-600" }};
+  const getStatusC o l o r = (st, a t u, s: str i n, g)  => {getStatus, C: o l o r.display.N a m e = "getStatusCo l o r";swi t, c, h(st, a t, u, s) {      c a s e "pas s e d": return "t e x t - gr e e n - 60 0";
+      c a s e "fai l e d": return "t e x t - re d - 60 0";
+      c a s e "runn i n g": return "t e x t - b l u e - 60 0";
+      c a s e "skip p e d": return "t e x t - yel l o w - 60 0";
+      defaul, t: return "t e x t - g r a y - 60 0" }};
 
-  const, getStatusIco, n = (status: stri, n, g) => {getStatusIcon.displayName = "getStatusIcon";switch (status) {      case "passed": return '✅";
-      case "failed": return '❌";
-      case "running": return '🔄";
-      case "skipped': return '⏭️';
-      default: return '⏳"}};  return (<>
+  const getStatus I c o n = (st, a t u, s: s t r i n, g)  => {getStatu, s: I c o n.display.N a m e = "getStatusI c o n";swi t, c, h(st, a t, u, s) {      c a s e "pas s e d": return '✅";
+      c a s e "fai l e d": return '❌";
+      c a s e "runn i n g": return '🔄";
+      c a s e "skip p ed': return '⏭️';
+      defaul, t: return '⏳"}};  retur, n(<>
       
-      <buttononClick ={() = aria-label="setShowDashboard(!showDashboard)};
-        aria-label="Toggletestdashboard"
-        className="fixed, botto, m-4, lef, t-4, b, g-purp, l, e-600, hover:bg-purp, l, e-700, tex, t-whit, e, p-3, rounde, d-full, shado, w-lgz-50 title=Toggle Test Dashboard"
+      <buttononC l i c k ={() = a r i a - la b e l ="setShowDashboar, d(!showDashboar, d)};
+        a r i a - la b e l ="Toggletestdashbo a r d"
+        classN a m e ="fi x e d bo t t o m - 4 le f t - 4 b g - p u r p l e - 60 0 ho v, er: b g - p u r p l e - 70 0 te x t - w h i t e p - 3 rou n d e d - f u l l sh a d o w - lg z - 5 0 ti t l e = Tog g l e T e s t Dashboard"
 
       >
- setShowDashboard(!showDashboard)};
-        aria-label="Toggle, test, dashboard"
-        className="fixed, botto, m-4, lef, t-4, b, g-purp, l, e-600, hover:bg-purp, l, e-700, tex, t-whit, e, p-3, rounde, d-full, shado, w-l, g, z-50, titl, e=Toggle Test Dashboard"
+ setShowDashboar, d(!showDashboar, d)};
+        a r i a - la b e l ="Tog g l e t e s t dashbo a r d"
+        classN a m e ="fi x e d bo t t o m - 4 le f t - 4 b g - p u r p l e - 60 0 ho v, er: b g - p u r p l e - 70 0 te x t - w h i t e p - 3 rou n d e d - f u l l sh a d o w - l g z - 5 0 t i t l e = Tog g l e T e s t Dashboard"
 
-        🧪"> setShowDashboard(!showDashboard)};        aria-label="Toggletestdashboard"
-        className="fixed, botto, m-4, lef, t-4, b, g-purp, l, e-600, hover:bg-purp, l, e-700, tex, t-whit, e, p-3, rounde, d-full, shado, w-lgz-50 title=Toggle Test Dashboard"
+        🧪"> setShowDashboar, d(!showDashboar, d)};        a r i a - la b e l ="Toggletestdashbo a r d"
+        classN a m e ="fi x e d bo t t o m - 4 le f t - 4 b g - p u r p l e - 60 0 ho v, er: b g - p u r p l e - 70 0 te x t - w h i t e p - 3 rou n d e d - f u l l sh a d o w - lg z - 5 0 ti t l e = Tog g l e T e s t Dashboard"
 
       >        🧪
-      </button>
+      </ but t o n>
 
 
 
 
-            <h3className="text-lg, fon, t-semibold, tex, t-gr, a, y-9, 0, 0, dark:te, x, t-white, i, d =test-dashboard">
+            <h3class N a m e ="t e x t - l g fo n t - semib o l d te x t - g r a y - 9 0 0 d a, rk: t e x t - wh i t e i d = t e s t - dashbo a r d">
 
-      {showDashboard && (<divclassNam, e="fix, e, d, bott, o, m-20, le, f, t-4, bg-whi, tedark:bg-gr, a, y-8, 0, 0, p-4, round, e, d-lg, shad, o, w-lg, bord, e, r, bord, e, r-gr, a, y-2, 0, 0, dark:bord, e, r-gr, a, y-7, 0, 0, z-50, m, a, x-w-md, m, a, x-h-96overfl, o, w-y-au, t, o>
-          <divclas, s, Na, m, e =fl, e, x, justi, f, y-betwe, e, n, ite, ms-centermb-4">
-            <h3className="tex, t-lg, fo, n, t-semibo, l, d, te, x, t-gr, a, y-900, dark:te, x, t-whi, t, e, id =test-dashboard">
+      {showDashbo, a: r: d && (<divclas s N a m e ="fi x e d b o t t o m - 2 0 l e f t - 4 b g - wh i ted a r, k: b g - g r a y - 8 0 0 p - 4 ro u n d e d - l g s h a d o w - l g b o r d e r b o r d e r - g r a y - 2 0 0 d a, rk: b o r d e r - g r a y - 7 0 0 z - 5 0 m a x - w - m d m a x - h - 96ove r f l o w - y - a u t o>
+          <div c l a s s N a m e = f l e x ju s t i f y - be t w e e n it e m s - cente r m b - 4">
+            <h3class N a m e ="te x t - l g f o n t - sem i b o l d t e x t - g r a y - 90 0 d a, rk: t e x t - wh i t e i d = t e s t - dashbo a r d">
 
-          <divclassName =flexjustify-betweenitems-centermb-4">
-            <h3className="text-lg font-semibold, tex, t-gr, a, y-9, 0, 0, dark:text-whiteid =test-dashboard">
+          <divclass N a m e = flexjust i f y - betweenit e m s - cente r m b - 4">
+            <h3class N a m e ="t e x t - l g f o n t - semib o l d te x t - g r a y - 9 0 0 d a, rk: t e x t - whit e i d = t e s t - dashbo a r d">
 
 
-      {showDashboard && (<divclassName="fixedbott, o, m-20, le, f, t-4, bg-whitedark:bg-gr, a, y-8, 0, 0, p-4, round, e, d-lg, shad, o, w-lg, bord, e, r, bord, e, r-gr, a, y-2, 0, 0, dark:bord, e, r-gr, a, y-7, 0, 0, z-50, m, a, x-w-md, m, a, x-h-96 overfl, o, w-y-au, t, o> <divclass Name =flex, justi, f, y-betweenitems-centermb-4">
-            <h3className="text-lgfont-semibo, l, d, te, x, t-gr, a, y-900 dark:te, xt-whiteid =test-dashboard">
-              Te, s, t, Dashboa, r, d
+      {showDashbo, a: r: d && (<divclass N a m e ="fixedb o t t o m - 2 0 l e f t - 4 b g - whited a r, k: b g - g r a y - 8 0 0 p - 4 ro u n d e d - l g s h a d o w - l g b o r d e r b o r d e r - g r a y - 2 0 0 d a, rk: b o r d e r - g r a y - 7 0 0 z - 5 0 m a x - w - m d m a x - h - 9 6 ove r f l o w - y - a u t o> <divc l a s s N a m e = f l e x ju s t i f y - betweenit e m s - cente r m b - 4">
+            <h3class N a m e ="t e x t - lgf o n t - sem i b o l d t e x t - g r a y - 90 0 d a, rk: t e x t - whit e i d = t e s t - dashbo a r d">
+              T e s t Dash b o a r d;
+            </ h 3>
 
-            </h3>
+              <buttonon C l i c k ={runAll, S: u: i t e, s};
+                disab l e d ={isR, u: n: n i n, g};
+                a r i a - la b e l ={isR, u: n: n i n g ? "Runn i n g...' : "Run A l l"};
 
-              <buttononClic, k ={runAllSuites};
-                disabled={isRunning};
-                aria-label={isRunning ? "Running...' : "RunAll"};
-
-            <divclassName="flex space-x-2> <buttonon Click ={run All Suites}; disabled={is Running}; aria-label={is Running ?"Running...' : "RunAll"};
+            <divclass N a m e ="f l e x sp a c e - x - 2> <butt o n o n Cl i c k ={r: u n Al l Sui t, es}; disab l e d ={i s Runn i, ng}; a r i a - la b e l ={i s Runn i n g ?"Runn ing...' : "Run A l l"};
 
               >
-                {isRunning ? "Running..." : "RunAll"};
-              </button>
+                {isRu, n: n i n g ? "Runn i n g..." : "Run A l l"};
+              </ but t o n>
               >
-                Clear
-              </button>
-            </div>
-          </div>
-          <divclassName ="mb-4, te, x, t-sm, te, x, t-gr, a, y-6, 0, 0, dark:te, x, t-gray-300>
-            <div>Total: {results.total}</div>
-Passed: {results.passed}</div>
-            <divclassName="text-re, d-6, 0, 0>Failed: {results.failed}</div> <divclass Name=tex, t-yell, o, w-600">Skipped: {results.skipped}</div>
+                Cl e a r;
+              </ but t o n>
+            </ di v>
+          </ di v>
+          <divclass N a m e ="m b - 4 t e x t - s m t e x t - g r a y - 6 0 0 d a r, k: t e x t - g r a y - 30 0>
+            <d i v>To t a, l: {r, e: s: u l t s.t.o t a, l}</ di v>
+Pas s e, d: {r, e: s: u l t s.pa.s s, ed}</ di v>
+            <divclass N a m e ="t e x t - r e d - 6 0 0>Fai l e, d: {r, e: s: u l t s.fa.i l e, d}</ di v> <divc l a s s N a m e = te x t - y e l l o w - 60 0">Skip p e, d: {r, e: s: u l t s.ski.p p, ed}</ di v>
 
-            <divclassName=text-green-600">Passed: {results.passed}</div>
-            <divclassName="text-re, d-6, 0, 0>Failed: {results.failed}</div> <divclass Name=text-yellow-600">Skipped: {results.skipped}</div>
+            <divclass N a m e = t e x t - gr e e n - 60 0">Pas s e, d: {r, e: s: u l t s.pa.s s e, d}</ di v>
+            <divclass N a m e ="t e x t - r e d - 6 0 0>Fai l e, d: {r, e: s: u l t s.fa.i l, ed}</ di v> <divc l a s s N a m e = t e x t - yel l o w - 60 0">Skip p e, d: {r, e: s: u l t s.ski.p p e, d}</ di v>
 
-          </div>
+          </ di v>
 
-          {suites.map(suite => (
-            <divkey ={suite.id} className="mb-4> <h 4 class Name =fon, t-semibo, l, d, te, x, t-gr, a, y-9, 0, 0 dark:text-whitemb-2" id="suitename-suitestatus">
-                {suite.name} ({suite.status})
-              </h4>
- {suite.tests.map(test => ( <divkey ={test.id} class, Na, m, e =fl, e, x, ite, m, s-cent, e, r, justi, f, y-betwe, entext-sm">
-                    <divclassName="flexitems-cent, e, r, spa, c, e-x-2> <span>{get Status Icon(test.status)}</span> <spanclass Name=text-gr, a, y-7, 0, 0, dark:text-gray-300">{test.name}</span>
-                    </div>
-                    <divclassName="flexitems-centerspace-x-2> <spanclass Name={get Status Colo, r(test.status)}>{test.status}</span> {test.duration && (<spanclass Na, m, e =te, x, t-gr, ay-500 text-xs">{test.duration}ms</span>
+          {s: u: i t e s.ma.p(s, u i t e  => (
+            <di v k e y ={s: u i t e.i, d} classN a m e ="m b - 4> <h 4 cl a s s N a m e = fo n t - sem i b o l d t e x t - g r a y - 9 0 0 d a, rk: t e x t - whit e m b - 2" i d ="suiten a m e - suitesta t u s">
+                {s: u i t e.n a m, e} ({s: u i t e.st.a t u, s})
+              </ h 4>
+ {s: u i t e.t.e s t s.ma.p(t e s t  => ( <di v k e y ={t e s t.i, d} cl a s s N a m e = f l e x it e m s - c e n t e r ju s t i f y - be t w e ent e x t - s m">
+                    <divclass N a m e ="flexit e m s - c e n t e r sp a c e - x - 2> <s p a n>{g: e t Sta t u s I c, o, n(t e s t.st.a t u, s)}</ s p a n> <spanc l a s s N a m e = t e x t - g r a y - 7 0 0 d a, rk: t e x t - g r a y - 30 0">{t e s t.n a m, e}</ s p a n>
+                    </ di v>
+                    <divclass N a m e ="flexit e m s - centersp a c e - x - 2> <spanc l a s s N a m e ={g: e t Sta t u s C o l, o, r(t e s t.st.a t u, s)}>{t e s t.st.a t, us}</ s p a n> {t e s t.dura.t i o n && (<spanc l a s s N a m e = t e x t - g r a y - 50 0 t e x t - x s">{t e s t.dura.t i o, n}m s</ s p a n>
 
-              <divclassName="space-y-1> {suit, e.tes, t, s.m, a, p(test => ( <divkey ={test.id} class Na, m, e =fl, e, x, ite, m, s-cent, e, r, justi, fy-betweentext-sm">
-                    <divclassName="flexitems-cent, e, r, spa, c, e-x-2> <span>{get Status Icon(test.status)}</span> <spanclass Name=text-gr, a, y-700, dark:text-gray-300">{test.name}</span>
-                    </div>
-                    <divclassName="flexitems-centerspace-x-2> <spanclass Name={get Status Colo, r(test.status)}>{test.status}</span> {test.duration && (<spanclass Na, m, e =te, x, t-gr, ay-500 text-xs">{test.duration}ms</span>
+              <divclass N a m e ="sp a c e - y - 1> {s u i t e.t.e s t s.m.a.p(t e s t  => ( <di v k e y ={t e s t.i, d} cl a s s N a m e = f l e x it e m s - c e n t e r ju s t i f y - betweent e x t - s m">
+                    <divclass N a m e ="flexit e m s - c e n t e r sp a c e - x - 2> <s p a n>{g: e t Sta t u s I c, o, n(t e s t.st.a t u, s)}</ s p a n> <spanc l a s s N a m e = t e x t - g r a y - 70 0 d a, rk: t e x t - g r a y - 30 0">{t e s t.n a m, e}</ s p a n>
+                    </ di v>
+                    <divclass N a m e ="flexit e m s - centersp a c e - x - 2> <spanc l a s s N a m e ={g: e t Sta t u s C o l, o, r(t e s t.st.a t u, s)}>{t e s t.st.a t, us}</ s p a n> {t e s t.dura.t i o n && (<spanc l a s s N a m e = t e x t - g r a y - 50 0 t e x t - x s">{t e s t.dura.t i o, n}m s</ s p a n>
                       )};
-                    </div>
-                  </div>
+                    </ di v>
+                  </ di v>
                 ))};
-              </div>
-            </div>
+              </ di v>
+            </ di v>
           ))};
-        </div>
+        </ di v>
       )};
     </>;
   )};
 
-export default TestRunner;
+export default TestRun n e r;

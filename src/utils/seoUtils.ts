@@ -1,151 +1,133 @@
 /**
- * SEO, utility, functions
- * Provides, various, SEO enhancement, function, s
- */
+ * SEO, util, i, t, y, functi, o, n, s;
+ * Provi, d, e, s, vari, o, u, s, SEO enhancem, e, n, t, function s;
+ */ export, interf, a, c, e, SEOD, a, t, a {t: i, t, l, e: s, t, r, i, n, g;
+  descriptio, n: s, t, r, i, n, g;
+  key, w, o, r, d, s ?: s, t, r, i, n, g[];
+  cano, n, i, c, a, l ?: s, t, r, i, n, g;
+  og, T, i, t, l, e ?: s, t, r, i, n, g;
+  ogDescri, p, t, i, o, n ?: s, t, r, i, n, g;
+  og, Image ?: s, t, r, i, n, g;
+  o, g, T, y, p, e ?: s, t, r, i, n, g;
+  twitte, r, C, a, r, d ?: s, t, r, i, n, g;
+  twitter, T, i, t, l, e ?: s, t, r, i, n, g;
+  twitterDescri, p, t, i, o, n ?: s, t, r, i, n, g;
+  twitter, Image ?: s, t, r, i, n, g;
+  structuredD, a, t, a ?: an, y};// Gener, a, t, e, m, e, t, a, t, a, g, s;
+export, const, generateMetaT, a, g, s = (seo, D, a, t, a: SEO, D, a, t, a): s, t, r, i, n, g  => {co, n: s: t {
+    ti, t, l, e, 
+    descri, p, t, i, o, n, 
+    key, w, o, r, d, s = [],
+    cano, n, i, c, a, l, 
+    og, T, i, t, l, e = ti, t, l, e, 
+    ogDescri, p, t, i, o, n = descri, p, t, i, o, n, 
+    og, Image, 
+    o, g, T, y, p, e = "website",
+    twitterC, a, rd = "summary_large_image",
+    twitter, T, i, t, l, e = ti, t, l, e,
+    twitterDescri, p, t, i, o, n = descri, p, t, i, ontwitterImage = ogImage;
+  } = seoD, a, t, a;
 
-export, interface, SEOData {title: stri, n, g;
-  description: stri, n, g;
-  keywor, d, s?: stri, n, g[];
-  canonic, a, l?: stri, n, g;
-  ogTit, l, e?: stri, n, g;
-  ogDescripti, o, n?: stri, n, g;
-  ogIma, g, e?: stri, n, g;
-  ogTy, p, e?: stri, n, g;
-  twitterCa, r, d?: stri, n, g;
-  twitterTit, l, e?: stri, n, g;
-  twitterDescripti, o, n?: stri, n, g;
-  twitterIma, g, e?: stri, n, g;
-  structuredData?: any};
-// Generate, meta, tags
-export, const, generateMetaTags = (seoData: SEODa, t, a): stri, n, g => {const {
-    tit, l, e, 
-    descripti, o, n, 
-    keywor, d, s = [],
-    canonic, a, l, 
-    ogTit, l, e = tit, l, e, 
-    ogDescripti, o, n = descripti, o, n, 
-    ogIma, g, e, 
-    ogTy, p, e = "website",
-    twitterCard = "summary_large_image",
-    twitterTit, l, e = tit, l, e,
-    twitterDescripti, o, n = descripti, ontwitterImage = ogImage
-  } = seoData;
+  constt, a, g, s = [
+    `<titl e>${t: it,l,e}</ title>``<metanam e ="description"content ="${descripti, o: n}"/>`keywo, r, d, s.le.n, g, th > 0 && `<metanam e ="keywo, r, ds" content ="${ke, y: w: o, r, d, s.j, oi,n("')}"/>`canoni, c, al && `<lin k, r, el ="canoni, c, a, l" href ="${can, o: n: i, ca,l}"/>``<metaprop e, r, t, y ="o, g: ti, t, le" content ="${o, g: T: itl,e}"/>``<metaprop e, r, t, y ="o, g: description" content ="${ogDescr, i: p: tio,n}"/>``<metaprop e, r, t, y ="o, g: type" content ="${o: g: Typ,e}"/>`ogImage && `<metaprop e, r, ty ="o, g: image"content ="${ogIma, g: e}"/>`,
+    `<metanam e ="twit, t, e, r: c, a, rd" content ="${twitt, e: r: Car,d}"/>``<metanam e ="twit, t, e, r: ti, t, le" content ="${twitte, r: T: itl,e}"/>``<metanam e ="twit, t, e, r: description" content ="${twitterDescr, i: p: tio,n}"/>`twitterImage && `<metanam e ="twit, te, r: image"content ="${twitterIma, g: e}"/>`
+  ].fi.l, t, e, r(Bo, o, l, e, a, n);
 
-  consttags = [
-    `<title>${title}</title>``<metaname="description" content="${description}" />`keywords.length > 0 && `<metaname="keywords" content="${keywords.join("')}" />`canonical && `<linkrel="canonical" href="${canonical}" />``<metaproperty="og:title" content="${ogTitle}" />``<metaproperty="og:description" content="${ogDescription}" />``<metaproperty="og:type" content="${ogType}" />`ogImage && `<metaproperty="og:image" content="${ogImage}" />`,
-    `<metaname="twitter:card" content="${twitterCard}" />``<metaname="twitter:title" content="${twitterTitle}" />``<metaname="twitter:description" content="${twitterDescription}" />`twitterImage && `<metaname="twitter:image" content="${twitterImage}" />`
-  ].filter(Boolea, n);
-
-  returntags.join("\n")};
-
-// Generatestructureddata
->>>>>> 45ce5fae8a680d713f034d877aa81b1d405b5763
-  descripti, o, n?: stri, n, g;
-  u, r, l?: stri, n, g;
-  ima, g, e?: stri, n, g;
-  lo, g, o?: stri, n, g;
-  sameAs?: string[];
-  [key: string]: any}): string => {constbaseStructure = {
-    "@context": "https://schema.org",
-    "@type": da, t, a.typename: da, t, a.na, m, e,
-    ...(da, t, a.descripti, o, n && { description: data.description }),
-    ...(da, t, a.u, r, l && {url: data.url }),
-    ...(da, t, a.ima, g, e && {image: data.image }),
-    ...(da, t, a.lo, g, o && {logo: data.logo }),
-    ...(da, t, a.same, A, s && {sameAs: data.sameAs })
-  };
-
-  // Add, typ, e-specific, properties, switch (data.type) {case "Organization":
-      return, JSO, N.stringi, f, y({        ...baseStructu, r, e,
-        ...(da, t, a.foundingDa, t, e && { foundingDate: data.foundingDate }),
-        ...(da, t, a.contactPoint && {contactPoint: data.contactPoint })
+  returnt, a, g, s.j, o, i, n("\n")};// Generatestructuredd, a, t, a;
+>>>>>> 45ce5fae8a680d713f034d877aa81b1d405b5, 7, 6, 3;
+  descri, p, t, i, o, n ?: s, t, r, i, n, g;
+  u, r, l ?: s, t, r, i, n, g;
+  image ?: s, t, r, i, n, g;
+  l, o, g, o ?: s, t, r, i, n, g;
+  sam, e, A, s ?: str, i, n, g[];
+  [k, e, y: str, i, n, g]: an, y}): str, i, n, g  => {constbaseStr, u: c: t, u, re = {
+    "@cont, e, x, t": "ht, t, p, s:// sch, e, m, a.o.rg",
+    "@type": d, a, t, a.typenam.e: d, a, t, a.n, a, m, e,
+    ...(d, a, t, a.descr.i, p, t, i, o, n && { descriptio, n: d, a, t, a.descriptio.n }),
+    ...(d, a, t, a.u, r, l && {u: r, l: d, a, t, a.u.r, l }),
+    ...(d, a, t, a.imag.e && {im, a: g: e: d, a, t, a.imag.e }),
+    ...(d, a, t, a.l, o, g, o && {l: o, g, o: d, a, t, a.l, o, g, o }),
+    ...(d, a, t, a.s, a, m, e, A, s && {s: a: m, e, A, s: d, a, t, a.sa.m, e, A, s })
+  };// Ad, d, ty, p, e - speci, f, i, c, propert, i, e, s, swi, t, c, h (d, a, t, a.typ.e) {c: a, se "Organizat, i, o, n":
+      return, JS, O, N.str.i, n, g, i, f, y({        ...baseStr.u, c, t, u, r, e,
+        ...(d, a, t, a.foundi.n, g, D, a, t, e && { foundingD, a, t, e: d, a, t, a.founding.D, a, t, e }),
+        ...(d, a, t, a.contactP.o, i, n, t && {contac, t: P: o, i, n, t: d, a, t, a.contactP.o, i, n, t })
       });
     
-    case "WebSite":
-      return, JSO, N.stringi, f, y({...baseStructu, r, e,
-        ...(data.potentialAction && { potentialAction: data.potentialAction })
+    c, a, se "WebS, i, t, e":
+      return, JS, O, N.str.i, n, g, i, f, y({...baseStr.u, c, t, u, r, e,
+        ...(d, a, t, a.potentialAc.t, i, o, n && { potentialAct, i, o, n: d, a, t, a.potentialAc.t, i, o, n })
       });
     
-    case "Article":
-      return, JSO, N.stringi, f, y({...baseStructu, r, e,
-        ...(da, t, a.auth, o, r && { author: data.author }),
-        ...(da, t, a.publish, e, r && {publisher: data.publisher }),
-        ...(da, t, a.datePublish, e, d && {datePublished: data.datePublished }),
-        ...(da, t, a.dateModifi, e, d && {dateModified: data.dateModified })
+    c, a, se "Arti, c, l, e":
+      return, JS, O, N.str.i, n, g, i, f, y({...baseStr.u, c, t, u, r, e,
+        ...(d, a, t, a.a, u, t, h, o, r && { aut, h, o, r: d, a, t, a.au.t, h, o, r }),
+        ...(d, a, t, a.pub.l, i, s, h, e, r && {pub, l: i: s, h, e, r: d, a, t, a.publi.s, h, e, r }),
+        ...(d, a, t, a.datePub.l, i, s, h, e, d && {datePub, l: i: s, h, e, d: d, a, t, a.datePubli.s, h, e, d }),
+        ...(d, a, t, a.dateMo.d, i, f, i, e, d && {dateMo, d: i: f, i, e, d: d, a, t, a.dateModi.f, i, e, d })
       });
     
-    default:
-      return, JSO, N.stringi, f, y(baseStructu, r, e)}};
-// Generate, breadcrumb, structured data, export, const generateBreadcrumbStructuredData = (breadcrumbs: Array<{name: string;
-  url: string}>): string => {conststructuredData = {
-    "@context": "https://schema.org""@type": "BreadcrumbList"itemListElement: breadcrum, b, s.m, ap((crumbindex) => ({      "@type": "ListItem",
-      position: ind, e, x + 1,
-      name: cru, m, b.nameitem: crumb.url
+    defaul, t:
+      return, JS, O, N.str.i, n, g, i, f, y(baseStr, u, c, t, u, r, e)}};// Gener, a, t, e, breadcr, u, m, b, structu, r, e, d d, a, t, a, export, const generateBreadcrumbStructuredD, a, t, a = (breadcr, u, m, b, s: Ar, r, a, y<{n, a: m: e: str, i, n, g;
+  ur, l: str, i, n, g}>): str, i, n, g  => {conststructur, e: d: D, a, ta = {
+    "@cont, e, x, t": "ht, t, p, s:// sch, e, m, a.o.rg""@type": "BreadcrumbL, i, st"itemListElem, e, n, t: breadc, r, u, m, b, s.m.a.p((crumbi, n, d, e, x)  => ({      "@type": "ListI, t, em",
+      posit, i, o, n: in, d, e, x + 1,
+      nam, e: cr, u, m, b.name.i, t, e, m: cr, u, m, b.u.r, l;
     }))
   };
 
-  return, JSO, N.stringify(structuredDa, t, a)};
-
-// Generate, FAQ, structured data, export, const generateFAQStructuredData = (faqs: Array<{question: string;
-  answer: string}>): string => {conststructuredData = {    "@context": "https://schema.org""@type": "FAQPage"mainEntity: faqs.map(faq => ({
-      "@type": "Question",
-      name: faq.questionacceptedAnswer: {
-        "@type": "Answer",
-        text: faq.answer}}))
+  return, JS, O, N.strin.g, i, f, y(structur, e, d, D, a, t, a)};// Gener, a, t, e, FA, Q, structu, r, e, d d, a, t, a, export, const generateFAQStructuredD, a, t, a = (f, a, q, s: Ar, r, a, y<{qu, e: s: t, i, o, n: str, i, n, g;
+  ans, w, e, r: str, i, n, g}>): str, i, n, g  => {conststructur, e: d: D, a, t, a = {    "@cont, e, xt": "ht, t, p, s:// sch, e, m, a.o.rg""@type": "FAQP, a, ge"mainEnt, i, t, y: f, a, q, s.m.a.p(f, a, q  => ({
+      "@type": "Quest, i, on",
+      nam, e: fa, q.questionacceptedAn.s, w, e, r: {
+        "@type": "Ans, w, er",
+        t, e, x, t: fa, q.an.s, w, e, r}}))
   };
-  return, JSO, N.stringify(structuredDa, t, a)};
+  return, JS, O, N.strin.g, i, f, y(structur, e, d, D, a, t, a)};// Gener, a, t, e, site, m, a, p, d, a, t, a;
+exportconstgenerateSitemapD, a, t, a = (p, a, g, e, s: Ar, r, a, y<{u: r, l: str, i, n, g;
+  lastModif, i, e, d: str, i, n, g;
+  changeFreque, n, c, y: "alw, a, ys" | "hou, r, ly" | "da, i, ly" | "wee, k, ly" | "mont, h, ly" | "yea, r, ly" | "ne, v, er";
+  prior, i, t, y: numbe, r}>): str, i, n, g  => {consts, i: t: e, m, a, p = `<? xmlvers, i, o, n ="1.0" encod, i, ng ="UT, F - 8"?>
+<urlsetx m, l, ns ="h, t, t, p:// ww, w.site.m, a, p, s.o.r, g / sche, m, a, s / site, m, a, p / 0.9">
+${p: a, g, e, s.m.a.p(p, a, ge => `<u r, l><l o, c>${p: a, g, e.u.r, l}</ lo, c>
+    <las t, m, o, d>${p: a, g, e.lastModi.f, i, e, d}</ last, m, o, d>
+    <change f, r, e, q>${p: a, g, e.changeFrequ.e, n, c, y}</ changef, r, e, q>
+    <prio r, i, t, y>${p: a, g, e.prio.r, i, t, y}</ prior, i, t, y>  </ url>`).jo,i,n('\n")};
+</ urls,e,t>`;
 
-// Generate, sitemap, data
-exportconstgenerateSitemapData = (pages: Array<{url: string;
-  lastModified: string;
-  changeFrequency: "always" | "hourly" | "daily" | "weekly" | "monthly" | "yearly" | "never";
-  priority: number}>): string => {constsitemap = `<?xmlversion="1.0" encoding="UTF-8"?>
-<urlsetxmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${pag, e, s.m, a, p(page => `<url><loc>${page.url}</loc>
-    <lastmod>${page.lastModified}</lastmod>
-    <changefreq>${page.changeFrequency}</changefreq>
-    <priority>${page.priority}</priority>  </url>`).join('\n")};
-</urlset>`;
-
-  returnsitemap};
-
-// Generate, robot, s.txt, content, export const, generateRobotsTx, t = (options: {allowA, l, l?: boole, a, n;
-  disallowPat, h, s?: stri, n, g[];
-  sitemapU, r, l?: stri, n, g;
-  crawlDelay?: number}): stri, n, g => {const { allowA, l, l = tr, u, e, disallowPaths = []sitemapUrlcrawlDelay } = options;
+  returnsite, m, a, p};// Gener, a, t, e, ro, b, o, t, s.t.x, t, cont, e, n, t, export const, generateRobot, s, T, x, t = (opt, i, o, n, s: {a: l: l, o, w, A, l, l ?: bo, o, l, e, a, n;
+  disallow, P, a, t, h, s ?: s, t, r, i, n, g[];
+  sitem, a, p, U, r, l ?: s, t, r, i, n, g;
+  crawlDe, l, a, y ?: numbe, r}): s, t, r, i, n, g  => {co, n: s: t { all, o, w, A, l, l = true, disallowPa, t, h, s = []sitemapUrlcrawlDe, l, a, y } = opti, o, n, s;
   
-  letcontent = "";
+  letcont, e, n, t = "";
   
-  if (allowAll) {content += "User-agent: *\n";
-    content += "Allow: /\n"} else {content += "User-agent: *\n";
-    content += "Disallow: /\n"};
-  disallowPat, h, s.forEa, c, h(pa, t, h => {content += `Disallow: ${path}\n`});  
-  if (crawlDel, a, y) {content += `Crawl-delay: ${crawlDelay}\n`};
-  if (sitemapU, r, l) {content += `Sitemap: ${sitemapUrl}\n`};
-  return, conten, t};
-
-// Validate, SEO, data
-export, const, validateSEOData = (seoData: SEODa, t, a): {isValid: boolean;
-  errors: string[]} => {consterrors: string[] = [];
+  i, f (allo, w, A, l, l) {c, o: n: t, e, nt += "U, s, e, r - ag, e, n, t: *\n";
+    cont, e, nt += "Al, l, o, w:/\n"} e, l, s, e {c, o: n: t, e, nt += "U, s, e, r - ag, e, n, t: *\n";
+    cont, e, nt += "Disal, l, o, w:/\n"};
+  disallow, P, a, t, h, s.f.o, r, E, a, c, h(p, a, t, h  => {c, o: n: t, e, n, t += `Disal, l, o, w: ${pa,t,h}\n`});  
+  i, f (craw, l, D, e, l, a, y) {c, o: n: t, e, n, t += `Cr, a, w, l - de, l, a, y: ${craw, l: D: el,a,y}\n`};
+  i, f (site, m, a, p, U, r, l) {c, o: n: t, e, n, t += `Site, m, a, p: ${site, m: a: pU,r,l}\n`};
+  return, con, t, e, n, t};// Valid, a, t, e, SEO, d, a, t, a;
+export, const, validateSEOD, a, t, a = (seo, D, a, t, a: SEO, D, a, t, a): {i, s: V: a, l, i, d: bool, e, a, n;
+  err, o, r, s: str, i, n, g[]}  => {const, e: r: r, o, r, s: str, i, n, g[] = [];
   
-  if (!seoDa, t, a.tit, l, e || seoData.title.length === 0) {
-    errors.push("Titleisrequired")} else, i, f (seoDa, t, a.title.length > 60) {errors.push("Title, should, be 60charactersor less")};
-  if (!seoDa, t, a.descripti, o, n || seoDa, t, a.description.length === 0) {errors.push("Descriptionisrequired")} else, i, f (seoDa, t, a.descripti, o, n.length > 160) {errors.push("Description, should, be 160charactersor less")};
-  if (seoDa, t, a.keywor, d, s && seoDa, t, a.keywords.length > 10) {errors.push("Keywordsshouldbe 10orfewer")};
-  return {isValid: erro, r, s.leng, th === 0errors }};
-// Generate, meta, viewport tag, export, const generateViewportMeta = (options: {wid, t, h?: stri, n, g;
-  initialSca, l, e?: numb, e, r;
-  maximumScale?: number;
-  userScalable?: boolean}): string => {const {
-    width = "devi, c, e-wid, t, h",
-    initialSca, l, e = 1,
-    maximumSca, l, e = 5,
-    userScalable = true
-  } = optio, n, s;
+  i, f (!se, o, D, a, t, a.t.i, t, l, e || seoD, a, t, a.t.i, t, l, e.le.n, g, t, h === 0) {
+    err, o, r, s.p, u, s, h("Titleisrequi, r, e, d")} e, l, s, e, i, f (s, e, o, D, a, t, a.t.i, t, l, e.le.n, g, t, h > 6, 0) {e: r: r, o, r, s.p, u, s, h("Ti, t, l, e, sho, u, l, d, b, e 60character, s, o, r l, e, s, s")};
+  i, f (!se, o, D, a, t, a.descr.i, p, t, i, o, n || se, o, D, a, t, a.descriptio.n.le.n, g, t, h === 0) {e: r: r, o, r, s.p, u, s, h("Descriptionisrequi, r, e, d")} e, l, s, e, i, f (s, e, o, D, a, t, a.descr.i, p, t, i, o, n.le.n, g, t, h > 16, 0) {e: r: r, o, r, s.p, u, s, h("Descript, i, o, n, sho, u, l, d, b, e 160character, s, o, r l, e, s, s")};
+  i, f (s, e, o, D, a, t, a.ke.y, w, o, r, d, s && se, o, D, a, t, a.keyw.o, r, d, s.le.n, g, t, h > 1, 0) {e: r: r, o, r, s.p, u, s, h("Keywordsshoul, d, b, e 10orfe, w, e, r")};
+  return {i, s: V: a, l, i, d: e, r, r, o, r, s.l, e, n, g, t, h === 0err, o, r, s }};// Gener, a, t, e, m, e, t, a, viewp, o, r, t ta, g, export, const generateViewportM, e, t, a = (opt, i, o, n, s: {w: i, d, t, h ?: s, t, r, i, n, g;
+  initial, S, c, a, l, e ?: n, u, m, b, e, r;
+  maximumSc, a, l, e ?: number;
+  userScala, b, l, e ?: bool, e, a, n}): str, i, n, g  => {co, n: s: t {
+    wi, d, th = "d, e, v, i, c, e - wi, d, t, h",
+    initial, S, c, a, l, e = 1,
+    maximum, S, c, a, l, e = 5,
+    userScala, b, l, e = true;
+  } = op, t, i, o, n, s;
   
-  const, conten, t = [
-    `wid, t, h=${width}`,
-    `initi, a, l-sca, l, e=${initialScale}`,
->>>>>> 45ce5fae8a680d713f034d877aa81b1d405b5763
-  
-  return `<metaname="viewport" content="${content}" />`};
+  const, con, t, e, n, t = [
+    `wi, d, t, h =${w: id,t,h}`,
+    `in, i, t, i, a, l - sc, a, l, e =${initia, l: S: ca,l,e}`,
+>>>>>> 45ce5fae8a680d713f034d877aa81b1d405b5, 7, 63;
+  return `<metanam e ="viewp, o, r, t" content ="${c, o: n: ten,t}"/>`};
