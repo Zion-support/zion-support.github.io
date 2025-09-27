@@ -1,8 +1,9 @@
 import { defineConfig } from "vite"
 import react from '@vitejs/plugin-react'
 import { resolve } from 'path'
+import { visualizer } from 'rollup-plugin-visualizer'
 
-export default defineConfig({
+export default defineConfig(({ mode }) => ({
   plugins: [
     react({
       // Enable React Fast Refresh
@@ -15,7 +16,16 @@ export default defineConfig({
           // Add any babel plugins here if needed
         ]
       }
-    })
+    }),
+    // Add bundle analyzer for analyze mode
+    ...(mode === 'analyze' ? [
+      visualizer({
+        filename: 'dist/stats.html',
+        open: false,
+        gzipSize: true,
+        brotliSize: true
+      })
+    ] : [])
   ],
   build: {
     outDir: 'dist',
@@ -28,11 +38,34 @@ export default defineConfig({
       },
       output: {
         // Manual chunk splitting for better caching
-        manualChunks: {
-          vendor: ['react', 'react-dom'],
-          router: ['react-router-dom'],
-          ui: ['framer-motion', 'lucide-react'],
-          utils: ['clsx', 'tailwind-merge']
+        manualChunks: (id) => {
+          // Vendor chunks
+          if (id.includes('node_modules')) {
+            if (id.includes('react') || id.includes('react-dom')) {
+              return 'vendor-react';
+            }
+            if (id.includes('react-router')) {
+              return 'vendor-router';
+            }
+            if (id.includes('framer-motion') || id.includes('lucide-react')) {
+              return 'vendor-ui';
+            }
+            if (id.includes('clsx') || id.includes('tailwind-merge')) {
+              return 'vendor-utils';
+            }
+            // All other node_modules go to vendor
+            return 'vendor';
+          }
+          // App chunks
+          if (id.includes('src/pages/')) {
+            return 'pages';
+          }
+          if (id.includes('src/components/')) {
+            return 'components';
+          }
+          if (id.includes('src/utils/')) {
+            return 'utils';
+          }
         },
         // Optimize chunk file names
         chunkFileNames: 'assets/js/[name]-[hash].js',
@@ -46,11 +79,24 @@ export default defineConfig({
       compress: {
         drop_console: true,
         drop_debugger: true,
-        pure_funcs: ['console.log']
+        pure_funcs: ['console.log', 'console.info', 'console.debug'],
+        dead_code: true,
+        unused: true,
+        side_effects: false
+      },
+      mangle: {
+        safari10: true
+      },
+      format: {
+        comments: false
       }
     },
     // Set chunk size warning limit
-    chunkSizeWarningLimit: 1000
+    chunkSizeWarningLimit: 1000,
+    // Enable CSS code splitting
+    cssCodeSplit: true,
+    // Target modern browsers for better optimization
+    target: ['es2020', 'edge88', 'firefox78', 'chrome87', 'safari14']
   },
   server: {
     port: 3000,
@@ -87,4 +133,4 @@ export default defineConfig({
   css: {
     devSourcemap: true
   }
-})
+}))

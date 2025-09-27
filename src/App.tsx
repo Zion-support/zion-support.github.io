@@ -15,6 +15,7 @@ import { cacheManager } from './utils/cacheManager';
 import { apiClient } from './utils/apiClient';
 import { notificationManager } from './utils/notificationManager';
 import { userFeedback } from './utils/userFeedbackManager';
+import { PerformanceDashboard } from './components/PerformanceDashboard';
 import './index.css';
 import './styles/notifications.css';
 
@@ -200,5 +201,10 @@ export default function App(): React.JSX.Element {
     };
   }, [preloadResource, recordMetric, seoData]);
 
-  return <AppRouter />;
+  return (
+    <>
+      <AppRouter />
+      <PerformanceDashboard />
+    </>
+  );
 }
