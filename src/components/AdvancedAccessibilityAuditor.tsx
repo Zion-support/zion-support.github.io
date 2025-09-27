@@ -304,17 +304,17 @@ export const AdvancedAccessibilityAuditor: React.FC<AdvancedAccessibilityAuditor
   }, [auditAccessibility]);
 
   return (
-    <div className={`bg-white dark:bg-gray-800rounded-lg shadow-lg p-6`}>
+    <div className={`bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6`}>
       {/* Header */}
       <div className="flex items-center justify-between mb-6">
         <div>
-          <h2className="text-2xl font-bold text-gray-900dark:text-white" id="accessibility-auditor">Accessibility Auditor</h2>
-          <p className="text-gray-600dark:text-gray-400">WCAG compliance and accessibility analysis</p>
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-white" id="accessibility-auditor">Accessibility Auditor</h2>
+          <p className="text-gray-600 dark:text-gray-400">WCAG compliance and accessibility analysis</p>
         </div>
         <div className="flex items-center space-x-4">
           <div className="flex items-center space-x-2">
-            <div className={`w-3h-3rounded-full ${isAuditing ? 'bg-blue-500animate-pulse' : 'bg-gray-400'}`} />
-            <span className="text-sm text-gray-600dark:text-gray-400">
+            <div className={`w-3 h-3 rounded-full ${isAuditing ? 'bg-blue-500 animate-pulse' : 'bg-gray-400'}`} />
+            <span className="text-sm text-gray-600 dark:text-gray-400">
               {isAuditing ? 'Auditing...' : 'Ready'}
             </span>
           </div>
@@ -331,12 +331,12 @@ export const AdvancedAccessibilityAuditor: React.FC<AdvancedAccessibilityAuditor
       {metrics && (
         <>
           {/* Accessibility Score */}
-          <div className="bg-gradient-to-r from-blue-500to-purple-600rounded-lg p-6text-white mb-6">
+          <div className="bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg p-6 text-white mb-6">
             <div className="flex items-center justify-between">
               <div>
-                <h3className="text-lg font-semibold mb-2" id="accessibility-score">Accessibility Score</h3>
+                <h3 className="text-lg font-semibold mb-2" id="accessibility-score">Accessibility Score</h3>
                 <div className="flex items-center space-x-4">
-                  <div className={`text-4xl font-bold ${getScoreColor(metrics.score)}`}
+                  <div className={`text-4xl font-bold ${getScoreColor(metrics.score)}`}>
                     {metrics.score}
                   </div>
                   <div>
@@ -396,19 +396,19 @@ export const AdvancedAccessibilityAuditor: React.FC<AdvancedAccessibilityAuditor
 
           {/* WCAG Compliance */}
           <div className="mb-6">
-            <h3className="text-lg font-semibold text-gray-900dark:text-white mb-4" id="wcag-compliance">WCAG Compliance</h3>
-            <div className="grid grid-cols-1md:grid-cols-3gap-4">
-              <div className="bg-gray-50dark:bg-gray-700rounded-lg p-4">
+            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4" id="wcag-compliance">WCAG Compliance</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
                 <div className="text-2xl font-bold text-green-500">{metrics.wcagCompliance.levelA}%</div>
-                <div className="text-sm text-gray-600dark:text-gray-400">Level A</div>
+                <div className="text-sm text-gray-600 dark:text-gray-400">Level A</div>
               </div>
-              <div className="bg-gray-50dark:bg-gray-700rounded-lg p-4">
+              <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
                 <div className="text-2xl font-bold text-blue-500">{metrics.wcagCompliance.levelAA}%</div>
-                <div className="text-sm text-gray-600dark:text-gray-400">Level AA</div>
+                <div className="text-sm text-gray-600 dark:text-gray-400">Level AA</div>
               </div>
-              <div className="bg-gray-50dark:bg-gray-700rounded-lg p-4">
+              <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
                 <div className="text-2xl font-bold text-purple-500">{metrics.wcagCompliance.levelAAA}%</div>
-                <div className="text-sm text-gray-600dark:text-gray-400">Level AAA</div>
+                <div className="text-sm text-gray-600 dark:text-gray-400">Level AAA</div>
               </div>
             </div>
           </div>
@@ -416,12 +416,12 @@ export const AdvancedAccessibilityAuditor: React.FC<AdvancedAccessibilityAuditor
           {/* Issues List */}
           <div className="mb-6">
             <div className="flex items-center justify-between mb-4">
-              <h3className="text-lg font-semibold text-gray-900dark:text-white" id="issues-found">Issues Found</h3>
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white" id="issues-found">Issues Found</h3>
               <div className="flex space-x-2">
                 <select
                   value={selectedFilter}
                   onChange={(e) => setSelectedFilter(e.target.value)}
-                  className="px-3py-1border border-gray-300dark:border-gray-600rounded-lg bg-white dark:bg-gray-700text-gray-900dark:text-white"
+                  className="px-3 py-1 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                 >
                   <option value="all">All Types</option>
                   <option value="error">Errors</option>

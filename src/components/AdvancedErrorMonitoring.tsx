@@ -214,11 +214,11 @@ const AdvancedErrorMonitoring: React.FC = () => {
         <CardHeader>
           <CardTitle className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
-              <Bug className="h-6w-6text-red-600" />
+              <Bug className="h-6 w-6 text-red-600" />
               <span>Advanced Error Monitoring</span>
             </div>
             <div className="flex items-center space-x-2">
-              <div className={`w-3h-3rounded-full ${isMonitoring ? 'bg-green-500' : 'bg-gray-400'}`}</div>
+              <div className={`w-3 h-3 rounded-full ${isMonitoring ? 'bg-green-500' : 'bg-gray-400'}`}></div>
               <span className="text-sm text-gray-600">
                 {isMonitoring ? 'Monitoring' : 'Stopped'}
               </span>

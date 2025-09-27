@@ -77,11 +77,11 @@ const AdvancedSecurityEnhancements: React.FC<SecurityEnhancementsProps> = ({ cla
   }, [performSecurityScan]);
 
   return (
-    <div className={`bg-white dark:bg-gray-800rounded-lg shadow-lg p-6 `}>
+    <div className={`bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6`}>
       <div className="flex items-center justify-between mb-6">
-        <div className="flex items-centerspace-x-3">
-          <Shield className="w-8h-8text-blue-500" />
-          <h2className="text-2xl font-bold text-gray-900dark:text-white">
+        <div className="flex items-center space-x-3">
+          <Shield className="w-8 h-8 text-blue-500" />
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
             Advanced Security Monitor
           </h2>
         </div>
