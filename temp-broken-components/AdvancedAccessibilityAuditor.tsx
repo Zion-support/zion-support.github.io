@@ -458,17 +458,17 @@ export const AdvancedAccessibilityAuditor: React.FC<AdvancedAccessibilityAuditor
                           <span className="font-semibold text-gray-900 dark:text-white">
                             {issue.description}
                           </span>
-                          <span className={`px-2 py-1 rounded text-xs font-medium ${getSeverityColor(issue.severity)}`}
+                          <span className={`px-2 py-1 rounded text-xs font-medium ${getSeverityColor(issue.severity)}`}>
                             {issue.severity}
                           </span>
                         </div>
-                        <div className="text-sm text-gray-600 dark:text-gray-400mb-2">
+                        <div className="text-sm text-gray-600 dark:text-gray-400 mb-2">
                           {issue.impact}
                         </div>
-                        <div className="text-sm text-gray-600 dark:text-gray-400mb-2">
+                        <div className="text-sm text-gray-600 dark:text-gray-400 mb-2">
                           <strong>Help:</strong> {issue.help}
                         </div>
-                        <div className="text-xs text-gray-500dark:text-gray-500">
+                        <div className="text-xs text-gray-500 dark:text-gray-500">
                           Element: {issue.element} • Selector: {issue.selector} • WCAG {issue.wcagLevel} ({issue.wcagCriteria})
                         </div>
                       </div>

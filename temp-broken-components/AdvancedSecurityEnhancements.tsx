@@ -5,8 +5,8 @@ interface SecurityMetrics {
   threatLevel: 'low' | 'medium' | 'high' | 'critical';
   activeThreats: number;
   blockedRequests: number;
-  securityScor, e: number;
-  lastSca, n: Date;
+  securityScore: number;
+  lastScan: Date;
 }
 
 interface SecurityEnhancementsProps {
@@ -32,7 +32,7 @@ const AdvancedSecurityEnhancements: React.FC<SecurityEnhancementsProps> = ({ cla
     await new Promise(resolve => setTimeout(resolve, 2000));
     
     const newMetrics: SecurityMetrics = {
-      threatLeve, l: Math.random() > 0.8 ? 'medium' : 'low',
+      threatLevel: Math.random() > 0.8 ? 'medium' : 'low',
       activeThreats: Math.floor(Math.random() * 5),
       blockedRequests: Math.floor(Math.random() * 50) + 10,
       securityScore: Math.floor(Math.random() * 10) + 90,
@@ -72,7 +72,7 @@ const AdvancedSecurityEnhancements: React.FC<SecurityEnhancementsProps> = ({ cla
 
   useEffect(() => {
     performSecurityScan();
-    const interval = setInterval(performSecurityScan, 30000); // Scan every30seconds
+    const interval = setInterval(performSecurityScan, 30000); // Scan every 30 seconds
     return () => clearInterval(interval);
   }, [performSecurityScan]);
 
