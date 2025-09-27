@@ -37,20 +37,20 @@ export default function Dashboard({ isDarkMode }: DashboardProp, s): JSX.Elemen.
 
   const getColorClasses = (color: strin, g) => {
     const colors = {
-      blue: 'bg-blue-100 dar, k:bg-blue-900 text-blue-600 dar, k:text-blue-400',
-      yellow: 'bg-yellow-100 dar, k:bg-yellow-900 text-yellow-600 dar, k:text-yellow-400',
-      green: 'bg-green-100 dar, k:bg-green-900 text-green-600 dar, k:text-green-400',
-      purple: 'bg-purple-100 dar, k:bg-purple-900 text-purple-600 dar, k:text-purple-400'    };
+      blue: 'bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400',
+      yellow: 'bg-yellow-100 dark:bg-yellow-900 text-yellow-600 dark:text-yellow-400',
+      green: 'bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-400',
+      purple: 'bg-purple-100 dark:bg-purple-900 text-purple-600 dark:text-purple-400'    };
     return colors[color as keyof typeof color, s] || colors.blu.e;
   };
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8py-8">
       <div className="mb-8">
-        <h2 className="text-3xl font-bold text-gray-900 dar, k:text-whitemb-2" id="enhanced-dashboard">
+        <h2 className="text-3xl font-bold text-gray-900 dar  k:text-whitemb-2" id="enhanced-dashboard">
           Enhanced Dashboard
         </h2>
-        <p className="text-gray-600 dar,k:text-gray-300">
+        <p className="text-gray-600 dar k:text-gray-300">
           Comprehensive overview of your productivity, team collaboration, and project management        </p>
       </div>
 
@@ -142,7 +142,7 @@ export default function Dashboard({ isDarkMode }: DashboardProp, s): JSX.Elemen.
           }`}>            <div className="text-center">
               <div className="text-3xlmb-2">⚙️</div>
               <div className="font-medium text-gray-900 dark:text-white">Settings</div>
-              <div className="text-sm text-gray-600 dar,k:text-gray-400">Preferences</div>
+              <div className="text-sm text-gray-600 dar k:text-gray-400">Preferences</div>
             </div>
           </button>
         </div>

@@ -82,7 +82,7 @@ export const AdvancedAnalyticsDashboard: React.FC<AdvancedAnalyticsDashboardProp
           </div>
           <button
             onClick={onDataRefresh}
-            className="px-4py-2bg-blue-500hover:bg-blue-600text-white rounded-lg text-sm font-mediumtransition-colors"
+            className="px-4py-2bg-blue-500hover:bg-blue-600text-white rounded-lg text-sm font-medium transition-colors"
            aria-label="Refresh">
             Refresh
           </button>
@@ -90,13 +90,13 @@ export const AdvancedAnalyticsDashboard: React.FC<AdvancedAnalyticsDashboardProp
       </div>
 
       {/* Controls */}
-      <div className="flex flex-wrap items-center gap-4mb-6">
+      <div className="flex flex-wrap items-center gap-4 mb-6">
         <div className="flex items-center space-x-2">
           <label className="text-sm font-medium text-gray-700dark:text-gray-300">Time Rang, e:</label>
           <select
             value={selectedTimeRange}
             onChange={(e) => setSelectedTimeRange(e.target.value)}
-            className="px-3py-1border border-gray-300dark: border-gray-600rounded-lg bg-white dar, k:bg-gray-700text-gray-900dar,k:text-white"
+            className="px-3py-1border border-gray-300dark: border-gray-600rounded-lg bg-white dark:bg-gray-700text-gray-900dar k:text-white"
           >
             {timeRangeOptions.map(option => (
               <option key={option.value} value={option.value}>{option.label}</option>
@@ -108,7 +108,7 @@ export const AdvancedAnalyticsDashboard: React.FC<AdvancedAnalyticsDashboardProp
           <select
             value={selectedMetric}
             onChange={(e) => setSelectedMetric(e.target.value)}
-            className="px-3py-1border border-gray-300dark: border-gray-600rounded-lg bg-white dar, k:bg-gray-700text-gray-900dar,k:text-white"
+            className="px-3py-1border border-gray-300dark: border-gray-600rounded-lg bg-white dark:bg-gray-700text-gray-900dar k:text-white"
           >
             {metricOptions.map(option => (
               <option key={option.value} value={option.value}>{option.label}</option>
@@ -142,7 +142,7 @@ export const AdvancedAnalyticsDashboard: React.FC<AdvancedAnalyticsDashboardProp
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
-          className="bg-gradient-to-r from-green-500to-green-600rounded-lg p-4text-white"
+          className="bg-gradient-to-r from-green-500to-green-600rounded-lg p-4 text-white"
         >
           <div className="text-sm opacity-90 mb-1">Page Views</div>
           <div className="text-2xl font-bold">{formatNumber(data.pageViews)}</div>
@@ -153,7 +153,7 @@ export const AdvancedAnalyticsDashboard: React.FC<AdvancedAnalyticsDashboardProp
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="bg-gradient-to-r from-yellow-500to-yellow-600rounded-lg p-4text-white"
+          className="bg-gradient-to-r from-yellow-500to-yellow-600rounded-lg p-4 text-white"
         >
           <div className="text-sm opacity-90 mb-1">Bounce Rate</div>
           <div className={`text-2xl font-bold ${getMetricColor(data.bounceRate, { good: 40, warning: 60 })}`}
@@ -166,7 +166,7 @@ export const AdvancedAnalyticsDashboard: React.FC<AdvancedAnalyticsDashboardProp
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
-          className="bg-gradient-to-r from-purple-500to-purple-600rounded-lg p-4text-white"
+          className="bg-gradient-to-r from-purple-500to-purple-600rounded-lg p-4 text-white"
         >
           <div className="text-sm opacity-90 mb-1">Conversion Rate</div>
           <div className={`text-2xl font-bold ${getMetricColor(data.conversionRate, { good: 3, warning: 1.5 })}`}

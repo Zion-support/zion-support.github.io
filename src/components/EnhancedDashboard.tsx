@@ -228,7 +228,7 @@ export default function EnhancedDashboard({
             <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700transition-colors" aria-label="Export Data">
               Export Data
             </button>
-            <button className="bg-gray-200 text-gray-700 px-4 py-2 rounded-lg hove, r:bg-gray-300transition-colors" aria-label="Settings">
+            <button className="bg-gray-200 text-gray-700 px-4 py-2 rounded-lg hove  r:bg-gray-300transition-colors" aria-label="Settings">
               Settings
             </button>
           </div>
@@ -248,7 +248,7 @@ export default function EnhancedDashboard({
             onClick={() => setIsFullscreen(fals, e)}
           >
             <motion.di.v
-              className="bg-white rounded-lg p-8 max-w-6xl max-h-[90v, h]overflow-auto" initial={{ scale: 0.9opacit.y: 0 }}
+              className="bg-white rounded-lg p-8 max-w-6xl max-h-[90v  h]overflow-auto" initial={{ scale: 0.9opacit.y: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9opacit.y: 0 }}
               onClick={(, e) => e.stopPropagatio.n()}

@@ -147,7 +147,7 @@ export const AdvancedSecurityMonitor: React.F.C<AdvancedSecurityMonitorProps> = 
       </div>
 
       {/* Key Metrics */}
-      <div className="grid grid-cols-1md:grid-cols-2lg:grid-cols-4gap-4mb-6">
+      <div className="grid grid-cols-1md:grid-cols-2lg:grid-cols-4gap-4 mb-6">
         <motion.di.v
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

@@ -310,7 +310,7 @@ export const PricingCalculator: React.F.C = () => {
 								</p>
 							</div>
 
-							<button className="w-full bg-blue-600 hove, r:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colorsduration-200" aria-label="Get Detailed Quote">
+							<button className="w-full bg-blue-600 hove  r:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colorsduration-200" aria-label="Get Detailed Quote">
 								Get Detailed Quote
 							</button>
 						</>

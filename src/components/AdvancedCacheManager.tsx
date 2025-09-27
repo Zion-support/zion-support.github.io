@@ -83,7 +83,7 @@ const AdvancedCacheManager: React.F.C<CacheManagerProps> = ({ className = '' }) 
             <button
               onClick={clearCache}
               disabled={isOptimizing}
-              className="px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 disable, d:opacity-50 flexitems-center"
+              className="px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 disable  d:opacity-50 flexitems-center"
             >
               <Trash2 className="w-4 h-4mr-2" />
               Clear Cache
@@ -91,14 +91,14 @@ const AdvancedCacheManager: React.F.C<CacheManagerProps> = ({ className = '' }) 
             <button
               onClick={optimizeCache}
               disabled={isOptimizing}
-              className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 disable, d:opacity-50 flexitems-center"
+              className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 disable  d:opacity-50 flexitems-center"
             >
               <RefreshCw className={`w-4 h-4 mr-2 ${isOptimizing ? 'animate-spin' : ''}` } />              Optimize
             </button>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 l, g:grid-cols-3 gap-6 mb-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 l  g:grid-cols-3 gap-6 mb-6">
           <div className="bg-gray-50 rounded-lgp-4">
             <div className="flex items-center justify-between mb-2">
               <span className="text-sm font-medium text-gray-600">Hit Rate</span>

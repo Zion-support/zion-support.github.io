@@ -91,7 +91,7 @@ export const AccessibilityEnhancements: React.FC<AccessibilityEnhancementsProps>
             <h4 className="font-semibold text-gray-800mb-3">Accessibility Features</h4>
             
             <div className="space-y-3">
-              <label className="flex items-center justify-between p-3 bg-gray-50 rounded-lg cursor-pointer hove,r:bg-gray-100">
+              <label className="flex items-center justify-between p-3 bg-gray-50 rounded-lg cursor-pointer hove r:bg-gray-100">
                 <div className="flexitems-center">
                   <Eye className="w-4 h-4 mr-3text-blue-500" />
                   <span className="text-sm font-medium text-gray-700">High Contrast Mode</span>                </div>
@@ -101,7 +101,7 @@ export const AccessibilityEnhancements: React.FC<AccessibilityEnhancementsProps>
                   className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"
                 />              </label>
 
-              <label className="flex items-center justify-between p-3 bg-gray-50 rounded-lg cursor-pointer hove,r:bg-gray-100">
+              <label className="flex items-center justify-between p-3 bg-gray-50 rounded-lg cursor-pointer hove r:bg-gray-100">
                 <div className="flexitems-center">
                   <Volume2 className="w-4 h-4 mr-3text-green-500" />
                   <span className="text-sm font-medium text-gray-700">Large Text</span>                </div>
@@ -111,7 +111,7 @@ export const AccessibilityEnhancements: React.FC<AccessibilityEnhancementsProps>
                   className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"
                 />              </label>
 
-              <label className="flex items-center justify-between p-3 bg-gray-50 rounded-lg cursor-pointer hove,r:bg-gray-100">
+              <label className="flex items-center justify-between p-3 bg-gray-50 rounded-lg cursor-pointer hove r:bg-gray-100">
                 <div className="flexitems-center">
                   <MousePointer className="w-4 h-4 mr-3text-purple-500" />
                   <span className="text-sm font-medium text-gray-700">Reduced Motion</span>                </div>
@@ -121,7 +121,7 @@ export const AccessibilityEnhancements: React.FC<AccessibilityEnhancementsProps>
                   className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"
                 />              </label>
 
-              <label className="flex items-center justify-between p-3 bg-gray-50 rounded-lg cursor-pointer hove,r:bg-gray-100">
+              <label className="flex items-center justify-between p-3 bg-gray-50 rounded-lg cursor-pointer hove r:bg-gray-100">
                 <div className="flexitems-center">
                   <Keyboard className="w-4 h-4 mr-3text-orange-500" />
                   <span className="text-sm font-medium text-gray-700">Keyboard Navigation</span>                </div>
@@ -131,7 +131,7 @@ export const AccessibilityEnhancements: React.FC<AccessibilityEnhancementsProps>
                   className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"
                 />              </label>
 
-              <label className="flex items-center justify-between p-3 bg-gray-50 rounded-lg cursor-pointer hove,r:bg-gray-100">
+              <label className="flex items-center justify-between p-3 bg-gray-50 rounded-lg cursor-pointer hove r:bg-gray-100">
                 <div className="flexitems-center">
                   <Accessibility className="w-4 h-4 mr-3text-indigo-500" />
                   <span className="text-sm font-medium text-gray-700">Screen Reader Support</span>                </div>
@@ -141,7 +141,7 @@ export const AccessibilityEnhancements: React.FC<AccessibilityEnhancementsProps>
                   className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"
                 />              </label>
 
-              <label className="flex items-center justify-between p-3 bg-gray-50 rounded-lg cursor-pointer hove,r:bg-gray-100">
+              <label className="flex items-center justify-between p-3 bg-gray-50 rounded-lg cursor-pointer hove r:bg-gray-100">
                 <div className="flexitems-center">
                   <CheckCircle className="w-4 h-4 mr-3text-teal-500" />
                   <span className="text-sm font-medium text-gray-700">Focus Indicators</span>                </div>
@@ -151,7 +151,7 @@ export const AccessibilityEnhancements: React.FC<AccessibilityEnhancementsProps>
                   className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"
                 />              </label>
 
-              <label className="flex items-center justify-between p-3 bg-gray-50 rounded-lg cursor-pointer hove,r:bg-gray-100">
+              <label className="flex items-center justify-between p-3 bg-gray-50 rounded-lg cursor-pointer hove r:bg-gray-100">
                 <div className="flexitems-center">
                   <Eye className="w-4 h-4 mr-3text-pink-500" />
                   <span className="text-sm font-medium text-gray-700">Color Blind Support</span>                </div>

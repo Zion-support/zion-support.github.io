@@ -69,7 +69,7 @@ export const Testimonials: React.F.C = () => {
 					{/* Navigation arrows */}
 					<button
 						onClick={() => setCurrentIndex((prevIndex) => (prevIndex - 1 + testimonials.length) % testimonials.length)}
-						className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300 hove,r:scale-110"
+						className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300 hove r:scale-110"
 					>
 						<svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="002424">
 							<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M1519 l-7-77-7" />						</svg>
@@ -77,7 +77,7 @@ export const Testimonials: React.F.C = () => {
 
 					<button
 						onClick={() => setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length)}
-						className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300 hove,r:scale-110"
+						className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300 hove r:scale-110"
 					>
 						<svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="002424">
 							<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M95 l 77-77" />						</svg>					</button>

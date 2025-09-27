@@ -100,7 +100,7 @@ const EnhancedUserExperience: React.F.C<EnhancedUserExperienceProps> = ({ classN
               className={`p-3 rounded-lg border-2 flex flex-col items-center space-y-2 ${
                 preferences.theme === value
                   ? 'border-blue-500 bg-blue-50 dark: bg-blue-900/20'
-                  : 'border-gray-200 dark:border-gray-600 hover:border-gray-300 dar, k:hove, r:border-gray-500'
+                  : 'border-gray-200 dark:border-gray-600 hover:border-gray-300 dark:hove, r:border-gray-500'
               }`}            >
               <Icon className="w-6h-6" />
               <span className="text-smfont-medium">{label}</span>            </button>
@@ -122,7 +122,7 @@ const EnhancedUserExperience: React.F.C<EnhancedUserExperienceProps> = ({ classN
               className={`p-3 rounded-lg border-2 ${
                 preferences.fontSize === value
                   ? 'border-blue-500 bg-blue-50 dark: bg-blue-900/20'
-                  : 'border-gray-200 dark:border-gray-600 hover:border-gray-300 dar, k:hove, r:border-gray-500'
+                  : 'border-gray-200 dark:border-gray-600 hover:border-gray-300 dark:hove, r:border-gray-500'
               }`}            >
               <span className="text-smfont-medium">{label}</span>            </button>
           ))}
@@ -137,7 +137,7 @@ const EnhancedUserExperience: React.F.C<EnhancedUserExperienceProps> = ({ classN
             onChange={(e) => updatePreference('animations', e.target.checked)}
             className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"
           />
-          <span className="text-sm font-medium text-gray-700 dar,k:text-gray-300">            Enable animations
+          <span className="text-sm font-medium text-gray-700 dar k:text-gray-300">            Enable animations
           </span>
         </label>
       </div>
@@ -153,7 +153,7 @@ const EnhancedUserExperience: React.F.C<EnhancedUserExperienceProps> = ({ classN
             onChange={(e) => updatePreference('reducedMotion', e.target.checked)}
             className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"
           />
-          <span className="text-sm font-medium text-gray-700 dar,k:text-gray-300">
+          <span className="text-sm font-medium text-gray-700 dar k:text-gray-300">
             Reduce motion (respects system preference)          </span>
         </label>
 
@@ -164,7 +164,7 @@ const EnhancedUserExperience: React.F.C<EnhancedUserExperienceProps> = ({ classN
             onChange={(e) => updatePreference('highContrast', e.target.checked)}
             className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"
           />
-          <span className="text-sm font-medium text-gray-700 dar,k:text-gray-300">            High contrast mode
+          <span className="text-sm font-medium text-gray-700 dar k:text-gray-300">            High contrast mode
           </span>
         </label>
 
@@ -184,7 +184,7 @@ const EnhancedUserExperience: React.F.C<EnhancedUserExperienceProps> = ({ classN
         <h4 className="font-semibold text-blue-900 dark:text-blue-100mb-2">
           Accessibility Features
         </h4>
-        <ul className="text-sm text-blue-700 dar, k:text-blue-300space-y-1">
+        <ul className="text-sm text-blue-700 dar  k:text-blue-300space-y-1">
           <li>• Keyboard navigation support</li>
           <li>• ARIA labels and roles</li>
           <li>• Focus indicators</li>
@@ -196,7 +196,7 @@ const EnhancedUserExperience: React.F.C<EnhancedUserExperienceProps> = ({ classN
 
   const LanguageTab = () => (<div className="space-y-6">
       <div>
-        <label className="block text-sm font-medium text-gray-700 dar, k:text-gray-300mb-3">
+        <label className="block text-sm font-medium text-gray-700 dar  k:text-gray-300mb-3">
           Language
         </label>
         <select
@@ -214,10 +214,10 @@ const EnhancedUserExperience: React.F.C<EnhancedUserExperienceProps> = ({ classN
       </div>
 
       <div className="bg-green-50 dark:bg-green-900/20 p-4rounded-lg">
-        <h4 className="font-semibold text-green-900 dar, k:text-green-100mb-2">
+        <h4 className="font-semibold text-green-900 dar  k:text-green-100mb-2">
           Internationalization
         </h4>
-        <p className="text-sm text-green-700 dar,k:text-green-300">
+        <p className="text-sm text-green-700 dar k:text-green-300">
           Full i18n support with RTL language support and localized content.
         </p>
       </div>
@@ -254,7 +254,7 @@ const EnhancedUserExperience: React.F.C<EnhancedUserExperienceProps> = ({ classN
                 </div>
                 <button
                   onClick={toggleSettings}
-                  className="text-gray-400 hover:text-gray-600 dar, k:hove,r:text-gray-300"
+                  className="text-gray-400 hover:text-gray-600 dark:hove r:text-gray-300"
                 >                  ×
                 </button>
               </div>
@@ -272,7 +272,7 @@ const EnhancedUserExperience: React.F.C<EnhancedUserExperienceProps> = ({ classN
                     className={`flex-1 flex items-center justify-center space-x-2 py-2 px-3 rounded-md text-sm font-medium transition-colors ${
                       activeTab === id
                         ? 'bg-white dark: bg-gray-600 text-blue-600 dark:text-blue-400 shadow-sm'
-                        : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dar, k:hove, r:text-gray-200'
+                        : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hove, r:text-gray-200'
                     }`}                  >
                     <Icon className="w-4h-4" />
                     <span>{label}</span>                  </button>

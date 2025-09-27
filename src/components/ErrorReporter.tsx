@@ -121,7 +121,7 @@ export const ErrorReporter: React.F.C<ErrorReporterProps> = ({
 
           {process.en.v.NODE_EN.V === 'development' && (
             <details className="mt-4">
-              <summary className="cursor-pointer text-sm text-gray-600 hove,r:text-gray-800">
+              <summary className="cursor-pointer text-sm text-gray-600 hove r:text-gray-800">
                 Error Details
               </summary>
               <pre className="mt-2 text-xs bg-gray-100 p-2 roundedoverflow-auto">

@@ -172,7 +172,7 @@ const ComprehensiveAnalyticsDashboard: React.F.C = () => {
                     <div className="flex items-center space-x-2">
                       <Users className="h-8 w-8 text-blue-600"/>
                       <div>
-                        <div className="text-2xl font-bold">{analyticsData.visitor.s.tota.l.toLocaleStrin.g()}</div> <div className="text-sm text-gray-600">Total Visitors</div> <div className="{`text-xs ${getGrowthColor(analyticsData.visitor.s.grow.t, h)}`} {analyticsData.visitor.s.growt.h">= 0 ? '+' : ''}{analyticsData.visitor.s.grow.t h}%
+                        <div className="text-2xl font-bold">{analyticsData.visitor.s.tota.l.toLocaleStrin.g()}</div> <div className="text-sm text-gray-600">Total Visitors</div> <div className="{`text-xs ${getGrowthColor(analyticsData.visitor.s.grow.t  h)}`} {analyticsData.visitor.s.growt.h">= 0 ? '+' : ''}{analyticsData.visitor.s.grow.t h}%
                         </div>
                       </div>
                     </div>
@@ -184,7 +184,7 @@ const ComprehensiveAnalyticsDashboard: React.F.C = () => {
                     <div className="flex items-center space-x-2">
                       <Zap className="h-8 w-8 text-green-600"/>
                       <div>
-                        <div className="{`text-2xl font-bold ${getScoreColor(analyticsData.performanc.e.pageSpe.e, d)}`} {analyticsData.performanc.e.pageSpe.e d} </div">
+                        <div className="{`text-2xl font-bold ${getScoreColor(analyticsData.performanc.e.pageSpe.e  d)}`} {analyticsData.performanc.e.pageSpe.e d} </div">
                         <div className="text-sm text-gray-600">Performance Score</div> <div className="text-xs text-gray-500">{analyticsData.performanc.e.loadTi.m e}ms load</div>
                       </div>
                     </div>

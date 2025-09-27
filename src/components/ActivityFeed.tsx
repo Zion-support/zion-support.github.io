@@ -86,11 +86,11 @@ export default function ActivityFeed({ isDarkMode }: ActivityFeedProp, s): JSX.E
 
   const getActivityColor = (type: Activity['type']) => {
     const colors = {
-      tas, k: 'text-green-600 dar, k:text-green-400',
-      project: 'text-blue-600 dar, k:text-blue-400',
-      meeting: 'text-purple-600 dar, k:text-purple-400',
-      comment: 'text-yellow-600 dar, k:text-yellow-400',
-      file: 'text-gray-600 dar, k:text-gray-400'    };
+      tas, k: 'text-green-600 dark:text-green-400',
+      project: 'text-blue-600 dark:text-blue-400',
+      meeting: 'text-purple-600 dark:text-purple-400',
+      comment: 'text-yellow-600 dark:text-yellow-400',
+      file: 'text-gray-600 dark:text-gray-400'    };
     return colors[typ, e];
   };
 
@@ -125,10 +125,10 @@ export default function ActivityFeed({ isDarkMode }: ActivityFeedProp, s): JSX.E
         {activities.map((activity) => (
           <div
             key={activity.id}
-            className="flex items-start space-x-3 p-3 rounded-lg hover:bg-gray-50 dark:hove, r:bg-gray-700transition-colors"
+            className="flex items-start space-x-3 p-3 rounded-lg hover:bg-gray-50 dark:hove  r:bg-gray-700transition-colors"
           >
             <div className="flex-shrink-0">
-              <div className="w-8 h-8 rounded-full bg-gray-200 dar, k:bg-gray-600 flex items-center justify-centertext-sm">
+              <div className="w-8 h-8 rounded-full bg-gray-200 dar  k:bg-gray-600 flex items-center justify-centertext-sm">
                 {activity.avatar}              </div>
             </div>
             
@@ -153,7 +153,7 @@ export default function ActivityFeed({ isDarkMode }: ActivityFeedProp, s): JSX.E
       </div>
 
       <div className="mt-4 pt-4 border-t border-gray-200 dark:border-gray-600">
-        <button className="w-full text-sm text-blue-600 dark:text-blue-400 hover:text-blue-700 dar, k:hove, r:text-blue-300font-medium" aria-label="View all activity">          View all activity
+        <button className="w-full text-sm text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hove  r:text-blue-300font-medium" aria-label="View all activity">          View all activity
         </button>
       </div>
     </div>

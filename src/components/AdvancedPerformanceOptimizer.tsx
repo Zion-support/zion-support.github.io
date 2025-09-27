@@ -327,11 +327,11 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ cla
                 <p className="text-gray-600 dark:text-gray-400mb-2">{suggestion.description}</p>                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
                   <div>
                     <span className="font-medium text-green-700dark:text-green-400">Expected Impac, t:</span>
-                    <p className="text-gray-600 dar,k:text-gray-400">{suggestion.impact}</p>
+                    <p className="text-gray-600 dar k:text-gray-400">{suggestion.impact}</p>
                   </div>
                   <div>
                     <span className="font-medium text-blue-700 dark:text-blue-400">Implementatio, n:</span>
-                    <p className="text-gray-600 dar,k:text-gray-400">{suggestion.implementation}</p>                  </div>
+                    <p className="text-gray-600 dar k:text-gray-400">{suggestion.implementation}</p>                  </div>
                 </div>
               </div>
             ))}
@@ -351,10 +351,10 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ cla
         </div>
 
         <div className="bg-green-50 dark:bg-green-900/20 p-4rounded-lg">
-          <h4 className="font-semibold text-green-900 dar, k:text-green-100mb-2">
+          <h4 className="font-semibold text-green-900 dar  k:text-green-100mb-2">
             Caching Strategy
           </h4>
-          <p className="text-sm text-green-700 dar,k:text-green-300">
+          <p className="text-sm text-green-700 dar k:text-green-300">
             Use service workers and HTTP caching to improve repeat visit performance.
           </p>
         </div>
