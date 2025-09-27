@@ -89,10 +89,10 @@ export class EnhancedErrorHandler {
     if (event.target !== window) {
       const errorReport: ErrorReport = {
         id: this.generateErrorId(event),
-        message: `Resource loading error: ${(event.target as HTMLImageElement | HTMLLinkElement)?.src || (event.target as HTMLLinkElement)?.href}`,
+        message: `Resource loading error: ${(event.target as HTMLImageElement)?.src || (event.target as HTMLLinkElement)?.href}`,
         context: this.getErrorContext({
           resourceType: (event.target as HTMLElement)?.tagName,
-          resourceUrl: (event.target as HTMLImageElement | HTMLLinkElement)?.src || (event.target as HTMLLinkElement)?.href
+          resourceUrl: (event.target as HTMLImageElement)?.src || (event.target as HTMLLinkElement)?.href
         }),
         severity: 'medium',
         category: 'resource',
@@ -161,20 +161,20 @@ export class EnhancedErrorHandler {
     const originalOpen = originalXHR.prototype.open;
     const originalSend = originalXHR.prototype.send;
 
-    originalXHR.prototype.open = function(method: string, url: string, ...args: unknown[]) {
-      this._method = method;
-      this._url = url;
-      return originalOpen.apply(this, [method, url, ...args]);
+    originalXHR.prototype.open = function(method: string, url: string, ...args: any[]) {
+      (this as any)._method = method;
+      (this as any)._url = url;
+      return originalOpen.apply(this, [method, url, ...args] as Parameters<typeof originalOpen>);
     };
 
     originalXHR.prototype.send = function(data?: unknown) {
       this.addEventListener('error', () => {
         const errorReport: ErrorReport = {
           id: EnhancedErrorHandler.getInstance().generateErrorId(this),
-          message: `XHR error: ${this._method} ${this._url}`,
+          message: `XHR error: ${(this as any)._method} ${(this as any)._url}`,
           context: EnhancedErrorHandler.getInstance().getErrorContext({
-            url: this._url,
-            method: this._method,
+            url: (this as any)._url,
+            method: (this as any)._method,
             status: this.status,
             statusText: this.statusText
           }),
@@ -189,7 +189,7 @@ export class EnhancedErrorHandler {
         EnhancedErrorHandler.getInstance().processError(errorReport);
       });
 
-      return originalSend.apply(this, [data]);
+      return originalSend.apply(this, [data] as Parameters<typeof originalSend>);
     };
   }
 
@@ -239,8 +239,8 @@ export class EnhancedErrorHandler {
   }
 
   private generateErrorId(error: Error | Event | unknown): string {
-    const message = error?.message || error?.toString() || 'unknown';
-    const stack = error?.stack || '';
+    const message = (error as any)?.message || error?.toString() || 'unknown';
+    const stack = (error as any)?.stack || '';
     return btoa(message + stack).replace(/[^a-zA-Z0-9]/g, '').substring(0, 16);
   }
 
@@ -254,7 +254,7 @@ export class EnhancedErrorHandler {
   }
 
   private determineSeverity(error: Error | Event | unknown): 'low' | 'medium' | 'high' | 'critical' {
-    const message = error?.message || error?.toString() || '';
+    const message = (error as any)?.message || error?.toString() || '';
     
     if (message.includes('ChunkLoadError') || message.includes('Loading chunk')) {
       return 'medium'; // Chunk loading errors are usually recoverable
@@ -376,7 +376,7 @@ export class ReactErrorBoundary extends React.Component<
 
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
     this.errorHandler.captureError(error, {
-      component: errorInfo.componentStack,
+      component: errorInfo.componentStack || undefined,
       action: 'componentDidCatch'
     });
   }
@@ -408,7 +408,7 @@ export const withErrorBoundary = <P extends object>(
   fallback?: React.ComponentType<{ error: Error }>
 ) => {
   const WrappedComponent = (props: P) => 
-    React.createElement(ReactErrorBoundary, { fallback },
+    React.createElement(ReactErrorBoundary, { fallback, children: null },
       React.createElement(Component, props)
     );
   

@@ -257,7 +257,7 @@ export class ResourceMonitor {
       };
     });
 
-    return metrics;
+    return metrics as Record<string, { count: number; totalSize: number; averageLoadTime: number; slowestResource: string; }>;
   }
 }
 
@@ -284,9 +284,9 @@ export class MemoryMonitor {
         const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
         this.memoryHistory.push({
           timestamp: Date.now(),
-          usedJSHeapSize: memory.usedJSHeapSize,
-          totalJSHeapSize: memory.totalJSHeapSize,
-          jsHeapSizeLimit: memory.jsHeapSizeLimit
+          usedJSHeapSize: memory?.usedJSHeapSize || 0,
+          totalJSHeapSize: memory?.totalJSHeapSize || 0,
+          jsHeapSizeLimit: memory?.jsHeapSizeLimit || 0
         });
 
         // Keep only last 100 measurements
@@ -296,7 +296,7 @@ export class MemoryMonitor {
       }, intervalMs);
 
       // Store interval ID for cleanup
-      this.intervalId = interval;
+      (this as any).intervalId = interval;
     }
   }
 
@@ -316,13 +316,13 @@ export class MemoryMonitor {
       (recent[recent.length - 1].usedJSHeapSize > recent[0].usedJSHeapSize ? 'increasing' : 'decreasing') :
       'stable';
 
-    return { current, average, peak, trend };
+    return { current: current.usedJSHeapSize, average, peak, trend };
   }
 
   public stopMonitoring(): void {
-    if (this.intervalId) {
-      clearInterval(this.intervalId);
-      this.intervalId = null;
+    if ((this as any).intervalId) {
+      clearInterval((this as any).intervalId);
+      (this as any).intervalId = null;
     }
   }
 }
