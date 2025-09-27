@@ -223,13 +223,13 @@ class EnhancedAccessibilityManager {
     if (event.shiftKey) {
       // Shift + Tab - move backwards
       if (currentIndex <= 0) {
-        focusableElements[focusableElements.length - 1]?.focus();
+        (focusableElements[focusableElements.length - 1] as HTMLElement)?.focus();
         event.preventDefault();
       }
     } else {
       // Tab - move forwards
       if (currentIndex >= focusableElements.length - 1) {
-        focusableElements[0]?.focus();
+        (focusableElements[0] as HTMLElement)?.focus();
         event.preventDefault();
       }
     }
@@ -591,14 +591,14 @@ class EnhancedAccessibilityManager {
    * Setup speech recognition
    */
   private setupSpeechRecognition(): void {
-    const SpeechRecognition = window.SpeechRecognition || (window as { webkitSpeechRecognition?: typeof SpeechRecognition }).webkitSpeechRecognition;
+    const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
     const recognition = new SpeechRecognition();
     
     recognition.continuous = false;
     recognition.interimResults = false;
     recognition.lang = 'en-US';
 
-    recognition.onresult = (event) => {
+    recognition.onresult = (event: any) => {
       const command = event.results[0][0].transcript.toLowerCase();
       this.handleVoiceCommand(command);
     };

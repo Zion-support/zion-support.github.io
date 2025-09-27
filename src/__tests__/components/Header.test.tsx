@@ -5,7 +5,7 @@ import Header from '../../components/Header';
 
 const renderWithRouter = (ui: React.ReactElement) => {
   const Wrapper = ({ children }: { children: React.ReactNode }) => (
-    <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
+    <BrowserRouter>
       {children}
     </BrowserRouter>
   );

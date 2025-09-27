@@ -6,7 +6,7 @@ import Header from '../components/Header';
 
 const renderWithRouter = (component: React.ReactElement) => {
   return render(
-    <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
+    <BrowserRouter>
       {component}
     </BrowserRouter>
   );
