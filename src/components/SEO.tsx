@@ -1,57 +1,61 @@
 import React from 'react';
-import Head from 'next / head';
+import Head from 'next/head';
 
-interf a c e SEOPr o p s {
-  ti t l e ?: str i n g;
-  description ?: str i n g;
-  keywo r d s ?: str i, n, g[];
-  image ?: str i n g;
-  ur l ?: str i n g;
-  type ?: str i n g;
-  twitterC a r d ?: str i n g;
-  canonical U r l ?: str i n, g}
+interface SEOProps {
+  title?: string;
+  description?: string;
+  keywords?: string[];
+  image?: string;
+  url?: string;
+  type?: string;
+  twitterCard?: string;
+  canonicalUrl?: string;
+}
 
-constSE, O: React.F C<SEOP r o p s> = ({
-  ti t l e = 'Z i o n Ap p - Advan c e d Technol o g y Solutions'
-  description = 'Z i o n Ap p provi d e s cutt i n g - e d g e A I Cl o u d Infrastruct u r e an d Digi t a l Transformat i o n soluti o n s t o empo w e r busines s e s.'
-  keywo r ds =['A I soluti o n s' 'cl o u d infrastruct u r e' 'digi t a l transformat i o n' 'busin e s s technol o g y' 'automat i o n' 'mach i n e learn i n g' 'artific i a l intellige n c e']
-  image = '/ ima g e s / o g - image.j.p g'// Defa u l t O p e n Gr a p h image;
-  ur l = 'ht t, ps:// ziontechgr o u p.c.o m'// Defa u l t canoni c a l UR L;
-  type = 'website'// Defa u l t O p e n Gr a p h type;
-  twitterC a r d = 'summary_large_image'// Defa u l t Twit t e r c a r d type;
-  canonical U r l;
-})  => {
-  const fullTi t l e = ti t l e;
-  const fullDescript i o n = description;
-  const fullImage = `${u: r: l}${ima, g: e}`;// Ens u r e absol u t e UR L fo r, imageretur, n(
+const SEO: React.FC<SEOProps> = ({
+  title = 'Zion App - Advanced Technology Solutions',
+  description = 'Zion App provides cutting-edge AI, Cloud Infrastructure, and Digital Transformation solutions to empower businesses.',
+  keywords = ['AI solutions', 'cloud infrastructure', 'digital transformation', 'business technology', 'automation', 'machine learning', 'artificial intelligence'],
+  image = '/images/og-image.jpg', // Default Open Graph image
+  url = 'https://ziontechgroup.com', // Default canonical URL
+  type = 'website', // Default Open Graph type
+  twitterCard = 'summary_large_image', // Default Twitter card type
+  canonicalUrl,
+}) => {
+  const fullTitle = title;
+  const fullDescription = description;
+  const fullImage = `${url}${image}`; // Ensure absolute URL for image
+
+  return (
     <Head>
-      <titl e>{ful, l: T: i t l, e}</ title>
-      <metanam e ="description" content ={fullDescr, i: p: t i, on}/>
-      <metanam e ="keywo r d s" content ={key, w: o r d s.joi.n(' ')}/>
-      <lin k re l ="canoni c a l" href ={canoni, c: a: l U r l || ur, l}/>
+      <title>{fullTitle}</title>
+      <meta name="description" content={fullDescription} />
+      <meta name="keywords" content={keywords.join(' ')} />
+      <link rel="canonical" href={canonicalUrl || url} />
 
-      {/* O p e n Gr a p h / Faceb o o k */}
-      <met a prope r t y ="o, g: type" content ={ty, p: e}/>
-      <met a prope r t y ="o, g: ur l" content ={u: r, l}/>
-      <met a prope r t y ="o, g: ti t l e" content ={ful, l: T: i t, le}/>
-      <met a prope r t y ="o, g: description" content ={fullDescr, i: p: t i, on}/>
-      <met a prope r t y ="o, g: image" content ={fullIma, g: e}/>
+      {/* Open Graph / Facebook */}
+      <meta property="og:type" content={type} />
+      <meta property="og:url" content={url} />
+      <meta property="og:title" content={fullTitle} />
+      <meta property="og:description" content={fullDescription} />
+      <meta property="og:image" content={fullImage} />
 
-      {/* Twit t e r */}
-      <met a prope r t y ="twit t e, r: c a r d" content ={twitt, e: r: C a, rd}/>
-      <met a prope r t y ="twit t e, r: ur l" content ={u: r, l}/>
-      <met a prope r t y ="twit t e, r: ti t l e" content ={ful, l: T: i t, le}/>
-      <met a prope r t y ="twit t e, r: description" content ={fullDescr, i: p: t i, on}/>
-      <met a prope r t y ="twit t e, r: image" content ={fullIma, g: e}/>
+      {/* Twitter */}
+      <meta property="twitter:card" content={twitterCard} />
+      <meta property="twitter:url" content={url} />
+      <meta property="twitter:title" content={fullTitle} />
+      <meta property="twitter:description" content={fullDescription} />
+      <meta property="twitter:image" content={fullImage} />
 
-      {/* Favi c o n */}
-      <lin k re l ="i c o n" href ="/ favi c o n.i.c o"/>
-      <lin k re l ="app l e - to u c h - i c o n" si z e s ="180x 1 8 0" href ="/ app l e - to u c h - i c o n.p.n g"/>
-      <lin k re l ="i c o n" type ="image / pn g" si z e s ="32 x 3 2" href ="/ favi c o n - 32 x 3 2.p.n g"/>
-      <lin k re l ="i c o n" type ="image / pn g" si z e s ="16 x 1 6" href ="/ favi c o n - 16 x 1 6.p.n g"/>
-      <lin k re l ="manif e s t" href ="/ s i t e.webmani.f e s t"/>
-      <metanam e ="th e m e - co l o r" content ="#fff f f f"/>
-    </ Head>
-  )};
+      {/* Favicon */}
+      <link rel="icon" href="/favicon.ico" />
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+      <link rel="manifest" href="/site.webmanifest" />
+      <meta name="theme-color" content="#ffffff" />
+    </Head>
+  );
+};
 
 export default SEO;
