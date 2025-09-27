@@ -44,7 +44,6 @@ export default function App({ Component, pageProps }: AppProps) {
       
       <PerformanceOptimizer />
       <AccessibilityAuditor />
-      <WebVitals />
       
       <Component {...pageProps} />
     </HelmetProvider>
