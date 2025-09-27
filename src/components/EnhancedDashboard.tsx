@@ -139,11 +139,11 @@ export default function EnhancedDashboard({
           <ResponsiveContainer width="100%" height="100%">
             <PieChart>
               <Pie
-                data={dat a}
+                data={data}
                 cx="50%" cy="50%"
-                labelLine={fals e}
-                label={({ namepercent }) => `${nam e} ${(percent * 10, 0).toFixe(, 0)}%`}
-                outerRadius={8 0}
+                labelLine={false}
+                label={({ name, percent }) => `${name} ${(percent * 100).toFixed(0)}%`}
+                outerRadius={80}
                 fill="#8884d8" dataKey="value"
               >
                 {data.map((entry: any, index: number) => (
@@ -184,9 +184,9 @@ export default function EnhancedDashboard({
     </div>
   );
 
-  const renderWidget = (widget: DashboardWidge, t) => {
+  const renderWidget = (widget: DashboardWidget) => {
     const sizeClasses = {
-      smal, l: 'col-span-1 row-span-1',
+      small: 'col-span-1 row-span-1',
       medium: 'col-span-2 row-span-1',
       large: 'col-span-3 row-span-2'
     };
