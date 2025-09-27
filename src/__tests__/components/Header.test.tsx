@@ -32,22 +32,21 @@ describe('Header', () => {
     renderWithRouter(<Header />);
     const hamburgerButton = screen.getByLabelText('Toggle menu');
     
-    // Mobile menu container should not be visible initially
-    const mobileMenuContainer = screen.queryByText('Home')?.closest('div')?.parentElement;
-    expect(mobileMenuContainer).not.toBeVisible();
+    // Menu should be closed initially - mobile menu container should not exist
+    expect(document.querySelector('.md\\:hidden.py-4')).not.toBeInTheDocument();
     
     // Click to open menu
     fireEvent.click(hamburgerButton);
     
-    // Mobile menu should be open - check for the mobile nav container
-    const mobileNavContainer = document.querySelector('.md\\:hidden');
-    expect(mobileNavContainer).toBeVisible();
+    // Menu should be open - check for mobile menu container
+    const mobileMenuContainer = document.querySelector('.md\\:hidden.py-4');
+    expect(mobileMenuContainer).toBeInTheDocument();
     
     // Click to close menu
     fireEvent.click(hamburgerButton);
     
-    // Mobile menu should be closed again
-    expect(mobileNavContainer).not.toBeVisible();
+    // Menu should be closed again - mobile menu container should not exist
+    expect(document.querySelector('.md\\:hidden.py-4')).not.toBeInTheDocument();
   });
 
   test('closes mobile menu when navigation link is clicked', () => {
@@ -56,17 +55,15 @@ describe('Header', () => {
     
     // Open menu
     fireEvent.click(hamburgerButton);
-    const mobileNavContainer = document.querySelector('.md\\:hidden');
-    expect(mobileNavContainer).toBeVisible();
+    const mobileMenuContainer = document.querySelector('.md\\:hidden.py-4');
+    expect(mobileMenuContainer).toBeInTheDocument();
     
     // Click on a navigation link in the mobile menu
-    const mobileAboutLink = screen.getAllByText('About').find(link => 
-      link.closest('nav')?.parentElement?.classList.contains('md:hidden')
-    );
-    fireEvent.click(mobileAboutLink!);
+    const aboutLink = screen.getAllByText('About')[1]; // Get the mobile menu About link
+    fireEvent.click(aboutLink);
     
-    // Menu should be closed
-    expect(mobileNavContainer).not.toBeVisible();
+    // Menu should be closed - mobile menu container should not exist
+    expect(document.querySelector('.md\\:hidden.py-4')).not.toBeInTheDocument();
   });
 
   test('has proper accessibility attributes', () => {
