@@ -93,6 +93,8 @@ export const measurePerformance = (name: string, fn: () => void): void => {
 };
 
 // Bundle size optimization
+import React from 'react';
+
 export const loadComponentLazy = <T extends React.ComponentType<unknown>>(
   importFunc: () => Promise<{ default: T }>
 ): React.LazyExoticComponent<T> => {
@@ -102,13 +104,13 @@ export const loadComponentLazy = <T extends React.ComponentType<unknown>>(
 // Memory management
 export const cleanupResources = (): void => {
   // Clear any intervals or timeouts
-  const highestTimeoutId = setTimeout(() => {}, 0);
+  const highestTimeoutId = setTimeout(() => {}, 0) as unknown as number;
   for (let i = 0; i < highestTimeoutId; i++) {
     clearTimeout(i);
   }
   
   // Clear any intervals
-  const highestIntervalId = setInterval(() => {}, 0);
+  const highestIntervalId = setInterval(() => {}, 0) as unknown as number;
   for (let i = 0; i < highestIntervalId; i++) {
     clearInterval(i);
   }
