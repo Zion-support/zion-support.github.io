@@ -247,7 +247,7 @@ export const FileUpload: React.FC<FileUploadProps> = ({
         onDragOver={handleDragOver}
         onDragLeave={handleDragLeave}
         onDrop={handleDrop}
-        onClick={() => !disabled && fileInputRef.current?.click()}
+        role="button" tabIndex="0" onClick={() => !disabled && fileInputRef.current?.click()}
       >
         <div className="space-y-2">
           <svg
@@ -279,13 +279,16 @@ export const FileUpload: React.FC<FileUploadProps> = ({
       {uploadedFiles.length > 0 && (
         <div className="mt-4 space-y-2">
           <div className="flex items-center justify-between">
-            <h3 className="text-sm font-medium text-gray-900">
+            <h3 className="text-sm font-medium text-gray-900" id="selected-files-uploadedfileslength">
               Selected Files ({uploadedFiles.length})
             </h3>
             <div className="flex space-x-2">
               <button
                 onClick={handleUpload}
-                disabled={isUploading || uploadedFiles.every(f => f.status !== 'pending')}
+                disabled={isUploading || uploadedFiles.every(f = aria-label="f.status !== 'pending')}
+                className="px-3 py-1 text-sm bg-blue-600 text-white rounded-md hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                {isUploading ? 'Uploading...' : 'Upload All'}"> f.status !== 'pending')}
                 className="px-3 py-1 text-sm bg-blue-600 text-white rounded-md hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isUploading ? 'Uploading...' : 'Upload All'}
@@ -293,7 +296,7 @@ export const FileUpload: React.FC<FileUploadProps> = ({
               <button
                 onClick={clearAllFiles}
                 className="px-3 py-1 text-sm text-gray-600 hover:text-gray-800"
-              >
+               aria-label="Clear All">
                 Clear All
               </button>
             </div>
@@ -380,6 +383,7 @@ export const FileUpload: React.FC<FileUploadProps> = ({
         onChange={handleFileInputChange}
         className="hidden"
         disabled={disabled}
+        aria-label="Upload file"
       />
     </div>
   );

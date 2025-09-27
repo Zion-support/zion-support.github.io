@@ -226,7 +226,7 @@ export default function EnhancedDashboard({
         onClick={() => setSelectedWidget(widget.id)}
       >
         <div className="flex justify-between items-center mb-4">
-          <h3 className="text-lg font-semibold text-gray-900">{widget.title}</h3>
+          <h3 className="text-lg font-semibold text-gray-900" id="widgettitle">{widget.title}</h3>
           <div className="flex space-x-2">
             {enableResize && (
               <button className="text-gray-400 hover:text-gray-600">
@@ -274,14 +274,14 @@ export default function EnhancedDashboard({
       <div className="p-6">
         <div className="flex justify-between items-center mb-8">
           <div>
-            <h1 className="text-3xl font-bold text-gray-900">Dashboard</h1>
+            <h1 className="text-3xl font-bold text-gray-900" id="dashboard">Dashboard</h1>
             <p className="text-gray-600">Monitor your business metrics and performance</p>
           </div>
           <div className="flex space-x-4">
-            <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+            <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors" aria-label="Export Data">
               Export Data
             </button>
-            <button className="bg-gray-200 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-300 transition-colors">
+            <button className="bg-gray-200 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-300 transition-colors" aria-label="Settings">
               Settings
             </button>
           </div>
@@ -310,7 +310,7 @@ export default function EnhancedDashboard({
               onClick={(e) => e.stopPropagation()}
             >
               <div className="flex justify-between items-center mb-6">
-                <h2 className="text-2xl font-bold text-gray-900">
+                <h2 className="text-2xl font-bold text-gray-900" id="dashboardwidgetsfindw-wid-selectedwidgettitle">
                   {dashboardWidgets.find(w => w.id === selectedWidget)?.title}
                 </h2>
                 <button

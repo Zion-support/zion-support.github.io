@@ -194,7 +194,16 @@ export default function EnhancedNotificationSystem({
                   {notification.actions.map((action, index) => (
                     <button
                       key={index}
-                      onClick={() => handleAction(notification.id, action.label)}
+                      onClick={() = aria-label="handleAction(notification.id, action.label)}
+                      className={`text-xs px-3 py-1 rounded ${
+                        action.variant === 'primary' 
+                          ? 'bg-blue-600 text-white hover:bg-blue-700'
+                          : action.variant === 'danger'
+                          ? 'bg-red-600 text-white hover:bg-red-700'
+                          : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                      } transition-colors`}
+                    >
+                      {action.label}"> handleAction(notification.id, action.label)}
                       className={`text-xs px-3 py-1 rounded ${
                         action.variant === 'primary' 
                           ? 'bg-blue-600 text-white hover:bg-blue-700'
@@ -278,7 +287,7 @@ export default function EnhancedNotificationSystem({
           >
             <div className="p-4 border-b">
               <div className="flex justify-between items-center">
-                <h3 className="text-lg font-semibold text-gray-900">Notifications</h3>
+                <h3 className="text-lg font-semibold text-gray-900" id="notifications">Notifications</h3>
                 <div className="flex space-x-2">
                   <button className="text-gray-400 hover:text-gray-600">
                     <Settings className="h-4 w-4" />

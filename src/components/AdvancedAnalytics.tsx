@@ -122,7 +122,7 @@ export const AdvancedAnalytics: React.FC = () => {
   return (
     <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
       <div className="flex justify-between items-center mb-6">
-        <h2 className="text-2xl font-bold text-gray-900">Advanced Analytics Dashboard</h2>
+        <h2 className="text-2xl font-bold text-gray-900" id="advanced-analytics-dashboard">Advanced Analytics Dashboard</h2>
         <button
           onClick={exportData}
           className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200 flex items-center space-x-2"
@@ -146,7 +146,7 @@ export const AdvancedAnalytics: React.FC = () => {
                 {card.change >= 0 ? '+' : ''}{card.change}%
               </span>
             </div>
-            <h3 className="text-sm font-medium text-gray-600 mb-1">{card.title}</h3>
+            <h3 className="text-sm font-medium text-gray-600 mb-1" id="cardtitle">{card.title}</h3>
             <p className="text-2xl font-bold text-gray-900">{card.value}</p>
           </div>
         ))}
@@ -162,17 +162,19 @@ export const AdvancedAnalytics: React.FC = () => {
             <button
               key={metric}
               onClick={() => setSelectedMetric(metric)}
+              aria-label={`Select ${metric} metric`}
               className={`px-4 py-2 rounded-lg font-medium transition-colors duration-200 ${
                 selectedMetric === metric
                   ? 'bg-blue-600 text-white'
                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
             >
-              {getMetricTitle()}
+              {getMetricTitle(metric)}
             </button>
           ))}
         </div>
       </div>
+
 
       {/* Chart Visualization */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -196,7 +198,7 @@ export const AdvancedAnalytics: React.FC = () => {
       {/* Additional Insights */}
       <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="bg-gray-50 rounded-lg p-6">
-          <h3 className="text-lg font-semibold text-gray-900 mb-4">📈 Key Insights</h3>
+          <h3 className="text-lg font-semibold text-gray-900 mb-4" id="-key-insights">📈 Key Insights</h3>
           <ul className="space-y-2 text-sm text-gray-600">
             <li>• Peak traffic occurs on Thursday with 5K page views</li>
             <li>• Bounce rate improved by 5.2% compared to last week</li>
@@ -206,7 +208,7 @@ export const AdvancedAnalytics: React.FC = () => {
         </div>
 
         <div className="bg-gray-50 rounded-lg p-6">
-          <h3 className="text-lg font-semibold text-gray-900 mb-4">🎯 Recommendations</h3>
+          <h3 className="text-lg font-semibold text-gray-900 mb-4" id="-recommendations">🎯 Recommendations</h3>
           <ul className="space-y-2 text-sm text-gray-600">
             <li>• Focus marketing efforts on Thursday peaks</li>
             <li>• Optimize content to reduce bounce rate further</li>

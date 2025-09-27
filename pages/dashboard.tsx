@@ -11,15 +11,13 @@ import { AdvancedAnalyticsDashboard } from '../src/components/AdvancedAnalyticsD
 import { AdvancedSecurityMonitor } from '../src/components/AdvancedSecurityMonitor';
 import { AdvancedAccessibilityAuditor } from '../src/components/AdvancedAccessibilityAuditor';
 import SystemMonitor from '../src/components/SystemMonitor';
-import AdvancedSecurityEnhancements from '../src/components/AdvancedSecurityEnhancements';
-import SecurityMonitor from '../src/components/SecurityMonitor';
-import EnhancedAnalytics from '../src/components/EnhancedAnalytics';
 import AdvancedErrorHandler from '../src/components/AdvancedErrorHandler';
 import AdvancedPerformanceOptimizer from '../src/components/AdvancedPerformanceOptimizer';
-import EnhancedUserExperience from '../src/components/EnhancedUserExperience';
 import AdvancedAnalyticsInsights from '../src/components/AdvancedAnalyticsInsights';
+import AdvancedErrorMonitoring from '../src/components/AdvancedErrorMonitoring';
+import AdvancedSystemMonitor from '../src/components/AdvancedSystemMonitor';
 
-type DashboardTab = 'comprehensive' | 'analytics' | 'performance' | 'security' | 'enhanced' | 'search' | 'advanced-analytics' | 'advanced-performance' | 'advanced-security' | 'accessibility' | 'system-monitor' | 'security-enhancements' | 'performance-optimizer' | 'user-experience' | 'error-handler' | 'analytics-insights' | 'new-performance' | 'new-security' | 'new-analytics';
+type DashboardTab = 'comprehensive' | 'analytics' | 'performance' | 'security' | 'enhanced' | 'search' | 'advanced-analytics' | 'advanced-performance' | 'advanced-security' | 'accessibility' | 'system-monitor' | 'security-enhancements' | 'performance-optimizer' | 'user-experience' | 'error-handler' | 'analytics-insights' | 'new-performance' | 'new-security' | 'new-analytics' | 'error-monitoring' | 'advanced-system-monitor';
 
 const Dashboard: React.FC = () => {
   const [activeTab, setActiveTab] = useState<DashboardTab>('comprehensive');
@@ -37,14 +35,11 @@ const Dashboard: React.FC = () => {
     { id: 'advanced-security' as const, name: 'Advanced Security', icon: '🛡️' },
     { id: 'accessibility' as const, name: 'Accessibility', icon: '♿' },
     { id: 'system-monitor' as const, name: 'System Monitor', icon: '📊' },
-    { id: 'security-enhancements' as const, name: 'Security Enhancements', icon: '🔐' },
-    { id: 'performance-optimizer' as const, name: 'Performance Optimizer', icon: '⚡️' },
-    { id: 'user-experience' as const, name: 'User Experience', icon: '👤' },
-    { id: 'new-performance' as const, name: 'New Performance', icon: '⚡️' },
-    { id: 'new-security' as const, name: 'New Security', icon: '🛡️' },
-    { id: 'new-analytics' as const, name: 'New Analytics', icon: '📊' },
     { id: 'error-handler' as const, name: 'Error Handler', icon: '🚨' },
-    { id: 'analytics-insights' as const, name: 'Analytics Insights', icon: '💡' }
+    { id: 'performance-optimizer' as const, name: 'Performance Optimizer', icon: '⚙️' },
+    { id: 'analytics-insights' as const, name: 'Analytics Insights', icon: '💡' },
+    { id: 'error-monitoring' as const, name: 'Error Monitoring', icon: '🐛' },
+    { id: 'advanced-system-monitor' as const, name: 'System Monitor', icon: '🖥️' }
   ];
 
   // Sample data for advanced components
@@ -288,11 +283,7 @@ const Dashboard: React.FC = () => {
                 </button>
               </div>
             </div>
-            <SecurityMonitor 
-              refreshInterval={isRealTime ? 5000 : 30000}
-              enableAlerts={true}
-              onSecurityAlert={(alert) => console.log('Security alert:', alert)}
-            />
+            <AdvancedPerformanceOptimizer />
           </div>
         );
       case 'new-analytics':
@@ -323,6 +314,20 @@ const Dashboard: React.FC = () => {
               enableRealTime={isRealTime}
               onDataUpdate={(data) => console.log('Analytics data updated:', data)}
             />
+          </div>
+        );
+      case 'error-monitoring':
+        return (
+          <div className="p-8">
+            <h1 className="text-3xl font-bold text-gray-900 mb-8">Advanced Error Monitoring</h1>
+            <AdvancedErrorMonitoring />
+          </div>
+        );
+      case 'advanced-system-monitor':
+        return (
+          <div className="p-8">
+            <h1 className="text-3xl font-bold text-gray-900 mb-8">Advanced System Monitor</h1>
+            <AdvancedSystemMonitor />
           </div>
         );
       case 'error-handler':
@@ -364,33 +369,13 @@ const Dashboard: React.FC = () => {
                 </button>
               </div>
             </div>
-            <AdvancedPerformanceOptimizer />
-          </div>
-        );
-      case 'user-experience':
-        return (
-          <div className="p-8">
-            <h1 className="text-3xl font-bold text-gray-900 mb-8">User Experience Settings</h1>
-            <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-6">
-              <p className="text-gray-600 dark:text-gray-400 mb-4">
-                Use the settings button in the bottom-right corner to customize your experience.
-              </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                <div className="bg-white dark:bg-gray-700 p-4 rounded-lg">
-                  <h3 className="font-semibold text-gray-900 dark:text-white mb-2">Theme Settings</h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">Customize light, dark, or auto theme</p>
-                </div>
-                <div className="bg-white dark:bg-gray-700 p-4 rounded-lg">
-                  <h3 className="font-semibold text-gray-900 dark:text-white mb-2">Accessibility</h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">High contrast, reduced motion, and screen reader support</p>
-                </div>
-                <div className="bg-white dark:bg-gray-700 p-4 rounded-lg">
-                  <h3 className="font-semibold text-gray-900 dark:text-white mb-2">Language</h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">Multi-language support with RTL support</p>
-                </div>
-              </div>
-            </div>
-            <EnhancedUserExperience />
+            <AdvancedPerformanceOptimizer 
+              enableRealTime={true}
+              refreshInterval={1000}
+              enableAutoOptimization={true}
+              onOptimization={(rule) => console.log('Optimization applied:', rule)}
+              onPerformanceChange={(metrics) => console.log('Performance changed:', metrics)}
+            />
           </div>
         );
       case 'analytics-insights':
@@ -413,6 +398,40 @@ const Dashboard: React.FC = () => {
               refreshInterval={30000}
               onInsightAction={(insight) => console.log('Insight action:', insight)}
             />
+          </div>
+        );
+      case 'error-monitoring':
+        return (
+          <div className="p-8">
+            <div className="flex justify-between items-center mb-8">
+              <h1 className="text-3xl font-bold text-gray-900">Advanced Error Monitoring</h1>
+              <div className="flex items-center space-x-4">
+                <button 
+                  onClick={() => window.location.reload()}
+                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  Refresh
+                </button>
+              </div>
+            </div>
+            <AdvancedErrorMonitoring />
+          </div>
+        );
+      case 'advanced-system-monitor':
+        return (
+          <div className="p-8">
+            <div className="flex justify-between items-center mb-8">
+              <h1 className="text-3xl font-bold text-gray-900">Advanced System Monitor</h1>
+              <div className="flex items-center space-x-4">
+                <button 
+                  onClick={() => window.location.reload()}
+                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  Refresh
+                </button>
+              </div>
+            </div>
+            <AdvancedSystemMonitor />
           </div>
         );
       default:

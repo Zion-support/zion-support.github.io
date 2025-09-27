@@ -200,13 +200,14 @@ export const AdvancedForm: React.FC<AdvancedFormProps> = ({
             <input
               type="checkbox"
               name={field.name}
+              id={`${field.name}-checkbox`}
               checked={formData[field.name] as boolean}
               onChange={(e) => handleInputChange(field.name, e.target.checked)}
               onBlur={() => handleBlur(field.name)}
               disabled={field.disabled}
               className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
             />
-            <label className="ml-2 text-sm text-gray-700">
+            <label htmlFor={`${field.name}-checkbox`} className="ml-2 text-sm text-gray-700">
               {field.label}
             </label>
           </div>
@@ -220,6 +221,7 @@ export const AdvancedForm: React.FC<AdvancedFormProps> = ({
                 <input
                   type="radio"
                   name={field.name}
+                  id={`${field.name}-${option.value}`}
                   value={option.value}
                   checked={formData[field.name] === option.value}
                   onChange={(e) => handleInputChange(field.name, e.target.value)}
@@ -227,7 +229,7 @@ export const AdvancedForm: React.FC<AdvancedFormProps> = ({
                   disabled={field.disabled}
                   className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300"
                 />
-                <label className="ml-2 text-sm text-gray-700">
+                <label htmlFor={`${field.name}-${option.value}`} className="ml-2 text-sm text-gray-700">
                   {option.label}
                 </label>
               </div>
@@ -240,12 +242,14 @@ export const AdvancedForm: React.FC<AdvancedFormProps> = ({
           <input
             type={field.type}
             name={field.name}
+            id={field.name}
             value={formData[field.name] as string}
             onChange={(e) => handleInputChange(field.name, e.target.value)}
             onBlur={() => handleBlur(field.name)}
             placeholder={field.placeholder}
             disabled={field.disabled}
             className={fieldClassName}
+            aria-label={field.label}
           />
         );
     }
@@ -302,7 +306,7 @@ export const AdvancedForm: React.FC<AdvancedFormProps> = ({
             onClick={handleReset}
             disabled={isLoading}
             className="px-4 py-2 border border-gray-300 text-gray-700 rounded-md hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-200"
-          >
+           aria-label="{resetText}">
             {resetText}
           </button>
         )}

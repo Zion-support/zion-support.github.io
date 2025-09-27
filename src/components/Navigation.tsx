@@ -49,7 +49,7 @@ export default function Navigation({
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
-              <h1 className="text-2xl font-bold text-gray-900 dark:text-white">
+              <h1 className="text-2xl font-bold text-gray-900 dark:text-white" id="zion-tech-group">
                 Zion Tech Group
               </h1>
             </div>
@@ -87,7 +87,12 @@ export default function Navigation({
                 {currentTime?.toLocaleTimeString() || '--:--:--'}
               </span>
               <button
-                onClick={() => setShowTaskManager(true)}
+                onClick={() = aria-label="setShowTaskManager(true)}
+                className="p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+                aria-label="Open task manager"
+                title="Task Manager"
+              >
+                📝"> setShowTaskManager(true)}
                 className="p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
                 aria-label="Open task manager"
                 title="Task Manager"
@@ -104,7 +109,11 @@ export default function Navigation({
               
               {/* Mobile Menu Button */}
               <button
-                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                onClick={() = aria-label="setIsMenuOpen(!isMenuOpen)}
+                className="md:hidden p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+                aria-label="Toggle mobile menu"
+              >
+                {isMenuOpen ? '✕' : '☰'}"> setIsMenuOpen(!isMenuOpen)}
                 className="md:hidden p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
                 aria-label="Toggle mobile menu"
               >

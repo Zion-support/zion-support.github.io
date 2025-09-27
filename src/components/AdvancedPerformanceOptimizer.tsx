@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { Zap, Clock, Cpu, HardDrive, Wifi, Battery, CheckCircle, AlertTriangle, XCircle } from 'lucide-react';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/Card';
 
 interface PerformanceMetrics {
   loadTime: number;

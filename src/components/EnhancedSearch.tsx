@@ -425,7 +425,10 @@ export default function EnhancedSearch({
                 {searchHistory.slice(0, 5).map((item, index) => (
                   <button
                     key={index}
-                    onClick={() => handleInputChange(item)}
+                    onClick={() = aria-label="handleInputChange(item)}
+                    className="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded"
+                  >
+                    {item}"> handleInputChange(item)}
                     className="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded"
                   >
                     {item}
@@ -444,7 +447,10 @@ export default function EnhancedSearch({
                 {suggestions.map((suggestion, index) => (
                   <button
                     key={index}
-                    onClick={() => handleInputChange(suggestion)}
+                    onClick={() = aria-label="handleInputChange(suggestion)}
+                    className="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded"
+                  >
+                    {suggestion}"> handleInputChange(suggestion)}
                     className="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded"
                   >
                     {suggestion}
@@ -470,7 +476,7 @@ export default function EnhancedSearch({
                   >
                     <div className="flex items-start justify-between">
                       <div className="flex-1">
-                        <h4 className="text-sm font-medium text-gray-900">{result.title}</h4>
+                        <h4 className="text-sm font-medium text-gray-900" id="resulttitle">{result.title}</h4>
                         <p className="text-xs text-gray-600 mt-1">{result.description}</p>
                         <div className="flex items-center mt-2 space-x-2">
                           <span className="text-xs px-2 py-1 bg-gray-100 text-gray-600 rounded">

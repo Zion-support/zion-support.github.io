@@ -214,12 +214,19 @@ export const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({ classNam
       {/* Analytics Overview */}
       <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
         <div className="flex items-center justify-between mb-4">
-          <h2 className="text-xl font-semibold text-gray-900">Analytics Overview</h2>
+          <h2 className="text-xl font-semibold text-gray-900" id="analytics-overview">Analytics Overview</h2>
           <div className="flex space-x-2">
             {(['1h', '24h', '7d', '30d'] as const).map((range) => (
               <button
                 key={range}
-                onClick={() => setSelectedTimeRange(range)}
+                onClick={() = aria-label="setSelectedTimeRange(range)}
+                className={`px-3 py-1 rounded-full text-sm font-medium ${
+                  selectedTimeRange === range
+                    ? 'bg-blue-100 text-blue-700'
+                    : 'text-gray-500 hover:text-gray-700'
+                }`}
+              >
+                {range}"> setSelectedTimeRange(range)}
                 className={`px-3 py-1 rounded-full text-sm font-medium ${
                   selectedTimeRange === range
                     ? 'bg-blue-100 text-blue-700'
@@ -263,12 +270,20 @@ export const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({ classNam
       {/* Metric Selector and Main Chart */}
       <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
         <div className="flex items-center justify-between mb-4">
-          <h3 className="text-lg font-semibold text-gray-900">Performance Trends</h3>
+          <h3 className="text-lg font-semibold text-gray-900" id="performance-trends">Performance Trends</h3>
           <div className="flex space-x-2">
             {(['pageViews', 'uniqueVisitors', 'revenue'] as const).map((metric) => (
               <button
                 key={metric}
-                onClick={() => setSelectedMetric(metric)}
+                onClick={() = aria-label="setSelectedMetric(metric)}
+                className={`px-3 py-1 rounded-full text-sm font-medium ${
+                  selectedMetric === metric
+                    ? 'bg-blue-100 text-blue-700'
+                    : 'text-gray-500 hover:text-gray-700'
+                }`}
+              >
+                {metric === 'pageViews' ? 'Page Views' : 
+                 metric === 'uniqueVisitors' ? 'Unique Visitors' : 'Revenue'}"> setSelectedMetric(metric)}
                 className={`px-3 py-1 rounded-full text-sm font-medium ${
                   selectedMetric === metric
                     ? 'bg-blue-100 text-blue-700'
@@ -317,7 +332,7 @@ export const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({ classNam
         />
         
         <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-          <h3 className="text-lg font-semibold text-gray-900 mb-4">Key Metrics</h3>
+          <h3 className="text-lg font-semibold text-gray-900 mb-4" id="key-metrics">Key Metrics</h3>
           <div className="space-y-4">
             <div className="flex justify-between items-center">
               <span className="text-sm text-gray-600">Avg Session Duration</span>
