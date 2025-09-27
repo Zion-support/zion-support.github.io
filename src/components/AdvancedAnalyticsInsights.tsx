@@ -261,24 +261,24 @@ export default function AdvancedAnalyticsInsights({
 
   const getInsightIcon = (type: string) => {
     switch (type) {
-      case 'positive': return <TrendingUp className="h-5 w-5 text-green-600" />;
-      case 'negative': return <TrendingDown className="h-5 w-5 text-red-600" />;
-      default: return <Activity className="h-5 w-5 text-blue-600" />;
+      case 'positive': return <TrendingUp className="h-5 w-5text-green-600" />;
+      case 'negative': return <TrendingDown className="h-5 w-5text-red-600" />;
+      default: return <Activity className="h-5 w-5text-blue-600" />;
     }
   };
 
   const getInsightColor = (type: string) => {
     switch (type) {
-      case 'positive': return 'border-green-200 bg-green-50';
-      case 'negative': return 'border-red-200 bg-red-50';
-      default: return 'border-blue-200 bg-blue-50';
+      case 'positive': return 'border-green-200bg-green-50';
+      case 'negative': return 'border-red-200bg-red-50';
+      default: return 'border-blue-200bg-blue-50';
     }
   };
 
   if (isLoading) {
     return (
       <div className="flex items-center justify-center h-64">
-        <div className="animate-spin rounded-full h-12 w-12 border -b-2 border -blue-600"></div>
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
       </div>
     );
   }
@@ -292,26 +292,30 @@ export default function AdvancedAnalyticsInsights({
         <div>
           <h2 className="text-2xl font-bold text-gray-900">Analytics Insights</h2>
           <p className="text-gray-600">Comprehensive analytics and performance insights</p>
-        </div> <div className="flex items-center space-x-2">
+        </div>
+        <div className="flex items-center space-x-2">
           <select
             value={timeRange}
             onChange={(e) => setTimeRange(e.target.value as any)}
-            className="px-3 py-1border border-gray-300 rounded-md text-sm"
+            className="px-3 py-1border border-gray-300rounded-md text-sm"
           >
-            <option value="7d">Last7days</option> <option value="30d">Last30days</option> <option value="90d">Last90days</option> <option value="1y">Last year</option>
+            <option value="7d">Last7days</option>
+            <option value="30d">Last30days</option>
+            <option value="90d">Last90days</option>
+            <option value="1y">Last year</option>
           </select>
         </div>
       </div>
 
       {/* Overview Metrics */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4ga p-6">
+      <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-6">
         <Card>
-          <CardHeader className="flex flex-row items-center justify-between space-y-0pb-2">
+          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">Total Sessions</CardTitle>
-            <Users className="h-4 w-4 text-muted-foreground" />
+            <Users className="h-4 w-4text-muted-foreground" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">{formatNumber(data.overview.totalSessions)}</div>
+            <div className="text-2 xl font-bold">{formatNumber(data.overview.totalSessions)}</div>
             <p className="text-xs text-muted-foreground">
               +12% from last period
             </p>
@@ -319,12 +323,12 @@ export default function AdvancedAnalyticsInsights({
         </Card>
 
         <Card>
-          <CardHeader className="flex flex-row items-center justify-between space-y-0pb-2">
+          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">Unique Users</CardTitle>
-            <Eye className="h-4 w-4 text-muted-foreground" />
+            <Eye className="h-4 w-4text-muted-foreground" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">{formatNumber(data.overview.uniqueUsers)}</div>
+            <div className="text-2 xl font-bold">{formatNumber(data.overview.uniqueUsers)}</div>
             <p className="text-xs text-muted-foreground">
               +8% from last period
             </p>
@@ -332,12 +336,12 @@ export default function AdvancedAnalyticsInsights({
         </Card>
 
         <Card>
-          <CardHeader className="flex flex-row items-center justify-between space-y-0pb-2">
+          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">Page Views</CardTitle>
-            <MousePointer className="h-4 w-4 text-muted-foreground" />
+            <MousePointer className="h-4 w-4text-muted-foreground" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">{formatNumber(data.overview.pageViews)}</div>
+            <div className="text-2 xl font-bold">{formatNumber(data.overview.pageViews)}</div>
             <p className="text-xs text-muted-foreground">
               +15% from last period
             </p>
@@ -345,12 +349,12 @@ export default function AdvancedAnalyticsInsights({
         </Card>
 
         <Card>
-          <CardHeader className="flex flex-row items-center justify-between space-y-0pb-2">
+          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">Conversion Rate</CardTitle>
-            <Target className="h-4 w-4 text-muted-foreground" />
+            <Target className="h-4 w-4text-muted-foreground" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">{(data.overview.conversionRate * 100).toFixed(1)}%</div>
+            <div className="text-2 xl font-bold">{(data.overview.conversionRate * 100).toFixed(1)}%</div>
             <p className="text-xs text-muted-foreground">
               +2.1% from last period
             </p>
@@ -359,7 +363,7 @@ export default function AdvancedAnalyticsInsights({
       </div>
 
       {/* Traffic Sources */}
-      <div className="grid grid-cols-1 lg:grid-cols-2ga p-6">
+      <div className="grid grid-cols-1 lg:grid-cols-2gap-6">
         <Card>
           <CardHeader>
             <CardTitle>Traffic Sources</CardTitle>
@@ -370,10 +374,12 @@ export default function AdvancedAnalyticsInsights({
               {data.traffic.sources.map((source, index) => (
                 <div key={index} className="flex items-center justify-between">
                   <div className="flex items-center space-x-2">
-                    <div className="w-3 h-3 rounded-full bg-blue-500"></div>
+                    <div className="w-3 h-3rounded-full bg-blue-500"></div>
                     <span className="text-sm font-medium">{source.name}</span>
-                  </div> <div className="text-right">
-                    <div className="text-sm font-bold">{formatNumber(source.count)}</div> <div className="text-xs text-muted-foreground">{source.percentage}%</div>
+                  </div>
+                  <div className="text-right">
+                    <div className="text-sm font-bold">{formatNumber(source.count)}</div>
+                    <div className="text-xs text-muted-foreground">{source.percentage}%</div>
                   </div>
                 </div>
               ))}
@@ -391,12 +397,14 @@ export default function AdvancedAnalyticsInsights({
               {data.traffic.devices.map((device, index) => (
                 <div key={index} className="flex items-center justify-between">
                   <div className="flex items-center space-x-2">
-                    {device.type === 'Desktop' && <Monitor className="h-4 w-4 text-blue-600" />}
-                    {device.type === 'Mobile' && <Smartphone className="h-4 w-4 text-green-600" />}
-                    {device.type === 'Tablet' && <Tablet className="h-4 w-4 text-purple-600" />}
+                    {device.type === 'Desktop' && <Monitor className="h-4 w-4text-blue-600" />}
+                    {device.type === 'Mobile' && <Smartphone className="h-4 w-4text-green-600" />}
+                    {device.type === 'Tablet' && <Tablet className="h-4 w-4text-purple-600" />}
                     <span className="text-sm font-medium">{device.type}</span>
-                  </div> <div className="text-right">
-                    <div className="text-sm font-bold">{formatNumber(device.count)}</div> <div className="text-xs text-muted-foreground">{device.percentage}%</div>
+                  </div>
+                  <div className="text-right">
+                    <div className="text-sm font-bold">{formatNumber(device.count)}</div>
+                    <div className="text-xs text-muted-foreground">{device.percentage}%</div>
                   </div>
                 </div>
               ))}
@@ -414,17 +422,21 @@ export default function AdvancedAnalyticsInsights({
         <CardContent>
           <div className="space-y-4">
             {data.performance.topPages.map((page, index) => (
-              <div key={index} className="flex items-center justify-between p-4border rounded-lg">
+              <div key={index} className="flex items-center justify-between p-4 border rounded-lg">
                 <div className="flex items-center space-x-4">
-                  <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center">
+                  <div className="w-8 h-8rounded-full bg-blue-100flex items-center justify-center">
                     <span className="text-sm font-bold text-blue-600">{index + 1}</span>
-                  </div> <div>
-                    <div className="font-medium">{page.path}</div> <div className="text-sm text-muted-foreground">
+                  </div>
+                  <div>
+                    <div className="font-medium">{page.path}</div>
+                    <div className="text-sm text-muted-foreground">
                       {formatNumber(page.uniqueViews)} unique views
                     </div>
                   </div>
-                </div> <div className="text-right">
-                  <div className="text-sm font-bold">{formatNumber(page.views)} views</div> <div className="text-xs text-muted-foreground">
+                </div>
+                <div className="text-right">
+                  <div className="text-sm font-bold">{formatNumber(page.views)} views</div>
+                  <div className="text-xs text-muted-foreground">
                     {Math.round(page.avgTimeOnPage)}s avg time
                   </div>
                 </div>
@@ -450,17 +462,20 @@ export default function AdvancedAnalyticsInsights({
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -20 }}
-                    className={`p-4 rounded-lg border ${getInsightColor(insight.type)}`}
+
+                    className={`p-4 rounded-lg border ${getInsightColor(insight.type)}` }
+>>>>>>> cursor/check-fix-push-and-merge-to-main-54b1
                   >
                     <div className="flex items-start space-x-3">
                       {getInsightIcon(insight.type)}
                       <div className="flex-1">
-                        <h4 className="font-semibold text-sm">{insight.title}</h4>
+                        <h4className="font-semibold text-sm">{insight.title}</h4>
                         <p className="text-sm text-gray-600 mt-1">{insight.description}</p>
                         <div className="mt-2">
                           <p className="text-xs font-medium text-gray-700">Impact:</p>
                           <p className="text-xs text-gray-600">{insight.impact}</p>
-                        </div> <div className="mt-2">
+                        </div>
+                        <div className="mt-2">
                           <p className="text-xs font-medium text-gray-700">Recommendation:</p>
                           <p className="text-xs text-gray-600">{insight.recommendation}</p>
                         </div>

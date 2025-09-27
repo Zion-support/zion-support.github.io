@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
 
-// Lazy load components for better performance
+// Lazy load components
 const EnhancedDashboard = dynamic(() => import('../src/components/EnhancedDashboard'), {
   loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-purple-600"></div></div>
 });
