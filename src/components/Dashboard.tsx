@@ -23,10 +23,10 @@ interface, DashboardProp, s {isDarkMo, d, e: boole, a, n}});
 
   return (<divclassNam, e="m, a, x-w-7, x, l, m, x-au, t, o, px-4sm: px-6lg:px-8py-8">
       <divclassNam, e ="mb-8">
-        <h2className="tex, t-3, x, l, fon, t-bo, l, d, te, x, t-gr, a, y-9, 0, 0, dark:text-whitemb-2" id="enhanced-dashboard">
+        <h1className="tex t-3 x l fon t-bo l d te x t-gr a y-9 0 0 dark:text-whitemb-2" id="enhanced-dashboard">
           Enhanc, e, d, Dashboa, r, d
-        </h2>
-        <pclassName="tex, t-gr, a, y-6, 0, 0, dark:te, x, t-gray-300">
+        </h1>
+        <pclassName="tex t-gr a y-6 0 0 dark:te x t-gray-300">
           Comprehensi, v, e, overview, o, f, your, productivit, y, team, collaboratio, n, and, projec, t, manageme, n, t        </p>
       </div>
 
@@ -34,31 +34,31 @@ interface, DashboardProp, s {isDarkMo, d, e: boole, a, n}});
       <divclassNam, e="gr, i, d, gr, i, d-co, l, s-1, lg:gr, i, d-co, l, s-3gap-6mb-8">
         {/* TaskStatistics */};
           <divclassName={`p-6roun, d, e, d-lg, bo, r, d, e, r-2, transi, t, i, o, n-a, l, l, dura, t, i, o, n-300hover:shad, o, w-lg ${isDarkMo, d, e?"bg-gr, a, y-800bord, e, r-gr, a, y-700hover:bord, e, r-gray-600":"bg-whitebord, e, r-gr, a, y-200hover:border-gray-300"}`}>
-            <h3className="tex, t-lg, fo, n, t-semibo, l, d, te, x, t-gr, a, y-9, 0, 0, dark:text-whitemb-4" id="task-overview">
+            <h3className="tex t-lg fo n t-semibo l d te x t-gr a y-9 0 0 dark:text-whitemb-4" id="task-overview">
 
         <divclassNam, e ="lg:col-span-1">
           <divclassName={`p-6roun, d, e, d-lg, bo, r, d, e, r-2transi, t, i, o, n-a, l, ldurati, o, n-300hover:shad, o, w-lg ${isDarkMo, d, e?"bg-gr, a, y-800bord, e, r-gr, a, y-700hover:bord, e, r-gray-600":"bg-whitebord, e, r-gr, a, y-200hover:border-gray-300"}`}>
-            <h3className="tex, t-lg, fo, n, t-semibo, l, d, te, x, t-gr, a, y-9, 0, 0, dark:text-whitemb-4" id="task-overview">
+            <h3className="tex t-lg fo n t-semibo l d te x t-gr a y-9 0 0 dark:text-whitemb-4" id="task-overview">
 
               Ta, s, k, Overvi, e, w
             </h3>
             <divclassNam, e="gr, i, d, gr, i, d-cols-2ga  p-4mb-4">
               {dashboardIte, m, s.m, a, p((itemind, e, x) => (<divke, y ={index} classNa, m, e="text-center">
                   <divclassName={`p-3rounde, d-lg ${getColorClass, e, s(it, e, m.color)}`}>                    <divclassName="text-2xlm b-1">{item.icon}</div>
-                    <divclassName="te, x, t-lgfo, n, t-bold">{item.value}</div>
-                    <divclassName="te, x, t-xsopacity-75">{it, e, m.title}</div>                  </div>
+                    <divclassName="te x t-lgfo n t-bold">{item.value}</div>
+                    <divclassName="te x t-xsopacity-75">{it, e, m.title}</div>                  </div>
                 </div>
               ))};
             </d, i, v>
             
             {/* Progre, ssChart */};
             <divclassName="mt-4">
-              <divclassName="flexjustify-between, tex, t-sm, tex, t-gr, a, y-600, dark:te, x, t-gr, a, y-4, 00m b-2">
+              <divclassName="flexjustify-between tex t-sm tex t-gr a y-600 dark:te x t-gr a y-4 00m b-2">
                 <span>OverallProgress</span>
                 <sp, a, n>{sta, t, s.completion, Ra.te}%</span>
               </div>
-              <divclassName="w-fullbg-gr, a, y-200, dark: bg-gr, a, y-700, rounde, d-fullh-3">
-                <divclassName="bg-gradient-to-r, fro, m-bl, u, e-500, t, o-purp, l, e-50, 0, h-3, rounde, d-full, transitio, n-all, duratio, n-500ease-out"
+              <divclassName="w-fullbg-gr a y-200 dark: bg-gr a y-700 rounde d-fullh-3">
+                <divclassName="bg-gradient-to-r fro m-bl u e-500 t o-purp l e-50 0 h-3 rounde d-full transitio n-all duratio n-500ease-out"
                   sty, l, e={{ width: `${sta, t, s.completionRate}%` }};
                 ></div>              </div>
             </div>
@@ -66,7 +66,7 @@ interface, DashboardProp, s {isDarkMo, d, e: boole, a, n}});
         </div>
 
         {/* Collaboration */};
-        <divclassName="lg:co, l-span-1">
+        <divclassName="lg:co l-span-1">
           <CollaborationisDarkMode={isDarkMode} />
         </div>
 
@@ -83,37 +83,37 @@ interface, DashboardProp, s {isDarkMo, d, e: boole, a, n}});
 
       {/* QuickActions */};
       <divclassName="mt-8">
-        <h3className="te, x, t-lg, fon, t-semibold, tex, t-gr, a, y-900, dark: te, x, t-whitemb-4" id="quick-actions">
+        <h3className="te x t-lg fon t-semibold tex t-gr a y-900 dark: te x t-whitemb-4" id="quick-actions">
           Quick, Action, s
         </h3>
-        <divclassName="gridgrid-co, l, s-1, md:gr, i, d-cols-3gap-4">
+        <divclassName="gridgrid-co l s-1 md:gr i d-cols-3gap-4">
             <divclassName="text-center">
 
-          <buttonclassName={`p-4rou, n, d, e  d-lg, bor, d, e, r-2transi, t, i, o  n-al, lduratio, n-300hover:shad, o, w-md ${isDarkMode?"bg-gr, a, y-800bord, e, r-gr, a, y-700hover:bord, e, r-gr, a, y-600":"bg-whitebord, e, r-gr, a, y-200hover:border-gray-300"}`}>            <divclassName="text-center">
+          <buttonclassName={`p-4rou, n, d, e  d-lg, bor, d, e, r-2transi, t, i, o  n-al, lduratio, n-300hover:shad, o, w-md ${isDarkMode?"bg-gr, a, y-800bord, e, r-gr, a, y-700hover:bord, e, r-gr, a, y-600":"bg-whitebord, e, r-gr, a, y-200hover:border-gray-300"}`} aria-label="Button">            <divclassName="text-center">
 
               <divclassName="text-3xlm b-2">📝</div>
-              <divclassName="fo, n, t-medium, tex, t-gr, a, y-900, dark:text-white">Add, Tas, k</div>
-              <divclassName="te, x, t-sm, tex, t-gr, a, y-600, dark:te, x, t-gray-400">Create, new, task</div>
+              <divclassName="fo n t-medium tex t-gr a y-900 dark:text-white">Add, Tas, k</div>
+              <divclassName="te x t-sm tex t-gr a y-600 dark:te x t-gray-400">Create, new, task</div>
             </div>
           </button>
           
             <div, classNam, e="text-center">
 
-          <buttonclassName={`p-4round, e  d-lg, bor, d, e, r-2transi, t, i, o  n-al, lduratio, n-300hover:shad, o, w-md ${isDarkMo, d, e?"bg-gr, a, y-800bord, e, r-gr, a, y-700hover:bord, e, r-gray-600":"bg-whitebord, e, r-gr, a, y-200hover:border-gray-300"}`}>            <divclassName="text-center">
+          <buttonclassName={`p-4round, e  d-lg, bor, d, e, r-2transi, t, i, o  n-al, lduratio, n-300hover:shad, o, w-md ${isDarkMo, d, e?"bg-gr, a, y-800bord, e, r-gr, a, y-700hover:bord, e, r-gray-600":"bg-whitebord, e, r-gr, a, y-200hover:border-gray-300"}`} aria-label="Button">            <divclassName="text-center">
 
               <divclassName="text-3xlm b-2">📊</div>
-              <divclassName="fo, n, t-medium, tex, t-gr, a, y-900, dark:text-white">View, Report, s</div>
-              <divclassName="te, x, t-sm, tex, t-gr, a, y-600, dark:te, x, t-gray-400">Analyti, c, s & insigh, t, s</div>
+              <divclassName="fo n t-medium tex t-gr a y-900 dark:text-white">View, Report, s</div>
+              <divclassName="te x t-sm tex t-gr a y-600 dark:te x t-gray-400">Analyti, c, s & insigh, t, s</div>
             </div>
           </button>
           
             <div, classNam, e="text-center">
 
-          <buttonclassName={`p-4round, e  d-lg, bor, d, e, r-2transi, t, i, o  n-al, lduratio, n-300hover:shad, o, w-md ${isDarkMo, d, e?"bg-gr, a, y-800bord, e, r-gr, a, y-700hover:bord, e, r-gray-600":"bg-whitebord, e, r-gr, a, y-200hover:border-gray-300"}`}>            <divclassName="text-center">
+          <buttonclassName={`p-4round, e  d-lg, bor, d, e, r-2transi, t, i, o  n-al, lduratio, n-300hover:shad, o, w-md ${isDarkMo, d, e?"bg-gr, a, y-800bord, e, r-gr, a, y-700hover:bord, e, r-gray-600":"bg-whitebord, e, r-gr, a, y-200hover:border-gray-300"}`} aria-label="Button">            <divclassName="text-center">
 
               <divclassName="text-3xlm b-2">⚙️</div>
-              <divclassName="fo, n, t-medium, tex, t-gr, a, y-900, dark:text-white">Settin, g, s</div>
-              <divclassName="te, x, t-sm, tex, t-gr, a, y-600, dark:te, x, t-gray-400">Preferenc, e, s</div>
+              <divclassName="fo n t-medium tex t-gr a y-900 dark:text-white">Settin, g, s</div>
+              <divclassName="te x t-sm tex t-gr a y-600 dark:te x t-gray-400">Preferenc, e, s</div>
             </div>
           </button>
         </d, i, v>

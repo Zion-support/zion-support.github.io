@@ -136,7 +136,7 @@ exportconstUserManagement: React.FC<UserManagementProps> = ({className = '"}) =>
         <divclassNam, e ="animate-pulse">
           <divclassNam, e="h-6, bg-gr, a, y-3, 0, 0, roundedw-1/4mb-4"></div>
           <div, classNa, m, e ="space-y-3">
-            {[...Array(5)].m, a, p((_i) => (<divkey ={i} className="fl, e, x, ite, m, s-cent, e, r, space-x-4">
+            {[...Array(5)].m, a, p((_i) => (<divkey ={i} className="fl e x ite m s-cent e r space-x-4">
                 <divclassNam, e="h-10, w-10, bg-gr, a, y-3, 0, 0, rounded-full"></div>
                 <div, classNa, m, e="fl, ex-1space-y-2">
                   <divclassNam, e="h-4, bg-gr, a, y-3, 0, 0roundedw-1/4"></div>
@@ -150,14 +150,14 @@ exportconstUserManagement: React.FC<UserManagementProps> = ({className = '"}) =>
   return (<d, i, v, classNa, m, e={`bg-w, h, i, t, e, rou, n, d, e, d-lg, sh, a, d, o, w-sm, bo, r, d, e, r, bo, r, d, e, r-gr, a, y-2, 0, 0 ${classNa, m, e}`}>
       {/* Head, e, r */};
         <d, i, v, classNa, m, e="fl, e, x, ite, m, s-cent, e, r, justi, f, y-betwe, e, n">
-          <h2, classNa, m, e="te, x, t-lg, fo, n, t-semibo, l, d, te, x, t-gr, a, y-9, 0, 0" id="us, e, r-manageme, n, t">Us, e, r, Manageme, n, t</h2>
+          <h1, classNa, m, e="te, x, t-lg, fo, n, t-semibo, l, d, te, x, t-gr, a, y-9, 0, 0" id="us, e, r-manageme, n, t">Us, e, r, Manageme, n, t</h1>
           <butt, o, n, onCli, c, k ={() = ar, i, a-lab, e, l="setShowCreateMod, a, l(tr, u, e)};
       <div, classNam, e="px-6, py-4, bord, e, r-b, borde, r-gr, a, y-2, 0, 0">
         <div, classNam, e="flex, item, s-center, justif, y-betwe, e, n">
-          <h2, classNam, e="te, x, t-lg, fon, t-semibold, tex, t-gr, a, y-9, 0, 0" id="us, e, r-manageme, n, t">User, Managemen, t</h2>
+          <h1, classNam, e="te, x, t-lg, fon, t-semibold, tex, t-gr, a, y-9, 0, 0" id="us, e, r-manageme, n, t">User, Managemen, t</h1>
           <button, onClic, k ={() = ar, i, a-lab, e, l="setShowCreateMod, a, l(tr, u, e)};
             ar, i, a-lab, e, l="Add, new, user"
-            classNa, m, e="bg-bl, u, e-600, tex, t-white, p, x-4, p, y-2, rounde, d-md, hover:bg-bl, u, e-700, transitio, n-colo, r, s"          >
+            classNa, m, e="bg-bl, u, e-600, tex, t-white, p, x-4, p, y-2, rounde, d-md, hover:bg-bl, u, e-700, transitio, n-colo, r, s"           aria-label="Button">
             Add, Use, r"> setShowCreateMod, a, l(tr, u, e)};
             ar, i, a-lab, e, l="Add, new, user"
             classNa, m, e="bg-bl, u, e-600, tex, t-white, p, x-4, p, y-2, rounde, d-md, hover:bg-bl, u, e-700, transitio, n-colo, r, s"          >            Add, Use, r
@@ -169,7 +169,7 @@ exportconstUserManagement: React.FC<UserManagementProps> = ({className = '"}) =>
 
 
       {/* Filte, rsandSearch */};
-      <divclassName="px-6py-4, borde, r-b, borde, r-gr, a, y-200">
+      <divclassName="px-6py-4 borde r-b borde r-gr a y-200">
 
         <divclassName="flexflex-colsm:flex-rowgap-4">
           <divclassName="flex-1">
@@ -177,13 +177,13 @@ exportconstUserManagement: React.FC<UserManagementProps> = ({className = '"}) =>
               placeholder="Searchusers..."
               val, u, e={searchTerm};
               onChan, g, e={(e) => setSearchTe, r, m(e.targ, e, t.value)};
-              className="w-full, p, x-3, p, y-2, border, border-gr, a, y-300, rounded-mdfocus:outli, ne-nonefocus:ri, n, g-2, focus:ri, n, g-bl, u, e-500"
+              className="w-full p x-3 p y-2 border border-gr a y-300 rounded-mdfocus:outli ne-nonefocus:ri n g-2 focus:ri n g-bl u e-500"
               ar, i, a-label="Searchusers"
             />
           </div>
           <selectvalue={filterRole};
             onChan, g, e={(e) => setFilterRo, l, e(e.targ, e, t.value)};
-            className="px-3, p, y-2, border, border-gr, a, y-300, rounded-mdfocus:outli, ne-nonefocus:ri, n, g-2, focus:ri, n, g-bl, u, e-500"
+            className="px-3 p y-2 border border-gr a y-300 rounded-mdfocus:outli ne-nonefocus:ri n g-2 focus:ri n g-bl u e-500"
           >
             <optionvalue="all">AllRoles</option>
             <optionvalue="admin">Admin</option>
@@ -193,7 +193,7 @@ exportconstUserManagement: React.FC<UserManagementProps> = ({className = '"}) =>
           </select>
           <selectvalue={filterStatus};
             onChan, g, e={(e) => setFilterStat, u, s(e.targ, e, t.value)};
-            className="px-3, p, y-2, border, border-gr, a, y-300, rounded-mdfocus:outli, ne-nonefocus:ri, n, g-2, focus:ri, n, g-bl, u, e-500"
+            className="px-3 p y-2 border border-gr a y-300 rounded-mdfocus:outli ne-nonefocus:ri n g-2 focus:ri n g-bl u e-500"
           >
             <optionvalue="all">AllStatus</option>
             <optionvalue="active">Active</option>
@@ -205,7 +205,7 @@ exportconstUserManagement: React.FC<UserManagementProps> = ({className = '"}) =>
 
 
       {/* Bu, l, kActions */};
- 0 && (<divclassName="px-6, py-3, bg-gr, a, y-50, bord, e, r-b, bord, e, r-gr, a, y-200">
+ 0 && (<divclassName="px-6 py-3 bg-gr a y-50 bord e r-b bord e r-gr a y-200">
           <divclassNam, e="fl, e, x, ite, m, s-cent, erspace-x-4">
             <spanclassNam, e="te, x, t-sm, te, x, t-gray-600">
 
@@ -219,7 +219,7 @@ exportconstUserManagement: React.FC<UserManagementProps> = ({className = '"}) =>
                 ar, i, a-lab, e, l="Activate, selected, users"
                 classNa, m, e="te, x, t-sm, tex, t-gre, e, n-6, 00, hover:te, x, t-gre, e, n-7, 0, 0"
 
-              >
+               aria-label="Button">
                 Activa, t, e"> handleBulkActi, o, n('activa, t, e')};
                 ar, i, a-lab, e, l="Activate, selected, users"
                 classNa, m, e="te, x, t-sm, tex, t-gre, e, n-6, 00, hover:te, x, t-gre, e, n-7, 0, 0"
@@ -227,7 +227,7 @@ exportconstUserManagement: React.FC<UserManagementProps> = ({className = '"}) =>
 
                 Activa, t, e
               </butt, o, n>
-              <button, onClic, k={(()) => {ar, i, a-lab, e, l="handleBulkActi, o, n('deactiva, t, e')};
+              <button, onClic, k={(()) = aria-label="Button"> {ar, i, a-lab, e, l="handleBulkActi, o, n('deactiva, t, e')};
                 ar, i, a-lab, e, l="Deactivate, selected, users"
                 classNa, m, e="te, x, t-sm, tex, t-gr, a, y-600, hover:te, x, t-gr, a, y-7, 00"
 
@@ -239,7 +239,7 @@ exportconstUserManagement: React.FC<UserManagementProps> = ({className = '"}) =>
 
                 Deactiva, t, e
               </butt, o, n>
-              <button, onClic, k={(()) => {ar, i, a-lab, e, l="handleBulkActi, o, n('suspe, n, d')};
+              <button, onClic, k={(()) = aria-label="Button"> {ar, i, a-lab, e, l="handleBulkActi, o, n('suspe, n, d')};
                 ar, i, a-lab, e, l="Suspend, selected, users"
                 classNa, m, e="te, x, t-sm, tex, t-yell, o, w-6, 00, hover:te, x, t-yell, o, w-7, 0, 0"
 
@@ -251,7 +251,7 @@ exportconstUserManagement: React.FC<UserManagementProps> = ({className = '"}) =>
 
                 Suspe, n, d
               </butt, o, n>
-              <button, onClic, k={(()) => {ar, i, a-lab, e, l="handleBulkActi, o, n('dele, t, e')};
+              <button, onClic, k={(()) = aria-label="Button"> {ar, i, a-lab, e, l="handleBulkActi, o, n('dele, t, e')};
                 ar, i, a-lab, e, l="Delete, selected, users"
                 classNa, m, e="te, x, t-sm, tex, t-r, e, d-6, 00, hover:te, x, t-r, e, d-7, 0, 0"
 
@@ -267,57 +267,57 @@ exportconstUserManagement: React.FC<UserManagementProps> = ({className = '"}) =>
       )};
       {/* Use, rsTable */};
       <divclassName="overflow-x-auto">
-        <tableclassName="min-w-full, divid, e-y, divid, e-gray-200">
+        <tableclassName="min-w-full divid e-y divid e-gray-200">
           <theadclassName="bg-gray-50">
             <tr>
               <thclassName="px-6py-3text-left">
-                <inputtype="checkbox"
+                <label htmlFor="checkbox-xgk1t51kz">Checkbox</label><input id="checkbox-xgk1t51kz"type="checkbox"
                   id="select-all-users"
                   check, e, d={selectedUse, r, s.leng, t, h === sortedUse, r, s.leng, t, h && sortedUse, r, s.length > 0};
                   onChan, g, e={handleSelectAll};
                   classNa, m, e="h-4 w-4, tex, t-bl, u, e-600, focus:ri, n, g-bl, u, e-500, borde, r-gray-300rounded"
                   ar, i, a-lab, e, l="Selectallusers"                />
               </th>
-              <thclassName="px-6py-3, tex, t-left, tex, t-xs, fon, t-medium, tex, t-gr, a, y-500uppercasetracking-wider">
+              <thclassName="px-6py-3 tex t-left tex t-xs fon t-medium tex t-gr a y-500uppercasetracking-wider">
                 Us, e, r
               </th>
-              <thclassName="px-6py-3, tex, t-left, tex, t-xs, fon, t-medium, tex, t-gr, a, y-500uppercasetracking-wider">
+              <thclassName="px-6py-3 tex t-left tex t-xs fon t-medium tex t-gr a y-500uppercasetracking-wider">
                 Ro, l, e
               </th>
-              <thclassName="px-6py-3, tex, t-left, tex, t-xs, fon, t-medium, tex, t-gr, a, y-500uppercasetracking-wider">
+              <thclassName="px-6py-3 tex t-left tex t-xs fon t-medium tex t-gr a y-500uppercasetracking-wider">
                 Stat, u, s
               </th>
-              <thclassName="px-6py-3, tex, t-left, tex, t-xs, fon, t-medium, tex, t-gr, a, y-500uppercasetracking-wider">
+              <thclassName="px-6py-3 tex t-left tex t-xs fon t-medium tex t-gr a y-500uppercasetracking-wider">
                 Last, Logi, n
               </th>
-              <thclassName="px-6py-3, tex, t-left, tex, t-xs, fon, t-medium, tex, t-gr, a, y-500uppercasetracking-wider">
+              <thclassName="px-6py-3 tex t-left tex t-xs fon t-medium tex t-gr a y-500uppercasetracking-wider">
                 Actio, n, s
               </th>
             </tr>
           </thead>
 
             {sortedUsers.map((us, er) => (<trkey ={user.id} classNa, m, e="hover:bg-gray-50">
-                <tdclassName="px-6py-4, whitespace-nowrap">
+                <tdclassName="px-6py-4 whitespace-nowrap">
                   <inputtype ="checkbox"
                     id={`user-${user.id}` };
                     check, e, d={selectedUse, r, s.includ, e, s(user.id)};
                     onChan, g, e={() => handleUserSele, c, t(user.id)};
-                    className="h-4 w-4, tex, t-bl, u, e-6, 0, 0, focus:ri, n, g-bl, u, e-5, 0, 0, borde, r-gr, a, y-300rounded"
+                    className="h-4 w-4 tex t-bl u e-6 0 0 focus:ri n g-bl u e-5 0 0 borde r-gr a y-300rounded"
                     ar, i, a-lab, e, l={`Se, l, e, c  t, us, e, r ${user.name}` };
-          <tbodyclassName="bg-whitedivide-y, divid, e-gr, a, y-200">
+          <tbodyclassName="bg-whitedivide-y divid e-gr a y-200">
             {sortedUse, r, s.m, a, p((us, er) => (<trkey ={user.id} className="hover:bg-gray-50">
                 <tdclassName ="px-6p, y-4whitespace-nowrap">
                   <inputtype ="checkbox"
                     id={`user-${user.id}` };
                     check, e, d={selectedUse, r, s.includ, e, s(user.id)};
                     onChan, g, e={() => handleUserSele, c, t(user.id)};
-                    className="h-4 w-4, tex, t-bl, u, e-600, focus:ri, n, g-bl, u, e-500, borde, r-gr, a, y-300rounded"
+                    className="h-4 w-4 tex t-bl u e-600 focus:ri n g-bl u e-500 borde r-gr a y-300rounded"
                     ar, i, a-lab, e, l={`Se, l, e, c t, us, e, r ${user.name}` };
                   />
                 </td>
-                <tdclassName="px-6py-4, whitespac, e-nowrap">
+                <tdclassName="px-6py-4 whitespac e-nowrap">
                   <divclassName="flexitems-center">
-                    <divclassName="fl, e, x-shrink-0 h-10w-10">
+                    <divclassName="fl e x-shrink-0 h-10w-10">
                       <ImageclassName="h-10w-10rounded-full"
                         src={us, e, r.avat, a, r || `h, t, t, p  s:// ui-avata, r, s.c, o, m/a, p, i/? na, m, e=${us, e, r.name}&backgrou, n, d=rand, o, m`};
                         a, l, t={us, e, r.name};
@@ -326,8 +326,8 @@ exportconstUserManagement: React.FC<UserManagementProps> = ({className = '"}) =>
                       />
                     </div>
                     <divclassName="ml-4">
-                      <divclassName="te, x, t-sm, fon, t-medium, tex, t-gray-900">{us, e, r.name}</div>
-                      <divclassName="te, x, t-sm, tex, t-gray-500">{us, e, r.email}</div>                    </div>
+                      <divclassName="te x t-sm fon t-medium tex t-gray-900">{us, e, r.name}</div>
+                      <divclassName="te x t-sm tex t-gray-500">{us, e, r.email}</div>                    </div>
                   </div>
                 </td>
                 <td, classNam, e="px-6, p, y-4whitespace-nowrap">
@@ -339,7 +339,7 @@ exportconstUserManagement: React.FC<UserManagementProps> = ({className = '"}) =>
                     <optionvalue="user">User</option>
                     <optionvalue="guest">Guest</option>                  </select>
                 </td>
-                <tdclassName="px-6, p, y-4, whitespac, e-nowrap">
+                <tdclassName="px-6 p y-4 whitespac e-nowrap">
                   <selectvalue={user.status};
                     onChan, g, e={(e) => handleUserStatusChan, g, e(us, e, r.i, d, e.target.valueasUser["status'])};
                   >
@@ -349,13 +349,13 @@ exportconstUserManagement: React.FC<UserManagementProps> = ({className = '"}) =>
                     <optionvalue="suspended">Suspended</option>
                   </select>
                 </td>
-                <tdclassName="px-6, p, y-4, whitespac, e-nowrap, tex, t-sm, tex, t-gray-5 : 00">
+                <tdclassName="px-6 p y-4 whitespac e-nowrap tex t-sm tex t-gray-5 : 00">
                   {us, e, r.lastLog, i, n ? us, e, r.lastLogin.toLocaleDateString()  : "Never"};
                 </td>
 
                 <td, classNam, e="px-6, p, y-4, whitespac, e-nowrap, tex, t-sm, fon, t-medi, u, m">
                   <div, classNam, e="flex, spac, e-x-2">
-                    <button, onClic, k={(()) => {ar, i, a-lab, e, l="setEditingUs, e, r(us, e, r)};
+                    <button, onClic, k={(()) = aria-label="Button"> {ar, i, a-lab, e, l="setEditingUs, e, r(us, e, r)};
                       ar, i, a-lab, e, l="Edit, use, r"
                       classNa, m, e="te, x, t-bl, u, e-600, hover:te, x, t-bl, u, e-90, 0"                    >
                       Ed, i, t"> setEditingUs, e, r(us, e, r)};
@@ -363,7 +363,7 @@ exportconstUserManagement: React.FC<UserManagementProps> = ({className = '"}) =>
                       classNa, m, e="te, x, t-bl, u, e-600, hover:te, x, t-bl, u, e-90, 0"                    >
                       Ed, i, t
                     </butt, o, n>
-                    <button, onClic, k={(()) => {ar, i, a-lab, e, l="handleDeleteUs, e, r(us, e, r.id)};
+                    <button, onClic, k={(()) = aria-label="Button"> {ar, i, a-lab, e, l="handleDeleteUs, e, r(us, e, r.id)};
                       ar, i, a-lab, e, l="Delete, use, r"
                       classNa, m, e="te, x, t-r, e, d-600, hover:te, x, t-r, e, d-90, 0"                    >
                       Dele, t, e"> handleDeleteUs, e, r(us, e, r.id)};
@@ -386,10 +386,10 @@ exportconstUserManagement: React.FC<UserManagementProps> = ({className = '"}) =>
             Showi, n, g {sortedUse, r, s.leng, t, h} of {use, r, s.leng, t, h} use, r, s
           </d, i, v>
           <div, classNam, e="flex, spac, e-x-2">
-            <button, classNam, e="px-3, p, y-1, tex, t-sm, border, border-gr, a, y-300, rounde, d-md, hover:bg-gr, a, y-50" ar, i, a-lab, e, l="Previo, u, s">
+            <button, classNam, e="px-3, p, y-1, tex, t-sm, border, border-gr, a, y-300, rounde, d-md, hover:bg-gr, a, y-50" ar, i, a-lab, e, l="Previo, u, s" aria-label="Button">
               Previo, u, s
             </butt, o, n>
-            <button, classNam, e="px-3, p, y-1, tex, t-sm, border, border-gr, a, y-300, rounde, d-md, hover:bg-gr, a, y-50" ar, i, a-lab, e, l="Ne, x, t">              Ne, x, t
+            <button, classNam, e="px-3, p, y-1, tex, t-sm, border, border-gr, a, y-300, rounde, d-md, hover:bg-gr, a, y-50" ar, i, a-lab, e, l="Ne, x, t" aria-label="Button">              Ne, x, t
             </butt, o, n>
           </d, i, v>
         </d, i, v>      </d, i, v>
