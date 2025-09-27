@@ -1,27 +1,21 @@
-import React, { useState, useEffect } from 'react';
-import Head from 'next/head';
+import React, { useState } from 'react';
 import Link from 'next/link';
-import SEO from '../src/components/SEO';
-import { useAnalytics } from '../src/hooks/useAnalytics';
+import { Mail, Phone, MapPin, Send, CheckCircle, Clock, Globe } from 'lucide-react';
 
-export default function Contact(): JSX.Element {
+export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     company: '',
+    phone: '',
     subject: '',
     message: ''
   });
+
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
-
-  const { trackClick } = useAnalytics();
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
@@ -37,188 +31,316 @@ export default function Contact(): JSX.Element {
     await new Promise(resolve => setTimeout(resolve, 2000));
     
     setIsSubmitting(false);
-    trackClick('contact-form-submit', 'conversion');
-    alert('Thank you for your message! We\'ll get back to you soon.');
+    setIsSubmitted(true);
     
-    // Reset form
-    setFormData({
-      name: '',
-      email: '',
-      company: '',
-      subject: '',
-      message: ''
-    });
+    // Reset form after 3 seconds
+    setTimeout(() => {
+      setIsSubmitted(false);
+      setFormData({
+        name: '',
+        email: '',
+        company: '',
+        phone: '',
+        subject: '',
+        message: ''
+      });
+    }, 3000);
   };
 
   const contactInfo = [
     {
-      icon: '📧',
-      title: 'Email Us',
-      details: 'hello@zionapp.com',
-      description: 'Send us an email and we\'ll respond within 24 hours.'
+      icon: <Mail className="h-6 w-6" />,
+      title: "Email",
+      details: "hello@ziontech.com",
+      description: "Send us an email anytime"
     },
     {
-      icon: '📞',
-      title: 'Call Us',
-      details: '+1 (555) 123-4567',
-      description: 'Mon-Fri from 9am to 6pm EST'
+      icon: <Phone className="h-6 w-6" />,
+      title: "Phone",
+      details: "+1 (555) 123-4567",
+      description: "Mon-Fri from 8am to 6pm"
     },
     {
-      icon: '📍',
-      title: 'Visit Us',
-      details: '123 Tech Street Silicon Valley CA 94000',
-      description: 'Come say hello at our office'
+      icon: <MapPin className="h-6 w-6" />,
+      title: "Office",
+      details: "123 Tech Street, Innovation City, IC 12345",
+      description: "Come visit our headquarters"
     }
   ];
 
+  const subjects = [
+    "General Inquiry",
+    "Project Consultation",
+    "Technical Support",
+    "Partnership Opportunity",
+    "Career Opportunity",
+    "Other"
+  ];
+
   return (
-    <>
-      <SEO />
-      <Head>
-        <title>Contact U s - Z i o n Ap p</title>
-        <meta name="description" content="Ge t i n to u c h w i t h Z i o n Ap p. W e'r e h e r e t o h e l p yo u transf o r m y o u r busin e s s w i t h cutt i n g-e d g e technol o g y soluti o n s." />
-        <meta name="viewp o r t" content="wi d t h=dev i c e-wi d t h init i a l-sc a l e=1" />
-      </Head>
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 pt-20">
-        <div className="container mx-auto px-4 py-8 max-w-7xl">
-          <nav className="mb-8">
-            <Link href="/" className="text-blue-600 hover:text-blue-800 font-medium transition-colors">
-              ← Back to Home
+    <div className="min-h-screen bg-gray-50">
+      {/* Navigation */}
+      <nav className="bg-white shadow-sm border-b">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center py-4">
+            <Link href="/" className="text-2xl font-bold text-blue-600">
+              Zion Tech
             </Link>
-          </nav>
+            <div className="flex space-x-8">
+              <Link href="/" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">
+                Home
+              </Link>
+              <Link href="/about" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">
+                About
+              </Link>
+              <Link href="/services" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">
+                Services
+              </Link>
+              <Link href="/portfolio" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">
+                Portfolio
+              </Link>
+              <Link href="/contact" className="text-blue-600 font-medium">
+                Contact
+              </Link>
+            </div>
+          </div>
+        </div>
+      </nav>
 
-          <header className="text-center mb-16">
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-              Contact Us
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Ready to transform your business? Let&apos;s discuss how we can help you achieve your goals.
-            </p>
-          </header>
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        {/* Hero Section */}
+        <header className="text-center mb-16">
+          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+            Get In <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Touch</span>
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            Ready to transform your business? Let&apos;s discuss how we can help you achieve your goals.
+          </p>
+        </header>
 
-          <di v classN a m e="g r i d g r i d-c o l s-1 l g:g r i d-c o l s-2 ga p-1 2">
-            {/* Contact F o r m */}
-            <di v classN a m e="b g-wh i t e roun d e d-2x l sha d o w-x l p-8">
-              <h 2 classN a m e="t e x t-2x l f o n t-b o l d t e x t-g r a y-90 0 m b-6">S e n d u s a Mess a g e</h 2>
-              <f o r m onSub m i t={handleSub m i t} classN a m e="sp a c e-y-6">
-                <di v classN a m e="g r i d g r i d-c o l s-1 m d:g r i d-c o l s-2 ga p-6">
-                  <di v>
-                    <la b e l html F o r="n a m e" classN a m e="bl o c k t e x t-s m f o n t-med i u m t e x t-g r a y-70 0 m b-2">
-                      F u l l N a m e *
-                    </la b e l>
-                    <in p u t
-                      type="t e x t"
-                      i d="n a m e"
-                      name="n a m e"
-                      va l u e={formData.n a m e}
-                      onCha n g e={handleInputCha n g e}
-                      requi r e d
-                      classN a m e="w-f u l l p x-4 p y-3 bor d e r bor d e r-g r a y-30 0 roun d e d-l g fo c u s:r i n g-2 fo c u s:r i n g-b l u e-50 0 fo c u s:bor d e r-transpar e n t"
-                      placehol d e r="Y o u r f u l l n a m e"
-                    />
-                  </di v>
-                  <di v>
-                    <la b e l html F o r="em a i l" classN a m e="bl o c k t e x t-s m f o n t-med i u m t e x t-g r a y-70 0 m b-2">
-                      Em a i l Addr e s s *
-                    </la b e l>
-                    <in p u t
-                      type="em a i l"
-                      i d="em a i l"
-                      name="em a i l"
-                      va l u e={formData.em a i l}
-                      onCha n g e={handleInputCha n g e}
-                      requi r e d
-                      classN a m e="w-f u l l p x-4 p y-3 bor d e r bor d e r-g r a y-30 0 roun d e d-l g fo c u s:r i n g-2 fo c u s:r i n g-b l u e-50 0 fo c u s:bor d e r-transpar e n t"
-                      placehol d e r="y o u r.em a i l@exam p l e.co m"
-                    />
-                  </di v>
-                </di v>
-                <di v>
-                  <la b e l html F o r="comp a n y" classN a m e="bl o c k t e x t-s m f o n t-med i u m t e x t-g r a y-70 0 m b-2">
-                    Comp a n y
-                  </la b e l>
-                  <in p u t
-                    type="t e x t"
-                    i d="comp a n y"
-                    name="comp a n y"
-                    va l u e={formData.comp a n y}
-                    onCha n g e={handleInputCha n g e}
-                    classN a m e="w-f u l l p x-4 p y-3 bor d e r bor d e r-g r a y-30 0 roun d e d-l g fo c u s:r i n g-2 fo c u s:r i n g-b l u e-50 0 fo c u s:bor d e r-transpar e n t"
-                    placehol d e r="Y o u r comp a n y n a m e"
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          {/* Contact Form */}
+          <div className="bg-white rounded-2xl shadow-xl p-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">Send us a Message</h2>
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                    Full Name *
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleInputChange}
+                    required
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                    placeholder="Your full name"
                   />
-                </di v>
-                <di v>
-                  <la b e l html F o r="subj e c t" classN a m e="bl o c k t e x t-s m f o n t-med i u m t e x t-g r a y-70 0 m b-2">
-                    Subj e c t *
-                  </la b e l>
-                  <in p u t
-                    type="t e x t"
-                    i d="subj e c t"
-                    name="subj e c t"
-                    va l u e={formData.subj e c t}
-                    onCha n g e={handleInputCha n g e}
-                    requi r e d
-                    classN a m e="w-f u l l p x-4 p y-3 bor d e r bor d e r-g r a y-30 0 roun d e d-l g fo c u s:r i n g-2 fo c u s:r i n g-b l u e-50 0 fo c u s:bor d e r-transpar e n t"
-                    placehol d e r="W h a t ca n w e h e l p yo u w i t h?"
+                </div>
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                    Email Address *
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    required
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                    placeholder="your.email@example.com"
                   />
-                </di v>
-                <di v>
-                  <la b e l html F o r="mess a g e" classN a m e="bl o c k t e x t-s m f o n t-med i u m t e x t-g r a y-70 0 m b-2">
-                    Mess a g e *
-                  </la b e l>
-                  <texta r e a
-                    i d="mess a g e"
-                    name="mess a g e"
-                    va l u e={formData.mess a g e}
-                    onCha n g e={handleInputCha n g e}
-                    requi r e d
-                    r o w s={6}
-                    classN a m e="w-f u l l p x-4 p y-3 bor d e r bor d e r-g r a y-30 0 roun d e d-l g fo c u s:r i n g-2 fo c u s:r i n g-b l u e-50 0 fo c u s:bor d e r-transpar e n t"
-                    placehol d e r="T e l l u s ab o u t y o u r proj e c t o r quest i o n..."
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
+                    Company
+                  </label>
+                  <input
+                    type="text"
+                    id="company"
+                    name="company"
+                    value={formData.company}
+                    onChange={handleInputChange}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                    placeholder="Your company name"
                   />
-                </di v>
-                <but t o n
-                  type="sub m i t"
-                  disab l e d={isSubmitt i n g}
-                  classN a m e="w-f u l l b g-b l u e-60 0 t e x t-wh i t e p y-3 p x-6 roun d e d-l g f o n t-semib o l d ho v e r:b g-b l u e-70 0 transit i o n-col o r s disab l e d:opac i t y-5 0 disab l e d:cur s o r-no t-allo w e d"
+                </div>
+                <div>
+                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+                    Phone Number
+                  </label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleInputChange}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                    placeholder="+1 (555) 123-4567"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
+                  Subject *
+                </label>
+                <select
+                  id="subject"
+                  name="subject"
+                  value={formData.subject}
+                  onChange={handleInputChange}
+                  required
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
                 >
-                  {isSubmitt i n g ? 'Send i n g...' : 'S e n d Mess a g e'}
-                </but t o n>
-              </f o r m>
-            </di v>
+                  <option value="">Select a subject</option>
+                  {subjects.map((subject, index) => (
+                    <option key={index} value={subject}>{subject}</option>
+                  ))}
+                </select>
+              </div>
 
-            {/* Contact Informat i o n */}
-            <di v classN a m e="sp a c e-y-8">
-              <di v>
-                <h 2 classN a m e="t e x t-2x l f o n t-b o l d t e x t-g r a y-90 0 m b-6">Ge t i n To u c h</h 2>
-                <p classN a m e="t e x t-g r a y-60 0 m b-8">
-                  W e&a p o s;r e h e r e t o h e l p yo u succ e e d. Re a c h ou t t o u s thro u g h an y o f th e chann e l s be l o w an d w e&a p o s;l l ge t b a c k t o yo u a s s o o n a s possi b l e.
-                </p>
-              </di v>
+              <div>
+                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                  Message *
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleInputChange}
+                  required
+                  rows={6}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors resize-none"
+                  placeholder="Tell us about your project or inquiry..."
+                />
+              </div>
 
-              <di v classN a m e="sp a c e-y-6">
-                {contactI n f o.ma p((i n f o in d e x) => (
-                  <di v ke y={in d e x} classN a m e="f l e x it e m s-st a r t sp a c e-x-4 p-6 b g-wh i t e roun d e d-x l sha d o w-l g">
-                    <di v classN a m e="t e x t-3x l">{i n f o.icon}</di v>
-                    <di v>
-                      <h 3 classN a m e="t e x t-l g f o n t-semib o l d t e x t-g r a y-90 0 m b-2">{i n f o.title}</h 3>
-                      <p classN a m e="t e x t-b l u e-60 0 f o n t-med i u m m b-1">{i n f o.details}</p>
-                      <p classN a m e="t e x t-g r a y-60 0 t e x t-s m">{i n f o.description}</p>
-                    </di v>
-                  </di v>
-                ))}
-              </di v>
+              <button
+                type="submit"
+                disabled={isSubmitting}
+                className={`w-full py-4 px-6 rounded-lg font-semibold text-white transition-colors duration-300 flex items-center justify-center ${
+                  isSubmitting 
+                    ? 'bg-gray-400 cursor-not-allowed' 
+                    : 'bg-blue-600 hover:bg-blue-700'
+                }`}
+              >
+                {isSubmitting ? (
+                  <>
+                    <Clock className="animate-spin h-5 w-5 mr-2" />
+                    Sending...
+                  </>
+                ) : isSubmitted ? (
+                  <>
+                    <CheckCircle className="h-5 w-5 mr-2" />
+                    Message Sent!
+                  </>
+                ) : (
+                  <>
+                    <Send className="h-5 w-5 mr-2" />
+                    Send Message
+                  </>
+                )}
+              </button>
+            </form>
+          </div>
 
-              <di v classN a m e="b g-b l u e-5 0 roun d e d-x l p-6">
-                <h 3 classN a m e="t e x t-l g f o n t-semib o l d t e x t-g r a y-90 0 m b-3">Respo n s e T i m e</h 3>
-                <p classN a m e="t e x t-g r a y-60 0 t e x t-s m">
-                  W e typica l l y resp o n d t o al l inquir i e s wit h i n 2 4 ho u r s dur i n g busin e s s d a y s. 
-                  Fo r urg e n t matt e r s ple a s e c a l l u s direc t l y.
-                </p>
-              </di v>
-            </di v>
-          </di v>
-        </di v>
-      </di v>
-    </>
-  )}
+          {/* Contact Information */}
+          <div className="space-y-8">
+            <div>
+              <h2 className="text-2xl font-bold text-gray-900 mb-6">Contact Information</h2>
+              <p className="text-gray-600 mb-8">
+                We&apos;d love to hear from you. Send us a message and we&apos;ll respond as soon as possible.
+              </p>
+            </div>
+
+            <div className="space-y-6">
+              {contactInfo.map((info, index) => (
+                <div key={index} className="bg-white rounded-xl p-6 shadow-lg">
+                  <div className="flex items-start space-x-4">
+                    <div className="bg-blue-100 p-3 rounded-lg">
+                      <div className="text-blue-600">{info.icon}</div>
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-gray-900 mb-1">{info.title}</h3>
+                      <p className="text-blue-600 font-medium mb-1">{info.details}</p>
+                      <p className="text-gray-600 text-sm">{info.description}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Office Hours */}
+            <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-xl p-6 text-white">
+              <div className="flex items-center space-x-3 mb-4">
+                <Clock className="h-6 w-6" />
+                <h3 className="text-lg font-semibold">Office Hours</h3>
+              </div>
+              <div className="space-y-2 text-blue-100">
+                <p>Monday - Friday: 8:00 AM - 6:00 PM</p>
+                <p>Saturday: 9:00 AM - 2:00 PM</p>
+                <p>Sunday: Closed</p>
+              </div>
+            </div>
+
+            {/* Response Time */}
+            <div className="bg-white rounded-xl p-6 shadow-lg">
+              <div className="flex items-center space-x-3 mb-4">
+                <Globe className="h-6 w-6 text-green-600" />
+                <h3 className="text-lg font-semibold text-gray-900">Response Time</h3>
+              </div>
+              <p className="text-gray-600">
+                We typically respond to all inquiries within 24 hours during business days.
+              </p>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      {/* Footer */}
+      <footer className="bg-white border-t">
+        <div className="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-4">Zion Tech</h3>
+              <p className="text-gray-600">
+                Transforming businesses through innovative technology solutions.
+              </p>
+            </div>
+            <div>
+              <h4 className="text-sm font-semibold text-gray-900 mb-4">Services</h4>
+              <ul className="space-y-2">
+                <li><Link href="/services" className="text-gray-600 hover:text-blue-600">Web Development</Link></li>
+                <li><Link href="/services" className="text-gray-600 hover:text-blue-600">Mobile Apps</Link></li>
+                <li><Link href="/services" className="text-gray-600 hover:text-blue-600">Cloud Solutions</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="text-sm font-semibold text-gray-900 mb-4">Company</h4>
+              <ul className="space-y-2">
+                <li><Link href="/about" className="text-gray-600 hover:text-blue-600">About Us</Link></li>
+                <li><Link href="/portfolio" className="text-gray-600 hover:text-blue-600">Portfolio</Link></li>
+                <li><Link href="/contact" className="text-gray-600 hover:text-blue-600">Contact</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="text-sm font-semibold text-gray-900 mb-4">Connect</h4>
+              <p className="text-gray-600 mb-2">hello@ziontech.com</p>
+              <p className="text-gray-600">+1 (555) 123-4567</p>
+            </div>
+          </div>
+          <div className="border-t mt-8 pt-8 text-center">
+            <p className="text-gray-500">&copy; 2024 Zion Tech Solutions. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+}
