@@ -271,6 +271,7 @@ export class MemoryMonitor {
     totalJSHeapSize: number;
     jsHeapSizeLimit: number;
   }> = [];
+  private intervalId: NodeJS.Timeout | null = null;
 
   public static getInstance(): MemoryMonitor {
     if (!MemoryMonitor.instance) {

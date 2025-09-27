@@ -440,5 +440,29 @@ export class EnhancedErrorBoundary extends React.Component<
   }
 }
 
+// Default error fallback component
+const DefaultErrorFallback: React.FC<{ error: Error }> = ({ error }) => 
+  React.createElement('div', { className: 'error-boundary' },
+    React.createElement('h2', null, 'Something went wrong'),
+    React.createElement('p', null, 'We\'re sorry, but something unexpected happened.'),
+    process.env.NODE_ENV === 'development' && React.createElement('details', null,
+      React.createElement('summary', null, 'Error Details'),
+      React.createElement('pre', null, error.message),
+      React.createElement('pre', null, error.stack)
+    )
+  );
+
+// Utility functions
+export const withErrorBoundary = <P extends object>(
+  Component: React.ComponentType<P>,
+  fallback?: React.ComponentType<{ error: Error }>
+) => {
+  const WrappedComponent = (props: P) => 
+    React.createElement(EnhancedErrorBoundary, { fallback, children: React.createElement(Component, props) });
+  
+  WrappedComponent.displayName = `withErrorBoundary(${Component.displayName || Component.name})`;
+  return WrappedComponent;
+};
+
 // Export singleton instance
 export const enhancedErrorHandler = EnhancedErrorHandler.getInstance();
