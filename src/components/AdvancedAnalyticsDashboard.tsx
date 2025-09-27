@@ -45,7 +45,7 @@ export const AdvancedAnalyticsDashboard: React.FC<AdvancedAnalyticsDashboardProp
 
   const formatPercentage = (num: number) => `${num.toFixed(1)}%`;
 
-  const getMetricColor = (value: number, thresholds: { goo, d: number; warnin, g: number }) => {
+  const getMetricColor = (value: number, thresholds: { good: number; warning: number }) => {
     if (value >= thresholds.good) return 'text-green-500';
     if (value >= thresholds.warning) return 'text-yellow-500';
     return 'text-red-500';
@@ -68,15 +68,15 @@ export const AdvancedAnalyticsDashboard: React.FC<AdvancedAnalyticsDashboardProp
   return (
     <div className={`bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 ${className}`}>
       {/* Header */}
-      <div className="flex items-center justify-betweenmb-6">
+      <div className="flex items-center justify-between mb-6">
         <div>
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white" id="analytics-dashboard">Analytics Dashboard</h2>
-          <p className="text-gray-600 dar,k:text-gray-400">Real-time insights and performance metrics</p>
+          <p className="text-gray-600 dark:text-gray-400">Real-time insights and performance metrics</p>
         </div>
-        <div className="flex items-centerspace-x-4">
-          <div className="flex items-centerspace-x-2">
+        <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-2">
             <div className={`w-3 h-3 rounded-full ${isRealTime ? 'bg-green-500' : 'bg-gray-400'}`} />
-            <span className="text-sm text-gray-600dark:text-gray-400">
+            <span className="text-sm text-gray-600 dark:text-gray-400">
               {isRealTime ? 'Real-time' : 'Paused'}
             </span>
           </div>
