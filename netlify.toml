@@ -5,17 +5,12 @@
  
 [build]
   command = "npm run build"
-<<<<<<< HEAD
-=======
-  publish = "dist"
->>>>>>> origin/backup-main-20250924-182607
+  publish = ".next"
   functions = "netlify/functions"
   command_timeout = "30m"
 
 [build.environment]
   NODE_VERSION = "24.0.0"
-<<<<<<< HEAD
-  YARN_ENABLE_IMMUTABLE_INSTALLS = "false"
 
 [[plugins]]
   package = "netlify-plugin-cloudinary"
@@ -35,21 +30,5 @@
 [context.deploy-preview]
   command = "npm run build"
 
-=======
-
-[[plugins]]
-  package = "netlify-plugin-compress"
-  [plugins.inputs]
-    gzip = true
-    brotli = true
-
-[context.production.environment]
-  NODE_ENV = "production"
-  NPM_CONFIG_PRODUCTION = "false"
-
-[context.deploy-preview]
-  command = "npm run build"
-
->>>>>>> origin/backup-main-20250924-182607
 [context.branch-deploy]
   command = "npm run build"

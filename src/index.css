@@ -15,26 +15,26 @@
 
 @layer components {
   .btn-primary {
-    background: linear-gradient(to right, #3b82f6, #8b5cf6);
     color: white;
     font-weight: 600;
     padding: 0.75rem 1.5rem;
     border-radius: 0.5rem;
     transition: all 0.3s;
+    background: linear-gradient(to right, #2563eb, #9333ea);
   }
   
   .btn-primary:hover {
-    background: linear-gradient(to right, #2563eb, #7c3aed);
+    background: linear-gradient(to right, #1d4ed8, #7c3aed);
   }
 
   .btn-secondary {
-    background-color: #1f2937;
     color: white;
     font-weight: 600;
     padding: 0.75rem 1.5rem;
     border-radius: 0.5rem;
-    border: 1px solid #4b5563;
     transition: all 0.3s;
+    background-color: #1f2937;
+    border: 1px solid #4b5563;
   }
   
   .btn-secondary:hover {
@@ -42,11 +42,11 @@
   }
 
   .card {
-    background-color: rgba(31, 41, 55, 0.5);
-    border: 1px solid #374151;
     border-radius: 0.5rem;
     padding: 1.5rem;
     transition: all 0.3s;
+    background-color: rgba(31, 41, 55, 0.5);
+    border: 1px solid #374151;
   }
   
   .card:hover {

@@ -1,24 +1,20 @@
 'use client';
 
 import React, { useState } from 'react';
+import SEO from '../../../components/SEO';
 import Link from 'next/link';
 
-type AnswerValue = number
-type AnswersMap = Record<string, AnswerValue>
-
-interface AssessmentResults {
-  totalScore: number
-  percentage: number
-  readinessLevel: string
-  color: 'green' | 'blue' | 'yellow' | 'red'
-  recommendations: string[]
-  nextSteps: string[]
-}
-
 export default function AIReadinessAssessment() {
-  const [currentStep, setCurrentStep] = useState<number>(0);
-  const [answers, setAnswers] = useState<AnswersMap>({});
-  const [results, setResults] = useState<AssessmentResults | null>(null);
+  const [currentStep, setCurrentStep] = useState(0);
+  const [answers, setAnswers] = useState<Record<string, number>>({});
+  const [results, setResults] = useState<{
+    totalScore: number;
+    percentage: number;
+    readinessLevel: string;
+    color: 'green' | 'blue' | 'yellow' | 'red';
+    recommendations: string[];
+    nextSteps: string[];
+  } | null>(null);
 
   const questions = [
     {
@@ -78,7 +74,7 @@ export default function AIReadinessAssessment() {
     }
   ];
 
-  const handleAnswer = (questionId: string, value: AnswerValue) => {
+  const handleAnswer = (questionId, value) => {
     setAnswers(prev => ({
       ...prev,
       [questionId]: value
@@ -100,11 +96,11 @@ export default function AIReadinessAssessment() {
   };
 
   const calculateResults = () => {
-    const totalScore = Object.values(answers).reduce<number>((sum, score) => sum + (score as number), 0);
+    const totalScore = Object.values(answers).reduce((sum, score) => sum + (Number(score) || 0), 0);
     const maxScore = questions.length * 4;
     const percentage = Math.round((totalScore / maxScore) * 100);
 
-    let readinessLevel: string, color: AssessmentResults['color'], recommendations: string[], nextSteps: string[];
+    let readinessLevel, color, recommendations, nextSteps;
 
     if (percentage >= 80) {
       readinessLevel = 'AI-Ready';
@@ -187,7 +183,14 @@ export default function AIReadinessAssessment() {
   if (results) {
     return (
       <div className="min-h-screen bg-white">
-                <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <SEO
+          title="AI Readiness Assessment Results | Free Tool | Zion Tech Group"
+          description="Get your personalized AI readiness assessment results with actionable recommendations and next steps for AI implementation success."
+          keywords="AI readiness assessment, AI implementation, AI strategy, digital transformation readiness, AI planning tool"
+          url="/resources/ai-readiness-assessment"
+        />
+        
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           {/* Header */}
           <div className="text-center mb-12">
             <div className="flex items-center gap-3 mb-6 justify-center">
@@ -254,7 +257,7 @@ export default function AIReadinessAssessment() {
           <div className="bg-gray-50 rounded-xl p-8 mb-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Detailed Analysis</h2>
             <div className="grid md:grid-cols-2 gap-6">
-              {questions.map((question, _index) => (
+              {questions.map((question, index) => (
                 <div key={question.id} className="bg-white rounded-lg p-6">
                   <h3 className="font-semibold text-gray-900 mb-2">{question.title}</h3>
                   <div className="flex items-center gap-2 mb-2">
@@ -324,7 +327,14 @@ export default function AIReadinessAssessment() {
 
   return (
     <div className="min-h-screen bg-white">
-            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <SEO
+        title="AI Readiness Assessment | Free Tool | Zion Tech Group"
+        description="Assess your organization's readiness for AI implementation with our comprehensive assessment tool. Get personalized recommendations and actionable next steps."
+        keywords="AI readiness assessment, AI implementation readiness, AI strategy assessment, digital transformation readiness, AI planning"
+        url="/resources/ai-readiness-assessment"
+      />
+      
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Header */}
         <div className="text-center mb-12">
           <div className="flex items-center gap-3 mb-6 justify-center">

@@ -1,8 +1,12 @@
+import React from 'react';
 import { ArrowRight, Shield, Zap, Users, Globe, Star, CheckCircle, Sparkles, Rocket, Target } from 'lucide-react';
+import Header from '../components/Header';
+// import { Footer } from '../components/Footer';
 
-export default function Home() {
+const Home = () => {
   return (
     <div className='min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden'>
+      <Header />
       {/* Animated background elements */}
       <div className='absolute inset-0 overflow-hidden'>
         <div className='absolute -top-40 -right-40 w-80 h-80 bg-zion-blue rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float'></div>
@@ -220,6 +224,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+      {/* <Footer /> */}
     </div>
   );
-}
+};
+
+export default Home;

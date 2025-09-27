@@ -1,88 +1,13 @@
-import Head from 'next/head';
+// This component is deprecated for App Router
+// Prefer using the Next.js Metadata API via `export const metadata` in `page.tsx`.
 
-interface SEOProps {
-  title?: string;
-  description?: string;
-  keywords?: string;
-  canonical?: string;
-  url?: string;
-  noindex?: boolean;
-  image?: string;
-  type?: string;
-  author?: string;
-  publishedTime?: string;
-  modifiedTime?: string;
+export interface SEOProps {
+	title?: string;
+	description?: string;
+	keywords?: string | string[];
+	url?: string;
 }
 
-export default function SEO({ 
-  title = 'Zion Tech Group - AI & Technology Solutions',
-  description = 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.',
-  keywords,
-  canonical,
-  url,
-  noindex = false,
-  image = 'https://zion.app/images/zion-tech-group-og.jpg',
-  type = 'website',
-  author = 'Zion Tech Group',
-  publishedTime,
-  modifiedTime
-}: SEOProps) {
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
-  const fullUrl = url ? `https://zion.app${url}` : 'https://zion.app';
-  const fullImage = image.startsWith('http') ? image : `https://zion.app${image}`;
-
-  return (
-    <Head>
-      {/* Basic Meta Tags */}
-      <title>{fullTitle}</title>
-      <meta name="description" content={description} />
-      {keywords && <meta name="keywords" content={keywords} />}
-      <meta name="author" content={author} />
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      
-      {/* Canonical URL */}
-      {canonical && <link rel="canonical" href={canonical} />}
-      
-      {/* Robots */}
-      {noindex ? (
-        <meta name="robots" content="noindex,nofollow" />
-      ) : (
-        <meta name="robots" content="index,follow" />
-      )}
-      
-      {/* Open Graph Tags */}
-      <meta property="og:title" content={fullTitle} />
-      <meta property="og:description" content={description} />
-      <meta property="og:type" content={type} />
-      <meta property="og:url" content={fullUrl} />
-      <meta property="og:image" content={fullImage} />
-      <meta property="og:site_name" content="Zion Tech Group" />
-      <meta property="og:locale" content="en_US" />
-      
-      {/* Twitter Card Tags */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={fullTitle} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={fullImage} />
-      <meta name="twitter:site" content="@ZionTechGroup" />
-      
-      {/* Article specific tags */}
-      {publishedTime && <meta property="article:published_time" content={publishedTime} />}
-      {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
-      
-      {/* Favicon and Icons */}
-      <link rel="icon" href="/favicon.ico" />
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-      <link rel="manifest" href="/site.webmanifest" />
-      
-      {/* Theme Color */}
-      <meta name="theme-color" content="#2563eb" />
-      
-      {/* Preconnect to external domains */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-    </Head>
-  );
+export default function SEO(_props: SEOProps) {
+	return null;
 }
