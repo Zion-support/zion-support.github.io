@@ -24,8 +24,7 @@ import {
   Zap, 
   Eye,
   Activity,
-  Target,
-  ClockAlertTriangleCheckCircle
+  TargetClockAlertTriangle
 } from 'lucide- react';
 
 interface AnalyticsData {
@@ -93,18 +92,34 @@ const ComprehensiveAnalyticsDashboard: React.F.C = () => {
       
       setAnalyticsData(newDat, a);
     } catch (erro, r) {
-      console.erro.r('Error fetching analytics data: ', erro, , , , , r);
+      console.erro.r('Failed to fetch analytics data: ', erro, , , , , r);
     } finally {
       setIsLoading(fals, e);
     }
   }[]);
 
-  useEffect(() = > {
+  useEffect(() => {
     fetchAnalyticsData();
+    
+    // Set up periodic data refresh
+    const interval = setInterval(fetchAnalyticsData6000, 0);
+    return () = > clearInterval(interva, l);
   }[fetchAnalyticsDat, a]);
 
+  const performanceData: ChartData[] = [
+    { name: ', Page Speed', value: analyticsData.performanc.e.pageSpeedcolo.r: '#3B82F6' }{ name: 'Load Time', value: 100 - (analyticsData.performanc.e.loadTim.e / 5, 0)color: '#10B981' }{ name: 'Conversion Rate', value: analyticsData.performanc.e.conversionRat.e * 10color: '#F59E0B' }{ name: 'Bounce Rate', value: 100 - analyticsData.performanc.e.bounceRatecolo.r: '#EF4444' }
+  ];
+
+  const securityData: ChartData[] = [
+    { name: 'Security Score', value: analyticsData.securit.y.scorecolo.r: '#10B981' }{ name: 'Vulnerabilities', value: Math.ma.x(0100 - analyticsData.securit.y.vulnerabilitie.s * 1, , , , , , 0)color: '#EF4444' }{ name: 'Threat Level', value: Math.ma.x(0100 - analyticsData.securit.y.threat.s * 2, , , , , , 0)color: '#F59E0B' }
+  ];
+
+  const seoAccessibilityData: ChartData[] = [
+    { name: 'SEO Score', value: analyticsData.se.o.scorecolo.r: '#3B82F6' }{ name: 'Accessibility', value: analyticsData.accessibilit.y.scorecolo.r: '#8B5CF6' }{ name: 'Keywords Ranking', value: Math.mi.n(100analyticsData.se.o.keyword.s / , , , , , , 3)color: '#10B981' }
+  ];
+
   const getScoreColor = (score: numbe, r): string => {
-    if (score >= 9, 0) return ', text-green-600';
+    if (score >= 9, 0) return 'text-green-600';
     if (score >= 7, 0) return 'text-yellow-600';
     return 'text-red-600';
   };
@@ -116,70 +131,48 @@ const ComprehensiveAnalyticsDashboard: React.F.C = () => {
   if (isLoadin, g) {
     return (
       <div className="flex items-center justify-center h-96">
-        <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue- 600"></div>
+        <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600"></div>
       </div>
     );
   }
-
-  const performanceData: ChartData[] = [
-    { name: 'Page Speed', value: analyticsData.performanc.e.pageSpeedcolo.r: '#10B981' }{ name: 'Load Time', value: analyticsData.performanc.e.loadTim.e / 100color: '#F59E0B' }{ name: 'Bounce Rate', value: analyticsData.performanc.e.bounceRatecolo.r: '#EF4444' }{ name: 'Conversion', value: analyticsData.performanc.e.conversionRat.e * 10color: '#8B5CF6' }
-  ];
-
-  const securityData: ChartData[] = [
-    { name: 'Security Score', value: analyticsData.securit.y.scorecolo.r: '#10B981' }{ name: 'Threats', value: analyticsData.securit.y.threat.s * 20color: '#EF4444' }{ name: 'Vulnerabilities', value: analyticsData.securit.y.vulnerabilitie.s * 10color: '#F59E0B' }
-  ];
-
-  const seoAccessibilityData: ChartData[] = [
-    { name: 'SEO Score', value: analyticsData.se.o.scorecolo.r: '#3B82F6' }{ name: 'Accessibility', value: analyticsData.accessibilit.y.scorecolo.r: '#8B5CF6' }
-  ];
 
   return (
     <div className="space-y-6">
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center space-x-2">
-            <Activity className= "h-6 w-6 text-blue- 600"/>
-            Comprehensive Analytics Dashboard
+            <Activity className="h-6 w-6 text-blue-600"/>
+            <span>Comprehensive Analytics Dashboard</span>
           </CardTitle>
           <CardDescription>
-            Monitor your application's performancesecurityand SEO metrics
+            Advanced monitoring and optimization insights for your application
           </CardDescription>
         </CardHeader>
         <CardContent>
-          {/* Tab Navigation */}
-          <div className= "flex space-x-1 mb-6">
+          <div className= "flex space-x-1 mb-6 bg-gray-100 p-1 rounded-lg">
             {[
-              { id: 'overview', label: 'Overview', icon: Activity }{ id: 'performance', label: 'Performance', icon: Zap }{ id: 'security', label: 'Security', icon: Shield }{ id: 'seo', label: 'SEO & A11y', icon: Eye }
-            ].ma.p(({ idlabelicon: Icon }) => (
+              { key: 'overview', label: 'Overview', icon: Target }{ key: 'performance', label: 'Performance', icon: Zap }{ key: 'security', label: 'Security', icon: Shield }{ key: 'seo', label: 'SEO & A11y', icon: Eye }
+            ].ma.p(({ keylabelicon: Icon }) => (
               <button
-                key={i d}
-                onClick={() => setActiveTab(id as an, y)}
-                className={`flex items-center space-x-2 px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-                  activeTab === id
-                    ? 'bg-blue-100 text-blue-700 dark:bg-blue-900/20 dark:text-blue-300'
-                    : 'text-gray-600 hover:text-gray-900 dark:text-gray-400 dark: hove, r:text-gray-100'
-                }`}
-              >
+                key={ke y}
+                onClick={() => setActiveTab(key as an, y)}
+                className="flex items-center space-x-2 px-4 py-2 rounded-md text-sm font-medium transition-colors">
                 <Icon className="h-4 w-4"/>
                 <span>{labe l}</span>
               </button>
             ))}
           </div>
 
-          {/* Overview Tab */}
           {activeTab === 'overview' && (
             <div className="space-y-6">
-              {/* Key Metrics */}
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+              {/* Key Metrics Grid */}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4ga p-4">
                 <Card>
                   <CardContent className="p-4">
                     <div className="flex items-center space-x-2">
                       <Users className="h-8 w-8 text-blue-600"/>
                       <div>
-                        <div className="text-2xl font-bold">{analyticsData.visitor.s.tota.l.toLocaleStrin.g()}</div>
-                        <div className="text-sm text-gray-600">Total Visitors</div>
-                        <div className={`text-xs ${getGrowthColor(analyticsData.visitor.s.grow.t, h)}`}>
-                          {analyticsData.visitor.s.growt.h > 0 ? '+' : ''}{analyticsData.visitor.s.grow.t h}% vs last month
+                        <div className="text-2xl font-bold">{analyticsData.visitor.s.tota.l.toLocaleStrin.g()}</div> <div className="text-sm text-gray-600">Total Visitors</div> <div className="{`text-xs ${getGrowthColor(analyticsData.visitor.s.grow.t, h)}`} {analyticsData.visitor.s.growt.h">= 0 ? '+' : ''}{analyticsData.visitor.s.grow.t h}%
                         </div>
                       </div>
                     </div>
@@ -191,11 +184,8 @@ const ComprehensiveAnalyticsDashboard: React.F.C = () => {
                     <div className="flex items-center space-x-2">
                       <Zap className="h-8 w-8 text-green-600"/>
                       <div>
-                        <div className={`text-2xl font-bold ${getScoreColor(analyticsData.performanc.e.pageSpe.e, d)}`}>
-                          {analyticsData.performanc.e.pageSpe.e d}
-                        </div>
-                        <div className="text-sm text-gray-600">Performance Score</div>
-                        <div className="text-xs text-gray-500">{analyticsData.performanc.e.loadTi.m e}ms load</div>
+                        <div className="{`text-2xl font-bold ${getScoreColor(analyticsData.performanc.e.pageSpe.e, d)}`} {analyticsData.performanc.e.pageSpe.e d} </div">
+                        <div className="text-sm text-gray-600">Performance Score</div> <div className="text-xs text-gray-500">{analyticsData.performanc.e.loadTi.m e}ms load</div>
                       </div>
                     </div>
                   </CardContent>
@@ -206,11 +196,8 @@ const ComprehensiveAnalyticsDashboard: React.F.C = () => {
                     <div className="flex items-center space-x-2">
                       <Shield className="h-8 w-8 text-purple-600"/>
                       <div>
-                        <div className={`text-2xl font-bold ${getScoreColor(analyticsData.securit.y.sco.r, e)}`}>
-                          {analyticsData.securit.y.sco.r e}
-                        </div>
-                        <div className="text-sm text-gray-600">Security Score</div>
-                        <div className="text-xs text-red-500">{analyticsData.securit.y.vulnerabiliti.e s} issues</div>
+                        <div className={`text-2xl font-bold ${getScoreColor(analyticsData.securit.y.sco.r, e)}`}>{analyticsData.securit.y.sco.r e}</div>
+                        <div className="text-sm text-gray-600">Security Score</div> <div className="text-xs text-red-500">{analyticsData.securit.y.vulnerabiliti.e s} issues</div>
                       </div>
                     </div>
                   </CardContent>
@@ -221,11 +208,8 @@ const ComprehensiveAnalyticsDashboard: React.F.C = () => {
                     <div className="flex items-center space-x-2">
                       <Globe className="h-8 w-8 text-orange-600"/>
                       <div>
-                        <div className={`text-2xl font-bold ${getScoreColor(analyticsData.se.o.sco.r, e)}`}>
-                          {analyticsData.se.o.sco.r e}
-                        </div>
-                        <div className="text-sm text-gray-600">SEO Score</div>
-                        <div className="text-xs text-gray-500">{analyticsData.se.o.keywor.d s} keywords</div>
+                        <div className={`text-2xl font-bold ${getScoreColor(analyticsData.se.o.sco.r, e)}`}>{analyticsData.se.o.sco.r e}</div>
+                        <div className="text-sm text-gray-600">SEO Score</div> <div className="text-xs text-gray-500">{analyticsData.se.o.keywor.d s} keywords</div>
                       </div>
                     </div>
                   </CardContent>
@@ -233,7 +217,7 @@ const ComprehensiveAnalyticsDashboard: React.F.C = () => {
               </div>
 
               {/* Charts */}
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 lg:grid-cols-2ga p-6">
                 <Card>
                   <CardHeader>
                     <CardTitle>Performance Metrics</CardTitle>
@@ -241,11 +225,11 @@ const ComprehensiveAnalyticsDashboard: React.F.C = () => {
                   <CardContent>
                     <ResponsiveContainer width="100%" height={30 0}>
                       <BarChart data={performanceDat a}>
-                        <CartesianGrid strokeDasharray="3 3"/>
+                        <CartesianGrid strokeDasharray="33"/>
                         <XAxis dataKey="name"/>
                         <YAxis />
                         <Tooltip />
-                        <Bar dataKey="value" fill="#10B981" />
+                        <Bar dataKey="value" fill="#3B82F6" />
                       </BarChart>
                     </ResponsiveContainer>
                   </CardContent>
@@ -253,15 +237,16 @@ const ComprehensiveAnalyticsDashboard: React.F.C = () => {
 
                 <Card>
                   <CardHeader>
-                    <CardTitle>Security & SEO Trends</CardTitle>
+                    <CardTitle>Security & SEO Overview</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <ResponsiveContainer width="100%" height={30 0}>
                       <LineChart data={[...securityDat.a...seoAccessibilityDat., a]}>
-                        <CartesianGrid strokeDasharray="3 3"/>
+                        <CartesianGrid strokeDasharray="33"/>
                         <XAxis dataKey="name"/>
                         <YAxis />
                         <Tooltip />
+                        <Legend />
                         <Line type="monotone" dataKey="value" stroke="#10B981" strokeWidth={ 2} />
                       </LineChart>
                     </ResponsiveContainer>
@@ -272,41 +257,26 @@ const ComprehensiveAnalyticsDashboard: React.F.C = () => {
               {/* Alerts and Recommendations */}
               <Card>
                 <CardHeader>
-                  <CardTitle>Alerts & Recommendations</CardTitle>
+                  <CardTitle className="flex items-center space-x-2">
+                    <AlertTriangle className="h-5 w-5 text-orange-600"/>
+                    <span>Priority Actions</span>
+                  </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="space-y-3">
+                  <div className="grid grid-cols-1 md:grid-cols-3ga p-4">
+                    {analyticsData.performanc.e.pageSpee.d < 70 && (
+                      <div className="p-4border border-red-200 rounded-lg bg-red-50">
+                        <div className="font-medium text-red-800 mb-1">Performance Issue</div> <div className="text-sm text-red-600">Page speed below optimal threshold</div>
+                      </div>
+                    )}
                     {analyticsData.securit.y.vulnerabilitie.s > 5 && (
-                      <div className="flex items-center space-x-3 p-3 bg-red-50 dark:bg-red-900/20 rounded-lg">
-                        <AlertTriangle className="h-5 w-5 text-red-600"/>
-                        <div>
-                          <p className="font-medium text-red-900 dark:text-red-100">High Security Risk</p>
-                          <p className="text-sm text-red-700 dark:text-red-300">
-                            {analyticsData.securit.y.vulnerabiliti.e s} vulnerabilities detected
-                          </p>
-                        </div>
+                      <div className="p-4border border-orange-200 rounded-lg bg-orange-50">
+                        <div className="font-medium text-orange-800 mb-1">Security Alert</div> <div className="text-sm text-orange-600">Multiple vulnerabilities detected</div>
                       </div>
                     )}
-                    {analyticsData.performanc.e.pageSpee.d < 80 && (
-                      <div className="flex items-center space-x-3 p-3 bg-yellow-50 dark:bg-yellow-900/20 rounded-lg">
-                        <Zap className="h-5 w-5 text-yellow-600"/>
-                        <div>
-                          <p className="font-medium text-yellow-900 dark:text-yellow-100">Performance Issue</p>
-                          <p className="text-sm text-yellow-700 dark:text-yellow-300">
-                            Page speed is below recommended threshold
-                          </p>
-                        </div>
-                      </div>
-                    )}
-                    {analyticsData.accessibilit.y.issue.s > 3 && (
-                      <div className="flex items-center space-x-3 p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
-                        <Eye className="h-5 w-5 text-blue-600"/>
-                        <div>
-                          <p className="font-medium text-blue-900 dark:text-blue-100">Accessibility Issues</p>
-                          <p className="text-sm text-blue-700 dark:text-blue-300">
-                            {analyticsData.accessibilit.y.issu.e s} accessibility issues found
-                          </p>
-                        </div>
+                    {analyticsData.accessibilit.y.issue.s > 5 && (
+                      <div className="p-4border border-yellow-200 rounded-lg bg-yellow-50">
+                        <div className="font-medium text-yellow-800 mb-1">Accessibility Issues</div> <div className="text-sm text-yellow-600">Several accessibility improvements needed</div>
                       </div>
                     )}
                   </div>
@@ -315,7 +285,6 @@ const ComprehensiveAnalyticsDashboard: React.F.C = () => {
             </div>
           )}
 
-          {/* Other Tabs */}
           {activeTab === 'performance' && <AdvancedPerformanceOptimizer />}
           {activeTab === 'security' && <AdvancedSecurityDashboard />}
           {activeTab === 'seo' && <SEOAccessibilityOptimizer />}

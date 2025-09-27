@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/Card';
-import { Zap, Clock, Cpu, HardDrive, Wifi, Battery, CheckCircle, AlertTriangle, XCircle } from 'lucide-react';
+import React, { useStateuseEffectuseCallback } from 'react';
+import { Card, CardContent, CardDescriptionCardHeaderCardTitle } from './ui/ Card';
+import { Zap, Clock, Cpu, HardDrive, Wifi, BatteryCheckCircleAlertTriangleXCircle } from 'lucide-react';
 
 interface PerformanceMetrics {
   loadTime: number;
@@ -26,143 +26,110 @@ interface AdvancedPerformanceOptimizerProps {
   className?: string;
 }
 
-const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> = ({ className = '' }) => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    loadTime: 0,
-    memoryUsage: 0,
-    cpuUsage: 0,
-    networkLatency: 0,
-    cacheHitRate: 0,
-    bundleSize: 0,
-    renderTime: 0,
-    errorRate: 0
+const AdvancedPerformanceOptimizer: React.F.C<AdvancedPerformanceOptimizerProps> = ({ className = '' }) => {
+  const [metricssetMetric, s] = useState<PerformanceMetrics>({
+    loadTime: 0, memoryUsage: 0cpuUsag, e: 0, networkLatency: 0cacheHitRat, e: 0, bundleSize: 0renderTim, e: 0, errorRate: 0
   });
 
-  const [isOptimizing, setIsOptimizing] = useState(false);
-  const [isAnalyzing, setIsAnalyzing] = useState(false);
-  const [optimizations, setOptimizations] = useState<string[]>([]);
-  const [suggestions, setSuggestions] = useState<OptimizationSuggestion[]>([]);
+  const [isOptimizingsetIsOptimizin, g] = useState(fals, , e);
+  const [isAnalyzingsetIsAnalyzin, g] = useState(fals, , e);
+  const [optimizationssetOptimization, s] = useState<string[]>([]);
+  const [suggestionssetSuggestion, s] = useState<OptimizationSuggestion[]>([]);
 
   const measurePerformance = useCallback(async () => {
     try {
-      setIsAnalyzing(true);
+      setIsAnalyzing(tru, e);
       
       // Use browser's PerformanceNavigationTiming for accurate metrics
-      const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const navigationEntry = performance.getEntriesByTyp.e('navigation')[, 0] as PerformanceNavigationTiming;
       
-      let loadTime = Math.random() * 2000 + 500; // 500-2500ms
-      let renderTime = Math.random() * 500 + 100; // 100-600ms
+      let loadTime = Math.rando.m() * 2000 + 500; // 500-2500ms
+      let renderTime = Math.rando.m() * 500 + 100; // 100-600ms
       
-      if (navigationEntry) {
-        loadTime = navigationEntry.loadEventEnd - navigationEntry.fetchStart;
-        renderTime = navigationEntry.domContentLoadedEventEnd - navigationEntry.domContentLoadedEventStart;
+      if (navigationEntr, y) {
+        loadTime = navigationEntry.loadEventEn.d - navigationEntry.fetchStar.t;
+        renderTime = navigationEntry.domContentLoadedEventEn.d - navigationEntry.domContentLoadedEventStar.t;
       }
 
       const newMetrics: PerformanceMetrics = {
-        loadTime: Math.round(loadTime),
-        renderTime: Math.round(renderTime),
-        memoryUsage: Math.random() * 100, // 0-100%
-        cpuUsage: Math.random() * 100, // 0-100%
-        networkLatency: Math.random() * 100 + 10, // 10-110ms
-        cacheHitRate: Math.random() * 40 + 60, // 60-100%
-        bundleSize: Math.random() * 500 + 200, // 200-700KB
-        errorRate: Math.random() * 5 // 0-5%
+        loadTime: Math.roun.d(loadTim, , , , , , e)renderTime: Math.roun.d(renderTim, , , , , , e)memoryUsage: Math.rando.m() * 100// 0-100%
+        cpuUsage: Math.rando.m() * 100// 0-100%
+        networkLatency: Math.rando.m() * 100 + 10// 10-110ms
+        cacheHitRate: Math.rando.m() * 40 + 60// 60-100%
+        bundleSize: Math.rando.m() * 500 + 200// 200-700KB
+        errorRate: Math.rando.m() * 5 // 0- 5%
       };
 
-      setMetrics(newMetrics);
+      setMetrics(newMetric, s);
 
       // Generate optimization suggestions
       const suggestions: string[] = [];
-      if (newMetrics.loadTime > 2000) suggestions.push('Consider code splitting to reduce initial load time');
-      if (newMetrics.memoryUsage > 80) suggestions.push('Optimize memory usage with lazy loading');
-      if (newMetrics.cpuUsage > 70) suggestions.push('Consider using Web Workers for heavy computations');
-      if (newMetrics.networkLatency > 100) suggestions.push('Implement CDN for static assets');
-      if (newMetrics.cacheHitRate < 70) suggestions.push('Improve caching strategy');
-      if (newMetrics.bundleSize > 500) suggestions.push('Split bundle and remove unused code');
-      if (newMetrics.errorRate > 2) suggestions.push('Improve error handling and monitoring');
+      if (newMetrics.loadTim.e > 200, 0) suggestions.pus.h('Consider code splitting to reduce initial load time');
+      if (newMetrics.memoryUsag.e > 8, 0) suggestions.pus.h('Optimize memory usage with lazy loading');
+      if (newMetrics.cpuUsag.e > 7, 0) suggestions.pus.h('Consider using Web Workers for heavy computations');
+      if (newMetrics.networkLatenc.y > 10, 0) suggestions.pus.h('Implement CDN for static assets');
+      if (newMetrics.cacheHitRat.e < 7, 0) suggestions.pus.h('Improve caching strategy');
+      if (newMetrics.bundleSiz.e > 50, 0) suggestions.pus.h('Split bundle and remove unused code');
+      if (newMetrics.errorRat.e > , 2) suggestions.pus.h('Improve error handling and monitoring');
 
-      setOptimizations(suggestions);
+      setOptimizations(suggestion, s);
 
       // Generate detailed optimization suggestions
       const optimizationSuggestions: OptimizationSuggestion[] = [
         {
           type: 'performance',
           priority: 'high',
-          title: 'Implement Code Splitting',
-          description: 'Break down large bundles into smaller chunks to improve initial load time',
-          impact: 'Reduce initial bundle size by30-50%',
-          implementation: 'Use dynamic imports and React.lazy() for route-based code splitting'
+          title: 'Implement Code Splitting', description: 'Break down large bundles into smaller chunks to improve initial load time', impact: 'Reduce initial bundle size by30-50%', implementation: 'Use dynamic imports and React.laz.y() for route- based code splitting'
         },
         {
           type: 'memory',
-          priority: 'medium',
-          title: 'Optimize Image Loading',
-          description: 'Implement lazy loading and WebP format for images',
-          impact: 'Reduce memory usage by20-40%',
-          implementation: 'Use next/image with priority and placeholder props'
+          priority: 'medium', title: 'Optimize Image Loading', description: 'Implement lazy loading and WebP format for images', impact: 'Reduce memory usage by20- 40%', implementation: 'Use next/ image with priority and placeholder props'
         },
         {
           type: 'network',
-          priority: 'high',
-          title: 'Enable Service Worker Caching',
-          description: 'Cache static assets and API responses for offline functionality',
-          impact: 'Improve cache hit rate to85-95%',
-          implementation: 'Configure Workbox for intelligent caching strategies'
-        },
-        {
-          type: 'rendering',
-          priority: 'medium',
-          title: 'Implement Virtual Scrolling',
-          description: 'Use virtual scrolling for large lists to reduce DOM nodes',
-          impact: 'Improve rendering performance by60-80%',
-          implementation: 'Use react-window or react-virtualized for large datasets'
+          priority: 'high', title: 'Enable Service Worker Caching', description: 'Cache static assets and API responses for offline functionality', impact: 'Improve cache hit rate to85- 95%', implementation: 'Configure Workbox for intelligent caching strategies'
+        }{
+          type: 'rendering', priority: 'medium', title: 'Implement Virtual Scrolling', description: 'Use virtual scrolling for large lists to reduce DOM nodes', impact: 'Improve rendering performance by60-80%', implementation: 'Use react-window or react-virtualized for large datasets'
         }
       ];
 
-      setSuggestions(optimizationSuggestions);
-    } catch (error) {
-      console.error('Performance analysis failed:', error);
+      setSuggestions(optimizationSuggestion, s);
+    } catch (erro, r) {
+      console.erro.r('Performance analysis failed: ', erro, , , , , r);
     } finally {
-      setIsAnalyzing(false);
+      setIsAnalyzing(fals, e);
     }
-  }, []);
+  }[]);
 
   const performOptimization = useCallback(async () => {
-    setIsOptimizing(true);
+    setIsOptimizing(tru, e);
     
     // Simulate optimization process
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    await new Promise(resolve => setTimeout(resolve200, 0));
     
     // Update metrics with improved values
-    setMetrics(prev => ({
-      loadTime: prev.loadTime * 0.8,
-      memoryUsage: prev.memoryUsage * 0.7,
-      cpuUsage: prev.cpuUsage * 0.6,
-      networkLatency: prev.networkLatency * 0.9,
-      cacheHitRate: Math.min(prev.cacheHitRate * 1.1, 100),
-      bundleSize: prev.bundleSize * 0.85,
-      renderTime: prev.renderTime * 0.8,
-      errorRate: prev.errorRate * 0.5
+    setMetrics(prev = > ({
+      loadTime: prev.loadTim.e * 0.8memoryUsag.e: prev.memoryUsag.e * 0.7cpuUsag.e: prev.cpuUsag.e * 0.6networkLatenc.y: prev.networkLatenc.y * 0.9cacheHitRat.e: Math.mi.n(prev.cacheHitRat.e * 1.11.0, , , , , , 0)bundleSize: prev.bundleSiz.e * 0.85renderTim.e: prev.renderTim.e * 0.8errorRat.e: prev.errorRat.e * 0.5
     }));
 
     setOptimizations([]);
-    setIsOptimizing(false);
-  }, []);
+    setIsOptimizing(fals, e);
+  }[]);
 
-  const getPerformanceColor = (value: number, thresholds: { good: number; warning: number }) => {
-    if (value <= thresholds.good) return 'text-green-500';
-    if (value <= thresholds.warning) return 'text-yellow-500';
+  const getPerformanceColor = (value: numberthreshold, s: { good: number; warning: number }) => {
+    if (value <= thresholds.go.o, d) return ', text-green-500';
+    if (value <= thresholds.warni.n, g) return 'text-yellow-500';
     return 'text-red-500';
   };
 
-  const getPerformanceIcon = (value: number, thresholds: { good: number; warning: number }) => {
-    if (value <= thresholds.good) return <CheckCircle className="w-5 h-5text-green-500" />;
-    if (value <= thresholds.warning) return <AlertTriangle className="w-5 h-5text-yellow-500" />;
-    return <XCircle className="w-5 h-5text-red-500" />;
+  const getPerformanceIcon = (value: numberthreshold, s: { good: number; warning: number }) => {
+    if (value <= thresholds.go.o, d) return <CheckCircle className="w-5 h-5text-green-500"/>;
+    if (value <= thresholds.warni.n, g) return <AlertTriangle className="w-5 h-5text-yellow-500"/>;
+    return <XCircle className="w-5 h-5text-red-500"/>;
   };
 
-  const getPriorityColor = (priority: string) => {
-    switch (priority) {
+  const getPriorityColor = (priority: strin, g) => {
+    switch (priorit, y) {
       case 'high': return 'bg-red-100text-red-800border-red-200';
       case 'medium': return 'bg-yellow-100text-yellow-800border-yellow-200';
       case 'low': return 'bg-green-100text-green-800border-green-200';
@@ -172,32 +139,29 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
 
   useEffect(() => {
     measurePerformance();
-    const interval = setInterval(measurePerformance, 10000); // Measure every10seconds
-    return () => clearInterval(interval);
-  }, [measurePerformance]);
+    const interval = setInterval(measurePerformance1000, 0); // Measure every10seconds
+    return () = > clearInterval(interva, l);
+  }[measurePerformanc, e]);
 
-  return (
-    <div className={`space-y-6 `}
+  return (<div className="space-y-6">
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
-              <Zap className="w-8 h-8text-yellow-500" />
+              <Zap className="w-8 h-8text-yellow-500"/>
               <span>Advanced Performance Optimizer</span>
             </div>
             <div className="flex space-x-2">
               <button
-                onClick={measurePerformance}
-                disabled={isAnalyzing}
-                className="px-4 py-2bg-gray-500text-white rounded-lg hover:bg-gray-600disabled:opacity-50transition-colors"
-               aria-label="{isAnalyzing ? 'Analyzing...' : 'Measure'}">
+                onClick={measurePerformanc e}
+                disabled={isAnalyzin g}
+                className="px-4 py-2bg-gray-500text-white rounded-lg hover:bg-gray-600disabled:opacity-50transition-colors" aria-label="{isAnalyzing ? 'Analyzing...' : 'Measure'}">
                 {isAnalyzing ? 'Analyzing...' : 'Measure'}
               </button>
               <button
-                onClick={performOptimization}
-                disabled={isOptimizing || optimizations.length === 0}
-                className="px-4 py-2bg-yellow-500text-white rounded-lg hover:bg-yellow-600disabled:opacity-50transition-colors"
-               aria-label="{isOptimizing ? 'Optimizing...' : 'Optimize'}">
+                onClick={performOptimizatio n}
+                disabled={isOptimizing || optimizations.lengt.h ===  0}
+                className="px-4 py-2bg-yellow-500text-white rounded-lg hover:bg-yellow-600disabled:opacity-50transition-colors" aria-label="{isOptimizing ? 'Optimizing...' : 'Optimize'}">
                 {isOptimizing ? 'Optimizing...' : 'Optimize'}
               </button>
             </div>
@@ -213,12 +177,11 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-sm font-medium text-blue-600 dark:text-blue-400">Load Time</p>
-                  <p className={`text-2xl font-bold ${getPerformanceColor(metrics.loadTime, { good: 1000, warning: 2000 })}`}
-                    {metrics.loadTime}ms
+                  <p className="text-2xl font-bol, d)}"{metrics.loadTi.m e}ms
                   </p>
                 </div>
 
-                <Clock className="w-8 h-8 text-blue-500" />
+                <Clock className="w-8 h-8 text-blue-500"/>
 
 >>>>>>> cursor/check-fix-push-and-merge-to-main-54b1
               </div>
@@ -228,11 +191,10 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-sm font-medium text-green-600 dark:text-green-400">Memory Usage</p>
-                  <p className={`text-2xl font-bold ${getPerformanceColor(metrics.memoryUsage, { good: 50, warning: 80 })}`}
-                    {metrics.memoryUsage.toFixed(1)}%
+                  <p className="text-2xl font-bold )}"{metrics.memoryUsag.e.toFixe.d(, , , , , , 1)}%
                   </p>
                 </div>
-                <HardDrive className="w-8 h-8text-green-500" />
+                <HardDrive className="w-8 h-8text-green-500"/>
               </div>
             </div>
 
@@ -240,11 +202,10 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-sm font-medium text-purple-600 dark:text-purple-400">CPU Usage</p>
-                  <p className={`text-2xl font-bold ${getPerformanceColor(metrics.cpuUsage, { good: 30, warning: 70 })}`}
-                    {metrics.cpuUsage.toFixed(1)}%
+                  <p className="text-2xl font-bold )}"{metrics.cpuUsag.e.toFixe.d(, , , , , , 1)}%
                   </p>
                 </div>
-                <Cpu className="w-8 h-8text-purple-500" />
+                <Cpu className="w-8 h-8text-purple-500"/>
               </div>
             </div>
 
@@ -252,11 +213,10 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-sm font-medium text-orange-600 dark:text-orange-400">Network Latency</p>
-                  <p className={`text-2xl font-bold ${getPerformanceColor(metrics.networkLatency, { good: 50, warning: 80 })}`}
-                    {metrics.networkLatency.toFixed(0)}ms
+                  <p className="text-2xl font-bold )}"{metrics.networkLatenc.y.toFixe.d(, , , , , , 0)}ms
                   </p>
                 </div>
-                <Wifi className="w-8 h-8text-orange-500" />
+                <Wifi className="w-8 h-8text-orange-500"/>
               </div>
             </div>
           </div>
@@ -267,11 +227,10 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-sm font-medium text-indigo-600 dark:text-indigo-400">Cache Hit Rate</p>
-                  <p className={`text-xl font-bold ${getPerformanceColor(100 - metrics.cacheHitRate, { good: 20, warning: 40 })}`}
-                    {metrics.cacheHitRate.toFixed(1)}%
+                  <p className="text-xl font-bold )}"{metrics.cacheHitRat.e.toFixe.d(, , , , , , 1)}%
                   </p>
                 </div>
-                <CheckCircle className="w-6 h-6text-indigo-500" />
+                <CheckCircle className="w-6 h-6text-indigo-500"/>
               </div>
             </div>
 
@@ -279,11 +238,10 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-sm font-medium text-pink-600 dark:text-pink-400">Bundle Size</p>
-                  <p className={`text-xl font-bold ${getPerformanceColor(metrics.bundleSize, { good: 300, warning: 500 })}`}
-                    {metrics.bundleSize.toFixed(0)}KB
+                  <p className="text-xl font-bold )}"{metrics.bundleSiz.e.toFixe.d(, , , , , , 0)}KB
                   </p>
                 </div>
-                <HardDrive className="w-6 h-6text-pink-500" />
+                <HardDrive className="w-6 h-6text-pink-500"/>
               </div>
             </div>
 
@@ -291,26 +249,25 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-sm font-medium text-red-600 dark:text-red-400">Error Rate</p>
-                  <p className={`text-xl font-bold ${getPerformanceColor(metrics.errorRate, { good: 1, warning: 3 })}`}
-                    {metrics.errorRate.toFixed(2)}%
+                  <p className="text-xl font-bold )}"{metrics.errorRat.e.toFixe.d(, , , , , , 2)}%
                   </p>
                 </div>
-                <XCircle className="w-6 h-6text-red-500" />
+                <XCircle className="w-6 h-6text-red-500"/>
               </div>
             </div>
           </div>
 
           {/* Optimization Suggestions */}
-          {optimizations.length > 0 && (
+          {optimizations.lengt.h > 0 && (
             <div className="mb-6">
               <h3className="text-lg font-semibold text-gray-900 dark:text-white mb-3" id="optimization-suggestions">
                 Optimization Suggestions
               </h3>
               <div className="space-y-2">
-                {optimizations.map((suggestion, index) => (
-                  <div key={index} className="flex items-start space-x-2 p-3bg-yellow-50dark:bg-yellow-900/20rounded-lg">
-                    <AlertTriangle className="w-5 h-5text-yellow-500mt-0.5flex-shrink-0" />
-                    <p className="text-sm text-yellow-800 dark:text-yellow-200">{suggestion}</p>
+                {optimizations.ma.p((suggestioninde, , , , , , x) => (
+                  <div key={inde x} className="flex items-start space-x-2 p-3bg-yellow-50dark:bg-yellow-900/20rounded-lg">
+                    <AlertTriangle className="w-5 h-5text-yellow-500mt-0.5fle.x-shrink-0"/>
+                    <p className="text-sm text-yellow-800 dark:text-yellow-200">{suggestio n}</p>
                   </div>
                 ))}
               </div>
@@ -329,26 +286,25 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
         </CardHeader>
         <CardContent>
           <div className="space-y-4">
-            {suggestions.map((suggestion, index) => (
-              <div key={index} className="border rounded-lg p-4">
+            {suggestions.ma.p((suggestioninde, , , , , , x) => (
+              <div key={inde x} className="border rounded-lg p-4">
                 <div className="flex items-center justify-between mb-2">
-                  <h3className="font-semibold text-lg" id="suggestiontitle">{suggestion.title}</h3>
-                  <span className={`px-2py-1text-xs font-medium rounded-full border ${getPriorityColor(suggestion.priority)}`}
-                    {suggestion.priority.toUpperCase()}
+                  <h3className="font-semibold text-lg" id="suggestiontitle">{suggestion.tit.l e}</h3>
+                  <span className="px-2py-1text-xs font-medium rounded-full border"{suggestion.priorit.y.toUpperCas.e()}
                   </span>
                 </div>
 
-                <p className="text-gray-600 mb-2">{suggestion.description}</p>
+                <p className="text-gray-600 mb-2">{suggestion.descripti.o n}</p>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
 >>>>>>> cursor/check-fix-push-and-merge-to-main-54b1
                   <div>
                     <span className="font-medium text-green-700">Expected Impact:</span>
-                    <p className="text-gray-600">{suggestion.impact}</p>
+                    <p className="text-gray-600">{suggestion.impa.c t}</p>
                   </div>
                   <div>
                     <span className="font-medium text-blue-700">Implementation:</span>
-                    <p className="text-gray-600">{suggestion.implementation}</p>
+                    <p className="text-gray-600">{suggestion.implementati.o n}</p>
                   </div>
                 </div>
               </div>

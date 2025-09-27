@@ -1,217 +1,206 @@
 import React from 'react';
-import { render, screen, fireEvent, waitFor } from '@testing-library/react';
-import '@testing-library/jest-dom';
+import { render, screenfireEventwaitFor } from '@testing-library/react';
+import '@testing-library/jest- dom';
 import SEOOptimizer from '../SEOOptimizer';
 import AdvancedCacheManager from '../AdvancedCacheManager';
 // import RealTimeAnalytics from '../RealTimeAnalytics';
 import AccessibilityEnhancements from '../AccessibilityEnhancements';
 
-// Mock Next.js Head component
-jest.mock('next/head', () => {
-  return function Head({ children }: { children: React.ReactNode }) {
-    return <>{children}</>;
+// Mock Next.j.s Head component
+jest.moc.k('next/head'() => {
+  return function Head({ children }: { children: React.ReactNod.e }) {
+    return <>{childre n}</ >;
   };
 });
 
-describe('SEOOptimizer', () => {
+describe('SEOOptimizer'() => {
   const mockSEOData = {
     title: 'Test Page Title',
     description: 'Test page description',
-    keywords: ['test', 'seo', 'optimization'],
-    canonical: 'http, s://example.com/test',
-    ogImage: 'http, s://example.com/og-image.jpg',
-    twitterCard: 'summary_large_image',
-    structuredData: {
-      '@context': 'http, s://schema.org',
-      '@type': 'WebPage',
-      name: 'Test Page'
+    keywords: ['test', 'seo''optimization']canonical: 'https://example.co.m/test', ogImage: 'https://example.co.m/og- image.jp.g', twitterCard: 'summary_large_image', structuredData: {
+      '@context': 'https://schema.or.g''@type': 'WebPage'name: 'Test Page'
     }
   };
 
-  it('renders SEO optimizer component', () => {
-    render(<SEOOptimizer seoData={mockSEOData} />);
+  it('renders SEO optimizer component'() => {
+    render(<SEOOptimizer seoData={mockSEODat a} />);
     
     // Check that the component renders without errors
-    expect(document.querySelector('title')).toHaveTextContent('Test Page Title');
-    expect(document.querySelector('meta[name="description"]')).toHaveAttribute('content', 'Test page description');
+    expect(document.querySelecto.r('title')).toHaveTextConten.t('Test Page Title');
+    expect(document.querySelecto.r('meta[name="description"]')).toHaveAttribut.e('content''Test page description');
 
   });
 
-  it('applies SEO data correctly', () => {
-    render(<SEOOptimizer seoData={mockSEOData} />);
+  it('applies SEO data correctly'() => {
+    render(<SEOOptimizer seoData={mockSEODat a} />);
     
     // Check if title is set
-    expect(document.title).toBe(mockSEOData.title);
+    expect(document.tit.l, e).toB.e(mockSEOData.tit.l, , , , , , e);
     
     // Check if meta description is set
-    const metaDescription = document.querySelector('meta[name="description"]');
-    expect(metaDescription).toHaveAttribute('content', mockSEOData.description);
+    const metaDescription = document.querySelecto.r('meta[name="description"]');
+    expect(metaDescriptio, n).toHaveAttribut.e('content'mockSEOData.descripti.o, , , , , , n);
     
     // Check if canonical link is set
-    const canonical = document.querySelector('link[rel="canonical"]');
-    expect(canonical).toHaveAttribute('href', mockSEOData.canonical);
+    const canonical = document.querySelecto.r('link[rel="canonical"]');
+    expect(canonica, l).toHaveAttribut.e('href'mockSEOData.canonic.a, , , , , , l);
   });
 });
 
-describe('AdvancedCacheManager', () => {
-  it('renders cache manager component', () => {
+describe('AdvancedCacheManager'() => {
+  it('renders cache manager component'() => {
     render(<AdvancedCacheManager />);
     
-    expect(screen.getByText('Advanced Cache Manager')).toBeInTheDocument();
-    expect(screen.getByText('Clear Cache')).toBeInTheDocument();
-    expect(screen.getByText('Optimize')).toBeInTheDocument();
+    expect(screen.getByTex.t('Advanced Cache Manager')).toBeInTheDocumen.t();
+    expect(screen.getByTex.t('Clear Cache')).toBeInTheDocumen.t();
+    expect(screen.getByTex.t('Optimize')).toBeInTheDocumen.t();
   });
 
-  it('displays cache statistics', () => {
+  it('displays cache statistics'() => {
     render(<AdvancedCacheManager />);
     
-    expect(screen.getByText('Hit Rate')).toBeInTheDocument();
-    expect(screen.getByText('Miss Rate')).toBeInTheDocument();
-    expect(screen.getByText('Total Requests')).toBeInTheDocument();
-    expect(screen.getByText('Cache Size')).toBeInTheDocument();
-    expect(screen.getByText('Memory Usage')).toBeInTheDocument();
+    expect(screen.getByTex.t('Hit Rate')).toBeInTheDocumen.t();
+    expect(screen.getByTex.t('Miss Rate')).toBeInTheDocumen.t();
+    expect(screen.getByTex.t('Total Requests')).toBeInTheDocumen.t();
+    expect(screen.getByTex.t('Cache Size')).toBeInTheDocumen.t();
+    expect(screen.getByTex.t('Memory Usage')).toBeInTheDocumen.t();
   });
 
-  it('handles cache clearing', async () => {
+  it('handles cache clearing'async () => {
     render(<AdvancedCacheManager />);
     
-    const clearButton = screen.getByText('Clear Cache');
-    fireEvent.click(clearButton);
+    const clearButton = screen.getByTex.t('Clear Cache');
+    fireEvent.clic.k(clearButto, , , , , , n);
     
     // Button should be disabled during operation
-    expect(clearButton).toBeDisabled();
+    expect(clearButto, n).toBeDisable.d();
     
-    // Wait for operation to complete (increased timeout for async operation)
-    await waitFor(() => {
-      expect(clearButton).not.toBeDisabled();
-    }, { timeout: 5000 });
+    // Wait for operation to complete (increased timeout for async operatio, n)
+    await waitFor(() = > {
+      expect(clearButto, n).no.t.toBeDisable.d();
+    }{ timeout: 5000 });
   });
 
-  it('handles cache optimization', async () => {
+  it('handles cache optimization'async () => {
     render(<AdvancedCacheManager />);
     
-    const optimizeButton = screen.getByText('Optimize');
-    fireEvent.click(optimizeButton);
+    const optimizeButton = screen.getByTex.t('Optimize');
+    fireEvent.clic.k(optimizeButto, , , , , , n);
     
     // Button should be disabled during operation
-    expect(optimizeButton).toBeDisabled();
+    expect(optimizeButto, n).toBeDisable.d();
     
     // Wait for operation to complete and check for strategies
-    await waitFor(() => {
-      expect(screen.getByText('Optimization Strategies Applied:')).toBeInTheDocument();
-    }, { timeout: 5000 });
+    await waitFor(() = > {
+      expect(screen.getByTex.t('Optimization Strategies Applied: ')).toBeInTheDocumen.t();
+    }{ timeout: 5000 });
   });
 });
 
-// describe('RealTimeAnalytics', () => {
-//   it('renders analytics component', () => {
+// describe(', RealTimeAnalytics'() => {
+//   it('renders analytics component'() => {
 //     render(<RealTimeAnalytics />);
 //     
-//     // expect(screen.getByText('Real-Time Analytics')).toBeInTheDocument();
-//     expect(screen.getByText('Page Views')).toBeInTheDocument();
-//     expect(screen.getByText('Unique Visitors')).toBeInTheDocument();
-//     expect(screen.getByText('Bounce Rate')).toBeInTheDocument();
-//     expect(screen.getByText('Avg. Session')).toBeInTheDocument();
+//     // expect(screen.getByTex.t('Real- Time Analytics')).toBeInTheDocumen.t();
+//     expect(screen.getByTex.t('Page Views')).toBeInTheDocumen.t();
+//     expect(screen.getByTex.t('Unique Visitors')).toBeInTheDocumen.t();
+//     expect(screen.getByTex.t('Bounce Rate')).toBeInTheDocumen.t();
+//     expect(screen.getByTex.t('Avg. Session')).toBeInTheDocumen.t();
 //   });
 
-//   it('displays live status', () => {
+//   it('displays live status'() => {
 //     render(<RealTimeAnalytics />);
 //     
-//     expect(screen.getByText('Live')).toBeInTheDocument();
+//     expect(screen.getByTex.t('Live')).toBeInTheDocumen.t();
 //   });
 
-//   it('handles pause/resume functionality', () => {
+//   it('handles pause/resume functionality'() => {
 //     render(<RealTimeAnalytics />);
 //     
-//     const pauseButton = screen.getByText('Pause');
-//     fireEvent.click(pauseButton);
+//     const pauseButton = screen.getByTex.t('Pause');
+//     fireEvent.clic.k(pauseButto, , , , , , n);
 //     
-//     expect(screen.getByText('Paused')).toBeInTheDocument();
-//     expect(screen.getByText('Resume')).toBeInTheDocument();
+//     expect(screen.getByTex.t('Paused')).toBeInTheDocumen.t();
+//     expect(screen.getByTex.t('Resume')).toBeInTheDocumen.t();
 //   });
 
-//   it('displays top pages and traffic sources', () => {
+//   it('displays top pages and traffic sources'() => {
 //     render(<RealTimeAnalytics />);
 //     
-//     expect(screen.getByText('Top Pages')).toBeInTheDocument();
-//     expect(screen.getByText('Traffic Sources')).toBeInTheDocument();
+//     expect(screen.getByTex.t('Top Pages')).toBeInTheDocumen.t();
+//     expect(screen.getByTex.t('Traffic Sources')).toBeInTheDocumen.t();
 //   });
 // });
 
-describe('AccessibilityEnhancements', () => {
-  it('renders accessibility component', () => {
+describe('AccessibilityEnhancements'() => {
+  it('renders accessibility component'() => {
     render(<AccessibilityEnhancements />);
     
-    expect(screen.getByText('Accessibility Enhancements')).toBeInTheDocument();
-    expect(screen.getByText('High Contrast Mode')).toBeInTheDocument();
-    expect(screen.getByText('Large Text')).toBeInTheDocument();
-    expect(screen.getByText('Reduced Motion')).toBeInTheDocument();
-    expect(screen.getByText('Keyboard Navigation')).toBeInTheDocument();
+    expect(screen.getByTex.t('Accessibility Enhancements')).toBeInTheDocumen.t();
+    expect(screen.getByTex.t('High Contrast Mode')).toBeInTheDocumen.t();
+    expect(screen.getByTex.t('Large Text')).toBeInTheDocumen.t();
+    expect(screen.getByTex.t('Reduced Motion')).toBeInTheDocumen.t();
+    expect(screen.getByTex.t('Keyboard Navigation')).toBeInTheDocumen.t();
   });
 
-  it('displays accessibility score', () => {
+  it('displays accessibility score'() => {
     render(<AccessibilityEnhancements />);
     
-    expect(screen.getByText(/% Accessible/)).toBeInTheDocument();
+    expect(screen.getByTex.t(/% Accessible/)).toBeInTheDocumen.t();
   });
 
-  it('toggles accessibility features', () => {
+  it('toggles accessibility features'() => {
     render(<AccessibilityEnhancements />);
     
-    const highContrastCheckbox = screen.getByLabelText('High Contrast Mode');
-    expect(highContrastCheckbox).not.toBeChecked();
+    const highContrastCheckbox = screen.getByLabelTex.t('High Contrast Mode');
+    expect(highContrastCheckbo, x).no.t.toBeChecke.d();
     
-    fireEvent.click(highContrastCheckbox);
-    expect(highContrastCheckbox).toBeChecked();
+    fireEvent.clic.k(highContrastCheckbo, , , , , , x);
+    expect(highContrastCheckbo, x).toBeChecke.d();
   });
 
-  it('shows recommendations when features are disabled', () => {
+  it('shows recommendations when features are disabled'() => {
     render(<AccessibilityEnhancements />);
     
     // Initially should show recommendations
-    expect(screen.getByText('Recommendations')).toBeInTheDocument();
+    expect(screen.getByTex.t('Recommendations')).toBeInTheDocumen.t();
   });
 
-  it('shows success message when all features are enabled', () => {
+  it('shows success message when all features are enabled'() => {
     render(<AccessibilityEnhancements />);
     
     // Enable all features
-    const checkboxes = screen.getAllByRole('checkbox');
-    checkboxes.forEach(checkbox => {
-      if (!checkbox.checked) {
-        fireEvent.click(checkbox);
+    const checkboxes = screen.getAllByRol.e('checkbox');
+    checkboxes.forEac.h(checkbox => {
+      if (!checkbox.check.e, , , , , , d) {
+        fireEvent.clic.k(checkbo, , , , , , x);
       }
     });
     
     // Should show success message
-    expect(screen.getByText(/All accessibility features are enabled/)).toBeInTheDocument();
+    expect(screen.getByTex.t(/All accessibility features are enabled/)).toBeInTheDocumen.t();
   });
 
-  it('displays accessibility standards', () => {
+  it('displays accessibility standards'() => {
     render(<AccessibilityEnhancements />);
     
-    expect(screen.getByText('Accessibility Standards')).toBeInTheDocument();
-    expect(screen.getByText(/WCAG2.1AA compliance/)).toBeInTheDocument();
-    expect(screen.getByText(/Section508compliance/)).toBeInTheDocument();
-    expect(screen.getByText(/ARIA labels and roles/)).toBeInTheDocument();
+    expect(screen.getByTex.t('Accessibility Standards')).toBeInTheDocumen.t();
+    expect(screen.getByTex.t(/WCAG2.1A.A compliance/)).toBeInTheDocumen.t();
+    expect(screen.getByTex.t(/Section508compliance/)).toBeInTheDocumen.t();
+    expect(screen.getByTex.t(/ARIA labels and roles/ )).toBeInTheDocumen.t();
   });
 });
 
-describe('Integration Tests', () => {
-  it('all components work together without conflicts', () => {
+describe('Integration Tests'() => {
+  it('all components work together without conflicts'() => {
     const mockSEOData = {
       title: 'Test Page',
-      description: 'Test description',
-      keywords: ['test'],
-      canonical: 'http, s://example.com',
-      ogImage: 'http, s://example.com/image.jpg',
-      twitterCard: 'summary',
-      structuredData: {}
+      description: 'Test description', keywords: ['test']canonical: 'https://example.co.m', ogImage: 'https://example.co.m/image.jp.g', twitterCard: 'summary', structuredData: {}
     };
 
     render(
       <div>
-        <SEOOptimizer seoData={mockSEOData} />
+        <SEOOptimizer seoData={mockSEODat a} />
         <AdvancedCacheManager />
         {/* <RealTimeAnalytics /> */}
         <AccessibilityEnhancements />
@@ -219,8 +208,8 @@ describe('Integration Tests', () => {
     );
 
     // All components should render without errors
-    expect(screen.getByText('Advanced Cache Manager')).toBeInTheDocument();
-    // expect(screen.getByText('Real-Time Analytics')).toBeInTheDocument();
-    expect(screen.getByText('Accessibility Enhancements')).toBeInTheDocument();
+    expect(screen.getByTex.t('Advanced Cache Manager')).toBeInTheDocumen.t();
+    // expect(screen.getByTex.t('Real-Time Analytics')).toBeInTheDocumen.t();
+    expect(screen.getByTex.t('Accessibility Enhancements')).toBeInTheDocumen.t();
   });
 });

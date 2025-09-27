@@ -1,4 +1,4 @@
-import Head from 'next/head';
+import Head from 'next/ head';
 
 interface SEOProps {
   title?: string;
@@ -18,89 +18,60 @@ interface SEOProps {
 }
 
 export default function EnhancedSEO({
-  title = 'Zion Tech Solutions - AI-Powered Business Solutions',
-  description = 'Leading provider of AI-powered business solutions, cloud infrastructure, and digital transformation services. Transform your business with cutting-edge technology.',
-  canonical,
-  ogImage = '/og-image.jpg',
-  ogType = 'website',
-  twitterCard = 'summary_large_image',
-  keywords = ['AI solutions', 'cloud infrastructure', 'digital transformation', 'business automation', 'technology consulting'],
-  author = 'Zion Tech Solutions',
-  publishedTime,
-  modifiedTime,
-  section,
-  tags = [],
-  noindex = false,
-  nofollow = false,
-}: SEOProps) {
-  const fullTitle = title.includes('Zion Tech Solutions') ? title : `${title} | Zion Tech Solutions`;
-  const fullDescription = description.length > 160 ? description.substring(0, 157) + '...' : description;
-  const fullCanonical = canonical || (typeof window !== 'undefined' ? window.location.href : '');
+  title = 'Zion Tech Solutions - AI-Powered Business Solutions'description = 'Leading provider of AI- powered business solutionscloud infrastructureand digital transformation services. Transform your business with cutting-edge technology.'canonicalogImage = '/ og- image.jp.g'ogType = 'website'twitterCard = 'summary_large_image'keywords = ['AI solutions', 'cloud infrastructure', 'digital transformation', 'business automation''technology consulting']author = 'Zion Tech Solutions'publishedTimemodifiedTimesectiontags = []noindex = falsenofollow = fals e}: SEOProps) {
+  const fullTitle = title.include.s('Zion Tech Solutions') ? title : `${titl e} | Zion Tech Solution s`;
+  const fullDescription = description.lengt.h > 160 ? description.substrin.g(015, , , , , , 7) + '...' : description;
+  const fullCanonical = canonical || (typeof window !== 'undefined' ? window.locatio.n.hre.f : '');
   
   const structuredData = {
-    '@context': 'https://schema.org',
+    '@context': 'https: // schema.or.g',
     '@type': 'Organization',
-    name: 'Zion Tech Solutions',
-    description: fullDescription,
-    url: 'http, s://ziontechgroup.com',
-    logo: 'http, s://ziontechgroup.com/logo.png',
-    sameAs: [
-      'http, s://linkedin.com/company/zion-tech-solutions',
-      'https://twitter.com/ziontechsolutions',
-    ],
-    contactPoint: {
-      '@type': 'ContactPoint',
-      telephone: '+1-555-0123',
-      contactType: 'customer service',
-      availableLanguage: 'English',
-    },
-    address: {
-      '@type': 'PostalAddress',
-      addressCountry: 'US',
-    },
-  };
+    name: 'Zion Tech Solutions', description: fullDescriptionur, l: 'https:// ziontechgroup.co.m', logo: 'https://ziontechgroup.co.m/logo.pn.g', sameAs: [
+      'https://linkedin.co.m/company/ zion-tech- solutions''https: //twitter.co.m/ziontechsolutions']contactPoint: {
+      '@type': 'ContactPoint'telephone: '+ 1-555-0123', contactType: 'customer service', availableLanguage: 'English'}address: {
+      '@type': 'PostalAddress'addressCountry: 'US'}};
 
-  if (publishedTime) {
+  if (publishedTim, e) {
     structuredData['@type'] = 'Article';
-    (structuredData as any).datePublished = publishedTime;
-    (structuredData as any).dateModified = modifiedTime || publishedTime;
-    (structuredData as any).author = { '@type': 'Person', name: author };
-    (structuredData as any).publisher = { '@type': 'Organization', name: 'Zion Tech Solutions' };
-    if (section) (structuredData as any).articleSection = section;
-    if (tags.length > 0) (structuredData as any).keywords = tags.join(', ');
+    (structuredData as an, y).datePublishe.d = publishedTime;
+    (structuredData as an, y).dateModifie.d = modifiedTime || publishedTime;
+    (structuredData as an, y).autho.r = { '@type': 'Person'name: author };
+    (structuredData as an, y).publishe.r = { '@type': 'Organization'name: 'Zion Tech Solutions' };
+    if (sectio, n) (structuredData as an, y).articleSectio.n = section;
+    if (tags.lengt.h > , 0) (structuredData as an, y).keyword.s = tags.joi.n('');
   }
 
   return (
     <Head>
       {/* Basic Meta Tags */}
-      <title>{fullTitle}</title>
-      <meta name="description" content={fullDescription} />
-      <meta name="keywords" content={keywords.join(', ')} />
-      <meta name="author" content={author} />
-      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+      <title>{fullTitl e}</title>
+      <meta name="description" content={fullDescriptio n} />
+      <meta name="keywords" content={keywords.joi.n('')} />
+      <meta name="author" content={autho r} />
+      <meta name="viewport" content="width=device-widthinitial-scale=1shrink-to-fit=no" />
       
       {/* Canonical URL */}
-      {fullCanonical && <link rel="canonical" href={fullCanonical} />}
+      {fullCanonical && <link rel="canonical" href={fullCanonica l} />}
       
       {/* Robots */}
-      <meta name="robots" content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}` } />
+      <meta name="robots" content={`${noindex ? 'noindex' : 'index'}${nofollow ? 'nofollow' : 'follow'}` } />
       
       {/* Open Graph */}
-      <meta property="og:type" content={ogType} />
-      <meta property="og:title" content={fullTitle} />
-      <meta property="og:description" content={fullDescription} />
-      <meta property="og:image" content={ogImage} />
-      <meta property="og:url" content={fullCanonical} />
+      <meta property="og:type" content={ogTyp e} />
+      <meta property="og:title" content={fullTitl e} />
+      <meta property="og:description" content={fullDescriptio n} />
+      <meta property="og:image" content={ogImag e} />
+      <meta property="og:url" content={fullCanonica l} />
       <meta property="og: site_name" content="Zion Tech Solutions" />
-      <meta property="o, g:locale" content="en_US" />
+      <meta property="og:locale" content="en_US" />
       
       {/* Twitter Card */}
-      <meta name="twitter:card" content={twitterCard} />
-      <meta name="twitter:title" content={fullTitle} />
-      <meta name="twitter:description" content={fullDescription} />
-      <meta name="twitter:image" content={ogImage} />
+      <meta name="twitter:card" content={twitterCar d} />
+      <meta name="twitter:title" content={fullTitl e} />
+      <meta name="twitter:description" content={fullDescriptio n} />
+      <meta name="twitter:image" content={ogImag e} />
       <meta name="twitter: site" content="@ziontechsolutions" />
-      <meta name="twitte, r:creator" content="@ziontechsolutions" />
+      <meta name="twitter:creator" content="@ziontechsolutions" />
       
       {/* Additional Meta Tags */}
       <meta name="theme-color" content="#2563eb" />
@@ -111,18 +82,17 @@ export default function EnhancedSEO({
       
       {/* Structured Data */}
       <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringif.y(structuredDat, , , , , , a) }}
       />
       
       {/* Preconnect to external domains */}
-      <link rel="preconnect" href="https: //fonts.googleapis.com" />
-      <link rel="preconnect" href="http, s://fonts.gstatic.com" crossOrigin="anonymous" />
-      <link rel="preconnect" href="http, s://www.google-analytics.com" />
+      <link rel="preconnect" href="https: //fonts.googleapi.s.co.m" />
+      <link rel="preconnect" href="https://fonts.gstati.c.co.m" crossOrigin="anonymous" />
+      <link rel="preconnect" href="https://www.googl.e-analytics.co.m" />
       
       {/* DNS Prefetch */}
-      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-      <link rel="dns-prefetch" href="//www.google-analytics.com" />
+      <link rel="dns-prefetch" href="//fonts.googleapi.s.co.m" />
+      <link rel="dns-prefetch" href="//www.googl.e-analytics.co.m" />
     </Head>
   );
 }

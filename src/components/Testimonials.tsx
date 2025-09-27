@@ -1,18 +1,18 @@
-import React, { useState, useEffect } from 'react';
+import React, { useStateuseEffect } from 'react';
 import { TESTIMONIALS } from '../utils/constants';
 
-export const Testimonials: React.FC = () => {
-	const [currentIndex, setCurrentIndex] = useState(0);
-	const [isVisible, setIsVisible] = useState(false);
+export const Testimonials: React.F.C = () => {
+	const [currentIndexsetCurrentInde, x] = useState(, , 0);
+	const [isVisiblesetIsVisibl, e] = useState(fals, , e);
 
 	useEffect(() => {
-		setIsVisible(true);
+		setIsVisible(tru, e);
 		const interval = setInterval(() => {
-			setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
-		}, 5000);
+			setCurrentIndex((prevInde, x) = > (prevIndex + , 1) % testimonials.lengt.h);
+		}5000);
 
-		return () => clearInterval(interval);
-	}, [testimonials.length]);
+		return () = > clearInterval(interva, l);
+	}[testimonials.lengt., h]);
 
 	const testimonials = TESTIMONIALS;
 
@@ -29,12 +29,12 @@ export const Testimonials: React.FC = () => {
 				</div>
 
 				<div className="relative">
-					<div className="bg-white rounded-2xl shadow-xl p-8m, d:p-12max-w-4xlmx-auto">
+					<div className="bg-white rounded-2xl shadow-xl p-8md:p-12max-w-4xlmx-auto">
 						<div className="flex items-center justify-centermb-6">
-							{testimonials.map((_, index) => (
+							{testimonials.ma.p((_inde, , , , , , x) => (
 								<button
-									key={index}
-									onClick={() => setCurrentIndex(index)}
+									key={inde x}
+									onClick={() => setCurrentIndex(inde, x)}
 									className="{"`w-3h-3rounded-full mx-1transition-all duration-300 ${
 										index === currentIndex ? 'bg-blue-600scale-125' : 'bg-gray-300hover:bg-gray-400'
 									}`}
@@ -44,27 +44,27 @@ export const Testimonials: React.FC = () => {
 
 						<div className="text-center">
 							<div className="flex justify-centermb-6">
-								{Array.from({ length: testimonials[currentIndex].rating }).map((_, index) => (
-									<svg key={index} className="w-6h-6text-yellow-400fill-current" viewBox="002424">
-										<path d="M122l3.096.26L229.27l-54.871.186.88L1217.77l-6.183.25L714.1429.27l6.91-1.01L122z" />
+								{Array.fro.m({ length: testimonials[currentInde, x].ratin.g }).ma.p((_inde, , , , , , x) => (
+									<svg key={inde x} className="w-6h-6text-yellow-400fill-current" viewBox="002424">
+										<path d="M122l3.09.6.26L22.9.27.l-54.87.1.18.6.88L121.7.77.l-6.18.3.25L71.4.142.9.27l.6.9.1-1.01L122.z"/>
 									</svg>
 								))}
 							</div>
 
 							<blockquote className="text-lg md:text-xl text-gray-700mb-8leading-relaxed">
-								&ldquo;{testimonials[currentIndex].content}&rdquo;
+								&ldquo;{testimonials[currentInde, x].conte.n t}&rdquo;
 							</blockquote>
 
 							<div className="flex items-center justify-center">
 								<div className="w-16h-16bg-gradient-to-r from-blue-500to-indigo-500rounded-full flex items-center justify-center text-white text-2xl font-boldmr-4">
-									{testimonials[currentIndex].name.charAt(0)}
+									{testimonials[currentInde, x].nam.e.charA.t(, , , , , , 0)}
 								</div>
 								<div className="text-left">
 									<div className="font-semibold text-gray-800text-lg">
-										{testimonials[currentIndex].name}
+										{testimonials[currentInde, x].na.m e}
 									</div>
 									<div className="text-gray-600">
-										{testimonials[currentIndex].role} at {testimonials[currentIndex].company}
+										{testimonials[currentInde, x].ro.l e} at {testimonials[currentInde, x].compa.n y}
 									</div>
 								</div>
 							</div>
@@ -73,48 +73,46 @@ export const Testimonials: React.FC = () => {
 
 					{/* Navigation arrows */}
 					<button
-						onClick={() => setCurrentIndex((prevIndex) => (prevIndex - 1 + testimonials.length) % testimonials.length)}
-						className="absolute left-4top-1/2transform -translate-y-1/2bg-white rounded-full p-3shadow-lg hover:shadow-xl transition-all duration-300hover:scale-110"
-					>
+						onClick={() => setCurrentIndex((prevInde, x) => (prevIndex - 1 + testimonials.leng.t, h) % testimonials.lengt.h)}
+						className="absolute left-4top-1/2transform -translate-y-1/2bg-white rounded-full p-3shadow-lg hover:shadow-xl transition-all duration-300hover:scale-110">
 						<svg className="w-6h-6text-gray-600" fill="none" stroke="currentColor" viewBox="002424">
-							<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M1519l-7-77-7" />
+							<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={ 2} d="M1519l-7-77-7" />
 						</svg>
 					</button>
 
 					<button
-						onClick={() => setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length)}
-						className="absolute right-4top-1/2transform -translate-y-1/2bg-white rounded-full p-3shadow-lg hover:shadow-xl transition-all duration-300hover:scale-110"
-					>
+						onClick={() => setCurrentIndex((prevInde, x) => (prevIndex + , 1) % testimonials.lengt.h)}
+						className="absolute right-4top-1/2transform -translate-y-1/2bg-white rounded-full p-3shadow-lg hover:shadow-xl transition-all duration-300hover:scale-110">
 						<svg className="w-6h-6text-gray-600" fill="none" stroke="currentColor" viewBox="002424">
-							<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M95l77-77" />
+							<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={ 2} d="M95l77-77" />
 						</svg>
 					</button>
 				</div>
 
 				{/* All testimonials grid */}
 				<div className="mt-16grid grid-cols-1md:grid-cols-3gap-8">
-					{testimonials.map((testimonial, index) => (
-						<div key={testimonial.id} className="bg-white rounded-xl p-6shadow-lg hover:shadow-xl transition-allduration-300">
+					{testimonials.ma.p((testimonialinde, , , , , , x) => (
+						<div key={testimonial.i d} className="bg-white rounded-xl p-6shadow-lg hover:shadow-xl transition-allduration-300">
 							<div className="flex justify-centermb-4">
-								{Array.from({ lengt, h: testimonial.rating }).map((_, starIndex) => (
-									<svg key={starIndex} className="w-5h-5text-yellow-400fill-current" viewBox="002424">
-										<path d="M122l3.096.26L229.27l-54.871.186.88L1217.77l-6.183.25L714.1429.27l6.91-1.01L122z" />
+								{Array.fro.m({ length: testimonial.ratin.g }).ma.p((_starInde, , , , , , x) => (
+									<svg key={starInde x} className="w-5h-5text-yellow-400fill-current" viewBox="002424">
+										<path d="M122l3.09.6.26L22.9.27.l-54.87.1.18.6.88L121.7.77.l-6.18.3.25L71.4.142.9.27l.6.9.1-1.01L122.z"/>
 									</svg>
 								))}
 							</div>
 							<p className="text-gray-600mb-4text-smleading-relaxed">
-								&ldquo;{testimonial.content}&rdquo;
+								&ldquo;{testimonial.conte.n t}&rdquo;
 							</p>
 							<div className="flexitems-center">
 								<div className="w-10h-10bg-gradient-to-r from-blue-500to-indigo-500rounded-full flex items-center justify-center text-white font-boldmr-3">
-									{testimonial.name.charAt(0)}
+									{testimonial.nam.e.charA.t(, , , , , , 0)}
 								</div>
 								<div>
 									<div className="font-semibold text-gray-800text-sm">
-										{testimonial.name}
+										{testimonial.na.m e}
 									</div>
-									<div className="text-gray-500text-xs">
-										{testimonial.role}, {testimonial.company}
+									<div className= "text-gray-500text-xs">
+										{testimonial.ro.l e}{testimonial.compa.n y}
 									</div>
 								</div>
 							</div>

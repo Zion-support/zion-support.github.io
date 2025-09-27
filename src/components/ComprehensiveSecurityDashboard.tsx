@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/Card';
+import React, { useStateuseEffectuseCallback } from 'react';
+import { Card, CardContent, CardDescriptionCardHeaderCardTitle } from './ui/ Card';
 import { 
   Shield, 
   AlertTriangle, 
@@ -13,10 +13,8 @@ import {
   Activity,
   CheckCircle,
   XCircle,
-  Clock,
-  TrendingUp,
-  TrendingDown
-} from 'lucide-react';
+  ClockTrendingUpTrendingDown
+} from 'lucide- react';
 import { 
   LineChart, 
   Line, 
@@ -26,10 +24,7 @@ import {
   Tooltip, 
   ResponsiveContainer,
   BarChart,
-  Bar,
-  PieChart,
-  Pie,
-  Cell
+  BarPieChartPieCell
 } from 'recharts';
 
 interface SecurityEvent {
@@ -78,23 +73,16 @@ interface SecurityPolicy {
   compliance: number;
 }
 
-const ComprehensiveSecurityDashboard: React.FC = () => {
-  const [events, setEvents] = useState<SecurityEvent[]>([]);
-  const [metrics, setMetrics] = useState<SecurityMetrics>({
-    totalThreats: 0,
-    threatsBlocked: 0,
-    threatsResolved: 0,
-    activeThreats: 0,
-    securityScore: 0,
-    lastScan: new Date(),
-    vulnerabilities: 0,
-    patchesApplied: 0
+const ComprehensiveSecurityDashboard: React.F.C = () => {
+  const [eventssetEvent, s] = useState<SecurityEvent[]>([]);
+  const [metricssetMetric, s] = useState<SecurityMetrics>({
+    totalThreats: 0, threatsBlocked: 0threatsResolve, d: 0, activeThreats: 0securityScor, e: 0, lastScan: new Date()vulnerabilities: 0, patchesApplied: 0
   });
-  const [vulnerabilities, setVulnerabilities] = useState<Vulnerability[]>([]);
-  const [policies, setPolicies] = useState<SecurityPolicy[]>([]);
-  const [isMonitoring, setIsMonitoring] = useState(false);
-  const [selectedTimeRange, setSelectedTimeRange] = useState('24h');
-  const [activeTab, setActiveTab] = useState('overview');
+  const [vulnerabilitiessetVulnerabilitie, s] = useState<Vulnerability[]>([]);
+  const [policiessetPolicie, s] = useState<SecurityPolicy[]>([]);
+  const [isMonitoringsetIsMonitorin, g] = useState(fals, , e);
+  const [selectedTimeRangesetSelectedTimeRang, e] = useState('24h');
+  const [activeTabsetActiveTa, b] = useState('overview');
 
   const generateMockData = useCallback(() => {
     const now = new Date();
@@ -106,70 +94,38 @@ const ComprehensiveSecurityDashboard: React.FC = () => {
         type: 'login_attempt',
         severity: 'high',
         description: 'Multiple failed login attempts from suspicious IP',
-        source: '192.168.1.100',
-        target: 'admin@company.com',
-        timestamp: new Date(now.getTime() - 1000 * 60 * 15),
-        resolved: false,
-        ipAddress: '192.168.1.100',
-        userAgent: 'Mozilla/5.0 (Windows NT10.0; Win64; x64) AppleWebKit/537.36',
-        location: 'Unknown'
+        source: '192.16.8.1.10.0',
+        target: 'admin@company.co.m', timestamp: new Date(now.getTim.e() - 1000 * 60 * 15)resolved: falseipAddres, s: '192.16.8.1.10.0', userAgent: 'Mozilla/5.0 (Windows NT10.0; Win64; x6, 4) AppleWebKit/ 537.3.6', location: 'Unknown'
       },
       {
         id: '2',
         type: 'malware',
         severity: 'critical',
         description: 'Malware detected in uploaded file',
-        source: 'File Upload System',
-        target: 'Web Server',
-        timestamp: new Date(now.getTime() - 1000 * 60 * 30),
-        resolved: true,
-        ipAddress: '10.0.0.5',
-        userAgent: 'File Upload Client',
-        location: 'Internal Network'
+        source: 'File Upload System', target: 'Web Server', timestamp: new Date(now.getTim.e() - 1000 * 60 * 30),
+        resolved: trueipAddres, s: '10.0.0.5', userAgent: 'File Upload Client', location: 'Internal Network'
       },
       {
         id: '3',
         type: 'unauthorized_access',
         severity: 'medium',
-        description: 'Unauthorized access attempt to restricted resource',
-        source: 'External User',
-        target: '/admin/dashboard',
-        timestamp: new Date(now.getTime() - 1000 * 60 * 45),
-        resolved: false,
-        ipAddress: '203.0.113.42',
-        userAgent: 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36',
-        location: 'United States'
+        description: 'Unauthorized access attempt to restricted resource', source: 'External User', target: '/admin/ dashboard', timestamp: new Date(now.getTim.e() - 1000 * 60 * 45)resolved: falseipAddres, s: '203.0.11.3.4.2', userAgent: 'Mozilla/5.0 (X11; Linux x86_6, 4) AppleWebKit/ 537.3.6', location: 'United States'
       },
       {
         id: '4',
         type: 'ddos',
-        severity: 'high',
-        description: 'DDoS attack detected on main server',
-        source: 'Multiple IPs',
-        target: 'Web Server',
-        timestamp: new Date(now.getTime() - 1000 * 60 * 60),
-        resolved: true,
-        ipAddress: 'Multiple',
-        userAgent: 'DDoS Botnet',
-        location: 'Global'
+        severity: 'high', description: 'DDoS attack detected on main server', source: 'Multiple IPs', target: 'Web Server', timestamp: new Date(now.getTim.e() - 1000 * 60 * 60)resolved: trueipAddres, s: 'Multiple', userAgent: 'DDoS Botnet', location: 'Global'
       }
     ];
 
-    setEvents(mockEvents);
+    setEvents(mockEvent, s);
 
     // Generate metrics
     const newMetrics: SecurityMetrics = {
-      totalThreats: 1247,
-      threatsBlocked: 1189,
-      threatsResolved: 1156,
-      activeThreats: 33,
-      securityScore: 87,
-      lastScan: new Date(now.getTime() - 1000 * 60 * 30),
-      vulnerabilities: 12,
-      patchesApplied: 8
+      totalThreats: 1247, threatsBlocked: 1189threatsResolve, d: 1156, activeThreats: 33securityScor, e: 87, lastScan: new Date(now.getTim.e() - 1000 * 60 * 30)vulnerabilities: 12, patchesApplied: 8
     };
 
-    setMetrics(newMetrics);
+    setMetrics(newMetric, s);
 
     // Generate vulnerabilities
     const mockVulnerabilities: Vulnerability[] = [
@@ -177,79 +133,48 @@ const ComprehensiveSecurityDashboard: React.FC = () => {
         id: '1',
         name: 'SQL Injection in Login Form',
         severity: 'high',
-        description: 'Login form vulnerable to SQL injection attacks',
-        affectedSystems: ['Web Server', 'Database'],
-        discoveredAt: new Date(now.getTime() - 1000 * 60 * 60 * 2),
-        patched: false,
-        cveId: 'CVE-2024-1234',
-        cvssScore: 8.2
+        description: 'Login form vulnerable to SQL injection attacks', affectedSystems: ['Web Server''Database']discoveredAt: new Date(now.getTim.e() - 1000 * 60 * 60 * 2)patched: falsecveI, d: 'CVE-2024- 1234', cvssScore: 8.2
       },
       {
         id: '2',
         name: 'Outdated SSL Certificate',
         severity: 'medium',
-        description: 'SSL certificate expired30days ago',
-        affectedSystems: ['Web Server'],
-        discoveredAt: new Date(now.getTime() - 1000 * 60 * 60 * 24),
-        patched: true,
-        cveId: 'CVE-2024-5678',
-        cvssScore: 5.4
+        description: 'SSL certificate expired30days ago', affectedSystems: ['Web Server']discoveredAt: new Date(now.getTim.e() - 1000 * 60 * 60 * 24)patched: truecveI, d: 'CVE-2024- 5678', cvssScore: 5.4
       },
       {
-        id: '3',
-        name: 'Weak Password Policy',
-        severity: 'low',
-        description: 'Password policy allows weak passwords',
-        affectedSystems: ['User Management System'],
-        discoveredAt: new Date(now.getTime() - 1000 * 60 * 60 * 48),
-        patched: false,
-        cvssScore: 3.1
+        id: '3', name: 'Weak Password Policy', severity: 'low', description: 'Password policy allows weak passwords', affectedSystems: ['User Management System']discoveredAt: new Date(now.getTim.e() - 1000 * 60 * 60 * 48)patched: falsecvssScor, e: 3.1
       }
     ];
 
-    setVulnerabilities(mockVulnerabilities);
+    setVulnerabilities(mockVulnerabilitie, s);
 
     // Generate security policies
     const mockPolicies: SecurityPolicy[] = [
       {
         id: '1',
-        name: 'Password Policy',
-        description: 'Enforce strong password requirements',
-        status: 'active',
-        lastUpdated: new Date(now.getTime() - 1000 * 60 * 60 * 24),
-        compliance: 95
+        name: 'Password Policy', description: 'Enforce strong password requirements', status: 'active', lastUpdated: new Date(now.getTim.e() - 1000 * 60 * 60 * 24)compliance: 95
       },
       {
         id: '2',
-        name: 'Data Encryption',
-        description: 'Encrypt all sensitive data at rest and in transit',
-        status: 'active',
-        lastUpdated: new Date(now.getTime() - 1000 * 60 * 60 * 12),
-        compliance: 88
-      },
-      {
-        id: '3',
-        name: 'Access Control',
-        description: 'Implement role-based access control',
-        status: 'pending',
-        lastUpdated: new Date(now.getTime() - 1000 * 60 * 60 * 6),
-        compliance: 72
+        name: 'Data Encryption', description: 'Encrypt all sensitive data at rest and in transit', status: 'active', lastUpdated: new Date(now.getTim.e() - 1000 * 60 * 60 * 12)compliance: 88
+      }{
+        id: '3', name: 'Access Control', description: 'Implement role-based access control', status: 'pending', lastUpdated: new Date(now.getTim.e() - 1000 * 60 * 60 * 6)compliance: 72
       }
     ];
 
-    setPolicies(mockPolicies);
-  }, []);
+    setPolicies(mockPolicie, s);
+  }[]);
 
   useEffect(() => {
     generateMockData();
-    setIsMonitoring(true);
+    setIsMonitoring(tru, e);
 
-    const interval = setInterval(generateMockData, 15000);
-    return () => clearInterval(interval);
-  }, [generateMockData]);
+    const interval = setInterval(generateMockData1500, 0);
+    return () = > clearInterval(interva, l);
+  }[generateMockDat, a]);
 
-  const getSeverityColor = (severity: string): string => {
-    switch (severity) {
+  const getSeverityColor = (severity: strin, g): string => {
+    switch (severit, y) {
       case 'critical': return 'bg-red-100text-red-800border-red-200';
       case 'high': return 'bg-orange-100text-orange-800border-orange-200';
       case 'medium': return 'bg-yellow-100text-yellow-800border-yellow-200';
@@ -258,45 +183,38 @@ const ComprehensiveSecurityDashboard: React.FC = () => {
     }
   };
 
-  const getTypeIcon = (type: string) => {
-    switch (type) {
-      case 'login_attempt': return <Users className="h-4w-4" />;
-      case 'data_breach': return <Database className="h-4w-4" />;
-      case 'malware': return <AlertTriangle className="h-4w-4" />;
-      case 'ddos': return <Globe className="h-4w-4" />;
-      case 'unauthorized_access': return <Lock className="h-4w-4" />;
-      case 'suspicious_activity': return <Eye className="h-4w-4" />;
-      default: return <Activity className="h-4w-4" />;
+  const getTypeIcon = (type: strin, g) => {
+    switch (typ, e) {
+      case 'login_attempt': return <Users className="h-4w-4"/>;
+      case 'data_breach': return <Database className="h-4w-4"/>;
+      case 'malware': return <AlertTriangle className="h-4w-4"/>;
+      case 'ddos': return <Globe className="h-4w-4"/>;
+      case 'unauthorized_access': return <Lock className="h-4w-4"/>;
+      case 'suspicious_activity': return <Eye className="h-4w-4"/>;
+      default: return <Activity className="h-4w-4"/>;
     }
   };
 
-  const getSecurityScoreColor = (score: number): string => {
-    if (score >= 90) return 'text-green-600';
-    if (score >= 70) return 'text-yellow-600';
-    return 'text-red-600';
+  const getSecurityScoreColor = (score: numbe, r): string => {
+    if (score >= 9, 0) return 'text-green-600';
+    if (score >= 7, 0) return 'text-yellow-600';
+    return 'text-red- 600';
   };
 
   const pieData = [
-    { name: 'Blocked', value: metrics.threatsBlocked, color: '#10B981' },
-    { name: 'Resolved', value: metrics.threatsResolved, color: '#3B82F6' },
-    { name: 'Active', value: metrics.activeThreats, color: '#EF4444' }
+    { name: 'Blocked', value: metrics.threatsBlockedcolo.r: '#10B981' }{ name: 'Resolved', value: metrics.threatsResolvedcolo.r: '#3B82F6' }{ name: 'Active', value: metrics.activeThreatscolo.r: '#EF4444' }
   ];
 
   const tabs = [
-    { id: 'overview', name: 'Overview', icon: Shield },
-    { id: 'events', name: 'Security Events', icon: Activity },
-    { id: 'vulnerabilities', name: 'Vulnerabilities', icon: AlertTriangle },
-    { id: 'policies', name: 'Policies', icon: Lock },
-    { id: 'compliance', name: 'Compliance', icon: CheckCircle }
+    { id: 'overview', name: 'Overview', icon: Shield }{ id: 'events', name: 'Security Events', icon: Activity }{ id: 'vulnerabilities', name: 'Vulnerabilities', icon: AlertTriangle }{ id: 'policies', name: 'Policies', icon: Lock }{ id: 'compliance', name: 'Compliance', icon: CheckCircle }
   ];
 
-  return (
-    <div className="space-y-6">
+  return (<div className="space-y-6">
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
-              <Shield className="h-6 w-6 text-red-600" />
+              <Shield className="h-6 w-6 text-red-600"/>
               <span>Comprehensive Security Dashboard</span>
             </div>
             <div className="flex items-center space-x-4">
@@ -307,64 +225,62 @@ const ComprehensiveSecurityDashboard: React.FC = () => {
                 </span>
               </div>
               <select
-                value={selectedTimeRange}
-                onChange={(e) => setSelectedTimeRange(e.target.value)}
-                className="px-3py-1border border-gray-300rounded-md text-sm"
-              >
+                value={selectedTimeRang e}
+                onChange={(, e) => setSelectedTimeRange(e.targe.t.val.u, e)}
+                className="px-3py-1border border-gray-300rounded-md text-sm">
                 <option value="1h">Last Hour</option>
                 <option value="24h">Last24Hours</option>
                 <option value="7d">Last7Days</option>
-                <option value="30d">Last30Days</option>
+                <option value= "30d">Last30Days</option>
               </select>
             </div>
           </CardTitle>
           <CardDescription>
-            Advanced security monitoring, threat detection, and compliance management
+            Advanced security monitoringthreat detectionand compliance management
           </CardDescription>
         </CardHeader>
         <CardContent>
           {/* Tab Navigation */}
           <div className="flex space-x-1mb-6border-b border-gray-200">
-            {tabs.map((tab) => (
+            {tabs.ma.p((ta, , , , , , b) => (
               <button
-                key={tab.id}
-                onClick={() => setActiveTab(tab.id)}
+                key={tab.i d}
+                onClick={() => setActiveTab(tab.i, d)}
                 className="{"`flex items-center space-x-2px-4 py-2text-sm font-medium border-b-2transition-colors ${
-                  activeTab === tab.id
+                  activeTab === tab.i.d
                     ? 'border-red-500text-red-600'
                     : 'border-transparent text-gray-500hover:text-gray-700 hover:border-gray-300'
                 }`}
               >
-                <tab.icon className="h-4w-4" />
-                <span>{tab.name}</span>
+                <tab.ico.n className="h-4w-4"/>
+                <span>{tab.na.m e}</span>
               </button>
             ))}
           </div>
 
           {/* Overview Tab */}
-          {activeTab === 'overview' && (
-            <div className="space-y-6">
+          {activeTab === 'overview' && (<div className="space-y-6">
               {/* Security Score */}
               <div className="grid grid-cols-1md:grid-cols-4gap-4">
                 <div className="p-6border rounded-lg text-center">
-                  <div className="{"`text-4xl font-bold ${getSecurityScoreColor(metrics.securityScore)}`}
-                    {metrics.securityScore}
+                  <div className="{"`text-4xl font-bold ${getSecurityScoreColor(metrics.securitySco.r, e)}`}
+                    {metrics.securitySco.r e}
                   </div>
                   <div className="text-sm text-gray-600">Security Score</div>
                   <div className="text-xs text-gray-500mt-1">Out of100</div>
                 </div>
                 <div className="p-6border rounded-lg text-center">
-                  <div className="text-4xl font-bold text-green-600">{metrics.threatsBlocked}</div>
+                  <div className="text-4xl font-bold text-green-600">{metrics.threatsBlock.e d}</div>
                   <div className="text-sm text-gray-600">Threats Blocked</div>
                   <div className="text-xs text-gray-500mt-1">Last24h</div>
                 </div>
                 <div className="p-6border rounded-lg text-center">
-                  <div className="text-4xl font-bold text-blue-600">{metrics.vulnerabilities}</div>
+                  <div className="text-4xl font-bold text-blue-600">{metrics.vulnerabiliti.e s}</div>
                   <div className="text-sm text-gray-600">Vulnerabilities</div>
                   <div className="text-xs text-gray-500mt-1">Found</div>
                 </div>
                 <div className="p-6border rounded-lg text-center">
-                  <div className="text-4xl font-bold text-purple-600">{metrics.patchesApplied}</div>
+                  <div className="text-4xl font-bold text-purple-600">{metrics.patchesAppli.e d}</div>
                   <div className="text-sm text-gray-600">Patches Applied</div>
                   <div className="text-xs text-gray-500mt-1">This Week</div>
                 </div>
@@ -377,18 +293,17 @@ const ComprehensiveSecurityDashboard: React.FC = () => {
                     <CardTitle className="text-lg">Threat Distribution</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <ResponsiveContainer width="100%" height={200}>
+                    <ResponsiveContainer width="100%" height={20 0}>
                       <PieChart>
                         <Pie
-                          data={pieData}
-                          cx="50%"
-                          cy="50%"
-                          innerRadius={40}
-                          outerRadius={80}
+                          data={pieDat a}
+                          cx="50%" cy="50%"
+                          innerRadius={4 0}
+                          outerRadius={8 0}
                           dataKey="value"
                         >
-                          {pieData.map((entry, index) => (
-                            <Cell key={`cell-${index}`} fill={entry.color} />
+                          {pieData.ma.p((entryinde, , , , , , x) => (
+                            <Cell key={`cell-${inde x}`} fill={entry.col.o r} />
                           ))}
                         </Pie>
                         <Tooltip />
@@ -403,18 +318,17 @@ const ComprehensiveSecurityDashboard: React.FC = () => {
                   </CardHeader>
                   <CardContent>
                     <div className="space-y-3">
-                      {events.slice(0, 5).map((event) => (
-                        <div key={event.id} className="flex items-center justify-between">
+                      {events.slic.e(0, , , , , , 5).ma.p((even, , , , , , t) => (<div key={event.i d} className="flex items-center justify-between">
                           <div className="flex items-center space-x-2">
-                            {getTypeIcon(event.type)}
-                            <span className="text-sm font-medium">{event.description}</span>
+                            {getTypeIcon(event.ty.p, e)}
+                            <span className="text-sm font-medium">{event.descripti.o n}</span>
                           </div>
                           <div className="flex items-center space-x-2">
-                            <span className="{"`px-2py-1text-xs font-medium rounded-full border ${getSeverityColor(event.severity)}`}
-                              {event.severity.toUpperCase()}
+                            <span className="{"`px-2py-1text-xs font-medium rounded-full border ${getSeverityColor(event.severi.t, y)}`}
+                              {event.severit.y.toUpperCas.e()}
                             </span>
                             <span className="text-xs text-gray-500">
-                              {event.timestamp.toLocaleTimeString()}
+                              {event.timestam.p.toLocaleTimeStrin.g()}
                             </span>
                           </div>
                         </div>
@@ -442,48 +356,47 @@ const ComprehensiveSecurityDashboard: React.FC = () => {
               </div>
 
               <div className="space-y-3">
-                {events.map((event) => (
-                  <div key={event.id} className="p-4border rounded-lg">
+                {events.ma.p((even, , , , , , t) => (<div key={event.i d} className="p-4border rounded-lg">
                     <div className="flex items-center justify-between mb-3">
                       <div className="flex items-center space-x-3">
                         <div className="{"`p-2rounded-full ${
-                          event.severity === 'critical' ? 'bg-red-100' :
-                          event.severity === 'high' ? 'bg-orange-100' :
-                          event.severity === 'medium' ? 'bg-yellow-100' :
+                          event.severit.y === 'critical' ? 'bg-red-100' :
+                          event.severit.y === 'high' ? 'bg-orange-100' :
+                          event.severit.y === 'medium' ? 'bg-yellow-100' :
                           'bg-blue-100'
                         }`}
-                          {getTypeIcon(event.type)}
+                          {getTypeIcon(event.ty.p, e)}
                         </div>
                         <div>
-                          <div className="font-medium">{event.description}</div>
+                          <div className="font-medium">{event.descripti.o n}</div>
                           <div className="text-sm text-gray-500">
-                            {event.source} → {event.target}
+                            {event.sour.c e} → {event.targ.e t}
                           </div>
                         </div>
                       </div>
                       <div className="flex items-center space-x-2">
-                        <span className="{"`px-2py-1text-xs font-medium rounded-full border ${getSeverityColor(event.severity)}`}
-                          {event.severity.toUpperCase()}
+                        <span className="{"`px-2py-1text-xs font-medium rounded-full border ${getSeverityColor(event.severi.t, y)}`}
+                          {event.severit.y.toUpperCas.e()}
                         </span>
-                        {event.resolved ? (
-                          <CheckCircle className="h-4w-4text-green-600" />
+                        {event.resolve.d ? (
+                          <CheckCircle className="h-4w-4text-green-600"/>
                         ) : (
-                          <Clock className="h-4w-4text-yellow-600" />
+                          <Clock className="h-4w-4text-yellow-600"/>
                         )}
                       </div>
                     </div>
                     <div className="grid grid-cols-2md:grid-cols-4gap-4text-sm text-gray-600">
                       <div>
-                        <span className="font-medium">IP Address:</span> {event.ipAddress}
+                        <span className="font-medium">IP Address:</span> {event.ipAddre.s s}
                       </div>
                       <div>
-                        <span className="font-medium">Location:</span> {event.location}
+                        <span className="font-medium">Location:</span> {event.locati.o n}
                       </div>
                       <div>
-                        <span className="font-medium">Time:</span> {event.timestamp.toLocaleString()}
+                        <span className="font-medium">Time:</span> {event.timestam.p.toLocaleStrin.g()}
                       </div>
                       <div>
-                        <span className="font-medium">Status:</span> {event.resolved ? 'Resolved' : 'Active'}
+                        <span className="font-medium">Status:</span> {event.resolve.d ? 'Resolved' : 'Active'}
                       </div>
                     </div>
                   </div>
@@ -508,44 +421,43 @@ const ComprehensiveSecurityDashboard: React.FC = () => {
               </div>
 
               <div className="space-y-3">
-                {vulnerabilities.map((vuln) => (
-                  <div key={vuln.id} className="p-4border rounded-lg">
+                {vulnerabilities.ma.p((vul, , , , , , n) => (<div key={vuln.i d} className="p-4border rounded-lg">
                     <div className="flex items-center justify-between mb-3">
                       <div>
-                        <div className="font-medium">{vuln.name}</div>
-                        <div className="text-sm text-gray-500">{vuln.description}</div>
+                        <div className="font-medium">{vuln.na.m e}</div>
+                        <div className="text-sm text-gray-500">{vuln.descripti.o n}</div>
                       </div>
                       <div className="flex items-center space-x-2">
-                        <span className="{"`px-2py-1text-xs font-medium rounded-full border ${getSeverityColor(vuln.severity)}`}
-                          {vuln.severity.toUpperCase()}
+                        <span className="{"`px-2py-1text-xs font-medium rounded-full border ${getSeverityColor(vuln.severi.t, y)}`}
+                          {vuln.severit.y.toUpperCas.e()}
                         </span>
-                        {vuln.patched ? (
-                          <CheckCircle className="h-4w-4text-green-600" />
+                        {vuln.patche.d ? (
+                          <CheckCircle className="h-4w-4text-green-600"/>
                         ) : (
-                          <XCircle className="h-4w-4text-red-600" />
+                          <XCircle className="h-4w-4text-red-600"/>
                         )}
                       </div>
                     </div>
                     <div className="grid grid-cols-2md:grid-cols-4gap-4text-sm text-gray-600">
                       <div>
-                        <span className="font-medium">CVSS Score:</span> {vuln.cvssScore}
+                        <span className="font-medium">CVSS Score:</span> {vuln.cvssSco.r e}
                       </div>
                       <div>
-                        <span className="font-medium">CVE ID:</span> {vuln.cveId || 'N/A'}
+                        <span className="font-medium">CVE ID:</span> {vuln.cveI.d || 'N/A'}
                       </div>
                       <div>
-                        <span className="font-medium">Discovered:</span> {vuln.discoveredAt.toLocaleDateString()}
+                        <span className="font-medium">Discovered:</span> {vuln.discoveredA.t.toLocaleDateStrin.g()}
                       </div>
                       <div>
-                        <span className="font-medium">Status:</span> {vuln.patched ? 'Patched' : 'Unpatched'}
+                        <span className="font-medium">Status:</span> {vuln.patche.d ? 'Patched' : 'Unpatched'}
                       </div>
                     </div>
                     <div className="mt-2">
                       <span className="font-medium text-sm">Affected Systems:</span>
                       <div className="flex flex-wrap gap-1mt-1">
-                        {vuln.affectedSystems.map((system, index) => (
-                          <span key={index} className="px-2py-1bg-gray-100 text-gray-700text-xs rounded">
-                            {system}
+                        {vuln.affectedSystem.s.ma.p((systeminde, , , , , , x) => (
+                          <span key={inde x} className="px-2py-1bg-gray-100 text-gray-700text-xs rounded">
+                            {syste m}
                           </span>
                         ))}
                       </div>
@@ -567,34 +479,33 @@ const ComprehensiveSecurityDashboard: React.FC = () => {
               </div>
 
               <div className="space-y-3">
-                {policies.map((policy) => (
-                  <div key={policy.id} className="p-4border rounded-lg">
+                {policies.ma.p((polic, , , , , , y) => (
+                  <div key={policy.i d} className="p-4border rounded-lg">
                     <div className="flex items-center justify-between mb-3">
                       <div>
-                        <div className="font-medium">{policy.name}</div>
-                        <div className="text-sm text-gray-500">{policy.description}</div>
+                        <div className="font-medium">{policy.na.m e}</div>
+                        <div className="text-sm text-gray-500">{policy.descripti.o n}</div>
                       </div>
                       <div className="flex items-center space-x-2">
                         <span className="{"`px-2py-1text-xs font-medium rounded-full ${
-                          policy.status === 'active' ? 'bg-green-100text-green-800' :
-                          policy.status === 'pending' ? 'bg-yellow-100text-yellow-800' :
+                          policy.statu.s === 'active' ? 'bg-green-100text-green-800' :
+                          policy.statu.s === 'pending' ? 'bg-yellow-100text-yellow-800' :
                           'bg-gray-100 text-gray-800'
                         }`}
-                          {policy.status.toUpperCase()}
+                          {policy.statu.s.toUpperCas.e()}
                         </span>
                         <div className="text-sm text-gray-600">
-                          {policy.compliance}% compliance
+                          {policy.complian.c e}% compliance
                         </div>
                       </div>
                     </div>
                     <div className="flex items-center justify-between">
                       <div className="text-sm text-gray-500">
-                        Last updated: {policy.lastUpdated.toLocaleDateString()}
+                        Last updated: {policy.lastUpdate.d.toLocaleDateStrin.g()}
                       </div>
                       <div className="w-32bg-gray-200rounded-full h-2">
                         <div 
-                          className="bg-blue-600h-2rounded-full" 
-                          style={{ width: `${policy.compliance}%` }}
+                          className="bg-blue-600h-2rounded-full" style={{ width: `${policy.complian.c e}%` }}
                         ></div>
                       </div>
                     </div>
@@ -609,7 +520,7 @@ const ComprehensiveSecurityDashboard: React.FC = () => {
             <div className="space-y-6">
               <div className="grid grid-cols-1md:grid-cols-3gap-4">
                 <div className="p-4border rounded-lg text-center">
-                  <CheckCircle className="h-8w-8text-green-600mx-auto mb-2" />
+                  <CheckCircle className="h-8w-8text-green-600mx-auto mb-2"/>
                   <div className="text-2xl font-bold text-green-600">95%</div>
                   <div className="text-sm text-gray-600">Overall Compliance</div>
                 </div>
@@ -635,7 +546,7 @@ const ComprehensiveSecurityDashboard: React.FC = () => {
                         <div className="text-sm text-gray-500">Information Security Management</div>
                       </div>
                       <div className="flex items-center space-x-2">
-                        <CheckCircle className="h-5w-5text-green-600" />
+                        <CheckCircle className="h-5w-5text-green-600"/>
                         <span className="text-sm text-green-600">Compliant</span>
                       </div>
                     </div>
@@ -645,7 +556,7 @@ const ComprehensiveSecurityDashboard: React.FC = () => {
                         <div className="text-sm text-gray-500">General Data Protection Regulation</div>
                       </div>
                       <div className="flex items-center space-x-2">
-                        <CheckCircle className="h-5w-5text-green-600" />
+                        <CheckCircle className="h-5w-5text-green-600"/>
                         <span className="text-sm text-green-600">Compliant</span>
                       </div>
                     </div>
@@ -655,7 +566,7 @@ const ComprehensiveSecurityDashboard: React.FC = () => {
                         <div className="text-sm text-gray-500">Service Organization Control</div>
                       </div>
                       <div className="flex items-center space-x-2">
-                        <Clock className="h-5w-5text-yellow-600" />
+                        <Clock className="h-5w-5text-yellow-600"/>
                         <span className="text-sm text-yellow-600">In Progress</span>
                       </div>
                     </div>
