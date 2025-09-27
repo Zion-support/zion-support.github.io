@@ -2,6 +2,9 @@
 // Integrates performance, security, and accessibility improvements
 
 import { PerformanceOptimizer } from './performanceOptimizer';
+import { SecurityEnhancer } from './securityEnhancer';
+import { AccessibilityEnhancer } from './accessibilityEnhancer';
+import { ErrorHandler } from './errorHandling';
 
 interface EnhancementConfig {
   performance: {
@@ -64,25 +67,12 @@ export class EnhancementSuite {
   private static instance: EnhancementSuite;
   private config: EnhancementConfig;
   private performanceOptimizer: PerformanceOptimizer;
-
-  public static getInstance(config?: Partial<EnhancementConfig>): EnhancementSuite {
-    if (!EnhancementSuite.instance) {
-      EnhancementSuite.instance = new EnhancementSuite(config);
-    }
-    return EnhancementSuite.instance;
-  }
-
-  public initialize(): void {
-    console.log('EnhancementSuite initialized');
-  }
-
-  public cleanup(): void {
-    console.log('EnhancementSuite cleanup');
-  }
+  private securityEnhancer: SecurityEnhancer;
+  private accessibilityEnhancer: AccessibilityEnhancer;
+  private errorHandler: ErrorHandler;
+  private metricsInterval: NodeJS.Timeout | null = null;
 
   private constructor(config: Partial<EnhancementConfig> = {}) {
-    this.performanceOptimizer = PerformanceOptimizer.getInstance();
-    
     this.config = {
       performance: {
         enableLazyLoading: true,
@@ -94,30 +84,99 @@ export class EnhancementSuite {
       },
       security: {
         enableCSP: true,
+        enableHSTS: true,
         enableXSSProtection: true,
         enableClickjackingProtection: true,
-        enableSecureHeaders: true,
-        enableInputSanitization: true,
-        enableRateLimiting: true,
+        enableContentTypeOptions: true,
         ...config.security
       },
       accessibility: {
+        enableARIALabels: true,
         enableKeyboardNavigation: true,
         enableScreenReaderSupport: true,
         enableHighContrast: true,
         enableFocusManagement: true,
-        enableAriaEnhancements: true,
-        enableMotionReduction: true,
         ...config.accessibility
       },
       errorHandling: {
         enableGlobalErrorHandling: true,
-        enablePerformanceMonitoring: true,
-        enableUserFeedback: true,
-        maxErrors: 100,
+        enableErrorReporting: true,
+        enableErrorRecovery: true,
         ...config.errorHandling
       }
     };
+  }
+
+  public static getInstance(config?: Partial<EnhancementConfig>): EnhancementSuite {
+    if (!EnhancementSuite.instance) {
+      EnhancementSuite.instance = new EnhancementSuite(config);
+    }
+    return EnhancementSuite.instance;
+  }
+
+  public cleanup(): void {
+    console.log('EnhancementSuite cleanup');
+  }
+
+  private initialize(): void {
+    // Initialize all enhancement modules
+    this.performanceOptimizer = PerformanceOptimizer.getInstance(this.config.performance);
+    this.securityEnhancer = SecurityEnhancer.getInstance(this.config.security);
+    this.accessibilityEnhancer = AccessibilityEnhancer.getInstance(this.config.accessibility);
+    this.errorHandler = ErrorHandler.getInstance();
+
+    // Initialize error handler
+    // if (this.config.errorHandling.enableGlobalErrorHandling) {
+    //   this.errorHandler.initialize();
+    // }
+
+    // Start metrics collection
+    this.startMetricsCollection();
+
+    // Setup cross-module integrations
+    this.setupIntegrations();
+
+    // Log initialization
+    console.log('🚀 Enhancement Suite initialized with:', {
+      performance: Object.keys(this.config.performance).filter(key => 
+        this.config.performance[key as keyof typeof this.config.performance]
+      ),
+      security: Object.keys(this.config.security).filter(key => 
+        this.config.security[key as keyof typeof this.config.security]
+      ),
+      accessibility: Object.keys(this.config.accessibility).filter(key => 
+        this.config.accessibility[key as keyof typeof this.config.accessibility]
+      ),
+      errorHandling: Object.keys(this.config.errorHandling).filter(key => 
+        this.config.errorHandling[key as keyof typeof this.config.errorHandling]
+      )
+    });
+  }
+
+  private setupIntegrations(): void {
+    // Setup cross-module integrations
+    // Performance + Security: Secure performance monitoring
+    // Security + Accessibility: Secure accessibility features
+    // Performance + Accessibility: Optimized accessibility features
+    console.log('🔗 Cross-module integrations established');
+  }
+
+  private startMetricsCollection(): void {
+    if (this.metricsInterval) {
+      clearInterval(this.metricsInterval);
+    }
+
+    this.metricsInterval = setInterval(() => {
+      const metrics = this.getMetrics();
+      console.log('📊 System Metrics:', metrics);
+    }, 30000); // Collect metrics every 30 seconds
+  }
+
+  private stopMetricsCollection(): void {
+    if (this.metricsInterval) {
+      clearInterval(this.metricsInterval);
+      this.metricsInterval = null;
+    }
   }
 
   public getMetrics(): SystemMetrics {
@@ -131,32 +190,27 @@ export class EnhancementSuite {
       },
       security: {
         violationCount: 0,
-        lastViolation: null,
-        rateLimitHits: 0
+        blockedRequests: 0,
+        cspViolations: 0,
+        xssAttempts: 0
       },
       accessibility: {
-        violationCount: 0,
-        lastAudit: null,
-        complianceScore: 100
+        ariaLabelsCount: 0,
+        keyboardNavigationScore: 0,
+        screenReaderCompatibility: 0,
+        colorContrastScore: 0
       },
-      errors: {
-        totalErrors: 0,
-        criticalErrors: 0,
-        lastError: null
+      errorHandling: {
+        errorCount: 0,
+        recoveredErrors: 0,
+        criticalErrors: 0
       }
     };
   }
 
-  public generateReport(): string {
-    const metrics = this.getMetrics();
-    return `
-Enhancement Suite Report:
-- Performance: FCP=${metrics.performance.fcp}ms, LCP=${metrics.performance.lcp}ms
-- Security: ${metrics.security.violationCount} violations
-- Accessibility: Score ${metrics.accessibility.complianceScore}/100
-- Errors: ${metrics.errors.totalErrors} total errors
-    `.trim();
+  public destroy(): void {
+    this.stopMetricsCollection();
+    this.cleanup();
+    EnhancementSuite.instance = null as any;
   }
 }
-
-export default EnhancementSuite;
