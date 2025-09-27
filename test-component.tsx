@@ -1,11 +1,9 @@
 import React from 'react';
 
-const TestComponent = () => {
+export const TestComponent: React.FC = () => {
   return (
-    <div className="test">
+    <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
       <h1>Test Component</h1>
     </div>
   );
 };
-
-export default TestComponent;
