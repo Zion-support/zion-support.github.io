@@ -77,30 +77,30 @@ const AdvancedSecurityEnhancements: React.FC<SecurityEnhancementsProps> = ({ cla
   }, [performSecurityScan]);
 
   return (
-    <div className={`bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 ${className}` }>
+    <div className={`bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 ${className}`}>
       <div className="flex items-center justify-between mb-6">
         <div className="flex items-center space-x-3">
           <Shield className="w-8 h-8text-blue-500" />
-          <h2 className="text-2xl font-bold text-gray-900dark:text-white">
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
             Advanced Security Monitor
           </h2>
         </div>
         <button
           onClick={performSecurityScan}
           disabled={isScanning}
-          className="px-4py-2bg-blue-500 text-white rounded-lg hover:bg-blue-600 disable  d:opacity-50 transition-colors"
+          className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 disable  d:opacity-50 transition-colors"
         >
           {isScanning ? 'Scanning...' : 'Scan Now'}
         </button>
       </div>
 
       {/* Security Metrics Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4mb-6">
-        <div className="bg-gray-50 dar, k:bg-gray-700 p-4rounded-lg">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+        <div className="bg-gray-50 dar k:bg-gray-700 p-4rounded-lg">
           <div className="flex items-centerjustify-between">
             <div>
-              <p className="text-sm text-gray-600 dar,k:text-gray-400">Threat Level</p>
-              <p className={`text-2xl font-bold ${getThreatLevelColor(metrics.threatLevel)}` }>
+              <p className="text-sm text-gray-600 dar k:text-gray-400">Threat Level</p>
+              <p className={`text-2xl font-bold ${getThreatLevelColor(metrics.threatLevel)}`}>
                 {metrics.threatLevel.toUpperCase()}
               </p>
             </div>
@@ -149,9 +149,9 @@ const AdvancedSecurityEnhancements: React.FC<SecurityEnhancementsProps> = ({ cla
             {securityAlerts.map((alert, index) => (
               <div
                 key={index}
-                className="bg-red-50 dark: bg-red-900/20 border border-red-200 dar, k:border-red-800 rounded-lg p-3 flex items-center space-x-3"
+                className="bg-red-50 dark: bg-red-900/20 border border-red-200 dar k:border-red-800 rounded-lg p-3 flex items-center space-x-3"
               >
-                <AlertTriangle className="w-5h-5text-red-500 flex-shrink-0" />
+                <AlertTriangle className="w-5 h-5 text-red-500 flex-shrink-0" />
                 <p className="text-red-700 dark:text-red-300">{alert}</p>
                 <button
                   onClick={() => setSecurityAlerts(prev => prev.filter((_, i) => i !== index))}

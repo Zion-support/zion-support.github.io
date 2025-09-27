@@ -193,7 +193,7 @@ const ComprehensiveAnalyticsDashboard: React.FC = () => {
                   activeTab === key
                     ? 'bg-white text-blue-600 shadow-sm'
                     : 'text-gray-600 hover:text-gray-900'
-                }` }
+                }`}
               >
                 <Icon className="h-4w-4" />
                 <span>{label}</span>
@@ -212,7 +212,7 @@ const ComprehensiveAnalyticsDashboard: React.FC = () => {
                       <div>
                         <div className="text-2xl font-bold">{analyticsData.visitors.total.toLocaleString()}</div>
                         <div className="text-smtext-gray-600">Total Visitors</div>
-                        <div className={`text-xs ${getGrowthColor(analyticsData.visitors.growth)}` }>
+                        <div className={`text-xs ${getGrowthColor(analyticsData.visitors.growth)}`}>
                           {analyticsData.visitors.growth >= 0 ? '+' : ''}{analyticsData.visitors.growth}%
                         </div>
                       </div>
@@ -225,7 +225,7 @@ const ComprehensiveAnalyticsDashboard: React.FC = () => {
                     <div className="flex items-center space-x-2">
                       <Zap className="h-8 w-8text-green-600" />
                       <div>
-                        <div className={`text-2xl font-bold ${getScoreColor(analyticsData.performance.pageSpeed)}` }>
+                        <div className={`text-2xl font-bold ${getScoreColor(analyticsData.performance.pageSpeed)}`}>
                           {analyticsData.performance.pageSpeed}
                         </div>
                         <div className="text-sm text-gray-600">Performance Score</div>
@@ -240,7 +240,7 @@ const ComprehensiveAnalyticsDashboard: React.FC = () => {
                     <div className="flex items-center space-x-2">
                       <Shield className="h-8 w-8text-purple-600" />
                       <div>
-                        <div className={`text-2xl font-bold ${getScoreColor(analyticsData.security.score)}` }>
+                        <div className={`text-2xl font-bold ${getScoreColor(analyticsData.security.score)}`}>
                           {analyticsData.security.score}
                         </div>
                         <div className="text-sm text-gray-600">Security Score</div>
@@ -255,7 +255,7 @@ const ComprehensiveAnalyticsDashboard: React.FC = () => {
                     <div className="flex items-center space-x-2">
                       <Globe className="h-8 w-8text-orange-600" />
                       <div>
-                        <div className={`text-2xl font-bold ${getScoreColor(analyticsData.seo.score)}` }>
+                        <div className={`text-2xl font-bold ${getScoreColor(analyticsData.seo.score)}`}>
                           {analyticsData.seo.score}
                         </div>
                         <div className="text-sm text-gray-600">SEO Score</div>

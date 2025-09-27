@@ -462,7 +462,7 @@ export default function AdvancedAnalyticsInsights({
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -20 }}
-                    className={`p-4 rounded-lg border ${getInsightColor(insight.type)}` }
+                    className={`p-4 rounded-lg border ${getInsightColor(insight.type)}`}
                   >
                     <div className="flex items-start space-x-3">
                       {getInsightIcon(insight.type)}

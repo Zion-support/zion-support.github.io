@@ -196,7 +196,7 @@ export const AdvancedForm: React.FC<AdvancedFormProps> = ({
 
       case 'checkbox':
         return (
-          <div className="flexitems-center">
+          <div className="flex items-center">
             <input
               type="checkbox"
               name={field.name}
@@ -217,7 +217,7 @@ export const AdvancedForm: React.FC<AdvancedFormProps> = ({
         return (
           <div className="space-y-2">
             {field.options?.map(option => (
-              <div key={option.value} className="flexitems-center">
+              <div key={option.value} className="flex items-center">
                 <input
                   type="radio"
                   name={field.name}
@@ -256,7 +256,7 @@ export const AdvancedForm: React.FC<AdvancedFormProps> = ({
   };
 
   return (
-    <form ref={formRef} onSubmit={handleSubmit} className={`space-y-6 ${className}` }>
+    <form ref={formRef} onSubmit={handleSubmit} className={`space-y-6 ${className}`}>
       {fields.map(field => (
         <div key={field.name} className="space-y-2">
           {field.type !== 'checkbox' && field.type !== 'radio' && (
@@ -271,7 +271,7 @@ export const AdvancedForm: React.FC<AdvancedFormProps> = ({
           {renderField(field)}
           
           {touched[field.name] && errors[field.name] && (
-            <p className="text-sm text-red-600 flexitems-center">
+            <p className="text-sm text-red-600 flex items-center">
               <svg className="w-4h-4mr-1" fill="currentColor" viewBox="002020">
                 <path fillRule="evenodd" d="M1810 a88011-16088001160 zm-74 a11011-201100120 zm-1-9a11000-11v4a1101020V 6 a11000-1-1z" clipRule="evenodd" />
               </svg>
@@ -281,7 +281,7 @@ export const AdvancedForm: React.FC<AdvancedFormProps> = ({
         </div>
       ))}
 
-      <div className="flexspace-x-4">
+      <div className="flex space-x-4">
         <button
           type="submit"
           disabled={isLoading}

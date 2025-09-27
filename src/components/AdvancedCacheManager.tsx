@@ -87,18 +87,18 @@ const AdvancedCacheManager: React.FC<CacheManagerProps> = ({ className = '' }) =
   };
 
   return (
-    <div className={`advanced-cache-manager ${className}` }>
-      <div className="bg-white rounded-lg shadow-lgp-6">
+    <div className={`advanced-cache-manager ${className}`}>
+      <div className="bg-white rounded-lg shadow-lg p-6">
         <div className="flex items-center justify-between mb-6">
-          <h3 className="text-xl font-semibold text-gray-800 flexitems-center">
+          <h3 className="text-xl font-semibold text-gray-800 flex items-center">
             <Database className="w-5h-5mr-2" />
             Advanced Cache Manager
           </h3>
-          <div className="flexspace-x-2">
+          <div className="flex space-x-2">
             <button
               onClick={clearCache}
               disabled={isOptimizing}
-              className="px-4py-2bg-red-500 text-white rounded-lg hover:bg-red-600 disable  d:opacity-50 flexitems-center"
+              className="px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 disable  d:opacity-50 flex items-center"
             >
               <Trash2 className="w-4h-4mr-2" />
               Clear Cache
@@ -106,21 +106,21 @@ const AdvancedCacheManager: React.FC<CacheManagerProps> = ({ className = '' }) =
             <button
               onClick={optimizeCache}
               disabled={isOptimizing}
-              className="px-4py-2bg-blue-500 text-white rounded-lg hover:bg-blue-600 disable  d:opacity-50 flexitems-center"
+              className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 disable  d:opacity-50 flex items-center"
             >
-              <RefreshCw className={`w-4 h-4 mr-2 ${isOptimizing ? 'animate-spin' : ''}` } />
+              <RefreshCw className={`w-4 h-4 mr-2 ${isOptimizing ? 'animate-spin' : ''}`} />
               Optimize
             </button>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 l, g:grid-cols-3 gap-6 mb-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 l g:grid-cols-3 gap-6 mb-6">
           <div className="bg-gray-50 rounded-lgp-4">
             <div className="flex items-center justify-between mb-2">
               <span className="text-sm font-medium text-gray-600">Hit Rate</span>
               <CheckCircle className="w-4 h-4text-green-500" />
             </div>
-            <div className={`text-2xl font-bold ${getHitRateColor(stats.hitRate)}` }>
+            <div className={`text-2xl font-bold ${getHitRateColor(stats.hitRate)}`}>
               {stats.hitRate.toFixed(1)}%
             </div>
           </div>
@@ -181,7 +181,7 @@ const AdvancedCacheManager: React.FC<CacheManagerProps> = ({ className = '' }) =
             <h4 className="font-semibold text-green-800 mb-2">Optimization Strategies Applied:</h4>
             <ul className="space-y-1">
               {cacheStrategies.map((strategy, index) => (
-                <li key={index} className="text-sm text-green-700 flexitems-center">
+                <li key={index} className="text-sm text-green-700 flex items-center">
                   <CheckCircle className="w-3h-3mr-2" />
                   {strategy}
                 </li>

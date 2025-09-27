@@ -211,7 +211,7 @@ export const AdvancedSearch: React.FC<SearchProps> = ({
   };
 
   return (
-    <div ref={searchRef} className={`relative ${className}` }>
+    <div ref={searchRef} className={`relative ${className}`}>
       <div className="relative">
         <div className="absolute inset-y-0left-0pl-3flex items-centerpointer-events-none">
           <svg className="h-5w-5text-gray-400" fill="none" stroke="currentColor" viewBox="002424">
@@ -230,7 +230,7 @@ export const AdvancedSearch: React.FC<SearchProps> = ({
           aria-label="Search"
         />
         {isLoading && (
-          <div className="absolute inset-y-0right-0pr-3flexitems-center">
+          <div className="absolute inset-y-0right-0pr-3flex items-center">
             <svg className="animate-spin h-5w-5text-gray-400" fill="none" viewBox="002424">
               <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
               <path className="opacity-75" fill="currentColor" d="M412a 880018-8V 0 C5.373005.373012 h4 zm 25.291 A7.9627.962001412 H 0 c 03.0421.1355.82437.938 l3-2.647 z"></path>
@@ -247,9 +247,9 @@ export const AdvancedSearch: React.FC<SearchProps> = ({
               role="button" tabIndex={0} onClick={() => handleResultClick(result)}
               className={`cursor-pointer select-none relative py-3px-4hover:bg-gray-50 ${
                 index === selectedIndex ? 'bg-blue-50' : ''
-              }` }
+              }`}
             >
-              <div className="flexitems-center">
+              <div className="flex items-center">
                 <div className="flex-shrink-0mr-3">
                   <span className="text-lg">{getTypeIcon(result.type)}</span>
                 </div>
@@ -258,7 +258,7 @@ export const AdvancedSearch: React.FC<SearchProps> = ({
                     <p className="text-sm font-medium text-gray-900 truncate">
                       {result.title}
                     </p>
-                    <span className={`inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium ${getTypeColor(result.type)}` }>
+                    <span className={`inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium ${getTypeColor(result.type)}`}>
                       {result.type}
                     </span>
                   </div>

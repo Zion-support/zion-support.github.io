@@ -3,8 +3,8 @@ import React, { useEffect, useRef, useCallback } from 'react';
 interface PerformanceMetrics {
   loadTime: number;
   domContentLoaded: number;
-  firstPain, t: number;
-  firstContentfulPain, t: number;
+  firstPaint: number;
+  firstContentfulPaint: number;
   largestContentfulPaint?: number;
   firstInputDelay?: number;
   cumulativeLayoutShift?: number;
@@ -32,7 +32,7 @@ export default function PerformanceTracker({
       const paintEntries = performance.getEntriesByType('paint');
       
       const metrics: PerformanceMetrics = {
-        loadTim, e: navigation.loadEventEnd - navigation.fetchStart,
+        loadTime: navigation.loadEventEnd - navigation.fetchStart,
         domContentLoaded: navigation.domContentLoadedEventEnd - navigation.fetchStart,
         firstPaint: paintEntries.find(entry => entry.name === 'first-paint')?.startTime || 0,
         firstContentfulPaint: paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0
@@ -117,7 +117,8 @@ export default function PerformanceTracker({
 
           // Send to analytics
           if (enableAnalytics && typeof window !== 'undefined') {
-            // Google Analytics 4 if (window.gtag) {
+            // Google Analytics 4
+            if (window.gtag) {
               window.gtag('event', 'page_load_metrics', {
                 load_time: Math.round(metrics.loadTime),
                 dom_content_loaded: Math.round(metrics.domContentLoaded),
@@ -143,7 +144,9 @@ export default function PerformanceTracker({
           }
 
           // Custom callback
-          onMetricsCollected?.(metrics);
+          if (onMetricsCollected) {
+            onMetricsCollected(metrics);
+          }
         }, 1000);
       }
     } catch (error) {

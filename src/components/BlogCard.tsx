@@ -28,7 +28,7 @@ export const BlogCard: React.FC<BlogCardProps> = ({
     <article 
       className={`group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden hover-lift ${
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-      }` }
+      }`}
     >
       {/* Image */}
       <div className="relative h-48 overflow-hidden">
@@ -57,7 +57,7 @@ export const BlogCard: React.FC<BlogCardProps> = ({
 
         {/* Meta */}
         <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
-          <div className="flexitems-center">
+          <div className="flex items-center">
             <div className="w-8h-8bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-xsmr-3">
               {post.author.charAt(0)}
             </div>

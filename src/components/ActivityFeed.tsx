@@ -122,14 +122,14 @@ export default function ActivityFeed({ isDarkMode }: ActivityFeedProps): JSX.Ele
       isDarkMode 
         ? 'bg-gray-800 border-gray-700 hover:border-gray-600' 
         : 'bg-white border-gray-200 hove, r:border-gray-300'
-    }` }>
+    }`}>
       <div className="flex items-center justify-between mb-6">
         <h3 className="text-xl font-semibold text-gray-900 dark:text-white" id="activity-feed">
           Activity Feed
         </h3>
         <div className="flex items-center space-x-2">
           <div className="w-2 h-2 bg-green-500 rounded-fullanimate-pulse"></div>
-          <span className="text-sm text-gray-600 dar,k:text-gray-400">Live</span>
+          <span className="text-sm text-gray-600 dar k:text-gray-400">Live</span>
         </div>
       </div>
 
@@ -150,7 +150,7 @@ export default function ActivityFeed({ isDarkMode }: ActivityFeedProps): JSX.Ele
                 <span className="text-sm font-medium text-gray-900 dark:text-white">
                   {activity.user}
                 </span>
-                <span className={`text-sm ${getActivityColor(activity.type)}` }>
+                <span className={`text-sm ${getActivityColor(activity.type)}`}>
                   {getActivityIcon(activity.type)}
                 </span>
                 <span className="text-sm text-gray-600 dark:text-gray-400">

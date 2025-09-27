@@ -31,7 +31,7 @@ export const PricingCard: React.FC<PricingCardProps> = ({
           : 'border-gray-200 hover:border-blue-300'
       } hover-lift ${
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-      }` }
+      }`}
     >
       {/* Popular badge */}
       {tier.isPopular && (
@@ -80,7 +80,7 @@ export const PricingCard: React.FC<PricingCardProps> = ({
           tier.buttonVariant === 'primary'
             ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 shadow-lg hover:shadow-xl'
             : 'border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white'
-        }` }
+        }`}
       >
         {tier.buttonText}
       </button>

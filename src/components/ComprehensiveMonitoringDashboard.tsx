@@ -250,7 +250,7 @@ const ComprehensiveMonitoringDashboard: React.FC = () => {
           <div className="text-sm text-gray-500">
             Last updated: {lastUpdated.toLocaleTimeString()}
           </div>
-          <div className={`px-3 py-1 rounded-full text-sm font-medium ${color}` }>
+          <div className={`px-3 py-1 rounded-full text-sm font-medium ${color}`}>
             Performance: {grade}
           </div>
         </div>
@@ -276,7 +276,7 @@ const ComprehensiveMonitoringDashboard: React.FC = () => {
                   alert.type === 'warning' ? 'bg-yellow-50 border-yellow-400' :
                   alert.type === 'info' ? 'bg-blue-50 border-blue-400' :
                   'bg-green-50 border-green-400'
-                }` }
+                }`}
               >
                 <tab.icon className="h-4 w-4" />
                 <span>{tab.name}</span>

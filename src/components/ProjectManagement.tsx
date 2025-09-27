@@ -112,7 +112,7 @@ export default function ProjectManagement({ isDarkMode }: ProjectManagementProps
       isDarkMode 
         ? 'bg-gray-800 border-gray-700 hover:border-gray-600' 
         : 'bg-white border-gray-200 hover:border-gray-300'
-    }` }>
+    }`}>
       <div className="flex items-center justify-between mb-6">
         <h3 className="text-xl font-semibold text-gray-900 dark:text-white" id="project-management">
           Project Management
@@ -133,7 +133,7 @@ export default function ProjectManagement({ isDarkMode }: ProjectManagementProps
               selectedStatus === status
                 ? 'bg-blue-600 text-white'
                 : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
-            }` }
+            }`}
           >
             {status === 'all' ? 'All' : status.charAt(0).toUpperCase() + status.slice(1)}
           </button>
@@ -169,7 +169,7 @@ export default function ProjectManagement({ isDarkMode }: ProjectManagementProps
               isDarkMode 
                 ? 'bg-gray-700 border-gray-600 hover:border-gray-500' 
                 : 'bg-gray-50 border-gray-200 hover:border-gray-300'
-            }` }
+            }`}
           >
             <div className="flex items-start justify-between mb-3">
               <div className="flex-1">
@@ -177,7 +177,7 @@ export default function ProjectManagement({ isDarkMode }: ProjectManagementProps
                   <h4 className="font-semibold text-gray-900 dark:text-white" id="projectname">
                     {project.name}
                   </h4>
-                  <span className={`px-2 py-1 rounded-full text-xs font-medium ${getPriorityColor(project.priority)}` }>
+                  <span className={`px-2 py-1 rounded-full text-xs font-medium ${getPriorityColor(project.priority)}`}>
                     {getPriorityIcon(project.priority)} {project.priority}
                   </span>
                 </div>
@@ -189,7 +189,7 @@ export default function ProjectManagement({ isDarkMode }: ProjectManagementProps
                   <span>Team: {project.team.join(', ')}</span>
                 </div>
               </div>
-              <span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(project.status)}` }>
+              <span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(project.status)}`}>
                 {project.status.replace('-', ' ')}
               </span>
             </div>

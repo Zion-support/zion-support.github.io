@@ -246,7 +246,7 @@ export const UserManagement: React.FC<UserManagementProps> = ({
 
   if (isLoading) {
     return (
-      <div className={`bg-white rounded-lg shadow-sm border border-gray-200 p-6 ${className}` }>
+      <div className={`bg-white rounded-lg shadow-sm border border-gray-200 p-6 ${className}`}>
         <div className="animate-pulse">
           <div className="h-6 bg-gray-300 rounded w-1/4 mb-4"></div>
           <div className="space-y-3">
@@ -266,7 +266,7 @@ export const UserManagement: React.FC<UserManagementProps> = ({
   }
 
   return (
-    <div className={`bg-white rounded-lg shadow-sm border border-gray-200 ${className}` }>
+    <div className={`bg-white rounded-lg shadow-sm border border-gray-200 ${className}`}>
       {/* Header */}
       <div className="px-6 py-4 border-b border-gray-200">
         <div className="flex items-center justify-between">
@@ -426,7 +426,7 @@ export const UserManagement: React.FC<UserManagementProps> = ({
                   <select
                     value={user.role}
                     onChange={(e) => handleUserRoleChange(user.id, e.target.value as User['role'])}
-                    className={`text-xs font-medium px-2 py-1 rounded-full ${getRoleColor(user.role)}` }
+                    className={`text-xs font-medium px-2 py-1 rounded-full ${getRoleColor(user.role)}`}
                   >
                     <option value="admin">Admin</option>
                     <option value="moderator">Moderator</option>
@@ -438,7 +438,7 @@ export const UserManagement: React.FC<UserManagementProps> = ({
                   <select
                     value={user.status}
                     onChange={(e) => handleUserStatusChange(user.id, e.target.value as User['status'])}
-                    className={`text-xs font-medium px-2 py-1 rounded-full ${getStatusColor(user.status)}` }
+                    className={`text-xs font-medium px-2 py-1 rounded-full ${getStatusColor(user.status)}`}
                   >
                     <option value="active">Active</option>
                     <option value="inactive">Inactive</option>

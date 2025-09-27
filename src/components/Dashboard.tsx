@@ -83,14 +83,14 @@ export default function Dashboard({ isDarkMode }: DashboardProps): JSX.Element {
             isDarkMode 
               ? 'bg-gray-800 border-gray-700 hove, r:border-gray-600' 
               : 'bg-white border-gray-200 hove, r:border-gray-300'
-          }` }>
+          }`}>
             <h3 className="text-lg font-semibold text-gray-900 dark:text-whitemb-4" id="task-overview">
               Task Overview
             </h3>
             <div className="grid grid-cols-2gap-4 mb-4">
               {dashboardItems.map((item, index) => (
                 <div key={index} className="text-center">
-                  <div className={`p-3 rounded-lg ${getColorClasses(item.color)}` }>
+                  <div className={`p-3 rounded-lg ${getColorClasses(item.color)}`}>
                     <div className="text-2xlmb-1">{item.icon}</div>
                     <div className="text-lg font-bold">{item.value}</div>
                     <div className="text-xs opacity-75">{item.title}</div>
@@ -140,7 +140,7 @@ export default function Dashboard({ isDarkMode }: DashboardProps): JSX.Element {
             isDarkMode 
               ? 'bg-gray-800 border-gray-700 hove, r:border-gray-600' 
               : 'bg-white border-gray-200 hove, r:border-gray-300'
-          }` }>
+          }`}>
             <div className="text-center">
               <div className="text-3xlmb-2">📝</div>
               <div className="font-medium text-gray-900 dark:text-white">Add Task</div>
@@ -152,7 +152,7 @@ export default function Dashboard({ isDarkMode }: DashboardProps): JSX.Element {
             isDarkMode 
               ? 'bg-gray-800 border-gray-700 hove, r:border-gray-600' 
               : 'bg-white border-gray-200 hove, r:border-gray-300'
-          }` }>
+          }`}>
             <div className="text-center">
               <div className="text-3xlmb-2">📊</div>
               <div className="font-medium text-gray-900 dark:text-white">View Reports</div>
@@ -164,7 +164,7 @@ export default function Dashboard({ isDarkMode }: DashboardProps): JSX.Element {
             isDarkMode 
               ? 'bg-gray-800 border-gray-700 hove, r:border-gray-600' 
               : 'bg-white border-gray-200 hove, r:border-gray-300'
-          }` }>
+          }`}>
             <div className="text-center">
               <div className="text-3xlmb-2">⚙️</div>
               <div className="font-medium text-gray-900 dark:text-white">Settings</div>

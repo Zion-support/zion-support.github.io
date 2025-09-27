@@ -241,7 +241,7 @@ const AdvancedSystemMonitor: React.FC = () => {
               <span>System Monitor</span>
             </div>
             <div className="flex items-center space-x-2">
-              <div className={`w-3 h-3 rounded-full ${isMonitoring ? 'bg-green-500' : 'bg-gray-400'}` }></div>
+              <div className={`w-3 h-3 rounded-full ${isMonitoring ? 'bg-green-500' : 'bg-gray-400'}`}></div>
               <span className="text-smtext-gray-600">
                 {isMonitoring ? 'Monitoring' : 'Stopped'}
               </span>
@@ -253,7 +253,7 @@ const AdvancedSystemMonitor: React.FC = () => {
         </CardHeader>
         <CardContent>
           {/* Key Metrics Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4mb-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
             <div className="p-4 borderrounded-lg">
               <div className="flex items-center justify-between mb-2">
                 <Cpu className="h-5 w-5text-blue-600" />
@@ -412,7 +412,7 @@ const AdvancedSystemMonitor: React.FC = () => {
                         alert.severity === 'high' ? 'bg-orange-100 text-orange-800' :
                         alert.severity === 'medium' ? 'bg-yellow-100 text-yellow-800' :
                         'bg-blue-100 text-blue-800'
-                      }` }>
+                      }`}>
                         {alert.severity.toUpperCase()}
                       </span>
                     </div>

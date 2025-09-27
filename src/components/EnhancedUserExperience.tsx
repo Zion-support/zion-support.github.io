@@ -108,7 +108,7 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
                 preferences.theme === value
                   ? 'border-blue-500 bg-blue-50 dark: bg-blue-900/20'
                   : 'border-gray-200 dark:border-gray-600 hover:border-gray-300 dar, k:hove, r:border-gray-500'
-              }` }
+              }`}
             >
               <Icon className="w-6h-6" />
               <span className="text-sm font-medium">{label}</span>
@@ -134,7 +134,7 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
                 preferences.fontSize === value
                   ? 'border-blue-500 bg-blue-50 dark: bg-blue-900/20'
                   : 'border-gray-200 dark:border-gray-600 hover:border-gray-300 dar, k:hove, r:border-gray-500'
-              }` }
+              }`}
             >
               <span className="text-sm font-medium">{label}</span>
             </button>
@@ -148,7 +148,7 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
             type="checkbox"
             checked={preferences.animations}
             onChange={(e) => updatePreference('animations', e.target.checked)}
-            className="w-4h-4text-blue-600 rounded focus:ring-blue-500"
+            className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"
           />
           <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
             Enable animations
@@ -166,7 +166,7 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
             type="checkbox"
             checked={preferences.reducedMotion}
             onChange={(e) => updatePreference('reducedMotion', e.target.checked)}
-            className="w-4h-4text-blue-600 rounded focus:ring-blue-500"
+            className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"
           />
           <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
             Reduce motion (respects system preference)
@@ -178,7 +178,7 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
             type="checkbox"
             checked={preferences.highContrast}
             onChange={(e) => updatePreference('highContrast', e.target.checked)}
-            className="w-4h-4text-blue-600 rounded focus:ring-blue-500"
+            className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"
           />
           <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
             High contrast mode
@@ -190,7 +190,7 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
             type="checkbox"
             checked={preferences.screenReader}
             onChange={(e) => updatePreference('screenReader', e.target.checked)}
-            className="w-4h-4text-blue-600 rounded focus:ring-blue-500"
+            className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"
           />
           <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
             Screen reader optimizations
@@ -245,7 +245,7 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
   );
 
   return (
-    <div className={`relative ${className}` }>
+    <div className={`relative ${className}`}>
       {/* Settings Toggle Button */}
       <button
         onClick={toggleSettings}
@@ -273,7 +273,7 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
               <div className="flex items-center justify-between mb-6">
                 <div className="flex items-center space-x-3">
                   <User className="w-6 h-6text-blue-500" />
-                  <h2 className="text-xl font-bold text-gray-900dark:text-white">
+                  <h2 className="text-xl font-bold text-gray-900 dark:text-white">
                     User Experience
                   </h2>
                 </div>
@@ -299,7 +299,7 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
                       activeTab === id
                         ? 'bg-white dark: bg-gray-600 text-blue-600 dark:text-blue-400 shadow-sm'
                         : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dar, k:hove, r:text-gray-200'
-                    }` }
+                    }`}
                   >
                     <Icon className="w-4h-4" />
                     <span>{label}</span>

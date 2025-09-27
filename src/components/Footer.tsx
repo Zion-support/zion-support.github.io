@@ -18,7 +18,7 @@ export const Footer: React.FC = () => {
             <p className="text-gray-400">
               Leading the future of technology with AI, blockchain, and innovative solutions.
             </p>
-            <div className="flexspace-x-4">
+            <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-whitetransition-colors" aria-label="Twitter">
                 <svg className="w-6h-6" fill="currentColor" viewBox="002424">
                   <path d="M 23.9534.57a1010001-2.825.7754.9584.9580002.163-2.723 c-.951.555-2.005.959-3.1271.184 a4.924.92000-8.3844.482 C7.698.0954.0676.131.643.162 a4.8224.822000-.6662.475 c 01.71.873.2132.1884.096 a4.9044.904001-2.228-.616 v.06 a4.9234.9230003.9464.8274.9964.996001-2.212.0854.9364.9360004.6043.4179.8679.867001-6.1022.105 c-.390-.779-.023-1.17-.067 a 13.99513.9950007.5572.209 c9.053013.998-7.49613.998-13.9850-.210-.42-.015-.63 A9.9359.935000244.59 z"/>

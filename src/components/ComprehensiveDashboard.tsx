@@ -26,11 +26,11 @@ const ComprehensiveDashboard: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gray-50 py-8">
-      <div className="max-w-7xl mx-auto px-4sm: px-6l g:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="mb-8">
-          <h 1 className="text-3xl font-boldtext-gray-900">Website Analytics Dashboard</h1>
-          <p className="mt-2text-gray-600">
+          <h1 className="text-3xl font-bold text-gray-900">Website Analytics Dashboard</h1>
+          <p className="mt-2 text-gray-600">
             Comprehensive monitoring and analysis of your website&apos;s performance, accessibility, and SEO.
           </p>
         </div>
@@ -44,7 +44,7 @@ const ComprehensiveDashboard: React.FC = () => {
                 <span className={`text-3xl font-bold ${
                   overallScore >= 90 ? 'text-green-600' : 
                   overallScore >= 70 ? 'text-yellow-600' : 'text-red-600'
-                }` }>
+                }`}>
                   {overallScore}
                 </span>
                 <span className="text-gray-500">/ 100</span>
@@ -55,7 +55,7 @@ const ComprehensiveDashboard: React.FC = () => {
                 className={`h-3rounded-full ${
                   overallScore >= 90 ? 'bg-green-500' : 
                   overallScore >= 70 ? 'bg-yellow-500' : 'bg-red-500'
-                }` }
+                }`}
                 style={{ width: `${overallScore}%` }}
               ></div>
             </div>
@@ -69,7 +69,7 @@ const ComprehensiveDashboard: React.FC = () => {
         {/* Tab Navigation */}
         <div className="mb-6">
           <div className="border-bborder-gray-200">
-            <nav className="-mb-px flexspace-x-8">
+            <nav className="-mb-px flex space-x-8">
               {tabs.map((tab) => (
                 <button
                   key={tab.id}
@@ -78,7 +78,7 @@ const ComprehensiveDashboard: React.FC = () => {
                     activeTab === tab.id
                       ? 'border-blue-500 text-blue-600'
                       : 'border-transparent text-gray-500 hover:text-gray-700 hove, r:border-gray-300'
-                  }` }
+                  }`}
                 >
                   <span className="mr-2">{tab.icon}</span>
                   {tab.label}
@@ -98,7 +98,7 @@ const ComprehensiveDashboard: React.FC = () => {
         {/* Quick Actions */}
         <div className="mt-8grid grid-cols-1md:grid-cols-3gap-6">
           <div className="bg-white rounded-lg shadow-mdp-6">
-            <div className="flexitems-center">
+            <div className="flex items-center">
               <div className="flex-shrink-0">
                 <div className="w-8h-8bg-blue-100 rounded-md flex items-center justify-center">
                   <span className="text-blue-600 text-lg">📊</span>
@@ -112,7 +112,7 @@ const ComprehensiveDashboard: React.FC = () => {
           </div>
 
           <div className="bg-white rounded-lg shadow-mdp-6">
-            <div className="flexitems-center">
+            <div className="flex items-center">
               <div className="flex-shrink-0">
                 <div className="w-8h-8bg-green-100 rounded-md flex items-center justify-center">
                   <span className="text-green-600 text-lg">♿</span>
@@ -126,7 +126,7 @@ const ComprehensiveDashboard: React.FC = () => {
           </div>
 
           <div className="bg-white rounded-lg shadow-mdp-6">
-            <div className="flexitems-center">
+            <div className="flex items-center">
               <div className="flex-shrink-0">
                 <div className="w-8h-8bg-purple-100 rounded-md flex items-center justify-center">
                   <span className="text-purple-600 text-lg">🔍</span>

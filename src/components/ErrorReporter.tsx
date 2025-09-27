@@ -109,8 +109,8 @@ export const ErrorReporter: React.FC<ErrorReporterProps> = ({
   if (errorState.hasError) {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-centerp-4">
-        <div className="max-w-md w-full bg-white rounded-lg shadow-lgp-6">
-          <div className="flex items-centermb-4">
+        <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6">
+          <div className="flex items-center mb-4">
             <div className="flex-shrink-0">
               <svg className="h-8w-8text-red-500" fill="none" viewBox="002424" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M129 v 2 m04 h.01 m-6.9384 h 13.856 c1.5402.502-1.6671.732-2.5L 13.7324 c-.77-.833-1.964-.833-2.7320 L3.73216.5c-.77.833.1922.51.7322.5z" />

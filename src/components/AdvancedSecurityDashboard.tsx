@@ -199,7 +199,7 @@ const AdvancedSecurityDashboard: React.FC = () => {
             <button
               onClick={performSecurityScan}
               disabled={isScanning}
-              className="px-4py-2bg-blue-600 text-white rounded-lg hover:bg-blue-700 disable d:opacity-50"
+              className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disable d:opacity-50"
             >
               {isScanning ? 'Scanning...' : 'Run Security Scan'}
             </button>
@@ -209,10 +209,10 @@ const AdvancedSecurityDashboard: React.FC = () => {
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4mb-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
             <div className="p-4 border rounded-lgtext-center">
               <div className="text-sm text-gray-600mb-1">Security Score</div>
-              <div className={`text-3xl font-bold ${getScoreColor(metrics.overallScore)}` }>
+              <div className={`text-3xl font-bold ${getScoreColor(metrics.overallScore)}`}>
                 {metrics.overallScore}/100
               </div>
             </div>
@@ -289,7 +289,7 @@ const AdvancedSecurityDashboard: React.FC = () => {
               {alerts.map((alert) => (
                 <div key={alert.id} className="border rounded-lgp-3">
                   <div className="flex items-center justify-between mb-2">
-                    <span className={`px-2 py-1 text-xs font-medium rounded-full border ${getSeverityColor(alert.severity)}` }>
+                    <span className={`px-2 py-1 text-xs font-medium rounded-full border ${getSeverityColor(alert.severity)}`}>
                       {alert.severity.toUpperCase()}
                     </span>
                     <span className="text-xstext-gray-500">
@@ -314,7 +314,7 @@ const AdvancedSecurityDashboard: React.FC = () => {
               {recommendations.map((rec, index) => (
                 <div key={index} className="border rounded-lgp-3">
                   <div className="flex items-center justify-between mb-2">
-                    <span className={`px-2 py-1 text-xs font-medium rounded-full border ${getPriorityColor(rec.priority)}` }>
+                    <span className={`px-2 py-1 text-xs font-medium rounded-full border ${getPriorityColor(rec.priority)}`}>
                       {rec.priority.toUpperCase()}
                     </span>
                     <span className="text-xs text-gray-500 capitalize">{rec.category}</span>

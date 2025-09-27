@@ -312,7 +312,7 @@ const ComprehensiveSecurityDashboard: React.FC = () => {
             metrics.overall.securityScore >= 90 ? 'text-green-600 bg-green-100' :
             metrics.overall.securityScore >= 70 ? 'text-yellow-600 bg-yellow-100' :
             'text-red-600 bg-red-100'
-          }` }>
+          }`}>
             Security Score: {Math.round(metrics.overall.securityScore)}
           </div>
         </div>
@@ -333,7 +333,7 @@ const ComprehensiveSecurityDashboard: React.FC = () => {
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: 20 }}
-                className={`p-4 rounded-lg border ${getSeverityColor(alert.severity)}` }
+                className={`p-4 rounded-lg border ${getSeverityColor(alert.severity)}`}
               >
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-3">
@@ -471,7 +471,7 @@ const ComprehensiveSecurityDashboard: React.FC = () => {
                     </div>
                   </div>
                   <div className="text-right">
-                    <div className={`text-xs px-2 py-1 rounded-full ${getSeverityColor(threat.severity)}` }>
+                    <div className={`text-xs px-2 py-1 rounded-full ${getSeverityColor(threat.severity)}`}>
                       {threat.status}
                     </div>
                     <div className="text-xs text-muted-foreground mt-1">

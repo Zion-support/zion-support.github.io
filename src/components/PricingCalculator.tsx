@@ -231,7 +231,7 @@ export const PricingCalculator: React.FC = () => {
 										inputs.service === service.id
 											? 'border-blue-500 bg-blue-50'
 											: 'border-gray-200 hover:border-gray-300'
-									}` }
+									}`}
 								>
 									<div className="flex justify-betweenitems-start">
 										<div>
@@ -261,7 +261,7 @@ export const PricingCalculator: React.FC = () => {
 										inputs.complexity === complexity
 											? 'border-blue-500 bg-blue-50'
 											: 'border-gray-200 hover:border-gray-300'
-									}` }
+									}`}
 								>
 									<span className="font-mediumcapitalize">{complexity}</span>
 								</button>
@@ -283,7 +283,7 @@ export const PricingCalculator: React.FC = () => {
 										inputs.timeline === timeline
 											? 'border-blue-500 bg-blue-50'
 											: 'border-gray-200 hover:border-gray-300'
-									}` }
+									}`}
 								>
 									<span className="font-mediumcapitalize">{timeline}</span>
 								</button>
@@ -323,7 +323,7 @@ export const PricingCalculator: React.FC = () => {
 											id={`feature-${feature.id}` }
 											checked={inputs.additionalFeatures.includes(feature.id)}
 											onChange={() => handleFeatureToggle(feature.id)}
-											className="w-4h-4text-blue-600 border-gray-300 roundedfocus:ring-blue-500"
+											className="w-4 h-4 text-blue-600 border-gray-300 roundedfocus:ring-blue-500"
 										/>
 									</div>
 								</label>

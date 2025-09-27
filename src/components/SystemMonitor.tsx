@@ -235,7 +235,7 @@ export const SystemMonitor: React.FC<SystemMonitorProps> = ({
                 className={`h-2rounded-full transition-all duration-500 ${
                   metrics.cpu > 90 ? 'bg-red-500' : 
                   metrics.cpu > 70 ? 'bg-yellow-500' : 'bg-green-500'
-                }` }
+                }`}
                 style={{ width: `${metrics.cpu}%` }}
               />
             </div>
@@ -261,7 +261,7 @@ export const SystemMonitor: React.FC<SystemMonitorProps> = ({
                 className={`h-2rounded-full transition-all duration-500 ${
                   metrics.memory > 85 ? 'bg-red-500' : 
                   metrics.memory > 70 ? 'bg-yellow-500' : 'bg-green-500'
-                }` }
+                }`}
                 style={{ width: `${metrics.memory}%` }}
               />
             </div>
@@ -287,7 +287,7 @@ export const SystemMonitor: React.FC<SystemMonitorProps> = ({
                 className={`h-2rounded-full transition-all duration-500 ${
                   metrics.responseTime > 1000 ? 'bg-red-500' : 
                   metrics.responseTime > 500 ? 'bg-yellow-500' : 'bg-green-500'
-                }` }
+                }`}
                 style={{ width: `${Math.min(100, (metrics.responseTime / 1000) * 100)}%` }}
               />
             </div>
@@ -316,7 +316,7 @@ export const SystemMonitor: React.FC<SystemMonitorProps> = ({
           <div className="flex items-centerjustify-between">
             <h3 className="text-lg font-medium text-gray-900" id="system-alerts">System Alerts</h3>
             <div className="flex items-center space-x-2">
-              <div className={`w-2 h-2 rounded-full ${isMonitoring ? 'bg-green-500' : 'bg-gray-400'}` } />
+              <div className={`w-2 h-2 rounded-full ${isMonitoring ? 'bg-green-500' : 'bg-gray-400'}`} />
               <span className="text-smtext-gray-600">
                 {isMonitoring ? 'Monitoring' : 'Stopped'}
               </span>
@@ -342,7 +342,7 @@ export const SystemMonitor: React.FC<SystemMonitorProps> = ({
                   transition={{ delay: index * 0.1 }}
                   className={`p-4border-l-4 ${getAlertColor(alert.type)} ${
                     alert.resolved ? 'opacity-50' : ''
-                  }` }
+                  }`}
                 >
                   <div className="flex items-startjustify-between">
                     <div className="flex items-startspace-x-3">
@@ -355,7 +355,7 @@ export const SystemMonitor: React.FC<SystemMonitorProps> = ({
                             alert.severity === 'high' ? 'bg-orange-100 text-orange-800' :
                             alert.severity === 'medium' ? 'bg-yellow-100 text-yellow-800' :
                             'bg-gray-100 text-gray-800'
-                          }` }>
+                          }`}>
                             {alert.severity.toUpperCase()}
                           </span>
                         </div>
@@ -367,7 +367,7 @@ export const SystemMonitor: React.FC<SystemMonitorProps> = ({
                     </div>
                     
                     {alert.actions && !alert.resolved && (
-                      <div className="flexspace-x-2">
+                      <div className="flex space-x-2">
                         {alert.actions.map((action, actionIndex) => (
                           <button
                             key={actionIndex}
@@ -376,7 +376,7 @@ export const SystemMonitor: React.FC<SystemMonitorProps> = ({
                               action.variant === 'primary' ? 'bg-blue-600 text-white hover:bg-blue-700' :
                               action.variant === 'secondary' ? 'bg-gray-600 text-white hove, r:bg-gray-700' :
                               'bg-red-600 text-white hove, r:bg-red-700'
-                            }` }
+                            }`}
                            aria-label="{action.label}">
                             {action.label}
                           </button>

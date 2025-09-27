@@ -86,10 +86,10 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
   };
 
   return (
-    <div className="bg-white rounded-lg shadow-lgp-6">
+    <div className="bg-white rounded-lg shadow-lg p-6">
       <div className="flex items-center justify-between mb-6">
-        <h2 className="text-2xl font-bold text-gray-900 flexitems-center">
-          <BarChart 3 className="w-6h-6mr-2text-blue-600" />
+        <h2 className="text-2xl font-bold text-gray-900 flex items-center">
+          <BarChart 3 className="w-6 h-6 mr-2 text-blue-600" />
           Analytics Dashboard
         </h2>
         <div className="flex items-center text-smtext-gray-500">
@@ -99,7 +99,7 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
       </div>
 
       {/* Key Metrics */}
-      <div className="grid grid-cols-2 md:grid-cols-5 gap-4mb-6">
+      <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-6">
         <div className="bg-blue-50 rounded-lg p-4 text-center">
           <Eye className="w-6 h-6 mx-auto mb-2text-blue-600" />
           <div className="text-2xl font-boldtext-blue-600">{formatNumber(data.pageViews)}</div>
@@ -131,7 +131,7 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
       {enableRealTime && (
         <div className="bg-gray-50 rounded-lg p-4mb-6">
           <div className="flex items-center justify-between">
-            <div className="flexitems-center">
+            <div className="flex items-center">
               <Activity className="w-5 h-5 mr-2text-green-600" />
               <span className="font-medium text-gray-900">Real-time Users</span>
             </div>

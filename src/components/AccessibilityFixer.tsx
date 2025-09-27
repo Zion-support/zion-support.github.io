@@ -31,7 +31,7 @@ export const AccessibilityFixer: React.FC<AccessibilityFixerProps> = ({ onFix })
       <h3 className="text-lg font-semiboldmb-4">Accessibility Fixer</h3>
       <button
         onClick={fixAccessibilityIssues}
-        className="px-4py-2bg-blue-600 text-white roundedhover:bg-blue-700"
+        className="px-4 py-2 bg-blue-600 text-white roundedhover:bg-blue-700"
         aria-label="Fix accessibility issues"
       >
         Fix Accessibility Issues
