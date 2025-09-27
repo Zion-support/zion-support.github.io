@@ -148,6 +148,6 @@ export default function AccessibilityAuditor() {
 // Extend Window interface for gtag
 declare global {
   interface Window {
-    gtag: (...arg, s: any[]) => void;
+    gtag: (...args: any[]) => void;
   }
 }

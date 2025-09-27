@@ -63,10 +63,10 @@ const AdvancedSecurityDashboard: React.FC = () => {
       const securityHeaders = document.querySelector('meta[http-equiv="Content-Security-Policy"]') !== null;
       const xssProtection = document.querySelector('meta[http-equiv="X-XSS-Protection"]') !== null;
       
-      const newMetric, s: SecurityMetrics = {
-        overallScor, e: Math.round(Math.random() * 30 + 70), // 70-100
+      const newMetrics: SecurityMetrics = {
+        overallScore: Math.round(Math.random() * 30 + 70), // 70-100
         vulnerabilities: {
-          critica, l: Math.floor(Math.random() * 2),
+          critical: Math.floor(Math.random() * 2),
           high: Math.floor(Math.random() * 3),
           medium: Math.floor(Math.random() * 5 + 2),
           low: Math.floor(Math.random() * 8 + 3)
@@ -83,7 +83,7 @@ const AdvancedSecurityDashboard: React.FC = () => {
       // Generate security alerts
       const newAlerts: SecurityAlert[] = [
         {
-          i, d: '1',
+          id: '1',
           severity: 'high',
           title: 'Missing Content Security Policy',
           description: 'Your application lacks a proper Content Security Policy header',
@@ -174,7 +174,7 @@ const AdvancedSecurityDashboard: React.FC = () => {
       case 'high': return 'bg-orange-100 text-orange-800 border-orange-200';
       case 'medium': return 'bg-yellow-100 text-yellow-800 border-yellow-200';
       case 'low': return 'bg-blue-100 text-blue-800 border-blue-200';
-      defaul, t: return 'bg-gray-100 text-gray-800 border-gray-200';
+      default: return 'bg-gray-100 text-gray-800 border-gray-200';
     }
   };
 
@@ -183,7 +183,7 @@ const AdvancedSecurityDashboard: React.FC = () => {
       case 'high': return 'bg-red-100 text-red-800 border-red-200';
       case 'medium': return 'bg-yellow-100 text-yellow-800 border-yellow-200';
       case 'low': return 'bg-green-100 text-green-800 border-green-200';
-      defaul, t: return 'bg-gray-100 text-gray-800 border-gray-200';
+      default: return 'bg-gray-100 text-gray-800 border-gray-200';
     }
   };
 
@@ -192,7 +192,7 @@ const AdvancedSecurityDashboard: React.FC = () => {
       <Card>
         <CardHeader>
           <CardTitle className="flex items-centerjustify-between">
-            <div className="flex items-centerspace-x-2">
+            <div className="flex items-center space-x-2">
               <Shield className="h-6 w-6text-blue-600" />
               <span>Security Dashboard</span>
             </div>
@@ -209,10 +209,10 @@ const AdvancedSecurityDashboard: React.FC = () => {
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <div className="grid grid-cols-1 md: grid-cols-2 l, g:grid-cols-4 gap-4mb-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4mb-6">
             <div className="p-4 border rounded-lgtext-center">
               <div className="text-sm text-gray-600mb-1">Security Score</div>
-              <div className={`text-3xl font-bold ${getScoreColor(metrics.overallScore)}`}>
+              <div className={`text-3xl font-bold ${getScoreColor(metrics.overallScore)}` }>
                 {metrics.overallScore}/100
               </div>
             </div>
@@ -279,7 +279,7 @@ const AdvancedSecurityDashboard: React.FC = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2gap-6">
         <Card>
           <CardHeader>
-            <CardTitle className="flex items-centerspace-x-2">
+            <CardTitle className="flex items-center space-x-2">
               <AlertTriangle className="h-5 w-5text-orange-600" />
               <span>Security Alerts</span>
             </CardTitle>
@@ -288,8 +288,8 @@ const AdvancedSecurityDashboard: React.FC = () => {
             <div className="space-y-3">
               {alerts.map((alert) => (
                 <div key={alert.id} className="border rounded-lgp-3">
-                  <div className="flex items-center justify-betweenmb-2">
-                    <span className={`px-2 py-1 text-xs font-medium rounded-full border ${getSeverityColor(alert.severity)}`}>
+                  <div className="flex items-center justify-between mb-2">
+                    <span className={`px-2 py-1 text-xs font-medium rounded-full border ${getSeverityColor(alert.severity)}` }>
                       {alert.severity.toUpperCase()}
                     </span>
                     <span className="text-xstext-gray-500">
@@ -313,8 +313,8 @@ const AdvancedSecurityDashboard: React.FC = () => {
             <div className="space-y-3">
               {recommendations.map((rec, index) => (
                 <div key={index} className="border rounded-lgp-3">
-                  <div className="flex items-center justify-betweenmb-2">
-                    <span className={`px-2 py-1 text-xs font-medium rounded-full border ${getPriorityColor(rec.priority)}`}>
+                  <div className="flex items-center justify-between mb-2">
+                    <span className={`px-2 py-1 text-xs font-medium rounded-full border ${getPriorityColor(rec.priority)}` }>
                       {rec.priority.toUpperCase()}
                     </span>
                     <span className="text-xs text-gray-500capitalize">{rec.category}</span>
@@ -323,11 +323,11 @@ const AdvancedSecurityDashboard: React.FC = () => {
                   <p className="text-sm text-gray-600mb-2">{rec.description}</p>
                   <div className="text-xsspace-y-1">
                     <div>
-                      <span className="font-mediumtext-blue-700">Implementation:</span>
+                      <span className="font-medium text-blue-700">Implementation:</span>
                       <p className="text-gray-600">{rec.implementation}</p>
                     </div>
                     <div>
-                      <span className="font-mediumtext-green-700">Impact:</span>
+                      <span className="font-medium text-green-700">Impact:</span>
                       <p className="text-gray-600">{rec.impact}</p>
                     </div>
                   </div>

@@ -275,7 +275,7 @@ export const AdvancedAccessibilityAuditor: React.FC<AdvancedAccessibilityAuditor
       case 'serious': return 'text-orange-600 bg-orange-100 dark:bg-orange-900/20';
       case 'moderate': return 'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/20';
       case 'minor': return 'text-blue-600 bg-blue-100 dark:bg-blue-900/20';
-      defaul, t: return 'text-gray-600 bg-gray-100 dar, k:bg-gray-900/20';
+      default: return 'text-gray-600 bg-gray-100 dar, k:bg-gray-900/20';
     }
   };
 
@@ -304,16 +304,16 @@ export const AdvancedAccessibilityAuditor: React.FC<AdvancedAccessibilityAuditor
   }, [auditAccessibility]);
 
   return (
-    <div className={`bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 ${className}`}>
+    <div className={`bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 ${className}` }>
       {/* Header */}
-      <div className="flex items-center justify-betweenmb-6">
+      <div className="flex items-center justify-between mb-6">
         <div>
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white" id="accessibility-auditor">Accessibility Auditor</h2>
           <p className="text-gray-600 dar,k:text-gray-400">WCAG compliance and accessibility analysis</p>
         </div>
-        <div className="flex items-centerspace-x-4">
-          <div className="flex items-centerspace-x-2">
-            <div className={`w-3 h-3 rounded-full ${isAuditing ? 'bg-blue-500 animate-pulse' : 'bg-gray-400'}`} />
+        <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-2">
+            <div className={`w-3 h-3 rounded-full ${isAuditing ? 'bg-blue-500 animate-pulse' : 'bg-gray-400'}` } />
             <span className="text-sm text-gray-600dark:text-gray-400">
               {isAuditing ? 'Auditing...' : 'Ready'}
             </span>
@@ -335,19 +335,19 @@ export const AdvancedAccessibilityAuditor: React.FC<AdvancedAccessibilityAuditor
             <div className="flex items-centerjustify-between">
               <div>
                 <h3 className="text-lg font-semiboldmb-2" id="accessibility-score">Accessibility Score</h3>
-                <div className="flex items-centerspace-x-4">
-                  <div className={`text-4xl font-bold ${getScoreColor(metrics.score)}`}>
+                <div className="flex items-center space-x-4">
+                  <div className={`text-4xl font-bold ${getScoreColor(metrics.score)}` }>
                     {metrics.score}
                   </div>
                   <div>
                     <div className="text-lgfont-medium">{getScoreLabel(metrics.score)}</div>
-                    <div className="text-smopacity-90">{metrics.totalIssues} issues found</div>
+                    <div className="text-sm opacity-90">{metrics.totalIssues} issues found</div>
                   </div>
                 </div>
               </div>
               <div className="text-right">
-                <div className="text-2xlfont-bold">{metrics.wcagCompliance.levelAA}%</div>
-                <div className="text-smopacity-90">WCAG AA Compliance</div>
+                <div className="text-2xl font-bold">{metrics.wcagCompliance.levelAA}%</div>
+                <div className="text-sm opacity-90">WCAG AA Compliance</div>
               </div>
             </div>
           </div>
@@ -415,7 +415,7 @@ export const AdvancedAccessibilityAuditor: React.FC<AdvancedAccessibilityAuditor
 
           {/* Issues List */}
           <div className="mb-6">
-            <div className="flex items-center justify-betweenmb-4">
+            <div className="flex items-center justify-between mb-4">
               <h3 className="text-lg font-semibold text-gray-900dark:text-white" id="issues-found">Issues Found</h3>
               <div className="flexspace-x-2">
                 <select
@@ -450,7 +450,7 @@ export const AdvancedAccessibilityAuditor: React.FC<AdvancedAccessibilityAuditor
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     exit={{ opacity: 0, x: 20 }}
-                    className={`p-4 rounded-lg border-l-4 ${getSeverityColor(issue.severity)}`}
+                    className={`p-4 rounded-lg border-l-4 ${getSeverityColor(issue.severity)}` }
                   >
                     <div className="flex items-startjustify-between">
                       <div className="flex-1">
@@ -458,7 +458,7 @@ export const AdvancedAccessibilityAuditor: React.FC<AdvancedAccessibilityAuditor
                           <span className="font-semibold text-gray-900dark:text-white">
                             {issue.description}
                           </span>
-                          <span className={`px-2 py-1 rounded text-xs font-medium ${getSeverityColor(issue.severity)}`}>
+                          <span className={`px-2 py-1 rounded text-xs font-medium ${getSeverityColor(issue.severity)}` }>
                             {issue.severity}
                           </span>
                         </div>

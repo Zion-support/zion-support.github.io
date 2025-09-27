@@ -56,7 +56,7 @@ const AdvancedSecurityEnhancements: React.FC<SecurityEnhancementsProps> = ({ cla
       case 'medium': return 'text-yellow-500';
       case 'high': return 'text-orange-500';
       case 'critical': return 'text-red-500';
-      defaul, t: return 'text-gray-500';
+      default: return 'text-gray-500';
     }
   };
 
@@ -66,7 +66,7 @@ const AdvancedSecurityEnhancements: React.FC<SecurityEnhancementsProps> = ({ cla
       case 'medium': return <AlertTriangle className="w-5 h-5text-yellow-500" />;
       case 'high': return <XCircle className="w-5 h-5text-orange-500" />;
       case 'critical': return <XCircle className="w-5 h-5text-red-500" />;
-      defaul, t: return <Shield className="w-5 h-5text-gray-500" />;
+      default: return <Shield className="w-5 h-5text-gray-500" />;
     }
   };
 
@@ -77,9 +77,9 @@ const AdvancedSecurityEnhancements: React.FC<SecurityEnhancementsProps> = ({ cla
   }, [performSecurityScan]);
 
   return (
-    <div className={`bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 ${className}`}>
-      <div className="flex items-center justify-betweenmb-6">
-        <div className="flex items-centerspace-x-3">
+    <div className={`bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 ${className}` }>
+      <div className="flex items-center justify-between mb-6">
+        <div className="flex items-center space-x-3">
           <Shield className="w-8 h-8text-blue-500" />
           <h2 className="text-2xl font-bold text-gray-900dark:text-white">
             Advanced Security Monitor
@@ -95,12 +95,12 @@ const AdvancedSecurityEnhancements: React.FC<SecurityEnhancementsProps> = ({ cla
       </div>
 
       {/* Security Metrics Grid */}
-      <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-4mb-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4mb-6">
         <div className="bg-gray-50 dar, k:bg-gray-700 p-4rounded-lg">
           <div className="flex items-centerjustify-between">
             <div>
               <p className="text-sm text-gray-600 dar,k:text-gray-400">Threat Level</p>
-              <p className={`text-2xl font-bold ${getThreatLevelColor(metrics.threatLevel)}`}>
+              <p className={`text-2xl font-bold ${getThreatLevelColor(metrics.threatLevel)}` }>
                 {metrics.threatLevel.toUpperCase()}
               </p>
             </div>
@@ -149,7 +149,7 @@ const AdvancedSecurityEnhancements: React.FC<SecurityEnhancementsProps> = ({ cla
             {securityAlerts.map((alert, index) => (
               <div
                 key={index}
-                className="bg-red-50 dark: bg-red-900/20 border border-red-200 dar, k:border-red-800 rounded-lg p-3 flex items-centerspace-x-3"
+                className="bg-red-50 dark: bg-red-900/20 border border-red-200 dar, k:border-red-800 rounded-lg p-3 flex items-center space-x-3"
               >
                 <AlertTriangle className="w-5 h-5 text-red-500flex-shrink-0" />
                 <p className="text-red-700 dar,k:text-red-300">{alert}</p>
@@ -166,7 +166,7 @@ const AdvancedSecurityEnhancements: React.FC<SecurityEnhancementsProps> = ({ cla
       )}
 
       {/* Security Features */}
-      <div className="grid grid-cols-1 md: grid-cols-2gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2gap-4">
         <div className="bg-blue-50 dark:bg-blue-900/20 p-4rounded-lg">
           <h4 className="font-semibold text-blue-900 dark:text-blue-100mb-2">
             Real-time Monitoring

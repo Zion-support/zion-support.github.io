@@ -216,7 +216,7 @@ export const SystemMonitor: React.FC<SystemMonitorProps> = ({
   return (
     <div className="space-y-6">
       {/* System Status Overview */}
-      <div className="grid grid-cols-1 md: grid-cols-2 l, g:grid-cols-4gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4gap-4">
         <motion.div
           initial={{ opacit, y: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -224,7 +224,7 @@ export const SystemMonitor: React.FC<SystemMonitorProps> = ({
         >
           <div className="flex items-centerjustify-between">
             <div>
-              <p className="text-sm font-mediumtext-gray-600">CPU Usage</p>
+              <p className="text-sm font-medium text-gray-600">CPU Usage</p>
               <p className="text-2xl font-boldtext-gray-900">{metrics.cpu.toFixed(1)}%</p>
             </div>
             <Server className="h-8 w-8text-blue-500" />
@@ -235,7 +235,7 @@ export const SystemMonitor: React.FC<SystemMonitorProps> = ({
                 className={`h-2 rounded-full transition-all duration-500 ${
                   metrics.cpu > 90 ? 'bg-red-500' : 
                   metrics.cpu > 70 ? 'bg-yellow-500' : 'bg-green-500'
-                }`}
+                }` }
                 style={{ width: `${metrics.cpu}%` }}
               />
             </div>
@@ -250,7 +250,7 @@ export const SystemMonitor: React.FC<SystemMonitorProps> = ({
         >
           <div className="flex items-centerjustify-between">
             <div>
-              <p className="text-sm font-mediumtext-gray-600">Memory Usage</p>
+              <p className="text-sm font-medium text-gray-600">Memory Usage</p>
               <p className="text-2xl font-boldtext-gray-900">{metrics.memory.toFixed(1)}%</p>
             </div>
             <Database className="h-8 w-8text-green-500" />
@@ -261,7 +261,7 @@ export const SystemMonitor: React.FC<SystemMonitorProps> = ({
                 className={`h-2 rounded-full transition-all duration-500 ${
                   metrics.memory > 85 ? 'bg-red-500' : 
                   metrics.memory > 70 ? 'bg-yellow-500' : 'bg-green-500'
-                }`}
+                }` }
                 style={{ width: `${metrics.memory}%` }}
               />
             </div>
@@ -276,7 +276,7 @@ export const SystemMonitor: React.FC<SystemMonitorProps> = ({
         >
           <div className="flex items-centerjustify-between">
             <div>
-              <p className="text-sm font-mediumtext-gray-600">Response Time</p>
+              <p className="text-sm font-medium text-gray-600">Response Time</p>
               <p className="text-2xl font-boldtext-gray-900">{metrics.responseTime.toFixed(0)}ms</p>
             </div>
             <Activity className="h-8 w-8text-purple-500" />
@@ -287,7 +287,7 @@ export const SystemMonitor: React.FC<SystemMonitorProps> = ({
                 className={`h-2 rounded-full transition-all duration-500 ${
                   metrics.responseTime > 1000 ? 'bg-red-500' : 
                   metrics.responseTime > 500 ? 'bg-yellow-500' : 'bg-green-500'
-                }`}
+                }` }
                 style={{ width: `${Math.min(100, (metrics.responseTime / 1000) * 100)}%` }}
               />
             </div>
@@ -302,7 +302,7 @@ export const SystemMonitor: React.FC<SystemMonitorProps> = ({
         >
           <div className="flex items-centerjustify-between">
             <div>
-              <p className="text-sm font-mediumtext-gray-600">Uptime</p>
+              <p className="text-sm font-medium text-gray-600">Uptime</p>
               <p className="text-2xl font-boldtext-gray-900">{formatUptime(metrics.uptime)}</p>
             </div>
             <Globe className="h-8 w-8text-indigo-500" />
@@ -314,9 +314,9 @@ export const SystemMonitor: React.FC<SystemMonitorProps> = ({
       <div className="bg-white rounded-lg shadow-sm borderborder-gray-200">
         <div className="px-6 py-4 border-bborder-gray-200">
           <div className="flex items-centerjustify-between">
-            <h3 className="text-lg font-mediumtext-gray-900" id="system-alerts">System Alerts</h3>
-            <div className="flex items-centerspace-x-2">
-              <div className={`w-2 h-2 rounded-full ${isMonitoring ? 'bg-green-500' : 'bg-gray-400'}`} />
+            <h3 className="text-lg font-medium text-gray-900" id="system-alerts">System Alerts</h3>
+            <div className="flex items-center space-x-2">
+              <div className={`w-2 h-2 rounded-full ${isMonitoring ? 'bg-green-500' : 'bg-gray-400'}` } />
               <span className="text-smtext-gray-600">
                 {isMonitoring ? 'Monitoring' : 'Stopped'}
               </span>
@@ -342,20 +342,20 @@ export const SystemMonitor: React.FC<SystemMonitorProps> = ({
                   transition={{ delay: index * 0.1 }}
                   className={`p-4 border-l-4 ${getAlertColor(alert.type)} ${
                     alert.resolved ? 'opacity-50' : ''
-                  }`}
+                  }` }
                 >
                   <div className="flex items-startjustify-between">
                     <div className="flex items-startspace-x-3">
                       {getAlertIcon(alert.type)}
                       <div className="flex-1">
-                        <div className="flex items-centerspace-x-2">
-                          <h4 className="text-sm font-mediumtext-gray-900" id="alerttitle">{alert.title}</h4>
+                        <div className="flex items-center space-x-2">
+                          <h4 className="text-sm font-medium text-gray-900" id="alerttitle">{alert.title}</h4>
                           <span className={`text-xs font-medium px-2 py-1 rounded-full ${
                             alert.severity === 'critical' ? 'bg-red-100 text-red-800' :
                             alert.severity === 'high' ? 'bg-orange-100 text-orange-800' :
                             alert.severity === 'medium' ? 'bg-yellow-100 text-yellow-800' :
                             'bg-gray-100 text-gray-800'
-                          }`}>
+                          }` }>
                             {alert.severity.toUpperCase()}
                           </span>
                         </div>
@@ -376,7 +376,7 @@ export const SystemMonitor: React.FC<SystemMonitorProps> = ({
                               action.variant === 'primary' ? 'bg-blue-600 text-white hover:bg-blue-700' :
                               action.variant === 'secondary' ? 'bg-gray-600 text-white hove, r:bg-gray-700' :
                               'bg-red-600 text-white hove, r:bg-red-700'
-                            }`}
+                            }` }
                            aria-label="{action.label}">
                             {action.label}
                           </button>

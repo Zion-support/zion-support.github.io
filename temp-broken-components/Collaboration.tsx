@@ -74,7 +74,7 @@ export default function Collaboration({ isDarkMode }: CollaborationProps): JSX.E
         return 'text-yellow-600 dark:text-yellow-400';
       case 'disconnected':
         return 'text-red-600 dark:text-red-400';
-      defaul, t:
+      default:
         return 'text-gray-600 dar, k:text-gray-400';
     }
   };
@@ -96,14 +96,14 @@ export default function Collaboration({ isDarkMode }: CollaborationProps): JSX.E
       isDarkMode 
         ? 'bg-gray-800 border-gray-700 hover:border-gray-600' 
         : 'bg-white border-gray-200 hove, r:border-gray-300'
-    }`}>
-      <div className="flex items-center justify-betweenmb-6">
+    }` }>
+      <div className="flex items-center justify-between mb-6">
         <h3 className="text-xl font-semibold text-gray-900dark:text-white">
           Team Collaboration
         </h3>
-        <div className="flex items-centerspace-x-2">
-          <div className={`w-3 h-3 rounded-full ${getStatusColor(isOnline)}`}></div>
-          <span className={`text-sm font-medium ${getConnectionStatusColor()}`}>
+        <div className="flex items-center space-x-2">
+          <div className={`w-3 h-3 rounded-full ${getStatusColor(isOnline)}` }></div>
+          <span className={`text-sm font-medium ${getConnectionStatusColor()}` }>
             {connectionStatus}
           </span>
         </div>
@@ -121,11 +121,11 @@ export default function Collaboration({ isDarkMode }: CollaborationProps): JSX.E
               </div>
               <div className={`absolute -bottom-1 -right-1 w-4 h-4 rounded-full border-2 ${
                 isDarkMode ? 'border-gray-800' : 'border-white'
-              } ${getStatusColor(user.isActive)}`}></div>
+              } ${getStatusColor(user.isActive)}` }></div>
             </div>
             
             <div className="flex-1min-w-0">
-              <div className="flex items-centerspace-x-2">
+              <div className="flex items-center space-x-2">
                 <p className="text-sm font-medium text-gray-900 dark:text-whitetruncate">
                   {user.name}
                 </p>
@@ -136,11 +136,11 @@ export default function Collaboration({ isDarkMode }: CollaborationProps): JSX.E
                 )}
               </div>
               <p className="text-xs text-gray-500dark:text-gray-400">
-                {user.isActive ? 'Online now' : `Last seen ${formatLastSeen(user.lastSeen)}`}
+                {user.isActive ? 'Online now' : `Last seen ${formatLastSeen(user.lastSeen)}` }
               </p>
             </div>
 
-            <div className="flex items-centerspace-x-2">
+            <div className="flex items-center space-x-2">
               <button className="p-1 rounded-md hover:bg-gray-200 dark:hover:bg-gray-600transition-colors">
                 💬
               </button>

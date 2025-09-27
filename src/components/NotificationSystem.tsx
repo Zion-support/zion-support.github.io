@@ -153,7 +153,7 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
   }
 
   return (
-    <div className={`${getPositionClasses()} ${className}`}>
+    <div className={`${getPositionClasses()} ${className}` }>
       {notifications.map((notification) => (
         <div
           key={notification.id}
@@ -165,7 +165,7 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
                 {getIcon(notification.type)}
               </div>
               <div className="ml-3 w-0flex-1">
-                <p className="text-sm font-mediumtext-gray-900">
+                <p className="text-sm font-medium text-gray-900">
                   {notification.title}
                 </p>
                 <p className="mt-1 text-smtext-gray-500">
@@ -184,7 +184,7 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
                             : action.variant === 'danger'
                             ? 'text-red-600 hove, r:text-red-500'
                             : 'text-gray-600 hove, r:text-gray-500'
-                        }`}
+                        }` }
                        aria-label="{action.label}">
                         {action.label}
                       </button>

@@ -16,7 +16,7 @@ export class GlobalErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = {
-      hasErro, r: false,
+      hasError: false,
       error: null,
       errorInfo: null
     };
@@ -24,7 +24,7 @@ export class GlobalErrorBoundary extends Component<Props, State> {
 
   static getDerivedStateFromError(error: Error): State {
     return {
-      hasErro, r: true,
+      hasError: true,
       error,
       errorInfo: null
     };

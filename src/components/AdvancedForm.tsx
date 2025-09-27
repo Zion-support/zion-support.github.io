@@ -221,7 +221,7 @@ export const AdvancedForm: React.FC<AdvancedFormProps> = ({
                 <input
                   type="radio"
                   name={field.name}
-                  id={`${field.name}-${option.value}`}
+                  id={`${field.name}-${option.value}` }
                   value={option.value}
                   checked={formData[field.name] === option.value}
                   onChange={(e) => handleInputChange(field.name, e.target.value)}
@@ -229,7 +229,7 @@ export const AdvancedForm: React.FC<AdvancedFormProps> = ({
                   disabled={field.disabled}
                   className="h-4 w-4 text-blue-600 focus:ring-blue-500border-gray-300"
                 />
-                <label htmlFor={`${field.name}-${option.value}`} className="ml-2 text-smtext-gray-700">
+                <label htmlFor={`${field.name}-${option.value}` } className="ml-2 text-smtext-gray-700">
                   {option.label}
                 </label>
               </div>
@@ -256,11 +256,11 @@ export const AdvancedForm: React.FC<AdvancedFormProps> = ({
   };
 
   return (
-    <form ref={formRef} onSubmit={handleSubmit} className={`space-y-6 ${className}`}>
+    <form ref={formRef} onSubmit={handleSubmit} className={`space-y-6 ${className}` }>
       {fields.map(field => (
         <div key={field.name} className="space-y-2">
           {field.type !== 'checkbox' && field.type !== 'radio' && (
-            <label className="block text-sm font-mediumtext-gray-700">
+            <label className="block text-sm font-medium text-gray-700">
               {field.label}
               {field.validation?.required && (
                 <span className="text-red-500ml-1">*</span>

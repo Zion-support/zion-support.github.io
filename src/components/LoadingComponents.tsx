@@ -31,7 +31,7 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   return (
     <div 
       data-testid={dataTestId}
-      className={`animate-spin rounded-full border-2 border-gray-300 border-t-2 ${sizeClasses[size]} ${colorClasses[color]} ${className}`} 
+      className={`animate-spin rounded-full border-2 border-gray-300 border-t-2 ${sizeClasses[size]} ${colorClasses[color]} ${className}` } 
     />
   );
 };
@@ -62,7 +62,7 @@ export const LoadingDots: React.FC<LoadingDotsProps> = ({
   };
 
   return (
-    <div className={`flex space-x-1 ${className}`}>
+    <div className={`flex space-x-1 ${className}` }>
       {[0, 1, 2].map((index) => (
         <div
           key={index}
@@ -87,13 +87,13 @@ export const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({
   className = ''
 }) => {
   return (
-    <div className={`animate-pulse ${className}`}>
+    <div className={`animate-pulse ${className}` }>
       {Array.from({ length: lines }).map((_, index) => (
         <div
           key={index}
           className={`h-4 bg-gray-300 rounded mb-2 ${
             index === lines - 1 ? 'w-3/4' : 'w-full'
-          }`}
+          }` }
         />
       ))}
     </div>
@@ -114,7 +114,7 @@ export const LoadingCard: React.FC<LoadingCardProps> = ({
   className = ''
 }) => {
   return (
-    <div className={`bg-white rounded-lg shadow-sm border border-gray-200 p-6 ${className}`}>
+    <div className={`bg-white rounded-lg shadow-sm border border-gray-200 p-6 ${className}` }>
       <div className="animate-pulse">
         {showImage && (
           <div className="h-48 bg-gray-300 rounded-lgmb-4" />
@@ -153,7 +153,7 @@ export const LoadingButton: React.FC<LoadingButtonProps> = ({
   return (
     <button
       disabled
-      className={`inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 opacity-50 cursor-not-allowed ${className}`}
+      className={`inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 opacity-50 cursor-not-allowed ${className}` }
     >
       <LoadingSpinner size="sm" className="mr-2" />
       {text}
@@ -173,7 +173,7 @@ export const LoadingPage: React.FC<LoadingPageProps> = ({
   className = ''
 }) => {
   return (
-    <div className={`min-h-screen flex items-center justify-center bg-gray-50 ${className}`}>
+    <div className={`min-h-screen flex items-center justify-center bg-gray-50 ${className}` }>
       <div className="text-center">
         <LoadingSpinner size="xl" className="mx-automb-4" />
         <h2 className="text-xl font-semibold text-gray-900mb-2" id="title">{title}</h2>
@@ -195,7 +195,7 @@ export const LoadingTable: React.FC<LoadingTableProps> = ({
   className = ''
 }) => {
   return (
-    <div className={`bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden ${className}`}>
+    <div className={`bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden ${className}` }>
       <div className="animate-pulse">
         {/* Header */}
         <div className="bg-gray-50 px-6 py-3 border-bborder-gray-200">
@@ -231,7 +231,7 @@ export const LoadingChart: React.FC<LoadingChartProps> = ({
   className = ''
 }) => {
   return (
-    <div className={`bg-white rounded-lg shadow-sm border border-gray-200 p-6 ${className}`}>
+    <div className={`bg-white rounded-lg shadow-sm border border-gray-200 p-6 ${className}` }>
       <div className="animate-pulse">
         <div className="h-6 bg-gray-300 rounded w-1/3mb-4" />
         <div className="h-64 bg-gray-200 rounded-lg flex items-centerjustify-center">
@@ -280,7 +280,7 @@ export const ServiceCardSkeleton: React.FC<{ className?: string }> = ({
   className = ''
 }) => {
   return (
-    <div className={`animate-pulse bg-white rounded-lg shadow p-6 ${className}`}>
+    <div className={`animate-pulse bg-white rounded-lg shadow p-6 ${className}` }>
       <div className="h-4 bg-gray-300 rounded w-3/4mb-2"></div>
       <div className="h-3 bg-gray-300 rounded w-1/2mb-4"></div>
       <div className="h-20 bg-gray-300 roundedmb-4"></div>
@@ -293,7 +293,7 @@ export const FeatureCardSkeleton: React.FC<{ className?: string }> = ({
   className = ''
 }) => {
   return (
-    <div className={`animate-pulse bg-white rounded-lg shadow p-6 ${className}`}>
+    <div className={`animate-pulse bg-white rounded-lg shadow p-6 ${className}` }>
       <div className="h-6 bg-gray-300 rounded w-1/2mb-2"></div>
       <div className="h-4 bg-gray-300 rounded w-3/4mb-4"></div>
       <div className="h-16 bg-gray-300 roundedmb-4"></div>

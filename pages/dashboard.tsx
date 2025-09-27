@@ -3,30 +3,30 @@ import Head from 'next/head';
 import dynamic from 'next/dynamic';
 
 // Lazy load heavy components to reduce initial bundle size
-const PerformanceDashboard = dynamic(() => import('../src/components/PerformanceDashboard').then(mod => ({ default: mod.PerformanceDashboard })), {
-  ssr: false,
-  loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
-});
+// const PerformanceDashboard = dynamic(() => import('../src/components/PerformanceDashboard').then(mod => ({ default: mod.PerformanceDashboard })), {
+//   ssr: false,
+//   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+// });
 
-const SecurityDashboard = dynamic(() => import('../src/components/SecurityDashboard').then(mod => ({ default: mod.SecurityDashboard })), {
-  ssr: false,
-  loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
-});
+// const SecurityDashboard = dynamic(() => import('../src/components/SecurityDashboard').then(mod => ({ default: mod.SecurityDashboard })), {
+//   ssr: false,
+//   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+// });
 
-const AnalyticsDashboard = dynamic(() => import('../src/components/AnalyticsDashboard').then(mod => ({ default: mod.AnalyticsDashboard })), {
-  ssr: false,
-  loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
-});
+// const AnalyticsDashboard = dynamic(() => import('../src/components/AnalyticsDashboard').then(mod => ({ default: mod.AnalyticsDashboard })), {
+//   ssr: false,
+//   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+// });
 
 const EnhancedDashboard = dynamic(() => import('../src/components/EnhancedDashboard'), {
   ssr: false,
   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
 });
 
-const EnhancedSearch = dynamic(() => import('../src/components/EnhancedSearch'), {
-  ssr: false,
-  loading: () => <div className="h-32 w-full bg-gray-200 rounded animate-pulse" />
-});
+// const EnhancedSearch = dynamic(() => import('../src/components/EnhancedSearch'), {
+//   ssr: false,
+//   loading: () => <div className="h-32 w-full bg-gray-200 rounded animate-pulse" />
+// });
 
 const ComprehensiveAnalyticsDashboard = dynamic(() => import('../src/components/ComprehensiveAnalyticsDashboard'), {
   ssr: false,
@@ -38,10 +38,10 @@ const AdvancedPerformanceMonitor = dynamic(() => import('../src/components/Advan
   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
 });
 
-const AdvancedAnalyticsDashboard = dynamic(() => import('../src/components/AdvancedAnalyticsDashboard').then(mod => ({ default: mod.AdvancedAnalyticsDashboard })), {
-  ssr: false,
-  loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
-});
+// const AdvancedAnalyticsDashboard = dynamic(() => import('../src/components/AdvancedAnalyticsDashboard').then(mod => ({ default: mod.AdvancedAnalyticsDashboard })), {
+//   ssr: false,
+//   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+// });
 
 const AdvancedSecurityMonitor = dynamic(() => import('../src/components/AdvancedSecurityMonitor').then(mod => ({ default: mod.AdvancedSecurityMonitor })), {
   ssr: false,
@@ -73,10 +73,10 @@ const EnhancedAnalytics = dynamic(() => import('../src/components/EnhancedAnalyt
   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
 });
 
-const AdvancedErrorHandler = dynamic(() => import('../src/components/AdvancedErrorHandler'), {
-  ssr: false,
-  loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
-});
+// const AdvancedErrorHandler = dynamic(() => import('../src/components/AdvancedErrorHandler'), {
+//   ssr: false,
+//   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+// });
 
 const AdvancedPerformanceOptimizer = dynamic(() => import('../src/components/AdvancedPerformanceOptimizer'), {
   ssr: false,
@@ -93,10 +93,10 @@ const AdvancedAnalyticsInsights = dynamic(() => import('../src/components/Advanc
   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
 });
 
-const AdvancedErrorMonitoring = dynamic(() => import('../src/components/AdvancedErrorMonitoring'), {
-  ssr: false,
-  loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
-});
+// const AdvancedErrorMonitoring = dynamic(() => import('../src/components/AdvancedErrorMonitoring'), {
+//   ssr: false,
+//   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+// });
 
 const AdvancedSystemMonitor = dynamic(() => import('../src/components/AdvancedSystemMonitor'), {
   ssr: false,
@@ -204,11 +204,11 @@ const Dashboard: React.FC = () => {
       case 'comprehensive':
         return <ComprehensiveAnalyticsDashboard />;
       case 'analytics':
-        return <AnalyticsDashboard />;
+        return <div>Analytics Dashboard (temporarily disabled)</div>;
       case 'performance':
-        return <PerformanceDashboard />;
+        return <div>Performance Dashboard (temporarily disabled)</div>;
       case 'security':
-        return <SecurityDashboard />;
+        return <div>Security Dashboard (temporarily disabled)</div>;
       case 'enhanced':
         return <EnhancedDashboard />;
       case 'search':
@@ -216,13 +216,13 @@ const Dashboard: React.FC = () => {
           <div className="p-8">
             <h1 className="text-3xl font-bold text-gray-900 mb-8">Enhanced Search</h1>
             <div className="max-w-2xl">
-              <EnhancedSearch 
+              {/* <EnhancedSearch 
                 onSearch={(query, results) => console.log('Search:', query, results)}
                 onResultClick={(result) => console.log('Result clicked:', result)}
                 enableFilters={true}
                 enableSuggestions={true}
                 enableHistory={true}
-              />
+              /> */}
             </div>
           </div>
         );
@@ -249,10 +249,10 @@ const Dashboard: React.FC = () => {
                 </button>
               </div>
             </div>
-            <AdvancedAnalyticsDashboard 
+            {/* <AdvancedAnalyticsDashboard 
               data={sampleAnalyticsData}
               onDataRefresh={() => console.log('Refreshing analytics data...')}
-            />
+            /> */}
           </div>
         );
       case 'advanced-performance':
@@ -358,7 +358,7 @@ const Dashboard: React.FC = () => {
                 </button>
               </div>
             </div>
-            <PerformanceDashboard />
+            {/* <PerformanceDashboard /> */}
           </div>
         );
       case 'new-security':
@@ -442,7 +442,7 @@ const Dashboard: React.FC = () => {
         return (
           <div className="p-8">
             <h1 className="text-3xl font-bold text-gray-900 mb-8">Advanced Error Monitoring</h1>
-            <AdvancedErrorMonitoring />
+            {/* <AdvancedErrorMonitoring /> */}
           </div>
         );
       case 'advanced-system-monitor':
@@ -466,7 +466,7 @@ const Dashboard: React.FC = () => {
                 </button>
               </div>
             </div>
-            <AdvancedErrorHandler 
+            {/* <AdvancedErrorHandler 
               onError={(error) => console.log('Error captured:', error)}
               onPerformanceIssue={(issue) => console.log('Performance issue:', issue)}
               enableAutoRetry={true}
@@ -474,7 +474,7 @@ const Dashboard: React.FC = () => {
               enablePerformanceMonitoring={true}
               enableErrorReporting={true}
               enableUserFeedback={true}
-            />
+            /> */}
           </div>
         );
       case 'performance-optimizer':
@@ -610,7 +610,7 @@ const Dashboard: React.FC = () => {
                 </button>
               </div>
             </div>
-            <AdvancedErrorMonitoring />
+            {/* <AdvancedErrorMonitoring /> */}
           </div>
         );
       case 'advanced-system-monitor':

@@ -97,25 +97,25 @@ const PerformanceDashboard: React.FC = () => {
 
   return (
     <div className="bg-white rounded-lg shadow-mdp-6">
-      <div className="flex items-center justify-betweenmb-6">
+      <div className="flex items-center justify-between mb-6">
         <h2 className="text-xl font-semiboldtext-gray-900">Performance Dashboard</h2>
         <button
-          onClick={() =>setIsVisible(!isVisible)}
+          onClick={() => setIsVisible(!isVisible)}
           className="text-sm text-blue-600hover:text-blue-800"
         </button>
       </div>
 
       {/* Overall Performance Score */}
       <div className="mb-6">
-        <div className="flex items-center justify-betweenmb-2">
-          <span className="text-sm font-mediumtext-gray-700">Overall Score</span>
-          <span className={`text-2xl font-bold ${getScoreColor(performanceScore)}`}>
+        <div className="flex items-center justify-between mb-2">
+          <span className="text-sm font-medium text-gray-700">Overall Score</span>
+          <span className={`text-2xl font-bold ${getScoreColor(performanceScore)}` }>
             {performanceScore}
           </span>
         </div>
         <div className="w-full bg-gray-200 rounded-fullh-2">
           <div
-            className={`h-2 rounded-full ${getScoreBgColor(performanceScore)}`}
+            className={`h-2 rounded-full ${getScoreBgColor(performanceScore)}` }
             style={{ width: `${performanceScore}%` }}
           ></div>
         </div>
@@ -124,9 +124,9 @@ const PerformanceDashboard: React.FC = () => {
       {/* Core Web Vitals */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4mb-6">
         <div className="p-4 borderrounded-lg">
-          <div className="flex items-center justify-betweenmb-2">
-            <span className="text-sm font-mediumtext-gray-700">LCP</span>
-            <span className={`text-sm font-bold ${getVitalColor(getVitalScore('LCP', vitals.LCP))}`}>
+          <div className="flex items-center justify-between mb-2">
+            <span className="text-sm font-medium text-gray-700">LCP</span>
+            <span className={`text-sm font-bold ${getVitalColor(getVitalScore('LCP', vitals.LCP))}` }>
               {vitals.LCP ? `${Math.round(vitals.LCP)}ms` : 'N/A'}
             </span>
           </div>
@@ -134,9 +134,9 @@ const PerformanceDashboard: React.FC = () => {
         </div>
 
         <div className="p-4 borderrounded-lg">
-          <div className="flex items-center justify-betweenmb-2">
-            <span className="text-sm font-mediumtext-gray-700">FID</span>
-            <span className={`text-sm font-bold ${getVitalColor(getVitalScore('FID', vitals.FID))}`}>
+          <div className="flex items-center justify-between mb-2">
+            <span className="text-sm font-medium text-gray-700">FID</span>
+            <span className={`text-sm font-bold ${getVitalColor(getVitalScore('FID', vitals.FID))}` }>
               {vitals.FID ? `${Math.round(vitals.FID)}ms` : 'N/A'}
             </span>
           </div>
@@ -144,9 +144,9 @@ const PerformanceDashboard: React.FC = () => {
         </div>
 
         <div className="p-4 borderrounded-lg">
-          <div className="flex items-center justify-betweenmb-2">
-            <span className="text-sm font-mediumtext-gray-700">CLS</span>
-            <span className={`text-sm font-bold ${getVitalColor(getVitalScore('CLS', vitals.CLS))}`}>
+          <div className="flex items-center justify-between mb-2">
+            <span className="text-sm font-medium text-gray-700">CLS</span>
+            <span className={`text-sm font-bold ${getVitalColor(getVitalScore('CLS', vitals.CLS))}` }>
               {vitals.CLS ? vitals.CLS.toFixed(3) : 'N/A'}
             </span>
           </div>
@@ -154,7 +154,7 @@ const PerformanceDashboard: React.FC = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md: grid-cols-2 l, g:grid-cols-4gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4gap-4">
         <AnimatePresence>
           {metrics.map((metric, index) => (
             <motion.div
@@ -165,14 +165,14 @@ const PerformanceDashboard: React.FC = () => {
               transition={{ delay: index * 0.1 }}
               className="bg-gray-50 rounded-lg p-4 borderborder-gray-200"
             >
-              <div className="flex items-center justify-betweenmb-2">
+              <div className="flex items-center justify-between mb-2">
                 <h3 className="font-medium text-gray-900text-sm" id="metricname">{metric.name}</h3>
-                <div className={`flex items-center px-2 py-1 rounded-full text-xs ${getStatusColor(metric.status)}`}>
+                <div className={`flex items-center px-2 py-1 rounded-full text-xs ${getStatusColor(metric.status)}` }>
                   {getStatusIcon(metric.status)}
                 </div>
               </div>
               
-              <div className="flex items-center justify-betweenmb-2">
+              <div className="flex items-center justify-between mb-2">
                 <span className="text-2xl font-boldtext-gray-900">
                   {metric.value.toFixed(metric.unit === 'score' ? 2 : 0)}
                 </span>
@@ -193,7 +193,7 @@ const PerformanceDashboard: React.FC = () => {
       {/* Detailed Metrics */}
       {isVisible && metrics && (
         <div className="space-y-4">
-          <h3 className="text-lg font-mediumtext-gray-900">Detailed Metrics</h3>
+          <h3 className="text-lg font-medium text-gray-900">Detailed Metrics</h3>
           
           <div className="grid grid-cols-1 md:grid-cols-2gap-4">
             <div className="p-3 bg-gray-50rounded">

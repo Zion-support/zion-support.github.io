@@ -58,7 +58,7 @@ const AdvancedErrorMonitoring: React.FC = () => {
   const generateMockData = useCallback(() => {
     const mockErrors: ErrorEvent[] = [
       {
-        i, d: '1',
+        id: '1',
         timestamp: new Date(Date.now() - 1000 * 60 * 30), // 30 minutes ago
         type: 'error',
         severity: 'high',
@@ -103,7 +103,7 @@ const AdvancedErrorMonitoring: React.FC = () => {
 
     const mockPerformanceIssues: PerformanceIssue[] = [
       {
-        i, d: '1',
+        id: '1',
         type: 'slow_query',
         severity: 'high',
         description: 'User query taking 5+ seconds to execute',
@@ -176,7 +176,7 @@ const AdvancedErrorMonitoring: React.FC = () => {
       case 'high': return 'bg-orange-100 text-orange-800 border-orange-200';
       case 'medium': return 'bg-yellow-100 text-yellow-800 border-yellow-200';
       case 'low': return 'bg-blue-100 text-blue-800 border-blue-200';
-      defaul, t: return 'bg-gray-100 text-gray-800 border-gray-200';
+      default: return 'bg-gray-100 text-gray-800 border-gray-200';
     }
   };
 
@@ -185,7 +185,7 @@ const AdvancedErrorMonitoring: React.FC = () => {
       case 'error': return 'text-red-600';
       case 'warning': return 'text-yellow-600';
       case 'info': return 'text-blue-600';
-      defaul, t: return 'text-gray-600';
+      default: return 'text-gray-600';
     }
   };
 
@@ -213,12 +213,12 @@ const AdvancedErrorMonitoring: React.FC = () => {
       <Card>
         <CardHeader>
           <CardTitle className="flex items-centerjustify-between">
-            <div className="flex items-centerspace-x-2">
+            <div className="flex items-center space-x-2">
               <Bug className="h-6 w-6text-red-600" />
               <span>Advanced Error Monitoring</span>
             </div>
-            <div className="flex items-centerspace-x-2">
-              <div className={`w-3 h-3 rounded-full ${isMonitoring ? 'bg-green-500' : 'bg-gray-400'}`}></div>
+            <div className="flex items-center space-x-2">
+              <div className={`w-3 h-3 rounded-full ${isMonitoring ? 'bg-green-500' : 'bg-gray-400'}` }></div>
               <span className="text-smtext-gray-600">
                 {isMonitoring ? 'Monitoring' : 'Stopped'}
               </span>
@@ -255,11 +255,11 @@ const AdvancedErrorMonitoring: React.FC = () => {
             <div className="space-y-2">
               {stats.topErrorTypes.map((errorType, index) => (
                 <div key={index} className="flex items-center justify-between p-3 borderrounded-lg">
-                  <div className="flex items-centerspace-x-3">
+                  <div className="flex items-center space-x-3">
                     <span className="font-medium">{errorType.type}</span>
                     <span className="text-smtext-gray-600">{errorType.count} occurrences</span>
                   </div>
-                  <div className="flex items-centerspace-x-2">
+                  <div className="flex items-center space-x-2">
                     <div className="w-20 bg-gray-200 rounded-fullh-2">
                       <div 
                         className="bg-blue-600 h-2rounded-full" 
@@ -279,7 +279,7 @@ const AdvancedErrorMonitoring: React.FC = () => {
         {/* Recent Errors */}
         <Card>
           <CardHeader>
-            <CardTitle className="flex items-centerspace-x-2">
+            <CardTitle className="flex items-center space-x-2">
               <AlertTriangle className="h-5 w-5text-red-600" />
               <span>Recent Errors</span>
             </CardTitle>
@@ -291,17 +291,17 @@ const AdvancedErrorMonitoring: React.FC = () => {
                   key={error.id} 
                   className={`p-3 border rounded-lg cursor-pointer hover:bg-gray-50 ${
                     selectedError?.id === error.id ? 'bg-blue-50 border-blue-200' : ''
-                  }`}
+                  }` }
                   onClick={() => setSelectedError(error)}
                 >
-                  <div className="flex items-center justify-betweenmb-2">
-                    <span className={`px-2 py-1 text-xs font-medium rounded-full border ${getSeverityColor(error.severity)}`}>
+                  <div className="flex items-center justify-between mb-2">
+                    <span className={`px-2 py-1 text-xs font-medium rounded-full border ${getSeverityColor(error.severity)}` }>
                       {error.severity.toUpperCase()}
                     </span>
                     <span className="text-xstext-gray-500">{formatTimeAgo(error.timestamp)}</span>
                   </div>
                   <div className="flex items-center space-x-2mb-1">
-                    <span className={`text-sm font-medium ${getTypeColor(error.type)}`}>
+                    <span className={`text-sm font-medium ${getTypeColor(error.type)}` }>
                       {error.type.toUpperCase()}
                     </span>
                     {error.resolved && (
@@ -326,7 +326,7 @@ const AdvancedErrorMonitoring: React.FC = () => {
         {/* Performance Issues */}
         <Card>
           <CardHeader>
-            <CardTitle className="flex items-centerspace-x-2">
+            <CardTitle className="flex items-center space-x-2">
               <Activity className="h-5 w-5text-orange-600" />
               <span>Performance Issues</span>
             </CardTitle>
@@ -335,8 +335,8 @@ const AdvancedErrorMonitoring: React.FC = () => {
             <div className="space-y-3">
               {performanceIssues.map((issue) => (
                 <div key={issue.id} className="p-3 borderrounded-lg">
-                  <div className="flex items-center justify-betweenmb-2">
-                    <span className={`px-2 py-1 text-xs font-medium rounded-full border ${getSeverityColor(issue.severity)}`}>
+                  <div className="flex items-center justify-between mb-2">
+                    <span className={`px-2 py-1 text-xs font-medium rounded-full border ${getSeverityColor(issue.severity)}` }>
                       {issue.severity.toUpperCase()}
                     </span>
                     <span className="text-xstext-gray-500">{formatTimeAgo(issue.detectedAt)}</span>
@@ -362,42 +362,42 @@ const AdvancedErrorMonitoring: React.FC = () => {
       {selectedError && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-centerz-50">
           <div className="bg-white rounded-lg p-6 max-w-2xl w-full mx-4 max-h-96overflow-y-auto">
-            <div className="flex items-center justify-betweenmb-4">
+            <div className="flex items-center justify-between mb-4">
               <h3 className="text-lgfont-semibold">Error Details</h3>
               <button 
-                onClick={() =>setSelectedError(null)}
+                onClick={() => setSelectedError(null)}
                 className="text-gray-500hover:text-gray-700"
               </button>
             </div>
             <div className="space-y-4">
               <div>
-                <label className="text-sm font-mediumtext-gray-600">Message</label>
+                <label className="text-sm font-medium text-gray-600">Message</label>
                 <p className="text-smtext-gray-900">{selectedError.message}</p>
               </div>
               <div>
-                <label className="text-sm font-mediumtext-gray-600">Stack Trace</label>
+                <label className="text-sm font-medium text-gray-600">Stack Trace</label>
                 <pre className="text-xs bg-gray-100 p-3 roundedoverflow-x-auto">
                   {selectedError.stack || 'No stack trace available'}
                 </pre>
               </div>
               <div className="grid grid-cols-2gap-4">
                 <div>
-                  <label className="text-sm font-mediumtext-gray-600">URL</label>
+                  <label className="text-sm font-medium text-gray-600">URL</label>
                   <p className="text-smtext-gray-900">{selectedError.url}</p>
                 </div>
                 <div>
-                  <label className="text-sm font-mediumtext-gray-600">User Agent</label>
+                  <label className="text-sm font-medium text-gray-600">User Agent</label>
                   <p className="text-sm text-gray-900truncate">{selectedError.userAgent}</p>
                 </div>
               </div>
               <div className="flex justify-endspace-x-2">
                 <button 
-                  onClick={() =>setSelectedError(null)}
+                  onClick={() => setSelectedError(null)}
                   className="px-4 py-2 text-gray-600 border border-gray-300 roundedhover:bg-gray-50"
                 </button>
                 {!selectedError.resolved && (
                   <button 
-                    onClick={() =>{
+                    onClick={() => {
                       resolveError(selectedError.id);
                       setSelectedError(null);
                     }}

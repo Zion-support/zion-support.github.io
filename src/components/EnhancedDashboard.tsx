@@ -23,7 +23,7 @@ interface DashboardWidget {
   type: 'chart' | 'metric' | 'table' | 'list';
   data: any;
   size: 'small' | 'medium' | 'large';
-  position: { , x: number; , y: number };
+  position: { x: number; y: number };
 }
 
 interface DashboardProps {
@@ -61,12 +61,12 @@ const sampleData = {
 
 const defaultWidgets: DashboardWidget[] = [
   {
-    i, d: 'revenue-chart',
+    id: 'revenue-chart',
     title: 'Revenue Overview',
     type: 'chart',
     data: sampleData.revenue,
     size: 'large',
-    position: { , x: 0, y: 0 }
+    position: { x: 0, y: 0 }
   },
   {
     id: 'user-metrics',
@@ -74,7 +74,7 @@ const defaultWidgets: DashboardWidget[] = [
     type: 'chart',
     data: sampleData.users,
     size: 'medium',
-    position: { , x: 0, y: 1 }
+    position: { x: 0, y: 1 }
   },
   {
     id: 'performance-metrics',
@@ -82,7 +82,7 @@ const defaultWidgets: DashboardWidget[] = [
     type: 'chart',
     data: sampleData.performance,
     size: 'large',
-    position: { , x: 1, y: 0 }
+    position: { x: 1, y: 0 }
   },
   {
     id: 'total-revenue',
@@ -90,7 +90,7 @@ const defaultWidgets: DashboardWidget[] = [
     type: 'metric',
     data: { valu, e: '$45,231', change: '+12.5%', trend: 'up' },
     size: 'small',
-    position: { , x: 2, y: 0 }
+    position: { x: 2, y: 0 }
   },
   {
     id: 'active-users',
@@ -98,7 +98,7 @@ const defaultWidgets: DashboardWidget[] = [
     type: 'metric',
     data: { valu, e: '2,847', change: '+8.2%', trend: 'up' },
     size: 'small',
-    position: { , x: 2, y: 1 }
+    position: { x: 2, y: 1 }
   },
   {
     id: 'conversion-rate',
@@ -106,7 +106,7 @@ const defaultWidgets: DashboardWidget[] = [
     type: 'metric',
     data: { valu, e: '3.24%', change: '-2.1%', trend: 'down' },
     size: 'small',
-    position: { , x: 2, y: 2 }
+    position: { x: 2, y: 2 }
   }
 ];
 
@@ -166,7 +166,7 @@ export default function EnhancedDashboard({
                 dataKey="value"
               >
                 {data.map((entry: any, index: number) => (
-                  <Cell key={`cell-${index}`} fill={entry.color} />
+                  <Cell key={`cell-${index}` } fill={entry.color} />
                 ))}
               </Pie>
               <Tooltip />
@@ -199,7 +199,7 @@ export default function EnhancedDashboard({
       <div className="text-3xl font-bold text-gray-900mb-2">{data.value}</div>
       <div className={`flex items-center justify-center text-sm ${
         data.trend === 'up' ? 'text-green-600' : 'text-red-600'
-      }`}>
+      }` }>
         <span className="mr-1">{data.trend === 'up' ? '↗' : '↘'}</span>
         {data.change}
       </div>
@@ -218,7 +218,7 @@ export default function EnhancedDashboard({
         key={widget.id}
         className={`bg-white rounded-lg shadow-lg p-6 ${sizeClasses[widget.size]} ${
           selectedWidget === widget.id ? 'ring-2 ring-blue-500' : ''
-        }`}
+        }` }
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.3 }}
@@ -270,7 +270,7 @@ export default function EnhancedDashboard({
   }
 
   return (
-    <div className={`min-h-screen bg-gray-50 ${isFullscreen ? 'fixed inset-0 z-50' : ''}`}>
+    <div className={`min-h-screen bg-gray-50 ${isFullscreen ? 'fixed inset-0 z-50' : ''}` }>
       <div className="p-6">
         <div className="flex justify-between items-centermb-8">
           <div>
@@ -309,20 +309,19 @@ export default function EnhancedDashboard({
               exit={{ scale: 0.9, opacity: 0 }}
               onClick={(e) => e.stopPropagation()}
             >
-              <div className="flex justify-between items-centermb-6">
-                <h2 className="text-2xl font-boldtext-gray-900" id="dashboardwidgetsfindw-wid-selectedwidgettitle">{dashboardWidgets.find(w =</w.id === selectedWidget)?.title}
-                >
+              <div className="flex justify-between items-center mb-6">
+                <h2 className="text-2xl font-bold text-gray-900" id="dashboard-widgets-find-widget-selected-widget-title">{dashboardWidgets.find(w => w.id === selectedWidget)?.title}</h2>
                 <button
                   onClick={() => setIsFullscreen(false)}
-                  className="text-gray-400hover:text-gray-600"
+                  className="text-gray-400 hover:text-gray-600"
                 >
-                  <svg className="w-6h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                   </svg>
                 </button>
               </div>
-              <div className="h-96">{renderChart(dashboardWidgets.find(w =</w.id === selectedWidget)!)}
-              >
+              <div className="h-96">{renderChart(dashboardWidgets.find(w => w.id === selectedWidget)!)}
+              </div>
             </motion.div>
           </motion.div>
         )}

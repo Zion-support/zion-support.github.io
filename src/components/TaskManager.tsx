@@ -74,12 +74,12 @@ export default function TaskManager({ isOpen, onClose }: TaskManagerProps): JSX.
               <button
                 key={filterType}
                 onClick={() => setFilter(filterType)}
-                aria-label={`Filter by ${filterType}`}
+                aria-label={`Filter by ${filterType}` }
                 className={`px-3 py-1 rounded-md text-sm transition-colors ${
                   filter === filterType
                     ? 'bg-blue-600 text-white'
                     : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
-                }`}
+                }` }
               >
                 {filterType.charAt(0).toUpperCase() + filterType.slice(1)}
               </button>
@@ -101,22 +101,22 @@ export default function TaskManager({ isOpen, onClose }: TaskManagerProps): JSX.
                       task.completed
                         ? 'bg-gray-100 dark:bg-gray-700 border-gray-200 dark:border-gray-600'
                         : 'bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-600'
-                    }`}
+                    }` }
                   >
                     <input
                       type="checkbox"
-                      id={`task-${task.id}`}
+                      id={`task-${task.id}` }
                       checked={task.completed}
                       onChange={() => toggleTask(task.id)}
                       className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"
-                      aria-label={`Mark task "${task.text}" as ${task.completed ? 'incomplete' : 'complete'}`}
+                      aria-label={`Mark task "${task.text}" as ${task.completed ? 'incomplete' : 'complete'}` }
                     />
                     <span
                       className={`flex-1 ${
                         task.completed
                           ? 'line-through text-gray-500 dark:text-gray-400'
                           : 'text-gray-900 dark:text-white'
-                      }`}
+                      }` }
                     >
                       {task.text}
                     </span>

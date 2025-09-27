@@ -19,7 +19,7 @@ export const Testimonials: React.FC = () => {
 	return (
 		<section className="py-16 bg-gradient-to-r from-gray-50to-blue-50">
 			<div className="container mx-auto px-4max-w-6xl">
-				<div className={`text-center mb-12 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+				<div className={`text-center mb-12 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}` }>
 					<h2 className="text-3xl md: text-4xl font-bold text-gray-800mb-4" id="what-our-clients-say">
 						What Our Clients Say
 					</h2>
@@ -37,7 +37,7 @@ export const Testimonials: React.FC = () => {
 									onClick={() => setCurrentIndex(index)}
 									className={`w-3 h-3 rounded-full mx-1 transition-all duration-300 ${
 										index === currentIndex ? 'bg-blue-600 scale-125' : 'bg-gray-300 hover:bg-gray-400'
-									}`}
+									}` }
 								/>
 							))}
 						</div>

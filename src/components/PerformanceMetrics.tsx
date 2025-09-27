@@ -70,14 +70,14 @@ const PerformanceMetrics: React.FC = () => {
           <div className="space-y-2 text-xs">
             <div className="flex justify-between">
               <span className="text-gray-600 dark:text-gray-400">Load Time:</span>
-              <span className={`font-mono ${metrics.loadTime < 1000 ? 'text-green-600' : 'text-yellow-600'}`}>
+              <span className={`font-mono ${metrics.loadTime < 1000 ? 'text-green-600' : 'text-yellow-600'}` }>
                 {metrics.loadTime}ms
               </span>
             </div>
             
             <div className="flex justify-between">
               <span className="text-gray-600 dark:text-gray-400">First Paint:</span>
-              <span className={`font-mono ${metrics.renderTime < 500 ? 'text-green-600' : 'text-yellow-600'}`}>
+              <span className={`font-mono ${metrics.renderTime < 500 ? 'text-green-600' : 'text-yellow-600'}` }>
                 {metrics.renderTime}ms
               </span>
             </div>
@@ -91,7 +91,7 @@ const PerformanceMetrics: React.FC = () => {
             
             <div className="flex justify-between">
               <span className="text-gray-600 dark:text-gray-400">Network:</span>
-              <span className={`font-mono ${metrics.networkLatency < 100 ? 'text-green-600' : 'text-yellow-600'}`}>
+              <span className={`font-mono ${metrics.networkLatency < 100 ? 'text-green-600' : 'text-yellow-600'}` }>
                 {metrics.networkLatency}ms
               </span>
             </div>
