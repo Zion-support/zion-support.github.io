@@ -267,7 +267,9 @@ class SecurityEnhancer {
       this.metrics.clickjackingAttempts++;
       
       // Redirect to top-level window
-      window.top.location.href = window.self.location.href;
+      if (window.top) {
+        window.top.location.href = window.self.location.href;
+      }
     }
 
     // Monitor for frame busting attempts
@@ -363,8 +365,7 @@ class SecurityEnhancer {
       lastClickTime = now;
     });
 
-    // Monitor for console access attempts
-    // Note: Console monitoring is disabled to avoid infinite loops
+    // Monitor for console access attempts (disabled to prevent infinite recursion)
     // const originalConsole = console;
     // Object.keys(console).forEach(key => {
     //   const originalMethod = (console as any)[key];
@@ -379,7 +380,7 @@ class SecurityEnhancer {
     // Monitor fetch requests
     const originalFetch = window.fetch;
     window.fetch = (input, init) => {
-      const url = typeof input === 'string' ? input : input.url;
+      const url = typeof input === 'string' ? input : (input as Request).url;
       
       // Check for suspicious URLs
       if (this.isSuspiciousURL(url)) {
@@ -393,14 +394,15 @@ class SecurityEnhancer {
 
     // Monitor XMLHttpRequest
     const originalXHR = XMLHttpRequest.prototype.open;
-    XMLHttpRequest.prototype.open = function(method, url, ...args) {
-      if (typeof url === 'string' && this.isSuspiciousURL(url)) {
-        this.recordSecurityEvent('blocked', `Suspicious XHR URL blocked: ${url}`, 'high', 'network');
-        this.metrics.blockedRequests++;
+    const self = this;
+    (XMLHttpRequest.prototype.open as any) = function(this: XMLHttpRequest, method: string, url: string | URL, ...args: any[]) {
+      if (typeof url === 'string' && self.isSuspiciousURL(url)) {
+        self.recordSecurityEvent('blocked', `Suspicious XHR URL blocked: ${url}`, 'high', 'network');
+        self.metrics.blockedRequests++;
         throw new Error('Suspicious URL blocked');
       }
       
-      return originalXHR.apply(this, [method, url, ...args]);
+      return (originalXHR as any).apply(this, [method, url, ...args]);
     };
   }
 

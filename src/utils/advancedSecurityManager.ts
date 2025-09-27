@@ -10,7 +10,7 @@ interface SecurityEvent {
   timestamp: number;
   userAgent: string;
   url: string;
-  metadata?: Record<string, unknown>;
+  metadata?: Record<string, any>;
 }
 
 interface SecurityConfig {
@@ -54,15 +54,7 @@ class AdvancedSecurityManager {
     this.setupSecurityHeaders();
   }
 
-  public getSecurityReport(): {
-    totalEvents: number;
-    criticalEvents: number;
-    highEvents: number;
-    mediumEvents: number;
-    lowEvents: number;
-    lastEvent: Date | null;
-    securityScore: number;
-  } {
+  public getSecurityReport(): any {
     const criticalEvents = this.events.filter(e => e.severity === 'critical');
     const highEvents = this.events.filter(e => e.severity === 'high');
     
@@ -115,7 +107,7 @@ class AdvancedSecurityManager {
   private startMonitoring(): void {
     if (this.isMonitoring) return;
     this.isMonitoring = true;
-    this.logEvent('security_monitoring_started', 'info', 'Security monitoring started');
+    this.logEvent('security_monitoring_started', 'low', 'Security monitoring started');
   }
 
   private setupEventListeners(): void {
@@ -150,8 +142,8 @@ class AdvancedSecurityManager {
     }
   }
 
-  private handleBeforeUnload(): void {
-    this.logEvent('page_unload', 'info', 'Page unload detected');
+  private handleBeforeUnload(event: BeforeUnloadEvent): void {
+    this.logEvent('page_unload', 'low', 'Page unload detected');
   }
 
   private monitorForXSS(): void {
@@ -212,7 +204,7 @@ class AdvancedSecurityManager {
     }
   }
 
-  private logEvent(type: string, severity: SecurityEvent['severity'], message: string, metadata?: Record<string, unknown>): void {
+  private logEvent(type: string, severity: SecurityEvent['severity'], message: string, metadata?: Record<string, any>): void {
     const event: SecurityEvent = {
       type,
       severity,
