@@ -1,17 +1,17 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import SEO from '../src/components/SEO';
-import { useAnalytics } from '../src/hooks/useAnalytics';
+// import { useAnalytics } from '../src/hooks/useAnalytics';
 
 export default function Services(): React.ReactElement {
-  const [isVisible, setIsVisible] = useState(false);
+  // const [isVisible, setIsVisible] = useState(false);
 
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
+  // useEffect(() => {
+  //   setIsVisible(true);
+  // }, []);
 
-  const { trackClick } = useAnalytics();
+  // const { trackClick } = useAnalytics();
 
   const serviceDetails = {
     'ai-ml': {
@@ -78,7 +78,7 @@ export default function Services(): React.ReactElement {
                 <Link 
                   href="/contact"
                   className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors"
-                  onClick={() => trackClick(`service-${key}`, 'engagement')}
+                  // onClick={() => trackClick(`service-${key}`, 'engagement')}
                 >
                   Learn More
                 </Link>

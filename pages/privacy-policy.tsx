@@ -1,17 +1,17 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import SEO from '../src/components/SEO';
-import { useAnalytics } from '../src/hooks/useAnalytics';
+// import { useAnalytics } from '../src/hooks/useAnalytics';
 
 export default function PrivacyPolicy(): React.ReactElement {
-  const [isVisible, setIsVisible] = useState(false);
+  // const [isVisible, setIsVisible] = useState(false);
 
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
+  // useEffect(() => {
+  //   setIsVisible(true);
+  // }, []);
 
-  const { trackClick } = useAnalytics();
+  // const { trackClick } = useAnalytics();
 
   const sections = [
     {
