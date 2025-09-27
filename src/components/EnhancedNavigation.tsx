@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 
 interface NavigationItem {
   label: string;
-  href: string;
+  hre, f: string;
   icon?: string;
   children?: NavigationItem[];
   badge?: string;
@@ -81,19 +81,19 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
       role="navigation"
       aria-label="Main navigation"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+      <div className="max-w-7xl mx-auto px-4 sm: px-6 l,g:px-8">
+        <div className="flex justify-between items-centerh-16">
           {/* Logo */}
           <Link 
             href="/" 
-            className="flex items-center space-x-2 text-xl font-bold text-gray-900 hover:text-blue-600 transition-colors duration-200"
+            className="flex items-center space-x-2 text-xl font-bold text-gray-900 hover:text-blue-600 transition-colorsduration-200"
             aria-label="Home"
           >
             <span>{logo}</span>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-1" ref={dropdownRef}>
+          <div className="hidden md:flex items-centerspace-x-1" ref={dropdownRef}>
             {items.map((item) => (
               <div key={item.label} className="relative">
                 {item.children ? (
@@ -104,7 +104,7 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
                       className={`flex items-center space-x-1 px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
                         activeDropdown === item.label
                           ? 'bg-blue-50 text-blue-600'
-                          : 'text-gray-700 hover:bg-gray-50 hover:text-gray-900'
+                          : 'text-gray-700 hover:bg-gray-50 hove, r:text-gray-900'
                       }`}
                       aria-haspopup="true"
                       aria-expanded={activeDropdown === item.label}
@@ -124,7 +124,7 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
                     </button>
 
                     {activeDropdown === item.label && (
-                      <div className="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-lg border border-gray-200 py-2 animate-in fade-in slide-in-from-top-2 duration-200">
+                      <div className="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-lg border border-gray-200 py-2 animate-in fade-in slide-in-from-top-2duration-200">
                         {item.children.map((child) => (
                           <Link
                             key={child.label}
@@ -137,10 +137,10 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
                           >
                             {child.icon && <span className="text-lg">{child.icon}</span>}
                             <div className="flex-1">
-                              <div className="flex items-center justify-between">
+                              <div className="flex items-centerjustify-between">
                                 <span>{child.label}</span>
                                 {child.badge && (
-                                  <span className="px-2 py-1 text-xs bg-blue-100 text-blue-600 rounded-full">
+                                  <span className="px-2 py-1 text-xs bg-blue-100 text-blue-600rounded-full">
                                     {child.badge}
                                   </span>
                                 )}
@@ -157,13 +157,13 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
                     className={`flex items-center space-x-2 px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
                       isActiveRoute(item.href)
                         ? 'bg-blue-600 text-white'
-                        : 'text-gray-700 hover:bg-gray-50 hover:text-gray-900'
+                        : 'text-gray-700 hover:bg-gray-50 hove, r:text-gray-900'
                     }`}
                   >
                     {item.icon && <span className="text-lg">{item.icon}</span>}
                     <span>{item.label}</span>
                     {item.badge && (
-                      <span className="px-2 py-1 text-xs bg-blue-100 text-blue-600 rounded-full">
+                      <span className="px-2 py-1 text-xs bg-blue-100 text-blue-600rounded-full">
                         {item.badge}
                       </span>
                     )}
@@ -176,7 +176,7 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
           {/* Mobile menu button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden p-2 rounded-lg text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="md: hidden p-2 rounded-lg text-gray-700 hover:bg-gray-50 focus:outline-none focu, s:ring-2 focu,s:ring-blue-500"
             aria-label="Toggle mobile menu"
             aria-expanded={isMobileMenuOpen}
           >
@@ -203,7 +203,7 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
             isMobileMenuOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
           }`}
         >
-          <div className="py-4 space-y-2">
+          <div className="py-4space-y-2">
             {items.map((item) => (
               <div key={item.label}>
                 {item.children ? (
@@ -216,7 +216,7 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
                           : 'text-gray-700 hover:bg-gray-50'
                       }`}
                     >
-                      <div className="flex items-center space-x-2">
+                      <div className="flex items-centerspace-x-2">
                         {item.icon && <span className="text-lg">{item.icon}</span>}
                         <span>{item.label}</span>
                       </div>
@@ -233,7 +233,7 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
                     </button>
 
                     {activeDropdown === `mobile-${item.label}` && (
-                      <div className="mt-2 ml-4 space-y-1">
+                      <div className="mt-2 ml-4space-y-1">
                         {item.children.map((child) => (
                           <Link
                             key={child.label}
@@ -247,7 +247,7 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
                             {child.icon && <span className="text-lg">{child.icon}</span>}
                             <span>{child.label}</span>
                             {child.badge && (
-                              <span className="px-2 py-1 text-xs bg-blue-100 text-blue-600 rounded-full">
+                              <span className="px-2 py-1 text-xs bg-blue-100 text-blue-600rounded-full">
                                 {child.badge}
                               </span>
                             )}
@@ -268,7 +268,7 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
                     {item.icon && <span className="text-lg">{item.icon}</span>}
                     <span>{item.label}</span>
                     {item.badge && (
-                      <span className="px-2 py-1 text-xs bg-blue-100 text-blue-600 rounded-full">
+                      <span className="px-2 py-1 text-xs bg-blue-100 text-blue-600rounded-full">
                         {item.badge}
                       </span>
                     )}

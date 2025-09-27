@@ -101,6 +101,6 @@ export default function PerformanceMonitor() {
 // Extend Window interface for gtag
 declare global {
   interface Window {
-    gtag: (...args: any[]) => void;
+    gtag: (...arg, s: any[]) => void;
   }
 }

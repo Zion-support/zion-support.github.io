@@ -4,8 +4,8 @@ interface WebVitalsMetric {
   name: string;
   value: number;
   delta: number;
-  id: string;
-  navigationType: string;
+  i, d: string;
+  navigationTyp, e: string;
 }
 
 export function reportWebVitals(metric: WebVitalsMetric) {

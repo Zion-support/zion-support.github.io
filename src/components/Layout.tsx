@@ -52,7 +52,7 @@ export default function Layout({ children }: LayoutProps): JSX.Element {
       category: 'welcome',
       actions: [
         {
-          label: 'Explore Services',
+          labe, l: 'Explore Services',
           action: () => window.location.href = '/services',
           variant: 'primary'
         },
