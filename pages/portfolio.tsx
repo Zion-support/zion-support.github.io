@@ -67,7 +67,13 @@ export default function Portfolio(): JSX.Element {
 
           <main>
             {/* Stats Section */}
+<<<<<<< HEAD
             <section className="mb-16">
+=======
+            <section className={`mb-16 transition-all duration-700 delay-100 ${
+              'opacity-100 translate-y-0'
+            }`}>
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-c010
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
                 {stats.map((stat, index) => (
                   <div key={index} className="text-center p-6 bg-white rounded-2xl shadow-lg">

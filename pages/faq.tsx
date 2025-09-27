@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { useAnalytics } from '../src/hooks/useAnalytics';
+// import { useAnalytics } from '../src/hooks/useAnalytics';
 
 export default function FAQ(): JSX.Element {
   const [searchTerm, setSearchTerm] = useState('');
   const [openItems, setOpenItems] = useState(new Set());
   // Removed unused visibility state
 
-  const { trackClick } = useAnalytics();
+  // const { trackClick } = useAnalytics();
 
   const faqData = [
     {
@@ -38,7 +38,7 @@ export default function FAQ(): JSX.Element {
       newOpenItems.add(id);
     }
     setOpenItems(newOpenItems);
-    trackClick(`faq-toggle-${id}`, 'interaction');
+    // trackClick(`faq-toggle-${id}`, 'interaction');
   };
 
   const filteredData = faqData.map(category => ({
