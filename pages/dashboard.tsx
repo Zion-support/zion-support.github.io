@@ -7,21 +7,21 @@ const PerformanceDashboard = dynamic(() => import('../src/components/Performance
   loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div></div>
 });
 
-const SecurityDashboard = dynamic(() => import('../src/components/SecurityDashboard').then(mod => ({ default: mod.SecurityDashboard })), {
-  loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-red-600"></div></div>
-});
+// const SecurityDashboard = dynamic(() => import('../src/components/SecurityDashboard').then(mod => ({ default: mod.SecurityDashboard })), {
+//   loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-red-600"></div></div>
+// });
 
-const AnalyticsDashboard = dynamic(() => import('../src/components/AnalyticsDashboard').then(mod => ({ default: mod.AnalyticsDashboard })), {
-  loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-green-600"></div></div>
-});
+// const AnalyticsDashboard = dynamic(() => import('../src/components/AnalyticsDashboard').then(mod => ({ default: mod.AnalyticsDashboard })), {
+//   loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-green-600"></div></div>
+// });
 
 const EnhancedDashboard = dynamic(() => import('../src/components/EnhancedDashboard'), {
   loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-purple-600"></div></div>
 });
 
-const EnhancedSearch = dynamic(() => import('../src/components/EnhancedSearch'), {
-  loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-indigo-600"></div></div>
-});
+// const EnhancedSearch = dynamic(() => import('../src/components/EnhancedSearch'), {
+//   loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-indigo-600"></div></div>
+// });
 
 const ComprehensiveAnalyticsDashboard = dynamic(() => import('../src/components/ComprehensiveAnalyticsDashboard'), {
   loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-pink-600"></div></div>
@@ -172,11 +172,11 @@ const Dashboard: React.FC = () => {
       case 'comprehensive':
         return <ComprehensiveAnalyticsDashboard />;
       case 'analytics':
-        return <AnalyticsDashboard />;
+        return <div>Analytics Dashboard (temporarily disabled)</div>;
       case 'performance':
         return <PerformanceDashboard />;
       case 'security':
-        return <SecurityDashboard />;
+        return <div>Security Dashboard (temporarily disabled)</div>;
       case 'enhanced':
         return <EnhancedDashboard />;
       case 'search':
@@ -184,13 +184,7 @@ const Dashboard: React.FC = () => {
           <div className="p-8">
             <h1 className="text-3xl font-bold text-gray-900 mb-8">Enhanced Search</h1>
             <div className="max-w-2xl">
-              <EnhancedSearch 
-                onSearch={(query, results) => console.log('Search:', query, results)}
-                onResultClick={(result) => console.log('Result clicked:', result)}
-                enableFilters={true}
-                enableSuggestions={true}
-                enableHistory={true}
-              />
+              <div>Enhanced Search (temporarily disabled)</div>
             </div>
           </div>
         );

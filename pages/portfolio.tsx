@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
-import ErrorBoundary from '../src/components/ErrorBoundary';
+// import ErrorBoundary from '../src/components/ErrorBoundary';
 import { usePageView, useAnalytics } from '../src/hooks/useAnalytics';
 
 export default function Portfolio(): JSX.Element {
@@ -115,7 +115,7 @@ export default function Portfolio(): JSX.Element {
 	];
 
 	return (
-		<ErrorBoundary>
+		<>
 			<Head>
 				<title>Portfolio - Zion App</title>
 				<meta name="description" content="Explore our portfolio of successful projects and case studies across AI, cloud computing, mobile development, and more." />
@@ -368,6 +368,6 @@ export default function Portfolio(): JSX.Element {
 					</main>
 				</div>
 			</div>
-		</ErrorBoundary>
+		</>
 	);
 }

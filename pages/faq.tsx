@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
-import { ErrorBoundary } from '../src/components/ErrorBoundary';
+// import { ErrorBoundary } from '../src/components/ErrorBoundary';
 import { usePageView, useAnalytics } from '../src/hooks/useAnalytics';
 
 export default function FAQ(): JSX.Element {
@@ -140,7 +140,7 @@ export default function FAQ(): JSX.Element {
 	})).filter(category => category.questions.length > 0);
 
 	return (
-		<ErrorBoundary>
+		<>
 			<Head>
 				<title>FAQ - Zion App</title>
 				<meta name="description" content="Find answers to frequently asked questions about Zion App's services, development process, pricing, and technology solutions." />
@@ -280,6 +280,6 @@ export default function FAQ(): JSX.Element {
 					</main>
 				</div>
 			</div>
-		</ErrorBoundary>
+		</>
 	);
 }
