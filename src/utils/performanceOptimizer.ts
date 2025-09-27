@@ -255,7 +255,7 @@ export class PerformanceOptimizer {
   private async loadComponent(componentName: string, element: HTMLElement): Promise<void> {
     try {
       // Dynamic import for code splitting
-      const module = await import(`../components/${componentName}`);
+      const module = await import(`../components/${componentName}.tsx`);
       // Component would be used for rendering in a real implementation
       const Component = module.default || module[componentName];
       
