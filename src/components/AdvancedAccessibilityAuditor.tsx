@@ -321,8 +321,8 @@ export const AdvancedAccessibilityAuditor: React.FC<AdvancedAccessibilityAuditor
           <button
             onClick={auditAccessibility}
             disabled={isAuditing}
-            className="px-4py-2bg-blue-500 hover:bg-blue-600 disable  d:bg-gray-400 text-white rounded-lg text-sm font-medium transition-colors"
-           aria-label="{isAuditing ? 'Auditing...' : 'Run Audit'}">
+            className="px-4 py-2 bg-blue-500 hover:bg-blue-600 disabled:bg-gray-400 text-white rounded-lg text-sm font-medium transition-colors"
+            aria-label={isAuditing ? 'Auditing...' : 'Run Audit'}>
             {isAuditing ? 'Auditing...' : 'Run Audit'}
           </button>
         </div>
