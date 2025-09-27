@@ -117,7 +117,7 @@ export const ErrorReporter: React.FC<ErrorReporterProps> = ({
               </svg>
             </div>
             <div className="ml-3">
-              <h3 className="text-lg font-medium text-gray-900">
+              <h3 className="text-lg font-medium text-gray-900" id="something-went-wrong">
                 Something went wrong
               </h3>
               <p className="text-sm text-gray-500">
@@ -130,7 +130,7 @@ export const ErrorReporter: React.FC<ErrorReporterProps> = ({
             <button
               onClick={retry}
               className="w-full bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors duration-200"
-            >
+             aria-label="Try Again">
               Try Again
             </button>
           </div>
@@ -158,11 +158,11 @@ export const ErrorReporter: React.FC<ErrorReporterProps> = ({
       {process.env.NODE_ENV === 'development' && errorHistory.length > 0 && (
         <div className="fixed bottom-4 right-4 bg-white border border-gray-200 rounded-lg shadow-lg p-4 max-w-sm">
           <div className="flex items-center justify-between mb-2">
-            <h4 className="text-sm font-medium text-gray-900">Error History</h4>
+            <h4 className="text-sm font-medium text-gray-900" id="error-history">Error History</h4>
             <button
               onClick={clearErrorHistory}
               className="text-xs text-gray-500 hover:text-gray-700"
-            >
+             aria-label="Clear">
               Clear
             </button>
           </div>

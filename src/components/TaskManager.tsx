@@ -25,13 +25,13 @@ export default function TaskManager({ isOpen, onClose }: TaskManagerProps): JSX.
       <div className="bg-white dark:bg-gray-800 rounded-lg shadow-xl w-full max-w-md max-h-[80vh] overflow-hidden">
         <div className="p-6">
           <div className="flex justify-between items-center mb-6">
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white" id="task-manager">
               Task Manager
             </h2>
             <button
               onClick={onClose}
               className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 text-xl"
-            >
+             aria-label="✕">
               ✕
             </button>
           </div>
@@ -52,9 +52,17 @@ export default function TaskManager({ isOpen, onClose }: TaskManagerProps): JSX.
                 }}
                 placeholder="Add a new task..."
                 className="flex-1 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white"
+                aria-label="Add a new task"
               />
               <button
-                onClick={() => {
+                onClick={() = aria-label="{
+                  if (addTask(newTaskText)) {
+                    setNewTaskText('');
+                  }
+                }}
+                className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
+              >
+                Add"> {
                   if (addTask(newTaskText)) {
                     setNewTaskText('');
                   }
@@ -71,7 +79,14 @@ export default function TaskManager({ isOpen, onClose }: TaskManagerProps): JSX.
             {(['all', 'active', 'completed'] as const).map((filterType) => (
               <button
                 key={filterType}
-                onClick={() => setFilter(filterType)}
+                onClick={() = aria-label="setFilter(filterType)}
+                className={`px-3 py-1 rounded-md text-sm transition-colors ${
+                  filter === filterType
+                    ? 'bg-blue-600 text-white'
+                    : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
+                }`}
+              >
+                {filterType.charAt(0).toUpperCase() + filterType.slice(1)}"> setFilter(filterType)}
                 className={`px-3 py-1 rounded-md text-sm transition-colors ${
                   filter === filterType
                     ? 'bg-blue-600 text-white'
@@ -102,9 +117,11 @@ export default function TaskManager({ isOpen, onClose }: TaskManagerProps): JSX.
                   >
                     <input
                       type="checkbox"
+                      id={`task-${task.id}`}
                       checked={task.completed}
                       onChange={() => toggleTask(task.id)}
                       className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"
+                      aria-label={`Mark task "${task.text}" as ${task.completed ? 'incomplete' : 'complete'}`}
                     />
                     <span
                       className={`flex-1 ${
@@ -116,7 +133,10 @@ export default function TaskManager({ isOpen, onClose }: TaskManagerProps): JSX.
                       {task.text}
                     </span>
                     <button
-                      onClick={() => deleteTask(task.id)}
+                      onClick={() = aria-label="deleteTask(task.id)}
+                      className="text-red-500 hover:text-red-700 dark:text-red-400 dark:hover:text-red-300"
+                    >
+                      🗑️"> deleteTask(task.id)}
                       className="text-red-500 hover:text-red-700 dark:text-red-400 dark:hover:text-red-300"
                     >
                       🗑️

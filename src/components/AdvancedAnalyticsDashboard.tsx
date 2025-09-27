@@ -70,7 +70,7 @@ export const AdvancedAnalyticsDashboard: React.FC<AdvancedAnalyticsDashboardProp
       {/* Header */}
       <div className="flex items-center justify-between mb-6">
         <div>
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-white">Analytics Dashboard</h2>
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-white" id="analytics-dashboard">Analytics Dashboard</h2>
           <p className="text-gray-600 dark:text-gray-400">Real-time insights and performance metrics</p>
         </div>
         <div className="flex items-center space-x-4">
@@ -83,7 +83,7 @@ export const AdvancedAnalyticsDashboard: React.FC<AdvancedAnalyticsDashboardProp
           <button
             onClick={onDataRefresh}
             className="px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg text-sm font-medium transition-colors"
-          >
+           aria-label="Refresh">
             Refresh
           </button>
         </div>
@@ -117,6 +117,7 @@ export const AdvancedAnalyticsDashboard: React.FC<AdvancedAnalyticsDashboardProp
         </div>
         <button
           onClick={() => setIsRealTime(!isRealTime)}
+          aria-label={isRealTime ? 'Disable real-time updates' : 'Enable real-time updates'}
           className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
             isRealTime
               ? 'bg-green-500 hover:bg-green-600 text-white'
@@ -185,7 +186,7 @@ export const AdvancedAnalyticsDashboard: React.FC<AdvancedAnalyticsDashboardProp
           animate={{ opacity: 1, scale: 1 }}
           className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4"
         >
-          <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Traffic Sources</h3>
+          <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4" id="traffic-sources">Traffic Sources</h3>
           <ResponsiveContainer width="100%" height={300}>
             <PieChart>
               <Pie
@@ -214,7 +215,7 @@ export const AdvancedAnalyticsDashboard: React.FC<AdvancedAnalyticsDashboardProp
           transition={{ delay: 0.1 }}
           className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4"
         >
-          <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Device Types</h3>
+          <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4" id="device-types">Device Types</h3>
           <ResponsiveContainer width="100%" height={300}>
             <BarChart data={data.deviceTypes}>
               <CartesianGrid strokeDasharray="3 3" />
@@ -236,7 +237,7 @@ export const AdvancedAnalyticsDashboard: React.FC<AdvancedAnalyticsDashboardProp
           transition={{ delay: 0.2 }}
           className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4"
         >
-          <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Hourly Traffic</h3>
+          <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4" id="hourly-traffic">Hourly Traffic</h3>
           <ResponsiveContainer width="100%" height={300}>
             <LineChart data={data.hourlyData}>
               <CartesianGrid strokeDasharray="3 3" />
@@ -255,7 +256,7 @@ export const AdvancedAnalyticsDashboard: React.FC<AdvancedAnalyticsDashboardProp
           transition={{ delay: 0.3 }}
           className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4"
         >
-          <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Top Countries</h3>
+          <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4" id="top-countries">Top Countries</h3>
           <div className="space-y-3">
             {data.geographicData.slice(0, 5).map((country, index) => (
               <div key={country.country} className="flex items-center justify-between">
@@ -284,7 +285,7 @@ export const AdvancedAnalyticsDashboard: React.FC<AdvancedAnalyticsDashboardProp
           >
             <div className="flex items-center justify-between">
               <div>
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Real-time Activity</h3>
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white" id="real-time-activity">Real-time Activity</h3>
                 <p className="text-gray-600 dark:text-gray-400">Live visitor count and activity</p>
               </div>
               <div className="text-right">
