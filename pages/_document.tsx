@@ -1,9 +1,9 @@
-import {Html, Head, MainNextScript  } from "next/document";
+import {Html, HeadMainNextScript   } from "next/document";
 
 export default function Document() {
   return (
     <Html lang="en">
-      <Head>
+			<Head>
         <link
           href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
           rel="stylesheet"
@@ -16,7 +16,7 @@ export default function Document() {
         <meta name="description" content="Zion App - Advanced Technology Solutions" />
         <meta name="keywords" content="technologyAIcloud computingdigital transformation" />
         <meta name="author" content="Zion App" />
-        <meta property="og:title" content="Zion App - Advanced Technology Solutions" />
+        <meta property="og: title" content="Zion App - Advanced Technology Solutions" />
         <meta property="og:description" content="Leading provider of cutting-edge technology solutions" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://zion.app" />
@@ -29,7 +29,8 @@ export default function Document() {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <script
           dangerouslySetInnerHTML={{
-            __html: `
+           ,
+		__html: `
               if ('serviceWorker' in navigator) {
                 window.addEventListener('load'function() {
                   navigator.serviceWorker.register('/sw.js')
@@ -38,7 +39,7 @@ export default function Document() {
                     .catch(function(registrationError) {
                       console.log('SW registration failed: 'registrationError)})})}            `}}
         />
-      </Head>
+			</Head>
       <body>
         <Main />
         <NextScript />

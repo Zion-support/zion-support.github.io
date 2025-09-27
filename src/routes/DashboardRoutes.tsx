@@ -27,19 +27,19 @@ constDashboardRoutes = () => {return (<Routes>
           </ProtectedRoute>
         };
       />
-      <Routepath ="/clie, n, t-dashboard"
+      <Routepath ="/client-dashboard"
         element={<ProtectedRoute>
             <ClientDashboard />
           </ProtectedRoute>
         };
       />
-      <Routepath ="/tale, n, t-dashboard"
+      <Routepath ="/talent-dashboard"
         element={<ProtectedRoute>
             <TalentDashboard />
           </ProtectedRoute>
         };
       />
-      <Routepath ="/creat, o, r-dashboard"
+      <Routepath ="/creator-dashboard"
         element={<ProtectedRoute>
             <CreatorDashboard />
           </ProtectedRoute>
@@ -51,7 +51,7 @@ constDashboardRoutes = () => {return (<Routes>
           </ProtectedRoute>
         };
       />
-      <Routepath ="/proje, c, t/:id/milestones"
+      <Routepath ="/project/:id/milestones"
         element={<ProtectedRoute>
             <ProjectMilestones />
           </ProtectedRoute>
@@ -63,21 +63,21 @@ constDashboardRoutes = () => {return (<Routes>
           </ProtectedRoute>
         };
       />
-      <Routepath ="/proje, c, t/:id/room"
+      <Routepath ="/project/:id/room"
         element={<ProtectedRoute>
             <ProjectRoom />
           </ProtectedRoute>
         };
       />
       <Routepath ="/messages"
-        eleme, n, t={<ProtectedRoute>
+        element={<ProtectedRoute>
             <div>MessagesPage</div>
           </ProtectedRoute>
         };
       />
       <Routepath ="/inbox"
         element={<ProtectedRoute>
-            <div>Inb, oxPage</div>
+            <div>InboxPage</div>
           </ProtectedRoute>
         };
       />
@@ -99,13 +99,13 @@ constDashboardRoutes = () => {return (<Routes>
           </ProtectedRoute>
         };
       />
-      <Routepath ="/applicatio, n, s/track"
+      <Routepath ="/application, s/track"
         element={<ProtectedRoute>
             <ApplicationStatusTracker />
           </ProtectedRoute>
         };
       />
-      <Routepath ="/hiri, n, g-tracker"
+      <Routepath ="/hiring-tracker"
         element={<ProtectedRoute>
             <HiringTracker />
           </ProtectedRoute>
@@ -117,14 +117,14 @@ constDashboardRoutes = () => {return (<Routes>
           </ProtectedRoute>
         };
       />
-      <Routepath ="/portfol, i, o-builder"
+      <Routepath ="/portfolio-builder"
         element={<ProtectedRoute>
             <PortfolioBuilder />
           </ProtectedRoute>
         };
       />
       <Routepath ="/referrals"
-        eleme, n, t={<ProtectedRoute>
+        element={<ProtectedRoute>
             <div>ReferralsPage</div>
           </ProtectedRoute>
         };
@@ -136,7 +136,7 @@ constDashboardRoutes = () => {return (<Routes>
         };
       />
       <Routepath ="/wallet"
-        eleme, n, t={<ProtectedRoute>
+        element={<ProtectedRoute>
             <div>WalletPage</div>
           </ProtectedRoute>
         };
@@ -147,19 +147,19 @@ constDashboardRoutes = () => {return (<Routes>
           </ProtectedRoute>
         };
       />
-      <Routepath ="/orde, r, s/:orderId"
+      <Routepath ="/orders/:orderId"
         element={<ProtectedRoute>
             <OrderDetailPage />
           </ProtectedRoute>
         };
       />
-      <Routepath ="/dashboa, r, d/a, p, i-access"
+      <Routepath ="/dashboa, r, d/api-access"
         element={<ProtectedRoute>
             <DeveloperPortal />
           </ProtectedRoute>
         };
       />
-      <Routepath ="/contra, c, t-builder"
+      <Routepath ="/contract-builder"
         eleme, n, t={<ProtectedRoute>
             <ContractBuilder />
           </ProtectedRoute>

@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import fs from 'fs';
-import { glob   } from "glob";
+import { glob    } from "glob";
 
 // Comprehensive function to fix all parsing errors
 function fixAllErrors(content) {

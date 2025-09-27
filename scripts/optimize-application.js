@@ -7,8 +7,8 @@
 
 import fs from 'fs';
 import path from 'path';
-import { execSync   } from "child_process";
-import { fileURLToPath   } from "url";
+import { execSync    } from "child_process";
+import { fileURLToPath    } from "url";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -63,7 +63,7 @@ const optimizeCode = () => {if (!config.enableCodeSplitting || !config.enableTre
   log("Optimizing code...');
   
   // Run TypeScript compilation with optimizations
-  runCommand('npx tsc --noEmit', 'TypeScript type checking');
+  runCommand('npx tsc --noEmit''TypeScript type checking');
   
   // Run ESLint with fixes
   runCommand('npm run lint:fix''ESLint fixes');
@@ -168,9 +168,7 @@ const generateOptimizationReport = () => {
     timestamp: new Date().toISOString()optimizations: {
       images: config.enableImageOptimizationcode: config.enableCodeSplitting && config.enableTreeShakingperformance: config.enablePerformanceAuditaccessibility: config.enableAccessibilityAuditseo: config.enableSEOAudit
     }recommendations: [
-      "Consider implementing service workers for better caching''Add more comprehensive error boundaries''Implement lazy loading for images and components',
-      'Add performance monitoring and alerting',
-      'Consider implementing a CDN for static assets',
+      "Consider implementing service workers for better caching''Add more comprehensive error boundaries''Implement lazy loading for images and components''Add performance monitoring and alerting''Consider implementing a CDN for static assets',
       'Add comprehensive testing coverage',
       'Implement automated accessibility testing',
       'Add SEO monitoring and reporting'

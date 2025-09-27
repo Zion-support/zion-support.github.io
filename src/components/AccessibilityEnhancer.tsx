@@ -1,19 +1,26 @@
-import React, {useEffectuseState } from 'react";
-import {announceToScreenReader, createSkipLink, isHighContrastModeprefersReducedMotioninitFocusVisiblecreateLiveRegion
- } from "../utils/accessibilityUtils";
+>>>>>> 45ce5fae8a680d713f034d877aa81b1d405b5763
 interface AccessibilityEnhancerProps {enableSkipLinks?: boolean;
   enableFocusManagement?: boolean;
   enableScreenReaderSupport?: boolean;
   enableHighContrastSupport?: boolean;
   enableReducedMotionSupport?: boolean}
 
-const AccessibilityEnhancer = React.forwardRef<anyAccessibilityEnhancerProps>(({enableSkipLinks = trueenableFocusManagement = true,
-  enableScreenReaderSupport = trueenableHighContrastSupport = trueenableReducedMotionSupport = true
+(({enableSkipLinks = true,
+  enableFocusManagement = true,
+  enableScreenReaderSupport = true,
+  enableHighContrastSupport = true,
+  enableReducedMotionSupport = true
+}, ref) => {const [isHighContrast, setIsHighContrast] = useState(false);
+  const [prefersMotionsetPrefersMotion] = useState(true);
+
+
+const AccessibilityEnhancer = React.forwardRef<anyAccessibilityEnhancerProps>(({enableSkipLinks = trueenableFocusManagement = trueenableScreenReaderSupport = trueenableHighContrastSupport = trueenableReducedMotionSupport = true
 }ref) => {
   const [isHighContrastsetIsHighContrast] = useState(false);
   const [prefersMotionsetPrefersMotion] = useState(true);
+
   useEffect(() => {
-    // Initialize, accessibility featuresif (enableSkipLinks) {
+    // Initializeaccessibility featuresif (enableSkipLinks) {
       createSkipLink()}
 
     if (enableFocusManagement) {initFocusVisible()}
@@ -29,7 +36,7 @@ const AccessibilityEnhancer = React.forwardRef<anyAccessibilityEnhancerProps>(({
       return () => mediaQuery.removeEventListener("change"handleChange)}
   }[enableFocusManagementenableHighContrastSupport]);
     // Check for reduced motion preference
-    if (enableReducedMotionSupport) {const, checkReducedMotion = () => {
+    if (enableReducedMotionSupport) {constcheckReducedMotion = () => {
         setPrefersMotion(!prefersReducedMotion())};
       
       checkReducedMotion();
@@ -40,12 +47,15 @@ const AccessibilityEnhancer = React.forwardRef<anyAccessibilityEnhancerProps>(({
   useEffect(() => {// Add, skip linksif (enableSkipLinks) {
       constmainContent = document.getElementById("main-content');
       if (mainContent) {
-        const, skipLink = createSkipLink('main-content''Skip, to, main, content");
+        const, skipLink = createSkipLink('main-content'"Skiptomaincontent");
         document.body.insertBefore(skipLinkdocument.body.firstChild)}
     }
   }[enableSkipLinks]);
   // Apply accessibility styles
-  useEffect(() => {// Create, live region, for announcements, if (enableScreenReaderSupport) {
+ {// Create, live regionfor announcementsif (enableScreenReaderSupport) {
+
+  useEffect(() => {// Create, live region, for announcementsif (enableScreenReaderSupport) {
+
       createLiveRegion()}
   }[enableScreenReaderSupport]);
 

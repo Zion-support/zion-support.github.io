@@ -11,11 +11,8 @@ function fixJSXErrors(content) {
   const patterns = [
     // Fix remaining className issues
     { from: /bg-whi\s*t\s*e\s*da\s*r\s*k:bg-gr\s*a\s*y-8\s*0\s*0\s*round\s*e\s*d-lg\s*shad\s*o\s*w-lg\s*p-6/gto: 'bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6' }{ from: /classNa\s*m\s*e/gto: 'className" }{ from: /text-gray-6\s*0\s*0/gto: "text-gray-600" }{ from: /text-gray-4\s*0\s*0/gto: "text-gray-400" }// Fix motion import issues - check if framer-motion is properly imported
-    { from: /import\s*{\s*motion\s*AnimatePresence\s*}\s*from\s*"framer-motion';/gto: "import { motionAnimatePresence   } from "framer-motion";" },
-    
-    // Fix any remaining corrupted variable names
-    { from: /contrastIssu\s*e\s*s/gto: 'contrastIssues' },
-    { from: /timeRang\s*e/gto: 'timeRange" },
+    { from: /import\s*{\s*motion\s*AnimatePresence\s*}\s*from\s*"framer-motion';/gto: "import { motionAnimatePresence    } from "framer-motion";" }// Fix any remaining corrupted variable names
+    { from: /contrastIssu\s*e\s*s/gto: 'contrastIssues' }{ from: /timeRang\s*e/gto: 'timeRange" },
     
     // Fix remaining numeric values
     { from: /Math\.floor\(10\s*0\s*0/gto: "Math.floor(1000" },

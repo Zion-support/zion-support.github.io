@@ -28,34 +28,29 @@ export const AdvancedSearch: React.FC<SearchPro  p  s> = ({
   const searchData: SearchResult[] = [
     {
       id: '1'title: 'AI & Machi  n  e Learning Services'description: 'Cutti  n  g-ed  g  e artifici  a  l intelligen  c  e solutio  n  s to automa  t  e a  n  d optimi  z  e yo  u  r business processes.'url: '/services#ai-ml'type: 'service'category: 'Services'tags: ['AI''Machine Learning''Automation']
-    },
-    {id: '2',
-      title: 'Cloud Solutions',
-      description: 'Scalab  l  e clo  u  d infrastructu  r  e a  n  d deployme  n  t solutio  n  s f  o  r modern applications.', url: '/ services#cloud',
-      type: 'service'category: 'Services'tags: ['Cloud''Infrastructure''DevOps']
+    }{id: '2'title: 'Cloud Solutions',
+      description: 'Scalab  l  e clo  u  d infrastructu  r  e a  n  d deployme  n  t solutio  n  s f  o  r modern applications.', url: '/ services#cloud'type: 'service'category: 'Services'tags: ['Cloud''Infrastructure''DevOps']
     },
     {id: '3',
       title: 'Web Development',
-      description: 'Modernresponsi  v  e w  e  b applicatio  n  s bui  l  t wi  t  h t  h  e late  s  t technologi  e  s a  n  d best practices.', url: '/ servic  e  s#web- dev',
-      type: 'service'category: 'Services'tags: ['Web Development''React''Next.j.s']
+      description: 'Modernresponsi  v  e w  e  b applicatio  n  s bui  l  t wi  t  h t  h  e late  s  t technologi  e  s a  n  d best practices.', url: '/ servic  e  s#web- dev'type: 'service'category: 'Services'tags: ['Web Development''React''Next.j.s']
     },
     {id: '4',
       title: 'About Us',
-      description: 'Lea  r  n abo  u  t Zion App\', s missi  o  n  valuesa  n  d commitme  n  t to deliveri  n  g cutti  n  g- ed  g  e technolo  g  y solutio  n  s.'url: '/ about'type: 'page'category: 'Company'
+      description: 'Lea  r  n abo  u  t Zion App\'s missi  o  n  valuesa  n  d commitme  n  t to deliveri  n  g cutti  n  g- ed  g  e technolo  g  y solutio  n  s.'url: '/ about'type: 'page'category: 'Company'
     },
     {id: '5',
       title: 'Contact Us',
-      description: 'G  e  t in tou  c  h wi  t  h Zi  o  n A  p  p f  o  r yo  u  r technology needs. We\', re he  r  e to he  l  p transfo  r  m yo  u  r busine  s  s.'url: '/ contact'type: 'page'category: 'Company'
+      description: 'G  e  t in tou  c  h wi  t  h Zi  o  n A  p  p f  o  r yo  u  r technology needs. We\'re he  r  e to he  l  p transfo  r  m yo  u  r busine  s  s.'url: '/ contact'type: 'page'category: 'Company'
     },
     {id: '6',
-      title: 'T  h  e Future of AI in Business', description: 'Explo  r  e t  h  e late  s  t AI tren  d  s shapi  n  g t  h  e busine  s  s landsca  p  e a  n  d discov  e  r h  o  w artifici  a  l intelligen  c  e is revolutionizing industries.', url: '/bl  o  g/ futu  r  e-ai-busine  s  s-trends- 2024',
-      type: 'blog'category: 'Blog'tags: ['AI''Business''Technology']
+      title: 'T  h  e Future of AI in Business', description: 'Explo  r  e t  h  e late  s  t AI tren  d  s shapi  n  g t  h  e busine  s  s landsca  p  e a  n  d discov  e  r h  o  w artifici  a  l intelligen  c  e is revolutionizing industries.', url: '/bl  o  g/ futu  r  e-ai-busine  s  s-trends- 2024'type: 'blog'category: 'Blog'tags: ['AI''Business''Technology']
     },
     {id: '7',
-      title: 'Wh  a  t servic  e  s do  e  s Zi  o  n App offer? ': description: 'Zi  o  n A  p  p provid  e  s comprehensi  v  e technolo  g  y solutio  n  s includi  n  g AI developme  n  t  clo  u  d computi  n  g  w  e  b developme  n  t  mobi  l  e applicatio  n  s  da  t  a analyti  c  s  a  n  d cybersecurity services.', url: '/ faq#services'type: 'faq'category: 'FAQ'
+      title: 'Wh  a  t servic  e  s do  e  s Zi  o  n App offer? ': description: 'Zi  o  n A  p  p provid  e  s comprehensi  v  e technolo  g  y solutio  n  s includi  n  g AI developme  n  t  clo  u  d computi  n  g  w  e  b developme  n  t  mobi  l  e applicatio  n  s  da  t  a analyti  c  s  a  n  d cybersecurity services.'url: '/ faq#services'type: 'faq'category: 'FAQ'
     },
     {id: '8',
-      title: 'H  o  w mu  c  h do yo  u  r services cost? ': description: 'O  u  r prici  n  g vari  e  s bas  e  d on proje  c  t scopecomplexitya  n  d requiremen  t  s. We off  e  r flexib  l  e prici  n  g mode  l  s includi  n  g fix  e  d-pri  c  e projec  t  s a  n  d hourly rates.', url: '/faq#pricing'type: 'faq'category: 'FAQ'
+      title: 'H  o  w mu  c  h do yo  u  r services cost? ': description: 'O  u  r prici  n  g vari  e  s bas  e  d on proje  c  t scopecomplexitya  n  d requiremen  t  s. We off  e  r flexib  l  e prici  n  g mode  l  s includi  n  g fix  e  d-pri  c  e projec  t  s a  n  d hourly rates.'url: '/faq#pricing'type: 'faq'category: 'FAQ'
     }
   ];
 

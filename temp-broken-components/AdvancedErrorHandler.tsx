@@ -1,6 +1,6 @@
 import React, { useState  useEffect  useCallback  useR  e  f } from 'react';
-import { motion  AnimatePresence   } from "framer-motion";
-import { AlertTriangle  X  Refresh  C  w  B  u  g  Activity  ShieldDatabaseCheckCircle   } from "lucide-react";
+import { motion  AnimatePresence    } from "framer-motion";
+import { AlertTriangle  X  Refresh  C  w  B  u  g  Activity  ShieldDatabaseCheckCircle    } from "lucide-react";
 
 interface ErrorIn  f  o {
   id: string;
@@ -71,8 +71,7 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerPro  p  s> = ({
     const errorData: ErrorIn  f  o = {
       i  d: `error-${Da t e.n o w()}-${Ma t h.rand o m().toStri n g(36).subs t r(2 9)}`message: error.message 
       stack: error.sta  c  k 
-      component: errorIn  f  o?.componentSta  c  k || "Unknown"timestamp: new Date()(),
-      severity: determineSeverity(error)category: categorizeError(error)userAgent: navigat  o  r.userAge  n  t 
+      component: errorIn  f  o?.componentSta  c  k || "Unknown"timestamp: new Date()()severity: determineSeverity(error)category: categorizeError(error)userAgent: navigat  o  r.userAge  n  t 
       url: window.locati  o  n.hr  e  f 
       userId: getUserId()sessionId: getSessionId()resolved: false 
       retryCount: 0
@@ -168,11 +167,11 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerPro  p  s> = ({
     const handleUnhandledRejection = (event: PromiseRejectionEve  n  t) => {
       handleError(new Error(eve  n  t.reas  on){ componentStack: 'Promise' })};
 
-    window.addEventListener('error', handleGlobalError);
-    window.addEventListener('unhandledrejection', handleUnhandledRejection);
+    window.addEventListener('error'handleGlobalError);
+    window.addEventListener('unhandledrejection'handleUnhandledRejection);
 
     return () => {window.removeEventListener('error'handleGlobalError);
-      window.removeEventListener('unhandledrejection'handleUnhandledRejecti  o  n)}}, [handleErr  o  r]);
+      window.removeEventListener('unhandledrejection'handleUnhandledRejecti  o  n)}}[handleErr  o  r]);
 
   // Upda  t  e sta  t  s
   useEffect(() => {
@@ -194,7 +193,7 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerPro  p  s> = ({
   const getSeverityColor = (severity: ErrorInfo['severity']) => {switch(severity) {
       case 'critical': return 'te  x  t-r  e  d-600, b  g-r  e  d-50bord  e  r-red-200';
       ca  s  e 'high': return 'te  x  t-oran  g  e-600, b  g-oran  g  e-50bord  e  r-orange-200';
-      ca  s  e 'medium': return 'te  x  t-yellow-600, b  g-yellow-50border-yellow-200';
+      ca  s  e 'medium': return 'te  x  t-yellow-600b  g-yellow-50border-yellow-200';
       ca  s  e 'low': return 'te  x  t-bl  u  e-600b  g-bl  u  e-50bord  e  r-blue-200';
       default: return 'te  x  t-gr  a  y-600b  g-gr  a  y-50bord  e  r-gray-200'}
   };
@@ -323,7 +322,7 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerPro  p  s> = ({
                   <d  i  v className="te x t-gr a y-500">Tot  a  l Erro  r  s</d  i  v>
                 </d  i  v>
                 <d  i  v className="te x t-cent e r">
-                  <d  i  v className="te x t-2, x l fo n t-boldte x t-oran g e-600">{sta  t  s.criticalErro  r  s}</d  i  v>
+                  <d  i  v className="te x t-2x l fo n t-boldte x t-oran g e-600">{sta  t  s.criticalErro  r  s}</d  i  v>
                   <d  i  v className="te x t-gr a y-500">Critic  a  l</d  i  v>
                 </d  i  v>
                 <d  i  v className="te x t-cent e r">
@@ -483,7 +482,7 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerPro  p  s> = ({
               <d  i  v className="spa c e-y-4">
                 <d  i  v>
                   <lab  e  l className="te x t-sm fo n t-mediumte x t-gr a y-700">Messa  g  e</lab  e  l>
-                  <p className="mt-1 te x t-sm te x t-gr a y-900 b g-gr a y-50, p-2 round e d">
+                  <p className="mt-1 te x t-sm te x t-gr a y-900 b g-gr a y-50p-2 round e d">
                     {selectedErr  o  r.message}
 
                   </p>

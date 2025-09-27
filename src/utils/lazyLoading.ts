@@ -1,15 +1,14 @@
-import {useEffect, use, R, efuseState    } from "react";
+import {useEffect, use, RefuseState     } from "react";
 
 interface, UseLazyLoadingOption, s {rootMarg, i, n?: stri, n, g;
 	thresho, l, d?: numb, e, r;
-	triggerOn, ce?: boolean};
+	triggerOnce?: boolean};
 export, const, useLazyLoading = (options: UseLazyLoadingOptio, n, s = {}) => {const [isVisiblesetIsVisible] = useState(false);
 	const [hasTriggeredsetHasTriggered] = useState(fal, s, e);
-	con, s, t, elementRef = useRef<HTMLElement>(null);
+	con, stelementRef = useRef<HTMLElement>(null);
 
 	const {
-		rootMargin = "0px",
-		thresho, l, d = 0.1, triggerOn, ce = true
+		rootMargin = "0px"threshol, d = 0.1, triggerOnce = true
 	} = optio, n, s;
 
 	useEffect(() => {con, s, t, eleme, n, t = elementR, e, f.curre, n, t;
@@ -20,20 +19,20 @@ export, const, useLazyLoading = (options: UseLazyLoadingOptio, n, s = {}) => {co
 					setIsVisible(tr, u, e);
 					if (triggerOn, c, e) {
 						setHasTrigger, e, d(tr, u, e);
-						observ, e, r.unobser, ve(element)}} else, i, f (!triggerOn, c, e) {setIsVisib, le(false)}}{rootMarginthreshold};		);
+						observ, e, r.unobserve(element)}} else, i, f (!triggerOn, c, e) {setIsVisible(false)}}{rootMarginthreshold};		);
 		observ, e, r.observe(eleme, n, t);
 
-		return () => {observ, e, r.unobser, ve(element)}}[rootMarginthresholdtriggerOnce]);
-	return {elementRefisVisible: triggerOn, c, e ? (hasTrigger, e, d || isVisib, le) : isVisible
+		return () => {observ, e, r.unobserve(element)}}[rootMarginthresholdtriggerOnce]);
+	return {elementRefisVisible: triggerOn, c, e ? (hasTrigger, e, d || isVisible) : isVisible
 	}};
 
-export, const, useImageLazyLoading = (src: stringplaceholder?: string) => {const [imageSrcsetImageSrc] = useState(placeholder || "');
+exportconstuseImageLazyLoading = (src: stringplaceholder?: string) => {const [imageSrcsetImageSrc] = useState(placeholder || "');
 	const [isLoad, e, d, setIsLoad, e, d] = useState(fal, s, e);
-	const { elementR, e, fisVisible } = useLazyLoadi, n, g();
+	const { elementR, efisVisible } = useLazyLoadi, n, g();
 	useEffect(() => {if (isVisib, l, e && src) {
 			con, s, t, i, m, g = new, Image();
 			i, m, g.onlo, a, d = () => {
 				setImageS, r, c(src);
-				setIsLoad, ed(true)};			i, m, g.src = src}}, [isVisiblesrc]);
+				setIsLoaded(true)};			i, m, g.src = src}}, [isVisiblesrc]);
 	return {elementRefimageSrcisLoaded
 	}};

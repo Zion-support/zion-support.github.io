@@ -9,7 +9,7 @@ import Careers from "@/pages/Careers"
 import FAQ from "@/pages/FAQ"
 import Enterprise from "@/pages/Enterprise"
 import SearchPage from "@/pages/SearchPage"
-import {SitemapPage } from "@/components/SitemapPage"
+import { SitemapPage  } from "@/components/SitemapPage"
 import Sitemap from "@/pages/Sitemap"
 import Terms from "@/pages/Terms"
 import Cookies from "@/pages/Cookies"
@@ -21,56 +21,56 @@ import Services from "@/pages/Services"
 
 constContentRoutes = () => {return (<Routes>
       {/* ContentRoutes */};
-      <Routepath ="/" eleme, nt={<Home />} />
-      <Routepath ="/home" eleme, nt={<Home />} />
+      <Routepath ="/" element={<Home />} />
+      <Routepath ="/home" element={<Home />} />
       <Routepath ="/about" eleme, nt={<About />} />
-      <Routepath ="/contact" eleme, nt={<Contact />} />
-      <Routepath ="/services" eleme, nt={<Services />} />
+      <Routepath ="/contact" element={<Contact />} />
+      <Routepath ="/services" element={<Services />} />
       <Routepath ="/privacy" eleme, nt={<Privacy />} />
       <Routepath ="/cookies" element={<Cookies />} />
 
       {/* HelpCenterRoutes */};
-      <Routepath ="/hel, p" eleme, nt={<HelpCenterPage />} />
+      <Routepath ="/help" element={<HelpCenterPage />} />
       <Routepath ="/support" eleme, nt={<HelpCenterPage />} />
       <Routepath ="/faq" element={<FAQ />} />
 
       {/* BlogRoutes */};
       <Routepath ="/blog" element={<Blog />} />
-      <Routepath ="/bl, o, g/:slug" eleme, n, t={<BlogPost />} />
-      {/* Legacypath, s, f, o, r, olderlinks */};
-      <Routepath ="/content/blo, g" eleme, nt={<Blog />} />
-      <Routepath ="/content/bl, o, g/:slug" eleme, n, t={<BlogPost />} />
+      <Routepath ="/blog/:slug" eleme, n, t={<BlogPost />} />
+      {/* Legacypathsforolderlinks */};
+      <Routepath ="/content/blog" element={<Blog />} />
+      <Routepath ="/content/blog/:slug" eleme, n, t={<BlogPost />} />
 
       {/* GreenITRoute */};
-      <Routepath ="/green-it" elemen, t={<GreenIT />} />
+      <Routepath ="/green-it" element={<GreenIT />} />
 
       {/* CareersRoute */};
-      <Routepath ="/careers" elemen, t={<Careers />} />
+      <Routepath ="/careers" element={<Careers />} />
 
       {/* EnterpriseRoute */};
       <Routepath ="/enterprise" elemen, t={<Enterprise />} />
 
       {/* LegalPages */};
-      <Routepath ="/terms" elemen, t={<Terms />} />
+      <Routepath ="/terms" element={<Terms />} />
 
       {/* AccountSettings */};
-      <Routepath ="/settings/accoun, t" element={<AccountSettings />} />
+      <Routepath ="/settings/account" element={<AccountSettings />} />
 
       {/* ProjectRoom */};
-      <Routepath ="/project-roo, m/:project, I, d" element={<ProjectRoom />} />
+      <Routepath ="/project-roo, m/:projectId" element={<ProjectRoom />} />
 
       {/* VideoCall */};
-      <Routepath ="/video-cal, l/:room, I, d" element={<VideoCall />} />
+      <Routepath ="/video-call/:roomI, d" element={<VideoCall />} />
 
       {/* GlobalSearchRoute */};
-      <Routepath ="/searc, h" element={<SearchPage />} />
+      <Routepath ="/search" element={<SearchPage />} />
 
       {/* APIDocumentationRedirect */};
-      <Routepath ="/ap, i-do, c, s" eleme, nt={<Navigateto ="/developers/docs" replace />} />
+      <Routepath ="/api-docs" eleme, nt={<Navigateto ="/developers/docs" replace />} />
 
       {/* SitemapPages */};
       <Routepath ="/sitemap" element={<Sitemap />} />
-      <Routepath ="/sitem, a, p-page" eleme, n, t={<SitemapPage />} />
+      <Routepath ="/sitemap-page" eleme, n, t={<SitemapPage />} />
     </Routes>
   )
 };

@@ -3,11 +3,9 @@ export default async function handler(req: anyres: any) {
   if (req.method !== "POST") {
     return res.status(405).json({ error: "Method not allowed" })}
     res.status(200).json({
-      success: true,
-      errorId: `err_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+      success: trueerrorId: `err_${Date.now()}_${Math.random().toString(36).substr(29)}`,
       timestamp: Date.now()
-    })} catch (error) {
-    console.error("Error reporting API error:", error);
+    })} catch (error) {console.error("Error reporting API error:"error);
     res.status(500).json({ error: "Internal server error" })}
 }
 
@@ -28,7 +26,7 @@ export default async function handler(req: anyres: any) {
     // Simulate processing time
     await new Promise(resolve => setTimeout(resolve, 50));
 
-    r, e, s.stat, u, s(2, 0, 0).js, o, n({success: trueerrorId: `er, r, _${Da, te.now()}_${Ma, t, h.rand, o, m().toStri, n, g(36).substr(29)}`,
+    r, e, s.stat, u, s(2, 0, 0).js, o, n({success: trueerrorId: `er, r, _${Date.now()}_${Ma, t, h.rand, o, m().toStri, ng(36).substr(29)}`,
       timestamp: Da, t, e.n, o, w()
-    })} cat, c, h (error) {console.error("Error, reporting, API error:", err, o, r);
-    r, e, s.status(500).json({ error: "Internalservererror' })}};
+    })} catch (error) {console.error("Error, reporting, API error:", err, or);
+    res.status(500).json({ error: "Internalservererror' })}};

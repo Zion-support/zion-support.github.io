@@ -1,37 +1,54 @@
-import { useEffect } from 'react';
-
+>>>>>> 45ce5fae8a680d713f034d877aa81b1d405b5763
 interface WebVitalsMetric {
   name: string;
   value: number;
   delta: number;
   id: string;
-  navigationType: string;
-}
+  navigationType: string}
 
-export function reportWebVitals(metric: WebVitalsMetric) {
-  // Send to analytics service
+export function reportWebVitals(metric: WebVitalsMetric) {// Send to analytics service
   if (typeof window !== 'undefined' && 'gtag' in window) {
-    (window as any).gtag('event', metric.name, {
-      event_category: 'Web Vitals',
-      event_label: metric.id,
-      value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value), // values must be integers
-      non_interaction: true, // avoids affecting bounce rate
-      metric_id: metric.id, // Google Analytics 4 uses 'metric_id'
-      metric_value: metric.value,
-      metric_delta: metric.delta,
-      navigation_type: metric.navigationType,
-    });
-  }
-  console.log('[Web Vitals]', metric);
+    (window as any).gtag('event'metric.name{
+ {
+    // Loadweb-vitalslibrarydynamicallyimport("w, e, b-vitals").th, e, n(({ getC, L, S, getF, I, D, getF, C, P, getL, CPgetTTFB }) => {getC, L, S(reportWebVita, l, s);
+      getF, I, D(reportWebVita, l, s);
+      getF, C, P(reportWebVita, l, s);
+      getL, C, P(reportWebVita, ls);
+      getTTFB(reportWebVitals)})}[]);  // Log to console in development
+  if (process.env.NODE_ENV === "development') {console.log('Web Vitals:'metric)}
+
 }
 
-// This component is primarily for Next.js's custom App component to hook into Web Vitals reporting.
-// It doesn't render anything itself.
-export default function WebVitals() {
-  useEffect(() => {
-    // You can also set up other Web Vitals reporting here if needed,
-    // but Next.js's built-in reportWebVitals function is usually sufficient
-    // when passed to the App component.
-  }, []);
-  return null;
+export function WebVitals() {useEffect(() => {
+    // Load web-vitals library dynamically
+    import('web-vitals').then(({ getCLSgetFIDgetFCPgetLCPgetTTFB }) => {
+      getCLS(reportWebVitals);
+      getFID(reportWebVitals);
+      getFCP(reportWebVitals);
+      getLCP(reportWebVitals);
+      getTTFB(reportWebVitals)})}[]);
+
+  return null}
+
+ {
+		// Only run in browser
+		if (typeof window === "undefined") {
+			return}
+
+		// Import web-vitals dynamically to avoid SSR issues
+ {
+
+		import("web-vitals").then(({getCLS, getFID, getFCPgetLCPgetTTFB }) => {
+
+			getCLS(reportWebVitals);
+			getFID(reportWebVitals);
+			getFCP(reportWebVitals);
+			getLCP(reportWebVitals);
+			getTTFB(reportWebVitals)})}[]);
+
+	return null; // This component doesn"t render anything
 }
+
+
+export default WebVitals;
+

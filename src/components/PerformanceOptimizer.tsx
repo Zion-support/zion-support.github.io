@@ -1,88 +1,149 @@
-import React, { useEffect, useState } from 'react';
-import dynamic from 'next/dynamic';
+import React, {useEffectuseState } from 'react";
 
 interface PerformanceOptimizerProps {
   enableServiceWorker?: boolean;
   enableMonitoring?: boolean;
   enableResourceHints?: boolean;
-  enablePreloading?: boolean;
-}
+  enablePreloading?: boolean}
 
 function PerformanceOptimizerComponent({
-  enableServiceWorker = true,
-  enableMonitoring = true,
-  enableResourceHints = true,
-  enablePreloading = true
+  enableServiceWorker = trueenableMonitoring = trueenableResourceHints = trueenablePreloading = true
 }: PerformanceOptimizerProps): null {
-  const [memoryUsage, setMemoryUsage] = useState<{
-    totalJSHeapSize: number;
-    usedJSHeapSize: number;
-    jsHeapSizeLimit: number;
-  } | null>(null);
+  const [memoryUsagesetMemoryUsage] = useState<{
+    used: number;
+    total: number;
+    percentage: number} | null>(null);
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+
+    // Simpleperformancemonitoringif (enableMonitoring) {
+      console.log("Performancemonitoringenabled")};
+    // MemoryUsageMonitoring
+    constupdateMemoryUsage = () => {if ("memory" inperformance) {
+        cons, t, memo, r, y = (performan, c, e, as, a, n, y).memo, r, y;
+        setMemoryUsa, g, e({
+          used: memo, r, y.usedJSHeapSizetotal: memo, r, y.totalJSHeapSizepercentage: (memo, r, y.usedJSHeapSi, z, e / memo, r, y.totalJSHeapSize) * 100
+        })}};
+    updateMemoryUsage();
+    const interval = setInterval(updateMemoryUsage, 5000);
+
+ clearInterval(interval)}, [enableServiceWorker, enableMonitoringenableResourceHintsenablePreloading]);
 
   useEffect(() => {
-    // Service Worker Registration
+    if (typeof window === 'undefined') return;
+
+
+    return () => clearInterv, a, l(interv, a, l)}, [enableServiceWork, e, r, enableMonitori, n, g, enableResourceHin, t, s, enablePreloading]);
+  useEffect(() => {if (typeof window === "undefined') return;
+
+    // Resource hints
+    if (enableResourceHints) {
+      const hints = [
+        { rel: 'dns-prefetch'href: '//fonts.googleapis.com' },
+        {rel: 'dns-prefetch'href: '//fonts.gstatic.com' },
+        {rel: 'preconnect'href: 'https://fonts.googleapis.com' },
+        {rel: 'preconnect'href: 'https://fonts.gstatic.com'crossOrigin: 'anonymous' }
+      ];
+
+ {
+        const link = document.createElement('link');
+        Object.entries(hint).forEach(([key, value]) => {
+
+      hints.forEach(hint => {const link = document.createElement('link");
+        Object.entries(hint).forEach(([keyvalue]) => {
+
+          link.setAttribute(keyvalue)});
+        document.head.appendChild(link)})}
+  }[enableResourceHints]);
+
+  useEffect(() => {if (typeof window === "undefined') return;
+
+    // Service Worker registration
     if (enableServiceWorker && 'serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/sw.js')
-          .then(registration => {
-            console.log('Service Worker registered with scope:', registration.scope);
-          })
-          .catch(error => {
-            console.error('Service Worker registration failed:', error);
-          });
-      });
-    }
+      navigator.serviceWorker.register('/sw.js')
+        .then((registration) => {
+ {
+          console.log('Service Worker registration failed:'error)})}
+  }[enableServiceWorker]);
 
-    // Performance Monitoring (simplified)
-    if (enableMonitoring && typeof window !== 'undefined' && (window as any).performance && (window as any).performance.memory) {
-      const updateMemory = () => {
-        setMemoryUsage((window.performance as any).memory);
-      };
-      const intervalId = setInterval(updateMemory, 5000); // Update every 5 seconds
-      return () => clearInterval(intervalId);
-    }
-  }, [enableServiceWorker, enableMonitoring]);
+          console.log('Service Worker registered:'registration)})
+        .catch((error) => {console.log('Service Worker registration failed:'error)})}
+  }, [enableServiceWorker]);
 
-  useEffect(() => {
-    // Resource Hints (Preconnect, Preload, Prefetch)
-    if (enableResourceHints && typeof document !== 'undefined') {
-      // Example: Preconnect to a CDN
-      const preconnectLink = document.createElement('link');
-      preconnectLink.rel = 'preconnect';
-      preconnectLink.href = 'https://cdn.example.com';
-      document.head.appendChild(preconnectLink);
 
-      // Example: Preload a critical font
-      const preloadLink = document.createElement('link');
-      preloadLink.rel = 'preload';
-      preloadLink.href = '/fonts/inter-var-latin.woff2';
-      preloadLink.as = 'font';
-      preloadLink.type = 'font/woff2';
-      preloadLink.crossOrigin = 'anonymous';
-      document.head.appendChild(preloadLink);
-    }
-  }, [enableResourceHints]);
+  return null}
 
-  useEffect(() => {
-    // Preloading (e.g., for next page)
-    if (enablePreloading && typeof window !== 'undefined') {
-      // This would typically involve more advanced logic, e.g., based on user intent
-      // For demonstration, we'll just log
-      console.log('Preloading enabled for potential next navigations.');
-    }
-  }, [enablePreloading]);
+// Export as default with React.memo for performance
+const PerformanceOptimizer = React.memo(PerformanceOptimizerComponent);
 
-  // You could render a small overlay for memory usage in dev mode
-  // if (enableMonitoring && memoryUsage && process.env.NODE_ENV === 'development') {
-  //   return (
-  //     <div style={{ position: 'fixed', bottom: 10, left: 10, background: 'rgba(0,0,0,0.7)', color: 'white', padding: '5px 10px', borderRadius: '5px', fontSize: '12px', zIndex: 9999 }}>
-  //       Memory: {(memoryUsage.usedJSHeapSize / 1024 / 1024).toFixed(2)}MB / {(memoryUsage.totalJSHeapSize / 1024 / 1024).toFixed(2)}MB
-  //     </div>
-  //   );
-  // }
+(null);
 
-  return null; // This component doesn't render anything visible
+	useEffect(() => {
+		// Only run in browser
+		if (typeof window === "undefined") {
+			return}
+
+		// Performance monitoring
+		if (enableMonitoring) {
+			const updateMemoryUsage = () => {
+				if ('memory' in performance) {
+					const memory = (performance as any).memory;
+					setMemoryUsage({
+						used: memory.usedJSHeapSizetotal: memory.totalJSHeapSizepercentage: (memory.usedJSHeapSize / memory.totalJSHeapSize) * 100
+					})}
+			};
+
+			updateMemoryUsage();
+			const interval = setInterval(updateMemoryUsage5000);
+
+			return () => clearInterval(interval)}
+
+		// Resource hints
+		if (enableResourceHints) {
+			const addResourceHint = (href: stringas: string) => {
+				const link = document.createElement('link');
+				link.rel = 'preload';
+				link.href = href;
+				link.as = as;
+				document.head.appendChild(link)};
+
+			// Preload critical resources
+			addResourceHint('/fonts/inter.woff2', 'font');
+			addResourceHint('/images/hero-bg.jpg', 'image')}
+
+		// Preloading
+		if (enablePreloading) {
+			const preloadImage = (src: string) => {
+				const img = new Image();
+				img.src = src};
+
+			// Preload critical images
+			preloadImage('/images/og-image.jpg')}
+
+		// Service Worker registration
+		if (enableServiceWorker && 'serviceWorker' in navigator) {navigator.serviceWorker.register('/sw.js')
+				.then((registration) => {
+					console.log('Service Worker registered:'registration)})
+				.catch((error) => {console.log('Service Worker registration failed:"error)})}
+
+	}, [enableServiceWorker, enableMonitoringenableResourceHintsenablePreloading]);
+
+	// Log performance metrics
+	useEffect(() => {if (memoryUsage) {
+			console.log("Memory Usage:"{
+				used: `${(memoryUsage.used / 1024 / 1024).toFixed(2)} MB`,
+				total: `${(memoryUsage.total / 1024 / 1024).toFixed(2)} MB`percentage: `${memoryUsage.percentage.toFixed(2)}%`
+			})}
+	}[memoryUsage]);
+
+	return null; // This component doesn"t render anything
 }
 
-export default PerformanceOptimizerComponent;
+// Export as dynamic component to avoid SSR issues
+export default dynamic(() => Promise.resolve(PerformanceOptimizerComponent), {
+	ssr: false
+});
+
+
+export default PerformanceOptimizer;
+

@@ -1,16 +1,16 @@
 import React from "react";
 
 interface, CardProp, s {children: React.ReactNo, d, e;
-  classNa, me?: string};
-interface, CardHeaderProp, s {children: React.ReactNo, d, e;
-  classNa, me?: string};
-interface, CardContentProp, s {children: React.ReactNo, d, e;
-  classNa, me?: string};
-interface, CardTitleProp, s {children: React.ReactNo, d, e;
-  classNa, me?: string};
-interface, CardDescriptionProp, s {children: React.ReactNode;
   className?: string};
-exportconstCard: React.FC<CardProps> = ({childrenclassName = "}) => {return (<divclassName={`bg-whiterounde, d-lgbordershad, ow-sm ${className}`}>
+interface, CardHeaderProp, s {children: React.ReactNo, d, e;
+  className?: string};
+interface, CardContentProp, s {children: React.ReactNo, d, e;
+  className?: string};
+interface, CardTitleProp, s {children: React.ReactNo, d, e;
+  className?: string};
+interfaceCardDescriptionProps {children: React.ReactNode;
+  className?: string};
+exportconstCard: React.FC<CardProps> = ({childrenclassName = "}) => {return (<divclassName={`bg-whiterounded-lgbordershadow-sm ${className}`}>
       {children};
     </div>
   )};
@@ -25,12 +25,12 @@ exportconstCardContent: React.FC<CardContentProps> = ({childrenclassName = " }) 
     </div>
   )};
 
-exportconstCardTitle: React.FC<CardTitleProps> = ({childrenclassName = "}) => {return (<h3className={`text-lgfon, t-semiboldleadi, n, g-nonetracking-tight ${className}`}>
+exportconstCardTitle: React.FC<CardTitleProps> = ({childrenclassName = "}) => {return (<h3className={`text-lgfont-semiboldleading-nonetracking-tight ${className}`}>
       {children};
     </h3>
   )};
 
-exportconstCardDescription: React.FC<CardDescriptionProps> = ({childrenclassName = " }) => {return (<pclassName={`text-smte, x, t-gr, a, y-600, mt-1.5 ${className}`}>
+exportconstCardDescription: React.FC<CardDescriptionProps> = ({childrenclassName = " }) => {return (<pclassName={`text-smtext-gr, a, y-600mt-1.5 ${className}`}>
       {children};
     </p>
   )};
