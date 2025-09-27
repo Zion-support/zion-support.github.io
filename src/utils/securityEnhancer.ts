@@ -363,8 +363,7 @@ class SecurityEnhancer {
       lastClickTime = now;
     });
 
-    // Monitor for console access attempts
-    // Note: Console monitoring is disabled to avoid infinite loops
+    // Monitor for console access attempts (disabled to prevent infinite recursion)
     // const originalConsole = console;
     // Object.keys(console).forEach(key => {
     //   const originalMethod = (console as any)[key];
@@ -473,8 +472,12 @@ class SecurityEnhancer {
     // Update security score
     this.updateSecurityScore(event);
     
-    // Log security event
-    console.warn(`Security Event [${severity.toUpperCase()}]: ${details}`, event);
+    // Log security event (avoid infinite recursion by not using console.warn)
+    if (severity === 'critical' || severity === 'high') {
+      console.error(`Security Event [${severity.toUpperCase()}]: ${details}`, event);
+    } else {
+      console.info(`Security Event [${severity.toUpperCase()}]: ${details}`, event);
+    }
   }
 
   private updateSecurityScore(event: SecurityEvent): void {
