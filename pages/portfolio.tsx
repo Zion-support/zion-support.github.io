@@ -1,18 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import SEO from '../src/components/SEO';
-import { useAnalytics } from '../src/hooks/useAnalytics';
 
 export default function Portfolio(): JSX.Element {
   const [selectedProject, setSelectedProject] = useState<number | null>(null);
-  const [isVisible, setIsVisible] = useState(false);
 
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
-
-  const { trackClick } = useAnalytics();
 
   const projects = [
     {
@@ -72,9 +65,7 @@ export default function Portfolio(): JSX.Element {
 
           <main>
             {/* Stats Section */}
-            <section className={`mb-16 transition-all duration-700 delay-100 ${
-              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-            }`}>
+            <section className="mb-16 transition-all duration-700 delay-100 opacity-100 translate-y-0">
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
                 {stats.map((stat, index) => (
                   <div key={index} className="text-center p-6 bg-white rounded-2xl shadow-lg">
