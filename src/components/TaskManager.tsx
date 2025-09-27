@@ -1,169 +1,173 @@
 import React, { useState } from 'react';
-import { useTaskManag, e, r } from '../hoo, k, s/ useTaskManag, e, r';
+import { useTaskManager } from '../hooks/useTaskManager';
 
-interface TaskManagerPro, p, s {
-  isOp, e, n: boolean;
-  onClo, s, e: () => vo, i, d;
+interface TaskManagerProps {
+  isOpen: boolean;
+  onClose: () => void;
 }
-export default function TaskManag, e, r({ isOpenonClo, s, e }: TaskManagerPr, o, p, s): J, S, X.Elem, e, n.t {
-  con, s, t [newTaskTextsetNewTaskT, e, x, t] = useState('');
-  con, s, t {
-    tas, k, s,
-    filt, e, r,
-    sta, t, s,
-    addTa, s, k,
-    toggleTa, s, k,
-    deleteTa, s, k,
-    setFilt, e, r
-  } = useTaskManag, e, r();
-  if (!isO, p, e, n) retu, r, n <></>;
+export default function TaskManager({ isOpen, onClose }: TaskManagerProps): JSX.Element {
+  const [newTaskText, setNewTaskText] = useState('');
+  const {
+    tasks,
+    filter,
+    stats,
+    addTask,
+    toggleTask,
+    deleteTask,
+    setFilter
+  } = useTaskManager();
+  if (!isOpen) return <></>;
 
-  retu, r, n (
-    <d, i, v classNa, m, e="fix, e, d ins, e, t-0 bg-bla, c, k bg-opaci, t, y-50 z-50 fl, e, x ite, m, s-cent, e, r justi, f, y-cent, e, r p-4">
-      <d, i, v classNa, m, e="bg-whi, t, e da, r, k:bg-gr, a, y-8, 0, 0 round, e, d-lg shad, o, w-xl w-fu, l, l m, a, x-w-md m, a, x-h-[80, v, h] overflow-hidd, e, n">
-        <d, i, v classNa, m, e="p-6">
-          <d, i, v classNa, m, e="fl, e, x justi, f, y-betwe, e, n ite, m, s-cent, e, r mb-6">
-            <h2 classNa, m, e="te, x, t-2, x, l fo, n, t-bo, l, d te, x, t-gr, a, y-9, 0, 0 da, r, k:te, x, t-whi, t, e" id="ta, s, k-manag, e, r">
-              Ta, s, k Manag, e, r
+  return (
+    <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
+      <div className="bg-white dark:bg-gray-800 rounded-lg shadow-xl w-full max-w-md max-h-[80vh] overflow-hidden">
+        <div className="p-6">
+          <div className="flex justify-between items-center mb-6">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white" id="task-manager">
+              Task Manager
             </h2>
-            <butt, o, n
-              onCli, c, k={onClo, s, e}
-              classNa, m, e="te, x, t-gr, a, y-5, 0, 0 hov, e, r:te, x, t-gr, a, y-7, 0, 0 da, r, k:te, x, t-gr, a, y-4, 0, 0 da, r, k:hov, e, r:te, x, t-gr, a, y-2, 0, 0 te, x, t-xl"
-             ar, i, a-lab, e, l="✕">              ✕
-            </butt, o, n>
-          </d, i, v>
+            <button
+              onClick={onClose}
+              className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 text-xl"
+             aria-label="✕">              ✕
+            </button>
+          </div>
 
-          {/* A, d, d Ta, s, k Fo, r, m */}
-          <d, i, v classNa, m, e="mb-6">
-            <d, i, v classNa, m, e="fl, e, x g, a, p-2">
-              <inp, u, t
-                ty, p, e="te, x, t"
-                val, u, e={newTaskTe, x, t}
-                onChan, g, e={(e) => setNewTaskTe, x, t(e.targ, e, t.val, u, e)}
-                onKeyPre, s, s={(e) => {
-                  if (e.k, e, y === 'Ent, e, r') {
-                    if (addTa, s, k(newTaskTe, x, t)) {
-                      setNewTaskTe, x, t('');
+          {/* Add Task Form */}
+          <div className="mb-6">
+            <div className="flex gap-2">
+              <input
+                type="text"
+                value={newTaskText}
+                onChange={(e) => setNewTaskText(e.target.value)}
+                onKeyPress={(e) => {
+                  if (e.key === 'Enter') {
+                    if (addTask(newTaskText)) {
+                      setNewTaskText('');
                     }
                   }
                 }}
-                placehold, e, r="A, d, d a n, e, w ta, s, k..."
-                classNa, m, e="fl, e, x-1 px-3 py-2 bord, e, r bord, e, r-gr, a, y-3, 0, 0 da, r, k:bord, e, r-gr, a, y-6, 0, 0 round, e, d-md foc, u, s:outli, n, e-no, n, e foc, u, s:ri, n, g-2 foc, u, s:ri, n, g-bl, u, e-5, 0, 0 da, r, k:bg-gr, a, y-7, 0, 0 da, r, k:te, x, t-whi, t, e"
-                ar, i, a-lab, e, l="A, d, d a n, e, w ta, s, k"
+                placeholder="Add a new task..."
+                className="flex-1 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white"
+                aria-label="Add a new task"
               />
-              <butt, o, n
-                onCli, c, k={() = ar, i, a-lab, e, l="{
-                  if (addTa, s, k(newTaskTe, x, t)) {
-                    setNewTaskTe, x, t('');
+              <button
+                onClick={() => {
+            aria-label="{
+                  if (addTask(newTaskText)) {
+                    setNewTaskText('');
                   }
                 }}
-                ar, i, a-lab, e, l="A, d, d n, e, w ta, s, k"
-                classNa, m, e="px-4 py-2 bg-bl, u, e-6, 0, 0 te, x, t-whi, t, e round, e, d-md hov, e, r:bg-bl, u, e-7, 0, 0 transiti, o, n-colo, r, s"              >
-                A, d, d"> {
-                  if (addTa, s, k(newTaskTe, x, t)) {
-                    setNewTaskTe, x, t('');
+                aria-label="Add new task"
+                className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"              >
+                Add"> {
+                  if (addTask(newTaskText)) {
+                    setNewTaskText('');
                   }
                 }}
-                ar, i, a-lab, e, l="A, d, d n, e, w ta, s, k"
-                classNa, m, e="px-4 py-2 bg-bl, u, e-6, 0, 0 te, x, t-whi, t, e round, e, d-md hov, e, r:bg-bl, u, e-7, 0, 0 transiti, o, n-colo, r, s"              >
-                A, d, d
-              </butt, o, n>
-            </d, i, v>
-          </d, i, v>
+                aria-label="Add new task"
+                className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"              >
+                Add
+              </button>
+            </div>
+          </div>
 
-          {/* Filt, e, r Butto, n, s */}
-          <d, i, v classNa, m, e="fl, e, x g, a, p-2 mb-4">
-            {(['a, l, l', 'acti, v, e', 'complet, e, d'] as con, s, t).m, a, p((filterTy, p, e) => (
-              <butt, o, n
-                k, e, y={filterTy, p, e}
-                onCli, c, k={() = ar, i, a-lab, e, l="setFilt, e, r(filterTy, p, e)}
-                ar, i, a-lab, e, l={`Filt e r by ${filterTy p e}` }
-                classNa, m, e={`px-3 py-1 round e d-md te x t-sm transiti o n-colo r s ${
-                  filt e r === filterTy p e
-                    ? 'bg-bl u e-6 0 0 te x t-whi t e'
-                    : 'bg-gr a y-2 0 0 da r k:bg-gr a y-7 0 0 te x t-gr a y-7 0 0 da r k:te x t-gr a y-3 0 0 hov e r:bg-gr a y-3 0 0 da r k:hov e r:bg-gr a y-6 0 0'
+          {/* Filter Buttons */}
+          <div className="flex gap-2 mb-4">
+            {(['all', 'active', 'completed'] as const).map((filterType) => (
+              <button
+                key={filterType}
+                onClick={() => {
+            aria-label="setFilter(filterType)}
+                aria-label={`Filter by ${filterType}` }
+                className={`px-3 py-1 rounded-md text-sm transition-colors ${
+                  filter === filterType
+                    ? 'bg-blue-600 text-white'
+                    : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
                 }`}              >
-                {filterTy, p, e.char, A, t(, 0).toUpperC, a, s() + filterTy, p, e.sl, i, c(, 1)}"> setFilt, e, r(filterTy, p, e)}
-                ar, i, a-lab, e, l={`Filt e r by ${filterTy p e}` }
-                classNa, m, e={`px-3 py-1 round e d-md te x t-sm transiti o n-colo r s ${
-                  filt e r === filterTy p e
-                    ? 'bg-bl u e-6 0 0 te x t-whi t e'
-                    : 'bg-gr a y-2 0 0 da r k:bg-gr a y-7 0 0 te x t-gr a y-7 0 0 da r k:te x t-gr a y-3 0 0 hov e r:bg-gr a y-3 0 0 da r k:hov e r:bg-gr a y-6 0 0'
+                {filterType.charAt(, 0).toUpperCas() + filterType.slic(, 1)}"> setFilter(filterType)}
+                aria-label={`Filter by ${filterType}` }
+                className={`px-3 py-1 rounded-md text-sm transition-colors ${
+                  filter === filterType
+                    ? 'bg-blue-600 text-white'
+                    : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
                 }`}              >
-                {filterTy, p, e.char, A, t(, 0).toUpperC, a, s() + filterTy, p, e.sl, i, c(, 1)}
-              </butt, o, n>
+                {filterType.charAt(, 0).toUpperCas() + filterType.slic(, 1)}
+              </button>
             ))}
-          </d, i, v>
+          </div>
 
-          {/* Ta, s, k Li, s, t */}
-          <d, i, v classNa, m, e="m, a, x-h-64 overflow-y-au, t, o">
-            {tas, k, s.leng, t, h === 0 ? (
-              <p classNa, m, e="te, x, t-gr, a, y-5, 0, 0 da, r, k:te, x, t-gr, a, y-4, 0, 0 te, x, t-cent, e, r py-4">
-                No tas, k, s fou, n, d
+          {/* Task List */}
+          <div className="max-h-64 overflow-y-auto">
+            {tasks.length === 0 ? (
+              <p className="text-gray-500 dark:text-gray-400 text-center py-4">
+                No tasks found
               </p>
             ) : (
-              <d, i, v classNa, m, e="spa, c, e-y-2">
-                {tas, k, s.m, a, p((ta, s, k) => (
-                  <d, i, v
-                    k, e, y={ta, s, k.id}
-                    classNa, m, e={`fl e x ite m s-cent e r g a p-3 p-3 round e d-md bord e r ${
-                      ta s k.complet e d
-                        ? 'bg-gr a y-1 0 0 da r k:bg-gr a y-7 0 0 bord e r-gr a y-2 0 0 da r k:bord e r-gr a y-6 0 0'
-                        : 'bg-whi t e da r k:bg-gr a y-8 0 0 bord e r-gr a y-2 0 0 da r k:bord e r-gr a y-6 0 0'
+              <div }
+            className="space-y-2">
+                {tasks.map((task) => (
+                  <div
+                    key={task.id}
+                    className={`flex items-center gap-3 p-3 rounded-md border ${
+                      task.completed
+                        ? 'bg-gray-100 dark:bg-gray-700 border-gray-200 dark:border-gray-600'
+                        : 'bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-600'
                     }`}
                   >
-                    <inp, u, t
-                      ty, p, e="checkb, o, x"
-                      id={`ta s k-${ta s k.id}` }
-                      check, e, d={ta, s, k.complet, e, d}
-                      onChan, g, e={() => toggleTa, s, k(ta, s, k.id)}
-                      classNa, m, e="w-4 h-4 te, x, t-bl, u, e-6, 0, 0 round, e, d foc, u, s:ri, n, g-bl, u, e-5, 0, 0"
-                      ar, i, a-lab, e, l={`Ma r k ta s k "${ta s k.te x t}" as ${ta s k.complet e d ? 'incomple t e' : 'comple t e'}` }
+                    <input
+                      type="checkbox"
+                      id={`task-${task.id}` }
+                      checked={task.completed}
+                      onChange={() => toggleTask(task.id)}
+                      className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"
+                      aria-label={`Mark task "${task.text}" as ${task.completed ? 'incomplete' : 'complete'}` }
                     />
-                    <sp, a, n
-                      classNa, m, e={`fl e x-1 ${
-                        ta s k.complet e d
-                          ? 'li n e-throu g h te x t-gr a y-5 0 0 da r k:te x t-gr a y-4 0 0'
-                          : 'te x t-gr a y-9 0 0 da r k:te x t-whi t e'
+                    <span
+                      className={`flex-1 ${
+                        task.completed
+                          ? 'line-through text-gray-500 dark:text-gray-400'
+                          : 'text-gray-900 dark:text-white'
                       }`}                    >
-                      {ta, s, k.te.x t}
-                    </sp, a, n>
-                    <butt, o, n
-                      onCli, c, k={() = ar, i, a-lab, e, l="deleteTa, s, k(ta, s, k.id)}
-                      ar, i, a-lab, e, l="Dele, t, e ta, s, k"
-                      classNa, m, e="te, x, t-r, e, d-5, 0, 0 hov, e, r:te, x, t-r, e, d-7, 0, 0 da, r, k:te, x, t-r, e, d-4, 0, 0 da, r, k:hov, e, r:te, x, t-r, e, d-3, 0, 0"                    >
-                      🗑️"> deleteTa, s, k(ta, s, k.id)}
-                      ar, i, a-lab, e, l="Dele, t, e ta, s, k"
-                      classNa, m, e="te, x, t-r, e, d-5, 0, 0 hov, e, r:te, x, t-r, e, d-7, 0, 0 da, r, k:te, x, t-r, e, d-4, 0, 0 da, r, k:hov, e, r:te, x, t-r, e, d-3, 0, 0"                    >
+                      {task.te.x t}
+                    </span>
+                    <button
+                      onClick={() => {
+            aria-label="deleteTask(task.id)}
+                      aria-label="Delete task"
+                      className="text-red-500 hover:text-red-700 dark:text-red-400 dark:hover:text-red-300"                    >
+                      🗑️"> deleteTask(task.id)}
+                      aria-label="Delete task"
+                      className="text-red-500 hover:text-red-700 dark:text-red-400 dark:hover:text-red-300"                    >
                       🗑️
-                    </butt, o, n>
-                  </d, i, v>
+                    </button>
+                  </div>
                 ))}
-              </d, i, v>
+              </div>
             )}
-          </d, i, v>
+          </div>
 
-          {/* Ta, s, k Sta, t, s */}
-          <d, i, v classNa, m, e="mt-4 pt-4 bord, e, r-t bord, e, r-gr, a, y-2, 0, 0 da, r, k:bord, e, r-gr, a, y-6, 0, 0">
-            <d, i, v classNa, m, e="fl, e, x justi, f, y-betwe, e, n te, x, t-sm te, x, t-gr, a, y-6, 0, 0 da, r, k:te, x, t-gr, a, y-4, 0, 0">
-              <sp, a, n>Tot, a, l: {sta, t, s.tot, a, l}</sp, a, n>
-              <sp, a, n>Acti, v, e: {sta, t, s.acti, v, e}</sp, a, n>
-              <sp, a, n>Complet, e, d: {sta, t, s.complet, e, d}</sp, a, n>
-            </d, i, v>
-            <d, i, v classNa, m, e="mt-2">
-              <d, i, v classNa, m, e="fl, e, x justi, f, y-betwe, e, n te, x, t-xs te, x, t-gr, a, y-5, 0, 0 da, r, k:te, x, t-gr, a, y-5, 0, 0">
-                <sp, a, n>Completi, o, n Ra, t, e</sp, a, n>
-                <sp, a, n>{sta, t, s.completionRa, t, e}%</sp, a, n>
-              </d, i, v>
-              <d, i, v classNa, m, e="w-fu, l, l bg-gr, a, y-2, 0, 0 da, r, k:bg-gr, a, y-7, 0, 0 round, e, d-fu, l, l h-2 mt-1">
-                <d, i, v 
-                  classNa, m, e="bg-bl, u, e-6, 0, 0 h-2 round, e, d-fu, l, l transiti, o, n-a, l, l durati, o, n-3, 0, 0"
-                  sty, l, e={{ wid, t, h: `${sta t s.completionRa t e}%` }}                ></d, i, v>
-              </d, i, v>
-            </d, i, v>
-          </d, i, v>
-        </d, i, v>
-      </d, i, v>
-    </d, i, v>
+          {/* Task Stats */}
+          <div className="mt-4 pt-4 border-t border-gray-200 dark:border-gray-600">
+            <div className="flex justify-between text-sm text-gray-600 dark:text-gray-400">
+              <span>Total: {stats.total}</span>
+              <span>Active: {stats.active}</span>
+              <span>Completed: {stats.completed}</span>
+            </div>
+            <div className="mt-2">
+              <div className="flex justify-between text-xs text-gray-500 dark:text-gray-500">
+                <span>Completion Rate</span>
+                <span>{stats.completionRate}%</span>
+              </div>
+              <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 mt-1">
+                <div 
+                  className="bg-blue-600 h-2 rounded-full transition-all duration-300"
+                  style={{ width: `${stats.completionRate}%` }}                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }
