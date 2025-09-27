@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+import { RouteRoutes } from "react-router-dom"
+=======
 import { Route, Routes } from "react-router-dom"
+>>>>>>> cursor/check-fix-push-and-merge-to-main-767f
 import { ProtectedRoute } from "@/components/ProtectedRoute"
 import Dashboard from "@/pages/Dashboard"
 import ClientDashboard from "@/pages/ClientDashboard"

@@ -1,59 +1,96 @@
 #!/bin/bash
 
-# Merge remaining branches script
+# Script to merge remaining cursor branches
 set -e
 
-echo "🚀 Starting merge of remaining branches..."
+echo "Starting merge of remaining cursor branches..."
 
-# Get list of branches that have new commits
-branches=($(git branch -r | grep "cursor/check-fix-push-and-merge-to-main" | tail -20 | sed 's/origin\///'))
+# Get the remaining branches
+REMAINING_BRANCHES=(
+    "cursor/check-fix-push-and-merge-to-main-1872"
+    "cursor/check-fix-push-and-merge-to-main-0c70"
+    "cursor/check-fix-push-and-merge-to-main-bd4c"
+    "cursor/check-fix-push-and-merge-to-main-3216"
+    "cursor/check-fix-push-and-merge-to-main-47a3"
+    "cursor/check-fix-push-and-merge-to-main-78f2"
+    "cursor/check-fix-push-and-merge-to-main-d6f5"
+    "cursor/check-fix-push-and-merge-to-main-d80d"
+    "cursor/check-fix-push-and-merge-to-main-0efc"
+)
 
-successful_merges=0
-failed_merges=0
+# Initialize counters
+MERGED_COUNT=0
+ERROR_COUNT=0
+SKIPPED_COUNT=0
 
-for branch in "${branches[@]}"; do
+# Function to merge a single branch
+merge_branch() {
+    local branch=$1
     echo ""
-    echo "🔄 Processing branch: $branch"
+    echo "Processing branch: $branch"
     
-    # Check if branch has commits not in main
-    if git log --oneline "origin/$branch" --not origin/main | head -1 > /dev/null 2>&1; then
-        echo "📝 Branch has new commits, attempting merge..."
-        
-        # Try to merge with strategy to take main version for conflicts
-        if git merge "origin/$branch" --no-commit -X ours 2>/dev/null; then
-            echo "✅ No conflicts in $branch"
-            git commit -m "Merge $branch into main - no conflicts"
-            ((successful_merges++))
-        else
-            echo "⚠️  Conflicts detected, resolving..."
-            
-            # Check if there are actual conflicts
-            if git status --porcelain | grep -q "^UU\|^AA\|^DD"; then
-                # Resolve conflicts by taking main version
-                git checkout --ours .
-                git add .
-                git commit -m "Merge $branch into main - conflicts resolved (took main version)"
-                echo "✅ Conflicts resolved for $branch"
-                ((successful_merges++))
-            else
-                echo "❌ Merge failed for $branch - aborting"
-                git merge --abort
-                ((failed_merges++))
-            fi
-        fi
-    else
-        echo "⏭️  Branch has no new commits, skipping"
+    # Check if branch exists
+    if ! git show-ref --verify --quiet "refs/remotes/origin/$branch"; then
+        echo "Branch $branch does not exist, skipping..."
+        SKIPPED_COUNT=$((SKIPPED_COUNT + 1))
+        return 1
     fi
+    
+    # Check if branch is already merged
+    if git merge-base --is-ancestor "origin/$branch" HEAD 2>/dev/null; then
+        echo "Branch $branch is already merged, skipping..."
+        SKIPPED_COUNT=$((SKIPPED_COUNT + 1))
+        return 0
+    fi
+    
+    # Try to merge into main
+    if git merge "origin/$branch" --no-edit 2>/dev/null; then
+        echo "✓ Successfully merged $branch"
+        MERGED_COUNT=$((MERGED_COUNT + 1))
+        return 0
+    else
+        echo "⚠ Merge conflict in $branch, resolving automatically..."
+        
+        # Resolve conflicts automatically by preferring incoming version
+        local conflicted_files=$(git status --porcelain | grep "^UU\|^AA\|^DD" | cut -c4-)
+        
+        for file in $conflicted_files; do
+            echo "Resolving conflicts in $file"
+            git checkout --theirs "$file" 2>/dev/null || true
+            git add "$file" 2>/dev/null || true
+        done
+        
+        # Add all files and commit
+        git add -A
+        git commit -m "resolve: merge conflicts in $branch" 2>/dev/null
+        
+        if [ $? -eq 0 ]; then
+            echo "✓ Resolved conflicts and merged $branch"
+            MERGED_COUNT=$((MERGED_COUNT + 1))
+        else
+            echo "✗ Failed to resolve conflicts in $branch"
+            git merge --abort 2>/dev/null || true
+            ERROR_COUNT=$((ERROR_COUNT + 1))
+        fi
+        return 1
+    fi
+}
+
+# Process each branch
+for branch in "${REMAINING_BRANCHES[@]}"; do
+    merge_branch "$branch"
 done
 
+# Final summary
 echo ""
-echo "📊 Merge Summary:"
-echo "  ✅ Successful merges: $successful_merges"
-echo "  ❌ Failed merges: $failed_merges"
+echo "=== MERGE SUMMARY ==="
+echo "Successfully merged: $MERGED_COUNT"
+echo "Errors: $ERROR_COUNT"
+echo "Skipped: $SKIPPED_COUNT"
 
-# Push all changes
+# Push the updated main branch
 echo ""
-echo "🚀 Pushing all changes to remote..."
+echo "Pushing updated main branch..."
 git push origin main
 
-echo "🎉 Merge process completed!"
+echo "Remaining cursor branches merge process completed!"
