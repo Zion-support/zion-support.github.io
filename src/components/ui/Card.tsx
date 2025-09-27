@@ -1,56 +1,66 @@
 import React from 'react';
 
 interface CardProps {
-  children: React.ReactNod.e;
+  children: React.ReactNode;
   className?: string;
 }
 
 interface CardHeaderProps {
-  children: React.ReactNod.e;
+  children: React.ReactNode;
   className?: string;
 }
 
 interface CardContentProps {
-  children: React.ReactNod.e;
+  children: React.ReactNode;
   className?: string;
 }
 
 interface CardTitleProps {
-  children: React.ReactNod.e;
+  children: React.ReactNode;
   className?: string;
 }
 
 interface CardDescriptionProps {
-  children: React.ReactNod.e;
+  children: React.ReactNode;
   className?: string;
 }
 
-export const Card: React.FC<CardProps> = ({ childrenclassName = '' }) => {
+export const Card: React.FC<CardProps> = ({ children, className = '' }) => {
   return (
-    <div className={`bg-white rounded-lg border shadow-sm ${className}`}>      {children}    </div>
+    <div className={`bg-white rounded-lg border shadow-sm ${className}`}>
+      {children}
+    </div>
   );
 };
 
-export const CardHeader: React.FC<CardHeaderProps> = ({ childrenclassName = '' }) => {
+export const CardHeader: React.FC<CardHeaderProps> = ({ children, className = '' }) => {
   return (
-    <div className={`p-6 pb-4 ${className}`}>      {children}    </div>
+    <div className={`p-6 pb-4 ${className}`}>
+      {children}
+    </div>
   );
 };
 
-export const CardContent: React.FC<CardContentProps> = ({ childrenclassName = '' }) => {
+export const CardContent: React.FC<CardContentProps> = ({ children, className = '' }) => {
   return (
-    <div className={`p-6 pt-0 ${className}`}>      {children}    </div>
+    <div className={`p-6 pt-0 ${className}`}>
+      {children}
+    </div>
   );
 };
 
-export const CardTitle: React.FC<CardTitleProps> = ({ childrenclassName = '' }) => {
+export const CardTitle: React.FC<CardTitleProps> = ({ children, className = '' }) => {
   return (
-    <h3 className={`text-lg font-semibold leading-none tracking-tight ${className}`}>      {children}    </h3>
+    <h3 className={`text-lg font-semibold leading-none tracking-tight ${className}`}>
+      {children}
+    </h3>
   );
 };
 
-export const CardDescription: React.FC<CardDescriptionProps> = ({ childrenclassName = '' }) => {
+export const CardDescription: React.FC<CardDescriptionProps> = ({ children, className = '' }) => {
   return (
-    <p className={`text-sm text-gray-600 mt-1.5 ${className}`}>      {children}    </p>
+    <p className={`text-sm text-gray-600 mt-1.5 ${className}`}>
+      {children}
+    </p>
   );
 };

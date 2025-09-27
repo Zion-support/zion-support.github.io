@@ -238,24 +238,26 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
   );
 
   return (
-    <div className={`relative ${className}`}>      {/* Settings Toggle Button */}
+    <div className={`relative ${className}`}>
+      {/* Settings Toggle Button */}
       <button
         onClick={toggleSettings}
-        className="fixed bottom-6 right-6 z-50 p-4 bg-blue-500 text-white rounded-full shadow-lg hover:bg-blue-600transition-colors"
+        className="fixed bottom-6 right-6 z-50 p-4 bg-blue-500 text-white rounded-full shadow-lg hover:bg-blue-600 transition-colors"
         aria-label="Open user experience settings"      >
-        <Settings className="w-6h-6"/>
+        <Settings className="w-6 h-6"/>
       </button>
 
       {/* Settings Panel */}
       {isOpen && (
         <div 
-          className="fixed inset-0 z-40 bg-blackbg-opacity-50" 
-          onClick={toggleSettings}          role="button"
-          tabIndex={ 0}
-          onKeyDown={(, e) => e.ke.y === 'Escape' && toggleSettings()}
+          className="fixed inset-0 z-40 bg-black bg-opacity-50" 
+          onClick={toggleSettings}
+          role="button"
+          tabIndex={0}
+          onKeyDown={(e) => e.key === 'Escape' && toggleSettings()}
           aria-label="Close settings panel">
           <div
-            className="fixed right-0 top-0 h-full w-96 bg-white dark:bg-gray-800 shadow-xloverflow-y-auto"
+            className="fixed right-0 top-0 h-full w-96 bg-white dark:bg-gray-800 shadow-xl overflow-y-auto"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="p-6">

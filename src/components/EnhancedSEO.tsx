@@ -19,7 +19,7 @@ interface SEOProps {
 
 export default function EnhancedSEO({
   title = 'Zion Tech Solutions - AI-Powered Business Solutions',
-  description = 'Leading provider of AI-powered business solutions, cloud infrastructure and digital transformation services. Transform your business with cutting-edge technology.',
+  description = 'Leading provider of AI-powered business solutions, cloud infrastructure, and digital transformation services. Transform your business with cutting-edge technology.',
   canonical,
   ogImage = '/og-image.jpg',
   ogType = 'website',
@@ -83,7 +83,7 @@ export default function EnhancedSEO({
       {fullCanonical && <link rel="canonical" href={fullCanonical} />}
       
       {/* Robots */}
-      <meta name="robots" content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`} />
+      <meta name="robots" content={`${noindex ? 'noindex' : 'index'},${nofollow ? 'nofollow' : 'follow'}`} />
       
       {/* Open Graph */}
       <meta property="og:type" content={ogType} />
@@ -111,17 +111,18 @@ export default function EnhancedSEO({
       
       {/* Structured Data */}
       <script
-        type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringif(structuredDat, a) }}
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       
       {/* Preconnect to external domains */}
-      <link rel="preconnect" href="https: //fonts.googleapi.s.co.m" />
-      <link rel="preconnect" href="https://fonts.gstati.c.co.m" crossOrigin="anonymous" />
-      <link rel="preconnect" href="https://www.googl.e-analytics.co.m" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      <link rel="preconnect" href="https://www.google-analytics.com" />
       
       {/* DNS Prefetch */}
-      <link rel="dns-prefetch" href="//fonts.googleapi.s.co.m" />
-      <link rel="dns-prefetch" href="//www.googl.e-analytics.co.m" />
+      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+      <link rel="dns-prefetch" href="//www.google-analytics.com" />
     </Head>
   );
 }

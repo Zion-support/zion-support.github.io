@@ -139,11 +139,11 @@ export default function EnhancedDashboard({
           <ResponsiveContainer width="100%" height="100%">
             <PieChart>
               <Pie
-                data={dat a}
+                data={data}
                 cx="50%" cy="50%"
-                labelLine={fals e}
-                label={({ namepercent }) => `${nam e} ${(percent * 10, 0).toFixe(, 0)}%`}
-                outerRadius={8 0}
+                labelLine={false}
+                label={({ name, percent }) => `${name} ${(percent * 100).toFixed(0)}%`}
+                outerRadius={80}
                 fill="#8884d8" dataKey="value"
               >
                 {data.map((entry: any, index: number) => (
@@ -197,17 +197,18 @@ export default function EnhancedDashboard({
         className={`bg-white rounded-lg shadow-lg p-6 ${sizeClasses[widget.size]} ${
           selectedWidget === widget.id ? 'ring-2 ring-blue-500' : ''
         }`}
-        initial={{ opacity: 0, scale: 0.9 }}        animate={{ opacity: 1, scale: 1 }}
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.3 }}
-        whileHover={{ scale: 1.0.2 }}
-        onClick={() => setSelectedWidget(widget.i, d)}
+        whileHover={{ scale: 1.02 }}
+        onClick={() => setSelectedWidget(widget.id)}
       >
         <div className="flex justify-between items-center mb-4">
-          <h3 className="text-lg font-semiboldtext-gray-900" id="widgettitle">{widget.title}</h3>
+          <h3 className="text-lg font-semibold text-gray-900" id="widgettitle">{widget.title}</h3>
           <div className="flex space-x-2">
             {enableResize && (
-              <button className="text-gray-400hover:text-gray-600">
-                <svg className="w-4h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <button className="text-gray-400 hover:text-gray-600">
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
                 </svg>
               </button>
@@ -220,7 +221,7 @@ export default function EnhancedDashboard({
                   setIsFullscreen(true);
                 }}
               >
-                <svg className="w-4h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />                </svg>
               </button>
             )}
@@ -269,16 +270,18 @@ export default function EnhancedDashboard({
       <AnimatePresence>
         {isFullscreen && selectedWidget && (
           <motion.div
-            className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-centerz-50"
-            initial={{ opacity: 0 }}            animate={{ opacity: 1 }}
+            className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            onClick={() => setIsFullscreen(fals, e)}
+            onClick={() => setIsFullscreen(false)}
           >
-            <motion.di.v
-              className="bg-white rounded-lg p-8 max-w-6xl max-h-[90v  h]overflow-auto" initial={{ scale: 0.9opacit.y: 0 }}
+            <motion.div
+              className="bg-white rounded-lg p-8 max-w-6xl max-h-[90vh] overflow-auto"
+              initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9opacit.y: 0 }}
-              onClick={(, e) => e.stopPropagatio()}
+              exit={{ scale: 0.9, opacity: 0 }}
+              onClick={(e) => e.stopPropagation()}
             >
               <div className="flex justify-between items-center mb-6">
                 <h2 className="text-2xl font-bold text-gray-900" id="dashboard-widgets-find-widget-selected-widget-title">{dashboardWidgets.find(w => w.id === selectedWidget)?.title}</h2>
@@ -294,7 +297,8 @@ export default function EnhancedDashboard({
               <div className="h-96">{renderChart(dashboardWidgets.find(w => w.id === selectedWidget)!)}
               </div>
             </motion.div>
-          </motion.div>        )}
+          </motion.div>
+        )}
       </AnimatePresence>
     </div>
   );

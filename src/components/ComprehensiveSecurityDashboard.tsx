@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/Card';import { 
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/Card';
+import { 
   Shield, 
   AlertTriangle, 
   CheckCircle, 
@@ -64,7 +65,8 @@ interface SecurityMetrics {
     ssl: {
       score: number;
       grade: string;
-      issues: string[];    };
+      issues: string[];
+    };
     csp: {
       enabled: boolean;
       violations: number;
@@ -176,7 +178,7 @@ export default function ComprehensiveSecurityDashboard({
             severity: 'high',
             description: 'jQuery version 3.4.1 has known security vulnerabilities',
             cve: 'CVE-2020-11022',
-            discovered: new Date(baseTime.getTime() - Math.random() * 86400000),
+            discovered: new Date(baseTime.getTime() - Math.random() * 8640000),
             status: 'open'
           },
           {
@@ -185,7 +187,7 @@ export default function ComprehensiveSecurityDashboard({
             severity: 'medium',
             description: 'Password policy does not enforce strong password requirements',
             cve: 'N/A',
-            discovered: new Date(baseTime.getTime() - Math.random() * 172800000),
+            discovered: new Date(baseTime.getTime() - Math.random() * 1728000),
             status: 'in-progress'
           }
         ]
@@ -218,7 +220,8 @@ export default function ComprehensiveSecurityDashboard({
         blockedIPs: Math.floor(12 * timeRangeMultiplier),
         suspiciousActivity: Math.floor(8 * timeRangeMultiplier),
         loginAttempts: Math.floor(500 * timeRangeMultiplier),
-        failedLogins: Math.floor(50 * timeRangeMultiplier)      }
+        failedLogins: Math.floor(50 * timeRangeMultiplier)
+      }
     };
   }, [selectedTimeRange]);
 
@@ -280,6 +283,7 @@ export default function ComprehensiveSecurityDashboard({
 
     setAlerts(prev => [...prev, ...newAlerts]);
   }, []);
+
   const loadMetrics = useCallback(async () => {
     setIsLoading(true);
     try {
@@ -589,7 +593,8 @@ export default function ComprehensiveSecurityDashboard({
                 {metrics.compliance.gdpr.issues.length} issues
               </p>
             </div>
-          </div>        </CardContent>
+          </div>
+        </CardContent>
       </Card>
     </div>
   );

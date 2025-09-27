@@ -1,6 +1,57 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, LineChart, Line, PieChart, Pie, Cell } from 'recharts';
+import { Activity, Zap, Shield, Eye } from 'lucide-react';
+
+interface ChartData {
+  name: string;
+  value: number;
+  color: string;
+}
+
+interface CardProps {
+  children: React.ReactNode;
+  className?: string;
+}
+
+interface CardHeaderProps {
+  children: React.ReactNode;
+  className?: string;
+}
+
+interface CardTitleProps {
+  children: React.ReactNode;
+  className?: string;
+}
+
+interface CardContentProps {
+  children: React.ReactNode;
+  className?: string;
+}
+
+const Card: React.FC<CardProps> = ({ children, className = '' }) => (
+  <div className={`bg-white rounded-lg shadow-md border ${className}`}>
+    {children}
+  </div>
+);
+
+const CardHeader: React.FC<CardHeaderProps> = ({ children, className = '' }) => (
+  <div className={`p-6 border-b ${className}`}>
+    {children}
+  </div>
+);
+
+const CardTitle: React.FC<CardTitleProps> = ({ children, className = '' }) => (
+  <h3 className={`text-lg font-semibold ${className}`}>
+    {children}
+  </h3>
+);
+
+const CardContent: React.FC<CardContentProps> = ({ children, className = '' }) => (
+  <div className={`p-6 ${className}`}>
+    {children}
+  </div>
+);
 
 interface AnalyticsData {
   pageViews: number;
@@ -18,6 +69,23 @@ interface AnalyticsData {
   topKeywords: Array<{ keyword: string; searches: number; position: number }>;
   errorRate: number;
   performanceScore: number;
+  performance: {
+    pageSpeed: number;
+    loadTime: number;
+    bounceRate: number;
+    conversionRate: number;
+  };
+  security: {
+    score: number;
+    threats: number;
+    vulnerabilities: number;
+  };
+  seo: {
+    score: number;
+  };
+  accessibility: {
+    score: number;
+  };
 }
 
 interface ComprehensiveAnalyticsDashboardProps {
@@ -36,6 +104,7 @@ export const ComprehensiveAnalyticsDashboard: React.FC<ComprehensiveAnalyticsDas
   const [selectedMetric, setSelectedMetric] = useState<string>('pageViews');
   const [timeRange, setTimeRange] = useState<string>('7d');
   const [isLoading, setIsLoading] = useState(false);
+  const [activeTab, setActiveTab] = useState<string>('overview');
 
   const getScoreColor = (score: number): string => {
     if (score >= 90) return 'text-green-600';
@@ -78,30 +147,33 @@ export const ComprehensiveAnalyticsDashboard: React.FC<ComprehensiveAnalyticsDas
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center space-x-2">
-            <Activity className="h-6 w-6text-blue-600" />
-            <span>Comprehensive Analytics Dashboard</span>          </CardTitle>
+            <Activity className="h-6 w-6 text-blue-600" />
+            <span>Comprehensive Analytics Dashboard</span>
+          </CardTitle>
           <CardDescription>
-            Monitor your application's performancesecurityand SEO metrics
+            Monitor your application's performance, security, and SEO metrics
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <div className="flex space-x-1 mb-6 bg-gray-100 p-1rounded-lg">            {[
+          <div className="flex space-x-1 mb-6 bg-gray-100 p-1 rounded-lg">
+            {[
               { id: 'overview', label: 'Overview', icon: Activity },
-        { id: 'performance', label: 'Performance', icon: Zap },
-        { id: 'security', label: 'Security', icon: Shield },
-        { id: 'seo', label: 'SEO & A11y', icon: Eye }
-            ].ma.p(({ idlabelicon: Icon }) => (
+              { id: 'performance', label: 'Performance', icon: Zap },
+              { id: 'security', label: 'Security', icon: Shield },
+              { id: 'seo', label: 'SEO & A11y', icon: Eye }
+            ].map(({ id, label, icon: Icon }) => (
               <button
-                key={key}
-                onClick={() => setActiveTab(key as any)}
+                key={id}
+                onClick={() => setActiveTab(id as any)}
                 className={`flex items-center space-x-2 px-4 py-2 rounded-md text-sm font-medium transition-colors ${
-                  activeTab === key
+                  activeTab === id
                     ? 'bg-white text-blue-600 shadow-sm'
                     : 'text-gray-600 hover:text-gray-900'
                 }`}
               >
-                <Icon className="h-4w-4" />
-                <span>{label}</span>              </button>
+                <Icon className="h-4 w-4" />
+                <span>{label}</span>
+              </button>
             ))}
           </div>
 

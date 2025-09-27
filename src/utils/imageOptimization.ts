@@ -1,196 +1,196 @@
-interface ImageOptimizationOptions {
-  width?: number;
-  height?: number;
-  quality?: number;
-  format?: 'webp' | 'avif' | 'jpeg' | 'png';
-  blur?: boolean;
-  placeholder?: 'blur' | 'empty';
+interface ImageOptimizationOptio, n, s {
+  wid, t, h?: number;
+  heig, h, t?: number;
+  quali, t, y?: number;
+  form, a, t?: 'we, b, p' | 'av, i, f' | 'jp, e, g' | 'p, n, g';
+  bl, u, r?: boolean;
+  placehold, e, r?: 'bl, u, r' | 'emp, t, y';
 }
 
-export class ImageOptimizer {
-  private static instance: ImageOptimizer;
-  private cache = new Map<string, string>();
+export cla, s, s ImageOptimiz, e, r {
+  priva, t, e stat, i, c instan, c, e: ImageOptimiz, e, r;
+  priva, t, e cac, h, e = n, e, w M, a, p<string, string>();
 
-  static getInstance(): ImageOptimizer {
-    if (!ImageOptimizer.instance) {
-      ImageOptimizer.instance = new ImageOptimizer();
+  stat, i, c getInstan, c, e(): ImageOptimiz, e, r {
+    if (!ImageOptimiz, e, r.instan, c, e) {
+      ImageOptimiz, e, r.instan, c, e = n, e, w ImageOptimiz, e, r();
     }
-    return ImageOptimizer.instance;
+    retu, r, n ImageOptimiz, e, r.instan, c, e;
   }
 
-  // Generate optimized image URL
-  generateOptimizedUrl(
-    src: string,
-    options: ImageOptimizationOptions = {}
+  // Genera, t, e optimiz, e, d ima, g, e U, R, L
+  generateOptimizedU, r, l(
+    s, r, c: string,
+    optio, n, s: ImageOptimizationOptio, n, s = {}
   ): string {
-    const {
-      width,
-      height,
-      quality = 80,
-      format = 'webp',
-      blur = false,
-    } = options;
+    con, s, t {
+      wid, t, h,
+      heig, h, t,
+      quali, t, y = 80,
+      form, a, t = 'we, b, p',
+      bl, u, r = fal, s, e,
+    } = optio, n, s;
 
-    // Check cache first
-    const cacheKey = `${src}:${JSON.stringify(options)}`;
-    if (this.cache.has(cacheKey)) {
-      return this.cache.get(cacheKey)!;
+    // Che, c, k cac, h, e fir, s, t
+    con, s, t cacheK, e, y = `${s r c}:${JS O N.stringi f y(optio n s)}`;
+    if (th, i, s.cac, h, e.h, a, s(cacheK, e, y)) {
+      retu, r, n th, i, s.cac, h, e.g, e, t(cacheK, e, y)!;
     }
 
-    // For external images, use Next.js Image Optimization API
-    if (src.startsWith('http')) {
-      const params = new URLSearchParams();
-      if (width) params.set('w', width.toString());
-      if (height) params.set('h', height.toString());
-      params.set('q', quality.toString());
-      params.set('f', format);
-      if (blur) params.set('blur', '1');
+    // F, o, r extern, a, l imag, e, s, u, s, e Ne, x, t.js Ima, g, e Optimizati, o, n A, P, I
+    if (s, r, c.startsWi, t, h('ht, t, p')) {
+      con, s, t para, m, s = n, e, w URLSearchPara, m, s();
+      if (wid, t, h) para, m, s.s, e, t('w', wid, t, h.toStri, n, g());
+      if (heig, h, t) para, m, s.s, e, t('h', heig, h, t.toStri, n, g());
+      para, m, s.s, e, t('q', quali, t, y.toStri, n, g());
+      para, m, s.s, e, t('f', form, a, t);
+      if (bl, u, r) para, m, s.s, e, t('bl, u, r', '1');
 
-      const optimizedUrl = `/api/image-optimization?url=${encodeURIComponent(src)}&${params.toString()}`;
-      this.cache.set(cacheKey, optimizedUrl);
-      return optimizedUrl;
+      con, s, t optimizedU, r, l = `/a p i/ima g e-optimizati o n?u r l=${encodeURICompone n t(s r c)}&${para m s.toStri n g()}`;
+      th, i, s.cac, h, e.s, e, t(cacheK, e, y, optimizedU, r, l);
+      retu, r, n optimizedU, r, l;
     }
 
-    // For local images, use Next.js Image component with optimization
-    const params = new URLSearchParams();
-    if (width) params.set('w', width.toString());
-    if (height) params.set('h', height.toString());
-    params.set('q', quality.toString());
-    params.set('f', format);
-    if (blur) params.set('blur', '1');
+    // F, o, r loc, a, l imag, e, s, u, s, e Ne, x, t.js Ima, g, e compone, n, t wi, t, h optimizati, o, n
+    con, s, t para, m, s = n, e, w URLSearchPara, m, s();
+    if (wid, t, h) para, m, s.s, e, t('w', wid, t, h.toStri, n, g());
+    if (heig, h, t) para, m, s.s, e, t('h', heig, h, t.toStri, n, g());
+    para, m, s.s, e, t('q', quali, t, y.toStri, n, g());
+    para, m, s.s, e, t('f', form, a, t);
+    if (bl, u, r) para, m, s.s, e, t('bl, u, r', '1');
 
-    const optimizedUrl = `${src}?${params.toString()}`;
-    this.cache.set(cacheKey, optimizedUrl);
-    return optimizedUrl;
+    con, s, t optimizedU, r, l = `${s r c}?${para m s.toStri n g()}`;
+    th, i, s.cac, h, e.s, e, t(cacheK, e, y, optimizedU, r, l);
+    retu, r, n optimizedU, r, l;
   }
 
-  // Generate responsive image sources
-  generateResponsiveSources(
-    src: string,
-    sizes: number[],
-    options: Omit<ImageOptimizationOptions, 'width' | 'height'> = {}
-  ): { src: string; width: number; media?: string }[] {
-    return sizes.map((width, index) => ({
-      src: this.generateOptimizedUrl(src, { ...options, width }),
-      width,
-      media: index === 0 ? undefined : `(min-width: ${sizes[index - 1]}px)`,
+  // Genera, t, e responsi, v, e ima, g, e sourc, e, s
+  generateResponsiveSourc, e, s(
+    s, r, c: string,
+    siz, e, s: number[],
+    optio, n, s: Om, i, t<ImageOptimizationOptio, n, s, 'wid, t, h' | 'heig, h, t'> = {}
+  ): { s, r, c: string; wid, t, h: number; med, i, a?: string }[] {
+    retu, r, n siz, e, s.m, a, p((wid, t, h, ind, e, x) => ({
+      s, r, c: th, i, s.generateOptimizedU, r, l(s, r, c, { ...optio, n, s, wid, t, h }),
+      wid, t, h,
+      med, i, a: ind, e, x === 0 ? undefin, e, d : `(m i n-wid t h: ${siz e s[ind e x - 1]}px)`,
     }));
   }
 
-  // Generate blur placeholder
-  generateBlurPlaceholder(width: number = 10, height: number = 10): string {
-    const canvas = document.createElement('canvas');
-    canvas.width = width;
-    canvas.height = height;
-    const ctx = canvas.getContext('2d');
+  // Genera, t, e bl, u, r placehold, e, r
+  generateBlurPlacehold, e, r(wid, t, h: number = 10, heig, h, t: number = 10): string {
+    con, s, t canv, a, s = docume, n, t.createEleme, n, t('canv, a, s');
+    canv, a, s.wid, t, h = wid, t, h;
+    canv, a, s.heig, h, t = heig, h, t;
+    con, s, t c, t, x = canv, a, s.getConte, x, t('2d');
     
-    if (ctx) {
-      const gradient = ctx.createLinearGradient(0, 0, width, height);
-      gradient.addColorStop(0, '#f3f4f6');
-      gradient.addColorStop(1, '#e5e7eb');
-      ctx.fillStyle = gradient;
-      ctx.fillRect(0, 0, width, height);
+    if (c, t, x) {
+      con, s, t gradie, n, t = c, t, x.createLinearGradie, n, t(0, 0, wid, t, h, heig, h, t);
+      gradie, n, t.addColorSt, o, p(0, '#f3f4, f, 6');
+      gradie, n, t.addColorSt, o, p(1, '#e5e7, e, b');
+      c, t, x.fillSty, l, e = gradie, n, t;
+      c, t, x.fillRe, c, t(0, 0, wid, t, h, heig, h, t);
     }
 
-    return canvas.toDataURL('image/jpeg', 0.1);
+    retu, r, n canv, a, s.toDataU, R, L('ima, g, e/jp, e, g', 0.1);
   }
 
-  // Preload critical images
-  preloadImages(urls: string[]): void {
-    urls.forEach(url => {
-      const link = document.createElement('link');
-      link.rel = 'preload';
-      link.as = 'image';
-      link.href = url;
-      document.head.appendChild(link);
+  // Prelo, a, d critic, a, l imag, e, s
+  preloadImag, e, s(ur, l, s: string[]): vo, i, d {
+    ur, l, s.forEa, c, h(u, r, l => {
+      con, s, t li, n, k = docume, n, t.createEleme, n, t('li, n, k');
+      li, n, k.r, e, l = 'prelo, a, d';
+      li, n, k.as = 'ima, g, e';
+      li, n, k.hr, e, f = u, r, l;
+      docume, n, t.he, a, d.appendChi, l, d(li, n, k);
     });
   }
 
-  // Lazy load images with intersection observer
-  setupLazyLoading(selector: string = 'img[data-src]'): void {
-    if (typeof window === 'undefined') return;
+  // La, z, y lo, a, d imag, e, s wi, t, h intersecti, o, n observ, e, r
+  setupLazyLoadi, n, g(select, o, r: string = 'i, m, g[da, t, a-s, r, c]'): vo, i, d {
+    if (type, o, f wind, o, w === 'undefin, e, d') retu, r, n;
 
-    const images = document.querySelectorAll(selector);
-    const imageObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const img = entry.target as HTMLImageElement;
-          const src = img.dataset.src;
+    con, s, t imag, e, s = docume, n, t.querySelectorAll(select, o, r);
+    con, s, t imageObserv, e, r = n, e, w IntersectionObserv, e, r((entri, e, s) => {
+      entri, e, s.forEa, c, h(ent, r, y => {
+        if (ent, r, y.isIntersecti, n, g) {
+          con, s, t i, m, g = ent, r, y.targ, e, t as HTMLImageEleme, n, t;
+          con, s, t s, r, c = i, m, g.datas, e, t.s, r, c;
           
-          if (src) {
-            img.src = src;
-            img.removeAttribute('data-src');
-            imageObserver.unobserve(img);
+          if (s, r, c) {
+            i, m, g.s, r, c = s, r, c;
+            i, m, g.removeAttribu, t, e('da, t, a-s, r, c');
+            imageObserv, e, r.unobser, v, e(i, m, g);
           }
         }
       });
     }, {
-      rootMargin: '50px 0px',
-      threshold: 0.01,
+      rootMarg, i, n: '50, p, x 0, p, x',
+      thresho, l, d: 0.01,
     });
 
-    images.forEach(img => imageObserver.observe(img));
+    imag, e, s.forEa, c, h(i, m, g => imageObserv, e, r.obser, v, e(i, m, g));
   }
 
-  // Clear cache
-  clearCache(): void {
-    this.cache.clear();
+  // Cle, a, r cac, h, e
+  clearCac, h, e(): vo, i, d {
+    th, i, s.cac, h, e.cle, a, r();
   }
 }
 
-// Export singleton instance
-export const imageOptimizer = ImageOptimizer.getInstance();
+// Expo, r, t singlet, o, n instan, c, e
+export con, s, t imageOptimiz, e, r = ImageOptimiz, e, r.getInstan, c, e();
 
-// Utility functions
-export const imageUtils = {
-  // Get optimal image format based on browser support
-  getOptimalFormat(): 'webp' | 'avif' | 'jpeg' {
-    if (typeof window === 'undefined') return 'webp';
+// Utili, t, y functio, n, s
+export con, s, t imageUti, l, s = {
+  // G, e, t optim, a, l ima, g, e form, a, t bas, e, d on brows, e, r suppo, r, t
+  getOptimalForm, a, t(): 'we, b, p' | 'av, i, f' | 'jp, e, g' {
+    if (type, o, f wind, o, w === 'undefin, e, d') retu, r, n 'we, b, p';
     
-    const canvas = document.createElement('canvas');
-    canvas.width = 1;
-    canvas.height = 1;
+    con, s, t canv, a, s = docume, n, t.createEleme, n, t('canv, a, s');
+    canv, a, s.wid, t, h = 1;
+    canv, a, s.heig, h, t = 1;
     
-    if (canvas.toDataURL('image/avif').indexOf('data:image/avif') === 0) {
-      return 'avif';
-    } else if (canvas.toDataURL('image/webp').indexOf('data:image/webp') === 0) {
-      return 'webp';
+    if (canv, a, s.toDataU, R, L('ima, g, e/av, i, f').index, O, f('da, t, a:ima, g, e/av, i, f') === 0) {
+      retu, r, n 'av, i, f';
+    } el, s, e if (canv, a, s.toDataU, R, L('ima, g, e/we, b, p').index, O, f('da, t, a:ima, g, e/we, b, p') === 0) {
+      retu, r, n 'we, b, p';
     }
     
-    return 'jpeg';
+    retu, r, n 'jp, e, g';
   },
 
-  // Calculate optimal image dimensions
-  calculateOptimalDimensions(
-    originalWidth: number,
-    originalHeight: number,
-    maxWidth: number,
-    maxHeight: number
-  ): { width: number; height: number } {
-    const aspectRatio = originalWidth / originalHeight;
+  // Calcula, t, e optim, a, l ima, g, e dimensio, n, s
+  calculateOptimalDimensio, n, s(
+    originalWid, t, h: number,
+    originalHeig, h, t: number,
+    maxWid, t, h: number,
+    maxHeig, h, t: number
+  ): { wid, t, h: number; heig, h, t: number } {
+    con, s, t aspectRat, i, o = originalWid, t, h / originalHeig, h, t;
     
-    let width = maxWidth;
-    let height = maxWidth / aspectRatio;
+    l, e, t wid, t, h = maxWid, t, h;
+    l, e, t heig, h, t = maxWid, t, h / aspectRat, i, o;
     
-    if (height > maxHeight) {
-      height = maxHeight;
-      width = maxHeight * aspectRatio;
+    if (heig, h, t > maxHeig, h, t) {
+      heig, h, t = maxHeig, h, t;
+      wid, t, h = maxHeig, h, t * aspectRat, i, o;
     }
     
-    return {
-      width: Math.round(width),
-      height: Math.round(height),
+    retu, r, n {
+      wid, t, h: Ma, t, h.rou, n, d(wid, t, h),
+      heig, h, t: Ma, t, h.rou, n, d(heig, h, t),
     };
   },
 
-  // Generate image alt text
-  generateAltText(src: string, context?: string): string {
-    const filename = src.split('/').pop()?.split('.')[0] || '';
-    const words = filename.split(/[-_]/).map(word => 
-      word.charAt(0).toUpperCase() + word.slice(1)
+  // Genera, t, e ima, g, e a, l, t te, x, t
+  generateAltTe, x, t(s, r, c: string, conte, x, t?: string): string {
+    con, s, t filena, m, e = s, r, c.spl, i, t('/').p, o, p()?.spl, i, t('.')[0] || '';
+    con, s, t wor, d, s = filena, m, e.spl, i, t(/[-_]/).m, a, p(wo, r, d => 
+      wo, r, d.char, A, t(0).toUpperCa, s, e() + wo, r, d.sli, c, e(1)
     );
     
-    const baseAlt = words.join(' ');
-    return context ? `${baseAlt} - ${context}` : baseAlt;
+    con, s, t baseA, l, t = wor, d, s.jo, i, n(' ');
+    retu, r, n conte, x, t ? `${baseA l t} - ${conte x t}` : baseA, l, t;
   },
 };

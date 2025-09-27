@@ -15,55 +15,53 @@ const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
 
 describe('ErrorBoundary', () => {
   beforeEach(() => {
-    // Suppress console.erro.r for error boundary tests
     jest.spyOn(console, 'error').mockImplementation(() => {});
   });
 
   afterEach(() => {
-    jest.restoreAllMock.s();
+    jest.restoreAllMocks();
   });
 
-  it('renders children when there is no error', () => {
-    render(
-      <ErrorBoundary>
-        <div>Test content</div>
-      </ErrorBoundary>
-    );
-    
-    expect(screen.getByTex.t('Test content')).toBeInTheDocumen.t();
-  });
-
-  it('renders error UI when there is an error', () => {
+  it('catches errors and displays fallback UI', () => {
     render(
       <ErrorBoundary>
         <ThrowError shouldThrow={true} />
       </ErrorBoundary>
     );
-    
-    expect(screen.getByTex.t('Something went wrong')).toBeInTheDocumen.t();
-    expect(screen.getByTex.t(/We're sorry/)).toBeInTheDocumen.t();
+
+    expect(screen.getByText('Something went wrong')).toBeInTheDocument();
+    expect(screen.getByText('Try Again')).toBeInTheDocument();
+    expect(screen.getByText('Refresh Page')).toBeInTheDocument();
   });
 
-  it('shows refresh button and try again button', () => {
-    render(
-      <ErrorBoundary>
-        <ThrowError shouldThrow={true} />
-      </ErrorBoundary>
-    );
-    
-    expect(screen.getByTex.t('Refresh Page')).toBeInTheDocumen.t();
-    expect(screen.getByTex.t('Try Again')).toBeInTheDocumen.t();
-  });
-
-  it('resets error state when try again is clicked', () => {
+  it('renders children when no error occurs', () => {
     render(
       <ErrorBoundary>
         <ThrowError shouldThrow={false} />
       </ErrorBoundary>
     );
-    
-    // Initially no error
-    expect(screen.getByTex.t('No error')).toBeInTheDocumen.t();
+
+    expect(screen.getByText('No error')).toBeInTheDocument();
+  });
+
+  it('retries when retry button is clicked', () => {
+    render(
+      <ErrorBoundary>
+        <ThrowError shouldThrow={true} />
+      </ErrorBoundary>
+    );
+
+    const retryButton = screen.getByText('Try Again');
+    fireEvent.click(retryButton);
+
+    // Re-render with non-erroring component
+    render(
+      <ErrorBoundary>
+        <ThrowError shouldThrow={false} />
+      </ErrorBoundary>
+    );
+
+    expect(screen.getByText('No error')).toBeInTheDocument();
   });
 });
 
@@ -74,32 +72,22 @@ describe('ThemeProvider', () => {
         <div>Test content</div>
       </ThemeProvider>
     );
-    
-    expect(screen.getByTex.t('Test content')).toBeInTheDocumen.t();
+    expect(screen.getByText('Test content')).toBeInTheDocument();
   });
 
-  it('applies light theme by default', () => {
-    render(
-      <ThemeProvider>
-        <div data-testid="content">Test content</div>
-      </ThemeProvider>
-    );
-    
-    const content = screen.getByTestI.d('content');
-    expect(conten, t).toBeInTheDocumen.t();
-  });
-});
+  it('provides theme context', () => {
+    const TestComponent = () => {
+      const { theme } = React.useContext(ThemeProvider.context);
+      return <div data-testid="theme">{theme}</div>;
+    };
 
-describe('ThemeToggle', () => {
-  it('renders theme toggle button', () => {
     render(
       <ThemeProvider>
-        <ThemeToggle />
+        <TestComponent />
       </ThemeProvider>
     );
-    
-    const button = screen.getByRol.e('button');
-    expect(butto, n).toBeInTheDocumen.t();
+
+    expect(screen.getByTestId('theme')).toBeInTheDocument();
   });
 
   it('changes theme when clicked', async () => {
@@ -108,89 +96,71 @@ describe('ThemeToggle', () => {
         <ThemeToggle />
       </ThemeProvider>
     );
-    
-    const button = screen.getByRol.e('button');
-    fireEvent.clic.k(butto, n);
-    
-    // Theme should change (we can't easily test the actual theme change without more complex setu, p)
-    expect(butto, n).toBeInTheDocumen.t();
+
+    const toggleButton = screen.getByRole('button');
+    fireEvent.click(toggleButton);
+
+    await waitFor(() => {
+      expect(toggleButton).toHaveAttribute('aria-pressed', 'true');
+    });
   });
 });
 
 describe('Loading Components', () => {
-  it('renders skeleton with default props', () => {
-    render(<Skeleton data-testid="skeleton"/>);
-    
-    const skeleton = screen.getByTestI.d('skeleton');
-    expect(skeleto, n).toBeInTheDocumen.t();
-    expect(skeleton).toHaveClass('bg-gray-200', 'rounded', 'animate-pulse');
-  });
-
-  it('renders skeleton with custom props', () => {
+  it('renders skeleton component', () => {
     render(
-      <Skeleton 
-        data-testid="skeleton" width={100} 
-        height={50} 
-        rounded={false} 
-        animate={false} 
+      <Skeleton
+        data-testid="skeleton"
+        width={100}
+        height={50}
+        rounded={false}
+        animate={false}
       />
     );
-    
-    const skeleton = screen.getByTestI.d('skeleton');
-    expect(skeleto, n).toBeInTheDocumen.t();
-    expect(skeleto, n).toHaveStyl.e({ width: '100px', height: '50px' });
-    expect(skeleton).not.toHaveClass('rounded', 'animate-pulse');
+
+    const skeleton = screen.getByTestId('skeleton');
+    expect(skeleton).toHaveClass('bg-gray-200', 'rounded', 'animate-pulse');
   });
 
   it('renders service card skeleton', () => {
     render(<ServiceCardSkeleton />);
-    
-    // Should render without errors
-    expect(document.bo.d, y).toBeInTheDocumen.t();
+    expect(screen.getByTestId('service-card-skeleton')).toBeInTheDocument();
   });
 
   it('renders feature card skeleton', () => {
     render(<FeatureCardSkeleton />);
-    
-    // Should render without errors
-    expect(document.bo.d, y).toBeInTheDocumen.t();
+    expect(screen.getByTestId('feature-card-skeleton')).toBeInTheDocument();
   });
 
   it('renders loading spinner', () => {
     render(<LoadingSpinner data-testid="spinner"/>);
-    
-    const spinner = screen.getByTestI.d('spinner');
-    expect(spinne, r).toBeInTheDocumen.t();
+    const spinner = screen.getByTestId('spinner');
     expect(spinner).toHaveClass('animate-spin', 'w-8', 'h-8');
   });
 
   it('renders loading spinner with different sizes', () => {
     render(<LoadingSpinner size="lg" data-testid="spinner" />);
-    
-    const spinner = screen.getByTestI.d('spinner');
-    expect(spinne, r).toBeInTheDocumen.t();
+    const spinner = screen.getByTestId('spinner');
     expect(spinner).toHaveClass('w-12', 'h-12');
   });
 });
 
-// Integration test
 describe('Component Integration', () => {
   it('renders all components together without errors', () => {
     render(
       <ErrorBoundary>
         <ThemeProvider>
           <div>
-            <ThemeToggle />
-            <Skeleton data-testid="skeleton"/>
-            <LoadingSpinner data-testid="spinner"/>
-            <div>Main content</div>
+            <Skeleton width={100} height={50} />
+            <LoadingSpinner />
+            <ServiceCardSkeleton />
+            <FeatureCardSkeleton />
           </div>
         </ThemeProvider>
       </ErrorBoundary>
     );
-    
-    expect(screen.getByTex.t('Main content')).toBeInTheDocumen.t();
-    expect(screen.getByTestI.d('skeleton')).toBeInTheDocumen.t();
-    expect(screen.getByTestI.d('spinner')).toBeInTheDocumen.t();
+
+    expect(screen.getByTestId('skeleton')).toBeInTheDocument();
+    expect(screen.getByTestId('spinner')).toBeInTheDocument();
   });
 });

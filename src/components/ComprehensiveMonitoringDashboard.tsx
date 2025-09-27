@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/Card';
 import { 
   Activity, 
   AlertTriangle, 
@@ -20,6 +19,61 @@ import {
   Search,
   X
 } from 'lucide-react';
+
+interface CardProps {
+  children: React.ReactNode;
+  className?: string;
+}
+
+interface CardHeaderProps {
+  children: React.ReactNode;
+  className?: string;
+}
+
+interface CardTitleProps {
+  children: React.ReactNode;
+  className?: string;
+}
+
+interface CardDescriptionProps {
+  children: React.ReactNode;
+  className?: string;
+}
+
+interface CardContentProps {
+  children: React.ReactNode;
+  className?: string;
+}
+
+const Card: React.FC<CardProps> = ({ children, className = '' }) => (
+  <div className={`bg-white rounded-lg shadow-md border ${className}`}>
+    {children}
+  </div>
+);
+
+const CardHeader: React.FC<CardHeaderProps> = ({ children, className = '' }) => (
+  <div className={`p-6 border-b ${className}`}>
+    {children}
+  </div>
+);
+
+const CardTitle: React.FC<CardTitleProps> = ({ children, className = '' }) => (
+  <h3 className={`text-lg font-semibold ${className}`}>
+    {children}
+  </h3>
+);
+
+const CardDescription: React.FC<CardDescriptionProps> = ({ children, className = '' }) => (
+  <p className={`text-sm text-gray-600 ${className}`}>
+    {children}
+  </p>
+);
+
+const CardContent: React.FC<CardContentProps> = ({ children, className = '' }) => (
+  <div className={`p-6 ${className}`}>
+    {children}
+  </div>
+);
 interface SystemMetrics {
   performance: {
     loadTime: number;
@@ -327,9 +381,12 @@ export default function ComprehensiveMonitoringDashboard({
                   'bg-green-50 border-green-400'
                 }`}
               >
-                <tab.icon className="h-4 w-4" />
-                <span>{tab.name}</span>
-              </button>            ))}
+                <div className="flex items-center space-x-2">
+                  <span className="text-sm font-medium">{alert.message}</span>
+                  <span className="text-xs text-gray-500">{alert.timestamp.toLocaleTimeString()}</span>
+                </div>
+              </motion.div>
+            ))}
           </motion.div>
         )}
       </AnimatePresence>
