@@ -1,0 +1,18 @@
+/** @type {import('next').NextConfig} */
+<<<<<<< HEAD
+const nextConfig = {
+	typescript: { ignoreBuildErrors: true },
+	eslint: { ignoreDuringBuilds: true },
+	pageExtensions: ['page.tsx', 'page.ts', 'page.jsx', 'page.js', 'js', 'jsx'],
+};
+
+export default nextConfig;
+=======
+export default {
+  typescript: {
+    ignoreBuildErrors: true},
+  eslint: {
+    ignoreDuringBuilds: true},
+  pageExtensions: ['js', 'jsx']
+};
+>>>>>>> origin/backup-main-20250926-083317

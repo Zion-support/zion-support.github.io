@@ -14,11 +14,14 @@ export const dbPool = new Pool({
   connectionTimeoutMillis: 2000,
   maxUses: 7500,
   // SSL configuration for production
-  ssl: process.env.NODE_ENV === 'production' ? { rejectUnauthorized: false } : false,
-})
+  ssl: process.env.NODE_ENV === 'production' ? { rejectUnauthorized: false } : false})
+
 // Graceful shutdown
 process.on('SIGINT', async () => {
+<<<<<<< HEAD
+=======
   // // // console.log('Closing database pool...')
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-ad04
   await dbPool.end()
   process.exit(0)
 })
