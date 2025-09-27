@@ -1,5 +1,4 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { motion } from 'framer-motion';
 
 interface Props {
   children: ReactNode;
@@ -11,75 +10,73 @@ interface State {
   hasError: boolean;
   error: Error | null;
   errorInfo: ErrorInfo | null;
-  errorId: string;
 }
 
-export class EnhancedErrorBoundary extends Component<Props, State> {
+class EnhancedErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = {
       hasError: false,
       error: null,
       errorInfo: null,
-      errorId: ''
     };
   }
 
-  static getDerivedStateFromError(error: Error): Partial<State> {
+  static getDerivedStateFromError(error: Error): State {
     return {
       hasError: true,
       error,
-      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+      errorInfo: null,
     };
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
-      errorInfo
+      errorInfo,
     });
 
-    // Log error to external service
+    // Log error to console in development
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Error caught by boundary:', error, errorInfo);
+    }
+
+    // Send error to monitoring service
     this.logErrorToService(error, errorInfo);
 
     // Call custom error handler
-    this.props.onError?.(error, errorInfo);
+    if (this.props.onError) {
+      this.props.onError(error, errorInfo);
+    }
   }
 
   private logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
-    // Send to error reporting service
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', 'exception', {
-        description: error.message,
-        fatal: false,
-        custom_map: {
-          error_id: this.state.errorId,
-          component_stack: errorInfo.componentStack
-        }
-      });
+    try {
+      // Send to error reporting service
+      if (typeof window !== 'undefined' && window.fetch) {
+        fetch('/api/error-reporting', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            error: {
+              message: error.message,
+              stack: error.stack,
+              name: error.name,
+            },
+            errorInfo: {
+              componentStack: errorInfo.componentStack,
+            },
+            timestamp: new Date().toISOString(),
+            userAgent: navigator.userAgent,
+            url: window.location.href,
+          }),
+        }).catch(console.error);
+      }
+    } catch (e) {
+      console.error('Failed to log error to service:', e);
     }
-
-    // Send to custom error reporting endpoint
-    fetch('/api/error-reporting', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        error: {
-          message: error.message,
-          stack: error.stack,
-          name: error.name
-        },
-        errorInfo: {
-          componentStack: errorInfo.componentStack
-        },
-        errorId: this.state.errorId,
-        timestamp: new Date().toISOString(),
-        userAgent: navigator.userAgent,
-        url: window.location.href
-      })
-    }).catch(console.error);
   };
 
   private handleRetry = () => {
@@ -87,7 +84,6 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
       hasError: false,
       error: null,
       errorInfo: null,
-      errorId: ''
     });
   };
 
@@ -102,24 +98,34 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
       }
 
       return (
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="min-h-screen flex items-center justify-center bg-gray-50 px-4"
-        >
-          <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center">
-            <motion.div
-              initial={{ scale: 0 }}
-              animate={{ scale: 1 }}
-              transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
-              className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6"
-            >
-              <svg className="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
-              </svg>
-            </motion.div>
+        <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-md w-full space-y-8">
+            <div className="text-center">
+              <div className="mx-auto h-12 w-12 text-red-500">
+                <svg
+                  className="h-12 w-12"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"
+                  />
+                </svg>
+              </div>
+              <h2 className="mt-6 text-3xl font-extrabold text-gray-900">
+                Something went wrong
+              </h2>
+              <p className="mt-2 text-sm text-gray-600">
+                We&apos;re sorry, but something unexpected happened. Please try again.
+              </p>
+            </div>
 
-            <h1 className="text-2xl font-bold text-gray-900 mb-4">
+            <h1 className="text-2xl font-bold text-gray-900 mb-4" id="oops-something-went-wrong">
               Oops! Something went wrong
             </h1>
             
@@ -153,57 +159,35 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
             <div className="flex flex-col sm:flex-row gap-3">
               <motion.button
                 onClick={this.handleRetry}
-                className="flex-1 bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
+                className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
               >
                 Try Again
-              </motion.button>
+              </button>
               
-              <motion.button
+              <button
                 onClick={this.handleReload}
-                className="flex-1 bg-gray-200 text-gray-800 px-6 py-3 rounded-lg hover:bg-gray-300 transition-colors font-medium"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
+                className="group relative w-full flex justify-center py-2 px-4 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
               >
                 Reload Page
-              </motion.button>
+              </button>
             </div>
 
-            <div className="mt-6 text-sm text-gray-500">
-              Error ID: {this.state.errorId}
-            </div>
+            {process.env.NODE_ENV === 'development' && this.state.error && (
+              <div className="mt-8 p-4 bg-red-50 border border-red-200 rounded-md">
+                <h3 className="text-sm font-medium text-red-800 mb-2">Error Details:</h3>
+                <pre className="text-xs text-red-700 overflow-auto">
+                  {this.state.error.toString()}
+                  {this.state.errorInfo?.componentStack}
+                </pre>
+              </div>
+            )}
           </div>
-        </motion.div>
+        </div>
       );
     }
 
     return this.props.children;
   }
 }
-
-// Hook for functional components to trigger error boundary
-export const useErrorHandler = () => {
-  return (error: Error, errorInfo?: ErrorInfo) => {
-    // This will be caught by the nearest error boundary
-    throw error;
-  };
-};
-
-// Higher-order component for easier usage
-export const withErrorBoundary = <P extends object>(
-  Component: React.ComponentType<P>,
-  errorBoundaryProps?: Omit<Props, 'children'>
-) => {
-  const WrappedComponent = (props: P) => (
-    <EnhancedErrorBoundary {...errorBoundaryProps}>
-      <Component {...props} />
-    </EnhancedErrorBoundary>
-  );
-
-  WrappedComponent.displayName = `withErrorBoundary(${Component.displayName || Component.name})`;
-  
-  return WrappedComponent;
-};
 
 export default EnhancedErrorBoundary;

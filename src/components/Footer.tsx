@@ -39,7 +39,7 @@ export const Footer: React.FC = () => {
 
           {/* Quick Links */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold">Quick Links</h3>
+            <h3 className="text-lg font-semibold" id="quick-links">Quick Links</h3>
             <ul className="space-y-2">
               <li>
                 <Link to="/" className="text-gray-400 hover:text-white transition-colors">
@@ -61,7 +61,7 @@ export const Footer: React.FC = () => {
 
           {/* Services */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold">Services</h3>
+            <h3 className="text-lg font-semibold" id="services">Services</h3>
             <ul className="space-y-2">
               <li>
                 <a href="#" className="text-gray-400 hover:text-white transition-colors">
@@ -88,7 +88,7 @@ export const Footer: React.FC = () => {
 
           {/* Contact Info */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold">Contact</h3>
+            <h3 className="text-lg font-semibold" id="contact">Contact</h3>
             <div className="space-y-2">
               <p className="text-gray-400">Email: info@ziontechgroup.com</p>
               <p className="text-gray-400">Phone: +1 (555) 123-4567</p>

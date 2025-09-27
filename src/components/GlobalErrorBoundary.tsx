@@ -123,7 +123,7 @@ export class GlobalErrorBoundary extends Component<Props, State> {
                   />
                 </svg>
               </div>
-              <h1 className="text-xl font-semibold text-gray-900 mb-2">
+              <h1 className="text-xl font-semibold text-gray-900 mb-2" id="something-went-wrong">
                 Something went wrong
               </h1>
               <p className="text-gray-600 mb-6">
@@ -135,13 +135,13 @@ export class GlobalErrorBoundary extends Component<Props, State> {
               <button
                 onClick={this.handleRetry}
                 className="w-full bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors"
-              >
+               aria-label="Try Again">
                 Try Again
               </button>
               <button
                 onClick={this.handleReload}
                 className="w-full bg-gray-200 text-gray-800 px-4 py-2 rounded-md hover:bg-gray-300 transition-colors"
-              >
+               aria-label="Reload Page">
                 Reload Page
               </button>
             </div>

@@ -1,6 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/Card';
-import { Zap, Clock, Cpu, HardDrive, Wifi, Battery, CheckCircle, AlertTriangle, XCircle } from 'lucide-react';
 
 interface PerformanceMetrics {
   loadTime: number;
@@ -38,105 +36,6 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ cla
     errorRate: 0
   });
 
-  const [isOptimizing, setIsOptimizing] = useState(false);
-  const [optimizations, setOptimizations] = useState<string[]>([]);
-  const [suggestions, setSuggestions] = useState<OptimizationSuggestion[]>([]);
-  const [isAnalyzing, setIsAnalyzing] = useState(false);
-
-  const measurePerformance = useCallback(async () => {
-    // Simulate performance measurement
-    const newMetrics: PerformanceMetrics = {
-      loadTime: Math.random() * 2000 + 500, // 500-2500ms
-      memoryUsage: Math.random() * 100, // 0-100%
-      cpuUsage: Math.random() * 100, // 0-100%
-      networkLatency: Math.random() * 100 + 10, // 10-110ms
-      cacheHitRate: Math.random() * 40 + 60, // 60-100%
-      bundleSize: Math.random() * 500 + 200, // 200-700KB
-      renderTime: Math.random() * 100 + 50, // 50-150ms
-      errorRate: Math.random() * 5 // 0-5%
-    };
-
-    setMetrics(newMetrics);
-
-    // Generate optimization suggestions
-    const suggestions: string[] = [];
-    if (newMetrics.loadTime > 2000) suggestions.push('Consider code splitting to reduce initial load time');
-    if (newMetrics.memoryUsage > 80) suggestions.push('Optimize memory usage with lazy loading');
-    if (newMetrics.cpuUsage > 70) suggestions.push('Implement virtual scrolling for large lists');
-    if (newMetrics.networkLatency > 80) suggestions.push('Enable CDN for static assets');
-    if (newMetrics.cacheHitRate < 80) suggestions.push('Improve caching strategy');
-    if (newMetrics.bundleSize > 500) suggestions.push('Remove unused dependencies and optimize bundle');
-
-    setOptimizations(suggestions);
-
-    // Generate detailed optimization suggestions
-    const optimizationSuggestions: OptimizationSuggestion[] = [
-      {
-        type: 'performance',
-        priority: 'high',
-        title: 'Implement Code Splitting',
-        description: 'Break down large bundles into smaller chunks to improve initial load time',
-        impact: 'Reduce initial bundle size by 30-50%',
-        implementation: 'Use dynamic imports and React.lazy() for route-based code splitting'
-      },
-      {
-        type: 'memory',
-        priority: 'medium',
-        title: 'Optimize Image Loading',
-        description: 'Implement lazy loading and WebP format for images',
-        impact: 'Reduce memory usage by 20-40%',
-        implementation: 'Use next/image with priority and placeholder props'
-      },
-      {
-        type: 'network',
-        priority: 'high',
-        title: 'Enable Service Worker Caching',
-        description: 'Cache static assets and API responses for offline functionality',
-        impact: 'Improve cache hit rate to 85-95%',
-        implementation: 'Configure Workbox for intelligent caching strategies'
-      },
-      {
-        type: 'rendering',
-        priority: 'medium',
-        title: 'Implement Virtual Scrolling',
-        description: 'Use virtual scrolling for large lists to reduce DOM nodes',
-        impact: 'Improve rendering performance by 60-80%',
-        implementation: 'Use react-window or react-virtualized for large datasets'
-      }
-    ];
-
-    setSuggestions(optimizationSuggestions);
-  }, []);
-
-  const performOptimization = useCallback(async () => {
-    setIsOptimizing(true);
-    
-    // Simulate optimization process
-    await new Promise(resolve => setTimeout(resolve, 3000));
-    
-    // Apply optimizations
-    setMetrics(prev => ({
-      ...prev,
-      loadTime: prev.loadTime * 0.8,
-      memoryUsage: prev.memoryUsage * 0.7,
-      cpuUsage: prev.cpuUsage * 0.6,
-      networkLatency: prev.networkLatency * 0.9,
-      cacheHitRate: Math.min(prev.cacheHitRate * 1.1, 100),
-      bundleSize: prev.bundleSize * 0.85,
-      renderTime: prev.renderTime * 0.9,
-      errorRate: prev.errorRate * 0.5
-    }));
-
-    setOptimizations([]);
-    setIsOptimizing(false);
-  }, []);
-
-  const getPerformanceColor = (value: number, thresholds: { good: number; warning: number }) => {
-    if (value <= thresholds.good) return 'text-green-500';
-    if (value <= thresholds.warning) return 'text-yellow-500';
-    return 'text-red-500';
-  };
-
   const getPerformanceIcon = (value: number, thresholds: { good: number; warning: number }) => {
     if (value <= thresholds.good) return <CheckCircle className="w-5 h-5 text-green-500" />;
     if (value <= thresholds.warning) return <AlertTriangle className="w-5 h-5 text-yellow-500" />;
@@ -152,12 +51,6 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ cla
     }
   };
 
-  useEffect(() => {
-    measurePerformance();
-    const interval = setInterval(measurePerformance, 10000); // Measure every 10 seconds
-    return () => clearInterval(interval);
-  }, [measurePerformance]);
-
   return (
     <div className={`space-y-6 ${className}`}>
       <Card>
@@ -172,14 +65,12 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ cla
                 onClick={measurePerformance}
                 disabled={isAnalyzing}
                 className="px-4 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600 disabled:opacity-50 transition-colors"
-              >
                 {isAnalyzing ? 'Analyzing...' : 'Measure'}
               </button>
               <button
                 onClick={performOptimization}
                 disabled={isOptimizing || optimizations.length === 0}
                 className="px-4 py-2 bg-yellow-500 text-white rounded-lg hover:bg-yellow-600 disabled:opacity-50 transition-colors"
-              >
                 {isOptimizing ? 'Optimizing...' : 'Optimize'}
               </button>
             </div>
@@ -261,30 +152,6 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ cla
                 <Zap className="w-5 h-5 text-yellow-500" />
               </div>
             </div>
-
-            <div className="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
-              <div className="flex items-center justify-between">
-                <div>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">Render Time</p>
-                  <p className={`text-2xl font-bold ${getPerformanceColor(metrics.renderTime, { good: 100, warning: 200 })}`}>
-                    {metrics.renderTime.toFixed(0)}ms
-                  </p>
-                </div>
-                <Clock className="w-5 h-5 text-blue-500" />
-              </div>
-            </div>
-
-            <div className="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
-              <div className="flex items-center justify-between">
-                <div>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">Error Rate</p>
-                  <p className={`text-2xl font-bold ${getPerformanceColor(metrics.errorRate, { good: 1, warning: 3 })}`}>
-                    {metrics.errorRate.toFixed(1)}%
-                  </p>
-                </div>
-                <AlertTriangle className="w-5 h-5 text-red-500" />
-              </div>
-            </div>
           </div>
         </CardContent>
       </Card>
@@ -327,58 +194,10 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ cla
             {suggestions.map((suggestion, index) => (
               <div key={index} className="border rounded-lg p-4">
                 <div className="flex items-center justify-between mb-2">
-                  <h3 className="font-semibold text-lg">{suggestion.title}</h3>
                   <span className={`px-2 py-1 text-xs font-medium rounded-full border ${getPriorityColor(suggestion.priority)}`}>
                     {suggestion.priority.toUpperCase()}
                   </span>
                 </div>
-                <p className="text-gray-600 mb-2">{suggestion.description}</p>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
-                  <div>
-                    <span className="font-medium text-green-700">Expected Impact:</span>
-                    <p className="text-gray-600">{suggestion.impact}</p>
-                  </div>
-                  <div>
-                    <span className="font-medium text-blue-700">Implementation:</span>
-                    <p className="text-gray-600">{suggestion.implementation}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </CardContent>
-      </Card>
-
-      {/* Performance Tips */}
-      <Card>
-        <CardHeader>
-          <CardTitle>Performance Best Practices</CardTitle>
-          <CardDescription>
-            General tips for maintaining optimal performance
-          </CardDescription>
-        </CardHeader>
-        <CardContent>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg">
-              <h4 className="font-semibold text-blue-900 dark:text-blue-100 mb-2">
-                Code Splitting
-              </h4>
-              <p className="text-sm text-blue-700 dark:text-blue-300">
-                Implement dynamic imports to reduce initial bundle size and improve load times.
-              </p>
-            </div>
-
-            <div className="bg-green-50 dark:bg-green-900/20 p-4 rounded-lg">
-              <h4 className="font-semibold text-green-900 dark:text-green-100 mb-2">
-                Caching Strategy
-              </h4>
-              <p className="text-sm text-green-700 dark:text-green-300">
-                Use service workers and HTTP caching to improve repeat visit performance.
-              </p>
-            </div>
-          </div>
-        </CardContent>
-      </Card>
     </div>
   );
 };

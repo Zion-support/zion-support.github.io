@@ -37,7 +37,7 @@ class ErrorBoundary extends Component<Props, State> {
         <div className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-900">
           <div className="text-center max-w-md mx-auto p-6" role="alert" aria-live="polite">
             <div className="text-6xl mb-4" aria-hidden="true">⚠️</div>
-            <h1 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+            <h1 className="text-2xl font-bold text-gray-900 dark:text-white mb-4" id="something-went-wrong">
               Something went wrong
             </h1>
             <p className="text-gray-600 dark:text-gray-300 mb-6">
@@ -45,14 +45,22 @@ class ErrorBoundary extends Component<Props, State> {
             </p>
             <div className="space-y-2">
               <button
-                onClick={() => window.location.reload()}
+                onClick={() = aria-label="window.location.reload()}
+                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                aria-label="Refresh the page to try again"
+              >
+                Refresh Page"> window.location.reload()}
                 className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                 aria-label="Refresh the page to try again"
               >
                 Refresh Page
               </button>
               <button
-                onClick={() => this.setState({ hasError: false })}
+                onClick={() = aria-label="this.setState({ hasError: false })}
+                className="w-full bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
+                aria-label="Try to continue without refreshing"
+              >
+                Try Again"> this.setState({ hasError: false })}
                 className="w-full bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
                 aria-label="Try to continue without refreshing"
               >

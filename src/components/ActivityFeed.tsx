@@ -124,7 +124,7 @@ export default function ActivityFeed({ isDarkMode }: ActivityFeedProps): JSX.Ele
         : 'bg-white border-gray-200 hover:border-gray-300'
     }`}>
       <div className="flex items-center justify-between mb-6">
-        <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
+        <h3 className="text-xl font-semibold text-gray-900 dark:text-white" id="activity-feed">
           Activity Feed
         </h3>
         <div className="flex items-center space-x-2">
@@ -169,7 +169,7 @@ export default function ActivityFeed({ isDarkMode }: ActivityFeedProps): JSX.Ele
       </div>
 
       <div className="mt-4 pt-4 border-t border-gray-200 dark:border-gray-600">
-        <button className="w-full text-sm text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium">
+        <button className="w-full text-sm text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium" aria-label="View all activity">
           View all activity
         </button>
       </div>
