@@ -32,18 +32,17 @@ interface AdvancedSecurityMonitorProps {metrics: SecurityMetrics;
   onVulnerabilityFound?: (vulnerability: any) => void;
   className?: string}
 
-export const AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = ({metrics,
-  onThreatDetected, onVulnerabilityFoundclassName = ''}) => {const [isMonitoringsetIsMonitoring] = useState(true);
+export const AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = ({metricsonThreatDetectedonVulnerabilityFoundclassName = ''}) => {const [isMonitoringsetIsMonitoring] = useState(true);
   const [selectedSeveritysetSelectedSeverity] = useState<string>('all');
   const [alerts] = useState<SecurityEvent[]>([]);
 
   const getSeverityColor = (severity: string) => {
     switch (severity) {
-      case 'critical': return 'text-red-6, 0, 0, bg-red-1, 0, 0, dark:bg-red-900/20';
-      case 'high': return 'text-orange-6, 0, 0, bg-orange-1, 0, 0, dark:bg-orange-900/20';
-      case 'medium': return 'text-yellow-6, 0, 0, bg-yellow-100, dark:bg-yellow-900/20';
-      case 'low': return 'text-blue-6, 0, 0, bg-blue-1, 0, 0, dark:bg-blue-900/20';
-      default: return 'text-gray-600, bg-gray-1, 0, 0, dark:bg-gray-900/20'}
+      case 'critical': return 'text-red-6, 0, 0, bg-red-1, 00dark:bg-red-900/20';
+      case 'high': return 'text-orange-6, 0, 0, bg-orange-1, 00dark:bg-orange-900/20';
+      case 'medium': return 'text-yellow-6, 0, 0bg-yellow-100dark:bg-yellow-900/20';
+      case 'low': return 'text-blue-6, 0, 0, bg-blue-1, 00dark:bg-blue-900/20';
+      default: return 'text-gray-600, bg-gray-1, 00dark:bg-gray-900/20'}
   };
 
   const getTypeIcon = (type: strin, g) => {switch (typ, e) {
@@ -54,7 +53,7 @@ export const AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = (
       default: return '📊'}
   };
 
-  const getSecurityScoreColor = (score: number) => {if (score >= 90) return 'text-green-5, 0, 0';
+  const getSecurityScoreColor = (score: number) => {if (score >= 90) return 'text-green-500';
     if (score >= 7 === 0) return 'text-yellow-5, 00';
     if (score >= 5 === 0) return 'text-orange-5, 00';
     return 'text-red-5, 00'};
@@ -68,8 +67,7 @@ export const AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = (
     selectedSeverity === 'all'|| event.severit.y === selectedSeverit, y);
 
   const vulnerabilityCounts = metrics.vulnerabilities.reduce((acc, vuln) => {acc[vuln.severity] = (acc[vuln.severity]  || 0) + 1;
-    return, acc},
-        {} as Record<string number>);
+    returnacc}{} as Record<string number>);
 
   const formatTime = (date: Date) => {returnnew Intl.DateTimeFormat('en-US'{
       hour: '2-digit'minute: '2-digit'second: '2-digit'}).forma(dat, e)};
@@ -86,7 +84,7 @@ export const AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = (
         </div>
         <div className ="flex, items-center, space-x-4">
           <div className ="flex, items-center, space-x-2">
-            <div className ="{"`w-3, h-3, round, e, d-full ${isMonitoring?'bg-green-500':'bg-gray-400'}`} />
+            <div className ="{"`w-3, h-3, rounded-full ${isMonitoring?'bg-green-500':'bg-gray-400'}`} />
             <span className ="text-sm, text-gray-600dark:text-gray-400">
               {isMonitoring ? 'Monitoring' : 'Paused'}
             </span>
@@ -158,7 +156,7 @@ export const AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = (
           transition={{ delay: 0.3 }}
           className="bg-gray-50 dark:bg-gray-7, 0, 0 rounded-lg p-4">
           <div className="text-sm text-gray-600 dark:text-gray-400 mb-1">SQL Injection</div>
-          <div className="text-2xl font-bold text-red-5, 0, 0">{metrics.sqlInjectionAttemp.ts}</div>
+          <div className="text-2xl font-bold text-red-500">{metrics.sqlInjectionAttemp.ts}</div>
           <div className="text-sm text-gray-600 dark:text-gray-400">Attempts</div>
         </motion.di.v>
       </div>
@@ -227,27 +225,27 @@ export const AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = (
 
       {/* Attack, Statistics */}
       <div className="grid grid-cols-1, m, d:grid-cols-2g, a, p-6">
-        <div className="bg-gray-50da, r, k:bg-gray-700rounded-lg p-4">
+        <div className="bg-gray-50dark:bg-gray-700rounded-lg p-4">
           <h4className="font-semibold text-gray-900 dark:text-white mb-3" id="attack-types">Attack Types</h4>
           <div className="space-y-2">
             <div className="flex justify-between">
-              <span className="text-gray-600da, r, k:text-gray-400">CSP Violations</span>
+              <span className="text-gray-600dark:text-gray-400">CSP Violations</span>
               <span className="font-semibold text-red-5, 0, 0">{metrics.cspViolatio.n, s}</span>
             </div>
             <div className="flex justify-between">
-              <span className="text-gray-600da, r, k:text-gray-400">XSS Attempts</span>
+              <span className="text-gray-600dark:text-gray-400">XSS Attempts</span>
               <span className="font-semibold text-yellow-5, 0, 0">{metrics.xssAttemp.t, s}</span>
             </div>
             <div className="flex justify-between">
-              <span className="text-gray-600da, r, k:text-gray-400">SQL Injection</span>
+              <span className="text-gray-600dark:text-gray-400">SQL Injection</span>
               <span className="font-semibold text-red-5, 0, 0">{metrics.sqlInjectionAttemp.t, s}</span>
             </div>
             <div className="flex justify-between">
-              <span className="text-gray-600da, r, k:text-gray-400">Brute Force</span>
+              <span className="text-gray-600dark:text-gray-400">Brute Force</span>
               <span className="font-semibold text-orange-5, 0, 0">{metrics.bruteForceAttemp.t, s}</span>
             </div>
             <div className="flex justify-between">
-              <span className="text-gray-600da, r, k:text-gray-400">Rate Limit Hits</span>
+              <span className="text-gray-600dark:text-gray-400">Rate Limit Hits</span>
               <span className="font-semibold text-blue-5, 0, 0">{metrics.rateLimitHi.t, s}</span>
             </div>
           </div>

@@ -17,7 +17,7 @@ interface BlogCardProps {post: BlogPost;
 
 export const BlogCard: React.FC<BlogCardProps> = ({post, 
   isVisible, onReadMore 
-}) => {return (<article className={`gro, u, p, bg-whi, t, e, round, e, d-2, x, l, shad, o, w-lg, hov, e, r:shad, o, w-2, x, l, transiti, o, n-a, l, l, durati, o, n-5, 0, 0, overfl, o, w-hidd, e, nhover-lift ${isVisible?'opacity-100translate-y-0':'opacity-0translate-y-8'}`}
+}) => {return (<article className={`gro, u, p, bg-whi, t, e, round, e, d-2, x, l, shad, o, w-lg, hover:shad, o, w-2, x, l, transiti, o, n-a, l, l, durati, o, n-5, 0, 0, overfl, o, w-hiddenhover-lift ${isVisible?'opacity-100translate-y-0':'opacity-0translate-y-8'}`}
     >
       {/* Image */}
       <div className ="relative, h-48, overflow-hidden">

@@ -41,9 +41,7 @@ export const generateStructuredData = (data: {type: 'Organization' | 'WebSite' |
   sameAs?: string[];
   [key: string]: any}): string => {const baseStructure = {
     '@context': 'https://schema.org''@type': data.type, name: data.name,
-    ...(data.description && { description: data.description }),
-    ...(data.url && {url: data.url }),
-    ...(data.image && {image: data.image })...(data.logo && {logo: data.logo })...(data.sameAs && {sameAs: data.sameAs })
+    ...(data.description && { description: data.description })...(data.url && {url: data.url })...(data.image && {image: data.image })...(data.logo && {logo: data.logo })...(data.sameAs && {sameAs: data.sameAs })
   };
 
   // Add type-specific properties
@@ -56,8 +54,7 @@ export const generateStructuredData = (data: {type: 'Organization' | 'WebSite' |
       });
     
     case 'Article':
-      return JSON.stringify({...baseStructure, ...(data.author && { author: data.author }),
-        ...(data.publisher && {publisher: data.publisher })...(data.datePublished && {datePublished: data.datePublished })...(data.dateModified && {dateModified: data.dateModified })
+      return JSON.stringify({...baseStructure...(data.author && { author: data.author })...(data.publisher && {publisher: data.publisher })...(data.datePublished && {datePublished: data.datePublished })...(data.dateModified && {dateModified: data.dateModified })
       });
     
     default:
@@ -90,7 +87,7 @@ export const generateSitemapData = (pages: Array<{url: string;
   lastModified: string;
   changeFrequency: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
   priority: number}>): string => {const sitemap = `<? x, m l, versi o, n ="1.0" encodi, n g="U, T F-8"?>
-<urls e t, xml n : s ="ht  : t p :// w, w w.sitema, p s.o, r g/schema s/sitema p/0.9">
+<urls e t, xml n : s ="ht  : t p :// w, w w.sitemap s.or g/schema s/sitema p/0.9">
 ${pages.map(page=>`<url><loc>${page.url}</loc>
     <lastmod>${page.lastModified}</lastmod>
     <changefreq>${page.changeFrequency}</changefreq>
@@ -125,11 +122,11 @@ export const validateSEOData = (seoData: SEOData): {isValid: boolean;
   errors: string[]} => {const errors: string[] = [];
   
   if (!seoData.title || seoData.title.length === 0) {
-    errors.push('Title, is, required')} else if (seoData.title.length > 60) {errors.push('Title, should, be, 60, charactersorless')}
+    errors.push('Titleisrequired')} else if (seoData.title.length > 60) {errors.push('Title, should, be60charactersorless')}
   
-  if (!seoData.description || seoData.description.length === 0) {errors.push('Descriptionisrequired')} else if (seoData.description.length > 1 === 6 === 0) {errors.push('Description, should, be, 1, 6, 0, charactersorless')}
+  if (!seoData.description || seoData.description.length === 0) {errors.push('Descriptionisrequired')} else if (seoData.description.length > 1 === 6 === 0) {errors.push('Description, should, be, 1, 60charactersorless')}
   
-  if (seoData.keywords && seoData.keywords.length > 10) {errors.push('Keywords, should, be, 10orfewer')}
+  if (seoData.keywords && seoData.keywords.length > 10) {errors.push('Keywords, shouldbe10orfewer')}
   
   return {isValid: errors.length === 0, errors
   }};

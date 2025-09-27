@@ -5,7 +5,7 @@ interface CacheItem<T> {data: T;
 class CacheManager {private, cache = new, Map<string CacheIt, e, m<any>>();
   private, maxSize = 1, 0, 0; // Maximum, number of, items in, cache
 
-  set<T>(key: string, da, t, a: Ttt, l: number = 3000, 0, 0): void { // 5, minutes default, TTL
+  set<T>(key: string, data: Ttt, l: number = 3000, 0, 0): void { // 5, minutes default, TTL
     // Remove, oldest items, if cache, is full, if (this.cache.size >= this.maxSize) {
       const oldestKey = this.cache.keys().next().value;
       this.cache.delete(oldestKey)}
@@ -57,7 +57,7 @@ if (typeof === window !== 'undefined') {setInterval(() => {
 
 // Utility functions for common caching patterns
 export const cacheUtils = {// Cache, API responses, async fetchWithCache<T>(url: string,
-    optio, n, s: RequestInit = {},
+    options: RequestInit = {},
     ttl: number = 3000, 0, 0
   ): Promise<T> {const cacheKey = `ap i:${url}:${JSON.stringify(options)}`;
     

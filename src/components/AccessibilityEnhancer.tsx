@@ -1,9 +1,7 @@
 import React, {useEffect, useState } from 'react';
 import {announceToScreenReader,
   createSkipLink,
-  isHighContrastMode,
-  prefersReducedMotion,
-  initFocusVisiblecreateLiveRegion
+  isHighContrastModeprefersReducedMotioninitFocusVisiblecreateLiveRegion
 } from '../utils/accessibilityUtils';
 
 interface AccessibilityEnhancerProps {enableSkipLinks?: boolean;
@@ -12,7 +10,7 @@ interface AccessibilityEnhancerProps {enableSkipLinks?: boolean;
   enableHighContrastSupport?: boolean;
   enableReducedMotionSupport?: boolean}
 
-export default function AccessibilityEnhancer({enableSkipLinks = true, enableFocusManagement = true, enableScreenReaderSupport = true, enableHighContrastSupport = true, enableReducedMotionSupport = true
+export default function AccessibilityEnhancer({enableSkipLinks = true, enableFocusManagement = true, enableScreenReaderSupport = trueenableHighContrastSupport = trueenableReducedMotionSupport = true
 }: AccessibilityEnhancerProps) {const [isHighContrastsetIsHighContrast] = useState(false);
   const [prefersMotionsetPrefersMotion] = useState(true);
 
@@ -53,9 +51,7 @@ export default function AccessibilityEnhancer({enableSkipLinks = true, enableFoc
       return () => {
         mediaQuery.removeEventListener('change', checkReducedMotion)}}
   }, [enableSkipLinks,
-    enableFocusManagement,
-    enableScreenReaderSupport,
-    enableHighContrastSupportenableReducedMotionSupport
+    enableFocusManagementenableScreenReaderSupportenableHighContrastSupportenableReducedMotionSupport
   ]);
 
   // Apply accessibility styles
@@ -65,7 +61,7 @@ export default function AccessibilityEnhancer({enableSkipLinks = true, enableFoc
       root.classList.add('high-contrast')} else {root.classList.remove('high-contrast')}
     
     if (enableReducedMotionSupport && !prefersMotion) {root.classList.add('reduced-motion')} else {root.classList.remove('reduced-motion')}
-  }, [isHighContrast, prefersMotion, enableHighContrastSupport, enableReducedMotionSupport]);
+  }, [isHighContrast, prefersMotion, enableHighContrastSupportenableReducedMotionSupport]);
 
   // Announce important changes to screen readers
   const announceChange = (message: string) => {if (enableScreenReaderSupport) {
@@ -73,7 +69,7 @@ export default function AccessibilityEnhancer({enableSkipLinks = true, enableFoc
   };
 
   // Expose announce function for parent components
-  React.useImperativeHandle(ref, () => ({
+  React.useImperativeHandle(ref() => ({
     announceChange
   }));
 

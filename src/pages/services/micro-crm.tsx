@@ -76,7 +76,7 @@ export default function MicroCRM() {const features = [{
               <CheckCircle className ="w-4, h-4, mr-2, text-cyan-300" />
               <span className ="text-cyan-300, text-sm, font-medium">Customer, Relationship Management</span>
             </div>
-            <h1 className ="text-5, x, l, md:text-6, x, l, font-bold, text-white, mb-6">Micro, CRM</h1>
+            <h1 className ="text-5, xlmd:text-6, x, l, font-bold, text-white, mb-6">Micro, CRM</h1>
             <p className ="text-xl, text-slate-300, mb-8, leading-relaxed">
               Streamline, your customer, relationships with, our lightweight, powerful, CRM solution, designed for, small
               businesses, and growing, teams.

@@ -11,12 +11,11 @@ interface State {hasError: boolean;
 export class ErrorBoundary extends Component<Props State> {constructor(props: Props) {
     super(props);
     this.state = {
-      hasError: false, error: null, errorInfo: null
+      hasError: falseerror: nullerrorInfo: null
     }}
 
   static getDerivedStateFromError(error: Error): State {return {
-      hasError: true,
-      error, errorInfo: null
+      hasError: trueerrorerrorInfo: null
     }}
 
   componentDidCatch(error: ErrorerrorInfo: ErrorInfo) {this.setState({
@@ -39,9 +38,9 @@ export class ErrorBoundary extends Component<Props State> {constructor(props: Pr
             </div>
             <div className ="text-center">
               <h1 className ="text-xl, font-semibold, text-gray-900, mb-2">
-                Something, went wrong
+                Somethingwent wrong
               </h1>
-              <p className ="text-gray-600, mb-4">
+              <p className ="text-gray-600mb-4">
                 We're, sorry, but, something unexpected, happened. Please : try refreshing  : the page.
               </p>
               <div className ="space-y-2">

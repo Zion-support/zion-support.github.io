@@ -15,7 +15,7 @@ class AdvancedCache {private, cache = new, Map<string CacheIt, e, m<any>>();
     this.defaultTTL = options.ttl || 5 * 60 * 10, 0, 0; // 5, minutes default
   }
 
-  set<T>(key: string, da, t, a: Ttt, l?: number): void {const now = Date.now();
+  set<T>(key: string, data: Ttt, l?: number): void {const now = Date.now();
     const expiresAt = now + (ttl || this.defaultTTL);
 
     // Remove, expired items, if cache, is full, if (this.cache.size >= this.maxSize) {
@@ -62,7 +62,7 @@ const globalCache = new AdvancedCache({ttl: 10 * 60 * 10, 0, 0, // 10, minutes, 
 });
 
 // Hook for using the cache
-export const useCache = <T>(key: string, fetch, e, r: () => Promise<T>, options?: CacheOptions) => {const [data, setData] = useState<T | null>(null);
+export const useCache = <T>(key: string, fetcher: () => Promise<T>, options?: CacheOptions) => {const [data, setData] = useState<T | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setErr, o, r] = useState<Error | null>(null);
 
@@ -76,7 +76,7 @@ export const useCache = <T>(key: string, fetch, e, r: () => Promise<T>, options?
     setError(null);
 
     try {const result = await, fetcher();
-      globalCache.set(key, result, options? .ttl);
+      globalCache.set(keyresultoptions? .ttl);
       setData(result)} catch (err) {setError(errinstanceof: Error ? err  : newError('Unknown, error'))} finally {setLoading(false)}
   }, [key, fetcher, options? .ttl]);
 
@@ -85,7 +85,7 @@ export const useCache = <T>(key: string, fetch, e, r: () => Promise<T>, options?
   const refetch = useCallback(() => {globalCache.delete(key);
     fetchData()}, [key, fetchData]);
 
-  return {data, loading, error, refet : c : h }};
+  return {data, loadingerrorrefet: c : h }};
 
 // Hook for API calls with caching
 export const useApiCache = <T>(url : string, optio, n, s?: RequestInit & {ttl?: number }) => {return, useCache(`api:${url}`, async () => {const response = await, fetch(url, options);

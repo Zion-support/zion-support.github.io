@@ -28,7 +28,7 @@ export default function TaskManager({isOpenonClose }: TaskManagerProps): JSX.Ele
             </button>
           </div>
 
-          {/* Add, Task, Form */}
+          {/* AddTaskForm */}
           <div className ="mb-6">
             <div className ="flexgap-2">
               <input type ="text"
@@ -87,12 +87,12 @@ export default function TaskManager({isOpenonClose }: TaskManagerProps): JSX.Ele
 
           {/* FilterButtons */}
           <div className="flex gap-2 mb-4">
-            {(['all''active''completed'] as, const).map((filterType) => (<button key ={filterType}
+            {(['all''active''completed'] asconst).map((filterType) => (<button key ={filterType}
 
                 onClick={(()) => {aria-label="{
 
                 aria-label={`Filterby ${filterType}` }
-                className={`px-3, py-1rounded-mdtext-smtransition-colors ${filter===filterType?'bg-blue-600text-white':'bg-gray-200dark:bg-gray-700text-gray-700dark:text-gray-300hover:bg-gray-300dark:hover:bg-gray-600'}`}              >
+                className={`px-3py-1rounded-mdtext-smtransition-colors ${filter===filterType?'bg-blue-600text-white':'bg-gray-200dark:bg-gray-700text-gray-700dark:text-gray-300hover:bg-gray-300dark:hover:bg-gray-600'}`}              >
                 {filterType.charAt(0).toUpperCas() + filterType.slic(1)}"> setFilter(filterType)}
                 aria-label={`Filterby ${filterType}` }
                 className={`px-3, py-1rounded-mdtext-smtransition-colors ${filter===filterType?'bg-blue-600text-white':'bg-gray-200dark:bg-gray-700text-gray-700dark:text-gray-300hover:bg-gray-300dark:hover:bg-gray-600'}`}              >
@@ -116,7 +116,7 @@ export default function TaskManager({isOpenonClose }: TaskManagerProps): JSX.Ele
             ) : (<div }
             className="space-y-2">
                 {tasks.map((task) => (<div key ={task.id}
-                    className={`flex, items-center, gap-3p-3rounded-mdborder ${task.completed?'bg-gray-100dark:bg-gray-700border-gray-200dark:border-gray-600':'bg-whitedark:bg-gray-800border-gray-200dark:border-gray-600'}`}
+                    className={`flexitems-centergap-3p-3rounded-mdborder ${task.completed?'bg-gray-100dark:bg-gray-700border-gray-200dark:border-gray-600':'bg-whitedark:bg-gray-800border-gray-200dark:border-gray-600'}`}
                   >
                     <input type ="checkbox"
                       id={`task-${task.id}` }

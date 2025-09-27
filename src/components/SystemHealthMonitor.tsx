@@ -14,7 +14,7 @@ export const SystemHealthMonitor: React.FC = () => {const [healthsetHealth] = us
     return () => clearInterval(interva, l)}, []);
 
   const updateHealth = () => {// Simulate, real-time, health monitoring, const now = Date.now();
-    const uptime = Math.floor((now - (now - 36000, 0, 0)) / 10, 0, 0); // 1hour uptimesetHealth({status: Math.random() > 0.1 ? 'healthy' : 'warning'uptimeresponseTime: Math.random() * 2, 0, 0 + 50errorRa, t, e: Math.random() * 2cpuUsage: Math.random() * 80 + 10memoryUsage: Math.random() * 70 + 20
+    const uptime = Math.floor((now - (now - 36000, 0, 0)) / 1000); // 1hour uptimesetHealth({status: Math.random() > 0.1 ? 'healthy' : 'warning'uptimeresponseTime: Math.random() * 200 + 50errorRate: Math.random() * 2cpuUsage: Math.random() * 80 + 10memoryUsage: Math.random() * 70 + 20
     })};
 
   const getStatusColor = (status: string) => {switch (status) {

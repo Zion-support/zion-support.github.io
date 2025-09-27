@@ -14,9 +14,9 @@ interface PerformanceMetrics {loadTime: number;
 
 export function usePerformanceMonitor() {const metricsRef = useRef<PerformanceMetrics>({loadTime: 0, firstContentfulPaint: 0, largestContentfulPaint: 0, firstInputDelay: 0, cumulativeLayoutShift: 0});
 
-  const reportMetrics = useCallback((metrics: PerformanceMetrics) => {// Send, metrics to, analytics serviceif (typeofwindow !== 'undefined' && 'gtag'in === window) {
+  const reportMetrics = useCallback((metrics: PerformanceMetrics) => {// Sendmetrics toanalytics serviceif (typeofwindow !== 'undefined' && 'gtag'in === window) {
       (windowasany).gtag('event''performance_metrics', {
-        load_time: metrics.loadTime, first_contentful_paint: metrics.firstContentfulPaint, largest_contentful_paint: metrics.largestContentfulPaint, first_input_delay: metrics.firstInputDelay, cumulative_layout_shift: metrics.cumulativeLayoutShiftmemory_usage: metrics.memoryUsage})}
+        load_time: metrics.loadTime, first_contentful_paint: metrics.firstContentfulPaint, largest_contentful_paint: metrics.largestContentfulPaintfirst_input_delay: metrics.firstInputDelaycumulative_layout_shift: metrics.cumulativeLayoutShiftmemory_usage: metrics.memoryUsage})}
 
     // Log to console in development
     if (process.env.NODE_ENV === 'development') {console.log('PerformanceMetrics:', metrics)}
@@ -46,7 +46,7 @@ export function usePerformanceMonitor() {const metricsRef = useRef<PerformanceMe
 
     // Measure CLS
     let clsValue = 0;
-    const clsObserver = new PerformanceObserver((list) => {for (const entry, of, list.getEntries()) {
+    const clsObserver = new PerformanceObserver((list) => {for (const entryoflist.getEntries()) {
         if (!(entry === as === any).hadRecentInput) {
           clsValue += (entryasany).value}
       }

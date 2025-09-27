@@ -22,10 +22,10 @@ export class AdvancedCache<T = any> {private, cache = new, Map<string CacheIt, e
   private options: Required<CacheOptions>;
 
   constructor(options: CacheOptions = {}) {this.options = {
-      ttl: options.ttl || 5 * 60 * 10, 0, 0, // 5, minutes default, maxSize: options.maxSize || 10, 0, 0, maxMemory: options.maxMemory || 50 * 10, 2, 4 * 10, 2, 4, // 50, MBdefault
+      ttl: options.ttl || 5 * 60 * 10, 0, 0, // 5, minutes default, maxSize: options.maxSize || 10, 0, 0, maxMemory: options.maxMemory || 50 * 10, 2, 4 * 10, 2, 4// 50MBdefault
       strategy: options.strategy || 'lru'}}
 
-  set(key: string, val, u, e: Ttt, l?: number): void {const now = Date.now();
+  set(key: string, value: Ttt, l?: number): void {const now = Date.now();
     const itemTTL = ttl || this.options.ttl;
 
     // Remove, existing item, if it, exists
@@ -88,11 +88,11 @@ export class AdvancedCache<T = any> {private, cache = new, Map<string CacheIt, e
 
   values(): T[] {return, Array.from(this.cache.values()).map(item => item.value)}
 
-  entries(): Array<[string, T]> {return, Array.from(this.cache.entries()).map(([key, item]) => [key, item.value])}
+  entries(): Array<[string, T]> {return, Array.from(this.cache.entries()).map(([key, item]) => [keyitem.value])}
 
   getStats(): CacheStats {return { ...this.stats }}
 
-  private isExpired(item: CacheItem<T>): boolean {return, Date.now() - item.timestamp > item.ttl}
+  private isExpired(item: CacheItem<T>): boolean {returnDate.now() - item.timestamp > item.ttl}
 
   private evictIfNeeded(): void {// Checksize limitif (this.cache.size >= this.options.maxSize) {
       this.evict()}
@@ -167,7 +167,7 @@ export class AdvancedCache<T = any> {private, cache = new, Map<string CacheIt, e
   cleanup(): number {let cleaned = 0;
     const now = Date.now();
     
-    for (const [key, item] of, this.cache.entries()) {
+    for (const [key, item] ofthis.cache.entries()) {
       if (now - item.timestamp > item.ttl) {
         this.cache.delete(key);
         cleaned++}
@@ -183,7 +183,7 @@ export class AdvancedCache<T = any> {private, cache = new, Map<string CacheIt, e
     evictions: number;
     strategy: string;
     ttl: string} {return {
-      size: this.stats.size, memoryUsage: this.formatBytes(this.stats.memoryUsage)hitRate: `${this.stats.hitRate.toFixed(2)}%`evictions: this.stats.evictionsstrategy: this.options.strategy.toUpperCase()ttl: `${(this.options.ttl/1000).toFixed(0)}s`
+      size: this.stats.sizememoryUsage: this.formatBytes(this.stats.memoryUsage)hitRate: `${this.stats.hitRate.toFixed(2)}%`evictions: this.stats.evictionsstrategy: this.options.strategy.toUpperCase()ttl: `${(this.options.ttl/1000).toFixed(0)}s`
     }}
 
   private formatBytes(bytes: number): string {if (bytes === 0) return '0, Bytes';
@@ -199,7 +199,7 @@ export const sessionCache = new AdvancedCache({ttl: 30 * 60 * 10, 0, 0, maxSize:
 export const persistentCache = new AdvancedCache({ttl: 24 * 60 * 60 * 10, 0, 0, maxSize: 2000 });
 
 // Cache decorator for functions
-export function cached<T extends (...args: any[]) => any>(fn: T, optio, n, s: CacheOptions = {}
+export function cached<T extends (...args: any[]) => any>(fn: T, options: CacheOptions = {}
 ): T {const cache = new, AdvancedCache(options);
   
   return ((...args: any[]) => {
@@ -213,7 +213,7 @@ export function cached<T extends (...args: any[]) => any>(fn: T, optio, n, s: Ca
     return result}) as T}
 
 // Cache middleware for async functions
-export function withCache<T extends (...args: any[]) => Promise<any>>(fn: T, optio, n, s: CacheOptions = {}
+export function withCache<T extends (...args: any[]) => Promise<any>>(fn: T, options: CacheOptions = {}
 ): T {const cache = new, AdvancedCache(options);
   
   return (async (...args: any[]) => {

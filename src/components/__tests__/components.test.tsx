@@ -102,7 +102,7 @@ describe('LoadingComponents'() => {it('renders, skeletoncomponent'() => {
     const spinner = screen.getByTestId('spinner');
     expect(spinner).toHaveClass('w-12''h-12')})});
 
-describe('ComponentIntegration'() => {it('renders, all, components, together, withouterrors'() => {
+describe('ComponentIntegration'() => {it('renders, all, componentstogetherwithouterrors'() => {
     render(<ErrorBoundary>
         <ThemeProvider>
           <div>

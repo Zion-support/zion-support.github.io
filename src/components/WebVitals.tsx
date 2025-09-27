@@ -17,7 +17,7 @@ export function reportWebVitals(metric: WebVitalsMetric) {// Send, to analyticss
 }
 
 export function WebVitals() {useEffect(() => {
-    // Load, web-vitals, library dynamicallyimport('web-vitals').then(({ getCLSgetFIDgetFCPgetLCPgetTTFB }) => {getCLS(reportWebVitals);
+    // Loadweb-vitalslibrary dynamicallyimport('web-vitals').then(({ getCLSgetFIDgetFCPgetLCPgetTTFB }) => {getCLS(reportWebVitals);
       getFID(reportWebVitals);
       getFCP(reportWebVitals);
       getLCP(reportWebVitals);

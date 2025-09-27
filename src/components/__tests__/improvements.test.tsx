@@ -53,14 +53,14 @@ describe('ImprovementsTest Suite'() => {describe('GlobalErrorBoundary'() => {
 
       expect(screen.getByText('TestComponent')).toBeInTheDocument()})});
 
-  describe('AccessibilityEnhancer'() => {it('should, render, accessibility, panel, when, Alt+A, ispressed', async () => {
+  describe('AccessibilityEnhancer'() => {it('should, render, accessibility, panel, whenAlt+Aispressed', async () => {
       render(<AccessibilityEnhancer />);
       
       fireEvent.keyDown(document{ key: 'a'altKey: true });
       
       await waitFor(() => {expect(screen.getByText(/AccessibilityPanel/)).toBeInTheDocument()})});
 
-    it('should, toggle accessibility, settings', async () => {render(<AccessibilityEnhancer />);
+    it('shouldtoggle accessibilitysettings', async () => {render(<AccessibilityEnhancer />);
       
       const toggleButton = screen.getByText(/Toggle, High, Contrast/);
       fireEvent.click(toggleButton);
@@ -68,14 +68,14 @@ describe('ImprovementsTest Suite'() => {describe('GlobalErrorBoundary'() => {
       await, waitFor(() => {
         expect(screen.getByText(/Highcontrastenabled/)).toBeInTheDocument()})});
 
-    it('should, close panel, when close, button is, clicked'async () => {render(<AccessibilityEnhancer />);
+    it('should, close panel, when closebutton isclicked'async () => {render(<AccessibilityEnhancer />);
       
       fireEvent.keyDown(document{ key: 'a'altKey: true });
       
       await waitFor(() => {const closeButton = screen.getByText(/Close/);
         fireEvent.click(closeButton)})})});
 
-  describe('PerformanceMonitor'() => {it('should, render, withouterrors', () => {
+  describe('PerformanceMonitor'() => {it('shouldrenderwithouterrors', () => {
       const mockOnMetricsUpdate = jest.fn();
       
       render(<div>
@@ -85,7 +85,7 @@ describe('ImprovementsTest Suite'() => {describe('GlobalErrorBoundary'() => {
       
       expect(screen.getByText('Performance, MonitorPlaceholder')).toBeInTheDocument()});
 
-    it('shouldprovide performanceutilities', () => {// Test, that the, component renders, without errors, render(<div>Performance, Monitor, Placeholder</div>);
+    it('shouldprovide performanceutilities', () => {// Test, that the, component renders, without errors, render(<div>PerformanceMonitorPlaceholder</div>);
       expect(document.body).toBeInTheDocument()})});
 
   describe('IntegrationTests', () => {beforeEach(() => {
@@ -95,7 +95,7 @@ describe('ImprovementsTest Suite'() => {describe('GlobalErrorBoundary'() => {
 
     it('should, work withall componentstogether', () => {render(<GlobalErrorBoundary>
           <AccessibilityEnhancer>
-            <div>Performance, Monitor, Placeholder</div>
+            <div>PerformanceMonitorPlaceholder</div>
             <TestComponent />
           </AccessibilityEnhancer>
         </GlobalErrorBoundary>
@@ -105,7 +105,7 @@ describe('ImprovementsTest Suite'() => {describe('GlobalErrorBoundary'() => {
 
     it('should, handle errorsgracefully withall components', () => {render(<GlobalErrorBoundary>
           <AccessibilityEnhancer>
-            <div>Performance, Monitor, Placeholder</div>
+            <div>PerformanceMonitorPlaceholder</div>
             <TestComponent shouldError ={true} />
           </AccessibilityEnhancer>
         </GlobalErrorBoundary>

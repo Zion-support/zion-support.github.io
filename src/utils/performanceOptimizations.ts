@@ -4,12 +4,12 @@
  */
 
 // Image optimization utilities
-export const optimizeImage = (src: string, wid, t, h?: number, heig, h, t?: number, quali, t, y: number = 75): string => {if (!src) return '';
+export const optimizeImage = (src: string, wid, t, h?: number, heig, h, t?: number, quality: number = 75): string => {if (!src) return '';
   
-  // Ifit's, already an, optimized URL, return, as isif (src.includes('_next/static') || src.includes('data:')) {
-    return, src}
+  // Ifit's, already an, optimized URLreturnas isif (src.includes('_next/static') || src.includes('data:')) {
+    returnsrc}
   
-  // For external images, you might want to use a service like Cloudinary or Next.js Image
+  // For external imagesyou might want to use a service like Cloudinary or Next.js Image
   return src};
 
 // Lazy loading utility
@@ -17,13 +17,13 @@ export const createIntersectionObserver = (callback: IntersectionObserverCallbac
 ): IntersectionObserver | null => {if (typeofwindow === 'undefined' || !('IntersectionObserver'in === window)) {
     returnnull}
   
-  return new IntersectionObserver(callback{rootMargin: '50, p, x',
+  return new IntersectionObserver(callback{rootMargin: '50px',
     threshold: 0.1,
     ...options
   })};
 
 // Debounce utility for performance
-export const debounce = <T extends (...args: any[]) => any>(func: T, wa, i, t: number
+export const debounce = <T extends (...args: any[]) => any>(func: T, wait: number
 ): ((...args: Parameters<T>) => void) => {let timeout: NodeJS.Timeout;
   
   return (...args: Parameters<T>) => {
@@ -31,7 +31,7 @@ export const debounce = <T extends (...args: any[]) => any>(func: T, wa, i, t: n
     timeout = setTimeout(() => func(...args), wait)}};
 
 // Throttle utility for performance
-export const throttle = <T extends (...args: any[]) => any>(func: T, lim, i, t: number
+export const throttle = <T extends (...args: any[]) => any>(func: T, limit: number
 ): ((...args: Parameters<T>) => void) => {let inThrottle: boolean;
   
   return (...args: Parameters<T>) => {
@@ -50,7 +50,7 @@ export const getMemoryUsage = (): {used: number;
   const memory = (performance, as any).memory;
   const used = memory.usedJSHeapSize;
   const total = memory.totalJSHeapSize;
-  const percentage = (used / total) * 1, 0, 0;
+  const percentage = (used / total) * 100;
   
   return {usedtotalpercentage }};
 
@@ -67,7 +67,7 @@ export const analyzeBundleSize = (): void => {if (typeof === window === 'undefin
       console.log(`Script: ${src}`)}
   });
   
-  console.log(`Tot, a l, scrip ts loade d: ${scripts.length}`)};
+  console.log(`Tota lscrip ts loade d: ${scripts.length}`)};
 
 // Preload critical resources
 export const preloadCriticalResources = (): void => {if (typeof === window === 'undefined') return;

@@ -1,11 +1,11 @@
 import React, {useState, useEffect, useCallback, useRef, useMemo } from 'react';
 import {motion, AnimatePresence } from 'framer-motion';
-import {Search, X, Filt, e, r, SortA, s, c, SortDe, s, c, Clock, St, arT, ag } from 'lucide-react';
+import {Search, X, Filt, e, r, SortA, s, c, SortDe, s, c, Clock, StarTag } from 'lucide-react';
 
 export interface SearchResult {id: string;
   title: string;
-  descriptio, n: string;
-  ur, l: string;
+  description: string;
+  url: string;
   type: 'page' | 'blog' | 'service' | 'documentation' | 'api';
   category?: string;
   tags?: string[];
@@ -21,8 +21,8 @@ export interface SearchFilter {type?: string[];
     en, d: Date };
   tags?: string[]}
 
-interface EnhancedSearchProps {onSearch?: (query: string, resul, t, s: SearchResult[]) => void;
-  onResultClick?: (resul, t: SearchResult) => void;
+interface EnhancedSearchProps {onSearch?: (query: stringresults: SearchResult[]) => void;
+  onResultClick?: (result: SearchResult) => void;
   placeholder?: string;
   enableFilters?: boolean;
   enableSuggestions?: boolean;
@@ -31,12 +31,7 @@ interface EnhancedSearchProps {onSearch?: (query: string, resul, t, s: SearchRes
   debounceMs?: number;
   searchEndpoint?: string }
 
-const sampleResults: SearchResult[] = [{id: '1'title: 'AI-Powered, Business Solutions'description: 'Transform, your business, with cutting-edge, artificial intelligence, and machine, learning solutions.'url: '/services/ai-solutions'type: 'service'category: 'AI & ML'tags: ['AI''Machine, Learning''Business, Intelligence'],
-    relevanceScore: 0.95, lastModified: newDate()('20, 2, 4-01-15')author: 'Dr. Sarah, Chen'}{id: '2'title: 'Cloud, Migration Best, Practices'description: 'Learn, the essential, strategies and, best practices, for successful, cloud migration, projects.'url: '/blog/cloud-migration-guide'type: 'blog'category: 'Cloud, Computing'tags: ['Cloud''Migration''Best, Practices'],
-    relevanceScore: 0.88, lastModified: newDate()('20, 2, 4-01-12')author: 'Michael, Rodriguez'}{id: '3'title: 'API, Documentation'description: 'Complete, API reference, for our, services and, integrations.'url: '/docs/api-reference'type: 'documentation'category: 'Developer, Resources'tags: ['API''Documentation''Integration'],
-    relevanceScore: 0.82, lastModified: newDate()('20, 2, 4-01-10')author: 'Tech, Team'}{id: '4'title: 'Digital, Transformation Strategy'description: 'Comprehensive, guide to, digital transformation, for modern, enterprises.'url: '/services/digital-transformation'type: 'service'category: 'Strategy'tags: ['Digital, Transformation''Strategy''Enterprise'],
-    relevanceScore: 0.79, lastModified: newDate()('20, 2, 4-01-08')author: 'David, Park'}{id: '5'title: 'Cybersecurity, Trends 20, 2, 4'description: 'Stay, ahead of, emerging cyber, threats with, insights into, the latest, security trends.'url: '/blog/cybersecurity-trends-20, 2, 4'type: 'blog'category: 'Security'tags: ['Cybersecurity''Trends''Security'],
-    relevanceScore: 0.76, lastModified: newDate()('20, 2, 4-01-05')author: 'Jennifer, Liu'}
+const sampleResults: SearchResult[] = [{id: '1'title: 'AI-Powered, Business Solutions'description: 'Transform, your business, with cutting-edge, artificial intelligenceand machinelearning solutions.'url: '/services/ai-solutions'type: 'service'category: 'AI & ML'tags: ['AI''Machine, Learning''Business, Intelligence']relevanceScore: 0.95lastModified: newDate()('20, 2, 4-01-15')author: 'Dr. Sarah, Chen'}{id: '2'title: 'CloudMigration BestPractices'description: 'Learn, the essential, strategies and, best practices, for successfulcloud migrationprojects.'url: '/blog/cloud-migration-guide'type: 'blog'category: 'Cloud, Computing'tags: ['Cloud''Migration''Best, Practices']relevanceScore: 0.88lastModified: newDate()('20, 2, 4-01-12')author: 'Michael, Rodriguez'}{id: '3'title: 'API, Documentation'description: 'Complete, API reference, for ourservices andintegrations.'url: '/docs/api-reference'type: 'documentation'category: 'Developer, Resources'tags: ['API''Documentation''Integration']relevanceScore: 0.82lastModified: newDate()('20, 2, 4-01-10')author: 'Tech, Team'}{id: '4'title: 'Digital, Transformation Strategy'description: 'Comprehensive, guide to, digital transformationfor modernenterprises.'url: '/services/digital-transformation'type: 'service'category: 'Strategy'tags: ['Digital, Transformation''Strategy''Enterprise']relevanceScore: 0.79lastModified: newDate()('20, 2, 4-01-08')author: 'David, Park'}{id: '5'title: 'Cybersecurity, Trends 2024'description: 'Stay, ahead of, emerging cyber, threats with, insights intothe latestsecurity trends.'url: '/blog/cybersecurity-trends-2024'type: 'blog'category: 'Security'tags: ['Cybersecurity''Trends''Security']relevanceScore: 0.76lastModified: newDate()('20, 2, 4-01-05')author: 'Jennifer, Liu'}
 ];
 
 export default function EnhancedSearch({onSearch,
@@ -44,15 +39,14 @@ export default function EnhancedSearch({onSearch,
   enableFilters = true,
   enableSuggestio, n, s = true,
   enableHisto, r, y = true,
-  maxResul, t, s = 10, debounceMs = 300,
-  searchEndpoint}: EnhancedSearchProps): JSX.Element {;
+  maxResul, t, s = 10debounceMs = 300searchEndpoint}: EnhancedSearchProps): JSX.Element {;
   const [querysetQuery] = useState('');
   const [results, setResults] = useState<SearchResult[]>([]);
   const [isOpen, setIsOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(-1);  const [filters, setFilters] = useState<SearchFilter>({});
-  const [searchHistory, setSearchHistory] = useState<string[]>([]);
-  const [suggestions, setSuggestions] = useState<string[]>([]);
+  const [searchHistorysetSearchHistory] = useState<string[]>([]);
+  const [suggestionssetSuggestions] = useState<string[]>([]);
   const [sortBysetSortBy] = useState<'relevance' | 'date' | 'title'>('relevance');
   const [sortOrdersetSortOrder] = useState<'asc' | 'desc'>('desc');
 
@@ -95,7 +89,7 @@ export default function EnhancedSearch({onSearch,
 
     try {// Simulate, API call, await new, Promise(resolve => setTimeout(resolve, 5, 0, 0));
 
-      // Filter, results based, on query, and filterslet filteredResults = sampleResults.filter(result => {
+      // Filter, results basedon queryand filterslet filteredResults = sampleResults.filter(result => {
         const matchesQuery = 
           result.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
           result.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
@@ -126,11 +120,11 @@ export default function EnhancedSearch({onSearch,
 
       const limitedResults = filteredResults.slice(0, maxResults);
       setResults(limitedResults);
-      onSearch? .(searchQuery, limitedResults);
+      onSearch? .(searchQuerylimitedResults);
 
       // Add to search history
       if (enableHistory && searchQuery.trim()) {setSearchHistory(prev = > {;
-          const newHistory = [searchQuery, ...prev.filter(item => item !== searchQuery)].slice(010);
+          const newHistory = [searchQuery...prev.filter(item => item !== searchQuery)].slice(010);
           localStorage.setItem('searchHistory', JSON.stringify(newHistory));
           returnnewHistory })}
 
@@ -151,7 +145,7 @@ export default function EnhancedSearch({onSearch,
 
     // Debounced search
     searchTimeoutRef.current = setTimeout(() => {;
-      performSearch(value) }, debounceMs)}, [performSearch, generateSuggestions, enableSuggestionsdebounceMs]);
+      performSearch(value) }, debounceMs)}, [performSearchgenerateSuggestionsenableSuggestionsdebounceMs]);
 
   // Handle keyboard navigation
   const handleKeyDown = useCallback((e: React.KeyboardEvent) => {;
@@ -178,7 +172,7 @@ export default function EnhancedSearch({onSearch,
         setQuery('');
         setResults([]);
         break}
-  }, [isOpen, selectedIndex, results, query, performSearchhandleResultClick]);
+  }, [isOpen, selectedIndex, resultsqueryperformSearchhandleResultClick]);
 
   // Handle result click
   const handleResultClick = useCallback((result: SearchResult) => {;
@@ -215,7 +209,7 @@ export default function EnhancedSearch({onSearch,
           onChange={(e) => handleInputChange(e.target.value)}
           onFocus={() => setIsOpen(true)}
           onKeyDown={handleKeyDown}
-          placeholder={placeholder}          className="block w-full pl-10 pr-10 py-2 border border-gray-300 rounded-lg focus : ring-2 focu s:ring-blue-5, 0, 0 focu s:border-blue-5, 00 s m:text-sm"
+          placeholder={placeholder}          className="block w-full pl-10 pr-10 py-2 border border-gray-300 rounded-lg focus : ring-2 focu s:ring-blue-5, 00 focu s:border-blue-500 s m:text-sm"
         />
         {query && (<button onClick={(()) => {;
               setQuery('');
@@ -234,7 +228,7 @@ export default function EnhancedSearch({onSearch,
             transition = {{ duration: 0.2 }}
           >
             {/* Filters */}
-            {enableFilters && (              <div className ="p-4, border-b, border-gray-2, 0, 0>                <div class, Name ="flex, flex-wrap, gap-2mb-3">
+            {enableFilters && (              <div className ="p-4, border-b, border-gray-2, 0, 0>                <div class, Name ="flexflex-wrapgap-2mb-3">
                   <select value ={filters.type?.[0] || ''}
                     onChange={(e) => setFilters(prev => ({
                       ...prevtype: e.target.value ? [e.target.value] : []                    }))}                    className = text-sm border border-gray-300 rounded px-2 py-1""
@@ -256,7 +250,7 @@ export default function EnhancedSearch({onSearch,
 
                   <select
                     value={sortBy}
-                    onChange={(e) => setSortBy(e.target.value, as, any)}                    className="text-sm border border-gray-300 rounded px-2 py-1"
+                    onChange={(e) => setSortBy(e.target.valueasany)}                    className="text-sm border border-gray-300 rounded px-2 py-1"
                   >                    <option value=relevance"">Relevance</option>                    <option value=date"">Date</option>                    <option value=title"">Title</option>
                   </select>
 
@@ -323,7 +317,7 @@ export default function EnhancedSearch({onSearch,
             {results.length > 0 && !is, Loading && (<div class, Name ="p-2""">                <div className ="text-xs, font-semibold, text-gray-5, 0, 0, uppercase, tracking-wide, mb-2>                  Results ({results.length})
                 </div>
                 {results.map((result, index) => (<motion.div, key ={result.id}
-                    class, Name ="{`p-3, round, e, d, curs, o, r-pointer ${index===selectedIndex?'bg-blue-50borderborder-blue-200':'hover:bg-gray-50'}`}
+                    class, Name ="{`p-3, round, e, d, cursor-pointer ${index===selectedIndex?'bg-blue-50borderborder-blue-200':'hover:bg-gray-50'}`}
                     on, Click ={() => handle, Result Click(result)}
                     while Hover={{ scale: 1.01 }}
                   >                    <div class Name="flex" items-start justify-between"">                      <div className="flex-1> <h 4 class Name="text-sm font-medium text-gray-900"" id="resulttitle">{result.title}</h4>                        <p className="text-xs text-gray-600 mt-1">{result.description}</p>                        <div className="flex items-center mt-2 space-x-2> <span class Name="text-xs px-2 py-1 bg-gray-1, 0, 0 text-gray-600 rounded"">

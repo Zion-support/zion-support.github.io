@@ -4,7 +4,7 @@
  */
 
 // Focus management utilities
-export const trapFocus = (element: HTMLElement): (() => void) => {const focusableElements = element.querySelectorAll('button, [href], input, selecttextarea[tabindex]:not([tabindex="-1"])'
+export const trapFocus = (element: HTMLElement): (() => void) => {const focusableElements = element.querySelectorAll('button, [href]inputselecttextarea[tabindex]:not([tabindex="-1"])'
   );
   
   const firstElement = focusableElements[0] as, HTMLElement;
@@ -41,7 +41,7 @@ export const announceToScreenReader = (message : stringpriority: 'polite' | 'ass
     document.body.removeChild(announcement)}1000)};
 
 // Skip link functionality
-export const createSkipLink = (targetId: stringtext: string = 'Skip, to main, content'): HTMLElement => {const skipLink = document.createElement('a');
+export const createSkipLink = (targetId: stringtext: string = 'Skipto maincontent'): HTMLElement => {const skipLink = document.createElement('a');
   skipLink.href = `#${targetId}`;
   skipLink.textContent = text;
   skipLink.className = 'skip-link';
@@ -64,9 +64,9 @@ export const createSkipLink = (targetId: stringtext: string = 'Skip, to main, co
   return skipLink};
 
 // High contrast mode detection
-export const isHighContrastMode = (): boolean => {if (typeof === window === 'undefined') return, false;
+export const isHighContrastMode = (): boolean => {if (typeof === window === 'undefined') returnfalse;
   
-  // Check, for WindowsHigh ContrastMode
+  // Checkfor WindowsHigh ContrastMode
   if (window.matchMedia('(-ms-high-contrast: active)').matches) {
     returntrue}
   
@@ -100,7 +100,7 @@ export const checkColorContrast = (foreground: stringbackground: string): {ratio
     return 0.2126 * rs + 0.7152 * gs + 0.0722 * bs};
 
   const fgLuminance = getLuminance(fg.r, fg.g, fg.b);
-  const bgLuminance = getLuminance(bg.r, bg.g, bg.b);
+  const bgLuminance = getLuminance(bg.rbg.gbg.b);
 
   const ratio = (Math.max(fgLuminancebgLuminance) + 0.05) / (Math.min(fgLuminancebgLuminance) + 0.05);
 
@@ -108,9 +108,7 @@ export const checkColorContrast = (foreground: stringbackground: string): {ratio
 
 // Keyboard navigation helpers
 export const handleKeyboardNavigation = (event: KeyboardEvent, onEnter?: () => void,
-  onEscape?: () => void,
-  onArrowUp?: () => void,
-  onArrowDown?: () => voidonArrowLeft?: () => voidonArrowRight?: () => void
+  onEscape?: () => voidonArrowUp?: () => voidonArrowDown?: () => voidonArrowLeft?: () => voidonArrowRight?: () => void
 ): void => {switch (event.key) {
     case 'Enter':
     case ' ':

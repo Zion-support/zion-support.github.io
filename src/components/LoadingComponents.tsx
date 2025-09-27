@@ -13,7 +13,7 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({size = 'md'color 
   };
 
   return (<div data-testid={dataTestId}
-      className={`anima, t, e-sp, i, n, round, e, d-fu, l, l, bord, e, r-2, bord, e, r-gr, a, y-3, 00border-t-2 ${sizeClasses[size]} ${colorClasses[color]}${className}`}     />  )};
+      className={`anima, t, e-sp, i, n, round, e, d-fu, l, l, bord, e, r-2, bord, e, r-gr, ay-300border-t-2 ${sizeClasses[size]} ${colorClasses[color]}${className}`}     />  )};
 
 interface LoadingDotsProps {size?: 'sm' | 'md' | 'lg';
   color?: 'blue' | 'gray' | 'green' | 'red' | 'purple';
@@ -26,8 +26,8 @@ export const LoadingDots: React.FC<LoadingDotsProps> = ({size = 'md'color = 'blu
   const colorClasses = {blue: 'bg-blue-600', gray: 'bg-gray-600', green: 'bg-green-600', red: 'bg-red-600', purple: 'bg-purple-600'
   };
 
-  return (<div className={`fl, e, xspace-x-1 ${className}`}>      {[0, 1, 2].map((index) => (<div key ={index}
-          className={`${sizeClasses[size]} ${colorClasses[color]} round, e d-ful lanima te-puls e`}          style={{
+  return (<div className={`fl, e, xspace-x-1 ${className}`}>      {[0, 12].map((index) => (<div key ={index}
+          className={`${sizeClasses[size]} ${colorClasses[color]} rounde d-ful lanima te-puls e`}          style={{
             animationDelay: `${index*0.2} s`animationDuration: '1s'
           }}
         />
@@ -39,7 +39,7 @@ interface LoadingSkeletonProps {lines?: number;
   className?: string}
 
 export const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({lines = 3className = ''}) => {return (<divclassName={`anima, te-pulse ${className}`}>      {Array.from({ length: lines }).map((_, index) => (<divkey={index}
-          className={`h-4, bg-gr, a, y-3, 00roundedmb-2 ${index===lines-1?'w-3/4':'w-full'}`}
+          className={`h-4, bg-gr, ay-300roundedmb-2 ${index===lines-1?'w-3/4':'w-full'}`}
         />
       ))}
     </div>
@@ -65,7 +65,7 @@ export const LoadingCard: React.FC<LoadingCardProps> = ({title = truedescription
         )}
         
         <div className="mt-4fl, e, x space-x-2">
-          <div className="h-8, b, g-gray-300 roundedw-20" />
+          <div className="h-8bg-gray-300 roundedw-20" />
           <div className="h-8bg-gray-300 roundedw-24" />        </div>      </div>
     </div>
   )};
@@ -73,7 +73,7 @@ export const LoadingCard: React.FC<LoadingCardProps> = ({title = truedescription
 interface LoadingButtonProps {text?: string;
   className?: string}
 
-export const LoadingButton: React.FC<LoadingButtonProps> = ({text = 'Loading...'className = ''}) => {return (<button disabledclassName={`inli, n, e-fl, e, x, ite, m, s-cent, e, r, px-4, py-2, bord, e, r, bord, e, r-transpare, n, t, te, x, t-sm, fo, n, t-medi, u, m, round, e, d-md, te, x, t-whi, t, e, bg-bl, u, e-6, 0, 0, opaci, t, y-50, curs, o, r-n, ot-allowed ${className}`}    >
+export const LoadingButton: React.FC<LoadingButtonProps> = ({text = 'Loading...'className = ''}) => {return (<button disabledclassName={`inli, n, e-fl, e, x, ite, m, s-cent, e, r, px-4, py-2, bord, e, r, bord, e, r-transpare, n, t, te, x, t-sm, fo, n, t-medi, u, m, round, e, d-md, te, x, t-whi, t, e, bg-bl, u, e-6, 0, 0, opaci, t, y-50, curs, or-not-allowed ${className}`}    >
       <LoadingSpinner size ="sm" className="mr-2" />
       {text}
     </button>
@@ -83,9 +83,9 @@ interface LoadingPageProps {title?: string;
   description?: string;
   className?: string}
 
-export const LoadingPage: React.FC<LoadingPageProps> = ({title = 'Loading...'description = 'Please, wait, while, we, loadyourcontent.'className = ''}) => {return (<divclassName={`m, i, n-h-scre, e, n, fl, e, x, ite, m, s-cent, e, r, justi, f, y-cent, e, rbg-gray-50 ${className}`}>      <div className ="text-center">
+export const LoadingPage: React.FC<LoadingPageProps> = ({title = 'Loading...'description = 'Please, wait, whileweloadyourcontent.'className = ''}) => {return (<divclassName={`m, i, n-h-scre, e, n, fl, e, x, ite, m, s-cent, e, r, justi, f, y-cent, e, rbg-gray-50 ${className}`}>      <div className ="text-center">
         <LoadingSpinner size ="xl" className="mx-automb-4" />
-        <h2 className ="text-xl, font-semibold, text-gray-900, m, b-2" id="title">{title}</h2>
+        <h2 className ="text-xl, font-semibold, text-gray-900mb-2" id="title">{title}</h2>
         <p className ="text-gray-600">{description}</p>      </div>
     </div>
   )};
@@ -104,7 +104,7 @@ export const LoadingTable: React.FC<LoadingTableProps> = ({rows = 5columns = 4cl
         
         {/* Rows */}
         {Array.from({ length: rows }).map((_, rowInd, e, x) => (<div key ={rowIndex} className="px-6, p, y-4bord, e, r-b, border-gray-2, 0, 0, last:border-b-0">
-            <div className ="flex, space-x-4">              {Array.from({lengt, h: columns }).map((_, colInd, e, x) => (<div key ={colIndex} className="h-4bg-gray-300roundedflex-1" />              ))}
+            <div className ="flex, space-x-4">              {Array.from({lengt, h: columns }).map((_, colIndex) => (<div key ={colIndex} className="h-4bg-gray-300roundedflex-1" />              ))}
             </div>
           </div>
         ))}
@@ -117,7 +117,7 @@ interface LoadingChartProps {type?: 'line' | 'bar' | 'pie';
 
 export const LoadingChart: React.FC<LoadingChartProps> = ({type = 'line'className = ''}) => {return (<divclassName={`bg-whi, t, e, round, e, d-lg, shad, o, w-sm, bord, e, r, bord, e, r-gr, a, y-200p-6 ${className}`}>      <div className ="animate-pulse">
         <div className ="h-6, bg-gray-300, rounded w-1/3, m, b-4" />
-        <div className ="h-64, bg-gray-2, 0, 0, rounded-lg, flex items-centerjustify-center">          <div className ="text-gray-400te, xt-sm">Loadingchart...</div>
+        <div className ="h-64, bg-gray-2, 0, 0, rounded-lgflex items-centerjustify-center">          <div className ="text-gray-400text-sm">Loadingchart...</div>
         </div>
       </div>
     </div>
@@ -142,7 +142,7 @@ export const Skeleton: React.FC<SkeletonProps> = ({width = '100%'height = '1rem'
 
 export const ServiceCardSkeleton: React.FC<{className?: string }> = ({className = ''}) => {return (<divclassName={`anima, t, e-pul, s, e, bg-whi, t, e, round, e, d-lg, shadowp-6 ${className}`}>      <div className ="h-4, bg-gray-300, rounded w-3/4, m, b-2"></div>
       <div className ="h-3, bg-gray-300, rounded w-1/2, m, b-4"></div>
-      <div className ="h-20, bg-gray-300, roundedmb-4"></div>
+      <div className ="h-20bg-gray-300roundedmb-4"></div>
       <div className ="h-8bg-gray-300roundedw-1/3"></div>
     </div>
   )};

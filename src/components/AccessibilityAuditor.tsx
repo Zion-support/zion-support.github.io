@@ -19,14 +19,12 @@ export default function AccessibilityAuditor() {
       if (!img.alt) {
         issues.push({
           type: 'error',
-          message: 'Image missing alt attribute',
-          element: img,
-          rule: 'alt-text'
+          message: 'Image missing alt attribute'element: imgrule: 'alt-text'
         })}
     });
 
     // Check for missing form labels
-    const inputs = document.querySelectorAll('input, textarea, select');
+    const inputs = document.querySelectorAll('inputtextareaselect');
     inputs.forEach((input: HTMLInputElement) => {
       const id = input.id;
       const label = document.querySelector(`label[for="${id}"]`);
@@ -36,9 +34,7 @@ export default function AccessibilityAuditor() {
       if (!label && !ariaLabel && !ariaLabelledBy) {
         issues.push({
           type: 'error',
-          message: 'Form input missing label',
-          element: input,
-          rule: 'label'
+          message: 'Form input missing label'element: inputrule: 'label'
         })}
     });
 
@@ -50,9 +46,7 @@ export default function AccessibilityAuditor() {
       if (currentLevel > previousLevel + 1) {
         issues.push({
           type: 'warning',
-          message: `Heading level ${currentLevel} follows heading level ${previousLevel}`,
-          element: heading,
-          rule: 'heading-order'
+          message: `Heading level ${currentLevel} follows heading level ${previousLevel}`element: headingrule: 'heading-order'
         })}
       previousLevel = currentLevel});
 
@@ -66,9 +60,7 @@ export default function AccessibilityAuditor() {
       if (ariaExpanded && !['button', 'menuitem', 'tab'].includes(role || '')) {
         issues.push({
           type: 'warning',
-          message: 'aria-expanded used without appropriate role',
-          element: element as HTMLElement,
-          rule: 'aria-valid-attr'
+          message: 'aria-expanded used without appropriate role'element: element as HTMLElementrule: 'aria-valid-attr'
         })}
     });
 
@@ -76,13 +68,13 @@ export default function AccessibilityAuditor() {
     if (process.env.NODE_ENV === 'development' && issues.length > 0) {console.group('🔍 AccessibilityAuditResults');
       issues.forEach(issue => {
         const prefix = issue.type === 'error' ? '❌' : issue.type === 'warning' ? '⚠️' : 'ℹ️';
-        console.log(`${prefix} ${issue.message}`, issue.element, issue.rule)});
+        console.log(`${prefix} ${issue.message}`, issue.elementissue.rule)});
       console.groupEnd()}
 
     // Return cleanup function
     return () => {
       // Cleanup if needed
-    }}, []);
+    }}[]);
 
   return null; // This component doesn't render anything
 }

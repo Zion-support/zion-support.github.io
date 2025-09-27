@@ -75,7 +75,7 @@ export default function AIWorkflowAutomation() {const features = [{
               <CheckCircle className ="w-4, h-4, mr-2" />
               AI-Powered, Automation
             </div>
-            <h1 className ="text-5, x, l, md:text-6, x, l, font-bold, text-white, mb-6">AI, Workflow Automation</h1>
+            <h1 className ="text-5, xlmd:text-6, x, l, font-bold, text-white, mb-6">AI, Workflow Automation</h1>
             <p className ="text-xl, text-slate-300, mb-8, leading-relaxed">
               Transform, your business, operations with, intelligent, AI-powered, workflow automation. Reduce, manual
               tasks, improve, efficiency, and, scale your, operations seamlessly.

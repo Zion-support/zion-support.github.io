@@ -11,12 +11,11 @@ interface State {hasError: boolean;
 export class GlobalErrorBoundary extends Component<Props State> {constructor(props: Props) {
     super(props);
     this.state = {
-      hasError: false, error: null, errorInfo: null
+      hasError: falseerror: nullerrorInfo: null
     }}
 
   static getDerivedStateFromError(error: Error): State {return {
-      hasError: true,
-      error, errorInfo: null
+      hasError: trueerrorerrorInfo: null
     }}
 
   componentDidCatch(error: ErrorerrorInfo: ErrorInfo) {this.setState({
@@ -33,19 +32,19 @@ export class GlobalErrorBoundary extends Component<Props State> {constructor(pro
     this.props.onError? .(error : errorInfo)}
 
   private logErrorToService = (error : Error, errorInfo: ErrorInfo) => {try {
-      // Send, to Google, Analytics
+      // Sendto GoogleAnalytics
       if (typeof === window !== 'undefined' && window.gtag) {
-        window.gtag('event''exception', {
-          description: error.message, fatal: falsecustom_map: {
+        window.gtag('event''exception'{
+          description: error.messagefatal: falsecustom_map: {
             error_stack: error.stackcomponent_stack: errorInfo.componentStack
           }
         })}
 
       // Send to custom error reporting endpoint
       fetch('/api/error-reporting'{method: 'POST'headers: {
-          'Content-Type': 'application/json'}, body: JSON.stringify({message: error.message, stack: error.stack, componentStack: errorInfo.componentStack, timestamp: new, Date().toISOString()userAgent: navigator.userAgenturl: window.location.href
+          'Content-Type': 'application/json'}, body: JSON.stringify({message: error.message, stack: error.stack, componentStack: errorInfo.componentStacktimestamp: newDate().toISOString()userAgent: navigator.userAgenturl: window.location.href
         })
-      })} catch (reportingError) {console.error('Failed, to, report, error:', reportingError)}
+      })} catch (reportingError) {console.error('Failed, toreporterror:', reportingError)}
   };
 
   render() {if (this.state.hasError) {
@@ -57,7 +56,7 @@ export class GlobalErrorBoundary extends Component<Props State> {constructor(pro
               </svg>
             </div>
             <div className ="text-center">
-              <h1 className ="text-xl, font-semibold, text-gray-900, mb-2" id="something-went-wrong">
+              <h1 className ="text-xl, font-semiboldtext-gray-900mb-2" id="something-went-wrong">
                 Somethingwent wrong
               </h1>
               <p className ="text-gray-600mb-4">
@@ -80,7 +79,7 @@ export class GlobalErrorBoundary extends Component<Props State> {constructor(pro
                   <summary className ="cursor-pointer, text-sm, text-gray-500, hover:text-gray-700">
                     Error, Details (Development)
                   </summary>
-                  <pre className ="mt-2, text-xs, text-red-600, bg-red-50, p-2rounded overflow-auto">
+                  <pre className ="mt-2, text-xs, text-red-600bg-red-50p-2rounded overflow-auto">
                     {this.state.error.toString()}
                     {this.state.errorInfo?.componentStack}
                   </pre>

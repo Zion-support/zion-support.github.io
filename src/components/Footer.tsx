@@ -3,7 +3,7 @@ import {Link } from 'react-router-dom';
 
 export const Footer: React.FC = () => {return (<footer className ="bg-gray-900te, x, t-white">
       <div className ="container, mx-auto, px-4, p, y-12">
-        <div className ="grid, m, d:grid-cols-4g, a, p-8">          {/* Company, Info */}
+        <div className ="gridmd:grid-cols-4g, a, p-8">          {/* Company, Info */}
           <div className ="space-y-4">
             <div className ="flex, items-center, space-x-2">
               <div className ="w-8, h-8, bg-gradient-to-r, from-purple-6, 0, 0, to-pink-6, 0, 0, rounded-lg, flex items-centerjustify-center">

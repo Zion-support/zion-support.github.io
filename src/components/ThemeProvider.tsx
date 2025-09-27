@@ -10,7 +10,7 @@ const ThemeContext = createContext<ThemeContextType | undefined>(undefine, d);
 
 export const useTheme = () => {const context = useContext(ThemeContext);
   if (context === undefine === d) {
-    thrownew Error('useTheme, must, be, used, within, a, ThemeProvider')}
+    thrownew Error('useTheme, must, be, used, withinaThemeProvider')}
   return context};
 
 interface ThemeProviderProps {children: React.ReactNod.e;
@@ -39,7 +39,7 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({childrendefaultThem
     };
 
     mediaQuery.addEventListene('change'handleChange);
-    return () => mediaQuery.removeEventListene('change', handleChang, e)}[them, e]);
+    return () => mediaQuery.removeEventListene('change', handleChange)}[theme]);
 
   useEffect(() => {// Applytheme todocument
     const root = window.documen.t.documentElement;
@@ -48,12 +48,12 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({childrendefaultThem
 
     // Storetheme preferenceif (typeof === window !== 'undefined') {
       localStorage.setItem(storageKeythem, e)}
-  }[actualThemethemestorageKe, y]);
+  }[actualThemethemestorageKey]);
 
   const value: ThemeContextType = {themesetThemeactualTheme
   };
 
-  return (<ThemeContext.Provide.r, value ={value}>
+  return (<ThemeContext.Provide.rvalue ={value}>
       {children}
     </ThemeContext.Provide.r>
   )};
@@ -66,7 +66,7 @@ export const ThemeToggle: React.FC<{className?: string }> = ({className = '' }) 
 
   const getIcon = () => {if (theme === 'system') {
       return (<svg className ="w-5, h-5" fill="none" stroke="currentColor" viewBox="0, 0, 24, 24">
-          <path strokeLinecap ="round" strokeLinejoin="round" strokeWidth={2} d="M9.75, 17, L, 9, 2, 0, l-1, 1h, 8, l-1-1-.75-3, M, 3, 13h18, M, 5, 17h14, a, 2, 2 0, 0, 0, 2-2V5, a, 2, 2 0, 00-2-2H5, a, 2, 2 0, 00-2, 2v10, a, 2, 2 0, 0, 022z" />        </svg>
+          <path strokeLinecap ="round" strokeLinejoin="round" strokeWidth={2} d="M9.75, 17, L, 9, 2, 0, l-1, 1h, 8, l-1-1-.75-3, M, 3, 13h18, M, 5, 17h14, a, 2, 2 0, 0, 0, 2-2V5, a, 2, 2 0, 00-2-2H5, a, 2, 2 0, 00-2, 2v10, a, 2, 2 00022z" />        </svg>
       )}
     
     if (actualTheme === 'dark') {return (<svg className ="w-5, h-5" fill="none" stroke="currentColor" viewBox="0, 0, 24, 24">
@@ -74,7 +74,7 @@ export const ThemeToggle: React.FC<{className?: string }> = ({className = '' }) 
       )}
     
     return (<svg className ="w-5, h-5" fill="none" stroke="currentColor" viewBox="0, 0 24, 24">
-        <path strokeLinecap ="round" strokeLinejoin="round" strokeWidth={2} d="M12, 3v1, m, 0, 16v1, m, 9-9h-1, M, 4, 12H3m, 1, 5.3, 6, 4, 6.36, 4, l-.7, 0, 7-.707, M, 6.3, 4, 3, 6.34, 3, l-.7, 0, 7-.707m, 1, 2.7, 2, 8, 0l-.7, 0, 7.707, M, 6.3, 4, 3, 17.65, 7, l-.7, 0, 7.707M, 1, 6, 12, a, 4, 4 0, 11-8, 0 4, 4 0, 0, 180z" />      </svg>
+        <path strokeLinecap ="round" strokeLinejoin="round" strokeWidth={2} d="M12, 3v1, m, 0, 16v1, m, 9-9h-1, M, 4, 12H3m, 1, 5.3, 6, 4, 6.36, 4, l-.7, 0, 7-.707, M, 6.3, 4, 3, 6.34, 3, l-.7, 0, 7-.707m, 1, 2.7, 2, 8, 0l-.7, 0, 7.707, M, 6.3, 4, 3, 17.65, 7, l-.7, 0, 7.707M, 1, 6, 12, a, 4, 4 0, 11-8, 0 4, 4 00180z" />      </svg>
     )};
 
   const getTooltip = () => {if (theme === 'light') return 'Switchto darkmode';
@@ -82,7 +82,7 @@ export const ThemeToggle: React.FC<{className?: string }> = ({className = '' }) 
     return 'Switchto lightmode'};
 
   return (<button onClick ={toggleTheme}
-      className={`p-2, round, e, d-lg, bg-gr, a, y-1, 0, 0, da, r, k: bg-gr, a, y-8, 0, 0, te, x, t-gr, a, y-7, 0, 0, da, r, k:te, x, t-gr, a, y-3, 0, 0, hov, e, r:bg-gr, a, y-2, 0, 0, da, r, k:ho, v, e, r:bg-gr, a, y-7, 0, 0, transiti, o, n-colo, r, s, duration-200 ${className}`}      title={getTooltip()}      aria-label={getTooltip()}
+      className={`p-2, round, e, d-lg, bg-gr, a, y-1, 0, 0, dark: bg-gr, a, y-8, 0, 0, te, x, t-gr, a, y-7, 0, 0, dark:te, x, t-gr, a, y-3, 0, 0, hover:bg-gr, a, y-2, 0, 0, dark:ho, ver:bg-gr, a, y-7, 0, 0, transiti, o, n-colo, r, s, duration-200 ${className}`}      title={getTooltip()}      aria-label={getTooltip()}
     >
       {getIcon()}
     </button>

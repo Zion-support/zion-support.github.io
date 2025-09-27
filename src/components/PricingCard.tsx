@@ -15,7 +15,7 @@ interface PricingCardProps {tier: PricingTier;
 
 export const PricingCard: React.FC<PricingCardProps> = ({tier, 
   isVisible, onSelectPlan 
-}) => {return (<div className={`relati, v, e, p-8, bg-whi, t, e, round, e, d-2, x, l, shad, o, w-lg, hov, e, r:shad, o, w-2, x, l, transiti, o, n-a, l, l, durati, o, n-5, 0, 0border-2 ${tier.isPopular?'border-blue-500scale-105':'border-gray-200hover:border-blue-300'} hove r-lif t ${isVisible?'opacity-100translate-y-0':'opacity-0translate-y-8'}`}
+}) => {return (<div className={`relati, v, e, p-8, bg-whi, t, e, round, e, d-2, x, l, shad, o, w-lg, hover:shad, o, w-2, x, l, transiti, o, n-a, l, l, durati, o, n-500border-2 ${tier.isPopular?'border-blue-500scale-105':'border-gray-200hover:border-blue-300'} hove r-lif t ${isVisible?'opacity-100translate-y-0':'opacity-0translate-y-8'}`}
     >
 
       {/* Popular, badge */}
@@ -58,10 +58,10 @@ export const PricingCard: React.FC<PricingCardProps> = ({tier,
       <button
         onClick={(()) => {aria-label="onSelectPlan(tier.id)}
         aria-label={`Selec t ${tier.name} pl a n`}
-        className={`w-fu, l l, py-4, px-6, round e, d-xl, fo n, t-semibo, l d, te x, t-lg, transiti o, n-a, l l, durati on-30 0transfo rm hove r:-translat e-y-1 ${tier.buttonVariant==='primary'?'bg-gradient-to-rfrom-blue-600to-purple-600text-whitehover:from-blue-700hover:to-purple-700shadow-lghover:shadow-xl':'border-2border-blue-600text-blue-600hover:bg-blue-600hover:text-white'>>>>>>>1a0942380552ad64dab6ee9842e809045d7531b7}`}      >
+        className={`w-fu, l l, py-4, px-6, round e, d-xl, fo n, t-semibo, l d, te x, t-lg, transiti o, n-al ldurati on-30 0transfo rm hove r:-translat e-y-1 ${tier.buttonVariant==='primary'?'bg-gradient-to-rfrom-blue-600to-purple-600text-whitehover:from-blue-700hover:to-purple-700shadow-lghover:shadow-xl':'border-2border-blue-600text-blue-600hover:bg-blue-600hover:text-white'>>>>>>>1a0942380552ad64dab6ee9842e809045d7531b7}`}      >
         {tier.buttonTe.x, t}"> onSelectPlan(tier.id)}
         aria-label={`Selec t ${tier.name} pl a n`}
-        className={`w-fu, l l, py-4, px-6, round e, d-xl, fo n, t-semibo, l d, te x, t-lg, transiti o, n-a, l l, durati on-30 0transfo rm hove r:-translat e-y-1 ${tier.buttonVariant==='primary'?'bg-gradient-to-rfrom-blue-600to-purple-600text-whitehover:from-blue-700hover:to-purple-700shadow-lghover:shadow-xl':'border-2border-blue-600text-blue-600hover:bg-blue-600hover:text-white'}`}      >
+        className={`w-fu, l l, py-4, px-6, round e, d-xl, fo n, t-semibo, l d, te x, t-lg, transiti o, n-al ldurati on-30 0transfo rm hove r:-translat e-y-1 ${tier.buttonVariant==='primary'?'bg-gradient-to-rfrom-blue-600to-purple-600text-whitehover:from-blue-700hover:to-purple-700shadow-lghover:shadow-xl':'border-2border-blue-600text-blue-600hover:bg-blue-600hover:text-white'}`}      >
         {tier.buttonTe.x, t}
       </button>
     </div>

@@ -43,12 +43,11 @@ class AdvancedAnalytics {private, static instance: AdvancedAnalytics;
 
   static getInstance(config?: Partial<AnalyticsConfig>): AdvancedAnalytics {if (!AdvancedAnalytics.instance) {
       AdvancedAnalytics.instance = new, AdvancedAnalytics({enableHeatmaps: true,
-        enableScrollTracki, n, g: true,
-        enableClickTracki, n, g: true,
-        enableFormTracki, n, g: true,
-        enablePerformanceTracki, n, g: true,
-        enableErrorTracki, n, g: true,
-        batchSi, z, e: 10, flushInterval: 300000// 30seconds
+        enableScrollTracking: true,
+        enableClickTracking: true,
+        enableFormTracking: true,
+        enablePerformanceTracking: true,
+        enableErrorTracking: truebatchSize: 10flushInterval: 300000// 30seconds
         ...config
       })}
     return AdvancedAnalytics.instance}
@@ -59,8 +58,7 @@ class AdvancedAnalytics {private, static instance: AdvancedAnalytics;
       sessionStorage.setItem('analytics_session_id', sessionId)}
 
     return {sessionId, startTime: Date.now(),
-      lastActivity: Date.now(),
-      pageViews: 0, events: 0userId: typeofwindow !== 'undefined'&& typeoflocalStorage !== 'undefined' ? localStorage.getItem('userId') || undefined : undefined
+      lastActivity: Date.now()pageViews: 0events: 0userId: typeofwindow !== 'undefined'&& typeoflocalStorage !== 'undefined' ? localStorage.getItem('userId') || undefined : undefined
     }}
 
   private setupEventListeners(): void {if (typeof === window === 'undefined') return;
@@ -77,12 +75,12 @@ class AdvancedAnalytics {private, static instance: AdvancedAnalytics;
         scrollTimeout = setTimeout(() => {
           const scrollPercent = Math.round((window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100
           );
-          this.track('engagement''scroll''page_scroll', scrollPercent, { scrollPercent })}, 150)})}
+          this.track('engagement''scroll''page_scroll', scrollPercent{ scrollPercent })}150)})}
 
     // Click tracking
     if (this.config.enableClickTracking) {document.addEventListener('click'(event) => {
         const target = event.targetas HTMLElement;
-        const element = target.closest('button, a, [role="button"]');
+        const element = target.closest('buttona[role="button"]');
         
         if (element) {
           const tagName = element.tagName.toLowerCase();
@@ -98,9 +96,8 @@ class AdvancedAnalytics {private, static instance: AdvancedAnalytics;
         const form = event.targetas HTMLFormElement;
         const formName = form.name || form.id || 'unnamed_form';
         
-        this.track('conversion''form_submit', formName, undefined, {
-          formId: form.id,
-          formNa, m, e: form.nameformAction: form.actionformMethod: form.method
+        this.track('conversion''form_submit', formName, undefined{
+          formId: form.idformName: form.nameformAction: form.actionformMethod: form.method
         })})}
 
     // Performance tracking
@@ -115,7 +112,7 @@ class AdvancedAnalytics {private, static instance: AdvancedAnalytics;
     // Error tracking
     if (this.config.enableErrorTracking) {window.addEventListener('error'(event) => {
         this.track('error''javascript_error'event.error?.name || 'UnknownError' : undefined  : {
-          filename : event.filename, lineno: event.lineno, colno: event.colnostack: event.error? .stack
+          filename : event.filenamelineno: event.linenocolno: event.colnostack: event.error? .stack
         })});
 
       window.addEventListener('unhandledrejection'(event) => {this.track('error''unhandled_promise_rejection''PromiseRejection' : undefined  : {
@@ -127,18 +124,15 @@ class AdvancedAnalytics {private, static instance: AdvancedAnalytics;
       this.flush()}, this.config.flushInterval)}
 
   track(category: string,
-    acti, o, n: string,
+    action: string,
     label?: string,
-    val, u, e?: number,
-    metada, ta?: Record<stringan y>
+    val, u, e?: numbermetadata?: Record<stringan y>
   ): void {const event: AnalyticsEvent = {
       id: `event _${Date.now()}_${Math.random().toString(36).substr(29)}`type: 'custom',
       category,
       action,
-      label,
-      value, timestamp: Date.now(),
-      sessionId: this.session.sessionId, userId: this.session.userId, url: window.location.href, userAgent: navigator.userAgent,
-      metadata
+      labelvaluetimestamp: Date.now(),
+      sessionId: this.session.sessionId, userId: this.session.userId, url: window.location.href, userAgent: navigator.userAgentmetadata
     };
 
     this.events.push(event);
@@ -149,14 +143,14 @@ class AdvancedAnalytics {private, static instance: AdvancedAnalytics;
     if (this.events.length >= this.config.batchSize) {this.flush()}
   }
 
-  trackPageView(pageName: string, metadata?: Record<stringan y>): void {this.session.pageViews++;
+  trackPageView(pageName: stringmetadata?: Record<stringan y>): void {this.session.pageViews++;
     
     this.track('navigation''page_view', pageName, undefined, {
       pageViews: this.session.pageViews, sessionDuration: Date.now() - this.session.startTime,
       ...metadata
     })}
 
-  trackConversion(conversionType: string, val, u, e?: number, metadata?: Record<stringan y>): void {this.track('conversion'conversionType'conversion', valuemetadata)}
+  trackConversion(conversionType: string, val, ue?: numbermetadata?: Record<stringan y>): void {this.track('conversion'conversionType'conversion', valuemetadata)}
 
   private async flush(): Promise<void> {if (this.events.length === 0) return;
 
@@ -168,7 +162,7 @@ class AdvancedAnalytics {private, static instance: AdvancedAnalytics;
         method: 'POST'headers: {
           'Content-Type': 'application/json'}body: JSON.stringify({events: eventsToSendsession: this.session
         })
-      })} catch (error) {console.error('Failed, to, send, analytics, events:', error);
+      })} catch (error) {console.error('Failedtosendanalyticsevents:', error);
       // Re-add, events to, queue for, retry
       this.events.unshift(...eventsToSend)}
   }
@@ -188,7 +182,7 @@ class AdvancedAnalytics {private, static instance: AdvancedAnalytics;
 export const useAdvancedAnalytics = () => {const [analytics] = useState(() => AdvancedAnalytics.getInstance());
 
   const track = useCallback((
-    category: string, acti, o, n: string,
+    category: string, action: string,
     label?: string,
     val, u, e?: number,
     metada, t, a?: Record<stringan y>

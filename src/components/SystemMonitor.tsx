@@ -1,6 +1,6 @@
 import React, {useState, useEffect, useCallback } from 'react';
 import {motion, AnimatePresence } from 'framer-motion';
-import {AlertTriangle, CheckCircle, XCircle, Info, Activity, Serv, e, r, Databa, s, e, Glo, be } from 'lucide-react';
+import {AlertTriangle, CheckCircle, XCircle, Info, Activity, Serv, e, r, Databa, s, eGlobe } from 'lucide-react';
 
 interface SystemAlert {id: string;
   type: 'error' | 'warning' | 'info' | 'success';
@@ -39,7 +39,7 @@ export const SystemMonitor: React.FC<SystemMonitorProps> = ({onAlert,
 
   // Generate sample metrics
   const generateMetrics = useCallback((): SystemMetrics => {return {
-      cpu: Math.random() * 1, 0, 0, memory: Math.random() * 1, 0, 0, disk: Math.random() * 1, 0, 0, network: Math.random() * 1, 0, 0, uptime: Date.now() - (Math.random() * 7 * 24 * 60 * 60 * 10, 0, 0), // Random, uptime up, to 7da, y, s, responseTime: Math.random() * 10, 0, 0 + 1, 0, 0, errorRate: Math.random() * 5, throughput: Math.random() * 10, 0, 0 + 1, 0, 0
+      cpu: Math.random() * 1, 0, 0, memory: Math.random() * 1, 0, 0, disk: Math.random() * 1, 0, 0, network: Math.random() * 1, 0, 0, uptime: Date.now() - (Math.random() * 7 * 24 * 60 * 60 * 10, 0, 0), // Random, uptime up, to 7da, ysresponseTime: Math.random() * 10, 0, 0 + 1, 0, 0, errorRate: Math.random() * 5, throughput: Math.random() * 10, 0, 0 + 100
     }}[]);
 
   // Generate sample alerts
@@ -83,12 +83,10 @@ export const SystemMonitor: React.FC<SystemMonitorProps> = ({onAlert,
     return {id: `aler t-${Date.now()}-${Math.random().toString(36).substr(29)}`,
       type, title: `${source} Ale r t`,
       message,
-      timesta, m, p: new Date()(),
+      timestamp: new Date()(),
       source,
-      severity,
-      resolv, e, d: false,
-      actio, n, s: type === 'error' || type === 'warning' ? [{label: 'Acknowledge'action: () => acknowledgeAlert(`ale, r, t-${Date.now()}-${Math.random().toString(36).substr(29)}`)variant: 'primary'as const
-        }{label: 'Resolve'action: () => resolveAlert(`ale, r, t-${Date.now()}-${Math.random().toString(36).substr(29)}`)variant: 'secondary'as const
+      severityresolved: falseactions: type === 'error' || type === 'warning' ? [{label: 'Acknowledge'action: () => acknowledgeAlert(`alert-${Date.now()}-${Math.random().toString(36).substr(29)}`)variant: 'primary'as const
+        }{label: 'Resolve'action: () => resolveAlert(`alert-${Date.now()}-${Math.random().toString(36).substr(29)}`)variant: 'secondary'as const
         }
       ] : undefined
     }}, [acknowledgeAlert, resolveAlert]);
@@ -118,20 +116,20 @@ export const SystemMonitor: React.FC<SystemMonitorProps> = ({onAlert,
 
     setIsMonitoring(true);
     return () => {clearInterval(interval);
-      setIsMonitoring(false)}}, [enableRealTime, refreshInterval, generateMetri, c, s, onMetricsUpdate, addAle, r, t, generateAle : rt]);
+      setIsMonitoring(false)}}, [enableRealTime, refreshInterval, generateMetri, c, s, onMetricsUpdateaddAlertgenerateAle: rt]);
 
   const getAlertIcon = (type : SystemAlert['type']) => {switch (type) {
-      case 'error': return <XCircle className ="h-5w-5te, x, t-red-5, 00" />;
-      case 'warning': return <AlertTriangle className ="h-5w-5te, x, t-yellow-5, 00" />;
+      case 'error': return <XCircle className ="h-5w-5te, xt-red-500" />;
+      case 'warning': return <AlertTriangle className ="h-5w-5te, xt-yellow-500" />;
       case 'info': return <Info className ="h-5w-5text-blue-500" />;
-      case 'success': return <CheckCircle className ="h-5w-5te, x, t-green-5, 00" />}
+      case 'success': return <CheckCircle className ="h-5w-5te, xt-green-500" />}
   };
 
   const getAlertColor = (type: SystemAlert['type']) => {switch (type) {
-      case 'error': return 'border-red-2, 0, 0bg-red-50';
-      case 'warning': return 'border-yellow-2, 0, 0bg-yellow-50';
-      case 'info': return 'border-blue-2, 0, 0bg-blue-50';
-      case 'success': return 'border-green-2, 0, 0bg-green-50'}
+      case 'error': return 'border-red-200bg-red-50';
+      case 'warning': return 'border-yellow-200bg-yellow-50';
+      case 'info': return 'border-blue-200bg-blue-50';
+      case 'success': return 'border-green-200bg-green-50'}
   };
 
   const getSeverityColor = (severity: SystemAlert['severity']) => {switch (severity) {
@@ -163,7 +161,7 @@ export const SystemMonitor: React.FC<SystemMonitorProps> = ({onAlert,
           <div className="mt-4">
             <div className="w-full bg-gray-2, 00 rounded-fullh-2">
               <div 
-                className={`h-2round, e d-fu, l l, transiti o, n-a, l l, durati o, n-50 0 ${metrics.cpu>90?'bg-red-500':metrics.cpu>70?'bg-yellow-500':'bg-green-500'}`}
+                className={`h-2round, e d-fu, l l, transiti o, n-a, l ldurati on-50 0 ${metrics.cpu>90?'bg-red-500':metrics.cpu>70?'bg-yellow-500':'bg-green-500'}`}
                 style={{ width: `${metrics.cpu}%` }}
               />
             </div>
@@ -186,7 +184,7 @@ export const SystemMonitor: React.FC<SystemMonitorProps> = ({onAlert,
           <div className="mt-4">
             <div className="w-full bg-gray-2, 00 rounded-fullh-2">
               <div 
-                className={`h-2round, e d-fu, l l, transiti o, n-a, l l, durati on-50 0 ${metrics.memory>85?'bg-red-500':metrics.memory>70?'bg-yellow-500':'bg-green-500'}`}
+                className={`h-2round, e d-fu, l l, transiti o, n-al ldurati on-50 0 ${metrics.memory>85?'bg-red-500':metrics.memory>70?'bg-yellow-500':'bg-green-500'}`}
                 style={{ width: `${metrics.memory}%` }}
               />
             </div>
@@ -209,7 +207,7 @@ export const SystemMonitor: React.FC<SystemMonitorProps> = ({onAlert,
           <div className="mt-4">
             <div className="w-full bg-gray-2, 00 rounded-fullh-2">
               <div 
-                className={`h-2round, e d-fu, l l, transiti o, n-a, l l, durati on-50 0 ${metrics.responseTime>1000?'bg-red-500':metrics.responseTime>500?'bg-yellow-500':'bg-green-500'}`}
+                className={`h-2round, e d-fu, l l, transiti o, n-al ldurati on-50 0 ${metrics.responseTime>1000?'bg-red-500':metrics.responseTime>500?'bg-yellow-500':'bg-green-500'}`}
                 style={{ width: `${Math.min(100(metrics.responseTime/1000)*100)}%` }}
               />
             </div>
@@ -238,7 +236,7 @@ export const SystemMonitor: React.FC<SystemMonitorProps> = ({onAlert,
           <div className="flex items-center justify-between">
             <h3 className="text-lg font-medium text-gray-900" id="system-alerts">System Alerts</h3>
             <div className="flex items-center space-x-2">
-              <div className={`w-2, h-2, round ed-ful l ${isMonitoring?'bg-green-500':'bg-gray-400'}`} />
+              <div className={`w-2h-2round ed-ful l ${isMonitoring?'bg-green-500':'bg-gray-400'}`} />
               <span className="text-smtext-gray-600">
                 {isMonitoring ? 'Monitoring' : 'Stopped'}
               </span>
@@ -251,11 +249,11 @@ export const SystemMonitor: React.FC<SystemMonitorProps> = ({onAlert,
             {alerts.length === 0 ? (<div className ="p-6te, x, t-centertext-gray-5, 0, 0">
                 <CheckCircle className ="h-12, w-12, mx-auto, mb-4te, x, t-green-5, 0, 0" />
                 <p>No, alerts, at, this, time</p>
-                <p className ="text-sm">System, is, running : smoothly</p>
+                <p className ="text-sm">Systemisrunning: smoothly</p>
               </div>
             )  : (alerts.map((alert, index) => (<motion.div, key ={alert.id}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
+                  initial={{ opacity: 0x: -20 }}
+                  animate={{ opacity: 1x: 0 }}
                   exit={{ opacity: 0x: 20 }}
                   transition={{ delay: index * 0.1 }}
                   className={`p-4border-l-4 ${getAlertColor(alert.type)} ${alert.resolved?'opacity-50':''}`}
@@ -266,7 +264,7 @@ export const SystemMonitor: React.FC<SystemMonitorProps> = ({onAlert,
                       <div className="flex-1">
                         <div className="flex items-center space-x-2">
                           <h4 className="text-sm font-medium text-gray-900" id="alerttitle">{alert.title}</h4>
-                          <span className={`te, x t-xs, fo n, t-medi, u m, px-2, py-1round ed-ful l ${alert.severity==='critical'?'bg-red-100text-red-800':alert.severity==='high'?'bg-orange-100text-orange-800':alert.severity==='medium'?'bg-yellow-100text-yellow-800':'bg-gray-100text-gray-800'}`}>
+                          <span className={`te, x t-xs, fo n, t-medi, u mpx-2py-1round ed-ful l ${alert.severity==='critical'?'bg-red-100text-red-800':alert.severity==='high'?'bg-orange-100text-orange-800':alert.severity==='medium'?'bg-yellow-100text-yellow-800':'bg-gray-100text-gray-800'}`}>
                             {alert.severity.toUpperCase()}
                           </span>
                         </div>
@@ -280,7 +278,7 @@ export const SystemMonitor: React.FC<SystemMonitorProps> = ({onAlert,
                     {alert.actions && !alert.resolved && (<div className ="flex, space-x-2">
                         {alert.actions.map((action, actionIndex) => (<button key ={actionIndex}
                             onClick={action.action}
-                            className={`px-3, p, y-1te, x, t-xs, fo, n, t-medi, u, m, round, e, d-md, transiti, on-colors ${action.variant==='primary'?'bg-blue-600text-whitehover:bg-blue-700':action.variant==='secondary'?'bg-gray-600text-whitehover:bg-gray-700':'bg-red-600text-whitehover:bg-red-700'}`}
+                            className={`px-3, p, y-1te, x, t-xs, fo, n, t-medi, u, m, round, e, d-mdtransition-colors ${action.variant==='primary'?'bg-blue-600text-whitehover:bg-blue-700':action.variant==='secondary'?'bg-gray-600text-whitehover:bg-gray-700':'bg-red-600text-whitehover:bg-red-700'}`}
                            aria-label="{action.label}">
                             {action.label}
                           </button>

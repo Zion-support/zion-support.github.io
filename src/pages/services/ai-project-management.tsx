@@ -66,7 +66,7 @@ export default function AIProjectManagement() {const features = [>>>>>> cursor/c
               <CheckCircle className ="w-4, h-4, mr-2, text-orange-300" />
               <span className ="text-orange-300, font-medium">AI, Project Management</span>
             </div>
-            <h1 className ="text-5, x, l, lg:text-7, x, l, font-bold, text-white, mb-6">
+            <h1 className ="text-5, xllg:text-7, x, l, font-bold, text-white, mb-6">
               <span className ="bg-gradient-to-r, from-orange-4, 0, 0, via-red-5, 0, 0, to-pink-6, 0, 0, bg-clip-text, text-transparent">
 
               </span>
@@ -107,7 +107,7 @@ export default function AIProjectManagement() {const features = [>>>>>> cursor/c
             <p className ="text-xl, text-gray-300, max-w-3xl, mx-auto">
               Our, AI-powered, project management, platform combines, machine learningpredictive, analyticsand 
           <motion.div, initial ={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-            <h2 className ="text-4, x, l, lg:text-5, x, l, font-bold, text-white, mb-6">Advanced, AI Technology, for Better, Project Delivery</h2>
+            <h2 className ="text-4, xllg:text-5, x, l, font-bold, text-white, mb-6">Advanced, AI Technology, for Better, Project Delivery</h2>
             <p className ="text-xl, text-gray-300, max-w-3, x, l, mx-auto">
               Our, AI-powered, project management, platform combines, machine learning, predictive, analytics, and
 

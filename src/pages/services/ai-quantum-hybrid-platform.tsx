@@ -62,7 +62,7 @@ const AIQuantumHybridPlatform: React.FC = () => {const features = [>>>>>> cursor
               <CheckCircle className ="w-4, h-4, mr-2" />
               Quantum, AI Technology
             </div>
-            <h1 className ="text-5, x, l, md:text-6, x, l, font-bold, text-white, mb-6">AI, Quantum Hybrid, Platform</h1>
+            <h1 className ="text-5, xlmd:text-6, x, l, font-bold, text-white, mb-6">AI, Quantum Hybrid, Platform</h1>
             <p className ="text-xl, text-gray-300, mb-8, max-w-3, x, l, mx-auto">
 
               intelligence, with quantum, computing to, solve previously, impossible problems, and accelerate, breakthrough

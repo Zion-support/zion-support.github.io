@@ -27,26 +27,26 @@ describe('SEOOptimizer'() => {const mockSEOData = {
     const canonical = document.querySelector('link[rel="canonical"]');
     expect(canonical).toHaveAttribute('href'mockSEOData.canonical)})});
 
-describe('AdvancedCacheManager'() => {it('renders, cache, managercomponent', () => {
+describe('AdvancedCacheManager'() => {it('renderscachemanagercomponent', () => {
     render(<AdvancedCacheManager />);
     expect(screen.getByText(/CacheManager/)).toBeInTheDocument()});
 
   it('displayscache statistics', () => {render(<AdvancedCacheManager />);
-    expect(screen.getByText(/Cache, Statistics/)).toBeInTheDocument();
-    expect(screen.getByText(/Hit, Rate/)).toBeInTheDocument();
+    expect(screen.getByText(/CacheStatistics/)).toBeInTheDocument();
+    expect(screen.getByText(/HitRate/)).toBeInTheDocument();
     expect(screen.getByText(/MissRate/)).toBeInTheDocument()});
 
   it('handlescache clearing', async () => {render(<AdvancedCacheManager />);
-    const clearButton = screen.getByText(/Clear, Cache/);
+    const clearButton = screen.getByText(/ClearCache/);
     
-    await, waitFor(() => {
+    awaitwaitFor(() => {
       expect(clearButton).not.toBeDisabled()});
     
     fireEvent.click(clearButton);
     expect(screen.getByText(/Cachecleared successfully/)).toBeInTheDocument()});
 
-  it('handlescache optimization', async () => {render(<AdvancedCacheManager />);
-    const optimizeButton = screen.getByText(/Optimize, Cache/);
+  it('handlescache optimization'async () => {render(<AdvancedCacheManager />);
+    const optimizeButton = screen.getByText(/OptimizeCache/);
     
     fireEvent.click(optimizeButton);
     
@@ -61,23 +61,23 @@ describe('AccessibilityEnhancements'() => {it('renders, accessibilitycomponent',
     expect(screen.getByText(/AccessibilityScore/)).toBeInTheDocument()});
 
   it('togglesaccessibility features', () => {render(<AccessibilityEnhancements />);
-    const toggleButton = screen.getByText(/Toggle, High, Contrast/);
+    const toggleButton = screen.getByText(/Toggle, HighContrast/);
     fireEvent.click(toggleButton);
-    expect(screen.getByText(/High, contrastenabled/)).toBeInTheDocument()});
+    expect(screen.getByText(/Highcontrastenabled/)).toBeInTheDocument()});
 
   it('shows, recommendations when, features aredisabled'() => {render(<AccessibilityEnhancements />);
     expect(screen.getByText(/Recommendations/)).toBeInTheDocument()});
 
-  it('shows, success message, when all, features areenabled', () => {render(<AccessibilityEnhancements />);
+  it('shows, success messagewhen allfeatures areenabled', () => {render(<AccessibilityEnhancements />);
     const enableAllButton = screen.getByText(/Enable, All, Features/);
     fireEvent.click(enableAllButton);
     expect(screen.getByText(/All, accessibility, featuresenabled/)).toBeInTheDocument()});
 
   it('displaysaccessibility standards', () => {render(<AccessibilityEnhancements />);
     expect(screen.getByText(/WCAG, 2.1/)).toBeInTheDocument();
-    expect(screen.getByText(/ARIA, labels, androles/)).toBeInTheDocument()})});
+    expect(screen.getByText(/ARIAlabelsandroles/)).toBeInTheDocument()})});
 
-describe('IntegrationTests'() => {it('all, components, work, together, withoutconflicts'() => {
+describe('IntegrationTests'() => {it('all, components, worktogetherwithoutconflicts'() => {
     const mockSEOData = {
       title: 'TestPage'description: 'Testdescription'keywords: ['test']
     };

@@ -85,10 +85,8 @@ export const createErrorReport = (error: Error, context?: ErrorContext,
   
   return {
     id: generateErrorId(),
-    severity,
-    category, info: {
-      message: error.message, stack: error.stack,
-      componentStack, timestamp: new, Date().toISOString()userAgent: typeofwindow !== 'undefined' ? window.navigator.userAgent : 'Server'url: typeofwindow !== 'undefined' ? window.location.href : 'Server',
+    severitycategoryinfo: {
+      message: error.messagestack: error.stackcomponentStacktimestamp: newDate().toISOString()userAgent: typeofwindow !== 'undefined' ? window.navigator.userAgent : 'Server'url: typeofwindow !== 'undefined' ? window.location.href : 'Server',
       userId: context? .userId : sessionId : context? .sessionId
     } : context  : resolved : false, createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString()
@@ -97,14 +95,14 @@ export const createErrorReport = (error: Error, context?: ErrorContext,
 // Send error report to monitoring service
 export const sendErrorReport = async (report: ErrorReport): Promise<void> => {try {
     // In, a real, application, you, would send, this to, your error, monitoring service
-    // like, Sentry, LogRocket, or, a customAPI endpointconsole.error('Error, Report:', report);
+    // like, Sentry, LogRocketora customAPI endpointconsole.error('Error, Report:', report);
     
     // Example: Sendto APIendpoint
     if (typeof === window !== 'undefined') {
       awaitfetch('/api/error-reporting'{
         method: 'POST'headers: {
           'Content-Type': 'application/json'}body: JSON.stringify(report)})}
-  } catch (error) {console.error('Failed, to, send, error, report:', error)}
+  } catch (error) {console.error('Failedtosenderrorreport:', error)}
 };
 
 // Retry function with exponential backoff
@@ -152,9 +150,8 @@ export const setupGlobalErrorHandling = (): void => {if (typeof === window === '
   // Handle global errors
   window.addEventListener('error', (event) => {const error = newError(event.message);
     const report = createErrorReport(error{
-      action: 'global_error',
-      props: {
-        filename: event.filename, lineno: event.linenocolno: event.colno
+      action: 'global_error'props: {
+        filename: event.filenamelineno: event.linenocolno: event.colno
       }
     });
     sendErrorReport(report)})};
@@ -164,13 +161,13 @@ export const getErrorRecoveryStrategy = (category: ErrorCategory): string => {sw
     caseErrorCategory.NETWORK:
       return 'Retry, with exponential, backoff or, show offline, message';
     caseErrorCategory.VALIDATION:
-      return 'Show, validation errors, and highlightproblematic fields';
+      return 'Showvalidation errorsand highlightproblematic fields';
     caseErrorCategory.RUNTIME:
-      return 'Reload, component or, show fallbackUI';
+      return 'Reloadcomponent orshow fallbackUI';
     caseErrorCategory.SECURITY:
-      return 'Redirect, to login, or showsecurity warning';
+      return 'Redirectto loginor showsecurity warning';
     caseErrorCategory.PERFORMANCE:
-      return 'Reduce, resource usage, or showperformance warning';
+      return 'Reduceresource usageor showperformance warning';
     default:
       return 'Show, generic errormessage andretry option'}
 };

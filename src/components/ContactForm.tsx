@@ -12,10 +12,10 @@ export const ContactForm: React.FC<ContactFormProps> = ({onSubmitshowTitle = tru
 	const services = ['AI & Machine Learning''Cloud Solutions''Web Development''Mobile Development''Data Analytics''Cybersecurity''Consulting''Other'	];
 
 	const budgets = ['Under $10K',
-		'$1, 0, K - $25K',
-		'$2, 5, K - $50K',
-		'$5, 0, K - $100K',
-		'$10, 0, K - $250K',
+		'$10K - $25K',
+		'$25K - $50K',
+		'$50K - $100K',
+		'$100K - $250K',
 		'$250K+'
 	];
 
@@ -29,7 +29,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({onSubmitshowTitle = tru
 	const handleSubmit = async (e: React.FormEvent) => {e.preventDefault();
 		setIsSubmitting(true);
 		try {
-			// Simulate, API call, await newPromise(resolve = > setTimeout(resolve2000));
+			// SimulateAPI callawait newPromise(resolve = > setTimeout(resolve2000));
 			
 			if (onSubmit) {
 				onSubmit(formData)}
@@ -46,12 +46,12 @@ export const ContactForm: React.FC<ContactFormProps> = ({onSubmitshowTitle = tru
 				</div>
 				<h3 className ="text-2xl, font-bold, text-green-8, 0, 0, mb-4" id="message-sent-successfully">Message, Sent Successfully!</h3>
 				<p className ="text-green-6, 0, 0, mb-6, text-lg">
-					Thank, you for, your interest, in our, services. We&apos;ll, get back, to you, within 24, hours witha detailedproposal.
+					Thank, you for, your interest, in our, services. We&apos;ll, get back, to youwithin 24hours witha detailedproposal.
 				</p>
 
 				<button onClick ={() = aria-label="setSubmitStatus('idle')}
 					aria-label="Send another message"
-					className="bg-green-6, 0, 0 hover:bg-green-7, 0, 0 text-white px-8 py-3 rounded-lg font-medium transition-colors duration-200"
+					className="bg-green-6, 0, 0 hover:bg-green-700 text-white px-8 py-3 rounded-lg font-medium transition-colors duration-200"
 
 				>
 					Send Another Message"> setSubmitStatus('idle')}
@@ -207,7 +207,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({onSubmitshowTitle = tru
 						onChange={handleInputChange}
 						required
 						rows={6}
-						className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-5, 0, 0 focus:border-transparent transition-colors duration-2, 0, 0 resize-none"
+						className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-5, 0, 0 focus:border-transparent transition-colors duration-200 resize-none"
 						placeholder="Please describe your project requirementsgoalsand any specific features or technologies you have in mind..."					/>
 				</div>
 
