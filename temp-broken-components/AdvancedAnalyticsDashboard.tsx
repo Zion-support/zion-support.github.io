@@ -45,7 +45,7 @@ export const AdvancedAnalyticsDashboard: React.FC<AdvancedAnalyticsDashboardProp
 
   const formatPercentage = (num: number) => `${num.toFixed(1)}%`;
 
-  const getMetricColor = (value: number, thresholds: { goo, d: number; warnin, g: number }) => {
+  const getMetricColor = (value: number, thresholds: { good: number; warning: number }) => {
     if (value >= thresholds.good) return 'text-green-500';
     if (value >= thresholds.warning) return 'text-yellow-500';
     return 'text-red-500';

@@ -11,8 +11,8 @@ interface AccessibilityIssue {
   selector: string;
   impact: string;
   help: string;
-  wcagLeve, l: 'A' | 'AA' | 'AAA';
-  wcagCriteri, a: string;
+  wcagLevel: 'A' | 'AA' | 'AAA';
+  wcagCriteria: string;
   line?: number;
   column?: number;
 }
@@ -218,22 +218,22 @@ export const AdvancedAccessibilityAuditor: React.FC<AdvancedAccessibilityAuditor
         minorIssues,
         issues,
         wcagCompliance: {
-          level, A: calculateWCAGCompliance(issues, 'A'),
+          levelA: calculateWCAGCompliance(issues, 'A'),
           levelAA: calculateWCAGCompliance(issues, 'AA'),
           levelAAA: calculateWCAGCompliance(issues, 'AAA')
         },
         colorContrast: {
-          passe, d: contrastIssues,
+          passed: contrastIssues,
           failed: contrastIssues,
           total: contrastIssues * 2
         },
         keyboardNavigation: {
-          focusableElement, s: focusableElements.length,
+          focusableElements: focusableElements.length,
           tabOrderIssues,
           keyboardTraps: 0
         },
         screenReader: {
-          missingAltTex, t: issues.filter(issue => issue.rule === 'image-alt').length,
+          missingAltText: issues.filter(issue => issue.rule === 'image-alt').length,
           missingLabels: issues.filter(issue => issue.rule === 'label').length,
           missingHeadings: issues.filter(issue => issue.rule === 'heading-order').length
         }
