@@ -194,16 +194,8 @@ export default function EnhancedNotificationSystem({
                   {notification.actions.map((action, index) => (
                     <button
                       key={index}
-                      onClick={() = aria-label="handleAction(notification.id, action.label)}
-                      className={`text-xs px-3 py-1 rounded ${
-                        action.variant === 'primary' 
-                          ? 'bg-blue-600 text-white hover:bg-blue-700'
-                          : action.variant === 'danger'
-                          ? 'bg-red-600 text-white hover:bg-red-700'
-                          : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-                      } transition-colors`}
-                    >
-                      {action.label}"> handleAction(notification.id, action.label)}
+                      onClick={() => handleAction(notification.id, action.label)}
+                      aria-label={`${action.label} action`}
                       className={`text-xs px-3 py-1 rounded ${
                         action.variant === 'primary' 
                           ? 'bg-blue-600 text-white hover:bg-blue-700'
