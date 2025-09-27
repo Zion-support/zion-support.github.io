@@ -11,89 +11,90 @@ export default function Blog(): JSX.Element {
 
 	const blogPosts = [
 		{
-			id: 1
-			title: 'The Future of AI in Business: Trends and Predictions for 2024'
-			exce r p t: 'Expl o r e th e lat e s t A I tre n d s shap i n g th e busin e s s landsc a p e an d ho w compan i e s ar e leverag i n g artific i a l intellige n c e fo r competit i v e advant a g e.'
-			author: 'Sarah Johnson'
-			d a t e: '2 0 2 4-0 1-1 5'
-			readT i m e: '5 mi n r e a d'
-			categ o r y: 'A I & Mach i n e Learn i n g'
-			image: '/ap i/placehol d e r/60 0/30 0'
-			s l u g: 'fut u r e-a i-busin e s s-2 0 2 4'
-		}
+			id: 1,
+			title: 'The Future of AI in Business: Trends and Predictions for 2024',
+			excerpt: 'Explore the latest AI trends shaping the business landscape and how companies are leveraging artificial intelligence for competitive advantage.',
+			author: 'Sarah Johnson',
+			date: '2024-01-15',
+			readTime: '5 min read',
+			category: 'AI & Machine Learning',
+			image: '/api/placeholder/600/300',
+			slug: 'future-ai-business-2024'
+		},
 		{
-			i d: 2
-			ti t l e: 'Cl o u d Migrat i o n B e s t Practi c e s: A Compl e t e Gu i d e'
-			exce r p t: 'Le a r n th e essent i a l strateg i e s an d considerati o n s fo r successfu l l y migrat i n g y o u r infrastruct u r e t o th e cl o u d.'
-			aut h o r: 'Mich a e l C h e n'
-			d a t e: '2 0 2 4-0 1-1 2'
-			readT i m e: '8 mi n r e a d'
-			categ o r y: 'Cl o u d Comput i n g'
-			image: '/ap i/placehol d e r/60 0/30 0'
-			s l u g: 'cl o u d-migrat i o n-b e s t-practi c e s'
-		}
+			id: 2,
+			title: 'Cloud Migration Best Practices: A Complete Guide',
+			excerpt: 'Learn the essential strategies and considerations for successfully migrating your infrastructure to the cloud.',
+			author: 'Michael Chen',
+			date: '2024-01-12',
+			readTime: '8 min read',
+			category: 'Cloud Computing',
+			image: '/api/placeholder/600/300',
+			slug: 'cloud-migration-best-practices'
+		},
 		{
-			i d: 3
-			ti t l e: 'Build i n g Scala b l e We b Applicati o n s w i t h Mod e r n Architect u r e'
-			exce r p t: 'Disco v e r th e architectu r a l patte r n s an d technolog i e s t h a t ena b l e we b applicati o n s t o sc a l e efficien t l y an d relia b l y.'
-			aut h o r: 'Em i l y Rodrig u e z'
-			d a t e: '2 0 2 4-0 1-1 0'
-			readT i m e: '6 mi n r e a d'
-			categ o r y: 'We b Developm e n t'
-			image: '/ap i/placehol d e r/60 0/30 0'
-			s l u g: 'scala b l e-we b-applicati o n s-architect u r e'
-		}
+			id: 3,
+			title: 'Building Scalable Web Applications with Modern Architecture',
+			excerpt: 'Discover the architectural patterns and technologies that enable web applications to scale efficiently and reliably.',
+			author: 'Emily Rodriguez',
+			date: '2024-01-10',
+			readTime: '6 min read',
+			category: 'Web Development',
+			image: '/api/placeholder/600/300',
+			slug: 'scalable-web-applications-architecture'
+		},
 		{
-			i d: 4
-			ti t l e: 'Digi t a l Transformat i o n: A Strate g i c Appro a c h'
-			exce r p t: 'Underst a n d ho w t o p l a n an d exec u t e a success f u l digi t a l transformat i o n initiat i v e t h a t dri v e s r e a l busin e s s va l u e.'
-			aut h o r: 'Da v i d Ki m'
-			d a t e: '2 0 2 4-0 1-0 8'
-			readT i m e: '7 mi n r e a d'
-			categ o r y: 'Digi t a l Transformat i o n'
-			image: '/ap i/placehol d e r/60 0/30 0'
-			s l u g: 'digi t a l-transformat i o n-strate g i c-appro a c h'
-		}
+			id: 4,
+			title: 'Digital Transformation: A Strategic Approach',
+			excerpt: 'Understand how to plan and execute a successful digital transformation initiative that drives real business value.',
+			author: 'David Kim',
+			date: '2024-01-08',
+			readTime: '7 min read',
+			category: 'Digital Transformation',
+			image: '/api/placeholder/600/300',
+			slug: 'digital-transformation-strategic-approach'
+		},
 		{
-			i d: 5
-			ti t l e: 'Cybersecur i t y i n th e Cl o u d: Essent i a l Protect i o n Strateg i e s'
-			exce r p t: 'Le a r n ab o u t th e criti c a l secur i t y considerati o n s an d b e s t practi c e s fo r protect i n g cl o u d-ba s e d applicati o n s an d d a t a.'
-			author: 'Sarah Johnson'
-			d a t e: '2 0 2 4-0 1-0 5'
-			readT i m e: '9 mi n r e a d'
-			categ o r y: 'Cybersecur i t y'
-			image: '/ap i/placehol d e r/60 0/30 0'
-			s l u g: 'cybersecur i t y-cl o u d-protect i o n-strateg i e s'
-		}
+			id: 5,
+			title: 'Cybersecurity in the Cloud: Essential Protection Strategies',
+			excerpt: 'Learn about the critical security considerations and best practices for protecting cloud-based applications and data.',
+			author: 'Sarah Johnson',
+			date: '2024-01-05',
+			readTime: '9 min read',
+			category: 'Cybersecurity',
+			image: '/api/placeholder/600/300',
+			slug: 'cybersecurity-cloud-protection-strategies'
+		},
 		{
-			i d: 6
-			ti t l e: 'Th e R i s e o f E d g e Comput i n g: Opportunit i e s an d Challen g e s'
-			exce r p t: 'Expl o r e ho w e d g e comput i n g i s revolutioniz i n g d a t a process i n g an d w h a t i t me a n s fo r th e fut u r e o f technol o g y.'
-			aut h o r: 'Mich a e l C h e n'
-			d a t e: '2 0 2 4-0 1-0 3'
-			readT i m e: '6 mi n r e a d'
-			categ o r y: 'E d g e Comput i n g'
-			image: '/ap i/placehol d e r/60 0/30 0'
-			s l u g: 'e d g e-comput i n g-opportunit i e s-challen g e s'
+			id: 6,
+			title: 'The Rise of Edge Computing: Opportunities and Challenges',
+			excerpt: 'Explore how edge computing is revolutionizing data processing and what it means for the future of technology.',
+			author: 'Michael Chen',
+			date: '2024-01-03',
+			readTime: '6 min read',
+			category: 'Edge Computing',
+			image: '/api/placeholder/600/300',
+			slug: 'edge-computing-opportunities-challenges'
 		}
 	];
 
-	const categor i e s = ['al l' 'A I & Mach i n e Learn i n g' 'Cl o u d Comput i n g' 'We b Developm e n t' 'Digi t a l Transformat i o n' 'Cybersecur i t y' 'E d g e Comput i n g'];
+	const categories = ['all', 'AI & Machine Learning', 'Cloud Computing', 'Web Development', 'Digital Transformation', 'Cybersecurity', 'Edge Computing'];
 
-	const filteredPo s t s = blogPo s t s.fil t e r(p o s t => 
-		categor i e s.inclu d e s('al l') || p o s t.categ o r y === categor i e s.f i n d(ca t => ca t !== 'al l')
+	const filteredPosts = blogPosts.filter(post => 
+		categories.includes('all') || post.category === categories.find(cat => cat !== 'all')
 	);
 
-	const handleNewsletterSub m i t = async (e: React.FormEv e n t) => {
-		e.preventDefa u l t();
+	const handleNewsletterSubmit = async (e: React.FormEvent) => {
+		e.preventDefault();
 		setIsNewsletterLoading(true);
 		
-		// Simul a t e AP I c a l l
-		aw a i t ne w Prom i s e(reso l v e => setTime o u t(reso l v e 2 0 0 0));
+		// Simulate API call
+		await new Promise(resolve => setTimeout(resolve, 2000));
 		
 		setIsNewsletterLoading(false);
-		trackClick('newslet t e r-subscr i b e' 'engagem e n t');
-		al e r t('Th a n k yo u fo r subscrib i n g t o ou r newslet t e r!')};
+		trackClick('newsletter-subscribe', 'engagement');
+		alert('Thank you for subscribing to our newsletter!');
+	};
 
 	return (
 		<>
@@ -147,7 +148,7 @@ export default function Blog(): JSX.Element {
 									<di v classN a m e="relat i v e h-4 8">
 										<Image
 											sr c={p o s t.image}
-											al t={p o s t.ti t l e}
+											al t={p o s t.title}
 											f i l l
 											classN a m e="object-co v e r"
 										/>
@@ -166,7 +167,7 @@ export default function Blog(): JSX.Element {
 											<s p a n>{p o s t.readT i m e}</s p a n>
 										</di v>
 										<h 2 classN a m e="t e x t-x l f o n t-b o l d t e x t-g r a y-90 0 m b-3 l i n e-cl a m p-2">
-											{p o s t.ti t l e}
+											{p o s t.title}
 										</h 2>
 										<p classN a m e="t e x t-g r a y-60 0 m b-4 l i n e-cl a m p-3">
 											{p o s t.exce r p t}

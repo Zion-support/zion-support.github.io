@@ -23,7 +23,8 @@ export default function Dashboard(): JSX.Element {
 
   const handleTabChange = (tab: string) => {
     setActiveTab(tab);
-    trackClick(`dashboard-tab-${tab}` 'navigation')};
+    trackClick(`dashboard-tab-${tab}`, 'navigation');
+  };
 
   const renderDashboard = () => {
     switch (activeTab) {
@@ -54,7 +55,7 @@ export default function Dashboard(): JSX.Element {
         );
       case 'advanced-analytics':
         return (
-      <div className="p-8">
+          <div className="p-8">
       <div className="flex justify-between items-center mb-8">
               <h1 className="text-3xl font-bold text-gray-900">Dashboard Overview</h1>
       <div className="flex items-center space-x-4">

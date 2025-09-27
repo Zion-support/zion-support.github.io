@@ -1,4 +1,4 @@
-import React { useState useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import SEO from '../src/components/SEO';
@@ -14,31 +14,31 @@ export default function PrivacyPol i c y(): JSX.Element {
 
   const secti o n s = [
     {
-      ti t l e: 'Informat i o n W e Coll e c t'
+      title: 'Informat i o n W e Coll e c t'
       cont e n t: 'W e coll e c t informat i o n yo u prov i d e direc t l y t o u s s u c h a s w h e n yo u cre a t e a n acco u n t cont a c t u s o r us e ou r servi c e s. T h i s ma y incl u d e y o u r n a m e em a i l addr e s s ph o n e number comp a n y informat i o n an d an y ot h e r informat i o n yo u cho o s e t o prov i d e.'
     }
     {
-      ti t l e: 'Ho w W e Us e Y o u r Informat i o n'
+      title: 'Ho w W e Us e Y o u r Informat i o n'
       cont e n t: 'W e us e th e informat i o n w e coll e c t t o prov i d e maint a i n an d impr o v e ou r servi c e s communic a t e w i t h yo u proc e s s transacti o n s an d com p l y w i t h le g a l obligati o n s. W e ma y a l s o us e y o u r informat i o n t o s e n d yo u techni c a l noti c e s upda t e s an d promotio n a l materi a l s.'
     }
     {
-      ti t l e: 'Informat i o n Shar i n g an d Disclos u r e'
+      title: 'Informat i o n Shar i n g an d Disclos u r e'
       cont e n t: 'W e d o no t sh a r e o r s e l l y o u r perso n a l informat i o n t o th i r d part i e s fo r th e i r market i n g purpo s e s with o u t y o u r expli c i t cons e n t. W e ma y sh a r e informat i o n w i t h serv i c e provid e r s wh o perf o r m servi c e s o n ou r beh a l f o r i f requi r e d b y la w.'
     }
     {
-      ti t l e: 'D a t a Secur i t y'
+      title: 'D a t a Secur i t y'
       cont e n t: 'W e implem e n t reasona b l e secur i t y measu r e s t o prot e c t y o u r informat i o n from unauthori z e d acc e s s disclos u r e alterat i o n an d destruct i o n. Howe v e r n o met h o d o f transmiss i o n o v e r th e Inter n e t o r electro n i c stor a g e i s 10 0% sec u r e.'
     }
     {
-      ti t l e: 'Y o u r Choi c e s'
+      title: 'Y o u r Choi c e s'
       cont e n t: 'Yo u h a v e th e ri g h t t o acc e s s upd a t e o r del e t e y o u r perso n a l informat i o n. Yo u ca n a l s o op t-ou t o f receiv i n g promotio n a l communicati o n s from u s a t an y t i m e b y follow i n g th e unsubscr i b e instructi o n s i n th o s e communicati o n s.'
     }
     {
-      ti t l e: 'Chan g e s t o T h i s Priv a c y Pol i c y'
+      title: 'Chan g e s t o T h i s Priv a c y Pol i c y'
       cont e n t: 'W e ma y upd a t e t h i s Priv a c y Pol i c y from t i m e t o t i m e. W e w i l l not i f y yo u o f an y chan g e s b y post i n g th e ne w Priv a c y Pol i c y o n t h i s p a g e an d updat i n g th e "L a s t Upda t e d" d a t e. W e encour a g e yo u t o rev i e w t h i s Priv a c y Pol i c y periodica l l y fo r an y chan g e s.'
     }
     {
-      ti t l e: 'Contact U s'
+      title: 'Contact U s'
       cont e n t: 'I f yo u h a v e an y questi o n s ab o u t t h i s Priv a c y Pol i c y ple a s e cont a c t u s a t priv a c y@zion a p p.co m.'
     }
   ];
@@ -72,7 +72,7 @@ export default function PrivacyPol i c y(): JSX.Element {
             {secti o n s.ma p((sect i o n in d e x) => (
               <di v ke y={in d e x} classN a m e="m b-8 l a s t:m b-0">
                 <h 2 classN a m e="t e x t-2x l f o n t-b o l d t e x t-g r a y-90 0 m b-4 bor d e r-b p b-2">
-                  {sect i o n.ti t l e}
+                  {sect i o n.title}
                 </h 2>
                 <p classN a m e="t e x t-g r a y-70 0 lead i n g-rela x e d">
                   {sect i o n.cont e n t}

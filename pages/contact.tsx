@@ -13,57 +13,60 @@ export default function Contact(): JSX.Element {
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isVisible setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    setIsVisible(true)} []);
+    setIsVisible(true);
+  }, []);
 
   const { trackClick } = useAnalytics();
 
-  const handleInputCha n g e = (e: React.ChangeEv e n t<HTMLInputElem e n t | HTMLTextAreaElem e n t>) => {
-    const { n a m e va l u e } = e.tar g e t;
-    setFormData(p r e v => ({
-      ...p r e v
-      [n a m e]: va l u e
-    }))};
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
 
-  const handleSub m i t = async (e: React.FormEv e n t) => {
-    e.preventDefa u l t();
-    setIsSubmitt i n g(true);
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
     
-    // Simul a t e f o r m submiss i o n
-    aw a i t ne w Prom i s e(reso l v e => setTime o u t(reso l v e 2 0 0 0));
+    // Simulate form submission
+    await new Promise(resolve => setTimeout(resolve, 2000));
     
-    setIsSubmitt i n g(false);
-    trackClick('cont a c t-f o r m-sub m i t' 'convers i o n');
-    al e r t('Th a n k yo u fo r y o u r mess a g e! W e\'l l ge t b a c k t o yo u s o o n.');
+    setIsSubmitting(false);
+    trackClick('contact-form-submit', 'conversion');
+    alert('Thank you for your message! We\'ll get back to you soon.');
     
-    // Re s e t f o r m
+    // Reset form
     setFormData({
-      name: ''
-      email: ''
-      comp a n y: ''
+      name: '',
+      email: '',
+      company: '',
       subject: '',
       message: ''
-    })};
+    });
+  };
 
-  const contactI n f o = [
+  const contactInfo = [
     {
-      i c o n: '📧'
-      ti t l e: 'Em a i l U s'
-      deta i l s: 'he l l o@zion a p p.co m'
-      description: 'S e n d u s a n em a i l an d w e\'l l resp o n d wit h i n 2 4 ho u r s.'
-    }
+      icon: '📧',
+      title: 'Email Us',
+      details: 'hello@zionapp.com',
+      description: 'Send us an email and we\'ll respond within 24 hours.'
+    },
     {
-      i c o n: '📞'
-      ti t l e: 'C a l l U s'
-      deta i l s: '+1 (55 5) 12 3-4 5 6 7'
+      icon: '📞',
+      title: 'Call Us',
+      details: '+1 (555) 123-4567'
       description: 'Mo n-Fr i from 9a m t o 6p m ES T'
     }
     {
-      i c o n: '📍'
-      ti t l e: 'Vi s i t U s'
-      deta i l s: '12 3 T e c h Str e e t Sili c o n Val l e y C A 94 0 0 0'
+      icon: '📍'
+      title: 'Vi s i t U s'
+      details: '12 3 T e c h Str e e t Silicon Val l e y C A 94 0 0 0'
       description: 'C o m e sa y he l l o a t ou r off i c e'
     }
   ];
@@ -196,10 +199,10 @@ export default function Contact(): JSX.Element {
               <di v classN a m e="sp a c e-y-6">
                 {contactI n f o.ma p((i n f o in d e x) => (
                   <di v ke y={in d e x} classN a m e="f l e x it e m s-st a r t sp a c e-x-4 p-6 b g-wh i t e roun d e d-x l sha d o w-l g">
-                    <di v classN a m e="t e x t-3x l">{i n f o.i c o n}</di v>
+                    <di v classN a m e="t e x t-3x l">{i n f o.icon}</di v>
                     <di v>
-                      <h 3 classN a m e="t e x t-l g f o n t-semib o l d t e x t-g r a y-90 0 m b-2">{i n f o.ti t l e}</h 3>
-                      <p classN a m e="t e x t-b l u e-60 0 f o n t-med i u m m b-1">{i n f o.deta i l s}</p>
+                      <h 3 classN a m e="t e x t-l g f o n t-semib o l d t e x t-g r a y-90 0 m b-2">{i n f o.title}</h 3>
+                      <p classN a m e="t e x t-b l u e-60 0 f o n t-med i u m m b-1">{i n f o.details}</p>
                       <p classN a m e="t e x t-g r a y-60 0 t e x t-s m">{i n f o.description}</p>
                     </di v>
                   </di v>

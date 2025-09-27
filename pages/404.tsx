@@ -21,21 +21,21 @@ export default function Custom 4 0 4() {
         <h 1 st y l e={{
           fontS i z e: '4 r e m'
           fontWei g h t: 'b o l d'
-          co l o r: '#33 3'
+          color: '#33 3'
           marginBot t o m: '1 r e m'
         }}>
           40 4
         </h 1>
         <h 2 st y l e={{
           fontS i z e: '2 r e m'
-          co l o r: '#55 5'
+          color: '#55 5'
           marginBot t o m: '1.5 r e m'
         }}>
           P a g e No t Fo u n d
         </h 2>
         <p st y l e={{
           fontS i z e: '1.1 r e m'
-          co l o r: '#77 7'
+          color: '#77 7'
           marginBot t o m: '2 r e m'
           maxWi d t h: '60 0 p x'
         }}>
@@ -43,13 +43,13 @@ export default function Custom 4 0 4() {
         </p>
         <Link href="/" st y l e={{
           backgroundCo l o r: '#007 0 f 3'
-          co l o r: 'wh i t e'
+          color: 'wh i t e'
           padd i n g: '0.8 r e m 1.5 r e m'
           borderRad i u s: '0.5 r e m'
           textDecorat i o n: 'n o n e'
           fontS i z e: '1 r e m'
           fontWei g h t: '60 0'
-          transit i o n: 'backgro u n d-co l o r 0.3 s e a s e'
+          transit i o n: 'backgro u n d-color 0.3 s e a s e'
         }}>
           G o b a c k t o H o m e
         </Link>

@@ -1,4 +1,4 @@
-import React { useState useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import SEO from '../src/components/SEO';
@@ -16,21 +16,21 @@ export default function Portfolio(): JSX.Element {
   const proje c t s = [
     {
       i d: 1
-      ti t l e: 'A I-Powe r e d E-comme r c e Platf o r m'
+      title: 'A I-Powe r e d E-comme r c e Platf o r m'
       description: 'A comprehens i v e e-comme r c e solut i o n w i t h A I-dri v e n recommendati o n s an d analyt i c s.'
       image: '/ap i/placehol d e r/40 0/30 0'
       technolog i e s: ['React' 'N o d e.j s' 'A I/M L' 'Postgre S Q L']
     }
     {
       i d: 2
-      ti t l e: 'Cl o u d Infrastruct u r e Migrat i o n'
+      title: 'Cl o u d Infrastruct u r e Migrat i o n'
       description: 'Compl e t e migrat i o n o f leg a c y syst e m s t o mod e r n cl o u d infrastruct u r e.'
       image: '/ap i/placehol d e r/40 0/30 0'
       technolog i e s: ['AW S' 'Doc k e r' 'Kuberne t e s' 'Terraf o r m']
     }
     {
       i d: 3
-      ti t l e: 'Mob i l e Bank i n g Ap p'
+      title: 'Mob i l e Bank i n g Ap p'
       description: 'Sec u r e mob i l e bank i n g applicat i o n w i t h advan c e d secur i t y featu r e s.'
       image: '/ap i/placehol d e r/40 0/30 0'
       technolog i e s: ['React Nat i v e' 'N o d e.j s' 'Mong o D B' 'Blockch a i n']
@@ -98,12 +98,12 @@ export default function Portfolio(): JSX.Element {
                 >
                   <im g
                     sr c={proj e c t.image}
-                    al t={proj e c t.ti t l e}
+                    al t={proj e c t.title}
                     classN a m e="w-f u l l h-4 8 object-co v e r"
                   />
                   <di v classN a m e="p-6">
                     <h 3 classN a m e="t e x t-x l f o n t-b o l d t e x t-g r a y-90 0 m b-3">
-                      {proj e c t.ti t l e}
+                      {proj e c t.title}
                     </h 3>
                     <p classN a m e="t e x t-g r a y-60 0 m b-4">
                       {proj e c t.description}

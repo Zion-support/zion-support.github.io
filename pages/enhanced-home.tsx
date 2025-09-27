@@ -1,62 +1,65 @@
-import React { useState useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import SEO from '../src/components/SEO';
 import { useAnalytics } from '../src/hooks/useAnalytics';
 
 export default function Home(): JSX.Element {
-  const [isVisible setIsVisible] = useState(false);
-  const [isLoading setIsLoading] = useState(false);
-  const [error setError] = useState<string | null>(null);
+  const [isVisible, setIsVisible] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    setIsVisible(true)} []);
+    setIsVisible(true);
+  }, []);
 
   const { trackClick } = useAnalytics();
 
   const handleSelectPlan = (tierId: string) => {
-    trackClick(`select-plan-${tierId}` 'conversion');
-    console.log('Selected plan:' tierId)};
+    trackClick(`select-plan-${tierId}`, 'conversion');
+    console.log('Selected plan:', tierId);
+  };
 
   const handleReadMore = (slug: string) => {
-    trackClick(`read-blog-${slug}` 'engagement');
-    console.log('Read more:' slug)};
+    trackClick(`read-blog-${slug}`, 'engagement');
+    console.log('Read more:', slug);
+  };
 
   const features = [
     {
-      title: 'AI-Powered Solutions'
-      description: 'Leverage cutting-edge artificial intelligence to automate and optimize your business processes.'
+      title: 'AI-Powered Solutions',
+      description: 'Leverage cutting-edge artificial intelligence to automate and optimize your business processes.',
       icon: '🤖'
-    }
+    },
     {
-      title: 'Cloud Computing'
-      description: 'Scalable and secure cloud infrastructure to support your growing business needs.'
+      title: 'Cloud Computing',
+      description: 'Scalable and secure cloud infrastructure to support your growing business needs.',
       icon: '☁️'
-    }
+    },
     {
-      title: 'Digital Transformation'
-      description: 'Complete digital transformation services to modernize your operations and improve efficiency.'
+      title: 'Digital Transformation',
+      description: 'Complete digital transformation services to modernize your operations and improve efficiency.',
       icon: '🚀'
     }
   ];
 
   const testimonials = [
     {
-      name: 'Sarah Johnson'
-      company: 'TechCorp Inc.'
-      content: 'Zion App transformed our entire digital infrastructure. The results exceeded our expectations.'
+      name: 'Sarah Johnson',
+      company: 'TechCorp Inc.',
+      content: 'Zion App transformed our entire digital infrastructure. The results exceeded our expectations.',
       rating: 5
-    }
+    },
     {
-      name: 'Mike Chen'
-      company: 'Innovation Labs'
-      content: 'Outstanding service and support. The team delivered exactly what we needed when we needed it.'
+      name: 'Mike Chen',
+      company: 'Innovation Labs',
+      content: 'Outstanding service and support. The team delivered exactly what we needed when we needed it.',
       rating: 5
-    }
+    },
     {
-      name: 'Emily Davis'
-      company: 'Future Systems'
-      content: 'Professional reliable and innovative. Highly recommend their services to any business.'
+      name: 'Emily Davis',
+      company: 'Future Systems',
+      content: 'Professional, reliable, and innovative. Highly recommend their services to any business.',
       rating: 5
     }
   ];
@@ -117,7 +120,7 @@ export default function Home(): JSX.Element {
                 </p>
               </div>
               <div className="grid md:grid-cols-3 gap-8">
-                {features.map((feature index) => (
+                {features.map((feature, index) => (
                   <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                     <div className="text-4xl mb-4">{feature.icon}</div>
                     <h3 className="text-xl font-semibold text-gray-900 mb-3">{feature.title}</h3>
@@ -137,7 +140,7 @@ export default function Home(): JSX.Element {
                 </h2>
               </div>
               <div className="grid md:grid-cols-3 gap-8">
-                {testimonials.map((testimonial index) => (
+                {testimonials.map((testimonial, index) => (
                   <div key={index} className="bg-white p-6 rounded-xl shadow-lg">
                     <div className="flex mb-4">
                       {[...Array(testimonial.rating)].map((_ i) => (
@@ -166,7 +169,7 @@ export default function Home(): JSX.Element {
                   Join hundreds of companies that have already revolutionized their operations with our technology solutions.
                 </p>
                 <button 
-                  onClick={() => trackClick('final-cta' 'conversion')}
+                  onClick={() => trackClick('final-cta', 'conversion')}
                   className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg hover:shadow-xl"
                 >
                   Start Your Journey Today
@@ -177,4 +180,5 @@ export default function Home(): JSX.Element {
         </div>
       </div>
     </>
-  )}
+  );
+}

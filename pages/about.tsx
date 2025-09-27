@@ -10,77 +10,77 @@ const About = React.memo(function About(): JSX.Element {
 
   useEffect(() => {
     setIsVisible(true);
-  }, []););
+  }, []);
 
   const { trackClick } = useAnalytics();
 
-  const teamMemb e r s = [
+  const teamMembers = [
     {
-      name: 'Sa r a h John s o n'
-      r o l e: 'CE O & Foun d e r'
-      expert i s e: 'Strate g i c Leaders h i p A I Innovat i o n'
-      image: '👩‍💼'
-      description: '1 5+ ye a r s i n technol o g y leaders h i p for m e r V P a t ma j o r t e c h compan i e s.'
-    }
+      name: 'Sarah Johnson',
+      role: 'CEO & Founder',
+      expertise: 'Strategic Leadership, AI Innovation',
+      image: '👩‍💼',
+      description: '15+ years in technology leadership, former VP at major tech companies.'
+    },
     {
-      name: 'Mich a e l C h e n'
-      r o l e: 'CT O'
-      expert i s e: 'Cl o u d Architect u r e Dev O p s'
-      image: '👨‍💻'
-      description: 'Exp e r t i n scala b l e cl o u d soluti o n s an d mod e r n developm e n t practi c e s.'
-    }
+      name: 'Michael Chen',
+      role: 'CTO',
+      expertise: 'Cloud Architecture, DevOps',
+      image: '👨‍💻',
+      description: 'Expert in scalable cloud solutions and modern development practices.'
+    },
     {
-      name: 'Em i l y Rodrig u e z'
-      r o l e: 'L e a d Desig n e r'
-      expert i s e: 'U X/U I Des i g n Prod u c t Strat e g y'
-      image: '👩‍🎨'
-      description: 'Aw a r d-winn i n g desig n e r w i t h expert i s e i n u s e r-cente r e d des i g n princip l e s.'
-    }
+      name: 'Emily Rodriguez',
+      role: 'Lead Designer',
+      expertise: 'UX/UI Design, Product Strategy',
+      image: '👩‍🎨',
+      description: 'Award-winning designer with expertise in user-centered design principles.'
+    },
     {
-      name: 'Da v i d Ki m'
-      r o l e: 'Sen i o r Develo p e r'
-      expert i s e: 'F u l l-St a c k Developm e n t A I/M L'
-      image: '👨‍💻'
-      description: 'F u l l-st a c k develo p e r specializ i n g i n A I integrat i o n an d mod e r n we b technolog i e s.'
+      name: 'David Kim',
+      role: 'Senior Developer',
+      expertise: 'Full-Stack Development, AI/ML',
+      image: '👨‍💻',
+      description: 'Full-stack developer specializing in AI integration and modern web technologies.'
     }
   ];
 
-  const val u e s = [
+  const values = [
     {
-      ti t l e: 'Innovat i o n Fi r s t'
-      description: 'W e s t a y a t th e forefr o n t o f technol o g y constan t l y explor i n g ne w possibilit i e s an d push i n g th e boundar i e s o f w h a t\'s possi b l e.'
-      i c o n: '🚀'
-      co l o r: 'b l u e'
+      title: 'Innovation First',
+      description: 'We stay at the forefront of technology, constantly exploring new possibilities and pushing the boundaries of what\'s possible.',
+      icon: '🚀',
+      color: 'blue'
     }
     {
-      ti t l e: 'Cli e n t Succ e s s'
+      title: 'Cli e n t Succ e s s'
       description: 'Y o u r succ e s s i s ou r succ e s s. W e&a p o s;r e commit t e d t o deliver i n g soluti o n s t h a t dr i v e r e a l busin e s s va l u e an d gro w t h.'
-      i c o n: '🎯'
-      co l o r: 'gr e e n'
+      icon: '🎯'
+      color: 'gr e e n'
     }
     {
-      ti t l e: 'Qual i t y Excelle n c e'
+      title: 'Qual i t y Excelle n c e'
       description: 'W e maint a i n th e high e s t standa r d s i n everyth i n g w e d o from c o d e qual i t y t o u s e r experie n c e.'
-      i c o n: '⭐'
-      co l o r: 'yel l o w'
+      icon: '⭐'
+      color: 'yel l o w'
     }
     {
-      ti t l e: 'Transpar e n t Communicat i o n'
+      title: 'Transpar e n t Communicat i o n'
       description: 'Cl e a r hon e s t communicat i o n i s th e foundat i o n o f ou r relationsh i p s w i t h clie n t s an d t e a m memb e r s.'
-      i c o n: '💬'
-      co l o r: 'pur p l e'
+      icon: '💬'
+      color: 'pur p l e'
     }
     {
-      ti t l e: 'Continu o u s Learn i n g'
+      title: 'Continu o u s Learn i n g'
       description: 'W e embr a c e cha n g e an d continuou s l y le a r n ad a p t an d impr o v e t o s t a y ahead i n th e f a s t-pa c e d t e c h wo r l d.'
-      i c o n: '📚'
-      co l o r: 'ind i g o'
+      icon: '📚'
+      color: 'ind i g o'
     }
     {
-      ti t l e: 'Collaborat i v e Appro a c h'
+      title: 'Collaborat i v e Appro a c h'
       description: 'W e beli e v e i n th e po w e r o f collaborat i o n work i n g a s a n extens i o n o f y o u r t e a m t o achi e v e sha r e d go a l s an d mut u a l succ e s s.'
-      i c o n: '🤝'
-      co l o r: 'ora n g e'
+      icon: '🤝'
+      color: 'ora n g e'
     }
   ];
 
@@ -96,7 +96,7 @@ const About = React.memo(function About(): JSX.Element {
       <SEO />
       <Head>
         <title>About U s - Z i o n Ap p</title>
-        <meta name="description" content="Le a r n ab o u t Z i o n Ap p's miss i o n val u e s an d commitm e n t t o deliver i n g cutt i n g-e d g e technol o g y soluti o n s." />
+        <meta name="description" content="Le a r n ab o u t Z i o n Ap p's miss i o n values an d commitm e n t t o deliver i n g cutt i n g-e d g e technol o g y soluti o n s." />
         <meta name="viewp o r t" content="wi d t h=dev i c e-wi d t h init i a l-sc a l e=1" />
       </Head>
       <di v classN a m e="mi n-h-scr e e n b g-gradi e n t-t o-b r from-b l u e-5 0 t o-ind i g o-10 0 p t-2 0">
@@ -132,10 +132,10 @@ const About = React.memo(function About(): JSX.Element {
           <sect i o n classN a m e="m b-2 0">
             <h 2 classN a m e="t e x t-4x l f o n t-b o l d t e x t-cen t e r t e x t-g r a y-90 0 m b-1 6">Ou r Val u e s</h 2>
             <di v classN a m e="g r i d g r i d-c o l s-1 m d:g r i d-c o l s-2 l g:g r i d-c o l s-3 ga p-8">
-              {val u e s.ma p((va l u e in d e x) => (
+              {values.ma p((va l u e in d e x) => (
                 <di v ke y={in d e x} classN a m e="b g-wh i t e roun d e d-x l p-6 sha d o w-l g ho v e r:sha d o w-x l transit i o n-sha d o w durat i o n-30 0">
-                  <di v classN a m e="t e x t-4x l m b-4">{va l u e.i c o n}</di v>
-                  <h 3 classN a m e="t e x t-x l f o n t-semib o l d t e x t-g r a y-90 0 m b-3">{va l u e.ti t l e}</h 3>
+                  <di v classN a m e="t e x t-4x l m b-4">{va l u e.icon}</di v>
+                  <h 3 classN a m e="t e x t-x l f o n t-semib o l d t e x t-g r a y-90 0 m b-3">{va l u e.title}</h 3>
                   <p classN a m e="t e x t-g r a y-60 0 lead i n g-rela x e d">{va l u e.description}</p>
                 </di v>
               ))}

@@ -32,15 +32,16 @@ export default function AnalyticsPage() {
 
       
       {/* <EnhancedSEO
-        ti t l e="Analytics Dashboard - Zion Tech Solutions"
-        description="Comprehens i v e website analyt i c s dashbo a r d fo r performanceaccessibility a n d SEO monitoring."
-        keywo r d s={['analyt i c s''performance monitoring''accessibility chec k e r''SEO analy z e r''website hea l t h''performance metr i c s''we b vit a l s''dashbo a r d']}
+        title="Analytics Dashboard - Zion Tech Solutions"
+        description="Comprehensive website analytics dashboard for performance, accessibility and SEO monitoring."
+        keywords={['analytics', 'performance monitoring', 'accessibility checker', 'SEO analyzer', 'website health', 'performance metrics', 'web vitals', 'dashboard']}
       /> */}
-			<di v classN a m e="mi n-h-scr e e n b g-g r a y-5 0 f l e x it e m s-cen t e r just i f y-cen t e r">
-			<di v classN a m e="t e x t-cen t e r">
-          <h 1 classN a m e="t e x t-2 x l f o n t-b o l d t e x t-g r a y-90 0 m b-4">Analytics Dashboard</h 1>
-          <p classN a m e="t e x t-g r a y-60 0">Compon e n t temporar i l y disab l e d</p>
-        </di v>
-      </di v>
+			<div className="min-h-screen bg-gray-50 flex items-center justify-center">
+			<div className="text-center">
+          <h1 className="text-2xl font-bold text-gray-900 mb-4">Analytics Dashboard</h1>
+          <p className="text-gray-600">Component temporarily disabled</p>
+        </div>
+      </div>
 		</>
-  )}
+  );
+}
