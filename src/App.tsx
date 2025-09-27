@@ -42,7 +42,7 @@ export default function App(): React.JSX.Element {
     initOptimizations();
     
     // Initialize security features
-    SecurityManager.getInstance();
+    const securityManagerInstance = SecurityManager.getInstance();
     
     // Initialize performance monitoring
     const performanceMonitor = PerformanceMonitor.getInstance();
@@ -88,7 +88,7 @@ export default function App(): React.JSX.Element {
     });
 
     // Initialize enhanced security features
-    // SecurityManager is already initialized with default config
+    securityManager.monitorSecurityEvents();
 
     // Initialize cache manager
     cacheManager.configure({

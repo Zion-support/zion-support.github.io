@@ -270,7 +270,7 @@ export class SecurityManager {
     ];
     
     return securityKeywords.some(keyword => 
-      error.message.toLowerCase().includes(keyword)
+      (error as Error).message.toLowerCase().includes(keyword)
     );
   }
 

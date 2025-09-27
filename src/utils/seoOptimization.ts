@@ -63,7 +63,7 @@ export class SEOOptimizer {
   }
 
   private setupBasicMeta(): void {
-    this.setMetaTag('charset', 'utf-8');
+    this.setMetaTag('charset', 'utf-8', '');
     this.setMetaTag('name', 'generator', 'React with Vite');
     this.setMetaTag('name', 'theme-color', '#1f2937');
     this.setMetaTag('name', 'msapplication-TileColor', '#1f2937');
@@ -158,7 +158,7 @@ export class SEOOptimizer {
   }
 
   private updateOpenGraph(data: PageSEOData): void {
-    const ogData = {
+    const ogData: Record<string, string> = {
       'og:site_name': this.config.siteName,
       'og:type': data.type || 'website',
       'og:url': data.url || window.location.href,
