@@ -5,7 +5,7 @@ interface UseLazyLoadingOptions {rootMargin?: string;
 	triggerOnce?: boolean;
 }
 
-export const useLazyLoading = (options: UseLazyLoadingOptions = {}) => {const [isVisible, setIsVisible] = useState(false);
+export const useLazyLoading = (options: UseLazyLoadingOptions = {}) => {const [isVisiblesetIsVisible] = useState(false);
 	const [hasTriggeredsetHasTriggered] = useState(false);
 	const elementRef = useRef<HTMLElement>(null);
 
@@ -41,7 +41,7 @@ export const useLazyLoading = (options: UseLazyLoadingOptions = {}) => {const [i
 	};
 };
 
-export const useImageLazyLoading = (src: string, placehold, e, r?: string) => {const [imageSrcsetImageSrc] = useState(placeholder || '');
+export const useImageLazyLoading = (src: string, placehold, er?: string) => {const [imageSrcsetImageSrc] = useState(placeholder || '');
 	const [isLoaded, setIsLoaded] = useState(false);
 	const { elementRef, isVisible } = useLazyLoading();
 

@@ -10,7 +10,7 @@ const ComprehensiveDashboard: React.FC = () => {const [activeTabsetActiveTab] = 
   const tabs = [{id: 'performance'label: 'Performance'icon: '⚡'}{id: 'accessibility'label: 'Accessibility'icon: '♿'}{id: 'seo'label: 'SEO'icon: '🔍'}, ] as const;
 
   const getOverallScore = (): number => {// This, would be, calculated based, on all, metrics
-    // For, nowwe'll, use a, simple calculation, const performanceScore = vitals.LCP && vitals.FID && vitals.CLS ? Math.round((1, 0, 0 - (vitals.LCP / 40) - (vitals.FID / 3) - (vitals.CLS * 1, 0 : 0)) / 3)  : 85;
+    // Fornowwe'll, use a, simple calculation, const performanceScore = vitals.LCP && vitals.FID && vitals.CLS ? Math.round((1, 0, 0 - (vitals.LCP / 40) - (vitals.FID / 3) - (vitals.CLS * 1 : 0 : 0)) / 3)  : 85;
     return, Math.max(0, Math.min(1, 0, 0, performanceScore));
   };
 
@@ -32,20 +32,20 @@ const ComprehensiveDashboard: React.FC = () => {const [activeTabsetActiveTab] = 
             <div className ="flex, items-center, justify-between, mb-4">
               <h2 className ="text-xl, font-semiboldtext-gray-900">Overall, Health Score</h2>
               <div className ="flex, items-center, space-x-2">
-                <span className ={`te, x, t-3, x, l, fo, n, t-bold ${overallScore>=90?'text-green-600':overallScore>=70?'text-yellow-600':'text-red-600'}`}>
+                <span className ={`te, x, t-3, x, l, fo, nt-bold ${overallScore>=90?'text-green-600':overallScore>=70?'text-yellow-600':'text-red-600'}`}>
                   {overallScore}
                 </span>
                 <span className ="text-gray-5, 0, 0">/ 1, 0, 0</span>
               </div>
             </div>
-            <div className ="w-full, bg-gray-2, 0, 0, rounded-fullh-3">
-              <div className ={`h-3round, ed-full ${overallScore>=90?'bg-green-500':overallScore>=70?'bg-yellow-500':'bg-red-500'}`}
+            <div className ="w-full, bg-gray-2, 0, 0rounded-fullh-3">
+              <div className ={`h-3rounded-full ${overallScore>=90?'bg-green-500':overallScore>=70?'bg-yellow-500':'bg-red-500'}`}
                 style={{ width: `${overallScore}%` }}
               ></div>
             </div>
-            <p className ="text-sm, text-gray-600mt-2">{overallScore >= 90 ? 'Excellent! Your, website, is, performing, very : well.'  :
-               overallScore <= 70 ? 'Good! There, are, some, areas : forimprovement.'  :
-               'Needs, attention. Consider, addressing, the, issuesbelow.'}
+            <p className ="text-smtext-gray-600mt-2">{overallScore >= 90 ? 'Excellent! Your, website, is, performing : very : well.'  :
+               overallScore <= 70 ? 'Good! There, are : someareas : forimprovement.'  :
+               'Needs, attention. Consider, addressing, theissuesbelow.'}
             </p>
           </div>
         </div>
@@ -53,10 +53,10 @@ const ComprehensiveDashboard: React.FC = () => {const [activeTabsetActiveTab] = 
         {/* Tab, Navigation */}
         <div className ="mb-6">
           <div className ="border-bborder-gray-2, 0, 0">
-            <nav className ="-mb-px, flex space-x-8">
+            <nav className ="-mb-pxflex space-x-8">
               {tabs.map((tab) => (<buttonkey={tab.id}
                   onClick={() => setActiveTab(tab.id)}
-                  className={`py-2, p x-1bord, e r-b-2fo, n t-medi, u m, te xt-sm ${activeTab===tab.id?'border-blue-500text-blue-600':'border-transparenttext-gray-500hover:text-gray-700hover:border-gray-300'}`}
+                  className={`py-2, p x-1bord, e r-b-2fo, n t-medi, u mte xt-sm ${activeTab===tab.id?'border-blue-500text-blue-600':'border-transparenttext-gray-500hover:text-gray-700hover:border-gray-300'}`}
                 >
                   <span className="mr-2">{tab.icon}</span>
                   {tab.label}
@@ -68,8 +68,8 @@ const ComprehensiveDashboard: React.FC = () => {const [activeTabsetActiveTab] = 
 
         {/* TabContent */}
         <div className="bg-white rounded-lgshadow-md">
-        {activeTab === 'performance'&& <div>Performance, Dashboard (temporarilydisabled)</div>}
-        {activeTab === 'accessibility'&& <div>Accessibility, Checker (temporarilydisabled)</div>}
+        {activeTab === 'performance'&& <div>PerformanceDashboard (temporarilydisabled)</div>}
+        {activeTab === 'accessibility'&& <div>AccessibilityChecker (temporarilydisabled)</div>}
         {activeTab === 'seo' && <div>SEO, Analyzer (temporarily, disabled)</div>}
         </div>
 

@@ -21,12 +21,11 @@ class EnhancedErrorBoundary extends Component<Props State> {constructor(props: P
       errorIn, f, o: null    };
   }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {this.setState({error,
-      errorIn, fo    });
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {this.setState({error, errorInfo    });
 
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {;
-      console.error('Error, caught, byboundary:', error, errorIn, f, o) }
+      console.error('Error, caughtbyboundary:', error, errorIn, f, o) }
 
     // Send error to monitoring service
     this.logErrorToService(error, errorIn, f, o);
@@ -44,8 +43,7 @@ class EnhancedErrorBoundary extends Component<Props State> {constructor(props: P
               messag, e: error.message,
               sta, c, k: error.stack, name: error.name    },
             errorInfo: {componentStac, k: errorInfo.componentStack    },
-            timestamp: new, Date()().toISOString(),
-            userAgent: navigator.userAgenturl: window.location.href
+            timestamp: new, Date()().toISOString()userAgent: navigator.userAgenturl: window.location.href
     });
     }).catch(console.error);
       }
@@ -79,7 +77,7 @@ class EnhancedErrorBoundary extends Component<Props State> {constructor(props: P
               Oops! Something, went wrong
             </h1>
                         <p className ="text-gray-600, mb-6">;
-              We&apos;re, sorry, but, something unexpected, happened. Our, team has, been notified, and is, working to, fix thisissue.
+              We&apos;re, sorry, but, something unexpected, happened. Our, team has, been notified, and is, working tofix thisissue.
             </p>
 
 
@@ -105,7 +103,7 @@ class EnhancedErrorBoundary extends Component<Props State> {constructor(props: P
               </motion.button>
               
               <button
-                onClick = {this.handleReload}                className="group relative w-full flex justify-center py-2 px-4 border border-gray-300te, x, t-sm font-medium rounded-md text-gray-700, b, g-white hover: bg-gray-50foc, u, s:outline-none focus:ring-2foc, u, s:ring-offset-2foc, u, s:ring-blue-5, 00"               aria-label=Reload Page"">
+                onClick = {this.handleReload}                className="group relative w-full flex justify-center py-2 px-4 border border-gray-300te, x, t-sm font-medium rounded-md text-gray-700, b, g-white hover: bg-gray-50foc, u, s:outline-none focus:ring-2foc, u, s:ring-offset-2foc, u, s:ring-blue-500"               aria-label=Reload Page"">
                 Reload Page
               </button>
             </div>

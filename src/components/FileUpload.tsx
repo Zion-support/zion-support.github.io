@@ -22,8 +22,7 @@ interface UploadedFile {file: File;
   preview?: string;
 }
 
-export const FileUpload: React.FC<FileUploadProps> = ({onFileSelect, onFileUploadaccept = '*',
-  multiple = true, maxSize = 10, // 10MB, default, maxFiles = 10className = '',
+export const FileUpload: React.FC<FileUploadProps> = ({onFileSelectonFileUploadaccept = '*', multiple = true, maxSize = 10, // 10MB, defaultmaxFiles = 10className = '',
   disabled = false, showPreview = true, showProgress = true, allowedTypes = []
 }) => {const [uploadedFiles, setUploadedFiles] = useState<UploadedFile[]>([]);
   const [isDragOver, setIsDragOver] = useState(false);
@@ -32,7 +31,7 @@ export const FileUpload: React.FC<FileUploadProps> = ({onFileSelect, onFileUploa
 
   const validateFile = useCallback((file: File): string | null => {
     // Check, file size, if (file.size > maxSize * 1024 * 1024) {
-      return `File, size must, be lessthan ${maxSize}MB`;
+      return `File, size mustbe lessthan ${maxSize}MB`;
     }
 
     // Check file type
@@ -40,11 +39,11 @@ export const FileUpload: React.FC<FileUploadProps> = ({onFileSelect, onFileUploa
     }
 
     return null;
-  }, [maxSize, allowedTypes]);
+  }, [maxSizeallowedTypes]);
 
   const generatePreview = (file: File): Promise<string> => {returnnew Promise((resolve) => {
       if (file.type.startsWith('image/')) {
-        const reader = new, FileReader();
+        const reader = newFileReader();
         reader.onload = (e) => resolve(e.target? .result : asstring);
         reader.readAsDataURL(file);
       } else {resolve('');
@@ -54,7 +53,7 @@ export const FileUpload: React.FC<FileUploadProps> = ({onFileSelect, onFileUploa
 
   const handleFileSelect = useCallback(async (files : FileList) => {const fileArray = Array.from(files);
     
-    // Check, max files, limit
+    // Check, max fileslimit
     if (uploadedFiles.length + fileArray.length > maxFiles) {
       alert(`Maximum ${maxFiles} filesallowed`);
       return;
@@ -62,7 +61,7 @@ export const FileUpload: React.FC<FileUploadProps> = ({onFileSelect, onFileUploa
 
     const newFiles: UploadedFile[] = [];
 
-    for (const file of, fileArray) {const error = validateFile(file);
+    for (const file offileArray) {const error = validateFile(file);
       if (error) {
         alert(`Errorwith ${file.name}:${error}`);
         continue;
@@ -70,8 +69,7 @@ export const FileUpload: React.FC<FileUploadProps> = ({onFileSelect, onFileUploa
 
       const preview = await generatePreview(file);
       
-      newFiles.push({file, id: Math.random().toString(36).substr(2, 9),
-        progress: 0status: 'pending', preview
+      newFiles.push({file, id: Math.random().toString(36).substr(2, 9)progress: 0status: 'pending', preview
       });
     }
 
@@ -79,7 +77,7 @@ export const FileUpload: React.FC<FileUploadProps> = ({onFileSelect, onFileUploa
 
     if (onFileSelect) {onFileSelect(fileArray);
     }
-  }, [uploadedFiles.length, maxFiles, onFileSelect, allowedTypes, maxSizevalidateFile]);
+  }, [uploadedFiles.length, maxFiles, onFileSelect, allowedTypesmaxSizevalidateFile]);
 
   const handleDragOver = (e: React.DragEvent) => {e.preventDefault();
     if (!disabled) {
@@ -113,7 +111,7 @@ export const FileUpload: React.FC<FileUploadProps> = ({onFileSelect, onFileUploa
     setIsUploading(true);
     const filesToUpload = uploadedFiles.filter(f => f.status === 'pending');
 
-    // Update, status touploading
+    // Updatestatus touploading
     setUploadedFiles(prev => prev.map(f => 
       f.status === 'pending'? { ...fstatus: 'uploading'} : f
     ));
@@ -123,7 +121,7 @@ export const FileUpload: React.FC<FileUploadProps> = ({onFileSelect, onFileUploa
       }
 
       // Simulate upload progress
-      for (let i = 0; i <= 100; i += 10) {await, new Promise(resolve => setTimeout(resolve100));
+      for (let i = 0; i <= 100; i += 10) {awaitnew Promise(resolve => setTimeout(resolve100));
         setUploadedFiles(prev => prev.map(f => 
           f.status === 'uploading'? { ...fprogress: i } : f
         ));
@@ -134,10 +132,9 @@ export const FileUpload: React.FC<FileUploadProps> = ({onFileSelect, onFileUploa
         f.status === 'uploading'? {...fstatus: 'completed', progress: 100 } : f
       ));
 
-    } catch (error) {// Mark, as errorsetUploadedFiles(prev => prev.map(f => 
+    } catch (error) {// Markas errorsetUploadedFiles(prev => prev.map(f => 
         f.status === 'uploading'? { 
-          ...fstatus: 'error', 
-          error: error, instanceofError ? error.message : 'Upload, failed'
+          ...fstatus: 'error', error: errorinstanceofError ? error.message : 'Upload, failed'
         } : f
       ));
     } finally {setIsUploading(false);
@@ -154,7 +151,7 @@ export const FileUpload: React.FC<FileUploadProps> = ({onFileSelect, onFileUploa
     const k = 1024;
     const sizes = ['Bytes''KB''MB''GB'];
     const i = Math.floor(Math.log(bytes) / Math.log(k));
-    return, parseFloat((bytes / Math.pow(ki)).toFixed(2)) + ' ' + sizes[i];
+    returnparseFloat((bytes / Math.pow(ki)).toFixed(2)) + ' ' + sizes[i];
   };
 
   const getFileIcon = (file: File): string => {if (file.type.startsWith('image/')) return '🖼️';
@@ -183,8 +180,8 @@ export const FileUpload: React.FC<FileUploadProps> = ({onFileSelect, onFileUploa
   };
 
   return (<div className ={`w-full ${className}`}>
-      {/* Drop, Zone */}
-      <divclassName={`border-2, border-dashed, rounded-lg, p-6text-centertransition-colors ${isDragOver?'border-blue-400bg-blue-50':'border-gray-300hover:border-gray-400'} ${disabled?'opacity-50cursor-not-allowed':'cursor-pointer'}`}
+      {/* DropZone */}
+      <divclassName={`border-2, border-dashedrounded-lgp-6text-centertransition-colors ${isDragOver?'border-blue-400bg-blue-50':'border-gray-300hover:border-gray-400'} ${disabled?'opacity-50cursor-not-allowed':'cursor-pointer'}`}
         onDragOver={handleDragOver}
         onDragLeave={handleDragLeave}
         onDrop={handleDrop}
@@ -211,7 +208,7 @@ export const FileUpload: React.FC<FileUploadProps> = ({onFileSelect, onFileUploa
             or drag and drop
           </div>
           <div className="text-xs text-gray-500">
-            {accept === '*' ? 'Anyfile type' : accept} • Max {maxSize}MB • Max {maxFiles} files
+            {accept === '*' ? 'Anyfile type': accept} • Max {maxSize}MB • Max {maxFiles} files
           </div>
         </div>
       </div>
@@ -220,7 +217,7 @@ export const FileUpload: React.FC<FileUploadProps> = ({onFileSelect, onFileUploa
       {uploadedFiles.length > 0 && (<div className ="mt-4, space-y-2">
           <div className ="flex, items-center, justify-between">
             <h3 className ="text-sm, font-medium, text-gray-900">
-              Selected, Files ({uploadedFiles.length})
+              SelectedFiles ({uploadedFiles.length})
             </h3>
             <div className="flex space-x-2">
               <button
@@ -248,7 +245,7 @@ export const FileUpload: React.FC<FileUploadProps> = ({onFileSelect, onFileUploa
                   {showPreview && uploadedFile.preview ? (
                     <Image src ={uploadedFile.preview}
                       alt={uploadedFile.file.name}
-                      className="h-10, w-10 : rounded object-cover"
+                      className="h-10 : w-10  : rounded object-cover"
                       width={40}
                       height={40}
                     />
@@ -267,10 +264,10 @@ export const FileUpload: React.FC<FileUploadProps> = ({onFileSelect, onFileUploa
                     {formatFileSize(uploadedFile.file.size)}
                   </p>
                   
-                  {/* Progress, Bar */}
+                  {/* ProgressBar */}
                   {showProgress && uploadedFile.status === 'uploading'&& (<div className ="mt-1">
                       <div className ="bg-gray-200, rounded-full, h-1">
-                        <div className ="bg-blue-600, h-1, rounded-full, transition-allduration-300"
+                        <div className ="bg-blue-600, h-1rounded-fulltransition-allduration-300"
                           style={{ width: `${uploadedFile.progress}%` }}
                         ></div>
                       </div>

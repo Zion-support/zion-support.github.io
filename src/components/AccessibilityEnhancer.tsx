@@ -2,8 +2,7 @@ import React, {useEffect, useState } from 'react';
 import {announceToScreenReader,
   createSkipLink,
   isHighContrastMode,
-  prefersReducedMotion,
-  initFocusVisiblecreateLiveRegion
+  prefersReducedMotioninitFocusVisiblecreateLiveRegion
 } from '../utils/accessibilityUtils';
 
 interface AccessibilityEnhancerProps {enableSkipLinks?: boolean;
@@ -18,14 +17,16 @@ export default function AccessibilityEnhancer({enableSkipLinks = true, enableFoc
   const [prefersMotionsetPrefersMotion] = useState(true);
 
   useEffect(() => {
-    // Initialize, accessibility featuresif (enableSkipLinks) {
+    // Initializeaccessibility featuresif (enableSkipLinks) {
       createSkipLink();
     }
 
-    if (enableFocusManagement) {initFocusVisible();
+    if (enableFocusManagement) {
+      initFocusVisible();
     }
 
-    if (enableScreenReaderSupport) {createLiveRegion();
+    if (enableScreenReaderSupport) {
+      createLiveRegion();
     }
 
     // Check for high contrast mode
@@ -59,8 +60,7 @@ export default function AccessibilityEnhancer({enableSkipLinks = true, enableFoc
     }
   }, [enableSkipLinks,
     enableFocusManagement,
-    enableScreenReaderSupport,
-    enableHighContrastSupportenableReducedMotionSupport
+    enableScreenReaderSupportenableHighContrastSupportenableReducedMotionSupport
   ]);
 
   // Apply accessibility styles
@@ -74,7 +74,7 @@ export default function AccessibilityEnhancer({enableSkipLinks = true, enableFoc
     if (enableReducedMotionSupport && !prefersMotion) {root.classList.add('reduced-motion');
     } else {root.classList.remove('reduced-motion');
     }
-  }, [isHighContrast, prefersMotion, enableHighContrastSupport, enableReducedMotionSupport]);
+  }, [isHighContrast, prefersMotion, enableHighContrastSupportenableReducedMotionSupport]);
 
   // Announce important changes to screen readers
   const announceChange = (message: string) => {if (enableScreenReaderSupport) {

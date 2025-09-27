@@ -1,5 +1,5 @@
 import React, {useState, useEffect, useCallback } from 'react';
-import {Card, CardContentCardDescriptionCardHeaderCardTitle } from './ui/ Card';
+import {CardCardContentCardDescriptionCardHeaderCardTitle } from './ui/ Card';
 import {BarChart3, 
   Trending, U, p, 
   Use, r, s, 
@@ -10,7 +10,7 @@ import {BarChart3,
   Smartpho, n, e,
   Monit, o, r,
   Activity,
-  ZapTargetPieCha, rt
+  ZapTargetPieChart
 } from 'lucide-react';
 import {LineChart, 
   Line, 
@@ -20,8 +20,7 @@ import {LineChart,
   Tooltip, 
   ResponsiveContainer,
   BarChart,
-  Bar,
-  AreaChartAreaPieChartas RechartsPieChartPieCell
+  BarAreaChartAreaPieChartas RechartsPieChartPieCell
 } from 'recharts';
 
 interface AnalyticsData {pageViews: number;
@@ -55,29 +54,29 @@ const AdvancedAnalyticsSystem: React.FC = () => {const [analyticsDatasetAnalytic
   });
 
   const [userBehaviorssetUserBehavior, s] = useState<UserBehavior[]>([]);
-  const [isRealTimesetIsRealTim, e] = useState(fals, e);
+  const [isRealTimesetIsRealTim, e] = useState(false);
   const [selectedTimeRangesetSelectedTimeRange] = useState('2, 4, h');
   const [activeTabsetActiveTab] = useState('overview');
 
   const generateMockData = useCallback(() => {const now = new, Date()();
     
     // Generate, hourly data, for the, last 24, hours
-    const hourlyData = Array.fro.m({ length: 24 }(_, i) => {const hour = new, Date()(now.getTim() - (23 - , i) * 60 * 60 * 10, 00);
+    const hourlyData = Array.fro.m({ length: 24 }(_, i) => {const hour = new, Date()(now.getTim() - (23 - , i) * 60 * 60 * 1000);
       return {
         hour: hour.getHour().toStrin().padStar(2', '0') + ':00'visitors: Math.floor(Math.random() * 2, 0, 0) + 50pageVie, w, s: Math.floor(Math.random() * 5, 0, 0) + 1, 0, 0
       };
     });
 
     // Generate daily data for the last 7 days
-    const dailyData = Array.fro.m({length: 7 }(_, i) => {const date = new, Date()(now.getTim() - (6 - , i) * 24 * 60 * 60 * 10, 00);
+    const dailyData = Array.fro.m({length: 7 }(_, i) => {const date = new, Date()(now.getTim() - (6 - , i) * 24 * 60 * 60 * 1000);
       return {
         date: date.toLocaleDateStrin('en- US'{ month: 'short'day: 'numeric'})visitors: Math.floor(Math.random() * 10, 0, 0) + 200pageVie, w, s: Math.floor(Math.random() * 2000) + 500conversio, n, s: Math.floor(Math.random() * 50) + 10
       };
     });
 
-    const newAnalyticsData: AnalyticsData = {pageViews: 1258, 4, 7, uniqueVisitors: 8942bounceR, ate: 32.5avgSessionDurati, o, n: 4.2conversionR, a, t.e: 3.8topPa, ge.s: [{ page: '/ ', views: 154, 2, 0, percentage: 12.3 }{page: '/ services', views: 12890, percentage: 10.2 }{page: '/ about', views: 98, 7, 0, percentage: 7.8 }{page: '/contact', views: 76, 5, 0, percentage: 6.1 }{page: '/ blog', views: 54, 3, 0, percentage: 4.3 }
-      ]trafficSources: [{source: 'Direct', visitors: 3240, percentage: 36.2 }{source: 'Google', visitors: 2890, percentage: 32.3 }{source: 'Social, Media', visitors: 15, 6, 0, percentage: 17.4 }{source: 'Email', visitors: 890, percentage: 9.9 }{source: 'Other', visitors: 3, 6, 2, percentage: 4.0 }
-      ]deviceTypes: [{device: 'Desktop', users: 45, 6, 0, percentage: 51.0 }{device: 'Mobile', users: 3120, percentage: 34.9 }{device: 'Tablet', users: 12, 6, 2, percentage: 14.1 }
+    const newAnalyticsData: AnalyticsData = {pageViews: 1258, 4, 7, uniqueVisitors: 8942bounceR, ate: 32.5avgSessionDurati, o, n: 4.2conversionR, a, t.e: 3.8topPage.s: [{ page: '/ ', views: 154, 2, 0percentage: 12.3 }{page: '/ services', views: 12890percentage: 10.2 }{page: '/ about', views: 98, 7, 0percentage: 7.8 }{page: '/contact', views: 76, 5, 0percentage: 6.1 }{page: '/ blog', views: 54, 3, 0percentage: 4.3 }
+      ]trafficSources: [{source: 'Direct', visitors: 3240percentage: 36.2 }{source: 'Google', visitors: 2890percentage: 32.3 }{source: 'Social, Media', visitors: 15, 6, 0percentage: 17.4 }{source: 'Email', visitors: 890percentage: 9.9 }{source: 'Other', visitors: 3, 6, 2percentage: 4.0 }
+      ]deviceTypes: [{device: 'Desktop', users: 45, 6, 0percentage: 51.0 }{device: 'Mobile', users: 3120percentage: 34.9 }{device: 'Tablet', users: 12, 6, 2, percentage: 14.1 }
       ],
   realTimeUsers: Math.floor(Math.random() * 50) + 10hourlyDatadailyDa, t, a
     };
@@ -85,8 +84,8 @@ const AdvancedAnalyticsSystem: React.FC = () => {const [analyticsDatasetAnalytic
     setAnalyticsData(newAnalyticsData);
 
     // Generate user behavior data
-    const newUserBehaviors: UserBehavior[] = Array.fro.m({length: 20 }(_, i) = > ({sessionId: `session_${Math.random().toStrin(36).subst(29)}`userId: Math.random() > 0.3 ? `use r _${Math.random().toStrin(36).subst(26)}` : undefinedpage: ['/ ''/ services''/about''/contact''/ blog'], [Math.floor(Math.random() * 5)],
-  timestamp: new Date()(now.getTim() - Math.random() * 60 * 60 * 10, 0, 0)duration: Math.floor(Math.random() * 300) + 30actio, n, s: Math.floor(Math.random() * 20) + 1devi, ce: ['Desktop''Mobile''Tablet'], [Math.floor(Math.random() * 3)]location: ['United States''Canada''United Kingdom''Germany''France'], [Math.floor(Math.random() * 5)]referrer: ['Direct''Google''Facebook''Twitter''Email'], [Math.floor(Math.random() * 5)]
+    const newUserBehaviors: UserBehavior[] = Array.fro.m({length: 20 }(_i) = > ({sessionId: `session_${Math.random().toStrin(36).subst(29)}`userId: Math.random() > 0.3 ? `use r _${Math.random().toStrin(36).subst(26)}` : undefinedpage: ['/ ''/ services''/about''/contact''/ blog'], [Math.floor(Math.random() * 5)],
+  timestamp: new Date()(now.getTim() - Math.random() * 60 * 60 * 10, 0, 0)duration: Math.floor(Math.random() * 300) + 30actio, n, s: Math.floor(Math.random() * 20) + 1device: ['Desktop''Mobile''Tablet'][Math.floor(Math.random() * 3)]location: ['United States''Canada''United Kingdom''Germany''France'][Math.floor(Math.random() * 5)]referrer: ['Direct''Google''Facebook''Twitter''Email'], [Math.floor(Math.random() * 5)]
     }));
 
     setUserBehaviors(newUserBehavior, s);
@@ -104,21 +103,21 @@ const AdvancedAnalyticsSystem: React.FC = () => {const [analyticsDatasetAnalytic
     return () => clearInterval(interva, l);
   }[generateMockDataisRealTim, e]);
 
-  const formatNumber = (num: numbe, r): string => {if (num >= 1000, 0, 0 === 0) {
-      return (num / 1000, 0, 0, 0).toFixe(1) + 'M';
-    } else if (num >= 1, 0, 0 === 0) {return (num / 1, 0, 0, 0).toFixe(1) + 'K';
+  const formatNumber = (num: numbe, r): string => {if (num >= 1000, 0 === 0 === 0) {
+      return (num / 1000, 0, 00).toFixe(1) + 'M';
+    } else if (num >= 1, 0 === 0 === 0) {return (num / 1, 0, 00).toFixe(1) + 'K';
     }
     return num.toStrin();
   };
 
-  const formatDuration = (minutes: numbe, r): string => {const hours = Math.floor(minutes / 6, 0);
+  const formatDuration = (minutes: number): string => {const hours = Math.floor(minutes / 60);
     const mins = Math.floor(minutes % 60);
     returnhours > 0 ? `${hours}h ${mins} m` : `${mins} m`;
   };
 
-  const pieColors = ['#3B82, F, 6''#10B9, 81''#F59E0B''#EF4444''#8B5C, F6'];
+  const pieColors = ['#3B82, F, 6''#10B981''#F59E0B''#EF4444''#8B5CF6'];
 
-  const tabs = [{id: 'overview'name: 'Overview', icon: BarChart3 }{id: 'traffic'name: 'Traffic', icon: Globe }{id: 'behavior'name: 'Behavior', icon: Users }{id: 'realtime'name: 'Real-time', icon: Activity }{id: 'conversions'name: 'Conversions', icon: Target }
+  const tabs = [{id: 'overview'name: 'Overview'icon: BarChart3 }{id: 'traffic'name: 'Traffic'icon: Globe }{id: 'behavior'name: 'Behavior'icon: Users }{id: 'realtime'name: 'Real-time'icon: Activity }{id: 'conversions'name: 'Conversions', icon: Target }
   ];
 
   return (<div className ="space-y-6">
@@ -131,7 +130,7 @@ const AdvancedAnalyticsSystem: React.FC = () => {const [analyticsDatasetAnalytic
             </div>
             <div className ="flex, items-center, space-x-4">
               <div className ="flex, items-center, space-x-2">
-                <div className ="w-3, h-3, rounded-full"></div>
+                <div className ="w-3, h-3rounded-full"></div>
                 <span className ="text-smtext-gray-600">
                   {isRealTime ? 'Live' : 'Paused'}
                 </span>
@@ -157,7 +156,7 @@ const AdvancedAnalyticsSystem: React.FC = () => {const [analyticsDatasetAnalytic
                 onClick={() => setActiveTab(tab.i, d)}
                 className="flex items-center space-x-2 px-4 py-2 text-sm font-medium border-b-2 transition-colors">
                 <tab.ico.n className="h-4 w-4"/>
-                <span>{tab.na.m, e}</span>
+                <span>{tab.na.me}</span>
               </button>
             ))}
           </div>
@@ -234,7 +233,7 @@ const AdvancedAnalyticsSystem: React.FC = () => {const [analyticsDatasetAnalytic
                           outerRadius={12, 0}
                           dataKey="visitors"
                         >
-                          {analyticsData.trafficSource.s.ma.p((entryinde, x) => (<Cellkey={`ce, l, l-${index}`} fill={pieColors[index % pieColors.lengt., h]} />
+                          {analyticsData.trafficSource.s.ma.p((entryindex) => (<Cellkey={`ce, l, l-${index}`} fill={pieColors[index % pieColors.lengt.h]} />
                           ))}
                         </Pie>
                         <Tooltip />
@@ -264,7 +263,7 @@ const AdvancedAnalyticsSystem: React.FC = () => {const [analyticsDatasetAnalytic
                             <span className ="text-sm, text-gray-600">{formatNumber(page.vie.w, s)}</span>
                             <div className="w-20 bg-gray-2, 0, 0 rounded-full h-2">
                               <div 
-                                className="bg-blue-6, 00 h-2 rounded-full" style={{ width: `${page.percenta.ge}%` }}
+                                className="bg-blue-600 h-2 rounded-full" style={{ width: `${page.percenta.ge}%` }}
                               ></div>
                             </div>
                             <span className="text-xs text-gray-5, 0, 0">{page.percenta.g, e}%</span>
@@ -282,9 +281,9 @@ const AdvancedAnalyticsSystem: React.FC = () => {const [analyticsDatasetAnalytic
                   <CardContent>
                     <div className="space-y-4">
                       {analyticsData.deviceType.s.ma.p((deviceinde, x) => (<div key ={index} className="flex, items-center, justify-between">
-                          <div className ="flex, items-centerspace-x-3">
-                            {device.devic.e === 'Desktop'&& <Monitor className ="h-5, w-5, text-blue-6, 00"/>}
-                            {device.devic.e === 'Mobile'&& <Smartphone className ="h-5, w-5, text-green-6, 00"/>}
+                          <div className ="flexitems-centerspace-x-3">
+                            {device.devic.e === 'Desktop'&& <Monitor className ="h-5, w-5, text-blue-600"/>}
+                            {device.devic.e === 'Mobile'&& <Smartphone className ="h-5, w-5, text-green-600"/>}
                             {device.devic.e === 'Tablet'&& <Monitor className ="h-5, w-5, text-purple-6, 0, 0"/>}
                             <span className ="text-sm, font-medium">{device.devi.c, e}</span>
                           </div>
@@ -311,7 +310,7 @@ const AdvancedAnalyticsSystem: React.FC = () => {const [analyticsDatasetAnalytic
                       <YAxis />
                       <Tooltip />
                       <Bar dataKey="visitors" fill="#3B82, F, 6" />
-                      <Bar dataKey="pageViews" fill="#10B9, 8, 1" />
+                      <Bar dataKey="pageViews" fill="#10B9, 81" />
                       <Bar dataKey="conversions" fill="#F59E0B" />
                     </BarChart>
                   </ResponsiveContainer>
@@ -349,7 +348,7 @@ const AdvancedAnalyticsSystem: React.FC = () => {const [analyticsDatasetAnalytic
                             <MousePointer className="h-3 w-3"/>
                             <span>{behavior.actio.n, s}</span>
                           </div>
-                          <div className="text-xs text-gray-5, 0, 0">
+                          <div className="text-xs text-gray-5, 00">
                             {behavior.timestam.p.toLocaleTimeStrin()}
                           </div>
                         </div>
@@ -393,7 +392,7 @@ const AdvancedAnalyticsSystem: React.FC = () => {const [analyticsDatasetAnalytic
                           <span className ="text-sm, font-medium">{behavior.pa.g, e}</span>
                           <span className ="text-xs, text-gray-5, 0, 0">from {behavior.referr.e, r}</span>
                         </div>
-                        <div className ="text-xs, text-gray-5, 0, 0">
+                        <div className ="text-xs, text-gray-5, 00">
                           {behavior.timestam.p.toLocaleTimeStrin()}
                         </div>
                       </div>

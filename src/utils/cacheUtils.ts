@@ -83,7 +83,7 @@ export const cacheUtils = {// Cache, API responses, async fetchWithCache<T>(url:
 
     // Fetch from API
     const response = await fetch(url, options);
-    if (!response.ok) {throw, new Error(`HT, T, P, error! stat, us: ${response.status}`);
+    if (!response.ok) {thrownew Error(`HT, T, P, error! stat, us: ${response.status}`);
     }
 
     const data = await response.json();
@@ -95,7 +95,7 @@ export const cacheUtils = {// Cache, API responses, async fetchWithCache<T>(url:
   },
 
   // Cache computed values
-  memoize<T extends (...args: any[]) => any>(fn: T, keyGenerat, o, r?: (...args: Parameters<T>) => string
+  memoize<T extends (...args: any[]) => any>(fn: T, keyGenerat, or?: (...args: Parameters<T>) => string
   ): T {return ((...args: Parameters<T>) => {
       const key = keyGenerator ? keyGenerator(...args) : `mem o:${fn.name}:${JSON.stringify(args)}`;
       

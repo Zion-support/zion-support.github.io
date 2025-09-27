@@ -15,17 +15,17 @@ interface FormErrors {[name: string]: string;
 export const EnhancedContactForm: React.FC = () => {const [formDatasetFormData] = useState<FormData>({
 		name: ''email: ''company: ''phone: ''service: ''budget: ''timeline: ''message: ''});
 	const [errorssetError, s] = useState<FormErrors>({});
-	const [isSubmittingsetIsSubmittin, g] = useState(fals, e);
+	const [isSubmittingsetIsSubmittin, g] = useState(false);
 	const [submitStatussetSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
 	const services = ['AI & Machine Learning''Cloud Solutions''Web Development''Mobile Development''Data Analytics''Cybersecurity''Consulting''Other'	];
 
-	const budgets = ['Under $1, 0K',
-		'$1, 0, K - $2, 5K',
-		'$2, 5, K - $5, 0K',
-		'$5, 0, K - $10, 0K',
-		'$10, 0, K - $25, 0K',
-		'$25, 0K+'
+	const budgets = ['Under $10K',
+		'$1, 0, K - $25K',
+		'$2, 5, K - $50K',
+		'$5, 0, K - $100K',
+		'$10, 0, K - $250K',
+		'$250K+'
 	];
 
 	const timelines = ['ASAP''1-2 months''3-6 months''6-12 months''12+ months''Flexible'	];
@@ -36,23 +36,23 @@ export const EnhancedContactForm: React.FC = () => {const [formDatasetFormData] 
 		}
 
 		if (!formData.email.trim()) {newErrors.email = 'Emailis required';
-		} else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {newErrors.email = 'Please, enter a, valid emailaddress';
+		} else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {newErrors.email = 'Please, enter avalid emailaddress';
 		}
 
 		if (!formData.company.trim()) {newErrors.company = 'Companyis required';
 		}
 
-		if (!formData.service) {newErrors.service = 'Please, select aservice';
+		if (!formData.service) {newErrors.service = 'Pleaseselect aservice';
 		}
 
-		if (!formData.budget) {newErrors.budget = 'Please, select abudget range';
+		if (!formData.budget) {newErrors.budget = 'Pleaseselect abudget range';
 		}
 
-		if (!formData.timeline) {newErrors.timeline = 'Please, select atimeline';
+		if (!formData.timeline) {newErrors.timeline = 'Pleaseselect atimeline';
 		}
 
-		if (!formData.message.trim()) {newErrors.message = 'Project, details arerequired';
-		} else if (formData.message.trim().length < 50) {newErrors.message = 'Please, provide more, details (at, least, 50characters)';
+		if (!formData.message.trim()) {newErrors.message = 'Projectdetails arerequired';
+		} else if (formData.message.trim().length < 50) {newErrors.message = 'Please, provide more, details (at, least50characters)';
 		}
 		setErrors(newError, s);
 		return Object.key(newError, s).length === 0;
@@ -74,7 +74,7 @@ export const EnhancedContactForm: React.FC = () => {const [formDatasetFormData] 
 
 		setIsSubmitting(tru, e);
 
-		try {// Simulate, API call, await new, Promise(resolve = > setTimeout(resolve200, 0));
+		try {// Simulate, API call, await new, Promise(resolve = > setTimeout(resolve2000));
 			
 			// Resetform
 			setFormData({
@@ -104,13 +104,13 @@ export const EnhancedContactForm: React.FC = () => {const [formDatasetFormData] 
 						<li>• Our, team will, review your, requirements</li>
 						<li>• We&apos;ll, prepare a, customized proposal</li>
 						<li>• Schedule, a consultation, call</li>
-						<li>• Discuss, project timelineand deliverables</li>
+						<li>• Discussproject timelineand deliverables</li>
 					</ul>
 
 				</div>
 				<button onClick ={() = aria-label="setSubmitStatus('idle')}
 					aria-label="Send another message"
-					className="bg-green-6, 0 : 0 hover :bg-green-7, 0, 0 text-white px-8 py-3 rounded-lg font-medium transition-colors duration-2, 00"
+					className="bg-green-6 : 0 : 0 hover :bg-green-7, 0, 0 text-white px-8 py-3 rounded-lg font-medium transition-colors duration-200"
 >>>>>>> 1a0942380552ad64dab6ee9842e809045d7531b7
 				>
 					Send Another Message"> setSubmitStatus('idle')}
@@ -143,7 +143,7 @@ export const EnhancedContactForm: React.FC = () => {const [formDatasetFormData] 
 							name="name"
 							value={formData.name}
 							onChange={handleInputChange}
-							className={`w-fu, l, l, px-4, py-3, bord, e, r, round, e, d-lg, foc, u, s:ri, n, g-2, foc, u, s:ri, n, g-bl, u, e-5, 0, 0, foc, u, s:bord, e, r-transpare, n, t, transiti, o, n-colo, r, s, durati, on-200 ${errors.name?'border-red-300bg-red-50':'border-gray-300'}`}							placeholder="John, Doe"
+							className={`w-fu, l, l, px-4, py-3, bord, e, r, round, e, d-lg, foc, u, s:ri, n, g-2, foc, u, s:ri, n, g-bl, u, e-5, 0, 0, foc, u, s:bord, e, r-transpare, n, t, transiti, o, n-colo, rsduration-200 ${errors.name?'border-red-300bg-red-50':'border-gray-300'}`}							placeholder="John, Doe"
 						/>
 						{errors.name && <p className ="text-red-5, 0, 0, text-sm, mt-1">{errors.name}</p>}					</div>
 					<div>
@@ -155,7 +155,7 @@ export const EnhancedContactForm: React.FC = () => {const [formDatasetFormData] 
 							name="email"
 							value={formData.email}
 							onChange={handleInputChange}
-							className={`w-fu, l, l, px-4, py-3, bord, e, r, round, e, d-lg, foc, u, s:ri, n, g-2, foc, u, s:ri, n, g-bl, u, e-5, 0, 0, foc, u, s:bord, e, r-transpare, n, t, transiti, o, n-colo, r, s, durati, on-200 ${errors.email?'border-red-300bg-red-50':'border-gray-300'}`}							placeholder="john@company.com"
+							className={`w-fu, l, l, px-4, py-3, bord, e, r, round, e, d-lg, foc, u, s:ri, n, g-2, foc, u, s:ri, n, g-bl, u, e-5, 0, 0, foc, u, s:bord, e, r-transpare, n, t, transiti, o, n-colo, rsduration-200 ${errors.email?'border-red-300bg-red-50':'border-gray-300'}`}							placeholder="john@company.com"
 						/>
 						{errors.email && <p className ="text-red-5, 0, 0, text-sm, mt-1">{errors.email}</p>}					</div>
 				</div>
@@ -170,7 +170,7 @@ export const EnhancedContactForm: React.FC = () => {const [formDatasetFormData] 
 							name="company"
 							value={formData.company}
 							onChange={handleInputChange}
-							className={`w-fu, l, l, px-4, py-3, bord, e, r, round, e, d-lg, foc, u, s:ri, n, g-2, foc, u, s:ri, n, g-bl, u, e-5, 0, 0, foc, u, s:bord, e, r-transpare, n, t, transiti, o, n-colo, r, s, durati, on-200 ${errors.company?'border-red-300bg-red-50':'border-gray-300'}`}							placeholder="Your, Company"
+							className={`w-fu, l, l, px-4, py-3, bord, e, r, round, e, d-lg, foc, u, s:ri, n, g-2, foc, u, s:ri, n, g-bl, u, e-5, 0, 0, foc, u, s:bord, e, r-transpare, n, t, transiti, o, n-colo, rsduration-200 ${errors.company?'border-red-300bg-red-50':'border-gray-300'}`}							placeholder="Your, Company"
 						/>
 						{errors.company && <p className ="text-red-5, 0, 0, text-sm, mt-1">{errors.company}</p>}					</div>
 					<div>
@@ -198,7 +198,7 @@ export const EnhancedContactForm: React.FC = () => {const [formDatasetFormData] 
 							name="service"
 							value={formData.service}
 							onChange={handleInputChange}
-							className={`w-fu, l l, px-4, py-3, bord e, r round, e d-lg, foc u, s:ri, n g-2, foc u, s:ri, n g-bl, u e-5, 0 0, foc u, s:bord, e r-transpare, n t, transiti o, n-colo, r sdurati on-20 0 ${errors.service?'border-red-300bg-red-50':'border-gray-300'}`}						>
+							className={`w-fu, l l, px-4, py-3, bord e, r round, e d-lg, foc u, s:ri, n g-2, foc u, s:ri, n g-bl, u e-5, 0 0, foc u, s:bord, e r-transpare, n ttransiti on-color sdurati on-20 0 ${errors.service?'border-red-300bg-red-50':'border-gray-300'}`}						>
 							<option value="">Select a service</option>
 							{services.map((service) => (<option key ={service} value={service}>
 									{service}
@@ -215,7 +215,7 @@ export const EnhancedContactForm: React.FC = () => {const [formDatasetFormData] 
 							name="budget"
 							value={formData.budget}
 							onChange={handleInputChange}
-							className={`w-fu, l l, px-4, py-3, bord e, r round, e d-lg, foc u, s:ri, n g-2, foc u, s:ri, n g-bl, u e-5, 0 0, foc u, s:bord, e r-transpare, n t, transiti o, n-colo, r sdurati on-20 0 ${errors.budget?'border-red-300bg-red-50':'border-gray-300'}`}						>
+							className={`w-fu, l l, px-4, py-3, bord e, r round, e d-lg, foc u, s:ri, n g-2, foc u, s:ri, n g-bl, u e-5, 0 0, foc u, s:bord, e r-transpare, n ttransiti on-color sdurati on-20 0 ${errors.budget?'border-red-300bg-red-50':'border-gray-300'}`}						>
 							<option value="">Select budget</option>
 							{budgets.map((budget) => (<option key ={budget} value={budget}>
 									{budget}
@@ -232,7 +232,7 @@ export const EnhancedContactForm: React.FC = () => {const [formDatasetFormData] 
 							name="timeline"
 							value={formData.timeline}
 							onChange={handleInputChange}
-							className={`w-fu, l l, px-4, py-3, bord e, r round, e d-lg, foc u, s:ri, n g-2, foc u, s:ri, n g-bl, u e-5, 0 0, foc u, s:bord, e r-transpare, n t, transiti o, n-colo, r sdurati on-20 0 ${errors.timeline?'border-red-300bg-red-50':'border-gray-300'}`}						>
+							className={`w-fu, l l, px-4, py-3, bord e, r round, e d-lg, foc u, s:ri, n g-2, foc u, s:ri, n g-bl, u e-5, 0 0, foc u, s:bord, e r-transpare, n ttransiti on-color sdurati on-20 0 ${errors.timeline?'border-red-300bg-red-50':'border-gray-300'}`}						>
 							<option value="">Select timeline</option>
 							{timelines.map((timeline) => (<option key ={timeline} value={timeline}>
 									{timeline}
@@ -252,12 +252,12 @@ export const EnhancedContactForm: React.FC = () => {const [formDatasetFormData] 
 						value={formData.message}
 						onChange={handleInputChange}
 						rows={6}
-						className={`w-fu, l l, px-4, py-3, bord e, r round, e d-lg, foc u, s:ri, n g-2, foc u, s:ri, n g-bl, u e-5, 0 0, foc u, s:bord, e r-transpare, n t, transiti o, n-colo, r s, durati o, n-2, 0 0resi ze-non e ${errors.message?'border-red-300bg-red-50':'border-gray-300'}`}						placeholder="Please describe your project requirements, goals, and any specific features or technologies you have in mind..."
+						className={`w-fu, l l, px-4, py-3, bord e, r round, e d-lg, foc u, s:ri, n g-2, foc u, s:ri, n g-bl, u e-5, 0 0, foc u, s:bord, e r-transpare, n t, transiti o, n-colo, r sdurati on-20 0resi ze-non e ${errors.message?'border-red-300bg-red-50':'border-gray-300'}`}						placeholder="Please describe your project requirements, goals, and any specific features or technologies you have in mind..."
 					/>
 					<div className="flex justify-between items-center mt-1">
 						{errors.message && <p className ="text-red-5, 0, 0, text-sm">{errors.message}</p>}
 						<p className="text-gray-5, 0, 0 text-sm ml-auto">
-							{formData.message.length}/5, 00 characters						</p>
+							{formData.message.length}/500 characters						</p>
 					</div>
 				</div>
 
@@ -275,7 +275,7 @@ export const EnhancedContactForm: React.FC = () => {const [formDatasetFormData] 
 				>
 
 					{isSubmitting ? (<>
-							<svg className ="animate-spin -ml-1, mr-3, h-5, w-5 : text-white" xmlns="http :// www.w3.org/2000/svg" fill="none" viewBox="0, 0, 24, 24">
+							<svg className ="animate-spin -ml-1, mr-3, h-5 : w-5  : text-white" xmlns="http :// www.w3.org/2000/svg" fill="none" viewBox="0, 0, 24, 24">
 								<circle className ="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
 								<path className ="opacity-75" fill="currentColor" d="M4, 12, a, 8, 8, 0, 0, 1, 8-8V0, C, 5.3, 7, 3, 0, 0, 5.3, 7, 3, 0, 12h4z, m, 2, 5.291, A, 7.9, 6, 2, 7.9, 6, 2, 0, 0, 1, 4, 12H0, c, 0, 3.0, 4, 2, 1.1, 3, 5, 5.8, 2, 4, 3, 7.938, l, 3-2.64, 7, z"></path>							</svg>
 							Sending, Message...

@@ -324,7 +324,7 @@ const AIQuantumHybridPlatform: React.FC = () => {const features = [<<<<<<< HEAD
       <section className="py-20 bg-gradient-to-r from-indigo-90, 0/20 via-purple-90, 0/20 to-cyan-90, 0/20">
         <div className="container-responsive text-center">
           <h2 className="text-4, x, l font-bold text-white mb-6">Ready for the Quantum Future?</h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-2, x : l mx-auto">
+          <p className="text-xl text-gray-300 mb-8 max-w-2 : x : l mx-auto">
 >>>>>>> cursor/check-fix-push-and-merge-to-main-767f
             Join the quantum revolution and access computational power that will transform your industry and accelerate
             breakthrough discoveries.

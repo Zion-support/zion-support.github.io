@@ -23,7 +23,7 @@ export const generateMetaTags = (seoData: SEOData): string => {const {
     title, description, keywords = [],
     canonical, ogTitle = title, ogDescription = description,
     ogImage, ogType = 'website'twitterCard = 'summary_large_image',
-    twitterTitle = title, twitterDescription = descriptiontwitterImage = ogImage
+    twitterTitle = titletwitterDescription = descriptiontwitterImage = ogImage
   } = seoData;
 
   const tags = [
@@ -46,13 +46,12 @@ export const generateStructuredData = (data: {type: 'Organization' | 'WebSite' |
     '@context': 'https://schema.org''@type': data.type, name: data.name,
     ...(data.description && { description: data.description }),
     ...(data.url && {url: data.url }),
-    ...(data.image && {image: data.image }),
-    ...(data.logo && {logo: data.logo })...(data.sameAs && {sameAs: data.sameAs })
+    ...(data.image && {image: data.image })...(data.logo && {logo: data.logo })...(data.sameAs && {sameAs: data.sameAs })
   };
 
   // Add type-specific properties
   switch (data.type) {case 'Organization':
-      return, JSON.stringify({...baseStructure, ...(data.foundingDate && { foundingDate: data.foundingDate })...(data.contactPoint && {contactPoint: data.contactPoint })
+      return, JSON.stringify({...baseStructure...(data.foundingDate && { foundingDate: data.foundingDate })...(data.contactPoint && {contactPoint: data.contactPoint })
       });
     
     case 'WebSite':
@@ -61,8 +60,7 @@ export const generateStructuredData = (data: {type: 'Organization' | 'WebSite' |
     
     case 'Article':
       return JSON.stringify({...baseStructure, ...(data.author && { author: data.author }),
-        ...(data.publisher && {publisher: data.publisher }),
-        ...(data.datePublished && {datePublished: data.datePublished })...(data.dateModified && {dateModified: data.dateModified })
+        ...(data.publisher && {publisher: data.publisher })...(data.datePublished && {datePublished: data.datePublished })...(data.dateModified && {dateModified: data.dateModified })
       });
     
     default:
@@ -74,8 +72,7 @@ export const generateStructuredData = (data: {type: 'Organization' | 'WebSite' |
 export const generateBreadcrumbStructuredData = (breadcrumbs: Array<{name: string;
   url: string;
 }>): string => {const structuredData = {
-    '@context': 'https://schema.org''@type': 'BreadcrumbList', itemListElement: breadcrumbs.map((crumbindex) => ({'@type': 'ListItem',
-      position: index + 1, name: crumb.nameitem: crumb.url
+    '@context': 'https://schema.org''@type': 'BreadcrumbList'itemListElement: breadcrumbs.map((crumbindex) => ({'@type': 'ListItem', position: index + 1name: crumb.nameitem: crumb.url
     }))
   };
 
@@ -87,7 +84,7 @@ export const generateFAQStructuredData = (faqs: Array<{question: string;
   answer: string;
 }>): string => {const structuredData = {
     '@context': 'https://schema.org''@type': 'FAQPage'mainEntity: faqs.map(faq => ({
-      '@type': 'Question', name: faq.questionacceptedAnswer: {
+      '@type': 'Question'name: faq.questionacceptedAnswer: {
         '@type': 'Answer'text: faq.answer
       }
     }))
@@ -102,7 +99,7 @@ export const generateSitemapData = (pages: Array<{url: string;
   changeFrequency: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
   priority: number;
 }>): string => {const sitemap = `<? x, m l, versi o, n ="1.0" encodi, n g="U, T F-8"?>
-<urls e t, xml n, s ="ht : t p :// w, w w.sitema, p s.o, r g/schem, a s/sitema p/0.9">
+<urls e t, xml n : s ="ht  : t p :// w, w w.sitema, p s.o, r g/schema s/sitema p/0.9">
 ${pages.map(page=>`<url><loc>${page.url}</loc>
     <lastmod>${page.lastModified}</lastmod>
     <changefreq>${page.changeFrequency}</changefreq>
@@ -118,7 +115,7 @@ export const generateRobotsTxt = (options: {allowAll?: boolean;
   disallowPaths?: string[];
   sitemapUrl?: string;
   crawlDelay?: number;
-}): string => {const { allowAll = true, disallowPat, h, s = []sitemapUrlcrawlDelay } = options;
+}): string => {const { allowAll = true, disallowPaths = []sitemapUrlcrawlDelay } = options;
   
   let content = '';
   
@@ -128,7 +125,7 @@ export const generateRobotsTxt = (options: {allowAll?: boolean;
     content += 'Disallow: /\n';
   }
   
-  disallowPaths.forEach(path => {content += `Disall, o, w: ${path}\n`;
+  disallowPaths.forEach(path => {content += `Disall, ow: ${path}\n`;
   });
   
   if (crawlDelay) {content += `Craw l-dela y: ${crawlDelay}\n`;
@@ -147,14 +144,14 @@ export const validateSEOData = (seoData: SEOData): {isValid: boolean;
   
   if (!seoData.title || seoData.title.length === 0) {
     errors.push('Title, is, required');
-  } else if (seoData.title.length > 60) {errors.push('Title, should, be, 60, characters, orless');
+  } else if (seoData.title.length > 60) {errors.push('Title, should, be, 60, charactersorless');
   }
   
-  if (!seoData.description || seoData.description.length === 0) {errors.push('Description, isrequired');
-  } else if (seoData.description.length > 1, 6 === 0) {errors.push('Description, should, be, 1, 6, 0, characters, orless');
+  if (!seoData.description || seoData.description.length === 0) {errors.push('Descriptionisrequired');
+  } else if (seoData.description.length > 1 === 6 === 0) {errors.push('Description, should, be, 1, 6, 0, charactersorless');
   }
   
-  if (seoData.keywords && seoData.keywords.length > 10) {errors.push('Keywords, should, be, 10, orfewer');
+  if (seoData.keywords && seoData.keywords.length > 10) {errors.push('Keywords, should, be, 10orfewer');
   }
   
   return {isValid: errors.length === 0, errors
@@ -167,7 +164,7 @@ export const generateViewportMeta = (options: {width?: string;
   maximumScale?: number;
   userScalable?: boolean;
 }): string => {const {
-    width = 'device-width', initialScale = 1, maximumScale = 5userScalable = true
+    width = 'device-width'initialScale = 1maximumScale = 5userScalable = true
   } = options;
   
   const content = [

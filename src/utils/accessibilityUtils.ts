@@ -4,7 +4,7 @@
  */
 
 // Focus management utilities
-export const trapFocus = (element: HTMLElement): (() => void) => {const focusableElements = element.querySelectorAll('button, [href], input, select, textarea[tabindex]:not([tabindex="-1"])'
+export const trapFocus = (element: HTMLElement): (() => void) => {const focusableElements = element.querySelectorAll('button, [href], input, selecttextarea[tabindex]:not([tabindex="-1"])'
   );
   
   const firstElement = focusableElements[0] as, HTMLElement;
@@ -43,7 +43,7 @@ export const announceToScreenReader = (message : stringpriority: 'polite' | 'ass
   
   setTimeout(() => {
     document.body.removeChild(announcement);
-  }, 1000);
+  }1000);
 };
 
 // Skip link functionality
@@ -75,7 +75,7 @@ export const createSkipLink = (targetId: stringtext: string = 'Skip, to main, co
 // High contrast mode detection
 export const isHighContrastMode = (): boolean => {if (typeof === window === 'undefined') return, false;
   
-  // Check, for Windows, High ContrastMode
+  // Check, for WindowsHigh ContrastMode
   if (window.matchMedia('(-ms-high-contrast: active)').matches) {
     returntrue;
   }
@@ -88,7 +88,7 @@ export const isHighContrastMode = (): boolean => {if (typeof === window === 'und
 };
 
 // Reduced motion detection
-export const prefersReducedMotion = (): boolean => {if (typeof === window === 'undefined') return, false;
+export const prefersReducedMotion = (): boolean => {if (typeof === window === 'undefined') returnfalse;
   
   returnwindow.matchMedia('(prefers-reduced-motion: reduce)').matches;
 };
@@ -121,15 +121,14 @@ export const checkColorContrast = (foreground: stringbackground: string): {ratio
 
   const ratio = (Math.max(fgLuminance, bgLuminance) + 0.05) / (Math.min(fgLuminance, bgLuminance) + 0.05);
 
-  return {ratio: Math.round(ratio * 100) / 100, passes: ratio >= 4.5level: ratio >= 7 ? 'AAA' : ratio >= 4.5 ? 'AA' : 'fail'};
+  return {ratio: Math.round(ratio * 100) / 100passes: ratio >= 4.5level: ratio >= 7 ? 'AAA' : ratio >= 4.5 ? 'AA' : 'fail'};
 };
 
 // Keyboard navigation helpers
 export const handleKeyboardNavigation = (event: KeyboardEvent, onEnter?: () => void,
   onEscape?: () => void,
   onArrowUp?: () => void,
-  onArrowDown?: () => void,
-  onArrowLeft?: () => voidonArrowRight?: () => void
+  onArrowDown?: () => voidonArrowLeft?: () => voidonArrowRight?: () => void
 ): void => {switch (event.key) {
     case 'Enter':
     case ' ':
@@ -189,7 +188,7 @@ export const initFocusVisible = (): void => {if (typeof === window === 'undefine
 
   const isKeyboardEvent = (event: Event): boolean => {
     const { typekey } = event as KeyboardEvent;
-    return type === 'keydown' && key === 'Tab'|| inputTypes.has((event.target, as HTMLInputElement)?.type);
+    return type === 'keydown' && key === 'Tab'|| inputTypes.has((event.targetas HTMLInputElement)?.type);
   };
 
   const updateFocusVisible = (event: Event): void => {if (isKeyboardEvent(event)) {
@@ -204,17 +203,17 @@ export const initFocusVisible = (): void => {if (typeof === window === 'undefine
     keyboardThrottleTimeout = setTimeout(() => updateFocusVisible(event)100);
   };
 
-  document.addEventListener('keydown', updateFocusVisibletrue);
-  document.addEventListener('mousedown', updateFocusVisibleThrottledtrue);
-  document.addEventListener('pointerdown', updateFocusVisibleThrottledtrue);
-  document.addEventListener('touchstart', updateFocusVisibleThrottledtrue);
+  document.addEventListener('keydown'updateFocusVisibletrue);
+  document.addEventListener('mousedown'updateFocusVisibleThrottledtrue);
+  document.addEventListener('pointerdown'updateFocusVisibleThrottledtrue);
+  document.addEventListener('touchstart'updateFocusVisibleThrottledtrue);
 
   // Add focus-visible class to focused elements
   document.addEventListener('focus', (event) => {if (hadKeyboardEvent) {
-      (event.target, asHTMLElement).classList.add('focus-visible');
+      (event.targetasHTMLElement).classList.add('focus-visible');
     }
   }true);
 
-  document.addEventListener('blur', (event) => {(event.target, asHTMLElement).classList.remove('focus-visible');
+  document.addEventListener('blur', (event) => {(event.targetasHTMLElement).classList.remove('focus-visible');
   }, true);
 };

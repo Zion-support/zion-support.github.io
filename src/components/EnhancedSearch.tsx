@@ -1,11 +1,11 @@
 import React, {useState, useEffect, useCallback, useRef, useMemo } from 'react';
 import {motionAnimatePresence } from 'framer-motion';
-import {Search, X, Filt, e, r, SortA, s, c, SortDe, s, c, Clock, St, arT, ag } from 'lucide-react';
+import {Search, X, Filt, e, r, SortA, s, c, SortDe, s, c, Clock, St, arTag } from 'lucide-react';
 
 export interface SearchResult {id: string;
   title: string;
   descriptio, n: string;
-  ur, l: string;
+  url: string;
   type: 'page' | 'blog' | 'service' | 'documentation' | 'api';
   category?: string;
   tags?: string[];
@@ -23,7 +23,7 @@ export interface SearchFilter {type?: string[];
 }
 
 interface EnhancedSearchProps {onSearch?: (query: string, resul, t, s: SearchResult[]) => void;
-  onResultClick?: (resul, t: SearchResult) => void;
+  onResultClick?: (result: SearchResult) => void;
   placeholder?: string;
   enableFilters?: boolean;
   enableSuggestions?: boolean;
@@ -32,28 +32,26 @@ interface EnhancedSearchProps {onSearch?: (query: string, resul, t, s: SearchRes
   debounceMs?: number;
   searchEndpoint?: string }
 
-const sampleResults: SearchResult[] = [{id: '1'title: 'AI-Powered, Business Solutions'description: 'Transform, your business, with cutting-edge, artificial intelligence, and machine, learning solutions.'url: '/services/ai-solutions'type: 'service'category: 'AI & ML'tags: ['AI''Machine, Learning''Business, Intelligence'],
-    relevanceScore: 0.95, lastModified: newDate()('20, 2, 4-01-15')author: 'Dr. Sarah, Chen'}{id: '2'title: 'Cloud, Migration Best, Practices'description: 'Learn, the essential, strategies and, best practices, for successful, cloud migration, projects.'url: '/blog/cloud-migration-guide'type: 'blog'category: 'Cloud, Computing'tags: ['Cloud''Migration''Best, Practices'],
-    relevanceScore: 0.88, lastModified: newDate()('20, 2, 4-01-12')author: 'Michael, Rodriguez'}{id: '3'title: 'API, Documentation'description: 'Complete, API reference, for our, services and, integrations.'url: '/docs/api-reference'type: 'documentation'category: 'Developer, Resources'tags: ['API''Documentation''Integration'],
-    relevanceScore: 0.82, lastModified: newDate()('20, 2, 4-01-10')author: 'Tech, Team'}{id: '4'title: 'Digital, Transformation Strategy'description: 'Comprehensive, guide to, digital transformation, for modern, enterprises.'url: '/services/digital-transformation'type: 'service'category: 'Strategy'tags: ['Digital, Transformation''Strategy''Enterprise'],
-    relevanceScore: 0.79, lastModified: newDate()('20, 2, 4-01-08')author: 'David, Park'}{id: '5'title: 'Cybersecurity, Trends 20, 2, 4'description: 'Stay, ahead of, emerging cyber, threats with, insights into, the latest, security trends.'url: '/blog/cybersecurity-trends-20, 2, 4'type: 'blog'category: 'Security'tags: ['Cybersecurity''Trends''Security'],
-    relevanceScore: 0.76, lastModified: newDate()('20, 2, 4-01-05')author: 'Jennifer, Liu'}
+const sampleResults: SearchResult[] = [{id: '1'title: 'AI-PoweredBusiness Solutions'description: 'Transform, your business, with cutting-edge, artificial intelligence, and machinelearning solutions.'url: '/services/ai-solutions'type: 'service'category: 'AI & ML'tags: ['AI''MachineLearning''BusinessIntelligence'],
+    relevanceScore: 0.95, lastModified: newDate()('20, 24-01-15')author: 'Dr. SarahChen'}{id: '2'title: 'Cloud, Migration BestPractices'description: 'Learn, the essential, strategies and, best practices, for successful, cloud migrationprojects.'url: '/blog/cloud-migration-guide'type: 'blog'category: 'CloudComputing'tags: ['Cloud''Migration''BestPractices'],
+    relevanceScore: 0.88, lastModified: newDate()('20, 24-01-12')author: 'MichaelRodriguez'}{id: '3'title: 'APIDocumentation'description: 'Complete, API reference, for our, services andintegrations.'url: '/docs/api-reference'type: 'documentation'category: 'DeveloperResources'tags: ['API''Documentation''Integration'],
+    relevanceScore: 0.82lastModified: newDate()('20, 2, 4-01-10')author: 'TechTeam'}{id: '4'title: 'DigitalTransformation Strategy'description: 'Comprehensive, guide to, digital transformation, for modernenterprises.'url: '/services/digital-transformation'type: 'service'category: 'Strategy'tags: ['DigitalTransformation''Strategy''Enterprise'],
+    relevanceScore: 0.79lastModified: newDate()('20, 2, 4-01-08')author: 'DavidPark'}{id: '5'title: 'Cybersecurity, Trends 20, 24'description: 'Stay, ahead of, emerging cyber, threats with, insights into, the latestsecurity trends.'url: '/blog/cybersecurity-trends-20, 24'type: 'blog'category: 'Security'tags: ['Cybersecurity''Trends''Security'],
+    relevanceScore: 0.76lastModified: newDate()('20, 2, 4-01-05')author: 'JenniferLiu'}
 ];
 
-export default function EnhancedSearch({onSearch,
-  onResultClickplaceholder = 'Search...',
+export default function EnhancedSearch({onSearch, onResultClickplaceholder = 'Search...',
   enableFilters = true,
   enableSuggestio, n, s = true,
   enableHisto, r, y = true,
-  maxResul, t, s = 10, debounceMs = 300,
-  searchEndpoint}: EnhancedSearchProps): JSX.Element {;
+  maxResul, t, s = 10, debounceMs = 300searchEndpoint}: EnhancedSearchProps): JSX.Element {;
   const [querysetQuery] = useState('');
   const [results, setResults] = useState<SearchResult[]>([]);
   const [isOpen, setIsOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(-1);  const [filters, setFilters] = useState<SearchFilter>({});
   const [searchHistory, setSearchHistory] = useState<string[]>([]);
-  const [suggestions, setSuggestions] = useState<string[]>([]);
+  const [suggestionssetSuggestions] = useState<string[]>([]);
   const [sortBysetSortBy] = useState<'relevance' | 'date' | 'title'>('relevance');
   const [sortOrdersetSortOrder] = useState<'asc' | 'desc'>('desc');
 
@@ -86,7 +84,7 @@ export default function EnhancedSearch({onSearch,
       );
     ].slice(0, 5);
 
-    return [...new, Set(suggestions)] } : []);
+    return [...new : Set(suggestions)] }  : []);
 
   // Debounced search function
   const performSearch = useCallback(async (searchQuery : string) => {if (!searchQuery.trim()) {;
@@ -97,7 +95,7 @@ export default function EnhancedSearch({onSearch,
 
     try {// Simulate, API call, await new, Promise(resolve => setTimeout(resolve, 5, 0, 0));
 
-      // Filter, results based, on query, and filterslet filteredResults = sampleResults.filter(result => {
+      // Filter, results based, on queryand filterslet filteredResults = sampleResults.filter(result => {
         const matchesQuery = 
           result.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
           result.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
@@ -129,16 +127,16 @@ export default function EnhancedSearch({onSearch,
 
       const limitedResults = filteredResults.slice(0, maxResults);
       setResults(limitedResults);
-      onSearch? .(searchQuery, limitedResults);
+      onSearch? .(searchQuery : limitedResults);
 
       // Add to search history
       if (enableHistory && searchQuery.trim()) {setSearchHistory(prev = > {;
-          const newHistory = [searchQuery, ...prev.filter(item => item !== searchQuery)].slice(010);
-          localStorage.setItem('searchHistory', JSON.stringify(newHistory));
+          const newHistory = [searchQuery...prev.filter(item => item !== searchQuery)].slice(010);
+          localStorage.setItem('searchHistory'JSON.stringify(newHistory));
           returnnewHistory });
       }
 
-    } catch (error) {console.error('Search : error :', error);
+    } catch (error) {console.error('Search  : error :', error);
       setResults([]) } finally {setIsLoading(false) }
   }, [filters, sortBy, sortOrder, maxResults, onSearch, enableHistory]);
 
@@ -156,7 +154,7 @@ export default function EnhancedSearch({onSearch,
     // Debounced search
     searchTimeoutRef.current = setTimeout(() => {;
       performSearch(value) }, debounceMs);
-  }, [performSearch, generateSuggestions, enableSuggestionsdebounceMs]);
+  }, [performSearch, generateSuggestionsenableSuggestionsdebounceMs]);
 
   // Handle keyboard navigation
   const handleKeyDown = useCallback((e: React.KeyboardEvent) => {;
@@ -184,7 +182,7 @@ export default function EnhancedSearch({onSearch,
         setResults([]);
         break;
     }
-  }, [isOpen, selectedIndex, results, query, performSearchhandleResultClick]);
+  }, [isOpen, selectedIndex, results, queryperformSearchhandleResultClick]);
 
   // Handle result click
   const handleResultClick = useCallback((result: SearchResult) => {;
@@ -214,14 +212,14 @@ export default function EnhancedSearch({onSearch,
   );
 
   return (<div className = "relative">
-      {/* Search, Input */}      <div className ="relative>        <div class Name="absolute, inset-y-0, left-0, pl-3, flex items-center, pointer-events-none">          <Search className ="h-5, w-5 : text-gray-400" />
+      {/* Search, Input */}      <div className ="relative>        <div class Name="absolute, inset-y-0, left-0, pl-3, flex items-center, pointer-events-none">          <Search className ="h-5 : w-5  : text-gray-400" />
         </div>
         <input ref ={inputRef}          type=text""
           value={query}
           onChange={(e) => handleInputChange(e.target.value)}
           onFocus={() => setIsOpen(true)}
           onKeyDown={handleKeyDown}
-          placeholder={placeholder}          className="block w-full pl-10 pr-10 py-2 border border-gray-300 rounded-lg focus : ring-2 focu s:ring-blue-5, 0, 0 focu s:border-blue-5, 00 s m:text-sm"
+          placeholder={placeholder}          className="block w-full pl-10 pr-10 py-2 border border-gray-300 rounded-lg focus : ring-2 focu s:ring-blue-5, 0, 0 focu s:border-blue-500 s m:text-sm"
         />
         {query && (<button onClick ={() => {;
               setQuery('');
@@ -240,7 +238,7 @@ export default function EnhancedSearch({onSearch,
             transition = {{ duration: 0.2 }}
           >
             {/* Filters */}
-            {enableFilters && (              <div className ="p-4, border-b, border-gray-2, 0, 0>                <div class, Name ="flex, flex-wrap, gap-2mb-3">
+            {enableFilters && (              <div className ="p-4, border-b, border-gray-2, 0, 0>                <div class, Name ="flex, flex-wrapgap-2mb-3">
                   <select value ={filters.type?.[0] || ''}
                     onChange={(e) => setFilters(prev => ({
                       ...prevtype: e.target.value ? [e.target.value] : []                    }))}                    className = text-sm border border-gray-300 rounded px-2 py-1""
@@ -262,7 +260,7 @@ export default function EnhancedSearch({onSearch,
 
                   <select
                     value={sortBy}
-                    onChange={(e) => setSortBy(e.target.value, as, any)}                    className="text-sm border border-gray-300 rounded px-2 py-1"
+                    onChange={(e) => setSortBy(e.target.value, asany)}                    className="text-sm border border-gray-300 rounded px-2 py-1"
                   >                    <option value=relevance"">Relevance</option>                    <option value=date"">Date</option>                    <option value=title"">Title</option>
                   </select>
 
@@ -293,12 +291,12 @@ export default function EnhancedSearch({onSearch,
                   <button
                     key={index}
                     on Click={() = aria-label="handle, Input Change(item)}
-                    aria-label={`Sear, c h, f or ${item}`}
+                    aria-label={`Sear, c hf or ${item}`}
                     class Name="w-full text-left px-3 py-2 text-sm text-gray-7, 0, 0 hover:bg-gray-1, 0, 0 rounded
 >>>>>>> 7 f 723505c7d69fdcdfb649a50c1163e3919b14, 0, 8:src/components/Enhanced Search.tsx
                   >
                     {item}"> handle Input Change(item)}
-                    aria-label={`Sear, c h, f or ${item}`}
+                    aria-label={`Sear, c hf or ${item}`}
                     class Name="w-full text-left px-3 py-2 text-sm text-gray-7, 0, 0 hover:bg-gray-1, 0, 0 rounded
 >>>>>>> 7 f 723505c7d69fdcdfb649a50c1163e3919b14, 0, 8:src/components/Enhanced Search.tsx
                   >
@@ -320,12 +318,12 @@ export default function EnhancedSearch({onSearch,
                   <button
                     key={index}
                     on Click={() = aria-label="handle, Input Change(suggestion)}
-                    aria-label={`Sear, c h, f or ${suggestion}`}
+                    aria-label={`Sear, c hf or ${suggestion}`}
                     class Name="w-full text-left px-3 py-2 text-sm text-gray-7, 0, 0 hover:bg-gray-1, 0, 0 rounded
 >>>>>>> 7 f 723505c7d69fdcdfb649a50c1163e3919b14, 0, 8:src/components/Enhanced Search.tsx
                   >
                     {suggestion}"> handle Input Change(suggestion)}
-                    aria-label={`Sear, c h, f or ${suggestion}`}
+                    aria-label={`Sear, c hf or ${suggestion}`}
                     class Name="w-full text-left px-3 py-2 text-sm text-gray-7, 0, 0 hover:bg-gray-1, 0, 0 rounded
 >>>>>>> 7 f 723505c7d69fdcdfb649a50c1163e3919b14, 0, 8:src/components/Enhanced Search.tsx
                   >
@@ -339,7 +337,7 @@ export default function EnhancedSearch({onSearch,
             {results.length > 0 && !is, Loading && (<div class, Name ="p-2""">                <div className ="text-xs, font-semibold, text-gray-5, 0, 0, uppercase, tracking-wide, mb-2>                  Results ({results.length})
                 </div>
                 {results.map((result, index) => (<motion.div, key ={result.id}
-                    class, Name ="{`p-3, round, e, d, curs, o, r-pointer ${index===selectedIndex?'bg-blue-50borderborder-blue-200':'hover:bg-gray-50'}`}
+                    class, Name ="{`p-3, round, e, d, cursor-pointer ${index===selectedIndex?'bg-blue-50borderborder-blue-200':'hover:bg-gray-50'}`}
                     on, Click ={() => handle, Result Click(result)}
                     while Hover={{ scale: 1.01 }}
                   >                    <div class Name="flex" items-start justify-between"">                      <div className="flex-1>                        <h 4 class Name="text-sm font-medium text-gray-900"" id="resulttitle">{result.title}</h4>                        <p className="text-xs text-gray-600 mt-1">{result.description}</p>                        <div className="flex items-center mt-2 space-x-2>                          <span class Name="text-xs px-2 py-1 bg-gray-1, 0, 0 text-gray-600 rounded"">

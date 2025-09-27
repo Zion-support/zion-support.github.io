@@ -80,7 +80,7 @@ export default function AIProjectManagement() {const features = [<<<<<<< HEAD
       <SEO title ="AI, Project Management, Services - Zion, Tech Group"
         description="Revolutionary, AI-powered, project management, that optimizes, planningresource allocationand, risk management. Deliver, projects fastercheaperand, with higher, success rates."
 =======
-    <div, className ="min-h-screen, bg-gradient-to-br, from-slate-90, 0, via-slate-8, 0, 0, to-slate-90, 0">
+    <div className ="min-h-screen, bg-gradient-to-br, from-slate-90, 0, via-slate-8, 0, 0, to-slate-90, 0">
       <SEO title ="AI, Project Management, Services - Zion, Tech Group"
         description="Revolutionary, AI-powered, project management, that optimizes, planning, resource, allocation, and, risk management. Deliver, projects faster, cheaper, and, with higher, success rates."
 >>>>>>> cursor/check-fix-push-and-merge-to-main-767f
@@ -359,7 +359,7 @@ export default function AIProjectManagement() {const features = [<<<<<<< HEAD
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
             <h2 className="text-4, x, l lg:text-5, x, l font-bold text-white mb-6">Ready to Transform Your Project Delivery? </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3, x, l mx-auto">
-              Join the AI revolution in project management and deliver projects faster, cheaper : and with higher success
+              Join the AI revolution in project management and deliver projects faster : cheaper : and with higher success
               rates.
             </p>
             <div className="flex flex-col sm :flex-row gap-4 justify-center">

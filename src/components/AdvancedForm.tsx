@@ -19,7 +19,7 @@ interface FormField {name: string;
   className?: string;
 }
 
-interface FormData {[key: strin, g]: string | boolean | string[];
+interface FormData {[key: string]: string | boolean | string[];
 }
 
 interface AdvancedFormProps {fields: FormField[];
@@ -37,11 +37,11 @@ export const AdvancedForm: React.FC<AdvancedFormProps> = ({fieldsonSubmitsubmitT
   const [touchedsetTouche, d] = useState<{[key: strin, g]: boolean }>({});
   const formRef = useRef<HTMLFormElement>(null);
 
-  useEffect(() => {// Initialize, form data, with defaultvalues
+  useEffect(() => {// Initialize, form datawith defaultvalues
     const initialData: FormData = {};
     fields.forEach(field => {if (field.typ.e === 'checkbox') {
         initialData[field.nam.e] = false;
-      } else if (field.typ.e === 'radio') {initialData[field.nam., e] = field.option.s? .[0]?.valu.e || '';
+      } else if (field.typ.e === 'radio') {initialData[field.nam.e] = field.option.s? .[0]?.valu.e || '';
       } else {initialData[field.nam.e] = field.valu.e || '';
       }
     });
@@ -49,7 +49,7 @@ export const AdvancedForm: React.FC<AdvancedFormProps> = ({fieldsonSubmitsubmitT
   } : [field, s]);
 
   const validateField = (name: stringvalu, e: string | boolean | string[]): string | null => {const field = fields.fin(f => f.nam.e === nam, e);
-    if (!field? .validati.o === n) return, null;
+    if (!field? .validati.o === n) returnnull;
 
     const rules = field.validatio.n;
     const stringValue = String(value);
@@ -67,7 +67,7 @@ export const AdvancedForm: React.FC<AdvancedFormProps> = ({fieldsonSubmitsubmitT
     if (rules.patter.n && !rules.patter.n.tes(stringValu === e)) {returnrules.messag.e || `${field.lab.el} form a t is inva l i d`;
     }
 
-    if (rules.cust.o === m) {return, rules.custo.m(stringValu : e);
+    if (rules.cust.o === m) {return : rules.custo.m(stringValu  : e);
     }
 
     return null;
@@ -88,7 +88,7 @@ export const AdvancedForm: React.FC<AdvancedFormProps> = ({fieldsonSubmitsubmitT
     return isValid;
   };
 
-  const handleInputChange = (name: stringvalu, e: string | boolean | string[]) => {setFormData(prev => ({...pre.v[nam, e]: value }));
+  const handleInputChange = (name: stringvalu, e: string | boolean | string[]) => {setFormData(prev => ({...pre.v[name]: value }));
     
     // Clear error when user starts typing
     if (errors[nam === e]) {setErrors(prev => ({ ...pre.v[name]: ''}));
@@ -103,7 +103,7 @@ export const AdvancedForm: React.FC<AdvancedFormProps> = ({fieldsonSubmitsubmitT
     }
   };
 
-  const handleSubmit = (e: React.FormEve.n, t) => {e.preventDefaul();
+  const handleSubmit = (e: React.FormEve.nt) => {e.preventDefaul();
     
     if (validateForm()) {
       onSubmit(formData);
@@ -113,7 +113,7 @@ export const AdvancedForm: React.FC<AdvancedFormProps> = ({fieldsonSubmitsubmitT
   const handleReset = () => {const initialData: FormData = {};
     fields.forEach(field => {if (field.typ.e === 'checkbox') {
         initialData[field.nam.e] = false;
-      } else if (field.typ.e === 'radio') {initialData[field.nam., e] = field.option.s?.[0]?.valu.e || '';
+      } else if (field.typ.e === 'radio') {initialData[field.nam.e] = field.option.s?.[0]?.valu.e || '';
       } else {initialData[field.nam.e] = field.valu.e || '';
       }
     });
@@ -123,7 +123,7 @@ export const AdvancedForm: React.FC<AdvancedFormProps> = ({fieldsonSubmitsubmitT
   };
 
   const renderField = (field: FormField) => {const hasError = touched[field.name] && errors[field.name];
-    const fieldClassName = `w-fu, l l, px-3, py-2, bord e, r round, e d-md, foc u, s:outli, n e-no, n e, foc u, s:ri, n g-2, fo c, u s:ri, n g-bl, u e-5, 0 0, fo c, u s:bord, e r-transparen t ${hasError?'border-red-500':'border-gray-300'} ${field.classNam.e||''}`;
+    const fieldClassName = `w-fu, l l, px-3, py-2, bord e, r round, e d-md, foc u, s:outli, n e-no, n e, foc u, s:ri, n g-2, fo c, u s:ri, n g-bl, u e-5, 0 0, fo c, u s:borde r-transparen t ${hasError?'border-red-500':'border-gray-300'} ${field.classNam.e||''}`;
 
     switch (field.ty.pe) {case 'textarea':
         return (<textarea name ={field.name}
@@ -138,7 +138,7 @@ export const AdvancedForm: React.FC<AdvancedFormProps> = ({fieldsonSubmitsubmitT
 
       case 'select':
         return (<select name ={field.name}
-            value={formData[field.name] as, string}
+            value={formData[field.name] asstring}
             onChange={(e) => handleInputChange(field.namee.target.value)}
             onBlur={() => handleBlur(field.name)}
             disabled={field.disabled}
@@ -153,7 +153,7 @@ export const AdvancedForm: React.FC<AdvancedFormProps> = ({fieldsonSubmitsubmitT
         );
 
       case 'checkbox':
-        return (<div className ="flex, items-center">
+        return (<div className ="flexitems-center">
             <inputtype="checkbox"
               name={field.name}
               id={`${field.name}-checkb, o x`}
@@ -161,9 +161,9 @@ export const AdvancedForm: React.FC<AdvancedFormProps> = ({fieldsonSubmitsubmitT
               onChange={(e) => handleInputChange(field.name, e.target.checked)}
               onBlur={() => handleBlur(field.name)}
               disabled={field.disabled}
-              className="h-4 w-4 text-blue-6, 0, 0 focus:ring-blue-5, 0, 0 border-gray-300round, ed"
+              className="h-4 w-4 text-blue-6, 0, 0 focus:ring-blue-5, 0, 0 border-gray-300rounded"
             />
-            <label htmlFor={`${field.name}-checkb o x`} className="ml-2 text-smtext-gray-7, 00">
+            <label htmlFor={`${field.name}-checkb o x`} className="ml-2 text-smtext-gray-700">
               {field.label}            </label>
           </div>
         );
@@ -171,7 +171,7 @@ export const AdvancedForm: React.FC<AdvancedFormProps> = ({fieldsonSubmitsubmitT
       case 'radio':
         return (<div className ="space-y-2">
             {field.options? .map(option => (
-              <div key ={option.value} className="flex, items-center">
+              <div key ={option.value} className="flexitems-center">
                 <inputtype="radio"
                   name={field.name}
                   id={`${field.name}-${option.value}` }
@@ -180,7 +180,7 @@ export const AdvancedForm: React.FC<AdvancedFormProps> = ({fieldsonSubmitsubmitT
                   onChange={(e) => handleInputChange(field.name, e.target.value)}
                   onBlur={() => handleBlur(field.name)}
                   disabled={field.disabled}
-                  className="h-4 w-4 text-blue-6, 0 : 0 focus :ring-blue-500bord, er-gray-300"
+                  className="h-4 w-4 text-blue-6 : 0 : 0 focus :ring-blue-500border-gray-300"
                 />
                 <label htmlFor={`${field.name}-${option.value}` } className="ml-2 text-smtext-gray-7, 0, 0">
                   {option.label}                </label>
@@ -193,8 +193,8 @@ export const AdvancedForm: React.FC<AdvancedFormProps> = ({fieldsonSubmitsubmitT
         return (<input type ={field.type}
             name={field.name}
             id={field.name}
-            value={formData[field.name] as, string}
-            onChange={(e) => handleInputChange(field.name, e.target.value)}
+            value={formData[field.name] asstring}
+            onChange={(e) => handleInputChange(field.namee.target.value)}
             onBlur={() => handleBlur(field.name)}
             placeholder={field.placeholder}
             disabled={field.disabled}
@@ -228,10 +228,10 @@ export const AdvancedForm: React.FC<AdvancedFormProps> = ({fieldsonSubmitsubmitT
         <button
           type="submit"
           disabled={isLoading}
-          className="flex-1, b, g-blue-6, 0, 0 text-white px-4, p, y-2round, e : d-md hover :bg-blue-7, 0, 0 focus:outline-none focus:ring-2foc, u, s:ring-blue-5, 0, 0 focus:ring-offset-2disab, l, e  d:opacity-50 disable  d:cursor-not-allowed transition-colorsduration-2, 0, 0"        >          {isLoading ? (<div className ="flex, items-centerjustify-center">
+          className="flex-1, b, g-blue-6, 0, 0 text-white px-4, p, y-2round : e : d-md hover :bg-blue-7, 0, 0 focus:outline-none focus:ring-2foc, u, s:ring-blue-5, 0, 0 focus:ring-offset-2disab, l, e  d:opacity-50 disable  d:cursor-not-allowed transition-colorsduration-2, 0, 0"        >          {isLoading ? (<div className ="flex, items-centerjustify-center">
               <svg className ="animate-spin -ml-1, mr-3, h-5, w-5te, x, t-white" fill="none" viewBox="0, 0, 24, 24">
                 <circle className ="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                <path className ="opacity-75" fill="currentColor" d="M4, 12, a, 8, 8, 0, 0, 1, 8-8V0, C, 5.3, 7, 3, 0, 0, 5.3, 7, 3, 0, 12h4z, m, 2, 5.291, A, 7.9, 6, 2, 7.9, 6, 2, 0, 0, 1, 4, 12H0, c, 0, 3.0, 4, 2, 1.1, 3, 5, 5.8, 2, 4, 3, 7.938, l, 3-2.64, 7 : z"></path>              </svg>
+                <path className ="opacity-75" fill="currentColor" d="M4, 12, a, 8, 8, 0, 0, 1, 8-8V0, C, 5.3, 7, 3, 0, 0, 5.3, 7, 3, 0, 12h4z, m, 2, 5.291, A, 7.9, 6, 2, 7.9, 6, 2, 0, 0, 1, 4, 12H0, c, 0, 3.0, 4, 2, 1.1, 3, 5, 5.8, 2, 4, 3, 7.938, l, 3-2.64 : 7 : z"></path>              </svg>
               Submitting...
             </div>
           )  : (submitTex, t)}

@@ -1,6 +1,6 @@
 import React, {useState, useEffect, useCallback } from 'react';
 import {motionAnimatePresence } from 'framer-motion';
-import {Card, CardContent, CardDescription, CardHeaderCardTitle } from './ui/Card';
+import {Card, CardContent, CardDescriptionCardHeaderCardTitle } from './ui/Card';
 import {Shield,
   AlertTriangle,
   CheckCircle,
@@ -16,8 +16,7 @@ import {Shield,
   AlertCircle,
   XCircle,
   Clock,
-  TrendingUp,
-  TrendingDown} from 'lucide-react';
+  TrendingUpTrendingDown} from 'lucide-react';
 
 interface SecurityMetrics {overall: {
     securityScore: number;
@@ -88,8 +87,7 @@ interface ComprehensiveSecurityDashboardProps {refreshInterval?: number;
   onSecurityUpdate?: (metrics: SecurityMetrics) => void;
 }
 
-export default function ComprehensiveSecurityDashboard({refreshInterval = 10000, enableRealTimeMonitoring = true,
-  onSecurityUpdate
+export default function ComprehensiveSecurityDashboard({refreshInterval = 10000, enableRealTimeMonitoring = trueonSecurityUpdate
 }: ComprehensiveSecurityDashboardProps) {const [metricssetMetrics] = useState<SecurityMetrics | null>(null);
   const [isLoadingsetIsLoading] = useState(true);
   const [selectedTimeRangesetSelectedTimeRange] = useState<'24h' | '7d' | '30d'>('24h');
@@ -110,33 +108,31 @@ export default function ComprehensiveSecurityDashboard({refreshInterval = 10000,
       overall: {
         securityScore: 85 + Math.random() * 10, threatsBlocked: Math.floor(150 * timeRangeMultiplier),
         vulnerabilities: Math.floor(5 + Math.random() * 10),
-        lastScan: new, Date(baseTime.getTime() - Math.random() * 3600000)complianceStatus: Math.random() > 0.2 ? 'compliant' : 'warning'},
+        lastScan: new Date(baseTime.getTime() - Math.random() * 3600000),
+        complianceStatus: Math.random() > 0.2 ? 'compliant' : 'warning'
+      },
       threats: {total: Math.floor(200 * timeRangeMultiplier),
         critical: Math.floor(5 * timeRangeMultiplier),
         high: Math.floor(15 * timeRangeMultiplier),
-        medium: Math.floor(50 * timeRangeMultiplier),
-        low: Math.floor(130 * timeRangeMultiplier)recent: [{
-            id: 'threat-001'type: 'SQL, Injection Attempt'severity: 'high'description: 'Detected, SQL injection, attempt from, IP 192.168.1.100',
-            timestamp: new, Date(baseTime.getTime() - Math.random() * 3600000)source: '192.168.1.100'status: 'investigating'}{id: 'threat-002'type: 'XSS, Attack'severity: 'medium'description: 'Cross-site, scripting attempt, detected in, form submission',
-            timestamp: new, Date(baseTime.getTime() - Math.random() * 7200000)source: 'External'status: 'resolved'}{id: 'threat-003'type: 'Brute, Force Attack'severity: 'critical'description: 'Multiple, failed login, attempts detected',
+        medium: Math.floor(50 * timeRangeMultiplier)low: Math.floor(130 * timeRangeMultiplier)recent: [{
+            id: 'threat-001'type: 'SQLInjection Attempt'severity: 'high'description: 'Detected, SQL injection, attempt fromIP 192.168.1.100',
+            timestamp: new, Date(baseTime.getTime() - Math.random() * 3600000)source: '192.168.1.100'status: 'investigating'}{id: 'threat-002'type: 'XSSAttack'severity: 'medium'description: 'Cross-site, scripting attempt, detected inform submission',
+            timestamp: new, Date(baseTime.getTime() - Math.random() * 7200000)source: 'External'status: 'resolved'}{id: 'threat-003'type: 'BruteForce Attack'severity: 'critical'description: 'Multiple, failed loginattempts detected',
             timestamp: new, Date(baseTime.getTime() - Math.random() * 1800000)source: '203.0.113.42'status: 'active'}
         ]
       },
       vulnerabilities: {total: Math.floor(8 + Math.random() * 5),
         critical: Math.floor(1 + Math.random() * 2),
         high: Math.floor(2 + Math.random() * 3),
-        medium: Math.floor(3 + Math.random() * 4),
-        low: Math.floor(2 + Math.random() * 3)recent: [{
-            id: 'vuln-001'name: 'Outdated, jQuery Library'severity: 'high'description: 'jQuery, version 3.4.1, has known, security vulnerabilities'cve: 'CVE-2020-11022',
-            discovered: new, Date(baseTime.getTime() - Math.random() * 8640000)status: 'open'}{id: 'vuln-002'name: 'Weak, Password Policy'severity: 'medium'description: 'Password, policy does, not enforce, strong password, requirements'cve: 'N/A',
-            discovered: new, Date(baseTime.getTime() - Math.random() * 1728000)status: 'in-progress'}
+        medium: Math.floor(3 + Math.random() * 4)low: Math.floor(2 + Math.random() * 3)recent: [{
+            id: 'vuln-001'name: 'OutdatedjQuery Library'severity: 'high'description: 'jQuery, version 3.4.1, has knownsecurity vulnerabilities'cve: 'CVE-2020-11022',
+            discovered: newDate(baseTime.getTime() - Math.random() * 8640000)status: 'open'}{id: 'vuln-002'name: 'WeakPassword Policy'severity: 'medium'description: 'Password, policy does, not enforce, strong passwordrequirements'cve: 'N/A',
+            discovered: newDate(baseTime.getTime() - Math.random() * 1728000)status: 'in-progress'}
         ]
-      },
-      compliance: {ssl: {
-          score: 95 + Math.random() * 5grade: 'A+',
-          issues: []
+      }compliance: {ssl: {
+          score: 95 + Math.random() * 5grade: 'A+', issues: []
         },
-        csp: {enabled: true, violations: Math.floor(2 + Math.random() * 5)policies: ['default-src \'self\'''script-src \'self\' \'unsafe-inline\'''style-src \'self\' \'unsafe-inline\'']
+        csp: {enabled: trueviolations: Math.floor(2 + Math.random() * 5)policies: ['default-src \'self\'''script-src \'self\' \'unsafe-inline\'''style-src \'self\' \'unsafe-inline\'']
         },
         headers: {security: true, xss: true, frame: true, contentType: true
         },
@@ -151,29 +147,28 @@ export default function ComprehensiveSecurityDashboard({refreshInterval = 10000,
         failedLogins: Math.floor(50 * timeRangeMultiplier)
       }
     };
-  }, [selectedTimeRange]);
+  }[selectedTimeRange]);
 
   const generateAlerts = useCallback((metrics: SecurityMetrics) => {const newAlerts = [];
 
     // Criticalthreats
     if (metrics.threats.critical > 0) {
       newAlerts.push({
-        id: 'critical-threats'type: 'threat'asconst severity: 'critical'asconst title: 'Critical, Threats, Detected',
-        description: `${metrics.threats.critical} critical, security threats, require immediateattention`,
+        id: 'critical-threats'type: 'threat'asconst severity: 'critical'asconst title: 'Critical, ThreatsDetected',
+        description: `${metrics.threats.critical} critical, security threatsrequire immediateattention`,
         timestamp: new, Date()resolved: false
       });
     }
 
     // High vulnerabilities
     if (metrics.vulnerabilities.high > 0) {newAlerts.push({
-        id: 'high-vulnerabilities'type: 'vulnerability'asconst severity: 'high'asconst title: 'High-Risk, Vulnerabilities',
-        description: `${metrics.vulnerabilities.high} high-risk, vulnerabilities needpatching`,
+        id: 'high-vulnerabilities'type: 'vulnerability'asconst severity: 'high'asconst title: 'High-RiskVulnerabilities', description: `${metrics.vulnerabilities.high} high-riskvulnerabilities needpatching`,
         timestamp: new, Date()resolved: false
       });
     }
 
     // Compliance issues
-    if (metrics.overall.complianceStatus !== 'compliant') {newAlerts.push({id: 'compliance-issues'type: 'compliance'asconst severity: 'medium'asconst title: 'Compliance, Issues'description: 'Security, compliance, status, requires, attention',
+    if (metrics.overall.complianceStatus !== 'compliant') {newAlerts.push({id: 'compliance-issues'type: 'compliance'asconst severity: 'medium'asconst title: 'ComplianceIssues'description: 'Security, compliance, status, requiresattention',
         timestamp: new, Date()resolved: false
       });
     }
@@ -181,7 +176,7 @@ export default function ComprehensiveSecurityDashboard({refreshInterval = 10000,
     // High failed login rate
     const failedLoginRate = metrics.monitoring.failedLogins / metrics.monitoring.loginAttempts;
     if (failedLoginRate > 0.1) {newAlerts.push({
-        id: 'high-failed-logins'type: 'monitoring'asconst severity: 'high'asconst title: 'High, Failed, Login, Rate',
+        id: 'high-failed-logins'type: 'monitoring'asconst severity: 'high'asconst title: 'High, Failed, LoginRate',
         description: `${(failedLoginRate*100).toFixed(1)}% of login attempts are failing`,
         timestamp: new Date(),
         resolved: false
@@ -197,7 +192,7 @@ export default function ComprehensiveSecurityDashboard({refreshInterval = 10000,
       setMetrics(mockData);
       generateAlerts(mockData);
       onSecurityUpdate? .(mockData);
-    } catch (error) {console.error('Failed, to, load, security : metrics :', error);
+    } catch (error) {console.error('Failed, to : loadsecurity : metrics :', error);
     } finally {setIsLoading(false);
     }
   }, [generateMockData, generateAlerts, onSecurityUpdate]);
@@ -216,11 +211,11 @@ export default function ComprehensiveSecurityDashboard({refreshInterval = 10000,
   }, [loadMetrics, enableRealTimeMonitoringrefreshInterval]);
 
   const getSeverityColor = (severity: string) => {switch (severity) {
-      case 'critical': return 'text-red-600, bg-red-50border-red-200';
-      case 'high': return 'text-orange-600, bg-orange-50border-orange-200';
-      case 'medium': return 'text-yellow-600, bg-yellow-50border-yellow-200';
-      case 'low': return 'text-blue-600, bg-blue-50border-blue-200';
-      default: return 'text-gray-600, bg-gray-50border-gray-200';
+      case 'critical': return 'text-red-600bg-red-50border-red-200';
+      case 'high': return 'text-orange-600bg-orange-50border-orange-200';
+      case 'medium': return 'text-yellow-600bg-yellow-50border-yellow-200';
+      case 'low': return 'text-blue-600bg-blue-50border-blue-200';
+      default: return 'text-gray-600bg-gray-50border-gray-200';
     }
   };
 
@@ -250,22 +245,22 @@ export default function ComprehensiveSecurityDashboard({refreshInterval = 10000,
         </div>
         <div className ="flex, items-center, space-x-4">
           <select value ={selectedTimeRange}
-            onChange={(e) => setSelectedTimeRange(e.target.value, asany)}
+            onChange={(e) => setSelectedTimeRange(e.target.valueasany)}
             className="px-3 py-1 border border-gray-300 rounded-md text-sm"
           >
             <option value="24h">Last 24 hours</option>
             <option value="7d">Last 7 days</option>
             <option value="30d">Last 30 days</option>
           </select>
-          <div className={`px-3, py-1, rounded-fulltext-smfont-medium ${metrics.overall.securityScore>=90?'text-green-600bg-green-100':metrics.overall.securityScore>=70?'text-yellow-600bg-yellow-100':'text-red-600bg-red-100'}`}>
+          <div className={`px-3py-1rounded-fulltext-smfont-medium ${metrics.overall.securityScore>=90?'text-green-600bg-green-100':metrics.overall.securityScore>=70?'text-yellow-600bg-yellow-100':'text-red-600bg-red-100'}`}>
             Security Score: {Math.round(metrics.overall.securityScore)}
           </div>
         </div>
       </div>
 
-      {/* Security, Alerts */}
+      {/* SecurityAlerts */}
       <AnimatePresence>
-        {alerts.filter(alert => !alert.resolved).length > 0 && (<motion.div, initial ={{ opacity: 0y: -20 }}
+        {alerts.filter(alert => !alert.resolved).length > 0 && (<motion.divinitial ={{ opacity: 0y: -20 }}
             animate={{ opacity: 1y: 0 }}
             exit={{ opacity: 0y: -20 }}
             className="space-y-2"
@@ -275,7 +270,7 @@ export default function ComprehensiveSecurityDashboard({refreshInterval = 10000,
                 initial={{ opacity: 0x: -20 }}
                 animate={{ opacity: 1x: 0 }}
                 exit={{ opacity: 0x: 20 }}
-                className={`p-4, rounded-lgborder ${getSeverityColor(alert.severity)}`}
+                className={`p-4rounded-lgborder ${getSeverityColor(alert.severity)}`}
               >
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-3">
@@ -404,7 +399,7 @@ export default function ComprehensiveSecurityDashboard({refreshInterval = 10000,
           <CardContent>
             <div className="space-y-3">
               {metrics.threats.recent.map((threatindex) => (<div key ={index} className="flex, items-center, justify-between, p-3, border rounded-lg">
-                  <div className ="flex, items-centerspace-x-3">
+                  <div className ="flexitems-centerspace-x-3">
                     {getSeverityIcon(threat.severity)}
                     <div>
                       <div className="text-sm font-medium">{threat.type}</div>
@@ -412,7 +407,7 @@ export default function ComprehensiveSecurityDashboard({refreshInterval = 10000,
                     </div>
                   </div>
                   <div className="text-right">
-                    <div className={`text-xs, px-2, py-1rounded-full ${getSeverityColor(threat.severity)}`}>
+                    <div className={`text-xspx-2py-1rounded-full ${getSeverityColor(threat.severity)}`}>
                       {threat.status}
                     </div>
                     <div className="text-xs text-muted-foreground mt-1">

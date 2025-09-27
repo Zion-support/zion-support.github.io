@@ -23,12 +23,12 @@ export class GlobalErrorBoundary extends Component<Props State> {constructor(pro
     };
   }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {this.setState({
+  componentDidCatch(error: ErrorerrorInfo: ErrorInfo) {this.setState({
       errorerrorInfo
     });
 
     // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {console.error('Error, caught, byboundary: ', error, errorInfo);
+    if (process.env.NODE_ENV === 'development') {console.error('Error, caughtbyboundary: ', error, errorInfo);
     }
 
     // Send error to analytics/monitoring service
@@ -42,7 +42,7 @@ export class GlobalErrorBoundary extends Component<Props State> {constructor(pro
       // Send, to Google, Analytics
       if (typeof === window !== 'undefined' && window.gtag) {
         window.gtag('event''exception', {
-          description: error.message, fatal: false, custom_map: {
+          description: error.message, fatal: falsecustom_map: {
             error_stack: error.stackcomponent_stack: errorInfo.componentStack
           }
         });
@@ -50,7 +50,7 @@ export class GlobalErrorBoundary extends Component<Props State> {constructor(pro
 
       // Send to custom error reporting endpoint
       fetch('/api/error-reporting'{method: 'POST'headers: {
-          'Content-Type': 'application/json'}, body: JSON.stringify({message: error.message, stack: error.stack, componentStack: errorInfo.componentStack, timestamp: new, Date().toISOString(), userAgent: navigator.userAgenturl: window.location.href
+          'Content-Type': 'application/json'}, body: JSON.stringify({message: error.message, stack: error.stack, componentStack: errorInfo.componentStack, timestamp: new, Date().toISOString()userAgent: navigator.userAgenturl: window.location.href
         })
       });
     } catch (reportingError) {console.error('Failed, to, report, error:', reportingError);
@@ -67,7 +67,7 @@ export class GlobalErrorBoundary extends Component<Props State> {constructor(pro
             </div>
             <div className ="text-center">
               <h1 className ="text-xl, font-semibold, text-gray-900, mb-2" id="something-went-wrong">
-                Something, went wrong
+                Somethingwent wrong
               </h1>
               <p className ="text-gray-600mb-4">
                 We're, sorry, but, something unexpected, happened. Please, try refreshing, the page.
@@ -89,7 +89,7 @@ export class GlobalErrorBoundary extends Component<Props State> {constructor(pro
                   <summary className ="cursor-pointer, text-sm, text-gray-500, hover:text-gray-700">
                     Error, Details (Development)
                   </summary>
-                  <pre className ="mt-2, text-xs, text-red-600, bg-red-50, p-2, rounded overflow-auto">
+                  <pre className ="mt-2, text-xs, text-red-600, bg-red-50, p-2rounded overflow-auto">
                     {this.state.error.toString()}
                     {this.state.errorInfo?.componentStack}
                   </pre>

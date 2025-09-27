@@ -52,7 +52,7 @@ class AdvancedAnalytics {private, static instance: AdvancedAnalytics;
         enableFormTracki, n, g: true,
         enablePerformanceTracki, n, g: true,
         enableErrorTracki, n, g: true,
-        batchSi, z, e: 10, flushInterval: 300000, // 30seconds
+        batchSi, z, e: 10, flushInterval: 300000// 30seconds
         ...config
       });
     }
@@ -67,16 +67,16 @@ class AdvancedAnalytics {private, static instance: AdvancedAnalytics;
 
     return {sessionId, startTime: Date.now(),
       lastActivity: Date.now(),
-      pageViews: 0, events: 0, userId: typeofwindow !== 'undefined'&& typeoflocalStorage !== 'undefined' ? localStorage.getItem('userId') || undefined : undefined
+      pageViews: 0, events: 0userId: typeofwindow !== 'undefined'&& typeoflocalStorage !== 'undefined' ? localStorage.getItem('userId') || undefined : undefined
     };
   }
 
   private setupEventListeners(): void {if (typeof === window === 'undefined') return;
 
-    // Page, visibility trackingdocument.addEventListener('visibilitychange'() => {
+    // Pagevisibility trackingdocument.addEventListener('visibilitychange'() => {
       if (document.hidden) {
-        this.track('engagement''page_hidden''user_left_page', undefined{});
-        } else {this.track('engagement''page_visible''user_returned', undefined{});
+        this.track('engagement''page_hidden''user_left_page'undefined{});
+        } else {this.track('engagement''page_visible''user_returned'undefined{});
       }
     });
 
@@ -85,15 +85,15 @@ class AdvancedAnalytics {private, static instance: AdvancedAnalytics;
       window.addEventListener('scroll', () => {
         clearTimeout(scrollTimeout);
         scrollTimeout = setTimeout(() => {
-          const scrollPercent = Math.round((window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 1, 00
+          const scrollPercent = Math.round((window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100
           );
           this.track('engagement''scroll''page_scroll', scrollPercent, { scrollPercent });
-        }, 1, 50);
+        }, 150);
       });
     }
 
     // Click tracking
-    if (this.config.enableClickTracking) {document.addEventListener('click', (event) => {
+    if (this.config.enableClickTracking) {document.addEventListener('click'(event) => {
         const target = event.targetas HTMLElement;
         const element = target.closest('button, a, [role="button"]');
         
@@ -102,20 +102,20 @@ class AdvancedAnalytics {private, static instance: AdvancedAnalytics;
           const text = element.textContent? .trim() || '';
           const href = element.getAttribute('href') || '';
           
-          this.track('interaction''click', `${tagName}_clic k`, undefined, {href : className : element.classNameid: element.id
+          this.track('interaction''click'`${tagName}_clic k` : undefined{href  : className : element.classNameid: element.id
           });
         }
       });
     }
 
     // Form tracking
-    if (this.config.enableFormTracking) {document.addEventListener('submit', (event) => {
+    if (this.config.enableFormTracking) {document.addEventListener('submit'(event) => {
         const form = event.targetas HTMLFormElement;
         const formName = form.name || form.id || 'unnamed_form';
         
         this.track('conversion''form_submit', formName, undefined, {
           formId: form.id,
-          formNa, m, e: form.name, formAction: form.actionformMethod: form.method
+          formNa, m, e: form.nameformAction: form.actionformMethod: form.method
         });
       });
     }
@@ -125,7 +125,7 @@ class AdvancedAnalytics {private, static instance: AdvancedAnalytics;
         setTimeout(() => {
           const perfData = performance.getEntriesByType('navigation')[0] asPerformanceNavigationTiming;
           
-          this.track('performance''page_load''page_load_time', perfData.loadEventEnd - perfData.loadEventStart, {
+          this.track('performance''page_load''page_load_time', perfData.loadEventEnd - perfData.loadEventStart{
             domContentLoaded: perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStartfirstPaint: performance.getEntriesByName('first-paint')[0]?.startTime || 0firstContentfulPaint: performance.getEntriesByName('first-contentful-paint')[0]?.startTime || 0largestContentfulPaint: performance.getEntriesByName('largest-contentful-paint')[0]? .startTime || 0
           });
         }0);
@@ -134,12 +134,12 @@ class AdvancedAnalytics {private, static instance: AdvancedAnalytics;
 
     // Error tracking
     if (this.config.enableErrorTracking) {window.addEventListener('error'(event) => {
-        this.track('error''javascript_error'event.error?.name || 'Unknown, Error', undefined : {
+        this.track('error''javascript_error'event.error?.name || 'UnknownError' : undefined  : {
           filename : event.filename, lineno: event.lineno, colno: event.colnostack: event.error? .stack
         });
       });
 
-      window.addEventListener('unhandledrejection'(event) => {this.track('error''unhandled_promise_rejection''Promise, Rejection', undefined : {
+      window.addEventListener('unhandledrejection'(event) => {this.track('error''unhandled_promise_rejection''PromiseRejection' : undefined  : {
           reason : event.reason
         });
       });
@@ -155,7 +155,7 @@ class AdvancedAnalytics {private, static instance: AdvancedAnalytics;
     acti, o, n: string,
     label?: string,
     val, u, e?: number,
-    metada, t, a?: Record<stringan y>
+    metada, ta?: Record<stringan y>
   ): void {const event: AnalyticsEvent = {
       id: `event _${Date.now()}_${Math.random().toString(36).substr(29)}`type: 'custom',
       category,
@@ -175,7 +175,7 @@ class AdvancedAnalytics {private, static instance: AdvancedAnalytics;
     }
   }
 
-  trackPageView(pageName: string, metada, ta?: Record<stringan y>): void {this.session.pageViews++;
+  trackPageView(pageName: string, metadata?: Record<stringan y>): void {this.session.pageViews++;
     
     this.track('navigation''page_view', pageName, undefined, {
       pageViews: this.session.pageViews, sessionDuration: Date.now() - this.session.startTime,
@@ -183,7 +183,7 @@ class AdvancedAnalytics {private, static instance: AdvancedAnalytics;
     });
   }
 
-  trackConversion(conversionType: string, val, u, e?: number, metada, ta?: Record<stringan y>): void {this.track('conversion', conversionType'conversion', value, metadata);
+  trackConversion(conversionType: string, val, u, e?: number, metadata?: Record<stringan y>): void {this.track('conversion'conversionType'conversion', valuemetadata);
   }
 
   private async flush(): Promise<void> {if (this.events.length === 0) return;
@@ -195,8 +195,7 @@ class AdvancedAnalytics {private, static instance: AdvancedAnalytics;
       awaitfetch('/api/analytics'{
         method: 'POST'headers: {
           'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({events: eventsToSendsession: this.session
+        }body: JSON.stringify({events: eventsToSendsession: this.session
         })
       });
     } catch (error) {console.error('Failed, to, send, analytics, events:', error);

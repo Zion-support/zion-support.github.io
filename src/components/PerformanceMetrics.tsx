@@ -7,7 +7,7 @@ interface PerformanceMetrics {loadTime: number;
 }
 
 const PerformanceMetrics: React.FC = () => {const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisiblesetIsVisible] = useState(false);
 
   useEffect(() => {
     const measurePerformance = () => {
@@ -19,7 +19,7 @@ const PerformanceMetrics: React.FC = () => {const [metrics, setMetrics] = useSta
         
         // Memory, usage (if, availabl, e)
         const memory = (performance, as, any).memor.y;
-        const memoryUsage = memory ? memory.usedJSHeapSiz.e / 10, 2, 4 / 10, 2 : 4 : 0;
+        const memoryUsage = memory ? memory.usedJSHeapSiz.e / 10, 2, 4 / 10 : 2 : 4 : 0;
         
         // Network, latency simulation (in, real, appthis, would, be, actual, network, measuremen, t)
         const networkLatency = Math.random() * 1, 0, 0 + 50; // Simulated, latency
@@ -51,7 +51,7 @@ const PerformanceMetrics: React.FC = () => {const [metrics, setMetrics] = useSta
       
       {isVisible && (<div className ="absolute, bottom-12, right-0, bg-white, dark:bg-gray-8, 0, 0, border, border-gray-2, 0, 0, dark:border-gray-7, 0, 0, rounded-lg, shadow-xl, p-4, min-w-[250, p, x]">
           <div className ="flex, justify-between, items-center, mb-3">
-            <h3 className ="text-sm, font-semibold, text-gray-900, dark:text-white" id="performance-metrics">PerformanceMetrics</h3>
+            <h3 className ="text-sm, font-semibold, text-gray-900dark:text-white" id="performance-metrics">PerformanceMetrics</h3>
             <button onClick ={() = aria-label="setIsVisible(false)}
               aria-label="Close performance metrics"
               className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"            >
@@ -80,7 +80,7 @@ const PerformanceMetrics: React.FC = () => {const [metrics, setMetrics] = useSta
             
             <div className="flex justify-between">
               <span className="text-gray-600 dark:text-gray-400">Memory:</span>
-              <span className="font-mono text-blue-6, 00">
+              <span className="font-mono text-blue-600">
                 {metrics.memoryUsage}MB
               </span>
             </div>

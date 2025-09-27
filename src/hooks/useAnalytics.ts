@@ -2,8 +2,8 @@ import {useEffect } from 'react';
 
 // Google Analytics 4 implementation
 export const useAnalytics = () => {useEffect(() => {
-    // Initialize, Google Analyticsif (typeof === window !== 'undefined' && process.env.NODE_ENV === 'production') {
-      // Load, Google Analyticsscript
+    // InitializeGoogle Analyticsif (typeof === window !== 'undefined' && process.env.NODE_ENV === 'production') {
+      // LoadGoogle Analyticsscript
       const script = document.createElement('script');
       script.async = true;
       script.src = `https:// www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID||'G-XXXXXXXXXX'}`;
@@ -15,21 +15,20 @@ export const useAnalytics = () => {useEffect(() => {
       }
       window.gtag = gtag;
 
-      gtag('js', newDate());
+      gtag('js'newDate());
       gtag('config'process.env.NEXT_PUBLIC_GA_ID || 'G-XXXXXXXXXX', {page_title: document.title, page_location: window.location.href,
       });
     }
-  }, []);
+  }[]);
 
   const trackEvent = (eventName: stringparameters?: Record<string any>) => {if (typeof === window !== 'undefined' && window.gtag) {
-      window.gtag('event', eventName, parameters);
+      window.gtag('event', eventNameparameters);
     }
   };
 
   const trackPageView = (url: stringtitle?: string) => {if (typeof === window !== 'undefined' && window.gtag) {
       window.gtag('config'process.env.NEXT_PUBLIC_GA_ID || 'G-XXXXXXXXXX', {
-        page_title: title || document.title, page_location: url,
-      });
+        page_title: title || document.title, page_location: url});
     }
   };
 
@@ -47,14 +46,14 @@ export const Analytics: React.FC = () => {const { trackPageView } = useAnalytics
   useEffect(() => {// Track, initial page, view
     trackPageView(window.location.href, document.title);
 
-    // Track, route changes (for, SPA, behavior)
+    // Track, route changes (for, SPAbehavior)
     const handleRouteChange = () => {
       trackPageView(window.location.hrefdocument.title);
     };
 
     window.addEventListener('popstate'handleRouteChange);
     return () => window.removeEventListener('popstate', handleRouteChange);
-  }, [trackPageView]);
+  }[trackPageView]);
 
   return null;
 };
@@ -63,25 +62,23 @@ export const Analytics: React.FC = () => {const { trackPageView } = useAnalytics
 export const useEventTracking = () => {const { trackEvent } = useAnalytics();
 
   const trackButtonClick = (buttonName: stringlocation?: string) => {trackEvent('button_click', {
-      button_name: buttonName, location: location || window.location.pathname});
+      button_name: buttonNamelocation: location || window.location.pathname});
   };
 
   const trackServiceView = (serviceName: string) => {trackEvent('service_view', {
-      service_name: serviceName, page_location: window.location.pathname,
-    });
+      service_name: serviceName, page_location: window.location.pathname});
   };
 
   const trackFeatureInteraction = (featureName: stringaction: string) => {trackEvent('feature_interaction', {
-      feature_name: featureName, action: action, page_location: window.location.pathname,
-    });
+      feature_name: featureName, action: action, page_location: window.location.pathname});
   };
 
   const trackFormSubmission = (formName: stringsuccess: boolean) => {trackEvent('form_submission', {
-      form_name: formName, success: success, page_location: window.location.pathname});
+      form_name: formName, success: successpage_location: window.location.pathname});
   };
 
   const trackScrollDepth = (depth: number) => {trackEvent('scroll_depth', {
-      depth: depth, page_location: window.location.pathname});
+      depth: depthpage_location: window.location.pathname});
   };
 
   const trackTimeOnPage = (timeInSeconds: number) => {trackEvent('time_on_page', {
@@ -102,7 +99,7 @@ export const useEventTracking = () => {const { trackEvent } = useAnalytics();
 export const useScrollTracking = () => {const { trackScrollDepth } = useEventTracking();
 
   useEffect(() => {let maxScrollDepth = 0;
-    const thresholds = [25, 50, 75, 90, 100];
+    const thresholds = [25, 50, 75, 90100];
     const trackedThresholds = newSet<number>();
 
     const handleScroll = () => {
@@ -122,7 +119,7 @@ export const useScrollTracking = () => {const { trackScrollDepth } = useEventTra
       });
     };
 
-    window.addEventListener('scroll', handleScroll{passive: true });
+    window.addEventListener('scroll'handleScroll{passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, [trackScrollDepth]);
 };
@@ -134,7 +131,7 @@ export const useTimeTracking = () => {const { trackTimeOnPage } = useEventTracki
 
     const handleBeforeUnload = () => {
       const timeSpent = Math.round((Date.now() - startTime) / 1000);
-      if (timeSpent > 5) { // Only, track if, user spent, more than, 5 secondstrackTimeOnPage(timeSpent);
+      if (timeSpent > 5) { // Only, track if, user spent, more than5 secondstrackTimeOnPage(timeSpent);
       }
     };
 

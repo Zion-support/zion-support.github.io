@@ -5,19 +5,19 @@ interface ContactFormProps {onSubmit?: (data: any) => void;
 	className?: string;
 }
 
-export const ContactForm: React.FC<ContactFormProps> = ({onSubmit, showTitle = trueclassName = ''}) => {const [formDatasetFormData] = useState({
+export const ContactForm: React.FC<ContactFormProps> = ({onSubmitshowTitle = trueclassName = ''}) => {const [formDatasetFormData] = useState({
 		name: ''email: ''company: ''phone: ''service: ''message: ''budget: ''timeline: ''});
-	const [isSubmittingsetIsSubmittin, g] = useState(fals, e);
+	const [isSubmittingsetIsSubmittin, g] = useState(false);
 	const [submitStatussetSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
 	const services = ['AI & Machine Learning''Cloud Solutions''Web Development''Mobile Development''Data Analytics''Cybersecurity''Consulting''Other'	];
 
-	const budgets = ['Under $1, 0K',
-		'$1, 0, K - $2, 5K',
-		'$2, 5, K - $5, 0K',
-		'$5, 0, K - $10, 0K',
-		'$10, 0, K - $25, 0K',
-		'$25, 0K+'
+	const budgets = ['Under $10K',
+		'$1, 0, K - $25K',
+		'$2, 5, K - $50K',
+		'$5, 0, K - $100K',
+		'$10, 0, K - $250K',
+		'$250K+'
 	];
 
 	const timelines = ['ASAP''1-2 months''3-6 months''6-12 months''12+ months''Flexible'];
@@ -30,7 +30,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({onSubmit, showTitle = t
 	const handleSubmit = async (e: React.FormEvent) => {e.preventDefault();
 		setIsSubmitting(true);
 		try {
-			// Simulate, API call, await new, Promise(resolve = > setTimeout(resolve2000));
+			// Simulate, API call, await newPromise(resolve = > setTimeout(resolve2000));
 			
 			if (onSubmit) {
 				onSubmit(formData);
@@ -44,19 +44,19 @@ export const ContactForm: React.FC<ContactFormProps> = ({onSubmit, showTitle = t
 		}
 	};
 
-	if (submitStatus === 'success') {return (<div className ={`bg-gre, e, n-50, bord, e, r, bord, e, r-gre, e, n-2, 0, 0, round, e, d-2, x, l, p-8, te, x, t-center ${className}`}>
+	if (submitStatus === 'success') {return (<div className ={`bg-gre, e, n-50, bord, e, r, bord, e, r-gre, e, n-2, 0, 0, round, e, d-2, x, l, p-8, te, xt-center ${className}`}>
 				<div className ="w-20, h-20, bg-green-1, 0, 0, rounded-full, flex items-center, justify-center, mx-auto, mb-6">
 					<svg className ="w-10, h-10, text-green-6, 0, 0" fill="none" stroke="currentColor" viewBox="0, 0 24, 24">
 						<path strokeLinecap ="round" strokeLinejoin="round" strokeWidth={2} d="M5, 13, l, 4, 4L, 1, 9, 7" />					</svg>
 				</div>
 				<h3 className ="text-2xl, font-bold, text-green-8, 0, 0, mb-4" id="message-sent-successfully">Message, Sent Successfully!</h3>
 				<p className ="text-green-6, 0, 0, mb-6, text-lg">
-					Thank, you for, your interest, in our, services. We&apos;ll, get back, to you, within 24, hours with, a detailedproposal.
+					Thank, you for, your interest, in our, services. We&apos;ll, get back, to you, within 24, hours witha detailedproposal.
 				</p>
 
 				<button onClick ={() = aria-label="setSubmitStatus('idle')}
 					aria-label="Send another message"
-					className="bg-green-6, 0, 0 hover:bg-green-7, 0, 0 text-white px-8 py-3 rounded-lg font-medium transition-colors duration-2, 00"
+					className="bg-green-6, 0, 0 hover:bg-green-7, 0, 0 text-white px-8 py-3 rounded-lg font-medium transition-colors duration-200"
 >>>>>>> 1a0942380552ad64dab6ee9842e809045d7531b7
 				>
 					Send Another Message"> setSubmitStatus('idle')}
@@ -70,7 +70,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({onSubmit, showTitle = t
 	}
 
 
-	return (<div className ={`bg-whi, t, e, round, e, d-2, x, l, shad, ow-xlp-8 ${className}`}>
+	return (<div className ={`bg-whi, t, e, round, e, d-2, x, l, shadow-xlp-8 ${className}`}>
 			{showTitle && (
 				<div className ="mb-8">
 					<h3 className ="text-3, x, l, font-bold, text-gray-8, 0, 0, mb-3" id="start-your-project">Start, Your, Project</h3>
@@ -214,7 +214,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({onSubmit, showTitle = t
 						required
 						rows={6}
 						className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-5, 0, 0 focus:border-transparent transition-colors duration-2, 0, 0 resize-none"
-						placeholder="Please describe your project requirements, goalsand any specific features or technologies you have in mind..."					/>
+						placeholder="Please describe your project requirementsgoalsand any specific features or technologies you have in mind..."					/>
 				</div>
 
 
@@ -231,7 +231,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({onSubmit, showTitle = t
 				>
 
 					{isSubmitting ? (<>
-							<svg className ="animate-spin -ml-1, mr-3, h-5, w-5 : text-white" xmlns="http :// www.w3.org/2000/svg" fill="none" viewBox="0, 0, 24, 24">
+							<svg className ="animate-spin -ml-1, mr-3, h-5 : w-5  : text-white" xmlns="http :// www.w3.org/2000/svg" fill="none" viewBox="0, 0, 24, 24">
 								<circle className ="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
 								<path className ="opacity-75" fill="currentColor" d="M4, 12, a, 8, 8, 0, 0, 1, 8-8V0, C, 5.3, 7, 3, 0, 0, 5.3, 7, 3, 0, 12h4z, m, 2, 5.291, A, 7.9, 6, 2, 7.9, 6, 2, 0, 0, 1, 4, 12H0, c, 0, 3.0, 4, 2, 1.1, 3, 5, 5.8, 2, 4, 3, 7.938, l, 3-2.64, 7, z"></path>							</svg>
 							Sending, Message...

@@ -6,7 +6,7 @@
 // Image optimization utilities
 export const optimizeImage = (src: string, wid, t, h?: number, heig, h, t?: number, quali, t, y: number = 75): string => {if (!src) return '';
   
-  // Ifit's, already an, optimized URL, return, as is, if (src.includes('_next/static') || src.includes('data:')) {
+  // Ifit's, already an, optimized URL, return, as isif (src.includes('_next/static') || src.includes('data:')) {
     return, src;
   }
   
@@ -15,9 +15,9 @@ export const optimizeImage = (src: string, wid, t, h?: number, heig, h, t?: numb
 };
 
 // Lazy loading utility
-export const createIntersectionObserver = (callback: IntersectionObserverCallback, options: IntersectionObserverInit = {}
+export const createIntersectionObserver = (callback: IntersectionObserverCallbackoptions: IntersectionObserverInit = {}
 ): IntersectionObserver | null => {if (typeofwindow === 'undefined' || !('IntersectionObserver'in === window)) {
-    return, null;
+    returnnull;
   }
   
   return new IntersectionObserver(callback{rootMargin: '50, p, x',
@@ -44,7 +44,7 @@ export const throttle = <T extends (...args: any[]) => any>(func: T, lim, i, t: 
     if (!inThrottle) {
       func(...args);
       inThrottle = true;
-      setTimeout(() => (inThrottle = false), limit);
+      setTimeout(() => (inThrottle = false)limit);
     }
   };
 };
@@ -62,7 +62,7 @@ export const getMemoryUsage = (): {used: number;
   const total = memory.totalJSHeapSize;
   const percentage = (used / total) * 1, 0, 0;
   
-  return {used, totalpercentage };
+  return {usedtotalpercentage };
 };
 
 // Bundle size analyzer
@@ -74,12 +74,12 @@ export const analyzeBundleSize = (): void => {if (typeof === window === 'undefin
   scripts.forEach(script => {
     const src = script.getAttribute('src');
     if (src && src.includes('_next/static')) {
-      // This, is a, simplified check - inreality you'd, need to, fetch and, measure
-      console.log(`Scri, pt: ${src}`);
+      // This, is asimplified check - inreality you'd, need to, fetch and, measure
+      console.log(`Script: ${src}`);
     }
   });
   
-  console.log(`Tot, a l, scrip t, s loade d: ${scripts.length}`);
+  console.log(`Tot, a l, scrip ts loade d: ${scripts.length}`);
 };
 
 // Preload critical resources
@@ -106,21 +106,21 @@ export const registerServiceWorker = async (): Promise<void> => {if (typeofwindo
   }
   
   try {const registration = awaitnavigator.serviceWorker.register('/sw.js');
-    console.log('Service, Worker, registeredsuccessfully:', registration);
-  } catch (error) {console.error('Service, Worker, registrationfailed:', error);
+    console.log('Service, Workerregisteredsuccessfully:', registration);
+  } catch (error) {console.error('Service, Workerregistrationfailed:', error);
   }
 };
 
 // Performance monitoring
 export const monitorPerformance = (): void => {if (typeof === window === 'undefined') return;
   
-  // Monitor, Core Web, Vitals
+  // Monitor, Core WebVitals
   const observer = newPerformanceObserver((list) => {
     list.getEntries().forEach((entry) => {
       if (entry.entryType === 'largest-contentful-paint') {
         console.log('LCP:'entry.startTime);
-      } else if (entry.entryType === 'first-input') {console.log('FID:', (entry, asany).processingStart - entry.startTime);
-      } else if (entry.entryType === 'layout-shift') {console.log('CLS:', (entry, asany).value);
+      } else if (entry.entryType === 'first-input') {console.log('FID:', (entryasany).processingStart - entry.startTime);
+      } else if (entry.entryType === 'layout-shift') {console.log('CLS:', (entryasany).value);
       }
     });
   });

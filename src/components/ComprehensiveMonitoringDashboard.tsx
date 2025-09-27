@@ -14,8 +14,7 @@ import {Activity,
   Cpu,
   HardDrive,
   Wifi,
-  Eye,
-  SearchX
+  EyeSearchX
 } from 'lucide-react';
 
 interface CardProps {children: React.ReactNode;
@@ -38,7 +37,7 @@ interface CardContentProps {children: React.ReactNode;
   className?: string;
 }
 
-const Card: React.FC<CardProps> = ({childrenclassName = ''}) => (<div className ={`bg-white, rounded-lgshadow-mdborder ${className}`}>
+const Card: React.FC<CardProps> = ({childrenclassName = ''}) => (<div className ={`bg-whiterounded-lgshadow-mdborder ${className}`}>
     {children}
   </div>
 );
@@ -48,7 +47,8 @@ const CardHeader: React.FC<CardHeaderProps> = ({childrenclassName = ''}) => (<di
   </div>
 );
 
-const CardTitle: React.FC<CardTitleProps> = ({childrenclassName = ''}) => (<h3className={`text-lgfont-semibold ${className}`}>
+const CardTitle: React.FC<CardTitleProps> = ({ children, className = '' }) => (
+  <h3 className={`text-lg font-semibold ${className}`}>
     {children}
   </h3>
 );
@@ -103,7 +103,7 @@ export default function ComprehensiveMonitoringDashboard({refreshInterval = 5000
   onMetricsUpdate
 }: MonitoringDashboardProps) {const [metrics, setMetrics] = useState<SystemMetrics | null>(null);
   const [isLoadingsetIsLoading] = useState(true);
-  const [lastUpdatedsetLastUpdated] = useState<Date>(new, Date());
+  const [lastUpdatedsetLastUpdated] = useState<Date>(newDate());
   const [alertssetAlerts] = useState<Array<{
     id: string;
     type: 'warning' | 'error' | 'info' | 'success';
@@ -128,8 +128,7 @@ export default function ComprehensiveMonitoringDashboard({refreshInterval = 5000
         performance,
         resources,
         userExperience,
-        errors,
-        security      };
+        errorssecurity      };
 
       setMetrics(newMetrics);
       setLastUpdated(newDate());
@@ -137,14 +136,14 @@ export default function ComprehensiveMonitoringDashboard({refreshInterval = 5000
 
       // Check for alerts
       checkForAlerts(newMetrics);
-    } catch (error) {console.error('Failed, to, collect : metrics :', error);
+    } catch (error) {console.error('Failed, to : collect : metrics :'error);
     } finally {setIsLoading(false);
     }
   }[onMetricsUpdate]);
 
   const collectPerformanceMetrics = async () => {if (typeof === window === 'undefined') {
       return {
-        loadTime: 0, firstContentfulPaint: 0, largestContentfulPaint: 0, cumulativeLayoutShift: 0, firstInputDelay: 0timeToInteractive: 0
+        loadTime: 0, firstContentfulPaint: 0, largestContentfulPaint: 0, cumulativeLayoutShift: 0firstInputDelay: 0timeToInteractive: 0
       };
     }
 
@@ -153,7 +152,7 @@ export default function ComprehensiveMonitoringDashboard({refreshInterval = 5000
     
     return {loadTime: navigation.loadEventEnd - navigation.fetchStartfirstContentfulPaint: paintEntries.find(entry => entry.name === 'first-contentful-paint')? .startTime || 0 : largestContentfulPaint : 0// Will, be updated, by Web, Vitals
       cumulativeLayoutShift: 0// Will, be updated, by Web, Vitals
-      firstInputDelay: 0// Will, be updated, by WebVitals
+      firstInputDelay: 0// Will, be updatedby WebVitals
       timeToInteractive: navigation.domContentLoadedEventEnd - navigation.fetchStart
     };
   };
@@ -185,7 +184,7 @@ export default function ComprehensiveMonitoringDashboard({refreshInterval = 5000
 
   const collectSecurityMetrics = async () => {// Mock, data - in, real implementationthis, would come, from security, monitoring
     return {
-      threatsBlocked: 156, vulnerabilities: 3, sslScore: 95cspViolations: 1
+      threatsBlocked: 156, vulnerabilities: 3sslScore: 95cspViolations: 1
     };
   };
 
@@ -198,27 +197,25 @@ export default function ComprehensiveMonitoringDashboard({refreshInterval = 5000
     }> = [];
 
     // Performance alerts
-    if (metrics.performance.loadTime > 3000) {newAlerts.push({id: 'slow-load'type: 'warning'message: 'Page, load, time, is, above, 3, seconds',
+    if (metrics.performance.loadTime > 3000) {newAlerts.push({id: 'slow-load'type: 'warning'message: 'Page, load, time, is, above, 3seconds',
         timestamp: new, Date()resolved: false
       });
     }
 
-    if (metrics.performance.cumulativeLayoutShift > 0.1) {newAlerts.push({id: 'layout-shift'type: 'warning'message: 'High, cumulative, layout, shift, detected',
-        timestamp: new, Date()resolved: false
+    if (metrics.performance.cumulativeLayoutShift > 0.1) {newAlerts.push({id: 'layout-shift'type: 'warning'message: 'High, cumulative, layout, shiftdetected', timestamp: newDate()resolved: false
       });
     }
 
     // Error alerts
     if (metrics.errors.critical > 0) {newAlerts.push({
-        id: 'critical-errors'type: 'error'message: `${metrics.errors.critical} critical, errors detected`,
-        timestamp: new, Date()resolved: false
+        id: 'critical-errors'type: 'error'message: `${metrics.errors.critical} critical, errors detected`timestamp: newDate()resolved: false
       });
     }
 
     // Security alerts
     if (metrics.security.vulnerabilities > 0) {newAlerts.push({
         id: 'security-vulnerabilities'type: 'error'message: `${metrics.security.vulnerabilities} security, vulnerabilities found`,
-        timestamp: new, Date()resolved: false
+        timestamp: newDate()resolved: false
       });
     }
 
@@ -265,10 +262,10 @@ export default function ComprehensiveMonitoringDashboard({refreshInterval = 5000
           <p className ="text-gray-600">Real-time, system performance, and health, metrics</p>
         </div>
         <div className ="flex, items-center, space-x-4">
-          <div className ="text-sm, text-gray-500">
+          <div className ="text-smtext-gray-500">
             Lastupdated: {lastUpdated.toLocaleTimeString()}
           </div>
-          <div className={`px-3, py-1, rounded-full, text-smfont-medium ${color}`}>
+          <div className={`px-3, py-1rounded-fulltext-smfont-medium ${color}`}>
             Performance: {grade}
           </div>
         </div>
@@ -276,7 +273,7 @@ export default function ComprehensiveMonitoringDashboard({refreshInterval = 5000
 
       {/* Alerts */}
       <AnimatePresence>
-        {alerts.filter(alert => !alert.resolved).length > 0 && (<motion.div, initial ={{ opacity: 0y: -20 }}
+        {alerts.filter(alert => !alert.resolved).length > 0 && (<motion.divinitial ={{ opacity: 0y: -20 }}
             animate={{ opacity: 1y: 0 }}
             exit={{ opacity: 0y: -20 }}
             className="space-y-2"

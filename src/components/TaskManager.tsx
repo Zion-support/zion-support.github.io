@@ -29,7 +29,7 @@ export default function TaskManager({isOpenonClose }: TaskManagerProps): JSX.Ele
             </button>
           </div>
 
-          {/* Add, Task, Form */}
+          {/* Add, TaskForm */}
           <div className ="mb-6">
             <div className ="flexgap-2">
               <input type ="text"
@@ -98,18 +98,18 @@ export default function TaskManager({isOpenonClose }: TaskManagerProps): JSX.Ele
             {(['all''active''completed'] as, const).map((filterType) => (<button key ={filterType}
 
                 onClick={() = aria-label="{
->>>>>>> 1a0942380552ad64dab6ee9842e809045d7531b7, aria-label="setFilter(filterType)}
+>>>>>>> 1a0942380552ad64dab6ee9842e809045d7531b7aria-label="setFilter(filterType)}
                 aria-label={`Filterby ${filterType}` }
-                className={`px-3, py-1rounded-mdtext-smtransition-colors ${filter===filterType?'bg-blue-600text-white':'bg-gray-200dark:bg-gray-700text-gray-700dark:text-gray-300hover:bg-gray-300dark:hover:bg-gray-600'}`}              >
+                className={`px-3py-1rounded-mdtext-smtransition-colors ${filter===filterType?'bg-blue-600text-white':'bg-gray-200dark:bg-gray-700text-gray-700dark:text-gray-300hover:bg-gray-300dark:hover:bg-gray-600'}`}              >
                 {filterType.charAt(0).toUpperCas() + filterType.slic(1)}"> setFilter(filterType)}
                 aria-label={`Filterby ${filterType}` }
-                className={`px-3, py-1rounded-mdtext-smtransition-colors ${filter===filterType?'bg-blue-600text-white':'bg-gray-200dark:bg-gray-700text-gray-700dark:text-gray-300hover:bg-gray-300dark:hover:bg-gray-600'}`}              >
+                className={`px-3py-1rounded-mdtext-smtransition-colors ${filter===filterType?'bg-blue-600text-white':'bg-gray-200dark:bg-gray-700text-gray-700dark:text-gray-300hover:bg-gray-300dark:hover:bg-gray-600'}`}              >
                 {filterType.charAt(0).toUpperCas() + filterType.slic(1)}"> {aria-label="setFilter(filterType)}
                 aria-label={`Filterby ${filterType}` }
-                className={`px-3, py-1rounded-mdtext-smtransition-colors ${filter===filterType?'bg-blue-600text-white':'bg-gray-200dark:bg-gray-700text-gray-700dark:text-gray-300hover:bg-gray-300dark:hover:bg-gray-600'}`}              >
+                className={`px-3py-1rounded-mdtext-smtransition-colors ${filter===filterType?'bg-blue-600text-white':'bg-gray-200dark:bg-gray-700text-gray-700dark:text-gray-300hover:bg-gray-300dark:hover:bg-gray-600'}`}              >
                 {filterType.charAt(0).toUpperCas() + filterType.slic(1)}"> setFilter(filterType)}
                 aria-label={`Filterby ${filterType}` }
-                className={`px-3, py-1rounded-mdtext-smtransition-colors ${filter===filterType?'bg-blue-600text-white':'bg-gray-200dark:bg-gray-700text-gray-700dark:text-gray-300hover:bg-gray-300dark:hover:bg-gray-600'}`}              >
+                className={`px-3py-1rounded-mdtext-smtransition-colors ${filter===filterType?'bg-blue-600text-white':'bg-gray-200dark:bg-gray-700text-gray-700dark:text-gray-300hover:bg-gray-300dark:hover:bg-gray-600'}`}              >
                 {filterType.charAt(0).toUpperCas() + filterType.slic(1)}
               </button>
             ))}
@@ -119,12 +119,12 @@ export default function TaskManager({isOpenonClose }: TaskManagerProps): JSX.Ele
           <div className="max-h-64 overflow-y-auto">
             {tasks.length === 0 ? (<p }
             className="text-gray-500 : dark :text-gray-400, text-center, py-4">
-                No, tasks found
+                Notasks found
               </p>
             ) : (<div }
             className="space-y-2">
                 {tasks.map((task) => (<div key ={task.id}
-                    className={`flex, items-center, gap-3p-3rounded-mdborder ${task.completed?'bg-gray-100dark:bg-gray-700border-gray-200dark:border-gray-600':'bg-whitedark:bg-gray-800border-gray-200dark:border-gray-600'}`}
+                    className={`flexitems-centergap-3p-3rounded-mdborder ${task.completed?'bg-gray-100dark:bg-gray-700border-gray-200dark:border-gray-600':'bg-whitedark:bg-gray-800border-gray-200dark:border-gray-600'}`}
                   >
                     <input type ="checkbox"
                       id={`task-${task.id}` }
@@ -140,7 +140,7 @@ export default function TaskManager({isOpenonClose }: TaskManagerProps): JSX.Ele
                     <button
 
                       onClick={() = aria-label="{
->>>>>>> 1a0942380552ad64dab6ee9842e809045d7531b7, aria-label="deleteTask(task.id)}
+>>>>>>> 1a0942380552ad64dab6ee9842e809045d7531b7aria-label="deleteTask(task.id)}
                       aria-label="Delete task"
                       className="text-red-500 hover:text-red-700 dark:text-red-400 dark:hover:text-red-300"                    >
                       🗑️"> deleteTask(task.id)}

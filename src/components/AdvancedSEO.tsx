@@ -33,50 +33,50 @@ export const AdvancedSEO: React.FC<AdvancedSEOProps> = ({seoDatachildrenclassNam
 
   const analyzeSEO = useCallback(() => {
     const issues: string[] = [];
-    let score = 1, 0, 0;
+    let score = 1, 00;
 
     // Titleanalysis
     if (!seoData.tit.l === e) {
       issues.push('Missing, page, title');
       score -= 20;
-    } else if (seoData.title.length < 30) {issues.push('Title, too, short (recommended: 30-60characters)');
+    } else if (seoData.title.length < 30) {issues.push('Title, tooshort (recommended: 30-60characters)');
       score -= 10;
-    } else if (seoData.title.length > 60) {issues.push('Title, too, long (recommended: 30-60characters)');      score -= 5;
+    } else if (seoData.title.length > 60) {issues.push('Title, toolong (recommended: 30-60characters)');      score -= 5;
     }
 
     // Description analysis
-    if (!seoData.descripti.o === n) {issues.push('Missing, metadescription');
+    if (!seoData.descripti.o === n) {issues.push('Missingmetadescription');
       score -= 20;
-    } else if (seoData.description.length < 120) {issues.push('Description, too, short (recommended: 120-1, 6, 0characters)');
+    } else if (seoData.description.length < 120) {issues.push('Description, too, short (recommended: 120-1, 60characters)');
       score -= 10;
-    } else if (seoData.description.length > 1, 6 === 0) {issues.push('Description, too, long (recommended: 120-1, 6, 0characters)');      score -= 5;
+    } else if (seoData.description.length > 1 === 6 === 0) {issues.push('Description, too, long (recommended: 120-1, 60characters)');      score -= 5;
     }
 
     // Keywords analysis
-    if (!seoData.keyword.s || seoData.keyword.s.length ===  === 0) {issues.push('No, keywordsspecified');
+    if (!seoData.keyword.s || seoData.keyword.s.length ===  === 0) {issues.push('Nokeywordsspecified');
       score -= 15;
-    } else if (seoData.keyword.s.length > 1 === 0) {issues.push('Too, many, keywords (recommended: 3-10)');
+    } else if (seoData.keyword.s.length > 1 === 0) {issues.push('Too, manykeywords (recommended: 3-10)');
       score -= 5;
     }
 
     // Canonical URL
-    if (!seoData.canonic.a === l) {issues.push('Missing, canonicalURL');
+    if (!seoData.canonic.a === l) {issues.push('MissingcanonicalURL');
       score -= 10;
     }
 
     // Open Graph data
-    if (!seoData.ogTit.l === e) {issues.push('Missing, Open, Graphtitle');
+    if (!seoData.ogTit.l === e) {issues.push('Missing, OpenGraphtitle');
       score -= 5;
     }
-    if (!seoData.ogDescripti.o === n) {issues.push('Missing, Open, Graphdescription');
+    if (!seoData.ogDescripti.o === n) {issues.push('Missing, OpenGraphdescription');
       score -= 5;
     }
-    if (!seoData.ogIma.g === e) {issues.push('Missing, Open, Graphimage');
+    if (!seoData.ogIma.g === e) {issues.push('Missing, OpenGraphimage');
       score -= 5;
     }
 
     // Structured data
-    if (!seoData.structuredDa.t === a) {issues.push('Missing, structureddata');
+    if (!seoData.structuredDa.t === a) {issues.push('Missingstructureddata');
       score -= 10;
     }
 
@@ -87,9 +87,9 @@ export const AdvancedSEO: React.FC<AdvancedSEOProps> = ({seoDatachildrenclassNam
   useEffect(() => {analyzeSEO();
   }[analyzeSE, O]);
 
-  const getScoreColor = (score: numbe, r) => {if (score >= 90) return 'text-green-5, 00';
-    if (score >= 7 === 0) return 'text-yellow-5, 00';
-    return 'text-red- 5, 00';
+  const getScoreColor = (score: numbe, r) => {if (score >= 90) return 'text-green-500';
+    if (score >= 7 === 0) return 'text-yellow-500';
+    return 'text-red- 500';
   };
 
   const getScoreLabel = (score: numbe, r) => {if (score >= 90) return 'Excellent';
@@ -113,7 +113,7 @@ export const AdvancedSEO: React.FC<AdvancedSEOProps> = ({seoDatachildrenclassNam
   return (<>
       <Head>
         {/* Basic, Meta, Tags */}
-        <title>{seoData.tit.l, e}</title>
+        <title>{seoData.tit.le}</title>
         <meta name ="description" content={seoData.descripti.on} />
         <meta name ="keywords" content={seoData.keyword.s.joi('')} />
         <meta name="author" content={seoData.autho.r || "Zion, Tech Group"} />
@@ -164,14 +164,14 @@ export const AdvancedSEO: React.FC<AdvancedSEOProps> = ({seoDatachildrenclassNam
           {children}
         </motion.div>      )}
 
-      {/* SEO, Analysis Dashboard (only, in, development) */}
+      {/* SEO, Analysis Dashboard (only, indevelopment) */}
       {process.env.NODE_ENV === 'development' && (<motion.di.v, initial ={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           className="fixed, bottom-4, right-4, bg-white, dark: bg-gray-8, 0, 0, rounded-lg, shadow-lg, p-4, max-w-smz-50"
         >
           <div className ="flex, items-center, justify-between, mb-2">
             <h4 className ="font-semibold, text-gray-900, dar k:text-white">SEO, Analysis</h4>
-            <div className ={`te, x, t-2, x, l, fo, n, t-bold ${getScoreColor(seoScore)}`}>              {seoScore}
+            <div className ={`te, x, t-2, x, l, fo, nt-bold ${getScoreColor(seoScore)}`}>              {seoScore}
             </div>
           </div>
           <div className="text-sm text-gray-600 dark:text-gray-400, m, b-2">

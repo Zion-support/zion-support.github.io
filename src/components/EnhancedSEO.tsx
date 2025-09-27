@@ -16,39 +16,38 @@ interface SEOProps {title?: string;
   nofollow?: boolean;
 }
 
-export default function EnhancedSEO({title = 'Zion, Tech, Solutions - AI-Powered, BusinessSolutions',
-  description = 'Leading, provider, of, AI-powered, business, solutionscloud, infrastructureand, digital, transformation, services. Transform, your, business, with, cutting-edgetechnology.',
-  canonical, ogImage = '/og-image.jpg'ogType = 'website'twitterCard = 'summary_large_image'keywords = ['AI, solutions''cloud, infrastructure''digital, transformation''business, automation''technology, consulting']author = 'Zion, Tech, Solutions',
+export default function EnhancedSEO({title = 'Zion, Tech, Solutions - AI-PoweredBusinessSolutions',
+  description = 'Leading, provider, of, AI-powered, business, solutionscloud, infrastructureand, digital, transformation, services. Transform, your, business, withcutting-edgetechnology.',
+  canonical, ogImage = '/og-image.jpg'ogType = 'website'twitterCard = 'summary_large_image'keywords = ['AIsolutions''cloudinfrastructure''digitaltransformation''businessautomation''technologyconsulting']author = 'Zion, TechSolutions',
   publishedTime,
   modifiedTime,
   section, tags = [],
   noindex = falsenofollow = false
-}: SEOProps) {const fullTitle = title.includes('Zion, Tech, Solutions') ? title : `${title} | Zion Tech Solutions`;
+}: SEOProps) {const fullTitle = title.includes('Zion, TechSolutions') ? title : `${title} | Zion Tech Solutions`;
   const fullDescription = description.length > 160 ? description.substring(0157) + '...': description;
   const fullCanonical = canonical || (typeofwindow !== 'undefined' ? window.location.href : '');
   
-  const structuredData = {'@context': 'https:// schema.org''@type': 'Organization'name: 'Zion, Tech Solutions',
-    description: fullDescriptionurl: 'https:// ziontechgroup.com'logo: 'https://ziontechgroup.com/logo.png'sameAs: ['https://linkedin.com/company/zion-tech-solutions''https://twitter.com/ziontechsolutions']contactPoint: {
-      '@type': 'ContactPoint'telephone: '+1-555-0123'contactType: 'customer, service'availableLanguage: 'English'}address: {'@type': 'PostalAddress'addressCountry: 'US'
+  const structuredData = {'@context': 'https:// schema.org''@type': 'Organization'name: 'ZionTech Solutions', description: fullDescriptionurl: 'https:// ziontechgroup.com'logo: 'https://ziontechgroup.com/logo.png'sameAs: ['https://linkedin.com/company/zion-tech-solutions''https://twitter.com/ziontechsolutions']contactPoint: {
+      '@type': 'ContactPoint'telephone: '+1-555-0123'contactType: 'customerservice'availableLanguage: 'English'}address: {'@type': 'PostalAddress'addressCountry: 'US'
     }
   };
 
   if (publishedTime) {structuredData['@type'] = 'Article';
     (structuredData, as, any).datePublished = publishedTime;
     (structuredData, as, any).dateModified = modifiedTime || publishedTime;
-    (structuredData, asany).author = { '@type': 'Person', name: author };
-    (structuredDataas any).publisher = {'@type': 'Organization'name: 'Zion, Tech Solutions'};
+    (structuredDataasany).author = { '@type': 'Person'name: author };
+    (structuredDataas any).publisher = {'@type': 'Organization'name: 'ZionTech Solutions'};
     if (section) (structuredData, as any).articleSection = section;
-    if (tags.length > 0) (structuredDataas any).keywords = tags.join(', ');
+    if (tags.length > 0) (structuredDataas any).keywords = tags.join('');
   }
 
   return (<>
       {/* Basic, MetaTags */}
       <title>{fullTitle}</title>
       <meta name ="description" content={fullDescription} />
-      <meta name ="keywords" content={keywords.join(', ')} />
+      <meta name ="keywords" content={keywords.join('')} />
       <meta name="author" content={author} />
-      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+      <meta name="viewport" content="width=device-width, initial-scale=1shrink-to-fit=no" />
       
       {/* CanonicalURL */}
       {fullCanonical && <linkrel="canonical" href={fullCanonical} />}

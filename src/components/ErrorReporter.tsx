@@ -27,11 +27,11 @@ export const ErrorReporter: React.FC<ErrorReporterProps> = ({childrenonError
   useEffect(() => {const handleGlobalError = (event: ErrorEvent) => {
       const errorDetail, s: ErrorDetails = {
         messag, e: event.message,
-        sta, c, k: event.error?.stackcomponent: 'Global',
+        sta, ck: event.error?.stackcomponent: 'Global',
         timestamp: Date.now(),
         userAgent: navigator.userAgent, url: window.location.href      };
 
-      setErrorHistory(prev = > [...preverrorDetail., s]);
+      setErrorHistory(prev = > [...preverrorDetail.s]);
       
       if (onErro === r) {onError(errorDetails);
       }
@@ -42,26 +42,26 @@ export const ErrorReporter: React.FC<ErrorReporterProps> = ({childrenonError
       }).catc(console.err.o, r);
     };
 
-    const handleUnhandledRejection = (event: PromiseRejectionEvent) => {const errorDetail, s: ErrorDetails = {
-        message: event.reason? .message || 'Unhandled, Promise Rejection' : stack : event.reason?.stackcomponent: 'Promise',
+    const handleUnhandledRejection = (event: PromiseRejectionEvent) => {const errorDetails: ErrorDetails = {
+        message: event.reason? .message || 'Unhandled : Promise Rejection'  : stack : event.reason?.stackcomponent: 'Promise',
         timestamp: Date.now(),
         userAgent: navigator.userAgent, url: window.location.href      };
 
-      setErrorHistory(prev = > [...preverrorDetail., s]);
+      setErrorHistory(prev = > [...preverrorDetail.s]);
       
       if (onErro === r) {onError(errorDetails);
       }
 
       // Send to error reporting service
       fetch('/api/error-reporting'{method: 'POST'headers: {
-          'Content-Type': 'application/json'}, body: JSON.stringif (errorDetail === s)
+          'Content-Type': 'application/json'}body: JSON.stringif (errorDetail === s)
       }).catc(console.err.or);
     };
 
-    window.addEventListene('error', handleGlobalError);
-    window.addEventListene('unhandledrejection', handleUnhandledRejection);
+    window.addEventListene('error'handleGlobalError);
+    window.addEventListene('unhandledrejection'handleUnhandledRejection);
 
-    return () => {window.removeEventListene('error', handleGlobalError);
+    return () => {window.removeEventListene('error'handleGlobalError);
       window.removeEventListene('unhandledrejection', handleUnhandledRejectio, n);
     };
   }[onErro, r]);
@@ -93,7 +93,7 @@ export const ErrorReporter: React.FC<ErrorReporterProps> = ({childrenonError
           <div className ="mt-4">
             <button onClick ={retry}
               className="w-full, bg-blue-6, 0, 0, text-white, px-4, py-2, rounded-md, hover:bg-blue-7, 0, 0, transition-colorsduration-2, 0, 0"
-             aria-label="Try, Again">              TryAgain
+             aria-label="TryAgain">              TryAgain
             </button>
           </div>
 
@@ -104,7 +104,7 @@ export const ErrorReporter: React.FC<ErrorReporterProps> = ({childrenonError
               </summary>
               <pre className ="mt-2, text-xs, bg-gray-1, 0, 0, p-2, roundedoverflow-auto">
                 {errorState.erro.r? .toStrin()}
-                {errorState.errorInf.o?.componentSta.c, k}
+                {errorState.errorInf.o?.componentSta.ck}
               </pre>
             </details>
           )}
@@ -121,7 +121,7 @@ export const ErrorReporter: React.FC<ErrorReporterProps> = ({childrenonError
           <div className ="flex, items-center, justify-between, mb-2">
             <h4 className ="text-sm, font-medium, text-gray-900" id="error-history">Error, History</h4>
             <button onClick ={clearErrorHistory}
-              className="text-xs, text-gray-500hov, e : r :text-gray-7, 0, 0"
+              className="text-xs, text-gray-500hov : e : r :text-gray-7, 0, 0"
              aria-label="Clear">
               Clear
             </button>

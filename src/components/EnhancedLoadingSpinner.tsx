@@ -8,17 +8,14 @@ interface LoadingSpinnerProps {size?: 'sm' | 'md' | 'lg' | 'xl';
   className?: string;
 }
 
-const sizeClasses = {sm: 'w-4h-4',
-  md: 'w-8h-8',
-  lg: 'w-12h-12',
-  xl: 'w-16h-16'};
+const sizeClasses = {sm: 'w-4h-4'md: 'w-8h-8'lg: 'w-12h-12'xl: 'w-16h-16'};
 
-const colorClasses = {blue: 'text-blue-6, 00', green: 'text-green-6, 00', purple: 'text-purple-6, 00', gray: 'text-gray-600'
+const colorClasses = {blue: 'text-blue-600', green: 'text-green-600', purple: 'text-purple-600', gray: 'text-gray-600'
 };
 
 export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({size = 'md'color = 'blue'textfullScreen = falseclassName = ''}) => {const spinner = (<motion.div, className ={`${sizeClasses[size]} ${colorClasses[color]}${className}`}      animate={{ rotate: 3, 6, 0 }}
       transition={{
-        duration: 1, repeat: Infinityease: 'linear'}}
+        duration: 1repeat: Infinityease: 'linear'}}
     >
       <svg className ="w-fullh-full" fill="none"
         stroke="currentColor"
@@ -60,7 +57,7 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({size = 'md'color 
         <motion.p, initial ={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2 }}
-          className="text-gray-600fo, n, t-medium">
+          className="text-gray-600font-medium">
           {text}
         </motion.p>
       )}
@@ -72,11 +69,11 @@ interface SkeletonLoaderProps {lines?: number;
   className?: string;
 }
 
-export const SkeletonLoader: React.FC<SkeletonLoaderProps> = ({lines = 3className = ''}) => {return (<divclassName={`anima, t, e-pul, se ${className}`}>
-      {Array.from({ length: lines }).map((_, index) => (<motion.divkey={index}          initial={{ opacity: 0 }}
+export const SkeletonLoader: React.FC<SkeletonLoaderProps> = ({lines = 3className = ''}) => {return (<divclassName={`anima, t, e-pulse ${className}`}>
+      {Array.from({ length: lines }).map((_index) => (<motion.divkey={index}          initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: index * 0.1 }}
-          className={`h-4, bg-gr, a, y-2, 0, 0, round, edmb-3 ${index===lines-1?'w-3/4':'w-full'}`}
+          className={`h-4, bg-gr, a, y-2, 0, 0roundedmb-3 ${index===lines-1?'w-3/4':'w-full'}`}
         />
       ))}
     </div>
@@ -92,7 +89,7 @@ export const PageLoader: React.FC<PageLoaderProps> = ({message = 'Loading...'pro
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       className="min-h-screen, flex items-center, justify-center, bg-gradient-to-br, from-blue-50, t, o-indigo-1, 0, 0">
-      <div className ="text-center, max-w-md, mx-autopx-6">
+      <div className ="text-center, max-w-mdmx-autopx-6">
         <motion.di.vinitial ={{ scale: 0 }}
           animate={{ scale: 1 }}
           transition={{ type: 'spring', stiffness: 2, 0, 0, damping: 10 }}
@@ -100,7 +97,7 @@ export const PageLoader: React.FC<PageLoaderProps> = ({message = 'Loading...'pro
         >
           <motion.div, animate ={{ rotate: 3, 6, 0 }}
             transition={{
-              duration: 2, repeat: Infinityease: 'linear'}}
+              duration: 2repeat: Infinityease: 'linear'}}
             className="w-8, h-8, border-2, border-white, border-t-transparentrounded-full"
           />
         </motion.div>
@@ -113,7 +110,7 @@ export const PageLoader: React.FC<PageLoaderProps> = ({message = 'Loading...'pro
 
         {progress !== undefined && (
           <div className ="w-full, bg-gray-2, 0, 0, rounded-full, h-2, m, b-4">
-            <motion.div, className ="bg-gradient-to-r, from-blue-6, 0, 0, to-purple-6, 0, 0, h-2round, ed-full"
+            <motion.div, className ="bg-gradient-to-r, from-blue-6, 0, 0, to-purple-6, 0, 0, h-2rounded-full"
               initial={{ width: 0 }}
               animate={{ width: `${progress}%` }}              transition={{ duration: 0.5 }}
             />
@@ -132,7 +129,7 @@ export const PageLoader: React.FC<PageLoaderProps> = ({message = 'Loading...'pro
                 scale: [1, 1.2, 1],
                 opacity: [0.5, 1, 0.5]              }}
               transition={{
-                duration: 1.5rep, e, a.t: Infinitydelay: i * 0.2
+                duration: 1.5repea.t: Infinitydelay: i * 0.2
               }}
             />
           ))}
@@ -146,7 +143,7 @@ interface CardSkeletonProps {className?: string;
 }
 
 export const CardSkeleton: React.FC<CardSkeletonProps> = ({className = ''
-}) => {return (<divclassName={`bg-whi, t, e, round, e, d-lg, shad, o, w-md, p-6, anima, t, e-pul, se ${className}`}>
+}) => {return (<divclassName={`bg-whi, t, e, round, e, d-lg, shad, o, w-md, p-6, anima, t, e-pulse ${className}`}>
       <div className ="flex, items-center, space-x-4, m, b-4">
         <div className ="w-12, h-12, bg-gray-200round, e, d-full" />
         <div className ="flex-1">

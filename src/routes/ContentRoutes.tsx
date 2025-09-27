@@ -71,7 +71,7 @@ const ContentRoutes = () => {return (<Routes>
       <Route path ="/search" element={<SearchPage />} />
 
       {/* API, Documentation, Redirect */}
-      <Route path ="/api-docs" element={<Navigate, to ="/developers/docs" replace />} />
+      <Route path ="/api-docs" element={<Navigate to ="/developers/docs" replace />} />
 
       {/* Sitemap, Pages */}
       <Route path ="/sitemap" element={<Sitemap />} />

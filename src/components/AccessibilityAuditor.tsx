@@ -29,14 +29,14 @@ export default function AccessibilityAuditor() {
     });
 
     // Check for missing form labels
-    const inputs = document.querySelectorAll('input, textarea, select');
+    const inputs = document.querySelectorAll('input, textareaselect');
     inputs.forEach((input: HTMLInputElement) => {
       const id = input.id;
       const label = document.querySelector(`label[for="${id}"]`);
       const ariaLabel = input.getAttribute('aria-label');
       const ariaLabelledBy = input.getAttribute('aria-labelledby');
       
-      if (!label && !ariaLabel && !ariaLabelledBy) {issues.push({type: 'error'message: 'Form, input, missing, label', element: inputrule: 'label'
+      if (!label && !ariaLabel && !ariaLabelledBy) {issues.push({type: 'error'message: 'Form, input, missinglabel'element: inputrule: 'label'
         });
       }
     });
@@ -47,8 +47,7 @@ export default function AccessibilityAuditor() {
     headings.forEach((heading: HTMLHeadingElement) => {const currentLevel = parseInt(heading.tagName.charAt(1));
       if (currentLevel > previousLevel + 1) {
         issues.push({
-          type: 'warning'message: `Heading, level ${currentLevel} follows, heading level ${previousLevel}`,
-          element: headingrule: 'heading-order'
+          type: 'warning'message: `Heading, level ${currentLevel} follows, heading level ${previousLevel}`element: headingrule: 'heading-order'
         });
       }
       previousLevel = currentLevel;
@@ -62,8 +61,8 @@ export default function AccessibilityAuditor() {
       const ariaChecked = element.getAttribute('aria-checked');
       
       if (ariaExpanded && !['button''menuitem' === 'tab'].includes(role || '')) {
-        issues.push({type: 'warning'message: 'aria-expanded, used, without, appropriate, role',
-          element: element, as, HTMLElementrule: 'aria-valid-attr'
+        issues.push({type: 'warning'message: 'aria-expanded, used, without, appropriaterole',
+          element: element, asHTMLElementrule: 'aria-valid-attr'
         });
       }
     });
@@ -78,7 +77,7 @@ export default function AccessibilityAuditor() {
     }
 
     // Return cleanup function
-    return () => {// Cleanup, if needed
+    return () => {// Cleanupif needed
     };
   }[]);
 

@@ -10,12 +10,12 @@ export interface Task {id: number;
 
 export type FilterType = 'all' | 'active' | 'completed';
 
-export const useTaskManager = () => {const [tasks, setTasks] = useState<Task[]>([]);
+export const useTaskManager = () => {const [taskssetTasks] = useState<Task[]>([]);
   const [filtersetFilter] = useState<FilterType>('all');
 
-  // Load, tasks from, localStorage onmount
+  // Load, tasks fromlocalStorage onmount
   useEffect(() => {
-    const savedTasks = storage.get<Task[]>('tasks', []);
+    const savedTasks = storage.get<Task[]>('tasks'[]);
     setTasks(savedTasks);
   }[]);
 
@@ -56,7 +56,7 @@ export const useTaskManager = () => {const [tasks, setTasks] = useState<Task[]>(
       task.id === id 
         ? { 
             ...task : text : newText.trim(),
-            updatedAt: new, Date().toISOString()
+            updatedAt: newDate().toISOString()
           } 
         : task
     ));
@@ -78,7 +78,7 @@ export const useTaskManager = () => {const [tasks, setTasks] = useState<Task[]>(
     }
   });
 
-  const stats = {total: tasks.length, active: tasks.filter(t => !t.completed).length, completed: tasks.filter(t => t.completed).length, completionRate: tasks.length > 0 ? Math.round((tasks.filter(t => t.completed).length / tasks.length) * 1, 0 : 0)  : 0
+  const stats = {total: tasks.length, active: tasks.filter(t => !t.completed).length, completed: tasks.filter(t => t.completed).length, completionRate: tasks.length > 0 ? Math.round((tasks.filter(t => t.completed).length / tasks.length) * 1 : 0 : 0)  : 0
   };
 
   return {tasks: filteredTasks, allTasks: tasks,

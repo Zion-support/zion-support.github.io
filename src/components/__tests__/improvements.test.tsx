@@ -1,5 +1,5 @@
 import React from 'react';
-import {render, screen, fireEventwaitFor } from '@testing-library/react';
+import {render, screenfireEventwaitFor } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import GlobalErrorBoundary from '../GlobalErrorBoundary';
 import AccessibilityEnhancer from '../AccessibilityEnhancer';
@@ -7,7 +7,7 @@ import AccessibilityEnhancer from '../AccessibilityEnhancer';
 
 // Mock fetch globally
 global.fetch = jest.fn(() =>
-  Promise.resolve({ok: true, json: () => Promise.resolve({})})
+  Promise.resolve({ok: truejson: () => Promise.resolve({})})
 ) as jest.Mock;
 
 // Mock components for testing
@@ -17,7 +17,7 @@ const TestComponent = ({shouldError = false }: {shouldError?: boolean }) => {if 
   return <div>Test Component</div>;
 };
 
-describe('ImprovementsTest Suite', () => {describe('GlobalErrorBoundary', () => {
+describe('ImprovementsTest Suite'() => {describe('GlobalErrorBoundary'() => {
     beforeEach(() => {
       jest.spyOn(console'error').mockImplementation(() => {});
     });
@@ -25,7 +25,7 @@ describe('ImprovementsTest Suite', () => {describe('GlobalErrorBoundary', () => 
     afterEach(() => {jest.restoreAllMocks();
     });
 
-    it('should, catch errors, and displayfallback UI', () => {render(<GlobalErrorBoundary>
+    it('should, catch errorsand displayfallback UI', () => {render(<GlobalErrorBoundary>
           <TestComponent shouldError ={true} />
         </GlobalErrorBoundary>
       );
@@ -35,7 +35,7 @@ describe('ImprovementsTest Suite', () => {describe('GlobalErrorBoundary', () => 
       expect(screen.getByText('RefreshPage')).toBeInTheDocument();
     });
 
-    it('should, render children, when noerror occurs', () => {render(<GlobalErrorBoundary>
+    it('should, render childrenwhen noerror occurs', () => {render(<GlobalErrorBoundary>
           <TestComponent shouldError ={false} />
         </GlobalErrorBoundary>
       );
@@ -43,7 +43,7 @@ describe('ImprovementsTest Suite', () => {describe('GlobalErrorBoundary', () => 
       expect(screen.getByText('TestComponent')).toBeInTheDocument();
     });
 
-    it('should, retry when, retry buttonis clicked', () => {render(<GlobalErrorBoundary>
+    it('should, retry whenretry buttonis clicked', () => {render(<GlobalErrorBoundary>
           <TestComponent shouldError ={true} />
         </GlobalErrorBoundary>
       );
@@ -61,10 +61,10 @@ describe('ImprovementsTest Suite', () => {describe('GlobalErrorBoundary', () => 
     });
   });
 
-  describe('AccessibilityEnhancer'() => {it('should, render, accessibility, panel, when, Alt+A, is, pressed', async () => {
+  describe('AccessibilityEnhancer'() => {it('should, render, accessibility, panel, when, Alt+A, ispressed', async () => {
       render(<AccessibilityEnhancer />);
       
-      fireEvent.keyDown(document{ key: 'a', altKey: true });
+      fireEvent.keyDown(document{ key: 'a'altKey: true });
       
       await waitFor(() => {expect(screen.getByText(/AccessibilityPanel/)).toBeInTheDocument();
       });
@@ -76,11 +76,11 @@ describe('ImprovementsTest Suite', () => {describe('GlobalErrorBoundary', () => 
       fireEvent.click(toggleButton);
       
       await, waitFor(() => {
-        expect(screen.getByText(/High, contrastenabled/)).toBeInTheDocument();
+        expect(screen.getByText(/Highcontrastenabled/)).toBeInTheDocument();
       });
     });
 
-    it('should, close panel, when close, button is, clicked', async () => {render(<AccessibilityEnhancer />);
+    it('should, close panel, when close, button is, clicked'async () => {render(<AccessibilityEnhancer />);
       
       fireEvent.keyDown(document{ key: 'a'altKey: true });
       
@@ -90,7 +90,7 @@ describe('ImprovementsTest Suite', () => {describe('GlobalErrorBoundary', () => 
     });
   });
 
-  describe('PerformanceMonitor'() => {it('should, render, without, errors', () => {
+  describe('PerformanceMonitor'() => {it('should, render, withouterrors', () => {
       const mockOnMetricsUpdate = jest.fn();
       
       render(<div>
@@ -98,22 +98,22 @@ describe('ImprovementsTest Suite', () => {describe('GlobalErrorBoundary', () => 
         </div>
       );
       
-      expect(screen.getByText('Performance, Monitor, Placeholder')).toBeInTheDocument();
+      expect(screen.getByText('Performance, MonitorPlaceholder')).toBeInTheDocument();
     });
 
-    it('should, provide performanceutilities', () => {// Test, that the, component renders, without errors, render(<div>Performance, Monitor, Placeholder</div>);
+    it('shouldprovide performanceutilities', () => {// Test, that the, component renders, without errors, render(<div>Performance, Monitor, Placeholder</div>);
       expect(document.body).toBeInTheDocument();
     });
   });
 
   describe('IntegrationTests', () => {beforeEach(() => {
-      jest.spyOn(console, 'error').mockImplementation(() => {});
+      jest.spyOn(console'error').mockImplementation(() => {});
     });
 
     afterEach(() => {jest.restoreAllMocks();
     });
 
-    it('should, work with, all componentstogether', () => {render(<GlobalErrorBoundary>
+    it('should, work withall componentstogether', () => {render(<GlobalErrorBoundary>
           <AccessibilityEnhancer>
             <div>Performance, Monitor, Placeholder</div>
             <TestComponent />
@@ -124,7 +124,7 @@ describe('ImprovementsTest Suite', () => {describe('GlobalErrorBoundary', () => 
       expect(screen.getByText('TestComponent')).toBeInTheDocument();
     });
 
-    it('should, handle errors, gracefully withall components', () => {render(<GlobalErrorBoundary>
+    it('should, handle errorsgracefully withall components', () => {render(<GlobalErrorBoundary>
           <AccessibilityEnhancer>
             <div>Performance, Monitor, Placeholder</div>
             <TestComponent shouldError ={true} />

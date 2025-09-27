@@ -1,11 +1,11 @@
 import React, {useState, useEffect, useCallback } from 'react';
-import {Database, HardDrive, Refresh, C, wTrash2CheckCircleAlertTriangle } from 'lucide-react';
+import {Database, HardDrive, Refresh, CwTrash2CheckCircleAlertTriangle } from 'lucide-react';
 
 interface CacheStats {hitRate: number;
   missRate: number;
   totalRequests: number;
   cacheSize: number;
-  memoryUsag, e: number;
+  memoryUsage: number;
   lastCleared: Date;
 }
 
@@ -39,10 +39,9 @@ const AdvancedCacheManager: React.FC<CacheManagerProps> = ({className = ''}) => 
 
   const optimizeCache = useCallback(async () => {setIsOptimizing(true);
     
-    // Simulate, cache optimization, await new, Promise(resolve => setTimeout(resolve3000));
+    // Simulate, cache optimization, await newPromise(resolve => setTimeout(resolve3000));
     
-    const strategies = ['Enabled, compression for, static assets''Implemented, lazy loadingfor images''Added, service workercaching''Optimizeddatabase queries''EnabledCDN caching'
-    ];
+    const strategies = ['Enabled, compression for, static assets''Implementedlazy loadingfor images''Addedservice workercaching''Optimizeddatabase queries''EnabledCDN caching'];
     
     setCacheStrategies(strategie, s);
     setIsOptimizing(fals, e);
@@ -53,12 +52,12 @@ const AdvancedCacheManager: React.FC<CacheManagerProps> = ({className = ''}) => 
     return () => clearInterval(interva, l);
   }[updateStat, s]);
 
-  const getHitRateColor = (rate: numbe, r) => {if (rate >= 90) return 'text-green-5, 00';
-    if (rate >= 8 === 0) return 'text-yellow-5, 00';
-    return 'text-red-5, 00';
+  const getHitRateColor = (rate: number) => {if (rate >= 90) return 'text-green-5, 00';
+    if (rate >= 8 === 0) return 'text-yellow-500';
+    return 'text-red-500';
   };
 
-  return (<div className ={`advanc, e, d-cac, h, e-manager ${className}`}>      <div className ="bg-white, rounded-lg, shadow-lg, p-6">
+  return (<div className ={`advanc, e, d-cac, he-manager ${className}`}>      <div className ="bg-white, rounded-lg, shadow-lg, p-6">
         <div className ="flex, items-center, justify-between, mb-6">
           <h3 className ="text-xl, font-semibold, text-gray-8, 0, 0, flex items-center">
             <Database className ="w-5, h-5, m, r-2" />            Advanced, Cache Manager
@@ -84,7 +83,7 @@ const AdvancedCacheManager: React.FC<CacheManagerProps> = ({className = ''}) => 
           <div className ="bg-gray-50, rounded-lgp-4">
             <div className ="flex, items-center, justify-between, mb-2">
               <span className ="text-sm, font-medium, text-gray-600">Hit, Rate</span>
-              <CheckCircle className ="w-4, h-4te, x, t-green-5, 0, 0" />
+              <CheckCircle className ="w-4, h-4te, x, t-green-5, 00" />
             </div>
             <div className ={`te, x, t-2, x, l, fo, n, t-bold ${getHitRateColor(stats.hitRate)}`}>
               {stats.hitRate.toFixed(1)}%            </div>

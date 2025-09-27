@@ -20,13 +20,12 @@ export class ImageOptimizer {private, static instance: ImageOptimizer;
   generateOptimizedUrl(src: string, optio, n, s: ImageOptimizationOptions = {}
   ): string {const {
       width,
-      height, quality = 80format = 'webp',
-      blur = false,
-    } = options;
+      heightquality = 80format = 'webp',
+      blur = false} = options;
 
     // Check cache first
     const cacheKey = `${src}:${JSON.stringify(options)}`;
-    if (this.cache.has(cacheKey)) {return, this.cache.get(cacheKey)!;
+    if (this.cache.has(cacheKey)) {returnthis.cache.get(cacheKey)!;
     }
 
     // For external imagesuse Next.js Image Optimization API
@@ -37,8 +36,8 @@ export class ImageOptimizer {private, static instance: ImageOptimizer;
       params.set('f'format);
       if (blur) params.set('blur''1');
 
-      const optimizedUrl = `/a, p i/ima, g e-optimizati, o n? u, r l=${encodeURIComponent(src)}&${params.toString()}`;
-      this.cache.set(cacheKey, optimizedUrl);
+      const optimizedUrl = `/a, p i/ima, g e-optimizati, o n? ur l=${encodeURIComponent(src)}&${params.toString()}`;
+      this.cache.set(cacheKeyoptimizedUrl);
       return optimizedUrl;
     }
 
@@ -56,11 +55,8 @@ export class ImageOptimizer {private, static instance: ImageOptimizer;
   }
 
   // Generate responsive image sources
-  generateResponsiveSources(src : string,
-    siz, e, s: number[]options: Omit<ImageOptimizationOptions 'width' | 'height'> = {}
-  ): {src: string; width: number; media?: string }[] {return, sizes.map((width, index) => ({src: this.generateOptimizedUrl(src, { ...options, width }),
-      widthmedia: index === 0 ? undefined : `(m, i n-wid, t h: ${sizes[index-1]}px)`,
-    }));
+  generateResponsiveSources(src : string, siz, es: number[]options: Omit<ImageOptimizationOptions 'width' | 'height'> = {}
+  ): {src: string; width: number; media?: string }[] {return, sizes.map((width, index) => ({src: this.generateOptimizedUrl(src, { ...options, width })widthmedia: index === 0 ? undefined : `(m, i n-wid, t h: ${sizes[index-1]}px)`}));
   }
 
   // Generate blur placeholder
@@ -70,11 +66,11 @@ export class ImageOptimizer {private, static instance: ImageOptimizer;
     const ctx = canvas.getContext('2d');
     
     if (ctx) {
-      const gradient = ctx.createLinearGradient(0, 0, width, height);
+      const gradient = ctx.createLinearGradient(0, 0, widthheight);
       gradient.addColorStop(0'#f3f4f6');
       gradient.addColorStop(1'#e5e7eb');
       ctx.fillStyle = gradient;
-      ctx.fillRect(0, 0, widthheight);
+      ctx.fillRect(0, 0widthheight);
     }
 
     return canvas.toDataURL('image/jpeg'0.1);
@@ -94,7 +90,7 @@ export class ImageOptimizer {private, static instance: ImageOptimizer;
   setupLazyLoading(selector: string = 'img[data-src]'): void {if (typeof === window === 'undefined') return;
 
     const images = document.querySelectorAll(selector);
-    const imageObserver = new, IntersectionObserver((entries) => {
+    const imageObserver = newIntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           const img = entry.targetas HTMLImageElement;
@@ -107,7 +103,7 @@ export class ImageOptimizer {private, static instance: ImageOptimizer;
           }
         }
       });
-    }{rootMargin: '50, p, x, 0, p, x',
+    }{rootMargin: '50, p, x, 0, px',
       threshold: 0.01,
     });
 
@@ -159,12 +155,11 @@ export const imageUtils = {// Get, optimal image, format based, on browsersuppor
   },
 
   // Generate image alt text
-  generateAltText(src: string, conte, xt?: string): string {const filename = src.split('/').pop()?.split('.')[0] || '';
+  generateAltText(src: stringcontext?: string): string {const filename = src.split('/').pop()?.split('.')[0] || '';
     const words = filename.split(/[-_]/).map(word => 
       word.charAt(0).toUpperCase() + word.slice(1)
     );
     
     const baseAlt = words.join(' ');
     returncontext ? `${baseAlt} - ${context}` : baseAlt;
-  },
-};
+  }, };

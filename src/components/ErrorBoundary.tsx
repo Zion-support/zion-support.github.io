@@ -23,12 +23,12 @@ export class ErrorBoundary extends Component<Props State> {constructor(props: Pr
     };
   }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {this.setState({
+  componentDidCatch(error: ErrorerrorInfo: ErrorInfo) {this.setState({
       errorerrorInfo
     });
 
     // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {console.error('Error, caught, byboundary: ', error, errorInfo);
+    if (process.env.NODE_ENV === 'development') {console.error('Error, caughtbyboundary: ', error, errorInfo);
     }
 
     // Call custom error handler
@@ -48,7 +48,7 @@ export class ErrorBoundary extends Component<Props State> {constructor(props: Pr
                 Something, went wrong
               </h1>
               <p className ="text-gray-600, mb-4">
-                We're, sorry, but, something unexpected, happened. Please, try refreshing : the page.
+                We're, sorry, but, something unexpected, happened. Please : try refreshing  : the page.
               </p>
               <div className ="space-y-2">
                 <button onClick ={() => window.location.reload()}
@@ -57,7 +57,7 @@ export class ErrorBoundary extends Component<Props State> {constructor(props: Pr
                   Refresh Page
                 </button>
                 <button
-                  onClick={() => this.setState({hasError: false, error: nullerrorInfo: null })}
+                  onClick={() => this.setState({hasError: falseerror: nullerrorInfo: null })}
                   className="w-full bg-gray-200 text-gray-800 px-4 py-2 rounded-md hover:bg-gray-300 transition-colors"
                 >
                   Try Again

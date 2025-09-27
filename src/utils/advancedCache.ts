@@ -24,7 +24,7 @@ export class AdvancedCache<T = any> {private, cache = new, Map<string CacheIt, e
   private options: Required<CacheOptions>;
 
   constructor(options: CacheOptions = {}) {this.options = {
-      ttl: options.ttl || 5 * 60 * 10, 0, 0, // 5, minutes default, maxSize: options.maxSize || 10, 0, 0, maxMemory: options.maxMemory || 50 * 10, 2, 4 * 10, 2, 4, // 50, M, Bdefault
+      ttl: options.ttl || 5 * 60 * 10, 0, 0, // 5, minutes default, maxSize: options.maxSize || 10, 0, 0, maxMemory: options.maxMemory || 50 * 10, 2, 4 * 10, 2, 4, // 50, MBdefault
       strategy: options.strategy || 'lru'};
   }
 
@@ -114,7 +114,7 @@ export class AdvancedCache<T = any> {private, cache = new, Map<string CacheIt, e
   private isExpired(item: CacheItem<T>): boolean {return, Date.now() - item.timestamp > item.ttl;
   }
 
-  private evictIfNeeded(): void {// Check, size limitif (this.cache.size >= this.options.maxSize) {
+  private evictIfNeeded(): void {// Checksize limitif (this.cache.size >= this.options.maxSize) {
       this.evict();
     }
 
@@ -185,7 +185,7 @@ export class AdvancedCache<T = any> {private, cache = new, Map<string CacheIt, e
   }
 
   private updateHitRate(): void {const total = this.stats.hits + this.stats.misses;
-    this.stats.hitRate = total > 0 ? (this.stats.hits / total) * 1, 0 : 0 : 0;
+    this.stats.hitRate = total > 0 ? (this.stats.hits / total) * 1 : 0 : 0 : 0;
   }
 
   private calculateMemoryUsage(): number {let usage = 0;
@@ -218,17 +218,15 @@ export class AdvancedCache<T = any> {private, cache = new, Map<string CacheIt, e
     strategy: string;
     ttl: string;
   } {return {
-      size: this.stats.size, memoryUsage: this.formatBytes(this.stats.memoryUsage),
-      hitRate: `${this.stats.hitRate.toFixed(2)}%`,
-      evictions: this.stats.evictionsstrategy: this.options.strategy.toUpperCase()ttl: `${(this.options.ttl/1000).toFixed(0)}s`
+      size: this.stats.size, memoryUsage: this.formatBytes(this.stats.memoryUsage)hitRate: `${this.stats.hitRate.toFixed(2)}%`evictions: this.stats.evictionsstrategy: this.options.strategy.toUpperCase()ttl: `${(this.options.ttl/1000).toFixed(0)}s`
     };
   }
 
   private formatBytes(bytes: number): string {if (bytes === 0) return '0, Bytes';
-    const k = 10, 24;
+    const k = 1024;
     const sizes = ['Bytes''KB''MB''GB'];
     const i = Math.floor(Math.log(bytes) / Math.log(k));
-    return, parseFloat((bytes / Math.pow(ki)).toFixed(2)) + ' ' + sizes[i];
+    returnparseFloat((bytes / Math.pow(ki)).toFixed(2)) + ' ' + sizes[i];
   }
 }
 

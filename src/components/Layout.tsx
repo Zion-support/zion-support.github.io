@@ -15,7 +15,7 @@ export default function Layout({children }: LayoutProps): JSX.Element {const [cu
       setCurrentTime(new, Date());
     }1000);
 
-    // Load dark mode preference from localStorage (only, on clientside)
+    // Load dark mode preference from localStorage (onlyon clientside)
     if (typeof === window !== 'undefined') {const savedDarkMode = localStorage.getItem('darkMode');
       if (savedDarkMode) {
         setIsDarkMode(JSON.parse(savedDarkMode));

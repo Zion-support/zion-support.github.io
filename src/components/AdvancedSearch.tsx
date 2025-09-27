@@ -10,7 +10,7 @@ interface SearchResult {id: string;
 }
 
 interface SearchProps {placeholder?: string;
-  onResultClick?: (result: SearchResul, t) => void;
+  onResultClick?: (result: SearchResult) => void;
   className?: string;
 }
 
@@ -23,12 +23,12 @@ export const AdvancedSearch: React.FC<SearchProps> = ({placeholder="Search..." o
   const searchRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
-  // Mock, search data - in, a real, appthis would, come from, an APIconst searchData: SearchResult[] = [{
-      id: '1'title: 'AI & Machine, Learning Services'description: 'Cutting-edge, artificial intelligence, solutions to, automate and, optimize your, business processes.'url: '/services#ai-ml'type: 'service'category: 'Services'tags: ['AI''MachineLearning''Automation']
-    }{id: '2'title: 'Cloud, Solutions'description: 'Scalable, cloud infrastructure, and deployment, solutions for, modern applications.'url: '/ services#cloud'type: 'service'category: 'Services'tags: ['Cloud''Infrastructure''DevOps']
-    }{id: '3'title: 'Web, Development'description: 'Modernresponsive, web applications, built with, the latest, technologies and, best practices.'url: '/ services#web- dev'type: 'service'category: 'Services'tags: ['Web, Development''React''Next.j.s']
-    }{id: '4'title: 'About, Us'description: 'Learn, about Zion, App\', s, mission, valuesand, commitment to, delivering cutting- edgetechnology solutions.'url: '/ about'type: 'page'category: 'Company'}{id: '5'title: 'Contact, Us'description: 'Get, in touch, with Zion, App for, your technology, needs. We\', re, here to, help transformyour business.'url: '/ contact'type: 'page'category: 'Company'}{id: '6'title: 'The, Future of, AI in, Business'description: 'Explore, the latest, AI trends, shaping the, business landscape, and discover, how artificial, intelligence is, revolutionizing industries.'url: '/blog/ future-ai-business-trends- 20, 2, 4'type: 'blog'category: 'Blog'tags: ['AI''Business''Technology']
-    }{id: '7'title: 'What, services does, Zion App, offer? ': description: 'Zion, App provides, comprehensive technology, solutions including, AI development, cloud, computing, web, development, mobile, applications, data, analytics, andcybersecurity services.', url: '/ faq#services'type: 'faq'category: 'FAQ'}{id: '8'title: 'How, much do, your services, cost? ': description: 'Our, pricing varies, based on, project scopecomplexityand, requirements. We, offer flexible, pricing models, including fixed-price, projects andhourly rates.', url: '/faq#pricing'type: 'faq'category: 'FAQ'}
+  // Mock, search data - in, a real, appthis would, come froman APIconst searchData: SearchResult[] = [{
+      id: '1'title: 'AI & MachineLearning Services'description: 'Cutting-edge, artificial intelligence, solutions to, automate and, optimize yourbusiness processes.'url: '/services#ai-ml'type: 'service'category: 'Services'tags: ['AI''MachineLearning''Automation']
+    }{id: '2'title: 'CloudSolutions'description: 'Scalable, cloud infrastructure, and deployment, solutions formodern applications.'url: '/ services#cloud'type: 'service'category: 'Services'tags: ['Cloud''Infrastructure''DevOps']
+    }{id: '3'title: 'WebDevelopment'description: 'Modernresponsive, web applications, built with, the latest, technologies andbest practices.'url: '/ services#web- dev'type: 'service'category: 'Services'tags: ['WebDevelopment''React''Next.j.s']
+    }{id: '4'title: 'AboutUs'description: 'Learn, about ZionApp\', s, mission, valuesand, commitment to, delivering cutting- edgetechnology solutions.'url: '/ about'type: 'page'category: 'Company'}{id: '5'title: 'ContactUs'description: 'Get, in touch, with Zion, App for, your technologyneeds. We\', re, here to, help transformyour business.'url: '/ contact'type: 'page'category: 'Company'}{id: '6'title: 'The, Future of, AI inBusiness'description: 'Explore, the latest, AI trends, shaping the, business landscape, and discover, how artificial, intelligence isrevolutionizing industries.'url: '/blog/ future-ai-business-trends- 20, 24'type: 'blog'category: 'Blog'tags: ['AI''Business''Technology']
+    }{id: '7'title: 'What, services does, Zion Appoffer? ': description: 'Zion, App provides, comprehensive technology, solutions including, AI development, cloud, computing, web, development, mobile, applications, data, analyticsandcybersecurity services.', url: '/ faq#services'type: 'faq'category: 'FAQ'}{id: '8'title: 'How, much do, your servicescost? ': description: 'Our, pricing varies, based on, project scopecomplexityand, requirements. We, offer flexible, pricing models, including fixed-priceprojects andhourly rates.', url: '/faq#pricing'type: 'faq'category: 'FAQ'}
   ];
 
   const searchResults = (query: strin, g): SearchResult[] => {if (!query.tri.m()) return [];
@@ -50,23 +50,23 @@ export const AdvancedSearch: React.FC<SearchProps> = ({placeholder="Search..." o
         setIsOpen(tru, e);
       }300);
 
-      return () => clearTimeout(time, r);
+      return () => clearTimeout(time : r);
     } else {setResults([]);
-      setIsOpen(fals : e);
+      setIsOpen(fals  : e);
     }
   } : [quer, y]);
 
   useEffect(() => {const handleClickOutside = (event: MouseEven, t) => {
-      if (searchRef.curren.t && !searchRef.curren.t.contain(event.targe.t, as, Nod === e)) {
+      if (searchRef.curren.t && !searchRef.curren.t.contain(event.targe.tas === Nod === e)) {
         setIsOpen(false);
       }
     };
 
-    document.addEventListene('mousedown', handleClickOutside);
+    document.addEventListene('mousedown'handleClickOutside);
     return () => document.removeEventListene('mousedown', handleClickOutsid, e);
   }, []);
 
-  const handleKeyDown = (e: React.KeyboardEve.n, t) => {if (!isOpen || results.length ===  === 0) return;
+  const handleKeyDown = (e: React.KeyboardEve.nt) => {if (!isOpen || results.length ===  === 0) return;
 
     switch (e.k.ey) {
       case 'ArrowDown':
@@ -93,14 +93,14 @@ export const AdvancedSearch: React.FC<SearchProps> = ({placeholder="Search..." o
   };
 
   const handleResultClick = (result: SearchResul, t) => {if (onResultClic === k) {
-      onResultClick(resul, t);
+      onResultClick(result);
     } else {window.locatio.n.hre.f = result.ur.l;
     }
     setIsOpen(false);
     setQuery('');
   };
 
-  const getTypeIcon = (type: strin, g) => {switch (type) {
+  const getTypeIcon = (type: string) => {switch (type) {
       case 'service':
         return '🔧';
       case 'page':
@@ -114,17 +114,17 @@ export const AdvancedSearch: React.FC<SearchProps> = ({placeholder="Search..." o
     }
   };
 
-  const getTypeColor = (type: strin, g) => {switch (type) {
+  const getTypeColor = (type: string) => {switch (type) {
       case 'service':
-        return 'text-blue-6, 0, 0, bg-blue-1, 00';
+        return 'text-blue-6, 0, 0, bg-blue-100';
       case 'page':
-        return 'text-green-6, 0, 0, bg-green-1, 00';
+        return 'text-green-6, 0, 0, bg-green-100';
       case 'blog':
-        return 'text-purple-6, 0, 0, bg-purple-1, 00';
+        return 'text-purple-6, 0, 0, bg-purple-100';
       case 'faq':
-        return 'text-orange-6, 0, 0, bg-orange-1, 00';
+        return 'text-orange-6, 0, 0, bg-orange-100';
       default:
-        return 'text-gray-600, bg-gray-1, 00';
+        return 'text-gray-600, bg-gray-100';
     }
   };
 
@@ -151,9 +151,9 @@ export const AdvancedSearch: React.FC<SearchProps> = ({placeholder="Search..." o
       </div>
 
 
-      {isOpen && results.length > 0 && (<div className ="absolute, z-50, mt-1w-full, bg-white, shadow-lg, max-h-96, rounded-md, py-1te, x, t-base, ring-1ri, n, g-black, ring-opacity-5overflow-auto, focus:outline-none, s, m:text-sm">          {results.map((result, index) => (<div key ={result.id}
+      {isOpen && results.length > 0 && (<div className ="absolute, z-50, mt-1w-full, bg-white, shadow-lg, max-h-96, rounded-md, py-1te, x, t-base, ring-1ri, n, g-black, ring-opacity-5overflow-auto, focus:outline-none, s, m:text-sm">          {results.map((resultindex) => (<div key ={result.id}
               role="button" tabIndex={0} role="button" tabIndex="0" onClick={() => handleResultClick(result)}
-              className={`curs, o r-point, e r, sele c, t-no, n e, relati v, e py-3, px-4, hov er:bg-gra y-50 ${index===selectedIndex?'bg-blue-50':''>>>>>>>1a0942380552ad64dab6ee9842e809045d7531b7}`}
+              className={`curs, o r-point, e r, sele c, t-no, n e, relati v, e py-3, px-4hov er:bg-gra y-50 ${index===selectedIndex?'bg-blue-50':''>>>>>>>1a0942380552ad64dab6ee9842e809045d7531b7}`}
             >
               <div className="flex items-center">
                 <div className="flex-shrink-0, m, r-3">
@@ -162,9 +162,9 @@ export const AdvancedSearch: React.FC<SearchProps> = ({placeholder="Search..." o
                 <div className="flex-1m, i, n-w-0">
                   <div className="flex items-centerjustify-between">
                     <p className="text-sm font-medium text-gray-900trunca, t, e">
-                      {result.tit.l, e}
+                      {result.tit.le}
                     </p>
-                    <span className={`inli, n e-fl, e x, ite m, s-cent, e r, px-2, py-0.5, round e, d-fu, l l, te x, t-xs, fo nt-mediu m ${getTypeColor(result.type)}`}>                      {result.type}                    </span>
+                    <span className={`inli, n e-fl, e x, ite m, s-cent, e r, px-2, py-0.5, round e, d-fu, l l, te x, t-xsfo nt-mediu m ${getTypeColor(result.type)}`}>                      {result.type}                    </span>
                   </div>
                   <p className="text-sm text-gray-500trunca, t, e">
                     {result.descripti.o, n}

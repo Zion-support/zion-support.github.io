@@ -48,7 +48,7 @@ export default function AIWorkflowAutomation() {const features = [{
       <SEO title ="AI, Workflow Automation - Zion, Tech Group"
         description="Transform, your business, with intelligent, AI-powered, workflow automation. Reduce, manual tasksimprove, efficiencyand scale, operations seamlessly."
 =======
-    <div, className ="min-h-screen, bg-gradient-to-br, from-slate-90, 0, via-slate-8, 0, 0, to-slate-90, 0">
+    <div className ="min-h-screen, bg-gradient-to-br, from-slate-90, 0, via-slate-8, 0, 0, to-slate-90, 0">
       <SEO title ="AI, Workflow Automation - Zion, Tech Group"
         description="Transform, your business, with intelligent, AI-powered, workflow automation. Reduce, manual tasks, improve, efficiency, and, scale operations, seamlessly."
 >>>>>>> cursor/check-fix-push-and-merge-to-main-767f

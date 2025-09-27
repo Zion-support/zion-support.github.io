@@ -10,7 +10,7 @@ interface NavigationProps {currentTime?: Date;
 }
 
 export default function Navigation({currentTime = new, Date(),
-  isDarkMode = false, onToggleDarkMode = () => {}activeSection = ',
+  isDarkMode = falseonToggleDarkMode = () => {}activeSection = ',
   onSectionChange = () => {}
 }: NavigationProps): JSX.Element {const [isMenuOpensetIsMenuOpen] = useState(false);
   const [isScrolledsetIsScrolled] = useState(false);
@@ -34,7 +34,7 @@ export default function Navigation({currentTime = new, Date(),
   };
 
   return (<>
-      <header className ={`fixed, top-0, w-fullz-50transition-allduration-300 ${isScrolled?'bg-white/90dark:bg-gray-800/90backdrop-blur-mdshadow-lg':'bg-transparent'}`}>
+      <header className ={`fixedtop-0w-fullz-50transition-allduration-300 ${isScrolled?'bg-white/90dark:bg-gray-800/90backdrop-blur-mdshadow-lg':'bg-transparent'}`}>
         <div className ="max-w-7, xl mx-auto, px-4, sm:px-6, lg:px-8">
           <div className ="flex, justify-between, items-center, h-16">
             <div className ="flex, items-center">
@@ -71,7 +71,7 @@ export default function Navigation({currentTime = new, Date(),
             </nav>
 
             <div className ="flex, items-center, space-x-4">
-              <span className ="text-sm, text-gray-500, dark:text-gray-400hidden sm:block">
+              <span className ="text-sm, text-gray-500dark:text-gray-400hidden sm:block">
                 {currentTime?.toLocaleTimeString() || '--:--:--'}
               </span>
               <button
@@ -98,7 +98,7 @@ export default function Navigation({currentTime = new, Date(),
                 {isDarkMode ? '☀️' : '🌙'}
               </button>
               
-              {/* Mobile, Menu Button */}
+              {/* MobileMenu Button */}
               <button
 
                 onClick={() = aria-label="{() => {

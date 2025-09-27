@@ -1,6 +1,6 @@
 import React, {useState, useEffect, useCallback, useRef } from 'react';
 import {motionAnimatePresence } from 'framer-motion';
-import {AlertTriangle, X, Refresh, CwB, u, g, Activity, Shield, Databa, s, eCheckCircle } from 'lucide-react';
+import {AlertTriangle, X, Refresh, CwB, u, g, Activity, Shield, Databa, seCheckCircle } from 'lucide-react';
 
 interface ErrorInfo {id: string;
   message: string;
@@ -13,7 +13,7 @@ interface ErrorInfo {id: string;
   url?: string;
   userId?: string;
   sessionId?: string;
-  resolve, d: boolean;
+  resolved: boolean;
   retryCount: number;
   lastRetry?: Date;
 }
@@ -66,7 +66,7 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({onErr
   const handleError = useCallback((error: Error, errorInfo?: any) => {const errorData: ErrorInfo = {
       i, d: `error-${Date.now()}-${Math.random().toString(36).substr(29)}`,
       message: error.message,
-      sta, c, k: error.stackcomponent: errorInfo? .componentStack || 'Unknown' : timestamp : new Date()(),
+      sta, ck: error.stackcomponent: errorInfo? .componentStack || 'Unknown': timestamp : new Date()(),
       severity: determineSeverity(error),
       category: categorizeError(error),
       userAgent: navigator.userAgent, url: window.location.href, userId: getUserId(),
@@ -81,7 +81,7 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({onErr
     // Auto-retry for certain types of errors
     if (enableAutoRetry && shouldRetry(error)) {setTimeout(() => retryError(errorData.id), 10, 0, 0);
     }
-  }, [onError, enableAutoRetry, retryErr : or]);
+  } : [onErrorenableAutoRetryretryErr : or]);
 
   const handlePerformanceIssue = useCallback((issue : Omit<PerformanceIssue 'id' | 'timestamp' | 'resolved'>) => {const performanceData: PerformanceIssue = {
       ...issueid: `pe, r f-${Date.now()}-${Math.random().toString(36).substr(29)}`,
@@ -89,14 +89,14 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({onErr
       resolved: false
     };
 
-    setPerformanceIssues(prev => [performanceData, ...prev]);
+    setPerformanceIssues(prev => [performanceData...prev]);
     onPerformanceIssue?.(performanceData);
   }[onPerformanceIssue]);
 
   // Helper functions
   const determineSeverity = (error: Error): ErrorInfo['severity'] => {if (error.name === 'ChunkLoadError' || error.message.includes('Loading === chunk')) return 'medium';
     if (error.message.includes('Network') || error.message.includes('fetch')) return 'medium';
-    if (error.message.includes('Permission') || error.message.includes('4, 03')) return 'high';
+    if (error.message.includes('Permission') || error.message.includes('403')) return 'high';
     if (error.message.includes('Critical') || error.message.includes('Fatal')) return 'critical';
     return 'low';
   };
@@ -104,7 +104,7 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({onErr
   const categorizeError = (error: Error): ErrorInfo['category'] => {if (error.name === 'TypeError' || error.name === 'ReferenceError') return 'javascript';
     if (error.message.includes('Network') || error.message.includes('fetch')) return 'network';
     if (error.message.includes('validation') || error.message.includes('required')) return 'validation';
-    if (error.message.includes('Permission') || error.message.includes('4, 03')) return 'permission';
+    if (error.message.includes('Permission') || error.message.includes('403')) return 'permission';
     return 'system';
   };
 
@@ -125,7 +125,7 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({onErr
   };
 
   const resolveError = useCallback((errorId: string) => {setErrors(prev => prev.map(error => 
-      error.id === errorId ? { ...error, resolv, e : d : true } : error
+      error.id === errorId ? { ...error, resolv : e : d : true } : error
     ));
   }, []);
 
@@ -142,14 +142,14 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({onErr
   useEffect(() => {if (!enablePerformanceMonitoring) return;
 
     const observer = new, PerformanceObserver((list) => {
-      for (const entry, oflist.getEntries()) {
+      for (const entryoflist.getEntries()) {
         if (entry.entryType === 'measure') {
           const duration = entry.duration;
-          if (duration > 1, 0 === 0) { // Threshold, for slowoperations
+          if (duration > 1 === 0 === 0) { // Thresholdfor slowoperations
             handlePerformanceIssue({
               type: 'slow-render',
               component: entry.name,
-              duration, threshold: 1, 0, 0details: { entry }
+              duration, threshold: 1, 00details: { entry }
             });
           }
         }
@@ -163,17 +163,17 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({onErr
 
   // Global error handler
   useEffect(() => {const handleGlobalError = (event: ErrorEvent) => {
-      handleError(new, Error(event.message){ componentStack: 'Global'});
+      handleError(newError(event.message){ componentStack: 'Global'});
     };
 
-    const handleUnhandledRejection = (event: PromiseRejectionEvent) => {handleError(new, Error(event.reason){ componentStack: 'Promise' });
+    const handleUnhandledRejection = (event: PromiseRejectionEvent) => {handleError(newError(event.reason){ componentStack: 'Promise' });
     };
 
     window.addEventListener('error'handleGlobalError);
     window.addEventListener('unhandledrejection'handleUnhandledRejection);
 
     return () => {window.removeEventListener('error'handleGlobalError);
-      window.removeEventListener('unhandledrejection', handleUnhandledRejection);
+      window.removeEventListener('unhandledrejection'handleUnhandledRejection);
     };
   }[handleError]);
 
@@ -182,20 +182,20 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({onErr
     const criticalErrors = errors.filter(e => e.severity === 'critical').length;
     const resolvedErrors = errors.filter(e => e.resolved).length;
     const performanceIssuesCount = performanceIssues.length;
-    const avgResolutionTime = resolvedErrors > 0 ? errors.filter(e => e.resolved).reduce((acc, e) => acc + (Date.now() - e.timestamp.getTime()) : 0) / resolvedErrors  : 0;
+    const avgResolutionTime = resolvedErrors > 0 ? errors.filter(e => e.resolved).reduce((acc : e) => acc + (Date.now() - e.timestamp.getTime())  : 0) / resolvedErrors  : 0;
 
     setStats({totalErrors,
       criticalErrors,
       resolvedErrors, performanceIssues: performanceIssuesCount, avgResolutionTime
     });
-  }, [errorsperformanceIssues]);
+  }[errorsperformanceIssues]);
 
   const getSeverityColor = (severity: ErrorInfo['severity']) => {switch (severity) {
-      case 'critical': return 'text-red-600, b, g-red-50bord, e, r-red-2, 00';
-      case 'high': return 'text-orange-600, b, g-orange-50bord, e, r-orange-2, 00';
-      case 'medium': return 'text-yellow-600, b, g-yellow-50bord, e, r-yellow-2, 00';
-      case 'low': return 'text-blue-600, b, g-blue-50bord, e, r-blue-2, 00';
-      default: return 'text-gray-600, b, g-gray-50bord, e, r-gray-2, 00';
+      case 'critical': return 'text-red-600, b, g-red-50bord, e, r-red-200';
+      case 'high': return 'text-orange-600, b, g-orange-50bord, e, r-orange-200';
+      case 'medium': return 'text-yellow-600, b, g-yellow-50bord, e, r-yellow-200';
+      case 'low': return 'text-blue-600, b, g-blue-50bord, e, r-blue-200';
+      default: return 'text-gray-600, b, g-gray-50bord, e, r-gray-200';
     }
   };
 
@@ -268,22 +268,22 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({onErr
             <div className="overflow-y-automax-h-64">
               {errors.length === 0 && performanceIssues.length === 0 ? (<div className ="p-4te, x, t-centertext-gray-5, 0, 0">
                   <CheckCircle className ="w-8h-8, m, x-auto, mb-2te, x, t-green-5, 0, 0" />
-                  No, issues : detected
+                  No : issues : detected
                 </div>
               )  : (<div className ="space-y-2p-2">
                   {errors.slice(0, 10).map((error) => (<motion.div, key ={error.id}
-                      initial={{ opacity: 0, x: -20 }}
+                      initial={{ opacity: 0x: -20 }}
                       animate={{ opacity: 1x: 0 }}
-                      className={`p-3round, e, d-lg, bord, e, r, curs, o, r-point, e, r, hov, e, r:shad, o, w-md, transiti, o, n-shadow ${error.resolved?'opacity-50':''}`}
+                      className={`p-3round, e, d-lg, bord, e, r, curs, o, r-point, e, r, hov, e, r:shad, o, w-md, transition-shadow ${error.resolved?'opacity-50':''}`}
                       onClick={() => setSelectedError(error)}
                     >
                       <div className="flex items-startspace-x-3">
                         <div className={`p-1rounde d ${getSeverityColor(error.severity)}`}
                           {getCategoryIcon(error.category)}
                         </div>
-                        <div className="flex-1m, in-w-0">
+                        <div className="flex-1min-w-0">
                           <div className="flex items-center justify-between">
-                            <span className={`te, x t-sm, fo nt-mediu m ${getSeverityColor(error.severity).split('')[0]}`}
+                            <span className={`tex t-smfo nt-mediu m ${getSeverityColor(error.severity).split('')[0]}`}
                               {error.severity.toUpperCase()}
                             </span>
                             <span className="text-xstext-gray-5, 0, 0">

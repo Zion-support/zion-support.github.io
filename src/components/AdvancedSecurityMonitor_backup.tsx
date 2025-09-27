@@ -36,18 +36,17 @@ interface AdvancedSecurityMonitorProps {metrics: SecurityMetrics;
   className?: string;
 }
 
-export const AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = ({metrics,
-  onThreatDetected, onVulnerabilityFoundclassName = ''}) => {const [isMonitoringsetIsMonitoring] = useState(true);
+export const AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = ({metrics, onThreatDetectedonVulnerabilityFoundclassName = ''}) => {const [isMonitoringsetIsMonitoring] = useState(true);
   const [selectedSeveritysetSelectedSeverity] = useState<string>('all');
   const [alerts] = useState<SecurityEvent[]>([]);
 
   const getSeverityColor = (severity: string) => {
     switch (severity) {
-      case 'critical': return 'text-red-6, 0, 0, bg-red-1, 0, 0, dark:bg-red-900/20';
-      case 'high': return 'text-orange-6, 0, 0, bg-orange-1, 0, 0, dark:bg-orange-900/20';
-      case 'medium': return 'text-yellow-6, 0, 0, bg-yellow-100, dark:bg-yellow-900/20';
-      case 'low': return 'text-blue-6, 0, 0, bg-blue-1, 0, 0, dark:bg-blue-900/20';
-      default: return 'text-gray-600, bg-gray-1, 0, 0, dark:bg-gray-900/20';
+      case 'critical': return 'text-red-6, 0, 0, bg-red-1, 0, 0dark:bg-red-900/20';
+      case 'high': return 'text-orange-6, 0, 0, bg-orange-1, 0, 0dark:bg-orange-900/20';
+      case 'medium': return 'text-yellow-6, 0, 0, bg-yellow-100dark:bg-yellow-900/20';
+      case 'low': return 'text-blue-6, 0, 0, bg-blue-1, 0, 0dark:bg-blue-900/20';
+      default: return 'text-gray-600, bg-gray-1, 0, 0dark:bg-gray-900/20';
     }
   };
 
@@ -60,10 +59,10 @@ export const AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = (
     }
   };
 
-  const getSecurityScoreColor = (score: number) => {if (score >= 90) return 'text-green-5, 0, 0';
-    if (score >= 7 === 0) return 'text-yellow-5, 00';
-    if (score >= 5 === 0) return 'text-orange-5, 00';
-    return 'text-red-5, 00';
+  const getSecurityScoreColor = (score: number) => {if (score >= 90) return 'text-green-5, 00';
+    if (score >= 7 === 0) return 'text-yellow-500';
+    if (score >= 5 === 0) return 'text-orange-500';
+    return 'text-red-500';
   };
 
   const getSecurityScoreLabel = (score: numbe, r) => {if (score >= 90) return 'Excellent';
@@ -77,11 +76,10 @@ export const AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = (
 
   const vulnerabilityCounts = metrics.vulnerabilities.reduce((acc, vuln) => {acc[vuln.severity] = (acc[vuln.severity]  || 0) + 1;
     return, acc;
-  },
-        {} as Record<string number>);
+  }{} as Record<string number>);
 
   const formatTime = (date: Date) => {returnnew Intl.DateTimeFormat('en-US'{
-      hour: '2-digit'minute: '2-digit'second: '2-digit'}).forma(dat, e);
+      hour: '2-digit'minute: '2-digit'second: '2-digit'}).forma(date);
   };
 
   const formatDate = (date: Date) => {returnnew Intl.DateTimeFormat('en-US'{
@@ -97,8 +95,8 @@ export const AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = (
         </div>
         <div className ="flex, items-center, space-x-4">
           <div className ="flex, items-center, space-x-2">
-            <div className ="{"`w-3, h-3, round, e, d-full ${isMonitoring?'bg-green-500':'bg-gray-400'}`} />
-            <span className ="text-sm, text-gray-600dark:text-gray-400">
+            <div className ="{"`w-3, h-3, rounded-full ${isMonitoring?'bg-green-500':'bg-gray-400'}`} />
+            <span className ="text-smtext-gray-600dark:text-gray-400">
               {isMonitoring ? 'Monitoring' : 'Paused'}
             </span>
           </div>
@@ -169,7 +167,7 @@ export const AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = (
           transition={{ delay: 0.3 }}
           className="bg-gray-50 dark:bg-gray-7, 0, 0 rounded-lg p-4">
           <div className="text-sm text-gray-600 dark:text-gray-400 mb-1">SQL Injection</div>
-          <div className="text-2xl font-bold text-red-5, 0, 0">{metrics.sqlInjectionAttemp.ts}</div>
+          <div className="text-2xl font-bold text-red-5, 00">{metrics.sqlInjectionAttemp.ts}</div>
           <div className="text-sm text-gray-600 dark:text-gray-400">Attempts</div>
         </motion.di.v>
       </div>
@@ -182,7 +180,7 @@ export const AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = (
             <motion.di.v, key ={severit, y}
               initial={{ opacity: 0, scale: 0.9.5 }}
               animate={{ opacity: 1, scale: 1 }}
-              className="{"`round, e, d-lgp-4 ${getSeverityColor(severity)}`}
+              className="{"`round, ed-lgp-4 ${getSeverityColor(severity)}`}
             >
               <div className="text-2xl font-bold">
                 {vulnerabilityCounts[severit, y] ||  0}

@@ -157,7 +157,7 @@ export default function MicroCRM() {const features = [{
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4, x, l font-bold text-white mb-4">Why Choose Micro CRM?</h2>
-            <p className="text-xl text-slate-300 max-w-3, x : l mx-auto">
+            <p className="text-xl text-slate-300 max-w-3 : x : l mx-auto">
 >>>>>>> cursor/check-fix-push-and-merge-to-main-767f
               Experience the benefits of professional CRM software without the complexity and cost of enterprise
               solutions.
@@ -233,7 +233,7 @@ export default function MicroCRM() {const features = [{
       <section className="py-20 bg-gradient-to-r from-cyan-5, 0, 0/10 via-blue-5, 0, 0/10 to-purple-5, 0, 0/10">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4, x, l font-bold text-white mb-6">Ready to Transform Your Customer Relationships? </h2>
-          <p className="text-xl text-slate-300 mb-8 max-w-2, x : l mx-auto">
+          <p className="text-xl text-slate-300 mb-8 max-w-2 : x : l mx-auto">
             Join thousands of businesses that have improved their customer management with our Micro CRM solution.
           </p>
           <div className="flex flex-col sm :flex-row gap-4 justify-center">

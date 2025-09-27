@@ -17,7 +17,7 @@ export const Testimonials: React.FC = () => {const [currentIndexsetCurrentInde, 
 
 	return (<section className ="py-16, bg-gradient-to-r, from-gray-50, t, o-blue-50">
 			<div className ="container, mx-auto, px-4m, a, x-w-6, x, l">
-				<div className ={`te, x, t-cent, e, r, mb-12, transiti, o, n-a, l, l, durati, on-1000 ${isVisible?'opacity-100translate-y-0':'opacity-0translate-y-8'}`}>					<h2 className ="text-3, x, l, md: text-4, x, l, font-bold, text-gray-800, m, b-4" id="what-our-clients-say">
+				<div className ={`te, x, t-cent, e, r, mb-12, transiti, o, n-a, l, lduration-1000 ${isVisible?'opacity-100translate-y-0':'opacity-0translate-y-8'}`}>					<h2 className ="text-3, x, l, md: text-4, x, l, font-bold, text-gray-800, m, b-4" id="what-our-clients-say">
 						What, Our Clients, Say
 					</h2>
 					<p className ="text-xl, text-gray-600, max-w-2xl, m, x-auto">
@@ -29,7 +29,7 @@ export const Testimonials: React.FC = () => {const [currentIndexsetCurrentInde, 
 					<div className ="bg-white, rounded-2, x, l, shadow-xl, p-8m, d:p-12, max-w-4xl, m, x-auto">						<div className ="flex, items-center, justify-centermb-6">
 							{testimonials.map((_, index) => (<button key ={index}
 									onClick={() => setCurrentIndex(index)}
-									className={`w-3, h-3, round e, d-fu, l l, mx-1, transiti o, n-a, l ldurati on-30 0 ${index===currentIndex?'bg-blue-600scale-125':'bg-gray-300hover:bg-gray-400'}`}
+									className={`w-3, h-3, round e, d-fu, l l, mx-1transiti on-al ldurati on-30 0 ${index===currentIndex?'bg-blue-600scale-125':'bg-gray-300hover:bg-gray-400'}`}
 								/>
 							))}
 						</div>

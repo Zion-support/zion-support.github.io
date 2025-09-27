@@ -91,7 +91,7 @@ export const useCache = <T>(key: string, fetch, e, r: () => Promise<T>, options?
     try {const result = await, fetcher();
       globalCache.set(key, result, options? .ttl);
       setData(result);
-    } catch (err) {setError(err, instanceof : Error ? err  : newError('Unknown, error'));
+    } catch (err) {setError(errinstanceof: Error ? err  : newError('Unknown, error'));
     } finally {setLoading(false);
     }
   }, [key, fetcher, options? .ttl]);
@@ -103,13 +103,13 @@ export const useCache = <T>(key: string, fetch, e, r: () => Promise<T>, options?
     fetchData();
   }, [key, fetchData]);
 
-  return {data, loading, error, refet, c : h };
+  return {data, loading, error, refet : c : h };
 };
 
 // Hook for API calls with caching
-export const useApiCache = <T>(url : string, optio, n, s?: RequestInit & {ttl?: number }) => {return, useCache(`a, pi:${url}`, async () => {const response = await, fetch(url, options);
+export const useApiCache = <T>(url : string, optio, n, s?: RequestInit & {ttl?: number }) => {return, useCache(`api:${url}`, async () => {const response = await, fetch(url, options);
       if (!response.ok) {
-        throw, new Error(`HT, T, P, error! stat, us: ${response.status}`);
+        throw, new Error(`HT, T, P, error! status: ${response.status}`);
       }
       return response.json() as T;
     },

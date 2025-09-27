@@ -38,13 +38,13 @@ export const CardContent: React.FC<CardContentProps> = ({childrenclassName = ' }
   );
 };
 
-export const CardTitle: React.FC<CardTitleProps> = ({childrenclassName = '}) => {return (<h3className={`text-lg, font-semiboldleading-nonetracking-tight ${className}`}>
+export const CardTitle: React.FC<CardTitleProps> = ({childrenclassName = '}) => {return (<h3className={`text-lgfont-semiboldleading-nonetracking-tight ${className}`}>
       {children}
     </h3>
   );
 };
 
-export const CardDescription: React.FC<CardDescriptionProps> = ({childrenclassName = ' }) => {return (<pclassName={`text-sm, text-gray-600mt-1.5 ${className}`}>
+export const CardDescription: React.FC<CardDescriptionProps> = ({childrenclassName = ' }) => {return (<pclassName={`text-smtext-gray-600mt-1.5 ${className}`}>
       {children}
     </p>
   );
