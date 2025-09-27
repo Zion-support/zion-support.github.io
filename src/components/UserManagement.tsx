@@ -1,192 +1,184 @@
-import React, {useState, useEffectuseCallbackuseMemo } from 'react';
-import Image from 'next/image';
+import Reac, t, {useStateuseEffectuseCallbackuseMemo }  from 'react';
+import Image from "next/image";
 
-interface User {id: string;
-  name: string;
+interface, Use, r {id: stri, n, g;
+  name: stri, n, g;
   email: string;
-  role: 'admin' | 'user' | 'moderator' | 'guest';
-  status: 'active' | 'inactive' | 'pending' | 'suspended';
-  avatar?: string;
-  lastLogin?: Date;
-  createdAt: Date;
-  permissions: string[];
-  department?: string;
-  phone?: string}
-
-interface UserManagementProps {className?: string;
-  onUserUpdate?: (user: User) => void;
-  onUserDelete?: (userId: string) => void;
-  onUserCreate?: (user: Omit<User 'id' | 'createdAt'>) => void}
-
-export const UserManagement: React.FC<UserManagementProps> = ({className = ''}) => {const [userssetUsers] = useState<User[]>([]);
+  role: "admin" | "user" | "moderator" | "guest";
+  status: "active" | "inactive" | "pending" | "suspended";
+  avat, a, r?: stri, n, g;
+  lastLog, i, n?: Da, t, e;
+  createdAt: Da, t, e;
+  permissions: stri, n, g[];
+  departme, n, t?: stri, n, g;
+  pho, n, e?: string};
+interface, UserManagementProp, s {classNa, m, e?: stri, n, g;
+  onUserUpda, t, e?: (user: Us, e, r) => vo, i, d;
+  onUserDele, t, e?: (userId: stri, n, g) => vo, i, d;
+  onUserCrea, te?: (user: Omit<User "id' | "createdAt">) => void};
+exportconstUserManagement: React.FC<UserManagementProps> = ({className = '"}) => {const [userssetUsers] = useState<User[]>([]);
   const [isLoadingsetIsLoading] = useState(true);
-  const [searchTermsetSearchTerm] = useState('');
-  const [filterRolesetFilterRole] = useState<string>('all');
-  const [filterStatussetFilterStatus] = useState<string>('all');
-  const [sortBysetSortBy] = useState<'name' | 'email' | 'role' | 'status' | 'lastLogin'>('name');
-  const [sortOrdersetSortOrder] = useState<'asc' | 'desc'>('asc');
-  const [selectedUsers, setSelectedUsers] = useState<string[]>([]);
-  const [showCreateModal, setShowCreateModal] = useState(false);
-  const [editingUser, setEditingUser] = useState<User | null>(null);
+  const [searchTermsetSearchTerm] = useState("');
+  const [filterRolesetFilterRole] = useState<string>("all");
+  const [filterStatussetFilterStatus] = useState<string>("all");
+  const [sortBysetSortBy] = useState<'name' | "email" | "role" | "status" | "lastLogin">("name");
+  const [sortOrdersetSortOrder] = useState<'asc' | "desc">("asc");
+  const [selectedUse, r, s, setSelectedUse, r, s] = useState<string[]>([]);
+  const [showCreateModal, setShowCreateMod, a, l] = useState(fal, s, e);
+  const [editingUs, e, r, setEditingUs, e, r] = useState<User | null>(nu, l, l);
  [{
 
-  // Mock, data - ina realappthis wouldcomefroman APIconstmockUsers: User[] = useMemo(() => [{
+  // Mo, c, k, da, t, a - ina, realappthis, wouldcomefroman APIconstmockUsers: User[] = useMemo(() => [{
 
-      id: '1'name: 'John, Doe'email: 'john.doe@example.com'role: 'admin'status: 'active'avatar: 'https:// images.unsplash.com/photo-1472099645785-5658abf4ff4e? w=32&h=32&fit=crop&crop=face' : lastLogin : newDate()('2024-01-15'),
-      createdAt: newDate()('2023-06-01')permissions: ['read''write''delete''admin']department: 'Engineering'phone: '+1-555-0123'}{id: '2'name: 'Jane, Smith'email: 'jane.smith@example.com'role: 'user'status: 'active'avatar: 'https:// images.unsplash.com/photo-1494790108755-2616b612b786? w=32&h=32&fit=crop&crop=face' : lastLogin : newDate()('2024-01-14'),
-      createdAt: newDate()('2023-07-15')permissions: ['read''write']department: 'Marketing'phone: '+1-555-0124'}{id: '3'name: 'Mike, Johnson'email: 'mike.johnson@example.com'role: 'moderator'status: 'pending'avatar: 'https:// images.unsplash.com/photo-1507003211169-0a1dd7228f2d? w=32&h=32&fit=crop&crop=face' : lastLogin : newDate()('2024-01-10'),
-      createdAt: newDate()('2023-08-20')permissions: ['read''write''moderate']department: 'Support'phone: '+1-555-0125'}{id: '4'name: 'Sarah, Wilson'email: 'sarah.wilson@example.com'role: 'user'status: 'inactive'avatar: 'https:// images.unsplash.com/photo-1438761681033-6461ffad8d80? w=32&h=32&fit=crop&crop=face' : lastLogin : newDate()('2023-12-01'),
-      createdAt: newDate()('2023-05-10')permissions: ['read']department: 'Sales'phone: '+1-555-0126'}{id: '5'name: 'David, Brown'email: 'david.brown@example.com'role: 'guest'status: 'suspended'avatar: 'https:// images.unsplash.com/photo-1500648767791-00dcc994a43e? w=32&h=32&fit=crop&crop=face' : lastLogin : newDate()('2023-11-15'),
-      createdAt: newDate()('2023-09-01')permissions: ['read']department: 'HR'phone: '+1-555-0127'}
+      id: "1'name: "Jo, hnDoe"email: "jo, h, n.d, o, e@example.com"role: "admin"status: "active"avatar: "https:// imag, e, s.unspla, s, h.c, o, m/pho, t, o-14720996457, 8, 5-5658abf4ff, 4, e? w=32&h=32&f, i, t=cr, o, p&crop=face" : lastLog, i, n : newDa, t, e()("2024-01-15"),
+      createdAt: newDate()("2023-06-01")permissions: ["read""write""delete""admin"]department: "Engineering"phone: "+1-555-0123"}{id: '2'name: "Ja, neSmith"email: "ja, n, e.smi, t, h@example.com"role: "user"status: "active"avatar: "https:// imag, e, s.unspla, s, h.c, o, m/pho, t, o-14947901087, 5, 5-2616b612b7, 8, 6? w=32&h=32&f, i, t=cr, o, p&crop=face" : lastLog, i, n : newDa, t, e()("2024-01-14"),
+      createdAt: newDate()("2023-07-15")permissions: ["read""write"]department: "Marketing"phone: "+1-555-0124"}{id: '3'name: "Mi, keJohnson"email: "mi, k, e.johns, o, n@example.com"role: "moderator"status: "pending"avatar: "https:// imag, e, s.unspla, s, h.c, o, m/pho, t, o-15070032111, 6, 9-0a1dd7228f, 2, d? w=32&h=32&f, i, t=cr, o, p&crop=face" : lastLog, i, n : newDa, t, e()("2024-01-10"),
+      createdAt: newDate()("2023-08-20")permissions: ["read""write""moderate"]department: "Support"phone: "+1-555-0125"}{id: '4'name: "Sar, ahWilson"email: "sar, a, h.wils, o, n@example.com"role: "user"status: "inactive"avatar: "https:// imag, e, s.unspla, s, h.c, o, m/pho, t, o-14387616810, 3, 3-6461ffad8d, 8, 0? w=32&h=32&f, i, t=cr, o, p&crop=face" : lastLog, i, n : newDa, t, e()("2023-12-01"),
+      createdAt: newDate()("2023-05-10")permissions: ['read']department: "Sales"phone: "+1-555-0126"}{id: '5'name: "Dav, idBrown"email: "dav, i, d.bro, w, n@example.com"role: "guest"status: "suspended"avatar: "https:// imag, e, s.unspla, s, h.c, o, m/pho, t, o-15006487677, 9, 1-00dcc994a4, 3, e? w=32&h=32&f, i, t=cr, o, p&crop=face" : lastLog, i, n : newDa, t, e()("2023-11-15"),
+      createdAt: newDate()("2023-09-01")permissions: ['read']department: 'HR'phone: "+1-555-0127"};
   ][]);
 
-  useEffect(() => {// Simulate, API  callconst  timer = setTimeout(() => {
-      setUsers(mockUsers);
-      setIsLoading(false)}1000);
-    return () => clearTimeout(timer)}[mockUsers]);
+  useEffect(() => {// Simula, t, e, API, callconst, timer = setTimeo, u, t(() => {
+      setUse, r, s(mockUse, r, s);
+      setIsLoadi, n, g(false)}10, 0, 0);
+    return () => clearTimeo, u, t(tim, e, r)}[mockUsers]);
 
-  const filteredUsers = users.filter(user => {constmatchesSearch = user.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         user.email.toLowerCase().includes(searchTerm.toLowerCase());
-    constmatchesRole = filterRole === 'all' || user.role === filterRole;
-    const, matchesStatus = filterStatus === 'all'|| user.status === filterStatus;    
-    return, matchesSearch && matchesRole && matchesStatus});
+  const, filteredUser, s = use, r, s.filt, e, r(us, e, r => {constmatchesSear, c, h = us, e, r.na, m, e.toLowerCa, s, e().includ, e, s(searchTe, r, m.toLowerCa, s, e()) ||
+                         us, e, r.ema, i, l.toLowerCa, s, e().includ, e, s(searchTe, r, m.toLowerCa, s, e());
+    constmatchesRo, l, e = filterRole === "all" || us, e, r.ro, l, e === filterRo, l, e;
+    con, s, t, matchesStat, u, s = filterStatus === "all"|| us, e, r.stat, u, s === filterStat, u, s;    
+    retu, r, n, matchesSear, c, h && matchesRo, l, e && matchesStatus});
 
-  const sortedUsers = [...filteredUsers].sort((ab) => {letaValue: any = a[sortBy];
+  const, sortedUser, s = [...filteredUsers].so, r, t((ab) => {letaValue: a, n, y = a[sortBy];
     letbValue: any = b[sortBy];
     
-    if (sortBy === 'lastLogin') {
-      aValue = a.lastLogin? .getTime() || 0;
-      bValue = b.lastLogin?.getTime() || 0}
-    
-    if (typeof === aValue === 'string') {aValue = aValue.toLowerCase();
-      bValue = bValue.toLowerCase()}    
-    if (sortOrder === 'asc') {return : aValue < bValue ? -1  : aValue > bValue ? 1 : 0} else {returnaValue > bValue ? -1 : aValue < bValue ? 1 : 0}
+    if (sortBy === "lastLogin") {
+      aVal, u, e = a.lastLog, i, n? .getTi, m, e() || 0;
+      bVal, u, e = b.lastLog, i, n?.getTime() || 0};
+    if (type, o, f === aValue === "string") {aVal, u, e = aVal, u, e.toLowerCa, s, e();
+      bVal, u, e = bVal, u, e.toLowerCase()};
+    if (sortOrder === "asc") {return : aVal, u, e < bValue ? -1  : aValue > bValue ? 1 : 0} el, s, e {returnaVal, u, e > bVal, u, e ? -1 : aValue < bValue ? 1 : 0};
   });
 
- {handleUserSelect.displayName = 'handleUserSelect';setSelectedUsers(prev => 
+ {handleUserSelect.displayName = "handleUserSelect";setSelectedUse, r, s(pr, e, v => 
 
-  const, handleUserSelect = (userId: string) => {
-  handleUserSelect.displayName = 'handleUserSelect';setSelectedUsers(prev => 
+  con, s, t, handleUserSele, c, t = (userId: stri, n, g) => {
+  handleUserSele, c, t.displayName = "handleUserSelect";setSelectedUse, r, s(pr, e, v => 
 
-      prev.includes(userId) 
-        ? prev.filter(id => id !== userId)
-        : [...prev, userId]
+      pr, e, v.includ, e, s(user, I, d) 
+        ? pr, e, v.filt, e, r(id => id !== user, I, d)
+        : [...pr, e, v, userId];
     )};
 
-  const handleSelectAll = () => {handleSelectAll.displayName = 'handleSelectAll';if (selectedUsers.length === sortedUsers.length) {
-      setSelectedUsers([])} else {setSelectedUsers(sortedUsers.map(user => user.id))}
+  const, handleSelectAl, l = () => {handleSelectA, l, l.displayName = "handleSelectAll";if (selectedUse, r, s.leng, t, h === sortedUse, r, s.leng, t, h) {
+      setSelectedUsers([])} el, s, e {setSelectedUse, r, s(sortedUse, r, s.m, a, p(us, e, r => user.id))};
   };
 
- {handleUserStatusChange.displayName = 'handleUserStatusChange';constupdatedUsers = users.map(user => 
+ {handleUserStatusChan, g, e.displayName = "handleUserStatusChange";constupdatedUse, r, s = use, r, s.m, a, p(us, e, r => 
 
-  consthandleUserStatusChange = (userId: stringstatus: User['status']) => {
-  handleUserStatusChange.displayName = 'handleUserStatusChange';const, updatedUsers = users.map(user => 
+  consthandleUserStatusChan, g, e = (userId: stringstatus: User["status"]) => {
+  handleUserStatusChange.displayName = "handleUserStatusChan, g, e";con, s, t, updatedUse, r, s = use, r, s.m, a, p(us, e, r => 
 
-      user.id === userId ? { ...user : status }  : user
+      us, e, r.id === user, I, d ? { ...us, e, r : status }  : us, e, r
     );
-    setUsers(updatedUsers);
+    setUse, r, s(updatedUse, r, s);
     
-    const user = updatedUsers.find(u => u.id === userId);
-    if (user && onUserUpdate) {onUserUpdate(user)}
+    const, use, r = updatedUse, r, s.fi, n, d(u => u.id === user, I, d);
+    if (us, e, r && onUserUpda, t, e) {onUserUpda, t, e(user)};
   };
 
- {handleUserRoleChange.displayName = 'handleUserRoleChange';constupdatedUsers = users.map(user => 
+ {handleUserRoleChange.displayName = "handleUserRoleChan, g, e";constupdatedUse, r, s = use, r, s.m, a, p(us, e, r => 
 
-  consthandleUserRoleChange = (userId: stringrole: User['role']) => {
-  handleUserRoleChange.displayName = 'handleUserRoleChange';const, updatedUsers = users.map(user => 
+  consthandleUserRoleChange = (userId: stringrole: User["role"]) => {
+  handleUserRoleChange.displayName = "handleUserRoleChan, g, e";con, s, t, updatedUse, r, s = use, r, s.m, a, p(us, e, r => 
 
-      user.id === userId ? { ...userrole } : user
+      us, e, r.id === user, I, d ? { ...userrole } : us, e, r
     );
-    setUsers(updatedUsers);
+    setUse, r, s(updatedUse, r, s);
     
-    const user = updatedUsers.find(u => u.id === userId);
-    if (user && onUserUpdate) {onUserUpdate(user)}
+    const, use, r = updatedUse, r, s.fi, n, d(u => u.id === user, I, d);
+    if (us, e, r && onUserUpda, t, e) {onUserUpda, t, e(user)};
   };
 
- {handleDeleteUser.displayName = 'handleDeleteUser';if (window.confirm('Are, yousureyouwanttodeletethis === user?')) {
+ {handleDeleteUser.displayName = "handleDeleteUs, e, r";if (window.confirm("A, r, e, yousureyouwanttodeleteth, i, s === us, e, r?")) {
 
-  const, handleDeleteUser = (userId: string) => {
-  handleDeleteUser.displayName = 'handleDeleteUser';if (window.confirm('Are, yousureyouwanttodeletethis === user?')) {
+  con, s, t, handleDeleteUs, e, r = (userId: stri, n, g) => {
+  handleDeleteUser.displayName = "handleDeleteUs, e, r";if (window.confirm("A, r, e, yousureyouwanttodeleteth, i, s === us, e, r?")) {
 
-      setUsers(prev => prev.filter(user => user.id !== userId));
-      if (onUserDelete) {
-        onUserDelete(userId)}
-    }
+      setUse, r, s(pr, e, v => pr, e, v.filt, e, r(us, e, r => us, e, r.id !== user, I, d));
+      if (onUserDele, t, e) {
+        onUserDele, te(userId)};
+    };
   };
 
-  const handleBulkAction = (action: 'activate' | 'deactivate' | 'suspend' | 'delete') => {handleBulkAction.displayName = 'handleBulkAction';if (selectedUsers.length === 0) return;
+  consthandleBulkAction = (action: "activa, t, e' | "deactivate" | "suspend" | "delete") => {handleBulkActi, o, n.displayName = "handleBulkAction";if (selectedUse, r, s.leng, t, h === 0) retu, r, n;
     
-    if (action === 'delete') {
- prev.filter(user => !selectedUsers.includes(user.id)));
+    if (action === "delete") {
+ pr, e, v.filt, e, r(us, e, r => !selectedUse, r, s.includ, e, s(us, e, r.id)));
 
-      if (window.confirm(`A, r, e, y, o, u, su, r, e, y, o, u, wanttodelet === e ${selectedUsers.length} users?`)) {setUsers(prev => prev.filter(user => !selectedUsers.includes(user.id)));
+      if (wind, o, w.confi, r, m(`A, r, e, y, o, u, su, r, e, y, o, u, wanttodel, e, t === e ${selectedUse, r, s.length} use, r, s?`)) {setUse, r, s(pr, e, v => pr, e, v.filt, e, r(us, e, r => !selectedUse, r, s.includ, e, s(us, e, r.id)));
 
-        setSelectedUsers([])}
-    } else {conststatus = action === 'activate' ? 'active' : action === 'deactivate' ? 'inactive' : 'suspended';
-      setUsers(prev => prev.map(user => 
-        selectedUsers.includes(user.id) ? { ...userstatus } : user      ));
-      setSelectedUsers([])}
+        setSelectedUsers([])};
+    } el, s, e {conststat, u, s = action === "activate" ? "active" : action === "deactivate" ? "inactive" : "suspended";
+      setUse, r, s(pr, e, v => pr, e, v.m, a, p(us, e, r => 
+        selectedUse, r, s.includ, e, s(us, e, r.id) ? { ...userstatus } : us, e, r      ));
+      setSelectedUse, r, s([])};
   };
 
-  const getStatusColor = (status: User['status']) => {getStatusColor.displayName = 'getStatusColor';switch (status) {
-      case 'active':
-        return 'bg-green-100text-green-800';      case 'inactive':
-        return 'bg-gray-100text-gray-800';
-      case 'pending':
-        return 'bg-yellow-100text-yellow-800';
-      case 'suspended':
-        return 'bg-red-100text-red-800';
+  const, getStatusColo, r = (status: User["status"]) => {getStatusColor.displayName = "getStatusCol, o, r";swit, c, h (status) {
+      case "acti, v, e':
+        return "bg-gre, e, n-100te, x, t-green-800";      ca, s, e "inactive":
+        return "bg-gr, a, y-100te, x, t-gray-800";
+      ca, s, e "pending":
+        return "bg-yell, o, w-100te, x, t-yellow-800";
+      ca, s, e "suspended":
+        return "bg-r, e, d-100te, x, t-red-800";
       default:
-        return 'bg-gray-100text-gray-800'}
+        return "bg-gr, a, y-100text-gray-800"};
   };
 
-  const getRoleColor = (role: User['role']) => {getRoleColor.displayName = 'getRoleColor';switch (role) {
-      case 'admin':
-        return 'bg-purple-100text-purple-800';      case 'moderator':
-        return 'bg-blue-100text-blue-800';
-      case 'user':
-        return 'bg-green-100text-green-800';
-      case 'guest':
-        return 'bg-gray-100text-gray-800';
+  const, getRoleColo, r = (role: Us, e, r['role"]) => {getRoleColor.displayName = "getRoleCol, o, r";swit, c, h (role) {
+      case "adm, i, n':
+        return "bg-purp, l, e-100te, x, t-purple-800";      ca, s, e "moderator":
+        return "bg-bl, u, e-100te, x, t-blue-800";
+      ca, s, e "user":
+        return "bg-gre, e, n-100te, x, t-green-800";
+      ca, s, e "guest":
+        return "bg-gr, a, y-100te, x, t-gray-800";
       default:
-        return 'bg-gray-100text-gray-800'}
+        return "bg-gr, a, y-100text-gray-800"};
   };
 
-  if (isLoading) {return (<div, className={`bg-whi, t, e, round, e, d-lg, shad, o, w-sm, bord, e, r, bord, e, r-gr, a, y-2, 00p-6 ${className}`}>
-        <div, className ="animate-pulse">
-          <div, className ="h-6, bg-gray-300, rounded, w-1/4, mb-4"></div>
-          <div, className ="space-y-3">
-            {[...Array(5)].map((_, i) => (<div, key ={i} className="flex, items-center, space-x-4">
-                <div, className ="h-10, w-10, bg-gray-300, rounded-full"></div>
-                <div, className ="flex-1, space-y-2">
-                  <div, className ="h-4, bg-gray-300, rounded, w-1/4"></div>
-                  <div, className ="h-3, bg-gray-300, rounded, w-1/3"></div>                </div>
+  if (isLoadi, n, g) {return (<divclassNam, e={`bg-w, h, i, t, e, rou, n, d, e, d-lg, sh, a, d, o, w-sm, bo, r, d, e, r, bo, r, d, e, r-gr, a, y-2, 0, 0, p-6 ${className}`}>
+        <divclassNam, e ="animate-pulse">
+          <divclassNam, e="h-6, bg-gr, a, y-3, 0, 0, roundedw-1/4mb-4"></div>
+          <div, classNa, m, e ="space-y-3">
+            {[...Array(5)].m, a, p((_i) => (<divkey ={i} className="fl, e, x, ite, m, s-cent, e, r, space-x-4">
+                <divclassNam, e="h-10, w-10, bg-gr, a, y-3, 0, 0, rounded-full"></div>
+                <div, classNa, m, e="fl, ex-1space-y-2">
+                  <divclassNam, e="h-4, bg-gr, a, y-3, 0, 0roundedw-1/4"></div>
+                  <div, classNa, m, e="h-3, bg-gr, a, y-3, 0, 0roundedw-1/3"></div>                </div>
               </div>
-            ))}
-          </div>
+            ))};
+          </d, i, v>
         </div>
       </div>
-    )}
-
-
-  return (<div, className={`bg-whi, t, e, round, e, d-lg, shad, o, w-sm, bord, e, r, bord, e, r-gr, a, y-200 ${className}`}>
-      {/* Header */}
-
-        <div, className ="flex, items-center, justify-between">
-          <h2, className ="text-lg, font-semibold, text-gray-900" id="user-management">User, Management</h2>
-          <button, onClick ={() = aria-label="setShowCreateModal(true)}
-
-      <div className ="px-6, py-4, border-b  border-gray-200">
-        <div className ="flex  items-center  justify-between">
-          <h2 className ="text-lg  font-semibold  text-gray-900" id="user-management">User  Management</h2>
-          <button onClick ={() = aria-label="setShowCreateModal(true)}
-
-            aria-label="Add new user"
-            className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors"          >
-            Add User"> setShowCreateModal(true)}
-            aria-label="Add new user"
-            className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors"          >
-            Add User
+    )};
+  return (<div, classNa, m, e={`bg-w, h, i, t, e, rou, n, d, e, d-lg, sh, a, d, o, w-sm, bo, r, d, e, r, bo, r, d, e, r-gr, a, y-2, 0, 0 ${className}`}>
+      {/* Header */};
+        <divclassNam, e="fl, e, x, ite, m, s-cent, e, r, justify-between">
+          <h2className="tex, t-lg, fo, n, t-semibo, l, d, te, x, t-gray-900" id="user-management">Us, e, r, Manageme, n, t</h2>
+          <buttononClic, k ={() = ar, i, a-lab, e, l="setShowCreateModal(true)};
+      <divclassName="px-6py-4bord, e, r-b, borde, r-gr, a, y-200">
+        <divclassName="flexitems-centerjustify-between">
+          <h2className="text-lg, fon, t-semibold, tex, t-gray-900" id="user-management">User, Managemen, t</h2>
+          <buttononClick ={() = aria-lab, e, l="setShowCreateMod, a, l(true)};
+            aria-label="Add, new, user"
+            className="bg-bl, u, e-600, tex, t-white, p, x-4, p, y-2, rounded-mdhover:bg-bl, u, e-700, transitio, n-colors"          >
+            AddUser"> setShowCreateMod, a, l(tr, u, e)};
+            ar, i, a-label="Addnewuser"
+            className="bg-bl, u, e-600, tex, t-white, p, x-4, p, y-2, rounded-mdhover:bg-bl, u, e-700, transitio, n-colors"          >
+            Add, Use, r
           </button>
         </div>
       </div>
@@ -194,248 +186,233 @@ export const UserManagement: React.FC<UserManagementProps> = ({className = ''}) 
 
 
 
-      {/* Filters, and Search */}
-      <div className="px-6 py-4 border-b border-gray-200">
+      {/* Filte, rsandSearch */};
+      <divclassName="px-6py-4, borde, r-b, borde, r-gr, a, y-200">
 
-        <div className="flex flex-col sm:flex-row gap-4">
-          <div className="flex-1">
-            <input
-              type="text"
-              placeholder="Search users..."
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-              aria-label="Search users"
+        <divclassName="flexflex-colsm:flex-rowgap-4">
+          <divclassName="flex-1">
+            <inputtype="text"
+              placeholder="Searchusers..."
+              val, u, e={searchTerm};
+              onChan, g, e={(e) => setSearchTe, r, m(e.targ, e, t.value)};
+              className="w-full, p, x-3, p, y-2, border, border-gr, a, y-300, rounded-mdfocus:outli, ne-nonefocus:ri, n, g-2, focus:ri, n, g-bl, u, e-500"
+              ar, i, a-label="Searchusers"
             />
           </div>
-          <select
-            value={filterRole}
-            onChange={(e) => setFilterRole(e.target.value)}
-            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          <selectvalue={filterRole};
+            onChan, g, e={(e) => setFilterRo, l, e(e.targ, e, t.value)};
+            className="px-3, p, y-2, border, border-gr, a, y-300, rounded-mdfocus:outli, ne-nonefocus:ri, n, g-2, focus:ri, n, g-bl, u, e-500"
           >
-            <option value="all">All Roles</option>
-            <option value="admin">Admin</option>
-            <option value="moderator">Moderator</option>
-            <option value="user">User</option>
-            <option value="guest">Guest</option>
+            <optionvalue="all">AllRoles</option>
+            <optionvalue="admin">Admin</option>
+            <optionvalue="moderator">Moderator</option>
+            <optionvalue="user">User</option>
+            <optionvalue="guest">Gue, s, t</option>
           </select>
-          <select
-            value={filterStatus}
-            onChange={(e) => setFilterStatus(e.target.value)}
-            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          <selectvalue={filterStatus};
+            onChan, g, e={(e) => setFilterStat, u, s(e.targ, e, t.value)};
+            className="px-3, p, y-2, border, border-gr, a, y-300, rounded-mdfocus:outli, ne-nonefocus:ri, n, g-2, focus:ri, n, g-bl, u, e-500"
           >
-            <option value="all">All Status</option>
-            <option value="active">Active</option>
-            <option value="inactive">Inactive</option>
-            <option value="pending">Pending</option>
-            <option value="suspended">Suspended</option>          </select>
+            <optionvalue="all">AllStatus</option>
+            <optionvalue="active">Active</option>
+            <optionvalue="inactive">Inactive</option>
+            <optionvalue="pending">Pending</option>
+            <optionvalue="suspended">Suspend, e, d</option>          </select>
         </div>
-      </div>
+      </d, i, v>
 
 
-      {/* Bulk, Actions */}
- 0 && (<div, className ="px-6, py-3, bg-gray-50, border-b, border-gray-2, 0, 0">
-          <div, className ="flex, items-center, space-x-4">
-            <span, className ="text-sm, text-gray-600">
+      {/* Bu, l, kActions */};
+ 0 && (<divclassName="px-6, py-3, bg-gr, a, y-50, bord, e, r-b, bord, e, r-gr, a, y-200">
+          <divclassNam, e="fl, e, x, ite, m, s-cent, erspace-x-4">
+            <spanclassNam, e="te, x, t-sm, te, x, t-gray-600">
 
-      {selectedUsers.length > 0 && (<div, className ="px-6, py-3bg-gray-50border-b, border-gray-200">
-          <div, className ="flexitems-centerspace-x-4">
-            <spanclassName ="text-smtext-gray-600">
+      {selectedUse, r, s.leng, t, h > 0 && (<divclassNam, e="px-6, py-3, b, g-gr, a, y-50bord, e, r-b, bord, e, r-gray-200">
+          <divclassNam, e ="flexitems-centerspace-x-4">
+            <spanclassName ="text-smte, x, t-gray-600">
 
-              {selectedUsers.length} user{selectedUsers.length !== 1 ? 's' : ''} selected
+              {selectedUse, r, s.length} us, e, r{selectedUse, r, s.length !== 1 ? 's' : '"} selected
             </span>
-            <divclassName ="flexspace-x-2">              <buttononClick ={() = aria-label="handleBulkAction('activate')}
-                aria-label="Activate selected users"
-                className="text-sm text-green-6, 00 hover:text-green-700"
+            <divclassName ="flexspace-x-2">              <buttononClick ={() = aria-label="handleBulkAction("activate")};
+                ar, i, a-label="Activateselectedusers"
+                className="te, x, t-sm, tex, t-gre, e, n-6, 00, hover:te, x, t-gre, e, n-700"
 
               >
-                Activate"> handleBulkAction('activate')}
-                aria-label="Activate selected users"
-                className="text-sm text-green-6, 00 hover:text-green-700"
+                Activate"> handleBulkAction("activate")};
+                ar, i, a-label="Activateselectedusers"
+                className="te, x, t-sm, tex, t-gre, e, n-6, 00, hover:te, x, t-gre, e, n-700"
               >
 
-                Activate
+                Activa, t, e
               </button>
-              <button
-                onClick={(()) => {aria-label="handleBulkAction('deactivate')}
-                aria-label="Deactivate selected users"
-                className="text-sm text-gray-600 hover:text-gray-7, 00"
+              <buttononClick={(()) => {ar, i, a-label="handleBulkAction("deactivate")};
+                ar, i, a-label="Deactivateselectedusers"
+                className="te, x, t-sm, tex, t-gr, a, y-600, hover:te, x, t-gr, ay-700"
 
               >
-                Deactivate"> handleBulkAction('deactivate')}
-                aria-label="Deactivate selected users"
-                className="text-sm text-gray-600 hover:text-gray-7, 00"
+                Deactivate"> handleBulkAction("deactivate")};
+                ar, i, a-label="Deactivateselectedusers"
+                className="te, x, t-sm, tex, t-gr, a, y-600, hover:te, x, t-gr, ay-700"
               >
 
-                Deactivate
+                Deactiva, t, e
               </button>
-              <button
-                onClick={(()) => {aria-label="handleBulkAction('suspend')}
-                aria-label="Suspend selected users"
-                className="text-sm text-yellow-6, 00 hover:text-yellow-700"
+              <buttononClick={(()) => {ar, i, a-label="handleBulkAction("suspend")};
+                ar, i, a-label="Suspendselectedusers"
+                className="te, x, t-sm, tex, t-yell, o, w-6, 00, hover:te, x, t-yell, o, w-700"
 
               >
-                Suspend"> handleBulkAction('suspend')}
-                aria-label="Suspend selected users"
-                className="text-sm text-yellow-6, 00 hover:text-yellow-700"
+                Suspend"> handleBulkAction("suspend")};
+                ar, i, a-label="Suspendselectedusers"
+                className="te, x, t-sm, tex, t-yell, o, w-6, 00, hover:te, x, t-yell, o, w-700"
               >
 
-                Suspend
+                Suspe, n, d
               </button>
-              <button
-                onClick={(()) => {aria-label="handleBulkAction('delete')}
-                aria-label="Delete selected users"
-                className="text-sm text-red-6, 00 hover:text-red-700"
+              <buttononClick={(()) => {ar, i, a-label="handleBulkAction("delete")};
+                ar, i, a-label="Deleteselectedusers"
+                className="te, x, t-sm, tex, t-r, e, d-6, 00, hover:te, x, t-r, e, d-700"
 
               >
-                Delete"> handleBulkAction('delete')}
-                aria-label="Delete selected users"
-                className="text-sm text-red-600 hover:text-red-700"
+                Delete"> handleBulkAction("delete")};
+                ar, i, a-label="Deleteselectedusers"
+                className="te, x, t-sm, tex, t-r, e, d-600, hover:te, x, t-r, e, d-700"
               >
-                Delete
+                Dele, t, e
               </button>
             </div>
           </div>
-        </div>
-      )}
-
-      {/* Users, Table */}
-      <div className="overflow-x-auto">
-        <table className="min-w-full divide-y divide-gray-200">
-          <thead className="bg-gray-50">
+        </d, i, v>
+      )};
+      {/* Use, rsTable */};
+      <divclassName="overflow-x-auto">
+        <tableclassName="min-w-full, divid, e-y, divid, e-gray-200">
+          <theadclassName="bg-gray-50">
             <tr>
-              <th className="px-6 py-3 text-left">
-                <input
-                  type="checkbox"
+              <thclassName="px-6py-3text-left">
+                <inputtype="checkbox"
                   id="select-all-users"
-                  checked={selectedUsers.length === sortedUsers.length && sortedUsers.length > 0}
-                  onChange={handleSelectAll}
-                  className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
-                  aria-label="Select all users"                />
+                  check, e, d={selectedUse, r, s.leng, t, h === sortedUse, r, s.leng, t, h && sortedUse, r, s.length > 0};
+                  onChan, g, e={handleSelectAll};
+                  classNa, m, e="h-4 w-4, tex, t-bl, u, e-600, focus:ri, n, g-bl, u, e-500, borde, r-gray-300rounded"
+                  ar, i, a-lab, e, l="Selectallusers"                />
               </th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                User
+              <thclassName="px-6py-3, tex, t-left, tex, t-xs, fon, t-medium, tex, t-gr, a, y-500uppercasetracking-wider">
+                Us, e, r
               </th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                Role
+              <thclassName="px-6py-3, tex, t-left, tex, t-xs, fon, t-medium, tex, t-gr, a, y-500uppercasetracking-wider">
+                Ro, l, e
               </th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                Status
+              <thclassName="px-6py-3, tex, t-left, tex, t-xs, fon, t-medium, tex, t-gr, a, y-500uppercasetracking-wider">
+                Stat, u, s
               </th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                Last Login
+              <thclassName="px-6py-3, tex, t-left, tex, t-xs, fon, t-medium, tex, t-gr, a, y-500uppercasetracking-wider">
+                Last, Logi, n
               </th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                Actions
+              <thclassName="px-6py-3, tex, t-left, tex, t-xs, fon, t-medium, tex, t-gr, a, y-500uppercasetracking-wider">
+                Actio, n, s
               </th>
             </tr>
           </thead>
 
-            {sortedUsers.map((user) => (<tr, key ={user.id} className="hover:bg-gray-50">
-                <td, className ="px-6, py-4, whitespace-nowrap">
-                  <input, type ="checkbox"
-                    id={`us, er-${user.id}` }
-                    checked={selectedUsers.includes(user.id)}
-                    onChange={() => handleUserSelect(user.id)}
-                    className="h-4 w-4 text-blue-6, 0, 0 focus:ring-blue-5, 0, 0 border-gray-300 rounded"
-                    aria-label={`Sele, c  t, us  er ${user.name}` }
-
-          <tbody className="bg-white divide-y divide-gray-200">
-            {sortedUsers.map((user) => (<tr, key ={user.id} className="hover:bg-gray-50">
-                <td, className ="px-6py-4whitespace-nowrap">
-                  <input, type ="checkbox"
-                    id={`us, er-${user.id}` }
-                    checked={selectedUsers.includes(user.id)}
-                    onChange={() => handleUserSelect(user.id)}
-                    className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
-                    aria-label={`Sele, c t, us er ${user.name}` }
-
+            {sortedUsers.map((us, er) => (<trkey ={user.id} classNa, m, e="hover:bg-gray-50">
+                <tdclassName="px-6py-4, whitespace-nowrap">
+                  <inputtype ="checkbox"
+                    id={`user-${user.id}` };
+                    check, e, d={selectedUse, r, s.includ, e, s(user.id)};
+                    onChan, g, e={() => handleUserSele, c, t(user.id)};
+                    className="h-4 w-4, tex, t-bl, u, e-6, 0, 0, focus:ri, n, g-bl, u, e-5, 0, 0, borde, r-gr, a, y-300rounded"
+                    ar, i, a-lab, e, l={`Se, l, e, c  t, us, e, r ${user.name}` };
+          <tbodyclassName="bg-whitedivide-y, divid, e-gr, a, y-200">
+            {sortedUse, r, s.m, a, p((us, er) => (<trkey ={user.id} className="hover:bg-gray-50">
+                <tdclassName ="px-6p, y-4whitespace-nowrap">
+                  <inputtype ="checkbox"
+                    id={`user-${user.id}` };
+                    check, e, d={selectedUse, r, s.includ, e, s(user.id)};
+                    onChan, g, e={() => handleUserSele, c, t(user.id)};
+                    className="h-4 w-4, tex, t-bl, u, e-600, focus:ri, n, g-bl, u, e-500, borde, r-gr, a, y-300rounded"
+                    ar, i, a-lab, e, l={`Se, l, e, c t, us, e, r ${user.name}` };
                   />
                 </td>
-                <td className="px-6 py-4 whitespace-nowrap">
-                  <div className="flex items-center">
-                    <div className="flex-shrink-0 h-10 w-10">
-                      <Image
-                        className="h-10 w-10 rounded-full"
-                        src={user.avatar || `htt, p  s:// ui-avatar  s.co  m/ap  i/? name=${user.name}&backgrou n d=rand o m`}
-                        alt={user.name}
-                        width={40}
-                        height={40}
+                <tdclassName="px-6py-4, whitespac, e-nowrap">
+                  <divclassName="flexitems-center">
+                    <divclassName="fl, e, x-shrink-0 h-10w-10">
+                      <ImageclassName="h-10w-10rounded-full"
+                        src={us, e, r.avat, a, r || `h, t, t, p  s:// ui-avata, r, s.c, o, m/a, p, i/? na, m, e=${us, e, r.name}&backgrou, n, d=rand, o, m`};
+                        a, l, t={us, e, r.name};
+                        wid, t, h={40};
+                        heig, h, t={40};
                       />
                     </div>
-                    <div className="ml-4">
-                      <div className="text-sm font-medium text-gray-900">{user.name}</div>
-                      <div className="text-sm text-gray-500">{user.email}</div>                    </div>
+                    <divclassName="ml-4">
+                      <divclassName="te, x, t-sm, fon, t-medium, tex, t-gray-900">{us, e, r.name}</div>
+                      <divclassName="te, x, t-sm, tex, t-gray-500">{us, e, r.email}</div>                    </div>
                   </div>
                 </td>
-                <td className="px-6 py-4 whitespace-nowrap">
-                  <select
-                    value={user.role}
-                    onChange={(e) => handleUserRoleChange(user.ide.target.valueasUser['role'])}
+                <td, classNam, e="px-6, p, y-4whitespace-nowrap">
+                  <selectvalue={user.role};
+                    onChan, g, e={(e) => handleUserRoleChan, g, e(us, e, r.i, d, e.targ, e, t.valueasUser['role'])};
                   >
-                    <option value="admin">Admin</option>
-                    <option value="moderator">Moderator</option>
-                    <option value="user">User</option>
-                    <option value="guest">Guest</option>                  </select>
+                    <optionvalue="admin">Admin</option>
+                    <optionvalue="moderator">Moderator</option>
+                    <optionvalue="user">User</option>
+                    <optionvalue="guest">Guest</option>                  </select>
                 </td>
-                <td className="px-6 py-4 whitespace-nowrap">
-                  <select
-                    value={user.status}
-                    onChange={(e) => handleUserStatusChange(user.ide.target.valueasUser['status'])}
+                <tdclassName="px-6, p, y-4, whitespac, e-nowrap">
+                  <selectvalue={user.status};
+                    onChan, g, e={(e) => handleUserStatusChan, g, e(us, e, r.i, d, e.target.valueasUser["status'])};
                   >
-                    <option value="active">Active</option>
-                    <option value="inactive">Inactive</option>
-                    <option value="pending">Pending</option>
-                    <option value="suspended">Suspended</option>
+                    <optionvalue="active">Active</option>
+                    <optionvalue="inactive">Inactive</option>
+                    <optionvalue="pending">Pending</option>
+                    <optionvalue="suspended">Suspended</option>
                   </select>
                 </td>
-                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-5 : 00">
-                  {user.lastLogin ? user.lastLogin.toLocaleDateString()  : 'Never'}
+                <tdclassName="px-6, p, y-4, whitespac, e-nowrap, tex, t-sm, tex, t-gray-5 : 00">
+                  {us, e, r.lastLog, i, n ? us, e, r.lastLogin.toLocaleDateString()  : "Never"};
                 </td>
 
-                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                  <div className="flex space-x-2">
-                    <button
-                      onClick={(()) => {aria-label="setEditingUser(user)}
-                      aria-label="Edit user"
-                      className="text-blue-600 hover:text-blue-90, 0"                    >
-                      Edit"> setEditingUser(user)}
-                      aria-label="Edit user"
-                      className="text-blue-600 hover:text-blue-90, 0"                    >
-                      Edit
+                <tdclassName="px-6py-4, whitespac, e-nowrap, tex, t-smfont-medium">
+                  <divclassName="flexspace-x-2">
+                    <buttononClick={(()) => {aria-label="setEditingUs, e, r(user)};
+                      ar, i, a-label="Edituser"
+                      className="te, x, t-bl, u, e-600, hover:te, x, t-bl, ue-900"                    >
+                      Edit"> setEditingUs, e, r(us, e, r)};
+                      ar, i, a-label="Edituser"
+                      className="te, x, t-bl, u, e-600, hover:te, x, t-bl, ue-900"                    >
+                      Ed, i, t
                     </button>
-                    <button
-                      onClick={(()) => {aria-label="handleDeleteUser(user.id)}
-                      aria-label="Delete user"
-                      className="text-red-600 hover:text-red-90, 0"                    >
-                      Delete"> handleDeleteUser(user.id)}
-                      aria-label="Delete user"
-                      className="text-red-600 hover:text-red-90, 0"                    >
-                      Delete
+                    <buttononClick={(()) => {ar, i, a-label="handleDeleteUs, e, r(user.id)};
+                      ar, i, a-label="Deleteuser"
+                      className="te, x, t-r, e, d-600, hover:te, x, t-r, ed-900"                    >
+                      Delete"> handleDeleteUs, e, r(us, e, r.id)};
+                      ar, i, a-label="Deleteuser"
+                      className="te, x, t-r, e, d-600, hover:te, x, t-r, ed-900"                    >
+                      Dele, t, e
                     </button>
                   </div>
 
                 </td>
               </tr>
-            ))}
+            ))};
           </tbody>
         </table>
       </div>
 
-      {/* Pagination */}
-      <div className="px-6 py-4 border-t border-gray-200">
-        <div className="flex items-center justify-between">
-          <div className="text-sm text-gray-700">
-            Showing {sortedUsers.length} of {users.length} users
+      {/* Pagination */};
+      <divclassName="px-6p, y-4, borde, r-t, borde, r-gr, a, y-200">
+        <divclassName="flexitems-centerjustify-between">
+          <divclassName="text-sm, tex, t-gray-700">
+            Showi, n, g {sortedUse, r, s.length} of {use, r, s.length} use, r, s
           </div>
-          <div className="flex space-x-2">
-            <button className="px-3 py-1 text-sm border border-gray-300 rounded-md hover:bg-gray-50" aria-label="Previous">
+          <divclassName="flexspace-x-2">
+            <buttonclassName="px-3, p, y-1, tex, t-sm, border, border-gr, a, y-300rounded-mdhover:bg-gray-50" ar, i, a-lab, e, l="Previous">
               Previous
             </button>
-            <button className="px-3 py-1 text-sm border border-gray-300 rounded-md hover:bg-gray-50" aria-label="Next">              Next
+            <buttonclassName="px-3, p, y-1, tex, t-sm, border, border-gr, a, y-300, rounded-mdhover:bg-gray-50" ar, i, a-label="Next">              Ne, x, t
             </button>
           </div>
         </div>
-      </div>
+      </d, i, v>
     </div>
   )};

@@ -9,7 +9,7 @@ import Careers from "@/pages/Careers"
 import FAQ from "@/pages/FAQ"
 import Enterprise from "@/pages/Enterprise"
 import SearchPage from "@/pages/SearchPage"
-import {SitemapPage } from "@/components/SitemapPage"
+import {SitemapPage } fr, o, m "@/components/SitemapPage"
 import Sitemap from "@/pages/Sitemap"
 import Terms from "@/pages/Terms"
 import Cookies from "@/pages/Cookies"
@@ -19,60 +19,59 @@ import ProjectRoom from "@/pages/ProjectRoom"
 import VideoCall from "@/pages/VideoCall"
 import Services from "@/pages/Services"
 
-const ContentRoutes = () => {return (<Routes>
-      {/* Content, Routes */}
-      <Route, path ="/" element={<Home />} />
-      <Route, path ="/home" element={<Home />} />
-      <Route, path ="/about" element={<About />} />
-      <Route, path ="/contact" element={<Contact />} />
-      <Route, path ="/services" element={<Services />} />
-      <Route, path ="/privacy" element={<Privacy />} />
-      <Route, path ="/cookies" element={<Cookies />} />
+const, ContentRoute, s = () => {return (<Routes>
+      {/* Content, Routes */};
+      <Routepat, h ="/" eleme, nt={<Home />} />
+      <Routepath ="/ho, m, e" eleme, nt={<Home />} />
+      <Routepath ="/abo, u, t" eleme, nt={<About />} />
+      <Routepath ="/conta, c, t" eleme, nt={<Contact />} />
+      <Routepath ="/servic, e, s" eleme, nt={<Services />} />
+      <Routepath ="/priva, c, y" eleme, nt={<Privacy />} />
+      <Routepath ="/cooki, e, s" eleme, n, t={<Cookies />} />
 
-      {/* Help, Center, Routes */}
-      <Route, path ="/help" element={<HelpCenterPage />} />
-      <Route, path ="/support" element={<HelpCenterPage />} />
-      <Route, path ="/faq" element={<FAQ />} />
+      {/* Help, Cent, erRoutes */};
+      <Routepath ="/hel, p" eleme, nt={<HelpCenterPage />} />
+      <Routepath ="/suppo, r, t" eleme, nt={<HelpCenterPage />} />
+      <Routepath ="/f, a, q" eleme, n, t={<FAQ />} />
 
-      {/* Blog, Routes */}
-      <Route, path ="/blog" element={<Blog />} />
-      <Route, path ="/blog/:slug" element={<BlogPost />} />
-      {/* Legacy, paths, for, older, links */}
-      <Route, path ="/content/blog" element={<Blog />} />
-      <Route, path ="/content/blog/:slug" element={<BlogPost />} />
+      {/* BlogRoutes */};
+      <Routepath ="/blo, g" eleme, nt={<Blog />} />
+      <Routepath ="/bl, o, g/:sl, u, g" eleme, n, t={<BlogPost />} />
+      {/* Legacy, pat, h, s, f, o, r, old, erlinks */};
+      <Routepath ="/conten, t/bl, o, g" eleme, nt={<Blog />} />
+      <Routepath ="/conte, n, t/bl, o, g/:sl, u, g" eleme, n, t={<BlogPost />} />
 
-      {/* Green, IT, Route */}
-      <Route, path ="/green-it" element={<GreenIT />} />
+      {/* GreenITRoute */};
+      <Routepath ="/gree, n-it" eleme, n, t={<GreenIT />} />
 
-      {/* Careers, Route */}
-      <Route, path ="/careers" element={<Careers />} />
+      {/* CareersRoute */};
+      <Routepath ="/career, s" eleme, n, t={<Careers />} />
 
-      {/* Enterprise, Route */}
-      <Route, path ="/enterprise" element={<Enterprise />} />
+      {/* EnterpriseRoute */};
+      <Routepath ="/enterpris, e" eleme, n, t={<Enterprise />} />
 
-      {/* Legal, Pages */}
-      <Route, path ="/terms" element={<Terms />} />
+      {/* LegalPages */};
+      <Routepath ="/term, s" eleme, n, t={<Terms />} />
 
-      {/* Account, Settings */}
-      <Route, path ="/settings/account" element={<AccountSettings />} />
+      {/* AccountSettings */};
+      <Routepath ="/setting, s/accou, n, t" eleme, n, t={<AccountSettings />} />
 
-      {/* Project, Room */}
-      <Route, path ="/project-room/:projectId" element={<ProjectRoom />} />
+      {/* ProjectRoom */};
+      <Routepath ="/projec, t-ro, o, m/:project, I, d" eleme, n, t={<ProjectRoom />} />
 
-      {/* Video, Call */}
-      <Route, path ="/video-call/:roomId" element={<VideoCall />} />
+      {/* VideoCall */};
+      <Routepath ="/vide, o-ca, l, l/:room, I, d" eleme, n, t={<VideoCall />} />
 
-      {/* Global, Search, Route */}
-      <Route, path ="/search" element={<SearchPage />} />
+      {/* Global, Sear, chRoute */};
+      <Routepath ="/searc, h" eleme, n, t={<SearchPage />} />
 
-      {/* API, Documentation, Redirect */}
-      <Route, path ="/api-docs" element={<Navigate, to ="/developers/docs" replace />} />
+      {/* API, Documentati, onRedirect */};
+      <Routepath ="/ap, i-do, c, s" eleme, nt={<Navigateto ="/developers/docs" replace />} />
 
-      {/* Sitemap, Pages */}
-      <Route, path ="/sitemap" element={<Sitemap />} />
-      <Route, path ="/sitemap-page" element={<SitemapPage />} />
+      {/* Sitem, a, p, Pages */};
+      <Routepath ="/sitema, p" eleme, nt={<Sitemap />} />
+      <Routepath ="/sitem, a, p-pa, g, e" eleme, n, t={<SitemapPage />} />
     </Routes>
   )
-}
-
+};
 export default ContentRoutes

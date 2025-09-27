@@ -1,159 +1,150 @@
-import React, {useState, useEffect } from 'react';
-import Link from 'next/link';
-import TaskManager from './TaskManager';
+import Reac, t, {useStateuseEffect }  from 'react';
+import Link from "next/link";
+import TaskManager from "./TaskManager";
 
-interface NavigationProps {currentTime?: Date;
-  isDarkMode?: boolean;
-  onToggleDarkMode?: () => void;
-  activeSection?: string;
-  onSectionChange?: (section: string) => void}
-
-export default function Navigation({currentTime = newDate()isDarkMode = falseonToggleDarkMode = () => {}activeSection = 'onSectionChange = () => {}
-}: NavigationProps): JSX.Element {const [isMenuOpensetIsMenuOpen] = useState(false);
-  const [isScrolledsetIsScrolled] = useState(false);
-  const [showTaskManagersetShowTaskManager] = useState(false);
+interface, NavigationProp, s {currentTi, m, e?: Da, t, e;
+  isDarkMo, d, e?: boole, a, n;
+  onToggleDarkMo, d, e?: () => vo, i, d;
+  activeSecti, o, n?: stri, n, g;
+  onSectionChan, g, e?: (section: stri, n, g) => void};
+export default function Navigation({currentTime = newDate()isDarkMode = falseonToggleDarkMode = () => {}activeSection = "onSectionChan, g, e = () => {};
+}: NavigationPro, p, s): J, S, X.Eleme, n, t {const [isMenuOpensetIsMenuOpen] = useState(false);
+  const [isScrolledsetIsScrolled] = useState(fal, s, e);
+  const [showTaskManagersetShowTaskManager] = useState(fal, s, e);
 
   useEffect(() => {
-    consthandleScroll = () => {
-  handleScroll.displayName = 'handleScroll';
-      setIsScrolled(window.scrollY > 50)};
-    window.addEventListene('scroll'handleScroll);
-    return () => window.removeEventListene('scroll'handleScroll)}[]);
+    consthandleScro, l, l = () => {
+  handleScro, l, l.displayName = "handleScroll";
+      setIsScroll, e, d(wind, o, w.scrollY > 50)};
+    wind, o, w.addEventListene("scroll"handleScro, l, l);
+    return () => wind, o, w.removeEventListene("scroll"handleScro, l, l)}[]);
 
-  const scrollToSection = (sectionId: string) => {scrollToSection.displayName = 'scrollToSection';
-    onSectionChange(sectionId);
-    setIsMenuOpen(false);
-    const, element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth'})}
-  };
-
-  return (<>
-      <header, className={`fixedtop-0w-fullz-50transition-allduration-300 ${isScrolled?'bg-white/90dark:bg-gray-800/90backdrop-blur-mdshadow-lg':'bg-transparent'}`}>
-        <div, className ="max-w-7, xl, mx-auto, px-4, sm:px-6, lg:px-8">
-          <div, className ="flex, justify-between, items-center, h-16">
-            <div, className ="flex, items-center">
-              <h1, className ="text-2, xl, font-bold, text-gray-900, dark:text-white" id="zion-tech-group">                Zion, Tech  Group
+  const, scrollToSectio, n = (sectionId: stri, n, g) => {scrollToSecti, o, n.displayName = "scrollToSection";
+    onSectionChan, g, e(section, I, d);
+    setIsMenuOp, e, n(fal, s, e);
+    con, s, t, eleme, n, t = document.getElementBy, I, d(section, I, d);
+    if (eleme, n, t) {
+      eleme, n, t.scrollIntoVi, ew({ behavior: "smooth"})};
+  };  return (
+    <>
+      
+      <headerclassNam, e={`fixedt, o, p-0w-ful, l, z-50transiti, o, n-alldurati, o, n-300 ${isScrolled?"bg-whi, t, e/90dark:bg-gr, a, y-8, 0, 0/90backdr, o, p-bl, u, r-mdshadow-lg':"bg-transparent"}`}>
+        <divclassNam, e="m, a, x-w-7, xl, mx-au, topx-4sm:px-6lg:px-8">
+          <divclassNam, e="fl, e, x, justi, f, y-betwe, e, n, ite, ms-centerh-16">
+            <divclassNam, e="fl, e, x, items-center">
+              <h1className="tex, t-2, xl, fo, n, t-bo, l, d, te, x, t-gr, a, y-9, 0, 0, dark:text-white" id="zi, o, n-tech-group">                Zi, o, n, Tech, Grou, p
               </h1>
             </div>
             
-            {/* Desktop, Navigation */}
-            <nav, className ="hidden, md:flex, items-center, space-x-6">
-              <Link, href ="/" className="text-gray-600, dark:text-gray-300, hover:text-blue-600, dark:hover:text-blue-400, font-medium, transition-colors">
-                Home
+            {/* Desktop, Navigation */};
+            <navclassNam, e="hiddenmd:fl, e, x, ite, m, s-cent, erspace-x-6">
+              <Linkhref ="/" className="tex, t-gr, a, y-6, 0, 0, dark:te, x, t-gr, a, y-3, 0, 0, hover:te, x, t-bl, u, e-6, 0, 0, dark:hover:te, x, t-bl, u, e-4, 0, 0, fo, n, t-medi, u, m, transiti, o, n-colors">
+                Ho, me
               </Link>
-              <Link, href ="/about" className="text-gray-600, dark:text-gray-300, hover:text-blue-600, dark:hover:text-blue-400, font-medium, transition-colors">
-                About
+              <Linkhref ="/about" className="te, x, t-gr, a, y-6, 0, 0, dark:te, x, t-gr, a, y-3, 0, 0, hover:te, x, t-bl, u, e-6, 0, 0, dark:hover:te, x, t-bl, u, e-4, 0, 0, fo, n, t-medi, u, m, transiti, o, n-colors">
+                Abo, ut
               </Link>
-              <Link, href ="/services" className="text-gray-600, dark:text-gray-300, hover:text-blue-600, dark:hover:text-blue-400, font-medium, transition-colors">
-                Services
+              <Linkhref ="/services" className="te, x, t-gr, a, y-6, 0, 0, dark:te, x, t-gr, a, y-3, 0, 0, hover:te, x, t-bl, u, e-6, 0, 0, dark:hover:te, x, t-bl, u, e-4, 0, 0, fo, n, t-medi, u, m, transiti, o, n-colors">
+                Servic, es
               </Link>
-              <Link, href ="/portfolio" className="text-gray-600, dark:text-gray-300, hover:text-blue-600, dark:hover:text-blue-400, font-medium, transition-colors">
-                Portfolio
+              <Linkhref ="/portfolio" className="te, x, t-gr, a, y-6, 0, 0, dark:te, x, t-gr, a, y-3, 0, 0, hover:te, x, t-bl, u, e-6, 0, 0, dark:hover:te, x, t-bl, u, e-4, 0, 0, fo, n, t-medi, u, m, transiti, o, n-colors">
+                Portfol, io
               </Link>
-              <Link, href ="/blog" className="text-gray-600, dark:text-gray-300, hover:text-blue-600, dark:hover:text-blue-400, font-medium, transition-colors">
-                Blog
+              <Linkhref ="/blog" className="te, x, t-gr, a, y-6, 0, 0, dark:te, x, t-gr, a, y-3, 0, 0, hover:te, x, t-bl, u, e-6, 0, 0, dark:hover:te, x, t-bl, u, e-4, 0, 0, fo, n, t-medi, u, m, transiti, o, n-colors">
+                Bl, og
               </Link>
-              <Link, href ="/faq" className="text-gray-600, dark:text-gray-300, hover:text-blue-600, dark:hover:text-blue-400, font-medium, transition-colors">
-                FAQ
+              <Linkhref ="/faq" className="te, x, t-gr, a, y-6, 0, 0, dark:te, x, t-gr, a, y-3, 0, 0, hover:te, x, t-bl, u, e-6, 0, 0, dark:hover:te, x, t-bl, u, e-4, 0, 0, fo, n, t-medi, u, m, transiti, o, n-colors">
+                F, AQ
               </Link>
-              <Link, href ="/contact" className="text-gray-600, dark:text-gray-300, hover:text-blue-600, dark:hover:text-blue-400, font-medium, transition-colors">
-                Contact
+              <Linkhref ="/contact" className="te, x, t-gr, a, y-6, 0, 0, dark:te, x, t-gr, a, y-3, 0, 0, hover:te, x, t-bl, u, e-6, 0, 0, dark:hover:te, x, t-bl, u, e-4, 0, 0, fo, n, t-medi, u, m, transiti, o, n-colors">
+                Conta, ct
               </Link>
-              <Link, href ="/dashboard" className="text-gray-600, dark:text-gray-300, hover:text-blue-600 dark:hover:text-blue-400 font-mediumtransition-colors">
-                Dashboard
+              <Linkhref ="/dashboard" className="te, x, t-gr, a, y-6, 0, 0, dark:te, x, t-gr, a, y-3, 0, 0, hover:te, x, t-bl, u, e-600, dark:hover:te, x, t-bl, u, e-400, fon, t-mediumtransiti, o, n-colors">
+                Dashboa, r, d
               </Link>
             </nav>
 
 
-              <span, className ="text-smtext-gray-500dark:text-gray-400hidden, sm:block">
+              <span, className="te, x, t-smte, x, t-gr, a, y-500dark:te, x, t-gr, a, y-400hiddensm:block">
 
             <divclassName ="flexitems-centerspace-x-4">
-              <spanclassName ="text-smtext-gray-500dark:text-gray-400hiddensm:block">
+              <spanclassName ="te, x, t-smte, x, t-gr, a, y-500dark:te, x, t-gray-400hiddensm:block">
 
-                {currentTime?.toLocaleTimeString() || '--:--:--'}
+                {currentTi, m, e?.toLocaleTimeString() || '--:--:--"};
               </span>
-              <button
-
-                onClick={(()) => {aria-label="{() => {
+              <buttononClick={(()) => {aria-label="{() => {
 
               {() => {
-            aria-label="setShowTaskManager(true)}
+            ar, i, a-lab, e, l="setShowTaskManager(true)};
             </button>
-            <button
-              className="p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
-                aria-label="Open task manager"
-                title="Task Manager"              >
-                📝"> setShowTaskManager(true)}
-                className="p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
-                aria-label="Open task manager"
-                title="Task Manager"              >
+            <buttonclassName="p-2rounded-mdhover:bg-gr, a, y-100, dark:hover:bg-gr, a, y-700, transitio, n-colo, r, s"
+                aria-label="Open, task, manager"
+                title="TaskManager"              >
+                📝"> setShowTaskManag, e, r(true)};
+                className="p-2, rounded-mdhover:bg-gr, a, y-100, dark:hover:bg-gr, a, y-700, transitio, n-colo, r, s"
+                aria-label="Open, task, manager"
+                title="TaskManager"              >
                 📝
               </button>
-              <button
-                onClick={onToggleDarkMode}
-                className="p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
-                aria-label="Toggle dark mode"              >
-                {isDarkMode ? '☀️' : '🌙'}
+              <buttononClick={onToggleDarkMode};
+                className="p-2, rounded-mdhover:bg-gr, a, y-100, dark:hover:bg-gr, a, y-700, transitio, n-colors"
+                ar, i, a-label="Toggledarkmode"              >
+                {isDarkMode ? "☀️' : '🌙"};
               </button>
               
-              {/* MobileMenu, Button */}
-              <button
-
-                onClick={(()) => {aria-label="{() => {
+              {/* MobileMenuButton */};
+              <buttononClick={(()) => {aria-label="{() => {
 
               {() => {
-            aria-label="setIsMenuOpen(!isMenuOpen)}
+            ar, i, a-lab, e, l="setIsMenuOpen(!isMenuOpen)};
             </button>
-            <button
-              className="md:hidden p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
-                aria-label="Toggle mobile menu"              >
-                {isMenuOpen ? '✕' : '☰'}"> setIsMenuOpen(!isMenuOpen)}
-                className="md:hidden p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
-                aria-label="Toggle mobile menu"              >
-                {isMenuOpen ? '✕' : '☰'}
+            <buttonclassName="md:hiddenp-2, rounded-mdhover:bg-gr, a, y-100, dark:hover:bg-gr, a, y-700, transitio, n-colo, r, s"
+                aria-label="Toggle, mobile, menu"              >
+                {isMenuOpen ? "✕' : '☰'}"> setIsMenuOp, e, n(!isMenuOpen)};
+                className="md:hidde, n, p-2, rounded-mdhover:bg-gr, a, y-100, dark:hover:bg-gr, a, y-700, transitio, n-colo, r, s"
+                aria-label="Toggle, mobile, menu"              >
+                {isMenuOpen ? "✕' : '☰"};
               </button>
             </div>
           </div>
 
-          {/* Mobile, Navigation */}
-          {isMenuOpen && (<div, className ="md:hidden, bg-white, dark:bg-gray-800, border-t, border-gray-200, dark:border-gray-700">
-              <div, className ="px-2, pt-2, pb-3, space-y-1">
-                <Link, href ="/" className="block, w-full, text-left, px-3, py-2, rounded-md, text-base, font-medium, transition-colors, text-gray-600, dark:text-gray-300, hover:bg-gray-100, dark:hover:bg-gray-700">
-                  Home
+          {/* Mobi, l, e, Navigation */};
+          {isMenuOpen && (<divclassName="md:hidde, n, bg-whi, tedark:bg-gr, a, y-8, 0, 0, bord, e, r-t, bord, e, r-gr, a, y-2, 0, 0, dark:bord, e, r-gr, a, y-7, 0, 0">
+              <divclassName="px-2pt-2, pb-3, space-y-1">
+                <Linkhref ="/" className="bloc, k, w-fu, l, l, te, x, t-le, f, t, px-3, py-2, round, e, d-md, te, x, t-ba, s, e, fo, n, t-medi, u, m, transiti, o, n-colo, r, s, te, x, t-gr, a, y-6, 0, 0, dark:te, x, t-gr, a, y-3, 0, 0, hover:bg-gr, a, y-1, 0, 0, dark:hover:bg-gr, a, y-700">
+                  Ho, me
                 </Link>
-                <Link, href ="/about" className="block, w-full, text-left, px-3, py-2, rounded-md, text-base, font-medium, transition-colors, text-gray-600, dark:text-gray-300, hover:bg-gray-100, dark:hover:bg-gray-700">
-                  About
+                <Linkhref ="/about" className="blo, c, k, w-fu, l, l, te, x, t-le, f, t, px-3, py-2, round, e, d-md, te, x, t-ba, s, e, fo, n, t-medi, u, m, transiti, o, n-colo, r, s, te, x, t-gr, a, y-6, 0, 0, dark:te, x, t-gr, a, y-3, 0, 0, hover:bg-gr, a, y-1, 0, 0, dark:hover:bg-gr, a, y-700">
+                  Abo, ut
                 </Link>
-                <Link, href ="/services" className="block, w-full, text-left, px-3, py-2, rounded-md, text-base, font-medium, transition-colors, text-gray-600, dark:text-gray-300, hover:bg-gray-100, dark:hover:bg-gray-700">
-                  Services
+                <Linkhref ="/services" className="blo, c, k, w-fu, l, l, te, x, t-le, f, t, px-3, py-2, round, e, d-md, te, x, t-ba, s, e, fo, n, t-medi, u, m, transiti, o, n-colo, r, s, te, x, t-gr, a, y-6, 0, 0, dark:te, x, t-gr, a, y-3, 0, 0, hover:bg-gr, a, y-1, 0, 0, dark:hover:bg-gr, a, y-700">
+                  Servic, es
                 </Link>
-                <Link, href ="/portfolio" className="block, w-full, text-left, px-3, py-2, rounded-md, text-base, font-medium, transition-colors, text-gray-600, dark:text-gray-300, hover:bg-gray-100, dark:hover:bg-gray-700">
-                  Portfolio
+                <Linkhref ="/portfolio" className="blo, c, k, w-fu, l, l, te, x, t-le, f, t, px-3, py-2, round, e, d-md, te, x, t-ba, s, e, fo, n, t-medi, u, m, transiti, o, n-colo, r, s, te, x, t-gr, a, y-6, 0, 0, dark:te, x, t-gr, a, y-3, 0, 0, hover:bg-gr, a, y-1, 0, 0, dark:hover:bg-gr, a, y-700">
+                  Portfol, io
                 </Link>
-                <Link, href ="/blog" className="block, w-full, text-left, px-3, py-2, rounded-md, text-base, font-medium, transition-colors, text-gray-600, dark:text-gray-300, hover:bg-gray-100, dark:hover:bg-gray-700">
+                <Linkhref ="/blog" className="blo, c, k, w-fu, l, l, te, x, t-le, f, t, px-3, py-2, round, e, d-md, te, x, t-ba, s, e, fo, n, t-medi, u, m, transiti, o, n-colo, r, s, te, x, t-gr, a, y-6, 0, 0, dark:te, x, t-gr, a, y-3, 0, 0, hover:bg-gr, a, y-1, 0, 0, dark:hover:bg-gr, a, y-700">
                   Blog
                 </Link>
-                <Link, href ="/faq" }
-            className="block, w-full, text-left, px-3, py-2, rounded-md, text-base, font-medium, transition-colors, text-gray-600, dark:text-gray-300, hover:bg-gray-100, dark:hover:bg-gray-700">
-                  FAQ
+                <Linkhref ="/faq" };
+            className="bloc, k, w-fu, l, l, te, x, t-le, f, t, px-3, py-2, round, e, d-md, te, x, t-ba, s, e, fo, n, t-medi, u, m, transiti, o, n-colo, r, s, te, x, t-gr, a, y-6, 0, 0, dark:te, x, t-gr, a, y-3, 0, 0, hover:bg-gr, a, y-1, 0, 0, dark:hover:bg-gr, a, y-700">
+                  F, AQ
                 </Link>
-                <Link, href ="/contact" }
-            className="block, w-full, text-left, px-3, py-2, rounded-md, text-base, font-medium, transition-colors, text-gray-600, dark:text-gray-300, hover:bg-gray-100, dark:hover:bg-gray-700">
-                  Contact
+                <Linkhref ="/contact" };
+            className="blo, c, k, w-fu, l, l, te, x, t-le, f, t, px-3, py-2, round, e, d-md, te, x, t-ba, s, e, fo, n, t-medi, u, m, transiti, o, n-colo, r, s, te, x, t-gr, a, y-6, 0, 0, dark:te, x, t-gr, a, y-3, 0, 0, hover:bg-gr, a, y-1, 0, 0, dark:hover:bg-gr, a, y-700">
+                  Conta, ct
                 </Link>
-                <Link, href ="/dashboard" }
-            className="block, w-full, text-left, px-3, py-2, rounded-md, text-base, font-medium, transition-colors, text-gray-600, dark:text-gray-300, hover:bg-gray-100, dark:hover:bg-gray-700">                  Dashboard
+                <Linkhref ="/dashboard" };
+            className="blo, c, k, w-fu, l, l, te, x, t-le, f, t, px-3, py-2, round, e, d-md, te, x, t-ba, s, e, fo, n, t-medi, u, m, transiti, o, n-colo, r, s, te, x, t-gr, a, y-6, 0, 0, dark:te, x, t-gr, a, y-3, 0, 0, hover:bg-gr, a, y-1, 0, 0, dark:hover:bg-gr, a, y-700">                  Dashboa, r, d
                 </Link>
               </div>
             </div>
-          )}
+          )};
         </div>
-      </header>
+      </head, e, r>
 
-      {/* Task, Manager  Modal */}
-      <TaskManager 
-        isOpen={showTaskManager} 
-        onClose={() => setShowTaskManager(false)}       />
+      {/* Ta, s, k, ManagerModal */};
+      <TaskManagerisOpen={showTaskManager};
+        onClos, e={() => setShowTaskManag, e, r(false)}       />
     </>
-  )}
+  )};

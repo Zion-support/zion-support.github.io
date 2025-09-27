@@ -1,125 +1,105 @@
-import React, {Component, ErrorInfo  ReactNode } from 'react';
+import Reac, t, {Compone, n, t, ErrorInfoReactNode }  from 'react";
 
-interface Props {children: ReactNode;
-  fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void}
-
-interface State {hasError: boolean;
-  error: Error | null;
-  errorInfo: ErrorInfo | null}
-
-export class GlobalErrorBoundary extends Component<Props State> {constructor(props: Props) {
-    super(props);
-    this.state = {
+interface, Prop, s {children: ReactNo, d, e;
+  fallba, c, k?: ReactNo, d, e;
+  onErr, o, r?: (error: Err, orerrorInfo: ErrorIn, f, o) => void};
+interface, Stat, e {hasError: boole, a, n;
+  error: Err, o, r | nu, l, l;
+  errorInfo: ErrorIn, f, o | null};
+export, class, GlobalErrorBoundary extends, Componen, t<PropsState> {constructor(props: Pro, p, s) {
+    sup, e, r(pro, p, s);
+    th, i, s.sta, t, e = {
       hasError: falseerror: nullerrorInfo: null
-    }}
-
-  static getDerivedStateFromError(error: Error): State {return {
+    }};
+  static, getDerivedStateFromErro, r(error: Err, o, r): Sta, t, e {return {
       hasError: trueerrorerrorInfo: null
-    }}
-
-  componentDidCatch(error: ErrorerrorInfo: ErrorInfo) {this.setState({
+    }};
+  componentDidCat, c, h(error: ErrorerrorInfo: ErrorIn, f, o) {th, i, s.setSta, t, e({
       errorerrorInfo
     });
 
-    // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {console.error('Error, caughtbyboundary: ', errorerrorInfo)}
+    // Log, error, to console, in, development
+    if (proce, s, s.env.NODE_ENV === "developme, n, t") {console.error("Err, orcaughtbyboundary: ", errorerrorInfo)};
+    // Send, error, to analyti, c, s/monitoring, service, this.logErrorToServi, c, e(errorerrorIn, f, o);
 
-    // Send error to analytics/monitoring service
-    this.logErrorToService(errorerrorInfo);
-
-    // Call custom error handler
-    this.props.onError? .(error : errorInfo)}
-
- {try {
-      // SendtoGoogleAnalytics
-
-  privatelogErrorToService = (error : ErrorerrorInfo: ErrorInfo) => {try {
-      // SendtoGoogleAnalytics
-
-      if (typeof === window !== 'undefined' && window.gtag) {
-        window.gtag('event''exception'{
-          description: error.messagefatal: falsecustom_map: {
-            error_stack: error.stackcomponent_stack: errorInfo.componentStack
-          }
-        })}
-
-      // Send to custom error reporting endpoint
-      fetch('/api/error-reporting'{method: 'POST'headers: {
+    // Call, custom, error handler, thi, s.pro, p, s.onErr, o, r? .(err, o, r : errorIn, f, o)};
+ {t, r, y {
+      // SendtoGoogleAnalytics, privatelogErrorToServic, e = (err, o, r : ErrorerrorInfo: ErrorIn, f, o) => {t, r, y {
+      // SendtoGoogleAnalytics, i, f (typeof === window !== "undefin, e, d" && wind, o, w.gt, a, g) {
+        window.gtag("eve, n, t'"exception"{
+          description: err, o, r.messagefatal: falsecustom_map: {
+            error_stack: err, o, r.stackcomponent_stack: errorIn, f, o.componentStack};
+        })};
+      // Send, to, custom error, reporting, endpoint
+      fetch("/a, p, i/err, o, r-reporting"{method: "POST"headers: {
         })
-      })} catch (reportingError) {console.error('Failed, toreporterror:', reportingError)}
+      })} cat, c, h (reportingErr, o, r) {conso, l, e.error("Failedtoreporterror:", reportingError)};
   };
 
-  render() {if (this.state.hasError) {
+  rend, e, r() {if (th, i, s.sta, t, e.hasErr, or) {
 
-          <div, className ="max-w-md, w-full, bg-white, shadow-lg, rounded-lg, p-6">
-            <div, className ="flex, items-center, justify-center, w-12, h-12, mx-auto, bg-red-100, rounded-full, mb-4">
-              <svg, className ="w-6, h-6, text-red-600" fill="none" stroke="currentColor" viewBox="0, 0, 24, 24">
-                <path, strokeLinecap ="round" strokeLinejoin="round" strokeWidth={2} d="M12  9v2m0  4h.01m-6.938, 4h13.856c1.54, 0, 2.502-1.667, 1.732-2.5L13.732, 4c-.77-.833-1.964-.833-2.732, 0L3.732, 16.5c-.77.833.192, 2.5, 1.7322.5z" />
+          <divclassName="m, a, x-w-md, w-fu, l, l, bg-whi, t, e, shad, o, w-lg, round, ed-lgp-6">
+            <divclassNam, e="fl, e, x, ite, m, s-cent, e, r, justi, f, y-cent, e, r, w-12, h-12, mx-au, t, o, bg-r, e, d-1, 0, 0, round, ed-fullmb-4">
+              <svgclassNam, e="w-6, h-6, te, x, t-red-600" fi, l, l="none" stroke="currentColor" viewBox="0, 02424">
+                <pathstrokeLineca, p ="round" strokeLinejoin="round" strokeWidth={2} d="M12, 9v2m0, 4h.0, 1, m-6.9, 3, 8, 4h, 1, 3.856, c, 1.54, 0, 2.5, 0, 2-1.6, 6, 7, 1.7, 3, 2-2.5L, 1, 3.7, 3, 2, 4c-.77-.8, 3, 3-1.9, 6, 4-.8, 3, 3-2.7, 3, 2, 0, L, 3.7, 3, 2, 16.5c-.77.8, 3, 3.1, 9, 22.51.7322.5z" />
               </svg>
             </div>
-            <div  className ="text-center">
-              <h1  className ="text-xlfont-semiboldtext-gray-900mb-2" id="something-went-wrong">
-                Somethingwent  wrong
-
-      return  this.props.fallback || (<div, className ="min-h-screen, flex  items-center, justify-center, bg-gray-50">
-          <div, className ="max-w-md, w-full, bg-white, shadow-lg, rounded-lg, p-6">
-            <div, className ="flex, items-center, justify-center, w-12, h-12, mx-auto, bg-red-100, rounded-full, mb-4">
-              <svg, className ="w-6, h-6, text-red-600" fill="none" stroke="currentColor" viewBox="0024, 24">
-                <path, strokeLinecap ="round" strokeLinejoin="round" strokeWidth={2} d="M12, 9v2m0 4h.01m-6.938, 4h13.856c1.54, 0, 2.502-1.667, 1.732-2.5L13.732, 4c-.77-.833-1.964-.833-2.732, 0L3.732, 16.5c-.77.833.192, 2.51.7322.5z" />
+            <divclassName ="text-center">
+              <h1className ="text-xlfo, n, t-semiboldte, x, t-gray-900mb-2" id="somethi, n, g-went-wrong">
+                Somethingwent, wrong, return  th, i, s.pro, p, s.fallba, c, k || (<divclassNam, e="m, i, n-h-scre, e, n, flex, item, s-cent, e, r, justi, f, y-cent, erbg-gray-50">
+          <divclassNam, e="m, a, x-w-md, w-fu, l, l, bg-whi, t, e, shad, o, w-lgrounded-lgp-6">
+            <divclassNam, e="fl, e, x, ite, m, s-cent, e, r, justi, f, y-cent, e, r, w-12, h-12, mx-au, t, o, bg-r, e, d-1, 0, 0, round, ed-fullmb-4">
+              <svgclassNam, e="w-6, h-6, te, x, t-red-600" fi, l, l="none" stroke="currentColor" viewBox="00, 2424">
+                <pathstrokeLineca, p ="round" strokeLinejoin="round" strokeWidth={2} d="M, 1, 2, 9v2m0, 4, h.0, 1, m-6.9, 3, 8, 4h, 1, 3.856, c, 1.54, 0, 2.5, 0, 2-1.6, 6, 7, 1.7, 3, 2-2.5L, 1, 3.7, 3, 2, 4c-.77-.8, 3, 3-1.9, 6, 4-.8, 3, 3-2.7, 3, 2, 0, L, 3.7, 3, 2, 16.5c-.77.8, 3, 3.1, 9, 2, 2.51.7322.5z" />
               </svg>
             </div>
-            <div, className ="text-center">
-              <h1className ="text-xlfont-semiboldtext-gray-900mb-2" id="something-went-wrong">
-                Somethingwentwrong
+            <div, className ="te, x, t-center">
+              <h1className ="text-xlfo, n, t-semiboldte, x, t-gray-900mb-2" id="somethi, n, g-went-wrong">
+                Somethingwentwro, n, g
 
               </h1>
               <pclassName ="text-gray-600mb-4">
-                We're, sorry  but, something  unexpected, happened. Please, try  refreshing, the  page.
+                We"re, sorry, bu, t, something, unexpecte, d, happen, e, d. Plea, s, e, try, refreshin, g, thepage.
               </p>
-              <div, className ="space-y-2">
-                <button, onClick ={() => window.location.reload()}
-                  className="w-full bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors"
+              <divclassName ="spac, e-y-2">
+                <buttononClic, k ={() => wind, o, w.location.reload()};
+                  className="w-full, b, g-bl, u, e-600, tex, t-white, p, x-4, p, y-2, rounded-mdhover:bg-bl, u, e-700, transitio, n-colo, r, s"
                 >
-                  Refresh Page
+                  Refresh, Pag, e
                 </button>
-                <button
-                  onClick={() => this.setState({hasError: false, error: null, errorInfo: null })}
-                  className="w-full bg-gray-200 text-gray-800 px-4 py-2 rounded-md hover:bg-gray-300 transition-colors"
+                <buttononClick={() => th, i, s.setSta, t, e({hasError: falseerror: nullerrorInfo: null })};
+                  className="w-full, b, g-gr, a, y-200, tex, t-gr, a, y-800, p, x-4, p, y-2, rounded-mdhover:bg-gr, a, y-300, transitio, n-colo, r, s"
                 >
-                  Try Again
+                  Try, Agai, n
                 </button>
               </div>
-              {process.env.NODE_ENV === 'development'&& this.state.error && (<details, className ="mt-4, text-left">
-                  <summary, className ="cursor-pointer, text-sm, text-gray-500hover:text-gray-700">
-                    ErrorDetails (Development)
+              {proce, s, s.env.NODE_ENV === "developme, n, t"&& th, i, s.sta, t, e.error && (<detailsclassName="mt-4te, x, t-le, f, t">
+                  <summaryclassName="curso, r-point, e, r, te, x, t-sm, te, x, t-gr, a, y-500hover:te, x, t-gr, a, y-700">
+                    ErrorDetai, l, s (Developme, n, t)
                   </summary>
 
 
-                  <preclassName ="mt-2text-xstext-red-600bg-red-50p-2roundedoverflow-auto">
+                  <preclassName ="mt-2text-xste, x, t-r, e, d-600, b, g-r, e, d-5, 0, p-2roundedoverfl, o, w-auto">
 
-                    {this.state.error.toString()}
-                    {this.state.errorInfo?.componentStack}
+                    {th, i, s.sta, t, e.err, o, r.toString()};
+                    {th, i, s.sta, t, e.errorIn, f, o?.componentStack};
                   </pre>
                 </details>
-              )}
+              )};
             </div>
-          </div>
+          </d, i, v>
         </div>
-      )}
-
-    return this.props.children}
-}
-
-// Higher-order component for easier usage
-export const withErrorBoundary = <P extends object>(Component: React.ComponentType<P>errorBoundaryProps?: Omit<Props 'children'>
-) => {const, WrappedComponent = (props: P) => (<GlobalErrorBoundary {...errorBoundaryProps}>
+      )};
+    returnthis.pro, p, s.childr, e, n};
+};
+// High, e, r-order, component, for easier, usage, export const, withErrorBoundar, y = <Pextendsobject>(Component: React.ComponentType<P>errorBoundaryProps?: Omit<Props "children">
+) => {con, s, t, WrappedCompone, nt = (props: P) => (<GlobalErrorBoundary {...errorBoundaryProps}>
       <Component {...props} />
     </GlobalErrorBoundary>
   );
 
-  WrappedComponent.displayName = `withErrorBoundary(${Component.displayName||Component.name})`;
+  WrappedCompone, n, t.displayNa, m, e = `withErrorBounda, r, y(${Compone, n, t.displayNa, m, e||Compone, n, t.name})`;
 
-  return WrappedComponent};
+  return, WrappedComponen, t};
 
 export default GlobalErrorBoundary;

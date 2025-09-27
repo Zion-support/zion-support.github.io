@@ -1,276 +1,251 @@
-import React, {useState, useEffect  useCallback } from 'react';
+import Reac, t, {useState, useEffectuseCallback }  from 'react";
 
-interface TestResult {id: string;
+interface, TestResul, t {id: stri, ng;
   name: string;
-  status: 'pending' | 'running' | 'passed' | 'failed' | 'skipped';
-  duration?: number;
-  error?: string;
-  timestam, p: number }
-
-interface TestSuite {id: string;
-  name: string;
+  status: "pendi, n, g' | "running" | "passed" | "failed" | "skipped";
+  durati, o, n?: numb, e, r;
+  err, o, r?: stri, n, g;
+  timestamp: number};
+interface, TestSuit, e {id: stri, n, g;
+  name: stri, n, g;
   tests: TestResult[];
-  status: 'pending' | 'running' | 'passed' | 'failed';
-  duration?: number }
+  status: "pending" | "running" | "passed" | "failed";
+  durati, o, n?: number};
+interface, TestConfi, g {timeout: numb, e, r;
+  retries: numb, e, r;
+  parallel: boole, a, n;
+  bail: boolean};
+class, TestRunne, r {priva, testaticinstance: TestRunn, e, r;
+  privatesuites: TestSui, t, e[] = [];
+  privateconfig: TestConf, i, g;
 
-interface TestConfig {timeout: number;
-  retries: number;
-  parallel: boolean;
-  bai, l: boolean }
+  construct, o, r(config: TestConf, i, g) {
+    th, i, s.conf, i, g = config};
+  static, getInstanc, e(conf, i, g?: Parti, a, l<TestConfig>): TestRunner {if (!TestRunn, e, r.instan, c, e) {
+      id: `suit, e, _${Da, t, e.now()}_${Ma, t, h.rand, o, m().toString(36).substr(29)}`nametests: []status: "pending"};
+    th, i, s.suit, e, s.pu, s, h(sui, t, e);
+    return, suit, e};
+ Promi, s, e<void> | void): vo, i, d {con, s, t, sui, t, e = th, i, s.suit, e, s.fi, n, d(s => s.id === suite, I, d);
+    if (!sui, t, e) retu, r, n;
 
-class TestRunner {private, static  instance: TestRunner;
-  privatesuites: TestSuite[] = [];
-  privateconfig: TestConfig;
+    consttest: TestResult = {};
+  addTe, s, t(suiteId: stringname: stringtestFn: () => Promi, s, e<void> | void): vo, i, d {constsui, t, e = th, i, s.suit, e, s.fi, n, d(s => s.id === suite, I, d);
+    if (!sui, t, e) retu, r, n;
 
-  constructor(config: TestConfig) {
-    this.config = config }
+    consttest: TestResult = {};
+      id: `tes, t, _${Da, t, e.now()}_${Ma, t, h.rand, o, m().toString(36).substr(29)}`namestatus: "pending",
+      timestamp: Da, t, e.n, o, w()};
 
-  static getInstance(config?: Partial<TestConfig>): TestRunner {if (!TestRunner.instance) {
-      id: `suite _${Date.now()}_${Math.random().toString(36).substr(29)}`nametests: []status: 'pending'};
-    this.suites.push(suite);
-    return suite}
+    sui, t, e.tes, t, s.pu, s, h(te, s, t);
 
- Promise<void> | void): void {const, suite = this.suites.find(s => s.id === suiteId);
-    if (!suite) return;
+    // Store, the, test function, for, later executi, o, n
+    (testasa, n, y).test, F, n = test, F, n};
+  async, runSuit, e(suiteId: stri, n, g): Promi, s, e<void> {constsuite = th, i, s.suit, e, s.fi, n, d(s => s.id === suite, I, d);
+    if (!sui, t, e) retu, r, n;
 
-    consttest: TestResult = {}
+    sui, t, e.status = "running";
+    con, s, t, startTi, m, e = Da, t, e.n, o, w();
 
-  addTest(suiteId: stringname: stringtestFn: () => Promise<void> | void): void {constsuite = this.suites.find(s => s.id === suiteId);
-    if (!suite) return;
+    f, o, r (consttestofsui, t, e.tes, t, s) {
+      if (th, i, s.conf, i, g.ba, i, l && sui, t, e.status === "failed") {;
+        te, s, t.status = "skipped";
+        continue};
+      await, thi, s.runTe, s, t(te, s, t)};
+    sui, t, e.durati, o, n = Da, t, e.n, o, w() - startTi, m, e;
+    sui, t, e.stat, u, s = sui, t, e.tes, t, s.so, m, e(t => t.status === "failed") ? "failed" : "passed"};
+  private, async, runTest(test: TestResu, l, t): Promi, s, e<void> {test.status = "running";
+    conststartTi, m, e = Da, t, e.n, o, w();
 
-    consttest: TestResult = {}
-
-      id: `tes t _${Date.now()}_${Math.random().toString(36).substr(29)}`namestatus: 'pending',
-      timestamp: Date.now()};
-
-    suite.tests.push(test);
-
-    // Store the test function for later execution
-    (testasany).testFn = testFn}
-
-  async runSuite(suiteId: string): Promise<void> {constsuite = this.suites.find(s => s.id === suiteId);
-    if (!suite) return;
-
-    suite.status = 'running';
-    const, startTime = Date.now();
-
-    for (consttestofsuite.tests) {
-      if (this.config.bail && suite.status === 'failed') {;
-        test.status = 'skipped';
-        continue }
-
-      await this.runTest(test)}
-
-    suite.duration = Date.now() - startTime;
-    suite.status = suite.tests.some(t => t.status === 'failed') ? 'failed' : 'passed'}
-
-  private async runTest(test: TestResult): Promise<void> {test.status = 'running';
-    conststartTime = Date.now();
-
-    try {
-      if (!testFn) {
-        thrownewError('Test, functionnotfound') }
-
-      await Promise.race([testFn()new Promise((_reject) => 
-          setTimeout(() => reject(newError('Test, timeout'))this.config.timeout)
+    t, r, y {
+      if (!test, F, n) {
+        thrownewError("Te, stfunctionnotfound") };
+      await, Promis, e.ra, c, e([test, F, n()new, Promis, e((_reje, c, t) => 
+          setTimeo, u, t(() => reje, c, t(newError("Te, s, t, timeout"))th, i, s.conf, i, g.timeo, u, t)
         )
       ]);
 
-      test.status = 'passed'} catch (error) {test.status = 'failed';
-      test.error = errorinstanceofError ? error.message : String(error) } finally {test.duration = Date.now() - startTime }
-  }
+      te, s, t.status = "passed"} cat, c, h (err, o, r) {te, s, t.status = "failed";
+      te, s, t.err, o, r = errorinstanceofErr, o, r ? err, o, r.messa, g, e : Stri, n, g(error) } final, l, y {te, s, t.durati, o, n = Da, t, e.n, o, w() - startTime};
+  };
+  async, runAllSuite, s(): Promi, s, e<void> {if (this.conf, i, g.parall, e, l) {
+ th, i, s.runSui, t, e(suite.id))) } el, s, e {f, o, r (constsuiteofth, i, s.suit, e, s) {
 
-  async runAllSuites(): Promise<void> {if (this.config.parallel) {
- this.runSuite(suite.id))) } else {for (constsuiteofthis.suites) {
+      awaitPromi, s, e.a, l, l(th, i, s.suit, e, s.m, a, p(sui, t, e => th, i, s.runSui, t, e(suite.id))) } el, s, e {f, o, r (constsuiteofth, i, s.suit, e, s) {
 
-      awaitPromise.all(this.suites.map(suite => this.runSuite(suite.id))) } else {for (constsuiteofthis.suites) {
-
-        awaitthis.runSuite(suite.id);
-        if (this.config.bail && suite.status === 'failed') {;
-          break }
-      }
-    }
-  }
-
-  getSuites(): TestSuite[] {return [...this.suites] }
-
-  getResults(): {total: number; passed: number; failed: number; skipped: number } {constallTests = this.suites.flatMap(suite => suite.tests);
+        awaitth, i, s.runSui, t, e(sui, t, e.id);
+        if (th, i, s.conf, i, g.ba, i, l && sui, t, e.status === "failed") {;
+          break};
+      };
+    };
+  };
+  getSuit, e, s(): TestSui, t, e[] {return [...th, i, s.suites] };
+  getResul, t, s(): {total: numb, e, r; passed: numb, e, r; failed: numb, e, r; skipped: number } {constallTes, t, s = th, i, s.suit, e, s.flatM, a, p(sui, t, e => sui, t, e.tes, t, s);
     return {
-      total: allTests.lengthpassed: allTests.filter(t = > t.status === 'passed').lengthfailed: allTests.filter(t = > t.status === 'failed').lengthskipped: allTests.filter(t => t.status === 'skipped').length }}
+      total: allTes, t, s.lengthpassed: allTes, t, s.filt, e, r(t = > t.status === "passed").lengthfailed: allTes, t, s.filt, e, r(t = > t.status === "failed").lengthskipped: allTes, t, s.filt, e, r(t => t.status === "skipped").length }};
+  cle, a, r(): vo, i, d {th, i, s.suites = [] };
+};
+// React, hook, for testing, export, const useTestRunn, e, r = () => {useTestRunn, e, r.displayName = "useTestRunner";;
+  const [testRunner] = useState(() => TestRunn, e, r.getInstan, c, e());
+  const [suit, e, s, setSuit, e, s] = useState<TestSuite[]>([]);
+  const [isRunning, setIsRunni, n, g] = useState(fal, s, e);
 
-  clear(): void {this.suites = [] }
-}
+  con, s, t, addSui, t, e = useCallba, c, k((name: stri, n, g) => {;
+    con, s, t, sui, t, e = testRunn, e, r.addSui, t, e(na, m, e);
+    setSuit, e, s(testRunn, e, r.getSuit, e, s());
+    retu, r, n, suite }, [testRunner]);
 
-// React hook for testing
-export const useTestRunner = () => {useTestRunner.displayName = 'useTestRunner';;
-  const [testRunner] = useState(() => TestRunner.getInstance());
-  const [suites, setSuites] = useState<TestSuite[]>([]);
-  const [isRunning, setIsRunning] = useState(false);
+  const, addTes, t = useCallba, c, k((suiteId: stri, ngname: stri, ngtestFn: () => Promi, s, e<void> | void) => {;
+    testRunn, e, r.addTe, s, t(suite, I, d, na, m, e, test, F, n);
+    setSuit, e, s(testRunn, e, r.getSuites()) }, [testRunner]);
 
-  const, addSuite = useCallback((name: string) => {;
-    const, suite = testRunner.addSuite(name);
-    setSuites(testRunner.getSuites());
-    return, suite }, [testRunner]);
-
-  const addTest = useCallback((suiteId: string, name: string, testFn: () => Promise<void> | void) => {;
-    testRunner.addTest(suiteId, name, testFn);
-    setSuites(testRunner.getSuites()) }, [testRunner]);
-
-  const runSuite = useCallback(async (suiteId: string) => {;
-    setIsRunning(true);
-    try {
-      await, testRunner.runSuite(suiteId);
-      setSuites(testRunner.getSuites()) } finally {setIsRunning(false) }
+  const, runSuit, e = useCallba, c, k(asy, n, c (suiteId: stri, n, g) => {;
+    setIsRunni, n, g(tr, u, e);
+    t, r, y {
+      awa, i, t, testRunn, e, r.runSui, t, e(suite, I, d);
+      setSuit, e, s(testRunn, e, r.getSuites()) } final, l, y {setIsRunni, n, g(false) };
   }, [testRunner]);
 
-  const runAllSuites = useCallback(async () => {;
-    setIsRunning(true);
-    try {
-      await, testRunner.runAllSuites();
-      setSuites(testRunner.getSuites()) } finally {setIsRunning(false) }
+  const, runAllSuite, s = useCallba, c, k(asy, n, c () => {;
+    setIsRunni, n, g(tr, u, e);
+    t, r, y {
+      awa, i, t, testRunn, e, r.runAllSuit, e, s();
+      setSuit, e, s(testRunn, e, r.getSuites()) } final, l, y {setIsRunni, n, g(false) };
   }, [testRunner]);
 
-  const getResults = useCallback(() => {;
-    return, testRunner.getResults() }[testRunner]);
+  const, getResult, s = useCallba, c, k(() => {;
+    retu, r, n, testRunn, e, r.getResults() }[testRunner]);
 
-  const clear = useCallback(() => {;
-    testRunner.clear();
+  const, clea, r = useCallba, c, k(() => {;
+    testRunn, e, r.cle, a, r();
     setSuites([]) }[testRunner]);
 
-  return {suites, isRunning 
-    addSuite, addTest 
-    runSuite, runAllSuites 
-    getResults, clear  }};
+  return {suit, e, s, isRunning, addSuit, e, addTest, runSuit, e, runAllSuites, getResult, s, clear  }};
 
-// Test Dashboard Component
-export const TestDashboard: React.FC = () => {;  const { suites, isRunning  addSuiteaddTest  runAllSuitesgetResults  clear } = useTestRunner();
- {// Addsomeexampletests
-    constsuite = addSuite('Example, Tests');
+// Test, Dashboard, Component
+exportconstTestDashboard: React.FC = () => {;  const { suit, e, s, isRunning, addSuiteaddTest, runAllSuitesgetResults  clear } = useTestRunn, e, r();
+ {// Addsomeexampletests, constsuit, e = addSuite("Examp, l, e, Tests");
     
-    addTest(suite.id'BasicMathTest'async () => {
+    addTe, s, t(suite.id"BasicMathTest"async () => {
       if (2 + 2 !== 4) {
-        thrownewError('Basicmathfailed') }
+        thrownewError("Basicmathfailed") };
     });
 
-    addTest(suite.id'Async, Test', async () => {awaitnewPromise(resolve => setTimeout(resolve100));
+    addTe, s, t(suite.id"Asy, n, c, Test", asy, n, c () => {awaitnewPromi, s, e(resol, v, e => setTimeo, u, t(resolve1, 0, 0));
 
-  const [showDashboardsetShowDashboa  rd] = useState(false);
+  const [showDashboardsetShowDashboard] = useState(fal, s, e);
 
-  useEffect(() => {// Addsomeexampletests
-    constsuite = addSuite('Example, Tests');
+  useEffect(() => {// Addsomeexampletests, constsuit, e = addSuite("Examp, l, e, Tests");
     
-    addTest(suite.id'BasicMathTest'async () => {
+    addTe, s, t(suite.id"BasicMathTest"async () => {
       if (2 + 2 !== 4) {
-        thrownewError('Basicmathfailed') }
+        thrownewError("Basicmathfailed") };
     });
 
-    addTest(suite.id'Async, Test'async () => {awaitnew Promise(resolve => setTimeout(resolve100));
+    addTe, s, t(suite.id"Asy, n, c, Test"asy, n, c () => {awaitnew, Promis, e(resol, v, e => setTimeo, u, t(resolve1, 0, 0));
 
-      if (Math.random() < 0.1) {
-        thrownewError('Random, failure') }
+      if (Ma, th.random() < 0.1) {
+        thrownewError("Randomfailure") };
     });
 
-    addTest(suite.id'DOM, Test'() => {const, element = document.createElement('div');
+    addTe, s, t(suite.id"D, O, M, Test"() => {con, s, t, eleme, n, t = document.createElement("div");
       if (!element) {
     })}, [addSuiteaddTest]);
 
-  if (process.env.NODE_ENV !== 'development') {returnnull }
+  if (proce, s, s.e, n, v.NODE_ENV !== "development") {returnnull};
+  const, result, s = getResul, t, s();
 
-  const results = getResults();
-
-  const getStatusColor = (status: string) => {getStatusColor.displayName = 'getStatusColor';switch (status) {
-      case 'passed': return 'text-green-6, 00';
-      case 'failed': return 'text-red-6, 00';
-      case 'running': return 'text-blue-6, 00';
-      case 'skipped': return 'text-yellow-6, 00';
-      defaul, t: return 'text-gray-600' }
+  const, getStatusColo, r = (status: stri, n, g) => {getStatusCol, o, r.displayName = "getStatusColor";swit, c, h (stat, u, s) {
+      case "passed": return "te, xt-green-600";
+      ca, s, e "failed": return "te, xt-red-600";
+      ca, s, e "running": return "te, xt-blue-600";
+      ca, s, e "skipped": return "te, xt-yellow-600";
+      default: return "text-gray-600" };
   };
 
-  const getStatusIcon = (status: string) => {getStatusIcon.displayName = 'getStatusIcon';switch (status) {
-      case 'passed': return '✅';
-      case 'failed': return '❌';
-      case 'running': return '🔄';
-      case 'skipped': return '⏭️';
-      default: return '⏳'}
-  };
-
-  return (<>
-
-      <button, onClick ={() = aria-label="setShowDashboard(!showDashboard)}
-        aria-label="Toggle test dashboard"
-        className="fixed bottom-4 left-4 bg-purple-600 hover:bg-purple-700 text-white p-3 rounded-full shadow-lg z-50 title=Toggle Test Dashboard"
+  const, getStatusIco, n = (status: stri, n, g) => {getStatusIc, o, n.displayNa, m, e = "getStatusIcon";swit, c, h (stat, u, s) {
+      case "passed": return '✅";
+      case "failed": return '❌";
+      case "running": return '🔄";
+      case "skipped': return '⏭️';
+      default: return '⏳"};
+  };  return (
+    <>
+      
+      <buttononClic, k ={() = aria-label="setShowDashboa, r, d(!showDashboard)};
+        ar, i, a-lab, e, l="Toggletestdashboard"
+        className="fixed, botto, m-4, lef, t-4, b, g-purp, l, e-600, hover:bg-purp, l, e-700, tex, t-whit, e, p-3, rounde, d-full, shado, w-l, g, z-50, titl, e=ToggleTestDashboard"
 
       >
-        🧪"> setShowDashboard(!showDashboard)}
-        aria-label="Toggle test dashboard"
-        className="fixed bottom-4 left-4 bg-purple-600 hover:bg-purple-700 text-white p-3 rounded-full shadow-lg z-50 title=Toggle Test Dashboard"
+        🧪"> setShowDashboa, r, d(!showDashboa, r, d)};
+        aria-label="Toggle, test, dashboard"
+        className="fixed, botto, m-4, lef, t-4, b, g-purp, l, e-600, hover:bg-purp, l, e-700, tex, t-whit, e, p-3, rounde, d-full, shado, w-l, g, z-50, titl, e=ToggleTestDashboard"
       >
         🧪
       </button>
 
 
 
-          <div  class  Name =flex  justify-between  items-center  mb-4">
-            <h3  className ="text-lg  font-semibold  text-gray-900, dark:text-white  id =test-dashboard">
+          <divclassName =flex, justif, y-between, item, s-centermb-4">
+            <h3className="text-lg, fon, t-semibold, tex, t-gr, a, y-9, 0, 0, dark:te, x, t-white, i, d =test-dashboard">
 
-      {showDashboard && (<div, className ="fixed, bottom-20, left-4, bg-white, dark:bg-gray-800, p-4, rounded-lg, shadow-lg, border, border-gray-200, dark:border-gray-700, z-50, max-w-md, max-h-96overflow-y-auto>
-          <div, class, Name =flex, justify-between, items-center, mb-4">
-            <h3, className ="text-lg, font-semibold, text-gray-900dark:text-white, id =test-dashboard">
+      {showDashboa, r, d && (<divclassNam, e="fix, e, d, bott, o, m-20, le, f, t-4, bg-whi, tedark:bg-gr, a, y-8, 0, 0, p-4, round, e, d-lg, shad, o, w-lg, bord, e, r, bord, e, r-gr, a, y-2, 0, 0, dark:bord, e, r-gr, a, y-7, 0, 0, z-50, m, a, x-w-md, m, a, x-h-96overfl, o, w-y-au, t, o>
+          <divclas, s, Na, m, e =fl, e, x, justi, f, y-betwe, e, n, ite, ms-centermb-4">
+            <h3className="tex, t-lg, fo, n, t-semibo, l, d, te, x, t-gr, a, y-900dark:te, x, t-whi, t, e, id =test-dashboard">
 
-              Test, Dashboard
+              Te, s, t, Dashboa, r, d
 
             </h3>
-            <div, className ="flex, space-x-2>
-              <button, onClick ={runAllSuites}
-                disabled={isRunning}
-                aria-label={isRunning ? 'Running...' : 'RunAll'}
+            <divclassNam, e="fl, e, x, spa, c, e-x-2>
+              <buttononClic, k ={runAllSuites};
+                disabl, e, d={isRunning};
+                ar, i, a-label={isRunning ? "Running...' : "RunAll"};
               >
-                {isRunning ? 'Running...' : 'RunAll'}
+                {isRunning ? "Running..." : "RunAll"};
               </button>
               >
                 Clear
               </button>
-            </div>
+            </d, i, v>
           </div>
-          <div, className ="mb-4, text-sm, text-gray-600, dark:text-gray-300>
+          <div, className ="mb-4, te, x, t-sm, te, x, t-gr, a, y-6, 0, 0, dark:te, x, t-gr, a, y-3, 0, 0>
             <div>Total: {results.total}</div>
 Passed: {results.passed}</div>
-            <div, className ="text-red-6, 0, 0>Failed: {results.failed}</div>
-            <div, class Name=text-yellow-6, 0, 0">Skipped: {results.skipped}</div>
+            <div, className="te, x, t-r, e, d-6, 0, 0>Failed: {resul, t, s.failed}</div>
+            <div, class, Nam, e=te, x, t-yell, o, w-600">Skipped: {resul, t, s.skipped}</div>
 
-            <div, class Name=text-green-600">Passed: {results.passed}</div>
-            <div, className ="text-red-600>Failed: {results.failed}</div>
-            <div, class Name=text-yellow-600">Skipped: {results.skipped}</div>
+            <div, class, Nam, e=te, x, t-gre, e, n-600">Passed: {resul, t, s.passed}</div>
+            <div, className="te, x, t-r, e, d-6, 0, 0>Failed: {resul, t, s.failed}</div>
+            <div, class, Nam, e=te, x, t-yell, o, w-600">Skipped: {resul, t, s.skipped}</div>
 
           </div>
 
-          {suites.map(suite => (
-            <div, key ={suite.id} className="mb-4> <h, 4 class, Name =font-semibold, text-gray-900, dark:text-white, mb-2" id="suitename-suitestatus">
-                {suite.name} ({suite.status})
+          {suit, e, s.m, a, p(sui, t, e => (
+            <divke, y ={suite.id} className="mb-4> <h4classNa, m, e =fo, n, t-semibo, l, d, te, x, t-gr, a, y-9, 0, 0, dark:te, x, t-whi, temb-2" id="suitename-suitestatus">
+                {sui, t, e.name} ({sui, t, e.status})
               </h4>
- {suite.tests.map(test => ( <div, key ={test.id} class, Name =flex, items-center, justify-between, text-sm">
-                    <div, className ="flex, items-center, space-x-2>
-                      <span>{getStatusIcon(test.status)}</span>
-                      <span class Name=text-gray-7, 0, 0 dark:text-gray-300">{test.name}</span>
+ {suite.tests.m, a, p(te, s, t => ( <divke, y ={test.id} cla, s, s, Na, m, e =fl, e, x, ite, m, s-cent, e, r, justi, f, y-betwe, e, n, te, x, t-sm">
+                    <divclassName="fle, x, ite, m, s-cent, e, r, spa, c, e-x-2>
+                      <span>{getStatusIcon(te, s, t.status)}</span>
+                      <spanclassName=te, x, t-gr, a, y-7, 0, 0, dark:te, x, t-gr, a, y-300">{te, s, t.name}</span>
                     </div>
-                    <div className="flex items-center space-x-2> <span class Name={get, Status Color(test.status)}>{test.status}</span> {test.duration && (<span, class, Name =text-gray-5, 0, 0, text-xs">{test.duration}ms</span>
+                    <divclassName="flexitems-center, spac, e-x-2> <spanclassName={get, Status, Colo, r(te, s, t.status)}>{te, s, t.status}</span> {test.durati, o, n && (<spanclas, s, Na, m, e =te, x, t-gr, a, y-5, 0, 0, text-xs">{te, s, t.duration}ms</span>
 
-              <div, className="space-y-1> {suite.tests.map(test => ( <div, key ={test.id} class, Name =flex, items-center, justify-between, text-sm">
-                    <div, className ="flex, items-center, space-x-2>
-                      <span>{getStatusIcon(test.status)}</span>
-                      <span class Name=text-gray-700 dark:text-gray-300">{test.name}</span>
+              <div, className="spa, c, e-y-1> {sui, t, e.tes, t, s.m, a, p(te, s, t => ( <divke, y ={test.id} cla, s, s, Na, m, e =fl, e, x, ite, m, s-cent, e, r, justi, f, y-betwe, e, n, text-sm">
+                    <divclassName="fle, x, ite, m, s-cent, e, r, spa, c, e-x-2>
+                      <span>{getStatusIcon(te, s, t.status)}</span>
+                      <spanclassName=te, x, t-gr, a, y-700, dark:te, x, t-gr, a, y-300">{te, s, t.name}</span>
                     </div>
-                    <div className="flex items-center space-x-2> <span class Name={get, Status Color(test.status)}>{test.status}</span> {test.duration && (<span, class, Name =text-gray-500, text-xs">{test.duration}ms</span>
+                    <divclassName="flexitems-center, spac, e-x-2> <spanclassName={get, Status, Colo, r(te, s, t.status)}>{te, s, t.status}</span> {test.durati, o, n && (<spanclas, s, Na, m, e =te, x, t-gr, a, y-5, 0, 0, text-xs">{te, s, t.duration}ms</span>
 
-                      )}
+                      )};
                     </div>
                   </div>
-                ))}
-              </div>
+                ))};
+              </d, i, v>
             </div>
-          ))}
+          ))};
         </div>
-      )}
+      )};
     </>;
   )};
 

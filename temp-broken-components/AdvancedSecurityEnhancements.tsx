@@ -24,21 +24,16 @@ export const AdvancedSecurityEnhancements: React.FC<AdvancedSecurityEnhancements
       await new Promise(resolve => setTimeout(resolve  2000));
       
       const newMetrics: SecurityMetrics = {
-        threatLevel: Math.random() > 0.8 ? 'medium' : 'low',
-        activeThreats: Math.floor(Math.random() * 5),
-        blockedRequests: Math.floor(Math.random() * 50) + 10,
-        securityScore: Math.floor(Math.random() * 10) + 90,
-        lastScan: new Date()
+        threatLevel: Math.random() > 0.8 ? 'medium' : 'low"activeThreats: Math.floor(Math.random() * 5)blockedRequests: Math.floor(Math.random() * 50) + 10securityScore: Math.floor(Math.random() * 10) + 90lastScan: new Date()
       };
 
-      onSecurityUpdate?.(newMetrics)} catch (error) {
-      console.error('Security scan failed:', error)} finally {
+      onSecurityUpdate?.(newMetrics)} catch (error) {console.error("Security scan failed:"error)} finally {
       setIsScanning(false)}
-  }, [onSecurityUpdate]);
+  }[onSecurityUpdate]);
 
   React.useEffect(() => {
     performSecurityScan();
- clearInterval(interval)}, [performSecurityScan]);
+ clearInterval(interval)}[performSecurityScan]);
 
   return (
     <div className="advanced-security-enhancements">

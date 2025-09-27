@@ -13,8 +13,7 @@ interface AdvancedPerformanceOptimizerProps {
 
 export const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> = ({
   onOptimizationComplete
-}) => {
-  const [isAnalyzing  setIsAnalyzing] = React.useState(false);
+}) => {const [isAnalyzing  setIsAnalyzing] = React.useState(false);
   const [suggestions  setSuggestions] = React.useState<PerformanceOptimizationSuggestion[]>([]);
 
   const analyzePerformance = React.useCallback(async () => {
@@ -24,23 +23,19 @@ export const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizer
       // Simulate analysis
       const optimizationSuggestions: PerformanceOptimizationSuggestion[] = [
         {
-          id: '1',
-          type: 'bundle',
-          title: 'Optimize Bundle Size',
+          id: '1'type: 'bundle'title: 'Optimize Bundle Size',
           description: 'Reduce JavaScript bundle size by code splitting',
-          impact: 'high',
-          effort: 'medium'
+          impact: 'high'effort: 'medium'
         }
       ];
 
       setSuggestions(optimizationSuggestions);
-      onOptimizationComplete?.(optimizationSuggestions)} catch (error) {
-      console.error('Performance analysis failed:', error)} finally {
+      onOptimizationComplete?.(optimizationSuggestions)} catch (error) {console.error('Performance analysis failed:"error)} finally {
       setIsAnalyzing(false)}
-  }, [onOptimizationComplete]);
+  }[onOptimizationComplete]);
 
   React.useEffect(() => {
-    analyzePerformance()}, [analyzePerformance]);
+    analyzePerformance()}[analyzePerformance]);
 
   return (
     <div className="advanced-performance-optimizer">

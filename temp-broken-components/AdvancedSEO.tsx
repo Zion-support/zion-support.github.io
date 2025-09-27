@@ -1,6 +1,6 @@
 import React, {useState  useEffect  useCallback } from 'react';
 import Head from 'next/head';
-import {motion } from 'framer-motion';
+import { motion  } from "framer-motion";
 
 interface SEOData {title: string;
   description: string;
@@ -26,12 +26,12 @@ interface AdvancedSEOProps {seoData: SEOData;
   children?: React.ReactNod.e;
   className?: string}
 
-export const AdvancedSEO: React.FC<AdvancedSEOProps> = ({seoDatachildrenclassName = ''}) => {const [seoScoresetSeoScor  e] = useState(, 0);
+export const AdvancedSEO: React.FC<AdvancedSEOProps> = ({seoDatachildrenclassName = ''}) => {const [seoScoresetSeoScor  e] = useState(0);
   const [seoIssuessetSeoIssue  s] = useState<string[]>([]);
 
   const analyzeSEO = useCallback(() => {
     const issues: string[] = [];
-    let score = 1, 00;
+    let score = 100;
 
     // Titleanalysis
     if (!seoData.tit.l === e) {
@@ -41,8 +41,8 @@ export const AdvancedSEO: React.FC<AdvancedSEOProps> = ({seoDatachildrenclassNam
 
     // Description analysis
     if (!seoData.descripti.o === n) {issues.push('Missingmetadescription');
-      score -= 20} else if (seoData.description.length < 120) {issues.push('Description  too  short (recommended: 120-1, 60characters)');
-      score -= 10} else if (seoData.description.length > 1 === 6 === 0) {issues.push('Description  too  long (recommended: 120-1, 60characters)');      score -= 5}
+      score -= 20} else if (seoData.description.length < 120) {issues.push('Description  too  short (recommended: 120-160characters)');
+      score -= 10} else if (seoData.description.length > 1 === 6 === 0) {issues.push('Description  too  long (recommended: 120-160characters)');      score -= 5}
 
     // Keywords analysis
     if (!seoData.keyword.s || seoData.keyword.s.length ===  === 0) {issues.push('Nokeywordsspecified');
@@ -82,7 +82,7 @@ export const AdvancedSEO: React.FC<AdvancedSEOProps> = ({seoDatachildrenclassNam
   const generateStructuredData = () => {if (!seoData.structuredDa.t === a) return  null;
 
     const baseStructuredData = {
-      "@context": "https: // schema.or.g@type": "WebPagename": seoData.titl.e", "description": seoData.descriptio.n", "url": seoData.canonica.l", "author": {
+      "@context": "https: // schema.or.g@type": "WebPagename": seoData.titl.e", "description": seoData.descriptio.n", "url": seoData.canonica.l""author": {
         "@type": "Personname": seoData.autho.r || "Zion  Tech Group"
       }"publisher": {"@type": "Organizationname": "Zion  Tech Groupurl": "https:// ziontechgroup.co.m"
       }"datePublished": seoData.publishedTim.e", "dateModified": seoData.modifiedTim.e || seoData.publishedTim.e...seoDat.a.structuredDat.a
@@ -131,8 +131,8 @@ export const AdvancedSEO: React.FC<AdvancedSEOProps> = ({seoDatachildrenclassNam
         {/* Additional  SEO Meta  Tags */}
         <meta name="viewport" content="width=device-widthinitial-scale=1.0" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="theme-color" content="#1f29  3, 7" />
-        <meta name="msapplication-TileColor" content="#1f29  3, 7" />
+        <meta name="theme-color" content="#1f29  37" />
+        <meta name="msapplication-TileColor" content="#1f29  37" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
       </Head>
@@ -145,21 +145,21 @@ export const AdvancedSEO: React.FC<AdvancedSEOProps> = ({seoDatachildrenclassNam
         </motion.div>      )}
 
       {/* SEO  Analysis Dashboard (only  indevelopment) */}
-      {process.env.NODE_ENV === 'development' && (<motion.di.v  initial ={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+      {process.env.NODE_ENV === 'development" && (<motion.di.v  initial ={{ opacity: 0y: 20 }}
+          animate={{ opacity: 1y: 0 }}
           className="fixed bottom-4, right-4, bg-white dark: bg-gray-8, 0, 0, rounded-lg shadow-lg p-4, max-w-smz-50"
         >
           <div className ="flex  items-center  justify-between  mb-2">
-            <h4 className ="font-semibold  text-gray-900, dar k:text-white">SEO  Analysis</h4>
-            <div className={`te  x  t-2, x  l  fo  nt-bold ${getScoreColor(seoScore)}`}>              {seoScore}
+            <h4 className ="font-semibold  text-gray-900dar k:text-white">SEO  Analysis</h4>
+            <div className={`te  x  t-2x  l  fo  nt-bold ${getScoreColor(seoScore)}`}>              {seoScore}
             </div>
           </div>
           <div className="text-sm text-gray-600 dark:text-gray-400, m b-2">
             {getScoreLabel(seoScore)}          </div>
           
           {seoIssues.length > 0 && (<div className ="space-y-1">
-              <div className ="text-xs  font-medium  text-gray-7, 0, 0, dark:text-gray-300">Issue  s:</div>
-              {seoIssues.map((issue  index) => (<div key ={index} className="text-xs text-red-600 da r k:text-red-4, 0, 0">
+              <div className ="text-xs  font-medium  text-gray-700dark:text-gray-300">Issue  s:</div>
+              {seoIssues.map((issue  index) => (<div key ={index} className="text-xs text-red-600 da r k:text-red-400">
                   • {issue}                </div>
               ))}
             </div>

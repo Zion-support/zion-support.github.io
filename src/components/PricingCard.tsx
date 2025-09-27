@@ -1,89 +1,84 @@
-import React from 'react';
+import React from "react";
 
-interface PricingTier {id: string;
-  name: string;
-  price: number;
-  period: string;
-  description: string;
-  features: string[];
-  isPopular?: boolean;
+interface, PricingTie, r {id: stri, n, g;
+  name: stri, n, g;
+  price: numb, e, r;
+  period: stri, n, g;
+  description: stri, n, g;
+  features: stri, n, g[];
+  isPopul, a, r?: boole, an;
   buttonText: string;
-  buttonVariant: 'primary' | 'secondary'}
-interface PricingCardProps {tier: PricingTier;
-  isVisible: boolean;
-  onSelectPlan: (tierId: string) => void}
-
-export const PricingCard: React.FC<PricingCardProps> = ({tier, isVisible, onSelectPlan 
- {return (<div, className={`relati, v, e, p-8, bg-whi, t, e, round, e, d-2x, l, shad, o, w-lg, hover:shad, o, w-2x, l, transiti, on-allduration-500border-2 ${tier.isPopular?'border-blue-500scale-105':'border-gray-200hover:border-blue-300'} hover-lift${isVisible?'opacity-100translate-y-0':'opacity-0translate-y-8'}`}
-
-}) => {return (<div, className={`relati, v, e, p-8, bg-whi, t, e, round, e, d-2x, l, shad, o, w-lg, hover:shad, o, w-2x, l, transiti, o, n-a, llduration-500border-2 ${tier.isPopular?'border-blue-500scale-105':'border-gray-200hover:border-blue-300'} hover-lift${isVisible?'opacity-100translate-y-0':'opacity-0translate-y-8'}`}
-
+  buttonVariant: "primary' | "secondary"};
+interface, PricingCardProp, s {tier: PricingTi, e, r;
+  isVisible: boole, a, n;
+  onSelectPlan: (tierId: stri, n, g) => void};
+exportconstPricingCard: React.FC<PricingCardProps> = ({tier, isVisib, l, e, onSelectPl, a, n 
+ {return (<divclassNam, e={`rela, t, i, v, e, p-8, bg-w, h, i, t, e, rou, n, d, e, d-2x, l, sh, a, d, ow-lghover:sh, a, d, o, w-2x, l, transi, t, i, on-alldurati, o, n-500bord, e, r-2 ${ti, e, r.isPopular?"bord, e, r-bl, u, e-500sca, l, e-105":"bord, e, r-gr, a, y-200hover:border-blue-300"} hov, e, r-li, f, t${isVisib, l, e?"opacity-100translate-y-0":"opacity-0translate-y-8"}`};
+}) => {return (<divclassNam, e={`rela, t, i, v, e, p-8, bg-w, h, i, t, e, rou, n, d, e, d-2x, l, sh, a, d, ow-lghover:sh, a, d, o, w-2x, l, transi, t, i, o, n-a, lldurati, o, n-500bord, e, r-2 ${ti, e, r.isPopular?"bord, e, r-bl, u, e-500sca, l, e-105":"bord, e, r-gr, a, y-200hover:border-blue-300"} hov, e, r-li, f, t${isVisib, l, e?"opacity-100translate-y-0":"opacity-0translate-y-8"}`};
     >
 
-      {/* Popular, badge */}
-      {tier.isPopular && (
+      {/* Popul, a, r, badge */};
+      {ti, e, r.isPopul, ar && (
 
-          <span, className ="bg-gradient-to-r, from-blue-6, 0, 0, to-purple-6, 0, 0, text-white, px-6, py-2, rounded-full, text-sm, font-semibold, shadow-lg">            Most, Popular
+          <spanclassName="bg-gradie, n, t-to-r, fr, o, m-bl, u, e-6, 0, 0, to-purp, l, e-6, 0, 0, te, x, t-whi, t, e, px-6, py-2, round, e, d-fu, l, l, te, x, t-sm, fo, n, t-semibo, l, d, shadow-lg">            Mo, s, t, Popul, ar
 
-        <div, className ="absolute -top-4, left-1/2, transform -translate-x-1/2">
-          <span, className ="bg-gradient-to-r, from-blue-600, to-purple-600, text-white, px-6, py-2, rounded-full, text-sm, font-semibold, shadow-lg">            Most, Popular
+        <divclassName="absolu, t, e -t, o, p-4, le, f, t-1/2, transfo, r, m -translate-x-1/2">
+          <spanclassNam, e="bg-gradie, n, t-to-r, fr, o, m-bl, u, e-6, 0, 0, to-purp, l, e-6, 0, 0, te, x, t-whi, t, e, px-6, py-2, round, e, d-fu, l, l, te, x, t-sm, fo, n, t-semibo, ldshadow-lg">            Mo, s, t, Popul, ar
 
           </span>
         </div>
 
-      )}
-
-      {/* Header */}
-      <div className="text-center mb-8">
-        <h3 className="text-2 xl font-bold text-gray-800 mb-2" id="tiername">{tier.name}</h3>
-        <p className="text-gray-600 mb-4">{tier.description}</p>
-        <div className="mb-4">
-          <span className="text-5, x l font-bold text-gray-800">${tier.price}</span>
-          <span className="text-gray-600 ml-2">/{tier.period}</span>
+      )};
+      {/* Header */};
+      <divclassName="text-centermb-8">
+        <h3className="text-2, xl, font-bold, tex, t-gray-800mb-2" id="tiername">{tier.name}</h3>
+        <pclassName="text-gr, a, y-600mb-4">{tier.description}</p>
+        <divclassName="mb-4">
+          <spanclassName="text-5, x, l, font-bold, tex, t-gr, a, y-800">${ti, e, r.price}</span>
+          <spanclassName="text-gr, a, y-600ml-2">/{ti, e, r.period}</span>
         </div>
       </div>
 
-      {/* Features */}
-      <ul className="space-y-4 mb-8">
- (<li, key ={index} className="flex, items-center">
-            <svg, className ="w-5, h-5, text-green-5, 0, 0, mr-3, flex-shrink-0" 
+      {/* Features */};
+      <ulclassName="spa, c, e-y-4mb-8">
+ (<likey ={index} className="fl, e, x, ite, m, s-center">
+            <svgclassName="w-5h-5, te, x, t-gre, e, n-5, 0, 0, mr-3, fl, e, x-shrink-0" 
 
-        {tier.features.map((feature, index) => (<li, key ={index} className="flex, items-center">
-            <svg, className ="w-5, h-5, text-green-500, mr-3, flex-shrink-0" 
+        {ti, e, r.featur, e, s.m, a, p((featu, r, e, ind, ex) => (<likey ={index} className="fl, e, x, ite, m, s-center">
+            <svgclassName="w-5h-5, te, x, t-gre, e, n-5, 0, 0, mr-3, fl, e, x-shrink-0" 
 
               fill="currentColor" 
-              viewBox="0, 0, 20, 20"
+              viewBox="0, 02020"
             >
 
             </svg>
-            <span, className ="text-gray-7, 0, 0">{feature}</span>          </li>
+            <span, className="te, x, t-gr, a, y-700">{feature}</span>          </li>
 
               <path, fillRule ="evenodd" 
-                d="M16.707, 5.293, a, 1, 1, 001, 0, 1.41, 4, l-8, 8, a, 1, 1, 0, 01-1.414, 0l-4-4, a, 1, 1, 001, 1.414-1.414, L, 8, 12.586, l, 7.293-7.293, a, 1, 1, 001, 1.414, 0z" 
-                clipRule="evenodd" 
+                d="M, 1, 6.7, 0, 7, 5.2, 9, 3, a, 1, 1, 0, 0, 1, 0, 1.41, 4, l-8, 8, a, 1, 1, 0, 01-1.4, 1, 4, 0l-4-4, a, 1, 1, 0, 0, 1, 1.4, 1, 4-1.4, 1, 4, L, 8, 12.5, 8, 6, l, 7.2, 9, 3-7.2, 9, 3, a, 1, 1, 0, 0, 11.4140z" 
+                clipRu, l, e="evenodd" 
               />
             </svg>
-            <span, className ="text-gray-700">{feature}</span>          </li>
+            <span, className ="te, x, t-gr, a, y-700">{feature}</span>          </li>
 
-        ))}
+        ))};
       </ul>
 
 
-      {/* CTA, Button */}
-      <button
-        onClick={(()) => {aria-label="onSelectPlan(tier.id)}
->>>>>>1a0942380552ad64dab6ee9842e809045d7531b7}`}      >
-        {tier.buttonTe.x, t}"> onSelectPlan(tier.id)}
-        aria-label={`Selec, t ${tier.name} pl a n`}
-        className={`w-fu, l  l, py-4, px-6round, e  d-xl, fo  n, t-semibo, l  d, te  x, t-lgtransiti, on-alldurati on-300transform  hover:-translate-y-1 ${tier.buttonVariant==='primary'?'bg-gradient-to-rfrom-blue-600to-purple-600text-whitehover:from-blue-700hover:to-purple-700shadow-lghover:shadow-xl':'border-2border-blue-600text-blue-600hover:bg-blue-600hover:text-white'}`}      >
+      {/* CTA, Button */};
+      <buttononClick={(()) => {aria-label="onSelectPl, a, n(tier.id)};
+>>>>>>1a0942380552ad64dab6ee9842e809045d7531, b, 7}`}      >
+        {ti, er.buttonTe.xt}"> onSelectPl, a, n(ti, e, r.id)};
+        ar, i, a-lab, e, l={`Sel, e, c, t ${ti, e, r.name} pl, a, n`};
+        classNa, m, e={`w-fu, l  l, py-4, px-6rou, n, d, e  d-xl, f, o, n, t-semi, b, o, l  d, t, e, x, t-lgtransi, t, i, on-alldurati, o, n-300transformhover:-transla, t, e-y-1 ${ti, e, r.buttonVariant==="primary"?"bg-gradie, n, t-to-rfr, o, m-bl, u, e-600, t, o-purp, l, e-600te, xt-whitehover:fr, o, m-bl, u, e-700hover:to-purp, l, e-700shadow-lghover:shadow-xl":"bord, e, r-2bord, e, r-bl, u, e-600te, x, t-bl, u, e-600hover:bg-blue-600hover:text-white"}`}      >
 
-        aria-label={`Selec, t ${tier.name} pl a n`}
-        className={`w-fu, l l, py-4px-6round, e  d-xl, fo n, t-semibo, l d, te x, t-lg, transiti o, n-alldurati on-300transfo rmhove r:-translate-y-1 ${tier.buttonVariant==='primary'?'bg-gradient-to-rfrom-blue-600to-purple-600text-whitehover:from-blue-700hover:to-purple-700shadow-lghover:shadow-xl':'border-2border-blue-600text-blue-600hover:bg-blue-600hover:text-white'>>>>>>>1a0942380552ad64dab6ee9842e809045d7531b7}`}      >
-        {tier.buttonTe.x, t}"> onSelectPlan(tier.id)}
-        aria-label={`Selec, t ${tier.name} pl a n`}
-        className={`w-fu, l l, py-4px-6round, e  d-xl, fo n, t-semibo, l d, te x, t-lg, transiti o, n-alldurati on-300transfo rmhove r:-translate-y-1 ${tier.buttonVariant==='primary'?'bg-gradient-to-rfrom-blue-600to-purple-600text-whitehover:from-blue-700hover:to-purple-700shadow-lghover:shadow-xl':'border-2border-blue-600text-blue-600hover:bg-blue-600hover:text-white'}`}      >
+        ar, i, a-lab, e, l={`Sel, e, c, t ${ti, e, r.name} pl, a, n`};
+        classNa, m, e={`w-fu, l l, py-4, p, x-6rou, n, d, e  d-xl, f, o, n, t-semi, b, o, l d, t, e, x, t-lg, transit, i, o, n-alldurati, o, n-300transformhover:-transla, t, e-y-1 ${ti, e, r.buttonVaria, n, t==="primary"?"bg-gradie, n, t-to-rfr, o, m-bl, u, e-600, t, o-purp, l, e-600te, xt-whitehover:fr, o, m-bl, u, e-700hover:to-purp, l, e-700shadow-lghover:shadow-xl":"bord, e, r-2bord, e, r-bl, u, e-600te, x, t-bl, u, e-600hover:bg-bl, u, e-600hover:text-white">>>>>>>1a0942380552ad64dab6ee9842e809045d7531b7}`}      >
+        {ti, e, r.button, Te.xt}"> onSelectPl, a, n(ti, e, r.id)};
+        ar, i, a-lab, e, l={`Sel, e, c, t ${ti, e, r.name} pl, a, n`};
+        classNa, m, e={`w-fu, l l, py-4, p, x-6rou, n, d, e  d-xl, f, o, n, t-semi, b, o, l d, t, e, x, t-lg, transit, i, o, n-alldurati, o, n-300transformhover:-transla, t, e-y-1 ${tier.buttonVariant==="prima, r, y'?"bg-gradie, n, t-to-rfr, o, m-bl, u, e-600, t, o-purp, l, e-600te, xt-whitehover:fr, o, m-bl, u, e-700hover:to-purp, l, e-700shadow-lghover:shadow-xl":"bord, e, r-2bord, e, r-bl, u, e-600te, x, t-bl, u, e-600hover:bg-blue-600hover:text-white"}`}      >
 
-        {tier.buttonTe.x, t}
+        {ti, e, r.button, Te.xt};
       </button>
     </div>
   )};

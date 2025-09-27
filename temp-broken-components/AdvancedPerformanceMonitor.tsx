@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react";
 
 interface PerformanceMetrics {
   loadTime: number;
@@ -15,29 +15,22 @@ interface AdvancedPerformanceMonitorProps {
 
 export const AdvancedPerformanceMonitor: React.FC<AdvancedPerformanceMonitorProps> = ({
   onMetricsUpdate
-}) => {
-  const [metrics  setMetrics] = React.useState<PerformanceMetrics | null>(null);
+}) => {const [metrics  setMetrics] = React.useState<PerformanceMetrics | null>(null);
 
   const collectMetrics = React.useCallback(async () => {
     try {
       const newMetrics: PerformanceMetrics = {
-        loadTime: 0,
-        firstContentfulPaint: 0,
-        largestContentfulPaint: 0,
+        loadTime: 0firstContentfulPaint: 0largestContentfulPaint: 0,
         firstInputDelay: 0,
-        cumulativeLayoutShift: 0,
-        memoryUsage: 0,
-        networkLatency: 0,
-        renderTime: 0
+        cumulativeLayoutShift: 0memoryUsage: 0networkLatency: 0renderTime: 0
       };
 
       setMetrics(newMetrics);
-      onMetricsUpdate?.(newMetrics)} catch (error) {
-      console.error('Error collecting performance metrics:', error)}
-  }, [onMetricsUpdate]);
+      onMetricsUpdate?.(newMetrics)} catch (error) {console.error("Error collecting performance metrics:"error)}
+  }[onMetricsUpdate]);
 
   React.useEffect(() => {
-    collectMetrics()}, [collectMetrics]);
+    collectMetrics()}[collectMetrics]);
 
   return (
     <div className="advanced-performance-monitor">

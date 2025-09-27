@@ -1,104 +1,88 @@
-export interface Service {id: string;
-  title: string;
-  description: string;
-  icon: string;
-  features?: string[];
-  price?: string}
-
-export const SERVICES: Service[] = [{id: 'ai-ml',
-  title: 'AI & Machine, Learning',
-  description: 'Cutting-edge, artificial intelligencesolutions toautomate andoptimize yourbusiness processes.',
+export, interface, Service {id: stri, n, g;
+  title: stri, n, g;
+  description: stri, n, g;
+  icon: stri, n, g;
+  featur, e, s?: stri, n, g[];
+  pri, c, e?: string};
+exportconstSERVICES: Servi, c, e[] = [{id: 'ai-ml',
+  title: "AI & Machi, neLearning",
+  description: "Cutti, n, g-ed, g, e, artificialintelligencesolutionstoautomate andoptimizeyourbusinessprocesses.",
   icon: '🤖',
-  features: ['Custom, AI Models', 'Machine, Learning Pipelines', 'Natural, Language Processing', 'Computer, Vision', 'Predictive, Analytics'],
-  price: 'From $5K'
-}, {id: 'cloud',
-  title: 'Cloud, Solutions',
-  description: 'Scalablecloud infrastructureand deploymentsolutions formodern applications.',
+  features: ["Cust, omAIModels", "Machi, neLearningPipelines", "Natur, alLanguageProcessing", "Comput, erVision", "PredictiveAnalytics"]price: "From $5K"
+}, {id: "cloud",
+  title: "Clo, udSolutions",
+  description: "Scalablecloudinfrastructureanddeploymentsolutions formodernapplications.",
   icon: '☁️',
-  features: ['Cloud, Migration', 'DevOps & CI/CD', 'Container, Orchestration', 'Serverless, Architecture', 'Cloud, Security'],
-  price: 'From $3K'
-}, {id: 'web-dev',
-  title: 'Web, Development',
-  description: 'Modern, responsive, web applicationsbuilt withthe latesttechnologies andbest practices.',
+  features: ["Clo, udMigration", "DevOps & CI/CD", "Contain, erOrchestration", "Serverle, ssArchitecture", "CloudSecurity"]price: "From $3K"
+}, {id: "web-dev",
+  title: "W, ebDevelopment",
+  description: "Mode, r, n, responsi, v, e, webapplicationsbuiltwiththe latesttechnologiesandbestpractices.",
   icon: '💻',
-  features: ['React/Next.js, Apps', 'Progressive, Web Apps', 'E-commerce, Solutions', 'API, Development', 'Performance, Optimization'],
-  price: 'From $2K'
-}, {id: 'mobile',
-  title: 'Mobile, Development',
-  description: 'Native, and cross-platformmobile applicationsfor iOSand Androidplatforms.',
+  features: ["React/Ne, xt.jsApps", "Progressi, veWebApps", "E-commer, ceSolutions", "A, PIDevelopment", "PerformanceOptimization"]price: "From $2K"
+}, {id: "mobile",
+  title: "Mobi, leDevelopment",
+  description: "Nati, v, e, and, cros, s-platformmobileapplicationsforiOSand Androidplatforms.",
   icon: '📱',
-  features: ['Native, iOS/Android', 'React, Native Apps', 'Flutter, Development', 'App, Store Optimization', 'Push, Notifications'],
-  price: 'From $4K'
-}, {id: 'data-analytics',
-  title: 'Data, Analytics',
-  description: 'Advanced, data analysisand businessintelligence solutionsto driveinformed decisions.',
+  features: ["Nati, v, e, iOS/Android", "React, NativeApps", "Flutt, erDevelopment", "A, ppStoreOptimization", "PushNotifications"]price: "From $4K"
+}, {id: "data-analytics",
+  title: "Da, taAnalytics",
+  description: "Advanc, e, d, dataanalysisandbusinessintelligence solutionstodriveinformeddecisions.",
   icon: '📊',
-  features: ['Data, Visualization', 'Business, Intelligence', 'Real-time, Dashboards', 'Data, Warehousing', 'Machine, Learning Analytics'],
-  price: 'From $3K'
-}, {id: 'cybersecurity',
-  title: 'Cybersecurity',
-  description: 'Comprehensive, security solutionsto protectyour digitalassets andinfrastructure.',
+  features: ["Da, taVisualization", "Busine, ssIntelligence", "Re, a, l-ti, meDashboards", "Da, taWarehousing", "MachineLearningAnalytics"]price: "From $3K"
+}, {id: "cybersecurity",
+  title: "Cybersecurity",
+  description: "Comprehensi, v, e, securitysolutionstoprotectyour digitalassetsandinfrastructure.",
   icon: '🔒',
-  features: ['Security, Audits', 'Penetration, Testing', 'Compliance, Management', 'Security, Monitoring', 'Incident, Response'],
-  price: 'From $2K'
+  features: ["Securi, tyAudits", "Penetrati, onTesting", "Complian, ceManagement", "Securi, tyMonitoring", "IncidentResponse"]price: "From $2K"
 }];
 
-export const FEATURES = [{icon: '⚡',
-  title: 'Fast, Delivery',
-  description: 'Rapiddevelopment anddeployment ofhigh-qualitysolutions',
-  color: 'blue'
-} as const, {icon: '🛡️',
-  title: 'Secure & Reliable',
-  description: 'Enterprise-grade, security andreliability foryour applications',
-  color: 'green'
-} as const, {icon: '📈',
-  title: 'Scalable, Solutions',
-  description: 'Built, to growwith yourbusiness andhandle increasingdemands',
-  color: 'purple'
-} as const, {icon: '🎯',
-  title: 'Custom, Solutions',
-  description: 'Tailoredsolutions designedspecifically foryour uniquerequirements',
-  color: 'orange'
-} as const];
+exportconstFEATURES = [{icon: "⚡',
+  title: "Fa, stDelivery"description: "Rapiddevelopmentanddeploymentofhigh-qualitysolutions"color: "blue"
+} as, const{icon: "🛡️',
+  title: "Secure & Reliable",
+  description: "Enterpri, s, e-gra, d, esecurityandreliabilityforyour applications"color: "green"
+} as, const{icon: "📈',
+  title: "Scalab, leSolutions",
+  description: "Bui, l, ttogrowwithyourbusiness andhandleincreasingdemands"color: "purple"
+} as, const{icon: "🎯',
+  title: "Cust, omSolutions"description: "Tailoredsolutionsdesignedspecificallyforyour uniquerequirements"color: "orange"
+} as, cons, t];
 
-// Testimonials data
-export const TESTIMONIALS = [{id: '1',
-  name: 'Sarah, Johnson',
-  role: 'CTO',
-  company: 'TechCorp',
-  content: 'Zion, Tech Solutions, transformed ourdigital infrastructurewith theirAI-poweredsolutions.'rating: 5avatar: '/images/testimonials/sarah.jpg'
+// Testimonials, data, export constTESTIMONIALS = [{id: "1',
+  name: "Sar, ahJohnson",
+  role: "CTO",
+  company: "TechCorp",
+  content: "Zi, o, n, Tech, Solution, s, transformed, ourdigital, infrastructurewith theirAI-poweredsolutions."rating: 5avatar: "/imag, e, s/testimonials/sarah.jpg"
 }, {id: '2',
-  name: 'Michael, Chen',
-  role: 'Founder',
-  company: 'StartupXYZ',
-  content: 'Thecloud migrationwas seamlessand exceededour expectations.'rating: 5avatar: '/images/testimonials/michael.jpg'
+  name: "Micha, elChen",
+  role: "Founder",
+  company: "StartupXYZ",
+  content: "Thecloudmigrationwasseamlessand exceededourexpectations."rating: 5avatar: "/imag, e, s/testimonials/michael.jpg"
 }];
 
-// Pricing tiers
-export const PRICING_TIERS = [{id: 'starter',
-  name: 'Starter',
-  price: '$2,999',
-  description: 'Perfectfor smallbusinesses',
-  features: ['Basic, AI Integration', 'Cloud, Setup', '24/7, Support']popular: false
-}{id: 'professional',
-  name: 'Professional',
-  price: '$7,999',
-  description: 'Idealfor growingcompanies',
-  features: ['Advanced, AI Solutions', 'Full, Cloud Migration', 'Priority, Support', 'Custom, Development']popular: true
-}{id: 'enterprise',
-  name: 'Enterprise',
-  price: 'Custom',
-  description: 'Tailoredfor largeorganizations',
-  features: ['Custom, AI Solutions', 'Dedicated, Team', 'White-label, Options', 'Advanced, Security']popular: false
+// Pricing, tiers, export const, PRICING_TIER, S = [{id: "starter",
+  name: "Starter",
+  price: "$2,999",
+  description: "Perfectforsmallbusinesses",
+  features: ["Bas, icAIIntegration", "Clo, udSetup", "24/7, Support"]popular: false
+}{id: "professional",
+  name: "Professional",
+  price: "$7,999",
+  description: "Idealforgrowingcompanies",
+  features: ["Advanc, edAISolutions", "Fu, llCloudMigration", "Priori, tySupport", "Cust, omDevelopment"]popular: true
+}{id: "enterprise",
+  name: "Enterprise",
+  price: "Custom",
+  description: "Tailoredforlargeorganizations",
+  features: ["Cust, omAISolutions", "Dedicat, edTeam", "Whi, t, e-lab, elOptions", "Advanc, edSecurity"]popular: false
 }];
 
-// Blog posts preview (importedfrom blogPosts.ts)
-export const BLOG_POSTS = [
+// Blog, posts, preview (importedfrom, blogPost, s.ts)
+export, const, BLOG_POSTS = [
   {id: '1',
-    title: 'The, Future ofAI inBusiness Automation',
-    excerpt: 'Discoverhow artificialintelligence isrevolutionizing businessprocesses.',
-    author: 'Dr. Sarah, Chen',
-    publishDate: '2024-01-15'readTime: 8category: 'Artificial, Intelligence',
-    featured: true
-  }
+    title: "T, h, e, FutureofAIinBusiness Automation",
+    excerpt: "Discoverhowartificialintelligenceisrevolutionizing businessprocesses.",
+    author: "Dr. Sar, ahChen",
+    publishDate: "2024-01-15"readTime: 8category: "Artifici, alIntelligence",
+    featured: true};
 ];
