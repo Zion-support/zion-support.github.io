@@ -217,9 +217,9 @@ const ComprehensiveMonitoringDashboard: React.FC = () => {
 
   const getTrendIcon = (trend: string) => {
     switch (trend) {
-      case 'up': return <TrendingUp className="h-4w-4text-red-500" />;
-      case 'down': return <TrendingUp className="h-4w-4text-green-500rotate-180" />;
-      case 'stable': return <div className="h-4w-4bg-gray-400rounded-full" />;
+      case 'up': return <TrendingUp className="h-4 w-4 text-red-500" />;
+      case 'down': return <TrendingUp className="h-4 w-4 text-green-500 rotate-180" />;
+      case 'stable': return <div className="h-4 w-4 bg-gray-400 rounded-full" />;
       default: return null;
     }
   };
@@ -249,7 +249,7 @@ const ComprehensiveMonitoringDashboard: React.FC = () => {
             </div>
             <div className="flex items-center space-x-4">
               <div className="flex items-center space-x-2">
-                <div className="{"`w-3 h-3 rounded-full ${isMonitoring ? 'bg-green-500' : 'bg-gray-400'}`}></div>
+                <div className={`w-3 h-3 rounded-full ${isMonitoring ? 'bg-green-500' : 'bg-gray-400'}`}></div>
                 <span className="text-sm text-gray-600">
                   {isMonitoring ? 'Monitoring' : 'Stopped'}
                 </span>
@@ -272,18 +272,18 @@ const ComprehensiveMonitoringDashboard: React.FC = () => {
         </CardHeader>
         <CardContent>
           {/* Tab Navigation */}
-          <div className="flex space-x-1mb-6border-b border-gray-200">
+          <div className="flex space-x-1 mb-6 border-b border-gray-200">
             {tabs.map((tab) => (
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className="{"`flex items-center space-x-2px-4 py-2text-sm font-medium border-b-2transition-colors ${
+                className={`flex items-center space-x-2 px-4 py-2 text-sm font-medium border-b-2 transition-colors ${
                   activeTab === tab.id
-                    ? 'border-blue-500text-blue-600'
-                    : 'border-transparent text-gray-500hover:text-gray-700 hover:border-gray-300'
+                    ? 'border-blue-500 text-blue-600'
+                    : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
                 }`}
               >
-                <tab.icon className="h-4w-4" />
+                <tab.icon className="h-4 w-4" />
                 <span>{tab.name}</span>
               </button>
             ))}
@@ -294,19 +294,19 @@ const ComprehensiveMonitoringDashboard: React.FC = () => {
             <div className="space-y-6">
               {/* Key Metrics Grid */}
               <div className="grid grid-cols-2md:grid-cols-4gap-4">
-                <div className="p-4border rounded-lg text-center">
+                <div className="p-4 border rounded-lg text-center">
                   <div className="text-2xl font-bold text-blue-600">98.5%</div>
                   <div className="text-sm text-gray-600">Uptime</div>
                 </div>
-                <div className="p-4border rounded-lg text-center">
+                <div className="p-4 border rounded-lg text-center">
                   <div className="text-2xl font-bold text-green-600">1.2s</div>
                   <div className="text-sm text-gray-600">Avg Response</div>
                 </div>
-                <div className="p-4border rounded-lg text-center">
+                <div className="p-4 border rounded-lg text-center">
                   <div className="text-2xl font-bold text-purple-600">2,847</div>
                   <div className="text-sm text-gray-600">Active Users</div>
                 </div>
-                <div className="p-4border rounded-lg text-center">
+                <div className="p-4 border rounded-lg text-center">
                   <div className="text-2xl font-bold text-orange-600">0.3%</div>
                   <div className="text-sm text-gray-600">Error Rate</div>
                 </div>
@@ -352,7 +352,7 @@ const ComprehensiveMonitoringDashboard: React.FC = () => {
                             <span className="text-sm font-medium">{item.metric}</span>
                           </div>
                           <div className="flex items-center space-x-2">
-                            <span className="{"`text-sm font-bold ${getStatusColor(item.status)}`}
+                            <span className={`text-sm font-bold ${getStatusColor(item.status)}`}
                               {item.value}%
                             </span>
                             <span className="text-xs text-gray-500">
@@ -435,16 +435,16 @@ const ComprehensiveMonitoringDashboard: React.FC = () => {
           {activeTab === 'security' && (
             <div className="space-y-6">
               <div className="grid grid-cols-1md:grid-cols-3gap-4">
-                <div className="p-4border rounded-lg text-center">
+                <div className="p-4 border rounded-lg text-center">
                   <Shield className="h-8w-8text-green-600mx-auto mb-2" />
                   <div className="text-2xl font-bold text-green-600">Secure</div>
                   <div className="text-sm text-gray-600">Overall Status</div>
                 </div>
-                <div className="p-4border rounded-lg text-center">
+                <div className="p-4 border rounded-lg text-center">
                   <div className="text-2xl font-bold text-blue-600">0</div>
                   <div className="text-sm text-gray-600">Active Threats</div>
                 </div>
-                <div className="p-4border rounded-lg text-center">
+                <div className="p-4 border rounded-lg text-center">
                   <div className="text-2xl font-bold text-purple-600">24/7</div>
                   <div className="text-sm text-gray-600">Monitoring</div>
                 </div>
@@ -467,7 +467,7 @@ const ComprehensiveMonitoringDashboard: React.FC = () => {
                             </div>
                           </div>
                         </div>
-                        <span className="{"`px-2py-1text-xs font-medium rounded-full border ${getSeverityColor(alert.severity)}`}
+                        <span className={`px-2 py-1 text-xs font-medium rounded-full border ${getSeverityColor(alert.severity)}`}
                           {alert.severity.toUpperCase()}
                         </span>
                       </div>
@@ -522,12 +522,12 @@ const ComprehensiveMonitoringDashboard: React.FC = () => {
           {activeTab === 'alerts' && (
             <div className="space-y-6">
               <div className="flex justify-between items-center">
-                <h3className="text-lg font-semibold">System Alerts</h3>
+                <h3 className="text-lg font-semibold">System Alerts</h3>
                 <div className="flex space-x-2">
-                  <button className="px-3py-1text-sm bg-blue-600text-white rounded hover:bg-blue-700">
+                  <button className="px-3 py-1 text-sm bg-blue-600 text-white rounded hover:bg-blue-700">
                     Mark All Read
                   </button>
-                  <button className="px-3py-1text-sm border border-gray-300rounded hover:bg-gray-50">
+                  <button className="px-3 py-1 text-sm border border-gray-300 rounded hover:bg-gray-50">
                     Filter
                   </button>
                 </div>
@@ -558,11 +558,11 @@ const ComprehensiveMonitoringDashboard: React.FC = () => {
                       </div>
                     </div>
                     <div className="flex items-center space-x-2">
-                      <span className="{"`px-2py-1text-xs font-medium rounded-full border ${getSeverityColor(alert.severity)}`}
+                      <span className={`px-2 py-1 text-xs font-medium rounded-full border ${getSeverityColor(alert.severity)}`}
                         {alert.severity.toUpperCase()}
                       </span>
                       {alert.resolved && (
-                        <span className="text-xs bg-green-100text-green-800px-2py-1rounded">RESOLVED</span>
+                        <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">RESOLVED</span>
                       )}
                     </div>
                   </div>

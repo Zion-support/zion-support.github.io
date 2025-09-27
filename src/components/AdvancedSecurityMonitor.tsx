@@ -118,7 +118,7 @@ export const AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = (
         </div>
         <div className="flex items-center space-x-4">
           <div className="flex items-center space-x-2">
-            <div className="{"`w-3 h-3 rounded-full ${isMonitoring ? 'bg-green-500' : 'bg-gray-400'}`} />
+            <div className={`w-3 h-3 rounded-full ${isMonitoring ? 'bg-green-500' : 'bg-gray-400'}`} />
             <span className="text-sm text-gray-600 dark:text-gray-400">
               {isMonitoring ? 'Monitoring' : 'Paused'}
             </span>
@@ -126,10 +126,10 @@ export const AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = (
           <button
             onClick={() => setIsMonitoring(!isMonitoring)}
             aria-label={isMonitoring ? 'Pause monitoring' : 'Start monitoring'}
-            className="{"`px-4 py-2rounded-lg text-sm font-medium transition-colors ${
+            className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
               isMonitoring
-                ? 'bg-red-500hover:bg-red-600text-white'
-                : 'bg-green-500hover:bg-green-600text-white'
+                ? 'bg-red-500 hover:bg-red-600 text-white'
+                : 'bg-green-500 hover:bg-green-600 text-white'
             }`}
           >
             {isMonitoring ? 'Pause' : 'Start'}
@@ -138,12 +138,12 @@ export const AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = (
       </div>
 
       {/* Security Score */}
-      <div className="bg-gradient-to-r from-blue-500to-purple-600rounded-lg p-6text-white mb-6">
+      <div className="bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg p-6 text-white mb-6">
         <div className="flex items-center justify-between">
           <div>
-            <h3className="text-lg font-semibold mb-2" id="security-score">Security Score</h3>
+            <h3 className="text-lg font-semibold mb-2" id="security-score">Security Score</h3>
             <div className="flex items-center space-x-4">
-              <div className="{"`text-4xl font-bold ${getSecurityScoreColor(metrics.securityScore)}`}
+              <div className={`text-4xl font-bold ${getSecurityScoreColor(metrics.securityScore)}`}>
                 {metrics.securityScore}
               </div>
               <div>
@@ -207,14 +207,14 @@ export const AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = (
 
       {/* Vulnerabilities */}
       <div className="mb-6">
-        <h3className="text-lg font-semibold text-gray-900dark:text-white mb-4" id="vulnerabilities">Vulnerabilities</h3>
-        <div className="grid grid-cols-1md:grid-cols-4gap-4">
+        <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4" id="vulnerabilities">Vulnerabilities</h3>
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
           {['critical', 'high', 'medium', 'low'].map(severity => (
             <motion.div
               key={severity}
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
-              className="{"`rounded-lg p-4 ${getSeverityColor(severity)}`}
+              className={`rounded-lg p-4 ${getSeverityColor(severity)}`}
             >
               <div className="text-2xl font-bold">
                 {vulnerabilityCounts[severity] || 0}
@@ -228,11 +228,11 @@ export const AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = (
       {/* Security Events */}
       <div className="mb-6">
         <div className="flex items-center justify-between mb-4">
-          <h3className="text-lg font-semibold text-gray-900dark:text-white" id="recent-security-events">Recent Security Events</h3>
+          <h3 className="text-lg font-semibold text-gray-900 dark:text-white" id="recent-security-events">Recent Security Events</h3>
           <select
             value={selectedSeverity}
             onChange={(e) => setSelectedSeverity(e.target.value)}
-            className="px-3py-1border border-gray-300dark:border-gray-600rounded-lg bg-white dark:bg-gray-700text-gray-900dark:text-white"
+            className="px-3 py-1 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
           >
             <option value="all">All Severities</option>
             <option value="critical">Critical</option>
@@ -242,7 +242,7 @@ export const AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = (
           </select>
         </div>
         
-        <div className="space-y-2max-h-64overflow-y-auto">
+        <div className="space-y-2 max-h-64 overflow-y-auto">
           <AnimatePresence>
             {filteredEvents.map((event) => (
               <motion.div
@@ -250,20 +250,20 @@ export const AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = (
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: 20 }}
-                className="{"`p-3rounded-lg border-l-4 ${getSeverityColor(event.severity)}`}
+                className={`p-3 rounded-lg border-l-4 ${getSeverityColor(event.severity)}`}
               >
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-2">
                     <span className="text-lg">{getTypeIcon(event.type)}</span>
-                    <span className="font-medium text-gray-900dark:text-white">
+                    <span className="font-medium text-gray-900 dark:text-white">
                       {event.message}
                     </span>
                   </div>
-                  <div className="text-sm text-gray-600dark:text-gray-400">
+                  <div className="text-sm text-gray-600 dark:text-gray-400">
                     {formatTime(event.timestamp)}
                   </div>
                 </div>
-                <div className="text-sm text-gray-600dark:text-gray-400mt-1">
+                <div className="text-sm text-gray-600 dark:text-gray-400 mt-1">
                   Source: {event.source} • Severity: {event.severity}
                 </div>
               </motion.div>
@@ -273,46 +273,46 @@ export const AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = (
       </div>
 
       {/* Attack Statistics */}
-      <div className="grid grid-cols-1md:grid-cols-2gap-6">
-        <div className="bg-gray-50dark:bg-gray-700rounded-lg p-4">
-          <h4className="font-semibold text-gray-900dark:text-white mb-3" id="attack-types">Attack Types</h4>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
+          <h4 className="font-semibold text-gray-900 dark:text-white mb-3" id="attack-types">Attack Types</h4>
           <div className="space-y-2">
             <div className="flex justify-between">
-              <span className="text-gray-600dark:text-gray-400">CSP Violations</span>
+              <span className="text-gray-600 dark:text-gray-400">CSP Violations</span>
               <span className="font-semibold text-red-500">{metrics.cspViolations}</span>
             </div>
             <div className="flex justify-between">
-              <span className="text-gray-600dark:text-gray-400">XSS Attempts</span>
+              <span className="text-gray-600 dark:text-gray-400">XSS Attempts</span>
               <span className="font-semibold text-yellow-500">{metrics.xssAttempts}</span>
             </div>
             <div className="flex justify-between">
-              <span className="text-gray-600dark:text-gray-400">SQL Injection</span>
+              <span className="text-gray-600 dark:text-gray-400">SQL Injection</span>
               <span className="font-semibold text-red-500">{metrics.sqlInjectionAttempts}</span>
             </div>
             <div className="flex justify-between">
-              <span className="text-gray-600dark:text-gray-400">Brute Force</span>
+              <span className="text-gray-600 dark:text-gray-400">Brute Force</span>
               <span className="font-semibold text-orange-500">{metrics.bruteForceAttempts}</span>
             </div>
             <div className="flex justify-between">
-              <span className="text-gray-600dark:text-gray-400">Rate Limit Hits</span>
+              <span className="text-gray-600 dark:text-gray-400">Rate Limit Hits</span>
               <span className="font-semibold text-blue-500">{metrics.rateLimitHits}</span>
             </div>
           </div>
         </div>
 
-        <div className="bg-gray-50dark:bg-gray-700rounded-lg p-4">
-          <h4className="font-semibold text-gray-900dark:text-white mb-3" id="security-actions">Security Actions</h4>
+        <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
+          <h4 className="font-semibold text-gray-900 dark:text-white mb-3" id="security-actions">Security Actions</h4>
           <div className="space-y-3">
-            <button className="w-full px-4 py-2bg-red-500hover:bg-red-600text-white rounded-lg text-sm font-medium transition-colors" aria-label="Block Suspicious IPs">
+            <button className="w-full px-4 py-2 bg-red-500 hover:bg-red-600 text-white rounded-lg text-sm font-medium transition-colors" aria-label="Block Suspicious IPs">
               Block Suspicious IPs
             </button>
-            <button className="w-full px-4 py-2bg-yellow-500hover:bg-yellow-600text-white rounded-lg text-sm font-medium transition-colors" aria-label="Update Firewall Rules">
+            <button className="w-full px-4 py-2 bg-yellow-500 hover:bg-yellow-600 text-white rounded-lg text-sm font-medium transition-colors" aria-label="Update Firewall Rules">
               Update Firewall Rules
             </button>
-            <button className="w-full px-4 py-2bg-blue-500hover:bg-blue-600text-white rounded-lg text-sm font-medium transition-colors" aria-label="Run Security Scan">
+            <button className="w-full px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg text-sm font-medium transition-colors" aria-label="Run Security Scan">
               Run Security Scan
             </button>
-            <button className="w-full px-4 py-2bg-green-500hover:bg-green-600text-white rounded-lg text-sm font-medium transition-colors" aria-label="Generate Security Report">
+            <button className="w-full px-4 py-2 bg-green-500 hover:bg-green-600 text-white rounded-lg text-sm font-medium transition-colors" aria-label="Generate Security Report">
               Generate Security Report
             </button>
           </div>
