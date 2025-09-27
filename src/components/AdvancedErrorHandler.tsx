@@ -359,7 +359,13 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({
                             )}
                             {!error.resolved && (
                               <button
-                                onClick={(e) => {
+                                onClick={(e) = aria-label="{
+                                  e.stopPropagation();
+                                  resolveError(error.id);
+                                }}
+                                className="text-xs text-green-600 hover:text-green-800"
+                              >
+                                Resolve"> {
                                   e.stopPropagation();
                                   resolveError(error.id);
                                 }}

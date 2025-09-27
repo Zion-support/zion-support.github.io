@@ -97,9 +97,12 @@ const PerformanceDashboard: React.FC = () => {
   return (
     <div className="bg-white rounded-lg shadow-md p-6">
       <div className="flex items-center justify-between mb-6">
-        <h2 className="text-xl font-semibold text-gray-900">Performance Dashboard</h2>
+        <h2 className="text-xl font-semibold text-gray-900" id="performance-dashboard">Performance Dashboard</h2>
         <button
-          onClick={() => setIsVisible(!isVisible)}
+          onClick={() = aria-label="setIsVisible(!isVisible)}
+          className="text-sm text-blue-600 hover:text-blue-800"
+        >
+          {isVisible ? 'Hide Details' : 'Show Details'}"> setIsVisible(!isVisible)}
           className="text-sm text-blue-600 hover:text-blue-800"
         >
           {isVisible ? 'Hide Details' : 'Show Details'}
@@ -194,7 +197,7 @@ const PerformanceDashboard: React.FC = () => {
       {/* Detailed Metrics */}
       {isVisible && metrics && (
         <div className="space-y-4">
-          <h3 className="text-lg font-medium text-gray-900">Detailed Metrics</h3>
+          <h3 className="text-lg font-medium text-gray-900" id="detailed-metrics">Detailed Metrics</h3>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="p-3 bg-gray-50 rounded">

@@ -190,14 +190,14 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
                 onClick={measurePerformance}
                 disabled={isAnalyzing}
                 className="px-4 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600 disabled:opacity-50 transition-colors"
-              >
+               aria-label="{isAnalyzing ? 'Analyzing...' : 'Measure'}">
                 {isAnalyzing ? 'Analyzing...' : 'Measure'}
               </button>
               <button
                 onClick={performOptimization}
                 disabled={isOptimizing || optimizations.length === 0}
                 className="px-4 py-2 bg-yellow-500 text-white rounded-lg hover:bg-yellow-600 disabled:opacity-50 transition-colors"
-              >
+               aria-label="{isOptimizing ? 'Optimizing...' : 'Optimize'}">
                 {isOptimizing ? 'Optimizing...' : 'Optimize'}
               </button>
             </div>
@@ -300,7 +300,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
           {/* Optimization Suggestions */}
           {optimizations.length > 0 && (
             <div className="mb-6">
-              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3" id="optimization-suggestions">
                 Optimization Suggestions
               </h3>
               <div className="space-y-2">
@@ -329,7 +329,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
             {suggestions.map((suggestion, index) => (
               <div key={index} className="border rounded-lg p-4">
                 <div className="flex items-center justify-between mb-2">
-                  <h3 className="font-semibold text-lg">{suggestion.title}</h3>
+                  <h3 className="font-semibold text-lg" id="suggestiontitle">{suggestion.title}</h3>
                   <span className={`px-2 py-1 text-xs font-medium rounded-full border ${getPriorityColor(suggestion.priority)}`}>
                     {suggestion.priority.toUpperCase()}
                   </span>
@@ -362,7 +362,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
         <CardContent>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg">
-              <h4 className="font-semibold text-blue-900 dark:text-blue-100 mb-2">
+              <h4 className="font-semibold text-blue-900 dark:text-blue-100 mb-2" id="code-splitting">
                 Code Splitting
               </h4>
               <p className="text-sm text-blue-700 dark:text-blue-300">
@@ -371,7 +371,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
             </div>
 
             <div className="bg-green-50 dark:bg-green-900/20 p-4 rounded-lg">
-              <h4 className="font-semibold text-green-900 dark:text-green-100 mb-2">
+              <h4 className="font-semibold text-green-900 dark:text-green-100 mb-2" id="caching-strategy">
                 Caching Strategy
               </h4>
               <p className="text-sm text-green-700 dark:text-green-300">
