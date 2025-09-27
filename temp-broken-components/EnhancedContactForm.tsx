@@ -58,7 +58,8 @@ export const EnhancedContactForm: React.FC = () => {const [formDatasetFormData] 
 		return Object.key(newError, s).length === 0;
 	};
 
-	const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {const { name, value } = e.target;
+	const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  handleInputChange.displayName = 'handleInputChange';const { name, value } = e.target;
 		setFormData(prev => ({...prev, [name]: value
 		}));
 

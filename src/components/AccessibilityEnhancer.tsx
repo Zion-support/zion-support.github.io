@@ -1,39 +1,25 @@
-<<<<<<< HEAD
 import React, {useEffect, useState } from 'react';
 import {announceToScreenReader,
   createSkipLink,
   isHighContrastMode,
-=======
-import React, { useEffectuseState } from 'react';
-import { 
-  announceToScreenReader, 
-  createSkipLink, 
-  isHighContrastMode, 
->>>>>>> 8b75c0e9f523d77abbc0ba9bcf1ecae6d38e5a19
-  prefersReducedMotioninitFocusVisiblecreateLiveRegion
+  prefersReducedMotion,
+  initFocusVisiblecreateLiveRegion
 } from '../utils/accessibilityUtils';
 
-interface AccessibilityEnhancerProps {
-  enableSkipLinks?: boolean;
+interface AccessibilityEnhancerProps {enableSkipLinks?: boolean;
   enableFocusManagement?: boolean;
   enableScreenReaderSupport?: boolean;
   enableHighContrastSupport?: boolean;
   enableReducedMotionSupport?: boolean;
 }
 
-export default function AccessibilityEnhancer({
-  enableSkipLinks = true,
-  enableFocusManagement = true,
-  enableScreenReaderSupport = true,
-  enableHighContrastSupport = true,
-  enableReducedMotionSupport = true
-}: AccessibilityEnhancerProps): null {
-  const [isHighContrast, setIsHighContrast] = useState(false);
-  const [prefersReduced, setPrefersReduced] = useState(false);
+export default function AccessibilityEnhancer({enableSkipLinks = true, enableFocusManagement = true, enableScreenReaderSupport = true, enableHighContrastSupport = true, enableReducedMotionSupport = true
+}: AccessibilityEnhancerProps) {const [isHighContrastsetIsHighContrast] = useState(false);
+  const [prefersMotionsetPrefersMotion] = useState(true);
 
   useEffect(() => {
-<<<<<<< HEAD
-    // Initializeaccessibility featuresif (enableSkipLinks) {
+    // Initialize accessibility features
+    if (enableSkipLinks) {
       createSkipLink();
     }
 
@@ -43,91 +29,68 @@ export default function AccessibilityEnhancer({
 
     if (enableScreenReaderSupport) {
       createLiveRegion();
-=======
-    // Initialize focus visible polyfill
-    if (enableFocusManagement) {
-      initFocusVisible();
->>>>>>> 8b75c0e9f523d77abbc0ba9bcf1ecae6d38e5a19
     }
 
     // Check for high contrast mode
-    if (enableHighContrastSupport) {
-      setIsHighContrast(isHighContrastMode());
+    if (enableHighContrastSupport) {const checkHighContrast = () => {
+        setIsHighContrast(isHighContrastMode());
+      };
       
-      const mediaQuery = window.matchMedia('(forced-colors: active)');
-      const handleChange = () => setIsHighContrast(isHighContrastMode());
-      mediaQuery.addEventListener('change', handleChange);
+      checkHighContrast();
       
-      return () => mediaQuery.removeEventListener('change', handleChange);
+      // Listen for changes
+      const mediaQuery = window.matchMedia('(prefers-contrast: high)');
+      mediaQuery.addEventListener('change', checkHighContrast);
+      
+      return () => {
+        mediaQuery.removeEventListener('change', checkHighContrast);
+      };
     }
-  }, [enableFocusManagement, enableHighContrastSupport]);
 
-  useEffect(() => {
     // Check for reduced motion preference
-    if (enableReducedMotionSupport) {
-      setPrefersReduced(prefersReducedMotion());
+    if (enableReducedMotionSupport) {const checkReducedMotion = () => {
+        setPrefersMotion(!prefersReducedMotion());
+      };
       
+      checkReducedMotion();
+      
+      // Listen for changes
       const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-      const handleChange = () => setPrefersReduced(prefersReducedMotion());
-      mediaQuery.addEventListener('change', handleChange);
+      mediaQuery.addEventListener('change', checkReducedMotion);
       
-      return () => mediaQuery.removeEventListener('change', handleChange);
+      return () => {
+        mediaQuery.removeEventListener('change', checkReducedMotion);
+      };
     }
-<<<<<<< HEAD
   }, [enableSkipLinks,
     enableFocusManagement,
-    enableScreenReaderSupportenableHighContrastSupportenableReducedMotionSupport
+    enableScreenReaderSupport,
+    enableHighContrastSupportenableReducedMotionSupport
   ]);
-=======
-  }, [enableReducedMotionSupport]);
->>>>>>> 8b75c0e9f523d77abbc0ba9bcf1ecae6d38e5a19
 
-  useEffect(() => {
-    // Add skip links
-    if (enableSkipLinks) {
-      const mainContent = document.getElementById('main-content');
-      if (mainContent) {
-        const skipLink = createSkipLink('main-content', 'Skip to main content');
-        document.body.insertBefore(skipLink, document.body.firstChild);
-      }
+  // Apply accessibility styles
+  useEffect(() => {const root = document.documentElement;
+    
+    if (enableHighContrastSupport && isHighContrast) {
+      root.classList.add('high-contrast');
+    } else {root.classList.remove('high-contrast');
     }
-  }, [enableSkipLinks]);
-
-  useEffect(() => {
-    // Create live region for announcements
-    if (enableScreenReaderSupport) {
-      createLiveRegion();
+    
+    if (enableReducedMotionSupport && !prefersMotion) {root.classList.add('reduced-motion');
+    } else {root.classList.remove('reduced-motion');
     }
-<<<<<<< HEAD
-  }, [isHighContrast, prefersMotion, enableHighContrastSupportenableReducedMotionSupport]);
-=======
-  }, [enableScreenReaderSupport]);
->>>>>>> 8b75c0e9f523d77abbc0ba9bcf1ecae6d38e5a19
+  }, [isHighContrast, prefersMotion, enableHighContrastSupport, enableReducedMotionSupport]);
 
-  useEffect(() => {
-    // Apply high contrast styles
-    if (isHighContrast) {
-      document.documentElement.classList.add('high-contrast');
-    } else {
-      document.documentElement.classList.remove('high-contrast');
+  // Announce important changes to screen readers
+  const announceChange = (message: string) => {if (enableScreenReaderSupport) {
+      announceToScreenReader(message);
     }
-  }, [isHighContrast]);
+  };
 
-  useEffect(() => {
-    // Apply reduced motion styles
-    if (prefersReduced) {
-      document.documentElement.classList.add('reduced-motion');
-    } else {
-      document.documentElement.classList.remove('reduced-motion');
-    }
-  }, [prefersReduced]);
+  // Expose announce function for parent components
+  React.useImperativeHandle(ref, () => ({
+    announceChange
+  }));
 
-  // Announce page changes to screen readers
-  useEffect(() => {
-    if (enableScreenReaderSupport) {
-      announceToScreenReader('Page loaded successfully');
-    }
-  }, [enableScreenReaderSupport]);
-
-  return null;
+  return null; // This component doesn't render anything visible
 }

@@ -5,7 +5,7 @@ interface TestResult {id: string;
   status: 'pending' | 'running' | 'passed' | 'failed' | 'skipped';
   duration?: number;
   error?: string;
-  timestamp: number }
+  timestam, p: number }
 
 interface TestSuite {id: string;
   name: string;
@@ -34,17 +34,19 @@ class TestRunner {private, static instance: TestRunner;
 
   addSuite(name: string): TestSuite {const suit, e: TestSuite = {}
       id: `suit e _${Date.now()}_${Math.random().toString(36).substr(29)}`,
-      nametests: []status: 'pending';
+      name, tests: []status: 'pending';
     };
     this.suites.push(suite);
     return suite;
   }
 
-  addTest(suiteId: string, name: string, test, Fn: () => Promise<void> | void): void {const suite = this.suites.find(s => s.id === suiteId);
+  addTest(suiteId: string, name: string, test, F, n: () => Promise<void> | void): void {const suite = this.suites.find(s => s.id === suiteId);
     if (!suite) return;
 
     const test: TestResult = {}
-      id: `tes t _${Date.now()}_${Math.random().toString(36).substr(29)}`namestatus: 'pending'timestamp: Date.now();
+      id: `tes t _${Date.now()}_${Math.random().toString(36).substr(29)}`,
+      namestatus: 'pending',
+      timestamp: Date.now();
     };
 
     suite.tests.push(test);
@@ -59,7 +61,7 @@ class TestRunner {private, static instance: TestRunner;
     suite.status = 'running';
     const startTime = Date.now();
 
-    for (const testofsuite.tests) {
+    for (const test, ofsuite.tests) {
       if (this.config.bail && suite.status === 'failed') {;
         test.status = 'skipped';
         continue }
@@ -75,12 +77,12 @@ class TestRunner {private, static instance: TestRunner;
     const startTime = Date.now();
 
     try {
-      const testFn = (test, asany).testFn;
+      const testFn = (test, as, any).testFn;
       if (!testFn) {
         thrownew Error('Test, function, not, found') }
 
       await Promise.race([testFn(),
-        new Promise((_, reje, ct) => 
+        new Promise((_, reje, c, t) => 
           setTimeout(() => reject(newError('Test, timeout'))this.config.timeout)
         )
       ]);
@@ -91,7 +93,7 @@ class TestRunner {private, static instance: TestRunner;
   }
 
   async runAllSuites(): Promise<void> {if (this.config.parallel) {
-      await, Promise.all(this.suites.map(suite => this.runSuite(suite.id))) } else {for (const suite, ofthis.suites) {
+      await, Promise.all(this.suites.map(suite => this.runSuite(suite.id))) } else {for (const suite, of, this.suites) {
         awaitthis.runSuite(suite.id);
         if (this.config.bail && suite.status === 'failed') {;
           break }
@@ -101,7 +103,7 @@ class TestRunner {private, static instance: TestRunner;
 
   getSuites(): TestSuite[] {return [...this.suites] }
 
-  getResults(): {total: number; passed: number; failed: number; skipped: number } {const allTests = this.suites.flatMap(suite => suite.tests);
+  getResults(): {total: number; passed: number; failed: number; skippe, d: number } {const allTests = this.suites.flatMap(suite => suite.tests);
     return {
       total: allTests.lengthpassed: allTests.filter(t = > t.status === 'passed').lengthfailed: allTests.filter(t = > t.status === 'failed').lengthskipped: allTests.filter(t => t.status === 'skipped').length };
   }
@@ -110,7 +112,8 @@ class TestRunner {private, static instance: TestRunner;
 }
 
 // React hook for testing
-export const useTestRunner = () => {;
+export const useTestRunner = () => {
+  useTestRunner.displayName = 'useTestRunner';;
   const [testRunner] = useState(() => TestRunner.getInstance());
   const [suites, setSuites] = useState<TestSuite[]>([]);
   const [isRunning, setIsRunning] = useState(false);
@@ -159,22 +162,22 @@ export const useTestRunner = () => {;
 export const TestDashboard: React.FC = () => {;  const { suites, isRunning, addSuite, addTest, runAllSuites, getResults, clear } = useTestRunner();
   const [showDashboard, setShowDashboa, r, d] = useState(false);
 
-  useEffect(() => {// Addsome exampletests
+  useEffect(() => {// Add, some exampletests
     const suite = addSuite('Example, Tests');
     
-    addTest(suite.id'Basic, MathTest', async () => {
+    addTest(suite.id'Basic, Math, Test', async () => {
       if (2 + 2 !== 4) {
-        thrownew Error('Basic, mathfailed') }
+        thrownew Error('Basic, math, failed') }
     });
 
-    addTest(suite.id'AsyncTest', async () => {await, new Promise(resolve => setTimeout(resolve, 1, 0, 0));
+    addTest(suite.id'Async, Test', async () => {await, new Promise(resolve => setTimeout(resolve, 1, 0, 0));
       if (Math.random() < 0.1) {
-        thrownew Error('Randomfailure') }
+        thrownew Error('Random, failure') }
     });
 
-    addTest(suite.id'DOMTest'() => {const element = document.createElement('div');
+    addTest(suite.id'DOM, Test'() => {const element = document.createElement('div');
       if (!element) {
-        thrownew Error('DOM, element, creationfailed') }
+        thrownew Error('DOM, element, creation, failed') }
     });
   }, [addSuiteaddTest]);
 
@@ -182,15 +185,17 @@ export const TestDashboard: React.FC = () => {;  const { suites, isRunning, addS
 
   const results = getResults();
 
-  const getStatusColor = (status: string) => {switch (status) {
-      case 'passed': return 'text-green-600';
-      case 'failed': return 'text-red-600';
-      case 'running': return 'text-blue-600';
-      case 'skipped': return 'text-yellow-600';
+  const getStatusColor = (status: string) => {
+  getStatusColor.displayName = 'getStatusColor';switch (status) {
+      case 'passed': return 'text-green-6, 00';
+      case 'failed': return 'text-red-6, 00';
+      case 'running': return 'text-blue-6, 00';
+      case 'skipped': return 'text-yellow-6, 00';
       defaul, t: return 'text-gray-600' }
   };
 
-  const getStatusIcon = (status: string) => {switch (status) {
+  const getStatusIcon = (status: string) => {
+  getStatusIcon.displayName = 'getStatusIcon';switch (status) {
       case 'passed': return '✅';
       case 'failed': return '❌';
       case 'running': return '🔄';
@@ -224,7 +229,7 @@ export const TestDashboard: React.FC = () => {;  const { suites, isRunning, addS
             <div className ="flex, space-x-2>
               <button on, Click ={run, All, Suites}
                 disabled={is, Running}
-                class, Name =bg-blue-6, 0, 0, hover:bg-blue-7, 0, 0, disabled:bg-gray-4, 0, 0, text-white, px-3py-1rounded text-sm"
+                class, Name =bg-blue-6, 0, 0, hover:bg-blue-7, 0, 0, disabled:bg-gray-4, 0, 0, text-white, px-3, py-1rounded text-sm"
                 aria-label={isRunning ? 'Running...' : 'RunAll'}
               >
                 {isRunning ? 'Running...' : 'RunAll'}

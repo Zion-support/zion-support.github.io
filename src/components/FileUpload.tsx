@@ -79,17 +79,20 @@ export const FileUpload: React.FC<FileUploadProps> = ({onFileSelectonFileUploada
     }
   }, [uploadedFiles.length, maxFiles, onFileSelect, allowedTypesmaxSizevalidateFile]);
 
-  const handleDragOver = (e: React.DragEvent) => {e.preventDefault();
+  const handleDragOver = (e: React.DragEvent) => {
+  handleDragOver.displayName = 'handleDragOver';e.preventDefault();
     if (!disabled) {
       setIsDragOver(true);
     }
   };
 
-  const handleDragLeave = (e: React.DragEvent) => {e.preventDefault();
+  const handleDragLeave = (e: React.DragEvent) => {
+  handleDragLeave.displayName = 'handleDragLeave';e.preventDefault();
     setIsDragOver(false);
   };
 
-  const handleDrop = (e: React.DragEvent) => {e.preventDefault();
+  const handleDrop = (e: React.DragEvent) => {
+  handleDrop.displayName = 'handleDrop';e.preventDefault();
     setIsDragOver(false);
     
     if (disabled) return;
@@ -100,7 +103,8 @@ export const FileUpload: React.FC<FileUploadProps> = ({onFileSelectonFileUploada
     }
   };
 
-  const handleFileInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {const files = e.target.files;
+  const handleFileInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  handleFileInputChange.displayName = 'handleFileInputChange';const files = e.target.files;
     if (files && files.length > 0) {
       handleFileSelect(files);
     }
@@ -141,10 +145,12 @@ export const FileUpload: React.FC<FileUploadProps> = ({onFileSelectonFileUploada
     }
   };
 
-  const removeFile = (id: string) => {setUploadedFiles(prev => prev.filter(f => f.id !== id));
+  const removeFile = (id: string) => {
+  removeFile.displayName = 'removeFile';setUploadedFiles(prev => prev.filter(f => f.id !== id));
   };
 
-  const clearAllFiles = () => {setUploadedFiles([]);
+  const clearAllFiles = () => {
+  clearAllFiles.displayName = 'clearAllFiles';setUploadedFiles([]);
   };
 
   const formatFileSize = (bytes: number): string => {if (bytes === 0) return '0Bytes';

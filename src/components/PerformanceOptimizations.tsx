@@ -150,7 +150,8 @@ DebouncedSearch.displayName = 'DebouncedSearch';
 DebouncedSearch.displayName = 'DebouncedSearch';
 
 // Performance monitoring hook
-export const usePerformanceMonitor = () => {const [metrics, setMetrics] = React.useState({renderTime: 0, memoryUsage: 0, componentCount: 0 });
+export const usePerformanceMonitor = () => {
+  usePerformanceMonitor.displayName = 'usePerformanceMonitor';const [metrics, setMetrics] = React.useState({renderTime: 0, memoryUsage: 0, componentCount: 0 });
 
   const measureRender = useCallback((componentName: string, render, F, n: () => void) => {;
     const start = performance.now();

@@ -95,10 +95,10 @@ import dynamic from 'next/dynamic';
 //   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
 // });
 
-const AdvancedPerformanceOptimizer = dynamic(() => import('../src/components/AdvancedPerformanceOptimizer'), {
-  ssr: false,
-  loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
-});
+// const AdvancedPerformanceOptimizer = dynamic(() => import('../src/components/AdvancedPerformanceOptimizer'), {
+//   ssr: false,
+//   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+// });
 
 const EnhancedUserExperience = dynamic(() => import('../src/components/EnhancedUserExperience'), {
   ssr: false,
@@ -117,15 +117,15 @@ const EnhancedUserExperience = dynamic(() => import('../src/components/EnhancedU
 
 // Removed broken component
 
-const ComprehensiveMonitoringDashboard = dynamic(() => import('../src/components/ComprehensiveMonitoringDashboard'), {
-  ssr: false,
-  loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
-});
+// const ComprehensiveMonitoringDashboard = dynamic(() => import('../src/components/ComprehensiveMonitoringDashboard'), {
+//   ssr: false,
+//   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+// });
 
-const ComprehensiveSecurityDashboard = dynamic(() => import('../src/components/ComprehensiveSecurityDashboard'), {
-  ssr: false,
-  loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
-});
+// const ComprehensiveSecurityDashboard = dynamic(() => import('../src/components/ComprehensiveSecurityDashboard'), {
+//   ssr: false,
+//   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+// });
 
 type DashboardTab = 'comprehensive' | 'analytics' | 'performance' | 'security' | 'enhanced' | 'search' | 'advanced-analytics' | 'advanced-performance' | 'advanced-security' | 'accessibility' | 'system-monitor' | 'security-enhancements' | 'performance-optimizer' | 'user-experience' | 'error-handler' | 'analytics-insights' | 'error-monitoring' | 'advanced-system-monitor' | 'new-performance' | 'new-security' | 'new-analytics' | 'comprehensive-monitoring' | 'comprehensive-security';
 
@@ -423,7 +423,7 @@ const Dashboard: React.FC = () => {
                 </button>
               </div>
             </div>
-            <AdvancedPerformanceOptimizer />
+            {/* <AdvancedPerformanceOptimizer /> */}
           </div>
         );
       case 'new-analytics':
@@ -509,7 +509,7 @@ const Dashboard: React.FC = () => {
                 </button>
               </div>
             </div>
-            <AdvancedPerformanceOptimizer />
+            {/* <AdvancedPerformanceOptimizer /> */}
           </div>
         );
       case 'analytics-insights':
@@ -587,7 +587,7 @@ const Dashboard: React.FC = () => {
                 </button>
               </div>
             </div>
-            <ComprehensiveMonitoringDashboard 
+            {/* <ComprehensiveMonitoringDashboard 
               refreshInterval={5000}
               enableRealTimeUpdates={true}
               onMetricsUpdate={(metrics) => console.log('Metrics updated:', metrics)}
@@ -608,7 +608,7 @@ const Dashboard: React.FC = () => {
                 </button>
               </div>
             </div>
-            <ComprehensiveSecurityDashboard 
+            {/* <ComprehensiveSecurityDashboard 
               refreshInterval={10000}
               enableRealTimeMonitoring={true}
               onSecurityUpdate={(metrics) => console.log('Security metrics updated:', metrics)}

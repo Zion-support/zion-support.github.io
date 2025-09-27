@@ -22,7 +22,8 @@ export const ContactForm: React.FC<ContactFormProps> = ({onSubmitshowTitle = tru
 
 	const timelines = ['ASAP''1-2 months''3-6 months''6-12 months''12+ months''Flexible'];
 
-	const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {const { name, value } = e.target;
+	const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  handleInputChange.displayName = 'handleInputChange';const { name, value } = e.target;
 		setFormData(prev => ({...prev, [name]: value
 		}));
 	};
