@@ -4,12 +4,8 @@ import Link from 'next/link';
 import SEO from '../src/components/SEO';
 // import { useAnalytics } from '../src/hooks/useAnalytics';
 
-export default function Services(): React.ReactElement {
-  // const [isVisible, setIsVisible] = useState(false);
-
-  // useEffect(() => {
-  //   setIsVisible(true);
-  // }, []);
+export default function Services(): JSX.Element {
+  // Removed unused visibility state
 
   // const { trackClick } = useAnalytics();
 

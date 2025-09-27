@@ -2,17 +2,12 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import SEO from '../src/components/SEO';
-// import { useAnalytics } from '../src/hooks/useAnalytics';
 
-export default function Portfolio(): React.ReactElement {
+export default function Portfolio(): JSX.Element {
   const [selectedProject, setSelectedProject] = useState<number | null>(null);
-  // const [isVisible, setIsVisible] = useState(false);
+  // Removed unused visibility state
 
-  // useEffect(() => {
-  //   setIsVisible(true);
-  // }, []);
-
-  // const { trackClick } = useAnalytics();
+  // Removed unused analytics hook
 
   const projects = [
     {
@@ -72,9 +67,13 @@ export default function Portfolio(): React.ReactElement {
 
           <main>
             {/* Stats Section */}
+<<<<<<< HEAD
+            <section className="mb-16">
+=======
             <section className={`mb-16 transition-all duration-700 delay-100 ${
               'opacity-100 translate-y-0'
             }`}>
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-c010
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
                 {stats.map((stat, index) => (
                   <div key={index} className="text-center p-6 bg-white rounded-2xl shadow-lg">
