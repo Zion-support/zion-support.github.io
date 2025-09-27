@@ -46,7 +46,7 @@ export class SecurityManager {
     };
 
     // Add to global scope for use throughout the app
-    (window as any).sanitizeInput = sanitizeInput;
+    (window as typeof window & { sanitizeInput: (input: string) => string }).sanitizeInput = sanitizeInput;
   }
 
   private setupClickjackingProtection(): void {
@@ -81,7 +81,7 @@ export class SecurityManager {
     });
   }
 
-  private async reportCSPViolation(violation: any): Promise<void> {
+  private async reportCSPViolation(violation: SecurityPolicyViolationEvent): Promise<void> {
     try {
       await fetch('/api/security/csp-violation', {
         method: 'POST',
