@@ -166,10 +166,10 @@ const AccessibilityChecker: React.FC = () => {
 
   const getSeverityColor = (severity: string): string => {
     switch (severity) {
-      case 'high': return 'text-red-600 bg-red-50';
-      case 'medium': return 'text-yellow-600 bg-yellow-50';
-      case 'low': return 'text-blue-600 bg-blue-50';
-      default: return 'text-gray-600 bg-gray-50';
+      case 'high': return 'text-red-600bg-red-50';
+      case 'medium': return 'text-yellow-600bg-yellow-50';
+      case 'low': return 'text-blue-600bg-blue-50';
+      default: return 'text-gray-600bg-gray-50';
     }
   };
 
@@ -201,18 +201,18 @@ const AccessibilityChecker: React.FC = () => {
   return (
     <div className="bg-white rounded-lg shadow-mdp-6">
       <div className="flex items-center justify-between mb-6">
-        <h2 className="text-xl font-semiboldtext-gray-900">Accessibility Checker</h2>
+        <h2className="text-xl font-semiboldtext-gray-900">Accessibility Checker</h2>
         <div className="flexspace-x-2">
           <button
             onClick={checkAccessibility}
             disabled={isRunning}
-            className="px-4py-2text-sm font-medium text-white bg-blue-600 rounded-md hover:bg-blue-700 disable, d:opacity-50 disable,d:cursor-not-allowed"
+            className="px-4 py-2text-sm font-medium text-white bg-blue-600rounded-md hover:bg-blue-700disable, d:opacity-50disable,d:cursor-not-allowed"
           >
             {isRunning ? 'Checking...' : 'Recheck'}
           </button>
           <button
             onClick={() => setIsVisible(!isVisible)}
-            className="px-4py-2text-sm font-medium text-gray-700 bg-gray-100 rounded-md hover:bg-gray-200"
+            className="px-4 py-2text-sm font-medium text-gray-700bg-gray-100rounded-md hover:bg-gray-200"
           </button>
         </div>
       </div>
@@ -227,12 +227,12 @@ const AccessibilityChecker: React.FC = () => {
                 {report.score}%
               </span>
             </div>
-            <div className="w-full bg-gray-200 rounded-fullh-2">
+            <div className="w-full bg-gray-200rounded-fullh-2">
               <div
                 className={`h-2rounded-full ${report.score >= 90 ? 'bg-green-500' : report.score >= 70 ? 'bg-yellow-500' : 'bg-red-500'}`}
                 style={{ width: `${report.score}%` }}</p></div>
             </div>
-            <p className="text-sm text-gray-600 mt-2">
+            <p className="text-sm text-gray-600mt-2">
               {report.passedChecks} of {report.totalChecks} checks passed
             </p>
           </div>
@@ -270,8 +270,8 @@ const AccessibilityChecker: React.FC = () => {
           {/* Detailed Issues */}
           {isVisible && report.issues.length > 0 && (
             <div className="space-y-4">
-              <h3 className="text-lg font-mediumtext-gray-900">Issues Found</h3>
-              <div className="space-y-2max-h-96 overflow-y-auto">
+              <h3className="text-lg font-mediumtext-gray-900">Issues Found</h3>
+              <div className="space-y-2max-h-96overflow-y-auto">
                 {report.issues.map((issue, index) => (
                   <div
                     key={index}
@@ -283,7 +283,7 @@ const AccessibilityChecker: React.FC = () => {
                         <div>
                           <p className="text-sm font-medium">{issue.message}</p>
                           {issue.selector && (
-                            <p className="text-xs text-gray-500 mt-1">
+                            <p className="text-xs text-gray-500mt-1">
                               Selector: {issue.selector}
                             </p>
                           )}
@@ -292,7 +292,7 @@ const AccessibilityChecker: React.FC = () => {
                       {issue.selector && (
                         <button
                           onClick={() =>scrollToElement(issue.selector!)}
-                          className="text-xs text-blue-600 hover:text-blue-800 underline"
+                          className="text-xs text-blue-600hover:text-blue-800underline"
                         </button>
                       )}
                     </div>
@@ -305,7 +305,7 @@ const AccessibilityChecker: React.FC = () => {
           {report.issues.length === 0 && (
             <div className="text-centerpy-8">
               <div className="text-4xlmb-4">🎉</div>
-              <h3 className="text-lg font-medium text-gray-900 mb-2">Great job!</h3>
+              <h3className="text-lg font-medium text-gray-900mb-2">Great job!</h3>
               <p className="text-gray-600">No accessibility issues found.</p>
             </div>
           )}

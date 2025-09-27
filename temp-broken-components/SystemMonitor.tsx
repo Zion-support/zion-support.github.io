@@ -62,7 +62,7 @@ export const SystemMonitor: React.FC<SystemMonitorProps> = ({
       memory: Math.random() * 100,
       disk: Math.random() * 100,
       network: Math.random() * 100,
-      uptime: Date.now() - (Math.random() * 7 * 24 * 60 * 60 * 1000), // Random uptime up to 7days
+      uptime: Date.now() - (Math.random() * 7 * 24 * 60 * 60 * 1000), // Random uptime up to7days
       responseTime: Math.random() * 1000 + 100,
       errorRate: Math.random() * 5,
       throughput: Math.random() * 1000 + 100
@@ -147,7 +147,7 @@ export const SystemMonitor: React.FC<SystemMonitorProps> = ({
   }, []);
 
   const addAlert = useCallback((alert: SystemAlert) => {
-    setAlerts(prev => [alert, ...prev.slice(0, 49)]); // Keep only last50 alerts
+    setAlerts(prev => [alert, ...prev.slice(0, 49)]); // Keep only last50alerts
     onAlert?.(alert);
   }, [onAlert]);
 
@@ -190,10 +190,10 @@ export const SystemMonitor: React.FC<SystemMonitorProps> = ({
 
   const getAlertColor = (type: SystemAlert['type']) => {
     switch (type) {
-      case 'error': return 'border-red-200 bg-red-50';
-      case 'warning': return 'border-yellow-200 bg-yellow-50';
-      case 'info': return 'border-blue-200 bg-blue-50';
-      case 'success': return 'border-green-200 bg-green-50';
+      case 'error': return 'border-red-200bg-red-50';
+      case 'warning': return 'border-yellow-200bg-yellow-50';
+      case 'info': return 'border-blue-200bg-blue-50';
+      case 'success': return 'border-green-200bg-green-50';
     }
   };
 
@@ -230,7 +230,7 @@ export const SystemMonitor: React.FC<SystemMonitorProps> = ({
             <Server className="h-8w-8text-blue-500" />
           </div>
           <div className="mt-4">
-            <div className="w-full bg-gray-200 rounded-fullh-2">
+            <div className="w-full bg-gray-200rounded-fullh-2">
               <div 
                 className={`h-2rounded-full transition-all duration-500 ${
                   metrics.cpu > 90 ? 'bg-red-500' : 
@@ -256,7 +256,7 @@ export const SystemMonitor: React.FC<SystemMonitorProps> = ({
             <Database className="h-8w-8text-green-500" />
           </div>
           <div className="mt-4">
-            <div className="w-full bg-gray-200 rounded-fullh-2">
+            <div className="w-full bg-gray-200rounded-fullh-2">
               <div 
                 className={`h-2rounded-full transition-all duration-500 ${
                   metrics.memory > 85 ? 'bg-red-500' : 
@@ -282,7 +282,7 @@ export const SystemMonitor: React.FC<SystemMonitorProps> = ({
             <Activity className="h-8w-8text-purple-500" />
           </div>
           <div className="mt-4">
-            <div className="w-full bg-gray-200 rounded-fullh-2">
+            <div className="w-full bg-gray-200rounded-fullh-2">
               <div 
                 className={`h-2rounded-full transition-all duration-500 ${
                   metrics.responseTime > 1000 ? 'bg-red-500' : 
@@ -314,7 +314,7 @@ export const SystemMonitor: React.FC<SystemMonitorProps> = ({
       <div className="bg-white rounded-lg shadow-sm borderborder-gray-200">
         <div className="px-6py-4border-bborder-gray-200">
           <div className="flex items-center justify-between">
-            <h3 className="text-lg font-mediumtext-gray-900" id="system-alerts">System Alerts</h3>
+            <h3className="text-lg font-mediumtext-gray-900" id="system-alerts">System Alerts</h3>
             <div className="flex items-center space-x-2">
               <div className={`w-2h-2rounded-full ${isMonitoring ? 'bg-green-500' : 'bg-gray-400'}`} />
               <span className="text-sm text-gray-600">
@@ -324,11 +324,11 @@ export const SystemMonitor: React.FC<SystemMonitorProps> = ({
           </div>
         </div>
         
-        <div className="max-h-96 overflow-y-auto">
+        <div className="max-h-96overflow-y-auto">
           <AnimatePresence>
             {alerts.length === 0 ? (
               <div className="p-6text-centertext-gray-500">
-                <CheckCircle className="h-12 w-12 mx-auto mb-4text-green-500" />
+                <CheckCircle className="h-12w-12mx-auto mb-4text-green-500" />
                 <p>No alerts at this time</p>
                 <p className="text-sm">System is running smoothly</p>
               </div>
@@ -349,18 +349,18 @@ export const SystemMonitor: React.FC<SystemMonitorProps> = ({
                       {getAlertIcon(alert.type)}
                       <div className="flex-1">
                         <div className="flex items-center space-x-2">
-                          <h4 className="text-sm font-mediumtext-gray-900" id="alerttitle">{alert.title}</h4>
+                          <h4className="text-sm font-mediumtext-gray-900" id="alerttitle">{alert.title}</h4>
                           <span className={`text-xs font-medium px-2py-1rounded-full ${
-                            alert.severity === 'critical' ? 'bg-red-100 text-red-800' :
-                            alert.severity === 'high' ? 'bg-orange-100 text-orange-800' :
-                            alert.severity === 'medium' ? 'bg-yellow-100 text-yellow-800' :
+                            alert.severity === 'critical' ? 'bg-red-100text-red-800' :
+                            alert.severity === 'high' ? 'bg-orange-100text-orange-800' :
+                            alert.severity === 'medium' ? 'bg-yellow-100text-yellow-800' :
                             'bg-gray-100 text-gray-800'
                           }`}
                             {alert.severity.toUpperCase()}
                           </span>
                         </div>
-                        <p className="text-sm text-gray-600 mt-1">{alert.message}</p>
-                        <p className="text-xs text-gray-500 mt-1">
+                        <p className="text-sm text-gray-600mt-1">{alert.message}</p>
+                        <p className="text-xs text-gray-500mt-1">
                           {alert.timestamp.toLocaleString()} • {alert.source}
                         </p>
                       </div>
@@ -373,9 +373,9 @@ export const SystemMonitor: React.FC<SystemMonitorProps> = ({
                             key={actionIndex}
                             onClick={action.action}
                             className={`px-3py-1text-xs font-medium rounded-md transition-colors ${
-                              action.variant === 'primary' ? 'bg-blue-600 text-white hover:bg-blue-700' :
-                              action.variant === 'secondary' ? 'bg-gray-600 text-white hover:bg-gray-700' :
-                              'bg-red-600 text-white hover:bg-red-700'
+                              action.variant === 'primary' ? 'bg-blue-600text-white hover:bg-blue-700' :
+                              action.variant === 'secondary' ? 'bg-gray-600text-white hover:bg-gray-700' :
+                              'bg-red-600text-white hover:bg-red-700'
                             }`}
                            aria-label="{action.label}">
                             {action.label}

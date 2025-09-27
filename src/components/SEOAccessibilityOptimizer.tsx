@@ -7,9 +7,9 @@ interface SEOMetrics {
   titleTag: boolean;
   metaDescription: boolean;
   headings: {
-    h 1 Count: number;
-    h2 Coun, t: number;
-    h3 Coun, t: number;
+    h1Count: number;
+    h2Coun, t: number;
+    h3Coun, t: number;
   };
   images: {
     total: number;
@@ -55,7 +55,7 @@ const SEOAccessibilityOptimizer: React.FC = () => {
     overallScore: 0,
     titleTag: false,
     metaDescription: false,
-    headings: { h 1 Coun, t: 0, h2 Count: 0, h3 Count: 0 },
+    headings: { h1Coun, t: 0, h2Count: 0, h3Count: 0 },
     images: { tota, l: 0, withAlt: 0, missingAlt: 0 },
     links: { interna, l: 0, external: 0, broken: 0 },
     pageSpeed: 0,
@@ -83,9 +83,9 @@ const SEOAccessibilityOptimizer: React.FC = () => {
       const titleTag = document.querySelector('title') !== null;
       const metaDescription = document.querySelector('meta[name="description"]') !== null;
       
-      const h 1 Elements = document.querySelectorAll('h1');
-      const h2 Elements = document.querySelectorAll('h2');
-      const h3 Elements = document.querySelectorAll('h3');
+      const h1Elements = document.querySelectorAll('h1');
+      const h2Elements = document.querySelectorAll('h2');
+      const h3Elements = document.querySelectorAll('h3');
       
       const images = document.querySelectorAll('img');
       const imagesWithAlt = document.querySelectorAll('img[alt]');
@@ -98,9 +98,9 @@ const SEOAccessibilityOptimizer: React.FC = () => {
         titleTag,
         metaDescription,
         headings: {
-          h 1 Coun, t: h 1 Elements.length,
-          h2 Count: h2 Elements.length,
-          h3 Count: h3 Elements.length
+          h1Coun, t: h1Elements.length,
+          h2Count: h2Elements.length,
+          h3Count: h3Elements.length
         },
         images: {
           tota, l: images.length,
@@ -160,7 +160,7 @@ const SEOAccessibilityOptimizer: React.FC = () => {
           severity: 'high',
           title: 'Missing Meta Description',
           description: 'The page lacks a meta description tag',
-          solution: 'Add a compelling meta description (150-160 characters)',
+          solution: 'Add a compelling meta description (150-160characters)',
           impact: 'Improves search result snippets and click-through rates'
         });
       }
@@ -176,24 +176,24 @@ const SEOAccessibilityOptimizer: React.FC = () => {
         });
       }
       
-      if (newSeoMetrics.headings.h 1 Count === 0) {
+      if (newSeoMetrics.headings.h1Count === 0) {
         optimizationIssues.push({
           category: 'seo',
           severity: 'high',
-          title: 'Missing H 1 Tag',
-          description: 'The page is missing an H 1 heading tag',
-          solution: 'Add a single, descriptive H 1 tag to the main content',
+          title: 'Missing H1Tag',
+          description: 'The page is missing an H1heading tag',
+          solution: 'Add a single, descriptive H1tag to the main content',
           impact: 'Improves content structure and SEO rankings'
         });
       }
       
-      if (newSeoMetrics.headings.h 1 Count > 1) {
+      if (newSeoMetrics.headings.h1Count > 1) {
         optimizationIssues.push({
           category: 'seo',
           severity: 'medium',
-          title: 'Multiple H 1 Tags',
-          description: 'The page has multiple H 1 tags, which can confuse search engines',
-          solution: 'Use only one H 1 tag per page and use H2-H 6 for subheadings',
+          title: 'Multiple H1Tags',
+          description: 'The page has multiple H1tags, which can confuse search engines',
+          solution: 'Use only one H1tag per page and use H2-H6for subheadings',
           impact: 'Improves content hierarchy and SEO structure'
         });
       }
@@ -241,11 +241,11 @@ const SEOAccessibilityOptimizer: React.FC = () => {
 
   const getSeverityColor = (severity: string): string => {
     switch (severity) {
-      case 'critical': return 'bg-red-100 text-red-800 border-red-200';
-      case 'high': return 'bg-orange-100 text-orange-800 border-orange-200';
-      case 'medium': return 'bg-yellow-100 text-yellow-800 border-yellow-200';
-      case 'low': return 'bg-blue-100 text-blue-800 border-blue-200';
-      default: return 'bg-gray-100 text-gray-800 border-gray-200';
+      case 'critical': return 'bg-red-100text-red-800border-red-200';
+      case 'high': return 'bg-orange-100text-orange-800border-orange-200';
+      case 'medium': return 'bg-yellow-100text-yellow-800border-yellow-200';
+      case 'low': return 'bg-blue-100text-blue-800border-blue-200';
+      default: return 'bg-gray-100 text-gray-800border-gray-200';
     }
   };
 
@@ -261,7 +261,7 @@ const SEOAccessibilityOptimizer: React.FC = () => {
             <button
               onClick={analyzePage}
               disabled={isAnalyzing}
-              className="px-4py-2bg-blue-600 text-white rounded-lg hover:bg-blue-700 disable,d:opacity-50"
+              className="px-4 py-2bg-blue-600text-white rounded-lg hover:bg-blue-700disable,d:opacity-50"
             >
               {isAnalyzing ? 'Analyzing...' : 'Analyze Page'}
             </button>
@@ -315,18 +315,18 @@ const SEOAccessibilityOptimizer: React.FC = () => {
                 <div className="text-sm font-mediummb-2">Heading Structure</div>
                 <div className="text-smspace-y-1">
                   <div className="flexjustify-between">
-                    <span>H 1 Tags:</span>
-                    <span className={seoMetrics.headings.h 1 Count === 1 ? 'text-green-600' : 'text-red-600'}>
-                      {seoMetrics.headings.h 1 Count}
+                    <span>H1Tags:</span>
+                    <span className={seoMetrics.headings.h1Count === 1 ? 'text-green-600' : 'text-red-600'}>
+                      {seoMetrics.headings.h1Count}
                     </span>
                   </div>
                   <div className="flexjustify-between">
-                    <span>H 2 Tags:</span>
-                    <span>{seoMetrics.headings.h2 Count}</span>
+                    <span>H2Tags:</span>
+                    <span>{seoMetrics.headings.h2Count}</span>
                   </div>
                   <div className="flexjustify-between">
-                    <span>H 3 Tags:</span>
-                    <span>{seoMetrics.headings.h3 Count}</span>
+                    <span>H3Tags:</span>
+                    <span>{seoMetrics.headings.h3Count}</span>
                   </div>
                 </div>
               </div>
@@ -452,7 +452,7 @@ const SEOAccessibilityOptimizer: React.FC = () => {
           <div className="space-y-4">
             {issues.length === 0 ? (
               <div className="text-center py-8text-gray-500">
-                <CheckCircle className="h-12 w-12 mx-auto mb-4text-green-600" />
+                <CheckCircle className="h-12w-12mx-auto mb-4text-green-600" />
                 <p>No critical issues found. Great job!</p>
               </div>
             ) : (
@@ -462,10 +462,10 @@ const SEOAccessibilityOptimizer: React.FC = () => {
                     <span className={`px-2py-1text-xs font-medium rounded-full border ${getSeverityColor(issue.severity)}`}
                       {issue.severity.toUpperCase()}
                     </span>
-                    <span className="text-xs text-gray-500 capitalize">{issue.category}</span>
+                    <span className="text-xs text-gray-500capitalize">{issue.category}</span>
                   </div>
-                  <h4 className="font-semiboldmb-2">{issue.title}</h4>
-                  <p className="text-sm text-gray-600 mb-3">{issue.description}</p>
+                  <h4className="font-semiboldmb-2">{issue.title}</h4>
+                  <p className="text-sm text-gray-600mb-3">{issue.description}</p>
                   <div className="grid grid-cols-1md:grid-cols-2gap-3text-sm">
                     <div>
                       <span className="font-mediumtext-blue-700">Solutio, n:</span>

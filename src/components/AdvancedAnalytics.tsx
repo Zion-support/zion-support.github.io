@@ -5,15 +5,15 @@ interface AnalyticsData {
   pageViews: number[];
   uniqueVisitors: number[];
   bounceRate: number[];
-  sessionDuratio, n: number[];
-  label, s: string[];
+  sessionDuration: number[];
+  labels: string[];
 }
 
 interface MetricCard {
   title: string;
   value: string;
-  chang, e: number;
-  ico, n: string;
+  change: number;
+  icon: string;
 }
 
 export const AdvancedAnalytics: React.FC = () => {
@@ -39,7 +39,7 @@ export const AdvancedAnalytics: React.FC = () => {
 
   const metricCards: MetricCard[] = [
     {
-      titl, e: 'Total Page Views',
+      title: 'Total Page Views',
       value: '24.5K',
       change: 12.5,
       icon: '📊'
@@ -58,7 +58,7 @@ export const AdvancedAnalytics: React.FC = () => {
     },
     {
       title: 'Avg Session Duration',
-      value: '4m32 s',
+      value: '4m 32s',
       change: 15.7,
       icon: '⏱️'
     }
@@ -68,10 +68,10 @@ export const AdvancedAnalytics: React.FC = () => {
     return {
       labels: analyticsData.labels,
       datasets: [{
-        labe, l: getMetricTitle(),
+        label: getMetricTitle(),
         data: analyticsData[selectedMetric],
-        backgroundColor: ['#3B82 F6', '#EF 4444', '#10 B981', '#F59 E 0 B', '#8B 5 CF6', '#06 B 6 D4', '#84 CC 16'],
-        borderColor: ['#3B82 F6', '#EF 4444', '#10 B981', '#F59 E 0 B', '#8B 5 CF6', '#06 B 6 D4', '#84 CC 16'],
+        backgroundColor: ['#3B82F6', '#EF4444', '#10B981', '#F59E0B', '#8B5CF6', '#06B6D4', '#84CC16'],
+        borderColor: ['#3B82F6', '#EF4444', '#10B981', '#F59E0B', '#8B5CF6', '#06B6D4', '#84CC16'],
         borderWidth: 2
       }]
     };
@@ -103,13 +103,13 @@ export const AdvancedAnalytics: React.FC = () => {
     return (
       <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8">
         <div className="animate-pulse">
-          <div className="h-6bg-gray-200 rounded w-1/4mb-6"></div>
-          <div className="grid grid-cols-1md:grid-cols-2lg:grid-cols-4gap-6mb-8">
+          <div className="h-6 bg-gray-200 rounded w-1/4 mb-6"></div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
             {[...Array(4)].map((_, i) => (
-              <div key={i} className="bg-gray-50 rounded-lgp-4">
-                <div className="h-4bg-gray-200 rounded w-3/4mb-2"></div>
-                <div className="h-8bg-gray-200 rounded w-1/2mb-2"></div>
-                <div className="h-3bg-gray-200 roundedw-1/4"></div>
+              <div key={i} className="bg-gray-50 rounded-lg p-4">
+                <div className="h-4 bg-gray-200 rounded w-3/4 mb-2"></div>
+                <div className="h-8 bg-gray-200 rounded w-1/2 mb-2"></div>
+                <div className="h-3 bg-gray-200 rounded w-1/4"></div>
               </div>
             ))}
           </div>
@@ -121,11 +121,11 @@ export const AdvancedAnalytics: React.FC = () => {
 
   return (
     <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-      <div className="flex justify-between items-centermb-6">
-        <h2 className="text-2xl font-boldtext-gray-900" id="advanced-analytics-dashboard">Advanced Analytics Dashboard</h2>
+      <div className="flex justify-between items-center mb-6">
+        <h2 className="text-2xl font-bold text-gray-900" id="advanced-analytics-dashboard">Advanced Analytics Dashboard</h2>
         <button
           onClick={exportData}
-          className="px-4py-2bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200 flex items-center space-x-2"
+          className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200 flex items-center space-x-2"
         >
           <span>📥</span>
           <span>Export Data</span>
@@ -133,21 +133,21 @@ export const AdvancedAnalytics: React.FC = () => {
       </div>
 
       {/* Metric Cards */}
-      <div className="grid grid-cols-1md:grid-cols-2lg:grid-cols-4gap-6mb-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
         {metricCards.map((card, index) => (
-          <div key={index} className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg p-6borderborder-blue-100">
+          <div key={index} className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg p-6 border border-blue-100">
             <div className="flex items-center justify-between mb-2">
               <span className="text-2xl">{card.icon}</span>
-              <span className={`text-sm font-medium px-2py-1rounded-full ${
+              <span className={`text-sm font-medium px-2 py-1 rounded-full ${
                 card.change >= 0 
                   ? 'text-green-700 bg-green-100' 
                   : 'text-red-700 bg-red-100'
-              }`}
+              }`}>
                 {card.change >= 0 ? '+' : ''}{card.change}%
               </span>
             </div>
             <h3 className="text-sm font-medium text-gray-600 mb-1" id="cardtitle">{card.title}</h3>
-            <p className="text-2xl font-boldtext-gray-900">{card.value}</p>
+            <p className="text-2xl font-bold text-gray-900">{card.value}</p>
           </div>
         ))}
       </div>
@@ -157,17 +157,19 @@ export const AdvancedAnalytics: React.FC = () => {
         <label className="block text-sm font-medium text-gray-700 mb-2">
           Select Metric to Display:
         </label>
-        <div className="flex flex-wrapgap-2">
+        <div className="flex flex-wrap gap-2">
           {(['pageViews', 'uniqueVisitors', 'bounceRate', 'sessionDuration'] as const).map((metric) => (
             <button
               key={metric}
-              onClick={() =>setSelectedMetric(metric)}
+              onClick={() => setSelectedMetric(metric)}
               aria-label={`Select ${metric} metric`}
-              className={`px-4py-2rounded-lg font-medium transition-colors duration-200 ${
+              className={`px-4 py-2 rounded-lg font-medium transition-colors duration-200 ${
                 selectedMetric === metric
                   ? 'bg-blue-600 text-white'
                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
+            >
+              {getMetricTitle(metric)}
             </button>
           ))}
         </div>
@@ -175,7 +177,7 @@ export const AdvancedAnalytics: React.FC = () => {
 
 
       {/* Chart Visualization */}
-      <div className="grid grid-cols-1lg:grid-cols-2gap-6">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <DataVisualization
           type="line"
           data={getChartData()}
@@ -194,20 +196,20 @@ export const AdvancedAnalytics: React.FC = () => {
       </div>
 
       {/* Additional Insights */}
-      <div className="mt-8grid grid-cols-1md:grid-cols-2gap-6">
-        <div className="bg-gray-50 rounded-lgp-6">
+      <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="bg-gray-50 rounded-lg p-6">
           <h3 className="text-lg font-semibold text-gray-900 mb-4" id="-key-insights">📈 Key Insights</h3>
-          <ul className="space-y-2text-sm text-gray-600">
-            <li>• Peak traffic occurs on Thursday with5 K page views</li>
-            <li>• Bounce rate improved by5.2% compared to last week</li>
-            <li>• Average session duration increased to 4 m32 s</li>
+          <ul className="space-y-2 text-sm text-gray-600">
+            <li>• Peak traffic occurs on Thursday with 5K page views</li>
+            <li>• Bounce rate improved by 5.2% compared to last week</li>
+            <li>• Average session duration increased to 4m 32s</li>
             <li>• Weekend traffic shows consistent engagement</li>
           </ul>
         </div>
 
-        <div className="bg-gray-50 rounded-lgp-6">
+        <div className="bg-gray-50 rounded-lg p-6">
           <h3 className="text-lg font-semibold text-gray-900 mb-4" id="-recommendations">🎯 Recommendations</h3>
-          <ul className="space-y-2text-sm text-gray-600">
+          <ul className="space-y-2 text-sm text-gray-600">
             <li>• Focus marketing efforts on Thursday peaks</li>
             <li>• Optimize content to reduce bounce rate further</li>
             <li>• Implement engagement features for weekends</li>

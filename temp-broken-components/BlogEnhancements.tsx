@@ -34,16 +34,16 @@ export function BlogSearch({ onSearch, onCategoryFilter, categories, currentCate
             onChange={(e) => handleSearch(e.target.value)}
             onFocus={() => setIsSearchFocused(true)}
             onBlur={() => setIsSearchFocused(false)}
-            className={`w-full px-4py-3pl-12 pr-4border-2rounded-lg transition-all duration-300 ${
+            className={`w-full px-4 py-3pl-12pr-4border-2rounded-lg transition-all duration-300 ${
               isSearchFocused 
-                ? 'border-blue-500 shadow-lg' 
-                : 'border-gray-300 hover:border-gray-400'
-            } focus:outline-none focus:ring-2focu, s:ring-blue-500 focu, s:border-transparent`}
+                ? 'border-blue-500shadow-lg' 
+                : 'border-gray-300hover:border-gray-400'
+            } focus:outline-none focus:ring-2focu, s:ring-blue-500focu, s:border-transparent`}
             aria-label="Search articles"
           />
           <div className="absolute inset-y-0left-0pl-4flex items-centerpointer-events-none">
             <svg className="h-5w-5text-gray-400" fill="none" stroke="currentColor" viewBox="002424">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2121 l-6-6m2-5a77011-14077001140 z" />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2121l-6-6m2-5a77011-14077001140z" />
             </svg>
           </div>
         </div>
@@ -55,9 +55,9 @@ export function BlogSearch({ onSearch, onCategoryFilter, categories, currentCate
           <motion.button
             key={category}
             onClick={() =>handleCategoryChange(category)}
-            className={`px-4py-2rounded-full text-sm font-medium transition-all duration-300 ${
+            className={`px-4 py-2rounded-full text-sm font-medium transition-all duration-300 ${
               currentCategory === category || (currentCategory === 'all' && category === 'All')
-                ? 'bg-blue-600 text-white shadow-lg'
+                ? 'bg-blue-600text-white shadow-lg'
                 : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
             }`}
             whileHover={{ scale: 1.05 }}
@@ -94,11 +94,11 @@ export function BlogCard({ post, variant = 'regular', onReadMore, onBookmark, is
   const getTitleClasses = () => {
     switch (variant) {
       case 'featured':
-        return 'text-2xl font-bold text-gray-800 mb-3hover: text-blue-600 transition-colors';
+        return 'text-2xl font-bold text-gray-800mb-3hover: text-blue-600transition-colors';
       case 'compact':
-        return 'text-lg font-bold text-gray-800 mb-2hover:text-blue-600 transition-colors';
+        return 'text-lg font-bold text-gray-800mb-2hover:text-blue-600transition-colors';
       default:
-        return 'text-lg font-bold text-gray-800 mb-3hover:text-blue-600 transition-colors';
+        return 'text-lg font-bold text-gray-800mb-3hover:text-blue-600transition-colors';
     }
   };
 
@@ -122,7 +122,7 @@ export function BlogCard({ post, variant = 'regular', onReadMore, onBookmark, is
           </div>
           <div>
             <span className={`px-3py-1rounded-full text-sm font-medium ${
-              variant === 'featured' ? 'bg-blue-100 text-blue-800' : 'bg-gray-100 text-gray-700'
+              variant === 'featured' ? 'bg-blue-100text-blue-800' : 'bg-gray-100 text-gray-700'
             }`}
               {post.category}
             </span>
@@ -134,25 +134,25 @@ export function BlogCard({ post, variant = 'regular', onReadMore, onBookmark, is
           onClick={() => onBookmark(post)}
           className={`p-2rounded-full transition-colors ${
             isBookmarked 
-              ? 'text-yellow-500 hover:text-yellow-600' 
-              : 'text-gray-400 hover:text-yellow-500'
+              ? 'text-yellow-500hover:text-yellow-600' 
+              : 'text-gray-400hover:text-yellow-500'
           }`}
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
         >
           <svg className="h-5w-5" fill={isBookmarked ? 'currentColor' : 'none'} stroke="currentColor" viewBox="002424">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M55a 220012-2h10a2200122 v 16 l-7-3.5L 521 V 5 z" />
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M55a220012-2h10a2200122v16l-7-3.5L521V5z" />
           </svg>
         </motion.button>
       </div>
 
       {/* Title */}
-      <h3 className={getTitleClasses()}>
+      <h3className={getTitleClasses()}>
         {post.title}
       </h3>
 
       {/* Excerpt */}
-      <p className={`text-gray-600 mb-4leading-relaxed ${
+      <p className={`text-gray-600mb-4leading-relaxed ${
         variant === 'compact' ? 'text-sm' : ''
       }`}
         {post.excerpt}
@@ -161,7 +161,7 @@ export function BlogCard({ post, variant = 'regular', onReadMore, onBookmark, is
       {/* Author and date */}
       <div className="flex items-center justify-between mb-4">
         <div className="flexitems-center">
-          <div className={`bg-gray-200 rounded-full flex items-center justify-center mr-3 ${
+          <div className={`bg-gray-200rounded-full flex items-center justify-center mr-3 ${
             variant === 'featured' ? 'w-8h-8' : 'w-6h-6'
           }`}
             <span className={`font-medium text-gray-600 ${
@@ -190,7 +190,7 @@ export function BlogCard({ post, variant = 'regular', onReadMore, onBookmark, is
         {post.tags.slice(0, 3).map((tag) => (
           <span
             key={tag}
-            className="px-2py-1bg-gray-100 text-gray-600 rounded-fulltext-xs"
+            className="px-2py-1bg-gray-100 text-gray-600rounded-fulltext-xs"
           >
             #{tag}
           </span>
@@ -200,7 +200,7 @@ export function BlogCard({ post, variant = 'regular', onReadMore, onBookmark, is
       {/* Read More Button */}
       <motion.button
         onClick={() => onReadMore(post)}
-        className="text-blue-600 hover:text-blue-800 font-medium transition-colors flexitems-center"
+        className="text-blue-600hover:text-blue-800font-medium transition-colors flexitems-center"
         whileHover={{ , x: 5 }}
       >
         Read More
@@ -212,7 +212,7 @@ export function BlogCard({ post, variant = 'regular', onReadMore, onBookmark, is
           animate={{ x: isHovered ? 5 : 0 }}
           transition={{ duration: 0.2 }}
         >
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M95 l 77-77" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M95l77-77" />
         </motion.svg>
       </motion.button>
     </motion.article>
@@ -253,8 +253,8 @@ export function BlogPagination({ currentPage, totalPages, onPageChange }: BlogPa
         disabled={currentPage === 1}
         className={`px-3py-2rounded-lg transition-colors ${
           currentPage === 1
-            ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
-            : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-300'
+            ? 'bg-gray-100 text-gray-400cursor-not-allowed'
+            : 'bg-white text-gray-700 hover:bg-gray-50border border-gray-300'
         }`}
         whileHover={{ scale: currentPage === 1 ? 1 : 1.05 }}
         whileTap={{ scale: currentPage === 1 ? 1 : 0.95 }}
@@ -266,8 +266,8 @@ export function BlogPagination({ currentPage, totalPages, onPageChange }: BlogPa
           onClick={() =>onPageChange(page)}
           className={`px-3py-2rounded-lg transition-colors ${
             currentPage === page
-              ? 'bg-blue-600 text-white'
-              : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-300'
+              ? 'bg-blue-600text-white'
+              : 'bg-white text-gray-700 hover:bg-gray-50border border-gray-300'
           }`}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
@@ -279,8 +279,8 @@ export function BlogPagination({ currentPage, totalPages, onPageChange }: BlogPa
         disabled={currentPage === totalPages}
         className={`px-3py-2rounded-lg transition-colors ${
           currentPage === totalPages
-            ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
-            : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-300'
+            ? 'bg-gray-100 text-gray-400cursor-not-allowed'
+            : 'bg-white text-gray-700 hover:bg-gray-50border border-gray-300'
         }`}
         whileHover={{ scale: currentPage === totalPages ? 1 : 1.05 }}
         whileTap={{ scale: currentPage === totalPages ? 1 : 0.95 }}
@@ -311,10 +311,10 @@ export function BlogNewsletter({ onSubscribe, isLoading = false }: BlogNewslette
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
-        className="text-center py-8bg-green-50 rounded-2xl borderborder-green-200"
+        className="text-center py-8bg-green-50rounded-2xl borderborder-green-200"
       >
-        <div className="text-green-600 text-4xlmb-4">✓</div>
-        <h3 className="text-xl font-bold text-green-800 mb-2">Thank you for subscribing!</h3>
+        <div className="text-green-600text-4xlmb-4">✓</div>
+        <h3className="text-xl font-bold text-green-800mb-2">Thank you for subscribing!</h3>
         <p className="text-green-600">You&apos;ll receive our latest articles in your inbox.</p>
       </motion.div>
     );
@@ -324,16 +324,16 @@ export function BlogNewsletter({ onSubscribe, isLoading = false }: BlogNewslette
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      className="text-center py-16 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 rounded-3xl text-white relativeoverflow-hidden"
+      className="text-center py-16bg-gradient-to-r from-blue-600via-indigo-600to-purple-600rounded-3xl text-white relativeoverflow-hidden"
     >
       <div className="absolute inset-0opacity-10">
         <div className="absoluteinset-0" style={{
-          backgroundImage: `url("dat, a:image/svg+xml,%3Csvg width='60' height='60' viewBox='006060' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23 ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+          backgroundImage: `url("dat, a:image/svg+xml,%3Csvg width='60' height='60' viewBox='006060' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
         }}</p></div>
       </div>
       
       <div className="relativez-10">
-        <h2 className="text-3xl md:text-5xl font-bold mb-6bg-gradient-to-r from-white to-blue-100 bg-clip-texttext-transparent">
+        <h2className="text-3xl md:text-5xl font-bold mb-6bg-gradient-to-r from-white to-blue-100bg-clip-texttext-transparent">
           Stay Updated
         </h2>
         <p className="text-xl mb-8max-w-2xl mx-autoopacity-90">
@@ -346,13 +346,13 @@ export function BlogNewsletter({ onSubscribe, isLoading = false }: BlogNewslette
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
-            className="flex-1px-4py-3rounded-lg text-gray-800 placeholder-gray-500 focus:outline-none focu, s:ring-2focu,s:ring-white"
+            className="flex-1px-4 py-3rounded-lg text-gray-800placeholder-gray-500focus:outline-none focu, s:ring-2focu,s:ring-white"
             aria-label="Email address for newsletter subscription"
           />
           <motion.button
             type="submit"
             disabled={isLoading}
-            className="bg-white text-blue-600 px-6py-3rounded-lg font-semibold hover:bg-gray-100 transition-colors disable,d:opacity-50"
+            className="bg-white text-blue-600px-6py-3rounded-lg font-semibold hover:bg-gray-100transition-colors disable,d:opacity-50"
             whileHover={{ scal, e: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >

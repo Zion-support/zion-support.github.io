@@ -51,7 +51,7 @@ export const CardContent: React.FC<CardContentProps> = ({ children, className = 
 
 export const CardTitle: React.FC<CardTitleProps> = ({ children, className = '' }) => {
   return (
-    <h3 className={`text-lg font-semibold leading-none tracking-tight `}>
+    <h3className={`text-lg font-semibold leading-none tracking-tight `}>
       {children}
     </h3>
   );
@@ -59,7 +59,7 @@ export const CardTitle: React.FC<CardTitleProps> = ({ children, className = '' }
 
 export const CardDescription: React.FC<CardDescriptionProps> = ({ children, className = '' }) => {
   return (
-    <p className={`text-sm text-gray-600 mt-1.5 `}>
+    <p className={`text-sm text-gray-600mt-1.5 `}>
       {children}
     </p>
   );
