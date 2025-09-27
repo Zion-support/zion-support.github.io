@@ -1,17 +1,140 @@
 {
-  "timestamp": "2025-09-05T22:25:16.020Z",
-  "metrics": {
-    "bundleSize": 8568279,
-    "loadTime": 0,
-    "performanceScore": 0
-  },
+  "timestamp": "2025-09-27T07:37:09.204Z",
   "optimizations": [
-    "Bundle analysis completed",
-    "Found 3 images for optimization"
+    {
+      "type": "component",
+      "file": "src/components/AccessibilityEnhancements.tsx",
+      "issue": "Large component detected",
+      "suggestion": "Consider breaking into smaller components"
+    },
+    {
+      "type": "component",
+      "file": "src/components/AdvancedErrorHandler.tsx",
+      "issue": "Large component detected",
+      "suggestion": "Consider breaking into smaller components"
+    },
+    {
+      "type": "component",
+      "file": "src/components/AdvancedPerformanceOptimizer.tsx",
+      "issue": "Large component detected",
+      "suggestion": "Consider breaking into smaller components"
+    },
+    {
+      "type": "component",
+      "file": "src/components/AdvancedSecurityMonitor_backup.tsx",
+      "issue": "Large component detected",
+      "suggestion": "Consider breaking into smaller components"
+    },
+    {
+      "type": "component",
+      "file": "src/components/AnalyticsDashboard.tsx",
+      "issue": "Large component detected",
+      "suggestion": "Consider breaking into smaller components"
+    },
+    {
+      "type": "component",
+      "file": "src/components/ChatSystem.tsx",
+      "issue": "Large component detected",
+      "suggestion": "Consider breaking into smaller components"
+    },
+    {
+      "type": "component",
+      "file": "src/components/ContactForm.tsx",
+      "issue": "Large component detected",
+      "suggestion": "Consider breaking into smaller components"
+    },
+    {
+      "type": "component",
+      "file": "src/components/DataVisualization.tsx",
+      "issue": "Large component detected",
+      "suggestion": "Consider breaking into smaller components"
+    },
+    {
+      "type": "component",
+      "file": "src/components/EnhancedSEO.tsx",
+      "issue": "Component could benefit from React.memo",
+      "suggestion": "Wrap component with React.memo for performance"
+    },
+    {
+      "type": "component",
+      "file": "src/components/EnhancedSearch.tsx",
+      "issue": "Large component detected",
+      "suggestion": "Consider breaking into smaller components"
+    },
+    {
+      "type": "component",
+      "file": "src/components/FileUpload.tsx",
+      "issue": "Large component detected",
+      "suggestion": "Consider breaking into smaller components"
+    },
+    {
+      "type": "component",
+      "file": "src/components/PerformanceOptimizations.tsx",
+      "issue": "Large component detected",
+      "suggestion": "Consider breaking into smaller components"
+    },
+    {
+      "type": "component",
+      "file": "src/components/PerformanceOptimizer.tsx",
+      "issue": "Component could benefit from React.memo",
+      "suggestion": "Wrap component with React.memo for performance"
+    },
+    {
+      "type": "component",
+      "file": "src/components/ProjectManagement.tsx",
+      "issue": "Large component detected",
+      "suggestion": "Consider breaking into smaller components"
+    },
+    {
+      "type": "component",
+      "file": "src/components/SEO.tsx",
+      "issue": "Component could benefit from React.memo",
+      "suggestion": "Wrap component with React.memo for performance"
+    },
+    {
+      "type": "component",
+      "file": "src/components/SEOAccessibilityOptimizer.tsx",
+      "issue": "Large component detected",
+      "suggestion": "Consider breaking into smaller components"
+    },
+    {
+      "type": "component",
+      "file": "src/components/SecurityDashboard.tsx",
+      "issue": "Large component detected",
+      "suggestion": "Consider breaking into smaller components"
+    },
+    {
+      "type": "component",
+      "file": "src/components/SystemMonitor.tsx",
+      "issue": "Large component detected",
+      "suggestion": "Consider breaking into smaller components"
+    },
+    {
+      "type": "component",
+      "file": "src/components/TestDashboard.tsx",
+      "issue": "Large component detected",
+      "suggestion": "Consider breaking into smaller components"
+    },
+    {
+      "type": "component",
+      "file": "src/components/UserManagement.tsx",
+      "issue": "Large component detected",
+      "suggestion": "Consider breaking into smaller components"
+    },
+    {
+      "type": "component",
+      "file": "src/components/WebVitals.tsx",
+      "issue": "Component could benefit from React.memo",
+      "suggestion": "Wrap component with React.memo for performance"
+    }
   ],
-  "summary": {
-    "totalOptimizations": 2,
-    "bundleSize": 8568279,
-    "performanceScore": 0
-  }
+  "metrics": {
+    "dependencies": 78,
+    "devDependencies": 41,
+    "totalOptimizations": 21,
+    "imagesAnalyzed": 0,
+    "componentsAnalyzed": 21,
+    "importsAnalyzed": 0
+  },
+  "recommendations": []
 }

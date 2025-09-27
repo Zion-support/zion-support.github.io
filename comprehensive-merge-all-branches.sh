@@ -1,196 +1,178 @@
 #!/bin/bash
 
 # Comprehensive Merge All Branches Script
-# This script will merge all remote branches into main, resolving conflicts automatically
+# This script will systematically merge all remote branches into main
 
 set -e
 
 echo "🚀 Starting comprehensive merge of all branches into main..."
+echo "📅 Started at: $(date)"
 
-# Colors for output
-RED='\033[0;31m'
-GREEN='\033[0;32m'
-YELLOW='\033[1;33m'
-BLUE='\033[0;34m'
-NC='\033[0m'
+# Ensure we're on main and it's up to date
+echo "🔄 Ensuring we're on main branch and up to date..."
+git checkout main
+git pull origin main
 
-print_status() { echo -e "${BLUE}[INFO]${NC} $1"; }
-print_success() { echo -e "${GREEN}[SUCCESS]${NC} $1"; }
-print_warning() { echo -e "${YELLOW}[WARNING]${NC} $1"; }
-print_error() { echo -e "${RED}[ERROR]${NC} $1"; }
+# Get list of all remote branches (excluding main and HEAD)
+echo "📋 Getting list of all remote branches..."
+ALL_BRANCHES=($(git branch -r | grep -v origin/main | grep -v HEAD | sed 's/origin\///' | sed 's/^[[:space:]]*//' | sed 's/[[:space:]]*$//' | sort -V))
 
-# Function to run commands with timeout and error handling
-run_with_timeout() {
-    local cmd="$1"
-    local timeout="${2:-60}"
-    
-    print_status "Running: $cmd"
-    
-    if timeout $timeout bash -c "$cmd" 2>/dev/null; then
-        return 0
-    else
-        print_warning "Command timed out or failed: $cmd"
-        return 1
-    fi
-}
+TOTAL_BRANCHES=${#ALL_BRANCHES[@]}
+echo "📊 Found $TOTAL_BRANCHES branches to process"
 
-# Check if we're in a git repository
-if ! git rev-parse --git-dir > /dev/null 2>&1; then
-    print_error "Not in a git repository"
-    exit 1
-fi
-
-# Ensure we're on main branch
-print_status "Switching to main branch..."
-if ! run_with_timeout "git checkout main" 30; then
-    print_error "Failed to switch to main branch"
-    exit 1
-fi
-
-# Pull latest main
-print_status "Pulling latest main..."
-if ! run_with_timeout "git pull origin main" 60; then
-    print_warning "Failed to pull latest main, continuing with local main"
-fi
-
-# Get all remote branches
-print_status "Getting list of remote branches..."
-REMOTE_BRANCHES=$(git branch -r | grep -v 'origin/main' | grep -v 'origin/HEAD' | sed 's/origin\///' | tr -d ' ')
-
-if [ -z "$REMOTE_BRANCHES" ]; then
-    print_warning "No remote branches found to merge"
-    exit 0
-fi
-
-TOTAL_BRANCHES=$(echo "$REMOTE_BRANCHES" | wc -l)
-print_status "Found $TOTAL_BRANCHES remote branches to process"
-
-# Create a log file for tracking
-LOG_FILE="merge-log-$(date +%Y%m%d-%H%M%S).txt"
-echo "Merge operation started at $(date)" > "$LOG_FILE"
+# Counters for tracking progress
+SUCCESS_COUNT=0
+FAILED_COUNT=0
+SKIPPED_COUNT=0
+ALREADY_UPTODATE_COUNT=0
+CONFLICT_RESOLVED_COUNT=0
 
 # Process branches in batches to avoid overwhelming the system
-BATCH_SIZE=10
-PROCESSED=0
-SUCCESSFUL=0
-FAILED=0
+BATCH_SIZE=100
+BATCH_NUMBER=1
 
-print_status "Processing branches in batches of $BATCH_SIZE..."
-
-# Convert to array for batch processing
-IFS=$'\n' read -rd '' -a BRANCH_ARRAY <<< "$REMOTE_BRANCHES"
-
-for ((i=0; i<${#BRANCH_ARRAY[@]}; i+=BATCH_SIZE)); do
-    BATCH_NUM=$((i/BATCH_SIZE + 1))
-    print_status "Processing batch $BATCH_NUM..."
+for ((i=0; i<TOTAL_BRANCHES; i+=BATCH_SIZE)); do
+    BATCH_END=$((i + BATCH_SIZE))
+    if [ $BATCH_END -gt $TOTAL_BRANCHES ]; then
+        BATCH_END=$TOTAL_BRANCHES
+    fi
     
-    for ((j=i; j<i+BATCH_SIZE && j<${#BRANCH_ARRAY[@]}; j++)); do
-        BRANCH="${BRANCH_ARRAY[j]}"
-        PROCESSED=$((PROCESSED + 1))
+    echo ""
+    echo "📦 Processing batch $BATCH_NUMBER: branches $((i+1))-$BATCH_END"
+    echo "🕐 Batch started at: $(date)"
+    
+    # Process each branch in the current batch
+    for ((j=i; j<BATCH_END; j++)); do
+        branch="${ALL_BRANCHES[$j]}"
+        current_branch=$((j+1))
         
-        print_status "[$PROCESSED/$TOTAL_BRANCHES] Processing branch: $BRANCH"
+        # Show progress every 10 branches
+        if [ $((current_branch % 10)) -eq 0 ]; then
+            echo "📊 Progress: $current_branch/$TOTAL_BRANCHES (✅ $SUCCESS_COUNT successful, ❌ $FAILED_COUNT failed, ⏭️ $SKIPPED_COUNT skipped, 📋 $ALREADY_UPTODATE_COUNT up-to-date)"
+        fi
         
-        # Try to checkout the branch
-        if run_with_timeout "git checkout $BRANCH" 30; then
-            print_status "Checked out branch: $BRANCH"
+        # Skip very long branch names or problematic patterns
+        if [ ${#branch} -gt 100 ] || [[ "$branch" =~ (HEAD|main|master) ]]; then
+            echo "⏭️  Skipping problematic branch: $branch"
+            ((SKIPPED_COUNT++))
+            continue
+        fi
+        
+        # Check if branch exists
+        if ! git show-ref --verify --quiet "refs/remotes/origin/$branch" 2>/dev/null; then
+            echo "⚠️  Branch $branch doesn't exist, skipping..."
+            ((SKIPPED_COUNT++))
+            continue
+        fi
+        
+        # Check if branch has commits not in main
+        if ! git log --oneline "origin/$branch" --not origin/main | head -1 > /dev/null 2>&1; then
+            echo "📋 Branch $branch has no new commits, skipping..."
+            ((ALREADY_UPTODATE_COUNT++))
+            continue
+        fi
+        
+        # Attempt to merge the branch
+        echo "🔄 Merging branch: $branch"
+        
+        # Try different merge strategies
+        MERGE_SUCCESS=false
+        
+        # Strategy 1: Normal merge
+        if git merge "origin/$branch" --no-edit --no-ff 2>/dev/null; then
+            echo "✅ Successfully merged $branch (normal merge)"
+            ((SUCCESS_COUNT++))
+            MERGE_SUCCESS=true
+        # Strategy 2: Ours strategy (prefer main)
+        elif git merge "origin/$branch" --no-edit --no-ff -X ours 2>/dev/null; then
+            echo "✅ Successfully merged $branch (ours strategy)"
+            ((SUCCESS_COUNT++))
+            ((CONFLICT_RESOLVED_COUNT++))
+            MERGE_SUCCESS=true
+        # Strategy 3: Theirs strategy (prefer branch)
+        elif git merge "origin/$branch" --no-edit --no-ff -X theirs 2>/dev/null; then
+            echo "✅ Successfully merged $branch (theirs strategy)"
+            ((SUCCESS_COUNT++))
+            ((CONFLICT_RESOLVED_COUNT++))
+            MERGE_SUCCESS=true
+        # Strategy 4: Manual conflict resolution
+        else
+            echo "⚠️  Conflicts detected in $branch, attempting resolution..."
             
-            # Pull latest changes
-            run_with_timeout "git pull origin $BRANCH" 30 || true
-            
-            # Switch back to main
-            if run_with_timeout "git checkout main" 30; then
-                # Try to merge the branch
-                if run_with_timeout "git merge $BRANCH --no-edit" 60; then
-                    print_success "Successfully merged $BRANCH into main"
-                    SUCCESSFUL=$((SUCCESSFUL + 1))
-                    echo "SUCCESS: $BRANCH" >> "$LOG_FILE"
-                    
-                    # Push main
-                    run_with_timeout "git push origin main" 60 || print_warning "Failed to push main after merging $BRANCH"
-                    
-                    # Clean up the branch
-                    run_with_timeout "git branch -d $BRANCH" 30 || true
-                    run_with_timeout "git push origin --delete $BRANCH" 30 || true
-                    
+            # Check if we're in a merge state
+            if git status --porcelain | grep -q "^UU\|^AA\|^DD"; then
+                # Try to resolve conflicts automatically
+                git checkout --ours . 2>/dev/null || true
+                git add . 2>/dev/null || true
+                
+                if git commit --no-edit 2>/dev/null; then
+                    echo "✅ Resolved conflicts for $branch"
+                    ((SUCCESS_COUNT++))
+                    ((CONFLICT_RESOLVED_COUNT++))
+                    MERGE_SUCCESS=true
                 else
-                    print_warning "Merge conflicts detected in $BRANCH. Attempting to resolve..."
-                    
-                    # Check for conflict files
-                    CONFLICT_FILES=$(run_with_timeout "git diff --name-only --diff-filter=U" 30 2>/dev/null || echo "")
-                    
-                    if [ -n "$CONFLICT_FILES" ]; then
-                        print_status "Found conflict files: $CONFLICT_FILES"
-                        
-                        # Resolve conflicts by taking our version (the branch being merged)
-                        for file in $CONFLICT_FILES; do
-                            print_status "Resolving conflicts in: $file"
-                            run_with_timeout "git checkout --ours $file" 30 || true
-                            run_with_timeout "git add $file" 30 || true
-                        done
-                        
-                        # Commit the resolution
-                        if run_with_timeout "git commit -m 'Resolved merge conflicts in $BRANCH'" 30; then
-                            print_success "Successfully resolved conflicts in $BRANCH"
-                            SUCCESSFUL=$((SUCCESSFUL + 1))
-                            echo "SUCCESS (resolved conflicts): $BRANCH" >> "$LOG_FILE"
-                            
-                            # Push the resolved changes
-                            run_with_timeout "git push origin main" 60 || print_warning "Failed to push resolved main"
-                            
-                            # Clean up
-                            run_with_timeout "git branch -d $BRANCH" 30 || true
-                            run_with_timeout "git push origin --delete $BRANCH" 30 || true
-                            
-                        else
-                            print_error "Failed to commit resolved conflicts in $BRANCH"
-                            run_with_timeout "git merge --abort" 30 || true
-                            FAILED=$((FAILED + 1))
-                            echo "FAILED (commit): $BRANCH" >> "$LOG_FILE"
-                        fi
-                    else
-                        print_error "No conflict files found but merge failed for $BRANCH"
-                        run_with_timeout "git merge --abort" 30 || true
-                        FAILED=$((FAILED + 1))
-                        echo "FAILED (no conflicts): $BRANCH" >> "$LOG_FILE"
-                    fi
+                    echo "❌ Failed to resolve conflicts for $branch"
+                    git merge --abort 2>/dev/null || true
+                    ((FAILED_COUNT++))
                 fi
             else
-                print_error "Failed to switch back to main after processing $BRANCH"
-                FAILED=$((FAILED + 1))
-                echo "FAILED (checkout main): $BRANCH" >> "$LOG_FILE"
+                echo "❌ Failed to merge $branch"
+                git merge --abort 2>/dev/null || true
+                ((FAILED_COUNT++))
             fi
-        else
-            print_warning "Could not checkout branch: $BRANCH (might be local only or already deleted)"
-            FAILED=$((FAILED + 1))
-            echo "FAILED (checkout): $BRANCH" >> "$LOG_FILE"
         fi
         
-        # Progress update
-        if [ $((PROCESSED % 10)) -eq 0 ]; then
-            print_status "Progress: $PROCESSED/$TOTAL_BRANCHES processed, $SUCCESSFUL successful, $FAILED failed"
-        fi
+        # Clean up any stray files
+        git clean -fd 2>/dev/null || true
     done
     
-    # Brief pause between batches
-    print_status "Batch $BATCH_NUM completed. Pausing briefly..."
+    # Push changes after each batch
+    echo "📤 Pushing batch $BATCH_NUMBER changes..."
+    if git push origin main; then
+        echo "✅ Batch $BATCH_NUMBER pushed successfully"
+    else
+        echo "❌ Failed to push batch $BATCH_NUMBER"
+    fi
+    
+    ((BATCH_NUMBER++))
+    
+    # Brief pause between batches to avoid overwhelming the system
+    echo "⏸️  Brief pause before next batch..."
     sleep 2
 done
 
-# Final summary
-print_success "🎉 Merge operation completed!"
-print_status "Summary:"
-print_status "- Total branches processed: $PROCESSED"
-print_status "- Successfully merged: $SUCCESSFUL"
-print_status "- Failed: $FAILED"
-print_status "- Log file: $LOG_FILE"
+# Final push
+echo "📤 Final push to origin/main..."
+if git push origin main; then
+    echo "✅ Successfully pushed all merged changes"
+else
+    echo "⚠️  Failed to push final changes"
+fi
 
-# Final status check
-print_status "Final repository status:"
-run_with_timeout "git status" 30 || true
+echo ""
+echo "🎉 Comprehensive merge process completed!"
+echo "📅 Completed at: $(date)"
+echo "📊 Final Summary:"
+echo "   ✅ Successful merges: $SUCCESS_COUNT"
+echo "   🔧 Conflicts resolved: $CONFLICT_RESOLVED_COUNT"
+echo "   ❌ Failed merges: $FAILED_COUNT"
+echo "   ⚠️  Skipped branches: $SKIPPED_COUNT"
+echo "   📋 Already up-to-date: $ALREADY_UPTODATE_COUNT"
+echo "   📊 Total processed: $((SUCCESS_COUNT + FAILED_COUNT + SKIPPED_COUNT + ALREADY_UPTODATE_COUNT))"
 
-# Show recent commits
-print_status "Recent commits:"
-run_with_timeout "git log --oneline -10" 30 || true
+# Calculate success rate
+if [ $((SUCCESS_COUNT + FAILED_COUNT)) -gt 0 ]; then
+    SUCCESS_RATE=$((SUCCESS_COUNT * 100 / (SUCCESS_COUNT + FAILED_COUNT)))
+    echo "   📈 Success rate: $SUCCESS_RATE%"
+fi
 
-echo "Merge operation completed at $(date)" >> "$LOG_FILE"
-print_success "✅ All branches have been processed and merged into main!"
+# Show final status
+echo ""
+echo "🔍 Final repository status:"
+git status --short
+echo ""
+echo "📈 Latest commits:"
+git log --oneline -5
+
+echo ""
+echo "✅ All branches have been processed!"

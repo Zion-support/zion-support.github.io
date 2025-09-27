@@ -1,90 +1,137 @@
-#!/usr/bin/env node
-
 const fs = require('fs');
 const path = require('path');
 
 // Function to fix common syntax errors
 function fixSyntaxErrors(content) {
-  let fixed = content;
-  
-  // Fix trailing commas in imports and exports
-  fixed = fixed.replace(/,(\s*)$/gm, ';$1');
-  
-  // Fix object property syntax (colon instead of semicolon)
-  fixed = fixed.replace(/(\w+);(\s*)(\w+)/g, '$1: $3');
-  
-  // Fix color values (30o0 -> 300, etc.)
-  fixed = fixed.replace(/(\d+)o0/g, '$100');
-  fixed = fixed.replace(/(\d+)o(\d+)/g, '$1$2');
-  
-  // Fix JSX closing tags (>, -> >)
-  fixed = fixed.replace(/>,(\s*<\/[^>]+>)/g, '>$1');
-  
-  // Fix template literals and string concatenation
-  fixed = fixed.replace(/`([^`]*)\$\{([^}]+)\}`([^`]*)/g, '`$1${$2}$3`');
-  
-  // Fix function declarations
-  fixed = fixed.replace(/export\s+default\s+function\s+(\w+)\(\s*\)\s*:\s*React\.ReactElement\s*{/g, 'export default function $1(): React.ReactElement {');
-  
-  // Fix array and object syntax
-  fixed = fixed.replace(/\[\s*([^[\]]*)\s*\]/g, (match, content) => {
-    if (content.trim()) {
-      return '[' + content.split(',').map(item => item.trim()).join(', ') + ']';
+  // Fix import statements with missing commas
+  content = content.replace(/import React \{ ([^}]+) \} from/g, (match, imports) => {
+    const cleanImports = imports.replace(/\s+/g, ' ').trim();
+    return `import React, { ${cleanImports} } from`;
+  });
+
+  // Fix variable names with spaces
+  content = content.replace(/\b(\w+)\s+(\w+)\s*=/g, (match, part1, part2) => {
+    if (part1.length > 1 && part2.length > 1) {
+      return `${part1}${part2} =`;
     }
     return match;
   });
-  
-  // Fix conditional expressions
-  fixed = fixed.replace(/\?\s*([^:]+)\s*,\s*:\s*([^,}]+)/g, '? $1 : $2');
-  
-  // Fix missing semicolons after statements
-  fixed = fixed.replace(/([^;}])\s*$/gm, '$1;');
-  
-  // Fix JSX attributes
-  fixed = fixed.replace(/className=\{`([^`]*)`\}/g, 'className={`$1`}');
-  
-  return fixed;
+
+  // Fix object property names with spaces
+  content = content.replace(/(\w+)\s+(\w+)\s*:/g, (match, part1, part2) => {
+    if (part1.length > 1 && part2.length > 1) {
+      return `${part1}${part2}:`;
+    }
+    return match;
+  });
+
+  // Fix destructuring with spaces
+  content = content.replace(/\{\s*(\w+)\s+(\w+)\s*(\w+)\s*\}/g, (match, part1, part2, part3) => {
+    if (part1.length > 1 && part2.length > 1 && part3.length > 1) {
+      return `{ ${part1}${part2}${part3} }`;
+    }
+    return match;
+  });
+
+  // Fix function names with spaces
+  content = content.replace(/\bfunction\s+(\w+)\s+(\w+)\s*\(/g, (match, part1, part2) => {
+    if (part1.length > 1 && part2.length > 1) {
+      return `function ${part1}${part2}(`;
+    }
+    return match;
+  });
+
+  // Fix const declarations with spaces
+  content = content.replace(/\bconst\s+(\w+)\s+(\w+)\s*=/g, (match, part1, part2) => {
+    if (part1.length > 1 && part2.length > 1) {
+      return `const ${part1}${part2} =`;
+    }
+    return match;
+  });
+
+  // Fix string literals with spaces
+  content = content.replace(/'([^']*)\s+([^']*)'/g, (match, part1, part2) => {
+    if (part1.length > 1 && part2.length > 1) {
+      return `'${part1}${part2}'`;
+    }
+    return match;
+  });
+
+  // Fix template literals with spaces
+  content = content.replace(/`([^`]*)\s+([^`]*)`/g, (match, part1, part2) => {
+    if (part1.length > 1 && part2.length > 1) {
+      return `\`${part1}${part2}\``;
+    }
+    return match;
+  });
+
+  // Fix JSX className with spaces
+  content = content.replace(/className="([^"]*)\s+([^"]*)"/g, (match, part1, part2) => {
+    if (part1.length > 1 && part2.length > 1) {
+      return `className="${part1}${part2}"`;
+    }
+    return match;
+  });
+
+  // Fix missing commas in object literals
+  content = content.replace(/(\w+):\s*'([^']+)'\s*(\w+):/g, '$1: \'$2\',\n      $3:');
+  content = content.replace(/(\w+):\s*"([^"]+)"\s*(\w+):/g, '$1: "$2",\n      $3:');
+
+  // Fix missing commas in arrays
+  content = content.replace(/(\w+)\s*(\w+)\s*\[/g, '$1$2[');
+
+  // Fix missing semicolons
+  content = content.replace(/(\w+)\s*(\w+)\s*=\s*\[/g, '$1$2 = [');
+  content = content.replace(/(\w+)\s*(\w+)\s*\(/g, '$1$2(');
+
+  return content;
 }
 
-// Function to recursively find and fix files
-function fixFilesInDirectory(dirPath) {
-  const items = fs.readdirSync(dirPath);
-  
-  for (const item of items) {
-    const fullPath = path.join(dirPath, item);
-    const stat = fs.statSync(fullPath);
+// Function to process a file
+function processFile(filePath) {
+  try {
+    const content = fs.readFileSync(filePath, 'utf8');
+    const fixedContent = fixSyntaxErrors(content);
     
-    if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-      fixFilesInDirectory(fullPath);
-    } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
-      try {
-        const content = fs.readFileSync(fullPath, 'utf8');
-        const fixed = fixSyntaxErrors(content);
-        
-        if (content !== fixed) {
-          fs.writeFileSync(fullPath, fixed);
-          console.log(`Fixed: ${fullPath}`);
-        }
-      } catch (error) {
-        console.error(`Error fixing ${fullPath}:`, error.message);
+    if (content !== fixedContent) {
+      fs.writeFileSync(filePath, fixedContent, 'utf8');
+      console.log(`Fixed: ${filePath}`);
+      return true;
+    }
+    return false;
+  } catch (error) {
+    console.error(`Error processing ${filePath}:`, error.message);
+    return false;
+  }
+}
+
+// Function to recursively find and process files
+function processDirectory(dirPath) {
+  const files = fs.readdirSync(dirPath);
+  let fixedCount = 0;
+
+  for (const file of files) {
+    const filePath = path.join(dirPath, file);
+    const stat = fs.statSync(filePath);
+
+    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
+      fixedCount += processDirectory(filePath);
+    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {
+      if (processFile(filePath)) {
+        fixedCount++;
       }
     }
   }
+
+  return fixedCount;
 }
 
 // Main execution
 console.log('Starting syntax error fixes...');
+const fixedCount = processDirectory('./pages');
+console.log(`Fixed ${fixedCount} files in pages directory`);
 
-// Fix zion-os directory
-if (fs.existsSync('/workspace/zion-os/src')) {
-  console.log('Fixing zion-os files...');
-  fixFilesInDirectory('/workspace/zion-os/src');
-}
-
-// Fix zion-website directory
-if (fs.existsSync('/workspace/zion-website/src')) {
-  console.log('Fixing zion-website files...');
-  fixFilesInDirectory('/workspace/zion-website/src');
-}
+const srcFixedCount = processDirectory('./src');
+console.log(`Fixed ${srcFixedCount} files in src directory`);
 
 console.log('Syntax error fixes completed!');

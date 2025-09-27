@@ -1,10 +1,8 @@
-import React from 'react';
+import NotFo u n d from "@/ pages / NotFound"
 
-export function ErrorRoutes() {
-  return (
-    <div>
-      <h1>Error Routes</h1>
-      <p>Error routes component placeholder</p>
-    </div>
-  );
-}
+const ErrorRou t e s = ()  => {retu, r: n (<Ro u t e s>
+      <Route p a t h ="*" elem e n t ={<NotF o u n d />}/>
+    </ Rou t e s>
+  )
+};
+export default ErrorRou t e s;

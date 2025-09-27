@@ -1,0 +1,224 @@
+import React, { useState, useEffect } from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import SEO from '../src/components/SEO';
+import { useAnalytics } from '../src/hooks/useAnalytics';
+
+export default function Contact(): JSX.Element {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    company: '',
+    subject: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
+  const { trackClick } = useAnalytics();
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    
+    // Simulate form submission
+    await new Promise(resolve => setTimeout(resolve, 2000));
+    
+    setIsSubmitting(false);
+    trackClick('contact-form-submit', 'conversion');
+    alert('Thank you for your message! We\'ll get back to you soon.');
+    
+    // Reset form
+    setFormData({
+      name: '',
+      email: '',
+      company: '',
+      subject: '',
+      message: ''
+    });
+  };
+
+  const contactInfo = [
+    {
+      icon: '📧',
+      title: 'Email Us',
+      details: 'hello@zionapp.com',
+      description: 'Send us an email and we\'ll respond within 24 hours.'
+    },
+    {
+      icon: '📞',
+      title: 'Call Us',
+      details: '+1 (555) 123-4567',
+      description: 'Mon-Fri from 9am to 6pm EST'
+    },
+    {
+      icon: '📍',
+      title: 'Visit Us',
+      details: '123 Tech Street Silicon Valley CA 94000',
+      description: 'Come say hello at our office'
+    }
+  ];
+
+  return (
+    <>
+      <SEO />
+      <Head>
+        <title>Contact U s - Z i o n Ap p</title>
+        <meta name="description" content="Ge t i n to u c h w i t h Z i o n Ap p. W e'r e h e r e t o h e l p yo u transf o r m y o u r busin e s s w i t h cutt i n g-e d g e technol o g y soluti o n s." />
+        <meta name="viewp o r t" content="wi d t h=dev i c e-wi d t h init i a l-sc a l e=1" />
+      </Head>
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 pt-20">
+        <div className="container mx-auto px-4 py-8 max-w-7xl">
+          <nav className="mb-8">
+            <Link href="/" className="text-blue-600 hover:text-blue-800 font-medium transition-colors">
+              ← Back to Home
+            </Link>
+          </nav>
+
+          <header className="text-center mb-16">
+            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+              Contact Us
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Ready to transform your business? Let&apos;s discuss how we can help you achieve your goals.
+            </p>
+          </header>
+
+          <di v classN a m e="g r i d g r i d-c o l s-1 l g:g r i d-c o l s-2 ga p-1 2">
+            {/* Contact F o r m */}
+            <di v classN a m e="b g-wh i t e roun d e d-2x l sha d o w-x l p-8">
+              <h 2 classN a m e="t e x t-2x l f o n t-b o l d t e x t-g r a y-90 0 m b-6">S e n d u s a Mess a g e</h 2>
+              <f o r m onSub m i t={handleSub m i t} classN a m e="sp a c e-y-6">
+                <di v classN a m e="g r i d g r i d-c o l s-1 m d:g r i d-c o l s-2 ga p-6">
+                  <di v>
+                    <la b e l html F o r="n a m e" classN a m e="bl o c k t e x t-s m f o n t-med i u m t e x t-g r a y-70 0 m b-2">
+                      F u l l N a m e *
+                    </la b e l>
+                    <in p u t
+                      type="t e x t"
+                      i d="n a m e"
+                      name="n a m e"
+                      va l u e={formData.n a m e}
+                      onCha n g e={handleInputCha n g e}
+                      requi r e d
+                      classN a m e="w-f u l l p x-4 p y-3 bor d e r bor d e r-g r a y-30 0 roun d e d-l g fo c u s:r i n g-2 fo c u s:r i n g-b l u e-50 0 fo c u s:bor d e r-transpar e n t"
+                      placehol d e r="Y o u r f u l l n a m e"
+                    />
+                  </di v>
+                  <di v>
+                    <la b e l html F o r="em a i l" classN a m e="bl o c k t e x t-s m f o n t-med i u m t e x t-g r a y-70 0 m b-2">
+                      Em a i l Addr e s s *
+                    </la b e l>
+                    <in p u t
+                      type="em a i l"
+                      i d="em a i l"
+                      name="em a i l"
+                      va l u e={formData.em a i l}
+                      onCha n g e={handleInputCha n g e}
+                      requi r e d
+                      classN a m e="w-f u l l p x-4 p y-3 bor d e r bor d e r-g r a y-30 0 roun d e d-l g fo c u s:r i n g-2 fo c u s:r i n g-b l u e-50 0 fo c u s:bor d e r-transpar e n t"
+                      placehol d e r="y o u r.em a i l@exam p l e.co m"
+                    />
+                  </di v>
+                </di v>
+                <di v>
+                  <la b e l html F o r="comp a n y" classN a m e="bl o c k t e x t-s m f o n t-med i u m t e x t-g r a y-70 0 m b-2">
+                    Comp a n y
+                  </la b e l>
+                  <in p u t
+                    type="t e x t"
+                    i d="comp a n y"
+                    name="comp a n y"
+                    va l u e={formData.comp a n y}
+                    onCha n g e={handleInputCha n g e}
+                    classN a m e="w-f u l l p x-4 p y-3 bor d e r bor d e r-g r a y-30 0 roun d e d-l g fo c u s:r i n g-2 fo c u s:r i n g-b l u e-50 0 fo c u s:bor d e r-transpar e n t"
+                    placehol d e r="Y o u r comp a n y n a m e"
+                  />
+                </di v>
+                <di v>
+                  <la b e l html F o r="subj e c t" classN a m e="bl o c k t e x t-s m f o n t-med i u m t e x t-g r a y-70 0 m b-2">
+                    Subj e c t *
+                  </la b e l>
+                  <in p u t
+                    type="t e x t"
+                    i d="subj e c t"
+                    name="subj e c t"
+                    va l u e={formData.subj e c t}
+                    onCha n g e={handleInputCha n g e}
+                    requi r e d
+                    classN a m e="w-f u l l p x-4 p y-3 bor d e r bor d e r-g r a y-30 0 roun d e d-l g fo c u s:r i n g-2 fo c u s:r i n g-b l u e-50 0 fo c u s:bor d e r-transpar e n t"
+                    placehol d e r="W h a t ca n w e h e l p yo u w i t h?"
+                  />
+                </di v>
+                <di v>
+                  <la b e l html F o r="mess a g e" classN a m e="bl o c k t e x t-s m f o n t-med i u m t e x t-g r a y-70 0 m b-2">
+                    Mess a g e *
+                  </la b e l>
+                  <texta r e a
+                    i d="mess a g e"
+                    name="mess a g e"
+                    va l u e={formData.mess a g e}
+                    onCha n g e={handleInputCha n g e}
+                    requi r e d
+                    r o w s={6}
+                    classN a m e="w-f u l l p x-4 p y-3 bor d e r bor d e r-g r a y-30 0 roun d e d-l g fo c u s:r i n g-2 fo c u s:r i n g-b l u e-50 0 fo c u s:bor d e r-transpar e n t"
+                    placehol d e r="T e l l u s ab o u t y o u r proj e c t o r quest i o n..."
+                  />
+                </di v>
+                <but t o n
+                  type="sub m i t"
+                  disab l e d={isSubmitt i n g}
+                  classN a m e="w-f u l l b g-b l u e-60 0 t e x t-wh i t e p y-3 p x-6 roun d e d-l g f o n t-semib o l d ho v e r:b g-b l u e-70 0 transit i o n-col o r s disab l e d:opac i t y-5 0 disab l e d:cur s o r-no t-allo w e d"
+                >
+                  {isSubmitt i n g ? 'Send i n g...' : 'S e n d Mess a g e'}
+                </but t o n>
+              </f o r m>
+            </di v>
+
+            {/* Contact Informat i o n */}
+            <di v classN a m e="sp a c e-y-8">
+              <di v>
+                <h 2 classN a m e="t e x t-2x l f o n t-b o l d t e x t-g r a y-90 0 m b-6">Ge t i n To u c h</h 2>
+                <p classN a m e="t e x t-g r a y-60 0 m b-8">
+                  W e&a p o s;r e h e r e t o h e l p yo u succ e e d. Re a c h ou t t o u s thro u g h an y o f th e chann e l s be l o w an d w e&a p o s;l l ge t b a c k t o yo u a s s o o n a s possi b l e.
+                </p>
+              </di v>
+
+              <di v classN a m e="sp a c e-y-6">
+                {contactI n f o.ma p((i n f o in d e x) => (
+                  <di v ke y={in d e x} classN a m e="f l e x it e m s-st a r t sp a c e-x-4 p-6 b g-wh i t e roun d e d-x l sha d o w-l g">
+                    <di v classN a m e="t e x t-3x l">{i n f o.icon}</di v>
+                    <di v>
+                      <h 3 classN a m e="t e x t-l g f o n t-semib o l d t e x t-g r a y-90 0 m b-2">{i n f o.title}</h 3>
+                      <p classN a m e="t e x t-b l u e-60 0 f o n t-med i u m m b-1">{i n f o.details}</p>
+                      <p classN a m e="t e x t-g r a y-60 0 t e x t-s m">{i n f o.description}</p>
+                    </di v>
+                  </di v>
+                ))}
+              </di v>
+
+              <di v classN a m e="b g-b l u e-5 0 roun d e d-x l p-6">
+                <h 3 classN a m e="t e x t-l g f o n t-semib o l d t e x t-g r a y-90 0 m b-3">Respo n s e T i m e</h 3>
+                <p classN a m e="t e x t-g r a y-60 0 t e x t-s m">
+                  W e typica l l y resp o n d t o al l inquir i e s wit h i n 2 4 ho u r s dur i n g busin e s s d a y s. 
+                  Fo r urg e n t matt e r s ple a s e c a l l u s direc t l y.
+                </p>
+              </di v>
+            </di v>
+          </di v>
+        </di v>
+      </di v>
+    </>
+  )}
