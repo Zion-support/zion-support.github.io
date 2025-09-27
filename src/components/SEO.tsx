@@ -1,5 +1,4 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React, { useEffect } from 'react';
 
 interface SEOProps {
   title?: string;
@@ -38,15 +37,7 @@ const SEO: React.FC<SEOProps> = ({
   image = '/images/og-image.jpg',
   url = 'https://ziontechgroup.com',
   type = 'website',
-  author = 'Zion Tech Group',
-  publishedTime,
-  modifiedTime,
-  section,
-  tags = [],
-  noindex = false,
-  nofollow = false,
   canonical,
-  alternate = [],
   structuredData
 }) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
@@ -77,83 +68,66 @@ const SEO: React.FC<SEOProps> = ({
 
   const mergedStructuredData = structuredData || defaultStructuredData;
 
-  return (
-    <Helmet>
-      {/* Basic Meta Tags */}
-      <title>{fullTitle}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords.join(', ')} />
-      <meta name="author" content={author} />
-      
-      {/* Robots */}
-      <meta name="robots" content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`} />
-      
-      {/* Canonical URL */}
-      <link rel="canonical" href={fullUrl} />
-      
-      {/* Alternate Languages */}
-      {alternate.map((alt, index) => (
-        <link key={index} rel="alternate" hrefLang={alt.hreflang} href={alt.href} />
-      ))}
-      
-      {/* Open Graph */}
-      <meta property="og:type" content={type} />
-      <meta property="og:title" content={fullTitle} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={fullImage} />
-      <meta property="og:url" content={fullUrl} />
-      <meta property="og:site_name" content="Zion Tech Group" />
-      <meta property="og:locale" content="en_US" />
-      
-      {/* Article specific */}
-      {type === 'article' && publishedTime && (
-        <meta property="article:published_time" content={publishedTime} />
-      )}
-      {type === 'article' && modifiedTime && (
-        <meta property="article:modified_time" content={modifiedTime} />
-      )}
-      {type === 'article' && author && (
-        <meta property="article:author" content={author} />
-      )}
-      {type === 'article' && section && (
-        <meta property="article:section" content={section} />
-      )}
-      {type === 'article' && tags.map((tag, index) => (
-        <meta key={index} property="article:tag" content={tag} />
-      ))}
-      
-      {/* Twitter Card */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={fullTitle} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={fullImage} />
-      <meta name="twitter:site" content="@ziontechgroup" />
-      <meta name="twitter:creator" content="@ziontechgroup" />
-      
-      {/* Additional Meta Tags */}
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta name="theme-color" content="#1e40af" />
-      <meta name="msapplication-TileColor" content="#1e40af" />
-      <meta name="apple-mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
-      
-      {/* Favicon */}
-      <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-      <link rel="icon" type="image/png" href="/favicon.png" />
-      <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-      <link rel="manifest" href="/site.webmanifest" />
-      
-      {/* Preconnect to external domains */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      
-      {/* Structured Data */}
-      <script type="application/ld+json">
-        {JSON.stringify(mergedStructuredData)}
-      </script>
-    </Helmet>
-  );
+  useEffect(() => {
+    // Update document title
+    document.title = fullTitle;
+    
+    // Update meta description
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', description);
+    } else {
+      const meta = document.createElement('meta');
+      meta.name = 'description';
+      meta.content = description;
+      document.head.appendChild(meta);
+    }
+    
+    // Update meta keywords
+    const metaKeywords = document.querySelector('meta[name="keywords"]');
+    if (metaKeywords) {
+      metaKeywords.setAttribute('content', keywords.join(', '));
+    } else {
+      const meta = document.createElement('meta');
+      meta.name = 'keywords';
+      meta.content = keywords.join(', ');
+      document.head.appendChild(meta);
+    }
+
+    // Update Open Graph tags
+    const updateMetaProperty = (property: string, content: string) => {
+      const meta = document.querySelector(`meta[property="${property}"]`);
+      if (meta) {
+        meta.setAttribute('content', content);
+      } else {
+        const newMeta = document.createElement('meta');
+        newMeta.setAttribute('property', property);
+        newMeta.content = content;
+        document.head.appendChild(newMeta);
+      }
+    };
+
+    updateMetaProperty('og:type', type);
+    updateMetaProperty('og:title', fullTitle);
+    updateMetaProperty('og:description', description);
+    updateMetaProperty('og:image', fullImage);
+    updateMetaProperty('og:url', fullUrl);
+    updateMetaProperty('og:site_name', 'Zion Tech Group');
+    updateMetaProperty('og:locale', 'en_US');
+
+    // Add structured data
+    const existingScript = document.querySelector('script[type="application/ld+json"]');
+    if (existingScript) {
+      existingScript.textContent = JSON.stringify(mergedStructuredData);
+    } else {
+      const script = document.createElement('script');
+      script.type = 'application/ld+json';
+      script.textContent = JSON.stringify(mergedStructuredData);
+      document.head.appendChild(script);
+    }
+  }, [fullTitle, description, keywords, type, fullImage, fullUrl, mergedStructuredData]);
+
+  return null;
 };
 
 export default SEO;
