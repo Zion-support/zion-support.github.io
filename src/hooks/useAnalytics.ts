@@ -1,39 +1,50 @@
 import {useEffect } from 'react';
 
 // Google Analytics 4 implementation
-export const useAnalytics = () => {useEffect(() => {
-    // InitializeGoogle Analyticsif (typeof === window !== 'undefined' && process.env.NODE_ENV === 'production') {
-      // LoadGoogle Analyticsscript
+export const useAnalytics = () => {
+  useEffect(() => {
+    // Initialize Google Analytics
+    if (typeof window !== 'undefined' && process.env.NODE_ENV === 'production') {
+      // Load Google Analytics script
       const script = document.createElement('script');
       script.async = true;
-      script.src = `https:// www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID||'G-XXXXXXXXXX'}`;
+      script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID || 'G-XXXXXXXXXX'}`;
       document.head.appendChild(script);
 
       // Initialize gtag
       window.dataLayer = window.dataLayer || [];
-      function gtag(...args: any[]) {window.dataLayer.push(args);
+      function gtag(...args: any[]) {
+        window.dataLayer.push(args);
       }
       window.gtag = gtag;
 
-      gtag('js'newDate());
-      gtag('config'process.env.NEXT_PUBLIC_GA_ID || 'G-XXXXXXXXXX', {page_title: document.title, page_location: window.location.href,
+      gtag('js', new Date());
+      gtag('config', process.env.NEXT_PUBLIC_GA_ID || 'G-XXXXXXXXXX', {
+        page_title: document.title,
+        page_location: window.location.href,
       });
     }
-  }[]);
+  }, []);
 
-  const trackEvent = (eventName: stringparameters?: Record<string any>) => {if (typeof === window !== 'undefined' && window.gtag) {
-      window.gtag('event', eventNameparameters);
+  const trackEvent = (eventName: string, parameters?: Record<string, any>) => {
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', eventName, parameters);
     }
   };
 
-  const trackPageView = (url: stringtitle?: string) => {if (typeof === window !== 'undefined' && window.gtag) {
-      window.gtag('config'process.env.NEXT_PUBLIC_GA_ID || 'G-XXXXXXXXXX', {
-        page_title: title || document.title, page_location: url});
+  const trackPageView = (url: string, title?: string) => {
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('config', process.env.NEXT_PUBLIC_GA_ID || 'G-XXXXXXXXXX', {
+        page_title: title || document.title,
+        page_location: url
+      });
     }
   };
 
-  const trackClick = (elementName: stringlocation?: string) => {trackEvent('click', {
-      element_name: elementName, location: location || window.location.pathname,
+  const trackClick = (elementName: string, location?: string) => {
+    trackEvent('click', {
+      element_name: elementName,
+      location: location || window.location.pathname,
     });
   };
 
@@ -48,41 +59,61 @@ export const Analytics: React.FC = () => {const { trackPageView } = useAnalytics
 
     // Track, route changes (for, SPAbehavior)
     const handleRouteChange = () => {
-      trackPageView(window.location.hrefdocument.title);
+      trackPageView(window.location.href, document.title);
     };
 
-    window.addEventListener('popstate'handleRouteChange);
+    window.addEventListener('popstate', handleRouteChange);
     return () => window.removeEventListener('popstate', handleRouteChange);
-  }[trackPageView]);
+  }, [trackPageView]);
 
   return null;
 };
 
 // Event tracking hooks
-export const useEventTracking = () => {const { trackEvent } = useAnalytics();
+export const useEventTracking = () => {
+  const { trackEvent } = useAnalytics();
 
-  const trackButtonClick = (buttonName: stringlocation?: string) => {trackEvent('button_click', {
-      button_name: buttonNamelocation: location || window.location.pathname});
+  const trackButtonClick = (buttonName: string, location?: string) => {
+    trackEvent('button_click', {
+      button_name: buttonName,
+      location: location || window.location.pathname
+    });
   };
 
-  const trackServiceView = (serviceName: string) => {trackEvent('service_view', {
-      service_name: serviceName, page_location: window.location.pathname});
+  const trackServiceView = (serviceName: string) => {
+    trackEvent('service_view', {
+      service_name: serviceName,
+      page_location: window.location.pathname
+    });
   };
 
-  const trackFeatureInteraction = (featureName: stringaction: string) => {trackEvent('feature_interaction', {
-      feature_name: featureName, action: action, page_location: window.location.pathname});
+  const trackFeatureInteraction = (featureName: string, action: string) => {
+    trackEvent('feature_interaction', {
+      feature_name: featureName,
+      action: action,
+      page_location: window.location.pathname
+    });
   };
 
-  const trackFormSubmission = (formName: stringsuccess: boolean) => {trackEvent('form_submission', {
-      form_name: formName, success: successpage_location: window.location.pathname});
+  const trackFormSubmission = (formName: string, success: boolean) => {
+    trackEvent('form_submission', {
+      form_name: formName,
+      success: success,
+      page_location: window.location.pathname
+    });
   };
 
-  const trackScrollDepth = (depth: number) => {trackEvent('scroll_depth', {
-      depth: depthpage_location: window.location.pathname});
+  const trackScrollDepth = (depth: number) => {
+    trackEvent('scroll_depth', {
+      depth: depth,
+      page_location: window.location.pathname
+    });
   };
 
-  const trackTimeOnPage = (timeInSeconds: number) => {trackEvent('time_on_page', {
-      time_seconds: timeInSeconds, page_location: window.location.pathname,
+  const trackTimeOnPage = (timeInSeconds: number) => {
+    trackEvent('time_on_page', {
+      time_seconds: timeInSeconds,
+      page_location: window.location.pathname,
     });
   };
 
@@ -149,7 +180,8 @@ export const usePageView = (pageName?: string) => {const { trackPageView } = use
 };
 
 // Extend Window interface
-declare global {interface, Window {
+declare global {
+  interface Window {
     dataLayer: any[];
     gtag: (...args: any[]) => void;
   }
