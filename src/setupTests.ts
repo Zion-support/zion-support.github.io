@@ -23,7 +23,7 @@ global.PerformanceObserver = class PerformanceObserver {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   observe(_options?: PerformanceObserverInit) {}
   takeRecords() { return []; }
-} as any;
+} as PerformanceObserver;
 
 // Mock window.scrollTo
 Object.defineProperty(window, 'scrollTo', {
@@ -167,7 +167,7 @@ Object.defineProperty(window, 'crypto', {
 
 // Suppress console warnings in tests
 const originalConsoleWarn = console.warn;
-console.warn = (...args: any[]) => {
+console.warn = (...args: unknown[]) => {
   // Suppress specific warnings that are expected in test environment
   if (
     args[0]?.includes?.('React Router') ||

@@ -406,7 +406,7 @@ export class PerformanceOptimizer {
           const observer = new PerformanceObserver((list) => {
             const entries = list.getEntries();
             entries.forEach(entry => {
-              const value = (entry as any).value || entry.startTime;
+              const value = (entry as PerformanceEntry & { value?: number }).value || entry.startTime;
               console.log(`Web Vital ${vital}:`, value);
               // Send to analytics service
               this.reportWebVital(vital, value);
