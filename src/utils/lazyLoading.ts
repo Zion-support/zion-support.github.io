@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 interface UseLazyLoadingOptions {
   rootMargin?: string;
@@ -21,17 +21,20 @@ export const useLazyLoading = (options: UseLazyLoadingOptions = {}) => {
     const element = elementRef.current;
     if (!element) return;
 
-    const observer = new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting) {
-        setIsVisible(true);
-        if (triggerOnce) {
-          setHasTriggered(true);
-          observer.unobserve(element);
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          if (triggerOnce) {
+            setHasTriggered(true);
+            observer.unobserve(element);
+          }
+        } else if (!triggerOnce) {
+          setIsVisible(false);
         }
-      } else if (!triggerOnce) {
-        setIsVisible(false);
-      }
-    }, { rootMargin, threshold });
+      },
+      { rootMargin, threshold }
+    );
 
     observer.observe(element);
 
@@ -49,7 +52,6 @@ export const useLazyLoading = (options: UseLazyLoadingOptions = {}) => {
 export const useImageLazyLoading = (src: string, placeholder?: string) => {
   const [imageSrc, setImageSrc] = useState(placeholder || "");
   const [isLoaded, setIsLoaded] = useState(false);
-  
   const { elementRef, isVisible } = useLazyLoading();
 
   useEffect(() => {
