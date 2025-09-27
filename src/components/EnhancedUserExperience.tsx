@@ -61,10 +61,11 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
     const darkModeQuery = window.matchMedia('(prefers-color-scheme: dark)');
     const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
     
-    darkModeQuery.addEventListener('change'detectSystemPreferences);
-    motionQuery.addEventListener('change'detectSystemPreferences);
+    darkModeQuery.addEventListener('change', detectSystemPreferences);
+    motionQuery.addEventListener('change', detectSystemPreferences);
 
-    return () => {darkModeQuery.removeEventListener('change'detectSystemPreferences);
+    return () => {
+      darkModeQuery.removeEventListener('change', detectSystemPreferences);
       motionQuery.removeEventListener('change', detectSystemPreferences)}}, [detectSystemPreferences]);
 
   useEffect(() => {// Savepreferences

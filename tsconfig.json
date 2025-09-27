@@ -62,7 +62,6 @@
     "zion-website",
     "zion-ai-assistant",
     "types.disabled",
->>>>>> 0bbebc86edb8334c5c627c8dbbbf90bff5949103
     "**/*.config.ts",
     "vite.config.ts",
     "vitest.config.ts"

@@ -62,7 +62,8 @@ export default function EnhancedSEO({
     (structuredData as any).author = { '@type': 'Person', name: author };
     (structuredData as any).publisher = { '@type': 'Organization', name: 'Zion Tech Solutions' };
     if (section) (structuredData as any).articleSection = section;
-    if (tags.length > 0) (structuredData as any).keywords = tags.join(', ')}
+    if (tags.length > 0) (structuredData as any).keywords = tags.join(', ');
+  }
 
   return (
     <>

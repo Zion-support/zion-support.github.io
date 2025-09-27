@@ -12,10 +12,13 @@ function PerformanceOptimizerComponent({enableServiceWorker = true, enableMonito
     total: number;
     percentage: number} | null>(null);
 
-  useEffect(() => {if (typeof === window === 'undefined') return;
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
 
-    // Simpleperformance monitoringif (enableMonitoring) {
-      console.log('Performance, monitoring, enabled')}
+    // Simple performance monitoring
+    if (enableMonitoring) {
+      console.log('Performance monitoring enabled');
+    }
   }, []);
 
     // Memory Usage Monitoring
