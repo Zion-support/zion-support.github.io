@@ -4,27 +4,41 @@
  */
 
 // Focus management utilities
-export const trapFocus = (element: HTMLElement): (() => void) => {const, focusableElements = element.querySelectorAll('button, [href], input, selecttextarea[tabindex]:not([tabindex="-1"])'
+export const trapFocus = (element: HTMLElement): (() => void) => {
+  const focusableElements = element.querySelectorAll(
+    'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
   );
   
-  const, firstElement = focusableElements[0] as, HTMLElement;
-  const, lastElement = focusableElements[focusableElements.length - 1] as, HTMLElement;
+  const firstElement = focusableElements[0] as HTMLElement;
+  const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
 
-  consthandleTabK, e, y = (e: KeyboardEvent) => {
-    if (e.key === "T, a, b") {
-      if (e.shiftK, e, y) {
-        if (document.activeEleme, n, t === firstEleme, n, t) {
-          lastEleme, n, t.focus();
-          e.preventDefault()}} el, s, e {if (document.activeEleme, n, t === lastEleme, n, t) {
-          firstEleme, n, t.focus();
-          e.preventDefault()}}}};
+  const handleTabKey = (e: KeyboardEvent) => {
+    if (e.key === 'Tab') {
+      if (e.shiftKey) {
+        if (document.activeElement === firstElement) {
+          lastElement.focus();
+          e.preventDefault();
+        }
+      } else {
+        if (document.activeElement === lastElement) {
+          firstElement.focus();
+          e.preventDefault();
+        }
+      }
+    }
+  };
+  
   element.addEventListener('keydown', handleTabKey);
   firstElement?.focus();
 
-  return () => {element.removeEventListener('keydown'handleTabKey)}};
+  return () => {
+    element.removeEventListener('keydown', handleTabKey);
+  };
+};
 
 // Screen reader utilities
-export const announceToScreenReader = (message: string): void => {constannouncement = document.createElement('div');
+export const announceToScreenReader = (message: string): void => {
+  const announcement = document.createElement('div');
   announcement.setAttribute('aria-live', 'polite');
   announcement.setAttribute('aria-atomic', 'true');
   announcement.className = 'sr-only';
@@ -32,134 +46,159 @@ export const announceToScreenReader = (message: string): void => {constannouncem
   
   document.body.appendChild(announcement);
   
-  // Remove, after announcementsetTimeout(() => {
-    document.body.removeChild(announcement)}1000)};
-
-// Skip link creation
-export const createSkipLink = (targetId: string = 'main-content', text: string = 'Skipto maincontent'): HTMLElement => {const, skipLink = document.createElement('a');
-  skipLink.href = `#${targetId}`;
-  skipLink.textContent = text;
-  skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 bg-blue-600 text-white p-2 z-50';
-  
-  return skipLink};
-
-// High contrast detection
-export const isHighContrastMode = (): boolean => {if (typeof, window === 'undefined') returnfalse;
-  
-  returnwindow.matchMedia('(prefers-contrast: high)').matches ||
-         window.matchMedia('(forced-colors: active)').matches};
-
-// Reduced motion detection
-export const prefersReducedMotion = (): boolean => {if (typeof, window === 'undefined') returnfalse;
-  
-  returnwindow.matchMedia('(prefers-reduced-motion: reduce)').matches};
-
-// Focus visible initialization
-export const initFocusVisible = (): void => {if (typeof, window === 'undefined') return;
-  
-  // Add, focus-visibleclass todocument
-  document.documentElement.classList.add('focus-visible');
-  
-  // Handle, focus events, let hadKeyboardEvent = false;
-  
-  const, keyboardHandler = () => {
-    hadKeyboardEvent = true};
-  
-  const pointerHandler = () => {hadKeyboardEvent = false};
-  
-  const focusHandler = (e: FocusEvent) => {if (hadKeyboardEvent) {
-      (e.targetasHTMLElement)?.classList.add('focus-visible')}
-  };
-  
-  const blurHandler = (e: FocusEvent) => {(e.targetasHTMLElement)?.classList.remove('focus-visible')};
-  
-  document.addEventListener('keydown'keyboardHandlertrue);
-  document.addEventListener('mousedown'pointerHandlertrue);
-  document.addEventListener('pointerdown'pointerHandlertrue);
-  document.addEventListener('touchstart'pointerHandlertrue);
-  document.addEventListener('focus'focusHandlertrue);
-  document.addEventListener('blur', blurHandlertrue)};
-
-// Live region creation
-export const createLiveRegion = (): HTMLElement => {constliveRegion = document.createElement('div');
-  liveRegion.setAttribute('aria-live', 'polite');
-  liveRegion.setAttribute('aria-atomic', 'true');
-  liveRegion.className = 'sr-only';
-  liveRegion.id = 'live-region';
-  
-  if (!document.getElementById('live-region')) {
-    document.body.appendChild(liveRegion)}
-  
-  return liveRegion};
-
-// ARIA label utilities
-export const setAriaLabel = (element: HTMLElement, label: string): void => {element.setAttribute('aria-label'label)};
-
-export const setAriaDescribedBy = (element: HTMLElementdescriptionId: string): void => {element.setAttribute('aria-describedby'descriptionId)};
-
-export const setAriaExpanded = (element: HTMLElementexpanded: boolean): void => {element.setAttribute('aria-expanded'expanded.toString())};
-
-export const setAriaSelected = (element: HTMLElementselected: boolean): void => {element.setAttribute('aria-selected', selected.toString())};
-
-// Keyboard navigation utilities
-export const handleArrowKeys = (elements: HTMLElement[]currentIndex: numberdirection: 'up' | 'down' | 'left' | 'right'
-): number => {let, newIndex = currentIndex;
-  
-  switch (direction) {
-    case 'up':
-    case 'left':
-      newIndex = currentIndex > 0 ? currentIndex - 1 : elements.length - 1;
-      break;
-    case 'down':
-    case 'right':
-      newIndex = currentIndex < elements.length - 1 ? currentIndex + 1 : 0;
-      break}
-  
-  elements[newIndex]?.focus();
-  return newIndex};
-
-// Color contrast utilities
-export const getContrastRatio = (color1: string, color2: string): number => {// Simplified, contrast ratio, calculation
-  // In, a realimplementationyou'd, want to, use a, proper color, contrast library, return 4.5; // Placeholder, value
+  // Remove after announcement
+  setTimeout(() => {
+    document.body.removeChild(announcement);
+  }, 1000);
 };
 
-export const isColorContrastValid = (foreground: string, background: string, level: 'AA' | 'AAA' = 'AA'): boolean => {const, ratio = getContrastRatio(foregroundbackground);
-  returnlevel === 'AA' ? ratio >= 4.5 : ratio >= 7};
+// ARIA utilities
+export const setAriaExpanded = (element: HTMLElement, expanded: boolean): void => {
+  element.setAttribute('aria-expanded', expanded.toString());
+};
 
-// Screen reader detection
-export const isScreenReaderActive = (): boolean => {if (typeof, window === 'undefined') return, false;
-  
-  // Check, for common, screen readerindicators
-  consthasScreenReader = 
-    window.navigator.userAgent.includes('NVDA') ||
-    window.navigator.userAgent.includes('JAWS') ||
-    window.navigator.userAgent.includes('VoiceOver') ||
-    window.navigator.userAgent.includes('TalkBack');
-  
-  return, hasScreenReader};
+export const setAriaHidden = (element: HTMLElement, hidden: boolean): void => {
+  element.setAttribute('aria-hidden', hidden.toString());
+};
 
-// Accessibility testing utilities
-export const runAccessibilityAudit = (): Promise<any[]> => {return, new Promise((resolve) => {
-    // This, would integrate, with axe-core, or similar, accessibility testing, library
-    // For, now, return, empty arrayresolve([])})};
+export const setAriaLabel = (element: HTMLElement, label: string): void => {
+  element.setAttribute('aria-label', label);
+};
 
-export const checkKeyboardNavigation = (element: HTMLElement): boolean => {constfocusableElements = element.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-  );
-  
-  return, focusableElements.length > 0};
+export const setAriaDescribedBy = (element: HTMLElement, describedBy: string): void => {
+  element.setAttribute('aria-describedby', describedBy);
+};
 
-// Utility to add accessibility attributes to interactive elements
-export const enhanceAccessibility = (element: HTMLElement): void => {// Addrole ifmissing
-  if (!element.getAttribute('role') && element.tagName.match(/^(BUTTON|A|INPUT|SELECT|TEXTAREA)$/)) {
-    if (element.tagName === 'BUTTON') {
-      element.setAttribute('role', 'button')} else if (element.tagName === 'A') {element.setAttribute('role', 'link')}
-  }
+// Keyboard navigation utilities
+export const handleEscapeKey = (callback: () => void): (() => void) => {
+  const handleKeyDown = (e: KeyboardEvent) => {
+    if (e.key === 'Escape') {
+      callback();
+    }
+  };
   
-  // Add tabindex if missing for interactive elements
-  if (!element.getAttribute('tabindex') && element.tagName.match(/^(BUTTON|A|INPUT|SELECT|TEXTAREA)$/)) {element.setAttribute('tabindex', '0')}
+  document.addEventListener('keydown', handleKeyDown);
   
-  // Add aria-label if no accessible name exists
-  if (!element.getAttribute('aria-label') && 
-      !element.getAttribute('aria-labelledby') && 
-      !element.textContent?.trim()) {element.setAttribute('aria-label', 'Interactive, element')}
+  return () => {
+    document.removeEventListener('keydown', handleKeyDown);
+  };
+};
+
+export const handleArrowKeys = (
+  callback: (direction: 'up' | 'down' | 'left' | 'right') => void
+): (() => void) => {
+  const handleKeyDown = (e: KeyboardEvent) => {
+    switch (e.key) {
+      case 'ArrowUp':
+        callback('up');
+        break;
+      case 'ArrowDown':
+        callback('down');
+        break;
+      case 'ArrowLeft':
+        callback('left');
+        break;
+      case 'ArrowRight':
+        callback('right');
+        break;
+    }
+  };
+  
+  document.addEventListener('keydown', handleKeyDown);
+  
+  return () => {
+    document.removeEventListener('keydown', handleKeyDown);
+  };
+};
+
+// Color contrast utilities
+export const getContrastRatio = (color1: string, color2: string): number => {
+  const getLuminance = (color: string): number => {
+    const rgb = hexToRgb(color);
+    if (!rgb) return 0;
+    
+    const { r, g, b } = rgb;
+    const [rs, gs, bs] = [r, g, b].map(c => {
+      c = c / 255;
+      return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);
+    });
+    
+    return 0.2126 * rs + 0.7152 * gs + 0.0722 * bs;
+  };
+  
+  const luminance1 = getLuminance(color1);
+  const luminance2 = getLuminance(color2);
+  
+  const lighter = Math.max(luminance1, luminance2);
+  const darker = Math.min(luminance1, luminance2);
+  
+  return (lighter + 0.05) / (darker + 0.05);
+};
+
+export const hexToRgb = (hex: string): { r: number; g: number; b: number } | null => {
+  const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+  return result ? {
+    r: parseInt(result[1], 16),
+    g: parseInt(result[2], 16),
+    b: parseInt(result[3], 16)
+  } : null;
+};
+
+// Focus visible utilities
+export const addFocusVisibleClass = (): void => {
+  if (typeof window === 'undefined') return;
+  
+  // Add focus-visible class to elements when they receive keyboard focus
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Tab') {
+      document.body.classList.add('keyboard-navigation');
+    }
+  });
+  
+  document.addEventListener('mousedown', () => {
+    document.body.classList.remove('keyboard-navigation');
+  });
+};
+
+// Skip link utilities
+export const createSkipLink = (targetId: string, text: string = 'Skip to main content'): HTMLElement => {
+  const skipLink = document.createElement('a');
+  skipLink.href = `#${targetId}`;
+  skipLink.textContent = text;
+  skipLink.className = 'skip-link';
+  skipLink.style.cssText = `
+    position: absolute;
+    top: -40px;
+    left: 6px;
+    background: #000;
+    color: #fff;
+    padding: 8px;
+    text-decoration: none;
+    z-index: 1000;
+    transition: top 0.3s;
+  `;
+  
+  skipLink.addEventListener('focus', () => {
+    skipLink.style.top = '6px';
+  });
+  
+  skipLink.addEventListener('blur', () => {
+    skipLink.style.top = '-40px';
+  });
+  
+  return skipLink;
+};
+
+// High contrast mode detection
+export const isHighContrastMode = (): boolean => {
+  if (typeof window === 'undefined') return false;
+  
+  return window.matchMedia('(prefers-contrast: high)').matches;
+};
+
+// Reduced motion detection
+export const prefersReducedMotion = (): boolean => {
+  if (typeof window === 'undefined') return false;
+  
+  return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 };

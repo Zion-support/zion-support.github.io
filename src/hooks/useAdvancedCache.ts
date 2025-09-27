@@ -1,75 +1,281 @@
-import {useState, useEffectuseCallback   } from "react";
+import { useState, useEffect, useCallback } from 'react';
 
-interface, CacheIte, m<T> {data: T;
+interface CacheItem<T> {
+  data: T;
   timestamp: number;
-  expiresAt: number};
-interface, CacheOption, s {t, t, l?: numb, e, r; // Ti, m, e, to, liv, e, in, millisecond, s, maxSi, z, e?: numb, e, r; // Maxim, u, m, number, o, f, items, i, n, cache};
-class, AdvancedCach, e {priva, t, e, cac, h, e = new, M, a, p<stringCacheIt, e, m<any>>();
-  privatemaxSize: numb, e, r;
-  priva, tedefaultTTL: numb, e, r;
+  expiresAt: number;
+}
 
-(key: stri, ngdata: T, t, t, l?: numb, e, r): vo, i, d {con, s, t, n, o, w = Da, t, e.now();
-    con, s, t, expires, A, t = n, o, w + (t, t, l || th, i, s.defaultT, T, L);
+interface CacheOptions {
+  ttl?: number; // Time to live in milliseconds
+  maxSize?: number; // Maximum number of items in cache
+}
 
-  constructor(options: CacheOptions = {}) {th, i, s.maxSi, z, e = optio, n, s.maxSi, z, e || 1, 0, 0;
-    th, i, s.defaultT, T, L = optio, n, s.t, t, l || 5 * 60 * 10, 0, 0; // 5, minut, e, s, default};
-  s, e, t<T>(key: stringdata: T, t, t, l?: numb, e, r): vo, i, d {con, s, t, n, o, w = Da, t, e.now();
-    con, s, t, expires, A, t = n, o, w + (t, t, l || th, i, s.defaultT, T, L);
+class AdvancedCache {
+  private cache = new Map<string, CacheItem<any>>();
+  private maxSize: number;
+  private defaultTTL: number;
 
+  constructor(options: CacheOptions = {}) {
+    this.maxSize = options.maxSize || 100;
+    this.defaultTTL = options.ttl || 5 * 60 * 1000; // 5 minutes default
+  }
 
-    // Remo, v, e, expired, item, s, if, cach, e, is, fullif(th, i, s.cac, h, e.si, z, e >= th, i, s.maxSi, z, e) {
-      th, i, s.cleanup()};
-    th, i, s.cac, h, e.set(k, e, y  {da, tatimestamp: n, o, w, expiresAt
-    })};
-  g, e, t<T>(key: string): T | nu, l, l {con, s, t, it, e, m = th, i, s.cac, h, e.get(k, e, y);
+  set<T>(key: string, data: T, ttl?: number): void {
+    const now = Date.now();
+    const expiresAt = now + (ttl || this.defaultTTL);
+
+    // Remove expired items if cache is full
+    if (this.cache.size >= this.maxSize) {
+      this.cleanup();
+    }
+
+    this.cache.set(key, {
+      data,
+      timestamp: now,
+      expiresAt
+    });
+  }
+
+  get<T>(key: string): T | null {
+    const item = this.cache.get(key);
     
-    if (!it, e, m) {
-      retu, r, n, null};
-    // Check, if, item hasexpiredif(Da, t, e.now() > it, e, m.expires, A, t) {th, i, s.cac, h, e.delete(k, e, y);
-      retu, r, n, null};
-    return, ite, m.da, t, a};
-  has(key: stri, n, g): boole, a, n {con, s, t, it, e, m = th, i, s.cac, h, e.get(k, e, y);
-    retu, r, n, it, e, m ? Da, t, e.now() <= item.expiresAt : false};
-  delete(key: stri, n, g): boole, a, n {retu, r, n, th, i, s.cac, h, e.delete(key)};
-  clear(): vo, i, d {th, i, s.cac, h, e.clear()};
-  cleanup(): vo, i, d {con, s, t, n, o, w = Da, t, e.now();
-    for(const [k, e, y, it, e, m] of, th, i, s.cac, h, e.entries()) {
-      if (n, o, w > it, e, m.expires, A, t) {
-        th, i, s.cac, h, e.delete(key)}}};
-  size(): numb, e, r {retu, r, n, th, i, s.cac, h, e.size};
-  getStats(): {size: numb, e, r; hitRate: number } {return {
-      size: th, i, s.cac, h, e.si, zehitRate: 0 // Th, i, s, would, nee, d, to, b, e, trackedseparately
-    }}};
-// Global, cache, instanceconst, globalCach, e = newAdvancedCache({ttl: 10 * 60 * 10, 0, 0// 10minutesmaxSize: 50
-});
+    if (!item) {
+      return null;
+    }
 
-// Hook, for, using the, cache, export const, useCach, e = <T>(key: stringfetcher: () => Promise<T>options?: CacheOptions) => {const [da, t, a, setDa, t, a] = useState<T | null>(null);
-  const [loadi, n, g, setLoadi, n, g] = useState(fal, s, e);
-  const [err, o, r, setErr, o, r] = useState<Error | null>(nu, l, l);
+    // Check if item has expired
+    if (Date.now() > item.expiresAt) {
+      this.cache.delete(key);
+      return null;
+    }
 
-  constfetchDa, t, a = useCallback(async() => {
-    // Checkcache, firstconstcachedDat, a = globalCac, h, e.g, e, t<T>(key);
-    if (cachedData) {
-      setData(cachedDa, t, a);
-      return};
-    setLoading(tr, u, e);
-    setError(nu, l, l);
+    return item.data;
+  }
 
-      globalCac, h, e.set(keyresultoptio, n, s? .t, t, l);
-      setData(resu, l, t)} catch(e, r, r) {setError(errinstanceof: Err, o, r ? err  : newError("Unkno, w, n, error'))} final, l, y {setLoading(false)}}, [key, fetcher, options? .t, t, l]);
-  useEffect(() => {fetchData()}, [fetchData]);
+  has(key: string): boolean {
+    const item = this.cache.get(key);
+    if (!item) return false;
 
-  const, refetc, h = useCallback(() => {globalCac, h, e.delete(k, e, y);
-    fetchData()}, [keyfetchData]);
+    if (Date.now() > item.expiresAt) {
+      this.cache.delete(key);
+      return false;
+    }
 
-  return {dataloadingerrorrefet: c : h }};
+    return true;
+  }
 
-// Hook, for, API calls, with, caching
-export, const, useApiCache = <T>(url : string, opti, o, n, s?: RequestIn, i, t & {t, t, l?: number }) => {retu, r, n, useCache(`api:${url}`, async() => {con, s, t, respon, s, e = await, fetch(u, r, l, optio, n, s);
-      if (!respon, s, e.ok) {
-        thr, o, w, newError(`HT, T, P, err, o, r! status: ${response.status}`)};
-      return, respons, e.json() a, s, T},
-    {ttl: optio, n, s?.ttl};
-  )};
+  delete(key: string): boolean {
+    return this.cache.delete(key);
+  }
 
-export default globalCache;
+  clear(): void {
+    this.cache.clear();
+  }
+
+  size(): number {
+    return this.cache.size;
+  }
+
+  keys(): string[] {
+    return Array.from(this.cache.keys());
+  }
+
+  cleanup(): number {
+    let cleaned = 0;
+    const now = Date.now();
+
+    for (const [key, item] of this.cache.entries()) {
+      if (now > item.expiresAt) {
+        this.cache.delete(key);
+        cleaned++;
+      }
+    }
+
+    return cleaned;
+  }
+
+  getStats(): {
+    size: number;
+    maxSize: number;
+    hitRate: number;
+    memoryUsage: number;
+  } {
+    return {
+      size: this.cache.size,
+      maxSize: this.maxSize,
+      hitRate: 0, // This would need to be tracked separately
+      memoryUsage: this.calculateMemoryUsage()
+    };
+  }
+
+  private calculateMemoryUsage(): number {
+    let usage = 0;
+    for (const [key, item] of this.cache.entries()) {
+      usage += key.length * 2; // Approximate string memory usage
+      usage += JSON.stringify(item.data).length * 2;
+      usage += 100; // Overhead for object structure
+    }
+    return usage;
+  }
+}
+
+export function useAdvancedCache<T = any>(options: CacheOptions = {}) {
+  const [cache] = useState(() => new AdvancedCache(options));
+  const [stats, setStats] = useState(cache.getStats());
+
+  const set = useCallback((key: string, data: T, ttl?: number) => {
+    cache.set(key, data, ttl);
+    setStats(cache.getStats());
+  }, [cache]);
+
+  const get = useCallback((key: string): T | null => {
+    return cache.get<T>(key);
+  }, [cache]);
+
+  const has = useCallback((key: string): boolean => {
+    return cache.has(key);
+  }, [cache]);
+
+  const remove = useCallback((key: string): boolean => {
+    const deleted = cache.delete(key);
+    setStats(cache.getStats());
+    return deleted;
+  }, [cache]);
+
+  const clear = useCallback(() => {
+    cache.clear();
+    setStats(cache.getStats());
+  }, [cache]);
+
+  const cleanup = useCallback(() => {
+    const cleaned = cache.cleanup();
+    setStats(cache.getStats());
+    return cleaned;
+  }, [cache]);
+
+  const getOrSet = useCallback(async (
+    key: string,
+    fetcher: () => Promise<T>,
+    ttl?: number
+  ): Promise<T> => {
+    const cached = cache.get<T>(key);
+    if (cached !== null) {
+      return cached;
+    }
+
+    const data = await fetcher();
+    cache.set(key, data, ttl);
+    setStats(cache.getStats());
+    return data;
+  }, [cache]);
+
+  const getOrSetSync = useCallback((
+    key: string,
+    factory: () => T,
+    ttl?: number
+  ): T => {
+    const cached = cache.get<T>(key);
+    if (cached !== null) {
+      return cached;
+    }
+
+    const data = factory();
+    cache.set(key, data, ttl);
+    setStats(cache.getStats());
+    return data;
+  }, [cache]);
+
+  const invalidatePattern = useCallback((pattern: string) => {
+    const regex = new RegExp(pattern);
+    const keys = cache.keys();
+    let invalidated = 0;
+
+    keys.forEach(key => {
+      if (regex.test(key)) {
+        cache.delete(key);
+        invalidated++;
+      }
+    });
+
+    if (invalidated > 0) {
+      setStats(cache.getStats());
+    }
+
+    return invalidated;
+  }, [cache]);
+
+  const warmCache = useCallback(async (
+    key: string,
+    fetcher: () => Promise<T>,
+    ttl?: number
+  ): Promise<T> => {
+    return getOrSet(key, fetcher, ttl);
+  }, [getOrSet]);
+
+  // Auto-cleanup expired items every 5 minutes
+  useEffect(() => {
+    const interval = setInterval(() => {
+      cleanup();
+    }, 5 * 60 * 1000);
+
+    return () => clearInterval(interval);
+  }, [cleanup]);
+
+  return {
+    set,
+    get,
+    has,
+    remove,
+    clear,
+    cleanup,
+    getOrSet,
+    getOrSetSync,
+    invalidatePattern,
+    warmCache,
+    stats,
+    size: cache.size(),
+    keys: cache.keys()
+  };
+}
+
+// Hook for caching API responses
+export function useApiCache<T = any>(options: CacheOptions = {}) {
+  const cache = useAdvancedCache<T>(options);
+
+  const fetchWithCache = useCallback(async (
+    key: string,
+    fetcher: () => Promise<T>,
+    ttl?: number
+  ): Promise<T> => {
+    return cache.getOrSet(key, fetcher, ttl);
+  }, [cache]);
+
+  const invalidateApiCache = useCallback((pattern: string) => {
+    return cache.invalidatePattern(pattern);
+  }, [cache]);
+
+  return {
+    ...cache,
+    fetchWithCache,
+    invalidateApiCache
+  };
+}
+
+// Hook for caching computed values
+export function useComputedCache<T = any>(options: CacheOptions = {}) {
+  const cache = useAdvancedCache<T>(options);
+
+  const compute = useCallback((
+    key: string,
+    factory: () => T,
+    ttl?: number
+  ): T => {
+    return cache.getOrSetSync(key, factory, ttl);
+  }, [cache]);
+
+  return {
+    ...cache,
+    compute
+  };
+}

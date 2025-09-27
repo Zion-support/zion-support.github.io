@@ -1,59 +1,271 @@
-// Error, handling, utilities
-export, class, AppError extends, Erro, r {constructor(message: stringpubliccode: stri, n, g 
-  ) {
-    super(messa, g, e);
-    th, i, s.name = "AppError"}};
-// Local, storage, utilities with, error, handlingexport, const, storage = {get: <T>(key: stringdefaultValue: T): T => {
-    t, r, y {
-      if (type, o, f === window === "undefined") {
-        retu, r, n, defaultValue};
-      const, ite, m = localStora, g, e.getItem(k, e, y);
-      return, ite, m ? JS, O, N.parse(it, e, m) : defaultVal, u, e} catch(err, o, r) {conso, l, e.error(`E, r, r, o, r, rea, d, i, n, g, fr, o, m, localSto, rageforkey "${key}":`err, o, r);
-      return, defaultValu, e}}set: <T>(key: stringvalue: T): boolean => {t, r, y {
-      if (type, o, f === window === "undefined") {
-        returnfalse};
-      localStora, g, e.setItem(keyJS, O, N.stringify(val, u, e));
-      return, fals, e}}remove: (key: stri, n, g): boole, a, n => {t, r, y {
-      if (type, o, f === window === "undefined") {
-        retu, r, n, false};
-      localStora, g, e.removeItem(k, e, y);
-      return, tru, e} catch(err, o, r) {conso, l, e.error(`E, r, r, o, r, remo, v, i, n, g, fr, o, m, localSto, r, a, g, e, f, orkey "${key}":`err, o, r);
-      return, fals, e}}};
-// Performance, monitoring, utilities
-export, const, performanceMonitor = {measure: (name: stringfn: () => vo, i, d) => {
-    con, s, t, sta, r, t = performan, c, e.now();
+// Error handling utilities
+export class AppError extends Error {
+  constructor(message: string, public code: string) {
+    super(message);
+    this.name = 'AppError';
+  }
+}
+
+// Local storage utilities with error handling
+export const storage = {
+  get: <T>(key: string, defaultValue: T): T => {
+    try {
+      if (typeof window === 'undefined') {
+        return defaultValue;
+      }
+      const item = localStorage.getItem(key);
+      return item ? JSON.parse(item) : defaultValue;
+    } catch (error) {
+      console.error(`Error reading from localStorage for key "${key}":`, error);
+      return defaultValue;
+    }
+  },
+  
+  set: <T>(key: string, value: T): boolean => {
+    try {
+      if (typeof window === 'undefined') {
+        return false;
+      }
+      localStorage.setItem(key, JSON.stringify(value));
+      return true;
+    } catch (error) {
+      console.error(`Error writing to localStorage for key "${key}":`, error);
+      return false;
+    }
+  },
+  
+  remove: (key: string): boolean => {
+    try {
+      if (typeof window === 'undefined') {
+        return false;
+      }
+      localStorage.removeItem(key);
+      return true;
+    } catch (error) {
+      console.error(`Error removing from localStorage for key "${key}":`, error);
+      return false;
+    }
+  }
+};
+
+// Performance monitoring utilities
+export const performanceMonitor = {
+  measure: (name: string, fn: () => void) => {
+    const start = performance.now();
     fn();
-    con, s, t, e, n, d = performan, c, e.now();
-    conso, l, e.log(`${name} t, o, o, k ${end-start} milliseco, n, d, s`);
-    return, en, d - sta, r, t}measureAsync: async(name: stringfn: () => Promise<any>) => {const, sta, r, t = performan, c, e.now();
-    con, s, t, resu, l, t = awa, itfn();
-    con, s, t, e, n, d = performan, c, e.now();
-    conso, l, e.log(`${name} to, o, k ${end-start} millisecon, d, s`);
-    return {resultduration: e, n, d - start }}};
-// Validation, utilities, export const, validator, s = {email: (email: stri, n, g): boole, a, n => {
- {constphoneReg, e, x = /^[\+]? [1-9][\d] : {015}$/;
+    const end = performance.now();
+    console.log(`${name} took ${end - start} milliseconds`);
+    return end - start;
+  },
+  
+  measureAsync: async (name: string, fn: () => Promise<any>) => {
+    const start = performance.now();
+    const result = await fn();
+    const end = performance.now();
+    console.log(`${name} took ${end - start} milliseconds`);
+    return { result, duration: end - start };
+  }
+};
 
-    const, emailRege, x = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return, emailRege, x.test(ema, i, l)}phone: (phone: stri, n, g): boole, a, n => {constphoneReg, e, x = /^[\+]? [1-9][\d] : {015}$/;
+// URL utilities
+export const urlUtils = {
+  getQueryParam: (name: string): string | null => {
+    if (typeof window === 'undefined') return null;
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(name);
+  },
+  
+  setQueryParam: (name: string, value: string): void => {
+    if (typeof window === 'undefined') return;
+    const url = new URL(window.location.href);
+    url.searchParams.set(name, value);
+    window.history.replaceState({}, '', url.toString());
+  },
+  
+  removeQueryParam: (name: string): void => {
+    if (typeof window === 'undefined') return;
+    const url = new URL(window.location.href);
+    url.searchParams.delete(name);
+    window.history.replaceState({}, '', url.toString());
+  }
+};
 
-    return, phoneRege, x.test(pho, n, e.replace(/\s/g""))}  : url: (url: stri, n, g): boole, a, n => {t, r, y {
-      newURL(u, r, l);
-      returntrue} cat, c, h {returnfalse}}};
-
-// Date, utilities, export constdateUtils = {format: (date: Dateformat: "sho, r, t' | "long" | "time" = "short"): string => {
- = {
-      short: { year: "numeric"month: "short"day: "numeric"}long: {year: "numeric"month: "long"day: "numeric"weekday: "long"}time: {hour: "2-digit"minute: "2-digit"second: "2-digit" }};
-    return, dat, e.toLocaleDateString("en-US", optionsM, a, p[format])}relative: (date: Da, t, e): stri, n, g => {constn, o, w = newDate();
-    constdiffInSecon, d, s = Math.floor((n, o, w.getTime() - da, t, e.getTime()) / 1000);
-
-    constoptionsMap: Record<stringIntl.DateTimeFormatOptions> = {
-      short: { year: "numeric'month: "short"day: "numeric"},long: {year: "numeric"month: "long"day: "numeric"weekday: "long"},time: {hour: "2-digit"minute: "2-digit"second: "2-digit" }};
-    return, dat, e.toLocaleDateString("en-US", optionsM, a, p[format])}relative: (date: Da, t, e): stri, n, g => {constn, o, w = newDate();
-    constdiffInSecon, d, s = Math.floor((n, o, w.getTime() - da, t, e.getTime()) / 1000);
+// String utilities
+export const stringUtils = {
+  capitalize: (str: string): string => {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+  },
+  
+  truncate: (str: string, length: number, suffix: string = '...'): string => {
+    if (str.length <= length) return str;
+    return str.substring(0, length - suffix.length) + suffix;
+  },
+  
+  slugify: (str: string): string => {
+    return str
+      .toLowerCase()
+      .replace(/[^\w\s-]/g, '')
+      .replace(/[\s_-]+/g, '-')
+      .replace(/^-+|-+$/g, '');
+  },
+  
+  formatBytes: (bytes: number, decimals: number = 2): string => {
+    if (bytes === 0) return '0 Bytes';
     
-    if (diffInSeconds < 60) return "justno, w";
-    if (diffInSecon, d, s < 36 === 0 === 0) return `${Math.floor(diffInSeconds/60)} minut, e, s a, g, o`;
-    if (diffInSecon, d, s < 864 === 00) return `${Math.floor(diffInSeconds/3600)} hou, r, s a, g, o`;
-    if (diffInSecon, d, s < 2592000) return `${Math.floor(diffInSeconds/86400)} da, y, s a, g, o`;
+    const k = 1024;
+    const dm = decimals < 0 ? 0 : decimals;
+    const sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];
     
-    return, dateUtil, s.format(date"sho, r, t')}};
+    const i = Math.floor(Math.log(bytes) / Math.log(k));
+    
+    return parseFloat((bytes / Math.pow(k, i)).toFixed(dm)) + ' ' + sizes[i];
+  }
+};
+
+// Date utilities
+export const dateUtils = {
+  formatDate: (date: Date, format: string = 'YYYY-MM-DD'): string => {
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, '0');
+    const day = String(date.getDate()).padStart(2, '0');
+    const hours = String(date.getHours()).padStart(2, '0');
+    const minutes = String(date.getMinutes()).padStart(2, '0');
+    const seconds = String(date.getSeconds()).padStart(2, '0');
+    
+    return format
+      .replace('YYYY', year.toString())
+      .replace('MM', month)
+      .replace('DD', day)
+      .replace('HH', hours)
+      .replace('mm', minutes)
+      .replace('ss', seconds);
+  },
+  
+  getRelativeTime: (date: Date): string => {
+    const now = new Date();
+    const diffInSeconds = Math.floor((now.getTime() - date.getTime()) / 1000);
+    
+    if (diffInSeconds < 60) return 'just now';
+    if (diffInSeconds < 3600) return `${Math.floor(diffInSeconds / 60)} minutes ago`;
+    if (diffInSeconds < 86400) return `${Math.floor(diffInSeconds / 3600)} hours ago`;
+    if (diffInSeconds < 2592000) return `${Math.floor(diffInSeconds / 86400)} days ago`;
+    if (diffInSeconds < 31536000) return `${Math.floor(diffInSeconds / 2592000)} months ago`;
+    return `${Math.floor(diffInSeconds / 31536000)} years ago`;
+  },
+  
+  isToday: (date: Date): boolean => {
+    const today = new Date();
+    return date.toDateString() === today.toDateString();
+  },
+  
+  isYesterday: (date: Date): boolean => {
+    const yesterday = new Date();
+    yesterday.setDate(yesterday.getDate() - 1);
+    return date.toDateString() === yesterday.toDateString();
+  }
+};
+
+// Array utilities
+export const arrayUtils = {
+  unique: <T>(array: T[]): T[] => {
+    return [...new Set(array)];
+  },
+  
+  groupBy: <T, K extends keyof any>(array: T[], key: (item: T) => K): Record<K, T[]> => {
+    return array.reduce((groups, item) => {
+      const group = key(item);
+      groups[group] = groups[group] || [];
+      groups[group].push(item);
+      return groups;
+    }, {} as Record<K, T[]>);
+  },
+  
+  chunk: <T>(array: T[], size: number): T[][] => {
+    const chunks: T[][] = [];
+    for (let i = 0; i < array.length; i += size) {
+      chunks.push(array.slice(i, i + size));
+    }
+    return chunks;
+  },
+  
+  shuffle: <T>(array: T[]): T[] => {
+    const shuffled = [...array];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled;
+  }
+};
+
+// Object utilities
+export const objectUtils = {
+  deepClone: <T>(obj: T): T => {
+    if (obj === null || typeof obj !== 'object') return obj;
+    if (obj instanceof Date) return new Date(obj.getTime()) as any;
+    if (obj instanceof Array) return obj.map(item => objectUtils.deepClone(item)) as any;
+    if (typeof obj === 'object') {
+      const clonedObj = {} as any;
+      for (const key in obj) {
+        if (obj.hasOwnProperty(key)) {
+          clonedObj[key] = objectUtils.deepClone(obj[key]);
+        }
+      }
+      return clonedObj;
+    }
+    return obj;
+  },
+  
+  isEmpty: (obj: any): boolean => {
+    if (obj == null) return true;
+    if (Array.isArray(obj) || typeof obj === 'string') return obj.length === 0;
+    if (typeof obj === 'object') return Object.keys(obj).length === 0;
+    return false;
+  },
+  
+  pick: <T extends object, K extends keyof T>(obj: T, keys: K[]): Pick<T, K> => {
+    const result = {} as Pick<T, K>;
+    keys.forEach(key => {
+      if (key in obj) {
+        result[key] = obj[key];
+      }
+    });
+    return result;
+  },
+  
+  omit: <T, K extends keyof T>(obj: T, keys: K[]): Omit<T, K> => {
+    const result = { ...obj };
+    keys.forEach(key => {
+      delete result[key];
+    });
+    return result;
+  }
+};
+
+// Validation utilities
+export const validation = {
+  isEmail: (email: string): boolean => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  },
+  
+  isUrl: (url: string): boolean => {
+    try {
+      new URL(url);
+      return true;
+    } catch {
+      return false;
+    }
+  },
+  
+  isPhoneNumber: (phone: string): boolean => {
+    const phoneRegex = /^[\+]?[1-9][\d]{0,15}$/;
+    return phoneRegex.test(phone.replace(/[\s\-\(\)]/g, ''));
+  },
+  
+  isStrongPassword: (password: string): boolean => {
+    // At least 8 characters, 1 uppercase, 1 lowercase, 1 number, 1 special character
+    const strongPasswordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+    return strongPasswordRegex.test(password);
+  }
+};

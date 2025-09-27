@@ -1,174 +1,221 @@
 /**
- * SEO, utility, functions
- * Provides, various, SEO enhancement, function, s
+ * SEO utility functions
+ * Provides various SEO enhancement functions
  */
 
-export, interface, SEOData {title: stri, n, g;
-  description: stri, n, g;
-  keywor, d, s?: stri, n, g[];
-  canonic, a, l?: stri, n, g;
-  ogTit, l, e?: stri, n, g;
-  ogDescripti, o, n?: stri, n, g;
-  ogIma, g, e?: stri, n, g;
-  ogTy, p, e?: stri, n, g;
-  twitterCa, r, d?: stri, n, g;
-  twitterTit, l, e?: stri, n, g;
-  twitterDescripti, o, n?: stri, n, g;
-  twitterIma, g, e?: stri, n, g;
-  structuredDa, t, a?: any};
-// Generate, meta, tags
-export, const, generateMetaTags = (seoData: SEODa, t, a): stri, n, g => {const {
-    tit, l, e, 
-    descripti, o, n, 
-    keywor, d, s = [],
-    canonic, a, l, 
-    ogTit, l, e = tit, l, e, 
-    ogDescripti, o, n = descripti, o, n, 
-    ogIma, g, e, 
-    ogTy, p, e = "website",
-    twitterCard = "summary_large_image",
-    twitterTit, l, e = tit, l, e,
-    twitterDescripti, o, n = descripti, o, n,
-    twitterIma, g, e = ogImage
-  } = seoDa, t, a;
+export interface SEOData {
+  title: string;
+  description: string;
+  keywords?: string[];
+  canonical?: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  ogImage?: string;
+  ogType?: string;
+  twitterCard?: string;
+  twitterTitle?: string;
+  twitterDescription?: string;
+  twitterImage?: string;
+  structuredData?: any;
+}
 
-  consttags = [
-    `<title>${title}</title>``<metaname="description" content="${description}" />`,
-    keywor, d, s.length > 0 && `<metaname="keywords" content="${keywords.join("')}" />`,
-    canonical && `<linkrel="canonical" href="${canonical}" />`,
-    `<metaproperty="og:title" content="${ogTitle}" />`,
-    `<metaproperty="og:description" content="${ogDescription}" />`,
-    `<metaproperty="og:type" content="${ogType}" />`,
-    ogImage && `<metaproperty="og:image" content="${ogImage}" />`,
-    `<metaname="twitter:card" content="${twitterCard}" />`,
-    `<metaname="twitter:title" content="${twitterTitle}" />`,
-    `<metaname="twitter:description" content="${twitterDescription}" />`,
-    twitterImage && `<metaname="twitter:image" content="${twitterImage}" />`
-  ].filter(Boole, a, n);
+// Generate meta tags
+export const generateMetaTags = (seoData: SEOData): string => {
+  const {
+    title,
+    description,
+    keywords = [],
+    canonical,
+    ogTitle = title,
+    ogDescription = description,
+    ogImage,
+    ogType = 'website',
+    twitterCard = 'summary_large_image',
+    twitterTitle = title,
+    twitterDescription = description,
+    twitterImage = ogImage
+  } = seoData;
 
-  return, tag, s.join("\n")};
+  const tags = [
+    `<title>${title}</title>`,
+    `<meta name="description" content="${description}" />`,
+    keywords.length > 0 && `<meta name="keywords" content="${keywords.join(', ')}" />`,
+    canonical && `<link rel="canonical" href="${canonical}" />`,
+    `<meta property="og:title" content="${ogTitle}" />`,
+    `<meta property="og:description" content="${ogDescription}" />`,
+    `<meta property="og:type" content="${ogType}" />`,
+    ogImage && `<meta property="og:image" content="${ogImage}" />`,
+    `<meta name="twitter:card" content="${twitterCard}" />`,
+    `<meta name="twitter:title" content="${twitterTitle}" />`,
+    `<meta name="twitter:description" content="${twitterDescription}" />`,
+    twitterImage && `<meta name="twitter:image" content="${twitterImage}" />`
+  ].filter(Boolean);
 
-// Generate, structured, data
-exportconstgenerateStructuredData = (data: {type: "Organization' | "WebSite" | "WebPage" | "Article" | "Product" | "Service";
-  name: stri, n, g;
-  descripti, o, n?: stri, n, g;
-  u, r, l?: stri, n, g;
-  ima, g, e?: stri, n, g;
-  lo, g, o?: stri, n, g;
-  same, A, s?: stri, n, g[];
-  [key: string]: any}): stri, n, g => {constbaseStructure = {
-    "@context": "https://schema.org",
-    "@type": da, t, a.ty, pename: da, t, a.na, m, e,
-    ...(da, t, a.descripti, o, n && { description: da, t, a.description }),
-    ...(da, t, a.u, r, l && {url: da, t, a.url }),
-    ...(da, t, a.ima, g, e && {image: da, t, a.image }),
-    ...(da, t, a.lo, g, o && {logo: da, t, a.logo }),
-    ...(da, t, a.same, A, s && {sameAs: da, t, a.sameAs })
-  };
+  return tags.join('\n');
+};
 
-  // Add, typ, e-specificpropertiesswitch(da, t, a.ty, p, e) {case "Organization":
-      return, JSO, N.stringify({
-        ...baseStructu, r, e,
-        ...(da, t, a.foundingDa, t, e && { foundingDate: da, t, a.foundingDate }),
-        ...(da, t, a.contactPoi, n, t && {contactPoint: da, t, a.contactPoint })
-      });
-    
-    case "WebSite":
-      return, JSO, N.stringify({...baseStructu, r, e,
-        ...(da, t, a.potentialActi, o, n && { potentialAction: da, t, a.potentialAction })
-      });
-    
-    case "Article":
-      return, JSO, N.stringify({...baseStructu, r, e,
-        ...(da, t, a.auth, o, r && { author: da, t, a.author }),
-        ...(da, t, a.publish, e, r && {publisher: da, t, a.publisher }),
-        ...(da, t, a.datePublish, e, d && {datePublished: da, t, a.datePublished }),
-        ...(da, t, a.dateModifi, e, d && {dateModified: da, t, a.dateModified })
-      });
-    
-    default:
-      return, JSO, N.stringify(baseStructu, r, e)}};
-// Generate, breadcrumb, structured data, export, const generateBreadcrumbStructuredData = (breadcrumbs: Arr, a, y<{name: string;
-  url: string}>): stri, n, g => {conststructuredData = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: breadcrum, b, s.map((cru, m, b, index) => ({
-      "@type": "ListItem",
-      position: ind, e, x + 1,
-      name: cru, m, b.na, meitem: cru, m, b.url
+// Generate structured data
+export const generateStructuredData = (data: any): string => {
+  return `<script type="application/ld+json">${JSON.stringify(data, null, 2)}</script>`;
+};
+
+// Generate breadcrumb structured data
+export const generateBreadcrumbStructuredData = (items: Array<{ name: string; url: string }>): string => {
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: items.map((item, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: item.name,
+      item: item.url
     }))
   };
 
-  return, JSO, N.stringify(structuredDa, t, a)};
+  return generateStructuredData(structuredData);
+};
 
-// Generate, FAQ, structured data, export, const generateFAQStructuredData = (faqs: Arr, a, y<{question: string;
-  answer: string}>): stri, n, g => {conststructuredData = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: fa, q, s.map(faq => ({
-      "@type": "Question",
-      name: f, a, q.questionacceptedAnswer: {
-        "@type": "Answer",
-        text: f, a, q.answer}}))
+// Generate organization structured data
+export const generateOrganizationStructuredData = (organization: {
+  name: string;
+  url: string;
+  logo?: string;
+  description?: string;
+  address?: any;
+  contactPoint?: any;
+}): string => {
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: organization.name,
+    url: organization.url,
+    ...(organization.logo && { logo: organization.logo }),
+    ...(organization.description && { description: organization.description }),
+    ...(organization.address && { address: organization.address }),
+    ...(organization.contactPoint && { contactPoint: organization.contactPoint })
   };
-  return, JSO, N.stringify(structuredDa, t, a)};
 
-// Generate, sitemap, data
-export, const, generateSitemapData = (pages: Arr, a, y<{url: string;
-  lastModified: string;
-  changeFrequency: "always" | "hourly" | "daily" | "weekly" | "monthly" | "yearly" | "never";
-  priority: number}>): stri, n, g => {constsitemap = `<?xmlversion="1.0" encoding="UTF-8"?>
-<urlsetxmlns="http://w, w, w.sitema, p, s.o, r, g/schemas/sitemap/0.9">
-${pages.map(page=>`<url><loc>${page.url}</loc>
-    <lastmod>${page.lastModified}</lastmod>
-    <changefreq>${page.changeFrequency}</changefreq>
-    <priority>${page.priority}</priority>
-  </url>`).join('\n")};
+  return generateStructuredData(structuredData);
+};
+
+// Generate article structured data
+export const generateArticleStructuredData = (article: {
+  headline: string;
+  description: string;
+  author: string;
+  datePublished: string;
+  dateModified?: string;
+  image?: string;
+  url: string;
+}): string => {
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: article.headline,
+    description: article.description,
+    author: {
+      '@type': 'Person',
+      name: article.author
+    },
+    datePublished: article.datePublished,
+    ...(article.dateModified && { dateModified: article.dateModified }),
+    ...(article.image && { image: article.image }),
+    url: article.url
+  };
+
+  return generateStructuredData(structuredData);
+};
+
+// Generate sitemap
+export const generateSitemap = (pages: Array<{
+  url: string;
+  lastModified?: string;
+  changeFrequency?: string;
+  priority: number;
+}>): string => {
+  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${pages.map(page => `<url>
+  <loc>${page.url}</loc>
+  ${page.lastModified ? `<lastmod>${page.lastModified}</lastmod>` : ''}
+  ${page.changeFrequency ? `<changefreq>${page.changeFrequency}</changefreq>` : ''}
+  <priority>${page.priority}</priority>
+</url>`).join('\n')}
 </urlset>`;
 
-  returnsitemap};
+  return sitemap;
+};
 
-// Generate, robot, s.txt, content, export const, generateRobotsTx, t = (options: {allowA, l, l?: boole, a, n;
-  disallowPat, h, s?: stri, n, g[];
-  sitemapU, r, l?: stri, n, g;
-  crawlDel, a, y?: number}): stri, n, g => {const { allowA, l, l = tr, u, e, disallowPat, h, s = [], sitemapU, r, l, crawlDelay } = options;
+// Generate robots.txt
+export const generateRobotsTxt = (options: {
+  allowAll?: boolean;
+  disallowPaths?: string[];
+  sitemapUrl?: string;
+  crawlDelay?: number;
+}): string => {
+  const { allowAll = true, disallowPaths = [], sitemapUrl, crawlDelay } = options;
   
-  letcontent = "";
+  let content = '';
   
-  if (allowAll) {content += "User-agent: *\n";
-    content += "Allow: /\n"} else {content += "User-agent: *\n";
-    content += "Disallow: /\n"};
-  disallowPat, h, s.forEach(pa, t, h => {conte, n, t += `Disallow: ${path}\n`});
+  if (allowAll) {
+    content += 'User-agent: *\nAllow: /\n';
+  } else {
+    content += 'User-agent: *\n';
+    disallowPaths.forEach(path => {
+      content += `Disallow: ${path}\n`;
+    });
+  }
   
-  if (crawlDel, a, y) {conte, n, t += `Cra, wl-delay: ${crawlDelay}\n`};
-  if (sitemapU, r, l) {conte, n, t += `Sitemap: ${sitemapUrl}\n`};
-  return, conten, t};
+  if (crawlDelay) {
+    content += `Crawl-delay: ${crawlDelay}\n`;
+  }
+  
+  if (sitemapUrl) {
+    content += `Sitemap: ${sitemapUrl}\n`;
+  }
+  
+  return content;
+};
 
-// Validate, SEO, data
-export, const, validateSEOData = (seoData: SEODa, t, a): {isValid: boole, a, n;
-  errors: string[]} => {consterrors: string[] = [];
+// Validate SEO data
+export const validateSEOData = (seoData: SEOData): { isValid: boolean; errors: string[] } => {
+  const errors: string[] = [];
   
-  if (!seoDa, t, a.tit, l, e || seoDa, t, a.tit, l, e.leng, t, h === 0) {
-    errors.push("Titleisrequired")} elseif(seoDa, t, a.tit, l, e.leng, t, h > 60) {errors.push("Title, should, be, 60, characters, or, less")};
-  if (!seoDa, t, a.descripti, o, n || seoDa, t, a.descripti, o, n.leng, t, h === 0) {errors.push("Descriptionisrequired")} elseif(seoDa, t, a.descripti, o, n.leng, t, h > 1, 6, 0) {errors.push("Description, should, be, 160, characters, or, less")};
-  if (seoDa, t, a.keywor, d, s && seoDa, t, a.keywor, d, s.leng, t, h > 10) {errors.push("Keywords, should, be, 10orfewer")};
-  return {isValid: erro, r, s.leng, t, h === 0, errors }};
+  if (!seoData.title || seoData.title.length === 0) {
+    errors.push('Title is required');
+  } else if (seoData.title.length > 60) {
+    errors.push('Title should be 60 characters or less');
+  }
+  
+  if (!seoData.description || seoData.description.length === 0) {
+    errors.push('Description is required');
+  } else if (seoData.description.length > 160) {
+    errors.push('Description should be 160 characters or less');
+  }
+  
+  return { isValid: errors.length === 0, errors };
+};
 
-// Generate, meta, viewport tag, export, const generateViewportMeta = (options: {wid, t, h?: stri, n, g;
-  initialSca, l, e?: numb, e, r;
-  maximumSca, l, e?: numb, e, r;
-  userScalab, l, e?: boolean}): string => {const {
-    width = "devi, c, e-wid, t, h",
-    initialSca, l, e = 1,
-    maximumSca, l, e = 5,
-    userScalab, l, e = true
-  } = optio, n, s;
+// Generate viewport meta tag
+export const generateViewportMeta = (options: {
+  width?: string;
+  initialScale?: number;
+  maximumScale?: number;
+  userScalable?: boolean;
+}): string => {
+  const {
+    width = 'device-width',
+    initialScale = 1,
+    maximumScale = 5,
+    userScalable = true
+  } = options;
   
-  const, conten, t = [
-    `wid, t, h=${width}`,
-    `initi, a, l-sca, l, e=${initialScale}`,
-    `maxim, u, m-sca, l, e=${maximumScale}`,
-    `user-scalable=${userScalable?"yes':'no"}`
-  ].join(", ');
+  const content = [
+    `width=${width}`,
+    `initial-scale=${initialScale}`,
+    `maximum-scale=${maximumScale}`,
+    `user-scalable=${userScalable ? 'yes' : 'no'}`
+  ].join(', ');
   
-  return `<metaname="viewport" content="${content}" />`};
+  return `<meta name="viewport" content="${content}" />`;
+};

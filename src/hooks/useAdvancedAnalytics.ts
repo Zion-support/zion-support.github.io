@@ -1,148 +1,339 @@
-import Reac, t, {useEffect, useStateuseCallback }  from 'react";
+import React, { useEffect, useState, useCallback } from 'react';
 
-interface, AnalyticsEven, t {id: stri, n, g;
-  type: stri, n, g;
-  category: stri, n, g;
-  action: stri, n, g;
-  lab, e, l?: stri, n, g;
-  val, u, e?: numb, e, r;
-  timestamp: numb, e, r;
-  sessionId: stri, n, g;
-  user, I, d?: stri, n, g;
-  url: stri, n, g;
-  userAgent: stri, n, g;
-  metada, t, a?: Reco, rd<stringany>};
-interfaceUserSession {sessionId: stri, n, g;
-  startTime: numb, e, r;
-  lastActivity: numb, e, r;
-  pageViews: numb, e, r;
-  events: numb, e, r;
-  user, I, d?: string};
-interface, AnalyticsConfi, g {enableHeatmaps: boole, a, n;
-  enableScrollTracking: boole, a, n;
-  enableClickTracking: boole, a, n;
-  enableFormTracking: boole, a, n;
-  enablePerformanceTracking: boole, a, n;
-  enableErrorTracking: boole, a, n;
-  batchSize: numb, e, r;
-  flushInterval: number};
-class, AdvancedAnalytic, s {priva, testaticinstance: AdvancedAnalyti, c, s;
-  priva, teevents: AnalyticsEve, n, t[] = [];
-  priva, tesession: UserSessi, o, n;
-  priva, teconfig: AnalyticsConf, i, g;
-  priva, t, e, flushTim, e, r?: Node, J, S.Timeo, u, t;
+interface AnalyticsEvent {
+  id: string;
+  type: string;
+  category: string;
+  action: string;
+  label?: string;
+  value?: number | string;
+  timestamp: number;
+  sessionId: string;
+  userId?: string;
+  url: string;
+  userAgent: string;
+  metadata?: Record<string, any>;
+}
 
-  constructor(config: AnalyticsConf, i, g) {
-    th, i, s.conf, i, g = conf, i, g;
-    th, i, s.sessi, o, n = th, i, s.initializeSession();
-    th, i, s.setupEventListeners();
-    th, i, s.startFlushTimer()};
-  staticgetInstance(conf, i, g?: Parti, a, l<AnalyticsConfig>): AdvancedAnalytics {if (!AdvancedAnalyti, c, s.instan, c, e) {
-      AdvancedAnalyti, c, s.instan, c, e = newAdvancedAnalytics({enableHeatmaps: trueenableScrollTracking: trueenableClickTracking: tr, u, e 
-        ...config
-      })};
-    return, AdvancedAnalytic, s.instan, c, e};
-  privateinitializeSession(): UserSession {letsessionId = "server_sessi, o, n";
-    if (typeofwindow !== "undefined" && type, o, f === sessionStorage !== "undefined") {
-      session, I, d = sessionStora, g, e.getItem("analytics_session_id") || `sessi, o, n, _${Date.now()}_${Math.random().toString(36).substr(29)}`;
-      sessionStora, g, e.setItem("analytics_session_id", session, I, d)}}};
-  privatesetupEventListeners(): vo, i, d {if (type, o, f === window === "undefined") retu, r, n;
+interface UserSession {
+  sessionId: string;
+  startTime: number;
+  lastActivity: number;
+  pageViews: number;
+  events: number;
+  userId?: string;
+}
 
-    // Pagevisibili, t, y, trackingdocument.addEventListener("visibilitychange"() => {
-      if (document.hidd, e, n) {
-        th, i, s.track("engagement""page_hidden""user_left_page"undefined{})} el, s, e {th, i, s.track("engagement""page_visible""user_returned"undefined{})}});
-    // Scrolltrackingif(th, i, s.conf, i, g.enableScrollTracki, n, g) {l, etscrollTimeout: Node, J, S.Timeo, u, t;
-      wind, o, w.addEventListener("scroll"() => {
-        clearTimeout(scrollTimeo, u, t);
-        scrollTimeo, u, t = setTimeout(() => {
-          constscrollPerce, n, t = Math.round((wind, o, w.scrol, l, Y / (document.documentEleme, n, t.scrollHeig, h, t - wind, o, w.innerHeig, h, t)) * 1, 0, 0
-          );
-          th, i, s.track("engagement""scroll""page_scroll", scrollPerce, n, t{ scrollPercent })}1, 5, 0)})};
-    // Clicktrackingif(th, i, s.conf, i, g.enableClickTracki, n, g) {document.addEventListener("click"(eve, n, t) => {
-        
-        if (eleme, n, t) {
-          consttagNa, m, e = eleme, n, t.tagNa, m, e.toLowerCase();
-          constte, x, t = eleme, n, t.textConte, n, t? .trim() || "";
-          con, s, t, hr, e, f = element.getAttribute("href') || '";
-          
-          this.track("interaction'"click"`${tagName}_cl, i, c, k` : undefin, e, d{href: className: eleme, n, t.classNameid: element.id
-          })}})};
-    // Formtrackingif(th, i, s.conf, i, g.enableFormTracki, n, g) {document.addEventListener("submit"(eve, n, t) => {
-        con, s, t, fo, r, m = eve, n, t.targetasHTMLFormEleme, n, t;        constformNa, m, e = fo, r, m.na, m, e || form.id || "unnamed_form";
-        
-          formId: fo, r, m.idformName: fo, r, m.nameformAction: fo, r, m.actionformMethod: fo, r, m.method
-        })})};
-    // Performancetrackingif(th, i, s.conf, i, g.enablePerformanceTracki, n, g) {wind, o, w.addEventListener("load"() => {
-        setTimeout(() => {
-          con, s, t, perfDa, t, a = performan, c, e.getEntriesByType("navigation")[0] asPerformanceNavigationTiming;
-          
-          th, i, s.track("performance""page_load""page_load_time", perfDa, t, a.loadEventE, n, d - perfDa, t, a.loadEventSta, r, t{
-            domContentLoaded: perfDa, t, a.domContentLoadedEventE, n, d - perfDa, t, a.domContentLoadedEventStartfirstPaint: performan, c, e.getEntriesByName("fir, s, t-paint")[0]?.startTime || 0firstContentfulPaint: performan, c, e.getEntriesByName("fir, s, t-contentf, u, l-paint")[0]?.startTime || 0largestContentfulPaint: performan, c, e.getEntriesByName("large, s, t-contentf, u, l-paint")[0]? .startTime || 0
-          })}0)})};
-    // Errortrackingif(th, i, s.conf, i, g.enableErrorTracki, n, g) {wind, o, w.addEventListener("error"(eve, n, t) => {
-        th, i, s.track("error""javascript_error"eve, n, t.err, o, r?.name || "UnknownError" : undefined: {
-          filename: eve, n, t.filenamelineno: eve, n, t.linenocolno: eve, n, t.colnostack: eve, n, t.err, o, r? .stack
-        })});
+interface AnalyticsConfig {
+  enableHeatmaps: boolean;
+  enableScrollTracking: boolean;
+  enableClickTracking: boolean;
+  enableFormTracking: boolean;
+  enablePerformanceTracking: boolean;
+  enableErrorTracking: boolean;
+  batchSize: number;
+  flushInterval: number;
+}
 
-      wind, o, w.addEventListener("unhandledrejection"(eve, n, t) => {th, i, s.track("error""unhandled_promise_rejection""PromiseRejection" : undefined: {
-          reason: eve, n, t.reason
-        })})}};
-  privatestartFlushTimer(): vo, i, d {th, i, s.flushTim, e, r = setInterval(() => {      th, i, s.flush()}, th, i, s.conf, i, g.flushInterv, a, l)};
-  track(category: stringaction: stringlab, e, l?: stri, n, g 
+class AdvancedAnalytics {
+  private static instance: AdvancedAnalytics;
+  private events: AnalyticsEvent[] = [];
+  private session: UserSession;
+  private config: AnalyticsConfig;
+  private flushTimer: NodeJS.Timeout | null = null;
 
-  ): vo, i, d {constevent: AnalyticsEve, n, t = {
-      id: `even, t, _${Date.now()}_${Math.random().toString(36).substr(29)}`type: "custom"categoryactionlabelvaluetimestamp: Da, t, e.now()sessionId: th, i, s.sessi, o, n.sessionIduserId: th, i, s.sessi, o, n.userIdurl: wind, o, w.locati, o, n.hrefuserAgent: navigat, o, r.userAgentmetadata, val, u  e?: numbermetada, t, a?: Reco, r, d<stringany>
-  ): void {constevent: AnalyticsEve, n, t = {
-      id: `even, t, _${Date.now()}_${Math.random().toString(36).substr(29)}`type: "custom"categoryactionlabelvaluetimestamp: Da, t, e.now()sessionId: th, i, s.sessi, o, n.sessionIduserId: th, i, s.sessi, o, n.userIdurl: wind, o, w.locati, o, n.hrefuserAgent: navigat, o, r.userAgentmetada, t, a
-
+  constructor() {
+    this.config = {
+      enableHeatmaps: true,
+      enableScrollTracking: true,
+      enableClickTracking: true,
+      enableFormTracking: true,
+      enablePerformanceTracking: true,
+      enableErrorTracking: true,
+      batchSize: 10,
+      flushInterval: 30000 // 30 seconds
     };
 
-    th, i, s.even, t, s.push(eve, n, t);
-    th, i, s.sessi, o, n.lastActivi, t, y = Da, t, e.now();
-    th, i, s.sessi, o, n.even, t, s++;
+    this.session = {
+      sessionId: this.generateSessionId(),
+      startTime: Date.now(),
+      lastActivity: Date.now(),
+      pageViews: 0,
+      events: 0
+    };
 
-    // Flush, if, batch sizereachedif(th, i, s.even, t, s.leng, t, h >= th, i, s.conf, i, g.batchSi, z, e) {th, i, s.flush()}};
-): vo, i, d {th, i, s.sessi, o, n.pageVie, w, s++;
-  trackPageView(pageName: stringmetada, t, a?: Reco, r, d<stringany>): voi, d {th, i, s.sessi, o, n.pageVie, w, s++;
+    this.initializeTracking();
+  }
 
-    
-    th, i, s.track("navigation""page_view", pageNameundefin, e, d  {
-      pageViews: th, i, s.sessi, o, n.pageViewssessionDuration: Da, t, e.now() - th, i, s.sessi, o, n.startTime 
-      ...metadata
-    })};
-): vo, i, d {th, i, s.track("conversion"conversionType"conversion", valuemetadata)};
-  trackConversion(conversionType: stringval, u, e?: numbermetada, t, a?: Reco, r, d<stringany>): void {th, i, s.track("conversion"conversionType"conversion"valuemetadata)};
-  privateasyncflush(): Promise<void> {if (this.even, t, s.leng, t, h === 0) retu, r, n;
+  static getInstance(): AdvancedAnalytics {
+    if (!AdvancedAnalytics.instance) {
+      AdvancedAnalytics.instance = new AdvancedAnalytics();
+    }
+    return AdvancedAnalytics.instance;
+  }
 
-    consteventsToSe, n, d = [...th, i, s.even, t, s];
-    th, i, s.even, t, s = [];
+  private generateSessionId(): string {
+    return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+  }
 
-    t, r, y {
-      awaitfetch("/a, p, i/analytics"{
-        method: "POST"headers: {
-          "Content-Type": "application/json"}body: JS, O, N.stringify({events: eventsToSendsession: th, i, s.session
+  private initializeTracking(): void {
+    if (typeof window === 'undefined') return;
+
+    // Track page views
+    this.trackPageView();
+
+    // Track performance metrics
+    if (this.config.enablePerformanceTracking) {
+      this.trackPerformanceMetrics();
+    }
+
+    // Track errors
+    if (this.config.enableErrorTracking) {
+      this.trackErrors();
+    }
+
+    // Track clicks
+    if (this.config.enableClickTracking) {
+      this.trackClicks();
+    }
+
+    // Track scroll behavior
+    if (this.config.enableScrollTracking) {
+      this.trackScrollBehavior();
+    }
+
+    // Track form interactions
+    if (this.config.enableFormTracking) {
+      this.trackFormInteractions();
+    }
+
+    // Start flush timer
+    this.startFlushTimer();
+  }
+
+  private trackPageView(): void {
+    this.track('page_view', 'navigation', 'view', window.location.pathname);
+    this.session.pageViews++;
+    this.session.lastActivity = Date.now();
+  }
+
+  private trackPerformanceMetrics(): void {
+    if ('performance' in window) {
+      window.addEventListener('load', () => {
+        setTimeout(() => {
+          const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+          if (navigation) {
+            this.track('performance', 'timing', 'page_load', navigation.loadEventEnd - navigation.loadEventStart);
+            this.track('performance', 'timing', 'dom_content_loaded', navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart);
+          }
+        }, 0);
+      });
+    }
+  }
+
+  private trackErrors(): void {
+    window.addEventListener('error', (event) => {
+      this.track('error', 'javascript', 'error', event.message, {
+        filename: event.filename,
+        lineno: event.lineno,
+        colno: event.colno,
+        stack: event.error?.stack
+      });
+    });
+
+    window.addEventListener('unhandledrejection', (event) => {
+      this.track('error', 'promise', 'rejection', event.reason?.message || 'Unhandled promise rejection', {
+        reason: event.reason
+      });
+    });
+  }
+
+  private trackClicks(): void {
+    document.addEventListener('click', (event) => {
+      const target = event.target as HTMLElement;
+      const tagName = target.tagName.toLowerCase();
+      const text = target.textContent?.trim().substring(0, 100) || '';
+      const href = target.getAttribute('href') || '';
+      
+      this.track('click', 'interaction', 'click', `${tagName}: ${text}`, {
+        tagName,
+        href,
+        className: target.className,
+        id: target.id
+      });
+    });
+  }
+
+  private trackScrollBehavior(): void {
+    let scrollTimeout: NodeJS.Timeout;
+    let maxScroll = 0;
+
+    window.addEventListener('scroll', () => {
+      clearTimeout(scrollTimeout);
+      scrollTimeout = setTimeout(() => {
+        const scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+        maxScroll = Math.max(maxScroll, scrollPercent);
+        
+        if (scrollPercent % 25 === 0) { // Track at 25%, 50%, 75%, 100%
+          this.track('scroll', 'engagement', 'scroll', scrollPercent);
+        }
+      }, 150);
+    });
+
+    // Track max scroll on page unload
+    window.addEventListener('beforeunload', () => {
+      if (maxScroll > 0) {
+        this.track('scroll', 'engagement', 'max_scroll', maxScroll);
+      }
+    });
+  }
+
+  private trackFormInteractions(): void {
+    document.addEventListener('submit', (event) => {
+      const form = event.target as HTMLFormElement;
+      const formId = form.id || form.className || 'unknown';
+      
+      this.track('form', 'interaction', 'submit', formId, {
+        formId,
+        action: form.action,
+        method: form.method
+      });
+    });
+
+    document.addEventListener('focus', (event) => {
+      const target = event.target as HTMLElement;
+      if (target.tagName.toLowerCase() === 'input' || target.tagName.toLowerCase() === 'textarea') {
+        this.track('form', 'interaction', 'focus', (target as HTMLInputElement).name || target.id || 'unknown');
+      }
+    }, true);
+  }
+
+  private startFlushTimer(): void {
+    this.flushTimer = setInterval(() => {
+      this.flush();
+    }, this.config.flushInterval);
+  }
+
+  track(
+    category: string,
+    action: string,
+    label?: string,
+    value?: number | string,
+    metadata?: Record<string, any>
+  ): void {
+    const event: AnalyticsEvent = {
+      id: `event_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+      type: 'custom',
+      category,
+      action,
+      label,
+      value,
+      timestamp: Date.now(),
+      sessionId: this.session.sessionId,
+      userId: this.session.userId,
+      url: window.location.href,
+      userAgent: navigator.userAgent,
+      metadata
+    };
+
+    this.events.push(event);
+    this.session.events++;
+    this.session.lastActivity = Date.now();
+
+    // Flush if batch size reached
+    if (this.events.length >= this.config.batchSize) {
+      this.flush();
+    }
+  }
+
+  private async flush(): Promise<void> {
+    if (this.events.length === 0) return;
+
+    const eventsToFlush = [...this.events];
+    this.events = [];
+
+    try {
+      // Send to analytics endpoint
+      await fetch('/api/analytics', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          events: eventsToFlush,
+          session: this.session
         })
-      })} catch(err, o, r) {conso, l, e.error("Failedtosendanalyticsevents:', error)};
-  getSession(): UserSessi, o, n {return { ...th, i, s.session }};
-  getEvents(): AnalyticsEve, n, t[] {return [...th, i, s.events]};
-  getEventCount(): numb, e, r {retu, r, n, th, i, s.even, t, s.length};
-  destroy(): vo, i, d {if (th, i, s.flushTim, e, r) {
-      clearInterval(th, i, s.flushTimer)};
-    th, i, s.flush()}};
-// React, hook, for analytics, export, const useAdvancedAnalytics = () => {const [analytics] = useState(() => AdvancedAnalyti, c, s.getInstance());
-    category: stri, ngaction: stri, n, g, lab, e, l?: stri, n, g, va, l, u, e?: numb, e, r, metad, a, t, a?: Reco, r, d<stringany>
+      });
+    } catch (error) {
+      console.error('Failed to send analytics data:', error);
+      // Re-add events to queue for retry
+      this.events.unshift(...eventsToFlush);
+    }
+  }
+
+  setUserId(userId: string): void {
+    this.session.userId = userId;
+  }
+
+  getSession(): UserSession {
+    return { ...this.session };
+  }
+
+  getEvents(): AnalyticsEvent[] {
+    return [...this.events];
+  }
+
+  updateConfig(config: Partial<AnalyticsConfig>): void {
+    this.config = { ...this.config, ...config };
+  }
+
+  destroy(): void {
+    if (this.flushTimer) {
+      clearInterval(this.flushTimer);
+    }
+    this.flush();
+  }
+}
+
+export function useAdvancedAnalytics() {
+  const [analytics] = useState(() => AdvancedAnalytics.getInstance());
+  const [session, setSession] = useState<UserSession>(analytics.getSession());
+
+  useEffect(() => {
+    // Update session info periodically
+    const interval = setInterval(() => {
+      setSession(analytics.getSession());
+    }, 5000);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, [analytics]);
+
+  const track = useCallback((
+    category: string,
+    action: string,
+    label?: string,
+    value?: number | string,
+    metadata?: Record<string, any>
   ) => {
-    analytic, s.track(catego, r, y, acti, o, n, lab, e, l, val, u, e, metadata)}, [analytics]);
+    analytics.track(category, action, label, value, metadata);
+  }, [analytics]);
 
-  const, trackPageVie, w = useCallback((pageName: stri, n, g, metad, a, t, a?: Reco, r, d<stringany>) => {analytic, s.trackPageView(pageNa, m, e, metadata)}, [analytics]);
+  const setUserId = useCallback((userId: string) => {
+    analytics.setUserId(userId);
+    setSession(analytics.getSession());
+  }, [analytics]);
 
-  const, trackConversio, n = useCallback((
-    conversionType: stri, n, g, va, l, u, e?: numb, e, r, metad, a, t, a?: Reco, r, d<stringany>
-  ) => {analytic, s.trackConversion(conversionTy, p, e, val, u, e, metadata)}, [analytics]);
+  const updateConfig = useCallback((config: Partial<AnalyticsConfig>) => {
+    analytics.updateConfig(config);
+  }, [analytics]);
 
-  const, getSessio, n = useCallback(() => {retu, r, n, analyti, c, s.getSession()}, [analytics]);
-
-  return {tra, c, k, trackPageView, trackConversio, n, getSessionanalytics
-  }};
-
-export default AdvancedAnalytics;
+  return {
+    track,
+    setUserId,
+    updateConfig,
+    session,
+    events: analytics.getEvents()
+  };
+}
