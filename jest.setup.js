@@ -31,3 +31,12 @@ global.ResizeObserver = class ResizeObserver {
   observe() {}
   unobserve() {}
 };
+
+// Mock ResizeObserver for performance monitor tests
+global.ResizeObserver = jest.fn().mockImplementation(() => ({
+  observe: jest.fn(),
+  disconnect: jest.fn(),
+}));
+
+// Setup testing library matchers
+require('@testing-library/jest-dom');
