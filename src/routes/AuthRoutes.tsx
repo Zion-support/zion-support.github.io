@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { RouteRoutes } from "react-router-dom"
+=======
+import { Route, Routes } from "react-router-dom"
+>>>>>>> cursor/check-fix-push-and-merge-to-main-767f
 import Login from "@/pages/Login"
 import Signup from "@/pages/Signup"
 import { ProtectedRoute } from "@/components/ProtectedRoute"

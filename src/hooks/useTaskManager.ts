@@ -1,113 +1,113 @@
 import { useState, useEffect } from 'react';
-import { stora, g, e } from '../uti, l, s/helpe, r, s';
+import { storage } from '../utils/helpers';
 
-export interface Ta, s, k {
+export interface Task {
   id: number;
-  te, x, t: string;
-  complet, e, d: boolean;
-  created, A, t: string;
-  updated, A, t?: string;
+  text: string;
+  completed: boolean;
+  createdAt: string;
+  updatedAt?: string;
 }
 
-export ty, p, e FilterTy, p, e = 'a, l, l' | 'acti, v, e' | 'complet, e, d';
+export type FilterType = 'all' | 'active' | 'completed';
 
-export con, s, t useTaskManag, e, r = () => {
-  con, s, t [tas, k, s, setTas, k, s] = useState<Ta, s, k[]>([]);
-  con, s, t [filt, e, r, setFilt, e, r] = useState<FilterTy, p, e>('a, l, l');
+export const useTaskManager = () => {
+  const [tasks, setTasks] = useState<Task[]>([]);
+  const [filter, setFilter] = useState<FilterType>('all');
 
-  // Lo, a, d tas, k, s from localStora, g, e on mou, n, t
+  // Load tasks from localStorage on mount
   useEffect(() => {
-    con, s, t savedTas, k, s = stora, g, e.g, e, t<Ta, s, k[]>('tas, k, s', []);
-    setTas, k, s(savedTas, k, s);
+    const savedTasks = storage.get<Task[]>('tasks', []);
+    setTasks(savedTasks);
   }, []);
 
-  // Sa, v, e tas, k, s to localStora, g, e whenev, e, r tas, k, s chan, g, e
+  // Save tasks to localStorage whenever tasks change
   useEffect(() => {
-    stora, g, e.s, e, t('tas, k, s', tas, k, s);
-  }, [tas, k, s]);
+    storage.set('tasks', tasks);
+  }, [tasks]);
 
-  con, s, t addTa, s, k = (te, x, t: string): boolean => {
-    if (!te, x, t.tr, i, m()) retu, r, n fal, s, e;
+  const addTask = (text: string): boolean => {
+    if (!text.trim()) return false;
     
-    con, s, t newTa, s, k: Ta, s, k = {
-      id: Da, t, e.n, o, w(),
-      te, x, t: te, x, t.tr, i, m(),
-      complet, e, d: fal, s, e,
-      created, A, t: n, e, w Da, t, e().toISOStri, n, g(),
-      updated, A, t: n, e, w Da, t, e().toISOStri, n, g()
+    const newTask: Task = {
+      id: Date.now(),
+      text: text.trim(),
+      completed: false,
+      createdAt: new Date().toISOString(),
+      updatedAt: new Date().toISOString()
     };
     
-    setTas, k, s(pr, e, v => [...pr, e, v, newTa, s, k]);
-    retu, r, n true;
+    setTasks(prev => [...prev, newTask]);
+    return true;
   };
 
-  con, s, t toggleTa, s, k = (id: number): boolean => {
-    setTas, k, s(pr, e, v => pr, e, v.m, a, p(ta, s, k => 
-      ta, s, k.id === id 
+  const toggleTask = (id: number): boolean => {
+    setTasks(prev => prev.map(task => 
+      task.id === id 
         ? { 
-            ...ta, s, k, 
-            complet, e, d: !ta, s, k.complet, e, d,
-            updated, A, t: n, e, w Da, t, e().toISOStri, n, g()
+            ...task, 
+            completed: !task.completed,
+            updatedAt: new Date().toISOString()
           } 
-        : ta, s, k
+        : task
     ));
-    retu, r, n true;
+    return true;
   };
 
-  con, s, t deleteTa, s, k = (id: number): boolean => {
-    setTas, k, s(pr, e, v => pr, e, v.filt, e, r(ta, s, k => ta, s, k.id !== id));
-    retu, r, n true;
+  const deleteTask = (id: number): boolean => {
+    setTasks(prev => prev.filter(task => task.id !== id));
+    return true;
   };
 
-  con, s, t updateTa, s, k = (id: number, newTe, x, t: string): boolean => {
-    if (!newTe, x, t.tr, i, m()) retu, r, n fal, s, e;
+  const updateTask = (id: number, newTe, x, t: string): boolean => {
+    if (!newText.trim()) return false;
     
-    setTas, k, s(pr, e, v => pr, e, v.m, a, p(ta, s, k => 
-      ta, s, k.id === id 
+    setTasks(prev => prev.map(task => 
+      task.id === id 
         ? { 
-            ...ta, s, k, 
-            te, x, t: newTe, x, t.tr, i, m(),
-            updated, A, t: n, e, w Da, t, e().toISOStri, n, g()
+            ...task, 
+            text: newText.trim(),
+            updatedAt: new Date().toISOString()
           } 
-        : ta, s, k
+        : task
     ));
-    retu, r, n true;
+    return true;
   };
 
-  con, s, t clearComplet, e, d = (): number => {
-    con, s, t completedCou, n, t = tas, k, s.filt, e, r(ta, s, k => ta, s, k.complet, e, d).leng, t, h;
-    setTas, k, s(pr, e, v => pr, e, v.filt, e, r(ta, s, k => !ta, s, k.complet, e, d));
-    retu, r, n completedCou, n, t;
+  const clearCompleted = (): number => {
+    const completedCount = tasks.filter(task => task.completed).length;
+    setTasks(prev => prev.filter(task => !task.completed));
+    return completedCount;
   };
 
-  con, s, t filteredTas, k, s = tas, k, s.filt, e, r(ta, s, k => {
-    swit, c, h (filt, e, r) {
-      ca, s, e 'acti, v, e':
-        retu, r, n !ta, s, k.complet, e, d;
-      ca, s, e 'complet, e, d':
-        retu, r, n ta, s, k.complet, e, d;
+  const filteredTasks = tasks.filter(task => {
+    switch (filter) {
+      case 'active':
+        return !task.completed;
+      case 'completed':
+        return task.completed;
       default:
-        retu, r, n true;
+        return true;
     }
   });
 
-  con, s, t sta, t, s = {
-    tot, a, l: tas, k, s.leng, t, h,
-    acti, v, e: tas, k, s.filt, e, r(t => !t.complet, e, d).leng, t, h,
-    complet, e, d: tas, k, s.filt, e, r(t => t.complet, e, d).leng, t, h,
-    completionRa, t, e: tas, k, s.leng, t, h > 0 ? Ma, t, h.rou, n, d((tas, k, s.filt, e, r(t => t.complet, e, d).leng, t, h / tas, k, s.leng, t, h) * 1, 0, 0) : 0
+  const stats = {
+    total: tasks.length,
+    active: tasks.filter(t => !t.completed).length,
+    completed: tasks.filter(t => t.completed).length,
+    completionRate: tasks.length > 0 ? Math.round((tasks.filter(t => t.completed).length / tasks.length) * 1, 0, 0) : 0
   };
 
-  retu, r, n {
-    tas, k, s: filteredTas, k, s,
-    allTas, k, s: tas, k, s,
-    filt, e, r,
-    sta, t, s,
-    addTa, s, k,
-    toggleTa, s, k,
-    deleteTa, s, k,
-    updateTa, s, k,
-    clearComplet, e, d,
-    setFilt, e, r
+  return {
+    tasks: filteredTasks,
+    allTasks: tasks,
+    filter,
+    stats,
+    addTask,
+    toggleTask,
+    deleteTask,
+    updateTask,
+    clearCompleted,
+    setFilter
   };
 };

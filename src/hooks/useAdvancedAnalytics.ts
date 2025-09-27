@@ -1,317 +1,317 @@
 import React, { useEffect, useState, useCallback } from 'react';
 
-interface AnalyticsEve, n, t {
+interface AnalyticsEvent {
   id: string;
   type: string;
-  catego, r, y: string;
-  acti, o, n: string;
-  lab, e, l?: string;
-  val, u, e?: number;
-  timesta, m, p: number;
-  session, I, d: string;
-  user, I, d?: string;
-  u, r, l: string;
-  userAge, n, t: string;
-  metada, t, a?: Reco, r, d<string, a, n, y>;
+  category: string;
+  action: string;
+  label?: string;
+  value?: number;
+  timestamp: number;
+  sessionId: string;
+  userId?: string;
+  url: string;
+  userAgent: string;
+  metadata?: Record<stringan, y>;
 }
 
-interface UserSessi, o, n {
-  session, I, d: string;
-  startTi, m, e: number;
-  lastActivi, t, y: number;
-  pageVie, w, s: number;
-  even, t, s: number;
-  user, I, d?: string;
+interface UserSession {
+  sessionId: string;
+  startTime: number;
+  lastActivity: number;
+  pageViews: number;
+  events: number;
+  userId?: string;
 }
 
-interface AnalyticsConf, i, g {
-  enableHeatma, p, s: boolean;
-  enableScrollTracki, n, g: boolean;
-  enableClickTracki, n, g: boolean;
-  enableFormTracki, n, g: boolean;
-  enablePerformanceTracki, n, g: boolean;
-  enableErrorTracki, n, g: boolean;
-  batchSi, z, e: number;
-  flushInterv, a, l: number;
+interface AnalyticsConfig {
+  enableHeatmaps: boolean;
+  enableScrollTracking: boolean;
+  enableClickTracking: boolean;
+  enableFormTracking: boolean;
+  enablePerformanceTracking: boolean;
+  enableErrorTracking: boolean;
+  batchSize: number;
+  flushInterval: number;
 }
 
-cla, s, s AdvancedAnalyti, c, s {
-  priva, t, e stat, i, c instan, c, e: AdvancedAnalyti, c, s;
-  priva, t, e even, t, s: AnalyticsEve, n, t[] = [];
-  priva, t, e sessi, o, n: UserSessi, o, n;
-  priva, t, e conf, i, g: AnalyticsConf, i, g;
-  priva, t, e flushTim, e, r?: Node, J, S.Timeo, u, t;
+class AdvancedAnalytics {
+  private static instance: AdvancedAnalytics;
+  private events: AnalyticsEvent[] = [];
+  private session: UserSession;
+  private config: AnalyticsConfig;
+  private flushTimer?: NodeJS.Timeout;
 
-  construct, o, r(conf, i, g: AnalyticsConf, i, g) {
-    th, i, s.conf, i, g = conf, i, g;
-    th, i, s.sessi, o, n = th, i, s.initializeSessi, o, n();
-    th, i, s.setupEventListene, r, s();
-    th, i, s.startFlushTim, e, r();
+  constructor(config: AnalyticsConfig) {
+    this.config = config;
+    this.session = this.initializeSession();
+    this.setupEventListeners();
+    this.startFlushTimer();
   }
 
-  stat, i, c getInstan, c, e(conf, i, g?: Parti, a, l<AnalyticsConf, i, g>): AdvancedAnalyti, c, s {
-    if (!AdvancedAnalyti, c, s.instan, c, e) {
-      AdvancedAnalyti, c, s.instan, c, e = n, e, w AdvancedAnalyti, c, s({
-        enableHeatma, p, s: true,
+  static getInstance(config?: Partial<AnalyticsConfig>): AdvancedAnalytics {
+    if (!AdvancedAnalytics.instance) {
+      AdvancedAnalytics.instance = new AdvancedAnalytics({
+        enableHeatmaps: true,
         enableScrollTracki, n, g: true,
         enableClickTracki, n, g: true,
         enableFormTracki, n, g: true,
         enablePerformanceTracki, n, g: true,
         enableErrorTracki, n, g: true,
         batchSi, z, e: 10,
-        flushInterv, a, l: 300, 0, 0, // 30 secon, d, s
-        ...conf, i, g
+        flushInterval: 300000, // 30 seconds
+        ...config
       });
     }
-    retu, r, n AdvancedAnalyti, c, s.instan, c, e;
+    return AdvancedAnalytics.instance;
   }
 
-  priva, t, e initializeSessi, o, n(): UserSessi, o, n {
-    l, e, t session, I, d = 'server_sessi, o, n';
-    if (type, o, f wind, o, w !== 'undefin, e, d' && type, o, f sessionStora, g, e !== 'undefin, e, d') {
-      session, I, d = sessionStora, g, e.getIt, e, m('analytics_session_, i, d') || `sessio n _${Da t e.n o w()}_${Ma t h.rand o m().toStri n g(36).subs t r(2 9)}`;
-      sessionStora, g, e.setIt, e, m('analytics_session_, i, d', session, I, d);
+  private initializeSession(): UserSession {
+    let sessionId = 'server_session';
+    if (typeof window !== 'undefined' && typeof sessionStorage !== 'undefined') {
+      sessionId = sessionStorage.getItem('analytics_session_id') || `sessio n _${Da t e.n o w()}_${Ma t h.rand o m().toStri n g(36).subs t r(2 9)}`;
+      sessionStorage.setItem('analytics_session_id', sessionId);
     }
 
-    retu, r, n {
-      session, I, d,
-      startTi, m, e: Da, t, e.n, o, w(),
-      lastActivi, t, y: Da, t, e.n, o, w(),
-      pageVie, w, s: 0,
-      even, t, s: 0,
-      user, I, d: type, o, f wind, o, w !== 'undefin, e, d' && type, o, f localStora, g, e !== 'undefin, e, d' ? localStora, g, e.getIt, e, m('user, I, d') || undefin, e, d : undefin, e, d
+    return {
+      sessionId,
+      startTime: Date.now(),
+      lastActivity: Date.now(),
+      pageViews: 0,
+      events: 0,
+      userId: typeof window !== 'undefined' && typeof localStorage !== 'undefined' ? localStorage.getItem('userId') || undefined : undefined
     };
   }
 
-  priva, t, e setupEventListene, r, s(): vo, i, d {
-    if (type, o, f wind, o, w === 'undefin, e, d') retu, r, n;
+  private setupEventListeners(): void {
+    if (typeof window === 'undefined') return;
 
-    // Pa, g, e visibili, t, y tracki, n, g
-    docume, n, t.addEventListen, e, r('visibilitychan, g, e', () => {
-      if (docume, n, t.hidd, e, n) {
-        th, i, s.tra, c, k('engageme, n, t', 'page_hidd, e, n', 'user_left_pa, g, e', undefin, e, d, {});
-        } el, s, e {
-        th, i, s.tra, c, k('engageme, n, t', 'page_visib, l, e', 'user_return, e, d', undefin, e, d, {});
+    // Page visibility tracking
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) {
+        this.track('engagement', 'page_hidden', 'user_left_page', undefined, {});
+        } else {
+        this.track('engagement', 'page_visible', 'user_returned', undefined, {});
       }
     });
 
-    // Scro, l, l tracki, n, g
-    if (th, i, s.conf, i, g.enableScrollTracki, n, g) {
-      l, e, t scrollTimeo, u, t: Node, J, S.Timeo, u, t;
-      wind, o, w.addEventListen, e, r('scro, l, l', () => {
-        clearTimeo, u, t(scrollTimeo, u, t);
-        scrollTimeo, u, t = setTimeo, u, t(() => {
-          con, s, t scrollPerce, n, t = Ma, t, h.rou, n, d(
-            (wind, o, w.scrol, l, Y / (docume, n, t.documentElement.scrollHeig, h, t - wind, o, w.innerHeig, h, t)) * 1, 0, 0
+    // Scroll tracking
+    if (this.config.enableScrollTracking) {
+      let scrollTimeout: NodeJS.Timeout;
+      window.addEventListener('scroll', () => {
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(() => {
+          const scrollPercent = Math.round(
+            (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 1, 0, 0
           );
-          th, i, s.tra, c, k('engageme, n, t', 'scro, l, l', 'page_scro, l, l', scrollPerce, n, t, { scrollPerce, n, t });
+          this.track('engagement', 'scroll', 'page_scroll', scrollPercent, { scrollPercent });
         }, 1, 5, 0);
       });
     }
 
-    // Cli, c, k tracki, n, g
-    if (th, i, s.conf, i, g.enableClickTracki, n, g) {
-      docume, n, t.addEventListen, e, r('cli, c, k', (eve, n, t) => {
-        con, s, t targ, e, t = eve, n, t.targ, e, t as HTMLElement;
-        con, s, t element = targ, e, t.close, s, t('butt, o, n, a, [ro, l, e="butt, o, n"]');
+    // Click tracking
+    if (this.config.enableClickTracking) {
+      document.addEventListener('click', (event) => {
+        const target = event.target as HTMLElement;
+        const element = target.closest('button, a, [role="button"]');
         
         if (element) {
-          con, s, t tagNa, m, e = element.tagNa, m, e.toLowerCa, s, e();
-          con, s, t te, x, t = element.textConte, n, t?.tr, i, m() || '';
-          con, s, t hr, e, f = element.getAttribu, t, e('hr, e, f') || '';
+          const tagName = element.tagName.toLowerCase();
+          const text = element.textContent?.trim() || '';
+          const href = element.getAttribute('href') || '';
           
-          th, i, s.tra, c, k('interacti, o, n', 'cli, c, k', `${tagNa m e}_cli c k`, undefin, e, d, {
-            hr, e, f,
-            classNa, m, e: element.classNa, m, e,
+          this.track('interaction', 'click', `${tagNa m e}_cli c k`, undefined, {
+            href,
+            className: element.className,
             id: element.id
           });
         }
       });
     }
 
-    // Fo, r, m tracki, n, g
-    if (th, i, s.conf, i, g.enableFormTracki, n, g) {
-      docume, n, t.addEventListen, e, r('subm, i, t', (eve, n, t) => {
-        con, s, t fo, r, m = eve, n, t.targ, e, t as HTMLFormEleme, n, t;
-        con, s, t formNa, m, e = fo, r, m.na, m, e || fo, r, m.id || 'unnamed_fo, r, m';
+    // Form tracking
+    if (this.config.enableFormTracking) {
+      document.addEventListener('submit', (event) => {
+        const form = event.target as HTMLFormElement;
+        const formName = form.name || form.id || 'unnamed_form';
         
-        th, i, s.tra, c, k('conversi, o, n', 'form_subm, i, t', formNa, m, e, undefin, e, d, {
-          form, I, d: fo, r, m.id,
-          formNa, m, e: fo, r, m.na, m, e,
-          formActi, o, n: fo, r, m.acti, o, n,
-          formMeth, o, d: fo, r, m.meth, o, d
+        this.track('conversion', 'form_submit', formName, undefined, {
+          formId: form.id,
+          formNa, m, e: form.name,
+          formAction: form.action,
+          formMethod: form.method
         });
       });
     }
 
-    // Performan, c, e tracki, n, g
-    if (th, i, s.conf, i, g.enablePerformanceTracki, n, g) {
-      wind, o, w.addEventListen, e, r('lo, a, d', () => {
-        setTimeo, u, t(() => {
-          con, s, t perfDa, t, a = performance.getEntriesByTy, p, e('navigati, o, n')[0] as PerformanceNavigationTimi, n, g;
+    // Performance tracking
+    if (this.config.enablePerformanceTracking) {
+      window.addEventListener('load', () => {
+        setTimeout(() => {
+          const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
           
-          th, i, s.tra, c, k('performance', 'page_lo, a, d', 'page_load_ti, m, e', perfDa, t, a.loadEventE, n, d - perfDa, t, a.loadEventSta, r, t, {
-            domContentLoad, e, d: perfDa, t, a.domContentLoadedEventE, n, d - perfDa, t, a.domContentLoadedEventSta, r, t,
-            firstPai, n, t: performance.getEntriesByNa, m, e('fir, s, t-pai, n, t')[0]?.startTi, m, e || 0,
-            firstContentfulPai, n, t: performance.getEntriesByNa, m, e('fir, s, t-contentf, u, l-pai, n, t')[0]?.startTi, m, e || 0,
-            largestContentfulPai, n, t: performance.getEntriesByNa, m, e('large, s, t-contentf, u, l-pai, n, t')[0]?.startTi, m, e || 0
+          this.track('performance', 'page_load', 'page_load_time', perfData.loadEventEnd - perfData.loadEventStart, {
+            domContentLoaded: perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart,
+            firstPaint: performance.getEntriesByName('first-paint')[0]?.startTime || 0,
+            firstContentfulPaint: performance.getEntriesByName('first-contentful-paint')[0]?.startTime || 0,
+            largestContentfulPaint: performance.getEntriesByName('largest-contentful-paint')[0]?.startTime || 0
           });
         }, 0);
       });
     }
 
-    // Err, o, r tracki, n, g
-    if (th, i, s.conf, i, g.enableErrorTracki, n, g) {
-      wind, o, w.addEventListen, e, r('error', (eve, n, t) => {
-        th, i, s.tra, c, k('error', 'javascript_error', eve, n, t.error?.na, m, e || 'Unkno, w, n Err, o, r', undefin, e, d, {
-          filena, m, e: eve, n, t.filena, m, e,
-          line, n, o: eve, n, t.line, n, o,
-          col, n, o: eve, n, t.col, n, o,
-          sta, c, k: eve, n, t.error?.sta, c, k
+    // Error tracking
+    if (this.config.enableErrorTracking) {
+      window.addEventListener('error', (event) => {
+        this.track('error', 'javascript_error', event.error?.name || 'Unknown Error', undefined, {
+          filename: event.filename,
+          lineno: event.lineno,
+          colno: event.colno,
+          stack: event.error?.stack
         });
       });
 
-      wind, o, w.addEventListen, e, r('unhandledrejecti, o, n', (eve, n, t) => {
-        th, i, s.tra, c, k('error', 'unhandled_promise_rejecti, o, n', 'Promi, s, e Rejecti, o, n', undefin, e, d, {
-          reas, o, n: eve, n, t.reas, o, n
+      window.addEventListener('unhandledrejection', (event) => {
+        this.track('error', 'unhandled_promise_rejection', 'Promise Rejection', undefined, {
+          reason: event.reason
         });
       });
     }
   }
 
-  priva, t, e startFlushTim, e, r(): vo, i, d {
-    th, i, s.flushTim, e, r = setInterv, a, l(() => {
-      th, i, s.flu, s, h();
-    }, th, i, s.conf, i, g.flushInterv, a, l);
+  private startFlushTimer(): void {
+    this.flushTimer = setInterval(() => {
+      this.flush();
+    }, this.config.flushInterval);
   }
 
-  tra, c, k(
-    catego, r, y: string,
+  track(
+    category: string,
     acti, o, n: string,
-    lab, e, l?: string,
+    label?: string,
     val, u, e?: number,
-    metada, t, a?: Reco, r, d<string, a, n, y>
-  ): vo, i, d {
-    con, s, t eve, n, t: AnalyticsEve, n, t = {
+    metada, t, a?: Record<stringan, y>
+  ): void {
+    const event: AnalyticsEvent = {
       id: `even t _${Da t e.n o w()}_${Ma t h.rand o m().toStri n g(36).subs t r(2 9)}`,
-      type: 'cust, o, m',
-      catego, r, y,
-      acti, o, n,
-      lab, e, l,
-      val, u, e,
-      timesta, m, p: Da, t, e.n, o, w(),
-      session, I, d: th, i, s.sessi, o, n.session, I, d,
-      user, I, d: th, i, s.sessi, o, n.user, I, d,
-      u, r, l: wind, o, w.locati, o, n.hr, e, f,
-      userAge, n, t: navigat, o, r.userAge, n, t,
-      metada, t, a
+      type: 'custom',
+      category,
+      action,
+      label,
+      value,
+      timestamp: Date.now(),
+      sessionId: this.session.sessionId,
+      userId: this.session.userId,
+      url: window.location.href,
+      userAgent: navigator.userAgent,
+      metadata
     };
 
-    th, i, s.even, t, s.pu, s, h(eve, n, t);
-    th, i, s.sessi, o, n.lastActivi, t, y = Da, t, e.n, o, w();
-    th, i, s.sessi, o, n.even, t, s++;
+    this.events.push(event);
+    this.session.lastActivity = Date.now();
+    this.session.events++;
 
-    // Flu, s, h if bat, c, h si, z, e reach, e, d
-    if (th, i, s.even, t, s.leng, t, h >= th, i, s.conf, i, g.batchSi, z, e) {
-      th, i, s.flu, s, h();
+    // Flush if batch size reached
+    if (this.events.length >= this.config.batchSize) {
+      this.flush();
     }
   }
 
-  trackPageVi, e, w(pageNa, m, e: string, metada, t, a?: Reco, r, d<string, a, n, y>): vo, i, d {
-    th, i, s.sessi, o, n.pageVie, w, s++;
+  trackPageView(pageName: string, metada, t, a?: Record<stringan, y>): void {
+    this.session.pageViews++;
     
-    th, i, s.tra, c, k('navigati, o, n', 'page_vi, e, w', pageNa, m, e, undefin, e, d, {
-      pageVie, w, s: th, i, s.sessi, o, n.pageVie, w, s,
-      sessionDurati, o, n: Da, t, e.n, o, w() - th, i, s.sessi, o, n.startTi, m, e,
-      ...metada, t, a
+    this.track('navigation', 'page_view', pageName, undefined, {
+      pageViews: this.session.pageViews,
+      sessionDuration: Date.now() - this.session.startTime,
+      ...metadata
     });
   }
 
-  trackConversi, o, n(conversionTy, p, e: string, val, u, e?: number, metada, t, a?: Reco, r, d<string, a, n, y>): vo, i, d {
-    th, i, s.tra, c, k('conversi, o, n', conversionTy, p, e, 'conversi, o, n', val, u, e, metada, t, a);
+  trackConversion(conversionType: string, val, u, e?: number, metada, t, a?: Record<stringan, y>): void {
+    this.track('conversion', conversionType, 'conversion', value, metadata);
   }
 
-  priva, t, e asy, n, c flu, s, h(): Promi, s, e<vo, i, d> {
-    if (th, i, s.even, t, s.leng, t, h === 0) retu, r, n;
+  private async flush(): Promise<void> {
+    if (this.events.length === 0) return;
 
-    con, s, t eventsToSe, n, d = [...th, i, s.even, t, s];
-    th, i, s.even, t, s = [];
+    const eventsToSend = [...this.events];
+    this.events = [];
 
-    t, r, y {
-      awa, i, t fet, c, h('/a, p, i/analyti, c, s', {
-        meth, o, d: 'PO, S, T',
-        heade, r, s: {
-          'Conte, n, t-Ty, p, e': 'applicati, o, n/js, o, n',
+    try {
+      await fetch('/api/analytics', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
         },
-        bo, d, y: JS, O, N.stringi, f, y({
-          even, t, s: eventsToSe, n, d,
-          sessi, o, n: th, i, s.sessi, o, n
+        body: JSON.stringify({
+          events: eventsToSend,
+          session: this.session
         })
       });
-    } cat, c, h (error) {
-      conso, l, e.error('Fail, e, d to se, n, d analyti, c, s even, t, s:', error);
-      // Re-a, d, d even, t, s to que, u, e f, o, r ret, r, y
-      th, i, s.even, t, s.unshi, f, t(...eventsToSe, n, d);
+    } catch (error) {
+      console.error('Failed to send analytics events:', error);
+      // Re-add events to queue for retry
+      this.events.unshift(...eventsToSend);
     }
   }
 
-  getSessi, o, n(): UserSessi, o, n {
-    retu, r, n { ...th, i, s.sessi, o, n };
+  getSession(): UserSession {
+    return { ...this.session };
   }
 
-  getEven, t, s(): AnalyticsEve, n, t[] {
-    retu, r, n [...th, i, s.even, t, s];
+  getEvents(): AnalyticsEvent[] {
+    return [...this.events];
   }
 
-  getEventCou, n, t(): number {
-    retu, r, n th, i, s.even, t, s.leng, t, h;
+  getEventCount(): number {
+    return this.events.length;
   }
 
-  destr, o, y(): vo, i, d {
-    if (th, i, s.flushTim, e, r) {
-      clearInterv, a, l(th, i, s.flushTim, e, r);
+  destroy(): void {
+    if (this.flushTimer) {
+      clearInterval(this.flushTimer);
     }
-    th, i, s.flu, s, h();
+    this.flush();
   }
 }
 
-// React ho, o, k f, o, r analyti, c, s
-export con, s, t useAdvancedAnalyti, c, s = () => {
-  con, s, t [analyti, c, s] = useState(() => AdvancedAnalyti, c, s.getInstan, c, e());
+// React hook for analytics
+export const useAdvancedAnalytics = () => {
+  const [analytics] = useState(() => AdvancedAnalytics.getInstance());
 
-  con, s, t tra, c, k = useCallback((
-    catego, r, y: string,
+  const track = useCallback((
+    category: string,
     acti, o, n: string,
-    lab, e, l?: string,
+    label?: string,
     val, u, e?: number,
-    metada, t, a?: Reco, r, d<string, a, n, y>
+    metada, t, a?: Record<stringan, y>
   ) => {
-    analyti, c, s.tra, c, k(catego, r, y, acti, o, n, lab, e, l, val, u, e, metada, t, a);
-  }, [analyti, c, s]);
+    analytics.track(category, action, label, value, metadata);
+  }, [analytics]);
 
-  con, s, t trackPageVi, e, w = useCallback((pageNa, m, e: string, metada, t, a?: Reco, r, d<string, a, n, y>) => {
-    analyti, c, s.trackPageVi, e, w(pageNa, m, e, metada, t, a);
-  }, [analyti, c, s]);
+  const trackPageView = useCallback((pageName: string, metada, t, a?: Record<stringan, y>) => {
+    analytics.trackPageView(pageName, metadata);
+  }, [analytics]);
 
-  con, s, t trackConversi, o, n = useCallback((
-    conversionTy, p, e: string,
+  const trackConversion = useCallback((
+    conversionType: string,
     val, u, e?: number,
-    metada, t, a?: Reco, r, d<string, a, n, y>
+    metada, t, a?: Record<stringan, y>
   ) => {
-    analyti, c, s.trackConversi, o, n(conversionTy, p, e, val, u, e, metada, t, a);
-  }, [analyti, c, s]);
+    analytics.trackConversion(conversionType, value, metadata);
+  }, [analytics]);
 
-  con, s, t getSessi, o, n = useCallback(() => {
-    retu, r, n analyti, c, s.getSessi, o, n();
-  }, [analyti, c, s]);
+  const getSession = useCallback(() => {
+    return analytics.getSession();
+  }, [analytics]);
 
-  retu, r, n {
-    tra, c, k,
-    trackPageVi, e, w,
-    trackConversi, o, n,
-    getSessi, o, n,
-    analyti, c, s
+  return {
+    track,
+    trackPageView,
+    trackConversion,
+    getSession,
+    analytics
   };
 };
 
-export default AdvancedAnalyti, c, s;
+export default AdvancedAnalytics;

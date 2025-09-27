@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { RouteRoutesNavigate } from "react-router-dom"
+=======
+import { Route, Routes, Navigate } from "react-router-dom"
+>>>>>>> cursor/check-fix-push-and-merge-to-main-767f
 import Home from "@/pages/Home"
 import About from "@/pages/About"
 import Contact from "@/pages/Contact"

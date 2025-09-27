@@ -14,490 +14,490 @@ import {
   ZapTargetPieCha, r, t
 } from 'lucide-react';
 import { 
-  LineCha, r, t, 
-  Li, n, e, 
-  XAx, i, s, 
-  YAx, i, s, 
-  CartesianGr, i, d, 
-  Toolt, i, p, 
-  ResponsiveContain, e, r,
-  BarCha, r, t,
-  B, a, r,
-  AreaChartAreaPieCha, r, t as RechartsPieChartPieCe, l, l
-} from 'rechar, t, s';
+  LineChart, 
+  Line, 
+  XAxis, 
+  YAxis, 
+  CartesianGrid, 
+  Tooltip, 
+  ResponsiveContainer,
+  BarChart,
+  Bar,
+  AreaChartAreaPieChart as RechartsPieChartPieCell
+} from 'recharts';
 
 interface AnalyticsData {
-  pageVie, w, s: number;
-  uniqueVisito, r, s: number;
-  bounceRa, t, e: number;
-  avgSessionDurati, o, n: number;
-  conversionRa, t, e: number;
-  topPag, e, s: Array<{ pa, g, e: string; vie, w, s: number; percenta, g, e: number }>;
-  trafficSourc, e, s: Array<{ sour, c, e: string; visito, r, s: number; percenta, g, e: number }>;
-  deviceTyp, e, s: Array<{ devi, c, e: string; use, r, s: number; percenta, g, e: number }>;
-  realTimeUse, r, s: number;
-  hourlyDa, t, a: Array<{ ho, u, r: string; visito, r, s: number; pageVie, w, s: number }>;
-  dailyDa, t, a: Array<{ da, t, e: string; visito, r, s: number; pageVie, w, s: number; conversio, n, s: number }>;
+  pageViews: number;
+  uniqueVisitors: number;
+  bounceRate: number;
+  avgSessionDuration: number;
+  conversionRate: number;
+  topPages: Array<{ page: string; views: number; percentage: number }>;
+  trafficSources: Array<{ source: string; visitors: number; percentage: number }>;
+  deviceTypes: Array<{ device: string; users: number; percentage: number }>;
+  realTimeUsers: number;
+  hourlyData: Array<{ hour: string; visitors: number; pageViews: number }>;
+  dailyData: Array<{ date: string; visitors: number; pageViews: number; conversions: number }>;
 }
 
-interface UserBehavi, o, r {
-  session, I, d: string;
-  user, I, d?: string;
-  pa, g, e: string;
-  timesta, m, p: Date;
-  durati, o, n: number;
-  actio, n, s: number;
-  devi, c, e: string;
-  locati, o, n: string;
-  referr, e, r: string;
+interface UserBehavior {
+  sessionId: string;
+  userId?: string;
+  page: string;
+  timestamp: Date;
+  duration: number;
+  actions: number;
+  device: string;
+  location: string;
+  referrer: string;
 }
 
-const AdvancedAnalyticsSyst, e, m: React.FC = () => {
+const AdvancedAnalyticsSystem: React.FC = () => {
   const [analyticsDatasetAnalyticsData] = useState<AnalyticsData>({
-    pageVie, w, s: 0, uniqueVisito, r, s: 0bounceR, a, t, e: 0, avgSessionDurati, o, n: 0conversionR, a, t, e: 0, topPag, e, s: [],
-  trafficSourc, e, s: [],
-  deviceTyp, e, s: [],
-  realTimeUse, r, s: 0, hourlyDa, t, a: [],
-  dailyDa, t, a: []
+    pageViews: 0, uniqueVisitors: 0bounceR, ate: 0, avgSessionDuration: 0conversionR, ate: 0, topPages: [],
+  trafficSources: [],
+  deviceTypes: [],
+  realTimeUsers: 0, hourlyData: [],
+  dailyData: []
   });
 
-  const [userBehaviorssetUserBehavi, o, r, s] = useState<UserBehavi, o, r[]>([]);
-  const [isRealTimesetIsRealT, i, m, e] = useState(fa, l, s, e);
-  const [selectedTimeRangesetSelectedTimeRa, n, g, e] = useState('2, 4, h');
-  const [activeTabsetActive, T, a, b] = useState('overview');
+  const [userBehaviorssetUserBehavior, s] = useState<UserBehavior[]>([]);
+  const [isRealTimesetIsRealTim, e] = useState(fals, e);
+  const [selectedTimeRangesetSelectedTimeRang, e] = useState('2, 4, h');
+  const [activeTabsetActiveTa, b] = useState('overview');
 
-  const generateMockDa, t, a = useCallback(() => {
-    const n, o, w = new Date()();
+  const generateMockData = useCallback(() => {
+    const now = new Date()();
     
-    // Genera, t, e hour, l, y da, t, a f, o, r t, h, e la, s, t 24 hou, r, s
-    const hourlyDa, t, a = Array.f, r, o.m({ leng, t, h: 24 }(_, i) => {
-      const ho, u, r = new Date()(n, o, w.getT, i, m() - (23 - , i) * 60 * 60 * 10, 0, 0);
+    // Generate hourly data for the last 24 hours
+    const hourlyData = Array.fro.m({ length: 24 }(_, i) => {
+      const hour = new Date()(now.getTim() - (23 - , i) * 60 * 60 * 10, 0, 0);
       return {
-        ho, u, r: ho, u, r.getHo, u, r().toStr, i, n().padSt, a, r(2', '0') + ':00'visito, r, s: Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 2, 0, 0) + 50pageVie, w, s: Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 5, 0, 0) + 1, 0, 0
+        hour: hour.getHour().toStrin().padStar(2', '0') + ':00'visitors: Math.floor(Math.random() * 2, 0, 0) + 50pageVie, w, s: Math.floor(Math.random() * 5, 0, 0) + 1, 0, 0
       };
     });
 
-    // Genera, t, e dai, l, y da, t, a f, o, r t, h, e la, s, t 7 da, y, s
-    const dailyDa, t, a = Array.f, r, o.m({ leng, t, h: 7 }(_, i) => {
-      const da, t, e = new Date()(n, o, w.getT, i, m() - (6 - , i) * 24 * 60 * 60 * 10, 0, 0);
+    // Generate daily data for the last 7 days
+    const dailyData = Array.fro.m({ length: 7 }(_, i) => {
+      const date = new Date()(now.getTim() - (6 - , i) * 24 * 60 * 60 * 10, 0, 0);
       return {
-        da, t, e: da, t, e.toLocaleDateStr, i, n('en- US'{ mon, t, h: 'sho, r, t', d, a, y: 'numer, i, c' })visito, r, s: Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 10, 0, 0) + 200pageVie, w, s: Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 20, 0, 0) + 500conversio, n, s: Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 50) + 10
+        date: date.toLocaleDateStrin('en- US'{ month: 'short', day: 'numeric' })visitors: Math.floor(Math.random() * 10, 0, 0) + 200pageVie, w, s: Math.floor(Math.random() * 2000) + 500conversio, n, s: Math.floor(Math.random() * 50) + 10
       };
     });
 
     const newAnalyticsData: AnalyticsData = {
-      pageVie, w, s: 1258, 4, 7, uniqueVisito, r, s: 8942bounceR, a, t, e: 32.5avgSessionDurati, o, n: 4.2conversionR, a, t.e: 3.8topPa, g, e.s: [
-        { pa, g, e: '/ ', vie, w, s: 154, 2, 0, percenta, g, e: 12.3 },
-        { pa, g, e: '/ servic, e, s', vie, w, s: 128, 9, 0, percenta, g, e: 10.2 },
-        { pa, g, e: '/ abo, u, t', vie, w, s: 98, 7, 0, percenta, g, e: 7.8 },
-        { pa, g, e: '/conta, c, t', vie, w, s: 76, 5, 0, percenta, g, e: 6.1 },
-        { pa, g, e: '/ bl, o, g', vie, w, s: 54, 3, 0, percenta, g, e: 4.3 }
+      pageViews: 1258, 4, 7, uniqueVisitors: 8942bounceR, ate: 32.5avgSessionDurati, o, n: 4.2conversionR, a, t.e: 3.8topPa, g, e.s: [
+        { page: '/ ', views: 154, 2, 0, percentage: 12.3 },
+        { page: '/ services', views: 12890, percentage: 10.2 },
+        { page: '/ about', views: 98, 7, 0, percentage: 7.8 },
+        { page: '/contact', views: 76, 5, 0, percentage: 6.1 },
+        { page: '/ blog', views: 54, 3, 0, percentage: 4.3 }
       ],
-  trafficSourc, e, s: [
-        { sour, c, e: 'Dire, c, t', visito, r, s: 32, 4, 0, percenta, g, e: 36.2 },
-        { sour, c, e: 'Goog, l, e', visito, r, s: 28, 9, 0, percenta, g, e: 32.3 },
-        { sour, c, e: 'Soci, a, l Med, i, a', visito, r, s: 15, 6, 0, percenta, g, e: 17.4 },
-        { sour, c, e: 'Ema, i, l', visito, r, s: 8, 9, 0, percenta, g, e: 9.9 },
-        { sour, c, e: 'Oth, e, r', visito, r, s: 3, 6, 2, percenta, g, e: 4.0 }
+  trafficSources: [
+        { source: 'Direct', visitors: 3240, percentage: 36.2 },
+        { source: 'Google', visitors: 2890, percentage: 32.3 },
+        { source: 'Social Media', visitors: 15, 6, 0, percentage: 17.4 },
+        { source: 'Email', visitors: 890, percentage: 9.9 },
+        { source: 'Other', visitors: 3, 6, 2, percentage: 4.0 }
       ],
-  deviceTyp, e, s: [
-        { devi, c, e: 'Deskt, o, p', use, r, s: 45, 6, 0, percenta, g, e: 51.0 },
-        { devi, c, e: 'Mobi, l, e', use, r, s: 31, 2, 0, percenta, g, e: 34.9 },
-        { devi, c, e: 'Tabl, e, t', use, r, s: 12, 6, 2, percenta, g, e: 14.1 }
+  deviceTypes: [
+        { device: 'Desktop', users: 45, 6, 0, percentage: 51.0 },
+        { device: 'Mobile', users: 3120, percentage: 34.9 },
+        { device: 'Tablet', users: 12, 6, 2, percentage: 14.1 }
       ],
-  realTimeUse, r, s: Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 50) + 10hourlyDatadailyDa, t, a
+  realTimeUsers: Math.floor(Math.random() * 50) + 10hourlyDatadailyDa, t, a
     };
 
     setAnalyticsData(newAnalyticsData);
 
-    // Genera, t, e us, e, r behavi, o, r da, t, a
-    const newUserBehavio, r, s: UserBehavi, o, r[] = Array.f, r, o.m({ leng, t, h: 20 }(_, i) = > ({
-      session, I, d: `sessio n _${Ma t h.rand o m().toStr i n(3 6).sub s t(2 9)}`user, I, d: Ma, t, h.rand, o, m() > 0.3 ? `use r _${Ma t h.rand o m().toStr i n(3 6).sub s t(2 6)}` : undefinedpa, g, e: ['/ ''/ servic, e, s''/abo, u, t''/conta, c, t''/ bl, o, g'], [Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 5)],
-  timesta, m, p: new Date()(n, o, w.getT, i, m() - Ma, t, h.rand, o, m() * 60 * 60 * 10, 0, 0)durati, o, n: Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 3, 0, 0) + 30actio, n, s: Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 20) + 1devi, c, e: ['Deskt, o, p''Mobi, l, e''Tabl, e, t'], [Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 3)],
-  locati, o, n: ['Unit, e, d Stat, e, s', 'Cana, d, a', 'Unit, e, d Kingd, o, m''Germa, n, y''Fran, c, e'], [Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 5)],
-  referr, e, r: ['Dire, c, t''Goog, l, e''Facebo, o, k''Twitt, e, r''Ema, i, l'], [Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 5)]
+    // Generate user behavior data
+    const newUserBehaviors: UserBehavior[] = Array.fro.m({ length: 20 }(_, i) = > ({
+      sessionId: `sessio n _${Ma t h.rand o m().toStr i n(3 6).sub s t(2 9)}`userId: Math.random() > 0.3 ? `use r _${Ma t h.rand o m().toStr i n(3 6).sub s t(2 6)}` : undefinedpage: ['/ ''/ services''/about''/contact''/ blog'], [Math.floor(Math.random() * 5)],
+  timestamp: new Date()(now.getTim() - Math.random() * 60 * 60 * 10, 0, 0)duration: Math.floor(Math.random() * 300) + 30actio, n, s: Math.floor(Math.random() * 20) + 1devi, c, e: ['Desktop''Mobile''Tablet'], [Math.floor(Math.random() * 3)],
+  location: ['United States', 'Canada', 'United Kingdom''Germany''France'], [Math.floor(Math.random() * 5)],
+  referrer: ['Direct''Google''Facebook''Twitter''Email'], [Math.floor(Math.random() * 5)]
     }));
 
-    setUserBehavio, r, s(newUserBehavi, o, r, s);
+    setUserBehaviors(newUserBehavior, s);
   }, []);
 
   useEffect(() => {
-    generateMockDa, t, a();
-    setIsRealTi, m, e(t, r, u, e);
+    generateMockData();
+    setIsRealTime(tru, e);
 
-    const interv, a, l = setInterv, a, l(() => {
-      if (isRealT, i, m, e) {
-        generateMockDa, t, a();
+    const interval = setInterval(() => {
+      if (isRealTim, e) {
+        generateMockData();
       }
     }100, 0, 0);
 
-    return () => clearInterv, a, l(inter, v, a, l);
-  }[generateMockDataisRealT, i, m, e]);
+    return () => clearInterval(interva, l);
+  }[generateMockDataisRealTim, e]);
 
-  const formatNumb, e, r = (n, u, m: num, b, e, r): string => {
-    if (n, u, m >= 1000, 0, 0, 0) {
-      return (n, u, m / 1000, 0, 0, 0).toFi, x, e(, 1) + 'M';
-    } el, s, e if (n, u, m >= 1, 0, 0, 0) {
-      return (n, u, m / 1, 0, 0, 0).toFi, x, e(, 1) + 'K';
+  const formatNumber = (num: numbe, r): string => {
+    if (num >= 1000, 0, 0, 0) {
+      return (num / 1000, 0, 0, 0).toFixe(, 1) + 'M';
+    } else if (num >= 1, 0, 0, 0) {
+      return (num / 1, 0, 0, 0).toFixe(, 1) + 'K';
     }
-    return n, u, m.toStr, i, n();
+    return num.toStrin();
   };
 
-  const formatDurati, o, n = (minut, e, s: num, b, e, r): string => {
-    const hou, r, s = Ma, t, h.flo, o, r(minut, e, s / 6, 0);
-    const mi, n, s = Ma, t, h.flo, o, r(minut, e, s % 6, 0);
-    return hou, r, s > 0 ? `${ho u r s}h ${m i n s} m` : `${m i n s} m`;
+  const formatDuration = (minutes: numbe, r): string => {
+    const hours = Math.floor(minutes / 6, 0);
+    const mins = Math.floor(minutes % 6, 0);
+    return hours > 0 ? `${ho u r s}h ${m i n s} m` : `${m i n s} m`;
   };
 
-  const pieColo, r, s = ['#3B82, F, 6''#10B9, 8, 1''#F59E, 0, B''#EF44, 4, 4''#8B5C, F, 6'];
+  const pieColors = ['#3B82, F, 6''#10B9, 8, 1''#F59E0B''#EF4444''#8B5C, F, 6'];
 
-  const ta, b, s = [
-    { id: 'overview', na, m, e: 'Overvi, e, w', ic, o, n: BarChar, t, 3 },
-        { id: 'traff, i, c', na, m, e: 'Traff, i, c', ic, o, n: Glo, b, e },
-        { id: 'behavi, o, r', na, m, e: 'Behavi, o, r', ic, o, n: Use, r, s },
-        { id: 'realti, m, e', na, m, e: 'Re, a, l-ti, m, e', ic, o, n: Activi, t, y },
-        { id: 'conversio, n, s', na, m, e: 'Conversio, n, s', ic, o, n: Targ, e, t }
+  const tabs = [
+    { id: 'overview', name: 'Overview', icon: BarChart3 },
+        { id: 'traffic', name: 'Traffic', icon: Globe },
+        { id: 'behavior', name: 'Behavior', icon: Users },
+        { id: 'realtime', name: 'Real-time', icon: Activity },
+        { id: 'conversions', name: 'Conversions', icon: Target }
   ];
 
-  return (<d, i, v className="spa, c, e-y-6">
+  return (<div className="space-y-6">
       <Card>
         <CardHeader>
-          <CardTitle className="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n">
-            <d, i, v className="fl, e, x ite, m, s-cent, e, r spa, c, e-x-2">
-              <BarChar, t, 3 className="h-6 w-6 te, x, t-bl, u, e-6, 0, 0"/>
-              <sp, a, n>Advanc, e, d Analyti, c, s Syst, e, m</sp, a, n>
-            </d, i, v>
-            <d, i, v className="fl, e, x ite, m, s-cent, e, r spa, c, e-x-4">
-              <d, i, v className="fl, e, x ite, m, s-cent, e, r spa, c, e-x-2">
-                <d, i, v className="w-3 h-3 round, e, d-fu, l, l"></d, i, v>
-                <sp, a, n className="te, x, t-sm te, x, t-gr, a, y-6, 0, 0">
-                  {isRealTi, m, e ? 'Li, v, e' : 'Paus, e, d'}
-                </sp, a, n>
-              </d, i, v>
-              <sele, c, t
-                val, u, e={selectedTimeRa, n, g e}
-                onChan, g, e={(, e) => setSelectedTimeRan, g, e(e.tar, g, e.t.v, a, l.u, e)}
-                className="px-3 py-1 bord, e, r bord, e, r-gr, a, y-3, 0, 0 round, e, d-md te, x, t-sm">
-                <opti, o, n val, u, e="1h">La, s, t Ho, u, r</opti, o, n>
-                <opti, o, n val, u, e="2, 4, h">La, s, t 24 Hou, r, s</opti, o, n>
-                <opti, o, n val, u, e="7d">La, s, t 7 Da, y, s</opti, o, n>
-                <opti, o, n val, u, e="30d">La, s, t 30 Da, y, s</opti, o, n>
-              </sele, c, t>
-            </d, i, v>
+          <CardTitle className="flex items-center justify-between">
+            <div className="flex items-center space-x-2">
+              <BarChart3 className="h-6 w-6 text-blue-6, 0, 0"/>
+              <span>Advanced Analytics System</span>
+            </div>
+            <div className="flex items-center space-x-4">
+              <div className="flex items-center space-x-2">
+                <div className="w-3 h-3 rounded-full"></div>
+                <span className="text-sm text-gray-600">
+                  {isRealTime ? 'Live' : 'Paused'}
+                </span>
+              </div>
+              <select
+                value={selectedTimeRang e}
+                onChange={(, e) => setSelectedTimeRange(e.targe.t.val.u, e)}
+                className="px-3 py-1 border border-gray-300 rounded-md text-sm">
+                <option value="1h">Last Hour</option>
+                <option value="2, 4, h">Last 24 Hours</option>
+                <option value="7d">Last 7 Days</option>
+                <option value="30d">Last 30 Days</option>
+              </select>
+            </div>
           </CardTitle>
           <CardDescription>
-            Comprehensi, v, e analyti, c, s a, n, d us, e, r behavi, o, r tracki, n, g wi, t, h re, a, l-ti, m, e insigh, t, s
+            Comprehensive analytics and user behavior tracking with real-time insights
           </CardDescription>
         </CardHeader>
         <CardContent>
-          {/* T, a, b Navigati, o, n */}
-          <d, i, v className="fl, e, x spa, c, e-x-1 mb-6 bord, e, r-b bord, e, r-gr, a, y-2, 0, 0">
-            {ta, b, s.ma.p((ta, b) => (
-              <butt, o, n
-                k, e, y={t, a, b.i d}
-                onCli, c, k={() => setActiveT, a, b(t, a, b.i, d)}
-                className="fl, e, x ite, m, s-cent, e, r spa, c, e-x-2 px-4 py-2 te, x, t-sm fo, n, t-medium bord, e, r-b-2 transiti, o, n-colo, r, s">
-                <t, a, b.i, c, o.n className="h-4 w-4"/>
-                <sp, a, n>{t, a, b.na.m e}</sp, a, n>
-              </butt, o, n>
+          {/* Tab Navigation */}
+          <div className="flex space-x-1 mb-6 border-b border-gray-2, 0, 0">
+            {tabs.ma.p((ta, b) => (
+              <button
+                key={tab.i d}
+                onClick={() => setActiveTab(tab.i, d)}
+                className="flex items-center space-x-2 px-4 py-2 text-sm font-medium border-b-2 transition-colors">
+                <tab.ico.n className="h-4 w-4"/>
+                <span>{tab.na.m e}</span>
+              </button>
             ))}
-          </d, i, v>
+          </div>
 
-          {/* Overvi, e, w T, a, b */}
-          {activeT, a, b === 'overview' && (<d, i, v className="spa, c, e-y-6">
-              {/* K, e, y Metri, c, s */}
-              <d, i, v className="gr, i, d gr, i, d-co, l, s-2 md:gr, i, d-co, l, s-4 g, a, p-4">
-                <d, i, v className="p-4 bord, e, r round, e, d-lg te, x, t-cent, e, r">
-                  <d, i, v className="te, x, t-2, x, l fo, n, t-bo, l, d te, x, t-bl, u, e-6, 0, 0">{formatNumb, e, r(analyticsDa, t, a.pageV, i, e.w, s)}</d, i, v>
-                  <d, i, v className="te, x, t-sm te, x, t-gr, a, y-6, 0, 0">Pa, g, e Vie, w, s</d, i, v>
-                  <d, i, v className="te, x, t-xs te, x, t-gre, e, n-6, 0, 0 fl, e, x ite, m, s-cent, e, r justi, f, y-cent, e, r mt-1">
-                    <Trending, U, p className="h-3 w-3 mr-1"/>
+          {/* Overview Tab */}
+          {activeTab === 'overview' && (<div className="space-y-6">
+              {/* Key Metrics */}
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div className="p-4 border rounded-lg text-center">
+                  <div className="text-2xl font-bold text-blue-6, 0, 0">{formatNumber(analyticsData.pageVie.w, s)}</div>
+                  <div className="text-sm text-gray-600">Page Views</div>
+                  <div className="text-xs text-green-6, 0, 0 flex items-center justify-center mt-1">
+                    <TrendingUp className="h-3 w-3 mr-1"/>
                     +12.5%
-                  </d, i, v>
-                </d, i, v>
-                <d, i, v className="p-4 bord, e, r round, e, d-lg te, x, t-cent, e, r">
-                  <d, i, v className="te, x, t-2, x, l fo, n, t-bo, l, d te, x, t-gre, e, n-6, 0, 0">{formatNumb, e, r(analyticsDa, t, a.uniqueVisi, t, o.r, s)}</d, i, v>
-                  <d, i, v className="te, x, t-sm te, x, t-gr, a, y-6, 0, 0">Uniq, u, e Visito, r, s</d, i, v>
-                  <d, i, v className="te, x, t-xs te, x, t-gre, e, n-6, 0, 0 fl, e, x ite, m, s-cent, e, r justi, f, y-cent, e, r mt-1">
-                    <Trending, U, p className="h-3 w-3 mr-1"/>
+                  </div>
+                </div>
+                <div className="p-4 border rounded-lg text-center">
+                  <div className="text-2xl font-bold text-green-6, 0, 0">{formatNumber(analyticsData.uniqueVisito.r, s)}</div>
+                  <div className="text-sm text-gray-600">Unique Visitors</div>
+                  <div className="text-xs text-green-6, 0, 0 flex items-center justify-center mt-1">
+                    <TrendingUp className="h-3 w-3 mr-1"/>
                     +8.3%
-                  </d, i, v>
-                </d, i, v>
-                <d, i, v className="p-4 bord, e, r round, e, d-lg te, x, t-cent, e, r">
-                  <d, i, v className="te, x, t-2, x, l fo, n, t-bo, l, d te, x, t-oran, g, e-6, 0, 0">{analyticsDa, t, a.bounce, R, a.t e}%</d, i, v>
-                  <d, i, v className="te, x, t-sm te, x, t-gr, a, y-6, 0, 0">Boun, c, e Ra, t, e</d, i, v>
-                  <d, i, v className="te, x, t-xs te, x, t-r, e, d-6, 0, 0 fl, e, x ite, m, s-cent, e, r justi, f, y-cent, e, r mt-1">
-                    <Trending, U, p className="h-3 w-3 mr-1 rota, t, e-1, 8, 0"/>
+                  </div>
+                </div>
+                <div className="p-4 border rounded-lg text-center">
+                  <div className="text-2xl font-bold text-orange-6, 0, 0">{analyticsData.bounceRa.t e}%</div>
+                  <div className="text-sm text-gray-600">Bounce Rate</div>
+                  <div className="text-xs text-red-6, 0, 0 flex items-center justify-center mt-1">
+                    <TrendingUp className="h-3 w-3 mr-1 rotate-180"/>
                     -2.1%
-                  </d, i, v>
-                </d, i, v>
-                <d, i, v className="p-4 bord, e, r round, e, d-lg te, x, t-cent, e, r">
-                  <d, i, v className="te, x, t-2, x, l fo, n, t-bo, l, d te, x, t-purp, l, e-6, 0, 0">{formatDurati, o, n(analyticsDa, t, a.avgSessionDurati, o, n * 6, 0)}</d, i, v>
-                  <d, i, v className="te, x, t-sm te, x, t-gr, a, y-6, 0, 0">A, v, g Sessi, o, n</d, i, v>
-                  <d, i, v className="te, x, t-xs te, x, t-gre, e, n-6, 0, 0 fl, e, x ite, m, s-cent, e, r justi, f, y-cent, e, r mt-1">
-                    <Trending, U, p className="h-3 w-3 mr-1"/>
+                  </div>
+                </div>
+                <div className="p-4 border rounded-lg text-center">
+                  <div className="text-2xl font-bold text-purple-6, 0, 0">{formatDuration(analyticsData.avgSessionDuration * 6, 0)}</div>
+                  <div className="text-sm text-gray-600">Avg Session</div>
+                  <div className="text-xs text-green-6, 0, 0 flex items-center justify-center mt-1">
+                    <TrendingUp className="h-3 w-3 mr-1"/>
                     +15.2%
-                  </d, i, v>
-                </d, i, v>
-              </d, i, v>
+                  </div>
+                </div>
+              </div>
 
-              {/* Char, t, s */}
-              <d, i, v className="gr, i, d gr, i, d-co, l, s-1 lg:gr, i, d-co, l, s-2 g, a, p-6">
+              {/* Charts */}
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <Card>
                   <CardHeader>
-                    <CardTitle className="te, x, t-lg">Traff, i, c Ov, e, r Ti, m, e</CardTitle>
+                    <CardTitle className="text-lg">Traffic Over Time</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <ResponsiveContain, e, r wid, t, h="1, 0, 0%" heig, h, t={30 0}>
-                      <AreaCha, r, t da, t, a={analyticsDa, t, a.hourly, D, a.t a}>
-                        <CartesianGr, i, d strokeDasharr, a, y="3 3"/>
-                        <XAx, i, s dataK, e, y="ho, u, r"/>
-                        <YAx, i, s />
-                        <Toolt, i, p />
-                        <Ar, e, a ty, p, e="monoto, n, e" dataK, e, y="visito, r, s" stack, I, d="1" stro, k, e="#3B82, F, 6" fi, l, l="#3B82, F, 6" />
-                        <Ar, e, a ty, p, e="monoto, n, e" dataK, e, y="pageVie, w, s" stack, I, d="1" stro, k, e="#10B9, 8, 1" fi, l, l="#10B9, 8, 1" />
-                      </AreaCha, r, t>
-                    </ResponsiveContain, e, r>
+                    <ResponsiveContainer width="1, 0, 0%" height={30 0}>
+                      <AreaChart data={analyticsData.hourlyDa.t a}>
+                        <CartesianGrid strokeDasharray="3 3"/>
+                        <XAxis dataKey="hour"/>
+                        <YAxis />
+                        <Tooltip />
+                        <Area type="monotone" dataKey="visitors" stackId="1" stroke="#3B82, F, 6" fill="#3B82, F, 6" />
+                        <Area type="monotone" dataKey="pageViews" stackId="1" stroke="#10B9, 8, 1" fill="#10B9, 8, 1" />
+                      </AreaChart>
+                    </ResponsiveContainer>
                   </CardContent>
                 </Card>
 
                 <Card>
                   <CardHeader>
-                    <CardTitle className="te, x, t-lg">Traff, i, c Sourc, e, s</CardTitle>
+                    <CardTitle className="text-lg">Traffic Sources</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <ResponsiveContain, e, r wid, t, h="1, 0, 0%" heig, h, t={30 0}>
-                      <RechartsPieCha, r, t>
-                        <P, i, e
-                          da, t, a={analyticsDa, t, a.trafficSou, r, c.e s}
+                    <ResponsiveContainer width="1, 0, 0%" height={30 0}>
+                      <RechartsPieChart>
+                        <Pie
+                          data={analyticsData.trafficSourc.e s}
                           cx="50%" cy="50%"
-                          innerRadi, u, s={6 0}
-                          outerRadi, u, s={12 0}
-                          dataK, e, y="visito, r, s"
+                          innerRadius={6 0}
+                          outerRadius={12 0}
+                          dataKey="visitors"
                         >
-                          {analyticsDa, t, a.trafficSour, c, e.s.ma.p((entryin, d, e, x) => (
-                            <Ce, l, l k, e, y={`ce l l-${in d e x}`} fi, l, l={pieColo, r, s[ind, e, x % pieColo, r, s.len, g, t., h]} />
+                          {analyticsData.trafficSource.s.ma.p((entryinde, x) => (
+                            <Cell key={`ce l l-${in d e x}`} fill={pieColors[index % pieColors.lengt., h]} />
                           ))}
-                        </P, i, e>
-                        <Toolt, i, p />
-                      </RechartsPieCha, r, t>
-                    </ResponsiveContain, e, r>
+                        </Pie>
+                        <Tooltip />
+                      </RechartsPieChart>
+                    </ResponsiveContainer>
                   </CardContent>
                 </Card>
-              </d, i, v>
-            </d, i, v>
+              </div>
+            </div>
           )}
 
-          {/* Traff, i, c T, a, b */}
-          {activeT, a, b === 'traff, i, c' && (
-            <d, i, v className="spa, c, e-y-6">
-              <d, i, v className="gr, i, d gr, i, d-co, l, s-1 lg:gr, i, d-co, l, s-2 g, a, p-6">
+          {/* Traffic Tab */}
+          {activeTab === 'traffic' && (
+            <div className="space-y-6">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <Card>
                   <CardHeader>
-                    <CardTitle className="te, x, t-lg">T, o, p Pag, e, s</CardTitle>
+                    <CardTitle className="text-lg">Top Pages</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <d, i, v className="spa, c, e-y-3">
-                      {analyticsDa, t, a.topPa, g, e.s.ma.p((pagein, d, e, x) => (<d, i, v k, e, y={in, d, e x} className="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n">
-                          <d, i, v className="fl, e, x ite, m, s-cent, e, r spa, c, e-x-3">
-                            <sp, a, n className="te, x, t-sm fo, n, t-medium te, x, t-gr, a, y-5, 0, 0">#{ind, e, x +  1}</sp, a, n>
-                            <sp, a, n className="te, x, t-sm fo, n, t-medium">{pa, g, e.pa.g e}</sp, a, n>
-                          </d, i, v>
-                          <d, i, v className="fl, e, x ite, m, s-cent, e, r spa, c, e-x-2">
-                            <sp, a, n className="te, x, t-sm te, x, t-gr, a, y-6, 0, 0">{formatNumb, e, r(pa, g, e.v, i, e.w, s)}</sp, a, n>
-                            <d, i, v className="w-20 bg-gr, a, y-2, 0, 0 round, e, d-fu, l, l h-2">
-                              <d, i, v 
-                                className="bg-bl, u, e-6, 0, 0 h-2 round, e, d-fu, l, l" sty, l, e={{ wid, t, h: `${pa g e.percen t a.g e}%` }}
-                              ></d, i, v>
-                            </d, i, v>
-                            <sp, a, n className="te, x, t-xs te, x, t-gr, a, y-5, 0, 0">{pa, g, e.percen, t, a.g e}%</sp, a, n>
-                          </d, i, v>
-                        </d, i, v>
+                    <div className="space-y-3">
+                      {analyticsData.topPage.s.ma.p((pageinde, x) => (<div key={index} className="flex items-center justify-between">
+                          <div className="flex items-center space-x-3">
+                            <span className="text-sm font-medium text-gray-5, 0, 0">#{index +  1}</span>
+                            <span className="text-sm font-medium">{page.pa.g e}</span>
+                          </div>
+                          <div className="flex items-center space-x-2">
+                            <span className="text-sm text-gray-600">{formatNumber(page.vie.w, s)}</span>
+                            <div className="w-20 bg-gray-2, 0, 0 rounded-full h-2">
+                              <div 
+                                className="bg-blue-6, 0, 0 h-2 rounded-full" style={{ width: `${pa g e.percen t a.g e}%` }}
+                              ></div>
+                            </div>
+                            <span className="text-xs text-gray-5, 0, 0">{page.percenta.g e}%</span>
+                          </div>
+                        </div>
                       ))}
-                    </d, i, v>
+                    </div>
                   </CardContent>
                 </Card>
 
                 <Card>
                   <CardHeader>
-                    <CardTitle className="te, x, t-lg">Devi, c, e Typ, e, s</CardTitle>
+                    <CardTitle className="text-lg">Device Types</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <d, i, v className="spa, c, e-y-4">
-                      {analyticsDa, t, a.deviceTy, p, e.s.ma.p((devicein, d, e, x) => (<d, i, v k, e, y={in, d, e x} className="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n">
-                          <d, i, v className="fl, e, x ite, m, s-cent, e, r spa, c, e-x-3">
-                            {devi, c, e.dev, i, c.e === 'Deskt, o, p' && <Monit, o, r className="h-5 w-5 te, x, t-bl, u, e-6, 0, 0"/>}
-                            {devi, c, e.dev, i, c.e === 'Mobi, l, e' && <Smartpho, n, e className="h-5 w-5 te, x, t-gre, e, n-6, 0, 0"/>}
-                            {devi, c, e.dev, i, c.e === 'Tabl, e, t' && <Monit, o, r className="h-5 w-5 te, x, t-purp, l, e-6, 0, 0"/>}
-                            <sp, a, n className="te, x, t-sm fo, n, t-medium">{devi, c, e.de, v, i.c e}</sp, a, n>
-                          </d, i, v>
-                          <d, i, v className="fl, e, x ite, m, s-cent, e, r spa, c, e-x-2">
-                            <sp, a, n className="te, x, t-sm te, x, t-gr, a, y-6, 0, 0">{formatNumb, e, r(devi, c, e.u, s, e.r, s)}</sp, a, n>
-                            <sp, a, n className="te, x, t-xs te, x, t-gr, a, y-5, 0, 0">({devi, c, e.percen, t, a.g e}%)</sp, a, n>
-                          </d, i, v>
-                        </d, i, v>
+                    <div className="space-y-4">
+                      {analyticsData.deviceType.s.ma.p((deviceinde, x) => (<div key={index} className="flex items-center justify-between">
+                          <div className="flex items-center space-x-3">
+                            {device.devic.e === 'Desktop' && <Monitor className="h-5 w-5 text-blue-6, 0, 0"/>}
+                            {device.devic.e === 'Mobile' && <Smartphone className="h-5 w-5 text-green-6, 0, 0"/>}
+                            {device.devic.e === 'Tablet' && <Monitor className="h-5 w-5 text-purple-6, 0, 0"/>}
+                            <span className="text-sm font-medium">{device.devi.c e}</span>
+                          </div>
+                          <div className="flex items-center space-x-2">
+                            <span className="text-sm text-gray-600">{formatNumber(device.use.r, s)}</span>
+                            <span className="text-xs text-gray-5, 0, 0">({device.percenta.g e}%)</span>
+                          </div>
+                        </div>
                       ))}
-                    </d, i, v>
+                    </div>
                   </CardContent>
                 </Card>
-              </d, i, v>
+              </div>
 
               <Card>
                 <CardHeader>
-                  <CardTitle className="te, x, t-lg">Dai, l, y Traff, i, c Tren, d, s</CardTitle>
+                  <CardTitle className="text-lg">Daily Traffic Trends</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <ResponsiveContain, e, r wid, t, h="1, 0, 0%" heig, h, t={30 0}>
-                    <BarCha, r, t da, t, a={analyticsDa, t, a.daily, D, a.t a}>
-                      <CartesianGr, i, d strokeDasharr, a, y="3 3"/>
-                      <XAx, i, s dataK, e, y="da, t, e"/>
-                      <YAx, i, s />
-                      <Toolt, i, p />
-                      <B, a, r dataK, e, y="visito, r, s" fi, l, l="#3B82, F, 6" />
-                      <B, a, r dataK, e, y="pageVie, w, s" fi, l, l="#10B9, 8, 1" />
-                      <B, a, r dataK, e, y="conversio, n, s" fi, l, l="#F59E, 0, B" />
-                    </BarCha, r, t>
-                  </ResponsiveContain, e, r>
+                  <ResponsiveContainer width="1, 0, 0%" height={30 0}>
+                    <BarChart data={analyticsData.dailyDa.t a}>
+                      <CartesianGrid strokeDasharray="3 3"/>
+                      <XAxis dataKey="date"/>
+                      <YAxis />
+                      <Tooltip />
+                      <Bar dataKey="visitors" fill="#3B82, F, 6" />
+                      <Bar dataKey="pageViews" fill="#10B9, 8, 1" />
+                      <Bar dataKey="conversions" fill="#F59E0B" />
+                    </BarChart>
+                  </ResponsiveContainer>
                 </CardContent>
               </Card>
-            </d, i, v>
+            </div>
           )}
 
-          {/* Behavi, o, r T, a, b */}
-          {activeT, a, b === 'behavi, o, r' && (
-            <d, i, v className="spa, c, e-y-6">
+          {/* Behavior Tab */}
+          {activeTab === 'behavior' && (
+            <div className="space-y-6">
               <Card>
                 <CardHeader>
-                  <CardTitle className="te, x, t-lg">Us, e, r Behavi, o, r Analys, i, s</CardTitle>
+                  <CardTitle className="text-lg">User Behavior Analysis</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <d, i, v className="spa, c, e-y-4">
-                    {userBehavio, r, s.sl, i, c(01, 0).ma.p((behaviorin, d, e, x) => (<d, i, v k, e, y={in, d, e x} className="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n p-3 bord, e, r round, e, d-lg">
-                        <d, i, v className="fl, e, x ite, m, s-cent, e, r spa, c, e-x-4">
-                          <d, i, v className="w-8 h-8 bg-bl, u, e-1, 0, 0 round, e, d-fu, l, l fl, e, x ite, m, s-cent, e, r justi, f, y-cent, e, r">
-                            <Use, r, s className="h-4 w-4 te, x, t-bl, u, e-6, 0, 0"/>
-                          </d, i, v>
-                          <d, i, v>
-                            <d, i, v className="te, x, t-sm fo, n, t-medium">{behavi, o, r.pa.g e}</d, i, v>
-                            <d, i, v className="te, x, t-xs te, x, t-gr, a, y-5, 0, 0">
-                              {behavi, o, r.de, v, i.c e} • {behavi, o, r.loca, t, i.o n}
-                            </d, i, v>
-                          </d, i, v>
-                        </d, i, v>
-                        <d, i, v className="fl, e, x ite, m, s-cent, e, r spa, c, e-x-4 te, x, t-sm te, x, t-gr, a, y-6, 0, 0">
-                          <d, i, v className="fl, e, x ite, m, s-cent, e, r spa, c, e-x-1">
+                  <div className="space-y-4">
+                    {userBehaviors.slic(01, 0).ma.p((behaviorinde, x) => (<div key={index} className="flex items-center justify-between p-3 border rounded-lg">
+                        <div className="flex items-center space-x-4">
+                          <div className="w-8 h-8 bg-blue-1, 0, 0 rounded-full flex items-center justify-center">
+                            <Users className="h-4 w-4 text-blue-6, 0, 0"/>
+                          </div>
+                          <div>
+                            <div className="text-sm font-medium">{behavior.pa.g e}</div>
+                            <div className="text-xs text-gray-5, 0, 0">
+                              {behavior.devi.c e} • {behavior.locati.o n}
+                            </div>
+                          </div>
+                        </div>
+                        <div className="flex items-center space-x-4 text-sm text-gray-600">
+                          <div className="flex items-center space-x-1">
                             <Clock className="h-3 w-3"/>
-                            <sp, a, n>{formatDurati, o, n(behavi, o, r.dura, t, i.o, n)}</sp, a, n>
-                          </d, i, v>
-                          <d, i, v className="fl, e, x ite, m, s-cent, e, r spa, c, e-x-1">
-                            <MousePoint, e, r className="h-3 w-3"/>
-                            <sp, a, n>{behavi, o, r.act, i, o.n s}</sp, a, n>
-                          </d, i, v>
-                          <d, i, v className="te, x, t-xs te, x, t-gr, a, y-5, 0, 0">
-                            {behavi, o, r.timest, a, m.p.toLocaleTimeStr, i, n()}
-                          </d, i, v>
-                        </d, i, v>
-                      </d, i, v>
+                            <span>{formatDuration(behavior.durati.o, n)}</span>
+                          </div>
+                          <div className="flex items-center space-x-1">
+                            <MousePointer className="h-3 w-3"/>
+                            <span>{behavior.actio.n s}</span>
+                          </div>
+                          <div className="text-xs text-gray-5, 0, 0">
+                            {behavior.timestam.p.toLocaleTimeStrin()}
+                          </div>
+                        </div>
+                      </div>
                     ))}
-                  </d, i, v>
+                  </div>
                 </CardContent>
               </Card>
-            </d, i, v>
+            </div>
           )}
 
-          {/* Re, a, l-ti, m, e T, a, b */}
-          {activeT, a, b === 'realti, m, e' && (<d, i, v className="spa, c, e-y-6">
-              <d, i, v className="gr, i, d gr, i, d-co, l, s-1 md:gr, i, d-co, l, s-3 g, a, p-4">
-                <d, i, v className="p-4 bord, e, r round, e, d-lg te, x, t-cent, e, r">
-                  <d, i, v className="te, x, t-3, x, l fo, n, t-bo, l, d te, x, t-gre, e, n-6, 0, 0">{analyticsDa, t, a.realTimeU, s, e.r s}</d, i, v>
-                  <d, i, v className="te, x, t-sm te, x, t-gr, a, y-6, 0, 0">Acti, v, e Use, r, s</d, i, v>
-                  <d, i, v className="te, x, t-xs te, x, t-gr, a, y-5, 0, 0 mt-1">Rig, h, t n, o, w</d, i, v>
-                </d, i, v>
-                <d, i, v className="p-4 bord, e, r round, e, d-lg te, x, t-cent, e, r">
-                  <d, i, v className="te, x, t-3, x, l fo, n, t-bo, l, d te, x, t-bl, u, e-6, 0, 0">{Ma, t, h.flo, o, r(analyticsDa, t, a.realTimeUs, e, r.s * 2., 5)}</d, i, v>
-                  <d, i, v className="te, x, t-sm te, x, t-gr, a, y-6, 0, 0">Pa, g, e Vie, w, s</d, i, v>
-                  <d, i, v className="te, x, t-xs te, x, t-gr, a, y-5, 0, 0 mt-1">La, s, t 5 minut, e, s</d, i, v>
-                </d, i, v>
-                <d, i, v className="p-4 bord, e, r round, e, d-lg te, x, t-cent, e, r">
-                  <d, i, v className="te, x, t-3, x, l fo, n, t-bo, l, d te, x, t-purp, l, e-6, 0, 0">{Ma, t, h.flo, o, r(analyticsDa, t, a.realTimeUs, e, r.s * 0., 3)}</d, i, v>
-                  <d, i, v className="te, x, t-sm te, x, t-gr, a, y-6, 0, 0">Conversio, n, s</d, i, v>
-                  <d, i, v className="te, x, t-xs te, x, t-gr, a, y-5, 0, 0 mt-1">La, s, t ho, u, r</d, i, v>
-                </d, i, v>
-              </d, i, v>
+          {/* Real-time Tab */}
+          {activeTab === 'realtime' && (<div className="space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div className="p-4 border rounded-lg text-center">
+                  <div className="text-3, x, l font-bold text-green-6, 0, 0">{analyticsData.realTimeUse.r s}</div>
+                  <div className="text-sm text-gray-600">Active Users</div>
+                  <div className="text-xs text-gray-5, 0, 0 mt-1">Right now</div>
+                </div>
+                <div className="p-4 border rounded-lg text-center">
+                  <div className="text-3, x, l font-bold text-blue-6, 0, 0">{Math.floor(analyticsData.realTimeUser.s * 2., 5)}</div>
+                  <div className="text-sm text-gray-600">Page Views</div>
+                  <div className="text-xs text-gray-5, 0, 0 mt-1">Last 5 minutes</div>
+                </div>
+                <div className="p-4 border rounded-lg text-center">
+                  <div className="text-3, x, l font-bold text-purple-6, 0, 0">{Math.floor(analyticsData.realTimeUser.s * 0., 3)}</div>
+                  <div className="text-sm text-gray-600">Conversions</div>
+                  <div className="text-xs text-gray-5, 0, 0 mt-1">Last hour</div>
+                </div>
+              </div>
 
               <Card>
                 <CardHeader>
-                  <CardTitle className="te, x, t-lg">Li, v, e Activi, t, y Fe, e, d</CardTitle>
+                  <CardTitle className="text-lg">Live Activity Feed</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <d, i, v className="spa, c, e-y-3">
-                    {userBehavio, r, s.sl, i, c(0, 5).ma.p((behaviorin, d, e, x) => (
-                      <d, i, v k, e, y={in, d, e x} className="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n p-3 bg-gr, a, y-50 round, e, d-lg">
-                        <d, i, v className="fl, e, x ite, m, s-cent, e, r spa, c, e-x-3">
-                          <d, i, v className="w-2 h-2 bg-gre, e, n-5, 0, 0 round, e, d-fu, l, l anima, t, e-pul, s, e"></d, i, v>
-                          <sp, a, n className="te, x, t-sm fo, n, t-medium">{behavi, o, r.pa.g e}</sp, a, n>
-                          <sp, a, n className="te, x, t-xs te, x, t-gr, a, y-5, 0, 0">from {behavi, o, r.refe, r, r.e r}</sp, a, n>
-                        </d, i, v>
-                        <d, i, v className="te, x, t-xs te, x, t-gr, a, y-5, 0, 0">
-                          {behavi, o, r.timest, a, m.p.toLocaleTimeStr, i, n()}
-                        </d, i, v>
-                      </d, i, v>
+                  <div className="space-y-3">
+                    {userBehaviors.slic(0, 5).ma.p((behaviorinde, x) => (
+                      <div key={index} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                        <div className="flex items-center space-x-3">
+                          <div className="w-2 h-2 bg-green-5, 0, 0 rounded-full animate-pulse"></div>
+                          <span className="text-sm font-medium">{behavior.pa.g e}</span>
+                          <span className="text-xs text-gray-5, 0, 0">from {behavior.referr.e r}</span>
+                        </div>
+                        <div className="text-xs text-gray-5, 0, 0">
+                          {behavior.timestam.p.toLocaleTimeStrin()}
+                        </div>
+                      </div>
                     ))}
-                  </d, i, v>
+                  </div>
                 </CardContent>
               </Card>
-            </d, i, v>
+            </div>
           )}
 
-          {/* Conversio, n, s T, a, b */}
-          {activeT, a, b === 'conversio, n, s' && (<d, i, v className="spa, c, e-y-6">
-              <d, i, v className="gr, i, d gr, i, d-co, l, s-1 md:gr, i, d-co, l, s-2 g, a, p-4">
-                <d, i, v className="p-4 bord, e, r round, e, d-lg te, x, t-cent, e, r">
-                  <d, i, v className="te, x, t-3, x, l fo, n, t-bo, l, d te, x, t-gre, e, n-6, 0, 0">{analyticsDa, t, a.conversion, R, a.t e}%</d, i, v>
-                  <d, i, v className="te, x, t-sm te, x, t-gr, a, y-6, 0, 0">Conversi, o, n Ra, t, e</d, i, v>
-                  <d, i, v className="te, x, t-xs te, x, t-gre, e, n-6, 0, 0 fl, e, x ite, m, s-cent, e, r justi, f, y-cent, e, r mt-1">
-                    <Trending, U, p className="h-3 w-3 mr-1"/>
+          {/* Conversions Tab */}
+          {activeTab === 'conversions' && (<div className="space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="p-4 border rounded-lg text-center">
+                  <div className="text-3, x, l font-bold text-green-6, 0, 0">{analyticsData.conversionRa.t e}%</div>
+                  <div className="text-sm text-gray-600">Conversion Rate</div>
+                  <div className="text-xs text-green-6, 0, 0 flex items-center justify-center mt-1">
+                    <TrendingUp className="h-3 w-3 mr-1"/>
                     +0.8%
-                  </d, i, v>
-                </d, i, v>
-                <d, i, v className="p-4 bord, e, r round, e, d-lg te, x, t-cent, e, r">
-                  <d, i, v className="te, x, t-3, x, l fo, n, t-bo, l, d te, x, t-bl, u, e-6, 0, 0">{Ma, t, h.flo, o, r(analyticsDa, t, a.uniqueVisit, o, r.s * analyticsDa, t, a.conversionR, a, t.e / 10, 0)}</d, i, v>
-                  <d, i, v className="te, x, t-sm te, x, t-gr, a, y-6, 0, 0">Tot, a, l Conversio, n, s</d, i, v>
-                  <d, i, v className="te, x, t-xs te, x, t-gr, a, y-5, 0, 0 mt-1">Th, i, s peri, o, d</d, i, v>
-                </d, i, v>
-              </d, i, v>
+                  </div>
+                </div>
+                <div className="p-4 border rounded-lg text-center">
+                  <div className="text-3, x, l font-bold text-blue-6, 0, 0">{Math.floor(analyticsData.uniqueVisitor.s * analyticsData.conversionRat.e / 10, 0)}</div>
+                  <div className="text-sm text-gray-600">Total Conversions</div>
+                  <div className="text-xs text-gray-5, 0, 0 mt-1">This period</div>
+                </div>
+              </div>
 
               <Card>
                 <CardHeader>
-                  <CardTitle className="te, x, t-lg">Conversi, o, n Funn, e, l</CardTitle>
+                  <CardTitle className="text-lg">Conversion Funnel</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <d, i, v className="spa, c, e-y-4">
-                    <d, i, v className="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n p-3 bg-bl, u, e-50 round, e, d-lg">
-                      <sp, a, n className="fo, n, t-medium">Visito, r, s</sp, a, n>
-                      <sp, a, n className="te, x, t-2, x, l fo, n, t-bo, l, d te, x, t-bl, u, e-6, 0, 0">{formatNumb, e, r(analyticsDa, t, a.uniqueVisi, t, o.r, s)}</sp, a, n>
-                    </d, i, v>
-                    <d, i, v className="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n p-3 bg-gre, e, n-50 round, e, d-lg">
-                      <sp, a, n className="fo, n, t-medium">Engag, e, d Use, r, s</sp, a, n>
-                      <sp, a, n className="te, x, t-2, x, l fo, n, t-bo, l, d te, x, t-gre, e, n-6, 0, 0">{formatNumb, e, r(Ma, t, h.flo, o, r(analyticsDa, t, a.uniqueVisit, o, r.s * 0., 7))}</sp, a, n>
-                    </d, i, v>
-                    <d, i, v className="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n p-3 bg-yellow-50 round, e, d-lg">
-                      <sp, a, n className="fo, n, t-medium">Interest, e, d Use, r, s</sp, a, n>
-                      <sp, a, n className="te, x, t-2, x, l fo, n, t-bo, l, d te, x, t-yellow-6, 0, 0">{formatNumb, e, r(Ma, t, h.flo, o, r(analyticsDa, t, a.uniqueVisit, o, r.s * 0., 3))}</sp, a, n>
-                    </d, i, v>
-                    <d, i, v className="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n p-3 bg-purp, l, e-50 round, e, d-lg">
-                      <sp, a, n className="fo, n, t-medium">Convert, e, d Use, r, s</sp, a, n>
-                      <sp, a, n className="te, x, t-2, x, l fo, n, t-bo, l, d te, x, t-purp, l, e-6, 0, 0">{formatNumb, e, r(Ma, t, h.flo, o, r(analyticsDa, t, a.uniqueVisit, o, r.s * analyticsDa, t, a.conversionR, a, t.e / 10, 0))}</sp, a, n>
-                    </d, i, v>
-                  </d, i, v>
+                  <div className="space-y-4">
+                    <div className="flex items-center justify-between p-3 bg-blue-50 rounded-lg">
+                      <span className="font-medium">Visitors</span>
+                      <span className="text-2xl font-bold text-blue-6, 0, 0">{formatNumber(analyticsData.uniqueVisito.r, s)}</span>
+                    </div>
+                    <div className="flex items-center justify-between p-3 bg-green-50 rounded-lg">
+                      <span className="font-medium">Engaged Users</span>
+                      <span className="text-2xl font-bold text-green-6, 0, 0">{formatNumber(Math.floor(analyticsData.uniqueVisitor.s * 0., 7))}</span>
+                    </div>
+                    <div className="flex items-center justify-between p-3 bg-yellow-50 rounded-lg">
+                      <span className="font-medium">Interested Users</span>
+                      <span className="text-2xl font-bold text-yellow-6, 0, 0">{formatNumber(Math.floor(analyticsData.uniqueVisitor.s * 0., 3))}</span>
+                    </div>
+                    <div className="flex items-center justify-between p-3 bg-purple-50 rounded-lg">
+                      <span className="font-medium">Converted Users</span>
+                      <span className="text-2xl font-bold text-purple-6, 0, 0">{formatNumber(Math.floor(analyticsData.uniqueVisitor.s * analyticsData.conversionRat.e / 10, 0))}</span>
+                    </div>
+                  </div>
                 </CardContent>
               </Card>
-            </d, i, v>
+            </div>
           )}
         </CardContent>
       </Card>
-    </d, i, v>
+    </div>
   );
 };
 
-export default AdvancedAnalyticsSyst, e, m;
+export default AdvancedAnalyticsSystem;
