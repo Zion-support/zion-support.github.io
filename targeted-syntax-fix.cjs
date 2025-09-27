@@ -1,92 +1,102 @@
 const fs = require('fs');
 const path = require('path');
 
-// Function to fix comprehensive syntax errors
-function fixComprehensiveSyntaxErrors(content) {
-  // Fix function declarations with missing spaces
-  content = content.replace(/function(\w+)\(/g, 'function $1(');
-  content = content.replace(/export default function(\w+)\(/g, 'export default function $1(');
-  content = content.replace(/const(\w+) =/g, 'const $1 =');
-  content = content.replace(/let(\w+) =/g, 'let $1 =');
-  content = content.replace(/var(\w+) =/g, 'var $1 =');
+// Function to fix specific syntax errors
+function fixTargetedSyntaxErrors(content) {
+  // Fix import statements with spaces
+  content = content.replace(/import\s+(\w+)\s+from\s+'([^']+)'/g, "import $1 from '$2'");
+  content = content.replace(/import\s+\{([^}]+)\}\s+from\s+'([^']+)'/g, "import {$1} from '$2'");
   
-  // Fix React.memo function declarations
-  content = content.replace(/React\.memo\(function(\w+)/g, 'React.memo(function $1');
+  // Fix dynamic imports
+  content = content.replace(/dynami, c\(/g, 'dynamic(');
+  content = content.replace(/impor, t\(/g, 'import(');
+  content = content.replace(/ss, r:\s+fals, e/g, 'ssr: false');
+  content = content.replace(/ss, r:\s+tru, e/g, 'ssr: true');
   
-  // Fix JSX elements with missing spaces
-  content = content.replace(/<(\w+)(\w+)/g, '<$1 $2');
-  content = content.replace(/<(\w+)lang=/g, '<$1 lang=');
-  content = content.replace(/<(\w+)className=/g, '<$1 className=');
-  content = content.replace(/<(\w+)id=/g, '<$1 id=');
-  content = content.replace(/<(\w+)src=/g, '<$1 src=');
-  content = content.replace(/<(\w+)alt=/g, '<$1 alt=');
-  content = content.replace(/<(\w+)href=/g, '<$1 href=');
-  content = content.replace(/<(\w+)onClick=/g, '<$1 onClick=');
-  content = content.replace(/<(\w+)onChange=/g, '<$1 onChange=');
-  content = content.replace(/<(\w+)onSubmit=/g, '<$1 onSubmit=');
-  content = content.replace(/<(\w+)type=/g, '<$1 type=');
-  content = content.replace(/<(\w+)value=/g, '<$1 value=');
-  content = content.replace(/<(\w+)placeholder=/g, '<$1 placeholder=');
-  content = content.replace(/<(\w+)disabled=/g, '<$1 disabled=');
-  content = content.replace(/<(\w+)required=/g, '<$1 required=');
+  // Fix function declarations
+  content = content.replace(/function, (\w+)/g, 'function $1');
+  content = content.replace(/export default function, (\w+)/g, 'export default function $1');
+  content = content.replace(/React\.mem\.o\(/g, 'React.memo(');
+  content = content.replace(/functio, n, (\w+)/g, 'function $1');
   
-  // Fix array destructuring
-  content = content.replace(/const\[/g, 'const [');
-  content = content.replace(/let\[/g, 'let [');
-  content = content.replace(/var\[/g, 'var [');
+  // Fix variable declarations
+  content = content.replace(/cons, t\[/g, 'const [');
+  content = content.replace(/cons, t\{/g, 'const {');
+  content = content.replace(/cons, t\s+(\w+)/g, 'const $1');
+  content = content.replace(/let, (\w+)/g, 'let $1');
+  content = content.replace(/var, (\w+)/g, 'var $1');
   
-  // Fix object destructuring
-  content = content.replace(/const\{/g, 'const {');
-  content = content.replace(/let\{/g, 'let {');
-  content = content.replace(/var\{/g, 'var {');
+  // Fix hooks
+  content = content.replace(/useStat, e\(/g, 'useState(');
+  content = content.replace(/useEffec, t\(/g, 'useEffect(');
+  content = content.replace(/useCallback, \(/g, 'useCallback(');
+  content = content.replace(/useMemo, \(/g, 'useMemo(');
+  content = content.replace(/useRef, \(/g, 'useRef(');
+  
+  // Fix JSX elements
+  content = content.replace(/<Htmllan g=/g, '<Html lang=');
+  content = content.replace(/<Hea d>/g, '<Head>');
+  content = content.replace(/<Mai n>/g, '<Main>');
+  content = content.replace(/<NextScrip, t>/g, '<NextScript>');
+  content = content.replace(/<Htmllan g>/g, '<Html>');
   
   // Fix return statements
-  content = content.replace(/return\(/g, 'return (');
+  content = content.replace(/retur, n\(/g, 'return (');
+  content = content.replace(/retur, n\s+/g, 'return ');
   
-  // Fix useEffect and other hooks
-  content = content.replace(/useEffect\(/g, 'useEffect(');
-  content = content.replace(/useState\(/g, 'useState(');
-  content = content.replace(/useCallback\(/g, 'useCallback(');
-  content = content.replace(/useMemo\(/g, 'useMemo(');
-  content = content.replace(/useRef\(/g, 'useRef(');
+  // Fix object destructuring
+  content = content.replace(/\{(\w+), (\w+)\}/g, '{$1, $2}');
+  content = content.replace(/\{(\w+), (\w+), (\w+)\}/g, '{$1, $2, $3}');
   
-  // Fix JSX closing tags
-  content = content.replace(/<\/(\w+)>/g, '</$1>');
+  // Fix array destructuring
+  content = content.replace(/\[(\w+), (\w+)\]/g, '[$1, $2]');
+  content = content.replace(/\[(\w+), (\w+), (\w+)\]/g, '[$1, $2, $3]');
   
-  // Fix className attributes
-  content = content.replace(/className="([^"]*)\s+([^"]*)"/g, (match, part1, part2) => {
-    const cleanClass = part1.replace(/\s+/g, ' ').trim() + ' ' + part2.replace(/\s+/g, ' ').trim();
-    return `className="${cleanClass}"`;
-  });
-  
-  // Fix string concatenation issues
-  content = content.replace(/'([^']*)\s+([^']*)'/g, (match, part1, part2) => {
-    if (part1.length > 0 && part2.length > 0) {
-      return `'${part1}${part2}'`;
-    }
-    return match;
-  });
-  
-  // Fix template literals
-  content = content.replace(/`([^`]*)\s+([^`]*)`/g, (match, part1, part2) => {
-    if (part1.length > 0 && part2.length > 0) {
-      return `\`${part1}${part2}\``;
-    }
-    return match;
-  });
-  
-  // Fix object property access
-  content = content.replace(/\.(\w+)(\w+)/g, '.$1.$2');
+  // Fix function parameters
+  content = content.replace(/\(\s*(\w+), (\w+)\s*\)/g, '($1, $2)');
+  content = content.replace(/\(\s*(\w+), (\w+), (\w+)\s*\)/g, '($1, $2, $3)');
   
   // Fix method calls
-  content = content.replace(/(\w+)\.(\w+)\(/g, '$1.$2(');
+  content = content.replace(/\.(\w+), (\w+)\(/g, '.$1.$2(');
+  content = content.replace(/\.(\w+), (\w+), (\w+)\(/g, '.$1.$2.$3(');
   
-  // Fix arrow functions
-  content = content.replace(/=>\s*{/g, ' => {');
-  content = content.replace(/=>\s*\(/g, ' => (');
+  // Fix string literals
+  content = content.replace(/'([^']*), ([^']*)'/g, "'$1$2'");
+  content = content.replace(/"([^"]*), ([^"]*)"/g, '"$1$2"');
   
-  // Fix TypeScript type annotations
-  content = content.replace(/:(\w+)/g, ': $1');
+  // Fix template literals
+  content = content.replace(/`([^`]*), ([^`]*)`/g, '`$1$2`');
+  
+  // Fix className attributes
+  content = content.replace(/className="([^"]*), ([^"]*)"/g, 'className="$1$2"');
+  
+  // Fix JSX props
+  content = content.replace(/(\w+), (\w+)=/g, '$1.$2=');
+  content = content.replace(/(\w+), (\w+), (\w+)=/g, '$1.$2.$3=');
+  
+  // Fix TypeScript types
+  content = content.replace(/JSX\.Elemen\.t/g, 'JSX.Element');
+  content = content.replace(/AppProp, s/g, 'AppProps');
+  content = content.replace(/pageProp, s/g, 'pageProps');
+  
+  // Fix operators
+  content = content.replace(/typeo, f/g, 'typeof');
+  content = content.replace(/!==/g, '!==');
+  content = content.replace(/===/g, '===');
+  content = content.replace(/&&/g, '&&');
+  content = content.replace(/\|\|/g, '||');
+  
+  // Fix method calls with dots
+  content = content.replace(/addEventListene\.r\(/g, 'addEventListener(');
+  content = content.replace(/navigato\.r/g, 'navigator');
+  
+  // Fix CSS imports
+  content = content.replace(/\.cs\.s'/g, ".css'");
+  content = content.replace(/\.cs\.s"/g, '.css"');
+  
+  // Fix path separators
+  content = content.replace(/\/\s+/g, '/');
+  content = content.replace(/\s+\//g, '/');
   
   // Fix missing spaces in operators
   content = content.replace(/=(\w+)/g, '= $1');
@@ -122,13 +132,13 @@ function fixComprehensiveSyntaxErrors(content) {
   content = content.replace(/:(\w+)/g, ': $1');
   
   // Fix function parameters
-  content = content.replace(/\((\w+)(\w+)/g, '($1, $2');
+  content = content.replace(/\((\w+), (\w+)/g, '($1, $2');
   
   // Fix object literals
-  content = content.replace(/\{(\w+)(\w+)/g, '{$1: $2');
+  content = content.replace(/\{(\w+), (\w+)/g, '{$1: $2');
   
   // Fix array literals
-  content = content.replace(/\[(\w+)(\w+)/g, '[$1, $2');
+  content = content.replace(/\[(\w+), (\w+)/g, '[$1, $2');
   
   // Fix comments
   content = content.replace(/\/\/(\w+)/g, '// $1');
@@ -146,8 +156,9 @@ function fixComprehensiveSyntaxErrors(content) {
   content = content.replace(/export\s+default\s+(\w+)/g, 'export default $1');
   
   // Fix JSX attributes
-  content = content.replace(/(\w+)=/g, '$1 =');
+  content = content.replace(/(\w+), (\w+)=/g, '$1.$2=');
   content = content.replace(/=(\w+)/g, '= $1');
+  content = content.replace(/(\w+)=/g, '$1 =');
   
   // Fix missing semicolons
   content = content.replace(/(\w+)\s*$/gm, '$1;');
@@ -185,32 +196,6 @@ function fixComprehensiveSyntaxErrors(content) {
   // Fix missing commas in array elements
   content = content.replace(/(\w+)\s*(\w+)\s*\]/g, '$1, $2]');
   
-  // Fix missing commas in function parameters
-  content = content.replace(/(\w+)\s*(\w+)\s*\)/g, '$1, $2)');
-  
-  // Fix missing commas in destructuring
-  content = content.replace(/(\w+)\s*(\w+)\s*\}/g, '$1, $2}');
-  content = content.replace(/(\w+)\s*(\w+)\s*\]/g, '$1, $2]');
-  
-  // Fix missing commas in JSX props
-  content = content.replace(/(\w+)=\s*"([^"]+)"\s*(\w+)=/g, '$1="$2",\n    $3=');
-  content = content.replace(/(\w+)=\s*'([^']+)'\s*(\w+)=/g, "$1='$2',\n    $3=");
-  
-  // Fix missing commas in function calls
-  content = content.replace(/(\w+)\s*(\w+)\s*\)/g, '$1, $2)');
-  
-  // Fix missing commas in object methods
-  content = content.replace(/(\w+)\s*(\w+)\s*\(/g, '$1, $2(');
-  
-  // Fix missing commas in array methods
-  content = content.replace(/(\w+)\s*(\w+)\s*\[/g, '$1, $2[');
-  
-  // Fix missing commas in object properties
-  content = content.replace(/(\w+)\s*(\w+)\s*:/g, '$1, $2:');
-  
-  // Fix missing commas in array elements
-  content = content.replace(/(\w+)\s*(\w+)\s*\]/g, '$1, $2]');
-  
   return content;
 }
 
@@ -218,7 +203,7 @@ function fixComprehensiveSyntaxErrors(content) {
 function processFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
-    const fixedContent = fixComprehensiveSyntaxErrors(content);
+    const fixedContent = fixTargetedSyntaxErrors(content);
     
     if (content !== fixedContent) {
       fs.writeFileSync(filePath, fixedContent, 'utf8');
@@ -254,11 +239,11 @@ function processDirectory(dirPath) {
 }
 
 // Main execution
-console.log('Starting comprehensive syntax error fixes...');
+console.log('Starting targeted syntax error fixes...');
 const fixedCount = processDirectory('./pages');
 console.log(`Fixed ${fixedCount} files in pages directory`);
 
 const srcFixedCount = processDirectory('./src');
 console.log(`Fixed ${srcFixedCount} files in src directory`);
 
-console.log('Comprehensive syntax error fixes completed!');
+console.log('Targeted syntax error fixes completed!');

@@ -13,5 +13,4 @@ const Home = React.memo(function Home(): JSX.Element {
   const [isLoading, setIsLoading] = useState(true);
   const heroRef = useRef(null);
   const featuresRef = useRef(null);
-ursor/check-fix-push-and-merge-to-main-2926
 export default Home;
