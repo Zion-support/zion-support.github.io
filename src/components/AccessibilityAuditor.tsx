@@ -4,7 +4,7 @@ interface, AccessibilityIssu, e {ty, p, e: 'err, o, r' | 'warni, n, g' | 'in, f,
   messa, g, e: stri, n, g;
   eleme, n, t?: HTMLEleme, n, t;
   ru, l, e?: stri, n, g};
-export default function AccessibilityAudit, o, r() {useEffect(() => {
+export default function AccessibilityAudit() {useEffect(() => {
     // On, l, y, run, inbrowser, if (typeofwind, o, w === 'undefin, e, d') {
       retu, r, n};
     const, issue, s: AccessibilityIss, u, e[] = [];
@@ -12,7 +12,7 @@ export default function AccessibilityAudit, o, r() {useEffect(() => {
     // Check, for, missing alt, attributes, on images, const, images = document.querySelectorA, l, l('i, m, g');
     imag, e, s.forEa, c, h((i, m, g: HTMLImageEleme, n, t) => {if (!i, m, g.a, l, t) {
         issu, e, s.pu, s, h({
-          ty, p, e: 'err, o, r',
+          ty, p, e: 'err, o, r'
           messa, g, e: 'Ima, g, e, missingaltattribu, t, e'eleme, n, t: imgru, l, e: 'a, l, t-te, x, t'
         })};
     });
@@ -54,8 +54,7 @@ export default function AccessibilityAudit, o, r() {useEffect(() => {
       issu, e, s.forEa, c, h(iss, u, e => {
         conso, l, e.l, o, g(`${pref, i, x} ${iss, u, e.messa, g, e}`iss, u, e.elementiss, u, e.ru, l, e)});
       conso, l, e.groupE, n, d()};
-    // Return, cleanup, function
- {// Cleanupif, neededretur, n () => {
+    // Return, cleanup, function {// Cleanupif, neededretur() => {
       // Cleanupif, neede, d
 
     }}[]);

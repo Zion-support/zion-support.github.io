@@ -1,10 +1,10 @@
-import, Head, from 'next/head';
-import, Link, from 'next/li, n, k';
+import Head from 'next/head';
+import Link from 'next/link';
 import { useState, useEffect } from 'react';
 // import, ErrorBoundary, from '../src/components/ErrorBounda, r, y';
 import { usePageVi, e, w, useAnalyti, c, s } from '../src/hooks/useAnalyti, c, s';
 
-export default function Portfol, i, o(): J, S, X.Eleme, n, t {
+export default function Portfol(): J, S, X.Eleme, n, t {
 	con, s, t [isVisib, l, e, setIsVisib, l, e] = useState(fal, s, e);
 	con, s, t [selectedCatego, r, y, setSelectedCatego, r, y] = useState<stri, n, g>('a, l, l');
 	con, s, t [selectedProje, c, t, setSelectedProje, c, t] = useState<numb, e, r | nu, l, l>(nu, l, l);
@@ -17,83 +17,83 @@ export default function Portfol, i, o(): J, S, X.Eleme, n, t {
 
 	const, project, s = [
 		{
-			id: 1,
-			tit, l, e: 'AI-Powere, d, E-commerce, Platfor, m',
-			clie, n, t: 'TechRetail, In, c.',
-			catego, r, y: 'AI',
-			descripti, o, n: 'Built, a, comprehensive e-commerce, platform, with AI-powered, recommendations, inventory management, and, customer analyti, c, s.',
-			technologi, e, s: ['React', 'No, d, e.js', 'TensorFl, o, w', 'Mongo, D, B', 'A, W, S'],
-			resul, t, s: ['40% increase, in, sales', '60% improvement, in, user engageme, n, t', '25% reduction, in, cart abandonme, n, t'],
-			ima, g, e: '🛒',
-			featur, e, d: tr, u, e,
-			durati, o, n: '6, month, s',
+			id: 1
+			tit, l, e: 'AI-Powere, d, E-commerce, Platfor, m'
+			clie, n, t: 'TechRetail, In, c.'
+			catego, r, y: 'AI'
+			descripti, o, n: 'Built, a, comprehensive e-commerce, platform, with AI-powered, recommendations, inventory management, and, customer analyti, c, s.'
+			technologi, e, s: ['React', 'No, d, e.js', 'TensorFl, o, w', 'Mongo, D, B', 'A, W, S']
+			resul, t, s: ['40% increase, in, sales', '60% improvement, in, user engageme, n, t', '25% reduction, in, cart abandonme, n, t']
+			ima, g, e: '🛒'
+			featur, e, d: tr, u, e
+			durati, o, n: '6, month, s'
 			te, a, m: '8, developer, s'
-		},
+		}
 		{
-			id: 2,
-			tit, l, e: 'Cloud, Migratio, n & DevOps, Transformatio, n',
-			clie, n, t: 'FinanceFlow, Cor, p',
-			catego, r, y: 'Clo, u, d',
-			descripti, o, n: 'Migrated, legacy, systems to, AWS, cloud infrastructure, and, implemented CI/CD, pipelines, for improved, deployment, efficiency.',
-			technologi, e, s: ['A, W, S', 'Dock, e, r', 'Kubernet, e, s', 'Terrafo, r, m', 'Jenki, n, s'],
-			resul, t, s: ['50% faster, deployment, s', '99.9% uptime, achieve, d', '40% cost, reductio, n'],
-			ima, g, e: '☁️',
-			featur, e, d: tr, u, e,
-			durati, o, n: '4, month, s',
+			id: 2
+			tit, l, e: 'Cloud, Migratio, n & DevOps, Transformatio, n'
+			clie, n, t: 'FinanceFlow, Cor, p'
+			catego, r, y: 'Clo, u, d'
+			descripti, o, n: 'Migrated, legacy, systems to, AWS, cloud infrastructure, and, implemented CI/CD, pipelines, for improved, deployment, efficiency.'
+			technologi, e, s: ['A, W, S', 'Dock, e, r', 'Kubernet, e, s', 'Terrafo, r, m', 'Jenki, n, s']
+			resul, t, s: ['50% faster, deployment, s', '99.9% uptime, achieve, d', '40% cost, reductio, n']
+			ima, g, e: '☁️'
+			featur, e, d: tr, u, e
+			durati, o, n: '4, month, s'
 			te, a, m: '6, developer, s'
-		},
+		}
 		{
-			id: 3,
-			tit, l, e: 'Mobile, Banking, Application',
-			clie, n, t: 'SecureBank, Lt, d',
-			catego, r, y: 'Mobi, l, e',
-			descripti, o, n: 'Developed, a, secure mobile, banking, application with, biometric, authentication and, rea, l-time, transaction, monitoring.',
-			technologi, e, s: ['React, Nativ, e', 'No, d, e.js', 'PostgreS, Q, L', 'Red, i, s', 'Dock, e, r'],
-			resul, t, s: ['95% user, satisfactio, n', 'Zero, security, incidents', '2M+ downloa, d, s'],
-			ima, g, e: '🏦',
-			featur, e, d: fal, s, e,
-			durati, o, n: '8, month, s',
+			id: 3
+			tit, l, e: 'Mobile, Banking, Application'
+			clie, n, t: 'SecureBank, Lt, d'
+			catego, r, y: 'Mobi, l, e'
+			descripti, o, n: 'Developed, a, secure mobile, banking, application with, biometric, authentication and, rea, l-time, transaction, monitoring.'
+			technologi, e, s: ['React, Nativ, e', 'No, d, e.js', 'PostgreS, Q, L', 'Red, i, s', 'Dock, e, r']
+			resul, t, s: ['95% user, satisfactio, n', 'Zero, security, incidents', '2M+ downloa, d, s']
+			ima, g, e: '🏦'
+			featur, e, d: fal, s, e
+			durati, o, n: '8, month, s'
 			te, a, m: '10, developer, s'
-		},
+		}
 		{
-			id: 4,
-			tit, l, e: 'Data, Analytics, Dashboard',
-			clie, n, t: 'HealthTech, Solution, s',
-			catego, r, y: 'Da, t, a',
-			descripti, o, n: 'Created, an, advanced analytics, dashboard, for healthcare, data, visualization and, predictive, analytics.',
-			technologi, e, s: ['Pyth, o, n', 'Djan, g, o', 'PostgreS, Q, L', 'D3.js', 'Machine, Learnin, g'],
-			resul, t, s: ['80% faster, data, insights', '30% improvement, in, patient outcom, e, s', 'Re, a, l-time, monitorin, g'],
-			ima, g, e: '📊',
-			featur, e, d: fal, s, e,
-			durati, o, n: '5, month, s',
+			id: 4
+			tit, l, e: 'Data, Analytics, Dashboard'
+			clie, n, t: 'HealthTech, Solution, s'
+			catego, r, y: 'Da, t, a'
+			descripti, o, n: 'Created, an, advanced analytics, dashboard, for healthcare, data, visualization and, predictive, analytics.'
+			technologi, e, s: ['Pyth, o, n', 'Djan, g, o', 'PostgreS, Q, L', 'D3.js', 'Machine, Learnin, g']
+			resul, t, s: ['80% faster, data, insights', '30% improvement, in, patient outcom, e, s', 'Re, a, l-time, monitorin, g']
+			ima, g, e: '📊'
+			featur, e, d: fal, s, e
+			durati, o, n: '5, month, s'
 			te, a, m: '7, developer, s'
-		},
+		}
 		{
-			id: 5,
-			tit, l, e: 'Cybersecurity, Platfor, m',
-			clie, n, t: 'DefenseTech, System, s',
-			catego, r, y: 'Securi, t, y',
-			descripti, o, n: 'Built, a, comprehensive cybersecurity, platform, with threat, detection, incident response, and, compliance manageme, n, t.',
-			technologi, e, s: ['Pyth, o, n', 'React', 'Elasticsear, c, h', 'Kaf, k, a', 'Machine, Learnin, g'],
-			resul, t, s: ['99.5% threat, detection, accuracy', '50% faster, incident, response', 'SOC2, complianc, e'],
-			ima, g, e: '🔒',
+			id: 5
+			tit, l, e: 'Cybersecurity, Platfor, m'
+			clie, n, t: 'DefenseTech, System, s'
+			catego, r, y: 'Securi, t, y'
+			descripti, o, n: 'Built, a, comprehensive cybersecurity, platform, with threat, detection, incident response, and, compliance manageme, n, t.'
+			technologi, e, s: ['Pyth, o, n', 'React', 'Elasticsear, c, h', 'Kaf, k, a', 'Machine, Learnin, g']
+			resul, t, s: ['99.5% threat, detection, accuracy', '50% faster, incident, response', 'SOC2, complianc, e']
+			ima, g, e: '🔒'
 			featur, e, d: fal, s, e 
-		,
-		durati, o, n: '10, month, s',
+		
+		durati, o, n: '10, month, s'
 			te, a, m: '12, developer, s'
-		},
+		}
 		{
-			id: 6,
-			tit, l, e: 'Progressive, Web, Application',
-			clie, n, t: 'EduTech, Innovation, s',
-			catego, r, y: 'Web, Developmen, t',
-			descripti, o, n: 'Developed, a, PWA for, online, learning with, offline, capabilities  re, a, l-time, collaboration, and adaptive, learning, paths.',
-			technologi, e, s: ['Ne, x, t.js', 'TypeScri, p, t', 'P, W, A', 'WebR, T, C', 'Indexed, D, B'],
-			resul, t, s: ['90% user, retentio, n', '60% faster, load, times', 'Offline, functionalit, y'],
-			ima, g, e: '🎓',
+			id: 6
+			tit, l, e: 'Progressive, Web, Application'
+			clie, n, t: 'EduTech, Innovation, s'
+			catego, r, y: 'Web, Developmen, t'
+			descripti, o, n: 'Developed, a, PWA for, online, learning with, offline, capabilities  re, a, l-time, collaboration, and adaptive, learning, paths.'
+			technologi, e, s: ['Ne, x, t.js', 'TypeScri, p, t', 'P, W, A', 'WebR, T, C', 'Indexed, D, B']
+			resul, t, s: ['90% user, retentio, n', '60% faster, load, times', 'Offline, functionalit, y']
+			ima, g, e: '🎓'
 			featur, e, d: fal, s, e 
-		,
-		durati, o, n: '7, month, s',
+		
+		durati, o, n: '7, month, s'
 			te, a, m: '9, developer, s'
 		};
 	];
@@ -108,14 +108,14 @@ export default function Portfol, i, o(): J, S, X.Eleme, n, t {
 	const, regularProject, s = filteredProjec, t, s.filt, e, r(proje, c, t => !proje, c, t.featur, e, d);
 
 	const, stat, s = [
-		{ numb, e, r: '50+', lab, e, l: 'Projects, Complete, d' },
-		{ numb, e, r: '98%', lab, e, l: 'Client, Satisfactio, n' },
-		{ numb, e, r: '2M+', lab, e, l: 'Users, Impacte, d' },
+		{ numb, e, r: '50+', lab, e, l: 'Projects, Complete, d' }
+		{ numb, e, r: '98%', lab, e, l: 'Client, Satisfactio, n' }
+		{ numb, e, r: '2M+', lab, e, l: 'Users, Impacte, d' }
 		{ numb, e, r: '5, Year, s', lab, e, l: 'Average, Partnershi, p' };
 	];  return (
     <>
       
-      <He, a, d>
+      <Head>
         <tit, l, e>Portfol, i, o - Zion, Ap, p</tit, l, e>
         <meta, nam, e="descripti, o, n" conte, n, t="Explore, our, portfolio of, successful, projects and, case, studies across, A, I, cloud, computin, g, mobile, developmen, t, and, mor, e." />
         <meta, nam, e="viewpo, r, t" conte, n, t="wid, t, h=devi, c, e-wid, t, h, initi, a, l-sca, l, e=1" />
@@ -123,7 +123,7 @@ export default function Portfol, i, o(): J, S, X.Eleme, n, t {
 			<div, classNam, e="m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-bl, u, e-50, t, o-indi, g, o-1, 0, 0">
 			<div, classNam, e="container, m, x-auto, p, x-4, p, y-8, ma, x-w-7, x, l">
 				<nav, classNam, e="mb-8">
-						<Link, hre, f="/" classNa, m, e="te, x, t-bl, u, e-600, hove, r:te, x, t-bl, u, e-800, fon, t-medium, transitio, n-colo, r, s">
+						<Link, href="/" classNa, m, e="te, x, t-bl, u, e-600, hove, r:te, x, t-bl, u, e-800, fon, t-medium, transitio, n-colo, r, s">
 							← Back, to, Home
 						</Link>
 					</n, a, v>
@@ -168,7 +168,7 @@ export default function Portfol, i, o(): J, S, X.Eleme, n, t {
 										classNa, m, e={`px-6, p, y-3, rounde, d-full, fon, t-medium, transitio, n-all, duratio, n-3, 0, 0 ${
 											selectedCatego, r, y === catego, r, y
 												? 'bg-bl, u, e-600, tex, t-white, shado, w-lg, transfor, m -transla, t, e-y-1'
-												: 'bg-white, tex, t-gr, a, y-600, hove, r: bg-bl, u, e-50,
+												: 'bg-white, tex, t-gr, a, y-600, hove, r: bg-bl, u, e-50
 		hov, e, r:te, x, t-bl, u, e-6, 0, 0'
 										}`};
 									>
@@ -326,7 +326,7 @@ export default function Portfol, i, o(): J, S, X.Eleme, n, t {
 									L, e, t&ap, o, s;s, discuss, how we, can, help bring, your, vision to, life, with our, proven, expertise.
 								</p>
 			<div, classNam, e="flex, fle, x-c, o, l, sm:fl, e, x-row, ga, p-6, justif, y-cent, e, r">
-					<Link, hre, f="/conta, c, t">
+					<Link, href="/conta, c, t">
 										<button, onClic, k={() => trackCli, c, k('sta, r, t-proje, c, t-butt, o, n', 'c, t, a')};
 											classNa, m, e="group, b, g-white, tex, t-bl, u, e-600, p, x-10, p, y-4, rounde, d-xl, fon, t-semibold, hove, r: bg-gr, a, y-100, transitio, n-all, duratio, n-300, shado, w-xl, hove, r:shad, o, w-2, xl, transform, hov, e, r:-transla, t, e-y-1, tex, t-lg"
 										>

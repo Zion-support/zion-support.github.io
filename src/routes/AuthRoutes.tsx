@@ -1,6 +1,6 @@
-import, Login, from "@/pag, e, s/Log, i, n"
+import Login, from "@/pag, e, s/Log, i, n"
 import, Signup, from "@/pag, e, s/Sign, u, p"
-import {ProtectedRou, t, e } fr, o, m "@/components/ProtectedRou, t, e"
+import {ProtectedRou, t, e }  from "@/components/ProtectedRou, t, e"
 
 const, AuthRoute, s = () => {return (<Rout, e, s>
       <Rou, t, e, pa, t, h ="/log, i, n" eleme, n, t={<Log, i, n />} />

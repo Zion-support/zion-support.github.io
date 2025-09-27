@@ -1,9 +1,9 @@
-import Reac, t, {useState }  from 'react';
+import React {useState }  from 'react';
 import {useTaskManag, e, r } from '../hooks/useTaskManag, e, r';
 
 interface, TaskManagerProp, s {isOp, e, n: boole, a, n;
   onClo, s, e: () => vo, i, d};
-export default function TaskManag, e, r({isOpenonClo, s, e }: TaskManagerPro, p, s): J, S, X.Eleme, n, t {con, s, t [newTaskTextsetNewTaskTe, x, t] = useState(');
+export default function TaskManag({isOpenonClo, s, e }: TaskManagerPro, p, s): J, S, X.Eleme, n, t {con, s, t [newTaskTextsetNewTaskTe, x, t] = useState(');
   con, s, t {
     tas, k, s, filter, stat, s, addTask, toggleTas, k, deleteTask, setFilte, r
   } = useTaskManag, e, r();

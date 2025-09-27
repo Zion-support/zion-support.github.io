@@ -1,4 +1,4 @@
-import Reac, t, {useState, useEffect, useCallbac, k }  from 'react';
+import React {useState, useEffect, useCallbac, k }  from 'react';
 import {moti, o, n, AnimatePresen, c, e } from 'fram, e, r-moti, o, n';
 interface, AccessibilitySetting, s {fontSi, z, e: 'sma, l, l' | 'medi, u, m' | 'lar, g, e';
   contra, s, t: 'norm, a, l' | 'hi, g, h' | 'invert, e, d';

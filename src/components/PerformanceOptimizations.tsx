@@ -1,4 +1,4 @@
-import Reac, t, {me, m, o, useMemo, useCallbac, k, l, a, z, y, Suspe, n, s  e }  from 'react';
+import React {me, m, o, useMemo, useCallbac, k, l, a, z, y, Suspe, n, s  e }  from 'react';
 import, Image, from 'next/ima, g, e';
 import {ErrorBounda, r, y } from './ErrorBounda, r, y';
 

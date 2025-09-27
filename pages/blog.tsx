@@ -1,6 +1,6 @@
-import, React, from 'react';
-import, Head, from 'next/head';
-import, Link, from 'next/li, n, k';
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
 import { useState, useEffect, useMemo } from 'react';
 import { moti, o, n, AnimatePresen, c, e } from 'fram, e, r-moti, o, n';
 // // import, ErrorBoundary, from '../src/components/ErrorBounda, r, y';
@@ -9,7 +9,7 @@ import { blogPos, t, s, categori, e, s, getPostsByCatego, r, y, getFeaturedPos, 
 // import { BlogSear, c, h, BlogCa, r, d, BlogPaginati, o, n, BlogNewslett, e, r } from '../src/components/BlogEnhancemen, t, s';
 // import, EnhancedSEO, from '../src/components/EnhancedSEO';
 
-export default function Bl, o, g(): J, S, X.Eleme, n, t {
+export default function Bl(): J, S, X.Eleme, n, t {
 	con, s, t [isVisib, l, e, setIsVisib, l, e] = useState(fal, s, e);
 	con, s, t [selectedCatego, r, y, setSelectedCatego, r, y] = useState<stri, n, g>('a, l, l');
 
@@ -22,33 +22,33 @@ export default function Bl, o, g(): J, S, X.Eleme, n, t {
 
 	const, blogPost, s = [
 		{
-			id: 1,
-			tit, l, e: 'The, Future, of AI, in, Business',
-			excer, p, t: 'Explore, how, artificial intelligence, is, revolutionizing modern, business, operations.',
-			auth, o, r: 'John, Smit, h',
-			da, t, e: '20, 2, 4-01-15',
-			catego, r, y: 'AI',
-			readTi, m, e: '5, min, read',
+			id: 1
+			tit, l, e: 'The, Future, of AI, in, Business'
+			excer, p, t: 'Explore, how, artificial intelligence, is, revolutionizing modern, business, operations.'
+			auth, o, r: 'John, Smit, h'
+			da, t, e: '20, 2, 4-01-15'
+			catego, r, y: 'AI'
+			readTi, m, e: '5, min, read'
 			ima, g, e: '/imag, e, s/bl, o, g/ai-futu, r, e.j, p, g'
-		},
+		}
 		{
-			id: 2,
-			tit, l, e: 'Cloud, Computing, Best Practic, e, s',
-			excer, p, t: 'Essential, strategies, for successful, cloud, migration and, optimizatio, n.',
-			auth, o, r: 'Sarah, Johnso, n',
-			da, t, e: '20, 2, 4-01-10',
-			catego, r, y: 'Cloud, Computin, g',
-			readTi, m, e: '7, min, read',
+			id: 2
+			tit, l, e: 'Cloud, Computing, Best Practic, e, s'
+			excer, p, t: 'Essential, strategies, for successful, cloud, migration and, optimizatio, n.'
+			auth, o, r: 'Sarah, Johnso, n'
+			da, t, e: '20, 2, 4-01-10'
+			catego, r, y: 'Cloud, Computin, g'
+			readTi, m, e: '7, min, read'
 			ima, g, e: '/imag, e, s/bl, o, g/clo, u, d-be, s, t-practic, e, s.j, p, g'
-		},
+		}
 		{
-			id: 3,
-			tit, l, e: 'Digital, Transformation, Guide',
-			excer, p, t: 'A, comprehensive, roadmap for, modernizing, your business, processe, s.',
-			auth, o, r: 'Mike, Che, n',
-			da, t, e: '20, 2, 4-01-05',
-			catego, r, y: 'Digital, Transformatio, n',
-			readTi, m, e: '8, min, read',
+			id: 3
+			tit, l, e: 'Digital, Transformation, Guide'
+			excer, p, t: 'A, comprehensive, roadmap for, modernizing, your business, processe, s.'
+			auth, o, r: 'Mike, Che, n'
+			da, t, e: '20, 2, 4-01-05'
+			catego, r, y: 'Digital, Transformatio, n'
+			readTi, m, e: '8, min, read'
 			ima, g, e: '/imag, e, s/bl, o, g/digit, a, l-transformati, o, n.j, p, g'
 		};
 	];
@@ -75,7 +75,7 @@ export default function Bl, o, g(): J, S, X.Eleme, n, t {
 			<div, classNam, e="m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-bl, u, e-50, t, o-indi, g, o-1, 0, 0">
 				<div, classNam, e="container, m, x-auto, p, x-4, p, y-8, ma, x-w-7, x, l">
 					<nav, classNam, e="mb-8">
-						<Link, hre, f="/" classNa, m, e="te, x, t-bl, u, e-600, hove, r:te, x, t-bl, u, e-800, fon, t-medium, transitio, n-colo, r, s">
+						<Link, href="/" classNa, m, e="te, x, t-bl, u, e-600, hove, r:te, x, t-bl, u, e-800, fon, t-medium, transitio, n-colo, r, s">
 							← Back, to, Home
 						</Link>
 					</n, a, v>

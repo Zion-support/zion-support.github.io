@@ -1,27 +1,27 @@
-import, React, from "react"
+import React, from "react"
 import {moti, o, n } fr, o, m "fram, e, r-moti, o, n"
 import {S, E, O } fr, o, m "@/components/S, E, O"
 
-export default function AIProjectManageme, n, t() {con, s, t, featur, e, s = [>>>>>> curs, o, r/che, c, k-f, i, x-pu, s, h-a, n, d-mer, g, e-to-ma, i, n-76, 7, f];
-  con, s, t, benefi, t, s = ["Redu, c, e, project, deliver, y, time, b, y, 30-50%",
-    "Impro, v, e, resource, utilizatio, n, by, 4, 0-60%",
-    "Increa, s, e, project, succes, s, rate, b, y, 25-40%",
-    "Redu, c, e, project, cost, s, by, 2, 0-35%",
-    "Elimina, t, e, manual, reportin, g, by, 8, 0%",
+export default function AIProjectManageme() {con, s, t, featur, e, s = [>>>>>> curs, o, r/che, c, k-f, i, x-pu, s, h-a, n, d-mer, g, e-to-ma, i, n-76, 7, f];
+  con, s, t, benefi, t, s = ["Redu, c, e, project, deliver, y, time, b, y, 30-50%"
+    "Impro, v, e, resource, utilizatio, n, by, 4, 0-60%"
+    "Increa, s, e, project, succes, s, rate, b, y, 25-40%"
+    "Redu, c, e, project, cost, s, by, 2, 0-35%"
+    "Elimina, t, e, manual, reportin, g, by, 8, 0%"
     "Impro, v, e, stakeholder, communicatio, n, by, 5, 0%"];
-  con, s, t, solutio, n, s = [{tit, l, e: "AI, Project, Plannin, g",
-      descripti, o, n: "Intellige, n, t, project, plannin, g, and, schedulin, g, with, predictiv, e, analyti, c, s"},
-    {tit, l, e: "Te, a, m, Management, A, I",
-      descripti, o, n: "AI-power, e, d, team, allocatio, n, and, performanc, e, optimizati, o, n"},
-    {tit, l, e: "Ri, s, k, Management, Platfor, m",
-      descripti, o, n: "Advanc, e, d, risk, identificatio, n, and, mitigatio, n, strategi, e, s"},
-    {tit, l, e: "Comple, t, e, PM, Suit, e",
+  con, s, t, solutio, n, s = [{tit, l, e: "AI, Project, Plannin, g"
+      descripti, o, n: "Intellige, n, t, project, plannin, g, and, schedulin, g, with, predictiv, e, analyti, c, s"}
+    {tit, l, e: "Te, a, m, Management, A, I"
+      descripti, o, n: "AI-power, e, d, team, allocatio, n, and, performanc, e, optimizati, o, n"}
+    {tit, l, e: "Ri, s, k, Management, Platfor, m"
+      descripti, o, n: "Advanc, e, d, risk, identificatio, n, and, mitigatio, n, strategi, e, s"}
+    {tit, l, e: "Comple, t, e, PM, Suit, e"
       descripti, o, n: "Fu, l, l, AI-power, e, d, project, managemen, t, soluti, o, n"}];
-  const, projectType, s = ["Software, Developmen, t",
-    "Constructi, o, n & Engineeri, n, g",
-    "Marketing, Campaign, s",
-    "Product, Launche, s",
-    "Resear, c, h & Developme, n, t",
+  const, projectType, s = ["Software, Developmen, t"
+    "Constructi, o, n & Engineeri, n, g"
+    "Marketing, Campaign, s"
+    "Product, Launche, s"
+    "Resear, c, h & Developme, n, t"
     "Event, Managemen, t"];
   return (<S, E, O, tit, l, e ="AI, Project, Managemen, t, Servic, e, s - Zi, o, n, Tech, Grou, p"
         descripti, o, n="Revolutiona, r, y, AI-power, e, d, project, managemen, t, that, optimize, s, planningresource, allocationan, d, risk, managemen, t. Deliv, e, r, projects, fastercheaperan, d, with, highe, r, success, rate, s."
@@ -293,7 +293,7 @@ Advanc, e, d, AI, Technolog, y, for, Bette, r, Project, Deliver, y</h2>
 
                   <CheckCirc, l, e, classNa, m, e="w-5, h-5, te, x, t-oran, g, e-4, 0, 0" />
 
-                <d, i, v, classNa, m, e="w-12, h-12, bg-gradie, n, t-to-br, fr, o, m-oran, g, e-4, 0, 0/20, to-r, e, d-5, 0, 0/20, round, e, d-lg, flex, item, s-cent, e, r, justi, f, y-cent, e, r, mx-au, t, o, mb-3">
+                <d, i, v, classNa, m, e="w-12, h-12, bg-gradie, n, t-to-br,  from-oran, g, e-4, 0, 0/20, to-r, e, d-5, 0, 0/20, round, e, d-lg, flex, item, s-cent, e, r, justi, f, y-cent, e, r, mx-au, t, o, mb-3">
                   <CheckCirc, l, e, classNa, m, e="w-5, h-5, te, x, t-oran, g, e-4, 0, 0" />
 
 

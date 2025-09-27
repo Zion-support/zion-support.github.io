@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback  } from 'react';
 import { Zap, Clock, Cpu, HardDrive, Wifi, Battery, CheckCircle, AlertTriangle, XCircle } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/Card';
 
@@ -28,13 +28,13 @@ interface PerformanceOptimizerProps {
 
 const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className = '' }) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    loadTime: 0,
-    memoryUsage: 0,
-    cpuUsage: 0,
-    networkLatency: 0,
-    cacheHitRate: 0,
-    bundleSize: 0,
-    renderTime: 0,
+    loadTime: 0
+    memoryUsage: 0
+    cpuUsage: 0
+    networkLatency: 0
+    cacheHitRate: 0
+    bundleSize: 0
+    renderTime: 0
     errorRate: 0
   });
 
@@ -59,8 +59,8 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ cla
       }
 
       const newMetrics: PerformanceMetrics = {
-        loadTime: Math.round(loadTime),
-        renderTime: Math.round(renderTime),
+        loadTime: Math.round(loadTime)
+        renderTime: Math.round(renderTime)
         memoryUsage: Math.random() * 100, // 0-100%
         cpuUsage: Math.random() * 100, // 0-100%
         networkLatency: Math.random() * 100 + 10, // 10-110ms
@@ -84,35 +84,35 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ cla
       // Generate detailed optimization suggestions
       const optimizationSuggestions: OptimizationSuggestion[] = [
         {
-          type: 'performance',
-          priority: 'high',
-          title: 'Implement Code Splitting',
-          description: 'Break down large bundles into smaller chunks to improve initial load time',
-          impact: 'Reduce initial bundle size by 30-50%',
+          type: 'performance'
+          priority: 'high'
+          title: 'Implement Code Splitting'
+          description: 'Break down large bundles into smaller chunks to improve initial load time'
+          impact: 'Reduce initial bundle size by 30-50%'
           implementation: 'Use dynamic imports and React.lazy() for route-based code splitting'
-        },
+        }
         {
-          type: 'memory',
-          priority: 'medium',
-          title: 'Optimize Image Loading',
-          description: 'Implement lazy loading and WebP format for images',
-          impact: 'Reduce memory usage by 20-40%',
+          type: 'memory'
+          priority: 'medium'
+          title: 'Optimize Image Loading'
+          description: 'Implement lazy loading and WebP format for images'
+          impact: 'Reduce memory usage by 20-40%'
           implementation: 'Use next/image with priority and placeholder props'
-        },
+        }
         {
-          type: 'network',
-          priority: 'high',
-          title: 'Enable Service Worker Caching',
-          description: 'Cache static assets and API responses for offline functionality',
-          impact: 'Improve cache hit rate to 85-95%',
+          type: 'network'
+          priority: 'high'
+          title: 'Enable Service Worker Caching'
+          description: 'Cache static assets and API responses for offline functionality'
+          impact: 'Improve cache hit rate to 85-95%'
           implementation: 'Configure Workbox for intelligent caching strategies'
-        },
+        }
         {
-          type: 'rendering',
-          priority: 'medium',
-          title: 'Implement Virtual Scrolling',
-          description: 'Use virtual scrolling for large lists to reduce DOM nodes',
-          impact: 'Improve rendering performance by 60-80%',
+          type: 'rendering'
+          priority: 'medium'
+          title: 'Implement Virtual Scrolling'
+          description: 'Use virtual scrolling for large lists to reduce DOM nodes'
+          impact: 'Improve rendering performance by 60-80%'
           implementation: 'Use react-window or react-virtualized for large datasets'
         }
       ];
@@ -133,14 +133,14 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ cla
     
     // Apply optimizations
     setMetrics(prev => ({
-      ...prev,
-      loadTime: prev.loadTime * 0.8,
-      memoryUsage: prev.memoryUsage * 0.7,
-      cpuUsage: prev.cpuUsage * 0.6,
-      networkLatency: prev.networkLatency * 0.9,
-      cacheHitRate: Math.min(prev.cacheHitRate * 1.1, 100),
-      bundleSize: prev.bundleSize * 0.85,
-      renderTime: prev.renderTime * 0.8,
+      ...prev
+      loadTime: prev.loadTime * 0.8
+      memoryUsage: prev.memoryUsage * 0.7
+      cpuUsage: prev.cpuUsage * 0.6
+      networkLatency: prev.networkLatency * 0.9
+      cacheHitRate: Math.min(prev.cacheHitRate * 1.1, 100)
+      bundleSize: prev.bundleSize * 0.85
+      renderTime: prev.renderTime * 0.8
       errorRate: prev.errorRate * 0.5
     }));
 

@@ -1,4 +1,4 @@
-import Reac, t, {Compone, n, t, ErrorInfo, ReactNod, e }  from 'react';
+import React {Compone, n, t, ErrorInfo, ReactNod, e }  from 'react';
 
 interface, Prop, s {childr, e, n: ReactNo, d, e;
   fallba, c, k?: ReactNo, d, e;

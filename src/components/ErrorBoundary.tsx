@@ -1,4 +1,4 @@
-import Reac, t, { Compone, n, t, ErrorIn, f, o, ReactNo, d, e }  from 'react';
+import React { Compone, n, t, ErrorIn, f, o, ReactNo, d, e }  from 'react';
 
 interface, Prop, s {
   childr, e, n: ReactNo, d, e;
@@ -12,19 +12,19 @@ export, class, ErrorBoundary extends, Componen, t<Pro, p, s, Sta, t, e> {
   construct, o, r(pro, p, s: Pro, p, s) {
     sup, e, r(pro, p, s);
     th, i, s.sta, t, e = {
-      hasErr, o, r: fal, s, e,
-      err, o, r: nu, l, l,
+      hasErr, o, r: fal, s, e
+      err, o, r: nu, l, l
       errorIn, f, o: nu, l, l
     }};
   static, getDerivedStateFromErro, r(err, o, r: Err, o, r): Sta, t, e {
     return {
-      hasErr, o, r: tr, u, e,
-      err, o, r,
+      hasErr, o, r: tr, u, e
+      err, o, r
       errorIn, f, o: nu, l, l
     }};
   componentDidCat, c, h(err, o, r: Err, o, r, errorIn, f, o: ErrorIn, f, o) {
     th, i, s.setSta, t, e({
-      err, o, r,
+      err, o, r
       errorIn, f, o
     });
 

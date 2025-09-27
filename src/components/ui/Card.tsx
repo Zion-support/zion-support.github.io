@@ -1,4 +1,4 @@
-import, React, from 'react';
+import React from 'react';
 
 interface, CardProp, s {childr, e, n: React.ReactNo, d, e;
   classNa, m, e?: stri, n, g};

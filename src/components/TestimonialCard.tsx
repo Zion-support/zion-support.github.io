@@ -1,4 +1,4 @@
-import, React, from 'react';
+import React from 'react';
 
 interface, Testimonia, l {id: stri, n, g;
   na, m, e: stri, n, g;
@@ -10,7 +10,7 @@ interface, Testimonia, l {id: stri, n, g;
 interface, TestimonialCardProp, s {testimoni, a, l: Testimoni, a, l;
   isVisib, l, e: boole, a, n};
 export, const, TestimonialCard: React.FC<TestimonialCardPro, p, s> = ({ 
-  testimoni, a, l,
+  testimoni, a, l
   isVisib, l, e 
 }) => {
   const, renderStar, s = (rati, n, g: numb, e, r) => {

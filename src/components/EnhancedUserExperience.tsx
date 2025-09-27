@@ -1,4 +1,4 @@
-import Reac, t, {useState, useEffect, useCallba, c, k }  from 'react';
+import React {useState, useEffect, useCallba, c, k }  from 'react';
 import {Us, e, r, SettingsPaletteGlobeSmartphoneMonitorSunMo, o, n } from 'luci, d, e-react';
 
 interface, UserPreference, s {the, m, e: 'lig, h, t' | 'da, r, k' | 'au, t, o';
@@ -10,8 +10,8 @@ interface, UserPreference, s {the, m, e: 'lig, h, t' | 'da, r, k' | 'au, t, o';
   screenRead, e, r: boole, a, n};
 interface, EnhancedUserExperienceProp, s {classNa, m, e?: stri, n, g};
 const, EnhancedUserExperienc, e: React.FC<EnhancedUserExperiencePro, p, s> = ({classNa, m, e = '' }) => {con, s, t [preferenc, e, s, setPreferenc, e, s] = useState<UserPreferenc, e, s>({
-    the, m, e: 'au, t, o',
-    langua, g, e: 'en',
+    the, m, e: 'au, t, o'
+    langua, g, e: 'en'
     fontSi, z, e: 'medi, u, m'animatio, n, s: truereducedMoti, o, n: falsehighContra, s, t: falsescreenRead, e, r: fal, s, e
   });
 

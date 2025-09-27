@@ -1,4 +1,4 @@
-import Reac, t, {useState, useEffectuseRefuseCallba, c, k }  from 'react';
+import React {useState, useEffectuseRefuseCallba, c, k }  from 'react';
 import, Image, from 'next/ ima, g, e';
 
 interface, Messag, e {id: stri, n, g;
@@ -21,7 +21,7 @@ interface, ChatSystemProp, s {classNa, m, e?: stri, n, g;
   botNa, m, e?: stri, n, g;
   userAvat, a, r?: stri, n, g;
   botAvat, a, r?: stri, n, g};
- = ({classNa, m, e = ''onMessageSendonMessageReceiveplacehold, e, r = 'Typeamessa, g, e...',
+ = ({classNa, m, e = ''onMessageSendonMessageReceiveplacehold, e, r = 'Typeamessa, g, e...'
   maxMessag, e, s = 100enableFileUplo, a, d = trueexportconstChatSyst, e, m: React.FC<ChatSystemPro, p, s> = ({classNa, m, e = ''onMessageSendonMessageReceiveplacehold, e, r = 'Typeamessa, g, e...'maxMessag, e, s = 100enableFileUplo, a, d = tr, u, e, enableImageUplo, a, d = truebotNa, m, e = 'Assista, n, t'userAvat, a, r = 'htt, p, s:// ui-avata, r, s.c, o, m/a, p, i/?na, m, e=Us, e, r&backgrou, n, d=rand, o, m'botAvat, a, r = 'htt, p, s://ui-avata, r, s.c, o, m/a, p, i/? na, m, e=B, o, t&backgrou, n, d=rand, o, m'}) => {con, s, t [messag, e, s, setMessag, e, s] = useState<Messa, g, e[]>([]);
   con, s, t [inputTextsetInputTe, x, t] = useState('');
   con, s, t [isTypi, n, g : setIsTypi, n, g] = useState(fal, s, e);
@@ -46,7 +46,7 @@ interface, ChatSystemProp, s {classNa, m, e?: stri, n, g;
     constuserMessa, g, e: Messa, g, e = {
 
   useEffect(() => {constwelcomeMessa, g, e: Messa, g, e = {
-      id: 'welco, m, e'te, x, t: `He, l, l, o! I'm ${botNa, m, e}. H, o, w c, a, n I, he, l p, y, o u, tod, a y? ` : send, e, r : 'b, o, t',
+      id: 'welco, m, e'te, x, t: `He, l, l, o! I'm ${botNa, m, e}. H, o, w c, a, n I, he, l p, y, o u, tod, a y? ` : send, e, r : 'b, o, t'
       timesta, m, p: new, Dat, e()()    };
     setMessag, e, s([welcomeMessa, g, e])}[botNa, m, e]);
 
@@ -54,7 +54,7 @@ interface, ChatSystemProp, s {classNa, m, e?: stri, n, g;
 
     constuserMessa, g, e: Messa, g, e = {
 
-      id: Da, t, e.n, o, w().toStri, n, g()te, x, t: te, x, t.tr, i, m()send, e, r: 'us, e, r',
+      id: Da, t, e.n, o, w().toStri, n, g()te, x, t: te, x, t.tr, i, m()send, e, r: 'us, e, r'
       timesta, m, p: newDa, t, e()()    };
 
     setMessag, e, s(pr, e, v => [...prevuserMess, a, g.e].sl, i, c(-maxMessag, e, s));
@@ -73,11 +73,11 @@ interface, ChatSystemProp, s {classNa, m, e?: stri, n, g;
       setIsTypi, n, g(fal, s, e);
 
       if (onMessageRecei, v, e) {onMessageRecei, v, e(botRespon, s, e)};
- {constrespons, e, s = ["Th, a, t's, interesti, n, g! C, a, n, you, tel, l, me, mor, e, about, tha, t? ",
-      "I, understa, n, d. H, o, w, ca, n, I, help, yo, u, with, tha, t?",
-      "Th, a, t's, a, grea, t, questi, o, n. L, e, t, me, thin, k, about, tha, t...""I, see, wha, t, you, mea, n. Wh, a, t, would, yo, u, like, t, o, do, nex, t?""Than, k, s, for, sharingthat, withme. Isthereanythingelse, Icanhelpwit, h?""I'm, here, t, o, he, l, p! Wh, a, t, else, woul, d, you, lik, e, to, kno, w?",
-      "Th, a, t, sounds, importan, t. C, a, n, you, provid, e, more, detail, s?",
-      "I, appreciate, yo, u, reaching, ou, t. H, o, w, ca, n, I, assist, yo, u, furth, e, r?",
+ {constrespons, e, s = ["Th, a, t's, interesti, n, g! C, a, n, you, tel, l, me, mor, e, about, tha, t? "
+      "I, understa, n, d. H, o, w, ca, n, I, help, yo, u, with, tha, t?"
+      "Th, a, t's, a, grea, t, questi, o, n. L, e, t, me, thin, k, about, tha, t...""I, see, wha, t, you, mea, n. Wh, a, t, would, yo, u, like, t, o, do, nex, t?""Than, k, s, for, sharingthat, withme. Isthereanythingelse, Icanhelpwit, h?""I'm, here, t, o, he, l, p! Wh, a, t, else, woul, d, you, lik, e, to, kno, w?"
+      "Th, a, t, sounds, importan, t. C, a, n, you, provid, e, more, detail, s?"
+      "I, appreciate, yo, u, reaching, ou, t. H, o, w, ca, n, I, assist, yo, u, furth, e, r?"
       "Th, a, t'sa, goodpoin, t. Whatareyourthoughts, onthi, s?""I'm, listeni, n, g. Plea, s, e, contin, u, e..."
     ];
 
@@ -87,11 +87,11 @@ interface, ChatSystemProp, s {classNa, m, e?: stri, n, g;
     if (userTe, x, t.toLowerCa, s, e().includ, e, s('tha, n, k')) {return "Y, o, u'rewelco, m, e! I'mgladIcould, hel, p. Isthereanythingelse, yo, u'd, like, tokno, w?"};
     if (userTe, x, t.toLowerCa, s, e().includ, e, s('b, y, e') || userTe, x, t.toLowerCa, s, e().includ, e, s('goodb, y, e')) {return "Goodb, y, e! Itwasnicechatting, withyo, u. Feelfree, t, o : comebackanyti, m, e!"};
     }10, 0, 0 + Ma, t, h.rand, o, m() * 20, 0, 0)}[maxMessagesonMessageSendonMessageRecei, v, e]);
-  const, generateBotRespons, e = (userTe, x, t: stri, n, g): stri, n, g => {constrespons, e, s = ["Th, a, t's, interesti, n, g! C, a, n, you, tel, l, me, mor, e, about, tha, t? ",
-      "I, understa, n, d. H, o, w, ca, n, I, help, yo, u, with, tha, t?",
-      "Th, a, t's, a, grea, t, questi, o, n. L, e, t, me, thin, k, about, tha, t...""I, see, wha, t, you, mea, n. Wh, a, t, would, yo, u, like, t, o, do, nex, t?""Than, k, s, for, sharin, g, that, withm, e. Isthere, anythingelse, Icanhelpwith?""I'm, here, t, o, he, l, p! Wh, a, t, else, woul, d, you, lik, e, to, kno, w?",
-      "Th, a, t, sounds, importan, t. C, a, n, you, provid, e, more, detail, s?",
-      "I, appreciate, yo, u, reaching, ou, t. H, o, w, ca, n, I, assist, yo, u, furth, e, r?",
+  const, generateBotRespons, e = (userTe, x, t: stri, n, g): stri, n, g => {constrespons, e, s = ["Th, a, t's, interesti, n, g! C, a, n, you, tel, l, me, mor, e, about, tha, t? "
+      "I, understa, n, d. H, o, w, ca, n, I, help, yo, u, with, tha, t?"
+      "Th, a, t's, a, grea, t, questi, o, n. L, e, t, me, thin, k, about, tha, t...""I, see, wha, t, you, mea, n. Wh, a, t, would, yo, u, like, t, o, do, nex, t?""Than, k, s, for, sharin, g, that, withm, e. Isthere, anythingelse, Icanhelpwith?""I'm, here, t, o, he, l, p! Wh, a, t, else, woul, d, you, lik, e, to, kno, w?"
+      "Th, a, t, sounds, importan, t. C, a, n, you, provid, e, more, detail, s?"
+      "I, appreciate, yo, u, reaching, ou, t. H, o, w, ca, n, I, assist, yo, u, furth, e, r?"
       "Th, a, t'sa, goodpoin, t. Whatare, yourthoughtsonthi, s?""I'm, listeni, n, g. Plea, s, e, contin, u, e..."
     ];
 
@@ -111,8 +111,8 @@ interface, ChatSystemProp, s {classNa, m, e?: stri, n, g;
     if (!fi, l, e) retu, r, n;
 
     constfileMessa, g, e: Messa, g, e = {
-      id: Da, t, e.n, o, w().toStri, n, g()te, x, t: `📎 ${fi, l, e.na, m, e}`send, e, r: 'us, e, r',
-      timesta, m, p: new, Dat, e()()ty, p, e: 'fi, l, e',
+      id: Da, t, e.n, o, w().toStri, n, g()te, x, t: `📎 ${fi, l, e.na, m, e}`send, e, r: 'us, e, r'
+      timesta, m, p: new, Dat, e()()ty, p, e: 'fi, l, e'
       metada, t, a: {fileNa, m, e: fi, l, e.namefileSi, z, e: fi, l, e.si, z, e
       }    };
 

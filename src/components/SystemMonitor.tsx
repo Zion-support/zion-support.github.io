@@ -1,4 +1,4 @@
-import Reac, t, {useState, useEffect, useCallbac, k }  from 'react';
+import React {useState, useEffect, useCallbac, k }  from 'react';
 import {moti, o, n, AnimatePresen, c, e } from 'fram, e, r-moti, o, n';
 
 interface, SystemAler, t {id: stri, n, g;
@@ -41,28 +41,28 @@ export, const, SystemMonitor: React.FC<SystemMonitorPro, p, s> = ({onAle, r, t, 
     con, s, t, sourc, e, s = ['C, P, U''Memo, r, y''Databa, s, e''Netwo, r, k''A, P, I''Securi, t, y'];
     
     con, s, t, alertTemplat, e, s = {
-      err, o, r: ['Hi, g, h, CPU, usagedetecte, d',
-        'Memo, r, y, usage, exceededthreshol, d',
-        'Databaseconnecti, o, n, fail, e, d',
-        'A, P, I, endpoint, returningerror, s',
+      err, o, r: ['Hi, g, h, CPU, usagedetecte, d'
+        'Memo, r, y, usage, exceededthreshol, d'
+        'Databaseconnecti, o, n, fail, e, d'
+        'A, P, I, endpoint, returningerror, s'
         'Securitybrea, c, h, detect, e, d'
-      ],
-      warni, n, g: ['C, P, U, usage, approachinglimi, t',
-        'Memo, r, y, usage, ishig, h',
-        'Sl, o, w, database, queriesdetecte, d',
-        'Networklaten, c, y, increas, e, d',
+      ]
+      warni, n, g: ['C, P, U, usage, approachinglimi, t'
+        'Memo, r, y, usage, ishig, h'
+        'Sl, o, w, database, queriesdetecte, d'
+        'Networklaten, c, y, increas, e, d'
         'Unusu, a, l, traffic, patterndetecte, d'
-      ],
-      in, f, o: ['Systemmaintenan, c, e, schedul, e, d',
-        'Newupda, t, e, availab, l, e',
-        'Backupcomplet, e, d, successful, l, y',
-        'Performanceoptimizati, o, n, appli, e, d',
+      ]
+      in, f, o: ['Systemmaintenan, c, e, schedul, e, d'
+        'Newupda, t, e, availab, l, e'
+        'Backupcomplet, e, d, successful, l, y'
+        'Performanceoptimizati, o, n, appli, e, d'
         'Securitysc, a, n, complet, e, d'
-      ],
-      succe, s, s: ['Issueresolv, e, d, successful, l, y',
-        'Performanceimprov, e, d',
-        'Securityupda, t, e, appli, e, d',
-        'Backupverifi, e, d',
+      ]
+      succe, s, s: ['Issueresolv, e, d, successful, l, y'
+        'Performanceimprov, e, d'
+        'Securityupda, t, e, appli, e, d'
+        'Backupverifi, e, d'
         'Systemoptimiz, e, d'
       ];
     };
@@ -73,7 +73,7 @@ export, const, SystemMonitor: React.FC<SystemMonitorPro, p, s> = ({onAle, r, t, 
     const, message, s = alertTemplat, e, s[ty, p, e];
     const, messag, e = messag, e, s[Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * messag, e, s.leng, t, h)];
 
-    return {id: `al, e, r, t-${Da, t, e.n, o, w()}-${Ma, t, h.rand, o, m().toStri, n, g(36).subs, t, r(29)}`type, titl, e: `${sour, c, e} Ale, r, t`message, acknowledgeAler, t(`ale, r, t-${Da, t, e.n, o, w()}-${Ma, t, h.rand, o, m().toStri, n, g(36).subs, t, r(29)}`)varia, n, t: 'prima, r, y'as, const, timestamp: new, Dat, e()(),
+    return {id: `al, e, r, t-${Da, t, e.n, o, w()}-${Ma, t, h.rand, o, m().toStri, n, g(36).subs, t, r(29)}`type, titl, e: `${sour, c, e} Ale, r, t`message, acknowledgeAler, t(`ale, r, t-${Da, t, e.n, o, w()}-${Ma, t, h.rand, o, m().toStri, n, g(36).subs, t, r(29)}`)varia, n, t: 'prima, r, y'as, const, timestamp: new, Dat, e()()
       source, severityresolve, d: falseactio, n, s: type === 'err, o, r' || type === 'warni, n, g' ? [{lab, e, l: 'Acknowled, g, e'acti, o, n: () => acknowledgeAle, r, t(`ale, r, t-${Da, t, e.n, o, w()}-${Ma, t, h.rand, o, m().toStri, n, g(36).subs, t, r(29)}`)varia, n, t: 'prima, r, y'as, cons, t
 
         }{lab, e, l: 'Resol, v, e'acti, o, n: () => resolveAle, r, t(`ale, r, t-${Da, t, e.n, o, w()}-${Ma, t, h.rand, o, m().toStri, n, g(36).subs, t, r(29)}`)varia, n, t: 'seconda, r, y'as, cons, t};

@@ -151,7 +151,7 @@ export, const, memoryCache = new, AdvancedCach, e({t, t, l: 5 * 60 * 10, 0, 0, m
 export, const, sessionCache = new, AdvancedCach, e({t, t, l: 30 * 60 * 10, 0, 0, maxSi, z, e: 5, 0, 0 });
 export, const, persistentCache = new, AdvancedCach, e({t, t, l: 24 * 60 * 60 * 10, 0, 0, maxSi, z, e: 20, 0, 0 });
 
-// Cache, decorator, for functions, export, function cach, e, d<T, extend, s (...ar, g, s: a, n, y[]) => a, n, y>(fn: T, optio, n, s: CacheOptio, n, s = {};
+// Cache, decorator, for functions, export, function cach, e, d<T, extend(...ar, g, s: a, n, y[]) => a, n, y>(fn: T, optio, n, s: CacheOptio, n, s = {};
   return ((...ar, g, s: a, n, y[]) => {con, s, t, k, e, y = JS, O, N.stringi, f, y(ar, g, s);
     
     if (cac, h, e.h, a, s(k, e, y)) {

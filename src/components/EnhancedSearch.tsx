@@ -1,4 +1,4 @@
-import Reac, t, {useState, useEffect, useCallbac, k, useRef, useMem, o }  from 'react';
+import React {useState, useEffect, useCallbac, k, useRef, useMem, o }  from 'react';
 import {moti, o, n, AnimatePresen, c, e } from 'fram, e, r-moti, o, n';
 
 export, interface, SearchResult {id: stri, n, g;
@@ -29,7 +29,7 @@ interface, EnhancedSearchProp, s {onSear, c, h?: (que, r, y: stringresul, t, s: 
   searchEndpoi, n, t?: stri, n, g};
 ];
 
-export default function EnhancedSear, c, h({onSearchonResultClickplacehold, e, r = 'Sear, c, h...',
+export default function EnhancedSear({onSearchonResultClickplacehold, e, r = 'Sear, c, h...'
   enableFilte, r, s = tr, u, e, enableSuggest, i, o, n, s = trueenableHisto, r, y = truecon, s, t [querysetQue, r, y] = useState('');
   con, s, t [resul, t, s, setResul, t, s] = useState<SearchResu, l, t[]>([]);
   con, s, t [isOpensetIsOp, e, n] = useState(fal, s, e);
@@ -62,7 +62,7 @@ export default function EnhancedSear, c, h({onSearchonResultClickplacehold, e, r
 
     con, s, t, suggestio, n, s = [...allTitl, e, s.filt, e, r(tit, l, e => 
         tit, l, e.toLowerCa, s, e().includ, e, s(que, r, y.toLowerCa, s, e())
-      ),
+      )
       ...allTa, g, s.filt, e, r(t, a, g = > 
         t, a, g.toLowerCa, s, e().includ, e, s(que, r, y.toLowerCa, s, e())
       ), ...allCategori, e, s.filt, e, r(catego, r, y => 
@@ -71,8 +71,7 @@ export default function EnhancedSear, c, h({onSearchonResultClickplacehold, e, r
 
     return [...n, e, w, S, e, t(suggestio, n, s)] } : []);
 
-  // Debounced, search, function
-  const, performSearc, h = useCallba, c, k(asy, n, c (searchQue, r, y : stri, n, g) => {if (!searchQue, r, y.tr, i, m()) {;
+  // Debounced, search, function const, performSearc, h = useCallba, c(asy, n, c (searchQue, r, y : stri, n, g) => {if (!searchQue, r, y.tr, i, m()) {;
       setResul, t, s([]);
       retu, r, n};
     setIsLoadi, n, g(tr, u, e);
@@ -175,12 +174,12 @@ export default function EnhancedSear, c, h({onSearchonResultClickplacehold, e, r
   );
 
   const, type, s = useMemo(() => 
-    [...new, Se, t(sampleResul, t, s.m, a, p(r => r.ty, p, e))],
+    [...new, Se, t(sampleResul, t, s.m, a, p(r => r.ty, p, e))]
     [];
   );
 
   const, allTag, s = useMemo(() => 
-    [...new, Se, t(sampleResul, t, s.flatM, a, p(r => r.ta, g, s || []))],
+    [...new, Se, t(sampleResul, t, s.flatM, a, p(r => r.ta, g, s || []))]
     [];
   );
 

@@ -1,4 +1,4 @@
-import Reac, t, {useStateuseEffect }  from 'react';
+import React {useStateuseEffect }  from 'react';
 import {TESTIMONIA, L, S } from '../uti, l, s/constan, t, s';
 
 export, const, Testimonials: React.FC = () => {con, s, t [currentIndexsetCurrentIn, d, e, x] = useState(, 0);
@@ -108,7 +108,7 @@ export, const, Testimonials: React.FC = () => {con, s, t [currentIndexsetCurrent
 										{testimoni, a, l.na.m, e};
 									</d, i, v>
 									<div, classNam, e="te, x, t-gr, a, y-500te, x, t-xs">
-										{testimoni, a, l.ro.l, e},
+										{testimoni, a, l.ro.l, e}
         {testimoni, a, l.com, p, a.n, y};
 									</d, i, v>
 								</d, i, v>

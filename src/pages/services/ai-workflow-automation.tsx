@@ -1,30 +1,30 @@
-import, React, from "react"
+import React, from "react"
 import {S, E, O } fr, o, m "../../components/S, E, O"
 import {moti, o, n } fr, o, m "fram, e, r-moti, o, n"
 
-export default function AIWorkflowAutomati, o, n() {con, s, t, featur, e, s = [{
+export default function AIWorkflowAutomati() {con, s, t, featur, e, s = [{
       ic, o, n: Workfl, o, w 
-        "AI-power, e, d, workflow, automatio, n, that, learn, s, and, optimize, s, your, busines, s, processes, automaticall, y."},
-    {ic, o, n: Bra, i, n, tit, l, e: "Machi, n, e, Learning, Integratio, n",
+        "AI-power, e, d, workflow, automatio, n, that, learn, s, and, optimize, s, your, busines, s, processes, automaticall, y."}
+    {ic, o, n: Bra, i, n, tit, l, e: "Machi, n, e, Learning, Integratio, n"
       descripti, o, n:
-        "Seamle, s, s, integration, wit, h, ML, model, s, for, predictiv, e, workflow, optimizatio, n, and, decisio, n-maki, n, g."},
-    {ic, o, n: Targ, e, t, tit, l, e: "Go, a, l-Orient, e, d, Automati, o, n",
+        "Seamle, s, s, integration, wit, h, ML, model, s, for, predictiv, e, workflow, optimizatio, n, and, decisio, n-maki, n, g."}
+    {ic, o, n: Targ, e, t, tit, l, e: "Go, a, l-Orient, e, d, Automati, o, n"
       descripti, o, n:
-        "Workflo, w, s, that, adap, t, and, optimiz, e, based, o, n, your, busines, s, objectives, an, d, KP, I, s."},
-    {ic, o, n: Trending, U, p, tit, l, e: "Performan, c, e, Analyti, c, s",
+        "Workflo, w, s, that, adap, t, and, optimiz, e, based, o, n, your, busines, s, objectives, an, d, KP, I, s."}
+    {ic, o, n: Trending, U, p, tit, l, e: "Performan, c, e, Analyti, c, s"
       descripti, o, n:
-        "Re, a, l-ti, m, e, insights, int, o, workflow, efficienc, y, and, optimizatio, n, opportuniti, e, s."},
-    {ic, o, n: Shie, l, d, tit, l, e: "Secu, r, e & Complia, n, t",
+        "Re, a, l-ti, m, e, insights, int, o, workflow, efficienc, y, and, optimizatio, n, opportuniti, e, s."}
+    {ic, o, n: Shie, l, d, tit, l, e: "Secu, r, e & Complia, n, t"
       descripti, o, n:
-        "Enterpri, s, e-gra, d, e, security, wit, h, bui, l, t-in, compliance, monitorin, g, and, audi, t, trai, l, s."},
-    {ic, o, n: Use, r, s, tit, l, e: "Te, a, m, Collaborati, o, n",
+        "Enterpri, s, e-gra, d, e, security, wit, h, bui, l, t-in, compliance, monitorin, g, and, audi, t, trai, l, s."}
+    {ic, o, n: Use, r, s, tit, l, e: "Te, a, m, Collaborati, o, n"
       descripti, o, n:
         "Enhanc, e, d, team, productivit, y, with, intelligen, t, task, routin, g, and, workloa, d, balanci, n, g."}];
-  const, benefit, s = ["Reduce, manual, tasks by, up, to 80%",
-    "Improve, process, efficiency by, 6, 0%",
-    "Cut, operational, costs by, 4, 0%",
-    "Enhance, customer, satisfaction",
-    "Ensure, regulatory, compliance",
+  const, benefit, s = ["Reduce, manual, tasks by, up, to 80%"
+    "Improve, process, efficiency by, 6, 0%"
+    "Cut, operational, costs by, 4, 0%"
+    "Enhance, customer, satisfaction"
+    "Ensure, regulatory, compliance"
     "Scale, operations, seamlessly"];
   return (<S, E, O, tit, l, e ="AI, Workflow, Automatio, n - Zi, o, n, Tech, Grou, p"
         descripti, o, n="Transfo, r, m, your, busines, s, with, intelligen, t, AI-power, e, d, workflow, automatio, n. Redu, c, e, manual, tasksimprov, e, efficiencyand, scal, e, operations, seamlessl, y."
@@ -252,7 +252,7 @@ export default function AIWorkflowAutomati, o, n() {con, s, t, featur, e, s = [{
               </butt, o, n>
               <button, classNam, e="px-8, p, y-4, border, border-cy, a, n-4, 0, 0/30, tex, t-cy, a, n-400, fon, t-semibold, rounde, d-lg, hove, r:bg-cy, a, n-4, 0, 0/10, transitio, n-all, duratio, n-2, 0, 0">
 
-              <button, classNam, e="px-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-cy, a, n-500, t, o-bl, u, e-600, tex, t-white, fon, t-semibold, rounde, d-lg, hove, r:fr, o, m-cy, a, n-400, hove, r:to-bl, u, e-500, transitio, n-all, duratio, n-200, hove, r:sca, l, e-105, shado, w-lg, shado, w-cy, a, n-5, 0, 0/20">
+              <button, classNam, e="px-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-cy, a, n-500, t, o-bl, u, e-600, tex, t-white, fon, t-semibold, rounde, d-lg, hove, r: from-cy, a, n-400, hove, r:to-bl, u, e-500, transitio, n-all, duratio, n-200, hove, r:sca, l, e-105, shado, w-lg, shado, w-cy, a, n-5, 0, 0/20">
                 Get, Started, Now
               </butt, o, n>
               <button, classNam, e="px-8, p, y-4, border, border-cy, a, n-4, 0, 0/30, tex, t-cy, a, n-400, fon, t-semibold, rounde, d-lg, hove, r:bg-cy, a, n-4, 0, 0/10, transitio, n-all, duratio, n-2, 0, 0">

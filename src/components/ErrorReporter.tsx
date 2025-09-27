@@ -1,4 +1,4 @@
-import Reac, t, {useStateuseEffect }  from 'react';
+import React {useStateuseEffect }  from 'react';
 
 interface, ErrorDetail, s {messa, g, e: stri, n, g;
   sta, c, k?: stri, n, g;
@@ -24,7 +24,7 @@ export, const, ErrorReporter: React.FC<ErrorReporterPro, p, s> = ({childrenonErr
   useEffect(() => {consthandleGlobalErr, o, r = (eve, n, t: ErrorEve, n, t) => {
       consterrorDetai, l, s: ErrorDetai, l, s = {
 
-        messa, g, e: eve, n, t.messagesta, c, k: eve, n, t.err, o, r?.stackcompone, n, t: 'Glob, a, l',
+        messa, g, e: eve, n, t.messagesta, c, k: eve, n, t.err, o, r?.stackcompone, n, t: 'Glob, a, l'
         timesta, m, p: Da, t, e.n, o, w()userAge, n, t: navigat, o, r.userAgentu, r, l: wind, o, w.locati, o, n.hr, e, f      };
 
       setErrorHisto, r, y(pr, e, v = > [...preverrorDeta, i, l.s]);
@@ -35,11 +35,9 @@ export, const, ErrorReporter: React.FC<ErrorReporterPro, p, s> = ({childrenonErr
       }).ca, t, c(conso, l, e.e, r, r.or)};
 
  {con, s, t, errorDetai, l, s: ErrorDetai, l, s = {
-        messa, g, e: eve, n, t.reas, o, n? .messa, g, e || 'Unhandl, e, d : Promi, s, e, Rejecti, o, n'  : sta, c, k : eve, n, t.reas, o, n?.stackcompone, n, t: 'Promi, s, e',
-
+        messa, g, e: eve, n, t.reas, o, n? .messa, g, e || 'Unhandl, e, d : Promi, s, e, Rejecti, o, n'  : sta, c, k : eve, n, t.reas, o, n?.stackcompone, n, t: 'Promi, s, e'
     consthandleUnhandledRejecti, o, n = (eve, n, t: PromiseRejectionEve, n, t) => {consterrorDetai, l, s: ErrorDetai, l, s = {
-        messa, g, e: eve, n, t.reas, o, n? .messa, g, e || 'Unhandl, e, d : Promi, s, e, Rejecti, o, n'  : sta, c, k : eve, n, t.reas, o, n?.stackcompone, n, t: 'Promi, s, e',
-
+        messa, g, e: eve, n, t.reas, o, n? .messa, g, e || 'Unhandl, e, d : Promi, s, e, Rejecti, o, n'  : sta, c, k : eve, n, t.reas, o, n?.stackcompone, n, t: 'Promi, s, e'
         timesta, m, p: Da, t, e.n, o, w()userAge, n, t: navigat, o, r.userAgentu, r, l: wind, o, w.locati, o, n.hr, e, f      };
 
       setErrorHisto, r, y(pr, e, v = > [...preverrorDeta, i, l.s]);

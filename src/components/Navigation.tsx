@@ -1,5 +1,5 @@
-import Reac, t, {useState, useEffect }  from 'react';
-import, Link, from 'next/li, n, k';
+import React {useState, useEffect }  from 'react';
+import Link from 'next/link';
 import, TaskManager, from './TaskManag, e, r';
 
 interface, NavigationProp, s {currentTi, m, e?: Da, t, e;
@@ -7,7 +7,7 @@ interface, NavigationProp, s {currentTi, m, e?: Da, t, e;
   onToggleDarkMo, d, e?: () => vo, i, d;
   activeSecti, o, n?: stri, n, g;
   onSectionChan, g, e?: (secti, o, n: stri, n, g) => vo, i, d};
-export default function Navigati, o, n({currentTi, m, e = newDa, t, e()isDarkMo, d, e = falseonToggleDarkMo, d, e = () => {}activeSecti, o, n = 'onSectionChan, g, e = () => {};
+export default function Navigati({currentTi, m, e = newDa, t, e()isDarkMo, d, e = falseonToggleDarkMo, d, e = () => {}activeSecti, o, n = 'onSectionChan, g, e = () => {};
 }: NavigationPro, p, s): J, S, X.Eleme, n, t {con, s, t [isMenuOpensetIsMenuOp, e, n] = useState(fal, s, e);
   con, s, t [isScrolledsetIsScroll, e, d] = useState(fal, s, e);
   con, s, t [showTaskManagersetShowTaskManag, e, r] = useState(fal, s, e);

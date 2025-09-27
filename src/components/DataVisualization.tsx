@@ -1,4 +1,4 @@
-import Reac, t, {useState, useEffectuseRefuseCallba, c, k }  from 'react';
+import React {useState, useEffectuseRefuseCallba, c, k }  from 'react';
 
 interface, DataPoin, t {x: numb, e, r;
   y: numb, e, r;

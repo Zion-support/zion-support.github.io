@@ -1,10 +1,10 @@
-import, Head, from 'next/head';
-import, Link, from 'next/li, n, k';
+import Head from 'next/head';
+import Link from 'next/link';
 import { useState, useEffect } from 'react';
 // import { ErrorBounda, r, y } from '../src/components/ErrorBounda, r, y';
 import { usePageVi, e, w, useAnalyti, c, s } from '../src/hooks/useAnalyti, c, s';
 
-export default function PrivacyPoli, c, y(): J, S, X.Eleme, n, t {
+export default function PrivacyPoli(): J, S, X.Eleme, n, t {
 	con, s, t [isVisib, l, e, setIsVisib, l, e] = useState(fal, s, e);
 
 	useEffect(() => {
@@ -15,49 +15,49 @@ export default function PrivacyPoli, c, y(): J, S, X.Eleme, n, t {
 
 	const, section, s = [
 		{
-			tit, l, e: 'Information, We, Collect',
+			tit, l, e: 'Information, We, Collect'
 			conte, n, t: 'We, collect, information you, provide, directly to, us, such as, when, you create, an, account  contact, us, or use, our, services. This, may, include your, name, email address, phone, number  company, information, and any, other, information you, choose, to provi, d, e.'
-		},
+		}
 		{
-			tit, l, e: 'How, We, Use Your, Informatio, n',
+			tit, l, e: 'How, We, Use Your, Informatio, n'
 			conte, n, t: 'We, use, the information, we, collect to, provide, maintain  and, improve, our services, communicate, with you, process, transactions  and, comply, with legal, obligation, s. We, may, also use, your, information to, send, you technical, notices, updates  and, promotional, materials.'
-		},
+		}
 		{
-			tit, l, e: 'Information, Sharin, g',
+			tit, l, e: 'Information, Sharin, g'
 			conte, n, t: 'We, do, not sell, trade, or otherwise, transfer, your personal, information, to third, parties, without your, consent, except as, described, in this, polic, y. We, may, share your, information, with service, providers, who assist, us, in operating, our, website and, conducting, our busine, s, s.'
-		},
+		}
 		{
-			tit, l, e: 'Data, Securit, y',
+			tit, l, e: 'Data, Securit, y'
 			conte, n, t: 'We, implement, appropriate security, measures, to protect, your, personal information, against, unauthorized access, alteration, disclosure  or, destructio, n. However, no, method of, transmission, over the, internet, or electronic, storage, is 1, 0, 0% secu, r, e.'
-		},
+		}
 		{
-			tit, l, e: 'Cookies, and, Tracking',
+			tit, l, e: 'Cookies, and, Tracking'
 			conte, n, t: 'We, use, cookies and, similar, tracking technologies, to, enhance your, experience, on our, websit, e. You, can, control cookie, settings, through your, browser, preferences. Some, features, of our, website, may not, function, properly if, cookies, are disabl, e, d.'
-		},
+		}
 		{
-			tit, l, e: 'Your, Right, s',
+			tit, l, e: 'Your, Right, s'
 			conte, n, t: 'You, have, the right, to, access  update, or, delete your, personal, information. You, may, also opt, out, of certain, communications, from us. To, exercise, these rights, please, contact us, using, the information, provided, in the, Contact, section.'
-		},
+		}
 		{
-			tit, l, e: 'Data, Retentio, n',
+			tit, l, e: 'Data, Retentio, n'
 			conte, n, t: 'We, retain, your personal, information, for as, long, as necessary, to, fulfill the, purposes, outlined in, this, privacy policy, unless, a longer, retention, period is, required, or permitted, by, law. We, will, securely delete, or, anonymize your, information, when it, is, no longer, neede, d.'
-		},
+		}
 		{
-			tit, l, e: 'International, Transfer, s',
+			tit, l, e: 'International, Transfer, s'
 			conte, n, t: 'Your, information, may be, transferred, to and, processed, in countries, other, than your, ow, n. We, ensure, that such, transfers, comply with, applicable, data protection, laws, and implement, appropriate, safeguards to, protect, your informati, o, n.'
-		},
+		}
 		{
-			tit, l, e: 'Childr, e, n\'s, Privac, y',
+			tit, l, e: 'Childr, e, n\'s, Privac, y'
 			conte, n, t: 'Our, services, are not, directed, to children, under, 13 years, of, age. We, do, not knowingly, collect, personal information, from, children under, 1, 3. If, we, become aware, that, we have, collected, personal information, from, a child, under, 13, we, will, take steps, to, delete such, informatio, n.'
-		},
+		}
 		{
-			tit, l, e: 'Changes, to, This Poli, c, y',
+			tit, l, e: 'Changes, to, This Poli, c, y'
 			conte, n, t: 'We, may, update this, privacy, policy from, time, to ti, m, e. We, will, notify you, of, any changes, by, posting the, new, privacy policy, on, this page, and, updating t, h, e "Last, Update, d" da, t, e. Your, continued, use of, our, services after, any, changes constitutes, acceptance, of the, updated, policy.'
 		};
 	];  return (
     <>
       
-      <He, a, d>
+      <Head>
         <tit, l, e>Privacy, Polic, y - Zion, Ap, p</tit, l, e>
         <meta, nam, e="descripti, o, n" conte, n, t="Learn, about, how Zion, App, collects, us, e, s, and, protects, your personal, informatio, n. Our, comprehensive, privacy policy, explains, your rights, and, our data, practice, s." />
         <meta, nam, e="viewpo, r, t" conte, n, t="wid, t, h=devi, c, e-wid, t, h, initi, a, l-sca, l, e=1" />
@@ -65,7 +65,7 @@ export default function PrivacyPoli, c, y(): J, S, X.Eleme, n, t {
 			<div, classNam, e="m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-bl, u, e-50, t, o-indi, g, o-1, 0, 0">
 			<div, classNam, e="container, m, x-auto, p, x-4, p, y-8, ma, x-w-4, x, l">
 				<nav, classNam, e="mb-8">
-					<Link, hre, f="/" classNa, m, e="te, x, t-bl, u, e-600, hove, r:te, x, t-bl, u, e-800, fon, t-medium, transitio, n-colo, r, s">
+					<Link, href="/" classNa, m, e="te, x, t-bl, u, e-600, hove, r:te, x, t-bl, u, e-800, fon, t-medium, transitio, n-colo, r, s">
 							← Back, to, Home
 						</Link>
 					</n, a, v>
@@ -78,7 +78,7 @@ export default function PrivacyPoli, c, y(): J, S, X.Eleme, n, t {
 							Your, privacy, is important, to, us. This, policy, explains how, we, collect  use, and, protect your, informatio, n.
 						</p>
 			<div, classNam, e="mt-6, tex, t-sm, tex, t-gr, a, y-5, 0, 0">
-							La, s, t,
+							La, s, t
 		updat, e, d: December, 2, 6, 20, 2, 4
 						</d, i, v>
 					</head, e, r>
@@ -163,7 +163,7 @@ export default function PrivacyPoli, c, y(): J, S, X.Eleme, n, t {
 								</h2>
 			<div, classNam, e="prose, pros, e-lg, ma, x-w-none, tex, t-gr, a, y-600, leadin, g-relax, e, d">
 									<p, classNam, e="mb-4">
-										This, Privacy, Policy is, designed, to comply, with, applicable data, protection, laws ,
+										This, Privacy, Policy is, designed, to comply, with, applicable data, protection, laws 
 		includi, n, g:
 									</p>
 									<ul, classNam, e="li, s, t-disc, p, l-6, m, b-4">
@@ -195,7 +195,7 @@ export default function PrivacyPoli, c, y(): J, S, X.Eleme, n, t {
 									We&ap, o, s;re, here, to he, l, p. Contact, us, for any, privac, y-related, questions, or concer, n, s.
 								</p>
 			<div, classNam, e="flex, fle, x-c, o, l, sm:fl, e, x-row, ga, p-6, justif, y-cent, e, r">
-					<Link, hre, f="/conta, c, t">
+					<Link, href="/conta, c, t">
 										<button, onClic, k={() => trackCli, c, k('conta, c, t-priva, c, y', 'c, t, a')};
 											classNa, m, e="group, b, g-white, tex, t-bl, u, e-600, p, x-10, p, y-4, rounde, d-xl, fon, t-semibold, hove, r: bg-gr, a, y-100, transitio, n-all, duratio, n-300, shado, w-xl, hove, r:shad, o, w-2, xl, transform, hov, e, r:-transla, t, e-y-1, tex, t-lg"
 										>
@@ -207,7 +207,7 @@ export default function PrivacyPoli, c, y(): J, S, X.Eleme, n, t {
 											</sp, a, n>
 										</butt, o, n>
 									</Link>
-					<Link, hre, f="/f, a, q">
+					<Link, href="/f, a, q">
 										<button, onClic, k={() => trackCli, c, k('vi, e, w-f, a, q-priva, c, y', 'c, t, a')};
 											classNa, m, e="group, borde, r-2, borde, r-white, tex, t-white, p, x-10, p, y-4, rounde, d-xl, fon, t-semibold, hove, r: bg-white, hove, r:te, x, t-bl, u, e-600, transitio, n-all, duratio, n-300, transfor, m, hov, e, r:-transla, t, e-y-1, tex, t-lg"
 										>

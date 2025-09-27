@@ -1,4 +1,4 @@
-import Reac, t, {useState, useEffect, useCallbac, k }  from 'react';
+import React {useState, useEffect, useCallbac, k }  from 'react';
 
 interface, Notificatio, n {id: stri, n, g;
   ty, p, e: 'succe, s, s' | 'err, o, r' | 'warni, n, g' | 'in, f, o' | 'loadi, n, g';

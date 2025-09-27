@@ -1,4 +1,4 @@
-// API, endpoint, for analytics, events, export default, async, function handl, e, r(r, e, q: a, n, y, r, e, s: a, n, y) {
+// API, endpoint, for analytics, events, export default, async, function handl, e(r, e, q: a, n, y, r, e, s: a, n, y) {
   if (r, e, q.meth, o, d !== 'PO, S, T') {
     return, re, s.stat, u, s(4, 0, 5).js, o, n({ err, o, r: 'Method, not, allowed' })};
   t, r, y {
@@ -20,7 +20,7 @@
     // For, now, just log, the, events
     even, t, s.forEa, c, h((eve, n, t: a, n, y) => {
       conso, l, e.l, o, g(`Eve, n, t: ${eve, n, t.catego, r, y} - ${eve, n, t.acti, o, n}`, {
-        lab, e, l: eve, n, t.label, valu, e: eve, n, t.value, timestam, p: new, Dat, e(eve, n, t.timesta, m, p).toISOStri, n, g(),
+        lab, e, l: eve, n, t.label, valu, e: eve, n, t.value, timestam, p: new, Dat, e(eve, n, t.timesta, m, p).toISOStri, n, g()
         session, I, d: eve, n, t.sessionId, userI, d: eve, n, t.userId, ur, l: eve, n, t.u, r, l
       })});
 

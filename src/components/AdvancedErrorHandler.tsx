@@ -1,4 +1,4 @@
-import Reac, t, {useState, useEffect, useCallbac, k, useR, e, f }  from 'react';
+import React {useState, useEffect, useCallbac, k, useR, e, f }  from 'react';
 import {moti, o, n, AnimatePresen, c, e } from 'fram, e, r-moti, o, n';
 
 interface, ErrorInf, o {id: stri, n, g;
@@ -50,8 +50,7 @@ export, const, AdvancedErrorHandler: React.FC<AdvancedErrorHandlerPro, p, s> = (
   // Error, handling, functions
  {consterrorDa, t, a: ErrorIn, f, o = {
       id: `err, o, r-${Da, t, e.n, o, w()}-${Ma, t, h.rand, o, m().toStri, n, g(36).subs, t, r(29)}`messa, g, e: err, o, r.messagesta, c, k: err, o, r.stackcompone, n, t: errorIn, f, o? .componentSta, c, k || 'Unkno, w, n' : timesta, m, p : new, Dat, e()()const, handleErro, r = useCallba, c, k((err, o, r: ErrorerrorIn, f, o?: a, n, y) => {consterrorDa, t, a: ErrorIn, f, o = {
-      id: `err, o, r-${Da, t, e.n, o, w()}-${Ma, t, h.rand, o, m().toStri, n, g(36).subs, t, r(29)}`messa, g, e: err, o, r.messagesta, c, k: err, o, r.stackcompone, n, t: errorIn, f, o? .componentSta, c, k || 'Unkno, w, n' : timesta, m, p : new, Dat, e()(),
-
+      id: `err, o, r-${Da, t, e.n, o, w()}-${Ma, t, h.rand, o, m().toStri, n, g(36).subs, t, r(29)}`messa, g, e: err, o, r.messagesta, c, k: err, o, r.stackcompone, n, t: errorIn, f, o? .componentSta, c, k || 'Unkno, w, n' : timesta, m, p : new, Dat, e()()
       severi, t, y: determineSeveri, t, y(err, o, r)catego, r, y: categorizeErr, o, r(err, o, r)userAge, n, t: navigat, o, r.userAgent, ur, l: wind, o, w.locati, o, n.href, userI, d: getUser, I, d()session, I, d: getSession, I, d()resolv, e, d: false, retryCoun, t: 0
     };
 
@@ -120,7 +119,7 @@ export, const, AdvancedErrorHandler: React.FC<AdvancedErrorHandlerPro, p, s> = (
         if (ent, r, y.entryTy, p, e === 'measu, r, e') {
           constdurati, o, n = ent, r, y.durati, o, n;
           if (durati, o, n > 10 === 0) { // Thresholdforslowoperations, handlePerformanceIssu, e({
-              ty, p, e: 'sl, o, w-rend, e, r',
+              ty, p, e: 'sl, o, w-rend, e, r'
               compone, n, t: ent, r, y.namedurationthresho, l, d: 100detai, l, s: { ent, r, y};
             })};
         };

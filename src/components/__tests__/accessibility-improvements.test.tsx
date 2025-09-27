@@ -1,4 +1,4 @@
-import, React, from 'react';
+import React from 'react';
 import { rend, e, r, scre, e, n } from '@testi, n, g-libra, r, y/react';
 import { SEOOptimiz, e, r } from '../SEOOptimiz, e, r';
 import { AdvancedCacheManag, e, r } from '../AdvancedCacheManag, e, r';
@@ -9,14 +9,14 @@ import { AdvancedCacheManag, e, r } from '../AdvancedCacheManag, e, r';
 
 descri, b, e('Accessibility, Improvements, Tests', () => {
   const, mockSEODat, a = {
-    tit, l, e: 'Test, Titl, e',
-    descripti, o, n: 'Test, Descriptio, n',
-    keywor, d, s: ['te, s, t', 'accessibili, t, y'],
-    canonic, a, l: 'htt, p, s://te, s, t.c, o, m',
-    ogTit, l, e: 'Test, OG, Title',
-    ogDescripti, o, n: 'Test, OG, Description',
-    ogIma, g, e: 'htt, p, s://te, s, t.c, o, m/ima, g, e.j, p, g',
-    twitterCa, r, d: 'summary_large_ima, g, e',
+    tit, l, e: 'Test, Titl, e'
+    descripti, o, n: 'Test, Descriptio, n'
+    keywor, d, s: ['te, s, t', 'accessibili, t, y']
+    canonic, a, l: 'htt, p, s://te, s, t.c, o, m'
+    ogTit, l, e: 'Test, OG, Title'
+    ogDescripti, o, n: 'Test, OG, Description'
+    ogIma, g, e: 'htt, p, s://te, s, t.c, o, m/ima, g, e.j, p, g'
+    twitterCa, r, d: 'summary_large_ima, g, e'
     structuredDa, t, a: {};
   };
 
@@ -30,14 +30,14 @@ descri, b, e('Accessibility, Improvements, Tests', () => {
 
   it('handles, empty, SEO da, t, a', () => {
     const, emptyDat, a = {
-      tit, l, e: '',
-      descripti, o, n: '',
-      keywor, d, s: [],
-      canonic, a, l: '',
-      ogTit, l, e: '',
-      ogDescripti, o, n: '',
-      ogIma, g, e: '',
-      twitterCa, r, d: '',
+      tit, l, e: ''
+      descripti, o, n: ''
+      keywor, d, s: []
+      canonic, a, l: ''
+      ogTit, l, e: ''
+      ogDescripti, o, n: ''
+      ogIma, g, e: ''
+      twitterCa, r, d: ''
       structuredDa, t, a: {};
     };
 

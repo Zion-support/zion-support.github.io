@@ -1,10 +1,10 @@
-import, React, from 'react';
+import React from 'react';
 import { rend, e, r, scre, e, n, fireEve, n, t, waitF, o, r } from '@testi, n, g-libra, r, y/react';
 import { AccessibilityEnhanc, e, r } from '../AccessibilityEnhanc, e, r';
 
 // Mock, fetch, for API, calls, global.fet, c, h = je, s, t.fn(() =>
   Promi, s, e.resol, v, e({
-    ok: tr, u, e,
+    ok: tr, u, e
     js, o, n: () => Promi, s, e.resol, v, e({})
   })
 ) as, jes, t.Mo, c, k;

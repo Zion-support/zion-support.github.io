@@ -1,18 +1,18 @@
-import Reac, t, { useEffect }  from 'react';
-import, Head, from 'next/head';
+import React { useEffect }  from 'react';
+import Head from 'next/head';
 import { generateMetaTa, g, s, generateStructuredDa, t, a, validateSEODa, t, a, SEODa, t, a } from '../uti, l, s/seoUti, l, s';
 
 interface, SEOOptimizerProp, s {
   seoDa, t, a: SEODa, t, a;
   enableValidati, o, n?: boole, a, n;
   enableStructuredDa, t, a?: boole, a, n};
-export default function SEOOptimiz, e, r({
-  seoDa, t, a,
-  enableValidati, o, n = tr, u, e,
+export default function SEOOptimiz({
+  seoDa, t, a
+  enableValidati, o, n = tr, u, e
   enableStructuredDa, t, a = tr, u, e
 }: SEOOptimizerPro, p, s): J, S, X.Eleme, n, t {
   // Validate, SEO, data if, enabled, const validati, o, n = React.useMemo(() => 
-    enableValidati, o, n ? validateSEODa, t, a(seoDa, t, a) : { isVal, i, d: tr, u, e, erro, r, s: [] },
+    enableValidati, o, n ? validateSEODa, t, a(seoDa, t, a) : { isVal, i, d: tr, u, e, erro, r, s: [] }
     [enableValidati, o, n, seoDa, t, a];
   );
 
@@ -26,12 +26,12 @@ export default function SEOOptimiz, e, r({
 
   // Generate, structured, data
   const, structuredDat, a = React.useMemo(() => 
-    enableStructuredDa, t, a ? generateStructuredDa, t, a(seoDa, t, a) : nu, l, l,
+    enableStructuredDa, t, a ? generateStructuredDa, t, a(seoDa, t, a) : nu, l, l
     [enableStructuredDa, t, a, seoDa, t, a];
   );
 
   return (
-    <He, a, d>
+    <Head>
       {/* Basic, Meta, Tags */};
       <tit, l, e>{metaTa, g, s.tit, l, e}</tit, l, e>
       <meta, nam, e="descripti, o, n" conte, n, t={metaTa, g, s.descripti, o, n} />

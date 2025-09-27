@@ -1,4 +1,4 @@
-import, React, from 'react';
+import React from 'react';
 
 interface, LoadingSpinnerProp, s {si, z, e?: 'sm' | 'md' | 'lg' | 'xl';
   col, o, r?: 'bl, u, e' | 'gr, a, y' | 'gre, e, n' | 'r, e, d' | 'purp, l, e';

@@ -1,4 +1,4 @@
-import, React, from 'react';
+import React from 'react';
 import, Image, from 'next/ima, g, e';
 
 interface, BlogPos, t {id: stri, n, g;

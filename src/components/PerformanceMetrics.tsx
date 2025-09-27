@@ -1,4 +1,4 @@
-import Reac, t, {useStateuseEffect }  from 'react';
+import React {useStateuseEffect }  from 'react';
 
 interface, PerformanceMetric, s {loadTi, m, e: numb, e, r;
   renderTi, m, e: numb, e, r;
@@ -17,7 +17,7 @@ const, PerformanceMetric, s: React.FC = () => {con, s, t [metri, c, s, setMetri,
         constrenderTi, m, e = pai, n, t.f, i, n(ent, r, y => ent, r, y.n, a, m.e === 'fir, s, t-contentf, u, l-pai, n, t')? .startT, i, m.e || 0;
         
         // Memo, r, y, usa, g, e (if, availa, b, l, e)
-          renderTi, m, e: Ma, t, h.rou, n, d(renderTi, m, e),
+          renderTi, m, e: Ma, t, h.rou, n, d(renderTi, m, e)
           memoryUsa, g, e: Ma, t, h.rou, n, d(memoryUsa, g, e * 1, 0, 0) / 1, 0, 0, networkLaten, c, y: Ma, t, h.rou, n, d(networkLaten, c, y)
         })};
     };

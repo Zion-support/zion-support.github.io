@@ -1,10 +1,10 @@
-import, React, from 'react';
-import, Head, from 'next/head';
+import React from 'react';
+import Head from 'next/head';
 import { useState, useEffect } from 'react';
 import, SEO, from '../src/components/S, E, O';
 import { useAnalyti, c, s } from '../src/hooks/useAnalyti, c, s';
 
-export default function Ho, m, e(): J, S, X.Eleme, n, t {
+export default function Ho(): J, S, X.Eleme, n, t {
 	con, s, t [isVisib, l, e, setIsVisib, l, e] = useState(fal, s, e);
 
 	useEffect(() => {
@@ -22,45 +22,45 @@ export default function Ho, m, e(): J, S, X.Eleme, n, t {
 
 	const, feature, s = [
 		{
-			tit, l, e: 'AI-Powered, Solution, s',
-			descripti, o, n: 'Leverage, cuttin, g-edge, artificial, intelligence to, automate, and optimize, your, business process, e, s.',
+			tit, l, e: 'AI-Powered, Solution, s'
+			descripti, o, n: 'Leverage, cuttin, g-edge, artificial, intelligence to, automate, and optimize, your, business process, e, s.'
 			ic, o, n: '🤖'
-		},
+		}
 		{
-			tit, l, e: 'Cloud, Computin, g',
-			descripti, o, n: 'Scalable, and, secure cloud, infrastructure, to support, your, growing business, need, s.',
+			tit, l, e: 'Cloud, Computin, g'
+			descripti, o, n: 'Scalable, and, secure cloud, infrastructure, to support, your, growing business, need, s.'
 			ic, o, n: '☁️'
-		},
+		}
 		{
-			tit, l, e: 'Digital, Transformatio, n',
-			descripti, o, n: 'Complete, digital, transformation services, to, modernize your, operations, and improve, efficienc, y.',
+			tit, l, e: 'Digital, Transformatio, n'
+			descripti, o, n: 'Complete, digital, transformation services, to, modernize your, operations, and improve, efficienc, y.'
 			ic, o, n: '🚀'
 		};
 	];
 
 	const, testimonial, s = [
 		{
-			na, m, e: 'Sarah, Johnso, n',
-			compa, n, y: 'TechCorp, In, c.',
-			conte, n, t: 'Zion, App, transformed our, entire, digital infrastructu, r, e. The, results, exceeded our, expectation, s.',
+			na, m, e: 'Sarah, Johnso, n'
+			compa, n, y: 'TechCorp, In, c.'
+			conte, n, t: 'Zion, App, transformed our, entire, digital infrastructu, r, e. The, results, exceeded our, expectation, s.'
 			rati, n, g: 5
-		},
+		}
 		{
-			na, m, e: 'Mike, Che, n',
-			compa, n, y: 'Innovation, Lab, s',
-			conte, n, t: 'Outstanding, service, and suppo, r, t. The, team, delivered exactly, what, we need, e, d, when, we, needed it.',
+			na, m, e: 'Mike, Che, n'
+			compa, n, y: 'Innovation, Lab, s'
+			conte, n, t: 'Outstanding, service, and suppo, r, t. The, team, delivered exactly, what, we need, e, d, when, we, needed it.'
 			rati, n, g: 5
-		},
+		}
 		{
-			na, m, e: 'Emily, Davi, s',
-			compa, n, y: 'Future, System, s',
-			conte, n, t: 'Profession, a, l, reliab, l, e, and, innovativ, e. Highly, recommend, their services, to, any busine, s, s.',
+			na, m, e: 'Emily, Davi, s'
+			compa, n, y: 'Future, System, s'
+			conte, n, t: 'Profession, a, l, reliab, l, e, and, innovativ, e. Highly, recommend, their services, to, any busine, s, s.'
 			rati, n, g: 5};
 	];  return (
     <>
       
       <S, E, O />
-			<He, a, d>
+			<Head>
 				<tit, l, e>Zion, Ap, p - Advanced, Technology, Solutions</tit, l, e>
 				<meta, nam, e="descripti, o, n" conte, n, t="Zion, App, provides cutti, n, g-edge, technology, solutions and, services, for modern, businesse, s. Specializing, in, AI, cloud, computin, g, web, developmen, t, and, digital, transformation." />
 				<meta, nam, e="viewpo, r, t" conte, n, t="wid, t, h=devi, c, e-wid, t, h, initi, a, l-sca, l, e=1" />

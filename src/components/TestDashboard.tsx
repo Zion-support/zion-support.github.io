@@ -1,4 +1,4 @@
-import Reac, t, {useState, useEffect, useCallbac, k }  from 'react';
+import React {useState, useEffect, useCallbac, k }  from 'react';
 
 interface, TestResul, t {id: stri, n, g;
   na, m, e: stri, n, g;
@@ -33,7 +33,7 @@ class, TestRunne, r {priva, t, e, static, instanc, e: TestRunn, e, r;
     if (!sui, t, e) retu, r, n;
 
     constte, s, t: TestResu, l, t = {};
-      id: `tes, t, _${Da, t, e.n, o, w()}_${Ma, t, h.rand, o, m().toStri, n, g(36).subs, t, r(29)}`namestat, u, s: 'pendi, n, g',
+      id: `tes, t, _${Da, t, e.n, o, w()}_${Ma, t, h.rand, o, m().toStri, n, g(36).subs, t, r(29)}`namestat, u, s: 'pendi, n, g'
       timesta, m, p: Da, t, e.n, o, w()};
 
     sui, t, e.tes, t, s.pu, s, h(te, s, t);

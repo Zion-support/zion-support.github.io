@@ -1,4 +1,4 @@
-import, React, from 'react';
+import React from 'react';
 
 interface, AccessibilityFixerProp, s {onF, i, x?: () => vo, i, d};
 export, const, AccessibilityFixer: React.FC<AccessibilityFixerPro, p, s> = ({onF, i, x }) => {constfixAccessibilityIssu, e, s = () => {

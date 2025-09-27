@@ -1,4 +1,4 @@
-import, React, from 'react';
+import React from 'react';
 import { rend, e, r, scre, e, n } from '@testi, n, g-libra, r, y/react';
 import { ErrorBounda, r, y } from '../ErrorBounda, r, y';
 

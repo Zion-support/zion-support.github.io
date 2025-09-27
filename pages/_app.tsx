@@ -1,8 +1,8 @@
-import Reac, t, { useEffect }  from 'react';
+import React { useEffect }  from 'react';
 import typ, e { AppProps }  from 'next/app';
 import { HelmetProvider } from 'react-helmet-async';
-import, Head, from 'next/head';
-import, dynamic, from 'next/dynamic';
+import from 'next/head';
+import dynamic from 'next/dynamic';
 // import, PerformanceMetrics, from '../src/components/PerformanceMetri, c, s';
 // import, PerformanceMonitor, from '../src/components/PerformanceMonit, o, r';
 import, AccessibilityAuditor, from '../src/components/AccessibilityAudit, o, r';
@@ -22,7 +22,7 @@ import '../src/styl, e, s/improvemen, t, s.c, s, s';
 //   s, s, r: fal, s, e
 // });
 
-export default function A, p, p({ Compone, n, t, pagePro, p, s }: AppProps) {
+export default function A({ Compone, n, t, pagePro, p, s }: AppProps) {
   // Setup, global, error handling, Reac, t.useEffect(() => {
     setupGlobalErrorHandli, n, g()}, []);
 
@@ -37,7 +37,7 @@ export default function A, p, p({ Compone, n, t, pagePro, p, s }: AppProps) {
   }, []);
 	return (
     <HelmetProvider>
-			<He, a, d>
+			<Head>
             <meta, charSe, t="u, t, f-8" />
             <meta, nam, e="robo, t, s" conte, n, t="index, follo, w" />
             <meta, nam, e="auth, o, r" conte, n, t="Zion, Ap, p" />
@@ -61,17 +61,17 @@ export default function A, p, p({ Compone, n, t, pagePro, p, s }: AppProps) {
           scro, l, l-behavi, o, r: smoo, t, h};
         bo, d, y {
           marg, i, n: 0;
-         ,
+         
 		paddi, n, g: 0;
           fo, n, t-fami, l, y: 'Int, e, r', syst, e, m-ui  -app, l, e-system, BlinkMacSystemFon, t  'Segoe, U, I', Roboto, san, s-ser, i, f;
           li, n, e-heig, h, t: 1.6;
           col, o, r: #1e29, 3, b;
           backgrou, n, d-col, o, r: #ffff, f, f;
-         ,
+         
 		transiti, o, n: backgrou, n, d-colo, r, 0.3s, ease, color 0.3s, eas, e};
         .dark, bod, y {
           backgrou, n, d-col, o, r: #0f17, 2, a;
-         ,
+         
 		col, o, r: #f1f5, f, 9};
         h1, h2, h3  h4, h5, h6 {
           marg, i, n: 0, 0, 1rem 0;
@@ -82,7 +82,7 @@ export default function A, p, p({ Compone, n, t, pagePro, p, s }: AppProps) {
         butt, o, n {
           fo, n, t-fami, l, y: inher, i, t};
         butt, o, n: hov, e, r {
-         ,
+         
 		opaci, t, y: 0.9};
         @med, i, a (prefe, r, s-reduc, e, d-moti, o, n: redu, c, e) {
           ht, m, l {
@@ -126,7 +126,7 @@ export default function A, p, p({ Compone, n, t, pagePro, p, s }: AppProps) {
         .keyboa, r, d-navigation, inpu, t:foc, u, s 
         .keyboa, r, d-navigation, textare, a:foc, u, s 
         .keyboa, r, d-navigation, selec, t:foc, u, s {
-         ,
+         
 		outli, n, e: 2px, soli, d #2563, e, b !importa, n, t;
           outli, n, e-offs, e, t: 2, p, x !importa, n, t};
         .sr-on, l, y {
@@ -136,10 +136,10 @@ export default function A, p, p({ Compone, n, t, pagePro, p, s }: AppProps) {
           paddi, n, g: 0;
           marg, i, n: -1, p, x;
           overfl, o, w: hidd, e, n;
-         ,
+         
 		cl, i, p: re, c, t(0, 0, 0, 0);
           whi, t, e-spa, c, e: nowr, a, p;
-         ,
+         
 		bord, e, r: 0};
       `}</sty, l, e>
           <PerformanceOptimiz, e, r>

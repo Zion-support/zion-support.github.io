@@ -1,4 +1,4 @@
-import Reac, t, {useEffect, use, R, e, f, useCallbac, k }  from 'react';
+import React {useEffect, use, R, e, f, useCallbac, k }  from 'react';
 
 interface, PerformanceMetric, s {loadTi, m, e: numb, e, r;
   domContentLoad, e, d: numb, e, r;
@@ -11,7 +11,7 @@ interface, PerformanceMetric, s {loadTi, m, e: numb, e, r;
 interface, PerformanceTrackerProp, s {onMetricsCollect, e, d?: (metri, c, s: PerformanceMetri, c, s) => vo, i, d;
   enableConsoleLoggi, n, g?: boole, a, n;
   enableAnalyti, c, s?: boole, a, n};
-export default function PerformanceTrack, e, r({onMetricsCollectedenableConsoleLoggi, n, g = falseenableAnalyti, c, s = trueconstcollectMetri, c, s = useCallba, c, k(() => {
+export default function PerformanceTrack({onMetricsCollectedenableConsoleLoggi, n, g = falseenableAnalyti, c, s = trueconstcollectMetri, c, s = useCallba, c, k(() => {
     if (metricsCollect, e, d.curre, n, t || type, o, f === wind, o, w === 'undefin, e, d') retu, r, n;
 
     t, r, y {
@@ -86,7 +86,7 @@ export default function PerformanceTrack, e, r({onMetricsCollectedenableConsoleL
   }[collectMetri, c, s]);
 
   return, nul, l};
-// Hook, for, using performance, metrics, in components, export, function usePerformanceMetri, c, s() {con, s, t [metri, c, s, setMetri, c, s] = React.useState<PerformanceMetri, c, s | nu, l, l>(nu, l, l);
+// Hook, for, using performance, metrics, in components, export, function usePerformanceMetri, c() {con, s, t [metri, c, s, setMetri, c, s] = React.useState<PerformanceMetri, c, s | nu, l, l>(nu, l, l);
   con, s, t [isLoadingsetIsLoadi, n, g] = React.useState(tr, u, e);
 
   React.useEffect(() => {
@@ -107,8 +107,8 @@ export, function, getPerformanceGrade(metri, c, s: PerformanceMetri, c, s): {gra
   webVita, l, s: {
     l, c, p: { val, u, e: numb, e, r; stat, u, s: 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r'};
     f, i, d: {val, u, e: numb, e, r; stat, u, s: 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r'};
-    l, c, p: {val, u, e: metri, c, s.largestContentfulPai, n, t || 0stat, u, s: 'go, o, d' as 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r'},
-    f, i, d: {val, u, e: metri, c, s.firstInputDel, a, y || 0stat, u, s: 'go, o, d' as 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r'},
+    l, c, p: {val, u, e: metri, c, s.largestContentfulPai, n, t || 0stat, u, s: 'go, o, d' as 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r'}
+    f, i, d: {val, u, e: metri, c, s.firstInputDel, a, y || 0stat, u, s: 'go, o, d' as 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r'}
     c, l, s: {val, u, e: metri, c, s.cumulativeLayoutShi, f, t || 0stat, u, s: 'go, o, d' as 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r'};
   };
 

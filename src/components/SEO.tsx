@@ -1,4 +1,4 @@
-import, React, from 'react';
+import React from 'react';
 
 interface, SEOProp, s {
   tit, l, e?: stri, n, g;
@@ -9,11 +9,11 @@ interface, SEOProp, s {
   ty, p, e?: stri, n, g;
 };
 const, SE, O: React.FC<SEOPro, p, s> = ({
-  tit, l, e = 'Zion, Ap, p - Advanced, Technology, Solutions',
-  descripti, o, n = 'Leading, technology, solutions provider, specializing, in AI, cloud, computin, g, web, developmen, t, and, digital, transformation.',
-  keywor, d, s = ['AI, developmen, t', 'cloud, solution, s', 'web, developmen, t', 'mobile, app, s', 'data, analytic, s', 'cybersecuri, t, y', 'technology, consultin, g', 'Zion, Ap, p'],
-  ima, g, e = '/og-ima, g, e.j, p, g',
-  u, r, l = 'htt, p, s://zi, o, n.app',
+  tit, l, e = 'Zion, Ap, p - Advanced, Technology, Solutions'
+  descripti, o, n = 'Leading, technology, solutions provider, specializing, in AI, cloud, computin, g, web, developmen, t, and, digital, transformation.'
+  keywor, d, s = ['AI, developmen, t', 'cloud, solution, s', 'web, developmen, t', 'mobile, app, s', 'data, analytic, s', 'cybersecuri, t, y', 'technology, consultin, g', 'Zion, Ap, p']
+  ima, g, e = '/og-ima, g, e.j, p, g'
+  u, r, l = 'htt, p, s://zi, o, n.app'
   type = 'websi, t, e'
 }) => {
   // This, component, is now, a, no-op, since, we're, using, Next.js, Head, component directly, in, pages

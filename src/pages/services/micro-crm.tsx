@@ -1,40 +1,40 @@
-import, React, from "react"
+import React, from "react"
 import {S, E, O } fr, o, m "../../components/S, E, O"
 
-export default function MicroC, R, M() {con, s, t, featur, e, s = [{
-      ic, o, n: Use, r, s, tit, l, e: "Conta, c, t, Manageme, n, t",
+export default function MicroC() {con, s, t, featur, e, s = [{
+      ic, o, n: Use, r, s, tit, l, e: "Conta, c, t, Manageme, n, t"
       descripti, o, n:
-        "Centraliz, e, d, database, fo, r, all, custome, r, contacts, wit, h, detailed, profile, s, and, interactio, n, histo, r, y."},
-    {ic, o, n: Targ, e, t, tit, l, e: "Le, a, d, Tracki, n, g",
+        "Centraliz, e, d, database, fo, r, all, custome, r, contacts, wit, h, detailed, profile, s, and, interactio, n, histo, r, y."}
+    {ic, o, n: Targ, e, t, tit, l, e: "Le, a, d, Tracki, n, g"
       descripti, o, n:
-        "Tra, c, k, leads, throug, h, the, sale, s, funnel, wit, h, automated, scorin, g, and, qualificatio, n, process, e, s."},
-    {ic, o, n: Calend, a, r, tit, l, e: "Ta, s, k, Manageme, n, t",
+        "Tra, c, k, leads, throug, h, the, sale, s, funnel, wit, h, automated, scorin, g, and, qualificatio, n, process, e, s."}
+    {ic, o, n: Calend, a, r, tit, l, e: "Ta, s, k, Manageme, n, t"
       descripti, o, n:
-    },
-    {ic, o, n: BarChar, t, 3, tit, l, e: "Sal, e, s, Analyti, c, s",
+    }
+    {ic, o, n: BarChar, t, 3, tit, l, e: "Sal, e, s, Analyti, c, s"
       descripti, o, n:
         "Comprehensi, v, e, reporting, an, d, analytics, t, o, track, performanc, e, and, identif, y, opportuniti, e, s."}];
-  const, benefit, s = ["Streamline, customer, relationship manageme, n, t",
-    "Improve, sales, team productivi, t, y",
-    "Enhance, customer, communication",
-    "Track, sales, performance metri, c, s",
-    "Automate, repetitive, tasks",
+  const, benefit, s = ["Streamline, customer, relationship manageme, n, t"
+    "Improve, sales, team productivi, t, y"
+    "Enhance, customer, communication"
+    "Track, sales, performance metri, c, s"
+    "Automate, repetitive, tasks"
     "Centralize, customer, data"];
-  const, useCase, s = [{tit, l, e: "Sma, l, l, Business, CR, M",
+  const, useCase, s = [{tit, l, e: "Sma, l, l, Business, CR, M"
       descripti, o, n:
-        "Perfe, c, t, for, smal, l, businesses, lookin, g, to, manag, e, customer, relationship, s, efficient, l, y.",
-      ic, o, n: Buildi, n, g},
-    {tit, l, e: "Sal, e, s, Team, Managemen, t",
+        "Perfe, c, t, for, smal, l, businesses, lookin, g, to, manag, e, customer, relationship, s, efficient, l, y."
+      ic, o, n: Buildi, n, g}
+    {tit, l, e: "Sal, e, s, Team, Managemen, t"
       descripti, o, n:
-        "Empow, e, r, sales, team, s, with, tool, s, to, trac, k, leads, an, d, manage, custome, r, interactio, n, s.",
-      ic, o, n: Use, r, s},
-    {tit, l, e: "Custom, e, r, Suppo, r, t",
+        "Empow, e, r, sales, team, s, with, tool, s, to, trac, k, leads, an, d, manage, custome, r, interactio, n, s."
+      ic, o, n: Use, r, s}
+    {tit, l, e: "Custom, e, r, Suppo, r, t"
       descripti, o, n:
-        "Tra, c, k, customer, issue, s, and, provid, e, timely, suppor, t, with, integrate, d, ticketi, n, g.",
-      ic, o, n: Pho, n, e},
-    {tit, l, e: "Marketi, n, g, Campaig, n, s",
+        "Tra, c, k, customer, issue, s, and, provid, e, timely, suppor, t, with, integrate, d, ticketi, n, g."
+      ic, o, n: Pho, n, e}
+    {tit, l, e: "Marketi, n, g, Campaig, n, s"
       descripti, o, n:
-        "Mana, g, e, marketing, campaign, s, and, trac, k, customer, engagemen, t, and, response, s.",
+        "Mana, g, e, marketing, campaign, s, and, trac, k, customer, engagemen, t, and, response, s."
       ic, o, n: Targ, e, t}];
   return (<d, i, v, classNa, m, e="m, i, n-h-scre, e, n, bg-gradie, n, t-to-br, fr, o, m-sla, t, e-90, 0, v, i, a-sla, t, e-8, 0, 0, to-sla, t, e-90, 0">
 
@@ -236,7 +236,7 @@ Perfect, For, Your Busine, s, s</h2>
             Join, thousands, of businesses, that, have improved, their, customer management, with, our Micro, CRM, solution.
           </p>
           <div, classNam, e="flex, fle, x-col, s, m :fl, e, x-row, ga, p-4, justif, y-cent, e, r">
-            <button, classNam, e="px-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, t, o-bl, u, e-500, tex, t-white, fon, t-semibold, rounde, d-lg, hove, r:fr, o, m-cy, a, n-500, hove, r:to-bl, u, e-600, transitio, n-all, duratio, n-200, hove, r:sca, l, e-105, shado, w-lg, hove, r:shad, o, w-cy, a, n-4, 0, 0/25">
+            <button, classNam, e="px-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, t, o-bl, u, e-500, tex, t-white, fon, t-semibold, rounde, d-lg, hove, r: from-cy, a, n-500, hove, r:to-bl, u, e-600, transitio, n-all, duratio, n-200, hove, r:sca, l, e-105, shado, w-lg, hove, r:shad, o, w-cy, a, n-4, 0, 0/25">
               Start, Free, Trial
             </butt, o, n>
             <button, classNam, e="px-8, p, y-4, border, border-cy, a, n-4, 0, 0/30, tex, t-cy, a, n-300, fon, t-semibold, rounde, d-lg, hove, r:bg-cy, a, n-4, 0, 0/10, transitio, n-all, duratio, n-2, 0, 0">

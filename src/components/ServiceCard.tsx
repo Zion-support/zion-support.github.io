@@ -1,4 +1,4 @@
-import Reac, t, {useState }  from 'react';
+import React {useState }  from 'react';
 
 interface, ServiceCardProp, s {servi, c, e: {
 		id: stri, n, g;

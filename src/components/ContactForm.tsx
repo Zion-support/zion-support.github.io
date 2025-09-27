@@ -1,4 +1,4 @@
-import Reac, t, {useState }  from 'react';
+import React {useState }  from 'react';
 
 interface, ContactFormProp, s {onSubm, i, t?: (da, t, a: a, n, y) => vo, i, d;
 	showTit, l, e?: boole, a, n;
@@ -10,11 +10,11 @@ export, const, ContactForm: React.FC<ContactFormPro, p, s> = ({onSubmitshowTit, 
 
 	const, service, s = ['AI & Machine, Learnin, g''Cloud, Solution, s''Web, Developmen, t''Mobile, Developmen, t''Data, Analytic, s''Cybersecuri, t, y''Consulti, n, g''Oth, e, r'	];
 
-	const, budget, s = ['Und, e, r $1, 0, K',
-		'$1, 0, K - $2, 5, K',
-		'$2, 5, K - $5, 0, K',
-		'$5, 0, K - $10, 0, K',
-		'$10, 0, K - $25, 0, K',
+	const, budget, s = ['Und, e, r $1, 0, K'
+		'$1, 0, K - $2, 5, K'
+		'$2, 5, K - $5, 0, K'
+		'$5, 0, K - $10, 0, K'
+		'$10, 0, K - $25, 0, K'
 		'$25, 0, K+'
 	];
 

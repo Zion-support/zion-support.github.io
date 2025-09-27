@@ -1,15 +1,15 @@
-import, React, from 'react';
-import, Head, from 'next/head';
-import, Link, from 'next/li, n, k';
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
 import { useState } from 'react';
-import, SEO, from '../src/components/S, E, O';
+import from '../src/components/S, E, O';
 import { useAnalyti, c, s } from '../src/hooks/useAnalyti, c, s';
 
-export default function Conta, c, t(): J, S, X.Eleme, n, t {
+export default function Conta(): J, S, X.Eleme, n, t {
 	con, s, t [formDa, t, a, setFormDa, t, a] = useState({
-		na, m, e: '',
-		ema, i, l: '',
-		compa, n, y: '',
+		na, m, e: ''
+		ema, i, l: ''
+		compa, n, y: ''
 		messa, g, e: ''
 	});
 
@@ -18,7 +18,7 @@ export default function Conta, c, t(): J, S, X.Eleme, n, t {
 	const, handleInputChang, e = (e: React.ChangeEve, n, t<HTMLInputEleme, n, t | HTMLTextAreaEleme, n, t>) => {
 		con, s, t { na, m, e, val, u, e } = e.targ, e, t;
 		setFormDa, t, a(pr, e, v => ({
-			...pr, e, v,
+			...pr, e, v
 			[na, m, e]: val, u, e
 		}))};
 
@@ -31,7 +31,7 @@ export default function Conta, c, t(): J, S, X.Eleme, n, t {
     <>
       
       <S, E, O />
-			<He, a, d>
+			<Head>
 				<tit, l, e>Contact, U, s - Zion, Ap, p</tit, l, e>
 				<meta, nam, e="descripti, o, n" conte, n, t="Get, in, touch with, Zion, App for, your, technology nee, d, s. We're, here, to help, transform, your busine, s, s." />
 				<meta, nam, e="viewpo, r, t" conte, n, t="wid, t, h=devi, c, e-wid, t, h, initi, a, l-sca, l, e=1" />
@@ -39,7 +39,7 @@ export default function Conta, c, t(): J, S, X.Eleme, n, t {
 			<div, classNam, e="m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-bl, u, e-50, t, o-indi, g, o-100, p, t-20">
 				<div, classNam, e="container, m, x-auto, p, x-4, p, y-8, ma, x-w-7, x, l">
 					<nav, classNam, e="mb-8">
-						<Link, hre, f="/" classNa, m, e="te, x, t-bl, u, e-600, hove, r:te, x, t-bl, u, e-800, fon, t-medium, transitio, n-colo, r, s">
+						<Link, href="/" classNa, m, e="te, x, t-bl, u, e-600, hove, r:te, x, t-bl, u, e-800, fon, t-medium, transitio, n-colo, r, s">
 							← Back, to, Home
 						</Link>
 					</n, a, v>

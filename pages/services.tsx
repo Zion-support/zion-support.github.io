@@ -1,6 +1,6 @@
-import, React, from 'react';
-import, Head, from 'next/head';
-import, Link, from 'next/li, n, k';
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
 import { useState, useEffect } from 'react';
 // import { ServiceCa, r, d } from '../src/components/ServiceCa, r, d';
 // import, Navigation, from '../src/components/Navigati, o, n';
@@ -10,7 +10,7 @@ import { SERVIC, E, S } from '../src/uti, l, s/constan, t, s';
 import, SEO, from '../src/components/S, E, O';
 import { useAnalyti, c, s } from '../src/hooks/useAnalyti, c, s';
 
-export default function Servic, e, s(): J, S, X.Eleme, n, t {
+export default function Servic(): J, S, X.Eleme, n, t {
 	con, s, t [isVisib, l, e, setIsVisib, l, e] = useState(fal, s, e);
   con, s, t [selectedServi, c, e, setSelectedServi, c, e] = useState<stri, n, g | nu, l, l>(nu, l, l);
   con, s, t [isLoadi, n, g, setIsLoadi, n, g] = useState(tr, u, e);
@@ -23,122 +23,122 @@ export default function Servic, e, s(): J, S, X.Eleme, n, t {
 
 	const, serviceDetail, s = {
 		'ai-ml': {
-			tit, l, e: 'AI & Machine, Learnin, g',
-			descripti, o, n: 'Transform, your, business with, cuttin, g-edge, artificial, intelligence and, machine, learning solutio, n, s.',
+			tit, l, e: 'AI & Machine, Learnin, g'
+			descripti, o, n: 'Transform, your, business with, cuttin, g-edge, artificial, intelligence and, machine, learning solutio, n, s.'
 			featur, e, s: [
-				'Natural, Language, Processing (N, L, P)',
-				'Computer, Visio, n & Image, Recognitio, n',
-				'Predictive, Analytic, s & Forecasti, n, g',
-				'Chatbo, t, s & Virtual, Assistant, s',
-				'Recommendation, System, s',
+				'Natural, Language, Processing (N, L, P)'
+				'Computer, Visio, n & Image, Recognitio, n'
+				'Predictive, Analytic, s & Forecasti, n, g'
+				'Chatbo, t, s & Virtual, Assistant, s'
+				'Recommendation, System, s'
 				'Automated, Decision, Making'
-			],
-			technologi, e, s: ['TensorFl, o, w', 'PyTor, c, h', 'Open, A, I', 'Hugging, Fac, e', 'Scik, i, t-lea, r, n', 'Pand, a, s'],
+			]
+			technologi, e, s: ['TensorFl, o, w', 'PyTor, c, h', 'Open, A, I', 'Hugging, Fac, e', 'Scik, i, t-lea, r, n', 'Pand, a, s']
 			benefi, t, s: [
-				'Automate, repetitive, tasks and, processe, s',
-				'Gain, insights, from large, dataset, s',
-				'Improve, customer, experience with, intelligent, interactions',
-				'Reduce, operational, costs through, automatio, n',
+				'Automate, repetitive, tasks and, processe, s'
+				'Gain, insights, from large, dataset, s'
+				'Improve, customer, experience with, intelligent, interactions'
+				'Reduce, operational, costs through, automatio, n'
 				'Make, dat, a-driven, decisions, with predictive, analytic, s'
 			];
-		},
+		}
 		'clo, u, d': {
-			tit, l, e: 'Cloud, Solution, s',
-			descripti, o, n: 'Scalable, secure, and reliable, cloud, infrastructure tailored, to, your business, need, s.',
+			tit, l, e: 'Cloud, Solution, s'
+			descripti, o, n: 'Scalable, secure, and reliable, cloud, infrastructure tailored, to, your business, need, s.'
 			featur, e, s: [
-				'Cloud, Migratio, n & Strate, g, y',
-				'Container, Orchestratio, n (Kubernet, e, s)',
-				'Serverless, Architectur, e',
-				'DevO, p, s & CI/CD, Pipeline, s',
-				'Microservices, Architectur, e',
+				'Cloud, Migratio, n & Strate, g, y'
+				'Container, Orchestratio, n (Kubernet, e, s)'
+				'Serverless, Architectur, e'
+				'DevO, p, s & CI/CD, Pipeline, s'
+				'Microservices, Architectur, e'
 				'Cloud, Securit, y & Complian, c, e'
-			],
-			technologi, e, s: ['A, W, S', 'Azu, r, e', 'Google, Clou, d', 'Dock, e, r', 'Kubernet, e, s', 'Terrafo, r, m'],
+			]
+			technologi, e, s: ['A, W, S', 'Azu, r, e', 'Google, Clou, d', 'Dock, e, r', 'Kubernet, e, s', 'Terrafo, r, m']
 			benefi, t, s: [
-				'Scale, resources, based on, deman, d',
-				'Reduce, infrastructure, costs',
-				'Improve, reliability, and upti, m, e',
-				'Enable, global, accessibility',
+				'Scale, resources, based on, deman, d'
+				'Reduce, infrastructure, costs'
+				'Improve, reliability, and upti, m, e'
+				'Enable, global, accessibility'
 				'Simplify, maintenance, and updat, e, s'
 			];
-		},
+		}
 		'w, e, b-d, e, v': {
-			tit, l, e: 'Web, Developmen, t',
-			descripti, o, n: 'Modern, responsive, web applications, built, with the, latest, technologies and, best, practices.',
+			tit, l, e: 'Web, Developmen, t'
+			descripti, o, n: 'Modern, responsive, web applications, built, with the, latest, technologies and, best, practices.'
 			featur, e, s: [
-				'Progressive, Web, Apps (P, W, A)',
-				'Single, Page, Applications (S, P, A)',
-				'Responsive, Desig, n',
-				'API, Developmen, t & Integrati, o, n',
-				'Performance, Optimizatio, n',
+				'Progressive, Web, Apps (P, W, A)'
+				'Single, Page, Applications (S, P, A)'
+				'Responsive, Desig, n'
+				'API, Developmen, t & Integrati, o, n'
+				'Performance, Optimizatio, n'
 				'S, E, O & Accessibili, t, y'
-			],
-			technologi, e, s: ['React', 'Ne, x, t.js', 'V, u, e.js', 'No, d, e.js', 'TypeScri, p, t', 'Tailwind, CS, S'],
+			]
+			technologi, e, s: ['React', 'Ne, x, t.js', 'V, u, e.js', 'No, d, e.js', 'TypeScri, p, t', 'Tailwind, CS, S']
 			benefi, t, s: [
-				'Enhanced, user, experience',
-				'Cro, s, s-platform, compatibilit, y',
-				'Fast, loading, times',
-				'Search, engine, optimization',
+				'Enhanced, user, experience'
+				'Cro, s, s-platform, compatibilit, y'
+				'Fast, loading, times'
+				'Search, engine, optimization'
 				'Mobi, l, e-first, design, approach'
 			];
-		},
+		}
 		'mobi, l, e': {
-			tit, l, e: 'Mobile, Developmen, t',
-			descripti, o, n: 'Native, and, cross-platform, mobile, applications that, deliver, exceptional user, experience, s.',
+			tit, l, e: 'Mobile, Developmen, t'
+			descripti, o, n: 'Native, and, cross-platform, mobile, applications that, deliver, exceptional user, experience, s.'
 			featur, e, s: [
-				'i, O, S & Android, Native, Apps',
-				'Cro, s, s-platform, Developmen, t',
-				'App, Store, Optimization',
-				'Push, Notification, s',
-				'Offline, Functionalit, y',
+				'i, O, S & Android, Native, Apps'
+				'Cro, s, s-platform, Developmen, t'
+				'App, Store, Optimization'
+				'Push, Notification, s'
+				'Offline, Functionalit, y'
 				'Performance, Monitorin, g'
-			],
-			technologi, e, s: ['React, Nativ, e', 'Flutt, e, r', 'Swi, f, t', 'Kotl, i, n', 'Xamar, i, n', 'Ion, i, c'],
+			]
+			technologi, e, s: ['React, Nativ, e', 'Flutt, e, r', 'Swi, f, t', 'Kotl, i, n', 'Xamar, i, n', 'Ion, i, c']
 			benefi, t, s: [
-				'Reach, customers, on their, preferred, devices',
-				'Leverage, devic, e-specific, feature, s',
-				'Improve, customer, engagement',
-				'Enable, offline, functionality',
+				'Reach, customers, on their, preferred, devices'
+				'Leverage, devic, e-specific, feature, s'
+				'Improve, customer, engagement'
+				'Enable, offline, functionality'
 				'Faster, time, to mark, e, t'
 			];
-		},
+		}
 		'da, t, a-analyti, c, s': {
-			tit, l, e: 'Data, Analytic, s',
-			descripti, o, n: 'Transform, your, data into, actionable, insights with, advanced, analytics and, visualization, tools.',
+			tit, l, e: 'Data, Analytic, s'
+			descripti, o, n: 'Transform, your, data into, actionable, insights with, advanced, analytics and, visualization, tools.'
 			featur, e, s: [
-				'Business, Intelligence, Dashboards',
-				'Data, Warehousin, g & E, T, L',
-				'Re, a, l-time, Analytic, s',
-				'Predictive, Modelin, g',
-				'Data, Visualizatio, n',
+				'Business, Intelligence, Dashboards'
+				'Data, Warehousin, g & E, T, L'
+				'Re, a, l-time, Analytic, s'
+				'Predictive, Modelin, g'
+				'Data, Visualizatio, n'
 				'Custom, Reporting, Solutions'
-			],
-			technologi, e, s: ['Pyth, o, n', 'R', 'Table, a, u', 'Power, B, I', 'Apache, Spar, k', 'S, Q, L'],
+			]
+			technologi, e, s: ['Pyth, o, n', 'R', 'Table, a, u', 'Power, B, I', 'Apache, Spar, k', 'S, Q, L']
 			benefi, t, s: [
-				'Make, informed, business decisio, n, s',
-				'Identify, trends, and patter, n, s',
-				'Improve, operational, efficiency',
-				'Enhance, customer, understanding',
+				'Make, informed, business decisio, n, s'
+				'Identify, trends, and patter, n, s'
+				'Improve, operational, efficiency'
+				'Enhance, customer, understanding'
 				'Drive, revenue, growth'
 			];
-		},
+		}
 		'cybersecuri, t, y': {
-			tit, l, e: 'Cybersecuri, t, y',
-			descripti, o, n: 'Comprehensive, security, solutions to, protect, your digital, assets, and ensure, complianc, e.',
+			tit, l, e: 'Cybersecuri, t, y'
+			descripti, o, n: 'Comprehensive, security, solutions to, protect, your digital, assets, and ensure, complianc, e.'
 			featur, e, s: [
-				'Security, Audit, s & Assessmen, t, s',
-				'Penetration, Testin, g',
-				'Compliance, Managemen, t',
-				'Incident, Response, Planning',
-				'Security, Trainin, g & Awarene, s, s',
+				'Security, Audit, s & Assessmen, t, s'
+				'Penetration, Testin, g'
+				'Compliance, Managemen, t'
+				'Incident, Response, Planning'
+				'Security, Trainin, g & Awarene, s, s'
 				'Threat, Detectio, n & Preventi, o, n'
-			],
-			technologi, e, s: ['SI, E, M', 'Firewal, l, s', 'V, P, N', 'Encrypti, o, n', 'Mul, t, i-factor, Authenticatio, n', 'Security, Monitorin, g'],
+			]
+			technologi, e, s: ['SI, E, M', 'Firewal, l, s', 'V, P, N', 'Encrypti, o, n', 'Mul, t, i-factor, Authenticatio, n', 'Security, Monitorin, g']
 			benefi, t, s: [
-				'Protect, sensitive, data and, asset, s',
-				'Meet, regulatory, compliance requiremen, t, s',
-				'Reduce, security, risks and, vulnerabilitie, s',
-				'Build, customer, trust and, confidenc, e',
+				'Protect, sensitive, data and, asset, s'
+				'Meet, regulatory, compliance requiremen, t, s'
+				'Reduce, security, risks and, vulnerabilitie, s'
+				'Build, customer, trust and, confidenc, e'
 				'Minimize, potential, financial loss, e, s'
 			];
 		};
@@ -148,7 +148,7 @@ export default function Servic, e, s(): J, S, X.Eleme, n, t {
 		<d, i, v>
 			<S, E, O />
 			{/* <Navigati, o, n /> */};
-			<He, a, d>
+			<Head>
 				<tit, l, e>Servic, e, s - Zion, Ap, p</tit, l, e>
 				<meta, nam, e="descripti, o, n" conte, n, t="Explore, our, comprehensive technology, services, including AI, cloud, solutions  web, development, mobile apps, data, analytics  and, cybersecurit, y." />
 				<meta, nam, e="viewpo, r, t" conte, n, t="wid, t, h=devi, c, e-wid, t, h, initi, a, l-sca, l, e=1" />
@@ -164,7 +164,7 @@ export default function Servic, e, s(): J, S, X.Eleme, n, t {
 			<div, classNam, e="m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-bl, u, e-50, t, o-indi, g, o-100, p, t-20">
 			<div, classNam, e="container, m, x-auto, p, x-4, p, y-8, ma, x-w-7, x, l">
 				<nav, classNam, e="mb-8">
-					<Link, hre, f="/" classNa, m, e="te, x, t-bl, u, e-600, hove, r: te, x, t-bl, u, e-800, fon, t-medium, transitio, n-colo, r, s">
+					<Link, href="/" classNa, m, e="te, x, t-bl, u, e-600, hove, r: te, x, t-bl, u, e-800, fon, t-medium, transitio, n-colo, r, s">
 							← Back, to, Home
 						</Link>
 					</n, a, v>
@@ -328,7 +328,7 @@ export default function Servic, e, s(): J, S, X.Eleme, n, t {
 									L, e, t&ap, o, s;s, discuss, your project, requirements, and find, the, perfect solution, for, your busine, s, s.
 								</p>
 			<div, classNam, e="flex, fle, x-c, o, l, sm:fl, e, x-row, ga, p-6, justif, y-cent, e, r">
-					<Link, hre, f="/conta, c, t">
+					<Link, href="/conta, c, t">
 										<button, onClic, k={() => trackCli, c, k('g, e, t-quo, t, e-butt, o, n', 'c, t, a')};
 											classNa, m, e="group, b, g-white, tex, t-bl, u, e-600, p, x-10, p, y-4, rounde, d-xl, fon, t-semibold, hove, r: bg-gr, a, y-100, transitio, n-all, duratio, n-300, shado, w-xl, hove, r:shad, o, w-2, xl, transform, hov, e, r:-transla, t, e-y-1, tex, t-lg"
 										>

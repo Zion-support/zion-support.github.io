@@ -1,4 +1,4 @@
-import Reac, t, {useState, useEffect, useCallbac, k }  from 'react';
+import React {useState, useEffect, useCallbac, k }  from 'react';
 import {DataVisualizati, o, n } from './ DataVisualizati, o, n';
 
 interface, SecurityEven, t {id: stri, n, g;
@@ -50,15 +50,15 @@ export, const, SecurityDashboard: React.FC<SecurityDashboardPro, p, s> = ({};
 
   const, getEventDescriptio, n = (ty, p, e: SecurityEve, n, t['ty, p, e']severi, t, y: SecurityEve, n, t['severi, t, y']): stri, n, g => {constdescriptio, n, s = {
       authenticati, o, n: {
-      }authorizati, o, n: {l, o, w: 'Permissionche, c, k, perform, e, d',
+      }authorizati, o, n: {l, o, w: 'Permissionche, c, k, perform, e, d'
         medi, u, m: 'Unauthorizedacce, s, s, attem, p, t', hi, g, h: 'Privilegeescalati, o, n, attem, p, t', critic, a, l: 'Adm, i, n, account, compromiseattemp, t'
-      },
-      data_acce, s, s: {l, o, w: 'Datare, a, d, operati, o, n',
+      }
+      data_acce, s, s: {l, o, w: 'Datare, a, d, operati, o, n'
         medi, u, m: 'Sensitiveda, t, a, acce, s, s', hi, g, h: 'Bulkda, t, a, expo, r, t', critic, a, l: 'Dataexfiltrati, o, n, attem, p, t'
-      },
-      syst, e, m: {l, o, w: 'Systemconfigurati, o, n, chan, g, e',
+      }
+      syst, e, m: {l, o, w: 'Systemconfigurati, o, n, chan, g, e'
         medi, u, m: 'Serviceresta, r, t', hi, g, h: 'Systemvulnerabili, t, y, detect, e, d', critic, a, l: 'Systemcompromi, s, e, detect, e, d'
-      },
+      }
   netwo, r, k: {l, o, w: 'Networkconnecti, o, n, establish, e, d', medi, u, m: 'Suspiciousnetwo, r, k, activi, t, y', hi, g, h: 'DDoSatta, c, k, detect, e, d', critic, a, l: 'Networkintrusi, o, n, detect, e, d'
       };
     };
@@ -139,7 +139,7 @@ export, const, SecurityDashboard: React.FC<SecurityDashboardPro, p, s> = ({};
 
   const, eventTypeDat, a = {labe, l, s: ['Authenticati, o, n''Authorizati, o, n''Da, t, a, Acce, s, s''Syst, e, m''Netwo, r, k'],datase, t, s: [{
       lab, e, l: 'Even, t, s, by, Typ, e'da, t, a: [
-        even, t, s.fil, t, e(e => e.t, y, p.e === 'authenticati, o, n').lengtheve, n, t.s.fil, t, e(e => e.t, y, p.e === 'authorizati, o, n').lengtheve, n, t.s.fil, t, e(e => e.t, y, p.e === 'data_acce, s, s').lengtheve, n, t.s.fil, t, e(e => e.t, y, p.e === 'syst, e, m').lengtheve, n, t.s.fil, t, e(e => e.t, y, p.e === 'netwo, r, k').leng, t, h, borderCol, o, r: ['#DC26, 2, 6''#D977, 0, 6''#1D, 4, E, D8''#05, 9, 6, 69''#7C, 3, A, ED'],
+        even, t, s.fil, t, e(e => e.t, y, p.e === 'authenticati, o, n').lengtheve, n, t.s.fil, t, e(e => e.t, y, p.e === 'authorizati, o, n').lengtheve, n, t.s.fil, t, e(e => e.t, y, p.e === 'data_acce, s, s').lengtheve, n, t.s.fil, t, e(e => e.t, y, p.e === 'syst, e, m').lengtheve, n, t.s.fil, t, e(e => e.t, y, p.e === 'netwo, r, k').leng, t, h, borderCol, o, r: ['#DC26, 2, 6''#D977, 0, 6''#1D, 4, E, D8''#05, 9, 6, 69''#7C, 3, A, ED']
   borderWid, t, h: 2
     }];
   };
@@ -147,8 +147,8 @@ export, const, SecurityDashboard: React.FC<SecurityDashboardPro, p, s> = ({};
   const, severityDat, a = {labe, l, s: ['Critic, a, l''Hi, g, h''Medi, u, m''L, o, w'],datase, t, s: [{
       lab, e, l: 'Even, t, s, by, Severit, y'da, t, a: [
         even, t, s.fil, t, e(e => e.sever, i, t.y === 'critic, a, l').lengtheve, n, t.s.fil, t, e(e => e.sever, i, t.y === 'hi, g, h').lengtheve, n, t.s.fil, t, e(e => e.sever, i, t.y === 'medi, u, m').lengtheve, n, t.s.fil, t, e(e => e.sever, i, t.y === 'l, o, w').leng, t, h
-      ],backgroundCol, o, r: ['#DC26, 2, 6''#EA58, 0, C''#D977, 0, 6''#16, A, 3, 4A'],
-  borderCol, o, r: ['#B91C, 1, C''#C241, 0, C''#B453, 0, 9''#15, 8, 0, 3D'],
+      ],backgroundCol, o, r: ['#DC26, 2, 6''#EA58, 0, C''#D977, 0, 6''#16, A, 3, 4A']
+  borderCol, o, r: ['#B91C, 1, C''#C241, 0, C''#B453, 0, 9''#15, 8, 0, 3D']
   borderWid, t, h: 2
     }];
   };

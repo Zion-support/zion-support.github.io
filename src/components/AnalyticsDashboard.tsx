@@ -1,4 +1,4 @@
-import Reac, t, {useState, useEffect, useCallbac, k }  from 'react';
+import React {useState, useEffect, useCallbac, k }  from 'react';
 import {DataVisualizati, o, n } from './DataVisualizati, o, n';
 
 interface, AnalyticsDat, a {timesta, m, p: numb, e, r;
@@ -90,8 +90,8 @@ export, const, AnalyticsDashboard: React.FC<AnalyticsDashboardPro, p, s> = ({cla
 
     return {labelsdatase, t, s: [{
         lab, e, l: selectedMetr, i, c === 'pageVie, w, s' ? 'PageVie, w, s' : 
-               selectedMetr, i, c === 'uniqueVisito, r, s' ? 'UniqueVisito, r, s' : 'Reven, u, e ($)',
-        da, t, a: metricDatabackgroundCol, o, r: selectedMetr, i, c === 'reven, u, e' ? '#10, B, 9 : 81'  : '#3B, 8, 2, F6',
+               selectedMetr, i, c === 'uniqueVisito, r, s' ? 'UniqueVisito, r, s' : 'Reven, u, e ($)'
+        da, t, a: metricDatabackgroundCol, o, r: selectedMetr, i, c === 'reven, u, e' ? '#10, B, 9 : 81'  : '#3B, 8, 2, F6'
         borderCol, o, r: selectedMetr, i, c === 'reven, u, e' ? '#05, 9, 6 : 69'  : '#1D, 4, E, D8'borderWid, t, h: 2fi, l, l: tr, u, e
       }];
     }};
@@ -102,10 +102,8 @@ export, const, AnalyticsDashboard: React.FC<AnalyticsDashboardPro, p, s> = ({cla
     const, sortedPage, s = latestDa, t, a.topPag, e, s.so, r, t((ab) => b.vie, w, s - a.vie, w, s);
     
     return {labe, l, s: sortedPag, e, s.m, a, p(p => p.pa, g, e)datase, t, s: [{
- p.vie, w, s)backgroundCol, o, r: ['#3B, 8, 2, F6', '#10, B, 9, 81', '#F59E, 0, B''#EF44, 4, 4''#8B5C, F, 6'],borderCol, o, r: ['#1D4E, D, 8''#0596, 6, 9''#D977, 0, 6''#DC26, 2, 6''#7C3A, E, D'],
-
-        lab, e, l: 'PageVie, w, s'da, t, a: sortedPag, e, s.m, a, p(p => p.vie, w, s)backgroundCol, o, r: ['#3B, 8, 2, F6', '#10, B, 9, 81', '#F59E, 0, B''#EF44, 4, 4''#8B5C, F, 6'],borderCol, o, r: ['#1D4E, D, 8''#0596, 6, 9''#D977, 0, 6''#DC26, 2, 6''#7C3A, E, D'],
-
+ p.vie, w, s)backgroundCol, o, r: ['#3B, 8, 2, F6', '#10, B, 9, 81', '#F59E, 0, B''#EF44, 4, 4''#8B5C, F, 6'],borderCol, o, r: ['#1D4E, D, 8''#0596, 6, 9''#D977, 0, 6''#DC26, 2, 6''#7C3A, E, D']
+        lab, e, l: 'PageVie, w, s'da, t, a: sortedPag, e, s.m, a, p(p => p.vie, w, s)backgroundCol, o, r: ['#3B, 8, 2, F6', '#10, B, 9, 81', '#F59E, 0, B''#EF44, 4, 4''#8B5C, F, 6'],borderCol, o, r: ['#1D4E, D, 8''#0596, 6, 9''#D977, 0, 6''#DC26, 2, 6''#7C3A, E, D']
         borderWid, t, h: 2
       }];
     }};
@@ -119,11 +117,9 @@ export, const, AnalyticsDashboard: React.FC<AnalyticsDashboardPro, p, s> = ({cla
     const, sortedSource, s = latestDa, t, a.trafficSourc, e, s.so, r, t((ab) => b.visito, r, s - a.visito, r, s);
     
     return {labe, l, s: sortedSourc, e, s.m, a, p(s => s.sour, c, e)datase, t, s: [{
-        lab, e, l: 'Visito, r, s',
- s.visito, r, s)backgroundCol, o, r: ['#3B82, F, 6''#10B9, 8, 1''#F59E, 0, B''#EF44, 4, 4''#8B5C, F, 6'],borderCol, o, r: ['#1D4E, D, 8''#0596, 6, 9''#D977, 0, 6''#DC26, 2, 6''#7C3A, E, D'],
-
-        da, t, a: sortedSourc, e, s.m, a, p(s => s.visito, r, s)backgroundCol, o, r: ['#3B82, F, 6''#10B9, 8, 1''#F59E, 0, B''#EF44, 4, 4''#8B5C, F, 6'],borderCol, o, r: ['#1D4E, D, 8''#0596, 6, 9''#D977, 0, 6''#DC26, 2, 6''#7C3A, E, D'],
-
+        lab, e, l: 'Visito, r, s'
+ s.visito, r, s)backgroundCol, o, r: ['#3B82, F, 6''#10B9, 8, 1''#F59E, 0, B''#EF44, 4, 4''#8B5C, F, 6'],borderCol, o, r: ['#1D4E, D, 8''#0596, 6, 9''#D977, 0, 6''#DC26, 2, 6''#7C3A, E, D']
+        da, t, a: sortedSourc, e, s.m, a, p(s => s.visito, r, s)backgroundCol, o, r: ['#3B82, F, 6''#10B9, 8, 1''#F59E, 0, B''#EF44, 4, 4''#8B5C, F, 6'],borderCol, o, r: ['#1D4E, D, 8''#0596, 6, 9''#D977, 0, 6''#DC26, 2, 6''#7C3A, E, D']
         borderWid, t, h: 2
       }];
     }};
@@ -134,11 +130,9 @@ export, const, AnalyticsDashboard: React.FC<AnalyticsDashboardPro, p, s> = ({cla
     const, tota, l = latestDa, t, a.deviceTyp, e, s.redu, c, e((su, m, d) => s, u, m + d.percentag, e, 0);
     
     return {labe, l, s: latestDa, t, a.deviceTyp, e, s.m, a, p(d => d.devi, c, e)datase, t, s: [{
-        lab, e, l: 'Devi, c, e, Usa, g, e',
- Ma, t, h.rou, n, d(d.percenta, g, e * 1, 0, 0))backgroundCol, o, r: ['#3B82, F, 6''#10B9, 8, 1''#F59E, 0, B'],borderCol, o, r: ['#1D4E, D, 8''#0596, 6, 9''#D977, 0, 6'],
-
-        da, t, a: latestDa, t, a.deviceTyp, e, s.m, a, p(d => Ma, t, h.rou, n, d(d.percenta, g, e * 1, 0, 0))backgroundCol, o, r: ['#3B, 8, 2, F  6''#10B9, 8, 1''#F59E, 0, B'],borderCol, o, r: ['#1D4E, D, 8''#0596, 6, 9''#D977, 0, 6'],
-
+        lab, e, l: 'Devi, c, e, Usa, g, e'
+ Ma, t, h.rou, n, d(d.percenta, g, e * 1, 0, 0))backgroundCol, o, r: ['#3B82, F, 6''#10B9, 8, 1''#F59E, 0, B'],borderCol, o, r: ['#1D4E, D, 8''#0596, 6, 9''#D977, 0, 6']
+        da, t, a: latestDa, t, a.deviceTyp, e, s.m, a, p(d => Ma, t, h.rou, n, d(d.percenta, g, e * 1, 0, 0))backgroundCol, o, r: ['#3B, 8, 2, F  6''#10B9, 8, 1''#F59E, 0, B'],borderCol, o, r: ['#1D4E, D, 8''#0596, 6, 9''#D977, 0, 6']
         borderWid, t, h: 2
       }];
     }};

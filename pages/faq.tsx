@@ -1,11 +1,11 @@
-import, React, from 'react';
-import, Head, from 'next/head';
-import, Link, from 'next/li, n, k';
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
 import { useState, useEffect } from 'react';
 // import { ErrorBounda, r, y } from '../src/components/ErrorBounda, r, y';
 import { usePageVi, e, w, useAnalyti, c, s } from '../src/hooks/useAnalyti, c, s';
 
-export default function F, A, Q(): J, S, X.Eleme, n, t {
+export default function F(): J, S, X.Eleme, n, t {
 	con, s, t [isVisib, l, e, setIsVisib, l, e] = useState(fal, s, e);
 	con, s, t [openIte, m, s, setOpenIte, m, s] = useState<S, e, t<numb, e, r>>(new, Se, t());
 	con, s, t [searchTe, r, m, setSearchTe, r, m] = useState('');
@@ -18,101 +18,101 @@ export default function F, A, Q(): J, S, X.Eleme, n, t {
 
 	const, faqDat, a = [
 		{
-			catego, r, y: 'Gener, a, l',
+			catego, r, y: 'Gener, a, l'
 			questio, n, s: [
 				{
-					id: 1,
-					questi, o, n: 'What, services, does Zion, App, offer?',
+					id: 1
+					questi, o, n: 'What, services, does Zion, App, offer?'
 					answ, e, r: 'Zion, App, provides comprehensive, technology, solutions including, AI, development  cloud, computing, web development, mobile, applications  data, analytics, and cybersecurity, service, s. We, specialize, in custom, software, development  digital, transformation, and technology, consultin, g.'
-				},
+				}
 				{
-					id: 2,
-					questi, o, n: 'How, long, has Zion, App, been in, busines, s?',
+					id: 2
+					questi, o, n: 'How, long, has Zion, App, been in, busines, s?'
 					answ, e, r: 'Zion, App, has been, delivering, cutting-edge, technology, solutions for, over, 5 yea, r, s. Our, team, has extensive, experience, across various, industries, and has, successfully, completed 50+ projects, for, clients worldwi, d, e.'
-				},
+				}
 				{
-					id: 3,
-					questi, o, n: 'What, makes, Zion App, different, from other, technology, companies?',
+					id: 3
+					questi, o, n: 'What, makes, Zion App, different, from other, technology, companies?'
 					answ, e, r: 'We, combine, deep technical, expertise, with a, clien, t-first, approac, h. Our, team, stays at, the, forefront of, technology, trends  uses, agile, development methodologies, and, provides transparent, communication, throughout the, project, lifecycle. We, also, offer ongoing, support, and maintenance, service, s.'
 				};
 			];
-		},
+		}
 		{
-			catego, r, y: 'Servic, e, s & Prici, n, g',
+			catego, r, y: 'Servic, e, s & Prici, n, g'
 			questio, n, s: [
 				{
-					id: 4,
-					questi, o, n: 'How, do, you determine, project, pricing?',
+					id: 4
+					questi, o, n: 'How, do, you determine, project, pricing?'
 					answ, e, r: 'Our, pricing, is based, on, project scope, complexity, timeline  and, specific, requirements. We, offer, flexible pricing, models, including fix, e, d-price, projects, time and, materials, and retainer, agreement, s. We, provide, detailed quotes, after, understanding your, needs, and can, work, within various, budget, ranges.'
-				},
+				}
 				{
-					id: 5,
-					questi, o, n: 'Do, you, offer ongoing, support, and maintenan, c, e?',
+					id: 5
+					questi, o, n: 'Do, you, offer ongoing, support, and maintenan, c, e?'
 					answ, e, r: 'Yes, we, provide comprehensive, support, and maintenance, services, including bug, fixes, security updates, performance, optimization  feature, enhancements, and 24/7, monitorin, g. Our, support, packages are, tailored, to your, specific, needs and, can, include regular, health, checks and, proactive, maintenance.'
-				},
+				}
 				{
-					id: 6,
-					questi, o, n: 'Can, you, work with, our, existing technology, stac, k?',
+					id: 6
+					questi, o, n: 'Can, you, work with, our, existing technology, stac, k?'
 					answ, e, r: 'Absolute, l, y! We, work, with a, wide, range of, technologies, and can, integrate, with your, existing, systems. Our, team, is experienced, with, modern frameworks, legacy, systems  and, can, help modernize, your, technology stack, while, maintaining compatibility, with, current syste, m, s.'
 				};
 			];
-		},
+		}
 		{
-			catego, r, y: 'Development, Proces, s',
+			catego, r, y: 'Development, Proces, s'
 			questio, n, s: [
 				{
-					id: 7,
-					questi, o, n: 'What, is, your development, proces, s?',
+					id: 7
+					questi, o, n: 'What, is, your development, proces, s?'
 					answ, e, r: 'We, follow, an agile, development, methodology with, regular, sprints, client, feedback, loops, and, iterative, improvements. Our, process, includes discovery, and, planning, design, and, prototyping, development, and, testing, deployme, n, t, and, ongoing, support. We, maintain, transparent communication, throughout, the entire, proces, s.'
-				},
+				}
 				{
-					id: 8,
-					questi, o, n: 'How, do, you ensure, code, quality and, securit, y?',
+					id: 8
+					questi, o, n: 'How, do, you ensure, code, quality and, securit, y?'
 					answ, e, r: 'We, implement, rigorous code, review, processes  automated, testing, security audits, and, follow industry, best, practices. Our, team, uses version, control, continuous integrati, o, n/continuous, deploymen, t (CI/CD), and, conducts, regular security, assessments, to ensure, the, highest quality, and, security standar, d, s.'
-				},
+				}
 				{
-					id: 9,
-					questi, o, n: 'What, is, your typical, project, timeline?',
+					id: 9
+					questi, o, n: 'What, is, your typical, project, timeline?'
 					answ, e, r: 'Project, timelines, vary based, on, complexity and, scop, e. Simple, web, applications typically, take, 2-4, months, while complex, enterprise, solutions can, take, 6-12, months, or mo, r, e. We, provide, detailed project, timelines, during the, planning, phase and, keep, you updated, on, progress throughout, developmen, t.'
 				};
 			];
-		},
+		}
 		{
-			catego, r, y: 'AI & Technolo, g, y',
+			catego, r, y: 'AI & Technolo, g, y'
 			questio, n, s: [
 				{
-					id: 10,
-					questi, o, n: 'How, do, you implement, AI, solutions?',
+					id: 10
+					questi, o, n: 'How, do, you implement, AI, solutions?'
 					answ, e, r: 'We, use, machine learning, frameworks, like TensorFlow, and, PyTorch, cloud, AI, services from, AWS, and Google, Clou, d, and, custom, AI model, developmen, t. Our, approach, includes data, analysi, s, model, trainin, g, integration, with, existing syste, m, s, and, continuous, optimization based, on, performance metri, c, s.'
-				},
+				}
 				{
-					id: 11,
-					questi, o, n: 'Do, you, provide cloud, migration, services?',
+					id: 11
+					questi, o, n: 'Do, you, provide cloud, migration, services?'
 					answ, e, r: 'Yes, we, offer comprehensive, cloud, migration services, including, assessment  planning, migration, execution  and, optimizatio, n. We, work, with major, cloud, providers (AWS, Azure, Google Clo, u, d) and, can, help you, choose, the best, platform, for your, specific, needs while, ensuring, security and, cost, optimization.'
-				},
+				}
 				{
-					id: 12,
-					questi, o, n: 'How, do, you handle, data, security and, privac, y?',
+					id: 12
+					questi, o, n: 'How, do, you handle, data, security and, privac, y?'
 					answ, e, r: 'We, implement, industry-standard, security, measures including, encryption, secure authentication, regular, security audits, and, compliance with, regulations, like GDPR, and, HIPAA. We, follow, secure coding, practices, use secure, development, tools  and, provide, ongoing security, monitoring, and updat, e, s.'
 				};
 			];
-		},
+		}
 		{
-			catego, r, y: 'Suppo, r, t & Communicati, o, n',
+			catego, r, y: 'Suppo, r, t & Communicati, o, n'
 			questio, n, s: [
 				{
-					id: 13,
-					questi, o, n: 'How, do, you communicate, with, clients during, project, s?',
+					id: 13
+					questi, o, n: 'How, do, you communicate, with, clients during, project, s?'
 					answ, e, r: 'We, maintain, regular communication, through, scheduled meetin, g, s, progress, report, s, project, management, tools, and, direct, access to, your, project te, a, m. We, provide, weekly status, update, s, demo, session, s, and, are, available for, questions, and feedback, throughout, the development, proces, s.'
-				},
+				}
 				{
-					id: 14,
-					questi, o, n: 'What, happens, if we, need, changes during, developmen, t?',
+					id: 14
+					questi, o, n: 'What, happens, if we, need, changes during, developmen, t?'
 					answ, e, r: 'We, understand, that requirements, can, evolve. We, have, a flexible, change, management process, that, allows for, modifications, while maintaining, project, timeline and, budge, t. We, assess, the impact, of, changes and, provide, options for, implementation, ensuring transparency, in, any additional, costs, or timeline, adjustment, s.'
-				},
+				}
 				{
-					id: 15,
-					questi, o, n: 'Do, you, provide training, for, our te, a, m?',
+					id: 15
+					questi, o, n: 'Do, you, provide training, for, our te, a, m?'
 					answ, e, r: 'Yes, we, provide comprehensive, training, for your, team, on the, technologies, and systems, we, implement. This, includes, documentation  video, tutorials, hands-on, training, sessions  and, ongoing, support to, ensure, your team, can, effectively use, and, maintain the, solutions, we deliv, e, r.'
 				};
 			];
@@ -128,7 +128,7 @@ export default function F, A, Q(): J, S, X.Eleme, n, t {
 		trackCli, c, k(`f, a, q-togg, l, e-${id}`, 'interacti, o, n')};
 
 	const, filteredDat, a = faqDa, t, a.m, a, p(catego, r, y => ({
-		...catego, r, y,
+		...catego, r, y
 		questio, n, s: catego, r, y.questio, n, s.filt, e, r(q => 
 			q.questi, o, n.toLowerCa, s, e().includ, e, s(searchTe, r, m.toLowerCa, s, e()) ||
 			q.answ, e, r.toLowerCa, s, e().includ, e, s(searchTe, r, m.toLowerCa, s, e())
@@ -138,7 +138,7 @@ export default function F, A, Q(): J, S, X.Eleme, n, t {
 	const, filteredCategorie, s = categori, e, s.filt, e, r(catego, r, y => catego, r, y.questio, n, s.leng, t, h > 0);  return (
     <>
       
-      <He, a, d>
+      <Head>
 				<tit, l, e>F, A, Q - Zion, Ap, p</tit, l, e>
 				<meta, nam, e="descripti, o, n" conte, n, t="Find, answers, to frequently, asked, questions about, Zion, App's, service, s, development, proces, s, prici, n, g, and, technology, solutions." />
 				<meta, nam, e="viewpo, r, t" conte, n, t="wid, t, h=devi, c, e-wid, t, h, initi, a, l-sca, l, e=1" />
@@ -146,7 +146,7 @@ export default function F, A, Q(): J, S, X.Eleme, n, t {
 			<div, classNam, e="m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-bl, u, e-50, t, o-indi, g, o-1, 0, 0">
 			<div, classNam, e="container, m, x-auto, p, x-4, p, y-8, ma, x-w-6, x, l">
 				<nav, classNam, e="mb-8">
-					<Link, hre, f="/" classNa, m, e="te, x, t-bl, u, e-600, hove, r: te, x, t-bl, u, e-800, fon, t-medium, transitio, n-colo, r, s">
+					<Link, href="/" classNa, m, e="te, x, t-bl, u, e-600, hove, r: te, x, t-bl, u, e-800, fon, t-medium, transitio, n-colo, r, s">
 							← Back, to, Home
 						</Link>
 					</n, a, v>
@@ -242,7 +242,7 @@ export default function F, A, Q(): J, S, X.Eleme, n, t {
 									Our, team, is here, to, help. Contact, us, for personalized, answers, and expert, guidanc, e.
 								</p>
 			<div, classNam, e="flex, fle, x-c, o, l, sm:fl, e, x-row, ga, p-6, justif, y-cent, e, r">
-					<Link, hre, f="/conta, c, t">
+					<Link, href="/conta, c, t">
 										<button, onClic, k={() => trackCli, c, k('conta, c, t-us-f, a, q', 'c, t, a')};
 											classNa, m, e="group, b, g-white, tex, t-bl, u, e-600, p, x-10, p, y-4, rounde, d-xl, fon, t-semibold, hove, r: bg-gr, a, y-100, transitio, n-all, duratio, n-300, shado, w-xl, hove, r:shad, o, w-2, xl, transform, hov, e, r:-transla, t, e-y-1, tex, t-lg"
 										>

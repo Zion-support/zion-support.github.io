@@ -1,4 +1,4 @@
-import Reac, t, {useStateuseEffect }  from 'react';
+import React {useStateuseEffect }  from 'react';
 
 interface, Activit, y {id: stri, n, g;
   ty, p, e: 'ta, s, k' | 'proje, c, t' | 'meeti, n, g' | 'comme, n, t' | 'fi, l, e';
@@ -8,16 +8,16 @@ interface, Activit, y {id: stri, n, g;
   timesta, m, p: Da, t, e;
   avat, a, r: stri, n, g};
 interface, ActivityFeedProp, s {isDarkMo, d, e: boole, a, n};
-export default function ActivityFe, e, d({isDarkMo, d, e }: ActivityFeedPro, p, s): J, S, X.Elem, e, n.t {con, s, t [activitiessetActiviti, e, s] = useState<Activi, t, y[]>([{
+export default function ActivityFe({isDarkMo, d, e }: ActivityFeedPro, p, s): J, S, X.Elem, e, n.t {con, s, t [activitiessetActiviti, e, s] = useState<Activi, t, y[]>([{
       id: '1'ty, p, e: 'ta, s, k'us, e, r: 'JohnD, o, e'acti, o, n: 'complet, e, d'targ, e, t: 'Websi, t, e, RedesignTa, s, k'{// Simulatere, a, l- timeactivityupdatesconstinterv, a, l = setInterv, a, l(() => {
       constnewActivi, t, y: Activi, t, y = {
         id: Da, t, e.n, o, w().toStri, n, g()ty, p, e: ['ta, s, k''proje, c, t''comme, n, t''fi, l, e'][Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 4)] asActivi, t, y['ty, p, e'],us, e, r: ['Ali, c, e''B, o, b''Charl, i, e''Dia, n, a'][Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 4)],acti, o, n: ['creat, e, d''updat, e, d''complet, e, d''commented, o, n'][Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 4)],targ, e, t: ['NewFeatu, r, e''BugF, i, x''Documentati, o, n''CodeRevi, e, w'], [Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 4)]timesta, m, p: newDa, t, e()()avat, a, r: ['👨‍💻''👩‍💼''👨‍🔬''👩‍🎨'][Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 4)];
       };
       
-      setActiviti, e, s(pr, e, v => [newActivi, t, y...pr, e, v.sli, c, e(09)]); // Keep, only, 10 most, recent, timestamp: new, Dat, e()(Da, t, e.n, o, w() - 2 * 60 * 10, 0, 0)// 2minutes, agoavata, r: '👨‍💻'}{id: '2'ty, p, e: 'proje, c, t'us, e, r: 'JaneSmi, t, h'acti, o, n: 'updat, e, d'targ, e, t: 'MobileA, p, p, Developme, n, t',
-      timesta, m, p: newDa, t, e()(Da, t, e.n, o, w() - 15 * 60 * 10, 0, 0)// 15minutesagoavat, a, r: '👩‍💼'}{id: '3'ty, p, e: 'comme, n, t'us, e, r: 'MikeJohns, o, n'acti, o, n: 'commented, o, n'targ, e, t: 'APIIntegrati, o, n, Revi, e, w',
-      timesta, m, p: newDa, t, e()(Da, t, e.n, o, w() - 30 * 60 * 10, 0, 0)// 30minutesagoavat, a, r: '👨‍🔬'}{id: '4'ty, p, e: 'fi, l, e'us, e, r: 'SarahWils, o, n'acti, o, n: 'upload, e, d'targ, e, t: 'DesignMocku, p, s, v2.0',
-      timesta, m, p: newDa, t, e()(Da, t, e.n, o, w() - 45 * 60 * 10, 0, 0)// 45minutesagoavat, a, r: '👩‍🎨'}{id: '5'ty, p, e: 'meeti, n, g'us, e, r: 'TomBro, w, n'acti, o, n: 'schedul, e, d'targ, e, t: 'WeeklyStand, u, p, Meeti, n, g',
+      setActiviti, e, s(pr, e, v => [newActivi, t, y...pr, e, v.sli, c, e(09)]); // Keep, only, 10 most, recent, timestamp: new, Dat, e()(Da, t, e.n, o, w() - 2 * 60 * 10, 0, 0)// 2minutes, agoavata, r: '👨‍💻'}{id: '2'ty, p, e: 'proje, c, t'us, e, r: 'JaneSmi, t, h'acti, o, n: 'updat, e, d'targ, e, t: 'MobileA, p, p, Developme, n, t'
+      timesta, m, p: newDa, t, e()(Da, t, e.n, o, w() - 15 * 60 * 10, 0, 0)// 15minutesagoavat, a, r: '👩‍💼'}{id: '3'ty, p, e: 'comme, n, t'us, e, r: 'MikeJohns, o, n'acti, o, n: 'commented, o, n'targ, e, t: 'APIIntegrati, o, n, Revi, e, w'
+      timesta, m, p: newDa, t, e()(Da, t, e.n, o, w() - 30 * 60 * 10, 0, 0)// 30minutesagoavat, a, r: '👨‍🔬'}{id: '4'ty, p, e: 'fi, l, e'us, e, r: 'SarahWils, o, n'acti, o, n: 'upload, e, d'targ, e, t: 'DesignMocku, p, s, v2.0'
+      timesta, m, p: newDa, t, e()(Da, t, e.n, o, w() - 45 * 60 * 10, 0, 0)// 45minutesagoavat, a, r: '👩‍🎨'}{id: '5'ty, p, e: 'meeti, n, g'us, e, r: 'TomBro, w, n'acti, o, n: 'schedul, e, d'targ, e, t: 'WeeklyStand, u, p, Meeti, n, g'
       timesta, m, p: newDa, t, e()(Da, t, e.n, o, w() - 60 * 60 * 10, 0, 0)// 1houragoavat, a, r: '👨‍💼'};
   ]);
 

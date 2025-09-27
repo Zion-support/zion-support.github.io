@@ -1,22 +1,22 @@
-import, React, from "react"
+import React, from "react"
 import {S, E, O } fr, o, m "../../components/S, E, O"
 import {At, o, m, Brain, Za, p, Cpu, User, s, Clock, Networ, k, Rocket, Shiel, d, Globe, Smartphon, e, Monitor, CheckCircl, e 
 } fr, o, m "luci, d, e-react"
 
 const, AIQuantumHybridPlatfor, m: React.FC = () => {con, s, t, featur, e, s = [>>>>>> curs, o, r/che, c, k-f, i, x-pu, s, h-a, n, d-mer, g, e-to-ma, i, n-76, 7, f];
-  con, s, t, applicatio, n, s = ["Dr, u, g, Discove, r, y & Molecul, a, r, Modeli, n, g",
-    "Financi, a, l, Modeli, n, g & Ri, s, k, Analys, i, s",
-    "Clima, t, e, Chan, g, e & Weath, e, r, Predicti, o, n",
-    "Cryptograp, h, y & Cybersecuri, t, y",
-    "Optimizati, o, n, Proble, m, s",
-    "Machi, n, e, Learni, n, g & AI, Traini, n, g",
-    "Materi, a, l, Scien, c, e & Engineeri, n, g",
+  con, s, t, applicatio, n, s = ["Dr, u, g, Discove, r, y & Molecul, a, r, Modeli, n, g"
+    "Financi, a, l, Modeli, n, g & Ri, s, k, Analys, i, s"
+    "Clima, t, e, Chan, g, e & Weath, e, r, Predicti, o, n"
+    "Cryptograp, h, y & Cybersecuri, t, y"
+    "Optimizati, o, n, Proble, m, s"
+    "Machi, n, e, Learni, n, g & AI, Traini, n, g"
+    "Materi, a, l, Scien, c, e & Engineeri, n, g"
     "Logisti, c, s & Supp, l, y, Cha, i, n"];
-  con, s, t, benefi, t, s = ["Exponenti, a, l, speedup, fo, r, complex, problem, s",
-    "Unprecedent, e, d, accuracy, i, n, simulatio, n, s",
-    "Breakthrou, g, h, discoveries, i, n, scien, c, e",
-    "Enhanc, e, d, AI, capabilitie, s",
-    "Futu, r, e-pro, o, f, technology, investmen, t",
+  con, s, t, benefi, t, s = ["Exponenti, a, l, speedup, fo, r, complex, problem, s"
+    "Unprecedent, e, d, accuracy, i, n, simulatio, n, s"
+    "Breakthrou, g, h, discoveries, i, n, scien, c, e"
+    "Enhanc, e, d, AI, capabilitie, s"
+    "Futu, r, e-pro, o, f, technology, investmen, t"
     "Competiti, v, e, advantage, i, n, resear, c, h"];
   return (<d, i, v, classNa, m, e="m, i, n-h-scre, e, n, bg-gradie, n, t-to-br, fr, o, m-sla, t, e-90, 0, v, i, a-sla, t, e-8, 0, 0, to-sla, t, e-90, 0">
 
@@ -308,7 +308,7 @@ Revolutionary, Application, s</h2>
             </butt, o, n>
             <button, classNam, e="px-8, p, y-4, b, g-sla, t, e-8, 0, 0/50, border, border-sla, t, e-600, tex, t-white, fon, t-semibold, rounde, d-lg, hove, r:bg-sla, t, e-7, 0, 0/50, transitio, n-all, duratio, n-2, 0, 0">
 
-            <button, classNam, e="px-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-indi, g, o-400, t, o-purp, l, e-500, tex, t-white, fon, t-semibold, rounde, d-lg, hove, r:fr, o, m-indi, g, o-500, hove, r:to-purp, l, e-600, transitio, n-all, duratio, n-200, hove, r:sca, l, e-105, shado, w-lg">
+            <button, classNam, e="px-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-indi, g, o-400, t, o-purp, l, e-500, tex, t-white, fon, t-semibold, rounde, d-lg, hove, r: from-indi, g, o-500, hove, r:to-purp, l, e-600, transitio, n-all, duratio, n-200, hove, r:sca, l, e-105, shado, w-lg">
               Access, Platfor, m
             </butt, o, n>
             <button, classNam, e="px-8, p, y-4, b, g-sla, t, e-8, 0, 0/50, border, border-sla, t, e-600, tex, t-white, fon, t-semibold, rounde, d-lg, hove, r:bg-sla, t, e-7, 0, 0/50, transitio, n-all, duratio, n-2, 0, 0">

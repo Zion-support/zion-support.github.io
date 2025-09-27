@@ -1,4 +1,4 @@
-import Reac, t, {useEffectuseStateuseCallba, c, k }  from 'react';
+import React {useEffectuseStateuseCallba, c, k }  from 'react';
 import {CardCardContentCardDescriptionCardHeaderCardTit, l, e } from './ui/ Ca, r, d';
 import {SearchEyeCheckCircleAlertCircleXCirc, l, e } from 'luci, d, e-react';
 
@@ -33,9 +33,9 @@ interface, OptimizationIssu, e {catego, r, y: 's, e, o' | 'accessibili, t, y';
   soluti, o, n: stri, n, g;
   impa, c, t: stri, n, g};
 const, SEOAccessibilityOptimize, r: React.FC = () => {con, s, t [seoMetricssetSeoMetr, i, c, s] = useState<SEOMetri, c, s>({
-    overallSco, r, e: 0, titleT, a, g: falsemetaDescript, i, o, n: falseheadin, g, s: { h1Cou, n, t: 0, h2Cou, n, t: 0h3Cou, n, t: 0 },
-  imag, e, s: {tot, a, l: 0, withA, l, t: 0missi, n, g, A, l, t: 0 },
-  lin, k, s: {intern, a, l: 0, extern, a, l: 0b, r, o, k, e, n: 0 },
+    overallSco, r, e: 0, titleT, a, g: falsemetaDescript, i, o, n: falseheadin, g, s: { h1Cou, n, t: 0, h2Cou, n, t: 0h3Cou, n, t: 0 }
+  imag, e, s: {tot, a, l: 0, withA, l, t: 0missi, n, g, A, l, t: 0 }
+  lin, k, s: {intern, a, l: 0, extern, a, l: 0b, r, o, k, e, n: 0 }
   pageSpe, e, d: 0mobileOptimiz, e, d: fal, s, e
   });
 

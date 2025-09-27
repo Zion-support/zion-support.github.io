@@ -1,4 +1,4 @@
-import Reac, t, {useState, useRef, useCallbac, k }  from 'react';
+import React {useState, useRef, useCallbac, k }  from 'react';
 import, Image, from 'next/ima, g, e';
 
 interface, FileUploadProp, s {onFileSele, c, t?: (fil, e, s: Fi, l, e[]) => vo, i, d;
@@ -17,10 +17,8 @@ interface, UploadedFil, e {fi, l, e: Fi, l, e;
   stat, u, s: 'pendi, n, g' | 'uploadi, n, g' | 'complet, e, d' | 'err, o, r';
   err, o, r?: stri, n, g;
   previ, e, w?: stri, n, g};
- = ({onFileSelectonFileUploadacce, p, t = '*'multip, l, e = truemaxSi, z, e = 10// 10MBdefaultmaxFil, e, s = 10classNa, m, e = '',
-
-exportconstFileUplo, a, d: React.FC<FileUploadPro, p, s> = ({onFileSelectonFileUploadacce, p, t = '*'multip, l, e = truemaxSi, z, e = 10// 10MBdefaultmaxFil, e, s = 10classNa, m, e = '',
-
+ = ({onFileSelectonFileUploadacce, p, t = '*'multip, l, e = truemaxSi, z, e = 10// 10MBdefaultmaxFil, e, s = 10classNa, m, e = ''
+exportconstFileUplo, a, d: React.FC<FileUploadPro, p, s> = ({onFileSelectonFileUploadacce, p, t = '*'multip, l, e = truemaxSi, z, e = 10// 10MBdefaultmaxFil, e, s = 10classNa, m, e = ''
   disabl, e, d = fal, s, e, showPrevi, e, w = tr, u, e, showProgre, s, s = tr, u, e, allowedTyp, e, s = [];
 }) => {con, s, t [uploadedFil, e, s, setUploadedFil, e, s] = useState<UploadedFi, l, e[]>([]);
   con, s, t [isDragOv, e, r, setIsDragOv, e, r] = useState(fal, s, e);

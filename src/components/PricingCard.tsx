@@ -1,4 +1,4 @@
-import, React, from 'react';
+import React from 'react';
 
 interface, PricingTie, r {id: stri, n, g;
   na, m, e: stri, n, g;

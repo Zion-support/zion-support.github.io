@@ -1,4 +1,4 @@
-import, React, from 'react';
+import React from 'react';
 import {Link } from 'react-rout, e, r-d, o, m';
 
  {return (<foot, e, r, classNa, m, e="bg-gr, a, y-900, t, e, x, t-whi, t, e">

@@ -1,4 +1,4 @@
-import Reac, t, {useStateuseEffect }  from 'react';
+import React {useStateuseEffect }  from 'react';
 
 interface, Projec, t {id: stri, n, g;
   na, m, e: stri, n, g;
@@ -9,38 +9,38 @@ interface, Projec, t {id: stri, n, g;
   te, a, m: stri, n, g[];
   priori, t, y: 'l, o, w' | 'medi, u, m' | 'hi, g, h' | 'urge, n, t'};
 interface, ProjectManagementProp, s {isDarkMo, d, e: boole, a, n};
-export default function ProjectManageme, n, t({isDarkMo, d, e }: ProjectManagementPr, o, p, s): J, S, X.Elem, e, n.t {con, s, t [projectssetProje, c, t] = useState<Proje, c, t[]>([{
+export default function ProjectManageme({isDarkMo, d, e }: ProjectManagementPr, o, p, s): J, S, X.Elem, e, n.t {con, s, t [projectssetProje, c, t] = useState<Proje, c, t[]>([{
       progre, s, s: 100dueDa, t, e: '20, 2, 4-01-15'te, a, m: ['Dav, i, d''Li, s, a']priori, t, y: 'l, o, w'}  ]);
 
   con, s, t [selectedStatussetSelectedSta, t, u] = useState<stri, n, g>('a, l, l');
 
  {getStatusCol, o, r.displayNa, m, e = 'getStatusCol, o, r';con, s, t, colo, r, s = {
-      planni, n, g: 'bg-bl, u, e-1, 00da, r, k:bg-bl, u, e-900te, x, t-bl, u, e-800da, r, k:te, x, t-bl, u, e-2, 0, 0',
-      'in-progre, s, s': 'bg-yell, o, w-1, 0, 0, da, r, k:bg-yell, o, w-900te, x, t-yell, o, w-800da, r, k:te, x, t-yell, o, w-2, 0, 0',
-      revi, e, w: 'bg-purp, l, e-1, 00da, r, k:bg-purp, l, e-900te, x, t-purp, l, e-800da, r, k:te, x, t-purp, l, e-2, 0, 0',
+      planni, n, g: 'bg-bl, u, e-1, 00da, r, k:bg-bl, u, e-900te, x, t-bl, u, e-800da, r, k:te, x, t-bl, u, e-2, 0, 0'
+      'in-progre, s, s': 'bg-yell, o, w-1, 0, 0, da, r, k:bg-yell, o, w-900te, x, t-yell, o, w-800da, r, k:te, x, t-yell, o, w-2, 0, 0'
+      revi, e, w: 'bg-purp, l, e-1, 00da, r, k:bg-purp, l, e-900te, x, t-purp, l, e-800da, r, k:te, x, t-purp, l, e-2, 0, 0'
       complet, e, d: 'bg-gre, e, n-1, 00da, r, k:bg-gre, e, n-900te, x, t-gre, e, n-800da, r, k:te, x, t-gre, e, n-2, 0, 0'
     };
     return, color, s[stat, u, s]};
 
   const, getPriorityColo, r = (priori, t, y: Proje, c, t['priori, t, y']) => {getPriorityCol, o, r.displayNa, m, e = 'getPriorityCol, o, r';con, s, t, colo, r, s = {
-      l, o, w: 'bg-gr, a, y-100da, r, k:bg-gr, a, y-700te, x, t-gr, a, y-800da, r, k:te, x, t-gr, a, y-2, 0, 0',
-      medi, u, m: 'bg-bl, u, e-1, 00da, r, k:bg-bl, u, e-900te, x, t-bl, u, e-800da, r, k:te, x, t-bl, u, e-2, 0, 0',
-      hi, g, h: 'bg-oran, g, e-1, 00da, r, k:bg-oran, g, e-900te, x, t-oran, g, e-800da, r, k:te, x, t-oran, g, e-2, 0, 0',
+      l, o, w: 'bg-gr, a, y-100da, r, k:bg-gr, a, y-700te, x, t-gr, a, y-800da, r, k:te, x, t-gr, a, y-2, 0, 0'
+      medi, u, m: 'bg-bl, u, e-1, 00da, r, k:bg-bl, u, e-900te, x, t-bl, u, e-800da, r, k:te, x, t-bl, u, e-2, 0, 0'
+      hi, g, h: 'bg-oran, g, e-1, 00da, r, k:bg-oran, g, e-900te, x, t-oran, g, e-800da, r, k:te, x, t-oran, g, e-2, 0, 0'
       urge, n, t: 'bg-r, e, d-1, 00da, r, k:bg-r, e, d-900te, x, t-r, e, d-800da, r, k:te, x, t-r, e, d-2, 0, 0'
 
   con, s, t, getStatusCol, o, r = (stat, u, s: Proje, c, t['stat, u, s']) => {
   getStatusCol, o, r.displayNa, m, e = 'getStatusCol, o, r';con, s, t, colo, r, s = {
-      planni, n, g: 'bg-bl, u, e-1, 0, 0, da, r, k:bg-bl, u, e-900te, x, t-bl, u, e-800da, r, k:te, x, t-bl, u, e-2, 0, 0',
-      'in-progre, s, s': 'bg-yell, o, w-1, 0, 0, da, r, k:bg-yell, o, w-900te, x, t-yell, o, w-800da, r, k:te, x, t-yell, o, w-2, 0, 0',
-      revi, e, w: 'bg-purp, l, e-1, 0, 0, da, r, k:bg-purp, l, e-900te, x, t-purp, l, e-800da, r, k:te, x, t-purp, l, e-2, 0, 0',
+      planni, n, g: 'bg-bl, u, e-1, 0, 0, da, r, k:bg-bl, u, e-900te, x, t-bl, u, e-800da, r, k:te, x, t-bl, u, e-2, 0, 0'
+      'in-progre, s, s': 'bg-yell, o, w-1, 0, 0, da, r, k:bg-yell, o, w-900te, x, t-yell, o, w-800da, r, k:te, x, t-yell, o, w-2, 0, 0'
+      revi, e, w: 'bg-purp, l, e-1, 0, 0, da, r, k:bg-purp, l, e-900te, x, t-purp, l, e-800da, r, k:te, x, t-purp, l, e-2, 0, 0'
       complet, e, d: 'bg-gre, e, n-1, 0, 0, da, r, k:bg-gre, e, n-900te, x, t-gre, e, n-800da, r, k:te, x, t-gre, e, n-2, 0, 0'
     };
     return, color, s[stat, u, s]};
 
   const, getPriorityColo, r = (priori, t, y: Proje, c, t['priori, t, y']) => {getPriorityCol, o, r.displayNa, m, e = 'getPriorityCol, o, r';con, s, t, colo, r, s = {
-      l, o, w: 'bg-gr, a, y-100da, r, k:bg-gr, a, y-700te, x, t-gr, a, y-800da, r, k:te, x, t-gr, a, y-2, 0, 0',
-      medi, u, m: 'bg-bl, u, e-1, 0, 0, da, r, k:bg-bl, u, e-900te, x, t-bl, u, e-800da, r, k:te, x, t-bl, u, e-2, 0, 0',
-      hi, g, h: 'bg-oran, g, e-1, 0, 0, da, r, k:bg-oran, g, e-900te, x, t-oran, g, e-800da, r, k:te, x, t-oran, g, e-2, 0, 0',
+      l, o, w: 'bg-gr, a, y-100da, r, k:bg-gr, a, y-700te, x, t-gr, a, y-800da, r, k:te, x, t-gr, a, y-2, 0, 0'
+      medi, u, m: 'bg-bl, u, e-1, 0, 0, da, r, k:bg-bl, u, e-900te, x, t-bl, u, e-800da, r, k:te, x, t-bl, u, e-2, 0, 0'
+      hi, g, h: 'bg-oran, g, e-1, 0, 0, da, r, k:bg-oran, g, e-900te, x, t-oran, g, e-800da, r, k:te, x, t-oran, g, e-2, 0, 0'
       urge, n, t: 'bg-r, e, d-1, 0, 0, da, r, k:bg-r, e, d-900te, x, t-r, e, d-800da, r, k:te, x, t-r, e, d-2, 0, 0'
 
     };

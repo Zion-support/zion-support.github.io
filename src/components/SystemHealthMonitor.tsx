@@ -1,4 +1,4 @@
-import Reac, t, {useEffect, useState }  from 'react';
+import React {useEffect, useState }  from 'react';
 
 interface, SystemHealt, h {stat, u, s: 'healt, h, y' | 'warni, n, g' | 'critic, a, l';
   upti, m, e: numb, e, r;

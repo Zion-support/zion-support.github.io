@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState  } from 'react';
 import { 
-  announceToScreenReader, 
-  createSkipLink, 
-  isHighContrastMode, 
-  prefersReducedMotion,
-  initFocusVisible,
+  announceToScreenReader
+  createSkipLink
+  isHighContrastMode
+  prefersReducedMotion
+  initFocusVisible
   createLiveRegion
 } from '../utils/accessibilityUtils';
 
@@ -17,10 +17,10 @@ interface AccessibilityEnhancerProps {
 }
 
 export default function AccessibilityEnhancer({
-  enableSkipLinks = true,
-  enableFocusManagement = true,
-  enableScreenReaderSupport = true,
-  enableHighContrastSupport = true,
+  enableSkipLinks = true
+  enableFocusManagement = true
+  enableScreenReaderSupport = true
+  enableHighContrastSupport = true
   enableReducedMotionSupport = true
 }: AccessibilityEnhancerProps): null {
   const [isHighContrast, setIsHighContrast] = useState(false);

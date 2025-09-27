@@ -1,4 +1,4 @@
-import Reac, t, {useEffect, useState, useCallbac, k }  from 'react';
+import React {useEffect, useState, useCallbac, k }  from 'react';
 
 interface, AnalyticsEven, t {id: stri, n, g;
   ty, p, e: stri, n, g;

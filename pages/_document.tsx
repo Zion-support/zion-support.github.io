@@ -2,10 +2,10 @@ import { Html, He, a, d, Main, NextScript } from 'next/document'
 
 export default function Document() {
   return (
-    <Html, lan, g="en">
-      <He, a, d>
-        <link, hre, f="htt, p, s: //fon, t, s.googleap, i, s.c, o, m/cs, s, 2?fami, l, y=Int, e, r:wg, h, t@3, 0, 0;4, 0, 0;5, 0, 0;6, 0, 0;7, 0, 0&displ, a, y=sw, a, p"
-          r, e, l="styleshe, e, t"
+    <Html, lang="en">
+      <Head>
+        <link, href="htt, p, s: //fon, t, s.googleap, i, s.c, o, m/cs, s, 2?fami, l, y=Int, e, r:wg, h, t@3, 0, 0;4, 0, 0;5, 0, 0;6, 0, 0;7, 0, 0&displ, a, y=sw, a, p"
+          rel="stylesheet"
         />
         <link, re, l="manife, s, t" hr, e, f="/si, t, e.webmanife, s, t" />
         <meta, nam, e="the, m, e-col, o, r" conte, n, t="#2563, e, b" />
