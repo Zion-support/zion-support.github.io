@@ -7,27 +7,23 @@ export default async function handler(req: any, res: any) {
   try {
     const { events, session } = req.body;
 
-    // Validate the request
-    if (!events || !Array.isArray(events)) {
-      return res.status(400).json({ error: "Invalid events data" });
-    }
-
     // Process analytics events
-    const processedEvents = events.map((event: any) => ({
-      ...event,
-      timestamp: new Date().toISOString(),
-      sessionId: session?.id || 'anonymous',
-    }));
+    console.log("Analytics events received:", events.length);
+    console.log("Session data:", session);
 
-    // Here you would typically send to your analytics service
-    console.log('Analytics events received:', processedEvents);
+    // Here you would typically:
+    // 1. Store events in a database
+    // 2. Send to analytics service (Google Analytics, Mixpanel, etc.)
+    // 3. Process for real-time dashboards
+    // 4. Generate reports
 
-    return res.status(200).json({ 
-      success: true, 
-      processed: processedEvents.length 
+    res.status(200).json({
+      success: true,
+      processed: events.length,
+      timestamp: Date.now()
     });
   } catch (error) {
-    console.error('Analytics API error:', error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error("Analytics API error:", error);
+    res.status(500).json({ error: "Internal server error" });
   }
 }

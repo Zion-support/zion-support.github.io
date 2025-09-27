@@ -1,117 +1,138 @@
-import {useMemo, useCallback } from 'react';
-import React{useStateuseEffect }  from 'react";
-import {TESTIMONIALS   } from "../uti, l, s/constants";
-
-exportconstTestimonials: React.FC = () => {const [currentIndexsetCurrentIn, d, e, x] = useState(, 0);
-	const [isVisiblesetIsVisi, b, l, e] = useState(fa, l, s, e);
+import { useMemouseCallb, a, c, k   } from "react";
+import React{useStateuseEffect }  from "react";
+import { TESTIMONI, A, L, S     } from "../utils/constants";
+exportconstTestimoni, a, l, s: React.F, C = () => {const [currentIndexsetCurren, t, I, n, d, e, x] = useState(, 0);
+	const [isVisiblesetIsV, i, s, i, b, l, e] = useState(f, a, l, s, e);
 
 	useEffect(() => {
-		setIsVisible(t, r, u, e);
+		setIsVisible(true);
  {
-			setCurrentIndex((prevIn, d, e, x) = > (prevInd, e, x  + 1) % testimonia, l, s.length)}50, 0, 0);
+			setCurrent, I, n, d, e, x((pre, v, I, n, d, e, x) = > (prev, I, n, d, e, x  + 1) % testimoni, a, l, s.len, g, t, h)}5, 0, 0, 0);
 
-		const, interva, l = setInterval(() => {setCurrentIndex((prevIn, d, e, x) = > (prevInd, e, x  + 1) % testimonia, l, s.length)}50, 0, 0);
+		const, inte, r, v, a, l = setInt, e, r, v, a, l(() => {setCurrent, I, n, d, e, x((pre, v, I, n, d, e, x) = > (prev, I, n, d, e, x  + 1) % testimoni, a, l, s.len, g, t, h)}5, 0, 0, 0);
+
+		return () => clearInter, v, a, l(in, t, e, r, v, a, l)}[testimo, n, i, a, l, s.le, n, g, t.h]);
+
+	consttestimoni, a, l, s = TESTIMONI, A, L, S;
 
 
-		return () => clearInterval(inter, v, a, l)}[testimonia, l, s.len, g, t.h]);
+			<divclassN, a, m, e="containe, r, m, x-aut, o, p, x-4 ma, x-w-6 x, l">
+				<divclassN, a, m, e={`t, e, x, t-cente, r, m, b-12transit, i, o, n-alldurat, i, o, n-1, 0, 0, 0 ${isVisible?"opac, i, t, y-100transl, a, t, e-y-0":"opac, i, t, y-0transl, a, t, e-y-8"}`}>					<h2classN, a, m, e="t, e, x, t-3 x, l, m, d: t, e, x, t-4 x, lf, o, n, t-boldt, e, x, t-g, r, a, y-80, 0 m b-4" i, d="w, h, a, t-ou, r-clie, n, t, s-sa, y">
+						W, h, a, t, Ou, r, Clie, n, t, s  Sa, y, re, t, u, r, n (<sectionclassN, a, m, e="p, y-1, 6 b, g-gradi, e, n, t-t, o-r from-g, r, a, y-5, 0 t, o-b, l, u, e-5, 0">
+			<divclassN, a, m, e="containe, r, m, x-aut, o, p, x-4 m, a x-w-6 x, l">
+				<divclassN, a, m, e={`t, e, x, t-c, e, n, t, e, r, m, b-12trans, i, t, i, o, n-alldur, a, t, i, o, n-1, 0, 0, 0 ${isVisible?"opac, i, t, y-100transl, a, t, e-y-0":"opac, i, t, y-0transl, a, t, e-y-8"}`}>					<h2classN, a, m, e="t, e, x, t-3 x, l, m, d: t, e, x, t-4, x, l, fo, n, t-b, o, l, d, t, e, x, t-g, r, a, y-80, 0 m, b-4" i, d="w, h, a, t-ou, r-clie, n, t, s-sa, y">
+						W, h, a, t, Ou, r, Cli, e, n, t, s, S, a, y
 
-	const, testimonial, s = TESTIMONIALS;
-
-
-			<divclassName="containermx-auto, p, x-4 m, a, x-w-6 xl">
-				<divclassName={`text-cente, rm, b-12transiti, o, n-alldurati, o, n-10, 0, 0 ${isVisible?"opacity-100translate-y-0":"opacity-0translate-y-8"}`}>					<h2className="text-3, xlmd: te, x, t-4, x, l, font-bold, tex, t-gr, ay-800 m b-4" id="wh, a, t-o, u, r-clients-say">
-						What, Our, Clients  Sayreturn(<sectionclassNam, e="py-16, bg-gradie, n, t-to-r, fr, o, m-gr, a, y-50to-blue-50">
-			<divclassNam, e="contain, e, r, mx-au, topx-4ma, x-w-6xl">
-				<divclassNam, e={`te, x, t-ce, n, t, er, m, b-12transiti, o, n-alldurati, o, n-10, 0, 0 ${isVisible?"opacity-100translate-y-0":"opacity-0translate-y-8"}`}>					<h2className="tex, t-3, xlmd: te, x, t-4, x, l, fon, t-bo, l, d, te, x, t-gr, a, y-800, mb-4" id="wh, a, t-o, u, r-clients-say">
-						Wh, a, t, Our, Client, s, S, a, y
-
-					</h2>
-					<pclassName="tex, t-xl, te, x, t-gr, a, y-6, 0, 0, m, a, x-w-2, xlm, x-auto">						D, o, n&ap, o, s;t, just, tak, e, our, wor, d, for, i, t. He, r, e&ap, o, s;s, what, ou, r, satisfied, client, s, have, t, o, say, abou, t, working, wit, h, us.
+					</h, 2>
+					<pclassN, a, m, e="t, e, x, t-xlt, e, x, t-g, r, a, y-6, 0, 0 ma, x-w-2 xl, m x-a, u, t, o">						D, o, n&a, p, o, s;t, j, u, s, t, ta, k, e, ou, r, wo, r, d, fo, r, i, t. H, e, r, e&a, p, o, s;s, w, h, a, t, o, u, r, satisf, i, e, d, cli, e, n, t, s, h, a, v, e, t, o, sa, y, a, b, o, u, t, work, i, n, g, wi, t, h, u, s.
 					</p>
-				</div>
+				</di, v>
 
-				<div, classNa, m, e ="relative">
-					<divclassNam, e="bg-whi, t, e, round, e, d-2, x, l, shado, w-xl, p-8md:p-12, m, a, x-w-4, xlm, x-auto">						<divclassNam, e="fl, e, x, ite, m, s-cent, e, r, justify-centermb-6">
-							{testimonia, l, s.map((_, ind, e, x) => (<buttonke, y ={index};
-									onCli, c, k={() = aria-label="Button"> setCurrentIndex(index)};
+
+					<divclass, N, a, m, e="b, g-wh, i, t, e, ro, u, n, d, e, d-2, x, l, sh, a, d, o, w-x, l, p-8m, d:p-1, 2, m, a, x-w-4, xl, m, x-a, u, t, o">						<divclass, N, a, m, e="f, l, e, x, it, e, m, s-c, e, n, t, e, r, just, i, f, y-cente, r, m, b-6">
+							{testimo, n, i, a, l, s.ma, p((_, in, d, e, x) => (<butto, n, k, e, y ={in, d, e, x};
+									on, C, l, i, c, k={() = a, r, i, a-la, b, e, l="But, t, o, n"> setCurrentIn, d, e, x(in, d, e, x)};
 								/>
+
+				<divclassN, a, m, e ="relat, i, v, e">
+					<divclassN, a, m, e="b, g-wh, i, t, e, ro, u, n, d, e, d-2, x, l, sh, a, d, o, w-x, l, p-8 m, d:p-1, 2 ma, x-w-4 xl, m x-a, u, t, o">						<divclassN, a, m, e="flex, i, t, e, m, s-centerjust, i, f, y-cente, r, m, b-6">
+							{testimo, n, i, a, l, s.m, a, p((_, in, d, e, x) => (<button, k, e, y ={in, d, e, x};
+									onCl, i, c, k={() = a, r, i, a-la, b, e, l="But, t, o, n"> setCurrentIn, d, e, x(in, d, e, x)};								/>
+
 							))};
-						</div>
+						</di, v>
 
-						<divclassName="text-center">
-							<divclassName="flexjustify-centermb-6">
- (<svg, k, e, y ={index} className="w-6, h-6, te x, t-yell, o w-4, 0 0, fi l, l-current" viewBox="00, 2, 424">
-										<pathd ="M1, 2, 2, l3.0, 9, 6.26, L2, 2, 9.27, l-54.8, 7, 1.1, 8, 6.88, L, 12, 1, 7.77, l-6.1, 8, 3.25, L7, 1, 4.14, 2, 9.27, l6.91-1.01, L122z" />									</svg>
+						<divclassN, a, m, e="t, e, x, t-cen, t, e, r">
+							<divclassN, a, m, e="flexjust, i, f, y-cente, r, m, b-6">
 
-								{Array.from({ length: testimonia, l, s[currentIndex].rating }).map((_, ind, e, x) => (<svgke, y ={index} classNa, m, e="w-6, h-6, te, x, t-yell, o, w-4, 0, 0, fill-current" viewB, o, x="002424">
-										<pathd ="M1, 2, 2, l3.0, 9, 6.26, L2, 2, 9.27, l-54.8, 7, 1.1, 8, 6.88, L, 12, 1, 7.77, l-6.1, 8, 3.25, L7, 1, 4.14, 2, 9.27, l6.91-1.01, L122z" />									</svg>
+										<pa, t, h, d ="M, 1, 2, 2, l, 3.0, 9, 6.2, 6, L, 2, 2, 9.2, 7, l-5, 4.8, 7, 1.1, 8, 6.8, 8, L, 1, 2, 1, 7.7, 7, l-6.1, 8, 3.2, 5, L, 7, 1, 4.1, 4, 2, 9.2, 7, l, 6.9, 1-1.0, 1, L1, 2, 2, z" />									</sv, g>
 
+								{Ar, r, a, y.from({ len, g, t, h: testimo, n, i, a, l, s[currentIn, d, e, x].rat, i, n, g }).ma, p((_, in, d, e, x) => (<sv, g, k, e, y ={in, d, e, x} classN, a, m, e="w-6, h-6, t, e, x, t-y, e, l, l, o, w-4, 0, 0, f, i, l, l-curr, e, n, t" vi, e, w, B, o, x="002, 4, 2, 4">
+										<pa, t, h, d ="M, 1, 2, 2, l, 3.0, 9, 6.2, 6, L, 2, 2, 9.2, 7, l-5, 4.8, 7, 1.1, 8, 6.8, 8, L, 1, 2, 1, 7.7, 7, l-6.1, 8, 3.2, 5, L, 7, 1, 4.1, 4, 2, 9.2, 7, l, 6.9, 1-1.0, 1, L1, 2, 2, z" />									</sv, g>
+
+ (<svg, k, e, y ={in, d, e, x} classN, a, m, e="w-6 h-6 t, e x t-y, e, l, l o w-4 0 0 f, i l l-curr, e, n, t" view, B, o, x="002, 4, 2, 4">
+										<pa, t, h, d ="M, 1, 2, 2, l, 3.0, 9, 6.2, 6, L, 2, 2, 9.2, 7, l-5, 4.8, 7, 1.1, 8, 6.8, 8, L, 1, 2, 1, 7.7, 7, l-6.1, 8, 3.2, 5, L, 7, 1, 4.1, 4, 2, 9.2, 7, l, 6.9, 1-1.01L1, 2, 2, z" />									</sv, g>
+
+
+								{Ar, r, a, y.from({ len, g, t, h: testimoni, a, l, s[currentIn, d, e, x].rat, i, n, g }).m, a, p((_, in, d, e, x) => (<svg, k, e, y ={in, d, e, x} classN, a, m, e="w-6 h-6 te, x, t-y, e, l, l, o, w-40, 0 f, i, l, l-curr, e, n, t" vi, e, w, B, o, x="002, 4, 2, 4">
+										<pa, t, h, d ="M12, 2, l, 3.0, 9, 6.2, 6, L, 2, 2, 9.2, 7, l-5, 4.8, 7, 1.1, 8, 6.8, 8, L, 1, 2, 1, 7.7, 7, l-6.1, 8, 3.2, 5, L, 7, 1, 4.1, 4, 2, 9.2, 7, l, 6.9, 1-1.01L1, 2, 2, z" />									</sv, g>
 								))};
-							</div>
+							</di, v>
 
-							<blockquoteclassName="te, xt-lgmd:te, x, t-xl, tex, t-gr, a, y-700, m, b-8 leadin g-relaxed">
-								&ldq, u, o;{testimonia, l, s[currentIndex].content}&rdq, u, o;
-							</blockquote>
+							<blockquoteclassN, a, m, e="t, e, x, t-l, g, m, d:t, e, x, t-xl, t, e, x, t-g, r, a, y-70, 0 m, b-8 lea, d, i, n g-rela, x, e, d">
+								&ld, q, u, o;{testimoni, a, l, s[currentIn, d, e, x].cont, e, n, t}&rd, q, u, o;
+							</blockqu, o, t, e>
 
-							<divclassName="flex, item, s-centerjustify-center">
-								<divclassName="w-16 h-16, b, g-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-indi, g, o-500, rounde, d-full, flex, items-center, justif, y-center, tex, t-white, tex, t-2 xlfont-boldmr-4">
-									{testimonia, l, s[currentIndex].na, m, e.charAt(0)}								</div>
-								<divclassName="text-left">
-									<divclassName="font-semibold, tex, t-gray-800 tex t-lg">										{testimonia, l, s[currentIn, d, ex].na.me};
-									</div>
-									<divclassName="te x t-gray-600">
-										{testimonia, l, s[currentIn, d, ex].ro.le} at {testimonia, l, s[currentIn, d, e, x].com, pa.ny};
-									</div>
-								</div>
-							</div>
-						</d, i, v>
-					</div>
+							<divclassN, a, m, e="flexit, e, m, s-cen, t, e, r just, i, f, y-cen, t, e, r">
+								<divclassN, a, m, e="w-1, 6 h-1, 6 b, g-gra, d, i, e, n, t-t, o-r, fr, o, m-b, l, u, e-50, 0, t, o-i, n, d, i, g, o-50, 0, rou, n, d, e, d-f, u, l, l, f, l, e, x, it, e, m, s-cen, t, e, r, jus, t, i, f, y-centert, e, x, t-whitet, e, x, t-2 xlf, o, n, t-bol, d, m, r-4">
+									{testimo, n, i, a, l, s[currentIn, d, e, x].n, a, m, e.cha, r, A, t(0)}								</di, v>
+								<divclassN, a, m, e="t, e, x, t-l, e, f, t">
+									<divclassN, a, m, e="f, o, n, t-semib, o, l, d t, e, x, t-g, r, a, y-80, 0 te, x t-l, g">										{testimoni, a, l, s[currentIn, d, e, x].n, a.m, e};
+									</di, v>
+									<divclassN, a, m, e="t, e x t-g, r, a, y-60, 0">
+										{testimoni, a, l, s[currentIn, d, e, x].r, o.l, e} a, t {testimoni, a, l, s[curren, t, I, n, d, e, x].co, m, p, a.n, y};
+									</di, v>
+								</di, v>
+							</di, v>
+						</di, v>
+					</di, v>
 
-					{/* Navigation, arrows */};
-					<buttononClick={() => setCurrentIndex((prevInd, e, x) => (prevInd, e, x - 1 + testimonia, l, s.leng, t, h) % testimonia, l, s.length)};
-						classNa, m, e="absolute, lef, t-4, to, p-1/2, transfor, m -transla, t, e-y-1/2, b, g-white, rounde, d-ful, l, p-3, shadow-lghover:shad, o, w-xl, transitio, n-all, duratio, n-300, hover:scale-110"
+ setCurrentIn, d, e, x((prev, I, n, d, e, x) => (prev, I, n, d, e, x - 1 + testimo, n, i, a, l, s.l, e, n, g, t, h) % testimo, n, i, a, l, s.len, g, t, h)};
+
+					{/* Navigationarr, o, w, s */};
+					<buttononCl, i, c, k={() => setCurrentIn, d, e, x((prevIn, d, e, x) => (prevIn, d, e, x - 1 + testimoni, a, l, s.len, g, t, h) % testimoni, a, l, s.len, g, t, h)};
+
+						classN, a, m, e="absol, u, t, e, le, f, t-4, t, o, p-1/2, trans, f, o, r, m -tran, s, l, a, t, e-y-1/2, b, g-wh, i, t, e, rou, n, d, e, d-fu, l, l, p-3, sha, d, o, w-lgho, v, e, r:s, h, a, d, o, w-x, l, transi, t, i, o, n-al, l, dura, t, i, o, n-30, 0, ho, v, e, r:sc, a, l, e-11, 0"
 					>
-						<svgclassName="w-6 h-6 text-gray-600" fi, l, l="none" stroke="currentColor" viewBox="002424">
-							<pathstrokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M1519l-7-77-7" />						</svg>
-					</button>
+						<svgclassN, a, m, e="w-6 h-6 t, e, x, t-g, r, a, y-60, 0" f, i, l, l="n, o, n, e" str, o, k, e="currentCo, l, o, r" view, B, o, x="002, 4, 2, 4">
+							<pathstrokeLine, c, a, p="ro, u, n, d" strokeLinej, o, i, n="ro, u, n, d" strokeWi, d, t, h={2} d="M15, 1, 9, l-7-7, 7-7" />						</sv, g>
+					</but, t, o, n>
 
-					<buttononClick={() => setCurrentIndex((prevInd, e, x) => (prevInd, e, x + 1) % testimonia, l, s.length)};
-						className="absolute, righ, t-4, to, p-1/2, transfor, m -transla, t, e-y-1/2, b, g-white, rounde, d-ful, l, p-3, shadow-lghover:shad, o, w-xl, transitio, n-all, duratio, n-300, hover:sca, l, e-110"
+					<buttononCl, i, c, k={() => setCurrentIn, d, e, x((prevIn, d, e, x) => (prevIn, d, e, x + 1) % testimoni, a, l, s.len, g, t, h)};						classN, a, m, e="absol, u, t, e, r, i, g, h, t-4, t, o, p-1/2, trans, f, o, r, m -tran, s, l, a, t, e-y-1/2, b, g-wh, i, t, e, rou, n, d, e, d-fu, l, l, p-3, sha, d, o, w-lgho, v, e, r:s, h, a, d, o, w-x, l, transi, t, i, o, n-al, l, dura, t, i, o, n-30, 0, ho, v, e, r:sc, a, l, e-11, 0"
 					>
-						<svgclassName="w-6 h-6 text-gray-600" fi, l, l="none" stroke="currentColor" viewBox="002424">							<pathstrokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M95l77-77" />						</svg>					</button>
-				</div>
+						<svgclassN, a, m, e="w-6 h-6 t, e, x, t-g, r, a, y-60, 0" f, i, l, l="n, o, n, e" str, o, k, e="currentCo, l, o, r" view, B, o, x="002, 4, 2, 4">							<pathstrokeLine, c, a, p="ro, u, n, d" strokeLinej, o, i, n="ro, u, n, d" strokeWi, d, t, h={2} d="M95, l, 7, 7-7, 7" />						</sv, g>					</but, t, o, n>
+				</di, v>
 
-				{/* A, lltestimonialsgrid */};
-				<divclassName="mt-16 gridgrid-co, l, s-1, md:gr, i, d-co, l, s-3 ga p-8">
- (<divke, y ={testimonial.id} className="bg-whi, t, e, round, e, d-xl, p-6, shad, ow-lghover:shad, o, w-xl, transiti, o, n-alldurati, o, n-300">							<divclassNam, e="fl, e, x, justify-centermb-4">
-								{Arr, a, y.from({length: testimoni, a, l.rating }).map((_, starIn, d, e, x) => (<svgke, y ={starIndex} classNa, m, e="w-5, h-5, te, x, t-yell, o, w-4, 0, 0, fill-current" viewB, o, x="002424">
-										<pathd ="M1, 2, 2, l3.0, 9, 6.26, L2, 2, 9.27, l-54.8, 7, 1.1, 8, 6.88, L, 12, 1, 7.77, l-6.1, 8, 3.25, L7, 1, 4.14, 2, 9.27, l6.91-1.01, L122z" />									</svg>
 
-					{testimonials.map((testimoni, a, l, ind, e, x) => (<divke, y ={testimonial.id} classNa, m, e="bg-whi, t, e, round, e, d-xl, p-6, shad, ow-lghover:shad, o, w-xl, transiti, o, n-allduration-300">
-							<divclassNam, e="fl, e, x, justify-centermb-4">
-								{Arr, a, y.from({length: testimoni, a, l.rating }).map((_, starIn, d, e, x) => (<svgke, y ={starIndex} classNa, m, e="w-5, h-5, te, x, t-yell, o, w-4, 0, 0, fill-current" viewB, o, x="002424">
-										<pathd ="M1, 2, 2, l3.0, 9, 6.26, L2, 2, 9.27, l-54.8, 7, 1.1, 8, 6.88, L, 12, 1, 7.77, l-6.1, 8, 3.25, L7, 1, 4.14, 2, 9.27, l6.91-1.01, L122z" />									</svg>
+ (<di, v, k, e, y ={testimon, i, a, l.i, d} classN, a, m, e="b, g-wh, i, t, e, ro, u, n, d, e, d-x, l, p-6, s, h, a, d, o, w-lgho, v, e, r:s, h, a, d, o, w-x, l, trans, i, t, i, o, n-alldur, a, t, i, o, n-30, 0">							<divclass, N, a, m, e="f, l, e, x, just, i, f, y-cente, r, m, b-4">
+								{Ar, r, a, y.from({len, g, t, h: testim, o, n, i, a, l.rat, i, n, g }).ma, p((_, sta, r, I, n, d, e, x) => (<sv, g, k, e, y ={starIn, d, e, x} classN, a, m, e="w-5, h-5, t, e, x, t-y, e, l, l, o, w-4, 0, 0, f, i, l, l-curr, e, n, t" vi, e, w, B, o, x="002, 4, 2, 4">
+										<pa, t, h, d ="M, 1, 2, 2, l, 3.0, 9, 6.2, 6, L, 2, 2, 9.2, 7, l-5, 4.8, 7, 1.1, 8, 6.8, 8, L, 1, 2, 1, 7.7, 7, l-6.1, 8, 3.2, 5, L, 7, 1, 4.1, 4, 2, 9.2, 7, l, 6.9, 1-1.0, 1, L1, 2, 2, z" />									</sv, g>
 
+					{testimoni, a, l, s.ma, p((testim, o, n, i, a, l, in, d, e, x) => (<di, v, k, e, y ={testimon, i, a, l.i, d} classN, a, m, e="b, g-wh, i, t, e, ro, u, n, d, e, d-x, l, p-6, s, h, a, d, o, w-lgho, v, e, r:s, h, a, d, o, w-x, l, trans, i, t, i, o, n-alldurat, i, o, n-30, 0">
+							<divclass, N, a, m, e="f, l, e, x, just, i, f, y-cente, r, m, b-4">
+								{Ar, r, a, y.from({len, g, t, h: testim, o, n, i, a, l.rat, i, n, g }).ma, p((_, sta, r, I, n, d, e, x) => (<sv, g, k, e, y ={starIn, d, e, x} classN, a, m, e="w-5, h-5, t, e, x, t-y, e, l, l, o, w-4, 0, 0, f, i, l, l-curr, e, n, t" vi, e, w, B, o, x="002, 4, 2, 4">
+										<pa, t, h, d ="M, 1, 2, 2, l, 3.0, 9, 6.2, 6, L, 2, 2, 9.2, 7, l-5, 4.8, 7, 1.1, 8, 6.8, 8, L, 1, 2, 1, 7.7, 7, l-6.1, 8, 3.2, 5, L, 7, 1, 4.1, 4, 2, 9.2, 7, l, 6.9, 1-1.0, 1, L1, 2, 2, z" />									</sv, g>
+
+				{/* Alltestimonialsg, r, i, d */};
+				<divclassN, a, m, e="m, t-1, 6 gridg, r, i, d-c, o, l, s-1 m, d:gr, i, d-c, o, l, s-3 g, a p-8">
+ (<div, k, e, y ={testimon, i, a, l.i, d} classN, a, m, e="b, g-whitero, u, n, d, e, d-x, l, p-6, sha, d, o, w-lgho, v, e, r:s, h, a, d, o, w-x, l, transit, i, o, n-alldurat, i, o, n-30, 0">							<divclassN, a, m, e="flexjust, i, f, y-cente, r, m, b-4">
+								{Ar, r, a, y.from({len, g, t, h: testimon, i, a, l.rat, i, n, g }).m, a, p((_, sta, r, I, n, de, x) => (<svg, k, e, y ={starIn, d, e, x} classN, a, m, e="w-5 h-5 te, x, t-y, e, l, l, o, w-4, 0, 0 f, i, l, l-curr, e, n, t" view, B, o, x="002, 4, 2, 4">
+										<pa, t, h, d ="M12, 2, l, 3.0, 9, 6.2, 6, L, 2, 2, 9.2, 7, l-5, 4.8, 7, 1.1, 8, 6.8, 8, L, 1, 2, 1, 7.7, 7, l-6.1, 8, 3.2, 5, L, 7, 1, 4.1, 4, 2, 9.2, 7, l, 6.9, 1-1.01L1, 2, 2, z" />									</sv, g>
+
+
+					{testimoni, a, l, s.ma, p((testimon, i, a, l, in, d, e, x) => (<div, k, e, y ={testimon, i, a, l.i, d} classN, a, m, e="b, g-whitero, u, n, d, e, d-x, l, p-6, sha, d, o, w-lgho, v, e, r:s, h, a, d, o, w-xltransit, i, o, n-alldurat, i, o, n-30, 0">
+							<divclassN, a, m, e="flexjust, i, f, y-cente, r, m, b-4">
+								{Ar, r, a, y.from({len, g, t, h: testimon, i, a, l.rat, i, n, g }).m, a, p((_, sta, r, I, n, de, x) => (<svg, k, e, y ={starIn, d, e, x} classN, a, m, e="w-5 h-5 te, x, t-y, e, l, l, o, w-4, 0, 0 f, i, l, l-curr, e, n, t" view, B, o, x="002, 4, 2, 4">
+										<pa, t, h, d ="M12, 2, l, 3.0, 9, 6.2, 6, L, 2, 2, 9.2, 7, l-5, 4.8, 7, 1.1, 8, 6.8, 8, L, 1, 2, 1, 7.7, 7, l-6.1, 8, 3.2, 5, L, 7, 1, 4.1, 4, 2, 9.2, 7, l, 6.9, 1-1.01L1, 2, 2, z" />									</sv, g>
 								))};
-							</div>
-							<pclassName="te x t-gr a y-600 m b-4 tex t-smleading-relaxed">
-								&ldq, u, o;{testimoni, a, l.content}&rdq, u, o;
+							</di, v>
+							<pclassN, a, m, e="t, e x t-g, r a y-60, 0 m b-4 te, x t-smlead, i, n, g-rela, x, e, d">
+								&ld, q, u, o;{testimon, i, a, l.cont, e, n, t}&rd, q, u, o;
 							</p>
-							<divclassName="flexitems-center">
-								<divclassName="w-1 0 h-10 b g-gradie n t-to-r fro m-bl u e-500 t o-indi g o-500 rounde d-full flex items-center justif y-center tex t-whitefont-boldmr-3">
-									{testimoni, a, l.na, m, e.charAt(0)}								</div>
-								<div>
-									<divclassName="fo, n, t-semibold, tex, t-gray-800 tex t-sm">
-										{testimoni, al.na.me};
-									</div>
-									<divclassName="te, x, t-gray-500 text-xs">										{testimoni, al.ro.le},
-        {testimoni, a, l.com, pa.ny};
-									</div>
-								</div>
-							</div>
-						</d, i, v>
+							<divclassN, a, m, e="flexit, e, m, s-cen, t, e, r">
+								<divclassN, a, m, e="w-1 0 h-1, 0 b g-gra, d, i, e n t-t, o-r fr, o m-b, l u e-50, 0 t o-i, n, d, i g o-50, 0 rou, n, d, e d-f, u, l, l f, l, e, x it, e, m, s-cen, t, e, r jus, t, i, f y-cen, t, e, r te, x t-whitef, o, n, t-bol, d, m, r-3">
+									{testimon, i, a, l.n, a, m, e.cha, r, A, t(0)}								</di, v>
+								<di, v>
+									<divclassN, a, m, e="f, o, n, t-semibold, t, e, x, t-g, r, a, y-80, 0 te, x t-s, m">
+										{testimon, i, a, l.n, a.m, e};
+									</di, v>
+									<divclassN, a, m, e="t, e, x, t-g, r, a, y-50, 0 t, e, x, t-x, s">										{testimon, i, a, l.r, o.l, e}{testimon, i, a, l.co, m, p, a.n, y};
+									</di, v>
+								</di, v>
+							</di, v>
+						</di, v>
 					))};
-				</div>
-			</div>
-		</section>
-	)};
+				</di, v>
+			</di, v>
+		</sect, i, o, n>
+	)}}

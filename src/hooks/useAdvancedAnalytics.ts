@@ -1,148 +1,144 @@
-import Reac, t, {useEffect, useStateuseCallback }  from 'react";
+import R, e, a, c, t, {useEffectuseStateuseCallb, a, c, k }  from 'react";
 
-interface, AnalyticsEven, t {id: stri, n, g;
-  type: stri, n, g;
-  category: stri, n, g;
-  action: stri, n, g;
-  lab, e, l?: stri, n, g;
-  val, u, e?: numb, e, r;
-  timestamp: numb, e, r;
-  sessionId: stri, n, g;
-  user, I, d?: stri, n, g;
-  url: stri, n, g;
-  userAgent: stri, n, g;
-  metada, t, a?: Reco, rd<stringany>};
-interfaceUserSession {sessionId: stri, n, g;
-  startTime: numb, e, r;
-  lastActivity: numb, e, r;
-  pageViews: numb, e, r;
-  events: numb, e, r;
-  user, I, d?: string};
-interface, AnalyticsConfi, g {enableHeatmaps: boole, a, n;
-  enableScrollTracking: boole, a, n;
-  enableClickTracking: boole, a, n;
-  enableFormTracking: boole, a, n;
-  enablePerformanceTracking: boole, a, n;
-  enableErrorTracking: boole, a, n;
-  batchSize: numb, e, r;
-  flushInterval: number};
-class, AdvancedAnalytic, s {priva, testaticinstance: AdvancedAnalyti, c, s;
-  priva, teevents: AnalyticsEve, n, t[] = [];
-  priva, tesession: UserSessi, o, n;
-  priva, teconfig: AnalyticsConf, i, g;
-  priva, t, e, flushTim, e, r?: Node, J, S.Timeo, u, t;
+interf, a, c, e, AnalyticsE, v, e, n, t {i, d: s, t, r, i, n, g;
+  type: s, t, r, i, n, g;
+  categ, o, r, y: s, t, r, i, n, g;
+  act, i, o, n: s, t, r, i, n, g;
+  la, b, e, l?: s, t, r, i, n, g;
+  va, l, u, e?: n, u, m, b, e, r;
+  timest, a, m, p: n, u, m, b, e, r;
+  sessio, n, I, d: s, t, r, i, n, g;
+  u, s, e, r, I, d?: s, t, r, i, n, g;
+  ur, l: s, t, r, i, n, g;
+  userAg, e, n, t: s, t, r, i, n, g;
+  met, a, d, a, t, a?: Rec, o, r, d<string, a, n, y>};
+interfaceUserSess, i, o, n {sessio, n, I, d: str, i, n, g;
+  startT, i, m, e: number;
+  lastActiv, i, t, y: n, u, m, b, e, r;
+  pageVi, e, w, s: n, u, m, b, e, r;
+  eve, n, t, s: n, u, m, b, e, r;
+  use, r, I, d?: str, i, n, g};
+interf, a, c, e, AnalyticsCo, n, f, i, g {enableHeatm, a, p, s: bo, o, l, e, a, n;
+  enableScrollTrack, i, n, g: bo, o, l, e, a, n;
+  enableClickTrack, i, n, g: bo, o, l, e, a, n;
+  enableFormTrack, i, n, g: bo, o, l, e, a, n;
+  enablePerformanceTrack, i, n, g: bo, o, l, e, a, n;
+  enableErrorTrack, i, n, g: bo, o, l, e, a, n;
+  batchS, i, z, e: number;
+  flushInter, v, a, l: number};
+cl, a, s, s, AdvancedAnaly, t, i, c, s {privatestaticinsta, n, c, e: AdvancedAnal, y, t, i, c, s;
+  privateeve, n, t, s: Analytics, E, v, e, n, t[] = [];
+  privatesess, i, o, n: UserSe, s, s, i, o, n;
+  privatecon, f, i, g: AnalyticsC, o, n, f, i, g;
+  pr, i, v, a, t, e, flush, T, i, m, e, r?: N, o, d, e, J, S.Ti, m, e, o, u, t;
 
-  constructor(config: AnalyticsConf, i, g) {
-    th, i, s.conf, i, g = conf, i, g;
-    th, i, s.sessi, o, n = th, i, s.initializeSession();
-    th, i, s.setupEventListeners();
-    th, i, s.startFlushTimer()};
-  staticgetInstance(conf, i, g?: Parti, a, l<AnalyticsConfig>): AdvancedAnalytics {if (!AdvancedAnalyti, c, s.instan, c, e) {
-      AdvancedAnalyti, c, s.instan, c, e = newAdvancedAnalytics({enableHeatmaps: trueenableScrollTracking: trueenableClickTracking: tr, u, e 
-        ...config
+  construc, t, o, r(con, f, i, g: AnalyticsC, o, n, f, i, g) {
+    t, h, i, s.c, o, n, f, i, g = c, o, n, f, i, g;
+    t, h, i, s.se, s, s, i, o, n = t, h, i, s.initializeSe, s, s, i, o, n();
+    t, h, i, s.setupEventList, e, n, e, r, s();
+    t, h, i, s.startFlushTi, m, e, r()};
+  sta, t, i, c, getInst, a, n, c, e(c, o, n, f, i, g?: Pa, r, t, i, a, l<AnalyticsCon, f, i, g>): AdvancedAnalytics {i, f (!AdvancedAnalytics.insta, n, c, e) {
+      AdvancedAnal, y, t, i, c, s.ins, t, a, n, c, e = newAdvancedAnal, y, t, i, c, s({enableHeatm, a, p, s: trueenableScrollTrack, i, n, g: trueenableClickTrack, i, n, g: true         ...con, f, i, g
       })};
-    return, AdvancedAnalytic, s.instan, c, e};
-  privateinitializeSession(): UserSession {letsessionId = "server_sessi, o, n";
-    if (typeofwindow !== "undefined" && type, o, f === sessionStorage !== "undefined") {
-      session, I, d = sessionStora, g, e.getItem("analytics_session_id") || `sessi, o, n, _${Date.now()}_${Math.random().toString(36).substr(29)}`;
-      sessionStora, g, e.setItem("analytics_session_id", session, I, d)}}};
-  privatesetupEventListeners(): vo, i, d {if (type, o, f === window === "undefined") retu, r, n;
+    return, AdvancedAnaly, t, i, c, s.insta, n, c, e};
+  privateinitializeSess, i, o, n(): UserSess, i, o, n {letsessio, n, I, d = "server_se, s, s, i, o, n";
+    i, f (typeofwin, d, o, w !== "undefi, n, e, d" && typ, e, o, f === sessionStor, a, g, e !== "undefi, n, e, d") {
+      sessio, n, I, d = sessionStor, a, g, e.getI, t, e, m("analytics_session, _, i, d") || `se, s, s, i, o, n, _${D, a, t, e.no, w()}_${M, a, t, h.ran, d, o, m().toStr, i, n, g(3, 6).sub, s, t, r(2, 9)}`;
+      sessionStor, a, g, e.setI, t, e, m("analytics_session, _, i, d", sess, i, o, n, I, d)}}};
+  priv, a, t, e, setupEventListe, n, e, r, s(): v, o, i, d {i, f (typ, e, o, f === win, d, o, w === "undefi, n, e, d") r, e, t, u, r, n;
 
-    // Pagevisibili, t, y, trackingdocument.addEventListener("visibilitychange"() => {
-      if (document.hidd, e, n) {
-        th, i, s.track("engagement""page_hidden""user_left_page"undefined{})} el, s, e {th, i, s.track("engagement""page_visible""user_returned"undefined{})}});
-    // Scrolltrackingif(th, i, s.conf, i, g.enableScrollTracki, n, g) {l, etscrollTimeout: Node, J, S.Timeo, u, t;
-      wind, o, w.addEventListener("scroll"() => {
-        clearTimeout(scrollTimeo, u, t);
-        scrollTimeo, u, t = setTimeout(() => {
-          constscrollPerce, n, t = Math.round((wind, o, w.scrol, l, Y / (document.documentEleme, n, t.scrollHeig, h, t - wind, o, w.innerHeig, h, t)) * 1, 0, 0
+    // Pagevisibilitytrackingdocument.addEventListe, n, e, r("visibilitycha, n, g, e"() => {
+      i, f (document.hid, d, e, n) {
+        t, h, i, s.tr, a, c, k("engagem, e, n, t""page_hid, d, e, n""user_left_p, a, g, e"undefi, n, e, d{})} e, l, s, e {t, h, i, s.tr, a, c, k("engagem, e, n, t""page_visi, b, l, e""user_retur, n, e, d"undefi, n, e, d{})}});
+    // Scr, o, l, l, track, i, n, g, i, f (t, h, i, s.c, o, n, f, i, g.enableScrollTra, c, k, i, n, g) {letscrollTime, o, u, t: N, o, d, e, J, S.Time, o, u, t;
+      win, d, o, w.addEventListe, n, e, r("scr, o, l, l"() => {
+        clearTi, m, e, o, u, t(scrollTi, m, e, o, u, t);
+        scrollTi, m, e, o, u, t = setTi, m, e, o, u, t(() => {
+          constscrollPe, r, c, e, n, t = M, a, t, h.ro, u, n, d((w, i, n, d, o, w.sc, r, o, l, l, Y / (document.documentEl, e, m, e, n, t.scrollH, e, i, g, h, t - w, i, n, d, o, w.innerH, e, i, g, h, t)) * 10, 0
           );
-          th, i, s.track("engagement""scroll""page_scroll", scrollPerce, n, t{ scrollPercent })}1, 5, 0)})};
-    // Clicktrackingif(th, i, s.conf, i, g.enableClickTracki, n, g) {document.addEventListener("click"(eve, n, t) => {
+          t, h, i, s.tr, a, c, k("engagem, e, n, t""scr, o, l, l""page_scr, o, l, l", scrollPerc, e, n, t{ scrollPerc, e, n, t })}1, 5, 0)})};
+    // Cl, i, c, k, track, i, n, g, i, f (t, h, i, s.con, f, i, g.enableClickTrack, i, n, g) {document.addEventListe, n, e, r("cl, i, c, k"(ev, e, n, t) => {
         
-        if (eleme, n, t) {
-          consttagNa, m, e = eleme, n, t.tagNa, m, e.toLowerCase();
-          constte, x, t = eleme, n, t.textConte, n, t? .trim() || "";
-          con, s, t, hr, e, f = element.getAttribute("href') || '";
+        i, f (el, e, m, e, n, t) {
+>>>>>> 45ce5fae8a680d713f034d877aa81b1d405b5, 7, 6, 3
           
-          this.track("interaction'"click"`${tagName}_cl, i, c, k` : undefin, e, d{href: className: eleme, n, t.classNameid: element.id
+          t, h, i, s.tr, a, c, k("interact, i, o, n""cl, i, c, k"`${tagN, a, m, e}_c, l, i, c, k` : unde, f, i, n, e, d{h, r, e, f  : clas, s, N, a, m, e : elem, e, n, t.classNam, e, i, d: elem, e, n, t.i, d
           })}})};
-    // Formtrackingif(th, i, s.conf, i, g.enableFormTracki, n, g) {document.addEventListener("submit"(eve, n, t) => {
-        con, s, t, fo, r, m = eve, n, t.targetasHTMLFormEleme, n, t;        constformNa, m, e = fo, r, m.na, m, e || form.id || "unnamed_form";
-        
-          formId: fo, r, m.idformName: fo, r, m.nameformAction: fo, r, m.actionformMethod: fo, r, m.method
+    // F, o, r, m, track, i, n, g, i, f (t, h, i, s.con, f, i, g.enableFormTrack, i, n, g) {document.addEventListe, n, e, r("sub, m, i, t"(ev, e, n, t) => {
+        const, f, o, r, m = ev, e, n, t.targetasHTMLFormEl, e, m, e, n, t;        constfor, m, N, a, m, e = f, o, r, m.n, a, m, e || f, o, r, m.i, d || "unnamed_f, o, r, m";        
+          for, m, I, d: f, o, r, m.idformN, a, m, e: f, o, r, m.nameformAct, i, o, n: f, o, r, m.actionformMet, h, o, d: f, o, r, m.met, h, o, d
         })})};
-    // Performancetrackingif(th, i, s.conf, i, g.enablePerformanceTracki, n, g) {wind, o, w.addEventListener("load"() => {
-        setTimeout(() => {
-          con, s, t, perfDa, t, a = performan, c, e.getEntriesByType("navigation")[0] asPerformanceNavigationTiming;
+    // Performa, n, c, e, track, i, n, g, i, f (t, h, i, s.c, o, n, f, i, g.enablePerformanceTrack, i, n, g) {win, d, o, w.addEventListe, n, e, r("l, o, a, d"() => {
+        setTi, m, e, o, u, t(() => {
+          const, perfD, a, t, a = performance.getEntriesByT, y, p, e("navigat, i, o, n")[0] asPerformanceNavigationTim, i, n, g;
           
-          th, i, s.track("performance""page_load""page_load_time", perfDa, t, a.loadEventE, n, d - perfDa, t, a.loadEventSta, r, t{
-            domContentLoaded: perfDa, t, a.domContentLoadedEventE, n, d - perfDa, t, a.domContentLoadedEventStartfirstPaint: performan, c, e.getEntriesByName("fir, s, t-paint")[0]?.startTime || 0firstContentfulPaint: performan, c, e.getEntriesByName("fir, s, t-contentf, u, l-paint")[0]?.startTime || 0largestContentfulPaint: performan, c, e.getEntriesByName("large, s, t-contentf, u, l-paint")[0]? .startTime || 0
+          t, h, i, s.tr, a, c, k("performance""page_l, o, a, d""page_load_t, i, m, e", per, f, D, a, t, a.loadEve, n, t, E, n, d - per, f, D, a, t, a.loadEvent, S, t, a, r, t{
+            domContentLoa, d, e, d: per, f, D, a, t, a.domContentLoadedEve, n, t, E, n, d - perfD, a, t, a.domContentLoadedEventStartfirstPa, i, n, t: performance.getEntriesByN, a, m, e("fi, r, s, t-pa, i, n, t")[0]?.startT, i, m, e || 0firstContentfulPa, i, n, t: performance.getEntriesByN, a, m, e("fi, r, s, t-conte, n, t, f, u, l-pa, i, n, t")[0]?.startT, i, m, e || 0largestContentfulPa, i, n, t: performance.getEntriesByN, a, m, e("la, r, g, e, s, t-content, f, u, l-pa, i, n, t")[0]? .startT, i, m, e || 0
           })}0)})};
-    // Errortrackingif(th, i, s.conf, i, g.enableErrorTracki, n, g) {wind, o, w.addEventListener("error"(eve, n, t) => {
-        th, i, s.track("error""javascript_error"eve, n, t.err, o, r?.name || "UnknownError" : undefined: {
-          filename: eve, n, t.filenamelineno: eve, n, t.linenocolno: eve, n, t.colnostack: eve, n, t.err, o, r? .stack
+    // Er, r, o, r, track, i, n, g, i, f (t, h, i, s.c, o, n, f, i, g.enableErrorTrack, i, n, g) {win, d, o, w.addEventListe, n, e, r("er, r, o, r"(ev, e, n, t) => {
+        t, h, i, s.tr, a, c, k("er, r, o, r""javascript_er, r, o, r"ev, e, n, t.er, r, o, r?.n, a, m, e || "UnknownEr, r, o, r" : unde, f, i, n, e, d  : {
+          fil, e, n, a, m, e : ev, e, n, t.filenamelin, e, n, o: ev, e, n, t.linenoco, l, n, o: ev, e, n, t.colnost, a, c, k: ev, e, n, t.er, r, o, r? .st, a, c, k
         })});
 
-      wind, o, w.addEventListener("unhandledrejection"(eve, n, t) => {th, i, s.track("error""unhandled_promise_rejection""PromiseRejection" : undefined: {
-          reason: eve, n, t.reason
+      win, d, o, w.addEventListe, n, e, r("unhandledreject, i, o, n"(ev, e, n, t) => {t, h, i, s.tr, a, c, k("er, r, o, r""unhandled_promise_reject, i, o, n""PromiseReject, i, o, n" : unde, f, i, n, e, d  : {
+          r, e, a, s, o, n : ev, e, n, t.rea, s, o, n
         })})}};
-  privatestartFlushTimer(): vo, i, d {th, i, s.flushTim, e, r = setInterval(() => {      th, i, s.flush()}, th, i, s.conf, i, g.flushInterv, a, l)};
-  track(category: stringaction: stringlab, e, l?: stri, n, g 
+  priv, a, t, e, startFlushT, i, m, e, r(): v, o, i, d {t, h, i, s.flush, T, i, m, e, r = setInt, e, r, v, a, l(() => {      t, h, i, s.fl, u, s, h()}, t, h, i, s.c, o, n, f, i, g.flushInt, e, r, v, a, l)};
+  tr, a, c, k(categ, o, r, y: stringact, i, o, n: string, l, a, b, e, l?: s, t, r, i, n, g 
 
-  ): vo, i, d {constevent: AnalyticsEve, n, t = {
-      id: `even, t, _${Date.now()}_${Math.random().toString(36).substr(29)}`type: "custom"categoryactionlabelvaluetimestamp: Da, t, e.now()sessionId: th, i, s.sessi, o, n.sessionIduserId: th, i, s.sessi, o, n.userIdurl: wind, o, w.locati, o, n.hrefuserAgent: navigat, o, r.userAgentmetadata, val, u  e?: numbermetada, t, a?: Reco, r, d<stringany>
-  ): void {constevent: AnalyticsEve, n, t = {
-      id: `even, t, _${Date.now()}_${Math.random().toString(36).substr(29)}`type: "custom"categoryactionlabelvaluetimestamp: Da, t, e.now()sessionId: th, i, s.sessi, o, n.sessionIduserId: th, i, s.sessi, o, n.userIdurl: wind, o, w.locati, o, n.hrefuserAgent: navigat, o, r.userAgentmetada, t, a
-
+  ): v, o, i, d {constev, e, n, t: Analytics, E, v, e, n, t = {
+      i, d: `e, v, e, n, t, _${D, a, t, e.no, w()}_${M, a, t, h.ran, d, o, m().toStr, i, n, g(3, 6).sub, s, t, r(2, 9)}`type: "cus, t, o, m"categoryactionlabelvaluetimest, a, m, p: D, a, t, e.n, o, w()sessio, n, I, d: t, h, i, s.se, s, s, i, o, n.sessionIduse, r, I, d: t, h, i, s.se, s, s, i, o, n.userId, u, r, l: w, i, n, d, o, w.loc, a, t, i, o, n.hrefuserAg, e, n, t: navi, g, a, t, o, r.userAgentmetad, a, t, a, va, l, u  e?: numbermet, a, d, a, t, a?: R, e, c, o, r, d<string, a, n, y>
+  ): v, o, i, d {constev, e, n, t: AnalyticsEv, e, n, t = {
+      i, d: `eve, n, t, _${D, a, t, e.no, w()}_${M, a, t, h.ran, d, o, m().toStr, i, n, g(3, 6).sub, s, t, r(2, 9)}`type: "cus, t, o, m"categoryactionlabelvaluetimest, a, m, p: D, a, t, e.n, o, w()sessio, n, I, d: t, h, i, s.se, s, s, i, o, n.sessionIduse, r, I, d: t, h, i, s.se, s, s, i, o, n.userId, u, r, l: w, i, n, d, o, w.loc, a, t, i, o, n.hrefuserAg, e, n, t: navi, g, a, t, o, r.userAgentmet, a, d, a, t, a
     };
 
-    th, i, s.even, t, s.push(eve, n, t);
-    th, i, s.sessi, o, n.lastActivi, t, y = Da, t, e.now();
-    th, i, s.sessi, o, n.even, t, s++;
+    t, h, i, s.e, v, e, n, t, s.p, u, s, h(ev, e, n, t);
+    t, h, i, s.se, s, s, i, o, n.lastAct, i, v, i, t, y = D, a, t, e.no, w();
+    t, h, i, s.se, s, s, i, o, n.e, v, e, n, t, s++;
 
-    // Flush, if, batch sizereachedif(th, i, s.even, t, s.leng, t, h >= th, i, s.conf, i, g.batchSi, z, e) {th, i, s.flush()}};
-): vo, i, d {th, i, s.sessi, o, n.pageVie, w, s++;
-  trackPageView(pageName: stringmetada, t, a?: Reco, r, d<stringany>): voi, d {th, i, s.sessi, o, n.pageVie, w, s++;
+    // Fl, u, s, h, i, f, ba, t, c, h s, i, z, e, reac, h, e, d, i, f (t, h, i, s.e, v, e, n, t, s.l, e, n, g, t, h >= t, h, i, s.c, o, n, f, i, g.batc, h, S, i, z, e) {t, h, i, s.fl, u, s, h()}};
+): v, o, i, d {t, h, i, s.se, s, s, i, o, n.page, V, i, e, w, s++;
+  trackPag, e, V, i, e, w(pageN, a, m, e: stringmet, a, d, a, t, a?: R, e, c, o, r, d<string, a, n, y>): v, o, i, d {t, h, i, s.ses, s, i, o, n.pageVi, e, w, s++;
 
     
-    th, i, s.track("navigation""page_view", pageNameundefin, e, d  {
-      pageViews: th, i, s.sessi, o, n.pageViewssessionDuration: Da, t, e.now() - th, i, s.sessi, o, n.startTime 
-      ...metadata
+    t, h, i, s.tr, a, c, k("navigat, i, o, n""page_v, i, e, w", pageNameunde, f, i, n, e, d  {
+      pageVi, e, w, s: t, h, i, s.se, s, s, i, o, n.pageViewssessionDurat, i, o, n: D, a, t, e.n, o, w() - t, h, i, s.se, s, s, i, o, n.startT, i, m, e 
+      ...metad, a, t, a
     })};
-): vo, i, d {th, i, s.track("conversion"conversionType"conversion", valuemetadata)};
-  trackConversion(conversionType: stringval, u, e?: numbermetada, t, a?: Reco, r, d<stringany>): void {th, i, s.track("conversion"conversionType"conversion"valuemetadata)};
-  privateasyncflush(): Promise<void> {if (this.even, t, s.leng, t, h === 0) retu, r, n;
+): v, o, i, d {t, h, i, s.tr, a, c, k("convers, i, o, n"conversionT, y, p, e"convers, i, o, n"valuemetad, a, t, a)};
+  trackConve, r, s, i, o, n(conversionT, y, p, e: string, v, a, l, u, e?: numbermetad, a, t, a?: Rec, o, r, d<string, a, n, y>): v, o, i, d {t, h, i, s.tr, a, c, k("convers, i, o, n"conversionT, y, p, e"convers, i, o, n"valuemetad, a, t, a)};
+  privateasyncfl, u, s, h(): Pr, o, m, i, s, e<v, o, i, d> {i, f (t, h, i, s.eve, n, t, s.len, g, t, h === 0) r, e, t, u, r, n;
+    consteventsT, o, S, e, n, d = [...t, h, i, s.e, v, e, n, t, s];
+    t, h, i, s.eve, n, t, s = [];
 
-    consteventsToSe, n, d = [...th, i, s.even, t, s];
-    th, i, s.even, t, s = [];
-
-    t, r, y {
-      awaitfetch("/a, p, i/analytics"{
-        method: "POST"headers: {
-          "Content-Type": "application/json"}body: JS, O, N.stringify({events: eventsToSendsession: th, i, s.session
+    tr, y {
+      awaitfe, t, c, h("/ap, i/analyt, i, c, s"{
+        met, h, o, d: "P, O, S, T"head, e, r, s: {
+          "Cont, e, n, t-T, y, p, e": "applicat, i, o, n/j, s, o, n"}b, o, d, y: J, S, O, N.stri, n, g, i, f, y({eve, n, t, s: eventsToSendsess, i, o, n: t, h, i, s.sess, i, o, n
         })
-      })} catch(err, o, r) {conso, l, e.error("Failedtosendanalyticsevents:', error)};
-  getSession(): UserSessi, o, n {return { ...th, i, s.session }};
-  getEvents(): AnalyticsEve, n, t[] {return [...th, i, s.events]};
-  getEventCount(): numb, e, r {retu, r, n, th, i, s.even, t, s.length};
-  destroy(): vo, i, d {if (th, i, s.flushTim, e, r) {
-      clearInterval(th, i, s.flushTimer)};
-    th, i, s.flush()}};
-// React, hook, for analytics, export, const useAdvancedAnalytics = () => {const [analytics] = useState(() => AdvancedAnalyti, c, s.getInstance());
-    category: stri, ngaction: stri, n, g, lab, e, l?: stri, n, g, va, l, u, e?: numb, e, r, metad, a, t, a?: Reco, r, d<stringany>
+ {const [analyt, i, c, s] = useState(() => AdvancedAnal, y, t, i, c, s.getInsta, n, c, e());
+    categ, o, r, y: s, t, r, i, ngact, i, o, n: s, t, r, i, n, g, la, b, e, l?: s, t, r, i, n, g, v, a, l, u, e?: n, u, m, b, e, r, me, t, a, d, a, t, a?: R, e, c, o, r, d<string, a, n, y>
+
+      })} ca, t, c, h (er, r, o, r) {cons, o, l, e.er, r, o, r("Failedtosendanalyticseve, n, t, s:'er, r, o, r)};
+  getSe, s, s, i, o, n(): UserSe, s, s, i, o, n {return { ...t, h, i, s.sess, i, o, n }};
+  getE, v, e, n, t, s(): Analytics, E, v, e, n, t[] {return [...t, h, i, s.eve, n, t, s]};
+  getEvent, C, o, u, n, t(): n, u, m, b, e, r {r, e, t, u, r, n, t, h, i, s.eve, n, t, s.len, g, t, h};
+  de, s, t, r, o, y(): v, o, i, d {i, f (t, h, i, s.flush, T, i, m, e, r) {
+      clearInt, e, r, v, a, l(t, h, i, s.flushTi, m, e, r)};
+    t, h, i, s.fl, u, s, h()}};
+// React, h, o, o, k, fo, r analyt, i, c, s, export, const useAdvancedAnal, y, t, i, c, s = () => {const [analyt, i, c, s] = useState(() => AdvancedAnal, y, t, i, c, s.getIns, t, a, n, c, e());
+    categ, o, r, y: stringact, i, o, n: s, t, r, i, n, g, la, b, e, l?: s, t, r, i, n, g, v, a, l, u, e?: n, u, m, b, e, r, me, t, a, d, a, t, a?: R, e, c, o, r, d<string, a, n, y>
+
   ) => {
-    analytic, s.track(catego, r, y, acti, o, n, lab, e, l, val, u, e, metadata)}, [analytics]);
+    analyt, i, c, s.tr, a, c, k(cate, g, o, r, y, a, c, t, i, o, n, la, b, e, l, va, l, uemetad, a, t, a)}, [analyt, i, c, s]);
 
-  const, trackPageVie, w = useCallback((pageName: stri, n, g, metad, a, t, a?: Reco, r, d<stringany>) => {analytic, s.trackPageView(pageNa, m, e, metadata)}, [analytics]);
+  const, trackPage, V, i, e, w = useCal, l, b, a, c, k((pageN, a, m, e: s, t, r, i, n, g, me, t, a, d, a, t, a?: R, e, c, o, r, d<string, a, n, y>) => {analyt, i, c, s.trackPageV, i, e, w(pageNamemetad, a, t, a)}, [analyt, i, c, s]);
+  const, trackConver, s, i, o, n = useCallb, a, c, k((
+    conversionT, y, p, e: s, t, r, i, n, g, v, a, l, u, e?: n, u, m, b, e, r, me, t, a, d, a, t, a?: R, e, c, o, r, d<string, a, n, y>
+  ) => {analyt, i, c, s.trackConvers, i, o, n(conversion, T, y, p, e, va, l, uemetad, a, t, a)}, [analyt, i, c, s]);
 
-  const, trackConversio, n = useCallback((
-    conversionType: stri, n, g, va, l, u, e?: numb, e, r, metad, a, t, a?: Reco, r, d<stringany>
-  ) => {analytic, s.trackConversion(conversionTy, p, e, val, u, e, metadata)}, [analytics]);
-
-  const, getSessio, n = useCallback(() => {retu, r, n, analyti, c, s.getSession()}, [analytics]);
-
-  return {tra, c, k, trackPageView, trackConversio, n, getSessionanalytics
+  const, getSes, s, i, o, n = useCal, l, b, a, c, k(() => {r, e, t, u, r, n, analyt, i, c, s.getSess, i, o, n()}, [analyt, i, c, s]);
+  return {tr, a, c, k, trackPageV, i, e, w, trackConversiongetSessionanalyt, i, c, s
   }};
 
 export default AdvancedAnalytics;

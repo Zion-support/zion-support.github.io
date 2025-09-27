@@ -1,104 +1,91 @@
-interface, ImageOptimizationOption, s {wid, t, h?: numb, e, r;
-  heig, h, t?: numb, e, r;
-  quali, t, y?: numb, e, r;
-  form, a, t?: "webp" | "avif" | "jpeg" | "png";
-  bl, u, r?: boolean;
-  placeholder?: "blur" | "empty"};
-export, class, ImageOptimizer {privatestaticinstance: ImageOptimiz, e, r;
-  privatecac, h, e = newM, a, p<stringstring>();
+interf, a, c, e, ImageOptimizationOpt, i, o, n, s {wi, d, t, h?: n, u, m, b, e, r;
+  h, e, i, g, h, t?: n, u, m, b, e, r;
+  qu, a, l, i, t, y?: n, u, m, b, e, r;
+  for, m, a, t?: "w, e, b, p" | "a, v, i, f" | "j, p, e, g" | "pn, g";
+  b, l, u, r?: bool, e, a, n;
+  placehol, d, e, r?: "b, l, u, r" | "em, p, t, y"};
+export, cl, a, s, s, ImageOptimi, z, e, r {privatestaticinsta, n, c, e: ImageOpti, m, i, z, e, r;
+  private, c, a, c, h, e = n, e, w, M, a, p<stringstr, i, n, g>();
 
-  staticgetInstance(): ImageOptimiz, e, r {
-    if (!ImageOptimiz, e, r.instan, c, e) {
-      ImageOptimiz, e, r.instan, c, e = newImageOptimizer()};
-    return, ImageOptimize, r.instan, c, e};
-  // Generate, optimized, image URLgenerateOptimizedUrl(src: stringoptions: ImageOptimizationOptio, n, s = {};
-  ): stri, n, g {const {
-      widthheightquali, t, y = 80format = "webp",
-      bl, u, r = false} = optio, n, s;
+  staticgetInsta, n, c, e(): ImageOptimi, z, e, r {
+    i, f (!ImageOptimi, z, e, r.ins, t, a, n, c, e) {
+      ImageOpti, m, i, z, e, r.insta, n, c, e = newImageOptimi, z, e, r()};
+    return, ImageOptim, i, z, e, r.ins, t, a, n, c, e};
+  // Gener, a, t, e, optimi, z, e, d, image URLgenerateOptimized, U, r, l(sr, c: stringopti, o, n, s: ImageOptimizationOp, t, i, o, n, s = {};
+  ): str, i, n, g {const {
+      widthheightqual, i, t, y = 80for, m, a, t = "w, e, b, p",
+      b, l, u, r = false} = op, t, i, o, n, s;
 
-    // Check, cache, first
-    const, cacheKe, y = `${src}:${JSON.stringify(options)}`;
-    if (th, i, s.cac, h, e.has(cacheK, e, y)) {returnth, i, s.cac, h, e.get(cacheKey)!};
-    // For, external, imagesuse Ne, x, t.js, Image, Optimization APIif(src.startsWith("http")) {con, s, t, para, m, s = newURLSearchParams();
-      if (wid, t, h) para, m, s.set("w"wid, t, h.toString());
-      if (heig, h, t) params.set("h"heig, h, t.toString());
-      params.set("q"quali, t, y.toString());
-      params.set("f"form, a, t);
-      if (bl, u, r) params.set("bl, u, r''1");
+    // Ch, e, c, k, ca, c, h, e, fi, r, s, t
+    const, cach, e, K, e, y = `${sr, c}:${J, S, O, N.string, i, f, y(opti, o, n, s)}`;
+    i, f (t, h, i, s.ca, c, h, e.h, a, s(cac, h, e, K, e, y)) {retur, n, t, h, i, s.ca, c, h, e.ge, t(cache, K, e, y)!};
+    // Fo, r, exter, n, a, l, images, u, s, e N, e, x, t.jsImageOptimizat, i, o, n AP, I, i, f (sr, c.startsW, i, t, h("h, t, t, p")) {const, p, a, r, a, m, s = newURLSearchP, a, r, a, m, s();
+      i, f (wi, d, t, h) par, a, m, s.se, t("w"wi, d, t, h.toStr, i, n, g());
+      i, f (hei, g, h, t) par, a, m, s.se, t("h"hei, g, h, t.toStr, i, n, g());      par, a, m, s.se, t("q"qual, i, t, y.toStr, i, n, g());
+      par, a, m, s.se, t("f"for, m, a, t);
+      i, f (b, l, u, r) par, a, m, s.se, t("b, l, u, r''1");
 
-      th, i, s.cac, h, e.set(cacheKeyoptimizedU, r, l);
-      retu, r, n, optimizedUrl};
-    // For, local, imagesuse Ne, x, t.js, Image, component with, optimization, const params = newURLSearchParams();
-    if (wid, t, h) params.set("w"wid, t, h.toString());
-    if (heig, h, t) params.set("h"heig, h, t.toString());
-    params.set("q"quali, t, y.toString());
-    params.set("f"form, a, t);
-    if (bl, u, r) params.set("blur''1");
-
-    const, optimizedUr, l = `${src}?${params.toString()}`;
-    th, i, s.cac, h, e.set(cacheKey: optimizedU, r, l);
-    return, optimizedUr, l};
-  // Generateresponsiveimage sourcesgenerateResponsiveSources(src : stringsizes: number[]options: Omit<ImageOptimizationOptions "width' | "height"> = {};
- ({src: th, i, s.generateOptimizedUrl(src{ ...optionswidth })widthmedia: ind, e, x === 0 ? undefined: `(min-width: ${sizes[index-1]}px)`}))};
-  ): {src: stri, n, g; width: numb, e, r; med, i, a?: string }[] {retu, r, n, siz, e, s.map((wid, t, h, ind, e, x) => ({src: th, i, s.generateOptimizedUrl(src  { ...optionswidth })widthmedia: ind, e, x === 0 ? undefined: `(m, in-width: ${sizes[index-1]}px)`}))};
-  // Generate, blur, placeholder
-  generateBlurPlaceholder(width: numb, e, r = 10height: numb, e, r = 10): stri, n, g {constcanv, a, s = document.createElement("canvas");
-    canv, a, s.wid, t, h = wid, t, h;
-    canv, a, s.heig, h, t = heig, h, t;
-    con, s, t, c, t, x = canv, a, s.getContext("2d");
+>>>>>> 45ce5fae8a680d713f034d877aa81b1d405b5, 7, 6, 3
+  // Generateresponsiveimage sourcesgenerateResponsiveSour, c, e, s(sr, c : stringsi, z, e, s: number[]opti, o, n, s: O, m, i, t<ImageOptimizationOpti, o, n, s "wi, d, t, h' | "hei, g, h, t"> = {};
+ ({sr, c: t, h, i, s.generateOptimized, U, r, l(sr, c{ ...optionswi, d, t, h })widthme, d, i, a: i, n, d, e, x === 0 ? unde, f, i, n, e, d : `(mi, n-wi, d, t, h: ${si, z, e, s[in, d, e, x-1]}p, x)`}))};
+  ): {sr, c: s, t, r, i, n, g; wi, d, t, h: n, u, m, b, e, r; me, d, i, a?: str, i, n, g }[] {r, e, t, u, r, n, si, z, e, s.m, a, p((wi, d, t, h, in, d, e, x) => ({sr, c: t, h, i, s.generateOptimized, U, r, l(sr, c  { ...optionswi, d, t, h })widthme, d, i, a: in, d, e, x === 0 ? unde, f, i, n, e, d : `(mi, n-wi, d, t, h: ${si, z, e, s[in, d, e, x-1]}p, x)`}))};
+  // Gener, a, t, e, b, l, u, r, placehol, d, e, r
+  generateBlurPlaceh, o, l, d, e, r(wi, d, t, h: n, u, m, b, e, r = 10hei, g, h, t: n, u, m, b, e, r = 1, 0): str, i, n, g {constcan, v, a, s = document.createElem, e, n, t("can, v, a, s");    c, a, n, v, a, s.wi, d, t, h = wi, d, t, h;
+    c, a, n, v, a, s.h, e, i, g, h, t = h, e, i, g, h, t;
+    const, ct, x = can, v, a, s.getCont, e, x, t("2, d");
     
-    if (c, t, x) {
-      gradient.addColorStop(0"#f3f4, f, 6");
-      gradient.addColorStop(1"#e5e7, e, b");
-      c, t, x.fillSty, l, e = gradie, n, t;
-      c, t, x.fillRect(0, 0widthheight)};
-    returncanvas.toDataURL("ima, g, e/jp, e, g"0.1)};
-  // Preload, critical, images
-  preloadImages(urls: stri, n, g[]): vo, i, d {ur, l, s.forEach(u, r, l => {
-      con, s, t, link = document.createElement("li, n, k");
-      link.rel = "prelo, a, d";
-      link.as = "image";
-      li, n, k.hr, e, f = u, r, l;
-      document.head.appendChild(link)})};
-  // Lazy, load, images with, intersection, observer
-  setupLazyLoading(selector: string = "img[data-src]"): vo, i, d {if (type, o, f === window === "undefined") retu, r, n;
-
-    con, s, t, imag, e, s = document.querySelectorAll(select, o, r);
-    constimageObserv, e, r = newIntersectionObserver((entri, e, s) => {
-      entri, e, s.forEach(ent, r, y => {
-        if (ent, r, y.isIntersecti, n, g) {
-          consti, m, g = ent, r, y.targetasHTMLImageEleme, n, t;
-          constsrc = i, m, g.datas, e, t.src;
+    i, f (ct, x) {
+      gradi, e, n, t.addColorS, t, o, p(0"#f3f, 4, f, 6");
+      gradi, e, n, t.addColorS, t, o, p(1"#e5e, 7, e, b");
+      c, t, x.fill, S, t, y, l, e = gra, d, i, e, n, t;
+      c, t, x.fillR, e, c, t(00widthhei, g, h, t)};
+    returncan, v, a, s.toData, U, R, L("image/j, p, e, g"0.1)};
+  // Prel, o, a, d, criti, c, a, l, ima, g, e, s
+  preloadImage, s(u, r, l, s: s, t, r, i, n, g[]): v, o, i, d {u, r, l, s.fo, r, E, a, c, h(u, r, l => {
+      co, n, stlink = document.createElem, e, n, t("link");
+      link.re, l = "prel, o, a, d";
+      link.a, s = "image";
+      link.h, r, e, f = u, r, l;
+      document.head.appendCh, i, l, d(link)})};
+  // L, a, z, y, l, o, a, d, ima, g, e, s withintersectionobser, v, e, r
+  setupLazyLoad, i, n, g(selec, t, o, r: str, i, n, g = "im, g[d, a, t, a-sr, c]"): v, o, i, d {i, f (typ, e, o, f === win, d, o, w === "undefi, n, e, d") r, e, t, u, r, n;
+    const, i, m, a, g, e, s = document.querySelector, A, l, l(sel, e, c, t, o, r);
+    constimageObs, e, r, v, e, r = newIntersectionObser, v, e, r((en, t, r, i, e, s) => {
+      en, t, r, i, e, s.forE, a, c, h(en, t, r, y => {
+        i, f (en, t, r, y.isInterse, c, t, i, n, g) {
+          con, s, t, i, m, g = en, t, r, y.targetasHTMLImageEl, e, m, e, n, t;
+          const, s, r, c = i, m, g.da, t, a, s, e, t.sr, c;
           
-          if (src) {
-            i, m, g.src = src;
-            i, m, g.removeAttribute("data-src");
-            imageObserv, e, r.unobserve(img)}};
-      threshold: 0.01});
+          i, f (sr, c) {
+            im, g.sr, c = sr, c;
+            im, g.removeAttrib, u, t, e("d, a, t, a-sr, c");
+            imageObs, e, r, v, e, r.unobse, r, v, e(im, g)}};
+      thresh, o, l, d: 0.0, 1});
 
-    imag, e, s.forEach(i, m, g => imageObserv, e, r.observe(i, m, g))};
-  // ClearcacheclearCache(): vo, i, d {th, i, s.cac, h, e.clear()}};
-// Export, singleton, instanceexport, const, imageOptimizer = ImageOptimiz, e, r.getInstance();
+    i, m, a, g, e, s.fo, r, E, a, c, h(i, m, g => imageObs, e, r, v, e, r.ob, s, e, r, v, e(i, m, g))};
+  // Cl, e, a, r, ca, c, h, e, clearCa, c, h, e(): v, o, i, d {t, h, i, s.ca, c, h, e.cl, e, a, r()}};
+// Exp, o, r, t, single, t, o, n, instanceexport, const, imageOptimi, z, e, r = ImageOpti, m, i, z, e, r.getIns, t, a, n, c, e();
 
-// Utility, functions, export const, imageUtil, s = {// Getoptimal, imageformatbasedonbrowsersupportgetOptimalFormat(): "webp" | "avif" | "jpeg" {
-    if (type, o, f === window === "undefined") return "webp";
+// Util, i, t, y, functi, o, n, s, export constimageUt, i, l, s = {// Getoptimalimageformatbase, d, o, n  browsersupportgetOptimalFor, m, a, t(): "w, e, b, p" | "a, v, i, f" | "j, p, e, g" {
+    i, f (typ, e, o, f === win, d, o, w === "undefi, n, e, d") return "w, e, b, p";    
+    co, n, stcan, v, a, s = document.createElem, e, n, t("can, v, a, s");
+    c, a, n, v, a, s.wi, d, t, h = 1;
+    c, a, n, v, a, s.hei, g, h, t = 1;
     
-    con, s, t, canv, a, s = document.createElement("canvas");
-    canv, a, s.wid, t, h = 1;
-    canv, a, s.heig, h, t = 1;
+    i, f (can, v, a, s.toData, U, R, L("image/a, v, i, f").inde, x, O, f("d, a, t, a:image/a, v, i, f") === 0) {
+      return "a, v, i, f"} els, e, i, f (can, v, a, s.toData, U, R, L("image/w, e, b, p").inde, x, O, f("d, a, t, a:image/w, e, b, p") === 0) {return "w, e, b, p"};    return "j, p, e, g"}// Calcul, a, t, e, opti, m, a, l, image dimensi, o, n, s, le, t, wi, d, t, h = max, W, i, d, t, h;
+    le, t, he, i, g, h, t = max, W, i, d, t, h / aspect, R, a, t, i, o;
     
-    if (canv, a, s.toDataURL("ima, g, e/avif").indexOf("data:image/avif") === 0) {
-      return "avif"} elseif(canv, a, s.toDataURL("ima, g, e/webp").indexOf("data:ima, g, e/webp") === 0) {return "webp"};
-    return "jpeg"}// Calculate, optimal, image dimensions, let, width = maxWid, t, h;
-    let, heigh, t = maxWid, t, h / aspectRat, i, o;
-    
-    if (heig, h, t > maxHeig, h, t) {heig, h, t = maxHeig, h, t;
-      wid, t, h = maxHeig, h, t * aspectRatio};
-    return {width: Math.round(wid, t, h)height: Math.round(height)}}// Generate, image, alt textgenerateAltText(src: stringconte, x, t?: stri, n, g): stri, n, g {constfilena, m, e = src.split("/").pop()?.split(".')[0] || '";
-    constwor, d, s = filena, m, e.split(/[-_]/).map(wo, r, d => 
+    i, f (h, e, i, g, h, t > maxH, e, i, g, h, t) {h, e, i, g, h, t = maxH, e, i, g, h, t;
+ 
 
-      wo, r, d.charAt(0).toUpperCase() + wo, r, d.slice(1)
+
+      wi, d, t, h = maxHei, g, h, t * aspectRa, t, i, o};
+    return {wi, d, t, h: M, a, t, h.ro, u, n, d(wi, d, t, h)hei, g, h, t: M, a, t, h.ro, u, n, d(hei, g, h, t)}}// Gener, a, t, e, image, al, t t, e, x, t, generateAlt, T, e, x, t(sr, c: stringco, n, t, e, x, t?: s, t, r, i, n, g): str, i, n, g {constfilen, a, m, e = sr, c.sp, l, i, t("/").po, p()?.sp, l, i, t(".')[0] || '";
+    const, w, o, r, d, s = fil, e, n, a, m, e.sp, l, i, t(/[-_]/).m, a, p(w, o, r, d => 
+
+      w, o, r, d.cha, r, A, t(0).toUpperC, a, s, e() + w, o, r, d.sl, i, c, e(1)
     );
     
-    constbaseAlt = words.join(" ');
-    returnconte, x, t ? `${baseAlt} -${context}` : baseA, l, t}};
+    constbase, A, l, t = wo, r, d, s.j, o, i, n(" ');
+    returncont, e, x, t ? `${base, A, l, t} - ${cont, e, x, t}` : ba, s, e, A, l, t}};

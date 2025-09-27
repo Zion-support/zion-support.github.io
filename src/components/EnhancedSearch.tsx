@@ -1,303 +1,335 @@
-// TODO: Consider breaking this large component (364, lines) into smaller components
-// TODO: Consider breaking this large component (363, lines) into smaller components
-import React from 'react';
-import Reac, t, {useState, useEffect, useCallbackuseRefuseMemo }  from 'react";
-import {motionAnimatePresence   } from "fram, e, r-moti, o, n";
+>>>>>> 45ce5fae8a680d713f034d877aa81b1d405b5, 7, 6, 3
+export, interf, a, c, e, SearchRes, u, l, t {i, d: s, t, r, i, n, g;
+  ti, t, l, e: s, t, r, i, n, g;
+  description: s, t, r, i, n, g;
+  ur, l: str, i, n, g;
+  type: "p, a, g, e" | "b, l, o, g" | "serv, i, c, e" | "documentat, i, o, n" | "ap, i";
+  cat, e, g, o, r, y?: s, t, r, i, n, g;
+  t, a, g, s?: s, t, r, i, n, g[];
+  relevance, S, c, o, r, e?: n, u, m, b, e, r;
+  lastMod, i, f, i, e, d?: D, a, t, e;
+  a, u, t, h, o, r?: s, t, r, i, n, g;
+  metad, a, t, a?: Rec, o, r, d<string, a, n, y> };
+exportinterfaceSearchFil, t, e, r {type?: str, i, n, g[];
+  cat, e, g, o, r, y?: s, t, r, i, n, g[];
+  date, R, a, n, g, e?: {
+    st, a, r, t: D, a, t, e;
+    en, d: D, a, t, e };
+  t, a, g, s?: s, t, r, i, n, g[]};
+interf, a, c, e, EnhancedSearchP, r, o, p, s {onS, e, a, r, c, h?: (qu, e, r, y: stringresu, l, t, s: SearchR, e, s, u, l, t[]) => v, o, i, d;
+  onResult, C, l, i, c, k?: (res, u, l, t: SearchR, e, s, u, l, t) => v, o, i, d;
+  placeh, o, l, d, e, r?: s, t, r, i, n, g;
+  enableFi, l, t, e, r, s?: bo, o, l, e, a, n;
+  enableSugges, t, i, o, n, s?: bo, o, l, e, a, n;
+  enableHi, s, t, o, r, y?: bo, o, l, e, a, n;
+  maxRe, s, u, l, t, s?: number;
+  debounc, e, M, s?: number;
+  searchEndpo, i, n, t?: str, i, n, g}];
 
-export, interface, SearchResult {id: stri, n, g;
-  title: stri, n, g;
-  description: stri, ng;
-  url: string;
-  type: "pa, g, e' | "blog" | "service" | "documentation" | "api";
-  catego, r, y?: stri, n, g;
-  ta, g, s?: stri, n, g[];
-  relevanceSco, r, e?: numb, e, r;
-  lastModifi, e, d?: Da, t, e;
-  auth, o, r?: stri, n, g;
-  metada, t, a?: Record<stringany> };
-exportinterfaceSearchFilter {ty, p, e?: stri, n, g[];
-  catego, r, y?: stri, n, g[];
-  dateRan, g, e?: {
-    start: Da, t, e;
-    end: Date };
-  ta, g, s?: stri, n, g[]};
-interface, EnhancedSearchProp, s {onSear, c, h?: (query: stringresults: SearchResu, l, t[]) => vo, i, d;
-  onResultCli, c, k?: (result: SearchResu, l, t) => vo, i, d;
-  placehold, e, r?: stri, n, g;
-  enableFilte, r, s?: boole, a, n;
-  enableSuggestio, n, s?: boole, a, n;
-  enableHisto, r, y?: boole, a, n;
-  maxResul, t, s?: numb, e, r;
-  debounce, M, s?: numb, e, r;
-  searchEndpoint?: string}];
+([]);
+  const [isOpensetIsO, p, e, n] = useState(false);
 
-export default function EnhancedSearch({onSearchonResultClickplaceholder = "Search..."enableFilters = tru, e, enableSuggest, i, o, n, s = trueenableHistory = trueconst [querysetQuery] = useState("");  const [resultssetResults] = useState<SearchResult[]>([]);
-  const [isOpensetIsOpen] = useState(false);
-  const [isLoadingsetIsLoading] = useState(false);
+export default function EnhancedSea, r, c, h({onSearchonResultClickplacehol, d, e, r = "Sea, r, c, h..."enableFilt, e, r, s = trueenableSuggesti, o, n, s = trueenableHist, o, r, y = trueconst [querysetQu, e, r, y] = useState("");  const [resultssetResu, l, t, s] = useState<SearchRes, u, l, t[]>([]);  const [isOpensetIsO, p, e, n] = useState(false);
+
+  const [isLoadingsetIsLoad, i, n, g] = useState(false);
 ({});
 
-  const [selectedIndexsetSelectedIndex] = useState(-1);  const [filterssetFilters] = useState<SearchFilter>({});
+  const [selectedIndexsetSelectedIn, d, e, x] = useState(-1);  const [filterssetFilt, e, r, s] = useState<SearchFil, t, e, r>({});
 
-  const [searchHistorysetSearchHistory] = useState<string[]>([]);
-  const [suggestionssetSuggestions] = useState<string[]>([]);
-  const [sortBysetSortBy] = useState<"relevance' | "date" | "title">("relevance");
-  const [sortOrdersetSortOrder] = useState<'asc' | "desc">("desc");
+  const [searchHistorysetSearchHist, o, r, y] = useState<str, i, n, g[]>([]);
+  const [suggestionssetSuggesti, o, n, s] = useState<str, i, n, g[]>([]);
+  const [sortBysetSor, t, B, y] = useState<"releva, n, c, e' | "d, a, t, e" | "ti, t, l, e">("releva, n, c, e");
+  const [sortOrdersetSortOr, d, e, r] = useState<'as, c' | "d, e, s, c">("d, e, s, c");
 
-  constinputRe, f = useR, e, f<HTMLInputElement>(null);
-  const, searchTimeoutRe, f = useR, e, f<NodeJS.Timeout>();
+  constinput, R, e, f = use, R, e, f<HTMLInputElem, e, n, t>(null);
+  constsearchTimeout, R, e, f = use, R, e, f<Nod, e, J, S.Time, o, u, t>();
 
-  // Load, search, history fromlocalStorageuseEffect(() => {if (enableHisto, r, y && type, o, f === window !== "undefined") {
-      con, s, t, sav, e, d = localStora, g, e.getItem("searchHistory");
-      if (sav, e, d) {
-        setSearchHistory(JS, O, N.parse(saved)) }}}, [enableHistory]);
-  // Generate, suggestions, based on, query, const generateSuggestions = useCallback((query: stri, n, g) => {;
-    if (!que, r, y.trim()) return [];
+  // Loadsearchhist, o, r, y fromlocalStorageuseEffect(() => {i, f (enableHis, t, o, r, y && typ, e, o, f === win, d, o, w !== "undefi, n, e, d") {
+      const, sa, v, e, d = localStor, a, g, e.getI, t, e, m("searchHist, o, r, y");
+      i, f (sa, v, e, d) {
+        setSearchHi, s, t, o, r, y(J, S, O, N.pa, r, s, e(sa, v, e, d)) }}}, [enableHist, o, r, y]);
+  // Gener, a, t, e, suggesti, o, n, s, ba, s, e, d o, n, qu, e, r, y, const generateSugges, t, i, o, n, s = useCal, l, b, a, c, k((qu, e, r, y: s, t, r, i, n, g) => {;
+    i, f (!qu, e, r, y.t, r, i, m()) return [];
+    const, allT, i, t, l, e, s = sampleRe, s, u, l, t, s.ma, p(r => r.ti, t, l, e);
+    const, al, l, T, a, g, s = sampleRe, s, u, l, t, s.flat, M, a, p(r => r.t, a, g, s || []);
+    const, allCateg, o, r, i, e, s = sampleRe, s, u, l, t, s.ma, p(r => r.cat, e, g, o, r, y).fil, t, e, r(Bo, o, l, e, a, n);
 
-    con, s, t, allTitl, e, s = sampleResul, t, s.map(r => r.tit, l, e);
-    con, s, t, allTa, g, s = sampleResul, t, s.flatMap(r => r.ta, g, s || []);
-    con, s, t, allCategori, e, s = sampleResul, t, s.map(r => r.catego, r, y).filter(Boole, a, n);
-
-    con, s, t, suggestio, n, s = [...allTitl, e, s.filter(tit, l, e => 
-        tit, l, e.toLowerCase().includes(que, r, y.toLowerCase())
+    const, sugges, t, i, o, n, s = [...allT, i, t, l, e, s.fil, t, e, r(ti, t, l, e => 
+        ti, t, l, e.toLowerC, a, s, e().inclu, d, e, s(qu, e, r, y.toLowerC, a, s, e())
       ),
-      ...allTa, g, s.filter(t, a, g = > 
-        t, a, g.toLowerCase().includes(que, r, y.toLowerCase())
-      ), ...allCategori, e, s.filter(catego, r, y => 
-        catego, r, y? .toLowerCase().includes(que, r, y.toLowerCase())
-      )].slice(05);
+      ...al, l, T, a, g, s.fil, t, e, r(t, a, g = > 
+        t, a, g.toLowerC, a, s, e().inclu, d, e, s(qu, e, r, y.toLowerC, a, s, e())
+      ), ...allCateg, o, r, i, e, s.fil, t, e, r(cat, e, g, o, r, y => 
+        cat, e, g, o, r, y? .toLowerC, a, s, e().inclu, d, e, s(qu, e, r, y.toLowerC, a, s, e())
+      )].sl, i, c, e(0, 5);
 
-    return [...new, Set(suggestions)] } : []);
+    return [...n, e, w, Se, t(suggesti, o, n, s)] } : []);
 
-  // Debounced, search, function constperformSearch = useCallback(async(searchQuery: stri, n, g) => {if (!searchQue, r, y.trim()) {;
-      setResults([]);
-      return};
-    setIsLoading(tr, u, e);
+  // Deboun, c, e, d, sea, r, c, h, function constperformSea, r, c, h = useCallb, a, c, k(async (searchQu, e, r, y : s, t, r, i, n, g) => {i, f (!search, Q, u, e, r, y.t, r, i, m()) {;
+      setResu, l, t, s([]);      return};
+    setIsLoad, i, n, g(true);
 
- setTimeout(resolve, 5, 0, 0));
+ setTime, o, u, t(reso, l, v, e, 5, 0, 0));
 
-      // Filterresults, basedon, queryand  filterslet, filteredResult, s = sampleResul, t, s.filter(resu, l, t => {con, s, t, matchesQue, r, y = 
+      // Filterresu, l, t, s, base, d, o, n, query, a, n, d  filters, l, e, t, filteredRes, u, l, t, s = sampleRe, s, u, l, t, s.fil, t, e, r(r, e, s, u, l, t => {const, matches, Q, u, e, r, y = 
 
-    t, r, y {// Simula, t, e, A, P, I, ca, l, l, awaitnewPromise(resolve => setTimeout(resolve, 5, 0, 0));
+    t, r, y {// Sim, u, l, a, t, e, A, P, I, c, a, llawaitnewProm, i, s, e(reso, l, v, e => setTime, o, u, t(reso, l, v, e, 5, 0, 0));
 
-      // Filt, e, r, results, basedo, n, queryand, filtersletfilteredResult, s = sampleResul, t, s.filter(resu, l, t => {
-        constmatchesQue, r, y = 
+      // F, i, l, t, e, r, resu, l, t, s, bas, e, d, o, n, query, a, n, d, filtersletfilteredRes, u, l, t, s = sampleRe, s, u, l, t, s.fil, t, e, r(r, e, s, u, l, t => {
+        constmatches, Q, u, e, r, y = 
 
-          resu, l, t.tit, l, e.toLowerCase().includes(searchQue, r, y.toLowerCase()) ||
-          resu, l, t.descripti, o, n.toLowerCase().includes(searchQue, r, y.toLowerCase()) ||;
-          resu, l, t.ta, g, s? .some(t, a, g => t, a, g.toLowerCase().includes(searchQue, r, y.toLowerCase()));
+          r, e, s, u, l, t.ti, t, l, e.toLowerC, a, s, e().inclu, d, e, s(search, Q, u, e, r, y.toLowerC, a, s, e()) ||
+          r, e, s, u, l, t.descri, p, t, i, o, n.toLowerC, a, s, e().inclu, d, e, s(search, Q, u, e, r, y.toLowerC, a, s, e()) ||;
+          r, e, s, u, l, t.t, a, g, s? .s, o, m, e(t, a, g => t, a, g.toLowerC, a, s, e().inclu, d, e, s(search, Q, u, e, r, y.toLowerC, a, s, e()));
 
-        constmatchesTy, p, e = !filte, r, s.ty, p, e?.leng, t, h || filte, r, s.ty, p, e.includes(resu, l, t.ty, p, e);
-        constmatchesCatego, r, y = !filte, r, s.catego, r, y?.leng, t, h || filte, r, s.catego, r, y.includes(resu, l, t.category || "");
-        constmatchesTa, g, s = !filte, r, s.ta, g, s?.leng, t, h || ;
-          filte, r, s.ta, g, s.some(filterT, a, g => resu, l, t.ta, g, s?.includes(filterT, a, g));
+        constmatche, s, T, y, p, e = !fi, l, t, e, r, s.type?.l, e, n, g, t, h || fi, l, t, e, r, s.type.inc, l, u, d, e, s(r, e, s, u, l, t.type);
+        constmatchesCat, e, g, o, r, y = !fi, l, t, e, r, s.cat, e, g, o, r, y?.l, e, n, g, t, h || fi, l, t, e, r, s.cat, e, g, o, r, y.inclu, d, e, s(res, u, l, t.categ, o, r, y || "");        constmatche, s, T, a, g, s = !fi, l, t, e, r, s.t, a, g, s?.l, e, n, g, t, h || ;
+          fi, l, t, e, r, s.t, a, g, s.s, o, m, e(filt, e, r, T, a, g => r, e, s, u, l, t.t, a, g, s?.inclu, d, e, s(filt, e, r, T, a, g));
 
-        return : matchesQue, r, y && matchesTy, p, e && matchesCatego, r, y && matchesTags });
+        return : matches, Q, u, e, r, y && matche, s, T, y, p, e && matchesCateg, o, r, y && matchesT, a, g, s });
 
-      // Sort, results, filteredResults.sort((ab) => {letcomparis, o, n = 0;
+      // S, o, r, t, resu, l, t, s, filteredResu, l, t, s.s, o, r, t((a, b) => {letcompari, s, o, n = 0;
         
-        switch(sortBy) {
-          case "relevan, c, e" :
-            comparis, o, n = (b.relevanceSco, r, e || 0) - (a.relevanceSco, r, e || 0);
-            break;
-          case "da, t, e":
-            comparis, o, n = (b.lastModifi, e, d?.getTime() || 0) - (a.lastModifi, e, d?.getTime() || 0);
-            break;
-          case "tit, l, e":
-            comparis, o, n = a.tit, l, e.localeCompare(b.title);
-            break};
-        returnsortOrder === "a, s, c"? -comparison: comparis, o, n});
+        swi, t, c, h (sor, t, B, y) {          c, a, s, e "rele, v, a, n, c, e" :
+            compa, r, i, s, o, n = (b.relevanceSc, o, r, e || 0) - (a.relevanceSc, o, r, e || 0);
+            br, e, a, k;
+          c, a, s, e "d, a, t, e":
+            compa, r, i, s, o, n = (b.lastMod, i, f, i, e, d?.ge, t, T, i, m, e() || 0) - (a.lastModif, i, e, d?.getT, i, m, e() || 0);
+            br, e, a, k;
+          c, a, s, e "ti, t, l, e":
+            compari, s, o, n = a.ti, t, l, e.localeComp, a, r, e(b.ti, t, l, e);            br, e, a, k};
+        returnsortOr, d, e, r === "a, s, c"? -compari, s, o, n: compa, r, i, s, o, n});
 
-      const, limitedResult, s = filteredResul, t, s.slice(0maxResul, t, s);
-      setResults(limitedResul, t, s);
-      onSear, c, h? .(searchQuerylimitedResul, t, s);
+      const, limitedRes, u, l, t, s = filteredRe, s, u, l, t, s.sl, i, c, e(0maxRe, s, u, l, t, s);
+      setResu, l, t, s(limitedRe, s, u, l, t, s);
+      onS, e, a, r, c, h? .(searchQuerylimitedRe, s, u, l, t, s);
 
-      // Add, to, search historyif(enableHisto, r, y && searchQue, r, y.trim()) {setSearchHistory(pr, e, v = > {;
- it, e, m !== searchQue, r, y)].slice(0, 1, 0);
+      // Ad, d, t, o, sea, r, c, h histor, y, i, f(enableHi, s, t, o, r, y && search, Q, u, e, r, y.t, r, i, m()) {setSearchHist, o, r, y(p, r, e, v = > {;
+ i, t, e, m !== search, Q, u, e, r, y)].sl, i, c, e(0, 1, 0);
 
-          constnewHisto, r, y = [searchQue, r, y...pr, e, v.filter(it, e, m => it, e, m !== searchQue, r, y)].slice(0, 1, 0);
+          constnewHi, s, t, o, r, y = [search, Q, u, e, r, y...p, r, e, v.f, i, l, t, e, r(i, t, e, m => i, t, e, m !== search, Q, u, e, r, y)].sl, i, c, e(01, 0);
 
-          localStorage.setItem("searchHisto, r, y", JS, O, N.stringify(newHisto, r, y));
-          returnnewHistory })}} catch(err, o, r) {console.error("Search: error:"err, o, r);
-      setResults([]) } final, l, y {setIsLoading(false) }}[filters, sortBy, sortOrder  maxResults, onSearch, enableHistory]);
-  // Handle, input, change with, debouncing, const handleInputChange = useCallback((value: stri, n, g) => {;
-    setQuery(val, u, e);
-    setSelectedIndex(-1);
+          localStor, a, g, e.setI, t, e, m("searchHi, s, t, o, r, y", J, S, O, N.stri, n, g, i, f, y(newHist, o, r, y));
+          returnnewHist, o, r, y })}} ca, t, c, h (er, r, o, r) {cons, o, l, e.er, r, o, r("S, e, a, r, c, h : er, r, o, r :"er, r, o, r);
+      setResu, l, t, s([]) } fi, n, a, l, l, y {setIsLoad, i, n, g(false) }}[filt, e, r, s, sor, t, B, y, sortOr, d, e, r  maxResu, l, t, s, onSea, r, c, h, enableHist, o, r, y]);
+  // Han, d, l, e, in, p, u, t, cha, n, g, e w, i, t, h, debounc, i, n, g, const handleInputC, h, a, n, g, e = useCal, l, b, a, c, k((va, l, u, e: s, t, r, i, n, g) => {;
+    set, Q, u, e, r, y(va, l, u, e);
+    setSelected, I, n, d, e, x(-1);
 
-    // Clearprevioustimeoutif(searchTimeoutR, e, f.curre, n, t) {
-      clearTimeout(searchTimeoutR, e, f.current) };
-    // Generatesuggestionsif(enableSuggestio, n, s && val, u, e.trim()) {setSuggestions(generateSuggestions(value)) } el, s, e {setSuggestions([]) };
-    // Debounced, search, searchTimeoutRef.curre, n, t = setTimeout(() => {;
+    // Clearprevi, o, u, s, timeo, u, t, i, f (searchTimeo, u, t, R, e, f.cu, r, r, e, n, t) {
+      clearTi, m, e, o, u, t(searchTimeout, R, e, f.curr, e, n, t) };
+    // Gener, a, t, e, suggesti, o, n, s, i, f (enableSugges, t, i, o, n, s && va, l, u, e.t, r, i, m()) {setSugges, t, i, o, n, s(generateSuggesti, o, n, s(va, l, u, e)) } e, l, s, e {setSuggesti, o, n, s([]) };
+    // Deboun, c, e, d, sea, r, c, h, searchTimeout, R, e, f.cu, r, r, e, n, t = setTi, m, e, o, u, t(() => {;
+  // Handlekeybo, a, r, d, navigationconst, handleKeyD, o, w, n = useCallb, a, c, k((e: React.Keyboard, E, v, e, n, t) => {;
+    i, f (!i, s, O, p, e, n) return;
 
-  // Handlekeyboard, navigationconst, handleKeyDown = useCallback((e: React.KeyboardEve, n, t) => {;
-    if (!isOp, e, n) retu, r, n;
-
-    switch(e.key) {
-      case "ArrowDo, w, n":
-        e.preventDefault();
-        setSelectedIndex(pr, e, v = > 
-          pr, e, v < results.length - 1 ? pr, e, v + 1 : pr, e, v;
+    swi, t, c, h (e.ke, y) {
+      c, a, s, e "Arro, w, D, o, w, n":
+        e.preventDe, f, a, u, l, t();
+        setSelected, I, n, d, e, x(p, r, e, v = > 
+          p, r, e, v < resu, l, t, s.len, g, t, h - 1 ? p, r, e, v + 1 : p, r, e, v;
         );
-        break;
-      case "Arrow, U, p":
-        e.preventDefault();
-        setSelectedIndex(pr, e, v => pr, e, v > 0 ? pr, e, v - 1 : -1);
-        break;
-      case "Ent, e, r":
-        e.preventDefault();
-        if (selectedInd, e, x >= 0 && resul, t, s[selectedIndex]) {
-          handleResultClick(results[selectedIndex]) } elseif(que, r, y.trim()) {performSearch(query) };
-        break;
-      case "Esca, p, e":
-        setIsOpen(false);
-        setQuery("");
-        setResults([]);
-        bre, a, k};
-  // Handle, result, click
-  const, handleResultClic, k = useCallback((result: SearchResu, l, t) => {;
-    onResultCli, c, k? .(resu, l, t);
-    setIsOpen(false);
-    setQuery("");
-    setResults([]) }, [onResultClick]);
+        br, e, a, k;
+      c, a, s, e "Arro, w, U, p":
+        e.preventDe, f, a, u, l, t();
+        setSelected, I, n, d, e, x(p, r, e, v => p, r, e, v > 0 ? p, r, e, v - 1 : -1);
+        br, e, a, k;
+      c, a, s, e "En, t, e, r":
+        e.preventDe, f, a, u, l, t();
+        i, f (selected, I, n, d, e, x >= 0 && resu, l, t, s[selectedIn, d, e, x]) {
+          handleResultCl, i, c, k(resu, l, t, s[selectedIn, d, e, x]) } e, l, s, e, i, f (qu, e, r, y.t, r, i, m()) {performSea, r, c, h(qu, e, r, y) };        br, e, a, k;
+      c, a, s, e "E, s, c, a, p, e":
+        setIsO, p, e, n(false);
+        setQu, e, r, y("");
+        setResu, l, t, s([]);
+        br, e, a, k};
+  // Han, d, l, e, res, u, l, t, cl, i, c, k
+  const, handleResultC, l, i, c, k = useCal, l, b, a, c, k((res, u, l, t: SearchR, e, s, u, l, t) => {;
+    onResultCl, i, c, k? .(res, u, l, t);    setIsO, p, e, n(false);
+    setQu, e, r, y("");
+    setResu, l, t, s([]) }, [onResultCl, i, c, k]);
 
-  // Focus, input, when openeduseEffect(() => {if (isOp, e, n && inputR, e, f.curre, n, t) {
-      inputR, e, f.curre, n, t.focus() }}, [isOpen]);
-  // Get, unique, categories and, types, for filters, const, categories = useMemo(() => 
-    [...newSet(sampleResul, t, s.map(r => r.catego, r, y).filter(Boole, a, n))], [];
+  // Fo, c, u, s, in, p, u, t, w, h, e, n ope, n, e, d, useEf, f, e, c, t(() => {i, f (i, s, O, p, e, n && inp, u, t, R, e, f.cu, r, r, e, n, t) {
+      inp, u, t, R, e, f.curr, e, n, t.fo, c, u, s() }}, [isO, p, e, n]);  // Ge, t, uni, q, u, e, categor, i, e, s an, d, ty, p, e, s, fo, r filt, e, r, s, const, categor, i, e, s = useM, e, m, o(() => 
+    [...new, S, e, t(sampleRe, s, u, l, t, s.ma, p(r => r.cat, e, g, o, r, y).fil, t, e, r(Bo, o, l, e, a, n))], [];
   );
 
-  const, type, s = useMemo(() => 
-    [...newSet(sampleResul, t, s.map(r => r.ty, p, e))],
+  const, type, s = useM, e, m, o(() => 
+    [...new, S, e, t(sampleRe, s, u, l, t, s.ma, p(r => r.type))],
     [];
   );
 
-  const, allTag, s = useMemo(() => 
-    [...newSet(sampleResul, t, s.flatMap(r => r.ta, gs || []))][];
+  const, all, T, a, g, s = useM, e, m, o(() => 
+    [...ne, w, S, e, t(sampleRe, s, u, l, t, s.flat, M, a, p(r => r.t, a, g, s || []))][];
   );
 
-  return (<divclassName = "relativ, e">
-      {/* Sear, chInput */}      <divclassName="relativ, e> <divclass, Nam, e="absolu, t, e, ins, e, t-y-0, le, f, t-0, p, l-3fl, e, x, ite, m, s-centerpoint, e, r-events-none">          <SearchclassName="h-5, w-5 : text-gray-400" />
-        </div>
-        <inputref ={inputRef}          ty, p, e=te, x, t""
-          val, u, e={query};
-          onChan, g, e={(e) => handleInputChange(e.targ, e, t.value)};
-          onFoc, u, s={() => setIsOpen(true)};
-          onKeyDo, w, n={handleKeyDown};
-        />
-        {query && (<buttononClick={(()) => {;
-              setQuery("");
-              setResults([]);
-              setIsOpen(false)}}            classNa, m, e = absolute, inse, t-y-0, righ, t-0, p, r-3flexitems-center""
-          >            <XclassName="h-5 w-5 text-gr, a, y-400, hover:te, x, t-gray-600" />
-          </button>
-        )};      </div>
+  return (<divclassN, a, m, e = "relat, i, v, e">
+      {/* SearchIn, p, u, t */}      <divclassN, a, m, e="relat, i, v, e> <divcl, a, s, s N, a, m, e="absol, u, t, e, in, s, e, t-y-0, l, e, f, t-0, p, l-3f, l, e, x, it, e, m, s-centerpoin, t, e, r-eve, n, t, s-n, o, n, e">          <SearchclassN, a, m, e="h-5 w-5 : t, e, x, t-g, r, a, y-40, 0" />        </di, v>
+        <input, r, e, f ={input, R, e, f}          type=t, e, x, t""
+          va, l, u, e={qu, e, r, y};
+          onC, h, a, n, g, e={(e) => handleInputC, h, a, n, g, e(e.tar, g, e, t.va, l, u, e)};
+          on, F, o, c, u, s={() => setIsO, p, e, n(true)};
+          onKeyD, o, w, n={handleKeyD, o, w, n};        />
+        {qu, e, r, y && (<buttononCl, i, c, k={(()) => {;
+              setQu, e, r, y("");
+              setResu, l, t, s([]);
+            <XclassN, a, m, e="h-5 w-5 t, e, x, t-g, r, a, y-40, 0, ho, v, e, r:t, e, x, t-g, r, a, y-60, 0" />
+          </but, t, o, n>
 
-      {/* Sear, c, h, ResultsDropdown */};
-      <AnimatePresence>
-        {isOpen && (<motion.d, i, v, classNa, m, e="absolu, t, e, z-50, mt-1, w-fu, l, l, bg-whi, t, e, round, e, d-lg, shad, o, w-lg, bord, e, r, bord, e, r-gr, a, y-2, 0, 0, m, a, x-h-96overflow-y-auto"            initial={{ opacity: 0y: -10 }};
-            anima, t, e={{ opacity: 1y: 0 }};
-            ex, i, t={{ opacity: 0y: -10 }};
-            transition = {{ duration: 0.2 }};
+              setIsO, p, e, n(false)}}            classN, a, m, e = absolutein, s, e, t-y-0ri, g, h, t-0p, r-3flexit, e, m, s-cen, t, e, r""
+          >            <XclassN, a, m, e="h-5 w-5 t, e, x, t-g, r, a, y-40, 0 ho, v, e, r:t, e, x, t-g, r, a, y-60, 0" />          </but, t, o, n>
+
+        )};      </di, v>
+
+      {/* SearchResultsDropd, o, w, n */};
+      <AnimatePrese, n, c, e>
+>>>>>> 45ce5fae8a680d713f034d877aa81b1d405b5, 7, 6, 3
+            an, i, m, a, t, e={{ opac, i, t, y: 1, y: 0 }};
+            e, x, i, t={{ opac, i, t, y: 0, y: -1, 0 }};
+            transit, i, o, n = {{ durat, i, o, n: 0.2 }};
           >
-            {/* Filters */};
-                <divclassName ="flexflex-wrapgap-2mb-3">
-                  <selectvalue ={filters.type?.[0] || '"};
-            {enableFilters && (              <divclassName="p-4, bord, e, r-bbord, e, r-gr, a, y-2, 0, 0> <divclass, Name ="flexflex-wrapgap-2mb-3">
-                  <selectvalue ={filters.type?.[0] || '"};
-                    onChan, g, e={(e) => setFilters(pr, e, v => ({
-                      ...prevtype: e.targ, e, t.val, u, e ? [e.targ, e, t.value] : []                    }))}                    classNa, m, e = te, x, t-sm, border, border-gr, a, y-300roundedpx-2py-1""
-                  >                    <optionvalue="">AllTypes</option>
-                    {typ, e, s.map(type => (                      <optionke, y ={type} val, u, e={type}>
-                        {ty, p, e.charAt(0).toUpperCase() + ty, pe.slice(1)};
-                      </option>
+            {/* Filt, e, r, s */};
+                <divclassN, a, m, e ="flexf, l, e, x-wrap, g, a, p-2m, b-3">
+                  <selectva, l, u, e ={filt, e, r, s.type?.[0] || '"};
+            {enableFilt, e, r, s && (              <divclassN, a, m, e="p-4 bor, d, e, r-b bor, d, e, r-g, r, a, y-20, 0> <divcl, a, s, s N, a, m, e ="flexf, l, e, x-wrap, g, a, p-2m, b-3">
+                  <selectva, l, u, e ={filt, e, r, s.type?.[0] || '"};
+ setFilt, e, r, s(p, r, e, v => ({
+                      ...prevtype: e.t, a, r, g, e, t.va, l, u, e ? [e.t, a, r, g, e, t.va, l, u, e] : []                    }))}                    classN, a, m, e = t, e, x, t-s, m, bor, d, e, r, bor, d, e, r-g, r, a, y-300rounde, d, p, x-2p, y-1""
+
+                    onCha, n, g, e={(e) => setFilt, e, r, s(p, r, e, v => ({
+                      ...prevtype: e.t, a, r, g, e, t.va, l, u, e ? [e.tar, g, e, t.va, l, u, e] : []                    }))}                    classN, a, m, e = t, e, x, t-smborderbor, d, e, r-g, r, a, y-300rounde, d, p, x-2p, y-1""
+
+                  >                    <optionva, l, u, e="">AllTy, p, e, s</opt, i, o, n>
+                    {ty, p, e, s.ma, p(type => (                      <option, k, e, y ={type} va, l, u, e={type}>
+                        {type.cha, r, A, t(0).toUpperC, a, s, e() + type.sl, i, c, e(1)};                      </opt, i, o, n>
                     ))};
-                  </select>
+                  </sel, e, c, t>
 
-                  <selectvalue={filters.category? .[0] || ""};
-                    onChan, g, e={(e) => setFilters(pr, e, v => ({
-                      ...prev: category: e.targ, e, t.val, u, e ? [e.target.value] : []                    }))}                    className="te, x, t-sm, border, border-gr, a, y-300, rounded, px-2, p, y-1"
-                  >                    <optionvalue="">AllCategories</option>
-                    {categori, e, s.map(catego, r, y => (                      <optionke, y ={category} val, u, e={category}>{category}</option>
-                    ))};
-                  </select>
+                  <selectva, l, u, e={filt, e, r, s.categ, o, r, y? .[0] || ""};
+                    onCha, n, g, e={(e) => setFilt, e, r, s(p, r, e, v => ({
+                      ...p, r, e, v : categ, o, r, y : e.tar, g, e, t.va, l, u, e ? [e.tar, g, e, t.va, l, u, e] : []                    }))}                    classN, a, m, e="t, e, x, t-s, m, bor, d, e, r, bor, d, e, r-g, r, a, y-30, 0, roun, d, e, d, p, x-2, p, y-1"
+                  >                    <optionva, l, u, e="">AllCategor, i, e, s</opt, i, o, n>
+                    {categor, i, e, s.ma, p(categ, o, r, y => (                      <option, k, e, y ={categ, o, r, y} va, l, u, e={categ, o, r, y}>{categ, o, r, y}</opt, i, o, n>                    ))};
+                  </sel, e, c, t>
 
-                  <selectvalue={sortBy};
-                    onChan, g, e={(e) => setSortBy(e.target.valueasany)}                    className="te, x, t-sm, border, border-gr, a, y-300, rounded, px-2, p, y-1"
-                  >                    <optionvalue=relevance"">Relevance</option>                    <optionvalue=date"">Date</option>                    <optionvalue=title"">Title</option>
-                  </select>
+                  <selectva, l, u, e={sor, t, B, y};
+ setSor, t, B, y(e.tar, g, e, t.valueas, a, n, y)}                    classN, a, m, e="t, e, x, t-s, m, bor, d, e, r, bor, d, e, r-g, r, a, y-30, 0, roun, d, e, d, p, x-2 p, y-1"
+                  >                    <optionva, l, u, e=releva, n, c, e"">Releva, n, c, e</opt, i, o, n>                    <optionva, l, u, e=d, a, t, e"">D, a, t, e</opt, i, o, n>                    <optionva, l, u, e=ti, t, l, e"">Ti, t, l, e</opt, i, o, n>
+
+                    onCha, n, g, e={(e) => setSor, t, B, y(e.tar, g, e, t.valueas, a, n, y)}                    classN, a, m, e="te, x, t-s, m, bor, d, e, r, bor, d, e, r-g, r, a, y-30, 0, roun, d, e, d, p, x-2 p, y-1"                  >                    <optionva, l, u, e=releva, n, c, e"">Releva, n, c, e</opt, i, o, n>                    <optionva, l, u, e=d, a, t, e"">D, a, t, e</opt, i, o, n>                    <optionva, l, u, e=ti, t, l, e"">Ti, t, l, e</opt, i, o, n>
+
+                  </sel, e, c, t>
 
 
-                  <buttononClick={() => setSortOrder(prev => prev === "asc' ? "desc" : "asc")}                    className="te, x, t-sm, border, border-gr, a, y-300, rounded, px-2, p, y-1, flex, items-center"
-                  >                    {sortOrder === "asc"? <SortAscclassName="h-4 : w-4" />  : <SortDescclassName="h-4, w-4 />}; </button> </di, v> </div> )}; {/* Loading, State */}; <divclass Name ="animate-spin, rounde, d-ful, l, h-6, w-6, bord, e, r-b-2, bord, e, r-bl, u, e-6, 0, 0, mx-auto, m, b-2></div>
-            {isLoadin, g && (<divclas, s, Name =p-4" te, x, t-cent, e, r, te, x, t-gr, a, y-500"">                <divclassName="animat, e-sp, i, n, round, e, d-fu, l, l, h-6, w-6, bord, e, r-b-2, bord, e, r-bl, u, e-6, 0, 0, mx-au, t, omb-2></div> Searching... </div> )}; {/* Searc, h, History */}; 0 && (<divclass, Name ="p-2">                <divclassName="tex, t-xs, fo, n, t-semibo, l, d, te, x, t-gr, a, y-5, 0, 0, upperca, s, e, tracki, n, g-wi, d, e, mb-2, fl, e, x, ite, m, s-cent, er> <Clockclass, Name ="h-3w-3mr-1"" />
-                  Rece, n, t, Search, e, s
-                </div>
-                {searchHistory.slice(0, 5).map((it, e, m, ind, e, x) => (handleInputChange(item}            ar, i, a-lab, e, l=handleInputChange(item""}                    className="w-fu, l, l, te, x, t-le, f, t, px-3, py-2, te, x, t-sm, te, x, t-gr, a, y-7, 0, 0, hover:bg-gr, a, y-1, 0, 0, rounded"
-                  >                    {item}> handleInputChange(it, e, m)};
-                    className="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-7, 0, 0, hover:bg-gr, a, y-1, 0, 0, rounde, d <buttonkey={index} on Clic, k={() = ar, i, a-label="hand, l, e, InputChange(item)};
-                    ar, i, a-lab, e, l={`Se, a, r, c, h, f, o, r ${item}`};
-                    className="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-7, 0, 0, hover:bg-gr, a, y-1, 0, 0, rounded > {item}"> handleInputChange(it, e, m)};
-                    ar, i, a-lab, e, l={`Se, a, r, c, h, f, o, r ${item}`};
-                    className="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-7, 0, 0, hover:bg-gr, a, y-1, 0, 0, rounde, d {!que, r, y && enab, l, e, Histo, r, y && sear, c, h, Histo, r, y.leng, t, h > 0 && (<divclas, s, Name ="p-2">                <divclassName="tex, t-xs, fo, n, t-semibo, l, d, te, x, t-gr, a, y-5, 0, 0, upperca, s, e, tracki, n, g-wi, d, e, mb-2, fl, e, x, ite, m, s-cent, e, r> <Clockclas, s, Name ="h-3w-3mr-1"" />
-                  Rece, n, t, Search, e, s
-                </div>
-                {searchHistory.slice(0, 5).map((it, e, m, ind, e, x) => (handleInputChange(item}            ar, i, a-lab, e, l=handleInputChange(item""}                    className="w-fu, l, l, te, x, t-le, f, t, px-3, py-2, te, x, t-sm, te, x, t-gr, a, y-7, 0, 0, hover:bg-gr, a, y-1, 0, 0, rounded"
-                  >                    {item}> handleInputChange(it, e, m)};
-                    className="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-700, hover:bg-gr, a, y-100, rounde, d <buttonkey={index} on Clic, k={() = ar, i, a-label="hand, l, e, InputChange(item)};
-                    ar, i, a-lab, e, l={`Se, a, r, c, h, f, o, r ${item}`};
-                    className="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-700, hover:bg-gr, a, y-100, rounded > {item}"> handleInputChange(it, e, m)};
-                    ar, i, a-lab, e, l={`Se, a, r, c, h, f, o, r ${item}`};
-                    className="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-700, hover:bg-gr, a, y-100, rounde, d > {item}; </button> ))}; </div> )}; {/* Suggestions */}; 0 && !is, Loading && (<divclass, Name ="p-2""">                <divclassName="tex, t-xs, fo, n, t-semibo, l, d, te, x, t-gr, a, y-5, 0, 0, upperca, s, e, tracki, n, g-wi, d, e, mb-2, fl, e, x, ite, m, s-cent, er> <Starclass, Name ="h-3w-3mr-1"" />
-                  Suggestio, n, s
-                </div>
-                {suggestions.map((suggesti, o, n, ind, e, x) => (handleInputChange(suggestion}            ar, i, a-lab, e, l=handleInputChange(suggestion""}                    className="w-fu, l, l, te, x, t-le, f, t, px-3, py-2, te, x, t-sm, te, x, t-gr, a, y-7, 0, 0, hover:bg-gr, a, y-1, 0, 0, rounded"
-                  >                    {suggestion}> handleInputChange(suggesti, o, n)};
-                    className="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-7, 0, 0, hover:bg-gr, a, y-1, 0, 0, rounde, d <buttonkey={index} on Clic, k={() = ar, i, a-label="hand, l, e, InputChange(suggestion)};
-                    ar, i, a-lab, e, l={`Se, a, r, c, h, f, o, r ${suggestion}`};
-                    className="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-7, 0, 0, hover:bg-gr, a, y-1, 0, 0, rounded > {suggestion}"> handleInputChange(suggesti, o, n)};
-                    ar, i, a-lab, e, l={`Se, a, r, c, h, f, o, r ${suggestion}`};
-                    className="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-7, 0, 0, hover:bg-gr, a, y-1, 0, 0, rounde, d {enab, l, e, Suggestio, n, s && suggestio, n, s.leng, t, h > 0 && !is, Loadi, n, g && (<divclas, s, Name ="p-2""">                <divclassName="tex, t-xs, fo, n, t-semibo, l, d, te, x, t-gr, a, y-5, 0, 0, upperca, s, e, tracki, n, g-wi, d, e, mb-2, fl, e, x, ite, m, s-cent, e, r> <Starclas, s, Name ="h-3w-3mr-1"" />
-                  Suggestio, n, s
-                </div>
-                {suggestions.map((suggesti, o, n, ind, e, x) => (handleInputChange(suggestion}            ar, i, a-lab, e, l=handleInputChange(suggestion""}                    className="w-fu, l, l, te, x, t-le, f, t, px-3, py-2, te, x, t-sm, te, x, t-gr, a, y-7, 0, 0, hover:bg-gr, a, y-1, 0, 0, rounded"
-                  >                    {suggestion}> handleInputChange(suggesti, o, n)};
-                    className="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-700, hover:bg-gr, a, y-100, rounde, d <buttonkey={index} on Clic, k={() = ar, i, a-label="hand, l, e, InputChange(suggestion)};
-                    ar, i, a-lab, e, l={`Se, a, r, c, h, f, o, r ${suggestion}`};
-                    className="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-700, hover:bg-gr, a, y-100, rounded > {suggestion}"> handleInputChange(suggesti, o, n)};
-                    ar, i, a-lab, e, l={`Se, a, r, c, h, f, o, r ${suggestion}`};
-                    className="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-700, hover:bg-gr, a, y-100, rounde, d > {suggestion}; </button> ))}; </div> )}; {/* Results */}; 0 && !is, Loading && (<divclass, Name ="p-2""">                <divclassName="tex, t-xs, fo, n, t-semibo, l, d, te, x, t-gr, a, y-5, 0, 0, upperca, s, e, tracki, n, g-wi, d, e, mb-2> Results({resul, t, s.length}) </div> {results.map((resultind, e, x) => (<motion.divkey ={result.id}; class, Name ="{`p-3roundedcurs, o, r-point, e, r ${index===selectedIndex?"bg-blue-50borderborder-blue-200":"hover:bg-gray-50"}`};                    on, Cli, c, k ={() => hand, l, e, ResultClick(result)};
-            {resul, t, s.leng, t, h > 0 && !is, Loadi, n, g && (<divclas, s, Name ="p-2""">                <divclassName="tex, t-xs, fo, n, t-semibo, l, d, te, x, t-gr, a, y-500, upperca, s, e, tracki, n, g-wi, d, e, mb-2> Results({resul, t, s.length}) </div> {results.map((resu, l, t, ind, e, x) => (<motion.div, k, e, y ={result.id}; class, Name ="{`p-3roundedcurs, o, r-point, e, r ${index===selectedIndex?"bg-blue-50borderborder-blue-200":"hover:bg-gray-50"}`};
-                    on, Cli, c, k ={() => hand, l, e, ResultClick(result)};
-                    whileHover={{ scale: 1.01 }};
-                  >                    <divclassName="flex" items-start, justif, y-between"">                      <divclassName="flex-1> <h 4 class Name="te, x, t-sm, fon, t-medium, tex, t-gr, a, y-900"" id="resulttitle">{result.title}</h4>                        <pclassName="text-xs, tex, t-gr, a, y-600 mt-1">{result.description}</p>                        <divclassName="flexitems-center, m, t-2 space-x-2> <spanclass Name="text-xs, p, x-2, p, y-1, b, g-gr, a, y-100, tex, t-gr, a, y-600rounded"">
-                            {resu, l, t.type};
-                          </span>
-                              {result.category};
-                            </span>
+                  <buttononCl, i, c, k={() => setSortOr, d, e, r(p, r, e, v => p, r, e, v === "as, c' ? "d, e, s, c" : "as, c")}                    classN, a, m, e="t, e, x, t-s, m, bor, d, e, r, bor, d, e, r-g, r, a, y-30, 0, roun, d, e, d, p, x-2 p, y-1 flexit, e, m, s-cen, t, e, r"
+                  >                    {sortOr, d, e, r === "as, c"? <SortAscclassN, a, m, e="h-4 : w-4" />  : <SortDescclassN, a, m, e="h-4 w-4 />}; </but, t, o, n> </di, v> </di, v> )}; {/* Load, i, n, g St, a, t, e */}; <divcl, a, s, s N, a, m, e ="anim, a, t, e-spinroun, d, e, d-f, u, l, l, h-6, w-6, b, o, r, d, e, r-b-2, b, o, r, d, e, r-b, l, u, e-6, 0, 0m, x-aut, o, m, b-2></di, v>
+            {isLoad, i, n, g && (<divclassN, a, m, e =p-4" t, e, x, t-c, e, n, t, e, r, t, e, x, t-g, r, a, y-50, 0"">                <divclassN, a, m, e="anim, a, t, e-spinro, u, n, d, e, d-f, u, l, l, h-6, w-6, b, o, r, d, e, r-b-2, b, o, r, d, e, r-b, l, u, e-60, 0 m, x-aut, o, m, b-2></di, v> Search, i, n, g... </di, v> )}; {/* Sea, r, c, h Hist, o, r, y */}; 0 && (<divcl, a, s, s N, a, m, e ="p-2">                <divclassN, a, m, e="t, e, x, t-xs, f, o, n, t-sem, i, b, o, l, d, t, e, x, t-g, r, a, y-5, 0, 0, uppe, r, c, a, s, e, tra, c, k, i, n, g-w, i, d, e, m, b-2, f, l, e, xit, e, m, s-cen, t, e, r> <Clockcl, a, s, s N, a, m, e ="h-3, w-3m, r-1"" />
+                  RecentSear, c, h, e, s
+                </di, v>
+ (handleInputCha, n, g, e(i, t, e, m}            a, r, i, a-la, b, e, l=handleInputCha, n, g, e(i, t, e, m""}                    classN, a, m, e="w-f, u, l, l, t, e, x, t-l, e, f, t, p, x-3, p, y-2, t, e, x, t-s, m, t, e, x, t-g, r, a, y-7, 0, 0, ho, v, e, r:b, g-g, r, a, y-1, 0, 0, roun, d, e, d"
+                  >                    {i, t, e, m}> handleInputCha, n, g, e(i, t, e, m)};
+                    classN, a, m, e="w-f, u, l, l, te, x, t-l, e, f, t, p, x-3, p, y-2, te, x, t-s, m, te, x, t-g, r, a, y-7, 0, 0, ho, v, e, r:b, g-g, r, a, y-1, 0, 0, rou, n, d, e, d <button, k, e, y={in, d, e, x} o, n C, l, i, c, k={() = a, r, i, a-la, b, e, l="h, a, n, d, leInputCha, n, g, e(i, t, e, m)};
+                    a, r, i, a-la, b, e, l={`S, e, a, r, c, h, f, o, r ${i, t, e, m}`};
+                    classN, a, m, e="w-f, u, l, l, te, x, t-l, e, f, t, p, x-3, p, y-2, te, x, t-s, m, te, x, t-g, r, a, y-7, 0, 0, ho, v, e, r:b, g-g, r, a, y-1, 0, 0, roun, d, e, d > {i, t, e, m}"> handleInputCha, n, g, e(i, t, e, m)};
+                    a, r, i, a-la, b, e, l={`S, e, a, r, c, h, f, o, r ${i, t, e, m}`};
+                    classN, a, m, e="w-f, u, l, l, te, x, t-l, e, f, t, p, x-3, p, y-2, te, x, t-s, m, te, x, t-g, r, a, y-7, 0, 0, ho, v, e, r:b, g-g, r, a, y-1, 0, 0, rou, n, d, e, d {!qu, e, r, y && e, n, a, b, l, e, Hi, s, t, o, r, y && s, e, a, r, c, h, Hi, s, t, o, r, y.l, e, n, g, t, h > 0 && (<divc, l, a, s, s, N, a, m, e ="p-2">                <divclassN, a, m, e="te, x, t-x, s, f, o, n, t-sem, i, b, o, l, d, t, e, x, t-g, r, a, y-5, 0, 0, uppe, r, c, a, s, e, tra, c, k, i, n, g-w, i, d, e, m, b-2, f, l, e, x, it, e, m, s-c, e, n, t, e, r> <Clockc, l, a, s, s, N, a, m, e ="h-3, w-3m, r-1"" />
+                  R, e, c, e, n, t, Sea, r, c, h, e, s
+                </di, v>
+                {searchHist, o, r, y.sl, i, c, e(0, 5).ma, p((i, t, e, m, in, d, e, x) => (handleInputCha, n, g, e(i, t, e, m}            a, r, i, a-la, b, e, l=handleInputCha, n, g, e(i, t, e, m""}                    classN, a, m, e="w-f, u, l, l, t, e, x, t-l, e, f, t, p, x-3, p, y-2, t, e, x, t-s, m, t, e, x, t-g, r, a, y-7, 0, 0, ho, v, e, r:b, g-g, r, a, y-1, 0, 0, roun, d, e, d"
+                  >                    {i, t, e, m}> handleInputCha, n, g, e(i, t, e, m)};
+                    classN, a, m, e="w-f, u, l, l, te, x, t-l, e, f, t, p, x-3, p, y-2, te, x, t-s, m, te, x, t-g, r, a, y-70, 0, ho, v, e, r:b, g-g, r, a, y-10, 0, rou, n, d, e, d <button, k, e, y={in, d, e, x} o, n C, l, i, c, k={() = a, r, i, a-la, b, e, l="h, a, n, d, leInputCha, n, g, e(i, t, e, m)};
+                    a, r, i, a-la, b, e, l={`S, e, a, r, c, h, f, o, r ${i, t, e, m}`};
+                    classN, a, m, e="w-f, u, l, l, te, x, t-l, e, f, t, p, x-3, p, y-2, te, x, t-s, m, te, x, t-g, r, a, y-70, 0, ho, v, e, r:b, g-g, r, a, y-10, 0, roun, d, e, d > {i, t, e, m}"> handleInputCha, n, g, e(i, t, e, m)};
+                    a, r, i, a-la, b, e, l={`S, e, a, r, c, h, f, o, r ${i, t, e, m}`};
+                    classN, a, m, e="w-f, u, l, l, te, x, t-l, e, f, t, p, x-3, p, y-2, te, x, t-s, m, te, x, t-g, r, a, y-70, 0, ho, v, e, r:b, g-g, r, a, y-10, 0, rou, n, d, e, d > {i, t, e, m}; </but, t, o, n> ))}; </di, v> )}; {/* Suggesti, o, n, s */}; 0 && !i, s, Load, i, n, g && (<divcl, a, s, s, N, a, m, e ="p-2""">                <divclassN, a, m, e="te, x, t-x, s, f, o, n, t-sem, i, b, o, l, d, t, e, x, t-g, r, a, y-5, 0, 0, uppe, r, c, a, s, e, tra, c, k, i, n, g-w, i, d, e, m, b-2, f, l, e, x, it, e, m, s-c, e, n, t, e, r> <Starcl, a, s, s, N, a, m, e ="h-3, w-3m, r-1"" />
+                  Sugges, t, i, o, n, s
+                </di, v>
+                {suggesti, o, n, s.ma, p((sugge, s, t, i, o, n, in, d, e, x) => (handleInputCha, n, g, e(suggest, i, o, n}            a, r, i, a-la, b, e, l=handleInputCha, n, g, e(suggest, i, o, n""}                    classN, a, m, e="w-f, u, l, l, t, e, x, t-l, e, f, t, p, x-3, p, y-2, t, e, x, t-s, m, t, e, x, t-g, r, a, y-7, 0, 0, ho, v, e, r:b, g-g, r, a, y-1, 0, 0, roun, d, e, d"
+                  >                    {suggest, i, o, n}> handleInputCha, n, g, e(sugge, s, t, i, o, n)};
+                    classN, a, m, e="w-f, u, l, l, te, x, t-l, e, f, t, p, x-3, p, y-2, te, x, t-s, m, te, x, t-g, r, a, y-7, 0, 0, ho, v, e, r:b, g-g, r, a, y-1, 0, 0, rou, n, d, e, d <button, k, e, y={in, d, e, x} o, n C, l, i, c, k={() = a, r, i, a-la, b, e, l="h, a, n, d, leInputCha, n, g, e(suggest, i, o, n)};
+                    a, r, i, a-la, b, e, l={`S, e, a, r, c, h, f, o, r ${suggest, i, o, n}`};
+                    classN, a, m, e="w-f, u, l, l, te, x, t-l, e, f, t, p, x-3, p, y-2, te, x, t-s, m, te, x, t-g, r, a, y-7, 0, 0, ho, v, e, r:b, g-g, r, a, y-1, 0, 0, roun, d, e, d > {suggest, i, o, n}"> handleInputCha, n, g, e(sugge, s, t, i, o, n)};
+                    a, r, i, a-la, b, e, l={`S, e, a, r, c, h, f, o, r ${suggest, i, o, n}`};
+                    classN, a, m, e="w-f, u, l, l, te, x, t-l, e, f, t, p, x-3, p, y-2, te, x, t-s, m, te, x, t-g, r, a, y-7, 0, 0, ho, v, e, r:b, g-g, r, a, y-1, 0, 0, rou, n, d, e, d {e, n, a, b, l, e, Sugges, t, i, o, n, s && sugges, t, i, o, n, s.l, e, n, g, t, h > 0 && !i, s, Lo, a, d, i, n, g && (<divc, l, a, s, s, N, a, m, e ="p-2""">                <divclassN, a, m, e="te, x, t-x, s, f, o, n, t-sem, i, b, o, l, d, t, e, x, t-g, r, a, y-5, 0, 0, uppe, r, c, a, s, e, tra, c, k, i, n, g-w, i, d, e, m, b-2, f, l, e, x, it, e, m, s-c, e, n, t, e, r> <Starc, l, a, s, s, N, a, m, e ="h-3, w-3m, r-1"" />
+                  Sugges, t, i, o, n, s
+                </di, v>
+                {suggesti, o, n, s.ma, p((sugge, s, t, i, o, n, in, d, e, x) => (handleInputCha, n, g, e(suggest, i, o, n}            a, r, i, a-la, b, e, l=handleInputCha, n, g, e(suggest, i, o, n""}                    classN, a, m, e="w-f, u, l, l, t, e, x, t-l, e, f, t, p, x-3, p, y-2, t, e, x, t-s, m, t, e, x, t-g, r, a, y-7, 0, 0, ho, v, e, r:b, g-g, r, a, y-1, 0, 0, roun, d, e, d"
+                  >                    {suggest, i, o, n}> handleInputCha, n, g, e(sugge, s, t, i, o, n)};
+                    classN, a, m, e="w-f, u, l, l, te, x, t-l, e, f, t, p, x-3, p, y-2, te, x, t-s, m, te, x, t-g, r, a, y-70, 0, ho, v, e, r:b, g-g, r, a, y-10, 0, rou, n, d, e, d <button, k, e, y={in, d, e, x} o, n C, l, i, c, k={() = a, r, i, a-la, b, e, l="h, a, n, d, leInputCha, n, g, e(suggest, i, o, n)};
+                    a, r, i, a-la, b, e, l={`S, e, a, r, c, h, f, o, r ${suggest, i, o, n}`};
+                    classN, a, m, e="w-f, u, l, l, te, x, t-l, e, f, t, p, x-3, p, y-2, te, x, t-s, m, te, x, t-g, r, a, y-70, 0, ho, v, e, r:b, g-g, r, a, y-10, 0, roun, d, e, d > {suggest, i, o, n}"> handleInputCha, n, g, e(sugge, s, t, i, o, n)};
+                    a, r, i, a-la, b, e, l={`S, e, a, r, c, h, f, o, r ${suggest, i, o, n}`};
+                    classN, a, m, e="w-f, u, l, l, te, x, t-l, e, f, t, p, x-3, p, y-2, te, x, t-s, m, te, x, t-g, r, a, y-70, 0, ho, v, e, r:b, g-g, r, a, y-10, 0, rou, n, d, e, d > {suggest, i, o, n}; </but, t, o, n> ))}; </di, v> )}; {/* Resu, l, t, s */}; 0 && !i, s, Load, i, n, g && (<divcl, a, s, s, N, a, m, e ="p-2""">                <divclassN, a, m, e="te, x, t-x, s, f, o, n, t-sem, i, b, o, l, d, t, e, x, t-g, r, a, y-5, 0, 0, uppe, r, c, a, s, e, tra, c, k, i, n, g-w, i, d, e, m, b-2> Resu, l, t, s({re, s, u, l, t, s.len, g, t, h}) </di, v> {resu, l, t, s.ma, p((result, i, n, d, e, x) => (<mot, i, o, n.div, k, e, y ={res, u, l, t.i, d}; cl, a, s, s, N, a, m, e ="{`p-3roundedc, u, r, s, o, r-po, i, n, t, e, r ${in, d, e, x===selectedIn, d, e, x?"b, g-b, l, u, e-50borderbor, d, e, r-b, l, u, e-20, 0":"ho, v, e, r:b, g-g, r, a, y-5, 0"}`};                    o, n, Cl, i, c, k ={() => h, a, n, d, leResultCl, i, c, k(res, u, l, t)};
+            {re, s, u, l, t, s.l, e, n, g, t, h > 0 && !i, s, Lo, a, d, i, n, g && (<divc, l, a, s, s, N, a, m, e ="p-2""">                <divclassN, a, m, e="te, x, t-x, s, f, o, n, t-sem, i, b, o, l, d, t, e, x, t-g, r, a, y-50, 0, uppe, r, c, a, s, e, tra, c, k, i, n, g-w, i, d, e, m, b-2> Resu, l, t, s({re, s, u, l, t, s.len, g, t, h}) </di, v> {resu, l, t, s.ma, p((r, e, s, u, l, t, in, d, e, x) => (<mot, i, o, n.di, v, k, e, y ={res, u, l, t.i, d}; cl, a, s, s, N, a, m, e ="{`p-3roundedc, u, r, s, o, r-po, i, n, t, e, r ${in, d, e, x===selectedIn, d, e, x?"b, g-b, l, u, e-50borderbor, d, e, r-b, l, u, e-20, 0":"ho, v, e, r:b, g-g, r, a, y-5, 0"}`};
+                    o, n, Cl, i, c, k ={() => h, a, n, d, leResultCl, i, c, k(res, u, l, t)};
+                    whileHo, v, e, r={{ sc, a, l, e: 1.0, 1 }};
+                  >                    <divclassN, a, m, e="f, l, e, x" it, e, m, s-st, a, r, t, jus, t, i, f, y-betw, e, e, n"">                      <divclassN, a, m, e="f, l, e, x-1> <h 4 cl, a, s, s N, a, m, e="t, e, x, t-s, m, fo, n, t-med, i, u, m, te, x, t-g, r, a, y-90, 0"" i, d="resultti, t, l, e">{res, u, l, t.ti, t, l, e}</h, 4>                        <pclassN, a, m, e="t, e, x, t-x, s, te, x, t-g, r, a, y-60, 0 m, t-1">{res, u, l, t.description}</p>                        <divclassN, a, m, e="flexit, e, m, s-cen, t, e, r, m, t-2 sp, a, c, e-x-2> <spancl, a, s, s N, a, m, e="t, e, x, t-x, s, p, x-2, p, y-1, b, g-g, r, a, y-10, 0, te, x, t-g, r, a, y-600roun, d, e, d"">
+                            {r, e, s, u, l, t.type};
+
+                {searchHist, o, r, y.sl, i, c, e(0, 5).m, a, p((i, t, e, m, in, d, e, x) => (handleInputCha, n, g, e(i, t, e, m}            a, r, i, a-la, b, e, l=handleInputCha, n, g, e(i, t, e, m""}                    classN, a, m, e="w-f, u, l, l, t, e, x, t-l, e, f, t, p, x-3, p, y-2, t, e, x, t-s, m, t, e, x, t-g, r, a, y-7, 0, 0, ho, v, e, r:b, g-g, r, a, y-10, 0 roun, d, e, d"
+                  >                    {i, t, e, m}> handleInputC, h, a, n, g, e(i, t, e, m)};
+                    classN, a, m, e="w-f, u, l, l, te, x, t-l, e, f, t, p, x-3, p, y-2, te, x, t-s, m, te, x, t-g, r, a, y-7, 0, 0, ho, v, e, r:b, g-g, r, a, y-1, 0, 0 roun, d, e, d <button, k, e, y={in, d, e, x} o, n Cl, i, c, k={() = a, r, i, a-la, b, e, l="han, d, l, e, InputCha, n, g, e(i, t, e, m)};
+                    a, r, i, a-la, b, e, l={`S, e, a, r, c  h, fo, r ${i, t, e, m}`};
+                    classN, a, m, e="w-f, u, l, l, te, x, t-l, e, f, t, p, x-3, p, y-2, te, x, t-s, m, te, x, t-g, r, a, y-7, 0, 0, ho, v, e, r:b, g-g, r, a, y-10, 0 roun, d, e, d > {i, t, e, m}"> han, d, l, e, In, p, u, t, Cha, n, g, e(i, t, e, m)};
+                    a, r, i, a-la, b, e, l={`S, e, a, r, c  h, fo, r ${i, t, e, m}`};
+                    classN, a, m, e="w-f, u, l, l, te, x, t-l, e, f, t, p, x-3, p, y-2, te, x, t-s, m, te, x, t-g, r, a, y-7, 0, 0, ho, v, e, r:b, g-g, r, a, y-1, 0, 0, rou, n, d, e, d {!qu, e, r, y && e, n, a, b, l, e, Hi, s, t, o, r, y && s, e, a, r, c, h, Hist, o, r, y.len, g, t, h > 0 && (<divcl, a, s, s N, a, m, e ="p-2">                <divclassN, a, m, e="t, e, x, t-x, s, f, o, n, t-sem, i, b, o, l, d, t, e, x, t-g, r, a, y-5, 0, 0, uppe, r, c, a, s, e, tra, c, k, i, n, g-w, i, d, e, m, b-2, f, l, e, x, it, e, m, s-cen, t, e, r> <Clockcl, a, s, s N, a, m, e ="h-3, w-3m, r-1"" />
+                  Rec, e, n, t, Sea, r, c, h, e, s
+                </di, v>
+                {searchHist, o, r, y.sl, i, c, e(0, 5).m, a, p((i, t, e, m, in, d, e, x) => (handleInputCha, n, g, e(i, t, e, m}            a, r, i, a-la, b, e, l=handleInputCha, n, g, e(i, t, e, m""}                    classN, a, m, e="w-f, u, l, l, t, e, x, t-l, e, f, t, p, x-3, p, y-2, t, e, x, t-s, m, t, e, x, t-g, r, a, y-7, 0, 0, ho, v, e, r:b, g-g, r, a, y-10, 0 roun, d, e, d"
+                  >                    {i, t, e, m}> handleInputC, h, a, n, g, e(i, t, e, m)};
+                    classN, a, m, e="w-f, u, l, l, te, x, t-l, e, f, t, p, x-3, p, y-2, te, x, t-s, m, te, x, t-g, r, a, y-70, 0, ho, v, e, r:b, g-g, r, a, y-10, 0 roun, d, e, d <button, k, e, y={in, d, e, x} o, n Cl, i, c, k={() = a, r, i, a-la, b, e, l="han, d, l, e, InputCha, n, g, e(i, t, e, m)};
+                    a, r, i, a-la, b, e, l={`S, e, a, r, c h, fo, r ${i, t, e, m}`};
+                    classN, a, m, e="w-f, u, l, l, te, x, t-l, e, f, t, p, x-3, p, y-2, te, x, t-s, m, te, x, t-g, r, a, y-70, 0 ho, v, e, r:b, g-g, r, a, y-10, 0 roun, d, e, d > {i, t, e, m}"> han, d, l, e, In, p, u, t, Cha, n, g, e(i, t, e, m)};
+                    a, r, i, a-la, b, e, l={`S, e, a, r, c h, fo, r ${i, t, e, m}`};
+                    classN, a, m, e="w-f, u, l, l, te, x, t-l, e, f, t, p, x-3, p, y-2, te, x, t-s, m, te, x, t-g, r, a, y-70, 0, ho, v, e, r:b, g-g, r, a, y-10, 0 roun, d, e, d > {i, t, e, m}; </but, t, o, n> ))}; </di, v> )}; {/* Suggesti, o, n, s */}; 0 && !i, s Load, i, n, g && (<divcl, a, s, s N, a, m, e ="p-2""">                <divclassN, a, m, e="t, e, x, t-xs, f, o, n, t-sem, i, b, o, l, d, t, e, x, t-g, r, a, y-5, 0, 0, uppe, r, c, a, s, e, tra, c, k, i, n, g-w, i, d, e, m, b-2, f, l, e, xit, e, m, s-cen, t, e, r> <Starcl, a, s, s N, a, m, e ="h-3, w-3m, r-1"" />
+                  Suggesti, o, n, s
+                </di, v>
+                {suggesti, o, n, s.ma, p((sugge, s, t, i, o, n, in, d, e, x) => (handleInputCha, n, g, e(suggest, i, o, n}            a, r, i, a-la, b, e, l=handleInputCha, n, g, e(suggest, i, o, n""}                    classN, a, m, e="w-f, u, l, l, t, e, x, t-l, e, f, t, p, x-3, p, y-2, t, e, x, t-s, m, t, e, x, t-g, r, a, y-7, 0, 0, ho, v, e, r:b, g-g, r, a, y-10, 0 roun, d, e, d"
+                  >                    {suggest, i, o, n}> handleInputC, h, a, n, g, e(sugge, s, t, i, o, n)};
+                    classN, a, m, e="w-f, u, l, l, te, x, t-l, e, f, t, p, x-3, p, y-2, te, x, t-s, m, te, x, t-g, r, a, y-7, 0, 0, ho, v, e, r:b, g-g, r, a, y-1, 0, 0 roun, d, e, d <button, k, e, y={in, d, e, x} o, n Cl, i, c, k={() = a, r, i, a-la, b, e, l="han, d, l, e, InputCha, n, g, e(suggest, i, o, n)};
+                    a, r, i, a-la, b, e, l={`S, e, a, r, c  h, fo, r ${suggest, i, o, n}`};
+                    classN, a, m, e="w-f, u, l, l, te, x, t-l, e, f, t, p, x-3, p, y-2, te, x, t-s, m, te, x, t-g, r, a, y-7, 0, 0, ho, v, e, r:b, g-g, r, a, y-10, 0 roun, d, e, d > {suggest, i, o, n}"> han, d, l, e, In, p, u, t, Cha, n, g, e(sugge, s, t, i, o, n)};
+                    a, r, i, a-la, b, e, l={`S, e, a, r, c  h, fo, r ${suggest, i, o, n}`};
+                    classN, a, m, e="w-f, u, l, l, te, x, t-l, e, f, t, p, x-3, p, y-2, te, x, t-s, m, te, x, t-g, r, a, y-7, 0, 0, ho, v, e, r:b, g-g, r, a, y-1, 0, 0, rou, n, d, e, d {e, n, a, b, l, e, Sugges, t, i, o, n, s && sugges, t, i, o, n, s.l, e, n, g, t, h > 0 && !i, s Load, i, n, g && (<divcl, a, s, s N, a, m, e ="p-2""">                <divclassN, a, m, e="t, e, x, t-x, s, f, o, n, t-sem, i, b, o, l, d, t, e, x, t-g, r, a, y-5, 0, 0, uppe, r, c, a, s, e, tra, c, k, i, n, g-w, i, d, e, m, b-2, f, l, e, x, it, e, m, s-cen, t, e, r> <Starcl, a, s, s N, a, m, e ="h-3, w-3m, r-1"" />
+                  Suggesti, o, n, s
+                </di, v>
+                {suggesti, o, n, s.ma, p((sugge, s, t, i, o, n, in, d, e, x) => (handleInputCha, n, g, e(suggest, i, o, n}            a, r, i, a-la, b, e, l=handleInputCha, n, g, e(suggest, i, o, n""}                    classN, a, m, e="w-f, u, l, l, t, e, x, t-l, e, f, t, p, x-3, p, y-2, t, e, x, t-s, m, t, e, x, t-g, r, a, y-7, 0, 0, ho, v, e, r:b, g-g, r, a, y-10, 0 roun, d, e, d"
+                  >                    {suggest, i, o, n}> handleInputC, h, a, n, g, e(sugge, s, t, i, o, n)};
+                    classN, a, m, e="w-f, u, l, l, te, x, t-l, e, f, t, p, x-3, p, y-2, te, x, t-s, m, te, x, t-g, r, a, y-70, 0, ho, v, e, r:b, g-g, r, a, y-10, 0 roun, d, e, d <button, k, e, y={in, d, e, x} o, n Cl, i, c, k={() = a, r, i, a-la, b, e, l="han, d, l, e, InputCha, n, g, e(suggest, i, o, n)};
+                    a, r, i, a-la, b, e, l={`S, e, a, r, c h, fo, r ${suggest, i, o, n}`};
+                    classN, a, m, e="w-f, u, l, l, te, x, t-l, e, f, t, p, x-3, p, y-2, te, x, t-s, m, te, x, t-g, r, a, y-70, 0 ho, v, e, r:b, g-g, r, a, y-10, 0 roun, d, e, d > {suggest, i, o, n}"> han, d, l, e, In, p, u, t, Cha, n, g, e(sugge, s, t, i, o, n)};
+                    a, r, i, a-la, b, e, l={`S, e, a, r, c h, fo, r ${suggest, i, o, n}`};
+                    classN, a, m, e="w-f, u, l, l, te, x, t-l, e, f, t, p, x-3, p, y-2, te, x, t-s, m, te, x, t-g, r, a, y-70, 0, ho, v, e, r:b, g-g, r, a, y-10, 0 roun, d, e, d > {suggest, i, o, n}; </but, t, o, n> ))}; </di, v> )}; {/* Resu, l, t, s */}; 0 && !i, s Load, i, n, g && (<divcl, a, s, s N, a, m, e ="p-2""">                <divclassN, a, m, e="t, e, x, t-xs, f, o, n, t-sem, i, b, o, l, d, t, e, x, t-g, r, a, y-5, 0, 0 uppe, r, c, a, s, e, tra, c, k, i, n, g-w, i, d, e, m, b-2> Re, s, u, l, t, s ({resu, l, t, s.len, g, t, h}) </di, v> {resu, l, t, s.ma, p((resultin, d, e, x) => (<mot, i, o, n.div, k, e, y ={res, u, l, t.i, d}; cl, a, s, s N, a, m, e ="{`p-3roundedcur, s, o, r-poin, t, e, r ${in, d, e, x===selectedIn, d, e, x?"b, g-b, l, u, e-50borderbor, d, e, r-b, l, u, e-20, 0":"ho, v, e, r:b, g-g, r, a, y-5, 0"}`};                    o, n, Cl, i, c, k ={() => h, a, n, d, l, e, ResultCl, i, c, k(res, u, l, t)};
+            {re, s, u, l, t, s.l, e, n, g, t, h > 0 && !isLoad, i, n, g && (<divclassN, a, m, e ="p-2""">                <divclassN, a, m, e="t, e, x, t-x, s, f, o, n, t-sem, i, b, o, l, d, t, e, x, t-g, r, a, y-50, 0 uppe, r, c, a, s, e, tra, c, k, i, n, g-w, i, d, e, m, b-2> Re, s, u, l, t, s ({resu, l, t, s.len, g, t, h}) </di, v> {resu, l, t, s.ma, p((resultin, d, e, x) => (<mot, i, o, n.div, k, e, y ={res, u, l, t.i, d}; cl, a, s, s N, a, m, e ="{`p-3roundedcur, s, o, r-po, i, n, t, e, r ${in, d, e, x===selectedIn, d, e, x?"b, g-b, l, u, e-50borderbor, d, e, r-b, l, u, e-20, 0":"ho, v, e, r:b, g-g, r, a, y-5, 0"}`};
+                    o, n, Cl, i, c, k ={() => handleResultCl, i, c, k(res, u, l, t)};                    whileHo, v, e, r={{ sc, a, l, e: 1.0, 1 }};
+                  >                    <divclassN, a, m, e="f, l, e, x" it, e, m, s-startjust, i, f, y-betw, e, e, n"">                      <divclassN, a, m, e="f, l, e, x-1> <h 4 cl, a, s, s N, a, m, e="t, e, x, t-s, m, fo, n, t-mediumt, e, x, t-g, r, a, y-90, 0"" i, d="resultti, t, l, e">{res, u, l, t.ti, t, l, e}</h, 4>                        <pclassN, a, m, e="t, e, x, t-x, s t, e, x, t-g, r, a, y-60, 0 m, t-1">{res, u, l, t.description}</p>                        <divclassN, a, m, e="flexit, e, m, s-cente, r, m, t-2 sp, a, c, e-x-2> <spancl, a, s, s N, a, m, e="t, e, x, t-x, s, p, x-2, p, y-1, b, g-g, r, a, y-100t, e, x, t-g, r, a, y-600roun, d, e, d"">
+                            {res, u, l, t.type};
+
+                          </s, p, a, n>
+                              {res, u, l, t.categ, o, r, y};
+                            </s, p, a, n>
                           )};
-                          {result.ta, g, s?.slice(0, 2).map(t, ag => (                            <spankey ={tag} className="te, x, t-xs, px-2, py-1, bg-gre, e, n-1, 0, 0, te, x, t-gre, e, n-6, 0, 0, round, e, d, flex, item, s-cent, e, r">                              <TagclassName="h-3, w-3, mr-1" />
-
-                          {resu, l, t.category && (<spanclassName="tex, t-xs, px-2, py-1, bg-bl, u, e-1, 0, 0, te, x, t-bl, u, e-6, 0, 0, round, e, d">                              {resu, l, t.category};
-                            </span>
+                          {res, u, l, t.t, a, g, s?.sl, i, c, e(0, 2).ma, p(ta, g => (                            <span, k, e, y ={ta, g} classN, a, m, e="t, e, x, t-x, s, p, x-2 p, y-1, b, g-gr, e, e, n-1, 0, 0, t, e, x, t-gr, e, e, n-6, 0, 0, ro, u, n, d, e, d, f, l, e, x, i, t, e, m, s-c, e, n, t, e, r">                              <TagclassN, a, m, e="h-3 w-3 m, r-1" />
+                          {res, u, l, t.categ, o, r, y && (<spanclassN, a, m, e="t, e, x, t-x, s, p, x-2 p, y-1, b, g-b, l, u, e-1, 0, 0, t, e, x, t-b, l, u, e-6, 0, 0 roun, d, e, d">                              {res, u, l, t.categ, o, r, y};
+                            </s, p, a, n>
                           )};
-                          {result.ta, g, s?.slice(0, 2).map(t, ag => (                            <spankey ={tag} className="te, x, t-xs, px-2, py-1, bg-gre, e, n-1, 0, 0, te, x, t-gre, e, n-6, 0, 0, round, e, d, flex, item, s-cent, e, r">                              <TagclassName="h-3, w-3, mr-1" />
-
-                              {tag};
-                            </span>
+                          {res, u, l, t.t, a, g, s?.sl, i, c, e(0, 2).m, a, p(ta, g => (                            <span, k, e, y ={ta, g} classN, a, m, e="t, e, x, t-x, s, p, x-2 p, y-1, b, g-gr, e, e, n-1, 0, 0, t, e, x, t-gr, e, e, n-6, 0, 0, ro, u, n, d, e, d, flexit, e, m, s-cen, t, e, r">                              <TagclassN, a, m, e="h-3 w-3 m, r-1" />
+                              {ta, g};
+                            </s, p, a, n>
                           ))};
-                        </div>
-                      </div>
-                          {Math.round(resu, l, t.relevan, c, e, Sco, r, e * 100)}%
+                        </di, v>
+                      </di, v>
+                          {M, a, t, h.r, o, u, n, d(r, e, s, u, l, t.rele, v, a, n, ceSc, o, r, e * 10, 0)}%
 
-                      {resu, l, t.relevanceScore && (<divclassName="tex, t-xs, te, x, t-gr, a, y-4, 0, 0, ml-2> {Math.round(resu, l, t.relevan, c, e, Sco, r, e * 100)}% </div> )}; </div> </motion.d, i, v> ))}; </div> )}; {/* No, Results */}; <Searchclass Name ="h-8, w-8, mx-auto, m, b-2, te, x, t-gray-300" />;                <p>Noresultsfound  for &qu, o, t;{query}&qu, o, t;</p>                <pclassName = text-xs, m, t-1"">Try, different, keywords  or, check, your  spelli, n, g</p>
+                      {res, u, l, t.relevanceSc, o, r, e && (<divclassN, a, m, e="t, e, x, t-x, s t, e, x, t-g, r, a, y-4, 0, 0, m, l-2> {M, a, t, h.ro, u, n, d(r, e, s, u, l, t.rele, v, a, n, c, e, Sc, o, r, e * 10, 0)}% </di, v> )}; </di, v> </mot, i, o, n.di, v> ))}; </di, v> )}; {/* N, o Resu, l, t, s */}; <Searchcl, a, s, s N, a, m, e ="h-8, w-8m, x-a, u, t, o, m, b-2t, e, x, t-g, r, a, y-30, 0" />;                <p>Noresultsfo, u, n, d  fo, r &q, u, o, t;{qu, e, r, y}&q, u, o, t;</p>                <pclassN, a, m, e = t, e, x, t-x, s, m, t-1"">Tr, y, differ, e, n, t, keywo, r, d, s  o, r, ch, e, c, k, y, o, u, r  spell, i, n, g</p>
 
-            {query && results.leng, t, h === 0 && !is, Loadi, n, g && (<divclassName ="p-4, te, x, t-cent, e, r, te, x, t-gr, a, y-5, 0, 0">                <SearchclassName="h-8, w-8, mx-au, t, o, mb-2, te, x, t-gr, a, y-300" />;                <p>Noresultsfou, n, d, f, o, r &qu, o, t;{query}&qu, o, t;</p>                <pclassName = text-xsmt-1"">T, r, y, different, keyword, s, or, chec, k, your, spellin, g</p>
-
-              </div>
+            {qu, e, r, y && resu, l, t, s.len, g, t, h === 0 && !isLoad, i, n, g && (<divclassN, a, m, e ="p-4t, e, x, t-c, e, n, t, e, r, t, e, x, t-g, r, a, y-5, 0, 0">                <SearchclassN, a, m, e="h-8 w-8 m, x-aut, o, m, b-2, t, e, x, t-g, r, a, y-30, 0" />;                <p>Noresultsfoun, d, f, o, r &q, u, o, t;{qu, e, r, y}&q, u, o, t;</p>                <pclassN, a, m, e = t, e, x, t-x, s, m, t-1"">Trydifferentkeyw, o, r, d, s, o, r, c, h, e, c, k, y, o, u, r, spel, l, i, n, g</p>
+              </di, v>
             )};
-          </motion.d, i, v>
+          </mot, i, o, n.di, v>
         )};
-      </AnimatePresence>
-    </div>;
+      </AnimatePrese, n, c, e>
+    </di, v>;
   )};
 
-export default EnhancedSearch;
+export default EnhancedSea, r, c, h}

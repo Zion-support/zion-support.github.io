@@ -1,46 +1,19 @@
 {
-  "timestamp": "2025-09-27T07:36:17.154Z",
+>>>>>> 45ce5fae8a680d713f034d877aa81b1d405b5763
   "fixedFiles": [
-    "src/components/UserManagement.tsx",
-    "src/components/Testimonials.tsx",
     "src/components/TestDashboard.tsx",
-    "src/components/TaskManager.tsx",
     "src/components/SystemMonitor.tsx",
-    "src/components/ServiceCard.tsx",
     "src/components/SecurityDashboard.tsx",
-    "src/components/SEOAccessibilityOptimizer.tsx",
-    "src/components/ProjectManagement.tsx",
-    "src/components/PricingCard.tsx",
-    "src/components/PerformanceTracker.tsx",
     "src/components/PerformanceOptimizations.tsx",
-    "src/components/PerformanceMetrics.tsx",
     "src/components/NotificationSystem.tsx",
-    "src/components/Navigation.tsx",
-    "src/components/LoadingComponents.tsx",
-    "src/components/GlobalErrorBoundary.tsx",
-    "src/components/Footer.tsx",
-    "src/components/FileUpload.tsx",
-    "src/components/FeatureCard.tsx",
-    "src/components/ErrorReporter.tsx",
-    "src/components/ErrorBoundary.tsx",
-    "src/components/EnhancedUserExperience.tsx",
-    "src/components/EnhancedSearch.tsx",
-    "src/components/DataVisualization.tsx",
-    "src/components/Dashboard.tsx",
-    "src/components/ContactForm.tsx",
-    "src/components/ChatSystem.tsx",
-    "src/components/BlogCard.tsx",
-    "src/components/AnalyticsDashboard.tsx",
+>>>>>> 45ce5fae8a680d713f034d877aa81b1d405b5763
     "src/components/AdvancedSecurityMonitor_backup.tsx",
-    "src/components/AdvancedPerformanceOptimizer.tsx",
     "src/components/AdvancedErrorHandler.tsx",
-    "src/components/ActivityFeed.tsx",
-    "src/components/AccessibilityFixer.tsx",
     "src/components/AccessibilityEnhancements.tsx"
   ],
   "errors": [],
   "summary": {
-    "totalFixed": 36,
+>>>>>> 45ce5fae8a680d713f034d877aa81b1d405b5763
     "totalErrors": 0
   }
 }

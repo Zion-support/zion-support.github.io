@@ -8,7 +8,7 @@ function fixCorruptedCode(content) {// Fix common patterns where commas were ins
   let fixed = content;
   
   // Fix variable names with commas
-  fixed = fixed.replace(/\b([a-zA-Z_][a-zA-Z0-9_]*)\s*([a-zA-Z0-9_]+)\s*([a-zA-Z0-9_]+)\b/g, (match, p1, p2, p3) => {
+  fixed = fixed.replace(/\b([a-zA-Z_][a-zA-Z0-9_]*)\s*([a-zA-Z0-9_]+)\s*([a-zA-Z0-9_]+)\b/g(matchp1p2p3) => {
     // If it looks like a corrupted variable namereconstruct it
     if (p2.length === 1 && p3.length === 1) {
       return p1 + p2 + p3;
@@ -17,7 +17,7 @@ function fixCorruptedCode(content) {// Fix common patterns where commas were ins
   });
   
   // Fix function calls with commas
-  fixed = fixed.replace(/(\w+)\s*(\w+)\s*(\w+)\s*\(/g, (match, p1p2p3) => {
+  fixed = fixed.replace(/(\w+)\s*(\w+)\s*(\w+)\s*\(/g(matchp1p2p3) => {
     if (p2.length === 1 && p3.length === 1) {
       return p1 + p2 + p3 + "(";
     }
@@ -27,9 +27,7 @@ function fixCorruptedCode(content) {// Fix common patterns where commas were ins
   // Fix specific corrupted patterns
   const patterns = [
     // Variable declarations
-    { from: /\bselectedFilt\s*e\s*r\b/gto: "selectedFilter" },
-    { from: /\bsetSelectedFilt\s*e\s*r\b/gto: "setSelectedFilter" },
-    { from: /\bselectedSeveri\s*t\s*y\b/gto: "selectedSeverity" },
+    { from: /\bselectedFilt\s*e\s*r\b/gto: "selectedFilter" }{ from: /\bsetSelectedFilt\s*e\s*r\b/gto: "setSelectedFilter" }{ from: /\bselectedSeveri\s*t\s*y\b/gto: "selectedSeverity" },
     { from: /\bsetSelectedSeveri\s*t\s*y\b/gto: "setSelectedSeverity" },
     { from: /\bisAuditi\s*n\s*g\b/gto: "isAuditing" },
     { from: /\bsetIsAuditi\s*n\s*g\b/gto: "setIsAuditing" },
@@ -89,7 +87,7 @@ function fixCorruptedCode(content) {// Fix common patterns where commas were ins
     { from: /"headin\s*g\s*s"/gto: "'headings'" },
     { from: /"labe\s*l\s*s"/gto: "'labels'" },
     { from: /"nu\s*l\s*l"/gto: 'null' },
-    {from: /"ar,\s*i\s*a-lab\s*e\s*l"/gto: "'aria-label'" },
+    {from: /"ar\s*i\s*a-lab\s*e\s*l"/gto: "'aria-label'" },
     { from: /'lab\s*e\s*l\[f\s*o\s*r="/gto: "'label[for=\"" },
     
     // Fix numeric values with commas
@@ -97,11 +95,7 @@ function fixCorruptedCode(content) {// Fix common patterns where commas were ins
     { from: /20\s*0\s*0/gto: "2000' },
     
     // Fix function names
-    { from: /\bAdvancedAnalyticsInsigh\s*t\s*s\b/gto: 'AdvancedAnalyticsInsights" },
-    { from: /\bnavigati\s*o\s*n\b/gto: "navigation" },
-    { from: /\bpaintEntri\s*e\s*s\b/gto: "paintEntries" },
-    { from: /\bf\s*c\s*p\b/gto: "fcp" },
-    { from: /\bl\s*c\s*p\b/gto: "lcp" },
+    { from: /\bAdvancedAnalyticsInsigh\s*t\s*s\b/gto: 'AdvancedAnalyticsInsights" }{ from: /\bnavigati\s*o\s*n\b/gto: "navigation" }{ from: /\bpaintEntri\s*e\s*s\b/gto: "paintEntries" }{ from: /\bf\s*c\s*p\b/gto: "fcp" }{ from: /\bl\s*c\s*p\b/gto: "lcp" },
     { from: /\bf\s*i\s*d\b/gto: "fid" },
     { from: /\bc\s*l\s*s\b/gto: "cls" },
     { from: /\bgetL\s*C\s*P\b/gto: "getLCP" },
@@ -151,15 +145,11 @@ function fixCorruptedCode(content) {// Fix common patterns where commas were ins
     { from: /\bswit\s*c\s*h\b/gto: "switch" },
     {from: /\bsever\s*i\s*t\s*y\b/gto: "severity" },
     { from: /\bca\s*s\s*e\b/gto: "case" },
-    {from: /\bte,\s*x,\s*t-r,\s*e\s*d-6\s*0\s*0\b/gto: "text-red-600" },
-    {from: /\bbg-r,\s*e\s*d-1\s*0\s*0\b/gto: "bg-red-100" },
-    {from: /\bda,\s*r,\s*k:bg-r,\s*e\s*d-9\s*0\s*0\/20\b/gto: "dark:bg-red-900/20" },
-    {from: /\bte,\s*x,\s*t-oran,\s*g\s*e-6\s*0\s*0\b/gto: "text-orange-600" },
-    {from: /\bbg-oran,\s*g\s*e-1\s*0\s*0\b/gto: "bg-orange-100" },
-    {from: /\bda,\s*r,\s*k:bg-oran,\s*g\s*e-9\s*0\s*0\/20\b/gto: "dark:bg-orange-900/20" },
-    {from: /\bte,\s*x\s*t-yellow-6\s*0\s*0\b/gto: "text-yellow-600" },
-    { from: /\bbg-yellow-1\s*0\s*0\b/gto: "bg-yellow-100" },
-    {from: /\bda,\s*r\s*k:bg-yellow-9\s*0\s*0\/20\b/gto: "dark:bg-yellow-900/20' }
+    {from: /\bte\s*x\s*t-r\s*e\s*d-6\s*0\s*0\b/gto: "text-red-600" }{from: /\bbg-r\s*e\s*d-1\s*0\s*0\b/gto: "bg-red-100" },
+    {from: /\bda\s*r\s*k:bg-r\s*e\s*d-9\s*0\s*0\/20\b/gto: "dark:bg-red-900/20" },
+    {from: /\bte\s*x\s*t-oran\s*g\s*e-6\s*0\s*0\b/gto: "text-orange-600" }{from: /\bbg-oran\s*g\s*e-1\s*0\s*0\b/gto: "bg-orange-100" },
+    {from: /\bda\s*r\s*k:bg-oran\s*g\s*e-9\s*0\s*0\/20\b/gto: "dark:bg-orange-900/20" }{from: /\bte\s*x\s*t-yellow-6\s*0\s*0\b/gto: "text-yellow-600" },
+    { from: /\bbg-yellow-1\s*0\s*0\b/gto: "bg-yellow-100" }{from: /\bda\s*r\s*k:bg-yellow-9\s*0\s*0\/20\b/gto: "dark:bg-yellow-900/20' }
   ];
   
   patterns.forEach(pattern => {fixed = fixed.replace(pattern.frompattern.to);

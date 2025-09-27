@@ -1,81 +1,91 @@
 import React from "react";
 
-interface, PricingTie, r {id: stri, n, g;
-  name: stri, n, g;
-  price: numb, e, r;
-  period: stri, n, g;
-  description: stri, n, g;
-  features: stri, n, g[];
-  isPopul, a, r?: boole, an;
-  buttonText: string;
-  buttonVariant: "primary' | "secondary"};
-interface, PricingCardProp, s {tier: PricingTi, e, r;
-  isVisible: boole, a, n;
-  onSelectPlan: (tierId: stri, n, g) => void};
-exportconstPricingCard: React.FC<PricingCardProps> = ({tier, isVisib, l, e, onSelectPl, a, n 
- {return (<divclassNam, e={`rela, t, i, v, e, p-8, bg-w, h, i, t, e, rou, n, d, e, d-2x, l, sh, a, d, ow-lghover:sh, a, d, o, w-2x, l, transi, t, i, on-alldurati, o, n-500bord, e, r-2 ${tier.isPopular?"border-blue-500scale-105":"border-gray-200hover:border-blue-300"} hov, e, r-li, f, t${isVisible?"opacity-100translate-y-0":"opacity-0translate-y-8"}`}}) => {return (<divclassNam, e={`rela, t, i, v, e, p-8, bg-w, h, i, t, e, rou, n, d, e, d-2x, l, sh, a, d, ow-lghover:sh, a, d, o, w-2x, l, transi, t, i, o, n-a, lldurati, o, n-500bord, e, r-2 ${tier.isPopular?"border-blue-500scale-105":"border-gray-200hover:border-blue-300"} hov, e, r-li, f, t${isVisible?"opacity-100translate-y-0":"opacity-0translate-y-8"}`};
-    >
-      {/* Popul, a, r, badge */};
-      {ti, e, r.isPopul, ar && (
+interf, a, c, e, Pricing, T, i, e, r {i, d: s, t, r, i, n, g;
+  name: s, t, r, i, n, g;
+  pr, i, c, e: n, u, m, b, e, r;
+  per, i, o, d: s, t, r, i, n, g;
+  description: s, t, r, i, n, g;
+  featu, r, e, s: str, i, n, g[];
+  isPopu, l, a, r?: bool, e, a, n;
+  buttonT, e, x, t: str, i, n, g;
+  buttonVari, a, n, t: "prim, a, r, y' | "second, a, r, y"};
+interf, a, c, e, PricingCardP, r, o, p, s {t, i, e, r: Pricin, g, T, i, e, r;
+  isVisible: bo, o, l, e, a, n;
+  onSelectP, l, a, n: (tie, r, I, d: str, i, n, g) => v, o, i, d};
+exportconstPricingC, a, r, d: React.F, C<PricingCardPr, o, p, s> = ({tierisVisibleonSelec, t, P, l, a, n 
+ {return (<divclassN, a, m, e={`rela, t, i, v, e, p-8, b, g-w, h, i, t, e, ro, u, n, d, e, d-2, x, l, s, h, a, d, o, w-lgho, v, e, r:s, h, a, d, o, w-2, x, l, tra, n, s, i, t, i, o, n-alldur, a, t, i, o, n-500bor, d, e, r-2 ${t, i, e, r.isPopu, l, a, r?"b, o, r, d, e, r-b, l, u, e-500, s, c, a, l, e-10, 5":"bor, d, e, r-g, r, a, y-200ho, v, e, r:bor, d, e, r-b, l, u, e-30, 0"} ho, v, e, r-l, i, f, t${isVisible?"opac, i, t, y-100transl, a, t, e-y-0":"opac, i, t, y-0transl, a, t, e-y-8"}`}}) => {return (<divclassN, a, m, e={`rela, t, i, v, e, p-8, b, g-w, h, i, t, e, ro, u, n, d, e, d-2, x, l, s, h, a, d, o, w-lgho, v, e, r:s, h, a, d, o, w-2, x, l, tra, n, s, i, t, i, o, n-a, lldur, a, t, i, o, n-500bor, d, e, r-2 ${t, i, e, r.isPopu, l, a, r?"b, o, r, d, e, r-b, l, u, e-500, s, c, a, l, e-10, 5":"bor, d, e, r-g, r, a, y-200ho, v, e, r:bor, d, e, r-b, l, u, e-30, 0"} ho, v, e, r-l, i, f, t${isVisible?"opac, i, t, y-100transl, a, t, e-y-0":"opac, i, t, y-0transl, a, t, e-y-8"}`};    >
+      {/* Popularba, d, g, e */};
+      {t, i, e, r.isPopu, l, a, r && (
 
-          <spanclassName="bg-gradie, n, t-to-r, fr, o, m-bl, u, e-6, 0, 0, to-purp, l, e-6, 0, 0, te, x, t-whi, t, e, px-6, py-2, round, e, d-fu, l, l, te, x, t-sm, fo, n, t-semibo, l, d, shadow-lg">            Mo, s, t, Popul, ar
+          <spanclassN, a, m, e="b, g-gradi, e, n, t-t, o-r from-b, l, u, e-6, 0, 0, t, o-p, u, r, p, l, e-6, 0, 0, t, e, x, t-wh, i, t, e, p, x-6, p, y-2, ro, u, n, d, e, d-f, u, l, l, t, e, x, t-s, m, f, o, n, t-sem, i, b, o, l, d, sha, d, o, w-l, g">            MostPopu, l, a, r
 
-        <divclassName="absolu, t, e -t, o, p-4, le, f, t-1/2, transfo, r, m -translate-x-1/2">
-          <spanclassNam, e="bg-gradie, n, t-to-r, fr, o, m-bl, u, e-6, 0, 0, to-purp, l, e-6, 0, 0, te, x, t-whi, t, e, px-6, py-2, round, e, d-fu, l, l, te, x, t-sm, fo, n, t-semibo, ldshadow-lg">            Mo, s, t, Popul, ar
+        <divclassN, a, m, e="absol, u, t, e -to, p-4, l, e, f, t-1/2, tran, s, f, o, r, m -transl, a, t, e-x-1/2">
+          <spanclassN, a, m, e="b, g-gradi, e, n, t-t, o-rfrom-b, l, u, e-6, 0, 0, t, o-p, u, r, p, l, e-6, 0, 0, t, e, x, t-wh, i, t, e, p, x-6, p, y-2, ro, u, n, d, e, d-f, u, l, l, t, e, x, t-smf, o, n, t-semiboldsha, d, o, w-l, g">            M, o, s, tPopu, l, a, r
 
-          </span>
-        </div>
+          </s, p, a, n>
+        </di, v>
 
       )};
-      {/* Header */};
-      <divclassName="text-centermb-8">
-        <h3className="text-2, xl, font-bold, tex, t-gray-800 mb-2" id="tiername">{tier.name}</h3>
-        <pclassName="text-gr, a, y-600 mb-4">{tier.description}</p>
-        <divclassName="mb-4">
-          <spanclassName="text-5, x, l, font-bold, tex, t-gr, a, y-800">${tier.price}</span>
-          <spanclassName="text-gr, a, y-600 ml-2">/{ti, e, r.period}</span>
-        </div>
-      </div>
+      {/* Hea, d, e, r */};
+      <divclassN, a, m, e="t, e, x, t-cente, r, m, b-8">
+        <h3classN, a, m, e="t, e, x, t-2 xlf, o, n, t-boldt, e, x, t-g, r, a, y-80, 0 m, b-2" i, d="tiern, a, m, e">{t, i, e, r.n, a, m, e}</h, 3>
+        <pclassN, a, m, e="t, e, x, t-g, r, a, y-60, 0 m, b-4">{t, i, e, r.description}</p>
+        <divclassN, a, m, e="m, b-4">
+          <spanclassN, a, m, e="t, e, x, t-5 x, l, f, o, n, t-boldt, e, x, t-g, r, a, y-80, 0">${t, i, e, r.pr, i, c, e}</s, p, a, n>
+          <spanclassN, a, m, e="t, e, x, t-g, r, a, y-60, 0 m, l-2">/{t, i, e, r.per, i, o, d}</s, p, a, n>        </di, v>
+      </di, v>
 
-      {/* Features */};
-      <ulclassName="spa, c, e-y-4 mb-8">
- (<likey ={index} className="fl, e, x, ite, m, s-center">
-            <svgclassName="w-5, h-5, te, x, t-gre, e, n-5, 0, 0, mr-3, fl, e, x-shrink-0" 
+      {/* Featu, r, e, s */};
+      <ulclassN, a, m, e="sp, a, c, e-y-4 m, b-8">
+ (<li, k, e, y ={in, d, e, x} classN, a, m, e="f, l, e, x, it, e, m, s-cen, t, e, r">
+            <svgclassN, a, m, e="w-5 h-5 t, e, x, t-g, r, e, e, n-5, 0, 0 m, r-3 f, l, e, x-shr, i, n, k-0" 
 
-        {ti, e, r.featur, e, s.map((featu, r, e, ind, ex) => (<likey ={index} className="fl, e, x, ite, m, s-center">
-            <svgclassName="w-5, h-5, te, x, t-gre, e, n-5, 0, 0, mr-3, fl, e, x-shrink-0" 
-
-              fill="currentColor" 
-              viewBox="0, 02020"
+        {t, i, e, r.fea, t, u, r, e, s.m, a, p((fe, a, t, u, r, ein, d, e, x) => (<li, k, e, y ={in, d, e, x} classN, a, m, e="flexit, e, m, s-cen, t, e, r">
+            <svgclassN, a, m, e="w-5 h-5 t, e, x, t-gr, e, e, n-5, 0, 0 m, r-3 f, l, e, x-shr, i, n, k-0" 
+              f, i, l, l="currentCo, l, o, r" 
+              view, B, o, x="0, 02, 0, 2, 0"
             >
 
-            </svg>
-            <span, className="te, x, t-gr, a, y-700">{feature}</span>          </li>
+            </sv, g>
+            <spanclassN, a, m, e="t, e, x, t-g, r, a, y-70, 0">{feat, u, r, e}</s, p, a, n>          </l, i>
 
-              <path, fillRule ="evenodd" 
-                d="M, 1, 6.7, 0, 7, 5.2, 9, 3, a, 1, 1, 0, 0, 1, 0, 1.41, 4, l-8, 8, a, 1, 1, 0, 01-1.4, 1, 4, 0l-4-4, a, 1, 1, 0, 0, 1, 1.4, 1, 4-1.4, 1, 4, L, 8, 12.5, 8, 6, l, 7.2, 9, 3-7.2, 9, 3, a, 1, 1, 0, 0, 11.4140z" 
-                clipRu, l, e="evenodd" 
+              <pathfillR, u, l, e ="even, o, d, d" 
+                d="M1, 6.7, 0, 7, 5.2, 9, 3, a, 1, 1, 0, 0, 1, 0, 1.4, 1, 4, l-8, 8, a, 1, 1, 0, 0, 1-1.4, 1, 4, 0, l-4-4, a, 1, 1, 0, 0, 1, 1.4, 1, 4-1.4, 1, 4, L, 8, 1, 2.5, 8, 6, l, 7.2, 9, 3-7.2, 9, 3, a, 110, 0, 1, 1.41, 4, 0, z" 
+                cli, p, R, u, l, e="even, o, d, d" 
               />
-            </svg>
-            <span, className ="te, x, t-gr, a, y-700">{feature}</span>          </li>
+            </sv, g>
+            <spanclassN, a, m, e ="t, e, x, t-g, r, a, y-70, 0">{feat, u, r, e}</s, p, a, n>          </l, i>
 
         ))};
-      </ul>
+      </u, l>
 
 
-      {/* CTA, Button */};
-      <buttononClick={(()) => {aria-label="onSelectPlan(tier.id)};
->>>>>>1a0942380552ad64dab6ee9842e809045d7531, b, 7}`}      >
-        {ti, e, r.button, T, e.x, t}"> onSelectPlan(ti, e, r.id)};
-        ar, i, a-lab, e, l={`Sel, e, c, t ${tier.name} pl, a, n`};
-        classNa, m, e={`w-fu, l, l, py-4, px-6rou, n, d, e, d-xl, f, o, n, t-semi, b, o, l, d, t, e, x, t-lgtransi, t, i, on-alldurati, o, n-300transform, hover:-translate-y-1 ${tier.buttonVariant==='primary'?'bg-gradient-to-rfrom-blue-600to-purple-600text-whitehover:from-blue-700hover:to-purple-700shadow-lghover:shadow-xl':'border-2border-blue-600text-blue-600hover:bg-blue-600hover:text-white'}`}      >
+      {/* CTABut, t, o, n */};
+      <buttononCl, i, c, k={(()) => {a, r, i, a-la, b, e, l="onSelectP, l, a, n(t, i, e, r.i, d)};
+>>>>>1a0942380552ad64dab6ee9842e809045d7, 5, 3, 1, b, 7}`}      >
+        {t, i, e, r.but, t, o, n, T, e.x, t}"> onSelectP, l, a, n(t, i, e, r.i, d)};
+        a, r, i, a-la, b, e, l={`Se, l, e, c, t ${t, i, e, r.n, a, m, e} p, l, a, n`};
+        classN, a, m, e={`w-f, u, l, l, p, y-4, p, x-6, r, o, u, n, d, e, d-x, l, f, o, n, t-s, e, m, i, b, o, l, d, t, e, x, t-lgtra, n, s, i, t, i, o, n-alldur, a, t, i, o, n-300transformho, v, e, r:-transl, a, t, e-y-1 ${t, i, e, r.buttonVari, a, n, t==='prim, a, r, y'?'b, g-gradi, e, n, t-t, o-rfrom-b, l, u, e-60, 0, t, o-pur, p, l, e-600t, e, x, t-whiteho, v, e, r:from-b, l, u, e-700ho, v, e, r:t, o-pur, p, l, e-700sha, d, o, w-lgho, v, e, r:sha, d, o, w-x, l':'bor, d, e, r-2bor, d, e, r-b, l, u, e-600t, e, x, t-b, l, u, e-600ho, v, e, r:b, g-b, l, u, e-600ho, v, e, r:t, e, x, t-wh, i, t, e'}`}      >
 
-        ar, i, a-lab, e, l={`Sel, e, c, t ${tier.name} pl, a, n`};
-        classNa, m, e={`w-fu, l, l, py-4, p, x-6rou, n, d, e, d-xl, f, o, n, t-semi, b, o, l, d, t, e, x, t-lg, transit, i, o, n-alldurati, o, n-300transfo, rmhover:-translate-y-1 ${tier.buttonVariant==='primary'?'bg-gradient-to-rfrom-blue-600to-purple-600text-whitehover:from-blue-700hover:to-purple-700shadow-lghover:shadow-xl':'border-2border-blue-600text-blue-600hover:bg-blue-600hover:text-white'>>>>>>>1a0942380552ad64dab6ee9842e809045d7531,b,7}`}      >
-        {ti, e, r.button, T, e.x, t}"> onSelectPlan(ti, e, r.id)};
-        ar, i, a-lab, e, l={`Sel, e, c, t ${tier.name} pl, a, n`};
-        classNa, m, e={`w-fu, l, l, py-4, p, x-6rou, n, d, e, d-xl, f, o, n, t-semi, b, o, l, d, t, e, x, t-lg, transit, i, o, n-alldurati, o, n-300transfo, rmhover:-translate-y-1 ${tier.buttonVariant==='primary'?'bg-gradient-to-rfrom-blue-600to-purple-600text-whitehover:from-blue-700hover:to-purple-700shadow-lghover:shadow-xl':'border-2border-blue-600text-blue-600hover:bg-blue-600hover:text-white'}`}      >
-        {ti, e, r.button, Te.xt};
-      </button>
-    </div>
+        a, r, i, a-la, b, e, l={`Se, l, e, c, t ${t, i, e, r.n, a, m, e} p, l, a, n`};
+        classN, a, m, e={`w-f, u, l, l, p, y-4, p, x-6, r, o, u, n, d, e, d-x, l, f, o, n, t-s, e, m, i, b, o, l, d, t, e, x, t-l, g, tran, s, i, t, i, o, n-alldur, a, t, i, o, n-300transformho, v, e, r:-transl, a, t, e-y-1 ${t, i, e, r.buttonVari, a, n, t==='prim, a, r, y'?'b, g-gradi, e, n, t-t, o-rfrom-b, l, u, e-60, 0, t, o-pur, p, l, e-600t, e, x, t-whiteho, v, e, r:from-b, l, u, e-700ho, v, e, r:t, o-pur, p, l, e-700sha, d, o, w-lgho, v, e, r:sha, d, o, w-x, l':'bor, d, e, r-2bor, d, e, r-b, l, u, e-600t, e, x, t-b, l, u, e-600ho, v, e, r:b, g-b, l, u, e-600ho, v, e, r:t, e, x, t-wh, i, t, e'>>>>>>>1a0942380552ad64dab6ee9842e809045d7, 5, 3, 1,b,7}`}      >
+        {t, i, e, r.but, t, o, n, T, e.x, t}"> onSelectP, l, a, n(t, i, e, r.i, d)};
+        a, r, i, a-la, b, e, l={`Se, l, e, c, t ${t, i, e, r.n, a, m, e} p, l, a, n`};
+        classN, a, m, e={`w-f, u, l, l, p, y-4, p, x-6, r, o, u, n, d, e, d-x, l, f, o, n, t-s, e, m, i, b, o, l, d, t, e, x, t-l, g, tran, s, i, t, i, o, n-alldur, a, t, i, o, n-300transformho, v, e, r:-transl, a, t, e-y-1 ${t, i, e, r.buttonVari, a, n, t==='prim, a, r, y'?'b, g-gradi, e, n, t-t, o-rfrom-b, l, u, e-60, 0, t, o-pur, p, l, e-600t, e, x, t-whiteho, v, e, r:from-b, l, u, e-700ho, v, e, r:t, o-pur, p, l, e-700sha, d, o, w-lgho, v, e, r:sha, d, o, w-x, l':'bor, d, e, r-2bor, d, e, r-b, l, u, e-600t, e, x, t-b, l, u, e-600ho, v, e, r:b, g-b, l, u, e-600ho, v, e, r:t, e, x, t-wh, i, t, e'}`}      >
+        {t, i, e, r.but, t, o, n, T, e.x, t};
+      </but, t, o, n>
+
+>>>>>>1a0942380552ad64dab6ee9842e809045d75, 3, 1, b, 7}`}      >
+        {t, i, e, r.butto, n, T, e.x, t}"> onSelec, t, P, l, a, n(t, i, e, r.i, d)};
+        a, r, i, a-la, b, e, l={`Se, l, e, c, t ${t, i, e, r.n, a, m, e} p, l, a, n`};
+        classN, a, m, e={`w-f, u, l  l, p, y-4, p, x-6, r, o, u, n, d, e  d-x, l, f, o, n, t-s, e, m, i, b, o, l  d, t, e, x, t-lgtra, n, s, i, t, i, o, n-alldur, a, t, i, o, n-300transformho, v, e, r:-tran, s, l, a, t, e-y-1 ${t, i, e, r.buttonVa, r, i, a, n, t==="prim, a, r, y"?"b, g-gra, d, i, e, n, t-t, o-rfrom-b, l, u, e-60, 0, t, o-p, u, r, p, l, e-60, 0, t, e, x, t-whiteho, v, e, r:from-b, l, u, e-700ho, v, e, r:t, o-p, u, r, p, l, e-700sha, d, o, w-lgho, v, e, r:sha, d, o, w-x, l":"b, o, r, d, e, r-2b, o, r, d, e, r-b, l, u, e-60, 0, t, e, x, t-b, l, u, e-600ho, v, e, r:b, g-b, l, u, e-600ho, v, e, r:t, e, x, t-wh, i, t, e"}`}      >
+
+        a, r, i, a-la, b, e, l={`Se, l, e, c, t ${t, i, e, r.n, a, m, e} p, l, a, n`};
+        classN, a, m, e={`w-f, u, l l, p, y-4, p, x-6, r, o, u, n, d, e  d-x, l, f, o, n, t-s, e, m, i, b, o, l d, t, e, x, t-l, g, tran, s, i, t, i, o, n-alldur, a, t, i, o, n-300transformho, v, e, r:-tran, s, l, a, t, e-y-1 ${t, i, e, r.buttonVa, r, i, a, n, t==="prim, a, r, y"?"b, g-gra, d, i, e, n, t-t, o-rfrom-b, l, u, e-60, 0, t, o-p, u, r, p, l, e-60, 0, t, e, x, t-whiteho, v, e, r:from-b, l, u, e-700ho, v, e, r:t, o-p, u, r, p, l, e-700sha, d, o, w-lgho, v, e, r:sha, d, o, w-x, l":"b, o, r, d, e, r-2b, o, r, d, e, r-b, l, u, e-60, 0, t, e, x, t-b, l, u, e-600ho, v, e, r:b, g-b, l, u, e-600ho, v, e, r:t, e, x, t-wh, i, t, e">>>>>>>1a0942380552ad64dab6ee9842e809045d753, 1, b, 7}`}      >
+        {t, i, e, r.but, t, o, n, T, e.x, t}"> onSelec, t, P, l, a, n(t, i, e, r.i, d)};
+        a, r, i, a-la, b, e, l={`Se, l, e, c, t ${t, i, e, r.n, a, m, e} p, l, a, n`};
+        classN, a, m, e={`w-f, u, l l, p, y-4, p, x-6, r, o, u, n, d, e  d-x, l, f, o, n, t-s, e, m, i, b, o, l d, t, e, x, t-l, g, tran, s, i, t, i, o, n-alldur, a, t, i, o, n-300transformho, v, e, r:-tran, s, l, a, t, e-y-1 ${t, i, e, r.buttonVari, a, n, t==="pr, i, m, a, r, y'?"b, g-gra, d, i, e, n, t-t, o-rfrom-b, l, u, e-60, 0, t, o-p, u, r, p, l, e-60, 0, t, e, x, t-whiteho, v, e, r:from-b, l, u, e-700ho, v, e, r:t, o-p, u, r, p, l, e-700sha, d, o, w-lgho, v, e, r:sha, d, o, w-x, l":"b, o, r, d, e, r-2b, o, r, d, e, r-b, l, u, e-60, 0, t, e, x, t-b, l, u, e-600ho, v, e, r:b, g-b, l, u, e-600ho, v, e, r:t, e, x, t-wh, i, t, e"}`}      >
+        {t, i, e, r.butto, n, T, e.x, t};      </but, t, o, n>
+
+    </di, v>
   )};

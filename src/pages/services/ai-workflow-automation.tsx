@@ -1,265 +1,334 @@
 import React from "react"
-import {SEO  } from "../../components/SEO"
-import {motion  } from "fram, e, r-motion"
+import { SEO    } from "../../components/SEO"
+import { mot, i, o, n    } from "framer-motion"
 
-export default function AIWorkflowAutomation() {constfeatures = [{
-      icon: Workflow 
-        "AI-powere, d, workflow, automatio, n, that, learn, s, and, optimize, s, your, businessprocessesautomatically."},
-    {icon: Braintitle: "Machi, n, e, LearningIntegration",
+export default function AIWorkflowAutomat, i, o, n() {constfeatu, r, e, s = [{
+      i, c, o, n: Workf, l, o, w 
+        "A, I-poweredworkflowautomationthatlearnsandoptimizesyourbusinessprocessesautomatica, l, l, y."},
+    {i, c, o, n: Brainti, t, l, e: "Ma, c, h, i, neLearningIntegrat, i, o, n",
       description:
-        "Seamle, s, s, integration, wit, h, ML, model, s, for, predictiv, e, workflow, optimizationanddecision-making."},
-    {icon: Targ, ettitle: "Go, a, l-Orient, edAutomation",
+        "Sea, m, l, e, s, s, integrat, i, o, n, wi, t, h, M, L, modelsforpredictiveworkflowoptimizationanddecis, i, o, n-mak, i, n, g."},
+    {i, c, o, n: Targetti, t, l, e: "G, o, a, l-OrientedAutomat, i, o, n",
       description:
-        "Workflo, w, s, that, adap, t, and, optimiz, e, based, o, n, your, busines, sobjectivesandKPIs."},
-    {icon: Trending, Uptitle: "Performan, ceAnalytics",
+        "Work, f, l, o, w, s, t, h, a, t, a, d, a, p, t, an, d, opti, m, i, z, ebasedonyourbusinessobjectivesandK, P, I, s."},
+    {i, c, o, n: TrendingUpti, t, l, e: "Perfor, m, a, n, ceAnalytics",
       description:
-        "Re, a, l-ti, m, e, insights, int, o, workflow, efficienc, yandoptimizationopportunities."},
-    {icon: Shie, ldtitle: "Secure & Compliant",
+        "R, e, a, l-t, i, m, einsightsintoworkflowefficiencyandoptimizationopportunit, i, e, s."},
+    {i, c, o, n: Shieldti, t, l, e: "Sec, u, r, e & Compli, a, n, t",
       description:
-        "Enterpri, s, e-gra, d, e, security, wit, h, bui, l, t-in, compliance, monitorin, gandaudittrails."},
-    {icon: Use, rstitle: "Te, amCollaboration",
+        "Enter, p, r, i, s, e-gr, a, d, e, secur, i, t, y, wi, t, hbu, i, l, t-incompliancemonitoringandaudittra, i, l, s."},
+    {i, c, o, n: Usersti, t, l, e: "T, e, amCollaborat, i, o, n",
       description:
-        "Enhanc, e, d, team, productivit, y, with, intelligen, t, task, routin, gandworkloadbalancing."}];
-  const, benefit, s = ["Reducemanualtasks byupto 80%",
-    "Improveprocessefficiency by60%",
-    "Cutoperationalcosts by40%",
-    "Enhancecustomersatisfaction",
-    "Ensureregulatorycompliance",
-    "Scaleoperationsseamlessly"];
-  return (<SEOtitl, e ="AI, Workflow, Automatio, n - Zi, onTechGroup"
-        descripti, o, n="Transfo, r, m, your, busines, s, with, intelligen, t, AI-power, e, d, workflow, automatio, n. Redu, c, e, manual, tasksimprov, e, efficiencyand, scaleoperationsseamlessly."
+        "Enh, a, n, c, e, d, t, e, a, m, producti, v, i, t, ywithintelligenttaskroutingandworkloadbalanc, i, n, g."}];
+  const, bene, f, i, t, s = ["Reducemanualta, s, k, s byu, p, t, o 8, 0%",
+    "Improveprocessefficie, n, c, y b, y, 6, 0%",
+    "Cutoperationalco, s, t, s b, y, 4, 0%",
+    "Enhancecustomersatisfact, i, o, n",
+    "Ensureregulatorycomplia, n, c, e",
+    "Scaleoperationsseamles, s, l, y"];
+  return (<SEOti, t, l, e ="AIWorkflowAutomat, i, o, n - ZionTechGr, o, u, p"
+        descrip, t, i, o, n="Tran, s, f, o, r, m, y, o, u, r, busi, n, e, s, s, w, i, t, h, intelli, g, e, n, t, A, I-po, w, e, r, e, d, workf, l, o, w, automa, t, i, o, n. R, e, d, u, c, e, manualtasksimproveefficiencyandscaleoperationsseamles, s, l, y."
 
 
-      <SEOtitl, e ="AI, Workflow, Automatio, n - Zi, onTechGroup"
-        descripti, o, n="Transfo, r, m, your, busines, s, with, intelligen, t, AI-power, e, d, workflow, automatio, n. Redu, c, e, manual, task, s, improve, efficienc, y, and, scaleoperationsseamlessly."
+      <SEOti, t, l, e ="AIWorkflowAutomat, i, o, n - ZionTechGr, o, u, p"
+        descrip, t, i, o, n="Tran, s, f, o, r, m, y, o, u, r, busi, n, e, s, s, w, i, t, h, intelli, g, e, n, t, A, I-po, w, e, r, e, d, workf, l, o, w, automa, t, i, o, n. R, e, d, u, c, e, man, u, a, l, t, a, s, k, s, improveefficiencyandscaleoperationsseamles, s, l, y."
 
-    <divclassNam, e="m, i, n-h-scre, e, n, bg-gradie, n, t-to-br, fr, o, m-sla, t, e-90, 0, v, i, a-sla, t, e-8, 0, 0to-slate-900">
-      <SEOtitl, e ="AI, Workflow, Automatio, n - Zi, onTechGroup"
-        descripti, o, n="Transfo, r, m, your, busines, s, with, intelligen, t, AI-power, e, d, workflow, automatio, n. Redu, c, e, manual, task, s, improve, efficienc, y, and, scaleoperationsseamlessly."
+    <divclassN, a, m, e="mi, n-h-sc, r, e, e, n, b, g-gra, d, i, e, n, t-t, o-b, r from-sl, a, t, e-9, 0, 0, v, i, a-sl, a, t, e-80, 0, t, o-sl, a, t, e-90, 0">
+      <SEOti, t, l, e ="AIWorkflowAutomat, i, o, n - ZionTechGr, o, u, p"
+        descrip, t, i, o, n="Tran, s, f, o, r, m, y, o, u, r, busi, n, e, s, s, w, i, t, h, intelli, g, e, n, t, A, I-po, w, e, r, e, d, workf, l, o, w, automa, t, i, o, n. R, e, d, u, c, e, man, u, a, l, t, a, s, k, s, improveefficiencyandscaleoperationsseamles, s, l, y."
 
 
       />
 
-      {/* He, r, o, Section */};
-      <sectionclassNam, e="relati, v, e, py-20, overflow-hidden">
+      {/* H, e, roSect, i, o, n */};
+      <sectionclassN, a, m, e="relativ, e, p, y-20overf, l, o, w-hid, d, e, n">
 
-        <divclassNam, e="contain, e, r, mx-au, t, o, px-4relativez-10">
-          <motion.div, initi, a, l ={{ opacity: 0y: 20 }};
-            anima, t, e={{ opacity: 1y: 0 }};
-            transiti, o, n={{ duration: 0.6 }};
-            classNa, m, e="te, x, t-cent, e, r, m, a, x-w-4, xlmx-auto"
+        <divclassN, a, m, e="containe, r, m, x-aut, o, p, x-4relati, v, e, z-1, 0">
+          <mot, i, o, n.divinit, i, a, l ={{ opac, i, t, y: 0, y: 2, 0 }};
+            ani, m, a, t, e={{ opac, i, t, y: 1, y: 0 }};
+            trans, i, t, i, o, n={{ durat, i, o, n: 0.6 }};
+            clas, s, N, a, m, e="t, e, x, t-c, e, n, t, e, r, m, a, x-w-4x, l, m, x-a, u, t, o"
           >
-            <divclassNam, e="inli, n, e-fl, e, x, ite, m, s-cent, e, r, px-4, py-2, bg-cy, a, n-5, 0, 0/20, bord, e, r, bord, e, r-cy, a, n-4, 0, 0/30, round, e, d-fu, l, l, te, x, t-cy, a, n-3, 0, 0, te, x, t-sm, fo, nt-mediummb-6">
-              <CheckCircleclassNam, e="w-4h-4mr-2" />
-              AI-Power, e, d, Automati, on
-            </div>
-            <h1className="te, x, t-5, xlmd:te, x, t-6, x, l, fo, n, t-bo, l, d, te, x, t-whi, temb-6">AI, WorkflowAutomation</h1>
-            <pclassName="tex, t-xl, te, x, t-sla, t, e-3, 0, 0, mb-8, leadi, n, g-relaxed">
-              Transfo, r, m, your, busines, s, operations, wit, h, intelligent, A, I-power, e, d, workflow, automatio, n. Redu, c, e, manual, tasksimprov, e, efficiencyand, scal, e, your, operation, s, seamless, ly.
+            <divclassN, a, m, e="inl, i, n, e-fl, e, x, it, e, m, s-c, e, n, t, e, r, p, x-4, p, y-2, b, g-c, y, a, n-5, 0, 0/2, 0, b, o, r, d, e, r, b, o, r, d, e, r-c, y, a, n-4, 0, 0/3, 0, ro, u, n, d, e, d-f, u, l, l, t, e, x, t-c, y, a, n-3, 0, 0, t, e, x, t-smf, o, n, t-mediu, m, m, b-6">
+              <CheckCircleclassN, a, m, e="w-4 h-4m, r-2" />
+              A, I-PoweredAutomat, i, o, n
+            </di, v>
+            <h1classN, a, m, e="t, e, x, t-5x, l, m, d:t, e, x, t-6, x, l, f, o, n, t-b, o, l, d, t, e, x, t-whit, e, m, b-6">A, I, WorkflowAutomat, i, o, n</h, 1>
+            <pclassN, a, m, e="t, e, x, t-xlt, e, x, t-sl, a, t, e-3, 0, 0m, b-8lead, i, n, g-rela, x, e, d">
+              Tran, s, f, o, r, m, y, o, u, r, busi, n, e, s, s, operati, o, n, s, wi, t, h, intellig, e, n, t, A, I-po, w, e, r, e, d, workf, l, o, w, automa, t, i, o, n. R, e, d, u, c, e, man, u, a, l, tasksimp, r, o, v, e, efficiency, a, n, d, s, c, a, l, e, y, o, u, r, operat, i, o, n, s, seaml, e, s, s, l, y.
             </p>
-            <divclassName="fl, e, x, fl, ex-colsm:fl, e, x-r, o, w, g, a, p-4, justi, f, y-center">
-              <buttonclassNam, e="px-8, py-4, bg-gradie, n, t-to-r, fr, o, m-cy, a, n-5, 0, 0, to-bl, u, e-6, 0, 0, te, x, t-whi, t, e, fo, n, t-semibo, l, d, round, ed-lghover:fr, o, m-cy, a, n-4, 0, 0, hover:to-bl, u, e-5, 0, 0, transiti, o, n-a, l, l, durati, o, n-2, 0, 0, hover:sca, l, e-1, 0, 5, shad, o, w-lg, shad, o, w-cyan-500/20">
-                G, e, t, Start, e, d
-              </button>
-              <button, classNa, m, e="px-8, py-4, bord, e, r, bord, e, r-cy, a, n-4, 0, 0/30, te, x, t-cy, a, n-4, 0, 0, fo, n, t-semibo, l, d, round, ed-lghover:bg-cy, a, n-4, 0, 0/10, transiti, o, n-a, l, l, duration-200">
+            <divclassN, a, m, e="flexf, l, e, x-co, l, s, m:fl, e, x-r, o, w, g, a, p-4just, i, f, y-cen, t, e, r">
+              <buttonclassN, a, m, e="p, x-8p, y-4b, g-grad, i, e, n, t-t, o-r from-c, y, a, n-5, 0, 0, t, o-b, l, u, e-6, 0, 0, t, e, x, t-wh, i, t, e, f, o, n, t-sem, i, b, o, l, droun, d, e, d-lgho, v, e, r:from-c, y, a, n-4, 0, 0, ho, v, e, r:t, o-b, l, u, e-5, 0, 0, trans, i, t, i, o, n-a, l, l, dur, a, t, i, o, n-2, 0, 0, ho, v, e, r:sc, a, l, e-1, 0, 5, s, h, a, d, o, w-lgsha, d, o, w-c, y, a, n-50, 0/2, 0">
+                G, e, t, St, a, r, t, e, d
+              </but, t, o, n>
+              <buttonclassN, a, m, e="p, x-8p, y-4, b, o, r, d, e, r, b, o, r, d, e, r-c, y, a, n-4, 0, 0/3, 0, t, e, x, t-c, y, a, n-4, 0, 0, f, o, n, t-sem, i, b, o, l, droun, d, e, d-lgho, v, e, r:b, g-c, y, a, n-4, 0, 0/1, 0, trans, i, t, i, o, n-alldurat, i, o, n-20, 0">
 
 
-        <divclassNam, e="contain, e, r, mx-au, t, o, px-4relativez-10">
+        <divclassN, a, m, e="containe, r, m, x-a, u, t, o, p, x-4relati, v, e, z-1, 0">
 
-        <divclassNam, e="absolu, t, e, ins, e, t-0, bg-gradie, n, t-to-r, fr, o, m-cy, a, n-5, 0, 0/10, v, i, a-bl, u, e-5, 0, 0/10, to-purple-500/10" />
-        <divclassNam, e="contain, e, r, mx-au, t, o, px-4relativez-10">
+        <divclassN, a, m, e="absolute, i, n, s, e, t-0, b, g-gra, d, i, e, n, t-t, o-r from-c, y, a, n-5, 0, 0/1, 0, v, i, a-b, l, u, e-50, 0/1, 0, t, o-pur, p, l, e-50, 0/1, 0" />
+        <divclassN, a, m, e="containe, r, m, x-a, u, t, o, p, x-4relati, v, e, z-1, 0">
 
-          <motion.div, initi, a, l ={{ opacity: 0y: 20 }};
-            anima, t, e={{ opacity: 1y: 0 }};
-            transiti, o, n={{ duration: 0.6 }};
-            classNa, m, e="te, x, t-cent, e, r, m, a, x-w-4, x, lmx-auto"
+          <mot, i, o, n.divinit, i, a, l ={{ opac, i, t, y: 0, y: 2, 0 }};
+            ani, m, a, t, e={{ opac, i, t, y: 1, y: 0 }};
+            trans, i, t, i, o, n={{ durat, i, o, n: 0.6 }};
+            classN, a, m, e="t, e, x, t-c, e, n, t, e, r, m, a, x-w-4x, l, m, x-a, u, t, o"
           >
 
-              <CheckCircleclassNam, e="w-4h-4mr-2" />
-              AI-Power, e, d, Automati, on
-            </div>
-            <h1className="te, x, t-5, xlmd:te, x, t-6, x, l, fon, t-bo, l, d, te, x, t-whi, temb-6">AI, WorkflowAutomation</h1>
-            <pclassName="tex, t-xl, te, x, t-sla, t, e-3, 0, 0, mb-8, leadi, n, g-relaxed">
-              Transfo, r, m, your, busines, s, operations, wit, h, intelligent, A, I-power, e, d, workflow, automatio, n. Redu, c, e, manual, task, s, improve, efficienc, y, and, scal, e, your, operation, s, seamless, ly.
+              <CheckCircleclassN, a, m, e="w-4 h-4m, r-2" />
+              A, I-PoweredAutomat, i, o, n
+            </di, v>
+            <h1classN, a, m, e="t, e, x, t-5x, l, m, d:t, e, x, t-6, x, l, fo, n, t-b, o, l, d, t, e, x, t-whit, e, m, b-6">A, I, WorkflowAutomat, i, o, n</h, 1>
+            <pclassN, a, m, e="t, e, x, t-xlt, e, x, t-sl, a, t, e-3, 0, 0m, b-8lead, i, n, g-rela, x, e, d">
+              Tran, s, f, o, r, m, y, o, u, r, busi, n, e, s, s, operati, o, n, s, wi, t, h, intellig, e, n, t, A, I-po, w, e, r, e, d, workf, l, o, w, automa, t, i, o, n. R, e, d, u, c, e, man, u, a, l, t, a, s, k, s, impr, o, v, e, effici, e, n, c, y, an, d, s, c, a, l, e, y, o, u, r, operat, i, o, n, s, seaml, e, s, s, l, y.
             </p>
-            <divclassName="fl, e, x, fl, ex-colsm:fl, e, x-r, o, w, g, a, p-4, justi, f, y-center">
-              <buttonclassNam, e="px-8, py-4, bg-gradie, n, t-to-r, fr, o, m-cy, a, n-5, 0, 0, to-bl, u, e-6, 0, 0, te, x, t-whi, t, e, fo, n, t-semibo, l, d, round, ed-lghover:fr, o, m-cy, a, n-4, 0, 0, hover:to-bl, u, e-5, 0, 0, transiti, o, n-a, l, l, durati, o, n-2, 0, 0, hover:sca, l, e-1, 0, 5, shad, o, w-lg, shad, o, w-cyan-500/20">
-                G, e, t, Start, e, d
-              </button>
-              <button, classNa, m, e="px-8, py-4, bord, e, r, bord, e, r-cy, a, n-4, 0, 0/30, te, x, t-cy, a, n-4, 0, 0, fo, n, t-semibo, l, d, round, ed-lghover:bg-cy, a, n-4, 0, 0/10, transiti, o, n-a, l, l, duration-200">
+            <divclassN, a, m, e="flexf, l, e, x-co, l, s, m:fl, e, x-r, o, w, g, a, p-4just, i, f, y-cen, t, e, r">
+              <buttonclassN, a, m, e="p, x-8p, y-4b, g-grad, i, e, n, t-t, o-r from-c, y, a, n-5, 0, 0, t, o-b, l, u, e-6, 0, 0, t, e, x, t-wh, i, t, e, f, o, n, t-sem, i, b, o, l, droun, d, e, d-lgho, v, e, r:from-c, y, a, n-4, 0, 0, ho, v, e, r:t, o-b, l, u, e-5, 0, 0, trans, i, t, i, o, n-a, l, l, dur, a, t, i, o, n-2, 0, 0, ho, v, e, r:sc, a, l, e-1, 0, 5, s, h, a, d, o, w-lgsha, d, o, w-c, y, a, n-50, 0/2, 0">
+                G, e, t, St, a, r, t, e, d
+              </but, t, o, n>
+              <buttonclassN, a, m, e="p, x-8p, y-4, b, o, r, d, e, r, b, o, r, d, e, r-c, y, a, n-4, 0, 0/3, 0, t, e, x, t-c, y, a, n-4, 0, 0, f, o, n, t-sem, i, b, o, l, droun, d, e, d-lgho, v, e, r:b, g-c, y, a, n-4, 0, 0/1, 0, trans, i, t, i, o, n-alldurat, i, o, n-20, 0">
 
-            <divclassNam, e="inli, n, e-fl, e, x, ite, m, s-cent, e, r, px-4, py-2, bg-cy, a, n-5, 0, 0/20, bord, e, r, bord, e, r-cy, a, n-4, 0, 0/30, round, e, d-fu, l, l, te, x, t-cy, a, n-3, 0, 0, te, x, t-sm, fo, nt-mediummb-6">
-              <CheckCircleclassNam, e="w-4h-4mr-2" />
-              AI-Power, e, d, Automati, on
-            </div>
-            <h1className="te, x, t-5, xlmd:te, x, t-6, x, l, fon, t-bo, l, d, te, x, t-whi, temb-6">AI, WorkflowAutomation</h1>
-            <pclassName="tex, t-xl, te, x, t-sla, t, e-3, 0, 0, mb-8, leadi, n, g-relaxed">
-              Transfo, r, m, your, busines, s, operations, wit, h, intelligent, A, I-power, e, d, workflow, automatio, n. Redu, c, e, manual, task, s, improve, efficienc, y, and, scal, e, your, operation, s, seamless, ly.
+            <divclassN, a, m, e="inl, i, n, e-fl, e, x, it, e, m, s-c, e, n, t, e, r, p, x-4, p, y-2, b, g-c, y, a, n-5, 0, 0/2, 0, b, o, r, d, e, r, b, o, r, d, e, r-c, y, a, n-4, 0, 0/3, 0, ro, u, n, d, e, d-f, u, l, l, t, e, x, t-c, y, a, n-3, 0, 0, t, e, x, t-smf, o, n, t-mediu, m, m, b-6">
+              <CheckCircleclassN, a, m, e="w-4 h-4m, r-2" />
+              A, I-PoweredAutomat, i, o, n
+            </di, v>
+            <h1classN, a, m, e="t, e, x, t-5x, l, m, d:t, e, x, t-6, x, l, fo, n, t-b, o, l, d, t, e, x, t-whit, e, m, b-6">A, I, WorkflowAutomat, i, o, n</h, 1>
+            <pclassN, a, m, e="t, e, x, t-xlt, e, x, t-sl, a, t, e-3, 0, 0m, b-8lead, i, n, g-rela, x, e, d">
+              Tran, s, f, o, r, m, y, o, u, r, busi, n, e, s, s, operati, o, n, s, wi, t, h, intellig, e, n, t, A, I-po, w, e, r, e, d, workf, l, o, w, automa, t, i, o, n. R, e, d, u, c, e, man, u, a, l, t, a, s, k, s, impr, o, v, e, effici, e, n, c, y, an, d, s, c, a, l, e, y, o, u, r, operat, i, o, n, s, seaml, e, s, s, l, y.
             </p>
-            <divclassName="fl, e, x, fl, ex-colsm:fl, e, x-r, o, w, g, a, p-4, justi, f, y-center">
-              <buttonclassNam, e="px-8, py-4, bg-gradie, n, t-to-r, fr, o, m-cy, a, n-5, 0, 0, to-bl, u, e-6, 0, 0, te, x, t-whi, t, e, fo, n, t-semibo, l, d, round, ed-lghover:fr, o, m-cy, a, n-4, 0, 0, hover:to-bl, u, e-5, 0, 0, transiti, o, n-a, l, l, durati, o, n-2, 0, 0, hover:sca, l, e-1, 0, 5, shad, o, w-lg, shad, o, w-cyan-500/20">
-                G, e, t, Start, e, d
-              </button>
-              <button, classNa, m, e="px-8, py-4, bord, e, r, bord, e, r-cy, a, n-4, 0, 0/30, te, x, t-cy, a, n-4, 0, 0, fo, n, t-semibo, l, d, round, ed-lghover:bg-cy, a, n-4, 0, 0/10, transiti, o, n-a, l, l, duration-200">
+            <divclassN, a, m, e="flexf, l, e, x-co, l, s, m:fl, e, x-r, o, w, g, a, p-4just, i, f, y-cen, t, e, r">
+              <buttonclassN, a, m, e="p, x-8p, y-4b, g-grad, i, e, n, t-t, o-r from-c, y, a, n-5, 0, 0, t, o-b, l, u, e-6, 0, 0, t, e, x, t-wh, i, t, e, f, o, n, t-sem, i, b, o, l, droun, d, e, d-lgho, v, e, r:from-c, y, a, n-4, 0, 0, ho, v, e, r:t, o-b, l, u, e-5, 0, 0, trans, i, t, i, o, n-a, l, l, dur, a, t, i, o, n-2, 0, 0, ho, v, e, r:sc, a, l, e-1, 0, 5, s, h, a, d, o, w-lgsha, d, o, w-c, y, a, n-50, 0/2, 0">
+                G, e, t, St, a, r, t, e, d
+              </but, t, o, n>
+              <buttonclassN, a, m, e="p, x-8p, y-4, b, o, r, d, e, r, b, o, r, d, e, r-c, y, a, n-4, 0, 0/3, 0, t, e, x, t-c, y, a, n-4, 0, 0, f, o, n, t-sem, i, b, o, l, droun, d, e, d-lgho, v, e, r:b, g-c, y, a, n-4, 0, 0/1, 0, trans, i, t, i, o, n-alldurat, i, o, n-20, 0">
 
 
-              </button>
-            </div>
-          </motion.d, i, v>
-        </div>
-      </section>
+              </but, t, o, n>
+            </di, v>
+          </mot, i, o, n.di, v>
+        </di, v>
+      </sect, i, o, n>
 
-      {/* Featur, e, s, Section */};
-      <sectionclassNam, e ="py-20">
-        <divclassName="containe, r, mx-au, topx-4">
-          <motion.div
+      {/* FeaturesSect, i, o, n */};
+      <sectionclassN, a, m, e ="p, y-2, 0">
+        <divclassN, a, m, e="containe, r, m, x-aut, o, p, x-4">
+          <mot, i, o, n.di, v
 
-            <h2className="tex, t-4, x, l, fo, n, t-bo, l, d, te, x, t-whi, temb-4">Intellige, n, t, Automation, Features</h2>
-            <pclassName="text-xl, te, x, t-sla, t, e-3, 0, 0, m, a, x-w-3, x, l, mx-auto">
+            <h2classN, a, m, e="t, e, x, t-4, x, l, f, o, n, t-b, o, l, dt, e, x, t-whit, e, m, b-4">Intell, i, g, e, n, t, Automat, i, o, n, Featu, r, e, s</h, 2>
+            <pclassN, a, m, e="t, e, x, t-xlt, e, x, t-s, l, a, t, e-3, 0, 0, m, a, x-w-3x, l, m, x-a, u, t, o">
 
-            initi, a, l={{ opacity: 0y: 20 }};
-            whileInVi, e, w={{ opacity: 1y: 0 }};
-            transiti, o, n={{ duration: 0.6 }};
-            className="te, x, t-cent, ermb-12"
+            in, i, t, i, a, l={{ opac, i, t, y: 0, y: 2, 0 }};
+            whileI, n, V, i, e, w={{ opac, i, t, y: 1, y: 0 }};
+            trans, i, t, i, o, n={{ durat, i, o, n: 0.6 }};
+            classN, a, m, e="t, e, x, t-cente, r, m, b-1, 2"
           >
-            <h2className="tex, t-4, x, l, fon, t-bo, l, d, te, xt-whitemb-4">Intellige, n, t, Automation, Feature, s</h2>
-            <pclassName="tex, t-xl, te, x, t-sla, t, e-3, 0, 0, m, a, x-w-3, x, lmx-auto">
+            <h2classN, a, m, e="t, e, x, t-4xl, f, o, n, t-boldt, e, x, t-whit, e, m, b-4">Intell, i, g, e, n, t, Automat, i, o, n, Feat, u, r, e, s</h, 2>
+            <pclassN, a, m, e="t, e, x, t-xlt, e, x, t-sl, a, t, e-3, 0, 0, ma, x-w-3x, l, m, x-a, u, t, o">
 
             </p>
-          </motion.div>
+          </mot, i, o, n.di, v>
 
-          <div, classNa, m, e="gridmd:gr, i, d-co, l, s-2, lg:gr, i, d-co, ls-3gap-8">
- (<motion.div, k, e, y ={index};
-                initi, a, l={{ opacity: 0y: 20 }};
-                whileInVi, e, w={{ opacity: 1y: 0 }};
-                transiti, o, n={{ duration: 0.6delay: index * 0.1 }};
-                classNa, m, e="p-6, round, e, d-xl, border, borde, r-cy, a, n-4, 0, 0/20, bg-slate-800/40"
+          <divclassN, a, m, e="gri, d, m, d:gr, i, d-c, o, l, s-2l, g:g, r, i, d-c, o, l, s-3, g, a, p-8">
+ (<mot, i, o, n.div, k, e, y ={in, d, e, x};
+                ini, t, i, a, l={{ opac, i, t, y: 0, y: 2, 0 }};
+                whileI, n, V, i, e, w={{ opac, i, t, y: 1, y: 0 }};
+                trans, i, t, i, o, n={{ durat, i, o, n: 0.6de, l, a, y: in, d, e, x * 0.1 }};
+                clas, s, N, a, m, e="p-6, ro, u, n, d, e, d-x, l, bor, d, e, r, bo, r, d, e, r-c, y, a, n-40, 0/2, 0, b, g-sl, a, t, e-80, 0/4, 0"
               >
-                <divclassNam, e="w-12, h-12, bg-gradie, n, t-to-br, fr, o, m-cy, a, n-4, 0, 0/20, to-bl, u, e-5, 0, 0/20, round, e, d-lg, flex, item, s-cent, e, r, justi, fy-centermb-4">
+                <divclassN, a, m, e="w-12, h-1, 2, b, g-grad, i, e, n, t-t, o-b, r from-c, y, a, n-4, 0, 0/2, 0, t, o-b, l, u, e-5, 0, 0/2, 0, ro, u, n, d, e, d-l, g, f, l, e, x, i, t, e, m, s-centerjust, i, f, y-cente, r, m, b-4">
 
-            {featur, e, s.map((featu, r, e, ind, e, x) => (<motion.div, k, e, y ={index};
-                initi, a, l={{ opacity: 0y: 20 }};
-                whileInVi, e, w={{ opacity: 1y: 0 }};
-                transiti, o, n={{ duration: 0.6, delay: index * 0.1 }};
-                <divclassNam, e="w-12, h-12, bg-gradie, n, t-to-br, fr, o, m-cy, a, n-4, 0, 0/20, to-bl, u, e-5, 0, 0/20, round, e, d-lg, flex, item, s-cent, e, r, justi, fy-centermb-4">
+            {fea, t, u, r, e, s.m, a, p((fe, a, t, u, r, e, in, d, e, x) => (<mot, i, o, n.div, k, e, y ={in, d, e, x};                init, i, a, l={{ opac, i, t, y: 0, y: 2, 0 }};
+                whileI, n, V, i, e, w={{ opac, i, t, y: 1, y: 0 }};
+                trans, i, t, i, o, n={{ durat, i, o, n: 0.6de, l, a, y: in, d, e, x * 0.1 }};
+                <divclassN, a, m, e="w-12, h-1, 2, b, g-grad, i, e, n, t-t, o-b, r from-c, y, a, n-4, 0, 0/2, 0, t, o-b, l, u, e-5, 0, 0/2, 0, ro, u, n, d, e, d-l, g, f, l, e, x, i, t, e, m, s-centerjust, i, f, y-cente, r, m, b-4">
 
-                classNa, m, e="p-6, round, e, d-xl, border, borde, r-cy, a, n-4, 0, 0/20, bg-slate-800/40"
+                clas, s, N, a, m, e="p-6, ro, u, n, d, e, d-x, l, bor, d, e, r, bo, r, d, e, r-c, y, a, n-40, 0/2, 0, b, g-sl, a, t, e-80, 0/4, 0"
               >
-                <divclassNam, e="w-12, h-12, bg-gradie, n, t-to-br, fr, o, m-cy, a, n-4, 0, 0/20, to-bl, u, e-5, 0, 0/20, round, e, d-lg, flex, item, s-cent, e, r, justi, fy-centermb-4">
+                <divclassN, a, m, e="w-12, h-1, 2, b, g-grad, i, e, n, t-t, o-b, r from-c, y, a, n-4, 0, 0/2, 0, t, o-b, l, u, e-5, 0, 0/2, 0, ro, u, n, d, e, d-l, g, f, l, e, x, i, t, e, m, s-centerjust, i, f, y-cente, r, m, b-4">
 
 
-                  <feature.icon, classNa, m, e="w-6, h-6, te, x, t-cyan-300" />
-                </div>
-                <h3classNam, e="te, x, t-xl, fo, n, t-semibo, l, d, te, xt-whitemb-3">{featu, r, e.title}</h3>
-                <pclassName="tex, t-sla, t, e-3, 0, 0, leading-relaxed">{featu, r, e.description}</p>
-              </motion.div>
+                  <feat, u, r, e.iconclassN, a, m, e="w-6, h-6, t, e, x, t-c, y, a, n-30, 0" />
+                </di, v>
+                <h3classN, a, m, e="t, e, x, t-x, l, f, o, n, t-semiboldt, e, x, t-whit, e, m, b-3">{feat, u, r, e.ti, t, l, e}</h, 3>
+                <pclassN, a, m, e="t, e, x, t-sl, a, t, e-300lead, i, n, g-rela, x, e, d">{feat, u, r, e.description}</p>
+              </mot, i, o, n.di, v>
             ))};
-          </div>
-        </d, i, v>
-      </section>
+          </di, v>
+        </di, v>
+      </sect, i, o, n>
 
-      {/* Benefits, Section */};
-        <divclassName="containermx-autopx-4">
-          <divclassName="gridlg:gr, i, d-co, l, s-2, ga, p-12 items-center">
-            <motion.divinitial={{ opacity: 0x: -20 }} whileInVi, e, w={{ opacity: 1x: 0 }} transiti, o, n={{ duration: 0.6 }}>
-              <h2className="text-4, xl, font-boldtext-whitemb-6">Transform, Your, Business Operatio, n, s</h2>
-              <pclassName="text-lg, tex, t-sla, t, e-300, m, b-8 leading-relaxed">
-                Our, AI, workflow automation, delivers, measurable results, that, directly impact, your, bottom li, n, e. From, cost, reduction to, improved, customer satisfactionthe, benefits, are clear, and, quantifiable.
+      {/* BenefitsSect, i, o, n */};
+        <divclassN, a, m, e="containe, r, m, x-aut, o, p, x-4">
+          <divclassN, a, m, e="gri, d, l, g:g, r, i, d-c, o, l, s-2, g, a, p-1, 2 it, e, m, s-cen, t, e, r">
+            <mot, i, o, n.divinit, i, a, l={{ opac, i, t, y: 0, x: -2, 0 }} whileInV, i, e, w={{ opac, i, t, y: 1, x: 0 }} trans, i, t, i, o, n={{ durat, i, o, n: 0.6 }}>
+              <h2classN, a, m, e="t, e, x, t-4xlf, o, n, t-boldt, e, x, t-whit, e, m, b-6">Transf, o, r, m, Y, o, u, r, Busin, e, s, s Operati, o, n, s</h, 2>
+              <pclassN, a, m, e="t, e, x, t-lgt, e, x, t-sl, a, t, e-30, 0, m, b-8 lead, i, n, g-rela, x, e, d">
+                Ou, r, A, I, workf, l, o, w automat, i, o, n, deliv, e, r, s, measura, b, l, e resu, l, t, s, t, h, a, t, direc, t, l, y imp, a, c, t, y, o, u, r, bot, t, o, m l, i, n, e. F, r, o, m, c, o, s, t, reduct, i, o, n t, o, impro, v, e, d, custo, m, e, r satisfaction, t, h, e, benef, i, t, s, ar, e clearandquantifia, b, l, e.
               </p>
-              <divclassName="gridgrid-cols-1 gap-4">
-                {benefi, t, s.map((benefitind, e, x) => (<divke, y ={index} classNa, m, e="fl, e, x, ite, m, s-cent, erspace-x-3">
-                    <CheckCircleclassNam, e="w-5, h-5, te, x, t-cyan-400" />
+              <divclassN, a, m, e="gridg, r, i, d-c, o, l, s-1 ga, p-4">
+                {benef, i, t, s.ma, p((benefitin, d, e, x) => (<div, k, e, y ={in, d, e, x} classN, a, m, e="f, l, e, x, it, e, m, s-c, e, n, t, ersp, a, c, e-x-3">
+                    <CheckCircleclassN, a, m, e="w-5, h-5, t, e, x, t-c, y, a, n-40, 0" />
 
 
-        <divclassNam, e="contain, e, rmx-autopx-4">
-          <divclassNam, e="gridlg:gr, i, d-co, l, s-2, g, a, p-12, items-center">
+        <divclassN, a, m, e="conta, i, n, e, rm, x-aut, o, p, x-4">
+          <divclassN, a, m, e="gri, d, l, g:gr, i, d-c, o, l, s-2, g, a, p-12it, e, m, s-cen, t, e, r">
 
-      <sectionclassNam, e="py-20, bg-slate-800/30">
-        <divclassNam, e="contain, e, rmx-autopx-4">
-          <divclassNam, e="gridlg:gr, i, d-co, l, s-2, g, a, p-12, items-center">
+      <sectionclassN, a, m, e="p, y-2, 0, b, g-sl, a, t, e-80, 0/3, 0">
+        <divclass, N, a, m, e="containe, r, m, x-aut, o, p, x-4">
+          <divclassN, a, m, e="gri, d, l, g:gr, i, d-c, o, l, s-2, g, a, p-12it, e, m, s-cen, t, e, r">
 
-            <motion.div, initi, a, l ={{ opacity: 0x: -20 }} whileInVi, e, w={{ opacity: 1x: 0 }} transiti, o, n={{ duration: 0.6 }}>
-              <h2className="tex, t-4, x, l, fon, t-bo, l, d, te, xt-whitemb-6">Transfo, r, m, Your, Busines, s, Operatio, n, s</h2>
-              <pclassName="tex, t-lg, te, x, t-sla, t, e-3, 0, 0, mb-8, leading-relaxed">
-                O, u, r, AI, workflo, w, automation, deliver, s, measurable, result, s, that, directl, y, impact, you, r, bottom, lin, e. Fr, o, m, cost, reductio, n, to, improve, d, customer, satisfactio, n, the, benefit, s, are, clea, r, and, quantifiabl, e.
+            <mot, i, o, n.divini, t, i, a, l ={{ opac, i, t, y: 0, x: -2, 0 }} whileI, n, V, i, e, w={{ opac, i, t, y: 1, x: 0 }} trans, i, t, i, o, n={{ durat, i, o, n: 0.6 }}>
+              <h2classN, a, m, e="t, e, x, t-4, x, l, fo, n, t-b, o, l, dt, e, x, t-whit, e, m, b-6">Tran, s, f, o, r, m, Y, o, u, r, Busi, n, e, s, s, Opera, t, i, o, n, s</h, 2>
+              <pclassN, a, m, e="t, e, x, t-l, g, t, e, x, t-sl, a, t, e-3, 0, 0m, b-8lead, i, n, g-rela, x, e, d">
+                O, u, r, A, I, work, f, l, o, w, automat, i, o, n, deli, v, e, r, s, measura, b, l, e, res, u, l, t, s, t, h, a, t, dire, c, t, l, y, imp, a, c, t, yo, u, r, bot, t, o, m, li, n, e. F, r, o, m, c, o, s, t, reduc, t, i, o, n, t, o, impr, o, v, e, d, custo, m, e, r, satisfac, t, i, o, n, th, e, bene, f, i, t, s, ar, e, c, l, e, a, r, an, d, quantifi, a, b, l, e.
               </p>
 
-                {benefits.map((benef, i, t, ind, e, x) => (<divke, y ={index} classNa, m, e="fl, e, x, ite, m, s-cent, erspace-x-3">
-                    <CheckCircleclassNam, e="w-5, h-5, te, x, t-cyan-400" />
+                {benef, i, t, s.ma, p((bene, f, i, t, in, d, e, x) => (<div, k, e, y ={in, d, e, x} class, N, a, m, e="f, l, e, x, it, e, m, s-centersp, a, c, e-x-3">
+                    <CheckCircleclassN, a, m, e="w-5, h-5, t, e, x, t-c, y, a, n-40, 0" />
 
-              <divclassNam, e="gr, i, d, gr, i, d-co, ls-1gap-4">
-                {benefi, t, s.map((benef, i, t, ind, e, x) => (<divke, y ={index} classNa, m, e="fl, e, x, ite, m, s-cent, erspace-x-3">
-                    <CheckCircleclassNam, e="w-5, h-5, te, x, t-cyan-400" />
+              <divclassN, a, m, e="gr, i, d, g, r, i, d-c, o, l, s-1, g, a, p-4">
+                {ben, e, f, i, t, s.ma, p((be, n, e, f, i, t, in, d, e, x) => (<div, k, e, y ={in, d, e, x} class, N, a, m, e="f, l, e, x, it, e, m, s-centersp, a, c, e-x-3">
+                    <CheckCircleclassN, a, m, e="w-5, h-5, t, e, x, t-c, y, a, n-40, 0" />
 
 
-                    <spanclassNam, e ="te, x, t-slate-300">{benefit}</span>
-                  </div>
+                    <spanclassN, a, m, e ="te, x, t-sl, a, t, e-30, 0">{bene, f, i, t}</s, p, a, n>
+                  </di, v>
                 ))};
-              </div>
-            </moti, o, n.d, i, v>
+              </di, v>
+            </mot, i, o, n.di, v>
 
-            <motion.div
+            <mot, i, o, n.di, v
 
-              <divclassName="text-center">
-                <divclassName="w-20 h-20, b, g-gradie, n, t-to-br, fro, m-cy, a, n-400, t, o-bl, u, e-500, rounde, d-full, flex, items-center, justif, y-centermx-automb-6">
+              <divclassN, a, m, e="t, e, x, t-cen, t, e, r">
+                <divclassN, a, m, e="w-2, 0 h-2, 0, b, g-gra, d, i, e, n, t-t, o-b, r, fr, o, m-c, y, a, n-40, 0, t, o-b, l, u, e-50, 0, rou, n, d, e, d-f, u, l, l, f, l, e, x, it, e, m, s-centerjust, i, f, y-cente, r, m, x-aut, o, m, b-6">
 
-              initi, a, l={{ opacity: 0x: 20 }};
-              whileInVi, e, w={{ opacity: 1x: 0 }};
-              transiti, o, n={{ duration: 0.6 }};
-              classNa, m, e="p-8, rounde, d-2, x, l, border bord, e, r-cy, a, n-4, 0, 0/30, b, g-gradie, n, t-to-br, fro, m-cy, a, n-5, 0, 0/20, t, o-blue-500/20"
+              in, i, t, i, a, l={{ opac, i, t, y: 0, x: 2, 0 }};
+              whileI, n, V, i, e, w={{ opac, i, t, y: 1, x: 0 }};
+              trans, i, t, i, o, n={{ durat, i, o, n: 0.6 }};
+              clas, s, N, a, m, e="p-8, rou, n, d, e, d-2, x, l, bor, d, e, r b, o, r, d, e, r-c, y, a, n-4, 0, 0/3, 0, b, g-gra, d, i, e, n, t-t, o-b, r, fr, o, m-c, y, a, n-5, 0, 0/2, 0, t, o-b, l, u, e-50, 0/2, 0"
             >
-              <divclassName="text-center">
-                <divclassName="w-2, 0, h-20, b, g-gradie, n, t-to-br, fro, m-cy, a, n-400, t, o-bl, u, e-500, rounde, d-full, flex, items-center, justif, y-centermx-automb-6">
+              <divclassN, a, m, e="t, e, x, t-cen, t, e, r">
+                <divclassN, a, m, e="w-20, h-2, 0, b, g-gra, d, i, e, n, t-t, o-b, r, fr, o, m-c, y, a, n-40, 0, t, o-b, l, u, e-50, 0, rou, n, d, e, d-f, u, l, l, f, l, e, x, it, e, m, s-centerjust, i, f, y-cente, r, m, x-aut, o, m, b-6">
 
-                  <WorkflowclassName="w-10 h-10 text-white" />
-                </div>
-                <h3className="te, x, t-2, xl, font-boldtext-whitemb-4">Ready, to, Automate?</h3>
-                <pclassName="text-slate-300 mb-6">
-                  Start, your, AI workflow, automation, journey today, and, see the, transformation, in acti, o, n.
+                  <WorkflowclassN, a, m, e="w-1, 0 h-1, 0 t, e, x, t-wh, i, t, e" />
+                </di, v>
+                <h3classN, a, m, e="t, e, x, t-2xlf, o, n, t-boldt, e, x, t-whit, e, m, b-4">Re, a, d, y, t, o, Autom, a, t, e?</h, 3>
+                <pclassN, a, m, e="t, e, x, t-sl, a, t, e-30, 0 m, b-6">
+                  Startyou, r, A, I workf, l, o, w, automat, i, o, n, jour, n, e, y to, d, a, y, an, d, se, e th, e, transformat, i, o, n, i, n act, i, o, n.
                 </p>
 
 
-                <button, classNam, e="w-full, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-cy, a, n-500, t, o-bl, u, e-600, tex, t-white, fon, t-semibold, rounde, d-lg, hover:fr, o, m-cy, a, n-400, hover:to-bl, u, e-500, transitio, n-all, duratio, n-2, 0, 0">
-                  Schedule, Dem, o
-                </button>
-              </div>
-            </motion.d, i, v>
-          </div>
-        </div>
-      </section>
+                <buttonclassN, a, m, e="w-f, u, l, l, p, x-6, p, y-3, b, g-gra, d, i, e, n, t-t, o-r, fr, o, m-c, y, a, n-50, 0, t, o-b, l, u, e-60, 0, te, x, t-wh, i, t, e, fo, n, t-semib, o, l, d, roun, d, e, d-lgho, v, e, r:from-c, y, a, n-40, 0, ho, v, e, r:t, o-b, l, u, e-50, 0, transi, t, i, o, n-al, l, dura, t, i, o, n-2, 0, 0">
+                  ScheduleD, e, m, o
+                </but, t, o, n>
+              </di, v>
+            </mot, i, o, n.di, v>
+          </di, v>
+        </di, v>
+      </sect, i, o, n>
 
-      {/* C, T, A, Section */};
-      <sectionclassName="py-20">
-        <divclassName="containermx-auto, p, x-4, tex, t-center">
-          <motion.div
+      {/* BenefitsSect, i, o, n */};
+        <divclassN, a, m, e="containe, r, m, x-aut, o, p, x-4">
+          <divclassN, a, m, e="gri, d, l, g:g, r, i, d-c, o, l, s-2, g, a, p-1, 2 it, e, m, s-cen, t, e, r">
+            <mot, i, o, n.divinit, i, a, l={{ opac, i, t, y: 0, x: -2, 0 }} whileInV, i, e, w={{ opac, i, t, y: 1, x: 0 }} transit, i, o, n={{ durat, i, o, n: 0.6 }}>
+              <h2classN, a, m, e="t, e, x, t-4xlf, o, n, t-boldt, e, x, t-whit, e, m, b-6">TransformYourBusin, e, s, s Operati, o, n, s</h, 2>
+              <pclassN, a, m, e="t, e, x, t-lgt, e, x, t-sl, a, t, e-30, 0, m, b-8 lead, i, n, g-rela, x, e, d">
+                Ou, r, A, I, workf, l, o, w automat, i, o, n, deliv, e, r, s, measura, b, l, e resu, l, t, s, t, h, a, t, direc, t, l, y imp, a, c, t, y, o, u, r, bot, t, o, m l, i, n, e. F, r, o, m, c, o, s, t, reduct, i, o, n t, o, impro, v, e, d, custo, m, e, r satisfactionthebenefits, a, r, e clearandquantifia, b, l, e.
+              </p>
+              <divclassN, a, m, e="gridg, r, i, d-c, o, l, s-1 ga, p-4">
+                {benef, i, t, s.ma, p((benefitin, d, e, x) => (<div, k, e, y ={in, d, e, x} classN, a, m, e="f, l, e, x, it, e, m, s-centersp, a, c, e-x-3">
+                    <CheckCircleclassN, a, m, e="w-5 h-5t, e, x, t-c, y, a, n-40, 0" />
 
-            <h2className="text-4, xl, font-bold, tex, t-whitemb-6">Ready, to, Automate Your, Workflow, s?</h2>
 
-            initial={{ opacity: 0y: 20 }};
-            whileInView={{ opacity: 1y: 0 }};
-            transiti, o, n={{ duration: 0.6 }};
-            className="m, a, x-w-3, x, l, mx-auto"
+        <divclassN, a, m, e="containe, r, m, x-aut, o, p, x-4">
+          <divclassN, a, m, e="gri, d, l, g:gr, i, d-c, o, l, s-2, g, a, p-12it, e, m, s-cen, t, e, r">
+
+      <sectionclassN, a, m, e="p, y-2, 0, b, g-sl, a, t, e-80, 0/3, 0">
+        <divclassN, a, m, e="containe, r, m, x-aut, o, p, x-4">
+          <divclassN, a, m, e="gri, d, l, g:g, r, i, d-c, o, l, s-2, g, a, p-12it, e, m, s-cen, t, e, r">
+
+            <mot, i, o, n.divinit, i, a, l ={{ opac, i, t, y: 0, x: -2, 0 }} whileIn, V, i, e, w={{ opac, i, t, y: 1, x: 0 }} trans, i, t, i, o, n={{ durat, i, o, n: 0.6 }}>
+              <h2classN, a, m, e="t, e, x, t-4xl, f, o, n, t-boldt, e, x, t-whit, e, m, b-6">Tran, s, f, o, r, m, Y, o, u, r, Busi, n, e, s, s, Opera, t, i, o, n, s</h, 2>
+              <pclassN, a, m, e="t, e, x, t-lgt, e, x, t-sl, a, t, e-30, 0, m, b-8lead, i, n, g-rela, x, e, d">
+                O, u, r, A, I, work, f, l, o, w, automat, i, o, n, deli, v, e, r, s, measura, b, l, e, res, u, l, t, s, t, h, a, t, dire, c, t, l, y, imp, a, c, t, yo, u, r, bot, t, o, m, li, n, e. F, r, o, m, c, o, s, t, reduc, t, i, o, n, t, o, impr, o, v, e, d, custo, m, e, r, satisfac, t, i, o, n, th, e, bene, f, i, t, s, ar, e, c, l, e, a, r, an, d, quantifi, a, b, l, e.
+              </p>
+
+                {benef, i, t, s.ma, p((benefitin, d, e, x) => (<div, k, e, y ={in, d, e, x} class, N, a, m, e="f, l, e, xit, e, m, s-centersp, a, c, e-x-3">
+                    <CheckCircleclassN, a, m, e="w-5 h-5t, e, x, t-c, y, a, n-40, 0" />
+
+              <divclassN, a, m, e="gridg, r, i, d-c, o, l, s-1, g, a, p-4">
+                {ben, e, f, i, t, s.m, a, p((be, n, e, f, i, t, in, d, e, x) => (<div, k, e, y ={in, d, e, x} classN, a, m, e="fl, e, xit, e, m, s-centersp, a, c, e-x-3">
+                    <CheckCircleclassN, a, m, e="w-5 h-5t, e, x, t-c, y, a, n-40, 0" />
+
+
+                    <spanclassN, a, m, e ="t, e, x, t-sl, a, t, e-30, 0">{bene, f, i, t}</s, p, a, n>
+                  </di, v>
+                ))};
+              </di, v>
+            </mot, i, o, n.di, v>
+
+            <mot, i, o, n.di, v
+
+              <divclassN, a, m, e="t, e, x, t-cen, t, e, r">
+                <divclassN, a, m, e="w-2, 0 h-2, 0, b, g-gra, d, i, e, n, t-t, o-b, r, fr, o, m-c, y, a, n-40, 0, t, o-b, l, u, e-50, 0, rou, n, d, e, d-fullflexit, e, m, s-cen, t, e, r just, i, f, y-cente, r, m, x-aut, o, m, b-6">
+
+              in, i, t, i, a, l={{ opac, i, t, y: 0, x: 2, 0 }};
+              whileI, n, V, i, e, w={{ opac, i, t, y: 1, x: 0 }};
+              trans, i, t, i, o, n={{ durat, i, o, n: 0.6 }};
+              clas, s, N, a, m, e="p-8, rou, n, d, e, d-2, x, l, bor, d, e, r b, o, r, d, e, r-c, y, a, n-4, 0, 0/3, 0, b, g-gra, d, i, e, n, t-t, o-b, r, fr, o, m-c, y, a, n-50, 0/2, 0, t, o-b, l, u, e-50, 0/2, 0"
+            >
+              <divclassN, a, m, e="t, e, x, t-cen, t, e, r">
+                <divclassN, a, m, e="w-20, h-2, 0, b, g-gra, d, i, e, n, t-t, o-b, r, fr, o, m-c, y, a, n-40, 0, t, o-b, l, u, e-50, 0, rou, n, d, e, d-fullflexit, e, m, s-cen, t, e, r just, i, f, y-cente, r, m, x-aut, o, m, b-6">
+
+                  <WorkflowclassN, a, m, e="w-1, 0 h-1, 0 t, e, x, t-wh, i, t, e" />
+                </di, v>
+                <h3classN, a, m, e="t, e, x, t-2xlf, o, n, t-boldt, e, x, t-whit, e, m, b-4">ReadytoAutom, a, t, e?</h, 3>
+                <pclassN, a, m, e="t, e, x, t-sl, a, t, e-30, 0 m, b-6">
+                  Startyou, r, A, I workf, l, o, w, automat, i, o, n, jour, n, e, y to, d, a, y, an, d, se, e thetransformatio, n, i, n act, i, o, n.
+                </p>
+
+
+                <buttonclassN, a, m, e="w-ful, l, p, x-6, p, y-3, b, g-gra, d, i, e, n, t-t, o-r, fr, o, m-c, y, a, n-50, 0, t, o-b, l, u, e-60, 0, te, x, t-wh, i, t, e, fo, n, t-semiboldroun, d, e, d-lgho, v, e, r:from-c, y, a, n-40, 0, ho, v, e, r:t, o-b, l, u, e-50, 0, transi, t, i, o, n-al, l, dura, t, i, o, n-2, 0, 0">
+                  ScheduleD, e, m, o
+                </but, t, o, n>
+              </di, v>
+            </mot, i, o, n.di, v>
+          </di, v>
+        </di, v>
+      </sect, i, o, n>
+
+      {/* CTASect, i, o, n */};
+      <sectionclassN, a, m, e="p, y-2, 0">
+        <divclassN, a, m, e="containe, r, m, x-aut, o, p, x-4t, e, x, t-cen, t, e, r">
+          <mot, i, o, n.di, v
+
+            <h2classN, a, m, e="t, e, x, t-4xlf, o, n, t-boldt, e, x, t-whit, e, m, b-6">ReadytoAutom, a, t, e YourWorkfl, o, w, s?</h, 2>
+
+            init, i, a, l={{ opac, i, t, y: 0, y: 2, 0 }};
+            whileInV, i, e, w={{ opac, i, t, y: 1, y: 0 }};
+            transit, i, o, n={{ durat, i, o, n: 0.6 }};
+            classN, a, m, e="ma, x-w-3, x, l, m, x-a, u, t, o"
           >
-            <h2className="text-4, x, l, font-boldtext-whitemb-6">Ready, to, Automate Your, Workflow, s?</h2>
+            <h2classN, a, m, e="t, e, x, t-4xlf, o, n, t-boldt, e, x, t-whit, e, m, b-6">Read, y, t, o, Autom, a, t, e YourWorkfl, o, w, s?</h, 2>
 
-            <pclassName="text-xl, tex, t-slate-300 mb-8">
-              Join, hundreds, of businesses, that, have already, transformed, their operations, with, AI workflow, automatio, n.
+            <pclassN, a, m, e="t, e, x, t-xlt, e, x, t-sl, a, t, e-30, 0 m, b-8">
+              Joinhundred, s, o, f busines, s, e, s, t, h, a, t, h, a, v, e alre, a, d, y, transfor, m, e, d, th, e, i, r operationswit, h, A, I workflowautomat, i, o, n.
             </p>
-            <divclassName="flexflex-colsm:fl, e, x-row, ga, p-4 justify-center">
+            <divclassN, a, m, e="flexf, l, e, x-co, l, s, m:f, l, e, x-row, g, a, p-4 just, i, f, y-cen, t, e, r">
 
-                Get, Started, Now
-              </butt, o, n>
-              <button, classNam, e="px-8, p, y-4, border, border-cy, a, n-4, 0, 0/30, tex, t-cy, a, n-400, fon, t-semibold, rounde, d-lg, hover:bg-cy, a, n-4, 0, 0/10, transitio, n-all, duratio, n-2, 0, 0">
+                GetStarted, N, o, w
+              </but, t, o, n>
+              <buttonclassN, a, m, e="p, x-8p, y-4, bor, d, e, r, bor, d, e, r-c, y, a, n-4, 0, 0/3, 0, te, x, t-c, y, a, n-40, 0, fo, n, t-semiboldroun, d, e, d-lgho, v, e, r:b, g-c, y, a, n-4, 0, 0/1, 0, transi, t, i, o, n-al, l, dura, t, i, o, n-2, 0, 0">
 
-              <buttonclassName="px-8 py-4, b, g-gradie, n, t-to-r, fro, m-cy, a, n-500, t, o-bl, u, e-600, tex, t-white, fon, t-semibold, rounded-lghover:fr, o, m-cy, a, n-400, hover:to-bl, u, e-500, transitio, n-all, duratio, n-200, hover:sca, l, e-105, shado, w-lg, shado, w-cyan-500/20">                Get, Started, Now
-              </butt, o, n>
-              <button, classNam, e="px-8, p, y-4, border, border-cy, a, n-4, 0, 0/30, tex, t-cy, a, n-400, fon, t-semibold, rounde, d-lg, hover:bg-cy, a, n-4, 0, 0/10, transitio, n-all, duratio, n-2, 0, 0">
-                Contact, Sale, s
-              </button>
-            </div>
-          </motion.d, i, v>
-        </div>
-      </section>
-    </div>
+              <buttonclassN, a, m, e="p, x-8 p, y-4b, g-gradi, e, n, t-t, o-r, fr, o, m-c, y, a, n-50, 0, t, o-b, l, u, e-60, 0, te, x, t-wh, i, t, e, f, o, n, t-semiboldroun, d, e, d-lgho, v, e, r:from-c, y, a, n-40, 0, ho, v, e, r:t, o-b, l, u, e-50, 0, transi, t, i, o, n-al, l, dura, t, i, o, n-20, 0, ho, v, e, r:sc, a, l, e-105sha, d, o, w-lgsha, d, o, w-c, y, a, n-50, 0/2, 0">                Ge, t, Star, t, e, d, No, w
+              </but, t, o, n>
+              <buttonclassN, a, m, e="p, x-8, p, y-4, bor, d, e, r, bor, d, e, r-c, y, a, n-4, 0, 0/3, 0, te, x, t-c, y, a, n-40, 0, fo, n, t-semiboldroun, d, e, d-lgho, v, e, r:b, g-c, y, a, n-4, 0, 0/1, 0, transi, t, i, o, n-alldurat, i, o, n-20, 0">
+                Contact, S, a, l, e, s
+              </but, t, o, n>
+            </di, v>
+          </mot, i, o, n.di, v>
+        </di, v>
+      </sect, i, o, n>
+    </di, v>
   )
 };

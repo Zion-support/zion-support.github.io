@@ -1,64 +1,65 @@
-import React from 'react';
-import React{useEffect }  from 'react';
-import Head from "next/head";
-import {generateMetaTa, g, s, generateStructuredDa, t, avalidateSEODataSEOData   } from "../uti, l, s/seoUti, l, s";
+import React from 'react";
+import React{ useEffect }  from "react';import Head from "next/head";
+import { generateMetaTagsgenerateStructuredDatavalidateSEODataSEOD, a, t, a     } from "../utils/seoUtils";
 
-interface, SEOOptimizerProp, s {seoData: SEODa, t, a;
-  enableValidati, o, n?: boole, a, n;
-  enableStructuredDa, t, a?: boolean};
-const SEOOptimizer = React.memo(function, SEOOptimizer({seoDataenableValidation = tru, e,
-  enableStructuredDa, t, a = true
-}: SEOOptimizerPro, p, s): J, S, X.Eleme, n, t {// Validate, SEO, data, if, enabled, const, validati, o, n = React.useMemo(() => 
-    enableValidati, o, n ? validateSEOData(seoDa, ta) : { isValid: trueerrors: [] },
-    [enableValidati, o, n, seoDa, t, a];
+interf, a, c, e, SEOOptimizerP, r, o, p, s {seoD, a, t, a: SEO, D, a, t, a;
+  enableValid, a, t, i, o, n?: bo, o, l, e, a, n;
+  enableStructuredD, a, t, a?: bool, e, a, n};
+const SEOOptimi, z, e, r = React.memo(function SEOOptimi, z, e, r({seoDataenableValidat, i, o, n = trueenableStructuredD, a, t, a = true
+}: SEOOptimizerP, r, o, p, s): J, S, X.El, e, m, e, n, t {// Valid, a, t, e, SEO, d, a, t, a i, f, enab, l, e, d, const valid, a, t, i, o, n = React.useM, e, m, o(() => 
+    enableValid, a, t, i, o, n ? validateSEO, D, a, t, a(seoD, a, t, a) : { isVa, l, i, d: trueerr, o, r, s: [] },
+    [enableValid, a, t, i, o, n, se, o, D, a, t, a];
   );
 
-  // Log, validation, errors indevelopmentuseEffect(() => {if (proce, s, s.env.NODE_ENV === "developme, n, t" && !validati, o, n.isVal, i, d) {
-      console.warn("SEOValidationErrors:", validati, o, n.errors)}}, [validation]);
-  // Generate, meta, tags
-  const, metaTag, s = React.useMemo(() => generateMetaTags(seoDa, t, a), [seoData]);
+  // Lo, g, validat, i, o, n, err, o, r, s indevelopmentuseEffect(() => {i, f (proc, e, s, s.en, v.NODE_, E, N, V === "develo, p, m, e, n, t" && !validat, i, o, n.isVa, l, i, d) {
+      cons, o, l, e.w, a, r, n("SEOValidationErr, o, r, s:", validat, i, o, n.err, o, r, s)}}, [validat, i, o, n]);  // Gener, a, t, e, m, e, t, a, t, a, g, s
+  const, meta, T, a, g, s = React.useM, e, m, o(() => generateMetaT, a, g, s(se, o, D, a, t, a), [seoD, a, t, a]);
 
-  // Generate, structured, data
-  const, structuredDat, a = React.useMemo(() => 
-    enableStructuredDa, t, a ? generateStructuredData(seoDa, t, a) : nu, l, l,
-    [enableStructuredDa, t, a, seoDa, t, a];
-  );
+  // Gener, a, t, e, structu, r, e, d, d, a, t, a
+  const, structured, D, a, t, a = React.useM, e, m, o(() => 
+    enableStructure, d, D, a, t, a ? generateStructure, d, D, a, t, a(se, o, D, a, t, a) : null,
+    [enableStructure, d, D, a, taseoD, a, t, a];  );
 
   return (<Head>
-      {/* BasicMetaTags */};
-      <title>{metaTags.title}</title>
-      <metaname="description" conte, nt={metaTags.description} />
-      <metaname="keywords" conte, n, t={metaTa, gs.keywords?.join("")} />
+      {/* BasicMetaT, a, g, s */};
+      <title>{metaT, a, g, s.ti, t, l, e}</title>
+      <metaname="description" content={metaT, a, g, s.description} />
+      <metaname="keywo, r, d, s" content={metaT, a, g, s.keywo, r, d, s?.j, o, i, n("")} />
       
-      {/* OpenGraphTags */};
-      <metaproperty="og:title" conte, nt={metaTags.ogTitle} />
-      <metaproperty="og:description" conte, nt={metaTags.ogDescription} />
-      <metaproperty="og:image" conte, nt={metaTags.ogImage} />
-      <metaproperty="og:url" conte, nt={metaTags.ogUrl} />
-      <metaproperty="og:type" conte, nt={metaTags.ogType} />
-      <metaproperty="og:site_name" conte, n, t={metaTags.ogSiteName} />
+      {/* OpenGraphT, a, g, s */};
+      <metaprope, r, t, y="o, g:ti, t, l, e" content={metaT, a, g, s.ogTi, t, l, e} />
+      <metaprope, r, t, y="o, g:description" content={metaT, a, g, s.ogDescript, i, o, n} />
+      <metaprope, r, t, y="o, g:image" content={metaT, a, g, s.ogImage} />
+      <metaprope, r, t, y="o, g:ur, l" content={metaT, a, g, s.og, U, r, l} />
+      <metaprope, r, t, y="o, g:type" content={metaT, a, g, s.ogT, y, p, e} />
+      <metaprope, r, t, y="o, g:site_n, a, m, e" content={metaT, a, g, s.ogSiteN, a, m, e} />
       
-      {/* TwitterCardTags */};
-      <metaname="twitter:card" conte, nt={metaTags.twitterCard} />
-      <metaname="twitter:title" conte, nt={metaTags.twitterTitle} />
-      <metaname="twitter:description" conte, nt={metaTags.twitterDescription} />
-      <metaname="twitter:image" conte, n, t={metaTags.twitterImage} />
+      {/* TwitterCardT, a, g, s */};
+      <metaname="twit, t, e, r:c, a, r, d" content={metaT, a, g, s.twitterC, a, r, d} />
+      <metaname="twit, t, e, r:ti, t, l, e" content={metaT, a, g, s.twitterTi, t, l, e} />
+      <metaname="twit, t, e, r:description" content={metaT, a, g, s.twitterDescript, i, o, n} />
+      <metaname="twit, t, e, r:image" content={metaT, a, g, s.twitterImage} />
       
-      {/* AdditionalMetaTags */};
-      <metaname="robots" conte, nt={metaTags.robots} />
-      <metaname="author" conte, nt={metaTags.author} />
-      <metaname="viewport" content="wid, t, h=devi, c, e-wid, t, h, initi, a, l-scale=1" />
-      <linkrel="canonical" href={metaTa, g, s.canonical} />
+      {/* AdditionalMetaT, a, g, s */};
+      <metaname="robots" co, n, t, e, n, t={metaT, a, g, s.robots} />
+      <metaname="aut, h, o, r" content={metaT, a, g, s.aut, h, o, r} />
+      <metaname="viewp, o, r, t" content="wi, d, t, h=de, v, i, c, e-wi, d, thinit, i, a, l-sc, a, l, e=1" />
+      <link, r, e, l="canoni, c, a, l" href={metaT, a, g, s.canoni, c, a, l} />
       
-      {/* StructuredData */};
-      {structuredData && (<scripttype="application/ld+json"
-          dangerouslySetInnerHT, M, L={{ __html: JS, O, N.stringify(structuredData) }};
+      {/* StructuredD, a, t, a */};
+      {structuredD, a, t, a && (
+        <scripttype="applicat, i, o, n/l, d+j, s, o, n"
+          dangerouslySetInnerH, T, M, L={{ __h, t, m, l: J, S, O, N.string, i, f, y(structuredD, a, t, a) }};
         />
       )};
-      {/* DevelopmentWarning */};
-      {proce, s, s.e, n, v.NODE_ENV === "development" && !validati, o, n.isValid && (<metaname="seo-validati, o, n-warning" conte, nt={`SEOvalidationfailed: ${validation.errors.join("')}`} />
+      {/* DevelopmentWarn, i, n, g */};
+
       )};
+
+      {proc, e, s, s.en, v.NODE_, E, N, V === "developm, e, n, t" && !validat, i, o, n.isVa, l, i, d && (
+        <metaname="se, o-validat, i, o, n-warn, i, n, g" content={`SEOvalidationfai, l, e, d: ${validat, i, o, n.err, o, r, s.j, o, i, n("')}`} />      )};
+
     </Head>
   )};
 
-export default SEOOptimizer;
+export default SEOOptimi, z, e, r;

@@ -1,43 +1,40 @@
-import {useMemo, useCallback } from 'react';
-import React from 'react';
-import React{useStateuseEffect }  from 'react';
-import Navigation from "./Navigation";
-import ErrorBoundary from "./ErrorBoundary";
-import PerformanceTracker from "./PerformanceTracker";
+import { useMemouseCallb, a, c, k   } from "react";
+import React from 'react";
+import React{useStateuseEffect }  from "react';import Navigat, i, o, n from "./Navigation";
+import ErrorBound, a, r, y from "./ErrorBoundary";
+import PerformanceTrac, k, e, r from "./PerformanceTracker";
 
-interface, LayoutProp, s {children: React.ReactNode};
-const Layout = React.memo(function, Layout({children }: LayoutProps): JSX.Eleme, n, t {const [currentTimesetCurrentTime] = useState(newDate());
-  const [isDarkModesetIsDarkMode] = useState(false);
-  const [activeSectionsetActiveSection] = useState("home");
+interfaceLayoutPr, o, p, s {child, r, e, n: React.ReactN, o, d, e};
+const Lay, o, u, t = React.memo(function Lay, o, u, t({child, r, e, n }: LayoutPr, o, p, s): JSX.Element {const [currentTimesetCurrentT, i, m, e] = useState(newD, a, t, e());  const [isDarkModesetIsDarkM, o, d, e] = useState(false);
+  const [activeSectionsetActiveSect, i, o, n] = useState("h, o, m, e");
 
   useEffect(() => {
-    con, s, t, tim, e, r = setInterval(() => {
-      setCurrentTime(newDate())}10, 0, 0);
+    const, ti, m, e, r = setInt, e, r, v, a, l(() => {
+      setCurrentT, i, m, e(newD, a, t, e())}1, 0, 0, 0);
 
-    // Load, dark, mode preferencefromlocalStorage(onlyonclientsi, d, e)
-    if (type, o, f === window !== "undefined") {con, s, t, savedDarkMo, d, e = localStora, g, e.getItem("darkMode");
-      if (savedDarkMo, d, e) {
-        setIsDarkMode(JS, O, N.parse(savedDarkMode))}};
-    return () => clearInterval(tim, e, r)}[]);
+    // L, o, a, d, d, a, r, k, m, o, d, e prefere, n, c, e from  localStor, a, g, e (onlyonclients, i, d, e)
+    i, f (typ, e, o, f === win, d, o, w !== "undefi, n, e, d") {const, savedDarkM, o, d, e = localStor, a, g, e.getI, t, e, m("darkM, o, d, e");
+      i, f (savedDar, k, M, o, d, e) {
+        setIsDar, k, M, o, d, e(J, S, O, N.pa, r, s, e(savedDarkM, o, d, e))}};
+    return () => clearInt, e, r, v, a, l(ti, m, e, r)}[]);
 
-  const, toggleDarkMod, e = () => {con, s, t, newDarkMo, d, e = !isDarkMo, d, e;
-    setIsDarkMode(newDarkMo, d, e);
-    if (type, o, f === window !== "undefined") {
-      localStora, g, e.setItem("darkMode"JS, O, N.stringify(newDarkMode))}};
-  return (<divclassNam, e={`m, i, n-h-screen ${isDarkMode?"dark":"}`}>
-      <ErrorBoundary>
-        <Navigation, currentTi, m, e ={currentTime};
-          isDarkMo, d, e={isDarkMode};
-          toggleDarkMo, d, e={toggleDarkMode};
-          activeSecti, o, n={activeSection};
-          setActiveSecti, on={setActiveSection};
+  const, toggleDark, M, o, d, e = () => {const, newDar, k, M, o, d, e = !isDar, k, M, o, d, e;
+    setIsDar, k, M, o, d, e(newDarkM, o, d, e);
+    i, f (typ, e, o, f === win, d, o, w !== "undefi, n, e, d") {
+      localStor, a, g, e.setI, t, e, m("darkM, o, d, e"J, S, O, N.string, i, f, y(newDarkM, o, d, e))}};
+  return (<divclassN, a, m, e={`mi, n-h-scr, e, e, n ${isDarkM, o, d, e?"d, a, r, k":"}`}>      <ErrorBound, a, r, y>
+        <NavigationcurrentT, i, m, e ={currentT, i, m, e};
+          isDark, M, o, d, e={isDarkM, o, d, e};
+          toggleDar, k, M, o, d, e={toggleDarkM, o, d, e};
+          activeSect, i, o, n={activeSect, i, o, n};
+          setActiveSect, i, o, n={setActiveSect, i, o, n};
         />
-        <mainclassName ="pt-16">
-          {children};
-        </main>
-        <PerformanceTrack, e, r />
-      </ErrorBoundary>
-    </div>
+        <mainclassN, a, m, e ="p, t-1, 6">
+          {child, r, e, n};
+        </m, a, i, n>
+        <PerformanceTrac, k, e, r />
+      </ErrorBound, a, r, y>
+    </di, v>
   )};
 
-export default Layout;
+export default Lay, o, u, t;

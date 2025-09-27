@@ -1,39 +1,32 @@
-import { NextApiRequest, NextApiResponse } from 'next';
-
-interface SecurityEvent {
-  type: string;
-  severity: 'low' | 'medium' | 'high' | 'critical';
-  description: string;
-  source: string;
-  timestamp: number;
-  metadata?: Record<string, any>;
-}
-
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse
-) {
-  if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' });
+// API endpoint for security events
+export default async function handler(req: any, res: any) {
+  if (req.method !== "POST") {
+    return res.status(405).json({ error: "Method not allowed" });
   }
 
   try {
-    const securityEvent: SecurityEvent = req.body;
+    const { securityEvent } = req.body;
 
-    // Validate required fields
-    if (!securityEvent.type || !securityEvent.severity || !securityEvent.description) {
-      return res.status(400).json({ error: 'Missing required fields' });
+    // Validate the request
+    if (!securityEvent || !securityEvent.type) {
+      return res.status(400).json({ error: "Invalid security event data" });
     }
 
-    // Log security event (in production, you might want to send to a security monitoring service)
-    console.warn('Security Event:', {
+    // Process security event
+    console.log("Security event received:", {
       type: securityEvent.type,
       severity: securityEvent.severity,
-      description: securityEvent.description,
-      source: securityEvent.source,
+      message: securityEvent.message,
       timestamp: new Date(securityEvent.timestamp).toISOString(),
-      metadata: securityEvent.metadata,
+      url: securityEvent.url,
+      userAgent: securityEvent.userAgent
     });
+
+    // Here you would typically:
+    // 1. Store in security monitoring system
+    // 2. Send alerts for critical events
+    // 3. Update security dashboard
+    // 4. Trigger automated responses
 
     // Simulate processing time
     await new Promise(resolve => setTimeout(resolve, 50));
@@ -44,7 +37,7 @@ export default async function handler(
       timestamp: Date.now()
     });
   } catch (error) {
-    console.error('Security API error:', error);
-    res.status(500).json({ error: 'Internal server error' });
+    console.error("Security API error:", error);
+    res.status(500).json({ error: "Internal server error" });
   }
 }

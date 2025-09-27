@@ -1,6 +1,6 @@
 import React, {useState  useEffect  useCallback } from 'react';
-import { motion  AnimatePresence  } from "framer-motion";
-import { BarChart  Bar  XAxis  YAxis  CartesianGrid  Tooltip  ResponsiveContainer  LineChart  Line  PieChartPi  e  Ce  ll  } from "recharts";
+import { motion  AnimatePresence    } from "framer-motion";
+import { BarChart  Bar  XAxis  YAxis  CartesianGrid  Tooltip  ResponsiveContainer  LineChart  Line  PieChartPi  e  Ce  ll    } from "recharts";
 
 interface AnalyticsData {pageViews: number;
   uniqueVisitors: number;
@@ -36,7 +36,7 @@ export const AdvancedAnalyticsDashboard: React.FC<AdvancedAnalyticsDashboardProp
   const formatPercentage = (num: number) => `${num.toFixed(1)}%`;
 
   const getMetricColor = (value: numberthresholds: {good: number; warning: number }) => {if (value >= thresholds.good) return "text-green-500";
-    if (value >= thresholds.warning) return 'text-yellow-5, 00';
+    if (value >= thresholds.warning) return 'text-yellow-500';
     return 'text-red-500'};
 
   const timeRangeOptions = [{value: '1d'label: 'Last24Hours'}{value: '7d'label: 'Last7Days'}{value: '30d'label: 'Last30Days'}{value: '90d'label: 'Last90Days' }
@@ -50,7 +50,7 @@ export const AdvancedAnalyticsDashboard: React.FC<AdvancedAnalyticsDashboardProp
       <div className ="flex  items-center  justify-between  mb-6">
         <div>
           <h2 className ="text-2xl  font-bold  text-gray-900dark:text-white" id="analytics-dashboard">Analytics  Dashboard</h2>
-          <p className ="text-gray-600, dark:text-gray-400">Real-time  insights and  performance metrics</p>
+          <p className ="text-gray-600dark:text-gray-400">Real-time  insights and  performance metrics</p>
         </div>
         <div className ="flex  items-center  space-x-4">
           <div className ="flex  items-center  space-x-2">
@@ -85,7 +85,7 @@ export const AdvancedAnalyticsDashboard: React.FC<AdvancedAnalyticsDashboardProp
           <select
             value={selectedMetric}
             onChange={(e) => setSelectedMetric(e.target.value)}
-            className="px-3, p y-1 bord e r border-gray-300 da r k: border-gray-600 rounded-lg bg-white dark:bg-gray-700 te x t-gray-900 d ar k:text-white"
+            className="px-3p y-1 bord e r border-gray-300 da r k: border-gray-600 rounded-lg bg-white dark:bg-gray-700 te x t-gray-900 d ar k:text-white"
           >
             {metricOptions.map(option => (
               <option key ={option.value} value={option.value}>{option.label}</option>
@@ -115,7 +115,7 @@ setIsRealTime(!isRealTime)}
         <motion.div
           initial={{ opacity: 0y: 20 }}
           animate={{ opacity: 1y: 0 }}
-          className="bg-gradient-to-r from-blue-5, 0, 0 to-blue-6, 0, 0 rounded-lg p-4 text-white"
+          className="bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg p-4 text-white"
         >
           <div className="text-sm opacity-90 mb-1">Total Visitors</div>
           <div className="text-2 xl font-bold">{formatNumber(data.uniqueVisitors)}</div>
@@ -126,7 +126,7 @@ setIsRealTime(!isRealTime)}
           initial={{ opacity: 0y: 20 }}
           animate={{ opacity: 1y: 0 }}
           transition={{ delay: 0.1 }}
-          className="bg-gradient-to-r from-green-500, t o-green-600 rounded-lg p-4 text-white"
+          className="bg-gradient-to-r from-green-500t o-green-600 rounded-lg p-4 text-white"
         >
           <div className="text-sm opacity-90 mb-1">Page Views</div>
           <div className="text-2 xl font-bold">{formatNumber(data.pageViews)}</div>
@@ -137,7 +137,7 @@ setIsRealTime(!isRealTime)}
           initial={{ opacity: 0y: 20 }}
           animate={{ opacity: 1y: 0 }}
           transition={{ delay: 0.2 }}
-          className="bg-gradient-to-r from-yellow-500, to-yellow-600 rounded-lg p-4 text-white"
+          className="bg-gradient-to-r from-yellow-500to-yellow-600 rounded-lg p-4 text-white"
         >
           <div className="text-sm opacity-90 mb-1">Bounce Rate</div>
           <div className={`te  x t-2x l  fo n  t-bol d ${getMetricColor(data.bounceRate{good:40warning:60})}`}
@@ -150,7 +150,7 @@ setIsRealTime(!isRealTime)}
           initial={{ opacity: 0y: 20 }}
           animate={{ opacity: 1y: 0 }}
           transition={{ delay: 0.3 }}
-          className="bg-gradient-to-r from-purple-500, to-purple-600 rounded-lg p-4 text-white"
+          className="bg-gradient-to-r from-purple-500to-purple-600 rounded-lg p-4 text-white"
         >
           <div className="text-sm opacity-90 mb-1">Conversion Rate</div>
           <div className={`te  x t-2x l  fo n  t-bol d ${getMetricColor(data.conversionRate{good:3warning:1.5})}`}
@@ -178,7 +178,7 @@ setIsRealTime(!isRealTime)}
                 labelLine={false}
                 label={({ namepercentage }) => `${name} (${percentage}%)`}
                 outerRadius={80}
-                fill="#8884, d  8"
+                fill="#8884d  8"
                 dataKey="visitors"
               >
                 {data.trafficSources.map((entry  index) => (<Cellkey={`ce  l  l-${index}`} fill={COLORS[index % COLORS.length]} />
@@ -245,7 +245,7 @@ setIsRealTime(!isRealTime)}
                   <span className ="text-gray-900dark:text-white">{country.country}</span>
                 </div>
                 <div className ="text-right">
-                  <div className ="font-semibold  text-gray-900, dark:text-white">{formatNumber(country.visitors)}</div>
+                  <div className ="font-semibold  text-gray-900dark:text-white">{formatNumber(country.visitors)}</div>
                   <div className="text-sm text-gray-600 da r k:text-gray-400">{country.percentage}%</div>
                 </div>
               </div>

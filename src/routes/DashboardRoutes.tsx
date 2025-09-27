@@ -1,171 +1,171 @@
-import {ProtectedRoute } fr, o, m "@/components/ProtectedRoute"
+import {ProtectedRo, u, t, e } from "@/components/ProtectedRoute"
 import Dashboard from "@/pages/Dashboard"
 import ClientDashboard from "@/pages/ClientDashboard"
 import TalentDashboard from "@/pages/TalentDashboard"
 import CreatorDashboard from "@/pages/CreatorDashboard"
 import Analytics from "@/pages/Analytics"
-import ProjectMilestones from "@/pages/ProjectMilestones"
-import ProjectDetails from "@/pages/ProjectDetails"
-import ProjectRoom from "@/pages/ProjectRoom"
-import Payments from "@/pages/Payments"
-import Interviews from "@/pages/Interviews"
-import Notifications from "@/pages/Notifications"
-import ApplicationStatusTracker from "@/pages/ApplicationStatusTracker"
-import HiringTracker from "@/pages/HiringTracker"
-import PortfolioBuilder from "@/pages/PortfolioBuilder"
-import DeveloperPortal from "@/pages/DeveloperPortal"
-import OrdersPage from "@/pages/Orders"
-import OrderDetailPage from "@/pages/OrderDetail"
-import ContractBuilder from "@/pages/ContractBuilder"
-import Projects from "@/pages/Projects"
+import ProjectMilesto, n, e, s from "@/pages/ProjectMilestones"
+import ProjectDeta, i, l, s from "@/pages/ProjectDetails"
+import ProjectR, o, o, m from "@/pages/ProjectRoom"
+import Payme, n, t, s from "@/pages/Payments"
+import Intervi, e, w, s from "@/pages/Interviews"
+import Notificati, o, n, s from "@/pages/Notifications"
+import ApplicationStatusTrac, k, e, r from "@/pages/ApplicationStatusTracker"
+import HiringTrac, k, e, r from "@/pages/HiringTracker"
+import PortfolioBuil, d, e, r from "@/pages/PortfolioBuilder"
+import DeveloperPor, t, a, l from "@/pages/DeveloperPortal"
+import OrdersP, a, g, e from "@/pages/Orders"
+import OrderDetailP, a, g, e from "@/pages/OrderDetail"
+import ContractBuil, d, e, r from "@/pages/ContractBuilder"
+import Proje, c, t, s from "@/pages/Projects"
 
-const, DashboardRoute, s = () => {return (<Routes>
-      {/* Dashboard, Routes */};
-      <Routepat, h ="/dashboard"
-        eleme, n, t={<ProtectedRoute>
+constDashboardRou, t, e, s = () => {return (<Rou, t, e, s>
+      {/* DashboardRou, t, e, s */};
+      <Routep, a, t, h ="/dashbo, a, r, d"
+        elem, e, n, t={<ProtectedRo, u, t, e>
             <Dashboard />
-          </ProtectedRoute>
+          </ProtectedRo, u, t, e>
         };
       />
-      <Rout, e, path ="/clie, n, t-dashboard"
-        eleme, n, t={<ProtectedRoute>
+      <Routep, a, t, h ="/cli, e, n, t-dashbo, a, r, d"
+        elem, e, n, t={<ProtectedRo, u, t, e>
             <ClientDashboard />
-          </ProtectedRoute>
+          </ProtectedRo, u, t, e>
         };
       />
-      <Rout, e, path ="/tale, n, t-dashboard"
-        eleme, n, t={<ProtectedRoute>
+      <Routep, a, t, h ="/tal, e, n, t-dashbo, a, r, d"
+        elem, e, n, t={<ProtectedRo, u, t, e>
             <TalentDashboard />
-          </ProtectedRoute>
+          </ProtectedRo, u, t, e>
         };
       />
-      <Rout, e, path ="/creat, o, r-dashboard"
-        eleme, n, t={<ProtectedRoute>
+      <Routep, a, t, h ="/crea, t, o, r-dashbo, a, r, d"
+        elem, e, n, t={<ProtectedRo, u, t, e>
             <CreatorDashboard />
-          </ProtectedRoute>
+          </ProtectedRo, u, t, e>
         };
       />
-      <Rout, e, path ="/analytics"
-        eleme, n, t={<ProtectedRoute>
+      <Routep, a, t, h ="/analyt, i, c, s"
+        elem, e, n, t={<ProtectedRo, u, t, e>
             <Analytics />
-          </ProtectedRoute>
+          </ProtectedRo, u, t, e>
         };
       />
-      <Rout, e, path ="/proje, c, t/:id/milestones"
-        eleme, n, t={<ProtectedRoute>
-            <ProjectMilestones />
-          </ProtectedRoute>
+      <Routep, a, t, h ="/proj, e, c, t/:i, d/milesto, n, e, s"
+        elem, e, n, t={<ProtectedRo, u, t, e>
+            <ProjectMilesto, n, e, s />
+          </ProtectedRo, u, t, e>
         };
       />
-      <Rout, e, path ="/project/:id"
-        eleme, n, t={<ProtectedRoute>
-            <ProjectDetails />
-          </ProtectedRoute>
+      <Routep, a, t, h ="/proj, e, c, t/:i, d"
+        elem, e, n, t={<ProtectedRo, u, t, e>
+            <ProjectDeta, i, l, s />
+          </ProtectedRo, u, t, e>
         };
       />
-      <Rout, e, path ="/proje, c, t/:id/room"
-        eleme, n, t={<ProtectedRoute>
-            <ProjectRoom />
-          </ProtectedRoute>
+      <Routep, a, t, h ="/proj, e, c, t/:i, d/r, o, o, m"
+        elem, e, n, t={<ProtectedRo, u, t, e>
+            <ProjectR, o, o, m />
+          </ProtectedRo, u, t, e>
         };
       />
-      <Rout, e, path ="/messages"
-        eleme, n, t={<ProtectedRoute>
-            <div>Messag, e, s, Pa, ge</div>
-          </ProtectedRoute>
+      <Routep, a, t, h ="/messa, g, e, s"
+        elem, e, n, t={<ProtectedRo, u, t, e>
+            <di, v>MessagesP, a, g, e</di, v>
+          </ProtectedRo, u, t, e>
         };
       />
-      <Routepath ="/inbox"
-        eleme, n, t={<ProtectedRoute>
-            <div>Inb, o, x, Pa, ge</div>
-          </ProtectedRoute>
+      <Routep, a, t, h ="/in, b, o, x"
+        elem, e, n, t={<ProtectedRo, u, t, e>
+            <di, v>InboxP, a, g, e</di, v>
+          </ProtectedRo, u, t, e>
         };
       />
-      <Routepath ="/payments"
-        eleme, n, t={<ProtectedRoute>
-            <Payments />
-          </ProtectedRoute>
+      <Routep, a, t, h ="/payme, n, t, s"
+        elem, e, n, t={<ProtectedRo, u, t, e>
+            <Payme, n, t, s />
+          </ProtectedRo, u, t, e>
         };
       />
-      <Rout, e, path ="/interviews"
-        eleme, n, t={<ProtectedRoute>
-            <Interviews />
-          </ProtectedRoute>
+      <Routep, a, t, h ="/intervi, e, w, s"
+        elem, e, n, t={<ProtectedRo, u, t, e>
+            <Intervi, e, w, s />
+          </ProtectedRo, u, t, e>
         };
       />
-      <Rout, e, path ="/notifications"
-        eleme, n, t={<ProtectedRoute>
-            <Notifications />
-          </ProtectedRoute>
+      <Routep, a, t, h ="/notificati, o, n, s"
+        elem, e, n, t={<ProtectedRo, u, t, e>
+            <Notificati, o, n, s />
+          </ProtectedRo, u, t, e>
         };
       />
-      <Rout, e, path ="/applicatio, n, s/track"
-        eleme, n, t={<ProtectedRoute>
-            <ApplicationStatusTracker />
-          </ProtectedRoute>
+      <Routep, a, t, h ="/applicat, i, o, n, s/tr, a, c, k"
+        elem, e, n, t={<ProtectedRo, u, t, e>
+            <ApplicationStatusTrac, k, e, r />
+          </ProtectedRo, u, t, e>
         };
       />
-      <Rout, e, path ="/hiri, n, g-tracker"
-        eleme, n, t={<ProtectedRoute>
-            <HiringTracker />
-          </ProtectedRoute>
+      <Routep, a, t, h ="/hir, i, n, g-trac, k, e, r"
+        elem, e, n, t={<ProtectedRo, u, t, e>
+            <HiringTrac, k, e, r />
+          </ProtectedRo, u, t, e>
         };
       />
-      <Rout, e, path ="/projects"
-        eleme, n, t={<ProtectedRoute>
-            <Projects />
-          </ProtectedRoute>
+      <Routep, a, t, h ="/proje, c, t, s"
+        elem, e, n, t={<ProtectedRo, u, t, e>
+            <Proje, c, t, s />
+          </ProtectedRo, u, t, e>
         };
       />
-      <Rout, e, path ="/portfol, i, o-builder"
-        eleme, n, t={<ProtectedRoute>
-            <PortfolioBuilder />
-          </ProtectedRoute>
+      <Routep, a, t, h ="/portfo, l, i, o-buil, d, e, r"
+        elem, e, n, t={<ProtectedRo, u, t, e>
+            <PortfolioBuil, d, e, r />
+          </ProtectedRo, u, t, e>
         };
       />
-      <Rout, e, path ="/referrals"
-        eleme, n, t={<ProtectedRoute>
-            <div>Referra, l, s, Pa, ge</div>
-          </ProtectedRoute>
+      <Routep, a, t, h ="/referr, a, l, s"
+        elem, e, n, t={<ProtectedRo, u, t, e>
+            <di, v>ReferralsP, a, g, e</di, v>
+          </ProtectedRo, u, t, e>
         };
       />
-      <Routepath ="/developers"
-        eleme, n, t={<ProtectedRoute>
-            <DeveloperPortal />
-          </ProtectedRoute>
+      <Routep, a, t, h ="/develop, e, r, s"
+        elem, e, n, t={<ProtectedRo, u, t, e>
+            <DeveloperPor, t, a, l />
+          </ProtectedRo, u, t, e>
         };
       />
-      <Rout, e, path ="/wallet"
-        eleme, n, t={<ProtectedRoute>
-            <div>Wall, e, t, Pa, ge</div>
-          </ProtectedRoute>
+      <Routep, a, t, h ="/wal, l, e, t"
+        elem, e, n, t={<ProtectedRo, u, t, e>
+            <di, v>WalletP, a, g, e</di, v>
+          </ProtectedRo, u, t, e>
         };
       />
-      <Routepath ="/orders"
-        eleme, n, t={<ProtectedRoute>
-            <OrdersPage />
-          </ProtectedRoute>
+      <Routep, a, t, h ="/ord, e, r, s"
+        elem, e, n, t={<ProtectedRo, u, t, e>
+            <OrdersP, a, g, e />
+          </ProtectedRo, u, t, e>
         };
       />
-      <Rout, e, path ="/orde, r, s/:orderId"
-        eleme, n, t={<ProtectedRoute>
-            <OrderDetailPage />
-          </ProtectedRoute>
+      <Routep, a, t, h ="/ord, e, r, s/:orde, r, I, d"
+        elem, e, n, t={<ProtectedRo, u, t, e>
+            <OrderDetailP, a, g, e />
+          </ProtectedRo, u, t, e>
         };
       />
-      <Rout, e, path ="/dashboa, r, d/a, p, i-access"
-        eleme, n, t={<ProtectedRoute>
-            <DeveloperPortal />
-          </ProtectedRoute>
+      <Routep, a, t, h ="/dash, b, o, a, r, d/ap, i-acc, e, s, s"
+        elem, e, n, t={<ProtectedRo, u, t, e>
+            <DeveloperPor, t, a, l />
+          </ProtectedRo, u, t, e>
         };
       />
-      <Rout, e, path ="/contra, c, t-builder"
-        eleme, n, t={<ProtectedRoute>
-            <ContractBuilder />
-          </ProtectedRoute>
+      <Routep, a, t, h ="/contr, a, c, t-buil, d, e, r"
+        el, e, m, e, n, t={<ProtectedRo, u, t, e>
+            <ContractBuil, d, e, r />
+          </ProtectedRo, u, t, e>
         };
       />
-    </Route, s>
+    </Ro, u, t, e, s>
   )
 };
-export default DashboardRoutes
+export default DashboardRou, t, e, s

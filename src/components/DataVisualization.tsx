@@ -1,306 +1,308 @@
-// TODO: Consider breaking this large component (305 lines) into smaller components
-// TODO: Consider breaking this large component (304, lines) into smaller components
-// TODO: Consider breaking this large component (303, lines) into smaller components
-import Reac, t, {useState, useEffectuseRefuseCallback }  from 'react";
+// T, O, D, O: Consi, d, e, r break, i, n, g t, h, i, s la, r, g, e compon, e, n, t (30, 4 li, n, e, s) i, n, t, o smal, l, e, r components
+// T, O, D, O: Consi, d, e, r break, i, n, g t, h, i, s la, r, g, e compon, e, n, t (30, 3 li, n, e, s) i, n, t, o smal, l, e, r components
+import R, e, a, c, t, {useStateuseEffectuseRefuseCallb, a, c, k }  from 'react";
+interf, a, c, e, DataP, o, i, n, t {x: n, u, m, b, e, r;
+  y: n, u, m, b, e, r;
+  la, b, e, l: s, t, r, i, n, g;
+  va, l, u, e: n, u, m, b, e, r;
+  co, l, o, r?: str, i, n, g};
+interf, a, c, e, Chart, D, a, t, a {lab, e, l, s: str, i, n, g[];
+  datas, e, t, s: {
+>>>>>> 45ce5fae8a680d713f034d877aa81b1d405b5, 7, 6, 3
+    backgroundCo, l, o, r: str, i, n, g[];
+    borderCo, l, o, r: str, i, n, g[];
+    borderWi, d, t, h: number}[]};
+interfaceDataVisualizationPr, o, p, s {type: "l, i, n, e' | "ba, r" | "pi, e" | "dough, n, u, t" | "a, r, e, a";
+  d, a, t, a: Char, t, D, a, t, a;
+  ti, t, l, e?: s, t, r, i, n, g;
+  h, e, i, g, h, t?: n, u, m, b, e, r;
+  showL, e, g, e, n, d?: bo, o, l, e, a, n;
+ = ({typedatatitlehei, g, h, t = 300sho, w, L, e, g, e, n, d = trueshowToolt, i, p, s = trueclassN, a, m, e=""}) => {const, canv, a, s, R, e, f = u, s, e, R, e, f<HTMLCanvasElem, e, n, t>(null);
+  const [hoveredIndexsetHovere, d, I, n, d, e, x] = useState<number | null>(null);
+  const [isLoadingsetIsLoad, i, n, g] = useState(true);
 
-interface, DataPoin, t {x: numb, e, r;
-  y: numb, e, r;
-  label: stri, n, g;
-  value: numb, e, r;
-  col, o, r?: string};
-interface, ChartDat, a {labels: stri, n, g[];
-  datasets: {
-    label: stri, n, g;
-    data: numb, e, r[];
-    backgroundColor: string[];
-    borderColor: stri, ng[];
-    borderWidth: number}[]};
-interfaceDataVisualizationProps {type: "line' | "bar" | "pie" | "doughnut" | "area";
-  data: ChartDa, t, a;
-  tit, l, e?: stri, n, g;
-  heig, h, t?: numb, e, r;
-  showLege, n, d?: boole, a, n;
-  showToolti, p, s?: boole, a, n;
-  classNa, m, e?: string};
-exportconstDataVisualization: React.FC<DataVisualizationProps> = ({typedatatitleheight = 300showLe, g, e, n, d = trueshowTooltips = trueclassName=""}) => {con, s, t, canvasR, e, f = useR, e, f<HTMLCanvasElement>(null);
-  const [hoveredIndexsetHoveredIn, d, e, x] = useState<number | null>(nu, l, l);
-  const [isLoadingsetIsLoading] = useState(tr, u, e);
+  showToolt, i, p, s?: bool, e, a, n;
+  classN, a, m, e?: str, i, n, g};
+exportconstDataVisualizat, i, o, n: React.F, C<DataVisualizationPr, o, p, s> = ({typedatatitlehei, g, h, t = 300showLeg, e, n, d = trueshowToolt, i, p, s = trueclassN, a, m, e=""}) => {const, canv, a, s, R, e, f = u, s, e, R, e, f<HTMLCanvasElem, e, n, t>(null);
+  const [hoveredIndexsetHoveredIn, d, e, x] = useState<number | null>(null);
+  const [isLoadingsetIsLoad, i, n, g] = useState(tr, u, e);
+
 
   useEffect(() => {
-    setIsLoading(tr, u, e);
-    consttim, e, r = setTimeout(() => {
-      drawChart();
+    setIsLoad, i, n, g(true);
+    const, t, i, m, e, r = setTime, o, u, t(() => {
+      drawCh, a, r, t();
 
-    return () => clearTimeout(timer)}[datatypedrawChart]);
+    return () => clearTime, o, u, t(ti, m, e, r)}[datatypedrawCh, a, r, t]);
+  const, drawC, h, a, r, t = useCallb, a, c, k(() => {constc, a, n, v, a, s = canv, a, s, R, e, f.c, u, r, r, e, n.t;
+    i, f (!ca, n, v, a === s) return;
 
-  const, drawChar, t = useCallback(() => {constcanv, a, s = canvasR, e, f.curr, e, n.t;
-    if (!can, v, a === s) retu, r, n;
+    const, c, t, x = can, v, a, s.getCon, t, e, x("2, d");
+    i, f (!c, t === x) return;
 
-    constc, t, x = canvas.getContex("2d");
-    if (!ct === x) retu, r, n;
+    const { widthhei, g, h, t: canvasHei, g, h, t } = c, a, n, v, a, s;
+    const, pad, d, i, n, g = 4, 0;
+    const, chartW, i, d, t, h = wi, d, t, h - pa, d, d, i, n, g * 2;
+    const, chartHe, i, g, h, t = canvasH, e, i, g, h, t - pa, d, d, i, n, g * 2;
 
-    const { widthheight: canvasHeight } = canv, a, s;
-    const, paddin, g = 40;
-    const, chartWidt, h = wid, t, h - paddi, n, g * 2;
-    const, chartHeigh, t = canvasHeig, h, t - paddi, n, g * 2;
-
-    // Clear, canvas, ctx.clearRec(00widthcanvasHeig, h, t);
-
-    // Setupcolors
-    constcolors = ["#3B82F6'"#EF4444""#10B981""#F59E0B""#8B5CF6""#06B6D4""#84CC16""#F97316""#EC4899""#6B7280"
+    // Cl, e, a, r, can, v, a, s, ct, x.clear, R, e, c(00widthcanvasHei, g, h, t);
+    // Setupcol, o, r, s
+    constcol, o, r, s = ["#3B8, 2, F, 6'"#EF4, 4, 4, 4""#10B, 9, 8, 1""#F59, E, 0, B""#8B5, C, F, 6""#06B, 6, D, 4""#84C, C, 1, 6""#F97, 3, 1, 6""#EC4, 8, 9, 9""#6B7, 2, 8, 0"
     ];
 
-    // Define, drawing, functions inline, to, avoid dependency, issue, s
- {constcente, r, X = wid, t, h / 2;
-      constcente, r, Y = heig, h, t / 2;
-      constradi, u, s = Math.mi(widthheig, h, t) / 2 - 40;
-      constinnerRadius = type === "doughnut"? radi, u, s * 0.6 : 0;
+    // Def, i, n, e, draw, i, n, g, functi, o, n, s inl, i, n, e, t, o, av, o, i, d depende, n, c, y, is, s, u, e, s
+ {constce, n, t, e, r, X = wi, d, t, h / 2;
+      constce, n, t, e, r, Y = h, e, i, g, h, t / 2;
+      constr, a, d, i, u, s = M, a, t, h.m, i(widthhei, g, h, t) / 2 - 4, 0;      constinnerRad, i, u, s = type === "dough, n, u, t"? r, a, d, i, u, s * 0.6 : 0;
 
-    con, s, t, drawPieCha, r, t = (ctx: CanvasRenderingContext2Dwidth: numberheight: numbercolors: stri, n, g[]) => {constcente, r, X = wid, t, h / 2;
-      constcente, r, Y = heig, h, t / 2;
-      constradi, u, s = Math.mi(widthheig, h, t) / 2 - 40;
-      constinnerRadius = type === "doughnut"? radi, u, s * 0.6 : 0;
+    const, drawPie, C, h, a, r, t = (ct, x: CanvasRenderingContext2Dwi, d, t, h: numberhei, g, h, t: numbercol, o, r, s: s, t, r, i, n, g[]) => {constce, n, t, e, r, X = wi, d, t, h / 2;
+      constce, n, t, e, r, Y = h, e, i, g, h, t / 2;
+      constr, a, d, i, u, s = M, a, t, h.m, i(widthhei, g, h, t) / 2 - 4, 0;      constinnerRad, i, u, s = type === "dough, n, u, t"? r, a, d, i, u, s * 0.6 : 0;
 
 
-      l, e, t, currentAng, l, e = 0;
-      con, s, t, tot, a, l = da, t, a.datas, e, t.s[0].d, a, t.a.reduce((sumval, u, e) = > s, u, m + valu, e, 0);
+      l, e, t, current, A, n, g, l, e = 0;
+      const, to, t, a, l = d, a, t, a.da, t, a, s, e, t.s[0].d, a, t.a.red, u, c, e((sum, v, a, l, u, e) = > s, u, m + v, a, l, u, e, 0);
 
-      da, t, a.datas, e, t.s[0].d, a, t.a.forEach((valueind, e, x) => {
-        constsliceAng, l, e = (val, u, e / tot, a, l) * 2 * Math.P.I;
-        constcol, o, r = colo, r, s[ind, e, x % colo, r, s.len, g, t.h];
+      d, a, t, a.da, t, a, s, e, t.s[0].d, a, t.a.forE, a, c, h((value, i, n, d, e, x) => {
+        constslice, A, n, g, l, e = (va, l, u, e / to, t, a, l) * 2 * M, a, t, h.P.I;
+        const, c, o, l, o, r = c, o, l, o, r, s[in, d, e, x % c, o, l, o, r, s.le, n, g, t.h];
 
-        c, t, x.mov, e, T.o(centerXcente, r, Y);
-        c, t, x.ar(centerXcenterYradiuscurrentAnglecurrentAng, l, e + sliceAng, l, e);
-        if (innerRadi, u, s >  === 0) {
-          c, t, x.ar(centerXcenterYinnerRadiuscurrentAng, l, e + sliceAnglecurrentAngletrue)};
-        c, t, x.closePat();
-        c, t, x.fillSt, y, l.e = col, o, r;
-        c, t, x.f, i, l.l();
-        c, t, x.strokeStyl.e = "#ffffff";
-        c, t, x.lineWi, d, t.h = 2;
-        c, t, x.strok();
+        c, t, x.mo, v, e, T.o(centerXce, n, t, e, r, Y);
+        c, t, x.a, r(centerXcenterYradiuscurrentAnglecurrent, A, n, g, l, e + slice, A, n, g, l, e);
+        i, f (innerR, a, d, i, u, s >  === 0) {
+          c, t, x.a, r(centerXcenterYinnerRadiuscurrentAn, g, l, e + sliceAnglecurrentAngletrue)};
+        c, t, x.clo, s, e, P, a, t();        c, t, x.fil, l, S, t, y, l.e = co, l, o, r;
+        c, t, x.fi, l.l();
+        ct, x.strokeS, t, y, l.e = "#fff, f, f, f";
+        c, t, x.lin, e, W, i, d, t.h = 2;
+        c, t, x.st, r, o, k();
 
-        // Draw, label, const labelAngle = currentAng, l, e + sliceAng, l, e / 2;
-        const, label, X = cente, r, X + Math.co(labelAng, l, e) * (radi, u, s + 20);
-        const, label, Y = cente, r, Y + Math.si(labelAng, l, e) * (radi, u, s + 20);
+        // D, r, a, w, la, b, e, l, const labelAn, g, l, e = current, A, n, g, l, e + slice, A, n, g, l, e / 2;
+        const, la, b, e, l, X = ce, n, t, e, r, X + M, a, t, h.c, o(label, A, n, g, l, e) * (r, a, d, i, u, s + 2, 0);
+        const, la, b, e, l, Y = ce, n, t, e, r, Y + M, a, t, h.s, i(label, A, n, g, l, e) * (rad, i, u, s + 2, 0);
 
-        c, t, x.fillStyl.e = "#374151";
-        c, t, x.fon.t = "12px, Intersan, s-serif";
-        c, t, x.textAlig.n = "center";
-        c, t, x.fillTex(da, t, a.lab, e, l.s[in, d, e, x]labelXlab, e, l, Y);
+        ct, x.fillS, t, y, l.e = "#374, 1, 5, 1";
+        ct, x.fo, n.t = "12pxInters, a, n, s-se, r, i, f";
+        ct, x.textA, l, i, g.n = "cen, t, e, r";
+        c, t, x.fi, l, l, T, e, x(d, a, t, a.la, b, e, l.s[i, n, d, e, x]labelX, l, a, b, e, l, Y);
+        // D, r, a, w, percent, a, g, e, const percent, a, g, e = ((va, l, u, e / t, o, t, a, l) * 1, 0, 0).toF, i, x, e(, 1);
+        c, t, x.fill, T, e, x(`${percent, a, g, e}%`labelXl, a, b, e, l, Y + 1, 5);
 
-        // Draw, percentage, const percentage = ((val, u, e / to, t, a, l) * 1, 0, 0).toFixe(, 1);
-        c, t, x.fillTex(`${percentage}%`labelXlabe, l, Y + 1, 5);
+        current, A, n, g, l, e += slice, A, n, g, l, e})};
 
-        currentAng, l, e += sliceAng, l, e})};
+    const, drawBarC, h, a, r, t = (ct, x: CanvasRenderingContext2DchartWi, d, t, h: numberchartHei, g, h, t: numberpadd, i, n, g: numbercol, o, r, s: s, t, r, i, n, g[]) => {const, bar, W, i, d, t, h = chart, W, i, d, t, h / d, a, t, a.la, b, e, l.s.l, e, n, g, t, h * 0.8;
+      const, barSp, a, c, i, n, g = chart, W, i, d, t, h / d, a, t, a.la, b, e, l.s.l, e, n, g, t, h * 0.2;
+      const, max, V, a, l, u, e = M, a, t, h.m, a.x(...d, a, t.a.da, t, a, s, e, t.s[0].d, a.t, a);
 
-    const, drawBarChar, t = (ctx: CanvasRenderingContext2DchartWidth: numberchartHeight: numberpadding: numbercolors: stri, n, g[]) => {con, s, t, barWid, t, h = chartWid, t, h / da, t, a.lab, e, l.s.leng, t, h * 0.8;
-      con, s, t, barSpaci, n, g = chartWid, t, h / da, t, a.lab, e, l.s.leng, t, h * 0.2;
-      con, s, t, maxVal, u, e = Math.ma.x(...d, a, t.a.datas, e, t.s[0].da.t, a);
+      d, a, t, a.da, t, a, s, e, t.s[0].d, a, t.a.forE, a, c, h((valu, e, i, n, d, e, x) => {
+        constbarH, e, i, g, h, t = (va, l, u, e / max, V, a, l, u, e) * chartH, e, i, g, h, t;
+        c, o, n, s, t, x = pa, d, d, i, n, g + in, d, e, x * (bar, W, i, d, t, h + barSp, a, c, i, n, g) + barSp, a, c, i, n, g / 2;
+        c, o, n, s, t, y = pa, d, d, i, n, g + chartH, e, i, g, h, t - barHei, g, h, t;
 
-      da, t, a.datas, e, t.s[0].d, a, t.a.forEach((valuein, d, e, x) => {
-        constbarHeig, h, t = (val, u, e / maxVal, u, e) * chartHeig, h, t;
-        cons, t, x = paddi, n, g + ind, e, x * (barWid, t, h + barSpaci, n, g) + barSpaci, n, g / 2;
-        cons, t, y = paddi, n, g + chartHeig, h, t - barHeig, h, t;
+        ct, x.fo, n.t = "1, 2, pxInte, r, s, a, n, s-se, r, i, f";
+        ct, x.textA, l, i, g.n = "cen, t, e, r";
+        c, t, x.fi, l, l, T, e, x(va, l, u, e.to, S, t, r, i, n()x + bar, W, i, d, t, h / 2, y - 5);
 
-        c, t, x.fon.t = "12, pxIntersa, n, s-serif";
-        c, t, x.textAlig.n = "center";
-        c, t, x.fillTex(val, u, e.toStrin()x + barWid, t, h / 2y - 5);
+        // D, r, a, w, la, b, e, l, c, t, x.fi, l, l, T, e, x(d, a, t, a.la, b, e, l.s[i, n, d, e, x]x + bar, W, i, d, t, h / 2, p, a, d, d, i, n, g + chartHei, g, h, t + 2, 0)})};
+    const, drawLineC, h, a, r, t = (ct, x: CanvasRenderingContext2DchartWi, d, t, h: numberchartHei, g, h, t: numberpadd, i, n, g: numbercol, o, r, s: s, t, r, i, n, g[]) => {const, max, V, a, l, u, e = M, a, t, h.m, a.x(...d, a, t.a.da, t, a, s, e, t.s[, 0].d, a.t, a);
+      const, min, V, a, l, u, e = M, a, t, h.m, i(...d, a, t.a.da, t, a, s, e, t.s[, 0].d, a.t, a);
+      const, value, R, a, n, g, e = max, V, a, l, u, e - min, V, a, l, u, e;
 
-        // Dr, a, w, label, ct, x.fillTex(da, t, a.lab, e, l.s[in, d, e, x]x + barWid, t, h / 2pad, d, i, n, g + chartHeig, ht + 20)})};
+      i, f (value, R, a, n, g, e ===  === 0) r, e, t, u, r, n;
 
-    const, drawLineChar, t = (ctx: CanvasRenderingContext2DchartWidth: numberchartHeight: numberpadding: numbercolors: stri, n, g[]) => {con, s, t, maxVal, u, e = Math.ma.x(...d, a, t.a.datas, e, t.s[, 0].da.t, a);
-      con, s, t, minVal, u, e = Math.mi(...d, a, t.a.datas, e, t.s[, 0].da.t, a);
-      con, s, t, valueRan, g, e = maxVal, u, e - minVal, u, e;
-
-      if (valueRan, g, e ===  === 0) retu, r, n;
-
-      con, s, t, pointSpaci, n, g = chartWid, t, h / (da, t, a.lab, e, l.s.leng, t, h - , 1);
-      con, s, t, poin, t, s = da, t, a.datas, e, t.s[, 0].d, a, t.a.ma.p((valuein, d, e, x) => ({x: paddi, n, g + ind, e, x * pointSpacingy: paddi, n, g + chartHeig, h, t - ((val, u, e - minVal, u, e) / valueRan, g, e) * chartHeight
+      const, pointSp, a, c, i, n, g = chart, W, i, d, t, h / (d, a, t, a.la, b, e, l.s.l, e, n, g, t, h - , 1);
+      const, p, o, i, n, t, s = d, a, t, a.da, t, a, s, e, t.s[, 0].d, a, t.a.m, a.p((valu, e, i, n, d, e, x) => ({x: pa, d, d, i, n, g + in, d, e, x * pointSpaci, n, g, y: pa, d, d, i, n, g + chartH, e, i, g, h, t - ((va, l, u, e - min, V, a, l, u, e) / valueRa, n, g, e) * chartHei, g, h, t
       }));
 
-      // Draw, line, ctx.beginPat();
-      c, t, x.mov, e, T.o(poin, t, s[0].xpoint.s[0].y);
- {c, t, x.lin, e, T.o(poi, n, t.xpoin.t.y)});
+      // D, r, a, w, l, i, n, e, ct, x.begin, P, a, t();
+      c, t, x.mo, v, e, T.o(p, o, i, n, t, s[0].xpo, i, n, t.s[0].y);
+ {c, t, x.li, n, e, T.o(po, i, n, t.xp, o, i, n.t.y)});
 
-      poin, t, s.slic(1).forEach(poi, n, t => {c, t, x.lin, e, T.o(poi, n, t.xpoin.t.y)});
+      p, o, i, n, t, s.s, l, i, c(1).fo, r, E, a, c, h(po, i, n, t => {c, t, x.li, n, e, T.o(po, i, n, t.xp, o, i, n.t.y)});
+      c, t, x.strok, e, S, t, y, l.e = c, o, l, o, r, s[0];
+      c, t, x.lin, e, W, i, d, t.h = 3;
+      c, t, x.st, r, o, k();
 
-      c, t, x.strokeSt, y, l.e = colo, r, s[0];
-      c, t, x.lineWi, d, t.h = 3;
-      c, t, x.strok();
+      // D, r, a, w, poi, n, t, s, poi, n, t, s.forE, a, c, h((point, i, n, d, e, x) = > {c, t, x.begin, P, a, t();
+        c, t, x.a, r(po, i, n, t.xp, o, i, n.t.y, 4, 0.2 * M, a, t, h.P, I);
+        c, t, x.fil, l, S, t, y, l.e = c, o, l, o, r, s[0];
+        c, t, x.fi, l.l();
+        ct, x.strokeS, t, y, l.e = "#fff, f, f, f";
+        c, t, x.lin, e, W, i, d, t.h = 2;
+        c, t, x.st, r, o, k();
 
-      // Draw, points, points.forEach((pointind, e, x) = > {c, t, x.beginPat();
-        c, t, x.ar(poi, n, t.xpo, i, n.t.y, 4, 0.2 * Math.PI);
-        c, t, x.fillSt, y, l.e = colo, r, s[0];
-        c, t, x.f, i, l.l();
-        c, t, x.strokeStyl.e = "#ffffff";
-        c, t, x.lineWi, d, t.h = 2;
-        c, t, x.strok();
-
-        // Drawval, u, e, c, t, x.fillStyl.e = "#37, 4151";
-        c, t, x.fon.t = "12, pxIntersa, n, s-serif";
-        c, t, x.textAlig.n = "center";
-        c, t, x.fillTex(da, t, a.datas, e, t.s[, 0].d, a, t.a[index].toStrin()poi, n, t.xpoin.t.y - 10);
-
-
-    if (type === "pie" || type === "doughnut") {drawPieChart(ctxwidthcanvasHeightcolors)} elseif (type === "bar") {drawBarChart(ctxchartWidthchartHeightpaddingcolors)} elseif (type === "line" || type === "area") {drawLineChart(ctxchartWidthchartHeightpaddingcol, ors)}}[typeda, t, a.datasetsd, a, t.a.lab, e, l.s]);
- {constcente, r, X = wid, t, h / 2;
-    constcente, r, Y = heig, h, t / 2;
-    constradi, u, s = Math.mi(widthheig, h, t) / 2 - 40;
-    constinnerRadius = type === "doughnut"? radi, u, s * 0.6 : 0;
-
-  con, s, t, drawPieCha, r, t = useCallback((ctx: CanvasRenderingContext2Dwidth: numberheight: numbercolors: stri, n, g[]) => {constcente, r, X = wid, t, h / 2;
-    constcente, r, Y = heig, h, t / 2;
-    constradi, u, s = Math.mi(widthheig, h, t) / 2 - 40;
-    constinnerRadius = type === "doughnut"? radi, u, s * 0.6 : 0;
+        // Draw, v, a, l, ue, c, t, x.fillS, t, y, l.e = "#3, 7, 4, 1, 5, 1";
+        ct, x.fo, n.t = "1, 2, pxInters, a, n, s-se, r, i, f";
+        ct, x.textA, l, i, g.n = "cen, t, e, r";
+        c, t, x.fi, l, l, T, e, x(d, a, t, a.da, t, a, s, e, t.s[, 0].da, t.a[in, d, e, x].toSt, r, i, n()po, i, n, t.xp, o, i, n.t.y - 1, 0);
 
 
-    l, e, t, currentAng, l, e = 0;
-    con, s, t, tot, a, l = da, t, a.datas, e, t.s[0].d, a, t.a.reduce((sumval, u, e) = > s, u, m + valu, e, 0);
+    i, f (type === "pi, e" || type === "dough, n, u, t") {drawPieCh, a, r, t(ctxwidthcanvasHeightcol, o, r, s)} els, e, i, f (type === "ba, r") {drawBarCh, a, r, t(ctxchartWidthchartHeightpaddingcol, o, r, s)} els, e, i, f (type === "l, i, n, e" || type === "a, r, e, a") {drawLine, C, h, a, r, t(ctxchartWidthchartHeightpaddingcol, o, r, s)}}[typ, e, d, a, t, a.datase, t, s, d, a, t.a.la, b, e, l.s]);
+ {constce, n, t, e, r, X = wi, d, t, h / 2;
+    constce, n, t, e, r, Y = h, e, i, g, h, t / 2;
+    constr, a, d, i, u, s = M, a, t, h.m, i(widthhei, g, h, t) / 2 - 4, 0;    constinnerRad, i, u, s = type === "dough, n, u, t"? r, a, d, i, u, s * 0.6 : 0;
 
-    da, t, a.datas, e, t.s[0].d, a, t.a.forEach((valueind, e, x) => {
-      constsliceAng, l, e = (val, u, e / tot, a, l) * 2 * Math.P.I;
-      constcol, o, r = colo, r, s[ind, e, x % colo, r, s.len, g, t.h];
+  const, drawPie, C, h, a, r, t = useCallb, a, c, k((ct, x: CanvasRenderingContext2Dwi, d, t, h: numberhei, g, h, t: numbercol, o, r, s: s, t, r, i, n, g[]) => {constce, n, t, e, r, X = wi, d, t, h / 2;
+    constce, n, t, e, r, Y = h, e, i, g, h, t / 2;
+    constr, a, d, i, u, s = M, a, t, h.m, i(widthhei, g, h, t) / 2 - 4, 0;    constinnerRad, i, u, s = type === "dough, n, u, t"? r, a, d, i, u, s * 0.6 : 0;
 
-      c, t, x.mov, e, T.o(centerXcente, r, Y);
-      c, t, x.ar(centerXcenterYradiuscurrentAnglecurrentAng, l, e + sliceAng, l, e);
-      if (innerRadi, u, s >  === 0) {
-        c, t, x.ar(centerXcenterYinnerRadiuscurrentAng, l, e + sliceAnglecurrentAngletrue)};
-      c, t, x.closePat();
-      c, t, x.fillSt, y, l.e = col, o, r;
-      c, t, x.f, i, l.l();
-      c, t, x.strokeStyl.e = "#ffffff";
-      c, t, x.lineWi, d, t.h = 2;
-      c, t, x.strok();
 
-      // Draw, label, const labelAngle = currentAng, l, e + sliceAng, l, e / 2;
-      const, label, X = cente, r, X + Math.co(labelAng, l, e) * (radi, u, s + 20);
-      const, label, Y = cente, r, Y + Math.si(labelAng, l, e) * (radi, u, s + 20);
+    l, e, t, current, A, n, g, l, e = 0;
+    const, to, t, a, l = d, a, t, a.da, t, a, s, e, t.s[0].d, a, t.a.red, u, c, e((sum, v, a, l, u, e) = > s, u, m + v, a, l, u, e, 0);
 
-      c, t, x.fillStyl.e = "#374151";
-      c, t, x.fon.t = "12px, Intersan, s-serif";
-      c, t, x.textAlig.n = "center";
-      c, t, x.fillTex(da, t, a.lab, e, l.s[in, d, e, x]labelXlab, e, l, Y);
+    d, a, t, a.da, t, a, s, e, t.s[0].d, a, t.a.forE, a, c, h((value, i, n, d, e, x) => {
+      constslice, A, n, g, l, e = (va, l, u, e / to, t, a, l) * 2 * M, a, t, h.P.I;
+      const, c, o, l, o, r = c, o, l, o, r, s[in, d, e, x % c, o, l, o, r, s.le, n, g, t.h];
 
-      // Draw, percentage, const percentage = ((val, u, e / to, t, a, l) * 1, 00).toFixe(1);
-      c, t, x.fillTex(`${percentage}%`labelXlabe, l, Y + 1, 5);
+      c, t, x.mo, v, e, T.o(centerXce, n, t, e, r, Y);
+      c, t, x.a, r(centerXcenterYradiuscurrentAnglecurrent, A, n, g, l, e + slice, A, n, g, l, e);
+      i, f (innerR, a, d, i, u, s >  === 0) {
+        c, t, x.a, r(centerXcenterYinnerRadiuscurrentAn, g, l, e + sliceAnglecurrentAngletrue)};
+      c, t, x.clo, s, e, P, a, t();      c, t, x.fil, l, S, t, y, l.e = co, l, o, r;
+      c, t, x.fi, l.l();
+      ct, x.strokeS, t, y, l.e = "#fff, f, f, f";
+      c, t, x.lin, e, W, i, d, t.h = 2;
+      c, t, x.st, r, o, k();
 
-      currentAng, l, e += sliceAng, l, e})}[typedata]);
+      // D, r, a, w, la, b, e, l, const labelAn, g, l, e = current, A, n, g, l, e + slice, A, n, g, l, e / 2;
+      const, la, b, e, l, X = ce, n, t, e, r, X + M, a, t, h.c, o(label, A, n, g, l, e) * (r, a, d, i, u, s + 2, 0);
+      const, la, b, e, l, Y = ce, n, t, e, r, Y + M, a, t, h.s, i(label, A, n, g, l, e) * (rad, i, u, s + 2, 0);
 
-  const, drawBarChar, t = useCallback((ctx: CanvasRenderingContext2DchartWidth: numberchartHeight: numberpadding: numbercolors: stri, n, g[]) => {con, s, t, barWid, t, h = chartWid, t, h / da, t, a.lab, e, l.s.leng, t, h * 0.8;
-    con, s, t, barSpaci, n, g = chartWid, t, h / da, t, a.lab, e, l.s.leng, t, h * 0.2;
-    con, s, t, maxVal, u, e = Math.ma.x(...d, a, t.a.datas, e, t.s[0].da.t, a);
+      ct, x.fillS, t, y, l.e = "#374, 1, 5, 1";
+      ct, x.fo, n.t = "12pxInters, a, n, s-se, r, i, f";
+      ct, x.textA, l, i, g.n = "cen, t, e, r";
+      c, t, x.fi, l, l, T, e, x(d, a, t, a.la, b, e, l.s[i, n, d, e, x]labelX, l, a, b, e, l, Y);
+      // D, r, a, w, percent, a, g, e, const percent, a, g, e = ((va, l, u, e / t, o, t, a, l) * 1, 0, 0).toF, i, x, e(1);
+      c, t, x.fill, T, e, x(`${percent, a, g, e}%`labelXl, a, b, e, l, Y + 1, 5);
 
-    da, t, a.datas, e, t.s[0].d, a, t.a.forEach((valuein, d, e, x) => {
-      constbarHeig, h, t = (val, u, e / maxVal, u, e) * chartHeig, h, t;
-      cons, t, x = paddi, n, g + ind, e, x * (barWid, t, h + barSpaci, n, g) + barSpaci, n, g / 2;
-      cons, t, y = paddi, n, g + chartHeig, h, t - barHeig, h, t;
+      current, A, n, g, l, e += slice, A, n, g, l, e})}[typed, a, t, a]);
 
-      c, t, x.fon.t = "12, pxIntersa, n, s-serif";
-      c, t, x.textAlig.n = "center";
-      c, t, x.fillTex(val, u, e.toStrin()x + barWid, t, h / 2y - 5);
+  const, drawBarC, h, a, r, t = useCallb, a, c, k((ct, x: CanvasRenderingContext2DchartWi, d, t, h: numberchartHei, g, h, t: numberpadd, i, n, g: numbercol, o, r, s: s, t, r, i, n, g[]) => {const, bar, W, i, d, t, h = chart, W, i, d, t, h / d, a, t, a.la, b, e, l.s.l, e, n, g, t, h * 0.8;
+    const, barSp, a, c, i, n, g = chart, W, i, d, t, h / d, a, t, a.la, b, e, l.s.l, e, n, g, t, h * 0.2;
+    const, max, V, a, l, u, e = M, a, t, h.m, a.x(...d, a, t.a.da, t, a, s, e, t.s[0].d, a.t, a);
 
-      // Dr, a, w, label, ct, x.fillTex(da, t, a.lab, e, l.s[in, d, e, x]x + barWid, t, h / 2pad, d, i, n, g + chartHeight + 20)})}[data]);
+    d, a, t, a.da, t, a, s, e, t.s[0].d, a, t.a.forE, a, c, h((valu, e, i, n, d, e, x) => {
+      constbarH, e, i, g, h, t = (va, l, u, e / max, V, a, l, u, e) * chartH, e, i, g, h, t;
+      c, o, n, s, t, x = pa, d, d, i, n, g + in, d, e, x * (bar, W, i, d, t, h + barSp, a, c, i, n, g) + barSp, a, c, i, n, g / 2;
+      c, o, n, s, t, y = pa, d, d, i, n, g + chartH, e, i, g, h, t - barHei, g, h, t;
 
-  const, drawLineChar, t = useCallback((ctx: CanvasRenderingContext2DchartWidth: numberchartHeight: numberpadding: numbercolors: stri, n, g[]) => {con, s, t, maxVal, u, e = Math.ma.x(...d, a, t.a.datas, e, t.s[0].da.ta);
-    constminVal, u, e = Math.mi(...d, a, t.a.datas, e, t.s[0].da.ta);
-    constvalueRan, g, e = maxVal, u, e - minVal, u, e;
+      ct, x.fo, n.t = "1, 2, pxInte, r, s, a, n, s-se, r, i, f";
+      ct, x.textA, l, i, g.n = "cen, t, e, r";
+      c, t, x.fi, l, l, T, e, x(va, l, u, e.to, S, t, r, i, n()x + bar, W, i, d, t, h / 2, y - 5);
 
- ({x: paddi, n, g + (ind, e, x / (da, t, a.lab, e, l.s.leng, t, h - 1)) * chartWidthy: paddi, n, g + chartHeig, h, t - ((val, u, e - minVal, u, e) / valueRan, g, e) * chartHeightvalueconst, point, s = da, t, a.datas, e, t.s[0].d, a, t.a.ma.p((valueind, e, x) => ({x: paddi, n, g + (ind, e, x / (da, t, a.lab, e, l.s.leng, t, h - 1)) * chartWidthy: paddi, n, g + chartHeig, h, t - ((val, u, e - minVal, u, e) / valueRan, g, e) * chartHeightvalue
+      // D, r, a, w, la, b, e, l, c, t, x.fi, l, l, T, e, x(d, a, t, a.la, b, e, l.s[i, n, d, e, x]x + bar, W, i, d, t, h / 2, p, a, d, d, in, g + chartHei, g, h, t + 2, 0)})}[d, a, t, a]);
+  const, drawLineC, h, a, r, t = useCallb, a, c, k((ct, x: CanvasRenderingContext2DchartWi, d, t, h: numberchartHei, g, h, t: numberpadd, i, n, g: numbercol, o, r, s: s, t, r, i, n, g[]) => {const, max, V, a, l, u, e = M, a, t, h.m, a.x(...d, a, t.a.da, t, a, s, e, t.s[0].d, a.t, a);
+    constmin, V, a, l, u, e = M, a, t, h.m, i(...d, a, t.a.da, t, a, s, e, t.s[0].d, a.t, a);
+    constvalue, R, a, n, g, e = max, V, a, l, u, e - min, V, a, l, u, e;
+
+ ({x: pa, d, d, i, n, g + (in, d, e, x / (d, a, t, a.la, b, e, l.s.l, e, n, g, t, h - 1)) * chartWid, t, h, y: pa, d, d, i, n, g + chartH, e, i, g, h, t - ((va, l, u, e - min, V, a, l, u, e) / value, R, a, n, g, e) * chartHeightvalueconst, po, i, n, t, s = d, a, t, a.da, t, a, s, e, t.s[0].d, a, t.a.m, a.p((value, i, n, d, e, x) => ({x: pa, d, d, i, n, g + (in, d, e, x / (d, a, t, a.la, b, e, l.s.l, e, n, g, t, h - 1)) * chartWid, t, h, y: pa, d, d, i, n, g + chartH, e, i, g, h, t - ((va, l, u, e - minVa, l, u, e) / valueRa, n, g, e) * chartHeightva, l, u, e
 
     }));
 
-    // Draw, area, under lineif (type === "area") {c, t, x.beginPat();
-      poin, t, s.forEach(poi, n, t => c, t, x.lin, e, T.o(poi, n, t.xpo, i, n.t.y));
-      c, t, x.lin, e, T.o(poin, t, s[poin, t, s.leng, t, h - 1].xpadd, i, n.g + chartHeig, h, t);
-      c, t, x.closePat();
-      c, t, x.fillSt, y, l.e = colors[0] + "20";
-      c, t, x.fil.l()};
-    // Draw, line, ctx.beginPat();
- c, t, x.lin, e, T.o(poi, n, t.xpo, i, n.t.y));
+    // Drawareaun, d, e, r lin, e, i, f (type === "a, r, e, a") {c, t, x.beg, i, n, P, a, t();
+      p, o, i, n, t, s.fo, r, E, a, c, h(po, i, n, t => c, t, x.li, n, e, T.o(po, i, n, t.xp, o, i, n.t.y));
+      c, t, x.li, n, e, T.o(p, o, i, n, t, s[p, o, i, n, t, s.l, e, n, g, t, h - 1].xp, a, d, d, i, n.g + chartH, e, i, g, h, t);
+      c, t, x.clo, s, e, P, a, t();
+      ct, x.fillS, t, y, l.e = col, o, r, s[0] + "2, 0";
+      ct, x.fi, l.l()};
+    // D, r, a, w, l, i, n, e, ct, x.beg, i, n, P, a, t(); c, t, x.li, n, e, T.o(po, i, n, t.xp, o, i, n.t.y));
 
-    c, t, x.mov, e, T.o(poin, t, s[0].xpoint.s[0].y);
-    poin, t, s.forEach(poi, n, t => c, t, x.lin, e, T.o(poi, n, t.xpo, i, n.t.y));
+    c, t, x.mo, v, e, T.o(p, o, i, n, t, s[0].xpo, i, n, t.s[0].y);
+    p, o, i, n, t, s.forE, a, c, h(po, i, n, t => c, t, x.li, n, e, T.o(po, i, n, t.xp, o, i, n.t.y));
 
-    c, t, x.strokeSt, y, l.e = colo, r, s[0];
-    c, t, x.lineWi, d, t.h = 3;
-    c, t, x.strok();
+    c, t, x.strok, e, S, t, y, l.e = c, o, l, o, r, s[0];
+    c, t, x.lin, e, W, i, d, t.h = 3;
+    c, t, x.st, r, o, k();
 
-    // Draw, points, points.forEach((pointind, e, x) = > {c, t, x.beginPat();
-      c, t, x.ar(poi, n, t.xpo, i, n.t.y, 4, 0.2 * Math.PI);
-      c, t, x.fillSt, y, l.e = colo, r, s[0];
-      c, t, x.f, i, l.l();
-      ctx.strokeStyl.e = "#ffff, f, f";
-      c, t, x.lineWi, d, t.h = 2;
-      c, t, x.strok();
+    // D, r, a, w, poi, n, t, s, poi, n, t, s.forE, a, c, h((point, i, n, d, e, x) = > {c, t, x.begin, P, a, t();
+      c, t, x.a, r(po, i, n, t.xp, o, i, n.t.y, 4, 0.2 * M, a, t, h.P, I);
+      c, t, x.fil, l, S, t, y, l.e = c, o, l, o, r, s[0];
+      ct, x.fi, l.l();
+      ct, x.strokeS, t, y, l.e = "#f, f, f, f, f, f";
+      c, t, x.lin, e, W, i, d, t.h = 2;
+      c, t, x.st, r, o, k();
 
-      // Drawval, u, e, ctx.fillStyl.e = "#37, 4, 1, 51";
-      ctx.fon.t = "12, pxIntersa, n, s-ser, i, f";
-      ctx.textAlig.n = "cent, e, r";
-      c, t, x.fillTex(poi, n, t.va, l, u.e.toStrin()poi, n, t.xpo, i, n.t.y - 10);
+      // Drawvalue, c, t, x.fillS, t, y, l.e = "#3, 7, 4, 1, 5, 1";
+      ct, x.fo, n.t = "1, 2, pxInters, a, n, s-se, r, i, f";
+      ct, x.textA, l, i, g.n = "cen, t, e, r";
+      c, t, x.fi, l, l, T, e, x(po, i, n, t.v, a, l, u.e.to, S, t, r, i, n()po, i, n, t.xp, o, i, n.t.y - 1, 0);
 
+  const, handleMous, e, M, o, v, e = (ev, e, n, t: React.Mous, e, E, v, e, n.t<HTMLCanvasElem, e, n, t>) => {i, f (!showTool, t, i, p === s) return;
 
-  con, s, t, handleMouseMo, v, e = (event: React.MouseEv, e, n.t<HTMLCanvasElement>) => {if (!showTooltip === s) retu, r, n;
+    const, c, a, n, v, a, s = canv, a, s, R, e, f.c, u, r, r, e, n.t;
+    i, f (!ca, n, v, a === s) r, e, t, u, r, n;
 
-    con, s, t, canv, a, s = canvasR, e, f.curr, e, n.t;
-    if (!can, v, a === s) retu, r, n;
-
-    con, s, t, re, c, t = canv, a, s.getBoundingClientRec();
-    con, s, t, x = eve, n, t.clie, n, t.X - re, c, t.l, e, f.t;
-    con, s, t, y = eve, n, t.clie, n, t.Y - re, c, t.to.p;
+    const, r, e, c, t = c, a, n, v, a, s.getBoundingClient, R, e, c();
+    const, x = ev, e, n, t.c, l, i, e, n, t.X - r, e, c, t.l, e, f.t;
+    const, y = ev, e, n, t.c, l, i, e, n, t.Y - r, e, c, t.t, o.p;
 
 
-      if (distan, c, e <= radiu === s) {
-        const, ang, l, e = Math.at, a, n.2(y - center, Y, x - cent, e, r, X);
-        con, s, t, normalizedAng, l, e = (ang, l, e + Math.P, I) / (2 * Math.P, I);
-        con, s, t, tot, a, l = da, t, a.datas, e, t.s[, 0].d, a, t.a.reduce((sumva, l, u, e) => s, u, m + valu, e, 0);
-        
-        l, e, t, currentAng, l, e = 0;
-        da, t, a.datas, e, t.s[, 0].d, a, t.a.forEach((valuein, d, e, x) => {
-          con, s, t, sliceAng, l, e = (val, u, e / to, t, a, l) * 2 * Math.P.I;
-          if (normalizedAng, l, e >= currentAng, l, e && normalizedAng, l, e < currentAngle + sliceAngl === e) {
-            setHoveredIndex(ind, e, x);
+      i, f (dis, t, a, n, c, e <= ra, d, i, u === s) {
+        constan, g, l, e = Ma, t, h.a, t, a, n.2(y - cen, t, e, r, Y, x - c, e, n, t, e, r, X);
+        const, normalized, A, n, g, l, e = (an, g, l, e + M, a, t, h.P, I) / (2 * M, a, t, h.P, I);
+        const, to, t, a, l = d, a, t, a.da, t, a, s, e, t.s[, 0].d, a, t.a.r, e, d, u, c, e((su, m, v, a, l, u, e) => s, u, m + v, a, l, u, e, 0);        
+        l, e, t, current, A, n, g, l, e = 0;
+        d, a, t, a.da, t, a, s, e, t.s[, 0].d, a, t.a.forE, a, c, h((valu, e, i, n, d, e, x) => {
+          const, slice, A, n, g, l, e = (va, l, u, e / t, o, t, a, l) * 2 * M, a, t, h.P.I;
+          i, f (normalized, A, n, g, l, e >= current, A, n, g, l, e && normalized, A, n, g, l, e < currentAn, g, l, e + sliceA, n, g, l === e) {
+            setHoveredIn, d, e, x(in, d, e, x);
             return};
-          currentAng, l, e += sliceAng, l, e})} el, s, e {setHoveredIndex(null)}}};
-  return (<divclassName={`bg-whi, t, e, rou, n, d, e, d-lg, sh, a, d, o, w-sm, bo, r, d, e, r, bo, r, d, e, r-gr, a, y-2, 0, 0p-6 ${className}`}>      {title && (
-        <h3className="text-lg, fo, n, t-semibo, l, d, te, x, t-gr, a, y-9, 0, 0, m, b-4" id="title">{title}</h3>      )};
-      <divclassName="relative">
+          currentA, n, g, l, e += slice, A, n, g, l, e})} e, l, s, e {setHoveredIn, d, e, x(null)}}};
+  return (<divclassN, a, m, e={`b, g-whiter, o, u, n, d, e, d-l, g, s, h, a, d, o, w-s, m, b, o, r, d, e, r, b, o, r, d, e, r-g, r, a, y-2, 0, 0, p-6 ${classN, a, m, e}`}>      {ti, t, l, e && (
+        <h3classN, a, m, e="t, e, x, t-lgf, o, n, t-semi, b, o, l, d, t, e, x, t-g, r, a, y-90, 0 m, b-4" i, d="ti, t, l, e">{ti, t, l, e}</h, 3>      )};      <divclassN, a, m, e="relat, i, v, e">
 
-            <divclassName="animate-spin, rounde, d-ful, l, h-8, w-8, bord, e, r-b-2 bord, e, r-blue-600"></div>
+            <divclassN, a, m, e="anim, a, t, e-spinroun, d, e, d-fu, l, l, h-8, w-8, bor, d, e, r-b-2 bor, d, e, r-b, l, u, e-60, 0"></di, v>
 
-        {isLoading && (<div, classNa, m, e="absolu, t, e, ins, e, t-0, fl, e, x, ite, m, s-cent, e, r, justi, f, y-cent, e, r, bg-whi, t, e, bg-opacity-75rounded-lg">
-            <divclassNam, e="anima, t, e-sp, i, n, round, e, d-fu, l, l, h-8, w-8, bord, e, r-b-2bo, r, d, er-blue-600"></div>
 
-          </div>
+            <divclass, N, a, m, e="an, i, m, a, t, e-s, p, i, n, ro, u, n, d, e, d-f, u, l, l, h-8, w-8, b, o, r, d, e, r-b-2b, o, r, d, e, r-b, l, u, e-60, 0"></di, v>
+
+        {isLoad, i, n, g && (<divclassN, a, m, e="absolute, i, n, s, e, t-0, f, l, e, x, it, e, m, s-c, e, n, t, e, r, ju, s, t, i, f, y-c, e, n, t, e, rb, g-whit, e, b, g-opac, i, t, y-7, 5 roun, d, e, d-l, g">
+            <divclassN, a, m, e="anim, a, t, e-sp, i, n, ro, u, n, d, e, d-f, u, l, l, h-8, w-8 bor, d, e, r-b-2 bor, d, e, r-b, l, u, e-60, 0"></di, v>
+
+
+          </di, v>
         )};
-        <canvasref={canvasRef};
-          wid, t, h={400};
-          heig, h, t={hei, ght};
-          onMouseMo, v, e={handleMouseM, ove};
-          onMouseLea, v, e={() => setHoveredIndex(null)};
-          classNa, m, e="w-fullh-full"/>
-      </div>
+        <canvas, r, e, f={canvas, R, e, f};
+          wi, d, t, h={40, 0};
+          hei, g, h, t={hei, g, h, t};
+          onMous, e, M, o, v, e={handleMouseM, o, v, e};
+          onMouse, L, e, a, v, e={() => setHoveredIn, d, e, x(null)};
+          classN, a, m, e="w-fu, l, l, h-f, u, l, l"/>
+      </di, v>
 
-      {showLegend && (<div, classNa, m, e="mt-4, fl, e, x, flex-wrapgap-2">
-          {da, t, a.labe, l, s.map((labelind, ex) => (<divkey={index};
+
+          {d, a, t, a.l, a, b, e, l, s.ma, p((label, i, n, d, e, x) => (<div, k, e, y={in, d, e, x};
             >
-              <divclassNa, m, e="w-3, h-3rou, nde, d-full"
-                sty, l, e={{ backgroundColor: da, t, a.datase, t, s[0].backgroundColor[index] }}              />
-{la, bel}</span>
-              <span, classNa, m, e="te, x, t-gray-500">
+              <divclassN, a, m, e="w-3, h-3 ro, u, nd, e, d-f, u, l, l"
+                st, y, l, e={{ backgroundCo, l, o, r: d, a, t, a.dat, a, s, e, t, s[0].backgroundCo, l, o, r[in, d, e, x] }}              />
+{l, a, be, l}</s, p, a, n>
+              <s, p, a, n, classN, a, m, e="t, e, x, t-g, r, a, y-50, 0">
 
-              <spanclassNam, e ="te, x, t-gray-700">{la, bel}</span>
-              <span, classNa, m, e ="te, x, t-gray-500">
+              <spanclass, N, a, m, e ="t, e, x, t-g, r, a, y-70, 0">{l, a, be, l}</s, p, a, n>
+              <s, p, a, n, classN, a, m, e ="t, e, x, t-g, r, a, y-50, 0">
 
-                ({da, t, a.datas, e, t.s[, 0].d, at.a[index]})
-              </span>
-            </div>
+                ({d, a, t, a.da, t, a, s, e, t.s[, 0].d, a, t.a[in, d, e, x]})
+
+      {showLeg, e, n, d && (<divclassN, a, m, e="m, t-4 flexf, l, e, x-wrap, g, a, p-2">
+          {da, t, a.l, a, b, e, l, s.ma, p((labelin, d, e, x) => (<div, k, e, y={in, d, e, x};
+            >
+              <divclassN, a, m, e="w-3 h-3 rou, n, d, e d-f, u, l, l"
+                st, y, l, e={{ backgroundCo, l, o, r: d, a, t, a.datas, e, t, s[0].backgroundCo, l, o, r[in, d, e, x] }}              />
+{la, b, e, l}</s, p, a, n>
+              <spanclassN, a, m, e="t, e, x, t-g, r, a, y-50, 0">
+              <spanclassN, a, m, e ="t, e, x, t-g, r, a, y-70, 0">{la, b, e, l}</s, p, a, n>
+              <spanclassN, a, m, e ="te, x, t-g, r, a, y-50, 0">
+
+                ({d, a, t, a.data, s, e, t.s[0].da, t.a[in, d, e, x]})
+
+              </s, p, a, n>
+            </di, v>
           ))};
-        </div>
+        </di, v>
       )};
-      {hoveredInd, e, x !== nu, l, l && showToolti, p, s && (<divclassNam, e="mt-2, p-2, bg-gr, a, y-1, 0, 0, round, e, d, te, x, t-smte, x, t-gray-700">
+      {hoveredIn, d, e, x !== null && showToolt, i, p, s && (<divclassN, a, m, e="m, t-2 p-2, b, g-g, r, a, y-1, 0, 0, ro, u, n, d, e, d, t, e, x, t-smt, e, x, t-g, r, a, y-70, 0">
 
-          <strong>{data.labels[hoveredIndex]}:</strong> {data.datasets[0].data[hoveredIndex]}        </div>
+          <str, o, n, g>{d, a, t, a.lab, e, l, s[hoveredIn, d, e, x]}:</str, o, n, g> {d, a, t, a.datas, e, t, s[0].d, a, t, a[hoveredIn, d, e, x]}        </di, v>
       )};
-    </div>
+    </di, v>
   )};

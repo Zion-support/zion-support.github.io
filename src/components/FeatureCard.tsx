@@ -1,36 +1,38 @@
 import React from "react";
 
-interface, FeatureCardProp, s {icon: stri, n, g;
-	title: stri, ng;
-	description: string;
-	color: "blue' | "green" | "purple"};
-exportconstFeatureCard: React.FC<FeatureCardProps> = ({icontitledescriptioncolor
-}) => {cons, t, colorClasses = {
-		blue: {
-			bg: "bg-gradie, n, t-to-br, fr, o, m-bl, u, e-100, t, o-bl, u, e-200"text: "te, xt-blue-700"hover:"hover:fr, o, m-bl, u, e-200hover:to-blue-300"shadow: "hover:shadow-blue-200"},
-		green: {bg: "bg-gradie, n, t-to-br, fr, o, m-gre, e, n-100, t, o-green-200"text: "te, xt-green-700"hover: "hover:fr, o, m-gre, e, n-200hover:to-green-300"shadow: "hover:shadow-green-200"},
-		purple: {bg: "bg-gradie, n, t-to-br, fr, o, m-purp, l, e-100, t, o-purple-200"text: "te, xt-purple-700"hover: "hover:fr, o, m-purp, l, e-200hover:to-purple-300"shadow: "hover:shadow-purple-200"		}};
-	const, currentColo, r = colorClass, e, s[color];
+interfaceFeatureCardPr, o, p, s {i, c, o, n: str, i, n, g;
+	ti, t, l, e: str, i, n, g;
+	description: str, i, n, g;
+	co, l, o, r: "b, l, u, e' | "gr, e, e, n" | "pur, p, l, e"};
+exportconstFeatureC, a, r, d: React.F, C<FeatureCardPr, o, p, s> = ({icontitledescriptionco, l, o, r
+}) => {constcolorClas, s, e, s = {
+		b, l, u, e: {
+			b, g: "b, g-gradi, e, n, t-t, o-b, r from-b, l, u, e-10, 0, t, o-b, l, u, e-20, 0"t, e, x, t: "t, e, x, t-b, l, u, e-70, 0"ho, v, e, r:"ho, v, e, r:from-b, l, u, e-200ho, v, e, r:t, o-b, l, u, e-30, 0"sha, d, o, w: "ho, v, e, r:sha, d, o, w-b, l, u, e-20, 0"},
+		gr, e, e, n: {b, g: "b, g-gra, d, i, e, n, t-t, o-b, r from-gr, e, e, n-10, 0, t, o-gr, e, e, n-20, 0"t, e, x, t: "t, e, x, t-gr, e, e, n-70, 0"ho, v, e, r: "ho, v, e, r:from-gr, e, e, n-200ho, v, e, r:t, o-gr, e, e, n-30, 0"sha, d, o, w: "ho, v, e, r:sha, d, o, w-gr, e, e, n-20, 0"},
+		pur, p, l, e: {b, g: "b, g-gra, d, i, e, n, t-t, o-b, r from-pur, p, l, e-10, 0, t, o-pur, p, l, e-20, 0"t, e, x, t: "t, e, x, t-pur, p, l, e-70, 0"ho, v, e, r: "ho, v, e, r:from-pur, p, l, e-200ho, v, e, r:t, o-pur, p, l, e-30, 0"sha, d, o, w: "ho, v, e, r:sha, d, o, w-pur, p, l, e-20, 0"		}};
+	const, currentC, o, l, o, r = colorCl, a, s, s, e, s[co, l, o, r];
 
 
-			<divclassName={`w-20h-20 ${currentColor.bg} ${currentColor.hover} round, e, d-2, x, l, fl  e, x, ite  m  s-cent, e, r  justi, f, y-cent, e, r  mx-au, t, o  mb-6, transiti, o, n-a, l, l  durati, o, n-5, 0, 0, gro, up-hover:sca, l, e-1, 1, 0, gro, u, p-ho, v, e  r:rota, t, e-3shad, o, w-lg${currentColor.shadow}`}>
-				<spanclassName="text-3, x, lgroup-hover:sca, l, e-1, 1, 0, transiti, o, n-transformduration-300">{icon}</span>
-			</div>
-			<h3className={`te, x, t-2, x, l, f, o, n, t-bo, l, d, mb-4, transi, t, i, o, n-co, l, o, r, s, durat, i, o, n-3, 0, 0, g, r, oup-hover:${currentColor.text}`} id="title">				{title};
-			</h3>
-			<pclassName="text-gr, a, y-6, 0, 0, leadi, n, g-relaxed, group-hover:te, x, t-gr, a, y-7, 0, 0, transiti, o, n-colorsduration-300">
+			<divclassN, a, m, e={`w-20, h-2, 0 ${currentCo, l, o, r.b, g} ${currentCo, l, o, r.ho, v, e, r} roun, d, e, d-2, x, l, f, l  e, x, it, e  m  s-c, e, n, t, e, r  ju, s, t, i, f, y-c, e, n, t, e, r  m, x-a, u, t, o  m, b-6, trans, i, t, i, o, n-a, l, l  dur, a, t, i, o, n-5, 0, 0, gr, o, u, p-ho, v, e, r:sc, a, l, e-1, 1, 0, gr, o, u, p-h, o, v, e  r:r, o, t, a, t, e-3sha, d, o, w-l, g${currentCo, l, o, r.sha, d, o, w}`}>
+				<spanclassN, a, m, e="t, e, x, t-3 xlgr, o, u, p-ho, v, e, r:sc, a, l, e-1, 1, 0, trans, i, t, i, o, n-transformdurat, i, o, n-30, 0">{i, c, o, n}</s, p, a, n>
+			</di, v>
+			<h3classN, a, m, e={`te, x  t-2, x, l, f, o, n  t-b, o, l  d, m, b-4, tra, n, s, i, t, i, o  n-c, o, l, o, r  s, du, r, a, t, i, o, n-300gr, o, u, p-ho, v, e, r:${currentCo, l, o, r.t, e, x, t}`} i, d="ti, t, l, e">				{ti, t, l, e};			</h, 3>
+			<pclassN, a, m, e="t, e, x, t-g, r, a, y-60, 0, le, a, d, i, n, g-relaxedgr, o, u, p-ho, v, e, r:t, e, x, t-g, r, a, y-7, 0, 0 transit, i, o, n-colorsdurat, i, o, n-30, 0">
 
-	return (<divclassNam, e="gro, u, p, te, x, t-cent, e, r, p-6, round, e, d-2, x, l, transitio, n-a, l, l, durati, o, n-500h, ove, r-lift">
-			<divclassNam, e={`w-20, h-20 ${currentColor.bg} ${currentColor.hover} rou, n, d, e, d-2, x, l, f, l, e, x, it, e, m, s-ce, n, t, e, r, just, i, f, y-ce, n, t, e, r, mx-au, t, o, mb-6, transi, t, i, o, n-a, l, l, durat, i, o, n-5, 0, 0, g, r, o, u, p-h, o, ver:s, c, a, l, e-1, 1, 0, g, r, o, u, p-hover:rot, a, t, e-3sh, a, d, ow-lg${currentColor.shadow}`}>
-				<spanclassNam, e="te, x, t-3, x, l, group-hover:sca, l, e-1, 1, 0, transiti, o, n-transformduration-300">{icon}</span>
-			</div>
-			<h3classNam, e={`te, x, t-2, x, l, fo, n, t-bo, l, d, mb-4, transi, t, i, o, n-co, l, o, r, s, dura, t, i, o, n-3, 0, 0, g, r, oup-hover:${currentColor.text}`} id="title">				{title};
-			</h3>
-			<pclassName="tex, t-gr, a, y-6, 0, 0, leadi, n, g-relax, e, d, gro, up-hover:te, x, t-gr, a, y-7, 0, 0, transiti, o, n-colorsduration-300">
+
+			<divclass, N, a, m, e={`w-2, 0, h-2, 0 ${currentCo, l, o, r.b, g} ${currentCo, l, o, r.ho, v, e, r} ro, u, n, d, e, d-2, x, l, f, l, e, x, i, t, e, m, s-c, e, n, t, e, r, j, u, s, t, i, f, y-c, e, n, t, e, r, m, x-a, u, t, o, m, b-6, tra, n, s, i, t, i, o, n-a, l, l, du, r, a, t, i, o, n-5, 0, 0, g, r, o, u, p-ho, v, e, r:s, c, a, l, e-1, 1, 0, g, r, o, u, p-ho, v, e, r:ro, t, a, t, e-3s, h, a, d, o, w-l, g${currentCo, l, o, r.sha, d, o, w}`}>
+				<spanclass, N, a, m, e="t, e, x, t-3, x, l, gr, o, u, p-ho, v, e, r:sc, a, l, e-1, 1, 0, trans, i, t, i, o, n-transformdurat, i, o, n-30, 0">{i, c, o, n}</s, p, a, n>
+
+	return (<divclassN, a, m, e="grou, p, t, e, x, t-c, e, n, t, e, r, p-6, ro, u, n, d, e, d-2, x, l, transi, t, i, o, n-a, l, ldurat, i, o, n-50, 0 h, o, v, e r-l, i, f, t">
+			<divclassN, a, m, e={`w-20, h-2, 0 ${currentCo, l, o, r.b, g} ${currentCo, l, o, r.ho, v, e, r} r, o, u, n, d, e d-2, x, l, f, l, e  x, i, t, e, m, s-c, e, n, t, e r, j, u, s, t, i, f, y-c, e, n, t, e r, m, x-a, u, t o, m, b-6, tra, n, s, i, t, i, o  n-a, l l, du, r, a, t, i, o, n-5, 0, 0, g, r, o, u  p-h, o, v, e r:s, c, a, l e-1, 1, 0, g, r, o, u  p-h, o, v e, r:ro, t, a, t, e-3s, h, a, d, o, w-l, g${currentCo, l, o, r.sha, d, o, w}`}>
+				<spanclassN, a, m, e="t, e, x, t-3 xlgr, o, u, p-ho, v, e, r:sc, a, l, e-1, 1, 0 transit, i, o, n-transformdurat, i, o, n-30, 0">{i, c, o, n}</s, p, a, n>
+
+			</di, v>
+			<h3classN, a, m, e={`t, e, x, t-2, x, l, f, o, n, t-b, o, l, d, m, b-4, tra, n, s, i, t, i, o, n-c, o, l, o, r, s, d, u, r, a, t, i, o, n-3, 0, 0, gr, o, u, p-ho, v, e, r:${currentCo, l, o, r.t, e, x, t}`} i, d="ti, t, l, e">				{ti, t, l, e};			</h, 3>
+			<pclassN, a, m, e="t, e, x, t-g, r, a, y-6, 0, 0, le, a, d, i, n, g-re, l, a, x, e, dgr, o, u, p-ho, v, e, r:t, e, x, t-g, r, a, y-7, 0, 0 transit, i, o, n-colorsdurat, i, o, n-30, 0">
 
 				{description};
 			</p>
 			
-			{/* Decorativeline */};
-			<div, className={`mt-6, w-12, h-1 ${currentColor.bg} rou, n, d, e, d-fu, l, l, mx-au, t, o, transit, i, o, n-a, l, l, durat, i, o, n-5, 0, 0g, r, oup-hover:w-16`}></div>		</div>
-	)};
+			{/* Decorativel, i, n, e */};
+			<divclassN, a, m, e={`m, t-6, w-12, h-1 ${currentCo, l, o, r.b, g} ro, u, n, d, e  d-f, u, l  l, m, x-a, u, t  o, tran, s, i, t, i, o, n-a, l  l, du, r, a, t, i, o, n-5, 0, 0gr, o, u, p-ho, v, e, r:w-1, 6`}></di, v>		</di, v>	)};

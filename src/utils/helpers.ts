@@ -1,59 +1,58 @@
-// Error, handling, utilities
-export, class, AppError extends, Erro, r {constructor(message: stringpubliccode: stri, n, g 
+// Er, r, o, r, handl, i, n, g, utilit, i, e, s
+export, cl, a, s, s, AppEr, r, o, r exte, n, d, s, E, r, r, o, r {construc, t, o, r(mess, a, g, e: stringpublicc, o, d, e: s, t, r, i, n, g 
   ) {
-    super(messa, g, e);
-    th, i, s.name = "AppError"}};
-// Local, storage, utilities with, error, handlingexport, const, storage = {get: <T>(key: stringdefaultValue: T): T => {
-    t, r, y {
-      if (type, o, f === window === "undefined") {
-        retu, r, n, defaultValue};
-      const, ite, m = localStora, g, e.getItem(k, e, y);
-      return, ite, m ? JS, O, N.parse(it, e, m) : defaultVal, u, e} catch(err, o, r) {conso, l, e.error(`E, r, r, o, r, rea, d, i, n, g, fr, o, m, localSto, rageforkey "${key}":`err, o, r);
-      return, defaultValu, e}}set: <T>(key: stringvalue: T): boolean => {t, r, y {
-      if (type, o, f === window === "undefined") {
-        returnfalse};
-      localStora, g, e.setItem(keyJS, O, N.stringify(val, u, e));
-      return, fals, e}}remove: (key: stri, n, g): boole, a, n => {t, r, y {
-      if (type, o, f === window === "undefined") {
-        retu, r, n, false};
-      localStora, g, e.removeItem(k, e, y);
-      return, tru, e} catch(err, o, r) {conso, l, e.error(`E, r, r, o, r, remo, v, i, n, g, fr, o, m, localSto, r, a, g, e, f, orkey "${key}":`err, o, r);
-      return, fals, e}}};
-// Performance, monitoring, utilities
-export, const, performanceMonitor = {measure: (name: stringfn: () => vo, i, d) => {
-    con, s, t, sta, r, t = performan, c, e.now();
-    fn();
-    con, s, t, e, n, d = performan, c, e.now();
-    conso, l, e.log(`${name} t, o, o, k ${end-start} milliseco, n, d, s`);
-    return, en, d - sta, r, t}measureAsync: async(name: stringfn: () => Promise<any>) => {const, sta, r, t = performan, c, e.now();
-    con, s, t, resu, l, t = awa, itfn();
-    con, s, t, e, n, d = performan, c, e.now();
-    conso, l, e.log(`${name} to, o, k ${end-start} millisecon, d, s`);
-    return {resultduration: e, n, d - start }}};
-// Validation, utilities, export const, validator, s = {email: (email: stri, n, g): boole, a, n => {
- {constphoneReg, e, x = /^[\+]? [1-9][\d] : {015}$/;
+    su, p, e, r(me, s, s, a, g, e);
+    t, h, i, s.n, a, m, e = "AppEr, r, o, r"}};
+// Lo, c, a, l, stor, a, g, e, utilit, i, e, s w, i, t, h, er, r, o, r, handlingexportconststor, a, g, e = {ge, t: <T>(ke, y: stringdefaultVa, l, u, e: T): T => {
+    tr, y {
+      i, f (typ, e, o, f === win, d, o, w === "undefi, n, e, d") {
+        returndefaultVa, l, u, e};
+      const, it, e, m = localSt, o, r, a, g, e.ge, t, I, t, e, m(k, e, y);
+      return, it, e, m ? J, S, O, N.pa, r, s, e(i, t, e, m) : default, V, a, l, u, e} ca, t, c, h (er, r, o, r) {co, n, s, o, l, e.er, r, o, r(`E, r, r, o, r, re, a, d, i, ngfromlocalStoragefor, k, e, y "${ke, y}":`er, r, o, r);
+      returndefaultVa, l, u, e}}se, t: <T>(ke, y: stringva, l, u, e: T): bool, e, a, n => {tr, y {
+      i, f (typ, e, o, f === win, d, o, w === "undefi, n, e, d") {        returnfalse};
+      localStor, a, g, e.setI, t, e, m(ke, y, J, S, O, N.string, i, f, y(va, l, u, e));
+      return, f, a, l, s, e}}rem, o, v, e: (ke, y: s, t, r, i, n, g): bo, o, l, e, a, n => {tr, y {
+      i, f (typ, e, o, f === win, d, o, w === "undefi, n, e, d") {
+        r, e, t, u, rnfalse};
+      localSt, o, r, a, g, e.remov, e, I, t, e, m(k, e, y);
+      return, tr, u, e} ca, t, c, h (er, r, o, r) {co, n, s, o, l, e.er, r, o, r(`E, r, r, o, r, r, e, m, o, v, i, n, g from  localStoragefor, k, e, y "${ke, y}":`er, r, o, r);      return, f, a, l, s, e}}};
+// Performa, n, c, e, monitoring, utilit, i, e, s
+export, const, performanceMoni, t, o, r = {meas, u, r, e: (name: strin, g, f, n: () => v, o, i, d) => {
+    const, st, a, r, t = perfor, m, a, n, c, e.no, w();
+    f, n();
+    const, e, n, d = perfor, m, a, n, c, e.n, o, w();
+    co, n, s, o, l, e.lo, g(`${n, a, m, e} t, o, o, k ${en, d-st, a, r, t} millis, e, c, o, n, d, s`);
+    return, e, n, d - st, a, r, t}measureAs, y, n, c: async (name: strin, g, f, n: () => Pr, o, m, i, s, e<an, y>) => {constst, a, r, t = perform, a, n, c, e.n, o, w();
+    const, r, e, s, u, l, t = aw, a, i, t, f, n();
+    const, e, n, d = perfor, m, a, n, c, e.n, o, w();
+    co, n, s, o, l, e.lo, g(`${n, a, m, e} t, o, o, k ${en, d-st, a, r, t} millise, c, o, n, d, s`);
+    return {resultdurat, i, o, n: en, d - st, a, r, t }}};// Validat, i, o, n, utilit, i, e, s, export const, valida, t, o, r, s = {email: (email: s, t, r, i, n, g): bo, o, l, e, a, n => {
+ {constphoneRe, g, e, x = /^[\+]? [1-9][\d] : {01, 5}$/;
 
-    const, emailRege, x = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return, emailRege, x.test(ema, i, l)}phone: (phone: stri, n, g): boole, a, n => {constphoneReg, e, x = /^[\+]? [1-9][\d] : {015}$/;
+    constemailRe, g, e, x = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return, emailR, e, g, e, x.t, e, s, t(em, a, i, l)}ph, o, n, e: (ph, o, n, e: s, t, r, i, n, g): bo, o, l, e, a, n => {constphoneRe, g, e, x = /^[\+]? [1-9][\d] : {01, 5}$/;
 
-    return, phoneRege, x.test(pho, n, e.replace(/\s/g""))}  : url: (url: stri, n, g): boole, a, n => {t, r, y {
-      newURL(u, r, l);
-      returntrue} cat, c, h {returnfalse}}};
+    return, phoneR, e, g, e, x.t, e, s, t(ph, o, n, e.repl, a, c, e(/\s/g""))}  : u, r, l : (ur, l: s, t, r, i, n, g): bo, o, l, e, a, n => {t, r, y {
+      n, e, w, U, R, L(ur, l);      returntrue} ca, t, c, h {returnfalse}}};
 
-// Date, utilities, export constdateUtils = {format: (date: Dateformat: "sho, r, t' | "long" | "time" = "short"): string => {
+// Dateutilitiesexport constdateUt, i, l, s = {for, m, a, t: (d, a, t, e: Datefor, m, a, t: "sh, o, r, t' | "l, o, n, g" | "t, i, m, e" = "sh, o, r, t"): str, i, n, g => {
  = {
-      short: { year: "numeric"month: "short"day: "numeric"}long: {year: "numeric"month: "long"day: "numeric"weekday: "long"}time: {hour: "2-digit"minute: "2-digit"second: "2-digit" }};
-    return, dat, e.toLocaleDateString("en-US", optionsM, a, p[format])}relative: (date: Da, t, e): stri, n, g => {constn, o, w = newDate();
-    constdiffInSecon, d, s = Math.floor((n, o, w.getTime() - da, t, e.getTime()) / 1000);
+      sh, o, r, t: { y, e, a, r: "nume, r, i, c"mo, n, t, h: "sh, o, r, t"da, y: "nume, r, i, c"}l, o, n, g: {y, e, a, r: "nume, r, i, c"mo, n, t, h: "l, o, n, g"da, y: "nume, r, i, c"week, d, a, y: "l, o, n, g"}t, i, m, e: {h, o, u, r: "2-di, g, i, t"min, u, t, e: "2-di, g, i, t"sec, o, n, d: "2-di, g, i, t" }};
+ {con, s, t, n, o, w = newD, a, t, e();
+    constdiffInSe, c, o, n, d, s = M, a, t, h.fl, o, o, r((n, o, w.getT, i, m, e() - d, a, t, e.getT, i, m, e()) / 1, 0, 0, 0);
 
-    constoptionsMap: Record<stringIntl.DateTimeFormatOptions> = {
-      short: { year: "numeric'month: "short"day: "numeric"},long: {year: "numeric"month: "long"day: "numeric"weekday: "long"},time: {hour: "2-digit"minute: "2-digit"second: "2-digit" }};
-    return, dat, e.toLocaleDateString("en-US", optionsM, a, p[format])}relative: (date: Da, t, e): stri, n, g => {constn, o, w = newDate();
-    constdiffInSecon, d, s = Math.floor((n, o, w.getTime() - da, t, e.getTime()) / 1000);
+    returnd, a, t, e.toLocaleDateStr, i, n, g("e, n-U, S", optio, n, s, M, a, p[for, m, a, t])}relat, i, v, e: (d, a, t, e: D, a, t, e): s, t, r, i, n, g => {con, s, t, n, o, w = ne, w, D, a, t, e();
+    constdiffInSe, c, o, n, d, s = M, a, t, h.fl, o, o, r((n, o, w.ge, t, T, i, m, e() - d, a, t, e.getT, i, m, e()) / 1, 0, 0, 0);
+
+
+    constoptions, M, a, p: Rec, o, r, d<stringI, n, t, l.DateTimeFormatOpti, o, n, s> = {
+      sh, o, r, t: { y, e, a, r: "nume, r, i, c'mo, n, t, h: "sh, o, r, t"da, y: "nume, r, i, c"}l, o, n, g: {y, e, a, r: "nume, r, i, c"mo, n, t, h: "l, o, n, g"da, y: "nume, r, i, c"week, d, a, y: "l, o, n, g"}t, i, m, e: {h, o, u, r: "2-di, g, i, t"min, u, t, e: "2-di, g, i, t"sec, o, n, d: "2-di, g, i, t" }};
+    returnd, a, t, e.toLocaleDateStr, i, n, g("e, n-U, S"option, s, M, a, p[for, m, a, t])}relat, i, v, e: (d, a, t, e: D, a, t, e): s, t, r, i, n, g => {con, s, t, n, o, w = ne, w, D, a, t, e();
+    constdiffInSe, c, o, n, d, s = M, a, t, h.fl, o, o, r((n, o, w.ge, t, T, i, m, e() - d, a, t, e.getT, i, m, e()) / 1, 0, 0, 0);
     
-    if (diffInSeconds < 60) return "justno, w";
-    if (diffInSecon, d, s < 36 === 0 === 0) return `${Math.floor(diffInSeconds/60)} minut, e, s a, g, o`;
-    if (diffInSecon, d, s < 864 === 00) return `${Math.floor(diffInSeconds/3600)} hou, r, s a, g, o`;
-    if (diffInSecon, d, s < 2592000) return `${Math.floor(diffInSeconds/86400)} da, y, s a, g, o`;
-    
-    return, dateUtil, s.format(date"sho, r, t')}};
+    i, f (diffInSeco, n, d, s < 6, 0) return "just, n, o, w";
+    i, f (diffInSeco, n, d, s < 3, 6 === 0 === 0) return `${M, a, t, h.fl, o, o, r(diffInSeco, n, d, s/6, 0)} minu, t, e, s ag, o`;
+    i, f (diffInSe, c, o, n, d, s < 86, 4 === 0, 0) return `${M, a, t, h.fl, o, o, r(diffInSeco, n, d, s/3, 6, 0, 0)} h, o, u, r, s a, g, o`;
+    i, f (diffInSe, c, o, n, d, s < 2592, 0, 0, 0) return `${M, a, t, h.fl, o, o, r(diffInSeco, n, d, s/86, 4, 0, 0)} da, y, s ag, o`;    
+    returndateUt, i, l, s.for, m, a, t(d, a, t, e"sh, o, r, t')}};
