@@ -1,4 +1,4 @@
-import React, { Suspense, lazy, useEffect } from 'react';
+import React, { Suspense, lazy, useEffect, useMemo } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ScrollToTop from './components/ScrollToTop';
 import Header from './components/Header';
@@ -16,6 +16,7 @@ import { seoManager, seoAnalytics, performanceSEO } from './utils/seoEnhanced';
 import { accessibilityManager } from './utils/accessibility';
 import { securityManager } from './utils/security';
 import { PerformanceMonitor, ResourceMonitor, MemoryMonitor } from './utils/performance';
+import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
 import './index.css';
 
 // Lazy load components for better performance
@@ -28,6 +29,23 @@ const Portfolio = lazy(() => import('./pages/Portfolio'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 
 export default function App(): React.JSX.Element {
+  // Initialize performance optimizations
+  const { preloadResource, recordMetric } = usePerformanceOptimization();
+
+  // Memoize the SEO data to prevent unnecessary re-renders
+  const seoData = useMemo(() => ({
+    title: 'Zion Tech Group - Leading Technology Solutions',
+    description: 'Innovative technology solutions and consulting services for modern businesses. Expert development, cloud services, and digital transformation.',
+    keywords: ['technology', 'consulting', 'development', 'cloud services', 'digital transformation'],
+    ogType: 'website',
+    ogImage: '/og-image.png',
+    twitterCard: 'summary_large_image',
+    structuredData: [
+      seoManager.generateOrganizationStructuredData(),
+      seoManager.generateWebsiteStructuredData()
+    ]
+  }), []);
+
   useEffect(() => {
     // Initialize error reporting
     initializeErrorReporting();
@@ -63,19 +81,12 @@ export default function App(): React.JSX.Element {
     performanceSEO.preloadCriticalResources();
     performanceSEO.optimizeFonts();
 
+    // Preload critical resources
+    preloadResource('/og-image.png', 'image');
+    preloadResource('/favicon.ico', 'image');
+
     // Set default SEO data
-    seoManager.updateSEO({
-      title: 'Zion Tech Group - Leading Technology Solutions',
-      description: 'Innovative technology solutions and consulting services for modern businesses. Expert development, cloud services, and digital transformation.',
-      keywords: ['technology', 'consulting', 'development', 'cloud services', 'digital transformation'],
-      ogType: 'website',
-      ogImage: '/og-image.png',
-      twitterCard: 'summary_large_image',
-      structuredData: [
-        seoManager.generateOrganizationStructuredData(),
-        seoManager.generateWebsiteStructuredData()
-      ]
-    });
+    seoManager.updateSEO(seoData);
 
     // Track user engagement
     let startTime = Date.now();
@@ -99,8 +110,17 @@ export default function App(): React.JSX.Element {
     };
 
     // Track clicks
-    const handleClick = () => {
+    const handleClick = (event: Event) => {
       clicks++;
+      recordMetric('userClicks', 1);
+      
+      // Track specific interaction types
+      const target = event.target as HTMLElement;
+      if (target.tagName === 'BUTTON') {
+        recordMetric('buttonClicks', 1);
+      } else if (target.tagName === 'A') {
+        recordMetric('linkClicks', 1);
+      }
     };
 
     window.addEventListener('scroll', handleScroll);
