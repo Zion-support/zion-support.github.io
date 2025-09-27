@@ -184,7 +184,7 @@ const Home = React.memo(function Home(): JSX.Element {
               animate={isFeaturesInView ? { y: 0, opacity: 1 } : { y: 30, opacity: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose Zion Tech?</h2>
+              <h1 className="text-4xl font-bold text-gray-900 mb-4">Why Choose Zion Tech?</h1>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 We deliver innovative technology solutions that drive business growth and operational excellence.
               </p>
@@ -227,9 +227,9 @@ const Home = React.memo(function Home(): JSX.Element {
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600 to-purple-600">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold text-white mb-6">
+            <h1 className="text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?
-            </h2>
+            </h1>
             <p className="text-xl text-blue-100 mb-8">
               Get started with our comprehensive suite of AI-powered solutions and cloud services.
             </p>
@@ -254,7 +254,7 @@ const Home = React.memo(function Home(): JSX.Element {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">What Our Clients Say</h2>
+              <h1 className="text-4xl font-bold text-gray-900 mb-4">What Our Clients Say</h1>
               <p className="text-xl text-gray-600">
                 Don&apos;t just take our word for it - hear from our satisfied clients.
               </p>
@@ -283,9 +283,9 @@ const Home = React.memo(function Home(): JSX.Element {
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              <h1 className="text-3xl font-bold text-gray-900 mb-4">
                 Monitor Your Website Performance
-              </h2>
+              </h1>
               <p className="text-xl text-gray-600 mb-8">
                 Get comprehensive insights into your website&apos;s performance, accessibility, and SEO with our advanced analytics dashboard.
               </p>
