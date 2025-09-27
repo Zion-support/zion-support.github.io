@@ -10,6 +10,7 @@
     "**/*.spec.ts",
     "**/*.spec.tsx",
     "src/pages/**",
+    "src/pages.disabled/**",
     "src/routes/**",
     "src/components/**",
     "src/context/**"

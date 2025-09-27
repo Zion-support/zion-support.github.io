@@ -6,8 +6,14 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
+<<<<<<< HEAD
+      '@': path.resolve(__dirname, 'src')
+    }
+  }
+=======
       '@': path.resolve(__dirname, 'src'),
     },
   },
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-86d3
 });
 
