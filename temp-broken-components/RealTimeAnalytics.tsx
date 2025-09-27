@@ -7,7 +7,7 @@ interface AnalyticsData {
   bounceRate: number;
   avgSessionDuration: number;
   topPages: Array<{ pag, e: string; view, s: number }>;
-  trafficSources: Array<{ sourc, e: string; percentage: number }>;
+  trafficSources: Array<{ sourc, e: string; percentag, e: number }>;
   realTimeUsers: number;
 }
 
@@ -34,7 +34,7 @@ const RealTimeAnalytics: React.FC<RealTimeAnalyticsProps> = ({ className = '' })
       pageView, s: Math.floor(Math.random() * 1000) + 5000,
       uniqueVisitors: Math.floor(Math.random() * 500) + 2000,
       bounceRate: Math.random() * 20 + 30, // 30-50%
-      avgSessionDuration: Math.random() * 300 + 120, // 2-7minutes
+      avgSessionDuration: Math.random() * 300 + 120, // 2-7 minutes
       topPages: [
         { pag, e: '/', views: Math.floor(Math.random() * 1000) + 2000 },
         { page: '/services', views: Math.floor(Math.random() * 500) + 800 },
@@ -70,56 +70,56 @@ const RealTimeAnalytics: React.FC<RealTimeAnalyticsProps> = ({ className = '' })
   };
 
   return (
-    <div className="{"`real-time-analytics `}>
+    <div className={`real-time-analytics ${className}` }>
       <div className="bg-white rounded-lg shadow-lgp-6">
         <div className="flex items-center justify-between mb-6">
-          <h3className="text-xl font-semibold text-gray-800flexitems-center">
-            <BarChart3className="w-5h-5mr-2" />
+          <h3 className="text-xl font-semibold text-gray-800 flexitems-center">
+            <BarChart3 className="w-5 h-5mr-2" />
             Real-Time Analytics
           </h3>
           <div className="flex items-center space-x-2">
-            <div className="{"`w-3h-3rounded-full ${isLive ? 'bg-green-500animate-pulse' : 'bg-gray-400'}`}</p></div>
-            <span className="text-sm font-mediumtext-gray-600">
+            <div className={`w-3 h-3 rounded-full ${isLive ? 'bg-green-500 animate-pulse' : 'bg-gray-400'}` }></div>
+            <span className="text-sm font-medium text-gray-600">
               {isLive ? 'Live' : 'Paused'}
             </span>
             <button
               onClick={() => setIsLive(!isLive)}
-              className="ml-2px-3py-1text-sm bg-blue-500text-white roundedhover:bg-blue-600"
+              className="ml-2 px-3 py-1 text-sm bg-blue-500 text-white rounded hover:bg-blue-600"
             </button>
           </div>
         </div>
 
-        <div className="grid grid-cols-1md:grid-cols-2lg:grid-cols-4gap-6mb-8">
-          <div className="bg-gradient-to-r from-blue-500to-blue-600rounded-lg p-4text-white">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+            <div className="bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg p-4 text-white">
             <div className="flex items-center justify-between mb-2">
-              <Eye className="w-5h-5" />
+              <Eye className="w-5 h-5" />
               <span className="text-sm opacity-90">Page Views</span>
             </div>
             <div className="text-2xl font-bold">{analytics.pageViews.toLocaleString()}</div>
             <div className="text-sm opacity-90">+12% from yesterday</div>
           </div>
 
-          <div className="bg-gradient-to-r from-green-500to-green-600rounded-lg p-4text-white">
+          <div className="bg-gradient-to-r from-green-500 to-green-600 rounded-lg p-4 text-white">
             <div className="flex items-center justify-between mb-2">
-              <Users className="w-5h-5" />
+              <Users className="w-5 h-5" />
               <span className="text-sm opacity-90">Unique Visitors</span>
             </div>
             <div className="text-2xl font-bold">{analytics.uniqueVisitors.toLocaleString()}</div>
             <div className="text-sm opacity-90">+8% from yesterday</div>
           </div>
 
-          <div className="bg-gradient-to-r from-yellow-500to-yellow-600rounded-lg p-4text-white">
+          <div className="bg-gradient-to-r from-yellow-500 to-yellow-600 rounded-lg p-4 text-white">
             <div className="flex items-center justify-between mb-2">
-              <MousePointer className="w-5h-5" />
+              <MousePointer className="w-5 h-5" />
               <span className="text-sm opacity-90">Bounce Rate</span>
             </div>
             <div className="text-2xl font-bold">{analytics.bounceRate.toFixed(1)}%</div>
             <div className="text-sm opacity-90">-2% from yesterday</div>
           </div>
 
-          <div className="bg-gradient-to-r from-purple-500to-purple-600rounded-lg p-4text-white">
+          <div className="bg-gradient-to-r from-purple-500 to-purple-600 rounded-lg p-4 text-white">
             <div className="flex items-center justify-between mb-2">
-              <Clock className="w-5h-5" />
+              <Clock className="w-5 h-5" />
               <span className="text-sm opacity-90">Avg. Session</span>
             </div>
             <div className="text-2xl font-bold">{formatDuration(analytics.avgSessionDuration)}</div>
@@ -127,45 +127,47 @@ const RealTimeAnalytics: React.FC<RealTimeAnalyticsProps> = ({ className = '' })
           </div>
         </div>
 
-        <div className="grid grid-cols-1lg:grid-cols-2gap-6">
-          <div className="bg-gray-50rounded-lgp-4">
-            <h4className="font-semibold text-gray-800mb-4flexitems-center">
-              <TrendingUp className="w-4h-4mr-2" />
+        <div className="grid grid-cols-1 lg:grid-cols-2gap-6">
+          <div className="bg-gray-50 rounded-lgp-4">
+            <h4 className="font-semibold text-gray-800 mb-4 flexitems-center">
+              <TrendingUp className="w-4 h-4mr-2" />
               Top Pages
             </h4>
             <div className="space-y-3">
               {analytics.topPages.map((page, index) => (
-                <div key={index} className="flex items-center justify-between">
-                  <span className="text-sm text-gray-600">{page.page}</span>
+                <div key={index} className="flex items-centerjustify-between">
+                  <span className="text-smtext-gray-600">{page.page}</span>
                   <div className="flex items-center space-x-2">
-                    <div className="w-20bg-gray-200rounded-fullh-2">
+                    <div className="w-20 bg-gray-200 rounded-fullh-2">
                       <div 
-                        className="bg-blue-500h-2rounded-full" 
-                        style={{ width: `${(page.views / analytics.topPages[0].views) * 100}%` }}</p></div>
+                        className="bg-blue-500 h-2rounded-full" 
+                        style={{ width: `${(page.views / analytics.topPages[0].views) * 100}%` }}
+                      ></div>
                     </div>
-                    <span className="text-sm font-mediumtext-gray-800">{page.views.toLocaleString()}</span>
+                    <span className="text-sm font-medium text-gray-800">{page.views.toLocaleString()}</span>
                   </div>
                 </div>
               ))}
             </div>
           </div>
 
-          <div className="bg-gray-50rounded-lgp-4">
-            <h4className="font-semibold text-gray-800mb-4flexitems-center">
-              <Globe className="w-4h-4mr-2" />
+          <div className="bg-gray-50 rounded-lgp-4">
+            <h4 className="font-semibold text-gray-800 mb-4 flexitems-center">
+              <Globe className="w-4 h-4mr-2" />
               Traffic Sources
             </h4>
             <div className="space-y-3">
               {analytics.trafficSources.map((source, index) => (
-                <div key={index} className="flex items-center justify-between">
-                  <span className="text-sm text-gray-600">{source.source}</span>
+                <div key={index} className="flex items-centerjustify-between">
+                  <span className="text-smtext-gray-600">{source.source}</span>
                   <div className="flex items-center space-x-2">
-                    <div className="w-20bg-gray-200rounded-fullh-2">
+                    <div className="w-20 bg-gray-200 rounded-fullh-2">
                       <div 
-                        className="bg-green-500h-2rounded-full" 
-                        style={{ width: `${source.percentage}%` }}</p></div>
+                        className="bg-green-500 h-2rounded-full" 
+                        style={{ width: `${source.percentage}%` }}
+                      ></div>
                     </div>
-                    <span className="text-sm font-mediumtext-gray-800">{source.percentage.toFixed(1)}%</span>
+                    <span className="text-sm font-medium text-gray-800">{source.percentage.toFixed(1)}%</span>
                   </div>
                 </div>
               ))}
@@ -173,11 +175,11 @@ const RealTimeAnalytics: React.FC<RealTimeAnalyticsProps> = ({ className = '' })
           </div>
         </div>
 
-        <div className="mt-6bg-blue-50border border-blue-200rounded-lgp-4">
-          <div className="flex items-center justify-between">
+        <div className="mt-6 bg-blue-50 border border-blue-200 rounded-lgp-4">
+          <div className="flex items-centerjustify-between">
             <div className="flexitems-center">
-              <div className="w-3h-3bg-green-500rounded-full animate-pulsemr-2"></div>
-              <span className="text-sm font-mediumtext-blue-800">
+              <div className="w-3 h-3 bg-green-500 rounded-full animate-pulsemr-2"></div>
+              <span className="text-sm font-medium text-blue-800">
                 {analytics.realTimeUsers} users online now
               </span>
             </div>

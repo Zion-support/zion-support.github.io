@@ -356,15 +356,15 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
   };
 
   return (
-    <div className="{"`bg-white rounded-lg shadow-sm border border-gray-200p-6 `}>
+    <div className={`bg-white rounded-lg shadow-sm border border-gray-200 p-6 ${className}` }>
       {title && (
-        <h3className="text-lg font-semibold text-gray-900mb-4" id="title">{title}</h3>
+        <h3 className="text-lg font-semibold text-gray-900mb-4" id="title">{title}</h3>
       )}
       
       <div className="relative">
         {isLoading && (
-          <div className="absolute inset-0flex items-center justify-center bg-white bg-opacity-75rounded-lg">
-            <div className="animate-spin rounded-full h-8w-8border-b-2border-blue-600"></div>
+          <div className="absolute inset-0 flex items-center justify-center bg-white bg-opacity-75rounded-lg">
+            <div className="animate-spin rounded-full h-8 w-8 border-b-2border-blue-600"></div>
           </div>
         )}
         
@@ -379,16 +379,16 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
       </div>
 
       {showLegend && (
-        <div className="mt-4flex flex-wrapgap-2">
+        <div className="mt-4 flex flex-wrapgap-2">
           {data.labels.map((label, index) => (
             <div
               key={index}
-              className="{"`flex items-center space-x-2px-3py-1rounded-full text-sm ${
+              className={`flex items-center space-x-2 px-3 py-1 rounded-full text-sm ${
                 hoveredIndex === index ? 'bg-gray-100' : ''
-              }`}
+              }` }
             >
               <div
-                className="w-3h-3rounded-full"
+                className="w-3 h-3rounded-full"
                 style={{ backgroundColor: data.datasets[0].backgroundColor[index] }}
               />
               <span className="text-gray-700">{label}</span>
@@ -401,7 +401,7 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
       )}
 
       {hoveredIndex !== null && showTooltips && (
-        <div className="mt-2p-2bg-gray-100rounded text-smtext-gray-700">
+        <div className="mt-2 p-2 bg-gray-100 rounded text-smtext-gray-700">
           <strong>{data.labels[hoveredIndex]}:</strong> {data.datasets[0].data[hoveredIndex]}
         </div>
       )}

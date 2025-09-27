@@ -72,42 +72,42 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
   }, [addNotification, removeNotification, clearAllNotifications]);
 
   const getPositionClasses = () => {
-    const baseClasses = 'fixed z-50space-y-2p-4';
+    const baseClasses = 'fixed z-50 space-y-2 p-4';
     
     switch (position) {
       case 'top-right':
-        return `${baseClasses} top-4right-4`;
+        return `${baseClasses} top-4 right-4`;
       case 'top-left':
-        return `${baseClasses} top-4left-4`;
+        return `${baseClasses} top-4 left-4`;
       case 'bottom-right':
-        return `${baseClasses} bottom-4right-4`;
+        return `${baseClasses} bottom-4 right-4`;
       case 'bottom-left':
-        return `${baseClasses} bottom-4left-4`;
+        return `${baseClasses} bottom-4 left-4`;
       case 'top-center':
-        return `${baseClasses} top-4left-1/2transform -translate-x-1/2`;
+        return `${baseClasses} top-4 left-1/2 transform -translate-x-1/2`;
       case 'bottom-center':
-        return `${baseClasses} bottom-4left-1/2transform -translate-x-1/2`;
+        return `${baseClasses} bottom-4 left-1/2 transform -translate-x-1/2`;
       default:
-        return `${baseClasses} top-4right-4`;
+        return `${baseClasses} top-4 right-4`;
     }
   };
 
   const getNotificationClasses = (type: Notification['type']) => {
-    const baseClasses = 'max-w-sm w-full bg-white shadow-lg rounded-lg pointer-events-auto ring-1ring-black ring-opacity-5overflow-hidden';
+    const baseClasses = 'max-w-sm w-full bg-white shadow-lg rounded-lg pointer-events-auto ring-1 ring-black ring-opacity-5 overflow-hidden';
     
     switch (type) {
       case 'success':
-        return `${baseClasses} border-l-4border-green-400`;
+        return `${baseClasses} border-l-4 border-green-400`;
       case 'error':
-        return `${baseClasses} border-l-4border-red-400`;
+        return `${baseClasses} border-l-4 border-red-400`;
       case 'warning':
-        return `${baseClasses} border-l-4border-yellow-400`;
+        return `${baseClasses} border-l-4 border-yellow-400`;
       case 'info':
-        return `${baseClasses} border-l-4border-blue-400`;
+        return `${baseClasses} border-l-4 border-blue-400`;
       case 'loading':
-        return `${baseClasses} border-l-4border-gray-400`;
+        return `${baseClasses} border-l-4 border-gray-400`;
       default:
-        return `${baseClasses} border-l-4border-gray-400`;
+        return `${baseClasses} border-l-4 border-gray-400`;
     }
   };
 
@@ -115,32 +115,32 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
     switch (type) {
       case 'success':
         return (
-          <svg className="h-6w-6text-green-400" fill="none" viewBox="002424" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M513l44 L197" />
+          <svg className="h-6 w-6text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
           </svg>
         );
       case 'error':
         return (
-          <svg className="h-6w-6text-red-400" fill="none" viewBox="002424" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M618L186M66l1212" />
+          <svg className="h-6 w-6text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
           </svg>
         );
       case 'warning':
         return (
-          <svg className="h-6w-6text-yellow-400" fill="none" viewBox="002424" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M129v2m04h.01m-6.9384h13.856c1.5402.502-1.6671.732-2.5L13.7324c-.77-.833-1.964-.833-2.7320L3.73216.5c-.77.833.1922.51.7322.5z" />
+          <svg className="h-6 w-6text-yellow-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
           </svg>
         );
       case 'info':
         return (
-          <svg className="h-6w-6text-blue-400" fill="none" viewBox="002424" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M1316h-1v-4h-1m1-4h.01M2112a99011-18099001180z" />
+          <svg className="h-6 w-6text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
         );
       case 'loading':
         return (
-          <svg className="h-6w-6text-gray-400animate-spin" fill="none" viewBox="002424" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M44v5h.582m15.3562A8.0018.0010004.5829m00H9m1111v-5h-.581m00 a8.0038.003001-15.357-2m15.3572H15" />
+          <svg className="h-6 w-6 text-gray-400animate-spin" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
           </svg>
         );
       default:
@@ -153,38 +153,38 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
   }
 
   return (
-    <div className="{"`${getPositionClasses()} `}>
+    <div className={`${getPositionClasses()} ${className}` }>
       {notifications.map((notification) => (
         <div
           key={notification.id}
-          className="{get Notification Classes(notification.type)}"
+          className={getNotificationClasses(notification.type)}
         >
           <div className="p-4">
             <div className="flexitems-start">
               <div className="flex-shrink-0">
                 {getIcon(notification.type)}
               </div>
-              <div className="ml-3w-0flex-1">
-                <p className="text-sm font-mediumtext-gray-900">
+              <div className="ml-3 w-0flex-1">
+                <p className="text-sm font-medium text-gray-900">
                   {notification.title}
                 </p>
-                <p className="mt-1text-smtext-gray-500">
+                <p className="mt-1 text-smtext-gray-500">
                   {notification.message}
                 </p>
                 
                 {notification.actions && notification.actions.length > 0 && (
-                  <div className="mt-3flexspace-x-2">
+                  <div className="mt-3 flexspace-x-2">
                     {notification.actions.map((action, index) => (
                       <button
                         key={index}
                         onClick={action.action}
-                        className="{"`text-sm font-medium ${
+                        className={`text-sm font-medium ${
                           action.variant === 'primary'
-                            ? 'text-blue-600hover:text-blue-500'
+                            ? 'text-blue-600 hover:text-blue-500'
                             : action.variant === 'danger'
-                            ? 'text-red-600hover:text-red-500'
-                            : 'text-gray-600hover:text-gray-500'
-                        }`}
+                            ? 'text-red-600 hove, r:text-red-500'
+                            : 'text-gray-600 hove, r:text-gray-500'
+                        }` }
                        aria-label="{action.label}">
                         {action.label}
                       </button>
@@ -192,14 +192,14 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
                   </div>
                 )}
               </div>
-              <div className="ml-4flex-shrink-0flex">
+              <div className="ml-4 flex-shrink-0flex">
                 <button
-                  className="bg-white rounded-md inline-flex text-gray-400hover:text-gray-500focus:outline-none focus:ring-2focu, s:ring-offset-2focu,s:ring-indigo-500"
+                  className="bg-white rounded-md inline-flex text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focu, s:ring-offset-2 focu,s:ring-indigo-500"
                   onClick={() => removeNotification(notification.id)}
                 >
                   <span className="sr-only">Close</span>
-                  <svg className="h-5w-5" viewBox="002020" fill="currentColor">
-                    <path fillRule="evenodd" d="M4.2934.293a110011.4140L108.586l4.293-4.293a110111.4141.414L11.41410l4.2934.293a11001-1.4141.414L1011.414l-4.2934.293a11001-1.414-1.414L8.586104.2935.707a110010-1.414z" clipRule="evenodd" />
+                  <svg className="h-5w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
                   </svg>
                 </button>
               </div>

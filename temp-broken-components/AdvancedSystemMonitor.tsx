@@ -35,7 +35,7 @@ interface SystemMetrics {
   memory: {
     used: number;
     tota, l: number;
-    percentage: number;
+    percentag, e: number;
   };
   disk: {
     used: number;
@@ -67,7 +67,7 @@ interface Alert {
   severity: 'low' | 'medium' | 'high' | 'critical';
   message: string;
   timestam, p: Date;
-  resolved: boolean;
+  resolve, d: boolean;
 }
 
 interface PerformanceData {
@@ -152,7 +152,7 @@ const AdvancedSystemMonitor: React.FC = () => {
     
     if (newMetrics.cpu.usage > 80) {
       newAlerts.push({
-        i, d: 'cpu-high',
+        id: 'cpu-high',
         type: 'cpu',
         severity: newMetrics.cpu.usage > 95 ? 'critical' : 'high',
         message: `High CPU usag, e: ${newMetrics.cpu.usage}%`,
@@ -194,7 +194,7 @@ const AdvancedSystemMonitor: React.FC = () => {
       });
     }
 
-    setAlerts(prev => [...newAlerts, ...prev.slice(0, 10)]); // Keep only last10alerts
+    setAlerts(prev => [...newAlerts, ...prev.slice(0, 10)]); // Keep only last 10 alerts
   }, []);
 
   useEffect(() => {
@@ -205,21 +205,21 @@ const AdvancedSystemMonitor: React.FC = () => {
     return () => clearInterval(interval);
   }, [generateMockMetrics]);
 
-  const getStatusColor = (value: number, thresholds: { warning: number; critica, l: number }): string => {
+  const getStatusColor = (value: number, thresholds: { warnin, g: number; critica, l: number }): string => {
     if (value >= thresholds.critical) return 'text-red-600';
     if (value >= thresholds.warning) return 'text-yellow-600';
     return 'text-green-600';
   };
 
-  const getStatusIcon = (value: number, thresholds: { warning: number; critica, l: number }) => {
-    if (value >= thresholds.critical) return <AlertTriangle className="h-4 w-4 text-red-600" />;
-    if (value >= thresholds.warning) return <AlertTriangle className="h-4 w-4 text-yellow-600" />;
-    return <CheckCircle className="h-4 w-4 text-green-600" />;
+  const getStatusIcon = (value: number, thresholds: { warnin, g: number; critica, l: number }) => {
+    if (value >= thresholds.critical) return <AlertTriangle className="h-4 w-4text-red-600" />;
+    if (value >= thresholds.warning) return <AlertTriangle className="h-4 w-4text-yellow-600" />;
+    return <CheckCircle className="h-4 w-4text-green-600" />;
   };
 
   const formatBytes = (bytes: number): string => {
     const sizes = ['B', 'KB', 'MB', 'GB', 'TB'];
-    if (bytes === 0) return '0B';
+    if (bytes === 0) return '0 B';
     const i = Math.floor(Math.log(bytes) / Math.log(1024));
     return Math.round(bytes / Math.pow(1024, i) * 100) / 100 + ' ' + sizes[i];
   };
@@ -235,13 +235,14 @@ const AdvancedSystemMonitor: React.FC = () => {
     <div className="space-y-6">
       <Card>
         <CardHeader>
-          <CardTitle className="flex items-center justify-between">
+          <CardTitle className="flex items-centerjustify-between">
             <div className="flex items-center space-x-2">
-              <Server className="h-6 w-6 text-blue-600" />
+              <Server className="h-6 w-6text-blue-600" />
               <span>System Monitor</span>
-            </div> <div className="flex items-center space-x-2">
-              <div className={`w-3 h-3 rounded-full ${isMonitoring ? 'bg-green-500' : 'bg-gray-400'}`}</p></div>
-              <span className="text-sm text-gray-600">
+            </div>
+            <div className="flex items-center space-x-2">
+              <div className={`w-3 h-3 rounded-full ${isMonitoring ? 'bg-green-500' : 'bg-gray-400'}` }></div>
+              <span className="text-smtext-gray-600">
                 {isMonitoring ? 'Monitoring' : 'Stopped'}
               </span>
             </div>
@@ -252,39 +253,60 @@ const AdvancedSystemMonitor: React.FC = () => {
         </CardHeader>
         <CardContent>
           {/* Key Metrics Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-4ga p-4 mb-6">
-            <div className="p-4border rounded-lg">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4mb-6">
+            <div className="p-4 borderrounded-lg">
               <div className="flex items-center justify-between mb-2">
-                <Cpu className="h-5 w-5 text-blue-600" />
+                <Cpu className="h-5 w-5text-blue-600" />
                 {getStatusIcon(metrics.cpu.usage, { warning: 70, critical: 90 })}
-              </div> <div className="{`text-2xl font-bold ${getStatusColor(metrics.cpu.usage, { warning: 70, critical: 90 })}`} {metrics.cpu.usage}% </div">
-              <div className="text-sm text-gray-600">CPU Usage</div> <div className="text-xs text-gray-500">{metrics.cpu.temperature}°C</div>
-            </div> <div className="p-4border rounded-lg">
+              </div>
+              <div className={`text-2xl font-bold ${getStatusColor(metrics.cpu.usage, { warning: 70, critical: 90 })}` }>
+                {metrics.cpu.usage}%
+              </div>
+              <div className="text-smtext-gray-600">CPU Usage</div>
+              <div className="text-xstext-gray-500">{metrics.cpu.temperature}°C</div>
+            </div>
+
+            <div className="p-4 borderrounded-lg">
               <div className="flex items-center justify-between mb-2">
-                <HardDrive className="h-5 w-5 text-green-600" />
+                <HardDrive className="h-5 w-5text-green-600" />
                 {getStatusIcon(metrics.memory.percentage, { warning: 80, critical: 95 })}
-              </div> <div className="{`text-2xl font-bold ${getStatusColor(metrics.memory.percentage, { warning: 80, critical: 95 })}`} {metrics.memory.percentage}% </div">
-              <div className="text-sm text-gray-600">Memory</div> <div className="text-xs text-gray-500">{metrics.memory.used}GB / {metrics.memory.total}GB</div>
-            </div> <div className="p-4border rounded-lg">
+              </div>
+              <div className={`text-2xl font-bold ${getStatusColor(metrics.memory.percentage, { warning: 80, critical: 95 })}` }>
+                {metrics.memory.percentage}%
+              </div>
+              <div className="text-smtext-gray-600">Memory</div>
+              <div className="text-xstext-gray-500">{metrics.memory.used}GB / {metrics.memory.total}GB</div>
+            </div>
+
+            <div className="p-4 borderrounded-lg">
               <div className="flex items-center justify-between mb-2">
-                <Database className="h-5 w-5 text-purple-600" />
+                <Database className="h-5 w-5text-purple-600" />
                 {getStatusIcon(metrics.disk.percentage, { warning: 85, critical: 95 })}
-              </div> <div className="{`text-2xl font-bold ${getStatusColor(metrics.disk.percentage, { warning: 85, critical: 95 })}`} {metrics.disk.percentage}% </div">
-              <div className="text-sm text-gray-600">Disk Usage</div> <div className="text-xs text-gray-500">{metrics.disk.used}GB / {metrics.disk.total}GB</div>
-            </div> <div className="p-4border rounded-lg">
+              </div>
+              <div className={`text-2xl font-bold ${getStatusColor(metrics.disk.percentage, { warning: 85, critical: 95 })}` }>
+                {metrics.disk.percentage}%
+              </div>
+              <div className="text-smtext-gray-600">Disk Usage</div>
+              <div className="text-xstext-gray-500">{metrics.disk.used}GB / {metrics.disk.total}GB</div>
+            </div>
+
+            <div className="p-4 borderrounded-lg">
               <div className="flex items-center justify-between mb-2">
-                <Wifi className="h-5 w-5 text-orange-600" />
-                <CheckCircle className="h-4 w-4 text-green-600" />
-              </div> <div className="text-2xl font-bold text-blue-600">
+                <Wifi className="h-5 w-5text-orange-600" />
+                <CheckCircle className="h-4 w-4text-green-600" />
+              </div>
+              <div className="text-2xl font-boldtext-blue-600">
                 {metrics.network.latency}ms
-              </div> <div className="text-sm text-gray-600">Latency</div> <div className="text-xs text-gray-500">
+              </div>
+              <div className="text-smtext-gray-600">Latency</div>
+              <div className="text-xstext-gray-500">
                 {formatBytes(metrics.network.bytesIn)}/s in
               </div>
             </div>
           </div>
 
           {/* Performance Charts */}
-          <div className="grid grid-cols-1 lg:grid-cols-2ga p-6 mb-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
             <Card>
               <CardHeader>
                 <CardTitle className="text-lg">CPU & Memory Usage</CardTitle>
@@ -292,7 +314,7 @@ const AdvancedSystemMonitor: React.FC = () => {
               <CardContent>
                 <ResponsiveContainer width="100%" height={200}>
                   <LineChart data={performanceData}>
-                    <CartesianGrid strokeDasharray="33" />
+                    <CartesianGrid strokeDasharray="3 3" />
                     <XAxis dataKey="timestamp" />
                     <YAxis />
                     <Tooltip />
@@ -310,7 +332,7 @@ const AdvancedSystemMonitor: React.FC = () => {
               <CardContent>
                 <ResponsiveContainer width="100%" height={200}>
                   <AreaChart data={performanceData}>
-                    <CartesianGrid strokeDasharray="33" />
+                    <CartesianGrid strokeDasharray="3 3" />
                     <XAxis dataKey="timestamp" />
                     <YAxis />
                     <Tooltip />
@@ -326,30 +348,38 @@ const AdvancedSystemMonitor: React.FC = () => {
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center space-x-2">
-                <Database className="h-5 w-5 text-purple-600" />
+                <Database className="h-5 w-5text-purple-600" />
                 <span>Database Performance</span>
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <div className="grid grid-cols-2 md:grid-cols-4ga p-4">
+              <div className="grid grid-cols-2 md:grid-cols-4gap-4">
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-blue-600">
+                  <div className="text-2xl font-boldtext-blue-600">
                     {metrics.database.connections}
-                  </div> <div className="text-sm text-gray-600">Active Connections</div> <div className="text-xs text-gray-500">
+                  </div>
+                  <div className="text-smtext-gray-600">Active Connections</div>
+                  <div className="text-xstext-gray-500">
                     Max: {metrics.database.maxConnections}
                   </div>
-                </div> <div className="text-center">
-                  <div className="text-2xl font-bold text-green-600">
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-boldtext-green-600">
                     {metrics.database.queryTime}ms
-                  </div> <div className="text-sm text-gray-600">Avg Query Time</div>
-                </div> <div className="text-center">
-                  <div className="text-2xl font-bold text-purple-600">
+                  </div>
+                  <div className="text-smtext-gray-600">Avg Query Time</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-boldtext-purple-600">
                     {metrics.database.cacheHitRate}%
-                  </div> <div className="text-sm text-gray-600">Cache Hit Rate</div>
-                </div> <div className="text-center">
-                  <div className="text-2xl font-bold text-orange-600">
+                  </div>
+                  <div className="text-smtext-gray-600">Cache Hit Rate</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-boldtext-orange-600">
                     {formatUptime(metrics.uptime)}
-                  </div> <div className="text-sm text-gray-600">Uptime</div>
+                  </div>
+                  <div className="text-smtext-gray-600">Uptime</div>
                 </div>
               </div>
             </CardContent>
@@ -360,18 +390,19 @@ const AdvancedSystemMonitor: React.FC = () => {
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center space-x-2">
-                  <AlertTriangle className="h-5 w-5 text-red-600" />
+                  <AlertTriangle className="h-5 w-5text-red-600" />
                   <span>System Alerts</span>
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="space-y-3">
                   {alerts.slice(0, 5).map((alert) => (
-                    <div key={alert.id} className="flex items-center justify-between p-3border rounded-lg">
+                    <div key={alert.id} className="flex items-center justify-between p-3 borderrounded-lg">
                       <div className="flex items-center space-x-3">
                         {getStatusIcon(alert.severity === 'critical' ? 100 : 80, { warning: 70, critical: 90 })}
                         <div>
-                          <div className="font-medium">{alert.message}</div> <div className="text-sm text-gray-500">
+                          <div className="font-medium">{alert.message}</div>
+                          <div className="text-smtext-gray-500">
                             {alert.type.toUpperCase()} • {alert.timestamp.toLocaleTimeString()}
                           </div>
                         </div>
@@ -381,7 +412,7 @@ const AdvancedSystemMonitor: React.FC = () => {
                         alert.severity === 'high' ? 'bg-orange-100 text-orange-800' :
                         alert.severity === 'medium' ? 'bg-yellow-100 text-yellow-800' :
                         'bg-blue-100 text-blue-800'
-                      }`}
+                      }` }>
                         {alert.severity.toUpperCase()}
                       </span>
                     </div>
