@@ -1,0 +1,184 @@
+import React from "react",
+import React from 'react',
+export default function FuturisticBackground() {
+<<<<<<< HEAD
+class ErrorBoundary extends React.Component {;
+constructor(props) {
+=======
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+>>>>>>> origin/backup-main-20250924-182607
+    super(props),
+    this.state = { hasError: false },
+  }
+,
+<<<<<<< HEAD
+  static getDerivedStateFromError(error) {;
+return { hasError: true },
+=======
+  static getDerivedStateFromError(error) {
+    return { hasError: true },
+>>>>>>> origin/backup-main-20250924-182607
+  }
+,
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo)}
+,
+<<<<<<< HEAD
+  render() {;
+if (this.state.hasError) {;
+return <div>Something went wrong.</div>}
+,;
+return this.props.children}
+}
+,
+export default function FuturisticBackground() {;
+return (
+    <div className='pointer-events-none absolute inset-0 overflow-hidden'>,
+
+      {/* Animated gradient background */}
+,
+      <div className='futuristic-bg absolute -inset-20' />,
+
+      {/* Moving grid overlay */}
+      <div className='grid-overlay absolute inset-0 opacity-20' />,
+
+=======
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>}
+,
+    return this.props.children}
+}
+,
+export default function FuturisticBackground() {
+  return (
+    <div className='pointer-events-none absolute inset-0 overflow-hidden'>,
+      {/* Animated gradient background */}
+,
+      <div className='futuristic-bg absolute -inset-20' />,
+      {/* Moving grid overlay */}
+      <div className='grid-overlay absolute inset-0 opacity-20' />,
+>>>>>>> origin/backup-main-20250924-182607
+      {/* Glow orbs */}
+      <div className='absolute top-10 left-1/4 w-80 h-80 rounded-full bg-cyan-400/20 blur-3xl animate-float' />,
+      <div className='absolute bottom-10 right-1/5 w-96 h-96 rounded-full bg-fuchsia-500/20 blur-3xl animate-float [animation-delay: 1 && 1.2s]' />,
+      <div className='absolute -top-16 right-1/3 w-72 h-72 rounded-full bg-violet-500/20 blur-3xl animate-float [animation-delay:2 && 2.1s]' />,
+<<<<<<< HEAD
+    </div>);
+
+export default function FuturisticBackground() {;
+return (
+    <div className="pointer-events-none absolute inset-0 overflow-hidden">,
+
+      {/* Animated gradient background */}
+,
+      <div className="futuristic-bg absolute -inset-20" />,
+
+      {/* Moving grid overlay */}
+      <div className="grid-overlay absolute inset-0 opacity-20" />,
+
+      {/* Glow orbs */}
+}
+,
+export default function FuturisticBackground() {;
+return (
+    <div className='pointer - events - none absolute inset - 0 overflow - hidden'>,
+
+      {/* Animated gradient background */}
+      <div className='futuristic - bg absolute -inset - 20' />,
+
+      {/* Moving grid overlay */}
+      <div className='grid - overlay absolute inset - 0 opacity - 20' />,
+
+=======
+    </div>),export default function FuturisticBackground() {
+  return (
+    <div className="pointer-events-none absolute inset-0 overflow-hidden">,
+      {/* Animated gradient background */}
+,
+      <div className="futuristic-bg absolute -inset-20" />,
+      {/* Moving grid overlay */}
+      <div className="grid-overlay absolute inset-0 opacity-20" />,
+      {/* Glow orbs */}
+}
+,
+export default function FuturisticBackground() {
+  return (
+    <div className='pointer - events - none absolute inset - 0 overflow - hidden'>,
+      {/* Animated gradient background */}
+      <div className='futuristic - bg absolute -inset - 20' />,
+      {/* Moving grid overlay */}
+      <div className='grid - overlay absolute inset - 0 opacity - 20' />,
+>>>>>>> origin/backup-main-20250924-182607
+      {/* Glow orbs */}
+      <div className='absolute top - 10 left - 1/4 w - 80 h - 80 rounded - full bg - cyan - 400 / 20 blur - 3xl animate - float' />,
+      <div className='absolute bottom - 10 right - 1/5 w - 96 h - 96 rounded - full bg - fuchsia - 500 / 20 blur - 3xl animate - float [animation - delay: 1.2s]' />,
+      <div className='absolute -top - 16 right - 1/3 w - 72 h - 72 rounded - full bg - violet - 500 / 20 blur - 3xl animate - float [animation - delay:2.1s]' />,
+<<<<<<< HEAD
+    </div>);
+
+export default /**,
+ * FuturisticBackground - Function description,
+ */,;
+function FuturisticBackground() {;
+return (
+    <div className="pointer - events - none absolute inset - 0 overflow - hidden">,
+
+      {/* Animated gradient background */}
+      <div className="futuristic - bg absolute -inset - 20" />,
+
+      {/* Moving grid overlay */}
+      <div className="grid - overlay absolute inset - 0 opacity - 20" />,
+
+=======
+    </div>),export default /**,
+ * FuturisticBackground - Function description,
+ */,
+function FuturisticBackground() {
+  return (
+    <div className="pointer - events - none absolute inset - 0 overflow - hidden">,
+      {/* Animated gradient background */}
+      <div className="futuristic - bg absolute -inset - 20" />,
+      {/* Moving grid overlay */}
+      <div className="grid - overlay absolute inset - 0 opacity - 20" />,
+>>>>>>> origin/backup-main-20250924-182607
+      {/* Glow orbs */}
+      <div className="absolute top - 10 left - 1/4 w - 80 h - 80 rounded - full bg - cyan - 400 / 20 blur - 3xl animate - float" />,
+      <div className="absolute bottom - 10 right - 1/5 w - 96 h - 96 rounded - full bg - fuchsia - 500 / 20 blur - 3xl animate - float [animation - delay: 1.2s]" />,
+      <div className="absolute -top - 16 right - 1/3 w - 72 h - 72 rounded - full bg - violet - 500 / 20 blur - 3xl animate - float [animation - delay:2.1s]" />,
+    </div>),
+<<<<<<< HEAD
+export default function FuturisticBackground() {;
+return (
+    <div className=&quot,pointer-events-none absolute inset-0 overflow-hidden&quot>,
+export default function FuturisticBackground() {_return (
+    <div className="pointer-events-none absolute inset-0 overflow-hidden">,
+
+      {/* Animated gradient background */}
+      <div className=&quot,futuristic-bg absolute -inset-20&quot, />,
+
+      {/* Moving grid overlay */}
+      <div className=&quot,grid-overlay absolute inset-0 opacity-20&quot, />,
+
+=======
+export default function FuturisticBackground() {
+  return (
+    <div className=&quot,pointer-events-none absolute inset-0 overflow-hidden&quot>,
+export default function FuturisticBackground() {_return (
+    <div className="pointer-events-none absolute inset-0 overflow-hidden">,
+      {/* Animated gradient background */}
+      <div className=&quot,futuristic-bg absolute -inset-20&quot, />,
+      {/* Moving grid overlay */}
+      <div className=&quot,grid-overlay absolute inset-0 opacity-20&quot, />,
+>>>>>>> origin/backup-main-20250924-182607
+      {/* Glow orbs */}
+,
+    </div>)}
+,
+    </div>)}
+}
+<<<<<<< HEAD
+=======
+>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))}}})
+>>>>>>> origin/backup-main-20250924-182607
