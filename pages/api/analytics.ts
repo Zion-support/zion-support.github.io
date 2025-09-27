@@ -1,29 +1,32 @@
 // API endpoint for analytics events
 export default async function handler(req: any, res: any) {
   if (req.method !== "POST") {
-    return res.status(405).json({ error: "Method not allowed" })}
+    return res.status(405).json({ error: "Method not allowed" });
+  }
 
   try {
     const { events, session } = req.body;
+    
+    // Process analytics events
+    // 1. Validate events
+    if (!Array.isArray(events)) {
+      return res.status(400).json({ error: "Events must be an array" });
+    }
+
+    // 2. Store events (simulate database storage)
+    console.log("Processing analytics events:", events.length);
+    
+    // 3. Update session data
+    console.log("Session data:", session);
+
+    // 4. Generate reports
     res.status(200).json({
       success: true,
       processed: events.length,
       timestamp: Date.now()
-    })} catch (error) {
+    });
+  } catch (error) {
     console.error("Analytics API error:", error);
-    res.status(500).json({ error: "Internal server error" })}
+    res.status(500).json({ error: "Internal server error" });
+  }
 }
-
-    // Process analytics events
-    console.log("Analytics events received:", events.length);
-    console.log("Session data:", session);
-
-    // Here you would typically:
-    // 1. Store events in a database
-    // 2. Send to analytics service (Google Analytics, Mixpanel, etc.)
-    // 3. Process for real-time dashboards
-    // 4. Generate reports
-
-    r, e, s.stat, u, s(2, 0, 0).js, o, n({success: trueprocessed: even, t, s.lengthtimestamp: Da, te.now()
-    })} cat, c, h (error) {console.error("AnalyticsAPIerror:", err, o, r);
-    r, e, s.status(500).json({ error: "Internalservererror' })}};

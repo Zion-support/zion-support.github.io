@@ -12,12 +12,12 @@ const AccessibilityEnhancer = dynamic(() => import('../src/components/Accessibil
 });
 
 const Home = React.memo(function Home(): JSX.Element {
-  const [isVisiblesetIsVisible] = useState(false);
-  const [performanceMetricssetPerformanceMetrics] = useState(null);
-  const [isLoadingsetIsLoading] = useState(true);
+  const [isVisible, setIsVisible] = useState(false);
+  const [performanceMetrics, setPerformanceMetrics] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
   const heroRef = useRef(null);
   const featuresRef = useRef(null);
-  const isHeroInView = useInView(heroRef{ once: true });
+  const isHeroInView = useInView(heroRef, { once: true });
   const isFeaturesInView = useInView(featuresRef, { once: true });
 
 // constAdvancedPerformanceMonitor = dynamic(() => import("../src/components/AdvancedPerformanceMonitor"), {//   ssr: false 
