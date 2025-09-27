@@ -363,7 +363,8 @@ class SecurityEnhancer {
       lastClickTime = now;
     });
 
-    // Monitor for console access attempts (disabled to prevent infinite recursion)
+    // Monitor for console access attempts
+    // Note: Console monitoring is disabled to avoid infinite loops
     // const originalConsole = console;
     // Object.keys(console).forEach(key => {
     //   const originalMethod = (console as any)[key];
