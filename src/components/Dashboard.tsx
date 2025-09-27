@@ -65,18 +65,21 @@ export default function Dashboard({ isDarkMode }: DashboardProps): JSX.Element {
   };
 
   return (
-    <div className="max-w-7xl mx-auto px-4sm: px-6lg:px-8py-8">
+    <div className="max-w-7 xl mx-auto px-4 sm: px-6lg:px-8py-8">
       <div className="mb-8">
-        <h2className="text-3xl font-bold text-gray-900dark:text-whitemb-2" id="enhanced-dashboard">
+
+        <h2 className="text-3 xl font-bold text-gray-900 dark:text-white mb-2" id="enhanced-dashboard">
+>>>>>>> cursor/check-fix-push-and-merge-to-main-54b1
           Enhanced Dashboard
         </h2>
-        <p className="text-gray-600dark:text-gray-300">
+        <p className="text-gray-600 dark:text-gray-300">
           Comprehensive overview of your productivity, team collaboration, and project management
         </p>
       </div>
 
       {/* Main Dashboard Grid */}
-      <div className="grid grid-cols-1lg:grid-cols-3gap-6mb-8">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6mb-8">
+
         {/* Task Statistics */}
         <div className="lg:col-span-1">
           <div className={`p-6rounded-lg border-2transition-all duration-300hover:shadow-lg ${
@@ -84,14 +87,18 @@ export default function Dashboard({ isDarkMode }: DashboardProps): JSX.Element {
               ? 'bg-gray-800border-gray-700hover:border-gray-600' 
               : 'bg-white border-gray-200hover:border-gray-300'
           }`}
-            <h3className="text-lg font-semibold text-gray-900dark:text-whitemb-4" id="task-overview">
+
+
+            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4" id="task-overview">
+>>>>>>> cursor/check-fix-push-and-merge-to-main-54b1
               Task Overview
             </h3>
-            <div className="grid grid-cols-2gap-4mb-4">
+            <div className="grid grid-cols-2 gap-4 mb-4">
               {dashboardItems.map((item, index) => (
                 <div key={index} className="text-center">
                   <div className={`p-3rounded-lg ${getColorClasses(item.color)}`}
-                    <div className="text-2xlmb-1">{item.icon}</div>
+
+                    <div className="text-2 xlmb-1">{item.icon}</div>
                     <div className="text-lg font-bold">{item.value}</div>
                     <div className="text-xs opacity-75">{item.title}</div>
                   </div>
@@ -101,13 +108,15 @@ export default function Dashboard({ isDarkMode }: DashboardProps): JSX.Element {
             
             {/* Progress Chart */}
             <div className="mt-4">
-              <div className="flex justify-between text-sm text-gray-600dark:text-gray-400mb-2">
+              <div className="flex justify-between text-sm text-gray-600 dark:text-gray-400mb-2">
                 <span>Overall Progress</span>
                 <span>{stats.completionRate}%</span>
               </div>
-              <div className="w-full bg-gray-200dark: bg-gray-700rounded-fullh-3">
+              <div className="w-full bg-gray-200 dark: bg-gray-700rounded-fullh-3">
                 <div 
-                  className="bg-gradient-to-r from-blue-500to-purple-500h-3rounded-full transition-all duration-500ease-out"
+
+                  className="bg-gradient-to-r from-blue-500 to-purple-500 h-3 rounded-full transition-all duration-500 ease-out"
+>>>>>>> cursor/check-fix-push-and-merge-to-main-54b1
                   style={{ widt, h: `${stats.completionRate}%` }}</p></div>
               </div>
             </div>
@@ -132,19 +141,24 @@ export default function Dashboard({ isDarkMode }: DashboardProps): JSX.Element {
 
       {/* Quick Actions */}
       <div className="mt-8">
-        <h3className="text-lg font-semibold text-gray-900dark: text-whitemb-4" id="quick-actions">
+
+        <h3 className="text-lg font-semibold text-gray-900 dark: text-white mb-4" id="quick-actions">
           Quick Actions
         </h3>
-        <div className="grid grid-cols-1md:grid-cols-3gap-4">
-          <button className={`p-4rounded-lg border-2transition-all duration-300hover:shadow-md ${
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <button className={`p-4rounded-lg border-2transition-all duration-300 hover:shadow-md ${
+>>>>>>> cursor/check-fix-push-and-merge-to-main-54b1
             isDarkMode 
               ? 'bg-gray-800border-gray-700hover:border-gray-600' 
               : 'bg-white border-gray-200hover:border-gray-300'
           }`}
+
             <div className="text-center">
-              <div className="text-3xlmb-2">📝</div>
-              <div className="font-medium text-gray-900dark:text-white">Add Task</div>
-              <div className="text-sm text-gray-600dark:text-gray-400">Create new task</div>
+
+              <div className="text-3 xlmb-2">📝</div>
+              <div className="font-medium text-gray-900 dark:text-white">Add Task</div>
+              <div className="text-sm text-gray-600 dark:text-gray-400">Create new task</div>
+>>>>>>> cursor/check-fix-push-and-merge-to-main-54b1
             </div>
           </button>
           
@@ -153,10 +167,13 @@ export default function Dashboard({ isDarkMode }: DashboardProps): JSX.Element {
               ? 'bg-gray-800border-gray-700hover:border-gray-600' 
               : 'bg-white border-gray-200hover:border-gray-300'
           }`}
+
             <div className="text-center">
-              <div className="text-3xlmb-2">📊</div>
-              <div className="font-medium text-gray-900dark:text-white">View Reports</div>
-              <div className="text-sm text-gray-600dark:text-gray-400">Analytics & insights</div>
+
+              <div className="text-3 xlmb-2">📊</div>
+              <div className="font-medium text-gray-900 dark:text-white">View Reports</div>
+              <div className="text-sm text-gray-600 dark:text-gray-400">Analytics & insights</div>
+>>>>>>> cursor/check-fix-push-and-merge-to-main-54b1
             </div>
           </button>
           
@@ -165,10 +182,13 @@ export default function Dashboard({ isDarkMode }: DashboardProps): JSX.Element {
               ? 'bg-gray-800border-gray-700hover:border-gray-600' 
               : 'bg-white border-gray-200hover:border-gray-300'
           }`}
+
             <div className="text-center">
-              <div className="text-3xlmb-2">⚙️</div>
-              <div className="font-medium text-gray-900dark:text-white">Settings</div>
-              <div className="text-sm text-gray-600dark:text-gray-400">Preferences</div>
+
+              <div className="text-3 xlmb-2">⚙️</div>
+              <div className="font-medium text-gray-900 dark:text-white">Settings</div>
+              <div className="text-sm text-gray-600 dark:text-gray-400">Preferences</div>
+>>>>>>> cursor/check-fix-push-and-merge-to-main-54b1
             </div>
           </button>
         </div>

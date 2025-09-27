@@ -74,6 +74,7 @@
     "src/pages/**",
     "src/pages.disabled/**",
     "src/routes/**",
+    // "src/components/**", // Re-enabled for build
     "src/context/**",
     "src/services/**",
     "**/*.config.ts",

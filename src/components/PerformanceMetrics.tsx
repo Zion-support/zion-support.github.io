@@ -58,15 +58,20 @@ const PerformanceMetrics: React.FC = () => {;
               ✕
             </button>
           </div>
-                    <div className=space-y-2text-xs"">            <div className=flex justify-between"">              <span className=text-gray-600dark:text-gray-400"">Load Tim,
-    e:</span>
-              <span className = {`font-mono ${metrics.loadTime < 1000 ? 'text-green-600' : 'text-yellow-600'}`}
+
+          
+          <div className="space-y-2 text-xs">
+            <div className="flex justify-between">
+              <span className="text-gray-600 dark:text-gray-400">Load Time:</span>
+              <span className={`font-mono ${metrics.loadTime < 1000 ? 'text-green-600' : 'text-yellow-600'}` }>
                 {metrics.loadTime}ms
               </span>
             </div>
-                        <div className=flex justify-between"">              <span className=text-gray-600dark: text-gray-400"">First Pain,
-    t:</span>
-              <span className = {`font-mono ${metrics.renderTime < 500 ? 'text-green-600' : 'text-yellow-600'}`}
+            
+            <div className="flex justify-between">
+              <span className="text-gray-600 dark:text-gray-400">First Paint:</span>
+              <span className={`font-mono ${metrics.renderTime < 500 ? 'text-green-600' : 'text-yellow-600'}` }>
+>>>>>>> cursor/check-fix-push-and-merge-to-main-54b1
                 {metrics.renderTime}ms
               </span>
             </div>
@@ -75,9 +80,12 @@ const PerformanceMetrics: React.FC = () => {;
                 {metrics.memoryUsage}MB
               </span>
             </div>
-                        <div className=flex justify-between"">              <span className=text-gray-600dark: text-gray-400"">Networ,
-    k:</span>
-              <span className = {`font-mono ${metrics.networkLatency < 100 ? 'text-green-600' : 'text-yellow-600'}`}
+
+            
+            <div className="flex justify-between">
+              <span className="text-gray-600 dark:text-gray-400">Network:</span>
+              <span className={`font-mono ${metrics.networkLatency < 100 ? 'text-green-600' : 'text-yellow-600'}` }>
+>>>>>>> cursor/check-fix-push-and-merge-to-main-54b1
                 {metrics.networkLatency}ms
               </span>
             </div>

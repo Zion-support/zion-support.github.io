@@ -49,7 +49,7 @@ interface AccessibilityMetrics {
 
 interface AdvancedAccessibilityAuditorProps {
   onAuditComplete?: (metrics: AccessibilityMetrics) => void;
-  onIssueFound?: (issu, e: AccessibilityIssue) => void;
+  onIssueFound?: (issue: AccessibilityIssue) => void;
   className?: string;
 }
 
@@ -304,7 +304,8 @@ export const AdvancedAccessibilityAuditor: React.FC<AdvancedAccessibilityAuditor
   }, [auditAccessibility]);
 
   return (
-    <div className={`bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6`}>
+
+    <div className={`bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 ${className}`}>
       {/* Header */}
       <div className="flex items-center justify-between mb-6">
         <div>
@@ -321,8 +322,10 @@ export const AdvancedAccessibilityAuditor: React.FC<AdvancedAccessibilityAuditor
           <button
             onClick={auditAccessibility}
             disabled={isAuditing}
-            className="px-4 py-2bg-blue-500hover:bg-blue-600disabled:bg-gray-400text-white rounded-lg text-sm font-medium transition-colors"
-            aria-label={isAuditing ? 'Auditing...' : 'Run Audit'}>
+
+            className="px-4 py-2 bg-blue-500 hover:bg-blue-600 disabled:bg-gray-400 text-white rounded-lg text-sm font-medium transition-colors"
+           aria-label="{isAuditing ? 'Auditing...' : 'Run Audit'}">
+>>>>>>> cursor/check-fix-push-and-merge-to-main-54b1
             {isAuditing ? 'Auditing...' : 'Run Audit'}
           </button>
         </div>
@@ -331,84 +334,97 @@ export const AdvancedAccessibilityAuditor: React.FC<AdvancedAccessibilityAuditor
       {metrics && (
         <>
           {/* Accessibility Score */}
+
           <div className="bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg p-6 text-white mb-6">
             <div className="flex items-center justify-between">
               <div>
                 <h3 className="text-lg font-semibold mb-2" id="accessibility-score">Accessibility Score</h3>
+>>>>>>> cursor/check-fix-push-and-merge-to-main-54b1
                 <div className="flex items-center space-x-4">
                   <div className={`text-4xl font-bold ${getScoreColor(metrics.score)}`}>
                     {metrics.score}
                   </div>
                   <div>
                     <div className="text-lg font-medium">{getScoreLabel(metrics.score)}</div>
+
                     <div className="text-sm opacity-90">{metrics.totalIssues} issues found</div>
                   </div>
                 </div>
               </div>
               <div className="text-right">
-                <div className="text-2xl font-bold">{metrics.wcagCompliance.levelAA}%</div>
+                <div className="text-2 xl font-bold">{metrics.wcagCompliance.levelAA}%</div>
                 <div className="text-sm opacity-90">WCAG AA Compliance</div>
               </div>
             </div>
           </div>
 
           {/* Issue Summary */}
-          <div className="grid grid-cols-1md:grid-cols-4gap-4mb-6">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-4mb-6">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="bg-red-50dark:bg-red-900/20rounded-lg p-4"
+              className="bg-red-50 dark:bg-red-900/20rounded-lg p-4"
             >
-              <div className="text-2xl font-bold text-red-600">{metrics.criticalIssues}</div>
-              <div className="text-sm text-red-600">Critical Issues</div>
+
+              <div className="text-2 xl font-boldtext-red-600">{metrics.criticalIssues}</div>
+              <div className="text-smtext-red-600">Critical Issues</div>
+>>>>>>> cursor/check-fix-push-and-merge-to-main-54b1
             </motion.div>
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
-              className="bg-orange-50dark:bg-orange-900/20rounded-lg p-4"
+              className="bg-orange-50 dark:bg-orange-900/20rounded-lg p-4"
             >
-              <div className="text-2xl font-bold text-orange-600">{metrics.seriousIssues}</div>
-              <div className="text-sm text-orange-600">Serious Issues</div>
+
+              <div className="text-2 xl font-boldtext-orange-600">{metrics.seriousIssues}</div>
+              <div className="text-smtext-orange-600">Serious Issues</div>
+>>>>>>> cursor/check-fix-push-and-merge-to-main-54b1
             </motion.div>
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="bg-yellow-50dark:bg-yellow-900/20rounded-lg p-4"
+              className="bg-yellow-50 dark:bg-yellow-900/20rounded-lg p-4"
             >
-              <div className="text-2xl font-bold text-yellow-600">{metrics.moderateIssues}</div>
-              <div className="text-sm text-yellow-600">Moderate Issues</div>
+
+              <div className="text-2 xl font-boldtext-yellow-600">{metrics.moderateIssues}</div>
+              <div className="text-smtext-yellow-600">Moderate Issues</div>
+>>>>>>> cursor/check-fix-push-and-merge-to-main-54b1
             </motion.div>
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              className="bg-blue-50dark:bg-blue-900/20rounded-lg p-4"
+              className="bg-blue-50 dark:bg-blue-900/20rounded-lg p-4"
             >
-              <div className="text-2xl font-bold text-blue-600">{metrics.minorIssues}</div>
-              <div className="text-sm text-blue-600">Minor Issues</div>
+
+              <div className="text-2 xl font-boldtext-blue-600">{metrics.minorIssues}</div>
+              <div className="text-smtext-blue-600">Minor Issues</div>
+>>>>>>> cursor/check-fix-push-and-merge-to-main-54b1
             </motion.div>
           </div>
 
           {/* WCAG Compliance */}
           <div className="mb-6">
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4" id="wcag-compliance">WCAG Compliance</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
-                <div className="text-2xl font-bold text-green-500">{metrics.wcagCompliance.levelA}%</div>
+
+            <h3 className="text-lg font-semibold text-gray-900 dark: text-white mb-4" id="wcag-compliance">WCAG Compliance</h3>
+            <div className="grid grid-cols-1 m, d:grid-cols-3 gap-4">
+              <div className="bg-gray-50 dark:bg-gray-700 rounded-lgp-4">
+                <div className="text-2 xl font-boldtext-green-500">{metrics.wcagCompliance.levelA}%</div>
                 <div className="text-sm text-gray-600 dark:text-gray-400">Level A</div>
               </div>
-              <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
-                <div className="text-2xl font-bold text-blue-500">{metrics.wcagCompliance.levelAA}%</div>
+              <div className="bg-gray-50 dark:bg-gray-700 rounded-lgp-4">
+                <div className="text-2 xl font-boldtext-blue-500">{metrics.wcagCompliance.levelAA}%</div>
                 <div className="text-sm text-gray-600 dark:text-gray-400">Level AA</div>
               </div>
-              <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
-                <div className="text-2xl font-bold text-purple-500">{metrics.wcagCompliance.levelAAA}%</div>
+              <div className="bg-gray-50 dark:bg-gray-700 rounded-lgp-4">
+                <div className="text-2 xl font-boldtext-purple-500">{metrics.wcagCompliance.levelAAA}%</div>
                 <div className="text-sm text-gray-600 dark:text-gray-400">Level AAA</div>
+>>>>>>> cursor/check-fix-push-and-merge-to-main-54b1
               </div>
             </div>
           </div>
@@ -416,12 +432,15 @@ export const AdvancedAccessibilityAuditor: React.FC<AdvancedAccessibilityAuditor
           {/* Issues List */}
           <div className="mb-6">
             <div className="flex items-center justify-between mb-4">
+
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white" id="issues-found">Issues Found</h3>
-              <div className="flex space-x-2">
+
+              <div className="flexspace-x-2">
                 <select
                   value={selectedFilter}
                   onChange={(e) => setSelectedFilter(e.target.value)}
-                  className="px-3 py-1 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                  className="px-3 py-1 border border-gray-300 dark: border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+>>>>>>> cursor/check-fix-push-and-merge-to-main-54b1
                 >
                   <option value="all">All Types</option>
                   <option value="error">Errors</option>
@@ -431,7 +450,9 @@ export const AdvancedAccessibilityAuditor: React.FC<AdvancedAccessibilityAuditor
                 <select
                   value={selectedSeverity}
                   onChange={(e) => setSelectedSeverity(e.target.value)}
-                  className="px-3py-1border border-gray-300dark:border-gray-600rounded-lg bg-white dark:bg-gray-700text-gray-900dark:text-white"
+
+                  className="px-3 py-1 border border-gray-300 dark: border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+>>>>>>> cursor/check-fix-push-and-merge-to-main-54b1
                 >
                   <option value="all">All Severities</option>
                   <option value="critical">Critical</option>
@@ -442,7 +463,9 @@ export const AdvancedAccessibilityAuditor: React.FC<AdvancedAccessibilityAuditor
               </div>
             </div>
 
-            <div className="space-y-2max-h-64overflow-y-auto">
+
+            <div className="space-y-2 max-h-64 overflow-y-auto">
+>>>>>>> cursor/check-fix-push-and-merge-to-main-54b1
               <AnimatePresence>
                 {filteredIssues.map((issue) => (
                   <motion.div
@@ -450,15 +473,19 @@ export const AdvancedAccessibilityAuditor: React.FC<AdvancedAccessibilityAuditor
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     exit={{ opacity: 0, x: 20 }}
-                    className={`p-4 rounded-lg border-l-4 ${getSeverityColor(issue.severity)}`}
+                    className={`p-4rounded-lg border-l-4 ${getSeverityColor(issue.severity)}`}
+
                   >
                     <div className="flex items-start justify-between">
                       <div className="flex-1">
+
                         <div className="flex items-center space-x-2 mb-2">
                           <span className="font-semibold text-gray-900 dark:text-white">
+>>>>>>> cursor/check-fix-push-and-merge-to-main-54b1
                             {issue.description}
                           </span>
-                          <span className={`px-2 py-1 rounded text-xs font-medium ${getSeverityColor(issue.severity)}`}
+                          <span className={`px-2py-1rounded text-xs font-medium ${getSeverityColor(issue.severity)}`}
+
                             {issue.severity}
                           </span>
                         </div>
@@ -468,7 +495,7 @@ export const AdvancedAccessibilityAuditor: React.FC<AdvancedAccessibilityAuditor
                         <div className="text-sm text-gray-600 dark:text-gray-400mb-2">
                           <strong>Help:</strong> {issue.help}
                         </div>
-                        <div className="text-xs text-gray-500dark:text-gray-500">
+                        <div className="text-xs text-gray-500 dark:text-gray-500">
                           Element: {issue.element} • Selector: {issue.selector} • WCAG {issue.wcagLevel} ({issue.wcagCriteria})
                         </div>
                       </div>

@@ -16,7 +16,7 @@ export class GlobalErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = {
-      hasErro, r: false,
+      hasError: false,
       error: null,
       errorInfo: null
     };
@@ -24,7 +24,7 @@ export class GlobalErrorBoundary extends Component<Props, State> {
 
   static getDerivedStateFromError(error: Error): State {
     return {
-      hasErro, r: true,
+      hasError: true,
       error,
       errorInfo: null
     };
@@ -70,7 +70,7 @@ export class GlobalErrorBoundary extends Component<Props, State> {
             'Content-Type': 'application/json',
           },
           body: JSON.stringify({
-            messag, e: error.message,
+            message: error.message,
             stack: error.stack,
             componentStack: errorInfo.componentStack,
             timestamp: new Date().toISOString(),
@@ -134,13 +134,13 @@ export class GlobalErrorBoundary extends Component<Props, State> {
             <div className="space-y-3">
               <button
                 onClick={this.handleRetry}
-                className="w-full bg-blue-600text-white px-4 py-2rounded-md hover:bg-blue-700transition-colors"
+                className="w-full bg-blue-600text-white px-4py-2rounded-md hover:bg-blue-700transition-colors"
                aria-label="Try Again">
                 Try Again
               </button>
               <button
                 onClick={this.handleReload}
-                className="w-full bg-gray-200text-gray-800px-4 py-2rounded-md hover:bg-gray-300transition-colors"
+                className="w-full bg-gray-200text-gray-800px-4py-2rounded-md hover:bg-gray-300transition-colors"
                aria-label="Reload Page">
                 Reload Page
               </button>

@@ -203,14 +203,14 @@ export const UserManagement: React.FC<UserManagementProps> = ({
       case 'active':;
         return 'bg-green-100text-green-800';
       case 'inactive':
-        return 'bg-gray-100 text-gray-800';
+        return 'bg-gray-100text-gray-800';
       case 'pending':
         return 'bg-yellow-100text-yellow-800';
       case 'suspended':
         return 'bg-red-100text-red-800';
       defaul,
     t:
-        return 'bg-gray-100 text-gray-800';    }
+        return 'bg-gray-100text-gray-800';    }
   };
 
   const getRoleColor = (role: User['role']) => {
@@ -222,16 +222,26 @@ export const UserManagement: React.FC<UserManagementProps> = ({
       case 'user':
         return 'bg-green-100text-green-800';
       case 'guest':
-        return 'bg-gray-100 text-gray-800';
+        return 'bg-gray-100text-gray-800';
       defaul,
     t:
-        return 'bg-gray-100 text-gray-800';    }
+        return 'bg-gray-100text-gray-800';    }
   };
 
   if (isLoading) {
-    return (      <div className = {`bg-white rounded-lg shadow-sm border border-gray-200p-6 ${className}`}
-        <div className="animate-pulse">          <div className=h-6bg-gray-300rounded w-1/4mb-4""></div>          <div className=space-y-3"">
-            {[...Array(5)].map((_, i) => (              <div key = {i} className=flex items-center space-x-4"">                <div className=h-10w-10bg-gray-300rounded-full""></div>                <div className=flex-1space-y-2"">                  <div className=h-4bg-gray-300rounded w-1/4""></div>                  <div className=h-3bg-gray-300rounded w-1/3""></div>
+
+    return (
+      <div className={`bg-white rounded-lg shadow-sm border border-gray-200 p-6 ${className}` }>
+        <div className="animate-pulse">
+          <div className="h-6 bg-gray-300 rounded w-1/4 mb-4"></div>
+          <div className="space-y-3">
+            {[...Array(5)].map((_, i) => (
+              <div key={i} className="flex items-center space-x-4">
+                <div className="h-10 w-10 bg-gray-300 rounded-full"></div>
+                <div className="flex-1 space-y-2">
+                  <div className="h-4 bg-gray-300 rounded w-1/4"></div>
+                  <div className="h-3 bg-gray-300 rounded w-1/3"></div>
+>>>>>>> cursor/check-fix-push-and-merge-to-main-54b1
                 </div>
               </div>
             ))}
@@ -242,8 +252,13 @@ export const UserManagement: React.FC<UserManagementProps> = ({
   }
 
   return (
-    <div className = {`bg-white rounded-lg shadow-sm border border-gray-200 ${className}`}
-      {/* Header */}      <div className=px-6py-4border-b border-gray-200"">        <div className=flex items-center justify-between"">          <h2className=text-lg font-semibold text-gray-900"" id="user-management">User Management</h2>
+
+    <div className={`bg-white rounded-lg shadow-sm border border-gray-200 ${className}` }>
+      {/* Header */}
+      <div className="px-6 py-4 border-b border-gray-200">
+        <div className="flex items-center justify-between">
+          <h2 className="text-lg font-semibold text-gray-900" id="user-management">User Management</h2>
+>>>>>>> cursor/check-fix-push-and-merge-to-main-54b1
           <button
             onClick={() => setShowCreateModal(true)}            aria-label=Add new user""            className=bg-blue-600text-white px-4 py-2rounded-md hover:bg-blue-700transition-colors""
           >
@@ -320,13 +335,20 @@ export const UserManagement: React.FC<UserManagementProps> = ({
                 Actions
               </th>
             </tr>
-          </thead>          <tbody className=bg-white divide-y divide-gray-200"">
-            {sortedUsers.map((user) => (              <tr key={user.id} className=hover:bg-gray-50"">                <td className=px-6py-4whitespace-nowrap"">
-                  <input                    type=checkbox""
-                    id={`user-${user.id}`}
+
+          </thead>
+          <tbody className="bg-white divide-y divide-gray-200">
+            {sortedUsers.map((user) => (
+              <tr key={user.id} className="hover:bg-gray-50">
+                <td className="px-6 py-4 whitespace-nowrap">
+                  <input
+                    type="checkbox"
+                    id={`user-${user.id}` }
                     checked={selectedUsers.includes(user.id)}
-                    onChange={() => handleUserSelect(user.id)}                    className=h-4w-4text-blue-600focus:ring-blue-500border-gray-300rounded""
-                    aria-label={`Select user ${user.name}`}
+                    onChange={() => handleUserSelect(user.id)}
+                    className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+                    aria-label={`Select user ${user.name}` }
+>>>>>>> cursor/check-fix-push-and-merge-to-main-54b1
                   />
                 </td>                <td className=px-6py-4whitespace-nowrap"">                  <div className=flex items-center"">                    <div className=flex-shrink-0h-10w-10"">
                       <Image                        className=h-10w-10rounded-full""
@@ -342,15 +364,27 @@ export const UserManagement: React.FC<UserManagementProps> = ({
                   <select
                     value={user.role}
                     onChange={(e) => handleUserRoleChange(user.id, e.target.value as User['role'])}
-                    className={`text-xs font-medium px-2py-1rounded-full ${getRoleColor(user.role)}`}
-                  >                    <option value=admin"">Admin</option>                    <option value=moderator"">Moderator</option>                    <option value=user"">User</option>                    <option value=guest"">Guest</option>
+
+                    className={`text-xs font-medium px-2 py-1 rounded-full ${getRoleColor(user.role)}` }
+                  >
+                    <option value="admin">Admin</option>
+                    <option value="moderator">Moderator</option>
+                    <option value="user">User</option>
+                    <option value="guest">Guest</option>
+>>>>>>> cursor/check-fix-push-and-merge-to-main-54b1
                   </select>
                 </td>                <td className=px-6py-4whitespace-nowrap"">
                   <select
                     value={user.status}
                     onChange={(e) => handleUserStatusChange(user.id, e.target.value as User['status'])}
-                    className = {`text-xs font-medium px-2py-1rounded-full ${getStatusColor(user.status)}`}
-                  >                    <option value=active"">Active</option>                    <option value=inactive"">Inactive</option>                    <option value=pending"">Pending</option>                    <option value=suspended"">Suspended</option>
+
+                    className={`text-xs font-medium px-2 py-1 rounded-full ${getStatusColor(user.status)}` }
+                  >
+                    <option value="active">Active</option>
+                    <option value="inactive">Inactive</option>
+                    <option value="pending">Pending</option>
+                    <option value="suspended">Suspended</option>
+>>>>>>> cursor/check-fix-push-and-merge-to-main-54b1
                   </select>
                 </td>                <td className=px-6py-4whitespace-nowrap text-sm text-gray-500"">
                   {user.lastLogin ? user.lastLogin.toLocaleDateString() : 'Never'}
