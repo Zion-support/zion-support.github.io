@@ -557,7 +557,8 @@ class EnhancedAccessibilityManager {
   /**
    * Calculate color contrast ratio
    */
-  private calculateContrast(color1: string, color2: string): number {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  private calculateContrast(_color1: string, _color2: string): number {
     // Simplified contrast calculation - use a proper library in production
     return 4.5; // Placeholder value
   }
@@ -590,7 +591,7 @@ class EnhancedAccessibilityManager {
    * Setup speech recognition
    */
   private setupSpeechRecognition(): void {
-    const SpeechRecognition = window.SpeechRecognition || (window as any).webkitSpeechRecognition;
+    const SpeechRecognition = window.SpeechRecognition || (window as { webkitSpeechRecognition?: typeof SpeechRecognition }).webkitSpeechRecognition;
     const recognition = new SpeechRecognition();
     
     recognition.continuous = false;
@@ -786,7 +787,7 @@ class EnhancedAccessibilityManager {
    * Get accessibility score
    */
   public getAccessibilityScore(): number {
-    const totalChecks = 10; // Number of accessibility checks
+    // const totalChecks = 10; // Number of accessibility checks - unused for now
     const violations = this.violations.length;
     return Math.max(0, 100 - (violations * 10));
   }

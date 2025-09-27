@@ -1,14 +1,14 @@
 import React from 'react';
-import { render, screen, fireEvent, waitFor } from '@testing-library/react';
+import { render, screen, fireEvent, waitFor, act } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import RealTimeMonitor from '../RealTimeMonitor';
 
 // Mock framer-motion
 jest.mock('framer-motion', () => ({
   motion: {
-    div: ({ children, ...props }: any) => <div {...props}>{children}</div>,
+    div: ({ children, ...props }: React.HTMLAttributes<HTMLDivElement>) => <div {...props}>{children}</div>,
   },
-  AnimatePresence: ({ children }: any) => children,
+  AnimatePresence: ({ children }: { children: React.ReactNode }) => children,
 }));
 
 describe('RealTimeMonitor', () => {
@@ -88,7 +88,9 @@ describe('RealTimeMonitor', () => {
     });
     
     // Fast-forward time to trigger metric updates
-    jest.advanceTimersByTime(3000);
+    act(() => {
+      jest.advanceTimersByTime(3000);
+    });
     
     // Metrics should still be present (values may have changed)
     expect(screen.getByText('CPU Usage')).toBeInTheDocument();

@@ -24,6 +24,9 @@ import AdvancedPerformanceMonitor from './utils/advancedPerformanceMonitor';
 import AccessibilityEnhancer from './utils/accessibilityEnhancer';
 import SecurityEnhancer from './utils/securityEnhancer';
 import SystemMetricsDashboard from './components/SystemMetricsDashboard';
+import AdvancedAccessibilityManager from './utils/advancedAccessibilityManager';
+import AdvancedSecurityManager from './utils/advancedSecurityManager';
+import EnhancedUXManager from './utils/enhancedUXManager';
 import './index.css';
 import './styles/notifications.css';
 import './styles/system-metrics.css';
@@ -111,6 +114,11 @@ export default function App(): React.JSX.Element {
       enableInputSanitization: true,
       enableSecurityMonitoring: true
     });
+    
+    // Initialize additional advanced managers
+    AdvancedAccessibilityManager.getInstance().initialize();
+    AdvancedSecurityManager.getInstance().initialize();
+    EnhancedUXManager.getInstance().initialize();
     
     // Initialize advanced performance optimizer
     advancedPerformanceOptimizer.addResourceHints();
