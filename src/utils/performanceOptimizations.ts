@@ -7,7 +7,6 @@
 export const optimizeImage = (src: string, width?: number, height?: number, quality: number = 75): string => {
   if (!src) return '';
   
-  return src;
   // For external images you might want to use a service like Cloudinary or Next.js Image
   return src;
 };

@@ -1,1 +1,0 @@
-import{j as t}from"./ui-C_PCuSNc.js";import"./vendor-BYA32aEE.js";function a(){return t.jsxs("div",{className:"p-8",children:[t.jsx("h1",{className:"text-3xl font-bold",children:"Contact"}),t.jsx("p",{className:"mt-4 text-gray-700",children:"Get in touch with our team."})]})}export{a as default};

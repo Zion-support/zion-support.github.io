@@ -131,7 +131,7 @@ export const objectUtils = {
   isEmpty: (obj: any): boolean => {
     return Object.keys(obj).length === 0;
   },
-  pick: <T, K extends keyof T>(obj: T, keys: K[]): Pick<T, K> => {
+  pick: <T extends object, K extends keyof T>(obj: T, keys: K[]): Pick<T, K> => {
     const result = {} as Pick<T, K>;
     keys.forEach(key => {
       if (key in obj) {
@@ -149,7 +149,7 @@ export const validationUtils = {
     return emailRegex.test(email);
   },
   phone: (phone: string): boolean => {
-    const phoneRegex = /^\+?[\d\s\-\(\)]+$/;
+    const phoneRegex = /^\+?[\d\s\-()]+$/;
     return phoneRegex.test(phone) && phone.replace(/\D/g, "").length >= 10;
   },
   url: (url: string): boolean => {
