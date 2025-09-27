@@ -66,7 +66,7 @@ export default function Portfolio(): React.JSX.Element {
         <div className="text-center mb-16">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">Our Portfolio</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Explore our successful projects and see how we've helped businesses transform with cutting-edge AI and IT solutions.
+            Explore our successful projects and see how we&apos;ve helped businesses transform with cutting-edge AI and IT solutions.
           </p>
         </div>
         
@@ -143,7 +143,7 @@ export default function Portfolio(): React.JSX.Element {
         <div className="text-center">
           <h2 className="text-3xl font-semibold mb-6">Ready to Start Your Project?</h2>
           <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
-            Let's discuss how we can help you achieve similar results with our AI and IT solutions.
+            Let&apos;s discuss how we can help you achieve similar results with our AI and IT solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a

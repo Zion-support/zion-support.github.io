@@ -81,7 +81,7 @@ export class SecurityManager {
     });
   }
 
-  private async reportCSPViolation(violation: SecurityPolicyViolationEvent): Promise<void> {
+  private async reportCSPViolation(violation: { blockedURI: string; violatedDirective: string; originalPolicy: string; timestamp: string }): Promise<void> {
     try {
       await fetch('/api/security/csp-violation', {
         method: 'POST',

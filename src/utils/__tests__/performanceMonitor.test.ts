@@ -54,7 +54,7 @@ describe('performanceMonitor', () => {
     };
     
     // Mock PerformanceObserver
-    global.PerformanceObserver = jest.fn().mockImplementation(() => mockObserver) as any;
+    global.PerformanceObserver = jest.fn().mockImplementation(() => mockObserver) as unknown as typeof PerformanceObserver;
     
     performanceMonitor.reportCoreWebVitals();
     

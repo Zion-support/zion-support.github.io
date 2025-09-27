@@ -15,7 +15,7 @@ export interface SEOData {
   twitterTitle?: string;
   twitterDescription?: string;
   twitterImage?: string;
-  structuredData?: Record<string, any>[];
+  structuredData?: Record<string, unknown>[];
   robots?: string;
   author?: string;
   publishedTime?: string;
@@ -134,7 +134,7 @@ class SEOManager {
     }
   }
 
-  private updateStructuredData(structuredData?: Record<string, any>[]): void {
+  private updateStructuredData(structuredData?: Record<string, unknown>[]): void {
     // Remove existing structured data
     const existingScripts = document.querySelectorAll('script[type="application/ld+json"]');
     existingScripts.forEach(script => {
@@ -205,7 +205,7 @@ class SEOManager {
     return this.currentData;
   }
 
-  public generateBreadcrumbStructuredData(breadcrumbs: { name: string; url: string }[]): Record<string, any> {
+  public generateBreadcrumbStructuredData(breadcrumbs: { name: string; url: string }[]): Record<string, unknown> {
     return {
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
@@ -226,7 +226,7 @@ class SEOManager {
     modifiedDate?: string;
     image?: string;
     url: string;
-  }): Record<string, any> {
+  }): Record<string, unknown> {
     return {
       "@context": "https://schema.org",
       "@type": "Article",
@@ -254,7 +254,7 @@ class SEOManager {
     };
   }
 
-  public generateOrganizationStructuredData(): Record<string, any> {
+  public generateOrganizationStructuredData(): Record<string, unknown> {
     return {
       "@context": "https://schema.org",
       "@type": "Organization",
@@ -276,7 +276,7 @@ class SEOManager {
     };
   }
 
-  public generateWebsiteStructuredData(): Record<string, any> {
+  public generateWebsiteStructuredData(): Record<string, unknown> {
     return {
       "@context": "https://schema.org",
       "@type": "WebSite",
