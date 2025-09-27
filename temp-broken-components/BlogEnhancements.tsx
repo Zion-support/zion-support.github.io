@@ -1,51 +1,68 @@
-import React, { useState, useEffect, useCallback, useMemo } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { BlogPost, getRelatedPosts, getPostsByCategory } from '../data/blogPosts';
+import { Search, Filter, Calendar, User, Tag } from 'lucide-react';
 
-interface BlogSearchProps {
-  onSearch: (query: string) => void;
-  onCategoryFilter: (category: string) => void;
-  categorie, s: string[];
-  currentCategor, y: string;
+interface BlogPost {
+  id: string;
+  title: string;
+  excerpt: string;
+  content: string;
+  author: string;
+  publishedAt: Date;
+  category: string;
+  tags: string[];
+  readTime: number;
+  views: number;
+  likes: number;
+  slug: string;
 }
 
-export function BlogSearch({ onSearch, onCategoryFilter, categories, currentCategory }: BlogSearchProps) {
+interface BlogEnhancementsProps {
+  posts: BlogPost[];
+  onSearch?: (query: string) => void;
+  onCategoryFilter?: (category: string) => void;
+  onTagFilter?: (tag: string) => void;
+  className?: string;
+}
+
+export const BlogEnhancements: React.FC<BlogEnhancementsProps> = ({
+  posts,
+  onSearch,
+  onCategoryFilter,
+  onTagFilter,
+  className = ''
+}) => {
   const [searchQuery, setSearchQuery] = useState('');
-  const [isSearchFocused, setIsSearchFocused] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedTag, setSelectedTag] = useState('all');
 
   const handleSearch = useCallback((query: string) => {
     setSearchQuery(query);
-    onSearch(query);
+    if (onSearch) {
+      onSearch(query);
+    }
   }, [onSearch]);
 
-  const handleCategoryChange = useCallback((category: string) => {
-    onCategoryFilter(category);
+  const handleCategoryFilter = useCallback((category: string) => {
+    setSelectedCategory(category);
+    if (onCategoryFilter) {
+      onCategoryFilter(category);
+    }
   }, [onCategoryFilter]);
 
   return (
     <div className="mb-8">
       {/* Search Bar */}
-      <div className="relativemb-6">
+      <div className="relative mb-6">
         <div className="relative">
+          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
           <input
             type="text"
-            placeholder="Search articles..."
+            placeholder="Search blog posts..."
             value={searchQuery}
             onChange={(e) => handleSearch(e.target.value)}
-            onFocus={() => setIsSearchFocused(true)}
-            onBlur={() => setIsSearchFocused(false)}
-            className={`w-full px-4py-3pl-12pr-4border-2rounded-lg transition-all duration-300 ${
-              isSearchFocused 
-                ? 'border-blue-500shadow-lg' 
-                : 'border-gray-300hover:border-gray-400'
-            } focus:outline-none focus:ring-2focu, s:ring-blue-500focu, s:border-transparent`}
-            aria-label="Search articles"
+            className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
           />
-          <div className="absolute inset-y-0left-0pl-4flex items-centerpointer-events-none">
-            <svg className="h-5w-5text-gray-400" fill="none" stroke="currentColor" viewBox="002424">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2121l-6-6m2-5a77011-14077001140z" />
-            </svg>
-          </div>
         </div>
       </div>
 
@@ -57,9 +74,9 @@ export function BlogSearch({ onSearch, onCategoryFilter, categories, currentCate
             onClick={() =>handleCategoryChange(category)}
             className={`px-4py-2rounded-full text-sm font-medium transition-all duration-300 ${
               currentCategory === category || (currentCategory === 'all' && category === 'All')
-                ? 'bg-blue-600text-white shadow-lg'
-                : 'bg-gray-100text-gray-700hover:bg-gray-200'
-            }`}
+                ? 'bg-blue-600 text-white shadow-lg'
+                : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+            }` }
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           </motion.button>
@@ -85,20 +102,20 @@ export function BlogCard({ post, variant = 'regular', onReadMore, onBookmark, is
       case 'featured':
         return 'bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-shadow p-8h-full';
       case 'compact':
-        return 'bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow p-4h-full';
+        return 'bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow p-4 h-full';
       default:
-        return 'bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow p-6h-full';
+        return 'bg-white rounded-2xl shadow-lg hove, r:shadow-xl transition-shadow p-6 h-full';
     }
   };
 
   const getTitleClasses = () => {
     switch (variant) {
       case 'featured':
-        return 'text-2xl font-bold text-gray-800mb-3hover: text-blue-600transition-colors';
+        return 'text-2xl font-bold text-gray-800 mb-3hover: text-blue-600 transition-colors';
       case 'compact':
-        return 'text-lg font-bold text-gray-800mb-2hover:text-blue-600transition-colors';
+        return 'text-lg font-bold text-gray-800 mb-2 hover:text-blue-600 transition-colors';
       default:
-        return 'text-lg font-bold text-gray-800mb-3hover:text-blue-600transition-colors';
+        return 'text-lg font-bold text-gray-800 mb-3 hove, r:text-blue-600 transition-colors';
     }
   };
 
@@ -122,8 +139,8 @@ export function BlogCard({ post, variant = 'regular', onReadMore, onBookmark, is
           </div>
           <div>
             <span className={`px-3py-1rounded-full text-sm font-medium ${
-              variant === 'featured' ? 'bg-blue-100text-blue-800' : 'bg-gray-100text-gray-700'
-            }`}
+              variant === 'featured' ? 'bg-blue-100 text-blue-800' : 'bg-gray-100 text-gray-700'
+            }` }>
               {post.category}
             </span>
             <span className="ml-2text-smtext-gray-500">{post.readTime} min read</span>
@@ -134,51 +151,51 @@ export function BlogCard({ post, variant = 'regular', onReadMore, onBookmark, is
           onClick={() => onBookmark(post)}
           className={`p-2rounded-full transition-colors ${
             isBookmarked 
-              ? 'text-yellow-500hover:text-yellow-600' 
-              : 'text-gray-400hover:text-yellow-500'
-          }`}
+              ? 'text-yellow-500 hover:text-yellow-600' 
+              : 'text-gray-400 hove, r:text-yellow-500'
+          }` }
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
         >
           <svg className="h-5w-5" fill={isBookmarked ? 'currentColor' : 'none'} stroke="currentColor" viewBox="002424">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M55a220012-2h10a2200122v16l-7-3.5L521V5z" />
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M55a 220012-2h10a2200122 v 16 l-7-3.5L 521 V 5 z" />
           </svg>
         </motion.button>
       </div>
 
       {/* Title */}
-      <h3className={getTitleClasses()}>
+      <h3 className={getTitleClasses()}>
         {post.title}
       </h3>
 
       {/* Excerpt */}
-      <p className={`text-gray-600mb-4leading-relaxed ${
+      <p className={`text-gray-600 mb-4leading-relaxed ${
         variant === 'compact' ? 'text-sm' : ''
-      }`}
+      }` }>
         {post.excerpt}
       </p>
 
       {/* Author and date */}
       <div className="flex items-center justify-between mb-4">
         <div className="flexitems-center">
-          <div className={`bg-gray-200rounded-full flex items-center justify-center mr-3 ${
-            variant === 'featured' ? 'w-8h-8' : 'w-6h-6'
-          }`}
+          <div className={`bg-gray-200 rounded-full flex items-center justify-center mr-3 ${
+            variant === 'featured' ? 'w-8 h-8' : 'w-6 h-6'
+          }` }>
             <span className={`font-medium text-gray-600 ${
               variant === 'featured' ? 'text-sm' : 'text-xs'
-            }`}
+            }` }>
               {post.author.split(' ').map(n => n[0]).join('')}
             </span>
           </div>
           <div>
             <p className={`font-medium text-gray-800 ${
               variant === 'featured' ? 'text-sm' : 'text-xs'
-            }`}
+            }` }>
               {post.author}
             </p>
             <p className={`text-gray-500 ${
               variant === 'featured' ? 'text-xs' : 'text-xs'
-            }`}
+            }` }>
               {new Date(post.publishDate).toLocaleDateString()}
             </p>
           </div>
@@ -186,11 +203,11 @@ export function BlogCard({ post, variant = 'regular', onReadMore, onBookmark, is
       </div>
 
       {/* Tags */}
-      <div className="flex flex-wrap gap-2mb-4">
+      <div className="flex flex-wrap gap-2 mb-4">
         {post.tags.slice(0, 3).map((tag) => (
           <span
             key={tag}
-            className="px-2py-1bg-gray-100text-gray-600rounded-fulltext-xs"
+            className="px-2py-1bg-gray-100 text-gray-600 rounded-fulltext-xs"
           >
             #{tag}
           </span>
@@ -200,8 +217,8 @@ export function BlogCard({ post, variant = 'regular', onReadMore, onBookmark, is
       {/* Read More Button */}
       <motion.button
         onClick={() => onReadMore(post)}
-        className="text-blue-600hover:text-blue-800font-medium transition-colors flexitems-center"
-        whileHover={{ , x: 5 }}
+        className="text-blue-600 hover:text-blue-800 font-medium transition-colors flexitems-center"
+        whileHover={{ x: 5 }}
       >
         Read More
         <motion.svg
@@ -212,7 +229,7 @@ export function BlogCard({ post, variant = 'regular', onReadMore, onBookmark, is
           animate={{ x: isHovered ? 5 : 0 }}
           transition={{ duration: 0.2 }}
         >
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M95l77-77" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M95 l 77-77" />
         </motion.svg>
       </motion.button>
     </motion.article>
@@ -253,9 +270,9 @@ export function BlogPagination({ currentPage, totalPages, onPageChange }: BlogPa
         disabled={currentPage === 1}
         className={`px-3py-2rounded-lg transition-colors ${
           currentPage === 1
-            ? 'bg-gray-100text-gray-400cursor-not-allowed'
-            : 'bg-white text-gray-700hover:bg-gray-50border border-gray-300'
-        }`}
+            ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
+            : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-300'
+        }` }
         whileHover={{ scale: currentPage === 1 ? 1 : 1.05 }}
         whileTap={{ scale: currentPage === 1 ? 1 : 0.95 }}
       </motion.button>
@@ -265,29 +282,67 @@ export function BlogPagination({ currentPage, totalPages, onPageChange }: BlogPa
           key={page}
           onClick={() =>onPageChange(page)}
           className={`px-3py-2rounded-lg transition-colors ${
-            currentPage === page
-              ? 'bg-blue-600text-white'
-              : 'bg-white text-gray-700hover:bg-gray-50border border-gray-300'
+            currentPage === page              ? 'bg-blue-600 text-white'
+              : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
           }`}
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-        </motion.button>
-      ))}
+        >
+          All Categories
+        </button>
+        {Array.from(new Set(posts.map(post => post.category))).map(category => (
+          <button
+            key={category}
+            onClick={() => handleCategoryFilter(category)}
+            className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+              selectedCategory === category
+                ? 'bg-blue-600 text-white'
+                : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+            }`}
+          >
+            {category}
+          </button>
+        ))}
+      </div>
 
-      <motion.button
-        onClick={() =>onPageChange(currentPage + 1)}
-        disabled={currentPage === totalPages}
-        className={`px-3py-2rounded-lg transition-colors ${
-          currentPage === totalPages
-            ? 'bg-gray-100text-gray-400cursor-not-allowed'
-            : 'bg-white text-gray-700hover:bg-gray-50border border-gray-300'
-        }`}
-        whileHover={{ scale: currentPage === totalPages ? 1 : 1.05 }}
-        whileTap={{ scale: currentPage === totalPages ? 1 : 0.95 }}
-      </motion.button>
+      {/* Posts Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {posts.map(post => (
+          <motion.article
+            key={post.id}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
+          >
+            <div className="p-6">
+              <div className="flex items-center justify-between mb-2">
+                <span className="text-sm text-blue-600 font-medium">{post.category}</span>
+                <span className="text-sm text-gray-500">{post.readTime} min read</span>
+              </div>
+              
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2 line-clamp-2">
+                {post.title}
+              </h3>
+              
+              <p className="text-gray-600 dark:text-gray-400 mb-4 line-clamp-3">
+                {post.excerpt}
+              </p>
+              
+              <div className="flex items-center justify-between">
+                <div className="flex items-center space-x-2">
+                  <User className="w-4 h-4 text-gray-400" />
+                  <span className="text-sm text-gray-600">{post.author}</span>
+                </div>
+                <div className="flex items-center space-x-4 text-sm text-gray-500">
+                  <span>{post.views} views</span>
+                  <span>{post.likes} likes</span>
+                </div>
+              </div>
+            </div>
+          </motion.article>
+        ))}
+      </div>
     </div>
   );
-}
+};
 
 interface BlogNewsletterProps {
   onSubscribe: (emai, l: string) => void;
@@ -311,10 +366,10 @@ export function BlogNewsletter({ onSubscribe, isLoading = false }: BlogNewslette
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
-        className="text-center py-8bg-green-50rounded-2xl borderborder-green-200"
+        className="text-center py-8bg-green-50 rounded-2xl borderborder-green-200"
       >
-        <div className="text-green-600text-4xlmb-4">✓</div>
-        <h3className="text-xl font-bold text-green-800mb-2">Thank you for subscribing!</h3>
+        <div className="text-green-600 text-4xlmb-4">✓</div>
+        <h3 className="text-xl font-bold text-green-800 mb-2">Thank you for subscribing!</h3>
         <p className="text-green-600">You&apos;ll receive our latest articles in your inbox.</p>
       </motion.div>
     );
@@ -324,16 +379,16 @@ export function BlogNewsletter({ onSubscribe, isLoading = false }: BlogNewslette
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      className="text-center py-16bg-gradient-to-r from-blue-600via-indigo-600to-purple-600rounded-3xl text-white relativeoverflow-hidden"
+      className="text-center py-16 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 rounded-3xl text-white relativeoverflow-hidden"
     >
       <div className="absolute inset-0opacity-10">
         <div className="absoluteinset-0" style={{
-          backgroundImage: `url("dat, a:image/svg+xml,%3Csvg width='60' height='60' viewBox='006060' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+          backgroundImage: `url("dat, a:image/svg+xml,%3Csvg width='60' height='60' viewBox='006060' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23 ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
         }}</p></div>
       </div>
       
       <div className="relativez-10">
-        <h2className="text-3xl md:text-5xl font-bold mb-6bg-gradient-to-r from-white to-blue-100bg-clip-texttext-transparent">
+        <h2 className="text-3xl md:text-5xl font-bold mb-6bg-gradient-to-r from-white to-blue-100 bg-clip-texttext-transparent">
           Stay Updated
         </h2>
         <p className="text-xl mb-8max-w-2xl mx-autoopacity-90">
@@ -346,13 +401,13 @@ export function BlogNewsletter({ onSubscribe, isLoading = false }: BlogNewslette
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
-            className="flex-1px-4py-3rounded-lg text-gray-800placeholder-gray-500focus:outline-none focu, s:ring-2focu,s:ring-white"
+            className="flex-1px-4py-3rounded-lg text-gray-800 placeholder-gray-500 focus:outline-none focu  s:ring-2focu s:ring-white"
             aria-label="Email address for newsletter subscription"
           />
           <motion.button
             type="submit"
             disabled={isLoading}
-            className="bg-white text-blue-600px-6py-3rounded-lg font-semibold hover:bg-gray-100transition-colors disable,d:opacity-50"
+            className="bg-white text-blue-600 px-6py-3rounded-lg font-semibold hover:bg-gray-100 transition-colors disable d:opacity-50"
             whileHover={{ scal, e: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >

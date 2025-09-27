@@ -3,8 +3,8 @@ import React, { useEffect, useRef, useCallback } from 'react';
 interface PerformanceMetrics {
   loadTime: number;
   domContentLoaded: number;
-  firstPain, t: number;
-  firstContentfulPain, t: number;
+  firstPaint: number;
+  firstContentfulPaint: number;
   largestContentfulPaint?: number;
   firstInputDelay?: number;
   cumulativeLayoutShift?: number;
@@ -32,7 +32,7 @@ export default function PerformanceTracker({
       const paintEntries = performance.getEntriesByType('paint');
       
       const metrics: PerformanceMetrics = {
-        loadTim, e: navigation.loadEventEnd - navigation.fetchStart,
+        loadTime: navigation.loadEventEnd - navigation.fetchStart,
         domContentLoaded: navigation.domContentLoadedEventEnd - navigation.fetchStart,
         firstPaint: paintEntries.find(entry => entry.name === 'first-paint')?.startTime || 0,
         firstContentfulPaint: paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0
@@ -117,7 +117,8 @@ export default function PerformanceTracker({
 
           // Send to analytics
           if (enableAnalytics && typeof window !== 'undefined') {
-            // Google Analytics4if (window.gtag) {
+            // Google Analytics 4
+            if (window.gtag) {
               window.gtag('event', 'page_load_metrics', {
                 load_time: Math.round(metrics.loadTime),
                 dom_content_loaded: Math.round(metrics.domContentLoaded),
@@ -143,7 +144,9 @@ export default function PerformanceTracker({
           }
 
           // Custom callback
-          onMetricsCollected?.(metrics);
+          if (onMetricsCollected) {
+            onMetricsCollected(metrics);
+          }
         }, 1000);
       }
     } catch (error) {
@@ -228,30 +231,30 @@ export function getPerformanceGrade(metrics: PerformanceMetrics): {
     }
   };
 
-  // Load Time scoring (target: < 3000ms)
+  // Load Time scoring (target: < 3000 ms)
   if (metrics.loadTime > 5000) {
     score -= 30;
-    recommendations.push('Optimize page load time (currently over5seconds)');
+    recommendations.push('Optimize page load time (currently over 5 seconds)');
   } else if (metrics.loadTime > 3000) {
     score -= 15;
     recommendations.push('Consider optimizing page load time');
   }
 
-  // First Contentful Paint scoring (target: < 1800ms)
+  // First Contentful Paint scoring (target: < 1800 ms)
   if (metrics.firstContentfulPaint > 3000) {
     score -= 25;
-    recommendations.push('Improve First Contentful Paint (currently over3seconds)');
+    recommendations.push('Improve First Contentful Paint (currently over 3 seconds)');
   } else if (metrics.firstContentfulPaint > 1800) {
     score -= 10;
     recommendations.push('Consider improving First Contentful Paint');
   }
 
-  // Largest Contentful Paint scoring (target: < 2500ms)
+  // Largest Contentful Paint scoring (target: < 2500 ms)
   if (metrics.largestContentfulPaint) {
     if (metrics.largestContentfulPaint > 4000) {
       score -= 25;
       webVitals.lcp.status = 'poor';
-      recommendations.push('Optimize Largest Contentful Paint (currently over4seconds)');
+      recommendations.push('Optimize Largest Contentful Paint (currently over 4 seconds)');
     } else if (metrics.largestContentfulPaint > 2500) {
       score -= 10;
       webVitals.lcp.status = 'needs-improvement';
@@ -261,12 +264,12 @@ export function getPerformanceGrade(metrics: PerformanceMetrics): {
     }
   }
 
-  // First Input Delay scoring (target: < 100ms)
+  // First Input Delay scoring (target: < 100 ms)
   if (metrics.firstInputDelay) {
     if (metrics.firstInputDelay > 300) {
       score -= 20;
       webVitals.fid.status = 'poor';
-      recommendations.push('Reduce First Input Delay (currently over300ms)');
+      recommendations.push('Reduce First Input Delay (currently over 300 ms)');
     } else if (metrics.firstInputDelay > 100) {
       score -= 5;
       webVitals.fid.status = 'needs-improvement';

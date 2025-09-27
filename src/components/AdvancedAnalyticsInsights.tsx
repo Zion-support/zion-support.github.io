@@ -269,9 +269,9 @@ export default function AdvancedAnalyticsInsights({
 
   const getInsightColor = (type: string) => {
     switch (type) {
-      case 'positive': return 'border-green-200bg-green-50';
-      case 'negative': return 'border-red-200bg-red-50';
-      default: return 'border-blue-200bg-blue-50';
+      case 'positive': return 'border-green-200 bg-green-50';
+      case 'negative': return 'border-red-200 bg-red-50';
+      default: return 'border-blue-200 bg-blue-50';
     }
   };
 
@@ -297,11 +297,11 @@ export default function AdvancedAnalyticsInsights({
           <select
             value={timeRange}
             onChange={(e) => setTimeRange(e.target.value as any)}
-            className="px-3py-1border border-gray-300rounded-md text-sm"
+            className="px-3 py-1 border border-gray-300 rounded-md text-sm"
           >
-            <option value="7d">Last7days</option>
-            <option value="30d">Last30days</option>
-            <option value="90d">Last90days</option>
+            <option value="7d">Last 7 days</option>
+            <option value="30d">Last 30 days</option>
+            <option value="90d">Last 90 days</option>
             <option value="1y">Last year</option>
           </select>
         </div>
@@ -462,13 +462,13 @@ export default function AdvancedAnalyticsInsights({
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -20 }}
-                    className={`p-4rounded-lg border ${getInsightColor(insight.type)}`}
+                    className={`p-4 rounded-lg border ${getInsightColor(insight.type)}`}
                   >
                     <div className="flex items-start space-x-3">
                       {getInsightIcon(insight.type)}
                       <div className="flex-1">
-                        <h4className="font-semibold text-sm">{insight.title}</h4>
-                        <p className="text-sm text-gray-600mt-1">{insight.description}</p>
+                        <h4 className="font-semibold text-sm">{insight.title}</h4>
+                        <p className="text-sm text-gray-600 mt-1">{insight.description}</p>
                         <div className="mt-2">
                           <p className="text-xs font-medium text-gray-700">Impact:</p>
                           <p className="text-xs text-gray-600">{insight.impact}</p>

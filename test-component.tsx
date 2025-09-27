@@ -7,3 +7,5 @@ export const TestComponent: React.FC = () => {
     </div>
   );
 };
+
+export default TestComponent;

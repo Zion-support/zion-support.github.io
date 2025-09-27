@@ -68,16 +68,16 @@ const SEOAnalyzer: React.FC = () => {
     } else if (title.length < 30) {
       issues.push({
         type: 'warning',
-        message: 'Title tag is too short (less than30characters)',
+        message: 'Title tag is too short (less than 30 characters)',
         severity: 'medium',
         suggestion: 'Make your title more descriptive and longer'
       });
     } else if (title.length > 60) {
       issues.push({
         type: 'warning',
-        message: 'Title tag is too long (more than60characters)',
+        message: 'Title tag is too long (more than 60 characters)',
         severity: 'medium',
-        suggestion: 'Shorten your title to under60characters'
+        suggestion: 'Shorten your title to under 60 characters'
       });
     } else {
       passedChecks++;
@@ -96,37 +96,37 @@ const SEOAnalyzer: React.FC = () => {
     } else if (metaDescription.length < 120) {
       issues.push({
         type: 'warning',
-        message: 'Meta description is too short (less than120characters)',
+        message: 'Meta description is too short (less than 120 characters)',
         severity: 'medium',
         suggestion: 'Make your meta description more descriptive'
       });
     } else if (metaDescription.length > 160) {
       issues.push({
         type: 'warning',
-        message: 'Meta description is too long (more than160characters)',
+        message: 'Meta description is too long (more than 160 characters)',
         severity: 'medium',
-        suggestion: 'Shorten your meta description to under160characters'
+        suggestion: 'Shorten your meta description to under 160 characters'
       });
     } else {
       passedChecks++;
     }
 
-    // Check for H1tag
+    // Check for H1 tag
     totalChecks++;
     const h1Tags = document.querySelectorAll('h1');
     if (h1Tags.length === 0) {
       issues.push({
         type: 'error',
-        message: 'Missing H1tag',
+        message: 'Missing H1 tag',
         severity: 'high',
-        suggestion: 'Add an H1tag to your page'
+        suggestion: 'Add an H1 tag to your page'
       });
     } else if (h1Tags.length > 1) {
       issues.push({
         type: 'warning',
-        message: 'Multiple H1tags found',
+        message: 'Multiple H1 tags found',
         severity: 'medium',
-        suggestion: 'Use only one H1tag per page'
+        suggestion: 'Use only one H1 tag per page'
       });
     } else {
       passedChecks++;
@@ -296,10 +296,10 @@ const SEOAnalyzer: React.FC = () => {
 
   const getSeverityColor = (severity: string): string => {
     switch (severity) {
-      case 'high': return 'text-red-600bg-red-50';
-      case 'medium': return 'text-yellow-600bg-yellow-50';
-      case 'low': return 'text-blue-600bg-blue-50';
-      default: return 'text-gray-600bg-gray-50';
+      case 'high': return 'text-red-600 bg-red-50';
+      case 'medium': return 'text-yellow-600 bg-yellow-50';
+      case 'low': return 'text-blue-600 bg-blue-50';
+      default: return 'text-gray-600 bg-gray-50';
     }
   };
 
@@ -319,18 +319,17 @@ const SEOAnalyzer: React.FC = () => {
   return (
     <div className="bg-white rounded-lg shadow-mdp-6">
       <div className="flex items-center justify-between mb-6">
-        <h2className="text-xl font-semiboldtext-gray-900">SEO Analyzer</h2>
+        <h2 className="text-xl font-semiboldtext-gray-900">SEO Analyzer</h2>
         <div className="flexspace-x-2">
           <button
             onClick={checkSEO}
             disabled={isRunning}
-            className="px-4py-2text-sm font-medium text-white bg-blue-600rounded-md hover:bg-blue-700disable, d:opacity-50disable,d:cursor-not-allowed"
-          >
+            className="px-4py-2text-sm font-medium text-white bg-blue-600 rounded-md hover:bg-blue-700 disable  d:opacity-50 disable d:cursor-not-allowed"          >
             {isRunning ? 'Analyzing...' : 'Reanalyze'}
           </button>
           <button
             onClick={() => setIsVisible(!isVisible)}
-            className="px-4py-2text-sm font-medium text-gray-700bg-gray-100rounded-md hover:bg-gray-200"
+            className="px-4 py-2 text-sm font-medium text-gray-700 bg-gray-100 rounded-md hover:bg-gray-200"
           </button>
         </div>
       </div>
@@ -340,15 +339,16 @@ const SEOAnalyzer: React.FC = () => {
           {/* Overall Score */}
           <div className="mb-6">
             <div className="flex items-center justify-between mb-2">
-              <span className="text-sm font-mediumtext-gray-700">SEO Score</span>
-              <span className={`text-2xl font-bold ${report.score >= 90 ? 'text-green-600' : report.score >= 70 ? 'text-yellow-600' : 'text-red-600'}`}
+              <span className="text-sm font-medium text-gray-700">SEO Score</span>
+              <span className={`text-2xl font-bold ${report.score >= 90 ? 'text-green-600' : report.score >= 70 ? 'text-yellow-600' : 'text-red-600'}` }>
                 {report.score}%
               </span>
             </div>
-            <div className="w-full bg-gray-200rounded-fullh-2">
+            <div className="w-full bg-gray-200 rounded-fullh-2">
               <div
-                className={`h-2rounded-full ${report.score >= 90 ? 'bg-green-500' : report.score >= 70 ? 'bg-yellow-500' : 'bg-red-500'}`}
-                style={{ width: `${report.score}%` }}</p></div>
+                className={`h-2 rounded-full ${report.score >= 90 ? 'bg-green-500' : report.score >= 70 ? 'bg-yellow-500' : 'bg-red-500'}` }
+                style={{ width: `${report.score}%` }}
+              ></div>
             </div>
             <p className="text-sm text-gray-600mt-2">
               {report.passedChecks} of {report.totalChecks} checks passed
@@ -356,51 +356,55 @@ const SEOAnalyzer: React.FC = () => {
           </div>
 
           {/* Quick Stats */}
-          <div className="grid grid-cols-2md:grid-cols-4gap-4mb-6">
-            <div className="p-4border rounded-lgtext-center">
-              <p className="text-2xl font-boldtext-blue-600">{report.headings.h1}</p>
-              <p className="text-sm text-gray-600">H1Tags</p>
+          <div className="grid grid-cols-2md:grid-cols-4gap-4 mb-6">
+            <div className="p-4border rounded-lgtext-center">              <p className="text-2xl font-boldtext-blue-600">{report.headings.h1}</p>
+              <p className="text-smtext-gray-600">H1 Tags</p>
             </div>
-            <div className="p-4border rounded-lgtext-center">
+            <div className="p-4 border rounded-lgtext-center">
               <p className="text-2xl font-boldtext-green-600">{report.images.withAlt}</p>
-              <p className="text-sm text-gray-600">Images with Alt</p>
+              <p className="text-smtext-gray-600">Images with Alt</p>
             </div>
-            <div className="p-4border rounded-lgtext-center">
+            <div className="p-4 border rounded-lgtext-center">
               <p className="text-2xl font-boldtext-purple-600">{report.links.internal}</p>
-              <p className="text-sm text-gray-600">Internal Links</p>
+              <p className="text-smtext-gray-600">Internal Links</p>
             </div>
-            <div className="p-4border rounded-lgtext-center">
+            <div className="p-4 border rounded-lgtext-center">
               <p className="text-2xl font-boldtext-orange-600">{report.links.external}</p>
-              <p className="text-sm text-gray-600">External Links</p>
+              <p className="text-smtext-gray-600">External Links</p>
             </div>
           </div>
 
           {/* Issues Summary */}
-          <div className="grid grid-cols-1md:grid-cols-3gap-4mb-6">
-            <div className="p-4borderrounded-lg">
-              <div className="flexitems-center">
+          <div className="grid grid-cols-1md:grid-cols-3gap-4 mb-6">
+            <div className="p-4borderrounded-lg">              <div className="flexitems-center">
                 <span className="text-2xlmr-2">❌</span>
                 <div>
-                  <p className="text-sm font-mediumtext-gray-900">Errors</p>
-                  <p className="text-2xl font-boldtext-red-600">{report.issues.filter(issue =</issue.type === 'error').length}</p></div>
+                  <p className="text-sm font-medium text-gray-900">Errors</p>
+                  <p className="text-2xl font-boldtext-red-600">{report.issues.filter(issue =</issue.type === 'error').length}
+                  >
+                </div>
               </div>
             </div>
             
-            <div className="p-4borderrounded-lg">
+            <div className="p-4 borderrounded-lg">
               <div className="flexitems-center">
                 <span className="text-2xlmr-2">⚠️</span>
                 <div>
-                  <p className="text-sm font-mediumtext-gray-900">Warnings</p>
-                  <p className="text-2xl font-boldtext-yellow-600">{report.issues.filter(issue =</issue.type === 'warning').length}</p></div>
+                  <p className="text-sm font-medium text-gray-900">Warnings</p>
+                  <p className="text-2xl font-boldtext-yellow-600">{report.issues.filter(issue =</issue.type === 'warning').length}
+                  >
+                </div>
               </div>
             </div>
             
-            <div className="p-4borderrounded-lg">
+            <div className="p-4 borderrounded-lg">
               <div className="flexitems-center">
                 <span className="text-2xlmr-2">ℹ️</span>
                 <div>
-                  <p className="text-sm font-mediumtext-gray-900">Info</p>
-                  <p className="text-2xl font-boldtext-blue-600">{report.issues.filter(issue =</issue.type === 'info').length}</p></div>
+                  <p className="text-sm font-medium text-gray-900">Info</p>
+                  <p className="text-2xl font-boldtext-blue-600">{report.issues.filter(issue =</issue.type === 'info').length}
+                  >
+                </div>
               </div>
             </div>
           </div>
@@ -408,17 +412,17 @@ const SEOAnalyzer: React.FC = () => {
           {/* Detailed Issues */}
           {isVisible && (
             <div className="space-y-4">
-              <h3className="text-lg font-mediumtext-gray-900">Issues Found</h3>
-              <div className="space-y-2max-h-96overflow-y-auto">
+              <h3 className="text-lg font-medium text-gray-900">Issues Found</h3>
+              <div className="space-y-2 max-h-96overflow-y-auto">
                 {report.issues.map((issue, index) => (
                   <div
                     key={index}
-                    className={`p-3rounded-md border ${getSeverityColor(issue.severity)}`}
+                    className={`p-3 rounded-md border ${getSeverityColor(issue.severity)}` }
                   >
                     <div className="flex items-startspace-x-2">
                       <span className="text-lg">{getTypeIcon(issue.type)}</span>
                       <div className="flex-1">
-                        <p className="text-sm font-medium">{issue.message}</p>
+                        <p className="text-smfont-medium">{issue.message}</p>
                         {issue.suggestion && (
                           <p className="text-xs text-gray-600mt-1">
                             💡 {issue.suggestion}
@@ -435,7 +439,7 @@ const SEOAnalyzer: React.FC = () => {
           {report.issues.length === 0 && (
             <div className="text-centerpy-8">
               <div className="text-4xlmb-4">🎉</div>
-              <h3className="text-lg font-medium text-gray-900mb-2">Excellent SEO!</h3>
+              <h3 className="text-lg font-medium text-gray-900mb-2">Excellent SEO!</h3>
               <p className="text-gray-600">No SEO issues found.</p>
             </div>
           )}

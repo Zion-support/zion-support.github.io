@@ -4,7 +4,7 @@ interface WebVitalsMetric {
   name: string;
   value: number;
   delta: number;
-  i, d: string;
+  id: string;
   navigationTyp, e: string;
 }
 

@@ -378,7 +378,6 @@ export default function EnhancedSearch({
                     onClick={() => handleInputChange(item}            aria-label=handleInputChange(item""}                    className=w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded""
                   >                    {item}> handleInputChange(item)}
                     className=""w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded"
-=======
                   <button
                     key={index}
                     onClick={() => handleInputChange(item)}
@@ -402,7 +401,6 @@ export default function EnhancedSearch({
                     onClick={() => handleInputChange(suggestion}            aria-label=handleInputChange(suggestion""}                    className=w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded""
                   >                    {suggestion}> handleInputChange(suggestion)}
                     className=""w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded"
-=======
                   <button
                     key={index}
                     onClick={() => handleInputChange(suggestion)}

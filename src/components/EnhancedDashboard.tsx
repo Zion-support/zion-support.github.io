@@ -1,21 +1,6 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  BarChart, 
-  Bar, 
-  XAxis, 
-  YAxis, 
-  CartesianGrid, 
-  Tooltip, 
-  ResponsiveContainer,
-  LineChart,
-  Line,
-  PieChart,
-  Pie,
-  Cell,
-  Area,
-  AreaChart
-} from 'recharts';
+import { Activity, TrendingUp, Users, Zap, Shield, BarChart3 } from 'lucide-react';
 
 interface DashboardWidget {
   id: string;
@@ -23,15 +8,15 @@ interface DashboardWidget {
   type: 'chart' | 'metric' | 'table' | 'list';
   data: any;
   size: 'small' | 'medium' | 'large';
-  position: { , x: number; , y: number };
+  position: { x: number; y: number };
 }
 
 interface DashboardProps {
-  widgets?: DashboardWidget[];
-  enableDragDrop?: boolean;
-  enableResize?: boolean;
-  enableFullscreen?: boolean;
-  onWidgetUpdate?: (widgets: DashboardWidget[]) => void;
+  widgets: DashboardWidget[];
+  onWidgetUpdate?: (widget: DashboardWidget) => void;
+  onWidgetAdd?: (widget: Omit<DashboardWidget, 'id'>) => void;
+  onWidgetRemove?: (widgetId: string) => void;
+  className?: string;
 }
 
 const sampleData = {
@@ -44,10 +29,10 @@ const sampleData = {
     { month: 'Jun', revenue: 2390, profit: 3800 },
   ],
   users: [
-    { nam, e: 'Active Users', value: 400, color: '#0088FE' },
-    { name: 'New Users', value: 300, color: '#00C49F' },
-    { name: 'Returning Users', value: 300, color: '#FFBB28' },
-    { name: 'Inactive Users', value: 200, color: '#FF8042' },
+    { nam, e: 'Active Users', value: 400, color: '#0088 FE' },
+    { name: 'New Users', value: 300, color: '#00 C49 F' },
+    { name: 'Returning Users', value: 300, color: '#FFBB 28' },
+    { name: 'Inactive Users', value: 200, color: '#FF 8042' },
   ],
   performance: [
     { tim, e: '0, 0:00', cpu: 20, memory: 40, disk: 10 },
@@ -61,12 +46,12 @@ const sampleData = {
 
 const defaultWidgets: DashboardWidget[] = [
   {
-    i, d: 'revenue-chart',
+    id: 'revenue-chart',
     title: 'Revenue Overview',
     type: 'chart',
     data: sampleData.revenue,
     size: 'large',
-    position: { , x: 0, y: 0 }
+    position: { x: 0, y: 0 }
   },
   {
     id: 'user-metrics',
@@ -74,7 +59,7 @@ const defaultWidgets: DashboardWidget[] = [
     type: 'chart',
     data: sampleData.users,
     size: 'medium',
-    position: { , x: 0, y: 1 }
+    position: { x: 0, y: 1 }
   },
   {
     id: 'performance-metrics',
@@ -82,7 +67,7 @@ const defaultWidgets: DashboardWidget[] = [
     type: 'chart',
     data: sampleData.performance,
     size: 'large',
-    position: { , x: 1, y: 0 }
+    position: { x: 1, y: 0 }
   },
   {
     id: 'total-revenue',
@@ -90,7 +75,7 @@ const defaultWidgets: DashboardWidget[] = [
     type: 'metric',
     data: { valu, e: '$45,231', change: '+12.5%', trend: 'up' },
     size: 'small',
-    position: { , x: 2, y: 0 }
+    position: { x: 2, y: 0 }
   },
   {
     id: 'active-users',
@@ -98,7 +83,7 @@ const defaultWidgets: DashboardWidget[] = [
     type: 'metric',
     data: { valu, e: '2,847', change: '+8.2%', trend: 'up' },
     size: 'small',
-    position: { , x: 2, y: 1 }
+    position: { x: 2, y: 1 }
   },
   {
     id: 'conversion-rate',
@@ -106,7 +91,7 @@ const defaultWidgets: DashboardWidget[] = [
     type: 'metric',
     data: { valu, e: '3.24%', change: '-2.1%', trend: 'down' },
     size: 'small',
-    position: { , x: 2, y: 2 }
+    position: { x: 2, y: 2 }
   }
 ];
 
@@ -145,8 +130,8 @@ export default function EnhancedDashboard({
               <XAxis dataKey="month" />
               <YAxis />
               <Tooltip />
-              <Area type="monotone" dataKey="revenue" stackId="1" stroke="#8884d8" fill="#8884d8" />
-              <Area type="monotone" dataKey="profit" stackId="1" stroke="#82ca9d" fill="#82ca9d" />
+              <Area type="monotone" dataKey="revenue" stackId="1" stroke="#8884 d8" fill="#8884 d8" />
+              <Area type="monotone" dataKey="profit" stackId="1" stroke="#82 ca 9 d" fill="#82 ca 9 d" />
             </AreaChart>
           </ResponsiveContainer>
         );
@@ -162,11 +147,11 @@ export default function EnhancedDashboard({
                 labelLine={false}
                 label={({ name, percent }) => `${name} ${(percent * 100).toFixed(0)}%`}
                 outerRadius={80}
-                fill="#8884d8"
+                fill="#8884 d8"
                 dataKey="value"
               >
                 {data.map((entry: any, index: number) => (
-                  <Cell key={`cell-${index}`} fill={entry.color} />
+                  <Cell key={`cell-${index}` } fill={entry.color} />
                 ))}
               </Pie>
               <Tooltip />
@@ -182,8 +167,8 @@ export default function EnhancedDashboard({
               <XAxis dataKey="time" />
               <YAxis />
               <Tooltip />
-              <Line type="monotone" dataKey="cpu" stroke="#8884d8" strokeWidth={2} />
-              <Line type="monotone" dataKey="memory" stroke="#82ca9d" strokeWidth={2} />
+              <Line type="monotone" dataKey="cpu" stroke="#8884 d8" strokeWidth={2} />
+              <Line type="monotone" dataKey="memory" stroke="#82 ca 9 d" strokeWidth={2} />
               <Line type="monotone" dataKey="disk" stroke="#ffc658" strokeWidth={2} />
             </LineChart>
           </ResponsiveContainer>
@@ -196,10 +181,10 @@ export default function EnhancedDashboard({
 
   const renderMetric = (data: any) => (
     <div className="text-center">
-      <div className="text-3xl font-bold text-gray-900mb-2">{data.value}</div>
+      <div className="text-3xl font-bold text-gray-900 mb-2">{data.value}</div>
       <div className={`flex items-center justify-center text-sm ${
         data.trend === 'up' ? 'text-green-600' : 'text-red-600'
-      }`}
+      }`}>
         <span className="mr-1">{data.trend === 'up' ? '↗' : '↘'}</span>
         {data.change}
       </div>
@@ -217,7 +202,7 @@ export default function EnhancedDashboard({
       <motion.div
         key={widget.id}
         className={`bg-white rounded-lg shadow-lg p-6 ${sizeClasses[widget.size]} ${
-          selectedWidget === widget.id ? 'ring-2ring-blue-500' : ''
+          selectedWidget === widget.id ? 'ring-2 ring-blue-500' : ''
         }`}
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -225,26 +210,26 @@ export default function EnhancedDashboard({
         whileHover={{ scale: 1.02 }}
         onClick={() => setSelectedWidget(widget.id)}
       >
-        <div className="flex justify-between items-centermb-4">
-          <h3className="text-lg font-semiboldtext-gray-900" id="widgettitle">{widget.title}</h3>
-          <div className="flexspace-x-2">
+        <div className="flex justify-between items-center mb-4">
+          <h3 className="text-lg font-semiboldtext-gray-900" id="widgettitle">{widget.title}</h3>
+          <div className="flex space-x-2">
             {enableResize && (
-              <button className="text-gray-400hover:text-gray-600">
+              <button className="text-gray-400 hover:text-gray-600">
                 <svg className="w-4h-4" fill="none" stroke="currentColor" viewBox="002424">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M48V4m00h4M44 l55m11-1V4m00h-4m40l-55M416v4m00h4 m-40l5-5m115l-5-5m55v-4m04h-4" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M48V4m00h4M44 l55 m 11-1V 4 m00 h-4m40 l-55M416v 4 m00 h4 m-40 l5-5m 115 l-5-5m55 v-4m04 h-4" />
                 </svg>
               </button>
             )}
             {enableFullscreen && (
               <button 
-                className="text-gray-400hover:text-gray-600"
+                className="text-gray-400 hover:text-gray-600"
                 onClick={(e) => {
                   e.stopPropagation();
                   setIsFullscreen(true);
                 }}
               >
                 <svg className="w-4h-4" fill="none" stroke="currentColor" viewBox="002424">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M48V4m00h4M44 l55m11-1V4m00h-4m40l-55M416v4m00h4 m-40l5-5m115l-5-5m55v-4m04h-4" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M48V4m00h4M44 l55 m 11-1V 4 m00 h-4m40 l-55M416v 4 m00 h4 m-40 l5-5m 115 l-5-5m55 v-4m04 h-4" />
                 </svg>
               </button>
             )}
@@ -260,9 +245,9 @@ export default function EnhancedDashboard({
 
   if (isLoading) {
     return (
-      <div className="min-h-screen bg-gray-50flex items-center justify-center">
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-12w-12border-b-2border-blue-600mx-automb-4"></div>
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2border-blue-600 mx-automb-4"></div>
           <p className="text-gray-600">Loading dashboard...</p>
         </div>
       </div>
@@ -270,63 +255,56 @@ export default function EnhancedDashboard({
   }
 
   return (
-    <div className={`min-h-screen bg-gray-50 ${isFullscreen ? 'fixed inset-0z-50' : ''}`}
+    <div className={`min-h-screen bg-gray-50 ${isFullscreen ? 'fixed inset-0 z-50' : ''}`}>
       <div className="p-6">
-        <div className="flex justify-between items-centermb-8">
+        <div className="flex justify-between items-center mb-8">
           <div>
-            <h1className="text-3xl font-boldtext-gray-900" id="dashboard">Dashboard</h1>
+            <h 1 className="text-3xl font-boldtext-gray-900" id="dashboard">Dashboard</h1>
             <p className="text-gray-600">Monitor your business metrics and performance</p>
           </div>
-          <div className="flexspace-x-4">
-            <button className="bg-blue-600text-white px-4py-2rounded-lg hover:bg-blue-700transition-colors" aria-label="Export Data">
+          <div className="flex space-x-4">
+            <button className="bg-blue-600 text-white px-4py-2rounded-lg hover:bg-blue-700 transition-colors" aria-label="Export Data">
               Export Data
             </button>
-            <button className="bg-gray-200text-gray-700px-4py-2rounded-lg hover:bg-gray-300transition-colors" aria-label="Settings">
+            <button className="bg-gray-200 text-gray-700 px-4py-2rounded-lg hover:bg-gray-300 transition-colors" aria-label="Settings">
               Settings
             </button>
-          </div>
-        </div>
+          </div>        </div>
 
-        <div className="grid grid-cols-3gap-6auto-rows-min">
-          {dashboardWidgets.map(renderWidget)}
-        </div>
-      </div>
-
-      {/* Fullscreen Modal */}
-      <AnimatePresence>
-        {isFullscreen && selectedWidget && (
-          <motion.div
-            className="fixed inset-0bg-black bg-opacity-50flex items-center justify-centerz-50"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            onClick={() => setIsFullscreen(false)}
-          >
+        {/* Widgets Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          {widgets.map(widget => (
             <motion.div
-              className="bg-white rounded-lg p-8max-w-6xl max-h-[90vh]overflow-auto"
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
-              onClick={(e) => e.stopPropagation()}
+              key={widget.id}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6"
             >
-              <div className="flex justify-between items-centermb-6">
-                <h2className="text-2xl font-boldtext-gray-900" id="dashboardwidgetsfindw-wid-selectedwidgettitle">{dashboardWidgets.find(w =</w.id === selectedWidget)?.title}
-                >
+              <div className="flex justify-between items-center mb-6">
+                <h2 className="text-2xl font-bold text-gray-900" id="dashboard-widgets-find-widget-selected-widget-title">{dashboardWidgets.find(w => w.id === selectedWidget)?.title}</h2>
                 <button
                   onClick={() => setIsFullscreen(false)}
-                  className="text-gray-400hover:text-gray-600"
+                  className="text-gray-400 hover:text-gray-600"
                 >
-                  <svg className="w-6h-6" fill="none" stroke="currentColor" viewBox="002424">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M618L186M66l1212" />
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                   </svg>
-                </button>
+                </button>              </div>
+              
+              <div className="text-center">
+                <div className="text-3xl font-bold text-blue-600 mb-2">
+                  {widget.data?.value || '0'}
+                </div>
+                <p className="text-gray-600 dark:text-gray-400">
+                  {widget.data?.label || 'No data'}
+                </p>
               </div>
-              <div className="h-96">{renderChart(dashboardWidgets.find(w =</w.id === selectedWidget)!)}
-              >
             </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+          ))}
+        </div>
+      </div>
     </div>
   );
-}
+};
+
+export default EnhancedDashboard;
