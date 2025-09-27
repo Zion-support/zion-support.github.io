@@ -1,36 +1,36 @@
 import React from "react"
 import { motion } from "framer-motion"
 import { ;
-  Brain,;
-  TrendingUp, ;
-  DollarSign, ;
-  CheckCircle, ;
-  Star, ;
-  Users, ;
-  Globe,;
-  Lock,;
-  Cpu,;
-  Database,;
-  Network,;
-  BarChart3,;
-  ArrowRight,;
-  Sparkles,;
-  Atom,;
-  Workflow,;
-  Target,;
-  Rocket,;
-  Shield,;
-  Zap,;
-  Activity,;
-  LineChart,;
-  PieChart,;
-  Target as TargetIcon,;
-  BrainCircuit,;
-  Clock,;
-  AlertTriangle,;
-  TrendingDown,;
-  DollarSign as DollarIcon,;
-  BarChart,;
+  Brain;
+  TrendingUp;
+  DollarSign;
+  CheckCircle;
+  Star;
+  Users;
+  Globe;
+  Lock;
+  Cpu;
+  Database;
+  Network;
+  BarChart3;
+  ArrowRight;
+  Sparkles;
+  Atom;
+  Workflow;
+  Target;
+  Rocket;
+  Shield;
+  Zap;
+  Activity;
+  LineChart;
+  PieChart;
+  Target as TargetIcon;
+  BrainCircuit;
+  Clock;
+  AlertTriangle;
+  TrendingDown;
+  DollarSign as DollarIcon;
+  BarChart;
   PieChart as PieChartIcon;
 } from "lucide-react"
 import { SEO } from "../../components/SEO"
@@ -64,57 +64,57 @@ export default function AIFinancialTrading() {;
     };
   ];
   const benefits = [;
-    "Increase trading profits by up to 300%",;
-    "Reduce trading risks by 65%",;
-    "24/7 automated trading operations",;
-    "Real-time market analysis and alerts",;
-    "Multi-asset portfolio management",;
+    "Increase trading profits by up to 300%";
+    "Reduce trading risks by 65%";
+    "24/7 automated trading operations";
+    "Real-time market analysis and alerts";
+    "Multi-asset portfolio management";
     "Advanced backtesting and optimization"
-  ],;
+  ];
 
   const pricing = [;
     {;
-      name: "Starter",price: "$4,500",;
+      name: "Starter",price: "$4,500";
       period: "/month",features: [;
         "Up to $100K portfolio"
-        "5 trading strategies",;
-        "Basic risk management",;
-        "Email support",;
+        "5 trading strategies";
+        "Basic risk management";
+        "Email support";
         "Standard reporting"
       ];
-    },;
+    };
     {;
-      name: "Professional",price: "$9,500",;
+      name: "Professional",price: "$9,500";
       period: "/month",features: [;
         "Up to $1M portfolio"
-        "15 trading strategies",;
-        "Advanced risk management",;
-        "Priority support",;
-        "Custom strategies",;
+        "15 trading strategies";
+        "Advanced risk management";
+        "Priority support";
+        "Custom strategies";
         "API access"
       ];
-    },;
+    };
     {;
-      name: "Enterprise",price: "$25,000",;
+      name: "Enterprise",price: "$25,000";
       period: "/month",features: [;
         "Unlimited portfolio size"
-        "Custom AI models",;
-        "White-label solution",;
-        "24/7 dedicated support",;
-        "On-premise deployment",;
+        "Custom AI models";
+        "White-label solution";
+        "24/7 dedicated support";
+        "On-premise deployment";
         "Custom development"
       ];
     };
-  ],;
+  ];
 
   const supportedAssets = [;
-    "Stocks & ETFs",;
-    "Cryptocurrencies",;
-    "Forex Pairs",;
-    "Commodities",;
-    "Options & Futures",;
+    "Stocks & ETFs";
+    "Cryptocurrencies";
+    "Forex Pairs";
+    "Commodities";
+    "Options & Futures";
     "Bonds & Fixed Income"
-  ],;
+  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;

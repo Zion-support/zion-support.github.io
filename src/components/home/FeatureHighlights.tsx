@@ -1,10 +1,10 @@
 import { motion } from "framer-motion"
 import {;
-  Award,;
-  Brain,;
-  CheckCircle,;
-  Globe,;
-  Shield,;
+  Award;
+  Brain;
+  CheckCircle;
+  Globe;
+  Shield;
   Users;
 } from "lucide-react"
 import React from "react"
@@ -49,26 +49,26 @@ const achievements = [;
 ];
 const technologies = [;
   "React", "TypeScript", "Node.js", "Python", "AI/ML", "Blockchain", "Cloud", "DevOps"
-],;
+];
 
 const highlights = [;
   {;
-    icon: Brain,title: 'AI-Powered Intelligence',description: 'Advanced machine learning algorithms that continuously learn and adapt to provide smarter solutions.',features: ['Predictive AnalyticsSmart Recommendations', 'Automated Workflows'],;
+    icon: Brain,title: 'AI-Powered Intelligence',description: 'Advanced machine learning algorithms that continuously learn and adapt to provide smarter solutions.',features: ['Predictive AnalyticsSmart Recommendations', 'Automated Workflows'];
     color: 'from-zion-purple to-zion-purple-dark',bgColor: 'bg-zion-purple/10',borderColor: 'border-zion-purple/20'
   };
   {;
-    icon: Globe,title: 'Global Network',description: 'Connect with professionals and businesses from over 150 countries worldwide.',features: ['Multi-language SupportLocal Expertise', '24/7 Availability'],;
+    icon: Globe,title: 'Global Network',description: 'Connect with professionals and businesses from over 150 countries worldwide.',features: ['Multi-language SupportLocal Expertise', '24/7 Availability'];
     color: 'from-zion-cyan to-zion-cyan-dark',bgColor: 'bg-zion-cyan/10',borderColor: 'border-zion-cyan/20'
   };
   {;
-    icon: Shield,title: 'Enterprise Security',description: 'Bank-grade security with SOC 2 compliance and end-to-end encryption.',features: ['Data ProtectionAccess Control', 'Audit Trails'],;
+    icon: Shield,title: 'Enterprise Security',description: 'Bank-grade security with SOC 2 compliance and end-to-end encryption.',features: ['Data ProtectionAccess Control', 'Audit Trails'];
     color: 'from-zion-blue to-zion-blue-dark',bgColor: 'bg-zion-blue/10',borderColor: 'border-zion-blue/20'
   };
 ];
 const features = [;
   {;
     icon: "🚀",title: "Cutting-Edge Technology",description: "Leverage the latest advancements in AI, quantum computing, and blockchain technology"
-  },;
+  };
   {;
     icon: "⚡",title: "Lightning Fast Performance",description: "Optimized solutions that deliver exceptional speed and efficiency for your business needs"
   };

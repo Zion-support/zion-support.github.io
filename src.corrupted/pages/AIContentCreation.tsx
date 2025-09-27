@@ -2,52 +2,52 @@ import React from "react"
 import { SEO } from "../components/SEO"
 import { motion } from "framer-motion"
 import { ;
-  PenTool,;
-  Brain, ;
-  Zap, ;
-  CheckCircle,;
-  Star,;
-  TrendingUp,;
-  Award,;
-  Globe,;
-  Lock,;
-  Database,;
-  Cpu,;
-  Network,;
-  BarChart3,;
-  FileText,;
-  MessageCircle,;
-  Phone,;
-  Mail,;
-  MapPin,;
-  Building,;
-  Video,;
-  Eye,;
-  Type,;
-  Image,;
-  Music,;
-  Code,;
-  Palette,;
-  Target,;
-  Users,;
+  PenTool;
+  Brain;
+  Zap;
+  CheckCircle;
+  Star;
+  TrendingUp;
+  Award;
+  Globe;
+  Lock;
+  Database;
+  Cpu;
+  Network;
+  BarChart3;
+  FileText;
+  MessageCircle;
+  Phone;
+  Mail;
+  MapPin;
+  Building;
+  Video;
+  Eye;
+  Type;
+  Image;
+  Music;
+  Code;
+  Palette;
+  Target;
+  Users;
   ArrowRight;
 } from "lucide-react"
 export default function AIContentCreation() {;
   const features = [;
     {;
-      icon: Type,title: 'AI Text Generation',description: 'Advanced language models for creating engaging, SEO-optimized content',;
+      icon: Type,title: 'AI Text Generation',description: 'Advanced language models for creating engaging, SEO-optimized content';
       color: 'from-blue-500 to-cyan-500'
     };
     {;
-      icon: Image,title: 'AI Image Creation',description: 'Generate stunning visuals, graphics, and illustrations with AI',;
+      icon: Image,title: 'AI Image Creation',description: 'Generate stunning visuals, graphics, and illustrations with AI';
       color: 'from-purple-500 to-pink-500'
     };
     {;
-      icon: Video,title: 'AI Video Production',description: 'Create professional videos, animations, and multimedia content',;
+      icon: Video,title: 'AI Video Production',description: 'Create professional videos, animations, and multimedia content';
       color: 'from-red-500 to-orange-500'
     };
     {;
-      icon: Music,title: 'AI Audio Generation',description: 'Generate background music, sound effects, and voiceovers',;
+      icon: Music,title: 'AI Audio Generation',description: 'Generate background music, sound effects, and voiceovers';
       color: 'from-green-500 to-emerald-500'
     };
     {;
@@ -58,43 +58,43 @@ export default function AIContentCreation() {;
     };
   ];
   const benefits = [;
-    'Increase content production by 10xReduce content creation costs by 70%',;
-    'Improve SEO rankings and engagementMaintain consistent brand voice',;
+    'Increase content production by 10xReduce content creation costs by 70%';
+    'Improve SEO rankings and engagementMaintain consistent brand voice';
     'Scale content across multiple platforms24/7 content generation capability'
-  ],;
+  ];
 
   const useCases = [;
     {;
-      title: 'Marketing Content',description: 'Generate blog posts, social media content, and marketing copy',;
+      title: 'Marketing Content',description: 'Generate blog posts, social media content, and marketing copy';
       icon: Target;
     };
     {;
       title: 'Product Descriptions',description: 'Create compelling product descriptions and e-commerce content',icon: ShoppingCart;
     };
     {;
-      title: 'Technical Documentation',description: 'Generate user manuals, API docs, and technical guides',;
+      title: 'Technical Documentation',description: 'Generate user manuals, API docs, and technical guides';
       icon: FileText;
     };
     {;
-      title: 'Creative Writing',description: 'Novels, scripts, poetry, and creative storytelling',;
+      title: 'Creative Writing',description: 'Novels, scripts, poetry, and creative storytelling';
       icon: PenTool;
     };
   ];
   const contentTypes = [;
     {;
       name: 'Blog Posts & Articles',description: 'SEO-optimized content for websites and blogs',examples: ['How-to guidesIndustry insights', 'Product reviews']
-    },;
+    };
     {;
       name: 'Social Media Content',description: 'Engaging posts for all social platforms',examples: ['CaptionsHashtag suggestions', 'Visual content']
-    },;
+    };
     {;
       name: 'Email Marketing',description: 'Personalized email campaigns and newsletters',examples: ['Subject linesEmail body', 'Call-to-actions']
-    },;
+    };
     {;
-      name: 'Video Scripts',description: 'Scripts for YouTube, TikTok, and marketing videos',;
+      name: 'Video Scripts',description: 'Scripts for YouTube, TikTok, and marketing videos';
       examples: ['Product demosEducational content', 'Brand stories']
     };
-  ],;
+  ];
 
   return (
     <>;

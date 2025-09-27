@@ -2,39 +2,39 @@ import React, { useMemo, useState } from "react"
 import { Link } from "react-router-dom"
 import { motion } from "framer-motion"
 import {;
-  Search,;
-  ArrowRight,;
-  DollarSign,;
-  ExternalLink,;
-  Workflow,;
-  MessageSquare,;
-  Globe,;
-  Brain,;
-  Shield,;
-  Cloud,;
-  Cpu,;
-  Zap,;
-  Rocket,;
-  Heart,;
-  Lock,;
-  Users,;
-  BarChart3,;
-  Target,;
-  TrendingUp,;
-  Award,;
-  Star,;
-  CheckCircle,;
-  Clock,;
-  Phone,;
-  Mail,;
+  Search;
+  ArrowRight;
+  DollarSign;
+  ExternalLink;
+  Workflow;
+  MessageSquare;
+  Globe;
+  Brain;
+  Shield;
+  Cloud;
+  Cpu;
+  Zap;
+  Rocket;
+  Heart;
+  Lock;
+  Users;
+  BarChart3;
+  Target;
+  TrendingUp;
+  Award;
+  Star;
+  CheckCircle;
+  Clock;
+  Phone;
+  Mail;
   MapPin;
 } from "lucide-react"
 import SEO from "@/components/SEO"
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2026, SPECIALIZED_SERVICES_2026 } from "../data/innovativeMicroSaasServices2026"
 const Services2026: React.FC = () => {
-  const [query, setQuery] = useState(''),;
-  const [selectedCategory, setSelectedCategory] = useState('all'),;
-  const [sortBy, setSortBy] = useState('innovation'),;
+  const [query, setQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [sortBy, setSortBy] = useState('innovation');
 
   const allServices = [...INNOVATIVE_MICRO_SAAS_SERVICES_2026, ...SPECIALIZED_SERVICES_2026]
 
@@ -61,32 +61,31 @@ const Services2026: React.FC = () => {
         s.description.toLowerCase().includes(q) ||;
         s.category.toLowerCase().includes(q) ||;
         s.tags?.some(t => t.toLowerCase().includes(q));
-      ),;
+      );
     };
 
     //[^;]*
     if (selectedCategory !== 'all') {;
-      filtered = filtered.filter(s => s.category === selectedCategory),;
+      filtered = filtered.filter(s => s.category === selectedCategory);
     };
 
     //[^;]*
     switch (sortBy) {;
       case 'price':;
-        return filtered.sort((a, b) => a.price - b.price),;
+        return filtered.sort((a, b) => a.price - b.price);
       case 'innovation':;
         return filtered.sort((a, b) => {;
           const innovationLevels = { 'Revolutionary': 3, 'Cutting-Edge': 2, 'Advanced': 1 };
-          return (innovationLevels[b.innovationLevel as keyof typeof innovationLevels] || 0) - (innovationLevels[a.innovationLevel as keyof typeof innovationLevels] || 0),
-        }),;
+          return (innovationLevels[b.innovationLevel as keyof typeof innovationLevels] || 0) - (innovationLevels[a.innovationLevel as keyof typeof innovationLevels] || 0)});
       case 'roi':;
         return filtered.sort((a, b) => {;
           const aROI = parseInt(a.roi.split('-')[0]);
           const bROI = parseInt(b.roi.split('-')[0]);
-          return bROI - aROI,;
-        }),;
+          return bROI - aROI;
+        });
       default: return filtered;
     };
-  }, [query, selectedCategory, sortBy, allServices]),;
+  }, [query, selectedCategory, sortBy, allServices]);
 
   const featuredServices = allServices.filter(s => s.innovationLevel === 'Revolutionary').slice(0, 3)
 

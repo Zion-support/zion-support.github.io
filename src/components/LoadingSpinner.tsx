@@ -1,13 +1,13 @@
 import React from "react"
-interface LoadingSpinnerProps {;
+interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg'
   text?: string;
   className?: string;
 };
 
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ ;
-  size = 'md',;
-  text = 'Loading...', ;
+  size = 'md';
+  text = 'Loading...';
   className = '' ;
 }) => {;
   const sizeClasses = {;
@@ -20,7 +20,7 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ ;
       <div className={`animate-spin rounded-full border-b-2 border-purple-500 ${sizeClasses[size]} mb-4`}></[^>]*>
       <p className="text-gray-300 text-lg">{text}</[^>]*>
     </[^>]*>
-  ),;
-},;
+  );
+};
 
 export default LoadingSpinner;

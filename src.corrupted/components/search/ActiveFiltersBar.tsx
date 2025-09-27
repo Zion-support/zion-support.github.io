@@ -1,10 +1,10 @@
 import React from "react"
 import { X } from "lucide-react"
-interface Filter {;
+interface Filter {
   key: string,value: string,label: string;
 };
 
-interface ActiveFiltersBarProps {;
+interface ActiveFiltersBarProps {
   filters: Filter[],onRemoveFilter: (key: string) => void,onClearAll: () => void;
 };
 

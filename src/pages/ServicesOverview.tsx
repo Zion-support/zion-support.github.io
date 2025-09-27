@@ -7,10 +7,10 @@ import { specializedIndustryServices } from "../../data/specialized-industry-ser
 import { allServices } from "../../data/services"
 import { Link } from "react-router-dom"
 export default function ServicesOverview() {;
-  const [searchTerm, setSearchTerm] = useState(''),;
-  const [selectedCategory, setSelectedCategory] = useState('all'),;
-  const [selectedIndustry, setSelectedIndustry] = useState('all'),;
-  const [sortBy, setSortBy] = useState('name'),;
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedIndustry, setSelectedIndustry] = useState('all');
+  const [sortBy, setSortBy] = useState('name');
 
   //[^;]*
   const allAvailableServices = [;
@@ -53,20 +53,18 @@ export default function ServicesOverview() {;
     .filter(service => {;
       const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                           service.tagline?.toLowerCase().includes(searchTerm.toLowerCase()),;
+                           service.tagline?.toLowerCase().includes(searchTerm.toLowerCase());
       ;
       const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory
       ;
       const matchesIndustry = selectedIndustry === 'all' || 
                              (service.industry && service.industry === selectedIndustry) ||;&& service.industry === selectedIndustry) ||; service.industry === selectedIndustry) ||
-                             (!service.industry && selectedIndustry === 'all'),;&& selectedIndustry === 'all'),; selectedIndustry === 'all'),
-      ;
-      return matchesSearch && matchesCategory && matchesIndustry,;&& matchesCategory && matchesIndustry,; matchesCategory && matchesIndustry,
-    });
+                             (!service.industry && selectedIndustry === 'all');&& selectedIndustry === 'all'); selectedIndustry === 'all');
+      return matchesSearch && matchesCategory && matchesIndustry;&& matchesCategory && matchesIndustry; matchesCategory && matchesIndustry});
     .sort((a, b) => {;
       switch (sortBy) {;
         case 'name':;
-          return a.name.localeCompare(b.name),;
+          return a.name.localeCompare(b.name);
         case 'price-low':;
           return (a.pricing?.starter || 0) - (b.pricing?.starter || 0),
         case 'price-high':;

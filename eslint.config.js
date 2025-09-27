@@ -145,6 +145,4 @@ export default [
         version: 'detect'
       }
     }
-  },
-  
-];
+  }];

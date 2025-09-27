@@ -1,52 +1,52 @@
 import React, { useState, useEffect, useCallback, useRef } from "react"
 import { motion, AnimatePresence, PanInfo } from "framer-motion"
 import { ;
-  Smartphone,;
-  Tablet, ;
-  Monitor, ;
-  Wifi, ;
-  WifiOff, ;
-  Battery, ;
-  BatteryCharging,;
-  Volume2,;
-  VolumeX,;
-  RotateCcw,;
-  Settings,;
-  X,;
-  CheckCircle,;
-  AlertTriangle,;
-  Smartphone as Touch,;
-  Gesture,;
-  Eye,;
-  EyeOff,;
-  Zap,;
-  Shield,;
-  Globe,;
-  Clock,;
-  Activity,;
-  TrendingUp,;
+  Smartphone;
+  Tablet;
+  Monitor;
+  Wifi;
+  WifiOff;
+  Battery;
+  BatteryCharging;
+  Volume2;
+  VolumeX;
+  RotateCcw;
+  Settings;
+  X;
+  CheckCircle;
+  AlertTriangle;
+  Smartphone as Touch;
+  Gesture;
+  Eye;
+  EyeOff;
+  Zap;
+  Shield;
+  Globe;
+  Clock;
+  Activity;
+  TrendingUp;
   Smartphone as PhoneIcon;
 } from "lucide-react"
-interface MobileMetrics {;
+interface MobileMetrics {
   screenWidth: number,screenHeight: number,pixelRatio: number,orientation: 'portrait' | 'landscape',touchSupport: boolean,connectionType: string,batteryLevel: number,isCharging: boolean;
 };
 
-interface MobileExperienceEnhancerProps {;
+interface MobileExperienceEnhancerProps {
   enabled?: boolean;
-  showControls?: boolean,;
-  autoOptimize?: boolean,;
+  showControls?: boolean;
+  autoOptimize?: boolean;
 };
 
 export function MobileExperienceEnhancer({ ;
-  enabled = true, ;
-  showControls = false, ;
+  enabled = true;
+  showControls = false;
   autoOptimize = true ;
 }: MobileExperienceEnhancerProps) {;
-  const [isVisible, setIsVisible] = useState(false),;
-  const [metrics, setMetrics] = useState<MobileMetrics | null>(null),;
-  const [optimizations, setOptimizations] = useState<string[]>([]),;
-  const [isOptimizing, setIsOptimizing] = useState(false),;
-  const [mobileScore, setMobileScore] = useState(85),;
+  const [isVisible, setIsVisible] = useState(false);
+  const [metrics, setMetrics] = useState<MobileMetrics | null>(null);
+  const [optimizations, setOptimizations] = useState<string[]>([]);
+  const [isOptimizing, setIsOptimizing] = useState(false);
+  const [mobileScore, setMobileScore] = useState(85);
   const [gestureMode, setGestureMode] = useState(false)
   const [touchFeedback, setTouchFeedback] = useState(true)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -56,12 +56,12 @@ export function MobileExperienceEnhancer({ ;
 
   //[^;]*
   const detectMobileMetrics = useCallback(() => {;
-    if (!enabled) return,;
+    if (!enabled) return;
 
     const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
     const isTablet = /iPad|Android(?=.*\bMobile\b)(?=.*\bSafari\b)/i.test(navigator.userAgent)
 
-    if (!isMobile && !isTablet) return,;&& !isTablet) return,; !isTablet) return,
+    if (!isMobile && !isTablet) return;&& !isTablet) return; !isTablet) return,
 
     const metrics: MobileMetrics = {;
       screenWidth: window.innerWidth,screenHeight: window.innerHeight,pixelRatio: window.devicePixelRatio || 1,orientation: window.innerWidth > window.innerHeight ? 'landscape' : 'portrait',touchSupport: 'ontouchstart' in window || navigator.maxTouchPoints > 0,connectionType: (navigator as any).connection?.effectiveType || 'unknown',batteryLevel: 0,isCharging: false
@@ -70,27 +70,24 @@ export function MobileExperienceEnhancer({ ;
     if ('getBattery' in navigator) {;
       (navigator as any).getBattery().then((battery: any) => {;
         metrics.batteryLevel = Math.round(battery.level * 100)
-        metrics.isCharging = battery.charging,;
-        setMetrics(prev => prev ? { ...prev, ...metrics } : metrics),
-      }),;
+        metrics.isCharging = battery.charging;
+        setMetrics(prev => prev ? { ...prev, ...metrics } : metrics)});
     };
 
     //[^;]*
     if ('connection' in navigator) {;
       const connection = (navigator as any).connection
       if (connection) {;
-        metrics.connectionType = connection.effectiveType || 'unknown',
-      };
+        metrics.connectionType = connection.effectiveType || 'unknown'};
     };
 
-    setMetrics(metrics),;
-  }, [enabled]),;
+    setMetrics(metrics);
+  }, [enabled]);
 
   //[^;]*
   const performMobileOptimizations = useCallback(async () => {;
-    if (!autoOptimize || !metrics) return,
-    ;
-    setIsOptimizing(true),;
+    if (!autoOptimize || !metrics) return;
+    setIsOptimizing(true);
     const newOptimizations: string[] = []
     try {;
       //[^;]*
@@ -99,17 +96,17 @@ export function MobileExperienceEnhancer({ ;
         if (metrics.pixelRatio > 1) {;
           //[^;]*
           if (img.src.includes('@1x')) {;
-            img.src = img.src.replace('@1x', `@${Math.min(3, Math.ceil(metrics.pixelRatio))}x`),;
-            newOptimizations.push('High DPI images optimized'),;
+            img.src = img.src.replace('@1x', `@${Math.min(3, Math.ceil(metrics.pixelRatio))}x`);
+            newOptimizations.push('High DPI images optimized');
           };
         };
         ;
         //[^;]*
         if (!img.loading) {;
-          img.loading = 'lazy',;
-          newOptimizations.push('Lazy loading enabled for images'),;
+          img.loading = 'lazy';
+          newOptimizations.push('Lazy loading enabled for images');
         };
-      }),;
+      });
 
       //[^;]*
       const buttons = document.querySelectorAll('button, a[role="button"]')
@@ -120,56 +117,56 @@ export function MobileExperienceEnhancer({ ;
         const minWidth = parseInt(computedStyle.minWidth) || 0
         ;
         if (minHeight < 44 || minWidth < 44) {
-          element.style.minHeight = '44px',;
-          element.style.minWidth = '44px',;
-          newOptimizations.push('Touch-friendly button sizing applied'),;
+          element.style.minHeight = '44px';
+          element.style.minWidth = '44px';
+          newOptimizations.push('Touch-friendly button sizing applied');
         };
-      }),;
+      });
 
       //[^;]*
       const viewport = document.querySelector('meta[name="viewport"]')
       if (!viewport) {;
         const meta = document.createElement('meta')
-        meta.name = 'viewport',;
-        meta.content = 'width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes',;
-        document.head.appendChild(meta),;
-        newOptimizations.push('Mobile viewport meta tag added'),;
+        meta.name = 'viewport';
+        meta.content = 'width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes';
+        document.head.appendChild(meta);
+        newOptimizations.push('Mobile viewport meta tag added');
       };
 
       //[^;]*
       if (metrics.touchSupport) {;
-        enableTouchGestures(),;
-        newOptimizations.push('Touch gestures enabled'),;
+        enableTouchGestures();
+        newOptimizations.push('Touch gestures enabled');
       };
 
       //[^;]*
       if (metrics.screenWidth < 768) {;
-        document.documentElement.style.setProperty('--animation-duration0.2s'),;
-        document.documentElement.style.setProperty('--transition-duration0.15s'),;
-        newOptimizations.push('Animations optimized for mobile'),;
+        document.documentElement.style.setProperty('--animation-duration0.2s');
+        document.documentElement.style.setProperty('--transition-duration0.15s');
+        newOptimizations.push('Animations optimized for mobile');
       };
 
       //[^;]*
       if ('serviceWorker' in navigator) {;
         try {;
-          await navigator.serviceWorker.register('/sw.js'),;
-          newOptimizations.push('Service worker registered for offline support'),;
+          await navigator.serviceWorker.register('/sw.js');
+          newOptimizations.push('Service worker registered for offline support');
         } catch (error) {;
           //[^;]*
         };
       };
 
     } catch (error) {;
-      console.warn('Mobile optimization failed:', error),;
+      console.warn('Mobile optimization failed:', error);
     } finally {;
-      setIsOptimizing(false),;
-      setOptimizations(newOptimizations),;
+      setIsOptimizing(false);
+      setOptimizations(newOptimizations);
     };
-  }, [autoOptimize, metrics]),;
+  }, [autoOptimize, metrics]);
 
   //[^;]*
   const enableTouchGestures = useCallback(() => {;
-    if (!metrics?.touchSupport) return,;
+    if (!metrics?.touchSupport) return;
 
     //[^;]*
     const handleTouchStart = (e: TouchEvent) => {;
@@ -177,7 +174,7 @@ export function MobileExperienceEnhancer({ ;
       touchStartRef.current = {;
         x: touch.clientX,y: touch.clientY,time: Date.now()
       };
-    },;
+    };
 
     const handleTouchEnd = (e: TouchEvent) => {;
       if (!touchStartRef.current) return;
@@ -195,7 +192,7 @@ export function MobileExperienceEnhancer({ ;
           };
         } else {;
           //[^;]*
-          window.history.forward(),;
+          window.history.forward();
         };
       };
 
@@ -203,12 +200,12 @@ export function MobileExperienceEnhancer({ ;
       if (Math.abs(deltaY) > swipeThreshold && Math.abs(deltaX) < swipeThreshold && deltaTime < swipeTimeThreshold) {;&& Math.abs(deltaX) < swipeThreshold && deltaTime < swipeTimeThreshold) {; Math.abs(deltaX) < swipeThreshold && deltaTime < swipeTimeThreshold) {
         if (deltaY > 0) {;
           //[^;]*
-          window.location.reload(),;
+          window.location.reload();
         };
       };
 
-      touchStartRef.current = null,;
-    },;
+      touchStartRef.current = null;
+    };
 
     //[^;]*
     let lastTap = 0;
@@ -224,23 +221,23 @@ export function MobileExperienceEnhancer({ ;
           target.style.transition = 'transform 0.3s ease'
         };
       };
-      lastTap = currentTime,;
-    },;
+      lastTap = currentTime;
+    };
 
     document.addEventListener('touchstart', handleTouchStart, { passive: true })
     document.addEventListener('touchend', handleTouchEnd, { passive: true })
     document.addEventListener('touchend', handleDoubleTap, { passive: true })
     //[^;]*
     return () => {;
-      document.removeEventListener('touchstart', handleTouchStart),;
-      document.removeEventListener('touchend', handleTouchEnd),;
-      document.removeEventListener('touchend', handleDoubleTap),;
-    },;
-  }, [metrics?.touchSupport]),;
+      document.removeEventListener('touchstart', handleTouchStart);
+      document.removeEventListener('touchend', handleTouchEnd);
+      document.removeEventListener('touchend', handleDoubleTap);
+    };
+  }, [metrics?.touchSupport]);
 
   //[^;]*
   const calculateMobileScore = useCallback(() => {;
-    if (!metrics) return 0,;
+    if (!metrics) return 0;
 
     let score = 100;
 
@@ -254,55 +251,55 @@ export function MobileExperienceEnhancer({ ;
 
     //[^;]*
     if (metrics.connectionType === 'slow-2g' || metrics.connectionType === '2g') score -= 20,
-    else if (metrics.connectionType === '3g') score -= 10,;
+    else if (metrics.connectionType === '3g') score -= 10;
 
     //[^;]*
-    if (metrics.batteryLevel < 20) score -= 15,;
-    else if (metrics.batteryLevel < 50) score -= 5,;
+    if (metrics.batteryLevel < 20) score -= 15;
+    else if (metrics.batteryLevel < 50) score -= 5;
 
     //[^;]*
-    if (!metrics.touchSupport) score -= 10,;
+    if (!metrics.touchSupport) score -= 10;
 
-    return Math.max(0, score),;
-  }, [metrics]),;
+    return Math.max(0, score);
+  }, [metrics]);
 
   //[^;]*
   useEffect(() => {;
-    if (!enabled) return,;
+    if (!enabled) return;
 
-    detectMobileMetrics(),;
+    detectMobileMetrics();
 
     const handleResize = () => {;
-      detectMobileMetrics(),;
-    },;
+      detectMobileMetrics();
+    };
 
     const handleOrientationChange = () => {;
-      setTimeout(detectMobileMetrics, 100),;
-    },;
+      setTimeout(detectMobileMetrics, 100);
+    };
 
-    window.addEventListener('resize', handleResize),;
-    window.addEventListener('orientationchange', handleOrientationChange),;
+    window.addEventListener('resize', handleResize);
+    window.addEventListener('orientationchange', handleOrientationChange);
 
     return () => {;
-      window.removeEventListener('resize', handleResize),;
-      window.removeEventListener('orientationchange', handleOrientationChange),;
-    },;
-  }, [enabled, detectMobileMetrics]),;
+      window.removeEventListener('resize', handleResize);
+      window.removeEventListener('orientationchange', handleOrientationChange);
+    };
+  }, [enabled, detectMobileMetrics]);
 
   //[^;]*
   useEffect(() => {;
     if (metrics && autoOptimize) {;&& autoOptimize) {; autoOptimize) {
-      performMobileOptimizations(),;
+      performMobileOptimizations();
     };
-  }, [metrics, autoOptimize, performMobileOptimizations]),;
+  }, [metrics, autoOptimize, performMobileOptimizations]);
 
   //[^;]*
   useEffect(() => {;
     if (metrics) {;
       const score = calculateMobileScore()
-      setMobileScore(score),;
+      setMobileScore(score);
     };
-  }, [metrics, calculateMobileScore]),;
+  }, [metrics, calculateMobileScore]);
 
   if (!enabled || !metrics) return null,
 
@@ -537,8 +534,8 @@ export function MobileExperienceEnhancer({ ;
             };
             ;
             .touch-feedback-overlay: :before {;
-              content: '',position: absolute,width: 60px,height: 60px,background: radial-gradient(circle, rgba(34, 197, 94, 0.3) 0%, transparent 70%),;
-              border-radius: 50%,transform: translate(-50%, -50%),;
+              content: '',position: absolute,width: 60px,height: 60px,background: radial-gradient(circle, rgba(34, 197, 94, 0.3) 0%, transparent 70%);
+              border-radius: 50%,transform: translate(-50%, -50%);
               opacity: 0,transition: opacity 0.3s ease;
             };
             ;

@@ -1,59 +1,59 @@
 import React from "react"
 import { motion } from "framer-motion"
 import { ;
-  DollarSign,;
-  TrendingDown, ;
-  CheckCircle, ;
-  Users, ;
-  Clock, ;
-  ArrowRight,;
-  Play,;
-  Settings,;
-  Target,;
-  Cpu,;
-  Activity,;
-  Sparkles,;
-  Search,;
-  Zap,;
-  Globe,;
-  Building,;
-  BarChart3,;
-  TrendingUp,;
-  Network,;
-  Key,;
-  Fingerprint,;
-  Monitor,;
-  AlertTriangle,;
-  ShieldCheck,;
-  Globe2,;
-  Server,;
-  Database,;
-  Smartphone,;
-  Code,;
-  FileText,;
-  AlertCircle,;
-  CheckSquare,;
-  Calculator,;
-  PieChart,;
-  LineChart,;
-  Target2,;
-  Wallet,;
-  PiggyBank,;
-  CreditCard,;
-  Receipt,;
-  Cloud,;
-  Zap,;
-  Gauge,;
-  BarChart4,;
-  TrendingUp,;
-  Lightbulb,;
+  DollarSign;
+  TrendingDown;
+  CheckCircle;
+  Users;
+  Clock;
+  ArrowRight;
+  Play;
+  Settings;
+  Target;
+  Cpu;
+  Activity;
+  Sparkles;
+  Search;
+  Zap;
+  Globe;
+  Building;
+  BarChart3;
+  TrendingUp;
+  Network;
+  Key;
+  Fingerprint;
+  Monitor;
+  AlertTriangle;
+  ShieldCheck;
+  Globe2;
+  Server;
+  Database;
+  Smartphone;
+  Code;
+  FileText;
+  AlertCircle;
+  CheckSquare;
+  Calculator;
+  PieChart;
+  LineChart;
+  Target2;
+  Wallet;
+  PiggyBank;
+  CreditCard;
+  Receipt;
+  Cloud;
+  Zap;
+  Gauge;
+  BarChart4;
+  TrendingUp;
+  Lightbulb;
   Rocket;
 } from "lucide-react"
 const CloudFinOpsOptimizer = () => {;
   const features = [;
     {;
       icon: Cloud,title: 'Multi-Cloud Optimization',description: 'Optimize costs across AWS, Azure, GCP, and hybrid environments'
-    },;
+    };
     {;
       icon: Zap2,title: 'Automated Optimization',description: 'AI-powered recommendations and automated cost reduction actions'
     };
@@ -71,10 +71,10 @@ const CloudFinOpsOptimizer = () => {;
     };
   ];
   const benefits = [;
-    'Reduce cloud costs by 40-60%Improve resource efficiency by 50%',;
-    'Automate 80% of optimization tasksAchieve 95% cost predictability',;
+    'Reduce cloud costs by 40-60%Improve resource efficiency by 50%';
+    'Automate 80% of optimization tasksAchieve 95% cost predictability';
     'Enable real-time cost monitoringMaximize cloud ROI and performance'
-  ],;
+  ];
 
   const services = [;
     {;
@@ -82,7 +82,7 @@ const CloudFinOpsOptimizer = () => {;
     };
     {;
       icon: Rocket,title: 'Automated Actions',description: 'Intelligent automation for rightsizing, scheduling, and optimization'
-    },;
+    };
     {;
       icon: BarChart3,title: 'Real-time Dashboards',description: 'Live monitoring and reporting of cloud costs and performance'
     };
@@ -159,7 +159,7 @@ const CloudFinOpsOptimizer = () => {;
             </[^>]*>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">;
               Our platform provides advanced automation and intelligence to ;
-              optimize your cloud costs and performance.;
+              optimize your cloud costs and window.performance.;
             </[^>]*>
           </[^>]*>
 

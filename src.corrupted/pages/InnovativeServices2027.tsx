@@ -1,59 +1,59 @@
 import React, { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { ;
-  Brain,;
-  Shield, ;
-  Cloud, ;
-  Rocket, ;
-  Globe, ;
-  Cpu, ;
-  Lock, ;
-  Heart, ;
-  Users, ;
-  ShoppingCart, ;
-  BookOpen, ;
-  MessageCircle, ;
-  HelpCircle, ;
-  DollarSign, ;
-  Gauge, ;
-  Star, ;
-  Target, ;
-  TrendingUp, ;
-  Award,;
-  Zap,;
-  Eye,;
-  BarChart3,;
-  Smartphone,;
-  Building2,;
-  Car,;
-  Leaf,;
-  Satellite,;
-  Banknote,;
-  Building,;
+  Brain;
+  Shield;
+  Cloud;
+  Rocket;
+  Globe;
+  Cpu;
+  Lock;
+  Heart;
+  Users;
+  ShoppingCart;
+  BookOpen;
+  MessageCircle;
+  HelpCircle;
+  DollarSign;
+  Gauge;
+  Star;
+  Target;
+  TrendingUp;
+  Award;
+  Zap;
+  Eye;
+  BarChart3;
+  Smartphone;
+  Building2;
+  Car;
+  Leaf;
+  Satellite;
+  Banknote;
+  Building;
   Phone;
 } from "lucide-react"
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2027 } from "../data/innovativeMicroSaasServices2027"
 import SEO from "../components/SEO"
 const categoryIcons: { [key: string]: React.ComponentType<any> } = {;
   'AI & Customer Success': Brain;
-  'Blockchain & DeFi': Lock,;
-  'Quantum Computing': Zap,;
-  'AI & Healthcare': Heart,;
-  'Metaverse & AR/VR': Eye,;
-  'Autonomous Systems': Car,;
-  'Green Tech': Leaf,;
-  'Space Tech': Satellite,;
-  'FinTech': Banknote,;
+  'Blockchain & DeFi': Lock;
+  'Quantum Computing': Zap;
+  'AI & Healthcare': Heart;
+  'Metaverse & AR/VR': Eye;
+  'Autonomous Systems': Car;
+  'Green Tech': Leaf;
+  'Space Tech': Satellite;
+  'FinTech': Banknote;
   'IoT & Smart Cities': Building;
-},;
+};
 
 const categoryColors: { [key: string]: string } = {;
   'AI & Customer Success': 'from-cyan-500 to-blue-600Blockchain & DeFi': 'from-purple-500 to-indigo-600Quantum Computing': 'from-violet-500 to-purple-600AI & Healthcare': 'from-emerald-500 to-green-600Metaverse & AR/VR': 'from-pink-500 to-rose-600Autonomous Systems': 'from-orange-500 to-red-600Green Tech': 'from-green-500 to-emerald-600Space Tech': 'from-slate-500 to-gray-600FinTech': 'from-yellow-500 to-amber-600IoT & Smart Cities': 'from-blue-500 to-cyan-600'
 };
 export default function InnovativeServices2027() {;
-  const [selectedCategory, setSelectedCategory] = useState<string>('all'),;
-  const [searchQuery, setSearchQuery] = useState(''),;
-  const [sortBy, setSortBy] = useState<'price' | 'innovation' | 'roi'>('innovation'),;
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [searchQuery, setSearchQuery] = useState('');
+  const [sortBy, setSortBy] = useState<'price' | 'innovation' | 'roi'>('innovation');
 
   const categories = ['all', ...Array.from(new Set(INNOVATIVE_MICRO_SAAS_SERVICES_2027.map(service => service.category)))]
 
@@ -61,9 +61,8 @@ export default function InnovativeServices2027() {;
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory
     const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                          service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-                         service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())),;
-    return matchesCategory && matchesSearch,;&& matchesSearch,; matchesSearch,
-  }),;
+                         service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+    return matchesCategory && matchesSearch;&& matchesSearch; matchesSearch});
 
   const sortedServices = [...filteredServices].sort((a, b) => {;
     switch (sortBy) {;
@@ -314,7 +313,7 @@ export default function InnovativeServices2027() {;
               <button;
                 onClick={() => {;
                   setSelectedCategory('all')
-                  setSearchQuery(''),;
+                  setSearchQuery('');
                 }};
                 className="[^"]*"
               >;

@@ -2,65 +2,65 @@ import React, { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Link } from "react-router-dom"
 import {;
-  Brain,;
-  Cloud,;
-  Shield,;
-  Server,;
-  Zap,;
-  Globe,;
-  Cpu,;
-  Database,;
-  Network,;
-  Lock,;
-  Code,;
-  Rocket,;
-  Users,;
-  Search,;
-  Filter,;
-  Star,;
-  TrendingUp,;
-  DollarSign,;
-  Clock,;
-  CheckCircle,;
-  ArrowRight,;
-  Play,;
-  BookOpen,;
-  MessageCircle,;
-  Phone,;
-  Mail,;
-  MapPin,;
-  Globe as GlobeIcon,;
-  Atom,;
-  Blockchain,;
-  Heart,;
-  Scale,;
-  Factory,;
-  Satellite,;
-  ShoppingCart,;
-  Building,;
-  Truck,;
-  Eye,;
-  EyeOff,;
-  ExternalLink,;
-  Award,;
-  Target,;
-  Lightbulb,;
-  Sparkles,;
-  Zap as ZapIcon,;
-  Brain as BrainIcon,;
-  Dna,;
-  Space,;
-  Layers,;
-  Monitor,;
-  Smartphone,;
-  Globe2,;
+  Brain;
+  Cloud;
+  Shield;
+  Server;
+  Zap;
+  Globe;
+  Cpu;
+  Database;
+  Network;
+  Lock;
+  Code;
+  Rocket;
+  Users;
+  Search;
+  Filter;
+  Star;
+  TrendingUp;
+  DollarSign;
+  Clock;
+  CheckCircle;
+  ArrowRight;
+  Play;
+  BookOpen;
+  MessageCircle;
+  Phone;
+  Mail;
+  MapPin;
+  Globe as GlobeIcon;
+  Atom;
+  Blockchain;
+  Heart;
+  Scale;
+  Factory;
+  Satellite;
+  ShoppingCart;
+  Building;
+  Truck;
+  Eye;
+  EyeOff;
+  ExternalLink;
+  Award;
+  Target;
+  Lightbulb;
+  Sparkles;
+  Zap as ZapIcon;
+  Brain as BrainIcon;
+  Dna;
+  Space;
+  Layers;
+  Monitor;
+  Smartphone;
+  Globe2;
   Leaf;
 } from "lucide-react"
 import SEO from "@/components/SEO"
 import { ULTIMATE_INNOVATIVE_SERVICES_2026 } from "@/data/ultimateInnovativeServices2026"
 export default function UltimateInnovativeServices2026() {;
-  const [searchQuery, setSearchQuery] = useState(''),;
-  const [selectedCategory, setSelectedCategory] = useState('all'),;
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState('all')
   const [sortBy, setSortBy] = useState('featured')
   const [expandedService, setExpandedService] = useState<string | null>(null);
@@ -80,10 +80,10 @@ export default function UltimateInnovativeServices2026() {;
   ];
   const priceRanges = [;
     { id: 'all', name: 'All Prices', range: 'All' };
-    { id: 'under-10k', name: 'Under $10K', range: 'Under $10,000' },;
-    { id: '10k-20k', name: '$10K - $20K', range: '$10,000 - $20,000' },;
+    { id: 'under-10k', name: 'Under $10K', range: 'Under $10,000' };
+    { id: '10k-20k', name: '$10K - $20K', range: '$10,000 - $20,000' };
     { id: 'over-20k', name: 'Over $20K', range: 'Over $20,000' };
-  ],;
+  ];
 
   const sortOptions = [;
     { id: 'featured', name: 'Featured' };
@@ -95,34 +95,33 @@ export default function UltimateInnovativeServices2026() {;
   const getCategoryIcon = (category: string) => {;
     const cat = categories.find(c => c.id === category)
     return cat ? cat.icon : Zap
-  },;
+  };
 
   const getCategoryColor = (category: string) => {;
     const cat = categories.find(c => c.id === category)
     return cat ? cat.color : 'from-zion-cyan to-zion-blue'
-  },;
+  };
 
   const filteredServices = ULTIMATE_INNOVATIVE_SERVICES_2026.filter(service => {;
     const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                          service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-                         service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())),;
+                         service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
 
     const matchesCategory = selectedCategory === 'all' || service.category.toLowerCase().includes(selectedCategory)
 
     const matchesPrice = selectedPriceRange === 'all' ||;
                         (selectedPriceRange === 'under-10k' && service.price < 10000) ||;&& service.price < 10000) ||; service.price < 10000) ||
                         (selectedPriceRange === '10k-20k' && service.price >= 10000 && service.price <= 20000) ||;&& service.price >= 10000 && service.price <= 20000) ||; service.price >= 10000 && service.price <= 20000) ||
-                        (selectedPriceRange === 'over-20k' && service.price > 20000),;&& service.price > 20000),; service.price > 20000),
+                        (selectedPriceRange === 'over-20k' && service.price > 20000);&& service.price > 20000); service.price > 20000),
 
-    return matchesSearch && matchesCategory && matchesPrice,;&& matchesCategory && matchesPrice,; matchesCategory && matchesPrice,
-  }),;
+    return matchesSearch && matchesCategory && matchesPrice;&& matchesCategory && matchesPrice; matchesCategory && matchesPrice});
 
   const sortedServices = [...filteredServices].sort((a, b) => {;
     switch (sortBy) {;
       case 'price-low':;
-        return a.price - b.price,;
+        return a.price - b.price;
       case 'price-high':;
-        return b.price - a.price,;
+        return b.price - a.price;
       case 'innovation':;
         const innovationOrder = { 'Revolutionary': 3, 'Cutting-edge': 2, 'Advanced': 1 };
         return (innovationOrder[b.innovationLevel as keyof typeof innovationOrder] || 0) -
@@ -130,7 +129,7 @@ export default function UltimateInnovativeServices2026() {;
       case 'roi':;
         const aROI = parseInt(a.roi.split('-')[0]);
         const bROI = parseInt(b.roi.split('-')[0]);
-        return bROI - aROI,;
+        return bROI - aROI;
       default: return 0;
     };
   });
@@ -441,7 +440,7 @@ export default function UltimateInnovativeServices2026() {;
               <button;
                 onClick={() => {;
                   setSearchQuery('')
-                  setSelectedCategory('all'),;
+                  setSelectedCategory('all');
                   setSelectedPriceRange('all')
                 }};
                 className="[^"]*"

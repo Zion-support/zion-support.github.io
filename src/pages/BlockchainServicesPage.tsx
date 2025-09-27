@@ -1,103 +1,103 @@
 import React, { useState } from "react"
 import { motion } from "framer-motion"
 import {;
-  Link,;
-  Coins,;
-  Shield,;
-  Zap,;
-  Database,;
-  Globe,;
-  TrendingUp,;
-  CheckCircle,;
-  ArrowRight,;
-  Lock,;
-  Network,;
-  Wallet,;
-  BarChart3,;
-  Star,;
-  Award,;
-  Target,;
-  Rocket,;
-  Crown,;
-  Sparkles,;
-  ChevronRight,;
-  Users,;
-  Clock,;
+  Link;
+  Coins;
+  Shield;
+  Zap;
+  Database;
+  Globe;
+  TrendingUp;
+  CheckCircle;
+  ArrowRight;
+  Lock;
+  Network;
+  Wallet;
+  BarChart3;
+  Star;
+  Award;
+  Target;
+  Rocket;
+  Crown;
+  Sparkles;
+  ChevronRight;
+  Users;
+  Clock;
   Check;
 } from "lucide-react"
 const BlockchainServicesPage = () => {;
-  const [selectedCategory, setSelectedCategory] = useState('all'),;
+  const [selectedCategory, setSelectedCategory] = useState('all');
 
   const blockchainServices = [;
     {;
-      id: "smart-contracts",title: "Smart Contract Development",description: "Custom smart contract development for DeFi, NFTs, and enterprise blockchain solutions with comprehensive auditing.",;
+      id: "smart-contracts",title: "Smart Contract Development",description: "Custom smart contract development for DeFi, NFTs, and enterprise blockchain solutions with comprehensive auditing.";
       price: 3500,currency: "$",period: "/project",features: [;
         "Custom smart contract development"
-        "Security auditing & testing",;
-        "Gas optimization",;
-        "Multi-chain deployment",;
-        "Documentation & training",;
+        "Security auditing & testing";
+        "Gas optimization";
+        "Multi-chain deployment";
+        "Documentation & training";
         "Ongoing support"
-      ],;
+      ];
       icon: Zap,category: "Development",badge: "Popular",image: "https://images.unsplash.com/photo-1639762681057-408e52192e55?auto=format&fit=crop&w=800&h=500"
     };
     {;
-      id: "defi-platform",title: "DeFi Platform Development",description: "Complete DeFi platform development including DEX, lending protocols, yield farming, and liquidity management.",;
+      id: "defi-platform",title: "DeFi Platform Development",description: "Complete DeFi platform development including DEX, lending protocols, yield farming, and liquidity management.";
       price: 15000,currency: "$",period: "/platform",features: [;
         "DEX development"
-        "Lending protocols",;
-        "Yield farming",;
-        "Liquidity management",;
-        "Security audits",;
+        "Lending protocols";
+        "Yield farming";
+        "Liquidity management";
+        "Security audits";
         "UI/UX design"
-      ],;
+      ];
       icon: Coins,category: "DeFi",badge: "Enterprise",image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&h=500"
     };
     {;
-      id: "nft-marketplace",title: "NFT Marketplace Development",description: "Custom NFT marketplace with minting, trading, auctions, and royalty distribution systems.",;
+      id: "nft-marketplace",title: "NFT Marketplace Development",description: "Custom NFT marketplace with minting, trading, auctions, and royalty distribution systems.";
       price: 8000,currency: "$",period: "/marketplace",features: [;
         "NFT minting & trading"
-        "Auction system",;
-        "Royalty distribution",;
-        "Multi-chain support",;
-        "Admin dashboard",;
+        "Auction system";
+        "Royalty distribution";
+        "Multi-chain support";
+        "Admin dashboard";
         "Analytics & reporting"
-      ],;
+      ];
       icon: Database,category: "NFTs",badge: "Featured",image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&h=500"
     };
     {;
-      id: "enterprise-blockchain",title: "Enterprise Blockchain Solutions",description: "Private blockchain networks for enterprise use cases including supply chain, identity management, and asset tracking.",;
+      id: "enterprise-blockchain",title: "Enterprise Blockchain Solutions",description: "Private blockchain networks for enterprise use cases including supply chain, identity management, and asset tracking.";
       price: 25000,currency: "$",period: "/solution",features: [;
         "Private blockchain setup"
-        "Consensus mechanisms",;
-        "Identity management",;
-        "Supply chain tracking",;
-        "Integration APIs",;
+        "Consensus mechanisms";
+        "Identity management";
+        "Supply chain tracking";
+        "Integration APIs";
         "Training & support"
-      ],;
+      ];
       icon: Network,category: "Enterprise",badge: "Custom",image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&h=500"
     };
     {;
-      id: "blockchain-security",title: "Blockchain Security & Auditing",description: "Comprehensive security audits, penetration testing, and vulnerability assessment for blockchain applications.",;
+      id: "blockchain-security",title: "Blockchain Security & Auditing",description: "Comprehensive security audits, penetration testing, and vulnerability assessment for blockchain applications.";
       price: 5000,currency: "$",period: "/audit",features: [;
         "Smart contract auditing"
-        "Penetration testing",;
-        "Vulnerability assessment",;
-        "Security best practices",;
-        "Compliance review",;
+        "Penetration testing";
+        "Vulnerability assessment";
+        "Security best practices";
+        "Compliance review";
         "Remediation guidance"
-      ],;
+      ];
       icon: Shield,category: "Security",badge: "Essential",image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&h=500"
     };
     {;
       id: "cross-chain",title: "Cross-Chain Solutions",description: "Interoperability solutions enabling seamless asset and data transfer across different blockchain networks.",price: 12000,currency: "$",period: "/solution",features: [;
         "Bridge development"
-        "Cross-chain messaging",;
-        "Asset interoperability",;
-        "Multi-chain wallets",;
-        "Atomic swaps",;
+        "Cross-chain messaging";
+        "Asset interoperability";
+        "Multi-chain wallets";
+        "Atomic swaps";
         "Network monitoring"
-      ],;
+      ];
       icon: Globe,category: "Interoperability",badge: "Advanced",image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&h=500"
     };
   ];
@@ -112,7 +112,7 @@ const BlockchainServicesPage = () => {;
   ];
   const filteredServices = selectedCategory === 'all'
     ? blockchainServices;
-    : blockchainServices.filter(service => service.category === selectedCategory),;
+    : blockchainServices.filter(service => service.category === selectedCategory);
 
   return (
     <div className="min-h-screen bg-futuristic">;
@@ -293,7 +293,7 @@ const BlockchainServicesPage = () => {;
               };
               {;
                 icon: Users,title: "Expert Team",description: "Blockchain specialists with years of experience in DeFi, NFTs, and enterprise solutions."
-              },;
+              };
               {;
                 icon: Clock,title: "Fast Delivery",description: "Agile development process ensuring rapid delivery without compromising quality."
               };

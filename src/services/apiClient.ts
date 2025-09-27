@@ -11,20 +11,20 @@ axios.defaults.baseURL = process.env.NEXT_PUBLIC_API_URL || 'https://api.ziontec
 // Global interceptor for all axios instances
 
 // Define the global error handler (exported for testing purposes)
-export const globalAxiosErrorHandler = (error: unknown) => {
+export const globalAxiosErrorHandler = (error: any) => {
   const contentType = typeof error === 'object' && error && 'response' in error && error.response && 'headers' in error.response ? (error.response as { headers?: Record<string, unknown> }).headers?.['content-type'] : undefined;
   if (typeof contentType === 'string' && contentType.includes('text/html')) {
     toast.error('Server returned HTML instead of JSON');
   }
 
-  const config = typeof error === 'object' && error && 'config' in error ? (error as { config?: unknown }).config || {} : {};
-  const axiosRetryState = config['axios-retry']; // Standard property used by axios-retry
+  const config = (typeof error === 'object' && error && 'config' in error ? (error as any).config : {}) || {};
+  const axiosRetryState = (config as any)['axios-retry'];
 
   const isRetryingAndNotFinalConfiguredRetry = axiosRetryState && axiosRetryState.attemptNumber <= axiosRetryState.retryCount;
 
   const status = typeof error === 'object' && error && 'response' in error && error.response && 'status' in error.response ? (error.response as { status?: number }).status : undefined;
-  const method = (config.method || '').toUpperCase();
-  const url = config.url || '';
+  const method = ((config as any).method || '').toUpperCase();
+  const url = (config as any).url || '';
 
   // Handle DELETE 404 as success (item already removed)
   if (status === 404 && method === 'DELETE') {
@@ -47,8 +47,7 @@ export const globalAxiosErrorHandler = (error: unknown) => {
     '/telemetry',
     'supabase.co',
     'googleapis.com',
-    'github.com/api',
-  ];
+    'github.com/api'];
 
   // Check if URL should fail silently
   const shouldFailSilently = (url: string): boolean => {
@@ -86,7 +85,7 @@ export const globalAxiosErrorHandler = (error: unknown) => {
 
   // Only show error toast if it's a user-facing error
   if (typeof status === 'number' && shouldShowErrorToUser(status, method, url)) {
-    const message = typeof error === 'object' && error && 'response' in error && error.response && 'data' in error.response && typeof (error.response as { data?: unknown }).data === 'object' && (error.response as { data?: unknown }).data && 'message' in (error.response as { data?: unknown }).data ? ((error.response as { data?: unknown }).data as { message?: string }).message : 'Something went wrong';
+    const message = error?.response?.data?.message as string | undefined;
     toast.error(message || 'Something went wrong');
   } else {
     // Log background errors without showing toast
@@ -111,7 +110,7 @@ export function setAuthToken(token: string) {
   (apiClient.defaults.headers.common as any).Authorization = `Bearer ${token}`;
 }
 
-axiosRetry(apiClient, {
+axiosRetry(apiClient as any, {
   retries: 3,
   retryCondition: (error) => {
     return (

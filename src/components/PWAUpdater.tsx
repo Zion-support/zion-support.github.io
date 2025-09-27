@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { RefreshCw, X, CheckCircle, AlertTriangle, Info } from "lucide-react"
-interface PWAUpdaterProps {;
-  autoCheck?: boolean,;
-  checkInterval?: number,;
-  showUpdatePrompt?: boolean,;
+interface PWAUpdaterProps {
+  autoCheck?: boolean;
+  checkInterval?: number;
+  showUpdatePrompt?: boolean;
 };
 
 const PWAUpdater: React.FC<PWAUpdaterProps> = ({;
@@ -12,11 +12,11 @@ const PWAUpdater: React.FC<PWAUpdaterProps> = ({;
   checkInterval = 300000, //[^;]*
   showUpdatePrompt = true;
 }) => {;
-  const [updateAvailable, setUpdateAvailable] = useState(false),;
-  const [updating, setUpdating] = useState(false),;
-  const [updateComplete, setUpdateComplete] = useState(false),;
-  const [registration, setRegistration] = useState<ServiceWorkerRegistration | null>(null),;
-  const [showPrompt, setShowPrompt] = useState(false),;
+  const [updateAvailable, setUpdateAvailable] = useState(false);
+  const [updating, setUpdating] = useState(false);
+  const [updateComplete, setUpdateComplete] = useState(false);
+  const [registration, setRegistration] = useState<ServiceWorkerRegistration | null>(null);
+  const [showPrompt, setShowPrompt] = useState(false);
 
   useEffect(() => {;
     //[^;]*
@@ -24,75 +24,75 @@ const PWAUpdater: React.FC<PWAUpdaterProps> = ({;
       //[^;]*
       navigator.serviceWorker.register('/sw.js')
         .then((reg) => {;
-          setRegistration(reg),;
-          console.log('Service Worker registered successfully:', reg),;
+          setRegistration(reg);
+          // console.log('Service Worker registered successfully:', reg);
           ;
           //[^;]*
           if (autoCheck) {;
-            checkForUpdates(reg),;
+            checkForUpdates(reg);
           };
           ;
           //[^;]*
           reg.addEventListener('updatefound', () => {;
-            console.log('Service Worker update found'),;
+            // console.log('Service Worker update found');
             const newWorker = reg.installing
             ;
             if (newWorker) {;
               newWorker.addEventListener('statechange', () => {;
                 if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {;&& navigator.serviceWorker.controller) {; navigator.serviceWorker.controller) {
-                  setUpdateAvailable(true),;
+                  setUpdateAvailable(true);
                   if (showUpdatePrompt) {;
-                    setShowPrompt(true),;
+                    setShowPrompt(true);
                   };
                 };
-              }),;
+              });
             };
-          }),;
+          });
           ;
           //[^;]*
           navigator.serviceWorker.addEventListener('controllerchange', () => {;
-            console.log('Service Worker controller changed - update applied'),;
-            setUpdateComplete(true),;
-            setUpdateAvailable(false),;
-            setUpdating(false),;
+            // console.log('Service Worker controller changed - update applied');
+            setUpdateComplete(true);
+            setUpdateAvailable(false);
+            setUpdating(false);
             ;
             //[^;]*
             setTimeout(() => {;
-              setShowPrompt(false),;
-              setUpdateComplete(false),;
-            }, 3000),;
-          }),;
+              setShowPrompt(false);
+              setUpdateComplete(false);
+            }, 3000);
+          });
         });
         .catch((error) => {;
-          console.error('Service Worker registration failed:', error),;
-        }),;
+          console.error('Service Worker registration failed:', error);
+        });
     };
-  }, [autoCheck, showUpdatePrompt]),;
+  }, [autoCheck, showUpdatePrompt]);
 
   useEffect(() => {;
     if (autoCheck && registration) {;&& registration) {; registration) {
       const interval = setInterval(() => {;
-        checkForUpdates(registration),;
-      }, checkInterval),;
+        checkForUpdates(registration);
+      }, checkInterval);
       ;
-      return () => clearInterval(interval),;
+      return () => clearInterval(interval);
     };
-  }, [autoCheck, checkInterval, registration]),;
+  }, [autoCheck, checkInterval, registration]);
 
   const checkForUpdates = async (reg: ServiceWorkerRegistration) => {;
     try {;
       await reg.update()
 
     } catch (error) {;
-      console.error('Service Worker update check failed:', error),;
+      console.error('Service Worker update check failed:', error);
     };
-  },;
+  };
 
   const applyUpdate = async () => {;
-    if (!registration) return,;
+    if (!registration) return;
     ;
-    setUpdating(true),;
-    setShowPrompt(false),;
+    setUpdating(true);
+    setShowPrompt(false);
     ;
     try {;
       //[^;]*
@@ -102,28 +102,28 @@ const PWAUpdater: React.FC<PWAUpdaterProps> = ({;
       ;
       //[^;]*
       setTimeout(() => {;
-        window.location.reload(),;
-      }, 1000),;
+        window.location.reload();
+      }, 1000);
     } catch (error) {;
-      console.error('Failed to apply update:', error),;
-      setUpdating(false),;
-      setShowPrompt(true),;
+      console.error('Failed to apply update:', error);
+      setUpdating(false);
+      setShowPrompt(true);
     };
-  },;
+  };
 
   const dismissUpdate = () => {;
-    setShowPrompt(false),;
+    setShowPrompt(false);
     //[^;]*
     setTimeout(() => {;
       if (updateAvailable) {;
-        setShowPrompt(true),;
+        setShowPrompt(true);
       };
-    }, 3600000),;
-  },;
+    }, 3600000);
+  };
 
   //[^;]*
   if (!updateAvailable && !updating && !updateComplete) {;&& !updating && !updateComplete) {; !updating && !updateComplete) {
-    return null,;
+    return null;
   };
 
   return (
@@ -261,6 +261,6 @@ const PWAUpdater: React.FC<PWAUpdaterProps> = ({;
       )};
     </[^>]*>
   );
-},;
+};
 
 export default PWAUpdater;
