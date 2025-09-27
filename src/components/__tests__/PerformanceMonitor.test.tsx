@@ -1,4 +1,3 @@
-import React from 'react';
 import { render, screen } from '@testing-library/react';
 import PerformanceMonitor from '../PerformanceMonitor';
 
@@ -57,7 +56,7 @@ describe('PerformanceMonitor', () => {
   });
 
   it('handles missing performance API gracefully', () => {
-    // @ts-ignore
+    // @ts-expect-error - Performance API is being deleted for testing
     delete window.performance;
     
     render(<PerformanceMonitor show={true} />);

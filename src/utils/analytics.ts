@@ -137,6 +137,27 @@ export class AnalyticsManager {
       this.trackPerformanceMetric('dom_content_loaded', navigation.domContentLoadedEventEnd - navigation.fetchStart);
       this.trackPerformanceMetric('first_byte', navigation.responseStart - navigation.fetchStart);
     });
+
+    // Time to interactive
+    this.trackTimeToInteractive();
+  }
+
+  private trackTimeToInteractive(): void {
+    let tti = 0;
+    const observer = new PerformanceObserver((list) => {
+      for (const entry of list.getEntries()) {
+        if (entry.entryType === 'navigation') {
+          const navEntry = entry as PerformanceNavigationTiming;
+          tti = navEntry.domContentLoadedEventEnd - (navEntry as PerformanceNavigationTiming & { navigationStart: number }).navigationStart;
+          this.trackPerformanceMetric({
+            name: 'time_to_interactive',
+            value: tti,
+            unit: 'ms'
+          });
+        }
+      }
+    });
+    observer.observe({ entryTypes: ['navigation'] });
   }
 
   private trackUserInteractions(): void {
