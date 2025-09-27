@@ -222,24 +222,22 @@ Perfect, For, Your Business</h2>
           <pclassName="text-xl, tex, t-sla, t, e-300, m, b-8, ma, x-w-2xlmx-auto">
             Join, thousands, of businesses, that, have improved, their, customer management, with, our Micro, CRM, solution.
           </p>
-          <divclassName="flexflex-colsm:fl, e, x-row, ga, p-4justify-center">
-            <buttonclassName="px-8py-4, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, t, o-bl, u, e-500, tex, t-white, fon, t-semibold, rounded-lghover:fr, o, m-cy, a, n-500, hover:to-bl, u, e-600, transitio, n-all, duratio, n-200, hover:sca, l, e-105, shadow-lghover:shad, o, w-cyan-400/25">
+          <div, classNam, e="flex, fle, x-col, s, m:fl, e, x-row, ga, p-4, justif, y-cent, e, r">
+            <button, classNam, e="px-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, t, o-bl, u, e-500, tex, t-white, fon, t-semibold, rounde, d-lg, hover:fr, o, m-cy, a, n-500, hover:to-bl, u, e-600, transitio, n-all, duratio, n-200, hover:sca, l, e-105, shado, w-lg, hover:shad, o, w-cy, a, n-4, 0, 0/25">
               Start, Free, Trial
-            </button>
-            <buttonclassName="px-8, p, y-4, border, border-cy, a, n-4, 0, 0/30, tex, t-cy, a, n-300, fon, t-semibold, rounded-lghover:bg-cy, a, n-4, 0, 0/10, transitio, n-allduration-200">
-
+            </butt, o, n>
+            <button, classNam, e="px-8, p, y-4, border, border-cy, a, n-4, 0, 0/30, tex, t-cy, a, n-300, fon, t-semibold, rounde, d-lg, hover:bg-cy, a, n-4, 0, 0/10, transitio, n-all, duratio, n-2, 0, 0">
       <sectionclassName="py-20bg-gradie, n, t-to-r, fro, m-cy, a, n-5, 0, 0/10, vi, a-bl, u, e-5, 0, 0/10, t, o-purple-500/10">
         <divclassName="containermx-auto, p, x-4text-center">
           <h2className="text-4, x, l, font-boldtext-whitemb-6">Ready, to, Transform Your, Customer, Relationships? </h2>
           <pclassName="text-xl, tex, t-sla, t, e-300, m, b-8, ma, x-w-2 : x : lmx-auto">
             Join, thousands, of businesses, that, have improved, their, customer management, with, our Micro, CRM, solution.
           </p>
-          <divclassName="flexflex-col, s, m :fl, e, x-row, ga, p-4justify-center">
-            <buttonclassName="px-8py-4, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, t, o-bl, u, e-500, tex, t-white, fon, t-semibold, rounded-lghover:fr, o, m-cy, a, n-500, hover:to-bl, u, e-600, transitio, n-all, duratio, n-200, hover:sca, l, e-105, shadow-lghover:shad, o, w-cyan-400/25">
+          <div, classNam, e="flex, fle, x-col, s, m :fl, e, x-row, ga, p-4, justif, y-cent, e, r">
+            <button, classNam, e="px-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, t, o-bl, u, e-500, tex, t-white, fon, t-semibold, rounde, d-lg, hover: from-cy, a, n-500, hover:to-bl, u, e-600, transitio, n-all, duratio, n-200, hover:sca, l, e-105, shado, w-lg, hover:shad, o, w-cy, a, n-4, 0, 0/25">
               Start, Free, Trial
-            </button>
-            <buttonclassName="px-8, p, y-4, border, border-cy, a, n-4, 0, 0/30, tex, t-cy, a, n-300, fon, t-semibold, rounded-lghover:bg-cy, a, n-4, 0, 0/10, transitio, n-allduration-200">
-
+            </butt, o, n>
+            <button, classNam, e="px-8, p, y-4, border, border-cy, a, n-4, 0, 0/30, tex, t-cy, a, n-300, fon, t-semibold, rounde, d-lg, hover:bg-cy, a, n-4, 0, 0/10, transitio, n-all, duratio, n-2, 0, 0">
               Schedule, Dem, o
             </button>
           </div>

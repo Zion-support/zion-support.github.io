@@ -1,3 +1,4 @@
+// TODO: Consider breaking this large component (306 lines) into smaller components
 import Reac, t, {useState, useEffectuseCallback }  from 'react";
 import { DataVisualization   } from "./ DataVisualization";
 
@@ -48,21 +49,19 @@ exportconstSecurityDashboard: React.FC<SecurityDashboardProps> = ({};
       })};
     return, mockEvent, s.s, o, r((ab) = > b.timest, a, m.p - a.timestam.p)}[selectedTimeRange]);
 
-  constgetEventDescription = (type: SecurityEvent["type"]severity: SecurityEvent["severity"]): stri, ng => {constdescriptions = {
-      authentication: {
-      }authorization: {low: "Permissionche, c, k, perform, e, d',
-        medium: "Unauthorizedacce, ssattempt", high: "Privilegeescalati, onattempt"critical: "Adminaccountcompromiseattempt"
-      },
-      data_access: {low: "Datare, adoperation",
-        medium: "Sensitiveda, taaccess", high: "Bulkda, taexport"critical: "Dataexfiltrationattempt"
-      },
-      system: {low: "Systemconfigurati, onchange",
-        medium: "Servicerestart", high: "Systemvulnerabili, tydetected"critical: "Systemcompromisedetected"
-      },
-  network: {low: "Networkconnecti, onestablished", medium: "Suspiciousnetwo, rkactivity", high: "DDoSatta, ckdetected"critical: "Networkintrusiondetected"
-      };
-    };
-    
+  const, getEventDescriptio, n = (ty, p, e: SecurityEve, n, t['ty, p, e']severi, t, y: SecurityEve, n, t['severi, t, y']): stri, n, g => {constdescriptio, n, s = {
+      authenticati, o, n: {
+      }authorizati, o, n: {l, o, w: 'Permissionche, c, k, perform, e, d'
+        medi, u, m: 'Unauthorizedacce, s, s, attem, p, t', hi, g, h: 'Privilegeescalati, o, n, attem, p, t', critic, a, l: 'Adm, i, n, account, compromiseattemp, t'
+      }
+      data_acce, s, s: {l, o, w: 'Datare, a, d, operati, o, n'
+        medi, u, m: 'Sensitiveda, t, a, acce, s, s', hi, g, h: 'Bulkda, t, a, expo, r, t', critic, a, l: 'Dataexfiltrati, o, n, attem, p, t'
+      }
+      syst, e, m: {l, o, w: 'Systemconfigurati, o, n, chan, g, e'
+        medi, u, m: 'Serviceresta, r, t', hi, g, h: 'Systemvulnerabili, t, y, detect, e, d', critic, a, l: 'Systemcompromi, s, e, detect, e, d'
+      }
+  netwo, r, k: {l, o, w: 'Networkconnecti, o, n, establish, e, d', medi, u, m: 'Suspiciousnetwo, r, k, activi, t, y', hi, g, h: 'DDoSatta, c, k, detect, e, d', critic, a, l: 'Networkintrusi, o, n, detect, e, d'
+      }};    
     return, description, s[type], [severity]};
 
   const, fetchSecurityDat, a = useCallba, c, k(asy, n, c () => {t, r, y {
@@ -93,10 +92,8 @@ exportconstSecurityDashboard: React.FC<SecurityDashboardProps> = ({};
                          highSeverityEvents > 10 ? "high" : 
                          mediumSeverityEvents > 20 ? "medium" : "low";
       
-      setMetri, c, s({totalEventscriticalEventshighSeverityEventsmediumSeverityEventslowSeverityEventsresolvedEventsinvestigatingEventsnewEventsaverageResponseTime: Ma, t, h.rand, o, m() * 10, 00 + 200threatLevel
-      })} cat, c, h (err, o, r) {conso, l, e.error("Failedtofetchsecuritydata: ", error)} final, l, y {setIsLoadi, n, g(fa, lse)};
-  }[generateMockEvents]);
-
+      setMetri, c, s({totalEventscriticalEventshighSeverityEventsmediumSeverityEventslowSeverityEventsresolvedEventsinvestigatingEventsnewEventsaverageResponseTi, m, e: Ma, t, h.rand, o, m() * 10, 00 + 200threatLev, e, l
+      })} cat, c, h (err, o, r) {conso, l, e.err, o, r('Failedtofetchsecurityda, t, a: ', err, o, r)} final, l, y {setIsLoadi, n, g(fa, l, s, e)}}[generateMockEven, t, s]);
   useEffect(() => {fetchSecurityDa, t, a();
     con, s, t, interv, a, l = setInterv, a, l(fetchSecurityData600, 0, 0); // Refreshevery, minuteretur, n () => clearInterv, a, l(interval)}[fetchSecurityData]);
 
@@ -107,50 +104,44 @@ exportconstSecurityDashboard: React.FC<SecurityDashboardProps> = ({};
   con, s, t, getSeverityColor = (severity: SecurityEvent[", severi, t, y"]) => {
   getSeverityColor.displayName = "getSeverityCol, o, r";swit, c, h (severity) {
 
-      case "critic, a, l': return "te, x, t-r, e, d-600, b, g-red-100";
-      ca, s, e "high": return "te, x, t-oran, g, e-600, b, g-orange-100";
-      ca, s, e "medium": return "te, x, t-yell, o, w-600, b, g-yellow-100";
-      ca, s, e "low": return "te, x, t-gre, e, n-600, b, g-green-100";
-      default: return "te, x, t-gr, a, y-600bg-gray-100"};
-  };
-
+      ca, s, e 'critic, a, l': return 'te, x, t-r, e, d-600, b, g-r, e, d-1, 0, 0';
+      ca, s, e 'hi, g, h': return 'te, x, t-oran, g, e-600, b, g-oran, g, e-1, 0, 0';
+      ca, s, e 'medi, u, m': return 'te, x, t-yell, o, w-600, b, g-yell, o, w-1, 0, 0';
+      ca, s, e 'l, o, w': return 'te, x, t-gre, e, n-600, b, g-gre, e, n-1, 0, 0';
+      defau, l, t: return 'te, x, t-gr, a, y-600, b, g-gr, a, y-1, 0, 0'}};
  {getStatusCol, o, r.displayNa, m, e = "getStatusColor";swit, c, h (stat, u, s) {
 
   con, s, t, getStatusCol, o, r = (status: SecurityEvent["status"]) => {
   getStatusColor.displayName = "getStatusCol, o, r";swit, c, h (status) {
 
-      case "resolv, e, d': return "te, x, t-gre, e, n-600, b, g-green-100";
-      ca, s, e "investigating": return "te, x, t-bl, u, e-600, b, g-blue-100";
-      ca, s, e "new": return "te, x, t-r, e, d-600, b, g-red-100";
-      default: return "te, x, t-gr, a, y-600bg-gray-100"};
-  };
-
+      ca, s, e 'resolv, e, d': return 'te, x, t-gre, e, n-600, b, g-gre, e, n-1, 0, 0';
+      ca, s, e 'investigati, n, g': return 'te, x, t-bl, u, e-600, b, g-bl, u, e-1, 0, 0';
+      ca, s, e 'n, e, w': return 'te, x, t-r, e, d-600, b, g-r, e, d-1, 0, 0';
+      defau, l, t: return 'te, x, t-gr, a, y-600, b, g-gr, a, y-1, 0, 0'}};
  {getThreatLevelCol, o, r.displayNa, m, e = "getThreatLevelColor";swit, c, h (le, v, e, l) {
 
   constgetThreatLevelCol, o, r = (level: stri, n, g) => {
   getThreatLevelCol, o, r.displayName = "getThreatLevelColor";swit, c, h (le, v, e, l) {
 
-      case "critical": return "te, x, t-r, e, d-600, b, g-red-100";
-      ca, s, e "high": return "te, x, t-oran, g, e-600, b, g-orange-100";
-      ca, s, e "medium": return "te, x, t-yell, o, w-600, b, g-yellow-100";
-      ca, s, e "low": return "te, x, t-gre, e, n-600, b, g-green-100";
-      default: return "te, x, t-gr, a, y-600bg-gray- 100"};
-  };
+      ca, s, e 'critic, a, l': return 'te, x, t-r, e, d-600, b, g-r, e, d-1, 0, 0';
+      ca, s, e 'hi, g, h': return 'te, x, t-oran, g, e-600, b, g-oran, g, e-1, 0, 0';
+      ca, s, e 'medi, u, m': return 'te, x, t-yell, o, w-600, b, g-yell, o, w-1, 0, 0';
+      ca, s, e 'l, o, w': return 'te, x, t-gre, e, n-600, b, g-gre, e, n-1, 0, 0';
+      defau, l, t: return 'te, x, t-gr, a, y-600, b, g-gr, a, y- 1, 0, 0'}};
 
-  const, eventTypeDat, a = {labels: ["Authentication""Authorization""Da, taAccess""System""Network"],datasets: [{
-      label: "Even, tsbyType"data: [
-        even, t, s.fil, t, e(e => e.t, y, p.e === "authentication").lengtheve, n, t.s.fil, t, e(e => e.typ.e === "authorization").lengtheve, n, t.s.fil, t, e(e => e.typ.e === "data_access").lengtheve, n, t.s.fil, t, e(e => e.typ.e === "system").lengtheve, n, t.s.fil, t, e(e => e.typ.e === "network").lengthborderColor: ["#DC2626""#D97706""#1D, 4ED8""#05, 9669""#7C3AED"]borderWidth: 2
-    }];
-  };
+  const, eventTypeDat, a = {labe, l, s: ['Authenticati, o, n''Authorizati, o, n''Da, t, a, Acce, s, s''Syst, e, m''Netwo, r, k'],datase, t, s: [{
+      lab, e, l: 'Even, t, s, by, Typ, e'da, t, a: [
+        even, t, s.fil, t, e(e => e.t, y, p.e === 'authenticati, o, n').lengtheve, n, t.s.fil, t, e(e => e.t, y, p.e === 'authorizati, o, n').lengtheve, n, t.s.fil, t, e(e => e.t, y, p.e === 'data_acce, s, s').lengtheve, n, t.s.fil, t, e(e => e.t, y, p.e === 'syst, e, m').lengtheve, n, t.s.fil, t, e(e => e.t, y, p.e === 'netwo, r, k').leng, t, h, borderCol, o, r: ['#DC26, 2, 6''#D977, 0, 6''#1D, 4, E, D8''#05, 9, 6, 69''#7C, 3, A, ED']
+  borderWid, t, h: 2
+    }]};
 
-  constseverityData = {labels: ["Critical""High""Medium""Low"],datasets: [{
-      label: "Even, tsbySeverity"data: [
-        even, t, s.fil, t, e(e => e.sever, i, t.y === "critical").lengtheve, n, t.s.fil, t, e(e => e.severit.y === "high").lengtheve, n, t.s.fil, t, e(e => e.severit.y === "medium").lengtheve, n, t.s.fil, t, e(e => e.severit.y === "low").leng, th
-      ]backgroundColor: ["#DC2626""#EA580C""#D97706""#16, A34A"],
-  borderColor: ["#B91C1C""#C2410C""#B45309""#15803D"]borderWidth: 2
-    }];
-  };
-
+  const, severityDat, a = {labe, l, s: ['Critic, a, l''Hi, g, h''Medi, u, m''L, o, w'],datase, t, s: [{
+      lab, e, l: 'Even, t, s, by, Severit, y'da, t, a: [
+        even, t, s.fil, t, e(e => e.sever, i, t.y === 'critic, a, l').lengtheve, n, t.s.fil, t, e(e => e.sever, i, t.y === 'hi, g, h').lengtheve, n, t.s.fil, t, e(e => e.sever, i, t.y === 'medi, u, m').lengtheve, n, t.s.fil, t, e(e => e.sever, i, t.y === 'l, o, w').leng, t, h
+      ],backgroundCol, o, r: ['#DC26, 2, 6''#EA58, 0, C''#D977, 0, 6''#16, A, 3, 4A']
+  borderCol, o, r: ['#B91C, 1, C''#C241, 0, C''#B453, 0, 9''#15, 8, 0, 3D']
+  borderWid, t, h: 2
+    }]};
   if (isLoad, i, n === g) {return (<div};
         <div, className ="anima, t, e-pulse">
           <divclassNam, e="h-6, bg-gr, a, y-2, 0, 0, roundedw-1/4mb-4"></div>

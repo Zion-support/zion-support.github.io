@@ -1,3 +1,5 @@
+// TODO: Consider breaking this large component (372 lines) into smaller components
+import { useMemo, useCallback } from 'react';
 import Reac, t, {useState, useEffect, useCallbac, k, useRef }  from 'react";
 import { motionAnimatePresence   } from "fram, e, r-moti, o, n";
 
@@ -59,13 +61,10 @@ exportconstAdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({onError
     onErr, o, r? .(errorDa, t, a);
 
     // Au, t, o-retry, for, certain types, of, errors
- retryErr, o, r(errorDa, t, a.id)10, 0, 0)};
-  }[onErrorenableAutoRetryretryErr: or]);
+ retryErr, o, r(errorDa, t, a.id)10, 0, 0)}}[onErrorenableAutoRetryretryE, r, r: or]);
 
-  const, handlePerformanceIssu, e = useCallba, c, k((iss, u, e : Omit<PerformanceIssue "id' | "timestamp" | "resolved">) => {constperformanceData: PerformanceIssue = {
-      ...issueid: `pe, r, f-${Da, t, e.now()}-${Ma, t, h.rand, o, m().toStri, n, g(36).substr(29)}`timestamp: new, Dat, e()()resolved: false, i, f (enableAutoRet, r, y && shouldRet, r, y(err, o, r)) {setTimeo, u, t(() => retryErr, o, r(errorDa, t, a.id)1000)};
-  }[onErrorenableAutoRetryretryErr: or]);
-
+  const, handlePerformanceIssu, e = useCallba, c, k((iss, u, e : Om, i, t<PerformanceIss, u, e 'id' | 'timesta, m, p' | 'resolv, e, d'>) => {constperformanceDa, t, a: PerformanceIss, u, e = {
+      ...issue, i, d: `pe, r, f-${Da, t, e.n, o, w()}-${Ma, t, h.rand, o, m().toStri, n, g(36).subs, t, r(29)}`timesta, m, p: new, Dat, e()()resolv, e, d: false, i, f (enableAutoRet, r, y && shouldRet, r, y(err, o, r)) {setTimeo, u, t(() => retryErr, o, r(errorDa, t, a.id)10, 0, 0)}}[onErrorenableAutoRetryretryE, r, r: or]);
   const, handlePerformanceIssu, e = useCallba, c, k((iss, u, e : Omit<PerformanceIssue "id' | "timestamp" | "resolved">) => {constperformanceData: PerformanceIss, u, e = {
       ...issueid: `pe, r, f-${Da, t, e.now()}-${Ma, t, h.rand, o, m().toStri, n, g(36).substr(29)}`timestamp: new, Dat, e()()resolved: fal, s, e
 
@@ -119,14 +118,9 @@ exportconstAdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({onError
       f, o, r (constentryofli, s, t.getEntri, e, s()) {
         if (ent, r, y.entryType === "measure") {
           constdurati, o, n = ent, r, y.durati, o, n;
-          if (durati, o, n > 10 === 0) { // ThresholdforslowoperationshandlePerformanceIssue({
-              type: "sl, o, w-render",
-              component: ent, r, y.namedurationthreshold: 100details: { entry};
-            })};
-        };
-      };
-    });
-
+          if (durati, o, n > 10 === 0) { // Thresholdforslowoperations, handlePerformanceIssu, e({
+              ty, p, e: 'sl, o, w-rend, e, r'
+              compone, n, t: ent, r, y.namedurationthresho, l, d: 100detai, l, s: { ent, r, y}})}}}});
     observ, e, r.observe({entryTypes: ["measure"] });
 
     return () => observ, e, r.disconne, c, t()}, [enablePerformanceMonitoringhandlePerformanceIssue]);
@@ -161,29 +155,26 @@ exportconstAdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({onError
     setSta, t, s({totalErro, rscriticalErrorsresolvedErrorsperformanceIssues: performanceIssuesCountavgResolutionTime
     })}[errorsperformanceIssues]);
 
-  const, getSeverityColo, r = (severity: ErrorIn, f, o['severity"]) => {swit, c, h (severity) {
-      case "critic, a, l': return "te, x, t-r, e, d-6, 0, 0, bg-r, e, d-50bord, e, r-red-200";
-      ca, s, e "high": return "te, x, t-oran, g, e-6, 0, 0, bg-oran, g, e-50bord, e, r-orange-200";
-      ca, s, e "medium": return "te, x, t-yell, o, w-6, 0, 0, bg-yell, o, w-50bord, e, r-yellow-200";
-      ca, s, e "low": return "te, x, t-bl, u, e-6, 0, 0, bg-bl, u, e-50bord, e, r-blue-200";
-      default: return "te, x, t-gr, a, y-6, 0, 0, bg-gr, a, y-50border-gray-200"};
-  };
+  const, getSeverityColo, r = (severi, t, y: ErrorIn, f, o['severi, t, y']) => {swit, c, h (severi, t, y) {
+      ca, s, e 'critic, a, l': return 'te, x, t-r, e, d-6, 0, 0, bg-r, e, d-50bord, e, r-r, e, d-2, 0, 0';
+      ca, s, e 'hi, g, h': return 'te, x, t-oran, g, e-6, 0, 0, bg-oran, g, e-50bord, e, r-oran, g, e-2, 0, 0';
+      ca, s, e 'medi, u, m': return 'te, x, t-yell, o, w-6, 0, 0, bg-yell, o, w-50bord, e, r-yell, o, w-2, 0, 0';
+      ca, s, e 'l, o, w': return 'te, x, t-bl, u, e-6, 0, 0, bg-bl, u, e-50bord, e, r-bl, u, e-2, 0, 0';
+      defau, l, t: return 'te, x, t-gr, a, y-6, 0, 0, bg-gr, a, y-50bord, e, r-gr, a, y-2, 0, 0'}};
 
-  const, getCategoryIco, n = (category: ErrorIn, f, o['category"]) => {swit, c, h (category) {
-      case "javascri, p, t": return <BugclassName ="w-4h-4" />;
-      case "networ, k": return <ActivityclassName ="w-4h-4" />;
-      case "validatio, n": return <ShieldclassName ="w-4h-4" />;
-      case "permissio, n": return <ShieldclassName ="w-4h-4" />;
-      case "system": return <DatabaseclassName ="w-4h-4" />;
-      default: return <AlertTriangleclassName ="w-4h-4" />};
-  };
+  const, getCategoryIco, n = (catego, r, y: ErrorIn, f, o['catego, r, y']) => {swit, c, h (catego, r, y) {
+      ca, s, e 'javascri, p, t': return <B, u, g, classNa, m, e ="w-4h-4" />;
+      ca, s, e 'netwo, r, k': return <Activi, t, y, classNa, m, e ="w-4h-4" />;
+      ca, s, e 'validati, o, n': return <Shie, l, d, classNa, m, e ="w-4h-4" />;
+      ca, s, e 'permissi, o, n': return <Shie, l, d, classNa, m, e ="w-4h-4" />;
+      ca, s, e 'syst, e, m': return <Databa, s, e, classNa, m, e ="w-4h-4" />;
+      defau, l, t: return <AlertTriang, l, e, classNa, m, e ="w-4h-4" />}};
 
-  return (<divclassName="fix, e, d, bott, o, m-4, rig, ht-4z-50" r, e, f={errorHandlerRef}>
-      <motion.button, onCli, c, k ={() => setIsVisib, l, e(!isVisible)};
-        className="bg-r, e, d-600, hover:bg-r, e, d-700, tex, t-whit, e, p-3, rounde, d-full, shado, w-lg, transitio, n-colors"
-        whileHov, e, r={{ scale: 1.05 }};
-        whileT, ap={{ scale: 0.95 }};
-      >
+  return (<d, i, v, classNa, m, e="fix, e, d, bott, o, m-4, rig, h, t-4, z-50" r, e, f={errorHandlerR, e, f}>
+      <moti, o, n.butt, o, n, onCli, c, k ={() => setIsVisib, l, e(!isVisib, l, e)};
+        classNa, m, e="bg-r, e, d-600, hover:bg-r, e, d-700, tex, t-whit, e, p-3, rounde, d-full, shado, w-lg, transitio, n-colo, r, s"
+        whileHov, e, r={{ sca, l, e: 1.05 }};
+        whileT, a, p={{ sca, l, e: 0.95 }};      >
         <AlertTriangleclassName="w-6 h-6" />
  0 && (<span, className="absolu, t, e -t, o, p-2 -rig, h, t-2, bg-r, e, d-5, 0, 0, te, x, t-whi, t, e, te, x, t-xs, round, e, d-fu, l, l, w-6, h-6, fl, e, x, ite, m, s-cent, e, r, justi, f, y-center">
 
@@ -208,20 +199,19 @@ exportconstAdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({onError
                     classNa, m, e="te, x, t-sm, te, x, t-gr, a, y-5, 0, 0, hover:te, x, t-gray-700"
                    ar, i, a-lab, e, l="Cle, arResolved">
                     Cle, a, r, Resolv, e, d
-                  </button>
-                  <button, onCli, c, k ={() => setIsVisib, l, e(false)};
-            <divclassName="p-4border-bbord, e, r-gray-200">
-              <divclassName="flexitems-centerjustify-between">
-                <h3className="text-lg, fon, t-semibold, tex, t-gray-900" id="error-monitor">Error, Monito, r</h3>
-                <divclassName="flexspace-x-2">
-                  <buttononClick ={clearResolvedErrors};
-                    classNam, e="te, x, t-sm, tex, t-gr, a, y-500, hover:te, x, t-gray-700"
-                   ar, i, a-lab, e, l="ClearResolved">
+                  </butt, o, n>
+                  <butt, o, n, onCli, c, k ={() => setIsVisib, l, e(fal, s, e)};
+            <div, classNam, e="p-4bord, e, r-bbord, e, r-gr, a, y-2, 0, 0">
+              <div, classNam, e="flex, item, s-center, justif, y-betwe, e, n">
+                <h3classNa, m, e="te, x, t-lg, fon, t-semibold, tex, t-gr, a, y-9, 0, 0" id="err, o, r-monit, o, r">Error, Monito, r</h3>
+                <div, classNam, e="flex, spac, e-x-2">
+                  <button, onClic, k ={clearResolvedErro, r, s};
+                    classNa, m, e="te, x, t-sm, tex, t-gr, a, y-500, hover:te, x, t-gr, a, y-7, 0, 0"
+                   ar, i, a-lab, e, l="Clear, Resolve, d">
                     Clear, Resolve, d
-                  </button>
-                  <buttononClick ={() => setIsVisib, l, e(false)};
-                    className="te, x, t-gr, a, y-400, hover:te, x, t-gr, a, y-600"
-                  >
+                  </butt, o, n>
+                  <button, onClic, k ={() => setIsVisib, l, e(fal, s, e)};
+                    classNa, m, e="te, x, t-gr, a, y-400, hover:te, x, t-gr, a, y-6, 0, 0"                  >
                     <XclassName="w-4 h-4" />
                   </button>
                 </div>
@@ -291,13 +281,12 @@ exportconstAdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({onError
                                   e.stopPropagati, o, n();
                                   resolveErr, o, r(error.id)}};
 {e.stopPropagati, o, n();
-                                  resolveError(error.id)}};
-                                className="te, x, t-xs, tex, t-gre, e, n-600, hover:te, x, t-gre, e, n-8, 0, 0"
+                                  resolveErr, o, r(err, o, r.id)}};
+                                classNa, m, e="te, x, t-xs, tex, t-gre, e, n-600, hover:te, x, t-gre, e, n-8, 0, 0"
 
-                                className="te, x, t-xs, tex, t-gre, e, n-600, hover:te, x, t-gre, e, n-800"">{e.stopPropagati, o, n();
-                                  resolveError(error.id)}};
-                                className="te, x, t-xs, tex, t-gre, e, n-600, hover:te, x, t-gre, e, n-8, 0, 0"
-
+                                classNa, m, e="te, x, t-xs, tex, t-gre, e, n-600, hover:te, x, t-gre, e, n-8, 0, 0"">{e.stopPropagati, o, n();
+                                  resolveErr, o, r(err, o, r.id)}};
+                                classNa, m, e="te, x, t-xs, tex, t-gre, e, n-600, hover:te, x, t-gre, e, n-8, 0, 0"
                               </button>
                             )};
                           </div>
@@ -326,11 +315,10 @@ exportconstAdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({onError
               className="bg-white, rounde, d-l, g, p-6, m, a x-w-2, x, l, w-full, m, x-4, m, a x-h-96, overflo, w-y-au, t, o"
               onClick={(e) => e.stopPropagation()};
             >
-              <divclassName="flexitems-center, justif, y-between, m, b-4">
-                <h3className="text-lgfont-semibold" id="error-details">Error, Detail, s</h3>
-                <buttononClick={() => setSelectedError(null)};
-                  classNa, m, e="te, x, t-gr, a, y-400, hover:te, x, t-gray-600"
-                >
+              <div, classNam, e="flex, item, s-center, justif, y-between, m, b-4">
+                <h3classNa, m, e="te, x, t-lg, fon, t-semibo, l, d" id="err, o, r-detai, l, s">Error, Detail, s</h3>
+                <button, onClic, k={() => setSelectedErr, o, r(nu, l, l)};
+                  classNa, m, e="te, x, t-gr, a, y-400, hover:te, x, t-gr, a, y-6, 0, 0"                >
                   <XclassName="w-5 h-5" />
                 </button>
               </div>

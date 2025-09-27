@@ -219,8 +219,7 @@ export default function AIWorkflowAutomation() {constfeatures = [{
                 </p>
 
 
-                <buttonclassName="w-fullpx-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-cy, a, n-500, t, o-bl, u, e-600, tex, t-white, fon, t-semibold, rounded-lghover:fr, o, m-cy, a, n-400, hover:to-bl, u, e-500, transitio, n-allduration-200">
-
+                <button, classNam, e="w-full, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-cy, a, n-500, t, o-bl, u, e-600, tex, t-white, fon, t-semibold, rounde, d-lg, hover:fr, o, m-cy, a, n-400, hover:to-bl, u, e-500, transitio, n-all, duratio, n-2, 0, 0">
                   Schedule, Dem, o
                 </button>
               </div>
@@ -249,14 +248,13 @@ export default function AIWorkflowAutomation() {constfeatures = [{
             <divclassName="flexflex-colsm:fl, e, x-row, ga, p-4justify-center">
 
                 Get, Started, Now
-              </button>
-              <buttonclassName="px-8, p, y-4, border, border-cy, a, n-4, 0, 0/30, tex, t-cy, a, n-400, fon, t-semibold, rounded-lghover:bg-cy, a, n-4, 0, 0/10, transitio, n-allduration-200">
+              </butt, o, n>
+              <button, classNam, e="px-8, p, y-4, border, border-cy, a, n-4, 0, 0/30, tex, t-cy, a, n-400, fon, t-semibold, rounde, d-lg, hover:bg-cy, a, n-4, 0, 0/10, transitio, n-all, duratio, n-2, 0, 0">
 
-              <buttonclassName="px-8py-4, b, g-gradie, n, t-to-r, fro, m-cy, a, n-500, t, o-bl, u, e-600, tex, t-white, fon, t-semibold, rounded-lghover:fr, o, m-cy, a, n-400, hover:to-bl, u, e-500, transitio, n-all, duratio, n-200, hover:sca, l, e-105, shado, w-lg, shado, w-cyan-500/20">
+              <button, classNam, e="px-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-cy, a, n-500, t, o-bl, u, e-600, tex, t-white, fon, t-semibold, rounde, d-lg, hover: from-cy, a, n-400, hover:to-bl, u, e-500, transitio, n-all, duratio, n-200, hover:sca, l, e-105, shado, w-lg, shado, w-cy, a, n-5, 0, 0/20">
                 Get, Started, Now
-              </button>
-              <buttonclassName="px-8, p, y-4, border, border-cy, a, n-4, 0, 0/30, tex, t-cy, a, n-400, fon, t-semibold, rounded-lghover:bg-cy, a, n-4, 0, 0/10, transitio, n-allduration-200">
-
+              </butt, o, n>
+              <button, classNam, e="px-8, p, y-4, border, border-cy, a, n-4, 0, 0/30, tex, t-cy, a, n-400, fon, t-semibold, rounde, d-lg, hover:bg-cy, a, n-4, 0, 0/10, transitio, n-all, duratio, n-2, 0, 0">
                 Contact, Sale, s
               </button>
             </div>

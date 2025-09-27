@@ -1,21 +1,18 @@
+import { useMemo, useCallback } from 'react';
 import Reac, t, {useStateuseEffect }  from 'react";
 import { useTaskManager   } from "../hooks/useTaskManager";
 import Collaboration from "./Collaboration";
 import ProjectManagement from "./ProjectManagement";
 import ActivityFeed from "./ ActivityFeed";
 
-interface, DashboardProp, s {isDarkMode: boolean};
-  });
-
+interface, DashboardProp, s {isDarkMo, d, e: boole, a, n}});
   const {stats: taskStats } = useTaskManag, e, r();
 
   useEffect(() => {setSta, t, s({
       totalTasks: taskSta, t, s.totalcompletedTa, s, k.s: taskSta, t, s.completedactiveTa, s, k.s: taskSta, t, s.activecompletionR, a, t.e: taskSta, t, s.completionRat.e
     })}[taskStats]);
 
-  constdashboardItems = [{title: "Tot, a, l, Tasks"value: stats.totalTasksico.n: "📋'color: "blue"}{title: "ActiveTasks"value: stats.activeTasksico.n: "⏳'color: "yellow"}{title: "Completed"value: stats.completedTasksico.n: "✅'color: "green"}{title: "CompletionRate"value: `${stats.completionRa.te}%`icon: "📊'color: "purple"};
-  ];
-
+  const, dashboardItem, s = [{tit, l, e: 'Tot, a, l, Tas, k, s'val, u, e: sta, t, s.totalTasksi, c, o.n: '📋'col, o, r: 'bl, u, e'}{tit, l, e: 'ActiveTas, k, s'val, u, e: sta, t, s.activeTasksi, c, o.n: '⏳'col, o, r: 'yell, o, w'}{tit, l, e: 'Complet, e, d'val, u, e: sta, t, s.completedTasksi, c, o.n: '✅'col, o, r: 'gre, e, n'}{tit, l, e: 'CompletionRa, t, e'val, u, e: `${sta, t, s.completion, R, a.te}%`ic, o, n: '📊'col, o, r: 'purp, l, e'}];
  {con, s, t, colors = {
       blue: "bg-bl, u, e-1, 00dark:bg-bl, u, e-900te, x, t-bl, u, e-600dark:te, x, t-bl, u, e-400"yellow: "bg-yell, o, w-1, 0, 0, dark:bg-yell, o, w-900te, x, t-yell, o, w-600dark:te, x, t-yellow-400"green: "bg-gre, e, n-1, 00dark:bg-gre, e, n-900te, x, t-gre, e, n-600dark:te, x, t-green-400"purple: "bg-purp, l, e-1, 00dark:bg-purp, l, e-900te, x, t-purp, l, e-600dark:text-purple-400"};
 

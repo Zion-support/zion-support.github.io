@@ -305,14 +305,13 @@ RevolutionaryApplications</h2>
           <divclassName="flexflex-col, s, m :fl, e, x-row, ga, p-4justify-center">
 
               Access, Platfor, m
-            </button>
-            <buttonclassName="px-8, p, y-4, b, g-sla, t, e-8, 0, 0/50, border, border-sla, t, e-600, tex, t-white, fon, t-semibold, rounded-lghover:bg-sla, t, e-7, 0, 0/50, transitio, n-allduration-200">
+            </butt, o, n>
+            <button, classNam, e="px-8, p, y-4, b, g-sla, t, e-8, 0, 0/50, border, border-sla, t, e-600, tex, t-white, fon, t-semibold, rounde, d-lg, hover:bg-sla, t, e-7, 0, 0/50, transitio, n-all, duratio, n-2, 0, 0">
 
-            <buttonclassName="px-8py-4, b, g-gradie, n, t-to-r, fro, m-indi, g, o-400, t, o-purp, l, e-500, tex, t-white, fon, t-semibold, rounded-lghover:fr, o, m-indi, g, o-500, hover:to-purp, l, e-600, transitio, n-all, duratio, n-200, hover:scale-105shadow-lg">
+            <button, classNam, e="px-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-indi, g, o-400, t, o-purp, l, e-500, tex, t-white, fon, t-semibold, rounde, d-lg, hover: from-indi, g, o-500, hover:to-purp, l, e-600, transitio, n-all, duratio, n-200, hover:sca, l, e-105, shado, w-lg">
               Access, Platfor, m
-            </button>
-            <buttonclassName="px-8, p, y-4, b, g-sla, t, e-8, 0, 0/50, border, border-sla, t, e-600, tex, t-white, fon, t-semibold, rounded-lghover:bg-sla, t, e-7, 0, 0/50, transitio, n-allduration-200">
-
+            </butt, o, n>
+            <button, classNam, e="px-8, p, y-4, b, g-sla, t, e-8, 0, 0/50, border, border-sla, t, e-600, tex, t-white, fon, t-semibold, rounde, d-lg, hover:bg-sla, t, e-7, 0, 0/50, transitio, n-all, duratio, n-2, 0, 0">
               Schedule, Dem, o
             </button>
           </div>

@@ -2,21 +2,19 @@ import React from "react";
 import Image from "next/image";
 
 interface, BlogPos, t {id: stri, n, g;
-  title: stri, n, g;
-  excerpt: stri, n, g;
-  author: stri, n, g;
-  date: stri, n, g;
-  readTime: stri, n, g;
-  category: stri, n, g;
-  image: stri, n, g;
-  slug: string};
-interface, BlogCardProp, s {post: BlogPo, s, t;
-  isVisible: boole, a, n;
-  onReadMore: (slug: stri, n, g) => void};
-exportconstBlogCard: React.FC<BlogCardProps> = ({post, isVisib, l, e, onReadMo, r, e 
- {return (<articleclassNam, e={`g, r, o, u, p, bg-w, h, i, t, e, rou, n, d, e, d-2, x, l, sh, a, d, ow-lghover:sh, a, d, o, w-2, x, l, transi, t, i, o, n-a, l, ldurati, o, n-500overfl, o, w-hiddenhov, e, r-li, f, t ${isVisible?"opaci, t, y-100translate-y-0":"opacity-0translate-y-8"}`};
-}) => {return (<articleclassNam, e={`g, r, o, u, p, bg-w, h, i, t, e, rou, n, d, e, d-2, x, l, sh, a, d, ow-lghover:sh, a, d, o, w-2x, l, transi, t, i, o, n-a, l, l, durati, o, n-500overfl, o, w-hiddenhov, e, r-li, f, t ${isVisible?"opaci, t, y-100translate-y-0":"opacity-0translate-y-8"}`};
-    >
+  tit, l, e: stri, n, g;
+  excer, p, t: stri, n, g;
+  auth, o, r: stri, n, g;
+  da, t, e: stri, n, g;
+  readTi, m, e: stri, n, g;
+  catego, r, y: stri, n, g;
+  ima, g, e: stri, n, g;
+  sl, u, g: stri, n, g};
+interface, BlogCardProp, s {po, s, t: BlogPo, s, t;
+  isVisib, l, e: boole, a, n;
+  onReadMo, r, e: (sl, u, g: stri, n, g) => vo, i, d};
+export, const, BlogCard: React.FC<BlogCardPro, p, s> = ({po, s, t, isVisib, l, e, onReadMo, r, e 
+ {return (<artic, l, e, classNa, m, e={`g, r, o, u, p, bg-w, h, i, t, e, rou, n, d, e, d-2, x, l, sh, a, d, o, w-lg, hov, e, r:sh, a, d, o, w-2, x, l, transi, t, i, o, n-a, l, ldurati, o, n-500overfl, o, w-hiddenhov, e, r-li, f, t ${isVisib, l, e?'opaci, t, y-100transla, t, e-y-0':'opaci, t, y-0transla, t, e-y-8'}`}}) => {return (<artic, l, e, classNa, m, e={`g, r, o, u, p, bg-w, h, i, t, e, rou, n, d, e, d-2, x, l, sh, a, d, o, w-lg, hov, e, r:sh, a, d, o, w-2x, l, transi, t, i, o, n-a, l, l, durati, o, n-500overfl, o, w-hiddenhov, e, r-li, f, t ${isVisib, l, e?'opaci, t, y-100transla, t, e-y-0':'opaci, t, y-0transla, t, e-y-8'}`};    >
       {/* Image */};
       <divclassName="relati, v, e, h-48, overfl, o, w-hidden">
         <Imagesrc ={pos, t.image};
@@ -66,10 +64,9 @@ exportconstBlogCard: React.FC<BlogCardProps> = ({post, isVisib, l, e, onReadMo, 
           </div>
         </div>
 
-        {/* Re, a, d, MoreButton */};
-        <buttononClick={() => onReadMore(po, s, t.slug)};
-          classNa, m, e="gro, u, p/btn, inlin, e-flex, item, s-center, tex, t-bl, u, e-600, font-semiboldhover:te, x, t-bl, u, e-700, transitio, n-colorsduration-300"
-        >
+        {/* Re, a, d, More, Butto, n */};
+        <button, onClic, k={() => onReadMo, r, e(po, s, t.sl, u, g)};
+          classNa, m, e="gro, u, p/btn, inlin, e-flex, item, s-center, tex, t-bl, u, e-600, fon, t-semibold, hover:te, x, t-bl, u, e-700, transitio, n-colors, duratio, n-3, 0, 0"        >
           Read, Mor, e
           <svgclassName="w-4 h-4ml-2, grou, p-hov, e, r/btn:transla, t, e-x-1, transitio, n-transformduration-300" 
             fi, l, l="none" 

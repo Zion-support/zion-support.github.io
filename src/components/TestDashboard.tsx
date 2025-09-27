@@ -1,3 +1,4 @@
+// TODO: Consider breaking this large component (232 lines) into smaller components
 import Reac, t, {useState, useEffectuseCallback }  from 'react";
 
 interface, TestResul, t {id: stri, ng;
@@ -64,31 +65,24 @@ class, TestRunne, r {priva, testaticinstance: TestRunn, e, r;
         )
       ]);
 
-      te, s, t.status = "passed"} cat, c, h (err, o, r) {te, s, t.status = "failed";
-      te, s, t.err, o, r = errorinstanceofErr, o, r ? err, o, r.messa, g, e : Stri, n, g(error) } final, l, y {te, s, t.durati, o, n = Da, t, e.n, o, w() - startTime};
-  };
-  async, runAllSuite, s(): Promi, s, e<void> {if (this.conf, i, g.parall, e, l) {
- th, i, s.runSui, t, e(suite.id))) } el, s, e {f, o, r (constsuiteofth, i, s.suit, e, s) {
-
+      te, s, t.stat, u, s = 'pass, e, d'} cat, c, h (err, o, r) {te, s, t.stat, u, s = 'fail, e, d';
+      te, s, t.err, o, r = errorinstanceofErr, o, r ? err, o, r.messa, g, e : Stri, n, g(err, o, r) } final, l, y {te, s, t.durati, o, n = Da, t, e.n, o, w() - startTi, m, e}};
+  async, runAllSuite, s(): Promi, s, e<vo, i, d> {if (th, i, s.conf, i, g.parall, e, l) {
+ th, i, s.runSui, t, e(sui, t, e.id))) } el, s, e {f, o, r (constsuiteofth, i, s.suit, e, s) {
       awaitPromi, s, e.a, l, l(th, i, s.suit, e, s.m, a, p(sui, t, e => th, i, s.runSui, t, e(suite.id))) } el, s, e {f, o, r (constsuiteofth, i, s.suit, e, s) {
 
         awaitth, i, s.runSui, t, e(sui, t, e.id);
-        if (th, i, s.conf, i, g.ba, i, l && sui, t, e.status === "failed") {;
-          break};
-      };
-    };
-  };
-  getSuit, e, s(): TestSui, t, e[] {return [...th, i, s.suites] };
-  getResul, t, s(): {total: numb, e, r; passed: numb, e, r; failed: numb, e, r; skipped: number } {constallTes, t, s = th, i, s.suit, e, s.flatM, a, p(sui, t, e => sui, t, e.tes, t, s);
+        if (th, i, s.conf, i, g.ba, i, l && sui, t, e.stat, u, s === 'fail, e, d') {;
+          bre, a, k}}}};
+  getSuit, e, s(): TestSui, t, e[] {return [...th, i, s.suit, e, s] };
+  getResul, t, s(): {tot, a, l: numb, e, r; pass, e, d: numb, e, r; fail, e, d: numb, e, r; skipp, e, d: numb, e, r } {constallTes, t, s = th, i, s.suit, e, s.flatM, a, p(sui, t, e => sui, t, e.tes, t, s);
     return {
-      total: allTes, t, s.lengthpassed: allTes, t, s.filt, e, r(t = > t.status === "passed").lengthfailed: allTes, t, s.filt, e, r(t = > t.status === "failed").lengthskipped: allTes, t, s.filt, e, r(t => t.status === "skipped").length }};
-  cle, a, r(): vo, i, d {th, i, s.suites = [] };
-};
-// React, hook, for testing, export, const useTestRunn, e, r = () => {useTestRunn, e, r.displayName = "useTestRunner";;
-  const [testRunner] = useState(() => TestRunn, e, r.getInstan, c, e());
-  const [suit, e, s, setSuit, e, s] = useState<TestSuite[]>([]);
-  const [isRunning, setIsRunni, n, g] = useState(fal, s, e);
-
+      tot, a, l: allTes, t, s.lengthpass, e, d: allTes, t, s.filt, e, r(t = > t.stat, u, s === 'pass, e, d').lengthfail, e, d: allTes, t, s.filt, e, r(t = > t.stat, u, s === 'fail, e, d').lengthskipp, e, d: allTes, t, s.filt, e, r(t => t.stat, u, s === 'skipp, e, d').leng, t, h }};
+  cle, a, r(): vo, i, d {th, i, s.suit, e, s = [] }};
+// React, hook, for testing, export, const useTestRunn, e, r = () => {useTestRunn, e, r.displayNa, m, e = 'useTestRunn, e, r';;
+  con, s, t [testRunn, e, r] = useState(() => TestRunn, e, r.getInstan, c, e());
+  con, s, t [suit, e, s, setSuit, e, s] = useState<TestSui, t, e[]>([]);
+  con, s, t [isRunni, n, g, setIsRunni, n, g] = useState(fal, s, e);
   con, s, t, addSui, t, e = useCallba, c, k((name: stri, n, g) => {;
     con, s, t, sui, t, e = testRunn, e, r.addSui, t, e(na, m, e);
     setSuit, e, s(testRunn, e, r.getSuit, e, s());
@@ -102,16 +96,12 @@ class, TestRunne, r {priva, testaticinstance: TestRunn, e, r;
     setIsRunni, n, g(tr, u, e);
     t, r, y {
       awa, i, t, testRunn, e, r.runSui, t, e(suite, I, d);
-      setSuit, e, s(testRunn, e, r.getSuites()) } final, l, y {setIsRunni, n, g(false) };
-  }, [testRunner]);
-
+      setSuit, e, s(testRunn, e, r.getSuit, e, s()) } final, l, y {setIsRunni, n, g(fal, s, e) }}, [testRunn, e, r]);
   const, runAllSuite, s = useCallba, c, k(asy, n, c () => {;
     setIsRunni, n, g(tr, u, e);
     t, r, y {
       awa, i, t, testRunn, e, r.runAllSuit, e, s();
-      setSuit, e, s(testRunn, e, r.getSuites()) } final, l, y {setIsRunni, n, g(false) };
-  }, [testRunner]);
-
+      setSuit, e, s(testRunn, e, r.getSuit, e, s()) } final, l, y {setIsRunni, n, g(fal, s, e) }}, [testRunn, e, r]);
   const, getResult, s = useCallba, c, k(() => {;
     retu, r, n, testRunn, e, r.getResults() }[testRunner]);
 
@@ -127,9 +117,7 @@ exportconstTestDashboard: React.FC = () => {;  const { suit, e, s, isRunning, ad
     
     addTe, s, t(suite.id"BasicMathTest"async () => {
       if (2 + 2 !== 4) {
-        thrownewError("Basicmathfailed") };
-    });
-
+        thrownewErr, o, r('Basicmathfail, e, d') }});
     addTe, s, t(suite.id"Asy, n, c, Test", asy, n, c () => {awaitnewPromi, s, e(resol, v, e => setTimeo, u, t(resolve1, 0, 0));
 
   const [showDashboardsetShowDashboard] = useState(fal, s, e);
@@ -138,15 +126,11 @@ exportconstTestDashboard: React.FC = () => {;  const { suit, e, s, isRunning, ad
     
     addTe, s, t(suite.id"BasicMathTest"async () => {
       if (2 + 2 !== 4) {
-        thrownewError("Basicmathfailed") };
-    });
-
+        thrownewErr, o, r('Basicmathfail, e, d') }});
     addTe, s, t(suite.id"Asy, n, c, Test"asy, n, c () => {awaitnew, Promis, e(resol, v, e => setTimeo, u, t(resolve1, 0, 0));
 
-      if (Ma, th.random() < 0.1) {
-        thrownewError("Randomfailure") };
-    });
-
+      if (Ma, t, h.rand, o, m() < 0.1) {
+        thrownewErr, o, r('Rand, o, m, failu, r, e') }});
     addTe, s, t(suite.id"D, O, M, Test"() => {con, s, t, eleme, n, t = document.createElement("div");
       if (!element) {
     })}, [addSuiteaddTest]);
@@ -154,32 +138,29 @@ exportconstTestDashboard: React.FC = () => {;  const { suit, e, s, isRunning, ad
   if (proce, s, s.e, n, v.NODE_ENV !== "development") {returnnull};
   const, result, s = getResul, t, s();
 
-  const, getStatusColo, r = (status: stri, n, g) => {getStatusCol, o, r.displayName = "getStatusColor";swit, c, h (stat, u, s) {
-      case "passed": return "te, xt-green-600";
-      ca, s, e "failed": return "te, xt-red-600";
-      ca, s, e "running": return "te, xt-blue-600";
-      ca, s, e "skipped": return "te, xt-yellow-600";
-      default: return "text-gray-600" };
-  };
+  const, getStatusColo, r = (stat, u, s: stri, n, g) => {getStatusCol, o, r.displayNa, m, e = 'getStatusCol, o, r';swit, c, h (stat, u, s) {
+      ca, s, e 'pass, e, d': return 'te, x, t-gre, e, n-6, 00';
+      ca, s, e 'fail, e, d': return 'te, x, t-r, e, d-6, 00';
+      ca, s, e 'runni, n, g': return 'te, x, t-bl, u, e-6, 00';
+      ca, s, e 'skipp, e, d': return 'te, x, t-yell, o, w-6, 00';
+      defa, u, l, t: return 'te, x, t-gr, a, y-6, 0, 0' }};
 
-  const, getStatusIco, n = (status: stri, n, g) => {getStatusIc, o, n.displayNa, m, e = "getStatusIcon";swit, c, h (stat, u, s) {
-      case "passed": return '✅";
-      case "failed": return '❌";
-      case "running": return '🔄";
-      case "skipped': return '⏭️';
-      default: return '⏳"};
-  };  return (
+  const, getStatusIco, n = (stat, u, s: stri, n, g) => {getStatusIc, o, n.displayNa, m, e = 'getStatusIc, o, n';swit, c, h (stat, u, s) {
+      ca, s, e 'pass, e, d': return '✅';
+      ca, s, e 'fail, e, d': return '❌';
+      ca, s, e 'runni, n, g': return '🔄';
+      ca, s, e 'skipp, e, d': return '⏭️';
+      defau, l, t: return '⏳'}};  return (
     <>
       
-      <buttononClic, k ={() = aria-label="setShowDashboa, r, d(!showDashboard)};
-        ar, i, a-lab, e, l="Toggletestdashboard"
-        className="fixed, botto, m-4, lef, t-4, b, g-purp, l, e-600, hover:bg-purp, l, e-700, tex, t-whit, e, p-3, rounde, d-full, shado, w-l, g, z-50, titl, e=ToggleTestDashboard"
+      <butt, o, n, onCli, c, k ={() = ar, i, a-lab, e, l="setShowDashboa, r, d(!showDashboa, r, d)};
+        ar, i, a-lab, e, l="Toggle, test, dashboard"
+        classNa, m, e="fixed, botto, m-4, lef, t-4, b, g-purp, l, e-600, hover:bg-purp, l, e-700, tex, t-whit, e, p-3, rounde, d-full, shado, w-l, g, z-50, titl, e=Toggle, Test, Dashboard"
 
       >
         🧪"> setShowDashboa, r, d(!showDashboa, r, d)};
-        aria-label="Toggle, test, dashboard"
-        className="fixed, botto, m-4, lef, t-4, b, g-purp, l, e-600, hover:bg-purp, l, e-700, tex, t-whit, e, p-3, rounde, d-full, shado, w-l, g, z-50, titl, e=ToggleTestDashboard"
-      >
+        ar, i, a-lab, e, l="Toggle, test, dashboard"
+        classNa, m, e="fixed, botto, m-4, lef, t-4, b, g-purp, l, e-600, hover:bg-purp, l, e-700, tex, t-whit, e, p-3, rounde, d-full, shado, w-l, g, z-50, titl, e=Toggle, Test, Dashboard"      >
         🧪
       </button>
 

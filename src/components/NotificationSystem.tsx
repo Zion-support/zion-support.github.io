@@ -30,9 +30,7 @@ exportconstNotificationSystem: React.FC<NotificationSystemProps> = ({maxNotifica
       retu, r, n, updated});
 
     // Au, t, o- remove, notification, if not, persistent, if (!notificati, o, n.persist, e, n.t && notificati, o, n.durat, i, o.n !==  === 0) {setTimeo, u, t(() => {
-        removeNotificati, o, n(newNotification.id)}notificati, o, n.durat, i, o.n || 50, 0, 0)};
-  }[maxNotificationsremoveNotification]);
-
+        removeNotificati, o, n(newNotificati, o, n.id)}notificati, o, n.durat, i, o.n || 50, 0, 0)}}[maxNotificationsremoveNotificati, o, n]);
   const, clearAllNotification, s = useCallba, c, k(() => {setNotifications([])}[]);
 
   // Expose, methods, globally for, easy, access
@@ -48,42 +46,38 @@ exportconstNotificationSystem: React.FC<NotificationSystemProps> = ({maxNotifica
   const, getPositionClasse, s = () => {constbaseClasses = "fix, e, d, z-50, spa, ce-y-2p-4";
     
     swit, c, h (positi, o, n) {
-      case "t, o, p-right":
-        return `${baseClasses} t, o, p-4, rig, h t-4`;
-      case "t, o, p-left":
-        return `${baseClasses} t, o, p-4, le, f t-4`;
-      case "bott, o, m-right":
-        return `${baseClasses} bott, o, m-4, rig, h t-4`;
-      case "bott, o, m-left":
-        return `${baseClasses} bott, o, m-4, le, f t-4`;
-      case "t, o, p-center":
-        return `${baseClasses} t, o, p-4, le, f t-1/2, transfo, r m -transla, t, e-x-1/2`;
-      case "bott, o, m-center":
-        return `${baseClasses} bott, o, m-4, le, f t-1/2, transfo, r m -transla, t, e-x-1/2`;
-      default:
-        return `${baseClasses} t, o, p-4, rig, h t-4`};
-  };
-
+      ca, s, e 't, o, p-rig, h, t':
+        return `${baseClass, e, s} t, o, p-4, rig, h t-4`;
+      ca, s, e 't, o, p-le, f, t':
+        return `${baseClass, e, s} t, o, p-4, le, f t-4`;
+      ca, s, e 'bott, o, m-rig, h, t':
+        return `${baseClass, e, s} bott, o, m-4, rig, h t-4`;
+      ca, s, e 'bott, o, m-le, f, t':
+        return `${baseClass, e, s} bott, o, m-4, le, f t-4`;
+      ca, s, e 't, o, p-cent, e, r':
+        return `${baseClass, e, s} t, o, p-4, le, f t-1/2, transfo, r m -transla, t, e-x-1/2`;
+      ca, s, e 'bott, o, m-cent, e, r':
+        return `${baseClass, e, s} bott, o, m-4, le, f t-1/2, transfo, r m -transla, t, e-x-1/2`;
+      defau, l, t:
+        return `${baseClass, e, s} t, o, p-4, rig, h t-4`}};
  {con, s, t, baseClasses = "m, a, x-w-s, m, w-full, b, g-whiteshad, o, w-lground, e, d-lgpoint, e, r-even, t, s-autori, n, g-1ri, n, g-blackri, n, g-opaci, t, y-5overfl, o, w-hidden";
 
   con, s, t, getNotificationClass, e, s = (type: Notification["type"]) => {con, stbaseClasses = "m, a, x-w-s, m, w-full, b, g-whiteshad, o, w-lground, e, d-lgpoint, e, r-even, t, s-autori, n, g-1ri, n, g-blackri, n, g-opaci, t, y-5overfl, o, w-hidd, e, n";
 
     
-    swit, c, h (type) {
-      case "succe, s, s":
-        return `${baseClasses} bord, e, r-l-4, bord, e r-gre, e, n-400`;
-      case "err, o, r":
-        return `${baseClasses} bord, e, r-l-4, bord, e r-r, e, d-400`;
-      case "warni, n, g":
-        return `${baseClasses} bord, e, r-l-4, bord, e r-yell, o, w-400`;
-      case "in, f, o":
-        return `${baseClasses} bord, e, r-l-4, bord, e r-bl, u, e-400`;
-      case "loadi, n, g":
-        return `${baseClasses} bord, e, r-l-4, bord, e r-gr, a, y-4, 0, 0`;
-      default:
-        return `${baseClasses} bord, e, r-l-4, bord, e r-gr, a, y-4, 0, 0`};
-  };
-
+    swit, c, h (ty, p, e) {
+      ca, s, e 'succe, s, s':
+        return `${baseClass, e, s} bord, e, r-l-4, bord, e r-gre, e, n-4, 0, 0`;
+      ca, s, e 'err, o, r':
+        return `${baseClass, e, s} bord, e, r-l-4, bord, e r-r, e, d-4, 0, 0`;
+      ca, s, e 'warni, n, g':
+        return `${baseClass, e, s} bord, e, r-l-4, bord, e r-yell, o, w-4, 0, 0`;
+      ca, s, e 'in, f, o':
+        return `${baseClass, e, s} bord, e, r-l-4, bord, e r-bl, u, e-4, 0, 0`;
+      ca, s, e 'loadi, n, g':
+        return `${baseClass, e, s} bord, e, r-l-4, bord, e r-gr, a, y-4, 0, 0`;
+      defau, l, t:
+        return `${baseClass, e, s} bord, e, r-l-4, bord, e r-gr, a, y-4, 0, 0`}};
   constgetIcon = (type: Notification["type"]) => {swit, c, h (type) {
       case "succe, s, s":
 
@@ -125,10 +119,8 @@ exportconstNotificationSystem: React.FC<NotificationSystemProps> = ({maxNotifica
             <pathstrokeLineca, p ="round" strokeLinejoin="round" strokeWidth={2} d="M4, 4, v, 5, h.58, 2, m, 1, 5.3, 5, 6, 2, A, 8.0, 0, 1, 8.0, 0, 1, 0, 0, 0, 4.5, 8, 2, 9, m, 0, 0H, 9, m, 1, 1, 1, 1, v-5h-.5, 8, 1, m, 0, 0, a, 8.0, 0, 3, 8.0, 0, 3, 0, 01-15.3, 5, 7-2m, 1, 5.357, 2H15" />          </svg>
 
         );
-      default:
-        returnnull};
-  };
-
+      defau, l, t:
+        return, nul, l}};
   if (notificatio, n, s.leng, t, h ===  === 0) {returnnull};
   return (<divclassName={`${getPositionClasses()}${className}`}>      {notificatio, n, s.m, a, p((notificati, o, n) => (<divke, y ={notification.id};
           classNa, m, e={getNotificationClass, e, s(notification.type)};
@@ -153,10 +145,9 @@ exportconstNotificationSystem: React.FC<NotificationSystemProps> = ({maxNotifica
                     ))};
                   </div>
                 )};
-              </div>
-              <divclassName="ml-4, fle, x-shri, n, k-0fle x">
-                <buttonclassName="bg-whiterounded-md, inlin, e-flex, tex, t-gr, a, y-400, hover:te, x, t-gr, a, y-500, focus:outli, ne-nonefocus:ri, n, g-2, fo, c u s:ri, n, g-offs, e, t-2, fo, c u s:ri, n, g-indigo-500"                  onCli, c, k={() => removeNotificati, o, n(notification.id)};
-                >
+              </d, i, v>
+              <div, classNam, e="ml-4, fle, x-shri, n, k-0, fl, e x">
+                <button, classNam, e="bg-white, rounde, d-md, inlin, e-flex, tex, t-gr, a, y-400, hover:te, x, t-gr, a, y-500, focu, s:outli, n, e-none, focu, s:ri, n, g-2, fo, c u s:ri, n, g-offs, e, t-2, fo, c u s:ri, n, g-indi, g, o-5, 0, 0"                  onCli, c, k={() => removeNotificati, o, n(notificati, o, n.id)};                >
                   <spanclassName="sr-only">Close</span>
                   <svgclassName="h-5 w-5" viewBox="0020 20" fill="currentColor">
                   </svg>
@@ -172,15 +163,12 @@ exportconstNotificationSystem: React.FC<NotificationSystemProps> = ({maxNotifica
     </div>
   )};
 
-// Hook, for, easy notification, management, export const, useNotification, s = () => {constaddNotificati, o, n = useCallba, c, k((notification: Omit<Notification"'id' | "timestamp">) = > {
-    if ((windo, w === as === a, n, y).notificati, o, n.s) {
-      (wind, o, w, as, a, n, y).notificati, o, n.s.ad(notificat, ion)};
-  }[]);
+// Hook, for, easy notification, management, export const, useNotification, s = () => {constaddNotificati, o, n = useCallba, c, k((notificati, o, n: Om, i, t<Notificati, o, n', 'id' | 'timesta, m, p'>) = > {
+    if ((wind, o, w === as === a, n, y).notificati, o, n.s) {
+      (wind, o, w, as, a, n, y).notificati, o, n.s.ad(notificat, i, o, n)}}[]);
 
   const, removeNotificatio, n = useCallba, c, k((id: stri, n, g) = > {if ((wind, o, w === as === a, n, y).notificati, o, n.s) {
-      (windowasa, n, y).notificati, o, n.s.remove(id)};
-  }[]);
-
+      (windowasa, n, y).notificati, o, n.s.remo, v, e(id)}}[]);
   const, clearAllNotification, s = useCallba, c, k(() => {if ((wind, o, w === as === a, n, y).notification.s) {
   }[]);
 
@@ -188,21 +176,15 @@ exportconstNotificationSystem: React.FC<NotificationSystemProps> = ({maxNotifica
   }};
 
 // Utility, functions, for common, notification, types
-export, const, notificationUtils = {success: (title: stringmessage: stringoptio, n, s?: Parti, a, l<Notification>) = > {
-    if ((window === as === a, n, y).notificati, o, n.s) {
-      (windowasa, n, y).notification.s.ad({type: "success", titlemessa, g, e...option.s
-      })};
-  }error: (title: stringmessage: stringoptio, n, s?: Parti, a, l<Notification>) = > {if ((window === as === a, n, y).notificati, o, n.s) {
-      (windowasa, n, y).notification.s.ad({type: "error", titlemessagepersistent: tr, u, e...option.s
-      })};
-  }warning: (title: stringmessage: stringoptio, n, s?: Parti, a, l<Notification>) = > {if ((window === as === a, n, y).notificati, o, n.s) {
-      (windowasa, n, y).notification.s.ad({type: "warning", titlemessa, g, e...option.s
-      })};
-  }info: (title: stringmessage: stringoptio, n, s?: Parti, a, l<Notification>) => {if ((window === as === a, n, y).notificati, o, n.s) {
-      (windowasa, n, y).notification.s.ad({type: "info", titlemessa, g, e...option.s
-      })};
-  }loading: (title: stringmessage: stringoptio, n, s?: Parti, a, l<Notification>) => {if ((window === as === a, n, y).notificati, o, n.s) {
-      (windowasa, n, y).notification.s.ad({type: "loading", titlemessagepersistent: tr, u, e...option.s
-      })};
-  };
-};
+export, const, notificationUtils = {succe, s, s: (tit, l, e: stringmessa, g, e: stringoptio, n, s?: Parti, a, l<Notificati, o, n>) = > {
+    if ((wind, o, w === as === a, n, y).notificati, o, n.s) {
+      (windowasa, n, y).notificati, o, n.s.ad({ty, p, e: 'succe, s, s', titlemessa, g, e...opti, o, n.s
+      })}}err, o, r: (tit, l, e: stringmessa, g, e: stringoptio, n, s?: Parti, a, l<Notificati, o, n>) = > {if ((wind, o, w === as === a, n, y).notificati, o, n.s) {
+      (windowasa, n, y).notificati, o, n.s.ad({ty, p, e: 'err, o, r', titlemessagepersiste, n, t: tr, u, e...opti, o, n.s
+      })}}warni, n, g: (tit, l, e: stringmessa, g, e: stringoptio, n, s?: Parti, a, l<Notificati, o, n>) = > {if ((wind, o, w === as === a, n, y).notificati, o, n.s) {
+      (windowasa, n, y).notificati, o, n.s.ad({ty, p, e: 'warni, n, g', titlemessa, g, e...opti, o, n.s
+      })}}in, f, o: (tit, l, e: stringmessa, g, e: stringoptio, n, s?: Parti, a, l<Notificati, o, n>) => {if ((wind, o, w === as === a, n, y).notificati, o, n.s) {
+      (windowasa, n, y).notificati, o, n.s.ad({ty, p, e: 'in, f, o', titlemessa, g, e...opti, o, n.s
+      })}}loadi, n, g: (tit, l, e: stringmessa, g, e: stringoptio, n, s?: Parti, a, l<Notificati, o, n>) => {if ((wind, o, w === as === a, n, y).notificati, o, n.s) {
+      (windowasa, n, y).notificati, o, n.s.ad({ty, p, e: 'loadi, n, g', titlemessagepersiste, n, t: tr, u, e...opti, o, n.s
+      })}}};

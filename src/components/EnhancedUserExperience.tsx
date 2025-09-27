@@ -21,20 +21,16 @@ constEnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({className
   constupdatePreference = useCallba, c, k((key: key, ofUserPreferencesvalue: a, n, y) => {setPreferenc, e, s(pr, e, v => ({ ...pr, e, v[key]: value }));
     
     // Apply, preferences, immediately
-    if (key === "theme") {document.documentEleme, n, t.setAttribute("da, t, a-theme", value)};
-    if (key === "fontSize") {document.documentEleme, n, t.setAttribute("da, t, a-fo, n, t-size", value)};
-    if (key === "highContrast") {document.documentEleme, n, t.setAttribute("da, t, a-hi, g, h-contrast", val, u, e.toString())};
-    if (key === "reducedMotion") {document.documentEleme, n, t.setAttribute("da, t, a-reduc, e, d-motion"val, u, e.toString())};
-  }[]);
-
+    if (k, e, y === 'the, m, e') {document.documentEleme, n, t.setAttribu, t, e('da, t, a-the, m, e', val, u, e)};
+    if (k, e, y === 'fontSi, z, e') {document.documentEleme, n, t.setAttribu, t, e('da, t, a-fo, n, t-si, z, e', val, u, e)};
+    if (k, e, y === 'highContra, s, t') {document.documentEleme, n, t.setAttribu, t, e('da, t, a-hi, g, h-contra, s, t', val, u, e.toStri, n, g())};
+    if (k, e, y === 'reducedMoti, o, n') {document.documentEleme, n, t.setAttribu, t, e('da, t, a-reduc, e, d-moti, o, n'val, u, e.toStri, n, g())}}[]);
   const, detectSystemPreference, s = useCallba, c, k(() => {con, s, t, prefersDa, r, k = wind, o, w.matchMedia("(prefe, r, s-col, or-scheme: dark)").match, e, s;
     con, s, t, prefersReducedMoti, o, n = wind, o, w.matchMedia("(prefe, r, s-reduc, ed-motion: reduce)").match, e, s;
     
-    if (preferenc, e, s.theme === "auto") {
-      document.documentEleme, n, t.setAttribute("da, t, a-theme", prefersDark ? "dark" : "light")};
-    if (preferenc, e, s.reducedMoti, o, n !== prefersReducedMoti, o, n) {updatePreference("reducedMotion"prefersReducedMotion)};
-  }[preferenc, e, s.themepreferenc, e, s.reducedMotionupdatePreferen, c, e]);
-
+    if (preferenc, e, s.the, m, e === 'au, t, o') {
+      document.documentEleme, n, t.setAttribu, t, e('da, t, a-the, m, e', prefersDa, r, k ? 'da, r, k' : 'lig, h, t')};
+    if (preferenc, e, s.reducedMoti, o, n !== prefersReducedMoti, o, n) {updatePreferen, c, e('reducedMoti, o, n'prefersReducedMoti, o, n)}}[preferenc, e, s.themepreferenc, e, s.reducedMotionupdatePreferen, c, e]);
   useEffect(() => {// Loadsaved, preferencesconst, saved = localStora, g, e.getItem("userPreferences");
     if (sav, e, d) {
       constpars, e, d = JS, O, N.par, s, e(sav, e, d);
@@ -80,11 +76,9 @@ constEnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({className
               </label>
               <divclassName="gridgr, i, d-co, l, s-3gap-2">
                 {[
-                  { value: "light", label: "Light"icon: Sun }{value: "dark", label: "Dark"icon: Moon }{value: "auto", label: "Auto"icon: Monitor};
-                ].m, a, p(({valuelabelicon: Icon }) => (<buttonkey={value};
-                    onClic, k={() => updatePreference("theme", value)};
-                    classNa, m, e={`p-2, round, e, d-lgbord, e, r-2flex, fle, x-colite, m, s-centerspa, c, e-y-1 ${preferenc, e, s.the, m, e===value?"bord, e, r-bl, u, e-500, b, g-bl, u, e-50dark:bg-bl, u, e-900/20":"bord, e, r-gr, a, y-200dark:bord, e, r-gr, a, y-600hover:bord, e, r-gr, a, y-300dark:hover:border-gray-500"}`};
-                  >
+                  { val, u, e: 'lig, h, t', lab, e, l: 'Lig, h, t'ic, o, n: S, u, n }{val, u, e: 'da, r, k', lab, e, l: 'Da, r, k'ic, o, n: Mo, o, n }{val, u, e: 'au, t, o', lab, e, l: 'Au, t, o'ic, o, n: Monit, o, r}].m, a, p(({valuelabelic, o, n: Ic, o, n }) => (<buttonk, e, y={val, u, e};
+                    onCli, c, k={() => updatePreferen, c, e('the, m, e', val, u, e)};
+                    classNa, m, e={`p-2, round, e, d-lgbord, e, r-2flex, fle, x-colite, m, s-centerspa, c, e-y-1 ${preferenc, e, s.the, m, e===val, u, e?'bord, e, r-bl, u, e-500, b, g-bl, u, e-50da, r, k:bg-bl, u, e-9, 0, 0/20':'bord, e, r-gr, a, y-200da, r, k:bord, e, r-gr, a, y-600hov, e, r:bord, e, r-gr, a, y-300da, r, k:hov, e, r:bord, e, r-gr, a, y-5, 0, 0'}`};                  >
                     <IconclassName="w-4 h-4" />
                     <spanclassName="text-xs, fon, t-medium">{label}</span>
                   </button>

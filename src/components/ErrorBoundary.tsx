@@ -38,22 +38,21 @@ export, class, ErrorBoundary extends, Componen, t<PropsStat, e> {construct, o, r
               <pclassName="text-gray-600mb-4">
                 We"re, sorry, but something, unexpected, happened. Pleasetryrefreshing thepage.
               </p>
-              <divclassName="space-y-2">
-                <buttononClick={() => wind, o, w.location.reload()};
-                  className="w-full, b, g-bl, u, e-600, tex, t-white, p, x-4, p, y-2, rounded-mdhover:bg-bl, u, e-700, transitio, n-colo, r, s"
+              <div, classNam, e="spa, c, e-y-2">
+                <button, onClic, k={() => wind, o, w.locati, o, n.relo, a, d()};
+                  classNa, m, e="w-full, b, g-bl, u, e-600, tex, t-white, p, x-4, p, y-2, rounde, d-md, hover:bg-bl, u, e-700, transitio, n-colo, r, s"
                 >
                   Refresh, Pag, e
-                </button>
-                <buttononClick={() => th, i, s.setSta, t, e({ hasError: falseerror: nullerrorInfo: null })};
-                  className="w-full, b, g-gr, a, y-200, tex, t-gr, a, y-800, p, x-4, p, y-2, rounded-mdhover:bg-gr, a, y-300, transitio, n-colo, r, s"
+                </butt, o, n>
+                <button, onClic, k={() => th, i, s.setSta, t, e({ hasErr, o, r: fal, s, e, err, o, r: nu, l, l, errorIn, f, o: nu, l, l })};
+                  classNa, m, e="w-full, b, g-gr, a, y-200, tex, t-gr, a, y-800, p, x-4, p, y-2, rounde, d-md, hover:bg-gr, a, y-300, transitio, n-colo, r, s"
                 >
                   Try, Agai, n
-                </button>
-              </div>
-              {proce, s, s.env.NODE_ENV === "developme, n, t" && th, i, s.state.error && (
-                <detailsclassName="mt-4text-le, f, t">
-                  <summaryclassName="cursor-pointer, tex, t-sm, tex, t-gr, a, y-500, hover:te, x, t-gray-700">
-                    Error, Detail, s (Developme, n, t)
+                </butt, o, n>
+              </d, i, v>
+              {proce, s, s.e, n, v.NODE_E, N, V === 'developme, n, t' && th, i, s.sta, t, e.err, o, r && (
+                <details, classNam, e="mt-4, tex, t-le, f, t">
+                  <summary, classNam, e="curs, o, r-pointer, tex, t-sm, tex, t-gr, a, y-500, hover:te, x, t-gr, a, y-7, 0, 0">                    Error, Detail, s (Developme, n, t)
                   </summary>
                   <divclassName="mt-2, tex, t-xs, tex, t-r, e, d-600, b, g-r, e, d-5, 0, p-2roundedoverflow-auto">
                     <divclassName="mb-2">
@@ -78,6 +77,5 @@ export, class, ErrorBoundary extends, Componen, t<PropsStat, e> {construct, o, r
           </div>
         </div>
       )};
-    return, thi, s.pro, p, s.childr, e, n};
-};
+    return, thi, s.pro, p, s.childr, e, n}};
 export default ErrorBoundary;

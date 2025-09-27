@@ -30,10 +30,8 @@ export, function, useWebVitals() {const [vitalssetVitals] = useState<WebVitals>(
       setVita, l, s(pr, e, v => ({...pr, e, v[name]: value}));
 
       // Send, to, analytics (ifavailab, l, e)
-      if (typeof === window !== "undefin, e, d" && wind, o, w.gt, a, g) {window.gtag("eve, n, t"na, me{
-          event_category: "W, e, b, Vitals"value: Ma, t, h.rou, n, d(name === "CLS"? val, u, e * 10 : 0 : 0 : val, u, e)event_label: repo, r, t.idnon_interaction: true})};
-    };
-
+      if (type, o, f === wind, o, w !== 'undefin, e, d' && wind, o, w.gt, a, g) {wind, o, w.gt, a, g('eve, n, t'na, m, e{
+          event_catego, r, y: 'W, e, b, Vita, l, s'val, u, e: Ma, t, h.rou, n, d(na, m, e === 'C, L, S'? val, u, e * 10 : 0 : 0 : val, u, e)event_lab, e, l: repo, r, t.idnon_interacti, o, n: tr, u, e})}};
     // Observe, Core, Web Vita, l, s
  {f, o, r (constentryofli, s, t.getEntri, e, s()) {
           if (ent, r, y.entryType === "large, s, t-contentf, u, l-paint") {
@@ -43,19 +41,14 @@ export, function, useWebVitals() {const [vitalssetVitals] = useState<WebVitals>(
               value: (entryasa, n, y).valuedelta: (entryasany).valueid: (entryasany).id || "cls"navigationType: "navigate"})};
     t, r, y {constobserv, e, r = newPerformanceObserv, e, r((li, s, t) => {
         f, o, r (constentryofli, s, t.getEntri, e, s()) {
-          if (ent, r, y.entryType === "large, s, t-contentf, u, l-paint") {
-            handleWebVitals({name: "LCP",
-              value: ent, r, y.startTimedelta: entry.startTimeid: (entryasany).id || "lcp"navigationType: "navigate"})} else, i, f (ent, r, y.entryType === "fir, s, t-input") {handleWebVitals({name: "FID",
-              value: (entryasa, n, y).processingSta, r, t - ent, r, y.startTimedelta: (entryasa, n, y).processingSta, r, t - entry.startTimeid: (entryasany).id || "fid"navigationType: "navigate"})} else, i, f (ent, r, y.entryType === "layo, u, t-shift" && !(ent, r, y === as, a, n, y).hadRecentInp, u, t) {handleWebVitals({name: "CLS",
-              value: (entryasa, n, y).valuedelta: (entryasany).valueid: (entryasany).id || "cls"navigationType: "navigate"})};
-        };
-      });
-
+          if (ent, r, y.entryTy, p, e === 'large, s, t-contentf, u, l-pai, n, t') {
+            handleWebVita, l, s({na, m, e: 'L, C, P',
+              val, u, e: ent, r, y.startTimedel, t, a: ent, r, y.startTime, i, d: (entryasa, n, y).id || 'l, c, p'navigationTy, p, e: 'naviga, t, e'})} else, i, f (ent, r, y.entryTy, p, e === 'fir, s, t-inp, u, t') {handleWebVita, l, s({na, m, e: 'F, I, D',
+              val, u, e: (entryasa, n, y).processingSta, r, t - ent, r, y.startTimedel, t, a: (entryasa, n, y).processingSta, r, t - ent, r, y.startTime, i, d: (entryasa, n, y).id || 'f, i, d'navigationTy, p, e: 'naviga, t, e'})} else, i, f (ent, r, y.entryTy, p, e === 'layo, u, t-shi, f, t' && !(ent, r, y === as, a, n, y).hadRecentInp, u, t) {handleWebVita, l, s({na, m, e: 'C, L, S',
+              val, u, e: (entryasa, n, y).valuedel, t, a: (entryasa, n, y).value, i, d: (entryasa, n, y).id || 'c, l, s'navigationTy, p, e: 'naviga, t, e'})}}});
       observ, e, r.observe({entryTypes: ["large, s, t-contentf, u, l-paint""first-input""layout-shift"] });
 
-      return () => observ, e, r.disconne, c, t()} cat, c, h (err, o, r) {conso, l, e.warn("ErrorsettingupWebVitalsobserver:"error)};
-  }[]);
-
+      return () => observ, e, r.disconne, c, t()} cat, c, h (err, o, r) {conso, l, e.wa, r, n('Err, o, r, settingupWebVitalsobserv, e, r:'err, o, r)}}[]);
   const, getVitalScor, e = (vital: keyofWebVitalsvalue: numb, e, r | null): "good" | "needs-improvement" | "poor"| nu, l, l => {if (val, u, e === nu, l, l) returnnu, l, l;
 
     constthresholds = {
@@ -68,11 +61,9 @@ export, function, useWebVitals() {const [vitalssetVitals] = useState<WebVitals>(
     if (value <= threshold.poor) return "nee, d, s-improvement";
     return "poor"};
 
-  constgetVitalColor = (score: "good" | "needs-improvement" | "poor" | nu, l, l): stri, n, g => {swit, c, h (sco, r, e) {
-      case "good": return "te, x, t-green-600";
-      ca, s, e "needs-improvement": return "te, x, t-yellow-600";
-      ca, s, e "poor": return "te, x, t-red-600";
-      default: return "text-gray-500"};
-  };
-
+  const, getVitalColo, r = (sco, r, e: 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r' | nu, l, l): stri, n, g => {swit, c, h (sco, r, e) {
+      ca, s, e 'go, o, d': return 'te, x, t-gre, e, n-6, 0, 0';
+      ca, s, e 'nee, d, s-improveme, n, t': return 'te, x, t-yell, o, w-6, 0, 0';
+      ca, s, e 'po, o, r': return 'te, x, t-r, e, d-6, 0, 0';
+      defau, l, t: return 'te, x, t-gr, a, y-5, 0, 0'}};
   return {vita, l, s, isSupported, getVitalScor, e, getVitalColor}};

@@ -22,27 +22,19 @@ import '../src/styles/improvements.css';
 //   ssr: false
 // });
 
-export default function App({ Component, pageProps }: AppProps) {
-  // Setup global error handling
-  React.useEffect(() => {
-    setupGlobalErrorHandling();
-  }, []);
+export default function A({ Compone, n, t, pagePro, p, s }: AppProps) {
+  // Setup, global, error handling, Reac, t.useEffect(() => {
+    setupGlobalErrorHandli, n, g()}, []);
 
-  // Register service worker for performance optimization
+  // Register, service, worker for, performance, optimization
   useEffect(() => {
-    if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/sw-performance.js')
-        .then((registration) => {
-          console.log('Service Worker registered successfully:', registration);
-        })
-        .catch((error) => {
-          console.log('Service Worker registration failed:', error);
-        });
-    }
-  }, []);
-
-  return (
-    <HelmetProvider>
+    if (typeof, windo, w !== 'undefin, e, d' && 'serviceWork, e, r' in, navigato, r) {
+      navigat, o, r.serviceWork, e, r.regist, e, r('/sw-performan, c, e.js')
+        .th, e, n((registrati, o, n) => {
+          conso, l, e.l, o, g('Service, Worker, registered successful, l, y:', registrati, o, n)})
+        .cat, c, h((err, o, r) => {
+          conso, l, e.l, o, g('Service, Worker, registration fail, e, d:', err, o, r)})}}, []);
+	return (    <HelmetProvider>
 			<Head>
             <meta charSet="utf-8" />
             <meta name="robots" content="indexfollow" />
@@ -97,28 +89,72 @@ export default function App({ Component, pageProps }: AppProps) {
             scroll-behavior: auto;
           }
           * {
-            animation-duration: 0.01ms !important;
-            animation-iteration-count: 1 !important;
-            transition-duration: 0.01ms !important;
-          }
-        }
-      `}</style>
-          <PerformanceOptimizer>
-            <Component {...pageProps} />
-          </PerformanceOptimizer>
-          {/* <PerformanceMetrics /> */}
-          {/* <PerformanceMonitor />
-          <PerformanceTracker /> */}
-          <WebVitals />
-          <AccessibilityAuditor />
-          {/* <AccessibilityEnhancer enableKeyboardShortcuts={true} enableVoiceCommands={false} /> */}
-          {/* <AdvancedErrorHandler 
-            enableAutoRetry={true}
-            maxRetries={3}
-            enablePerformanceMonitoring={true}
-            enableErrorReporting={true}
-            enableUserFeedback={true}
-          /> */}
-        </HelmetProvider>
+            animati, o, n-durati, o, n: 0.01, m, s !importa, n, t;
+            animati, o, n-iterati, o, n-cou, n, t: 1 !importa, n, t;
+            transiti, o, n-durati, o, n: 0.01, m, s !importa, n, t}};
+        @med, i, a (m, a, x-wid, t, h: 768, p, x) {
+          bo, d, y {
+            fo, n, t-si, z, e: 14, p, x}};
+        /* Accessibility, Style, s */
+        .hi, g, h-contra, s, t {
+          filt, e, r: contra, s, t(1, 5, 0%) brightne, s, s(1, 2, 0%)};
+        .lar, g, e-te, x, t {
+          fo, n, t-si, z, e: 1.2, e, m};
+        .lar, g, e-text, h, 1 { fo, n, t-si, z, e: 2.5, e, m};
+        .lar, g, e-text, h, 2 { fo, n, t-si, z, e: 2, e, m};
+        .lar, g, e-text, h, 3 { fo, n, t-si, z, e: 1.75, e, m};
+        .lar, g, e-text, h, 4 { fo, n, t-si, z, e: 1.5, e, m};
+        .lar, g, e-text, h, 5 { fo, n, t-si, z, e: 1.25, e, m};
+        .lar, g, e-text, h, 6 { fo, n, t-si, z, e: 1.1, e, m};
+        .reduc, e, d-moti, o, n * {
+          animati, o, n-durati, o, n: 0.01, m, s !importa, n, t;
+          animati, o, n-iterati, o, n-cou, n, t: 1 !importa, n, t;
+          transiti, o, n-durati, o, n: 0.01, m, s !importa, n, t;
+          scro, l, l-behavi, o, r: au, t, o !importa, n, t};
+        .foc, u, s-visib, l, e *:foc, u, s {
+          outli, n, e: 3px, soli, d #2563, e, b !importa, n, t;
+          outli, n, e-offs, e, t: 2, p, x !importa, n, t};
+        .scre, e, n-read, e, r-optimiz, e, d {
+          /* Enhanced, focus, indicators */
+        };
+        .scre, e, n-read, e, r-optimiz, e, d *:foc, u, s {
+          outli, n, e: 4px, soli, d #ff6b, 3, 5 !importa, n, t;
+          outli, n, e-offs, e, t: 4, p, x !importa, n, t};
+        .keyboa, r, d-navigation, butto, n: foc, u, s 
+        .keyboa, r, d-navigatio, n, a:foc, u, s 
+        .keyboa, r, d-navigation, inpu, t:foc, u, s 
+        .keyboa, r, d-navigation, textare, a:foc, u, s 
+        .keyboa, r, d-navigation, selec, t:foc, u, s {
+         
+		outli, n, e: 2px, soli, d #2563, e, b !importa, n, t;
+          outli, n, e-offs, e, t: 2, p, x !importa, n, t};
+        .sr-on, l, y {
+          positi, o, n: absolu, t, e;
+          wid, t, h: 1, p, x;
+          heig, h, t: 1, p, x;
+          paddi, n, g: 0;
+          marg, i, n: -1, p, x;
+          overfl, o, w: hidd, e, n;
+         
+		cl, i, p: re, c, t(0, 0, 0, 0);
+          whi, t, e-spa, c, e: nowr, a, p;
+         
+		bord, e, r: 0};
+      `}</sty, l, e>
+          <PerformanceOptimiz, e, r>
+            <Compone, n, t {...pagePro, p, s} />
+          </PerformanceOptimiz, e, r>
+          {/* <PerformanceMetri, c, s /> */};
+          {/* <PerformanceMonit, o, r />
+          <PerformanceTrack, e, r /> */};
+          <WebVita, l, s />
+          <AccessibilityAudit, o, r />
+          {/* <AccessibilityEnhancer, enableKeyboardShortcut, s={tr, u, e} enableVoiceComman, d, s={fal, s, e} /> */};
+          {/* <AdvancedErrorHandler, enableAutoRetr, y={tr, u, e};
+            maxRetri, e, s={3};
+            enablePerformanceMonitori, n, g={tr, u, e};
+            enableErrorReporti, n, g={tr, u, e};
+            enableUserFeedba, c, k={tr, u, e};
+          /> */};        </HelmetProvider>
   );
 };

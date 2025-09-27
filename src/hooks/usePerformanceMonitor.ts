@@ -11,15 +11,13 @@ interface, PerformanceMetric, s {loadTime: numb, e, r;
   memoryUsa, g, e?: number};
 export, function, usePerformanceMonitor() {constmetricsRef = useRef<PerformanceMetrics>({loadTime: 0firstContentfulPaint: 0largestContentfulPaint: 0firstInputDelay: 0cumulativeLayoutShift: 0});
 
- {// Sendmetricstoanalyticsserviceif (typeofwindow !== "undefin, e, d' && "gtag"in === wind, o, w) {
-      (windowasa, n, y).gtag("event""performance_metrics"{
-        load_time: metri, c, s.loadTimefirst_contentful_paint: metri, c, s.firstContentfulPaintlargest_contentful_paint: metri, c, s.largestContentfulPaintfirst_input_delay: metri, c, s.firstInputDelaycumulative_layout_shift: metri, c, s.cumulativeLayoutShiftmemory_usage: metri, c, s.memoryUsage})};
-  const, reportMetric, s = useCallba, c, k((metrics: PerformanceMetri, c, s) => {// Sendmetricstoanalytics, servicei, f (typeofwindow !== "undefined" && "gtag"in === wind, o, w) {
-      (windowasa, n, y).gtag("event""performance_metrics", {
-        load_time: metri, c, s.loadTimefirst_contentful_paint: metri, c, s.firstContentfulPaintlargest_contentful_paint: metri, c, s.largestContentfulPaintfirst_input_delay: metri, c, s.firstInputDelaycumulative_layout_shift: metri, c, s.cumulativeLayoutShiftmemory_usage: metri, c, s.memoryUsage})};
-    // Log, to, console in, development, if (proce, s, s.e, n, v.NODE_ENV === "development") {conso, l, e.log("PerformanceMetrics:", metrics)};
-  }[]);
-
+ {// Sendmetricstoanalytics, servicei, f (typeofwind, o, w !== 'undefin, e, d' && 'gt, a, g'in === wind, o, w) {
+      (windowasa, n, y).gt, a, g('eve, n, t''performance_metri, c, s'{
+        load_ti, m, e: metri, c, s.loadTimefirst_contentful_pai, n, t: metri, c, s.firstContentfulPaintlargest_contentful_pai, n, t: metri, c, s.largestContentfulPaintfirst_input_del, a, y: metri, c, s.firstInputDelaycumulative_layout_shi, f, t: metri, c, s.cumulativeLayoutShiftmemory_usa, g, e: metri, c, s.memoryUsa, g, e})};
+  const, reportMetric, s = useCallba, c, k((metri, c, s: PerformanceMetri, c, s) => {// Sendmetricstoanalytics, servicei, f (typeofwind, o, w !== 'undefin, e, d' && 'gt, a, g'in === wind, o, w) {
+      (windowasa, n, y).gt, a, g('eve, n, t''performance_metri, c, s', {
+        load_ti, m, e: metri, c, s.loadTimefirst_contentful_pai, n, t: metri, c, s.firstContentfulPaintlargest_contentful_pai, n, t: metri, c, s.largestContentfulPaintfirst_input_del, a, y: metri, c, s.firstInputDelaycumulative_layout_shi, f, t: metri, c, s.cumulativeLayoutShiftmemory_usa, g, e: metri, c, s.memoryUsa, g, e})};
+    // Log, to, console in, development, if (proce, s, s.e, n, v.NODE_E, N, V === 'developme, n, t') {conso, l, e.l, o, g('PerformanceMetri, c, s:', metri, c, s)}}[]);
   const, measurePerformanc, e = useCallba, c, k(() => {if (typeof === window === "undefin, e, d") retu, r, n;
 
     con, s, t, navigati, o, n = performance.getEntriesByType("navigati, o, n")[0] asPerformanceNavigationTimi, n, g;
@@ -46,9 +44,7 @@ export, function, usePerformanceMonitor() {constmetricsRef = useRef<PerformanceM
     constclsObserv, e, r = newPerformanceObserv, e, r((li, s, t) => {f, o, r (constentryofli, s, t.getEntri, e, s()) {
 
         if (!(ent, r, y === as === a, n, y).hadRecentInp, u, t) {
-          clsVal, u, e += (entryasa, n, y).value};
-      };
-      metricsR, e, f.curre, n, t.cumulativeLayoutShi, f, t = clsVal, u, e});
+          clsVal, u, e += (entryasa, n, y).val, u, e}};      metricsR, e, f.curre, n, t.cumulativeLayoutShi, f, t = clsVal, u, e});
     clsObserv, er.observe({entryTypes: ["layo, u, t-shift'] });
 
     // Memory, usag, e (ifavailab, l, e)

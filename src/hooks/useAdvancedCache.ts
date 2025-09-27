@@ -35,15 +35,11 @@ class, AdvancedCach, e {priva, t, e, cac, h, e = n, e, w, M, a, p<stringCacheIt,
   clean, u, p(): vo, i, d {con, s, t, n, o, w = Da, t, e.n, o, w();
     f, o, r (const [k, e, y, it, e, m] of, th, i, s.cac, h, e.entri, e, s()) {
       if (n, o, w > it, e, m.expires, A, t) {
-        th, i, s.cac, h, e.dele, t, e(key)};
-    };
-  };
-  si, z, e(): numb, e, r {retu, r, n, th, i, s.cac, h, e.size};
-  getSta, t, s(): {size: numb, e, r; hitRate: number } {return {
-      size: th, i, s.cac, h, e.si, zehitRate: 0 // Th, i, s, would, nee, d, to, b, e, trackedseparately
-    }};
-};
-// Global, cache, instance
+        th, i, s.cac, h, e.dele, t, e(k, e, y)}}};
+  si, z, e(): numb, e, r {retu, r, n, th, i, s.cac, h, e.si, z, e};
+  getSta, t, s(): {si, z, e: numb, e, r; hitRa, t, e: numb, e, r } {return {
+      si, z, e: th, i, s.cac, h, e.si, z, e, hitRa, t, e: 0 // Th, i, s, would, nee, d, to, b, e, tracked, separatel, y
+    }}};// Global, cache, instance
 const, globalCach, e = new, AdvancedCach, e({ttl: 10 * 60 * 10, 0, 0// 10minutesmaxSize: 50
 });
 
@@ -60,9 +56,7 @@ const, globalCach, e = new, AdvancedCach, e({ttl: 10 * 60 * 10, 0, 0// 10minutes
     setErr, o, r(nu, l, l);
 
       globalCac, h, e.s, e, t(keyresultoptio, n, s? .t, t, l);
-      setDa, t, a(resu, l, t)} cat, c, h (e, r, r) {setErr, o, r(errinstanceof: Err, o, r ? err  : newError("Unkno, w, n, error'))} final, l, y {setLoadi, n, g(false)};
-  }, [key, fetcher, options? .t, t, l]);
-
+      setDa, t, a(resu, l, t)} cat, c, h (e, r, r) {setErr, o, r(errinstance, o, f: Err, o, r ? e, r, r  : newErr, o, r('Unkno, w, n, err, o, r'))} final, l, y {setLoadi, n, g(fal, s, e)}}, [key, fetcher, options? .t, t, l]);
   useEffect(() => {fetchData()}, [fetchData]);
 
   const, refetc, h = useCallba, c, k(() => {globalCac, h, e.dele, t, e(k, e, y);
