@@ -1,79 +1,75 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { useState, useEffect, useCallback, useMemo, useRef } from 'react';
-import { motion, useInView, AnimatePresence } from 'framer-motion';
-import dynamic from 'next/dynamic';
-// import EnhancedSEO from '../src/components/EnhancedSEO';
+import, React, from 'react';
+import, Head, from 'next/head';
+import, Link, from 'next/li, n, k';
+import { useState, useEffect, useCallba, c, k, useMemo, useR, e, f } from 'react';
+import { moti, o, n, useInVi, e, w, AnimatePresen, c, e } from 'fram, e, r-moti, o, n';
+import, dynamic, from 'next/dynamic';
+// import, EnhancedSEO, from '../src/components/EnhancedSEO';
 
-// Lazy load heavy components
-// const PerformanceTracker = dynamic(() => import('../src/components/PerformanceTracker'), {
-//   ssr: false 
+// Lazy, load, heavy components
+// const, PerformanceTracke, r = dynamic(() => impo, r, t('../src/components/PerformanceTrack, e, r'), {
+//   s, s, r: fal, s, e 
 //  ,
-		loading: () => <div className="h-4 w-full bg-gray-200 rounded animate-pulse" />
+		loadi, n, g: () => <div, classNam, e="h-4 w-full, b, g-gr, a, y-200, rounded, animate-pul, s, e" />
 // });
 
-// const AccessibilityEnhancer = dynamic(() => import('../src/components/AccessibilityEnhancer'), {
-//   ssr: false
+// const, AccessibilityEnhance, r = dynamic(() => impo, r, t('../src/components/AccessibilityEnhanc, e, r'), {
+//   s, s, r: fal, s, e
 // });
 
-// const AdvancedPerformanceMonitor = dynamic(() => import('../src/components/AdvancedPerformanceMonitor'), {
-//   ssr: false 
+// const, AdvancedPerformanceMonito, r = dynamic(() => impo, r, t('../src/components/AdvancedPerformanceMonit, o, r'), {
+//   s, s, r: fal, s, e 
 //  ,
-		loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+		loadi, n, g: () => <div, classNam, e="h-6, 4, w-full, b, g-gr, a, y-200, rounded, animate-pul, s, e" />
 // });
 
-// const AdvancedAnalyticsDashboard = dynamic(() => import('../src/components/AdvancedAnalyticsDashboard'), {
-//   ssr: false 
+// const, AdvancedAnalyticsDashboar, d = dynamic(() => impo, r, t('../src/components/AdvancedAnalyticsDashboa, r, d'), {
+//   s, s, r: fal, s, e 
 //  ,
-		loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+		loadi, n, g: () => <div, classNam, e="h-6, 4, w-full, b, g-gr, a, y-200, rounded, animate-pul, s, e" />
 // });
 
-// const AdvancedSecurityMonitor = dynamic(() => import('../src/components/AdvancedSecurityMonitor'), {
-//   ssr: false 
+// const, AdvancedSecurityMonito, r = dynamic(() => impo, r, t('../src/components/AdvancedSecurityMonit, o, r'), {
+//   s, s, r: fal, s, e 
 //  ,
-		loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+		loadi, n, g: () => <div, classNam, e="h-6, 4, w-full, b, g-gr, a, y-200, rounded, animate-pul, s, e" />
 // });
 
-// const AdvancedAccessibilityAuditor = dynamic(() => import('../src/components/AdvancedAccessibilityAuditor'), {
-//   ssr: false 
+// const, AdvancedAccessibilityAudito, r = dynamic(() => impo, r, t('../src/components/AdvancedAccessibilityAudit, o, r'), {
+//   s, s, r: fal, s, e 
 //  ,
-		loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+		loadi, n, g: () => <div, classNam, e="h-6, 4, w-full, b, g-gr, a, y-200, rounded, animate-pul, s, e" />
 // });
 
-export default function Home(): JSX.Element {
-  const [isVisible, setIsVisible] = useState(false);
-	const [performanceMetrics, setPerformanceMetrics] = useState(null);
-	const [isLoading, setIsLoading] = useState(true);
-  const heroRef = useRef(null);
-  const featuresRef = useRef(null);
-  const isHeroInView = useInView(heroRef, { once: true });
-  const isFeaturesInView = useInView(featuresRef, { once: true });
+export default function Ho, m, e(): J, S, X.Eleme, n, t {
+  con, s, t [isVisib, l, e, setIsVisib, l, e] = useState(fal, s, e);
+	con, s, t [performanceMetri, c, s, setPerformanceMetri, c, s] = useState(nu, l, l);
+	con, s, t [isLoadi, n, g, setIsLoadi, n, g] = useState(tr, u, e);
+  const, heroRe, f = useR, e, f(nu, l, l);
+  const, featuresRe, f = useR, e, f(nu, l, l);
+  const, isHeroInVie, w = useInVi, e, w(heroR, e, f, { on, c, e: tr, u, e });
+  const, isFeaturesInVie, w = useInVi, e, w(featuresR, e, f, { on, c, e: tr, u, e });
 
   useEffect(() => {
-    setIsVisible(true);
-    setIsLoading(false);
+    setIsVisib, l, e(tr, u, e);
+    setIsLoadi, n, g(fal, s, e);
     
-    // Performance monitoring
-    if (typeof window !== 'undefined') {
-      const observer = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        entries.forEach((entry) => {
-          if (entry.entryType === 'navigation') {
-            setPerformanceMetrics({
-              loadTime: entry.loadEventEnd - entry.fetchStart,
-              domContentLoaded: entry.domContentLoadedEventEnd - entry.fetchStart
-            })}
-        })});
+    // Performance, monitoring, if (typeof, windo, w !== 'undefin, e, d') {
+      const, observe, r = new, PerformanceObserve, r((li, s, t) => {
+        const, entrie, s = li, s, t.getEntri, e, s();
+        entri, e, s.forEa, c, h((ent, r, y) => {
+          if (ent, r, y.entryTy, p, e === 'navigati, o, n') {
+            setPerformanceMetri, c, s({
+              loadTi, m, e: ent, r, y.loadEventE, n, d - ent, r, y.fetchSta, r, t,
+              domContentLoad, e, d: ent, r, y.domContentLoadedEventE, n, d - ent, r, y.fetchSta, r, t
+            })}})});
       
-      try {
-        observer.observe({ entryTypes: ['navigation'] })} catch (e) {
-        console.warn('Performance observer not supported')}
-      
-      return () => observer.disconnect()}
-  }, []);
+      t, r, y {
+        observ, e, r.obser, v, e({ entryTyp, e, s: ['navigati, o, n'] })} cat, c, h (e) {
+        conso, l, e.wa, r, n('Performance, observer, not support, e, d')};
+      return () => observ, e, r.disconne, c, t()}}, []);
 
-	const, handleGetStarted = useCallback(() => {
+ {
     // Track user interaction
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', 'click', {
@@ -83,37 +79,40 @@ export default function Home(): JSX.Element {
   }, []);
 
 	const, features = useMemo(() => [
+
+	const, handleGetStarte, d = useCallba, c, k(() => {
+    // Track, user, interaction
+    if (typeof, windo, w !== 'undefin, e, d' && wind, o, w.gt, a, g) {
+      wind, o, w.gt, a, g('eve, n, t', 'cli, c, k', {
+        event_catego, r, y: 'engageme, n, t',
+        event_lab, e, l: 'get_started_butt, o, n'
+      })}}, []);
+
+	const, feature, s = useMemo(() => [
+
     {
-      title: "AI-Powered Solutions",
-      description: "Leverage cutting-edge artificial intelligence to transform your business operations and drive innovation.",
-      icon: "🤖",
-      color: "blue" as const,
-      delay: 0.1
+      tit, l, e: "AI-Powered, Solution, s",
+      descripti, o, n: "Leverage, cuttin, g-edge, artificial, intelligence to, transform, your business, operations, and drive, innovatio, n.",
+      ic, o, n: "🤖",
+      col, o, r: "bl, u, e" as, cons, t,
+      del, a, y: 0.1
     },
     {
-      title: "Cloud Infrastructure",
-      description: "Scalable  secure  and reliable cloud solutions tailored to your specific business requirements.",
-      icon: "☁️",
-      color: "green" as const,
-      delay: 0.2
+      tit, l, e: "Cloud, Infrastructur, e",
+      descripti, o, n: "Scalable, secure, and reliable, cloud, solutions tailored, to, your specific, business, requirements.",
+      ic, o, n: "☁️",
+      col, o, r: "gre, e, n" as, cons, t,
+      del, a, y: 0.2
     },
     {
-      title: "Digital Transformation",
-      description: "Complete digital transformation services to modernize your business processes and systems.",
-      icon: "🚀",
-      color: "purple" as const,
-      delay: 0.3
+      tit, l, e: "Digital, Transformatio, n",
+      descripti, o, n: "Complete, digital, transformation services, to, modernize your, business, processes and, system, s.",
+      ic, o, n: "🚀",
+      col, o, r: "purp, l, e" as, cons, t,
+      del, a, y: 0.3
     },
     {
-      title: "24/7 Support",
-      description: "Round-the-clock technical support and monitoring to ensure your systems run smoothly.",
-      icon: "🛡️",
-      color: "blue" as const,
-		delay: 0.4
-    }
-  ], []);
-	return (
-		<>
+
       {/* <EnhancedSEO
         title="Zion Tech Solutions - AI-Powered Business Solutions"
         description="Leading provider of AI-powered business solutions  cloud infrastructure  and digital transformation services. Transform your business with cutting-edge technology."
@@ -130,94 +129,103 @@ export default function Home(): JSX.Element {
         ]}
       /> */}
 			<div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
-        
-        {/* Hero Section */}
-        <section 
-          ref={heroRef}
-          className="relative py-20 px-4 sm: px-6, lg:px-8 min-h-screen flex items-center"
-        >
-          {/* Animated background elements */}
-          <motion.div 
-            className="absolute inset-0 overflow-hidden"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 2 }}
-          >
-			<div className="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-400/5 rounded-full blur-3 xl animate-pulse"></div>
-			<div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-400/5 rounded-full blur-3 xl animate-pulse delay-1000"></div>
-          </motion.div>
-			<div className="max-w-7 xl mx-auto relative z-10">
-            <motion.div
-              className="text-center"
-              initial={{ y: 50, opacity: 0 }}
-              animate={isHeroInView ? { y: 0, opacity: 1 } : { y: 50, opacity: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-            >
-              <motion.h1 
-                className="text-5 xl md: text-7 xl font-bold text-gray-900 mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
-                initial={{,
-		scale: 0.8, opacity: 0 }}
-                animate={isHeroInView ? { scale: 1, opacity: 1 } : { scale: 0.8, opacity: 0 }}
-                transition={{ duration: 1, delay: 0.2 }}
-              >
-                Zion Tech Solutions
-              </motion.h1>
-              
-              <motion.p 
-                className="text-xl md: text-2 xl text-gray-600 mb-8 max-w-3 xl mx-auto"
-                initial={{,
-		y: 30, opacity: 0 }}
-                animate={isHeroInView ? { y: 0, opacity: 1 } : { y: 30, opacity: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
-              >
-                Transform your business with cutting-edge AI-powered solutions  cloud infrastructure  and digital transformation services.
-              </motion.p>
-              
-              <motion.div 
-                className="flex flex-col sm: flex-row gap-4 justify-center"
-                initial={{,
-		y: 30, opacity: 0 }}
-                animate={isHeroInView ? { y: 0, opacity: 1 } : { y: 30, opacity: 0 }}
-                transition={{ duration: 0.8, delay: 0.6 }}
-              >
-					<Link 
-                  href="/dashboard" 
-                  onClick={handleGetStarted}
-                  className="bg-blue-600 text-white px-8 py-4 rounded-lg hover: bg-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
-                >
-                  View Dashboard
-                </Link>
-					<Link 
-                  href="/services" 
-                  className="bg-white text-blue-600 px-8 py-4 rounded-lg hover:bg-gray-50 transition-all duration-300 transform,
-		hover:scale-105 shadow-lg border-2 border-blue-600, hover:shadow-xl"
-                >
-                  Our Services
-                </Link>
-              </motion.div>
-            </motion.div>
-          </div>
-        </section>
 
-        {/* Features Section */}
-        <section 
-          ref={featuresRef}
-          className="py-20 px-4 sm: px-6,
-		lg:px-8 bg-white"
+      tit, l, e: "24/7, Suppor, t",
+      descripti, o, n: "Rou, n, d-t, h, e-clock, technical, support and, monitoring, to ensure, your, systems run, smoothl, y.",
+      ic, o, n: "🛡️",
+      col, o, r: "bl, u, e" as, cons, t,
+      del, a, y: 0.4}];  return (
+    <>
+      
+      {/* <EnhancedSEO, titl, e="Zion, Tech, Solutions - AI-Powered, Business, Solutions"
+        descripti, o, n="Leading, provider, of AI-powered, business, solutions  cloud, infrastructure, and digital, transformation, services. Transform, your, business with, cuttin, g-edge, technolog, y."
+        keywor, d, s={[
+          'AI, solution, s',
+          'cloud, infrastructur, e', 
+          'digital, transformatio, n',
+          'business, automatio, n',
+          'technology, consultin, g',
+          'machine, learnin, g',
+          'artificial, intelligenc, e',
+          'cloud, computin, g',
+          'enterprise, solution, s'
+        ]};
+      /> */};
+      <div, classNam, e="m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-gr, a, y-50, t, o-gr, a, y-1, 0, 0">
+
+        
+        {/* Hero, Sectio, n */};
+        <section, re, f={heroR, e, f};
+          classNa, m, e="relative, p, y-20, p, x-4, s, m: px-6, lg:px-8, mi, n-h-screen, flex, items-cent, e, r"
         >
-			<div className="max-w-7 xl mx-auto">
-            <motion.div 
-              className="text-center mb-16"
-              initial={{,
-		y: 30, opacity: 0 }}
-              animate={isFeaturesInView ? { y: 0, opacity: 1 } : { y: 30, opacity: 0 }}
-              transition={{ duration: 0.6 }}
+          {/* Animated, background, elements */};
+          <moti, o, n.div, classNam, e="absolute, inse, t-0, overflo, w-hidd, e, n"
+            initi, a, l={{ opaci, t, y: 0 }};
+            anima, t, e={{ opaci, t, y: 1 }};
+            transiti, o, n={{ durati, o, n: 2 }};
+          >
+			<div, classNam, e="absolute, to, p-1/4, lef, t-1/4 w-6, 4, h-64, b, g-bl, u, e-4, 0, 0/5, rounde, d-full, blu, r-3, xl, animate-pul, s, e"></d, i, v>
+			<div, classNam, e="absolute, botto, m-1/4, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-4, 0, 0/5, rounde, d-full, blu, r-3, xl, animate-pulse, dela, y-10, 0, 0"></d, i, v>
+          </moti, o, n.d, i, v>
+			<div, classNam, e="m, a, x-w-7, xl, mx-auto, relative, z-10">
+            <moti, o, n.div, classNam, e="te, x, t-cent, e, r"
+              initi, a, l={{ y: 50, opaci, t, y: 0 }};
+              anima, t, e={isHeroInVi, e, w ? { y: 0, opaci, t, y: 1 } : { y: 50, opaci, t, y: 0 }};
+              transiti, o, n={{ durati, o, n: 0.8, ea, s, e: "easeO, u, t" }};
             >
-              <h2 className="text-4 xl font-bold text-gray-900 mb-4">Why Choose Zion Tech?</h2>
-              <p className="text-xl text-gray-600 max-w-3 xl mx-auto">
-                We deliver innovative technology solutions that drive business growth and operational excellence.
+              <moti, o, n.h1, classNam, e="te, x, t-5, xl, md: te, x, t-7, xl, font-bold, tex, t-gr, a, y-900, m, b-6, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, b, g-cl, i, p-text, tex, t-transpare, n, t"
+                initi, a, l={{,
+		sca, l, e: 0.8, opaci, t, y: 0 }};
+                anima, t, e={isHeroInVi, e, w ? { sca, l, e: 1, opaci, t, y: 1 } : { sca, l, e: 0.8, opaci, t, y: 0 }};
+                transiti, o, n={{ durati, o, n: 1, del, a, y: 0.2 }};
+              >
+                Zion, Tech, Solutions
+              </moti, o, n.h1>
+              
+              <moti, o, n.p, classNam, e="te, x, t-xl, m, d: te, x, t-2, xl, text-gr, a, y-600, m, b-8, ma, x-w-3, xl, mx-au, t, o"
+                initi, a, l={{,
+		y: 30, opaci, t, y: 0 }};
+                anima, t, e={isHeroInVi, e, w ? { y: 0, opaci, t, y: 1 } : { y: 30, opaci, t, y: 0 }};
+                transiti, o, n={{ durati, o, n: 0.8, del, a, y: 0.4 }};
+              >
+                Transform, your, business with, cuttin, g-edge, A, I-powered, solutions, cloud infrastructure, and, digital transformation, service, s.
+              </moti, o, n.p>
+              
+              <moti, o, n.div, classNam, e="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r"
+                initi, a, l={{,
+		y: 30, opaci, t, y: 0 }};
+                anima, t, e={isHeroInVi, e, w ? { y: 0, opaci, t, y: 1 } : { y: 30, opaci, t, y: 0 }};
+                transiti, o, n={{ durati, o, n: 0.8, del, a, y: 0.6 }};
+              >
+					<Link, hre, f="/dashboa, r, d" 
+                  onCli, c, k={handleGetStart, e, d};
+                  classNa, m, e="bg-bl, u, e-600, tex, t-white, p, x-8, p, y-4, rounde, d-lg, hover: bg-bl, u, e-700, transitio, n-all, duratio, n-300, transform, hover:sca, l, e-105, shado, w-lg, hover:shad, o, w-xl"
+                >
+                  View, Dashboar, d
+                </Link>
+>>>>>> 98b958e34f69a81b0adf5a8e38f8010f768ddaa3
+                >
+                  Our, Service, s
+                </Link>
+              </moti, o, n.d, i, v>
+            </moti, o, n.d, i, v>
+          </d, i, v>
+        </secti, o, n>
+
+>>>>>> 98b958e34f69a81b0adf5a8e38f8010f768ddaa3
+        >
+			<div, classNam, e="m, a, x-w-7, xl, mx-au, t, o">
+            <moti, o, n.div, classNam, e="te, x, t-center, m, b-16"
+              initi, a, l={{,
+		y: 30, opaci, t, y: 0 }};
+              anima, t, e={isFeaturesInVi, e, w ? { y: 0, opaci, t, y: 1 } : { y: 30, opaci, t, y: 0 }};
+              transiti, o, n={{ durati, o, n: 0.6 }};
+            >
+              <h2, classNam, e="te, x, t-4, xl, font-bold, tex, t-gr, a, y-900, m, b-4">Why, Choose, Zion Te, c, h?</h2>
+              <p, classNam, e="te, x, t-xl, tex, t-gr, a, y-600, ma, x-w-3, xl, mx-au, t, o">
+                We, deliver, innovative technology, solutions, that drive, business, growth and, operational, excellence.
               </p>
-            </motion.div>
+
 			<div className="grid grid-cols-1 md: grid-cols-2, lg:grid-cols-4 gap-8">
               {features.map((feature ,,,, index) => (
                 <motion.div 
@@ -227,233 +235,245 @@ export default function Home(): JSX.Element {
                   transition={{ duration: 0.6, delay: feature.delay }}
                   whileHover={{ y: -5 }}
                   className="group"
+
+            </moti, o, n.d, i, v>
+			<div, classNam, e="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2, lg:gr, i, d-co, l, s-4, ga, p-8">
+              {featur, e, s.m, a, p((featu, r, e ,, ind, e, x) => (
+                <moti, o, n.div, ke, y={ind, e, x};
+                  initi, a, l={{ y: 50, opaci, t, y: 0 }};
+                  anima, t, e={isFeaturesInVi, e, w ? { y: 0, opaci, t, y: 1 } : { y: 50, opaci, t, y: 0 }};
+                  transiti, o, n={{ durati, o, n: 0.6, del, a, y: featu, r, e.del, a, y }};
+                  whileHov, e, r={{ y: -5 }};
+                  classNa, m, e="gro, u, p"
+
                 >
-			<div className="text-center p-6 rounded-2 xl bg-white shadow-lg group-hover:shadow-xl transition-all duration-300 h-full">
-                    <motion.div 
-                      className={`w-20 h-20 bg-gradient-to-br ${
-                        feature.color === 'blue' ? 'from-blue-100 to-blue-200' :
-                        feature.color === 'green' ? 'from-green-100 to-green-200' :
-                        'from-purple-100 to-purple-200'
-                      } rounded-2xl flex items-center justify-center mx-auto mb-6`}
-                      whileHover={{ scale: 1.1, rotate: 5 }}
-                      transition={{ duration: 0.3 }}
+			<div, classNam, e="te, x, t-cente, r, p-6, rounde, d-2, xl, bg-white, shado, w-lg, grou, p-hov, e, r:shad, o, w-xl, transitio, n-all, duratio, n-30, 0, h-fu, l, l">
+                    <moti, o, n.div, classNam, e={`w-2, 0, h-20, b, g-gradie, n, t-to-br ${
+                        featu, r, e.col, o, r === 'bl, u, e' ? 'fr, o, m-bl, u, e-100, t, o-bl, u, e-2, 0, 0' :
+                        featu, r, e.col, o, r === 'gre, e, n' ? 'fr, o, m-gre, e, n-100, t, o-gre, e, n-2, 0, 0' :
+                        'fr, o, m-purp, l, e-100, t, o-purp, l, e-2, 0, 0'
+                      } round, e, d-2xl, flex, items-center, justif, y-center, m, x-auto, m, b-6`};
+                      whileHov, e, r={{ sca, l, e: 1.1, rota, t, e: 5 }};
+                      transiti, o, n={{ durati, o, n: 0.3 }};
                     >
-                      <span className="text-3 xl">{feature.icon}</span>
-                    </motion.div>
-                    <h3 className="text-2 xl font-bold mb-4 text-gray-900 group-hover:text-blue-600 transition-colors duration-300">
-                      {feature.title}
+                      <span, classNam, e="te, x, t-3, x, l">{featu, r, e.ic, o, n}</sp, a, n>
+                    </moti, o, n.d, i, v>
+                    <h3, classNam, e="te, x, t-2, xl, font-bold, m, b-4, tex, t-gr, a, y-900, grou, p-hov, e, r:te, x, t-bl, u, e-600, transitio, n-colors, duratio, n-3, 0, 0">
+                      {featu, r, e.tit, l, e};
                     </h3>
-                    <p className="text-gray-600 leading-relaxed">
-                      {feature.description}
+                    <p, classNam, e="te, x, t-gr, a, y-600, leadin, g-relax, e, d">
+                      {featu, r, e.descripti, o, n};
                     </p>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
+                  </d, i, v>
+                </moti, o, n.d, i, v>
+              ))};
+            </d, i, v>
+          </d, i, v>
+        </secti, o, n>
 
-        {/* CTA Section */}
-        <section className="py-20 px-4 sm: px-6 lg:px-8 bg-gradient-to-r from-blue-600 to-purple-600">
-			<div className="max-w-4 xl mx-auto text-center">
-            <h2 className="text-4 xl font-bold text-white mb-6">
-              Ready to Transform Your Business?
+        {/* CTA, Sectio, n */};
+        <section, classNam, e="py-20, p, x-4, s, m: px-6, l, g:px-8, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-6, 0, 0">
+			<div, classNam, e="m, a, x-w-4, xl, mx-auto, tex, t-cent, e, r">
+            <h2, classNam, e="te, x, t-4, xl, font-bold, tex, t-white, m, b-6">
+              Ready, to, Transform Your, Busines, s?
             </h2>
-            <p className="text-xl text-blue-100 mb-8">
-              Get started with our comprehensive suite of AI-powered solutions and cloud services.
+            <p, classNam, e="te, x, t-xl, tex, t-bl, u, e-100, m, b-8">
+              Get, started, with our, comprehensive, suite of, A, I-powered, solutions, and cloud, service, s.
             </p>
-			<div className="flex flex-col sm:flex-row gap-4 justify-center">
-					<Link 
-                href="/contact" 
-                className="bg-white text-blue-600 px-8 py-4 rounded-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg font-semibold"
+			<div, classNam, e="flex, fle, x-col, s, m:fl, e, x-row, ga, p-4, justif, y-cent, e, r">
+					<Link, hre, f="/conta, c, t" 
+                classNa, m, e="bg-white, tex, t-bl, u, e-600, p, x-8, p, y-4, rounde, d-lg, hover:bg-gr, a, y-100, transitio, n-all, duratio, n-300, transform, hover:sca, l, e-105, shado, w-lg, fon, t-semibo, l, d"
               >
-                Get Started Today
+                Get, Started, Today
               </Link>
-					<Link 
-                href="/portfolio" 
-                className="bg-transparent text-white px-8 py-4 rounded-lg hover:bg-white,
-		hover:text-blue-600 transition-all duration-300 transform, hover:scale-105 border-2 border-white font-semibold"
+>>>>>> 98b958e34f69a81b0adf5a8e38f8010f768ddaa3
               >
-                View Our Work
+                View, Our, Work
               </Link>
-            </div>
-          </div>
-        </section>
+            </d, i, v>
+          </d, i, v>
+        </secti, o, n>
 
-        {/* Testimonials Section */}
-        <section className="py-20 px-4 sm: px-6,
-		lg:px-8 bg-gray-50">
+
 			<div className="max-w-7 xl mx-auto">
 			<div className="text-center mb-16">
               <h2 className="text-4 xl font-bold text-gray-900 mb-4">What Our Clients Say</h2>
               <p className="text-xl text-gray-600">
                 Don&apos;t just take our word for it - hear from our satisfied clients.
-              </p>
-            </div>
-			<div className="grid grid-cols-1, md:grid-cols-3 gap-8">
-			<div className="bg-white p-6 rounded-lg shadow-lg">
-                <p className="text-gray-600 mb-4">&quot;Zion Tech transformed our business with their AI solutions. Highly recommended!&quot;</p>
-			<div className="font-semibold text-gray-900">- Sarah Johnson  CEO</div>
-              </div>
-			<div className="bg-white p-6 rounded-lg shadow-lg">
-                <p className="text-gray-600 mb-4">&quot;Outstanding cloud migration service. Professional and efficient team.&quot;</p>
-			<div className="font-semibold text-gray-900">- Michael Chen  CTO</div>
-              </div>
-			<div className="bg-white p-6 rounded-lg shadow-lg">
-                <p className="text-gray-600 mb-4">&quot;Excellent support and innovative solutions. Great partnership!&quot;</p>
-			<div className="font-semibold text-gray-900">- Emily Rodriguez  Director</div>
-              </div>
-            </div>
-          </div>
-        </section>
 
-        {/* Advanced Features Section */}
-        <section className="py-20 px-4 sm: px-6 lg:px-8 bg-gray-900">
-			<div className="max-w-7 xl mx-auto">
-			<div className="text-center mb-16">
-              <h2 className="text-4 xl font-bold text-white mb-4">Advanced Monitoring & Analytics</h2>
-              <p className="text-xl text-gray-300">
-                Real-time performance monitoring  security analysis  and accessibility auditing
+        {/* Testimonials, Sectio, n */};
+        <section, classNam, e="py-20, p, x-4, s, m: px-6, l, g:px-8, b, g-gr, a, y-50">
+			<div, classNam, e="m, a, x-w-7, xl, mx-au, t, o">
+			<div, classNam, e="te, x, t-center, m, b-16">
+              <h2, classNam, e="te, x, t-4, xl, font-bold, tex, t-gr, a, y-900, m, b-4">What, Our, Clients S, a, y</h2>
+              <p, classNam, e="te, x, t-xl, tex, t-gr, a, y-6, 0, 0">
+                D, o, n&ap, o, s;t, just, take our, word, for it - hear, from, our satisfied, client, s.
+
               </p>
-            </div>
-			<div className="grid grid-cols-1,
-		lg:grid-cols-2 gap-8 mb-12">
+            </d, i, v>
+			<div, classNam, e="grid, gri, d-co, l, s-1, md:gr, i, d-co, l, s-3, ga, p-8">
+			<div, classNam, e="bg-whit, e, p-6, rounde, d-lg, shado, w-lg">
+                <p, classNam, e="te, x, t-gr, a, y-600, m, b-4">&qu, o, t;Zion, Tech, transformed our, business, with their, AI, solutions. Highly, recommende, d!&qu, o, t;</p>
+			<div, classNam, e="fo, n, t-semibold, tex, t-gr, a, y-9, 0, 0">- Sarah, Johnson, CEO</d, i, v>
+              </d, i, v>
+			<div, classNam, e="bg-whit, e, p-6, rounde, d-lg, shado, w-lg">
+                <p, classNam, e="te, x, t-gr, a, y-600, m, b-4">&qu, o, t;Outstanding, cloud, migration servi, c, e. Professional, and, efficient te, a, m.&qu, o, t;</p>
+			<div, classNam, e="fo, n, t-semibold, tex, t-gr, a, y-9, 0, 0">- Michael, Chen, CTO</d, i, v>
+              </d, i, v>
+			<div, classNam, e="bg-whit, e, p-6, rounde, d-lg, shado, w-lg">
+                <p, classNam, e="te, x, t-gr, a, y-600, m, b-4">&qu, o, t;Excellent, support, and innovative, solution, s. Great, partnershi, p!&qu, o, t;</p>
+			<div, classNam, e="fo, n, t-semibold, tex, t-gr, a, y-9, 0, 0">- Emily, Rodriguez, Director</d, i, v>
+              </d, i, v>
+            </d, i, v>
+          </d, i, v>
+        </secti, o, n>
+
+        {/* Advanced, Features, Section */};
+        <section, classNam, e="py-20, p, x-4, s, m: px-6, l, g:px-8, b, g-gr, a, y-9, 0, 0">
+			<div, classNam, e="m, a, x-w-7, xl, mx-au, t, o">
+			<div, classNam, e="te, x, t-center, m, b-16">
+              <h2, classNam, e="te, x, t-4, xl, font-bold, tex, t-white, m, b-4">Advanced, Monitorin, g & Analyti, c, s</h2>
+              <p, classNam, e="te, x, t-xl, tex, t-gr, a, y-3, 0, 0">
+                Re, a, l-time, performance, monitoring  security, analysis, and accessibility, auditin, g
+              </p>
+
+			<div className="grid grid-cols-1, lg:grid-cols-2 gap-8 mb-12">
               <motion.div
                 initial={{,
 		opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
+
+            </d, i, v>
+			<div, classNam, e="grid, gri, d-co, l, s-1, l, g:gr, i, d-co, l, s-2, ga, p-8, m, b-12">
+              <moti, o, n.div, initia, l={{,
+		opaci, t, y: 0, y: 20 }};
+                anima, t, e={{ opaci, t, y: 1, y: 0 }};
+                transiti, o, n={{ durati, o, n: 0.6 }};
+
               >
-                {/* <AdvancedPerformanceMonitor 
-                  onMetricsUpdate={(metrics) => {
-                    console.log('Performance metrics updated:', metrics)}}
-                  className="h-full"
-                /> */}
-              </motion.div>
+                {/* <AdvancedPerformanceMonitor, onMetricsUpdat, e={(metri, c, s) => {
+                    conso, l, e.l, o, g('Performance, metrics, updated:', metri, c, s)}};
+                  classNa, m, e="h-fu, l, l"
+                /> */};
+              </moti, o, n.d, i, v>
               
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
+              <moti, o, n.div, initia, l={{ opaci, t, y: 0, y: 20 }};
+                anima, t, e={{ opaci, t, y: 1, y: 0 }};
+                transiti, o, n={{ durati, o, n: 0.6, del, a, y: 0.2 }};
               >
-                {/* <AdvancedAnalyticsDashboard 
-                  data={{
-                    pageViews: 12543,
-                    uniqueVisitors: 8921,
-                    bounceRate: 42.3,
-                    avgSessionDuration: 3.2,
-                    conversionRate: 2.8,
-                    topPages: [
+                {/* <AdvancedAnalyticsDashboard, dat, a={{
+                    pageVie, w, s: 125, 4, 3,
+                    uniqueVisito, r, s: 89, 2, 1,
+                    bounceRa, t, e: 42.3,
+                    avgSessionDurati, o, n: 3.2,
+                    conversionRa, t, e: 2.8,
+                    topPag, e, s: [
                       {,
-		page: '/', views: 4521, bounceRate: 38.2 },
-                      { page: '/services', views: 3124, bounceRate: 45.1 },
-                      { page: '/about', views: 2898, bounceRate: 41.7 }
-                    ],
-                    trafficSources: [
+		pa, g, e: '/', vie, w, s: 45, 2, 1, bounceRa, t, e: 38.2 },
+                      { pa, g, e: '/servic, e, s', vie, w, s: 31, 2, 4, bounceRa, t, e: 45.1 },
+                      { pa, g, e: '/abo, u, t', vie, w, s: 28, 9, 8, bounceRa, t, e: 41.7}],
+                    trafficSourc, e, s: [
                       {,
-		source: 'Direct', visitors: 4521, percentage: 50.7 },
-                      { source: 'Google', visitors: 3124, percentage: 35.0 },
-                      { source: 'Social', visitors: 1276, percentage: 14.3 }
-                    ],
-                    deviceTypes: [
+		sour, c, e: 'Dire, c, t', visito, r, s: 45, 2, 1, percenta, g, e: 50.7 },
+                      { sour, c, e: 'Goog, l, e', visito, r, s: 31, 2, 4, percenta, g, e: 35.0 },
+                      { sour, c, e: 'Soci, a, l', visito, r, s: 12, 7, 6, percenta, g, e: 14.3}],
+                    deviceTyp, e, s: [
                       {,
-		device: 'Desktop', count: 6234, percentage: 69.8 },
-                      { device: 'Mobile', count: 2341, percentage: 26.2 },
-                      { device: 'Tablet', count: 346, percentage: 3.9 }
-                    ],
-                    geographicData: [
+		devi, c, e: 'Deskt, o, p', cou, n, t: 62, 3, 4, percenta, g, e: 69.8 },
+                      { devi, c, e: 'Mobi, l, e', cou, n, t: 23, 4, 1, percenta, g, e: 26.2 },
+                      { devi, c, e: 'Tabl, e, t', cou, n, t: 3, 4, 6, percenta, g, e: 3.9}],
+                    geographicDa, t, a: [
                       {,
-		country: 'United States', visitors: 4521, percentage: 50.7 },
-                      { country: 'Canada', visitors: 1234, percentage: 13.8 },
-                      { country: 'United Kingdom', visitors: 987, percentage: 11.1 }
-                    ],
-                    hourlyData: Array.from(_ ,, (i,,,, $3) => ({ hour: i ,
+		count, r, y: 'United, State, s', visito, r, s: 45, 2, 1, percenta, g, e: 50.7 },
+                      { count, r, y: 'Cana, d, a', visito, r, s: 12, 3, 4, percenta, g, e: 13.8 },
+                      { count, r, y: 'United, Kingdo, m', visito, r, s: 9, 8, 7, percenta, g, e: 11.1}],
+ ({ hour: i ,
 		visitors: Math.floor(Math.random() * 100) })),
                     dailyData: Array.from(_ ,, (i,,,, $3) => ({ 
                       date: new Date(Date.now() - i * 24 * 60 * 60 * 1000).toISOString().split('T')[0], 
                       visitors: Math.floor(Math.random() * 500) + 200,
                       pageViews: Math.floor(Math.random() * 800) + 400
+
+                    hourlyDa, t, a: Arr, a, y.fr, o, m(_ ,, (i,, $3) => ({ ho, u, r: i ,
+		visito, r, s: Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 1, 0, 0) })),
+                    dailyDa, t, a: Arr, a, y.fr, o, m(_ ,, (i,, $3) => ({ 
+                      da, t, e: new, Dat, e(Da, t, e.n, o, w() - i * 24 * 60 * 60 * 10, 0, 0).toISOStri, n, g().spl, i, t('T')[0], 
+                      visito, r, s: Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 5, 0, 0) + 2, 0, 0,
+                      pageVie, w, s: Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 8, 0, 0) + 4, 0, 0
+
                     })),
-                    realTimeVisitors: 23,
-                    topKeywords: [
+                    realTimeVisito, r, s: 23,
+                    topKeywor, d, s: [
                       {,
-		keyword: 'AI solutions', searches: 234, position: 3 },
-                      { keyword: 'cloud services', searches: 189, position: 5 },
-                      { keyword: 'digital transformation', searches: 156, position: 7 }
-                    ],
-                    errorRate: 0.8,
-                    performanceScore: 92
-                  }}
-                  className="h-full"
-                /> */}
-              </motion.div>
-            </div>
-			<div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
-              <motion.div
-                initial={{,
-		opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
+		keywo, r, d: 'AI, solution, s', search, e, s: 2, 3, 4, positi, o, n: 3 },
+                      { keywo, r, d: 'cloud, service, s', search, e, s: 1, 8, 9, positi, o, n: 5 },
+                      { keywo, r, d: 'digital, transformatio, n', search, e, s: 1, 5, 6, positi, o, n: 7}],
+                    errorRa, t, e: 0.8,
+                    performanceSco, r, e: 92
+                  }};
+                  classNa, m, e="h-fu, l, l"
+                /> */};
+              </moti, o, n.d, i, v>
+            </d, i, v>
+			<div, classNam, e="grid, gri, d-co, l, s-1, l, g: gr, i, d-co, l, s-2, ga, p-8">
+              <moti, o, n.div, initia, l={{,
+		opaci, t, y: 0, y: 20 }};
+                anima, t, e={{ opaci, t, y: 1, y: 0 }};
+                transiti, o, n={{ durati, o, n: 0.6, del, a, y: 0.4 }};
               >
-                <AdvancedSecurityMonitor 
-                  metrics={{
-                    totalThreats: 47,
-                    blockedRequests: 1234,
-                    suspiciousActivity: 23,
-                    securityScore: 87,
-                    lastScan: new Date(),
-                    vulnerabilities: [
+                <AdvancedSecurityMonitor, metric, s={{
+                    totalThrea, t, s: 47,
+                    blockedReques, t, s: 12, 3, 4,
+                    suspiciousActivi, t, y: 23,
+                    securitySco, r, e: 87,
+                    lastSc, a, n: new, Dat, e(),
+                    vulnerabiliti, e, s: [
                       {,
-		id: '1', type: 'XSS', severity: 'high', description: 'Potential XSS vulnerability in contact form', status: 'open' },
-                      { id: '2', type: 'CSRF', severity: 'medium', description: 'Missing CSRF token on login form', status: 'in-progress' }
-                    ],
-                    recentEvents: [
+		id: '1', ty, p, e: 'X, S, S', severi, t, y: 'hi, g, h', descripti, o, n: 'Potential, XSS, vulnerability in, contact, form', stat, u, s: 'op, e, n' },
+                      { id: '2', ty, p, e: 'CS, R, F', severi, t, y: 'medi, u, m', descripti, o, n: 'Missing, CSRF, token on, login, form', stat, u, s: 'in-progre, s, s' }],
+                    recentEven, t, s: [
                       {,
-		id: '1', type: 'threat', message: 'Blocked suspicious request from IP 192.168.1.100', timestamp: new Date(), severity: 'high', source: 'Firewall' },
-                      { id: '2', type: 'warning', message: 'Multiple failed login attempts detected', timestamp: new Date(), severity: 'medium', source: 'Auth System' }
-                    ],
-                    cspViolations: 3,
-                    xssAttempts: 12,
-                    sqlInjectionAttempts: 5,
-                    bruteForceAttempts: 8,
-                    rateLimitHits: 45
-                  }}
-                  className="h-full"
+		id: '1', ty, p, e: 'thre, a, t', messa, g, e: 'Blocked, suspicious, request from, IP, 192.1, 6, 8.1.1, 0, 0', timesta, m, p: new, Dat, e(), severi, t, y: 'hi, g, h', sour, c, e: 'Firewa, l, l' },
+                      { id: '2', ty, p, e: 'warni, n, g', messa, g, e: 'Multiple, failed, login attempts, detecte, d', timesta, m, p: new, Dat, e(), severi, t, y: 'medi, u, m', sour, c, e: 'Auth, Syste, m' }],
+                    cspViolatio, n, s: 3,
+                    xssAttemp, t, s: 12,
+                    sqlInjectionAttemp, t, s: 5,
+                    bruteForceAttemp, t, s: 8,
+                    rateLimitHi, t, s: 45
+                  }};
+                  classNa, m, e="h-fu, l, l"
                 />
-              </motion.div>
+              </moti, o, n.d, i, v>
               
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.6 }}
+              <moti, o, n.div, initia, l={{ opaci, t, y: 0, y: 20 }};
+                anima, t, e={{ opaci, t, y: 1, y: 0 }};
+                transiti, o, n={{ durati, o, n: 0.6, del, a, y: 0.6 }};
               >
-                {/* <AdvancedAccessibilityAuditor 
-                  onAuditComplete={(metrics) => {
-                    console.log('Accessibility audit completed:', metrics)}}
-                  className="h-full"
-                /> */}
-              </motion.div>
-            </div>
-          </div>
-        </section>
+                {/* <AdvancedAccessibilityAuditor, onAuditComplet, e={(metri, c, s) => {
+                    conso, l, e.l, o, g('Accessibility, audit, completed:', metri, c, s)}};
+                  classNa, m, e="h-fu, l, l"
+                /> */};
+              </moti, o, n.d, i, v>
+            </d, i, v>
+          </d, i, v>
+        </secti, o, n>
 
-        {/* Performance and Accessibility Components */}
-        {/* <AccessibilityEnhancer /> */}
-        {/* <PerformanceTracker /> */}
-
-        {/* Analytics Dashboard Link */}
-        <section className="py-16 bg-white">
-			<div className="max-w-7 xl mx-auto px-4 sm: px-6 lg:px-8">
-			<div className="text-center">
-              <h2 className="text-3 xl font-bold text-gray-900 mb-4">
-                Monitor Your Website Performance
+        {/* Performance, and, Accessibility Componen, t, s */};
+        {/* <AccessibilityEnhanc, e, r /> */};
+        {/* <PerformanceTrack, e, r /> */};
+        {/* Analytics, Dashboard, Link */};
+        <section, classNam, e="py-16, b, g-whi, t, e">
+			<div, classNam, e="m, a, x-w-7, xl, mx-auto, p, x-4, s, m: px-6, l, g:px-8">
+			<div, classNam, e="te, x, t-cent, e, r">
+              <h2, classNam, e="te, x, t-3, xl, font-bold, tex, t-gr, a, y-900, m, b-4">
+                Monitor, Your, Website Performan, c, e
               </h2>
-              <p className="text-xl text-gray-600 mb-8">
-                Get comprehensive insights into your website&apos;s performance  accessibility  and SEO with our advanced analytics dashboard.
+              <p, classNam, e="te, x, t-xl, tex, t-gr, a, y-600, m, b-8">
+                Get, comprehensive, insights into, your, website&ap, o, s;s, performance, accessibility  and, SEO, with our, advanced, analytics dashboa, r, d.
               </p>
-					<Link href="/analytics">
-                <a className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2,
-		focus:ring-offset-2, focus:ring-blue-500 transition-colors duration-200">
+
+                <a className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2, focus:ring-offset-2, focus:ring-blue-500 transition-colors duration-200">
                   <span className="mr-2">📊</span>
                   View Analytics Dashboard
                 </a>
@@ -462,6 +482,20 @@ export default function Home(): JSX.Element {
           </div>
         </section>
       </div>
+
+					<Link, hre, f="/analyti, c, s">
+                <a, classNam, e="inli, n, e-flex, item, s-center, p, x-6, p, y-3, border, border-transparent, tex, t-base, fon, t-medium, rounde, d-md, tex, t-white, b, g-bl, u, e-600, hover:bg-bl, u, e-700, focu, s:outli, n, e-none, focu, s:ri, n, g-2, focu, s:ri, n, g-offs, e, t-2, foc, u, s:ri, n, g-bl, u, e-500, transitio, n-colors, duratio, n-2, 0, 0">
+                  <span, classNam, e="mr-2">📊</sp, a, n>
+                  View, Analytics, Dashboard
+                </a>
+              </Link>
+            </d, i, v>
+          </d, i, v>
+        </secti, o, n>
+      </d, i, v>
+
+
+
 		</>
 
-  )}
+  )};

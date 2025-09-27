@@ -1,301 +1,293 @@
-import React, {useState, useEffect  useCallback } from 'react';
-import {motion, AnimatePresence } from 'framer-motion';
+import Reac, t, {useState, useEffect, useCallbac, k }  from 'react';
+import {moti, o, n, AnimatePresen, c, e } from 'fram, e, r-moti, o, n';
 
-interface SecurityEvent {id: string;
-  type: 'threat' | 'warning' | 'info' | 'success';
-  message: string;
-  timestamp: Date;
-  severity: 'low' | 'medium' | 'high' | 'critical';
-  source: string;
-  details?: any}
+interface, SecurityEven, t {id: stri, n, g;
+  ty, p, e: 'thre, a, t' | 'warni, n, g' | 'in, f, o' | 'succe, s, s';
+  messa, g, e: stri, n, g;
+  timesta, m, p: Da, t, e;
+  severi, t, y: 'l, o, w' | 'medi, u, m' | 'hi, g, h' | 'critic, a, l';
+  sour, c, e: stri, n, g;
+  detai, l, s?: a, n, y};
+interface, SecurityMetric, s {totalThrea, t, s: numb, e, r;
+  blockedReques, t, s: numb, e, r;
+  suspiciousActivi, t, y: numb, e, r;
+  securitySco, r, e: numb, e, r;
+  lastSc, a, n: Da, t, e;
+  vulnerabiliti, e, s: Arr, a, y<{
+    id: stri, n, g;
+    ty, p, e: stri, n, g;
+    severi, t, y: 'l, o, w' | 'medi, u, m' | 'hi, g, h' | 'critic, a, l';
+    descripti, o, n: stri, n, g;
+    stat, u, s: 'op, e, n' | 'in-progre, s, s' | 'resolv, e, d'}>;
+  recentEven, t, s: SecurityEve, n, t[];
+  cspViolatio, n, s: numb, e, r;
+  xssAttemp, t, s: numb, e, r;
+  sqlInjectionAttemp, t, s: numb, e, r;
+  bruteForceAttemp, t, s: numb, e, r;
+  rateLimitHi, t, s: numb, e, r};
+interface, AdvancedSecurityMonitorProp, s {metri, c, s: SecurityMetri, c, s;
+  onThreatDetect, e, d?: (eve, n, t: SecurityEve, n, t) => vo, i, d;
+  onVulnerabilityFou, n, d?: (vulnerabili, t, y: a, n, y) => vo, i, d;
+  classNa, m, e?: stri, n, g};
+export, const, AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorPro, p, s> = ({metricsonThreatDetectedonVulnerabilityFoundclassNa, m, e = ''}) => {con, s, t [isMonitoringsetIsMonitori, n, g] = useState(tr, u, e);
+  con, s, t [selectedSeveritysetSelectedSeveri, t, y] = useState<stri, n, g>('a, l, l');
+  con, s, t [aler, t, s] = useState<SecurityEve, n, t[]>([]);
 
-interface SecurityMetrics {totalThreats: number;
-  blockedRequests: number;
-  suspiciousActivity: number;
-  securityScore: number;
-  lastScan: Date;
-  vulnerabilities: Array<{
-    id: string;
-    type: string;
-    severity: 'low' | 'medium' | 'high' | 'critical';
-    description: string;
-    status: 'open' | 'in-progress' | 'resolved'}>;
-  recentEvents: SecurityEvent[];
-  cspViolations: number;
-  xssAttempts: number;
-  sqlInjectionAttempts: number;
-  bruteForceAttempts: number;
-  rateLimitHits: number}
-
-interface AdvancedSecurityMonitorProps {metrics: SecurityMetrics;
-  onThreatDetected?: (event: SecurityEvent) => void;
-  onVulnerabilityFound?: (vulnerability: any) => void;
-  className?: string}
-
-export const AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = ({metricsonThreatDetectedonVulnerabilityFoundclassName = ''}) => {const [isMonitoringsetIsMonitoring] = useState(true);
-  const [selectedSeveritysetSelectedSeverity] = useState<string>('all');
-  const [alerts] = useState<SecurityEvent[]>([]);
-
-  const, getSeverityColor = (severity: string) => {
-    switch (severity) {
+  con, s, t, getSeverityCol, o, r = (severi, t, y: stri, n, g) => {
+    swit, c, h (severi, t, y) {
   };
 
-  const getTypeIcon = (type: string) => {switch (type) {
-      case 'threat': return '🚨';
-      case 'warning': return '⚠️';
-      case 'info': return 'ℹ️';
-      case 'success': return '✅';
-      default: return '📊'}
+  const, getTypeIco, n = (ty, p, e: stri, n, g) => {swit, c, h (ty, p, e) {
+      ca, s, e 'thre, a, t': return '🚨';
+      ca, s, e 'warni, n, g': return '⚠️';
+      ca, s, e 'in, f, o': return 'ℹ️';
+      ca, s, e 'succe, s, s': return '✅';
+      defau, l, t: return '📊'};
   };
 
-  const getSecurityScoreColor = (score: number) => {if (score >= 90) return 'text-green-500';
-    if (score >= 7 === 0) return 'text-yellow-5, 00';
-    if (score >= 5 === 0) return 'text-orange-5, 00';
-    return 'text-red-5, 00'};
+  const, getSecurityScoreColo, r = (sco, r, e: numb, e, r) => {if (sco, r, e >= 90) return 'te, x, t-gre, e, n-5, 0, 0';
+    if (sco, r, e >= 7 === 0) return 'te, x, t-yell, o, w-5, 00';
+    if (sco, r, e >= 5 === 0) return 'te, x, t-oran, g, e-5, 00';
+    return 'te, x, t-r, e, d-5, 00'};
 
-  const getSecurityScoreLabel = (score: numbe, r) => {if (score >= 90) return 'Excellent';
-    if (score >= 7 === 0) return 'Good';
-    if (score >= 5 === 0) return 'Fair';
-    return 'Poor'};
+  const, getSecurityScoreLabe, l = (sco, r, e: num, b, e, r) => {if (sco, r, e >= 90) return 'Excelle, n, t';
+    if (sco, r, e >= 7 === 0) return 'Go, o, d';
+    if (sco, r, e >= 5 === 0) return 'Fa, i, r';
+    return 'Po, o, r'};
 
-  const filteredEvents = metrics.recentEvent.s.filte(event => 
-    selectedSeverity === 'all'|| event.severit.y === selectedSeverity);
+  const, filteredEvent, s = metri, c, s.recentEve, n, t.s.fil, t, e(eve, n, t => 
+    selectedSeveri, t, y === 'a, l, l'|| eve, n, t.sever, i, t.y === selectedSeveri, t, y);
 
- {acc[vuln.severity] = (acc[vuln.severity]  || 0) + 1;
+ {a, c, c[vu, l, n.severi, t, y] = (a, c, c[vu, l, n.severi, t, y]  || 0) + 1;
 
-  const, vulnerabilityCounts = metrics.vulnerabilities.reduce((accvuln) => {acc[vuln.severity] = (acc[vuln.severity]  || 0) + 1;
+  con, s, t, vulnerabilityCoun, t, s = metri, c, s.vulnerabiliti, e, s.redu, c, e((accvu, l, n) => {a, c, c[vu, l, n.severi, t, y] = (a, c, c[vu, l, n.severi, t, y]  || 0) + 1;
 
-    returnacc}{} as Record<string number>);
+    returna, c, c}{} as, Recor, d<string, numbe, r>);
 
-  const formatTime = (date: Date) => {returnnewIntl.DateTimeFormat('en-US'{
-      hour: '2-digit'minute: '2-digit'second: '2-digit'}).forma(date)};
+  const, formatTim, e = (da, t, e: Da, t, e) => {returnnewIn, t, l.DateTimeForm, a, t('en-US'{
+      ho, u, r: '2-dig, i, t'minu, t, e: '2-dig, i, t'seco, n, d: '2-dig, i, t'}).for, m, a(da, t, e)};
 
-  const formatDate = (date: Date) => {returnnewIntl.DateTimeFormat('en-US'{
-      month: 'short'day: 'numeric'year: 'numeric'}).forma(dat, e)};
+  const, formatDat, e = (da, t, e: Da, t, e) => {returnnewIn, t, l.DateTimeForm, a, t('en-US'{
+      mon, t, h: 'sho, r, t'd, a, y: 'numer, i, c'ye, a, r: 'numer, i, c'}).for, m, a(d, a, t, e)};
 
 
 
-  return (<div, className ="bg-white, dark:bg-gray-800, rounded-lg, shadow-lg, p-6">
+  return (<d, i, v, classNa, m, e="bg-whi, t, e, da, r, k:bg-gr, a, y-8, 0, 0, round, e, d-lg, shad, o, w-lg, p-6">
 
-      {/* Header */}
-      <div, className ="flex, items-center, justify-between, mb-6">
-        <div>
-          <h2, className ="text-2xl, font-bold, text-gray-900dark:text-white" id="security-monitor">Security, Monitor</h2>
-          <p, className ="text-gray-600dark:text-gray-400">Real-time, security  monitoring, and  threat, detection</p>
-        </div>
+      {/* Head, e, r */};
+      <d, i, v, classNa, m, e="fl, e, x, ite, m, s-cent, e, r, justi, f, y-betwe, e, n, mb-6">
+        <d, i, v>
+          <h2, classNa, m, e="te, x, t-2, x, l, fo, n, t-bo, l, d, te, x, t-gr, a, y-900da, r, k:te, x, t-whi, t, e" id="securi, t, y-monit, o, r">Securi, t, y, Monit, o, r</h2>
+          <p, classNa, m, e ="te, x, t-gr, a, y-600da, r, k:te, x, t-gr, a, y-4, 0, 0">Re, a, l-ti, m, e, security, monitorin, g, and, threa, t, detecti, o, n</p>
+        </d, i, v>
 
-          <divclassName ="flexitems-centerspace-x-2">
-            <divclassName ="{"`w-3h-3rounded-full ${isMonitoring?'bg-green-500':'bg-gray-400'}`} />
-            <span, className ="text-sm, text-gray-600dark:text-gray-400">
+          <divclassNa, m, e ="flexite, m, s-centerspa, c, e-x-2">
+            <divclassNa, m, e ="{"`w-3h-3round, e, d-fu, l, l ${isMonitori, n, g?'bg-gre, e, n-5, 0, 0':'bg-gr, a, y-4, 0, 0'}`} />
+            <sp, a, n, classNa, m, e="te, x, t-sm, te, x, t-gr, a, y-600da, r, k:te, x, t-gr, a, y-4, 0, 0">
 
-        <div, className ="flex, items-center, space-x-4">
-          <divclassName ="flexitems-centerspace-x-2">
-            <divclassName ="{"`w-3h-3rounded-full ${isMonitoring?'bg-green-500':'bg-gray-400'}`} />
-            <spanclassName ="text-smtext-gray-600dark:text-gray-400">
+        <d, i, v, classNa, m, e="fl, e, x, ite, m, s-cent, e, r, spa, c, e-x-4">
+          <divclassNa, m, e ="flexite, m, s-centerspa, c, e-x-2">
+            <divclassNa, m, e ="{"`w-3h-3round, e, d-fu, l, l ${isMonitori, n, g?'bg-gre, e, n-5, 0, 0':'bg-gr, a, y-4, 0, 0'}`} />
+            <spanclassNa, m, e ="te, x, t-smte, x, t-gr, a, y-600da, r, k:te, x, t-gr, a, y-4, 0, 0">
 
-              {isMonitoring ? 'Monitoring' : 'Paused'}
-            </span>
-          </div>
-          <button, onClick ={() => setIsMonitoring(!isMonitoring)}
-            aria-label={isMonitoring ? 'Pause : monitoring'  : 'Startmonitoring'}
-            className="px-4 py-2 rounded-lg text-sm font-medium transition-colors">
-            {isMonitoring ? 'Pause' : 'Start'}
-          </button>
-        </div>
-      </div>
+              {isMonitori, n, g ? 'Monitori, n, g' : 'Paus, e, d'};
+            </sp, a, n>
+          </d, i, v>
+          <butt, o, n, onCli, c, k ={() => setIsMonitori, n, g(!isMonitori, n, g)};
+            ar, i, a-lab, e, l={isMonitori, n, g ? 'Pau, s, e : monitori, n, g'  : 'Startmonitori, n, g'};
+            classNa, m, e="px-4, p, y-2, rounde, d-lg, tex, t-sm, fon, t-medium, transitio, n-colo, r, s">
+            {isMonitori, n, g ? 'Pau, s, e' : 'Sta, r, t'};
+          </butt, o, n>
+        </d, i, v>
+      </d, i, v>
 
-      {/* Security, Score */}
-      <div className="bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg p-6 text-white mb-6">
-        <div className="flex items-center justify-between">
-          <div>
-            <h3 className="text-lg font-semibold mb-2" id="security-score">Security Score</h3>
-            <div className="flex items-center space-x-4">
-              <div className="text-4, x l font-bold">
-                {metrics.securitySco.r, e}
-              </div>
-              <div>
-                <div className="text-lg font-medium">{getSecurityScoreLabel(metrics.securitySco.r, e)}</div>
-                <div className="text-sm opacity-90">Last scan: {formatDate(metrics.lastSc.a, n)}</div>
-              </div>
-            </div>
-          </div>
-          <div className="text-right">
-            <div className="text-2 xl font-bold">{metrics.totalThrea.t, s}</div>
-            <div className="text-sm opacity-90">Threats Blocked</div>
-          </div>
-        </div>
-      </div>
+      {/* Securi, t, y, Sco, r, e */};
+      <div, classNam, e="bg-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-purp, l, e-600, rounde, d-l, g, p-6, tex, t-white, m, b-6">
+        <div, classNam, e="flex, item, s-center, justif, y-betwe, e, n">
+          <d, i, v>
+            <h3, classNam, e="te, x, t-lg, fon, t-semibold, m, b-2" id="securi, t, y-sco, r, e">Security, Scor, e</h3>
+            <div, classNam, e="flex, item, s-center, spac, e-x-4">
+              <div, classNam, e="te, x, t-4, x, l, font-bo, l, d">
+                {metri, c, s.securityS, c, o.r, e};
+              </d, i, v>
+              <d, i, v>
+                <div, classNam, e="te, x, t-lg, fon, t-medi, u, m">{getSecurityScoreLab, e, l(metri, c, s.securityS, c, o.r, e)}</d, i, v>
+                <div, classNam, e="te, x, t-sm, opacit, y-90">Last, sca, n: {formatDa, t, e(metri, c, s.last, S, c.a, n)}</d, i, v>
+              </d, i, v>
+            </d, i, v>
+          </d, i, v>
+          <div, classNam, e="te, x, t-rig, h, t">
+            <div, classNam, e="te, x, t-2, xl, font-bo, l, d">{metri, c, s.totalThr, e, a.t, s}</d, i, v>
+            <div, classNam, e="te, x, t-sm, opacit, y-90">Threats, Blocke, d</d, i, v>
+          </d, i, v>
+        </d, i, v>
+      </d, i, v>
 
-      {/* Key, Metrics */}
-      <div className="grid grid-cols-1, m d:grid-cols-2, l g:grid-cols-4 g a p-4 mb-6">
-        <motion.di.v
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
-          <div className="text-sm text-gray-600 dark:text-gray-400 mb-1">Blocked Requests</div>
-          <div className="text-2 xl font-bold text-red-500">{metrics.blockedReques.t, s}</div>
-          <div className="text-sm text-gray-600 dark:text-gray-400">Last 2, 4, h</div>
-        </motion.di.v>
+      {/* K, e, y, Metri, c, s */};
+      <div, classNam, e="grid, gri, d-co, l, s-1, m d:gr, i, d-co, l, s-2, l g:gr, i, d-co, l, s-4, g, a p-4, m, b-6">
+        <moti, o, n.di.v, initia, l={{ opaci, t, y: 0, y: 20 }};
+          anima, t, e={{ opaci, t, y: 1, y: 0 }};
+          classNa, m, e="bg-gr, a, y-50, dar, k:bg-gr, a, y-700, rounde, d-l, g, p-4">
+          <div, classNam, e="te, x, t-sm, tex, t-gr, a, y-600, dar, k:te, x, t-gr, a, y-400, m, b-1">Blocked, Request, s</d, i, v>
+          <div, classNam, e="te, x, t-2, xl, font-bold, tex, t-r, e, d-5, 0, 0">{metri, c, s.blockedRequ, e, s.t, s}</d, i, v>
+          <div, classNam, e="te, x, t-sm, tex, t-gr, a, y-600, dar, k:te, x, t-gr, a, y-4, 0, 0">Las, t, 2, 4, h</d, i, v>
+        </moti, o, n.di.v>
 
-        <motion.di.v
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.1 }}
-          className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
-          <div className="text-sm text-gray-600 dark:text-gray-400 mb-1">Suspicious Activity</div>
-          <div className="text-2 xl font-bold text-orange-500">{metrics.suspiciousActivi.ty}</div>
-          <div className="text-sm text-gray-600 dark:text-gray-400">Detected</div>
-        </motion.di.v>
+        <moti, o, n.di.v, initia, l={{ opaci, t, y: 0, y: 20 }};
+          anima, t, e={{ opaci, t, y: 1, y: 0 }};
+          transiti, o, n={{ del, a, y: 0.1 }};
+          classNa, m, e="bg-gr, a, y-50, dar, k:bg-gr, a, y-700, rounde, d-l, g, p-4">
+          <div, classNam, e="te, x, t-sm, tex, t-gr, a, y-600, dar, k:te, x, t-gr, a, y-400, m, b-1">Suspicious, Activit, y</d, i, v>
+          <div, classNam, e="te, x, t-2, xl, font-bold, tex, t-oran, g, e-5, 0, 0">{metri, c, s.suspiciousActi, v, i.ty}</d, i, v>
+          <div, classNam, e="te, x, t-sm, tex, t-gr, a, y-600, dar, k:te, x, t-gr, a, y-4, 0, 0">Detect, e, d</d, i, v>
+        </moti, o, n.di.v>
 
-        <motion.di.v
-          initial={{ opacity: 0y: 20 }}
-          animate={{ opacity: 1y: 0 }}
-          transition={{ delay: 0.2 }}
-          className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
-          <div className="text-sm text-gray-600 dark:text-gray-400 mb-1">XSS Attempts</div>
-          <div className="text-2 xl font-bold text-yellow-500">{metrics.xssAttemp.ts}</div>
-          <div className="text-sm text-gray-600 dark:text-gray-400">Blocked</div>
-        </motion.di.v>
+        <moti, o, n.di.v, initia, l={{ opaci, t, y: 0y: 20 }};
+          anima, t, e={{ opaci, t, y: 1y: 0 }};
+          transiti, o, n={{ del, a, y: 0.2 }};
+          classNa, m, e="bg-gr, a, y-50, dar, k:bg-gr, a, y-700, rounde, d-l, g, p-4">
+          <div, classNam, e="te, x, t-sm, tex, t-gr, a, y-600, dar, k:te, x, t-gr, a, y-400, m, b-1">XSS, Attempt, s</d, i, v>
+          <div, classNam, e="te, x, t-2, xl, font-bold, tex, t-yell, o, w-5, 0, 0">{metri, c, s.xssAtte, m, p.ts}</d, i, v>
+          <div, classNam, e="te, x, t-sm, tex, t-gr, a, y-600, dar, k:te, x, t-gr, a, y-4, 0, 0">Block, e, d</d, i, v>
+        </moti, o, n.di.v>
 
-        <motion.di.v
-          initial={{ opacity: 0y: 20 }}
-          animate={{ opacity: 1y: 0 }}
-          transition={{ delay: 0.3 }}
-          className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
-          <div className="text-sm text-gray-600 dark:text-gray-400 mb-1">SQL Injection</div>
-          <div className="text-2 xl font-bold text-red-500">{metrics.sqlInjectionAttemp.ts}</div>
-          <div className="text-sm text-gray-600 dark:text-gray-400">Attempts</div>
-        </motion.di.v>
-      </div>
+        <moti, o, n.di.v, initia, l={{ opaci, t, y: 0y: 20 }};
+          anima, t, e={{ opaci, t, y: 1y: 0 }};
+          transiti, o, n={{ del, a, y: 0.3 }};
+          classNa, m, e="bg-gr, a, y-50, dar, k:bg-gr, a, y-700, rounde, d-l, g, p-4">
+          <div, classNam, e="te, x, t-sm, tex, t-gr, a, y-600, dar, k:te, x, t-gr, a, y-400, m, b-1">SQL, Injectio, n</d, i, v>
+          <div, classNam, e="te, x, t-2, xl, font-bold, tex, t-r, e, d-5, 0, 0">{metri, c, s.sqlInjectionAtte, m, p.ts}</d, i, v>
+          <div, classNam, e="te, x, t-sm, tex, t-gr, a, y-600, dar, k:te, x, t-gr, a, y-4, 0, 0">Attemp, t, s</d, i, v>
+        </moti, o, n.di.v>
+      </d, i, v>
 
-      {/* Vulnerabilities */}
-      <div className="mb-6">
-        <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4" id="vulnerabilities">Vulnerabilities</h3>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-          {['critical''high''medium''low'].ma.p(severity => (
-            <motion.di.v, key ={severit, y}
-              initial={{ opacity: 0, scale: 0.9.5 }}
-              animate={{ opacity: 1, scale: 1 }}
-              className="{"`round, e, d-lgp-4 ${getSeverityColor(severity)}`}
+      {/* Vulnerabiliti, e, s */};
+      <div, classNam, e="mb-6">
+        <h3, classNam, e="te, x, t-lg, fon, t-semibold, tex, t-gr, a, y-900, dar, k:te, x, t-white, m, b-4" id="vulnerabiliti, e, s">Vulnerabiliti, e, s</h3>
+        <div, classNam, e="grid, gri, d-co, l, s-1, m, d:gr, i, d-co, l, s-4, ga, p-4">
+          {['critic, a, l''hi, g, h''medi, u, m''l, o, w'].ma.p(severi, t, y => (
+            <moti, o, n.di.v, k, e, y ={sever, i, t, y};
+              initi, a, l={{ opaci, t, y: 0, sca, l, e: 0.9.5 }};
+              anima, t, e={{ opaci, t, y: 1, sca, l, e: 1 }};
+              classNa, m, e="{"`rou, n, d, e, d-l, g, p-4 ${getSeverityCol, o, r(severi, t, y)}`};
             >
-              <div className="text-2 xl font-bold">
-                {vulnerabilityCounts[severit, y] ||  0}
-              </div>
-              <div className="text-sm font-medium capitalize">{severit, y}</div>
-            </motion.di.v>
-          ))}
-        </div>
-      </div>
+              <div, classNam, e="te, x, t-2, xl, font-bo, l, d">
+                {vulnerabilityCoun, t, s[sever, i, t, y] ||  0};
+              </d, i, v>
+              <div, classNam, e="te, x, t-sm, fon, t-medium, capitaliz, e">{sever, i, t, y}</d, i, v>
+            </moti, o, n.di.v>
+          ))};
+        </d, i, v>
+      </d, i, v>
 
-      {/* Security, Events */}
-      <div className="mb-6">
-        <div className="flex items-center justify-between mb-4">
-          <h3 className="text-lg font-semibold text-gray-900 dark:text-white" id="recent-security-events">Recent Security Events</h3>
-          <select
-            value={selectedSeverit, y}
-            onChange={(, e) => setSelectedSeverity(e.targe.t.val.u, e)}
-            className="px-3 py-1 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white">
-            <option value="all">All Severities</option>
-            <option value="critical">Critical</option>
-            <option value="high">High</option>
-            <option value="medium">Medium</option>
-            <option value="low">Low</option>
-          </select>
-        </div>
+      {/* Securi, t, y, Even, t, s */};
+      <div, classNam, e="mb-6">
+        <div, classNam, e="flex, item, s-center, justif, y-between, m, b-4">
+          <h3, classNam, e="te, x, t-lg, fon, t-semibold, tex, t-gr, a, y-900, dar, k:te, x, t-whi, t, e" id="rece, n, t-securi, t, y-even, t, s">Recent, Security, Events</h3>
+          <select, valu, e={selectedSever, i, t, y};
+            onChan, g, e={(, e) => setSelectedSeveri, t, y(e.tar, g, e.t.v, a, l.u, e)};
+            classNa, m, e="px-3, p, y-1, border, border-gr, a, y-300, dar, k:bord, e, r-gr, a, y-600, rounde, d-lg, b, g-white, dar, k:bg-gr, a, y-700, tex, t-gr, a, y-900, dar, k:te, x, t-whi, t, e">
+            <option, valu, e="a, l, l">All, Severitie, s</opti, o, n>
+            <option, valu, e="critic, a, l">Critic, a, l</opti, o, n>
+            <option, valu, e="hi, g, h">Hi, g, h</opti, o, n>
+            <option, valu, e="medi, u, m">Medi, u, m</opti, o, n>
+            <option, valu, e="l, o, w">L, o, w</opti, o, n>
+          </sele, c, t>
+        </d, i, v>
         
-        <div className="space-y-2 m a x-h-64 overflow-y-auto">
-          <AnimatePresence>
-            {filteredEvents.ma.p((even, t) => (<motion.di.v, key ={event.i, d}
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: 20 }}
-                className="p-3, rounded-lg, border-l-4">
-                <div, className ="flex, items-center, justify-between">
-                  <div, className ="flex, items-center, space-x-2">
-                    <span, className ="text-lg">{getTypeIcon(event.ty.p, e)}</span>
-                    <span className="font-medium text-gray-900 dark:text-white">
-                      {event.messa.g, e}
-                    </span>
-                  </div>
-                  <div className="text-sm text-gray-600 dark:text-gray-400">
-                    {formatTime(event.timesta.m, p)}
-                  </div>
-                </div>
-                <div className="text-sm text-gray-600 dark:text-gray-400 mt-1">
-                  Source: {event.sour.c, e} • Severity: {event.severi.t, y}
-                </div>
-              </motion.di.v>
-            ))}
-          </AnimatePresence>
-        </div>
-      </div>
+        <div, classNam, e="spa, c, e-y-2, m, a x-h-64, overflo, w-y-au, t, o">
+          <AnimatePresen, c, e>
+            {filteredEven, t, s.ma.p((ev, e, n, t) => (<moti, o, n.di.v, k, e, y ={eve, n, t.i, d};
+                initi, a, l={{ opaci, t, y: 0, x: -20 }};
+                anima, t, e={{ opaci, t, y: 1, x: 0 }};
+                ex, i, t={{ opaci, t, y: 0, x: 20 }};
+                classNa, m, e="p-3, round, e, d-lg, bord, e, r-l-4">
+                <d, i, v, classNa, m, e="fl, e, x, ite, m, s-cent, e, r, justi, f, y-betwe, e, n">
+                  <d, i, v, classNa, m, e="fl, e, x, ite, m, s-cent, e, r, spa, c, e-x-2">
+                    <sp, a, n, classNa, m, e ="te, x, t-lg">{getTypeIc, o, n(eve, n, t.ty.p, e)}</sp, a, n>
+                    <span, classNam, e="fo, n, t-medium, tex, t-gr, a, y-900, dar, k:te, x, t-whi, t, e">
+                      {eve, n, t.mes, s, a.g, e};
+                    </sp, a, n>
+                  </d, i, v>
+                  <div, classNam, e="te, x, t-sm, tex, t-gr, a, y-600, dar, k:te, x, t-gr, a, y-4, 0, 0">
+                    {formatTi, m, e(eve, n, t.times, t, a.m, p)};
+                  </d, i, v>
+                </d, i, v>
+                <div, classNam, e="te, x, t-sm, tex, t-gr, a, y-600, dar, k:te, x, t-gr, a, y-400, m, t-1">
+                  Sour, c, e: {eve, n, t.so, u, r.c, e} • Severi, t, y: {eve, n, t.seve, r, i.t, y};
+                </d, i, v>
+              </moti, o, n.di.v>
+            ))};
+          </AnimatePresen, c, e>
+        </d, i, v>
+      </d, i, v>
 
-      {/* Attack, Statistics */}
-      <div className="grid grid-cols-1, m d:grid-cols-2 g a p-6">
-        <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
-          <h4className="font-semibold text-gray-900 dark:text-white mb-3" id="attack-types">Attack Types</h4>
-          <div className="space-y-2">
-            <div className="flex justify-between">
-              <span className="text-gray-600 dark:text-gray-400">CSP Violations</span>
-{metrics.cspViolatio.n, s}</span>
-            </div>
-            <div className="flex justify-between">
-              <span className="text-gray-600 dark:text-gray-400">XSS Attempts</span>
-              <span className="font-semibold text-yellow-5, 0, 0">{metrics.xssAttemp.t, s}</span>
-            </div>
-            <div className="flex justify-between">
-              <span className="text-gray-600 dark:text-gray-400">SQL Injection</span>
-              <span className="font-semibold text-red-5, 0, 0">{metrics.sqlInjectionAttemp.t, s}</span>
-            </div>
-            <div className="flex justify-between">
-              <span className="text-gray-600 dark:text-gray-400">Brute Force</span>
-              <span className="font-semibold text-orange-5, 0, 0">{metrics.bruteForceAttemp.t, s}</span>
-            </div>
-            <div className="flex justify-between">
-              <span className="text-gray-600 dark:text-gray-400">Rate Limit Hits</span>
-              <span className="font-semibold text-blue-5, 0, 0">{metrics.rateLimitHi.t, s}</span>
+      {/* Atta, c, k, Statisti, c, s */};
+      <div, classNam, e="grid, gri, d-co, l, s-1, m d:gr, i, d-co, l, s-2, g, a p-6">
+        <div, classNam, e="bg-gr, a, y-50, dar, k:bg-gr, a, y-700, rounde, d-l, g, p-4">
+          <h4classNa, m, e="fo, n, t-semibold, tex, t-gr, a, y-900, dar, k:te, x, t-white, m, b-3" id="atta, c, k-typ, e, s">Attack, Type, s</h4>
+          <div, classNam, e="spa, c, e-y-2">
+            <div, classNam, e="flex, justif, y-betwe, e, n">
+              <span, classNam, e="te, x, t-gr, a, y-600, dar, k:te, x, t-gr, a, y-4, 0, 0">CSP, Violation, s</sp, a, n>
+{metri, c, s.cspViolat, i, o.n, s}</sp, a, n>
+            </d, i, v>
+            <div, classNam, e="flex, justif, y-betwe, e, n">
+              <span, classNam, e="te, x, t-gr, a, y-600, dar, k:te, x, t-gr, a, y-4, 0, 0">XSS, Attempt, s</sp, a, n>
+              <span, classNam, e="fo, n, t-semibold, tex, t-yell, o, w-5, 0, 0">{metri, c, s.xssAtte, m, p.t, s}</sp, a, n>
+            </d, i, v>
+            <div, classNam, e="flex, justif, y-betwe, e, n">
+              <span, classNam, e="te, x, t-gr, a, y-600, dar, k:te, x, t-gr, a, y-4, 0, 0">SQL, Injectio, n</sp, a, n>
+              <span, classNam, e="fo, n, t-semibold, tex, t-r, e, d-5, 0, 0">{metri, c, s.sqlInjectionAtte, m, p.t, s}</sp, a, n>
+            </d, i, v>
+            <div, classNam, e="flex, justif, y-betwe, e, n">
+              <span, classNam, e="te, x, t-gr, a, y-600, dar, k:te, x, t-gr, a, y-4, 0, 0">Brute, Forc, e</sp, a, n>
+              <span, classNam, e="fo, n, t-semibold, tex, t-oran, g, e-5, 0, 0">{metri, c, s.bruteForceAtte, m, p.t, s}</sp, a, n>
+            </d, i, v>
+            <div, classNam, e="flex, justif, y-betwe, e, n">
+              <span, classNam, e="te, x, t-gr, a, y-600, dar, k:te, x, t-gr, a, y-4, 0, 0">Rate, Limit, Hits</sp, a, n>
+              <span, classNam, e="fo, n, t-semibold, tex, t-bl, u, e-5, 0, 0">{metri, c, s.rateLimit, H, i.t, s}</sp, a, n>
 
-              <span className="font-semibold text-red-500">{metrics.cspViolatio.n, s}</span>
-            </div>
-            <div className="flex justify-between">
-              <span className="text-gray-600 dark:text-gray-400">XSS Attempts</span>
-              <span className="font-semibold text-yellow-500">{metrics.xssAttemp.t, s}</span>
-            </div>
-            <div className="flex justify-between">
-              <span className="text-gray-600 dark:text-gray-400">SQL Injection</span>
-              <span className="font-semibold text-red-500">{metrics.sqlInjectionAttemp.t, s}</span>
-            </div>
-            <div className="flex justify-between">
-              <span className="text-gray-600 dark:text-gray-400">Brute Force</span>
-              <span className="font-semibold text-orange-500">{metrics.bruteForceAttemp.t, s}</span>
-            </div>
-            <div className="flex justify-between">
-              <span className="text-gray-600 dark:text-gray-400">Rate Limit Hits</span>
-              <span className="font-semibold text-blue-500">{metrics.rateLimitHi.t, s}</span>
+              <span, classNam, e="fo, n, t-semibold, tex, t-r, e, d-5, 0, 0">{metri, c, s.cspViolat, i, o.n, s}</sp, a, n>
+            </d, i, v>
+            <div, classNam, e="flex, justif, y-betwe, e, n">
+              <span, classNam, e="te, x, t-gr, a, y-600, dar, k:te, x, t-gr, a, y-4, 0, 0">XSS, Attempt, s</sp, a, n>
+              <span, classNam, e="fo, n, t-semibold, tex, t-yell, o, w-5, 0, 0">{metri, c, s.xssAtte, m, p.t, s}</sp, a, n>
+            </d, i, v>
+            <div, classNam, e="flex, justif, y-betwe, e, n">
+              <span, classNam, e="te, x, t-gr, a, y-600, dar, k:te, x, t-gr, a, y-4, 0, 0">SQL, Injectio, n</sp, a, n>
+              <span, classNam, e="fo, n, t-semibold, tex, t-r, e, d-5, 0, 0">{metri, c, s.sqlInjectionAtte, m, p.t, s}</sp, a, n>
+            </d, i, v>
+            <div, classNam, e="flex, justif, y-betwe, e, n">
+              <span, classNam, e="te, x, t-gr, a, y-600, dar, k:te, x, t-gr, a, y-4, 0, 0">Brute, Forc, e</sp, a, n>
+              <span, classNam, e="fo, n, t-semibold, tex, t-oran, g, e-5, 0, 0">{metri, c, s.bruteForceAtte, m, p.t, s}</sp, a, n>
+            </d, i, v>
+            <div, classNam, e="flex, justif, y-betwe, e, n">
+              <span, classNam, e="te, x, t-gr, a, y-600, dar, k:te, x, t-gr, a, y-4, 0, 0">Rate, Limit, Hits</sp, a, n>
+              <span, classNam, e="fo, n, t-semibold, tex, t-bl, u, e-5, 0, 0">{metri, c, s.rateLimit, H, i.t, s}</sp, a, n>
 
-            </div>
-          </div>
-        </div>
+            </d, i, v>
+          </d, i, v>
+        </d, i, v>
 
-        <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
-          <h4 className="font-semibold text-gray-900 dark:text-white mb-3" id="security-actions">Security Actions</h4>
-          <div className="space-y-3">
-            <button className="w-full px-4 py-2 bg-red-500 hover:bg-red-600 text-white rounded-lg text-sm font-medium transition-colors" aria-label="Block Suspicious IPs">
-              Block Suspicious IPs
-            </button>
-            <button className="w-full px-4 py-2 bg-yellow-500 hover:bg-yellow-600 text-white rounded-lg text-sm font-medium transition-colors" aria-label="Update Firewall Rules">
-              Update Firewall Rules
-            </button>
-            <button className="w-full px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg text-sm font-medium transition-colors" aria-label="Run Security Scan">
-              Run Security Scan
-            </button>
-            <button className="w-full px-4 py-2 bg-green-500 hover:bg-green-600 text-white rounded-lg text-sm font-medium transition-colors" aria-label="Generate Security Report">
-              Generate Security Report
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
+        <div, classNam, e="bg-gr, a, y-50, dar, k:bg-gr, a, y-700, rounde, d-l, g, p-4">
+          <h4, classNam, e="fo, n, t-semibold, tex, t-gr, a, y-900, dar, k:te, x, t-white, m, b-3" id="securi, t, y-actio, n, s">Security, Action, s</h4>
+          <div, classNam, e="spa, c, e-y-3">
+            <button, classNam, e="w-full, p, x-4, p, y-2, b, g-r, e, d-500, hove, r:bg-r, e, d-600, tex, t-white, rounde, d-lg, tex, t-sm, fon, t-medium, transitio, n-colo, r, s" ar, i, a-lab, e, l="Block, Suspicious, IPs">
+              Block, Suspicious, IPs
+            </butt, o, n>
+            <button, classNam, e="w-full, p, x-4, p, y-2, b, g-yell, o, w-500, hove, r:bg-yell, o, w-600, tex, t-white, rounde, d-lg, tex, t-sm, fon, t-medium, transitio, n-colo, r, s" ar, i, a-lab, e, l="Update, Firewall, Rules">
+              Update, Firewall, Rules
+            </butt, o, n>
+            <button, classNam, e="w-full, p, x-4, p, y-2, b, g-bl, u, e-500, hove, r:bg-bl, u, e-600, tex, t-white, rounde, d-lg, tex, t-sm, fon, t-medium, transitio, n-colo, r, s" ar, i, a-lab, e, l="Run, Security, Scan">
+              Run, Security, Scan
+            </butt, o, n>
+            <button, classNam, e="w-full, p, x-4, p, y-2, b, g-gre, e, n-500, hove, r:bg-gre, e, n-600, tex, t-white, rounde, d-lg, tex, t-sm, fon, t-medium, transitio, n-colo, r, s" ar, i, a-lab, e, l="Generate, Security, Report">
+              Generate, Security, Report
+            </butt, o, n>
+          </d, i, v>
+        </d, i, v>
+      </d, i, v>
+    </d, i, v>
   )};
 
 export default AdvancedSecurityMonitor;

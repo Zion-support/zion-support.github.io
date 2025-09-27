@@ -1,342 +1,324 @@
-import React from "react"
-import {SEO } from "../../components/SEO"
-import {Atom, Brain 
-  Zap, Cpu 
-  Users, Clock 
-  Network, Rocket 
-  Shield, Globe 
-  Smartphone, Monitor 
-  CheckCircle 
-} from "lucide-react"
+import, React, from "react"
+import {S, E, O } fr, o, m "../../components/S, E, O"
+import {At, o, m, Brain, Za, p, Cpu, User, s, Clock, Networ, k, Rocket, Shiel, d, Globe, Smartphon, e, Monitor, CheckCircl, e 
+} fr, o, m "luci, d, e-react"
 
-const AIQuantumHybridPlatform: React.FC = () => {const, features = [>>>>>> cursor/check-fix-push-and-merge-to-main-767f
-  ]
-
-  const, applications = ["Drug, Discovery & Molecular, Modeling",
-    "Financial, Modeling & Risk, Analysis",
-    "Climate, Change & Weather, Prediction",
-    "Cryptography & Cybersecurity",
-    "Optimization, Problems",
-    "Machine, Learning & AI, Training",
-    "Material, Science & Engineering",
-    "Logistics & Supply, Chain"]
-
-  const, benefits = ["Exponential, speedup for, complex problems",
-    "Unprecedented, accuracy in, simulations",
-    "Breakthrough, discoveries in, science",
-    "Enhanced, AI capabilities",
-    "Future-proof, technology investment",
-    "Competitive, advantage in, research"]
-
-  return (<div, className ="min-h-screen, bg-gradient-to-br, from-slate-90, 0, via-slate-8, 0, 0, to-slate-90, 0">
+const, AIQuantumHybridPlatfor, m: React.FC = () => {con, s, t, featur, e, s = [>>>>>> curs, o, r/che, c, k-f, i, x-pu, s, h-a, n, d-mer, g, e-to-ma, i, n-76, 7, f];
+  con, s, t, applicatio, n, s = ["Dr, u, g, Discove, r, y & Molecul, a, r, Modeli, n, g",
+    "Financi, a, l, Modeli, n, g & Ri, s, k, Analys, i, s",
+    "Clima, t, e, Chan, g, e & Weath, e, r, Predicti, o, n",
+    "Cryptograp, h, y & Cybersecuri, t, y",
+    "Optimizati, o, n, Proble, m, s",
+    "Machi, n, e, Learni, n, g & AI, Traini, n, g",
+    "Materi, a, l, Scien, c, e & Engineeri, n, g",
+    "Logisti, c, s & Supp, l, y, Cha, i, n"];
+  con, s, t, benefi, t, s = ["Exponenti, a, l, speedup, fo, r, complex, problem, s",
+    "Unprecedent, e, d, accuracy, i, n, simulatio, n, s",
+    "Breakthrou, g, h, discoveries, i, n, scien, c, e",
+    "Enhanc, e, d, AI, capabilitie, s",
+    "Futu, r, e-pro, o, f, technology, investmen, t",
+    "Competiti, v, e, advantage, i, n, resear, c, h"];
+  return (<d, i, v, classNa, m, e="m, i, n-h-scre, e, n, bg-gradie, n, t-to-br, fr, o, m-sla, t, e-90, 0, v, i, a-sla, t, e-8, 0, 0, to-sla, t, e-90, 0">
 
 
 
-      <SEO, title ="AI, Quantum, Hybrid, Platform - Zion, Tech, Group"
-        description="Revolutionary, AI-Quantum, hybrid, platform, combining, classical, AI, with, quantum, computing, for, unprecedented, computational, power, and, breakthrough, discoveries."
+      <S, E, O, tit, l, e ="AI, Quant, u, m, Hybr, i, d, Platfo, r, m - Zi, o, n, Te, c, h, Gro, u, p"
+        descripti, o, n="Revolutiona, r, y, AI-Quant, u, m, hybr, i, d, platfo, r, m, combini, n, g, classic, a, l, AI, wi, t, h, quant, u, m, computi, n, g, f, o, r, unprecedent, e, d, computation, a, l, pow, e, r, a, n, d, breakthrou, g, h, discoveri, e, s."
 
       />
 
-      {/* Hero, Section */}
-      <section, className ="relative, py-20, overflow-hidden">
+      {/* He, r, o, Secti, o, n */};
+      <secti, o, n, classNa, m, e="relati, v, e, py-20, overfl, o, w-hidd, e, n">
 
-        <div, className ="container-responsive, relative  z-10">
-          <div, className ="text-center, max-w-4xl, mx-auto">
-            <div, className ="inline-flex, items-center, px-4, py-2, bg-indigo-400/10, border, border-indigo-400/20, rounded-full, text-indigo-400, text-sm, font-medium, mb-6">
-              <CheckCircle, className ="w-4, h-4, mr-2" />
-              Quantum, AI  Technology
-            </div>
-            <h1, className ="text-5xl, md:text-6xl, font-bold, text-white, mb-6">AI, Quantum  Hybrid, Platform</h1>
-            <p, className ="text-xl, text-gray-300, mb-8, max-w-3xl, mx-auto">
-
-
-        <div, className ="container-responsive, relative  z-10">
-          <div, className ="text-center, max-w-4, x, l  mx-auto">
-            <div, className ="inline-flex, items-center, px-4, py-2, bg-indigo-4, 0, 0/10, border, border-indigo-4, 0, 0/20, rounded-full, text-indigo-4, 0, 0, text-sm, font-medium, mb-6">
-              <CheckCircle, className ="w-4, h-4, mr-2" />
-              Quantum, AI  Technology
-            </div>
-            <h1, className ="text-5, xlmd:text-6, x, l  font-bold, text-white, mb-6">AI, Quantum  Hybrid, Platform</h1>
-            <p, className ="text-xl, text-gray-300, mb-8, max-w-3, x, l  mx-auto">
-
-        <div, className ="absolute, inset-0, bg-gradient-to-r, from-indigo-90, 0/20, via-purple-90, 0/20, to-cyan-90, 0/20" />
-        <div, className ="container-responsive, relative z-10">
-          <div, className ="text-center, max-w-4, x, l  mx-auto">
-            <div, className ="inline-flex, items-center, px-4, py-2, bg-indigo-400/10, border, border-indigo-400/20, rounded-full, text-indigo-400, text-sm, font-medium, mb-6">
-              <CheckCircle, className ="w-4, h-4, mr-2" />
-              Quantum, AI Technology
-            </div>
-            <h1, className ="text-5, xlmd:text-6, x, l  font-bold, text-white, mb-6">AI, Quantum Hybrid, Platform</h1>
-            <p, className ="text-xl, text-gray-300, mb-8, max-w-3, x, l  mx-auto">
+        <d, i, v, classNa, m, e="contain, e, r-responsi, v, e, relativ, e, z-10">
+          <d, i, v, classNa, m, e="te, x, t-cent, e, r, m, a, x-w-4, x, l, mx-au, t, o">
+            <d, i, v, classNa, m, e="inli, n, e-fl, e, x, ite, m, s-cent, e, r, px-4, py-2, bg-indi, g, o-4, 0, 0/10, bord, e, r, bord, e, r-indi, g, o-4, 0, 0/20, round, e, d-fu, l, l, te, x, t-indi, g, o-4, 0, 0, te, x, t-sm, fo, n, t-medi, u, m, mb-6">
+              <CheckCirc, l, e, classNa, m, e="w-4, h-4, mr-2" />
+              Quant, u, m, AI, Technolog, y
+            </d, i, v>
+            <h1, classNa, m, e="te, x, t-5, x, l, md:te, x, t-6, x, l, fo, n, t-bo, l, d, te, x, t-whi, t, e, mb-6">AI, Quantum, Hybri, d, Platfo, r, m</h1>
+            <p, classNa, m, e="te, x, t-xl, te, x, t-gr, a, y-3, 0, 0, mb-8, m, a, x-w-3, x, l, mx-au, t, o">
 
 
-              intelligence, with  quantum, computing  to, solve  previously, impossible  problems, and  accelerate, breakthrough  discoveries, across  all, domains.
+        <d, i, v, classNa, m, e="contain, e, r-responsi, v, e, relativ, e, z-10">
+          <d, i, v, classNa, m, e="te, x, t-cent, e, r, m, a, x-w-4, x, l, m, x-au, t, o">
+            <d, i, v, classNa, m, e="inli, n, e-fl, e, x, ite, m, s-cent, e, r, px-4, py-2, bg-indi, g, o-4, 0, 0/10, bord, e, r, bord, e, r-indi, g, o-4, 0, 0/20, round, e, d-fu, l, l, te, x, t-indi, g, o-4, 0, 0, te, x, t-sm, fo, n, t-medi, u, m, mb-6">
+              <CheckCirc, l, e, classNa, m, e="w-4, h-4, mr-2" />
+              Quant, u, m, AI, Technolog, y
+            </d, i, v>
+            <h1, classNa, m, e="te, x, t-5, xl, m, d:te, x, t-6, x, l, fon, t-bo, l, d, te, x, t-whi, t, e, mb-6">AI, Quantum, Hybri, d, Platfo, r, m</h1>
+            <p, classNa, m, e="te, x, t-xl, te, x, t-gr, a, y-3, 0, 0, mb-8, m, a, x-w-3, x, l, m, x-au, t, o">
+
+        <d, i, v, classNa, m, e="absolu, t, e, ins, e, t-0, bg-gradie, n, t-to-r, fr, o, m-indi, g, o-90, 0/20, v, i, a-purp, l, e-90, 0/20, to-cy, a, n-90, 0/20" />
+        <d, i, v, classNa, m, e="contain, e, r-responsi, v, e, relativ, e, z-10">
+          <d, i, v, classNa, m, e="te, x, t-cent, e, r, m, a, x-w-4, x, l, m, x-au, t, o">
+            <d, i, v, classNa, m, e="inli, n, e-fl, e, x, ite, m, s-cent, e, r, px-4, py-2, bg-indi, g, o-4, 0, 0/10, bord, e, r, bord, e, r-indi, g, o-4, 0, 0/20, round, e, d-fu, l, l, te, x, t-indi, g, o-4, 0, 0, te, x, t-sm, fo, n, t-medi, u, m, mb-6">
+              <CheckCirc, l, e, classNa, m, e="w-4, h-4, mr-2" />
+              Quant, u, m, AI, Technolog, y
+            </d, i, v>
+            <h1, classNa, m, e="te, x, t-5, xl, m, d:te, x, t-6, x, l, fon, t-bo, l, d, te, x, t-whi, t, e, mb-6">AI, Quantum, Hybri, d, Platfo, r, m</h1>
+            <p, classNa, m, e="te, x, t-xl, te, x, t-gr, a, y-3, 0, 0, mb-8, m, a, x-w-3, x, l, m, x-au, t, o">
+
+
+              intelligen, c, e, with, quantu, m, computing, t, o, solve, previousl, y, impossible, problem, s, and, accelerat, e, breakthrough, discoverie, s, across, al, l, domai, n, s.
             </p>
-            <div, className ="flex, flex-col, sm:flex-row, gap-4, justify-center">
+            <d, i, v, classNa, m, e="fl, e, x, fl, e, x-c, o, l, sm:fl, e, x-r, o, w, g, a, p-4, justi, f, y-cent, e, r">
 
-                Access, Platform
-              </button>
-              <button, className ="px-8, py-4, bg-slate-800/50, border, border-slate-600, text-white, font-semibold, rounded-lg, hover:bg-slate-700/50, transition-all, duration-200">
-
-
-                Access, Platform
-              </button>
-              <button, className ="px-8, py-4, bg-slate-8, 0, 0/50, border, border-slate-6, 0, 0, text-white, font-semibold, rounded-lg, hover:bg-slate-7, 0, 0/50, transition-all, duration-2, 0, 0">
-
-              <button, className ="px-8, py-4, bg-gradient-to-r, from-indigo-400, to-purple-500, text-white, font-semibold, rounded-lg, hover:from-indigo-500, hover:to-purple-600, transition-all, duration-200, hover:scale-105, shadow-lg">
-                Access, Platform
-              </button>
-              <button, className ="px-8, py-4, bg-slate-800/50, border, border-slate-600, text-white, font-semibold, rounded-lg, hover:bg-slate-700/50, transition-all, duration-200">
+                Acce, s, s, Platfo, r, m
+              </butt, o, n>
+              <butt, o, n, classNa, m, e="px-8, py-4, bg-sla, t, e-8, 0, 0/50, bord, e, r, bord, e, r-sla, t, e-6, 0, 0, te, x, t-whi, t, e, fo, n, t-semibo, l, d, round, e, d-lg, hov, e, r:bg-sla, t, e-7, 0, 0/50, transiti, o, n-a, l, l, durati, o, n-2, 0, 0">
 
 
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
+                Acce, s, s, Platfo, r, m
+              </butt, o, n>
+              <butt, o, n, classNa, m, e="px-8, py-4, bg-sla, t, e-8, 0, 0/50, bord, e, r, bord, e, r-sla, t, e-6, 0, 0, te, x, t-whi, t, e, fo, n, t-semibo, l, d, round, e, d-lg, hov, e, r:bg-sla, t, e-7, 0, 0/50, transiti, o, n-a, l, l, durati, o, n-2, 0, 0">
 
-      {/* Features, Section */}
-      <section, className ="py-20">
-        <div, className ="container-responsive">
-          <div, className ="text-center, mb-16">
-Quantum-Classical, Hybrid  Intelligence</h2>
-            <p, className ="text-xl, text-gray-300, max-w-3xl, mx-auto">
-              Experience, the  power, of  quantum, computing  enhanced, by  artificial, intelligencedelivering  computational
+              <butt, o, n, classNa, m, e="px-8, py-4, bg-gradie, n, t-to-r, fr, o, m-indi, g, o-4, 0, 0, to-purp, l, e-5, 0, 0, te, x, t-whi, t, e, fo, n, t-semibo, l, d, round, e, d-lg, hov, e, r:fr, o, m-indi, g, o-5, 0, 0, hov, e, r:to-purp, l, e-6, 0, 0, transiti, o, n-a, l, l, durati, o, n-2, 0, 0, hov, e, r:sca, l, e-1, 0, 5, shad, o, w-lg">
+                Acce, s, s, Platfo, r, m
+              </butt, o, n>
+              <butt, o, n, classNa, m, e="px-8, py-4, bg-sla, t, e-8, 0, 0/50, bord, e, r, bord, e, r-sla, t, e-6, 0, 0, te, x, t-whi, t, e, fo, n, t-semibo, l, d, round, e, d-lg, hov, e, r:bg-sla, t, e-7, 0, 0/50, transiti, o, n-a, l, l, durati, o, n-2, 0, 0">
 
-            <h2, className ="text-4, x, l  font-bold, text-white, mb-4">Quantum-Classical, Hybrid  Intelligence</h2>
-            <p, className ="text-xl, text-gray-300, max-w-3, x, l  mx-auto">
-              Experience, the  power, of  quantum, computing  enhanced, by  artificial, intelligence  delivering, computational
+
+              </butt, o, n>
+            </d, i, v>
+          </d, i, v>
+        </d, i, v>
+      </secti, o, n>
+
+      {/* Featur, e, s, Secti, o, n */};
+      <secti, o, n, classNa, m, e ="py-20">
+        <d, i, v, classNa, m, e ="contain, e, r-responsi, v, e">
+          <d, i, v, classNa, m, e="te, x, t-cent, e, r, mb-16">
+Quant, u, m-Classic, a, l, Hybrid, Intelligenc, e</h2>
+            <p, classNa, m, e="te, x, t-xl, te, x, t-gr, a, y-3, 0, 0, m, a, x-w-3, x, l, mx-au, t, o">
+              Experien, c, e, the, powe, r, of, quantu, m, computing, enhance, d, by, artificia, l, intelligencedelivering, computationa, l
+
+            <h2, classNa, m, e="te, x, t-4, x, l, fon, t-bo, l, d, te, x, t-whi, t, e, mb-4">Quant, u, m-Classic, a, l, Hybrid, Intelligenc, e</h2>
+            <p, classNa, m, e="te, x, t-xl, te, x, t-gr, a, y-3, 0, 0, m, a, x-w-3, x, l, m, x-au, t, o">
+              Experien, c, e, the, powe, r, of, quantu, m, computing, enhance, d, by, artificia, l, intelligence, deliverin, g, computation, a, l
 
             </p>
-          </div>
-          <div, className ="grid, grid-cols-1, md:grid-cols-2, lg:grid-cols-3, gap-8">
- (<div, key ={index}
-                className="group, p-6, bg-slate-800/50, border, border-slate-700/50, rounded-xl, hover:bg-slate-700/50, hover:border-indigo-400/30, transition-all, duration-200, hover:scale-105"
+          </d, i, v>
+          <d, i, v, classNa, m, e="gr, i, d, gr, i, d-co, l, s-1, md:gr, i, d-co, l, s-2, lg:gr, i, d-co, l, s-3, g, a, p-8">
+ (<d, i, v, k, e, y ={ind, e, x};
+                classNa, m, e="gro, u, p, p-6, bg-sla, t, e-8, 0, 0/50, bord, e, r, bord, e, r-sla, t, e-7, 0, 0/50, round, e, d-xl, hov, e, r:bg-sla, t, e-7, 0, 0/50, hov, e, r:bord, e, r-indi, g, o-4, 0, 0/30, transiti, o, n-a, l, l, durati, o, n-2, 0, 0, hov, e, r:sca, l, e-1, 0, 5"
               >
-                <div, className ="w-12, h-12, bg-gradient-to-br, from-indigo-400/20, to-purple-500/20, rounded-lg, flex  items-center, justify-center, mb-4, group-hover:from-indigo-400/40, group-hover:to-purple-500/40, transition-all, duration-200">
+                <d, i, v, classNa, m, e="w-12, h-12, bg-gradie, n, t-to-br, fr, o, m-indi, g, o-4, 0, 0/20, to-purp, l, e-5, 0, 0/20, round, e, d-lg, flex, item, s-cent, e, r, justi, f, y-cent, e, r, mb-4, gro, u, p-hov, e, r:fr, o, m-indi, g, o-4, 0, 0/40, gro, u, p-hov, e, r:to-purp, l, e-5, 0, 0/40, transiti, o, n-a, l, l, durati, o, n-2, 0, 0">
 
- (<div, key ={index}
-                className="group, p-6, bg-slate-8, 0, 0/50, border, border-slate-7, 0, 0/50, rounded-xl, hover:bg-slate-7, 0, 0/50, hover:border-indigo-4, 0, 0/30, transition-all, duration-2, 0, 0, hover:scale-1, 0, 5"
+ (<d, i, v, k, e, y ={ind, e, x};
+                classNa, m, e="gro, u, p, p-6, bg-sla, t, e-8, 0, 0/50, bord, e, r, bord, e, r-sla, t, e-7, 0, 0/50, round, e, d-xl, hov, e, r:bg-sla, t, e-7, 0, 0/50, hov, e, r:bord, e, r-indi, g, o-4, 0, 0/30, transiti, o, n-a, l, l, durati, o, n-2, 0, 0, hov, e, r:sca, l, e-1, 0, 5"
               >
-                <div, className ="w-12, h-12, bg-gradient-to-br, from-indigo-4, 0, 0/20, to-purple-5, 0, 0/20, rounded-lg, flex  items-center, justify-center, mb-4, group-hover:from-indigo-4, 0, 0/40, group-hover:to-purple-5, 0, 0/40, transition-all, duration-2, 0, 0">
+                <d, i, v, classNa, m, e="w-12, h-12, bg-gradie, n, t-to-br, fr, o, m-indi, g, o-4, 0, 0/20, to-purp, l, e-5, 0, 0/20, round, e, d-lg, flex, item, s-cent, e, r, justi, f, y-cent, e, r, mb-4, gro, u, p-hov, e, r:fr, o, m-indi, g, o-4, 0, 0/40, gro, u, p-hov, e, r:to-purp, l, e-5, 0, 0/40, transiti, o, n-a, l, l, durati, o, n-2, 0, 0">
 
-            {features.map((feature, index) => (<div, key ={index}
-                className="group, p-6, bg-slate-800/50, border, border-slate-700/50, rounded-xl, hover:bg-slate-700/50, hover:border-indigo-400/30, transition-all, duration-200, hover:scale-105"
+            {featur, e, s.m, a, p((featu, r, e, ind, e, x) => (<d, i, v, k, e, y ={ind, e, x};
+                classNa, m, e="gro, u, p, p-6, bg-sla, t, e-8, 0, 0/50, bord, e, r, bord, e, r-sla, t, e-7, 0, 0/50, round, e, d-xl, hov, e, r:bg-sla, t, e-7, 0, 0/50, hov, e, r:bord, e, r-indi, g, o-4, 0, 0/30, transiti, o, n-a, l, l, durati, o, n-2, 0, 0, hov, e, r:sca, l, e-1, 0, 5"
               >
-                <div, className ="w-12, h-12, bg-gradient-to-br, from-indigo-400/20, to-purple-500/20, rounded-lg, flex items-center, justify-center, mb-4, group-hover:from-indigo-400/40, group-hover:to-purple-500/40, transition-all, duration-200">
+                <d, i, v, classNa, m, e="w-12, h-12, bg-gradie, n, t-to-br, fr, o, m-indi, g, o-4, 0, 0/20, to-purp, l, e-5, 0, 0/20, round, e, d-lg, flex, item, s-cent, e, r, justi, f, y-cent, e, r, mb-4, gro, u, p-hov, e, r:fr, o, m-indi, g, o-4, 0, 0/40, gro, u, p-hov, e, r:to-purp, l, e-5, 0, 0/40, transiti, o, n-a, l, l, durati, o, n-2, 0, 0">
 
 
-                  <feature.icon, className ="w-6, h-6, text-indigo-300" />
-                </div>
-                <h3, className ="text-xl, font-semibold, text-white, mb-3">{feature.title}</h3>
-                <p, className ="text-gray-400, group-hover:text-gray-300, transition-colors">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+                  <featu, r, e.ic, o, n, classNa, m, e="w-6, h-6, te, x, t-indi, g, o-3, 0, 0" />
+                </d, i, v>
+                <h3, classNa, m, e="te, x, t-xl, fo, n, t-semibo, l, d, te, x, t-whi, t, e, mb-3">{featu, r, e.tit, l, e}</h3>
+                <p, classNa, m, e="te, x, t-gr, a, y-4, 0, 0, gro, u, p-hov, e, r:te, x, t-gr, a, y-3, 0, 0, transiti, o, n-colo, r, s">{featu, r, e.descripti, o, n}</p>
+              </d, i, v>
+            ))};
+          </d, i, v>
+        </d, i, v>
+      </secti, o, n>
 
-      {/* Capabilities, Section */}
+      {/* Capabiliti, e, s, Secti, o, n */};
+        <div, classNam, e="contain, e, r-responsi, v, e">
+          <div, classNam, e="te, x, t-center, m, b-16">
+            <h2, classNam, e="te, x, t-4, xl, font-bold, tex, t-white, m, b-4">Advanced, Quantum, Capabilities</h2>
+            <p, classNam, e="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3, xl, mx-au, t, o">
+              From, quantum, machine learning, to, quantum cryptographyour, platform, delivers cutti, n, g-edge, quantu, m
 
-        <div className="container-responsive">
-          <div className="text-center mb-16">
-            <h2 className="text-4 xl font-bold text-white mb-4">Advanced Quantum Capabilities</h2>
-            <p className="text-xl text-gray-300 max-w-3 xl mx-auto">
-              From quantum machine learning to quantum cryptographyour platform delivers cutting-edge quantum
-
-      <section className="py-20 bg-slate-800/20">
-        <div className="container-responsive">
-          <div className="text-center mb-16">
-            <h2 className="text-4, x l font-bold text-white mb-4">Advanced Quantum Capabilities</h2>
-            <p className="text-xl text-gray-300 max-w-3, x l mx-auto">
-              From quantum machine learning to quantum cryptography  our platform delivers cutting-edge quantum
-
-              computing capabilities.
+      <section, classNam, e="py-20, b, g-sla, t, e-8, 0, 0/20">
+        <div, classNam, e="contain, e, r-responsi, v, e">
+          <div, classNam, e="te, x, t-center, m, b-16">
+            <h2, classNam, e="te, x, t-4, x, l, font-bold, tex, t-white, m, b-4">Advanced, Quantum, Capabilities</h2>
+            <p, classNam, e="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3, x, l, mx-au, t, o">
+              From, quantum, machine learning, to, quantum cryptography, our, platform delivers, cuttin, g-edge, quantum, computing capabiliti, e, s.
             </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
- (<div, key ={index}
-                className="group, p-6, bg-slate-800/50, border, border-slate-700/50, rounded-xl, hover:bg-slate-700/50, hover:border-indigo-400/30, transition-all, duration-200, hover:scale-105"
+          </d, i, v>
+          <div, classNam, e="grid, gri, d-co, l, s-1, m, d:gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-3, ga, p-8">
+ (<d, i, v, k, e, y ={ind, e, x};
+                classNa, m, e="gro, u, p, p-6, bg-sla, t, e-8, 0, 0/50, bord, e, r, bord, e, r-sla, t, e-7, 0, 0/50, round, e, d-xl, hov, e, r:bg-sla, t, e-7, 0, 0/50, hov, e, r:bord, e, r-indi, g, o-4, 0, 0/30, transiti, o, n-a, l, l, durati, o, n-2, 0, 0, hov, e, r:sca, l, e-1, 0, 5"
               >
-                <div, className ="w-12, h-12, bg-gradient-to-br, from-purple-400/20, to-cyan-500/20, rounded-lg, flex  items-center, justify-center, mb-4, group-hover:from-purple-400/40, group-hover:to-cyan-500/40, transition-all, duration-200">
+                <d, i, v, classNa, m, e="w-12, h-12, bg-gradie, n, t-to-br, fr, o, m-purp, l, e-4, 0, 0/20, to-cy, a, n-5, 0, 0/20, round, e, d-lg, flex, item, s-cent, e, r, justi, f, y-cent, e, r, mb-4, gro, u, p-hov, e, r:fr, o, m-purp, l, e-4, 0, 0/40, gro, u, p-hov, e, r:to-cy, a, n-5, 0, 0/40, transiti, o, n-a, l, l, durati, o, n-2, 0, 0">
 
- (<div, key ={index}
-                className="group, p-6, bg-slate-8, 0, 0/50, border, border-slate-7, 0, 0/50, rounded-xl, hover:bg-slate-7, 0, 0/50, hover:border-indigo-4, 0, 0/30, transition-all, duration-2, 0, 0, hover:scale-1, 0, 5"
+ (<d, i, v, k, e, y ={ind, e, x};
+                classNa, m, e="gro, u, p, p-6, bg-sla, t, e-8, 0, 0/50, bord, e, r, bord, e, r-sla, t, e-7, 0, 0/50, round, e, d-xl, hov, e, r:bg-sla, t, e-7, 0, 0/50, hov, e, r:bord, e, r-indi, g, o-4, 0, 0/30, transiti, o, n-a, l, l, durati, o, n-2, 0, 0, hov, e, r:sca, l, e-1, 0, 5"
               >
-                <div, className ="w-12, h-12, bg-gradient-to-br, from-purple-4, 0, 0/20, to-cyan-5, 0, 0/20, rounded-lg, flex  items-center, justify-center, mb-4, group-hover:from-purple-4, 0, 0/40, group-hover:to-cyan-5, 0, 0/40, transition-all, duration-2, 0, 0">
+                <d, i, v, classNa, m, e="w-12, h-12, bg-gradie, n, t-to-br, fr, o, m-purp, l, e-4, 0, 0/20, to-cy, a, n-5, 0, 0/20, round, e, d-lg, flex, item, s-cent, e, r, justi, f, y-cent, e, r, mb-4, gro, u, p-hov, e, r:fr, o, m-purp, l, e-4, 0, 0/40, gro, u, p-hov, e, r:to-cy, a, n-5, 0, 0/40, transiti, o, n-a, l, l, durati, o, n-2, 0, 0">
 
-            {capabilities.map((capability, index) => (<div, key ={index}
-                className="group, p-6, bg-slate-800/50, border, border-slate-700/50, rounded-xl, hover:bg-slate-700/50, hover:border-indigo-400/30, transition-all, duration-200, hover:scale-105"
+            {capabiliti, e, s.m, a, p((capabili, t, y, ind, e, x) => (<d, i, v, k, e, y ={ind, e, x};
+                classNa, m, e="gro, u, p, p-6, bg-sla, t, e-8, 0, 0/50, bord, e, r, bord, e, r-sla, t, e-7, 0, 0/50, round, e, d-xl, hov, e, r:bg-sla, t, e-7, 0, 0/50, hov, e, r:bord, e, r-indi, g, o-4, 0, 0/30, transiti, o, n-a, l, l, durati, o, n-2, 0, 0, hov, e, r:sca, l, e-1, 0, 5"
               >
-                <div, className ="w-12, h-12, bg-gradient-to-br, from-purple-400/20, to-cyan-500/20, rounded-lg, flex items-center, justify-center, mb-4, group-hover:from-purple-400/40, group-hover:to-cyan-500/40, transition-all, duration-200">
+                <d, i, v, classNa, m, e="w-12, h-12, bg-gradie, n, t-to-br, fr, o, m-purp, l, e-4, 0, 0/20, to-cy, a, n-5, 0, 0/20, round, e, d-lg, flex, item, s-cent, e, r, justi, f, y-cent, e, r, mb-4, gro, u, p-hov, e, r:fr, o, m-purp, l, e-4, 0, 0/40, gro, u, p-hov, e, r:to-cy, a, n-5, 0, 0/40, transiti, o, n-a, l, l, durati, o, n-2, 0, 0">
 
 
-                  <capability.icon, className ="w-6, h-6, text-indigo-300" />
-                </div>
-                <h3, className ="text-xl, font-semibold, text-white, mb-3">{capability.title}</h3>
-                <p, className ="text-gray-400, group-hover:text-gray-300, transition-colors">{capability.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+                  <capabili, t, y.ic, o, n, classNa, m, e="w-6, h-6, te, x, t-indi, g, o-3, 0, 0" />
+                </d, i, v>
+                <h3, classNa, m, e="te, x, t-xl, fo, n, t-semibo, l, d, te, x, t-whi, t, e, mb-3">{capabili, t, y.tit, l, e}</h3>
+                <p, classNa, m, e="te, x, t-gr, a, y-4, 0, 0, gro, u, p-hov, e, r:te, x, t-gr, a, y-3, 0, 0, transiti, o, n-colo, r, s">{capabili, t, y.descripti, o, n}</p>
+              </d, i, v>
+            ))};
+          </d, i, v>
+        </d, i, v>
+      </secti, o, n>
 
-      {/* Applications, Section */}
-      <section className="py-20">
-        <div className="container-responsive">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div>
-Revolutionary Applications</h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Our AI-Quantum hybrid platform opens new frontiers in sciencetechnologyand businesssolving
-                problems that were previously impossible.
+      {/* Applicatio, n, s, Secti, o, n */};
+      <section, classNam, e="py-20">
+        <div, classNam, e="contain, e, r-responsi, v, e">
+          <div, classNam, e="grid, gri, d-co, l, s-1, l, g:gr, i, d-co, l, s-2, ga, p-16, item, s-cent, e, r">
+            <d, i, v>
+Revolutionary, Application, s</h2>
+              <p, classNam, e="te, x, t-xl, tex, t-gr, a, y-300, m, b-8">
+                Our, A, I-Quantum, hybrid, platform opens, new, frontiers in, sciencetechnologyand, businesssolving
+                problems, that, were previously, impossibl, e.
               </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {applications.map((applicationindex) => (<div, key ={index} className="flex, items-center, space-x-3">
-                    <CheckCircle, className ="w-5, h-5, text-indigo-400" />
+              <div, classNam, e="grid, gri, d-co, l, s-1, m, d:gr, i, d-co, l, s-2, ga, p-4">
+                {applicatio, n, s.m, a, p((applicationind, e, x) => (<d, i, v, k, e, y ={ind, e, x} classNa, m, e="fl, e, x, ite, m, s-cent, e, r, spa, c, e-x-3">
+                    <CheckCirc, l, e, classNa, m, e="w-5, h-5, te, x, t-indi, g, o-4, 0, 0" />
 
-              <h2, className ="text-4, x, l  font-bold, text-white, mb-6">Revolutionary, Applications</h2>
-              <p, className ="text-xl, text-gray-300, mb-8">
-                Our, AI-Quantum, hybrid  platform, opens  new, frontiers  in, science  technology, and  business, solving  problems, that  were, previously  impossible.
+              <h2, classNa, m, e="te, x, t-4, x, l, fon, t-bo, l, d, te, x, t-whi, t, e, mb-6">Revolutiona, r, y, Applicatio, n, s</h2>
+              <p, classNa, m, e="te, x, t-xl, te, x, t-gr, a, y-3, 0, 0, mb-8">
+                O, u, r, AI-Quant, u, m, hybrid, platfor, m, opens, ne, w, frontiers, i, n, science, technolog, y, and, busines, s, solving, problem, s, that, wer, e, previously, impossibl, e.
               </p>
 
-                {applications.map((application, index) => (<div, key ={index} className="flex, items-center, space-x-3">
-                    <CheckCircle, className ="w-5, h-5, text-indigo-4, 0, 0" />
+                {applicatio, n, s.m, a, p((applicati, o, n, ind, e, x) => (<d, i, v, k, e, y ={ind, e, x} classNa, m, e="fl, e, x, ite, m, s-cent, e, r, spa, c, e-x-3">
+                    <CheckCirc, l, e, classNa, m, e="w-5, h-5, te, x, t-indi, g, o-4, 0, 0" />
 
-              <div, className ="grid, grid-cols-1, md:grid-cols-2, gap-4">
-                {applications.map((application, index) => (<div, key ={index} className="flex, items-center, space-x-3">
-                    <CheckCircle, className ="w-5, h-5, text-indigo-400" />
-
-
-                    <span, className ="text-gray-300">{application}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="relative">
+              <d, i, v, classNa, m, e="gr, i, d, gr, i, d-co, l, s-1, md:gr, i, d-co, l, s-2, g, a, p-4">
+                {applicatio, n, s.m, a, p((applicati, o, n, ind, e, x) => (<d, i, v, k, e, y ={ind, e, x} classNa, m, e="fl, e, x, ite, m, s-cent, e, r, spa, c, e-x-3">
+                    <CheckCirc, l, e, classNa, m, e="w-5, h-5, te, x, t-indi, g, o-4, 0, 0" />
 
 
-              <div className="p-8 bg-slate-800/50 border border-indigo-400/20 rounded-xl">
+                    <sp, a, n, classNa, m, e ="te, x, t-gr, a, y-3, 0, 0">{applicati, o, n}</sp, a, n>
+                  </d, i, v>
+                ))};
+              </d, i, v>
+            </d, i, v>
+            <div, classNam, e="relati, v, e">
 
-                <div className="text-center">
-                  <Rocket className="w-10 h-10 text-indigo-300 mx-auto mb-4" />
-                  <h3 className="text-2 xl font-bold text-white mb-4">Quantum Advantage</h3>
-                  <div className="grid grid-cols-2 gap-6">
-                    <div className="text-center">
-∞</div>
-                      <div className="text-gray-400">Potential</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-3 xl font-bold text-indigo-400">1000x</div>
-                      <div className="text-gray-400">Speedup</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-3 xl font-bold text-indigo-400">99.9%</div>
-                      <div className="text-gray-400">Accuracy</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-3 xl font-bold text-indigo-400">24/7</div>
 
-                      <div className="text-3, x l font-bold text-indigo-400">∞</div>
-                      <div className="text-gray-400">Potential</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-3, x l font-bold text-indigo-400">100, 0, x</div>
-                      <div className="text-gray-400">Speedup</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-3, x l font-bold text-indigo-400">99.9%</div>
-                      <div className="text-gray-400">Accuracy</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-3, x l font-bold text-indigo-400">24/7</div>
+              <div, classNam, e="p-8, b, g-sla, t, e-8, 0, 0/50, border, border-indi, g, o-4, 0, 0/20, rounde, d-xl">
 
-                      <div className="text-gray-400">Access</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+                <div, classNam, e="te, x, t-cent, e, r">
+                  <Rocket, classNam, e="w-1, 0, h-10, tex, t-indi, g, o-300, m, x-auto, m, b-4" />
+                  <h3, classNam, e="te, x, t-2, xl, font-bold, tex, t-white, m, b-4">Quantum, Advantag, e</h3>
+                  <div, classNam, e="grid, gri, d-co, l, s-2, ga, p-6">
+                    <div, classNam, e="te, x, t-cent, e, r">
+∞</d, i, v>
+                      <div, classNam, e="te, x, t-gr, a, y-4, 0, 0">Potenti, a, l</d, i, v>
+                    </d, i, v>
+                    <div, classNam, e="te, x, t-cent, e, r">
+                      <div, classNam, e="te, x, t-3, xl, font-bold, tex, t-indi, g, o-4, 0, 0">100, 0, x</d, i, v>
+                      <div, classNam, e="te, x, t-gr, a, y-4, 0, 0">Speed, u, p</d, i, v>
+                    </d, i, v>
+                    <div, classNam, e="te, x, t-cent, e, r">
+                      <div, classNam, e="te, x, t-3, xl, font-bold, tex, t-indi, g, o-4, 0, 0">99.9%</d, i, v>
+                      <div, classNam, e="te, x, t-gr, a, y-4, 0, 0">Accura, c, y</d, i, v>
+                    </d, i, v>
+                    <div, classNam, e="te, x, t-cent, e, r">
+                      <div, classNam, e="te, x, t-3, xl, font-bold, tex, t-indi, g, o-4, 0, 0">24/7</d, i, v>
 
-      {/* Benefits, Section */}
+                      <div, classNam, e="te, x, t-3, x, l, font-bold, tex, t-indi, g, o-4, 0, 0">∞</d, i, v>
+                      <div, classNam, e="te, x, t-gr, a, y-4, 0, 0">Potenti, a, l</d, i, v>
+                    </d, i, v>
+                    <div, classNam, e="te, x, t-cent, e, r">
+                      <div, classNam, e="te, x, t-3, x, l, font-bold, tex, t-indi, g, o-4, 0, 0">1, 0, 0, 0, x</d, i, v>
+                      <div, classNam, e="te, x, t-gr, a, y-4, 0, 0">Speed, u, p</d, i, v>
+                    </d, i, v>
+                    <div, classNam, e="te, x, t-cent, e, r">
+                      <div, classNam, e="te, x, t-3, x, l, font-bold, tex, t-indi, g, o-4, 0, 0">99.9%</d, i, v>
+                      <div, classNam, e="te, x, t-gr, a, y-4, 0, 0">Accura, c, y</d, i, v>
+                    </d, i, v>
+                    <div, classNam, e="te, x, t-cent, e, r">
+                      <div, classNam, e="te, x, t-3, x, l, font-bold, tex, t-indi, g, o-4, 0, 0">24/7</d, i, v>
 
-        <div className="container-responsive">
-          <div className="text-center mb-16">
-            <h2 className="text-4 xl font-bold text-white mb-4">Transform Your Computational Power</h2>
-            <p className="text-xl text-gray-300 max-w-3 xl mx-auto">
-              Experience unprecedented computational capabilities that will revolutionize your researchdevelopment 
+                      <div, classNam, e="te, x, t-gr, a, y-4, 0, 0">Acce, s, s</d, i, v>
+                    </d, i, v>
+                  </d, i, v>
+                </d, i, v>
+              </d, i, v>
+            </d, i, v>
+          </d, i, v>
+        </d, i, v>
+      </secti, o, n>
 
-      <section className="py-20 bg-slate-800/20">
-        <div className="container-responsive">
-          <div className="text-center mb-16">
-            <h2 className="text-4, x l font-bold text-white mb-4">Transform Your Computational Power</h2>
-            <p className="text-xl text-gray-300 max-w-3, x l mx-auto">
-              Experience unprecedented computational capabilities that will revolutionize your research  development 
+      {/* Benefi, t, s, Secti, o, n */};
+        <div, classNam, e="contain, e, r-responsi, v, e">
+          <div, classNam, e="te, x, t-center, m, b-16">
+            <h2, classNam, e="te, x, t-4, xl, font-bold, tex, t-white, m, b-4">Transform, Your, Computational Pow, e, r</h2>
+            <p, classNam, e="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3, xl, mx-au, t, o">
+              Experience, unprecedented, computational capabilities, that, will revolutionize, your, researchdevelopment 
 
-              and business processes.
+      <section, classNam, e="py-20, b, g-sla, t, e-8, 0, 0/20">
+        <div, classNam, e="contain, e, r-responsi, v, e">
+          <div, classNam, e="te, x, t-center, m, b-16">
+            <h2, classNam, e="te, x, t-4, x, l, font-bold, tex, t-white, m, b-4">Transform, Your, Computational Pow, e, r</h2>
+            <p, classNam, e="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3, x, l, mx-au, t, o">
+              Experience, unprecedented, computational capabilities, that, will revolutionize, your, research  development, and, business process, e, s.
             </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
- (<div, key ={index}
-                className="text-center, p-6, bg-slate-800/50, border, border-slate-700/50, rounded-xl, hover:bg-slate-700/50, hover:border-indigo-400/30, transition-all, duration-200"
+          </d, i, v>
+          <div, classNam, e="grid, gri, d-co, l, s-1, m, d:gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-3, ga, p-8">
+ (<d, i, v, k, e, y ={ind, e, x};
+                classNa, m, e="te, x, t-cent, e, r, p-6, bg-sla, t, e-8, 0, 0/50, bord, e, r, bord, e, r-sla, t, e-7, 0, 0/50, round, e, d-xl, hov, e, r:bg-sla, t, e-7, 0, 0/50, hov, e, r:bord, e, r-indi, g, o-4, 0, 0/30, transiti, o, n-a, l, l, durati, o, n-2, 0, 0"
               >
-                <div, className ="w-16, h-16, bg-gradient-to-br, from-indigo-400/20, to-purple-500/20, rounded-full, flex  items-center, justify-center, mx-auto, mb-4">
+                <d, i, v, classNa, m, e="w-16, h-16, bg-gradie, n, t-to-br, fr, o, m-indi, g, o-4, 0, 0/20, to-purp, l, e-5, 0, 0/20, round, e, d-fu, l, l, flex, item, s-cent, e, r, justi, f, y-cent, e, r, mx-au, t, o, mb-4">
 
- (<div, key ={index}
-                className="text-center, p-6, bg-slate-8, 0, 0/50, border, border-slate-7, 0, 0/50, rounded-xl, hover:bg-slate-7, 0, 0/50, hover:border-indigo-4, 0, 0/30, transition-all, duration-2, 0, 0"
+ (<d, i, v, k, e, y ={ind, e, x};
+                classNa, m, e="te, x, t-cent, e, r, p-6, bg-sla, t, e-8, 0, 0/50, bord, e, r, bord, e, r-sla, t, e-7, 0, 0/50, round, e, d-xl, hov, e, r:bg-sla, t, e-7, 0, 0/50, hov, e, r:bord, e, r-indi, g, o-4, 0, 0/30, transiti, o, n-a, l, l, durati, o, n-2, 0, 0"
               >
-                <div, className ="w-16, h-16, bg-gradient-to-br, from-indigo-4, 0, 0/20, to-purple-5, 0, 0/20, rounded-full, flex  items-center, justify-center, mx-auto, mb-4">
+                <d, i, v, classNa, m, e="w-16, h-16, bg-gradie, n, t-to-br, fr, o, m-indi, g, o-4, 0, 0/20, to-purp, l, e-5, 0, 0/20, round, e, d-fu, l, l, flex, item, s-cent, e, r, justi, f, y-cent, e, r, mx-au, t, o, mb-4">
 
-            {benefits.map((benefit, index) => (<div, key ={index}
-                className="text-center, p-6, bg-slate-800/50, border, border-slate-700/50, rounded-xl, hover:bg-slate-700/50, hover:border-indigo-400/30, transition-all, duration-200"
+            {benefi, t, s.m, a, p((benef, i, t, ind, e, x) => (<d, i, v, k, e, y ={ind, e, x};
+                classNa, m, e="te, x, t-cent, e, r, p-6, bg-sla, t, e-8, 0, 0/50, bord, e, r, bord, e, r-sla, t, e-7, 0, 0/50, round, e, d-xl, hov, e, r:bg-sla, t, e-7, 0, 0/50, hov, e, r:bord, e, r-indi, g, o-4, 0, 0/30, transiti, o, n-a, l, l, durati, o, n-2, 0, 0"
               >
-                <div, className ="w-16, h-16, bg-gradient-to-br, from-indigo-400/20, to-purple-500/20, rounded-full, flex items-center, justify-center, mx-auto, mb-4">
+                <d, i, v, classNa, m, e="w-16, h-16, bg-gradie, n, t-to-br, fr, o, m-indi, g, o-4, 0, 0/20, to-purp, l, e-5, 0, 0/20, round, e, d-fu, l, l, flex, item, s-cent, e, r, justi, f, y-cent, e, r, mx-au, t, o, mb-4">
 
 
-                  <CheckCircle, className ="w-7, h-7, text-indigo-300" />
-                </div>
-                <h3, className ="text-lg, font-semibold, text-white, mb-2">{benefit}</h3>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+                  <CheckCirc, l, e, classNa, m, e="w-7, h-7, te, x, t-indi, g, o-3, 0, 0" />
+                </d, i, v>
+                <h3, classNa, m, e="te, x, t-lg, fo, n, t-semibo, l, d, te, x, t-whi, t, e, mb-2">{benef, i, t}</h3>
+              </d, i, v>
+            ))};
+          </d, i, v>
+        </d, i, v>
+      </secti, o, n>
 
-      {/* CTA, Section */}
+      {/* C, T, A, Secti, o, n */};
+        <div, classNam, e="contain, e, r-responsive, tex, t-cent, e, r">
+          <h2, classNam, e="te, x, t-4, xl, font-bold, tex, t-white, m, b-6">Ready, for, the Quantum, Futur, e? </h2>
+          <p, classNam, e="te, x, t-xl, tex, t-gr, a, y-300, m, b-8, ma, x-w-2, xl, mx-au, t, o">
 
-        <div className="container-responsive text-center">
-          <h2 className="text-4 xl font-bold text-white mb-6">Ready for the Quantum Future? </h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-2 xl mx-auto">
+      <section, classNam, e="py-20, b, g-gradie, n, t-to-r, fro, m-indi, g, o-90, 0/20, vi, a-purp, l, e-90, 0/20, t, o-cy, a, n-90, 0/20">
+        <div, classNam, e="contain, e, r-responsive, tex, t-cent, e, r">
+          <h2, classNam, e="te, x, t-4, x, l, font-bold, tex, t-white, m, b-6">Ready, for, the Quantum, Futur, e?</h2>
+          <p, classNam, e="te, x, t-xl, tex, t-gr, a, y-300, m, b-8, ma, x-w-2 : x : l, m, x-au, t, o">
 
-      <section className="py-20 bg-gradient-to-r from-indigo-90, 0/20 via-purple-90, 0/20 to-cyan-90, 0/20">
-        <div className="container-responsive text-center">
-          <h2 className="text-4, x l font-bold text-white mb-6">Ready for the Quantum Future?</h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-2 : x : l mx-auto">
-
-            Join the quantum revolution and access computational power that will transform your industry and accelerate
-            breakthrough discoveries.
+            Join, the, quantum revolution, and, access computational, power, that will, transform, your industry, and, accelerate
+            breakthrough, discoverie, s.
           </p>
-          <div className="flex flex-col sm :flex-row gap-4 justify-center">
+          <div, classNam, e="flex, fle, x-col, s, m :fl, e, x-row, ga, p-4, justif, y-cent, e, r">
 
-              Access Platform
-            </button>
-            <button className="px-8 py-4 bg-slate-800/50 border border-slate-600 text-white font-semibold rounded-lg hover:bg-slate-700/50 transition-all duration-200">
+              Access, Platfor, m
+            </butt, o, n>
+            <button, classNam, e="px-8, p, y-4, b, g-sla, t, e-8, 0, 0/50, border, border-sla, t, e-600, tex, t-white, fon, t-semibold, rounde, d-lg, hove, r:bg-sla, t, e-7, 0, 0/50, transitio, n-all, duratio, n-2, 0, 0">
 
-            <button className="px-8 py-4 bg-gradient-to-r from-indigo-400 to-purple-500 text-white font-semibold rounded-lg hover:from-indigo-500 hover:to-purple-600 transition-all duration-200 hover:scale-105 shadow-lg">
-              Access Platform
-            </button>
-            <button className="px-8 py-4 bg-slate-800/50 border border-slate-600 text-white font-semibold rounded-lg hover:bg-slate-700/50 transition-all duration-200">
+            <button, classNam, e="px-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-indi, g, o-400, t, o-purp, l, e-500, tex, t-white, fon, t-semibold, rounde, d-lg, hove, r:fr, o, m-indi, g, o-500, hove, r:to-purp, l, e-600, transitio, n-all, duratio, n-200, hove, r:sca, l, e-105, shado, w-lg">
+              Access, Platfor, m
+            </butt, o, n>
+            <button, classNam, e="px-8, p, y-4, b, g-sla, t, e-8, 0, 0/50, border, border-sla, t, e-600, tex, t-white, fon, t-semibold, rounde, d-lg, hove, r:bg-sla, t, e-7, 0, 0/50, transitio, n-all, duratio, n-2, 0, 0">
 
-              Schedule Demo
-            </button>
-          </div>
-        </div>
-      </section>
-    </div>
+              Schedule, Dem, o
+            </butt, o, n>
+          </d, i, v>
+        </d, i, v>
+      </secti, o, n>
+    </d, i, v>
   )
-}
-
+};
 export default AIQuantumHybridPlatform

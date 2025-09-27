@@ -1,358 +1,343 @@
-import React from "react"
-import {motion } from "framer-motion"
-import {SEO } from "@/components/SEO"
+import, React, from "react"
+import {moti, o, n } fr, o, m "fram, e, r-moti, o, n"
+import {S, E, O } fr, o, m "@/components/S, E, O"
 
-export default function AIProjectManagement() {const, features = [>>>>>> cursor/check-fix-push-and-merge-to-main-767f
-  ]
-
-  const, benefits = ["Reduce, project delivery, time by, 30-50%",
-    "Improve, resource utilization, by 40-60%",
-    "Increase, project success, rate by, 25-40%",
-    "Reduce, project costs, by 20-35%",
-    "Eliminate, manual reporting, by 80%",
-    "Improve, stakeholder communication, by 50%"]
-
-  const, solutions = [{title: "AI, Project  Planning",
-      description: "Intelligent, project  planning, and  scheduling, with  predictive, analytics"},
-    {title: "Team, Management  AI",
-      description: "AI-powered, team  allocation, and  performance, optimization"},
-    {title: "Risk, Management  Platform",
-      description: "Advanced, risk  identification, and  mitigation, strategies"},
-    {title: "Complete, PM  Suite",
-      description: "Full, AI-powered, project  management, solution"}]
-
-  const projectTypes = ["Software Development",
-    "Construction & Engineering",
-    "Marketing Campaigns",
-    "Product Launches",
-    "Research & Development",
-    "Event Management"]
-
-  return (<SEO, title ="AI, Project  Management, Services - Zion, Tech  Group"
-        description="Revolutionary, AI-powered, project  management, that  optimizes, planningresource  allocationand, risk  management. Deliver, projects  fastercheaperand, with  higher, success  rates."
+export default function AIProjectManageme, n, t() {con, s, t, featur, e, s = [>>>>>> curs, o, r/che, c, k-f, i, x-pu, s, h-a, n, d-mer, g, e-to-ma, i, n-76, 7, f];
+  con, s, t, benefi, t, s = ["Redu, c, e, project, deliver, y, time, b, y, 30-50%",
+    "Impro, v, e, resource, utilizatio, n, by, 4, 0-60%",
+    "Increa, s, e, project, succes, s, rate, b, y, 25-40%",
+    "Redu, c, e, project, cost, s, by, 2, 0-35%",
+    "Elimina, t, e, manual, reportin, g, by, 8, 0%",
+    "Impro, v, e, stakeholder, communicatio, n, by, 5, 0%"];
+  con, s, t, solutio, n, s = [{tit, l, e: "AI, Project, Plannin, g",
+      descripti, o, n: "Intellige, n, t, project, plannin, g, and, schedulin, g, with, predictiv, e, analyti, c, s"},
+    {tit, l, e: "Te, a, m, Management, A, I",
+      descripti, o, n: "AI-power, e, d, team, allocatio, n, and, performanc, e, optimizati, o, n"},
+    {tit, l, e: "Ri, s, k, Management, Platfor, m",
+      descripti, o, n: "Advanc, e, d, risk, identificatio, n, and, mitigatio, n, strategi, e, s"},
+    {tit, l, e: "Comple, t, e, PM, Suit, e",
+      descripti, o, n: "Fu, l, l, AI-power, e, d, project, managemen, t, soluti, o, n"}];
+  const, projectType, s = ["Software, Developmen, t",
+    "Constructi, o, n & Engineeri, n, g",
+    "Marketing, Campaign, s",
+    "Product, Launche, s",
+    "Resear, c, h & Developme, n, t",
+    "Event, Managemen, t"];
+  return (<S, E, O, tit, l, e ="AI, Project, Managemen, t, Servic, e, s - Zi, o, n, Tech, Grou, p"
+        descripti, o, n="Revolutiona, r, y, AI-power, e, d, project, managemen, t, that, optimize, s, planningresource, allocationan, d, risk, managemen, t. Deliv, e, r, projects, fastercheaperan, d, with, highe, r, success, rate, s."
 
 
-      <SEO, title ="AI, Project  Management, Services - Zion, Tech  Group"
-        description="Revolutionary, AI-powered, project  management, that  optimizes, planning  resource, allocation  and, risk  management. Deliver, projects  faster, cheaper  and, with  higher, success  rates."
+      <S, E, O, tit, l, e ="AI, Project, Managemen, t, Servic, e, s - Zi, o, n, Tech, Grou, p"
+        descripti, o, n="Revolutiona, r, y, AI-power, e, d, project, managemen, t, that, optimize, s, planning, resourc, e, allocation, an, d, risk, managemen, t. Deliv, e, r, projects, faste, r, cheaper, an, d, with, highe, r, success, rate, s."
 
-    <div, className ="min-h-screen, bg-gradient-to-br, from-slate-90, 0, via-slate-800, to-slate-90, 0">
-      <SEO, title ="AI, Project Management, Services - Zion, Tech Group"
-        description="Revolutionary, AI-powered, project management, that optimizes, planning  resource, allocation  and, risk management. Deliver, projects faster, cheaper  and, with higher, success rates."
+    <d, i, v, classNa, m, e="m, i, n-h-scre, e, n, bg-gradie, n, t-to-br, fr, o, m-sla, t, e-90, 0, v, i, a-sla, t, e-8, 0, 0, to-sla, t, e-90, 0">
+      <S, E, O, tit, l, e ="AI, Project, Managemen, t, Servic, e, s - Zi, o, n, Tech, Grou, p"
+        descripti, o, n="Revolutiona, r, y, AI-power, e, d, project, managemen, t, that, optimize, s, planning, resourc, e, allocation, an, d, risk, managemen, t. Deliv, e, r, projects, faste, r, cheaper, an, d, with, highe, r, success, rate, s."
 
 
       />
 
-      {/* Hero, Section */}
-      <section, className ="relative, overflow-hidden, py-20, lg:py-32">
+      {/* He, r, o, Secti, o, n */};
+      <secti, o, n, classNa, m, e="relati, v, e, overfl, o, w-hidd, e, n, py-20, lg:py-32">
 
-        <div, className ="container, mx-auto, px-4, relative, z-10">
-          <motion.div, initial ={{ opacity: 0y: 20 }} animate={{ opacity: 1y: 0 }} transition={{ duration: 0.8 }}>
-            <div, className ="inline-flex, items-center, px-4, py-2, bg-gradient-to-r, from-orange-500/20, to-red-500/20, rounded-full, border  border-orange-400/30, mb-6">
-              <CheckCircle, className ="w-4, h-4, mr-2, text-orange-300" />
-              <span, className ="text-orange-300, font-medium">AI, Project  Management</span>
-            </div>
-            <h1, className ="text-5xl, lg:text-7xl, font-bold, text-white, mb-6">
-              <span, className ="bg-gradient-to-r, from-orange-400, via-red-500, to-pink-600, bg-clip-text, text-transparent">
-
-
-        <div, className ="container, mx-auto, px-4, relative, z-10">
-          <motion.div, initial ={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-            <div, className ="inline-flex, items-center, px-4, py-2, bg-gradient-to-r, from-orange-5, 0, 0/20, to-red-5, 0, 0/20, rounded-full, border  border-orange-4, 0, 0/30, mb-6">
-              <CheckCircle, className ="w-4, h-4, mr-2, text-orange-300" />
-              <span, className ="text-orange-300, font-medium">AI, Project  Management</span>
-            </div>
-            <h1, className ="text-5, xllg:text-7, x, l  font-bold, text-white, mb-6">
-              <span, className ="bg-gradient-to-r, from-orange-4, 0, 0, via-red-5, 0, 0, to-pink-6, 0, 0, bg-clip-text, text-transparent">
-
-        <div, className ="absolute, inset-0, bg-gradient-to-r, from-orange-500/10, via-red-500/10, to-pink-500/10" />
-        <div, className ="container, mx-auto, px-4, relative, z-10">
-          <motion.div, initial ={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-            <div, className ="inline-flex, items-center, px-4, py-2, bg-gradient-to-r, from-orange-500/20, to-red-500/20, rounded-full, border border-orange-400/30, mb-6">
-              <CheckCircle, className ="w-4, h-4, mr-2, text-orange-300" />
-              <span, className ="text-orange-300, font-medium">AI, Project Management</span>
-            </div>
-            <h1, className ="text-5, xllg:text-7, x, l  font-bold, text-white, mb-6">
-              <span, className ="bg-gradient-to-r, from-orange-400, via-red-500, to-pink-600, bg-clip-text, text-transparent">
+        <d, i, v, classNa, m, e="contain, e, r, mx-au, t, o, px-4, relati, v, e, z-10">
+          <moti, o, n.d, i, v, initi, a, l ={{ opaci, t, y: 0y: 20 }} anima, t, e={{ opaci, t, y: 1y: 0 }} transiti, o, n={{ durati, o, n: 0.8 }}>
+            <d, i, v, classNa, m, e="inli, n, e-fl, e, x, ite, m, s-cent, e, r, px-4, py-2, bg-gradie, n, t-to-r, fr, o, m-oran, g, e-5, 0, 0/20, to-r, e, d-5, 0, 0/20, round, e, d-fu, l, l, border, borde, r-oran, g, e-4, 0, 0/30, mb-6">
+              <CheckCirc, l, e, classNa, m, e="w-4, h-4, mr-2, te, x, t-oran, g, e-3, 0, 0" />
+              <sp, a, n, classNa, m, e="te, x, t-oran, g, e-3, 0, 0, fo, n, t-medi, u, m">AI, Project, Managemen, t</sp, a, n>
+            </d, i, v>
+            <h1, classNa, m, e="te, x, t-5, x, l, lg:te, x, t-7, x, l, fo, n, t-bo, l, d, te, x, t-whi, t, e, mb-6">
+              <sp, a, n, classNa, m, e="bg-gradie, n, t-to-r, fr, o, m-oran, g, e-4, 0, 0, v, i, a-r, e, d-5, 0, 0, to-pi, n, k-6, 0, 0, bg-cl, i, p-te, x, t, te, x, t-transpare, n, t">
 
 
-              </span>
+        <d, i, v, classNa, m, e="contain, e, r, mx-au, t, o, px-4, relati, v, e, z-10">
+          <moti, o, n.d, i, v, initi, a, l ={{ opaci, t, y: 0, y: 20 }} anima, t, e={{ opaci, t, y: 1, y: 0 }} transiti, o, n={{ durati, o, n: 0.8 }}>
+            <d, i, v, classNa, m, e="inli, n, e-fl, e, x, ite, m, s-cent, e, r, px-4, py-2, bg-gradie, n, t-to-r, fr, o, m-oran, g, e-5, 0, 0/20, to-r, e, d-5, 0, 0/20, round, e, d-fu, l, l, border, borde, r-oran, g, e-4, 0, 0/30, mb-6">
+              <CheckCirc, l, e, classNa, m, e="w-4, h-4, mr-2, te, x, t-oran, g, e-3, 0, 0" />
+              <sp, a, n, classNa, m, e="te, x, t-oran, g, e-3, 0, 0, fo, n, t-medi, u, m">AI, Project, Managemen, t</sp, a, n>
+            </d, i, v>
+            <h1, classNa, m, e="te, x, t-5, xl, l, g:te, x, t-7, x, l, fon, t-bo, l, d, te, x, t-whi, t, e, mb-6">
+              <sp, a, n, classNa, m, e="bg-gradie, n, t-to-r, fr, o, m-oran, g, e-4, 0, 0, v, i, a-r, e, d-5, 0, 0, to-pi, n, k-6, 0, 0, bg-cl, i, p-te, x, t, te, x, t-transpare, n, t">
+
+        <d, i, v, classNa, m, e="absolu, t, e, ins, e, t-0, bg-gradie, n, t-to-r, fr, o, m-oran, g, e-5, 0, 0/10, v, i, a-r, e, d-5, 0, 0/10, to-pi, n, k-5, 0, 0/10" />
+        <d, i, v, classNa, m, e="contain, e, r, mx-au, t, o, px-4, relati, v, e, z-10">
+          <moti, o, n.d, i, v, initi, a, l ={{ opaci, t, y: 0, y: 20 }} anima, t, e={{ opaci, t, y: 1, y: 0 }} transiti, o, n={{ durati, o, n: 0.8 }}>
+            <d, i, v, classNa, m, e="inli, n, e-fl, e, x, ite, m, s-cent, e, r, px-4, py-2, bg-gradie, n, t-to-r, fr, o, m-oran, g, e-5, 0, 0/20, to-r, e, d-5, 0, 0/20, round, e, d-fu, l, l, border, borde, r-oran, g, e-4, 0, 0/30, mb-6">
+              <CheckCirc, l, e, classNa, m, e="w-4, h-4, mr-2, te, x, t-oran, g, e-3, 0, 0" />
+              <sp, a, n, classNa, m, e="te, x, t-oran, g, e-3, 0, 0, fo, n, t-medi, u, m">AI, Project, Managemen, t</sp, a, n>
+            </d, i, v>
+            <h1, classNa, m, e="te, x, t-5, xl, l, g:te, x, t-7, x, l, fon, t-bo, l, d, te, x, t-whi, t, e, mb-6">
+              <sp, a, n, classNa, m, e="bg-gradie, n, t-to-r, fr, o, m-oran, g, e-4, 0, 0, v, i, a-r, e, d-5, 0, 0, to-pi, n, k-6, 0, 0, bg-cl, i, p-te, x, t, te, x, t-transpare, n, t">
+
+
+              </sp, a, n>
               <br />
-              <span, className ="text-white">That, Delivers  Results</span>
+              <sp, a, n, classNa, m, e ="te, x, t-whi, t, e">Th, a, t, Delivers, Result, s</sp, a, n>
             </h1>
 
-              Transform, your  project, delivery  with, AI-powered, management  that, optimizes  planningresource, allocation 
-              and, risk  management. Deliver, projects  fastercheaperand, with  unprecedented, success  rates.
+              Transfo, r, m, your, projec, t, delivery, wit, h, AI-power, e, d, management, tha, t, optimizes, planningresourc, e, allocation, an, d, risk, managemen, t. Deliv, e, r, projects, fastercheaperan, d, with, unprecedente, d, success, rate, s.
             </p>
-            <div, className ="flex, flex-col, sm:flex-row, gap-4, justify-center">
-              <motion.button, whileHover ={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="px-8, py-4, bg-gradient-to-r, from-orange-500, to-red-500, text-white, font-semibold, rounded-lg">
-                Start, Free  Trial
-              </motion.button>
-              <motion.button, whileHover ={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="px-8, py-4, border, border-orange-400/30, text-orange-300, font-semibold, rounded-lg">
+            <d, i, v, classNa, m, e="fl, e, x, fl, e, x-c, o, l, sm:fl, e, x-r, o, w, g, a, p-4, justi, f, y-cent, e, r">
+              <moti, o, n.butt, o, n, whileHov, e, r ={{ sca, l, e: 1.05 }} whileT, a, p={{ sca, l, e: 0.95 }} classNa, m, e="px-8, py-4, bg-gradie, n, t-to-r, fr, o, m-oran, g, e-5, 0, 0, to-r, e, d-5, 0, 0, te, x, t-whi, t, e, fo, n, t-semibo, l, d, round, e, d-lg">
+                Sta, r, t, Free, Tria, l
+              </moti, o, n.butt, o, n>
+              <moti, o, n.butt, o, n, whileHov, e, r ={{ sca, l, e: 1.05 }} whileT, a, p={{ sca, l, e: 0.95 }} classNa, m, e="px-8, py-4, bord, e, r, bord, e, r-oran, g, e-4, 0, 0/30, te, x, t-oran, g, e-3, 0, 0, fo, n, t-semibo, l, d, round, e, d-lg">
 
-            <p, className ="text-xl, lg:text-2xl, text-gray-300, mb-8, max-w-3, x, l  mx-auto">
-              Transform, your  project, delivery  with, AI-powered, management  that, optimizes  planning, resource  allocation, and  risk, management. Deliver, projects  faster, cheaper  and, with  unprecedented, success  rates.
+            <p, classNa, m, e="te, x, t-xl, lg:te, x, t-2, x, l, te, x, t-gr, a, y-3, 0, 0, mb-8, m, a, x-w-3, x, l, m, x-au, t, o">
+              Transfo, r, m, your, projec, t, delivery, wit, h, AI-power, e, d, management, tha, t, optimizes, plannin, g, resource, allocatio, n, and, ris, k, manageme, n, t. Deliv, e, r, projects, faste, r, cheaper, an, d, with, unprecedente, d, success, rate, s.
             </p>
 
-              <motion.button, whileHover ={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="px-8, py-4, bg-gradient-to-r, from-orange-5, 0, 0, to-red-5, 0, 0, text-white, font-semibold, rounded-lg">
-                Start, Free  Trial
-              </motion.button>
-              <motion.button, whileHover ={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="px-8, py-4, border, border-orange-4, 0, 0/30, text-orange-300, font-semibold, rounded-lg">
+              <moti, o, n.butt, o, n, whileHov, e, r ={{ sca, l, e: 1.05 }} whileT, a, p={{ sca, l, e: 0.95 }} classNa, m, e="px-8, py-4, bg-gradie, n, t-to-r, fr, o, m-oran, g, e-5, 0, 0, to-r, e, d-5, 0, 0, te, x, t-whi, t, e, fo, n, t-semibo, l, d, round, e, d-lg">
+                Sta, r, t, Free, Tria, l
+              </moti, o, n.butt, o, n>
+              <moti, o, n.butt, o, n, whileHov, e, r ={{ sca, l, e: 1.05 }} whileT, a, p={{ sca, l, e: 0.95 }} classNa, m, e="px-8, py-4, bord, e, r, bord, e, r-oran, g, e-4, 0, 0/30, te, x, t-oran, g, e-3, 0, 0, fo, n, t-semibo, l, d, round, e, d-lg">
 
-            <div, className ="flex, flex-col, sm:flex-row, gap-4, justify-center">
-              <motion.button, whileHover ={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="px-8, py-4, bg-gradient-to-r, from-orange-500, to-red-500, text-white, font-semibold, rounded-lg">
-                Start, Free Trial
-              </motion.button>
-              <motion.button, whileHover ={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="px-8, py-4, border, border-orange-400/30, text-orange-300, font-semibold, rounded-lg">
+            <d, i, v, classNa, m, e="fl, e, x, fl, e, x-c, o, l, sm:fl, e, x-r, o, w, g, a, p-4, justi, f, y-cent, e, r">
+              <moti, o, n.butt, o, n, whileHov, e, r ={{ sca, l, e: 1.05 }} whileT, a, p={{ sca, l, e: 0.95 }} classNa, m, e="px-8, py-4, bg-gradie, n, t-to-r, fr, o, m-oran, g, e-5, 0, 0, to-r, e, d-5, 0, 0, te, x, t-whi, t, e, fo, n, t-semibo, l, d, round, e, d-lg">
+                Sta, r, t, Free, Tria, l
+              </moti, o, n.butt, o, n>
+              <moti, o, n.butt, o, n, whileHov, e, r ={{ sca, l, e: 1.05 }} whileT, a, p={{ sca, l, e: 0.95 }} classNa, m, e="px-8, py-4, bord, e, r, bord, e, r-oran, g, e-4, 0, 0/30, te, x, t-oran, g, e-3, 0, 0, fo, n, t-semibo, l, d, round, e, d-lg">
 
 
-              </motion.button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+              </moti, o, n.butt, o, n>
+            </d, i, v>
+          </moti, o, n.d, i, v>
+        </d, i, v>
+      </secti, o, n>
 
-      {/* Features, Section */}
-      <section, className ="py-20">
-        <div, className ="container, mx-auto, px-4">
+      {/* Featur, e, s, Secti, o, n */};
+      <secti, o, n, classNa, m, e ="py-20">
+        <d, i, v, classNa, m, e="contain, e, r, mx-au, t, o, px-4">
 
-            <h2, className ="text-4xl, lg:text-5xl, font-bold, text-white, mb-6">Advanced, AI  Technology, for  Better, Project  Delivery</h2>
-            <p, className ="text-xl, text-gray-300, max-w-3xl, mx-auto">
-              Our, AI-powered, project  management, platform  combines, machine  learningpredictive, analyticsand 
-          <motion.div, initial ={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-Advanced, AI  Technology, for  Better, Project  Delivery</h2>
-            <p, className ="text-xl, text-gray-300, max-w-3, x, l  mx-auto">
-              Our, AI-powered, project  management, platform  combines, machine  learning, predictive  analytics, and
+            <h2, classNa, m, e="te, x, t-4, x, l, lg:te, x, t-5, x, l, fo, n, t-bo, l, d, te, x, t-whi, t, e, mb-6">Advanc, e, d, AI, Technolog, y, for, Bette, r, Project, Deliver, y</h2>
+            <p, classNa, m, e="te, x, t-xl, te, x, t-gr, a, y-3, 0, 0, m, a, x-w-3, x, l, mx-au, t, o">
+              O, u, r, AI-power, e, d, project, managemen, t, platform, combine, s, machine, learningpredictiv, e, analyticsa, n, d 
+          <moti, o, n.d, i, v, initi, a, l ={{ opaci, t, y: 0, y: 20 }} whileInVi, e, w={{ opaci, t, y: 1, y: 0 }} transiti, o, n={{ durati, o, n: 0.8 }}>
+Advanc, e, d, AI, Technolog, y, for, Bette, r, Project, Deliver, y</h2>
+            <p, classNa, m, e="te, x, t-xl, te, x, t-gr, a, y-3, 0, 0, m, a, x-w-3, x, l, m, x-au, t, o">
+              O, u, r, AI-power, e, d, project, managemen, t, platform, combine, s, machine, learnin, g, predictive, analytic, s, a, n, d
 
-            <h2, className ="text-4, xllg:text-5, x, l  font-bold, text-white, mb-6">Advanced, AI Technology, for Better, Project Delivery</h2>
-            <p, className ="text-xl, text-gray-300, max-w-3, x, l  mx-auto">
-              Our, AI-powered, project management, platform combines, machine learning, predictive  analytics, and
+            <h2, classNa, m, e="te, x, t-4, xl, l, g:te, x, t-5, x, l, fon, t-bo, l, d, te, x, t-whi, t, e, mb-6">Advanc, e, d, AI, Technolog, y, for, Bette, r, Project, Deliver, y</h2>
+            <p, classNa, m, e="te, x, t-xl, te, x, t-gr, a, y-3, 0, 0, m, a, x-w-3, x, l, m, x-au, t, o">
+              O, u, r, AI-power, e, d, project, managemen, t, platform, combine, s, machine, learnin, g, predictive, analytic, s, a, n, d
 
 
             </p>
-          </motion.div>
+          </moti, o, n.d, i, v>
 
-          <div, className ="grid, grid-cols-1, md:grid-cols-2, lg:grid-cols-3, gap-8">
- (<motion.div, key ={index}
-                initial={{ opacity: 0y: 20 }}
-                whileInView={{ opacity: 1y: 0 }}
-                transition={{ duration: 0.6delay: index * 0.1 }}
-                className="p-6, rounded-xl, border border-orange-400/20, bg-slate-800/40"
+          <d, i, v, classNa, m, e="gr, i, d, gr, i, d-co, l, s-1, md:gr, i, d-co, l, s-2, lg:gr, i, d-co, l, s-3, g, a, p-8">
+ (<moti, o, n.d, i, v, k, e, y ={ind, e, x};
+                initi, a, l={{ opaci, t, y: 0y: 20 }};
+                whileInVi, e, w={{ opaci, t, y: 1y: 0 }};
+                transiti, o, n={{ durati, o, n: 0.6del, a, y: ind, e, x * 0.1 }};
+                classNa, m, e="p-6, round, e, d-xl, border, borde, r-oran, g, e-4, 0, 0/20, bg-sla, t, e-8, 0, 0/40"
               >
-                <div, className ="w-12, h-12, bg-gradient-to-br, from-orange-400/20, to-red-500/20, rounded-lg, flex  items-center, justify-center, mb-4">
+                <d, i, v, classNa, m, e="w-12, h-12, bg-gradie, n, t-to-br, fr, o, m-oran, g, e-4, 0, 0/20, to-r, e, d-5, 0, 0/20, round, e, d-lg, flex, item, s-cent, e, r, justi, f, y-cent, e, r, mb-4">
 
-            {features.map((feature, index) => (<motion.div, key ={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+            {featur, e, s.m, a, p((featu, r, e, ind, e, x) => (<moti, o, n.d, i, v, k, e, y ={ind, e, x};
+                initi, a, l={{ opaci, t, y: 0, y: 20 }};
+                whileInVi, e, w={{ opaci, t, y: 1, y: 0 }};
+                transiti, o, n={{ durati, o, n: 0.6, del, a, y: ind, e, x * 0.1 }};
+                <d, i, v, classNa, m, e="w-12, h-12, bg-gradie, n, t-to-br, fr, o, m-oran, g, e-4, 0, 0/20, to-r, e, d-5, 0, 0/20, round, e, d-lg, flex, item, s-cent, e, r, justi, f, y-cent, e, r, mb-4">
 
-                <div, className ="w-12, h-12, bg-gradient-to-br, from-orange-4, 0, 0/20, to-red-5, 0, 0/20, rounded-lg, flex  items-center, justify-center, mb-4">
-
-                className="p-6, rounded-xl, border border-orange-400/20, bg-slate-800/40"
+                classNa, m, e="p-6, round, e, d-xl, border, borde, r-oran, g, e-4, 0, 0/20, bg-sla, t, e-8, 0, 0/40"
               >
-                <div, className ="w-12, h-12, bg-gradient-to-br, from-orange-400/20, to-red-500/20, rounded-lg, flex items-center, justify-center, mb-4">
+                <d, i, v, classNa, m, e="w-12, h-12, bg-gradie, n, t-to-br, fr, o, m-oran, g, e-4, 0, 0/20, to-r, e, d-5, 0, 0/20, round, e, d-lg, flex, item, s-cent, e, r, justi, f, y-cent, e, r, mb-4">
 
 
-                  <feature.icon, className ="w-6, h-6, text-orange-300" />
-                </div>
-                <h3, className ="text-xl, font-semibold, text-white, mb-3">{feature.title}</h3>
-                <p, className ="text-gray-300">{feature.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+                  <featu, r, e.ic, o, n, classNa, m, e="w-6, h-6, te, x, t-oran, g, e-3, 0, 0" />
+                </d, i, v>
+                <h3, classNa, m, e="te, x, t-xl, fo, n, t-semibo, l, d, te, x, t-whi, t, e, mb-3">{featu, r, e.tit, l, e}</h3>
+                <p, classNa, m, e ="te, x, t-gr, a, y-3, 0, 0">{featu, r, e.descripti, o, n}</p>
+              </moti, o, n.d, i, v>
+            ))};
+          </d, i, v>
+        </d, i, v>
+      </secti, o, n>
 
-      {/* Benefits, Section */}
+      {/* Benefi, t, s, Secti, o, n */};
+        <div, classNam, e="container, m, x-auto, p, x-4">
+          <moti, o, n.div, initia, l={{ opaci, t, y: 0y: 20 }} whileInVi, e, w={{ opaci, t, y: 1y: 0 }} transiti, o, n={{ durati, o, n: 0.8 }}>
+            <h2, classNam, e="te, x, t-4, xl, lg:te, x, t-5, xl, font-bold, tex, t-white, m, b-6">Proven, Result, s & Benefi, t, s</h2>
+            <p, classNam, e="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3, xl, mx-au, t, o">
+              Our, A, I-powered, project, management delivers, measurable, improvements in, delivery, timecost reductiona, n, d
 
-        <div className="container mx-auto px-4">
-          <motion.div initial={{ opacity: 0y: 20 }} whileInView={{ opacity: 1y: 0 }} transition={{ duration: 0.8 }}>
-            <h2 className="text-4 xl lg:text-5 xl font-bold text-white mb-6">Proven Results & Benefits</h2>
-            <p className="text-xl text-gray-300 max-w-3 xl mx-auto">
-              Our AI-powered project management delivers measurable improvements in delivery timecost reductionand
+      <section, classNam, e="py-20, b, g-sla, t, e-8, 0, 0/30">
+        <div, classNam, e="container, m, x-auto, p, x-4">
+          <moti, o, n.div, initia, l={{ opaci, t, y: 0, y: 20 }} whileInVi, e, w={{ opaci, t, y: 1, y: 0 }} transiti, o, n={{ durati, o, n: 0.8 }}>
+            <h2, classNam, e="te, x, t-4, x, l, lg:te, x, t-5, x, l, font-bold, tex, t-white, m, b-6">Proven, Result, s & Benefi, t, s</h2>
+            <p, classNam, e="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3, x, l, mx-au, t, o">
+              Our, A, I-powered, project, management delivers, measurable, improvements in, delivery, time  cost, reduction, and
 
-      <section className="py-20 bg-slate-800/30">
-        <div className="container mx-auto px-4">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-            <h2 className="text-4, x l lg:text-5, x l font-bold text-white mb-6">Proven Results & Benefits</h2>
-            <p className="text-xl text-gray-300 max-w-3, x l mx-auto">
-              Our AI-powered project management delivers measurable improvements in delivery time  cost reduction  and
-
-              project success rates.
+              project, success, rates.
             </p>
-          </motion.div>
+          </moti, o, n.d, i, v>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
- (<motion.div, key ={index}
-                initial={{ opacity: 0x: -20 }}
-                whileInView={{ opacity: 1x: 0 }}
-                transition={{ duration: 0.6delay: index * 0.1 }}
-                className="flex, items-center, space-x-3"
+          <div, classNam, e="grid, gri, d-co, l, s-1, m, d:gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-3, ga, p-6">
+ (<moti, o, n.d, i, v, k, e, y ={ind, e, x};
+                initi, a, l={{ opaci, t, y: 0x: -20 }};
+                whileInVi, e, w={{ opaci, t, y: 1x: 0 }};
+                transiti, o, n={{ durati, o, n: 0.6del, a, y: ind, e, x * 0.1 }};
+                classNa, m, e="fl, e, x, ite, m, s-cent, e, r, spa, c, e-x-3"
               >
-                <CheckCircle, className ="w-5, h-5, text-orange-400" />
+                <CheckCirc, l, e, classNa, m, e="w-5, h-5, te, x, t-oran, g, e-4, 0, 0" />
 
-            {benefits.map((benefit, index) => (<motion.div, key ={index}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="flex, items-center, space-x-3"
+            {benefi, t, s.m, a, p((benef, i, t, ind, e, x) => (<moti, o, n.d, i, v, k, e, y ={ind, e, x};
+                initi, a, l={{ opaci, t, y: 0, x: -20 }};
+                whileInVi, e, w={{ opaci, t, y: 1, x: 0 }};
+                transiti, o, n={{ durati, o, n: 0.6, del, a, y: ind, e, x * 0.1 }};
+                classNa, m, e="fl, e, x, ite, m, s-cent, e, r, spa, c, e-x-3"
               >
 
 
-                <CheckCircle, className ="w-5, h-5, text-orange-400" />
+                <CheckCirc, l, e, classNa, m, e="w-5, h-5, te, x, t-oran, g, e-4, 0, 0" />
 
 
-                <span, className ="text-white, font-medium">{benefit}</span>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+                <sp, a, n, classNa, m, e="te, x, t-whi, t, e, fo, n, t-medi, u, m">{benef, i, t}</sp, a, n>
+              </moti, o, n.d, i, v>
+            ))};
+          </d, i, v>
+        </d, i, v>
+      </secti, o, n>
 
-      {/* Solutions, Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
+      {/* Solutio, n, s, Secti, o, n */};
+      <section, classNam, e="py-20">
+        <div, classNam, e="container, m, x-auto, p, x-4">
 
-            <h2 className="text-4 xl lg:text-5 xl font-bold text-white mb-6">Flexible Solutions for Every Project</h2>
-            <p className="text-xl text-gray-300 max-w-3 xl mx-auto">
+            <h2, classNam, e="te, x, t-4, xl, lg:te, x, t-5, xl, font-bold, tex, t-white, m, b-6">Flexible, Solutions, for Every, Projec, t</h2>
+            <p, classNam, e="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3, xl, mx-au, t, o">
 
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-            <h2 className="text-4, x l lg:text-5, x l font-bold text-white mb-6">Flexible Solutions for Every Project</h2>
-            <p className="text-xl text-gray-300 max-w-3, x l mx-auto">
+          <moti, o, n.div, initia, l={{ opaci, t, y: 0, y: 20 }} whileInVi, e, w={{ opaci, t, y: 1, y: 0 }} transiti, o, n={{ durati, o, n: 0.8 }}>
+            <h2, classNam, e="te, x, t-4, x, l, lg:te, x, t-5, x, l, font-bold, tex, t-white, m, b-6">Flexible, Solutions, for Every, Projec, t</h2>
+            <p, classNam, e="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3, x, l, mx-au, t, o">
 
-              Choose from our range of AI-powered project management solutions designed to meet your specific project
-              needs and scale with your organization.
+              Choose, from, our range, of, AI-powered, project, management solutions, designed, to meet, your, specific project, needs, and scale, with, your organizati, o, n.
             </p>
-          </motion.div>
+          </moti, o, n.d, i, v>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
- (<motion.div, key ={index}
-                initial={{ opacity: 0y: 20 }}
-                whileInView={{ opacity: 1y: 0 }}
-                transition={{ duration: 0.6delay: index * 0.1 }}
-                className="p-6, rounded-xl, border border-orange-400/20, bg-slate-800/40"
+          <div, classNam, e="grid, gri, d-co, l, s-1, m, d:gr, i, d-co, l, s-2, ga, p-8">
+ (<moti, o, n.d, i, v, k, e, y ={ind, e, x};
+                initi, a, l={{ opaci, t, y: 0y: 20 }};
+                whileInVi, e, w={{ opaci, t, y: 1y: 0 }};
+                transiti, o, n={{ durati, o, n: 0.6del, a, y: ind, e, x * 0.1 }};
+                classNa, m, e="p-6, round, e, d-xl, border, borde, r-oran, g, e-4, 0, 0/20, bg-sla, t, e-8, 0, 0/40"
 
-            {solutions.map((solution, index) => (<motion.div, key ={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-
+            {solutio, n, s.m, a, p((soluti, o, n, ind, e, x) => (<moti, o, n.d, i, v, k, e, y ={ind, e, x};
+                initi, a, l={{ opaci, t, y: 0, y: 20 }};
+                whileInVi, e, w={{ opaci, t, y: 1, y: 0 }};
+                transiti, o, n={{ durati, o, n: 0.6, del, a, y: ind, e, x * 0.1 }};
               >
-                <h3, className ="text-2xl, font-semibold, text-white, mb-4">{solution.title}</h3>
-                <p, className ="text-gray-300, mb-6">{solution.description}</p>
-                <div, className ="space-y-3, mb-6">
- (<div, key ={featureIndex} className="flex, items-center, space-x-3">
-                      <CheckCircle, className ="w-5, h-5, text-orange-400" />
+                <h3, classNa, m, e="te, x, t-2, x, l, fo, n, t-semibo, l, d, te, x, t-whi, t, e, mb-4">{soluti, o, n.tit, l, e}</h3>
+                <p, classNa, m, e="te, x, t-gr, a, y-3, 0, 0, mb-6">{soluti, o, n.descripti, o, n}</p>
+                <d, i, v, classNa, m, e="spa, c, e-y-3, mb-6">
+ (<d, i, v, k, e, y ={featureInd, e, x} classNa, m, e="fl, e, x, ite, m, s-cent, e, r, spa, c, e-x-3">
+                      <CheckCirc, l, e, classNa, m, e="w-5, h-5, te, x, t-oran, g, e-4, 0, 0" />
 
- (<div, key ={featureIndex} className="flex, items-center, space-x-3">
-                      <CheckCircle, className ="w-5, h-5, text-orange-4, 0, 0" />
+ (<d, i, v, k, e, y ={featureInd, e, x} classNa, m, e="fl, e, x, ite, m, s-cent, e, r, spa, c, e-x-3">
+                      <CheckCirc, l, e, classNa, m, e="w-5, h-5, te, x, t-oran, g, e-4, 0, 0" />
 
-                  {solution.features.map((feature, featureIndex) => (<div, key ={featureIndex} className="flex, items-center, space-x-3">
-                      <CheckCircle, className ="w-5, h-5, text-orange-400" />
+                  {soluti, o, n.featur, e, s.m, a, p((featu, r, e, featureInd, e, x) => (<d, i, v, k, e, y ={featureInd, e, x} classNa, m, e="fl, e, x, ite, m, s-cent, e, r, spa, c, e-x-3">
+                      <CheckCirc, l, e, classNa, m, e="w-5, h-5, te, x, t-oran, g, e-4, 0, 0" />
 
 
-                      <span, className ="text-gray-300">{feature}</span>
-                    </div>
-                  ))}
-                </div>
-{solution.price}</div>
-                <button className="w-full py-4 px-6 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-600 transition-all duration-300">
+                      <sp, a, n, classNa, m, e ="te, x, t-gr, a, y-3, 0, 0">{featu, r, e}</sp, a, n>
+                    </d, i, v>
+                  ))};
+                </d, i, v>
+{soluti, o, n.pri, c, e}</d, i, v>
+                <button, classNam, e="w-full, p, y-4, p, x-6, b, g-gradie, n, t-to-r, fro, m-oran, g, e-500, t, o-r, e, d-500, tex, t-white, fon, t-semibold, rounde, d-lg, hove, r:fr, o, m-oran, g, e-600, hove, r:to-r, e, d-600, transitio, n-all, duratio, n-3, 0, 0">
 
-                <div className="text-3, x l font-bold text-orange-400 mb-6">{solution.price}</div>
-                <button className="w-full py-4 px-6 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-600 transition-all duration-300">
+                <div, classNam, e="te, x, t-3, x, l, font-bold, tex, t-oran, g, e-400, m, b-6">{soluti, o, n.pri, c, e}</d, i, v>
+                <button, classNam, e="w-full, p, y-4, p, x-6, b, g-gradie, n, t-to-r, fro, m-oran, g, e-500, t, o-r, e, d-500, tex, t-white, fon, t-semibold, rounde, d-lg, hove, r:fr, o, m-oran, g, e-600, hove, r:to-r, e, d-600, transitio, n-all, duratio, n-3, 0, 0">
 
-                  Get Started
-                </button>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+                  Get, Starte, d
+                </butt, o, n>
+              </moti, o, n.d, i, v>
+            ))};
+          </d, i, v>
+        </d, i, v>
+      </secti, o, n>
 
-      {/* Project, Types  Section */}
+      {/* Proje, c, t, Types, Sectio, n */};
+        <div, classNam, e="container, m, x-auto, p, x-4">
+          <moti, o, n.div, initia, l={{ opaci, t, y: 0y: 20 }} whileInVi, e, w={{ opaci, t, y: 1y: 0 }} transiti, o, n={{ durati, o, n: 0.8 }}>
+            <h2, classNam, e="te, x, t-4, xl, lg:te, x, t-5, xl, font-bold, tex, t-white, m, b-6">Optimized, for, Any Project, Typ, e</h2>
+            <p, classNam, e="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3, xl, mx-au, t, o">
 
-        <div className="container mx-auto px-4">
-          <motion.div initial={{ opacity: 0y: 20 }} whileInView={{ opacity: 1y: 0 }} transition={{ duration: 0.8 }}>
-            <h2 className="text-4 xl lg:text-5 xl font-bold text-white mb-6">Optimized for Any Project Type</h2>
-            <p className="text-xl text-gray-300 max-w-3 xl mx-auto">
+      <section, classNam, e="py-20, b, g-sla, t, e-8, 0, 0/30">
+        <div, classNam, e="container, m, x-auto, p, x-4">
+          <moti, o, n.div, initia, l={{ opaci, t, y: 0, y: 20 }} whileInVi, e, w={{ opaci, t, y: 1, y: 0 }} transiti, o, n={{ durati, o, n: 0.8 }}>
+            <h2, classNam, e="te, x, t-4, x, l, lg:te, x, t-5, x, l, font-bold, tex, t-white, m, b-6">Optimized, for, Any Project, Typ, e</h2>
+            <p, classNam, e="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3, x, l, mx-au, t, o">
 
-      <section className="py-20 bg-slate-800/30">
-        <div className="container mx-auto px-4">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-            <h2 className="text-4, x l lg:text-5, x l font-bold text-white mb-6">Optimized for Any Project Type</h2>
-            <p className="text-xl text-gray-300 max-w-3, x l mx-auto">
-
-              Our AI-powered project management platform is designed to handle diverse project types across all
-              industries and complexity levels.
+              Our, A, I-powered, project, management platform, is, designed to, handle, diverse project, types, across all, industries, and complexity, level, s.
             </p>
-          </motion.div>
+          </moti, o, n.d, i, v>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
- (<motion.div, key ={index}
-                initial={{ opacity: 0scale: 0.8 }}
-                whileInView={{ opacity: 1scale: 1 }}
-                transition={{ duration: 0.6delay: index * 0.1 }}
-                className="text-center"
+          <div, classNam, e="grid, gri, d-co, l, s-2, m, d:gr, i, d-co, l, s-3, l, g:gr, i, d-co, l, s-6, ga, p-6">
+ (<moti, o, n.d, i, v, k, e, y ={ind, e, x};
+                initi, a, l={{ opaci, t, y: 0sca, l, e: 0.8 }};
+                whileInVi, e, w={{ opaci, t, y: 1sca, l, e: 1 }};
+                transiti, o, n={{ durati, o, n: 0.6del, a, y: ind, e, x * 0.1 }};
+                classNa, m, e="te, x, t-cent, e, r"
               >
-                <div, className ="w-12, h-12, bg-gradient-to-br, from-orange-400/20, to-red-500/20, rounded-lg, flex  items-center, justify-center, mx-auto, mb-3">
-                  <CheckCircle, className ="w-5, h-5, text-orange-400" />
+                <d, i, v, classNa, m, e="w-12, h-12, bg-gradie, n, t-to-br, fr, o, m-oran, g, e-4, 0, 0/20, to-r, e, d-5, 0, 0/20, round, e, d-lg, flex, item, s-cent, e, r, justi, f, y-cent, e, r, mx-au, t, o, mb-3">
+                  <CheckCirc, l, e, classNa, m, e="w-5, h-5, te, x, t-oran, g, e-4, 0, 0" />
 
-            {projectTypes.map((projectType, index) => (<motion.div, key ={index}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="text-center"
+            {projectTyp, e, s.m, a, p((projectTy, p, e, ind, e, x) => (<moti, o, n.d, i, v, k, e, y ={ind, e, x};
+                initi, a, l={{ opaci, t, y: 0, sca, l, e: 0.8 }};
+                whileInVi, e, w={{ opaci, t, y: 1, sca, l, e: 1 }};
+                transiti, o, n={{ durati, o, n: 0.6, del, a, y: ind, e, x * 0.1 }};
+                classNa, m, e="te, x, t-cent, e, r"
               >
 
-                  <CheckCircle, className ="w-5, h-5, text-orange-4, 0, 0" />
+                  <CheckCirc, l, e, classNa, m, e="w-5, h-5, te, x, t-oran, g, e-4, 0, 0" />
 
-                <div, className ="w-12, h-12, bg-gradient-to-br, from-orange-400/20, to-red-500/20, rounded-lg, flex items-center, justify-center, mx-auto, mb-3">
-                  <CheckCircle, className ="w-5, h-5, text-orange-400" />
+                <d, i, v, classNa, m, e="w-12, h-12, bg-gradie, n, t-to-br, fr, o, m-oran, g, e-4, 0, 0/20, to-r, e, d-5, 0, 0/20, round, e, d-lg, flex, item, s-cent, e, r, justi, f, y-cent, e, r, mx-au, t, o, mb-3">
+                  <CheckCirc, l, e, classNa, m, e="w-5, h-5, te, x, t-oran, g, e-4, 0, 0" />
 
 
-                </div>
-                <span, className ="text-white, font-medium, text-sm">{projectType}</span>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+                </d, i, v>
+                <sp, a, n, classNa, m, e="te, x, t-whi, t, e, fo, n, t-medi, u, m, te, x, t-sm">{projectTy, p, e}</sp, a, n>
+              </moti, o, n.d, i, v>
+            ))};
+          </d, i, v>
+        </d, i, v>
+      </secti, o, n>
 
-      {/* CTA, Section */}
-
-        <div className="container mx-auto px-4 text-center">
-          <motion.div initial={{ opacity: 0y: 20 }} whileInView={{ opacity: 1y: 0 }} transition={{ duration: 0.8 }}>
-            <h2 className="text-4 xl lg:text-5 xl font-bold text-white mb-6">Ready to Transform Your Project Delivery?</h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-3 xl mx-auto">
-              Join the AI revolution in project management and deliver projects fastercheaperand with higher success
-              rates.
+      {/* C, T, A, Secti, o, n */};
+        <div, classNam, e="container, m, x-auto, p, x-4, tex, t-cent, e, r">
+          <moti, o, n.div, initia, l={{ opaci, t, y: 0y: 20 }} whileInVi, e, w={{ opaci, t, y: 1y: 0 }} transiti, o, n={{ durati, o, n: 0.8 }}>
+            <h2, classNam, e="te, x, t-4, xl, lg:te, x, t-5, xl, font-bold, tex, t-white, m, b-6">Ready, to, Transform Your, Project, Delivery?</h2>
+            <p, classNam, e="te, x, t-xl, tex, t-gr, a, y-300, m, b-8, ma, x-w-3, xl, mx-au, t, o">
+              Join, the, AI revolution, in, project management, and, deliver projects, fastercheaperand, with higher, success, rates.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-lg">
-                Start Your Free Trial
-              </motion.button>
-              <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="px-8 py-4 border border-orange-400/30 text-orange-300 font-semibold rounded-lg">
-                Call +1 302 464 0950
+            <div, classNam, e="flex, fle, x-col, s, m:fl, e, x-row, ga, p-4, justif, y-cent, e, r">
+              <moti, o, n.button, whileHove, r={{ sca, l, e: 1.05 }} whileT, a, p={{ sca, l, e: 0.95 }} classNa, m, e="px-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-oran, g, e-500, t, o-r, e, d-500, tex, t-white, fon, t-semibold, rounde, d-lg">
+                Start, Your, Free Tri, a, l
+              </moti, o, n.butt, o, n>
+              <moti, o, n.button, whileHove, r={{ sca, l, e: 1.05 }} whileT, a, p={{ sca, l, e: 0.95 }} classNa, m, e="px-8, p, y-4, border, border-oran, g, e-4, 0, 0/30, tex, t-oran, g, e-300, fon, t-semibold, rounde, d-lg">
+                Ca, l, l +1, 302, 464 09, 5, 0
 
-      <section className="py-20 bg-gradient-to-r from-orange-500/10 via-red-500/10 to-pink-500/10">
-        <div className="container mx-auto px-4 text-center">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-            <h2 className="text-4, x l lg:text-5, x l font-bold text-white mb-6">Ready to Transform Your Project Delivery? </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-3, x l mx-auto">
-              Join the AI revolution in project management and deliver projects faster : cheaper : and with higher success
-              rates.
+      <section, classNam, e="py-20, b, g-gradie, n, t-to-r, fro, m-oran, g, e-5, 0, 0/10, vi, a-r, e, d-5, 0, 0/10, t, o-pi, n, k-5, 0, 0/10">
+        <div, classNam, e="container, m, x-auto, p, x-4, tex, t-cent, e, r">
+          <moti, o, n.div, initia, l={{ opaci, t, y: 0, y: 20 }} whileInVi, e, w={{ opaci, t, y: 1, y: 0 }} transiti, o, n={{ durati, o, n: 0.8 }}>
+            <h2, classNam, e="te, x, t-4, x, l, lg:te, x, t-5, x, l, font-bold, tex, t-white, m, b-6">Ready, to, Transform Your, Project, Delivery? </h2>
+            <p, classNam, e="te, x, t-xl, tex, t-gr, a, y-300, m, b-8, ma, x-w-3, x, l, mx-au, t, o">
+              Join, the, AI revolution, in, project management, and, deliver projects, faste, r : cheap, e, r : and, with, higher success, rate, s.
             </p>
-            <div className="flex flex-col sm :flex-row gap-4 justify-center">
-              <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-lg">
-                Start Your Free Trial
-              </motion.button>
-              <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="px-8 py-4 border border-orange-400/30 text-orange-300 font-semibold rounded-lg">
-                Call +1 302 464 0950
+            <div, classNam, e="flex, fle, x-col, s, m :fl, e, x-row, ga, p-4, justif, y-cent, e, r">
+              <moti, o, n.button, whileHove, r={{ sca, l, e: 1.05 }} whileT, a, p={{ sca, l, e: 0.95 }} classNa, m, e="px-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-oran, g, e-500, t, o-r, e, d-500, tex, t-white, fon, t-semibold, rounde, d-lg">
+                Start, Your, Free Tri, a, l
+              </moti, o, n.butt, o, n>
+              <moti, o, n.button, whileHove, r={{ sca, l, e: 1.05 }} whileT, a, p={{ sca, l, e: 0.95 }} classNa, m, e="px-8, p, y-4, border, border-oran, g, e-4, 0, 0/30, tex, t-oran, g, e-300, fon, t-semibold, rounde, d-lg">
+                Ca, l, l +1, 302, 464 09, 5, 0
 
-              </motion.button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
+              </moti, o, n.butt, o, n>
+            </d, i, v>
+          </moti, o, n.d, i, v>
+        </d, i, v>
+      </secti, o, n>
+    </d, i, v>
   )
-}
+};

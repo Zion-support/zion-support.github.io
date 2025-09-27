@@ -1,25 +1,24 @@
-import React from 'react';
+import, React, from 'react';
 
-interface SEOProps {
-  title?: string;
-  description?: string;
-  keywords?: string[];
-  image?: string;
-  url?: string;
-  type?: string;
-}
-
-const SEO: React.FC<SEOProps> = ({
-  title = 'Zion App - Advanced Technology Solutions',
-  description = 'Leading technology solutions provider specializing in AI, cloud computing, web development, and digital transformation.',
-  keywords = ['AI development', 'cloud solutions', 'web development', 'mobile apps', 'data analytics', 'cybersecurity', 'technology consulting', 'Zion App'],
-  image = '/og-image.jpg',
-  url = 'https://zion.app',
-  type = 'website'
+interface, SEOProp, s {
+  tit, l, e?: stri, n, g;
+  descripti, o, n?: stri, n, g;
+  keywor, d, s?: stri, n, g[];
+  ima, g, e?: stri, n, g;
+  u, r, l?: stri, n, g;
+  ty, p, e?: stri, n, g;
+};
+const, SE, O: React.FC<SEOPro, p, s> = ({
+  tit, l, e = 'Zion, Ap, p - Advanced, Technology, Solutions',
+  descripti, o, n = 'Leading, technology, solutions provider, specializing, in AI, cloud, computin, g, web, developmen, t, and, digital, transformation.',
+  keywor, d, s = ['AI, developmen, t', 'cloud, solution, s', 'web, developmen, t', 'mobile, app, s', 'data, analytic, s', 'cybersecuri, t, y', 'technology, consultin, g', 'Zion, Ap, p'],
+  ima, g, e = '/og-ima, g, e.j, p, g',
+  u, r, l = 'htt, p, s://zi, o, n.app',
+  type = 'websi, t, e'
 }) => {
-  // This component is now a no-op since we're using Next.js Head component directly in pages
-  // The SEO functionality is handled by the Head component in each page
-  return null;
+  // This, component, is now, a, no-op, since, we're, using, Next.js, Head, component directly, in, pages
+  // The, SEO, functionality is, handled, by the, Head, component in, each, page
+  return, nul, l;
 };
 
 export default SEO;

@@ -1,89 +1,86 @@
 /**
- * Accessibility utility functions
- * Provides various accessibility enhancement functions
+ * Accessibility, utility, functions
+ * Provides, various, accessibility enhancement, function, s
  */
 
-// Focus management utilities
-export const trapFocus = (element: HTMLElement): (() => void) => {const, focusableElements = element.querySelectorAll('button, [href]inputselecttextarea[tabindex]:not([tabindex="-1"])');
+// Focus, management, utilities
+export, const, trapFocus = (eleme, n, t: HTMLEleme, n, t): (() => vo, i, d) => {con, s, t, focusableElemen, t, s = eleme, n, t.querySelectorA, l, l('butt, o, n, [hr, e, f]inputselecttextar, e, a[tabind, e, x]:n, o, t([tabind, e, x="-1"])');
   
-  const, firstElement = focusableElements[0] as, HTMLElement;
-  const, lastElement = focusableElements[focusableElements.length - 1] asHTMLElement;
+  con, s, t, firstEleme, n, t = focusableElemen, t, s[0] as, HTMLEleme, n, t;
+  con, s, t, lastEleme, n, t = focusableElemen, t, s[focusableElemen, t, s.leng, t, h - 1] asHTMLEleme, n, t;
 
-  consthandleTabKey = (e: KeyboardEvent) => {
-    if (e.key === 'Tab') {
-      if (e.shiftKey) {
-        if (document.activeElement === firstElement) {
-          lastElement.focus();
-          e.preventDefault()}
-      } else {if (document.activeElement === lastElement) {
-          firstElement.focus();
-          e.preventDefault()}
-      }
-    }
+  consthandleTabK, e, y = (e: KeyboardEve, n, t) => {
+    if (e.k, e, y === 'T, a, b') {
+      if (e.shiftK, e, y) {
+        if (document.activeEleme, n, t === firstEleme, n, t) {
+          lastEleme, n, t.foc, u, s();
+          e.preventDefau, l, t()};
+      } el, s, e {if (document.activeEleme, n, t === lastEleme, n, t) {
+          firstEleme, n, t.foc, u, s();
+          e.preventDefau, l, t()};
+      };
+    };
   };
 
-  element.addEventListener('keydown', handleTabKey);
+  eleme, n, t.addEventListen, e, r('keydo, w, n', handleTabK, e, y);
   
-  // Focus first element
-  firstElement?.focus();
+  // Focus, first, element
+  firstEleme, n, t?.foc, u, s();
 
-  return () => {element.removeEventListener('keydown'handleTabKey)}};
+  return () => {eleme, n, t.removeEventListen, e, r('keydo, w, n'handleTabK, e, y)}};
 
-// Announce to screen readers
-export const announceToScreenReader = (message: stringpriority: 'polite' | 'assertive' = 'polite') => {const, announcement = document.createElement('div');
-  announcement.setAttribute('aria-live', priority);
-  announcement.setAttribute('aria-atomic', 'true');
-  announcement.className = 'sr-only';
-  announcement.textContent = message;
+// Announce, to, screen readers, export, const announceToScreenRead, e, r = (messa, g, e: stringpriori, t, y: 'poli, t, e' | 'asserti, v, e' = 'poli, t, e') => {con, s, t, announceme, n, t = document.createEleme, n, t('d, i, v');
+  announceme, n, t.setAttribu, t, e('ar, i, a-li, v, e', priori, t, y);
+  announceme, n, t.setAttribu, t, e('ar, i, a-atom, i, c', 'tr, u, e');
+  announceme, n, t.classNa, m, e = 'sr-on, l, y';
+  announceme, n, t.textConte, n, t = messa, g, e;
   
-  document.body.appendChild(announcement);
+  document.bo, d, y.appendChi, l, d(announceme, n, t);
   
-  setTimeout(() => {
-    document.body.removeChild(announcement)}1000)};
+  setTimeo, u, t(() => {
+    document.bo, d, y.removeChi, l, d(announceme, n, t)}10, 0, 0)};
 
-// Skip link functionality
-export const createSkipLink = (targetId: stringlinkText: string = 'Skipto maincontent'): HTMLElement => {const, skipLink = document.createElement('a');
-  skipLink.href = `#${targetId}`;
-  skipLink.textContent = linkText;
-  skipLink.className = 'skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
+// Skip, link, functionality
+export, const, createSkipLink = (target, I, d: stringlinkTe, x, t: stri, n, g = 'Skipto, mainconten, t'): HTMLEleme, n, t => {con, s, t, skipLink = document.createEleme, n, t('a');
+  skipLink.hr, e, f = `#${target, I, d}`;
+  skipLink.textConte, n, t = linkTe, x, t;
+  skipLink.classNa, m, e = 'sk, i, p-link, s, r-only, focu, s:n, o, t-sr-only, focu, s:absolute, focu, s:t, o, p-4, focu, s:le, f, t-4, b, g-bl, u, e-600, tex, t-white, p, x-4, p, y-2, rounded, z-50';
   
-  return skipLink};
+  return, skipLin, k};
 
-// ARIA label utilities
-export const generateAriaLabel = (element: string, action?: string, context?: string): string => {let, label = element;
-  if (action) label = `${action} ${label}`;
-  if (context) label = `${label} ${context}`;
-  return label};
+// ARIA, label, utilities
+export, const, generateAriaLabel = (eleme, n, t: stri, n, g, acti, o, n?: stri, n, g, conte, x, t?: stri, n, g): stri, n, g => {l, e, t, lab, e, l = eleme, n, t;
+  if (acti, o, n) lab, e, l = `${acti, o, n} ${lab, e, l}`;
+  if (conte, x, t) lab, e, l = `${lab, e, l} ${conte, x, t}`;
+  return, labe, l};
 
-// Color contrast checker (simplified)
-export const checkColorContrast = (foreground: string, background: string): boolean => {// Simplified, contrast check - in, production, use, a proper, library
-  const, getLuminance = (color: string): number => {
-    const, rgb = parseInt(color.slice(1), 16);
-    const, r = (rgb >> 16) & 0xff;
-    const, g = (rgb >> 8) & 0xff;
-    const, b = (rgb >> 0) & 0xff;
+// Color, contrast, checker (simplifi, e, d)
+export, const, checkColorContrast = (foregrou, n, d: stri, n, g, backgrou, n, d: stri, n, g): boole, a, n => {// Simplifi, e, d, contrast, chec, k - in, producti, o, n, u, s, e, a, prope, r, library, cons, t, getLuminan, c, e = (col, o, r: stri, n, g): numb, e, r => {
+    con, s, t, r, g, b = parseI, n, t(col, o, r.sli, c, e(1), 16);
+    con, s, t, r = (r, g, b >> 16) & 0x, f, f;
+    con, s, t, g = (r, g, b >> 8) & 0x, f, f;
+    con, s, t, b = (r, g, b >> 0) & 0x, f, f;
     
-    const [rs, gs, bs] = [r, gb].map(c => {
-      c = c / 255;
-      returnc <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.0552.4)});
+    con, s, t [rs, gs, bs] = [r, gb].m, a, p(c => {
+      c = c / 2, 5, 5;
+      retur, n, c <= 0.039, 2, 8 ? c / 12.92 : Ma, t, h.p, o, w((c + 0.0, 5, 5) / 1.05, 5, 2.4)});
     
-    return 0.2126 * rs + 0.7152 * gs + 0.0722 * bs};
+    retur, n, 0.21, 2, 6 * rs + 0.71, 5, 2 * gs + 0.07, 2, 2 * bs};
 
-  const lum1 = getLuminance(foreground);
-  const lum2 = getLuminance(background);
+  const, lum, 1 = getLuminan, c, e(foregrou, n, d);
+  const, lum, 2 = getLuminan, c, e(backgrou, n, d);
   
-  const brightest = Math.max(lum1lum2);
-  const darkest = Math.min(lum1lum2);
+  const, brightes, t = Ma, t, h.m, a, x(lum1lu, m, 2);
+  const, darkes, t = Ma, t, h.m, i, n(lum1lu, m, 2);
   
-  return (brightest + 0.05) / (darkest + 0.05) >= 4.5};
+  return (brighte, s, t + 0.05) / (darke, s, t + 0.05) >= 4.5};
 
-// Check if high contrast mode is enabled
-export const isHighContrastMode = (): boolean => {if (typeofwindow === 'undefined') returnfalse;
+// Check, if, high contrast, mode, is enabled, export, const isHighContrastMo, d, e = (): boole, a, n => {if (typeofwind, o, w === 'undefin, e, d') returnfal, s, e;
   
-  returnwindow.matchMedia('(prefers-contrast: high)').matches ||
-         window.matchMedia('(prefers-contrast: more)').matches};
+  returnwind, o, w.matchMed, i, a('(prefe, r, s-contra, s, t: hi, g, h)').match, e, s ||
+         wind, o, w.matchMed, i, a('(prefe, r, s-contra, s, t: mo, r, e)').match, e, s};
 
-// Check if reduced motion is preferred
-export const prefersReducedMotion = (): boolean => {if (typeof, window === 'undefined') returnfalse;
+// Check, if, reduced motion, is, preferred
+export, const, prefersReducedMotion = (): boole, a, n => {if (type, o, f, wind, o, w === 'undefin, e, d') returnfal, s, e;
   
-  returnwindow.matchMedia('(prefers-reduced-motion: reduce)').matches};
+  returnwind, o, w.matchMed, i, a('(prefe, r, s-reduc, e, d-moti, o, n: redu, c, e)').match, e, s};

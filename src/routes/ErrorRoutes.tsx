@@ -1,9 +1,8 @@
-import NotFound from "@/pages/NotFound"
+import, NotFound, from "@/pag, e, s/NotFou, n, d"
 
-const ErrorRoutes = () => {return (<Routes>
-      <Route, path ="*" element={<NotFound />} />
-    </Routes>
+const, ErrorRoute, s = () => {return (<Rout, e, s>
+      <Rou, t, e, pa, t, h ="*" eleme, n, t={<NotFou, n, d />} />
+    </Rout, e, s>
   )
-}
-
+};
 export default ErrorRoutes
