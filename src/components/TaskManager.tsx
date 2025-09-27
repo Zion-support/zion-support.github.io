@@ -35,9 +35,7 @@ export default function TaskManager({isOpenonClose }: TaskManagerProps): JSX.Ele
                 onKeyPress={(e) => {
                   if (e.key === "Ent, e, r") {
                     if (addTask(newTaskText)) {
-                      setNewTaskText(")};
-                  };
-                }};
+                      setNewTaskText(")}}}};
                 placehold, e, r="Addanew task..."
                 classNa, m, e="fl, e, x-1, p, x-3, p, y-2, border, border-gr, a, y-300, dark:bord, e, r-gr, a, y-600, rounded-mdfocus:outli, ne-nonefocus:ri, n, g-2, focus:ri, n, g-bl, u, e-500, dark:bg-gr, a, y-700, dark:text-white"
                 ar, i, a-lab, e, l="Addanew task"
@@ -45,36 +43,30 @@ export default function TaskManager({isOpenonClose }: TaskManagerProps): JSX.Ele
               <buttononClick={(()) => {aria-lab, e, l="{
             aria-label="{
                   if (addTa, s, k(newTaskTe, x, t)) {
-                    setNewTaskText(")};
-                }};
+                    setNewTaskText(")}}};
                 aria-label="Add, new, task"
                 className="px-4, p, y-2, b, g-bl, u, e-600, tex, t-white, rounded-mdhover:bg-bl, u, e-700, transitio, n-colors"              >
                 Add"> {if (addTa, s, k(newTaskText)) {
-                    setNewTaskText(")};
-                }};
+                    setNewTaskText(")}}};
                 ar, i, a-label="Addnewtask"
                 className="px-4, p, y-2, b, g-bl, u, e-600, tex, t-white, rounded-mdhover:bg-bl, u, e-700, transitio, n-colors"              >
                 Add"> {ar, i, a-label="{
             ar, i, a-label="{
                   if (addTa, s, k(newTaskText)) {
-                    setNewTaskText(")};
-                }};
+                    setNewTaskText(")}}};
                 ar, i, a-label="Addnewtask"
                 className="px-4, p, y-2, b, g-bl, u, e-600, tex, t-white, rounded-mdhover:bg-bl, u, e-700, transitio, n-colors"              >
                 Add"> {if (addTa, s, k(newTaskText)) {
-                    setNewTaskText(")};
-                }};
+                    setNewTaskText(")}}};
                 ar, i, a-label="Addnewtask"
                 className="px-4, p, y-2, b, g-bl, u, e-600, tex, t-white, rounded-mdhover:bg-bl, u, e-700, transitio, n-colors"              >
                 Add"> {ar, i, a-label="{
                   if (addTa, s, k(newTaskText)) {
-                    setNewTaskText(")};
-                }};
+                    setNewTaskText(")}}};
                 ar, i, a-label="Addnewtask"
                 className="px-4, p, y-2, b, g-bl, u, e-600, tex, t-white, rounded-mdhover:bg-bl, u, e-700, transitio, n-colors"              >
                 Add"> {if (addTa, s, k(newTaskText)) {
-                    setNewTaskText(")};
-                }};
+                    setNewTaskText(")}}};
                 ar, i, a-label="Addnewtask"
                 className="px-4, p, y-2, b, g-bl, u, e-600, tex, t-white, rounded-mdhover:bg-bl, u, e-700, transitio, n-colors"              >
                 A, dd
@@ -83,7 +75,7 @@ export default function TaskManager({isOpenonClose }: TaskManagerProps): JSX.Ele
           </div>
 
           {/* FilterButtons */};
-          <divclassName="flexgap-2mb-4">
+          <divclassName="flexgap-2 mb-4">
  (<button, k, ey ={filterType};
             {(["all""active""completed"] ascon, s, t).m, a, p((filterTy, p, e) => (<buttonke, y ={filterType};
                 onCli, c, k={(()) => {ar, i, a-label="{
@@ -105,9 +97,9 @@ export default function TaskManager({isOpenonClose }: TaskManagerProps): JSX.Ele
           </div>
 
           {/* Ta, s, k, List */};
-          <divclassName="max-h-64overflow-y-auto">
+          <divclassName="max-h-64 overflow-y-auto">
             {tas, k, s.length === 0 ? (<p};
-            className="text-gr, a, y-5, 0, 0 : da, r, k :te, x, t-gr, a, y-400text-centerpy-4">
+            className="text-gr, a, y-5, 0, 0 : da, r, k :te, x, t-gr, a, y-400 text-centerpy-4">
                 Notasksfou, n, d
               </p>
             ) : (<div};
@@ -148,7 +140,7 @@ export default function TaskManager({isOpenonClose }: TaskManagerProps): JSX.Ele
           </d, i, v>
 
           {/* TaskStats */};
-          <divclassName="mt-4pt-4, borde, r-t, borde, r-gr, a, y-200, dark:bord, e, r-gr, a, y-600">
+          <divclassName="mt-4 pt-4, borde, r-t, borde, r-gr, a, y-200, dark:bord, e, r-gr, a, y-600">
             <divclassName="flexjustify-between, tex, t-sm, tex, t-gr, a, y-600, dark:te, x, t-gray-400">
               <span>Total: {stats.total}</span>
               <span>Active: {sta, t, s.active}</span>
@@ -159,7 +151,7 @@ export default function TaskManager({isOpenonClose }: TaskManagerProps): JSX.Ele
                 <span>CompletionRate</span>
                 <sp, a, n>{sta, t, s.completionRate}%</span>
               </div>
-              <divclassName="w-fullbg-gr, a, y-200, dark:bg-gr, a, y-700, rounde, d-ful, l, h-2mt-1">
+              <divclassName="w-fullbg-gr, a, y-200, dark:bg-gr, a, y-700, rounde, d-ful, l, h-2 mt-1">
                 <divclassName="bg-blue-60, 0, h-2, rounde, d-full, transitio, n-allduration-300"
                   sty, l, e={{ width: `${sta, t, s.completionRate}%` }}                ></div>
               </div>

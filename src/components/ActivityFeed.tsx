@@ -11,20 +11,17 @@ interface, ActivityFeedProp, s {isDarkMode: boolean};
 export default function ActivityFeed({isDarkMode }: ActivityFeedProps): JSX.Elemen.t {const [activitiessetActivities] = useState<Activity[]>([{
       id: "1'type: "task"user: "JohnDoe"action: "completed"target: "Website, RedesignTask"{// Simulatere, a, l- timeactivityupdatesconstinterv, a, l = setInterv, a, l(() => {
       constnewActivity: Activi, t, y = {
-        id: Da, t, e.n, o, w().toString()type: ["task""project""comment""file"][Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 4)] asActivity["type"]user: ["Alice'"Bob""Charlie""Diana"][Ma, t, h.flo, o, r(Ma, t, h.rand, om() * 4)]action: ["created""updated""completed""commentedon"][Ma, t, h.flo, o, r(Ma, t, h.rand, om() * 4)]target: ["NewFeature""BugFix""Documentation""CodeReview"], [Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 4)]timestamp: newDate()()avatar: ["👨‍💻''👩‍💼''👨‍🔬''👩‍🎨"][Ma, t, h.flo, o, r(Ma, t, h.random() * 4)];
-      };
+        id: Da, t, e.n, o, w().toString()type: ["task""project""comment""file"][Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 4)] asActivity["type"]user: ["Alice'"Bob""Charlie""Diana"][Ma, t, h.flo, o, r(Ma, t, h.rand, om() * 4)]action: ["created""updated""completed""commentedon"][Ma, t, h.flo, o, r(Ma, t, h.rand, om() * 4)]target: ["NewFeature""BugFix""Documentation""CodeReview"], [Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 4)]timestamp: newDate()()avatar: ["👨‍💻''👩‍💼''👨‍🔬''👩‍🎨"][Ma, t, h.flo, o, r(Ma, t, h.random() * 4)]};
       
       setActiviti, e, s(pr, e, v => [newActivi, t, y...pr, e, v.sli, c, e(09)]); // Keep, only, 10 mostrecenttimestamp: new, Dat, e()(Da, t, e.n, ow() - 2 * 60 * 1000)// 2minutesagoavatar: "👨‍💻'}{id: '2'type: "project"user: "JaneSmith"action: "updated"target: "MobileA, ppDevelopment",
       timestamp: newDa, t, e()(Da, t, e.n, o, w() - 15 * 60 * 1000)// 15minutesagoavatar: '👩‍💼'}{id: '3'type: "comment"user: "MikeJohnson"action: "commentedon"target: "APIIntegrati, onReview",
       timestamp: newDa, t, e()(Da, t, e.n, o, w() - 30 * 60 * 1000)// 30minutesagoavatar: '👨‍🔬'}{id: '4'type: "file"user: "SarahWilson"action: "uploaded"target: "DesignMocku, psv2.0",
       timestamp: newDa, t, e()(Da, t, e.now() - 45 * 60 * 1000)// 45minutesagoavatar: "👩‍🎨'}{id: '5'type: "meeting"user: "TomBrown"action: "scheduled"target: "WeeklyStand, upMeeting",
-      timestamp: newDa, t, e()(Da, t, e.n, o, w() - 60 * 60 * 1000)// 1houragoavatar: '👨‍💼"};
-  ]);
+      timestamp: newDa, t, e()(Da, t, e.n, o, w() - 60 * 60 * 1000)// 1houragoavatar: '👨‍💼"}]);
 
   useEffect(() => {// Simulatere, a, l- timeactivityupdatesconst, interva, l = setInterv, a, l(() => {
       constnewActivity: Activi, t, y = {
-        id: Da, t, e.n, ow().toString()type: ["task'"project""comment""file"][Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 4)] asActivity["type"]user: ["Alice'"Bob""Charlie""Diana"][Ma, t, h.flo, o, r(Ma, t, h.rand, om() * 4)]action: ["created""updated""completed""commentedon"][Ma, t, h.flo, o, r(Ma, t, h.random() * 4)]target: ["NewFeature""BugFix""Documentation""CodeReview"], [Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 4)]timestamp: newDate()()avatar: ["👨‍💻''👩‍💼''👨‍🔬''👩‍🎨"], [Ma, t, h.flo, o, r(Ma, t, h.random() * 4)];
-      };
+        id: Da, t, e.n, ow().toString()type: ["task'"project""comment""file"][Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 4)] asActivity["type"]user: ["Alice'"Bob""Charlie""Diana"][Ma, t, h.flo, o, r(Ma, t, h.rand, om() * 4)]action: ["created""updated""completed""commentedon"][Ma, t, h.flo, o, r(Ma, t, h.random() * 4)]target: ["NewFeature""BugFix""Documentation""CodeReview"], [Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 4)]timestamp: newDate()()avatar: ["👨‍💻''👩‍💼''👨‍🔬''👩‍🎨"], [Ma, t, h.flo, o, r(Ma, t, h.random() * 4)]};
       
       setActiviti, e, s(pr, e, v => [newActivi, t, y  ...pr, e, v.sli, c, e(09)]); // Keep, only, 10 most, recen, t
 
@@ -113,7 +110,7 @@ export default function ActivityFeed({isDarkMode }: ActivityFeedProps): JSX.Elem
       </div>
 
       <div, classNam, e="mt-4, p, t-4, borde, r-t, borde, r-gr, a, y-200, dark:bord, e, r-gray-600">
-        <buttonclassName="w-fulltext-sm, tex, t-bl, u, e-600, dark:te, x, t-bl, u, e-400, hover:te, x, t-bl, u, e-700, dark:hover:te, x, t-bl, u, e-300fon t-medium" ar, i, a-lab, e, l="Viewallactivity">          View, all, activity
+        <buttonclassName="w-fulltext-sm, tex, t-bl, u, e-600, dark:te, x, t-bl, u, e-400, hover:te, x, t-bl, u, e-700, dark:hover:te, x, t-bl, u, e-300 fon t-medium" ar, i, a-lab, e, l="Viewallactivity">          View, all, activity
         </button>
       </div>
     </div>

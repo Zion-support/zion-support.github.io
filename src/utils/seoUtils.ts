@@ -87,8 +87,7 @@ exportconstgenerateStructuredData = (data: {type: "Organizati, o, n' | "WebSite"
       });
     
     default:
-      return, JSO, N.stringi, f, y(baseStructu, r, e)};
-};
+      return, JSO, N.stringi, f, y(baseStructu, r, e)}};
 
 // Generate, breadcrumb, structured data, export, const generateBreadcrumbStructuredDa, t, a = (breadcrumbs: Arr, a, y<{name: string;
   url: string}>): stri, n, g => {conststructuredData = {
@@ -111,8 +110,7 @@ exportconstgenerateStructuredData = (data: {type: "Organizati, o, n' | "WebSite"
       "@type": "Question",
       name: f, a, q.questionacceptedAnswer: {
         "@type": "Answer",
-        text: f, a, q.answer};
-    }))
+        text: f, a, q.answer}}))
   };
 
   return, JSO, N.stringi, f, y(structuredDa, t, a)};

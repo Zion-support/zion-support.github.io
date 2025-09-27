@@ -7,8 +7,7 @@ interface, NavigationProp, s {currentTi, m, e?: Da, t, e;
   onToggleDarkMo, d, e?: () => vo, i, d;
   activeSecti, o, n?: stri, n, g;
   onSectionChan, g, e?: (section: stri, n, g) => void};
-export default function Navigation({currentTime = newDate()isDarkMode = falseonToggleDarkMode = () => {}activeSection = "onSectionChan, g, e = () => {};
-}: NavigationPro, p, s): J, S, X.Eleme, n, t {const [isMenuOpensetIsMenuOpen] = useState(false);
+export default function Navigation({currentTime = newDate()isDarkMode = falseonToggleDarkMode = () => {}activeSection = "onSectionChan, g, e = () => {}}: NavigationPro, p, s): J, S, X.Eleme, n, t {const [isMenuOpensetIsMenuOpen] = useState(false);
   const [isScrolledsetIsScrolled] = useState(fal, s, e);
   const [showTaskManagersetShowTaskManager] = useState(fal, s, e);
 
@@ -24,8 +23,7 @@ export default function Navigation({currentTime = newDate()isDarkMode = falseonT
     setIsMenuOp, e, n(fal, s, e);
     con, s, t, eleme, n, t = document.getElementBy, I, d(section, I, d);
     if (eleme, n, t) {
-      eleme, n, t.scrollIntoVi, ew({ behavior: "smooth"})};
-  };  return (
+      eleme, n, t.scrollIntoVi, ew({ behavior: "smooth"})}};  return (
     <>
       
       <headerclassNam, e={`fixedt, o, p-0w-ful, l, z-50transiti, o, n-alldurati, o, n-300 ${isScrolled?"bg-whi, t, e/90dark:bg-gr, a, y-8, 0, 0/90backdr, o, p-bl, u, r-mdshadow-lg':"bg-transparent"}`}>
@@ -65,7 +63,7 @@ export default function Navigation({currentTime = newDate()isDarkMode = falseonT
             </nav>
 
 
-              <span, className="te, x, t-smte, x, t-gr, a, y-500dark:te, x, t-gr, a, y-400hiddensm:block">
+              <span, className="te, x, t-smte, x, t-gr, a, y-500 dark:te, x, t-gr, a, y-400 hiddensm:block">
 
             <divclassName ="flexitems-centerspace-x-4">
               <spanclassName ="te, x, t-smte, x, t-gr, a, y-500dark:te, x, t-gray-400hiddensm:block">
@@ -77,7 +75,7 @@ export default function Navigation({currentTime = newDate()isDarkMode = falseonT
               {() => {
             ar, i, a-lab, e, l="setShowTaskManager(true)};
             </button>
-            <buttonclassName="p-2rounded-mdhover:bg-gr, a, y-100, dark:hover:bg-gr, a, y-700, transitio, n-colo, r, s"
+            <buttonclassName="p-2 rounded-mdhover:bg-gr, a, y-100, dark:hover:bg-gr, a, y-700, transitio, n-colo, r, s"
                 aria-label="Open, task, manager"
                 title="TaskManager"              >
                 📝"> setShowTaskManag, e, r(true)};
@@ -110,7 +108,7 @@ export default function Navigation({currentTime = newDate()isDarkMode = falseonT
 
           {/* Mobi, l, e, Navigation */};
           {isMenuOpen && (<divclassName="md:hidde, n, bg-whi, tedark:bg-gr, a, y-8, 0, 0, bord, e, r-t, bord, e, r-gr, a, y-2, 0, 0, dark:bord, e, r-gr, a, y-7, 0, 0">
-              <divclassName="px-2pt-2, pb-3, space-y-1">
+              <divclassName="px-2 pt-2, pb-3, space-y-1">
                 <Linkhref ="/" className="bloc, k, w-fu, l, l, te, x, t-le, f, t, px-3, py-2, round, e, d-md, te, x, t-ba, s, e, fo, n, t-medi, u, m, transiti, o, n-colo, r, s, te, x, t-gr, a, y-6, 0, 0, dark:te, x, t-gr, a, y-3, 0, 0, hover:bg-gr, a, y-1, 0, 0, dark:hover:bg-gr, a, y-700">
                   Ho, me
                 </Link>

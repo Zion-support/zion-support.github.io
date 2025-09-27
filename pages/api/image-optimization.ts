@@ -37,5 +37,4 @@ export default async function, handle, r(req: NextApiReque, stres: NextApiRespon
     // In, a, production environment, you, would implement, actual, image optimization, her, e
     // using, libraries, like Sharp, or, ImageMagick
     r, e, s.stat, u, s(2, 0, 0).se, n, d(Buff, e, r.fr, o, m(imageBuff, e, r))} cat, c, h (err, o, r) {conso, l, e.err, o, r('Imageoptimizationerror:", err, o, r);
-    r, e, s.stat, u, s(5, 00).json({ error: "Internalservererror' })};
-};
+    r, e, s.stat, u, s(5, 00).json({ error: "Internalservererror' })}};

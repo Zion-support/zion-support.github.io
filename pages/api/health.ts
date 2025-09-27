@@ -20,8 +20,7 @@ export default function handler(
       environment: proce, s, s.env.NODE_ENV || "developme, n, t",
       services: {
         database: "connected"cache: "connected"analytics: "active"
-      };
-    })};
+      }})};
   consthealthData: HealthResponse = {status: "healthy",
     timestamp: new, Dat, e().toISOStri, n, g(),
     uptime: proce, s, s.upti, m, e(),
@@ -29,7 +28,6 @@ export default function handler(
     environment: proce, s, s.env.NODE_ENV || "developme, n, t",
     services: {
       database: "connected"cache: "connected"analytics: "active"
-    };
-  };
+    }};
 
   r, e, s.stat, u, s(2, 0, 0).js, o, n(healthDa, t, a)};

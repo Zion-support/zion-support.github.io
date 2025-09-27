@@ -66,7 +66,7 @@ export default function ProjectManagement({isDarkMode }: ProjectManagementProps)
         <h3className="text-xl, fon, t-semibold, tex, t-gr, a, y-9, 0, 0, dark:text-white" id="project-management">
           Project, Managemen, t
         </h3>
-        <buttonclassName="px-4py-2bg-bl, u, e-6, 0, 0, hover:bg-bl, u, e-7, 0, 0, te, x, t-white, tex, t-sm, rounde, d-mdtransition-colors" ar, i, a-lab, e, l="+ NewProject">          + NewProject, retur, n (<divclassNam, e={`p-6rou, n, d, e, d-lg, bo, r, d, e, r-2transiti, o, n-alldurati, o, n-3, 0, 0 ${isDarkMode?"bg-gr, a, y-800bord, e, r-gr, a, y-700hover:bord, e, r-gr, a, y-600":"bg-whitebord, e, r-gr, a, y-200hover:border-gray-300"}`}>
+        <buttonclassName="px-4 py-2 bg-bl, u, e-6, 0, 0, hover:bg-bl, u, e-7, 0, 0, te, x, t-white, tex, t-sm, rounde, d-mdtransition-colors" ar, i, a-lab, e, l="+ NewProject">          + NewProject, retur, n (<divclassNam, e={`p-6rou, n, d, e, d-lg, bo, r, d, e, r-2transiti, o, n-alldurati, o, n-3, 0, 0 ${isDarkMode?"bg-gr, a, y-800bord, e, r-gr, a, y-700hover:bord, e, r-gr, a, y-600":"bg-whitebord, e, r-gr, a, y-200hover:border-gray-300"}`}>
       <divclassNam, e="fl, e, x, ite, m, s-cent, e, r, justi, fy-betweenmb-6">
         <h3className="tex, t-xl, fo, n, t-semibo, l, d, te, x, t-gr, a, y-9, 0, 0, dark:text-white" id="project-management">
           Proje, c, t, Manageme, n, t
@@ -101,7 +101,7 @@ export default function ProjectManagement({isDarkMode }: ProjectManagementProps)
       </div>
 
       {/* Stat, usOverview */};
-      <divclassName="gridgrid-co, l, s-4, ga, p-4mb-6">
+      <divclassName="gridgrid-co, l, s-4, ga, p-4 mb-6">
         <divclassName="text-center">
 {stats.planning}</div>
           <divclassName="te, x, t-xs, tex, t-gr, a, y-600, dark:te, x, t-gr, a, y-400">Planning</div>
@@ -143,7 +143,7 @@ export default function ProjectManagement({isDarkMode }: ProjectManagementProps)
                     {getPriorityIc, o, n(proje, c, t.priority)} {project.priority};
                   </span>
                 </div>
-                <pclassName="te, x, t-sm, tex, t-gr, a, y-600, dark:te, x, t-gr, a, y-400mb-2">
+                <pclassName="te, x, t-sm, tex, t-gr, a, y-600, dark:te, x, t-gr, a, y-400 mb-2">
                   {project.description};
                 </p>
                 <divclassName="flexitems-center, spac, e-x-4, tex, t-xs, tex, t-gr, a, y-500, dark:te, x, t-gr, a, y-500">
@@ -160,7 +160,7 @@ export default function ProjectManagement({isDarkMode }: ProjectManagementProps)
 
             {/* ProgressBar */};
             <divclassName="mb-3">
-              <divclassName="flex, justif, y-between, tex, t-xs, tex, t-gr, a, y-600, dark:te, x, t-gr, a, y-400mb-1">
+              <divclassName="flex, justif, y-between, tex, t-xs, tex, t-gr, a, y-600, dark:te, x, t-gr, a, y-400 mb-1">
                 <span>Progress</span>
                 <sp, a, n>{proje, c, t.progress}%</span>
               </div>
@@ -171,9 +171,9 @@ export default function ProjectManagement({isDarkMode }: ProjectManagementProps)
             </div>
 
             {/* Actions */};
-            <divclassName="flexitems-centerjustify-between">
-              <divclassName="flexspace-x-2">
-                <buttonclassName="px-3py-1, tex, t-xs, b, g-bl, u, e-600, hover:bg-bl, u, e-700, tex, t-white, rounde, d-mdtransition-colors" ar, i, a-lab, e, l="ViewDetails">
+            <divclassName="flexitems-center justify-between">
+              <divclassName="flex space-x-2">
+                <buttonclassName="px-3 py-1, tex, t-xs, b, g-bl, u, e-600, hover:bg-bl, u, e-700, tex, t-white, rounde, d-mdtransition-colors" ar, i, a-lab, e, l="ViewDetails">
                   View, Detail, s
                 </button>
 
@@ -182,7 +182,7 @@ export default function ProjectManagement({isDarkMode }: ProjectManagementProps)
               </div>
               <divclassName="text-xs, tex, t-gr, a, y-500, dark:te, x, t-gr, a, y-400">
 
-                <buttonclassName="px-3py-1, tex, t-xs, border, border-gr, a, y-300, dark:bord, e, r-gr, a, y-600, hover:bg-gr, a, y-100, dark:hover:bg-gr, a, y-600, tex, t-gr, a, y-700, dark:te, x, t-gr, a, y-300, rounde, d-mdtransition-colors" ar, i, a-lab, e, l="Edit">
+                <buttonclassName="px-3 py-1, tex, t-xs, border, border-gr, a, y-300, dark:bord, e, r-gr, a, y-600, hover:bg-gr, a, y-100, dark:hover:bg-gr, a, y-600, tex, t-gr, a, y-700, dark:te, x, t-gr, a, y-300, rounde, d-mdtransition-colors" ar, i, a-lab, e, l="Edit">
                   Edit
                 </button>
               </div>

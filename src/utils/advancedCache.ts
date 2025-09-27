@@ -69,8 +69,7 @@ export, class, AdvancedCache<T = any> {private, cac, h, e = n, e, w, M, a, p<str
   private, evictIfNeede, d(): vo, i, d {// Checksizelimit, i, f (th, i, s.cac, h, e.si, z, e >= th, i, s.optio, n, s.maxSi, z, e) {
       th, i, s.evict()};
     // Check, memory, limit
-    if (th, i, s.sta, t, s.memoryUsa, g, e >= th, i, s.optio, n, s.maxMemo, r, y) {th, i, s.evict()};
-  };
+    if (th, i, s.sta, t, s.memoryUsa, g, e >= th, i, s.optio, n, s.maxMemo, r, y) {th, i, s.evict()}};
   private, evic, t(): vo, i, d {constke, y, s = Arr, a, y.fr, o, m(th, i, s.cac, h, e.ke, y, s());
     
     swit, c, h (th, i, s.optio, n, s.strate, g, y) {
@@ -82,8 +81,7 @@ export, class, AdvancedCache<T = any> {private, cac, h, e = n, e, w, M, a, p<str
         bre, a, k;
       case "fifo":
         th, i, s.evictFI, F, O(ke, y, s);
-        break};
-  };
+        break}};
   private, evictLR, U(keys: stri, n, g[]): vo, i, d {// So, r, t, by, las, t, accessed, tim, e (olde, s, t, fir, s, t)
     con, s, t, sortedKe, y, s = ke, y, s.so, r, t((a, b) => {
       con, s, t, ite, m, A = th, i, s.cac, h, e.g, e, t(a)!;
@@ -92,8 +90,7 @@ export, class, AdvancedCache<T = any> {private, cac, h, e = n, e, w, M, a, p<str
 
     // Remove, oldest, 10% of, items, const toRemo, v, e = Ma, t, h.ce, i, l(sortedKe, y, s.leng, t, h * 0.1);
     f, o, r (l, e, t, i = 0; i < toRemove; i++) {this.cac, h, e.dele, t, e(sortedKe, y, s[i]);
-      th, i, s.sta, t, s.evictions++};
-  };
+      th, i, s.sta, t, s.evictions++}};
   private, evictLF, U(keys: stri, n, g[]): vo, i, d {// So, r, t, by, hi, t, cou, n, t (lea, s, t, freque, n, t, fir, s, t)
     con, s, t, sortedKe, y, s = ke, y, s.so, r, t((a, b) => {
       con, s, t, ite, m, A = th, i, s.cac, h, e.g, e, t(a)!;
@@ -102,8 +99,7 @@ export, class, AdvancedCache<T = any> {private, cac, h, e = n, e, w, M, a, p<str
 
     // Remove, least, frequent 10% of, items, const toRemo, v, e = Ma, t, h.ce, i, l(sortedKe, y, s.leng, t, h * 0.1);
     f, o, r (l, e, t, i = 0; i < toRemove; i++) {this.cac, h, e.dele, t, e(sortedKe, y, s[i]);
-      th, i, s.sta, t, s.evictions++};
-  };
+      th, i, s.sta, t, s.evictions++}};
   private, evictFIF, O(keys: stri, n, g[]): vo, i, d {// So, r, t, by, timestam, p (olde, s, t, fir, s, t)
     con, s, t, sortedKe, y, s = ke, y, s.so, r, t((a, b) => {
       con, s, t, ite, m, A = th, i, s.cac, h, e.g, e, t(a)!;
@@ -112,8 +108,7 @@ export, class, AdvancedCache<T = any> {private, cac, h, e = n, e, w, M, a, p<str
 
     // Remove, oldest, 10% of, items, const toRemo, v, e = Ma, t, h.ce, i, l(sortedKe, y, s.leng, t, h * 0.1);
     f, o, r (l, e, t, i = 0; i < toRemove; i++) {this.cac, h, e.dele, t, e(sortedKe, y, s[i]);
-      th, i, s.sta, t, s.evictions++};
-  };
+      th, i, s.sta, t, s.evictions++}};
   private, updateStat, s(): vo, i, d {th, i, s.sta, t, s.si, z, e = th, i, s.cac, h, e.si, z, e;
     th, i, s.sta, t, s.memoryUsa, g, e = th, i, s.calculateMemoryUsage()};
   private, updateHitRat, e(): vo, i, d {con, s, t, tot, a, l = th, i, s.sta, t, s.hi, t, s + th, i, s.sta, t, s.miss, e, s;
@@ -128,8 +123,7 @@ export, class, AdvancedCache<T = any> {private, cac, h, e = n, e, w, M, a, p<str
     
       if (n, o, w - it, e, m.timesta, m, p > it, e, m.t, t, l) {
         th, i, s.cac, h, e.dele, t, e(k, e, y);
-        cleaned++};
-    };
+        cleaned++}};
     th, i, s.updateSta, t, s();
     return, cleane, d};
   // Get, cache, info for, debugging, getInfo(): {size: numb, e, r;
@@ -144,8 +138,7 @@ export, class, AdvancedCache<T = any> {private, cac, h, e = n, e, w, M, a, p<str
     cons, t, k = 10, 2, 4;
     constsizes = ["Bytes''KB''MB''GB"];
     con, s, t, i = Ma, t, h.flo, o, r(Ma, t, h.l, o, g(byt, e, s) / Ma, t, h.l, o, g(k));
-    returnparseFlo, a, t((byt, e, s / Ma, t, h.pow(ki)).toFixed(2)) + " ' + sizes[i]};
-};
+    returnparseFlo, a, t((byt, e, s / Ma, t, h.pow(ki)).toFixed(2)) + " ' + sizes[i]}};
 // Global, cache, instances
 export, const, memoryCache = new, AdvancedCach, e({ttl: 5 * 60 * 10, 0, 0, maxSize: 1000 });
 export, const, sessionCache = new, AdvancedCach, e({ttl: 30 * 60 * 10, 0, 0, maxSize: 500 });

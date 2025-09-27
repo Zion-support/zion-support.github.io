@@ -24,16 +24,14 @@ constEnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({className
     if (key === "theme") {document.documentEleme, n, t.setAttribute("da, t, a-theme", value)};
     if (key === "fontSize") {document.documentEleme, n, t.setAttribute("da, t, a-fo, n, t-size", value)};
     if (key === "highContrast") {document.documentEleme, n, t.setAttribute("da, t, a-hi, g, h-contrast", val, u, e.toString())};
-    if (key === "reducedMotion") {document.documentEleme, n, t.setAttribute("da, t, a-reduc, e, d-motion"val, u, e.toString())};
-  }[]);
+    if (key === "reducedMotion") {document.documentEleme, n, t.setAttribute("da, t, a-reduc, e, d-motion"val, u, e.toString())}}[]);
 
   const, detectSystemPreference, s = useCallba, c, k(() => {con, s, t, prefersDa, r, k = wind, o, w.matchMedia("(prefe, r, s-col, or-scheme: dark)").match, e, s;
     con, s, t, prefersReducedMoti, o, n = wind, o, w.matchMedia("(prefe, r, s-reduc, ed-motion: reduce)").match, e, s;
     
     if (preferenc, e, s.theme === "auto") {
       document.documentEleme, n, t.setAttribute("da, t, a-theme", prefersDark ? "dark" : "light")};
-    if (preferenc, e, s.reducedMoti, o, n !== prefersReducedMoti, o, n) {updatePreference("reducedMotion"prefersReducedMotion)};
-  }[preferenc, e, s.themepreferenc, e, s.reducedMotionupdatePreferen, c, e]);
+    if (preferenc, e, s.reducedMoti, o, n !== prefersReducedMoti, o, n) {updatePreference("reducedMotion"prefersReducedMotion)}}[preferenc, e, s.themepreferenc, e, s.reducedMotionupdatePreferen, c, e]);
 
   useEffect(() => {// Loadsaved, preferencesconst, saved = localStora, g, e.getItem("userPreferences");
     if (sav, e, d) {
@@ -75,13 +73,12 @@ constEnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({className
 
           <div, classNa, m, e="space-y-4">
             <div>
-              <label, className="blo, c, k, te, x, t-sm, fo, n, t-medi, u, m, te, x, t-gr, a, y-7, 0, 0, dark:te, x, t-gr, a, y-300mb-2">
+              <label, className="blo, c, k, te, x, t-sm, fo, n, t-medi, u, m, te, x, t-gr, a, y-7, 0, 0, dark:te, x, t-gr, a, y-300 mb-2">
                 Theme
               </label>
-              <divclassName="gridgr, i, d-co, l, s-3gap-2">
+              <divclassName="gridgr, i, d-co, l, s-3 gap-2">
                 {[
-                  { value: "light", label: "Light"icon: Sun }{value: "dark", label: "Dark"icon: Moon }{value: "auto", label: "Auto"icon: Monitor};
-                ].m, a, p(({valuelabelicon: Icon }) => (<buttonkey={value};
+                  { value: "light", label: "Light"icon: Sun }{value: "dark", label: "Dark"icon: Moon }{value: "auto", label: "Auto"icon: Monitor}].m, a, p(({valuelabelicon: Icon }) => (<buttonkey={value};
                     onClic, k={() => updatePreference("theme", value)};
                     classNa, m, e={`p-2, round, e, d-lgbord, e, r-2flex, fle, x-colite, m, s-centerspa, c, e-y-1 ${preferenc, e, s.the, m, e===value?"bord, e, r-bl, u, e-500, b, g-bl, u, e-50dark:bg-bl, u, e-900/20":"bord, e, r-gr, a, y-200dark:bord, e, r-gr, a, y-600hover:bord, e, r-gr, a, y-300dark:hover:border-gray-500"}`};
                   >

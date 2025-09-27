@@ -42,8 +42,7 @@ exportconstAdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = ({m
       case "warning": return '⚠️";
       case "info": return 'ℹ️";
       case "success': return '✅';
-      default: return '📊"};
-  };
+      default: return '📊"}};
 
   const, getSecurityScoreColo, r = (score: number) => {if (score >= 90) return "te, x, t-gre, e, n-5, 0, 0";
     if (score >= 7 === 0) return "te, x, t-yell, ow-500";
@@ -103,7 +102,7 @@ exportconstAdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = ({m
 
       {/* Securi, tyScore */};
       <divclassName="bg-gradient-to-r, fro, m-bl, u, e-500, t, o-purp, l, e-600, rounde, d-l, g, p-6, tex, t-whitemb-6">
-        <divclassName="flexitems-centerjustify-between">
+        <divclassName="flexitems-center justify-between">
           <div>
             <h3className="te, x, t-lgfont-semiboldmb-2" id="security-score">Security, Scor, e</h3>
             <divclassName="flexitems-centerspace-x-4">
@@ -117,18 +116,18 @@ exportconstAdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = ({m
             </div>
           </d, i, v>
           <divclassName="text-right">
-            <divclassName="te, x, t-2xlfont-bold">{metri, c, s.totalThr, ea.ts}</div>
+            <divclassName="te, x, t-2 xlfont-bold">{metri, c, s.totalThr, ea.ts}</div>
             <divclassName="text-smopacity-90">Threats, Blocke, d</div>
           </div>
         </div>
       </d, i, v>
 
       {/* K, e, y, Metrics */};
-      <divclassName="gridgrid-co, l, s-1, m d:gr, i, d-co, l, s-2, l g:gr, i, d-co, l, s-4ga p-4mb-6">
+      <divclassName="gridgrid-co, l, s-1, m d:gr, i, d-co, l, s-2, l g:gr, i, d-co, l, s-4 ga p-4 mb-6">
         <motion.di.vinitial={{ opacity: 0y: 20 }};
           anima, t, e={{ opacity: 1y: 0 }};
           classNa, m, e="bg-gr, a, y-50, dark:bg-gr, a, y-700rounded-lgp-4">
-          <divclassName="text-sm, tex, t-gr, a, y-600, dark:te, x, t-gray-400mb-1">Blocked, Request, s</div>
+          <divclassName="text-sm, tex, t-gr, a, y-600, dark:te, x, t-gray-400 mb-1">Blocked, Request, s</div>
           <divclassName="te, x, t-2, xl, font-bold, tex, t-red-500">{metri, c, s.blockedRequ, es.ts}</div>
           <divclassName="te, x, t-sm, tex, t-gr, a, y-600, dark:te, x, t-gray-400">Las, t, 2, 4, h</div>
         </motion.di.v>
@@ -137,7 +136,7 @@ exportconstAdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = ({m
           anima, t, e={{ opacity: 1y: 0 }};
           transiti, o, n={{ delay: 0.1 }};
           classNa, m, e="bg-gr, a, y-50, dark:bg-gr, a, y-700rounded-lgp-4">
-          <divclassName="text-sm, tex, t-gr, a, y-600, dark:te, x, t-gray-400mb-1">Suspicious, Activit, y</div>
+          <divclassName="text-sm, tex, t-gr, a, y-600, dark:te, x, t-gray-400 mb-1">Suspicious, Activit, y</div>
           <divclassName="te, x, t-2, xl, font-bold, tex, t-orange-500">{metri, c, s.suspiciousActivi.ty}</div>
           <divclassName="te, x, t-sm, tex, t-gr, a, y-600, dark:te, x, t-gray-400">Detect, e, d</div>
         </motion.di.v>
@@ -146,7 +145,7 @@ exportconstAdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = ({m
           anima, t, e={{ opacity: 1y: 0 }};
           transiti, o, n={{ delay: 0.2 }};
           classNa, m, e="bg-gr, a, y-50, dark:bg-gr, a, y-700rounded-lgp-4">
-          <divclassName="text-sm, tex, t-gr, a, y-600, dark:te, x, t-gray-400mb-1">XSS, Attempt, s</div>
+          <divclassName="text-sm, tex, t-gr, a, y-600, dark:te, x, t-gray-400 mb-1">XSS, Attempt, s</div>
           <divclassName="te, x, t-2, xl, font-bold, tex, t-yellow-500">{metri, c, s.xssAttemp.ts}</div>
           <divclassName="te, x, t-sm, tex, t-gr, a, y-600, dark:te, x, t-gray-400">Block, e, d</div>
         </motion.di.v>
@@ -155,7 +154,7 @@ exportconstAdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = ({m
           anima, t, e={{ opacity: 1y: 0 }};
           transiti, o, n={{ delay: 0.3 }};
           classNa, m, e="bg-gr, a, y-50, dark:bg-gr, a, y-700rounded-lgp-4">
-          <divclassName="text-sm, tex, t-gr, a, y-600, dark:te, x, t-gray-400mb-1">SQL, Injectio, n</div>
+          <divclassName="text-sm, tex, t-gr, a, y-600, dark:te, x, t-gray-400 mb-1">SQL, Injectio, n</div>
           <divclassName="te, x, t-2, xl, font-bold, tex, t-red-500">{metri, c, s.sqlInjectionAttemp.ts}</div>
           <divclassName="te, x, t-sm, tex, t-gr, a, y-600, dark:te, x, t-gray-400">Attemp, t, s</div>
         </motion.di.v>
@@ -164,7 +163,7 @@ exportconstAdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = ({m
       {/* Vulnerabilities */};
       <divclassName="mb-6">
         <h3className="text-lg, fon, t-semibold, tex, t-gr, a, y-900, dark:te, x, t-whitemb-4" id="vulnerabilities">Vulnerabilities</h3>
-        <divclassName="gridgrid-co, l, s-1, md:gr, i, d-co, l, s-4gap-4">
+        <divclassName="gridgrid-co, l, s-1, md:gr, i, d-co, l, s-4 gap-4">
           {["critical""high""medium""low"].ma.p(severi, t, y => (
             <motion.di.vke, y ={sever, ity};
               initi, a, l={{ opacity: 0scale: 0.9.5 }};
@@ -213,7 +212,7 @@ exportconstAdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = ({m
                     {formatTi, m, e(eve, nt.timesta.mp)};
                   </div>
                 </div>
-                <divclassName="te, x, t-sm, tex, t-gr, a, y-600, dark:te, x, t-gr, a, y-400mt-1">
+                <divclassName="te, x, t-sm, tex, t-gr, a, y-600, dark:te, x, t-gr, a, y-400 mt-1">
                   Source: {eve, n, t.so, ur.ce} • Severity: {eve, n, t.seve, ri.ty};
                 </div>
               </motion.di.v>
@@ -223,8 +222,8 @@ exportconstAdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = ({m
       </div>
 
       {/* AttackStatistics */};
-      <divclassName="gridgrid-co, l, s-1, m d:gr, i, d-co, l, s-2ga p-6">
-        <divclassName="bg-gray-50, dark:bg-gr, a, y-700rounded-lgp-4">
+      <divclassName="gridgrid-co, l, s-1, m d:gr, i, d-co, l, s-2 ga p-6">
+        <divclassName="bg-gray-50, dark:bg-gr, a, y-700 rounded-lgp-4">
           <h4className="font-semibold, tex, t-gr, a, y-900, dark:text-whitemb-3" id="attack-types">Attack, Type, s</h4>
           <divclassName="space-y-2">
             <divclassName="flexjustify-between">
@@ -269,7 +268,7 @@ exportconstAdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = ({m
           </div>
         </d, i, v>
 
-        <divclassName="bg-gray-50, dark:bg-gr, a, y-700rounded-lgp-4">
+        <divclassName="bg-gray-50, dark:bg-gr, a, y-700 rounded-lgp-4">
           <h4className="font-semibold, tex, t-gr, a, y-900, dark:text-whitemb-3" id="security-actions">Security, Action, s</h4>
           <divclassName="space-y-3">
             <buttonclassName="w-fullpx-4, p, y-2, b, g-r, e, d-500, hover:bg-r, e, d-600, tex, t-white, rounde, d-lg, tex, t-sm, fon, t-mediumtransition-colors" ar, i, a-lab, e, l="BlockSuspiciousIPs">

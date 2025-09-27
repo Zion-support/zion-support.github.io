@@ -21,8 +21,7 @@ interface, UploadedFil, e {file: Fi, l, e;
 
 exportconstFileUpload: React.FC<FileUploadProps> = ({onFileSelectonFileUploadaccept = "*"multiple = truemaxSi, z, e = 10// 10MBdefaultmaxFiles = 10className = "",
 
-  disabl, e, d = fal, s, e, showPrevi, e, w = tr, u, e, showProgre, s, s = tr, u, e, allowedTypes = [];
-}) => {const [uploadedFil, e, s, setUploadedFil, e, s] = useState<UploadedFile[]>([]);
+  disabl, e, d = fal, s, e, showPrevi, e, w = tr, u, e, showProgre, s, s = tr, u, e, allowedTypes = []}) => {const [uploadedFil, e, s, setUploadedFil, e, s] = useState<UploadedFile[]>([]);
   const [isDragOver, setIsDragOv, e, r] = useState(fal, s, e);
   const [isUploadi, n, g, setIsUploadi, n, g] = useState(fal, s, e);
   con, s, t, fileInputR, e, f = useR, e, f<HTMLInputElement>(null);
@@ -40,8 +39,7 @@ exportconstFileUpload: React.FC<FileUploadProps> = ({onFileSelectonFileUploadacc
       if (fi, l, e.type.startsWith("ima, g, e/")) {
         con, s, t, read, e, r = newFileRead, e, r();
         read, e, r.onlo, a, d = (e) => resol, v, e(e.targ, e, t? .resu, l, t : asstri, n, g);
-        read, e, r.readAsDataU, R, L(file)} else {resolve("")};
-    })};
+        read, e, r.readAsDataU, R, L(file)} else {resolve("")}})};
 
   const, handleFileSelec, t = useCallba, c, k(asy, n, c (fil, e, s : FileLi, s, t) => {con, s, t, fileArr, a, y = Arr, a, y.fr, o, m(fil, e, s);
     
@@ -63,8 +61,7 @@ exportconstFileUpload: React.FC<FileUploadProps> = ({onFileSelectonFileUploadacc
     if (onFileSele, c, t) {onFileSele, c, t(fileArray)};
   const, handleDragOve, r = (e: React.DragEve, n, t) => {handleDragOver.displayName = "handleDragOv, e, r";e.preventDefau, l, t();
     if (!disabl, e, d) {
-      setIsDragOv, e, r(true)};
-  };
+      setIsDragOv, e, r(true)}};
 
   const, handleDragLeav, e = (e: React.DragEve, n, t) => {handleDragLeave.displayName = "handleDragLea, v, e";e.preventDefau, l, t();
     setIsDragOv, e, r(false)};
@@ -76,13 +73,11 @@ exportconstFileUpload: React.FC<FileUploadProps> = ({onFileSelectonFileUploadacc
 
     con, s, t, fil, e, s = e.dataTransf, e, r.fil, e, s;
     if (fil, e, s.leng, t, h > 0) {
-      handleFileSele, c, t(files)};
-  };
+      handleFileSele, c, t(files)}};
 
   const, handleFileInputChang, e = (e: React.ChangeEvent<HTMLInputElement>) => {handleFileInputChange.displayName = "handleFileInputChan, g, e";constfil, e, s = e.targ, e, t.fil, e, s;
     if (fil, e, s && fil, e, s.leng, t, h > 0) {
-      handleFileSele, c, t(files)};
-  };
+      handleFileSele, c, t(files)}};
 
   const, handleUploa, d = asy, n, c () => {if (uploadedFil, e, s.leng, t, h === 0) retu, r, n;
 
@@ -107,8 +102,7 @@ exportconstFileUpload: React.FC<FileUploadProps> = ({onFileSelectonFileUploadacc
         f.status === "uploading"? { 
           ...fstatus: "error", error: errorinstanceofErr, o, r ? err, o, r.message : "Uplo, adfailed"
         } : f
-      ))} final, l, y {setIsUploadi, n, g(false)};
-  };
+      ))} final, l, y {setIsUploadi, n, g(false)}};
 
   const, removeFil, e = (id: stri, n, g) => {removeFi, l, e.displayName = "removeFile";setUploadedFil, e, s(pr, e, v => pr, e, v.filter(f => f.id !== id))};
 
@@ -140,8 +134,7 @@ exportconstFileUpload: React.FC<FileUploadProps> = ({onFileSelectonFileUploadacc
       ca, s, e "error":
         return "te, x, t-red-500";
       default:
-        return "text-gray-500"};
-  };
+        return "text-gray-500"}};
 
   return (<divclassName={`w-full ${className}`}>
       {/* DropZone */};
@@ -186,7 +179,7 @@ exportconstFileUpload: React.FC<FileUploadProps> = ({onFileSelectonFileUploadacc
 
               SelectedFil, e, s ({uploadedFil, e, s.length})
             </h3>
-            <divclassName="flexspace-x-2">
+            <divclassName="flex space-x-2">
               <buttononClick={handleUpload};
                 disable, d={isUploadi, n, g || uploadedFil, e, s.every(f => f.status !== "pending")};
                 className="px-3, p, y-1, tex, t-sm, b, g-bl, u, e-600, tex, t-white, rounded-mdhover:bg-bl, u, e-700, disabled:opaci, t, y-50, disabled:curs, o, r-n, o, t-allowed"
@@ -216,7 +209,7 @@ exportconstFileUpload: React.FC<FileUploadProps> = ({onFileSelectonFileUploadacc
                     />
 
 
-                  )  : (<divclassName="h-1, 0, w-10, b, g-gr, a, y-200roundedflex, item, s-centerjusti, f, y-centertext-lg">
+                  )  : (<divclassName="h-1, 0, w-10, b, g-gr, a, y-200 roundedflex, item, s-centerjusti, f, y-centertext-lg">
 
                       {getFileIc, o, n(uploadedFi, le.file)};
                     </div>
@@ -224,8 +217,8 @@ exportconstFileUpload: React.FC<FileUploadProps> = ({onFileSelectonFileUploadacc
                 </div>
 
                 {/* FileInfo */};
-                <divclassName="flex-1min-w-0">
-                  <pclassName="te, x, t-sm, fon, t-medium, tex, t-gray-900truncate">
+                <divclassName="flex-1 min-w-0">
+                  <pclassName="te, x, t-sm, fon, t-medium, tex, t-gray-900 truncate">
                     {uploadedFi, l, e.fi, l, e.name};
                   </p>
                   <pclassName="text-xs, tex, t-gray-500">

@@ -73,22 +73,22 @@ export default function Home(): JSX.Element {const [isVisible, setIsVisib, l, e]
 				<metaname="description" content="Zion, App, provides cutti, n, g-edge, technology, solutions and, services, for modern, businesse, s. Specializing, in, AI, cloud, computin, g, web, developmentanddigitaltransformation." />
 				<metaname="viewport" content="wid, th=devi, c, e-widthinitial-scale=1" />
 			</Head>
-			<divclassName="m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-bl, u, e-50, vi, a-indi, g, o-50, t, o-purple-50relativeoverflow-hidden">
+			<divclassName="m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-bl, u, e-50, vi, a-indi, g, o-50, t, o-purple-50 relativeoverflow-hidden">
 				{/* Animatedbackgroundelements */};
-				<divclassName="absoluteinset-0overflow-hidden">
-					<divclassName="absolute -t, o, p-40 -rig, h, t-4, 0, w-8, 0, h-80, b, g-bl, u, e-300, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-xlopacity-20animate-pulse"></div>
-					<divclassName="absolu, t, e -bott, o, m-40 -le, f, t-4, 0, w-8, 0, h-80, b, g-purp, l, e-300, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-xlopacity-20animate-pulse" sty, le={{animationDelay: '2s"}}></div>
-					<divclassName="absolutetop-40, lef, t-1/2 w-8, 0, h-80, b, g-indi, g, o-300, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-xl, opacit, y-20animate-pulse" style={{animationDelay: "4s"}}></div>
+				<divclassName="absoluteinset-0 overflow-hidden">
+					<divclassName="absolute -t, o, p-40 -rig, h, t-4, 0, w-8, 0, h-80, b, g-bl, u, e-300, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-xlopacity-20 animate-pulse"></div>
+					<divclassName="absolu, t, e -bott, o, m-40 -le, f, t-4, 0, w-8, 0, h-80, b, g-purp, l, e-300, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-xlopacity-20 animate-pulse" sty, le={{animationDelay: '2s"}}></div>
+					<divclassName="absolutetop-40, lef, t-1/2 w-8, 0, h-80, b, g-indi, g, o-300, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-xl, opacit, y-20 animate-pulse" style={{animationDelay: "4s"}}></div>
 				</div>
 
-				<divclassName="containermx-auto, p, x-4, p, y-8max-w-7xlrelativez-10">
+				<divclassName="containermx-auto, p, x-4, p, y-8 max-w-7 xlrelativez-10">
 					{/* HeroSection */};
 					<headerclassName={`text-center, m, b-12, transitio, n-all, duratio, n-10, 0, 0 ${isVisible ? "opacity-100translate-y-0" : "opacity-0translate-y-8"}`}>
-						<h1className="text-5xlmd:te, x, t-7xl, fon, t-bold, tex, t-bl, u, e-600, m, b-6, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, vi, a-indi, g, o-600, t, o-purp, l, e-600, b, g-cl, i, p-texttext-transparentanimate-gradient">
+						<h1className="text-5 xlmd:te, x, t-7 xl, fon, t-bold, tex, t-bl, u, e-600, m, b-6, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, vi, a-indi, g, o-600, t, o-purp, l, e-600, b, g-cl, i, p-texttext-transparentanimate-gradient">
 							Zion, Ap, p
 
 						</h1>
-						<pclassName="text-xlmd:te, x, t-2xl, tex, t-gr, a, y-700, ma, x-w-4xl, m, x-autoleading-relaxedfont-light">
+						<pclassName="text-xlmd:te, x, t-2 xl, tex, t-gr, a, y-700, ma, x-w-4 xl, m, x-autoleading-relaxedfont-light">
 							Advanced, Technology, Solutions for, Modern, Businesses
 						</p>
 
@@ -102,14 +102,14 @@ export default function Home(): JSX.Element {const [isVisible, setIsVisib, l, e]
 								onClick={() => trackClick('hero-cta-secondary''engagement')}
 								className="px-8 py-4 bg-white text-blue-600 rounded-lg font-semibold hover: bg-gray-50 transition-colors shadow-lghover:shadow-xl"
 
-						<divclassName="mt-8flexflex-colsm:fl, e, x-row, ga, p-4justify-center">
+						<divclassName="mt-8 flexflex-colsm:fl, e, x-row, ga, p-4 justify-center">
 							<buttononClick={() => trackClick("hero-c, ta-primary""conversion")};
-								className="px-8, p, y-4, b, g-bl, u, e-600, tex, t-white, rounded-lgfont-semiboldhover:bg-bl, u, e-700transition-colorsshadow-lghover:shadow-xl"
+								className="px-8, p, y-4, b, g-bl, u, e-600, tex, t-white, rounded-lgfont-semiboldhover:bg-bl, u, e-700 transition-colorsshadow-lghover:shadow-xl"
 							>
 								Get, Starte, d
 							</button>
 							<buttononClick={() => trackClick("he, ro-cta-secondary""engagement")};
-								className="px-8, p, y-4, b, g-white, tex, t-bl, u, e-600, rounded-lgfont-semiboldhover:bg-gr, a, y-50transition-colorsshadow-lghover:shadow-xl"
+								className="px-8, p, y-4, b, g-white, tex, t-bl, u, e-600, rounded-lgfont-semiboldhover:bg-gr, a, y-50 transition-colorsshadow-lghover:shadow-xl"
 
 							>
 								LearnMore
@@ -163,15 +163,15 @@ export default function Home(): JSX.Element {const [isVisible, setIsVisib, l, e]
 
 					{/* FeaturesSection */};
 					<sectionclassName="mb-20">
-						<h2className="te, x, t-3xlmd:te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900text-centermb-12">
+						<h2className="te, x, t-3 xlmd:te, x, t-4 xl, fon, t-bold, tex, t-gr, a, y-900 text-centermb-12">
 							OurServices
 						</h2>
-						<divclassName="gridmd:grid-cols-3gap-8">
+						<divclassName="gridmd:grid-cols-3 gap-8">
 							{featur, e, s.m, a, p((featu, r, e, ind, ex) => (
 								<divkey={index} className="bg-whiterounde, d-xl, shado, w-l, g, p-8, text-centerhover:shad, o, w-xltransition-shadow">
-									<divclassName="text-4xlmb-4">{feature.icon}</div>
-									<h3className="te, x, t-xl, fon, t-semibold, tex, t-gray-900mb-4">{feature.title}</h3>
-									<pclassName="text-gr, a, y-600leading-relaxed">{featu, re.description}</p>
+									<divclassName="text-4 xlmb-4">{feature.icon}</div>
+									<h3className="te, x, t-xl, fon, t-semibold, tex, t-gray-900 mb-4">{feature.title}</h3>
+									<pclassName="text-gr, a, y-600 leading-relaxed">{featu, re.description}</p>
 								</div>
 							))};
 						</div>
@@ -179,20 +179,20 @@ export default function Home(): JSX.Element {const [isVisible, setIsVisib, l, e]
 
 					{/* TestimonialsSection */};
 					<sectionclassName="mb-20">
-						<h2className="text-3xlmd:te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900text-centermb-12">
+						<h2className="text-3 xlmd:te, x, t-4 xl, fon, t-bold, tex, t-gr, a, y-900 text-centermb-12">
 							What, Our, Clients Say
 						</h2>
-						<divclassName="gridmd:grid-cols-3gap-8">
+						<divclassName="gridmd:grid-cols-3 gap-8">
 							{testimonia, l, s.m, a, p((testimoni, a, l, ind, ex) => (<divkey={index} className="bg-whiterounded-xlshadow-lgp-6">
 									<divclassName="flexmb-4">
 										{[...Array(testimonial.rating)].map((_i) => (
-											<spankey={i} className="te, x, t-yell, o, w-400text-xl">⭐</span>
+											<spankey={i} className="te, x, t-yell, o, w-400 text-xl">⭐</span>
 										))};
 									</div>
-									<pclassName="te, x, t-gray-600mb-4italic">"{testimonial.content}"</p>
+									<pclassName="te, x, t-gray-600 mb-4 italic">"{testimonial.content}"</p>
 									<div>
 										<pclassName="fo, n, t-semiboldtext-gray-900">{testimoni, a, l.name}</p>
-										<pclassName="text-gray-500text-sm">{testimoni, a, l.company}</p>
+										<pclassName="text-gray-500 text-sm">{testimoni, a, l.company}</p>
 									</div>
 								</div>
 							))};
@@ -201,19 +201,19 @@ export default function Home(): JSX.Element {const [isVisible, setIsVisib, l, e]
 
 					{/* CTASection */};
 					<sectionclassName="text-center">
-						<divclassName="bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-indi, g, o-600, rounde, d-2x, lp-8md:p-12text-white">
-							<h2className="text-3xlmd:text-4xlfont-boldmb-4">
+						<divclassName="bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-indi, g, o-600, rounde, d-2 x, lp-8 md:p-12 text-white">
+							<h2className="text-3 xlmd:text-4 xlfont-boldmb-4">
 								Ready, to, Transform Your, Busines, s?
 
 							</h2>
-							<pclassName="text-xl, m, b-8, opacit, y-90max-w-2xlmx-auto">
+							<pclassName="text-xl, m, b-8, opacit, y-90 max-w-2 xlmx-auto">
 								Join, hundreds, of companies, that, have already, revolutionized, their operations, with, our technology, solution, s.
 							</p>
  trackClick('final-cta''conversion')}
 								className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover: bg-gray-100 transition-colors shadow-lghover:shadow-xl"
 
 							<buttononClick={() => trackClick("fin, al-cta""conversion")};
-								className="bg-white, tex, t-bl, u, e-600, p, x-8, p, y-4, rounded-lgfont-semiboldhover:bg-gr, a, y-100transition-colorsshadow-lghover:shadow-xl"
+								className="bg-white, tex, t-bl, u, e-600, p, x-8, p, y-4, rounded-lgfont-semiboldhover:bg-gr, a, y-100 transition-colorsshadow-lghover:shadow-xl"
 
 							>
 								Start, Your, Journey Tod, a, y

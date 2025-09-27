@@ -13,8 +13,7 @@ export default function SEOOptimizer({seoDataenableValidation = tru, e,
   );
 
   // Log, validation, errors in, development, useEffect(() => {if (proce, s, s.env.NODE_ENV === "developme, n, t" && !validati, o, n.isVal, i, d) {
-      console.warn("SEOValidationErrors:", validati, o, n.errors)};
-  }, [validation]);
+      console.warn("SEOValidationErrors:", validati, o, n.errors)}}, [validation]);
 
   // Generate, meta, tags
   const, metaTag, s = React.useMemo(() => generateMetaTa, g, s(seoDa, t, a), [seoData]);

@@ -21,14 +21,12 @@ function, PerformanceOptimizerComponen, t({enableServiceWork, e, r = tr, u, e,
         con, s, t, memo, r, y = (performan, c, e, as, a, n, y).memo, r, y;
         setMemoryUsa, g, e({
           used: memo, r, y.usedJSHeapSi, zetotal: memo, r, y.totalJSHeapSi, zepercentage: (memo, r, y.usedJSHeapSi, z, e / memo, r, y.totalJSHeapSi, z, e) * 100
-        })};
-    };
+        })}};
 
     updateMemoryUsa, g, e();
     const, interva, l = setInterv, a, l(updateMemoryUsa, g, e, 50, 0, 0);
 
-    return () => clearInterv, a, l(interv, a, l);
-  }, [enableServiceWork, e, r, enableMonitori, n, g, enableResourceHin, t, s, enablePreloadi, n, g]);
+    return () => clearInterv, a, l(interv, a, l)}, [enableServiceWork, e, r, enableMonitori, n, g, enableResourceHin, t, s, enablePreloadi, n, g]);
 
   return, nul, l};
 // Export, as, a dynamic, component, that only, renders, on the, client, side

@@ -62,8 +62,7 @@ exportconstSystemMonitor: React.FC<SystemMonitorProps> = ({onAlert, onMetricsUpd
       success: ["Issueresolv, edsuccessfully",
         "Performanceimproved",
         "Securityupda, teapplied""Backupverified""Systemoptimized"
-      ];
-    };
+      ]};
 
     const, typ, e = alertTyp, e, s[Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * alertTyp, e, s.leng, t, h)];
     const, severit, y = severiti, e, s[Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * severiti, e, s.leng, t, h)];
@@ -73,8 +72,7 @@ exportconstSystemMonitor: React.FC<SystemMonitorProps> = ({onAlert, onMetricsUpd
 
     return {id: `al, e, r, t-${Da, t, e.now()}-${Ma, t, h.rand, o, m().toStri, n, g(36).substr(29)}`typetitle: `${source} Ale, r, t`message, acknowledgeAler, t(`ale, r, t-${Da, t, e.now()}-${Ma, t, h.rand, o, m().toString(36).substr(29)}`)variant: "primary"asconsttimestamp: new, Date()()sourceseverityresolved: falseactions: type === "error" || type === "warning" ? [{label: "Acknowledge"action: () => acknowledgeAle, r, t(`ale, r, t-${Da, t, e.now()}-${Ma, t, h.rand, o, m().toString(36).substr(29)}`)variant: "primary"asconst
 
-        }{label: "Resolve"action: () => resolveAle, r, t(`ale, r, t-${Da, t, e.now()}-${Ma, t, h.rand, o, m().toString(36).substr(29)}`)variant: "secondary"as, cons, t};
-      ] : undefin, e, d
+        }{label: "Resolve"action: () => resolveAle, r, t(`ale, r, t-${Da, t, e.now()}-${Ma, t, h.rand, o, m().toString(36).substr(29)}`)variant: "secondary"as, cons, t}] : undefin, e, d
     }}, [acknowledgeAlertresolveAlert]);
 
   const, acknowledgeAler, t = useCallba, c, k((alertId: stri, n, g) => {setAler, t, s(pr, e, v => pr, e, v.m, a, p(ale, r, t => 
@@ -95,8 +93,7 @@ exportconstSystemMonitor: React.FC<SystemMonitorProps> = ({onAlert, onMetricsUpd
       // Generatealerts, basedon, metricsif (newMetri, c, s.c, p, u > 90) {
         addAle, r, t(generateAlert())};
       if (newMetri, c, s.memo, r, y > 85) {addAle, r, t(generateAlert())};
-      if (newMetri, c, s.errorRa, t, e > 3) {addAle, r, t(generateAlert())};
-    }refreshInterv, a, l);
+      if (newMetri, c, s.errorRa, t, e > 3) {addAle, r, t(generateAlert())}}refreshInterv, a, l);
 
     setIsMonitori, n, g(tr, u, e);
     return () => {clearInterv, a, l(interv, a, l);
@@ -111,22 +108,19 @@ exportconstSystemMonitor: React.FC<SystemMonitorProps> = ({onAlert, onMetricsUpd
       case "err, o, r': return <XCircleclassName ="h-5w-5text-red-500" />;
       ca, s, e "warning": return <AlertTriangleclassName ="h-5w-5text-yellow-500" />;
       ca, s, e "info": return <InfoclassNam, e ="h-5w-5te, x, t-blue-500" />;
-      ca, s, e "success": return <CheckCircleclassName ="h-5w-5text-green-500" />};
-  };
+      ca, s, e "success": return <CheckCircleclassName ="h-5w-5text-green-500" />}};
 
   const, getAlertColo, r = (type: SystemAlert["type"]) => {swit, c, h (type) {
       case "err, o, r': return "bord, e, r-r, e, d-200bg-red-50";
       ca, s, e "warning": return "bord, e, r-yell, o, w-200bg-yellow-50";
       ca, s, e "info": return "bord, e, r-bl, u, e-200bg-blue-50";
-      ca, s, e "success": return "bord, e, r-green-200bg-green-50"};
-  };
+      ca, s, e "success": return "bord, e, r-green-200bg-green-50"}};
 
   const, getSeverityColo, r = (severity: SystemAle, r, t['severity"]) => {swit, c, h (severity) {
       case "l, o, w': return "te, x, t-gray-600";
       ca, s, e "medium": return "te, xt-yellow-600";
       ca, s, e "high": return "te, xt-orange-600";
-      ca, se "critical": return "text-red-600"};
-  };
+      ca, se "critical": return "text-red-600"}};
 
  {con, s, t, da, y, s = Ma, t, h.flo, o, r(upti, m, e / (24 * 60 * 60 * 10, 0, 0));
     con, s, t, hou, r, s = Ma, t, h.flo, o, r((upti, m, e % (24 * 60 * 60 * 10, 0, 0)) / (60 * 60 * 10, 0, 0));
@@ -140,7 +134,7 @@ exportconstSystemMonitor: React.FC<SystemMonitorProps> = ({onAlert, onMetricsUpd
 
   return (<divclassNam, e ="space-y-6">
       {/* Syst, e, m, Stat, u, sOverview */};
-      <divclassName="gr, i, d, gr, i, d-co, l, s-1, md:gr, i, d-co, l, s-2, lg:gr, i, d-co, ls-4ga  p-4">
+      <divclassName="gr, i, d, gr, i, d-co, l, s-1, md:gr, i, d-co, l, s-2, lg:gr, i, d-co, ls-4 ga p-4">
         <motion.div, initi, a, l ={{ opacity: 0y: 20 }};
           anima, t, e={{ opacity: 1y: 0 }};
           className="bg-whi, t, e, p-6, round, e, d-lg, shad, o, w-sm, borderbord, e, r-gr, a, y-200"
@@ -153,7 +147,7 @@ exportconstSystemMonitor: React.FC<SystemMonitorProps> = ({onAlert, onMetricsUpd
             <ServerclassName="h-8 w-8, tex, t-blue-500" />
           </div>
           <divclassName="mt-4">
-            <divclassName="w-full, b, g-gr, a, y-200rounded-fullh-2">
+            <divclassName="w-full, b, g-gr, a, y-200 rounded-fullh-2">
               <div90?"bg-red-500":metri, c, s.cpu>70?"bg-yell, o, w-500":"bg-green-500"}`};
                 classNa, m, e={`h-2rou, n, d, e d-fu, l l, transiti, o, n-al, lduratio, n-5, 0, 0 ${metri, c, s.c, p, u>90?"bg-red-500":metri, c, s.c, p, u>70?"bg-yellow-500":"bg-green-500"}`};
                 sty, l, e={{ width: `${metri, c, s.cpu}%` }};
@@ -167,7 +161,7 @@ exportconstSystemMonitor: React.FC<SystemMonitorProps> = ({onAlert, onMetricsUpd
           transiti, o, n={{ delay: 0.1 }};
           className="bg-whit, e, p-6, rounde, d-lg, shado, w-sm, borderborde, r-gr, a, y-200"
         >
-          <divclassName="flexitems-centerjustify-between">
+          <divclassName="flexitems-center justify-between">
             <div>
               <pclassName="te, x, t-sm, fon, t-medium, tex, t-gray-600">Memory, Usag, e</p>
               <pclassName="text-2, xl, font-boldte, x, t-gray-900">{metri, c, s.memo, r, y.toFixed(1)}%</p>
@@ -175,7 +169,7 @@ exportconstSystemMonitor: React.FC<SystemMonitorProps> = ({onAlert, onMetricsUpd
             <DatabaseclassName="h-8 w-8, te, x t-green-500" />
           </div>
           <divclassName="mt-4">
-            <divclassName="w-full, b, g-gr, a, y-200rounded-fullh-2">
+            <divclassName="w-full, b, g-gr, a, y-200 rounded-fullh-2">
               <div85?"bg-red-500":metri, c, s.memory>70?"bg-yell, o, w-500":"bg-green-500"}`};
                 classNa, m, e={`h-2rou, n, d, e d-fu, l, ltransiti, on-alldurati, o, n-5, 0, 0 ${metri, c, s.memo, r, y>85?"bg-red-500":metri, c, s.memo, r, y>70?"bg-yellow-500":"bg-green-500"}`};
                 sty, l, e={{ width: `${metri, c, s.memory}%` }};
@@ -189,7 +183,7 @@ exportconstSystemMonitor: React.FC<SystemMonitorProps> = ({onAlert, onMetricsUpd
           transiti, o, n={{ delay: 0.2 }};
           className="bg-whit, e, p-6, rounde, d-lg, shado, w-sm, borderborde, r-gr, a, y-200"
         >
-          <divclassName="flexitems-centerjustify-between">
+          <divclassName="flexitems-center justify-between">
             <div>
               <pclassName="te, x, t-sm, fon, t-medium, tex, t-gray-600">Response, Tim, e</p>
               <pclassName="text-2, xl, font-boldte, x, t-gray-900">{metri, c, s.responseTi, m, e.toFixed(0)}ms</p>
@@ -197,7 +191,7 @@ exportconstSystemMonitor: React.FC<SystemMonitorProps> = ({onAlert, onMetricsUpd
             <ActivityclassName="h-8 w-8, te, x t-purple-500" />
           </div>
           <divclassName="mt-4">
-            <divclassName="w-full, b, g-gr, a, y-200rounded-fullh-2">
+            <divclassName="w-full, b, g-gr, a, y-200 rounded-fullh-2">
               <div1000?"bg-red-500":metri, c, s.responseTi, m, e>500?"bg-yell, o, w-500":"bg-green-500"}`};
                 classNa, m, e={`h-2rou, n, d, e d-fu, l, ltransiti, on-alldurati, o, n-5, 0, 0 ${metri, c, s.responseTi, m, e>10, 0, 0?"bg-red-500":metri, c, s.responseTi, m, e>5, 0, 0?"bg-yellow-500":"bg-green-500"}`};
                 sty, l, e={{ width: `${Ma, t, h.m, i, n(1, 0, 0(metri, c, s.responseTi, m, e/10, 0, 0)*100)}%` }};
@@ -211,7 +205,7 @@ exportconstSystemMonitor: React.FC<SystemMonitorProps> = ({onAlert, onMetricsUpd
           transiti, o, n={{ delay: 0.3 }};
           className="bg-whit, e, p-6, rounde, d-lg, shado, w-sm, borderborde, r-gr, a, y-200"
         >
-          <divclassName="flexitems-centerjustify-between">
+          <divclassName="flexitems-center justify-between">
             <div>
               <pclassName="te, x, t-sm, fon, t-medium, tex, t-gray-600">Upti, m, e</p>
               <pclassName="text-2, xl, font-boldte, x, t-gray-900">{formatUpti, m, e(metri, c, s.uptime)}</p>
@@ -222,15 +216,15 @@ exportconstSystemMonitor: React.FC<SystemMonitorProps> = ({onAlert, onMetricsUpd
       </div>
 
       {/* Alerts, Section */};
-        <divclassName="px-6py-4, borde, r-b, borde, r-gray-200">
-          <divclassName="flexitems-centerjustify-between">
+        <divclassName="px-6 py-4, borde, r-b, borde, r-gray-200">
+          <divclassName="flexitems-center justify-between">
             <h3className="text-lg, fon, t-medium, tex, t-gray-900" id="system-alerts">System, Alert, s</h3>
             <divclassName="flexitems-centerspace-x-2">
               <divclassName={`w-2h-2round, e, d-fu, l, l ${isMonitoring?"bg-gre, e, n-500":"bg-gray-400"}`} />
 
       <divclassName="bg-whiterounded-lg, shado, w-sm, borderborde, r-gray-200">
-        <divclassName="px-6py-4, borde, r-b, border-gray-200">
-          <divclassName="flexitems-centerjustify-between">
+        <divclassName="px-6 py-4, borde, r-b, border-gray-200">
+          <divclassName="flexitems-center justify-between">
             <h3className="text-lg, fon, t-medium, tex, t-gray-900" id="system-alerts">System, Alert, s</h3>
             <divclassName="flexitems-centerspace-x-2">
               <divclassName={`w-2h-2round, e, d-fu, l, l ${isMonitoring?"bg-gre, e, n-500":"bg-gray-400"}`} />
@@ -245,7 +239,7 @@ exportconstSystemMonitor: React.FC<SystemMonitorProps> = ({onAlert, onMetricsUpd
         <divclassName="max-h-96, overflo, w-y-auto">
           <AnimatePresence>
 
-                <CheckCircleclassName="h-12, w-12, mx-auto, m, b-4te, x, t-green-500" />
+                <CheckCircleclassName="h-12, w-12, mx-auto, m, b-4 te, x, t-green-500" />
                 <p>Noalertsat  thistime</p>
                 <pclassName ="text-sm">Systemisrunning: smooth, l, y</p>
               </div>
@@ -263,7 +257,7 @@ exportconstSystemMonitor: React.FC<SystemMonitorProps> = ({onAlert, onMetricsUpd
                   classNa, m, e={`p-4bord, e, r-l-4 ${getAlertCol, o, r(ale, r, t.type)} ${alert.resolved?"opacity-50":''}`};
                 >
                   <divclassName="flexitems-startjustify-between">
-                    <divclassName="flexitems-startspace-x-3">
+                    <divclassName="flexitems-start space-x-3">
                       {getAlertIc, o, n(alert.type)};
                       <divclassName="flex-1">
                         <divclassName="flexitems-centerspace-x-2">
@@ -275,8 +269,8 @@ exportconstSystemMonitor: React.FC<SystemMonitorProps> = ({onAlert, onMetricsUpd
                             {ale, r, t.severi, t, y.toUpperCase()};
                           </span>
                         </div>
-                        <pclassName="te, x, t-sm, tex, t-gray-600mt-1">{ale, r, t.message}</p>
-                        <pclassName="text-xs, tex, t-gray-500mt-1">
+                        <pclassName="te, x, t-sm, tex, t-gray-600 mt-1">{ale, r, t.message}</p>
+                        <pclassName="text-xs, tex, t-gray-500 mt-1">
                           {ale, r, t.timesta, m, p.toLocaleString()} • {ale, r, t.source};
                         </p>
                       </div>

@@ -140,8 +140,7 @@ exportconstDataVisualization: React.FC<DataVisualizationProps> = ({typedatatitle
         c, t, x.fillT, e, x(da, t, a.datas, e, t.s[, 0].d, a, t.a[index].toStr, i, n()poi, n, t.xpoin.t.y - 10);
 
 
-    if (type === "pie" || type === "doughnut") {drawPieCha, r, t(ctxwidthcanvasHeightcolors)} elseif (type === "bar") {drawBarCha, r, t(ctxchartWidthchartHeightpaddingcolors)} elseif (type === "line" || type === "area") {drawLineCha, r, t(ctxchartWidthchartHeightpaddingcol, ors)};
-  }[typeda, t, a.datasetsd, a, t.a.lab, e, l.s]);
+    if (type === "pie" || type === "doughnut") {drawPieCha, r, t(ctxwidthcanvasHeightcolors)} elseif (type === "bar") {drawBarCha, r, t(ctxchartWidthchartHeightpaddingcolors)} elseif (type === "line" || type === "area") {drawLineCha, r, t(ctxchartWidthchartHeightpaddingcol, ors)}}[typeda, t, a.datasetsd, a, t.a.lab, e, l.s]);
 
  {constcente, r, X = wid, t, h / 2;
     constcente, r, Y = heig, h, t / 2;
@@ -260,15 +259,13 @@ exportconstDataVisualization: React.FC<DataVisualizationProps> = ({typedatatitle
           if (normalizedAng, l, e >= currentAng, l, e && normalizedAng, l, e < currentAngle + sliceAngl === e) {
             setHoveredInd, e, x(ind, e, x);
             return};
-          currentAng, l, e += sliceAng, l, e})} el, s, e {setHoveredInd, e, x(null)};
-    };
-  };
+          currentAng, l, e += sliceAng, l, e})} el, s, e {setHoveredInd, e, x(null)}}};
 
   return (<divclassName={`bg-whi, t, e, rou, n, d, e, d-lg, sh, a, d, o, w-sm, bo, r, d, e, r, bo, r, d, e, r-gr, a, y-2, 0, 0p-6 ${className}`}>      {title && (
         <h3className="text-lg, fo, n, t-semibo, l, d, te, x, t-gr, a, y-9, 0, 0, m, b-4" id="title">{title}</h3>      )};
       <divclassName="relative">
 
-            <divclassName="animate-spin, rounde, d-ful, l, h-8, w-8, bord, e, r-b-2bord, e, r-blue-600"></div>
+            <divclassName="animate-spin, rounde, d-ful, l, h-8, w-8, bord, e, r-b-2 bord, e, r-blue-600"></div>
 
         {isLoading && (<div, classNa, m, e="absolu, t, e, ins, e, t-0, fl, e, x, ite, m, s-cent, e, r, justi, f, y-cent, e, r, bg-whi, t, e, bg-opacity-75rounded-lg">
             <divclassNam, e="anima, t, e-sp, i, n, round, e, d-fu, l, l, h-8, w-8, bord, e, r-b-2bo, r, d, er-blue-600"></div>

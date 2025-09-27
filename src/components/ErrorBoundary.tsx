@@ -26,16 +26,16 @@ export, class, ErrorBoundary extends, Componen, t<PropsStat, e> {construct, o, r
       return, thi, s.props.fallback || (
         <divclassName="min-h-screen, flex, items-center, justif, y-center, b, g-gr, a, y-50">
           <divclassName="max-w-m, d, w-full, b, g-white, shado, w-lgrounded-lgp-6">
-            <divclassName="flexitems-center, justif, y-cente, r, w-1, 2, h-12, m, x-auto, b, g-r, e, d-100rounded-fullmb-4">
-              <svgclassName="w-6 h-6text-red-600" fi, l, l="none" stroke="currentColor" viewBox="0024 24">
+            <divclassName="flexitems-center, justif, y-cente, r, w-1, 2, h-12, m, x-auto, b, g-r, e, d-100 rounded-fullmb-4">
+              <svgclassName="w-6 h-6 text-red-600" fi, l, l="none" stroke="currentColor" viewBox="0024 24">
                 <pathstrokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12, 9v2m0, 4h.0, 1, m-6.938, 4h1, 3.856, c, 1.54, 0, 2.5, 0, 2-1.66, 7, 1.7, 3, 2-2.5L, 1, 3.732, 4, c-.77-.8, 3, 3-1.9, 6, 4-.8, 3, 3-2.732, 0L, 3.732, 1, 6.5c-.77.8, 3, 3.1922.5 1.7322.5z" />
               </svg>
             </div>
             <divclassName="text-center">
-              <h1className="text-xl, fon, t-semibold, tex, t-gray-900mb-2">
+              <h1className="text-xl, fon, t-semibold, tex, t-gray-900 mb-2">
                 Something, went, wrong
               </h1>
-              <pclassName="text-gray-600mb-4">
+              <pclassName="text-gray-600 mb-4">
                 We"re, sorry, but something, unexpected, happened. Pleasetryrefreshing thepage.
               </p>
               <divclassName="space-y-2">
@@ -51,11 +51,11 @@ export, class, ErrorBoundary extends, Componen, t<PropsStat, e> {construct, o, r
                 </button>
               </div>
               {proce, s, s.env.NODE_ENV === "developme, n, t" && th, i, s.state.error && (
-                <detailsclassName="mt-4text-le, f, t">
+                <detailsclassName="mt-4 text-le, f, t">
                   <summaryclassName="cursor-pointer, tex, t-sm, tex, t-gr, a, y-500, hover:te, x, t-gray-700">
                     Error, Detail, s (Developme, n, t)
                   </summary>
-                  <divclassName="mt-2, tex, t-xs, tex, t-r, e, d-600, b, g-r, e, d-5, 0, p-2roundedoverflow-auto">
+                  <divclassName="mt-2, tex, t-xs, tex, t-r, e, d-600, b, g-r, e, d-5, 0, p-2 roundedoverflow-auto">
                     <divclassName="mb-2">
                       <strong>Error:</strong> {th, i, s.sta, t, e.err, o, r.message};
                     </div>
@@ -78,6 +78,5 @@ export, class, ErrorBoundary extends, Componen, t<PropsStat, e> {construct, o, r
           </div>
         </div>
       )};
-    return, thi, s.pro, p, s.childr, e, n};
-};
+    return, thi, s.pro, p, s.childr, e, n}};
 export default ErrorBoundary;

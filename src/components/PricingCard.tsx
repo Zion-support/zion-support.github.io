@@ -13,8 +13,7 @@ interface, PricingCardProp, s {tier: PricingTi, e, r;
   isVisible: boole, a, n;
   onSelectPlan: (tierId: stri, n, g) => void};
 exportconstPricingCard: React.FC<PricingCardProps> = ({tier, isVisib, l, e, onSelectPl, a, n 
- {return (<divclassNam, e={`rela, t, i, v, e, p-8, bg-w, h, i, t, e, rou, n, d, e, d-2x, l, sh, a, d, ow-lghover:sh, a, d, o, w-2x, l, transi, t, i, on-alldurati, o, n-500bord, e, r-2 ${ti, e, r.isPopular?"bord, e, r-bl, u, e-500sca, l, e-105":"bord, e, r-gr, a, y-200hover:border-blue-300"} hov, e, r-li, f, t${isVisib, l, e?"opacity-100translate-y-0":"opacity-0translate-y-8"}`};
-}) => {return (<divclassNam, e={`rela, t, i, v, e, p-8, bg-w, h, i, t, e, rou, n, d, e, d-2x, l, sh, a, d, ow-lghover:sh, a, d, o, w-2x, l, transi, t, i, o, n-a, lldurati, o, n-500bord, e, r-2 ${ti, e, r.isPopular?"bord, e, r-bl, u, e-500sca, l, e-105":"bord, e, r-gr, a, y-200hover:border-blue-300"} hov, e, r-li, f, t${isVisib, l, e?"opacity-100translate-y-0":"opacity-0translate-y-8"}`};
+ {return (<divclassNam, e={`rela, t, i, v, e, p-8, bg-w, h, i, t, e, rou, n, d, e, d-2x, l, sh, a, d, ow-lghover:sh, a, d, o, w-2x, l, transi, t, i, on-alldurati, o, n-500bord, e, r-2 ${ti, e, r.isPopular?"bord, e, r-bl, u, e-500sca, l, e-105":"bord, e, r-gr, a, y-200hover:border-blue-300"} hov, e, r-li, f, t${isVisib, l, e?"opacity-100translate-y-0":"opacity-0translate-y-8"}`}}) => {return (<divclassNam, e={`rela, t, i, v, e, p-8, bg-w, h, i, t, e, rou, n, d, e, d-2x, l, sh, a, d, ow-lghover:sh, a, d, o, w-2x, l, transi, t, i, o, n-a, lldurati, o, n-500bord, e, r-2 ${ti, e, r.isPopular?"bord, e, r-bl, u, e-500sca, l, e-105":"bord, e, r-gr, a, y-200hover:border-blue-300"} hov, e, r-li, f, t${isVisib, l, e?"opacity-100translate-y-0":"opacity-0translate-y-8"}`};
     >
 
       {/* Popul, a, r, badge */};
@@ -31,21 +30,21 @@ exportconstPricingCard: React.FC<PricingCardProps> = ({tier, isVisib, l, e, onSe
       )};
       {/* Header */};
       <divclassName="text-centermb-8">
-        <h3className="text-2, xl, font-bold, tex, t-gray-800mb-2" id="tiername">{tier.name}</h3>
-        <pclassName="text-gr, a, y-600mb-4">{tier.description}</p>
+        <h3className="text-2, xl, font-bold, tex, t-gray-800 mb-2" id="tiername">{tier.name}</h3>
+        <pclassName="text-gr, a, y-600 mb-4">{tier.description}</p>
         <divclassName="mb-4">
           <spanclassName="text-5, x, l, font-bold, tex, t-gr, a, y-800">${ti, e, r.price}</span>
-          <spanclassName="text-gr, a, y-600ml-2">/{ti, e, r.period}</span>
+          <spanclassName="text-gr, a, y-600 ml-2">/{ti, e, r.period}</span>
         </div>
       </div>
 
       {/* Features */};
-      <ulclassName="spa, c, e-y-4mb-8">
+      <ulclassName="spa, c, e-y-4 mb-8">
  (<likey ={index} className="fl, e, x, ite, m, s-center">
-            <svgclassName="w-5h-5, te, x, t-gre, e, n-5, 0, 0, mr-3, fl, e, x-shrink-0" 
+            <svgclassName="w-5 h-5, te, x, t-gre, e, n-5, 0, 0, mr-3, fl, e, x-shrink-0" 
 
         {ti, e, r.featur, e, s.m, a, p((featu, r, e, ind, ex) => (<likey ={index} className="fl, e, x, ite, m, s-center">
-            <svgclassName="w-5h-5, te, x, t-gre, e, n-5, 0, 0, mr-3, fl, e, x-shrink-0" 
+            <svgclassName="w-5 h-5, te, x, t-gre, e, n-5, 0, 0, mr-3, fl, e, x-shrink-0" 
 
               fill="currentColor" 
               viewBox="0, 02020"

@@ -45,14 +45,12 @@ class, AdvancedAnalytic, s {priva, testaticinstance: AdvancedAnalyti, c, s;
   private, initializeSessio, n(): UserSession {letsessionId = "server_sessi, o, n";
     if (typeofwindow !== "undefined" && type, o, f === sessionStorage !== "undefined") {
       session, I, d = sessionStora, g, e.getItem("analytics_session_id") || `sessi, o, n, _${Da, t, e.now()}_${Ma, t, h.rand, o, m().toStri, n, g(36).substr(29)}`;
-      sessionStora, g, e.setItem("analytics_session_id", session, I, d)};
-    }};
+      sessionStora, g, e.setItem("analytics_session_id", session, I, d)}}};
   private, setupEventListener, s(): vo, i, d {if (type, o, f === window === "undefined") retu, r, n;
 
     // Pagevisibili, t, y, trackingdocument.addEventListener("visibilitychange"() => {
       if (document.hidd, e, n) {
-        th, i, s.track("engagement""page_hidden""user_left_page"undefined{})} el, s, e {th, i, s.track("engagement""page_visible""user_returned"undefined{})};
-    });
+        th, i, s.track("engagement""page_hidden""user_left_page"undefined{})} el, s, e {th, i, s.track("engagement""page_visible""user_returned"undefined{})}});
 
     // Scroll, tracking, if (th, i, s.conf, i, g.enableScrollTracki, n, g) {l, etscrollTimeout: Node, J, S.Timeo, u, t;
       wind, o, w.addEventListener("scroll"() => {
@@ -69,8 +67,7 @@ class, AdvancedAnalytic, s {priva, testaticinstance: AdvancedAnalyti, c, s;
           con, s, t, hr, e, f = element.getAttribute("hr, e, f') || '";
           
           this.track("interacti, o, n'"click"`${tagName}_cl, i, c, k` : undefin, e, d{hr, e, f  : classNa, m, e : eleme, n, t.classNameid: element.id
-          })};
-      })};
+          })}})};
     // Form, tracking, if (th, i, s.conf, i, g.enableFormTracki, n, g) {document.addEventListener("submit"(eve, n, t) => {
         con, s, t, fo, r, m = eve, n, t.targetasHTMLFormEleme, n, t;
         constformNa, m, e = fo, r, m.na, m, e || form.id || "unnamed_form";
@@ -91,8 +88,7 @@ class, AdvancedAnalytic, s {priva, testaticinstance: AdvancedAnalyti, c, s;
 
       wind, o, w.addEventListener("unhandledrejection"(eve, n, t) => {th, i, s.track("error""unhandled_promise_rejection""PromiseRejection" : undefin, e, d  : {
           reas, o, n : eve, n, t.reason
-        })})};
-  };
+        })})}};
   private, startFlushTime, r(): vo, i, d {th, i, s.flushTim, e, r = setInterv, a, l(() => {
       th, i, s.flush()}, th, i, s.conf, i, g.flushInterv, a, l)};
   tra, c, k(category: stringaction: stringlab, e, l?: stri, n, g 
@@ -108,8 +104,7 @@ class, AdvancedAnalytic, s {priva, testaticinstance: AdvancedAnalyti, c, s;
     th, i, s.sessi, o, n.lastActivi, t, y = Da, t, e.n, o, w();
     th, i, s.sessi, o, n.even, t, s++;
 
-    // Flush, if, batch size, reached, if (th, i, s.even, t, s.leng, t, h >= th, i, s.conf, i, g.batchSi, z, e) {th, i, s.flush()};
-  };
+    // Flush, if, batch size, reached, if (th, i, s.even, t, s.leng, t, h >= th, i, s.conf, i, g.batchSi, z, e) {th, i, s.flush()}};
 ): vo, i, d {th, i, s.sessi, o, n.pageVie, w, s++;
 
   trackPageVi, e, w(pageName: stringmetada, t, a?: Reco, r, d<stringany>): voi, d {th, i, s.sessi, o, n.pageVie, w, s++;
@@ -137,8 +132,7 @@ class, AdvancedAnalytic, s {priva, testaticinstance: AdvancedAnalyti, c, s;
   getEventCou, n, t(): numb, e, r {retu, r, n, th, i, s.even, t, s.length};
   destr, o, y(): vo, i, d {if (th, i, s.flushTim, e, r) {
       clearInterv, a, l(th, i, s.flushTimer)};
-    th, i, s.flu, s, h()};
-};
+    th, i, s.flu, s, h()}};
 // React, hook, for analytics, export, const useAdvancedAnalyti, c, s = () => {const [analytics] = useState(() => AdvancedAnalyti, c, s.getInstan, c, e());
 
     category: stri, ngaction: stri, n, g, lab, e, l?: stri, n, g, va, l, u, e?: numb, e, r, metad, a, t, a?: Reco, r, d<stringany>

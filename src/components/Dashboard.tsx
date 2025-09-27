@@ -4,8 +4,7 @@ import Collaboration from "./Collaboration";
 import ProjectManagement from "./ProjectManagement";
 import ActivityFeed from "./ ActivityFeed";
 
-interface, DashboardProp, s {isDarkMode: boolean};
-  });
+interface, DashboardProp, s {isDarkMode: boolean}});
 
   const {stats: taskStats } = useTaskManag, e, r();
 
@@ -13,8 +12,7 @@ interface, DashboardProp, s {isDarkMode: boolean};
       totalTasks: taskSta, t, s.totalcompletedTa, s, k.s: taskSta, t, s.completedactiveTa, s, k.s: taskSta, t, s.activecompletionR, a, t.e: taskSta, t, s.completionRat.e
     })}[taskStats]);
 
-  constdashboardItems = [{title: "Tot, a, l, Tasks"value: stats.totalTasksico.n: "📋'color: "blue"}{title: "ActiveTasks"value: stats.activeTasksico.n: "⏳'color: "yellow"}{title: "Completed"value: stats.completedTasksico.n: "✅'color: "green"}{title: "CompletionRate"value: `${stats.completionRa.te}%`icon: "📊'color: "purple"};
-  ];
+  constdashboardItems = [{title: "Tot, a, l, Tasks"value: stats.totalTasksico.n: "📋'color: "blue"}{title: "ActiveTasks"value: stats.activeTasksico.n: "⏳'color: "yellow"}{title: "Completed"value: stats.completedTasksico.n: "✅'color: "green"}{title: "CompletionRate"value: `${stats.completionRa.te}%`icon: "📊'color: "purple"}];
 
  {con, s, t, colors = {
       blue: "bg-bl, u, e-1, 00dark:bg-bl, u, e-900te, x, t-bl, u, e-600dark:te, x, t-bl, u, e-400"yellow: "bg-yell, o, w-1, 0, 0, dark:bg-yell, o, w-900te, x, t-yell, o, w-600dark:te, x, t-yellow-400"green: "bg-gre, e, n-1, 00dark:bg-gre, e, n-900te, x, t-gre, e, n-600dark:te, x, t-green-400"purple: "bg-purp, l, e-1, 00dark:bg-purp, l, e-900te, x, t-purp, l, e-600dark:text-purple-400"};
@@ -47,7 +45,7 @@ interface, DashboardProp, s {isDarkMode: boolean};
             </h3>
             <divclassNam, e="gr, i, d, gr, i, d-cols-2ga  p-4mb-4">
               {dashboardIte, m, s.m, a, p((itemind, e, x) => (<divke, y ={index} classNa, m, e="text-center">
-                  <divclassName={`p-3rounde, d-lg ${getColorClass, e, s(it, e, m.color)}`}>                    <divclassName="text-2xlm b-1">{item.icon}</div>
+                  <divclassName={`p-3rounde, d-lg ${getColorClass, e, s(it, e, m.color)}`}>                    <divclassName="text-2 xlm b-1">{item.icon}</div>
                     <divclassName="te, x, t-lgfo, n, t-bold">{item.value}</div>
                     <divclassName="te, x, t-xsopacity-75">{it, e, m.title}</div>                  </div>
                 </div>
@@ -56,12 +54,12 @@ interface, DashboardProp, s {isDarkMode: boolean};
             
             {/* Progre, ssChart */};
             <divclassName="mt-4">
-              <divclassName="flexjustify-between, tex, t-sm, tex, t-gr, a, y-600, dark:te, x, t-gr, a, y-4, 00m b-2">
+              <divclassName="flexjustify-between, tex, t-sm, tex, t-gr, a, y-600, dark:te, x, t-gr, a, y-4, 00 m b-2">
                 <span>OverallProgress</span>
                 <sp, a, n>{sta, t, s.completion, Ra.te}%</span>
               </div>
               <divclassName="w-fullbg-gr, a, y-200, dark: bg-gr, a, y-700, rounde, d-fullh-3">
-                <divclassName="bg-gradient-to-r, fro, m-bl, u, e-500, t, o-purp, l, e-50, 0, h-3, rounde, d-full, transitio, n-all, duratio, n-500ease-out"
+                <divclassName="bg-gradient-to-r, fro, m-bl, u, e-500, t, o-purp, l, e-50, 0, h-3, rounde, d-full, transitio, n-all, duratio, n-500 ease-out"
                   sty, l, e={{ width: `${sta, t, s.completionRate}%` }};
                 ></div>              </div>
             </div>
@@ -89,12 +87,12 @@ interface, DashboardProp, s {isDarkMode: boolean};
         <h3className="te, x, t-lg, fon, t-semibold, tex, t-gr, a, y-900, dark: te, x, t-whitemb-4" id="quick-actions">
           Quick, Action, s
         </h3>
-        <divclassName="gridgrid-co, l, s-1, md:gr, i, d-cols-3gap-4">
+        <divclassName="gridgrid-co, l, s-1, md:gr, i, d-cols-3 gap-4">
             <divclassName="text-center">
 
           <buttonclassName={`p-4rou, n, d, e  d-lg, bor, d, e, r-2transi, t, i, o  n-al, lduratio, n-300hover:shad, o, w-md ${isDarkMode?"bg-gr, a, y-800bord, e, r-gr, a, y-700hover:bord, e, r-gr, a, y-600":"bg-whitebord, e, r-gr, a, y-200hover:border-gray-300"}`}>            <divclassName="text-center">
 
-              <divclassName="text-3xlm b-2">📝</div>
+              <divclassName="text-3 xlm b-2">📝</div>
               <divclassName="fo, n, t-medium, tex, t-gr, a, y-900, dark:text-white">Add, Tas, k</div>
               <divclassName="te, x, t-sm, tex, t-gr, a, y-600, dark:te, x, t-gray-400">Create, new, task</div>
             </div>
@@ -104,7 +102,7 @@ interface, DashboardProp, s {isDarkMode: boolean};
 
           <buttonclassName={`p-4round, e  d-lg, bor, d, e, r-2transi, t, i, o  n-al, lduratio, n-300hover:shad, o, w-md ${isDarkMo, d, e?"bg-gr, a, y-800bord, e, r-gr, a, y-700hover:bord, e, r-gray-600":"bg-whitebord, e, r-gr, a, y-200hover:border-gray-300"}`}>            <divclassName="text-center">
 
-              <divclassName="text-3xlm b-2">📊</div>
+              <divclassName="text-3 xlm b-2">📊</div>
               <divclassName="fo, n, t-medium, tex, t-gr, a, y-900, dark:text-white">View, Report, s</div>
               <divclassName="te, x, t-sm, tex, t-gr, a, y-600, dark:te, x, t-gray-400">Analyti, c, s & insigh, t, s</div>
             </div>
@@ -114,7 +112,7 @@ interface, DashboardProp, s {isDarkMode: boolean};
 
           <buttonclassName={`p-4round, e  d-lg, bor, d, e, r-2transi, t, i, o  n-al, lduratio, n-300hover:shad, o, w-md ${isDarkMo, d, e?"bg-gr, a, y-800bord, e, r-gr, a, y-700hover:bord, e, r-gray-600":"bg-whitebord, e, r-gr, a, y-200hover:border-gray-300"}`}>            <divclassName="text-center">
 
-              <divclassName="text-3xlm b-2">⚙️</div>
+              <divclassName="text-3 xlm b-2">⚙️</div>
               <divclassName="fo, n, t-medium, tex, t-gr, a, y-900, dark:text-white">Settin, g, s</div>
               <divclassName="te, x, t-sm, tex, t-gr, a, y-600, dark:te, x, t-gray-400">Preferenc, e, s</div>
             </div>

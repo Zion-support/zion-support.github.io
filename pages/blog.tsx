@@ -11,8 +11,7 @@ export default function Blog(): JSX.Element {
 	const [selectedCategory, setSelectedCategory] = useState<string>('all');
 
 	useEffect(() => {
-		setIsVisible(true);
-	}, []);
+		setIsVisible(true)}, []);
 
 	// Analytics tracking
 	const { trackClick } = useAnalytics();
@@ -54,20 +53,16 @@ export default function Blog(): JSX.Element {
 
 	const handleCategoryChange = (category: string) => {
 		setSelectedCategory(category.toLowerCase());
-		trackClick(`blog-category-${category}`, 'filter');
-	};
+		trackClick(`blog-category-${category}`, 'filter')};
 
 	const handleReadMore = (post: any) => {
 		trackClick(`read-post-${post.id}`, 'cta');
-		console.log("Read more:", post.title);
-	};
+		console.log("Read more:", post.title)};
 
 	const filteredPosts = useMemo(() => {
 		if (selectedCategory === 'all') {
-			return blogPosts;
-		}
-		return blogPosts.filter(post => post.category.toLowerCase() === selectedCategory);
-	}, [selectedCategory, blogPosts]);
+			return blogPosts}
+		return blogPosts.filter(post => post.category.toLowerCase() === selectedCategory)}, [selectedCategory, blogPosts]);
 
 	return (
 		<>
@@ -78,7 +73,7 @@ export default function Blog(): JSX.Element {
 			</Head>
 			
 			<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 pt-20">
-				<div className="container mx-auto px-4 py-8 max-w-7xl">
+				<div className="container mx-auto px-4 py-8 max-w-7 xl">
 					<nav className="mb-8">
 						<Link href="/" className="text-blue-600 hover:text-blue-800 font-medium transition-colors">
 							← Back to Home
@@ -87,10 +82,10 @@ export default function Blog(): JSX.Element {
 
 					{/* Hero Section */}
 					<section className="text-center mb-16">
-						<h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+						<h1 className="text-4 xl md:text-6 xl font-bold text-gray-900 mb-6">
 							Our Blog
 						</h1>
-						<p className="text-xl text-gray-600 max-w-3xl mx-auto">
+						<p className="text-xl text-gray-600 max-w-3 xl mx-auto">
 							Stay updated with the latest insights on technology, AI, cloud computing, and digital transformation.
 						</p>
 					</section>
@@ -142,7 +137,7 @@ export default function Blog(): JSX.Element {
 
 					{/* Newsletter Signup */}
 					<section className="mt-16 bg-blue-600 rounded-lg p-8 text-white text-center">
-						<h2 className="text-3xl font-bold mb-4">Stay Updated</h2>
+						<h2 className="text-3 xl font-bold mb-4">Stay Updated</h2>
 						<p className="text-xl mb-6">Get the latest insights delivered to your inbox.</p>
 						<div className="flex max-w-md mx-auto">
 							<input
@@ -158,5 +153,4 @@ export default function Blog(): JSX.Element {
 				</div>
 			</div>
 		</>
-	);
-}
+	)}

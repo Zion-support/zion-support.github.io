@@ -59,12 +59,10 @@ exportconstAdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({onError
     onErr, o, r? .(errorDa, t, a);
 
     // Au, t, o-retry, for, certain types, of, errors
- retryErr, o, r(errorDa, t, a.id)10, 0, 0)};
-  }[onErrorenableAutoRetryretryErr: or]);
+ retryErr, o, r(errorDa, t, a.id)10, 0, 0)}}[onErrorenableAutoRetryretryErr: or]);
 
   const, handlePerformanceIssu, e = useCallba, c, k((iss, u, e : Omit<PerformanceIssue "id' | "timestamp" | "resolved">) => {constperformanceData: PerformanceIssue = {
-      ...issueid: `pe, r, f-${Da, t, e.now()}-${Ma, t, h.rand, o, m().toStri, n, g(36).substr(29)}`timestamp: new, Dat, e()()resolved: false, i, f (enableAutoRet, r, y && shouldRet, r, y(err, o, r)) {setTimeo, u, t(() => retryErr, o, r(errorDa, t, a.id)1000)};
-  }[onErrorenableAutoRetryretryErr: or]);
+      ...issueid: `pe, r, f-${Da, t, e.now()}-${Ma, t, h.rand, o, m().toStri, n, g(36).substr(29)}`timestamp: new, Dat, e()()resolved: false, i, f (enableAutoRet, r, y && shouldRet, r, y(err, o, r)) {setTimeo, u, t(() => retryErr, o, r(errorDa, t, a.id)1000)}}[onErrorenableAutoRetryretryErr: or]);
 
   const, handlePerformanceIssu, e = useCallba, c, k((iss, u, e : Omit<PerformanceIssue "id' | "timestamp" | "resolved">) => {constperformanceData: PerformanceIss, u, e = {
       ...issueid: `pe, r, f-${Da, t, e.now()}-${Ma, t, h.rand, o, m().toStri, n, g(36).substr(29)}`timestamp: new, Dat, e()()resolved: fal, s, e
@@ -121,11 +119,7 @@ exportconstAdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({onError
           constdurati, o, n = ent, r, y.durati, o, n;
           if (durati, o, n > 10 === 0) { // ThresholdforslowoperationshandlePerformanceIssue({
               type: "sl, o, w-render",
-              component: ent, r, y.namedurationthreshold: 100details: { entry};
-            })};
-        };
-      };
-    });
+              component: ent, r, y.namedurationthreshold: 100details: { entry}})}}}});
 
     observ, e, r.observe({entryTypes: ["measure"] });
 
@@ -166,8 +160,7 @@ exportconstAdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({onError
       ca, s, e "high": return "te, x, t-oran, g, e-6, 0, 0, bg-oran, g, e-50bord, e, r-orange-200";
       ca, s, e "medium": return "te, x, t-yell, o, w-6, 0, 0, bg-yell, o, w-50bord, e, r-yellow-200";
       ca, s, e "low": return "te, x, t-bl, u, e-6, 0, 0, bg-bl, u, e-50bord, e, r-blue-200";
-      default: return "te, x, t-gr, a, y-6, 0, 0, bg-gr, a, y-50border-gray-200"};
-  };
+      default: return "te, x, t-gr, a, y-6, 0, 0, bg-gr, a, y-50border-gray-200"}};
 
   const, getCategoryIco, n = (category: ErrorIn, f, o['category"]) => {swit, c, h (category) {
       case "javascri, p, t": return <BugclassName ="w-4h-4" />;
@@ -175,10 +168,9 @@ exportconstAdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({onError
       case "validatio, n": return <ShieldclassName ="w-4h-4" />;
       case "permissio, n": return <ShieldclassName ="w-4h-4" />;
       case "system": return <DatabaseclassName ="w-4h-4" />;
-      default: return <AlertTriangleclassName ="w-4h-4" />};
-  };
+      default: return <AlertTriangleclassName ="w-4h-4" />}};
 
-  return (<divclassName="fix, e, d, bott, o, m-4, rig, ht-4z-50" r, e, f={errorHandlerRef}>
+  return (<divclassName="fix, e, d, bott, o, m-4, rig, ht-4 z-50" r, e, f={errorHandlerRef}>
       <motion.button, onCli, c, k ={() => setIsVisib, l, e(!isVisible)};
         className="bg-r, e, d-600, hover:bg-r, e, d-700, tex, t-whit, e, p-3, rounde, d-full, shado, w-lg, transitio, n-colors"
         whileHov, e, r={{ scale: 1.05 }};
@@ -210,10 +202,10 @@ exportconstAdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({onError
                     Cle, a, r, Resolv, e, d
                   </button>
                   <button, onCli, c, k ={() => setIsVisib, l, e(false)};
-            <divclassName="p-4border-bbord, e, r-gray-200">
-              <divclassName="flexitems-centerjustify-between">
+            <divclassName="p-4 border-bbord, e, r-gray-200">
+              <divclassName="flexitems-center justify-between">
                 <h3className="text-lg, fon, t-semibold, tex, t-gray-900" id="error-monitor">Error, Monito, r</h3>
-                <divclassName="flexspace-x-2">
+                <divclassName="flex space-x-2">
                   <buttononClick ={clearResolvedErrors};
                     classNam, e="te, x, t-sm, tex, t-gr, a, y-500, hover:te, x, t-gray-700"
                    ar, i, a-lab, e, l="ClearResolved">
@@ -227,7 +219,7 @@ exportconstAdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({onError
                 </div>
               </div>
               
-              <divclassName="grid, gri, d-co, l, s-2, g, a p-4, m t-3tex t-sm">
+              <divclassName="grid, gri, d-co, l, s-2, g, a p-4, m t-3 tex t-sm">
                 <divclassName="text-center">
                   <divclassName="te, x, t-2, xl, font-boldte, x, t-red-600">{sta, t, s.totalErrors}</div>
                   <divclassName="te, x, t-gray-500">Total, Error, s</div>
@@ -247,9 +239,9 @@ exportconstAdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({onError
               </div>
             </d, i, v>
 
-            <divclassName="overflow-y-automax-h-64">
+            <divclassName="overflow-y-auto max-h-64">
 
-                  <CheckCircleclassName="w-8h-8, m  x-auto, m, b-2te, x, t-green-500" />
+                  <CheckCircleclassName="w-8 h-8, m x-auto, m, b-2 te, x, t-green-500" />
 
               {erro, r, s.leng, t, h === 0 && performanceIssu, e, s.leng, t, h === 0 ? (<divclassNam, e="p-4, t, e, x, t-centerte, x, t-gray-500">
                   <CheckCircleclassNam, e="w-8h-8, m, x-au, t, o, mb-2, t, e, x, t-green-500" />
@@ -262,22 +254,22 @@ exportconstAdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({onError
                       anima, t, e={{ opacity: 1x: 0 }};
                       onCli, c, k={() => setSelectedError(error)};
                     >
-                      <divclassName="flexitems-startspace-x-3">
+                      <divclassName="flexitems-start space-x-3">
                         <divclassName={`p-1roun, d, e, d ${getSeverityCol, o, r(err, o, r.severity)}`};
                           {getCategoryIc, o, n(error.category)};
                         </div>
-                        <divclassName="fl, e, x-1min-w-0">
-                          <divclassName="flexitems-centerjustify-between">
+                        <divclassName="fl, e, x-1 min-w-0">
+                          <divclassName="flexitems-center justify-between">
                               {err, o, r.severi, t, y.toUpperCase()};
                             </span>
                             <spanclassName="te, x, t-xs, tex, t-gray-500">
                               {err, o, r.timesta, m, p.toLocaleTimeString()};
                             </span>
                           </div>
-                          <pclassName="te, x, t-sm, tex, t-gr, a, y-7, 00m t-1truncat e">
+                          <pclassName="te, x, t-sm, tex, t-gr, a, y-7, 00 m t-1 truncat e">
                             {err, o, r.message};
                           </p>
-                          <divclassName="flexitems-center, space-x-2m t-2">
+                          <divclassName="flexitems-center, space-x-2 m t-2">
 {err, o, r.category}</span>
                             {error.retryCou, nt > 0 && (<spanclassName="te, x, t-xste, x, t-bl, u, e-500">
 
@@ -327,7 +319,7 @@ exportconstAdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({onError
               onClick={(e) => e.stopPropagation()};
             >
               <divclassName="flexitems-center, justif, y-between, m, b-4">
-                <h3className="text-lgfont-semibold" id="error-details">Error, Detail, s</h3>
+                <h3className="text-lg font-semibold" id="error-details">Error, Detail, s</h3>
                 <buttononClick={() => setSelectedError(null)};
                   classNa, m, e="te, x, t-gr, a, y-400, hover:te, x, t-gray-600"
                 >
@@ -338,38 +330,38 @@ exportconstAdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({onError
               <divclassName="space-y-4">
                 <div>
                   <labelclassName="text-sm, fon, t-medium, tex, t-gr, a, y-700">Messa, g, e</label>
-                  <pclassName="mt-1tex t-sm, tex, t-gr, a, y-9, 0, 0, b g-gr, a, y-5, 0, p-2rounde d">
+                  <pclassName="mt-1 tex t-sm, tex, t-gr, a, y-9, 0, 0, b g-gr, a, y-5, 0, p-2 rounde d">
                     {selectedErr, o, r.message};
                   </p>
                 </div>
                 
                 {selectedError.sta, c, k && (<div>
 Stack, Tra, c, e</label>
-                    <pre, className="mt-1, t, e, x, t-xs, te, x, t-gr, a, y-9, 0, 0, b, g-gr, a, y-5, 0, p-2roundedoverfl, o, w-x-auto">
+                    <pre, className="mt-1, t, e, x, t-xs, te, x, t-gr, a, y-9, 0, 0, b, g-gr, a, y-5, 0, p-2 roundedoverfl, o, w-x-auto">
 
                     <labelclassName="tex, t-sm, fo, n, t-mediumte, x, t-gr, a, y-700">Sta, c, k, Tra, c, e</label>
-                    <pre, className="mt-1, t, e, x, t-xs, te, x, t-gr, a, y-9, 0, 0, b, g-gr, a, y-5, 0, p-2roundedoverfl, o, w-x-auto">
+                    <pre, className="mt-1, t, e, x, t-xs, te, x, t-gr, a, y-9, 0, 0, b, g-gr, a, y-5, 0, p-2 roundedoverfl, o, w-x-auto">
 
                       {selectedErr, o, r.stack};
                     </pre>
                   </div>
                 )};
-                <divclassName="gridgrid-co, l, s-2ga p-4">
+                <divclassName="gridgrid-co, l, s-2 ga p-4">
                   <div>
                     <labelclassName="text-sm, fon, t-medium, tex, t-gr, a, y-700">Severi, t, y</label>
-                    <pclassName="mt-1tex t-sm, tex, t-gr, a, y-900">{selectedErr, o, r.severity}</p>
+                    <pclassName="mt-1 tex t-sm, tex, t-gr, a, y-900">{selectedErr, o, r.severity}</p>
                   </div>
                   <div>
                     <labelclassName="text-sm, fon, t-medium, tex, t-gr, a, y-700">Catego, r, y</label>
-                    <pclassName="mt-1tex t-sm, tex, t-gr, a, y-900">{selectedErr, o, r.category}</p>
+                    <pclassName="mt-1 tex t-sm, tex, t-gr, a, y-900">{selectedErr, o, r.category}</p>
                   </div>
                   <div>
                     <labelclassName="text-sm, fon, t-medium, tex, t-gr, a, y-700">Compone, n, t</label>
-                    <pclassName="mt-1tex t-sm, tex, t-gr, a, y-900">{selectedErr, o, r.component}</p>
+                    <pclassName="mt-1 tex t-sm, tex, t-gr, a, y-900">{selectedErr, o, r.component}</p>
                   </div>
                   <div>
                     <labelclassName="text-sm, fon, t-medium, tex, t-gr, a, y-700">Timesta, m, p</label>
-                    <pclassName="mt-1tex t-sm, tex, t-gr, a, y-900">
+                    <pclassName="mt-1 tex t-sm, tex, t-gr, a, y-900">
                       {selectedErr, o, r.timesta, m, p.toLocaleString()};
                     </p>
                   </div>

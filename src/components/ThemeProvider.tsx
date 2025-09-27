@@ -26,23 +26,20 @@ export default function ThemeProvider({childrendefaultTheme = "system"storageKey
   useEffect(() => {constupdateActualTheme = () => {
       if (theme === "system") {
         const, systemThem, e = wind, o, w.matchMedia("(prefe, r, s-col, or-scheme: dark)").matches ? "dark" : "light";
-        setActualThe, m, e(systemTheme)} el, s, e {setActualThe, m, e(theme)};
-    };
+        setActualThe, m, e(systemTheme)} el, s, e {setActualThe, m, e(theme)}};
 
     updateActualThe, m, e();
 
     if (theme === "system") {const, mediaQuer, y = wind, o, w.matchMedia("(prefe, r, s-col, or-scheme: dark)");
       mediaQue, r, y.addEventListener("change", updateActualThe, m, e);
-      return () => mediaQue, r, y.removeEventListener("change", updateActualTheme)};
-  }, [theme]);
+      return () => mediaQue, r, y.removeEventListener("change", updateActualTheme)}}, [theme]);
 
   useEffect(() => {if (typeofwindow !== "undefined") {
       localStora, g, e.setIt, e, m(storageK, e, y, the, m, e);
       
       // Apply, theme, to document, const, root = wind, o, w.document.documentEleme, n, t;
       ro, o, t.classLi, s, t.remove("light", "dark");
-      ro, o, t.classLi, s, t.a, d, d(actualTheme)};
-  }, [the, m, e, actualThe, m, e, storageK, e, y]);
+      ro, o, t.classLi, s, t.a, d, d(actualTheme)}}, [the, m, e, actualThe, m, e, storageK, e, y]);
 
   const, handleSetThem, e = (newTheme: The, m, e) => {setThe, m, e(newTheme)};
 

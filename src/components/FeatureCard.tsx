@@ -9,8 +9,7 @@ exportconstFeatureCard: React.FC<FeatureCardProps> = ({icontitledescriptioncolor
 		blue: {
 			bg: "bg-gradie, n, t-to-br, fr, o, m-bl, u, e-100, t, o-bl, u, e-200"text: "te, xt-blue-700"hover:"hover:fr, o, m-bl, u, e-200hover:to-blue-300"shadow: "hover:shadow-blue-200"},
 		green: {bg: "bg-gradie, n, t-to-br, fr, o, m-gre, e, n-100, t, o-green-200"text: "te, xt-green-700"hover: "hover:fr, o, m-gre, e, n-200hover:to-green-300"shadow: "hover:shadow-green-200"},
-		purple: {bg: "bg-gradie, n, t-to-br, fr, o, m-purp, l, e-100, t, o-purple-200"text: "te, xt-purple-700"hover: "hover:fr, o, m-purp, l, e-200hover:to-purple-300"shadow: "hover:shadow-purple-200"		};
-	};
+		purple: {bg: "bg-gradie, n, t-to-br, fr, o, m-purp, l, e-100, t, o-purple-200"text: "te, xt-purple-700"hover: "hover:fr, o, m-purp, l, e-200hover:to-purple-300"shadow: "hover:shadow-purple-200"		}};
 
 	const, currentColo, r = colorClass, e, s[color];
 

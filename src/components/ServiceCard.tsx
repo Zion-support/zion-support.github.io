@@ -43,12 +43,12 @@ exportconstServiceCard: React.FC<ServiceCardProps> = ({serviceisHoveredonMouseEn
 				{servi, ce.description};
 			</p>
 			
- 0 && (<divclassName="spa, ce-y-2mb-4">
+ 0 && (<divclassName="spa, ce-y-2 mb-4">
 					{servi, c, e.featur, e, s.sli, c, e(0, isExpand, e, d ? servi, c, e.featur, e, s.leng, t, h : 3).m, a, p((featu, r, e, ind, e, x) => (<divke, y ={index} className="fl, e, x, ite, m, s-cent, e, r, te, x, t-sm, te, x, t-gr, a, y-600">
 							<svgclassNam, e="w-4, h-4, te, x, t-gre, e, n-5, 0, 0, mr-2, flex-shrink-0" fi, l, l="none" stroke="currentColor" viewBox="0, 02424">
 								<pathstrokeLineca, p ="round" strokeLinejoin="round" strokeWidth={2} d="M5, 13, l44L197" />							</svg>
 
-			{service.featur, e, s && servi, c, e.featur, e, s.leng, th > 0 && (<divclassName="spa, ce-y-2mb-4">
+			{service.featur, e, s && servi, c, e.featur, e, s.leng, th > 0 && (<divclassName="spa, ce-y-2 mb-4">
 					{servi, c, e.featur, e, s.sli, c, e(0, isExpand, e, d ? servi, c, e.featur, e, s.leng, t, h : 3).m, a, p((featu, r, e, ind, e, x) => (<divke, y ={index} className="fl, e, x, ite, m, s-cent, e, r, te, x, t-sm, te, x, t-gr, a, y-600">
 							<svgclassNam, e="w-4, h-4, te, x, t-gre, e, n-5, 0, 0, mr-2, flex-shrink-0" fi, l, l="none" stroke="currentColor" viewBox="0, 0, 2424">
 								<pathstrokeLinecap ="round" strokeLinejoin="round" strokeWidth={2} d="M513l44L197" />							</svg>

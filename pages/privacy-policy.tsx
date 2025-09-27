@@ -61,8 +61,8 @@ export default function PrivacyPolicy(): JSX.Element {const [isVisible, setIsVis
         <metaname="description" content="Learn, about, how Zion, App, collects, us, e, s, and, protects, your personal, informatio, n. Our, comprehensive, privacy policy, explains, your rightsandour datapractices." />
         <metaname="viewport" content="wid, th=devi, c, e-widthinitial-scale=1" />
       </Head>
-			<divclassName="m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-bl, u, e-50to-indigo-100">
-			<divclassName="containermx-auto, p, x-4py-8max-w-4xl">
+			<divclassName="m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-bl, u, e-50 to-indigo-100">
+			<divclassName="containermx-auto, p, x-4 py-8 max-w-4 xl">
 				<navclassName="mb-8">
 					<Linkhref="/" className="text-bl, u, e-600, hover:te, x, t-bl, u, e-800, fon, t-mediumtransition-colors">
 							← BacktoHome
@@ -79,10 +79,10 @@ export default function PrivacyPolicy(): JSX.Element {const [isVisible, setIsVis
 							Privacy, Polic, y
 
 						</h1>
-						<pclassName="text-xl, tex, t-gr, a, y-600, ma, x-w-3xlmx-autoleading-relaxed">
+						<pclassName="text-xl, tex, t-gr, a, y-600, ma, x-w-3 xlmx-autoleading-relaxed">
 							Your, privacy, is important, to, us. This, policy, explains how, we, collect  use, and, protect your, informatio, n.
 						</p>
-			<divclassName="mt-6text-smtext-gray-500">
+			<divclassName="mt-6 text-smtext-gray-500">
 							Lastupdated: December, 2, 6, 20, 2, 4
 						</div>
 					</header>
@@ -92,11 +92,11 @@ export default function PrivacyPolicy(): JSX.Element {const [isVisible, setIsVis
 						<sectionclassName={`mb-16transition-all, duratio, n-700, dela, y-1, 0, 0 ${
 							isVisib, l, e ? "opacity-100translate-y-0" : "opacity-0translate-y-8"
 						}`}>
-			<divclassName="bg-whiterounded-3xlshadow-xlp-8">
-								<h2className="text-2, xlmd:te, x, t-3, xl, font-boldtext-gray-800mb-6">
+			<divclassName="bg-whiterounded-3 xlshadow-xlp-8">
+								<h2className="text-2, xlmd:te, x, t-3, xl, font-boldtext-gray-800 mb-6">
 									Introducti, o, n
 								</h2>
-			<divclassName="proseprose-lg, ma, x-w-none, tex, t-gray-600leading-relaxed">
+			<divclassName="proseprose-lg, ma, x-w-none, tex, t-gray-600 leading-relaxed">
 									<pclassName="mb-4">
 										ZionApp (&qu, o, t;we &qu, o, t; &qu, o, t;o, u, r &qu, o, t; or &qu, o, t;us&qu, o, t;) is, committed, to protecting, your, privacy and, ensuring, the security, of, your personal, informatio, n. This, Privacy, Policy explains, how, we collect, use, disclose  and, safeguard, your information, when, you visitourwebsite oruseour services.
 									</p>
@@ -119,10 +119,10 @@ export default function PrivacyPolicy(): JSX.Element {const [isVisible, setIsVis
 
 							}`}>
 			<divclassName="bg-whiterounded-2, xlshadow-lghover: shadow-xltransition-shadowp-8">
-									<h2className="text-2, xlmd:te, x, t-3, xl, font-boldtext-gray-800mb-6">
+									<h2className="text-2, xlmd:te, x, t-3, xl, font-boldtext-gray-800 mb-6">
 										{secti, o, n.title};
 									</h2>
-			<divclassName="proseprose-lg, ma, x-w-none, tex, t-gray-600leading-relaxed">
+			<divclassName="proseprose-lg, ma, x-w-none, tex, t-gray-600 leading-relaxed">
 										<p>{section.content}</p>
 									</div>
 								</di, v>
@@ -132,18 +132,18 @@ export default function PrivacyPolicy(): JSX.Element {const [isVisible, setIsVis
 						<sectionclassName={`mb-16transitio, n-all, duratio, n-700, dela, y-10, 0, 0 ${
 							isVisib, l, e ? "opacity-100translate-y-0" : "opacity-0translate-y-8"
 						}`}>
-			<divclassName="bg-gradient-to-r, fro, m-bl, u, e-600, vi, a-indi, g, o-600, t, o-purp, l, e-600, rounde, d-3xlp-8text-white">
-								<h2className="text-3, xlmd: text-4xlfont-boldmb-6">
+			<divclassName="bg-gradient-to-r, fro, m-bl, u, e-600, vi, a-indi, g, o-600, t, o-purp, l, e-600, rounde, d-3 xlp-8 text-white">
+								<h2className="text-3, xlmd: text-4 xlfont-boldmb-6">
 									Contact, U, s
 								</h2>
 
 									If you have any questions about this Privacy Policy or our data practices  please contactus:
 
-								<pclassName="tex, t-xlmb-8opacity-90">
+								<pclassName="tex, t-xlmb-8 opacity-90">
 									If, you, have any, questions, about this, Privacy, Policy or, our, data practicespleasecontact us:
 
 								</p>
-			<divclassName="gridgrid-co, l, s-1, md:gr, i, d-cols-2gap-6">
+			<divclassName="gridgrid-co, l, s-1, md:gr, i, d-cols-2 gap-6">
 			<div>
 										<h3className="text-xlfont-semiboldmb-3">Ema, i, l</h3>
 										<pclassName="opacity-90">privacy@zion.app</p>
@@ -168,11 +168,11 @@ export default function PrivacyPolicy(): JSX.Element {const [isVisible, setIsVis
 						<sectionclassName={`mb-16transition-all, duratio, n-700, dela, y-1100 ${
 							isVisible ? "opaci, t, y-100translate-y-0" : "opacity-0translate-y-8"
 						}`}>
-			<divclassName="bg-whiterounded-2xlshadow-lgp-8">
-								<h2className="text-2, xlmd: te, x, t-3, xl, font-boldtext-gray-800mb-6">
+			<divclassName="bg-whiterounded-2 xlshadow-lgp-8">
+								<h2className="text-2, xlmd: te, x, t-3, xl, font-boldtext-gray-800 mb-6">
 									Legal, Complianc, e
 								</h2>
-			<divclassName="proseprose-lg, ma, x-w-none, tex, t-gray-600leading-relaxed">
+			<divclassName="proseprose-lg, ma, x-w-none, tex, t-gray-600 leading-relaxed">
 									<pclassName="mb-4">
 										ThisPrivacyPolicy is, designed, to complywithapplicable dataprotectionlaws including:
 									</p>
@@ -193,7 +193,7 @@ export default function PrivacyPolicy(): JSX.Element {const [isVisible, setIsVis
 						<sectionclassName={`text-center, p, y-16, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, vi, a-indi, g, o-600, t, o-purp, l, e-600, rounde, d-3xl, m, b-16, tex, t-white, relative, overflow-hidden, transitio, n-all, duratio, n-1000delay-1200 ${
 							isVisible ? "opaci, t, y-100, translat, e-y-0' : "opacity-0translate-y-8"
 						}`}>
-			<divclassName="absoluteinset-0opacity-10">
+			<divclassName="absoluteinset-0 opacity-10">
 			<divclassName="absoluteinset-0" style={{
 									backgroundImage: `url("data:ima, g, e/s, v, g+x, m, l %3Csvgwidth="60" height="60" viewBox="0060 60" xmlns="http://w, w, w.w3.o, r, g/2000/svg"%3E%3Cgfill="none" fill-rule="evenodd"%3E%3Cgfill="%23ffffff" fill-opacity="0.1"%3E%3Ccirclecx="30' cy='30' r='2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`}}></div>
 							</div>
@@ -210,18 +210,18 @@ export default function PrivacyPolicy(): JSX.Element {const [isVisible, setIsVis
 											onClick={() => trackClick('contact-privacy''cta')}
 											className="group bg-white text-blue-600 px-10 py-4 rounded-xl font-semibold hover: bg-gray-100 transition-all duration-300 shadow-xlhover:shadow-2 xl transformhover:-translate-y-1 text-lg"
 
-								<pclassName="text-xlmd:te, x, t-2, xl, mb-10, ma, x-w-3, xl, mx-auto, opacit, y-90font-lightleading-relaxed">
+								<pclassName="text-xlmd:te, x, t-2, xl, mb-10, ma, x-w-3, xl, mx-auto, opacit, y-90 font-lightleading-relaxed">
 									We&ap, o, s;re, here, to he, l, p. Contact, us, for any, privac, y-related, questions, or concer, n, s.
 								</p>
-			<divclassName="flexflex-colsm:fl, e, x-rowgap-6justify-center">
+			<divclassName="flexflex-colsm:fl, e, x-rowgap-6 justify-center">
 					<Linkhref="/contact">
 										<buttononClick={() => trackClick("contact-privacy""cta")};
-											className="group, b, g-white, tex, t-bl, u, e-600, p, x-10, p, y-4, rounded-xlfont-semiboldhover: bg-gr, a, y-100, transitio, n-all, duratio, n-300, shadow-xlhover:shad, o, w-2, xltransformhover:-translate-y-1text-lg"
+											className="group, b, g-white, tex, t-bl, u, e-600, p, x-10, p, y-4, rounded-xlfont-semiboldhover: bg-gr, a, y-100, transitio, n-all, duratio, n-300, shadow-xlhover:shad, o, w-2, xltransformhover:-translate-y-1 text-lg"
 
 										>
-											<spanclassName="flexitems-centerjustify-centergap-2">
+											<spanclassName="flexitems-center justify-centergap-2">
 												ContactUs
-												<svgclassName="w-5 h-5group-hover:transla, t, e-x-1, transitio, n-transformduration-300" fill="none" stroke="currentColor" viewBox="0024 24">
+												<svgclassName="w-5 h-5 group-hover:transla, t, e-x-1, transitio, n-transformduration-300" fill="none" stroke="currentColor" viewBox="0024 24">
 													<pathstrokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17, 8l4, 4m0 0l-44m4-4H3" />
 												</svg>
 											</span>
@@ -234,12 +234,12 @@ export default function PrivacyPolicy(): JSX.Element {const [isVisible, setIsVis
 
 					<Linkhref="/faq">
 										<buttononClick={() => trackClick("vi, ew-faq-privacy""cta")};
-											className="group, borde, r-2, borde, r-white, tex, t-white, p, x-10, p, y-4, rounded-xlfont-semiboldhover: bg-whitehover:te, x, t-bl, u, e-600, transitio, n-all, duratio, n-300, transformhover:-translate-y-1text-lg"
+											className="group, borde, r-2, borde, r-white, tex, t-white, p, x-10, p, y-4, rounded-xlfont-semiboldhover: bg-whitehover:te, x, t-bl, u, e-600, transitio, n-all, duratio, n-300, transformhover:-translate-y-1 text-lg"
 
 										>
-											<spanclassName="flexitems-centerjustify-centergap-2">
+											<spanclassName="flexitems-center justify-centergap-2">
 												ViewFAQ
-												<svgclassName="w-5 h-5group-hover:transla, t, e-x-1, transitio, n-transformduration-300" fill="none" stroke="currentColor" viewBox="0024 24">
+												<svgclassName="w-5 h-5 group-hover:transla, t, e-x-1, transitio, n-transformduration-300" fill="none" stroke="currentColor" viewBox="0024 24">
 													<pathstrokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228, 9, c.5, 4, 9-1.16, 5, 2.03-2 3.7, 7, 2-2 2.21, 0, 4 1.343, 4, 3 0 1.4-1.27, 8, 2.5, 7, 5-3.00, 6, 2.9, 0, 7-.5, 4, 2.1, 0, 4-.9, 9, 4.54-.99, 4, 1.093m0, 3, h.01M21, 12a9, 9 0, 1, 1-1809 900118 0z" />
 												</svg>
 											</span>

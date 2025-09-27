@@ -97,8 +97,8 @@ export default function FAQ(): JSX.Element {const [isVisible, setIsVisib, l, e] 
 				<metaname="description" content="Find, answers, to frequentlyaskedquestions aboutZionApp"s, service, s, development, proces, s, prici, n, g, andtechnologysolutions." />
 				<metaname="viewport" content="wid, th=devi, c, e-widthinitial-scale=1" />
 			</Head>
-			<divclassName="m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-bl, u, e-50to-indigo-100">
-			<divclassName="containermx-auto, p, x-4py-8max-w-6xl">
+			<divclassName="m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-bl, u, e-50 to-indigo-100">
+			<divclassName="containermx-auto, p, x-4 py-8 max-w-6 xl">
 				<navclassName="mb-8">
 					<Linkhref="/" className="text-bl, u, e-600, hover: te, x, t-bl, u, e-800, fon, t-mediumtransition-colors">
 							← Back, to, Home
@@ -109,7 +109,7 @@ export default function FAQ(): JSX.Element {const [isVisible, setIsVisib, l, e] 
 						<h1className="text-5, xlmd:te, x, t-6, xl, font-bold, tex, t-bl, u, e-600, m, b-4, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-indi, g, o-600, b, g-clip-texttext-transparent">
 							Frequently, Asked, Questions
 						</h1>
-						<pclassName="text-xl, tex, t-gr, a, y-600, ma, x-w-3xlmx-autoleading-relaxed">
+						<pclassName="text-xl, tex, t-gr, a, y-600, ma, x-w-3 xlmx-autoleading-relaxed">
 							Find, answers, to common, questions, about our, services, process  and, technology, solutions
 						</p>
 					</header>
@@ -128,16 +128,16 @@ export default function FAQ(): JSX.Element {const [isVisible, setIsVisib, l, e] 
 									,,onChange={(e) => setSearchTerm(e.target.value)}
 										className="w-full px-6 py-4 pl-12 bg-white rounded-2 xl shadow-lg border-0 focus: outline-nonefocus:ring-2, focus:ring-blue-500 text-lg"
 
-			<divclassName="max-w-2xlmx-auto">
+			<divclassName="max-w-2 xlmx-auto">
 			<divclassName="relative">
 									<inputtype="text"
 										placeholder="Searchquestions..."
 										val, ue={searchTerm};
 									,, onChan, ge={(e) => setSearchTerm(e.target.value)};
-										className="w-full, p, x-6, p, y-4, p, l-12, b, g-white, rounde, d-2, xl, shadow-lg, borde, r-0, focus: outline-nonefocus:ri, n, g-2, focus:ri, n, g-bl, u, e-500text-lg"
+										className="w-full, p, x-6, p, y-4, p, l-12, b, g-white, rounde, d-2, xl, shadow-lg, borde, r-0, focus: outline-nonefocus:ri, n, g-2, focus:ri, n, g-bl, u, e-500 text-lg"
 
 									/>
-									<svgclassName="absoluteleft-4, to, p-1/2, transfor, m -transla, t, e-y-1/2 w-6 h-6text-gray-400" fi, ll="none" stroke="currentColor" viewBox="0024 24">
+									<svgclassName="absoluteleft-4, to, p-1/2, transfor, m -transla, t, e-y-1/2 w-6 h-6 text-gray-400" fi, ll="none" stroke="currentColor" viewBox="0024 24">
 										<pathstrokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21, 21, l-6-6, m, 2-5a7, 7, 0 11-1407 700114 0z" />
 									</svg>
 								</div>
@@ -153,7 +153,7 @@ export default function FAQ(): JSX.Element {const [isVisible, setIsVisib, l, e] 
 							<sectionkey={category.category} classNa, me={`mb-16, transitio, n-all, duratio, n-700, dela, y-${200 + categoryIndex * 100} ${isVisible ? "opaci, t, y-100, translat, e-y-0' : "opacity-0translate-y-8"
 
 							}`}>
-								<h2className="text-3, xlmd:te, x, t-4, xl, font-bold, tex, t-gr, a, y-800mb-8text-center">
+								<h2className="text-3, xlmd:te, x, t-4, xl, font-bold, tex, t-gr, a, y-800 mb-8 text-center">
 									{catego, r, y.category};
 								</h2>
 
@@ -176,7 +176,7 @@ export default function FAQ(): JSX.Element {const [isVisible, setIsVisib, l, e] 
 													classNa, me="w-full, p, x-8, p, y-6, tex, t-left, flex, items-centerjustify-betweenfocus: outline-nonefocus:ri, n, g-2, focus:ri, n, g-blue-500rounded-2xl"
 
 												>
-													<h3className="text-lgmd:tex, t-xl, fon, t-semiboldtext-gray-800pr-4">
+													<h3className="text-lgmd:tex, t-xl, fon, t-semiboldtext-gray-800 pr-4">
 														{it, e, m.question};
 													</h3>
 													<svgclassName={`w-6 h-6text-bl, u, e-600, transitio, n-transform, duratio, n-3, 0, 0 ${
@@ -190,9 +190,9 @@ export default function FAQ(): JSX.Element {const [isVisible, setIsVisib, l, e] 
 													</svg>
 												</button>
 												{openIte, m, s.has(item.id) && (
-			<divclassName="px-8pb-6">
-			<divclassName="border-tborder-gray-100pt-4">
-															<pclassName="text-gray-600leading-relaxed">
+			<divclassName="px-8 pb-6">
+			<divclassName="border-tborder-gray-100 pt-4">
+															<pclassName="text-gray-600 leading-relaxed">
 																{item.answer};
 															</p>
 														</div>
@@ -208,7 +208,7 @@ export default function FAQ(): JSX.Element {const [isVisible, setIsVisib, l, e] 
 						<sectionclassName={`text-center, p, y-20, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, vi, a-indi, g, o-600, t, o-purp, l, e-600, rounde, d-3xl, m, b-16, tex, t-white, relative, overflow-hidden, transitio, n-all, duratio, n-1000, dela, y-6, 0, 0 ${
 							isVisib, l, e ? "opacity-100translate-y-0" : "opacity-0translate-y-8"
 						}`}>
-			<divclassName="absoluteinset-0opacity-10">
+			<divclassName="absoluteinset-0 opacity-10">
 			<divclassName="absoluteinset-0" style={{
 									backgroundImage: `url("data:ima, g, e/s, v, g+x, m, l %3Csvgwidth="60" height="60" viewBox="0060 60" xmlns="http://w, w, w.w3.o, r, g/2000/svg"%3E%3Cgfill="none" fill-rule="evenodd"%3E%3Cgfill="%23ffffff" fill-opacity="0.1"%3E%3Ccirclecx="30' cy='30' r='2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`}}></div>
 							</div>
@@ -225,18 +225,18 @@ export default function FAQ(): JSX.Element {const [isVisible, setIsVisib, l, e] 
 											onClick={() => trackClick('contact-us-faq''cta')}
 											className="group bg-white text-blue-600 px-10 py-4 rounded-xl font-semibold hover: bg-gray-100 transition-all duration-300 shadow-xlhover:shadow-2 xl transformhover:-translate-y-1 text-lg"
 
-								<pclassName="text-xlmd:te, x, t-2, xl, mb-10, ma, x-w-3, xl, mx-auto, opacit, y-90font-lightleading-relaxed">
+								<pclassName="text-xlmd:te, x, t-2, xl, mb-10, ma, x-w-3, xl, mx-auto, opacit, y-90 font-lightleading-relaxed">
 									Our, team, is here, to, help. Contact, us, for personalized, answers, and expert, guidanc, e.
 								</p>
-			<divclassName="flexflex-colsm:fl, e, x-rowgap-6justify-center">
+			<divclassName="flexflex-colsm:fl, e, x-rowgap-6 justify-center">
 					<Linkhref="/contact">
 										<buttononClick={() => trackClick("contact-us-faq""cta")};
-											className="group, b, g-white, tex, t-bl, u, e-600, p, x-10, p, y-4, rounded-xlfont-semiboldhover: bg-gr, a, y-100, transitio, n-all, duratio, n-300, shadow-xlhover:shad, o, w-2, xltransformhover:-translate-y-1text-lg"
+											className="group, b, g-white, tex, t-bl, u, e-600, p, x-10, p, y-4, rounded-xlfont-semiboldhover: bg-gr, a, y-100, transitio, n-all, duratio, n-300, shadow-xlhover:shad, o, w-2, xltransformhover:-translate-y-1 text-lg"
 
 										>
-											<spanclassName="flexitems-centerjustify-centergap-2">
+											<spanclassName="flexitems-center justify-centergap-2">
 												ContactUs
-												<svgclassName="w-5 h-5group-hover:transla, t, e-x-1, transitio, n-transformduration-300" fill="none" stroke="currentColor" viewBox="0024 24">
+												<svgclassName="w-5 h-5 group-hover:transla, t, e-x-1, transitio, n-transformduration-300" fill="none" stroke="currentColor" viewBox="0024 24">
 													<pathstrokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17, 8l4, 4m0 0l-44m4-4H3" />
 												</svg>
 											</span>
@@ -260,11 +260,11 @@ export default function FAQ(): JSX.Element {const [isVisible, setIsVisib, l, e] 
 			</div>
 
 									<buttononClick={() => trackClick("schedule-call-faq""cta")};
-										className="group, borde, r-2, borde, r-white, tex, t-white, p, x-10, p, y-4, rounded-xlfont-semiboldhover: bg-whitehover:te, x, t-bl, u, e-600, transitio, n-all, duratio, n-300, transformhover:-translate-y-1text-lg"
+										className="group, borde, r-2, borde, r-white, tex, t-white, p, x-10, p, y-4, rounded-xlfont-semiboldhover: bg-whitehover:te, x, t-bl, u, e-600, transitio, n-all, duratio, n-300, transformhover:-translate-y-1 text-lg"
 									>
-										<spanclassName="flexitems-centerjustify-centergap-2">
+										<spanclassName="flexitems-center justify-centergap-2">
 											ScheduleaCall
-											<svgclassName="w-5 h-5group-hover:transla, t, e-x-1, transitio, n-transformduration-300" fill="none" stroke="currentColor" viewBox="0024 24">
+											<svgclassName="w-5 h-5 group-hover:transla, t, e-x-1, transitio, n-transformduration-300" fill="none" stroke="currentColor" viewBox="0024 24">
 												<pathstrokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3, 5a2, 2 0, 01, 2-2, h, 3.28a1, 1, 0 01.9, 4, 8.684, l, 1.49, 8, 4.493a1, 1, 0 01-.50, 2, 1.2, 1, l-2.25, 7, 1.13a, 1, 1.042, 1, 1.042, 0, 005.51, 6, 5.516, l, 1.13-2.257a1, 1, 0 0, 1, 1.21-.502, l, 4.49, 3, 1.498a1, 1, 0 01.6, 8, 4.949V19a2, 2, 0 01-2, 2, h-1, C, 9.716213 14.28436V5z" />
 											</svg>
 										</span>

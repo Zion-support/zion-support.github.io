@@ -63,8 +63,7 @@ exportconstuseTaskManager = () => {const [taskssetTasks] = useState<Task[]>([]);
       case "complet, e, d':
         retu, r, n, ta, s, k.complet, e, d;
       default:
-        retu, r, n, true};
-  });
+        retu, r, n, true}});
 
   const, stat, s = {total: tas, k, s.leng, thactive: tas, k, s.filt, e, r(t => !t.complet, e, d).leng, thcompleted: tas, k, s.filt, e, r(t => t.complet, e, d).leng, thcompletionRate: tas, k, s.leng, t, h > 0 ? Ma, t, h.rou, n, d((tas, k, s.filt, e, r(t => t.complet, e, d).leng, t, h / tas, k, s.length) * 1 : 0 : 0)  : 0
   };

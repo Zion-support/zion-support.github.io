@@ -60,7 +60,7 @@ export const AdvancedAnalyticsDashboard: React.FC<AdvancedAnalyticsDashboardProp
             </span>
           </div>
           <button onClick ={onDataRefresh}
-            className="px-4py-2bg-blue-500 hov e r:bg-blue-600 te x t-white rounded-lg text-sm font-medium transition-colors"
+            className="px-4 py-2 bg-blue-500 hov e r:bg-blue-600 te x t-white rounded-lg text-sm font-medium transition-colors"
            aria-label="Refresh">
             Refresh
           </button>
@@ -73,7 +73,7 @@ export const AdvancedAnalyticsDashboard: React.FC<AdvancedAnalyticsDashboardProp
           <label className ="text-sm  font-medium  text-gray-700da  r  k:text-gray-300">Time  Rang  e:</label>
           <select value ={selectedTimeRange}
             onChange={(e) => setSelectedTimeRange(e.target.value)}
-            className="px-3p y-1 bord e r border-gray-300 da r k: border-gray-600 rounded-lg bg-white dark:bg-gray-700 te x t-gray-900 d a r k:text-white"
+            className="px-3 p y-1 bord e r border-gray-300 da r k: border-gray-600 rounded-lg bg-white dark:bg-gray-700 te x t-gray-900 d a r k:text-white"
           >
             {timeRangeOptions.map(option => (
               <option key ={option.value} value={option.value}>{option.label}</option>

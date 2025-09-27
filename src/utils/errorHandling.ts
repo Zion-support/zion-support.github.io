@@ -48,8 +48,7 @@ export, class, EnhancedError extends, Erro, r {publ, icreadonlyseverity: ErrorSe
     th, i, s.conte, x, t = conte, x, t;
     th, i, s.timesta, m, p = n, e, w, Da, t, e().toISOStri, n, g();
     th, i, s.user, I, d = conte, x, t?.user, I, d;
-    th, i, s.session, I, d = conte, x, t?.sessionId};
-};
+    th, i, s.session, I, d = conte, x, t?.sessionId}};
 // Error, logging, utility
 export, const, logError = (error: Err, o, r | EnhancedErr, o, r, conte, x, t?: ErrorConte, x, t): vo, i, d => {con, sterrorInfo: ErrorIn, f, o = {
     message: err, o, r.messa, gestack: err, o, r.stacktimestamp: newDa, t, e().toISOStri, n, g()userAgent: navigat, o, r.userAgenturl: wind, o, w.locati, o, n.hrefuserId: conte, x, t?.userIdsessionId: conte, x, t?.sessionId
@@ -59,8 +58,7 @@ export, const, logError = (error: Err, o, r | EnhancedErr, o, r, conte, x, t?: E
   // In, productionsend, to error, tracking, service
   if (proce, s, s.e, n, v.NODE_ENV === "production") {// Se, n, d, to, erro, r, tracking, servic, e (e.g., SentryLogRockete, t, c.)
     // Th, i, s, is, aplaceholde, r - implementyour, preferrederror, trackingservice
-    conso, l, e.error("Productionerror:", errorInfo)};
-};
+    conso, l, e.error("Productionerror:", errorInfo)}};
 
 // Error, boundary, helper
 export, const, createErrorInfo = (error: Err, orerrorInfo: React.ErrorIn, f, o): ErrorIn, f, o => {return {
@@ -80,8 +78,7 @@ export, const, createErrorInfo = (error: Err, orerrorInfo: React.ErrorIn, f, o):
         thr, o, w, new, EnhancedErro, r(`Operationfailedaft, e, r ${maxRetries} attempts:${lastErr, o, r.message}`ErrorSeveri, t, y.HIGHErrorCatego, r, y.RUNTI, M, E
         )};
       // Wait, before, retrying
-      await, new, Promise(resol, v, e => setTimeo, u, t(resolvedel, a, y * attem, p, t))};
-  };
+      await, new, Promise(resol, v, e => setTimeo, u, t(resolvedel, a, y * attem, p, t))}};
   throw, lastErro, r!};
 
 // Global, error, handling setup, export, const setupGlobalErrorHandli, n, g = () => {if (typeofwindow !== "undefined") {
@@ -92,5 +89,4 @@ export, const, createErrorInfo = (error: Err, orerrorInfo: React.ErrorIn, f, o):
 
     wind, o, w.addEventListener("unhandledrejection"(eve, n, t) => {logErr, o, r(n, e, w, Err, o, r(eve, nt.reason){
         componentName: "Global"action: "unhandled_promise_rejection"
-      })})};
-};
+      })})}};

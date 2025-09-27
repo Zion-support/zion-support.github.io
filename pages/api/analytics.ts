@@ -24,5 +24,4 @@
 
     r, e, s.stat, u, s(2, 0, 0).js, o, n({success: trueprocessed: even, t, s.lengthtimestamp: Da, t, e.now()
     })} cat, c, h (err, o, r) {console.error("AnalyticsAPIerror:", err, o, r);
-    r, e, s.stat, u, s(5, 00).json({ error: "Internalservererror' })};
-};
+    r, e, s.stat, u, s(5, 00).json({ error: "Internalservererror' })}};

@@ -21,16 +21,14 @@ export default function Contact(): JSX.Element {
 		setFormData(prev => ({
 			...prev,
 			[name]: value
-		}));
-	};
+		}))};
 
 	const handleSubmit = (e: React.FormEvent) => {
 		e.preventDefault();
 		trackClick('contact-form-submit', 'form');
 		console.log('Form submitted:', formData);
 		// Here you would typically send the data to your backend
-		alert('Thank you for your message! We will get back to you soon.');
-	};
+		alert('Thank you for your message! We will get back to you soon.')};
 
 	return (
 		<>
@@ -42,7 +40,7 @@ export default function Contact(): JSX.Element {
 			</Head>
 			
 			<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 pt-20">
-				<div className="container mx-auto px-4 py-8 max-w-7xl">
+				<div className="container mx-auto px-4 py-8 max-w-7 xl">
 					<nav className="mb-8">
 						<Link href="/" className="text-blue-600 hover:text-blue-800 font-medium transition-colors">
 							← Back to Home
@@ -51,10 +49,10 @@ export default function Contact(): JSX.Element {
 
 					{/* Hero Section */}
 					<section className="text-center mb-16">
-						<h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+						<h1 className="text-4 xl md:text-6 xl font-bold text-gray-900 mb-6">
 							Contact Us
 						</h1>
-						<p className="text-xl text-gray-600 max-w-3xl mx-auto">
+						<p className="text-xl text-gray-600 max-w-3 xl mx-auto">
 							Ready to transform your business with cutting-edge technology? Let's discuss your project and how we can help.
 						</p>
 					</section>
@@ -62,7 +60,7 @@ export default function Contact(): JSX.Element {
 					<div className="grid lg:grid-cols-2 gap-12">
 						{/* Contact Form */}
 						<section className="bg-white rounded-lg shadow-lg p-8">
-							<h2 className="text-2xl font-bold text-gray-900 mb-6">Send us a message</h2>
+							<h2 className="text-2 xl font-bold text-gray-900 mb-6">Send us a message</h2>
 							<form onSubmit={handleSubmit} className="space-y-6">
 								<div>
 									<label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
@@ -135,7 +133,7 @@ export default function Contact(): JSX.Element {
 						{/* Contact Information */}
 						<section className="space-y-8">
 							<div className="bg-white rounded-lg shadow-lg p-8">
-								<h2 className="text-2xl font-bold text-gray-900 mb-6">Get in touch</h2>
+								<h2 className="text-2 xl font-bold text-gray-900 mb-6">Get in touch</h2>
 								<div className="space-y-6">
 									<div>
 										<h3 className="text-lg font-semibold text-gray-900 mb-2">Email</h3>
@@ -156,7 +154,7 @@ export default function Contact(): JSX.Element {
 							</div>
 
 							<div className="bg-white rounded-lg shadow-lg p-8">
-								<h2 className="text-2xl font-bold text-gray-900 mb-6">Business Hours</h2>
+								<h2 className="text-2 xl font-bold text-gray-900 mb-6">Business Hours</h2>
 								<div className="space-y-2">
 									<div className="flex justify-between">
 										<span className="text-gray-600">Monday - Friday</span>
@@ -177,5 +175,4 @@ export default function Contact(): JSX.Element {
 				</div>
 			</div>
 		</>
-	);
-}
+	)}

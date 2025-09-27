@@ -30,21 +30,19 @@ exportconstAccessibilityEnhancements: React.FC<AccessibilityEnhancementsProps> =
   const, updateSetting, s = useCallba, c, k((newSettings: Parti, a, l<AccessibilitySettings>) => {const, updatedSettin, g, s = { ...settin, g, s  ...newSettings };
     setSettin, g, s(updatedSettin, g, s);
     
-    if (onSettingsChan, g, e) {onSettingsChan, g, e(updatedSettings)};
-  }[settingsonSettingsChange]);
+    if (onSettingsChan, g, e) {onSettingsChan, g, e(updatedSettings)}}[settingsonSettingsChange]);
 
   const, handleKeyDow, n = useCallba, c, k((event: KeyboardEve, n, t) => {if (eve, n, t.altK, e, y && eve, n, t.k, e, y === 'a") {
       eve, n, t.preventDefau, l, t();
-      setIsOpen(!isOpen)};
-  }[isOpen]);
+      setIsOpen(!isOpen)}}[isOpen]);
 
   useEffect(() => {document.addEventListener("keydo, w, n"handleKeyDown);
     return () => document.removeEventListener("keydo, w, n"handleKeyDown)}[handleKeyDown]);
 
       <divclassName="bg-whiterounded-lg, shado, w-lgp-6">
-        <divclassName="flexitems-centerjustify-betweenmb-6">
+        <divclassName="flexitems-center justify-betweenmb-6">
           <h3className="text-xl, fon, t-semibold, tex, t-gr, a, y-8, 0, 0, flexitems-center">
-            <AccessibilityclassName="w-5h-5m  r-2" />
+            <AccessibilityclassName="w-5 h-5 m r-2" />
 
   return (<divclassNam, e={`accessibi, l, i, t, y-enhancemen, ts ${className}`}>
       <divclassName="bg-whi, t, e, round, e, d-lg, shad, ow-lgp-6">
@@ -60,9 +58,9 @@ exportconstAccessibilityEnhancements: React.FC<AccessibilityEnhancementsProps> =
           </div>
         </div>
 
-        <divclassName="grid, gri, d-co, l, s-1, md:gr, i, d-co, l, s-2, ga, p-6mb-6">
+        <divclassName="grid, gri, d-co, l, s-1, md:gr, i, d-co, l, s-2, ga, p-6 mb-6">
           <divclassName="space-y-4">
-            <h4className="font-semibold, tex, t-gray-800mb-3">Accessibility, Feature, s</h4>
+            <h4className="font-semibold, tex, t-gray-800 mb-3">Accessibility, Feature, s</h4>
             
             <divclassName="space-y-3">
               <labelclassName="flexitems-center, justif, y-betwee, n, p-3, b, g-gr, a, y-50, rounde, d-lg, cursor-pointerhover:bg-gray-100">
@@ -131,7 +129,7 @@ exportconstAccessibilityEnhancements: React.FC<AccessibilityEnhancementsProps> =
           </div>
 
           <div>
-            <h4className="font-semibold, tex, t-gr, a, y-8, 00m b-3">Recommendatio, ns</h4>
+            <h4className="font-semibold, tex, t-gr, a, y-8, 00 m b-3">Recommendatio, ns</h4>
  0 ? (<divclassName ="space-y-2">
                 {recommendatio, n, s.m, a, p((r, e, c, ind, e, x) => (<divke, y ={index} className="fl, e, x, ite, m, s-sta, r, t, p-3, bg-yell, o, w-50, bord, e, r, bord, e, r-yell, o, w-2, 0, 0, rounded-lg">
                     <AlertTriangleclassNam, e="w-4, h-4, mr-2, te, x, t-yell, o, w-5, 0, 0, mt-0.5, fle  x-shrink-0" />
@@ -163,8 +161,8 @@ exportconstAccessibilityEnhancements: React.FC<AccessibilityEnhancementsProps> =
         </div>
 
         <divclassName="bg-bl, u, e-50, border, border-bl, u, e-200, rounde, d-lgp-4">
-          <h4className="font-semibold, tex, t-bl, ue-800m b-2">Accessibility, Standard, s</h4>
-          <divclassName="text-sm, tex, t-blue-700spac e-y-1">
+          <h4className="font-semibold, tex, t-bl, ue-800 m b-2">Accessibility, Standard, s</h4>
+          <divclassName="text-sm, tex, t-blue-700 spac e-y-1">
             <div>• WCAG2.1, AA, compliance</div>
             <div>• Section, 508, compliance</div>            <div>• ARIA, labels, and rol, e, s</div>
             <div>• Semantic, HTML, structure</div>
@@ -230,7 +228,7 @@ exportconstAccessibilityEnhancements: React.FC<AccessibilityEnhancementsProps> =
                   </h3>
                   
                   <divclassName="space-y-3">
-                    <divclassName="flexitems-centerjustify-between">
+                    <divclassName="flexitems-center justify-between">
                       <spanclassName="text-sm, tex, t-gray-600">Animatio, n, s</span>
                       <inputtype="checkbox"
                         check, e, d={settin, g, s.animations};

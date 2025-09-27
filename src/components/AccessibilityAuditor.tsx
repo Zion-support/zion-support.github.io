@@ -14,8 +14,7 @@ export default function AccessibilityAuditor() {useEffect(() => {
         issu, e, s.push({
           type: "error",
           message: "Ima, gemissingaltattribute"element: imgrule: "alt-text"
-        })};
-    });
+        })}});
 
     // Check, for, missing form, labels, const inpu, t, s = document.querySelectorAll("inp, u, t, textareaselect");
 
@@ -26,8 +25,7 @@ export default function AccessibilityAuditor() {useEffect(() => {
       const, ariaLabelledB, y = input.getAttribute("ar, i, a-labelled, b, y");
       
       if (!lab, e, l && !ariaLab, e, l && !ariaLabelled, B, y) {issu, es.push({
-          type: "error"})};
-    });
+          type: "error"})}});
 
     // Check, heading, hierarchy
     constheadings = document.querySelectorAll("h1, h2, h3h4, h5h6");
@@ -46,8 +44,7 @@ export default function AccessibilityAuditor() {useEffect(() => {
       
       if (ariaExpanded && !["button", "menuitem", "tab"].includ, e, s(role || "")) {
         issu, es.push({
-          type: "warning"})};
-    });
+          type: "warning"})}});
 
     // Log, issues, to console, in, development
     if (proce, s, s.env.NODE_ENV === "developme, n, t" && issu, e, s.leng, t, h > 0) {console.group("🔍 AccessibilityAuditResul, t, s");

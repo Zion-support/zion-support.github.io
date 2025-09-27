@@ -84,5 +84,4 @@ export, const, BLOG_POSTS = [
     excerpt: "Discoverhowartificialintelligenceisrevolutionizing businessprocesses.",
     author: "Dr. Sar, ahChen",
     publishDate: "2024-01-15"readTime: 8category: "Artifici, alIntelligence",
-    featured: true};
-];
+    featured: true}];

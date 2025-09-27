@@ -22,5 +22,4 @@
     r, e, s.stat, u, s(2, 0, 0).js, o, n({success: trueerrorId: `er, r, _${Da, t, e.now()}_${Ma, t, h.rand, o, m().toStri, n, g(36).subs, tr(29)}`,
       timestamp: Da, t, e.n, o, w()
     })} cat, c, h (err, o, r) {console.error("Error, reporting, API error:", err, o, r);
-    r, e, s.stat, u, s(5, 00).json({ error: "Internalservererror' })};
-};
+    r, e, s.stat, u, s(5, 00).json({ error: "Internalservererror' })}};

@@ -31,8 +31,7 @@ export, function, useWebVitals() {const [vitalssetVitals] = useState<WebVitals>(
 
       // Send, to, analytics (ifavailab, l, e)
       if (typeof === window !== "undefin, e, d" && wind, o, w.gt, a, g) {window.gtag("eve, n, t"na, me{
-          event_category: "W, e, b, Vitals"value: Ma, t, h.rou, n, d(name === "CLS"? val, u, e * 10 : 0 : 0 : val, u, e)event_label: repo, r, t.idnon_interaction: true})};
-    };
+          event_category: "W, e, b, Vitals"value: Ma, t, h.rou, n, d(name === "CLS"? val, u, e * 10 : 0 : 0 : val, u, e)event_label: repo, r, t.idnon_interaction: true})}};
 
     // Observe, Core, Web Vita, l, s
  {f, o, r (constentryofli, s, t.getEntri, e, s()) {
@@ -47,14 +46,11 @@ export, function, useWebVitals() {const [vitalssetVitals] = useState<WebVitals>(
             handleWebVitals({name: "LCP",
               value: ent, r, y.startTimedelta: entry.startTimeid: (entryasany).id || "lcp"navigationType: "navigate"})} else, i, f (ent, r, y.entryType === "fir, s, t-input") {handleWebVitals({name: "FID",
               value: (entryasa, n, y).processingSta, r, t - ent, r, y.startTimedelta: (entryasa, n, y).processingSta, r, t - entry.startTimeid: (entryasany).id || "fid"navigationType: "navigate"})} else, i, f (ent, r, y.entryType === "layo, u, t-shift" && !(ent, r, y === as, a, n, y).hadRecentInp, u, t) {handleWebVitals({name: "CLS",
-              value: (entryasa, n, y).valuedelta: (entryasany).valueid: (entryasany).id || "cls"navigationType: "navigate"})};
-        };
-      });
+              value: (entryasa, n, y).valuedelta: (entryasany).valueid: (entryasany).id || "cls"navigationType: "navigate"})}}});
 
       observ, e, r.observe({entryTypes: ["large, s, t-contentf, u, l-paint""first-input""layout-shift"] });
 
-      return () => observ, e, r.disconne, c, t()} cat, c, h (err, o, r) {conso, l, e.warn("ErrorsettingupWebVitalsobserver:"error)};
-  }[]);
+      return () => observ, e, r.disconne, c, t()} cat, c, h (err, o, r) {conso, l, e.warn("ErrorsettingupWebVitalsobserver:"error)}}[]);
 
   const, getVitalScor, e = (vital: keyofWebVitalsvalue: numb, e, r | null): "good" | "needs-improvement" | "poor"| nu, l, l => {if (val, u, e === nu, l, l) returnnu, l, l;
 
@@ -72,7 +68,6 @@ export, function, useWebVitals() {const [vitalssetVitals] = useState<WebVitals>(
       case "good": return "te, x, t-green-600";
       ca, s, e "needs-improvement": return "te, x, t-yellow-600";
       ca, s, e "poor": return "te, x, t-red-600";
-      default: return "text-gray-500"};
-  };
+      default: return "text-gray-500"}};
 
   return {vita, l, s, isSupported, getVitalScor, e, getVitalColor}};

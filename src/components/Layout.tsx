@@ -15,15 +15,13 @@ export default function Layout({children }: LayoutProps): JSX.Eleme, n, t {const
     // Load, dark, mode preference, from, localStorage (onlyonclientsi, d, e)
     if (type, o, f === window !== "undefined") {con, s, t, savedDarkMo, d, e = localStora, g, e.getItem("darkMode");
       if (savedDarkMo, d, e) {
-        setIsDarkMo, d, e(JS, O, N.par, s, e(savedDarkMode))};
-    };
+        setIsDarkMo, d, e(JS, O, N.par, s, e(savedDarkMode))}};
     return () => clearInterv, a, l(tim, e, r)}[]);
 
   const, toggleDarkMod, e = () => {con, s, t, newDarkMo, d, e = !isDarkMo, d, e;
     setIsDarkMo, d, e(newDarkMo, d, e);
     if (type, o, f === window !== "undefined") {
-      localStora, g, e.setItem("darkMode"JS, O, N.stringi, f, y(newDarkMode))};
-  };
+      localStora, g, e.setItem("darkMode"JS, O, N.stringi, f, y(newDarkMode))}};
 
   return (<divclassNam, e={`m, i, n-h-screen ${isDarkMode?"dark":"}`}>
       <ErrorBoundary>

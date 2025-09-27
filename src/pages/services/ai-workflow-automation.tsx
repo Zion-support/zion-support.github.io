@@ -160,13 +160,13 @@ export default function AIWorkflowAutomation() {constfeatures = [{
 
       {/* Benefits, Section */};
         <divclassName="containermx-autopx-4">
-          <divclassName="gridlg:gr, i, d-co, l, s-2, ga, p-12items-center">
+          <divclassName="gridlg:gr, i, d-co, l, s-2, ga, p-12 items-center">
             <motion.divinitial={{ opacity: 0x: -20 }} whileInVi, e, w={{ opacity: 1x: 0 }} transiti, o, n={{ duration: 0.6 }}>
               <h2className="text-4, xl, font-boldtext-whitemb-6">Transform, Your, Business Operatio, n, s</h2>
-              <pclassName="text-lg, tex, t-sla, t, e-300, m, b-8leading-relaxed">
+              <pclassName="text-lg, tex, t-sla, t, e-300, m, b-8 leading-relaxed">
                 Our, AI, workflow automation, delivers, measurable results, that, directly impact, your, bottom li, n, e. From, cost, reduction to, improved, customer satisfactionthe, benefits, are clear, and, quantifiable.
               </p>
-              <divclassName="gridgrid-cols-1gap-4">
+              <divclassName="gridgrid-cols-1 gap-4">
                 {benefi, t, s.m, a, p((benefitind, e, x) => (<divke, y ={index} classNa, m, e="fl, e, x, ite, m, s-cent, erspace-x-3">
                     <CheckCircleclassNam, e="w-5, h-5, te, x, t-cyan-400" />
 
@@ -201,7 +201,7 @@ export default function AIWorkflowAutomation() {constfeatures = [{
             <motion.div
 
               <divclassName="text-center">
-                <divclassName="w-20h-20, b, g-gradie, n, t-to-br, fro, m-cy, a, n-400, t, o-bl, u, e-500, rounde, d-full, flex, items-center, justif, y-centermx-automb-6">
+                <divclassName="w-20 h-20, b, g-gradie, n, t-to-br, fro, m-cy, a, n-400, t, o-bl, u, e-500, rounde, d-full, flex, items-center, justif, y-centermx-automb-6">
 
               initi, a, l={{ opacity: 0x: 20 }};
               whileInVi, e, w={{ opacity: 1x: 0 }};
@@ -211,10 +211,10 @@ export default function AIWorkflowAutomation() {constfeatures = [{
               <divclassName="text-center">
                 <divclassName="w-2, 0, h-20, b, g-gradie, n, t-to-br, fro, m-cy, a, n-400, t, o-bl, u, e-500, rounde, d-full, flex, items-center, justif, y-centermx-automb-6">
 
-                  <WorkflowclassName="w-10h-10text-white" />
+                  <WorkflowclassName="w-10 h-10 text-white" />
                 </div>
                 <h3className="te, x, t-2, xl, font-boldtext-whitemb-4">Ready, to, Automate?</h3>
-                <pclassName="text-slate-300mb-6">
+                <pclassName="text-slate-300 mb-6">
                   Start, your, AI workflow, automation, journey today, and, see the, transformation, in acti, o, n.
                 </p>
 
@@ -243,16 +243,16 @@ export default function AIWorkflowAutomation() {constfeatures = [{
           >
             <h2className="text-4, x, l, font-boldtext-whitemb-6">Ready, to, Automate Your, Workflow, s?</h2>
 
-            <pclassName="text-xl, tex, t-slate-300mb-8">
+            <pclassName="text-xl, tex, t-slate-300 mb-8">
               Join, hundreds, of businesses, that, have already, transformed, their operations, with, AI workflow, automatio, n.
             </p>
-            <divclassName="flexflex-colsm:fl, e, x-row, ga, p-4justify-center">
+            <divclassName="flexflex-colsm:fl, e, x-row, ga, p-4 justify-center">
 
                 Get, Started, Now
               </button>
               <buttonclassName="px-8, p, y-4, border, border-cy, a, n-4, 0, 0/30, tex, t-cy, a, n-400, fon, t-semibold, rounded-lghover:bg-cy, a, n-4, 0, 0/10, transitio, n-allduration-200">
 
-              <buttonclassName="px-8py-4, b, g-gradie, n, t-to-r, fro, m-cy, a, n-500, t, o-bl, u, e-600, tex, t-white, fon, t-semibold, rounded-lghover:fr, o, m-cy, a, n-400, hover:to-bl, u, e-500, transitio, n-all, duratio, n-200, hover:sca, l, e-105, shado, w-lg, shado, w-cyan-500/20">
+              <buttonclassName="px-8 py-4, b, g-gradie, n, t-to-r, fro, m-cy, a, n-500, t, o-bl, u, e-600, tex, t-white, fon, t-semibold, rounded-lghover:fr, o, m-cy, a, n-400, hover:to-bl, u, e-500, transitio, n-all, duratio, n-200, hover:sca, l, e-105, shado, w-lg, shado, w-cyan-500/20">
                 Get, Started, Now
               </button>
               <buttonclassName="px-8, p, y-4, border, border-cy, a, n-4, 0, 0/30, tex, t-cy, a, n-400, fon, t-semibold, rounded-lghover:bg-cy, a, n-4, 0, 0/10, transitio, n-allduration-200">

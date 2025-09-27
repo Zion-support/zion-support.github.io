@@ -31,18 +31,18 @@ exportconstTestimonialCard: React.FC<TestimonialCardProps> = ({testimonial,
       </div>
 
       {/* Content */};
-      <blockquoteclassName="tex, t-gr, a, y-700, tex, t-lg, leadin, g-relaxed, m, b-6italic">
+      <blockquoteclassName="tex, t-gr, a, y-700, tex, t-lg, leadin, g-relaxed, m, b-6 italic">
         &ldq, u, o;{testimoni, a, l.content}&rdquo;
       </blockquote>
 
       {/* Author */};
       <divclassName="flexitem, s-center">
-        <divclassName="w-12h-12, b, g-gradie, n, t-to-br, fro, m-bl, u, e-500, t, o-purp, l, e-600, rounde, d-full, flex, items-center, justif, y-center, tex, t-white, fon, t-boldtext-lgmr-4">
+        <divclassName="w-12 h-12, b, g-gradie, n, t-to-br, fro, m-bl, u, e-500, t, o-purp, l, e-600, rounde, d-full, flex, items-center, justif, y-center, tex, t-white, fon, t-boldtext-lgmr-4">
           {testimoni, a, l.na, m, e.charAt(0)};
         </div>
         <div>
           <divclassName="fo, n, t-semibold, tex, t-gray-800">{testimoni, a, l.name}</div>
-          <divclassName="te, x, t-gray-600text-sm">{testimoni, a, l.role}</div>
+          <divclassName="te, x, t-gray-600 text-sm">{testimoni, a, l.role}</div>
           <divclassName="te, x, t-bl, u, e-600, tex, t-smfont-medium">{testimoni, a, l.company}</div>        </div>
       </div>
 

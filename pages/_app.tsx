@@ -25,20 +25,16 @@ import '../src/styles/improvements.css';
 export default function App({ Component, pageProps }: AppProps) {
   // Setup global error handling
   React.useEffect(() => {
-    setupGlobalErrorHandling();
-  }, []);
+    setupGlobalErrorHandling()}, []);
 
   // Register service worker for performance optimization
   useEffect(() => {
     if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {
       navigator.serviceWorker.register('/sw-performance.js')
         .then((registration) => {
-          console.log('Service Worker registered successfully:', registration);
-        })
+          console.log('Service Worker registered successfully:', registration)})
         .catch((error) => {
-          console.log('Service Worker registration failed:', error);
-        });
-    }
+          console.log('Service Worker registration failed:', error)})}
   }, []);
 
   return (
@@ -62,45 +58,35 @@ export default function App({ Component, pageProps }: AppProps) {
 			</Head>
       <style jsx global>{`
         * {
-          box-sizing: border-box;
-        }
+          box-sizing: border-box}
         html {
-          scroll-behavior: smooth;
-        }
+          scroll-behavior: smooth}
         body {margin: 0;
           padding: 0;
           font-family: -apple-systemBlinkMacSystemFont'Segoe UI''Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue'sans-serif;
           -webkit-font-smoothing: antialiased;
           -moz-osx-font-smoothing: grayscale;
-          transition: background-color 0.3s easecolor 0.3s ease;
-        }
+          transition: background-color 0.3s easecolor 0.3s ease}
         .dark body {
           background-color: #0f172a;
-          color: #f1f5f9;
-        }
+          color: #f1f5f9}
         h1, h2, h3, h4, h5, h6 {
           margin: 0 0 1rem 0;
           font-weight: 600;
-          line-height: 1.2;
-        }
+          line-height: 1.2}
         p {
-          margin: 0 0 1rem 0;
-        }
+          margin: 0 0 1rem 0}
         button {
-          font-family: inherit;
-        }
+          font-family: inherit}
         button:hover {
-          opacity: 0.9;
-        }
+          opacity: 0.9}
         @media (prefers-reduced-motion: reduce) {
           html {
-            scroll-behavior: auto;
-          }
+            scroll-behavior: auto}
           * {
             animation-duration: 0.01ms !important;
             animation-iteration-count: 1 !important;
-            transition-duration: 0.01ms !important;
-          }
+            transition-duration: 0.01ms !important}
         }
       `}</style>
           <PerformanceOptimizer>
@@ -120,5 +106,4 @@ export default function App({ Component, pageProps }: AppProps) {
             enableUserFeedback={true}
           /> */}
         </HelmetProvider>
-  );
-};
+  )};
