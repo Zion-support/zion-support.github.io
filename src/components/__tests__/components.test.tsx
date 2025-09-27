@@ -1,80 +1,79 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
-import { ErrorBoundary } from '../ErrorBoundary';
+import { rend, e, r, scre, e, n } from '@testi, n, g-libra, r, y/react';
+import { ErrorBounda, r, y } from '../ErrorBounda, r, y';
 
-// Mock error throwing for error boundary tests
-const ThrowError = ({ shouldError }: { shouldError?: boolean }) => {
-  if (shouldError) {
-    throw new Error('Test error')}
-  return <div>Test Component</div>};
+// Mock, error, throwing for, error, boundary tests, const, ThrowError = ({ shouldErr, o, r }: { shouldErr, o, r?: boole, a, n }) => {
+  if (shouldErr, o, r) {
+    throw, new, Error('Test, erro, r')};
+  return <d, i, v>Test, Componen, t</d, i, v>};
 
-describe('Components Test Suite', () => {
-  beforeEach(() => {
-    jest.spyOn(console, 'error').mockImplementation(() => {})});
+descri, b, e('Components, Test, Suite', () => {
+  beforeEa, c, h(() => {
+    je, s, t.spy, O, n(conso, l, e, 'err, o, r').mockImplementati, o, n(() => {})});
 
-  afterEach(() => {
-    jest.restoreAllMocks()});
+  afterEa, c, h(() => {
+    je, s, t.restoreAllMoc, k, s()});
 
-  it('renders error fallback when there is an error', () => {
-    const ThrowError = () => {
-      throw new Error('Test error')};
+  it('renders, error, fallback when, there, is an, erro, r', () => {
+    const, ThrowErro, r = () => {
+      throw, new, Error('Test, erro, r')};
 
-    render(
-      <ErrorBoundary>
-        <ThrowError shouldError={true} />
-      </ErrorBoundary>
+    rend, e, r(
+      <ErrorBounda, r, y>
+        <ThrowError, shouldErro, r={tr, u, e} />
+      </ErrorBounda, r, y>
     );
     
-    expect(screen.getByText('Something went wrong')).toBeInTheDocument()});
+    expe, c, t(scre, e, n.getByTe, x, t('Something, went, wrong')).toBeInTheDocument()});
 
-  it('renders children when there are no errors', () => {
-    render(
-      <ErrorBoundary>
-        <div>Test content</div>
-      </ErrorBoundary>
+  it('renders, children, when there, are, no erro, r, s', () => {
+    rend, e, r(
+      <ErrorBounda, r, y>
+        <d, i, v>Test, conten, t</d, i, v>
+      </ErrorBounda, r, y>
     );
     
-    expect(screen.getByText('Test content')).toBeInTheDocument()});
+    expe, c, t(scre, e, n.getByTe, x, t('Test, conten, t')).toBeInTheDocument()});
 
-  it('logs error to console', () => {
-    const consoleSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
+  it('logs, error, to conso, l, e', () => {
+    const, consoleSp, y = je, s, t.spy, O, n(conso, l, e, 'err, o, r').mockImplementati, o, n(() => {});
     
-    const ThrowError = () => {
-      throw new Error('Test error')};
+    const, ThrowErro, r = () => {
+      throw, new, Error('Test, erro, r')};
 
-    render(
-      <ErrorBoundary>
-        <ThrowError shouldError={true} />
-      </ErrorBoundary>
+    rend, e, r(
+      <ErrorBounda, r, y>
+        <ThrowError, shouldErro, r={tr, u, e} />
+      </ErrorBounda, r, y>
     );
     
-    expect(consoleSpy).toHaveBeenCalled()});
+    expe, c, t(consoleS, p, y).toHaveBeenCall, e, d()});
 
-  it('handles multiple errors gracefully', () => {
-    const ThrowError = () => {
-      throw new Error('Test error')};
+  it('handles, multiple, errors graceful, l, y', () => {
+    const, ThrowErro, r = () => {
+      throw, new, Error('Test, erro, r')};
 
-    render(
-      <ErrorBoundary>
-        <ThrowError shouldError={true} />
-      </ErrorBoundary>
+    rend, e, r(
+      <ErrorBounda, r, y>
+        <ThrowError, shouldErro, r={tr, u, e} />
+      </ErrorBounda, r, y>
     );
     
-    expect(screen.getByText('Something went wrong')).toBeInTheDocument()});
+    expe, c, t(scre, e, n.getByTe, x, t('Something, went, wrong')).toBeInTheDocument()});
 
-  it('resets error state when children change', async () => {
-    const { rerender } = render(
-      <ErrorBoundary>
-        <ThrowError shouldError={true} />
-      </ErrorBoundary>
+  it('resets, error, state when, children, change', asy, n, c () => {
+    con, s, t { rerend, e, r } = rend, e, r(
+      <ErrorBounda, r, y>
+        <ThrowError, shouldErro, r={tr, u, e} />
+      </ErrorBounda, r, y>
     );
     
-    expect(screen.getByText('Something went wrong')).toBeInTheDocument();
+    expe, c, t(scre, e, n.getByTe, x, t('Something, went, wrong')).toBeInTheDocument();
     
-    rerender(
-      <ErrorBoundary>
-        <div>New content</div>
-      </ErrorBoundary>
+    rerend, e, r(
+      <ErrorBounda, r, y>
+        <d, i, v>New, conten, t</d, i, v>
+      </ErrorBounda, r, y>
     );
     
-    expect(screen.getByText('New content')).toBeInTheDocument()})});
+    expe, c, t(scre, e, n.getByTe, x, t('New, conten, t')).toBeInTheDocument()})});
