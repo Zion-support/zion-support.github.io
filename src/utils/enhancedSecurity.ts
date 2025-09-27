@@ -289,7 +289,7 @@ class EnhancedSecurityManager {
             details: {
               type: 'integrity_violation',
               element: target.tagName,
-              src: (element as HTMLImageElement).src || (element as HTMLAnchorElement).href
+              src: (element as any).src || (element as any).href
             },
             userAgent: navigator.userAgent,
             url: window.location.href

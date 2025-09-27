@@ -107,7 +107,7 @@ class AdvancedSecurityManager {
   private startMonitoring(): void {
     if (this.isMonitoring) return;
     this.isMonitoring = true;
-    this.logEvent('security_monitoring_started', 'info', 'Security monitoring started');
+    this.logEvent('security_monitoring_started', 'low', 'Security monitoring started');
   }
 
   private setupEventListeners(): void {
@@ -143,7 +143,7 @@ class AdvancedSecurityManager {
   }
 
   private handleBeforeUnload(event: BeforeUnloadEvent): void {
-    this.logEvent('page_unload', 'info', 'Page unload detected');
+    this.logEvent('page_unload', 'low', 'Page unload detected');
   }
 
   private monitorForXSS(): void {

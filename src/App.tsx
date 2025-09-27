@@ -276,7 +276,7 @@ export default function App(): React.JSX.Element {
         userAgent: navigator.userAgent,
         viewport: `${window.innerWidth}x${window.innerHeight}`,
         connection: (navigator as any).connection?.effectiveType || 'unknown'
-      });
+      } as any);
     };
 
     // Track scroll depth with throttling

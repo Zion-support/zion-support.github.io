@@ -29,7 +29,7 @@ interface AccessibilityIssue {
   fix: string;
 }
 
-interface FocusableElement extends HTMLElement {
+interface FocusableElement extends Omit<HTMLElement, 'tabIndex'> {
   tabIndex?: number;
 }
 

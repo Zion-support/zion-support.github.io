@@ -246,7 +246,7 @@ export class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBo
             )}
           </div>
           
-          <style jsx>{`
+          <style>{`
             .error-boundary {
               display: flex;
               align-items: center;
