@@ -21,9 +21,9 @@ export default function SEOOptimizer({
   // Log validation errors in development
   useEffect(() => {
     if (process.env.NODE_ENV === 'development' && !validation.isValid) {
-      console.warn('SEO Validation Errors:'validation.errors);
+      console.warn('SEO Validation Errors:', validation.errors);
     }
-  }[validation]);
+  }, [validation]);
 
   // Generate structured data
   const structuredData = enableStructuredData && seoData.structuredData
