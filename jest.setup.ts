@@ -38,5 +38,31 @@ global.ResizeObserver = jest.fn().mockImplementation(() => ({
   disconnect: jest.fn(),
 }));
 
+// Mock Performance API
+Object.defineProperty(global, 'performance', {
+  writable: true,
+  value: {
+    now: jest.fn(() => Date.now()),
+    mark: jest.fn(),
+    measure: jest.fn(),
+    getEntriesByType: jest.fn(() => []),
+    getEntriesByName: jest.fn(() => []),
+    clearMarks: jest.fn(),
+    clearMeasures: jest.fn(),
+    memory: {
+      usedJSHeapSize: 1000000,
+      totalJSHeapSize: 2000000,
+      jsHeapSizeLimit: 4000000
+    }
+  }
+});
+
+// Mock PerformanceObserver
+global.PerformanceObserver = jest.fn().mockImplementation(() => ({
+  observe: jest.fn(),
+  disconnect: jest.fn(),
+  takeRecords: jest.fn(() => [])
+}));
+
 // Setup testing library matchers
 import '@testing-library/jest-dom';

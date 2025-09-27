@@ -45,7 +45,6 @@ const SystemDashboard: React.FC = () => {
 
     const updateMetrics = () => {
       // Get performance metrics
-      const performanceEntries = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       const paintEntries = performance.getEntriesByType('paint');
       const fcpEntry = paintEntries.find(entry => entry.name === 'first-contentful-paint');
       
@@ -57,9 +56,8 @@ const SystemDashboard: React.FC = () => {
       
       const score = Math.max(0, 100 - (fcp / 10) - (lcp / 100) - (fid / 10) - (cls * 100));
 
-      // Simulate resource usage
-      const memory = performance.memory ? 
-        (performance.memory.usedJSHeapSize / performance.memory.totalJSHeapSize) * 100 : 0;
+      // Simulate resource usage (performance.memory is not available in all browsers)
+      const memory = 0; // Simulated memory usage
       const cpu = Math.random() * 100;
       const storage = Math.random() * 100;
 

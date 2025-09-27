@@ -29,7 +29,6 @@ const PerformanceProfiler: React.FC = () => {
   const [selectedTimeRange, setSelectedTimeRange] = useState<'1m' | '5m' | '15m' | '1h'>('5m');
   
   const observerRef = useRef<PerformanceObserver | null>(null);
-  const componentTimers = useRef<Map<string, { start: number; end?: number }>>(new Map());
 
   useEffect(() => {
     // Only show in development or when explicitly enabled
@@ -99,7 +98,7 @@ const PerformanceProfiler: React.FC = () => {
     const fid = 0; // Would need to measure this
     const cls = 0; // Would need to measure this
     const ttfb = navigation ? navigation.responseStart - navigation.requestStart : 0;
-    const loadTime = navigation ? navigation.loadEventEnd - navigation.navigationStart : 0;
+    const loadTime = navigation ? navigation.loadEventEnd - navigation.fetchStart : 0;
     
     // Get memory usage
     const memoryUsage = (performance as any).memory ? 
@@ -183,13 +182,6 @@ const PerformanceProfiler: React.FC = () => {
     return 'text-red-500';
   };
 
-  const formatBytes = (bytes: number): string => {
-    if (bytes === 0) return '0 B';
-    const k = 1024;
-    const sizes = ['B', 'KB', 'MB', 'GB'];
-    const i = Math.floor(Math.log(bytes) / Math.log(k));
-    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
-  };
 
   const formatTime = (ms: number): string => {
     if (ms < 1000) return `${Math.round(ms)}ms`;

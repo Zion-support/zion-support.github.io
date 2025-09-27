@@ -1,4 +1,10 @@
 // Performance monitoring utilities
+
+// Declare gtag for Google Analytics
+declare global {
+  function gtag(...args: any[]): void;
+}
+
 export class PerformanceMonitor {
   private static instance: PerformanceMonitor;
   private metrics: Map<string, number> = new Map();
@@ -112,12 +118,12 @@ export class PerformanceMonitor {
         
         if (navigation) {
           this.metrics.set('TTFB', navigation.responseStart - navigation.requestStart);
-          this.metrics.set('DOMContentLoaded', navigation.domContentLoadedEventEnd - navigation.navigationStart);
-          this.metrics.set('LoadComplete', navigation.loadEventEnd - navigation.navigationStart);
+          this.metrics.set('DOMContentLoaded', navigation.domContentLoadedEventEnd - navigation.fetchStart);
+          this.metrics.set('LoadComplete', navigation.loadEventEnd - navigation.fetchStart);
           
           this.reportMetric('TTFB', navigation.responseStart - navigation.requestStart);
-          this.reportMetric('DOMContentLoaded', navigation.domContentLoadedEventEnd - navigation.navigationStart);
-          this.reportMetric('LoadComplete', navigation.loadEventEnd - navigation.navigationStart);
+          this.reportMetric('DOMContentLoaded', navigation.domContentLoadedEventEnd - navigation.fetchStart);
+          this.reportMetric('LoadComplete', navigation.loadEventEnd - navigation.fetchStart);
         }
       }, 0);
     });
