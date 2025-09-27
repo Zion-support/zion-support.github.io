@@ -249,8 +249,8 @@ const Dashboard: React.FC = () => {
       case 'search':
 	return (
 			<div className="p-8">
-            <h1 className="text-3xl font-bold text-gray-900 mb-8">Enhanced Search</h1>
-			<div className="max-w-2xl">
+            <h1 className="text-3 xl font-bold text-gray-900 mb-8">Enhanced Search</h1>
+			<div className="max-w-2 xl">
               {/* <EnhancedSearch 
                 onSearch={(query ,, results) => console.log('Search:', query  results)}
                 onResultClick={(result) => console.log('Result clicked:', result)}
@@ -265,7 +265,7 @@ const Dashboard: React.FC = () => {
 	return (
 			<div className="p-8">
 			<div className="flex justify-between items-center mb-8">
-              <h1 className="text-3xl font-bold text-gray-900">Advanced Analytics Dashboard</h1>
+              <h1 className="text-3 xl font-bold text-gray-900">Advanced Analytics Dashboard</h1>
 			<div className="flex items-center space-x-4">
                 <label className="flex items-center">
                   <input
@@ -293,7 +293,7 @@ const Dashboard: React.FC = () => {
       case 'advanced-performance':
 	return (
 			<div className="p-8">
-            <h1 className="text-3xl font-bold text-gray-900 mb-8">Advanced Performance Monitor</h1>
+            <h1 className="text-3 xl font-bold text-gray-900 mb-8">Advanced Performance Monitor</h1>
             {/* <AdvancedPerformanceMonitor 
              ,, onMetricsUpdate={(metrics) => console.log('Performance metrics updated:', metrics)}
               showDashboard={true}
@@ -304,7 +304,7 @@ const Dashboard: React.FC = () => {
       case 'advanced-security':
 	return (
 			<div className="p-8">
-            <h1 className="text-3xl font-bold text-gray-900 mb-8">Advanced Security Monitor</h1>
+            <h1 className="text-3 xl font-bold text-gray-900 mb-8">Advanced Security Monitor</h1>
             {/* <AdvancedSecurityMonitor 
               metrics={{
                 totalThreats: 0,
@@ -328,7 +328,7 @@ const Dashboard: React.FC = () => {
       case 'accessibility':
 	return (
 			<div className="p-8">
-            <h1 className="text-3xl font-bold text-gray-900 mb-8">Accessibility Auditor</h1>
+            <h1 className="text-3 xl font-bold text-gray-900 mb-8">Accessibility Auditor</h1>
             {/* <AdvancedAccessibilityAuditor 
              ,, onAuditComplete={(results) => console.log('Accessibility audit complete:', results)}
             /> */}
@@ -339,7 +339,7 @@ const Dashboard: React.FC = () => {
 	return (
 			<div className="p-8">
 			<div className="flex justify-between items-center mb-8">
-              <h1 className="text-3xl font-bold text-gray-900">System Monitor</h1>
+              <h1 className="text-3 xl font-bold text-gray-900">System Monitor</h1>
 			<div className="flex items-center space-x-4">
                 <label className="flex items-center">
                   <input
@@ -370,7 +370,7 @@ const Dashboard: React.FC = () => {
       case 'security-enhancements':
 	return (
 			<div className="p-8">
-            <h1 className="text-3xl font-bold text-gray-900 mb-8">Advanced Security Enhancements</h1>
+            <h1 className="text-3 xl font-bold text-gray-900 mb-8">Advanced Security Enhancements</h1>
             {/* <AdvancedSecurityEnhancements /> */}
 			<div className="text-center py-8 text-gray-500">Security Enhancements temporarily disabled</div>
           </div>
@@ -379,7 +379,7 @@ const Dashboard: React.FC = () => {
 	return (
 			<div className="p-8">
 			<div className="flex justify-between items-center mb-8">
-              <h1 className="text-3xl font-bold text-gray-900">Enhanced Performance Dashboard</h1>
+              <h1 className="text-3 xl font-bold text-gray-900">Enhanced Performance Dashboard</h1>
 			<div className="flex items-center space-x-4">
                 <label className="flex items-center">
                   <input
@@ -405,7 +405,7 @@ const Dashboard: React.FC = () => {
 	return (
 			<div className="p-8">
 			<div className="flex justify-between items-center mb-8">
-              <h1 className="text-3xl font-bold text-gray-900">Enhanced Security Monitor</h1>
+              <h1 className="text-3 xl font-bold text-gray-900">Enhanced Security Monitor</h1>
 			<div className="flex items-center space-x-4">
                 <label className="flex items-center">
                   <input
@@ -435,7 +435,7 @@ const Dashboard: React.FC = () => {
 	return (
 			<div className="p-8">
 			<div className="flex justify-between items-center mb-8">
-              <h1 className="text-3xl font-bold text-gray-900">Performance Optimizer</h1>
+              <h1 className="text-3 xl font-bold text-gray-900">Performance Optimizer</h1>
 			<div className="flex items-center space-x-4">
                 <button 
                  ,, onClick={() => window.location.reload()}
@@ -452,7 +452,7 @@ const Dashboard: React.FC = () => {
 	return (
 			<div className="p-8">
 			<div className="flex justify-between items-center mb-8">
-              <h1 className="text-3xl font-bold text-gray-900">Enhanced Analytics Dashboard</h1>
+              <h1 className="text-3 xl font-bold text-gray-900">Enhanced Analytics Dashboard</h1>
 			<div className="flex items-center space-x-4">
                 <label className="flex items-center">
                   <input
@@ -481,14 +481,14 @@ const Dashboard: React.FC = () => {
       case 'error-monitoring':
 	return (
 			<div className="p-8">
-            <h1 className="text-3xl font-bold text-gray-900 mb-8">Advanced Error Monitoring</h1>
+            <h1 className="text-3 xl font-bold text-gray-900 mb-8">Advanced Error Monitoring</h1>
             {/* <AdvancedErrorMonitoring /> */}
           </div>
         );
       case 'advanced-system-monitor':
 	return (
 			<div className="p-8">
-            <h1 className="text-3xl font-bold text-gray-900 mb-8">Advanced System Monitor</h1>
+            <h1 className="text-3 xl font-bold text-gray-900 mb-8">Advanced System Monitor</h1>
             <AdvancedSystemMonitor />
           </div>
         );
@@ -496,7 +496,7 @@ const Dashboard: React.FC = () => {
 	return (
 			<div className="p-8">
 			<div className="flex justify-between items-center mb-8">
-              <h1 className="text-3xl font-bold text-gray-900">Advanced Error Handler</h1>
+              <h1 className="text-3 xl font-bold text-gray-900">Advanced Error Handler</h1>
 			<div className="flex items-center space-x-4">
                 <button 
                  ,, onClick={() => window.location.reload()}
@@ -522,7 +522,7 @@ const Dashboard: React.FC = () => {
 	return (
 			<div className="p-8">
 			<div className="flex justify-between items-center mb-8">
-              <h1 className="text-3xl font-bold text-gray-900">Performance Optimizer</h1>
+              <h1 className="text-3 xl font-bold text-gray-900">Performance Optimizer</h1>
 			<div className="flex items-center space-x-4">
                 <button 
                  ,, onClick={() => window.location.reload()}
@@ -539,7 +539,7 @@ const Dashboard: React.FC = () => {
 	return (
 			<div className="p-8">
 			<div className="flex justify-between items-center mb-8">
-              <h1 className="text-3xl font-bold text-gray-900">Analytics Insights</h1>
+              <h1 className="text-3 xl font-bold text-gray-900">Analytics Insights</h1>
 			<div className="flex items-center space-x-4">
                 <button 
                  ,, onClick={() => window.location.reload()}
@@ -607,7 +607,7 @@ const Dashboard: React.FC = () => {
 	return (
 			<div className="p-8">
 			<div className="flex justify-between items-center mb-8">
-              <h1 className="text-3xl font-bold text-gray-900">Comprehensive Monitoring</h1>
+              <h1 className="text-3 xl font-bold text-gray-900">Comprehensive Monitoring</h1>
 			<div className="flex items-center space-x-4">
                 <button 
                  ,, onClick={() => window.location.reload()}
@@ -628,7 +628,7 @@ const Dashboard: React.FC = () => {
 	return (
 			<div className="p-8">
 			<div className="flex justify-between items-center mb-8">
-              <h1 className="text-3xl font-bold text-gray-900">Comprehensive Security</h1>
+              <h1 className="text-3 xl font-bold text-gray-900">Comprehensive Security</h1>
 			<div className="flex items-center space-x-4">
                 <button 
                  ,, onClick={() => window.location.reload()}
@@ -649,7 +649,7 @@ const Dashboard: React.FC = () => {
 	return (
 			<div className="p-8">
 			<div className="flex justify-between items-center mb-8">
-              <h1 className="text-3xl font-bold text-gray-900">Advanced Error Monitoring</h1>
+              <h1 className="text-3 xl font-bold text-gray-900">Advanced Error Monitoring</h1>
 			<div className="flex items-center space-x-4">
                 <button 
                  ,, onClick={() => window.location.reload()}
@@ -666,7 +666,7 @@ const Dashboard: React.FC = () => {
 	return (
 			<div className="p-8">
 			<div className="flex justify-between items-center mb-8">
-              <h1 className="text-3xl font-bold text-gray-900">Advanced System Monitor</h1>
+              <h1 className="text-3 xl font-bold text-gray-900">Advanced System Monitor</h1>
 			<div className="flex items-center space-x-4">
                 <button 
                  ,, onClick={() => window.location.reload()}
@@ -693,10 +693,10 @@ const Dashboard: React.FC = () => {
 			<div className="min-h-screen bg-gray-50">
         {/* Header */}
         <header className="bg-white shadow-sm border-b border-gray-200">
-			<div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
+			<div className="max-w-7 xl mx-auto px-4 sm: px-6 lg:px-8">
 			<div className="flex justify-between items-center py-6">
 			<div>
-                <h1 className="text-2xl font-bold text-gray-900">Advanced Analytics Dashboard</h1>
+                <h1 className="text-2 xl font-bold text-gray-900">Advanced Analytics Dashboard</h1>
                 <p className="text-sm text-gray-600">Comprehensive monitoring with AI-powered insights  performance optimization  security analysis  and SEO recommendations</p>
               </div>
 			<div className="flex items-center space-x-4">
@@ -714,8 +714,7 @@ const Dashboard: React.FC = () => {
 
         {/* Navigation Tabs */}
 			<div className="bg-white border-b border-gray-200">
-			<div className="max-w-7xl mx-auto px-4 sm: px-6,
-		lg:px-8">
+			<div className="max-w-7 xl mx-auto px-4 sm: px-6, lg:px-8">
 				<nav className="flex space-x-8">
               {tabs.map((tab) => (
                 <button
@@ -738,8 +737,7 @@ const Dashboard: React.FC = () => {
         </div>
 
         {/* Dashboard Content */}
-        <main className="max-w-7xl mx-auto px-4 sm: px-6,
-		lg:px-8 py-8 relative">
+        <main className="max-w-7 xl mx-auto px-4 sm: px-6, lg:px-8 py-8 relative">
           {isLoading && (
 			<div className="absolute inset-0 bg-white bg-opacity-75 flex items-center justify-center z-10">
 			<div className="flex items-center space-x-2">
@@ -753,8 +751,7 @@ const Dashboard: React.FC = () => {
 
         {/* Footer */}
         <footer className="bg-white border-t border-gray-200 mt-12">
-			<div className="max-w-7xl mx-auto px-4 sm: px-6,
-		lg:px-8 py-6">
+			<div className="max-w-7 xl mx-auto px-4 sm: px-6, lg:px-8 py-6">
 			<div className="text-center text-sm text-gray-500">
               <p>&copy; 2024 Zion Tech Solutions. All rights reserved.</p>
               <p className="mt-1">Dashboard powered by advanced analytics and monitoring systems.</p>

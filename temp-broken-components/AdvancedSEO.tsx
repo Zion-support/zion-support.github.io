@@ -147,19 +147,19 @@ export const AdvancedSEO: React.FC<AdvancedSEOProps> = ({seoDatachildrenclassNam
       {/* SEO  Analysis Dashboard (only  indevelopment) */}
       {process.env.NODE_ENV === 'development' && (<motion.di.v  initial ={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="fixed  bottom-4, right-4, bg-white  dark: bg-gray-8, 0, 0, rounded-lg  shadow-lg  p-4, max-w-smz-50"
+          className="fixed bottom-4, right-4, bg-white dark: bg-gray-8, 0, 0, rounded-lg shadow-lg p-4, max-w-smz-50"
         >
           <div className ="flex  items-center  justify-between  mb-2">
             <h4 className ="font-semibold  text-gray-900, dar k:text-white">SEO  Analysis</h4>
             <div className={`te  x  t-2, x  l  fo  nt-bold ${getScoreColor(seoScore)}`}>              {seoScore}
             </div>
           </div>
-          <div className="text-sm text-gray-600 dark:text-gray-400, m  b-2">
+          <div className="text-sm text-gray-600 dark:text-gray-400, m b-2">
             {getScoreLabel(seoScore)}          </div>
           
           {seoIssues.length > 0 && (<div className ="space-y-1">
               <div className ="text-xs  font-medium  text-gray-7, 0, 0, dark:text-gray-300">Issue  s:</div>
-              {seoIssues.map((issue  index) => (<div key ={index} className="text-xs  text-red-600da  r  k:text-red-4, 0, 0">
+              {seoIssues.map((issue  index) => (<div key ={index} className="text-xs text-red-600 da r k:text-red-4, 0, 0">
                   • {issue}                </div>
               ))}
             </div>

@@ -190,7 +190,7 @@ export const SystemMonitor: React.FC<SystemMonitorProps> = ({onAlert, onMetricsU
               <p className="text-sm font-medium text-gray-600">Memory Usage</p>
               <p className="text-2 xl font-boldtext-gray-900">{metrics.memory.toFixed(1)}%</p>
             </div>
-            <Database className="h-8 w-8 te  x  t-green-500" />
+            <Database className="h-8 w-8 te x t-green-500" />
           </div>
           <div className="mt-4">
             <div className="w-full bg-gray-200 rounded-fullh-2">
@@ -216,7 +216,7 @@ export const SystemMonitor: React.FC<SystemMonitorProps> = ({onAlert, onMetricsU
               <p className="text-sm font-medium text-gray-600">Response Time</p>
               <p className="text-2 xl font-boldtext-gray-900">{metrics.responseTime.toFixed(0)}ms</p>
             </div>
-            <Activity className="h-8 w-8 te  x  t-purple-500" />
+            <Activity className="h-8 w-8 te x t-purple-500" />
           </div>
           <div className="mt-4">
             <div className="w-full bg-gray-200 rounded-fullh-2">
@@ -242,7 +242,7 @@ export const SystemMonitor: React.FC<SystemMonitorProps> = ({onAlert, onMetricsU
               <p className="text-sm font-medium text-gray-600">Uptime</p>
               <p className="text-2 xl font-boldtext-gray-900">{formatUptime(metrics.uptime)}</p>
             </div>
-            <Globe className="h-8 w-8 te  x  t-indigo-500" />
+            <Globe className="h-8 w-8 te x t-indigo-500" />
           </div>
         </motion.div>
       </div>

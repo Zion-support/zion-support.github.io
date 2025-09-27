@@ -275,7 +275,7 @@ export default function ComprehensiveSecurityDashboard({
       {/* Header */}
       <div className="flex items-center justify-between">
         <div>
-          <h2 className="text-2xl font-bold text-gray-900">Security Dashboard</h2>
+          <h2 className="text-2 xl font-bold text-gray-900">Security Dashboard</h2>
           <p className="text-gray-600">Comprehensive security monitoring and threat analysis</p>
         </div>
         <div className="flex items-center space-x-4">
@@ -344,7 +344,7 @@ export default function ComprehensiveSecurityDashboard({
             <Shield className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">{metrics.overall.threatsBlocked}</div>
+            <div className="text-2 xl font-bold">{metrics.overall.threatsBlocked}</div>
             <p className="text-xs text-muted-foreground">
               +{Math.floor(Math.random() * 20)}% from last period
             </p>
@@ -357,7 +357,7 @@ export default function ComprehensiveSecurityDashboard({
             <AlertTriangle className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">{metrics.vulnerabilities.total}</div>
+            <div className="text-2 xl font-bold">{metrics.vulnerabilities.total}</div>
             <p className="text-xs text-muted-foreground">
               {metrics.vulnerabilities.critical} critical
             </p>
@@ -370,7 +370,7 @@ export default function ComprehensiveSecurityDashboard({
             <Activity className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">{metrics.monitoring.activeAlerts}</div>
+            <div className="text-2 xl font-bold">{metrics.monitoring.activeAlerts}</div>
             <p className="text-xs text-muted-foreground">
               {metrics.monitoring.resolvedAlerts} resolved
             </p>
@@ -383,7 +383,7 @@ export default function ComprehensiveSecurityDashboard({
             <CheckCircle className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">
+            <div className="text-2 xl font-bold">
               {metrics.overall.complianceStatus === 'compliant' ? '100%' : '85%'}
             </div>
             <p className="text-xs text-muted-foreground">

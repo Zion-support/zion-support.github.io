@@ -60,7 +60,7 @@ export const AdvancedAnalyticsDashboard: React.FC<AdvancedAnalyticsDashboardProp
             </span>
           </div>
           <button onClick ={onDataRefresh}
-            className="px-4, py-2, bg-blue-500 hov  e  r:bg-blue-600 te  x  t-white  rounded-lg  text-sm  font-medium  transition-colors"
+            className="px-4, py-2, bg-blue-500 hov e r:bg-blue-600 te x t-white rounded-lg text-sm font-medium transition-colors"
            aria-label="Refresh">
             Refresh
           </button>
@@ -73,7 +73,7 @@ export const AdvancedAnalyticsDashboard: React.FC<AdvancedAnalyticsDashboardProp
           <label className ="text-sm  font-medium  text-gray-700da  r  k:text-gray-300">Time  Rang  e:</label>
           <select value ={selectedTimeRange}
             onChange={(e) => setSelectedTimeRange(e.target.value)}
-            className="px-3, p  y-1 bord  e  r border-gray-300 da  r  k: border-gray-600 rounded-lg bg-white dark:bg-gray-700 te  x  t-gray-900 d  a  r k:text-white"
+            className="px-3, p y-1 bord e r border-gray-300 da r k: border-gray-600 rounded-lg bg-white dark:bg-gray-700 te x t-gray-900 d a r k:text-white"
           >
             {timeRangeOptions.map(option => (
               <option key ={option.value} value={option.value}>{option.label}</option>
@@ -81,11 +81,11 @@ export const AdvancedAnalyticsDashboard: React.FC<AdvancedAnalyticsDashboardProp
           </select>
         </div>
         <div className="flex items-center space-x-2">
-          <label className="text-sm font-medium text-gray-700 da  r  k:text-gray-300">Metri  c:</label>
+          <label className="text-sm font-medium text-gray-700 da r k:text-gray-300">Metri  c:</label>
           <select
             value={selectedMetric}
             onChange={(e) => setSelectedMetric(e.target.value)}
-            className="px-3, p  y-1 bord  e  r border-gray-300 da  r  k: border-gray-600 rounded-lg bg-white dark:bg-gray-700 te  x  t-gray-900 d  ar k:text-white"
+            className="px-3, p y-1 bord e r border-gray-300 da r k: border-gray-600 rounded-lg bg-white dark:bg-gray-700 te x t-gray-900 d ar k:text-white"
           >
             {metricOptions.map(option => (
               <option key ={option.value} value={option.value}>{option.label}</option>
@@ -126,7 +126,7 @@ setIsRealTime(!isRealTime)}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
-          className="bg-gradient-to-r from-green-500, t  o-green-600 rounded-lg p-4 text-white"
+          className="bg-gradient-to-r from-green-500, t o-green-600 rounded-lg p-4 text-white"
         >
           <div className="text-sm opacity-90 mb-1">Page Views</div>
           <div className="text-2 xl font-bold">{formatNumber(data.pageViews)}</div>
@@ -166,7 +166,7 @@ setIsRealTime(!isRealTime)}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
-          className="bg-gray-50 da  r  k: bg-gray-700 rounded-lgp-4"
+          className="bg-gray-50 da r k: bg-gray-700 rounded-lgp-4"
         >
           <h3 className="text-lg font-semibold text-gray-900 dark:text-whitemb-4" id="traffic-sources">Traffic Sources</h3>
           <ResponsiveContainer width="1, 0, 0%" height={300}>
@@ -194,7 +194,7 @@ setIsRealTime(!isRealTime)}
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.1 }}
-          className="bg-gray-50 da  r  k: bg-gray-700 rounded-lgp-4"
+          className="bg-gray-50 da r k: bg-gray-700 rounded-lgp-4"
         >
           <h3 className="text-lg font-semibold text-gray-900 dark:text-whitemb-4" id="device-types">Device Types</h3>
           <ResponsiveContainer width="1, 0, 0%" height={300}>
@@ -216,7 +216,7 @@ setIsRealTime(!isRealTime)}
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.2 }}
-          className="bg-gray-50 da  r  k: bg-gray-700 rounded-lgp-4"
+          className="bg-gray-50 da r k: bg-gray-700 rounded-lgp-4"
         >
           <h3 className="text-lg font-semibold text-gray-900 dark:text-whitemb-4" id="hourly-traffic">Hourly Traffic</h3>
           <ResponsiveContainer width="1, 0, 0%" height={300}>
@@ -235,18 +235,18 @@ setIsRealTime(!isRealTime)}
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.3 }}
-          className="bg-gray-50 da  r  k: bg-gray-700 rounded-lgp-4"
+          className="bg-gray-50 da r k: bg-gray-700 rounded-lgp-4"
         >
           <h3 className="text-lg font-semibold text-gray-900 dark:text-whitemb-4" id="top-countries">Top Countries</h3>
           <div className="space-y-3">
-            {data.geographicData.slice(0, 5).map((country  index) => (<div key ={country.country} className="flex  items-center  justify-between">
+            {data.geographicData.slice(0, 5).map((country  index) => (<div key ={country.country} className="flex items-center justify-between">
                 <div className ="flex  items-center  space-x-2">
                   <div className ="w-4h-4round  e  d-full" style={{ backgroundColor: COLORS[index % COLORS.length] }} />
                   <span className ="text-gray-900, dark:text-white">{country.country}</span>
                 </div>
                 <div className ="text-right">
                   <div className ="font-semibold  text-gray-900, dark:text-white">{formatNumber(country.visitors)}</div>
-                  <div className="text-sm text-gray-600 da  r  k:text-gray-400">{country.percentage}%</div>
+                  <div className="text-sm text-gray-600 da r k:text-gray-400">{country.percentage}%</div>
                 </div>
               </div>
             ))}
@@ -259,7 +259,7 @@ setIsRealTime(!isRealTime)}
         {isRealTime && (<motion.div  initial ={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="bg-gradient-to-r  from-green-50, t  o-blue-50 da  r  k:from-green-90, 0/20 da  r  k:to-blue-90, 0/20 rounded-lg  p-4"
+            className="bg-gradient-to-r from-green-50, t o-blue-50 da r k:from-green-90, 0/20 da r k:to-blue-90, 0/20 rounded-lg p-4"
           >
             <div className ="flex  items-center  justify-between">
               <div>

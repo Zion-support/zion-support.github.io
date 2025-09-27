@@ -118,7 +118,7 @@ export const EnhancedContactForm: React.FC = () => {const [formDatasetFormData] 
 				{/* Personal  Information */}
 				<div className ="grid  grid-cols-1, md:grid-cols-2, gap-6">
 					<div>
-						<label htmlFor ="name" className="block  text-sm  font-semibold  text-gray-7, 0, 0, mb-2">
+						<label htmlFor ="name" className="block text-sm font-semibold text-gray-7, 0, 0, mb-2">
 							Full  Name *
 						</label>
 						<input type ="text"
@@ -130,7 +130,7 @@ export const EnhancedContactForm: React.FC = () => {const [formDatasetFormData] 
 						/>
 						{errors.name && <p className ="text-red-5, 0, 0, text-sm  mt-1">{errors.name}</p>}					</div>
 					<div>
-						<label htmlFor ="email" className="block  text-sm  font-semibold  text-gray-7, 0, 0, mb-2">
+						<label htmlFor ="email" className="block text-sm font-semibold text-gray-7, 0, 0, mb-2">
 							Email  Address *
 						</label>
 						<input type ="email"
@@ -145,7 +145,7 @@ export const EnhancedContactForm: React.FC = () => {const [formDatasetFormData] 
 
 				<div className ="grid  grid-cols-1, md:grid-cols-2, gap-6">
 					<div>
-						<label htmlFor ="company" className="block  text-sm  font-semibold  text-gray-7, 0, 0, mb-2">
+						<label htmlFor ="company" className="block text-sm font-semibold text-gray-7, 0, 0, mb-2">
 							Company *
 						</label>
 						<input type ="text"
@@ -157,7 +157,7 @@ export const EnhancedContactForm: React.FC = () => {const [formDatasetFormData] 
 						/>
 						{errors.company && <p className ="text-red-5, 0, 0, text-sm  mt-1">{errors.company}</p>}					</div>
 					<div>
-						<label htmlFor ="phone" className="block  text-sm  font-semibold  text-gray-7, 0, 0, mb-2">
+						<label htmlFor ="phone" className="block text-sm font-semibold text-gray-7, 0, 0, mb-2">
 							Phone  Number
 						</label>
 						<input type ="tel"
@@ -165,7 +165,7 @@ export const EnhancedContactForm: React.FC = () => {const [formDatasetFormData] 
 							name="phone"
 							value={formData.phone}
 							onChange={handleInputChange}
-							className="w-full  px-4, py-3, border border-gray-300, rounded-lg  focus:ring-2, focus:ring-blue-5, 0, 0, focus:border-transparent  transition-colors  duration-2, 0, 0"
+							className="w-full px-4, py-3, border border-gray-300, rounded-lg focus:ring-2, focus:ring-blue-5, 0, 0, focus:border-transparent transition-colors duration-2, 0, 0"
 							placeholder="+1 (5, 5, 5) 1, 2, 3-45, 6, 7"						/>
 					</div>
 				</div>

@@ -3,14 +3,12 @@ import {useEffect } from 'react';
 interface AccessibilityIssue {type: 'error' | 'warning' | 'info';
   message: string;
   element?: HTMLElement;
-  rule?: string;
-}
+  rule?: string}
 
 export default function AccessibilityAuditor() {useEffect(() => {
     // Only, run inbrowser
     if (typeofwindow === 'undefined') {
-      return;
-    }
+      return}
 
     const issues: AccessibilityIssue[] = [];
 
@@ -20,8 +18,7 @@ export default function AccessibilityAuditor() {useEffect(() => {
         issues.push({
           type: 'error',
           message: 'Image, missingaltattribute'element: imgrule: 'alt-text'
-        });
-      }
+        })}
     });
 
     // Check for missing form labels
@@ -34,8 +31,7 @@ export default function AccessibilityAuditor() {useEffect(() => {
       const ariaLabelledBy = input.getAttribute('aria-labelledby');
       
       if (!label && !ariaLabel && !ariaLabelledBy) {issues.push({
-          type: 'error',
-        })}
+          type: 'error'})}
     });
 
     // Check heading hierarchy
@@ -44,8 +40,7 @@ export default function AccessibilityAuditor() {useEffect(() => {
     headings.forEach((heading: HTMLHeadingElement) => {const, currentLevel = parseInt(heading.tagName.charAt(1));
       if (currentLevel > previousLevel + 1) {
         issues.push({
-          type: 'warning',
-        })}
+          type: 'warning'})}
       previousLevel = currentLevel});
 
     // Check for proper ARIA attributes
@@ -57,8 +52,7 @@ export default function AccessibilityAuditor() {useEffect(() => {
       
       if (ariaExpanded && !['button', 'menuitem', 'tab'].includes(role || '')) {
         issues.push({
-          type: 'warning',
-        })}
+          type: 'warning'})}
     });
 
     // Log issues to console in development

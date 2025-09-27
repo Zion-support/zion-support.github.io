@@ -62,8 +62,7 @@ export default function Blog(): JSX.Element {
 	const handleSearch = (query: string) => {
 		setSearchQuery(query);
 		setCurrentPage(1);
-		trackClick('blog-search', 'search');
-	};
+		trackClick('blog-search', 'search')};
 
 	const handleCategoryFilter = (category: string) => {
 		setSelectedCategory(category.toLowerCase());
@@ -89,8 +88,7 @@ export default function Blog(): JSX.Element {
 		// Simulate API call
 		await new Promise(resolve => setTimeout(resolve, 1000));
 		trackClick('newsletter-signup', 'cta');
-		setIsNewsletterLoading(false);
-	};
+		setIsNewsletterLoading(false)};
   return (
     <>
 			<EnhancedSEO
@@ -101,7 +99,7 @@ export default function Blog(): JSX.Element {
 				type="website"
 			/>
 			<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-			<div className="container mx-auto px-4 py-8 max-w-7xl">
+			<div className="container mx-auto px-4 py-8 max-w-7 xl">
 				<nav className="mb-8">
 					<Link href="/" className="text-blue-600 hover:text-blue-800 font-medium transition-colors">
 							← Back to Home
@@ -109,11 +107,10 @@ export default function Blog(): JSX.Element {
 					</nav>
 
 					<header className="text-center mb-16">
-						<h1 className="text-5xl,
-		md:text-6xl font-bold text-blue-600 mb-4 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+						<h1 className="text-5 xl, md:text-6 xl font-bold text-blue-600 mb-4 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
 							Our Blog
 						</h1>
-						<p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+						<p className="text-xl text-gray-600 max-w-3 xl mx-auto leading-relaxed">
 							Insights  trends  and best practices from our technology experts
 						</p>
 					</header>
@@ -136,11 +133,10 @@ export default function Blog(): JSX.Element {
 							<section className={`mb-16 transition-all duration-700 delay-200 ${
 								isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
 							}`}>
-								<h2 className="text-3xl md: text-4xl font-bold text-gray-800 mb-8 text-center">
+								<h2 className="text-3 xl md: text-4 xl font-bold text-gray-800 mb-8 text-center">
 									Featured Articles
 								</h2>
-			<div className="grid grid-cols-1,
-		lg:grid-cols-2 gap-8">
+			<div className="grid grid-cols-1, lg:grid-cols-2 gap-8">
 									<AnimatePresence>
 										{featuredPosts.map((post ,, index) => (
 											<motion.div
@@ -168,11 +164,10 @@ export default function Blog(): JSX.Element {
 						<section className={`mb-16 transition-all duration-700 delay-400 ${
 							isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
 						}`}>
-							<h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-8 text-center">
+							<h2 className="text-3 xl md:text-4 xl font-bold text-gray-800 mb-8 text-center">
 								{selectedCategory === 'all' ? 'Latest Articles' : `${selectedCategory} Articles`}
 							</h2>
-			<div className="grid grid-cols-1 md: grid-cols-2,
-		lg:grid-cols-3 gap-8">
+			<div className="grid grid-cols-1 md: grid-cols-2, lg:grid-cols-3 gap-8">
 								<AnimatePresence mode="wait">
 									{paginatedPosts.map((post ,, index) => (
 										<motion.div
@@ -217,5 +212,4 @@ export default function Blog(): JSX.Element {
 				</div>
 			</div>
 		</>
-	);
-}
+	)}

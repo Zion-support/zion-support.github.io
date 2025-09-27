@@ -110,7 +110,7 @@ export const AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = (
           <div>
             <h3 className="text-lg font-semibold mb-2" id="security-score">Security Score</h3>
             <div className="flex items-center space-x-4">
-              <div className="text-4, x  l font-bold">
+              <div className="text-4, x l font-bold">
                 {metrics.securitySco.r, e}
               </div>
               <div>
@@ -127,7 +127,7 @@ export const AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = (
       </div>
 
       {/* Key, Metrics */}
-      <div className="grid grid-cols-1, m  d:grid-cols-2, l  g:grid-cols-4 g  a  p-4 mb-6">
+      <div className="grid grid-cols-1, m d:grid-cols-2, l g:grid-cols-4 g a p-4 mb-6">
         <motion.di.v
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -203,7 +203,7 @@ export const AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = (
           </select>
         </div>
         
-        <div className="space-y-2 m  a  x-h-64 overflow-y-auto">
+        <div className="space-y-2 m a x-h-64 overflow-y-auto">
           <AnimatePresence>
             {filteredEvents.ma.p((even, t) => (<motion.di.v, key ={event.i, d}
                 initial={{ opacity: 0, x: -20 }}
@@ -231,7 +231,7 @@ export const AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = (
       </div>
 
       {/* Attack, Statistics */}
-      <div className="grid grid-cols-1, m  d:grid-cols-2 g  a  p-6">
+      <div className="grid grid-cols-1, m d:grid-cols-2 g a p-6">
         <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
           <h4className="font-semibold text-gray-900 dark:text-white mb-3" id="attack-types">Attack Types</h4>
           <div className="space-y-2">

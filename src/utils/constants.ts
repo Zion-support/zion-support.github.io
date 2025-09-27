@@ -3,8 +3,7 @@ export interface Service {id: string;
   description: string;
   icon: string;
   features?: string[];
-  price?: string;
-}
+  price?: string}
 
 export const SERVICES: Service[] = [{id: 'ai-ml',
   title: 'AI & Machine, Learning',

@@ -18,8 +18,7 @@ interface UserManagementProps {className?: string;
   onUserDelete?: (userId: string) => void;
   onUserCreate?: (user: Omit<User 'id' | 'createdAt'>) => void}
 
-export const UserManagement: React.FC<UserManagementProps> = ({className = '',
-}) => {const [userssetUsers] = useState<User[]>([]);
+export const UserManagement: React.FC<UserManagementProps> = ({className = ''}) => {const [userssetUsers] = useState<User[]>([]);
   const [isLoadingsetIsLoading] = useState(true);
   const [searchTermsetSearchTerm] = useState('');
   const [filterRolesetFilterRole] = useState<string>('all');

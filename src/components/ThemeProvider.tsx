@@ -5,24 +5,20 @@ type Theme = 'light' | 'dark' | 'system';
 interface ThemeContextType {
   theme: Theme;
   setTheme: (theme: Theme) => void;
-  actualTheme: 'light' | 'dark';
-}
+  actualTheme: 'light' | 'dark'}
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export const useTheme = () => {
   const context = useContext(ThemeContext);
   if (context === undefined) {
-    throw new Error('useTheme must be used within a ThemeProvider');
-  }
-  return context;
-};
+    throw new Error('useTheme must be used within a ThemeProvider')}
+  return context};
 
 interface ThemeProviderProps {
   children: React.ReactNode;
   defaultTheme?: Theme;
-  storageKey?: string;
-}
+  storageKey?: string}
 
 export default function ThemeProvider({
   children,
@@ -31,10 +27,8 @@ export default function ThemeProvider({
 }: ThemeProviderProps) {
   const [theme, setTheme] = useState<Theme>(() => {
     if (typeof window !== 'undefined') {
-      return (localStorage.getItem(storageKey) as Theme) || defaultTheme;
-    }
-    return defaultTheme;
-  });
+      return (localStorage.getItem(storageKey) as Theme) || defaultTheme}
+    return defaultTheme});
 
   const [actualTheme, setActualTheme] = useState<'light' | 'dark'>('light');
 
@@ -42,10 +36,8 @@ export default function ThemeProvider({
     const updateActualTheme = () => {
       if (theme === 'system') {
         const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-        setActualTheme(systemTheme);
-      } else {
-        setActualTheme(theme);
-      }
+        setActualTheme(systemTheme)} else {
+        setActualTheme(theme)}
     };
 
     updateActualTheme();
@@ -53,8 +45,7 @@ export default function ThemeProvider({
     if (theme === 'system') {
       const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
       mediaQuery.addEventListener('change', updateActualTheme);
-      return () => mediaQuery.removeEventListener('change', updateActualTheme);
-    }
+      return () => mediaQuery.removeEventListener('change', updateActualTheme)}
   }, [theme]);
 
   useEffect(() => {
@@ -64,13 +55,11 @@ export default function ThemeProvider({
       // Apply theme to document
       const root = window.document.documentElement;
       root.classList.remove('light', 'dark');
-      root.classList.add(actualTheme);
-    }
+      root.classList.add(actualTheme)}
   }, [theme, actualTheme, storageKey]);
 
   const handleSetTheme = (newTheme: Theme) => {
-    setTheme(newTheme);
-  };
+    setTheme(newTheme)};
 
   const value = {
     theme,
@@ -82,5 +71,4 @@ export default function ThemeProvider({
     <ThemeContext.Provider value={value}>
       {children}
     </ThemeContext.Provider>
-  );
-}
+  )}

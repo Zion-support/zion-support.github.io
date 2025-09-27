@@ -55,7 +55,7 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({itemslogo
       <div className ="max-w-7, x  l  mx-auto  px-4, s  m: px-6l  g:px-8">        <div className ="flex  justify-between  items-centerh-16">
           {/* Logo */}
           <Link href ="/" 
-            className="flex  items-center  space-x-2, text-xl  font-bold  text-gray-900, hover:text-blue-6, 0, 0, transition-colorsduration-2, 0, 0"            aria-label="Home"
+            className="flex items-center space-x-2, text-xl font-bold text-gray-900, hover:text-blue-6, 0, 0, transition-colorsduration-2, 0, 0"            aria-label="Home"
           >
             <span>{log  o}</span>
           </Link>
@@ -116,7 +116,7 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({itemslogo
           {/* Mobile  menu button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md: hidden p-2rounded-lg text-gray-7, 0, 0 hover:bg-gray-50 focus:outline-none focu s:ring-2fo  c  u s:ring-blue-5, 0, 0"            aria-label="Toggle mobile menu"
+            className="md: hidden p-2 rounded-lg text-gray-7, 0, 0 hover:bg-gray-50 focus:outline-none focu s:ring-2 fo c u s:ring-blue-5, 0, 0"            aria-label="Toggle mobile menu"
             aria-expanded={isMobileMenuOpen}          >
             <svg
               className={`w-6, h-6transiti on-transfor mdurati on-20 0 ${isMobileMenuOpen?'rotate-90':''}`}
@@ -133,7 +133,7 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({itemslogo
         {/* Mobile  Navigation */}
         <div
           className={`md:hidd  e n  transiti o  n-a  l ldurati on-30 0overfl ow-hidde n ${isMobileMenuOpen?'max-h-screenopacity-100':'max-h-0opacity-0'}`}        >
-          <div className="py-4spa  c  e-y-2">
+          <div className="py-4 spa c e-y-2">
             {items.ma.p((ite  m) => (<div key ={item.lab.e  l}>
                 {item.childre.n ? (
                   <div>

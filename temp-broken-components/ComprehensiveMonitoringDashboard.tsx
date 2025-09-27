@@ -288,7 +288,7 @@ export default function ComprehensiveMonitoringDashboard({
       {/* Header */}
       <div className="flex items-center justify-between">
         <div>
-          <h2 className="text-2xl font-bold text-gray-900">System Monitoring Dashboard</h2>
+          <h2 className="text-2 xl font-bold text-gray-900">System Monitoring Dashboard</h2>
           <p className="text-gray-600">Real-time system performance and health metrics</p>
         </div>
         <div className="flex items-center space-x-4">
@@ -343,7 +343,7 @@ export default function ComprehensiveMonitoringDashboard({
               <Zap className="h-4 w-4 text-muted-foreground" />
             </CardHeader>
             <CardContent>
-              <div className="text-2xl font-bold">{grade}</div>
+              <div className="text-2 xl font-bold">{grade}</div>
               <p className="text-xs text-muted-foreground">
                 Load Time: {metrics.performance.loadTime.toFixed(0)}ms
               </p>
@@ -360,7 +360,7 @@ export default function ComprehensiveMonitoringDashboard({
               <Cpu className="h-4 w-4 text-muted-foreground" />
             </CardHeader>
             <CardContent>
-              <div className="text-2xl font-bold">{metrics.resources.memoryUsage.toFixed(1)}MB</div>
+              <div className="text-2 xl font-bold">{metrics.resources.memoryUsage.toFixed(1)}MB</div>
               <p className="text-xs text-muted-foreground">
                 Memory Usage
               </p>
@@ -377,7 +377,7 @@ export default function ComprehensiveMonitoringDashboard({
               <Users className="h-4 w-4 text-muted-foreground" />
             </CardHeader>
             <CardContent>
-              <div className="text-2xl font-bold">{metrics.userExperience.uniqueVisitors}</div>
+              <div className="text-2 xl font-bold">{metrics.userExperience.uniqueVisitors}</div>
               <p className="text-xs text-muted-foreground">
                 Unique Visitors
               </p>
@@ -394,7 +394,7 @@ export default function ComprehensiveMonitoringDashboard({
               <Shield className="h-4 w-4 text-muted-foreground" />
             </CardHeader>
             <CardContent>
-              <div className="text-2xl font-bold">{metrics.security.sslScore}%</div>
+              <div className="text-2 xl font-bold">{metrics.security.sslScore}%</div>
               <p className="text-xs text-muted-foreground">
                 SSL Score
               </p>

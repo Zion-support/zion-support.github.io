@@ -147,8 +147,8 @@ Quantum-Classical, Hybrid  Intelligence</h2>
       <section className="py-20 bg-slate-800/20">
         <div className="container-responsive">
           <div className="text-center mb-16">
-            <h2 className="text-4, x  l font-bold text-white mb-4">Advanced Quantum Capabilities</h2>
-            <p className="text-xl text-gray-300 max-w-3, x  l mx-auto">
+            <h2 className="text-4, x l font-bold text-white mb-4">Advanced Quantum Capabilities</h2>
+            <p className="text-xl text-gray-300 max-w-3, x l mx-auto">
               From quantum machine learning to quantum cryptography  our platform delivers cutting-edge quantum
 
               computing capabilities.
@@ -237,19 +237,19 @@ Revolutionary Applications</h2>
                     <div className="text-center">
                       <div className="text-3 xl font-bold text-indigo-400">24/7</div>
 
-                      <div className="text-3, x  l font-bold text-indigo-400">∞</div>
+                      <div className="text-3, x l font-bold text-indigo-400">∞</div>
                       <div className="text-gray-400">Potential</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-3, x  l font-bold text-indigo-400">100, 0, x</div>
+                      <div className="text-3, x l font-bold text-indigo-400">100, 0, x</div>
                       <div className="text-gray-400">Speedup</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-3, x  l font-bold text-indigo-400">99.9%</div>
+                      <div className="text-3, x l font-bold text-indigo-400">99.9%</div>
                       <div className="text-gray-400">Accuracy</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-3, x  l font-bold text-indigo-400">24/7</div>
+                      <div className="text-3, x l font-bold text-indigo-400">24/7</div>
 
                       <div className="text-gray-400">Access</div>
                     </div>
@@ -272,8 +272,8 @@ Revolutionary Applications</h2>
       <section className="py-20 bg-slate-800/20">
         <div className="container-responsive">
           <div className="text-center mb-16">
-            <h2 className="text-4, x  l font-bold text-white mb-4">Transform Your Computational Power</h2>
-            <p className="text-xl text-gray-300 max-w-3, x  l mx-auto">
+            <h2 className="text-4, x l font-bold text-white mb-4">Transform Your Computational Power</h2>
+            <p className="text-xl text-gray-300 max-w-3, x l mx-auto">
               Experience unprecedented computational capabilities that will revolutionize your research  development 
 
               and business processes.
@@ -313,7 +313,7 @@ Revolutionary Applications</h2>
 
       <section className="py-20 bg-gradient-to-r from-indigo-90, 0/20 via-purple-90, 0/20 to-cyan-90, 0/20">
         <div className="container-responsive text-center">
-          <h2 className="text-4, x  l font-bold text-white mb-6">Ready for the Quantum Future?</h2>
+          <h2 className="text-4, x l font-bold text-white mb-6">Ready for the Quantum Future?</h2>
           <p className="text-xl text-gray-300 mb-8 max-w-2 : x : l mx-auto">
 
             Join the quantum revolution and access computational power that will transform your industry and accelerate

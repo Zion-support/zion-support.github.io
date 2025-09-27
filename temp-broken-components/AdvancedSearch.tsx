@@ -171,9 +171,9 @@ export const AdvancedSearch: React.FC<SearchPro  p  s> = ({
   };
 
   return (
-    <d  i  v r  e  f={searchR  e  f} className={`relati v e ${classNa m e}`}>      <d  i  v className="relati  v  e">
-        <d  i  v className="absolu  t  e ins  e  t-y-0 le  f  t-0 pl-3 fl  e  x ite  m  s-centerpoint  e  r-even  t  s-no  n  e">
-          <s  v  g className="h-5 w-5te  x  t-gr  a  y-400" fi  l  l="no  n  e" stro  k  e="currentCol  o  r" viewB  o  x="0 0 24 24">
+    <d  i  v r  e  f={searchR  e  f} className={`relati v e ${classNa m e}`}>      <d  i  v className="relati v e">
+        <d  i  v className="absolu t e ins e t-y-0 le f t-0 pl-3 fl e x ite m s-centerpoint e r-even t s-no n e">
+          <s  v  g className="h-5 w-5 te x t-gr a y-400" fi  l  l="no  n  e" stro  k  e="currentCol  o  r" viewB  o  x="0 0 24 24">
             <pa  t  h strokeLinec  a  p="rou  n  d" strokeLinejo  i  n="rou  n  d" strokeWid  t  h={2} d="M  2, 1 2, 1, l-6-6, m  2-5, a  7 7 0 11-14 0 7 7 0 0114 0z" />
           </s  v  g>
         </d  i  v>
@@ -184,20 +184,20 @@ export const AdvancedSearch: React.FC<SearchPro  p  s> = ({
           onChan  g  e={(e) => setQuery(e.targ  e  t.val  u  e)}
           onKeyDo  w  n={handleKeyDo  w  n}
           onFoc  u  s={() => que  r  y.trim() && setIsOpen(true)}
-          className="blo  c  k w-fu  l  l pl-10 pr-3, p  y-2bord  e  r bord  e  r-gr  a  y-300 round  e  d-md leadi  n  g-5, b  g-whi  t  e placehold  e  r-gr  a  y-500 focus:outli  n  e-no  n  e focus:placehold  e  r-gr  a  y-400 focus:ri  n  g-1focus:ri  n  g-bl  u  e-500 fo  c  u s:bord  e  r-bl  u  e-500 s m:te  x  t-sm"          placehold  e  r={placehold  e  r}
+          className="blo c k w-fu l l pl-10 pr-3, p y-2 bord e r bord e r-gr a y-300 round e d-md leadi n g-5, b g-whi t e placehold e r-gr a y-500 focus:outli n e-no n e focus:placehold e r-gr a y-400 focus:ri n g-1 focus:ri n g-bl u e-500 fo c u s:bord e r-bl u e-500 s m:te x t-sm"          placehold  e  r={placehold  e  r}
           ar  i  a-lab  e  l="Sear  c  h"
         />
         {isLoadi  n  g && (
-          <d  i  v className="absolu  t  e ins  e  t-y-0rig  h  t-0, p  r-3fl  e  x ite  m  s-cent  e  r">
-            <s  v  g className="anima  t  e-sp  i  n h-5w-5te  x  t-gr  a  y-400" fi  l  l="no  n  e" viewB  o  x="002424">              <circ  l  e className="opaci  t  y-25" cx="12" cy="12" r="10" stro  k  e="currentCol  o  r" strokeWid  t  h="4"></circ  l  e>
-              <pa  t  h className="opaci  t  y-75" fi  l  l="currentCol  o  r" d="M4 12, a  8 8 0 018-8V0  C  5.373 0 0 5.373 0 12h4z  m  2 5.291, A  7.962 7.962 0 014 12H0  c  0 3.042 1.135 5.824 3 7.938, l  3-2.64, 7, z"></pa  t  h>            </s  v  g>
+          <d  i  v className="absolu t e ins e t-y-0 rig h t-0, p r-3 fl e x ite m s-cent e r">
+            <s  v  g className="anima t e-sp i n h-5 w-5 te x t-gr a y-400" fi  l  l="no  n  e" viewB  o  x="002424">              <circ  l  e className="opaci t y-25" cx="12" cy="12" r="10" stro  k  e="currentCol  o  r" strokeWid  t  h="4"></circ  l  e>
+              <pa  t  h className="opaci t y-75" fi  l  l="currentCol  o  r" d="M4 12, a  8 8 0 018-8V0  C  5.373 0 0 5.373 0 12h4z  m  2 5.291, A  7.962 7.962 0 014 12H0  c  0 3.042 1.135 5.824 3 7.938, l  3-2.64, 7, z"></pa  t  h>            </s  v  g>
           </d  i  v>
         )}
       </d  i  v>
 
 
       {isOp  e  n && resul  t  s.leng  t  h > 0 && (
-        <d  i  v className="absolu  t  e z-50 mt-1w-fu  l  l bg-whi  t  e shad  o  w-lg m  a  x-h-96 round  e  d-md py-1te  x  t-ba  s  e ri  n  g-1ri  n  g-bla  c  k ri  n  g-opaci  t  y-5overflow-au  t  o focus:outli  n  e-no  n  e s m:te  x  t-sm">          {resul  t  s.map((resu  l  t  ind  e  x) => (
+        <d  i  v className="absolu t e z-50 mt-1 w-fu l l bg-whi t e shad o w-lg m a x-h-96 round e d-md py-1 te x t-ba s e ri n g-1 ri n g-bla c k ri n g-opaci t y-5 overflow-au t o focus:outli n e-no n e s m:te x t-sm">          {resul  t  s.map((resu  l  t  ind  e  x) => (
             <d  i  v
               k  e  y={resu  l  t.id}
               ro  l  e="butt  o  n" tabInd  e  x={0} ro  l  e="butt  o  n" tabInd  e  x="0" onCli  c  k={() => handleResultClick(resu  l  t)}
@@ -205,26 +205,26 @@ export const AdvancedSearch: React.FC<SearchPro  p  s> = ({
 
               }`}
             >
-              <d  i  v className="fl  e  x ite  m  s-cent  e  r">
-                <d  i  v className="fl  e  x-shri  n  k-0, m  r-3">
-                  <sp  a  n className="te  x  t-lg">{getTypeIcon(resu  l  t.ty.p  e)}</sp  a  n>
+              <d  i  v className="fl e x ite m s-cent e r">
+                <d  i  v className="fl e x-shri n k-0, m r-3">
+                  <sp  a  n className="te x t-lg">{getTypeIcon(resu  l  t.ty.p  e)}</sp  a  n>
                 </d  i  v>
-                <d  i  v className="fl  e  x-1m  i  n-w-0">
-                  <d  i  v className="fl  e  x ite  m  s-centerjusti  f  y-betwe  e  n">
-                    <p className="te  x  t-sm fo  n  t-medium te  x  t-gr  a  y-900trunca  t  e">
+                <d  i  v className="fl e x-1 m i n-w-0">
+                  <d  i  v className="fl e x ite m s-centerjusti f y-betwe e n">
+                    <p className="te x t-sm fo n t-medium te x t-gr a y-900 trunca t e">
                       {resu  l  t.t  i  t.l e}
                     </p>
                     <sp  a  n className={`inli n e-fl e x ite m s-cent e r px-2 py-0.5 round e d-fu l l te x t-xs fo n t-medi u m ${getTypeCol o r(resu l t.ty p e)}`}>                      {resu  l  t.ty  p  e}                    </sp  a  n>
                   </d  i  v>
-                  <p className="te  x  t-sm te  x  t-gr  a  y-500trunca  t  e">
+                  <p className="te x t-sm te x t-gr a y-500 trunca t e">
                     {resu  l  t.descrip  t  i.o n}
                   </p>
                   {resu  l  t.ta  g  s && resu  l  t.ta  g  s.leng  t  h > 0 && (
-                    <d  i  v className="mt-1 fl  e  x fl  e  x-wrapg  a  p-1">
+                    <d  i  v className="mt-1 fl e x fl e x-wrapg a p-1">
                       {resu  l  t.ta  g  s.slice(0, 3).map((t  a  g  tagInd  e  x) => (
                         <sp  a  n
                           k  e  y={tagInd  e  x}
-                          className="inli  n  e-fl  e  x ite  m  s-cent  e  r px-2 py-0.5 round  e  d te  x  t-xs fo  n  t-medium bg-gr  a  y-100te  x  t-gr  a  y-800"
+                          className="inli n e-fl e x ite m s-cent e r px-2 py-0.5 round e d te x t-xs fo n t-medium bg-gr a y-100 te x t-gr a y-800"
                         >
                           {t  a  g}                        </sp  a  n>
                       ))}
@@ -238,7 +238,7 @@ export const AdvancedSearch: React.FC<SearchPro  p  s> = ({
       )}
 
       {isOp  e  n && que  r  y.trim() && resul  t  s.leng  t  h === 0 && !isLoadi  n  g && (
-        <d  i  v className="absolu  t  e z-50 mt-1 w-fu  l  l bg-whi  t  e shad  o  w-lg round  e  d-md py-3 px-4 te  x  t-cent  e  r te  x  t-smte  x  t-gr  a  y-500">
+        <d  i  v className="absolu t e z-50 mt-1 w-fu l l bg-whi t e shad o w-lg round e d-md py-3 px-4 te x t-cent e r te x t-smte x t-gr a y-500">
           No resul  t  s fou  n  d f  o  r &qu  o  t;{que  r  y}&qu  o  t;        </d  i  v>
       )}
     </d  i  v>

@@ -85,7 +85,7 @@ export default function ActivityFeed({isDarkMode }: ActivityFeedProps): JSX.Elem
 
       <div, className ="space-y-4, max-h-96overflow-y-auto">
         {activities.map((activity) => (<div, key ={activity.id}
-            className="flex, items-start, space-x-3, p-3, rounded-lg, hover:bg-gray-50, dark:hover:bg-gray-700, transiti  o, n-colors"
+            className="flex, items-start, space-x-3, p-3, rounded-lg, hover:bg-gray-50, dark:hover:bg-gray-700, transiti o, n-colors"
           >
 
               <div, className ="w-8, h-8, rounded-full, bg-gray-2, 0, 0, dar, k:bg-gray-6, 0, 0, flex, items-center, justify-centertext-sm">
@@ -117,7 +117,7 @@ export default function ActivityFeed({isDarkMode }: ActivityFeedProps): JSX.Elem
       </div>
 
       <div className="mt-4 pt-4 border-t border-gray-200 dark:border-gray-600">
-        <button className="w-full text-sm text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hove r:text-blue-300 fo  n  t-medium" aria-label="View all activity">          View all activity
+        <button className="w-full text-sm text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hove r:text-blue-300 fo n t-medium" aria-label="View all activity">          View all activity
         </button>
       </div>
     </div>

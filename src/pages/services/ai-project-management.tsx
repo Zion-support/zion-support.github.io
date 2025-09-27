@@ -13,17 +13,13 @@ export default function AIProjectManagement() {const, features = [>>>>>> cursor/
     "Improve, stakeholder communication, by 50%"]
 
   const, solutions = [{title: "AI, Project  Planning",
-      description: "Intelligent, project  planning, and  scheduling, with  predictive, analytics",
-    },
+      description: "Intelligent, project  planning, and  scheduling, with  predictive, analytics"},
     {title: "Team, Management  AI",
-      description: "AI-powered, team  allocation, and  performance, optimization",
-    },
+      description: "AI-powered, team  allocation, and  performance, optimization"},
     {title: "Risk, Management  Platform",
-      description: "Advanced, risk  identification, and  mitigation, strategies",
-    },
+      description: "Advanced, risk  identification, and  mitigation, strategies"},
     {title: "Complete, PM  Suite",
-      description: "Full, AI-powered, project  management, solution",
-    }]
+      description: "Full, AI-powered, project  management, solution"}]
 
   const projectTypes = ["Software Development",
     "Construction & Engineering",
@@ -140,7 +136,7 @@ Advanced, AI  Technology, for  Better, Project  Delivery</h2>
                 initial={{ opacity: 0y: 20 }}
                 whileInView={{ opacity: 1y: 0 }}
                 transition={{ duration: 0.6delay: index * 0.1 }}
-                className="p-6, rounded-xl, border  border-orange-400/20, bg-slate-800/40"
+                className="p-6, rounded-xl, border border-orange-400/20, bg-slate-800/40"
               >
                 <div, className ="w-12, h-12, bg-gradient-to-br, from-orange-400/20, to-red-500/20, rounded-lg, flex  items-center, justify-center, mb-4">
 
@@ -177,8 +173,8 @@ Advanced, AI  Technology, for  Better, Project  Delivery</h2>
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-4">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-            <h2 className="text-4, x  l lg:text-5, x  l font-bold text-white mb-6">Proven Results & Benefits</h2>
-            <p className="text-xl text-gray-300 max-w-3, x  l mx-auto">
+            <h2 className="text-4, x l lg:text-5, x l font-bold text-white mb-6">Proven Results & Benefits</h2>
+            <p className="text-xl text-gray-300 max-w-3, x l mx-auto">
               Our AI-powered project management delivers measurable improvements in delivery time  cost reduction  and
 
               project success rates.
@@ -220,8 +216,8 @@ Advanced, AI  Technology, for  Better, Project  Delivery</h2>
             <p className="text-xl text-gray-300 max-w-3 xl mx-auto">
 
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-            <h2 className="text-4, x  l lg:text-5, x  l font-bold text-white mb-6">Flexible Solutions for Every Project</h2>
-            <p className="text-xl text-gray-300 max-w-3, x  l mx-auto">
+            <h2 className="text-4, x l lg:text-5, x l font-bold text-white mb-6">Flexible Solutions for Every Project</h2>
+            <p className="text-xl text-gray-300 max-w-3, x l mx-auto">
 
               Choose from our range of AI-powered project management solutions designed to meet your specific project
               needs and scale with your organization.
@@ -233,7 +229,7 @@ Advanced, AI  Technology, for  Better, Project  Delivery</h2>
                 initial={{ opacity: 0y: 20 }}
                 whileInView={{ opacity: 1y: 0 }}
                 transition={{ duration: 0.6delay: index * 0.1 }}
-                className="p-6, rounded-xl, border  border-orange-400/20, bg-slate-800/40"
+                className="p-6, rounded-xl, border border-orange-400/20, bg-slate-800/40"
 
             {solutions.map((solution, index) => (<motion.div, key ={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -261,7 +257,7 @@ Advanced, AI  Technology, for  Better, Project  Delivery</h2>
 {solution.price}</div>
                 <button className="w-full py-4 px-6 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-600 transition-all duration-300">
 
-                <div className="text-3, x  l font-bold text-orange-400 mb-6">{solution.price}</div>
+                <div className="text-3, x l font-bold text-orange-400 mb-6">{solution.price}</div>
                 <button className="w-full py-4 px-6 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-600 transition-all duration-300">
 
                   Get Started
@@ -282,8 +278,8 @@ Advanced, AI  Technology, for  Better, Project  Delivery</h2>
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-4">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-            <h2 className="text-4, x  l lg:text-5, x  l font-bold text-white mb-6">Optimized for Any Project Type</h2>
-            <p className="text-xl text-gray-300 max-w-3, x  l mx-auto">
+            <h2 className="text-4, x l lg:text-5, x l font-bold text-white mb-6">Optimized for Any Project Type</h2>
+            <p className="text-xl text-gray-300 max-w-3, x l mx-auto">
 
               Our AI-powered project management platform is designed to handle diverse project types across all
               industries and complexity levels.
@@ -340,8 +336,8 @@ Advanced, AI  Technology, for  Better, Project  Delivery</h2>
       <section className="py-20 bg-gradient-to-r from-orange-500/10 via-red-500/10 to-pink-500/10">
         <div className="container mx-auto px-4 text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-            <h2 className="text-4, x  l lg:text-5, x  l font-bold text-white mb-6">Ready to Transform Your Project Delivery? </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-3, x  l mx-auto">
+            <h2 className="text-4, x l lg:text-5, x l font-bold text-white mb-6">Ready to Transform Your Project Delivery? </h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-3, x l mx-auto">
               Join the AI revolution in project management and deliver projects faster : cheaper : and with higher success
               rates.
             </p>

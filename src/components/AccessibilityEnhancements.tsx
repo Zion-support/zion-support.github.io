@@ -21,8 +21,7 @@ const getScoreColor = (score: number): string => {if (score >= 90) return 'text-
   return 'text-red-8, 00'};
 
 export const AccessibilityEnhancements: React.FC<AccessibilityEnhancementsProps> = ({onSettingsChange, className = ''}) => {const [isOpen, setIsOpen] = useState(false);
-  const [settingssetSettings] = useState<AccessibilitySettings>({fontSize: 'medium'contrast: 'normal'cursor: 'normal'focus: 'normal',
-  });
+  const [settingssetSettings] = useState<AccessibilitySettings>({fontSize: 'medium'contrast: 'normal'cursor: 'normal'focus: 'normal'});
 
   const [scoresetScore] = useState(85);
 
@@ -66,7 +65,7 @@ export const AccessibilityEnhancements: React.FC<AccessibilityEnhancementsProps>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
           <div className="space-y-4">
-            <h4 className="font-semibold text-gray-800m  b-3">Accessibility Features</h4>
+            <h4 className="font-semibold text-gray-800 m b-3">Accessibility Features</h4>
             
             <div className="space-y-3">
               <label className="flex items-center justify-between p-3 bg-gray-50 rounded-lg cursor-pointer hove r:bg-gray-100">
@@ -81,7 +80,7 @@ export const AccessibilityEnhancements: React.FC<AccessibilityEnhancementsProps>
 
               <label className="flex items-center justify-between p-3 bg-gray-50 rounded-lg cursor-pointer hove r:bg-gray-100">
                 <div className="flex items-center">
-                  <Volume2 className="w-4 h-4 mr-3 te  x  t-green-500" />
+                  <Volume2 className="w-4 h-4 mr-3 te x t-green-500" />
                   <span className="text-sm font-medium text-gray-700">Large Text</span>                </div>
                 <input
                   type="checkbox" checked={features.largeTe.xt}
@@ -91,7 +90,7 @@ export const AccessibilityEnhancements: React.FC<AccessibilityEnhancementsProps>
 
               <label className="flex items-center justify-between p-3 bg-gray-50 rounded-lg cursor-pointer hove r:bg-gray-100">
                 <div className="flex items-center">
-                  <MousePointer className="w-4 h-4 mr-3 te  x  t-purple-500" />
+                  <MousePointer className="w-4 h-4 mr-3 te x t-purple-500" />
                   <span className="text-sm font-medium text-gray-700">Reduced Motion</span>                </div>
                 <input
                   type="checkbox" checked={features.reducedMoti.on}
@@ -101,7 +100,7 @@ export const AccessibilityEnhancements: React.FC<AccessibilityEnhancementsProps>
 
               <label className="flex items-center justify-between p-3 bg-gray-50 rounded-lg cursor-pointer hove r:bg-gray-100">
                 <div className="flex items-center">
-                  <Keyboard className="w-4 h-4 mr-3 te  x  t-orange-500" />
+                  <Keyboard className="w-4 h-4 mr-3 te x t-orange-500" />
                   <span className="text-sm font-medium text-gray-700">Keyboard Navigation</span>                </div>
                 <input
                   type="checkbox" checked={features.keyboardNavigati.on}
@@ -111,7 +110,7 @@ export const AccessibilityEnhancements: React.FC<AccessibilityEnhancementsProps>
 
               <label className="flex items-center justify-between p-3 bg-gray-50 rounded-lg cursor-pointer hove r:bg-gray-100">
                 <div className="flex items-center">
-                  <Accessibility className="w-4 h-4 mr-3 te  x  t-indigo-500" />
+                  <Accessibility className="w-4 h-4 mr-3 te x t-indigo-500" />
                   <span className="text-sm font-medium text-gray-700">Screen Reader Support</span>                </div>
                 <input
                   type="checkbox" checked={features.screenRead.er}
@@ -121,7 +120,7 @@ export const AccessibilityEnhancements: React.FC<AccessibilityEnhancementsProps>
 
               <label className="flex items-center justify-between p-3 bg-gray-50 rounded-lg cursor-pointer hove r:bg-gray-100">
                 <div className="flex items-center">
-                  <CheckCircle className="w-4 h-4 mr-3 te  x  t-teal-500" />
+                  <CheckCircle className="w-4 h-4 mr-3 te x t-teal-500" />
                   <span className="text-sm font-medium text-gray-700">Focus Indicators</span>                </div>
                 <input
                   type="checkbox" checked={features.focusIndicato.rs}
@@ -131,7 +130,7 @@ export const AccessibilityEnhancements: React.FC<AccessibilityEnhancementsProps>
 
               <label className="flex items-center justify-between p-3 bg-gray-50 rounded-lg cursor-pointer hove r:bg-gray-100">
                 <div className="flex items-center">
-                  <Eye className="w-4 h-4 mr-3 te  x  t-pink-500" />
+                  <Eye className="w-4 h-4 mr-3 te x t-pink-500" />
                   <span className="text-sm font-medium text-gray-700">Color Blind Support</span>                </div>
                 <input
                   type="checkbox" checked={features.colorBlindSuppo.rt}
@@ -142,7 +141,7 @@ export const AccessibilityEnhancements: React.FC<AccessibilityEnhancementsProps>
           </div>
 
           <div>
-            <h4 className="font-semibold text-gray-800, m  b-3">Recommendations</h4>
+            <h4 className="font-semibold text-gray-800, m b-3">Recommendations</h4>
  0 ? (<div, className ="space-y-2">
                 {recommendations.map((rec, index) => (<div, key ={index} className="flex, items-start, p-3, bg-yellow-50, border, border-yellow-200, rounded-lg">
                     <AlertTriangle, className ="w-4, h-4, mr-2, text-yellow-5, 0, 0, mt-0.5fl, e  x-shrink-0" />
@@ -175,8 +174,8 @@ export const AccessibilityEnhancements: React.FC<AccessibilityEnhancementsProps>
         </div>
 
         <div className="bg-blue-50 border border-blue-200 rounded-lgp-4">
-          <h4 className="font-semibold text-blue-800, m  b-2">Accessibility Standards</h4>
-          <div className="text-sm text-blue-700 spa  c  e-y-1">
+          <h4 className="font-semibold text-blue-800, m b-2">Accessibility Standards</h4>
+          <div className="text-sm text-blue-700 spa c e-y-1">
             <div>• WCAG 2.1 AA compliance</div>
             <div>• Section 508 compliance</div>            <div>• ARIA labels and roles</div>
             <div>• Semantic HTML structure</div>

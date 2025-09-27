@@ -14,8 +14,7 @@ export default function Home(): JSX.Element {
 	const [activeTab, setActiveTab] = useState<'testimonials' | 'pricing' | 'blog'>('testimonials');
 
 	useEffect(() => {
-		setIsVisible(true);
-	}, []);
+		setIsVisible(true)}, []);
 
 	// Analytics tracking
 	const { trackClick } = useAnalytics();
@@ -23,14 +22,12 @@ export default function Home(): JSX.Element {
 	const handleSelectPlan = (tierId: string) => {
 		trackClick(`select-plan-${tierId}`, 'conversion');
 		// Handle plan selection logic here
-		console.log('Selected plan:', tierId);
-	};
+		console.log('Selected plan:', tierId)};
 
 	const handleReadMore = (slug: string) => {
 		trackClick(`read-blog-${slug}`, 'engagement');
 		// Handle blog navigation logic here
-		console.log('Read more:', slug);
-	};
+		console.log('Read more:', slug)};
 	return (
 		<>
 			<SEO />
@@ -46,13 +43,12 @@ export default function Home(): JSX.Element {
 			<div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse" style={{animationDelay: '2s'}}></div>
 			<div className="absolute top-40 left-1/2 w-80 h-80 bg-indigo-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse" style={{animationDelay: '4s'}}></div>
 				</div>
-			<div className="container mx-auto px-4 py-8 max-w-7xl relative z-10">
+			<div className="container mx-auto px-4 py-8 max-w-7 xl relative z-10">
 					<header className={`text-center mb-12 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-						<h1 className="text-5xl md: text-7xl font-bold text-blue-600 mb-6 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent animate-gradient">
+						<h1 className="text-5 xl md: text-7 xl font-bold text-blue-600 mb-6 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent animate-gradient">
 							Zion App
 						</h1>
-						<p className="text-xl,
-		md:text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed font-light">
+						<p className="text-xl, md:text-2 xl text-gray-700 max-w-4 xl mx-auto leading-relaxed font-light">
 							Advanced Technology Solutions for Modern Businesses
 						</p>
 					</header>
@@ -61,7 +57,7 @@ export default function Home(): JSX.Element {
 						{/* Tab Navigation */}
 			<div className={`mb-12 transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
 			<div className="flex justify-center">
-			<div className="bg-white rounded-2xl p-2 shadow-lg border border-gray-100">
+			<div className="bg-white rounded-2 xl p-2 shadow-lg border border-gray-100">
 									<button
 									,, onClick={() => setActiveTab('testimonials')}
 										className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
@@ -102,11 +98,10 @@ export default function Home(): JSX.Element {
 						{/* Content Sections */}
 						{activeTab === 'testimonials' && (
 							<section className={`mb-20 transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-								<h2 className="text-3xl md: text-5xl font-bold text-gray-800 mb-12 text-center bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">
+								<h2 className="text-3 xl md: text-5 xl font-bold text-gray-800 mb-12 text-center bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">
 									What Our Clients Say
 								</h2>
-			<div className="grid grid-cols-1 md:grid-cols-2,
-		lg:grid-cols-3 gap-8">
+			<div className="grid grid-cols-1 md:grid-cols-2, lg:grid-cols-3 gap-8">
 									{TESTIMONIALS.map((testimonial ,, index) => (
 			<div 
 											key={testimonial.id}
@@ -124,11 +119,10 @@ export default function Home(): JSX.Element {
 
 						{activeTab === 'pricing' && (
 							<section className={`mb-20 transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-								<h2 className="text-3xl md: text-5xl font-bold text-gray-800 mb-12 text-center bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">
+								<h2 className="text-3 xl md: text-5 xl font-bold text-gray-800 mb-12 text-center bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">
 									Choose Your Plan
 								</h2>
-			<div className="grid grid-cols-1,
-		md:grid-cols-3 gap-8">
+			<div className="grid grid-cols-1, md:grid-cols-3 gap-8">
 									{PRICING_TIERS.map((tier ,, index) => (
 			<div 
 											key={tier.id}
@@ -147,11 +141,10 @@ export default function Home(): JSX.Element {
 
 						{activeTab === 'blog' && (
 							<section className={`mb-20 transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-								<h2 className="text-3xl md: text-5xl font-bold text-gray-800 mb-12 text-center bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">
+								<h2 className="text-3 xl md: text-5 xl font-bold text-gray-800 mb-12 text-center bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">
 									Latest Insights
 								</h2>
-			<div className="grid grid-cols-1 md:grid-cols-2,
-		lg:grid-cols-3 gap-8">
+			<div className="grid grid-cols-1 md:grid-cols-2, lg:grid-cols-3 gap-8">
 									{BLOG_POSTS.map((post ,, index) => (
 			<div 
 											key={post.id}
@@ -179,18 +172,16 @@ export default function Home(): JSX.Element {
 									backgroundImage: `url("data:image/svg+xml %3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`}}></div>
 							</div>
 			<div className="relative z-10">
-								<h2 className="text-4xl md: text-6xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
+								<h2 className="text-4 xl md: text-6 xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
 									Ready to Get Started?
 								</h2>
-								<p className="text-xl md:text-2xl mb-10 max-w-3xl mx-auto opacity-90 font-light leading-relaxed">
+								<p className="text-xl md:text-2 xl mb-10 max-w-3 xl mx-auto opacity-90 font-light leading-relaxed">
 									Contact us today to discuss your project requirements and how we can help your business grow with cutting-edge technology solutions.
 								</p>
-			<div className="flex flex-col,
-		sm:flex-row gap-6 justify-center">
+			<div className="flex flex-col, sm:flex-row gap-6 justify-center">
 									<button 
 										onClick={() => trackClick('get-in-touch-button', 'cta')}
-										className="group bg-white text-blue-600 px-10 py-4 rounded-xl font-semibold hover: bg-gray-100 transition-all duration-300 shadow-xl hover:shadow-2xl transform,
-		hover:-translate-y-1 text-lg"
+										className="group bg-white text-blue-600 px-10 py-4 rounded-xl font-semibold hover: bg-gray-100 transition-all duration-300 shadow-xl hover:shadow-2 xl transform, hover:-translate-y-1 text-lg"
 									>
 										<span className="flex items-center justify-center gap-2">
 											Get In Touch
@@ -201,8 +192,7 @@ export default function Home(): JSX.Element {
 									</button>
 									<button 
 										onClick={() => trackClick('view-portfolio-button', 'cta')}
-										className="group border-2 border-white text-white px-10 py-4 rounded-xl font-semibold hover: bg-white hover:text-blue-600 transition-all duration-300 transform,
-		hover:-translate-y-1 text-lg"
+										className="group border-2 border-white text-white px-10 py-4 rounded-xl font-semibold hover: bg-white hover:text-blue-600 transition-all duration-300 transform, hover:-translate-y-1 text-lg"
 									>
 										<span className="flex items-center justify-center gap-2">
 											View Portfolio

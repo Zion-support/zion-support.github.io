@@ -5,7 +5,7 @@ interface PerformanceMetrics {loadTime: number;
   memoryUsage: number;
   networkLatency: number}
 
-const PerformanceMetrics: React.FC = () => {const [metricssetMetrics] = useState<PerformanceMetrics | null>(null);
+const PerformanceMetrics: React.FC = () => {const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [isVisiblesetIsVisible] = useState(false);
 
   useEffect(() => {

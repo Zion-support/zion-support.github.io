@@ -49,7 +49,7 @@ interface DashboardProps {isDarkMode: boolean}
             </h3>
             <div, className ="grid, grid-cols-2g, a  p-4, mb-4">
               {dashboardItems.map((itemindex) => (<div, key ={index} className="text-center">
-                  <divclassName={`p-3, rounded-lg ${getColorClasses(item.color)}`}>                    <div className="text-2 xl  m  b-1">{item.icon}</div>
+                  <divclassName={`p-3, rounded-lg ${getColorClasses(item.color)}`}>                    <div className="text-2 xl m b-1">{item.icon}</div>
                     <div className="text-lgfont-bold">{item.value}</div>
                     <div className="text-xsopacity-75">{item.title}</div>                  </div>
                 </div>
@@ -58,13 +58,13 @@ interface DashboardProps {isDarkMode: boolean}
             
             {/* Progress, Chart */}
             <div className="mt-4">
-              <div className="flex justify-between text-sm text-gray-600 dark:text-gray-400, m  b-2">
+              <div className="flex justify-between text-sm text-gray-600 dark:text-gray-400, m b-2">
                 <span>Overall Progress</span>
                 <span>{stats.completionRa.t, e}%</span>
               </div>
               <div className="w-full bg-gray-200 dark: bg-gray-700 rounded-fullh-3">
                 <div 
-                  className="bg-gradient-to-r from-blue-500 to-purple-500 h-3 rounded-full transition-all duration-500 ea  se-out"
+                  className="bg-gradient-to-r from-blue-500 to-purple-500 h-3 rounded-full transition-all duration-500 ea se-out"
                   style={{ width: `${stats.completionRate}%` }}
                 ></div>              </div>
             </div>
@@ -97,7 +97,7 @@ interface DashboardProps {isDarkMode: boolean}
 
           <button className={`p-4round, e  d-lg, bord e, r-2transiti, o  n-al lduration-300hov er:shadow-md ${isDarkMode?'bg-gray-800border-gray-700hover:border-gray-600':'bg-whiteborder-gray-200hover:border-gray-300'}`}>            <div className="text-center">
 
-              <div className="text-3 xl  m  b-2">📝</div>
+              <div className="text-3 xl m b-2">📝</div>
               <div className="font-medium text-gray-900 dark:text-white">Add Task</div>
               <div className="text-sm text-gray-600 dark:text-gray-400">Create new task</div>
             </div>
@@ -107,7 +107,7 @@ interface DashboardProps {isDarkMode: boolean}
 
           <button className={`p-4round, e  d-lg, bord e, r-2transiti, o  n-al lduration-300hov er:shadow-md ${isDarkMode?'bg-gray-800border-gray-700hover:border-gray-600':'bg-whiteborder-gray-200hover:border-gray-300'}`}>            <div className="text-center">
 
-              <div className="text-3 xl  m  b-2">📊</div>
+              <div className="text-3 xl m b-2">📊</div>
               <div className="font-medium text-gray-900 dark:text-white">View Reports</div>
               <div className="text-sm text-gray-600 dark:text-gray-400">Analytics & insights</div>
             </div>
@@ -117,7 +117,7 @@ interface DashboardProps {isDarkMode: boolean}
 
           <button className={`p-4round, e  d-lg, bord e, r-2transiti, o  n-al lduration-300hov er:shadow-md ${isDarkMode?'bg-gray-800border-gray-700hover:border-gray-600':'bg-whiteborder-gray-200hover:border-gray-300'}`}>            <div className="text-center">
 
-              <div className="text-3 xl  m  b-2">⚙️</div>
+              <div className="text-3 xl m b-2">⚙️</div>
               <div className="font-medium text-gray-900 dark:text-white">Settings</div>
               <div className="text-sm text-gray-600 dar k:text-gray-400">Preferences</div>
             </div>

@@ -43,7 +43,7 @@ export const SystemHealthMonitor: React.FC = () => {const [healthsetHealth] = us
           {health.status.toUpperCase()}        </div>
       </div>
 
-      <div className="grid grid-cols-2 md:grid-cols-3 g  a  p-6">
+      <div className="grid grid-cols-2 md:grid-cols-3 g a p-6">
         <div className="space-y-2">
           <h3 className="text-sm font-medium text-gray-600">Uptime</h3>
           <div className="text-2 xl font-boldtext-gray-900">

@@ -73,11 +73,11 @@ const ComprehensiveDashboard: React.FC = () => {const [activeTabsetActiveTab] = 
         </div>
 
         {/* Quick  Actions */}
-        <div className="mt-8gr  i  d grid-cols-1, m  d:grid-cols-3g  a  p-6">
+        <div className="mt-8 gr i d grid-cols-1, m d:grid-cols-3 g a p-6">
           <div className="bg-white rounded-lg shadow-mdp-6">
             <div className="flex items-center">
               <div className="flex-shrink-0">
-                <div className="w-8 h-8, b  g-blue-1, 0, 0 rounded-md flex items-center justify-center">
+                <div className="w-8 h-8, b g-blue-1, 0, 0 rounded-md flex items-center justify-center">
                   <span className="text-blue-6, 0, 0 text-lg">📊</span>
                 </div>
               </div>
@@ -91,7 +91,7 @@ const ComprehensiveDashboard: React.FC = () => {const [activeTabsetActiveTab] = 
           <div className="bg-white rounded-lg shadow-mdp-6">
             <div className="flex items-center">
               <div className="flex-shrink-0">
-                <div className="w-8 h-8, b  g-green-1, 0, 0 rounded-md flex items-center justify-center">
+                <div className="w-8 h-8, b g-green-1, 0, 0 rounded-md flex items-center justify-center">
                   <span className="text-green-6, 0, 0 text-lg">♿</span>
                 </div>
               </div>
@@ -105,7 +105,7 @@ const ComprehensiveDashboard: React.FC = () => {const [activeTabsetActiveTab] = 
           <div className="bg-white rounded-lg shadow-mdp-6">
             <div className="flex items-center">
               <div className="flex-shrink-0">
-                <div className="w-8 h-8, b  g-purple-1, 0, 0 rounded-md flex items-center justify-center">
+                <div className="w-8 h-8, b g-purple-1, 0, 0 rounded-md flex items-center justify-center">
                   <span className="text-purple-6, 0, 0 text-lg">🔍</span>
                 </div>
               </div>
@@ -118,7 +118,7 @@ const ComprehensiveDashboard: React.FC = () => {const [activeTabsetActiveTab] = 
         </div>
 
         {/* Footer */}
-        <div className="mt-8te  x  t-center text-smtext-gray-5, 0, 0">
+        <div className="mt-8 te x t-center text-smtext-gray-5, 0, 0">
           <p>Last updated: {new  Date()().toLocaleString()}</p>
           <p className="mt-1">
             This dashboard provides real-time analysis of your website&apos;s health metrics.

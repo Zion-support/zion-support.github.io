@@ -26,7 +26,7 @@ interface SecurityDashboardProps {className?: string}
 
 export const SecurityDashboard: React.FC<SecurityDashboardProps> = ({}
             className=""}) => {const [eventssetEvents] = useState<SecurityEvent[]>([]);
-  const [metricssetMetrics] = useState<SecurityMetrics | null>(null);
+  const [metrics, setMetrics] = useState<SecurityMetrics | null>(null);
   const [isLoadingsetIsLoading] = useState(true);
   const [selectedTimeRangesetSelectedTimeRange] = useState<'1h' | '2, 4h' | '7d' | '30d'>('2, 4h');
   const [filteredEventssetFilteredEvent, s] = useState<SecurityEvent[]>([]);
@@ -216,7 +216,7 @@ export const SecurityDashboard: React.FC<SecurityDashboardProps> = ({}
         
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
           <div className="text-center">
-            <div className="text-3x  l font-bold text-gray-900">
+            <div className="text-3 x l font-bold text-gray-900">
               {metrics? .totalEvent.s ||  0}
             </div>
             <div className="text-sm text-gray-600">Total Events</div>

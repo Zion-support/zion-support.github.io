@@ -5,24 +5,19 @@ import { ErrorBoundary } from '../ErrorBoundary';
 // Mock error throwing for error boundary tests
 const ThrowError = ({ shouldError }: { shouldError?: boolean }) => {
   if (shouldError) {
-    throw new Error('Test error');
-  }
-  return <div>Test Component</div>;
-};
+    throw new Error('Test error')}
+  return <div>Test Component</div>};
 
 describe('Components Test Suite', () => {
   beforeEach(() => {
-    jest.spyOn(console, 'error').mockImplementation(() => {});
-  });
+    jest.spyOn(console, 'error').mockImplementation(() => {})});
 
   afterEach(() => {
-    jest.restoreAllMocks();
-  });
+    jest.restoreAllMocks()});
 
   it('renders error fallback when there is an error', () => {
     const ThrowError = () => {
-      throw new Error('Test error');
-    };
+      throw new Error('Test error')};
 
     render(
       <ErrorBoundary>
@@ -30,8 +25,7 @@ describe('Components Test Suite', () => {
       </ErrorBoundary>
     );
     
-    expect(screen.getByText('Something went wrong')).toBeInTheDocument();
-  });
+    expect(screen.getByText('Something went wrong')).toBeInTheDocument()});
 
   it('renders children when there are no errors', () => {
     render(
@@ -40,15 +34,13 @@ describe('Components Test Suite', () => {
       </ErrorBoundary>
     );
     
-    expect(screen.getByText('Test content')).toBeInTheDocument();
-  });
+    expect(screen.getByText('Test content')).toBeInTheDocument()});
 
   it('logs error to console', () => {
     const consoleSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
     
     const ThrowError = () => {
-      throw new Error('Test error');
-    };
+      throw new Error('Test error')};
 
     render(
       <ErrorBoundary>
@@ -56,13 +48,11 @@ describe('Components Test Suite', () => {
       </ErrorBoundary>
     );
     
-    expect(consoleSpy).toHaveBeenCalled();
-  });
+    expect(consoleSpy).toHaveBeenCalled()});
 
   it('handles multiple errors gracefully', () => {
     const ThrowError = () => {
-      throw new Error('Test error');
-    };
+      throw new Error('Test error')};
 
     render(
       <ErrorBoundary>
@@ -70,8 +60,7 @@ describe('Components Test Suite', () => {
       </ErrorBoundary>
     );
     
-    expect(screen.getByText('Something went wrong')).toBeInTheDocument();
-  });
+    expect(screen.getByText('Something went wrong')).toBeInTheDocument()});
 
   it('resets error state when children change', async () => {
     const { rerender } = render(
@@ -88,6 +77,4 @@ describe('Components Test Suite', () => {
       </ErrorBoundary>
     );
     
-    expect(screen.getByText('New content')).toBeInTheDocument();
-  });
-});
+    expect(screen.getByText('New content')).toBeInTheDocument()})});

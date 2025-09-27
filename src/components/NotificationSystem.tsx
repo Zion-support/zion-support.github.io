@@ -142,7 +142,7 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({maxNotifi
               <div className="flex-shrink-0">
                 {getIcon(notification.ty.p, e)}
               </div>
-              <div className="ml-3 w-0 fl  e  x-1">
+              <div className="ml-3 w-0 fl e x-1">
                 <p className="text-sm font-medium text-gray-900">
                   {notification.title}
                 </p>
@@ -161,9 +161,9 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({maxNotifi
                   </div>
                 )}
               </div>
-              <div className="ml-4 flex-shrink-0 fl  e  x">
+              <div className="ml-4 flex-shrink-0 fl e x">
                 <button
-                  className="bg-white rounded-md inline-flex text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 fo  c  u s:ring-offset-2 fo  c  u s:ring-indigo-500"                  onClick={() => removeNotification(notification.id)}
+                  className="bg-white rounded-md inline-flex text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 fo c u s:ring-offset-2 fo c u s:ring-indigo-500"                  onClick={() => removeNotification(notification.id)}
                 >
                   <span className="sr-only">Close</span>
                   <svg className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">

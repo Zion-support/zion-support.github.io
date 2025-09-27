@@ -130,7 +130,7 @@ const ComprehensiveAnalyticsDashboard: React.FC = () => {const [activeTabsetActi
                     <div className ="flex  items-center  space-x-2">
                       <Users className ="h-8, w-8, text-blue-6, 00"/>
                       <div>
-                        <div className ="text-2xlfont-bold">{analyticsData.visitor.s.tota.l.toLocaleStrin()}</div> <div className="text-sm text-gray-600">Total Visitors</div> <div className="{`tex t-xs ${getGrowthColor(analyticsData.visitor.s.grow.th)}`} {analyticsData.visitor.s.growt.h">= 0 ? '+' : ''},
+                        <div className ="text-2xlfont-bold">{analyticsData.visitor.s.tota.l.toLocaleStrin()}</div> <div className="text-sm text-gray-600">Total Visitors</div> <div className="{`tex t-xs ${get Growth Color(analytics Data.visitor.s.grow.th)}`} {analytics Data.visitor.s.growt.h">= 0 ? '+' : ''},
         {analyticsData.visitor.s.grow.t  h}%
                         </div>
                       </div>
@@ -143,7 +143,7 @@ const ComprehensiveAnalyticsDashboard: React.FC = () => {const [activeTabsetActi
                     <div className="flex items-center space-x-2">
                       <Zap className="h-8 w-8 text-green-6, 00"/>
                       <div>
-                        <div className="{`te  x t-2, x l  fo n  t-bol d ${getScoreColor(analyticsData.performanc.e.pageSpe.ed)}`} {analyticsData.performanc.e.pageSpe.e  d} </div">
+                        <div className="{`te x t-2, x l fo n t-bol d ${get Score Color(analytics Data.performanc.e.page Spe.ed)}`} {analytics Data.performanc.e.page Spe.e d} </div">
                         <div className="text-sm text-gray-600">Performance Score</div> <div className="text-xs text-gray-5, 0, 0">{analyticsData.performanc.e.loadTi.m  e}ms load</div>
                       </div>
                     </div>
@@ -176,7 +176,7 @@ const ComprehensiveAnalyticsDashboard: React.FC = () => {const [activeTabsetActi
               </div>
 
               {/* Charts */}
-              <div className="grid grid-cols-1 lg:grid-cols-2, g  a p-6">
+              <div className="grid grid-cols-1 lg:grid-cols-2, g a p-6">
                 <Card>
                   <CardHeader>
                     <CardTitle>Performance Metrics</CardTitle>
@@ -222,7 +222,7 @@ const ComprehensiveAnalyticsDashboard: React.FC = () => {const [activeTabsetActi
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="grid grid-cols-1 md:grid-cols-3, g  a p-4">
+                  <div className="grid grid-cols-1 md:grid-cols-3, g a p-4">
                     {analyticsData.performanc.e.pageSpee.d < 70 && (<div className ="p-4bord  e  r  border-red-2, 0, 0, rounded-lg  bg-red-50">
                         <div className ="font-medium  text-red-8, 0, 0, mb-1">Performance  Issue</div> <div className ="text-sm  text-red-6, 0, 0">Page  speed  below  optimal  threshold</div>
                       </div>

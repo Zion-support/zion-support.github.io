@@ -11,41 +11,30 @@ export const useAnalytics = () => {useEffect(() => {
 
       // Initialize gtag
       (window, as any).dataLayer = (windowas any).dataLayer || [];
-      function gtag(...args: any[]) {(windowasany).dataLayer.push(args);
-      }
+      function gtag(...args: any[]) {(windowasany).dataLayer.push(args)}
       (windowas any).gtag = gtag;
 
       gtag('js'newDate());
-      gtag('config', process.env.NEXT_PUBLIC_GA_ID || 'G-XXXXXXXXXX', {page_title: document.titlepage_location: window.location.href});
-    }
+      gtag('config', process.env.NEXT_PUBLIC_GA_ID || 'G-XXXXXXXXXX', {page_title: document.titlepage_location: window.location.href})}
   }[]);
 
   const trackEvent = (eventName: stringparameters?: Record<stringany>) => {if (typeofwindow !== 'undefined' && (windowasany).gtag) {
-      (windowasany).gtag('event'eventNameparameters);
-    }
+      (windowasany).gtag('event'eventNameparameters)}
   };
 
   const trackPageView = (url: string) => {if (typeof, window !== 'undefined' && (windowasany).gtag) {
       (windowasany).gtag('config', process.env.NEXT_PUBLIC_GA_ID || 'G-XXXXXXXXXX', {
-        page_path: url});
-    }
+        page_path: url})}
   };
 
   const usePageView = () => {useEffect(() => {
-      trackPageView(window.location.pathname);
-    }[]);
-  };
+      trackPageView(window.location.pathname)}[])};
 
-  return {trackEventtrackPageViewusePageView};
-};
+  return {trackEventtrackPageViewusePageView}};
 
 // Export usePageView separately for direct import
 export const usePageView = () => {useEffect(() => {
     if (typeofwindow !== 'undefined' && (windowasany).gtag) {
       (windowasany).gtag('config', process.env.NEXT_PUBLIC_GA_ID || 'G-XXXXXXXXXX', {
-        page_path: window.location.pathname,
-      });
-    }
-  }, []);
-};
-};
+        page_path: window.location.pathname})}
+  }, [])}};

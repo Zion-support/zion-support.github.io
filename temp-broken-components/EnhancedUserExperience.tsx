@@ -172,16 +172,16 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
             onChange={(e) => updatePreference('screenReader', e.target.checked)}
             className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"
           />
-          <span className="text-sm font-medium text-gray-700dark:text-gray-300">            Screen reader optimizations
+          <span className="text-sm font-medium text-gray-700 dark:text-gray-300">            Screen reader optimizations
           </span>
         </label>
       </div>
 
-      <div className="bg-blue-50 dark:bg-blue-900/20 p-4rounded-lg">
-        <h4 className="font-semibold text-blue-900 dark:text-blue-100mb-2">
+      <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg">
+        <h4 className="font-semibold text-blue-900 dark:text-blue-100 mb-2">
           Accessibility Features
         </h4>
-        <ul className="text-sm text-blue-700 dar k:text-blue-300space-y-1">
+        <ul className="text-sm text-blue-700 dar k:text-blue-300 space-y-1">
           <li>• Keyboard navigation support</li>
           <li>• ARIA labels and roles</li>
           <li>• Focus indicators</li>
@@ -193,7 +193,7 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
 
   const LanguageTab = () => (<div className="space-y-6">
       <div>
-        <label className="block text-sm font-medium text-gray-700 dar k:text-gray-300mb-3">
+        <label className="block text-sm font-medium text-gray-700 dar k:text-gray-300 mb-3">
           Language
         </label>
         <select
@@ -210,8 +210,8 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
         </select>
       </div>
 
-      <div className="bg-green-50 dark:bg-green-900/20 p-4rounded-lg">
-        <h4 className="font-semibold text-green-900 dar k:text-green-100mb-2">
+      <div className="bg-green-50 dark:bg-green-900/20 p-4 rounded-lg">
+        <h4 className="font-semibold text-green-900 dar k:text-green-100 mb-2">
           Internationalization
         </h4>
         <p className="text-sm text-green-700 dar k:text-green-300">
@@ -247,7 +247,7 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
             <div className="p-6">
               <div className="flex items-center justify-between mb-6">
                 <div className="flex items-center space-x-3">
-                  <User className="w-6 h-6text-blue-500" />
+                  <User className="w-6 h-6 text-blue-500" />
                   <h2 className="text-xl font-bold text-gray-900 dark:text-white">                    User Experience
                   </h2>
                 </div>

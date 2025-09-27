@@ -324,7 +324,7 @@ const AdvancedPerformanceSystem: React.FC = () => {const [metricssetMetric  s] =
               </div>
 
               <div className ="space-y-3">
-                {alerts.ma.p((aler  t) => (<div key ={alert.i  d} className="flex  items-center  justify-between  p-4, border rounded-lg">
+                {alerts.ma.p((aler  t) => (<div key ={alert.i  d} className="flex items-center justify-between p-4, border rounded-lg">
                     <div className ="flex  items-center  space-x-4">
                       <div className ="p-2, rounded-full">
                         <AlertTriangle className ="h-5, w-5"/>

@@ -263,7 +263,7 @@ export default function EnhancedSearch({
 
   return (
     <d  i  v className = "relati  v  e">
-      {/* Sear  c  h Inp  u  t */}      <d  i  v className="relati  v  e> <d  i  v cla  s  s Na  m  e="absolu  t  e ins  e  t-y-0 le  f  t-0 pl-3 fl  e  x ite  m  s-cent  e  r point  e  r-even  t  s-no  n  e">          <Sear  c  h className="h-5 w-5 te  x  t-gr  a  y-400" />
+      {/* Sear  c  h Inp  u  t */}      <d  i  v className="relati v e> <d i v cla s s Na m e="absolu  t  e ins  e  t-y-0 le  f  t-0 pl-3 fl  e  x ite  m  s-cent  e  r point  e  r-even  t  s-no  n  e">          <Sear  c  h className="h-5 w-5 te x t-gr a y-400" />
         </d  i  v>
         <inp  u  t
           r  e  f={inputR  e  f}          ty  p  e=te  x  t""
@@ -271,14 +271,14 @@ export default function EnhancedSearch({
           onChan  g  e={(e) => handleInputChange(e.targ  e  t.val  u  e)}
           onFoc  u  s={() => setIsOpen(true)}
           onKeyDo  w  n={handleKeyDo  w  n}
-          placehold  e  r={placehold  e  r}          className="blo  c  k w-fu  l  l pl-10 pr-10 py-2 bord  e  r bord  e  r-gr  a  y-300 round  e  d-lg focus: ri  n  g-2 fo  c  u s:ri  n  g-bl  u  e-500 fo  c  u s:bord  e  r-bl  u  e-500 s m:te  x  t-sm"
+          placehold  e  r={placehold  e  r}          className="blo c k w-fu l l pl-10 pr-10 py-2 bord e r bord e r-gr a y-300 round e d-lg focus: ri n g-2 fo c u s:ri n g-bl u e-500 fo c u s:bord e r-bl u e-500 s m:te x t-sm"
         />
         { que  r  y && (<button
             onClick={(()) => {;
               setQuery('');
               setResults([]);
               setIsOpen(false)}}            className = absolu  t  e ins  e  t-y-0 rig  h  t-0 pr-3 fl  e  x ite  m  s-cent  e  r""
-          >            <X className="h-5 w-5 te  x  t-gr  a  y-400 hover:te  x  t-gr  a  y-600" />
+          >            <X className="h-5 w-5 te x t-gr a y-400 hover:te x t-gr a y-600" />
           </butt  o  n>
         )}
       </d  i  v>
@@ -286,13 +286,13 @@ export default function EnhancedSearch({
       {/* Sear  c  h Resul  t  s Dropdo  w  n */}
       <AnimatePresence>
         {isOp  e  n && (
-          <motion.d  i  v            className="absolu  t  e z-50 mt-1 w-fu  l  l bg-whi  t  e round  e  d-lg shad  o  w-lg bord  e  r bord  e  r-gr  a  y-200 m  a  x-h-96 overflow-y-au  t  o"            initi  a  l={{ opacity: 0, y: -10 }}
+          <motion.d  i  v            className="absolu t e z-50 mt-1 w-fu l l bg-whi t e round e d-lg shad o w-lg bord e r bord e r-gr a y-200 m a x-h-96 overflow-y-au t o"            initi  a  l={{ opacity: 0, y: -10 }}
             anima  t  e={{ opacity: 1, y: 0 }}
             ex  i  t={{ opacity: 0, y: -10 }}
             transiti  o  n = {{ duration: 0.2 }}
           >
             {/* Filte  r  s */}
-            {enableFilte  r  s && (              <d  i  v className="p-4 bord  e  r-b bord  e  r-gr  a  y-200> <d  i  v cla  s  s Na  m  e="fl  e  x fl  e  x-wr  a  p g  a  p-2 mb-3">
+            {enableFilte  r  s && (              <d  i  v className="p-4 bord e r-b bord e r-gr a y-200> <d i v cla s s Na m e="fl  e  x fl  e  x-wr  a  p g  a  p-2 mb-3">
                   <sele  c  t                    val  u  e={filters.type?.[0] || ''}
                     onChan  g  e={(e) => setFilters(pr  e  v => ({
                       ...pr  evtype: e.targ  e  t.val  u  e ? [e.targ  e  t.val  u  e] : []                    }))}                    className = te  x  t-sm bord  e  r bord  e  r-gr  a  y-300 round  e  d px-2 py-1""
@@ -307,7 +307,7 @@ export default function EnhancedSearch({
                     val  u  e={filters.category?.[0] || ''}
                     onChan  g  e={(e) => setFilters(pr  e  v => ({
                       ...pr  e  v 
-                      category: e.targ  e  t.val  u  e ? [e.targ  e  t.val  u  e] : []                    }))}                    className="te  x  t-sm bord  e  r bord  e  r-gr  a  y-300 round  e  d px-2 py-1"
+                      category: e.targ  e  t.val  u  e ? [e.targ  e  t.val  u  e] : []                    }))}                    className="te x t-sm bord e r bord e r-gr a y-300 round e d px-2 py-1"
                   >                    <opti  o  n val  u  e="">A  l  l Categori  e  s</opti  o  n>
                     {categori  e  s.map(catego  r  y => (                      <opti  o  n k  e  y={catego  r  y} val  u  e={catego  r  y}>{catego  r  y}</opti  o  n>
                     ))}
@@ -315,20 +315,20 @@ export default function EnhancedSearch({
 
                   <sele  c  t
                     val  u  e={sort  B  y}
-                    onChan  g  e={(e) => setSortBy(e.targ  e  t.val  u  e as a  n  y)}                    className="te  x  t-sm bord  e  r bord  e  r-gr  a  y-300 round  e  d px-2 py-1"
+                    onChan  g  e={(e) => setSortBy(e.targ  e  t.val  u  e as a  n  y)}                    className="te x t-sm bord e r bord e r-gr a y-300 round e d px-2 py-1"
                   >                    <opti  o  n val  u  e=relevan  c  e"">Relevan  c  e</opti  o  n>                    <opti  o  n val  u  e=da  t  e"">Date</opti  o  n>                    <opti  o  n val  u  e=tit  l  e"">Tit  l  e</opti  o  n>
                   </sele  c  t>
 
 
                   <butt  o  n
-                    on Cli  c  k={() => set SortOrder(prev => prev === 'a  s  c' ? 'desc' : 'asc')}                    className="te  x  t-sm bord  e  r bord  e  r-gr  a  y-300 round  e  d px-2 py-1 fl  e  x ite  m  s-cent  e  r"
-                  >                    {sortOrder === 'asc' ? <SortA  s  c className="h-4 w-4" /> : <SortDe  s  c className="h-4 w-4 />} </butt  o  n> </d  i  v> </d  i  v> )} {/* Loadi  n  g Sta  t  e */} {is Loadi  n  g && ( <d  i  v cla  s  s Na  m  e=p-4" te  x  t-cent  e  r te  x  t-gr  a  y-500"">                <d  i  v className="anima  t  e-sp  i  n round  e  d-fu  l  l h-6 w-6 bord  e  r-b-2 bord  e  r-bl  u  e-600 mx-au  t  o mb-2></d  i  v> Searchi  n  g... </d  i  v> )} {/* Sear  c  h Histo  r  y */} {!que  r  y && enab  l  e Histo  r  y && sear  c  h Histo  r  y.leng  t  h > 0 && ( <d  i  v cla  s  s Na  m  e="p-2">                <d  i  v className="te  x  t-xs fo  n  t-semibo  l  d te  x  t-gr  a  y-500 upperca  s  e tracki  n  g-wi  d  e mb-2 fl  e  x ite  m  s-cent  e  r> <Clock cla  s  s Na  m  e="h-3 w-3 mr-1"" />
+                    on Cli  c  k={() => set SortOrder(prev => prev === 'a  s  c' ? 'desc' : 'asc')}                    className="te x t-sm bord e r bord e r-gr a y-300 round e d px-2 py-1 fl e x ite m s-cent e r"
+                  >                    {sortOrder === 'asc' ? <SortA  s  c className="h-4 w-4" /> : <SortDe  s  c className="h-4 w-4 />} </butt o n> </d i v> </d i v> )} {/* Loadi n g Sta t e */} {is Loadi n g && ( <d i v cla s s Na m e=p-4" te  x  t-cent  e  r te  x  t-gr  a  y-500"">                <d  i  v className="anima t e-sp i n round e d-fu l l h-6 w-6 bord e r-b-2 bord e r-bl u e-600 mx-au t o mb-2></d i v> Searchi n g... </d i v> )} {/* Sear c h Histo r y */} {!que r y && enab l e Histo r y && sear c h Histo r y.leng t h > 0 && ( <d i v cla s s Na m e="p-2">                <d  i  v className="te x t-xs fo n t-semibo l d te x t-gr a y-500 upperca s e tracki n g-wi d e mb-2 fl e x ite m s-cent e r> <Clock cla s s Na m e="h-3 w-3 mr-1"" />
                   Rece  n  t Search  e  s
                 </d  i  v>
                 {searchHisto  r  y.slice(0, 5).map((it  e  m  ind  e  x) => (
- handleInputChange(it  e  m}            ar  i  a-lab  e  l=handleInputChange(it  e  m""}                    className="w-fu  l  l te  x  t-le  f  t px-3 py-2 te  x  t-sm te  x  t-gr  a  y-700 hover:bg-gr  a  y-100 round  e  d"
+ handleInputChange(it  e  m}            ar  i  a-lab  e  l=handleInputChange(it  e  m""}                    className="w-fu l l te x t-le f t px-3 py-2 te x t-sm te x t-gr a y-700 hover:bg-gr a y-100 round e d"
                   >                    {it  e  m}> handleInputChange(it  e  m)}
-                    className="w-fu  l  l te  x  t-le  f  t px-3 py-2 te  x  t-sm te  x  t-gr  a  y-700 hover:bg-gr  a  y-100 round  e  d <butt  o  n k  e  y={ind  e  x} on Cli  c  k={() = ar  i  a-lab  e  l="hand  l  e Inp  u  t Change(it  e  m)}
+                    className="w-fu l l te x t-le f t px-3 py-2 te x t-sm te x t-gr a y-700 hover:bg-gr a y-100 round e d <butt o n k e y={ind e x} on Cli c k={() = ar i a-lab e l="hand  l  e Inp  u  t Change(it  e  m)}
                     ar  i  a-lab  e  l={`Sear c h f o r ${it e m}`}
                     cla  s  s Na  m  e="w-fu  l  l te  x  t-le  f  t px-3 py-2 te  x  t-sm te  x  t-gr  a  y-700 hover:bg-gr  a  y-100 round  e  d
 
@@ -345,13 +345,13 @@ export default function EnhancedSearch({
             )}
 
             {/* Suggestio  n  s */}
-            {enab  l  e Suggestio  n  s && suggestio  n  s.leng  t  h > 0 && !is Loadi  n  g && (<d  i  v cla  s  s Na  m  e="p-2""">                <d  i  v className="te  x  t-xs fo  n  t-semibo  l  d te  x  t-gr  a  y-500 upperca  s  e tracki  n  g-wi  d  e mb-2 fl  e  x ite  m  s-cent  e  r> <St  a  r cla  s  s Na  m  e="h-3 w-3 mr-1"" />
+            {enab  l  e Suggestio  n  s && suggestio  n  s.leng  t  h > 0 && !is Loadi  n  g && (<d  i  v cla  s  s Na  m  e="p-2""">                <d  i  v className="te x t-xs fo n t-semibo l d te x t-gr a y-500 upperca s e tracki n g-wi d e mb-2 fl e x ite m s-cent e r> <St a r cla s s Na m e="h-3 w-3 mr-1"" />
                   Suggestio  n  s
                 </d  i  v>
                 {suggestio  n  s.map((suggesti  o  n  ind  e  x) => (
- handleInputChange(suggesti  o  n}            ar  i  a-lab  e  l=handleInputChange(suggesti  o  n""}                    className="w-fu  l  l te  x  t-le  f  t px-3 py-2 te  x  t-sm te  x  t-gr  a  y-700 hover:bg-gr  a  y-100 round  e  d"
+ handleInputChange(suggesti  o  n}            ar  i  a-lab  e  l=handleInputChange(suggesti  o  n""}                    className="w-fu l l te x t-le f t px-3 py-2 te x t-sm te x t-gr a y-700 hover:bg-gr a y-100 round e d"
                   >                    {suggesti  o  n}> handleInputChange(suggesti  o  n)}
-                    className="w-fu  l  l te  x  t-le  f  t px-3 py-2 te  x  t-sm te  x  t-gr  a  y-700 hover:bg-gr  a  y-100 round  e  d <butt  o  n k  e  y={ind  e  x} on Cli  c  k={() = ar  i  a-lab  e  l="hand  l  e Inp  u  t Change(suggesti  o  n)}
+                    className="w-fu l l te x t-le f t px-3 py-2 te x t-sm te x t-gr a y-700 hover:bg-gr a y-100 round e d <butt o n k e y={ind e x} on Cli c k={() = ar i a-lab e l="hand  l  e Inp  u  t Change(suggesti  o  n)}
                     ar  i  a-lab  e  l={`Sear c h f o r ${suggesti o n}`}
                     cla  s  s Na  m  e="w-fu  l  l te  x  t-le  f  t px-3 py-2 te  x  t-sm te  x  t-gr  a  y-700 hover:bg-gr  a  y-100 round  e  d
 
@@ -368,23 +368,23 @@ export default function EnhancedSearch({
             )}
 
             {/* Resul  t  s */}
-            {resul  t  s.leng  t  h > 0 && !is Loadi  n  g && (              <d  i  v cla  s  s Na  m  e="p-2""">                <d  i  v className="te  x  t-xs fo  n  t-semibo  l  d te  x  t-gr  a  y-500 upperca  s  e tracki  n  g-wi  d  e mb-2> Results({resul  t  s.leng  t  h}) </d  i  v> {resul  t  s.map((resu  l  t ind  e  x) => ( <motion.d  i  v k  e  y={resu  l  t.id} cla  s  s Name="{`p-3 round e d curs o r-point e r ${
+            {resul  t  s.leng  t  h > 0 && !is Loadi  n  g && (              <d  i  v cla  s  s Na  m  e="p-2""">                <d  i  v className="te x t-xs fo n t-semibo l d te x t-gr a y-500 upperca s e tracki n g-wi d e mb-2> Results({resul t s.leng t h}) </d i v> {resul t s.map((resu l t ind e x) => ( <motion.d i v k e y={resu l t.id} cla s s Name="{`p-3 round e d curs o r-point e r ${
                       ind e x === select e d Ind e x ? 'bg-bl u e-50 bord e r bord e r-bl u e-2 0 0' : 'hov e r:bg-gr a y-50'                    }`}
                     on Cli  c  k={() => hand  l  e Resu  l  t Click(resu  l  t)}
                     whi  l  e Hov  e  r={{ scale: 1.01 }}
-                  >                    <d  i  v cla  s  s Na  m  e="fl  e  x" ite  m  s-sta  r  t justi  f  y-betwe  e  n"">                      <d  i  v className="fl  e  x-1> <h 4 cla  s  s Na  m  e="te  x  t-sm fo  n  t-medium te  x  t-gr  a  y-900"" id="resulttit  l  e">{resu  l  t.tit  l  e}</h4>                        <p className="te  x  t-xs te  x  t-gr  a  y-600 mt-1">{resu  l  t.descripti  o  n}</p>                        <d  i  v className="fl  e  x ite  m  s-cent  e  r mt-2 spa  c  e-x-2> <sp  a  n cla  s  s Na  m  e="te  x  t-xs px-2 py-1 bg-gr  a  y-100 te  x  t-gr  a  y-600 round  e  d"">
+                  >                    <d  i  v cla  s  s Na  m  e="fl  e  x" ite  m  s-sta  r  t justi  f  y-betwe  e  n"">                      <d  i  v className="fl e x-1> <h 4 cla s s Na m e="te  x  t-sm fo  n  t-medium te  x  t-gr  a  y-900"" id="resulttit  l  e">{resu  l  t.tit  l  e}</h4>                        <p className="te x t-xs te x t-gr a y-600 mt-1">{resu  l  t.descripti  o  n}</p>                        <d  i  v className="fl e x ite m s-cent e r mt-2 spa c e-x-2> <sp a n cla s s Na m e="te  x  t-xs px-2 py-1 bg-gr  a  y-100 te  x  t-gr  a  y-600 round  e  d"">
                             {resu  l  t.ty  p  e}
                           </sp  a  n>
-                          {resu  l  t.catego  r  y && (                            <sp  a  n className="te  x  t-xs px-2 py-1 bg-bl  u  e-100 te  x  t-bl  u  e-600 round  e  d">                              {resu  l  t.catego  r  y}
+                          {resu  l  t.catego  r  y && (                            <sp  a  n className="te x t-xs px-2 py-1 bg-bl u e-100 te x t-bl u e-600 round e d">                              {resu  l  t.catego  r  y}
                             </sp  a  n>
                           )}
-                          {resu  l  t.ta  g  s?.slice(0, 2).map(t  a  g => (                            <sp  a  n k  e  y={t  a  g} className="te  x  t-xs px-2 py-1 bg-gre  e  n-100 te  x  t-gre  e  n-600 round  e  d fl  e  x ite  m  s-cent  e  r">                              <T  a  g className="h-3 w-3 mr-1" />
+                          {resu  l  t.ta  g  s?.slice(0, 2).map(t  a  g => (                            <sp  a  n k  e  y={t  a  g} className="te x t-xs px-2 py-1 bg-gre e n-100 te x t-gre e n-600 round e d fl e x ite m s-cent e r">                              <T  a  g className="h-3 w-3 mr-1" />
                               {t  a  g}
                             </sp  a  n>
                           ))}
                         </d  i  v>
                       </d  i  v>
-                      {resu  l  t.relevanceSco  r  e && (                        <d  i  v className="te  x  t-xs te  x  t-gr  a  y-400 ml-2> {Math.round(resu  l  t.relevan  c  e Sco  r  e * 100)}% </d  i  v> )} </d  i  v> </motion.d  i  v> ))} </d  i  v> )} {/* No Resul  t  s */} {que  r  y && resul  t  s.leng  t  h === 0 && !is Loadi  n  g && ( <d  i  v cla  s  s Na  m  e="p-4 te  x  t-cent  e  r te  x  t-gr  a  y-500">                <Sear  c  h className="h-8 w-8 mx-au  t  o mb-2 te  x  t-gr  a  y-300" />;                <p>No resul  t  s fou  n  d f  o  r &qu  o  t;{que  r  y}&qu  o  t;</p>                <p className = te  x  t-xs mt-1"">T  r  y differe  n  t keywor  d  s or che  c  k yo  u  r spelli  n  g</p>
+                      {resu  l  t.relevanceSco  r  e && (                        <d  i  v className="te x t-xs te x t-gr a y-400 ml-2> {Math.round(resu l t.relevan c e Sco r e * 100)}% </d i v> )} </d i v> </motion.d i v> ))} </d i v> )} {/* No Resul t s */} {que r y && resul t s.leng t h === 0 && !is Loadi n g && ( <d i v cla s s Na m e="p-4 te  x  t-cent  e  r te  x  t-gr  a  y-500">                <Sear  c  h className="h-8 w-8 mx-au t o mb-2 te x t-gr a y-300" />;                <p>No resul  t  s fou  n  d f  o  r &qu  o  t;{que  r  y}&qu  o  t;</p>                <p className = te  x  t-xs mt-1"">T  r  y differe  n  t keywor  d  s or che  c  k yo  u  r spelli  n  g</p>
               </d  i  v>
             )}
           </motion.d  i  v>

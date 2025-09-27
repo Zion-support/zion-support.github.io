@@ -6,9 +6,7 @@ import { AdvancedCacheManager } from '../AdvancedCacheManager';
 // Mock next/head
 jest.mock('next/head', () => {
   return function Head({ children }: { children: React.ReactNode }) {
-    return <>{children}</>;
-  };
-});
+    return <>{children}</>}});
 
 describe('Accessibility Improvements Tests', () => {
   const mockSEOData = {
@@ -25,13 +23,11 @@ describe('Accessibility Improvements Tests', () => {
 
   it('renders SEO optimizer component', () => {
     render(<SEOOptimizer seoData={mockSEOData} />);
-    expect(screen.getByText('SEO Optimizer')).toBeInTheDocument();
-  });
+    expect(screen.getByText('SEO Optimizer')).toBeInTheDocument()});
 
   it('applies SEO data correctly', () => {
     render(<SEOOptimizer seoData={mockSEOData} />);
-    expect(screen.getByText('Test Title')).toBeInTheDocument();
-  });
+    expect(screen.getByText('Test Title')).toBeInTheDocument()});
 
   it('handles empty SEO data', () => {
     const emptyData = {
@@ -47,43 +43,34 @@ describe('Accessibility Improvements Tests', () => {
     };
 
     render(<SEOOptimizer seoData={emptyData} />);
-    expect(screen.getByText('SEO Optimizer')).toBeInTheDocument();
-  });
+    expect(screen.getByText('SEO Optimizer')).toBeInTheDocument()});
 
   it('shows cache status information', async () => {
     render(<AdvancedCacheManager />);
-    expect(screen.getByText('Cache Manager')).toBeInTheDocument();
-  });
+    expect(screen.getByText('Cache Manager')).toBeInTheDocument()});
 
   it('handles cache optimization', async () => {
     render(<AdvancedCacheManager />);
-    expect(screen.getByText('Cache Manager')).toBeInTheDocument();
-  });
+    expect(screen.getByText('Cache Manager')).toBeInTheDocument()});
 
   it('displays performance metrics', () => {
     render(<AdvancedCacheManager />);
-    expect(screen.getByText('Cache Manager')).toBeInTheDocument();
-  });
+    expect(screen.getByText('Cache Manager')).toBeInTheDocument()});
 
   it('handles cache clearing', () => {
     render(<AdvancedCacheManager />);
-    expect(screen.getByText('Cache Manager')).toBeInTheDocument();
-  });
+    expect(screen.getByText('Cache Manager')).toBeInTheDocument()});
 
   it('shows cache statistics', () => {
     render(<AdvancedCacheManager />);
-    expect(screen.getByText('Cache Manager')).toBeInTheDocument();
-  });
+    expect(screen.getByText('Cache Manager')).toBeInTheDocument()});
 
   it('renders with proper accessibility attributes', () => {
     render(<SEOOptimizer seoData={mockSEOData} />);
     const seoComponent = screen.getByRole('main');
-    expect(seoComponent).toHaveAttribute('aria-label');
-  });
+    expect(seoComponent).toHaveAttribute('aria-label')});
 
   it('supports keyboard navigation', () => {
     render(<AdvancedCacheManager />);
     const cacheComponent = screen.getByRole('button');
-    expect(cacheComponent).toBeInTheDocument();
-  });
-});
+    expect(cacheComponent).toBeInTheDocument()})});

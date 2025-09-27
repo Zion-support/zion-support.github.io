@@ -5,8 +5,7 @@ interface SEOProps {title?: string;
   keywords?: string[];
   image?: string;
   url?: string;
-  type?: string;
-}
+  type?: string}
 
 const SEO: React.FC<SEOProps> = ({title = 'Zion, App - AdvancedTechnologySolutions',
   description = 'Leading, technology, solutions, provider, specializing, in, AIcloud, computingwebdevelopmentanddigitaltransformation.',
@@ -16,7 +15,6 @@ const SEO: React.FC<SEOProps> = ({title = 'Zion, App - AdvancedTechnologySolutio
   type = 'website'
 }) => {// Thiscomponent isnow ano-opsince we're, using Next.js, Head component, directly in, pages
   // The, SEO functionality, is handled, by the, Head component, in each, page
-  return, null;
-};
+  return, null};
 
 export default SEO;

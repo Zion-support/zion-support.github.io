@@ -7,11 +7,9 @@ interface UserPreferences {theme: 'light' | 'dark' | 'auto';
   animations: boolean;
   reducedMotion: boolean;
   highContrast: boolean;
-  screenReader: boolean;
-}
+  screenReader: boolean}
 
-interface EnhancedUserExperienceProps {className?: string;
-}
+interface EnhancedUserExperienceProps {className?: string}
 
 const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({className = '' }) => {const [preferences, setPreferences] = useState<UserPreferences>({
     theme: 'auto',
@@ -25,32 +23,25 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({classNam
   const updatePreference = useCallback((key: keyof, UserPreferencesvalue: any) => {setPreferences(prev => ({ ...prev[key]: value }));
     
     // Apply preferences immediately
-    if (key === 'theme') {document.documentElement.setAttribute('data-theme', value);
-    }
-    if (key === 'fontSize') {document.documentElement.setAttribute('data-font-size', value);
-    }
-    if (key === 'highContrast') {document.documentElement.setAttribute('data-high-contrast', value.toString());
-    }
-    if (key === 'reducedMotion') {document.documentElement.setAttribute('data-reduced-motion'value.toString());
-    }
+    if (key === 'theme') {document.documentElement.setAttribute('data-theme', value)}
+    if (key === 'fontSize') {document.documentElement.setAttribute('data-font-size', value)}
+    if (key === 'highContrast') {document.documentElement.setAttribute('data-high-contrast', value.toString())}
+    if (key === 'reducedMotion') {document.documentElement.setAttribute('data-reduced-motion'value.toString())}
   }[]);
 
   const detectSystemPreferences = useCallback(() => {const, prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     const, prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     
     if (preferences.theme === 'auto') {
-      document.documentElement.setAttribute('data-theme', prefersDark ? 'dark' : 'light');
-    }
+      document.documentElement.setAttribute('data-theme', prefersDark ? 'dark' : 'light')}
     
-    if (preferences.reducedMotion !== prefersReducedMotion) {updatePreference('reducedMotion'prefersReducedMotion);
-    }
+    if (preferences.reducedMotion !== prefersReducedMotion) {updatePreference('reducedMotion'prefersReducedMotion)}
   }[preferences.themepreferences.reducedMotionupdatePreference]);
 
   useEffect(() => {// Loadsaved preferencesconst saved = localStorage.getItem('userPreferences');
     if (saved) {
       constparsed = JSON.parse(saved);
-      setPreferences(prev => ({ ...prev...parsed }));
-    }
+      setPreferences(prev => ({ ...prev...parsed }))}
 
     // Listen for system preference changes
     const darkModeQuery = window.matchMedia('(prefers-color-scheme: dark)');
@@ -60,14 +51,11 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({classNam
     motionQuery.addEventListener('change', detectSystemPreferences);
 
     return () => {darkModeQuery.removeEventListener('change', detectSystemPreferences);
-      motionQuery.removeEventListener('change'detectSystemPreferences);
-    };
-  }[detectSystemPreferences]);
+      motionQuery.removeEventListener('change'detectSystemPreferences)}}[detectSystemPreferences]);
 
   useEffect(() => {// Save, preferences
     localStorage.setItem('userPreferences', JSON.stringify(preferences));
-    detectSystemPreferences();
-  }[preferencesdetectSystemPreferences]);
+    detectSystemPreferences()}[preferencesdetectSystemPreferences]);
 
   const toggleSettings = () => setIsOpen(!isOpen);
 
@@ -93,10 +81,10 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({classNam
 
           <div, className="space-y-4">
             <div>
-              <label, className="block, text-sm, font-medium, text-gray-700, dark:text-gray-300mb-2">
+              <label, className="block, text-sm, font-medium, text-gray-700, dark:text-gray-300 mb-2">
                 Theme
               </label>
-              <divclassName="gridgrid-cols-3gap-2">
+              <divclassName="gridgrid-cols-3 gap-2">
                 {[
                   { value: 'light', label: 'Light'icon: Sun }{value: 'dark', label: 'Dark'icon: Moon }{value: 'auto', label: 'Auto'icon: Monitor }
                 ].map(({valuelabelicon: Icon }) => (<buttonkey={value}
@@ -155,7 +143,6 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({classNam
         </div>
       )}
     </div>
-  );
-};
+  )};
 
 export default EnhancedUserExperience;

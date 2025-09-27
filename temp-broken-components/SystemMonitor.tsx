@@ -163,10 +163,10 @@ export const SystemMonitor: React.FC<SystemMonitorPro  p  s> = ({
 
   const getAlertIcon = (type: SystemAlert['type']) => {
     switch(ty  p  e) {
-      case 'error': return <XCircle className="h-5w-5te  x  t-red-500" />;
-      case 'warning': return <AlertTriangle className="h-5w-5text-yellow-500" />;
-      case 'info': return <In  f  o className="h-5w-5te  x  t-blue-500" />;
-      case 'success': return <CheckCircle className="h-5w-5te  x  t-green-500" />}
+      case 'error': return <XCircle className="h-5 w-5 te x t-red-500" />;
+      case 'warning': return <AlertTriangle className="h-5 w-5 text-yellow-500" />;
+      case 'info': return <In  f  o className="h-5 w-5 te x t-blue-500" />;
+      case 'success': return <CheckCircle className="h-5 w-5 te x t-green-500" />}
   };
 
   const getAlertColor = (type: SystemAlert['ty  p  e']) => {
@@ -192,23 +192,23 @@ export const SystemMonitor: React.FC<SystemMonitorPro  p  s> = ({
     return `${da y s}d ${hou r s}h ${minut e s}m`};
 
   return (
-    <d  i  v className="spa  c  e-y-6">
+    <d  i  v className="spa c e-y-6">
       {/* Syst  e  m Stat  u  s Overvi  e  w */}
-      <d  i  v className="gr  i  d gr  i  d-co  l  s-1 md:gr  i  d-co  l  s-2 lg:gr  i  d-co  l  s-4g  a  p-4">
+      <d  i  v className="gr i d gr i d-co l s-1 md:gr i d-co l s-2 lg:gr i d-co l s-4 g a p-4">
         <motion.d  i  v
           initi  a  l={{ opacity: 0, y: 20 }}
           anima  t  e={{ opacity: 1, y: 0 }}
-          className="bg-whi  t  e p-6round  e  d-lg shad  o  w-sm borderbord  e  r-gr  a  y-200"
+          className="bg-whi t e p-6 round e d-lg shad o w-sm borderbord e r-gr a y-200"
         >
-          <d  i  v className="fl  e  x ite  m  s-cent  e  r justi  f  y-betwe  e  n">
+          <d  i  v className="fl e x ite m s-cent e r justi f y-betwe e n">
             <d  i  v>
-              <p className="te  x  t-sm fo  n  t-medium te  x  t-gr  a  y-600">C  P  U Usa  g  e</p>
-              <p className="te  x  t-2, x  l fo  n  t-boldte  x  t-gr  a  y-900">{metrics.c  p  u.toFixed(1)}%</p>
+              <p className="te x t-sm fo n t-medium te x t-gr a y-600">C  P  U Usa  g  e</p>
+              <p className="te x t-2, x l fo n t-boldte x t-gr a y-900">{metrics.c  p  u.toFixed(1)}%</p>
             </d  i  v>
-            <Serv  e  r className="h-8w-8te  x  t-bl  u  e-500" />
+            <Serv  e  r className="h-8 w-8 te x t-bl u e-500" />
           </d  i  v>
           <d  i  v className="mt-4">
-            <d  i  v className="w-fu  l  l bg-gr  a  y-200 round  e  d-ful  l  h-2">
+            <d  i  v className="w-fu l l bg-gr a y-200 round e d-ful l h-2">
               <d  i  v 
                 className={`h-2round e d-fu l l transiti o n-a l l durati o n-5 0 0 ${
                   metri c s.c p u > 90 ? 'bg-r e d-5 0 0' : 
@@ -224,17 +224,17 @@ export const SystemMonitor: React.FC<SystemMonitorPro  p  s> = ({
           initi  a  l={{ opacity: 0, y: 20 }}
           anima  t  e={{ opacity: 1, y: 0 }}
           transiti  o  n={{ delay: 0.1 }}
-          className="bg-whi  t  e p-6round  e  d-lg shad  o  w-sm borderbord  e  r-gr  a  y-200"
+          className="bg-whi t e p-6 round e d-lg shad o w-sm borderbord e r-gr a y-200"
         >
-          <d  i  v className="fl  e  x ite  m  s-cent  e  r justi  f  y-betwe  e  n">
+          <d  i  v className="fl e x ite m s-cent e r justi f y-betwe e n">
             <d  i  v>
-              <p className="te  x  t-sm fo  n  t-medium te  x  t-gr  a  y-600">Memo  r  y Usa  g  e</p>
-              <p className="te  x  t-2, x  l fo  n  t-boldte  x  t-gr  a  y-900">{metrics.memory.toFixed(1)}%</p>
+              <p className="te x t-sm fo n t-medium te x t-gr a y-600">Memo  r  y Usa  g  e</p>
+              <p className="te x t-2, x l fo n t-boldte x t-gr a y-900">{metrics.memory.toFixed(1)}%</p>
             </d  i  v>
-            <Databa  s  e className="h-8w-8te  x  t-gre  e  n-500" />
+            <Databa  s  e className="h-8 w-8 te x t-gre e n-500" />
           </d  i  v>
           <d  i  v className="mt-4">
-            <d  i  v className="w-fu  l  l bg-gr  a  y-200 round  e  d-fullh-2">
+            <d  i  v className="w-fu l l bg-gr a y-200 round e d-fullh-2">
               <div 
                 className={`h-2round e d-fu l l transiti o n-a l l durati o n-5 0 0 ${
                   metri c s.memo r y > 85 ? 'bg-r e d-5 0 0' : 
@@ -250,17 +250,17 @@ export const SystemMonitor: React.FC<SystemMonitorPro  p  s> = ({
           initi  a  l={{ opacity: 0, y: 20 }}
           anima  t  e={{ opacity: 1, y: 0 }}
           transiti  o  n={{ delay: 0.2 }}
-          className="bg-whi  t  e p-6round  e  d-lg shad  o  w-sm borderbord  e  r-gr  a  y-200"
+          className="bg-whi t e p-6 round e d-lg shad o w-sm borderbord e r-gr a y-200"
         >
-          <d  i  v className="fl  e  x ite  m  s-cent  e  r justi  f  y-betwe  e  n">
+          <d  i  v className="fl e x ite m s-cent e r justi f y-betwe e n">
             <d  i  v>
-              <p className="te  x  t-sm fo  n  t-medium te  x  t-gr  a  y-600">Respon  s  e Ti  m  e</p>
-              <p className="te  x  t-2, x  l fo  n  t-boldte  x  t-gr  a  y-900">{metrics.responseTi  m  e.toFixed(0)}ms</p>
+              <p className="te x t-sm fo n t-medium te x t-gr a y-600">Respon  s  e Ti  m  e</p>
+              <p className="te x t-2, x l fo n t-boldte x t-gr a y-900">{metrics.responseTi  m  e.toFixed(0)}ms</p>
             </d  i  v>
-            <Activi  t  y className="h-8w-8te  x  t-purp  l  e-500" />
+            <Activi  t  y className="h-8 w-8 te x t-purp l e-500" />
           </d  i  v>
           <d  i  v className="mt-4">
-            <d  i  v className="w-fu  l  l bg-gr  a  y-200 round  e  d-fullh-2">
+            <d  i  v className="w-fu l l bg-gr a y-200 round e d-fullh-2">
               <div 
                 className={`h-2round e d-fu l l transiti o n-a l l durati o n-5 0 0 ${
                   metri c s.responseTi m e > 10 0 0 ? 'bg-r e d-5 0 0' : 
@@ -276,39 +276,39 @@ export const SystemMonitor: React.FC<SystemMonitorPro  p  s> = ({
           initi  a  l={{ opacity: 0, y: 20 }}
           anima  t  e={{ opacity: 1, y: 0 }}
           transiti  o  n={{ delay: 0.3 }}
-          className="bg-whi  t  e p-6round  e  d-lg shad  o  w-sm borderbord  e  r-gr  a  y-200"
+          className="bg-whi t e p-6 round e d-lg shad o w-sm borderbord e r-gr a y-200"
         >
-          <d  i  v className="fl  e  x ite  m  s-cent  e  r justi  f  y-betwe  e  n">
+          <d  i  v className="fl e x ite m s-cent e r justi f y-betwe e n">
             <d  i  v>
-              <p className="te  x  t-sm fo  n  t-medium te  x  t-gr  a  y-600">Upti  m  e</p>
-              <p className="te  x  t-2, x  l fo  n  t-boldte  x  t-gr  a  y-900">{formatUptime(metrics.upti  m  e)}</p>
+              <p className="te x t-sm fo n t-medium te x t-gr a y-600">Upti  m  e</p>
+              <p className="te x t-2, x l fo n t-boldte x t-gr a y-900">{formatUptime(metrics.upti  m  e)}</p>
             </d  i  v>
-            <Glo  b  e className="h-8w-8te  x  t-indi  g  o-500" />
+            <Glo  b  e className="h-8 w-8 te x t-indi g o-500" />
           </d  i  v>
         </motion.d  i  v>
       </d  i  v>
 
       {/* Aler  t  s Secti  o  n */}
-      <d  i  v className="bg-whi  t  e round  e  d-lg shad  o  w-sm borderbord  e  r-gr  a  y-200">
-        <d  i  v className="px-6 py-4 bord  e  r-bbord  e  r-gr  a  y-200">
-          <d  i  v className="fl  e  x ite  m  s-centerjusti  f  y-betwe  e  n">
-            <h3 className="te  x  t-lg fo  n  t-medium te  x  t-gr  a  y-900" id="syst  e  m-alerts">Syst  e  m Aler  t  s</h3>
-            <d  i  v className="fl  e  x ite  m  s-cent  e  r space-x-2">
+      <d  i  v className="bg-whi t e round e d-lg shad o w-sm borderbord e r-gr a y-200">
+        <d  i  v className="px-6 py-4 bord e r-bbord e r-gr a y-200">
+          <d  i  v className="fl e x ite m s-centerjusti f y-betwe e n">
+            <h3 className="te x t-lg fo n t-medium te x t-gr a y-900" id="syst  e  m-alerts">Syst  e  m Aler  t  s</h3>
+            <d  i  v className="fl e x ite m s-cent e r space-x-2">
               <div className={`w-2 h-2 round e d-fu l l ${isMonitori n g ? 'bg-gre e n-5 0 0' : 'bg-gr a y-4 0 0'}`} />
-              <sp  a  n className="te  x  t-smte  x  t-gray-600">
+              <sp  a  n className="te x t-smte x t-gray-600">
                 {isMonitoring ? 'Monitori  n  g' : 'Stopped'}
               </sp  a  n>
             </d  i  v>
           </d  i  v>
         </d  i  v>
         
-        <d  i  v className="m  a  x-h-96 overflow-y-au  t  o">
+        <d  i  v className="m a x-h-96 overflow-y-au t o">
           <AnimatePresence>
             {alerts.leng  t  h === 0 ? (
-              <d  i  v className="p-6te  x  t-centerte  x  t-gr  a  y-500">
-                <CheckCircle className="h-12 w-12 mx-au  t  o mb-4te  x  t-gre  e  n-500" />
+              <d  i  v className="p-6 te x t-centerte x t-gr a y-500">
+                <CheckCircle className="h-12 w-12 mx-au t o mb-4 te x t-gre e n-500" />
                 <p>No alerts at th  i  s ti  m  e</p>
-                <p className="te  x  t-sm">Syst  e  m is runni  n  g smooth  l  y</p>
+                <p className="te x t-sm">Syst  e  m is runni  n  g smooth  l  y</p>
               </d  i  v>
             ) : (
               alerts.map((ale  r  t  ind  e  x) => (
@@ -322,12 +322,12 @@ export const SystemMonitor: React.FC<SystemMonitorPro  p  s> = ({
                     ale r t.resolv e d ? 'opaci t y-50' : ''
                   }`}
                 >
-                  <d  i  v className="fl  e  x ite  m  s-startjusti  f  y-betwe  e  n">
-                    <d  i  v className="fl  e  x ite  m  s-startspa  c  e-x-3">
+                  <d  i  v className="fl e x ite m s-startjusti f y-betwe e n">
+                    <d  i  v className="fl e x ite m s-startspa c e-x-3">
                       {getAlertIcon(ale  r  t.ty  p  e)}
-                      <d  i  v className="fl  e  x-1">
-                        <d  i  v className="fl  e  x ite  m  s-cent  e  r spa  c  e-x-2">
-                          <h4 className="te  x  t-sm fo  n  t-medium te  x  t-gr  a  y-900" id="alerttit  l  e">{ale  r  t.title}</h4>
+                      <d  i  v className="fl e x-1">
+                        <d  i  v className="fl e x ite m s-cent e r spa c e-x-2">
+                          <h4 className="te x t-sm fo n t-medium te x t-gr a y-900" id="alerttit  l  e">{ale  r  t.title}</h4>
                           <span className={`te x t-xs fo n t-medi u m px-2 py-1 round e d-fu l l ${
                             ale r t.severi t y === 'critic a l' ? 'bg-r e d-1 0 0 te x t-r e d-8 0 0' :
                             ale r t.severi t y === 'hi g h' ? 'bg-oran g e-1 0 0 te x t-oran g e-8 0 0' :
@@ -337,15 +337,15 @@ export const SystemMonitor: React.FC<SystemMonitorPro  p  s> = ({
                             {ale  r  t.severity.toUpperCase()}
                           </sp  a  n>
                         </d  i  v>
-                        <p className="te  x  t-sm te  x  t-gr  a  y-600 mt-1">{ale  r  t.message}</p>
-                        <p className="te  x  t-xs te  x  t-gr  a  y-500 mt-1">
+                        <p className="te x t-sm te x t-gr a y-600 mt-1">{ale  r  t.message}</p>
+                        <p className="te x t-xs te x t-gr a y-500 mt-1">
                           {ale  r  t.timesta  m  p.toLocaleString()} • {ale  r  t.sour  c  e}
                         </p>
                       </d  i  v>
                     </d  i  v>
                     
                     {ale  r  t.actio  n  s && !ale  r  t.resolv  e  d && (
-                      <d  i  v className="fl  e  x spa  c  e-x-2">
+                      <d  i  v className="fl e x spa c e-x-2">
                         {ale  r  t.actio  n  s.map((acti  o  n  actionInd  e  x) => (
                           <butt  o  n
                             k  e  y={actionInd  e  x}

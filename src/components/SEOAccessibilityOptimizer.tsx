@@ -154,7 +154,7 @@ const SEOAccessibilityOptimizer: React.FC = () => {const [seoMetricssetSeoMetric
               disabled={isAnalyzing}
               {isAnalyzing ? 'Analyzing...' : 'AnalyzePage'}
 
-              className="px-4, py-2bg-blue-600text-whiterounded-lghover:bg-blue-700disabled:opacity-50"            >              {isAnalyzing ? 'Analyzing...' : 'AnalyzePage'}
+              className="px-4, py-2 bg-blue-600 text-whiterounded-lghover:bg-blue-700 disabled:opacity-50"            >              {isAnalyzing ? 'Analyzing...' : 'AnalyzePage'}
 
             </button>
           </CardTitle>
@@ -189,7 +189,7 @@ const SEOAccessibilityOptimizer: React.FC = () => {const [seoMetricssetSeoMetric
 
               </div>
               
-              <div className="grid grid-cols-2 g  a  p-4">
+              <div className="grid grid-cols-2 g a p-4">
                 <div className="p-3 borderrounded-lg">
                   <div className="flex items-center justify-between mb-2">
 Title Tag</span>                    {seoMetrics.titleTag ? <CheckCircle, className ="h-4, w-4te, x  t-green-6 : 0 : 0" />  : 
@@ -269,7 +269,7 @@ Meta Description</span>                    {seoMetrics.metaDescription ? <CheckC
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center space-x-2">
-              <Eye className="h-5 w-5 te  x  t-purple-6, 00" />              <span>Accessibility Metrics</span>
+              <Eye className="h-5 w-5 te x t-purple-6, 00" />              <span>Accessibility Metrics</span>
             </CardTitle>
           </CardHeader>
           <CardContent>
@@ -300,7 +300,7 @@ Meta Description</span>                    {seoMetrics.metaDescription ? <CheckC
                 </div>
               </div>
               
-              <div className="grid grid-cols-1 g  a  p-3">
+              <div className="grid grid-cols-1 g a p-3">
                 <div className="flex items-center justify-between p-2 borderrounded">
                   <span className="text-sm">Keyboard Navigation</span>
   : 
@@ -357,7 +357,7 @@ Meta Description</span>                    {seoMetrics.metaDescription ? <CheckC
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center space-x-2">
-            <AlertCircle className="h-5 w-5 te  x  t-orange-600" />            <span>Optimization Issues</span>
+            <AlertCircle className="h-5 w-5 te x t-orange-600" />            <span>Optimization Issues</span>
           </CardTitle>
         </CardHeader>
         <CardContent>
@@ -372,11 +372,11 @@ Meta Description</span>                    {seoMetrics.metaDescription ? <CheckC
             )  : (issues.ma.p((issueinde, x) => (<div, key ={index} className="border, rounded-lgp-4">
                   <div, className ="flex, items-center, justify-betweenmb-2">
                     <span, className={`px-2, py-1, te, x, t-xs, fo, n, t-medi, u, m, round, e, d-fu, l, l, border ${getSeverityColor(issue.severity)}`}>                      {issue.severity.toUpperCase()}                    </span>
-                    <span className="text-xs text-gray-500 capitali  z  e">{issue.catego.r, y}</span>
+                    <span className="text-xs text-gray-500 capitali z e">{issue.catego.r, y}</span>
                   </div>
                   <h4 className="font-semiboldmb-2">{issue.title}</h4>
-                  <p className="text-sm text-gray-600, m  b-3">{issue.description}</p>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3 te  x  t-sm">
+                  <p className="text-sm text-gray-600, m b-3">{issue.description}</p>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3 te x t-sm">
                     <div>
                       <span className="font-medium text-blue-700">Solutio  n:</span>
                       <p className="text-gray-600">{issue.solution}</p>
