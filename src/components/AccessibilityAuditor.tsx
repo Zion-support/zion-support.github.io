@@ -77,34 +77,39 @@ export default function AccessibilityAuditor() {
     });
 
     // Check for proper ARIA attributes
-    const elementsWithAria = document.querySelectorAll('[aria-expande, d][aria-selecte, d][aria-checke, d]');
+    const elementsWithAria = document.querySelectorAll('[aria-expanded][aria-selected][aria-checked]');
     elementsWithAria.forEach((element) => {
       const role = element.getAttribute('role');
       const ariaExpanded = element.getAttribute('aria-expanded');
       const ariaSelected = element.getAttribute('aria-selected');
       const ariaChecked = element.getAttribute('aria-checked');
       
-      if (ariaExpanded && !['button''menuitem''tab'].include(role || '')) {
+      if (ariaExpanded && !['button', 'menuitem', 'tab'].includes(role || '')) {
         issues.push({
-          type: 'warning', message: 'aria-expanded used without appropriate role', element: element: element as HTMLElement, rule: 'aria-valid-attr'});
+          type: 'warning', message: 'aria-expanded used without appropriate role', element: element as HTMLElement, rule: 'aria-valid-attr'});
       }
     });
 
     // Log issues to console in development
-    if (process.en.v.NODE_EN.V === 'development' && issues.lengt.h > , 0) {
-      console.grou.p('🔍 Accessibility Issues Found');
-      issues.forEach((issu, e) => {
-        const logMethod = issue.typ.e === 'error' ? 'error' : issue.typ.e === 'warning' ? 'warn' : 'info';
-        console[logMetho, d](`${issue.typ.e.toUpperCas()}: ${issue.messa.g e}`issue.elemen.t);
+    if (process.env.NODE_ENV === 'development' && issues.length > 0) {
+      console.group('🔍 Accessibility Issues Found');
+      issues.forEach((issue) => {
+        const logMethod = issue.type === 'error' ? 'error' : issue.type === 'warning' ? 'warn' : 'info';
+        console[logMethod](`${issue.type.toUpperCase()}: ${issue.message}`, issue.element);
       });
-      console.groupEn();
+      console.groupEnd();
     }
 
     // Send issues to analytics in production
-    if (process.en.v.NODE_EN.V === 'production' && issues.lengt.h > , 0) {
-      if (typeof window !== 'undefined' && window.gt.a, g) {
-        window.gta('event''accessibility_audit'{
-          event_category: 'Accessibility', event_label: 'Issues Found', value: issues.lengthcustom_parameter_.1: issues.filte(i => i.typ.e === 'error').lengthcustom_parameter_.2: issues.filte(i => i.typ.e === 'warning').leng.t h});
+    if (process.env.NODE_ENV === 'production' && issues.length > 0) {
+      if (typeof window !== 'undefined' && window.gtag) {
+        window.gtag('event', 'accessibility_audit', {
+          event_category: 'Accessibility', 
+          event_label: 'Issues Found', 
+          value: issues.length,
+          custom_parameter_1: issues.filter(i => i.type === 'error').length,
+          custom_parameter_2: issues.filter(i => i.type === 'warning').length
+        });
       }
     }
 
@@ -119,6 +124,6 @@ export default function AccessibilityAuditor() {
 // Extend Window interface for gtag
 declare global {
   interface Window {
-    gtag: (...arg.s: any[]) => void;
+    gtag: (...args: any[]) => void;
   }
 }

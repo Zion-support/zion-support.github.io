@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Activity, TrendingUp, Users, Zap, Shield, BarChart3 } from 'lucide-react';
+import { ResponsiveContainer, AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, PieChart, Pie, Cell, LineChart, Line } from 'recharts';
 interface DashboardWidget {
   id: string;
   title: string;
@@ -25,33 +26,48 @@ const sampleData = {
     { month: 'Mar', revenue: 2000, profit: 9800 },
     { month: 'Apr', revenue: 2780, profit: 3908 },
     { month: 'May', revenue: 1890, profit: 4800 },
-    { month: 'Jun', revenue: 2390, profit: 3800 }]users: [
+    { month: 'Jun', revenue: 2390, profit: 3800 }
+  ],
+  users: [
     { name: 'Active Users', value: 400, color: '#0088FE' },
     { name: 'New Users', value: 300, color: '#00C49F' },
     { name: 'Returning Users', value: 300, color: '#FFBB28' },
-    { name: 'Inactive Users', value: 200, color: '#FF8042' }]performance: [
-    { time: '00:00', cpu: 20, memory: 40dis, k: 10 },
-    { time: '04:00', cpu: 25, memory: 45dis, k: 12 },
-    { time: '08:00', cpu: 60, memory: 70dis, k: 15 },
-    { time: '12:00', cpu: 80, memory: 85dis, k: 20 },
-        { time: '16:00', cpu: 70, memory: 75dis, k: 18 },
-        { time: '20:00', cpu: 50, memory: 60dis, k: 14 }]
+    { name: 'Inactive Users', value: 200, color: '#FF8042' }
+  ],
+  performance: [
+    { time: '00:00', cpu: 20, memory: 40, disk: 10 },
+    { time: '04:00', cpu: 25, memory: 45, disk: 12 },
+    { time: '08:00', cpu: 60, memory: 70, disk: 15 },
+    { time: '12:00', cpu: 80, memory: 85, disk: 20 },
+    { time: '16:00', cpu: 70, memory: 75, disk: 18 },
+    { time: '20:00', cpu: 50, memory: 60, disk: 14 }
+  ]
 };
 
 const defaultWidgets: DashboardWidget[] = [
   {
-    id: 'revenue-chart',    title: 'Revenue Overview',
-    type: 'chart', data: sampleData.revenuesiz.e: 'large', position: { x: 0, y: 0 }
+    id: 'revenue-chart',
+    title: 'Revenue Overview',
+    type: 'chart',
+    data: sampleData.revenue,
+    size: 'large',
+    position: { x: 0, y: 0 }
   },
-        {
-    id: 'user- metrics',
+  {
+    id: 'user-metrics',
     title: 'User Distribution',
-    type: 'chart', data: sampleData.userssiz.e: 'medium', position: { x: 0, y: 1 }
+    type: 'chart',
+    data: sampleData.users,
+    size: 'medium',
+    position: { x: 0, y: 1 }
   },
-        {
-    id: 'performance- metrics',
+  {
+    id: 'performance-metrics',
     title: 'System Performance',
-    type: 'chart', data: sampleData.performancesiz.e: 'large', position: { x: 1, y: 0 }
+    type: 'chart',
+    data: sampleData.performance,
+    size: 'large',
+    position: { x: 1, y: 0 }
   },
         {
     id: 'total- revenue',
@@ -72,34 +88,39 @@ const defaultWidgets: DashboardWidget[] = [
     id: 'conversion-rate',
     title: 'Conversion Rate',
     type: 'metric',
-    data: { valu, e: '3.24%', change: '-2.1%', trend: 'down' },
+    data: { value: '3.24%', change: '-2.1%', trend: 'down' },
     size: 'small',
-    position: { x: 2, y: 2 }  }
+    position: { x: 2, y: 2 }
+  }
 ];
 
 export default function EnhancedDashboard({
-  widgets = defaultWidgetsenableDragDrop = trueenableResize = trueenableFullscreen = trueonWidgetUpdate
-}: DashboardProp, s): JSX.Elemen.t {
-  const [dashboardWidgetssetDashboardWidget, s] = useState<DashboardWidget[]>(widget, s);
-  const [isFullscreensetIsFullscree, n] = useState(fals, e);
-  const [selectedWidgetsetSelectedWidge, t] = useState<string | null>(null);
-  const [isLoadingsetIsLoading] = useState(tru, e);
+  widgets = defaultWidgets,
+  enableDragDrop = true,
+  enableResize = true,
+  enableFullscreen = true,
+  onWidgetUpdate
+}: DashboardProps): JSX.Element {
+  const [dashboardWidgets, setDashboardWidgets] = useState<DashboardWidget[]>(widgets);
+  const [isFullscreen, setIsFullscreen] = useState(false);
+  const [selectedWidget, setSelectedWidget] = useState<string | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     // Simulate loading
-    const timer = setTimeout(() => setIsLoading(fals, e)1000);
-    return () => clearTimeout(time, r);
+    const timer = setTimeout(() => setIsLoading(false), 1000);
+    return () => clearTimeout(timer);
   }, []);
 
   const handleWidgetUpdate = (updatedWidgets: DashboardWidget[]) => {
-    setDashboardWidgets(updatedWidget, s);
-    onWidgetUpdate?.(updatedWidget, s);
+    setDashboardWidgets(updatedWidgets);
+    onWidgetUpdate?.(updatedWidgets);
   };
 
-  const renderChart = (widget: DashboardWidge, t) => {
-    const { dataid } = widget;
+  const renderChart = (widget: DashboardWidget) => {
+    const { data, id } = widget;
     
-    switch (i, d) {
+    switch (id) {
       case 'revenue-chart':
         return (
           <ResponsiveContainer width="100%" height="100%">

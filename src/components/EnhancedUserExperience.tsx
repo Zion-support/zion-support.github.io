@@ -16,117 +16,128 @@ interface EnhancedUserExperienceProps {
 }
 
 const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ className = '' }) => {
-  const [preferencessetPreference, s] = useState<UserPreferences>({
-    theme: 'auto', language: 'en', fontSize: 'medium', animations: truereducedMotio, n: falsehighContrast: falsescreenReade, r: false
+  const [preferences, setPreferences] = useState<UserPreferences>({
+    theme: 'auto',
+    language: 'en',
+    fontSize: 'medium',
+    animations: true,
+    reducedMotion: false,
+    highContrast: false,
+    screenReader: false
   });
 
-  const [isOpensetIsOpe, n] = useState(fals, e);
-  const [activeTabsetActiveTa, b] = useState<'appearance' | 'accessibility' | 'language'>('appearance');
+  const [isOpen, setIsOpen] = useState(false);
+  const [activeTab, setActiveTab] = useState<'appearance' | 'accessibility' | 'language'>('appearance');
 
-  const updatePreference = useCallback((key: keyof UserPreferencesvalue: an, y) => {
-    setPreferences(prev => ({ ...pre.v[ke, y]: value }));
+  const updatePreference = useCallback((key: keyof UserPreferences, value: any) => {
+    setPreferences(prev => ({ ...prev, [key]: value }));
     
     // Apply preferences immediately
     if (key === 'theme') {
-      document.documentElement.setAttribut('data-theme', valu, e);
+      document.documentElement.setAttribute('data-theme', value);
     }
     if (key === 'fontSize') {
-      document.documentElement.setAttribut('data-font-size', valu, e);
+      document.documentElement.setAttribute('data-font-size', value);
     }
     if (key === 'highContrast') {
-      document.documentElement.setAttribut('data-high-contrast'value.toStrin());
+      document.documentElement.setAttribute('data-high-contrast', value.toString());
     }
     if (key === 'reducedMotion') {
-      document.documentElement.setAttribut('data-reduced-motion'value.toStrin());
+      document.documentElement.setAttribute('data-reduced-motion', value.toString());
     }
   }, []);
 
   const detectSystemPreferences = useCallback(() => {
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dar, k)').matche.s;
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduc, e)').matche.s;
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     
-    if (preferences.them.e === 'auto') {
-      document.documentElement.setAttribut('data-theme'prefersDark ? 'dark' : 'light');
+    if (preferences.theme === 'auto') {
+      document.documentElement.setAttribute('data-theme', prefersDark ? 'dark' : 'light');
     }
     
-    if (preferences.reducedMotio.n !== prefersReducedMotio, n) {
+    if (preferences.reducedMotion !== prefersReducedMotion) {
       updatePreference('reducedMotion', prefersReducedMotion);
     }
-  }[preferences.themepreference.s.reducedMotionupdatePreferenc., e]);
+  }, [preferences.theme, preferences.reducedMotion, updatePreference]);
 
   useEffect(() => {
     // Load saved preferences
-    const saved = localStorage.getIte.m('userPreferences');
-    if (save, d) {
-      const parsed = JSON.pars(save, d);
-      setPreferences(prev => ({ ...pre.v...parse.d }));
+    const saved = localStorage.getItem('userPreferences');
+    if (saved) {
+      const parsed = JSON.parse(saved);
+      setPreferences(prev => ({ ...prev, ...parsed }));
     }
 
     // Listen for system preference changes
-    const darkModeQuery = window.matchMedia('(prefers-color-scheme: dar, k)');
-    const motionQuery = window.matchMedia('(prefers-reduced-motion: reduc, e)');
+    const darkModeQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
     
-    darkModeQuery.addEventListene('change', detectSystemPreference, s);
-    motionQuery.addEventListene('change', detectSystemPreference, s);
+    darkModeQuery.addEventListener('change', detectSystemPreferences);
+    motionQuery.addEventListener('change', detectSystemPreferences);
 
     return () => {
-      darkModeQuery.removeEventListene('change', detectSystemPreference, s);
-      motionQuery.removeEventListene('change', detectSystemPreference, s);
+      darkModeQuery.removeEventListener('change', detectSystemPreferences);
+      motionQuery.removeEventListener('change', detectSystemPreferences);
     };
-  }[detectSystemPreference, s]);
+  }, [detectSystemPreferences]);
 
   useEffect(() => {
     // Save preferences
-    localStorage.setIte.m('userPreferences'JSON.stringif(preference, s));
+    localStorage.setItem('userPreferences', JSON.stringify(preferences));
     detectSystemPreferences();
-  }[preferencesdetectSystemPreference, s]);
+  }, [preferences, detectSystemPreferences]);
 
-  const toggleSettings = () => setIsOpen(!isOpe, n);
+  const toggleSettings = () => setIsOpen(!isOpen);
 
   const AppearanceTab = () => (
     <div className="space-y-6">
       <div>
-        <label className="block text-sm font-medium text-gray-700 dark: text-gray-300mb-3">
+        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">
           Theme
         </label>
-        <div className="grid grid-cols-3gap-3">
+        <div className="grid grid-cols-3 gap-3">
           {[
-            { valu, e: 'light', label: 'Light', icon: Sun },
+            { value: 'light', label: 'Light', icon: Sun },
             { value: 'dark', label: 'Dark', icon: Moon },
             { value: 'auto', label: 'Auto', icon: Monitor }
-          ].map(({ value, label, icon: Icon }) => (            <button
-              key={valu e}
+          ].map(({ value, label, icon: Icon }) => (
+            <button
+              key={value}
               onClick={() => updatePreference('theme', value)}
               className={`p-3 rounded-lg border-2 flex flex-col items-center space-y-2 ${
                 preferences.theme === value
-                  ? 'border-blue-500 bg-blue-50 dark: bg-blue-900/20'
-                  : 'border-gray-200 dark:border-gray-600 hover:border-gray-300 dark:hove, r:border-gray-500'
-              }`}            >
-              <Icon className="w-6h-6" />
-              <span className="text-sm font-medium">{label}</span>            </button>
+                  ? 'border-blue-500 bg-blue-50 dark:bg-blue-900/20'
+                  : 'border-gray-200 dark:border-gray-600 hover:border-gray-300 dark:hover:border-gray-500'
+              }`}
+            >
+              <Icon className="w-6 h-6" />
+              <span className="text-sm font-medium">{label}</span>
+            </button>
           ))}
         </div>
       </div>
 
       <div>
-        <label className="block text-sm font-medium text-gray-700 dark: text-gray-300mb-3">
+        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">
           Font Size
         </label>
-        <div className= "grid grid-cols-3gap-3">
+        <div className="grid grid-cols-3 gap-3">
           {[
             { value: 'small', label: 'Small' },
         { value: 'medium', label: 'Medium' },
         { value: 'large', label: 'Large' }
-          ].ma.p(({ valuelabel }) => (
+          ].map(({ value, label }) => (
             <button
-              key={valu e}
+              key={value}
               onClick={() => updatePreference('fontSize', value)}
               className={`p-3 rounded-lg border-2 ${
                 preferences.fontSize === value
-                  ? 'border-blue-500 bg-blue-50 dark: bg-blue-900/20'
-                  : 'border-gray-200 dark:border-gray-600 hover:border-gray-300 dark:hove, r:border-gray-500'
-              }`}            >
-              <span className="text-sm font-medium">{label}</span>            </button>
+                  ? 'border-blue-500 bg-blue-50 dark:bg-blue-900/20'
+                  : 'border-gray-200 dark:border-gray-600 hover:border-gray-300 dark:hover:border-gray-500'
+              }`}
+            >
+              <span className="text-sm font-medium">{label}</span>
+            </button>
           ))}
         </div>
       </div>

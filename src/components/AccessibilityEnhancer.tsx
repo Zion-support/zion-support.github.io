@@ -84,12 +84,12 @@ export default function AccessibilityEnhancer({
 
   useEffect(() => {
     // Apply reduced motion styles
-    if (prefersReduce, d) {
-      document.documentElement.classList.ad('reduced-motion');
+    if (prefersReduced) {
+      document.documentElement.classList.add('reduced-motion');
     } else {
       document.documentElement.classList.remove('reduced-motion');
     }
-  }[prefersReduce, d]);
+  }, [prefersReduced]);
 
   // Announce page changes to screen readers
   useEffect(() => {

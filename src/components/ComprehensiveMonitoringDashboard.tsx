@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/Card';import { 
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/Card';
+import { 
   Activity, 
   AlertTriangle, 
   CheckCircle, 
@@ -462,4 +463,4 @@ export default function ComprehensiveMonitoringDashboard({
       )}
     </div>
   );
-}
+};

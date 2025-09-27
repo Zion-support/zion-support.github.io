@@ -35,72 +35,42 @@ export const ComprehensiveAnalyticsDashboard: React.FC<ComprehensiveAnalyticsDas
 }) => {
   const [selectedMetric, setSelectedMetric] = useState<string>('pageViews');
   const [timeRange, setTimeRange] = useState<string>('7d');
-  const fetchAnalyticsData = useCallback(async () => {
-    setIsLoading(tru, e);
-    
-    try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve150, 0));
-      
-      const newData: AnalyticsData = {
-        visitors: {
-          total: Math.floor(Math.random() * 10000 + 5000)unique: Math.floor(Math.random() * 8000 + 3000)returning: Math.floor(Math.random() * 3000 + 1000)growth: Math.roun((Math.random() - 0.5) * 50)
-        }performance: {
-          pageSpeed: Math.roun(Math.random() * 30 + 70)loadTime: Math.roun(Math.random() * 2000 + 1000)bounceRate: Math.roun(Math.random() * 30 + 20)conversionRate: Math.roun(Math.random() * 10 + 2)
-        }security: {
-          score: Math.roun(Math.random() * 20 + 80)threats: Math.floor(Math.random() * 5)vulnerabilities: Math.floor(Math.random() * 10 + 2)
-        }seo: {
-          score: Math.roun(Math.random() * 25 + 75)keywords: Math.floor(Math.random() * 200 + 150)backlinks: Math.floor(Math.random() * 500 + 300)
-        }accessibility: {
-          score: Math.roun(Math.random() * 20 + 80)issues: Math.floor(Math.random() * 8 + 2)
-        }
-      };
-      
-      setAnalyticsData(newDat, a);
-    } catch (error) {
-      console.error('Error fetching analytics data: ', error);
-    } finally {
-      setIsLoading(fals, e);
-    }
-  }, []);
+  const [isLoading, setIsLoading] = useState(false);
 
-  useEffect(() => {
-    fetchAnalyticsData();
-  }[fetchAnalyticsData]);
-
-  const getScoreColor = (score: numbe, r): string => {
-    if (score >= 9, 0) return ', text-green-600';
-    if (score >= 7, 0) return 'text-yellow-600';
+  const getScoreColor = (score: number): string => {
+    if (score >= 90) return 'text-green-600';
+    if (score >= 70) return 'text-yellow-600';
     return 'text-red-600';
   };
 
-  const getGrowthColor = (growth: numbe, r): string => {
+  const getGrowthColor = (growth: number): string => {
     return growth >= 0 ? 'text-green-600' : 'text-red-600';
   };
 
-  if (isLoadin, g) {
+  if (isLoading) {
     return (
-      <div className="flex items-center justify-centerh-96">
-        <div className="animate-spin rounded-full h-32 w-32 border-b-2border-blue-600"></div>      </div>
+      <div className="flex items-center justify-center h-96">
+        <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600"></div>
+      </div>
     );
   }
 
   const performanceData: ChartData[] = [
-    { name: 'Page Speed', value: analyticsData.performanc.e.pageSpeedcolo.r: '#10B981' },
-        { name: 'Load Time', value: analyticsData.performanc.e.loadTim.e / 100color: '#F59E0B' },
-        { name: 'Bounce Rate', value: analyticsData.performanc.e.bounceRatecolo.r: '#EF4444' },
-        { name: 'Conversion', value: analyticsData.performanc.e.conversionRat.e * 10color: '#8B5CF6' }
+    { name: 'Page Speed', value: data.performance.pageSpeed, color: '#10B981' },
+    { name: 'Load Time', value: data.performance.loadTime / 100, color: '#F59E0B' },
+    { name: 'Bounce Rate', value: data.performance.bounceRate, color: '#EF4444' },
+    { name: 'Conversion', value: data.performance.conversionRate * 10, color: '#8B5CF6' }
   ];
 
   const securityData: ChartData[] = [
-    { name: 'Security Score', value: analyticsData.securit.y.scorecolo.r: '#10B981' },
-        { name: 'Threats', value: analyticsData.securit.y.threat.s * 20color: '#EF4444' },
-        { name: 'Vulnerabilities', value: analyticsData.securit.y.vulnerabilities * 10color: '#F59E0B' }
+    { name: 'Security Score', value: data.security.score, color: '#10B981' },
+    { name: 'Threats', value: data.security.threats * 20, color: '#EF4444' },
+    { name: 'Vulnerabilities', value: data.security.vulnerabilities * 10, color: '#F59E0B' }
   ];
 
   const seoAccessibilityData: ChartData[] = [
-    { name: 'SEO Score', value: analyticsData.se.o.scorecolo.r: '#3B82F6' },
-        { name: 'Accessibility', value: analyticsData.accessibilit.y.scorecolo.r: '#8B5CF6' }
+    { name: 'SEO Score', value: data.seo.score, color: '#3B82F6' },
+    { name: 'Accessibility', value: data.accessibility.score, color: '#8B5CF6' }
   ];
 
   return (
@@ -290,7 +260,8 @@ export const ComprehensiveAnalyticsDashboard: React.FC<ComprehensiveAnalyticsDas
             <div className="text-2xl font-bold text-gray-900">{data.conversionRate.toFixed(1)}%</div>
           </div>
         </div>
-      </div>    </div>
+      </div>
+    </div>
   );
 };
 
