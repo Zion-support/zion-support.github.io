@@ -50,6 +50,7 @@ class ErrorReporter {
   private maxReports = 100;
   private sessionId: string;
   private isInitialized = false;
+  private isReporting = false;
 
   private constructor() {
     this.sessionId = this.generateSessionId();
@@ -241,59 +242,93 @@ class ErrorReporter {
       customData?: Record<string, unknown>;
     } = {}
   ) {
-    const report: ErrorReport = {
-      id: this.generateErrorId(),
-      error: {
-        name: error.name,
-        message: error.message,
-        stack: error.stack,
-        cause: (error as Error & { cause?: unknown }).cause
-      },
-      context: this.getErrorContext(options.customData),
-      category: options.category || 'javascript',
-      severity: options.severity || 'medium',
-      tags: options.tags || []
-    };
-
-    // Add to reports array
-    this.reports.push(report);
-
-    // Keep only the most recent reports
-    if (this.reports.length > this.maxReports) {
-      this.reports = this.reports.slice(-this.maxReports);
+    // Prevent recursive error reporting
+    if (this.isReporting) {
+      return;
     }
 
-    // Send to monitoring service
-    this.sendToMonitoringService(report);
+    this.isReporting = true;
 
-    // Log to console in development
-    if (process.env.NODE_ENV === 'development') {
-      console.group(`🚨 Error Report [${report.severity}]`);
-      console.error('Error:', error);
-      console.log('Report:', report);
-      console.groupEnd();
+    try {
+      const report: ErrorReport = {
+        id: this.generateErrorId(),
+        error: {
+          name: error.name,
+          message: error.message,
+          stack: error.stack,
+          cause: (error as Error & { cause?: unknown }).cause
+        },
+        context: this.getErrorContext(options.customData),
+        category: options.category || 'javascript',
+        severity: options.severity || 'medium',
+        tags: options.tags || []
+      };
+
+      // Add to reports array
+      this.reports.push(report);
+
+      // Keep only the most recent reports
+      if (this.reports.length > this.maxReports) {
+        this.reports = this.reports.slice(-this.maxReports);
+      }
+
+      // Send to monitoring service
+      this.sendToMonitoringService(report);
+
+      // Log to console in development
+      if (process.env.NODE_ENV === 'development') {
+        console.group(`🚨 Error Report [${report.severity}]`);
+        console.error('Error:', error);
+        console.log('Report:', report);
+        console.groupEnd();
+      }
+    } finally {
+      this.isReporting = false;
     }
   }
 
   private async sendToMonitoringService(report: ErrorReport) {
+    // Prevent recursion by checking if we're already in an error reporting cycle
+    if (this.isReporting) {
+      return;
+    }
+    
+    this.isReporting = true;
+    
     try {
-      // Send to your error monitoring service
-      await fetch('/api/error-reporting', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(report),
-      });
+      // Prevent infinite recursion by checking if this is an error reporting error
+      if (report.error.message.includes('Failed to send error report') || 
+          report.error.message.includes('error-reporting') ||
+          report.error.message.includes('Maximum call stack size exceeded')) {
+        return;
+      }
+
+      // Only send to monitoring service if we're not in a test environment
+      if (typeof window !== 'undefined' && process.env.NODE_ENV !== 'test') {
+        await fetch('/api/error-reporting', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(report),
+        });
+      }
     } catch {
       // Fallback: store in localStorage for later retry
       try {
-        const storedReports = JSON.parse(localStorage.getItem('errorReports') || '[]');
-        storedReports.push(report);
-        localStorage.setItem('errorReports', JSON.stringify(storedReports.slice(-10)));
+        if (typeof localStorage !== 'undefined') {
+          const storedReports = JSON.parse(localStorage.getItem('errorReports') || '[]');
+          storedReports.push(report);
+          localStorage.setItem('errorReports', JSON.stringify(storedReports.slice(-10)));
+        }
       } catch {
-        // Ignore localStorage errors
+        // If localStorage fails, just log to console silently
+        if (process.env.NODE_ENV === 'development') {
+          console.warn('Failed to store error report:', report);
+        }
       }
+    } finally {
+      this.isReporting = false;
     }
   }
 

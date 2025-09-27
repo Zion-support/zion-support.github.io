@@ -4,13 +4,19 @@ import { initializeErrorReporting } from './utils/errorReporting';
 import { initOptimizations } from './utils/buildOptimizations';
 import { seoManager, seoAnalytics, performanceSEO } from './utils/seoEnhanced';
 import { accessibilityManager } from './utils/accessibility';
-import { securityManager } from './utils/security';
 import { PerformanceMonitor, ResourceMonitor, MemoryMonitor } from './utils/performance';
 import { performanceOptimizer } from './utils/optimization';
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
 import { analytics } from './utils/analytics';
 import { seoOptimizer } from './utils/seoOptimization';
+import { securityManager } from './utils/security';
+import { SecurityManager } from './utils/securityEnhancements';
+import { cacheManager } from './utils/cacheManager';
+import { apiClient } from './utils/apiClient';
+import { notificationManager } from './utils/notificationManager';
+import { userFeedback } from './utils/userFeedbackManager';
 import './index.css';
+import './styles/notifications.css';
 
 export default function App(): React.JSX.Element {
   // Initialize performance optimizations
@@ -39,7 +45,8 @@ export default function App(): React.JSX.Element {
     initOptimizations();
     
     // Initialize security features
-    securityManager.initialize();
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    const securityManagerInstance = SecurityManager.getInstance();
     
     // Initialize performance monitoring
     const performanceMonitor = PerformanceMonitor.getInstance();
@@ -69,6 +76,9 @@ export default function App(): React.JSX.Element {
     // Initialize advanced performance optimizer
     performanceOptimizer.preloadCriticalResources();
     performanceOptimizer.optimizeImages();
+    performanceOptimizer.addResourceHints();
+    performanceOptimizer.optimizeCriticalCSS();
+    performanceOptimizer.setupWebVitalsMonitoring();
 
     // Initialize analytics system
     analytics.initialize();
@@ -80,12 +90,50 @@ export default function App(): React.JSX.Element {
       description: seoData.description,
       keywords: seoData.keywords,
       image: seoData.ogImage,
-      url: seoData.ogUrl,
-      type: 'website'
+      url: window.location.href,
+      type: seoData.ogType as 'website' | 'article' | 'product'
     });
 
     // Initialize enhanced security features
-    securityManager.monitorSecurityEvents();
+    securityManagerInstance.monitorSecurityEvents();
+
+    // Initialize cache manager
+    cacheManager.configure({
+      maxSize: 100,
+      ttl: 10 * 60 * 1000, // 10 minutes
+      storageType: 'localStorage',
+      enableCompression: true,
+      enableEncryption: false
+    });
+
+    // Initialize API client
+    apiClient.configure({
+      baseURL: '/api',
+      timeout: 30000,
+      retries: 3,
+      enableCaching: true,
+      enableLogging: process.env.NODE_ENV === 'development'
+    });
+
+    // Initialize notification manager
+    notificationManager.configure({
+      position: 'top-right',
+      duration: 5000,
+      maxNotifications: 5,
+      enableSound: true,
+      enableVibration: true,
+      enableBrowserNotifications: true,
+      theme: 'auto'
+    });
+
+    // Show welcome notification
+    notificationManager.info('Welcome to Zion Tech Group', 'Your advanced technology solutions platform is ready!');
+
+    // Show welcome feedback
+    userFeedback.showSuccess(
+      'Welcome!',
+      'Zion Tech Group is now ready with enhanced performance optimizations and user experience features.'
+    );
 
     // Preload critical resources
     preloadResource('/og-image.png', 'image');

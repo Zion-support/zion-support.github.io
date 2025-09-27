@@ -6,6 +6,9 @@ interface PerformanceConfig {
   enableCodeSplitting: boolean;
   enableServiceWorker: boolean;
   enablePrefetching: boolean;
+  enableResourceHints: boolean;
+  enableCriticalCSS: boolean;
+  enableWebVitals: boolean;
 }
 
 interface PerformanceMetrics {
@@ -29,6 +32,9 @@ export class PerformanceOptimizer {
       enableCodeSplitting: true,
       enableServiceWorker: true,
       enablePrefetching: true,
+      enableResourceHints: true,
+      enableCriticalCSS: true,
+      enableWebVitals: true,
       ...config
     };
     this.initialize();
@@ -343,6 +349,87 @@ export class PerformanceOptimizer {
   public cleanup(): void {
     this.observers.forEach((observer) => observer.disconnect());
     this.observers = [];
+  }
+
+  /**
+   * Add resource hints for better performance
+   */
+  public addResourceHints(): void {
+    if (!this.config.enableResourceHints) return;
+
+    const hints = [
+      { rel: 'dns-prefetch', href: '//fonts.googleapis.com' },
+      { rel: 'dns-prefetch', href: '//cdnjs.cloudflare.com' },
+      { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: true },
+      { rel: 'preconnect', href: 'https://api.ziontechgroup.com', crossorigin: true }
+    ];
+
+    hints.forEach(hint => {
+      const link = document.createElement('link');
+      Object.entries(hint).forEach(([key, value]) => {
+        link.setAttribute(key, value as string);
+      });
+      document.head.appendChild(link);
+    });
+  }
+
+  /**
+   * Optimize critical CSS loading
+   */
+  public optimizeCriticalCSS(): void {
+    if (!this.config.enableCriticalCSS) return;
+
+    // Add critical CSS inline for above-the-fold content
+    const criticalCSS = `
+      .hero-section { display: block; }
+      .navigation { position: fixed; top: 0; }
+      .loading-spinner { display: none; }
+    `;
+
+    const style = document.createElement('style');
+    style.textContent = criticalCSS;
+    document.head.appendChild(style);
+  }
+
+  /**
+   * Enhanced Web Vitals monitoring
+   */
+  public setupWebVitalsMonitoring(): void {
+    if (!this.config.enableWebVitals) return;
+
+    // Monitor Core Web Vitals
+    const vitals = ['LCP', 'FID', 'CLS', 'FCP', 'TTFB'];
+    
+    vitals.forEach(vital => {
+      if ('PerformanceObserver' in window) {
+        try {
+          const observer = new PerformanceObserver((list) => {
+            const entries = list.getEntries();
+            entries.forEach(entry => {
+              console.log(`Web Vital ${vital}:`, entry.value || entry.startTime);
+              // Send to analytics service
+              this.reportWebVital(vital, entry.value || entry.startTime);
+            });
+          });
+          
+          observer.observe({ entryTypes: [vital.toLowerCase()] });
+          this.observers.push(observer);
+        } catch (error) {
+          console.warn(`Failed to observe ${vital}:`, error);
+        }
+      }
+    });
+  }
+
+  private reportWebVital(name: string, value: number): void {
+    // Report to analytics service
+    if (window.gtag) {
+      window.gtag('event', 'web_vital', {
+        event_category: 'Performance',
+        event_label: name,
+        value: Math.round(value)
+      });
+    }
   }
 }
 
