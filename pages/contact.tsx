@@ -16,7 +16,7 @@ export default function Contact(): React.JSX.Element {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    trackClick('contact_form_submit', { formData });
+    trackClick('contact_form_submit', 'engagement');
     // Handle form submission here
     console.log('Form submitted:', formData);
   };

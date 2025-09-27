@@ -5,11 +5,18 @@ interface HealthResponse {
 	timestamp: string;
 	uptime: number;
 	version: string;
+	error?: string;
 }
 
 export default function handler(req: NextApiRequest, res: NextApiResponse<HealthResponse>) {
 	if (req.method !== 'GET') {
-		return res.status(405).json({ error: 'Method not allowed' });
+		return res.status(405).json({ 
+			status: "unhealthy",
+			timestamp: new Date().toISOString(),
+			uptime: process.uptime(),
+			version: process.env.npm_package_version || "1.0.0",
+			error: 'Method not allowed' 
+		});
 	}
 
 	const healthResponse: HealthResponse = {
