@@ -160,8 +160,8 @@ const ComprehensiveAnalyticsDashboard: React.FC = () => {
 
   if (isLoading) {
     return (
-      <div className="flex items-center justify-centerh-96">
-        <div className="animate-spin rounded-full h-32w-32border-b-2border-blue-600"></div>
+      <div className="flex items-center justify-center h-96">
+        <div className="animate-spin rounded-full h-32 w-32 border -b-2 border -blue-600"></div>
       </div>
     );
   }
@@ -171,7 +171,7 @@ const ComprehensiveAnalyticsDashboard: React.FC = () => {
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center space-x-2">
-            <Activity className="h-6w-6text-blue-600" />
+            <Activity className="h-6 w-6 text-blue-600" />
             <span>Comprehensive Analytics Dashboard</span>
           </CardTitle>
           <CardDescription>
@@ -179,7 +179,7 @@ const ComprehensiveAnalyticsDashboard: React.FC = () => {
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <div className="flex space-x-1mb-6bg-gray-100p-1rounded-lg">
+          <div className="flex space-x-1 mb-6 bg-gray-100 p-1 rounded-lg">
             {[
               { key: 'overview', label: 'Overview', icon: Target },
               { key: 'performance', label: 'Performance', icon: Zap },
@@ -189,13 +189,13 @@ const ComprehensiveAnalyticsDashboard: React.FC = () => {
               <button
                 key={key}
                 onClick={() => setActiveTab(key as any)}
-                className={`flex items-center space-x-2px-4 py-2rounded-md text-sm font-medium transition-colors ${
+                className={`flex items-center space-x-2 px-4 py-2 rounded-md text-sm font-medium transition-colors ${
                   activeTab === key
                     ? 'bg-white text-blue-600shadow-sm'
-                    : 'text-gray-600hover:text-gray-900'
+                    : 'text-gray-600 hover:text-gray-900'
                 }`}
               >
-                <Icon className="h-4w-4" />
+                <Icon className="h-4 w-4" />
                 <span>{label}</span>
               </button>
             ))}
@@ -204,16 +204,13 @@ const ComprehensiveAnalyticsDashboard: React.FC = () => {
           {activeTab === 'overview' && (
             <div className="space-y-6">
               {/* Key Metrics Grid */}
-              <div className="grid grid-cols-1md:grid-cols-2lg:grid-cols-4gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4ga p-4">
                 <Card>
                   <CardContent className="p-4">
                     <div className="flex items-center space-x-2">
-                      <Users className="h-8w-8text-blue-600" />
+                      <Users className="h-8 w-8 text-blue-600" />
                       <div>
-                        <div className="text-2xl font-bold">{analyticsData.visitors.total.toLocaleString()}</div>
-                        <div className="text-sm text-gray-600">Total Visitors</div>
-                        <div className={`text-xs ${getGrowthColor(analyticsData.visitors.growth)}`}
-                          {analyticsData.visitors.growth >= 0 ? '+' : ''}{analyticsData.visitors.growth}%
+                        <div className="text-2xl font-bold">{analyticsData.visitors.total.toLocaleString()}</div> <div className="text-sm text-gray-600">Total Visitors</div> <div className="{`text-xs ${getGrowthColor(analyticsData.visitors.growth)}`} {analyticsData.visitors.growth">= 0 ? '+' : ''}{analyticsData.visitors.growth}%
                         </div>
                       </div>
                     </div>
@@ -223,13 +220,10 @@ const ComprehensiveAnalyticsDashboard: React.FC = () => {
                 <Card>
                   <CardContent className="p-4">
                     <div className="flex items-center space-x-2">
-                      <Zap className="h-8w-8text-green-600" />
+                      <Zap className="h-8 w-8 text-green-600" />
                       <div>
-                        <div className={`text-2xl font-bold ${getScoreColor(analyticsData.performance.pageSpeed)}`}
-                          {analyticsData.performance.pageSpeed}
-                        </div>
-                        <div className="text-sm text-gray-600">Performance Score</div>
-                        <div className="text-xstext-gray-500">{analyticsData.performance.loadTime}ms load</div>
+                        <div className="{`text-2xl font-bold ${getScoreColor(analyticsData.performance.pageSpeed)}`} {analyticsData.performance.pageSpeed} </div">
+                        <div className="text-sm text-gray-600">Performance Score</div> <div className="text-xs text-gray-500">{analyticsData.performance.loadTime}ms load</div>
                       </div>
                     </div>
                   </CardContent>
@@ -238,13 +232,10 @@ const ComprehensiveAnalyticsDashboard: React.FC = () => {
                 <Card>
                   <CardContent className="p-4">
                     <div className="flex items-center space-x-2">
-                      <Shield className="h-8w-8text-purple-600" />
+                      <Shield className="h-8 w-8 text-purple-600" />
                       <div>
-                        <div className={`text-2xl font-bold ${getScoreColor(analyticsData.security.score)}`}
-                          {analyticsData.security.score}
-                        </div>
-                        <div className="text-sm text-gray-600">Security Score</div>
-                        <div className="text-xstext-red-500">{analyticsData.security.vulnerabilities} issues</div>
+                        <div className="{`text-2xl font-bold ${getScoreColor(analyticsData.security.score)}`} {analyticsData.security.score} </div">
+                        <div className="text-sm text-gray-600">Security Score</div> <div className="text-xs text-red-500">{analyticsData.security.vulnerabilities} issues</div>
                       </div>
                     </div>
                   </CardContent>
@@ -253,13 +244,10 @@ const ComprehensiveAnalyticsDashboard: React.FC = () => {
                 <Card>
                   <CardContent className="p-4">
                     <div className="flex items-center space-x-2">
-                      <Globe className="h-8w-8text-orange-600" />
+                      <Globe className="h-8 w-8 text-orange-600" />
                       <div>
-                        <div className={`text-2xl font-bold ${getScoreColor(analyticsData.seo.score)}`}
-                          {analyticsData.seo.score}
-                        </div>
-                        <div className="text-sm text-gray-600">SEO Score</div>
-                        <div className="text-xstext-gray-500">{analyticsData.seo.keywords} keywords</div>
+                        <div className="{`text-2xl font-bold ${getScoreColor(analyticsData.seo.score)}`} {analyticsData.seo.score} </div">
+                        <div className="text-sm text-gray-600">SEO Score</div> <div className="text-xs text-gray-500">{analyticsData.seo.keywords} keywords</div>
                       </div>
                     </div>
                   </CardContent>
@@ -267,7 +255,7 @@ const ComprehensiveAnalyticsDashboard: React.FC = () => {
               </div>
 
               {/* Charts */}
-              <div className="grid grid-cols-1lg:grid-cols-2gap-6">
+              <div className="grid grid-cols-1 lg:grid-cols-2ga p-6">
                 <Card>
                   <CardHeader>
                     <CardTitle>Performance Metrics</CardTitle>
@@ -308,28 +296,25 @@ const ComprehensiveAnalyticsDashboard: React.FC = () => {
               <Card>
                 <CardHeader>
                   <CardTitle className="flex items-center space-x-2">
-                    <AlertTriangle className="h-5w-5text-orange-600" />
+                    <AlertTriangle className="h-5 w-5 text-orange-600" />
                     <span>Priority Actions</span>
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="grid grid-cols-1md:grid-cols-3gap-4">
+                  <div className="grid grid-cols-1 md:grid-cols-3ga p-4">
                     {analyticsData.performance.pageSpeed < 70 && (
-                      <div className="p-4border border-red-200rounded-lgbg-red-50">
-                        <div className="font-medium text-red-800mb-1">Performance Issue</div>
-                        <div className="text-smtext-red-600">Page speed below optimal threshold</div>
+                      <div className="p-4border border-red-200 rounded-lg bg-red-50">
+                        <div className="font-medium text-red-800 mb-1">Performance Issue</div> <div className="text-sm text-red-600">Page speed below optimal threshold</div>
                       </div>
                     )}
                     {analyticsData.security.vulnerabilities > 5 && (
-                      <div className="p-4border border-orange-200rounded-lgbg-orange-50">
-                        <div className="font-medium text-orange-800mb-1">Security Alert</div>
-                        <div className="text-smtext-orange-600">Multiple vulnerabilities detected</div>
+                      <div className="p-4border border-orange-200 rounded-lg bg-orange-50">
+                        <div className="font-medium text-orange-800 mb-1">Security Alert</div> <div className="text-sm text-orange-600">Multiple vulnerabilities detected</div>
                       </div>
                     )}
                     {analyticsData.accessibility.issues > 5 && (
-                      <div className="p-4border border-yellow-200rounded-lgbg-yellow-50">
-                        <div className="font-medium text-yellow-800mb-1">Accessibility Issues</div>
-                        <div className="text-smtext-yellow-600">Several accessibility improvements needed</div>
+                      <div className="p-4border border-yellow-200 rounded-lg bg-yellow-50">
+                        <div className="font-medium text-yellow-800 mb-1">Accessibility Issues</div> <div className="text-sm text-yellow-600">Several accessibility improvements needed</div>
                       </div>
                     )}
                   </div>

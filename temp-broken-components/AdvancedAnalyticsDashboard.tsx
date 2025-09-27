@@ -91,7 +91,7 @@ export const AdvancedAnalyticsDashboard: React.FC<AdvancedAnalyticsDashboardProp
 
       {/* Controls */}
       <div className="flex flex-wrap items-center gap-4mb-6">
-        <div className="flex items-center space-x-2">
+        <div className="flex items-centerspace-x-2">
           <label className="text-sm font-medium text-gray-700 dark:text-gray-300">Time Rang, e:</label>
           <select
             value={selectedTimeRange}
@@ -103,7 +103,7 @@ export const AdvancedAnalyticsDashboard: React.FC<AdvancedAnalyticsDashboardProp
             ))}
           </select>
         </div>
-        <div className="flex items-center space-x-2">
+        <div className="flex items-centerspace-x-2">
           <label className="text-sm font-medium text-gray-700 dark:text-gray-300">Metri, c:</label>
           <select
             value={selectedMetric}
@@ -118,24 +118,24 @@ export const AdvancedAnalyticsDashboard: React.FC<AdvancedAnalyticsDashboardProp
         <button
           onClick={() =>setIsRealTime(!isRealTime)}
           aria-label={isRealTime ? 'Disable real-time updates' : 'Enable real-time updates'}
-          className = {`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+          className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
             isRealTime
-              ? 'bg-green-500 hover:bg-green-600 text-white'};
-              : 'bg-gray-500 hove, r:bg-gray-600 text-white'}
+              ? 'bg-green-500 hover:bg-green-600 text-white'
+              : 'bg-gray-500 hover:bg-gray-600 text-white'
           }`}
         </button>
       </div>
 
       {/* Key Metrics */}
-      <div className="grid grid-cols-1 md: grid-cols-2 l, g:grid-cols-4 gap-4mb-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
         <motion.div
-          initial={{ opacit, y: 0, y: 20 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg p-4text-white"
+          className="bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg p-4 text-white"
         >
-          <div className="text-sm opacity-90mb-1">Total Visitors</div>
-          <div className="text-2xlfont-bold">{formatNumber(data.uniqueVisitors)}</div>
-          <div className="text-smopacity-90">+12% from last period</div>
+          <div className="text-sm opacity-90 mb-1">Total Visitors</div>
+          <div className="text-2xl font-bold">{formatNumber(data.uniqueVisitors)}</div>
+          <div className="text-sm opacity-90">+12% from last period</div>
         </motion.div>
 
         <motion.div
@@ -258,7 +258,7 @@ export const AdvancedAnalyticsDashboard: React.FC<AdvancedAnalyticsDashboardProp
           <div className="space-y-3">
             {data.geographicData.slice(0, 5).map((country, index) => (
               <div key={country.country} className="flex items-centerjustify-between">
-                <div className="flex items-center space-x-2">
+                <div className="flex items-centerspace-x-2">
                   <div className="w-4 h-4rounded-full" style={{ backgroundColor: COLORS[index % COLORS.length] }} />
                   <span className="text-gray-900dark:text-white">{country.country}</span>
                 </div>

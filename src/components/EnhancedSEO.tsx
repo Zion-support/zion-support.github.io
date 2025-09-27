@@ -83,7 +83,7 @@ export default function EnhancedSEO({
       {fullCanonical && <link rel="canonical" href={fullCanonical} />}
       
       {/* Robots */}
-      <meta name="robots" content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`} />
+      <meta name="robots" content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}` } />
       
       {/* Open Graph */}
       <meta property="og:type" content={ogType} />
