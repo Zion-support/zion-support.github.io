@@ -6,10 +6,10 @@
 export const lazyImport = <T extends Record<string, unknown>>(
   factory: () => Promise<T>,
   name?: keyof T
-) => {
+): React.LazyExoticComponent<React.ComponentType<unknown>> => {
   return React.lazy(() =>
     factory().then((module) => ({
-      default: name ? module[name] : module.default || module,
+      default: (name ? module[name] : module.default || module) as React.ComponentType<unknown>,
     }))
   );
 };
