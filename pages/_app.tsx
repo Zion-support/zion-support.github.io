@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import type { AppProps } from 'next/app';
 import { HelmetProvider } from "react-helmet-async";
 import Head from 'next/head';
+// import dynamic from 'next/dynamic';
 // import PerformanceMetrics from '../src/components/PerformanceMetrics';
 // import PerformanceMonitor from '../src/components/PerformanceMonitor';
 import AccessibilityAuditor from '../src/components/AccessibilityAuditor';
@@ -59,8 +60,44 @@ export default function App({ Component, pageProps }: AppProps) {
             <link rel="icon" type="image/png" sizes="32x32" href="/icon-32x32.png" />
             <link rel="icon" type="image/png" sizes="16x16" href="/icon-16x16.png" />
 			</Head>
-      <style dangerouslySetInnerHTML={{
-        __html: `
+      <style>{`
+        * {
+          box-sizing: border-box;
+        }
+        html {
+          scroll-behavior: smooth;
+        }
+        body {
+          margin: 0;
+          padding: 0;
+          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+          transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .dark body {
+          background-color: #0f172a;
+          color: #f1f5f9;
+        }
+        h1, h2, h3, h4, h5, h6 {
+          margin: 0 0 1rem 0;
+          font-weight: 600;
+          line-height: 1.2;
+        }
+        p {
+          margin: 0 0 1rem 0;
+        }
+        button {
+          font-family: inherit;
+        }
+        button:hover {
+          opacity: 0.9;
+        }
+        @media (prefers-reduced-motion: reduce) {
+          html {
+            scroll-behavior: auto;
+          }
+>>>>>>> cursor/check-fix-push-and-merge-to-main-ab1d
           * {
             box-sizing: border-box;
           }
@@ -103,8 +140,8 @@ export default function App({ Component, pageProps }: AppProps) {
               transition-duration: 0.01ms !important;
             }
           }
-        `
-      }} />
+        `}
+      </style>
           <PerformanceOptimizer>
             <Component {...pageProps} />
           </PerformanceOptimizer>

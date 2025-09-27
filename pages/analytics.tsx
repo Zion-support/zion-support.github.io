@@ -1,5 +1,5 @@
 import Head from "next/head";
-import dynamic from "next/dynamic";
+// import dynamic from "next/dynamic";
 // import EnhancedSEO from "../src/components/EnhancedSEO";
 
 // Lazy load the comprehensive dashboard

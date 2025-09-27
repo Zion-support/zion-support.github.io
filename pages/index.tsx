@@ -2,11 +2,12 @@ import React from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { useState, useEffect, useCallback, useMemo, useRef } from "react";
-import { motion, useInView, AnimatePresence } from "framer-motion";
-import dynamic from "next/dynamic";
+import { motion, useInView } from "framer-motion";
+// import { AnimatePresence } from "framer-motion";
+// import dynamic from "next/dynamic";
 
 const Home = React.memo(function Home(): JSX.Element {
-	const [isVisible, setIsVisible] = useState(false);
+	// const [isVisible, setIsVisible] = useState(false);
 	const [performanceMetrics, setPerformanceMetrics] = useState(null);
 	const [isLoading, setIsLoading] = useState(true);
 	const heroRef = useRef(null);
