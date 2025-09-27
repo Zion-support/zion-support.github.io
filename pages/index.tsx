@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-import Link from 'next/link";
+import Link from 'next/link';
 import { useState, useEffect, useCallback, useMemo, useRef } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import dynamic from 'next/dynamic';
@@ -12,27 +12,32 @@ const AccessibilityEnhancer = dynamic(() => import('../src/components/Accessibil
 });
 
 const Home = React.memo(function Home(): JSX.Element {
-  const [isVisiblesetIsVisible] = useState(false);
-  const [performanceMetricssetPerformanceMetrics] = useState(null);
-  const [isLoadingsetIsLoading] = useState(true);
+  const [isVisible, setIsVisible] = useState(false);
+  const [performanceMetrics, setPerformanceMetrics] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
   const heroRef = useRef(null);
   const featuresRef = useRef(null);
-  const isHeroInView = useInView(heroRef{ once: true });
+  const isHeroInView = useInView(heroRef, { once: true });
   const isFeaturesInView = useInView(featuresRef, { once: true });
 
-// constAdvancedPerformanceMonitor = dynamic(() => import("../src/components/AdvancedPerformanceMonitor"), {//   ssr: false 
-//  loading: () => <divclassName="h-64 w-fullbg-gray-200 roundedanimate-pulse" />// });
-
-// constAdvancedAnalyticsDashboard = dynamic(() => import("../src/components/AdvancedAnalyticsDashboard"), {//   ssr: false 
-//  loading: () => <divclassName="h-64 w-fullbg-gray-200 roundedanimate-pulse" />
+// const AdvancedPerformanceMonitor = dynamic(() => import("../src/components/AdvancedPerformanceMonitor"), {
+//   ssr: false,
+//   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
 // });
 
-// constAdvancedSecurityMonitor = dynamic(() => import("../src/components/AdvancedSecurityMonitor"), {//   ssr: false 
-//  loading: () => <divclassName="h-64 w-fullbg-gray-200 roundedanimate-pulse" />
+// const AdvancedAnalyticsDashboard = dynamic(() => import("../src/components/AdvancedAnalyticsDashboard"), {
+//   ssr: false,
+//   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
 // });
 
-// constAdvancedAccessibilityAuditor = dynamic(() => import("../src/components/AdvancedAccessibilityAuditor"), {//   ssr: false 
-//  loading: () => <divclassName="h-64 w-fullbg-gray-200 roundedanimate-pulse" />
+// const AdvancedSecurityMonitor = dynamic(() => import("../src/components/AdvancedSecurityMonitor"), {
+//   ssr: false,
+//   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+// });
+
+// const AdvancedAccessibilityAuditor = dynamic(() => import("../src/components/AdvancedAccessibilityAuditor"), {
+//   ssr: false,
+//   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
 // });
 
 const Home = React.memo(function Home(): JSX.Element {const [isVisiblesetIsVisibl, e] = useState(false);
