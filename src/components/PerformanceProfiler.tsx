@@ -40,6 +40,48 @@ const PerformanceProfiler: React.FC = () => {
   
   const observerRef = useRef<PerformanceObserver | null>(null);
 
+  const collectPerformanceData = useCallback(() => {
+    const now = Date.now();
+    
+    // Get Core Web Vitals
+    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    const paintEntries = performance.getEntriesByType('paint');
+    const fcpEntry = paintEntries.find(entry => entry.name === 'first-contentful-paint');
+    
+    const fcp = fcpEntry ? fcpEntry.startTime : 0;
+    const lcp = performance.now(); // Simplified LCP
+    const fid = 0; // Would need to measure this
+    const cls = 0; // Would need to measure this
+    const ttfb = navigation ? navigation.responseStart - navigation.requestStart : 0;
+    const loadTime = navigation ? navigation.loadEventEnd - navigation.fetchStart : 0;
+    
+    // Get memory usage
+    const memoryUsage = (performance as PerformanceWithMemory).memory ? 
+      (performance as PerformanceWithMemory).memory!.usedJSHeapSize / 1024 / 1024 : 0; // MB
+    
+    // Calculate render time (simplified)
+    const renderTime = performance.now() - (performanceData[performanceData.length - 1]?.timestamp || now);
+
+    const newData: PerformanceData = {
+      timestamp: now,
+      fcp,
+      lcp,
+      fid,
+      cls,
+      ttfb,
+      loadTime,
+      memoryUsage,
+      renderTime
+    };
+
+    setPerformanceData(prev => {
+      const updated = [...prev, newData];
+      // Keep only data within selected time range
+      const cutoff = now - getTimeRangeMs(selectedTimeRange);
+      return updated.filter(data => data.timestamp > cutoff);
+    });
+  }, [performanceData, selectedTimeRange]);
+
   const startProfiling = useCallback(() => {
     // Clear existing data
     setPerformanceData([]);
@@ -94,48 +136,6 @@ const PerformanceProfiler: React.FC = () => {
       }
     };
   }, [isProfiling, startProfiling]);
-
-  const collectPerformanceData = useCallback(() => {
-    const now = Date.now();
-    
-    // Get Core Web Vitals
-    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-    const paintEntries = performance.getEntriesByType('paint');
-    const fcpEntry = paintEntries.find(entry => entry.name === 'first-contentful-paint');
-    
-    const fcp = fcpEntry ? fcpEntry.startTime : 0;
-    const lcp = performance.now(); // Simplified LCP
-    const fid = 0; // Would need to measure this
-    const cls = 0; // Would need to measure this
-    const ttfb = navigation ? navigation.responseStart - navigation.requestStart : 0;
-    const loadTime = navigation ? navigation.loadEventEnd - navigation.fetchStart : 0;
-    
-    // Get memory usage
-    const memoryUsage = (performance as PerformanceWithMemory).memory ? 
-      (performance as PerformanceWithMemory).memory!.usedJSHeapSize / 1024 / 1024 : 0; // MB
-    
-    // Calculate render time (simplified)
-    const renderTime = performance.now() - (performanceData[performanceData.length - 1]?.timestamp || now);
-
-    const newData: PerformanceData = {
-      timestamp: now,
-      fcp,
-      lcp,
-      fid,
-      cls,
-      ttfb,
-      loadTime,
-      memoryUsage,
-      renderTime
-    };
-
-    setPerformanceData(prev => {
-      const updated = [...prev, newData];
-      // Keep only data within selected time range
-      const cutoff = now - getTimeRangeMs(selectedTimeRange);
-      return updated.filter(data => data.timestamp > cutoff);
-    });
-  }, [performanceData, selectedTimeRange]);
 
   const updateComponentPerformance = (componentName: string, duration: number) => {
     setComponentData(prev => {
