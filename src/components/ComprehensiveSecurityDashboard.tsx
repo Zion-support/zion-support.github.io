@@ -35,10 +35,10 @@ interface SecurityMetrics {
     high: number;
     medium: number;
     low: number;
-    rece, n, t: Arr, a, y<{
+    recent: Array<{
       id: string;
       type: string;
-      severi, t, y: 'critic, a, l' | 'high' | 'medium' | 'low';
+      severity: 'critical' | 'high' | 'medium' | 'low';
       descripti, o, n: string;
       timesta, m, p: Da, t, e;
       sour, c, e: string;
@@ -51,10 +51,10 @@ interface SecurityMetrics {
     high: number;
     medium: number;
     low: number;
-    rece, n, t: Arr, a, y<{
+    recent: Array<{
       id: string;
       na, m, e: string;
-      severi, t, y: 'critic, a, l' | 'high' | 'medium' | 'low';
+      severity: 'critical' | 'high' | 'medium' | 'low';
       descripti, o, n: string;
       c, v, e: string;
       discover, e, d: Da, t, e;
