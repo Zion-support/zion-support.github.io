@@ -231,5 +231,4 @@ export default function PrivacyPolicy(): JSX.Element {
 				</div>
 			</div>
 		</div>
-	);
-}
+	)}

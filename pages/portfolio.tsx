@@ -361,5 +361,4 @@ export default function Portfolio(): JSX.Element {
 				</div>
 			</div>
 		</div>
-	);
-}
+	)}

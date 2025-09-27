@@ -275,5 +275,4 @@ export default function FAQ(): JSX.Element {
 				</div>
 			</div>
 		</div>
-	);
-}
+	)}

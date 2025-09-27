@@ -21,8 +21,7 @@ export default function Contact(): JSX.Element {
 		setFormData(prev => ({
 			...prev,
 			[name]: value
-		}));
-	};
+		}))};
 
 	const handleSubmit = (e: React.FormEvent) => {
 		e.preventDefault();
@@ -183,5 +182,4 @@ export default function Contact(): JSX.Element {
 				</div>
 			</div>
 		</>
-	);
-}
+	)}

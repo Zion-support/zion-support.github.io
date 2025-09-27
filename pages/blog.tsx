@@ -10,8 +10,7 @@ export default function Blog(): JSX.Element {
 	const [selectedCategory, setSelectedCategory] = useState<string>('all');
 
 	useEffect(() => {
-		setIsVisible(true);
-	}, []);
+		setIsVisible(true)}, []);
 
 	// Analytics tracking
 	const { trackClick } = useAnalytics();
@@ -53,13 +52,11 @@ export default function Blog(): JSX.Element {
 
 	const handleCategoryFilter = (category: string) => {
 		setSelectedCategory(category.toLowerCase());
-		trackClick(`blog-category-${category}`, 'filter');
-	};
+		trackClick(`blog-category-${category}`, 'filter')};
 
 	const handleReadMore = (post: any) => {
 		trackClick(`read-post-${post.id}`, 'cta');
-		console.log('Read more:', post.title);
-	};
+		console.log('Read more:', post.title)};
 
 	const filteredPosts = selectedCategory === 'all' 
 		? blogPosts 
@@ -166,5 +163,4 @@ export default function Blog(): JSX.Element {
 				</div>
 			</div>
 		</>
-	);
-}
+	)}

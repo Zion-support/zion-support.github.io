@@ -16,8 +16,7 @@ export interface SEOData {
   twitterTitle?: string;
   twitterDescription?: string;
   twitterImage?: string;
-  structuredData?: any;
-}
+  structuredData?: any}
 
 // Generate meta tags
 export const generateMetaTags = (seoData: SEOData): string => {
@@ -51,8 +50,7 @@ export const generateMetaTags = (seoData: SEOData): string => {
     twitterImage && `<meta name="twitter:image" content="${twitterImage}" />`
   ].filter(Boolean);
 
-  return tags.join('\n');
-};
+  return tags.join('\n')};
 
 // Generate structured data
 export const generateStructuredData = (data: {
@@ -63,8 +61,7 @@ export const generateStructuredData = (data: {
   image?: string;
   logo?: string;
   sameAs?: string[];
-  [key: string]: any;
-}): string => {
+  [key: string]: any}): string => {
   const baseStructure = {
     '@context': 'https://schema.org',
     '@type': data.type,
@@ -101,15 +98,13 @@ export const generateStructuredData = (data: {
       });
     
     default:
-      return JSON.stringify(baseStructure);
-  }
+      return JSON.stringify(baseStructure)}
 };
 
 // Generate breadcrumb structured data
 export const generateBreadcrumbStructuredData = (breadcrumbs: Array<{
   name: string;
-  url: string;
-}>): string => {
+  url: string}>): string => {
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -121,14 +116,12 @@ export const generateBreadcrumbStructuredData = (breadcrumbs: Array<{
     }))
   };
 
-  return JSON.stringify(structuredData);
-};
+  return JSON.stringify(structuredData)};
 
 // Generate FAQ structured data
 export const generateFAQStructuredData = (faqs: Array<{
   question: string;
-  answer: string;
-}>): string => {
+  answer: string}>): string => {
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
@@ -142,16 +135,14 @@ export const generateFAQStructuredData = (faqs: Array<{
     }))
   };
 
-  return JSON.stringify(structuredData);
-};
+  return JSON.stringify(structuredData)};
 
 // Generate sitemap data
 export const generateSitemapData = (pages: Array<{
   url: string;
   lastModified: string;
   changeFrequency: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
-  priority: number;
-}>): string => {
+  priority: number}>): string => {
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${pages.map(page => `<url><loc>${page.url}</loc>
@@ -161,76 +152,60 @@ ${pages.map(page => `<url><loc>${page.url}</loc>
   </url>`).join('\n')}
 </urlset>`;
 
-  return sitemap;
-};
+  return sitemap};
 
 // Generate robots.txt content
 export const generateRobotsTxt = (options: {
   allowAll?: boolean;
   disallowPaths?: string[];
   sitemapUrl?: string;
-  crawlDelay?: number;
-}): string => {
+  crawlDelay?: number}): string => {
   const { allowAll = true, disallowPaths = [], sitemapUrl, crawlDelay } = options;
   
   let content = '';
   
   if (allowAll) {
     content += 'User-agent: *\n';
-    content += 'Allow: /\n';
-  } else {
+    content += 'Allow: /\n'} else {
     content += 'User-agent: *\n';
-    content += 'Disallow: /\n';
-  }
+    content += 'Disallow: /\n'}
   
   disallowPaths.forEach(path => {
-    content += `Disallow: ${path}\n`;
-  });
+    content += `Disallow: ${path}\n`});
   
   if (crawlDelay) {
-    content += `Crawl-delay: ${crawlDelay}\n`;
-  }
+    content += `Crawl-delay: ${crawlDelay}\n`}
   
   if (sitemapUrl) {
-    content += `Sitemap: ${sitemapUrl}\n`;
-  }
+    content += `Sitemap: ${sitemapUrl}\n`}
   
-  return content;
-};
+  return content};
 
 // Validate SEO data
 export const validateSEOData = (seoData: SEOData): {
   isValid: boolean;
-  errors: string[];
-} => {
+  errors: string[]} => {
   const errors: string[] = [];
   
   if (!seoData.title || seoData.title.length === 0) {
-    errors.push('Title is required');
-  } else if (seoData.title.length > 60) {
-    errors.push('Title should be 60 characters or less');
-  }
+    errors.push('Title is required')} else if (seoData.title.length > 60) {
+    errors.push('Title should be 60 characters or less')}
   
   if (!seoData.description || seoData.description.length === 0) {
-    errors.push('Description is required');
-  } else if (seoData.description.length > 160) {
-    errors.push('Description should be 160 characters or less');
-  }
+    errors.push('Description is required')} else if (seoData.description.length > 160) {
+    errors.push('Description should be 160 characters or less')}
   
   if (seoData.keywords && seoData.keywords.length > 10) {
-    errors.push('Keywords should be 10 or fewer');
-  }
+    errors.push('Keywords should be 10 or fewer')}
   
-  return { isValid: errors.length === 0, errors };
-};
+  return { isValid: errors.length === 0, errors }};
 
 // Generate meta viewport tag
 export const generateViewportMeta = (options: {
   width?: string;
   initialScale?: number;
   maximumScale?: number;
-  userScalable?: boolean;
-}): string => {
+  userScalable?: boolean}): string => {
   const {
     width = 'device-width',
     initialScale = 1,
@@ -245,5 +220,4 @@ export const generateViewportMeta = (options: {
     `user-scalable=${userScalable ? 'yes' : 'no'}`
   ].join(', ');
   
-  return `<meta name="viewport" content="${content}" />`;
-};
+  return `<meta name="viewport" content="${content}" />`};

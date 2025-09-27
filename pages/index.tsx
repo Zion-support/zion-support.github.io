@@ -135,8 +135,7 @@ export default function Home(): JSX.Element {
         {/* Hero Section */}
         <section 
           ref={heroRef}
-          className="relative py-20 px-4 sm: px-6,
-		lg:px-8 min-h-screen flex items-center"
+          className="relative py-20 px-4 sm: px-6, lg:px-8 min-h-screen flex items-center"
         >
           {/* Animated background elements */}
           <motion.div 
@@ -191,8 +190,7 @@ export default function Home(): JSX.Element {
                 </Link>
 					<Link 
                   href="/services" 
-                  className="bg-white text-blue-600 px-8 py-4 rounded-lg hover:bg-gray-50 transition-all duration-300 transform hover:scale-105 shadow-lg border-2 border-blue-600,
-		hover:shadow-xl"
+                  className="bg-white text-blue-600 px-8 py-4 rounded-lg hover:bg-gray-50 transition-all duration-300 transform hover:scale-105 shadow-lg border-2 border-blue-600, hover:shadow-xl"
                 >
                   Our Services
                 </Link>
@@ -219,8 +217,7 @@ export default function Home(): JSX.Element {
                 We deliver innovative technology solutions that drive business growth and operational excellence.
               </p>
             </motion.div>
-			<div className="grid grid-cols-1 md: grid-cols-2,
-		lg:grid-cols-4 gap-8">
+			<div className="grid grid-cols-1 md: grid-cols-2, lg:grid-cols-4 gap-8">
               {features.map((feature ,, index) => (
                 <motion.div 
                   key={index}
@@ -273,8 +270,7 @@ export default function Home(): JSX.Element {
               </Link>
 					<Link 
                 href="/portfolio" 
-                className="bg-transparent text-white px-8 py-4 rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 transform,
-		hover:scale-105 border-2 border-white font-semibold"
+                className="bg-transparent text-white px-8 py-4 rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 transform, hover:scale-105 border-2 border-white font-semibold"
               >
                 View Our Work
               </Link>
@@ -291,8 +287,7 @@ export default function Home(): JSX.Element {
                 Don&apos;t just take our word for it - hear from our satisfied clients.
               </p>
             </div>
-			<div className="grid grid-cols-1,
-		md:grid-cols-3 gap-8">
+			<div className="grid grid-cols-1, md:grid-cols-3 gap-8">
 			<div className="bg-white p-6 rounded-lg shadow-lg">
                 <p className="text-gray-600 mb-4">&quot;Zion Tech transformed our business with their AI solutions. Highly recommended!&quot;</p>
 			<div className="font-semibold text-gray-900">- Sarah Johnson  CEO</div>
@@ -463,5 +458,4 @@ export default function Home(): JSX.Element {
         </section>
       </div>
     </div>
-  );
-}
+  )}

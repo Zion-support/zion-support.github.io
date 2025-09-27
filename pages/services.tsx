@@ -377,5 +377,4 @@ export default function Services(): JSX.Element {
 			</div>
 			)}
 		</div>
-	);
-}
+	)}

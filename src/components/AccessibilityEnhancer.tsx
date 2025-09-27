@@ -11,8 +11,7 @@ interface AccessibilityEnhancerProps {
   enableFocusManagement?: boolean;
   enableScreenReaderSupport?: boolean;
   enableHighContrastSupport?: boolean;
-  enableReducedMotionSupport?: boolean;
-}
+  enableReducedMotionSupport?: boolean}
 
 export default function AccessibilityEnhancer({
   enableSkipLinks = true,
@@ -28,14 +27,12 @@ export default function AccessibilityEnhancer({
     // Initialize accessibility features
     if (enableSkipLinks) {
       const skipLink = createSkipLink('main', 'Skip to main content');
-      document.body.insertBefore(skipLink, document.body.firstChild);
-    }
+      document.body.insertBefore(skipLink, document.body.firstChild)}
 
     // Check for high contrast mode
     if (enableHighContrastSupport) {
       const checkHighContrast = () => {
-        setIsHighContrast(isHighContrastMode());
-      };
+        setIsHighContrast(isHighContrastMode())};
       
       checkHighContrast();
       
@@ -44,15 +41,12 @@ export default function AccessibilityEnhancer({
       mediaQuery.addEventListener('change', checkHighContrast);
       
       return () => {
-        mediaQuery.removeEventListener('change', checkHighContrast);
-      };
-    }
+        mediaQuery.removeEventListener('change', checkHighContrast)}}
 
     // Check for reduced motion preference
     if (enableReducedMotionSupport) {
       const checkReducedMotion = () => {
-        setPrefersMotion(!prefersReducedMotion());
-      };
+        setPrefersMotion(!prefersReducedMotion())};
       
       checkReducedMotion();
       
@@ -61,9 +55,7 @@ export default function AccessibilityEnhancer({
       mediaQuery.addEventListener('change', checkReducedMotion);
       
       return () => {
-        mediaQuery.removeEventListener('change', checkReducedMotion);
-      };
-    }
+        mediaQuery.removeEventListener('change', checkReducedMotion)}}
   }, [enableSkipLinks, enableFocusManagement, enableScreenReaderSupport, enableHighContrastSupport, enableReducedMotionSupport]);
 
   // Apply accessibility styles
@@ -71,23 +63,18 @@ export default function AccessibilityEnhancer({
     const root = document.documentElement;
     
     if (isHighContrast) {
-      root.classList.add('high-contrast');
-    } else {
-      root.classList.remove('high-contrast');
-    }
+      root.classList.add('high-contrast')} else {
+      root.classList.remove('high-contrast')}
     
     if (!prefersMotion) {
-      root.classList.add('reduced-motion');
-    } else {
-      root.classList.remove('reduced-motion');
-    }
+      root.classList.add('reduced-motion')} else {
+      root.classList.remove('reduced-motion')}
   }, [isHighContrast, prefersMotion]);
 
   // Announce page changes to screen readers
   useEffect(() => {
     if (enableScreenReaderSupport) {
-      announceToScreenReader('Page loaded', 'polite');
-    }
+      announceToScreenReader('Page loaded', 'polite')}
   }, [enableScreenReaderSupport]);
 
   return null; // This component doesn't render anything visible
