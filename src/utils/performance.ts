@@ -18,6 +18,7 @@ export class PerformanceMonitor {
   private static instance: PerformanceMonitor;
   private metrics: Map<string, number> = new Map();
   private observers: PerformanceObserver[] = [];
+  private intervalId: NodeJS.Timeout | null = null;
 
   private constructor() {
     this.initializeObservers();
@@ -238,7 +239,7 @@ export class ResourceMonitor {
     averageLoadTime: number;
     slowestResource: string;
   }> {
-    const metrics: Record<string, any> = {};
+    const metrics: Record<string, unknown> = {};
     
     this.resourceTimings.forEach((timings, domain) => {
       const totalSize = timings.reduce((sum, timing) => sum + (timing.transferSize || 0), 0);
@@ -256,7 +257,7 @@ export class ResourceMonitor {
       };
     });
 
-    return metrics;
+    return metrics as Record<string, { count: number; totalSize: number; averageLoadTime: number; slowestResource: string; }>;
   }
 }
 
@@ -280,12 +281,12 @@ export class MemoryMonitor {
   public startMonitoring(intervalMs: number = 5000): void {
     if ('memory' in performance) {
       const interval = setInterval(() => {
-        const memory = (performance as any).memory;
+        const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
         this.memoryHistory.push({
           timestamp: Date.now(),
-          usedJSHeapSize: memory.usedJSHeapSize,
-          totalJSHeapSize: memory.totalJSHeapSize,
-          jsHeapSizeLimit: memory.jsHeapSizeLimit
+          usedJSHeapSize: memory?.usedJSHeapSize || 0,
+          totalJSHeapSize: memory?.totalJSHeapSize || 0,
+          jsHeapSizeLimit: memory?.jsHeapSizeLimit || 0
         });
 
         // Keep only last 100 measurements
@@ -300,7 +301,7 @@ export class MemoryMonitor {
   }
 
   public getMemoryMetrics(): {
-    current: any;
+    current: number;
     average: number;
     peak: number;
     trend: 'increasing' | 'decreasing' | 'stable';
@@ -315,7 +316,7 @@ export class MemoryMonitor {
       (recent[recent.length - 1].usedJSHeapSize > recent[0].usedJSHeapSize ? 'increasing' : 'decreasing') :
       'stable';
 
-    return { current, average, peak, trend };
+    return { current: current.usedJSHeapSize, average, peak, trend };
   }
 
   public stopMonitoring(): void {
