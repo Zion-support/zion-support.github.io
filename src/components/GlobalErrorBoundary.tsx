@@ -123,7 +123,7 @@ export class GlobalErrorBoundary extends Component<Props, State> {
                   />
                 </svg>
               </div>
-              <h 1 className="text-xl font-semibold text-gray-900 mb-2" id="something-went-wrong">
+              <h1 className="text-xl font-semibold text-gray-900 mb-2" id="something-went-wrong">
                 Something went wrong
               </h1>
               <p className="text-gray-600 mb-6">

@@ -74,7 +74,6 @@
     "src/pages/**",
     "src/pages.disabled/**",
     "src/routes/**",
-    "src/components/**",
     "src/context/**",
     "src/services/**",
     "**/*.config.ts",
