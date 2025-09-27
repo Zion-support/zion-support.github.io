@@ -88,8 +88,8 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
   return (
     <div className="bg-white rounded-lg shadow-lgp-6">
       <div className="flex items-center justify-between mb-6">
-        <h2 className="text-2xl font-bold text-gray-900 flexitems-center">
-          <BarChart 3 className="w-6h-6mr-2text-blue-600" />
+        <h2className="text-2xl font-bold text-gray-900flexitems-center">
+          <BarChart3className="w-6h-6mr-2text-blue-600" />
           Analytics Dashboard
         </h2>
         <div className="flex items-center text-smtext-gray-500">
@@ -100,27 +100,27 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
 
       {/* Key Metrics */}
       <div className="grid grid-cols-2md:grid-cols-5gap-4mb-6">
-        <div className="bg-blue-50 rounded-lg p-4text-center">
+        <div className="bg-blue-50rounded-lg p-4text-center">
           <Eye className="w-6h-6mx-auto mb-2text-blue-600" />
           <div className="text-2xl font-boldtext-blue-600">{formatNumber(data.pageViews)}</div>
           <div className="text-sm text-gray-600">Page Views</div>
         </div>
-        <div className="bg-green-50 rounded-lg p-4text-center">
+        <div className="bg-green-50rounded-lg p-4text-center">
           <Users className="w-6h-6mx-auto mb-2text-green-600" />
           <div className="text-2xl font-boldtext-green-600">{formatNumber(data.uniqueVisitors)}</div>
           <div className="text-sm text-gray-600">Unique Visitors</div>
         </div>
-        <div className="bg-yellow-50 rounded-lg p-4text-center">
+        <div className="bg-yellow-50rounded-lg p-4text-center">
           <MousePointer className="w-6h-6mx-auto mb-2text-yellow-600" />
           <div className="text-2xl font-boldtext-yellow-600">{data.bounceRate.toFixed(1)}%</div>
           <div className="text-sm text-gray-600">Bounce Rate</div>
         </div>
-        <div className="bg-purple-50 rounded-lg p-4text-center">
+        <div className="bg-purple-50rounded-lg p-4text-center">
           <Clock className="w-6h-6mx-auto mb-2text-purple-600" />
           <div className="text-2xl font-boldtext-purple-600">{formatDuration(data.avgSessionDuration)}</div>
           <div className="text-sm text-gray-600">Avg. Session</div>
         </div>
-        <div className="bg-red-50 rounded-lg p-4text-center">
+        <div className="bg-red-50rounded-lg p-4text-center">
           <TrendingUp className="w-6h-6mx-auto mb-2text-red-600" />
           <div className="text-2xl font-boldtext-red-600">{data.conversionRate.toFixed(1)}%</div>
           <div className="text-sm text-gray-600">Conversion Rate</div>
@@ -129,7 +129,7 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
 
       {/* Real-time Users */}
       {enableRealTime && (
-        <div className="bg-gray-50 rounded-lg p-4mb-6">
+        <div className="bg-gray-50rounded-lg p-4mb-6">
           <div className="flex items-center justify-between">
             <div className="flexitems-center">
               <Activity className="w-5h-5mr-2text-green-600" />

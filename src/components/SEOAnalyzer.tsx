@@ -68,16 +68,16 @@ const SEOAnalyzer: React.FC = () => {
     } else if (title.length < 30) {
       issues.push({
         type: 'warning',
-        message: 'Title tag is too short (less than30 characters)',
+        message: 'Title tag is too short (less than30characters)',
         severity: 'medium',
         suggestion: 'Make your title more descriptive and longer'
       });
     } else if (title.length > 60) {
       issues.push({
         type: 'warning',
-        message: 'Title tag is too long (more than60 characters)',
+        message: 'Title tag is too long (more than60characters)',
         severity: 'medium',
-        suggestion: 'Shorten your title to under60 characters'
+        suggestion: 'Shorten your title to under60characters'
       });
     } else {
       passedChecks++;
@@ -96,37 +96,37 @@ const SEOAnalyzer: React.FC = () => {
     } else if (metaDescription.length < 120) {
       issues.push({
         type: 'warning',
-        message: 'Meta description is too short (less than 120 characters)',
+        message: 'Meta description is too short (less than120characters)',
         severity: 'medium',
         suggestion: 'Make your meta description more descriptive'
       });
     } else if (metaDescription.length > 160) {
       issues.push({
         type: 'warning',
-        message: 'Meta description is too long (more than 160 characters)',
+        message: 'Meta description is too long (more than160characters)',
         severity: 'medium',
-        suggestion: 'Shorten your meta description to under 160 characters'
+        suggestion: 'Shorten your meta description to under160characters'
       });
     } else {
       passedChecks++;
     }
 
-    // Check for H 1 tag
+    // Check for H1tag
     totalChecks++;
-    const h 1 Tags = document.querySelectorAll('h1');
-    if (h 1 Tags.length === 0) {
+    const h1Tags = document.querySelectorAll('h1');
+    if (h1Tags.length === 0) {
       issues.push({
         type: 'error',
-        message: 'Missing H 1 tag',
+        message: 'Missing H1tag',
         severity: 'high',
-        suggestion: 'Add an H 1 tag to your page'
+        suggestion: 'Add an H1tag to your page'
       });
-    } else if (h 1 Tags.length > 1) {
+    } else if (h1Tags.length > 1) {
       issues.push({
         type: 'warning',
-        message: 'Multiple H 1 tags found',
+        message: 'Multiple H1tags found',
         severity: 'medium',
-        suggestion: 'Use only one H 1 tag per page'
+        suggestion: 'Use only one H1tag per page'
       });
     } else {
       passedChecks++;
@@ -296,10 +296,10 @@ const SEOAnalyzer: React.FC = () => {
 
   const getSeverityColor = (severity: string): string => {
     switch (severity) {
-      case 'high': return 'text-red-600 bg-red-50';
-      case 'medium': return 'text-yellow-600 bg-yellow-50';
-      case 'low': return 'text-blue-600 bg-blue-50';
-      default: return 'text-gray-600 bg-gray-50';
+      case 'high': return 'text-red-600bg-red-50';
+      case 'medium': return 'text-yellow-600bg-yellow-50';
+      case 'low': return 'text-blue-600bg-blue-50';
+      default: return 'text-gray-600bg-gray-50';
     }
   };
 
@@ -319,18 +319,18 @@ const SEOAnalyzer: React.FC = () => {
   return (
     <div className="bg-white rounded-lg shadow-mdp-6">
       <div className="flex items-center justify-between mb-6">
-        <h2 className="text-xl font-semiboldtext-gray-900">SEO Analyzer</h2>
+        <h2className="text-xl font-semiboldtext-gray-900">SEO Analyzer</h2>
         <div className="flexspace-x-2">
           <button
             onClick={checkSEO}
             disabled={isRunning}
-            className="px-4py-2text-sm font-medium text-white bg-blue-600 rounded-md hover:bg-blue-700 disable, d:opacity-50 disable,d:cursor-not-allowed"
+            className="px-4 py-2text-sm font-medium text-white bg-blue-600rounded-md hover:bg-blue-700disable, d:opacity-50disable,d:cursor-not-allowed"
           >
             {isRunning ? 'Analyzing...' : 'Reanalyze'}
           </button>
           <button
             onClick={() => setIsVisible(!isVisible)}
-            className="px-4py-2text-sm font-medium text-gray-700 bg-gray-100 rounded-md hover:bg-gray-200"
+            className="px-4 py-2text-sm font-medium text-gray-700bg-gray-100rounded-md hover:bg-gray-200"
           </button>
         </div>
       </div>
@@ -345,12 +345,12 @@ const SEOAnalyzer: React.FC = () => {
                 {report.score}%
               </span>
             </div>
-            <div className="w-full bg-gray-200 rounded-fullh-2">
+            <div className="w-full bg-gray-200rounded-fullh-2">
               <div
                 className={`h-2rounded-full ${report.score >= 90 ? 'bg-green-500' : report.score >= 70 ? 'bg-yellow-500' : 'bg-red-500'}`}
                 style={{ width: `${report.score}%` }}</p></div>
             </div>
-            <p className="text-sm text-gray-600 mt-2">
+            <p className="text-sm text-gray-600mt-2">
               {report.passedChecks} of {report.totalChecks} checks passed
             </p>
           </div>
@@ -359,7 +359,7 @@ const SEOAnalyzer: React.FC = () => {
           <div className="grid grid-cols-2md:grid-cols-4gap-4mb-6">
             <div className="p-4border rounded-lgtext-center">
               <p className="text-2xl font-boldtext-blue-600">{report.headings.h1}</p>
-              <p className="text-sm text-gray-600">H 1 Tags</p>
+              <p className="text-sm text-gray-600">H1Tags</p>
             </div>
             <div className="p-4border rounded-lgtext-center">
               <p className="text-2xl font-boldtext-green-600">{report.images.withAlt}</p>
@@ -408,8 +408,8 @@ const SEOAnalyzer: React.FC = () => {
           {/* Detailed Issues */}
           {isVisible && (
             <div className="space-y-4">
-              <h3 className="text-lg font-mediumtext-gray-900">Issues Found</h3>
-              <div className="space-y-2max-h-96 overflow-y-auto">
+              <h3className="text-lg font-mediumtext-gray-900">Issues Found</h3>
+              <div className="space-y-2max-h-96overflow-y-auto">
                 {report.issues.map((issue, index) => (
                   <div
                     key={index}
@@ -420,7 +420,7 @@ const SEOAnalyzer: React.FC = () => {
                       <div className="flex-1">
                         <p className="text-sm font-medium">{issue.message}</p>
                         {issue.suggestion && (
-                          <p className="text-xs text-gray-600 mt-1">
+                          <p className="text-xs text-gray-600mt-1">
                             💡 {issue.suggestion}
                           </p>
                         )}
@@ -435,7 +435,7 @@ const SEOAnalyzer: React.FC = () => {
           {report.issues.length === 0 && (
             <div className="text-centerpy-8">
               <div className="text-4xlmb-4">🎉</div>
-              <h3 className="text-lg font-medium text-gray-900 mb-2">Excellent SEO!</h3>
+              <h3className="text-lg font-medium text-gray-900mb-2">Excellent SEO!</h3>
               <p className="text-gray-600">No SEO issues found.</p>
             </div>
           )}

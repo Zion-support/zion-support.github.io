@@ -117,7 +117,7 @@ export default function PerformanceTracker({
 
           // Send to analytics
           if (enableAnalytics && typeof window !== 'undefined') {
-            // Google Analytics 4 if (window.gtag) {
+            // Google Analytics4if (window.gtag) {
               window.gtag('event', 'page_load_metrics', {
                 load_time: Math.round(metrics.loadTime),
                 dom_content_loaded: Math.round(metrics.domContentLoaded),
@@ -228,30 +228,30 @@ export function getPerformanceGrade(metrics: PerformanceMetrics): {
     }
   };
 
-  // Load Time scoring (target: < 3000 ms)
+  // Load Time scoring (target: < 3000ms)
   if (metrics.loadTime > 5000) {
     score -= 30;
-    recommendations.push('Optimize page load time (currently over 5 seconds)');
+    recommendations.push('Optimize page load time (currently over5seconds)');
   } else if (metrics.loadTime > 3000) {
     score -= 15;
     recommendations.push('Consider optimizing page load time');
   }
 
-  // First Contentful Paint scoring (target: < 1800 ms)
+  // First Contentful Paint scoring (target: < 1800ms)
   if (metrics.firstContentfulPaint > 3000) {
     score -= 25;
-    recommendations.push('Improve First Contentful Paint (currently over 3 seconds)');
+    recommendations.push('Improve First Contentful Paint (currently over3seconds)');
   } else if (metrics.firstContentfulPaint > 1800) {
     score -= 10;
     recommendations.push('Consider improving First Contentful Paint');
   }
 
-  // Largest Contentful Paint scoring (target: < 2500 ms)
+  // Largest Contentful Paint scoring (target: < 2500ms)
   if (metrics.largestContentfulPaint) {
     if (metrics.largestContentfulPaint > 4000) {
       score -= 25;
       webVitals.lcp.status = 'poor';
-      recommendations.push('Optimize Largest Contentful Paint (currently over 4 seconds)');
+      recommendations.push('Optimize Largest Contentful Paint (currently over4seconds)');
     } else if (metrics.largestContentfulPaint > 2500) {
       score -= 10;
       webVitals.lcp.status = 'needs-improvement';
@@ -261,12 +261,12 @@ export function getPerformanceGrade(metrics: PerformanceMetrics): {
     }
   }
 
-  // First Input Delay scoring (target: < 100 ms)
+  // First Input Delay scoring (target: < 100ms)
   if (metrics.firstInputDelay) {
     if (metrics.firstInputDelay > 300) {
       score -= 20;
       webVitals.fid.status = 'poor';
-      recommendations.push('Reduce First Input Delay (currently over 300 ms)');
+      recommendations.push('Reduce First Input Delay (currently over300ms)');
     } else if (metrics.firstInputDelay > 100) {
       score -= 5;
       webVitals.fid.status = 'needs-improvement';

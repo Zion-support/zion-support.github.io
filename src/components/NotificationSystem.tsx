@@ -72,7 +72,7 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
   }, [addNotification, removeNotification, clearAllNotifications]);
 
   const getPositionClasses = () => {
-    const baseClasses = 'fixed z-50 space-y-2p-4';
+    const baseClasses = 'fixed z-50space-y-2p-4';
     
     switch (position) {
       case 'top-right':
@@ -116,31 +116,31 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
       case 'success':
         return (
           <svg className="h-6w-6text-green-400" fill="none" viewBox="002424" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M513 l44 L197" />
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M513l44 L197" />
           </svg>
         );
       case 'error':
         return (
           <svg className="h-6w-6text-red-400" fill="none" viewBox="002424" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M618L186M66 l 1212" />
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M618L186M66l1212" />
           </svg>
         );
       case 'warning':
         return (
           <svg className="h-6w-6text-yellow-400" fill="none" viewBox="002424" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M129 v 2 m04 h.01 m-6.9384 h 13.856 c1.5402.502-1.6671.732-2.5L 13.7324 c-.77-.833-1.964-.833-2.7320 L3.73216.5c-.77.833.1922.51.7322.5z" />
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M129v2m04h.01m-6.9384h13.856c1.5402.502-1.6671.732-2.5L13.7324c-.77-.833-1.964-.833-2.7320L3.73216.5c-.77.833.1922.51.7322.5z" />
           </svg>
         );
       case 'info':
         return (
           <svg className="h-6w-6text-blue-400" fill="none" viewBox="002424" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M1316 h-1v-4h-1m1-4h.01M2112 a99011-18099001180 z" />
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M1316h-1v-4h-1m1-4h.01M2112a99011-18099001180z" />
           </svg>
         );
       case 'loading':
         return (
-          <svg className="h-6w-6text-gray-400 animate-spin" fill="none" viewBox="002424" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M44 v 5 h.582 m 15.3562 A8.0018.0010004.5829m00H 9 m1111 v-5h-.581 m00 a8.0038.003001-15.357-2m 15.3572 H 15" />
+          <svg className="h-6w-6text-gray-400animate-spin" fill="none" viewBox="002424" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M44v5h.582m15.3562A8.0018.0010004.5829m00H9m1111v-5h-.581m00 a8.0038.003001-15.357-2m15.3572H15" />
           </svg>
         );
       default:
@@ -180,10 +180,10 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
                         onClick={action.action}
                         className={`text-sm font-medium ${
                           action.variant === 'primary'
-                            ? 'text-blue-600 hover:text-blue-500'
+                            ? 'text-blue-600hover:text-blue-500'
                             : action.variant === 'danger'
-                            ? 'text-red-600 hover:text-red-500'
-                            : 'text-gray-600 hover:text-gray-500'
+                            ? 'text-red-600hover:text-red-500'
+                            : 'text-gray-600hover:text-gray-500'
                         }`}
                        aria-label="{action.label}">
                         {action.label}
@@ -194,12 +194,12 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
               </div>
               <div className="ml-4flex-shrink-0flex">
                 <button
-                  className="bg-white rounded-md inline-flex text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2focu, s:ring-offset-2focu,s:ring-indigo-500"
+                  className="bg-white rounded-md inline-flex text-gray-400hover:text-gray-500focus:outline-none focus:ring-2focu, s:ring-offset-2focu,s:ring-indigo-500"
                   onClick={() => removeNotification(notification.id)}
                 >
                   <span className="sr-only">Close</span>
                   <svg className="h-5w-5" viewBox="002020" fill="currentColor">
-                    <path fillRule="evenodd" d="M4.2934.293a 110011.4140 L108.586 l4.293-4.293a 110111.4141.414 L 11.41410 l4.2934.293 a11001-1.4141.414 L 1011.414 l-4.2934.293 a11001-1.414-1.414 L8.586104.2935.707a 110010-1.414 z" clipRule="evenodd" />
+                    <path fillRule="evenodd" d="M4.2934.293a110011.4140L108.586l4.293-4.293a110111.4141.414L11.41410l4.2934.293a11001-1.4141.414L1011.414l-4.2934.293a11001-1.414-1.414L8.586104.2935.707a110010-1.414z" clipRule="evenodd" />
                   </svg>
                 </button>
               </div>

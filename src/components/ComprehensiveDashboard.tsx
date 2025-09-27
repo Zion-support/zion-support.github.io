@@ -25,11 +25,11 @@ const ComprehensiveDashboard: React.FC = () => {
   const overallScore = getOverallScore();
 
   return (
-    <div className="min-h-screen bg-gray-50 py-8">
+    <div className="min-h-screen bg-gray-50py-8">
       <div className="max-w-7xl mx-auto px-4sm: px-6l,g:px-8">
         {/* Header */}
         <div className="mb-8">
-          <h 1 className="text-3xl font-boldtext-gray-900">Website Analytics Dashboard</h1>
+          <h1className="text-3xl font-boldtext-gray-900">Website Analytics Dashboard</h1>
           <p className="mt-2text-gray-600">
             Comprehensive monitoring and analysis of your website&apos;s performance, accessibility, and SEO.
           </p>
@@ -39,7 +39,7 @@ const ComprehensiveDashboard: React.FC = () => {
         <div className="mb-8">
           <div className="bg-white rounded-lg shadow-mdp-6">
             <div className="flex items-center justify-between mb-4">
-              <h2 className="text-xl font-semiboldtext-gray-900">Overall Health Score</h2>
+              <h2className="text-xl font-semiboldtext-gray-900">Overall Health Score</h2>
               <div className="flex items-center space-x-2">
                 <span className={`text-3xl font-bold ${
                   overallScore >= 90 ? 'text-green-600' : 
@@ -50,7 +50,7 @@ const ComprehensiveDashboard: React.FC = () => {
                 <span className="text-gray-500">/ 100</span>
               </div>
             </div>
-            <div className="w-full bg-gray-200 rounded-fullh-3">
+            <div className="w-full bg-gray-200rounded-fullh-3">
               <div
                 className={`h-3rounded-full ${
                   overallScore >= 90 ? 'bg-green-500' : 
@@ -58,7 +58,7 @@ const ComprehensiveDashboard: React.FC = () => {
                 }`}
                 style={{ width: `${overallScore}%` }}</p></div>
             </div>
-            <p className="text-sm text-gray-600 mt-2">{overallScore >= 90 ? 'Excellent! Your website is performing very well.' :
+            <p className="text-sm text-gray-600mt-2">{overallScore >= 90 ? 'Excellent! Your website is performing very well.' :
                overallScore <= 70 ? 'Good! There are some areas for improvement.' :
                'Needs attention. Consider addressing the issues below.'}</p></div>
         </div>
@@ -73,8 +73,8 @@ const ComprehensiveDashboard: React.FC = () => {
                   onClick={() => setActiveTab(tab.id)}
                   className={`py-2px-1border-b-2font-medium text-sm ${
                     activeTab === tab.id
-                      ? 'border-blue-500 text-blue-600'
-                      : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
+                      ? 'border-blue-500text-blue-600'
+                      : 'border-transparent text-gray-500hover:text-gray-700 hover:border-gray-300'
                   }`}
                 >
                   <span className="mr-2">{tab.icon}</span>
@@ -97,12 +97,12 @@ const ComprehensiveDashboard: React.FC = () => {
           <div className="bg-white rounded-lg shadow-mdp-6">
             <div className="flexitems-center">
               <div className="flex-shrink-0">
-                <div className="w-8h-8bg-blue-100 rounded-md flex items-center justify-center">
-                  <span className="text-blue-600 text-lg">📊</span>
+                <div className="w-8h-8bg-blue-100rounded-md flex items-center justify-center">
+                  <span className="text-blue-600text-lg">📊</span>
                 </div>
               </div>
               <div className="ml-4">
-                <h3 className="text-lg font-mediumtext-gray-900">Performance Report</h3>
+                <h3className="text-lg font-mediumtext-gray-900">Performance Report</h3>
                 <p className="text-sm text-gray-600">Generate detailed performance analysis</p>
               </div>
             </div>
@@ -111,12 +111,12 @@ const ComprehensiveDashboard: React.FC = () => {
           <div className="bg-white rounded-lg shadow-mdp-6">
             <div className="flexitems-center">
               <div className="flex-shrink-0">
-                <div className="w-8h-8bg-green-100 rounded-md flex items-center justify-center">
-                  <span className="text-green-600 text-lg">♿</span>
+                <div className="w-8h-8bg-green-100rounded-md flex items-center justify-center">
+                  <span className="text-green-600text-lg">♿</span>
                 </div>
               </div>
               <div className="ml-4">
-                <h3 className="text-lg font-mediumtext-gray-900">Accessibility Audit</h3>
+                <h3className="text-lg font-mediumtext-gray-900">Accessibility Audit</h3>
                 <p className="text-sm text-gray-600">Check for accessibility compliance</p>
               </div>
             </div>
@@ -125,12 +125,12 @@ const ComprehensiveDashboard: React.FC = () => {
           <div className="bg-white rounded-lg shadow-mdp-6">
             <div className="flexitems-center">
               <div className="flex-shrink-0">
-                <div className="w-8h-8bg-purple-100 rounded-md flex items-center justify-center">
-                  <span className="text-purple-600 text-lg">🔍</span>
+                <div className="w-8h-8bg-purple-100rounded-md flex items-center justify-center">
+                  <span className="text-purple-600text-lg">🔍</span>
                 </div>
               </div>
               <div className="ml-4">
-                <h3 className="text-lg font-mediumtext-gray-900">SEO Analysis</h3>
+                <h3className="text-lg font-mediumtext-gray-900">SEO Analysis</h3>
                 <p className="text-sm text-gray-600">Optimize for search engines</p>
               </div>
             </div>

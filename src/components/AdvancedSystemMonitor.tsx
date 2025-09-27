@@ -194,7 +194,7 @@ const AdvancedSystemMonitor: React.FC = () => {
       });
     }
 
-    setAlerts(prev => [...newAlerts, ...prev.slice(0, 10)]); // Keep only last10 alerts
+    setAlerts(prev => [...newAlerts, ...prev.slice(0, 10)]); // Keep only last10alerts
   }, []);
 
   useEffect(() => {
@@ -241,7 +241,7 @@ const AdvancedSystemMonitor: React.FC = () => {
               <span>System Monitor</span>
             </div>
             <div className="flex items-center space-x-2">
-              <div className={`w-3 h-3 rounded-full ${isMonitoring ? 'bg-green-500' : 'bg-gray-400'}`}</p></div>
+              <div className={`w-3h-3rounded-full ${isMonitoring ? 'bg-green-500' : 'bg-gray-400'}`}</p></div>
               <span className="text-sm text-gray-600">
                 {isMonitoring ? 'Monitoring' : 'Stopped'}
               </span>
@@ -318,8 +318,8 @@ const AdvancedSystemMonitor: React.FC = () => {
                     <XAxis dataKey="timestamp" />
                     <YAxis />
                     <Tooltip />
-                    <Line type="monotone" dataKey="cpu" stroke="#3B82 F6" strokeWidth={2} />
-                    <Line type="monotone" dataKey="memory" stroke="#10 B981" strokeWidth={2} />
+                    <Line type="monotone" dataKey="cpu" stroke="#3B82F6" strokeWidth={2} />
+                    <Line type="monotone" dataKey="memory" stroke="#10B981" strokeWidth={2} />
                   </LineChart>
                 </ResponsiveContainer>
               </CardContent>
@@ -336,8 +336,8 @@ const AdvancedSystemMonitor: React.FC = () => {
                     <XAxis dataKey="timestamp" />
                     <YAxis />
                     <Tooltip />
-                    <Area type="monotone" dataKey="network" stackId="1" stroke="#F59 E 0 B" fill="#F59 E 0 B" />
-                    <Area type="monotone" dataKey="disk" stackId="1" stroke="#8B 5 CF6" fill="#8B 5 CF6" />
+                    <Area type="monotone" dataKey="network" stackId="1" stroke="#F59E0B" fill="#F59E0B" />
+                    <Area type="monotone" dataKey="disk" stackId="1" stroke="#8B5CF6" fill="#8B5CF6" />
                   </AreaChart>
                 </ResponsiveContainer>
               </CardContent>
@@ -408,10 +408,10 @@ const AdvancedSystemMonitor: React.FC = () => {
                         </div>
                       </div>
                       <span className={`px-2py-1text-xs font-medium rounded-full ${
-                        alert.severity === 'critical' ? 'bg-red-100 text-red-800' :
-                        alert.severity === 'high' ? 'bg-orange-100 text-orange-800' :
-                        alert.severity === 'medium' ? 'bg-yellow-100 text-yellow-800' :
-                        'bg-blue-100 text-blue-800'
+                        alert.severity === 'critical' ? 'bg-red-100text-red-800' :
+                        alert.severity === 'high' ? 'bg-orange-100text-orange-800' :
+                        alert.severity === 'medium' ? 'bg-yellow-100text-yellow-800' :
+                        'bg-blue-100text-blue-800'
                       }`}
                         {alert.severity.toUpperCase()}
                       </span>

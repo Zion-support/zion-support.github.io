@@ -104,7 +104,7 @@ export const ThemeToggle: React.FC<{ className?: string }> = ({ className = '' }
     if (theme === 'system') {
       return (
         <svg className="w-5h-5" fill="none" stroke="currentColor" viewBox="002424">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.7517 L920 l-11 h 8 l-1-1-.75-3M313h18M517h14a 220002-2V 5 a22000-2-2H 5 a22000-22v10a2200022 z" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.7517L920 l-11h8l-1-1-.75-3M313h18M517h14a220002-2V5a22000-2-2H5a22000-22v10a2200022z" />
         </svg>
       );
     }
@@ -112,14 +112,14 @@ export const ThemeToggle: React.FC<{ className?: string }> = ({ className = '' }
     if (actualTheme === 'dark') {
       return (
         <svg className="w-5h-5" fill="none" stroke="currentColor" viewBox="002424">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M 20.35415.354A 990018.6463.6469.0039.0030001221 a9.0039.0030008.354-5.646 z" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.35415.354A990018.6463.6469.0039.0030001221a9.0039.0030008.354-5.646z" />
         </svg>
       );
     }
     
     return (
       <svg className="w-5h-5" fill="none" stroke="currentColor" viewBox="002424">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M123v1m 016 v 1 m9-9h-1M412 H 3 m 15.3646.364 l-.707-.707 M6.3436.343 l-.707-.707 m 12.7280 l-.707.707 M6.34317.657 l-.707.707M1612 a44011-804400180 z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M123v1m016v1 m9-9h-1M412H3m15.3646.364l-.707-.707M6.3436.343l-.707-.707m12.7280l-.707.707M6.34317.657l-.707.707M1612a44011-804400180z" />
       </svg>
     );
   };
@@ -133,7 +133,7 @@ export const ThemeToggle: React.FC<{ className?: string }> = ({ className = '' }
   return (
     <button
       onClick={toggleTheme}
-      className={`p-2rounded-lg bg-gray-100 dark: bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-200 `}
+      className={`p-2rounded-lg bg-gray-100dark: bg-gray-800text-gray-700dark:text-gray-300hover:bg-gray-200dark:hover:bg-gray-700transition-colors duration-200 `}
       title={getTooltip()}
       aria-label={getTooltip()}
     >

@@ -47,10 +47,10 @@ export const AdvancedSEO: React.FC<AdvancedSEOProps> = ({
       issues.push('Missing page title');
       score -= 20;
     } else if (seoData.title.length < 30) {
-      issues.push('Title too short (recommended: 30-60 characters)');
+      issues.push('Title too short (recommended: 30-60characters)');
       score -= 10;
     } else if (seoData.title.length > 60) {
-      issues.push('Title too long (recommended: 30-60 characters)');
+      issues.push('Title too long (recommended: 30-60characters)');
       score -= 5;
     }
 
@@ -59,10 +59,10 @@ export const AdvancedSEO: React.FC<AdvancedSEOProps> = ({
       issues.push('Missing meta description');
       score -= 20;
     } else if (seoData.description.length < 120) {
-      issues.push('Description too short (recommended: 120-160 characters)');
+      issues.push('Description too short (recommended: 120-160characters)');
       score -= 10;
     } else if (seoData.description.length > 160) {
-      issues.push('Description too long (recommended: 120-160 characters)');
+      issues.push('Description too long (recommended: 120-160characters)');
       score -= 5;
     }
 
@@ -194,8 +194,8 @@ export const AdvancedSEO: React.FC<AdvancedSEOProps> = ({
         {/* Additional SEO Meta Tags */}
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="theme-color" content="#1f 2937" />
-        <meta name="msapplication-TileColor" content="#1f 2937" />
+        <meta name="theme-color" content="#1f2937" />
+        <meta name="msapplication-TileColor" content="#1f2937" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
       </Head>
@@ -215,23 +215,23 @@ export const AdvancedSEO: React.FC<AdvancedSEOProps> = ({
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="fixed bottom-4right-4bg-white dark: bg-gray-800 rounded-lg shadow-lg p-4max-w-smz-50"
+          className="fixed bottom-4right-4bg-white dark: bg-gray-800rounded-lg shadow-lg p-4max-w-smz-50"
         >
           <div className="flex items-center justify-between mb-2">
-            <h4 className="font-semibold text-gray-900 dark:text-white">SEO Analysis</h4>
+            <h4className="font-semibold text-gray-900dark:text-white">SEO Analysis</h4>
             <div className={`text-2xl font-bold ${getScoreColor(seoScore)}`}
               {seoScore}
             </div>
           </div>
-          <div className="text-sm text-gray-600 dark:text-gray-400 mb-2">
+          <div className="text-sm text-gray-600dark:text-gray-400mb-2">
             {getScoreLabel(seoScore)}
           </div>
           
           {seoIssues.length > 0 && (
             <div className="space-y-1">
-              <div className="text-xs font-medium text-gray-700 dark:text-gray-300">Issue, s:</div>
+              <div className="text-xs font-medium text-gray-700dark:text-gray-300">Issue, s:</div>
               {seoIssues.map((issue, index) => (
-                <div key={index} className="text-xs text-red-600 dark:text-red-400">
+                <div key={index} className="text-xs text-red-600dark:text-red-400">
                   • {issue}
                 </div>
               ))}

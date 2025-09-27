@@ -139,7 +139,7 @@ describe('Loading Components', () => {
     
     const skeleton = screen.getByTestId('skeleton');
     expect(skeleton).toBeInTheDocument();
-    expect(skeleton).toHaveStyle({ width: '100 px', height: '50 px' });
+    expect(skeleton).toHaveStyle({ width: '100px', height: '50px' });
     expect(skeleton).not.toHaveClass('rounded', 'animate-pulse');
   });
 

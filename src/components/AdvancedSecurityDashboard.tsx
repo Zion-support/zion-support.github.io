@@ -64,7 +64,7 @@ const AdvancedSecurityDashboard: React.FC = () => {
       const xssProtection = document.querySelector('meta[http-equiv="X-XSS-Protection"]') !== null;
       
       const newMetric, s: SecurityMetrics = {
-        overallScor, e: Math.round(Math.random() * 30 + 70), // 70-100 vulnerabilities: {
+        overallScor, e: Math.round(Math.random() * 30 + 70), // 70-100vulnerabilities: {
           critica, l: Math.floor(Math.random() * 2),
           high: Math.floor(Math.random() * 3),
           medium: Math.floor(Math.random() * 5 + 2),
@@ -128,14 +128,14 @@ const AdvancedSecurityDashboard: React.FC = () => {
           title: 'Enable Multi-Factor Authentication',
           description: 'Implement MFA for all user accounts to enhance security',
           implementation: 'Integrate with TOTP or SMS-based authentication providers',
-          impact: 'Reduces account compromise risk by 99.9%'
+          impact: 'Reduces account compromise risk by99.9%'
         },
         {
           category: 'data',
           priority: 'medium',
           title: 'Encrypt Sensitive Data',
           description: 'Ensure all sensitive data is encrypted at rest and in transit',
-          implementation: 'Use AES-256 encryption for data storage and TLS1.3for transmission',
+          implementation: 'Use AES-256encryption for data storage and TLS1.3for transmission',
           impact: 'Protects user data from unauthorized access'
         },
         {
@@ -169,20 +169,20 @@ const AdvancedSecurityDashboard: React.FC = () => {
 
   const getSeverityColor = (severity: string): string => {
     switch (severity) {
-      case 'critical': return 'bg-red-100 text-red-800 border-red-200';
-      case 'high': return 'bg-orange-100 text-orange-800 border-orange-200';
-      case 'medium': return 'bg-yellow-100 text-yellow-800 border-yellow-200';
-      case 'low': return 'bg-blue-100 text-blue-800 border-blue-200';
-      default: return 'bg-gray-100 text-gray-800 border-gray-200';
+      case 'critical': return 'bg-red-100text-red-800border-red-200';
+      case 'high': return 'bg-orange-100text-orange-800border-orange-200';
+      case 'medium': return 'bg-yellow-100text-yellow-800border-yellow-200';
+      case 'low': return 'bg-blue-100text-blue-800border-blue-200';
+      default: return 'bg-gray-100 text-gray-800border-gray-200';
     }
   };
 
   const getPriorityColor = (priority: string): string => {
     switch (priority) {
-      case 'high': return 'bg-red-100 text-red-800 border-red-200';
-      case 'medium': return 'bg-yellow-100 text-yellow-800 border-yellow-200';
-      case 'low': return 'bg-green-100 text-green-800 border-green-200';
-      default: return 'bg-gray-100 text-gray-800 border-gray-200';
+      case 'high': return 'bg-red-100text-red-800border-red-200';
+      case 'medium': return 'bg-yellow-100text-yellow-800border-yellow-200';
+      case 'low': return 'bg-green-100text-green-800border-green-200';
+      default: return 'bg-gray-100 text-gray-800border-gray-200';
     }
   };
 
@@ -198,7 +198,7 @@ const AdvancedSecurityDashboard: React.FC = () => {
             <button
               onClick={performSecurityScan}
               disabled={isScanning}
-              className="px-4py-2bg-blue-600 text-white rounded-lg hover:bg-blue-700 disable,d:opacity-50"
+              className="px-4 py-2bg-blue-600text-white rounded-lg hover:bg-blue-700disable,d:opacity-50"
             >
               {isScanning ? 'Scanning...' : 'Run Security Scan'}
             </button>
@@ -210,13 +210,13 @@ const AdvancedSecurityDashboard: React.FC = () => {
         <CardContent>
           <div className="grid grid-cols-1md:grid-cols-2lg:grid-cols-4gap-4mb-6">
             <div className="p-4border rounded-lgtext-center">
-              <div className="text-sm text-gray-600 mb-1">Security Score</div>
+              <div className="text-sm text-gray-600mb-1">Security Score</div>
               <div className={`text-3xl font-bold ${getScoreColor(metrics.overallScore)}`}
                 {metrics.overallScore}/100
               </div>
             </div>
             <div className="p-4borderrounded-lg">
-              <div className="text-sm text-gray-600 mb-2">Vulnerabilities</div>
+              <div className="text-sm text-gray-600mb-2">Vulnerabilities</div>
               <div className="space-y-1text-sm">
                 <div className="flexjustify-between">
                   <span className="text-red-600">Critical:</span>
@@ -237,7 +237,7 @@ const AdvancedSecurityDashboard: React.FC = () => {
               </div>
             </div>
             <div className="p-4borderrounded-lg">
-              <div className="text-sm text-gray-600 mb-2">Security Features</div>
+              <div className="text-sm text-gray-600mb-2">Security Features</div>
               <div className="space-y-2">
                 <div className="flex items-center justify-between">
                   <span className="text-sm">HTTPS</span>
@@ -263,7 +263,7 @@ const AdvancedSecurityDashboard: React.FC = () => {
               </div>
             </div>
             <div className="p-4borderrounded-lg">
-              <div className="text-sm text-gray-600 mb-1">Last Scan</div>
+              <div className="text-sm text-gray-600mb-1">Last Scan</div>
               <div className="text-sm font-semibold">
                 {metrics.lastScan.toLocaleDateString()}
               </div>
@@ -295,9 +295,9 @@ const AdvancedSecurityDashboard: React.FC = () => {
                       {alert.timestamp.toLocaleTimeString()}
                     </span>
                   </div>
-                  <h4 className="font-semiboldmb-1">{alert.title}</h4>
-                  <p className="text-sm text-gray-600 mb-2">{alert.description}</p>
-                  <p className="text-sm text-blue-600 font-medium">{alert.recommendation}</p>
+                  <h4className="font-semiboldmb-1">{alert.title}</h4>
+                  <p className="text-sm text-gray-600mb-2">{alert.description}</p>
+                  <p className="text-sm text-blue-600font-medium">{alert.recommendation}</p>
                 </div>
               ))}
             </div>
@@ -316,10 +316,10 @@ const AdvancedSecurityDashboard: React.FC = () => {
                     <span className={`px-2py-1text-xs font-medium rounded-full border ${getPriorityColor(rec.priority)}`}
                       {rec.priority.toUpperCase()}
                     </span>
-                    <span className="text-xs text-gray-500 capitalize">{rec.category}</span>
+                    <span className="text-xs text-gray-500capitalize">{rec.category}</span>
                   </div>
-                  <h4 className="font-semiboldmb-1">{rec.title}</h4>
-                  <p className="text-sm text-gray-600 mb-2">{rec.description}</p>
+                  <h4className="font-semiboldmb-1">{rec.title}</h4>
+                  <p className="text-sm text-gray-600mb-2">{rec.description}</p>
                   <div className="text-xsspace-y-1">
                     <div>
                       <span className="font-mediumtext-blue-700">Implementation:</span>
