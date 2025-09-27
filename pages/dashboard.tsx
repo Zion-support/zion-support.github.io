@@ -23,6 +23,14 @@ const EnhancedDashboard = dynamic(() => import('../src/components/EnhancedDashbo
   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
 });
 
+const AdvancedAnalyticsSystem = dynamic(() => import('../src/components/AdvancedAnalyticsSystem'), {
+  loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div></div>
+});
+
+const AdvancedPerformanceSystem = dynamic(() => import('../src/components/AdvancedPerformanceSystem'), {
+  loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-yellow-600"></div></div>
+});
+
 // const EnhancedSearch = dynamic(() => import('../src/components/EnhancedSearch'), {
 //   ssr: false,
 //   loading: () => <div className="h-32 w-full bg-gray-200 rounded animate-pulse" />
@@ -113,7 +121,7 @@ const ComprehensiveSecurityDashboard = dynamic(() => import('../src/components/C
   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
 });
 
-type DashboardTab = 'comprehensive' | 'analytics' | 'performance' | 'security' | 'enhanced' | 'search' | 'advanced-analytics' | 'advanced-performance' | 'advanced-security' | 'accessibility' | 'system-monitor' | 'security-enhancements' | 'performance-optimizer' | 'user-experience' | 'error-handler' | 'analytics-insights' | 'error-monitoring' | 'advanced-system-monitor' | 'new-performance' | 'new-security' | 'new-analytics' | 'comprehensive-monitoring' | 'comprehensive-security';
+type DashboardTab = 'comprehensive' | 'analytics' | 'performance' | 'security' | 'enhanced' | 'search' | 'advanced-analytics' | 'advanced-performance' | 'advanced-security' | 'accessibility' | 'system-monitor' | 'security-enhancements' | 'performance-optimizer' | 'user-experience' | 'error-handler' | 'analytics-insights' | 'error-monitoring' | 'advanced-system-monitor' | 'new-performance' | 'new-security' | 'new-analytics' | 'comprehensive-monitoring' | 'comprehensive-security' | 'advanced-analytics-system' | 'advanced-performance-system';
 
 const Dashboard: React.FC = () => {
   const [activeTab, setActiveTab] = useState<DashboardTab>('comprehensive');
@@ -151,6 +159,8 @@ const Dashboard: React.FC = () => {
     { id: 'new-security' as const, name: 'New Security', icon: '🛡️' },
     { id: 'new-analytics' as const, name: 'New Analytics', icon: '📊' },
     { id: 'error-handler' as const, name: 'Error Handler', icon: '🚨' },
+    { id: 'advanced-analytics-system' as const, name: 'Advanced Analytics System', icon: '📊' },
+    { id: 'advanced-performance-system' as const, name: 'Advanced Performance System', icon: '⚡' },
     { id: 'analytics-insights' as const, name: 'Analytics Insights', icon: '💡' },
     { id: 'comprehensive-monitoring' as const, name: 'Comprehensive Monitoring', icon: '📊' },
     { id: 'comprehensive-security' as const, name: 'Comprehensive Security', icon: '🛡️' }
@@ -594,6 +604,40 @@ const Dashboard: React.FC = () => {
               enableRealTimeMonitoring={true}
               onSecurityUpdate={(metrics) => console.log('Security metrics updated:', metrics)}
             />
+          </div>
+        );
+      case 'advanced-analytics-system':
+        return (
+          <div className="p-8">
+            <div className="flex justify-between items-center mb-8">
+              <h1 className="text-3xl font-bold text-gray-900">Advanced Analytics System</h1>
+              <div className="flex items-center space-x-4">
+                <button 
+                  onClick={() => window.location.reload()}
+                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  Refresh
+                </button>
+              </div>
+            </div>
+            <AdvancedAnalyticsSystem />
+          </div>
+        );
+      case 'advanced-performance-system':
+        return (
+          <div className="p-8">
+            <div className="flex justify-between items-center mb-8">
+              <h1 className="text-3xl font-bold text-gray-900">Advanced Performance System</h1>
+              <div className="flex items-center space-x-4">
+                <button 
+                  onClick={() => window.location.reload()}
+                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  Refresh
+                </button>
+              </div>
+            </div>
+            <AdvancedPerformanceSystem />
           </div>
         );
       case 'error-monitoring':
