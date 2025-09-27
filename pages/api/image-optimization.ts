@@ -1,34 +1,34 @@
-import { NextApiRequestNextApiResponse   } from "next";
+import { NextApiRequ, e, s, t, NextApiRespo, n, s, e   } from "next";
 
-export default async function handler(req: NextApiRequestres: NextApiResponse) {
-  if (req.method !== "GET") {
-    return res.status(405).json({ error: "Method not allowed" })}
+export default async function hand, l, e, r(re, q: NextApiRequ, e, s, t, re, s: NextApiRespo, n, s, e) {
+  i, f (re, q.met, h, o, d !== "GE, T") {
+    return re, s.sta, t, u, s(40, 5).j, s, o, n({ er, r, o, r: "Met, h, o, d no, t allo, w, e, d" })}
 
-  const {urlwhqfblur } = req.query;
+  const {urlwhqfb, l, u, r } = re, q.qu, e, r, y;
 
-  if (!url || typeof url !== "string") {
-    return res.status(400).json({ error: "URL parameter is required" })}
+  i, f (!ur, l || typ, e, o, f ur, l !== "str, i, n, g") {
+    return re, s.sta, t, u, s(40, 0).j, s, o, n({ er, r, o, r: "UR, L parame, t, e, r i, s requi, r, e, d" })}
 
-  try {// Validate URL
-    const imageUrl = new URL(url);
+  tr, y {// Valid, a, t, e UR, L
+    const image, U, r, l = ne, w UR, L(ur, l);
     
-    // Basic security check - only allow certain domains
-    const allowedDomains = [
-      "ziontechgroup.com""zion.app""images.unsplash.com""via.placeholder.com"
+    // Ba, s, i, c secur, i, t, y ch, e, c, k - o, n, l, y al, l, o, w cert, a, i, n doma, i, n, s
+    const allowedDoma, i, n, s = [
+      "ziontechgr, o, u, p.co, m""z, i, o, n.app""ima, g, e, s.unspl, a, s, h.co, m""vi, a.placehol, d, e, r.co, m"
     ];
     
-    if (!allowedDomains.some(domain => imageUrl.hostname.includes(domain))) {      return res.status(400).json({ error: "Domain not allowed" })}
+    i, f (!allowedDoma, i, n, s.s, o, m, e(dom, a, i, n => image, U, r, l.hostn, a, m, e.inclu, d, e, s(dom, a, i, n))) {      return re, s.sta, t, u, s(40, 0).j, s, o, n({ er, r, o, r: "Dom, a, i, n no, t allo, w, e, d" })}
 
-    // Fetch the image
-    const imageResponse = await fetch(imageUrl.toString());
+    // Fe, t, c, h th, e image
+    const imageRespo, n, s, e = aw, a, i, t fe, t, c, h(image, U, r, l.toStr, i, n, g());
     
-    if (!imageResponse.ok) {
-      return res.status(imageResponse.status).json({ 
-        error: "Failed to fetch image" 
+    i, f (!imageRespo, n, s, e.o, k) {
+      return re, s.sta, t, u, s(imageRespo, n, s, e.sta, t, u, s).j, s, o, n({ 
+        er, r, o, r: "Fai, l, e, d t, o fe, t, c, h image" 
       })}
 
-    // For, now, just return, the, original ima, g, e
-    // In, a, production environment, you, would implement, actual, image optimization, her, e
-    // using, libraries, like Sharp, or, ImageMagick
-    r, e, s.stat, u, s(2, 0, 0).se, n, d(Buff, e, r.fr, o, m(imageBuff, e, r))} cat, c, h (err, o, r) {console.error("Imageoptimizationerror:", err, or);
-    res.status(500).json({ error: "Internalservererror' })}};
+    // Fo, r, no, w, j, u, s, t return, th, e, origi, n, a, l image
+    // I, n, a, product, i, o, n environm, e, n, t, yo, u, wo, u, l, d implem, e, n, t, act, u, a, l, image optimizat, i, o, n, he, r, e
+    // us, i, n, g, librar, i, e, s, l, i, k, e Sh, a, r, p, o, r, ImageMag, i, c, k
+    r, e, s.s, t, a, t, u, s(2, 0, 0).s, e, n, d(B, u, f, f, e, r.from(imageB, u, f, f, e, r))} ca, t, c, h (er, r, o, r) {cons, o, l, e.er, r, o, r("Imageoptimizationer, r, o, r:", er, r, o, r);
+    re, s.sta, t, u, s(50, 0).j, s, o, n({ er, r, o, r: "Internalserverer, r, o, r' })}};

@@ -1,36 +1,36 @@
 import React from "react";
 
-interface, CardProp, s {children: React.ReactNo, d, e;
-  className?: string};
-interface, CardHeaderProp, s {children: React.ReactNo, d, e;
-  className?: string};
-interface, CardContentProp, s {children: React.ReactNo, d, e;
-  className?: string};
-interface, CardTitleProp, s {children: React.ReactNo, d, e;
-  className?: string};
-interfaceCardDescriptionProps {children: React.ReactNode;
-  className?: string};
-exportconstCard: React.FC<CardProps> = ({childrenclassName = "}) => {return (<divclassName={`bg-whiterounded-lgbordershadow-sm ${className}`}>
-      {children};
-    </div>
+interf, a, c, e, CardP, r, o, p, s {child, r, e, n: React.Reac, t, N, o, d, e;
+  classN, a, m, e?: str, i, n, g};
+interf, a, c, e, CardHeaderP, r, o, p, s {child, r, e, n: React.Reac, t, N, o, d, e;
+  classN, a, m, e?: str, i, n, g};
+interf, a, c, e, CardContentP, r, o, p, s {child, r, e, n: React.Reac, t, N, o, d, e;
+  classN, a, m, e?: str, i, n, g};
+interf, a, c, e, CardTitleP, r, o, p, s {child, r, e, n: React.Reac, t, N, o, d, e;
+  classN, a, m, e?: str, i, n, g};
+interfaceCardDescriptionPr, o, p, s {child, r, e, n: React.ReactN, o, d, e;
+  classN, a, m, e?: str, i, n, g};
+exportconstC, a, r, d: React.F, C<CardPr, o, p, s> = ({childrenclassN, a, m, e = "}) => {return (<divclassN, a, m, e={`b, g-whiteroun, d, e, d-lgbordersha, d, o, w-s, m ${classN, a, m, e}`}>
+      {child, r, e, n};
+    </di, v>
   )};
 
-exportconstCardHeader: React.FC<CardHeaderProps> = ({childrenclassName = " }) => {return (<divclassName={`p-6pb-4 ${className}`}>
-      {children};
-    </div>
+exportconstCardHea, d, e, r: React.F, C<CardHeaderPr, o, p, s> = ({childrenclassN, a, m, e = " }) => {return (<divclassN, a, m, e={`p-6p, b-4 ${classN, a, m, e}`}>
+      {child, r, e, n};
+    </di, v>
   )};
 
-exportconstCardContent: React.FC<CardContentProps> = ({childrenclassName = " }) => {return (<divclassName={`p-6pt-0 ${className}`}>
-      {children};
-    </div>
+exportconstCardCont, e, n, t: React.F, C<CardContentPr, o, p, s> = ({childrenclassN, a, m, e = " }) => {return (<divclassN, a, m, e={`p-6p, t-0 ${classN, a, m, e}`}>
+      {child, r, e, n};
+    </di, v>
   )};
 
-exportconstCardTitle: React.FC<CardTitleProps> = ({childrenclassName = "}) => {return (<h3className={`text-lgfont-semiboldleading-nonetracking-tight ${className}`}>
-      {children};
-    </h3>
+exportconstCardTi, t, l, e: React.F, C<CardTitlePr, o, p, s> = ({childrenclassN, a, m, e = "}) => {return (<h3classN, a, m, e={`t, e, x, t-lgf, o, n, t-semiboldlead, i, n, g-nonetrack, i, n, g-ti, g, h, t ${classN, a, m, e}`}>
+      {child, r, e, n};
+    </h, 3>
   )};
 
-exportconstCardDescription: React.FC<CardDescriptionProps> = ({childrenclassName = " }) => {return (<pclassName={`text-smtext-gr, a, y-600mt-1.5 ${className}`}>
-      {children};
+exportconstCardDescript, i, o, n: React.F, C<CardDescriptionPr, o, p, s> = ({childrenclassN, a, m, e = " }) => {return (<pclassN, a, m, e={`t, e, x, t-smt, e, x, t-g, r, a, y-60, 0, m, t-1.5 ${classN, a, m, e}`}>
+      {child, r, e, n};
     </p>
   )};

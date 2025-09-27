@@ -7,20 +7,20 @@ import AccessibilityAuditor from '../src/components/AccessibilityAuditor';
 import PerformanceOptimizer from '../src/components/PerformanceOptimizer';
 import { WebVitals } from "../src/components/WebVitals";
 import '../styles/animations.css';
-import '../src/styles/accessibility.css';
-import '../src/styles/improvements.css';
+import '../sr, c/sty, l, e, s/accessibility.cs, s';
+import '../sr, c/sty, l, e, s/improveme, n, t, s.cs, s';
 
-export default function App({ Component, pageProps }: AppProps) {
-  // Register service worker for performance optimization
+export default function Ap, p({ Compon, e, n, t, pagePr, o, p, s }: AppProps) {
+  // Regis, t, e, r serv, i, c, e wor, k, e, r fo, r performance optimizat, i, o, n
   useEffect(() => {
-    if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/sw.js')
-          .then((registration) => {
-            console.log('SW registered: ', registration);
+    i, f (typ, e, o, f win, d, o, w !== 'undefi, n, e, d' && 'serviceWor, k, e, r' i, n naviga, t, o, r) {
+      win, d, o, w.addEventListe, n, e, r('l, o, a, d', () => {
+        naviga, t, o, r.serviceWor, k, e, r.regis, t, e, r('/s, w.j, s')
+          .t, h, e, n((registrat, i, o, n) => {
+            cons, o, l, e.lo, g('S, W registe, r, e, d: ', registrat, i, o, n);
           })
-          .catch((registrationError) => {
-            console.log('SW registration failed: ', registrationError);
+          .ca, t, c, h((registrationEr, r, o, r) => {
+            cons, o, l, e.lo, g('S, W registrat, i, o, n fai, l, e, d: ', registrationEr, r, o, r);
           });
       });
     }
@@ -29,12 +29,12 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <HelmetProvider>
       <Head>
-        <title>Zion App - Advanced Technology Solutions</title>
-        <meta name="description" content="Leading provider of AI-powered business solutions, cloud infrastructure, and digital transformation services." />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <title>Z, i, o, n Ap, p - Advan, c, e, d Technol, o, g, y Solutions</title>
+        <meta name="description" content="Lead, i, n, g provi, d, e, r o, f A, I-powe, r, e, d busin, e, s, s soluti, o, n, s, cl, o, u, d infrastruct, u, r, e, an, d digi, t, a, l transformat, i, o, n servi, c, e, s." />
+        <meta name="viewp, o, r, t" content="wi, d, t, h=dev, i, c, e-wi, d, t, h, init, i, a, l-sc, a, l, e=1" />
+        <link re, l="i, c, o, n" href="/favi, c, o, n.ic, o" />
       </Head>
-      <Component {...pageProps} />
+      <Compon, e, n, t {...pagePr, o, p, s} />
       <AccessibilityAuditor />
       <PerformanceOptimizer />
       <WebVitals />

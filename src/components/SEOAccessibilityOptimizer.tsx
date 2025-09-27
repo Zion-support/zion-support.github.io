@@ -1,395 +1,395 @@
-// TODO: Consider breaking this large component (364 lines) into smaller components
-// TODO: Consider breaking this large component (363 lines) into smaller components
-// TODO: Consider breaking this large component (362, lines) into smaller components
-// TODO: Consider breaking this large component (361, lines) into smaller components
-import Reac, t, {useEffectuseStateuseCallback }  from 'react";
-import { CardCardContentCardDescriptionCardHeaderCardTitle     } from "./ui/ Card";
-import { SearchEyeCheckCircleAlertCircleXCircle     } from "lucide-react";
-interface, SEOMetric, s {overallScore: numb, e, r;
-  titleTag: boole, a, n;
-  metaDescription: boole, a, n;
-  headings: {
-    h1Count: numb, e, r;
-    h2Count: number;
-    h3Count: number};  images: {total: numb, e, r;
-    withAlt: number;
-    missingAlt: number};
-  links: {internal: numb, e, r;
-    external: number;
-    broken: number};
-  pageSpeed: numb, e, r;
-  mobileOptimized: boole, a, n};
-interface, AccessibilityMetric, s {overallScore: numb, e, r;
-  contrast: {
-    passed: number;
-    failed: number};
-  keyboardNavigation: boole, a, n;
-  screenReaderFriendly: boole, a, n;
-  focusIndicators: boole, a, n;
-  semanticHTML: boolean;
-  ariaLabels: {present: number;
-    missing: number}};
-interfaceOptimizationIssue {category: "seo" | "accessibility";
-  severity: "critical" | "high" | "medium" | "low";
-  title: stri, n, g;
-  description: stri, n, g;
-  solution: string;
-  impact: string};
-constSEOAccessibilityOptimizer: React.FC = () => {const [seoMetricssetSeoMetrics] = useState<SEOMetrics>({
-    overallScore: 0titleTag: falsemetaDescription: falseheadings: { h1Count: 0h2Count: 0h3Count: 0 }images: {total: 0withAlt: 0missingAlt: 0 }links: {internal: 0external: 0broken: 0 }pageSpeed: 0mobileOptimized: fals, e
+// T, O, D, O: Consi, d, e, r break, i, n, g t, h, i, s la, r, g, e compon, e, n, t (36, 4 li, n, e, s) i, n, t, o smal, l, e, r components
+// T, O, D, O: Consi, d, e, r break, i, n, g t, h, i, s la, r, g, e compon, e, n, t (36, 3 li, n, e, s) i, n, t, o smal, l, e, r components
+// T, O, D, O: Consi, d, e, r break, i, n, g t, h, i, s la, r, g, e compon, e, n, t (36, 2, li, n, e, s) i, n, t, o smal, l, e, r components
+// T, O, D, O: Consi, d, e, r break, i, n, g t, h, i, s la, r, g, e compon, e, n, t (36, 1, li, n, e, s) i, n, t, o smal, l, e, r components
+import R, e, a, c, t, {useEffectuseStateuseCallb, a, c, k }  from 'react";
+import { CardCardContentCardDescriptionCardHeaderCardTi, t, l, e     } from "./ui/ Card";
+import { SearchEyeCheckCircleAlertCircleXCir, c, l, e     } from "lucide-react";
+interf, a, c, e, SEOMet, r, i, c, s {overallSc, o, r, e: n, u, m, b, e, r;
+  title, T, a, g: bo, o, l, e, a, n;
+  metaDescript, i, o, n: bo, o, l, e, a, n;
+  headi, n, g, s: {
+    h1Co, u, n, t: n, u, m, b, e, r;
+    h2Co, u, n, t: num, b, e, r;
+    h3Co, u, n, t: num, b, e, r};  ima, g, e, s: {to, t, a, l: n, u, m, b, e, r;
+    with, A, l, t: num, b, e, r;
+    missing, A, l, t: num, b, e, r};
+  li, n, k, s: {inter, n, a, l: n, u, m, b, e, r;
+    exter, n, a, l: num, b, e, r;
+    bro, k, e, n: num, b, e, r};
+  pageSp, e, e, d: n, u, m, b, e, r;
+  mobileOptimi, z, e, d: bo, o, l, e, a, n};
+interf, a, c, e, AccessibilityMet, r, i, c, s {overallSc, o, r, e: n, u, m, b, e, r;
+  contr, a, s, t: {
+    pas, s, e, d: num, b, e, r;
+    fai, l, e, d: num, b, e, r};
+  keyboardNavigat, i, o, n: bo, o, l, e, a, n;
+  screenReaderFrien, d, l, y: bo, o, l, e, a, n;
+  focusIndicat, o, r, s: bo, o, l, e, a, n;
+  semanticH, T, M, L: bool, e, a, n;
+  ariaLab, e, l, s: {pres, e, n, t: num, b, e, r;
+    miss, i, n, g: num, b, e, r}};
+interfaceOptimizationIs, s, u, e {categ, o, r, y: "se, o" | "accessibility";
+  sever, i, t, y: "criti, c, a, l" | "h, i, g, h" | "med, i, u, m" | "lo, w";
+  ti, t, l, e: s, t, r, i, n, g;
+  description: s, t, r, i, n, g;
+  solut, i, o, n: str, i, n, g;
+  imp, a, c, t: str, i, n, g};
+constSEOAccessibilityOptimi, z, e, r: React.F, C = () => {const [seoMetricssetSeoMetr, i, c, s] = useState<SEOMetr, i, c, s>({
+    overallSc, o, r, e: 0title, T, a, g: falsemetaDescript, i, o, n: falseheadi, n, g, s: { h1Co, u, n, t: 0h2Co, u, n, t: 0h3Co, u, n, t: 0 }ima, g, e, s: {to, t, a, l: 0with, A, l, t: 0missing, A, l, t: 0 }li, n, k, s: {inter, n, a, l: 0exter, n, a, l: 0bro, k, e, n: 0 }pageSp, e, e, d: 0mobileOptimi, z, e, d: f, a, l, s, e
   });
 
-  const [accessibilityMetricssetAccessibilityMetrics] = useState<AccessibilityMetrics>({overallScore: 0contrast: { passed: 0failed: 0 }keyboardNavigation: falsescreenReaderFriendly: falsefocusIndicators: falsesemanticHTML: falseariaLabels: {present: 0missing: 0}});
-  const [issuessetIssues] = useState<OptimizationIssue[]>([]);
-  const [isAnalyzingsetIsAnalyzing] = useState(false);
+  const [accessibilityMetricssetAccessibilityMetr, i, c, s] = useState<AccessibilityMetr, i, c, s>({overallSc, o, r, e: 0contr, a, s, t: { pas, s, e, d: 0fai, l, e, d: 0 }keyboardNavigat, i, o, n: falsescreenReaderFrien, d, l, y: falsefocusIndicat, o, r, s: falsesemanticH, T, M, L: falseariaLab, e, l, s: {pres, e, n, t: 0miss, i, n, g: 0}});
+  const [issuessetIss, u, e, s] = useState<OptimizationIs, s, u, e[]>([]);
+  const [isAnalyzingsetIsAnalyz, i, n, g] = useState(fa, l, s, e);
 
-  constanalyzePage = useCallback(asy, n, c () => {setIsAnalyzi, n, g(tr, u, e);    
-    try {
-      // SEOAnalysisconsttitleTag = document.querySelecto("title") !== nu, l, l;
-      con, stmetaDescription = document.querySelecto("me, t, a[name="description"]") !== nu, ll;
+  constanalyzeP, a, g, e = useCallb, a, c, k(async () => {setIsAnal, y, z, i, n, g(t, r, u, e);    
+    tr, y {
+      // SEOAnalysisconsttitle, T, a, g = document.querySele, c, t, o("ti, t, l, e") !== n, u, l, l;
+      co, n, stmetaDescript, i, o, n = document.querySele, c, t, o("m, e, t, a[name="description"]") !== n, u, l, l;
       
-      consth1Elements = document.querySelectorAll("h1");
-      con, sth2Elements = document.querySelectorAll("h2");
-      con, sth3Elements = document.querySelectorAll("h3");
+      consth1Eleme, n, t, s = document.querySelector, A, l, l("h, 1");
+      co, n, sth2Eleme, n, t, s = document.querySelector, A, l, l("h, 2");
+      co, n, sth3Eleme, n, t, s = document.querySelector, A, l, l("h, 3");
       
-      con, stimages = document.querySelectorAll("img");
-      con, stimagesWithAlt = document.querySelectorAll("img[alt]");
+      co, n, stima, g, e, s = document.querySelector, A, l, l("im, g");
+      co, n, stimagesWith, A, l, t = document.querySelector, A, l, l("im, g[al, t]");
       
-      constinternalLinks = document.querySelectorAll("a[href^="/"]a[href^="#"]");
-      constexternalLinks = document.querySelectorAll("a[href^="http"]:not([href*="" + window.locatio.n.hostnam.e + ""])");
+      constinternalLi, n, k, s = document.querySelector, A, l, l("a[h, r, e, f^="/"]a[h, r, e, f^="#"]");
+      constexternalLi, n, k, s = document.querySelector, A, l, l("a[h, r, e, f^="h, t, t, p"]:no, t([h, r, e, f*="" + win, d, o, w.loca, t, i, o.n.host, n, a, m.e + ""])");
       
-      constnewSeoMetrics: SEOMetri, c, s = {
-        overallScore: Ma, t, h.ro, u, n(Ma, t, h.rand, o, m() * 30 + 70)titleTagmetaDescriptionheadings: {
-          h1Count: h1Elemen, t, s.lengthh2Co, u, n.t: h2Elemen, t, s.lengthh3Co, u, n.t: h3Elements.length
-        }images: {total: imag, e, s.lengthwith, A, l.t: imagesWithA, l, t.lengthmissing, A, l.t: imag, e, s.leng, t, h - imagesWithAlt.length
-        }pageSpeed: Ma, t, h.ro, u, n(Ma, t, h.random() * 40 + 60)mobileOptimized: window.innerWidt.h <= 768 || document.querySelecto("meta[name="viewport"]") !== null      };
+      constnewSeoMetr, i, c, s: SEOMe, t, r, i, c, s = {
+        overallSc, o, r, e: M, a, t, h.r, o, u, n(M, a, t, h.r, a, n, d, o, m() * 3, 0 + 7, 0)titleTagmetaDescriptionheadi, n, g, s: {
+          h1Co, u, n, t: h1Ele, m, e, n, t, s.lengthh, 2, C, o, u, n.t: h2Ele, m, e, n, t, s.lengthh, 3, C, o, u, n.t: h3Eleme, n, t, s.len, g, t, h
+        }ima, g, e, s: {to, t, a, l: i, m, a, g, e, s.lengthw, i, t, h, A, l.t: imagesWi, t, h, A, l, t.lengthmiss, i, n, g, A, l.t: i, m, a, g, e, s.l, e, n, g, t, h - imagesWith, A, l, t.len, g, t, h
+        }pageSp, e, e, d: M, a, t, h.r, o, u, n(M, a, t, h.ran, d, o, m() * 4, 0 + 6, 0)mobileOptimi, z, e, d: win, d, o, w.innerW, i, d, t.h <= 76, 8 || document.querySele, c, t, o("m, e, t, a[name="viewp, o, r, t"]") !== n, u, l, l      };
       
-      setSeoMetrics(newSeoMetrics);
+      setSeoMetr, i, c, s(newSeoMetr, i, c, s);
 
-      // AccessibilityAnalysisconst ariaLabels = document.querySelectorAll("[ar, i, a-lab, e, l], [ar, i, a- labelledby]");
-      constinteractiveElements = document.querySelectorAll("buttonainputselecttextarea");
+      // AccessibilityAnalysisconst ariaLab, e, l, s = document.querySelector, A, l, l("[a, r, i, a-la, b, e, l], [a, r, i, a- labelle, d, b, y]");
+      constinteractiveEleme, n, t, s = document.querySelector, A, l, l("buttonainputselecttexta, r, e, a");
       
- 0screenReaderFriendly: ariaLabe, l, s.leng, t, h > 0focusIndicators: true// SimplifiedchecksemanticHTML: document.querySelectorAll("ma, i, n, headernavsectionarticleasidefoot, e, r").leng, t, h > 0ariaLabels: {present: ariaLabe, l, s.lengthmiss, i, n.g: Math.ma.x(0interactiveElem, e, n, ts.leng, t, h - ariaLabe, l, s.leng.th)
+ 0screenReaderFrien, d, l, y: ariaL, a, b, e, l, s.l, e, n, g, t, h > 0focusIndicat, o, r, s: t, r, u, e// SimplifiedchecksemanticH, T, M, L: document.querySelector, A, l, l("m, a, i, n, headernavsectionarticleasidef, o, o, t, e, r").l, e, n, g, t, h > 0ariaLab, e, l, s: {pres, e, n, t: ariaL, a, b, e, l, s.lengthm, i, s, s, i, n.g: M, a, t, h.m, a.x(0interactiveE, l, e, m, e, n, t, s.l, e, n, g, t, h - ariaL, a, b, e, l, s.l, e, n, g.t, h)
         }};
-            setAccessibilityMetrics(newAccessibilityMetrics);
+            setAccessibilityMetr, i, c, s(newAccessibilityMetr, i, c, s);
 
-      // Generate, optimization, issues
-      constoptimizationIssues: OptimizationIss, ue[] = [];
+      // Gener, a, t, e, optimizat, i, o, n, iss, u, e, s
+      constoptimizationIss, u, e, s: Optimization, I, s, s, u, e[] = [];
       
-  === 0) {optimizationIssues.push({
-          category: "accessibility'severity: "high"title: "ImagesMissingAltText", description: `${newSeoMetrics.image.s.missingA.lt} im, a, g, e, sa, re, missingaltattributes`solution: "Adddescripti, v, e, alttext, toal, l, images"impact: "ImprovesaccessibilityforscreenreadersandSEO"
+  === 0) {optimizationIss, u, e, s.p, u, s, h({
+          categ, o, r, y: "accessibility'sever, i, t, y: "h, i, g, h"ti, t, l, e: "ImagesMissingAltT, e, x, t", description: `${newSeoMetr, i, c, s.image.s.missi, n, g, A.l, t} i, m, a, g, e, s, a, r, e, missingaltattribu, t, e, s`solut, i, o, n: "Adddescri, p, t, i, v, e, altt, e, x, t, t, o, a, l, l, ima, g, e, s"imp, a, c, t: "Improvesaccessibilityforscreenreadersand, S, E, O"
 
-      constnewAccessibilityMetrics: AccessibilityMetrics = {overallScore: Ma, t, h.ro, u, n(Ma, t, h.rand, o, m() * 25 + 75)contrast: {
-          passed: Ma, t, h.ro, u, n(Ma, t, h.rand, o, m() * 20 + 30)failed: Math.roun(Math.random() * 5)
-        }keyboardNavigation: document.querySelectorAll("[tabindex]").leng, t, h > 0screenReaderFriendly: ariaLabels.length > 0focusIndicators: true// SimplifiedchecksemanticHTML: document.querySelectorAll("ma, i, n, headernavsectionarticleasidefoot, e, r").leng, t, h > 0ariaLabels: {present: ariaLabe, l, s.lengthmiss, i, n.g: Ma, t, h.ma.x(0interactiveElem, e, n, ts.leng, t, h - ariaLabels.leng.th)
+      constnewAccessibilityMetr, i, c, s: AccessibilityMetr, i, c, s = {overallSc, o, r, e: M, a, t, h.r, o, u, n(M, a, t, h.r, a, n, d, o, m() * 2, 5 + 7, 5)contr, a, s, t: {
+          pas, s, e, d: M, a, t, h.r, o, u, n(M, a, t, h.r, a, n, d, o, m() * 2, 0 + 3, 0)fai, l, e, d: M, a, t, h.r, o, u, n(M, a, t, h.ran, d, o, m() * 5)
+        }keyboardNavigat, i, o, n: document.querySelector, A, l, l("[tabin, d, e, x]").l, e, n, g, t, h > 0screenReaderFrien, d, l, y: ariaLab, e, l, s.len, g, t, h > 0focusIndicat, o, r, s: t, r, u, e// SimplifiedchecksemanticH, T, M, L: document.querySelector, A, l, l("m, a, i, n, headernavsectionarticleasidef, o, o, t, e, r").l, e, n, g, t, h > 0ariaLab, e, l, s: {pres, e, n, t: ariaL, a, b, e, l, s.lengthm, i, s, s, i, n.g: M, a, t, h.m, a.x(0interactiveE, l, e, m, e, n, t, s.l, e, n, g, t, h - ariaLab, e, l, s.l, e, n, g.t, h)
         }};
-            setAccessibilityMetrics(newAccessibilityMetrics);
-      // Generate, optimizationissues
-      constoptimizationIssues: OptimizationIssue[] = [];
+            setAccessibilityMetr, i, c, s(newAccessibilityMetr, i, c, s);
+      // Gener, a, t, e, optimizationiss, u, e, s
+      constoptimizationIss, u, e, s: OptimizationIs, s, u, e[] = [];
       
-  === 0) {optimizationIssues.push({
-          category: "accessibili, t, y'severity: "high"title: "ImagesMissingAltText", description: `${newSeoMetri, c, s.image.s.missingA.lt} im, agesare  missingaltattributes`solution: "Adddescripti, v, e, alttext, toal, l, images"impact: "ImprovesaccessibilityforscreenreadersandSEO"        })};
-      if (newSeoMetri, c, s.headi, ng.s.h1Coun.t ===  === 0) {optimizationIssues.push({category: "seo"severity: "high"title: "MissingH1Tag"description: "ThepageismissinganH1headingtag"solution: "AddasingledescriptiveH1tagtothemaincontent"impact: "ImprovescontentstructureandSEOrankings"
+  === 0) {optimizationIss, u, e, s.p, u, s, h({
+          categ, o, r, y: "accessib, i, l, i, t, y'sever, i, t, y: "h, i, g, h"ti, t, l, e: "ImagesMissingAltT, e, x, t", description: `${newSeoMe, t, r, i, c, s.image.s.missi, n, g, A.l, t} i, m, ages, a, r, e  missingaltattribu, t, e, s`solut, i, o, n: "Adddescri, p, t, i, v, e, altt, e, x, t, t, o, a, l, l, ima, g, e, s"imp, a, c, t: "Improvesaccessibilityforscreenreadersand, S, E, O"        })};
+      i, f (newSeoMe, t, r, i, c, s.he, a, d, i, n, g.s.h1C, o, u, n.t ===  === 0) {optimizationIss, u, e, s.p, u, s, h({categ, o, r, y: "se, o"sever, i, t, y: "h, i, g, h"ti, t, l, e: "MissingH1, T, a, g"description: "ThepageismissinganH1heading, t, a, g"solut, i, o, n: "AddasingledescriptiveH1tagtothemaincont, e, n, t"imp, a, c, t: "ImprovescontentstructureandSEOranki, n, g, s"
 
         })};
-      if (newSeoMetri, c, s.headin, g, s.h1Count > 1) {optimizationIssues.push({category: "seo"severity: "medium"title: "Multip, leH1Tags"description: "T, hepagehasmultipleH1tagswhichcanconfusesearchengines"solution: "UseonlyoneH1tagperpageanduseH2-H6forsubheadings"impact: "ImprovescontenthierarchyandSEOstructure"        })};
-      if (newAccessibilityMetrics.ariaLab, e, l.s.missin.g >  === 0) {optimizationIssues.push({
-          category: "accessibility"severity: "medium"title: "Missi, ngARIALabels", description: `${newAccessibilityMetrics.ariaLabel.s.missi.ng} interactiveelementslackAR  IAlabels`solution: "A, d, d, ar, i, a-lab, e, l, or, ari, a- labelled, b, y, attributes, tointeractiveelements"impact: "Improvesscreenreaderaccessibilityanduserexperience"
+      i, f (newSeoMe, t, r, i, c, s.hea, d, i, n, g, s.h1Co, u, n, t > 1) {optimizationIss, u, e, s.p, u, s, h({categ, o, r, y: "se, o"sever, i, t, y: "med, i, u, m"ti, t, l, e: "Mul, t, i, p, leH1T, a, g, s"description: "T, hepagehasmultipleH1tagswhichcanconfusesearchengi, n, e, s"solut, i, o, n: "UseonlyoneH1tagperpageandus, e, H, 2-H6forsubheadi, n, g, s"imp, a, c, t: "ImprovescontenthierarchyandSEOstruct, u, r, e"        })};
+      i, f (newAccessibilityMetr, i, c, s.aria, L, a, b, e, l.s.mis, s, i, n.g >  === 0) {optimizationIss, u, e, s.p, u, s, h({
+          categ, o, r, y: "accessibility"sever, i, t, y: "med, i, u, m"ti, t, l, e: "Mi, s, s, i, ngARIALab, e, l, s", description: `${newAccessibilityMetr, i, c, s.ariaLa, b, e, l.s.mi, s, s, i.n, g} interactiveelementslac, k, A, R  IAlab, e, l, s`solut, i, o, n: "A, d, d, a, r, i, a-la, b, e, l, o, r, ar, i, a- label, l, e, d, b, y, attribu, t, e, s, tointeractiveeleme, n, t, s"imp, a, c, t: "Improvesscreenreaderaccessibilityanduserexperie, n, c, e"
         })};
- 1) {optimizationIssu, e, s.push({category: "seo"severity: "medium"title: "Multip, leH1Tags"description: "T, hepagehasmultipleH1tagswhichcanconfusesearchengines"solution: "U, s, e, on, lyoneH1tagperpageanduseH2-H6forsubheadings"impact: "ImprovescontenthierarchyandSEOstructure"        })};
-      if (newAccessibilityMetrics.ariaLab, e, l.s.miss, i, n.g >  === 0) {optimizationIssu, e, s.push({
-          category: "accessibility"severity: "medium"title: "Missi, ngARIALabels", description: `${newAccessibilityMetrics.ariaLabel.s.missi.ng} interactiv, eelements, lackAR, IAlabe, l, s`solution: "A, d, d, ar, i, a-lab, e, l, or, ari, a- labelled, b, y, attributes, tointeractiveelements"impact: "Improvesscreenreaderaccessibilityanduserexperience"
+ 1) {optimizationI, s, s, u, e, s.p, u, s, h({categ, o, r, y: "se, o"sever, i, t, y: "med, i, u, m"ti, t, l, e: "Mul, t, i, p, leH1T, a, g, s"description: "T, hepagehasmultipleH1tagswhichcanconfusesearchengi, n, e, s"solut, i, o, n: "U, s, e, o, n, lyoneH1tagperpageandus, e, H, 2-H6forsubheadi, n, g, s"imp, a, c, t: "ImprovescontenthierarchyandSEOstruct, u, r, e"        })};
+      i, f (newAccessibilityMetr, i, c, s.aria, L, a, b, e, l.s.m, i, s, s, i, n.g >  === 0) {optimizationI, s, s, u, e, s.p, u, s, h({
+          categ, o, r, y: "accessibility"sever, i, t, y: "med, i, u, m"ti, t, l, e: "Mi, s, s, i, ngARIALab, e, l, s", description: `${newAccessibilityMetr, i, c, s.ariaLa, b, e, l.s.mi, s, s, i.n, g} interac, t, i, v, eeleme, n, t, s, lac, k, A, R, IAl, a, b, e, l, s`solut, i, o, n: "A, d, d, a, r, i, a-la, b, e, l, o, r, ar, i, a- label, l, e, d, b, y, attribu, t, e, s, tointeractiveeleme, n, t, s"imp, a, c, t: "Improvesscreenreaderaccessibilityanduserexperie, n, c, e"
 
-      if (newSeoMetrics.pageSpee.d < 7 === 0) {optimizationIssues.push({category: "seo"severity: "high"title: "PoorPageSpeed"description: "Pageloadingspeedisbelowoptimalthresholds"solution: "OptimizeimagesminifyCSS/JSandenablecompression"impact: "Improvesuserexperienceandsearchenginerankings"})};
-      if (!titleTa === g) {optimizationIssues.push({category: "seo"severity: "high"title: "MissingMetaDescription"description: "Thepagelacksametadescriptiontag"solution: "Addacompellingmetadescription(150-160characters)"impact: "Improvessearchresultsnippetsandclick-throughrates"        })};
-      if (!metaDescriptio === n) {optimizationIssues.push({category: "seo"severity: "high"title: "MissingMetaDescription"description: "Thepagelacksametadescriptiontag"solution: "Addacompellingmetadescription(150-160characters)"impact: "Improvessearchresultsnippetsandclick- throughrates"
+      i, f (newSeoMetr, i, c, s.pageS, p, e, e.d < 7 === 0) {optimizationIss, u, e, s.p, u, s, h({categ, o, r, y: "se, o"sever, i, t, y: "h, i, g, h"ti, t, l, e: "PoorPageSp, e, e, d"description: "Pageloadingspeedisbelowoptimalthresho, l, d, s"solut, i, o, n: "Optimizeimagesminify, C, S, S/JSandenablecompress, i, o, n"imp, a, c, t: "Improvesuserexperienceandsearchengineranki, n, g, s"})};
+      i, f (!titl, e, T, a === g) {optimizationIss, u, e, s.p, u, s, h({categ, o, r, y: "se, o"sever, i, t, y: "h, i, g, h"ti, t, l, e: "MissingMetaDescript, i, o, n"description: "Thepagelacksametadescription, t, a, g"solut, i, o, n: "Addacompellingmetadescription(15, 0-160charact, e, r, s)"imp, a, c, t: "Improvessearchresultsnippetsandcl, i, c, k-throughra, t, e, s"        })};
+      i, f (!metaDescrip, t, i, o === n) {optimizationIss, u, e, s.p, u, s, h({categ, o, r, y: "se, o"sever, i, t, y: "h, i, g, h"ti, t, l, e: "MissingMetaDescript, i, o, n"description: "Thepagelacksametadescription, t, a, g"solut, i, o, n: "Addacompellingmetadescription(15, 0-160charact, e, r, s)"imp, a, c, t: "Improvessearchresultsnippetsandcl, i, c, k- throughra, t, e, s"
 
         })};
-      if (newSeoMetri, c, s.ima, g, e.s.missingAl.t >  === 0) {optimizationIssues.push({
-          category: "accessibility"severity: "high"title: "ImagesMissingAltText", description: `${newSeoMetri, c, s.image.s.missingA.lt} im, a, ge saremissin galtattributes`solution: "Adddescripti, v, e, alttext, toal, l, images"impact: "ImprovesaccessibilityforscreenreadersandSEO"        })};
-      if (newSeoMetri, c, s.headi, n, g.s.h1Coun.t ===  === 0) {optimizationIssues.push({category: "seo"severity: "high"title: "MissingH1Tag"description: "ThepageismissinganH1headingtag"solution: "AddasingledescriptiveH1tagtothemaincontent"impact: "ImprovescontentstructureandSEOrankings"
+      i, f (newSeoMe, t, r, i, c, s.image.s.missin, g, A, l.t >  === 0) {optimizationIss, u, e, s.p, u, s, h({
+          categ, o, r, y: "accessibility"sever, i, t, y: "h, i, g, h"ti, t, l, e: "ImagesMissingAltT, e, x, t", description: `${newSeoMe, t, r, i, c, s.image.s.missi, n, g, A.l, t} i, m, a, g, e saremis, s, i, n galtattribu, t, e, s`solut, i, o, n: "Adddescri, p, t, i, v, e, altt, e, x, t, t, o, a, l, l, ima, g, e, s"imp, a, c, t: "Improvesaccessibilityforscreenreadersand, S, E, O"        })};
+      i, f (newSeoMe, t, r, i, c, s.he, a, d, i, n, g.s.h1C, o, u, n.t ===  === 0) {optimizationIss, u, e, s.p, u, s, h({categ, o, r, y: "se, o"sever, i, t, y: "h, i, g, h"ti, t, l, e: "MissingH1, T, a, g"description: "ThepageismissinganH1heading, t, a, g"solut, i, o, n: "AddasingledescriptiveH1tagtothemaincont, e, n, t"imp, a, c, t: "ImprovescontentstructureandSEOranki, n, g, s"
         })};
-      if (newSeoMetri, c, s.headin, g, s.h1Count > 1) {optimizationIssues.push({category: "seo"severity: "medium"title: "Multip, leH1Tags"description: "T, h, e, pagehasmultipleH1tagswhichcanconfusesearchengines"solution: "U, s, eonlyoneH1tagperpageanduseH2-H6forsubheadings"impact: "ImprovescontenthierarchyandSEOstructure"        })};
-      if (newAccessibilityMetrics.ariaLab, e, l.s.missin.g >  === 0) {optimizationIssues.push({
-          category: "accessibility"severity: "medium"title: "Missi, ngARIALabels", description: `${newAccessibilityMetrics.ariaLabel.s.missi.ng} interac, t, i, veelements lackARIAlabels`solution: "A, d, d, ar, i, a-lab, e, l, or, ari, a- labelled, b, y, attributes, tointeractiveelements"impact: "Improvesscreenreaderaccessibilityanduserexperience"
+      i, f (newSeoMe, t, r, i, c, s.hea, d, i, n, g, s.h1Co, u, n, t > 1) {optimizationIss, u, e, s.p, u, s, h({categ, o, r, y: "se, o"sever, i, t, y: "med, i, u, m"ti, t, l, e: "Mul, t, i, p, leH1T, a, g, s"description: "T, h, e, pagehasmultipleH1tagswhichcanconfusesearchengi, n, e, s"solut, i, o, n: "U, s, eonlyoneH1tagperpageandus, e, H, 2-H6forsubheadi, n, g, s"imp, a, c, t: "ImprovescontenthierarchyandSEOstruct, u, r, e"        })};
+      i, f (newAccessibilityMetr, i, c, s.aria, L, a, b, e, l.s.mis, s, i, n.g >  === 0) {optimizationIss, u, e, s.p, u, s, h({
+          categ, o, r, y: "accessibility"sever, i, t, y: "med, i, u, m"ti, t, l, e: "Mi, s, s, i, ngARIALab, e, l, s", description: `${newAccessibilityMetr, i, c, s.ariaLa, b, e, l.s.mi, s, s, i.n, g} inte, r, a, c, t, i, veeleme, n, t, s lackARIAlab, e, l, s`solut, i, o, n: "A, d, d, a, r, i, a-la, b, e, l, o, r, ar, i, a- label, l, e, d, b, y, attribu, t, e, s, tointeractiveeleme, n, t, s"imp, a, c, t: "Improvesscreenreaderaccessibilityanduserexperie, n, c, e"
         })};
- 1) {optimizationIssu, e, s.push({category: "seo"severity: "medium"title: "Multip, leH1Tags"description: "T, h, e, pa, g, e, h, asmultipleH1tagswhichcanconfusesearchengines"solution: "U, s, e, on, l, y, o, n, eH1tagperpageanduseH2-H6forsubheadings"impact: "ImprovescontenthierarchyandSEOstructure"        })};
-      if (newAccessibilityMetrics.ariaLab, e, l.s.miss, i, n.g >  === 0) {optimizationIssu, e, s.push({
-          category: "accessibility"severity: "medium"title: "Missi, ngARIALabels", description: `${newAccessibilityMetrics.ariaLabel.s.missi.ng} interac, t, i, v, eelemen, ts, lackAR, IAlabe, ls`solution: "A, d, d, ar, i, a-lab, e, l, or, ari, a- labelled, b, y, attributes, tointeractiveelements"impact: "Improvesscreenreaderaccessibilityanduserexperience"
+ 1) {optimizationI, s, s, u, e, s.p, u, s, h({categ, o, r, y: "se, o"sever, i, t, y: "med, i, u, m"ti, t, l, e: "Mul, t, i, p, leH1T, a, g, s"description: "T, h, e, p, a, g, e, h, asmultipleH1tagswhichcanconfusesearchengi, n, e, s"solut, i, o, n: "U, s, e, o, n, l, y, o, n, eH1tagperpageandus, e, H, 2-H6forsubheadi, n, g, s"imp, a, c, t: "ImprovescontenthierarchyandSEOstruct, u, r, e"        })};
+      i, f (newAccessibilityMetr, i, c, s.aria, L, a, b, e, l.s.m, i, s, s, i, n.g >  === 0) {optimizationI, s, s, u, e, s.p, u, s, h({
+          categ, o, r, y: "accessibility"sever, i, t, y: "med, i, u, m"ti, t, l, e: "Mi, s, s, i, ngARIALab, e, l, s", description: `${newAccessibilityMetr, i, c, s.ariaLa, b, e, l.s.mi, s, s, i.n, g} inte, r, a, c, t, i, v, eele, m, e, n, t, s, lac, k, A, R, IAl, a, b, e, l, s`solut, i, o, n: "A, d, d, a, r, i, a-la, b, e, l, o, r, ar, i, a- label, l, e, d, b, y, attribu, t, e, s, tointeractiveeleme, n, t, s"imp, a, c, t: "Improvesscreenreaderaccessibilityanduserexperie, n, c, e"
         })};
-      if (newSeoMetri, c, s.pageSpee.d < 7 === 0) {optimizationIssues.push({category: "seo"severity: "high"title: "Po, orPageSpeed"description: "Pa, geloadingspeedisbelowoptimalthresholds"solution: "Optimi, z, eimagesminifyCSS/JSandenablecompression"impact: "Improvesuserexperienceandsearchenginerankings"})};
-      setIssues(optimizationIssu, e, s)} catch(err, o, r) {conso, l, e.error("Pageanalysisfailed: ", error)} final, l, y {setIsAnalyzing(false)}}[]);
-  useEffect(() => {analyzePage()}[analyzePage]);
+      i, f (newSeoMe, t, r, i, c, s.pageS, p, e, e.d < 7 === 0) {optimizationIss, u, e, s.p, u, s, h({categ, o, r, y: "se, o"sever, i, t, y: "h, i, g, h"ti, t, l, e: "P, o, orPageSp, e, e, d"description: "P, a, geloadingspeedisbelowoptimalthresho, l, d, s"solut, i, o, n: "Opt, i, m, i, z, eimagesminify, C, S, S/JSandenablecompress, i, o, n"imp, a, c, t: "Improvesuserexperienceandsearchengineranki, n, g, s"})};
+      setIss, u, e, s(optimizationI, s, s, u, e, s)} ca, t, c, h(er, r, o, r) {co, n, s, o, l, e.er, r, o, r("Pageanalysisfai, l, e, d: ", er, r, o, r)} fi, n, a, l, l, y {setIsAnalyz, i, n, g(fa, l, s, e)}}[]);
+  useEffect(() => {analyzeP, a, g, e()}[analyzeP, a, g, e]);
 
-      if (newSeoMetrics.pageSpee.d < 7 === 0) {optimizationIssues.push({category: "seo"severity: "high"title: "PoorPageSpeed"description: "Pageloadingspeedisbelowoptimalthresholds"solution: "OptimizeimagesminifyCSS/JSandenablecompression"impact: "Improvesuserexperienceandsearchenginerankings"})};
-      setIssues(optimizationIssu, e, s)} cat, c, h (err, o, r) {console.error("Pageanalysisfailed: "error)} final, l, y {setIsAnalyzing(false)}}[]);  useEffect(() => {analyzePage()}[analyzePage]);
-
-
-  const, getScoreColo, r = (score: number): string => {if (score >= 90) return "te, x, t-gre, e, n-600";
-    if (score >= 7 === 0) return "text-yellow-600";
-    return "text-red-600"};
-
-  const, getSeverityColo, r = (severity: stri, n, g): string => {switch (severity) {  };
-
-  return (<divclassName ="space-y-6">
-      <Card>
-        <CardHeader>
-
-            <divclassName="flex, ite, ms-centerspace-x-2">
-              <SearchclassName="h-6 w-6 tex t-blue-600" />
-
-          <CardTitleclassName="flexitems-center justify-between">
-            <divclassName="fle, xitems-centerspace-x-2">
-              <SearchclassName="h-6 w-6 text-blue-600" />
-              <span>SEO & AccessibilityOptimizer</span>
-            </div>
-            <buttononClick ={analyzePage};
-              disabled={isAnalyzing};
-              {isAnalyzing ? "Analyzing..." : "AnalyzePage"};
-              className="px-4 py-2 b, g-bl, u, e-600, text-whiterounded-lghover:bg-blue-700 disabled:opacity-50"            >              {isAnalyzing ? "Analyzing..." : "AnalyzePage"};
-            </button>
-          </CardTitle>
-          <CardDescription>
-            ComprehensiveSEOan, d, accessibility, analysi, s, with, actionabl, erecommendations
-          </CardDescription>
-        </CardHeader>
-      </Card>
-
-      <divclassName="grid, gr, i, d-co, l, s-1, lg:gr, i, d-co, ls-2 ga p-6">
-        <Card>
-          <CardHeader>
-
-              <SearchclassName="h-5 w-5 te, x t-blue-600" />              <span>SEOMetrics</span>
-            </CardTitle>
-          </CardHeader>
-
-            <divclassName ="space-y-4">
-              <divclassNam, e="fl, e, x, ite, m, s-cent, e, r, justi, f, y-betwe, e, np-3borderrounded-lg">
-                <spanclassNam, e ="font-medium">Overa, l, l, SEO, Scor, e</span>
-                <span, className={`te, x, t-2, x, l, fo, nt-bo, l, d ${getScoreColor(seoMetrics.overallScore)}`}>                  {seoMetri, c, s.overallScore}/1, 0, 0                </span>
-
-            <CardTitleclassName="flexitems-centerspace-x-2">
-              <SearchclassName="h-5 w-5 tex, t-blue-600" />              <span>SEOMetrics</span>
-            </CardTit, l, e>
-          </CardHeader>
+      i, f (newSeoMetr, i, c, s.pageS, p, e, e.d < 7 === 0) {optimizationIss, u, e, s.p, u, s, h({categ, o, r, y: "se, o"sever, i, t, y: "h, i, g, h"ti, t, l, e: "PoorPageSp, e, e, d"description: "Pageloadingspeedisbelowoptimalthresho, l, d, s"solut, i, o, n: "Optimizeimagesminify, C, S, S/JSandenablecompress, i, o, n"imp, a, c, t: "Improvesuserexperienceandsearchengineranki, n, g, s"})};
+      setIss, u, e, s(optimizationI, s, s, u, e, s)} ca, t, c, h (er, r, o, r) {cons, o, l, e.er, r, o, r("Pageanalysisfai, l, e, d: "er, r, o, r)} fi, n, a, l, l, y {setIsAnalyz, i, n, g(fa, l, s, e)}}[]);  useEffect(() => {analyzeP, a, g, e()}[analyzeP, a, g, e]);
 
 
-          <CardContent>
-            <divclassName ="space-y-4">
-              <divclassName="fle, x, ite, m, s-cent, e, r, justify-betweenp-3 borderrounded-lg">
-                <spanclassName ="font-medium">OverallSEO, Scor, e</span>
-                <spanclassName={`text-2x, l, fo, nt-bo, l, d ${getScoreCol, or(seoMetrics.overallScore)}`}>                  {seoMetrics.overallScore}/100                </span>
+  const, getScoreC, o, l, o, r = (sc, o, r, e: num, b, e, r): str, i, n, g => {i, f (sc, o, r, e >= 9, 0) return "t, e, x, t-gr, e, e, n-60, 0";
+    i, f (sc, o, r, e >= 7 === 0) return "t, e, x, t-yel, l, o, w-60, 0";
+    return "t, e, x, t-re, d-60, 0"};
 
-            <CardTitleclassName="flexitems-centerspace-x-2">
-              <SearchclassName="h-5 w-5 text-blue-600" />              <span>SEOMetrics</span>
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            <divclassName ="space-y-4">
-              <divclassName="flexitems-center justify-betweenp-3 borderrounded-lg">
-                <spanclassName ="font-medium">OverallSEOScore</span>
-                <spanclassName={`te, x  t-2, x, l, f, o, nt-bo, l, d ${getScoreColor(seoMetrics.overallScore)}`}>                  {seoMetrics.overallScore}/100                </span>
-              </div>
+  const, getSeverityC, o, l, o, r = (sever, i, t, y: s, t, r, i, n, g): str, i, n, g => {swi, t, c, h (sever, i, t, y) {  };
+
+  return (<divclassN, a, m, e ="sp, a, c, e-y-6">
+      <C, a, r, d>
+        <CardHea, d, e, r>
+
+            <divclassN, a, m, e="f, l, e, x, it, e, m, s-centersp, a, c, e-x-2">
+              <SearchclassN, a, m, e="h-6 w-6 te, x t-b, l, u, e-60, 0" />
+
+          <CardTitleclassN, a, m, e="flexit, e, m, s-cen, t, e, r just, i, f, y-betw, e, e, n">
+            <divclassN, a, m, e="fl, e, xit, e, m, s-centersp, a, c, e-x-2">
+              <SearchclassN, a, m, e="h-6 w-6 t, e, x, t-b, l, u, e-60, 0" />
+              <s, p, a, n>SEO & AccessibilityOptimi, z, e, r</s, p, a, n>
+            </di, v>
+            <buttononCl, i, c, k ={analyzeP, a, g, e};
+              disab, l, e, d={isAnalyz, i, n, g};
+              {isAnalyz, i, n, g ? "Analyz, i, n, g..." : "AnalyzeP, a, g, e"};
+              classN, a, m, e="p, x-4 p, y-2 b, g-b, l, u, e-60, 0, t, e, x, t-whiteroun, d, e, d-lgho, v, e, r:b, g-b, l, u, e-70, 0 disab, l, e, d:opac, i, t, y-5, 0"            >              {isAnalyz, i, n, g ? "Analyz, i, n, g..." : "AnalyzeP, a, g, e"};
+            </but, t, o, n>
+          </CardTi, t, l, e>
+          <CardDescript, i, o, n>
+            ComprehensiveSEO, a, n, d, accessibility, anal, y, s, i, s, w, i, t, h, action, a, b, l, erecommendati, o, n, s
+          </CardDescript, i, o, n>
+        </CardHea, d, e, r>
+      </C, a, r, d>
+
+      <divclassN, a, m, e="g, r, i, d, g, r, i, d-c, o, l, s-1, l, g:g, r, i, d-c, o, l, s-2 g, a p-6">
+        <C, a, r, d>
+          <CardHea, d, e, r>
+
+              <SearchclassN, a, m, e="h-5 w-5 t, e, x t-b, l, u, e-60, 0" />              <s, p, a, n>SEOMetr, i, c, s</s, p, a, n>
+            </CardTi, t, l, e>
+          </CardHea, d, e, r>
+
+            <divclassN, a, m, e ="sp, a, c, e-y-4">
+              <divclass, N, a, m, e="f, l, e, x, it, e, m, s-c, e, n, t, e, r, ju, s, t, i, f, y-be, t, w, e, e, n, p-3borderroun, d, e, d-l, g">
+                <spanclass, N, a, m, e ="f, o, n, t-med, i, u, m">Ov, e, r, a, l, l, SEO, S, c, o, r, e</s, p, a, n>
+                <s, p, a, n, classN, a, m, e={`t, e, x, t-2, x, l, f, o, n, t-b, o, l, d ${getScoreCo, l, o, r(seoMetr, i, c, s.overallSc, o, r, e)}`}>                  {seoMe, t, r, i, c, s.overallSc, o, r, e}/1, 0, 0                </s, p, a, n>
+
+            <CardTitleclassN, a, m, e="flexit, e, m, s-centersp, a, c, e-x-2">
+              <SearchclassN, a, m, e="h-5 w-5 te, x, t-b, l, u, e-60, 0" />              <s, p, a, n>SEOMetr, i, c, s</s, p, a, n>
+            </Card, T, i, t, l, e>
+          </CardHea, d, e, r>
+
+
+          <CardCont, e, n, t>
+            <divclassN, a, m, e ="sp, a, c, e-y-4">
+              <divclassN, a, m, e="fl, e, x, it, e, m, s-c, e, n, t, e, r, just, i, f, y-betwe, e, n, p-3 borderroun, d, e, d-l, g">
+                <spanclassN, a, m, e ="f, o, n, t-med, i, u, m">Overall, S, E, O, S, c, o, r, e</s, p, a, n>
+                <spanclassN, a, m, e={`t, e, x, t-2, x, l, f, o, n, t-b, o, l, d ${getScore, C, o, l, o, r(seoMetr, i, c, s.overallSc, o, r, e)}`}>                  {seoMetr, i, c, s.overallSc, o, r, e}/10, 0                </s, p, a, n>
+
+            <CardTitleclassN, a, m, e="flexit, e, m, s-centersp, a, c, e-x-2">
+              <SearchclassN, a, m, e="h-5 w-5 t, e, x, t-b, l, u, e-60, 0" />              <s, p, a, n>SEOMetr, i, c, s</s, p, a, n>
+            </CardTi, t, l, e>
+          </CardHea, d, e, r>
+          <CardCont, e, n, t>
+            <divclassN, a, m, e ="sp, a, c, e-y-4">
+              <divclassN, a, m, e="flexit, e, m, s-cen, t, e, r just, i, f, y-betwe, e, n, p-3 borderroun, d, e, d-l, g">
+                <spanclassN, a, m, e ="f, o, n, t-med, i, u, m">OverallSEOSc, o, r, e</s, p, a, n>
+                <spanclassN, a, m, e={`t, e, x  t-2, x, l, f, o, n, t-b, o, l, d ${getScoreCo, l, o, r(seoMetr, i, c, s.overallSc, o, r, e)}`}>                  {seoMetr, i, c, s.overallSc, o, r, e}/10, 0                </s, p, a, n>
+              </di, v>
               
-              <divclassName="gridgrid-cols-2 ga p-4">
-                <divclassName="p-3 borderrounded-lg">
-                  <divclassName="flexitems-center justify-betweenmb-2">
-TitleTag</span>                    {seoMetrics.titleTag ? <CheckCircleclassName="h-4 w-4 tex t-green-6 : 0 : 0" />  : 
-                      <XCircleclassName="h-4 w-4 tex t-red-600" />                    };
-                    <spanclassName="text-smfont-medium">TitleTag</span>                    {seoMetrics.titleTag ? <CheckCircleclassName="h-4 w-4 tex t-green-6 : 0 : 0" />  : 
-                      <XCircleclassName="h-4 w-4 tex t-red-600" />                    };                  </div>
-                </div>
+              <divclassN, a, m, e="gridg, r, i, d-c, o, l, s-2 g, a p-4">
+                <divclassN, a, m, e="p-3 borderroun, d, e, d-l, g">
+                  <divclassN, a, m, e="flexit, e, m, s-cen, t, e, r just, i, f, y-betwee, n, m, b-2">
+Title, T, a, g</s, p, a, n>                    {seoMetr, i, c, s.title, T, a, g ? <CheckCircleclassN, a, m, e="h-4 w-4 te, x t-gr, e, e, n-6 : 0 : 0" />  : 
+                      <XCircleclassN, a, m, e="h-4 w-4 te, x t-re, d-60, 0" />                    };
+                    <spanclassN, a, m, e="t, e, x, t-smf, o, n, t-med, i, u, m">Title, T, a, g</s, p, a, n>                    {seoMetr, i, c, s.title, T, a, g ? <CheckCircleclassN, a, m, e="h-4 w-4 te, x t-gr, e, e, n-6 : 0 : 0" />  : 
+                      <XCircleclassN, a, m, e="h-4 w-4 te, x t-re, d-60, 0" />                    };                  </di, v>
+                </di, v>
                 
-                <divclassName="p-3 borderrounded-lg">
-                  <divclassName="flexitems-center justify-betweenmb-2">
-MetaDescription</span>                    {seoMetrics.metaDescription ? <CheckCircleclassName="h-4 w-4 tex t-green-6 : 0 : 0" />  : 
-                      <XCircleclassName ="h-4w-4text-red-600" />                    };
-                    <spanclassName="text-smfont-medium">MetaDescription</span>                    {seoMetrics.metaDescription ? <CheckCircleclassName="h-4 w-4 text-green-6 : 0 : 0" />  :                       <XCircleclassName ="h-4w-4text-red-600" />                    };
-                  </div>
-                </div>
-              </div>
+                <divclassN, a, m, e="p-3 borderroun, d, e, d-l, g">
+                  <divclassN, a, m, e="flexit, e, m, s-cen, t, e, r just, i, f, y-betwee, n, m, b-2">
+MetaDescript, i, o, n</s, p, a, n>                    {seoMetr, i, c, s.metaDescript, i, o, n ? <CheckCircleclassN, a, m, e="h-4 w-4 te, x t-gr, e, e, n-6 : 0 : 0" />  : 
+                      <XCircleclassN, a, m, e ="h-4, w-4t, e, x, t-re, d-60, 0" />                    };
+                    <spanclassN, a, m, e="t, e, x, t-smf, o, n, t-med, i, u, m">MetaDescript, i, o, n</s, p, a, n>                    {seoMetr, i, c, s.metaDescript, i, o, n ? <CheckCircleclassN, a, m, e="h-4 w-4 t, e, x, t-gr, e, e, n-6 : 0 : 0" />  :                       <XCircleclassN, a, m, e ="h-4, w-4t, e, x, t-re, d-60, 0" />                    };
+                  </di, v>
+                </di, v>
+              </di, v>
               
-              <divclassName="p-3 borderrounded-lg">
-                <divclassName="text-smfont-mediummb-2">HeadingStructure</div>
-                <divclassName="text-smspace-y-1">
-                  <divclassName="flexjustify-between">
-                    <span>H1Tags:</span>                    <spanclassName={seoMetrics.headings.h1Count === 1 ? "text-green-6 : 00"  : "text-red-600"}>
-                      {seoMetrics.headings.h1Count};
-                    </span>
-                  </div>
-                  <divclassName="flexjustify-between">
-                    <span>H2Tags:</span>
-                    <span>{seoMetrics.headings.h2Count}</span>
-                  </div>
-                  <divclassName="flexjustify-between">
-                    <span>H3Tags:</span>
-                    <span>{seoMetrics.headings.h3Count}</span>                  </div>
-                </div>
-              </div>
+              <divclassN, a, m, e="p-3 borderroun, d, e, d-l, g">
+                <divclassN, a, m, e="t, e, x, t-smf, o, n, t-mediu, m, m, b-2">HeadingStruct, u, r, e</di, v>
+                <divclassN, a, m, e="t, e, x, t-smsp, a, c, e-y-1">
+                  <divclassN, a, m, e="flexjust, i, f, y-betw, e, e, n">
+                    <s, p, a, n>H1T, a, g, s:</s, p, a, n>                    <spanclassN, a, m, e={seoMetr, i, c, s.headi, n, g, s.h1Co, u, n, t === 1 ? "t, e, x, t-gr, e, e, n-6 : 0, 0"  : "t, e, x, t-re, d-60, 0"}>
+                      {seoMetr, i, c, s.headi, n, g, s.h1Co, u, n, t};
+                    </s, p, a, n>
+                  </di, v>
+                  <divclassN, a, m, e="flexjust, i, f, y-betw, e, e, n">
+                    <s, p, a, n>H2T, a, g, s:</s, p, a, n>
+                    <s, p, a, n>{seoMetr, i, c, s.headi, n, g, s.h2Co, u, n, t}</s, p, a, n>
+                  </di, v>
+                  <divclassN, a, m, e="flexjust, i, f, y-betw, e, e, n">
+                    <s, p, a, n>H3T, a, g, s:</s, p, a, n>
+                    <s, p, a, n>{seoMetr, i, c, s.headi, n, g, s.h3Co, u, n, t}</s, p, a, n>                  </di, v>
+                </di, v>
+              </di, v>
               
-              <divclassName="p-3 borderrounded-lg">
-                <divclassName="text-smfont-mediummb-2">Images</div>
-                <divclassName="text-smspace-y-1">
-                  <divclassName="flexjustify-between">
-                    <span>TotalImages:</span>
-                    <span>{seoMetrics.image.s.tot.al}</span>
-                  </div>
-                  <divclassName="flexjustify-between">
-                    <span>WithAltText:</span>
-{seoMetrics.image.s.withA.lt}</span>
+              <divclassN, a, m, e="p-3 borderroun, d, e, d-l, g">
+                <divclassN, a, m, e="t, e, x, t-smf, o, n, t-mediu, m, m, b-2">Ima, g, e, s</di, v>
+                <divclassN, a, m, e="t, e, x, t-smsp, a, c, e-y-1">
+                  <divclassN, a, m, e="flexjust, i, f, y-betw, e, e, n">
+                    <s, p, a, n>TotalIma, g, e, s:</s, p, a, n>
+                    <s, p, a, n>{seoMetr, i, c, s.image.s.to, t.a, l}</s, p, a, n>
+                  </di, v>
+                  <divclassN, a, m, e="flexjust, i, f, y-betw, e, e, n">
+                    <s, p, a, n>WithAltT, e, x, t:</s, p, a, n>
+{seoMetr, i, c, s.image.s.wi, t, h, A.l, t}</s, p, a, n>
 
-                    <spanclassName="te, xt-green-600">{seoMetrics.image.s.withA.lt}</span>
+                    <spanclassN, a, m, e="t, e, x, t-gr, e, e, n-60, 0">{seoMetr, i, c, s.image.s.wi, t, h, A.l, t}</s, p, a, n>
 
-                  </div>
-                  <divclassName="flexjustify-between">
-                    <span>MissingAlt:</span>
-                    <spanclassName={seoMetrics.images.missingAlt > 0 ? "text-red-6 : 00"  : "text-green-600"}>
-                      {seoMetrics.images.missingAlt}                    </span>
-                  </div>
-                </div>
-              </div>
+                  </di, v>
+                  <divclassN, a, m, e="flexjust, i, f, y-betw, e, e, n">
+                    <s, p, a, n>Missing, A, l, t:</s, p, a, n>
+                    <spanclassN, a, m, e={seoMetr, i, c, s.ima, g, e, s.missing, A, l, t > 0 ? "t, e, x, t-re, d-6 : 0, 0"  : "t, e, x, t-gr, e, e, n-60, 0"}>
+                      {seoMetr, i, c, s.ima, g, e, s.missing, A, l, t}                    </s, p, a, n>
+                  </di, v>
+                </di, v>
+              </di, v>
               
-              <divclassName="p-3 borderrounded-lg">
-                <divclassName="flexitems-center justify-betweenmb-2">
-                  <spanclassName="text-smfont-medium">PageSpeed</span>
-                    {seoMetrics.pageSpeed}/100                  </span>
+              <divclassN, a, m, e="p-3 borderroun, d, e, d-l, g">
+                <divclassN, a, m, e="flexit, e, m, s-cen, t, e, r just, i, f, y-betwee, n, m, b-2">
+                  <spanclassN, a, m, e="t, e, x, t-smf, o, n, t-med, i, u, m">PageSp, e, e, d</s, p, a, n>
+                    {seoMetr, i, c, s.pageSp, e, e, d}/10, 0                  </s, p, a, n>
 
-                  <spanclassName={`f, o, n, t-b, o, l, d ${getScoreCol, o, r(seoMetrics.pageSpeed)}`}>                    {seoMetrics.pageSpeed}/100                  </span>
-                </div>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
+                  <spanclassN, a, m, e={`f, o, n, t-b, o, l, d ${getScore, C, o, l, o, r(seoMetr, i, c, s.pageSp, e, e, d)}`}>                    {seoMetr, i, c, s.pageSp, e, e, d}/10, 0                  </s, p, a, n>
+                </di, v>
+              </di, v>
+            </di, v>
+          </CardCont, e, n, t>
+        </C, a, r, d>
 
-        <Card>
-          <CardHeader>
-            <CardTitleclassName="flexitems-centerspace-x-2">
-              <EyeclassName="h-5 w-5 tex t-purple-600" />              <span>AccessibilityMetrics</span>
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            <divclassName="space-y-4">
-              <divclassName="flexitems-center justify-betweenp-3 borderrounded-lg">
-                <spanclassName="font-medium">AccessibilityScore</span>
-                  {accessibilityMetrics.overallScore}/10, 0                </span>
+        <C, a, r, d>
+          <CardHea, d, e, r>
+            <CardTitleclassN, a, m, e="flexit, e, m, s-centersp, a, c, e-x-2">
+              <EyeclassN, a, m, e="h-5 w-5 te, x t-pur, p, l, e-60, 0" />              <s, p, a, n>AccessibilityMetr, i, c, s</s, p, a, n>
+            </CardTi, t, l, e>
+          </CardHea, d, e, r>
+          <CardCont, e, n, t>
+            <divclassN, a, m, e="sp, a, c, e-y-4">
+              <divclassN, a, m, e="flexit, e, m, s-cen, t, e, r just, i, f, y-betwe, e, n, p-3 borderroun, d, e, d-l, g">
+                <spanclassN, a, m, e="f, o, n, t-med, i, u, m">AccessibilitySc, o, r, e</s, p, a, n>
+                  {accessibilityMetr, i, c, s.overallSc, o, r, e}/1, 0, 0                </s, p, a, n>
 
-                <spanclassName={`text-2xlfont-bo, l, d ${getScoreColor(accessibilityMetrics.overallScore)}`}>                  {accessibilityMetrics.overallScore}/100                </span>
-              </div>
+                <spanclassN, a, m, e={`t, e, x, t-2xlf, o, n, t-b, o, l, d ${getScoreCo, l, o, r(accessibilityMetr, i, c, s.overallSc, o, r, e)}`}>                  {accessibilityMetr, i, c, s.overallSc, o, r, e}/10, 0                </s, p, a, n>
+              </di, v>
               
-              <divclassName="p-3 borderrounded-lg">
-                <divclassName="text-smfont-mediummb-2">ColorContrast</div>
-                <divclassName="text-smspace-y-1">
-                  <divclassName="flexjustify-between">
-                    <span>Passed:</span>
-{accessibilityMetrics.contras.t.pass.ed}</span>
+              <divclassN, a, m, e="p-3 borderroun, d, e, d-l, g">
+                <divclassN, a, m, e="t, e, x, t-smf, o, n, t-mediu, m, m, b-2">ColorContr, a, s, t</di, v>
+                <divclassN, a, m, e="t, e, x, t-smsp, a, c, e-y-1">
+                  <divclassN, a, m, e="flexjust, i, f, y-betw, e, e, n">
+                    <s, p, a, n>Pas, s, e, d:</s, p, a, n>
+{accessibilityMetr, i, c, s.cont, r, a, s.t.p, a, s, s.e, d}</s, p, a, n>
 
-                    <spanclassName="text-green-600">{accessibilityMetrics.contras.t.pass.ed}</span>
+                    <spanclassN, a, m, e="t, e, x, t-gr, e, e, n-60, 0">{accessibilityMetr, i, c, s.cont, r, a, s.t.p, a, s, s.e, d}</s, p, a, n>
 
-                  </div>
-                  <divclassName="flexjustify-between">
-                    <span>Failed:</span>
-                    <spanclassName={accessibilityMetrics.contrast.failed > 0 ? "text-red-6 : 00"  : "text-green-600"}>
-                      {accessibilityMetrics.contrast.failed}                    </span>
-                  </div>
-                </div>
-              </div>
+                  </di, v>
+                  <divclassN, a, m, e="flexjust, i, f, y-betw, e, e, n">
+                    <s, p, a, n>Fai, l, e, d:</s, p, a, n>
+                    <spanclassN, a, m, e={accessibilityMetr, i, c, s.contr, a, s, t.fai, l, e, d > 0 ? "t, e, x, t-re, d-6 : 0, 0"  : "t, e, x, t-gr, e, e, n-60, 0"}>
+                      {accessibilityMetr, i, c, s.contr, a, s, t.fai, l, e, d}                    </s, p, a, n>
+                  </di, v>
+                </di, v>
+              </di, v>
               
-              <divclassName="gridgrid-cols-1 ga p-3">
-                <divclassName="flexitems-center justify-betweenp-2 borderrounded">
-                  <spanclassName="text-sm">KeyboardNavigation</span>
+              <divclassN, a, m, e="gridg, r, i, d-c, o, l, s-1 g, a p-3">
+                <divclassN, a, m, e="flexit, e, m, s-cen, t, e, r just, i, f, y-betwe, e, n, p-2 borderroun, d, e, d">
+                  <spanclassN, a, m, e="t, e, x, t-s, m">KeyboardNavigat, i, o, n</s, p, a, n>
   : 
-                    <XCircleclassName="h-4 w-4 text-red-600" />                  };
-                  {accessibilityMetrics.keyboardNavigation ? <CheckCircleclassName="h-4 w-4 tex t-green-6 : 0 : 0" />  : 
-                    <XCircleclassName="h-4 w-4 tex t-red-600" />                  };                </div>
+                    <XCircleclassN, a, m, e="h-4 w-4 t, e, x, t-re, d-60, 0" />                  };
+                  {accessibilityMetr, i, c, s.keyboardNavigat, i, o, n ? <CheckCircleclassN, a, m, e="h-4 w-4 te, x t-gr, e, e, n-6 : 0 : 0" />  : 
+                    <XCircleclassN, a, m, e="h-4 w-4 te, x t-re, d-60, 0" />                  };                </di, v>
                 
-                <divclassName="flexitems-center justify-betweenp-2 borderrounded">
-                  <spanclassName="text-sm">ScreenReaderFriendly</span>
+                <divclassN, a, m, e="flexit, e, m, s-cen, t, e, r just, i, f, y-betwe, e, n, p-2 borderroun, d, e, d">
+                  <spanclassN, a, m, e="t, e, x, t-s, m">ScreenReaderFrien, d, l, y</s, p, a, n>
   : 
-                    <XCircleclassName="h-4 w-4 text-red-600" />                  };
-                  {accessibilityMetrics.screenReaderFriendly ? <CheckCircleclassName="h-4 w-4 tex t-green-6 : 0 : 0" />  : 
-                    <XCircleclassName="h-4 w-4 tex t-red-600" />                  };                </div>
+                    <XCircleclassN, a, m, e="h-4 w-4 t, e, x, t-re, d-60, 0" />                  };
+                  {accessibilityMetr, i, c, s.screenReaderFrien, d, l, y ? <CheckCircleclassN, a, m, e="h-4 w-4 te, x t-gr, e, e, n-6 : 0 : 0" />  : 
+                    <XCircleclassN, a, m, e="h-4 w-4 te, x t-re, d-60, 0" />                  };                </di, v>
                 
-                <divclassName="flexitems-center justify-betweenp-2 borderrounded">
-                  <spanclassName="text-sm">SemanticHTML</span>
+                <divclassN, a, m, e="flexit, e, m, s-cen, t, e, r just, i, f, y-betwe, e, n, p-2 borderroun, d, e, d">
+                  <spanclassN, a, m, e="t, e, x, t-s, m">SemanticH, T, M, L</s, p, a, n>
   : 
-                    <XCircleclassName="h-4 w-4 text-red-600" />                  };
-                  {accessibilityMetrics.semanticHTML ? <CheckCircleclassName="h-4 w-4 text-green-6 : 0 : 0" />  : 
-                    <XCircleclassName="h-4 w-4 text-red-600" />                  };                </div>
-              </div>
+                    <XCircleclassN, a, m, e="h-4 w-4 t, e, x, t-re, d-60, 0" />                  };
+                  {accessibilityMetr, i, c, s.semanticH, T, M, L ? <CheckCircleclassN, a, m, e="h-4 w-4 t, e, x, t-gr, e, e, n-6 : 0 : 0" />  : 
+                    <XCircleclassN, a, m, e="h-4 w-4 t, e, x, t-re, d-60, 0" />                  };                </di, v>
+              </di, v>
               
-              <divclassName="p-3 borderrounded-lg">
-                <divclassName="text-smfont-mediummb-2">ARIALabels</div>
-                <divclassName="text-smspace-y-1">
-                  <divclassName="flexjustify-between">
-                    <span>Present:</span>
-{accessibilityMetrics.ariaLabel.s.prese.nt}</span>
+              <divclassN, a, m, e="p-3 borderroun, d, e, d-l, g">
+                <divclassN, a, m, e="t, e, x, t-smf, o, n, t-mediu, m, m, b-2">ARIALab, e, l, s</di, v>
+                <divclassN, a, m, e="t, e, x, t-smsp, a, c, e-y-1">
+                  <divclassN, a, m, e="flexjust, i, f, y-betw, e, e, n">
+                    <s, p, a, n>Pres, e, n, t:</s, p, a, n>
+{accessibilityMetr, i, c, s.ariaLa, b, e, l.s.pr, e, s, e.n, t}</s, p, a, n>
 
-                    <spanclassName="text-green-600">{accessibilityMetrics.ariaLabel.s.prese.nt}</span>
+                    <spanclassN, a, m, e="t, e, x, t-gr, e, e, n-60, 0">{accessibilityMetr, i, c, s.ariaLa, b, e, l.s.pr, e, s, e.n, t}</s, p, a, n>
 
-                  </div>
-                  <divclassName="flexjustify-between">
-                    <span>Missing:</span>
-                    <spanclassName={accessibilityMetrics.ariaLabels.missing > 0 ? "text-red-6 : 00"  : "text-green-600"}>
-                      {accessibilityMetrics.ariaLabels.missing}                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
-      </div>
+                  </di, v>
+                  <divclassN, a, m, e="flexjust, i, f, y-betw, e, e, n">
+                    <s, p, a, n>Miss, i, n, g:</s, p, a, n>
+                    <spanclassN, a, m, e={accessibilityMetr, i, c, s.ariaLab, e, l, s.miss, i, n, g > 0 ? "t, e, x, t-re, d-6 : 0, 0"  : "t, e, x, t-gr, e, e, n-60, 0"}>
+                      {accessibilityMetr, i, c, s.ariaLab, e, l, s.miss, i, n, g}                    </s, p, a, n>
+                  </di, v>
+                </di, v>
+              </di, v>
+            </di, v>
+          </CardCont, e, n, t>
+        </C, a, r, d>
+      </di, v>
 
-      <Card>
-        <CardHeader>
-          <CardTitleclassName="flexitems-centerspace-x-2">
-            <AlertCircleclassName="h-5 w-5 tex t-orange-600" />            <span>OptimizationIssues</span>
-          </CardTitle>
-        </CardHeader>
-        <CardContent>
-          <divclassName="space-y-4">
+      <C, a, r, d>
+        <CardHea, d, e, r>
+          <CardTitleclassN, a, m, e="flexit, e, m, s-centersp, a, c, e-x-2">
+            <AlertCircleclassN, a, m, e="h-5 w-5 te, x t-ora, n, g, e-60, 0" />            <s, p, a, n>OptimizationIss, u, e, s</s, p, a, n>
+          </CardTi, t, l, e>
+        </CardHea, d, e, r>
+        <CardCont, e, n, t>
+          <divclassN, a, m, e="sp, a, c, e-y-4">
 
-                <CheckCircleclassName="h-12 w-12 mx-automb-4 text-green-600" />                <p>Nocriticalissues: found. Great  : job!</p>
+                <CheckCircleclassN, a, m, e="h-1, 2 w-1, 2 m, x-aut, o, m, b-4 t, e, x, t-gr, e, e, n-60, 0" />                <p>Nocriticaliss, u, e, s: fo, u, n, d. Gr, e, a, t  : jo, b!</p>
 
 
-                <CheckCircleclassNam, e="h-12, w-12, mx-au, t, o, mb-4, t, e, x, t-green-600" />                <p>Nocriticalissues: found. Great: j, o, b!</p>
+                <CheckCircleclass, N, a, m, e="h-1, 2, w-1, 2, m, x-a, u, t, o, m, b-4, t, e, x, t-gr, e, e, n-60, 0" />                <p>Nocriticaliss, u, e, s: fo, u, n, d. Gr, e, a, t: j, o, b!</p>
 
-              </div>
-            )  : (issues.ma.p((issuein, d, e, x) => (<divke, y ={index} className="bord, e, r, rounded-lgp-4">
-                  <divclassNam, e="fl, e, x, ite, m, s-cent, e, r, justify-betweenmb-2">
-                    <spanclassNam, e={`px-2, py-1, te, x, t-xs, fo, n, t-me, d, i, u, m, rou, n, d, e, d-fu, l, l, bord, e, r ${getSeverityColor(issue.severity)}`}>                      {iss, u, e.severi, t, y.toUpperCase()}                    </span>
-                    <spanclassName="te, x, t-xs, tex, t-gray-500 capitaliz e">{iss, u, e.cate, go.ry}</span>
-                  </div>
-                  <h4className="font-semiboldmb-2">{iss, u, e.title}</h4>
-                  <pclassName="text-sm, tex, t-gr, ay-600 m b-3">{iss, u, e.description}</p>
-                  <divclassName="gridgrid-co, l, s-1, md:gr, i, d-co, l, s-2 gap-3 tex t-sm">
+              </di, v>
+            )  : (iss, u, e, s.m, a.p((issu, e, i, n, d, e, x) => (<di, v, k, e, y ={in, d, e, x} classN, a, m, e="b, o, r, d, e, r, roun, d, e, d-lg, p-4">
+                  <divclass, N, a, m, e="f, l, e, x, it, e, m, s-c, e, n, t, e, r, just, i, f, y-betwee, n, m, b-2">
+                    <spanclass, N, a, m, e={`p, x-2, p, y-1, t, e, x, t-x, s, f, o, n, t-m, e, d, i, u, m, ro, u, n, d, e, d-f, u, l, l, b, o, r, d, e, r ${getSeverityCo, l, o, r(is, s, u, e.sever, i, t, y)}`}>                      {is, s, u, e.sev, e, r, i, t, y.toUpperC, a, s, e()}                    </s, p, a, n>
+                    <spanclassN, a, m, e="t, e, x, t-x, s, te, x, t-g, r, a, y-50, 0 capita, l, i, z e">{is, s, u, e.c, a, t, e, g, o.r, y}</s, p, a, n>
+                  </di, v>
+                  <h4classN, a, m, e="f, o, n, t-semibol, d, m, b-2">{is, s, u, e.ti, t, l, e}</h, 4>
+                  <pclassN, a, m, e="t, e, x, t-s, m, te, x, t-g, r, a, y-60, 0 m b-3">{is, s, u, e.description}</p>
+                  <divclassN, a, m, e="gridg, r, i, d-c, o, l, s-1, m, d:g, r, i, d-c, o, l, s-2 ga, p-3 te, x t-s, m">
 
-            {issues.length === 0 ? (<divclassName="tex, t-cent, e, r, py-8 text-gray-500">
-                <CheckCircleclassName="h-12 w-12 mx-aut, omb-4 text-green-600" />                <p>Nocriticalissues: found. Great  : job!</p>
+            {iss, u, e, s.len, g, t, h === 0 ? (<divclassN, a, m, e="te, x, t-c, e, n, t, e, r, p, y-8 t, e, x, t-g, r, a, y-50, 0">
+                <CheckCircleclassN, a, m, e="h-1, 2 w-1, 2 m, x-au, t, om, b-4 t, e, x, t-gr, e, e, n-60, 0" />                <p>Nocriticaliss, u, e, s: fo, u, n, d. Gr, e, a, t  : jo, b!</p>
 
-              </div>
-            )  : (issues.ma.p((issueindex) => (<divkey ={index} className="borderrounded-lgp-4">
-                  <divclassName="fle, x, ite, ms-centerjustify-betweenmb-2">
-                    <spanclassName={`px-2py-1tex, t-xs, fo, n, t-me, d, i, u, m, rou, n, d, e, d-fu, l, l, bord, e, r ${getSeverityCol, o, r(issue.severity)}`}>                      {iss, u, e.severity.toUpperCase()}                    </span>
-                    <spanclassName="text-xs text-gray-500 capitaliz e">{issue.catego.ry}</span>                  </div>
-                  <h4className="font-semiboldmb-2">{issue.title}</h4>
-                  <pclassName="text-sm, text-gray-600 m b-3">{issue.description}</p>
-                  <divclassName="gridgrid-cols-1 md:gri, d-cols-2 gap-3 tex t-sm">
+              </di, v>
+            )  : (iss, u, e, s.m, a.p((issuein, d, e, x) => (<div, k, e, y ={in, d, e, x} classN, a, m, e="borderroun, d, e, d-lg, p-4">
+                  <divclassN, a, m, e="fl, e, x, it, e, m, s-centerjust, i, f, y-betwee, n, m, b-2">
+                    <spanclassN, a, m, e={`p, x-2p, y-1, t, e, x, t-x, s, f, o, n, t-m, e, d, i, u, m, ro, u, n, d, e, d-f, u, l, l, b, o, r, d, e, r ${getSeverity, C, o, l, o, r(is, s, u, e.sever, i, t, y)}`}>                      {is, s, u, e.sever, i, t, y.toUpperC, a, s, e()}                    </s, p, a, n>
+                    <spanclassN, a, m, e="t, e, x, t-x, s t, e, x, t-g, r, a, y-50, 0 capita, l, i, z e">{is, s, u, e.cat, e, g, o.r, y}</s, p, a, n>                  </di, v>
+                  <h4classN, a, m, e="f, o, n, t-semibol, d, m, b-2">{is, s, u, e.ti, t, l, e}</h, 4>
+                  <pclassN, a, m, e="t, e, x, t-s, m, t, e, x, t-g, r, a, y-60, 0 m b-3">{is, s, u, e.description}</p>
+                  <divclassN, a, m, e="gridg, r, i, d-c, o, l, s-1 m, d:gr, i, d-c, o, l, s-2 ga, p-3 te, x t-s, m">
 
-                    <div>
-                      <spanclassName="font-mediumtext-blue-700">Solution:</span>
-                      <pclassName="text-gray-600">{issue.solution}</p>
-                    </div>
-                    <div>
-                      <spanclassName="font-mediumtext-green-700">Impact:</span>
-                      <pclassName="text-gray-600">{issue.impact}</p>                    </div>
-                  </div>
-                </div>
+                    <di, v>
+                      <spanclassN, a, m, e="f, o, n, t-mediumt, e, x, t-b, l, u, e-70, 0">Solut, i, o, n:</s, p, a, n>
+                      <pclassN, a, m, e="t, e, x, t-g, r, a, y-60, 0">{is, s, u, e.solut, i, o, n}</p>
+                    </di, v>
+                    <di, v>
+                      <spanclassN, a, m, e="f, o, n, t-mediumt, e, x, t-gr, e, e, n-70, 0">Imp, a, c, t:</s, p, a, n>
+                      <pclassN, a, m, e="t, e, x, t-g, r, a, y-60, 0">{is, s, u, e.imp, a, c, t}</p>                    </di, v>
+                  </di, v>
+                </di, v>
               ))
             )};
-          </div>
-        </CardContent>
-      </Card>
-    </div>
+          </di, v>
+        </CardCont, e, n, t>
+      </C, a, r, d>
+    </di, v>
   )};
 
-export default SEOAccessibilityOptimizer;
+export default SEOAccessibilityOptimi, z, e, r;

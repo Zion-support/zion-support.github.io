@@ -1,20 +1,20 @@
-const, cartUtil, s = {addItem: (ca, r, t, it, e, m) => {
-    con, s, t, existingIt, e, m = ca, r, t.find(cartIt, e, m => cartIt, e, m.id === it, e, m.id)
-    if (existingIt, e, m) {
-      retu, r, n, ca, r, t.map(cartIt, e, m =>
-        cartIt, e, m.id === it, e, m.id
-          ? { ...cartIt, e, m : quanti, t, y : cartItem.quantity + 1};          : cartIt, e, m
+const, cartU, t, i, l, s = {addI, t, e, m: (c, a, r, t, i, t, e, m) => {
+    const, existin, g, I, t, e, m = c, a, r, t.f, i, n, d(car, t, I, t, e, m => car, t, I, t, e, m.i, d === i, t, e, m.i, d)
+    i, f (existin, g, I, t, e, m) {
+      r, e, t, u, r, n, c, a, r, t.ma, p(car, t, I, t, e, m =>
+        car, t, I, t, e, m.i, d === i, t, e, m.i, d
+          ? { ...car, t, I, t, e, m : qua, n, t, i, t, y : cartI, t, e, m.quant, i, t, y + 1};          : car, t, I, t, e, m
       )
     };
-    return [...ca, r, t, {...itemquantity: 1 }]},
-  removeItem: (ca, r, t, item, I, d) => {retu, r, n, ca, r, t.filt, e, r(it, e, m => item.id !== itemId)
+    return [...c, a, r, t, {...itemquant, i, t, y: 1 }]},
+  removeI, t, e, m: (c, a, r, t, i, t, e, m, I, d) => {r, e, t, u, r, n, c, a, r, t.f, i, l, t, e, r(i, t, e, m => i, t, e, m.i, d !== ite, m, I, d)
   },
 
-  updateQuantity: (ca, r, t, item, I, d, quanti, t, y) => {if (quanti, t, y <= 0) {
-      returncartUtils.removeItem(cartitemId)
+  updateQuant, i, t, y: (c, a, r, t, i, t, e, m, I, d, qua, n, t, i, t, y) => {i, f (qua, n, t, i, t, y <= 0) {
+      returncartUt, i, l, s.removeI, t, e, m(cartite, m, I, d)
     };
-    return, car, t.m, a, p(it, e, m => (it, e, m.id === item, I, d ? {...item : quantity }  : it, e, m))
+    return, ca, r, t.m, a, p(i, t, e, m => (i, t, e, m.i, d === i, t, e, m, I, d ? {...i, t, e, m : quant, i, t, y }  : i, t, e, m))
   },
 
-  getTotalItems: ca, r, t => {retu, r, n, ca, r, t.redu, c, e((tot, a, l, it, e, m) => tot, a, l + it, em.quantity0)  }};
-export default cartUtils
+  getTotalIt, e, m, s: c, a, r, t => {r, e, t, u, r, n, c, a, r, t.r, e, d, u, c, e((to, t, a, l, i, t, e, m) => to, t, a, l + i, t, e, m.quanti, t, y, 0)  }};
+export default cartUt, i, l, s

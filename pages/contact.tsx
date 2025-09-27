@@ -4,70 +4,70 @@ import Link from 'next/link';
 import SEO from '../src/components/SEO';
 import { useAnalytics } from '../src/hooks/useAnalytics';
 
-export default function Contact(): JSX.Element {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    subject: '',
-    message: ''
+export default function Cont, a, c, t(): JS, X.Elem, e, n, t {
+  const [formD, a, t, a, setFormD, a, t, a] = useState({
+    n, a, m, e: '',
+    em, a, i, l: '',
+    comp, a, n, y: '',
+    subj, e, c, t: '',
+    mess, a, g, e: ''
   });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
+  const [isSubmitt, i, n, g, setIsSubmitt, i, n, g] = useState(fa, l, s, e);
+  const [isVisi, b, l, e, setIsVisi, b, l, e] = useState(fa, l, s, e);
 
   useEffect(() => {
-    setIsVisible(true);
+    setIsVisi, b, l, e(t, r, u, e);
   }, []);
 
-  const { trackClick } = useAnalytics();
+  const { trackCl, i, c, k } = useAnalytics();
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
+  const handleInputCha, n, g, e = (e: React.ChangeEv, e, n, t<HTMLInputElem, e, n, t | HTMLTextAreaElem, e, n, t>) => {
+    const { n, a, m, e, va, l, u, e } = e.tar, g, e, t;
+    setFormD, a, t, a(p, r, e, v => ({
+      ...p, r, e, v,
+      [n, a, m, e]: va, l, u, e
     }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
+  const handleSub, m, i, t = async (e: React.FormEv, e, n, t) => {
+    e.preventDefa, u, l, t();
+    setIsSubmitt, i, n, g(t, r, u, e);
     
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    // Simul, a, t, e f, o, r, m submiss, i, o, n
+    aw, a, i, t ne, w Prom, i, s, e(reso, l, v, e => setTime, o, u, t(reso, l, v, e, 2, 0, 0, 0));
     
-    setIsSubmitting(false);
-    trackClick('contact-form-submit', 'conversion');
-    alert('Thank you for your message! We\'ll get back to you soon.');
+    setIsSubmitt, i, n, g(fa, l, s, e);
+    trackCl, i, c, k('cont, a, c, t-f, o, r, m-sub, m, i, t', 'convers, i, o, n');
+    al, e, r, t('Th, a, n, k yo, u fo, r y, o, u, r mess, a, g, e! W, e\'l, l ge, t b, a, c, k t, o yo, u s, o, o, n.');
     
-    // Reset form
-    setFormData({
-      name: '',
-      email: '',
-      company: '',
-      subject: '',
-      message: ''
+    // Re, s, e, t f, o, r, m
+    setFormD, a, t, a({
+      n, a, m, e: '',
+      em, a, i, l: '',
+      comp, a, n, y: '',
+      subj, e, c, t: '',
+      mess, a, g, e: ''
     });
   };
 
-  const contactInfo = [
+  const contactI, n, f, o = [
     {
-      icon: '📧',
-      title: 'Email Us',
-      details: 'hello@zionapp.com',
-      description: 'Send us an email and we\'ll respond within 24 hours.'
+      i, c, o, n: '📧',
+      ti, t, l, e: 'Em, a, i, l U, s',
+      deta, i, l, s: 'he, l, l, o@zion, a, p, p.co, m',
+      description: 'S, e, n, d u, s a, n em, a, i, l an, d w, e\'l, l resp, o, n, d wit, h, i, n 2, 4 ho, u, r, s.'
     },
     {
-      icon: '📞',
-      title: 'Call Us',
-      details: '+1 (555) 123-4567',
-      description: 'Mon-Fri from 9am to 6pm EST'
+      i, c, o, n: '📞',
+      ti, t, l, e: 'C, a, l, l U, s',
+      deta, i, l, s: '+1 (55, 5) 12, 3-4, 5, 6, 7',
+      description: 'Mo, n-Fr, i from 9a, m t, o 6p, m ES, T'
     },
     {
-      icon: '📍',
-      title: 'Visit Us',
-      details: '123 Tech Street, Silicon Valley, CA 94000',
-      description: 'Come say hello at our office'
+      i, c, o, n: '📍',
+      ti, t, l, e: 'Vi, s, i, t U, s',
+      deta, i, l, s: '12, 3 T, e, c, h Str, e, e, t, Sili, c, o, n Val, l, e, y, C, A 94, 0, 0, 0',
+      description: 'C, o, m, e sa, y he, l, l, o a, t ou, r off, i, c, e'
     }
   ];
 
@@ -75,151 +75,151 @@ export default function Contact(): JSX.Element {
     <>
       <SEO />
       <Head>
-        <title>Contact Us - Zion App</title>
-        <meta name="description" content="Get in touch with Zion App. We're here to help you transform your business with cutting-edge technology solutions." />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Cont, a, c, t U, s - Z, i, o, n Ap, p</title>
+        <meta name="description" content="Ge, t i, n to, u, c, h w, i, t, h Z, i, o, n Ap, p. W, e'r, e h, e, r, e t, o h, e, l, p yo, u transf, o, r, m y, o, u, r busin, e, s, s w, i, t, h cutt, i, n, g-e, d, g, e technol, o, g, y soluti, o, n, s." />
+        <meta name="viewp, o, r, t" content="wi, d, t, h=dev, i, c, e-wi, d, t, h, init, i, a, l-sc, a, l, e=1" />
       </Head>
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 pt-20">
-        <div className="container mx-auto px-4 py-8 max-w-7xl">
-          <nav className="mb-8">
-            <Link href="/" className="text-blue-600 hover:text-blue-800 font-medium transition-colors">
-              ← Back to Home
+      <di, v classN, a, m, e="mi, n-h-scr, e, e, n b, g-gradi, e, n, t-t, o-b, r from-b, l, u, e-5, 0 t, o-ind, i, g, o-10, 0 p, t-2, 0">
+        <di, v classN, a, m, e="contai, n, e, r m, x-a, u, t, o p, x-4 p, y-8 ma, x-w-7x, l">
+          <na, v classN, a, m, e="m, b-8">
+            <Link href="/" classN, a, m, e="t, e, x, t-b, l, u, e-60, 0 ho, v, e, r:t, e, x, t-b, l, u, e-80, 0 f, o, n, t-med, i, u, m transit, i, o, n-col, o, r, s">
+              ← B, a, c, k t, o H, o, m, e
             </Link>
-          </nav>
+          </na, v>
 
-          <header className="text-center mb-16">
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-              Contact Us
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Ready to transform your business? Let&apos;s discuss how we can help you achieve your goals.
+          <hea, d, e, r classN, a, m, e="t, e, x, t-cen, t, e, r m, b-1, 6">
+            <h, 1 classN, a, m, e="t, e, x, t-5x, l m, d:t, e, x, t-6x, l f, o, n, t-b, o, l, d t, e, x, t-g, r, a, y-90, 0 m, b-6">
+              Cont, a, c, t U, s
+            </h, 1>
+            <p classN, a, m, e="t, e, x, t-x, l t, e, x, t-g, r, a, y-60, 0 ma, x-w-3x, l m, x-a, u, t, o">
+              Re, a, d, y t, o transf, o, r, m y, o, u, r busin, e, s, s? Le, t&a, p, o, s;s disc, u, s, s ho, w w, e ca, n h, e, l, p yo, u achi, e, v, e y, o, u, r go, a, l, s.
             </p>
-          </header>
+          </hea, d, e, r>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Contact Form */}
-            <div className="bg-white rounded-2xl shadow-xl p-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">Send us a Message</h2>
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                      Full Name *
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      placeholder="Your full name"
+          <di, v classN, a, m, e="g, r, i, d g, r, i, d-c, o, l, s-1 l, g:g, r, i, d-c, o, l, s-2 ga, p-1, 2">
+            {/* Cont, a, c, t F, o, r, m */}
+            <di, v classN, a, m, e="b, g-wh, i, t, e roun, d, e, d-2x, l sha, d, o, w-x, l p-8">
+              <h, 2 classN, a, m, e="t, e, x, t-2x, l f, o, n, t-b, o, l, d t, e, x, t-g, r, a, y-90, 0 m, b-6">S, e, n, d u, s a Mess, a, g, e</h, 2>
+              <f, o, r, m onSub, m, i, t={handleSub, m, i, t} classN, a, m, e="sp, a, c, e-y-6">
+                <di, v classN, a, m, e="g, r, i, d g, r, i, d-c, o, l, s-1 m, d:g, r, i, d-c, o, l, s-2 ga, p-6">
+                  <di, v>
+                    <la, b, e, l html, F, o, r="n, a, m, e" classN, a, m, e="bl, o, c, k t, e, x, t-s, m f, o, n, t-med, i, u, m t, e, x, t-g, r, a, y-70, 0 m, b-2">
+                      F, u, l, l N, a, m, e *
+                    </la, b, e, l>
+                    <in, p, u, t
+                      type="t, e, x, t"
+                      i, d="n, a, m, e"
+                      name="n, a, m, e"
+                      va, l, u, e={formD, a, t, a.n, a, m, e}
+                      onCha, n, g, e={handleInputCha, n, g, e}
+                      requi, r, e, d
+                      classN, a, m, e="w-f, u, l, l p, x-4 p, y-3 bor, d, e, r bor, d, e, r-g, r, a, y-30, 0 roun, d, e, d-l, g fo, c, u, s:r, i, n, g-2 fo, c, u, s:r, i, n, g-b, l, u, e-50, 0 fo, c, u, s:bor, d, e, r-transpar, e, n, t"
+                      placehol, d, e, r="Y, o, u, r f, u, l, l n, a, m, e"
                     />
-                  </div>
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                      Email Address *
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      placeholder="your.email@example.com"
+                  </di, v>
+                  <di, v>
+                    <la, b, e, l html, F, o, r="em, a, i, l" classN, a, m, e="bl, o, c, k t, e, x, t-s, m f, o, n, t-med, i, u, m t, e, x, t-g, r, a, y-70, 0 m, b-2">
+                      Em, a, i, l Addr, e, s, s *
+                    </la, b, e, l>
+                    <in, p, u, t
+                      type="em, a, i, l"
+                      i, d="em, a, i, l"
+                      name="em, a, i, l"
+                      va, l, u, e={formD, a, t, a.em, a, i, l}
+                      onCha, n, g, e={handleInputCha, n, g, e}
+                      requi, r, e, d
+                      classN, a, m, e="w-f, u, l, l p, x-4 p, y-3 bor, d, e, r bor, d, e, r-g, r, a, y-30, 0 roun, d, e, d-l, g fo, c, u, s:r, i, n, g-2 fo, c, u, s:r, i, n, g-b, l, u, e-50, 0 fo, c, u, s:bor, d, e, r-transpar, e, n, t"
+                      placehol, d, e, r="y, o, u, r.em, a, i, l@exam, p, l, e.co, m"
                     />
-                  </div>
-                </div>
-                <div>
-                  <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
-                    Company
-                  </label>
-                  <input
-                    type="text"
-                    id="company"
-                    name="company"
-                    value={formData.company}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="Your company name"
+                  </di, v>
+                </di, v>
+                <di, v>
+                  <la, b, e, l html, F, o, r="comp, a, n, y" classN, a, m, e="bl, o, c, k t, e, x, t-s, m f, o, n, t-med, i, u, m t, e, x, t-g, r, a, y-70, 0 m, b-2">
+                    Comp, a, n, y
+                  </la, b, e, l>
+                  <in, p, u, t
+                    type="t, e, x, t"
+                    i, d="comp, a, n, y"
+                    name="comp, a, n, y"
+                    va, l, u, e={formD, a, t, a.comp, a, n, y}
+                    onCha, n, g, e={handleInputCha, n, g, e}
+                    classN, a, m, e="w-f, u, l, l p, x-4 p, y-3 bor, d, e, r bor, d, e, r-g, r, a, y-30, 0 roun, d, e, d-l, g fo, c, u, s:r, i, n, g-2 fo, c, u, s:r, i, n, g-b, l, u, e-50, 0 fo, c, u, s:bor, d, e, r-transpar, e, n, t"
+                    placehol, d, e, r="Y, o, u, r comp, a, n, y n, a, m, e"
                   />
-                </div>
-                <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
-                    Subject *
-                  </label>
-                  <input
-                    type="text"
-                    id="subject"
-                    name="subject"
-                    value={formData.subject}
-                    onChange={handleInputChange}
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="What can we help you with?"
+                </di, v>
+                <di, v>
+                  <la, b, e, l html, F, o, r="subj, e, c, t" classN, a, m, e="bl, o, c, k t, e, x, t-s, m f, o, n, t-med, i, u, m t, e, x, t-g, r, a, y-70, 0 m, b-2">
+                    Subj, e, c, t *
+                  </la, b, e, l>
+                  <in, p, u, t
+                    type="t, e, x, t"
+                    i, d="subj, e, c, t"
+                    name="subj, e, c, t"
+                    va, l, u, e={formD, a, t, a.subj, e, c, t}
+                    onCha, n, g, e={handleInputCha, n, g, e}
+                    requi, r, e, d
+                    classN, a, m, e="w-f, u, l, l p, x-4 p, y-3 bor, d, e, r bor, d, e, r-g, r, a, y-30, 0 roun, d, e, d-l, g fo, c, u, s:r, i, n, g-2 fo, c, u, s:r, i, n, g-b, l, u, e-50, 0 fo, c, u, s:bor, d, e, r-transpar, e, n, t"
+                    placehol, d, e, r="W, h, a, t ca, n w, e h, e, l, p yo, u w, i, t, h?"
                   />
-                </div>
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                    Message *
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleInputChange}
-                    required
-                    rows={6}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="Tell us about your project or question..."
+                </di, v>
+                <di, v>
+                  <la, b, e, l html, F, o, r="mess, a, g, e" classN, a, m, e="bl, o, c, k t, e, x, t-s, m f, o, n, t-med, i, u, m t, e, x, t-g, r, a, y-70, 0 m, b-2">
+                    Mess, a, g, e *
+                  </la, b, e, l>
+                  <texta, r, e, a
+                    i, d="mess, a, g, e"
+                    name="mess, a, g, e"
+                    va, l, u, e={formD, a, t, a.mess, a, g, e}
+                    onCha, n, g, e={handleInputCha, n, g, e}
+                    requi, r, e, d
+                    r, o, w, s={6}
+                    classN, a, m, e="w-f, u, l, l p, x-4 p, y-3 bor, d, e, r bor, d, e, r-g, r, a, y-30, 0 roun, d, e, d-l, g fo, c, u, s:r, i, n, g-2 fo, c, u, s:r, i, n, g-b, l, u, e-50, 0 fo, c, u, s:bor, d, e, r-transpar, e, n, t"
+                    placehol, d, e, r="T, e, l, l u, s ab, o, u, t y, o, u, r proj, e, c, t o, r quest, i, o, n..."
                   />
-                </div>
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                </di, v>
+                <but, t, o, n
+                  type="sub, m, i, t"
+                  disab, l, e, d={isSubmitt, i, n, g}
+                  classN, a, m, e="w-f, u, l, l b, g-b, l, u, e-60, 0 t, e, x, t-wh, i, t, e p, y-3 p, x-6 roun, d, e, d-l, g f, o, n, t-semib, o, l, d ho, v, e, r:b, g-b, l, u, e-70, 0 transit, i, o, n-col, o, r, s disab, l, e, d:opac, i, t, y-5, 0 disab, l, e, d:cur, s, o, r-no, t-allo, w, e, d"
                 >
-                  {isSubmitting ? 'Sending...' : 'Send Message'}
-                </button>
-              </form>
-            </div>
+                  {isSubmitt, i, n, g ? 'Send, i, n, g...' : 'S, e, n, d Mess, a, g, e'}
+                </but, t, o, n>
+              </f, o, r, m>
+            </di, v>
 
-            {/* Contact Information */}
-            <div className="space-y-8">
-              <div>
-                <h2 className="text-2xl font-bold text-gray-900 mb-6">Get in Touch</h2>
-                <p className="text-gray-600 mb-8">
-                  We&apos;re here to help you succeed. Reach out to us through any of the channels below, and we&apos;ll get back to you as soon as possible.
+            {/* Cont, a, c, t Informat, i, o, n */}
+            <di, v classN, a, m, e="sp, a, c, e-y-8">
+              <di, v>
+                <h, 2 classN, a, m, e="t, e, x, t-2x, l f, o, n, t-b, o, l, d t, e, x, t-g, r, a, y-90, 0 m, b-6">Ge, t i, n To, u, c, h</h, 2>
+                <p classN, a, m, e="t, e, x, t-g, r, a, y-60, 0 m, b-8">
+                  W, e&a, p, o, s;r, e h, e, r, e t, o h, e, l, p yo, u succ, e, e, d. Re, a, c, h ou, t t, o u, s thro, u, g, h an, y o, f th, e chann, e, l, s be, l, o, w, an, d w, e&a, p, o, s;l, l ge, t b, a, c, k t, o yo, u a, s s, o, o, n a, s possi, b, l, e.
                 </p>
-              </div>
+              </di, v>
 
-              <div className="space-y-6">
-                {contactInfo.map((info, index) => (
-                  <div key={index} className="flex items-start space-x-4 p-6 bg-white rounded-xl shadow-lg">
-                    <div className="text-3xl">{info.icon}</div>
-                    <div>
-                      <h3 className="text-lg font-semibold text-gray-900 mb-2">{info.title}</h3>
-                      <p className="text-blue-600 font-medium mb-1">{info.details}</p>
-                      <p className="text-gray-600 text-sm">{info.description}</p>
-                    </div>
-                  </div>
+              <di, v classN, a, m, e="sp, a, c, e-y-6">
+                {contactI, n, f, o.ma, p((i, n, f, o, in, d, e, x) => (
+                  <di, v ke, y={in, d, e, x} classN, a, m, e="f, l, e, x it, e, m, s-st, a, r, t sp, a, c, e-x-4 p-6 b, g-wh, i, t, e roun, d, e, d-x, l sha, d, o, w-l, g">
+                    <di, v classN, a, m, e="t, e, x, t-3x, l">{i, n, f, o.i, c, o, n}</di, v>
+                    <di, v>
+                      <h, 3 classN, a, m, e="t, e, x, t-l, g f, o, n, t-semib, o, l, d t, e, x, t-g, r, a, y-90, 0 m, b-2">{i, n, f, o.ti, t, l, e}</h, 3>
+                      <p classN, a, m, e="t, e, x, t-b, l, u, e-60, 0 f, o, n, t-med, i, u, m m, b-1">{i, n, f, o.deta, i, l, s}</p>
+                      <p classN, a, m, e="t, e, x, t-g, r, a, y-60, 0 t, e, x, t-s, m">{i, n, f, o.description}</p>
+                    </di, v>
+                  </di, v>
                 ))}
-              </div>
+              </di, v>
 
-              <div className="bg-blue-50 rounded-xl p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">Response Time</h3>
-                <p className="text-gray-600 text-sm">
-                  We typically respond to all inquiries within 24 hours during business days. 
-                  For urgent matters, please call us directly.
+              <di, v classN, a, m, e="b, g-b, l, u, e-5, 0 roun, d, e, d-x, l p-6">
+                <h, 3 classN, a, m, e="t, e, x, t-l, g f, o, n, t-semib, o, l, d t, e, x, t-g, r, a, y-90, 0 m, b-3">Respo, n, s, e T, i, m, e</h, 3>
+                <p classN, a, m, e="t, e, x, t-g, r, a, y-60, 0 t, e, x, t-s, m">
+                  W, e typica, l, l, y resp, o, n, d t, o al, l inquir, i, e, s wit, h, i, n 2, 4 ho, u, r, s dur, i, n, g busin, e, s, s d, a, y, s. 
+                  Fo, r urg, e, n, t matt, e, r, s, ple, a, s, e c, a, l, l u, s direc, t, l, y.
                 </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+              </di, v>
+            </di, v>
+          </di, v>
+        </di, v>
+      </di, v>
     </>
   );
 }

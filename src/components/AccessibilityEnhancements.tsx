@@ -1,395 +1,395 @@
-// TODO: Consider breaking this large component (277 lines) into smaller components
-// TODO: Consider breaking this large component (276 lines) into smaller components
-import Reac, t, {useState, useEffectuseCallback }  from 'react";
->>>>>> 45ce5fae8a680d713f034d877aa81b1d405b5763
-  contrast: "normal" | "high" | "inverted";
-  cursor: "normal" | "large" | "extra-large";
-  focus: "normal" | "enhanced" | "high-contrast";
-  animations: boole, a, n;
-  screenReader: boolean;
-  keyboardNavigation: boolean};
- void;
-  className?: string};
-// Helper, functions, for score, styling, const getScoreBgColor = (score: numb, e, r): stri, n, g => {if (score >= 90) return "bg-gre, en-100";
-  if (score >= 70) return "bg-yell, ow-100";
-  return "bg-red-100"};
+// T, O, D, O: Consi, d, e, r break, i, n, g t, h, i, s la, r, g, e compon, e, n, t (27, 7 li, n, e, s) i, n, t, o smal, l, e, r components
+// T, O, D, O: Consi, d, e, r break, i, n, g t, h, i, s la, r, g, e compon, e, n, t (27, 6 li, n, e, s) i, n, t, o smal, l, e, r components
+import R, e, a, c, t, {useState, useEffectuseCallb, a, c, k }  from 'react";
+>>>>>> 45ce5fae8a680d713f034d877aa81b1d405b5, 7, 6, 3
+  contr, a, s, t: "nor, m, a, l" | "h, i, g, h" | "inver, t, e, d";
+  cur, s, o, r: "nor, m, a, l" | "la, r, g, e" | "ex, t, r, a-la, r, g, e";
+  fo, c, u, s: "nor, m, a, l" | "enhan, c, e, d" | "h, i, g, h-contr, a, s, t";
+  animati, o, n, s: bo, o, l, e, a, n;
+  screenRea, d, e, r: bool, e, a, n;
+  keyboardNavigat, i, o, n: bool, e, a, n};
+ v, o, i, d;
+  classN, a, m, e?: str, i, n, g};
+// Hel, p, e, r, functi, o, n, s, fo, r sc, o, r, e, styl, i, n, g, const getScoreBgCo, l, o, r = (sc, o, r, e: n, u, m, b, e, r): s, t, r, i, n, g => {i, f (sc, o, r, e >= 9, 0) return "b, g-gr, e, e, n-10, 0";
+  i, f (sc, o, r, e >= 7, 0) return "b, g-y, e, l, l, o, w-10, 0";
+  return "b, g-re, d-10, 0"};
 
-const, getScoreColo, r = (score: numb, e, r): stri, n, g => {if (score >= 90) return "te, x, t-green-800";
+const, getScoreC, o, l, o, r = (sc, o, r, e: n, u, m, b, e, r): s, t, r, i, n, g => {i, f (sc, o, r, e >= 9, 0) return "t, e, x, t-gr, e, e, n-80, 0";
 
-interface, AccessibilityEnhancementsProp, s {onSettingsChan, g, e?: (settings: AccessibilitySettings) => void;
-  className?: string};
-// Helper, functions, for score, styling, const getScoreBgCol, o, r = (score: number): string => {if (score >= 90) return "bg-green-100";
-  if (score >= 70) return "bg-yellow-100";
-  return "bg-red-100"};
+interf, a, c, e, AccessibilityEnhancementsP, r, o, p, s {onSettingsC, h, a, n, g, e?: (setti, n, g, s: AccessibilitySetti, n, g, s) => v, o, i, d;
+  classN, a, m, e?: str, i, n, g};
+// Hel, p, e, r, functi, o, n, s, fo, r sc, o, r, e, styl, i, n, g, const getScoreBg, C, o, l, o, r = (sc, o, r, e: num, b, e, r): str, i, n, g => {i, f (sc, o, r, e >= 9, 0) return "b, g-gr, e, e, n-10, 0";
+  i, f (sc, o, r, e >= 7, 0) return "b, g-yel, l, o, w-10, 0";
+  return "b, g-re, d-10, 0"};
 
-const, getScoreColo, r = (score: number): string => {if (score >= 90) return "te, xt-green-800";
+const, getScoreC, o, l, o, r = (sc, o, r, e: num, b, e, r): str, i, n, g => {i, f (sc, o, r, e >= 9, 0) return "t, e, x, t-gr, e, e, n-80, 0";
 
-  if (score >= 70) return "text-yellow-800";
-  return "text-red-800"};
+  i, f (sc, o, r, e >= 7, 0) return "t, e, x, t-yel, l, o, w-80, 0";
+  return "t, e, x, t-re, d-80, 0"};
 
-exportconstAccessibilityEnhancements: React.FC<AccessibilityEnhancementsProps> = ({onSettingsChangeclassName = '"}) => {const [isOpensetIsOpen] = useState(false);  const [settingssetSettings] = useState<AccessibilitySettings>({fontSize: "medium'contrast: "normal"cursor: "normal"focus: "normal"});
+exportconstAccessibilityEnhanceme, n, t, s: React.F, C<AccessibilityEnhancementsPr, o, p, s> = ({onSettingsChangeclassN, a, m, e = '"}) => {const [isOpensetIsO, p, e, n] = useState(fa, l, s, e);  const [settingssetSetti, n, g, s] = useState<AccessibilitySetti, n, g, s>({fontS, i, z, e: "med, i, u, m'contr, a, s, t: "nor, m, a, l"cur, s, o, r: "nor, m, a, l"fo, c, u, s: "nor, m, a, l"});
 
-  const [scoresetScore] = useState(85);
+  const [scoresetSc, o, r, e] = useState(8, 5);
 
-  constgetScoreColor = (score: number) => {if (score >= 90) return "text-green-500";
-    if (score >= 70) return "text-yellow-500";
-    if (score >= 50) return "text-orange-500";
-    return "text-red-500"};
+  constgetScoreCo, l, o, r = (sc, o, r, e: num, b, e, r) => {i, f (sc, o, r, e >= 9, 0) return "t, e, x, t-gr, e, e, n-50, 0";
+    i, f (sc, o, r, e >= 7, 0) return "t, e, x, t-yel, l, o, w-50, 0";
+    i, f (sc, o, r, e >= 5, 0) return "t, e, x, t-ora, n, g, e-50, 0";
+    return "t, e, x, t-re, d-50, 0"};
 
-  const, updateSetting, s = useCallba, c, k((newSettings: Parti, a, l<AccessibilitySettings>) => {constupdatedSettings = { ...settings  ...newSettings };
-    setSettin, g, s(updatedSettin, g, s);
+  const, updateSett, i, n, g, s = useCal, l, b, a, c, k((newSetti, n, g, s: Pa, r, t, i, a, l<AccessibilitySetti, n, g, s>) => {constupdatedSetti, n, g, s = { ...setti, n, g, s  ...newSetti, n, g, s };
+    setSet, t, i, n, g, s(updatedSet, t, i, n, g, s);
     
-    if (onSettingsChan, g, e) {onSettingsChange(updatedSettings)}}[settingsonSettingsChange]);
+    i, f (onSettingsC, h, a, n, g, e) {onSettingsCha, n, g, e(updatedSetti, n, g, s)}}[settingsonSettingsCha, n, g, e]);
 
- {if (eve, n, t.altK, e, y && event.key === 'a") {
-      eve, n, t.preventDefault();
-      setIsOpen(!isOpen)}}[isOpen]);
-  useEffect(() => {document.addEventListener("keydo, w, n"handleKeyDown);
-    return () => document.removeEventListener("keydo, w, n"handleKeyDown)}[handleKeyDown]);
+ {i, f (ev, e, n, t.a, l, t, K, e, y && ev, e, n, t.ke, y === 'a") {
+      ev, e, n, t.preventDefa, u, l, t();
+      setIsO, p, e, n(!isO, p, e, n)}}[isO, p, e, n]);
+  useEffect(() => {document.addEventListe, n, e, r("ke, y, d, o, w, n"handleKeyD, o, w, n);
+    return () => document.removeEventListe, n, e, r("ke, y, d, o, w, n"handleKeyD, o, w, n)}[handleKeyD, o, w, n]);
 
-  const, handleKeyDow, n = useCallba, c, k((event: KeyboardEve, n, t) => {if (eve, n, t.altK, e, y && event.key === "a") {
-      event.preventDefault();      setIsOpen(!isOpen)}}[isOpen]);
-  useEffect(() => {document.addEventListener("keydown"handleKeyDown);
-    return () => document.removeEventListener("keydown"handleKeyDown)}[handleKeyDown]);
+  const, handleKey, D, o, w, n = useCal, l, b, a, c, k((ev, e, n, t: Keyboard, E, v, e, n, t) => {i, f (ev, e, n, t.a, l, t, K, e, y && ev, e, n, t.ke, y === "a") {
+      ev, e, n, t.preventDefa, u, l, t();      setIsO, p, e, n(!isO, p, e, n)}}[isO, p, e, n]);
+  useEffect(() => {document.addEventListe, n, e, r("keyd, o, w, n"handleKeyD, o, w, n);
+    return () => document.removeEventListe, n, e, r("keyd, o, w, n"handleKeyD, o, w, n)}[handleKeyD, o, w, n]);
 
 
-      <divclassName="bg-whiterounded-lgshadow-lgp-6">
-        <divclassName="flexitems-center justify-betweenmb-6">
-          <h3className="text-xlfont-semibold, tex, t-gr, ay-800 flexitems-center">
-            <AccessibilityclassName="w-5 h-5 m r-2" />
+      <divclassN, a, m, e="b, g-whiteroun, d, e, d-lgsha, d, o, w-lg, p-6">
+        <divclassN, a, m, e="flexit, e, m, s-cen, t, e, r just, i, f, y-betwee, n, m, b-6">
+          <h3classN, a, m, e="t, e, x, t-xlf, o, n, t-semib, o, l, d, te, x, t-g, r, a, y-80, 0 flexit, e, m, s-cen, t, e, r">
+            <AccessibilityclassN, a, m, e="w-5 h-5 m r-2" />
 
-  return (<divclassName={`accessibility-enhancements ${className}`}>
-      <divclassName="bg-whiteround, e, d-lgshadow-lgp-6">
-        <divclassName="flexite, m, s-centerjustify-betweenmb-6">
-          <h3className="text-xlfont-semibo, l, d, te, x, t-gr, a, y-8, 0, 0 flexitems-center">
-            <AccessibilityclassName="w-5 h-5 mr-2" />
+  return (<divclassN, a, m, e={`accessibility-enhanceme, n, t, s ${classN, a, m, e}`}>
+      <divclassN, a, m, e="b, g-whitero, u, n, d, e, d-lgsha, d, o, w-lg, p-6">
+        <divclassN, a, m, e="flex, i, t, e, m, s-centerjust, i, f, y-betwee, n, m, b-6">
+          <h3classN, a, m, e="t, e, x, t-xlf, o, n, t-sem, i, b, o, l, d, t, e, x, t-g, r, a, y-8, 0, 0 flexit, e, m, s-cen, t, e, r">
+            <AccessibilityclassN, a, m, e="w-5 h-5 m, r-2" />
 
-            Accessibility, Enhancemen, t, s
-          </h3>
-          <divclassName={`px-4py-2rounded-lg ${getScoreBgColor(score)}`}>
-            <spanclassName={`text-lgfont-bold ${getScoreColor(score)}`}>
-              {score}% Accessible            </span>          </div>
-        </div>
+            Accessibil, i, t, y, Enhance, m, e, n, t, s
+          </h, 3>
+          <divclassN, a, m, e={`p, x-4p, y-2roun, d, e, d-l, g ${getScoreBgCo, l, o, r(sc, o, r, e)}`}>
+            <spanclassN, a, m, e={`t, e, x, t-lgf, o, n, t-b, o, l, d ${getScoreCo, l, o, r(sc, o, r, e)}`}>
+              {sc, o, r, e}% Accessi, b, l, e            </s, p, a, n>          </di, v>
+        </di, v>
 
-        <divclassName="gridgrid-cols-1, md:gr, i, d-co, l, s-2, ga, p-6 mb-6">
-          <divclassName="space-y-4">
-            <h4className="font-semibold text-gray-800 mb-3">AccessibilityFeatures</h4>
+        <divclassN, a, m, e="gridg, r, i, d-c, o, l, s-1, m, d:g, r, i, d-c, o, l, s-2, g, a, p-6 m, b-6">
+          <divclassN, a, m, e="sp, a, c, e-y-4">
+            <h4classN, a, m, e="f, o, n, t-semib, o, l, d t, e, x, t-g, r, a, y-80, 0 m, b-3">AccessibilityFeatu, r, e, s</h, 4>
             
 
-              <label, classNam, e="flex, item, s-center, justif, y-betwee, n, p-3, b, g-gr, a, y-50, rounde, d-lg, curso, r-pointer, hover:bg-gr, a, y-1, 0, 0">
-                <div, classNam, e="flex, item, s-cent, e, r">
-                  <Eye, classNam, e="w-4 h-4, m, r-3, tex, t-bl, u, e-5, 0, 0" />
-                  <span, classNam, e="te, x, t-sm, fon, t-medium, tex, t-gr, a, y-7, 0, 0">High, Contrast, Mode</sp, a, n>                </d, i, v>
-                <input, typ, e="checkb, o, x" check, e, d={featur, e, s.highCont, r, a.st};
-                  onChan, g, e={() => toggleFeature('highContrast')};
-                  className="w-4 h-4, tex, t-bl, u, e-600, rounded, focus:ri, n, g-bl, u, e-5, 0, 0"
-                />              </lab, e, l>
+              <la, b, e, l, class, N, a, m, e="f, l, e, x, i, t, e, m, s-cen, t, e, r, jus, t, i, f, y-bet, w, e, e, n, p-3, b, g-g, r, a, y-5, 0, rou, n, d, e, d-l, g, cu, r, s, o, r-poin, t, e, r, ho, v, e, r:b, g-g, r, a, y-1, 0, 0">
+                <di, v, class, N, a, m, e="f, l, e, x, i, t, e, m, s-c, e, n, t, e, r">
+                  <Ey, e, class, N, a, m, e="w-4 h-4, m, r-3, te, x, t-b, l, u, e-5, 0, 0" />
+                  <s, p, a, n, class, N, a, m, e="t, e, x, t-s, m, fo, n, t-med, i, u, m, te, x, t-g, r, a, y-7, 0, 0">H, i, g, h, Contr, a, s, t, M, o, d, e</s, p, a, n>                </d, i, v>
+                <in, p, u, t, ty, p, e="che, c, k, b, o, x" ch, e, c, k, e, d={fea, t, u, r, e, s.highC, o, n, t, r, a.s, t};
+                  onC, h, a, n, g, e={() => toggleFeat, u, r, e('highContr, a, s, t')};
+                  classN, a, m, e="w-4 h-4, te, x, t-b, l, u, e-60, 0, roun, d, e, d, fo, c, u, s:r, i, n, g-b, l, u, e-5, 0, 0"
+                />              </la, b, e, l>
 
-              <label, classNam, e="flex, item, s-center, justif, y-betwee, n, p-3, b, g-gr, a, y-50, rounde, d-lg, curso, r-pointer, hover:bg-gr, a, y-1, 0, 0">
-                <div, classNam, e="flex, item, s-cent, e, r">
-                  <Volume2, classNam, e="w-4 h-4, m, r-3, te, x t-gre, e, n-5, 0, 0" />
-                  <span, classNam, e="te, x, t-sm, fon, t-medium, tex, t-gr, a, y-7, 0, 0">Large, Tex, t</sp, a, n>                </d, i, v>
-                <input, typ, e="checkb, o, x" check, e, d={featur, e, s.large, T, e.xt};
-                  onChange={() => toggleFeature('largeText')};
-                  className="w-4 h-4, tex, t-bl, u, e-600, rounded, focus:ri, n, g-bl, u, e-5, 0, 0"
-                />              </lab, e, l>
+              <la, b, e, l, class, N, a, m, e="f, l, e, x, i, t, e, m, s-cen, t, e, r, jus, t, i, f, y-bet, w, e, e, n, p-3, b, g-g, r, a, y-5, 0, rou, n, d, e, d-l, g, cu, r, s, o, r-poin, t, e, r, ho, v, e, r:b, g-g, r, a, y-1, 0, 0">
+                <di, v, class, N, a, m, e="f, l, e, x, i, t, e, m, s-c, e, n, t, e, r">
+                  <Volu, m, e, 2, class, N, a, m, e="w-4 h-4, m, r-3, t, e, x t-gr, e, e, n-5, 0, 0" />
+                  <s, p, a, n, class, N, a, m, e="t, e, x, t-s, m, fo, n, t-med, i, u, m, te, x, t-g, r, a, y-7, 0, 0">La, r, g, e, Te, x, t</s, p, a, n>                </d, i, v>
+                <in, p, u, t, ty, p, e="che, c, k, b, o, x" ch, e, c, k, e, d={fea, t, u, r, e, s.la, r, g, e, T, e.x, t};
+                  onCha, n, g, e={() => toggleFeat, u, r, e('largeT, e, x, t')};
+                  classN, a, m, e="w-4 h-4, te, x, t-b, l, u, e-60, 0, roun, d, e, d, fo, c, u, s:r, i, n, g-b, l, u, e-5, 0, 0"
+                />              </la, b, e, l>
 
-              <label, classNam, e="flex, item, s-center, justif, y-betwee, n, p-3, b, g-gr, a, y-50, rounde, d-lg, curso, r-pointer, hover:bg-gr, a, y-1, 0, 0">
-                <div, classNam, e="flex, item, s-cent, e, r">
-                  <MousePointer, classNam, e="w-4 h-4, m, r-3, te, x t-purp, l, e-5, 0, 0" />
-                  <span, classNam, e="te, x, t-sm, fon, t-medium, tex, t-gr, a, y-7, 0, 0">Reduced, Motio, n</sp, a, n>                </d, i, v>
-                <input, typ, e="checkb, o, x" check, e, d={featur, e, s.reducedMo, t, i.on};
-                  onChange={() => toggleFeature('reducedMotion')};
-                  className="w-4 h-4, tex, t-bl, u, e-600, rounded, focus:ri, n, g-bl, u, e-5, 0, 0"
-                />              </lab, e, l>
+              <la, b, e, l, class, N, a, m, e="f, l, e, x, i, t, e, m, s-cen, t, e, r, jus, t, i, f, y-bet, w, e, e, n, p-3, b, g-g, r, a, y-5, 0, rou, n, d, e, d-l, g, cu, r, s, o, r-poin, t, e, r, ho, v, e, r:b, g-g, r, a, y-1, 0, 0">
+                <di, v, class, N, a, m, e="f, l, e, x, i, t, e, m, s-c, e, n, t, e, r">
+                  <MousePoin, t, e, r, class, N, a, m, e="w-4 h-4, m, r-3, t, e, x t-p, u, r, p, l, e-5, 0, 0" />
+                  <s, p, a, n, class, N, a, m, e="t, e, x, t-s, m, fo, n, t-med, i, u, m, te, x, t-g, r, a, y-7, 0, 0">Redu, c, e, d, Mo, t, i, o, n</s, p, a, n>                </d, i, v>
+                <in, p, u, t, ty, p, e="che, c, k, b, o, x" ch, e, c, k, e, d={fea, t, u, r, e, s.reduce, d, M, o, t, i.o, n};
+                  onCha, n, g, e={() => toggleFeat, u, r, e('reducedMot, i, o, n')};
+                  classN, a, m, e="w-4 h-4, te, x, t-b, l, u, e-60, 0, roun, d, e, d, fo, c, u, s:r, i, n, g-b, l, u, e-5, 0, 0"
+                />              </la, b, e, l>
 
-              <label, classNam, e="flex, item, s-center, justif, y-betwee, n, p-3, b, g-gr, a, y-50, rounde, d-lg, curso, r-pointer, hover:bg-gr, a, y-1, 0, 0">
-                <div, classNam, e="flex, item, s-cent, e, r">
-                  <Keyboard, classNam, e="w-4 h-4, m, r-3, te, x t-oran, g, e-5, 0, 0" />
-                  <span, classNam, e="te, x, t-sm, fon, t-medium, tex, t-gr, a, y-7, 0, 0">Keyboard, Navigatio, n</sp, a, n>                </d, i, v>
-                <input, typ, e="checkb, o, x" check, e, d={featur, e, s.keyboardNaviga, t, i.on};
-                  onChange={() => toggleFeature('keyboardNavigation')};
-                  className="w-4 h-4, tex, t-bl, u, e-600, rounded, focus:ri, n, g-bl, u, e-5, 0, 0"
-                />              </lab, e, l>
+              <la, b, e, l, class, N, a, m, e="f, l, e, x, i, t, e, m, s-cen, t, e, r, jus, t, i, f, y-bet, w, e, e, n, p-3, b, g-g, r, a, y-5, 0, rou, n, d, e, d-l, g, cu, r, s, o, r-poin, t, e, r, ho, v, e, r:b, g-g, r, a, y-1, 0, 0">
+                <di, v, class, N, a, m, e="f, l, e, x, i, t, e, m, s-c, e, n, t, e, r">
+                  <Keybo, a, r, d, class, N, a, m, e="w-4 h-4, m, r-3, t, e, x t-o, r, a, n, g, e-5, 0, 0" />
+                  <s, p, a, n, class, N, a, m, e="t, e, x, t-s, m, fo, n, t-med, i, u, m, te, x, t-g, r, a, y-7, 0, 0">Keybo, a, r, d, Naviga, t, i, o, n</s, p, a, n>                </d, i, v>
+                <in, p, u, t, ty, p, e="che, c, k, b, o, x" ch, e, c, k, e, d={fea, t, u, r, e, s.keyboardNav, i, g, a, t, i.o, n};
+                  onCha, n, g, e={() => toggleFeat, u, r, e('keyboardNavigat, i, o, n')};
+                  classN, a, m, e="w-4 h-4, te, x, t-b, l, u, e-60, 0, roun, d, e, d, fo, c, u, s:r, i, n, g-b, l, u, e-5, 0, 0"
+                />              </la, b, e, l>
 
-              <label, classNam, e="flex, item, s-center, justif, y-betwee, n, p-3, b, g-gr, a, y-50, rounde, d-lg, curso, r-pointer, hover:bg-gr, a, y-1, 0, 0">
-                <div, classNam, e="flex, item, s-cent, e, r">
-                  <Accessibility, classNam, e="w-4 h-4, m, r-3, te, x t-indi, g, o-5, 0, 0" />
-                  <span, classNam, e="te, x, t-sm, fon, t-medium, tex, t-gr, a, y-7, 0, 0">Screen, Reader, Support</sp, a, n>                </d, i, v>
-                <input, typ, e="checkb, o, x" check, e, d={featur, e, s.screenRe, a, d.er};
-                  onChange={() => toggleFeature('screenReader')};
-                  className="w-4 h-4, tex, t-bl, u, e-600, rounded, focus:ri, n, g-bl, u, e-5, 0, 0"
-                />              </lab, e, l>
+              <la, b, e, l, class, N, a, m, e="f, l, e, x, i, t, e, m, s-cen, t, e, r, jus, t, i, f, y-bet, w, e, e, n, p-3, b, g-g, r, a, y-5, 0, rou, n, d, e, d-l, g, cu, r, s, o, r-poin, t, e, r, ho, v, e, r:b, g-g, r, a, y-1, 0, 0">
+                <di, v, class, N, a, m, e="f, l, e, x, i, t, e, m, s-c, e, n, t, e, r">
+                  <Accessibil, i, t, y, class, N, a, m, e="w-4 h-4, m, r-3, t, e, x t-i, n, d, i, g, o-5, 0, 0" />
+                  <s, p, a, n, class, N, a, m, e="t, e, x, t-s, m, fo, n, t-med, i, u, m, te, x, t-g, r, a, y-7, 0, 0">Scr, e, e, n, Rea, d, e, r, Supp, o, r, t</s, p, a, n>                </d, i, v>
+                <in, p, u, t, ty, p, e="che, c, k, b, o, x" ch, e, c, k, e, d={fea, t, u, r, e, s.scree, n, R, e, a, d.e, r};
+                  onCha, n, g, e={() => toggleFeat, u, r, e('screenRea, d, e, r')};
+                  classN, a, m, e="w-4 h-4, te, x, t-b, l, u, e-60, 0, roun, d, e, d, fo, c, u, s:r, i, n, g-b, l, u, e-5, 0, 0"
+                />              </la, b, e, l>
 
-              <label, classNam, e="flex, item, s-center, justif, y-betwee, n, p-3, b, g-gr, a, y-50, rounde, d-lg, curso, r-pointer, hover:bg-gr, a, y-1, 0, 0">
-                <div, classNam, e="flex, item, s-cent, e, r">
-                  <CheckCircle, classNam, e="w-4 h-4, m, r-3, te, x t-te, a, l-5, 0, 0" />
-                  <span, classNam, e="te, x, t-sm, fon, t-medium, tex, t-gr, a, y-7, 0, 0">Focus, Indicator, s</sp, a, n>                </d, i, v>
-                <input, typ, e="checkb, o, x" check, e, d={featur, e, s.focusIndica, t, o.rs};
-                  onChange={() => toggleFeature('focusIndicators')};
-                  className="w-4 h-4, tex, t-bl, u, e-600, rounded, focus:ri, n, g-bl, u, e-5, 0, 0"
-                />              </lab, e, l>
+              <la, b, e, l, class, N, a, m, e="f, l, e, x, i, t, e, m, s-cen, t, e, r, jus, t, i, f, y-bet, w, e, e, n, p-3, b, g-g, r, a, y-5, 0, rou, n, d, e, d-l, g, cu, r, s, o, r-poin, t, e, r, ho, v, e, r:b, g-g, r, a, y-1, 0, 0">
+                <di, v, class, N, a, m, e="f, l, e, x, i, t, e, m, s-c, e, n, t, e, r">
+                  <CheckCir, c, l, e, class, N, a, m, e="w-4 h-4, m, r-3, t, e, x t-t, e, a, l-5, 0, 0" />
+                  <s, p, a, n, class, N, a, m, e="t, e, x, t-s, m, fo, n, t-med, i, u, m, te, x, t-g, r, a, y-7, 0, 0">Fo, c, u, s, Indica, t, o, r, s</s, p, a, n>                </d, i, v>
+                <in, p, u, t, ty, p, e="che, c, k, b, o, x" ch, e, c, k, e, d={fea, t, u, r, e, s.focusInd, i, c, a, t, o.r, s};
+                  onCha, n, g, e={() => toggleFeat, u, r, e('focusIndicat, o, r, s')};
+                  classN, a, m, e="w-4 h-4, te, x, t-b, l, u, e-60, 0, roun, d, e, d, fo, c, u, s:r, i, n, g-b, l, u, e-5, 0, 0"
+                />              </la, b, e, l>
 
-              <label, classNam, e="flex, item, s-center, justif, y-betwee, n, p-3, b, g-gr, a, y-50, rounde, d-lg, curso, r-pointer, hover:bg-gr, a, y-1, 0, 0">
-                <div, classNam, e="flex, item, s-cent, e, r">
-                  <Eye, classNam, e="w-4 h-4, m, r-3, te, x t-pi, n, k-5, 0, 0" />
-                  <span, classNam, e="te, x, t-sm, fon, t-medium, tex, t-gr, a, y-7, 0, 0">Color, Blind, Support</sp, a, n>                </d, i, v>
-                <input, typ, e="checkb, o, x" check, e, d={featur, e, s.colorBlindSup, p, o.rt};
-                  onChange={() => toggleFeature('colorBlindSupport')};
-                  className="w-4 h-4, tex, t-bl, u, e-600, roundedfocu, s:ri, n, g-bl, u, e-5, 0, 0"
-                />              </lab, e, l>
+              <la, b, e, l, class, N, a, m, e="f, l, e, x, i, t, e, m, s-cen, t, e, r, jus, t, i, f, y-bet, w, e, e, n, p-3, b, g-g, r, a, y-5, 0, rou, n, d, e, d-l, g, cu, r, s, o, r-poin, t, e, r, ho, v, e, r:b, g-g, r, a, y-1, 0, 0">
+                <di, v, class, N, a, m, e="f, l, e, x, i, t, e, m, s-c, e, n, t, e, r">
+                  <Ey, e, class, N, a, m, e="w-4 h-4, m, r-3, t, e, x t-p, i, n, k-5, 0, 0" />
+                  <s, p, a, n, class, N, a, m, e="t, e, x, t-s, m, fo, n, t-med, i, u, m, te, x, t-g, r, a, y-7, 0, 0">Co, l, o, r, Bl, i, n, d, Supp, o, r, t</s, p, a, n>                </d, i, v>
+                <in, p, u, t, ty, p, e="che, c, k, b, o, x" ch, e, c, k, e, d={fea, t, u, r, e, s.colorBlind, S, u, p, p, o.r, t};
+                  onCha, n, g, e={() => toggleFeat, u, r, e('colorBlindSupp, o, r, t')};
+                  classN, a, m, e="w-4 h-4, te, x, t-b, l, u, e-60, 0, roundedf, o, c, u, s:r, i, n, g-b, l, u, e-5, 0, 0"
+                />              </la, b, e, l>
             </d, i, v>
           </d, i, v>
 
-            <divclassName="space-y-3">
-              <labelclassName="flex, item, s-center, justif, y-betwee, n, p-3, b, g-gr, a, y-50, rounde, d-lgcursor-pointerhover:bg-gray-100">
-                <divclassName="flexitems-center">
-                  <EyeclassName="w-4 h-4, m, r-3, tex, t-blue-500" />
-                  <spanclassName="text-sm, fon, t-medium, tex, t-gray-700">High, Contrast, Mode</span>                </div>
-                <inputtype="checkbox" check, e, d={featur, e, s.highContra.st};
-                  onChan, ge={() => toggleFeature("highContrast")};
-                  className="w-4 h-4, tex, t-bl, u, e-600, roundedfocus:ri, n, g-blue-500"
-                />              </label>
+            <divclassN, a, m, e="sp, a, c, e-y-3">
+              <labelclassN, a, m, e="f, l, e, x, i, t, e, m, s-cen, t, e, r, jus, t, i, f, y-bet, w, e, e, n, p-3, b, g-g, r, a, y-5, 0, rou, n, d, e, d-lgcur, s, o, r-pointerho, v, e, r:b, g-g, r, a, y-10, 0">
+                <divclassN, a, m, e="flexit, e, m, s-cen, t, e, r">
+                  <EyeclassN, a, m, e="w-4 h-4, m, r-3, te, x, t-b, l, u, e-50, 0" />
+                  <spanclassN, a, m, e="t, e, x, t-s, m, fo, n, t-med, i, u, m, te, x, t-g, r, a, y-70, 0">H, i, g, h, Contr, a, s, t, M, o, d, e</s, p, a, n>                </di, v>
+                <inputtype="check, b, o, x" ch, e, c, k, e, d={fea, t, u, r, e, s.highCon, t, r, a.s, t};
+                  onC, h, a, n, g, e={() => toggleFeat, u, r, e("highContr, a, s, t")};
+                  classN, a, m, e="w-4 h-4, te, x, t-b, l, u, e-60, 0, roundedfo, c, u, s:r, i, n, g-b, l, u, e-50, 0"
+                />              </la, b, e, l>
 
-              <labelclassName="flex, item, s-center, justif, y-betwee, n, p-3, b, g-gr, a, y-50, rounde, d-lgcursor-pointerhover:bg-gray-100">
-                <divclassName="flexitems-center">
-                  <Volume2className="w-4 h-4, m, r-3, te, x t-green-500" />
-                  <spanclassName="text-sm, fon, t-medium, tex, t-gray-700">Large, Tex, t</span>                </div>
-                <inputtype="checkbox" check, e, d={featur, e, s.largeTe.xt};
-                  onChan, ge={() => toggleFeature("largeText")};
-                  className="w-4 h-4, tex, t-bl, u, e-600, roundedfocus:ri, n, g-blue-500"
-                />              </label>
+              <labelclassN, a, m, e="f, l, e, x, i, t, e, m, s-cen, t, e, r, jus, t, i, f, y-bet, w, e, e, n, p-3, b, g-g, r, a, y-5, 0, rou, n, d, e, d-lgcur, s, o, r-pointerho, v, e, r:b, g-g, r, a, y-10, 0">
+                <divclassN, a, m, e="flexit, e, m, s-cen, t, e, r">
+                  <Volume2classN, a, m, e="w-4 h-4, m, r-3, t, e, x t-gr, e, e, n-50, 0" />
+                  <spanclassN, a, m, e="t, e, x, t-s, m, fo, n, t-med, i, u, m, te, x, t-g, r, a, y-70, 0">La, r, g, e, Te, x, t</s, p, a, n>                </di, v>
+                <inputtype="check, b, o, x" ch, e, c, k, e, d={fea, t, u, r, e, s.larg, e, T, e.x, t};
+                  onC, h, a, n, g, e={() => toggleFeat, u, r, e("largeT, e, x, t")};
+                  classN, a, m, e="w-4 h-4, te, x, t-b, l, u, e-60, 0, roundedfo, c, u, s:r, i, n, g-b, l, u, e-50, 0"
+                />              </la, b, e, l>
 
-              <labelclassName="flex, item, s-center, justif, y-betwee, n, p-3, b, g-gr, a, y-50, rounde, d-lgcursor-pointerhover:bg-gray-100">
-                <divclassName="flexitems-center">
-                  <MousePointerclassName="w-4 h-4, m, r-3, te, x t-purple-500" />
-                  <spanclassName="text-sm, fon, t-medium, tex, t-gray-700">Reduced, Motio, n</span>                </div>
-                <inputtype="checkbox" check, e, d={featur, e, s.reducedMoti.on};
-                  onChan, ge={() => toggleFeature("reducedMotion")};
-                  className="w-4 h-4, tex, t-bl, u, e-600, roundedfocus:ri, n, g-blue-500"
-                />              </label>
+              <labelclassN, a, m, e="f, l, e, x, i, t, e, m, s-cen, t, e, r, jus, t, i, f, y-bet, w, e, e, n, p-3, b, g-g, r, a, y-5, 0, rou, n, d, e, d-lgcur, s, o, r-pointerho, v, e, r:b, g-g, r, a, y-10, 0">
+                <divclassN, a, m, e="flexit, e, m, s-cen, t, e, r">
+                  <MousePointerclassN, a, m, e="w-4 h-4, m, r-3, t, e, x t-pur, p, l, e-50, 0" />
+                  <spanclassN, a, m, e="t, e, x, t-s, m, fo, n, t-med, i, u, m, te, x, t-g, r, a, y-70, 0">Redu, c, e, d, Mo, t, i, o, n</s, p, a, n>                </di, v>
+                <inputtype="check, b, o, x" ch, e, c, k, e, d={fea, t, u, r, e, s.reducedM, o, t, i.o, n};
+                  onC, h, a, n, g, e={() => toggleFeat, u, r, e("reducedMot, i, o, n")};
+                  classN, a, m, e="w-4 h-4, te, x, t-b, l, u, e-60, 0, roundedfo, c, u, s:r, i, n, g-b, l, u, e-50, 0"
+                />              </la, b, e, l>
 
-              <labelclassName="flex, item, s-center, justif, y-betwee, n, p-3, b, g-gr, a, y-50, rounde, d-lgcursor-pointerhover:bg-gray-100">
-                <divclassName="flexitems-center">
-                  <KeyboardclassName="w-4 h-4, m, r-3, te, x t-orange-500" />
-                  <spanclassName="text-sm, fon, t-medium, tex, t-gray-700">Keyboard, Navigatio, n</span>                </div>
-                <inputtype="checkbox" check, e, d={featur, e, s.keyboardNavigati.on};
-                  onChan, ge={() => toggleFeature("keyboardNavigation")};
-                  className="w-4 h-4, tex, t-bl, u, e-600, roundedfocus:ri, n, g-blue-500"
-                />              </label>
+              <labelclassN, a, m, e="f, l, e, x, i, t, e, m, s-cen, t, e, r, jus, t, i, f, y-bet, w, e, e, n, p-3, b, g-g, r, a, y-5, 0, rou, n, d, e, d-lgcur, s, o, r-pointerho, v, e, r:b, g-g, r, a, y-10, 0">
+                <divclassN, a, m, e="flexit, e, m, s-cen, t, e, r">
+                  <KeyboardclassN, a, m, e="w-4 h-4, m, r-3, t, e, x t-ora, n, g, e-50, 0" />
+                  <spanclassN, a, m, e="t, e, x, t-s, m, fo, n, t-med, i, u, m, te, x, t-g, r, a, y-70, 0">Keybo, a, r, d, Naviga, t, i, o, n</s, p, a, n>                </di, v>
+                <inputtype="check, b, o, x" ch, e, c, k, e, d={fea, t, u, r, e, s.keyboardNavig, a, t, i.o, n};
+                  onC, h, a, n, g, e={() => toggleFeat, u, r, e("keyboardNavigat, i, o, n")};
+                  classN, a, m, e="w-4 h-4, te, x, t-b, l, u, e-60, 0, roundedfo, c, u, s:r, i, n, g-b, l, u, e-50, 0"
+                />              </la, b, e, l>
 
-              <labelclassName="flex, item, s-center, justif, y-betwee, n, p-3, b, g-gr, a, y-50, rounde, d-lgcursor-pointerhover:bg-gray-100">
-                <divclassName="flexitems-center">
-                  <AccessibilityclassName="w-4 h-4, m, r-3, te, x t-indigo-500" />
-                  <spanclassName="text-sm, fon, t-medium, tex, t-gray-700">Screen, Reader, Support</span>                </div>
-                <inputtype="checkbox" check, e, d={featur, e, s.screenRead.er};
-                  onChan, ge={() => toggleFeature("screenReader")};
-                  className="w-4 h-4, tex, t-bl, u, e-600, roundedfocus:ri, n, g-blue-500"
-                />              </label>
+              <labelclassN, a, m, e="f, l, e, x, i, t, e, m, s-cen, t, e, r, jus, t, i, f, y-bet, w, e, e, n, p-3, b, g-g, r, a, y-5, 0, rou, n, d, e, d-lgcur, s, o, r-pointerho, v, e, r:b, g-g, r, a, y-10, 0">
+                <divclassN, a, m, e="flexit, e, m, s-cen, t, e, r">
+                  <AccessibilityclassN, a, m, e="w-4 h-4, m, r-3, t, e, x t-ind, i, g, o-50, 0" />
+                  <spanclassN, a, m, e="t, e, x, t-s, m, fo, n, t-med, i, u, m, te, x, t-g, r, a, y-70, 0">Scr, e, e, n, Rea, d, e, r, Supp, o, r, t</s, p, a, n>                </di, v>
+                <inputtype="check, b, o, x" ch, e, c, k, e, d={fea, t, u, r, e, s.screenR, e, a, d.e, r};
+                  onC, h, a, n, g, e={() => toggleFeat, u, r, e("screenRea, d, e, r")};
+                  classN, a, m, e="w-4 h-4, te, x, t-b, l, u, e-60, 0, roundedfo, c, u, s:r, i, n, g-b, l, u, e-50, 0"
+                />              </la, b, e, l>
 
-              <labelclassName="flex, item, s-center, justif, y-betwee, n, p-3, b, g-gr, a, y-50, rounde, d-lgcursor-pointerhover:bg-gray-100">
-                <divclassName="flexitems-center">
-                  <CheckCircleclassName="w-4 h-4, m, r-3, te, x t-teal-500" />
-                  <spanclassName="text-sm, fon, t-medium, tex, t-gray-700">Focus, Indicator, s</span>                </div>
-                <inputtype="checkbox" check, e, d={featur, e, s.focusIndicato.rs};
-                  onChan, ge={() => toggleFeature("focusIndicators")};
-                  className="w-4 h-4, tex, t-bl, u, e-600, roundedfocus:ri, n, g-blue-500"
-                />              </label>
+              <labelclassN, a, m, e="f, l, e, x, i, t, e, m, s-cen, t, e, r, jus, t, i, f, y-bet, w, e, e, n, p-3, b, g-g, r, a, y-5, 0, rou, n, d, e, d-lgcur, s, o, r-pointerho, v, e, r:b, g-g, r, a, y-10, 0">
+                <divclassN, a, m, e="flexit, e, m, s-cen, t, e, r">
+                  <CheckCircleclassN, a, m, e="w-4 h-4, m, r-3, t, e, x t-t, e, a, l-50, 0" />
+                  <spanclassN, a, m, e="t, e, x, t-s, m, fo, n, t-med, i, u, m, te, x, t-g, r, a, y-70, 0">Fo, c, u, s, Indica, t, o, r, s</s, p, a, n>                </di, v>
+                <inputtype="check, b, o, x" ch, e, c, k, e, d={fea, t, u, r, e, s.focusIndic, a, t, o.r, s};
+                  onC, h, a, n, g, e={() => toggleFeat, u, r, e("focusIndicat, o, r, s")};
+                  classN, a, m, e="w-4 h-4, te, x, t-b, l, u, e-60, 0, roundedfo, c, u, s:r, i, n, g-b, l, u, e-50, 0"
+                />              </la, b, e, l>
 
-              <labelclassName="flex, item, s-center, justif, y-betwee, n, p-3, b, g-gr, a, y-50, rounde, d-lgcursor-pointerhover:bg-gray-100">
-                <divclassName="flexitems-center">
-                  <EyeclassName="w-4 h-4, m, r-3, te, x t-pink-500" />
-                  <spanclassName="text-sm, fon, t-medium, tex, t-gray-700">Color, Blind, Support</span>                </div>
-                <inputtype="checkbox" check, e, d={featur, e, s.colorBlindSuppo.rt};
-                  onChan, ge={() => toggleFeature("colorBlindSupport")};
-                  className="w-4 h-4, tex, t-bl, u, e-600, roundedfocus:ri, n, g-blue-500"
-                />              </label>            </div>
-          </div>
+              <labelclassN, a, m, e="f, l, e, x, i, t, e, m, s-cen, t, e, r, jus, t, i, f, y-bet, w, e, e, n, p-3, b, g-g, r, a, y-5, 0, rou, n, d, e, d-lgcur, s, o, r-pointerho, v, e, r:b, g-g, r, a, y-10, 0">
+                <divclassN, a, m, e="flexit, e, m, s-cen, t, e, r">
+                  <EyeclassN, a, m, e="w-4 h-4, m, r-3, t, e, x t-p, i, n, k-50, 0" />
+                  <spanclassN, a, m, e="t, e, x, t-s, m, fo, n, t-med, i, u, m, te, x, t-g, r, a, y-70, 0">Co, l, o, r, Bl, i, n, d, Supp, o, r, t</s, p, a, n>                </di, v>
+                <inputtype="check, b, o, x" ch, e, c, k, e, d={fea, t, u, r, e, s.colorBlindSu, p, p, o.r, t};
+                  onC, h, a, n, g, e={() => toggleFeat, u, r, e("colorBlindSupp, o, r, t")};
+                  classN, a, m, e="w-4 h-4, te, x, t-b, l, u, e-60, 0, roundedfo, c, u, s:r, i, n, g-b, l, u, e-50, 0"
+                />              </la, b, e, l>            </di, v>
+          </di, v>
 
-          <div>
-            <h4className="font-semibold, text-gray-800 m b-3">Recommendatio, ns</h4>
- 0 ? (<divclassName ="space-y-2">
-                {recommendations.map((recindex) => (<divkey ={index} className="flexite, m, s-sta, r, t, p-3, bg-yell, o, w-50, bord, e, r, bord, e, r-yell, o, w-2, 0, 0, rounded-lg">
-                    <AlertTriangleclassName="w-4 h-4 mr-2 te, x, t-yell, o, w-500 mt-0.5 fle x-shrink-0" />
-                    <spanclassName="text-smtext-yellow-80 : 0">{rec}</span>                  </div>
+          <di, v>
+            <h4classN, a, m, e="f, o, n, t-semib, o, l, d, t, e, x, t-g, r, a, y-80, 0 m b-3">Recommenda, t, i, o, n, s</h, 4>
+ 0 ? (<divclassN, a, m, e ="sp, a, c, e-y-2">
+                {recommendati, o, n, s.ma, p((recin, d, e, x) => (<div, k, e, y ={in, d, e, x} classN, a, m, e="flex, i, t, e, m, s-st, a, r, t, p-3, b, g-y, e, l, l, o, w-5, 0, b, o, r, d, e, r, b, o, r, d, e, r-y, e, l, l, o, w-2, 0, 0, roun, d, e, d-l, g">
+                    <AlertTriangleclassN, a, m, e="w-4 h-4 m, r-2 t, e, x, t-y, e, l, l, o, w-50, 0 m, t-0.5 fl, e x-shr, i, n, k-0" />
+                    <spanclassN, a, m, e="t, e, x, t-smt, e, x, t-yel, l, o, w-8, 0 : 0">{re, c}</s, p, a, n>                  </di, v>
                 ))};
-              </div>
+              </di, v>
 
-                <CheckCircleclassNam, e="w-5, h-5, mr-2, t, e, x, t-green-500" />
-                <spanclassNam, e="te, x, t-sm, fo, n, t-medi, u, m, te, x, t-green-800">                  A, l, l, accessibility, feature, s, are, enable, d! Greatj, o, b!
+                <CheckCircleclass, N, a, m, e="w-5, h-5, m, r-2, t, e, x, t-gr, e, e, n-50, 0" />
+                <spanclass, N, a, m, e="t, e, x, t-s, m, f, o, n, t-m, e, d, i, u, m, t, e, x, t-gr, e, e, n-80, 0">                  A, l, l, accessibility, feat, u, r, e, s, ar, e, ena, b, l, e, d! Gre, a, t, j, o, b!
 
-            )  : (<divclassName="fle, x, ite, m, s-cent, e, r, p-4, bg-gre, e, n-50, bord, erborder-green-200 rounded-lg">
-                <CheckCircleclassName="w-5 h-5 mr-2 tex t-green-500" />
-                <spanclassName="tex, t-sm, fo, n, t-medi, umtext-green-800">                  A, l, l, accessibility, feature, s, are, enable, d! Greatj, o, b!
+            )  : (<divclassN, a, m, e="fl, e, x, it, e, m, s-c, e, n, t, e, r, p-4, b, g-gr, e, e, n-5, 0, b, o, r, d, erbor, d, e, r-gr, e, e, n-20, 0 roun, d, e, d-l, g">
+                <CheckCircleclassN, a, m, e="w-5 h-5 m, r-2 te, x t-gr, e, e, n-50, 0" />
+                <spanclassN, a, m, e="te, x, t-s, m, f, o, n, t-m, e, d, i, umt, e, x, t-gr, e, e, n-80, 0">                  A, l, l, accessibility, feat, u, r, e, s, ar, e, ena, b, l, e, d! Gre, a, t, j, o, b!
 
 
-            {recommendatio, n, s.leng, t, h > 0 ? (<divclassName ="space-y-2">
-                {recommendations.map((recindex) => (<divkey ={index} className="flexite, m, s-sta, r, t, p-3, bg-yell, o, w-50, bord, e, r, bord, e, r-yell, o, w-2, 0, 0, rounded-lg">
-                    <AlertTriangleclassName="w-4 h-4 mr-2 te, x, t-yell, o, w-500 mt-0.5 fle x-shrink-0" />
-                    <spanclassName="text-smtext-yellow-80 : 0">{rec}</span>                  </div>
+            {recommenda, t, i, o, n, s.l, e, n, g, t, h > 0 ? (<divclassN, a, m, e ="sp, a, c, e-y-2">
+                {recommendati, o, n, s.ma, p((recin, d, e, x) => (<div, k, e, y ={in, d, e, x} classN, a, m, e="flex, i, t, e, m, s-st, a, r, t, p-3, b, g-y, e, l, l, o, w-5, 0, b, o, r, d, e, r, b, o, r, d, e, r-y, e, l, l, o, w-2, 0, 0, roun, d, e, d-l, g">
+                    <AlertTriangleclassN, a, m, e="w-4 h-4 m, r-2 t, e, x, t-y, e, l, l, o, w-50, 0 m, t-0.5 fl, e x-shr, i, n, k-0" />
+                    <spanclassN, a, m, e="t, e, x, t-smt, e, x, t-yel, l, o, w-8, 0 : 0">{re, c}</s, p, a, n>                  </di, v>
                 ))};
-              </div>
+              </di, v>
 
-                <CheckCircleclassNam, e="w-5h-5, m, r-2, t, e, x, t-green-500" />
-                <spanclassNam, e="te, x, t-sm, fo, n, t-mediumte, x, t-green-800">                  Allaccessibility, featuresare, enabled! Greatj, o, b!
+                <CheckCircleclass, N, a, m, e="w-5, h-5, m, r-2, t, e, x, t-gr, e, e, n-50, 0" />
+                <spanclass, N, a, m, e="t, e, x, t-s, m, f, o, n, t-mediu, m, t, e, x, t-gr, e, e, n-80, 0">                  Allaccessibility, features, a, r, e, enab, l, e, d! Gre, a, t, j, o, b!
 
 
-            )  : (<divclassName="fle, x, ite, m, s-cent, e, r, p-4, bg-gre, e, n-50, bord, erborder-green-200 rounded-lg">
-                <CheckCircleclassName="w-5 h-5 mr-2 tex t-green-500" />
-                <spanclassName="tex, t-sm, font-mediumtext-green-800">                  Allaccessibility, featuresare, enabled! Greatj, o, b!
+            )  : (<divclassN, a, m, e="fl, e, x, it, e, m, s-c, e, n, t, e, r, p-4, b, g-gr, e, e, n-5, 0, b, o, r, d, erbor, d, e, r-gr, e, e, n-20, 0 roun, d, e, d-l, g">
+                <CheckCircleclassN, a, m, e="w-5 h-5 m, r-2 te, x t-gr, e, e, n-50, 0" />
+                <spanclassN, a, m, e="te, x, t-s, m, f, o, n, t-mediumt, e, x, t-gr, e, e, n-80, 0">                  Allaccessibility, features, a, r, e, enab, l, e, d! Gre, a, t, j, o, b!
 
-                </span>
-              </div>
+                </s, p, a, n>
+              </di, v>
             )};
-          </div>
-          <buttononClick={() => setIsOpen(!isOpen)};          >
-            {isOpen ? "Close" : "Open"} Settings
-          </button>
-        </div>
+          </di, v>
+          <buttononCl, i, c, k={() => setIsO, p, e, n(!isO, p, e, n)};          >
+            {isO, p, e, n ? "Cl, o, s, e" : "O, p, e, n"} Setti, n, g, s
+          </but, t, o, n>
+        </di, v>
 
-        <divclassName="bg-blue-50 border, border-blue-200 rounded-lgp-4">
-          <h4className="font-semibold text-blue-800 m b-2">AccessibilityStandards</h4>
-          <divclassName="text-smtext-blue-700 spac e-y-1">
-            <div>• WCAG2.1AA, compliance</div>
-            <div>• Section508compliance</div>            <div>• ARIAlabelsand roles</div>
-            <div>• SemanticHTMLstructure</div>
-            <div>• Keyboardnavigationsupport</div>
-          </div>
-          <pclassName="text-gray-600, dark:te, x, t-gray-400">AccessibilityScore</p>
-        </div>
+        <divclassN, a, m, e="b, g-b, l, u, e-5, 0 bor, d, e, r, bor, d, e, r-b, l, u, e-20, 0 roun, d, e, d-lg, p-4">
+          <h4classN, a, m, e="f, o, n, t-semib, o, l, d t, e, x, t-b, l, u, e-80, 0 m b-2">AccessibilityStanda, r, d, s</h, 4>
+          <divclassN, a, m, e="t, e, x, t-smt, e, x, t-b, l, u, e-70, 0 s, p, a, c e-y-1">
+            <di, v>• WC, A, G, 2.1A, A, complia, n, c, e</di, v>
+            <di, v>• Section508complia, n, c, e</di, v>            <di, v>• ARIAlabels, a, n, d ro, l, e, s</di, v>
+            <di, v>• SemanticHTMLstruct, u, r, e</di, v>
+            <di, v>• Keyboardnavigationsupp, o, r, t</di, v>
+          </di, v>
+          <pclassN, a, m, e="t, e, x, t-g, r, a, y-60, 0, d, a, r, k:t, e, x, t-g, r, a, y-40, 0">AccessibilitySc, o, r, e</p>
+        </di, v>
 
-        <AnimatePresence>
-          {isOpen && (<motion.divinitial ={{ opacity: 0height: 0 }};
-              animate={{ opacity: 1height: "auto" }};
-              exit={{ opacity: 0height: 0 }};
-              className="space-y-6"
+        <AnimatePrese, n, c, e>
+          {isO, p, e, n && (<mot, i, o, n.divinit, i, a, l ={{ opac, i, t, y: 0hei, g, h, t: 0 }};
+              anim, a, t, e={{ opac, i, t, y: 1hei, g, h, t: "a, u, t, o" }};
+              e, x, i, t={{ opac, i, t, y: 0hei, g, h, t: 0 }};
+              classN, a, m, e="sp, a, c, e-y-6"
             >
-              <divclassName="gridgr, i, d-co, l, s-1 md:grid-cols-2 gap-6">
-                <divclassName ="space-y-4">
-                  <h3className="text-lgfon, t-semibo, l, d, te, x, t-gr, ay-900 dark:text-white">
-                    Visu, a, l, Settin, g, s
-                  </h3>
+              <divclassN, a, m, e="gri, d, g, r, i, d-c, o, l, s-1 m, d:g, r, i, d-c, o, l, s-2 ga, p-6">
+                <divclassN, a, m, e ="sp, a, c, e-y-4">
+                  <h3classN, a, m, e="t, e, x, t-lg, f, o, n, t-sem, i, b, o, l, d, t, e, x, t-g, r, a, y-90, 0 d, a, r, k:t, e, x, t-wh, i, t, e">
+                    V, i, s, u, a, l, Set, t, i, n, g, s
+                  </h, 3>
                   
 
-                    <divclassNam, e="fl, e, x, ite, m, s-cent, e, r, justify-between">
-                      <spanclassNam, e="te, x, t-sm, te, x, t-gray-600">Fo, n, t, Si, z, e</span>
-                      <select, val, u, e ={settin, g, s.fontSize};
-                        onChan, g, e={(e) => updateSettings({fontSize: e.targ, e, t.val, u, e, as, any })};
-                        className="px-3, p, y-1, border, border-gr, a, y-300 rounded-mdtext-sm"
+                    <divclass, N, a, m, e="f, l, e, x, it, e, m, s-c, e, n, t, e, r, just, i, f, y-betw, e, e, n">
+                      <spanclass, N, a, m, e="t, e, x, t-s, m, t, e, x, t-g, r, a, y-60, 0">F, o, n, t, S, i, z, e</s, p, a, n>
+                      <sel, e, c, t, va, l, u, e ={set, t, i, n, g, s.fontS, i, z, e};
+                        onC, h, a, n, g, e={(e) => updateSetti, n, g, s({fontS, i, z, e: e.t, a, r, g, e, t.va, l, u, e, a, s, an, y })};
+                        classN, a, m, e="p, x-3, p, y-1, bor, d, e, r, bor, d, e, r-g, r, a, y-30, 0 roun, d, e, d-mdt, e, x, t-s, m"
                       >
 
-                  <divclassName ="space-y-3">
-                    <divclassName="flex, ite, ms-centerjustify-between">
-                      <spanclassName="text-smtext-gray-600">Fo, n, t, Si, z, e</span>
-                      <selectvalue ={settings.fontSize};
-                        onChan, g, e={(e) => updateSettin, g, s({fontSize: e.targ, e, t.valueasany })};
-                        className="px-3, p, y-1, border, border-gray-300 rounded-mdtext-sm"                      >
+                  <divclassN, a, m, e ="sp, a, c, e-y-3">
+                    <divclassN, a, m, e="f, l, e, x, it, e, m, s-centerjust, i, f, y-betw, e, e, n">
+                      <spanclassN, a, m, e="t, e, x, t-smt, e, x, t-g, r, a, y-60, 0">F, o, n, t, S, i, z, e</s, p, a, n>
+                      <selectva, l, u, e ={setti, n, g, s.fontS, i, z, e};
+                        onC, h, a, n, g, e={(e) => updateSet, t, i, n, g, s({fontS, i, z, e: e.t, a, r, g, e, t.valueas, a, n, y })};
+                        classN, a, m, e="p, x-3, p, y-1, bor, d, e, r, bor, d, e, r-g, r, a, y-30, 0 roun, d, e, d-mdt, e, x, t-s, m"                      >
 
-                        <optionvalue="small">Small</option>
-                        <optionvalue="medium">Medium</option>
-                        <optionvalue="large">Large</option>
-                      </select>
-                    </div>
+                        <optionva, l, u, e="sm, a, l, l">Sm, a, l, l</opt, i, o, n>
+                        <optionva, l, u, e="med, i, u, m">Med, i, u, m</opt, i, o, n>
+                        <optionva, l, u, e="la, r, g, e">La, r, g, e</opt, i, o, n>
+                      </sel, e, c, t>
+                    </di, v>
 
 
-                      <spanclassName="text-sm, tex, t-gray-600">Contra, s, t</span>
-                      <selectvalue={settin, g, s.contrast};
-                        onChan, g, e={(e) => updateSettings({contrast: e.targ, e, t.val, u, e, as, any })};
-                        className="px-3, p, y-1, border, border-gr, a, y-300 rounded-mdtext-sm"
+                      <spanclassN, a, m, e="t, e, x, t-s, m, te, x, t-g, r, a, y-60, 0">Con, t, r, a, s, t</s, p, a, n>
+                      <selectva, l, u, e={set, t, i, n, g, s.contr, a, s, t};
+                        onC, h, a, n, g, e={(e) => updateSetti, n, g, s({contr, a, s, t: e.t, a, r, g, e, t.va, l, u, e, a, s, an, y })};
+                        classN, a, m, e="p, x-3, p, y-1, bor, d, e, r, bor, d, e, r-g, r, a, y-30, 0 roun, d, e, d-mdt, e, x, t-s, m"
                       >
 
-                    <divclassName="flexitems-center justify-between">
-                      <spanclassName="text-smtext-gray-600">Contra, s, t</span>
-                      <selectvalue={settings.contrast};
-                        onChange={(e) => updateSettin, g, s({contrast: e.target.valueasany })};
-                        className="px-3, p, y-1, border, border-gr, a, y-300 rounded-mdtext-sm"                      >
+                    <divclassN, a, m, e="flexit, e, m, s-cen, t, e, r just, i, f, y-betw, e, e, n">
+                      <spanclassN, a, m, e="t, e, x, t-smt, e, x, t-g, r, a, y-60, 0">Con, t, r, a, s, t</s, p, a, n>
+                      <selectva, l, u, e={setti, n, g, s.contr, a, s, t};
+                        onCha, n, g, e={(e) => updateSet, t, i, n, g, s({contr, a, s, t: e.tar, g, e, t.valueas, a, n, y })};
+                        classN, a, m, e="p, x-3, p, y-1, bor, d, e, r, bor, d, e, r-g, r, a, y-30, 0 roun, d, e, d-mdt, e, x, t-s, m"                      >
 
-                        <optionvalue="normal">Normal</option>
-                        <optionvalue="high">High</option>
-                        <optionvalue="inverted">Inverted</option>
-                      </select>
-                    </div>
+                        <optionva, l, u, e="nor, m, a, l">Nor, m, a, l</opt, i, o, n>
+                        <optionva, l, u, e="h, i, g, h">H, i, g, h</opt, i, o, n>
+                        <optionva, l, u, e="inver, t, e, d">Inver, t, e, d</opt, i, o, n>
+                      </sel, e, c, t>
+                    </di, v>
 
 
-                      <spanclassName="text-sm, tex, t-gray-600">Cursor, Siz, e</span>
-                      <selectvalue={settin, g, s.cursor};
-                        onChan, g, e={(e) => updateSettings({cursor: e.targ, e, t.val, u, e, as, any })};
-                        className="px-3, p, y-1, border, border-gr, a, y-300 rounded-mdtext-sm"
+                      <spanclassN, a, m, e="t, e, x, t-s, m, te, x, t-g, r, a, y-60, 0">Cur, s, o, r, Si, z, e</s, p, a, n>
+                      <selectva, l, u, e={set, t, i, n, g, s.cur, s, o, r};
+                        onC, h, a, n, g, e={(e) => updateSetti, n, g, s({cur, s, o, r: e.t, a, r, g, e, t.va, l, u, e, a, s, an, y })};
+                        classN, a, m, e="p, x-3, p, y-1, bor, d, e, r, bor, d, e, r-g, r, a, y-30, 0 roun, d, e, d-mdt, e, x, t-s, m"
                       >
 
-                    <divclassName="flexitems-center justify-between">
-                      <spanclassName="text-smtext-gray-600">Cursor, Siz, e</span>
-                      <selectvalue={settings.cursor};
-                        onChange={(e) => updateSettin, g, s({cursor: e.target.valueasany })};
-                        className="px-3, p, y-1, border, border-gr, a, y-300 rounded-mdtext-sm"                      >
+                    <divclassN, a, m, e="flexit, e, m, s-cen, t, e, r just, i, f, y-betw, e, e, n">
+                      <spanclassN, a, m, e="t, e, x, t-smt, e, x, t-g, r, a, y-60, 0">Cur, s, o, r, Si, z, e</s, p, a, n>
+                      <selectva, l, u, e={setti, n, g, s.cur, s, o, r};
+                        onCha, n, g, e={(e) => updateSet, t, i, n, g, s({cur, s, o, r: e.tar, g, e, t.valueas, a, n, y })};
+                        classN, a, m, e="p, x-3, p, y-1, bor, d, e, r, bor, d, e, r-g, r, a, y-30, 0 roun, d, e, d-mdt, e, x, t-s, m"                      >
 
-                        <optionvalue="normal">Normal</option>
-                        <optionvalue="large">Large</option>
-                        <optionvalue="extra-large">ExtraLarge</option>
-                      </select>
-                    </div>
-                  </div>
-                </div>
+                        <optionva, l, u, e="nor, m, a, l">Nor, m, a, l</opt, i, o, n>
+                        <optionva, l, u, e="la, r, g, e">La, r, g, e</opt, i, o, n>
+                        <optionva, l, u, e="ex, t, r, a-la, r, g, e">ExtraLa, r, g, e</opt, i, o, n>
+                      </sel, e, c, t>
+                    </di, v>
+                  </di, v>
+                </di, v>
 
-                <divclassName="space-y-4">
-                  <h3className="text-lg font-semibold, text-gray-900 dark:text-white">
-                    Interaction, Setting, s
-                  </h3>
+                <divclassN, a, m, e="sp, a, c, e-y-4">
+                  <h3classN, a, m, e="t, e, x, t-l, g f, o, n, t-semib, o, l, d, t, e, x, t-g, r, a, y-90, 0 d, a, r, k:t, e, x, t-wh, i, t, e">
+                    Interact, i, o, n, Sett, i, n, g, s
+                  </h, 3>
                   
-                  <divclassName="space-y-3">
-                    <divclassName="flexitems-center justify-between">
-                      <spanclassName="text-smtext-gray-600">Animations</span>
-                      <inputtype="checkbox"
-                        checked={settings.animations};
-                        onChange={(e) => updateSettings({ animations: e.target.checked })};                        className="w-4 h-4, tex, t-bl, u, e-600, borde, r-gr, a, y-300, roundedfocus:ri, n, g-bl, u, e-500"
+                  <divclassN, a, m, e="sp, a, c, e-y-3">
+                    <divclassN, a, m, e="flexit, e, m, s-cen, t, e, r just, i, f, y-betw, e, e, n">
+                      <spanclassN, a, m, e="t, e, x, t-smt, e, x, t-g, r, a, y-60, 0">Animati, o, n, s</s, p, a, n>
+                      <inputtype="check, b, o, x"
+                        chec, k, e, d={setti, n, g, s.animati, o, n, s};
+                        onCha, n, g, e={(e) => updateSetti, n, g, s({ animati, o, n, s: e.tar, g, e, t.chec, k, e, d })};                        classN, a, m, e="w-4 h-4, te, x, t-b, l, u, e-60, 0, bo, r, d, e, r-g, r, a, y-30, 0, roundedfo, c, u, s:r, i, n, g-b, l, u, e-50, 0"
                       />
-                    </div>
+                    </di, v>
 
-                    <divclassName="flexitems-center justify-between">
-                      <spanclassName="text-smtext-gray-600">ScreenReader</span>
-                      <inputtype="checkbox"
-                        checked={settings.screenReader};
-                        onChan, ge={(e) => updateSettings({ screenReader: e.target.checked })};                        className="w-4 h-4, tex, t-bl, u, e-600, borde, r-gr, a, y-300, roundedfocus:ri, n, g-bl, u, e-500"
+                    <divclassN, a, m, e="flexit, e, m, s-cen, t, e, r just, i, f, y-betw, e, e, n">
+                      <spanclassN, a, m, e="t, e, x, t-smt, e, x, t-g, r, a, y-60, 0">ScreenRea, d, e, r</s, p, a, n>
+                      <inputtype="check, b, o, x"
+                        chec, k, e, d={setti, n, g, s.screenRea, d, e, r};
+                        onC, h, a, n, g, e={(e) => updateSetti, n, g, s({ screenRea, d, e, r: e.tar, g, e, t.chec, k, e, d })};                        classN, a, m, e="w-4 h-4, te, x, t-b, l, u, e-60, 0, bo, r, d, e, r-g, r, a, y-30, 0, roundedfo, c, u, s:r, i, n, g-b, l, u, e-50, 0"
                       />
-                    </div>
+                    </di, v>
 
-                    <divclassName="flexitems-center justify-between">
-                      <spanclassName="text-smtext-gray-600">KeyboardNavigation</span>
-                      <inputtype="checkbox"
-                        checked={settings.keyboardNavigation};
-                        onChan, ge={(e) => updateSettings({ keyboardNavigation: e.target.checked })};                        className="w-4 h-4, tex, t-bl, u, e-600, borde, r-gr, a, y-300, roundedfocus:ri, n, g-bl, u, e-500"
+                    <divclassN, a, m, e="flexit, e, m, s-cen, t, e, r just, i, f, y-betw, e, e, n">
+                      <spanclassN, a, m, e="t, e, x, t-smt, e, x, t-g, r, a, y-60, 0">KeyboardNavigat, i, o, n</s, p, a, n>
+                      <inputtype="check, b, o, x"
+                        chec, k, e, d={setti, n, g, s.keyboardNavigat, i, o, n};
+                        onC, h, a, n, g, e={(e) => updateSetti, n, g, s({ keyboardNavigat, i, o, n: e.tar, g, e, t.chec, k, e, d })};                        classN, a, m, e="w-4 h-4, te, x, t-b, l, u, e-60, 0, bo, r, d, e, r-g, r, a, y-30, 0, roundedfo, c, u, s:r, i, n, g-b, l, u, e-50, 0"
                       />
-                    </div>
-                  </div>
-                </div>
-              </div>
+                    </di, v>
+                  </di, v>
+                </di, v>
+              </di, v>
 
 
-                <button, onClic, k={() => setIsOpen(fal, s, e)};
-                  className="px-4, p, y-2, tex, t-gr, a, y-600, hover:te, x, t-gr, a, y-800, transitio, n-colo, r, s"
+                <but, t, o, n, onC, l, i, c, k={() => setIsO, p, e, n(fa, l, s, e)};
+                  classN, a, m, e="p, x-4, p, y-2, te, x, t-g, r, a, y-60, 0, ho, v, e, r:t, e, x, t-g, r, a, y-80, 0, transi, t, i, o, n-c, o, l, o, r, s"
                 >
-                  Canc, e, l
-                </butt, o, n>
-                <button, onClic, k={() => setIsOpen(fal, s, e)};
-                  className="px-4, p, y-2, b, g-bl, u, e-600, hover:bg-bl, u, e-700, tex, t-white, rounde, d-lg, transitio, n-colo, r, s"                >
-                  Apply, Setting, s
+                  C, a, n, c, e, l
+                </b, u, t, t, o, n>
+                <but, t, o, n, onC, l, i, c, k={() => setIsO, p, e, n(fa, l, s, e)};
+                  classN, a, m, e="p, x-4, p, y-2, b, g-b, l, u, e-60, 0, ho, v, e, r:b, g-b, l, u, e-70, 0, te, x, t-wh, i, t, e, rou, n, d, e, d-l, g, transi, t, i, o, n-c, o, l, o, r, s"                >
+                  Ap, p, l, y, Sett, i, n, g, s
 
-              <divclassName="flexitems-center justify-centerspace-x-4">
-                <buttononClick={() => setIsOpen(false)};
-                  className="px-4, p, y-2, tex, t-gr, a, y-600, hover:te, x, t-gr, a, y-800 transition-colors"
+              <divclassN, a, m, e="flexit, e, m, s-cen, t, e, r just, i, f, y-centersp, a, c, e-x-4">
+                <buttononCl, i, c, k={() => setIsO, p, e, n(fa, l, s, e)};
+                  classN, a, m, e="p, x-4, p, y-2, te, x, t-g, r, a, y-60, 0, ho, v, e, r:t, e, x, t-g, r, a, y-80, 0 transit, i, o, n-col, o, r, s"
                 >
-                  Canc, e, l
-                </button>
-                <buttononClick={() => setIsOp, e, n(false)};
-                  className="px-4, p, y-2, b, g-bl, u, e-600, hover:bg-bl, u, e-700, tex, t-white, rounde, d-lgtransition-colors"                >                  Apply, Setting, s
+                  C, a, n, c, e, l
+                </but, t, o, n>
+                <buttononCl, i, c, k={() => setI, s, O, p, e, n(fa, l, s, e)};
+                  classN, a, m, e="p, x-4, p, y-2, b, g-b, l, u, e-60, 0, ho, v, e, r:b, g-b, l, u, e-70, 0, te, x, t-wh, i, t, e, rou, n, d, e, d-lgtransit, i, o, n-col, o, r, s"                >                  Ap, p, l, y, Sett, i, n, g, s
 
-                </button>
-              </div>
-            </motion.div>
+                </but, t, o, n>
+              </di, v>
+            </mot, i, o, n.di, v>
           )};
-        </AnimatePresence>
-      </div>
-    </div>
+        </AnimatePrese, n, c, e>
+      </di, v>
+    </di, v>
   )};
 
-export default AccessibilityEnhancements;
+export default AccessibilityEnhanceme, n, t, s;

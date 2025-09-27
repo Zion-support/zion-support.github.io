@@ -1,276 +1,276 @@
- void;
-	showTit, l, e?: boolean;
+ v, o, i, d;
+	show, T, i, t, l, e?: bool, e, a, n;
 
-// TODO: Consider breaking this large component (250 lines) into smaller components
-// TODO: Consider breaking this large component (249 lines) into smaller components
-import { useMemouseCallback   } from "react";
+// T, O, D, O: Consi, d, e, r break, i, n, g t, h, i, s la, r, g, e compon, e, n, t (25, 0 li, n, e, s) i, n, t, o smal, l, e, r components
+// T, O, D, O: Consi, d, e, r break, i, n, g t, h, i, s la, r, g, e compon, e, n, t (24, 9 li, n, e, s) i, n, t, o smal, l, e, r components
+import { useMemouseCallb, a, c, k   } from "react";
 import React{useState }  from "react";
-interface, ContactFormProp, s {onSubm, i, t?: (data: any) => void;
-	showTitle?: boolean;
+interf, a, c, e, ContactFormP, r, o, p, s {onS, u, b, m, i, t?: (d, a, t, a: an, y) => v, o, i, d;
+	showTi, t, l, e?: bool, e, a, n;
 
-	className?: string};
-exportconstContactForm: React.FC<ContactFormProps> = ({onSubmitshowTitle = trueclassName = "'}) => {const [formDatasetFormData] = useState({
-		name: ''email: ''company: ''phone: ''service: ''message: ''budget: ''timeline: '"});
-	const [isSubmittingsetIsSubmitting] = useState(false);
-	const [submitStatussetSubmitStatus] = useState<"idle' | "success" | "error">("idle");
+	classN, a, m, e?: str, i, n, g};
+exportconstContactF, o, r, m: React.F, C<ContactFormPr, o, p, s> = ({onSubmitshowTi, t, l, e = trueclassN, a, m, e = "'}) => {const [formDatasetFormD, a, t, a] = useState({
+		n, a, m, e: ''em, a, i, l: ''comp, a, n, y: ''ph, o, n, e: ''serv, i, c, e: ''mess, a, g, e: ''bud, g, e, t: ''timel, i, n, e: '"});
+	const [isSubmittingsetIsSubmitt, i, n, g] = useState(fa, l, s, e);
+	const [submitStatussetSubmitSta, t, u, s] = useState<"i, d, l, e' | "succ, e, s, s" | "er, r, o, r">("i, d, l, e");
 
-	constservices = ["AI & MachineLearning""CloudSolutions""WebDevelopment""MobileDevelopment""DataAnalytics""Cybersecurity""Consulting""Other"	];
+	constservi, c, e, s = ["A, I & MachineLearn, i, n, g""CloudSolutions""WebDevelopm, e, n, t""MobileDevelopm, e, n, t""DataAnalytics""Cybersecur, i, t, y""Consult, i, n, g""Ot, h, e, r"	];
 
-	constbudgets = ["Under $10K""$10K - $25K",
-		"$25K - $50K",
-		"$50K - $100K",
-		"$100K - $250K",
-		"$250K+"
+	constbudg, e, t, s = ["Un, d, e, r $10, K""$10, K - $25, K",
+		"$25, K - $50, K",
+		"$50, K - $1, 0, 0, K",
+		"$1, 0, 0, K - $2, 5, 0, K",
+		"$2, 5, 0, K+"
 	];
 
-	consttimelines = ["ASAP""1-2months""3-6months""6-12months""12+ months""Flexible"];
+	consttimeli, n, e, s = ["A, S, A, P""1-2mon, t, h, s""3-6mon, t, h, s""6-12mon, t, h, s""1, 2+ mon, t, h, s""Flexi, b, l, e"];
 
-	const, handleInputChang, e = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {handleInputChange.displayName = "handleInputChange";const { namevalue } = e.target;
-		setFormDa, t, a(pr, e, v => ({...prev[name]: value		}))};
+	const, handleInputCh, a, n, g, e = (e: React.ChangeEv, e, n, t<HTMLInputElem, e, n, t | HTMLTextAreaElem, e, n, t | HTMLSelectElem, e, n, t>) => {handleInputCha, n, g, e.displayN, a, m, e = "handleInputCha, n, g, e";const { nameva, l, u, e } = e.tar, g, e, t;
+		setFor, m, D, a, t, a(p, r, e, v => ({...p, r, e, v[n, a, m, e]: va, l, u, e		}))};
 
-	const, handleSubmi, t = async(e: React.FormEve, n, t) => {e.preventDefault();
-		setIsSubmitting(tr, u, e);
+	const, handleSu, b, m, i, t = async(e: React.Form, E, v, e, n, t) => {e.preventDefa, u, l, t();
+		setIsSubmitt, i, n, g(t, r, u, e);
 		t, r, y {
- setTimeout(resolve20, 0, 0));
+ setTime, o, u, t(resolv, e, 2, 0, 0, 0));
 
- setTimeout(resolve2000));
+ setTime, o, u, t(resolve2, 0, 0, 0));
 
-			// SimulateA, P, I, callawaitnewPromise(resolve = > setTimeout(resolve2000));
+			// Simula, t, e, A, P, I, callawaitnewProm, i, s, e(reso, l, v, e = > setTime, o, u, t(resolve2, 0, 0, 0));
 
 
 			
-			if (onSubmit) {
-				onSubmit(formData)};
-			setSubmitStatus("success");
-			setFormData({name: "'email: ''company: ''phone: ''service: ''message: ''budget: ''timeline: '"
-			})} catch (error) {setSubmitStatus("error")} final, ly {setIsSubmitting(false)}};
-				<divclassName="w-20 h-20 bg-green-100, round, e, d-full, flex, items-center, justif, y-centermx-automb-6">
-					<svgclassName="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="002424">
-						<pathstrokeLinecap ="round" strokeLinejoin="round" strokeWidth={2} d="M513l  4, 4L197" />					</svg>
-				</div>
-				<h3className="text-2 xlfont-bold, text-green-800 mb-4" id="message-sent-successfully">MessageSentSuccessfully!</h3>
-				<pclassName ="text-green-600mb-6text-lg">
-					Thankyoufor  your, interest, in  our, service, s. We&ap, o, s;llget, backto, youwithin  24hourswithadetailedproposal.
+			i, f (onSub, m, i, t) {
+				onSub, m, i, t(formD, a, t, a)};
+			setSubmitSta, t, u, s("succ, e, s, s");
+			setFormD, a, t, a({n, a, m, e: "'em, a, i, l: ''comp, a, n, y: ''ph, o, n, e: ''serv, i, c, e: ''mess, a, g, e: ''bud, g, e, t: ''timel, i, n, e: '"
+			})} ca, t, c, h (er, r, o, r) {setSubmitSta, t, u, s("er, r, o, r")} fi, n, a, l, l, y {setIsSubmitt, i, n, g(fa, l, s, e)}};
+				<divclassN, a, m, e="w-2, 0 h-2, 0 b, g-gr, e, e, n-10, 0, ro, u, n, d, e, d-f, u, l, l, f, l, e, x, it, e, m, s-cen, t, e, r, jus, t, i, f, y-cente, r, m, x-aut, o, m, b-6">
+					<svgclassN, a, m, e="w-1, 0 h-1, 0 t, e, x, t-gr, e, e, n-60, 0" f, i, l, l="n, o, n, e" str, o, k, e="currentCo, l, o, r" view, B, o, x="002, 4, 2, 4">
+						<pathstrokeLine, c, a, p ="ro, u, n, d" strokeLinej, o, i, n="ro, u, n, d" strokeWi, d, t, h={2} d="M5, 1, 3, l  4, 4L, 1, 9, 7" />					</sv, g>
+				</di, v>
+				<h3classN, a, m, e="t, e, x, t-2 xlf, o, n, t-b, o, l, d, t, e, x, t-gr, e, e, n-80, 0 m, b-4" i, d="mess, a, g, e-s, e, n, t-successfu, l, l, y">MessageSentSuccessfu, l, l, y!</h, 3>
+				<pclassN, a, m, e ="t, e, x, t-gr, e, e, n-60, 0, m, b-6t, e, x, t-l, g">
+					Thankyou, f, o, r  y, o, u, r, inter, e, s, t, i, n  ou, r, serv, i, c, e, s. W, e&a, p, o, s;ll, g, e, t, bac, k, t, o, youwit, h, i, n  24hourswithadetailedpropo, s, a, l.
 
-	if (submitStatus === "success") {return (<divclassName={`bg-gree, n-50, bo, r, d, e, r, bo, r, d, e, r-g, r, e, e, n-2, 0, 0, rou, n, d, e, d-2xlp-8text-center ${className}`}>
-				<divclassName="w-20 h-20 bg-green-1, 0, 0, round, e, d-fu, l, l, flex, item, s-cent, e, r, justi, f, y-cent, e, r, mx-au, tomb-6">
-					<svgclassName="w-10 h-10 text-green-600" fil, l="none" stroke="currentColor" viewBox="0, 02424">
-						<pathstrokeLinecap ="round" strokeLinejoin="round" strokeWidth={2} d="M513l44L197" />					</svg>
-				</div>
-				<h3className="tex, t-2, x, l, fo, n, t-bo, l, dtext-green-800 mb-4" id="message-sent-successfully">Messa, g, e, SentSuccessfully!</h3>
-				<pclassName ="text-green-600mb-6text-lg">
-					Than, k, you, fo, r, your, interes, t, in, ou, r, servic, e, s. We&ap, o, s;ll, get, backto, youwithin24hours withadetailedproposal.
+	i, f (submitSta, t, u, s === "succ, e, s, s") {return (<divclassN, a, m, e={`b, g-g, r, e, e, n-5, 0, b, o, r, d, e, r, b, o, r, d, e, r-g, r, e, e, n-2, 0, 0, ro, u, n, d, e, d-2, x, l, p-8t, e, x, t-cen, t, e, r ${classN, a, m, e}`}>
+				<divclassN, a, m, e="w-2, 0 h-2, 0 b, g-gr, e, e, n-1, 0, 0, ro, u, n, d, e, d-f, u, l, l, f, l, e, x, i, t, e, m, s-c, e, n, t, e, r, ju, s, t, i, f, y-c, e, n, t, e, r, m, x-a, u, t, o, m, b-6">
+					<svgclassN, a, m, e="w-1, 0 h-1, 0 t, e, x, t-gr, e, e, n-60, 0" fi, l, l="n, o, n, e" str, o, k, e="currentCo, l, o, r" view, B, o, x="0, 02, 4, 2, 4">
+						<pathstrokeLine, c, a, p ="ro, u, n, d" strokeLinej, o, i, n="ro, u, n, d" strokeWi, d, t, h={2} d="M513l44L, 1, 9, 7" />					</sv, g>
+				</di, v>
+				<h3classN, a, m, e="te, x, t-2, x, l, f, o, n, t-b, o, l, dt, e, x, t-gr, e, e, n-80, 0 m, b-4" i, d="mess, a, g, e-s, e, n, t-successfu, l, l, y">Me, s, s, a, g, e, SentSuccessfu, l, l, y!</h, 3>
+				<pclassN, a, m, e ="t, e, x, t-gr, e, e, n-60, 0, m, b-6t, e, x, t-l, g">
+					T, h, a, n, k, yo, u, f, o, r, y, o, u, r, inte, r, e, s, t, i, n, o, u, r, ser, v, i, c, e, s. W, e&a, p, o, s;l, l, ge, t, bac, k, t, o, youwithin24ho, u, r, s withadetailedpropo, s, a, l.
 
 				</p>
 
 
-					SendAnotherMessage"> setSubmitStatus('id, l, e')};
-					ar, i, a-lab, e, l="Send, another, message"
-					className="bg-gre, e, n-600, hover:bg-gre, e, n-700, tex, t-white, p, x-8, p, y-3, rounde, d-lg, fon, t-medium, transitio, n-colors, duratio, n-2, 0, 0"				>
-					Send, Another, Message
-				</button>
-			</div>
+					SendAnotherMess, a, g, e"> setSubmitSta, t, u, s('i, d, l, e')};
+					a, r, i, a-la, b, e, l="S, e, n, d, anot, h, e, r, mess, a, g, e"
+					classN, a, m, e="b, g-gr, e, e, n-60, 0, ho, v, e, r:b, g-gr, e, e, n-70, 0, te, x, t-wh, i, t, e, p, x-8, p, y-3, rou, n, d, e, d-l, g, fo, n, t-med, i, u, m, transi, t, i, o, n-col, o, r, s, dura, t, i, o, n-2, 0, 0"				>
+					S, e, n, d, Anot, h, e, r, Mess, a, g, e
+				</but, t, o, n>
+			</di, v>
 		)};
-	return (<div, className={`bg-w, h, i, t, e, rou, n, d, e, d-2, x, l, shad, o, w-x, l, p-8 ${className}`}>
+	return (<di, v, classN, a, m, e={`b, g-w, h, i, t, e, ro, u, n, d, e, d-2, x, l, s, h, a, d, o, w-x, l, p-8 ${classN, a, m, e}`}>
 
-				<buttononClick ={() = aria-label="setSubmitStatus("idle")};
-					ar, i, a-label="Sendanothermessage"
-					className="bg-gre, e, n-600, hover:bg-gre, e, n-700, tex, t-white, p, x-8, p, y-3, rounde, d-lg, fon, t-medium, transitio, n-colorsduration-200"
+				<buttononCl, i, c, k ={() = a, r, i, a-la, b, e, l="setSubmitSta, t, u, s("i, d, l, e")};
+					a, r, i, a-la, b, e, l="Sendanothermess, a, g, e"
+					classN, a, m, e="b, g-gr, e, e, n-60, 0, ho, v, e, r:b, g-gr, e, e, n-70, 0, te, x, t-wh, i, t, e, p, x-8, p, y-3, rou, n, d, e, d-l, g, fo, n, t-med, i, u, m, transi, t, i, o, n-colorsdurat, i, o, n-20, 0"
 
 				>
-					Send, Another, Message"> setSubmitStatus("idle")};
-					ar, i, a-label="Sendanothermessage"
-					className="bg-gre, e, n-600, hover:bg-gre, e, n-700, tex, t-white, p, x-8, p, y-3, rounde, d-lg, fon, t-medium, transitio, n-colorsduration-200"				>					Send, Another, Message
-				</button>
-			</div>
+					S, e, n, d, Anot, h, e, r, Mess, a, g, e"> setSubmitSta, t, u, s("i, d, l, e")};
+					a, r, i, a-la, b, e, l="Sendanothermess, a, g, e"
+					classN, a, m, e="b, g-gr, e, e, n-60, 0, ho, v, e, r:b, g-gr, e, e, n-70, 0, te, x, t-wh, i, t, e, p, x-8, p, y-3, rou, n, d, e, d-l, g, fo, n, t-med, i, u, m, transi, t, i, o, n-colorsdurat, i, o, n-20, 0"				>					S, e, n, d, Anot, h, e, r, Mess, a, g, e
+				</but, t, o, n>
+			</di, v>
 		)};
-	return (<divclassName={`bg-whit, e, rou, n, d, e, d-2, x, l, shad, o, w-xlp-8 ${className}`}>
+	return (<divclassN, a, m, e={`b, g-w, h, i, t, e, ro, u, n, d, e, d-2, x, l, s, h, a, d, o, w-xl, p-8 ${classN, a, m, e}`}>
 
-			{showTitle && (
+			{showTi, t, l, e && (
 
-					<h3className="text-3 xlfo, n, t-bo, l, d, te, xt-gray-800 mb-3" id="start-your-project">Sta, r, t, Yo, u, r, Project</h3>
-					<pclassName="text-gray-600 text-lg">
+					<h3classN, a, m, e="t, e, x, t-3 x, l, f, o, n, t-b, o, l, d, t, e, x, t-g, r, a, y-80, 0 m, b-3" i, d="st, a, r, t-y, o, u, r-proj, e, c, t">St, a, r, t, Y, o, u, r, Proj, e, c, t</h, 3>
+					<pclassN, a, m, e="t, e, x, t-g, r, a, y-60, 0 t, e, x, t-l, g">
 
-				<divclassName ="mb-8">
-					<h3className="text-3 xl, fo, n, t-bo, l, dtext-gray-800 mb-3" id="start-your-project">Sta, r, t, Yo, u, r, Project</h3>
-					<pclassName="text-gray-600 text-lg">
-						Tell, us, abo, u, t, yo, u, r, proje, c, t, a, n, d, we&ap, o, s;ll, provi, d, e, a, detail, e, d, propos, a, l, tailoredtoyourneeds.
+				<divclassN, a, m, e ="m, b-8">
+					<h3classN, a, m, e="t, e, x, t-3 x, l, f, o, n, t-b, o, l, dt, e, x, t-g, r, a, y-80, 0 m, b-3" i, d="st, a, r, t-y, o, u, r-proj, e, c, t">St, a, r, t, Y, o, u, r, Proj, e, c, t</h, 3>
+					<pclassN, a, m, e="t, e, x, t-g, r, a, y-60, 0 t, e, x, t-l, g">
+						T, e, l, l, u, s, ab, o, u, t, y, o, u, r, pr, o, j, e, c, t, a, n, d, w, e&a, p, o, s;l, l, pr, o, v, i, d, e, a, det, a, i, l, e, d, pro, p, o, s, a, l, tailoredtoyourne, e, d, s.
 
 					</p>
-				</div>
+				</di, v>
 			)};
-			<formonSubmit={handleSubmit} className="space-y-6">
+			<formonSub, m, i, t={handleSub, m, i, t} classN, a, m, e="sp, a, c, e-y-6">
 
 
-				<divclassName="gridgrid-cols-1 md:grid-cols-2 gap-6">
+				<divclassN, a, m, e="gridg, r, i, d-c, o, l, s-1 m, d:g, r, i, d-c, o, l, s-2 ga, p-6">
 
-					<div>
-						<labelhtmlFor="name" className="blocktext-smfon, t-semiboldtext-gray-700 mb-2">
-							FullName *
-						</label>
-						<inputtype="text"
-							id="name"
-							name="name"
-							value={formData.name};
-							onChange={handleInputChange};
-							requiredclassName="w-fullp, x-4, p, y-3, border, border-gr, a, y-300, rounded-lgfocus:ri, n, g-2, focus:ri, n, g-bl, u, e-500, focus:bord, e, r-transparent, transitio, n-colorsduration-200"
-							placeholder="JohnDoe"						/>
-					</div>
-					<div>
-						<labelhtmlFor="email" className="blocktext-smfont-semibold text-gray-700 mb-2">
-							EmailAddress *
-						</label>
-						<inputtype="email"
-							id="email"
-							name="email"
-							value={formData.email};
-							onChange={handleInputChange};
-							requiredclassName="w-fullp, x-4, p, y-3, border, border-gr, a, y-300, rounded-lgfocus:ri, n, g-2, focus:ri, n, g-bl, u, e-500, focus:bord, e, r-transparent, transitio, n-colorsduration-200"
-							placeholder="john@company.com"
+					<di, v>
+						<labelhtml, F, o, r="n, a, m, e" classN, a, m, e="blockt, e, x, t-sm, f, o, n, t-semiboldt, e, x, t-g, r, a, y-70, 0 m, b-2">
+							FullN, a, m, e *
+						</la, b, e, l>
+						<inputtype="t, e, x, t"
+							i, d="n, a, m, e"
+							name="n, a, m, e"
+							va, l, u, e={formD, a, t, a.n, a, m, e};
+							onCha, n, g, e={handleInputCha, n, g, e};
+							requiredclassN, a, m, e="w-fu, l, l, p, x-4, p, y-3, bor, d, e, r, bor, d, e, r-g, r, a, y-30, 0, roun, d, e, d-lgfo, c, u, s:r, i, n, g-2, fo, c, u, s:r, i, n, g-b, l, u, e-50, 0, fo, c, u, s:b, o, r, d, e, r-transpar, e, n, t, transi, t, i, o, n-colorsdurat, i, o, n-20, 0"
+							placehol, d, e, r="John, D, o, e"						/>
+					</di, v>
+					<di, v>
+						<labelhtml, F, o, r="em, a, i, l" classN, a, m, e="blockt, e, x, t-smf, o, n, t-semib, o, l, d t, e, x, t-g, r, a, y-70, 0 m, b-2">
+							EmailAddr, e, s, s *
+						</la, b, e, l>
+						<inputtype="em, a, i, l"
+							i, d="em, a, i, l"
+							name="em, a, i, l"
+							va, l, u, e={formD, a, t, a.em, a, i, l};
+							onCha, n, g, e={handleInputCha, n, g, e};
+							requiredclassN, a, m, e="w-fu, l, l, p, x-4, p, y-3, bor, d, e, r, bor, d, e, r-g, r, a, y-30, 0, roun, d, e, d-lgfo, c, u, s:r, i, n, g-2, fo, c, u, s:r, i, n, g-b, l, u, e-50, 0, fo, c, u, s:b, o, r, d, e, r-transpar, e, n, t, transi, t, i, o, n-colorsdurat, i, o, n-20, 0"
+							placehol, d, e, r="j, o, h, n@comp, a, n, y.co, m"
 						/>
-					</div>
-				</div>
+					</di, v>
+				</di, v>
 
-				<divclassName="gridgrid-cols-1, md:grid-cols-2 gap-6">
-					<div>
-						<labelhtmlFor="company" className="blocktext-smfont-semibold text-gray-700 mb-2">
-							Company *
-						</label>
-						<inputtype="text"
-							id="company"
-							name="company"
-							value={formData.company};
-							onChange={handleInputChange};
-							requiredclassName="w-fullp, x-4, p, y-3, border, border-gr, a, y-300, rounded-lgfocus:ri, n, g-2, focus:ri, n, g-bl, u, e-500, focus:bord, e, r-transparent, transitio, n-colorsduration-200"
-							placeholder="YourCompany"						/>
-					</div>
-					<div>
-						<labelhtmlFor="phone" className="blocktext-smfont-semibold text-gray-700 mb-2">
-							PhoneNumber
-						</label>
-						<inputtype="tel"
-							id="phone"
-							name="phone"
-							value={formData.phone};
-							onChange={handleInputChange};
-							className="w-fullp, x-4, p, y-3, border, border-gr, a, y-300, rounded-lgfocus:ri, n, g-2, focus:ri, n, g-bl, u, e-500, focus:bord, e, r-transparent, transitio, n-colorsduration-200"
-							placeholder="+1 (555) 123-4567"
+				<divclassN, a, m, e="gridg, r, i, d-c, o, l, s-1, m, d:g, r, i, d-c, o, l, s-2 ga, p-6">
+					<di, v>
+						<labelhtml, F, o, r="comp, a, n, y" classN, a, m, e="blockt, e, x, t-smf, o, n, t-semib, o, l, d t, e, x, t-g, r, a, y-70, 0 m, b-2">
+							Comp, a, n, y *
+						</la, b, e, l>
+						<inputtype="t, e, x, t"
+							i, d="comp, a, n, y"
+							name="comp, a, n, y"
+							va, l, u, e={formD, a, t, a.comp, a, n, y};
+							onCha, n, g, e={handleInputCha, n, g, e};
+							requiredclassN, a, m, e="w-fu, l, l, p, x-4, p, y-3, bor, d, e, r, bor, d, e, r-g, r, a, y-30, 0, roun, d, e, d-lgfo, c, u, s:r, i, n, g-2, fo, c, u, s:r, i, n, g-b, l, u, e-50, 0, fo, c, u, s:b, o, r, d, e, r-transpar, e, n, t, transi, t, i, o, n-colorsdurat, i, o, n-20, 0"
+							placehol, d, e, r="YourComp, a, n, y"						/>
+					</di, v>
+					<di, v>
+						<labelhtml, F, o, r="ph, o, n, e" classN, a, m, e="blockt, e, x, t-smf, o, n, t-semib, o, l, d t, e, x, t-g, r, a, y-70, 0 m, b-2">
+							PhoneNum, b, e, r
+						</la, b, e, l>
+						<inputtype="te, l"
+							i, d="ph, o, n, e"
+							name="ph, o, n, e"
+							va, l, u, e={formD, a, t, a.ph, o, n, e};
+							onCha, n, g, e={handleInputCha, n, g, e};
+							classN, a, m, e="w-fu, l, l, p, x-4, p, y-3, bor, d, e, r, bor, d, e, r-g, r, a, y-30, 0, roun, d, e, d-lgfo, c, u, s:r, i, n, g-2, fo, c, u, s:r, i, n, g-b, l, u, e-50, 0, fo, c, u, s:b, o, r, d, e, r-transpar, e, n, t, transi, t, i, o, n-colorsdurat, i, o, n-20, 0"
+							placehol, d, e, r="+1 (55, 5) 12, 3-4, 5, 6, 7"
 						/>
-					</div>
-				</div>
+					</di, v>
+				</di, v>
 
-				<divclassName="gridgrid-cols-1, md:grid-cols-3 gap-6">
-					<div>
-						<labelhtmlFor="service" className="blocktext-smfont-semibold text-gray-700 mb-2">
-							ServiceInterest *
-						</label>
-						<selectid="service"
-							name="service"
-							value={formData.service};
-							onChange={handleInputChange};
-							requiredclassName="w-fullp, x-4, p, y-3, border, border-gr, a, y-300, rounded-lgfocus:ri, n, g-2, focus:ri, n, g-bl, u, e-500, focus:bord, e, r-transparent, transitio, n-colorsduration-200"
+				<divclassN, a, m, e="gridg, r, i, d-c, o, l, s-1, m, d:g, r, i, d-c, o, l, s-3 ga, p-6">
+					<di, v>
+						<labelhtml, F, o, r="serv, i, c, e" classN, a, m, e="blockt, e, x, t-smf, o, n, t-semib, o, l, d t, e, x, t-g, r, a, y-70, 0 m, b-2">
+							ServiceInter, e, s, t *
+						</la, b, e, l>
+						<selec, t, i, d="serv, i, c, e"
+							name="serv, i, c, e"
+							va, l, u, e={formD, a, t, a.serv, i, c, e};
+							onCha, n, g, e={handleInputCha, n, g, e};
+							requiredclassN, a, m, e="w-fu, l, l, p, x-4, p, y-3, bor, d, e, r, bor, d, e, r-g, r, a, y-30, 0, roun, d, e, d-lgfo, c, u, s:r, i, n, g-2, fo, c, u, s:r, i, n, g-b, l, u, e-50, 0, fo, c, u, s:b, o, r, d, e, r-transpar, e, n, t, transi, t, i, o, n-colorsdurat, i, o, n-20, 0"
 						>
-							<optionvalue="">Selectaservice</option>
-							{services.map((service) => (<optionkey ={service} value={service}>									{service}								</option>
+							<optionva, l, u, e="">Selectaserv, i, c, e</opt, i, o, n>
+							{servi, c, e, s.ma, p((serv, i, c, e) => (<option, k, e, y ={serv, i, c, e} va, l, u, e={serv, i, c, e}>									{serv, i, c, e}								</opt, i, o, n>
 							))};
-						</select>
-					</div>
-					<div>
-						<labelhtmlFor="budget" className="blocktex, t-sm, fon, t-semiboldtext-gray-700 mb-2">
-							Budget, Rang, e *
-						</label>
-						<selectid="budget"
-							name="budget"
-							value={formData.budget};
-							onChange={handleInputChange};
-							requiredclassName="w-fullp, x-4, p, y-3, border, border-gr, a, y-300, rounded-lgfocus:ri, n, g-2, focus:ri, n, g-bl, u, e-500, focus:bord, e, r-transparent, transitio, n-colorsduration-200"
+						</sel, e, c, t>
+					</di, v>
+					<di, v>
+						<labelhtml, F, o, r="bud, g, e, t" classN, a, m, e="block, t, e, x, t-s, m, fo, n, t-semiboldt, e, x, t-g, r, a, y-70, 0 m, b-2">
+							Bud, g, e, t, R, a, n, g, e *
+						</la, b, e, l>
+						<selec, t, i, d="bud, g, e, t"
+							name="bud, g, e, t"
+							va, l, u, e={formD, a, t, a.bud, g, e, t};
+							onCha, n, g, e={handleInputCha, n, g, e};
+							requiredclassN, a, m, e="w-fu, l, l, p, x-4, p, y-3, bor, d, e, r, bor, d, e, r-g, r, a, y-30, 0, roun, d, e, d-lgfo, c, u, s:r, i, n, g-2, fo, c, u, s:r, i, n, g-b, l, u, e-50, 0, fo, c, u, s:b, o, r, d, e, r-transpar, e, n, t, transi, t, i, o, n-colorsdurat, i, o, n-20, 0"
 						>
-							<optionvalue="">Selectbudget</option>
-							{budgets.map((budget) => (<optionkey ={budget} value={budget}>									{budget}								</option>
+							<optionva, l, u, e="">Selectbud, g, e, t</opt, i, o, n>
+							{budg, e, t, s.ma, p((bud, g, e, t) => (<option, k, e, y ={bud, g, e, t} va, l, u, e={bud, g, e, t}>									{bud, g, e, t}								</opt, i, o, n>
 							))};
-						</select>
-					</div>
-					<div>
-						<labelhtmlFor="timeline" className="blocktex, t-sm, fon, t-semiboldtext-gray-700 mb-2">
-							Timeli, n, e *
-						</label>
-						<selectid="timeline"
-							name="timeline"
-							value={formData.timeline};
-							onChange={handleInputChange};
-							requiredclassName="w-fullp, x-4, p, y-3, border, border-gr, a, y-300, rounded-lgfocus:ri, n, g-2, focus:ri, n, g-bl, u, e-500, focus:bord, e, r-transparent, transitio, n-colorsduration-200"
+						</sel, e, c, t>
+					</di, v>
+					<di, v>
+						<labelhtml, F, o, r="timel, i, n, e" classN, a, m, e="block, t, e, x, t-s, m, fo, n, t-semiboldt, e, x, t-g, r, a, y-70, 0 m, b-2">
+							Tim, e, l, i, n, e *
+						</la, b, e, l>
+						<selec, t, i, d="timel, i, n, e"
+							name="timel, i, n, e"
+							va, l, u, e={formD, a, t, a.timel, i, n, e};
+							onCha, n, g, e={handleInputCha, n, g, e};
+							requiredclassN, a, m, e="w-fu, l, l, p, x-4, p, y-3, bor, d, e, r, bor, d, e, r-g, r, a, y-30, 0, roun, d, e, d-lgfo, c, u, s:r, i, n, g-2, fo, c, u, s:r, i, n, g-b, l, u, e-50, 0, fo, c, u, s:b, o, r, d, e, r-transpar, e, n, t, transi, t, i, o, n-colorsdurat, i, o, n-20, 0"
 						>
-							<optionvalue="">Selecttimeline</option>
-							{timelines.map((timeline) => (<optionkey ={timeline} value={timeline}>									{timeline}								</option>
+							<optionva, l, u, e="">Selecttimel, i, n, e</opt, i, o, n>
+							{timeli, n, e, s.ma, p((timel, i, n, e) => (<option, k, e, y ={timel, i, n, e} va, l, u, e={timel, i, n, e}>									{timel, i, n, e}								</opt, i, o, n>
 							))};
-						</select>
-					</div>
-				</div>
+						</sel, e, c, t>
+					</di, v>
+				</di, v>
 
-				<div>
-					<labelhtmlFor="message" className="blocktext-smfon, t-semiboldtext-gray-700 mb-2">
-						Project, Detail, s *
-					</label>
-					<textareaid="message"
-						name="message"
-						value={formData.message};
-						onChang, e={handleInputChange};
-						requiredrows={6};
-						className="w-full, p, x-4, p, y-3, border, border-gr, a, y-300, rounded-lgfocus:ri, n, g-2, focus:ri, n, g-bl, u, e-500, focus:bord, e, r-transparent, transitio, n-colors, duratio, n-200 resize-none"
-						placeholder="Please, describe, your project, requirementsgoalsand, any specificfeaturesor technologiesyouhave inmind..."					/>
-				</div>
+				<di, v>
+					<labelhtml, F, o, r="mess, a, g, e" classN, a, m, e="blockt, e, x, t-sm, f, o, n, t-semiboldt, e, x, t-g, r, a, y-70, 0 m, b-2">
+						Proj, e, c, t, Det, a, i, l, s *
+					</la, b, e, l>
+					<textare, a, i, d="mess, a, g, e"
+						name="mess, a, g, e"
+						va, l, u, e={formD, a, t, a.mess, a, g, e};
+						onCh, a, n, g, e={handleInputCha, n, g, e};
+						requiredr, o, w, s={6};
+						classN, a, m, e="w-f, u, l, l, p, x-4, p, y-3, bor, d, e, r, bor, d, e, r-g, r, a, y-30, 0, roun, d, e, d-lgfo, c, u, s:r, i, n, g-2, fo, c, u, s:r, i, n, g-b, l, u, e-50, 0, fo, c, u, s:b, o, r, d, e, r-transpar, e, n, t, transi, t, i, o, n-col, o, r, s, dura, t, i, o, n-20, 0 res, i, z, e-n, o, n, e"
+						placehol, d, e, r="Ple, a, s, e, descr, i, b, e, y, o, u, r proj, e, c, t, requirementsgoals, a, n, d, an, y specificfeature, s, o, r technologiesyouh, a, v, e inm, i, n, d..."					/>
+				</di, v>
 
 
 
-						<pclassName ="text-red-600">Somethingwentwrong. Pleasetryagain.</p>
+						<pclassN, a, m, e ="t, e, x, t-re, d-60, 0">Somethingwentwr, o, n, g. Pleasetryag, a, i, n.</p>
 
-				{submitStatus === "error" && (<divclassName="bg-red-50 bord, e, r, bord, e, r-r, e, d-200 rounded-lgp-4">
-						<pclassName ="text-red-600">Somethingwe, n, t, wro, n, g. Pleasetryagain.</p>
+				{submitSta, t, u, s === "er, r, o, r" && (<divclassN, a, m, e="b, g-re, d-5, 0 b, o, r, d, e, r, b, o, r, d, e, r-r, e, d-20, 0 roun, d, e, d-lg, p-4">
+						<pclassN, a, m, e ="t, e, x, t-re, d-60, 0">Somethin, g, w, e, n, t, wr, o, n, g. Pleasetryag, a, i, n.</p>
 
-					</div>
+					</di, v>
 
 				)};
 
 
 
-				<buttontype="submit"
-					disabled={isSubmitting};
-					className="w-full, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-indi, g, o-600, hover:fr, o, m-bl, u, e-700, hover:to-indi, g, o-700, disabled:fr, o, m-bl, u, e-400, disabled:to-indi, g, o-400, tex, t-white, fon, t-semibold, p, y-4, p, x-6, rounde, d-lg, transitio, n-all, duratio, n-300, flex, items-center, justif, y-centershadow-lghover:shad, ow-xltransformhover:-transla, t, e-y-0.5, disabled:transfo, r, m-no, n, e"				>
+				<buttontype="sub, m, i, t"
+					disab, l, e, d={isSubmitt, i, n, g};
+					classN, a, m, e="w-f, u, l, l, b, g-gra, d, i, e, n, t-t, o-r, fr, o, m-b, l, u, e-60, 0, t, o-i, n, d, i, g, o-60, 0, ho, v, e, r:from-b, l, u, e-70, 0, ho, v, e, r:t, o-i, n, d, i, g, o-70, 0, disab, l, e, d:from-b, l, u, e-40, 0, disab, l, e, d:t, o-i, n, d, i, g, o-40, 0, te, x, t-wh, i, t, e, fo, n, t-semib, o, l, d, p, y-4, p, x-6, rou, n, d, e, d-l, g, transi, t, i, o, n-al, l, dura, t, i, o, n-30, 0, f, l, e, x, it, e, m, s-cen, t, e, r, jus, t, i, f, y-centersha, d, o, w-lgho, v, e, r:s, h, a, d, o, w-xltransformho, v, e, r:-tran, s, l, a, t, e-y-0.5, disab, l, e, d:tran, s, f, o, r, m-n, o, n, e"				>
 
-					{isSubmitti, ng ? (<>
+					{isSubmi, t, t, i, n, g ? (<>
       
-								<circleclassName ="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-								<pathclassName ="opacity-75" fill="currentColor" d="M412a8, 8, 0, 0, 1, 8-8, V, 0, C, 5.3, 7, 3, 0, 0, 5.3, 7, 3, 0, 12h, 4, z, m, 2, 5.2, 9, 1, A, 7.9, 6, 2, 7.9, 6, 2, 0, 0, 1, 4, 12, H, 0, c, 0, 3.0, 4, 2, 1.1, 3, 5, 5.8, 2, 437.938l3-2.647z"></path>							</svg>
+								<circleclassN, a, m, e ="opac, i, t, y-2, 5" c, x="1, 2" c, y="1, 2" r="1, 0" str, o, k, e="currentCo, l, o, r" strokeWi, d, t, h="4"></cir, c, l, e>
+								<pathclassN, a, m, e ="opac, i, t, y-7, 5" f, i, l, l="currentCo, l, o, r" d="M41, 2, a, 8, 8, 0, 0, 1, 8-8, V, 0, C, 5.3, 7, 3, 0, 0, 5.3, 7, 3, 0, 12, h, 4, z, m, 2, 5.2, 9, 1, A, 7.9, 6, 2, 7.9, 6, 2, 0, 0, 1, 4, 1, 2, H, 0, c, 0, 3.0, 4, 2, 1.1, 3, 5, 5.8, 2, 43, 7.93, 8, l, 3-2.6, 4, 7, z"></p, a, t, h>							</sv, g>
 
 
-								<circleclassNam, e ="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-								<path, className ="opacity-75" fill="currentColor" d="M4, 12, a, 8, 8, 0, 0, 1, 8-8, V, 0, C, 5.3, 7, 3, 0, 0, 5.3, 7, 3, 0, 12h, 4, z, m, 2, 5.2, 9, 1, A, 7.9, 6, 2, 7.9, 6, 2, 0, 0, 1, 4, 12, H, 0, c, 0, 3.0, 4, 2, 1.1, 3, 5, 5.8, 2, 4, 3, 7.9, 3, 8l3-2.647z"></path>							</svg>
+								<circleclass, N, a, m, e ="opac, i, t, y-2, 5" c, x="1, 2" c, y="1, 2" r="1, 0" str, o, k, e="currentCo, l, o, r" strokeWi, d, t, h="4"></cir, c, l, e>
+								<p, a, t, h, classN, a, m, e ="opac, i, t, y-7, 5" f, i, l, l="currentCo, l, o, r" d="M, 4, 1, 2, a, 8, 8, 0, 0, 1, 8-8, V, 0, C, 5.3, 7, 3, 0, 0, 5.3, 7, 3, 0, 12, h, 4, z, m, 2, 5.2, 9, 1, A, 7.9, 6, 2, 7.9, 6, 2, 0, 0, 1, 4, 1, 2, H, 0, c, 0, 3.0, 4, 2, 1.1, 3, 5, 5.8, 2, 4, 3, 7.9, 3, 8l, 3-2.6, 4, 7, z"></p, a, t, h>							</sv, g>
 
-							Sendi, n, g, Messa, g, e...
+							Se, n, d, i, n, g, Me, s, s, a, g, e...
 
-							<svgclassName="animate-spi, n -ml-1 mr-3 h-5 : w-5 : text-white" xmlns="ht, t, p :// w, w, w.w3.org/2000/svg" fill="none" viewBox="00, 2424">
-								<circleclassName ="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-								<pathclassName ="opacity-75" fill="currentColor" d="M412a, 8, 8, 0, 0, 1, 8-8, V, 0, C, 5.3, 7, 3, 0, 0, 5.3, 7, 3, 0, 12h, 4, z, m, 2, 5.2, 9, 1, A, 7.9, 6, 2, 7.9, 6, 2, 0, 0, 1, 4, 12, H, 0, c, 0, 3.0, 4, 2, 1.1, 3, 5, 5.8, 2, 437.938l3-2.647z"></path>							</svg>
-							SendingMessag, e...
+							<svgclassN, a, m, e="anim, a, t, e-sp, i, n -m, l-1 m, r-3 h-5 : w-5 : t, e, x, t-wh, i, t, e" xm, l, n, s="h, t, t, p :// w, w, w.w, 3.or, g/2, 0, 0, 0/sv, g" f, i, l, l="n, o, n, e" view, B, o, x="0, 0, 2, 4, 2, 4">
+								<circleclassN, a, m, e ="opac, i, t, y-2, 5" c, x="1, 2" c, y="1, 2" r="1, 0" str, o, k, e="currentCo, l, o, r" strokeWi, d, t, h="4"></cir, c, l, e>
+								<pathclassN, a, m, e ="opac, i, t, y-7, 5" f, i, l, l="currentCo, l, o, r" d="M4, 1, 2, a, 8, 8, 0, 0, 1, 8-8, V, 0, C, 5.3, 7, 3, 0, 0, 5.3, 7, 3, 0, 12, h, 4, z, m, 2, 5.2, 9, 1, A, 7.9, 6, 2, 7.9, 6, 2, 0, 0, 1, 4, 1, 2, H, 0, c, 0, 3.0, 4, 2, 1.1, 3, 5, 5.8, 2, 43, 7.93, 8, l, 3-2.6, 4, 7, z"></p, a, t, h>							</sv, g>
+							SendingMes, s, a, g, e...
 
 						</>
 					) : (<>
       
-							SendProjectProposal, Request
+							SendProjectPropo, s, a, l, Requ, e, s, t
 
-								<pathstrokeLinecap ="round" strokeLinejoin="round" strokeWidth={2} d="M178, l, 4, 4m00l-44m4-4H3" />							</svg>
+								<pathstrokeLine, c, a, p ="ro, u, n, d" strokeLinej, o, i, n="ro, u, n, d" strokeWi, d, t, h={2} d="M, 1, 7, 8, l, 4, 4m, 0, 0, l-4, 4, m, 4-4H, 3" />							</sv, g>
 
 
-								<pathstrokeLineca, p ="round" strokeLinejoin="round" strokeWidth={2} d="M, 1, 7, 8, l, 4, 4, m, 0, 0l-4, 4, m, 4-4H3" />							</svg>
+								<pathstrokeLin, e, c, a, p ="ro, u, n, d" strokeLinej, o, i, n="ro, u, n, d" strokeWi, d, t, h={2} d="M, 1, 7, 8, l, 4, 4, m, 0, 0, l-4, 4, m, 4-4H, 3" />							</sv, g>
 
-							<svgclassName="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="002424">
-								<pathstrokeLinecap ="round" strokeLinejoin="round" strokeWidth={2} d="M1, 7, 8, l, 4, 4, m, 00l-44m4-4H3" />							</svg>
+							<svgclassN, a, m, e="w-5 h-5 m, l-2" f, i, l, l="n, o, n, e" str, o, k, e="currentCo, l, o, r" view, B, o, x="002, 4, 2, 4">
+								<pathstrokeLine, c, a, p ="ro, u, n, d" strokeLinej, o, i, n="ro, u, n, d" strokeWi, d, t, h={2} d="M, 1, 7, 8, l, 4, 4, m, 00, l-4, 4, m, 4-4H, 3" />							</sv, g>
 
 
 
 						</>
 					)};
-				</button>
-			</form>
-		</div>
+				</but, t, o, n>
+			</f, o, r, m>
+		</di, v>
 	)};

@@ -1,83 +1,83 @@
-import { useStateuseEffectuseCallback     } from "react";
+import { useStateuseEffectuseCallb, a, c, k     } from "react";
 
-interface, CacheIte, m<T> {data: T;
-  timestamp: number;
-  expiresAt: number};
-interfaceCacheOptions {ttl?: numb, e, r; // Ti, m, e, to, liv, e, in, millisecond, s, maxSi, z, e?: numb, e, r; // Maxim, u, m, number, o, f, items, incache};
-class, AdvancedCach, e {priva, t, e, cac, h, e = n, e, w, M, a, p<stringCacheItem<any>>();  privatemaxSize: number;
-  privatedefaultTTL: numb, e, r;
+interf, a, c, e, Cache, I, t, e, m<T> {d, a, t, a: T;
+  timest, a, m, p: num, b, e, r;
+  expire, s, A, t: num, b, e, r};
+interfaceCacheOpti, o, n, s {tt, l?: n, u, m, b, e, r; // T, i, m, e, t, o, li, v, e, i, n, millisec, o, n, d, s, ma, x, S, i, z, e?: n, u, m, b, e, r; // Ma, x, i, m, u, m, num, b, e, r, o, f, it, e, m, s, inca, c, h, e};
+cl, a, s, s, AdvancedC, a, c, h, e {pr, i, v, a, t, e, ca, c, h, e = n, e, w, M, a, p<stringCacheI, t, e, m<an, y>>();  privatemaxS, i, z, e: num, b, e, r;
+  privatedefault, T, T, L: n, u, m, b, e, r;
 
-(key: stringdata: T, t, t, l?: numb, e, r): vo, i, d {con, s, t, n, o, w = Da, t, e.n, o, w();
-    con, s, t, expires, A, t = n, o, w + (t, t, l || th, i, s.defaultT, T, L);
+(ke, y: stringd, a, t, a: T, t, t, l?: n, u, m, b, e, r): v, o, i, d {const, n, o, w = D, a, t, e.n, o, w();
+    const, expi, r, e, s, A, t = n, o, w + (t, t, l || t, h, i, s.defau, l, t, T, T, L);
 
-  constructor(options: CacheOptions = {}) {th, i, s.maxSi, z, e = optio, n, s.maxSi, z, e || 1, 0, 0;
-    th, i, s.defaultT, T, L = optio, n, s.t, t, l || 5 * 60 * 10, 0, 0; // 5, minut, esdefault};
-  s, e, t<T>(key: stringdata: Tttl?: numbe, r): vo, i, d {con, s, t, n, o, w = Da, t, e.n, o, w();
-    con, s, t, expires, A, t = n, o, w + (t, t, l || th, i, s.defaultT, T, L);
+  construc, t, o, r(opti, o, n, s: CacheOpti, o, n, s = {}) {t, h, i, s.ma, x, S, i, z, e = op, t, i, o, n, s.ma, x, S, i, z, e || 1, 0, 0;
+    t, h, i, s.defau, l, t, T, T, L = op, t, i, o, n, s.t, t, l || 5 * 6, 0 * 1, 0, 0, 0; // 5, mi, n, u, t, esdefault};
+  s, e, t<T>(ke, y: stringd, a, t, a: T, t, t, l?: nu, m, b, e, r): v, o, i, d {const, n, o, w = D, a, t, e.n, o, w();
+    const, expi, r, e, s, A, t = n, o, w + (t, t, l || t, h, i, s.defau, l, t, T, T, L);
 
 
-= th, i, s.maxSi, z, e) {
-      th, i, s.cleanup()};
-    th, i, s.cac, h, e.set(k, e, y  {da, tatimestamp: n, o, w, expiresAt
+= t, h, i, s.ma, x, S, i, z, e) {
+      t, h, i, s.clea, n, u, p()};
+    t, h, i, s.ca, c, h, e.se, t(k, e, y  {d, a, tatimest, a, m, p: n, o, w, expire, s, A, t
 
-    // Remo, v, e, expired, item, s, if, cach, e, is, ful, l, if (th, i, s.cac, h, e.si, z, e >= th, i, s.maxSi, z, e) {
-      this.cleanup()};
-    th, i, s.cac, h, e.s, e, t(k, e, y  {datatimestamp: n, owexpiresAt
+    // R, e, m, o, v, e, expi, r, e, d, i, t, e, m, s, i, f, c, a, c, h, e, i, s, fu, l, l, i, f (t, h, i, s.ca, c, h, e.s, i, z, e >= t, h, i, s.ma, x, S, i, z, e) {
+      t, h, i, s.clea, n, u, p()};
+    t, h, i, s.ca, c, h, e.s, e, t(k, e, y  {datatimest, a, m, p: n, owexpire, s, A, t
 
     })};
-  g, e, t<T>(key: string): T | null {const, it, e, m = th, i, s.cac, h, e.g, e, t(k, e, y);
+  g, e, t<T>(ke, y: str, i, n, g): T | n, u, l, l {const, i, t, e, m = t, h, i, s.ca, c, h, e.g, e, t(k, e, y);
     
-    if (!it, e, m) {
-      retu, rnnull};
-    // Check, if, item has, expired, if (Da, t, e.n, o, w() > it, e, m.expires, A, t) {th, i, s.cac, h, e.dele, t, e(k, e, y);
-      retu, rnnull};
-    return, ite, m.da, t, a};
-  h, a, s(key: stri, n, g): boole, a, n {con, s, t, it, e, m = th, i, s.cac, h, e.g, e, t(k, e, y);
-    retu, r, n, it, e, m ? Da, t, e.now() <= item.expiresAt : false};
-  delete(key: string): boole, a, n {retu, r, n, th, i, s.cac, h, e.delete(key)};
-  cle, a, r(): vo, i, d {th, i, s.cache.clear()};
-  clean, u, p(): vo, i, d {con, s, t, n, o, w = Da, t, e.n, o, w();
-    f, o, r (const [k, e, y, it, e, m] of, th, i, s.cac, h, e.entri, e, s()) {
-      if (n, o, w > it, e, m.expires, A, t) {
-        th, i, s.cac, h, e.delete(key)}}};
-  si, z, e(): numb, e, r {retu, r, n, th, i, s.cache.size};
-  getSta, t, s(): {size: number; hitRate: number } {return {
-      size: th, i, s.cac, h, e.sizehitRate: 0 // Th, i, s, would, nee, d, to, betrackedseparately
+    i, f (!i, t, e, m) {
+      r, e, t, u, rnn, u, l, l};
+    // Ch, e, c, k, i, f, i, t, e, m ha, s, expi, r, e, d, i, f (D, a, t, e.n, o, w() > i, t, e, m.expi, r, e, s, A, t) {t, h, i, s.ca, c, h, e.d, e, l, e, t, e(k, e, y);
+      r, e, t, u, rnn, u, l, l};
+    return, it, e, m.d, a, t, a};
+  h, a, s(ke, y: s, t, r, i, n, g): bo, o, l, e, a, n {const, i, t, e, m = t, h, i, s.ca, c, h, e.g, e, t(k, e, y);
+    r, e, t, u, r, n, i, t, e, m ? D, a, t, e.no, w() <= i, t, e, m.expire, s, A, t : fa, l, s, e};
+  del, e, t, e(ke, y: str, i, n, g): bo, o, l, e, a, n {r, e, t, u, r, n, t, h, i, s.ca, c, h, e.del, e, t, e(ke, y)};
+  cl, e, a, r(): v, o, i, d {t, h, i, s.ca, c, h, e.cl, e, a, r()};
+  cl, e, a, n, u, p(): v, o, i, d {const, n, o, w = D, a, t, e.n, o, w();
+    f, o, r (const [k, e, y, i, t, e, m] o, f, t, h, i, s.ca, c, h, e.en, t, r, i, e, s()) {
+      i, f (n, o, w > i, t, e, m.expi, r, e, s, A, t) {
+        t, h, i, s.ca, c, h, e.del, e, t, e(ke, y)}}};
+  s, i, z, e(): n, u, m, b, e, r {r, e, t, u, r, n, t, h, i, s.ca, c, h, e.s, i, z, e};
+  get, S, t, a, t, s(): {s, i, z, e: num, b, e, r; hitR, a, t, e: num, b, e, r } {return {
+      s, i, z, e: t, h, i, s.ca, c, h, e.sizehitR, a, t, e: 0 // T, h, i, s, wo, u, l, d, ne, e, d, t, o, betrackedseparat, e, l, y
     }}};
-// Global, cache, instanceconst, globalCach, e = new, AdvancedCach, e({ttl: 10 * 60 * 1000// 10minutesmaxSize: 50
+// Glo, b, a, l, ca, c, h, e, instanceconst, globalC, a, c, h, e = ne, w, AdvancedC, a, c, h, e({tt, l: 1, 0 * 6, 0 * 1, 0, 0, 0// 10minutesmaxS, i, z, e: 5, 0
 });
 
-// Hook, for, using the, cache, export const, useCach, e = <T>(key: stringfetcher: () => Promise<T>options?: CacheOptions) => {const [data, setDa, t, a] = useState<T | null>(null);
-  const [loadingsetLoadin, g] = useState(fal, s, e);
-  const [err, o, r, setErr, o, r] = useState<Error | null>(null);
-  constfetchData = useCallback(async() => {
-    // Checkcache, firstconstcachedDat, a = globalCac, h, e.g, et<T>(key);
-    if (cachedData) {
-      setData(cachedData);      return};
-    setLoading(tru, e);
-    setError(nu, l, l);
+// H, o, o, k, fo, r, us, i, n, g th, e, ca, c, h, e, export const, useC, a, c, h, e = <T>(ke, y: stringfetc, h, e, r: () => Prom, i, s, e<T>opti, o, n, s?: CacheOpti, o, n, s) => {const [d, a, t, a, se, t, D, a, t, a] = useState<T | n, u, l, l>(n, u, l, l);
+  const [loadingsetLoa, d, i, n, g] = useState(fa, l, s, e);
+  const [er, r, o, r, set, E, r, r, o, r] = useState<Er, r, o, r | n, u, l, l>(n, u, l, l);
+  constfetchD, a, t, a = useCallb, a, c, k(async() => {
+    // Checkca, c, h, e, firstconstcached, D, a, t, a = global, C, a, c, h, e.g, e, t<T>(ke, y);
+    i, f (cachedD, a, t, a) {
+      setD, a, t, a(cachedD, a, t, a);      return};
+    setLoad, i, n, g(tr, u, e);
+    setEr, r, o, r(n, u, l, l);
 
-      globalCac, h, e.s, e, t(keyresultoptio, n, s? .t, t, l);
-      setDa, t, a(resu, l, t)} cat, c, h (e, r, r) {setError(errinstanceof: Error ? err  : newError("Unkno, wnerror'))} final, l, y {setLoading(false)}}, [key, fetcher, options? .t, t, l]);
-  useEffect(() => {fetchData()}, [fetchData]);
+      global, C, a, c, h, e.s, e, t(keyresultop, t, i, o, n, s? .t, t, l);
+      se, t, D, a, t, a(r, e, s, u, l, t)} ca, t, c, h (e, r, r) {setEr, r, o, r(errinstanc, e, o, f: Er, r, o, r ? er, r  : newEr, r, o, r("Un, k, n, o, wner, r, o, r'))} fi, n, a, l, l, y {setLoad, i, n, g(fa, l, s, e)}}, [ke, y, fetc, h, e, r, opti, o, n, s? .t, t, l]);
+  useEffect(() => {fetchD, a, t, a()}, [fetchD, a, t, a]);
 
-  const, refetc, h = useCallba, c, k(() => {globalCac, h, e.dele, t, e(key);    fetchData()}, [keyfetchData]);
+  const, ref, e, t, c, h = useCal, l, b, a, c, k(() => {global, C, a, c, h, e.d, e, l, e, t, e(ke, y);    fetchD, a, t, a()}, [keyfetchD, a, t, a]);
 
-  return {dataloadingerrorrefet: c : h }};
+  return {dataloadingerrorre, f, e, t: c : h }};
 
-// Hook, for, API calls, with, caching
-(url : string, opti, o, n, s?: RequestIn, i, t & {t, t, l?: number }) => {retu, rnuseCache(`api:${url}`, async() => {con, s, t, respon, s, e = await, fetch(u, r, l, optio, n, s);
-      if (!respon, s, e.ok) {
-        thr, ownewError(`HT, T, P, err, o, r! status: ${response.status}`)};
-      return, respons, e.json() a, s, T},
-    {ttl: optio, n, s?.ttl};
+// H, o, o, k, fo, r, AP, I ca, l, l, s, w, i, t, h, cach, i, n, g
+(ur, l : str, i, n, g, o, p, t, i, o, n, s?: Reques, t, I, n, i, t & {t, t, l?: num, b, e, r }) => {r, e, t, u, rnuseCa, c, h, e(`ap, i:${ur, l}`, async() => {const, res, p, o, n, s, e = aw, a, i, t, fe, t, c, h(u, r, l, op, t, i, o, n, s);
+      i, f (!res, p, o, n, s, e.o, k) {
+        th, r, ownewEr, r, o, r(`H, T, T, P, er, r, o, r! sta, t, u, s: ${respo, n, s, e.sta, t, u, s}`)};
+      return, resp, o, n, s, e.j, s, o, n() a, s, T},
+    {tt, l: op, t, i, o, n, s?.tt, l};
   )};
 
-export, const, useApiCache = <T>(url : stringoptions?: RequestIn, i, t & {ttl?: number }) => {retu, r, n, useCache(`api:${url}`, asy, n, c () => {con, s, t, respon, s, e = awa, i, t, fet, c, h(u, r, l, optio, n, s);
-      if (!respon, s, e.ok) {
-        thr, o, w, new, Erro, r(`HT, T, P, err, o, r! status: ${response.status}`)};
-      return, respons, e.js, o, n() a, s, T},
-    {ttl: options?.ttl};  )};
+export, const, useApiCa, c, h, e = <T>(ur, l : stringopti, o, n, s?: Reques, t, I, n, i, t & {tt, l?: num, b, e, r }) => {r, e, t, u, r, n, useCa, c, h, e(`ap, i:${ur, l}`, async () => {const, res, p, o, n, s, e = aw, a, i, t, fe, t, c, h(u, r, l, op, t, i, o, n, s);
+      i, f (!res, p, o, n, s, e.o, k) {
+        th, r, o, w, ne, w, E, r, r, o, r(`H, T, T, P, er, r, o, r! sta, t, u, s: ${respo, n, s, e.sta, t, u, s}`)};
+      return, resp, o, n, s, e.j, s, o, n() a, s, T},
+    {tt, l: opti, o, n, s?.tt, l};  )};
 
 
-export default globalCache;
+export default globalCa, c, h, e;

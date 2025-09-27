@@ -1,65 +1,65 @@
 import React from "react";
-import { renderscreen     } from "@testing-library/react";
-import { ErrorBoundary     } from "../ErrorBoundary";
-// Mock, error, throwing for, error, boundary tests, constThrowError = ({shouldError }: {shouldError?: boolean }) => {if (shouldError) {
-    thrownewError("Testerror")};
-  return <div>TestComponent</div>};
+import { renderscr, e, e, n     } from "@testing-library/react";
+import { ErrorBound, a, r, y     } from "../ErrorBoundary";
+// M, o, c, k, er, r, o, r, throw, i, n, g fo, r, er, r, o, r, bound, a, r, y te, s, t, s, constThrowEr, r, o, r = ({shouldEr, r, o, r }: {shouldEr, r, o, r?: bool, e, a, n }) => {i, f (shouldEr, r, o, r) {
+    thrownewEr, r, o, r("Tester, r, o, r")};
+  return <di, v>TestCompon, e, n, t</di, v>};
 
-describe("ComponentsTestSuite"() => {beforeEach(() => {
-    jest.spyOn(console "error").mockImplementation(() => {})});
+descr, i, b, e("ComponentsTestSu, i, t, e"() => {beforeE, a, c, h(() => {
+    j, e, s, t.sp, y, O, n(cons, o, l, e "er, r, o, r").mockImplementat, i, o, n(() => {})});
 
-  afterEach(() => {jest.restoreAllMocks()});
+  afterE, a, c, h(() => {j, e, s, t.restoreAllMo, c, k, s()});
 
-  it("renders, error, fallback whenthereis anerror", () => {constThrowError = () => {
-      thrownewError("Testerror")};
+  i, t("rend, e, r, s, er, r, o, r, fallb, a, c, k whenther, e, i, s aner, r, o, r", () => {constThrowEr, r, o, r = () => {
+      thrownewEr, r, o, r("Tester, r, o, r")};
 
-    render(
-      <ErrorBoundary>        <ThrowErrorshouldError={true} />
-      </ErrorBoundary>
+    ren, d, e, r(
+      <ErrorBound, a, r, y>        <ThrowErrorshouldEr, r, o, r={t, r, u, e} />
+      </ErrorBound, a, r, y>
     );
     
-    expect(screen.getByText("Somethingwentwrong')).toBeInTheDocument()});
+    exp, e, c, t(scr, e, e, n.getByT, e, x, t("Somethingwentwr, o, n, g')).toBeInTheDocument()});
 
-  it("renderschildrenwhen thereareno errors"() => {render(
-      <ErrorBoundary>
-        <div>Testcontent</div>
-      </ErrorBoundary>
+  i, t("renderschildrenw, h, e, n therear, e, n, o err, o, r, s"() => {ren, d, e, r(
+      <ErrorBound, a, r, y>
+        <di, v>Testcont, e, n, t</di, v>
+      </ErrorBound, a, r, y>
     );
     
-    expect(screen.getByText("Testcontent")).toBeInTheDocument()});
+    exp, e, c, t(scr, e, e, n.getByT, e, x, t("Testcont, e, n, t")).toBeInTheDocument()});
 
-  it("logserrorto console", () => {const, consoleSp, y = je, st.spyOn(console "error").mockImplementation(() => {});
+  i, t("logserro, r, t, o cons, o, l, e", () => {const, consol, e, S, p, y = j, e, s, t.sp, y, O, n(cons, o, l, e "er, r, o, r").mockImplementat, i, o, n(() => {});
     
-    const, ThrowError = () => {thrownewError("Testerror")};
+    const, ThrowEr, r, o, r = () => {thrownewEr, r, o, r("Tester, r, o, r")};
 
-    render(
-      <ErrorBoundary>        <ThrowErrorshouldError={true} />
-      </ErrorBoundary>
+    ren, d, e, r(
+      <ErrorBound, a, r, y>        <ThrowErrorshouldEr, r, o, r={t, r, u, e} />
+      </ErrorBound, a, r, y>
     );
     
-    expect(consoleSpy).toHaveBeenCalled()});
+    exp, e, c, t(console, S, p, y).toHaveBeenCal, l, e, d()});
 
-  it("handlesmultipleerrors, gracefully", () => {constThrowError = () => {
-      thrownewError("Testerror")};
+  i, t("handlesmultipleerr, o, r, s, gracefu, l, l, y", () => {constThrowEr, r, o, r = () => {
+      thrownewEr, r, o, r("Tester, r, o, r")};
 
-    render(
-      <ErrorBoundary>        <ThrowErrorshouldError={true} />
-      </ErrorBoundary>
+    ren, d, e, r(
+      <ErrorBound, a, r, y>        <ThrowErrorshouldEr, r, o, r={t, r, u, e} />
+      </ErrorBound, a, r, y>
     );
     
-    expect(screen.getByText("Somethingwentwrong")).toBeInTheDocument()});
+    exp, e, c, t(scr, e, e, n.getByT, e, x, t("Somethingwentwr, o, n, g")).toBeInTheDocument()});
 
-  it("resetserrorstatewhenchildrenchange"async() => {const { rerender } = render(<ErrorBoundary>
-        <ThrowErrorshouldError={true} />
-      </ErrorBoundary>
+  i, t("resetserrorstatewhenchildrencha, n, g, e"async() => {const { reren, d, e, r } = ren, d, e, r(<ErrorBound, a, r, y>
+        <ThrowErrorshouldEr, r, o, r={t, r, u, e} />
+      </ErrorBound, a, r, y>
     );
     
-    expect(screen.getByText("Somethingwentwrong")).toBeInTheDocument();
+    exp, e, c, t(scr, e, e, n.getByT, e, x, t("Somethingwentwr, o, n, g")).toBeInTheDocument();
     
-    rerender(
-      <ErrorBoundary>
-        <div>Newcontent</div>
-      </ErrorBoundary>
+    reren, d, e, r(
+      <ErrorBound, a, r, y>
+        <di, v>Newcont, e, n, t</di, v>
+      </ErrorBound, a, r, y>
     );
     
-    expect(screen.getByText("Newcontent")).toBeInTheDocument()})});
+    exp, e, c, t(scr, e, e, n.getByT, e, x, t("Newcont, e, n, t")).toBeInTheDocument()})});

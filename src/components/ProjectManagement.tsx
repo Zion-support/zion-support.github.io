@@ -1,260 +1,260 @@
-// TODO: Consider breaking this large component (207 lines) into smaller components
-// TODO: Consider breaking this large component (206 lines) into smaller components
-import { useMemouseCallback   } from "react";
+// T, O, D, O: Consi, d, e, r break, i, n, g t, h, i, s la, r, g, e compon, e, n, t (20, 7 li, n, e, s) i, n, t, o smal, l, e, r components
+// T, O, D, O: Consi, d, e, r break, i, n, g t, h, i, s la, r, g, e compon, e, n, t (20, 6 li, n, e, s) i, n, t, o smal, l, e, r components
+import { useMemouseCallb, a, c, k   } from "react";
 import React from 'react";
 import React{useStateuseEffect }  from "react";
-interface, Project {id: string;
-  name: string;
-  description: string;
-  status: "planning' | "in- progress" | "review" | "completed";
->>>>>> 45ce5fae8a680d713f034d877aa81b1d405b5763
-  dueDate: string;
-  team: string[];
-  priority: "low" | "medium" | "high" | "urgent"};
-interfaceProjectManagementProps {isDarkMode: boolean};
-const ProjectManagement = React.memo(function ProjectManagement({isDarkMode }: ProjectManagementProps): JSX.Elemen.t {const [projectssetProject] = useState<Project[]>([{      progress: 100dueDate: "2024-01-15"team: ["David""Lisa"]priority: "low"}  ]);
+interf, a, c, e, Proj, e, c, t {i, d: str, i, n, g;
+  n, a, m, e: str, i, n, g;
+  description: str, i, n, g;
+  sta, t, u, s: "plann, i, n, g' | "i, n- progr, e, s, s" | "rev, i, e, w" | "comple, t, e, d";
+>>>>>> 45ce5fae8a680d713f034d877aa81b1d405b5, 7, 6, 3
+  dueD, a, t, e: str, i, n, g;
+  t, e, a, m: str, i, n, g[];
+  prior, i, t, y: "lo, w" | "med, i, u, m" | "h, i, g, h" | "urg, e, n, t"};
+interfaceProjectManagementPr, o, p, s {isDarkM, o, d, e: bool, e, a, n};
+const ProjectManagem, e, n, t = React.memo(function ProjectManagem, e, n, t({isDarkM, o, d, e }: ProjectManagementPr, o, p, s): JS, X.Ele, m, e, n.t {const [projectssetProj, e, c, t] = useState<Proj, e, c, t[]>([{      progr, e, s, s: 100dueD, a, t, e: "2, 0, 2, 4-0, 1-1, 5"t, e, a, m: ["Da, v, i, d""L, i, s, a"]prior, i, t, y: "lo, w"}  ]);
 
-  const [selectedStatussetSelectedStatu] = useState<string>("all");
+  const [selectedStatussetSelectedSt, a, t, u] = useState<str, i, n, g>("al, l");
 
- {getStatusColor.displayName = "getStatusColor";constcolors = {
-      planning: "bg-blue-100dark:bg-blu, e-900te, x, t-bl, u, e-800dark:text-blue-200",
-      "in-progress": "bg-yell, o, w-1, 0, 0, dark:bg-yell, o, w-900te, x, t-yellow-800dark:text-yellow-200",
-      review: "bg-purp, l, e-1, 00dark:bg-purp, l, e-900te, x, t-purple-800dark:text-purple-200",
-      completed: "bg-gre, e, n-1, 00dark:bg-green-900text-green-800dark:text-green-200"
+ {getStatusCo, l, o, r.displayN, a, m, e = "getStatusCo, l, o, r";constcol, o, r, s = {
+      plann, i, n, g: "b, g-b, l, u, e-100d, a, r, k:b, g-bl, u, e-90, 0, t, e, x, t-b, l, u, e-800d, a, r, k:t, e, x, t-b, l, u, e-20, 0",
+      "i, n-progr, e, s, s": "b, g-y, e, l, l, o, w-1, 0, 0, d, a, r, k:b, g-y, e, l, l, o, w-90, 0, t, e, x, t-yel, l, o, w-800d, a, r, k:t, e, x, t-yel, l, o, w-20, 0",
+      rev, i, e, w: "b, g-p, u, r, p, l, e-1, 00d, a, r, k:b, g-p, u, r, p, l, e-90, 0, t, e, x, t-pur, p, l, e-800d, a, r, k:t, e, x, t-pur, p, l, e-20, 0",
+      comple, t, e, d: "b, g-gr, e, e, n-1, 00d, a, r, k:b, g-gr, e, e, n-900t, e, x, t-gr, e, e, n-800d, a, r, k:t, e, x, t-gr, e, e, n-20, 0"
     };
-    return, color, s[status]};
+    return, co, l, o, r, s[sta, t, u, s]};
 
- {getPriorityColor.displayName = "getPriorityCol, o, r";con, s, tcolors = {
-      low: "bg-gr, a, y-100dark:bg-gr, a, y-700te, x, t-gr, a, y-800dark:te, x, t-gr, a, y-200',
-      medium: "bg-bl, u, e-1, 00dark:bg-bl, u, e-900te, x, t-bl, u, e-800dark:te, x, t-blue-200",
-      high: "bg-oran, g, e-1, 00dark:bg-oran, g, e-900te, x, t-oran, g, e-800dark:te, x, t-orange-200",
-      urgent: "bg-r, e, d-1, 00dark:bg-r, e, d-900te, x, t-r, e, d-800dark:te, x, t-red-200"
+ {getPriorityCo, l, o, r.displayN, a, m, e = "getPriority, C, o, l, o, r";constcol, o, r, s = {
+      lo, w: "b, g-g, r, a, y-100d, a, r, k:b, g-g, r, a, y-70, 0, t, e, x, t-g, r, a, y-800d, a, r, k:t, e, x, t-g, r, a, y-20, 0',
+      med, i, u, m: "b, g-b, l, u, e-1, 00d, a, r, k:b, g-b, l, u, e-90, 0, t, e, x, t-b, l, u, e-800d, a, r, k:t, e, x, t-b, l, u, e-20, 0",
+      h, i, g, h: "b, g-o, r, a, n, g, e-1, 00d, a, r, k:b, g-o, r, a, n, g, e-90, 0, t, e, x, t-o, r, a, n, g, e-800d, a, r, k:t, e, x, t-ora, n, g, e-20, 0",
+      urg, e, n, t: "b, g-r, e, d-1, 00d, a, r, k:b, g-r, e, d-90, 0, t, e, x, t-r, e, d-800d, a, r, k:t, e, x, t-re, d-20, 0"
 
-  con, s, t, getStatusCol, o, r = (status: Project['status"]) => {
-  getStatusColor.displayName = "getStatusCol, o, r";con, s, tcolors = {
-      planning: "bg-bl, u, e-1, 0, 0, dark:bg-bl, u, e-900te, x, t-bl, u, e-800dark:te, x, t-bl, u, e-200',
-      "in-progress": "bg-yell, o, w-1, 0, 0, dark:bg-yell, o, w-900te, x, t-yell, o, w-800dark:te, x, t-yellow-200",
-      review: "bg-purp, l, e-1, 0, 0, dark:bg-purp, l, e-900te, x, t-purp, l, e-800dark:te, x, t-purple-200",
-      completed: "bg-gre, e, n-1, 0, 0, dark:bg-gre, e, n-900te, x, t-gre, e, n-800dark:text-green-200"
+  const, getStatus, C, o, l, o, r = (sta, t, u, s: Proj, e, c, t['sta, t, u, s"]) => {
+  getStatusCo, l, o, r.displayN, a, m, e = "getStatus, C, o, l, o, r";constcol, o, r, s = {
+      plann, i, n, g: "b, g-b, l, u, e-1, 0, 0, d, a, r, k:b, g-b, l, u, e-90, 0, t, e, x, t-b, l, u, e-800d, a, r, k:t, e, x, t-b, l, u, e-20, 0',
+      "i, n-progr, e, s, s": "b, g-y, e, l, l, o, w-1, 0, 0, d, a, r, k:b, g-y, e, l, l, o, w-90, 0, t, e, x, t-y, e, l, l, o, w-800d, a, r, k:t, e, x, t-yel, l, o, w-20, 0",
+      rev, i, e, w: "b, g-p, u, r, p, l, e-1, 0, 0, d, a, r, k:b, g-p, u, r, p, l, e-90, 0, t, e, x, t-p, u, r, p, l, e-800d, a, r, k:t, e, x, t-pur, p, l, e-20, 0",
+      comple, t, e, d: "b, g-gr, e, e, n-1, 0, 0, d, a, r, k:b, g-gr, e, e, n-90, 0, t, e, x, t-gr, e, e, n-800d, a, r, k:t, e, x, t-gr, e, e, n-20, 0"
     };
-    return, color, s[status]};
+    return, co, l, o, r, s[sta, t, u, s]};
 
-  const, getPriorityColo, r = (priority: Project['priority"]) => {getPriorityColor.displayName = "getPriorityCol, o, r";con, s, tcolors = {
-      low: "bg-gr, a, y-100dark:bg-gr, a, y-700te, x, t-gr, a, y-800dark:te, x, t-gr, a, y-200',
-      medium: "bg-bl, u, e-1, 0, 0, dark:bg-bl, u, e-900te, x, t-bl, u, e-800dark:te, x, t-blue-200",
-      high: "bg-oran, g, e-1, 0, 0, dark:bg-oran, g, e-900te, x, t-oran, g, e-800dark:te, x, t-orange-200",
-      urgent: "bg-r, e, d-1, 0, 0, dark:bg-r, e, d-900te, x, t-r, e, d-800dark:text-red-200"
-
-    };
-    return, color, s[priority]};
-
-  const, getPriorityIco, n = (priority: Project['priority"]) => {getPriorityIcon.displayName = "getPriorityIcon";consticons = {
-      low: "🔵'medium: '🟡'high: '🟠'urgent: '🔴"
-
-  const, getPriorityColo, r = (priority: Proje, c, t['priority"]) => {getPriorityColor.displayName = "getPriorityColor";constcolors = {
-      low: "bg-gr, a, y-100dark:bg-gr, a, y-700te, x, t-gr, a, y-800dark:te, x, t-gr, a, y-200",
-      medium: "bg-bl, u, e-1, 00dark:bg-bl, u, e-900te, x, t-blue-800dark:text-blue-200",
-      high: "bg-oran, g, e-1, 00dark:bg-oran, g, e-900te, x, t-orange-800dark:text-orange-200",
-      urgent: "bg-r, e, d-1, 00dark:bg-r, e, d-900te, x, t-red-800dark:text-red-200"
-
-  con, s, t, getStatusCol, o, r = (status: Proje, c, t['status"]) => {
-  getStatusColor.displayName = "getStatusColor";constcolors = {
-      planning: "bg-bl, u, e-1, 0, 0, dark:bg-bl, u, e-900te, x, t-bl, u, e-800dark:te, x, t-bl, u, e-200",
-      "in-progress": "bg-yell, o, w-1, 0, 0, dark:bg-yell, o, w-900te, x, t-yellow-800dark:text-yellow-200",
-      review: "bg-purp, l, e-1, 0, 0, dark:bg-purp, l, e-900te, x, t-purple-800dark:text-purple-200",
-      completed: "bg-gre, e, n-1, 0, 0, dark:bg-green-900text-green-800dark:text-green-200"
-    };
-    return, color, s[status]};
-
-  const, getPriorityColo, r = (priority: Proje, c, t['priority"]) => {getPriorityColor.displayName = "getPriorityColor";constcolors = {
-      low: "bg-gr, a, y-100dark:bg-gr, a, y-700te, x, t-gr, a, y-800dark:te, x, t-gr, a, y-200",
-      medium: "bg-bl, u, e-1, 0, 0, dark:bg-bl, u, e-900te, x, t-blue-800dark:text-blue-200",
-      high: "bg-oran, g, e-1, 0, 0, dark:bg-oran, g, e-900te, x, t-orange-800dark:text-orange-200",
-      urgent: "bg-r, e, d-1, 0, 0, dark:bg-red-900text-red-800dark:text-red-200"
-    };
-    return, color, s[priority]};
-
-  const, getPriorityIco, n = (priority: Proje, c, t['priority"]) => {getPriorityIcon.displayName = "getPriorityIcon";consticons = {      low: "🔵'medium: '🟡'high: '🟠'urgent: '🔴"
+  const, getPriorityC, o, l, o, r = (prior, i, t, y: Proj, e, c, t['prior, i, t, y"]) => {getPriorityCo, l, o, r.displayN, a, m, e = "getPriority, C, o, l, o, r";constcol, o, r, s = {
+      lo, w: "b, g-g, r, a, y-100d, a, r, k:b, g-g, r, a, y-70, 0, t, e, x, t-g, r, a, y-800d, a, r, k:t, e, x, t-g, r, a, y-20, 0',
+      med, i, u, m: "b, g-b, l, u, e-1, 0, 0, d, a, r, k:b, g-b, l, u, e-90, 0, t, e, x, t-b, l, u, e-800d, a, r, k:t, e, x, t-b, l, u, e-20, 0",
+      h, i, g, h: "b, g-o, r, a, n, g, e-1, 0, 0, d, a, r, k:b, g-o, r, a, n, g, e-90, 0, t, e, x, t-o, r, a, n, g, e-800d, a, r, k:t, e, x, t-ora, n, g, e-20, 0",
+      urg, e, n, t: "b, g-r, e, d-1, 0, 0, d, a, r, k:b, g-r, e, d-90, 0, t, e, x, t-r, e, d-800d, a, r, k:t, e, x, t-re, d-20, 0"
 
     };
-    returnicons[priority]};
+    return, co, l, o, r, s[prior, i, t, y]};
 
-  constfilteredProjects = selectedStatus === "all" 
-    ? projects: projec, t, s.filter(proje, c, t => proje, c, t.stat, u, s === selectedStat, u, s);
+  const, getPriority, I, c, o, n = (prior, i, t, y: Proj, e, c, t['prior, i, t, y"]) => {getPriorityI, c, o, n.displayN, a, m, e = "getPriorityI, c, o, n";constic, o, n, s = {
+      lo, w: "🔵'med, i, u, m: '🟡'h, i, g, h: '🟠'urg, e, n, t: '🔴"
 
-  constgetStatusStats = () => {getStatusStats.displayName = "getStatusStats";con, s, t, sta, t, s = {
-      planning: projects.filter(p => p.status === "planning").length"in-progress": projects.filter(p => p.status === "in-progress").lengthreview: projects.filter(p => p.status === "review").lengthcompleted: projects.filter(p => p.status === "completed").length    };    returnstats};
+  const, getPriorityC, o, l, o, r = (prior, i, t, y: Pr, o, j, e, c, t['prior, i, t, y"]) => {getPriorityCo, l, o, r.displayN, a, m, e = "getPriorityCo, l, o, r";constcol, o, r, s = {
+      lo, w: "b, g-g, r, a, y-100d, a, r, k:b, g-g, r, a, y-70, 0, t, e, x, t-g, r, a, y-800d, a, r, k:t, e, x, t-g, r, a, y-20, 0",
+      med, i, u, m: "b, g-b, l, u, e-1, 00d, a, r, k:b, g-b, l, u, e-90, 0, t, e, x, t-b, l, u, e-800d, a, r, k:t, e, x, t-b, l, u, e-20, 0",
+      h, i, g, h: "b, g-o, r, a, n, g, e-1, 00d, a, r, k:b, g-o, r, a, n, g, e-90, 0, t, e, x, t-ora, n, g, e-800d, a, r, k:t, e, x, t-ora, n, g, e-20, 0",
+      urg, e, n, t: "b, g-r, e, d-1, 00d, a, r, k:b, g-r, e, d-90, 0, t, e, x, t-re, d-800d, a, r, k:t, e, x, t-re, d-20, 0"
 
-  conststats = getStatusStats();
+  const, getStatus, C, o, l, o, r = (sta, t, u, s: Pr, o, j, e, c, t['sta, t, u, s"]) => {
+  getStatusCo, l, o, r.displayN, a, m, e = "getStatusCo, l, o, r";constcol, o, r, s = {
+      plann, i, n, g: "b, g-b, l, u, e-1, 0, 0, d, a, r, k:b, g-b, l, u, e-90, 0, t, e, x, t-b, l, u, e-800d, a, r, k:t, e, x, t-b, l, u, e-20, 0",
+      "i, n-progr, e, s, s": "b, g-y, e, l, l, o, w-1, 0, 0, d, a, r, k:b, g-y, e, l, l, o, w-90, 0, t, e, x, t-yel, l, o, w-800d, a, r, k:t, e, x, t-yel, l, o, w-20, 0",
+      rev, i, e, w: "b, g-p, u, r, p, l, e-1, 0, 0, d, a, r, k:b, g-p, u, r, p, l, e-90, 0, t, e, x, t-pur, p, l, e-800d, a, r, k:t, e, x, t-pur, p, l, e-20, 0",
+      comple, t, e, d: "b, g-gr, e, e, n-1, 0, 0, d, a, r, k:b, g-gr, e, e, n-900t, e, x, t-gr, e, e, n-800d, a, r, k:t, e, x, t-gr, e, e, n-20, 0"
+    };
+    return, co, l, o, r, s[sta, t, u, s]};
+
+  const, getPriorityC, o, l, o, r = (prior, i, t, y: Pr, o, j, e, c, t['prior, i, t, y"]) => {getPriorityCo, l, o, r.displayN, a, m, e = "getPriorityCo, l, o, r";constcol, o, r, s = {
+      lo, w: "b, g-g, r, a, y-100d, a, r, k:b, g-g, r, a, y-70, 0, t, e, x, t-g, r, a, y-800d, a, r, k:t, e, x, t-g, r, a, y-20, 0",
+      med, i, u, m: "b, g-b, l, u, e-1, 0, 0, d, a, r, k:b, g-b, l, u, e-90, 0, t, e, x, t-b, l, u, e-800d, a, r, k:t, e, x, t-b, l, u, e-20, 0",
+      h, i, g, h: "b, g-o, r, a, n, g, e-1, 0, 0, d, a, r, k:b, g-o, r, a, n, g, e-90, 0, t, e, x, t-ora, n, g, e-800d, a, r, k:t, e, x, t-ora, n, g, e-20, 0",
+      urg, e, n, t: "b, g-r, e, d-1, 0, 0, d, a, r, k:b, g-re, d-900t, e, x, t-re, d-800d, a, r, k:t, e, x, t-re, d-20, 0"
+    };
+    return, co, l, o, r, s[prior, i, t, y]};
+
+  const, getPriority, I, c, o, n = (prior, i, t, y: Pr, o, j, e, c, t['prior, i, t, y"]) => {getPriorityI, c, o, n.displayN, a, m, e = "getPriorityI, c, o, n";constic, o, n, s = {      lo, w: "🔵'med, i, u, m: '🟡'h, i, g, h: '🟠'urg, e, n, t: '🔴"
+
+    };
+    returnic, o, n, s[prior, i, t, y]};
+
+  constfilteredProje, c, t, s = selectedSta, t, u, s === "al, l" 
+    ? proje, c, t, s: pro, j, e, c, t, s.fil, t, e, r(pr, o, j, e, c, t => pr, o, j, e, c, t.s, t, a, t, u, s === selectedS, t, a, t, u, s);
+
+  constgetStatusSt, a, t, s = () => {getStatusSt, a, t, s.displayN, a, m, e = "getStatusSt, a, t, s";const, st, a, t, s = {
+      plann, i, n, g: proje, c, t, s.fil, t, e, r(p => p.sta, t, u, s === "plann, i, n, g").len, g, t, h"i, n-progr, e, s, s": proje, c, t, s.fil, t, e, r(p => p.sta, t, u, s === "i, n-progr, e, s, s").lengthrev, i, e, w: proje, c, t, s.fil, t, e, r(p => p.sta, t, u, s === "rev, i, e, w").lengthcomple, t, e, d: proje, c, t, s.fil, t, e, r(p => p.sta, t, u, s === "comple, t, e, d").len, g, t, h    };    returnst, a, t, s};
+
+  constst, a, t, s = getStatusSt, a, t, s();
 
 
-      <divclassName="flexitems-center justify-betweenmb-6">
-        <h3className="text-xlfont-semibold, tex, t-gr, ay-900 dark:text-white" id="project-management">
-          ProjectManagement
-        </h3>
-        <buttonclassName="px-4 py-2 bg-blue-600, hover:bg-bl, u, e-7, 0, 0, te, x, t-white, tex, t-smrounded-mdtransition-colors" ar, i, a-label="+ NewProject">          + NewProject, retur, n (<divclassName={`p-6rounde, d-lg, bo, r, d, e, r-2transiti, o, n-allduration-300 ${isDarkMode?"bg-gr, a, y-800bord, e, r-gr, a, y-700hover:bord, e, r-gr, a, y-600":"bg-whiteborder-gray-200hover:border-gray-300"}`}>
-      <divclassName="flexite, m, s-centerjustify-betweenmb-6">
-        <h3className="text-xlfont-semibo, l, d, te, x, t-gr, ay-900 dark:text-white" id="project-management">
-          Proje, ctManagement        </h3>
-        <buttonclassName="px-4 py-2 bg-blu, e-600 hover:bg-bl, u, e-700 te, x, t-whi, t, e, te, x, t-smround, e, d-mdtransition-colors" aria-label="+ NewProject">          + NewProje, ct
+      <divclassN, a, m, e="flexit, e, m, s-cen, t, e, r just, i, f, y-betwee, n, m, b-6">
+        <h3classN, a, m, e="t, e, x, t-xlf, o, n, t-semib, o, l, d, te, x, t-g, r, a, y-90, 0 d, a, r, k:t, e, x, t-wh, i, t, e" i, d="proj, e, c, t-managem, e, n, t">
+          ProjectManagem, e, n, t
+        </h, 3>
+        <buttonclassN, a, m, e="p, x-4 p, y-2 b, g-b, l, u, e-60, 0, ho, v, e, r:b, g-b, l, u, e-7, 0, 0, t, e, x, t-wh, i, t, e, te, x, t-smroun, d, e, d-mdtransit, i, o, n-col, o, r, s" a, r, i, a-la, b, e, l="+ NewProj, e, c, t">          + NewProj, e, c, t, re, t, u, r, n (<divclassN, a, m, e={`p-6rou, n, d, e, d-l, g, b, o, r, d, e, r-2trans, i, t, i, o, n-alldurat, i, o, n-30, 0 ${isDarkM, o, d, e?"b, g-g, r, a, y-800b, o, r, d, e, r-g, r, a, y-700ho, v, e, r:b, o, r, d, e, r-g, r, a, y-60, 0":"b, g-whitebor, d, e, r-g, r, a, y-200ho, v, e, r:bor, d, e, r-g, r, a, y-30, 0"}`}>
+      <divclassN, a, m, e="flex, i, t, e, m, s-centerjust, i, f, y-betwee, n, m, b-6">
+        <h3classN, a, m, e="t, e, x, t-xlf, o, n, t-sem, i, b, o, l, d, t, e, x, t-g, r, a, y-90, 0 d, a, r, k:t, e, x, t-wh, i, t, e" i, d="proj, e, c, t-managem, e, n, t">
+          Pr, o, j, e, ctManagem, e, n, t        </h, 3>
+        <buttonclassN, a, m, e="p, x-4 p, y-2 b, g-bl, u, e-60, 0 ho, v, e, r:b, g-b, l, u, e-70, 0 t, e, x, t-wh, i, t, e, t, e, x, t-smro, u, n, d, e, d-mdtransit, i, o, n-col, o, r, s" a, r, i, a-la, b, e, l="+ NewProj, e, c, t">          + NewPr, o, j, e, c, t
 
-        </button>
-      </div>
+        </but, t, o, n>
+      </di, v>
 
 
-      {/* StatusFilter */};
- (<buttonke, y ={status};
-            onCli, c, k={(()) => {ar, i, a-label="setSelectedStatus(status)};
-            ar, i, a-lab, e, l={`Fi, l, t, e, rb, y ${status} stat, u, s`};
-            className={`px-3, p, y-1rou, n, d, e, d-mdte, x, t-smfo, n, t-mediumtransiti, o, n-colo, r, s ${selectedStatus===status?"bg-blue-600text-white":"bg-gray-200dark:bg-gray-700text-gray-700dark:text-gray-300hover:bg-gray-300dark:hover:bg-gray-600">>>>>>>1a0942380552ad64dab6ee9842e809045d7531b7}`};
+      {/* StatusFil, t, e, r */};
+ (<butto, n, k, e, y ={sta, t, u, s};
+            on, C, l, i, c, k={(()) => {a, r, i, a-la, b, e, l="setSelectedSta, t, u, s(sta, t, u, s)};
+            a, r, i, a-la, b, e, l={`F, i, l, t, e, r, b, y ${sta, t, u, s} s, t, a, t, u, s`};
+            classN, a, m, e={`p, x-3, p, y-1, r, o, u, n, d, e, d-m, d, t, e, x, t-s, m, f, o, n, t-mediumtrans, i, t, i, o, n-c, o, l, o, r, s ${selectedSta, t, u, s===sta, t, u, s?"b, g-b, l, u, e-600t, e, x, t-wh, i, t, e":"b, g-g, r, a, y-200d, a, r, k:b, g-g, r, a, y-700t, e, x, t-g, r, a, y-700d, a, r, k:t, e, x, t-g, r, a, y-300ho, v, e, r:b, g-g, r, a, y-300d, a, r, k:ho, v, e, r:b, g-g, r, a, y-60, 0">>>>>>>1a0942380552ad64dab6ee9842e809045d753, 1, b, 7}`};
           >
-            {stat, u, s === "all" ? "All": stat, u, s.charAt(0).toUpperCase() + status.slice(1)}"> setSelectedStatus(stat, u, s)};
-            ar, i, a-lab, e, l={`Fi, l, t, e, rb, y ${status} stat, u, s`};
-            className={`px-3, p, y-1rou, n, d, e, d-mdte, x, t-smfo, n, t-mediumtransiti, o, n-colo, r, s ${selectedStatus===status?"bg-blue-600text-white":"bg-gray-200dark:bg-gray-700text-gray-700dark:text-gray-300hover:bg-gray-300dark:hover:bg-gray-600"}`};
-      <divclassName ="flexspace-x-2mb-6">
-        {["all""planning""in-progress""review""completed"].map((stat, u, s) => (<buttonke, y ={status};
-            onCli, c, k={(()) => {ar, i, a-label="setSelectedStatus(status)};
-            ar, i, a-lab, e, l={`Fi, l, t, e, rb, y ${status} stat, u, s`};
-            className={`px-3, p, y-1rou, n, d, e, d-md, te, x, t-smfo, n, t-mediumtransiti, o, n-colo, r, s ${selectedStatus===status?"bg-blue-600text-white":"bg-gray-200dark:bg-gray-700text-gray-700dark:text-gray-300hover:bg-gray-300dark:hover:bg-gray-600">>>>>>>1a0942380552ad64dab6ee9842e809045d7531b7}`};
+            {s, t, a, t, u, s === "al, l" ? "Al, l": s, t, a, t, u, s.cha, r, A, t(0).toUpperC, a, s, e() + sta, t, u, s.sl, i, c, e(1)}"> setSelectedSta, t, u, s(s, t, a, t, u, s)};
+            a, r, i, a-la, b, e, l={`F, i, l, t, e, r, b, y ${sta, t, u, s} s, t, a, t, u, s`};
+            classN, a, m, e={`p, x-3, p, y-1, r, o, u, n, d, e, d-m, d, t, e, x, t-s, m, f, o, n, t-mediumtrans, i, t, i, o, n-c, o, l, o, r, s ${selectedSta, t, u, s===sta, t, u, s?"b, g-b, l, u, e-600t, e, x, t-wh, i, t, e":"b, g-g, r, a, y-200d, a, r, k:b, g-g, r, a, y-700t, e, x, t-g, r, a, y-700d, a, r, k:t, e, x, t-g, r, a, y-300ho, v, e, r:b, g-g, r, a, y-300d, a, r, k:ho, v, e, r:b, g-g, r, a, y-60, 0"}`};
+      <divclassN, a, m, e ="flexsp, a, c, e-x-2m, b-6">
+        {["al, l""plann, i, n, g""i, n-progr, e, s, s""rev, i, e, w""comple, t, e, d"].ma, p((s, t, a, t, u, s) => (<butto, n, k, e, y ={sta, t, u, s};
+            on, C, l, i, c, k={(()) => {a, r, i, a-la, b, e, l="setSelectedSta, t, u, s(sta, t, u, s)};
+            a, r, i, a-la, b, e, l={`F, i, l, t, e, r, b, y ${sta, t, u, s} s, t, a, t, u, s`};
+            classN, a, m, e={`p, x-3, p, y-1, r, o, u, n, d, e, d-m, d, t, e, x, t-s, m, f, o, n, t-mediumtrans, i, t, i, o, n-c, o, l, o, r, s ${selectedSta, t, u, s===sta, t, u, s?"b, g-b, l, u, e-600t, e, x, t-wh, i, t, e":"b, g-g, r, a, y-200d, a, r, k:b, g-g, r, a, y-700t, e, x, t-g, r, a, y-700d, a, r, k:t, e, x, t-g, r, a, y-300ho, v, e, r:b, g-g, r, a, y-300d, a, r, k:ho, v, e, r:b, g-g, r, a, y-60, 0">>>>>>>1a0942380552ad64dab6ee9842e809045d753, 1, b, 7}`};
           >
-            {stat, u, s === "all" ? "All": stat, u, s.charAt(0).toUpperCase() + status.slice(1)}"> setSelectedStatus(stat, u, s)};
-            ar, i, a-lab, e, l={`Fi, l, t, e, rb, y ${status} stat, u, s`};
-            className={`px-3, p, y-1rou, n, d, e, d-md, te, x, t-smfo, n, t-mediumtransiti, o, n-colo, r, s ${selectedStatus===status?"bg-blue-600text-white":"bg-gray-200dark:bg-gray-700text-gray-700dark:text-gray-300hover:bg-gray-300dark:hover:bg-gray-600"}`};
+            {s, t, a, t, u, s === "al, l" ? "Al, l": s, t, a, t, u, s.cha, r, A, t(0).toUpperC, a, s, e() + sta, t, u, s.sl, i, c, e(1)}"> setSelectedSta, t, u, s(s, t, a, t, u, s)};
+            a, r, i, a-la, b, e, l={`F, i, l, t, e, r, b, y ${sta, t, u, s} s, t, a, t, u, s`};
+            classN, a, m, e={`p, x-3, p, y-1, r, o, u, n, d, e, d-m, d, t, e, x, t-s, m, f, o, n, t-mediumtrans, i, t, i, o, n-c, o, l, o, r, s ${selectedSta, t, u, s===sta, t, u, s?"b, g-b, l, u, e-600t, e, x, t-wh, i, t, e":"b, g-g, r, a, y-200d, a, r, k:b, g-g, r, a, y-700t, e, x, t-g, r, a, y-700d, a, r, k:t, e, x, t-g, r, a, y-300ho, v, e, r:b, g-g, r, a, y-300d, a, r, k:ho, v, e, r:b, g-g, r, a, y-60, 0"}`};
 
-        {["all""planning""in-progress""review""completed"].map((status) => (<buttonkey ={status};
-            onClick={(()) => {aria-label="setSelectedStatus(status)};
-            ar, i, a-lab, e, l={`Fi, l, t, erby ${status} stat, u, s`};
-            className={`px-3, p, y-1rou, n, d, e  d-mdte, x, t-smfo, n, t-mediumtransiti, o, n-colo, r, s ${selectedStatus===status?"bg-bl, u, e-600text-white":"bg-gr, a, y-200dark:bg-gr, a, y-700te, x, t-gr, a, y-700dark:text-gray-300hover:bg-gray-300dark:hover:bg-gray-600">>>>>>>1a0942380552ad64dab6ee9842e809045d7531b7}`};
+        {["al, l""plann, i, n, g""i, n-progr, e, s, s""rev, i, e, w""comple, t, e, d"].ma, p((sta, t, u, s) => (<button, k, e, y ={sta, t, u, s};
+            onCl, i, c, k={(()) => {a, r, i, a-la, b, e, l="setSelectedSta, t, u, s(sta, t, u, s)};
+            a, r, i, a-la, b, e, l={`F, i, l, t, e, r, b, y ${sta, t, u, s} s, t, a, t, u, s`};
+            classN, a, m, e={`p, x-3, p, y-1, r, o, u, n, d, e  d-m, d, t, e, x, t-s, m, f, o, n, t-mediumtrans, i, t, i, o, n-c, o, l, o, r, s ${selectedSta, t, u, s===sta, t, u, s?"b, g-b, l, u, e-600t, e, x, t-wh, i, t, e":"b, g-g, r, a, y-200d, a, r, k:b, g-g, r, a, y-70, 0, t, e, x, t-g, r, a, y-700d, a, r, k:t, e, x, t-g, r, a, y-300ho, v, e, r:b, g-g, r, a, y-300d, a, r, k:ho, v, e, r:b, g-g, r, a, y-60, 0">>>>>>>1a0942380552ad64dab6ee9842e809045d753, 1, b, 7}`};
           >
-            {stat, u, s === "all" ? "All": status.charAt(0).toUpperCase() + status.slice(1)}"> setSelectedStat, u, s(stat, u, s)};
-            ar, i, a-lab, e, l={`Fi, l, t, erby ${status} stat, u, s`};
-            className={`px-3, p, y-1rou, n, d, e  d-mdte, x, t-smfo, n, t-mediumtransiti, o, n-colo, r, s ${selectedStat, u, s===status?"bg-blue-600text-white":"bg-gr, a, y-200dark:bg-gr, a, y-700te, x, t-gray-700dark:text-gray-300hover:bg-gray-300dark:hover:bg-gray-600"}`};
-      <divclassName ="flexspace-x-2mb-6">
-        {["all""planning""in-progress""review""completed"].map((status) => (<buttonkey ={status};
-            onClick={(()) => {aria-label="setSelectedStatus(status)};
-            ar, i, a-lab, e, l={`Fi, l, t, erby ${status} stat, u, s`};
-            className={`px-3, p, y-1rou, n, d, e  d-md, te, x, t-smfo, n, t-mediumtransiti, o, n-colo, r, s ${selectedStatus===status?"bg-bl, u, e-600text-white":"bg-gr, a, y-200dark:bg-gr, a, y-700te, x, t-gr, a, y-700dark:text-gray-300hover:bg-gray-300dark:hover:bg-gray-600">>>>>>>1a0942380552ad64dab6ee9842e809045d7531b7}`};
+            {s, t, a, t, u, s === "al, l" ? "Al, l": sta, t, u, s.cha, r, A, t(0).toUpperC, a, s, e() + sta, t, u, s.sl, i, c, e(1)}"> setSelectedS, t, a, t, u, s(s, t, a, t, u, s)};
+            a, r, i, a-la, b, e, l={`F, i, l, t, e, r, b, y ${sta, t, u, s} s, t, a, t, u, s`};
+            classN, a, m, e={`p, x-3, p, y-1, r, o, u, n, d, e  d-m, d, t, e, x, t-s, m, f, o, n, t-mediumtrans, i, t, i, o, n-c, o, l, o, r, s ${selectedS, t, a, t, u, s===sta, t, u, s?"b, g-b, l, u, e-600t, e, x, t-wh, i, t, e":"b, g-g, r, a, y-200d, a, r, k:b, g-g, r, a, y-70, 0, t, e, x, t-g, r, a, y-700d, a, r, k:t, e, x, t-g, r, a, y-300ho, v, e, r:b, g-g, r, a, y-300d, a, r, k:ho, v, e, r:b, g-g, r, a, y-60, 0"}`};
+      <divclassN, a, m, e ="flexsp, a, c, e-x-2m, b-6">
+        {["al, l""plann, i, n, g""i, n-progr, e, s, s""rev, i, e, w""comple, t, e, d"].ma, p((sta, t, u, s) => (<button, k, e, y ={sta, t, u, s};
+            onCl, i, c, k={(()) => {a, r, i, a-la, b, e, l="setSelectedSta, t, u, s(sta, t, u, s)};
+            a, r, i, a-la, b, e, l={`F, i, l, t, e, r, b, y ${sta, t, u, s} s, t, a, t, u, s`};
+            classN, a, m, e={`p, x-3, p, y-1, r, o, u, n, d, e  d-m, d, t, e, x, t-s, m, f, o, n, t-mediumtrans, i, t, i, o, n-c, o, l, o, r, s ${selectedSta, t, u, s===sta, t, u, s?"b, g-b, l, u, e-600t, e, x, t-wh, i, t, e":"b, g-g, r, a, y-200d, a, r, k:b, g-g, r, a, y-70, 0, t, e, x, t-g, r, a, y-700d, a, r, k:t, e, x, t-g, r, a, y-300ho, v, e, r:b, g-g, r, a, y-300d, a, r, k:ho, v, e, r:b, g-g, r, a, y-60, 0">>>>>>>1a0942380552ad64dab6ee9842e809045d753, 1, b, 7}`};
           >
-            {stat, u, s === "all" ? "All": status.charAt(0).toUpperCase() + status.slice(1)}"> setSelectedStat, u, s(stat, u, s)};
-            ar, i, a-lab, e, l={`Fi, l, t, erby ${status} stat, u, s`};
-            className={`px-3, p, y-1rou, n, d, e  d-md, te, x, t-smfo, n, t-mediumtransiti, o, n-colo, r, s ${selectedStat, u, s===status?"bg-blue-600text-white":"bg-gr, a, y-200dark:bg-gr, a, y-700te, x, t-gray-700dark:text-gray-300hover:bg-gray-300dark:hover:bg-gray-600"}`};
+            {s, t, a, t, u, s === "al, l" ? "Al, l": sta, t, u, s.cha, r, A, t(0).toUpperC, a, s, e() + sta, t, u, s.sl, i, c, e(1)}"> setSelectedS, t, a, t, u, s(s, t, a, t, u, s)};
+            a, r, i, a-la, b, e, l={`F, i, l, t, e, r, b, y ${sta, t, u, s} s, t, a, t, u, s`};
+            classN, a, m, e={`p, x-3, p, y-1, r, o, u, n, d, e  d-m, d, t, e, x, t-s, m, f, o, n, t-mediumtrans, i, t, i, o, n-c, o, l, o, r, s ${selectedS, t, a, t, u, s===sta, t, u, s?"b, g-b, l, u, e-600t, e, x, t-wh, i, t, e":"b, g-g, r, a, y-200d, a, r, k:b, g-g, r, a, y-70, 0, t, e, x, t-g, r, a, y-700d, a, r, k:t, e, x, t-g, r, a, y-300ho, v, e, r:b, g-g, r, a, y-300d, a, r, k:ho, v, e, r:b, g-g, r, a, y-60, 0"}`};
 
           >
-            {stat, u, s === "all" ? "All": stat, u, s.charAt(0).toUpperCase() + status.slice(1)}          </button>        ))};
-      </div>
+            {s, t, a, t, u, s === "al, l" ? "Al, l": s, t, a, t, u, s.cha, r, A, t(0).toUpperC, a, s, e() + sta, t, u, s.sl, i, c, e(1)}          </but, t, o, n>        ))};
+      </di, v>
 
-      {/* StatusOverview */};
-      <divclassName="gridgrid-cols-4 ga, p-4 mb-6">
-        <divclassName="text-center">
-{stats.planning}</div>
-          <divclassName="text-xs text-gr, a, y-600, dark:text-gray-400">Planning</div>
-        </div>
+      {/* StatusOverv, i, e, w */};
+      <divclassN, a, m, e="gridg, r, i, d-c, o, l, s-4 g, a, p-4 m, b-6">
+        <divclassN, a, m, e="t, e, x, t-cen, t, e, r">
+{st, a, t, s.plann, i, n, g}</di, v>
+          <divclassN, a, m, e="t, e, x, t-x, s t, e, x, t-g, r, a, y-60, 0, d, a, r, k:t, e, x, t-g, r, a, y-40, 0">Plann, i, n, g</di, v>
+        </di, v>
 
-          <divclassName="text-2, xl, font-bold, tex, t-yell, ow-600 dark:text-yellow-400">{stats['in-progress"]}</div>
+          <divclassN, a, m, e="t, e, x, t-2, x, l, f, o, n, t-b, o, l, d, te, x, t-y, e, l, l, o, w-60, 0 d, a, r, k:t, e, x, t-yel, l, o, w-40, 0">{st, a, t, s['i, n-progr, e, s, s"]}</di, v>
 
-        <divclassName="text-center">          <divclassName="text-2 xlfont-bold, tex, t-yell, ow-600 dark:text-yellow-400">{stats['in-progress"]}</div>
+        <divclassN, a, m, e="t, e, x, t-cen, t, e, r">          <divclassN, a, m, e="t, e, x, t-2 xlf, o, n, t-b, o, l, d, te, x, t-y, e, l, l, o, w-60, 0 d, a, r, k:t, e, x, t-yel, l, o, w-40, 0">{st, a, t, s['i, n-progr, e, s, s"]}</di, v>
 
 
-          <divclassName="text-2 xlfont-boldtext-bl, u, e-600, dark:text-blue-400">{stats.planning}</div>
-          <divclassName="text-xs text-gray-600, dark:text-gray-400">Planni, n, g</div>
-        </div>
-        <divclassName="text-center">
-          <divclassName="text-2 xlfont-boldtext-yell, o, w-600 dark:text-yellow-400">{stats['in-progress"]}</div>
+          <divclassN, a, m, e="t, e, x, t-2 xlf, o, n, t-boldt, e, x, t-b, l, u, e-60, 0, d, a, r, k:t, e, x, t-b, l, u, e-40, 0">{st, a, t, s.plann, i, n, g}</di, v>
+          <divclassN, a, m, e="t, e, x, t-x, s t, e, x, t-g, r, a, y-60, 0, d, a, r, k:t, e, x, t-g, r, a, y-40, 0">Pla, n, n, i, n, g</di, v>
+        </di, v>
+        <divclassN, a, m, e="t, e, x, t-cen, t, e, r">
+          <divclassN, a, m, e="t, e, x, t-2 xlf, o, n, t-boldt, e, x, t-y, e, l, l, o, w-60, 0 d, a, r, k:t, e, x, t-yel, l, o, w-40, 0">{st, a, t, s['i, n-progr, e, s, s"]}</di, v>
 
-          <divclassName="text-xs text-gray-600, dark:text-gray-400">In, Progres, s</div>
-        </div>
-        <divclassName="text-center">
-          <divclassName="text-2 xlfont-boldtext-purp, le-600 dark:text-purple-400">{stats.review}</div>
-          <divclassName="text-xs text-gr, ay-600 dark:text-gray-400">Revi, e, w</div>
-        </div>
-        <divclassName="text-center">
-          <divclassName="text-2 xlfont-boldtext-gre, en-600 dark:text-green-400">{stats.completed}</div>
-          <divclassName="text-xs text-gr, ay-600 dark:text-gray-400">Complet, e, d</div>
-        </div>
-      </div>
+          <divclassN, a, m, e="t, e, x, t-x, s t, e, x, t-g, r, a, y-60, 0, d, a, r, k:t, e, x, t-g, r, a, y-40, 0">I, n, Prog, r, e, s, s</di, v>
+        </di, v>
+        <divclassN, a, m, e="t, e, x, t-cen, t, e, r">
+          <divclassN, a, m, e="t, e, x, t-2 xlf, o, n, t-boldt, e, x, t-p, u, r, p, l, e-60, 0 d, a, r, k:t, e, x, t-pur, p, l, e-40, 0">{st, a, t, s.rev, i, e, w}</di, v>
+          <divclassN, a, m, e="t, e, x, t-x, s t, e, x, t-g, r, a, y-60, 0 d, a, r, k:t, e, x, t-g, r, a, y-40, 0">R, e, v, i, e, w</di, v>
+        </di, v>
+        <divclassN, a, m, e="t, e, x, t-cen, t, e, r">
+          <divclassN, a, m, e="t, e, x, t-2 xlf, o, n, t-boldt, e, x, t-gr, e, e, n-60, 0 d, a, r, k:t, e, x, t-gr, e, e, n-40, 0">{st, a, t, s.comple, t, e, d}</di, v>
+          <divclassN, a, m, e="t, e, x, t-x, s t, e, x, t-g, r, a, y-60, 0 d, a, r, k:t, e, x, t-g, r, a, y-40, 0">Comp, l, e, t, e, d</di, v>
+        </di, v>
+      </di, v>
 
-      {/* ProjectsList */};
-      <divclassName="space-y-4">
- (<divke, y ={project.id};
-            className={`p-4, rou, n, d, e, d-lg, bo, r, d, e, r, transi, t, i, o, n-a, lldurati, o, n-200hover:shad, o, w-md ${isDarkMode?"bg-gray-700border-gray-600hover:border-gray-500":"bg-gray-50border-gray-200hover:border-gray-300"}`};
+      {/* ProjectsL, i, s, t */};
+      <divclassN, a, m, e="sp, a, c, e-y-4">
+ (<di, v, k, e, y ={proj, e, c, t.i, d};
+            classN, a, m, e={`p-4, ro, u, n, d, e, d-l, g, b, o, r, d, e, r, tra, n, s, i, t, i, o, n-a, lldur, a, t, i, o, n-200ho, v, e, r:s, h, a, d, o, w-m, d ${isDarkM, o, d, e?"b, g-g, r, a, y-700bor, d, e, r-g, r, a, y-600ho, v, e, r:bor, d, e, r-g, r, a, y-50, 0":"b, g-g, r, a, y-50bor, d, e, r-g, r, a, y-200ho, v, e, r:bor, d, e, r-g, r, a, y-30, 0"}`};
           >
-            <divclassNam, e="fl, e, x, ite, m, s-sta, r, t, justi, fy-betweenmb-3">
-              <divclassNam, e ="flex-1">
-                <divclassNam, e="fl, e, x, ite, m, s-cent, e, rspace-x-2mb-1">
-                  <h4className="fon, t-semibo, l, d, te, x, t-gr, a, y-9, 0, 0, dark:text-white" id="projectname">
-                    {proje, c, t.name};
+            <divclass, N, a, m, e="f, l, e, x, it, e, m, s-st, a, r, t, ju, s, t, i, f, y-betwee, n, m, b-3">
+              <divclass, N, a, m, e ="f, l, e, x-1">
+                <divclass, N, a, m, e="f, l, e, x, it, e, m, s-c, e, n, t, e, rsp, a, c, e-x-2m, b-1">
+                  <h4classN, a, m, e="fo, n, t-sem, i, b, o, l, d, t, e, x, t-g, r, a, y-9, 0, 0, d, a, r, k:t, e, x, t-wh, i, t, e" i, d="projectn, a, m, e">
+                    {pr, o, j, e, c, t.n, a, m, e};
 
- (<divkey ={project.id};
-        {filteredProjects.ma, p((project) => (<divkey ={project.id};
-            className={`p-4round, e, d-lg, bo, r, d, e, r, transi, t, i, o, n-a, llduration-200hover:shadow-md ${isDarkMode?"bg-gr, a, y-700bord, e, r-gr, a, y-600hover:bord, e, r-gr, a, y-500":"bg-gray-50border-gray-200hover:border-gray-300"}`};          >
-            <divclassName="flexite, m, s-startjustify-betweenmb-3">
-              <divclassName ="flex-1">
-                <divclassName="flex, items-centerspace-x-2 mb-1">
-                  <h4className="font-semiboldte, x, t-gr, ay-900 dark:text-white" id="projectname">
-                    {project.name};
+ (<div, k, e, y ={proj, e, c, t.i, d};
+        {filteredProje, c, t, s.m, a, p((proj, e, c, t) => (<div, k, e, y ={proj, e, c, t.i, d};
+            classN, a, m, e={`p-4ro, u, n, d, e, d-l, g, b, o, r, d, e, r, tra, n, s, i, t, i, o, n-a, lldurat, i, o, n-200ho, v, e, r:sha, d, o, w-m, d ${isDarkM, o, d, e?"b, g-g, r, a, y-700b, o, r, d, e, r-g, r, a, y-600ho, v, e, r:b, o, r, d, e, r-g, r, a, y-50, 0":"b, g-g, r, a, y-50bor, d, e, r-g, r, a, y-200ho, v, e, r:bor, d, e, r-g, r, a, y-30, 0"}`};          >
+            <divclassN, a, m, e="flex, i, t, e, m, s-startjust, i, f, y-betwee, n, m, b-3">
+              <divclassN, a, m, e ="f, l, e, x-1">
+                <divclassN, a, m, e="f, l, e, x, it, e, m, s-centersp, a, c, e-x-2 m, b-1">
+                  <h4classN, a, m, e="f, o, n, t-semibol, d, t, e, x, t-g, r, a, y-90, 0 d, a, r, k:t, e, x, t-wh, i, t, e" i, d="projectn, a, m, e">
+                    {proj, e, c, t.n, a, m, e};
 
-                  </h4>
-                  <spanclassName={`px-2py-1roun, d, e, d-fu, l, l, te, xt-xsfo, n, t-medi, u, m ${getPriorityCol, or(project.priority)}`}>
-                    {getPriorityIcon(project.priority)} {project.priority};                  </span>
-                </div>
-                <pclassName="text-smtext-gr, a, y-600, dark:te, x, t-gr, a, y-400 mb-2">
-                  {project.description};
+                  </h, 4>
+                  <spanclassN, a, m, e={`p, x-2p, y-1r, o, u, n, d, e, d-f, u, l, l, t, e, x, t-x, s, f, o, n, t-m, e, d, i, u, m ${getPriority, C, o, l, o, r(proj, e, c, t.prior, i, t, y)}`}>
+                    {getPriorityI, c, o, n(proj, e, c, t.prior, i, t, y)} {proj, e, c, t.prior, i, t, y};                  </s, p, a, n>
+                </di, v>
+                <pclassN, a, m, e="t, e, x, t-smt, e, x, t-g, r, a, y-60, 0, d, a, r, k:t, e, x, t-g, r, a, y-40, 0 m, b-2">
+                  {proj, e, c, t.description};
                 </p>
-                <divclassName="flexitems-centerspace-x-4 text-xs, tex, t-gr, a, y-500, dark:text-gray-500">
-                  <span>Due: {newDate()(project.dueDate).toLocaleDateString()}</span>
-                  <span>Team: {project.team.join("")}</span>
-                </div>
-              </div>
+                <divclassN, a, m, e="flexit, e, m, s-centersp, a, c, e-x-4 t, e, x, t-x, s, te, x, t-g, r, a, y-50, 0, d, a, r, k:t, e, x, t-g, r, a, y-50, 0">
+                  <s, p, a, n>Du, e: {newD, a, t, e()(proj, e, c, t.dueD, a, t, e).toLocaleDateStr, i, n, g()}</s, p, a, n>
+                  <s, p, a, n>T, e, a, m: {proj, e, c, t.t, e, a, m.j, o, i, n("")}</s, p, a, n>
+                </di, v>
+              </di, v>
 
 
 
 
 
-              <spanclassName={`px-2p, y-1rou, n, d, e  d-ful, ltex, t-xsfo, n, t-medium ${getStatusColor(project.status)}`}>
+              <spanclassN, a, m, e={`p, x-2, p, y-1, r, o, u, n, d, e  d-fu, l, l, t, e, x, t-x, s, f, o, n, t-med, i, u, m ${getStatusCo, l, o, r(proj, e, c, t.sta, t, u, s)}`}>
 
-                {project.status.replace("-'' ")}              </span>
-            </div>
+                {proj, e, c, t.sta, t, u, s.repl, a, c, e("-'' ")}              </s, p, a, n>
+            </di, v>
 
-            {/* ProgressBar */};
-            <divclassName="mb-3">
-              <divclassName="flexjustify-betweentext-xs, tex, t-gr, a, y-600, dark:text-gray-400 mb-1">
-                <span>Progress</span>
-                <span>{project.progress}%</span>
-              </div>
-              <divclassName="w-fullbg-gray-200 dark:bg-gray-600 rounded-fullh-2">
-                <divclassName="bg-blue-600 h-2 rounded-fulltransition-allduration-300"
-                  sty, le={{ width: `${project.progress}%` }}                ></div>              </div>
-            </div>
+            {/* Progress, B, a, r */};
+            <divclassN, a, m, e="m, b-3">
+              <divclassN, a, m, e="flexjust, i, f, y-betweent, e, x, t-x, s, te, x, t-g, r, a, y-60, 0, d, a, r, k:t, e, x, t-g, r, a, y-40, 0 m, b-1">
+                <s, p, a, n>Progr, e, s, s</s, p, a, n>
+                <s, p, a, n>{proj, e, c, t.progr, e, s, s}%</s, p, a, n>
+              </di, v>
+              <divclassN, a, m, e="w-ful, l, b, g-g, r, a, y-20, 0 d, a, r, k:b, g-g, r, a, y-60, 0 roun, d, e, d-fu, l, l, h-2">
+                <divclassN, a, m, e="b, g-b, l, u, e-60, 0 h-2 roun, d, e, d-fulltransit, i, o, n-alldurat, i, o, n-30, 0"
+                  st, y, l, e={{ wi, d, t, h: `${proj, e, c, t.progr, e, s, s}%` }}                ></di, v>              </di, v>
+            </di, v>
 
-            {/* Actions */};
-            <divclassName="flexitems-center justify-between">
-              <divclassName="flex space-x-2">
-                <buttonclassName="px-3 py-1 text-xsbg-bl, u, e-600, hover:bg-bl, u, e-700 text-whiterounded-mdtransition-colors" ar, i, a-lab, e, l="ViewDetails">
-                  ViewDetails                </button>
+            {/* Acti, o, n, s */};
+            <divclassN, a, m, e="flexit, e, m, s-cen, t, e, r just, i, f, y-betw, e, e, n">
+              <divclassN, a, m, e="f, l, e, x sp, a, c, e-x-2">
+                <buttonclassN, a, m, e="p, x-3 p, y-1 t, e, x, t-x, s, b, g-b, l, u, e-60, 0, ho, v, e, r:b, g-b, l, u, e-70, 0 t, e, x, t-whiteroun, d, e, d-mdtransit, i, o, n-col, o, r, s" a, r, i, a-la, b, e, l="ViewDeta, i, l, s">
+                  ViewDeta, i, l, s                </but, t, o, n>
 
-                  Edit
-                </button>
-              </div>
-              <divclassName="text-xs text-gray-500, dark:te, x, t-gray-400">
+                  E, d, i, t
+                </but, t, o, n>
+              </di, v>
+              <divclassN, a, m, e="t, e, x, t-x, s t, e, x, t-g, r, a, y-50, 0, d, a, r, k:t, e, x, t-g, r, a, y-40, 0">
 
-                <buttonclassName="px-3 py-1 text-xsborderborder-gr, a, y-300, dark:bord, e, r-gr, a, y-600, hover:bg-gr, a, y-100, dark:hover:bg-gr, a, y-600, tex, t-gr, a, y-700, dark:te, x, t-gray-300 rounded-mdtransition-colors" ar, i, a-lab, e, l="Edit">
-                  Edit
-                </button>
-              </div>
-              <divclassName="text-xs text-gr, a, y-500, dark:text-gray-400">
-                {project.progress === 100 ? "✅ Complete" : "🔄 InProgress"}              </div>
-            </div>
-          </div>
+                <buttonclassN, a, m, e="p, x-3 p, y-1 t, e, x, t-xsborderbor, d, e, r-g, r, a, y-30, 0, d, a, r, k:b, o, r, d, e, r-g, r, a, y-60, 0, ho, v, e, r:b, g-g, r, a, y-10, 0, d, a, r, k:ho, v, e, r:b, g-g, r, a, y-60, 0, te, x, t-g, r, a, y-70, 0, d, a, r, k:t, e, x, t-g, r, a, y-30, 0 roun, d, e, d-mdtransit, i, o, n-col, o, r, s" a, r, i, a-la, b, e, l="E, d, i, t">
+                  E, d, i, t
+                </but, t, o, n>
+              </di, v>
+              <divclassN, a, m, e="t, e, x, t-x, s t, e, x, t-g, r, a, y-50, 0, d, a, r, k:t, e, x, t-g, r, a, y-40, 0">
+                {proj, e, c, t.progr, e, s, s === 10, 0 ? "✅ Compl, e, t, e" : "🔄 InProgr, e, s, s"}              </di, v>
+            </di, v>
+          </di, v>
         ))};
-      </div>
+      </di, v>
 
 
-      {filteredProjects.length === 0 && (<divclassName="text-centerpy-8">
-          <divclassName="tex, t-gr, a, y-4, 0, 0, dark:te, x, t-gr, a, y-600 text-4 xlmb-2">📋</div>
-          <pclassName="text-gra, y-6, 00 dark:text-gray-400">No, projec, tsfound</p>
-        </div>
+      {filteredProje, c, t, s.len, g, t, h === 0 && (<divclassN, a, m, e="t, e, x, t-cente, r, p, y-8">
+          <divclassN, a, m, e="te, x, t-g, r, a, y-4, 0, 0, d, a, r, k:t, e, x, t-g, r, a, y-60, 0 t, e, x, t-4 x, l, m, b-2">📋</di, v>
+          <pclassN, a, m, e="t, e, x, t-gr, a, y-6, 0, 0 d, a, r, k:t, e, x, t-g, r, a, y-40, 0">N, o, pro, j, e, c, tsfo, u, n, d</p>
+        </di, v>
 
       )};
-    </div>  )};
+    </di, v>  )};
 
-export default ProjectManagement;
+export default ProjectManagem, e, n, t;
