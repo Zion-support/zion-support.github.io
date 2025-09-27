@@ -1,22 +1,46 @@
-import { useEffect   } from "react";
+import { useEffect } from "react";
 
-interface, WebVitalsMetri, c {name: stri, n, g;
-  value: numb, e, r;
-  delta: numb, e, r;
-  id: stri, n, g;
-  navigationType: string};
-export, function, reportWebVitals(metric: WebVitalsMetr, i, c) {// Se, n, d, toanalyticsserviceif (typeofwindow !== "undefin, e, d' && "gtag" in, wind, o, w) {
-    (windowasa, n, y).gtag("event"metr, i, c.name{
-      event_category: "W, e, b, Vitals"event_label: metr, i, c.idvalue: Ma, t, h.rou, n, d(metr, i, c.name === "CLS" ? metr, i, c.val, u, e * 10, 0, 0 : metr, i, c.val, u, e),
-      non_interaction: true
-    })};
-  // Log, to, console in, development, if (proce, s, s.e, n, v.NODE_ENV === "development") {conso, l, e.log("WebVitals:"metric)};
-};
-export, function, WebVitals() {useEffect(() => {
-    // Loadweb-vitalslibrarydynamicallyimport("w, e, b-vita, l, s').th, e, n(({ getC, L, S, getF, I, D, getF, C, P, getL, C, P, getTTFB }) => {getC, L, S(reportWebVita, l, s);
-      getF, I, D(reportWebVita, l, s);
-      getF, C, P(reportWebVita, l, s);
-      getL, C, P(reportWebVita, l, s);
-      getTT, F, B(reportWebVitals)})}, []);
+interface WebVitalsMetric {
+	name: string;
+	value: number;
+	delta: number;
+	id: string;
+	navigationType: string;
+}
 
-  return, nul, l};
+export function reportWebVitals(metric: WebVitalsMetric) {
+	// Send to analytics service
+	if (typeof window !== "undefined" && "gtag" in window) {
+		(window as any).gtag("event", metric.name, {
+			event_category: "Web Vitals",
+			event_label: metric.id,
+			value: Math.round(metric.name === "CLS" ? metric.value * 1000 : metric.value),
+			non_interaction: true,
+		});
+	}
+
+	// Log to console in development
+	if (process.env.NODE_ENV === "development") {
+		console.log(metric);
+	}
+}
+
+export default function WebVitals() {
+	useEffect(() => {
+		// Only run in browser
+		if (typeof window === "undefined") {
+			return;
+		}
+
+		// Import web-vitals dynamically to avoid SSR issues
+		import("web-vitals").then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+			getCLS(reportWebVitals);
+			getFID(reportWebVitals);
+			getFCP(reportWebVitals);
+			getLCP(reportWebVitals);
+			getTTFB(reportWebVitals);
+		});
+	}, []);
+
+	return null; // This component doesn't render anything
+}

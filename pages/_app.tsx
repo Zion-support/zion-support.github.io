@@ -11,7 +11,7 @@ import AccessibilityAuditor from '../src/components/AccessibilityAuditor';
 // import { AnalyticsProvider   } from "../src/components/EnhancedAnalytics";
 import PerformanceOptimizer from '../src/components/PerformanceOptimizer';
 // import AdvancedErrorHandler from '../src/components/AdvancedErrorHandler';
-import { WebVitals   } from "../src/components/WebVitals";
+import WebVitals from "../src/components/WebVitals";
 import { setupGlobalErrorHandling   } from "../src/utils/errorHandling";
 import '../styles/animations.css';
 import '../src/styles/accessibility.css';
