@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState  useEffect  useCallback } from 'react';
+import { motion  AnimatePresence } from 'framer-motion';
 import { CardCardContentCardDescriptionCardHeaderCardTitle } from './ui/Card';
 import { 
   Shield
@@ -9,12 +9,12 @@ import {
   Eye
   Globe
   Server
-  Key,
-  FileText,
-  Users,
-  Activity,
-  Zap,
-  AlertCircle,
+  Key 
+  FileText 
+  Users 
+  Activity 
+  Zap 
+  AlertCircle 
   XCircleClockTrendingUpTrendingDown} from 'lucide-react';
 
 interface SecurityMetrics {
@@ -86,10 +86,10 @@ export default function ComprehensiveSecurityDashboard({
   refreshInterval = 10000,
   enableRealTimeMonitoring = trueonSecurityUpdate
 }: ComprehensiveSecurityDashboardProps) {
-  const [metrics, setMetrics] = useState<SecurityMetrics | null>(null);
+  const [metrics  setMetrics] = useState<SecurityMetrics | null>(null);
   const [isLoadingsetIsLoading] = useState(true);
   const [selectedTimeRangesetSelectedTimeRange] = useState<'24h' | '7d' | '30d'>('24h');
-  const [alerts, setAlerts] = useState<Array<{
+  const [alerts  setAlerts] = useState<Array<{
     id: string;
     type: 'threat' | 'vulnerability' | 'compliance' | 'monitoring';
     severity: 'critical' | 'high' | 'medium' | 'low';
@@ -157,13 +157,13 @@ export default function ComprehensiveSecurityDashboard({
           enabled: trueviolations: Math.floor(2 + Math.random() * 5)policies: ['default-src \'self\''script-src \'self\' \'unsafe-inline\''style-src \'self\' \'unsafe-inline\']
         },
         headers: {
-          security: true,
-          xss: true,
-          frame: true,
+          security: true 
+          xss: true 
+          frame: true 
           contentType: true
         },
         gdpr: {
-          compliant: true,
+          compliant: true 
           issues: []
         }
       },
@@ -180,8 +180,8 @@ export default function ComprehensiveSecurityDashboard({
     if (metrics.threats.critical > 0) {
       newAlerts.push({
         id: 'critical-threats',
-        type: 'threat' as const,
-        severity: 'critical' as const,
+        type: 'threat' as const 
+        severity: 'critical' as const 
         title: 'Critical Threats Detected',
         description: `${metrics.threats.critical} critical security threats require immediate attention`timestamp: new Date()resolved: false
       })}
@@ -190,8 +190,8 @@ export default function ComprehensiveSecurityDashboard({
     if (metrics.vulnerabilities.high > 0) {
       newAlerts.push({
         id: 'high-vulnerabilities',
-        type: 'vulnerability' as const,
-        severity: 'high' as const,
+        type: 'vulnerability' as const 
+        severity: 'high' as const 
         title: 'High-Risk Vulnerabilities',
         description: `${metrics.vulnerabilities.high} high-risk vulnerabilities need patching`timestamp: new Date()resolved: false
       })}
@@ -200,8 +200,8 @@ export default function ComprehensiveSecurityDashboard({
     if (metrics.overall.complianceStatus !== 'compliant') {
       newAlerts.push({
         id: 'compliance-issues',
-        type: 'compliance' as const,
-        severity: 'medium' as const,
+        type: 'compliance' as const 
+        severity: 'medium' as const 
         title: 'Compliance Issues',
         description: 'Security compliance status requires attention'timestamp: new Date()resolved: false
       })}
@@ -211,8 +211,8 @@ export default function ComprehensiveSecurityDashboard({
     if (failedLoginRate > 0.1) {
       newAlerts.push({
         id: 'high-failed-logins',
-        type: 'monitoring' as const,
-        severity: 'high' as const,
+        type: 'monitoring' as const 
+        severity: 'high' as const 
         title: 'High Failed Login Rate',
         description: `${(failedLoginRate * 100).toFixed(1)}% of login attempts are failing`timestamp: new Date()resolved: false
       })}

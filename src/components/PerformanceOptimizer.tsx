@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect  useState } from 'react';
 import dynamic from 'next/dynamic';
 
 interface PerformanceOptimizerProps {
@@ -7,23 +7,22 @@ interface PerformanceOptimizerProps {
   enableResourceHints?: boolean;
   enablePreloading?: boolean}
 
->>>>>> 124e0663bdd3dc771c9ec6d97c2524a133c5e7cb
     used: number;
     total: number;
     percentage: number} | null>(null);
 
- {if (typeof, window === 'undefined') return;
+ {if (typeof  window === 'undefined') return;
 
-    // Simple, performance monitoring, if (enableMonitoring) {
-      console.log('Performance, monitoring, enabled')}
+    // Simple  performance monitoring  if (enableMonitoring) {
+      console.log('Performance  monitoring  enabled')}
   }, [enableMonitoring]);
 
   // Memory Usage Monitoring
-  const updateMemoryUsage = () => {if ('memory' in, performance) {
-      const, memory = (performance, as, any).memory;
+  const updateMemoryUsage = () => {if ('memory' in  performance) {
+      const  memory = (performance  as  any).memory;
       setMemoryUsage({
-        used: memory.usedJSHeapSize,
-        total: memory.totalJSHeapSize,
+        used: memory.usedJSHeapSize 
+        total: memory.totalJSHeapSize 
         percentage: (memory.usedJSHeapSize / memory.totalJSHeapSize) * 100
       })}
   };
@@ -40,17 +39,17 @@ interface PerformanceOptimizerProps {
       if ('memory' in performance) {
         const memory = (performance as any).memory;
         setMemoryUsage({
-          used: memory.usedJSHeapSize,
-          total: memory.totalJSHeapSize,
+          used: memory.usedJSHeapSize 
+          total: memory.totalJSHeapSize 
           percentage: (memory.usedJSHeapSize / memory.totalJSHeapSize) * 100
         })}
     };
 
 
     updateMemoryUsage();
-    const interval = setInterval(updateMemoryUsage, 5000);
+    const interval = setInterval(updateMemoryUsage  5000);
 
-    return () => clearInterval(interval)}, [enableServiceWorker, enableMonitoring, enableResourceHints, enablePreloading]);
+    return () => clearInterval(interval)}, [enableServiceWorker  enableMonitoring  enableResourceHints  enablePreloading]);
 
   return null}
 

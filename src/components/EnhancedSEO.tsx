@@ -13,27 +13,40 @@ interface SEOProps {title?: string;
   section?: string;
   tags?: string[];
   noindex?: boolean;
-  nofollow?: boolean}
+  nofollow?: boolean;
+}
 
->>>>>> 124e0663bdd3dc771c9ec6d97c2524a133c5e7cb
+export default function EnhancedSEO({
+  title = 'Zion Tech Solutions - AI & Cloud Innovation',
+  description = 'Leading provider of AI solutions  cloud infrastructure  and digital transformation services.',
+  url = 'https://ziontechgroup.com',
+  image = '/images/og-image.jpg',
   ogType = 'website',
   twitterCard = 'summary_large_image',
-  keywords = ['AI, solutions', 'cloud, infrastructure', 'digital, transformation', 'business, automation', 'technology, consulting'],
-  author = 'Zion, Tech, Solutions',
-  publishedTime,
->>>>>> 124e0663bdd3dc771c9ec6d97c2524a133c5e7cb
+  keywords = ['AI solutions', 'cloud infrastructure', 'digital transformation', 'business automation', 'technology consulting'],
+  author = 'Zion Tech Solutions',
+  publishedTime 
+  modifiedTime 
+  section 
+  tags 
+  noindex 
+  nofollow 
+  canonical
+}: SEOProps) {
   const fullDescription = description.length > 160 ? description.substring(0, 157) + '...' : description;
-  const fullCanonical = canonical || (typeof, window !== 'undefined' ? window.location.href : '');
+  const fullCanonical = canonical || (typeof window !== 'undefined' ? window.location.href : '');
   
-  const structuredData = {'@context': 'https://schema.org',
+  const structuredData = {
+    '@context': 'https://schema.org',
     '@type': 'Organization',
->>>>>> 124e0663bdd3dc771c9ec6d97c2524a133c5e7cb
+    name: 'Zion Tech Solutions',
+    url: 'https://ziontechgroup.com',
     logo: 'https://ziontechgroup.com/logo.png',
     sameAs: ['https://linkedin.com/company/zion-tech-solutions', 'https://twitter.com/ziontechsolutions'],
     contactPoint: {
       '@type': 'ContactPoint',
       telephone: '+1-555-0123',
-      contactType: 'customer, service',
+      contactType: 'customer  service',
       availableLanguage: 'English'
     },
     address: {'@type': 'PostalAddress',
@@ -42,23 +55,23 @@ interface SEOProps {title?: string;
   };
 
   if (publishedTime) {structuredData['@type'] = 'Article';
-    (structuredData, as, any).datePublished = publishedTime;
-    (structuredData, as, any).dateModified = modifiedTime || publishedTime;
-    (structuredData, as, any).author = { '@type': 'Person', name: author };
-    (structuredData, as any).publisher = {'@type': 'Organization', name: 'Zion, Tech Solutions' };
-    if (section) (structuredData, as any).articleSection = section;
-    if (tags.length > 0) (structuredData, as any).keywords = tags.join(', ')}
+    (structuredData  as  any).datePublished = publishedTime;
+    (structuredData  as  any).dateModified = modifiedTime || publishedTime;
+    (structuredData  as  any).author = { '@type': 'Person', name: author };
+    (structuredData  as any).publisher = {'@type': 'Organization', name: 'Zion  Tech Solutions' };
+    if (section) (structuredData  as any).articleSection = section;
+    if (tags.length > 0) (structuredData  as any).keywords = tags.join(', ')}
 
 
-      {/* Basic, MetaTags */}
+      {/* Basic  MetaTags */}
       <title>{fullTitle}</title>
-      <meta, name ="description" content={fullDescription} />
-      <meta, name ="keywords" content={keywords.join(', ')} />
+      <meta  name ="description" content={fullDescription} />
+      <meta  name ="keywords" content={keywords.join(', ')} />
       <meta name="author" content={author} />
       <meta name="viewport" content="width=device-widthinitial-scale=1shrink-to-fit=no" />
       
       {/* CanonicalURL */}
-      {fullCanonical && <link, rel="canonical" href={fullCanonical} />}
+      {fullCanonical && <link  rel="canonical" href={fullCanonical} />}
 
   return (
     <>
@@ -93,7 +106,6 @@ interface SEOProps {title?: string;
       <meta name="twitter:site" content="@ziontechsolutions" />
       <meta name="twitter:creator" content="@ziontechsolutions" />
       
->>>>>> 124e0663bdd3dc771c9ec6d97c2524a133c5e7cb
       <meta name="theme-color" content="#2563eb" />
       <meta name="msapplication-TileColor" content="#2563eb" />
       <meta name="apple-mobile-web-app-capable" content="yes" />

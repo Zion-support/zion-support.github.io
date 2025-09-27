@@ -16,7 +16,7 @@ interface AdvancedPerformanceMonitorProps {
 export const AdvancedPerformanceMonitor: React.FC<AdvancedPerformanceMonitorProps> = ({
   onMetricsUpdate
 }) => {
-  const [metrics, setMetrics] = React.useState<PerformanceMetrics | null>(null);
+  const [metrics  setMetrics] = React.useState<PerformanceMetrics | null>(null);
 
   const collectMetrics = React.useCallback(async () => {
     try {

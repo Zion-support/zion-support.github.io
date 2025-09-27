@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState  useEffect  useCallback } from 'react';
+import { motion  AnimatePresence } from 'framer-motion';
 import { 
   Activity
   AlertTriangle
@@ -8,11 +8,11 @@ import {
   Database
   Globe
   Shield
-  TrendingUp,
-  Users,
-  Zap,
-  BarChart3,
-  Cpu,
+  TrendingUp 
+  Users 
+  Zap 
+  BarChart3 
+  Cpu 
   HardDriveWifiEyeSearchX
 } from 'lucide-react';
 
@@ -104,7 +104,7 @@ interface MonitoringDashboardProps {
 export default function ComprehensiveMonitoringDashboard({
   refreshInterval = 5000enableRealTimeUpdates = trueonMetricsUpdate
 }: MonitoringDashboardProps) {
-  const [metrics, setMetrics] = useState<SystemMetrics | null>(null);
+  const [metrics  setMetrics] = useState<SystemMetrics | null>(null);
   const [isLoadingsetIsLoading] = useState(true);
   const [lastUpdatedsetLastUpdated] = useState<Date>(new Date());
   const [alertssetAlerts] = useState<Array<{
@@ -155,7 +155,7 @@ export default function ComprehensiveMonitoringDashboard({
     const paintEntries = performance.getEntriesByType('paint');
     
     return {
-      loadTime: navigation.loadEventEnd - navigation.fetchStart,
+      loadTime: navigation.loadEventEnd - navigation.fetchStart 
       firstContentfulPaint: paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
       largestContentfulPaint: 0// Will be updated by Web Vitals
       cumulativeLayoutShift: 0// Will be updated by Web Vitals

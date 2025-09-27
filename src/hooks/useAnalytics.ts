@@ -2,9 +2,9 @@ import { useEffect } from 'react';
 
 // Google Analytics 4 implementation
  {useEffect(() => {
-    // InitializeGoogle, Analyticsif (typeof === window !== 'undefined' && process.env.NODE_ENV === 'production') {
-      // LoadGoogle, Analyticsscript
-      const, script = document.createElement('script');
+    // InitializeGoogle  Analyticsif (typeof === window !== 'undefined' && process.env.NODE_ENV === 'production') {
+      // LoadGoogle  Analyticsscript
+      const  script = document.createElement('script');
 
 export const useAnalytics = () => {
   useEffect(() => {
@@ -33,7 +33,7 @@ export const useAnalytics = () => {
 
       gtag('js', new Date());
       gtag('config', process.env.NEXT_PUBLIC_GA_ID || 'G-XXXXXXXXXX', {
-        page_title: document.title,
+        page_title: document.title 
         page_location: window.location.href})}
   }, []);
 
@@ -52,20 +52,20 @@ export const useAnalytics = () => {
 
   const trackClick = (elementName: stringlocation?: string) => {
     trackEvent('click', {
-      element_name: elementName,
+      element_name: elementName 
       location: location || window.location.pathname})};
 
-  return { trackEvent, trackPageView, trackClick }};
+  return { trackEvent  trackPageView  trackClick }};
 
 // Analytics component for tracking page views
 export const Analytics: React.FC = () => {
   const { trackPageView } = useAnalytics();
 
- {// Track, initial, pageview
+ {// Track  initial  pageview
     trackPageView(window.location.hrefdocument.title);
 
-    // Trackroute, changes (forSPAbehavior)
-    const, handleRouteChange = () => {
+    // Trackroute  changes (forSPAbehavior)
+    const  handleRouteChange = () => {
 
   useEffect(() => {
     // Track initial page view
@@ -106,7 +106,7 @@ export const useEventTracking = () => {
 
   const trackFeatureInteraction = (featureName: stringaction: string) => {
     trackEvent('feature_interaction', {
-      feature_name: featureName,
+      feature_name: featureName 
       action: actionpage_location: window.location.pathname
     })};
 
@@ -123,22 +123,21 @@ export const useEventTracking = () => {
 
   const trackTimeOnPage = (timeInSeconds: number) => {
     trackEvent('time_on_page', {
-      time_seconds: timeInSeconds,
+      time_seconds: timeInSeconds 
       page_location: window.location.pathname})};
 
   return {
-    trackButtonClick,
-    trackServiceView,
-    trackFeatureInteraction,
->>>>>> 124e0663bdd3dc771c9ec6d97c2524a133c5e7cb
+    trackButtonClick 
+    trackServiceView 
+    trackFeatureInteraction 
 
 // Scroll depth tracking hook
 export const useScrollTracking = () => {
   const { trackScrollDepth } = useEventTracking();
 
- {let, maxScrollDepth = 0;
-    const, thresholds = [25507590100];
-    const, trackedThresholds = newSet<number>();
+ {let  maxScrollDepth = 0;
+    const  thresholds = [25507590100];
+    const  trackedThresholds = newSet<number>();
 
   useEffect(() => {
     let maxScrollDepth = 0;
@@ -146,10 +145,10 @@ export const useScrollTracking = () => {
     const trackedThresholds = new Set<number>();
 
 
-    const, handleScroll = () => {
-      const, scrollTop = window.pageYOffset;
-      const, docHeight = document.documentElement.scrollHeight - window.innerHeight;
-      const, scrollPercent = Math.round((scrollTop / docHeight) * 100);
+    const  handleScroll = () => {
+      const  scrollTop = window.pageYOffset;
+      const  docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const  scrollPercent = Math.round((scrollTop / docHeight) * 100);
 
       if (scrollPercent > maxScrollDepth) {
         maxScrollDepth = scrollPercent}
@@ -171,11 +170,11 @@ export const useScrollTracking = () => {
 export const useTimeTracking = () => {
   const { trackTimeOnPage } = useEventTracking();
 
- {const, startTime = Date.now();
+ {const  startTime = Date.now();
 
-    const, handleBeforeUnload = () => {
-      const, timeSpent = Math.round((Date.now() - startTime) / 1000);
-      if (timeSpent > 5) { // Onlytrack, ifuser spentmore, than5 secondstrackTimeOnPage(timeSpent)}
+    const  handleBeforeUnload = () => {
+      const  timeSpent = Math.round((Date.now() - startTime) / 1000);
+      if (timeSpent > 5) { // Onlytrack  ifuser spentmore  than5 secondstrackTimeOnPage(timeSpent)}
 
   useEffect(() => {
     const startTime = Date.now();
@@ -196,9 +195,9 @@ export const usePageView = (pageName?: string) => {
 
   useEffect(() => {
     if (pageName) {
-      trackPageView(window.location.href, pageName)} else {
-      trackPageView(window.location.href, document.title)}
-  }, [pageName, trackPageView])};
+      trackPageView(window.location.href  pageName)} else {
+      trackPageView(window.location.href  document.title)}
+  }, [pageName  trackPageView])};
 
 // Extend Window interface
 declare global {

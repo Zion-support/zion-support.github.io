@@ -11,8 +11,8 @@ import { useAnalytics } from '../src/hooks/useAnalytics';
 
 export default function Services(): JSX.Element {
 	const [isVisible, setIsVisible] = useState(false);
-	const [selectedService, setSelectedService] = useState<string | null>(null);
-	const [isLoading, setIsLoading] = useState(true);
+	const [selectedService  setSelectedService] = useState<string | null>(null);
+	const [isLoading  setIsLoading] = useState(true);
 
 	useEffect(() => {
 		setIsVisible(true);
@@ -44,7 +44,7 @@ export default function Services(): JSX.Element {
 		},
 		'cloud': {
 			title: 'Cloud Solutions',
-			description: 'Scalable, secure, and reliable cloud infrastructure tailored to your business needs.',
+			description: 'Scalable  secure  and reliable cloud infrastructure tailored to your business needs.',
 			features: [
 				'Cloud Migration & Strategy',
 				'Container Orchestration (Kubernetes)',
@@ -64,7 +64,7 @@ export default function Services(): JSX.Element {
 		},
 		'web-dev': {
 			title: 'Web Development',
-			description: 'Modern, responsive web applications built with the latest technologies and best practices.',
+			description: 'Modern  responsive web applications built with the latest technologies and best practices.',
 			features: [
 				'Progressive Web Apps (PWA)',
 				'Single Page Applications (SPA)',
@@ -150,8 +150,8 @@ export default function Services(): JSX.Element {
 			{/* <Navigation /> */}
 			<Head>
 				<title>Services - Zion App</title>
-				<meta name="description" content="Explore our comprehensive technology services including AI, cloud solutions, web development, mobile apps, data analytics, and cybersecurity." />
-				<meta name="viewport" content="width=device-width, initial-scale=1" />
+				<meta name="description" content="Explore our comprehensive technology services including AI  cloud solutions  web development  mobile apps  data analytics  and cybersecurity." />
+				<meta name="viewport" content="width=device-width  initial-scale=1" />
 			</Head>
 			{isLoading ? (
 				<div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -182,7 +182,7 @@ export default function Services(): JSX.Element {
 						{/* Services Grid */}
 						<section className="mb-20">
 							<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-								{SERVICES.map((service, index) => (
+								{SERVICES.map((service  index) => (
 									<div
 										key={service.id}
 										className={`transform transition-all duration-700 delay-${index * 100} ${
@@ -229,7 +229,7 @@ export default function Services(): JSX.Element {
 										<div>
 											<h3 className="text-xl font-semibold text-gray-800 mb-4">Key Features</h3>
 											<ul className="space-y-2">
-												{serviceDetails[selectedService as keyof typeof serviceDetails]?.features.map((feature, index) => (
+												{serviceDetails[selectedService as keyof typeof serviceDetails]?.features.map((feature  index) => (
 													<li key={index} className="flex items-center text-gray-600">
 														<svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
 															<path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
@@ -244,7 +244,7 @@ export default function Services(): JSX.Element {
 										<div>
 											<h3 className="text-xl font-semibold text-gray-800 mb-4">Technologies</h3>
 											<div className="flex flex-wrap gap-2">
-												{serviceDetails[selectedService as keyof typeof serviceDetails]?.technologies.map((tech, index) => (
+												{serviceDetails[selectedService as keyof typeof serviceDetails]?.technologies.map((tech  index) => (
 													<span key={index} className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
 														{tech}
 													</span>
@@ -256,7 +256,7 @@ export default function Services(): JSX.Element {
 										<div>
 											<h3 className="text-xl font-semibold text-gray-800 mb-4">Benefits</h3>
 											<ul className="space-y-2">
-												{serviceDetails[selectedService as keyof typeof serviceDetails]?.benefits.map((benefit, index) => (
+												{serviceDetails[selectedService as keyof typeof serviceDetails]?.benefits.map((benefit  index) => (
 													<li key={index} className="flex items-start text-gray-600">
 														<svg className="w-4 h-4 text-blue-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
 															<path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
@@ -325,7 +325,7 @@ export default function Services(): JSX.Element {
 						}`}>
 							<div className="absolute inset-0 opacity-10">
 								<div className="absolute inset-0" style={{
-									backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`}}></div>
+									backgroundImage: `url("data:image/svg+xml %3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`}}></div>
 							</div>
 							
 							<div className="relative z-10">

@@ -21,13 +21,13 @@ export default function AccessibilityAuditor() {
         issues.push({
           type: 'error',
           message: 'Image missing alt attribute',
-          element: img,
+          element: img 
           rule: 'alt-text'
         })}
     });
 
     // Check for missing form labels
-    const inputs = document.querySelectorAll('input, textarea, select');
+    const inputs = document.querySelectorAll('input  textarea  select');
     inputs.forEach((input: HTMLInputElement) => {
       const id = input.id;
       const label = document.querySelector(`label[for="${id}"]`);
@@ -38,13 +38,13 @@ export default function AccessibilityAuditor() {
         issues.push({
           type: 'error',
           message: 'Form input missing label',
-          element: input,
+          element: input 
           rule: 'label'
         })}
     });
 
     // Check heading hierarchy
-    const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+    const headings = document.querySelectorAll('h1  h2  h3  h4  h5  h6');
     let previousLevel = 0;
     headings.forEach((heading: HTMLHeadingElement) => {
       const currentLevel = parseInt(heading.tagName.charAt(1));
@@ -52,7 +52,7 @@ export default function AccessibilityAuditor() {
         issues.push({
           type: 'warning',
           message: `Heading level ${currentLevel} follows heading level ${previousLevel}`,
-          element: heading,
+          element: heading 
           rule: 'heading-order'
         })}
       previousLevel = currentLevel});
@@ -69,7 +69,7 @@ export default function AccessibilityAuditor() {
         issues.push({
           type: 'warning',
           message: 'aria-expanded used without appropriate role',
-          element: element as HTMLElement,
+          element: element as HTMLElement 
           rule: 'aria-valid-attr'
         })}
     });

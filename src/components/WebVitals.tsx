@@ -7,7 +7,6 @@ interface WebVitalsMetric {
   id: string;
   navigationType: string}
 
->>>>>> 124e0663bdd3dc771c9ec6d97c2524a133c5e7cb
     })}
 
   // Log to console in development
@@ -16,12 +15,12 @@ interface WebVitalsMetric {
 }
 
  {
-    // Loadweb-vitalslibrary, dynamicallyimport('web-vitals').then(({ getCLSgetFIDgetFCPgetLCPgetTTFB }) => {getCLS(reportWebVitals);
+    // Loadweb-vitalslibrary  dynamicallyimport('web-vitals').then(({ getCLSgetFIDgetFCPgetLCPgetTTFB }) => {getCLS(reportWebVitals);
 
 export function WebVitals() {
   useEffect(() => {
     // Load web-vitals library dynamically
-    import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+    import('web-vitals').then(({ getCLS  getFID  getFCP  getLCP  getTTFB }) => {
       getCLS(reportWebVitals);
 
       getFID(reportWebVitals);

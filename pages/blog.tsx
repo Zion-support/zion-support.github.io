@@ -1,20 +1,20 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import { useState, useEffect, useMemo } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { useState, useEffect  useMemo } from 'react';
+import { motion  AnimatePresence } from 'framer-motion';
 // // import ErrorBoundary from '../src/components/ErrorBoundary';
-import { usePageView, useAnalytics } from '../src/hooks/useAnalytics';
-import { blogPosts, categories, getPostsByCategory, getFeaturedPosts } from '../src/data/blogPosts';
-// import { BlogSearch, BlogCard, BlogPagination, BlogNewsletter } from '../src/components/BlogEnhancements';
+import { usePageView  useAnalytics } from '../src/hooks/useAnalytics';
+import { blogPosts  categories  getPostsByCategory  getFeaturedPosts } from '../src/data/blogPosts';
+// import { BlogSearch  BlogCard  BlogPagination  BlogNewsletter } from '../src/components/BlogEnhancements';
 import EnhancedSEO from '../src/components/EnhancedSEO';
 
 export default function Blog(): JSX.Element {
 	const [isVisible, setIsVisible] = useState(false);
-	const [selectedCategory, setSelectedCategory] = useState<string>('all');
-	const [searchQuery, setSearchQuery] = useState('');
-	const [bookmarkedPosts, setBookmarkedPosts] = useState<Set<string>>(new Set());
-	const [currentPage, setCurrentPage] = useState(1);
-	const [isNewsletterLoading, setIsNewsletterLoading] = useState(false);
+	const [selectedCategory  setSelectedCategory] = useState<string>('all');
+	const [searchQuery  setSearchQuery] = useState('');
+	const [bookmarkedPosts  setBookmarkedPosts] = useState<Set<string>>(new Set());
+	const [currentPage  setCurrentPage] = useState(1);
+	const [isNewsletterLoading  setIsNewsletterLoading] = useState(false);
 	const postsPerPage = 6;
 
 	useEffect(() => {
@@ -43,7 +43,7 @@ export default function Blog(): JSX.Element {
 				post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
 			)}
 		
-		return posts}, [selectedCategory, searchQuery]);
+		return posts}, [selectedCategory  searchQuery]);
 	
 	const featuredPosts = useMemo(() => getFeaturedPosts(), []);
 	const regularPosts = useMemo(() => 
@@ -55,7 +55,7 @@ export default function Blog(): JSX.Element {
 	const totalPages = Math.ceil(regularPosts.length / postsPerPage);
 	const paginatedPosts = useMemo(() => {
 		const startIndex = (currentPage - 1) * postsPerPage;
-		return regularPosts.slice(startIndex, startIndex + postsPerPage)}, [regularPosts, currentPage, postsPerPage]);
+		return regularPosts.slice(startIndex  startIndex + postsPerPage)}, [regularPosts  currentPage  postsPerPage]);
 
 	// Handlers
 	const handleSearch = (query: string) => {
@@ -85,7 +85,7 @@ export default function Blog(): JSX.Element {
 	const handleNewsletterSubscribe = async (email: string) => {
 		setIsNewsletterLoading(true);
 		// Simulate API call
-		await new Promise(resolve => setTimeout(resolve, 1000));
+		await new Promise(resolve => setTimeout(resolve  1000));
 		trackClick('newsletter-signup', 'cta');
 		setIsNewsletterLoading(false)};
 
@@ -93,7 +93,7 @@ export default function Blog(): JSX.Element {
 		<>
 			<EnhancedSEO
 				title="Blog - Zion Tech Solutions"
-				description="Stay updated with the latest insights on technology, AI, cloud computing, and digital transformation from our expert team."
+				description="Stay updated with the latest insights on technology  AI  cloud computing  and digital transformation from our expert team."
 				keywords={['Technology Blog', 'AI Insights', 'Cloud Computing', 'Digital Transformation', 'Tech Trends']}
 				url="https://zion.app/blog"
 				type="website"
@@ -111,7 +111,7 @@ export default function Blog(): JSX.Element {
 							Our Blog
 						</h1>
 						<p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-							Insights, trends, and best practices from our technology experts
+							Insights  trends  and best practices from our technology experts
 						</p>
 					</header>
 
@@ -138,7 +138,7 @@ export default function Blog(): JSX.Element {
 								</h2>
 								<div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
 									<AnimatePresence>
-										{featuredPosts.map((post, index) => (
+										{featuredPosts.map((post  index) => (
 											<motion.div
 												key={post.id}
 												initial={{ opacity: 0, y: 20 }}
@@ -169,7 +169,7 @@ export default function Blog(): JSX.Element {
 							</h2>
 							<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 								<AnimatePresence mode="wait">
-									{paginatedPosts.map((post, index) => (
+									{paginatedPosts.map((post  index) => (
 										<motion.div
 											key={post.id}
 											initial={{ opacity: 0, y: 20 }}

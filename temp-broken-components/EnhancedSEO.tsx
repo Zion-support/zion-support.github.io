@@ -23,7 +23,7 @@ export default function EnhancedSEO({
   twitterCard = 'summary_large_image',
   keywords = ['AI solutions'cloud infrastructure'digital transformation'business automation'technology consulting'],
   author = 'Zion Tech Solutions',
-  publishedTime,
+  publishedTime 
   modifiedTimesectiontags = []noindex = falsenofollow = false
 }: SEOProps) {
   const fullTitle = title.includes('Zion Tech Solutions') ? title : `${title} | Zion Tech Solutions`;

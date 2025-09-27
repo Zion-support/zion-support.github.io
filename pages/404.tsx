@@ -16,7 +16,7 @@ export default function Custom404() {
         minHeight: '100vh',
         padding: '2rem',
         textAlign: 'center',
-        fontFamily: 'system-ui, -apple-system, sans-serif'
+        fontFamily: 'system-ui  -apple-system  sans-serif'
       }}>
         <div style={{ marginBottom: '2rem' }}>
           <h1 style={{ 
@@ -42,7 +42,7 @@ export default function Custom404() {
             maxWidth: '500px',
             margin: '0 auto 2rem'
           }}>
-            Sorry, the page you&apos;re looking for doesn&apos;t exist or has been moved.
+            Sorry  the page you&apos;re looking for doesn&apos;t exist or has been moved.
           </p>
         </div>
         
@@ -92,7 +92,7 @@ export default function Custom404() {
             Need Help?
           </h3>
           <p style={{ color: '#64748b', marginBottom: '1rem' }}>
-            If you believe this is an error, please contact our support team.
+            If you believe this is an error  please contact our support team.
           </p>
           <p style={{ color: '#64748b', fontSize: '0.9rem' }}>
             Error Code: 404 | Timestamp: {new Date().toISOString()}

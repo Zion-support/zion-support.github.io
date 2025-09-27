@@ -6,7 +6,6 @@ export interface Service {
   features?: string[];
   price?: string}
 
->>>>>> 124e0663bdd3dc771c9ec6d97c2524a133c5e7cb
 };
 
 export interface Testimonial {
@@ -18,7 +17,6 @@ export interface Testimonial {
   avatar?: string;
   rating: number}
 
->>>>>> 124e0663bdd3dc771c9ec6d97c2524a133c5e7cb
 ];
 
 export interface PricingTier {
@@ -32,7 +30,6 @@ export interface PricingTier {
   buttonText: string;
   buttonVariant: 'primary' | 'secondary'}
 
->>>>>> 124e0663bdd3dc771c9ec6d97c2524a133c5e7cb
 ];
 
 export interface BlogPost {
@@ -46,5 +43,4 @@ export interface BlogPost {
   image: string;
   slug: string}
 
->>>>>> 124e0663bdd3dc771c9ec6d97c2524a133c5e7cb
 ];

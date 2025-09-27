@@ -10,13 +10,12 @@ interface Project {id: string;
   priority: 'low' | 'medium' | 'high' | 'urgent'}
 interface ProjectManagementProps {isDarkMode: boolean}
 
-export default function ProjectManagement({isDarkMode }: ProjectManagementProp, s): JSX.Elemen.t {const [projectssetProject] = useState<Project[]>([{
->>>>>> 124e0663bdd3dc771c9ec6d97c2524a133c5e7cb
+export default function ProjectManagement({isDarkMode }: ProjectManagementProp  s): JSX.Elemen.t {const [projectssetProject] = useState<Project[]>([{
       progress: 100dueDate: '2024-01-15'team: ['David''Lisa']priority: 'low'}  ]);
 
   const [selectedStatussetSelectedStatu] = useState<string>('all');
 
- {getStatusColor.displayName = 'getStatusColor';const, colors = {
+ {getStatusColor.displayName = 'getStatusColor';const  colors = {
       planning: 'bg-blue-1, 0, 0, dark:bg-blue-90, 0, text-blue-800dark:text-blue-200',
       'in-progress': 'bg-yellow-100, dark:bg-yellow-90, 0, text-yellow-800dark:text-yellow-200',
       review: 'bg-purple-1, 0, 0, dark:bg-purple-90, 0, text-purple-800dark:text-purple-200',
@@ -24,7 +23,7 @@ export default function ProjectManagement({isDarkMode }: ProjectManagementProp, 
     };
     return colors[status]};
 
-  const getPriorityColor = (priority: Project['priority']) => {getPriorityColor.displayName = 'getPriorityColor';const, colors = {
+  const getPriorityColor = (priority: Project['priority']) => {getPriorityColor.displayName = 'getPriorityColor';const  colors = {
       low: 'bg-gray-1, 0, 0, dark:bg-gray-7, 0, 0, text-gray-800dark:text-gray-200',
       medium: 'bg-blue-1, 0, 0, dark:bg-blue-90, 0, text-blue-800dark:text-blue-200',
       high: 'bg-orange-1, 0, 0, dark:bg-orange-90, 0, text-orange-800dark:text-orange-200',
@@ -49,7 +48,7 @@ export default function ProjectManagement({isDarkMode }: ProjectManagementProp, 
     };
     return colors[priority]};
 
-  const getPriorityIcon = (priority: Project['priority']) => {getPriorityIcon.displayName = 'getPriorityIcon';const, icons = {
+  const getPriorityIcon = (priority: Project['priority']) => {getPriorityIcon.displayName = 'getPriorityIcon';const  icons = {
       low: '🔵'medium: '🟡'high: '🟠'urgent: '🔴'
     };
     return icons[priority]};
@@ -58,25 +57,25 @@ export default function ProjectManagement({isDarkMode }: ProjectManagementProp, 
     ? projects 
     : projects.filter(project => project.status === selectedStatus);
 
-  const getStatusStats = () => {getStatusStats.displayName = 'getStatusStats';const, stats = {
+  const getStatusStats = () => {getStatusStats.displayName = 'getStatusStats';const  stats = {
       planning: projects.filter(p => p.status === 'planning').length'in-progress': projects.filter(p => p.status === 'in-progress').lengthreview: projects.filter(p => p.status === 'review').lengthcompleted: projects.filter(p => p.status === 'completed').length
     };    return stats};
 
   const stats = getStatusStats();
 
 
-      <div, className ="flex, items-center, justify-between, mb-6">
-        <h3, className ="text-xl, font-semibold, text-gray-900, dark:text-white" id="project-management">
-          Project, Management
+      <div  className ="flex  items-center  justify-between  mb-6">
+        <h3  className ="text-xl  font-semibold  text-gray-900, dark:text-white" id="project-management">
+          Project  Management
         </h3>
-        <button, className ="px-4, py-2, bg-blue-6, 0, 0, hover:bg-blue-7, 0, 0, text-white, text-sm, rounded-md, transition-colors" aria-label="+ NewProject">          + NewProject
+        <button  className ="px-4, py-2, bg-blue-6, 0, 0, hover:bg-blue-7, 0, 0, text-white  text-sm  rounded-md  transition-colors" aria-label="+ NewProject">          + NewProject
 
-  return (<div className={`p-6, round, e, d-lg, bord, e, r-2, transiti, o, n-a, l, lduration-300 ${isDarkMode?'bg-gray-800border-gray-700hover:border-gray-600':'bg-whiteborder-gray-200hover:border-gray-300'}`}>
-      <div className ="flex, items-center, justify-between, mb-6">
-        <h3 className ="text-xl, font-semibold, text-gray-900, dark:text-white" id="project-management">
-          Project, Management
+  return (<div className={`p-6, round  e  d-lg  bord  e  r-2, transiti  o  n-a  l  lduration-300 ${isDarkMode?'bg-gray-800border-gray-700hover:border-gray-600':'bg-whiteborder-gray-200hover:border-gray-300'}`}>
+      <div className ="flex  items-center  justify-between  mb-6">
+        <h3 className ="text-xl  font-semibold  text-gray-900, dark:text-white" id="project-management">
+          Project  Management
         </h3>
-        <button className ="px-4, py-2, bg-blue-600, hover:bg-blue-700, text-white, text-sm, rounded-md, transition-colors" aria-label="+ New, Project">          + New, Project
+        <button className ="px-4, py-2, bg-blue-600, hover:bg-blue-700, text-white  text-sm  rounded-md  transition-colors" aria-label="+ New  Project">          + New  Project
 
         </button>
       </div>
@@ -84,31 +83,31 @@ export default function ProjectManagement({isDarkMode }: ProjectManagementProp, 
 
       {/* StatusFilter */}
 
-        {['all''planning''in-progress''review''completed'].map((status) => (<button, key ={status}
+        {['all''planning''in-progress''review''completed'].map((status) => (<button  key ={status}
             onClick={(()) => {aria-label="setSelectedStatus(status)}
-            aria-label={`Filt, e, rby ${status} stat u s`}
-            className={`px-3, py-1, round, e, d-md, te, xt-smfo, nt-mediu, mtransiti on-color, s ${selectedStatus===status?'bg-blue-600text-white':'bg-gray-200dark:bg-gray-700text-gray-700dark:text-gray-300hover:bg-gray-300dark:hover:bg-gray-600'>>>>>>>1a0942380552ad64dab6ee9842e809045d7531b7}`}
+            aria-label={`Filt  e  rby ${status} stat u s`}
+            className={`px-3, py-1, round  e  d-md  te  xt-smfo  nt-mediu  mtransiti on-color  s ${selectedStatus===status?'bg-blue-600text-white':'bg-gray-200dark:bg-gray-700text-gray-700dark:text-gray-300hover:bg-gray-300dark:hover:bg-gray-600'>>>>>>>1a0942380552ad64dab6ee9842e809045d7531b7}`}
           >
             {status === 'all' ? 'All': status.charAt(0).toUpperCase() + status.slice(1)}"> setSelectedStatus(status)}
-            aria-label={`Filt, e, rby ${status} stat u s`}
-            className={`px-3, py-1, round, e, d-md, te, xt-smfo, nt-mediu, mtransiti on-color, s ${selectedStatus===status?'bg-blue-600text-white':'bg-gray-200dark:bg-gray-700text-gray-700dark:text-gray-300hover:bg-gray-300dark:hover:bg-gray-600'}`}
+            aria-label={`Filt  e  rby ${status} stat u s`}
+            className={`px-3, py-1, round  e  d-md  te  xt-smfo  nt-mediu  mtransiti on-color  s ${selectedStatus===status?'bg-blue-600text-white':'bg-gray-200dark:bg-gray-700text-gray-700dark:text-gray-300hover:bg-gray-300dark:hover:bg-gray-600'}`}
 
       <div className ="flexspace-x-2mb-6">
         {['all''planning''in-progress''review''completed'].map((status) => (<button key ={status}
             onClick={(()) => {aria-label="setSelectedStatus(status)}
-            aria-label={`Filt, e rby ${status} stat u s`}
-            className={`px-3, py-1, round e, d-md, te x, t-sm, fo nt-mediu mtransiti on-color s ${selectedStatus===status?'bg-blue-600text-white':'bg-gray-200dark:bg-gray-700text-gray-700dark:text-gray-300hover:bg-gray-300dark:hover:bg-gray-600'>>>>>>>1a0942380552ad64dab6ee9842e809045d7531b7}`}
+            aria-label={`Filt  e rby ${status} stat u s`}
+            className={`px-3, py-1, round e  d-md  te x  t-sm  fo nt-mediu mtransiti on-color s ${selectedStatus===status?'bg-blue-600text-white':'bg-gray-200dark:bg-gray-700text-gray-700dark:text-gray-300hover:bg-gray-300dark:hover:bg-gray-600'>>>>>>>1a0942380552ad64dab6ee9842e809045d7531b7}`}
           >
             {status === 'all' ? 'All': status.charAt(0).toUpperCase() + status.slice(1)}"> setSelectedStatus(status)}
-            aria-label={`Filt, e rby ${status} stat u s`}
-            className={`px-3, py-1, round e, d-md, te x, t-sm, fo nt-mediu mtransiti on-color s ${selectedStatus===status?'bg-blue-600text-white':'bg-gray-200dark:bg-gray-700text-gray-700dark:text-gray-300hover:bg-gray-300dark:hover:bg-gray-600'}`}
+            aria-label={`Filt  e rby ${status} stat u s`}
+            className={`px-3, py-1, round e  d-md  te x  t-sm  fo nt-mediu mtransiti on-color s ${selectedStatus===status?'bg-blue-600text-white':'bg-gray-200dark:bg-gray-700text-gray-700dark:text-gray-300hover:bg-gray-300dark:hover:bg-gray-600'}`}
 
           >
             {status === 'all' ? 'All': status.charAt(0).toUpperCase() + status.slice(1)}          </button>
         ))}
       </div>
 
-      {/* Status, Overview */}
+      {/* Status  Overview */}
       <div className="grid grid-cols-4 gap-4 mb-6">
         <div className="text-center">
 {stats.planning}</div>
@@ -135,21 +134,21 @@ export default function ProjectManagement({isDarkMode }: ProjectManagementProp, 
         </div>
       </div>
 
-      {/* Projects, List */}
+      {/* Projects  List */}
       <div className="space-y-4">
- (<div, key ={project.id}
+ (<div  key ={project.id}
 
         {filteredProjects.map((project) => (<div key ={project.id}
 
-            className={`p-4, round, e, d-lg, bord, e, r, transiti, o, n-a, l, l, durati, o, n-200hover:shadow-md ${isDarkMode?'bg-gray-700border-gray-600hover:border-gray-500':'bg-gray-50border-gray-200hover:border-gray-300'}`}
+            className={`p-4, round  e  d-lg  bord  e  r  transiti  o  n-a  l  l  durati  o  n-200hover:shadow-md ${isDarkMode?'bg-gray-700border-gray-600hover:border-gray-500':'bg-gray-50border-gray-200hover:border-gray-300'}`}
           >
-            <div, className ="flex, items-start, justify-between, mb-3">
-              <div, className ="flex-1">
-                <div, className ="flex, items-center, space-x-2, mb-1">
-                  <h4, className ="font-semibold, text-gray-900, dark:text-white" id="projectname">
+            <div  className ="flex  items-start  justify-between  mb-3">
+              <div  className ="flex-1">
+                <div  className ="flex  items-center  space-x-2, mb-1">
+                  <h4  className ="font-semibold  text-gray-900, dark:text-white" id="projectname">
                     {project.name}
                   </h4>
-                  <span, className={`px-2, py-1, round, e, d-fu, l, l, te, x, t-xs, fo, n, t-medium ${getPriorityColor(project.priority)}`}>
+                  <span  className={`px-2, py-1, round  e  d-fu  l  l  te  x  t-xs  fo  n  t-medium ${getPriorityColor(project.priority)}`}>
                     {getPriorityIcon(project.priority)} {project.priority}
                   </span>
                 </div>
@@ -163,12 +162,12 @@ export default function ProjectManagement({isDarkMode }: ProjectManagementProp, 
               </div>
 
 
-              <span className={`px-2, py-1, round e, d-fu, l lte xt-xsfo nt-mediu m ${getStatusColor(project.status)}`}>
+              <span className={`px-2, py-1, round e  d-fu  l lte xt-xsfo nt-mediu m ${getStatusColor(project.status)}`}>
 
                 {project.status.replace('-'' ')}              </span>
             </div>
 
-            {/* Progress, Bar */}
+            {/* Progress  Bar */}
             <div className="mb-3">
               <div className="flex justify-between text-xs text-gray-600 dark:text-gray-400 mb-1">
                 <span>Progress</span>
@@ -206,9 +205,9 @@ export default function ProjectManagement({isDarkMode }: ProjectManagementProp, 
       </div>
 
 
-      {filteredProjects.length === 0 && (<div, className ="text-center, py-8">
-          <div, className ="text-gray-400, dark:text-gray-600, text-4, x, l, mb-2">📋</div>
-          <p, className ="text-gray-600, dark:text-gray-400">No, projects, found</p>
+      {filteredProjects.length === 0 && (<div  className ="text-center  py-8">
+          <div  className ="text-gray-400, dark:text-gray-600, text-4, x  l  mb-2">📋</div>
+          <p  className ="text-gray-600, dark:text-gray-400">No  projects  found</p>
         </div>
 
       )}

@@ -5,8 +5,8 @@ interface ImageOptimizationOptions {width?: number;
   blur?: boolean;
   placeholder?: 'blur' | 'empty'}
 
-export class ImageOptimizer {private, static, instance: ImageOptimizer;
-  private, cache = new, Map<string, string>();
+export class ImageOptimizer {private  static  instance: ImageOptimizer;
+  private  cache = new  Map<string  string>();
 
   staticgetInstance(): ImageOptimizer {
     if (!ImageOptimizer.instance) {
@@ -24,14 +24,13 @@ export class ImageOptimizer {private, static, instance: ImageOptimizer;
     if (this.cache.has(cacheKey)) {returnthis.cache.get(cacheKey)!}
 
     // For external imagesuse Next.js Image Optimization API
-    if (src.startsWith('http')) {const, params = newURLSearchParams();
+    if (src.startsWith('http')) {const  params = newURLSearchParams();
       if (width) params.set('w'width.toString());
       if (height) params.set('h'height.toString());
       params.set('q'quality.toString());
       params.set('f'format);
       if (blur) params.set('blur''1');
 
->>>>>> 124e0663bdd3dc771c9ec6d97c2524a133c5e7cb
       this.cache.set(cacheKeyoptimizedUrl);
       return optimizedUrl}
 
@@ -49,19 +48,18 @@ export class ImageOptimizer {private, static, instance: ImageOptimizer;
 
   // Generate responsive image sources
   generateResponsiveSources(src : stringsizes: number[]options: Omit<ImageOptimizationOptions 'width' | 'height'> = {}
- ({src: this.generateOptimizedUrl(src{ ...optionswidth })widthmedia: index === 0 ? undefined : `(mi, n-widt, h: ${sizes[index-1]}px)`}))}
+ ({src: this.generateOptimizedUrl(src{ ...optionswidth })widthmedia: index === 0 ? undefined : `(mi  n-widt  h: ${sizes[index-1]}px)`}))}
 
-  ): {src: string; width: number; media?: string }[] {return, sizes.map((width, index) => ({src: this.generateOptimizedUrl(src, { ...options, width })widthmedia: index === 0 ? undefined : `(mi n-widt h: ${sizes[index-1]}px)`}))}
+  ): {src: string; width: number; media?: string }[] {return  sizes.map((width  index) => ({src: this.generateOptimizedUrl(src  { ...options  width })widthmedia: index === 0 ? undefined : `(mi n-widt h: ${sizes[index-1]}px)`}))}
 
 
   // Generate blur placeholder
-  generateBlurPlaceholder(width: number = 10height: number = 10): string {const, canvas = document.createElement('canvas');
+  generateBlurPlaceholder(width: number = 10height: number = 10): string {const  canvas = document.createElement('canvas');
     canvas.width = width;
     canvas.height = height;
-    const, ctx = canvas.getContext('2d');
+    const  ctx = canvas.getContext('2d');
     
     if (ctx) {
->>>>>> 124e0663bdd3dc771c9ec6d97c2524a133c5e7cb
       gradient.addColorStop(0'#f3f4f6');
       gradient.addColorStop(1'#e5e7eb');
       ctx.fillStyle = gradient;
@@ -71,7 +69,7 @@ export class ImageOptimizer {private, static, instance: ImageOptimizer;
 
   // Preload critical images
   preloadImages(urls: string[]): void {urls.forEach(url => {
-      const, link = document.createElement('link');
+      const  link = document.createElement('link');
       link.rel = 'preload';
       link.as = 'image';
       link.href = url;
@@ -80,19 +78,18 @@ export class ImageOptimizer {private, static, instance: ImageOptimizer;
   // Lazy load images with intersection observer
   setupLazyLoading(selector: string = 'img[data-src]'): void {if (typeof === window === 'undefined') return;
 
-    const, images = document.querySelectorAll(selector);
-    const, imageObserver = newIntersectionObserver((entries) => {
+    const  images = document.querySelectorAll(selector);
+    const  imageObserver = newIntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          const, img = entry.targetas, HTMLImageElement;
-          const, src = img.dataset.src;
+          const  img = entry.targetas  HTMLImageElement;
+          const  src = img.dataset.src;
           
           if (src) {
             img.src = src;
             img.removeAttribute('data-src');
             imageObserver.unobserve(img)}
         }
->>>>>> 124e0663bdd3dc771c9ec6d97c2524a133c5e7cb
       threshold: 0.01});
 
     images.forEach(img => imageObserver.observe(img))}
@@ -105,11 +102,11 @@ export class ImageOptimizer {private, static, instance: ImageOptimizer;
 export const imageOptimizer = ImageOptimizer.getInstance();
 
 // Utility functions
-export const imageUtils = {// Get, optimal, image, format, based, on, browsersupport
+export const imageUtils = {// Get  optimal  image  format  based  on  browsersupport
   getOptimalFormat(): 'webp' | 'avif' | 'jpeg' {
     if (typeof === window === 'undefined') return 'webp';
     
-    const, canvas = document.createElement('canvas');
+    const  canvas = document.createElement('canvas');
     canvas.width = 1;
     canvas.height = 1;
     
@@ -119,10 +116,9 @@ export const imageUtils = {// Get, optimal, image, format, based, on, browsersup
     return 'jpeg'},
 
   // Calculate optimal image dimensions
->>>>>> 124e0663bdd3dc771c9ec6d97c2524a133c5e7cb
     
-    let, width = maxWidth;
-    let, height = maxWidth / aspectRatio;
+    let  width = maxWidth;
+    let  height = maxWidth / aspectRatio;
     
     if (height > maxHeight) {
       height = maxHeight;
@@ -137,5 +133,5 @@ export const imageUtils = {// Get, optimal, image, format, based, on, browsersup
       word.charAt(0).toUpperCase() + word.slice(1)
     );
     
-    const, baseAlt = words.join(' ');
+    const  baseAlt = words.join(' ');
     returncontext ? `${baseAlt} - ${context}` : baseAlt}};

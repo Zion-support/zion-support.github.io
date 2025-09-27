@@ -1,82 +1,82 @@
-import React, { useState, useEffect, useMemo, useCallback } from 'react';
+import React, { useState  useEffect  useMemo  useCallback } from 'react';
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
 
 // Lazy load heavy components to reduce initial bundle size
 // const PerformanceDashboard = dynamic(() => import('../src/components/PerformanceDashboard').then(mod => ({ default: mod.PerformanceDashboard })), {
-//   ssr: false,
+//   ssr: false 
 //   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
 // });
 
 // const SecurityDashboard = dynamic(() => import('../src/components/SecurityDashboard').then(mod => ({ default: mod.SecurityDashboard })), {
-//   ssr: false,
+//   ssr: false 
 //   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
 // });
 
 // const AnalyticsDashboard = dynamic(() => import('../src/components/AnalyticsDashboard').then(mod => ({ default: mod.AnalyticsDashboard })), {
-//   ssr: false,
+//   ssr: false 
 //   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
 // });
 
 // const EnhancedDashboard = dynamic(() => import('../src/components/EnhancedDashboard'), {
-//   ssr: false,
+//   ssr: false 
 //   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
 // });
 
 // const EnhancedSearch = dynamic(() => import('../src/components/EnhancedSearch'), {
-//   ssr: false,
+//   ssr: false 
 //   loading: () => <div className="h-32 w-full bg-gray-200 rounded animate-pulse" />
 // });
 
 // const ComprehensiveAnalyticsDashboard = dynamic(() => import('../src/components/ComprehensiveAnalyticsDashboard'), {
-//   ssr: false,
+//   ssr: false 
 //   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
 // });
 
 // Removed broken component
 
 // const AdvancedAnalyticsDashboard = dynamic(() => import('../src/components/AdvancedAnalyticsDashboard').then(mod => ({ default: mod.AdvancedAnalyticsDashboard })), {
-//   ssr: false,
+//   ssr: false 
 //   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
 // });
 
 // const AdvancedSecurityMonitor = dynamic(() => import('../src/components/AdvancedSecurityMonitor').then(mod => ({ default: mod.AdvancedSecurityMonitor })), {
-//   ssr: false,
+//   ssr: false 
 //   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
 // });
 
 // const AdvancedPerformanceMonitor = dynamic(() => import('../src/components/AdvancedPerformanceMonitor'), {
-//   ssr: false,
+//   ssr: false 
 //   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
 // });
 
 // const AdvancedAccessibilityAuditor = dynamic(() => import('../src/components/AdvancedAccessibilityAuditor'), {
-//   ssr: false,
+//   ssr: false 
 //   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
 // });
 
 // const SystemMonitor = dynamic(() => import('../src/components/SystemMonitor'), {
-//   ssr: false,
+//   ssr: false 
 //   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
 // });
 
 // const AdvancedSecurityEnhancements = dynamic(() => import('../src/components/AdvancedSecurityEnhancements'), {
-//   ssr: false,
+//   ssr: false 
 //   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
 // });
 
 // const SecurityMonitor = dynamic(() => import('../src/components/SecurityMonitor'), {
-//   ssr: false,
+//   ssr: false 
 //   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
 // });
 
 // const EnhancedAnalytics = dynamic(() => import('../src/components/EnhancedAnalytics'), {
-//   ssr: false,
+//   ssr: false 
 //   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
 // });
 
 // const AdvancedSystemMonitor = dynamic(() => import('../src/components/AdvancedSystemMonitor'), {
-//   ssr: false,
+//   ssr: false 
 //   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
 // });
 
@@ -91,48 +91,48 @@ import dynamic from 'next/dynamic';
 // Removed broken component
 
 // const AdvancedErrorHandler = dynamic(() => import('../src/components/AdvancedErrorHandler'), {
-//   ssr: false,
+//   ssr: false 
 //   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
 // });
 
 // const AdvancedPerformanceOptimizer = dynamic(() => import('../src/components/AdvancedPerformanceOptimizer'), {
-//   ssr: false,
+//   ssr: false 
 //   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
 // });
 
 const EnhancedUserExperience = dynamic(() => import('../src/components/EnhancedUserExperience'), {
-  ssr: false,
+  ssr: false 
   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
 });
 
 // const AdvancedAnalyticsInsights = dynamic(() => import('../src/components/AdvancedAnalyticsInsights'), {
-//   ssr: false,
+//   ssr: false 
 //   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
 // });
 
 // const AdvancedErrorMonitoring = dynamic(() => import('../src/components/AdvancedErrorMonitoring'), {
-//   ssr: false,
+//   ssr: false 
 //   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
 // });
 
 // Removed broken component
 
 // const ComprehensiveMonitoringDashboard = dynamic(() => import('../src/components/ComprehensiveMonitoringDashboard'), {
-//   ssr: false,
+//   ssr: false 
 //   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
 // });
 
 // const ComprehensiveSecurityDashboard = dynamic(() => import('../src/components/ComprehensiveSecurityDashboard'), {
-//   ssr: false,
+//   ssr: false 
 //   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
 // });
 
 type DashboardTab = 'comprehensive' | 'analytics' | 'performance' | 'security' | 'enhanced' | 'search' | 'advanced-analytics' | 'advanced-performance' | 'advanced-security' | 'accessibility' | 'system-monitor' | 'security-enhancements' | 'performance-optimizer' | 'user-experience' | 'error-handler' | 'analytics-insights' | 'error-monitoring' | 'advanced-system-monitor' | 'new-performance' | 'new-security' | 'new-analytics' | 'comprehensive-monitoring' | 'comprehensive-security';
 
 const Dashboard: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<DashboardTab>('comprehensive');
-  const [isRealTime, setIsRealTime] = useState(true);
-  const [isLoading, setIsLoading] = useState(false);
+  const [activeTab  setActiveTab] = useState<DashboardTab>('comprehensive');
+  const [isRealTime  setIsRealTime] = useState(true);
+  const [isLoading  setIsLoading] = useState(false);
 
   // Optimized tab switching with loading state
   const handleTabChange = useCallback((tabId: DashboardTab) => {
@@ -144,29 +144,29 @@ const Dashboard: React.FC = () => {
   }, [activeTab]);
 
   const tabs = useMemo(() => [
-    { id: 'comprehensive' as const, name: 'Comprehensive', icon: '🎯' },
-    { id: 'analytics' as const, name: 'Analytics', icon: '📊' },
-    { id: 'performance' as const, name: 'Performance', icon: '⚡' },
-    { id: 'security' as const, name: 'Security', icon: '🔒' },
-    { id: 'enhanced' as const, name: 'Enhanced Dashboard', icon: '🚀' },
-    { id: 'search' as const, name: 'Search', icon: '🔍' },
-    { id: 'advanced-analytics' as const, name: 'Advanced Analytics', icon: '📈' },
-    { id: 'advanced-performance' as const, name: 'Advanced Performance', icon: '⚡️' },
-    { id: 'advanced-security' as const, name: 'Advanced Security', icon: '🛡️' },
-    { id: 'accessibility' as const, name: 'Accessibility', icon: '♿' },
-    { id: 'system-monitor' as const, name: 'System Monitor', icon: '📊' },
-    { id: 'security-enhancements' as const, name: 'Security Enhancements', icon: '🔐' },
-    { id: 'performance-optimizer' as const, name: 'Performance Optimizer', icon: '⚙️' },
-    { id: 'user-experience' as const, name: 'User Experience', icon: '👤' },
-    { id: 'error-monitoring' as const, name: 'Error Monitoring', icon: '🚨' },
-    { id: 'advanced-system-monitor' as const, name: 'Advanced System Monitor', icon: '🔧' },
-    { id: 'new-performance' as const, name: 'New Performance', icon: '⚡️' },
-    { id: 'new-security' as const, name: 'New Security', icon: '🛡️' },
-    { id: 'new-analytics' as const, name: 'New Analytics', icon: '📊' },
-    { id: 'error-handler' as const, name: 'Error Handler', icon: '🚨' },
-    { id: 'analytics-insights' as const, name: 'Analytics Insights', icon: '💡' },
-    { id: 'comprehensive-monitoring' as const, name: 'Comprehensive Monitoring', icon: '📊' },
-    { id: 'comprehensive-security' as const, name: 'Comprehensive Security', icon: '🛡️' }
+    { id: 'comprehensive' as const  name: 'Comprehensive', icon: '🎯' },
+    { id: 'analytics' as const  name: 'Analytics', icon: '📊' },
+    { id: 'performance' as const  name: 'Performance', icon: '⚡' },
+    { id: 'security' as const  name: 'Security', icon: '🔒' },
+    { id: 'enhanced' as const  name: 'Enhanced Dashboard', icon: '🚀' },
+    { id: 'search' as const  name: 'Search', icon: '🔍' },
+    { id: 'advanced-analytics' as const  name: 'Advanced Analytics', icon: '📈' },
+    { id: 'advanced-performance' as const  name: 'Advanced Performance', icon: '⚡️' },
+    { id: 'advanced-security' as const  name: 'Advanced Security', icon: '🛡️' },
+    { id: 'accessibility' as const  name: 'Accessibility', icon: '♿' },
+    { id: 'system-monitor' as const  name: 'System Monitor', icon: '📊' },
+    { id: 'security-enhancements' as const  name: 'Security Enhancements', icon: '🔐' },
+    { id: 'performance-optimizer' as const  name: 'Performance Optimizer', icon: '⚙️' },
+    { id: 'user-experience' as const  name: 'User Experience', icon: '👤' },
+    { id: 'error-monitoring' as const  name: 'Error Monitoring', icon: '🚨' },
+    { id: 'advanced-system-monitor' as const  name: 'Advanced System Monitor', icon: '🔧' },
+    { id: 'new-performance' as const  name: 'New Performance', icon: '⚡️' },
+    { id: 'new-security' as const  name: 'New Security', icon: '🛡️' },
+    { id: 'new-analytics' as const  name: 'New Analytics', icon: '📊' },
+    { id: 'error-handler' as const  name: 'Error Handler', icon: '🚨' },
+    { id: 'analytics-insights' as const  name: 'Analytics Insights', icon: '💡' },
+    { id: 'comprehensive-monitoring' as const  name: 'Comprehensive Monitoring', icon: '📊' },
+    { id: 'comprehensive-security' as const  name: 'Comprehensive Security', icon: '🛡️' }
   ], []);
 
   // Sample data for advanced components - memoized to prevent re-creation
@@ -196,8 +196,8 @@ const Dashboard: React.FC = () => {
       { country: 'Canada', visitors: 9000, percentage: 20.0 },
       { country: 'United Kingdom', visitors: 7200, percentage: 16.0 }
     ],
-    hourlyData: Array.from({ length: 24 }, (_, i) => ({ hour: i, visitors: Math.floor(Math.random() * 1000) })),
-    dailyData: Array.from({ length: 30 }, (_, i) => ({ 
+    hourlyData: Array.from({ length: 24 }, (_  i) => ({ hour: i  visitors: Math.floor(Math.random() * 1000) })),
+    dailyData: Array.from({ length: 30 }, (_  i) => ({ 
       date: new Date(Date.now() - (29 - i) * 24 * 60 * 60 * 1000).toISOString().split('T')[0], 
       visitors: Math.floor(Math.random() * 2000) + 1000,
       pageViews: Math.floor(Math.random() * 5000) + 2000
@@ -230,7 +230,7 @@ const Dashboard: React.FC = () => {
             <h1 className="text-3xl font-bold text-gray-900 mb-8">Enhanced Search</h1>
             <div className="max-w-2xl">
               {/* <EnhancedSearch 
-                onSearch={(query, results) => console.log('Search:', query, results)}
+                onSearch={(query  results) => console.log('Search:', query  results)}
                 onResultClick={(result) => console.log('Result clicked:', result)}
                 enableFilters={true}
                 enableSuggestions={true}
@@ -650,14 +650,14 @@ const Dashboard: React.FC = () => {
         );
       default:
         return <ComprehensiveAnalyticsDashboard />}
-  }, [activeTab, isRealTime]);
+  }, [activeTab  isRealTime]);
 
   return (
     <>
       <Head>
         <title>Advanced Dashboard - Zion Tech Solutions</title>
-        <meta name="description" content="Comprehensive analytics dashboard with advanced performance monitoring, security analysis, SEO optimization, and accessibility insights" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="Comprehensive analytics dashboard with advanced performance monitoring  security analysis  SEO optimization  and accessibility insights" />
+        <meta name="viewport" content="width=device-width  initial-scale=1" />
       </Head>
 
       <div className="min-h-screen bg-gray-50">
@@ -667,7 +667,7 @@ const Dashboard: React.FC = () => {
             <div className="flex justify-between items-center py-6">
               <div>
                 <h1 className="text-2xl font-bold text-gray-900">Advanced Analytics Dashboard</h1>
-                <p className="text-sm text-gray-600">Comprehensive monitoring with AI-powered insights, performance optimization, security analysis, and SEO recommendations</p>
+                <p className="text-sm text-gray-600">Comprehensive monitoring with AI-powered insights  performance optimization  security analysis  and SEO recommendations</p>
               </div>
               <div className="flex items-center space-x-4">
                 <div className="text-sm text-gray-500">

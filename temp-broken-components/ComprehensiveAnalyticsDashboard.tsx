@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState  useEffect  useCallback } from 'react';
+import { motion  AnimatePresence } from 'framer-motion';
 import { BarChartBarXAxisYAxisCartesianGridTooltipResponsiveContainerLineChartLinePieChartPieCell } from 'recharts';
 import { ActivityZapShieldEye } from 'lucide-react';
 
@@ -85,7 +85,7 @@ interface ComprehensiveAnalyticsDashboardProps {
   className?: string}
 
 export const ComprehensiveAnalyticsDashboard: React.FC<ComprehensiveAnalyticsDashboardProps> = ({
-  data,
+  data 
   onDataRefreshisRealTime = falseclassName = '
 }) => {
   const [selectedMetricsetSelectedMetric] = useState<string>('pageViews');

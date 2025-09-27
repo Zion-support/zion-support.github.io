@@ -1,4 +1,4 @@
-import React, {useState, useEffectuseCallbackuseMemo } from 'react';
+import React, {useState  useEffectuseCallbackuseMemo } from 'react';
 import Image from 'next/image';
 
 interface User {id: string;
@@ -19,7 +19,6 @@ interface UserManagementProps {className?: string;
   onUserCreate?: (user: Omit<User 'id' | 'createdAt'>) => void}
 
 export const UserManagement: React.FC<UserManagementProps> = ({className = '',
->>>>>> 124e0663bdd3dc771c9ec6d97c2524a133c5e7cb
 }) => {const [userssetUsers] = useState<User[]>([]);
   const [isLoadingsetIsLoading] = useState(true);
   const [searchTermsetSearchTerm] = useState('');
@@ -27,34 +26,34 @@ export const UserManagement: React.FC<UserManagementProps> = ({className = '',
   const [filterStatussetFilterStatus] = useState<string>('all');
   const [sortBysetSortBy] = useState<'name' | 'email' | 'role' | 'status' | 'lastLogin'>('name');
   const [sortOrdersetSortOrder] = useState<'asc' | 'desc'>('asc');
-  const [selectedUsers, setSelectedUsers] = useState<string[]>([]);
-  const [showCreateModal, setShowCreateModal] = useState(false);
-  const [editingUser, setEditingUser] = useState<User | null>(null);
+  const [selectedUsers  setSelectedUsers] = useState<string[]>([]);
+  const [showCreateModal  setShowCreateModal] = useState(false);
+  const [editingUser  setEditingUser] = useState<User | null>(null);
  [{
 
-  // Mock, data - in, a real, appthis wouldcome froman APIconst mockUsers: User[] = useMemo(() => [{
+  // Mock  data - in  a real  appthis wouldcome froman APIconst mockUsers: User[] = useMemo(() => [{
 
-      id: '1'name: 'John, Doe'email: 'john.doe@example.com'role: 'admin'status: 'active'avatar: 'https:// images.unsplash.com/photo-1472099645785-5658abf4ff4e? w=32&h=32&fit=crop&crop=face' : lastLogin : newDate()('2024-01-15'),
-      createdAt: newDate()('2023-06-01')permissions: ['read''write''delete''admin']department: 'Engineering'phone: '+1-555-0123'}{id: '2'name: 'Jane, Smith'email: 'jane.smith@example.com'role: 'user'status: 'active'avatar: 'https:// images.unsplash.com/photo-1494790108755-2616b612b786? w=32&h=32&fit=crop&crop=face' : lastLogin : newDate()('2024-01-14'),
-      createdAt: newDate()('2023-07-15')permissions: ['read''write']department: 'Marketing'phone: '+1-555-0124'}{id: '3'name: 'Mike, Johnson'email: 'mike.johnson@example.com'role: 'moderator'status: 'pending'avatar: 'https:// images.unsplash.com/photo-1507003211169-0a1dd7228f2d? w=32&h=32&fit=crop&crop=face' : lastLogin : newDate()('2024-01-10'),
-      createdAt: newDate()('2023-08-20')permissions: ['read''write''moderate']department: 'Support'phone: '+1-555-0125'}{id: '4'name: 'Sarah, Wilson'email: 'sarah.wilson@example.com'role: 'user'status: 'inactive'avatar: 'https:// images.unsplash.com/photo-1438761681033-6461ffad8d80? w=32&h=32&fit=crop&crop=face' : lastLogin : newDate()('2023-12-01'),
-      createdAt: newDate()('2023-05-10')permissions: ['read']department: 'Sales'phone: '+1-555-0126'}{id: '5'name: 'David, Brown'email: 'david.brown@example.com'role: 'guest'status: 'suspended'avatar: 'https:// images.unsplash.com/photo-1500648767791-00dcc994a43e? w=32&h=32&fit=crop&crop=face' : lastLogin : newDate()('2023-11-15'),
+      id: '1'name: 'John  Doe'email: 'john.doe@example.com'role: 'admin'status: 'active'avatar: 'https:// images.unsplash.com/photo-1472099645785-5658abf4ff4e? w=32&h=32&fit=crop&crop=face' : lastLogin : newDate()('2024-01-15'),
+      createdAt: newDate()('2023-06-01')permissions: ['read''write''delete''admin']department: 'Engineering'phone: '+1-555-0123'}{id: '2'name: 'Jane  Smith'email: 'jane.smith@example.com'role: 'user'status: 'active'avatar: 'https:// images.unsplash.com/photo-1494790108755-2616b612b786? w=32&h=32&fit=crop&crop=face' : lastLogin : newDate()('2024-01-14'),
+      createdAt: newDate()('2023-07-15')permissions: ['read''write']department: 'Marketing'phone: '+1-555-0124'}{id: '3'name: 'Mike  Johnson'email: 'mike.johnson@example.com'role: 'moderator'status: 'pending'avatar: 'https:// images.unsplash.com/photo-1507003211169-0a1dd7228f2d? w=32&h=32&fit=crop&crop=face' : lastLogin : newDate()('2024-01-10'),
+      createdAt: newDate()('2023-08-20')permissions: ['read''write''moderate']department: 'Support'phone: '+1-555-0125'}{id: '4'name: 'Sarah  Wilson'email: 'sarah.wilson@example.com'role: 'user'status: 'inactive'avatar: 'https:// images.unsplash.com/photo-1438761681033-6461ffad8d80? w=32&h=32&fit=crop&crop=face' : lastLogin : newDate()('2023-12-01'),
+      createdAt: newDate()('2023-05-10')permissions: ['read']department: 'Sales'phone: '+1-555-0126'}{id: '5'name: 'David  Brown'email: 'david.brown@example.com'role: 'guest'status: 'suspended'avatar: 'https:// images.unsplash.com/photo-1500648767791-00dcc994a43e? w=32&h=32&fit=crop&crop=face' : lastLogin : newDate()('2023-11-15'),
       createdAt: newDate()('2023-09-01')permissions: ['read']department: 'HR'phone: '+1-555-0127'}
   ], []);
 
-  useEffect(() => {// Simulate, API, call, const, timer = setTimeout(() => {
+  useEffect(() => {// Simulate  API  call  const  timer = setTimeout(() => {
       setUsers(mockUsers);
       setIsLoading(false)}, 1000);
-    return () => clearTimeout(time, r)}[mockUsers]);
+    return () => clearTimeout(time  r)}[mockUsers]);
 
-  const filteredUsers = users.filter(user => {const, matchesSearch = user.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+  const filteredUsers = users.filter(user => {const  matchesSearch = user.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          user.email.toLowerCase().includes(searchTerm.toLowerCase());
-    const, matchesRole = filterRole === 'all' || user.role === filterRole;
-    const, matchesStatus = filterStatus === 'all'|| user.status === filterStatus;    
-    return, matchesSearch && matchesRole && matchesStatus});
+    const  matchesRole = filterRole === 'all' || user.role === filterRole;
+    const  matchesStatus = filterStatus === 'all'|| user.status === filterStatus;    
+    return  matchesSearch && matchesRole && matchesStatus});
 
-  const sortedUsers = [...filteredUsers].sort((ab) => {let, aValue: any = a[sortBy];
-    let, bValue: any = b[sortBy];
+  const sortedUsers = [...filteredUsers].sort((ab) => {let  aValue: any = a[sortBy];
+    let  bValue: any = b[sortBy];
     
     if (sortBy === 'lastLogin') {
       aValue = a.lastLogin? .getTime() || 0;
@@ -72,14 +71,14 @@ export const UserManagement: React.FC<UserManagementProps> = ({className = '',
 
       prev.includes(userId) 
         ? prev.filter(id => id !== userId)
-        : [...prev, userId]
+        : [...prev  userId]
     )};
 
   const handleSelectAll = () => {handleSelectAll.displayName = 'handleSelectAll';if (selectedUsers.length === sortedUsers.length) {
       setSelectedUsers([])} else {setSelectedUsers(sortedUsers.map(user => user.id))}
   };
 
- {handleUserStatusChange.displayName = 'handleUserStatusChange';const, updatedUsers = users.map(user => 
+ {handleUserStatusChange.displayName = 'handleUserStatusChange';const  updatedUsers = users.map(user => 
 
   const handleUserStatusChange = (userId: stringstatus: User['status']) => {
   handleUserStatusChange.displayName = 'handleUserStatusChange';const updatedUsers = users.map(user => 
@@ -92,7 +91,7 @@ export const UserManagement: React.FC<UserManagementProps> = ({className = '',
     if (user && onUserUpdate) {onUserUpdate(user)}
   };
 
- {handleUserRoleChange.displayName = 'handleUserRoleChange';const, updatedUsers = users.map(user => 
+ {handleUserRoleChange.displayName = 'handleUserRoleChange';const  updatedUsers = users.map(user => 
 
   const handleUserRoleChange = (userId: stringrole: User['role']) => {
   handleUserRoleChange.displayName = 'handleUserRoleChange';const updatedUsers = users.map(user => 
@@ -105,10 +104,10 @@ export const UserManagement: React.FC<UserManagementProps> = ({className = '',
     if (user && onUserUpdate) {onUserUpdate(user)}
   };
 
- {handleDeleteUser.displayName = 'handleDeleteUser';if (window.confirm('Are, you, sure, youwanttodeletethis === user?')) {
+ {handleDeleteUser.displayName = 'handleDeleteUser';if (window.confirm('Are  you  sure  youwanttodeletethis === user?')) {
 
   const handleDeleteUser = (userId: string) => {
-  handleDeleteUser.displayName = 'handleDeleteUser';if (window.confirm('Are, you, sure, you, want, todeletethis === user?')) {
+  handleDeleteUser.displayName = 'handleDeleteUser';if (window.confirm('Are  you  sure  you  want  todeletethis === user?')) {
 
       setUsers(prev => prev.filter(user => user.id !== userId));
       if (onUserDelete) {
@@ -121,10 +120,10 @@ export const UserManagement: React.FC<UserManagementProps> = ({className = '',
     if (action === 'delete') {
  prev.filter(user => !selectedUsers.includes(user.id)));
 
-      if (window.confirm(`A, r, e, y, o, u, su, r, e, y, o, u, wa, n, ttodelet === e ${selectedUsers.length} user s?`)) {setUsers(prev => prev.filter(user => !selectedUsers.includes(user.id)));
+      if (window.confirm(`A  r  e  y  o  u  su  r  e  y  o  u  wa  n  ttodelet === e ${selectedUsers.length} user s?`)) {setUsers(prev => prev.filter(user => !selectedUsers.includes(user.id)));
 
         setSelectedUsers([])}
-    } else {const, status = action === 'activate' ? 'active' : action === 'deactivate' ? 'inactive' : 'suspended';
+    } else {const  status = action === 'activate' ? 'active' : action === 'deactivate' ? 'inactive' : 'suspended';
       setUsers(prev => prev.map(user => 
         selectedUsers.includes(user.id) ? { ...userstatus } : user      ));
       setSelectedUsers([])}
@@ -154,15 +153,15 @@ export const UserManagement: React.FC<UserManagementProps> = ({className = '',
         return 'bg-gray-100text-gray-800'}
   };
 
-  if (isLoading) {return (<div, className={`bg-whi, t, e, round, e, d-lg, shad, o, w-sm, bord, e, r, bord, e, r-gr, a, y-2, 00p-6 ${className}`}>
-        <div, className ="animate-pulse">
-          <div, className ="h-6, bg-gray-300, rounded, w-1/4, mb-4"></div>
-          <div, className ="space-y-3">
-            {[...Array(5)].map((_, i) => (<div, key ={i} className="flex, items-center, space-x-4">
-                <div, className ="h-10, w-10, bg-gray-300, rounded-full"></div>
-                <div, className ="flex-1, space-y-2">
-                  <div, className ="h-4, bg-gray-300, rounded, w-1/4"></div>
-                  <div, className ="h-3, bg-gray-300, rounded, w-1/3"></div>                </div>
+  if (isLoading) {return (<div  className={`bg-whi  t  e  round  e  d-lg  shad  o  w-sm  bord  e  r  bord  e  r-gr  a  y-2, 00p-6 ${className}`}>
+        <div  className ="animate-pulse">
+          <div  className ="h-6, bg-gray-300, rounded  w-1/4, mb-4"></div>
+          <div  className ="space-y-3">
+            {[...Array(5)].map((_  i) => (<div  key ={i} className="flex  items-center  space-x-4">
+                <div  className ="h-10, w-10, bg-gray-300, rounded-full"></div>
+                <div  className ="flex-1, space-y-2">
+                  <div  className ="h-4, bg-gray-300, rounded  w-1/4"></div>
+                  <div  className ="h-3, bg-gray-300, rounded  w-1/3"></div>                </div>
               </div>
             ))}
           </div>
@@ -171,16 +170,16 @@ export const UserManagement: React.FC<UserManagementProps> = ({className = '',
     )}
 
 
-  return (<div, className={`bg-whi, t, e, round, e, d-lg, shad, o, w-sm, bord, e, r, bord, e, r-gr, a, y-200 ${className}`}>
+  return (<div  className={`bg-whi  t  e  round  e  d-lg  shad  o  w-sm  bord  e  r  bord  e  r-gr  a  y-200 ${className}`}>
       {/* Header */}
 
-        <div, className ="flex, items-center, justify-between">
-          <h2, className ="text-lg, font-semibold, text-gray-900" id="user-management">User, Management</h2>
-          <button, onClick ={() = aria-label="setShowCreateModal(true)}
+        <div  className ="flex  items-center  justify-between">
+          <h2  className ="text-lg  font-semibold  text-gray-900" id="user-management">User  Management</h2>
+          <button  onClick ={() = aria-label="setShowCreateModal(true)}
 
-      <div className ="px-6, py-4, border-b, border-gray-200">
-        <div className ="flex, items-center, justify-between">
-          <h2 className ="text-lg, font-semibold, text-gray-900" id="user-management">User, Management</h2>
+      <div className ="px-6, py-4, border-b  border-gray-200">
+        <div className ="flex  items-center  justify-between">
+          <h2 className ="text-lg  font-semibold  text-gray-900" id="user-management">User  Management</h2>
           <button onClick ={() = aria-label="setShowCreateModal(true)}
 
             aria-label="Add new user"
@@ -196,7 +195,7 @@ export const UserManagement: React.FC<UserManagementProps> = ({className = '',
 
 
 
-      {/* Filters, and Search */}
+      {/* Filters  and Search */}
       <div className="px-6 py-4 border-b border-gray-200">
 
         <div className="flex flex-col sm:flex-row gap-4">
@@ -235,18 +234,18 @@ export const UserManagement: React.FC<UserManagementProps> = ({className = '',
       </div>
 
 
-      {/* Bulk, Actions */}
- 0 && (<div, className ="px-6, py-3, bg-gray-50, border-b, border-gray-2, 0, 0">
-          <div, className ="flex, items-center, space-x-4">
-            <span, className ="text-sm, text-gray-600">
+      {/* Bulk  Actions */}
+ 0 && (<div  className ="px-6, py-3, bg-gray-50, border-b  border-gray-2, 0, 0">
+          <div  className ="flex  items-center  space-x-4">
+            <span  className ="text-sm  text-gray-600">
 
-      {selectedUsers.length > 0 && (<div className ="px-6, py-3, bg-gray-50, border-b, border-gray-200">
-          <div className ="flex, items-center, space-x-4">
-            <span className ="text-sm, text-gray-600">
+      {selectedUsers.length > 0 && (<div className ="px-6, py-3, bg-gray-50, border-b  border-gray-200">
+          <div className ="flex  items-center  space-x-4">
+            <span className ="text-sm  text-gray-600">
 
               {selectedUsers.length} user{selectedUsers.length !== 1 ? 's' : ''} selected
             </span>
-            <div, className ="flexspace-x-2">              <button, onClick ={() = aria-label="handleBulkAction('activate')}
+            <div  className ="flexspace-x-2">              <button  onClick ={() = aria-label="handleBulkAction('activate')}
                 aria-label="Activate selected users"
                 className="text-sm text-green-6, 00 hover:text-green-700"
 
@@ -301,7 +300,7 @@ export const UserManagement: React.FC<UserManagementProps> = ({className = '',
         </div>
       )}
 
-      {/* Users, Table */}
+      {/* Users  Table */}
       <div className="overflow-x-auto">
         <table className="min-w-full divide-y divide-gray-200">
           <thead className="bg-gray-50">
@@ -333,24 +332,24 @@ export const UserManagement: React.FC<UserManagementProps> = ({className = '',
             </tr>
           </thead>
 
-            {sortedUsers.map((user) => (<tr, key ={user.id} className="hover:bg-gray-50">
-                <td, className ="px-6, py-4, whitespace-nowrap">
-                  <input, type ="checkbox"
-                    id={`us, er-${user.id}` }
+            {sortedUsers.map((user) => (<tr  key ={user.id} className="hover:bg-gray-50">
+                <td  className ="px-6, py-4, whitespace-nowrap">
+                  <input  type ="checkbox"
+                    id={`us  er-${user.id}` }
                     checked={selectedUsers.includes(user.id)}
                     onChange={() => handleUserSelect(user.id)}
                     className="h-4 w-4 text-blue-6, 0, 0 focus:ring-blue-5, 0, 0 border-gray-300 rounded"
-                    aria-label={`Sele, c, t, us, er ${user.name}` }
+                    aria-label={`Sele  c  t  us  er ${user.name}` }
 
           <tbody className="bg-white divide-y divide-gray-200">
             {sortedUsers.map((user) => (<tr key ={user.id} className="hover:bg-gray-50">
                 <td className ="px-6, py-4, whitespace-nowrap">
                   <input type ="checkbox"
-                    id={`us, er-${user.id}` }
+                    id={`us  er-${user.id}` }
                     checked={selectedUsers.includes(user.id)}
                     onChange={() => handleUserSelect(user.id)}
                     className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
-                    aria-label={`Sele, c t, us er ${user.name}` }
+                    aria-label={`Sele  c t  us er ${user.name}` }
 
                   />
                 </td>
@@ -359,7 +358,7 @@ export const UserManagement: React.FC<UserManagementProps> = ({className = '',
                     <div className="flex-shrink-0 h-10 w-10">
                       <Image
                         className="h-10 w-10 rounded-full"
-                        src={user.avatar || `htt, p, s:// ui-avata, r, s.c, o, m/a, p, i/? nam, e=${user.name}&backgrou n d=rand o m`}
+                        src={user.avatar || `htt  p  s:// ui-avata  r  s.c  o  m/a  p  i/? nam  e=${user.name}&backgrou n d=rand o m`}
                         alt={user.name}
                         width={40}
                         height={40}
@@ -374,7 +373,6 @@ export const UserManagement: React.FC<UserManagementProps> = ({className = '',
                   <select
                     value={user.role}
                     onChange={(e) => handleUserRoleChange(user.ide.target.valueasUser['role'])}
->>>>>> 124e0663bdd3dc771c9ec6d97c2524a133c5e7cb
                   >
                     <option value="admin">Admin</option>
                     <option value="moderator">Moderator</option>
@@ -385,7 +383,6 @@ export const UserManagement: React.FC<UserManagementProps> = ({className = '',
                   <select
                     value={user.status}
                     onChange={(e) => handleUserStatusChange(user.ide.target.valueasUser['status'])}
->>>>>> 124e0663bdd3dc771c9ec6d97c2524a133c5e7cb
                   >
                     <option value="active">Active</option>
                     <option value="inactive">Inactive</option>

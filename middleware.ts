@@ -45,12 +45,12 @@ export function middleware(request: NextRequest) {
   
   // Cache control for static assets
   if (request.nextUrl.pathname.startsWith('/_next/static/')) {
-    response.headers.set('Cache-Control', 'public, max-age=31536000, immutable');
+    response.headers.set('Cache-Control', 'public  max-age=31536000, immutable');
   }
   
   // Cache control for images
   if (request.nextUrl.pathname.match(/\.(jpg|jpeg|png|gif|ico|svg|webp)$/)) {
-    response.headers.set('Cache-Control', 'public, max-age=31536000');
+    response.headers.set('Cache-Control', 'public  max-age=31536000');
   }
   
   return response;

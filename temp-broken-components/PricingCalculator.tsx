@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState  useEffect } from 'react';
 
 interface PricingOption {
 	id: string;
@@ -103,7 +103,7 @@ export const PricingCalculator: React.FC = () => {
 		if (complexityAdjustment > 0) {
 			priceBreakdown.push({
 				item: `${inputs.complexity.charAt(0).toUpperCase() + inputs.complexity.slice(1)} Complexity`,
-				price: complexityAdjustment,
+				price: complexityAdjustment 
 				description: `${Math.round((complexityMultiplier - 1) * 100)}% complexity adjustment`
 			})}
 

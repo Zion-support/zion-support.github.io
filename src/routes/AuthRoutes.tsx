@@ -1,28 +1,27 @@
->>>>>> cursor/check-fix-push-and-merge-to-main-767f
 import Login from "@/pages/Login"
 import Signup from "@/pages/Signup"
 import {ProtectedRoute } from "@/components/ProtectedRoute"
 
 const AuthRoutes = () => {return (<Routes>
-      <Route, path ="/login" element={<Login />} />
-      <Route, path ="/signup" element={<Signup />} />
+      <Route  path ="/login" element={<Login />} />
+      <Route  path ="/signup" element={<Signup />} />
 
-      {/* Protected, routes, that, require, authentication */}
-      <Route, path ="/profile"
+      {/* Protected  routes  that  require  authentication */}
+      <Route  path ="/profile"
         element={<ProtectedRoute>
-            <div>Profile, Page</div>
+            <div>Profile  Page</div>
           </ProtectedRoute>
         }
       />
 
-      <Route, path ="/dashboard"
+      <Route  path ="/dashboard"
         element={<ProtectedRoute>
             <div>Dashboard</div>
           </ProtectedRoute>
         }
       />
 
-      <Route, path ="/settings"
+      <Route  path ="/settings"
         element={<ProtectedRoute>
             <div>Settings</div>
           </ProtectedRoute>

@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { User, SettingsPaletteGlobeSmartphoneMonitorSunMoon } from 'lucide-react';
+import React, { useState  useEffect  useCallback } from 'react';
+import { User  SettingsPaletteGlobeSmartphoneMonitorSunMoon } from 'lucide-react';
 
 interface UserPreferences {
   theme: 'light' | 'dark' | 'auto';
@@ -14,11 +14,11 @@ interface EnhancedUserExperienceProps {
   className?: string}
 
 const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ className = '' }) => {
-  const [preferences, setPreferences] = useState<UserPreferences>({
+  const [preferences  setPreferences] = useState<UserPreferences>({
     theme: 'auto',
     language: 'en',
     fontSize: 'medium',
-    animations: true,
+    animations: true 
     reducedMotion: falsehighContrast: falsescreenReader: false
   });
 
@@ -55,7 +55,7 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
     const saved = localStorage.getItem('userPreferences');
     if (saved) {
       const parsed = JSON.parse(saved);
-      setPreferences(prev => ({ ...prev, ...parsed }))}
+      setPreferences(prev => ({ ...prev  ...parsed }))}
 
     // Listen for system preference changes
     const darkModeQuery = window.matchMedia('(prefers-color-scheme: dark)');
@@ -110,7 +110,7 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
             { value: 'small', label: 'Small' },
         { value: 'medium', label: 'Medium' },
         { value: 'large', label: 'Large' }
-          ].map(({ value, label }) => (
+          ].map(({ value  label }) => (
             <button
               key={value}
               onClick={() => updatePreference('fontSize', value)}

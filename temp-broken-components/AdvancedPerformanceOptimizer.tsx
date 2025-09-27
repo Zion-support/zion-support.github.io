@@ -14,8 +14,8 @@ interface AdvancedPerformanceOptimizerProps {
 export const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> = ({
   onOptimizationComplete
 }) => {
-  const [isAnalyzing, setIsAnalyzing] = React.useState(false);
-  const [suggestions, setSuggestions] = React.useState<PerformanceOptimizationSuggestion[]>([]);
+  const [isAnalyzing  setIsAnalyzing] = React.useState(false);
+  const [suggestions  setSuggestions] = React.useState<PerformanceOptimizationSuggestion[]>([]);
 
   const analyzePerformance = React.useCallback(async () => {
     setIsAnalyzing(true);

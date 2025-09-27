@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState  useCallback } from 'react';
 
 interface AccessibilityIssue {
   id: string;
@@ -25,12 +25,12 @@ interface AdvancedAccessibilityAuditorProps {
   className?: string}
 
 export const AdvancedAccessibilityAuditor: React.FC<AdvancedAccessibilityAuditorProps> = ({
-  onAuditComplete, onIssueFound, className = ''
+  onAuditComplete  onIssueFound  className = ''
 }) => {
-  const [isAuditing, setIsAuditing] = useState(false);
-  const [metrics, setMetrics] = useState<AccessibilityMetrics | null>(null);
-  const [selectedFilter, setSelectedFilter] = useState<string>('all');
-  const [selectedSeverity, setSelectedSeverity] = useState<string>('all');
+  const [isAuditing  setIsAuditing] = useState(false);
+  const [metrics  setMetrics] = useState<AccessibilityMetrics | null>(null);
+  const [selectedFilter  setSelectedFilter] = useState<string>('all');
+  const [selectedSeverity  setSelectedSeverity] = useState<string>('all');
 
   const auditAccessibility = useCallback(async () => {
     if (typeof window === 'undefined') return;
@@ -41,7 +41,7 @@ export const AdvancedAccessibilityAuditor: React.FC<AdvancedAccessibilityAuditor
     try {
       // Check for missing alt text
       const images = document.querySelectorAll('img');
-      images.forEach((img, index) => {
+      images.forEach((img  index) => {
         if (!img.alt && !img.getAttribute('aria-label')) {
           issues.push({
             id: `alt-text-${index}`,
@@ -49,7 +49,7 @@ export const AdvancedAccessibilityAuditor: React.FC<AdvancedAccessibilityAuditor
             severity: 'critical',
             rule: 'image-alt',
             description: 'Image missing alternative text',
-            element: img.tagName,
+            element: img.tagName 
             selector: img.tagName.toLowerCase(),
             impact: 'Screen readers cannot convey the purpose of this image',
             help: 'Add an alt attribute to describe the image content',
@@ -60,9 +60,9 @@ export const AdvancedAccessibilityAuditor: React.FC<AdvancedAccessibilityAuditor
 
       // Calculate metrics
       const newMetrics: AccessibilityMetrics = {
-        totalIssues: issues.length,
-        errors: issues.filter(issue => issue.type === 'error').length,
-        warnings: issues.filter(issue => issue.type === 'warning').length,
+        totalIssues: issues.length 
+        errors: issues.filter(issue => issue.type === 'error').length 
+        warnings: issues.filter(issue => issue.type === 'warning').length 
         score: Math.max(0, 100 - (issues.length * 5))
       };
 
@@ -73,7 +73,7 @@ export const AdvancedAccessibilityAuditor: React.FC<AdvancedAccessibilityAuditor
     } catch (error) {
       console.error('Accessibility audit failed:', error)} finally {
       setIsAuditing(false)}
-  }, [onAuditComplete, onIssueFound]);
+  }, [onAuditComplete  onIssueFound]);
 
   React.useEffect(() => {
     auditAccessibility()}, [auditAccessibility]);

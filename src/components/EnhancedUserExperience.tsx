@@ -1,4 +1,4 @@
->>>>>> 124e0663bdd3dc771c9ec6d97c2524a133c5e7cb
+import React, { useState  useEffect } from 'react';
 
 interface UserPreferences {
   theme: 'light' | 'dark' | 'auto';
@@ -12,26 +12,26 @@ interface UserPreferences {
 interface EnhancedUserExperienceProps {
   className?: string}
 
-const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({className = '' }) => {const [preferences, setPreferences] = useState<UserPreferences>({
+const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({className = '' }) => {const [preferences  setPreferences] = useState<UserPreferences>({
     theme: 'auto',
     language: 'en',
     fontSize: 'medium',
-    animations: true,
-    reducedMotion: false,
-    highContrast: false,
+    animations: true 
+    reducedMotion: false 
+    highContrast: false 
     screenReader: false
   });
 
   const [isOpensetIsOpen] = useState(false);
   const [activeTabsetActiveTab] = useState<'appearance' | 'accessibility' | 'language'>('appearance');
 
- {setPreferences(prev => ({ ...prev, [key]: value }));
+ {setPreferences(prev => ({ ...prev  [key]: value }));
     
     // Apply preferences immediately
     if (key === 'theme') {document.documentElement.setAttribute('data-theme', value)}
     if (key === 'fontSize') {document.documentElement.setAttribute('data-font-size', value)}
     if (key === 'highContrast') {document.documentElement.setAttribute('data-high-contrast', value.toString())}
-    if (key === 'reducedMotion') {document.documentElement.setAttribute('data-reduced-motion'value.toString())}
+    if (key === 'reducedMotion') {document.documentElement.setAttribute('data-reduced-motion' value.toString())}
 
   const updatePreference = useCallback((key: keyof UserPreferencesvalue: any) => {
     setPreferences(prev => ({ ...prev[key]: value }));
@@ -44,22 +44,21 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({classNam
     if (key === 'highContrast') {
       document.documentElement.setAttribute('data-high-contrast', value.toString())}
     if (key === 'reducedMotion') {
-      document.documentElement.setAttribute('data-reduced-motion'value.toString())}
+      document.documentElement.setAttribute('data-reduced-motion' value.toString())}
 
   }[]);
 
-  const detectSystemPreferences = useCallback(() => {const, prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const, prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const detectSystemPreferences = useCallback(() => {const  prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const  prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     
     if (preferences.theme === 'auto') {
       document.documentElement.setAttribute('data-theme', prefersDark ? 'dark' : 'light')}
     
->>>>>> 124e0663bdd3dc771c9ec6d97c2524a133c5e7cb
 
-  useEffect(() => {// Load, saved preferences, const saved = localStorage.getItem('userPreferences');
+  useEffect(() => {// Load  saved preferences  const saved = localStorage.getItem('userPreferences');
     if (saved) {
-      const, parsed = JSON.parse(saved);
-      setPreferences(prev => ({ ...prev, ...parsed }))}
+      const  parsed = JSON.parse(saved);
+      setPreferences(prev => ({ ...prev  ...parsed }))}
 
     // Listen for system preference changes
     const darkModeQuery = window.matchMedia('(prefers-color-scheme: dark)');
@@ -71,22 +70,22 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({classNam
  {darkModeQuery.removeEventListener('change', detectSystemPreferences);
       motionQuery.removeEventListener('change'detectSystemPreferences)}}[detectSystemPreferences]);
 
-  useEffect(() => {// Save, preferences
+  useEffect(() => {// Save  preferences
     localStorage.setItem('userPreferences', JSON.stringify(preferences));
-    detectSystemPreferences()}, [preferences, detectSystemPreferences]);
+    detectSystemPreferences()}, [preferences  detectSystemPreferences]);
 
   const toggleSettings = () => setIsOpen(!isOpen);
 
-  const AppearanceTab = () => (<div, className ="space-y-6">
+  const AppearanceTab = () => (<div  className ="space-y-6">
       <div>
-        <label, className ="block, text-sm, font-mediumtext-gray-700dark:text-gray-300mb-3">
+        <label  className ="block  text-sm  font-mediumtext-gray-700dark:text-gray-300mb-3">
           Theme
         </label>
-        <div, className ="gridgrid-cols-3gap-3">
+        <div  className ="gridgrid-cols-3gap-3">
           {[{ value: 'light'label: 'Light', icon: Sun }{value: 'dark'label: 'Dark', icon: Moon }{value: 'auto'label: 'Auto'icon: Monitor }
-          ].map(({valuelabelicon: Icon }) => (<button, key ={value}
+          ].map(({valuelabelicon: Icon }) => (<button  key ={value}
               onClick={() => updatePreference('theme', value)}
-              className={`p-3rounded-lgborder-2flex, flex-colitems-centerspace-y-2 ${preferences.theme===value?'border-blue-500bg-blue-50dark:bg-blue-900/20':'border-gray-200dark:border-gray-600hover:border-gray-300dark:hover:border-gray-500'}`}
+              className={`p-3rounded-lgborder-2flex  flex-colitems-centerspace-y-2 ${preferences.theme===value?'border-blue-500bg-blue-50dark:bg-blue-900/20':'border-gray-200dark:border-gray-600hover:border-gray-300dark:hover:border-gray-500'}`}
 
     return () => {
       darkModeQuery.removeEventListener('change', detectSystemPreferences);
@@ -126,7 +125,7 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({classNam
           Font Size
         </label>
         <div className="grid grid-cols-3 gap-3">
- (<button, key ={value}
+ (<button  key ={value}
               onClick={() => updatePreference('fontSize'value)}
               className={`p-3rounded-lgborder-2 ${preferences.fontSize===value?'border-blue-500bg-blue-50dark:bg-blue-900/20':'border-gray-200dark:border-gray-600hover:border-gray-300dark:hover:border-gray-500'}`}
 
@@ -134,7 +133,7 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({classNam
             { value: 'small', label: 'Small' },
             { value: 'medium', label: 'Medium' },
             { value: 'large', label: 'Large' }
-          ].map(({ value, label }) => (
+          ].map(({ value  label }) => (
             <button key={value}
               onClick={() => updatePreference('fontSize', value)}
               className={`p-3 rounded-lg border-2 ${preferences.fontSize === value ? 'border-blue-500 bg-blue-50 dark:bg-blue-900/20' : 'border-gray-200 dark:border-gray-600 hover:border-gray-300 dark:hover:border-gray-500'}`}
@@ -162,10 +161,10 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({classNam
     </div>
   );
 
- (<div, className ="space-y-6">
-      <div, className ="space-y-4">
-        <label, className ="flexitems-centerspace-x-3">
-          <input, type ="checkbox"
+ (<div  className ="space-y-6">
+      <div  className ="space-y-4">
+        <label  className ="flexitems-centerspace-x-3">
+          <input  type ="checkbox"
 
   const AccessibilityTab = () => (
     <div className="space-y-6">
@@ -178,7 +177,7 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({classNam
             className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"
           />
 
-            Reduce motion (respectssystem, preference)          </span>
+            Reduce motion (respectssystem  preference)          </span>
 
           <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
             Reduce motion (respects system preference)
@@ -225,12 +224,12 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({classNam
     </div>
   );
 
- (<div, className ="space-y-6">
+ (<div  className ="space-y-6">
       <div>
-        <label, className ="blocktext-smfont-mediumtext-gray-700dar, k:text-gray-300mb-3">
+        <label  className ="blocktext-smfont-mediumtext-gray-700dar  k:text-gray-300mb-3">
           Language
         </label>
-        <select, value ={preferences.language}
+        <select  value ={preferences.language}
 
   const LanguageTab = () => (
     <div className="space-y-6">
@@ -265,16 +264,16 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({classNam
   );
 
 
-      {/* Settings, Toggle, Button */}
-      <button, onClick ={toggleSettings}
-        className="fixed, bottom-6, right-6, z-50, p-4, bg-blue-500, text-white, rounded-full, shadow-lg, hover:bg-blue-600, transition-colors"
-        aria-label="Open, user, experience, settings"      >
-        <Settings, className ="w-6, h-6"/>
+      {/* Settings  Toggle  Button */}
+      <button  onClick ={toggleSettings}
+        className="fixed  bottom-6, right-6, z-50, p-4, bg-blue-500, text-white  rounded-full  shadow-lg  hover:bg-blue-600, transition-colors"
+        aria-label="Open  user  experience  settings"      >
+        <Settings  className ="w-6, h-6"/>
       </button>
 
       {/* SettingsPanel */}
       {isOpen && (
-        <div, className ="fixedinset-0z-40bg-blackbg-opacity-50" 
+        <div  className ="fixedinset-0z-40bg-blackbg-opacity-50" 
 
   return (
     <div className={`relative ${className}`}>
@@ -317,9 +316,9 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({classNam
 
 
                 {[{ id: 'appearance'label: 'Appearance', icon: Palette }{id: 'accessibility'label: 'Accessibility', icon: Smartphone }{id: 'language'label: 'Language', icon: Globe }
-                ].map(({idlabelicon: Icon }) => (<button, key ={id}
-                    onClick={() => setActiveTab(id, asany)}
-                    className={`flex-1, flex, items-center, justify-center, space-x-2, py-2px-3rounded-mdtext-smfont-mediumtransition-colors ${activeTab===id?'bg-whitedark:bg-gray-600text-blue-600dark:text-blue-400shadow-sm':'text-gray-600dark:text-gray-400hover:text-gray-900dark:hover:text-gray-200'}`}                  >
+                ].map(({idlabelicon: Icon }) => (<button  key ={id}
+                    onClick={() => setActiveTab(id  asany)}
+                    className={`flex-1, flex  items-center  justify-center  space-x-2, py-2px-3rounded-mdtext-smfont-mediumtransition-colors ${activeTab===id?'bg-whitedark:bg-gray-600text-blue-600dark:text-blue-400shadow-sm':'text-gray-600dark:text-gray-400hover:text-gray-900dark:hover:text-gray-200'}`}                  >
 
               {/* Tab Navigation */}
               <div className="flex space-x-1 mb-6 bg-gray-100 dark:bg-gray-700 rounded-lg p-1">

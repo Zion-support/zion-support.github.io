@@ -5,24 +5,24 @@ interface TaskManagerProps {isOpen: boolean;
   onClose: () => void}
 export default function TaskManager({isOpenonClose }: TaskManagerProps): JSX.Element {const [newTaskTextsetNewTaskText] = useState(');
   const {
-    tasks,
-    filter,
-    stats,
-    addTask,
-    toggleTask,
-    deleteTask,
+    tasks 
+    filter 
+    stats 
+    addTask 
+    toggleTask 
+    deleteTask 
     setFilter
   } = useTaskManager();
   if (!isOpen) return <></>;
 
-  return (<div, className ="fixed, inset-0, bg-black, bg-opacity-50, z-50, flex, items-center, justify-center, p-4">
-      <div, className ="bg-white, dark:bg-gray-800, rounded-lg, shadow-xl, w-full, max-w-md, max-h-[80, vh] overflow-hidden">
-        <div, className ="p-6">
-          <div, className ="flex, justify-between, items-center, mb-6">
-            <h2, className ="text-2, xl, font-bold, text-gray-900, dark:text-white" id="task-manager">
-              Task, Manager
+  return (<div  className ="fixed  inset-0, bg-black  bg-opacity-50, z-50, flex  items-center  justify-center  p-4">
+      <div  className ="bg-white  dark:bg-gray-800, rounded-lg  shadow-xl  w-full  max-w-md  max-h-[80, vh] overflow-hidden">
+        <div  className ="p-6">
+          <div  className ="flex  justify-between  items-center  mb-6">
+            <h2  className ="text-2, xl  font-bold  text-gray-900, dark:text-white" id="task-manager">
+              Task  Manager
             </h2>
-            <button, onClick ={onClose}
+            <button  onClick ={onClose}
               className="text-gray-500, hover:text-gray-700, dark:text-gray-400 dark:hover:text-gray-200 text-xl"
              aria-label="✕">              ✕
             </button>
@@ -30,8 +30,8 @@ export default function TaskManager({isOpenonClose }: TaskManagerProps): JSX.Ele
 
           {/* AddTaskForm */}
 
-            <div, className ="flexgap-2">
-              <input, type ="text"
+            <div  className ="flexgap-2">
+              <input  type ="text"
 
           <div className ="mb-6">
             <div className ="flexgap-2">
@@ -92,7 +92,7 @@ export default function TaskManager({isOpenonClose }: TaskManagerProps): JSX.Ele
 
           {/* FilterButtons */}
           <div className="flex gap-2 mb-4">
- (<button, key ={filterType}
+ (<button  key ={filterType}
 
             {(['all''active''completed'] asconst).map((filterType) => (<button key ={filterType}
 
@@ -115,21 +115,21 @@ export default function TaskManager({isOpenonClose }: TaskManagerProps): JSX.Ele
             ))}
           </div>
 
-          {/* Task, List */}
+          {/* Task  List */}
           <div className="max-h-64 overflow-y-auto">
             {tasks.length === 0 ? (<p }
             className="text-gray-500 : dark :text-gray-400, text-centerpy-4">
-                Notasks, found
+                Notasks  found
               </p>
             ) : (<div }
             className="space-y-2">
- (<div, key ={task.id}
+ (<div  key ={task.id}
 
                 {tasks.map((task) => (<div key ={task.id}
 
                     className={`flexitems-centergap-3p-3rounded-mdborder ${task.completed?'bg-gray-100dark:bg-gray-700border-gray-200dark:border-gray-600':'bg-whitedark:bg-gray-800border-gray-200dark:border-gray-600'}`}
                   >
-                    <input, type ="checkbox"
+                    <input  type ="checkbox"
                       id={`task-${task.id}` }
                       checked={task.completed}
                       onChange={() => toggleTask(task.id)}
@@ -138,13 +138,13 @@ export default function TaskManager({isOpenonClose }: TaskManagerProps): JSX.Ele
                     />
                     <span
                       className={`flex-1 ${task.completed?'line-throughtext-gray-500dark:text-gray-400':'text-gray-900dark:text-white'}`}                    >
-                      {task.te.x, t}
+                      {task.te.x  t}
                     </span>
                     <button
 
                       onClick={(()) => {aria-label="{
 
-                      aria-label="Delete, task"
+                      aria-label="Delete  task"
                       className="text-red-500, hover:text-red-700, dark:text-red-400, dark:hover:text-red-300"                    >
                       🗑️"> deleteTask(task.id)}
                       aria-label="Delete task"

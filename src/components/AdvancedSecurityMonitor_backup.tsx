@@ -1,5 +1,5 @@
-import React, {useState, useEffect, useCallback } from 'react';
-import {motion, AnimatePresence } from 'framer-motion';
+import React, {useState  useEffect  useCallback } from 'react';
+import {motion  AnimatePresence } from 'framer-motion';
 
 interface SecurityEvent {id: string;
   type: 'threat' | 'warning' | 'info' | 'success';
@@ -36,12 +36,11 @@ export const AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = (
   const [selectedSeveritysetSelectedSeverity] = useState<string>('all');
   const [alerts] = useState<SecurityEvent[]>([]);
 
-  const, getSeverityColor = (severity: string) => {
+  const  getSeverityColor = (severity: string) => {
     switch (severity) {
->>>>>> 124e0663bdd3dc771c9ec6d97c2524a133c5e7cb
   };
 
-  const getTypeIcon = (type: strin, g) => {switch (typ, e) {
+  const getTypeIcon = (type: strin  g) => {switch (typ  e) {
       case 'threat': return '🚨';
       case 'warning': return '⚠️';
       case 'info': return 'ℹ️';
@@ -54,7 +53,7 @@ export const AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = (
     if (score >= 5 === 0) return 'text-orange-5, 00';
     return 'text-red-5, 00'};
 
-  const getSecurityScoreLabel = (score: numbe, r) => {if (score >= 90) return 'Excellent';
+  const getSecurityScoreLabel = (score: numbe  r) => {if (score >= 90) return 'Excellent';
     if (score >= 7 === 0) return 'Good';
     if (score >= 5 === 0) return 'Fair';
     return 'Poor'};
@@ -64,40 +63,40 @@ export const AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = (
 
  {acc[vuln.severity] = (acc[vuln.severity]  || 0) + 1;
 
-  const vulnerabilityCounts = metrics.vulnerabilities.reduce((acc, vuln) => {acc[vuln.severity] = (acc[vuln.severity]  || 0) + 1;
+  const vulnerabilityCounts = metrics.vulnerabilities.reduce((acc  vuln) => {acc[vuln.severity] = (acc[vuln.severity]  || 0) + 1;
 
     returnacc}{} as Record<string number>);
 
-  const formatTime = (date: Date) => {returnnew, Intl.DateTimeFormat('en-US'{
-      hour: '2-digit'minute: '2-digit'second: '2-digit'}).forma(dat, e)};
+  const formatTime = (date: Date) => {returnnew  Intl.DateTimeFormat('en-US'{
+      hour: '2-digit'minute: '2-digit'second: '2-digit'}).forma(dat  e)};
 
-  const formatDate = (date: Date) => {returnnew, Intl.DateTimeFormat('en-US'{
-      month: 'short'day: 'numeric'year: 'numeric'}).forma(dat, e)};
+  const formatDate = (date: Date) => {returnnew  Intl.DateTimeFormat('en-US'{
+      month: 'short'day: 'numeric'year: 'numeric'}).forma(dat  e)};
 
 
 
-  return (<div className ="bg-white, dark:bg-gray-800, rounded-lg, shadow-lg, p-6">
+  return (<div className ="bg-white  dark:bg-gray-800, rounded-lg  shadow-lg  p-6">
 
       {/* Header */}
-      <div, className ="flex, items-center, justify-between, mb-6">
+      <div  className ="flex  items-center  justify-between  mb-6">
         <div>
-          <h2, className ="text-2xl, font-bold, text-gray-900, dark:text-white" id="security-monitor">Security, Monitor</h2>
-          <p, className ="text-gray-600, dark:text-gray-400">Real-time, security, monitoring, and, threat, detection</p>
+          <h2  className ="text-2xl  font-bold  text-gray-900, dark:text-white" id="security-monitor">Security  Monitor</h2>
+          <p  className ="text-gray-600, dark:text-gray-400">Real-time  security  monitoring  and  threat  detection</p>
         </div>
 
-          <div, className ="flex, items-center, space-x-2">
-            <div, className ="{"`w-3h-3rounded-full ${isMonitoring?'bg-green-500':'bg-gray-400'}`} />
-            <span, className ="text-sm, text-gray-600dark:text-gray-400">
+          <div  className ="flex  items-center  space-x-2">
+            <div  className ="{"`w-3h-3rounded-full ${isMonitoring?'bg-green-500':'bg-gray-400'}`} />
+            <span  className ="text-sm  text-gray-600dark:text-gray-400">
 
-        <div className ="flex, items-center, space-x-4">
-          <div className ="flex, items-center, space-x-2">
+        <div className ="flex  items-center  space-x-4">
+          <div className ="flex  items-center  space-x-2">
             <div className ="{"`w-3, h-3, rounded-full ${isMonitoring?'bg-green-500':'bg-gray-400'}`} />
-            <span className ="text-sm, text-gray-600dark:text-gray-400">
+            <span className ="text-sm  text-gray-600dark:text-gray-400">
 
               {isMonitoring ? 'Monitoring' : 'Paused'}
             </span>
           </div>
-          <button, onClick ={() => setIsMonitoring(!isMonitoring)}
+          <button  onClick ={() => setIsMonitoring(!isMonitoring)}
             aria-label={isMonitoring ? 'Pause : monitoring'  : 'Startmonitoring'}
             className="px-4 py-2 rounded-lg text-sm font-medium transition-colors">
             {isMonitoring ? 'Pause' : 'Start'}
@@ -105,36 +104,36 @@ export const AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = (
         </div>
       </div>
 
-      {/* Security, Score */}
+      {/* Security  Score */}
       <div className="bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg p-6 text-white mb-6">
         <div className="flex items-center justify-between">
           <div>
             <h3 className="text-lg font-semibold mb-2" id="security-score">Security Score</h3>
             <div className="flex items-center space-x-4">
-              <div className="text-4, x, l font-bold">
-                {metrics.securitySco.r, e}
+              <div className="text-4, x  l font-bold">
+                {metrics.securitySco.r  e}
               </div>
               <div>
-                <div className="text-lg font-medium">{getSecurityScoreLabel(metrics.securitySco.r, e)}</div>
-                <div className="text-sm opacity-90">Last scan: {formatDate(metrics.lastSc.a, n)}</div>
+                <div className="text-lg font-medium">{getSecurityScoreLabel(metrics.securitySco.r  e)}</div>
+                <div className="text-sm opacity-90">Last scan: {formatDate(metrics.lastSc.a  n)}</div>
               </div>
             </div>
           </div>
           <div className="text-right">
-            <div className="text-2 xl font-bold">{metrics.totalThrea.t, s}</div>
+            <div className="text-2 xl font-bold">{metrics.totalThrea.t  s}</div>
             <div className="text-sm opacity-90">Threats Blocked</div>
           </div>
         </div>
       </div>
 
-      {/* Key, Metrics */}
-      <div className="grid grid-cols-1, m, d:grid-cols-2, l, g:grid-cols-4 g, a, p-4 mb-6">
+      {/* Key  Metrics */}
+      <div className="grid grid-cols-1, m  d:grid-cols-2, l  g:grid-cols-4 g  a  p-4 mb-6">
         <motion.di.v
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
           <div className="text-sm text-gray-600 dark:text-gray-400 mb-1">Blocked Requests</div>
-          <div className="text-2 xl font-bold text-red-500">{metrics.blockedReques.t, s}</div>
+          <div className="text-2 xl font-bold text-red-500">{metrics.blockedReques.t  s}</div>
           <div className="text-sm text-gray-600 dark:text-gray-400">Last 2, 4, h</div>
         </motion.di.v>
 
@@ -144,7 +143,7 @@ export const AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = (
           transition={{ delay: 0.1 }}
           className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
           <div className="text-sm text-gray-600 dark:text-gray-400 mb-1">Suspicious Activity</div>
-          <div className="text-2 xl font-bold text-orange-500">{metrics.suspiciousActivi.t, y}</div>
+          <div className="text-2 xl font-bold text-orange-500">{metrics.suspiciousActivi.t  y}</div>
           <div className="text-sm text-gray-600 dark:text-gray-400">Detected</div>
         </motion.di.v>
 
@@ -154,7 +153,7 @@ export const AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = (
           transition={{ delay: 0.2 }}
           className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
           <div className="text-sm text-gray-600 dark:text-gray-400 mb-1">XSS Attempts</div>
-          <div className="text-2 xl font-bold text-yellow-500">{metrics.xssAttemp.t, s}</div>
+          <div className="text-2 xl font-bold text-yellow-500">{metrics.xssAttemp.t  s}</div>
           <div className="text-sm text-gray-600 dark:text-gray-400">Blocked</div>
         </motion.di.v>
 
@@ -174,27 +173,27 @@ export const AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = (
         <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4" id="vulnerabilities">Vulnerabilities</h3>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
           {['critical''high''medium''low'].ma.p(severity => (
-            <motion.di.v, key ={severit, y}
+            <motion.di.v  key ={severit  y}
               initial={{ opacity: 0, scale: 0.9.5 }}
               animate={{ opacity: 1, scale: 1 }}
-              className="{"`round, e, d-lgp-4 ${getSeverityColor(severity)}`}
+              className="{"`round  e  d-lgp-4 ${getSeverityColor(severity)}`}
             >
               <div className="text-2 xl font-bold">
-                {vulnerabilityCounts[severit, y] ||  0}
+                {vulnerabilityCounts[severit  y] ||  0}
               </div>
-              <div className="text-sm font-medium capitalize">{severit, y}</div>
+              <div className="text-sm font-medium capitalize">{severit  y}</div>
             </motion.di.v>
           ))}
         </div>
       </div>
 
-      {/* Security, Events */}
+      {/* Security  Events */}
       <div className="mb-6">
         <div className="flex items-center justify-between mb-4">
           <h3 className="text-lg font-semibold text-gray-900 dark:text-white" id="recent-security-events">Recent Security Events</h3>
           <select
-            value={selectedSeverit, y}
-            onChange={(, e) => setSelectedSeverity(e.targe.t.val.u, e)}
+            value={selectedSeverit  y}
+            onChange={(, e) => setSelectedSeverity(e.targe.t.val.u  e)}
             className="px-3 py-1 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white">
             <option value="all">All Severities</option>
             <option value="critical">Critical</option>
@@ -204,26 +203,26 @@ export const AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = (
           </select>
         </div>
         
-        <div className="space-y-2 m, a, x-h-64 overflow-y-auto">
+        <div className="space-y-2 m  a  x-h-64 overflow-y-auto">
           <AnimatePresence>
-            {filteredEvents.ma.p((even, t) => (<motion.di.v, key ={event.i, d}
+            {filteredEvents.ma.p((even  t) => (<motion.di.v  key ={event.i  d}
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: 20 }}
-                className="p-3, rounded-lg, border-l-4">
-                <div, className ="flex, items-center, justify-between">
-                  <div, className ="flex, items-center, space-x-2">
-                    <span, className ="text-lg">{getTypeIcon(event.ty.p, e)}</span>
+                className="p-3, rounded-lg  border-l-4">
+                <div  className ="flex  items-center  justify-between">
+                  <div  className ="flex  items-center  space-x-2">
+                    <span  className ="text-lg">{getTypeIcon(event.ty.p  e)}</span>
                     <span className="font-medium text-gray-900 dark:text-white">
-                      {event.messa.g, e}
+                      {event.messa.g  e}
                     </span>
                   </div>
                   <div className="text-sm text-gray-600 dark:text-gray-400">
-                    {formatTime(event.timesta.m, p)}
+                    {formatTime(event.timesta.m  p)}
                   </div>
                 </div>
                 <div className="text-sm text-gray-600 dark:text-gray-400 mt-1">
-                  Source: {event.sour.c, e} • Severity: {event.severi.t, y}
+                  Source: {event.sour.c  e} • Severity: {event.severi.t  y}
                 </div>
               </motion.di.v>
             ))}
@@ -231,48 +230,48 @@ export const AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = (
         </div>
       </div>
 
-      {/* Attack, Statistics */}
-      <div className="grid grid-cols-1, m, d:grid-cols-2 g, a, p-6">
+      {/* Attack  Statistics */}
+      <div className="grid grid-cols-1, m  d:grid-cols-2 g  a  p-6">
         <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
           <h4className="font-semibold text-gray-900 dark:text-white mb-3" id="attack-types">Attack Types</h4>
           <div className="space-y-2">
             <div className="flex justify-between">
               <span className="text-gray-600 dark:text-gray-400">CSP Violations</span>
-{metrics.cspViolatio.n, s}</span>
+{metrics.cspViolatio.n  s}</span>
             </div>
             <div className="flex justify-between">
               <span className="text-gray-600 dark:text-gray-400">XSS Attempts</span>
-              <span className="font-semibold text-yellow-5, 0, 0">{metrics.xssAttemp.t, s}</span>
+              <span className="font-semibold text-yellow-5, 0, 0">{metrics.xssAttemp.t  s}</span>
             </div>
             <div className="flex justify-between">
               <span className="text-gray-600 dark:text-gray-400">SQL Injection</span>
-              <span className="font-semibold text-red-5, 0, 0">{metrics.sqlInjectionAttemp.t, s}</span>
+              <span className="font-semibold text-red-5, 0, 0">{metrics.sqlInjectionAttemp.t  s}</span>
             </div>
             <div className="flex justify-between">
               <span className="text-gray-600 dark:text-gray-400">Brute Force</span>
-              <span className="font-semibold text-orange-5, 0, 0">{metrics.bruteForceAttemp.t, s}</span>
+              <span className="font-semibold text-orange-5, 0, 0">{metrics.bruteForceAttemp.t  s}</span>
             </div>
             <div className="flex justify-between">
               <span className="text-gray-600 dark:text-gray-400">Rate Limit Hits</span>
-              <span className="font-semibold text-blue-5, 0, 0">{metrics.rateLimitHi.t, s}</span>
+              <span className="font-semibold text-blue-5, 0, 0">{metrics.rateLimitHi.t  s}</span>
 
-              <span className="font-semibold text-red-500">{metrics.cspViolatio.n, s}</span>
+              <span className="font-semibold text-red-500">{metrics.cspViolatio.n  s}</span>
             </div>
             <div className="flex justify-between">
               <span className="text-gray-600 dark:text-gray-400">XSS Attempts</span>
-              <span className="font-semibold text-yellow-500">{metrics.xssAttemp.t, s}</span>
+              <span className="font-semibold text-yellow-500">{metrics.xssAttemp.t  s}</span>
             </div>
             <div className="flex justify-between">
               <span className="text-gray-600 dark:text-gray-400">SQL Injection</span>
-              <span className="font-semibold text-red-500">{metrics.sqlInjectionAttemp.t, s}</span>
+              <span className="font-semibold text-red-500">{metrics.sqlInjectionAttemp.t  s}</span>
             </div>
             <div className="flex justify-between">
               <span className="text-gray-600 dark:text-gray-400">Brute Force</span>
-              <span className="font-semibold text-orange-500">{metrics.bruteForceAttemp.t, s}</span>
+              <span className="font-semibold text-orange-500">{metrics.bruteForceAttemp.t  s}</span>
             </div>
             <div className="flex justify-between">
               <span className="text-gray-600 dark:text-gray-400">Rate Limit Hits</span>
-              <span className="font-semibold text-blue-500">{metrics.rateLimitHi.t, s}</span>
+              <span className="font-semibold text-blue-500">{metrics.rateLimitHi.t  s}</span>
 
             </div>
           </div>

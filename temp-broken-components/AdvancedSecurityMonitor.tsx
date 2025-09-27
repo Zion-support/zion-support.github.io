@@ -13,7 +13,7 @@ interface AdvancedSecurityMonitorProps {
 export const AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = ({
   onSecurityUpdate
 }) => {
-  const [metrics, setMetrics] = React.useState<SecurityMetrics | null>(null);
+  const [metrics  setMetrics] = React.useState<SecurityMetrics | null>(null);
 
   const updateSecurityMetrics = React.useCallback(() => {
     const newMetrics: SecurityMetrics = {

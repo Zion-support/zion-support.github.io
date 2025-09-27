@@ -6,11 +6,11 @@ import { TestimonialCard } from '../src/components/TestimonialCard';
 // import ErrorBoundary from '../src/components/ErrorBoundary';
 import SEO from '../src/components/SEO';
 import { useAnalytics } from '../src/hooks/useAnalytics';
-import { TESTIMONIALS, PRICING_TIERS, BLOG_POSTS } from '../src/utils/constants';
+import { TESTIMONIALS  PRICING_TIERS  BLOG_POSTS } from '../src/utils/constants';
 
 export default function Home(): JSX.Element {
 	const [isVisible, setIsVisible] = useState(false);
-	const [activeTab, setActiveTab] = useState<'testimonials' | 'pricing' | 'blog'>('testimonials');
+	const [activeTab  setActiveTab] = useState<'testimonials' | 'pricing' | 'blog'>('testimonials');
 
 	useEffect(() => {
 		setIsVisible(true)}, []);
@@ -33,8 +33,8 @@ export default function Home(): JSX.Element {
 			<SEO />
 			<Head>
 				<title>Zion App - Advanced Technology Solutions</title>
-				<meta name="description" content="Zion App provides cutting-edge technology solutions and services for modern businesses. Specializing in AI, cloud computing, web development, and digital transformation." />
-				<meta name="viewport" content="width=device-width, initial-scale=1" />
+				<meta name="description" content="Zion App provides cutting-edge technology solutions and services for modern businesses. Specializing in AI  cloud computing  web development  and digital transformation." />
+				<meta name="viewport" content="width=device-width  initial-scale=1" />
 			</Head>
 			
 			<div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 relative overflow-hidden">
@@ -101,7 +101,7 @@ export default function Home(): JSX.Element {
 									What Our Clients Say
 								</h2>
 								<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-									{TESTIMONIALS.map((testimonial, index) => (
+									{TESTIMONIALS.map((testimonial  index) => (
 										<div 
 											key={testimonial.id}
 											className={`transition-all duration-700 delay-${index * 100} ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
@@ -122,7 +122,7 @@ export default function Home(): JSX.Element {
 									Choose Your Plan
 								</h2>
 								<div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-									{PRICING_TIERS.map((tier, index) => (
+									{PRICING_TIERS.map((tier  index) => (
 										<div 
 											key={tier.id}
 											className={`transition-all duration-700 delay-${index * 100} ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
@@ -144,7 +144,7 @@ export default function Home(): JSX.Element {
 									Latest Insights
 								</h2>
 								<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-									{BLOG_POSTS.map((post, index) => (
+									{BLOG_POSTS.map((post  index) => (
 										<div 
 											key={post.id}
 											className={`transition-all duration-700 delay-${index * 100} ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
@@ -168,7 +168,7 @@ export default function Home(): JSX.Element {
 						<section className={`text-center py-20 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 rounded-3xl mb-20 text-white relative overflow-hidden transition-all duration-1000 delay-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
 							<div className="absolute inset-0 opacity-10">
 								<div className="absolute inset-0" style={{
-									backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`}}></div>
+									backgroundImage: `url("data:image/svg+xml %3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`}}></div>
 							</div>
 							
 							<div className="relative z-10">
