@@ -5,11 +5,11 @@ import { initOptimizations } from './utils/buildOptimizations';
 import { seoManager, seoAnalytics, performanceSEO } from './utils/seoEnhanced';
 import { accessibilityManager } from './utils/accessibility';
 import { PerformanceMonitor, ResourceMonitor, MemoryMonitor } from './utils/performance';
-import { performanceOptimizer } from './utils/optimization';
+import { PerformanceOptimizer } from './utils/performanceOptimizer';
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
 import { analytics } from './utils/analytics';
 import { seoOptimizer } from './utils/seoOptimization';
-import { securityManager } from './utils/security';
+// import { securityManager } from './utils/security'; // Unused import removed
 import { SecurityManager } from './utils/securityEnhancements';
 import { cacheManager } from './utils/cacheManager';
 import { apiClient } from './utils/apiClient';
@@ -47,8 +47,7 @@ export default function App(): React.JSX.Element {
     initOptimizations();
     
     // Initialize security features
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    const securityManagerInstance = SecurityManager.getInstance();
+    SecurityManager.getInstance();
     
     // Initialize advanced performance optimizer
     advancedPerformanceOptimizer.addResourceHints();
@@ -107,8 +106,7 @@ export default function App(): React.JSX.Element {
     performanceSEO.optimizeFonts();
     
     // Initialize advanced performance optimizer
-    performanceOptimizer.preloadCriticalResources();
-    performanceOptimizer.optimizeImages();
+    const performanceOptimizer = PerformanceOptimizer.getInstance();
     performanceOptimizer.addResourceHints();
     performanceOptimizer.optimizeCriticalCSS();
     performanceOptimizer.setupWebVitalsMonitoring();
@@ -128,6 +126,7 @@ export default function App(): React.JSX.Element {
     });
 
     // Initialize enhanced security features
+    const securityManagerInstance = SecurityManager.getInstance();
     securityManagerInstance.monitorSecurityEvents();
 
     // Initialize cache manager

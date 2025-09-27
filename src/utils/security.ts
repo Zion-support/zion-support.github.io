@@ -111,7 +111,7 @@ export class SecurityManager {
     let clickCount = 0;
     let lastClickTime = 0;
 
-    document.addEventListener('click', (event) => {
+    document.addEventListener('click', (_event) => {
       const now = Date.now();
       
       // Detect rapid clicking (potential bot behavior)
