@@ -341,7 +341,8 @@ export default function EnhancedSearch({
 
                   <button
                     onClick={() => setSortOrder(prev => prev === 'asc' ? 'desc' : 'asc')}                    className="text-sm border border-gray-300 rounded px-2 py-1 flex items-center"
-                  >                    {sortOrder === 'asc' ? <SortAsc className="h-4 w-4" /> : <SortDesc }
+                  >                    {sortOrder === 'asc' ? <SortAsc }
+            className="h-4 w-4" /> : <SortDesc }
             className="h-4 w-4 />}
                   </button>
                 </div>

@@ -47,6 +47,14 @@ const PerformanceMetrics: React.FC = () => {
     <div className="fixed bottom-4 right-4 z-50">
       <button
         onClick={() => {
+            aria-label="{
+            aria-label="setIsVisible(!isVisible)}
+        aria-label="Toggle performance metrics visibility"
+        className="bg-blue-600 text-white px-3 py-2 rounded-lg shadow-lg hover:bg-blue-700 transition-colors text-sm font-medium"      >
+        📊 Performance"> setIsVisible(!isVisible)}
+        aria-label="Toggle performance metrics visibility"
+        className="bg-blue-600 text-white px-3 py-2 rounded-lg shadow-lg hover:bg-blue-700 transition-colors text-sm font-medium"      >
+        📊 Performance"> {
             aria-label="setIsVisible(!isVisible)}
         aria-label="Toggle performance metrics visibility"
         className="bg-blue-600 text-white px-3 py-2 rounded-lg shadow-lg hover:bg-blue-700 transition-colors text-sm font-medium"      >
@@ -58,11 +66,20 @@ const PerformanceMetrics: React.FC = () => {
       
       {isVisible && (
         <div className="absolute bottom-12 right-0 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-xl p-4 min-w-[250px]">
-          <div className="flex justify-between items-center mb-3">
+          <div }
+            className="flex justify-between items-center mb-3">
             <h3 }
             className="text-sm font-semibold text-gray-900 dark:text-white" id="performance-metrics">Performance Metrics</h3>
             <button
               onClick={() => {
+            aria-label="{
+            aria-label="setIsVisible(false)}
+              aria-label="Close performance metrics"
+              className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"            >
+              ✕"> setIsVisible(false)}
+              aria-label="Close performance metrics"
+              className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"            >
+              ✕"> {
             aria-label="setIsVisible(false)}
               aria-label="Close performance metrics"
               className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"            >

@@ -125,6 +125,24 @@ export default function ProjectManagement({ isDarkMode }: ProjectManagementProp,
           <button
             key={status}
             onClick={() => {
+            aria-label="{
+            aria-label="setSelectedStatus(status)}
+            aria-label={`Filter by ${status} status`}
+            className={`px-3 py-1 rounded-md text-sm font-medium transition-colors ${
+              selectedStatus === status
+                ? 'bg-blue-600 text-white'
+                : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
+            }`}
+          >
+            {status === 'all' ? 'All' : status.charAt(0).toUpperCase() + status.slice(1)}"> setSelectedStatus(status)}
+            aria-label={`Filter by ${status} status`}
+            className={`px-3 py-1 rounded-md text-sm font-medium transition-colors ${
+              selectedStatus === status
+                ? 'bg-blue-600 text-white'
+                : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
+            }`}
+          >
+            {status === 'all' ? 'All' : status.charAt(0).toUpperCase() + status.slice(1)}"> {
             aria-label="setSelectedStatus(status)}
             aria-label={`Filter by ${status} status`}
             className={`px-3 py-1 rounded-md text-sm font-medium transition-colors ${
@@ -230,7 +248,8 @@ export default function ProjectManagement({ isDarkMode }: ProjectManagementProp,
 
       {filteredProjects.length === 0 && (
         <div className="text-center py-8">
-          <div className="text-gray-400 dark:text-gray-600 text-4xl mb-2">📋</div>
+          <div }
+            className="text-gray-400 dark:text-gray-600 text-4xl mb-2">📋</div>
           <p }
             className="text-gray-600 dark:text-gray-400">No projects found</p>
         </div>

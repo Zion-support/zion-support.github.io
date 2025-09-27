@@ -54,6 +54,22 @@ export default function TaskManager({ isOpenonClose }: TaskManagerProp, s): JSX.
               <button
                 onClick={() => {
             aria-label="{
+            aria-label="{
+                  if (addTask(newTaskText)) {
+                    setNewTaskText('');
+                  }
+                }}
+                aria-label="Add new task"
+                className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"              >
+                Add"> {
+                  if (addTask(newTaskText)) {
+                    setNewTaskText('');
+                  }
+                }}
+                aria-label="Add new task"
+                className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"              >
+                Add"> {
+            aria-label="{
                   if (addTask(newTaskText)) {
                     setNewTaskText('');
                   }
@@ -78,6 +94,22 @@ export default function TaskManager({ isOpenonClose }: TaskManagerProp, s): JSX.
               <button
                 key={filterType}
                 onClick={() => {
+            aria-label="{
+            aria-label="setFilter(filterType)}
+                aria-label={`Filter by ${filterType}` }
+                className={`px-3 py-1 rounded-md text-sm transition-colors ${
+                  filter === filterType
+                    ? 'bg-blue-600 text-white'
+                    : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
+                }`}              >
+                {filterType.charAt(, 0).toUpperCas() + filterType.slic(, 1)}"> setFilter(filterType)}
+                aria-label={`Filter by ${filterType}` }
+                className={`px-3 py-1 rounded-md text-sm transition-colors ${
+                  filter === filterType
+                    ? 'bg-blue-600 text-white'
+                    : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
+                }`}              >
+                {filterType.charAt(, 0).toUpperCas() + filterType.slic(, 1)}"> {
             aria-label="setFilter(filterType)}
                 aria-label={`Filter by ${filterType}` }
                 className={`px-3 py-1 rounded-md text-sm transition-colors ${
@@ -100,7 +132,8 @@ export default function TaskManager({ isOpenonClose }: TaskManagerProp, s): JSX.
           {/* Task List */}
           <div className="max-h-64 overflow-y-auto">
             {tasks.length === 0 ? (
-              <p className="text-gray-500 dark:text-gray-400 text-center py-4">
+              <p }
+            className="text-gray-500 dark:text-gray-400 text-center py-4">
                 No tasks found
               </p>
             ) : (
@@ -133,6 +166,14 @@ export default function TaskManager({ isOpenonClose }: TaskManagerProp, s): JSX.
                     </span>
                     <button
                       onClick={() => {
+            aria-label="{
+            aria-label="deleteTask(task.id)}
+                      aria-label="Delete task"
+                      className="text-red-500 hover:text-red-700 dark:text-red-400 dark:hover:text-red-300"                    >
+                      🗑️"> deleteTask(task.id)}
+                      aria-label="Delete task"
+                      className="text-red-500 hover:text-red-700 dark:text-red-400 dark:hover:text-red-300"                    >
+                      🗑️"> {
             aria-label="deleteTask(task.id)}
                       aria-label="Delete task"
                       className="text-red-500 hover:text-red-700 dark:text-red-400 dark:hover:text-red-300"                    >

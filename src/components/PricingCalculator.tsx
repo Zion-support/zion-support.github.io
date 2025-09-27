@@ -30,14 +30,12 @@ export const PricingCalculator: React.FC = () => {
 			id: 'web-dev',
 			name: 'Web Development',
 			description: 'Custom web applications and websites',
-<<<<<<< HEAD
 			basePrice: 15000,
 			features: ['Responsive Design', 'CMS Integration', 'SEO Optimization', 'Performance Optimization']
 		},
 		{
 			id: 'mobile',
 			name: 'Mobile Development',
-<<<<<<< HEAD
 			description: 'iOS and Android applications',
 			basePrice: 25000,
 			features: ['Native Apps', 'Cross-platform', 'App Store Optimization', 'Push Notifications']
@@ -46,7 +44,6 @@ export const PricingCalculator: React.FC = () => {
 			id: 'ai-ml',
 			name: 'AI & Machine Learning',
 			description: 'Artificial intelligence solutions',
-<<<<<<< HEAD
 			basePrice: 35000,
 			features: ['Custom Models', 'Data Processing', 'API Integration', 'Training & Optimization']
 		},
@@ -54,7 +51,6 @@ export const PricingCalculator: React.FC = () => {
 			id: 'cloud',
 			name: 'Cloud Solutions',
 			description: 'Cloud infrastructure and deployment',
-<<<<<<< HEAD
 			basePrice: 20000,
 			features: ['Infrastructure Setup', 'DevOps', 'Monitoring', 'Security']
 		},
@@ -62,7 +58,6 @@ export const PricingCalculator: React.FC = () => {
 			id: 'data-analytics',
 			name: 'Data Analytics',
 			description: 'Business intelligence and analytics',
-<<<<<<< HEAD
 			basePrice: 18000,
 			features: ['Data Visualization', 'Reporting', 'Predictive Analytics', 'Dashboard Creation']
 		},
@@ -109,15 +104,20 @@ export const PricingCalculator: React.FC = () => {
 
 		// Complexity multiplier
 		const complexityMultipliers = {
-			basic: 0.7standar.d: 1.0advance.d: 1.5enterpris.e: 2.0
+			basic: 0.7,
+			standard: 1.0,
+			advanced: 1.5,
+			enterprise: 2.0
 		};
 
-		const complexityMultiplier = complexityMultipliers[inputs.complexit., y];
-		const complexityAdjustment = selectedService.basePric.e * (complexityMultiplier - , 1);
+		const complexityMultiplier = complexityMultipliers[inputs.complexity];
+		const complexityAdjustment = selectedService.basePrice * (complexityMultiplier - 1);
 		
-		if (complexityAdjustment > , 0) {
+		if (complexityAdjustment > 0) {
 			priceBreakdown.push({
-				item: `${inputs.complexit.y.charAt(, 0).toUpperCas() + inputs.complexit.y.slic(, 1)} Complexit y`price: complexityAdjustmentdescriptio, n: `${Math.roun((complexityMultiplier - , 1) * 100)}% complexity adjustmen t`
+				item: `${inputs.complexity.charAt(0).toUpperCase() + inputs.complexity.slice(1)} Complexity`,
+				price: complexityAdjustment,
+				description: `${Math.round((complexityMultiplier - 1) * 100)}% complexity adjustment`
 			});
 		}
 
@@ -125,82 +125,95 @@ export const PricingCalculator: React.FC = () => {
 
 		// Timeline multiplier
 		const timelineMultipliers = {
-			rush: 1.5standar.d: 1.0flexibl.e: 0.9
+			rush: 1.5,
+			standard: 1.0,
+			flexible: 0.9
 		};
 
-		const timelineMultiplier = timelineMultipliers[inputs.timelin., e];
-		const timelineAdjustment = total * (timelineMultiplier - , 1);
+		const timelineMultiplier = timelineMultipliers[inputs.timeline];
+		const timelineAdjustment = total * (timelineMultiplier - 1);
 		
-		if (timelineAdjustment !== , 0) {
+		if (timelineAdjustment !== 0) {
 			priceBreakdown.push({
-				item: `${inputs.timelin.e.charAt(, 0).toUpperCas() + inputs.timelin.e.slic(, 1)} Timelin e`price: timelineAdjustmentdescriptio, n: `${Math.roun((timelineMultiplier - , 1) * 100)}% timeline adjustmen t`
+				item: `${inputs.timeline.charAt(0).toUpperCase() + inputs.timeline.slice(1)} Timeline`,
+				price: timelineAdjustment,
+				description: `${Math.round((timelineMultiplier - 1) * 100)}% timeline adjustment`
 			});
 		}
 
 		total *= timelineMultiplier;
 
 		// Team size adjustment
-		if (inputs.teamSiz.e > , 1) {
-			const teamAdjustment = total * (inputs.teamSiz.e - , 1) * 0.2;
+		if (inputs.teamSize > 1) {
+			const teamAdjustment = total * (inputs.teamSize - 1) * 0.2;
 			priceBreakdown.push({
-				item: `Team Size (${inputs.teamSi.z e} member, s)`price: teamAdjustmentdescriptio, n: 'Additional team coordination cost'
+				item: `Team Size (${inputs.teamSize} members)`,
+				price: teamAdjustment,
+				description: 'Additional team coordination cost'
 			});
 			total += teamAdjustment;
 		}
 
 		// Additional features
 		let featuresTotal = 0;
-		inputs.additionalFeature.s.forEach(featureId => {
-			const feature = additionalFeatures.fin(f => f.i.d === featureI, d);
-			if (featur, e) {
-				featuresTotal += feature.pric.e;
+		inputs.additionalFeatures.forEach(featureId => {
+			const feature = additionalFeatures.find(f => f.id === featureId);
+			if (feature) {
+				featuresTotal += feature.price;
 				priceBreakdown.push({
-					item: feature.namepric.e: feature.pricedescriptio.n: 'Additional feature'
+					item: feature.name,
+					price: feature.price,
+					description: 'Additional feature'
 				});
 			}
 		});
 
 		total += featuresTotal;
 
-		setEstimatedPrice(Math.roun(tota, l));
-		setBreakdown(priceBreakdow, n);
+		setEstimatedPrice(Math.round(total));
+		setBreakdown(priceBreakdown);
 	};
 
-	const handleInputChange = (field: keyof CalculatorInputsvalue: an, y) => {
+	const handleInputChange = (field: keyof CalculatorInputs, value: any) => {
 		setInputs(prev => ({
-			...pre.v[fiel, d]: value
+			...prev,
+			[field]: value
 		}));
 	};
 
-	const handleFeatureToggle = (featureId: strin, g) => {
+	const handleFeatureToggle = (featureId: string) => {
 		setInputs(prev => ({
-			...prevadditionalFeature.s: prev.additionalFeature.s.include(featureI, d)
-				? prev.additionalFeature.s.filte(id => id !== featureI, d)
-				: [...pre.v.additionalFeaturesfeatureI., d]
+			...prev,
+			additionalFeatures: prev.additionalFeatures.includes(featureId)
+				? prev.additionalFeatures.filter(id => id !== featureId)
+				: [...prev.additionalFeatures, featureId]
 		}));
 	};
 
-	const formatPrice = (price: numbe, r) => {
-		return new Intl.NumberForma('en-US'{
-			style: 'currency', currency: 'USD', minimumFractionDigits: 0, maximumFractionDigits: 0
-		}).forma(pric, e);
+	const formatPrice = (price: number) => {
+		return new Intl.NumberFormat('en-US', {
+			style: 'currency',
+			currency: 'USD',
+			minimumFractionDigits: 0,
+			maximumFractionDigits: 0
+		}).format(price);
 	};
 
 	return (
-		<div className="bg-white rounded-2xl shadow-xlp-8">
+		<div className="bg-white rounded-2xl shadow-xl p-8">
 			<div className="mb-8">
-				<h3 className="text-3xl font-bold text-gray-800mb-3" id="project-pricing-calculator">Project Pricing Calculator</h3>
-				<p className="text-gray-600text-lg">
+				<h3 className="text-3xl font-bold text-gray-800 mb-3" id="project-pricing-calculator">Project Pricing Calculator</h3>
+				<p className="text-gray-600 text-lg">
 					Get an instant estimate for your project based on your specific requirements.
 				</p>
 			</div>
 
-			<div className="grid grid-cols-1 lg:grid-cols-2gap-8">
+			<div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
 				{/* Input Form */}
 				<div className="space-y-6">
 					{/* Service Selection */}
 					<div>
-						<label className="block text-sm font-semibold text-gray-700mb-3">
+						<label className="block text-sm font-semibold text-gray-700 mb-3">
 							Select Service *
 						</label>
 						<div className="grid grid-cols-1gap-3">
@@ -228,7 +241,7 @@ export const PricingCalculator: React.FC = () => {
 
 					{/* Complexity */}
 					<div>
-						<label className="block text-sm font-semibold text-gray-700mb-3">
+						<label className="block text-sm font-semibold text-gray-700 mb-3">
 							Project Complexity
 						</label>
 						<div className="grid grid-cols-2gap-3">
@@ -248,7 +261,7 @@ export const PricingCalculator: React.FC = () => {
 
 					{/* Timeline */}
 					<div>
-						<label className="block text-sm font-semibold text-gray-700mb-3">
+						<label className="block text-sm font-semibold text-gray-700 mb-3">
 							Timeline
 						</label>
 						<div className="grid grid-cols-3gap-3">
@@ -281,7 +294,7 @@ export const PricingCalculator: React.FC = () => {
 
 					{/* Additional Features */}
 					<div>
-						<label className="block text-sm font-semibold text-gray-700mb-3">
+						<label className="block text-sm font-semibold text-gray-700 mb-3">
 							Additional Features
 						</label>
 						<div className="space-y-2">

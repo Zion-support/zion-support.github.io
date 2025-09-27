@@ -40,6 +40,16 @@ class ErrorBoundary extends Component<Props, State> {
             <div class Name=space-y-2">
               <button
                 onClick={() => {
+            aria-label="{
+            aria-label="window.location.reload()}
+                aria-label="Refresh the page to try again"
+                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2
+              >
+                Refresh Page"> window.location.reload()}
+                aria-label="Refresh the page to try again"
+                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2
+              >
+                Refresh Page"> {
             aria-label="window.location.reload()}
                 aria-label="Refresh the page to try again"
                 className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2
@@ -64,7 +74,8 @@ class ErrorBoundary extends Component<Props, State> {
             </div>
             {process.env.N O D E_E N V === 'development' && this.state.error && (
               <details class Name=mt-4 text-left">
-                <summary className="cursor-pointer text-sm text-gray-500 hover:text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded>
+                <summary }
+            className="cursor-pointer text-sm text-gray-500 hover:text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded>
                   Error Details (Development)
                 </summary>
                 <div class Name=mt-2 p-3 bg-gray-100 rounded text-xs font-mono text-gray-800 overflow-auto max-h-40" role="log" aria-label="Error details">

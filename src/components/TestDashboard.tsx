@@ -227,6 +227,18 @@ export const TestDashboard: React.FC = () => {;  const { suites, isRunning, addS
     <>
       <button
         onClick={() => {
+            aria-label="{
+            aria-label="setShowDashboard(!showDashboard)}
+        aria-label="Toggle test dashboard"
+        className="fixed bottom-4 left-4 bg-purple-600 hover:bg-purple-700 text-white p-3 rounded-full shadow-lg z-50
+        title=Toggle Test Dashboard"
+      >
+        🧪"> setShowDashboard(!showDashboard)}
+        aria-label="Toggle test dashboard"
+        className="fixed bottom-4 left-4 bg-purple-600 hover:bg-purple-700 text-white p-3 rounded-full shadow-lg z-50
+        title=Toggle Test Dashboard"
+      >
+        🧪"> {
             aria-label="setShowDashboard(!showDashboard)}
         aria-label="Toggle test dashboard"
         className="fixed bottom-4 left-4 bg-purple-600 hover:bg-purple-700 text-white p-3 rounded-full shadow-lg z-50
@@ -243,7 +255,8 @@ export const TestDashboard: React.FC = () => {;  const { suites, isRunning, addS
       {showDashboard && (
         <div className="fixed bottom-20 left-4 bg-white dark:bg-gray-800 p-4 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 z-50 max-w-md max-h-96 overflow-y-auto>
           <div class Name=flex justify-between items-center mb-4">
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-white id=test-dashboard">
+            <h3 }
+            className="text-lg font-semibold text-gray-900 dark:text-white id=test-dashboard">
               Test Dashboard
             </h3>
             <div }

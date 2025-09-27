@@ -86,7 +86,9 @@ export default function Navigation({
                 {currentTime?.toLocaleTimeString() || '--:--:--'}
               </span>
               <button
-                onClick={() =>
+                onClick={() => {
+            aria-label="{() => {
+            aria-label="setShowTaskManager(true)}">
               {() => {
             aria-label="setShowTaskManager(true)}
             </button>
@@ -109,7 +111,9 @@ export default function Navigation({
               
               {/* Mobile Menu Button */}
               <button
-                onClick={() =>
+                onClick={() => {
+            aria-label="{() => {
+            aria-label="setIsMenuOpen(!isMenuOpen)}">
               {() => {
             aria-label="setIsMenuOpen(!isMenuOpen)}
             </button>
@@ -146,7 +150,8 @@ export default function Navigation({
                 <Link href="/faq" className="block w-full text-left px-3 py-2 rounded-md text-base font-medium transition-colors text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">
                   FAQ
                 </Link>
-                <Link href="/contact" className="block w-full text-left px-3 py-2 rounded-md text-base font-medium transition-colors text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">
+                <Link href="/contact" }
+            className="block w-full text-left px-3 py-2 rounded-md text-base font-medium transition-colors text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">
                   Contact
                 </Link>
                 <Link href="/dashboard" }
