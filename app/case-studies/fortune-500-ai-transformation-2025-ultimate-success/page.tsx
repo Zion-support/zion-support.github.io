@@ -5,6 +5,7 @@ import { ArrowLeft, Calendar, User, Clock } from 'lucide-react';
 import SEO from '../../../components/SEO';
 
 // Removed Next.js metadata export
+const metadata = {
   title: 'Fortune 500 AI Transformation 2025: Ultimate Success Story | Zion Tech Group',
   description: 'Discover how a Fortune 500 company achieved 500% ROI through AI transformation in 2025. Complete case study with implementation details and results.',
   keywords: ['Fortune 500', 'AI transformation', 'ROI', 'success', '2025', 'case study'],

@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { ArrowLeft, Calendar, User, Clock } from 'lucide-react';
 
 // Removed Next.js metadata export
+const metadata = {
   title: 'AI 2025: Edge Computing Revolution - Ultimate Guide | Zion Tech Group',
   description: 'Discover the revolutionary impact of edge computing on AI in 2025. Complete guide to edge AI implementation and enterprise transformation.',
   keywords: ['edge computing', 'AI', '2025', 'revolution', 'guide', 'enterprise'],
