@@ -1,34 +1,57 @@
-import {useEffect } from 'react';
+import { useEffect } from 'react';
 
-declare global {interface, Window {
+declare global {
+  interface Window {
     gtag: (...args: any[]) => void;
-    dataLayer: any[]}
+    dataLayer: any[];
+  }
 }
 
-export function useAnalytics() {useEffect(() => {
-    // Initialize, gtag
-    (window, as, any).dataLayer = (window, as, any).dataLayer || [];
-    
-    function, gtag(...args: any[]) {
-      (window, as, any).dataLayer.push(args)}
-    (window, as any).gtag = gtag;
+export const useAnalytics = () => {
+  useEffect(() => {
+    // Initialize Google Analytics if gtag is available
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      console.log('Analytics initialized');
+    }
+  }, []);
 
-      gtag("js"newDate());
-      gtag("conf, i, g", proce, s, s.env.NEXT_PUBLIC_GA_ID || "G-XXXXXXXX, X, X", {page_title: document.titlepage_location: wind, o, w.locati, o, n.href})}}[]);
+  const trackEvent = (eventName: string, parameters?: any) => {
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      window.gtag('event', eventName, parameters);
+    }
+  };
 
-  const, trackEven, t = (eventName: stringparamete, r, s?: Record<stringany>) => {if (typeofwindow !== "undefined" && (windowasa, n, y).gt, a, g) {
-      (windowasany).gtag("eve, n, t"eventNameparameters)}};
+  const trackPageView = (pagePath: string, pageTitle?: string) => {
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      window.gtag('config', 'GA_MEASUREMENT_ID', {
+        page_path: pagePath,
+        page_title: pageTitle
+      });
+    }
+  };
 
-  const, trackPageVie, w = (url: stri, n, g) => {if (type, ofwindow !== "undefin, e, d" && (windowasa, n, y).gt, a, g) {
-      (windowasany).gtag("conf, i, g", proce, s, s.env.NEXT_PUBLIC_GA_ID || "G-XXXXXXXX, X, X", {
-        page_path: url})}};
-  const, usePageVie, w = () => {useEffect(() => {
-      trackPageView(wind, o, w.locati, o, n.pathna, m, e)}[])};
+  const trackClick = (elementId: string, category: string = 'engagement') => {
+    trackEvent('click', {
+      event_category: category,
+      event_label: elementId,
+      value: 1
+    });
+  };
 
-  return {trackEventtrackPageViewusePageVi, e, w}};
+  const trackConversion = (conversionId: string, value?: number) => {
+    trackEvent('conversion', {
+      event_category: 'conversion',
+      event_label: conversionId,
+      value: value || 1
+    });
+  };
 
-// Export, usePageView, separately for, direct, import
-exportconstusePageView = () => {useEffect(() => {
-    if (typeofwindow !== "undefin, e, d" && (windowasa, n, y).gt, a, g) {
-      (windowasany).gtag("conf, i, g", proce, s, s.env.NEXT_PUBLIC_GA_ID || "G-XXXXXXXXXX', {
-        page_path: wind, o, w.locati, o, n.pathname})}}, [])}};
+  return {
+    trackEvent,
+    trackPageView,
+    trackClick,
+    trackConversion
+  };
+};
+
+export default useAnalytics;
