@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ScrollToTop from './components/ScrollToTop';
 import Header from './components/Header';
@@ -7,10 +7,31 @@ import ErrorBoundary from './components/ErrorBoundary';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import SEO from './components/SEO';
 import Home from './pages/Home';
+import { performanceMonitor } from './utils/performanceMonitor';
+import { accessibilityManager } from './utils/accessibility';
 import './index.css';
 import './styles/improvements.css';
 
 export default function App(): React.JSX.Element {
+  useEffect(() => {
+    // Initialize enhanced accessibility features
+    accessibilityManager.initialize({
+      announceChanges: true,
+      reducedMotion: true,
+      highContrast: true
+    });
+    accessibilityManager.announceToScreenReader('Zion website loaded successfully');
+    
+    // Start enhanced performance monitoring
+    performanceMonitor.startMeasure('app-render');
+    performanceMonitor.reportCoreWebVitals();
+    
+    return () => {
+      performanceMonitor.endMeasure('app-render');
+      accessibilityManager.cleanup();
+      performanceMonitor.cleanup();
+    };
+  }, []);
   return (
     <ErrorBoundary>
       <Router>
