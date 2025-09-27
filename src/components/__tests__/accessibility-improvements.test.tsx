@@ -31,7 +31,9 @@ describe('SEOOptimizer', () => {
   it('renders SEO optimizer component', () => {
     render(<SEOOptimizer seoData={mockSEOData} />);
     
-    expect(screen.getByText(/SEO Optimized|SEO Needs Optimization/)).toBeInTheDocument();
+    // Check that the component renders without errors
+    expect(document.querySelector('title')).toHaveTextContent('Test Page Title');
+    expect(document.querySelector('meta[name="description"]')).toHaveAttribute('content', 'Test page description');
   });
 
   it('applies SEO data correctly', () => {

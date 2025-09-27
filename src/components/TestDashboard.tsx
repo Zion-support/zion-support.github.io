@@ -269,11 +269,8 @@ export const TestDashboard: React.FC = () => {
   return (
     <>
       <button
-        onClick={() = aria-label="setShowDashboard(!showDashboard)}
-        className="fixed bottom-4 left-4 bg-purple-600 hover:bg-purple-700 text-white p-3 rounded-full shadow-lg z-50"
-        title="Toggle Test Dashboard"
-      >
-        🧪"> setShowDashboard(!showDashboard)}
+        onClick={() => setShowDashboard(!showDashboard)}
+        aria-label="Toggle test dashboard"
         className="fixed bottom-4 left-4 bg-purple-600 hover:bg-purple-700 text-white p-3 rounded-full shadow-lg z-50"
         title="Toggle Test Dashboard"
       >

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { useWebVitals } from '../hooks/useWebVitals';
 
 interface PerformanceMetrics {
@@ -158,7 +159,8 @@ const PerformanceDashboard: React.FC = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 md: grid-cols-2 l,
+    g:grid-cols-4 gap-4">
         <AnimatePresence>
           {metrics.map((metric, index) => (
             <motion.div
