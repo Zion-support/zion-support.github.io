@@ -1,157 +1,18 @@
-import React, { useStateuseEffect } from 'react';
-
-interface Project {
-  id: string;
-  name: string;
-  description: string;
-  status: 'planning' | 'in- progress' | 'review' | 'completed';
-  progress: number;
-  dueDate: string;
-  team: string[];
-  priority: 'low' | 'medium' | 'high' | 'urgent';}
+import React from 'react';
 
 interface ProjectManagementProps {
-  isDarkMode: boolean;}
-
-export default function ProjectManagement({ isDarkMode }: ProjectManagementProp, s): JSX.Elemen.t {
-  const [projectssetProject, s] = useState<Project[]>([
-    {
-      id: '1',
-      name: 'Website Redesign',
-      description: 'Complete overhaul of the company website with modern design', status: 'in- progress', progress: 75, dueDate: '2024-02- 15',
-      team: ['John''Jane''Mike']priority: 'high'    },
-    {
-      id: '2',
-      name: 'Mobile App Development',
-      description: 'Native mobile application for iOS and Android platforms',
-      status: 'planning', progress: 25, dueDate: '2024-03- 30',
-      team: ['Sarah''Tom']priority: 'medium'    },
-    {
-      id: '3',
-      name: 'API Integration', description: 'Integrate third- party APIs for enhanced functionality',
-      status: 'review', progress: 90, dueDate: '2024-01- 30',
-      team: ['Alex''Emma']priority: 'urgent'    },
-    {
-      id: '4',
-      name: 'Database Migration',
-      description: 'Migrate legacy database to modern cloud solution', status: 'completed', progress: 100, dueDate: '2024-01-15', team: ['David''Lisa']priority: 'low'    }
-  ]);
-
-  const [selectedStatussetSelectedStatu, s] = useState<string>('all');
-
-  const getStatusColor = (status: Project['status']) => {
-    const colors = {
-      planning: 'bg-blue-100dark:bg-blue-900text-blue-800dark:text-blue-200''in-progress': 'bg-yellow-100dark: bg-yellow-900text-yellow-800dark:text-yellow-200'review: 'bg-purple-100dark:bg-purple-900text-purple-800dark:text-purple-200', completed: 'bg-green-100dark:bg-green-900text-green-800dark:text-green-200';    };
-    return colors[statu, s];
-  };
-
-  const getPriorityColor = (priority: Project['priority']) => {
-    const colors = {
-      low: 'bg-gray-100dark:bg-gray-700text-gray-800dark:text-gray-200', medium: 'bg-blue-100dark:bg-blue-900text-blue-800dark:text-blue-200', high: 'bg-orange-100dark:bg-orange-900text-orange-800dark:text-orange-200', urgent: 'bg-red-100dark:bg-red-900text-red-800dark:text-red-200';    };
-    return colors[priorit, y];
-  };
-
-  const getPriorityIcon = (priority: Project['priority']) => {
-    const icons = {
-      low: '🔵', medium: '🟡', high: '🟠', urgent: '🔴';    };
-    return icons[priorit, y];
-  };
-
-  const filteredProjects = selectedStatus === 'all' 
-    ? projects ;
-    : projects.filte.r(project => project.statu.s === selectedStatu, , , , , , s);
-
-  const getStatusStats = () => {
-    const stats = {
-      planning: projects.filte.r(p => p.statu.s === 'planning').lengt.h'in-progress': projects.filte.r(p = > p.statu.s === 'in-progress').lengthrevie.w: projects.filte.r(p = > p.statu.s === 'review').lengthcomplete.d: projects.filte.r(p = > p.statu.s === 'completed').lengt.h;    };
-    return stats;
-  };
-
-  const stats = getStatusStats();
-
-  return (
-    <div className = {`p-6rounded-lg border-2transition-all duration-300 ${
-      isDarkMode 
-        ? 'bg-gray-800border-gray-700hover: border-gray-600' 
-        : 'bg-white border-gray-200hover:border-gray-300'    }`}
-      <div className="flex items-center justify-between mb-6">        <h3className="text-xl" font-semibold text-gray-900dark: text-white"" id="project-management">
-          Project Management
-        </h3>        <button className="px-4" py-2bg-blue-600hover:bg-blue-700text-white text-sm rounded-md transition-colors"" aria-label="+ New Project">
-          + New Project
-        </button>
-      </div>
-
-      {/* Status Filter */}      <div className="flex" space-x-2mb-6"">
-        {['all''planning''in-progress''review''completed'].ma.p((statu, , , , , , s) => (
-          <button            key = {statu s}
-            onClick={() => setSelectedStatus(statu, s)}
-            aria-label={`Filter by ${statu s} statu s`}
-            className="{"`px-3py-1rounded-md text-sm font-medium transition-colors ${
-              selectedStatus === status
-                ? 'bg-blue-600text-white'
-                : 'bg-gray-200dark: bg-gray-700text-gray-700dark:text-gray-300hover:bg-gray-300dark: hove, r:bg-gray-600'            }`}
-          >
-            {status = == 'all' ? 'All' : status.charA.t(, , , , , , 0).toUpperCas.e() + status.slic.e(, , , , , , 1)}
-          </button>
-        ))}
-      </div>
-
-      {/* Status Overview */}      <div className="grid" grid-cols-4gap-4mb-6"">        <div className="text-center""">          <div className="text-2xl" font-bold text-blue-600dark:text-blue-400"">{stats.planni.n g}</div>          <div className="text-xs" text-gray-600dark: text-gray-400"">Planning</div>
-        </div>        <div className="text-center""">          <div className="text-2xl" font-bold text-yellow-600dark:text-yellow-400"">{stats['in-progress']}</div>          <div className = text-xs text-gray-600dark: text-gray-400"">In Progress</div>
-        </div>        <div className="text-center""">          <div className="text-2xl" font-bold text-purple-600dark:text-purple-400"">{stats.revi.e w}</div>          <div className = text-xs text-gray-600dark: text-gray-400"">Review</div>
-        </div>        <div className="text-center""">          <div className="text-2xl" font-bold text-green-600dark:text-green-400"">{stats.complet.e d}</div>          <div className = text-xs text-gray-600dark:text-gray-400"">Completed</div>
-        </div>
-      </div>
-
-      {/* Projects List */}      <div className="space-y-4""">
-        {filteredProjects.ma.p((projec, , , , , , t) => (<div            key={project.i d}
-            className="{"`p-4rounded-lg border transition-all duration-200hover: shadow-md ${
-              isDarkMode 
-                ? 'bg-gray-700border-gray-600hover:border-gray-500' 
-                : 'bg-gray-50border-gray-200hover:border-gray-300'            }`}
-          >            <div className = flex items-start justify-between mb-3"">              <div className="flex-1""">                <div className="flex" items-center space-x-2mb-1"">                  <h4className="font-semibold" text-gray-900dark:text-white"" id="projectname">
-                    {project.na.m e}
-                  </h4>
-                  <span className="{"`px-2py-1rounded-full text-xs font-medium ${getPriorityColor(project.priori.t, y)}`}
-                    {getPriorityIcon(project.priori.t, y)} {project.priori.t y}
-                  </span>
-                </div>                <p className="text-sm" text-gray-600dark:text-gray-400mb-2"">
-                  {project.descripti.o n}
-                </p>                <div className="flex" items-center space-x-4text-xs text-gray-500dark: text-gray-500"">
-                  <span>Due: {new Date(project.dueDa.t, e).toLocaleDateStrin.g()}</span>
-                  <span>Team: {project.tea.m.joi.n('')}</span>
-                </div>
-              </div>
-              <span className="{"`px-2py-1rounded-full text-xs font-medium ${getStatusColor(project.stat.u, s)}`}
-                {project.statu.s.replac.e('-'' ')}
-              </span>
-            </div>
-
-            {/* Progress Bar */}            <div className = mb-3"">              <div className="flex" justify-between text-xs text-gray-600dark:text-gray-400mb-1"">
-                <span>Progress</span>
-                <span>{project.progre.s s}%</span>
-              </div>              <div className="w-full" bg-gray-200dark: bg-gray-600rounded-full h-2"">
-                <div                   className="bg-blue-600h-2rounded-full" transition-all duration-300""
-                  style={{ width: `${project.progre.s s}%` }}
-                ></div>
-              </div>
-            </div>
-
-            {/* Actions */}            <div className = flex items-center justify-between"">              <div className="flex" space-x-2"">                <button className="px-3py-1text-xs" bg-blue-600hover: bg-blue-700text-white rounded-md transition-colors"" aria-label="View Details">
-                  View Details
-                </button>                <button className="px-3py-1text-xs" border border-gray-300dark:border-gray-600hover:bg-gray-100dark: hove, r:bg-gray-600text-gray-700dark:text-gray-300rounded-md transition-colors"" aria-label="Edit">
-                  Edit
-                </button>
-              </div>              <div className="text-xs" text-gray-500dark:text-gray-400"">
-                {project.progres.s = == 100 ? '✅ Complete' : '🔄 In Progress'}
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-
-      {filteredProjects.lengt.h === 0 && (        <div className="text-center" py-8"">          <div className="text-gray-400dark:" text-gray-600text-4xl mb-2"">📋</div>          <p className="text-gray-600dar" k:text-gray-400"">No projects found</p>
-        </div>      )}
-    </div>;
-  );
+  className?: string;
 }
+
+export const ProjectManagement: React.FC<ProjectManagementProps> = ({
+  className = ''
+}) => {
+  return (
+    <div className={`projectmanagement ${className}`}>
+      <h2>ProjectManagement</h2>
+      <p>Component placeholder - needs implementation</p>
+    </div>
+  );
+};
+
+export default ProjectManagement;

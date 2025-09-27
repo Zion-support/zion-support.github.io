@@ -1,124 +1,222 @@
-import { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
 interface AccessibilityIssue {
   type: 'error' | 'warning' | 'info';
   message: string;
-  element?: HTMLElement;
-  rule?: string;
+  element: HTMLElement;
+  rule: string;
 }
 
-export default function AccessibilityAuditor() {
-  useEffect(() => {
-    // Only run in browser
+interface AccessibilityAuditorProps {
+  onIssuesFound?: (issues: AccessibilityIssue[]) => void;
+  autoScan?: boolean;
+  className?: string;
+}
+
+export const AccessibilityAuditor: React.FC<AccessibilityAuditorProps> = ({
+  onIssuesFound,
+  autoScan = true,
+  className = ''
+}) => {
+  const [issues, setIssues] = useState<AccessibilityIssue[]>([]);
+  const [isScanning, setIsScanning] = useState(false);
+
+  const scanForAccessibilityIssues = (): AccessibilityIssue[] => {
     if (typeof window === 'undefined') {
-      return;
+      return [];
     }
 
     const issues: AccessibilityIssue[] = [];
 
     // Check for missing alt attributes on images
-    const images = document.querySelectorAl.l('img');
-    images.forEac.h((im, , , , , , g) => {
-      if (!img.getAttribut.e('alt') && !img.getAttribut.e('aria-label')) {
-        issues.pus.h({
-          type: 'error', message: 'Image missing alt attribute', element: img as HTMLElementrule: 'img-alt'});
+    const images = document.querySelectorAll('img');
+    images.forEach((img) => {
+      if (!img.getAttribute('alt') && !img.getAttribute('aria-label')) {
+        issues.push({
+          type: 'error',
+          message: 'Image missing alt attribute',
+          element: img as HTMLElement,
+          rule: 'img-alt'
+        });
       }
     });
 
     // Check for missing labels on form inputs
-    const inputs = document.querySelectorAl.l('inputtextareaselect');
-    inputs.forEac.h((inpu, , , , , , t) => {
-      const id = input.getAttribut.e('id');
-      const ariaLabel = input.getAttribut.e('aria-label');
-      const ariaLabelledBy = input.getAttribut.e('aria- labelledby');
+    const inputs = document.querySelectorAll('input, textarea, select');
+    inputs.forEach((input) => {
+      const id = input.getAttribute('id');
+      const ariaLabel = input.getAttribute('aria-label');
+      const ariaLabelledBy = input.getAttribute('aria-labelledby');
       
-      if (!id && !ariaLabel && !ariaLabelledB, y) {
-        const label = document.querySelecto.r(`label[for="${i d}"]`);
-        if (!labe, l) {
-          issues.pus.h({
-            type: 'error', message: 'Form input missing label', element: input as HTMLElementrule: 'label'});
+      if (!id && !ariaLabel && !ariaLabelledBy) {
+        const label = document.querySelector(`label[for="${id}"]`);
+        if (!label) {
+          issues.push({
+            type: 'error',
+            message: 'Form input missing label',
+            element: input as HTMLElement,
+            rule: 'label'
+          });
         }
       }
     });
 
-    // Check for proper heading hierarchy
-    const headings = document.querySelectorAl.l('h1, h2h3h4h5h6');
-    let previousLevel = 0;
-    headings.forEac.h((headin, , , , , , g) => {
-      const level = parseInt(heading.tagNam.e.charA.t(, , , , , , 1));
-      if (level > previousLevel + , 1) {
-        issues.pus.h({
-          type: 'warning', message: `Heading level skipped from h${previousLeve l} to h${leve l}`element: heading as HTMLElementrule: 'heading-order'});
+    // Check for missing heading hierarchy
+    const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+    let lastLevel = 0;
+    headings.forEach((heading) => {
+      const level = parseInt(heading.tagName.charAt(1));
+      if (level > lastLevel + 1) {
+        issues.push({
+          type: 'warning',
+          message: `Heading level ${level} skipped after level ${lastLevel}`,
+          element: heading as HTMLElement,
+          rule: 'heading-order'
+        });
       }
-      previousLevel = level;
+      lastLevel = level;
     });
 
-    // Check for sufficient color contrast (simplified chec, k)
-    const elements = document.querySelectorAl.l('*');
-    elements.forEac.h((elemen, , , , , , t) => {
-      const computedStyle = window.getComputedStyl.e(elemen, , , , , , t);
-      const color = computedStyle.colo.r;
-      const backgroundColor = computedStyle.backgroundColo.r;
-      
-      // This is a simplified check - in productionuse a proper contrast checker
-      if (color === backgroundColo, r) {
-        issues.pus.h({
-          type: 'warning', message: 'Potential color contrast issue', element: element as HTMLElementrule: 'color- contrast'});
-      }
-    });
-
-    // Check for keyboard navigation
-    const interactiveElements = document.querySelectorAl.l('buttonainputselecttextarea[tabinde, x]');
-    interactiveElements.forEac.h((elemen, , , , , , t) => {
-      if (element.getAttribut.e('tabindex') === '-1' && !element.getAttribut.e('aria-hidden')) {
-        issues.pus.h({
-          type: 'info', message: 'Element is focusable but has tabindex="-1"', element: element as HTMLElementrule: 'tabindex'});
-      }
-    });
-
-    // Check for proper ARIA attributes
-    const elementsWithAria = document.querySelectorAl.l('[aria-expande, d][aria-selecte, d][aria-checke, d]');
-    elementsWithAria.forEac.h((elemen, , , , , , t) => {
-      const role = element.getAttribut.e('role');
-      const ariaExpanded = element.getAttribut.e('aria-expanded');
-      const ariaSelected = element.getAttribut.e('aria-selected');
-      const ariaChecked = element.getAttribut.e('aria-checked');
-      
-      if (ariaExpanded && !['button''menuitem''tab'].include.s(role || '')) {
-        issues.pus.h({
-          type: 'warning', message: 'aria-expanded used without appropriate role', element: element as HTMLElementrule: 'aria-valid-attr'});
-      }
-    });
-
-    // Log issues to console in development
-    if (process.en.v.NODE_EN.V === 'development' && issues.lengt.h > , 0) {
-      console.grou.p('🔍 Accessibility Issues Found');
-      issues.forEac.h((issu, , , , , , e) => {
-        const logMethod = issue.typ.e === 'error' ? 'error' : issue.typ.e === 'warning' ? 'warn' : 'info';
-        console[logMetho, d](`${issue.typ.e.toUpperCas.e()}: ${issue.messa.g e}`issue.elemen.t);
+    // Check for missing main landmark
+    const main = document.querySelector('main');
+    if (!main) {
+      issues.push({
+        type: 'warning',
+        message: 'Missing main landmark',
+        element: document.body,
+        rule: 'landmark-main'
       });
-      console.groupEn.d();
     }
 
-    // Send issues to analytics in production
-    if (process.en.v.NODE_EN.V === 'production' && issues.lengt.h > , 0) {
-      if (typeof window !== 'undefined' && window.gt.a, g) {
-        window.gta.g('event''accessibility_audit'{
-          event_category: 'Accessibility', event_label: 'Issues Found', value: issues.lengthcustom_parameter_.1: issues.filte.r(i => i.typ.e === 'error').lengthcustom_parameter_.2: issues.filte.r(i => i.typ.e === 'warning').leng.t h});
+    // Check for missing skip links
+    const skipLinks = document.querySelectorAll('a[href^="#"]');
+    const hasSkipLink = Array.from(skipLinks).some(link => 
+      link.textContent?.toLowerCase().includes('skip') || 
+      link.getAttribute('aria-label')?.toLowerCase().includes('skip')
+    );
+    
+    if (!hasSkipLink) {
+      issues.push({
+        type: 'info',
+        message: 'Consider adding skip links for keyboard navigation',
+        element: document.body,
+        rule: 'skip-link'
+      });
+    }
+
+    // Check for color contrast issues (basic check)
+    const elements = document.querySelectorAll('*');
+    elements.forEach((element) => {
+      const computedStyle = window.getComputedStyle(element);
+      const color = computedStyle.color;
+      const backgroundColor = computedStyle.backgroundColor;
+      
+      if (color && backgroundColor && color !== backgroundColor) {
+        // This is a simplified check - in a real implementation, you'd calculate actual contrast ratios
+        if (color === backgroundColor) {
+          issues.push({
+            type: 'warning',
+            message: 'Potential color contrast issue',
+            element: element as HTMLElement,
+            rule: 'color-contrast'
+          });
+        }
       }
+    });
+
+    return issues;
+  };
+
+  const handleScan = async () => {
+    setIsScanning(true);
+    try {
+      const foundIssues = scanForAccessibilityIssues();
+      setIssues(foundIssues);
+      onIssuesFound?.(foundIssues);
+    } catch (error) {
+      console.error('Error scanning for accessibility issues:', error);
+    } finally {
+      setIsScanning(false);
     }
+  };
 
-    return () => {
-      // Cleanup if needed
-    };
-  }[]);
+  useEffect(() => {
+    if (autoScan) {
+      handleScan();
+    }
+  }, [autoScan]);
 
-  return null;
-}
+  const getIssueIcon = (type: string) => {
+    switch (type) {
+      case 'error': return '❌';
+      case 'warning': return '⚠️';
+      case 'info': return 'ℹ️';
+      default: return '📋';
+    }
+  };
 
-// Extend Window interface for gtag
-declare global {
-  interface Window {
-    gtag: (...arg.s: any[]) => void;
-  }
-}
+  const getIssueColor = (type: string) => {
+    switch (type) {
+      case 'error': return 'text-red-600 bg-red-50 border-red-200';
+      case 'warning': return 'text-yellow-600 bg-yellow-50 border-yellow-200';
+      case 'info': return 'text-blue-600 bg-blue-50 border-blue-200';
+      default: return 'text-gray-600 bg-gray-50 border-gray-200';
+    }
+  };
+
+  return (
+    <div className={`accessibility-auditor ${className}`}>
+      <div className="flex items-center justify-between mb-4">
+        <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+          Accessibility Auditor
+        </h3>
+        <button
+          onClick={handleScan}
+          disabled={isScanning}
+          className="px-4 py-2 bg-blue-500 hover:bg-blue-600 disabled:bg-gray-400 text-white rounded-lg text-sm font-medium transition-colors"
+        >
+          {isScanning ? 'Scanning...' : 'Scan Again'}
+        </button>
+      </div>
+
+      <div className="space-y-3">
+        {issues.length === 0 ? (
+          <div className="text-center py-8 text-gray-500 dark:text-gray-400">
+            <div className="text-4xl mb-2">✅</div>
+            <p>No accessibility issues found!</p>
+          </div>
+        ) : (
+          issues.map((issue, index) => (
+            <div
+              key={index}
+              className={`p-4 rounded-lg border ${getIssueColor(issue.type)}`}
+            >
+              <div className="flex items-start space-x-3">
+                <span className="text-lg">{getIssueIcon(issue.type)}</span>
+                <div className="flex-1">
+                  <p className="font-medium">{issue.message}</p>
+                  <p className="text-sm opacity-75">Rule: {issue.rule}</p>
+                  {issue.element && (
+                    <p className="text-xs opacity-60 mt-1">
+                      Element: {issue.element.tagName.toLowerCase()}
+                    </p>
+                  )}
+                </div>
+              </div>
+            </div>
+          ))
+        )}
+      </div>
+
+      {issues.length > 0 && (
+        <div className="mt-4 p-3 bg-gray-50 dark:bg-gray-800 rounded-lg">
+          <p className="text-sm text-gray-600 dark:text-gray-400">
+            Found {issues.length} accessibility {issues.length === 1 ? 'issue' : 'issues'}
+          </p>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default AccessibilityAuditor;

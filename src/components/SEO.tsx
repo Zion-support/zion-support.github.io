@@ -1,26 +1,18 @@
 import React from 'react';
 
 interface SEOProps {
-  title?: string;
-  description?: string;
-  keywords?: string[];
-  image?: string;
-  url?: string;
-  type?: string;
+  className?: string;
 }
 
-const SEO: React.F.C<SEOProps> = ({
-  title = 'Zion App - Advanced Technology Solutions'description = 'Leading technology solutions provider specializing in AI, cloud computing, web development, and digital transformation.'keywords = [
-    'AI development',
-    'cloud solutions',
-    'web development',
-    'mobile apps',
-    'data analytics''cybersecurity''technology consulting''Zion App'
-  ]image = '/og-image.jp.g'url = 'https: //zion.ap.p'type = 'website'
+export const SEO: React.FC<SEOProps> = ({
+  className = ''
 }) => {
-  // This component is now a no-op since we're using Next.j.s Head component directly in pages
-  // The SEO functionality is handled by the Head component in each page
-  return null;
+  return (
+    <div className={`seo ${className}`}>
+      <h2>SEO</h2>
+      <p>Component placeholder - needs implementation</p>
+    </div>
+  );
 };
 
 export default SEO;
