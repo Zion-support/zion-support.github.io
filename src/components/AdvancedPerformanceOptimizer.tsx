@@ -133,16 +133,16 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ cla
       <div className="flex items-center justify-between mb-6">
         <div className="flex items-center space-x-3">
           <Zap className="w-8 h-8 text-yellow-500" />
-          <h2 className="text-2 xl font-bold text-gray-900 dark:text-white">
+          <h1 className="text-2 xl font-bold text-gray-900 dark:text-white">
             Advanced Performance Optimizer
-          </h2>
+          </h1>
         </div>
         <div className="flex space-x-2">
           <button
             onClick={measurePerformance}
             disabled={isAnalyzing}
             className="px-4 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600 disabled:opacity-50 transition-colors"
-          >
+           aria-label="Button">
             {isAnalyzing ? 'Analyzing...' : 'Measure'}
           </button>
           <button
