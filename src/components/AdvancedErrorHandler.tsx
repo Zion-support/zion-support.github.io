@@ -1,4 +1,3 @@
->>>>>> 45ce5fae8a680d713f034d877aa81b1d405b5 7 6 3;
 interf a c e Error I n f o {i: d: s t r i n g;
   mess a g, e: s t r i n g;
   st a c k ?: s t r i n g;
@@ -372,7 +371,6 @@ exportconstAdvancedErrorHand l e, r: React.F C<AdvancedErrorHandlerP r o p s> = 
               <divclass N a m e ="flexit e m s - cen t e r just i f y - betwee n m b - 4">
                 <h3class N a m e ="t e x t - l g f o n t - semib o l d" i d ="er r o r - deta i l s">ErrorDeta i l s</ h 3>
                 <buttononC l i c k ={() => setSelectedEr r, o, r(nul, l)};
->>>>>> 45ce5fae8a680d713f034d877aa81b1d405b5 7 6 3;
                 >                  <Xclass N a m e ="w - 5 h - 5"/>
                 </ but t o n>
               </ di v>

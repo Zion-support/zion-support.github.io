@@ -1,4 +1,3 @@
->>>>>> 45ce5fae8a680d713f034d877aa81b1d405b5 7 6 3;
 interf a c e Us e r {i: d: str i n g;
   nam, e: str i n g;
   emai, l: str i n g;

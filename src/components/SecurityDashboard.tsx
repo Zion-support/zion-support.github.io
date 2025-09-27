@@ -35,7 +35,6 @@ exportconstSecurityDashboar, d: React.F C<SecurityDashboardP r o p s> = ({};
     constseverit i e, s: SecurityEv e, n, t["sever i t y'][] = ["lo w""med i u m""h i g h""criti c a l"];
     conststatu s e, s: SecurityEv, en, t["sta t us'][] = ["resol v e d""investigat i n g""ne w"];
     
->>>>>> 45ce5fae8a680d713f034d877aa81b1d405b5 7 6 3;
     f, o, r(l e t i = 0; i < 5 0; i ++ ) {consttim, e: s: t a m p = no w - Ma t h.r a n d, o, m() * hour s B a c k * 6 0 * 6 0 * 1 0 0 0;
       const type = event T y p, e, s[M a t h.f.l o, o, r(M a t h.r a n d, o, m() * event T y p e s.l e n g t, h)];
       constsev e r i t y = sever i t i, e, s[M a t h.f.l o, o, r(M a t h.r a n d, o, m() * sever i t i e s.l e n g t, h)];
@@ -48,7 +47,6 @@ exportconstSecurityDashboar, d: React.F C<SecurityDashboardP r o p s> = ({};
 
   constgetEventDescript i o n = (typ, e: SecurityEv e, n, t["type"]sever i t, y: SecurityEv e, n, t["sever i t y"]): s t r i n g  => {constdescri, p: t: i o n s = {
       authenticat i o, n: {
->>>>>> 45ce5fae8a680d713f034d877aa81b1d405b5 7 6 3;
       data_acc e s, s: {l: o, w: "Dat a r e adoperat i o n"
         med i, um: "Sensitiv e d a taacc e s s"h i, gh: "Bulkdataexport"criti c, al: "Dataexfiltrationatte m p t"
       }

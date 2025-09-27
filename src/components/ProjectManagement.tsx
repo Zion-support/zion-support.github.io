@@ -6,7 +6,6 @@ interf a c e Proj e c t {i: d: str i n g;
   nam, e: str i n g;
   descriptio, n: str i n g;
   sta t, us: "plann i ng' | "i n - progr e s s" | "rev i e w" | "comple t e d";
->>>>>> 45ce5fae8a680d713f034d877aa81b1d405b5 7 6 3;
   dueD a t, e: str i n g;
   t e a, m: str i, n, g[];
   prior i, ty: "lo w" | "med i u m" | "h i g h" | "urg e n t"};

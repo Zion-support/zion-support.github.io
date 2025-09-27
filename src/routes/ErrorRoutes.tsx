@@ -1,8 +1,12 @@
-import NotFo u n d from "@/ pages / NotFound"
+import { Route, Routes } from "react-router-dom";
+import NotFound from "@/pages/NotFound";
 
-const ErrorRou t e s = ()  => {retu, r: n (<Ro u t e s>
-      <Route p a t h ="*" elem e n t ={<NotF o u n d />}/>
-    </ Rou t e s>
-  )
+const ErrorRoutes = () => {
+  return (
+    <Routes>;
+      <Route path="*" element={<NotFound />} />;
+    </[^>]*>
+  );
 };
-export default ErrorRou t e s;
+
+export default ErrorRoutes;

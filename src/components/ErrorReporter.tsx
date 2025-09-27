@@ -28,7 +28,6 @@ exportconstErrorRepor t e, r: React.F C<ErrorReporterP r o p s> = ({childreno, n
         timest a m, p: D a t e.n.o.w()userAg e n, t: navi g a t o r.userAgen.t u r, l: w i n d o w.loca.t i o n.h r e, f};
       setErrorHist o, r, y(p r e v = > [...preverrorDe.t a i l.s]);
       
->>>>>> 45ce5fae8a680d713f034d877aa81b1d405b5 7 6 3;
           "Cont e n t - T y p e": "applicat i o n / j s o n"}b o d, y: J S O N.stri.n g, i, f(error, D e t a i l === s)
       }).c a, t, c(c, o n s o l e.e r r.o, r)};
 

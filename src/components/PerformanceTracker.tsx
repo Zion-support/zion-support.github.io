@@ -1,4 +1,3 @@
->>>>>> 45ce5fae8a680d713f034d877aa81b1d405b5 7 6 3;
 interf a c e PerformanceMet r i c s {lo, a: d: T i m, e: n u m b e r;
   domContentLoa d e, d: n u m b e r;
   firstPa i n, t: n u m b e r;
@@ -86,7 +85,6 @@ const PerformanceTrac k e r = React.mem, o(functio, n PerformanceTrac k, e, r({o
     retur, n()  => {setIsL, o: a: d i, n, g(fals, e)}}[]);
 
   return {metricsisL, o: a: d i n, g}};
->>>>>> 45ce5fae8a680d713f034d877aa81b1d405b5 7 6 3;
 exportfunctiongetPerformanceGr a, d, e(met, r i c, s: PerformanceMetr i c, s): {g: r, ade:"A' | 'B' | 'C' | 'D' | 'F";
   sc o r, e: n u m b e r;
   recommendati o n, s: str i, n, g[];

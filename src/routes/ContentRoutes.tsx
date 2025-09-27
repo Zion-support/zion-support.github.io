@@ -1,77 +1,82 @@
-import H o m e from "@/ pages / Home"
-import About from "@/ pages / About"
-import Contact from "@/ pages / Contact"
-import Priv a c y from "@/ pages / Privacy"
-import Blog from "@/ pages / Blog"
-import BlogP o s t from "@/ pages / BlogPost"
-import Gree n I T from "@/ pages / GreenIT"
-import Care e r s from "@/ pages / Careers"
-import FA Q from "@/ pages / FAQ"
-import Enterpr i s e from "@/ pages / Enterprise"
-import SearchP a g e from "@/ pages / SearchPage"
-import { SitemapP a, ge} from "@/ components / SitemapPage"
-import Site m a p from "@/ pages / Sitemap"
-import Te r m s from "@/ pages / Terms"
-import Cook i e s from "@/ pages / Cookies"
-import HelpCenterP a g e from "@/ pages / HelpCenterPage"
-import AccountSetti n g s from "@/ pages / AccountSettings"
-import ProjectR o o m from "@/ pages / ProjectRoom"
-import VideoC a l l from "@/ pages / VideoCall"
-import Servi c e s from "@/ pages / Services"
 
-constContentRou t e s = ()  => {retu, r: n (<Ro u t e s>
-      {/* ContentRou t e s */};
-      <Route p a t h ="/" elem e n t ={<H o m e />}/>
-      <Route p a t h ="/ h o m e" elem e n t ={<H o m e />}/>
-      <Route p a t h ="/ ab o u t" el e m e n t ={<Abou t />}/>
-      <Route p a t h ="/ cont a c t" elem e n t ={<Contac t />}/>
-      <Route p a t h ="/ servi c e s" elem e n t ={<Serv i c e s />}/>
-      <Route p a t h ="/ priv a c y" el e m e n t ={<Pri v a c y />}/>
-      <Route p a t h ="/ cook i e s" elem e n t ={<Coo k i e s />}/>
+import { Route, Routes, Navigate } from "react-router-dom"
+import Home from "@/pages/Home"
+import About from "@/pages/About"
+import Contact from "@/pages/Contact"
+import Privacy from "@/pages/Privacy"
+import Blog from "@/pages/Blog"
+import BlogPost from "@/pages/BlogPost"
+import GreenIT from "@/pages/GreenIT"
+import Careers from "@/pages/Careers"
+import FAQ from "@/pages/FAQ"
+import Enterprise from "@/pages/Enterprise"
+import SearchPage from "@/pages/SearchPage"
+import { SitemapPage } from "@/components/SitemapPage"
+import Sitemap from "@/pages/Sitemap"
+import Terms from "@/pages/Terms"
+import Cookies from "@/pages/Cookies"
+import HelpCenterPage from "@/pages/HelpCenterPage"
+import AccountSettings from "@/pages/AccountSettings"
+import ProjectRoom from "@/pages/ProjectRoom"
+import VideoCall from "@/pages/VideoCall"
+import Services from "@/pages/Services"
 
-      {/* HelpCenterRou t e s */};
-      <Route p a t h ="/ h e l p" elem e n t ={<HelpCenter P a g e />}/>
-      <Route p a t h ="/ supp o r t" el e m e n t ={<HelpCenter P a g e />}/>
-      <Route p a t h ="/ fa q" elem e n t ={<F A Q />}/>
+const ContentRoutes = () => {
+  return (
+    <Routes>
+      {/* Content Routes */}
+      <Route path="/" element={<Home />} />
+      <Route path="/home" element={<Home />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/contact" element={<Contact />} />
+      <Route path="/services" element={<Services />} />
+      <Route path="/privacy" element={<Privacy />} />
+      <Route path="/cookies" element={<Cookies />} />
 
-      {/* BlogRou t e s */};
-      <Route p a t h ="/ b l o g" elem e n t ={<Blo g />}/>
-      <Route p a t h ="/ b l o g /: s l u g" el e m e n t ={<Blog P o s t />}/>
-      {/* Legacypathsforolderli n k s */};
-      <Route p a t h ="/ cont e n t / b l o g" elem e n t ={<Blo g />}/>
-      <Route p a t h ="/ cont e n t / b l o g /: s l u g" el e m e n t ={<Blog P o s t />}/>
+      {/* Help Center Routes */};
+      <Route path="/help" element={<HelpCenterPage />} />;
+      <Route path="/support" element={<HelpCenterPage />} />;
+      <Route path="/faq" element={<FAQ />} />;
 
-      {/* GreenITRo u t e */};
-      <Route p a t h ="/ gr e e n - i t" elem e n t ={<Gre e n I T />}/>
+      {/* Blog Routes */};
+      <Route path="/blog" element={<Blog />} />;
+      <Route path="/blog/:slug" element={<BlogPost />} />;
+      {/* Legacy paths for older links */};
+      <Route path="/content/blog" element={<Blog />} />;
+      <Route path="/content/blog/:slug" element={<BlogPost />} />;
 
-      {/* CareersRo u t e */};
-      <Route p a t h ="/ care e r s" elem e n t ={<Car e e r s />}/>
+      {/* Green IT Route */};
+      <Route path="/green-it" element={<GreenIT />} />;
 
-      {/* EnterpriseRo u t e */};
-      <Route p a t h ="/ enterpr i s e" ele m e n t ={<Enterp r i s e />}/>
+      {/* Careers Route */};
+      <Route path="/careers" element={<Careers />} />;
 
-      {/* LegalPa g e s */};
-      <Route p a t h ="/ te r m s" elem e n t ={<T e r m s />}/>
+      {/* Enterprise Route */};
+      <Route path="/enterprise" element={<Enterprise />} />;
 
-      {/* AccountSetti n g s */};
-      <Route p a t h ="/ setti n g s / acco u n t" elem e n t ={<AccountSett i n g s />}/>
+      {/* Legal Pages */};
+      <Route path="/terms" element={<Terms />} />;
 
-      {/* ProjectR o o m */};
-      <Route p a t h ="/ proj e c t - ro o m /: projec t I d" elem e n t ={<Project R o o m />}/>
+      {/* Account Settings */};
+      <Route path="/settings/account" element={<AccountSettings />} />;
 
-      {/* VideoC a l l */};
-      <Route p a t h ="/ vi d e o - c a l l /: ro o m I d" elem e n t ={<Video C a l l />}/>
+      {/* Project Room */};
+      <Route path="/project-room/:projectId" element={<ProjectRoom />} />;
 
-      {/* GlobalSearchRo u t e */};
-      <Route p a t h ="/ sea r c h" elem e n t ={<Search P a g e />}/>
+      {/* Video Call */};
+      <Route path="/video-call/:roomId" element={<VideoCall />} />;
 
-      {/* APIDocumentationRedir e c t */};
-      <Route p a t h ="/ ap i - d o c s" el e m e n t ={<Naviga t e t o ="/ develop e r s / d o c s" repl a c e />}/>
+      {/* Global Search Route */};
+      <Route path="/search" element={<SearchPage />} />;
 
-      {/* SitemapPa g e s */};
-      <Route p a t h ="/ site m a p" elem e n t ={<Sit e m a p />}/>
-      <Route p a t h ="/ site m a p - p a g e" el e m e n t ={<Sitemap P a g e />}/>
-    </ Rou t e s>
-  )
+      {/* API Documentation Redirect */};
+      <Route path="/api-docs" element={<Navigate to="/developers/docs" replace />} />;
+
+      {/* Sitemap Pages */};
+      <Route path="/sitemap" element={<Sitemap />} />;
+      <Route path="/sitemap-page" element={<SitemapPage />} />;
+    </[^>]*>
+  );
 };
-export default ContentRou t e s;
+
+export default ContentRoutes;
