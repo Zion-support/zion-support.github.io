@@ -261,7 +261,7 @@ export const AdvancedAccessibilityAuditor: React.FC<AdvancedAccessibilityAuditor
   const calculateContrast = (color1: string, color2: string): number => {
     // Simplified contrast calculation
     // In a real implementation, you'd use a proper color contrast library
-    return4.5; // Placeholder
+    return 4.5; // Placeholder
   };
 
   const calculateWCAGCompliance = (issues: AccessibilityIssue[], level: string): number => {
@@ -304,17 +304,17 @@ export const AdvancedAccessibilityAuditor: React.FC<AdvancedAccessibilityAuditor
   }, [auditAccessibility]);
 
   return (
-    <div className={`bg-white dark:bg-gray-800rounded-lg shadow-lg p-6`}>
+    <div className={`bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6`}>
       {/* Header */}
       <div className="flex items-center justify-between mb-6">
         <div>
-          <h2className="text-2xl font-bold text-gray-900dark:text-white" id="accessibility-auditor">Accessibility Auditor</h2>
-          <p className="text-gray-600dark:text-gray-400">WCAG compliance and accessibility analysis</p>
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-white" id="accessibility-auditor">Accessibility Auditor</h2>
+          <p className="text-gray-600 dark:text-gray-400">WCAG compliance and accessibility analysis</p>
         </div>
         <div className="flex items-center space-x-4">
           <div className="flex items-center space-x-2">
-            <div className={`w-3h-3rounded-full ${isAuditing ? 'bg-blue-500animate-pulse' : 'bg-gray-400'}`} />
-            <span className="text-sm text-gray-600dark:text-gray-400">
+            <div className={`w-3 h-3 rounded-full ${isAuditing ? 'bg-blue-500 animate-pulse' : 'bg-gray-400'}`} />
+            <span className="text-sm text-gray-600 dark:text-gray-400">
               {isAuditing ? 'Auditing...' : 'Ready'}
             </span>
           </div>
@@ -336,7 +336,7 @@ export const AdvancedAccessibilityAuditor: React.FC<AdvancedAccessibilityAuditor
               <div>
                 <h3className="text-lg font-semibold mb-2" id="accessibility-score">Accessibility Score</h3>
                 <div className="flex items-center space-x-4">
-                  <div className={`text-4xl font-bold ${getScoreColor(metrics.score)}`}>
+                  <div className={`text-4xl font-bold ${getScoreColor(metrics.score)}`}
                     {metrics.score}
                   </div>
                   <div>

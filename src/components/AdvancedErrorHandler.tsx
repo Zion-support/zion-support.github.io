@@ -254,16 +254,16 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({
   };
 
   return (
-    <div className="fixed bottom-4right-4z-50" ref={errorHandlerRef}>
+    <div className="fixed bottom-4 right-4 z-50" ref={errorHandlerRef}>
       <motion.button
         onClick={() => setIsVisible(!isVisible)}
-        className="bg-red-600hover:bg-red-700text-white p-3rounded-full shadow-lg transition-colors"
+        className="bg-red-600 hover:bg-red-700 text-white p-3 rounded-full shadow-lg transition-colors"
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
       >
-        <AlertTriangle className="w-6h-6" />
+        <AlertTriangle className="w-6 h-6" />
         {stats.totalErrors > 0 && (
-          <span className="absolute -top-2 -right-2bg-red-500text-white text-xs rounded-full w-6h-6flex items-center justify-center">
+          <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-6 h-6 flex items-center justify-center">
             {stats.totalErrors}
           </span>
         )}
