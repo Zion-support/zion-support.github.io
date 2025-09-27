@@ -381,9 +381,12 @@ export default function ComprehensiveMonitoringDashboard({
                   'bg-green-50 border-green-400'
                 }`}
               >
-                <tab.icon className="h-4 w-4" />
-                <span>{tab.name}</span>
-              </button>            ))}
+                <div className="flex items-center space-x-2">
+                  <span className="text-sm font-medium">{alert.message}</span>
+                  <span className="text-xs text-gray-500">{alert.timestamp.toLocaleTimeString()}</span>
+                </div>
+              </motion.div>
+            ))}
           </motion.div>
         )}
       </AnimatePresence>

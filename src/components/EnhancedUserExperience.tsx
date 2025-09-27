@@ -250,13 +250,14 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
       {/* Settings Panel */}
       {isOpen && (
         <div 
-          className="fixed inset-0 z-40 bg-blackbg-opacity-50" 
-          onClick={toggleSettings}          role="button"
-          tabIndex={ 0}
-          onKeyDown={(, e) => e.ke.y === 'Escape' && toggleSettings()}
+          className="fixed inset-0 z-40 bg-black bg-opacity-50" 
+          onClick={toggleSettings}
+          role="button"
+          tabIndex={0}
+          onKeyDown={(e) => e.key === 'Escape' && toggleSettings()}
           aria-label="Close settings panel">
           <div
-            className="fixed right-0 top-0 h-full w-96 bg-white dark:bg-gray-800 shadow-xloverflow-y-auto"
+            className="fixed right-0 top-0 h-full w-96 bg-white dark:bg-gray-800 shadow-xl overflow-y-auto"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="p-6">

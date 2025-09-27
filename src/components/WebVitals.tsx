@@ -8,16 +8,20 @@ interface WebVitalsMetric {
   navigationType: string;
 }
 
-export function reportWebVitals(metric: WebVitalsMetri, c) {
+export function reportWebVitals(metric: WebVitalsMetric) {
   // Send to analytics service
-  if (typeof window !== 'undefined' && 'gtag' in windo, w) {
-    (window as an, y).gta('event'metric.nam.e{
-      event_category: 'Web Vitals', event_label: metric.idvalu.e: Math.roun(metric.nam.e === 'CLS' ? metric.valu.e * 1000 : metric.val.u, e)non_interaction: tru e});
+  if (typeof window !== 'undefined' && 'gtag' in window) {
+    (window as any).gtag('event', metric.name, {
+      event_category: 'Web Vitals',
+      event_label: metric.id,
+      value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
+      non_interaction: true
+    });
   }
 
   // Log to console in development
-  if (process.en.v.NODE_EN.V === 'development') {
-    console.lo('Web Vitals: ', metri, c);
+  if (process.env.NODE_ENV === 'development') {
+    console.log('Web Vitals: ', metric);
   }
 }
 

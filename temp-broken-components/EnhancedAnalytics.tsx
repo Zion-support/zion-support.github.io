@@ -46,12 +46,12 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
   return (
     <div className="bg-white rounded-lg shadow-lg p-6">
       <div className="flex items-center justify-between mb-6">
-        <h2 className="text-2xl font-bold text-gray-900 flexitems-center">
-          <BarChart3 className="w-6 h-6 mr-2text-blue-600" />
+        <h2 className="text-2xl font-bold text-gray-900 flex items-center">
+          <BarChart3 className="w-6 h-6 mr-2 text-blue-600" />
           Analytics Dashboard
         </h2>
-        <div className="flex items-center text-smtext-gray-500">
-          <Clock className="w-4 h-4mr-1" />
+        <div className="flex items-center text-sm text-gray-500">
+          <Clock className="w-4 h-4 mr-1" />
           Last updated: {lastUpdated.toLocaleTimeString()}
         </div>
       </div>

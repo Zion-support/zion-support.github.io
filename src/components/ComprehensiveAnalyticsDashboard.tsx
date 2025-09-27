@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, LineChart, Line, PieChart, Pie, Cell } from 'recharts';
+import { Activity, Zap, Shield, Eye } from 'lucide-react';
 
 interface ChartData {
   name: string;
@@ -103,6 +104,7 @@ export const ComprehensiveAnalyticsDashboard: React.FC<ComprehensiveAnalyticsDas
   const [selectedMetric, setSelectedMetric] = useState<string>('pageViews');
   const [timeRange, setTimeRange] = useState<string>('7d');
   const [isLoading, setIsLoading] = useState(false);
+  const [activeTab, setActiveTab] = useState<string>('overview');
 
   const getScoreColor = (score: number): string => {
     if (score >= 90) return 'text-green-600';
