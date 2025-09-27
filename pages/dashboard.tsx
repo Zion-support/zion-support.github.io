@@ -8,12 +8,12 @@ const PerformanceDashboard = dynamic(() => import('../src/components/Performance
   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
 });
 
-const SecurityDashboard = dynamic(() => import('../src/components/SecurityDashboard').then(mod => ({ default: mod.SecurityDashboard })), {
+const SecurityDashboard = dynamic(() => import('../src/components/AdvancedSecurityDashboard').then(mod => ({ default: mod.AdvancedSecurityDashboard })), {
   ssr: false,
   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
 });
 
-const AnalyticsDashboard = dynamic(() => import('../src/components/AnalyticsDashboard').then(mod => ({ default: mod.AnalyticsDashboard })), {
+const AnalyticsDashboard = dynamic(() => import('../src/components/AdvancedAnalyticsDashboard').then(mod => ({ default: mod.AdvancedAnalyticsDashboard })), {
   ssr: false,
   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
 });
@@ -23,7 +23,7 @@ const EnhancedDashboard = dynamic(() => import('../src/components/EnhancedDashbo
   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
 });
 
-const EnhancedSearch = dynamic(() => import('../src/components/EnhancedSearch'), {
+const EnhancedSearch = dynamic(() => import('../src/components/AdvancedSearch'), {
   ssr: false,
   loading: () => <div className="h-32 w-full bg-gray-200 rounded animate-pulse" />
 });

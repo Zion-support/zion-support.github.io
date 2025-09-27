@@ -285,7 +285,7 @@ export default function ComprehensiveMonitoringDashboard({
   if (isLoading) {
     return (
       <div className="flex items-center justify-center h-64">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2border-blue-600"></div>
       </div>
     );
   }
@@ -302,7 +302,7 @@ export default function ComprehensiveMonitoringDashboard({
           <div className="text-sm text-gray-500">
             Last updated: {lastUpdated.toLocaleTimeString()}
           </div>
-          <div className={`px-3 py-1 rounded-full text-sm font-medium ${color}`}>
+          <div className={`px-3py-1rounded-full text-sm font-medium ${color}`}
             Performance: {grade}
           </div>
         </div>
@@ -323,7 +323,7 @@ export default function ComprehensiveMonitoringDashboard({
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: 20 }}
-                className={`p-4 rounded-lg border-l-4 ${
+                className={`p-4rounded-lg border-l-4 ${
                   alert.type === 'error' ? 'bg-red-50 border-red-400' :
                   alert.type === 'warning' ? 'bg-yellow-50 border-yellow-400' :
                   alert.type === 'info' ? 'bg-blue-50 border-blue-400' :
@@ -332,17 +332,17 @@ export default function ComprehensiveMonitoringDashboard({
               >
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-2">
-                    {alert.type === 'error' && <AlertTriangle className="h-5 w-5 text-red-600" />}
-                    {alert.type === 'warning' && <AlertTriangle className="h-5 w-5 text-yellow-600" />}
-                    {alert.type === 'info' && <Activity className="h-5 w-5 text-blue-600" />}
-                    {alert.type === 'success' && <CheckCircle className="h-5 w-5 text-green-600" />}
+                    {alert.type === 'error' && <AlertTriangle className="h-5w-5text-red-600" />}
+                    {alert.type === 'warning' && <AlertTriangle className="h-5w-5text-yellow-600" />}
+                    {alert.type === 'info' && <Activity className="h-5w-5text-blue-600" />}
+                    {alert.type === 'success' && <CheckCircle className="h-5w-5text-green-600" />}
                     <span className="font-medium">{alert.message}</span>
                   </div>
                   <button
                     onClick={() => resolveAlert(alert.id)}
                     className="text-gray-400 hover:text-gray-600"
                   >
-                    <X className="h-4 w-4" />
+                    <X className="h-4w-4" />
                   </button>
                 </div>
               </motion.div>
@@ -353,12 +353,12 @@ export default function ComprehensiveMonitoringDashboard({
 
       {/* Metrics Grid */}
       {metrics && (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1md:grid-cols-2lg:grid-cols-4gap-6">
           {/* Performance Metrics */}
           <Card>
-            <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+            <CardHeader className="flex flex-row items-center justify-between space-y-0pb-2">
               <CardTitle className="text-sm font-medium">Performance</CardTitle>
-              <Zap className="h-4 w-4 text-muted-foreground" />
+              <Zap className="h-4w-4text-muted-foreground" />
             </CardHeader>
             <CardContent>
               <div className="text-2xl font-bold">{grade}</div>
@@ -373,9 +373,9 @@ export default function ComprehensiveMonitoringDashboard({
 
           {/* Resource Usage */}
           <Card>
-            <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+            <CardHeader className="flex flex-row items-center justify-between space-y-0pb-2">
               <CardTitle className="text-sm font-medium">Resources</CardTitle>
-              <Cpu className="h-4 w-4 text-muted-foreground" />
+              <Cpu className="h-4w-4text-muted-foreground" />
             </CardHeader>
             <CardContent>
               <div className="text-2xl font-bold">{metrics.resources.memoryUsage.toFixed(1)}MB</div>
@@ -390,9 +390,9 @@ export default function ComprehensiveMonitoringDashboard({
 
           {/* User Experience */}
           <Card>
-            <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+            <CardHeader className="flex flex-row items-center justify-between space-y-0pb-2">
               <CardTitle className="text-sm font-medium">User Experience</CardTitle>
-              <Users className="h-4 w-4 text-muted-foreground" />
+              <Users className="h-4w-4text-muted-foreground" />
             </CardHeader>
             <CardContent>
               <div className="text-2xl font-bold">{metrics.userExperience.uniqueVisitors}</div>
@@ -407,9 +407,9 @@ export default function ComprehensiveMonitoringDashboard({
 
           {/* Security */}
           <Card>
-            <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+            <CardHeader className="flex flex-row items-center justify-between space-y-0pb-2">
               <CardTitle className="text-sm font-medium">Security</CardTitle>
-              <Shield className="h-4 w-4 text-muted-foreground" />
+              <Shield className="h-4w-4text-muted-foreground" />
             </CardHeader>
             <CardContent>
               <div className="text-2xl font-bold">{metrics.security.sslScore}%</div>
@@ -426,7 +426,7 @@ export default function ComprehensiveMonitoringDashboard({
 
       {/* Detailed Metrics */}
       {metrics && (
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1lg:grid-cols-2gap-6">
           {/* Performance Details */}
           <Card>
             <CardHeader>

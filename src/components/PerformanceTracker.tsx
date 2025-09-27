@@ -117,8 +117,7 @@ export default function PerformanceTracker({
 
           // Send to analytics
           if (enableAnalytics && typeof window !== 'undefined') {
-            // Google Analytics 4
-            if (window.gtag) {
+            // Google Analytics 4 if (window.gtag) {
               window.gtag('event', 'page_load_metrics', {
                 load_time: Math.round(metrics.loadTime),
                 dom_content_loaded: Math.round(metrics.domContentLoaded),
@@ -229,7 +228,7 @@ export function getPerformanceGrade(metrics: PerformanceMetrics): {
     }
   };
 
-  // Load Time scoring (target: < 3000ms)
+  // Load Time scoring (target: < 3000 ms)
   if (metrics.loadTime > 5000) {
     score -= 30;
     recommendations.push('Optimize page load time (currently over 5 seconds)');
@@ -238,7 +237,7 @@ export function getPerformanceGrade(metrics: PerformanceMetrics): {
     recommendations.push('Consider optimizing page load time');
   }
 
-  // First Contentful Paint scoring (target: < 1800ms)
+  // First Contentful Paint scoring (target: < 1800 ms)
   if (metrics.firstContentfulPaint > 3000) {
     score -= 25;
     recommendations.push('Improve First Contentful Paint (currently over 3 seconds)');
@@ -247,7 +246,7 @@ export function getPerformanceGrade(metrics: PerformanceMetrics): {
     recommendations.push('Consider improving First Contentful Paint');
   }
 
-  // Largest Contentful Paint scoring (target: < 2500ms)
+  // Largest Contentful Paint scoring (target: < 2500 ms)
   if (metrics.largestContentfulPaint) {
     if (metrics.largestContentfulPaint > 4000) {
       score -= 25;
@@ -262,12 +261,12 @@ export function getPerformanceGrade(metrics: PerformanceMetrics): {
     }
   }
 
-  // First Input Delay scoring (target: < 100ms)
+  // First Input Delay scoring (target: < 100 ms)
   if (metrics.firstInputDelay) {
     if (metrics.firstInputDelay > 300) {
       score -= 20;
       webVitals.fid.status = 'poor';
-      recommendations.push('Reduce First Input Delay (currently over 300ms)');
+      recommendations.push('Reduce First Input Delay (currently over 300 ms)');
     } else if (metrics.firstInputDelay > 100) {
       score -= 5;
       webVitals.fid.status = 'needs-improvement';
@@ -282,7 +281,7 @@ export function getPerformanceGrade(metrics: PerformanceMetrics): {
     if (metrics.cumulativeLayoutShift > 0.25) {
       score -= 20;
       webVitals.cls.status = 'poor';
-      recommendations.push('Fix layout shifts (CLS over 0.25)');
+      recommendations.push('Fix layout shifts (CLS over0.25)');
     } else if (metrics.cumulativeLayoutShift > 0.1) {
       score -= 10;
       webVitals.cls.status = 'needs-improvement';

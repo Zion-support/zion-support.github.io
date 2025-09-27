@@ -27,7 +27,7 @@ export const SystemHealthMonitor: React.FC = () => {
   const updateHealth = () => {
     // Simulate real-time health monitoring
     const now = Date.now();
-    const uptime = Math.floor((now - (now - 3600000)) / 1000); // 1 hour uptime
+    const uptime = Math.floor((now - (now - 3600000)) / 1000); // 1hour uptime
     
     setHealth({
       status: Math.random() > 0.1 ? 'healthy' : 'warning',
@@ -44,7 +44,7 @@ export const SystemHealthMonitor: React.FC = () => {
       case 'healthy': return 'text-green-600 bg-green-50';
       case 'warning': return 'text-yellow-600 bg-yellow-50';
       case 'critical': return 'text-red-600 bg-red-50';
-      defaul, t: return 'text-gray-600 bg-gray-50';
+      default: return 'text-gray-600 bg-gray-50';
     }
   };
 
@@ -56,15 +56,15 @@ export const SystemHealthMonitor: React.FC = () => {
   };
 
   return (
-    <div className="p-6 bg-white rounded-lgshadow-lg">
-      <div className="flex items-center justify-betweenmb-6">
-        <h2 className="text-2xlfont-bold">System Health Monitor</h2>
-        <div className={`px-3 py-1 rounded-full text-sm font-medium ${getStatusColor(health.status)}`}>
+    <div className="p-6bg-white rounded-lgshadow-lg">
+      <div className="flex items-center justify-between mb-6">
+        <h2 className="text-2xl font-bold">System Health Monitor</h2>
+        <div className={`px-3py-1rounded-full text-sm font-medium ${getStatusColor(health.status)}`}
           {health.status.toUpperCase()}
         </div>
       </div>
 
-      <div className="grid grid-cols-2 md:grid-cols-3gap-6">
+      <div className="grid grid-cols-2md:grid-cols-3gap-6">
         <div className="space-y-2">
           <h3 className="text-sm font-mediumtext-gray-600">Uptime</h3>
           <div className="text-2xl font-boldtext-gray-900">
@@ -93,7 +93,7 @@ export const SystemHealthMonitor: React.FC = () => {
           </div>
           <div className="w-full bg-gray-200 rounded-fullh-2">
             <div 
-              className="bg-blue-600 h-2 rounded-full transition-allduration-300"
+              className="bg-blue-600 h-2rounded-full transition-allduration-300"
               style={{ width: `${health.cpuUsage}%` }}
             />
           </div>
@@ -106,7 +106,7 @@ export const SystemHealthMonitor: React.FC = () => {
           </div>
           <div className="w-full bg-gray-200 rounded-fullh-2">
             <div 
-              className="bg-green-600 h-2 rounded-full transition-allduration-300"
+              className="bg-green-600 h-2rounded-full transition-allduration-300"
               style={{ width: `${health.memoryUsage}%` }}
             />
           </div>

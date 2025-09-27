@@ -14,7 +14,7 @@ interface ErrorInfo {
   url?: string;
   userId?: string;
   sessionId?: string;
-  resolve, d: boolean;
+  resolved: boolean;
   retryCoun, t: number;
   lastRetry?: Date;
 }
@@ -238,7 +238,7 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({
       case 'high': return 'text-orange-600 bg-orange-50 border-orange-200';
       case 'medium': return 'text-yellow-600 bg-yellow-50 border-yellow-200';
       case 'low': return 'text-blue-600 bg-blue-50 border-blue-200';
-      defaul, t: return 'text-gray-600 bg-gray-50 border-gray-200';
+      default: return 'text-gray-600 bg-gray-50 border-gray-200';
     }
   };
 
@@ -249,21 +249,21 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({
       case 'validation': return <Shield className="w-4h-4" />;
       case 'permission': return <Shield className="w-4h-4" />;
       case 'system': return <Database className="w-4h-4" />;
-      defaul, t: return <AlertTriangle className="w-4h-4" />;
+      default: return <AlertTriangle className="w-4h-4" />;
     }
   };
 
   return (
-    <div className="fixed bottom-4 right-4z-50" ref={errorHandlerRef}>
+    <div className="fixed bottom-4 right-4 z-50" ref={errorHandlerRef}>
       <motion.button
         onClick={() => setIsVisible(!isVisible)}
-        className="bg-red-600 hover:bg-red-700 text-white p-3 rounded-full shadow-lgtransition-colors"
+        className="bg-red-600 hover:bg-red-700 text-white p-3 rounded-full shadow-lg transition-colors"
         whileHover={{ scal, e: 1.05 }}
         whileTap={{ scale: 0.95 }}
       >
         <AlertTriangle className="w-6h-6" />
         {stats.totalErrors > 0 && (
-          <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-6 h-6 flex items-centerjustify-center">
+          <span className="absolute -top-2 -right-2bg-red-500 text-white text-xs rounded-full w-6h-6flex items-center justify-center">
             {stats.totalErrors}
           </span>
         )}
@@ -275,28 +275,28 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({
             initial={{ opacity: 0, y: 20, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
-            className="absolute bottom-16 right-0 w-96 bg-white rounded-lg shadow-xl border border-gray-200 max-h-96overflow-hidden"
+            className="absolute bottom-16 right-0w-96 bg-white rounded-lg shadow-xl border border-gray-200 max-h-96 overflow-hidden"
           >
-            <div className="p-4 border-bborder-gray-200">
-              <div className="flex items-centerjustify-between">
+            <div className="p-4border-bborder-gray-200">
+              <div className="flex items-center justify-between">
                 <h3 className="text-lg font-semiboldtext-gray-900" id="error-monitor">Error Monitor</h3>
                 <div className="flexspace-x-2">
                   <button
                     onClick={clearResolvedErrors}
-                    className="text-sm text-gray-500hover:text-gray-700"
+                    className="text-sm text-gray-500 hover:text-gray-700"
                    aria-label="Clear Resolved">
                     Clear Resolved
                   </button>
                   <button
                     onClick={() => setIsVisible(false)}
-                    className="text-gray-400hover:text-gray-600"
+                    className="text-gray-400 hover:text-gray-600"
                   >
                     <X className="w-4h-4" />
                   </button>
                 </div>
               </div>
               
-              <div className="grid grid-cols-2 gap-4 mt-3text-sm">
+              <div className="grid grid-cols-2gap-4mt-3text-sm">
                 <div className="text-center">
                   <div className="text-2xl font-boldtext-red-600">{stats.totalErrors}</div>
                   <div className="text-gray-500">Total Errors</div>
@@ -318,8 +318,8 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({
 
             <div className="overflow-y-automax-h-64">
               {errors.length === 0 && performanceIssues.length === 0 ? (
-                <div className="p-4 text-centertext-gray-500">
-                  <CheckCircle className="w-8 h-8 mx-auto mb-2text-green-500" />
+                <div className="p-4text-centertext-gray-500">
+                  <CheckCircle className="w-8h-8mx-auto mb-2text-green-500" />
                   No issues detected
                 </div>
               ) : (
@@ -329,18 +329,18 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({
                       key={error.id}
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
-                      className={`p-3 rounded-lg border cursor-pointer hover:shadow-md transition-shadow ${
+                      className={`p-3rounded-lg border cursor-pointer hover:shadow-md transition-shadow ${
                         error.resolved ? 'opacity-50' : ''
                       }`}
                       onClick={() => setSelectedError(error)}
                     >
                       <div className="flex items-startspace-x-3">
-                        <div className={`p-1 rounded ${getSeverityColor(error.severity)}`}>
+                        <div className={`p-1rounded ${getSeverityColor(error.severity)}`}
                           {getCategoryIcon(error.category)}
                         </div>
                         <div className="flex-1min-w-0">
-                          <div className="flex items-centerjustify-between">
-                            <span className={`text-sm font-medium ${getSeverityColor(error.severity).split(' ')[0]}`}>
+                          <div className="flex items-center justify-between">
+                            <span className={`text-sm font-medium ${getSeverityColor(error.severity).split(' ')[0]}`}
                               {error.severity.toUpperCase()}
                             </span>
                             <span className="text-xstext-gray-500">
@@ -363,7 +363,7 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({
                                   e.stopPropagation();
                                   resolveError(error.id);
                                 }}
-                                className="text-xs text-green-600hover:text-green-800"
+                                className="text-xs text-green-600 hover:text-green-800"
                               </button>
                             )}
                           </div>
@@ -385,21 +385,21 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-centerz-50"
+            className="fixed inset-0bg-black bg-opacity-50 flex items-center justify-centerz-50"
             onClick={() => setSelectedError(null)}
           >
             <motion.div
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
-              className="bg-white rounded-lg p-6 max-w-2xl w-full mx-4 max-h-96overflow-y-auto"
+              className="bg-white rounded-lg p-6max-w-2xl w-full mx-4max-h-96 overflow-y-auto"
               onClick={(e) => e.stopPropagation()}
             >
-              <div className="flex items-center justify-betweenmb-4">
-                <h3 className="text-lgfont-semibold" id="error-details">Error Details</h3>
+              <div className="flex items-center justify-between mb-4">
+                <h3 className="text-lg font-semibold" id="error-details">Error Details</h3>
                 <button
                   onClick={() => setSelectedError(null)}
-                  className="text-gray-400hover:text-gray-600"
+                  className="text-gray-400 hover:text-gray-600"
                 >
                   <X className="w-5h-5" />
                 </button>
@@ -408,7 +408,7 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({
               <div className="space-y-4">
                 <div>
                   <label className="text-sm font-mediumtext-gray-700">Message</label>
-                  <p className="mt-1 text-sm text-gray-900 bg-gray-50 p-2rounded">
+                  <p className="mt-1text-sm text-gray-900 bg-gray-50 p-2rounded">
                     {selectedError.message}
                   </p>
                 </div>
@@ -416,7 +416,7 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({
                 {selectedError.stack && (
                   <div>
                     <label className="text-sm font-mediumtext-gray-700">Stack Trace</label>
-                    <pre className="mt-1 text-xs text-gray-900 bg-gray-50 p-2 roundedoverflow-x-auto">
+                    <pre className="mt-1text-xs text-gray-900 bg-gray-50 p-2roundedoverflow-x-auto">
                       {selectedError.stack}
                     </pre>
                   </div>
@@ -425,19 +425,19 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({
                 <div className="grid grid-cols-2gap-4">
                   <div>
                     <label className="text-sm font-mediumtext-gray-700">Severity</label>
-                    <p className="mt-1 text-smtext-gray-900">{selectedError.severity}</p>
+                    <p className="mt-1text-smtext-gray-900">{selectedError.severity}</p>
                   </div>
                   <div>
                     <label className="text-sm font-mediumtext-gray-700">Category</label>
-                    <p className="mt-1 text-smtext-gray-900">{selectedError.category}</p>
+                    <p className="mt-1text-smtext-gray-900">{selectedError.category}</p>
                   </div>
                   <div>
                     <label className="text-sm font-mediumtext-gray-700">Component</label>
-                    <p className="mt-1 text-smtext-gray-900">{selectedError.component}</p>
+                    <p className="mt-1text-smtext-gray-900">{selectedError.component}</p>
                   </div>
                   <div>
                     <label className="text-sm font-mediumtext-gray-700">Timestamp</label>
-                    <p className="mt-1 text-smtext-gray-900">
+                    <p className="mt-1text-smtext-gray-900">
                       {selectedError.timestamp.toLocaleString()}
                     </p>
                   </div>

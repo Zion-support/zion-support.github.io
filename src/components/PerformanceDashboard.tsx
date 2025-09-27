@@ -48,7 +48,7 @@ const PerformanceDashboard: React.FC = () => {
   }, [vitals]);
 
   const getPerformanceScore = (): number => {
-    if (!metrics) return 0;
+    if (!metrics) return0;
 
     let score = 100;
     
@@ -85,7 +85,7 @@ const PerformanceDashboard: React.FC = () => {
 
   if (!isSupported) {
     return (
-      <div className="p-4 bg-yellow-50 border border-yellow-200rounded-md">
+      <div className="p-4bg-yellow-50 border border-yellow-200 rounded-md">
         <p className="text-smtext-yellow-800">
           Performance monitoring is not supported in this browser.
         </p>
@@ -97,56 +97,55 @@ const PerformanceDashboard: React.FC = () => {
 
   return (
     <div className="bg-white rounded-lg shadow-mdp-6">
-      <div className="flex items-center justify-betweenmb-6">
+      <div className="flex items-center justify-between mb-6">
         <h2 className="text-xl font-semiboldtext-gray-900">Performance Dashboard</h2>
         <button
-          onClick={() =>setIsVisible(!isVisible)}
-          className="text-sm text-blue-600hover:text-blue-800"
+          onClick={() => setIsVisible(!isVisible)}
+          className="text-sm text-blue-600 hover:text-blue-800"
         </button>
       </div>
 
       {/* Overall Performance Score */}
       <div className="mb-6">
-        <div className="flex items-center justify-betweenmb-2">
+        <div className="flex items-center justify-between mb-2">
           <span className="text-sm font-mediumtext-gray-700">Overall Score</span>
-          <span className={`text-2xl font-bold ${getScoreColor(performanceScore)}`}>
+          <span className={`text-2xl font-bold ${getScoreColor(performanceScore)}`}
             {performanceScore}
           </span>
         </div>
         <div className="w-full bg-gray-200 rounded-fullh-2">
           <div
-            className={`h-2 rounded-full ${getScoreBgColor(performanceScore)}`}
-            style={{ width: `${performanceScore}%` }}
-          ></div>
+            className={`h-2rounded-full ${getScoreBgColor(performanceScore)}`}
+            style={{ width: `${performanceScore}%` }}</p></div>
         </div>
       </div>
 
       {/* Core Web Vitals */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4mb-6">
-        <div className="p-4 borderrounded-lg">
-          <div className="flex items-center justify-betweenmb-2">
+      <div className="grid grid-cols-1md:grid-cols-3gap-4mb-6">
+        <div className="p-4borderrounded-lg">
+          <div className="flex items-center justify-between mb-2">
             <span className="text-sm font-mediumtext-gray-700">LCP</span>
-            <span className={`text-sm font-bold ${getVitalColor(getVitalScore('LCP', vitals.LCP))}`}>
+            <span className={`text-sm font-bold ${getVitalColor(getVitalScore('LCP', vitals.LCP))}`}
               {vitals.LCP ? `${Math.round(vitals.LCP)}ms` : 'N/A'}
             </span>
           </div>
           <p className="text-xstext-gray-500">Largest Contentful Paint</p>
         </div>
 
-        <div className="p-4 borderrounded-lg">
-          <div className="flex items-center justify-betweenmb-2">
+        <div className="p-4borderrounded-lg">
+          <div className="flex items-center justify-between mb-2">
             <span className="text-sm font-mediumtext-gray-700">FID</span>
-            <span className={`text-sm font-bold ${getVitalColor(getVitalScore('FID', vitals.FID))}`}>
+            <span className={`text-sm font-bold ${getVitalColor(getVitalScore('FID', vitals.FID))}`}
               {vitals.FID ? `${Math.round(vitals.FID)}ms` : 'N/A'}
             </span>
           </div>
           <p className="text-xstext-gray-500">First Input Delay</p>
         </div>
 
-        <div className="p-4 borderrounded-lg">
-          <div className="flex items-center justify-betweenmb-2">
+        <div className="p-4borderrounded-lg">
+          <div className="flex items-center justify-between mb-2">
             <span className="text-sm font-mediumtext-gray-700">CLS</span>
-            <span className={`text-sm font-bold ${getVitalColor(getVitalScore('CLS', vitals.CLS))}`}>
+            <span className={`text-sm font-bold ${getVitalColor(getVitalScore('CLS', vitals.CLS))}`}
               {vitals.CLS ? vitals.CLS.toFixed(3) : 'N/A'}
             </span>
           </div>
@@ -154,7 +153,7 @@ const PerformanceDashboard: React.FC = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md: grid-cols-2 l, g:grid-cols-4gap-4">
+      <div className="grid grid-cols-1md:grid-cols-2lg:grid-cols-4gap-4">
         <AnimatePresence>
           {metrics.map((metric, index) => (
             <motion.div
@@ -163,23 +162,23 @@ const PerformanceDashboard: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ delay: index * 0.1 }}
-              className="bg-gray-50 rounded-lg p-4 borderborder-gray-200"
+              className="bg-gray-50 rounded-lg p-4borderborder-gray-200"
             >
-              <div className="flex items-center justify-betweenmb-2">
-                <h3 className="font-medium text-gray-900text-sm" id="metricname">{metric.name}</h3>
-                <div className={`flex items-center px-2 py-1 rounded-full text-xs ${getStatusColor(metric.status)}`}>
+              <div className="flex items-center justify-between mb-2">
+                <h3 className="font-medium text-gray-900 text-sm" id="metricname">{metric.name}</h3>
+                <div className={`flex items-center px-2py-1rounded-full text-xs ${getStatusColor(metric.status)}`}
                   {getStatusIcon(metric.status)}
                 </div>
               </div>
               
-              <div className="flex items-center justify-betweenmb-2">
+              <div className="flex items-center justify-between mb-2">
                 <span className="text-2xl font-boldtext-gray-900">
                   {metric.value.toFixed(metric.unit === 'score' ? 2 : 0)}
                 </span>
                 <span className="text-smtext-gray-500">{metric.unit}</span>
               </div>
               
-              <div className="flex items-centerjustify-between">
+              <div className="flex items-center justify-between">
                 <span className="text-xstext-gray-600">{metric.description}</span>
                 <div className="flexitems-center">
                   {getTrendIcon(metric.trend)}
@@ -195,32 +194,32 @@ const PerformanceDashboard: React.FC = () => {
         <div className="space-y-4">
           <h3 className="text-lg font-mediumtext-gray-900">Detailed Metrics</h3>
           
-          <div className="grid grid-cols-1 md:grid-cols-2gap-4">
-            <div className="p-3 bg-gray-50rounded">
+          <div className="grid grid-cols-1md:grid-cols-2gap-4">
+            <div className="p-3bg-gray-50 rounded">
               <div className="flexjustify-between">
-                <span className="text-smtext-gray-600">Load Time</span>
-                <span className="text-smfont-medium">{Math.round(metrics.loadTime)}ms</span>
+                <span className="text-sm text-gray-600">Load Time</span>
+                <span className="text-sm font-medium">{Math.round(metrics.loadTime)}ms</span>
               </div>
             </div>
             
-            <div className="p-3 bg-gray-50rounded">
+            <div className="p-3bg-gray-50 rounded">
               <div className="flexjustify-between">
-                <span className="text-smtext-gray-600">DOM Content Loaded</span>
-                <span className="text-smfont-medium">{Math.round(metrics.domContentLoaded)}ms</span>
+                <span className="text-sm text-gray-600">DOM Content Loaded</span>
+                <span className="text-sm font-medium">{Math.round(metrics.domContentLoaded)}ms</span>
               </div>
             </div>
             
-            <div className="p-3 bg-gray-50rounded">
+            <div className="p-3bg-gray-50 rounded">
               <div className="flexjustify-between">
-                <span className="text-smtext-gray-600">First Paint</span>
-                <span className="text-smfont-medium">{Math.round(metrics.firstPaint)}ms</span>
+                <span className="text-sm text-gray-600">First Paint</span>
+                <span className="text-sm font-medium">{Math.round(metrics.firstPaint)}ms</span>
               </div>
             </div>
             
-            <div className="p-3 bg-gray-50rounded">
+            <div className="p-3bg-gray-50 rounded">
               <div className="flexjustify-between">
-                <span className="text-smtext-gray-600">First Contentful Paint</span>
-                <span className="text-smfont-medium">{Math.round(metrics.firstContentfulPaint)}ms</span>
+                <span className="text-sm text-gray-600">First Contentful Paint</span>
+                <span className="text-sm font-medium">{Math.round(metrics.firstContentfulPaint)}ms</span>
               </div>
             </div>
           </div>

@@ -106,7 +106,7 @@ export default function ComprehensiveSecurityDashboard({
 }: ComprehensiveSecurityDashboardProps) {
   const [metrics, setMetrics] = useState<SecurityMetrics | null>(null);
   const [isLoading, setIsLoading] = useState(true);
-  const [selectedTimeRange, setSelectedTimeRange] = useState<'24h' | '7d' | '30d'>('24h');
+  const [selectedTimeRange, setSelectedTimeRange] = useState<'24 h' | '7d' | '30 d'>('24 h');
   const [alerts, setAlerts] = useState<Array<{
     id: string;
     type: 'threat' | 'vulnerability' | 'compliance' | 'monitoring';
@@ -119,7 +119,7 @@ export default function ComprehensiveSecurityDashboard({
 
   const generateMockData = useCallback((): SecurityMetrics => {
     const baseTime = new Date();
-    const timeRangeMultiplier = selectedTimeRange === '24h' ? 1 : selectedTimeRange === '7d' ? 7 : 30;
+    const timeRangeMultiplier = selectedTimeRange === '24 h' ? 1 : selectedTimeRange === '7d' ? 7 : 30;
 
     return {
       overall: {
@@ -140,7 +140,7 @@ export default function ComprehensiveSecurityDashboard({
             id: 'threat-001',
             type: 'SQL Injection Attempt',
             severity: 'high',
-            description: 'Detected SQL injection attempt from IP 192.168.1.100',
+            description: 'Detected SQL injection attempt from IP192.168.1.100',
             timestamp: new Date(baseTime.getTime() - Math.random() * 3600000),
             source: '192.168.1.100',
             status: 'investigating'
@@ -176,7 +176,7 @@ export default function ComprehensiveSecurityDashboard({
             id: 'vuln-001',
             name: 'Outdated jQuery Library',
             severity: 'high',
-            description: 'jQuery version 3.4.1 has known security vulnerabilities',
+            description: 'jQuery version3.4.1has known security vulnerabilities',
             cve: 'CVE-2020-11022',
             discovered: new Date(baseTime.getTime() - Math.random() * 86400000),
             status: 'open'
@@ -325,18 +325,18 @@ export default function ComprehensiveSecurityDashboard({
 
   const getSeverityIcon = (severity: string) => {
     switch (severity) {
-      case 'critical': return <XCircle className="h-4 w-4" />;
-      case 'high': return <AlertCircle className="h-4 w-4" />;
-      case 'medium': return <AlertTriangle className="h-4 w-4" />;
-      case 'low': return <CheckCircle className="h-4 w-4" />;
-      default: return <Activity className="h-4 w-4" />;
+      case 'critical': return <XCircle className="h-4w-4" />;
+      case 'high': return <AlertCircle className="h-4w-4" />;
+      case 'medium': return <AlertTriangle className="h-4w-4" />;
+      case 'low': return <CheckCircle className="h-4w-4" />;
+      default: return <Activity className="h-4w-4" />;
     }
   };
 
   if (isLoading) {
     return (
       <div className="flex items-center justify-center h-64">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2border-blue-600"></div>
       </div>
     );
   }
@@ -355,17 +355,17 @@ export default function ComprehensiveSecurityDashboard({
           <select
             value={selectedTimeRange}
             onChange={(e) => setSelectedTimeRange(e.target.value as any)}
-            className="px-3 py-1 border border-gray-300 rounded-md text-sm"
+            className="px-3py-1border border-gray-300 rounded-md text-sm"
           >
-            <option value="24h">Last 24 hours</option>
-            <option value="7d">Last 7 days</option>
-            <option value="30d">Last 30 days</option>
+            <option value="24 h">Last24 hours</option>
+            <option value="7d">Last 7days</option>
+            <option value="30 d">Last30 days</option>
           </select>
-          <div className={`px-3 py-1 rounded-full text-sm font-medium ${
+          <div className={`px-3py-1rounded-full text-sm font-medium ${
             metrics.overall.securityScore >= 90 ? 'text-green-600 bg-green-100' :
             metrics.overall.securityScore >= 70 ? 'text-yellow-600 bg-yellow-100' :
             'text-red-600 bg-red-100'
-          }`}>
+          }`}
             Security Score: {Math.round(metrics.overall.securityScore)}
           </div>
         </div>
@@ -386,7 +386,7 @@ export default function ComprehensiveSecurityDashboard({
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: 20 }}
-                className={`p-4 rounded-lg border ${getSeverityColor(alert.severity)}`}
+                className={`p-4rounded-lg border ${getSeverityColor(alert.severity)}`}
               >
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-3">
@@ -400,7 +400,7 @@ export default function ComprehensiveSecurityDashboard({
                     onClick={() => resolveAlert(alert.id)}
                     className="text-gray-400 hover:text-gray-600"
                   >
-                    <XCircle className="h-4 w-4" />
+                    <XCircle className="h-4w-4" />
                   </button>
                 </div>
               </motion.div>
@@ -410,11 +410,11 @@ export default function ComprehensiveSecurityDashboard({
       </AnimatePresence>
 
       {/* Overview Metrics */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1md:grid-cols-2lg:grid-cols-4gap-6">
         <Card>
-          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+          <CardHeader className="flex flex-row items-center justify-between space-y-0pb-2">
             <CardTitle className="text-sm font-medium">Threats Blocked</CardTitle>
-            <Shield className="h-4 w-4 text-muted-foreground" />
+            <Shield className="h-4w-4text-muted-foreground" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">{metrics.overall.threatsBlocked}</div>
@@ -425,9 +425,9 @@ export default function ComprehensiveSecurityDashboard({
         </Card>
 
         <Card>
-          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+          <CardHeader className="flex flex-row items-center justify-between space-y-0pb-2">
             <CardTitle className="text-sm font-medium">Vulnerabilities</CardTitle>
-            <AlertTriangle className="h-4 w-4 text-muted-foreground" />
+            <AlertTriangle className="h-4w-4text-muted-foreground" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">{metrics.vulnerabilities.total}</div>
@@ -438,9 +438,9 @@ export default function ComprehensiveSecurityDashboard({
         </Card>
 
         <Card>
-          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+          <CardHeader className="flex flex-row items-center justify-between space-y-0pb-2">
             <CardTitle className="text-sm font-medium">Active Alerts</CardTitle>
-            <Activity className="h-4 w-4 text-muted-foreground" />
+            <Activity className="h-4w-4text-muted-foreground" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">{metrics.monitoring.activeAlerts}</div>
@@ -451,9 +451,9 @@ export default function ComprehensiveSecurityDashboard({
         </Card>
 
         <Card>
-          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+          <CardHeader className="flex flex-row items-center justify-between space-y-0pb-2">
             <CardTitle className="text-sm font-medium">Compliance</CardTitle>
-            <CheckCircle className="h-4 w-4 text-muted-foreground" />
+            <CheckCircle className="h-4w-4text-muted-foreground" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">
@@ -467,7 +467,7 @@ export default function ComprehensiveSecurityDashboard({
       </div>
 
       {/* Threat Analysis */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1lg:grid-cols-2gap-6">
         <Card>
           <CardHeader>
             <CardTitle>Threat Severity Distribution</CardTitle>
@@ -515,7 +515,7 @@ export default function ComprehensiveSecurityDashboard({
           <CardContent>
             <div className="space-y-3">
               {metrics.threats.recent.map((threat, index) => (
-                <div key={index} className="flex items-center justify-between p-3 border rounded-lg">
+                <div key={index} className="flex items-center justify-between p-3border rounded-lg">
                   <div className="flex items-center space-x-3">
                     {getSeverityIcon(threat.severity)}
                     <div>
@@ -524,7 +524,7 @@ export default function ComprehensiveSecurityDashboard({
                     </div>
                   </div>
                   <div className="text-right">
-                    <div className={`text-xs px-2 py-1 rounded-full ${getSeverityColor(threat.severity)}`}>
+                    <div className={`text-xs px-2py-1rounded-full ${getSeverityColor(threat.severity)}`}
                       {threat.status}
                     </div>
                     <div className="text-xs text-muted-foreground mt-1">
@@ -545,10 +545,10 @@ export default function ComprehensiveSecurityDashboard({
           <CardDescription>Security compliance and configuration status</CardDescription>
         </CardHeader>
         <CardContent>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1md:grid-cols-2lg:grid-cols-4gap-6">
             <div className="text-center">
-              <div className="w-12 h-12 mx-auto mb-2 rounded-full bg-green-100 flex items-center justify-center">
-                <Lock className="h-6 w-6 text-green-600" />
+              <div className="w-12 h-12 mx-auto mb-2rounded-full bg-green-100 flex items-center justify-center">
+                <Lock className="h-6w-6text-green-600" />
               </div>
               <h4 className="font-semibold text-sm">SSL/TLS</h4>
               <p className="text-xs text-muted-foreground">Grade: {metrics.compliance.ssl.grade}</p>
@@ -556,8 +556,8 @@ export default function ComprehensiveSecurityDashboard({
             </div>
 
             <div className="text-center">
-              <div className="w-12 h-12 mx-auto mb-2 rounded-full bg-blue-100 flex items-center justify-center">
-                <FileText className="h-6 w-6 text-blue-600" />
+              <div className="w-12 h-12 mx-auto mb-2rounded-full bg-blue-100 flex items-center justify-center">
+                <FileText className="h-6w-6text-blue-600" />
               </div>
               <h4 className="font-semibold text-sm">CSP</h4>
               <p className="text-xs text-muted-foreground">
@@ -569,21 +569,21 @@ export default function ComprehensiveSecurityDashboard({
             </div>
 
             <div className="text-center">
-              <div className="w-12 h-12 mx-auto mb-2 rounded-full bg-purple-100 flex items-center justify-center">
-                <Shield className="h-6 w-6 text-purple-600" />
+              <div className="w-12 h-12 mx-auto mb-2rounded-full bg-purple-100 flex items-center justify-center">
+                <Shield className="h-6w-6text-purple-600" />
               </div>
               <h4 className="font-semibold text-sm">Security Headers</h4>
               <p className="text-xs text-muted-foreground">
                 {Object.values(metrics.compliance.headers).every(Boolean) ? 'All Set' : 'Issues Found'}
               </p>
               <p className="text-xs text-muted-foreground">
-                {Object.values(metrics.compliance.headers).filter(Boolean).length}/4 configured
+                {Object.values(metrics.compliance.headers).filter(Boolean).length}/4configured
               </p>
             </div>
 
             <div className="text-center">
-              <div className="w-12 h-12 mx-auto mb-2 rounded-full bg-orange-100 flex items-center justify-center">
-                <Globe className="h-6 w-6 text-orange-600" />
+              <div className="w-12 h-12 mx-auto mb-2rounded-full bg-orange-100 flex items-center justify-center">
+                <Globe className="h-6w-6text-orange-600" />
               </div>
               <h4 className="font-semibold text-sm">GDPR</h4>
               <p className="text-xs text-muted-foreground">

@@ -103,8 +103,8 @@ export default function EnhancedSEO({
       <meta name="twitte, r:creator" content="@ziontechsolutions" />
       
       {/* Additional Meta Tags */}
-      <meta name="theme-color" content="#2563eb" />
-      <meta name="msapplication-TileColor" content="#2563eb" />
+      <meta name="theme-color" content="#2563 eb" />
+      <meta name="msapplication-TileColor" content="#2563 eb" />
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="default" />
       <meta name="apple-mobile-web-app-title" content="Zion Tech Solutions" />

@@ -99,14 +99,14 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       }
 
       return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm: px-6 l,g:px-8">
+        <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4sm: px-6l,g:px-8">
           <div className="max-w-md w-fullspace-y-8">
             <div className="text-center">
-              <div className="mx-auto h-12 w-12text-red-500">
+              <div className="mx-auto h-12 w-12 text-red-500">
                 <svg
-                  className="h-12w-12"
+                  className="h-12 w-12"
                   fill="none"
-                  viewBox="0 0 24 24"
+                  viewBox="002424"
                   stroke="currentColor"
                   aria-hidden="true"
                 >
@@ -114,32 +114,32 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth={2}
-                    d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"
+                    d="M129 v 2 m04 h.01 m-6.9384 h 13.856 c1.5402.502-1.6671.732-2.5L 13.7324 c-.77-.833-1.964-.833-2.7320 L3.73216.5c-.77.833.1922.51.7322.5z"
                   />
                 </svg>
               </div>
-              <h2 className="mt-6 text-3xl font-extraboldtext-gray-900">
+              <h2 className="mt-6text-3xl font-extraboldtext-gray-900">
                 Something went wrong
               </h2>
-              <p className="mt-2 text-smtext-gray-600">
+              <p className="mt-2text-sm text-gray-600">
                 We&apos;re sorry, but something unexpected happened. Please try again.
               </p>
             </div>
 
-            <h1 className="text-2xl font-bold text-gray-900mb-4" id="oops-something-went-wrong">
+            <h 1 className="text-2xl font-bold text-gray-900 mb-4" id="oops-something-went-wrong">
               Oops! Something went wrong
             </h1>
             
-            <p className="text-gray-600mb-6">
+            <p className="text-gray-600 mb-6">
               We&apos;re sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
             </p>
 
             {process.env.NODE_ENV === 'development' && this.state.error && (
               <details className="mb-6text-left">
-                <summary className="cursor-pointer text-sm text-gray-500 hover:text-gray-700mb-2">
+                <summary className="cursor-pointer text-sm text-gray-500 hover:text-gray-700 mb-2">
                   Error Details (Development)
                 </summary>
-                <div className="bg-gray-100 p-4 rounded text-xs font-mono text-gray-800 overflow-automax-h-40">
+                <div className="bg-gray-100 p-4rounded text-xs font-mono text-gray-800 overflow-automax-h-40">
                   <div className="mb-2">
                     <strong>Erro, r:</strong> {this.state.error.message}
                   </div>
@@ -160,23 +160,23 @@ class EnhancedErrorBoundary extends Component<Props, State> {
             <div className="flex flex-col sm:flex-rowgap-3">
               <motion.button
                 onClick={this.handleRetry}
-                className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focu,s:ring-blue-500"
+                className="group relative w-full flex justify-center py-2px-4border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2focus:ring-offset-2focu,s:ring-blue-500"
               >
                 Try Again
               </motion.button>
               
               <button
                 onClick={this.handleReload}
-                className="group relative w-full flex justify-center py-2 px-4 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focu,s:ring-blue-500"
+                className="group relative w-full flex justify-center py-2px-4border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2focus:ring-offset-2focu,s:ring-blue-500"
               >
                 Reload Page
               </button>
             </div>
 
             {process.env.NODE_ENV === 'development' && this.state.error && (
-              <div className="mt-8 p-4 bg-red-50 border border-red-200rounded-md">
-                <h3 className="text-sm font-medium text-red-800mb-2">Error Detail, s:</h3>
-                <pre className="text-xs text-red-700overflow-auto">
+              <div className="mt-8p-4bg-red-50 border border-red-200 rounded-md">
+                <h3 className="text-sm font-medium text-red-800 mb-2">Error Detail, s:</h3>
+                <pre className="text-xs text-red-700 overflow-auto">
                   {this.state.error.toString()}
                   {this.state.errorInfo?.componentStack}
                 </pre>

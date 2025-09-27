@@ -51,8 +51,8 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ cla
       const performanceEntries = performance.getEntriesByType('navigation');
       const navigationEntry = performanceEntries[0] as PerformanceNavigationTiming;
       
-      let loadTime = Math.random() * 2000 + 500; // 500-2500ms
-      let renderTime = Math.random() * 500 + 100; // 100-600ms
+      let loadTime = Math.random() * 2000 + 500; // 500-2500 ms
+      let renderTime = Math.random() * 500 + 100; // 100-600 ms
       
       if (navigationEntry) {
         loadTime = navigationEntry.loadEventEnd - navigationEntry.fetchStart;
@@ -64,9 +64,9 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ cla
         renderTime: Math.round(renderTime),
         memoryUsage: Math.random() * 100, // 0-100%
         cpuUsage: Math.random() * 100, // 0-100%
-        networkLatency: Math.random() * 100 + 10, // 10-110ms
+        networkLatency: Math.random() * 100 + 10, // 10-110 ms
         cacheHitRate: Math.random() * 40 + 60, // 60-100%
-        bundleSize: Math.random() * 500 + 200, // 200-700KB
+        bundleSize: Math.random() * 500 + 200, // 200-700 KB
         errorRate: Math.random() * 5 // 0-5%
       };
 
@@ -84,9 +84,9 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ cla
       setOptimizations(suggestions);
 
       // Generate detailed optimization suggestions
-      const optimizationSuggestion, s: OptimizationSuggestion[] = [
+      const optimizationSuggestions: OptimizationSuggestion[] = [
         {
-          typ, e: 'performance',
+          type: 'performance',
           priority: 'high',
           title: 'Implement Code Splitting',
           description: 'Break down large bundles into smaller chunks to improve initial load time',
@@ -150,16 +150,16 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ cla
     setIsOptimizing(false);
   }, []);
 
-  const getPerformanceColor = (value: number, thresholds: { goo, d: number; warnin, g: number }) => {
+  const getPerformanceColor = (value: number, thresholds: { good: number; warning: number }) => {
     if (value <= thresholds.good) return 'text-green-500';
     if (value <= thresholds.warning) return 'text-yellow-500';
     return 'text-red-500';
   };
 
-  const getPerformanceIcon = (value: number, thresholds: { goo, d: number; warnin, g: number }) => {
-    if (value <= thresholds.good) return <CheckCircle className="w-5 h-5text-green-500" />;
-    if (value <= thresholds.warning) return <AlertTriangle className="w-5 h-5text-yellow-500" />;
-    return <XCircle className="w-5 h-5text-red-500" />;
+  const getPerformanceIcon = (value: number, thresholds: { good: number; warning: number }) => {
+    if (value <= thresholds.good) return <CheckCircle className="w-5h-5text-green-500" />;
+    if (value <= thresholds.warning) return <AlertTriangle className="w-5h-5text-yellow-500" />;
+    return <XCircle className="w-5h-5text-red-500" />;
   };
 
   const getPriorityColor = (priority: string): string => {
@@ -167,22 +167,22 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ cla
       case 'high': return 'bg-red-100 text-red-800 border-red-200';
       case 'medium': return 'bg-yellow-100 text-yellow-800 border-yellow-200';
       case 'low': return 'bg-green-100 text-green-800 border-green-200';
-      defaul, t: return 'bg-gray-100 text-gray-800 border-gray-200';
+      default: return 'bg-gray-100 text-gray-800 border-gray-200';
     }
   };
 
   useEffect(() => {
     measurePerformance();
-    const interval = setInterval(measurePerformance, 10000); // Measure every 10 seconds
+    const interval = setInterval(measurePerformance, 10000); // Measure every10 seconds
     return () => clearInterval(interval);
   }, [measurePerformance]);
 
   return (
-    <div className={`bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 ${className}`}>
-      <div className="flex items-center justify-betweenmb-6">
+    <div className={`bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 `}>
+      <div className="flex items-center justify-between mb-6">
         <div className="flex items-centerspace-x-3">
-          <Zap className="w-8 h-8text-yellow-500" />
-          <h2 className="text-2xl font-bold text-gray-900dark:text-white">
+          <Zap className="w-8h-8text-yellow-500" />
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
             Advanced Performance Optimizer
           </h2>
         </div>
@@ -190,14 +190,14 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ cla
           <button
             onClick={measurePerformance}
             disabled={isAnalyzing}
-            className="px-4 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600 disable, d:opacity-50transition-colors"
+            className="px-4py-2bg-gray-500 text-white rounded-lg hover:bg-gray-600 disable, d:opacity-50 transition-colors"
           >
             {isAnalyzing ? 'Analyzing...' : 'Measure'}
           </button>
           <button
             onClick={performOptimization}
             disabled={isOptimizing || optimizations.length === 0}
-            className="px-4 py-2 bg-yellow-500 text-white rounded-lg hover:bg-yellow-600 disable, d:opacity-50transition-colors"
+            className="px-4py-2bg-yellow-500 text-white rounded-lg hover:bg-yellow-600 disable, d:opacity-50 transition-colors"
           >
             {isOptimizing ? 'Optimizing...' : 'Optimize'}
           </button>
@@ -205,100 +205,100 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ cla
       </div>
 
       {/* Performance Metrics Grid */}
-      <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-4mb-6">
-        <div className="bg-gray-50 dar, k:bg-gray-700 p-4rounded-lg">
-          <div className="flex items-centerjustify-between">
+      <div className="grid grid-cols-1md:grid-cols-2lg:grid-cols-4gap-4mb-6">
+        <div className="bg-gray-50 dark:bg-gray-700 p-4rounded-lg">
+          <div className="flex items-center justify-between">
             <div>
-              <p className="text-sm text-gray-600 dar,k:text-gray-400">Load Time</p>
-              <p className={`text-2xl font-bold ${getPerformanceColor(metrics.loadTime, { good: 1000, warning: 2000 })}`}>
+              <p className="text-sm text-gray-600 dark:text-gray-400">Load Time</p>
+              <p className={`text-2xl font-bold ${getPerformanceColor(metrics.loadTime, { good: 1000, warning: 2000 })}`}
                 {metrics.loadTime}ms
               </p>
             </div>
-            <Clock className="w-5 h-5text-blue-500" />
+            <Clock className="w-5h-5text-blue-500" />
           </div>
         </div>
 
         <div className="bg-gray-50 dark: bg-gray-700 p-4rounded-lg">
-          <div className="flex items-centerjustify-between">
+          <div className="flex items-center justify-between">
             <div>
-              <p className="text-sm text-gray-600 dar,k:text-gray-400">Render Time</p>
-              <p className={`text-2xl font-bold ${getPerformanceColor(metrics.renderTime, { good: 200, warning: 500 })}`}>
+              <p className="text-sm text-gray-600 dark:text-gray-400">Render Time</p>
+              <p className={`text-2xl font-bold ${getPerformanceColor(metrics.renderTime, { good: 200, warning: 500 })}`}
                 {metrics.renderTime}ms
               </p>
             </div>
-            <Zap className="w-5 h-5text-purple-500" />
+            <Zap className="w-5h-5text-purple-500" />
           </div>
         </div>
 
         <div className="bg-gray-50 dark: bg-gray-700 p-4rounded-lg">
-          <div className="flex items-centerjustify-between">
+          <div className="flex items-center justify-between">
             <div>
-              <p className="text-sm text-gray-600 dar,k:text-gray-400">Memory Usage</p>
-              <p className={`text-2xl font-bold ${getPerformanceColor(metrics.memoryUsage, { good: 50, warning: 80 })}`}>
+              <p className="text-sm text-gray-600 dark:text-gray-400">Memory Usage</p>
+              <p className={`text-2xl font-bold ${getPerformanceColor(metrics.memoryUsage, { good: 50, warning: 80 })}`}
                 {metrics.memoryUsage.toFixed(1)}%
               </p>
             </div>
-            <HardDrive className="w-5 h-5text-green-500" />
+            <HardDrive className="w-5h-5text-green-500" />
           </div>
         </div>
 
         <div className="bg-gray-50 dark: bg-gray-700 p-4rounded-lg">
-          <div className="flex items-centerjustify-between">
+          <div className="flex items-center justify-between">
             <div>
-              <p className="text-sm text-gray-600 dar,k:text-gray-400">CPU Usage</p>
-              <p className={`text-2xl font-bold ${getPerformanceColor(metrics.cpuUsage, { good: 30, warning: 70 })}`}>
+              <p className="text-sm text-gray-600 dark:text-gray-400">CPU Usage</p>
+              <p className={`text-2xl font-bold ${getPerformanceColor(metrics.cpuUsage, { good: 30, warning: 70 })}`}
                 {metrics.cpuUsage.toFixed(1)}%
               </p>
             </div>
-            <Cpu className="w-5 h-5text-purple-500" />
+            <Cpu className="w-5h-5text-purple-500" />
           </div>
         </div>
 
         <div className="bg-gray-50 dark: bg-gray-700 p-4rounded-lg">
-          <div className="flex items-centerjustify-between">
+          <div className="flex items-center justify-between">
             <div>
-              <p className="text-sm text-gray-600 dar,k:text-gray-400">Network Latency</p>
-              <p className={`text-2xl font-bold ${getPerformanceColor(metrics.networkLatency, { good: 50, warning: 80 })}`}>
+              <p className="text-sm text-gray-600 dark:text-gray-400">Network Latency</p>
+              <p className={`text-2xl font-bold ${getPerformanceColor(metrics.networkLatency, { good: 50, warning: 80 })}`}
                 {metrics.networkLatency.toFixed(0)}ms
               </p>
             </div>
-            <Wifi className="w-5 h-5text-indigo-500" />
+            <Wifi className="w-5h-5text-indigo-500" />
           </div>
         </div>
 
         <div className="bg-gray-50 dark: bg-gray-700 p-4rounded-lg">
-          <div className="flex items-centerjustify-between">
+          <div className="flex items-center justify-between">
             <div>
-              <p className="text-sm text-gray-600 dar,k:text-gray-400">Cache Hit Rate</p>
-              <p className={`text-2xl font-bold ${getPerformanceColor(100 - metrics.cacheHitRate, { good: 20, warning: 40 })}`}>
+              <p className="text-sm text-gray-600 dark:text-gray-400">Cache Hit Rate</p>
+              <p className={`text-2xl font-bold ${getPerformanceColor(100 - metrics.cacheHitRate, { good: 20, warning: 40 })}`}
                 {metrics.cacheHitRate.toFixed(1)}%
               </p>
             </div>
-            <Battery className="w-5 h-5text-orange-500" />
+            <Battery className="w-5h-5text-orange-500" />
           </div>
         </div>
 
         <div className="bg-gray-50 dark: bg-gray-700 p-4rounded-lg">
-          <div className="flex items-centerjustify-between">
+          <div className="flex items-center justify-between">
             <div>
-              <p className="text-sm text-gray-600 dar,k:text-gray-400">Bundle Size</p>
-              <p className={`text-2xl font-bold ${getPerformanceColor(metrics.bundleSize, { good: 300, warning: 500 })}`}>
+              <p className="text-sm text-gray-600 dark:text-gray-400">Bundle Size</p>
+              <p className={`text-2xl font-bold ${getPerformanceColor(metrics.bundleSize, { good: 300, warning: 500 })}`}
                 {(metrics.bundleSize / 1024).toFixed(1)}KB
               </p>
             </div>
-            <Zap className="w-5 h-5text-yellow-500" />
+            <Zap className="w-5h-5text-yellow-500" />
           </div>
         </div>
 
         <div className="bg-gray-50 dark: bg-gray-700 p-4rounded-lg">
-          <div className="flex items-centerjustify-between">
+          <div className="flex items-center justify-between">
             <div>
-              <p className="text-sm text-gray-600 dar,k:text-gray-400">Error Rate</p>
-              <p className={`text-2xl font-bold ${getPerformanceColor(metrics.errorRate, { good: 1, warning: 3 })}`}>
+              <p className="text-sm text-gray-600 dark:text-gray-400">Error Rate</p>
+              <p className={`text-2xl font-bold ${getPerformanceColor(metrics.errorRate, { good: 1, warning: 3 })}`}
                 {metrics.errorRate.toFixed(1)}%
               </p>
             </div>
-            <XCircle className="w-5 h-5text-red-500" />
+            <XCircle className="w-5h-5text-red-500" />
           </div>
         </div>
       </div>
@@ -313,10 +313,10 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ cla
             {optimizations.map((suggestion, index) => (
               <div
                 key={index}
-                className="bg-yellow-50 dark: bg-yellow-900/20 border border-yellow-200 dar, k:border-yellow-800 rounded-lg p-3 flex items-centerspace-x-3"
+                className="bg-yellow-50 dark: bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-lg p-3flex items-centerspace-x-3"
               >
-                <AlertTriangle className="w-5 h-5 text-yellow-500flex-shrink-0" />
-                <p className="text-yellow-700 dar,k:text-yellow-300">{suggestion}</p>
+                <AlertTriangle className="w-5h-5text-yellow-500 flex-shrink-0" />
+                <p className="text-yellow-700 dark:text-yellow-300">{suggestion}</p>
               </div>
             ))}
           </div>
@@ -332,21 +332,21 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ cla
           <div className="space-y-4">
             {suggestions.map((suggestion, index) => (
               <div key={index} className="border rounded-lgp-4">
-                <div className="flex items-center justify-betweenmb-2">
+                <div className="flex items-center justify-between mb-2">
                   <h4 className="font-semiboldtext-lg">{suggestion.title}</h4>
-                  <span className={`px-2 py-1 text-xs font-medium rounded-full border ${getPriorityColor(suggestion.priority)}`}>
+                  <span className={`px-2py-1text-xs font-medium rounded-full border ${getPriorityColor(suggestion.priority)}`}
                     {suggestion.priority.toUpperCase()}
                   </span>
                 </div>
-                <p className="text-gray-600 dark:text-gray-400mb-2">{suggestion.description}</p>
-                <div className="grid grid-cols-1 md: grid-cols-2 gap-4text-sm">
+                <p className="text-gray-600 dark:text-gray-400 mb-2">{suggestion.description}</p>
+                <div className="grid grid-cols-1md:grid-cols-2gap-4text-sm">
                   <div>
-                    <span className="font-medium text-green-700dark:text-green-400">Expected Impac, t:</span>
-                    <p className="text-gray-600 dar,k:text-gray-400">{suggestion.impact}</p>
+                    <span className="font-medium text-green-700 dark:text-green-400">Expected Impac, t:</span>
+                    <p className="text-gray-600 dark:text-gray-400">{suggestion.impact}</p>
                   </div>
                   <div>
                     <span className="font-medium text-blue-700 dark:text-blue-400">Implementatio, n:</span>
-                    <p className="text-gray-600 dar,k:text-gray-400">{suggestion.implementation}</p>
+                    <p className="text-gray-600 dark:text-gray-400">{suggestion.implementation}</p>
                   </div>
                 </div>
               </div>
@@ -356,21 +356,21 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ cla
       )}
 
       {/* Performance Tips */}
-      <div className="grid grid-cols-1 md: grid-cols-2gap-4">
+      <div className="grid grid-cols-1md:grid-cols-2gap-4">
         <div className="bg-blue-50 dark:bg-blue-900/20 p-4rounded-lg">
-          <h4 className="font-semibold text-blue-900 dark:text-blue-100mb-2">
+          <h4 className="font-semibold text-blue-900 dark:text-blue-100 mb-2">
             Code Splitting
           </h4>
-          <p className="text-sm text-blue-700dark:text-blue-300">
+          <p className="text-sm text-blue-700 dark:text-blue-300">
             Implement dynamic imports to reduce initial bundle size and improve load times.
           </p>
         </div>
 
         <div className="bg-green-50 dark:bg-green-900/20 p-4rounded-lg">
-          <h4 className="font-semibold text-green-900 dar, k:text-green-100mb-2">
+          <h4 className="font-semibold text-green-900 dark:text-green-100 mb-2">
             Caching Strategy
           </h4>
-          <p className="text-sm text-green-700 dar,k:text-green-300">
+          <p className="text-sm text-green-700 dark:text-green-300">
             Use service workers and HTTP caching to improve repeat visit performance.
           </p>
         </div>
