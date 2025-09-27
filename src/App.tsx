@@ -10,7 +10,7 @@ import SEO from './components/SEO';
 import Home from './pages/Home';
 import { performanceMonitor } from './utils/performanceMonitor';
 import { accessibilityManager } from './utils/accessibility';
-import { errorHandler, setupGlobalErrorHandlers } from './utils/errorHandling';
+import { setupGlobalErrorHandlers } from './utils/errorHandling';
 import { analyticsManager } from './utils/analytics';
 import { securityManager } from './utils/security';
 import './index.css';

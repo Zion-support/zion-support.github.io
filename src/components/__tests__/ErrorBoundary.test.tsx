@@ -40,7 +40,7 @@ describe('ErrorBoundary', () => {
     expect(screen.getByText(/We're sorry, but something unexpected happened/i)).toBeInTheDocument();
   });
 
-  it('logs error to console when error occurs', () => {
+  it('logs error to console and renders error message when error occurs', () => {
     const consoleSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
     
     render(
@@ -54,6 +54,8 @@ describe('ErrorBoundary', () => {
       expect.any(Error), 
       expect.any(Object)
     );
+    
+    expect(screen.getByText(/Something went wrong/i)).toBeInTheDocument();
     
     consoleSpy.mockRestore();
   });
