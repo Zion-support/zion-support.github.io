@@ -1,5 +1,0 @@
-<<<<<<< HEAD
-export { default } from '../../components/SEO';
-=======
-export { default } from '@/components/SEO';
->>>>>>> origin/backup-main-20250924-182607
