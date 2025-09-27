@@ -1,485 +1,579 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/Card';
 import { 
   Activity, 
   AlertTriangle, 
-  CheckCircle, 
-  Clock, 
+  BarChart3, 
+  Cpu, 
   Database, 
   Globe, 
+  HardDrive, 
+  Monitor, 
+  Network, 
+  Server, 
   Shield, 
   TrendingUp,
   Users,
-  Zap,
-  BarChart3,
-  Cpu,
-  HardDrive,
-  Wifi,
-  Eye,
-  Search,
-  X
+  Zap
 } from 'lucide-react';
+import { 
+  LineChart, 
+  Line, 
+  XAxis, 
+  YAxis, 
+  CartesianGrid, 
+  Tooltip, 
+  ResponsiveContainer,
+  AreaChart,
+  Area,
+  BarChart,
+  Bar,
+  PieChart,
+  Pie,
+  Cell
+} from 'recharts';
 
 interface SystemMetrics {
-  performance: {
-    loadTime: number;
-    firstContentfulPaint: number;
-    largestContentfulPaint: number;
-    cumulativeLayoutShift: number;
-    firstInputDelay: number;
-    timeToInteractive: number;
-  };
-  resources: {
-    memoryUsage: number;
-    cpuUsage: number;
-    networkLatency: number;
-    bundleSize: number;
-    cacheHitRate: number;
-  };
-  userExperience: {
-    bounceRate: number;
-    sessionDuration: number;
-    pageViews: number;
-    uniqueVisitors: number;
-    conversionRate: number;
-  };
-  errors: {
-    total: number;
-    critical: number;
-    resolved: number;
-    unresolved: number;
-  };
-  security: {
-    threatsBlocked: number;
-    vulnerabilities: number;
-    sslScore: number;
-    cspViolations: number;
-  };
+  timestamp: string;
+  cpu: number;
+  memory: number;
+  disk: number;
+  network: number;
+  database: number;
+  responseTime: number;
+  errorRate: number;
+  throughput: number;
 }
 
-interface MonitoringDashboardProps {
-  refreshInterval?: number;
-  enableRealTimeUpdates?: boolean;
-  onMetricsUpdate?: (metrics: SystemMetrics) => void;
+interface Alert {
+  id: string;
+  type: 'performance' | 'security' | 'error' | 'capacity';
+  severity: 'low' | 'medium' | 'high' | 'critical';
+  message: string;
+  timestamp: Date;
+  resolved: boolean;
+  source: string;
 }
 
-export default function ComprehensiveMonitoringDashboard({
-  refreshInterval = 5000,
-  enableRealTimeUpdates = true,
-  onMetricsUpdate
-}: MonitoringDashboardProps) {
-  const [metrics, setMetrics] = useState<SystemMetrics | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [lastUpdated, setLastUpdated] = useState<Date>(new Date());
-  const [alerts, setAlerts] = useState<Array<{
-    id: string;
-    type: 'warning' | 'error' | 'info' | 'success';
-    message: string;
-    timestamp: Date;
-    resolved: boolean;
-  }>>([]);
+interface PerformanceData {
+  metric: string;
+  value: number;
+  trend: 'up' | 'down' | 'stable';
+  change: number;
+  threshold: number;
+  status: 'good' | 'warning' | 'critical';
+}
 
-  const collectMetrics = useCallback(async () => {
-    try {
-      // Collect performance metrics
-      const performance = await collectPerformanceMetrics();
-      
-      // Collect resource metrics
-      const resources = await collectResourceMetrics();
-      
-      // Collect user experience metrics
-      const userExperience = await collectUserExperienceMetrics();
-      
-      // Collect error metrics
-      const errors = await collectErrorMetrics();
-      
-      // Collect security metrics
-      const security = await collectSecurityMetrics();
+const ComprehensiveMonitoringDashboard: React.FC = () => {
+  const [metrics, setMetrics] = useState<SystemMetrics[]>([]);
+  const [alerts, setAlerts] = useState<Alert[]>([]);
+  const [performanceData, setPerformanceData] = useState<PerformanceData[]>([]);
+  const [isMonitoring, setIsMonitoring] = useState(false);
+  const [selectedTimeRange, setSelectedTimeRange] = useState('1h');
+  const [activeTab, setActiveTab] = useState('overview');
 
-      const newMetrics: SystemMetrics = {
-        performance,
-        resources,
-        userExperience,
-        errors,
-        security
-      };
-
-      setMetrics(newMetrics);
-      setLastUpdated(new Date());
-      onMetricsUpdate?.(newMetrics);
-
-      // Check for alerts
-      checkForAlerts(newMetrics);
-    } catch (error) {
-      console.error('Failed to collect metrics:', error);
-    } finally {
-      setIsLoading(false);
-    }
-  }, [onMetricsUpdate]);
-
-  const collectPerformanceMetrics = async () => {
-    if (typeof window === 'undefined') {
+  const generateMockMetrics = useCallback(() => {
+    const now = new Date();
+    const newMetrics: SystemMetrics[] = Array.from({ length: 20 }, (_, i) => {
+      const timestamp = new Date(now.getTime() - (19 - i) * 60000);
       return {
-        loadTime: 0,
-        firstContentfulPaint: 0,
-        largestContentfulPaint: 0,
-        cumulativeLayoutShift: 0,
-        firstInputDelay: 0,
-        timeToInteractive: 0
+        timestamp: timestamp.toLocaleTimeString(),
+        cpu: Math.round(20 + Math.random() * 60),
+        memory: Math.round(30 + Math.random() * 50),
+        disk: Math.round(40 + Math.random() * 40),
+        network: Math.round(10 + Math.random() * 80),
+        database: Math.round(15 + Math.random() * 70),
+        responseTime: Math.round(50 + Math.random() * 200),
+        errorRate: Math.round(Math.random() * 5),
+        throughput: Math.round(100 + Math.random() * 900)
       };
-    }
+    });
 
-    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-    const paintEntries = performance.getEntriesByType('paint');
-    
-    return {
-      loadTime: navigation.loadEventEnd - navigation.fetchStart,
-      firstContentfulPaint: paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
-      largestContentfulPaint: 0, // Will be updated by Web Vitals
-      cumulativeLayoutShift: 0, // Will be updated by Web Vitals
-      firstInputDelay: 0, // Will be updated by Web Vitals
-      timeToInteractive: navigation.domContentLoadedEventEnd - navigation.fetchStart
-    };
-  };
+    setMetrics(newMetrics);
 
-  const collectResourceMetrics = async () => {
-    if (typeof window === 'undefined') {
-      return {
-        memoryUsage: 0,
-        cpuUsage: 0,
-        networkLatency: 0,
-        bundleSize: 0,
-        cacheHitRate: 0
-      };
-    }
+    // Generate performance data
+    const newPerformanceData: PerformanceData[] = [
+      {
+        metric: 'CPU Usage',
+        value: 65,
+        trend: 'up',
+        change: 5.2,
+        threshold: 80,
+        status: 'good'
+      },
+      {
+        metric: 'Memory Usage',
+        value: 78,
+        trend: 'up',
+        change: 3.1,
+        threshold: 85,
+        status: 'warning'
+      },
+      {
+        metric: 'Disk Usage',
+        value: 45,
+        trend: 'stable',
+        change: 0.5,
+        threshold: 90,
+        status: 'good'
+      },
+      {
+        metric: 'Network Latency',
+        value: 120,
+        trend: 'down',
+        change: -8.3,
+        threshold: 200,
+        status: 'good'
+      },
+      {
+        metric: 'Database Connections',
+        value: 85,
+        trend: 'up',
+        change: 12.4,
+        threshold: 100,
+        status: 'warning'
+      },
+      {
+        metric: 'Error Rate',
+        value: 2.1,
+        trend: 'down',
+        change: -1.8,
+        threshold: 5,
+        status: 'good'
+      }
+    ];
 
-    const memory = (performance as any).memory;
-    const connection = (navigator as any).connection;
+    setPerformanceData(newPerformanceData);
 
-    return {
-      memoryUsage: memory ? memory.usedJSHeapSize / 1024 / 1024 : 0, // MB
-      cpuUsage: 0, // Would need Web Workers to measure
-      networkLatency: connection ? connection.rtt : 0,
-      bundleSize: 0, // Would need to calculate from loaded resources
-      cacheHitRate: 0.85 // Mock value
-    };
-  };
-
-  const collectUserExperienceMetrics = async () => {
-    // Mock data - in real implementation, this would come from analytics
-    return {
-      bounceRate: 0.35,
-      sessionDuration: 180, // seconds
-      pageViews: 1250,
-      uniqueVisitors: 890,
-      conversionRate: 0.12
-    };
-  };
-
-  const collectErrorMetrics = async () => {
-    // Mock data - in real implementation, this would come from error tracking
-    return {
-      total: 23,
-      critical: 2,
-      resolved: 18,
-      unresolved: 5
-    };
-  };
-
-  const collectSecurityMetrics = async () => {
-    // Mock data - in real implementation, this would come from security monitoring
-    return {
-      threatsBlocked: 156,
-      vulnerabilities: 3,
-      sslScore: 95,
-      cspViolations: 1
-    };
-  };
-
-  const checkForAlerts = (metrics: SystemMetrics) => {
-    const newAlerts: Array<{
-      id: string;
-      type: 'warning' | 'error' | 'info' | 'success';
-      message: string;
-      timestamp: Date;
-      resolved: boolean;
-    }> = [];
-
-    // Performance alerts
-    if (metrics.performance.loadTime > 3000) {
-      newAlerts.push({
-        id: 'slow-load',
-        type: 'warning',
-        message: 'Page load time is above 3 seconds',
-        timestamp: new Date(),
-        resolved: false
-      });
-    }
-
-    if (metrics.performance.cumulativeLayoutShift > 0.1) {
-      newAlerts.push({
-        id: 'layout-shift',
-        type: 'warning',
-        message: 'High cumulative layout shift detected',
-        timestamp: new Date(),
-        resolved: false
-      });
-    }
-
-    // Error alerts
-    if (metrics.errors.critical > 0) {
-      newAlerts.push({
-        id: 'critical-errors',
+    // Generate alerts
+    const newAlerts: Alert[] = [
+      {
+        id: '1',
+        type: 'performance',
+        severity: 'high',
+        message: 'High CPU usage detected on server-01',
+        timestamp: new Date(now.getTime() - 1000 * 60 * 15),
+        resolved: false,
+        source: 'server-01'
+      },
+      {
+        id: '2',
+        type: 'security',
+        severity: 'critical',
+        message: 'Suspicious login attempts detected',
+        timestamp: new Date(now.getTime() - 1000 * 60 * 30),
+        resolved: false,
+        source: 'auth-service'
+      },
+      {
+        id: '3',
+        type: 'capacity',
+        severity: 'medium',
+        message: 'Database connection pool approaching limit',
+        timestamp: new Date(now.getTime() - 1000 * 60 * 45),
+        resolved: true,
+        source: 'database'
+      },
+      {
+        id: '4',
         type: 'error',
-        message: `${metrics.errors.critical} critical errors detected`,
-        timestamp: new Date(),
-        resolved: false
-      });
-    }
+        severity: 'low',
+        message: 'Minor API timeout in payment service',
+        timestamp: new Date(now.getTime() - 1000 * 60 * 60),
+        resolved: true,
+        source: 'payment-service'
+      }
+    ];
 
-    // Security alerts
-    if (metrics.security.vulnerabilities > 0) {
-      newAlerts.push({
-        id: 'security-vulnerabilities',
-        type: 'error',
-        message: `${metrics.security.vulnerabilities} security vulnerabilities found`,
-        timestamp: new Date(),
-        resolved: false
-      });
-    }
-
-    setAlerts(prev => [...prev, ...newAlerts]);
-  };
-
-  const resolveAlert = (alertId: string) => {
-    setAlerts(prev => prev.map(alert => 
-      alert.id === alertId ? { ...alert, resolved: true } : alert
-    ));
-  };
+    setAlerts(newAlerts);
+  }, []);
 
   useEffect(() => {
-    collectMetrics();
+    generateMockMetrics();
+    setIsMonitoring(true);
 
-    if (enableRealTimeUpdates) {
-      const interval = setInterval(collectMetrics, refreshInterval);
-      return () => clearInterval(interval);
+    const interval = setInterval(generateMockMetrics, 10000);
+    return () => clearInterval(interval);
+  }, [generateMockMetrics]);
+
+  const getStatusColor = (status: string): string => {
+    switch (status) {
+      case 'good': return 'text-green-600';
+      case 'warning': return 'text-yellow-600';
+      case 'critical': return 'text-red-600';
+      default: return 'text-gray-600';
     }
-  }, [collectMetrics, enableRealTimeUpdates, refreshInterval]);
-
-  const getPerformanceGrade = (score: number) => {
-    if (score >= 90) return { grade: 'A', color: 'text-green-600' };
-    if (score >= 80) return { grade: 'B', color: 'text-blue-600' };
-    if (score >= 70) return { grade: 'C', color: 'text-yellow-600' };
-    if (score >= 60) return { grade: 'D', color: 'text-orange-600' };
-    return { grade: 'F', color: 'text-red-600' };
   };
 
-  const performanceScore = metrics ? 
-    Math.round((100 - (metrics.performance.loadTime / 100)) + 
-               (100 - (metrics.performance.cumulativeLayoutShift * 1000)) + 
-               (100 - (metrics.resources.memoryUsage / 10))) / 3 : 0;
+  const getSeverityColor = (severity: string): string => {
+    switch (severity) {
+      case 'critical': return 'bg-red-100 text-red-800 border-red-200';
+      case 'high': return 'bg-orange-100 text-orange-800 border-orange-200';
+      case 'medium': return 'bg-yellow-100 text-yellow-800 border-yellow-200';
+      case 'low': return 'bg-blue-100 text-blue-800 border-blue-200';
+      default: return 'bg-gray-100 text-gray-800 border-gray-200';
+    }
+  };
 
-  const { grade, color } = getPerformanceGrade(performanceScore);
+  const getTrendIcon = (trend: string) => {
+    switch (trend) {
+      case 'up': return <TrendingUp className="h-4 w-4 text-red-500" />;
+      case 'down': return <TrendingUp className="h-4 w-4 text-green-500 rotate-180" />;
+      case 'stable': return <div className="h-4 w-4 bg-gray-400 rounded-full" />;
+      default: return null;
+    }
+  };
 
-  if (isLoading) {
-    return (
-      <div className="flex items-center justify-center h-64">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2border-blue-600"></div>
-      </div>
-    );
-  }
+  const pieData = [
+    { name: 'Healthy', value: 75, color: '#10B981' },
+    { name: 'Warning', value: 20, color: '#F59E0B' },
+    { name: 'Critical', value: 5, color: '#EF4444' }
+  ];
+
+  const tabs = [
+    { id: 'overview', name: 'Overview', icon: Monitor },
+    { id: 'performance', name: 'Performance', icon: BarChart3 },
+    { id: 'security', name: 'Security', icon: Shield },
+    { id: 'infrastructure', name: 'Infrastructure', icon: Server },
+    { id: 'alerts', name: 'Alerts', icon: AlertTriangle }
+  ];
 
   return (
     <div className="space-y-6">
-      {/* Header */}
-      <div className="flex items-center justify-between">
-        <div>
-          <h2 className="text-2xl font-bold text-gray-900">System Monitoring Dashboard</h2>
-          <p className="text-gray-600">Real-time system performance and health metrics</p>
-        </div>
-        <div className="flex items-center space-x-4">
-          <div className="text-sm text-gray-500">
-            Last updated: {lastUpdated.toLocaleTimeString()}
-          </div>
-          <div className={`px-3py-1rounded-full text-sm font-medium ${color}`}
-            Performance: {grade}
-          </div>
-        </div>
-      </div>
-
-      {/* Alerts */}
-      <AnimatePresence>
-        {alerts.filter(alert => !alert.resolved).length > 0 && (
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            className="space-y-2"
-          >
-            {alerts.filter(alert => !alert.resolved).map(alert => (
-              <motion.div
-                key={alert.id}
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: 20 }}
-                className={`p-4rounded-lg border-l-4 ${
-                  alert.type === 'error' ? 'bg-red-50 border-red-400' :
-                  alert.type === 'warning' ? 'bg-yellow-50 border-yellow-400' :
-                  alert.type === 'info' ? 'bg-blue-50 border-blue-400' :
-                  'bg-green-50 border-green-400'
+      <Card>
+        <CardHeader>
+          <CardTitle className="flex items-center justify-between">
+            <div className="flex items-center space-x-2">
+              <Activity className="h-6 w-6 text-blue-600" />
+              <span>Comprehensive Monitoring Dashboard</span>
+            </div>
+            <div className="flex items-center space-x-4">
+              <div className="flex items-center space-x-2">
+                <div className={`w-3 h-3 rounded-full ${isMonitoring ? 'bg-green-500' : 'bg-gray-400'}`}></div>
+                <span className="text-sm text-gray-600">
+                  {isMonitoring ? 'Monitoring' : 'Stopped'}
+                </span>
+              </div>
+              <select
+                value={selectedTimeRange}
+                onChange={(e) => setSelectedTimeRange(e.target.value)}
+                className="px-3 py-1 border border-gray-300 rounded-md text-sm"
+              >
+                <option value="1h">Last Hour</option>
+                <option value="6h">Last 6 Hours</option>
+                <option value="24h">Last 24 Hours</option>
+                <option value="7d">Last 7 Days</option>
+              </select>
+            </div>
+          </CardTitle>
+          <CardDescription>
+            Real-time system monitoring with comprehensive analytics and alerting
+          </CardDescription>
+        </CardHeader>
+        <CardContent>
+          {/* Tab Navigation */}
+          <div className="flex space-x-1 mb-6 border-b border-gray-200">
+            {tabs.map((tab) => (
+              <button
+                key={tab.id}
+                onClick={() => setActiveTab(tab.id)}
+                className={`flex items-center space-x-2 px-4 py-2 text-sm font-medium border-b-2 transition-colors ${
+                  activeTab === tab.id
+                    ? 'border-blue-500 text-blue-600'
+                    : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
                 }`}
               >
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center space-x-2">
-                    {alert.type === 'error' && <AlertTriangle className="h-5w-5text-red-600" />}
-                    {alert.type === 'warning' && <AlertTriangle className="h-5w-5text-yellow-600" />}
-                    {alert.type === 'info' && <Activity className="h-5w-5text-blue-600" />}
-                    {alert.type === 'success' && <CheckCircle className="h-5w-5text-green-600" />}
-                    <span className="font-medium">{alert.message}</span>
+                <tab.icon className="h-4 w-4" />
+                <span>{tab.name}</span>
+              </button>
+            ))}
+          </div>
+
+          {/* Overview Tab */}
+          {activeTab === 'overview' && (
+            <div className="space-y-6">
+              {/* Key Metrics Grid */}
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div className="p-4 border rounded-lg text-center">
+                  <div className="text-2xl font-bold text-blue-600">98.5%</div>
+                  <div className="text-sm text-gray-600">Uptime</div>
+                </div>
+                <div className="p-4 border rounded-lg text-center">
+                  <div className="text-2xl font-bold text-green-600">1.2s</div>
+                  <div className="text-sm text-gray-600">Avg Response</div>
+                </div>
+                <div className="p-4 border rounded-lg text-center">
+                  <div className="text-2xl font-bold text-purple-600">2,847</div>
+                  <div className="text-sm text-gray-600">Active Users</div>
+                </div>
+                <div className="p-4 border rounded-lg text-center">
+                  <div className="text-2xl font-bold text-orange-600">0.3%</div>
+                  <div className="text-sm text-gray-600">Error Rate</div>
+                </div>
+              </div>
+
+              {/* System Health Pie Chart */}
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <Card>
+                  <CardHeader>
+                    <CardTitle className="text-lg">System Health</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <ResponsiveContainer width="100%" height={200}>
+                      <PieChart>
+                        <Pie
+                          data={pieData}
+                          cx="50%"
+                          cy="50%"
+                          innerRadius={40}
+                          outerRadius={80}
+                          dataKey="value"
+                        >
+                          {pieData.map((entry, index) => (
+                            <Cell key={`cell-${index}`} fill={entry.color} />
+                          ))}
+                        </Pie>
+                        <Tooltip />
+                      </PieChart>
+                    </ResponsiveContainer>
+                  </CardContent>
+                </Card>
+
+                <Card>
+                  <CardHeader>
+                    <CardTitle className="text-lg">Performance Metrics</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="space-y-3">
+                      {performanceData.slice(0, 4).map((item, index) => (
+                        <div key={index} className="flex items-center justify-between">
+                          <div className="flex items-center space-x-2">
+                            {getTrendIcon(item.trend)}
+                            <span className="text-sm font-medium">{item.metric}</span>
+                          </div>
+                          <div className="flex items-center space-x-2">
+                            <span className={`text-sm font-bold ${getStatusColor(item.status)}`}>
+                              {item.value}%
+                            </span>
+                            <span className="text-xs text-gray-500">
+                              {item.change > 0 ? '+' : ''}{item.change}%
+                            </span>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+          )}
+
+          {/* Performance Tab */}
+          {activeTab === 'performance' && (
+            <div className="space-y-6">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <Card>
+                  <CardHeader>
+                    <CardTitle className="text-lg">System Performance</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <ResponsiveContainer width="100%" height={300}>
+                      <LineChart data={metrics}>
+                        <CartesianGrid strokeDasharray="3 3" />
+                        <XAxis dataKey="timestamp" />
+                        <YAxis />
+                        <Tooltip />
+                        <Line type="monotone" dataKey="cpu" stroke="#3B82F6" strokeWidth={2} />
+                        <Line type="monotone" dataKey="memory" stroke="#10B981" strokeWidth={2} />
+                        <Line type="monotone" dataKey="disk" stroke="#F59E0B" strokeWidth={2} />
+                      </LineChart>
+                    </ResponsiveContainer>
+                  </CardContent>
+                </Card>
+
+                <Card>
+                  <CardHeader>
+                    <CardTitle className="text-lg">Network & Database</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <ResponsiveContainer width="100%" height={300}>
+                      <AreaChart data={metrics}>
+                        <CartesianGrid strokeDasharray="3 3" />
+                        <XAxis dataKey="timestamp" />
+                        <YAxis />
+                        <Tooltip />
+                        <Area type="monotone" dataKey="network" stackId="1" stroke="#8B5CF6" fill="#8B5CF6" />
+                        <Area type="monotone" dataKey="database" stackId="1" stroke="#EF4444" fill="#EF4444" />
+                      </AreaChart>
+                    </ResponsiveContainer>
+                  </CardContent>
+                </Card>
+              </div>
+
+              <Card>
+                <CardHeader>
+                  <CardTitle className="text-lg">Response Time & Throughput</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <ResponsiveContainer width="100%" height={250}>
+                    <BarChart data={metrics}>
+                      <CartesianGrid strokeDasharray="3 3" />
+                      <XAxis dataKey="timestamp" />
+                      <YAxis yAxisId="left" />
+                      <YAxis yAxisId="right" orientation="right" />
+                      <Tooltip />
+                      <Bar yAxisId="left" dataKey="responseTime" fill="#3B82F6" />
+                      <Bar yAxisId="right" dataKey="throughput" fill="#10B981" />
+                    </BarChart>
+                  </ResponsiveContainer>
+                </CardContent>
+              </Card>
+            </div>
+          )}
+
+          {/* Security Tab */}
+          {activeTab === 'security' && (
+            <div className="space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div className="p-4 border rounded-lg text-center">
+                  <Shield className="h-8 w-8 text-green-600 mx-auto mb-2" />
+                  <div className="text-2xl font-bold text-green-600">Secure</div>
+                  <div className="text-sm text-gray-600">Overall Status</div>
+                </div>
+                <div className="p-4 border rounded-lg text-center">
+                  <div className="text-2xl font-bold text-blue-600">0</div>
+                  <div className="text-sm text-gray-600">Active Threats</div>
+                </div>
+                <div className="p-4 border rounded-lg text-center">
+                  <div className="text-2xl font-bold text-purple-600">24/7</div>
+                  <div className="text-sm text-gray-600">Monitoring</div>
+                </div>
+              </div>
+
+              <Card>
+                <CardHeader>
+                  <CardTitle className="text-lg">Security Events</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-3">
+                    {alerts.filter(alert => alert.type === 'security').map((alert) => (
+                      <div key={alert.id} className="flex items-center justify-between p-3 border rounded-lg">
+                        <div className="flex items-center space-x-3">
+                          <Shield className="h-5 w-5 text-red-600" />
+                          <div>
+                            <div className="font-medium">{alert.message}</div>
+                            <div className="text-sm text-gray-500">
+                              {alert.source} • {alert.timestamp.toLocaleTimeString()}
+                            </div>
+                          </div>
+                        </div>
+                        <span className={`px-2 py-1 text-xs font-medium rounded-full border ${getSeverityColor(alert.severity)}`}>
+                          {alert.severity.toUpperCase()}
+                        </span>
+                      </div>
+                    ))}
                   </div>
-                  <button
-                    onClick={() => resolveAlert(alert.id)}
-                    className="text-gray-400 hover:text-gray-600"
-                  >
-                    <X className="h-4w-4" />
+                </CardContent>
+              </Card>
+            </div>
+          )}
+
+          {/* Infrastructure Tab */}
+          {activeTab === 'infrastructure' && (
+            <div className="space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div className="p-4 border rounded-lg">
+                  <div className="flex items-center justify-between mb-2">
+                    <Cpu className="h-5 w-5 text-blue-600" />
+                    <span className="text-sm text-gray-500">8 cores</span>
+                  </div>
+                  <div className="text-2xl font-bold text-blue-600">65%</div>
+                  <div className="text-sm text-gray-600">CPU Usage</div>
+                </div>
+                <div className="p-4 border rounded-lg">
+                  <div className="flex items-center justify-between mb-2">
+                    <HardDrive className="h-5 w-5 text-green-600" />
+                    <span className="text-sm text-gray-500">16GB</span>
+                  </div>
+                  <div className="text-2xl font-bold text-green-600">78%</div>
+                  <div className="text-sm text-gray-600">Memory Usage</div>
+                </div>
+                <div className="p-4 border rounded-lg">
+                  <div className="flex items-center justify-between mb-2">
+                    <Database className="h-5 w-5 text-purple-600" />
+                    <span className="text-sm text-gray-500">500GB</span>
+                  </div>
+                  <div className="text-2xl font-bold text-purple-600">45%</div>
+                  <div className="text-sm text-gray-600">Disk Usage</div>
+                </div>
+                <div className="p-4 border rounded-lg">
+                  <div className="flex items-center justify-between mb-2">
+                    <Network className="h-5 w-5 text-orange-600" />
+                    <span className="text-sm text-gray-500">1Gbps</span>
+                  </div>
+                  <div className="text-2xl font-bold text-orange-600">120ms</div>
+                  <div className="text-sm text-gray-600">Latency</div>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* Alerts Tab */}
+          {activeTab === 'alerts' && (
+            <div className="space-y-6">
+              <div className="flex justify-between items-center">
+                <h3 className="text-lg font-semibold">System Alerts</h3>
+                <div className="flex space-x-2">
+                  <button className="px-3 py-1 text-sm bg-blue-600 text-white rounded hover:bg-blue-700">
+                    Mark All Read
+                  </button>
+                  <button className="px-3 py-1 text-sm border border-gray-300 rounded hover:bg-gray-50">
+                    Filter
                   </button>
                 </div>
-              </motion.div>
-            ))}
-          </motion.div>
-        )}
-      </AnimatePresence>
+              </div>
 
-      {/* Metrics Grid */}
-      {metrics && (
-        <div className="grid grid-cols-1md:grid-cols-2lg:grid-cols-4gap-6">
-          {/* Performance Metrics */}
-          <Card>
-            <CardHeader className="flex flex-row items-center justify-between space-y-0pb-2">
-              <CardTitle className="text-sm font-medium">Performance</CardTitle>
-              <Zap className="h-4w-4text-muted-foreground" />
-            </CardHeader>
-            <CardContent>
-              <div className="text-2xl font-bold">{grade}</div>
-              <p className="text-xs text-muted-foreground">
-                Load Time: {metrics.performance.loadTime.toFixed(0)}ms
-              </p>
-              <p className="text-xs text-muted-foreground">
-                FCP: {metrics.performance.firstContentfulPaint.toFixed(0)}ms
-              </p>
-            </CardContent>
-          </Card>
-
-          {/* Resource Usage */}
-          <Card>
-            <CardHeader className="flex flex-row items-center justify-between space-y-0pb-2">
-              <CardTitle className="text-sm font-medium">Resources</CardTitle>
-              <Cpu className="h-4w-4text-muted-foreground" />
-            </CardHeader>
-            <CardContent>
-              <div className="text-2xl font-bold">{metrics.resources.memoryUsage.toFixed(1)}MB</div>
-              <p className="text-xs text-muted-foreground">
-                Memory Usage
-              </p>
-              <p className="text-xs text-muted-foreground">
-                Cache Hit: {(metrics.resources.cacheHitRate * 100).toFixed(0)}%
-              </p>
-            </CardContent>
-          </Card>
-
-          {/* User Experience */}
-          <Card>
-            <CardHeader className="flex flex-row items-center justify-between space-y-0pb-2">
-              <CardTitle className="text-sm font-medium">User Experience</CardTitle>
-              <Users className="h-4w-4text-muted-foreground" />
-            </CardHeader>
-            <CardContent>
-              <div className="text-2xl font-bold">{metrics.userExperience.uniqueVisitors}</div>
-              <p className="text-xs text-muted-foreground">
-                Unique Visitors
-              </p>
-              <p className="text-xs text-muted-foreground">
-                Bounce Rate: {(metrics.userExperience.bounceRate * 100).toFixed(1)}%
-              </p>
-            </CardContent>
-          </Card>
-
-          {/* Security */}
-          <Card>
-            <CardHeader className="flex flex-row items-center justify-between space-y-0pb-2">
-              <CardTitle className="text-sm font-medium">Security</CardTitle>
-              <Shield className="h-4w-4text-muted-foreground" />
-            </CardHeader>
-            <CardContent>
-              <div className="text-2xl font-bold">{metrics.security.sslScore}%</div>
-              <p className="text-xs text-muted-foreground">
-                SSL Score
-              </p>
-              <p className="text-xs text-muted-foreground">
-                Threats Blocked: {metrics.security.threatsBlocked}
-              </p>
-            </CardContent>
-          </Card>
-        </div>
-      )}
-
-      {/* Detailed Metrics */}
-      {metrics && (
-        <div className="grid grid-cols-1lg:grid-cols-2gap-6">
-          {/* Performance Details */}
-          <Card>
-            <CardHeader>
-              <CardTitle>Performance Details</CardTitle>
-              <CardDescription>Core Web Vitals and performance metrics</CardDescription>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <div className="flex justify-between items-center">
-                <span className="text-sm">Load Time</span>
-                <span className="font-mono">{metrics.performance.loadTime.toFixed(0)}ms</span>
+              <div className="space-y-3">
+                {alerts.map((alert) => (
+                  <div key={alert.id} className="flex items-center justify-between p-4 border rounded-lg">
+                    <div className="flex items-center space-x-4">
+                      <div className={`p-2 rounded-full ${
+                        alert.severity === 'critical' ? 'bg-red-100' :
+                        alert.severity === 'high' ? 'bg-orange-100' :
+                        alert.severity === 'medium' ? 'bg-yellow-100' :
+                        'bg-blue-100'
+                      }`}>
+                        <AlertTriangle className={`h-5 w-5 ${
+                          alert.severity === 'critical' ? 'text-red-600' :
+                          alert.severity === 'high' ? 'text-orange-600' :
+                          alert.severity === 'medium' ? 'text-yellow-600' :
+                          'text-blue-600'
+                        }`} />
+                      </div>
+                      <div>
+                        <div className="font-medium">{alert.message}</div>
+                        <div className="text-sm text-gray-500">
+                          {alert.source} • {alert.type} • {alert.timestamp.toLocaleString()}
+                        </div>
+                      </div>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <span className={`px-2 py-1 text-xs font-medium rounded-full border ${getSeverityColor(alert.severity)}`}>
+                        {alert.severity.toUpperCase()}
+                      </span>
+                      {alert.resolved && (
+                        <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">RESOLVED</span>
+                      )}
+                    </div>
+                  </div>
+                ))}
               </div>
-              <div className="flex justify-between items-center">
-                <span className="text-sm">First Contentful Paint</span>
-                <span className="font-mono">{metrics.performance.firstContentfulPaint.toFixed(0)}ms</span>
-              </div>
-              <div className="flex justify-between items-center">
-                <span className="text-sm">Time to Interactive</span>
-                <span className="font-mono">{metrics.performance.timeToInteractive.toFixed(0)}ms</span>
-              </div>
-              <div className="flex justify-between items-center">
-                <span className="text-sm">Cumulative Layout Shift</span>
-                <span className="font-mono">{metrics.performance.cumulativeLayoutShift.toFixed(3)}</span>
-              </div>
-            </CardContent>
-          </Card>
-
-          {/* Error Summary */}
-          <Card>
-            <CardHeader>
-              <CardTitle>Error Summary</CardTitle>
-              <CardDescription>Application errors and issues</CardDescription>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <div className="flex justify-between items-center">
-                <span className="text-sm">Total Errors</span>
-                <span className="font-mono">{metrics.errors.total}</span>
-              </div>
-              <div className="flex justify-between items-center">
-                <span className="text-sm text-red-600">Critical</span>
-                <span className="font-mono text-red-600">{metrics.errors.critical}</span>
-              </div>
-              <div className="flex justify-between items-center">
-                <span className="text-sm text-green-600">Resolved</span>
-                <span className="font-mono text-green-600">{metrics.errors.resolved}</span>
-              </div>
-              <div className="flex justify-between items-center">
-                <span className="text-sm text-orange-600">Unresolved</span>
-                <span className="font-mono text-orange-600">{metrics.errors.unresolved}</span>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-      )}
+            </div>
+          )}
+        </CardContent>
+      </Card>
     </div>
   );
-}
+};
+
+export default ComprehensiveMonitoringDashboard;

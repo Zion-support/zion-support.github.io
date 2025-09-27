@@ -212,7 +212,7 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({
     if (isSystem) {
       return (
         <div key={message.id} className="flex justify-center">
-          <div className="bg-gray-100 text-gray-600 text-sm px-3py-1rounded-full">
+          <div className="bg-gray-100 text-gray-600 text-sm px-3 py-1 rounded-full">
             {message.text}
           </div>
         </div>
@@ -224,19 +224,19 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({
         key={message.id}
         className={`flex ${isUser ? 'justify-end' : 'justify-start'} mb-4`}
       >
-        <div className={`flex max-w-xs lg:max-w-md ${isUser ? 'flex-row-reverse' : 'flex-row'}`}
-          <div className={`flex-shrink-0 ${isUser ? 'ml-3' : 'mr-3'}`}
+        <div className={`flex max-w-xs lg:max-w-md ${isUser ? 'flex-row-reverse' : 'flex-row'}`}>
+          <div className={`flex-shrink-0 ${isUser ? 'ml-3' : 'mr-3'}`}>
             <Image
-              className="h-8w-8rounded-full"
+              className="h-8 w-8 rounded-full"
               src={isUser ? userAvatar : botAvatar}
               alt={isUser ? 'User' : botName}
               width={32}
               height={32}
             />
           </div>
-          <div className={`${isUser ? 'text-right' : 'text-left'}`}
+          <div className={`${isUser ? 'text-right' : 'text-left'}`}>
             <div
-              className={`px-4py-2rounded-lg ${
+              className={`px-4 py-2 rounded-lg ${
                 isUser
                   ? 'bg-blue-600 text-white'
                   : 'bg-gray-200 text-gray-800'
@@ -254,7 +254,7 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({
                 </div>
               )}
               {message.type === 'file' && (
-                <div className="mb-2p-2bg-gray-100 rounded">
+                <div className="mb-2 p-2 bg-gray-100 rounded">
                   <div className="text-sm font-medium">{message.metadata?.fileName}</div>
                   <div className="text-xs text-gray-500">
                     {message.metadata?.fileSize ? `${(message.metadata.fileSize / 1024).toFixed(1)} KB` : ''}
@@ -263,7 +263,7 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({
               )}
               <p className="text-sm">{message.text}</p>
             </div>
-            <div className={`text-xs text-gray-500 mt-1 ${isUser ? 'text-right' : 'text-left'}`}
+            <div className={`text-xs text-gray-500 mt-1 ${isUser ? 'text-right' : 'text-left'}`}>
               {formatTime(message.timestamp)}
             </div>
           </div>
@@ -273,12 +273,12 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({
   };
 
   return (
-    <div className={`flex flex-col h-96 bg-white rounded-lg shadow-sm border border-gray-200 `}>
+    <div className={`flex flex-col h-96 bg-white rounded-lg shadow-sm border border-gray-200 ${className}`}>
       {/* Header */}
-      <div className="flex items-center justify-between p-4border-b border-gray-200">
+      <div className="flex items-center justify-between p-4 border-b border-gray-200">
         <div className="flex items-center">
           <Image
-            className="h-8w-8rounded-full mr-3"
+            className="h-8 w-8 rounded-full mr-3"
             src={botAvatar}
             alt={botName}
             width={32}
@@ -287,7 +287,7 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({
           <div>
             <h3 className="text-sm font-medium text-gray-900" id="botname">{botName}</h3>
             <div className="flex items-center">
-              <div className={`h-2w-2rounded-full mr-2 ${isConnected ? 'bg-green-400' : 'bg-red-400'}`}</p></div>
+              <div className={`h-2 w-2 rounded-full mr-2 ${isConnected ? 'bg-green-400' : 'bg-red-400'}`}></div>
               <span className="text-xs text-gray-500">
                 {isConnected ? 'Online' : 'Offline'}
               </span>
@@ -298,22 +298,22 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({
           {enableFileUpload && (
             <button
               onClick={() => fileInputRef.current?.click()}
-              className="p-2text-gray-400 hover:text-gray-600"
+              className="p-2 text-gray-400 hover:text-gray-600"
               title="Upload file"
             >
-              <svg className="h-5w-5" fill="none" stroke="currentColor" viewBox="002424">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M 15.1727 l-6.5866.586a 220102.8282.828 l6.414-6.586 a44000-5.656-5.656 l-6.4156.585a 660108.4868.486 L 20.513" />
+              <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13" />
               </svg>
             </button>
           )}
           {enableImageUpload && (
             <button
               onClick={() => fileInputRef.current?.click()}
-              className="p-2text-gray-400 hover:text-gray-600"
+              className="p-2 text-gray-400 hover:text-gray-600"
               title="Upload image"
             >
-              <svg className="h-5w-5" fill="none" stroke="currentColor" viewBox="002424">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M 416 l4.586-4.586a 220012.8280 L1616 m-2-2l1.586-1.586a 220012.8280 L2014 m-6-6h.01M620h12a 220002-2V 6 a22000-2-2H 6 a22000-22v12a2200022 z" />
+              <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
               </svg>
             </button>
           )}
@@ -321,23 +321,23 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({
       </div>
 
       {/* Messages */}
-      <div className="flex-1overflow-y-auto p-4space-y-4">
+      <div className="flex-1 overflow-y-auto p-4 space-y-4">
         {messages.map(renderMessage)}
         {isTyping && (
           <div className="flex justify-start">
             <div className="flex items-center">
               <Image
-                className="h-8w-8rounded-full mr-3"
+                className="h-8 w-8 rounded-full mr-3"
                 src={botAvatar}
                 alt={botName}
                 width={32}
                 height={32}
               />
-              <div className="bg-gray-200 text-gray-800 px-4py-2rounded-lg">
+              <div className="bg-gray-200 text-gray-800 px-4 py-2 rounded-lg">
                 <div className="flex space-x-1">
-                  <div className="w-2h-2bg-gray-500 rounded-full animate-bounce"></div>
-                  <div className="w-2h-2bg-gray-500 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}</p></div>
-                  <div className="w-2h-2bg-gray-500 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}</p></div>
+                  <div className="w-2 h-2 bg-gray-500 rounded-full animate-bounce"></div>
+                  <div className="w-2 h-2 bg-gray-500 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
+                  <div className="w-2 h-2 bg-gray-500 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
                 </div>
               </div>
             </div>
@@ -347,7 +347,7 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({
       </div>
 
       {/* Input */}
-      <div className="p-4border-t border-gray-200">
+      <div className="p-4 border-t border-gray-200">
         <div className="flex space-x-2">
           <input
             type="text"
@@ -355,7 +355,7 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({
             onChange={(e) => setInputText(e.target.value)}
             onKeyPress={handleKeyPress}
             placeholder={placeholder}
-            className="flex-1px-3py-2border border-gray-300 rounded-md focus:outline-none focus:ring-2focus:ring-blue-500"
+            className="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             disabled={!isConnected}
             aria-label="Type your message"
           />
@@ -363,7 +363,7 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({
             onClick={() => handleSendMessage(inputText)}
             aria-label="Send message"
             disabled={!inputText.trim() || !isConnected}
-            className="px-4py-2bg-blue-600 text-white rounded-md hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+            className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
           >
             Send
           </button>

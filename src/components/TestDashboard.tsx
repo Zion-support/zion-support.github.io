@@ -271,14 +271,14 @@ export const TestDashboard: React.FC = () => {
       <button
         onClick={() => setShowDashboard(!showDashboard)}
         aria-label="Toggle test dashboard"
-        className="fixed bottom-4left-4bg-purple-600 hover:bg-purple-700 text-white p-3 rounded-full shadow-lg z-50"
+        className="fixed bottom-4 left-4 bg-purple-600 hover:bg-purple-700 text-white p-3 rounded-full shadow-lg z-50"
         title="Toggle Test Dashboard"
       >
         🧪
       </button>
 
       {showDashboard && (
-        <div className="fixed bottom-20 left-4bg-white dark:bg-gray-800 p-4rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 z-50 max-w-md max-h-96 overflow-y-auto">
+        <div className="fixed bottom-20 left-4 bg-white dark:bg-gray-800 p-4 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 z-50 max-w-md max-h-96 overflow-y-auto">
           <div className="flex justify-between items-center mb-4">
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white" id="test-dashboard">
               Test Dashboard
@@ -287,20 +287,20 @@ export const TestDashboard: React.FC = () => {
               <button
                 onClick={runAllSuites}
                 disabled={isRunning}
-                className="bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 text-white px-3py-1rounded text-sm"
+                className="bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 text-white px-3 py-1 rounded text-sm"
                aria-label="{isRunning ? 'Running...' : 'Run All'}">
                 {isRunning ? 'Running...' : 'Run All'}
               </button>
               <button
                 onClick={clear}
-                className="bg-red-600 hover:bg-red-700 text-white px-3py-1rounded text-sm"
+                className="bg-red-600 hover:bg-red-700 text-white px-3 py-1 rounded text-sm"
                aria-label="Clear">
                 Clear
               </button>
             </div>
           </div>
 
-          <div className="mb-4text-sm text-gray-600 dark:text-gray-300">
+          <div className="mb-4 text-sm text-gray-600 dark:text-gray-300">
             <div>Total: {results.total}</div>
             <div className="text-green-600">Passed: {results.passed}</div>
             <div className="text-red-600">Failed: {results.failed}</div>

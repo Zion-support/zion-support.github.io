@@ -69,14 +69,14 @@ interface AnalyticsData {
 }
 
 interface AdvancedAnalyticsInsightsProps {
-  timeRange?: '7d' | '30 d' | '90 d' | '1y';
+  timeRange?: '7d' | '30d' | '90d' | '1y';
   refreshInterval?: number;
   onDataUpdate?: (data: AnalyticsData) => void;
 }
 
 export default function AdvancedAnalyticsInsights({
   timeRange = '30d',
-  refreshInterval = 300000,
+  refreshInterval = 30000,
   onDataUpdate
 }: AdvancedAnalyticsInsightsProps) {
   const [data, setData] = useState<AnalyticsData | null>(null);
@@ -91,7 +91,7 @@ export default function AdvancedAnalyticsInsights({
   }>>([]);
 
   const generateMockData = useCallback((): AnalyticsData => {
-    const baseMultiplier = timeRange === '7d' ? 1 : timeRange === '30 d' ? 4 : timeRange === '90 d' ? 12 : 48;
+    const baseMultiplier = timeRange === '7d' ? 1 : timeRange === '30d' ? 4 : timeRange === '90d' ? 12 : 48;
     
     return {
       overview: {
@@ -261,9 +261,9 @@ export default function AdvancedAnalyticsInsights({
 
   const getInsightIcon = (type: string) => {
     switch (type) {
-      case 'positive': return <TrendingUp className="h-5w-5text-green-600" />;
-      case 'negative': return <TrendingDown className="h-5w-5text-red-600" />;
-      default: return <Activity className="h-5w-5text-blue-600" />;
+      case 'positive': return <TrendingUp className="h-5 w-5 text-green-600" />;
+      case 'negative': return <TrendingDown className="h-5 w-5 text-red-600" />;
+      default: return <Activity className="h-5 w-5 text-blue-600" />;
     }
   };
 
@@ -278,7 +278,7 @@ export default function AdvancedAnalyticsInsights({
   if (isLoading) {
     return (
       <div className="flex items-center justify-center h-64">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2border-blue-600"></div>
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
       </div>
     );
   }
@@ -297,22 +297,22 @@ export default function AdvancedAnalyticsInsights({
           <select
             value={timeRange}
             onChange={(e) => setTimeRange(e.target.value as any)}
-            className="px-3py-1border border-gray-300 rounded-md text-sm"
+            className="px-3 py-1 border border-gray-300 rounded-md text-sm"
           >
-            <option value="7d">Last 7days</option>
-            <option value="30 d">Last30 days</option>
-            <option value="90 d">Last90 days</option>
+            <option value="7d">Last 7 days</option>
+            <option value="30d">Last 30 days</option>
+            <option value="90d">Last 90 days</option>
             <option value="1y">Last year</option>
           </select>
         </div>
       </div>
 
       {/* Overview Metrics */}
-      <div className="grid grid-cols-1md:grid-cols-2lg:grid-cols-4gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         <Card>
-          <CardHeader className="flex flex-row items-center justify-between space-y-0pb-2">
+          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">Total Sessions</CardTitle>
-            <Users className="h-4w-4text-muted-foreground" />
+            <Users className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">{formatNumber(data.overview.totalSessions)}</div>
@@ -323,9 +323,9 @@ export default function AdvancedAnalyticsInsights({
         </Card>
 
         <Card>
-          <CardHeader className="flex flex-row items-center justify-between space-y-0pb-2">
+          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">Unique Users</CardTitle>
-            <Eye className="h-4w-4text-muted-foreground" />
+            <Eye className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">{formatNumber(data.overview.uniqueUsers)}</div>
@@ -336,9 +336,9 @@ export default function AdvancedAnalyticsInsights({
         </Card>
 
         <Card>
-          <CardHeader className="flex flex-row items-center justify-between space-y-0pb-2">
+          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">Page Views</CardTitle>
-            <MousePointer className="h-4w-4text-muted-foreground" />
+            <MousePointer className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">{formatNumber(data.overview.pageViews)}</div>
@@ -349,9 +349,9 @@ export default function AdvancedAnalyticsInsights({
         </Card>
 
         <Card>
-          <CardHeader className="flex flex-row items-center justify-between space-y-0pb-2">
+          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">Conversion Rate</CardTitle>
-            <Target className="h-4w-4text-muted-foreground" />
+            <Target className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">{(data.overview.conversionRate * 100).toFixed(1)}%</div>
@@ -363,7 +363,7 @@ export default function AdvancedAnalyticsInsights({
       </div>
 
       {/* Traffic Sources */}
-      <div className="grid grid-cols-1lg:grid-cols-2gap-6">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <Card>
           <CardHeader>
             <CardTitle>Traffic Sources</CardTitle>
@@ -397,9 +397,9 @@ export default function AdvancedAnalyticsInsights({
               {data.traffic.devices.map((device, index) => (
                 <div key={index} className="flex items-center justify-between">
                   <div className="flex items-center space-x-2">
-                    {device.type === 'Desktop' && <Monitor className="h-4w-4text-blue-600" />}
-                    {device.type === 'Mobile' && <Smartphone className="h-4w-4text-green-600" />}
-                    {device.type === 'Tablet' && <Tablet className="h-4w-4text-purple-600" />}
+                    {device.type === 'Desktop' && <Monitor className="h-4 w-4 text-blue-600" />}
+                    {device.type === 'Mobile' && <Smartphone className="h-4 w-4 text-green-600" />}
+                    {device.type === 'Tablet' && <Tablet className="h-4 w-4 text-purple-600" />}
                     <span className="text-sm font-medium">{device.type}</span>
                   </div>
                   <div className="text-right">
@@ -422,9 +422,9 @@ export default function AdvancedAnalyticsInsights({
         <CardContent>
           <div className="space-y-4">
             {data.performance.topPages.map((page, index) => (
-              <div key={index} className="flex items-center justify-between p-4border rounded-lg">
+              <div key={index} className="flex items-center justify-between p-4 border rounded-lg">
                 <div className="flex items-center space-x-4">
-                  <div className="w-8h-8rounded-full bg-blue-100 flex items-center justify-center">
+                  <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center">
                     <span className="text-sm font-bold text-blue-600">{index + 1}</span>
                   </div>
                   <div>
@@ -462,7 +462,7 @@ export default function AdvancedAnalyticsInsights({
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -20 }}
-                    className={`p-4rounded-lg border ${getInsightColor(insight.type)}`}
+                    className={`p-4 rounded-lg border ${getInsightColor(insight.type)}`}
                   >
                     <div className="flex items-start space-x-3">
                       {getInsightIcon(insight.type)}
