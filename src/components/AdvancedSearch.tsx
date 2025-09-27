@@ -214,7 +214,7 @@ export const AdvancedSearch: React.FC<SearchProps> = ({
         <div className="absolute z-50 mt-1w-full bg-white shadow-lg max-h-96 rounded-md py-1text-base ring-1ring-black ring-opacity-5overflow-auto focus:outline-none s m:text-sm">          {results.map((result, index) => (
             <div
               key={result.id}
-              role="button" tabIndex={0} onClick={() => handleResultClick(result)}
+              role="button" tabIndex={0} role="button" tabIndex="0" onClick={() => handleResultClick(result)}
               className={`cursor-pointer select-none relative py-3 px-4 hover:bg-gray-50 ${                index === selectedIndex ? 'bg-blue-50' : ''
               }`}
             >

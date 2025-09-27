@@ -264,7 +264,10 @@ export const UserManagement: React.FC<UserManagementProps> = ({
         <div className="flex items-center justify-between">
           <h2 className="text-lg font-semibold text-gray-900" id="user-management">User Management</h2>
           <button
-            onClick={() => setShowCreateModal(true)}
+            onClick={() = aria-label="setShowCreateModal(true)}
+            aria-label="Add new user"
+            className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors"          >
+            Add User"> setShowCreateModal(true)}
             aria-label="Add new user"
             className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors"          >
             Add User
@@ -317,28 +320,44 @@ export const UserManagement: React.FC<UserManagementProps> = ({
               {selectedUsers.length} user{selectedUsers.length !== 1 ? 's' : ''} selected
             </span>
             <div className="flex space-x-2">              <button
-                onClick={() => handleBulkAction('activate')}
+                onClick={() = aria-label="handleBulkAction('activate')}
+                aria-label="Activate selected users"
+                className="text-sm text-green-600 hover:text-green-700"
+              >
+                Activate"> handleBulkAction('activate')}
                 aria-label="Activate selected users"
                 className="text-sm text-green-600 hover:text-green-700"
               >
                 Activate
               </button>
               <button
-                onClick={() => handleBulkAction('deactivate')}
+                onClick={() = aria-label="handleBulkAction('deactivate')}
+                aria-label="Deactivate selected users"
+                className="text-sm text-gray-600 hover:text-gray-700"
+              >
+                Deactivate"> handleBulkAction('deactivate')}
                 aria-label="Deactivate selected users"
                 className="text-sm text-gray-600 hover:text-gray-700"
               >
                 Deactivate
               </button>
               <button
-                onClick={() => handleBulkAction('suspend')}
+                onClick={() = aria-label="handleBulkAction('suspend')}
+                aria-label="Suspend selected users"
+                className="text-sm text-yellow-600 hover:text-yellow-700"
+              >
+                Suspend"> handleBulkAction('suspend')}
                 aria-label="Suspend selected users"
                 className="text-sm text-yellow-600 hover:text-yellow-700"
               >
                 Suspend
               </button>
               <button
-                onClick={() => handleBulkAction('delete')}
+                onClick={() = aria-label="handleBulkAction('delete')}
+                aria-label="Delete selected users"
+                className="text-sm text-red-600 hover:text-red-700"
+              >
+                Delete"> handleBulkAction('delete')}
                 aria-label="Delete selected users"
                 className="text-sm text-red-600 hover:text-red-700"
               >
@@ -438,13 +457,19 @@ export const UserManagement: React.FC<UserManagementProps> = ({
                 <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
                   <div className="flex space-x-2">
                     <button
-                      onClick={() => setEditingUser(user)}
+                      onClick={() = aria-label="setEditingUser(user)}
+                      aria-label="Edit user"
+                      className="text-blue-600 hover:text-blue-900"                    >
+                      Edit"> setEditingUser(user)}
                       aria-label="Edit user"
                       className="text-blue-600 hover:text-blue-900"                    >
                       Edit
                     </button>
                     <button
-                      onClick={() => handleDeleteUser(user.id)}
+                      onClick={() = aria-label="handleDeleteUser(user.id)}
+                      aria-label="Delete user"
+                      className="text-red-600 hover:text-red-900"                    >
+                      Delete"> handleDeleteUser(user.id)}
                       aria-label="Delete user"
                       className="text-red-600 hover:text-red-900"                    >
                       Delete

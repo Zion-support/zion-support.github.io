@@ -116,7 +116,13 @@ export const AdvancedAnalyticsDashboard: React.FC<AdvancedAnalyticsDashboardProp
           </select>
         </div>
         <button
-          onClick={() =>setIsRealTime(!isRealTime)}
+          onClick={() = aria-label="setIsRealTime(!isRealTime)}
+          aria-label={isRealTime ? 'Disable real-time updates' : 'Enable real-time updates'}
+          className={`px-4py-2rounded-lg text-sm font-medium transition-colors ${
+            isRealTime
+              ? 'bg-green-500hover:bg-green-600text-white'
+              : 'bg-gray-500hove, r:bg-gray-600text-white'
+          }`}">setIsRealTime(!isRealTime)}
           aria-label={isRealTime ? 'Disable real-time updates' : 'Enable real-time updates'}
           className={`px-4py-2rounded-lg text-sm font-medium transition-colors ${
             isRealTime

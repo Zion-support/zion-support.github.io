@@ -1,35 +1,29 @@
 {
-  "timestamp": "2025-09-27T01:47:48.014Z",
+  "timestamp": "2025-09-27T02:21:57.140Z",
   "summary": {
-    "totalIssues": 86,
-    "highSeverity": 10,
+    "totalIssues": 82,
+    "highSeverity": 12,
     "mediumSeverity": 49,
-    "lowSeverity": 27
+    "lowSeverity": 21
   },
   "issues": [
     {
-      "file": "src/components/AccessibilityChecker.tsx",
+      "file": "src/components/AccessibilityEnhancements.tsx",
       "issue": "Button missing accessible label",
       "severity": "medium",
-      "count": 3
-    },
-    {
-      "file": "src/components/AccessibilityChecker.tsx",
-      "issue": "Heading missing id for anchor links",
-      "severity": "low",
       "count": 3
     },
     {
       "file": "src/components/AccessibilityEnhancements.tsx",
       "issue": "Input missing accessible label",
       "severity": "high",
-      "count": 7
+      "count": 10
     },
     {
       "file": "src/components/AccessibilityEnhancements.tsx",
       "issue": "Heading missing id for anchor links",
       "severity": "low",
-      "count": 4
+      "count": 6
     },
     {
       "file": "src/components/AccessibilityFixer.tsx",
@@ -50,12 +44,6 @@
       "count": 1
     },
     {
-      "file": "src/components/AdvancedAnalytics.tsx",
-      "issue": "Button missing accessible label",
-      "severity": "medium",
-      "count": 2
-    },
-    {
       "file": "src/components/AdvancedAnalyticsDashboard.tsx",
       "issue": "Button missing accessible label",
       "severity": "medium",
@@ -66,6 +54,12 @@
       "issue": "Heading missing id for anchor links",
       "severity": "low",
       "count": 2
+    },
+    {
+      "file": "src/components/AdvancedAnalyticsSystem.tsx",
+      "issue": "Button missing accessible label",
+      "severity": "medium",
+      "count": 1
     },
     {
       "file": "src/components/AdvancedCacheManager.tsx",
@@ -84,18 +78,6 @@
       "issue": "Button missing accessible label",
       "severity": "medium",
       "count": 4
-    },
-    {
-      "file": "src/components/AdvancedErrorMonitoring.tsx",
-      "issue": "Button missing accessible label",
-      "severity": "medium",
-      "count": 3
-    },
-    {
-      "file": "src/components/AdvancedErrorMonitoring.tsx",
-      "issue": "Heading missing id for anchor links",
-      "severity": "low",
-      "count": 3
     },
     {
       "file": "src/components/AdvancedForm.tsx",
@@ -119,6 +101,24 @@
       "file": "src/components/AdvancedPerformanceOptimizer.tsx",
       "issue": "Button missing accessible label",
       "severity": "medium",
+      "count": 2
+    },
+    {
+      "file": "src/components/AdvancedPerformanceOptimizer.tsx",
+      "issue": "Heading missing id for anchor links",
+      "severity": "low",
+      "count": 6
+    },
+    {
+      "file": "src/components/AdvancedPerformanceSystem.tsx",
+      "issue": "Button missing accessible label",
+      "severity": "medium",
+      "count": 4
+    },
+    {
+      "file": "src/components/AdvancedPerformanceSystem.tsx",
+      "issue": "Heading missing id for anchor links",
+      "severity": "low",
       "count": 2
     },
     {
@@ -164,24 +164,30 @@
       "count": 1
     },
     {
+      "file": "src/components/AdvancedSecurityMonitor.tsx",
+      "issue": "Heading missing id for anchor links",
+      "severity": "low",
+      "count": 1
+    },
+    {
+      "file": "src/components/AdvancedSecurityMonitor_backup.tsx",
+      "issue": "Button missing accessible label",
+      "severity": "medium",
+      "count": 1
+    },
+    {
+      "file": "src/components/AnalyticsDashboard.tsx",
+      "issue": "Button missing accessible label",
+      "severity": "medium",
+      "count": 2
+    },
+    {
       "file": "src/components/BlogCard.tsx",
       "issue": "Button missing accessible label",
       "severity": "medium",
       "count": 1
     },
     {
-      "file": "src/components/BlogEnhancements.tsx",
-      "issue": "Input missing accessible label",
-      "severity": "high",
-      "count": 2
-    },
-    {
-      "file": "src/components/BlogEnhancements.tsx",
-      "issue": "Heading missing id for anchor links",
-      "severity": "low",
-      "count": 3
-    },
-    {
       "file": "src/components/ChatSystem.tsx",
       "issue": "Button missing accessible label",
       "severity": "medium",
@@ -192,23 +198,17 @@
       "issue": "Input missing accessible label",
       "severity": "high",
       "count": 2
-    },
-    {
-      "file": "src/components/Collaboration.tsx",
-      "issue": "Button missing accessible label",
-      "severity": "medium",
-      "count": 5
-    },
-    {
-      "file": "src/components/Collaboration.tsx",
-      "issue": "Heading missing id for anchor links",
-      "severity": "low",
-      "count": 1
     },
     {
       "file": "src/components/ComprehensiveAnalyticsDashboard.tsx",
       "issue": "Button missing accessible label",
       "severity": "medium",
+      "count": 2
+    },
+    {
+      "file": "src/components/ComprehensiveAnalyticsDashboard_backup.tsx",
+      "issue": "Button missing accessible label",
+      "severity": "medium",
       "count": 1
     },
     {
@@ -225,12 +225,6 @@
     },
     {
       "file": "src/components/ComprehensiveMonitoringDashboard.tsx",
-      "issue": "Button missing accessible label",
-      "severity": "medium",
-      "count": 3
-    },
-    {
-      "file": "src/components/ComprehensiveMonitoringDashboard.tsx",
       "issue": "Heading missing id for anchor links",
       "severity": "low",
       "count": 1
@@ -239,19 +233,25 @@
       "file": "src/components/ComprehensiveSecurityDashboard.tsx",
       "issue": "Button missing accessible label",
       "severity": "medium",
-      "count": 6
+      "count": 1
     },
     {
       "file": "src/components/ComprehensiveSecurityDashboard.tsx",
       "issue": "Heading missing id for anchor links",
       "severity": "low",
-      "count": 3
+      "count": 6
     },
     {
       "file": "src/components/ContactForm.tsx",
       "issue": "Button missing accessible label",
       "severity": "medium",
       "count": 2
+    },
+    {
+      "file": "src/components/ContactForm.tsx",
+      "issue": "Input missing accessible label",
+      "severity": "high",
+      "count": 4
     },
     {
       "file": "src/components/Dashboard.tsx",
@@ -272,6 +272,12 @@
       "count": 2
     },
     {
+      "file": "src/components/EnhancedContactForm.tsx",
+      "issue": "Input missing accessible label",
+      "severity": "high",
+      "count": 4
+    },
+    {
       "file": "src/components/EnhancedDashboard.tsx",
       "issue": "Button missing accessible label",
       "severity": "medium",
@@ -288,6 +294,18 @@
       "issue": "Button missing accessible label",
       "severity": "medium",
       "count": 3
+    },
+    {
+      "file": "src/components/EnhancedSearch.tsx",
+      "issue": "Button missing accessible label",
+      "severity": "medium",
+      "count": 6
+    },
+    {
+      "file": "src/components/EnhancedSearch.tsx",
+      "issue": "Input missing accessible label",
+      "severity": "high",
+      "count": 1
     },
     {
       "file": "src/components/EnhancedUserExperience.tsx",
@@ -338,34 +356,16 @@
       "count": 3
     },
     {
-      "file": "src/components/Navigation.tsx",
-      "issue": "Heading missing id for anchor links",
-      "severity": "low",
-      "count": 1
-    },
-    {
       "file": "src/components/NotificationSystem.tsx",
       "issue": "Button missing accessible label",
       "severity": "medium",
       "count": 2
     },
     {
-      "file": "src/components/PerformanceDashboard.tsx",
-      "issue": "Button missing accessible label",
-      "severity": "medium",
-      "count": 1
-    },
-    {
       "file": "src/components/PerformanceMetrics.tsx",
       "issue": "Button missing accessible label",
       "severity": "medium",
-      "count": 1
-    },
-    {
-      "file": "src/components/PerformanceMetrics.tsx",
-      "issue": "Heading missing id for anchor links",
-      "severity": "low",
-      "count": 1
+      "count": 2
     },
     {
       "file": "src/components/PerformanceOptimizations.tsx",
@@ -401,19 +401,7 @@
       "file": "src/components/ProjectManagement.tsx",
       "issue": "Button missing accessible label",
       "severity": "medium",
-      "count": 2
-    },
-    {
-      "file": "src/components/RealTimeAnalytics.tsx",
-      "issue": "Button missing accessible label",
-      "severity": "medium",
       "count": 1
-    },
-    {
-      "file": "src/components/RealTimeAnalytics.tsx",
-      "issue": "Heading missing id for anchor links",
-      "severity": "low",
-      "count": 3
     },
     {
       "file": "src/components/SEOAccessibilityOptimizer.tsx",
@@ -428,16 +416,10 @@
       "count": 1
     },
     {
-      "file": "src/components/SEOAnalyzer.tsx",
+      "file": "src/components/SecurityDashboard.tsx",
       "issue": "Button missing accessible label",
       "severity": "medium",
-      "count": 2
-    },
-    {
-      "file": "src/components/SEOAnalyzer.tsx",
-      "issue": "Heading missing id for anchor links",
-      "severity": "low",
-      "count": 3
+      "count": 1
     },
     {
       "file": "src/components/SecurityMonitor.tsx",
@@ -449,7 +431,7 @@
       "file": "src/components/ServiceCard.tsx",
       "issue": "Button missing accessible label",
       "severity": "medium",
-      "count": 2
+      "count": 1
     },
     {
       "file": "src/components/SystemHealthMonitor.tsx",
@@ -476,7 +458,7 @@
       "count": 2
     },
     {
-      "file": "src/components/TaskManager.tsx",
+      "file": "src/components/TestComponent.tsx",
       "issue": "Heading missing id for anchor links",
       "severity": "low",
       "count": 1
@@ -486,12 +468,6 @@
       "issue": "Button missing accessible label",
       "severity": "medium",
       "count": 3
-    },
-    {
-      "file": "src/components/TestDashboard.tsx",
-      "issue": "Heading missing id for anchor links",
-      "severity": "low",
-      "count": 1
     },
     {
       "file": "src/components/Testimonials.tsx",
@@ -509,13 +485,13 @@
       "file": "src/components/UserManagement.tsx",
       "issue": "Button missing accessible label",
       "severity": "medium",
-      "count": 8
+      "count": 7
     },
     {
       "file": "src/components/UserManagement.tsx",
       "issue": "Input missing accessible label",
       "severity": "high",
-      "count": 2
+      "count": 3
     },
     {
       "file": "src/components/ui/Card.tsx",

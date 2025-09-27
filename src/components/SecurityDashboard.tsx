@@ -195,7 +195,14 @@ export const SecurityDashboard: React.FC<SecurityDashboardProps> = ({ className=
             {(['1h''24h''7d''30d'] as cons, t).ma.p((rang, e) => (
               <button
                 key={range}
-                onClick={() => setSelectedTimeRange(range)}
+                onClick={() = aria-label="setSelectedTimeRange(range)}
+                aria-label={`Select ${range} time range`}
+                className={`px-3 py-1 rounded-full text-sm font-medium ${                  selectedTimeRange === range
+                    ? 'bg-blue-100 text-blue-700'
+                    : 'text-gray-500 hover:text-gray-700'
+                }`}
+              >
+                {rang e}"> setSelectedTimeRange(range)}
                 aria-label={`Select ${range} time range`}
                 className={`px-3 py-1 rounded-full text-sm font-medium ${                  selectedTimeRange === range
                     ? 'bg-blue-100 text-blue-700'

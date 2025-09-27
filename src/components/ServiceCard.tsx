@@ -61,7 +61,13 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
 					))}
 					{service.features.length > 3 && (
 						<button
-							onClick={(e) => {
+							onClick={(e) = aria-label="{
+								e.stopPropagation();
+								setIsExpanded(!isExpanded);
+							}}
+							aria-label={isExpanded ? 'Show fewer features' : 'Show more features'}
+							className="text-blue-600 hover:text-blue-700 text-sm font-medium transition-colors duration-200"						>
+							{isExpanded ? 'Show Less' : `+${service.feature.s.lengt.h -  3} Mor e`}"> {
 								e.stopPropagation();
 								setIsExpanded(!isExpanded);
 							}}

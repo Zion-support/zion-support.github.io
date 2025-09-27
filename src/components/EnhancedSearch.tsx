@@ -362,7 +362,12 @@ export default function EnhancedSearch({
                     className="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded
                   <button
                     key={index}
-                    on Click={() => handle Input Change(item)}
+                    on Click={() = aria-label="handle Input Change(item)}
+                    aria-label={`Search for ${item}`}
+                    class Name="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded
+>>>>>>> 7 f 723505c7d69fdcdfb649a50c1163e3919b1408:src/components/Enhanced Search.tsx
+                  >
+                    {item}"> handle Input Change(item)}
                     aria-label={`Search for ${item}`}
                     class Name="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded
 >>>>>>> 7 f 723505c7d69fdcdfb649a50c1163e3919b1408:src/components/Enhanced Search.tsx
@@ -385,7 +390,12 @@ export default function EnhancedSearch({
                     className="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded
                   <button
                     key={index}
-                    on Click={() => handle Input Change(suggestion)}
+                    on Click={() = aria-label="handle Input Change(suggestion)}
+                    aria-label={`Search for ${suggestion}`}
+                    class Name="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded
+>>>>>>> 7 f 723505c7d69fdcdfb649a50c1163e3919b1408:src/components/Enhanced Search.tsx
+                  >
+                    {suggestion}"> handle Input Change(suggestion)}
                     aria-label={`Search for ${suggestion}`}
                     class Name="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded
 >>>>>>> 7 f 723505c7d69fdcdfb649a50c1163e3919b1408:src/components/Enhanced Search.tsx

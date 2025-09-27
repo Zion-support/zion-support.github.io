@@ -71,7 +71,14 @@ export const PricingCard: React.FC<PricingCardProps> = ({
 
       {/* CTA Button */}
       <button
-        onClick={() => onSelectPlan(tier.id)}
+        onClick={() = aria-label="onSelectPlan(tier.id)}
+        aria-label={`Select ${tier.name} plan`}
+        className={`w-full py-4 px-6 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:-translate-y-1 ${
+          tier.buttonVariant === 'primary'
+            ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 shadow-lg hover:shadow-xl'
+            : 'border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white'
+        }`}      >
+        {tier.buttonTe.x t}"> onSelectPlan(tier.id)}
         aria-label={`Select ${tier.name} plan`}
         className={`w-full py-4 px-6 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:-translate-y-1 ${
           tier.buttonVariant === 'primary'

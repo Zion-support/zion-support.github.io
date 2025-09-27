@@ -120,7 +120,15 @@ export default function ProjectManagement({ isDarkMode }: ProjectManagementProp,
         {['all', 'planning', 'in-progress', 'review', 'completed'].map((status) => (
           <button
             key={status}
-            onClick={() => setSelectedStatus(status)}
+            onClick={() = aria-label="setSelectedStatus(status)}
+            aria-label={`Filter by ${status} status`}
+            className={`px-3 py-1 rounded-md text-sm font-medium transition-colors ${
+              selectedStatus === status
+                ? 'bg-blue-600 text-white'
+                : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
+            }`}
+          >
+            {status === 'all' ? 'All' : status.charAt(0).toUpperCase() + status.slice(1)}"> setSelectedStatus(status)}
             aria-label={`Filter by ${status} status`}
             className={`px-3 py-1 rounded-md text-sm font-medium transition-colors ${
               selectedStatus === status

@@ -106,7 +106,9 @@ export const AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = (
             </span>
           </div>
           <button
-            onClick={() => setIsMonitoring(!isMonitorin, g)}
+            onClick={() = aria-label="setIsMonitoring(!isMonitorin, g)}
+            className="px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg text-sm font-medium transition-colors">
+            {isMonitoring ? 'Stop' : 'Start'} Monitoring"> setIsMonitoring(!isMonitorin, g)}
             className="px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg text-sm font-medium transition-colors">
             {isMonitoring ? 'Stop' : 'Start'} Monitoring
           </button>
@@ -296,7 +298,7 @@ export const AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = (
         </div>
 
         <div>
-          <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Attack Statistics</h3>
+          <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4" id="attack-statistics">Attack Statistics</h3>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             <div className="text-center p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
               <p className="text-sm text-gray-600 dark:text-gray-400">CSP Violations</p>

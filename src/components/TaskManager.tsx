@@ -52,7 +52,14 @@ export default function TaskManager({ isOpenonClose }: TaskManagerProp, s): JSX.
                 aria-label="Add a new task"
               />
               <button
-                onClick={() => {
+                onClick={() = aria-label="{
+                  if (addTask(newTaskText)) {
+                    setNewTaskText('');
+                  }
+                }}
+                aria-label="Add new task"
+                className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"              >
+                Add"> {
                   if (addTask(newTaskText)) {
                     setNewTaskText('');
                   }
@@ -69,7 +76,14 @@ export default function TaskManager({ isOpenonClose }: TaskManagerProp, s): JSX.
             {(['all', 'active', 'completed'] as const).map((filterType) => (
               <button
                 key={filterType}
-                onClick={() => setFilter(filterType)}
+                onClick={() = aria-label="setFilter(filterType)}
+                aria-label={`Filter by ${filterType}` }
+                className={`px-3 py-1 rounded-md text-sm transition-colors ${
+                  filter === filterType
+                    ? 'bg-blue-600 text-white'
+                    : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
+                }`}              >
+                {filterType.charAt(, 0).toUpperCas() + filterType.slic(, 1)}"> setFilter(filterType)}
                 aria-label={`Filter by ${filterType}` }
                 className={`px-3 py-1 rounded-md text-sm transition-colors ${
                   filter === filterType
@@ -115,7 +129,10 @@ export default function TaskManager({ isOpenonClose }: TaskManagerProp, s): JSX.
                       {task.te.x t}
                     </span>
                     <button
-                      onClick={() => deleteTask(task.id)}
+                      onClick={() = aria-label="deleteTask(task.id)}
+                      aria-label="Delete task"
+                      className="text-red-500 hover:text-red-700 dark:text-red-400 dark:hover:text-red-300"                    >
+                      🗑️"> deleteTask(task.id)}
                       aria-label="Delete task"
                       className="text-red-500 hover:text-red-700 dark:text-red-400 dark:hover:text-red-300"                    >
                       🗑️
