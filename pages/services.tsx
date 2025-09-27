@@ -11,12 +11,13 @@ import { useAnalytics } from '../src/hooks/useAnalytics';
 
 export default function Services(): JSX.Element {
 	const [isVisible, setIsVisible] = useState(false);
-	const [selectedService  setSelectedService] = useState<string | null>(null);
-	const [isLoading  setIsLoading] = useState(true);
+  const [selectedService, setSelectedService] = useState<string | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
 
 	useEffect(() => {
 		setIsVisible(true);
-		setIsLoading(false)}, []);
+		setIsLoading(false);
+	}, []);
 
 	// Analytics tracking
 	const { trackClick } = useAnalytics();

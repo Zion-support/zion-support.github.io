@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 // import { ErrorBoundary } from '../src/components/ErrorBoundary';
-import { usePageView  useAnalytics } from '../src/hooks/useAnalytics';
+import { usePageView, useAnalytics } from '../src/hooks/useAnalytics';
 
 export default function PrivacyPolicy(): JSX.Element {
 	const [isVisible, setIsVisible] = useState(false);
@@ -108,7 +108,7 @@ export default function PrivacyPolicy(): JSX.Element {
 						</section>
 
 						{/* Policy Sections */}
-						{sections.map((section  index) => (
+      {sections.map((section, index) => (
 							<section key={index} className={`mb-12 transition-all duration-700 delay-${200 + index * 100} ${
 								isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
 							}`}>
@@ -230,4 +230,5 @@ export default function PrivacyPolicy(): JSX.Element {
 				</div>
 			</div>
 		</>
-	)}
+	);
+}

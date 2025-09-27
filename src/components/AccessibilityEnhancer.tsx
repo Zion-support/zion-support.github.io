@@ -79,7 +79,7 @@ export default function AccessibilityEnhancer({
     } else {
       root.classList.remove('reduced-motion');
     }
-  }[isHighContrastprefersMotion]);
+  }[isHighContrast, prefersMotion]);
 
   // Announce page changes to screen readers
   useEffect(() => {

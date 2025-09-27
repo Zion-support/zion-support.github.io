@@ -32,12 +32,12 @@ export const trapFocus = (element: HTMLElement): (() => void) => {
   firstElement?.focus();
 
   return () => {
-    element.removeEventListener('keydown'handleTabKey);
+    element.removeEventListener('keydown', handleTabKey);
   };
 };
 
 // Announce to screen readers
-export const announceToScreenReader = (message: stringpriority: 'polite' | 'assertive' = 'polite') => {
+export const announceToScreenReader = (message: string, priority: 'polite' | 'assertive' = 'polite') => {
   const announcement = document.createElement('div');
   announcement.setAttribute('aria-live', priority);
   announcement.setAttribute('aria-atomic', 'true');
@@ -48,11 +48,11 @@ export const announceToScreenReader = (message: stringpriority: 'polite' | 'asse
   
   setTimeout(() => {
     document.body.removeChild(announcement);
-  }1000);
+  }, 1000);
 };
 
 // Skip link functionality
-export const createSkipLink = (targetId: stringlinkText: string = 'Skip to main content'): HTMLElement => {
+export const createSkipLink = (targetId: string, linkText: string = 'Skip to main content'): HTMLElement => {
   const skipLink = document.createElement('a');
   skipLink.href = `#${targetId}`;
   skipLink.textContent = linkText;

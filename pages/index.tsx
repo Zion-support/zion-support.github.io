@@ -55,15 +55,21 @@ export default function Home(): JSX.Element {
         entries.forEach((entry) => {
           if (entry.entryType === 'navigation') {
             setPerformanceMetrics({
-              loadTime: entry.loadEventEnd - entry.fetchStart 
-              domContentLoaded: entry.domContentLoadedEventEnd - entry.fetchStart})}
-        })});
+              loadTime: entry.loadEventEnd - entry.fetchStart,
+              domContentLoaded: entry.domContentLoadedEventEnd - entry.fetchStart
+            });
+          }
+        });
+      });
       
       try {
-        observer.observe({ entryTypes: ['navigation'] })} catch (e) {
-        console.warn('Performance observer not supported')}
+        observer.observe({ entryTypes: ['navigation'] });
+      } catch (e) {
+        console.warn('Performance observer not supported');
+      }
       
-      return () => observer.disconnect()}
+      return () => observer.disconnect();
+    }
   }, []);
 
   const handleGetStarted = useCallback(() => {
@@ -80,28 +86,28 @@ export default function Home(): JSX.Element {
       title: "AI-Powered Solutions",
       description: "Leverage cutting-edge artificial intelligence to transform your business operations and drive innovation.",
       icon: "🤖",
-      color: "blue" as const 
+      color: "blue" as const,
       delay: 0.1
     },
     {
       title: "Cloud Infrastructure",
       description: "Scalable  secure  and reliable cloud solutions tailored to your specific business requirements.",
       icon: "☁️",
-      color: "green" as const 
+      color: "green" as const,
       delay: 0.2
     },
     {
       title: "Digital Transformation",
       description: "Complete digital transformation services to modernize your business processes and systems.",
       icon: "🚀",
-      color: "purple" as const 
+      color: "purple" as const,
       delay: 0.3
     },
     {
       title: "24/7 Support",
       description: "Round-the-clock technical support and monitoring to ensure your systems run smoothly.",
       icon: "🛡️",
-      color: "blue" as const 
+      color: "blue" as const,
       delay: 0.4
     }
   ], []);
@@ -208,7 +214,7 @@ export default function Home(): JSX.Element {
               </p>
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature  index) => (
+              {features.map((feature, index) => (
                 <motion.div 
                   key={index}
                   initial={{ y: 50, opacity: 0 }}
@@ -440,4 +446,5 @@ export default function Home(): JSX.Element {
         </section>
       </div>
     </>
-  )}
+  );
+}

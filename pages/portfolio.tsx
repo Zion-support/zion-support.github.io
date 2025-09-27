@@ -27,8 +27,8 @@ export default function Portfolio(): JSX.Element {
 			technologies: ['React', 'Node.js', 'TensorFlow', 'MongoDB', 'AWS'],
 			results: ['40% increase in sales', '60% improvement in user engagement', '25% reduction in cart abandonment'],
 			image: '🛒',
-			featured: true 
-			duration: '6 months',
+                  featured: true,
+                  duration: '6 months',
 			team: '8 developers'
 		},
 		{
@@ -40,8 +40,8 @@ export default function Portfolio(): JSX.Element {
 			technologies: ['AWS', 'Docker', 'Kubernetes', 'Terraform', 'Jenkins'],
 			results: ['50% faster deployments', '99.9% uptime achieved', '40% cost reduction'],
 			image: '☁️',
-			featured: true 
-			duration: '4 months',
+                  featured: true,
+                  duration: '4 months',
 			team: '6 developers'
 		},
 		{
@@ -53,8 +53,8 @@ export default function Portfolio(): JSX.Element {
 			technologies: ['React Native', 'Node.js', 'PostgreSQL', 'Redis', 'Docker'],
 			results: ['95% user satisfaction', 'Zero security incidents', '2M+ downloads'],
 			image: '🏦',
-			featured: false 
-			duration: '8 months',
+                  featured: false,
+                  duration: '8 months',
 			team: '10 developers'
 		},
 		{
@@ -66,8 +66,8 @@ export default function Portfolio(): JSX.Element {
 			technologies: ['Python', 'Django', 'PostgreSQL', 'D3.js', 'Machine Learning'],
 			results: ['80% faster data insights', '30% improvement in patient outcomes', 'Real-time monitoring'],
 			image: '📊',
-			featured: false 
-			duration: '5 months',
+                  featured: false,
+                  duration: '5 months',
 			team: '7 developers'
 		},
 		{
@@ -79,8 +79,8 @@ export default function Portfolio(): JSX.Element {
 			technologies: ['Python', 'React', 'Elasticsearch', 'Kafka', 'Machine Learning'],
 			results: ['99.5% threat detection accuracy', '50% faster incident response', 'SOC2 compliance'],
 			image: '🔒',
-			featured: false 
-			duration: '10 months',
+                  featured: false,
+                  duration: '10 months',
 			team: '12 developers'
 		},
 		{
@@ -92,8 +92,8 @@ export default function Portfolio(): JSX.Element {
 			technologies: ['Next.js', 'TypeScript', 'PWA', 'WebRTC', 'IndexedDB'],
 			results: ['90% user retention', '60% faster load times', 'Offline functionality'],
 			image: '🎓',
-			featured: false 
-			duration: '7 months',
+                  featured: false,
+                  duration: '7 months',
 			team: '9 developers'
 		}
 	];
@@ -362,4 +362,5 @@ export default function Portfolio(): JSX.Element {
 				</div>
 			</div>
 		</>
-	)}
+	);
+}
