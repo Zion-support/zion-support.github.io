@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { performanceMetrics, PerformanceReport } from '../utils/performanceMetrics';
-import { analyzeSEO, SEOAnalysis } from '../utils/seoOptimizer';
+import { seoOptimizer } from '../utils/seoOptimizer';
 import { analyzeAccessibility, AccessibilityReport } from '../utils/accessibilityEnhancer';
 
 interface PerformanceMetricsDashboardProps {
@@ -10,7 +10,7 @@ interface PerformanceMetricsDashboardProps {
 
 const PerformanceMetricsDashboard: React.FC<PerformanceMetricsDashboardProps> = ({ isVisible, onClose }) => {
   const [performanceReport, setPerformanceReport] = useState<PerformanceReport | null>(null);
-  const [seoAnalysis, setSeoAnalysis] = useState<SEOAnalysis | null>(null);
+  const [seoAnalysis, setSeoAnalysis] = useState<any>(null);
   const [accessibilityReport, setAccessibilityReport] = useState<AccessibilityReport | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [activeTab, setActiveTab] = useState<'performance' | 'seo' | 'accessibility'>('performance');
@@ -19,7 +19,7 @@ const PerformanceMetricsDashboard: React.FC<PerformanceMetricsDashboardProps> = 
     setIsLoading(true);
     try {
       const perfReport = performanceMetrics.generateReport();
-      const seoData = analyzeSEO();
+      const seoData = seoOptimizer.generateSEOReport();
       const a11yData = analyzeAccessibility();
 
       setPerformanceReport(perfReport);
@@ -79,7 +79,7 @@ const PerformanceMetricsDashboard: React.FC<PerformanceMetricsDashboardProps> = 
           ].map((tab) => (
             <button
               key={tab.id}
-              onClick={() => setActiveTab(tab.id as 'overview' | 'performance' | 'security' | 'analytics')}
+              onClick={() => setActiveTab(tab.id as 'performance' | 'accessibility' | 'seo')}
               className={`flex items-center px-6 py-3 text-sm font-medium ${
                 activeTab === tab.id
                   ? 'text-blue-600 border-b-2 border-blue-600'
@@ -208,7 +208,7 @@ const PerformanceMetricsDashboard: React.FC<PerformanceMetricsDashboardProps> = 
                       SEO Recommendations
                     </h3>
                     <ul className="space-y-2">
-                      {seoAnalysis.recommendations.map((rec, index) => (
+                      {seoAnalysis.recommendations.map((rec: any, index: number) => (
                         <li key={index} className="flex items-start">
                           <span className="text-blue-500 mr-2">•</span>
                           <div>

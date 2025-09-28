@@ -10,7 +10,7 @@ import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import AIPerformanceDashboard from './components/AIPerformanceDashboard';
-import { SEOOptimizer, useSEOData } from './components/SEOOptimizer';
+import SEOOptimizer from './components/SEOOptimizer';
 import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
 import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
 import { enhancedAnalytics } from './utils/enhancedAnalytics';
@@ -70,7 +70,14 @@ export default function App(): React.JSX.Element {
   const currentPathname = typeof window !== 'undefined' ? window.location.pathname : '/';
 
   // Get SEO data using current pathname
-  const seoData = useSEOData(currentPathname);
+  const seoData = { 
+    title: 'Zion Tech Group - Advanced AI and IT Solutions',
+    description: 'Leading provider of AI-powered IT solutions, cloud computing, cybersecurity, and digital transformation services for enterprises worldwide.',
+    keywords: ['AI', 'IT Solutions', 'Cloud Computing', 'Cybersecurity', 'Digital Transformation'],
+    image: '/images/og-default.jpg',
+    url: `https://ziontechgroup.com${currentPathname}`,
+    type: 'website' as const
+  };
 
   // Enhanced engagement tracking function
   const enhancedTrackEngagement = useCallback(() => {
@@ -129,7 +136,8 @@ export default function App(): React.JSX.Element {
     performanceSEO.optimizeCSS();
 
     // Set default SEO data using the correct method
-    seoManager.updateMetaTags(seoData);
+    const seoDataFormatted = { ...seoData, keywords: Array.isArray(seoData.keywords) ? seoData.keywords : [seoData.keywords || 'AI'] };
+    seoManager.updateMetaTags(seoDataFormatted);
     
     // Initialize advanced optimization systems
     // performanceOptimizer.optimizeBundle(); // Method doesn't exist
@@ -521,7 +529,7 @@ export default function App(): React.JSX.Element {
         />
 
         {/* New Components */}
-        <NotificationSystem />
+        <NotificationSystem notifications={[]} onRemove={() => {}} />
         
         <KeyboardShortcutsHelp
           isVisible={showKeyboardHelp}
