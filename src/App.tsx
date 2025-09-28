@@ -20,6 +20,7 @@ import { performanceOptimizer } from './utils/performanceOptimizations';
 import { advancedAccessibilityEnhancer } from './utils/advancedAccessibilityEnhancer';
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
 import { useAppInitialization } from './hooks/useAppInitialization';
+import { useSEOData } from './hooks/useSEOData';
 import AIPerformanceDashboard from './components/AIPerformanceDashboard';
 import WebsiteEnhancements from './components/WebsiteEnhancements';
 import SEOOptimizer from './components/SEOOptimizer';
@@ -44,6 +45,14 @@ import { seoManager } from './utils/advancedSEOManager';
 import { errorTracker } from './utils/advancedErrorTracker';
 import { apiCache, imageCache, dataCache } from './utils/advancedCacheManager';
 
+// Import new comprehensive systems
+import { buildOptimizer } from './utils/advancedBuildOptimizer';
+import { errorRecovery } from './utils/enhancedErrorRecovery';
+import { analyticsSystem } from './utils/enhancedAnalyticsSystem';
+import { performanceOptimizer as comprehensivePerformanceOptimizer } from './utils/performanceOptimizations';
+import { accessibilityEnhancer } from './utils/accessibilityEnhancements';
+// import { securityEnhancer } from './utils/securityEnhancements';
+// import ComprehensiveMonitoringDashboard from './components/ComprehensiveMonitoringDashboard';
 // Import enhanced utilities
 import { enhancedErrorHandler } from './utils/enhancedErrorHandling';
 import { enhancedPerformanceMonitor as enhancedPerfMonitor } from './utils/enhancedPerformanceMonitoring';
@@ -53,13 +62,23 @@ import { enhancedSEOOptimizer } from './utils/enhancedSEOOptimizer';
 import { enhancedSecuritySystem } from './utils/enhancedSecuritySystem';
 import { enhancedAccessibilitySystem } from './utils/enhancedAccessibilitySystem';
 import { apiCache as apiCacheSystem, imageCache as imageCacheSystem, dataCache as dataCacheSystem } from './utils/enhancedCachingSystem';
-import { enhancedAnalyticsSystem } from './utils/enhancedAnalyticsSystem';
+import { analyticsSystem as enhancedAnalyticsSystem } from './utils/enhancedAnalyticsSystem';
 import { advancedAppEnhancements } from './utils/advancedAppEnhancements';
 import { errorHandler, ErrorBoundary } from './utils/errorHandler';
 import { performanceMonitor } from './utils/performanceMonitoring';
+<<<<<<< HEAD
 import { advancedErrorReporter } from './utils/advancedErrorReporting';
 import { advancedPerformanceMonitor } from './utils/advancedPerformanceMonitoring';
 import { enhancedSEOOptimizer as enhancedSEOOpt } from './utils/enhancedSEOOptimization';
+=======
+import { advancedErrorHandler } from './utils/advancedErrorHandling';
+import SystemMonitoringDashboard from './components/SystemMonitoringDashboard';
+// import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
+// import { advancedCacheSystem } from './utils/advancedCacheSystem';
+// import { enhancedAnalytics } from './utils/enhancedAnalytics';
+// import { advancedErrorRecovery } from './utils/advancedErrorRecovery';
+// import { AccessibilityEnhancer, SecurityEnhancer } from './utils/enhancementClasses';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-cdef
 
 // Lazy load heavy components
 const AdvancedAnalyticsDashboard = lazy(() => import('./components/AdvancedAnalyticsDashboard'));
@@ -157,6 +176,7 @@ const App: React.FC = () => {
     }
   }, []);
 
+<<<<<<< HEAD
   // Advanced error handler
   const advancedErrorHandler = useCallback((error: Error, context?: any) => {
     console.error('Advanced Error:', error, context);
@@ -165,6 +185,108 @@ const App: React.FC = () => {
     // Enhanced error reporting
     if (advancedErrorReporter) {
       advancedErrorReporter.reportError(error, context);
+=======
+  // Performance metrics state
+  const [performanceMetrics, setPerformanceMetrics] = useState({
+    memoryUsage: 0,
+    renderTime: 0,
+    networkLatency: 0,
+    errorCount: 0
+  });
+
+  // Engagement tracking data
+  const engagementData = useMemo(() => ({
+    startTime: Date.now(),
+    scrollDepth: 0,
+    clicks: 0
+  }), []);
+
+
+  // Enhanced keyboard handler for all dashboard toggles
+  const handleKeyDown = useCallback((event: KeyboardEvent) => {
+    if ((event.ctrlKey || event.metaKey) && event.shiftKey) {
+      event.preventDefault();
+      switch (event.key) {
+        case 'D':
+          setShowSystemDashboard(prev => !prev);
+          break;
+        case 'P':
+          setShowPerformanceOptimizer(prev => !prev);
+          break;
+        case 'M':
+          setShowPerformanceMonitor(prev => !prev);
+          break;
+        case 'A':
+          setShowAIDashboard(prev => !prev);
+          break;
+        case 'S':
+          setShowSEOOptimizer(prev => !prev);
+          break;
+        case 'R':
+          setShowRealTimeMetrics(prev => !prev);
+          break;
+        case 'H':
+          setShowAccessibilityPanel(prev => !prev);
+          break;
+        case 'K':
+          setShowKeyboardShortcutsManager(prev => !prev);
+          break;
+        case 'I':
+          setShowComprehensiveImprovements(prev => !prev);
+          break;
+        default:
+          break;
+      }
+    }
+  }, [setShowSystemDashboard, setShowPerformanceOptimizer, setShowPerformanceMonitor, setShowAIDashboard, setShowSEOOptimizer, setShowRealTimeMetrics, setShowAccessibilityPanel, setShowKeyboardShortcutsManager, setShowComprehensiveImprovements]);
+
+  // Main initialization effect
+  useEffect(() => {
+    try {
+      // Initialize enhanced systems
+      enhancedPerfMonitor.initialize();
+      analytics.initialize();
+      
+      // Initialize accessibility and security enhancers
+      if (advancedAccessibilityEnhancer && typeof advancedAccessibilityEnhancer.initialize === 'function') {
+        advancedAccessibilityEnhancer.initialize();
+      }
+      if (enhancedSecurityManager && typeof enhancedSecurityManager.initialize === 'function') {
+        enhancedSecurityManager.initialize();
+      }
+      
+      // Initialize new performance and accessibility enhancements
+      initializePerformanceEnhancements();
+      initializeAccessibilityEnhancements();
+      
+      // Initialize advanced optimizers
+      advancedPerformanceOptimizer.initialize();
+      seoOptimizer.initialize();
+      advancedAccessibilityEnhancer.initialize();
+      
+      // Initialize new comprehensive systems
+      buildOptimizer.initialize();
+      errorRecovery.initialize();
+      analyticsSystem.initialize();
+      
+      // Initialize new monitoring and optimization systems
+      // Note: PerformanceMonitor is auto-initialized in constructor
+      // seoOptimizer and errorHandler will be initialized by their respective classes
+      
+      // Get comprehensive enhancements
+      const enhancements = getComprehensiveEnhancements();
+
+      // Store enhancements globally for debugging
+      (window as unknown as Record<string, unknown>).enhancements = enhancements;
+      (window as unknown as Record<string, unknown>).performanceOptimizer = advancedPerformanceOptimizer;
+      (window as unknown as Record<string, unknown>).seoOptimizer = seoOptimizer;
+      (window as unknown as Record<string, unknown>).accessibilityEnhancer = advancedAccessibilityEnhancer;
+      (window as unknown as Record<string, unknown>).buildOptimizer = buildOptimizer;
+      (window as unknown as Record<string, unknown>).errorRecovery = errorRecovery;
+      (window as unknown as Record<string, unknown>).analyticsSystem = analyticsSystem;
+    } catch (error) {
+      console.error('Error initializing enhancements:', error);
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-cdef
     }
   }, []);
 
