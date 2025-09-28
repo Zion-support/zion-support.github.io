@@ -195,12 +195,12 @@ class SecurityEnhancer {
     const self = this; // eslint-disable-line @typescript-eslint/no-this-alias
     
     XMLHttpRequest.prototype.open = function(method: string, url: string | URL, ...args: unknown[]) {
-      (this as { _url?: string })._url = url.toString();
+      (this as XMLHttpRequest & { _url?: string })._url = url.toString();
       return originalOpen.call(this, method, url, args[0] as boolean, args[1] as string, args[2] as string);
     };
     
     XMLHttpRequest.prototype.send = function(data?: unknown) {
-      const url = (this as { _url?: string })._url;
+      const url = (this as XMLHttpRequest & { _url?: string })._url;
       if (url && self.isRateLimited(url)) {
         throw new Error('Rate limit exceeded');
       }

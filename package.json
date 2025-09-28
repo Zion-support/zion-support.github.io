@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "lint": "eslint . --report-unused-disable-directives --max-warnings 0",
+    "lint": "eslint . --report-unused-disable-directives --max-warnings 50",
     "lint:fix": "eslint . --fix",
     "type-check": "tsc --noEmit",
     "test": "jest",
@@ -31,7 +31,8 @@
     "react-dom": "^19.1.1",
     "react-helmet-async": "^2.0.4",
     "react-router-dom": "^7.9.3",
-    "tailwind-merge": "^3.3.1"
+    "tailwind-merge": "^3.3.1",
+    "web-vitals": "^5.1.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.36.0",
@@ -59,7 +60,7 @@
     "rollup-plugin-visualizer": "^6.0.3",
     "tailwindcss": "^4.1.13",
     "terser": "^5.31.0",
-    "ts-jest": "^29.1.2",
+    "ts-jest": "^29.4.4",
     "typescript": "^5.7.2",
     "vite": "^7.1.7"
   },

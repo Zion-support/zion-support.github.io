@@ -1,257 +1,257 @@
-/**
- * Advanced Analytics Manager
- * Provides comprehensive analytics tracking and reporting
- */
-
 interface AnalyticsEvent {
-  event: string;
+  name: string;
   properties?: Record<string, unknown>;
-  timestamp: number;
-  userId?: string;
-  sessionId: string;
+  timestamp?: number;
 }
 
-interface UserSession {
-  id: string;
-  startTime: number;
-  lastActivity: number;
-  pageViews: number;
-  events: AnalyticsEvent[];
-  deviceInfo: {
-    userAgent: string;
-    screenResolution: string;
-    language: string;
-    timezone: string;
-  };
+interface PerformanceMetrics {
+  loadTime: number;
+  firstContentfulPaint: number;
+  largestContentfulPaint: number;
+  firstInputDelay: number;
+  cumulativeLayoutShift: number;
+  timeToInteractive: number;
 }
 
-class AdvancedAnalyticsManager {
-  private static instance: AdvancedAnalyticsManager;
-  private session: UserSession | null = null;
-  private eventQueue: AnalyticsEvent[] = [];
-  private isOnline = navigator.onLine;
-  private maxQueueSize = 100;
+class AdvancedAnalytics {
+  private events: AnalyticsEvent[] = [];
+  private sessionId: string;
+  private userId?: string;
+  private isEnabled: boolean;
 
-  private constructor() {
-    this.initializeSession();
-    this.setupEventListeners();
-    this.startHeartbeat();
-  }
-
-  public static getInstance(): AdvancedAnalyticsManager {
-    if (!AdvancedAnalyticsManager.instance) {
-      AdvancedAnalyticsManager.instance = new AdvancedAnalyticsManager();
-    }
-    return AdvancedAnalyticsManager.instance;
-  }
-
-  private initializeSession(): void {
-    const sessionId = this.generateSessionId();
-    const now = Date.now();
-
-    this.session = {
-      id: sessionId,
-      startTime: now,
-      lastActivity: now,
-      pageViews: 0,
-      events: [],
-      deviceInfo: {
-        userAgent: navigator.userAgent,
-        screenResolution: `${screen.width}x${screen.height}`,
-        language: navigator.language,
-        timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
-      },
-    };
-
-    // Track page view
-    this.trackEvent('page_view', {
-      url: window.location.href,
-      referrer: document.referrer,
-      title: document.title,
-    });
-
-    console.log('📊 Advanced Analytics Manager initialized');
-  }
-
-  private setupEventListeners(): void {
-    // Online/offline status
-    window.addEventListener('online', () => {
-      this.isOnline = true;
-      this.flushEventQueue();
-    });
-
-    window.addEventListener('offline', () => {
-      this.isOnline = false;
-    });
-
-    // Page visibility
-    document.addEventListener('visibilitychange', () => {
-      if (document.visibilityState === 'visible') {
-        this.trackEvent('page_visible', {
-          duration: Date.now() - (this.session?.lastActivity || 0),
-        });
-      } else {
-        this.trackEvent('page_hidden', {
-          duration: Date.now() - (this.session?.lastActivity || 0),
-        });
-      }
-    });
-
-    // Before unload
-    window.addEventListener('beforeunload', () => {
-      this.trackEvent('session_end', {
-        duration: Date.now() - (this.session?.startTime || 0),
-        pageViews: this.session?.pageViews || 0,
-        eventCount: this.session?.events.length || 0,
-      });
-      this.flushEventQueue();
-    });
-  }
-
-  private startHeartbeat(): void {
-    setInterval(() => {
-      if (this.session) {
-        this.session.lastActivity = Date.now();
-        this.trackEvent('heartbeat', {
-          sessionDuration: Date.now() - this.session.startTime,
-          pageViews: this.session.pageViews,
-        });
-      }
-    }, 30000); // 30 seconds
+  constructor() {
+    this.sessionId = this.generateSessionId();
+    this.isEnabled = this.shouldEnableAnalytics();
+    this.initializePerformanceTracking();
   }
 
   private generateSessionId(): string {
     return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
   }
 
-  public trackEvent(event: string, properties?: Record<string, unknown>): void {
-    if (!this.session) return;
+  private shouldEnableAnalytics(): boolean {
+    // Check for analytics consent
+    const consent = localStorage.getItem('analytics-consent');
+    if (consent === 'false') return false;
 
-    const analyticsEvent: AnalyticsEvent = {
-      event,
+    // Check for development mode
+    if (process.env.NODE_ENV === 'development') return false;
+
+    // Check for privacy mode
+    if (navigator.doNotTrack === '1') return false;
+
+    return true;
+  }
+
+  private initializePerformanceTracking(): void {
+    if (!this.isEnabled || typeof window === 'undefined') return;
+
+    // Track page load performance
+    window.addEventListener('load', () => {
+      this.trackPerformanceMetrics();
+    });
+
+    // Track Web Vitals
+    this.trackWebVitals();
+
+    // Track user interactions
+    this.trackUserInteractions();
+  }
+
+  private async trackPerformanceMetrics(): Promise<void> {
+    if (!this.isEnabled) return;
+
+    try {
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      
+      const metrics: PerformanceMetrics = {
+        loadTime: navigation.loadEventEnd - navigation.loadEventStart,
+        firstContentfulPaint: 0,
+        largestContentfulPaint: 0,
+        firstInputDelay: 0,
+        cumulativeLayoutShift: 0,
+        timeToInteractive: 0
+      };
+
+      // Get FCP
+      const fcpEntry = performance.getEntriesByName('first-contentful-paint')[0];
+      if (fcpEntry) {
+        metrics.firstContentfulPaint = fcpEntry.startTime;
+      }
+
+      // Get LCP
+      const lcpEntries = performance.getEntriesByType('largest-contentful-paint');
+      if (lcpEntries.length > 0) {
+        metrics.largestContentfulPaint = lcpEntries[lcpEntries.length - 1].startTime;
+      }
+
+      this.trackEvent('performance_metrics', {
+        ...metrics,
+        url: window.location.href,
+        userAgent: navigator.userAgent,
+        viewport: {
+          width: window.innerWidth,
+          height: window.innerHeight
+        }
+      });
+    } catch (error) {
+      console.warn('Failed to track performance metrics:', error);
+    }
+  }
+
+  private trackWebVitals(): void {
+    if (!this.isEnabled) return;
+
+    // Track Core Web Vitals
+    import('web-vitals').then(({ onCLS, onFCP, onLCP, onTTFB, onINP }) => {
+      onCLS((metric) => {
+        this.trackEvent('web_vital', {
+          name: 'CLS',
+          value: metric.value,
+          delta: metric.delta,
+          id: metric.id
+        });
+      });
+
+      onINP((metric) => {
+        this.trackEvent('web_vital', {
+          name: 'INP',
+          value: metric.value,
+          delta: metric.delta,
+          id: metric.id
+        });
+      });
+
+      onFCP((metric) => {
+        this.trackEvent('web_vital', {
+          name: 'FCP',
+          value: metric.value,
+          delta: metric.delta,
+          id: metric.id
+        });
+      });
+
+      onLCP((metric) => {
+        this.trackEvent('web_vital', {
+          name: 'LCP',
+          value: metric.value,
+          delta: metric.delta,
+          id: metric.id
+        });
+      });
+
+      onTTFB((metric) => {
+        this.trackEvent('web_vital', {
+          name: 'TTFB',
+          value: metric.value,
+          delta: metric.delta,
+          id: metric.id
+        });
+      });
+    });
+  }
+
+  private trackUserInteractions(): void {
+    if (!this.isEnabled) return;
+
+    // Track clicks
+    document.addEventListener('click', (event) => {
+      const target = event.target as HTMLElement;
+      this.trackEvent('click', {
+        element: target.tagName,
+        id: target.id,
+        className: target.className,
+        text: target.textContent?.slice(0, 100),
+        x: event.clientX,
+        y: event.clientY
+      });
+    });
+
+    // Track form submissions
+    document.addEventListener('submit', (event) => {
+      const form = event.target as HTMLFormElement;
+      this.trackEvent('form_submit', {
+        formId: form.id,
+        formClass: form.className,
+        action: form.action,
+        method: form.method
+      });
+    });
+
+    // Track scroll depth
+    let maxScrollDepth = 0;
+    window.addEventListener('scroll', () => {
+      const scrollDepth = Math.round(
+        (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100
+      );
+      
+      if (scrollDepth > maxScrollDepth) {
+        maxScrollDepth = scrollDepth;
+        this.trackEvent('scroll_depth', {
+          depth: maxScrollDepth,
+          url: window.location.href
+        });
+      }
+    });
+  }
+
+  public trackEvent(name: string, properties?: Record<string, unknown>): void {
+    if (!this.isEnabled) return;
+
+    const event: AnalyticsEvent = {
+      name,
       properties: {
         ...properties,
+        sessionId: this.sessionId,
+        userId: this.userId,
         timestamp: Date.now(),
-        url: window.location.href,
+        url: window.location.href
       },
-      timestamp: Date.now(),
-      sessionId: this.session.id,
+      timestamp: Date.now()
     };
 
-    this.session.events.push(analyticsEvent);
-    this.eventQueue.push(analyticsEvent);
-
-    // Update activity
-    this.session.lastActivity = Date.now();
-
-    // Track page views
-    if (event === 'page_view') {
-      this.session.pageViews++;
-    }
-
-    console.log('📊 Analytics Event:', event, properties);
-
-    // Send immediately if online, otherwise queue
-    if (this.isOnline) {
-      this.sendEvent(analyticsEvent);
-    } else if (this.eventQueue.length >= this.maxQueueSize) {
-      // Remove oldest events if queue is full
-      this.eventQueue.shift();
-    }
+    this.events.push(event);
+    this.sendEvent(event);
   }
 
   private async sendEvent(event: AnalyticsEvent): Promise<void> {
     try {
-      // In a real implementation, you would send to your analytics service
+      // Send to analytics service
       await fetch('/api/analytics', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
+          'Content-Type': 'application/json'
         },
-        body: JSON.stringify(event),
+        body: JSON.stringify(event)
       });
     } catch (error) {
-      console.error('Failed to send analytics event:', error);
-      // Re-queue the event for later
-      this.eventQueue.push(event);
+      console.warn('Failed to send analytics event:', error);
     }
   }
 
-  private async flushEventQueue(): Promise<void> {
-    if (!this.isOnline || this.eventQueue.length === 0) return;
-
-    const events = [...this.eventQueue];
-    this.eventQueue = [];
-
-    try {
-      await fetch('/api/analytics/batch', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ events }),
-      });
-      console.log(`📊 Sent ${events.length} queued analytics events`);
-    } catch (error) {
-      console.error('Failed to flush analytics queue:', error);
-      // Re-queue events for later
-      this.eventQueue.unshift(...events);
-    }
+  public setUserId(userId: string): void {
+    this.userId = userId;
   }
 
-  public trackUserAction(action: string, element?: string, properties?: Record<string, unknown>): void {
-    this.trackEvent('user_action', {
-      action,
-      element,
-      ...properties,
-    });
+  public enable(): void {
+    this.isEnabled = true;
+    localStorage.setItem('analytics-consent', 'true');
   }
 
-  public trackPerformance(metric: string, value: number, properties?: Record<string, unknown>): void {
-    this.trackEvent('performance_metric', {
-      metric,
-      value,
-      ...properties,
-    });
+  public disable(): void {
+    this.isEnabled = false;
+    localStorage.setItem('analytics-consent', 'false');
   }
 
-  public trackError(error: Error, context?: string): void {
-    this.trackEvent('error', {
-      message: error.message,
-      stack: error.stack,
-      context,
-      url: window.location.href,
-    });
+  public getEvents(): AnalyticsEvent[] {
+    return [...this.events];
   }
 
-  public getSessionData(): UserSession | null {
-    return this.session;
-  }
-
-  public identifyUser(userId: string, traits?: Record<string, unknown>): void {
-    if (this.session) {
-      (this.session as { userId?: string }).userId = userId;
-    }
-
-    this.trackEvent('user_identified', {
-      userId,
-      traits,
-    });
-  }
-
-  public setUserProperties(properties: Record<string, unknown>): void {
-    this.trackEvent('user_properties_updated', {
-      properties,
-    });
-  }
-
-  public trackConversion(conversionType: string, value?: number, properties?: Record<string, unknown>): void {
-    this.trackEvent('conversion', {
-      conversionType,
-      value,
-      ...properties,
-    });
+  public clearEvents(): void {
+    this.events = [];
   }
 }
 
-export default AdvancedAnalyticsManager;
+// Export singleton instance
+export const analytics = new AdvancedAnalytics();
+export default analytics;

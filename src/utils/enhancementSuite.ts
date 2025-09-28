@@ -76,7 +76,7 @@ interface SystemMetrics {
 }
 
 export class EnhancementSuite {
-  private static instance: EnhancementSuite;
+  private static instance: EnhancementSuite | null;
   private config: EnhancementConfig;
   private performanceOptimizer!: PerformanceOptimizer;
   private securityEnhancer!: SecurityEnhancer;
@@ -140,7 +140,16 @@ export class EnhancementSuite {
 
   public initialize(): void {
     // Initialize all enhancement modules
-    this.performanceOptimizer = PerformanceOptimizer.getInstance(this.config.performance);
+    // Map enhancement config to performance config
+    const performanceConfig = {
+      enableWebVitals: true,
+      enableResourceMonitoring: this.config.performance.enableImageOptimization,
+      enableMemoryTracking: true,
+      enableRenderTracking: true,
+      reportInterval: 5000,
+      maxMetricsHistory: 100
+    };
+    this.performanceOptimizer = new PerformanceOptimizer(performanceConfig);
     this.securityEnhancer = SecurityEnhancer.getInstance();
     this.accessibilityEnhancer = AccessibilityEnhancer.getInstance();
     this.errorHandler = ErrorHandler.getInstance();
@@ -236,6 +245,6 @@ export class EnhancementSuite {
   public destroy(): void {
     this.stopMetricsCollection();
     this.cleanup();
-    EnhancementSuite.instance = null as any;
+    EnhancementSuite.instance = null as unknown as EnhancementSuite;
   }
 }

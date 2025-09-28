@@ -74,7 +74,18 @@ jest.mock('../hooks/usePerformanceOptimization', () => ({
 jest.mock('../utils/analytics', () => ({
   analytics: {
     initialize: jest.fn(),
-    trackPageView: jest.fn()
+    trackPageView: jest.fn(),
+    enable: jest.fn(),
+    trackEvent: jest.fn()
+  }
+}));
+
+jest.mock('../utils/advancedAnalytics', () => ({
+  analytics: {
+    enable: jest.fn(),
+    trackEvent: jest.fn(),
+    trackPageView: jest.fn(),
+    initialize: jest.fn()
   }
 }));
 
@@ -179,6 +190,12 @@ jest.mock('../components/PerformanceProfiler', () => {
   };
 });
 
+jest.mock('../components/ThemeToggle', () => {
+  return function MockThemeToggle() {
+    return null;
+  };
+});
+
 // Components are mocked above, no need to import them
 
 // Mock the router to use MemoryRouter for tests
@@ -210,9 +227,21 @@ jest.mock('../router', () => {
 });
 
 const renderWithRouter = (ui: React.ReactElement, { route = '/' } = {}) => {
-  // Mock window.location using delete and redefine approach
-  delete (window as unknown as { location?: unknown }).location;
-  (window as unknown as { location: { pathname: string } }).location = { pathname: route };
+  // Update the existing location mock with new route
+  (window as unknown as { location: Partial<Location> }).location = {
+    pathname: route,
+    href: `http://localhost:3000${route}`,
+    assign: jest.fn(),
+    replace: jest.fn(),
+    reload: jest.fn(),
+    search: '',
+    hash: '',
+    origin: 'http://localhost:3000',
+    protocol: 'http:',
+    host: 'localhost:3000',
+    hostname: 'localhost',
+    port: '3000',
+  };
   return render(ui);
 };
 

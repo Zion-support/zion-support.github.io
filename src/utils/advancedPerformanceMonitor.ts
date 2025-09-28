@@ -1,46 +1,56 @@
 /**
- * Advanced Performance Monitoring Utility
- * Provides comprehensive performance tracking and optimization features
+ * Advanced Performance Monitor
+ * Comprehensive performance tracking and optimization system
  */
 
-export interface PerformanceMetrics {
-  loadTime: number;
+import { PerformanceMetrics } from '../types/global';
+
+interface PerformanceThresholds {
+  pageLoadTime: number;
   firstContentfulPaint: number;
   largestContentfulPaint: number;
-  firstInputDelay: number;
   cumulativeLayoutShift: number;
-  memoryUsage: number;
-  networkLatency: number;
-  renderTime: number;
-  bundleSize: number;
-  cacheHitRate: number;
+  firstInputDelay: number;
+  totalBlockingTime: number;
 }
 
-export interface PerformanceConfig {
-  enableRealTimeMonitoring: boolean;
-  enableMemoryTracking: boolean;
-  enableNetworkTracking: boolean;
-  enableRenderTracking: boolean;
+interface PerformanceConfig {
+  enableWebVitals: boolean;
+  enableMemoryMonitoring: boolean;
+  enableNetworkMonitoring: boolean;
+  enableCustomMetrics: boolean;
+  samplingRate: number;
   reportInterval: number;
-  maxMetricsHistory: number;
+  thresholds: PerformanceThresholds;
 }
 
 class AdvancedPerformanceMonitor {
   private static instance: AdvancedPerformanceMonitor;
   private metrics: PerformanceMetrics[] = [];
   private config: PerformanceConfig;
-  private observers: PerformanceObserver[] = [];
+  private observer?: PerformanceObserver;
   private isMonitoring = false;
+  private reportTimer?: NodeJS.Timeout;
 
-  constructor() {
+  private constructor() {
     this.config = {
-      enableRealTimeMonitoring: true,
-      enableMemoryTracking: true,
-      enableNetworkTracking: true,
-      enableRenderTracking: true,
-      reportInterval: 5000,
-      maxMetricsHistory: 100
+      enableWebVitals: true,
+      enableMemoryMonitoring: true,
+      enableNetworkMonitoring: true,
+      enableCustomMetrics: true,
+      samplingRate: 1.0,
+      reportInterval: 30000, // 30 seconds
+      thresholds: {
+        pageLoadTime: 3000,
+        firstContentfulPaint: 1800,
+        largestContentfulPaint: 2500,
+        cumulativeLayoutShift: 0.1,
+        firstInputDelay: 100,
+        totalBlockingTime: 300,
+      },
     };
+
+    this.initializeMonitoring();
   }
 
   public static getInstance(): AdvancedPerformanceMonitor {
@@ -50,188 +60,346 @@ class AdvancedPerformanceMonitor {
     return AdvancedPerformanceMonitor.instance;
   }
 
-  public configure(config: Partial<PerformanceConfig>): void {
-    this.config = { ...this.config, ...config };
+  private initializeMonitoring(): void {
+    if (typeof window === 'undefined') return;
+
+    // Initialize Web Vitals monitoring
+    if (this.config.enableWebVitals) {
+      this.initializeWebVitals();
+    }
+
+    // Initialize custom performance observer
+    this.initializePerformanceObserver();
+
+    // Initialize memory monitoring
+    if (this.config.enableMemoryMonitoring) {
+      this.initializeMemoryMonitoring();
+    }
+
+    // Initialize network monitoring
+    if (this.config.enableNetworkMonitoring) {
+      this.initializeNetworkMonitoring();
+    }
+
+    // Start periodic reporting
+    this.startPeriodicReporting();
+  }
+
+  private initializeWebVitals(): void {
+    // First Contentful Paint (FCP)
+    this.observeMetric('paint', (entry) => {
+      if (entry.name === 'first-contentful-paint') {
+        this.recordMetric('firstContentfulPaint', entry.startTime);
+      }
+    });
+
+    // Largest Contentful Paint (LCP)
+    this.observeMetric('largest-contentful-paint', (entry) => {
+      this.recordMetric('largestContentfulPaint', entry.startTime);
+    });
+
+    // First Input Delay (FID)
+    this.observeMetric('first-input', (entry) => {
+      this.recordMetric('firstInputDelay', (entry as any).processingStart - entry.startTime);
+    });
+
+    // Cumulative Layout Shift (CLS)
+    this.observeMetric('layout-shift', (entry) => {
+      if (!(entry as any).hadRecentInput) {
+        this.recordMetric('cumulativeLayoutShift', (entry as any).value);
+      }
+    });
+
+    // Navigation Timing
+    window.addEventListener('load', () => {
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      if (navigation) {
+        this.recordMetric('pageLoadTime', navigation.loadEventEnd - navigation.fetchStart);
+        this.recordMetric('domContentLoaded', navigation.domContentLoadedEventEnd - navigation.fetchStart);
+        this.recordMetric('firstByte', navigation.responseStart - navigation.fetchStart);
+      }
+    });
+  }
+
+  private observeMetric(type: string, callback: (entry: PerformanceEntry) => void): void {
+    if (typeof PerformanceObserver !== 'undefined') {
+      try {
+        const observer = new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            callback(entry);
+          }
+        });
+        observer.observe({ type, buffered: true });
+      } catch (error) {
+        console.warn(`PerformanceObserver not supported for ${type}:`, error);
+      }
+    }
+  }
+
+  private initializePerformanceObserver(): void {
+    if (typeof PerformanceObserver === 'undefined') return;
+
+    try {
+      this.observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          this.processPerformanceEntry(entry);
+        }
+      });
+
+      // Observe various performance entry types
+      this.observer.observe({ entryTypes: ['measure', 'navigation', 'resource'] });
+    } catch (error) {
+      console.warn('PerformanceObserver initialization failed:', error);
+    }
+  }
+
+  private processPerformanceEntry(entry: PerformanceEntry): void {
+    switch (entry.entryType) {
+      case 'measure':
+        this.recordCustomMetric(entry.name, entry.duration);
+        break;
+      case 'navigation':
+        this.processNavigationTiming(entry as PerformanceNavigationTiming);
+        break;
+      case 'resource':
+        this.processResourceTiming(entry as PerformanceResourceTiming);
+        break;
+    }
+  }
+
+  private processNavigationTiming(navigation: PerformanceNavigationTiming): void {
+    const metrics = {
+      dns: navigation.domainLookupEnd - navigation.domainLookupStart,
+      tcp: navigation.connectEnd - navigation.connectStart,
+      request: navigation.responseStart - navigation.requestStart,
+      response: navigation.responseEnd - navigation.responseStart,
+      processing: navigation.domComplete - ((navigation as any).domLoading || 0),
+      load: navigation.loadEventEnd - navigation.loadEventStart,
+    };
+
+    Object.entries(metrics).forEach(([key, value]) => {
+      if (value > 0) {
+        this.recordCustomMetric(`navigation.${key}`, value);
+      }
+    });
+  }
+
+  private processResourceTiming(resource: PerformanceResourceTiming): void {
+    const metrics = {
+      dns: resource.domainLookupEnd - resource.domainLookupStart,
+      tcp: resource.connectEnd - resource.connectStart,
+      request: resource.responseStart - resource.requestStart,
+      response: resource.responseEnd - resource.responseStart,
+      total: resource.responseEnd - resource.startTime,
+    };
+
+    Object.entries(metrics).forEach(([key, value]) => {
+      if (value > 0) {
+        this.recordCustomMetric(`resource.${key}`, value);
+      }
+    });
+  }
+
+  private initializeMemoryMonitoring(): void {
+    if (!('memory' in performance)) return;
+
+    const checkMemory = () => {
+      const memory = (performance as any).memory;
+      if (memory) {
+        this.recordMetric('memoryUsage', {
+          usedJSHeapSize: memory.usedJSHeapSize,
+          totalJSHeapSize: memory.totalJSHeapSize,
+          jsHeapSizeLimit: memory.jsHeapSizeLimit,
+        });
+      }
+    };
+
+    // Check memory usage periodically
+    setInterval(checkMemory, 10000); // Every 10 seconds
+    checkMemory(); // Initial check
+  }
+
+  private initializeNetworkMonitoring(): void {
+    if (!('connection' in navigator)) return;
+
+    const connection = (navigator as any).connection;
+    if (connection) {
+      this.recordMetric('networkInfo', {
+        effectiveType: connection.effectiveType,
+        downlink: connection.downlink,
+        rtt: connection.rtt,
+        saveData: connection.saveData,
+      });
+    }
+
+    // Monitor connection changes
+    connection.addEventListener('change', () => {
+      this.recordMetric('networkInfo', {
+        effectiveType: connection.effectiveType,
+        downlink: connection.downlink,
+        rtt: connection.rtt,
+        saveData: connection.saveData,
+      });
+    });
+  }
+
+  private recordMetric(key: string, value: any): void {
+    if (!this.isMonitoring) return;
+
+    const currentMetrics = this.getCurrentMetrics();
+    if (key === 'memoryUsage' || key === 'networkInfo') {
+      (currentMetrics as any)[key] = value;
+    } else if (typeof value === 'number') {
+      (currentMetrics as any)[key] = value;
+    }
+  }
+
+  private recordCustomMetric(name: string, value: number): void {
+    if (!this.config.enableCustomMetrics) return;
+
+    const currentMetrics = this.getCurrentMetrics();
+    currentMetrics.customMetrics[name] = value;
+  }
+
+  private getCurrentMetrics(): PerformanceMetrics {
+    const now = Date.now();
+    let current = this.metrics.find(m => m.timestamp === now);
+
+    if (!current) {
+      current = {
+        timestamp: now,
+        pageLoadTime: 0,
+        firstContentfulPaint: 0,
+        largestContentfulPaint: 0,
+        cumulativeLayoutShift: 0,
+        firstInputDelay: 0,
+        totalBlockingTime: 0,
+        customMetrics: {},
+      };
+      this.metrics.push(current);
+    }
+
+    return current;
+  }
+
+  private startPeriodicReporting(): void {
+    this.reportTimer = setInterval(() => {
+      this.reportMetrics();
+    }, this.config.reportInterval);
+  }
+
+  private reportMetrics(): void {
+    const recentMetrics = this.metrics.slice(-10); // Last 10 entries
+    if (recentMetrics.length === 0) return;
+
+    // Calculate averages
+    const averages = this.calculateAverages(recentMetrics);
+    
+    // Check thresholds
+    const violations = this.checkThresholds(averages);
+
+    // Report to analytics
+    this.reportToAnalytics(averages, violations);
+
+    // Clean up old metrics
+    this.cleanupOldMetrics();
+  }
+
+  private calculateAverages(metrics: PerformanceMetrics[]): Partial<PerformanceMetrics> {
+    const averages: any = {
+      customMetrics: {},
+    };
+
+    const numericFields = [
+      'pageLoadTime', 'firstContentfulPaint', 'largestContentfulPaint',
+      'cumulativeLayoutShift', 'firstInputDelay', 'totalBlockingTime'
+    ];
+
+    numericFields.forEach(field => {
+      const values = metrics.map(m => (m as any)[field]).filter(v => v > 0);
+      if (values.length > 0) {
+        averages[field] = values.reduce((a, b) => a + b, 0) / values.length;
+      }
+    });
+
+    // Calculate custom metrics averages
+    const customKeys = new Set<string>();
+    metrics.forEach(m => Object.keys(m.customMetrics).forEach(k => customKeys.add(k)));
+
+    customKeys.forEach(key => {
+      const values = metrics.map(m => m.customMetrics[key]).filter(v => v > 0);
+      if (values.length > 0) {
+        averages.customMetrics[key] = values.reduce((a, b) => a + b, 0) / values.length;
+      }
+    });
+
+    return averages;
+  }
+
+  private checkThresholds(averages: Partial<PerformanceMetrics>): string[] {
+    const violations: string[] = [];
+
+    Object.entries(this.config.thresholds).forEach(([key, threshold]) => {
+      const value = (averages as any)[key];
+      if (value && value > threshold) {
+        violations.push(`${key}: ${value.toFixed(2)} > ${threshold}`);
+      }
+    });
+
+    return violations;
+  }
+
+  private reportToAnalytics(averages: Partial<PerformanceMetrics>, violations: string[]): void {
+    // Report to Google Analytics
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      Object.entries(averages).forEach(([key, value]) => {
+        if (typeof value === 'number') {
+          (window as any).gtag('event', 'performance_metric', {
+            metric_name: key,
+            metric_value: Math.round(value),
+            custom_map: {
+              metric_type: 'performance',
+            },
+          });
+        }
+      });
+    }
+
+    // Report violations
+    if (violations.length > 0) {
+      console.warn('Performance threshold violations:', violations);
+      
+      if (typeof window !== 'undefined' && (window as any).gtag) {
+        (window as any).gtag('event', 'performance_violation', {
+          violations: violations.join(', '),
+          violation_count: violations.length,
+        });
+      }
+    }
+  }
+
+  private cleanupOldMetrics(): void {
+    const cutoff = Date.now() - (5 * 60 * 1000); // Keep last 5 minutes
+    this.metrics = this.metrics.filter(m => m.timestamp > cutoff);
   }
 
   public startMonitoring(): void {
-    if (this.isMonitoring) return;
-
     this.isMonitoring = true;
-    this.initializeObservers();
-    this.startPeriodicReporting();
-    
     console.log('Advanced Performance Monitor started');
   }
 
   public stopMonitoring(): void {
     this.isMonitoring = false;
-    this.observers.forEach(observer => observer.disconnect());
-    this.observers = [];
-    
+    if (this.observer) {
+      this.observer.disconnect();
+    }
+    if (this.reportTimer) {
+      clearInterval(this.reportTimer);
+    }
     console.log('Advanced Performance Monitor stopped');
   }
 
-  private initializeObservers(): void {
-    if (!this.config.enableRealTimeMonitoring) return;
-
-    // Web Vitals Observer
-    if ('PerformanceObserver' in window) {
-      try {
-        const vitalsObserver = new PerformanceObserver((list) => {
-          for (const entry of list.getEntries()) {
-            this.processWebVital(entry);
-          }
-        });
-
-        vitalsObserver.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
-        this.observers.push(vitalsObserver);
-      } catch (error) {
-        console.warn('Web Vitals observer not supported:', error);
-      }
-    }
-
-    // Memory Observer
-    if (this.config.enableMemoryTracking && 'memory' in performance) {
-      this.observeMemoryUsage();
-    }
-
-    // Network Observer
-    if (this.config.enableNetworkTracking && 'PerformanceObserver' in window) {
-      try {
-        const networkObserver = new PerformanceObserver((list) => {
-          for (const entry of list.getEntries()) {
-            this.processNetworkEntry(entry);
-          }
-        });
-
-        networkObserver.observe({ entryTypes: ['navigation', 'resource'] });
-        this.observers.push(networkObserver);
-      } catch (error) {
-        console.warn('Network observer not supported:', error);
-      }
-    }
-
-    // Render Observer
-    if (this.config.enableRenderTracking && 'PerformanceObserver' in window) {
-      try {
-        const renderObserver = new PerformanceObserver((list) => {
-          for (const entry of list.getEntries()) {
-            this.processRenderEntry(entry);
-          }
-        });
-
-        renderObserver.observe({ entryTypes: ['measure', 'mark'] });
-        this.observers.push(renderObserver);
-      } catch (error) {
-        console.warn('Render observer not supported:', error);
-      }
-    }
-  }
-
-  private processWebVital(entry: PerformanceEntry): void {
-    const metrics = this.getCurrentMetrics();
-    
-    switch (entry.entryType) {
-      case 'largest-contentful-paint':
-        metrics.largestContentfulPaint = entry.startTime;
-        break;
-      case 'first-input':
-        metrics.firstInputDelay = entry.startTime;
-        break;
-      case 'layout-shift':
-        metrics.cumulativeLayoutShift += (entry as PerformanceEntry & { value: number }).value;
-        break;
-    }
-  }
-
-  private processNetworkEntry(entry: PerformanceEntry): void {
-    if (entry.entryType === 'navigation') {
-      const navEntry = entry as PerformanceNavigationTiming;
-      const metrics = this.getCurrentMetrics();
-      metrics.loadTime = navEntry.loadEventEnd - navEntry.loadEventStart;
-      metrics.networkLatency = navEntry.responseStart - navEntry.requestStart;
-    }
-  }
-
-  private processRenderEntry(entry: PerformanceEntry): void {
-    if (entry.entryType === 'measure' && entry.name.includes('render')) {
-      const metrics = this.getCurrentMetrics();
-      metrics.renderTime = entry.duration;
-    }
-  }
-
-  private observeMemoryUsage(): void {
-    const checkMemory = () => {
-      if ('memory' in performance) {
-        const memory = (performance as Performance & { memory: { usedJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
-        const metrics = this.getCurrentMetrics();
-        metrics.memoryUsage = memory.usedJSHeapSize / memory.jsHeapSizeLimit;
-      }
-    };
-
-    checkMemory();
-    setInterval(checkMemory, 1000);
-  }
-
-  private getCurrentMetrics(): PerformanceMetrics {
-    if (this.metrics.length === 0) {
-      this.metrics.push({
-        loadTime: 0,
-        firstContentfulPaint: 0,
-        largestContentfulPaint: 0,
-        firstInputDelay: 0,
-        cumulativeLayoutShift: 0,
-        memoryUsage: 0,
-        networkLatency: 0,
-        renderTime: 0,
-        bundleSize: 0,
-        cacheHitRate: 0
-      });
-    }
-    return this.metrics[this.metrics.length - 1];
-  }
-
-  private startPeriodicReporting(): void {
-    setInterval(() => {
-      if (this.isMonitoring) {
-        this.reportMetrics();
-      }
-    }, this.config.reportInterval);
-  }
-
-  private reportMetrics(): void {
-    const currentMetrics = this.getCurrentMetrics();
-    
-    // Send metrics to analytics
-    this.sendMetricsToAnalytics(currentMetrics);
-    
-    // Store in history
-    this.metrics.push({ ...currentMetrics });
-    
-    // Limit history size
-    if (this.metrics.length > this.config.maxMetricsHistory) {
-      this.metrics.shift();
-    }
-  }
-
-  private sendMetricsToAnalytics(metrics: PerformanceMetrics): void {
-    // Send to analytics service
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as { gtag: (...args: unknown[]) => void }).gtag('event', 'performance_metrics', {
-        load_time: metrics.loadTime,
-        fcp: metrics.firstContentfulPaint,
-        lcp: metrics.largestContentfulPaint,
-        fid: metrics.firstInputDelay,
-        cls: metrics.cumulativeLayoutShift,
-        memory_usage: metrics.memoryUsage,
-        network_latency: metrics.networkLatency,
-        render_time: metrics.renderTime
-      });
-    }
-  }
-
-  public getMetricsHistory(): PerformanceMetrics[] {
+  public getMetrics(): PerformanceMetrics[] {
     return [...this.metrics];
   }
 
@@ -239,73 +407,45 @@ class AdvancedPerformanceMonitor {
     return this.metrics.length > 0 ? this.metrics[this.metrics.length - 1] : null;
   }
 
-  public generatePerformanceReport(): string {
-    const latest = this.getLatestMetrics();
-    if (!latest) return 'No metrics available';
-
-    return `
-Performance Report:
-- Load Time: ${latest.loadTime.toFixed(2)}ms
-- Largest Contentful Paint: ${latest.largestContentfulPaint.toFixed(2)}ms
-- First Input Delay: ${latest.firstInputDelay.toFixed(2)}ms
-- Cumulative Layout Shift: ${latest.cumulativeLayoutShift.toFixed(4)}
-- Memory Usage: ${(latest.memoryUsage * 100).toFixed(2)}%
-- Network Latency: ${latest.networkLatency.toFixed(2)}ms
-- Render Time: ${latest.renderTime.toFixed(2)}ms
-    `.trim();
+  public markCustomMetric(name: string, value?: number): void {
+    if (typeof value === 'undefined') {
+      performance.mark(name);
+    } else {
+      this.recordCustomMetric(name, value);
+    }
   }
 
-  public optimizePerformance(): void {
-    // Implement performance optimization strategies
-    this.optimizeImages();
-    this.optimizeFonts();
-    this.optimizeBundleSize();
-    this.optimizeCaching();
+  public measureCustomMetric(name: string, startMark: string, endMark?: string): void {
+    try {
+      if (endMark) {
+        performance.measure(name, startMark, endMark);
+      } else {
+        performance.measure(name, startMark);
+      }
+    } catch (error) {
+      console.warn(`Failed to measure ${name}:`, error);
+    }
   }
 
-  private optimizeImages(): void {
-    // Lazy load images
-    const images = document.querySelectorAll('img[data-src]');
-    const imageObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const img = entry.target as HTMLImageElement;
-          img.src = img.dataset.src || '';
-          img.removeAttribute('data-src');
-          imageObserver.unobserve(img);
-        }
-      });
-    });
-
-    images.forEach(img => imageObserver.observe(img));
+  public updateConfig(newConfig: Partial<PerformanceConfig>): void {
+    this.config = { ...this.config, ...newConfig };
+    
+    if (newConfig.reportInterval && this.reportTimer) {
+      clearInterval(this.reportTimer);
+      this.startPeriodicReporting();
+    }
   }
 
-  private optimizeFonts(): void {
-    // Preload critical fonts
-    const criticalFonts = [
-      '/fonts/inter-var.woff2',
-      '/fonts/inter-var.woff'
-    ];
-
-    criticalFonts.forEach(font => {
-      const link = document.createElement('link');
-      link.rel = 'preload';
-      link.href = font;
-      link.as = 'font';
-      link.type = 'font/woff2';
-      link.crossOrigin = 'anonymous';
-      document.head.appendChild(link);
-    });
+  public getConfig(): PerformanceConfig {
+    return { ...this.config };
   }
 
-  private optimizeBundleSize(): void {
-    // Implement bundle size optimization
-    console.log('Bundle size optimization not implemented yet');
-  }
-
-  private optimizeCaching(): void {
-    // Implement caching optimization
-    console.log('Caching optimization not implemented yet');
+  public exportMetrics(): string {
+    return JSON.stringify({
+      metrics: this.metrics,
+      config: this.config,
+      timestamp: new Date().toISOString(),
+    }, null, 2);
   }
 }
 

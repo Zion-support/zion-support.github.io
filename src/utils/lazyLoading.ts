@@ -6,10 +6,10 @@ interface UseLazyLoadingOptions {
   triggerOnce?: boolean;
 }
 
-export const useLazyLoading = (options: UseLazyLoadingOptions = {}) => {
+export const useLazyLoading = <T extends HTMLElement = HTMLElement>(options: UseLazyLoadingOptions = {}) => {
   const [isVisible, setIsVisible] = useState(false);
   const [hasTriggered, setHasTriggered] = useState(false);
-  const elementRef = useRef<HTMLElement>(null);
+  const elementRef = useRef<T>(null);
 
   const {
     rootMargin = "0px",
@@ -52,7 +52,7 @@ export const useLazyLoading = (options: UseLazyLoadingOptions = {}) => {
 export const useImageLazyLoading = (src: string, placeholder?: string) => {
   const [imageSrc, setImageSrc] = useState(placeholder || "");
   const [isLoaded, setIsLoaded] = useState(false);
-  const { elementRef, isVisible } = useLazyLoading();
+  const { elementRef, isVisible } = useLazyLoading<HTMLDivElement>();
 
   useEffect(() => {
     if (isVisible && src) {
