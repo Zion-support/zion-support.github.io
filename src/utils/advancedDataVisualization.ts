@@ -232,7 +232,7 @@ export class AdvancedDataVisualization {
     const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
     path.setAttribute('d', line(data.data));
     path.setAttribute('fill', 'none');
-    path.setAttribute('stroke', data.color || '#3b82f6' || colors[0]);
+    path.setAttribute('stroke', data.color || colors[0] || '#3b82f6');
     path.setAttribute('stroke-width', '2');
     path.setAttribute('stroke-linecap', 'round');
     path.setAttribute('stroke-linejoin', 'round');
@@ -306,7 +306,7 @@ export class AdvancedDataVisualization {
       bar.setAttribute('y', yScale(point.y).toString());
       bar.setAttribute('width', barWidth.toString());
       bar.setAttribute('height', barHeight.toString());
-      bar.setAttribute('fill', point.color || data.color || '#3b82f6' || colors[index % colors.length]);
+      bar.setAttribute('fill', point.color || data.color || colors[index % colors.length] || '#3b82f6');
       bar.setAttribute('rx', '2');
 
       if (this.config.animations) {
@@ -433,7 +433,7 @@ export class AdvancedDataVisualization {
       circle.setAttribute('cx', xScale(point.x).toString());
       circle.setAttribute('cy', yScale(point.y).toString());
       circle.setAttribute('r', '4');
-      circle.setAttribute('fill', point.color || data.color || '#3b82f6' || colors[0]);
+      circle.setAttribute('fill', point.color || data.color || colors[0] || '#3b82f6');
       circle.setAttribute('opacity', '0.7');
 
       if (this.config.animations) {
@@ -493,7 +493,7 @@ export class AdvancedDataVisualization {
     const areaPath = this.createAreaGenerator(xScale, yScale, chartHeight);
     const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
     path.setAttribute('d', areaPath(data.data));
-    path.setAttribute('fill', data.color || '#3b82f6' || colors[0]);
+    path.setAttribute('fill', data.color || colors[0] || '#3b82f6');
     path.setAttribute('opacity', '0.3');
 
     if (this.config.animations) {
@@ -511,7 +511,7 @@ export class AdvancedDataVisualization {
     const linePath = document.createElementNS('http://www.w3.org/2000/svg', 'path');
     linePath.setAttribute('d', line(data.data));
     linePath.setAttribute('fill', 'none');
-    linePath.setAttribute('stroke', data.color || '#3b82f6' || colors[0]);
+    linePath.setAttribute('stroke', data.color || colors[0] || '#3b82f6');
     linePath.setAttribute('stroke-width', '2');
 
     g.appendChild(linePath);
