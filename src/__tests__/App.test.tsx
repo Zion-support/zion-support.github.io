@@ -217,6 +217,13 @@ const renderWithRouter = (ui: React.ReactElement, { route = '/' } = {}) => {
     assign: jest.fn(),
     replace: jest.fn(),
     reload: jest.fn(),
+    search: '',
+    hash: '',
+    host: 'localhost:3000',
+    hostname: 'localhost',
+    port: '3000',
+    protocol: 'http:',
+    origin: 'http://localhost:3000',
   };
   return render(ui);
 };
