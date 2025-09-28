@@ -42,7 +42,8 @@ export const usePerformanceOptimization = () => {
   // Preload resource
   const preloadResource = useCallback(async (src: string, type: 'image' | 'script' | 'stylesheet' = 'image') => {
     try {
-      performanceEnhancer.preloadResource(src, type as 'image' | 'script' | 'style');
+      const resourceType = type === 'stylesheet' ? 'style' : type;
+      performanceEnhancer.preloadResource(src, resourceType as 'image' | 'script' | 'style');
     } catch (error) {
       console.warn(`Failed to preload ${type}: ${src}`, error);
     }

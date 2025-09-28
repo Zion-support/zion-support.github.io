@@ -158,13 +158,13 @@ class PerformanceEnhancer {
   }
 
   private implementCacheStrategy(): void {
-    self.addEventListener('fetch', (event: unknown) => {
-      const request = (event as { request: Request }).request;
+    self.addEventListener('fetch', (event: ServiceWorkerEvent) => {
+      const request = event.request;
       const url = new URL(request.url);
 
       // Cache-first for static assets
       if (url.pathname.startsWith('/static/')) {
-        (event as { respondWith: (response: Promise<Response>) => void }).respondWith(
+        event.respondWith(
           caches.match(request).then((response) => {
             return response || fetch(request).then((fetchResponse) => {
               const responseClone = fetchResponse.clone();
@@ -212,7 +212,7 @@ class PerformanceEnhancer {
     new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
-        console.log('FID:', (entry as { processingStart: number }).processingStart - entry.startTime);
+        console.log('FID:', (entry as PerformanceEntry).processingStart! - entry.startTime);
       });
     }).observe({ entryTypes: ['first-input'] });
 
@@ -221,8 +221,8 @@ class PerformanceEnhancer {
     new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
-        if (!(entry as { hadRecentInput: boolean }).hadRecentInput) {
-          clsValue += (entry as { value: number }).value;
+        if (!(entry as PerformanceEntry).hadRecentInput) {
+          clsValue += (entry as PerformanceEntry).value!;
         }
       });
       console.log('CLS:', clsValue);
