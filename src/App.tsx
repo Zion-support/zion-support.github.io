@@ -32,9 +32,10 @@ export default function App(): React.JSX.Element {
       performance.mark('app-init-start');
     }
 
-<<<<<<< HEAD
-    // Add keyboard event listener
-    document.addEventListener('keydown', handleKeyDown);
+    // Basic performance monitoring
+    if (typeof window !== 'undefined') {
+      console.log('🚀 Zion Tech Group App initialized');
+    }
 
     // Mark app as fully initialized
     if (typeof window !== 'undefined' && window.performance && 
@@ -42,25 +43,10 @@ export default function App(): React.JSX.Element {
         typeof performance.measure === 'function') {
       performance.mark('app-init-complete');
       performance.measure('app-initialization', 'app-init-start', 'app-init-complete');
-=======
-    // Basic performance monitoring
-    if (typeof window !== 'undefined') {
-      console.log('🚀 Zion Tech Group App initialized');
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-6d51
     }
   }, []);
 
-<<<<<<< HEAD
-    // Cleanup function
-    return () => {
-      document.removeEventListener('keydown', handleKeyDown);
-    };
-  }, [handleKeyDown]);
-
-  // Show loading screen while initializing
-=======
   // Show loading spinner while initializing
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-6d51
   if (isLoading) {
     return (
       <EnhancedErrorBoundary>
