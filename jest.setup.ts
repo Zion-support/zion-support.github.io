@@ -110,3 +110,8 @@ Object.defineProperty(window, 'scrollTo', {
 
 // Setup testing library matchers
 import '@testing-library/jest-dom';
+
+// Mock TextEncoder and TextDecoder for React Router v7 compatibility
+import { TextEncoder, TextDecoder } from 'util';
+global.TextEncoder = TextEncoder;
+global.TextDecoder = TextDecoder;

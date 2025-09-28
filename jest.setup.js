@@ -2,8 +2,7 @@
 // Add any global test setup here
 
 // Mock TextEncoder and TextDecoder for React Router v7 compatibility
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const { TextEncoder, TextDecoder } = require('util');
+import { TextEncoder, TextDecoder } from 'util';
 global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder;
 
@@ -79,4 +78,4 @@ global.PerformanceObserver = jest.fn().mockImplementation(() => ({
 }));
 
 // Setup testing library matchers
-require('@testing-library/jest-dom');
+import '@testing-library/jest-dom';

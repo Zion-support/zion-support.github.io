@@ -46,6 +46,92 @@ export const storage = {
   }
 };
 
+// Currency formatting
+export const formatCurrency = (amount: number, currency = 'USD'): string => {
+  const formatter = new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: currency,
+  });
+  return formatter.format(amount);
+};
+
+// Date formatting
+export const formatDate = (date: Date, format: 'short' | 'long' | 'medium' = 'medium'): string => {
+  const options: Intl.DateTimeFormatOptions = {
+    short: { month: 'numeric', day: 'numeric', year: 'numeric' },
+    medium: { year: 'numeric', month: 'long', day: 'numeric' },
+    long: { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' },
+  }[format];
+
+  return new Intl.DateTimeFormat('en-US', options).format(date);
+};
+
+// Debounce function
+export const debounce = <T extends (...args: unknown[]) => unknown>(
+  func: T,
+  wait: number
+): ((...args: Parameters<T>) => void) => {
+  let timeout: NodeJS.Timeout;
+  return (...args: Parameters<T>) => {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => func(...args), wait);
+  };
+};
+
+// Throttle function
+export const throttle = <T extends (...args: unknown[]) => unknown>(
+  func: T,
+  limit: number
+): ((...args: Parameters<T>) => void) => {
+  let inThrottle: boolean;
+  return (...args: Parameters<T>) => {
+    if (!inThrottle) {
+      func(...args);
+      inThrottle = true;
+      setTimeout(() => (inThrottle = false), limit);
+    }
+  };
+};
+
+// Generate unique ID
+export const generateId = (): string => {
+  return Math.random().toString(36).substr(2, 9) + Date.now().toString(36);
+};
+
+// Email validation
+export const isValidEmail = (email: string): boolean => {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+};
+
+// HTML sanitization
+export const sanitizeHtml = (html: string): string => {
+  const div = document.createElement('div');
+  div.textContent = html;
+  return div.innerHTML;
+};
+
+// Text truncation
+export const truncateText = (text: string, maxLength: number): string => {
+  if (text.length <= maxLength) return text;
+  return text.substr(0, maxLength) + '...';
+};
+
+// Capitalize first letter
+export const capitalizeFirst = (str: string): string => {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+};
+
+// Generate random color
+export const getRandomColor = (): string => {
+  const letters = '0123456789ABCDEF';
+  let color = '#';
+  for (let i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+};
+
 // Performance monitoring utilities
 export const performanceMonitor = {
   measure: (name: string, fn: () => void) => {
@@ -160,31 +246,4 @@ export const validationUtils = {
       return false;
     }
   }
-};
-
-// Debounce utility
-export const debounce = <T extends (...args: unknown[]) => unknown>(
-  func: T,
-  wait: number
-): ((...args: Parameters<T>) => void) => {
-  let timeout: ReturnType<typeof setTimeout>;
-  return (...args: Parameters<T>) => {
-    clearTimeout(timeout);
-    timeout = setTimeout(() => func(...args), wait);
-  };
-};
-
-// Throttle utility
-export const throttle = <T extends (...args: unknown[]) => unknown>(
-  func: T,
-  limit: number
-): ((...args: Parameters<T>) => void) => {
-  let inThrottle: boolean;
-  return (...args: Parameters<T>) => {
-    if (!inThrottle) {
-      func(...args);
-      inThrottle = true;
-      setTimeout(() => (inThrottle = false), limit);
-    }
-  };
 };
