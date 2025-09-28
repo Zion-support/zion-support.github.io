@@ -76,7 +76,7 @@ class SecurityEnhancer {
     this.config = { ...this.config, ...config };
     
     // Set global reference for XMLHttpRequest monitoring
-    (window as unknown).__securityEnhancerInstance = this;
+    window.__securityEnhancerInstance = this;
     
     this.setupCSP();
     this.setupXSSProtection();
@@ -399,14 +399,14 @@ class SecurityEnhancer {
     const originalXHR = XMLHttpRequest.prototype.open;
     (XMLHttpRequest.prototype.open as unknown) = function(this: XMLHttpRequest, method: string, url: string | URL, ...args: unknown[]) {
       // Access the security enhancer instance through a global reference
-      const securityEnhancer = (window as unknown).__securityEnhancerInstance;
+      const securityEnhancer = window.__securityEnhancerInstance;
       if (securityEnhancer && typeof url === 'string' && securityEnhancer.isSuspiciousURL(url)) {
         securityEnhancer.recordSecurityEvent('blocked', `Suspicious XHR URL blocked: ${url}`, 'high', 'network');
         securityEnhancer.metrics.blockedRequests++;
         throw new Error('Suspicious URL blocked');
       }
       
-      return (originalXHR as unknown).apply(this, [method, url, ...args]);
+      return (originalXHR as typeof XMLHttpRequest.prototype.open).apply(this, [method, url, ...args]);
     };
   }
 

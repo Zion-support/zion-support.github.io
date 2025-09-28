@@ -591,14 +591,14 @@ class EnhancedAccessibilityManager {
    * Setup speech recognition
    */
   private setupSpeechRecognition(): void {
-    const SpeechRecognition = (window as unknown).SpeechRecognition || (window as unknown).webkitSpeechRecognition;
+    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
     const recognition = new SpeechRecognition();
     
     recognition.continuous = false;
     recognition.interimResults = false;
     recognition.lang = 'en-US';
 
-    recognition.onresult = (event: unknown) => {
+    recognition.onresult = (event: SpeechRecognitionEvent) => {
       const command = event.results[0][0].transcript.toLowerCase();
       this.handleVoiceCommand(command);
     };

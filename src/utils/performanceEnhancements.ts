@@ -158,7 +158,7 @@ class PerformanceEnhancer {
   }
 
   private implementCacheStrategy(): void {
-    self.addEventListener('fetch', (event: unknown) => {
+    self.addEventListener('fetch', (event: ServiceWorkerEvent) => {
       const request = event.request;
       const url = new URL(request.url);
 
@@ -212,7 +212,7 @@ class PerformanceEnhancer {
     new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
-        console.log('FID:', (entry as unknown).processingStart - entry.startTime);
+        console.log('FID:', (entry as PerformanceEntry).processingStart! - entry.startTime);
       });
     }).observe({ entryTypes: ['first-input'] });
 
@@ -221,8 +221,8 @@ class PerformanceEnhancer {
     new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
-        if (!(entry as unknown).hadRecentInput) {
-          clsValue += (entry as unknown).value;
+        if (!(entry as PerformanceEntry).hadRecentInput) {
+          clsValue += (entry as PerformanceEntry).value!;
         }
       });
       console.log('CLS:', clsValue);

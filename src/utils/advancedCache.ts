@@ -97,7 +97,7 @@ class AdvancedCacheManager {
     item.lastAccessed = now;
 
     console.log(`🗄️ Cache hit: ${key}`);
-    return item.value;
+    return item.value as T | null;
   }
 
   public has(key: CacheKey): boolean {
@@ -270,7 +270,7 @@ class AdvancedCacheManager {
 
       const result = fn(...args);
       this.set(key, result);
-      return result;
+      return result as ReturnType<T>;
     }) as T;
   }
 
@@ -290,7 +290,7 @@ class AdvancedCacheManager {
 
       const result = await fn(...args);
       this.set(key, result, ttl);
-      return result;
+      return result as Awaited<ReturnType<T>>;
     }) as T;
   }
 

@@ -212,7 +212,12 @@ class AdvancedSecurityManager {
       timestamp: Date.now(),
       userAgent: navigator.userAgent,
       url: window.location.href,
-      metadata
+      metadata: metadata ? Object.fromEntries(
+        Object.entries(metadata).map(([k, v]) => [
+          k, 
+          typeof v === 'string' || typeof v === 'number' || typeof v === 'boolean' ? v : String(v)
+        ])
+      ) : undefined
     };
     
     this.events.push(event);
