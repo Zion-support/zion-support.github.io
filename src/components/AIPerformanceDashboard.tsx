@@ -40,7 +40,7 @@ interface ErrorReport {
   [key: string]: unknown;
 }
 
-interface AIInsights {
+interface AIPerformanceInsights {
   predictedHighRiskActions: string[];
   recommendedImprovements: string[];
   errorTrends: Array<{ category: string; trend: string }>;
@@ -48,7 +48,7 @@ interface AIInsights {
 
 const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisible, onClose }) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-  const [insights, setInsights] = useState<AIInsights | null>(null);
+  const [insights, setInsights] = useState<AIPerformanceInsights | null>(null);
   const [errors, setErrors] = useState<ErrorReport[]>([]);
   const [isLoading, setIsLoading] = useState(false);
 
