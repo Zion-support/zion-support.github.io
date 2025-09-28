@@ -35,7 +35,7 @@ import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
 import performanceEnhancer from './utils/performanceEnhancements';
 import EnhancedNotificationSystem from './components/EnhancedNotificationSystem';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
-import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor';
+import AdvancedPerformanceMonitorComponent from './components/AdvancedPerformanceMonitor';
 import ThemeToggle from './components/ThemeToggle';
 import ScrollToTop from './components/ScrollToTop';
 import { analytics } from './utils/advancedAnalytics';
@@ -473,7 +473,7 @@ export default function App(): React.JSX.Element {
         isVisible={showPerformanceOptimizer}
         onClose={() => setShowPerformanceOptimizer(false)}
       />
-      <AdvancedPerformanceMonitor 
+      <AdvancedPerformanceMonitorComponent 
         isVisible={showAdvancedMonitor}
         onToggle={() => setShowAdvancedMonitor(!showAdvancedMonitor)}
       />
