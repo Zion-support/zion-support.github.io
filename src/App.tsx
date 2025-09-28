@@ -3,13 +3,12 @@ import { AppRouter } from './router';
 import { useAppInitialization } from './hooks/useAppInitialization';
 import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
-import { seoAnalytics, performanceSEO, seoManager } from './utils/seoEnhanced';
+import { seoAnalytics, performanceSEO } from './utils/seoEnhanced';
 import { analytics } from './utils/analytics';
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
 import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import PerformanceMonitor from './components/PerformanceMonitor';
-import SEOOptimizer, { useSEOData } from './components/SEOOptimizer';
 import AIPerformanceDashboard from './components/AIPerformanceDashboard';
 import './index.css';
 import './styles/notifications.css';
@@ -31,7 +30,7 @@ export default function App(): React.JSX.Element {
 
   // Simple SEO manager
   const seoManager = useMemo(() => ({
-    updateMetaTags: (data: typeof seoData) => {
+    updateMetaTags: (data: { title: string; description: string }) => {
       if (typeof document !== 'undefined') {
         document.title = data.title;
         const metaDescription = document.querySelector('meta[name="description"]');
@@ -144,12 +143,15 @@ export default function App(): React.JSX.Element {
     performanceSEO.optimizeCSS();
 
     // Set default SEO data using the correct method
-    seoManager.updateMetaTags(seoData);
+    seoManager.updateMetaTags({
+      title: 'Zion Tech Group - Advanced AI and IT Solutions',
+      description: 'Leading provider of AI-powered IT solutions, cloud services, and digital transformation consulting.'
+    });
 
     // Use passive listeners for better performance
     window.addEventListener('scroll', handleScroll, { passive: true });
     document.addEventListener('click', handleClick, { passive: true });
-  }, [handleClick, handleKeyDown, handleScroll, seoData, preloadResource, seoManager]);
+  }, [handleClick, handleKeyDown, handleScroll, preloadResource, seoManager]);
 
   // Add keyboard event listener
   React.useEffect(() => {
@@ -179,7 +181,7 @@ export default function App(): React.JSX.Element {
       document.removeEventListener('click', handleClick);
       document.removeEventListener('keydown', handleKeyDown);
     };
-  }, [handleScroll, handleClick, handleKeyDown, seoData, preloadResource, updateMetaTags]);
+  }, [handleScroll, handleClick, handleKeyDown, preloadResource, updateMetaTags, enhancedTrackEngagement]);
 
   // Main initialization and cleanup effect
   React.useEffect(() => {
