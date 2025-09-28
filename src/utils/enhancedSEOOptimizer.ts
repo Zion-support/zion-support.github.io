@@ -1,143 +1,223 @@
 /**
  * Enhanced SEO Optimizer
- * Provides comprehensive SEO analysis and optimization features
+ * Comprehensive SEO optimization and monitoring system
  */
 
-interface SEOData {
+export interface SEOData {
   title: string;
   description: string;
   keywords: string[];
   canonical: string;
-  ogTitle: string;
-  ogDescription: string;
-  ogImage: string;
-  twitterCard: string;
-  twitterTitle: string;
-  twitterDescription: string;
-  structuredData?: Record<string, unknown>;
+  ogTitle?: string;
+  ogDescription?: string;
+  ogImage?: string;
+  ogType?: string;
+  ogUrl?: string;
+  twitterCard?: string;
+  twitterTitle?: string;
+  twitterDescription?: string;
+  twitterImage?: string;
+  structuredData?: Record<string, any>;
+  robots?: string;
+  language?: string;
+  author?: string;
+  publishedTime?: string;
+  modifiedTime?: string;
+  section?: string;
+  tags?: string[];
 }
 
-interface SEOAnalysis {
-  score: number;
-  issues: SEOIssue[];
-  recommendations: string[];
-  metrics: SEOMetrics;
-}
-
-interface SEOIssue {
-  type: 'error' | 'warning' | 'info';
-  message: string;
-  element?: string;
-  suggestion?: string;
-}
-
-interface SEOMetrics {
+export interface SEOMetrics {
   titleLength: number;
   descriptionLength: number;
-  headingCount: number;
-  imageCount: number;
-  linkCount: number;
-  wordCount: number;
-  readingTime: number;
+  keywordsCount: number;
+  hasCanonical: boolean;
+  hasOpenGraph: boolean;
+  hasTwitterCard: boolean;
+  hasStructuredData: boolean;
+  hasRobots: boolean;
+  score: number;
+  recommendations: string[];
+}
+
+export interface PagePerformanceMetrics {
+  loadTime: number;
+  firstContentfulPaint: number;
+  largestContentfulPaint: number;
+  firstInputDelay: number;
+  cumulativeLayoutShift: number;
+  speedIndex: number;
+  totalBlockingTime: number;
+  timeToInteractive: number;
 }
 
 class EnhancedSEOOptimizer {
-  private seoData: SEOData | null = null;
-  private analysis: SEOAnalysis | null = null;
+  private currentSEOData: SEOData | null = null;
+  private isInitialized = false;
+  private performanceMetrics: PagePerformanceMetrics | null = null;
+  private observer: PerformanceObserver | null = null;
 
   constructor() {
-    this.initializeSEO();
+    this.setupPerformanceObserver();
   }
 
-  private initializeSEO(): void {
-    if (typeof window === 'undefined') return;
+  /**
+   * Initialize the SEO optimizer
+   */
+  initialize(): void {
+    if (this.isInitialized) return;
 
-    // Set up meta tag monitoring
-    this.setupMetaTagObserver();
+    this.optimizeExistingMetaTags();
+    this.setupDynamicMetaUpdates();
+    this.injectStructuredData();
+    this.optimizeImages();
+    this.setupLazyLoading();
+    this.isInitialized = true;
+
+    console.log('✅ Enhanced SEO Optimizer initialized');
+  }
+
+  /**
+   * Update SEO data for the current page
+   */
+  updateSEO(data: SEOData): void {
+    this.currentSEOData = data;
     
-    // Initialize structured data
-    this.initializeStructuredData();
+    // Update meta tags
+    this.updateMetaTags(data);
+    
+    // Update Open Graph tags
+    this.updateOpenGraphTags(data);
+    
+    // Update Twitter Card tags
+    this.updateTwitterCardTags(data);
+    
+    // Update structured data
+    if (data.structuredData) {
+      this.updateStructuredData(data.structuredData);
+    }
+    
+    // Update robots meta
+    this.updateRobotsMeta(data);
+    
+    // Log SEO metrics
+    const metrics = this.getSEOMetrics();
+    console.log('SEO Metrics:', metrics);
   }
 
-  private setupMetaTagObserver(): void {
-    const observer = new MutationObserver((mutations) => {
-      mutations.forEach((mutation) => {
-        if (mutation.type === 'childList' && mutation.target.nodeName === 'HEAD') {
-          this.analyzeCurrentPage();
-        }
+  /**
+   * Update meta tags
+   */
+  private updateMetaTags(data: SEOData): void {
+    // Title
+    document.title = data.title;
+    
+    // Description
+    this.setMetaTag('description', data.description);
+    
+    // Keywords
+    if (data.keywords && data.keywords.length > 0) {
+      this.setMetaTag('keywords', data.keywords.join(', '));
+    }
+    
+    // Canonical
+    this.setCanonicalUrl(data.canonical);
+    
+    // Language
+    if (data.language) {
+      document.documentElement.lang = data.language;
+    }
+    
+    // Author
+    if (data.author) {
+      this.setMetaTag('author', data.author);
+    }
+    
+    // Published time
+    if (data.publishedTime) {
+      this.setMetaTag('article:published_time', data.publishedTime);
+    }
+    
+    // Modified time
+    if (data.modifiedTime) {
+      this.setMetaTag('article:modified_time', data.modifiedTime);
+    }
+    
+    // Section
+    if (data.section) {
+      this.setMetaTag('article:section', data.section);
+    }
+    
+    // Tags
+    if (data.tags && data.tags.length > 0) {
+      data.tags.forEach(tag => {
+        this.setMetaTag('article:tag', tag);
       });
-    });
-
-    observer.observe(document.head, { childList: true, subtree: true });
+    }
   }
 
-  private initializeStructuredData(): void {
-    const structuredData = {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Zion Tech Group",
-      "description": "Advanced AI and IT Solutions for Modern Enterprises",
-      "url": "https://zion.app",
-      "logo": "https://zion.app/logo.png",
-      "sameAs": [
-        "https://twitter.com/ziontechgroup",
-        "https://linkedin.com/company/zion-tech-group"
-      ],
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+1-555-0123",
-        "contactType": "customer service"
-      }
+  /**
+   * Update Open Graph tags
+   */
+  private updateOpenGraphTags(data: SEOData): void {
+    const ogTags = {
+      'og:title': data.ogTitle || data.title,
+      'og:description': data.ogDescription || data.description,
+      'og:type': data.ogType || 'website',
+      'og:url': data.ogUrl || data.canonical,
+      'og:image': data.ogImage || '/og-image.png',
+      'og:site_name': 'Zion Tech Group'
     };
 
-    this.addStructuredData(structuredData);
+    Object.entries(ogTags).forEach(([property, content]) => {
+      this.setMetaProperty(property, content);
+    });
   }
 
-  private addStructuredData(data: Record<string, unknown>): void {
+  /**
+   * Update Twitter Card tags
+   */
+  private updateTwitterCardTags(data: SEOData): void {
+    const twitterTags = {
+      'twitter:card': data.twitterCard || 'summary_large_image',
+      'twitter:title': data.twitterTitle || data.title,
+      'twitter:description': data.twitterDescription || data.description,
+      'twitter:image': data.twitterImage || data.ogImage || '/twitter-image.png'
+    };
+
+    Object.entries(twitterTags).forEach(([name, content]) => {
+      this.setMetaName(name, content);
+    });
+  }
+
+  /**
+   * Update structured data
+   */
+  private updateStructuredData(data: Record<string, any>): void {
+    // Remove existing structured data
+    const existingScripts = document.querySelectorAll('script[type="application/ld+json"]');
+    existingScripts.forEach(script => script.remove());
+
+    // Add new structured data
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(data);
     document.head.appendChild(script);
   }
 
-  public updateSEOData(data: SEOData): void {
-    this.seoData = data;
-    this.updateMetaTags();
-    this.analyzeCurrentPage();
+  /**
+   * Update robots meta tag
+   */
+  private updateRobotsMeta(data: SEOData): void {
+    if (data.robots) {
+      this.setMetaName('robots', data.robots);
+    }
   }
 
-  private updateMetaTags(): void {
-    if (!this.seoData || typeof document === 'undefined') return;
-
-    const { title, description, keywords, canonical, ogTitle, ogDescription, ogImage, twitterCard, twitterTitle, twitterDescription } = this.seoData;
-
-    // Update title
-    document.title = title;
-
-    // Update meta description
-    this.updateMetaTag('description', description);
-    
-    // Update keywords
-    this.updateMetaTag('keywords', keywords.join(', '));
-    
-    // Update canonical URL
-    this.updateLinkTag('canonical', canonical);
-    
-    // Update Open Graph tags
-    this.updateMetaTag('og:title', ogTitle);
-    this.updateMetaTag('og:description', ogDescription);
-    this.updateMetaTag('og:image', ogImage);
-    this.updateMetaTag('og:url', canonical);
-    this.updateMetaTag('og:type', 'website');
-    
-    // Update Twitter Card tags
-    this.updateMetaTag('twitter:card', twitterCard);
-    this.updateMetaTag('twitter:title', twitterTitle);
-    this.updateMetaTag('twitter:description', twitterDescription);
-    this.updateMetaTag('twitter:image', ogImage);
-  }
-
-  private updateMetaTag(name: string, content: string): void {
+  /**
+   * Set meta tag by name
+   */
+  private setMetaTag(name: string, content: string): void {
     let meta = document.querySelector(`meta[name="${name}"]`) as HTMLMetaElement;
     if (!meta) {
       meta = document.createElement('meta');
@@ -147,286 +227,381 @@ class EnhancedSEOOptimizer {
     meta.content = content;
   }
 
-  private updateLinkTag(rel: string, href: string): void {
-    let link = document.querySelector(`link[rel="${rel}"]`) as HTMLLinkElement;
-    if (!link) {
-      link = document.createElement('link');
-      link.rel = rel;
-      document.head.appendChild(link);
+  /**
+   * Set meta property (for Open Graph)
+   */
+  private setMetaProperty(property: string, content: string): void {
+    let meta = document.querySelector(`meta[property="${property}"]`) as HTMLMetaElement;
+    if (!meta) {
+      meta = document.createElement('meta');
+      meta.setAttribute('property', property);
+      document.head.appendChild(meta);
     }
-    link.href = href;
+    meta.content = content;
   }
 
-  public analyzeCurrentPage(): SEOAnalysis {
-    const issues: SEOIssue[] = [];
-    const metrics = this.calculateMetrics();
-    
-    // Analyze title
-    this.analyzeTitle(issues);
-    
-    // Analyze description
-    this.analyzeDescription(issues);
-    
-    // Analyze headings
-    this.analyzeHeadings(issues);
-    
-    // Analyze images
-    this.analyzeImages(issues);
-    
-    // Analyze links
-    this.analyzeLinks(issues);
-    
-    // Analyze content
-    this.analyzeContent(issues, metrics);
-    
-    // Calculate score
-    const score = this.calculateScore(issues);
-    
-    // Generate recommendations
-    const recommendations = this.generateRecommendations(issues, metrics);
-    
-    this.analysis = {
-      score,
-      issues,
-      recommendations,
-      metrics
-    };
-    
-    return this.analysis;
+  /**
+   * Set meta name (for Twitter Cards)
+   */
+  private setMetaName(name: string, content: string): void {
+    let meta = document.querySelector(`meta[name="${name}"]`) as HTMLMetaElement;
+    if (!meta) {
+      meta = document.createElement('meta');
+      meta.name = name;
+      document.head.appendChild(meta);
+    }
+    meta.content = content;
   }
 
-  private calculateMetrics(): SEOMetrics {
+  /**
+   * Set canonical URL
+   */
+  private setCanonicalUrl(url: string): void {
+    let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
+    if (!canonical) {
+      canonical = document.createElement('link');
+      canonical.rel = 'canonical';
+      document.head.appendChild(canonical);
+    }
+    canonical.href = url;
+  }
+
+  /**
+   * Setup performance observer for Core Web Vitals
+   */
+  private setupPerformanceObserver(): void {
+    if (!('PerformanceObserver' in window)) return;
+
+    try {
+      this.observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          switch (entry.entryType) {
+            case 'navigation':
+              this.handleNavigationTiming(entry as PerformanceNavigationTiming);
+              break;
+            case 'paint':
+              this.handlePaintTiming(entry as PerformancePaintTiming);
+              break;
+            case 'largest-contentful-paint':
+              this.handleLCPTiming(entry as PerformanceEntry);
+              break;
+            case 'first-input':
+              this.handleFIDTiming(entry as PerformanceEventTiming);
+              break;
+            case 'cumulative-layout-shift':
+              this.handleCLSTiming(entry as PerformanceEntry);
+              break;
+          }
+        }
+      });
+
+      const supportedEntryTypes = [
+        'navigation',
+        'paint',
+        'largest-contentful-paint',
+        'first-input',
+        'cumulative-layout-shift'
+      ].filter(type => PerformanceObserver.supportedEntryTypes.includes(type));
+
+      this.observer.observe({ entryTypes: supportedEntryTypes });
+    } catch (error) {
+      console.warn('Failed to setup performance observer:', error);
+    }
+  }
+
+  /**
+   * Handle navigation timing
+   */
+  private handleNavigationTiming(entry: PerformanceNavigationTiming): void {
+    if (!this.performanceMetrics) {
+      this.performanceMetrics = {} as PagePerformanceMetrics;
+    }
+
+    this.performanceMetrics.loadTime = entry.loadEventEnd - entry.loadEventStart;
+    this.performanceMetrics.timeToInteractive = entry.domInteractive - entry.navigationStart;
+  }
+
+  /**
+   * Handle paint timing
+   */
+  private handlePaintTiming(entry: PerformancePaintTiming): void {
+    if (!this.performanceMetrics) {
+      this.performanceMetrics = {} as PagePerformanceMetrics;
+    }
+
+    if (entry.name === 'first-contentful-paint') {
+      this.performanceMetrics.firstContentfulPaint = entry.startTime;
+    }
+  }
+
+  /**
+   * Handle Largest Contentful Paint timing
+   */
+  private handleLCPTiming(entry: PerformanceEntry): void {
+    if (!this.performanceMetrics) {
+      this.performanceMetrics = {} as PagePerformanceMetrics;
+    }
+
+    this.performanceMetrics.largestContentfulPaint = entry.startTime;
+  }
+
+  /**
+   * Handle First Input Delay timing
+   */
+  private handleFIDTiming(entry: PerformanceEventTiming): void {
+    if (!this.performanceMetrics) {
+      this.performanceMetrics = {} as PagePerformanceMetrics;
+    }
+
+    this.performanceMetrics.firstInputDelay = entry.processingStart - entry.startTime;
+  }
+
+  /**
+   * Handle Cumulative Layout Shift timing
+   */
+  private handleCLSTiming(entry: PerformanceEntry): void {
+    if (!this.performanceMetrics) {
+      this.performanceMetrics = {} as PagePerformanceMetrics;
+    }
+
+    this.performanceMetrics.cumulativeLayoutShift = (entry as any).value || 0;
+  }
+
+  /**
+   * Get SEO metrics and score
+   */
+  getSEOMetrics(): SEOMetrics {
     const title = document.title;
-    const description = this.getMetaContent('description') || '';
-    const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
-    const images = document.querySelectorAll('img');
-    const links = document.querySelectorAll('a');
-    const content = document.body.textContent || '';
-    const words = content.split(/\s+/).filter(word => word.length > 0);
-    
+    const description = this.getMetaContent('description');
+    const keywords = this.getMetaContent('keywords');
+    const canonical = document.querySelector('link[rel="canonical"]');
+    const ogTags = document.querySelectorAll('meta[property^="og:"]');
+    const twitterTags = document.querySelectorAll('meta[name^="twitter:"]');
+    const structuredData = document.querySelector('script[type="application/ld+json"]');
+    const robots = this.getMetaContent('robots');
+
+    const recommendations: string[] = [];
+
+    // Title analysis
+    if (title.length < 30) {
+      recommendations.push('Title is too short (recommended: 30-60 characters)');
+    } else if (title.length > 60) {
+      recommendations.push('Title is too long (recommended: 30-60 characters)');
+    }
+
+    // Description analysis
+    if (!description) {
+      recommendations.push('Missing meta description');
+    } else if (description.length < 120) {
+      recommendations.push('Meta description is too short (recommended: 120-160 characters)');
+    } else if (description.length > 160) {
+      recommendations.push('Meta description is too long (recommended: 120-160 characters)');
+    }
+
+    // Keywords analysis
+    if (!keywords) {
+      recommendations.push('Missing meta keywords');
+    }
+
+    // Canonical URL analysis
+    if (!canonical) {
+      recommendations.push('Missing canonical URL');
+    }
+
+    // Open Graph analysis
+    if (ogTags.length === 0) {
+      recommendations.push('Missing Open Graph tags');
+    }
+
+    // Twitter Card analysis
+    if (twitterTags.length === 0) {
+      recommendations.push('Missing Twitter Card tags');
+    }
+
+    // Structured data analysis
+    if (!structuredData) {
+      recommendations.push('Missing structured data');
+    }
+
+    // Calculate score
+    let score = 100;
+    score -= title.length < 30 || title.length > 60 ? 10 : 0;
+    score -= !description ? 15 : (description.length < 120 || description.length > 160 ? 10 : 0);
+    score -= !keywords ? 5 : 0;
+    score -= !canonical ? 10 : 0;
+    score -= ogTags.length === 0 ? 15 : 0;
+    score -= twitterTags.length === 0 ? 10 : 0;
+    score -= !structuredData ? 15 : 0;
+    score -= !robots ? 5 : 0;
+
     return {
       titleLength: title.length,
-      descriptionLength: description.length,
-      headingCount: headings.length,
-      imageCount: images.length,
-      linkCount: links.length,
-      wordCount: words.length,
-      readingTime: Math.ceil(words.length / 200) // Assuming 200 words per minute
+      descriptionLength: description?.length || 0,
+      keywordsCount: keywords ? keywords.split(',').length : 0,
+      hasCanonical: !!canonical,
+      hasOpenGraph: ogTags.length > 0,
+      hasTwitterCard: twitterTags.length > 0,
+      hasStructuredData: !!structuredData,
+      hasRobots: !!robots,
+      score: Math.max(0, score),
+      recommendations
     };
   }
 
+  /**
+   * Get meta content by name
+   */
   private getMetaContent(name: string): string | null {
     const meta = document.querySelector(`meta[name="${name}"]`) as HTMLMetaElement;
-    return meta ? meta.content : null;
+    return meta?.content || null;
   }
 
-  private analyzeTitle(issues: SEOIssue[]): void {
-    const title = document.title;
-    
-    if (!title) {
-      issues.push({
-        type: 'error',
-        message: 'Page title is missing',
-        element: 'title',
-        suggestion: 'Add a descriptive page title'
-      });
-    } else if (title.length < 30) {
-      issues.push({
-        type: 'warning',
-        message: 'Page title is too short',
-        element: 'title',
-        suggestion: 'Make the title more descriptive (30-60 characters)'
-      });
-    } else if (title.length > 60) {
-      issues.push({
-        type: 'warning',
-        message: 'Page title is too long',
-        element: 'title',
-        suggestion: 'Shorten the title to under 60 characters'
-      });
+  /**
+   * Optimize existing meta tags
+   */
+  private optimizeExistingMetaTags(): void {
+    // Ensure viewport meta tag exists
+    if (!document.querySelector('meta[name="viewport"]')) {
+      const viewport = document.createElement('meta');
+      viewport.name = 'viewport';
+      viewport.content = 'width=device-width, initial-scale=1.0';
+      document.head.appendChild(viewport);
+    }
+
+    // Ensure charset meta tag exists
+    if (!document.querySelector('meta[charset]')) {
+      const charset = document.createElement('meta');
+      charset.setAttribute('charset', 'UTF-8');
+      document.head.insertBefore(charset, document.head.firstChild);
     }
   }
 
-  private analyzeDescription(issues: SEOIssue[]): void {
-    const description = this.getMetaContent('description');
+  /**
+   * Setup dynamic meta updates
+   */
+  private setupDynamicMetaUpdates(): void {
+    // Update page title on focus/blur for better UX
+    let originalTitle = document.title;
     
-    if (!description) {
-      issues.push({
-        type: 'error',
-        message: 'Meta description is missing',
-        element: 'meta[name="description"]',
-        suggestion: 'Add a compelling meta description'
-      });
-    } else if (description.length < 120) {
-      issues.push({
-        type: 'warning',
-        message: 'Meta description is too short',
-        element: 'meta[name="description"]',
-        suggestion: 'Make the description more detailed (120-160 characters)'
-      });
-    } else if (description.length > 160) {
-      issues.push({
-        type: 'warning',
-        message: 'Meta description is too long',
-        element: 'meta[name="description"]',
-        suggestion: 'Shorten the description to under 160 characters'
-      });
-    }
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) {
+        document.title = '👋 ' + originalTitle;
+      } else {
+        document.title = originalTitle;
+      }
+    });
   }
 
-  private analyzeHeadings(issues: SEOIssue[]): void {
-    const h1s = document.querySelectorAll('h1');
-    const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
-    
-    if (h1s.length === 0) {
-      issues.push({
-        type: 'error',
-        message: 'No H1 heading found',
-        element: 'h1',
-        suggestion: 'Add a main H1 heading to structure your content'
-      });
-    } else if (h1s.length > 1) {
-      issues.push({
-        type: 'warning',
-        message: 'Multiple H1 headings found',
-        element: 'h1',
-        suggestion: 'Use only one H1 heading per page'
-      });
-    }
-    
-    if (headings.length < 3) {
-      issues.push({
-        type: 'info',
-        message: 'Consider adding more headings',
-        element: 'h1-h6',
-        suggestion: 'Use headings to structure your content better'
-      });
-    }
+  /**
+   * Inject default structured data
+   */
+  private injectStructuredData(): void {
+    const defaultStructuredData = {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "description": "Leading AI and technology solutions provider",
+      "url": window.location.origin,
+      "logo": `${window.location.origin}/logo.png`,
+      "sameAs": [
+        "https://linkedin.com/company/zion-tech-group",
+        "https://twitter.com/ziontechgroup"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-555-0123",
+        "contactType": "customer service"
+      }
+    };
+
+    this.updateStructuredData(defaultStructuredData);
   }
 
-  private analyzeImages(issues: SEOIssue[]): void {
+  /**
+   * Optimize images for SEO
+   */
+  private optimizeImages(): void {
     const images = document.querySelectorAll('img');
-    
-    images.forEach((img, index) => {
+    images.forEach(img => {
+      // Add alt text if missing
       if (!img.alt) {
-        issues.push({
-          type: 'error',
-          message: `Image ${index + 1} is missing alt text`,
-          element: `img[${index}]`,
-          suggestion: 'Add descriptive alt text for accessibility and SEO'
-        });
+        img.alt = img.title || 'Image';
+      }
+
+      // Add loading="lazy" for better performance
+      if (!img.loading) {
+        img.loading = 'lazy';
       }
     });
   }
 
-  private analyzeLinks(issues: SEOIssue[]): void {
-    const links = document.querySelectorAll('a');
-    
-    links.forEach((link, index) => {
-      if (!link.textContent?.trim()) {
-        issues.push({
-          type: 'warning',
-          message: `Link ${index + 1} has no text content`,
-          element: `a[${index}]`,
-          suggestion: 'Add descriptive text to your links'
+  /**
+   * Setup lazy loading
+   */
+  private setupLazyLoading(): void {
+    // Intersection Observer for lazy loading
+    if ('IntersectionObserver' in window) {
+      const lazyImages = document.querySelectorAll('img[data-src]');
+      const imageObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const img = entry.target as HTMLImageElement;
+            img.src = img.dataset.src || '';
+            img.removeAttribute('data-src');
+            imageObserver.unobserve(img);
+          }
         });
-      }
-    });
-  }
-
-  private analyzeContent(issues: SEOIssue[], metrics: SEOMetrics): void {
-    if (metrics.wordCount < 300) {
-      issues.push({
-        type: 'warning',
-        message: 'Content is too short',
-        element: 'body',
-        suggestion: 'Add more substantial content (300+ words recommended)'
       });
+
+      lazyImages.forEach(img => imageObserver.observe(img));
     }
   }
 
-  private calculateScore(issues: SEOIssue[]): number {
-    let score = 100;
+  /**
+   * Generate sitemap
+   */
+  generateSitemap(pages: string[]): string {
+    const baseUrl = window.location.origin;
     
-    issues.forEach(issue => {
-      switch (issue.type) {
-        case 'error':
-          score -= 20;
-          break;
-        case 'warning':
-          score -= 10;
-          break;
-        case 'info':
-          score -= 5;
-          break;
-      }
+    let sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n';
+    sitemap += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
+    
+    pages.forEach(page => {
+      sitemap += '  <url>\n';
+      sitemap += `    <loc>${baseUrl}${page}</loc>\n`;
+      sitemap += `    <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>\n`;
+      sitemap += '    <changefreq>weekly</changefreq>\n';
+      sitemap += '    <priority>0.8</priority>\n';
+      sitemap += '  </url>\n';
     });
     
-    return Math.max(0, score);
+    sitemap += '</urlset>';
+    
+    return sitemap;
   }
 
-  private generateRecommendations(issues: SEOIssue[], metrics: SEOMetrics): string[] {
-    const recommendations: string[] = [];
-    
-    issues.forEach(issue => {
-      if (issue.suggestion) {
-        recommendations.push(issue.suggestion);
-      }
-    });
-    
-    // Add general recommendations based on metrics
-    if (metrics.readingTime < 1) {
-      recommendations.push('Consider adding more content to improve user engagement');
-    }
-    
-    if (metrics.imageCount === 0) {
-      recommendations.push('Add relevant images to make your content more engaging');
-    }
-    
-    if (recommendations.length === 0) {
-      recommendations.push('Your SEO looks great! Keep up the excellent work.');
-    }
-    
-    return recommendations;
+  /**
+   * Get current performance metrics
+   */
+  getPerformanceMetrics(): PagePerformanceMetrics | null {
+    return this.performanceMetrics;
   }
 
-  public getAnalysis(): SEOAnalysis | null {
-    return this.analysis;
-  }
-
-  public generateReport(): string {
-    if (!this.analysis) {
-      return 'No SEO analysis available. Run analyzeCurrentPage() first.';
+  /**
+   * Cleanup
+   */
+  cleanup(): void {
+    if (this.observer) {
+      this.observer.disconnect();
+      this.observer = null;
     }
-    
-    const { score, issues, recommendations, metrics } = this.analysis;
-    
-    return `
-SEO Analysis Report
-==================
-Overall Score: ${score}/100
-
-Issues Found: ${issues.length}
-- Errors: ${issues.filter(i => i.type === 'error').length}
-- Warnings: ${issues.filter(i => i.type === 'warning').length}
-- Info: ${issues.filter(i => i.type === 'info').length}
-
-Content Metrics:
-- Title Length: ${metrics.titleLength} characters
-- Description Length: ${metrics.descriptionLength} characters
-- Word Count: ${metrics.wordCount} words
-- Reading Time: ${metrics.readingTime} minutes
-- Headings: ${metrics.headingCount}
-- Images: ${metrics.imageCount}
-- Links: ${metrics.linkCount}
-
-Recommendations:
-${recommendations.map(rec => `- ${rec}`).join('\n')}
-    `.trim();
   }
 }
 
 // Export singleton instance
 export const enhancedSEOOptimizer = new EnhancedSEOOptimizer();
-export { EnhancedSEOOptimizer };
-export type { SEOData, SEOAnalysis, SEOIssue, SEOMetrics };
+
+// Auto-initialize
+if (typeof window !== 'undefined') {
+  enhancedSEOOptimizer.initialize();
+}

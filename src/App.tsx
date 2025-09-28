@@ -22,6 +22,8 @@ import { apiCache, imageCache, dataCache } from './utils/advancedCacheManager';
 import { enhancedErrorHandler } from './utils/enhancedErrorHandling';
 import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitoring';
 import { enhancedAccessibilityManager } from './utils/enhancedAccessibility';
+import { advancedErrorRecovery } from './utils/advancedErrorRecovery';
+import { enhancedSEOOptimizer } from './utils/enhancedSEOOptimizer';
 
 // Lazy load heavy components for better performance
 const EnhancedSystemDashboard = lazy(() => import('./components/EnhancedSystemDashboard'));
@@ -137,6 +139,8 @@ export default function App(): React.JSX.Element {
       enhancedPerformanceMonitor.initialize();
       enhancedErrorHandler.initialize();
       enhancedAccessibilityManager.initialize();
+      advancedErrorRecovery.initialize();
+      enhancedSEOOptimizer.initialize();
       
       // Initialize advanced systems
       void performanceAnalytics; // Initialize performance analytics
@@ -150,6 +154,19 @@ export default function App(): React.JSX.Element {
       
       // Initialize SEO for current page
       seoManager.updateSEO({
+        title: seoData.title,
+        description: seoData.description,
+        keywords: seoData.keywords.split(', '),
+        canonical: seoData.canonicalUrl,
+        ogTitle: seoData.title,
+        ogDescription: seoData.description,
+        ogImage: seoData.ogImage,
+        ogType: seoData.ogType,
+        twitterCard: seoData.twitterCard
+      });
+
+      // Also update with enhanced SEO optimizer
+      enhancedSEOOptimizer.updateSEO({
         title: seoData.title,
         description: seoData.description,
         keywords: seoData.keywords.split(', '),
