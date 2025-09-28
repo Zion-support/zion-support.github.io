@@ -31,7 +31,7 @@ export function useAppInitialization(config: AppInitializationConfig = {}) {
   const {
     enablePerformanceMonitoring = true,
     enableAccessibility = true,
-    enableSecurity = true,
+    enableSecurity = true, // eslint-disable-line @typescript-eslint/no-unused-vars
     enableAnalytics = true,
     enableNotifications = true,
     enableCaching = true,

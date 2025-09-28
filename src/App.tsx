@@ -94,7 +94,7 @@ export default function App(): React.JSX.Element {
     });
     // Also call the original trackEngagement from useAppInitialization
     trackEngagement();
-  }, [engagementData, trackEngagement]);
+  }, [trackEngagement]);
 
   // Simple SEO manager
   const seoManagerInstance = {
@@ -138,6 +138,10 @@ export default function App(): React.JSX.Element {
 
     // Set default SEO data using the correct method
     seoManagerInstance.updateMetaTags(seoData);
+
+    // Use passive listeners for better performance
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    document.addEventListener('click', handleClick, { passive: true });
   }, [seoData, handleScroll, handleClick, handleKeyDown, preloadResource]);
 
   // Main initialization and cleanup effect
