@@ -168,9 +168,6 @@ export default function App(): React.JSX.Element {
         case 'S':
           setShowSEOOptimizer(prev => !prev);
           break;
-        case 'R':
-          setShowRealTimeMetrics(prev => !prev);
-          break;
         case 'Escape':
           // Close all modals and dashboards
           setShowSystemDashboard(false);
@@ -523,7 +520,10 @@ export default function App(): React.JSX.Element {
       </div>
       
       {/* Additional components */}
-      <PerformanceDashboard />
+      <PerformanceDashboard 
+        isVisible={showPerformanceOptimizer}
+        onClose={() => setShowPerformanceOptimizer(false)}
+      />
       <SystemMetricsDashboard 
         isVisible={showSystemDashboard}
         onClose={() => setShowSystemDashboard(false)}
@@ -555,6 +555,6 @@ export default function App(): React.JSX.Element {
         notifications={notifications}
         onRemove={(id) => setNotifications(prev => prev.filter(n => n.id !== id))}
       />
-    </EnhancedErrorBoundary>
+    </AdvancedErrorBoundary>
   );
 }
