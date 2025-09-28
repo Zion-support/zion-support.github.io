@@ -189,6 +189,9 @@ export default function App(): React.JSX.Element {
   React.useEffect(() => {
     // Track engagement on page unload
     window.addEventListener('beforeunload', trackEngagement);
+    window.addEventListener('scroll', handleScroll);
+    document.addEventListener('click', handleClick);
+    document.addEventListener('keydown', handleKeyDown);
 
     // Mark app as fully initialized
     if (typeof window !== 'undefined' && window.performance && 
@@ -206,23 +209,14 @@ export default function App(): React.JSX.Element {
       console.log('🚀 Zion Tech Group App initialized');
     }
 
-    // Mark app as fully initialized
-    if (typeof window !== 'undefined' && window.performance && 
-        typeof performance.mark === 'function' && 
-        typeof performance.measure === 'function') {
-      performance.mark('app-init-complete');
-      performance.measure('app-initialization', 'app-init-start', 'app-init-complete');
-    }
-
-  // Cleanup function for event listeners
-  useEffect(() => {
+    // Cleanup function
     return () => {
       window.removeEventListener('beforeunload', trackEngagement);
       window.removeEventListener('scroll', handleScroll);
       document.removeEventListener('click', handleClick);
       document.removeEventListener('keydown', handleKeyDown);
     };
-  }, [trackEngagement, handleScroll, handleClick, handleKeyDown]);
+  }, [trackEngagement, handleScroll, handleClick, handleKeyDown, seoData]);
 
   // Show loading screen while initializing
   if (isLoading) {
