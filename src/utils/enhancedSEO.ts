@@ -221,7 +221,7 @@ export class EnhancedSEO {
       
       if (additionalAttributes) {
         Object.entries(additionalAttributes).forEach(([attr, value]) => {
-          link.setAttribute(attr, value);
+          link!.setAttribute(attr, value);
         });
       }
       
