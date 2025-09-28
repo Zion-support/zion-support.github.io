@@ -20,18 +20,6 @@ export class ErrorRecovery {
     window.addEventListener('unhandledrejection', (event) => {
       this.handleError(event.reason instanceof Error ? event.reason : new Error(String(event.reason)));
     });
-
-    // Component error recovery
-    this.addStrategy({
-      name: 'component-reset',
-      condition: (error, context) => 
-        Boolean(context.component && error.message.includes('component')),
-      action: async (error, context) => {
-        console.log('🔄 Resetting component...');
-        // Component reset logic would go here
-      },
-      priority: 2
-    });
   }
 
   private handleError(error: Error): void {
@@ -83,6 +71,14 @@ export class ErrorRecovery {
     return this.errorCount;
   }
 
+<<<<<<< HEAD
+  public reset(): void {
+    this.errorCount = 0;
+  }
+}
+
+export const errorRecoverySystem = new ErrorRecovery();
+=======
   public getErrorHistory(): ErrorContext[] {
     return [...this.errorHistory];
   }
@@ -103,4 +99,5 @@ export class ErrorRecovery {
 }
 
 export const errorRecoverySystem = new ErrorRecoverySystem();
+>>>>>>> 61be861214b50a66fa9f716d0213bc509edae316
 export const errorRecovery = errorRecoverySystem;

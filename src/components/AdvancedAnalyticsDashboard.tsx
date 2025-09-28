@@ -1,8 +1,12 @@
 import React, { useState, useEffect } from 'react';
+<<<<<<< HEAD
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, LineChart, Line, PieChart, Pie, Cell } from 'recharts';
+=======
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell } from 'recharts';
 
 // Define colors for charts
 const COLORS = ['#8884d8', '#82ca9d', '#ffc658', '#ff7c7c', '#8dd1e1', '#d084d0', '#87d068', '#ffc658'];
+>>>>>>> 61be861214b50a66fa9f716d0213bc509edae316
 
 interface AnalyticsData {
   pageViews: number;
@@ -15,6 +19,8 @@ interface AnalyticsData {
   deviceBreakdown: Array<{ device: string; count: number; percentage: number }>;
   performanceMetrics: Array<{ metric: string; value: number; trend: 'up' | 'down' | 'stable' }>;
 }
+
+const COLORS = ['#3B82F6', '#10B981', '#F59E0B', '#EF4444', '#8B5CF6', '#06B6D4'];
 
 interface AdvancedAnalyticsDashboardProps {
   isVisible: boolean;

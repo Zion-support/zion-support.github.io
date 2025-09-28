@@ -1,20 +1,12 @@
+<<<<<<< HEAD
+// Global types are available through tsconfig.json
+=======
 // Enhanced monitoring types are defined in global.d.ts
+>>>>>>> 61be861214b50a66fa9f716d0213bc509edae316
 /**
  * Enhanced Monitoring and Analytics System
  * Provides comprehensive monitoring, error tracking, and performance analytics
  */
-
-// Layout Shift interface for CLS monitoring
-interface LayoutShift extends PerformanceEntry {
-  value: number;
-  hadRecentInput: boolean;
-  lastInputTime: number;
-  sources: Array<{
-    node: Node;
-    previousRect: DOMRectReadOnly;
-    currentRect: DOMRectReadOnly;
-  }>;
-}
 
 interface MonitoringConfig {
   enableErrorTracking: boolean;

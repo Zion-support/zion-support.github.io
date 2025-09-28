@@ -235,6 +235,12 @@ export function useAppInitialization(config: AppInitializationConfig = {}) {
   const initializeAdvancedSystems = useCallback(async () => {
     try {
       // Initialize advanced performance monitor
+<<<<<<< HEAD
+      const { getPerformanceMonitor } = await import('../utils/advancedPerformanceMonitor');
+      const advancedPerformanceMonitor = getPerformanceMonitor();
+      // Start monitoring
+      advancedPerformanceMonitor.start();
+=======
       const { AdvancedPerformanceMonitor } = await import('../utils/advancedPerformanceMonitor');
       const advancedPerformanceMonitor = new AdvancedPerformanceMonitor();
       advancedPerformanceMonitor.updateConfig({
@@ -254,6 +260,7 @@ export function useAppInitialization(config: AppInitializationConfig = {}) {
         }
       });
       advancedPerformanceMonitor.startMonitoring();
+>>>>>>> 61be861214b50a66fa9f716d0213bc509edae316
 
       // Initialize advanced cache system
       const { advancedCacheSystem } = await import('../utils/advancedCacheSystem');

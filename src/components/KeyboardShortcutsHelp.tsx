@@ -19,7 +19,32 @@ const KeyboardShortcutsHelp: React.FC<KeyboardShortcutsHelpProps> = ({ isVisible
     { key: 'Escape', description: 'Close All Modals', category: 'Navigation' },
   ];
 
+<<<<<<< HEAD
+  useEffect(() => {
+    if (searchTerm) {
+      const filtered = shortcuts.filter(shortcut =>
+        shortcut.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        shortcut.key.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        shortcut.category.toLowerCase().includes(searchTerm.toLowerCase())
+      );
+      setFilteredShortcuts(filtered);
+    } else {
+      setFilteredShortcuts(shortcuts);
+    }
+  }, [searchTerm]);
+
+  if (!isVisible) return null;
+
+  const groupedShortcuts = filteredShortcuts.reduce((acc, shortcut) => {
+    if (!acc[shortcut.category]) {
+      acc[shortcut.category] = [];
+    }
+    acc[shortcut.category].push(shortcut);
+    return acc;
+  }, {} as Record<string, Shortcut[]>);
+=======
   const categories = [...new Set(shortcuts.map(s => s.category))];
+>>>>>>> 61be861214b50a66fa9f716d0213bc509edae316
 
   return (
     <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
@@ -36,6 +61,44 @@ const KeyboardShortcutsHelp: React.FC<KeyboardShortcutsHelpProps> = ({ isVisible
               </svg>
             </button>
           </div>
+<<<<<<< HEAD
+
+          {/* Search functionality */}
+          <div className="mb-6">
+            <input
+              type="text"
+              placeholder="Search shortcuts..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
+            />
+          </div>
+
+          <div className="space-y-6">
+            {Object.entries(groupedShortcuts).length > 0 ? (
+              Object.entries(groupedShortcuts).map(([category, shortcuts]) => (
+                <div key={category}>
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
+                    {category}
+                  </h3>
+                  <div className="space-y-2">
+                    {shortcuts.map((shortcut, index) => (
+                      <div key={index} className="flex justify-between items-center py-2 px-3 bg-gray-50 dark:bg-gray-700 rounded">
+                        <span className="text-gray-700 dark:text-gray-300">
+                          {shortcut.description}
+                        </span>
+                        <kbd className="px-2 py-1 bg-gray-200 dark:bg-gray-600 text-gray-800 dark:text-gray-200 rounded text-sm font-mono">
+                          {shortcut.key}
+                        </kbd>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))
+            ) : (
+              <div className="text-center py-8 text-gray-500 dark:text-gray-400">
+                No shortcuts found matching &quot;{searchTerm}&quot;
+=======
         </div>
         
         <div className="p-6 overflow-y-auto max-h-96">
@@ -53,6 +116,7 @@ const KeyboardShortcutsHelp: React.FC<KeyboardShortcutsHelpProps> = ({ isVisible
                       </kbd>
                     </div>
                   ))}
+>>>>>>> 61be861214b50a66fa9f716d0213bc509edae316
               </div>
             </div>
           ))}

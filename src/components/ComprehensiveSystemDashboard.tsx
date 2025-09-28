@@ -6,6 +6,7 @@ import { enhancedPerformanceMonitor } from '../utils/enhancedPerformanceMonitor'
 import { enhancedAnalytics } from '../utils/enhancedAnalytics';
 import { advancedAnalytics } from '../utils/advancedAnalytics';
 import { smartCache } from '../utils/smartCache';
+import { errorRecoverySystem } from '../utils/errorRecovery';
 
 interface SystemMetrics {
   performance: {
@@ -109,6 +110,30 @@ const ComprehensiveSystemDashboard: React.FC<SystemDashboardProps> = ({
     } finally {
       setIsLoading(false);
     }
+  };
+
+  const exportSystemData = () => {
+    const data = {
+      metrics,
+      realTimeData,
+      timestamp: new Date().toISOString()
+    };
+
+    const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'system-dashboard-data.json';
+    a.click();
+    URL.revokeObjectURL(url);
+  };
+
+  const clearAllData = () => {
+    errorRecoverySystem.reset();
+    advancedAnalytics.clearData();
+    smartCache.clear();
+    setMetrics(null);
+    setRealTimeData([]);
   };
 
   const getScoreColor = (score: number) => {

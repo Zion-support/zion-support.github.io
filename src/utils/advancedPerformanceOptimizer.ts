@@ -90,6 +90,8 @@ class AdvancedPerformanceOptimizer {
     ];
   }
 
+<<<<<<< HEAD
+=======
   // Additional methods for the existing class
   private preloadCriticalResources(): void {
     // Implementation for critical resource preloading
@@ -211,6 +213,7 @@ class AdvancedPerformanceOptimizerV2 {
   /**
    * Initialize the performance optimizer
    */
+>>>>>>> 61be861214b50a66fa9f716d0213bc509edae316
   public async initialize(): Promise<void> {
     if (this.isInitialized) return;
 
@@ -218,6 +221,8 @@ class AdvancedPerformanceOptimizerV2 {
       await this.collectPerformanceMetrics();
       await this.analyzeAndOptimize();
       
+<<<<<<< HEAD
+=======
       // Initialize performance observers
       this.initializePerformanceObservers();
       
@@ -252,6 +257,7 @@ class AdvancedPerformanceOptimizerV2 {
       }
 
       this.isInitialized = true;
+>>>>>>> 61be861214b50a66fa9f716d0213bc509edae316
       console.log('Advanced Performance Optimizer initialized successfully');
     } catch (error) {
       console.error('Failed to initialize Advanced Performance Optimizer:', error);
@@ -311,6 +317,8 @@ class AdvancedPerformanceOptimizerV2 {
         console.log(`Applied optimization: ${strategy.name}`);
       } catch (error) {
         console.error(`Failed to apply optimization ${strategy.name}:`, error);
+<<<<<<< HEAD
+=======
       }
     }
   }
@@ -565,10 +573,25 @@ class AdvancedPerformanceOptimizerV2 {
         console.log('Service Worker registered:', registration);
       } catch (error) {
         console.error('Service Worker registration failed:', error);
+>>>>>>> 61be861214b50a66fa9f716d0213bc509edae316
       }
     }
   }
 
+<<<<<<< HEAD
+  private preloadCriticalResources(): void {
+    const criticalResources = [
+      '/fonts/main.woff2',
+      '/css/critical.css',
+      '/js/main.js'
+    ];
+
+    criticalResources.forEach(resource => {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.href = resource;
+      link.as = resource.endsWith('.css') ? 'style' : 'script';
+=======
   /**
    * Setup resource hints for better performance
    */
@@ -598,10 +621,113 @@ class AdvancedPerformanceOptimizerV2 {
       link.rel = 'preconnect';
       link.href = resource;
       link.crossOrigin = 'anonymous';
+>>>>>>> 61be861214b50a66fa9f716d0213bc509edae316
       document.head.appendChild(link);
     });
   }
 
+<<<<<<< HEAD
+  private optimizeImages(): void {
+    // Implement image optimization strategies
+    const images = document.querySelectorAll('img');
+    images.forEach(img => {
+      // Add lazy loading
+      if (!img.loading) {
+        img.loading = 'lazy';
+      }
+
+      // Add proper alt text
+      if (!img.alt) {
+        img.alt = 'Image';
+      }
+
+      // Add responsive images
+      if (img.srcset) {
+        img.sizes = '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw';
+      }
+    });
+  }
+
+  private optimizeJavaScriptBundles(): void {
+    // Implement bundle splitting strategies
+    if (typeof window !== 'undefined') {
+      // Add code splitting hints
+      const script = document.createElement('script');
+      script.textContent = `
+        // Implement dynamic imports for non-critical code
+        window.addEventListener('load', () => {
+          import('./components/NonCriticalComponent').then(module => {
+            console.log('Non-critical component loaded');
+          });
+        });
+      `;
+      document.head.appendChild(script);
+    }
+  }
+
+  private optimizeCSS(): void {
+    // Implement CSS optimization strategies
+    const styleSheets = document.styleSheets;
+    for (let i = 0; i < styleSheets.length; i++) {
+      const sheet = styleSheets[i];
+      try {
+        const rules = sheet.cssRules || sheet.rules;
+        // Analyze and optimize CSS rules
+        console.log(`Optimizing CSS sheet ${i} with ${rules?.length || 0} rules`);
+      } catch (error) {
+        console.warn(`Cannot access CSS rules for sheet ${i}:`, error);
+      }
+    }
+  }
+
+  private implementServiceWorkerCaching(): void {
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js')
+        .then(registration => {
+          console.log('Service Worker registered:', registration);
+        })
+        .catch(error => {
+          console.error('Service Worker registration failed:', error);
+        });
+    }
+  }
+
+  private optimizeDatabaseQueries(): void {
+    // Implement database query optimization strategies
+    console.log('Database query optimization strategies implemented');
+  }
+
+  private optimizeMemoryUsage(): void {
+    // Implement memory optimization strategies
+    if (typeof window !== 'undefined') {
+      // Monitor memory usage
+      if ('memory' in performance) {
+        const memory = (performance as any).memory;
+        console.log('Memory usage:', {
+          used: Math.round(memory.usedJSHeapSize / 1048576) + ' MB',
+          total: Math.round(memory.totalJSHeapSize / 1048576) + ' MB',
+          limit: Math.round(memory.jsHeapSizeLimit / 1048576) + ' MB'
+        });
+      }
+    }
+  }
+
+  private optimizeNetworkRequests(): void {
+    // Implement network optimization strategies
+    console.log('Network optimization strategies implemented');
+  }
+
+  public getOptimizationReport(): {
+    metrics: PerformanceMetrics | null;
+    strategies: OptimizationStrategy[];
+    appliedOptimizations: string[];
+  } {
+    return {
+      metrics: this.metrics,
+      strategies: this.strategies,
+      appliedOptimizations: this.strategies.map(s => s.name)
+    };
+=======
   /**
    * Setup intelligent prefetching
    */
@@ -635,6 +761,7 @@ class AdvancedPerformanceOptimizerV2 {
    */
   public getMetrics(): PerformanceMetrics {
     return { ...this.metrics };
+>>>>>>> 61be861214b50a66fa9f716d0213bc509edae316
   }
 
   /**
@@ -644,7 +771,9 @@ class AdvancedPerformanceOptimizerV2 {
     key: K,
     value: PerformanceMetrics[K]
   ): void {
-    this.metrics[key] = value;
+    if (this.metrics) {
+      this.metrics[key] = value;
+    }
   }
 
   /**
@@ -653,6 +782,19 @@ class AdvancedPerformanceOptimizerV2 {
   public getPerformanceScore(): number {
     if (!this.metrics) return 0;
 
+<<<<<<< HEAD
+    // Calculate a performance score based on metrics
+    const lcpScore = Math.max(0, 100 - (this.metrics.lcp / 10));
+    const fcpScore = Math.max(0, 100 - (this.metrics.fcp / 10));
+    const ttfbScore = Math.max(0, 100 - (this.metrics.ttfb / 10));
+
+    return Math.round((lcpScore + fcpScore + ttfbScore) / 3);
+  }
+}
+
+export const advancedPerformanceOptimizer = new AdvancedPerformanceOptimizer();
+export default AdvancedPerformanceOptimizer;
+=======
     // Calculate a performance score based on Core Web Vitals
     const lcpScore = this.metrics.lcp < 2500 ? 100 : Math.max(0, 100 - (this.metrics.lcp - 2500) / 25);
     const fidScore = this.metrics.fid < 100 ? 100 : Math.max(0, 100 - (this.metrics.fid - 100) / 10);
@@ -697,3 +839,4 @@ export const performanceOptimizer = new AdvancedPerformanceOptimizer();
 // Export class for custom instances
 export { AdvancedPerformanceOptimizer };
 export type { PerformanceConfig, PerformanceMetrics };
+>>>>>>> 61be861214b50a66fa9f716d0213bc509edae316
