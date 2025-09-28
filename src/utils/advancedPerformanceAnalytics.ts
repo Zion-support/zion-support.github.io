@@ -119,7 +119,7 @@ class AdvancedPerformanceAnalytics {
         // FID Observer
         const fidObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
-          entries.forEach((entry: any) => {
+          entries.forEach((entry: PerformanceEntry) => {
             this.metrics.fid = entry.processingStart - entry.startTime;
             this.checkAlert('fid', this.metrics.fid);
           });
@@ -131,7 +131,7 @@ class AdvancedPerformanceAnalytics {
         let clsValue = 0;
         const clsObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
-          entries.forEach((entry: any) => {
+          entries.forEach((entry: PerformanceEntry) => {
             if (!entry.hadRecentInput) {
               clsValue += entry.value;
               this.metrics.cls = clsValue;
@@ -159,7 +159,7 @@ class AdvancedPerformanceAnalytics {
         const resourceObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           this.metrics.resourceCount = entries.length;
-          this.metrics.resourceSize = entries.reduce((total, entry: any) => {
+          this.metrics.resourceSize = entries.reduce((total, entry: PerformanceEntry) => {
             return total + (entry.transferSize || 0);
           }, 0);
           this.checkAlert('resourceCount', this.metrics.resourceCount);
@@ -197,7 +197,7 @@ class AdvancedPerformanceAnalytics {
 
   private updateMemoryUsage(): void {
     if ('memory' in performance) {
-      const memory = (performance as any).memory;
+      const memory = (performance as Performance & { memory: { usedJSHeapSize: number } }).memory;
       this.metrics.memoryUsage = memory.usedJSHeapSize;
       this.checkAlert('memoryUsage', this.metrics.memoryUsage);
     }
@@ -290,7 +290,7 @@ class AdvancedPerformanceAnalytics {
   private notifyAlert(alert: PerformanceAlert): void {
     // Send to analytics service
     if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as any).gtag('event', 'performance_alert', {
+      (window as Window & { gtag: (...args: unknown[]) => void }).gtag('event', 'performance_alert', {
         metric: alert.metric,
         value: alert.currentValue,
         threshold: alert.threshold,
