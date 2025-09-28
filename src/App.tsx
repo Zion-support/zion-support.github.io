@@ -28,6 +28,8 @@ import { advancedSEOOptimizer } from './utils/advancedSEOOptimizer';
 import { advancedAccessibilityEnhancer } from './utils/advancedAccessibilityEnhancer';
 import { advancedSecurityManager } from './utils/advancedSecurityManager';
 import { advancedAnalytics } from './utils/advancedAnalytics';
+import { advancedErrorHandler } from './utils/advancedErrorHandler';
+import { advancedCachingSystem } from './utils/advancedCachingSystem';
 import AdvancedAnalytics from './components/AdvancedAnalytics';
 import AdvancedMonitoringDashboard from './components/AdvancedMonitoringDashboard';
 import NotificationSystem, { Notification } from './components/NotificationSystem';
@@ -217,6 +219,8 @@ export default function App(): React.JSX.Element {
       advancedAccessibilityEnhancer.initialize();
       advancedSecurityManager.initialize();
       advancedAnalytics.initialize();
+      advancedErrorHandler.initialize();
+      advancedCachingSystem.initialize();
       
       // Get comprehensive enhancements
       const enhancements = getComprehensiveEnhancements();
@@ -226,6 +230,10 @@ export default function App(): React.JSX.Element {
       (window as unknown as Record<string, unknown>).performanceOptimizer = advancedPerformanceOptimizer;
       (window as unknown as Record<string, unknown>).seoOptimizer = advancedSEOOptimizer;
       (window as unknown as Record<string, unknown>).accessibilityEnhancer = advancedAccessibilityEnhancer;
+      (window as unknown as Record<string, unknown>).securityManager = advancedSecurityManager;
+      (window as unknown as Record<string, unknown>).analytics = advancedAnalytics;
+      (window as unknown as Record<string, unknown>).errorHandler = advancedErrorHandler;
+      (window as unknown as Record<string, unknown>).cachingSystem = advancedCachingSystem;
     } catch (error) {
       console.error('Error initializing enhancements:', error);
     }
