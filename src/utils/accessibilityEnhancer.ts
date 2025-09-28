@@ -341,7 +341,6 @@ class AccessibilityEnhancer {
   private calculateContrastRatio(_color1: string, _color2: string): number {
     // Simplified contrast ratio calculation
     // In a real implementation, you'd parse the colors and calculate luminance
-    // Parameters are prefixed with _ to indicate they are intentionally unused
     return 4.5; // Placeholder
   }
 

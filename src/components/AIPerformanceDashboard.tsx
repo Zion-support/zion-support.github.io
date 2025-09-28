@@ -25,9 +25,10 @@ interface AIInsights {
 }
 
 interface ErrorReport {
-  severity: string;
+  id: string;
   message: string;
-  lastOccurrence: string | Date;
+  severity: string;
+  lastOccurrence: string | number;
   occurrenceCount: number;
   context: {
     component?: string;
