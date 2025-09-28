@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { performanceEnhancer } from '../utils/performanceEnhancements';
+import { performanceEnhancements } from '../utils/performanceEnhancements';
 
 interface PerformanceData {
   dns?: number;
@@ -43,7 +43,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
 
   // Update performance data
   const updatePerformanceData = useCallback(() => {
-    const metrics = performanceEnhancer.getMetrics();
+    const metrics = performanceEnhancements.getMetrics();
     if (metrics) {
       setPerformanceData(metrics);
     }
@@ -62,16 +62,16 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     try {
       // Initialize performance enhancer
       addLogEntry('Initializing performance enhancer...');
-      performanceEnhancer.initialize();
+      performanceEnhancements.applyAutomatedOptimizations();
       
       // Generate performance report
       addLogEntry('Generating performance report...');
-      const report = performanceEnhancer.generateReport();
+      const report = performanceEnhancements.generateReport();
       addLogEntry(`Report generated: ${report.length} characters`);
       
       // Apply automated optimizations
       addLogEntry('Applying automated optimizations...');
-      performanceEnhancer.applyAutomatedOptimizations();
+      performanceEnhancements.applyAutomatedOptimizations();
       
       // Update metrics
       addLogEntry('Updating performance metrics...');

@@ -17,7 +17,7 @@ import PerformanceMonitor from './components/PerformanceMonitor';
 import AIPerformanceDashboard from './components/AIPerformanceDashboard';
 import AdvancedPerformanceDashboard from './components/AdvancedPerformanceDashboard';
 import WebsiteEnhancements from './components/WebsiteEnhancements';
-import { SEOOptimizer } from './components/SEOOptimizer';
+import SEOOptimizer from './components/SEOOptimizer';
 // import EnhancedAnalytics from './components/EnhancedAnalytics';
 // Available for future use:
 // import { seoManager } from './utils/seoEnhanced';
