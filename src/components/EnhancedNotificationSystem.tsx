@@ -123,6 +123,26 @@ const EnhancedNotificationSystem: React.FC<NotificationSystemProps> = ({
     )
   };
 
+  // Remove notification
+  const removeNotification = useCallback((id: string) => {
+    setNotifications(prev => prev.filter(n => n.id !== id));
+    
+    // Clear timeout if exists
+    const timeout = timeoutRefs.current.get(id);
+    if (timeout) {
+      clearTimeout(timeout);
+      timeoutRefs.current.delete(id);
+    }
+
+    // Hide container if no notifications
+    setNotifications(current => {
+      if (current.length === 1) {
+        setIsVisible(false);
+      }
+      return current;
+    });
+  }, []);
+
   // Add notification
   const addNotification = useCallback((notification: Omit<Notification, 'id' | 'timestamp'>) => {
     const id = `notification_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
@@ -165,27 +185,7 @@ const EnhancedNotificationSystem: React.FC<NotificationSystemProps> = ({
     }
 
     return id;
-  }, [maxNotifications, enableSounds, enableVibrations]);
-
-  // Remove notification
-  const removeNotification = useCallback((id: string) => {
-    setNotifications(prev => prev.filter(n => n.id !== id));
-    
-    // Clear timeout if exists
-    const timeout = timeoutRefs.current.get(id);
-    if (timeout) {
-      clearTimeout(timeout);
-      timeoutRefs.current.delete(id);
-    }
-
-    // Hide container if no notifications
-    setNotifications(current => {
-      if (current.length === 1) {
-        setIsVisible(false);
-      }
-      return current;
-    });
-  }, []);
+  }, [maxNotifications, enableSounds, enableVibrations, removeNotification]);
 
   // Clear all notifications
   const clearAll = useCallback(() => {

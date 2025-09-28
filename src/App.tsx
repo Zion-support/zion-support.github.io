@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import { AppRouter } from './router';
 import { initializeErrorReporting } from './utils/errorReporting';
 import { initOptimizations } from './utils/buildOptimizations';
@@ -427,7 +427,7 @@ export default function App(): React.JSX.Element {
       // Final engagement tracking
       trackEngagement();
     };
-  }, [preloadResource, recordMetric, seoData]);
+  }, [preloadResource, recordMetric, seoData, engagementData.clicks, engagementData.scrollDepth, engagementData.startTime, handleClick, handleKeyDown, handleScroll]);
 
   return (
     <>
