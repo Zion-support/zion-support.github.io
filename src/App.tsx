@@ -70,37 +70,46 @@ export default function App(): React.JSX.Element {
     { 
       id: 'dashboard', 
       title: 'Open System Dashboard', 
-      description: 'View comprehensive system metrics and health status',
+      description: 'Open the system dashboard to view performance metrics',
       category: 'System',
-      action: () => setShowSystemDashboard(true) 
+      action: () => setShowSystemDashboard(true),
+      keywords: ['dashboard', 'system', 'metrics'],
+      shortcut: 'Ctrl+Shift+D'
     },
     { 
       id: 'health', 
       title: 'Open System Health', 
-      description: 'Monitor system health and performance metrics',
+      description: 'View system health and diagnostics',
       category: 'System',
-      action: () => setShowSystemHealth(true) 
+      action: () => setShowSystemHealth(true),
+      keywords: ['health', 'system', 'diagnostics'],
+      shortcut: 'Ctrl+Shift+H'
     },
     { 
       id: 'keyboard', 
       title: 'Show Keyboard Shortcuts', 
-      description: 'Display available keyboard shortcuts and commands',
+      description: 'Display available keyboard shortcuts',
       category: 'Help',
-      action: () => setShowKeyboardHelp(true) 
+      action: () => setShowKeyboardHelp(true),
+      keywords: ['keyboard', 'shortcuts', 'help'],
+      shortcut: 'Ctrl+Shift+K'
     },
     { 
       id: 'performance', 
       title: 'Open Performance Widget', 
-      description: 'Access real-time performance monitoring tools',
-      category: 'Performance',
-      action: () => setShowPerformanceWidget(true) 
+      description: 'View real-time performance metrics',
+      category: 'System',
+      action: () => setShowPerformanceWidget(true),
+      keywords: ['performance', 'metrics', 'widget'],
+      shortcut: 'Ctrl+Shift+P'
     },
     { 
       id: 'theme', 
       title: 'Toggle Theme', 
-      description: 'Switch between light and dark mode',
-      category: 'UI',
-      action: () => setIsDarkMode(!isDarkMode) 
+      description: 'Switch between light and dark themes',
+      category: 'Appearance',
+      action: () => setIsDarkMode(!isDarkMode),
+      keywords: ['theme', 'dark', 'light', 'appearance']
     },
   ], [isDarkMode]);
 
@@ -121,17 +130,9 @@ export default function App(): React.JSX.Element {
       
       // Initialize performance optimizations
       performanceOptimizer.preloadCriticalResources();
-      performanceOptimizer.addResourceHints();
-      performanceOptimizer.optimizeServiceWorker();
       
       // Start memory optimization
-      const cleanupMemoryOptimization = performanceOptimizer.optimizeMemory();
-      
-      return () => {
-        if (cleanupMemoryOptimization) {
-          cleanupMemoryOptimization();
-        }
-      };
+      performanceOptimizer.optimizeMemory();
     } catch (error) {
       console.error('Error initializing enhancements:', error);
     }
