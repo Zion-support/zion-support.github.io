@@ -10,17 +10,47 @@ import { useAppInitialization } from './hooks/useAppInitialization';
 // import PerformanceOptimizer from './components/PerformanceOptimizer';
 import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
-import { seoAnalytics, performanceSEO, seoManager } from './utils/seoEnhanced';
+// Removed unused imports: seoOptimizer, cacheManager, apiClient, notificationManager, userFeedback
+import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
+import PerformanceDashboard from './components/PerformanceDashboard';
+import RealTimeMonitor from './components/RealTimeMonitor';
+import SystemMetricsDashboard from './components/SystemMetricsDashboard';
+import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
+import EnhancedNotificationSystem from './components/EnhancedNotificationSystem';
+import PerformanceOptimizer from './components/PerformanceOptimizer';
+import EnhancedAnalytics from './components/EnhancedAnalytics';
+// Removed unused import: getComprehensiveEnhancements
+import './index.css';
+
+// Import utility modules
+import { seoManager, seoAnalytics, performanceSEO } from './utils/seoEnhanced';
 import { analytics } from './utils/analytics';
+import { initializeErrorReporting } from './utils/errorReporting';
+import { initOptimizations } from './utils/buildOptimizations';
+import { performanceOptimizer } from './utils/optimization';
+import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
+import { enhancedAnalytics } from './utils/enhancedAnalytics';
+import { enhancedSEO } from './utils/enhancedSEO';
+import { enhancedPerformanceOptimizer } from './utils/enhancedPerformance';
+import { enhancedSecurityManager } from './utils/enhancedSecurity';
+import { enhancedAccessibilityManager } from './utils/enhancedAccessibility';
+import { accessibilityManager } from './utils/accessibility';
+import performanceEnhancer from './utils/performanceEnhancements';
+import { PerformanceMonitor } from './utils/performanceMonitor';
+import { advancedCacheSystem } from './utils/advancedCacheSystem';
+import { advancedErrorRecovery } from './utils/advancedErrorRecovery';
+import { advancedAutomationSystem } from './utils/advancedAutomationSystem';
+import { advancedPerformanceOptimizer } from './utils/performanceOptimizer';
+import { AccessibilityEnhancer } from './utils/accessibilityEnhancer';
+import { SecurityEnhancer } from './utils/securityEnhancer';
+import AdvancedPerformanceMonitor from './utils/advancedPerformanceMonitor';
+import AdvancedAccessibilityManager from './utils/advancedAccessibilityManager';
+import AdvancedSecurityManager from './utils/advancedSecurityManager';
+import EnhancedUXManager from './utils/enhancedUXManager';
 import { seoOptimizer } from './utils/seoOptimization';
 import { cacheManager } from './utils/cacheManager';
 import { apiClient } from './utils/apiClient';
 import { notificationManager } from './utils/notificationManager';
-import { userFeedback } from './utils/userFeedbackManager';
-import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
-import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
-import './index.css';
-
 export default function App(): React.JSX.Element {
   // State for system metrics dashboard (available for future use)
   // const [showSystemDashboard, setShowSystemDashboard] = useState(false);
@@ -28,8 +58,19 @@ export default function App(): React.JSX.Element {
   // State for performance optimizer (available for future use)
   // const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
 
+  // Engagement tracking data
+  const engagementData = useMemo(() => ({
+    startTime: Date.now(),
+    scrollDepth: 0,
+    clicks: 0
+  }), []);
+
   // Initialize app with custom configuration
+<<<<<<< HEAD
   const { isLoading, loadingProgress, engagementData, handleScroll, handleClick } = useAppInitialization({
+=======
+  const { isLoading, loadingProgress, handleScroll, handleClick, trackEngagement } = useAppInitialization({
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-e4b2
     enablePerformanceMonitoring: true,
     enableAccessibility: true,
     enableSecurity: true,
@@ -45,6 +86,7 @@ export default function App(): React.JSX.Element {
     enableImageOptimization: true,
   });
 
+<<<<<<< HEAD
   // Initialize comprehensive enhancements
   useEffect(() => {
     const enhancements = getComprehensiveEnhancements({
@@ -60,6 +102,18 @@ export default function App(): React.JSX.Element {
 
     // Store enhancements globally for debugging
     (window as Record<string, unknown>).enhancements = enhancements;
+=======
+  // Optimized keyboard handler for system dashboard toggle
+  const handleKeyDown = useCallback((event: KeyboardEvent) => {
+    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'D') {
+      event.preventDefault();
+      setShowSystemDashboard(prev => !prev);
+    }
+    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'P') {
+      event.preventDefault();
+      setShowPerformanceOptimizer(prev => !prev);
+    }
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-e4b2
   }, []);
 
   // Memoize the SEO data to prevent unnecessary re-renders
@@ -70,9 +124,11 @@ export default function App(): React.JSX.Element {
     ogType: 'website',
     ogUrl: typeof window !== 'undefined' ? window.location.href : '',
     ogImage: '/og-image.png',
-    twitterCard: 'summary_large_image' as const
+    twitterCard: 'summary_large_image' as const,
+    structuredData: []
   }), []);
 
+<<<<<<< HEAD
   // Track engagement function
   const trackEngagement = useCallback(() => {
     const timeOnPage = Date.now() - engagementData.startTime;
@@ -82,6 +138,21 @@ export default function App(): React.JSX.Element {
       clicks: engagementData.clicks,
     });
   }, [engagementData]);
+=======
+
+  // Simple SEO manager
+  const seoManager = {
+    updateMetaTags: (data: typeof seoData) => {
+      if (typeof document !== 'undefined') {
+        document.title = data.title;
+        const metaDescription = document.querySelector('meta[name="description"]');
+        if (metaDescription) {
+          metaDescription.setAttribute('content', data.description);
+        }
+      }
+    }
+  };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-e4b2
 
   useEffect(() => {
     // Add performance marks for better monitoring
@@ -93,6 +164,19 @@ export default function App(): React.JSX.Element {
     preloadResource('/og-image.png', 'image');
     preloadResource('/favicon.ico', 'image');
 
+<<<<<<< HEAD
+=======
+    // Use passive listeners for better performance
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    document.addEventListener('click', handleClick, { passive: true });
+    document.addEventListener('keydown', handleKeyDown);
+
+    // Initialize basic systems
+    analytics.initialize();
+    // Note: CacheManager, ApiClient, and NotificationManager don't have initialize methods
+    // They are initialized when first used via their getInstance() methods
+    
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-e4b2
     // Initialize SEO analytics
     seoAnalytics.trackPageView(window.location.pathname);
     
@@ -100,6 +184,7 @@ export default function App(): React.JSX.Element {
     performanceSEO.optimizeImages();
     performanceSEO.preloadCriticalResources();
     performanceSEO.optimizeFonts();
+<<<<<<< HEAD
     
     // Initialize analytics system
     analytics.initialize();
@@ -160,6 +245,28 @@ export default function App(): React.JSX.Element {
     window.addEventListener('scroll', handleScroll, { passive: true });
     document.addEventListener('click', handleClick, { passive: true });
   }, [seoData, handleScroll, handleClick, preloadResource]);
+=======
+    // Note: optimizeCSS method doesn't exist in PerformanceSEO class
+
+    // Set default SEO data using the correct method
+    seoManager.updateMetaTags(seoData);
+    // Add keyboard event listener
+    document.addEventListener('keydown', handleKeyDown);
+
+    // Use passive listeners for better performance
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    document.addEventListener('click', handleClick, { passive: true });
+  }, [seoData]);
+
+  // Add keyboard event listener
+  React.useEffect(() => {
+    document.addEventListener("keydown", handleKeyDown);
+    
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [handleKeyDown]);
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-e4b2
 
   // Main initialization and cleanup effect
   React.useEffect(() => {
@@ -174,6 +281,7 @@ export default function App(): React.JSX.Element {
       performance.measure('app-initialization', 'app-init-start', 'app-init-complete');
     }
 
+<<<<<<< HEAD
     // Set default SEO data
     seoManager.updateMetaTags(seoData);
 
@@ -191,23 +299,110 @@ export default function App(): React.JSX.Element {
       document.removeEventListener('click', handleClick);
     };
   }, [trackEngagement, handleScroll, handleClick]);
+=======
+    // Cleanup function
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+      window.removeEventListener('beforeunload', trackEngagement);
+      
+      // Clear timeouts (if any exist)
+      // Note: Timeout variables are now managed by the component state
+      
+      // Stop monitoring
+      // memoryMonitor.stopMonitoring(); // Not available
+      
+      // Cleanup new utilities
+      const advancedPerformanceMonitor = AdvancedPerformanceMonitor.getInstance();
+      advancedPerformanceMonitor.stopMonitoring();
+      
+      const accessibilityEnhancer = AccessibilityEnhancer.getInstance();
+      accessibilityEnhancer.cleanup();
+      
+      const securityEnhancer = SecurityEnhancer.getInstance();
+      securityEnhancer.cleanup();
+      
+      // Cleanup enhanced systems
+      enhancedPerformanceMonitor.stopMonitoring();
+      enhancedAnalytics.endSession();
+      
+      // Cleanup advanced systems
+      advancedCacheSystem.clear();
+      advancedAutomationSystem.stop();
+      
+      // Final engagement tracking
+      trackEngagement();
+      
+      // Remove event listeners
+      window.removeEventListener('scroll', handleScroll);
+      document.removeEventListener('click', handleClick);
+    };
+  }, [seoData, handleKeyDown, handleScroll, handleClick]);
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-e4b2
 
   // Show loading screen while initializing
   if (isLoading) {
     return (
+<<<<<<< HEAD
       <EnhancedErrorBoundary>
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
           <ModernLoadingSpinner progress={loadingProgress} />
         </div>
       </EnhancedErrorBoundary>
+=======
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100">
+        <ModernLoadingSpinner progress={loadingProgress} />
+      </div>
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-e4b2
     );
   }
 
   return (
+<<<<<<< HEAD
     <EnhancedErrorBoundary>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <AppRouter />
       </div>
     </EnhancedErrorBoundary>
+=======
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <AppRouter />
+      
+      {/* System Dashboard */}
+      {showSystemDashboard && (
+        <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
+          <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+            <div className="flex justify-between items-center mb-4">
+              <h2 className="text-2xl font-bold text-gray-900">System Dashboard</h2>
+              <button
+                onClick={() => setShowSystemDashboard(false)}
+                className="text-gray-500 hover:text-gray-700"
+              >
+                ✕
+              </button>
+            </div>
+            <EnhancedSystemDashboard />
+          </div>
+        </div>
+      )}
+
+      {/* Performance Optimizer */}
+      {showPerformanceOptimizer && (
+        <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
+          <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+            <div className="flex justify-between items-center mb-4">
+              <h2 className="text-2xl font-bold text-gray-900">Performance Optimizer</h2>
+              <button
+                onClick={() => setShowPerformanceOptimizer(false)}
+                className="text-gray-500 hover:text-gray-700"
+              >
+                ✕
+              </button>
+            </div>
+            <PerformanceOptimizer />
+          </div>
+        </div>
+      )}
+    </div>
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-e4b2
   );
 }

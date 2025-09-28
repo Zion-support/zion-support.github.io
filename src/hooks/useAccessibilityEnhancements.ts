@@ -32,14 +32,13 @@ export function useAccessibilityEnhancements(options: UseAccessibilityEnhancemen
   const {
     enableKeyboardNavigation = true,
     enableScreenReaderSupport = true,
+    enableHighContrastMode = true,
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    enableHighContrastMode: _enableHighContrastMode = true,
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    enableReducedMotion: _enableReducedMotion = true,
+    enableReducedMotion = true,
     enableFocusIndicators = true,
     enableAriaLabels = true,
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    announceChanges: _announceChanges = true,
+    announceChanges = true,
     enableSkipLinks = true,
     enableFocusTrap = true,
     enableAnnouncements = true
