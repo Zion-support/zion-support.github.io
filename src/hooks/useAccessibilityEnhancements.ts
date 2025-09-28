@@ -32,11 +32,11 @@ export function useAccessibilityEnhancements(options: UseAccessibilityEnhancemen
   const {
     enableKeyboardNavigation = true,
     enableScreenReaderSupport = true,
-    enableHighContrastMode = true,
-    enableReducedMotion = true,
+    enableHighContrastMode: _enableHighContrastMode = true,
+    enableReducedMotion: _enableReducedMotion = true,
     enableFocusIndicators = true,
     enableAriaLabels = true,
-    announceChanges = true,
+    announceChanges: _announceChanges = true,
     enableSkipLinks = true,
     enableFocusTrap = true,
     enableAnnouncements = true
@@ -248,12 +248,13 @@ export function useAccessibilityEnhancements(options: UseAccessibilityEnhancemen
           setCurrentFocusIndex(0);
           focusElement(focusableElements[0]);
           break;
-        case 'End':
+        case 'End': {
           event.preventDefault();
           const lastIndex = focusableElements.length - 1;
           setCurrentFocusIndex(lastIndex);
           focusElement(focusableElements[lastIndex]);
           break;
+        }
       }
     };
 
