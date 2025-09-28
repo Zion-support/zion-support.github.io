@@ -372,7 +372,7 @@ class AdvancedPerformanceOptimizer {
   }
 
   /**
-   * Setup Web Vitals monitoring
+   * Setup Web Vitals monitoring (public interface)
    */
   setupWebVitalsMonitoring(): void {
     console.log('📊 Setting up Web Vitals monitoring');

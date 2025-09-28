@@ -72,7 +72,7 @@ describe('Advanced Error Recovery System', () => {
             failingFunction,
             'network'
           );
-        } catch (error) {
+        } catch {
           // Expected to fail
         }
       }
@@ -95,7 +95,7 @@ describe('Advanced Error Recovery System', () => {
             failingFunction,
             'network'
           );
-        } catch (error) {
+        } catch {
           // Expected to fail
         }
       }
@@ -144,10 +144,6 @@ describe('Advanced Error Recovery System', () => {
 
   describe('User Guidance', () => {
     it('should provide user guidance for errors', async () => {
-      const errorFunction = () => {
-        throw new Error('Network error');
-      };
-
       const guidance = await advancedErrorRecovery.getUserGuidance(
         new Error('Network error'),
         'network'
