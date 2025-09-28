@@ -40,6 +40,7 @@ import SystemHealthDashboard from './components/SystemHealthDashboard';
 import './index.css';
 
 export default function App(): React.JSX.Element {
+
   // State for system dashboard and performance optimizer
   const [showSystemDashboard, setShowSystemDashboard] = useState(false);
   const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
@@ -193,8 +194,13 @@ export default function App(): React.JSX.Element {
     ogImage: 'https://zion.app/og-image.jpg',
     ogUrl: `https://zion.app${currentPathname}`,
     ogType: 'website' as const,
+    ogTitle: 'Zion Tech Group - AI & Technology Solutions',
+    ogDescription: 'Transform your business with cutting-edge AI and technology solutions.',
     twitterCard: 'summary_large_image' as const,
-    siteName: 'Zion Tech Group'
+    siteName: 'Zion Tech Group',
+    twitterTitle: 'Zion Tech Group - AI & Technology Solutions',
+    twitterDescription: 'Transform your business with cutting-edge AI and technology solutions.',
+    twitterImage: 'https://zion.app/twitter-image.jpg'
   }), [currentPathname]);
 
   // Performance optimization hook (for future use)
@@ -222,6 +228,11 @@ export default function App(): React.JSX.Element {
       if (accessibilityEnhancer && typeof accessibilityEnhancer.initialize === 'function') {
         accessibilityEnhancer.initialize();
       }
+      enhancedSecurityManager.initialize();
+      // new AdvancedAutomationSystem().initialize();
+      // Initialize enhancement systems
+      // new AccessibilityEnhancer();
+      // new SecurityEnhancer();
       
       // Initialize analytics
       if ('initialize' in analytics) {
@@ -577,7 +588,7 @@ export default function App(): React.JSX.Element {
         />
 
         {/* Advanced Performance Dashboard */}
-        <AdvancedPerformanceDashboard
+        <AIPerformanceDashboard
           isVisible={showAdvancedDashboard}
           onClose={() => setShowAdvancedDashboard(false)}
         />
@@ -647,7 +658,7 @@ export default function App(): React.JSX.Element {
             <div className="space-y-2 text-sm">
               <div className="flex justify-between">
                 <span>Memory Usage:</span>
-                <span className="text-green-400">{Math.round(((performance as Performance & { memory?: { usedJSHeapSize: number } }).memory?.usedJSHeapSize || 0) / 1024 / 1024)} MB</span>
+                <span className="text-green-400">{Math.round(((performance as Performance & { memory?: { usedJSHeapSize?: number } }).memory?.usedJSHeapSize || 0) / 1024 / 1024)} MB</span>
               </div>
               <div className="flex justify-between">
                 <span>Render Time:</span>

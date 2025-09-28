@@ -24,6 +24,16 @@ interface AIInsights {
   [key: string]: unknown;
 }
 
+interface AIInsights {
+  predictedHighRiskActions: string[];
+  recommendedImprovements: string[];
+  errorTrends: Array<{
+    category: string;
+    trend: 'increasing' | 'decreasing' | 'stable';
+  }>;
+  [key: string]: unknown;
+}
+
 interface ErrorReport {
   id: string;
   severity: string;
@@ -249,14 +259,17 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
               <div className="bg-gray-50 p-4 rounded-lg">
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">🐛 Error Reports</h3>
                 <div className="space-y-3">
-                  {errors.length > 0 ? (
-                    errors.map((report) => (
-                      <div key={String(report.id)} className="bg-white p-4 rounded border">
-                        <div className="flex items-start justify-between">
-                          <div className="flex-1">
-                            <div className="flex items-center gap-2 mb-2">
-                              <span className={`px-2 py-1 rounded text-xs font-medium ${getSeverityColor(report.severity)}`}>
-                                {report.severity.toUpperCase()}
+                  {errorReports.length > 0 ? (
+                    errorReports.map((report) => (
+                      <div key={report.id} className="bg-white p-4 rounded border">
+                        <div className="flex justify-between items-start mb-2">
+                          <div className="flex items-center space-x-2">
+                            <span className={`px-2 py-1 rounded text-xs font-medium ${getSeverityColor(report.severity || 'unknown')}`}>
+                              {(report.severity || 'unknown').toUpperCase()}
+                            </span>
+                            {report.aiPredictedImpact && (
+                              <span className={`text-sm font-medium ${getImpactColor(report.aiPredictedImpact)}`}>
+                                Impact: {report.aiPredictedImpact}%
                               </span>
                             </div>
                             <span className="text-sm text-gray-500">
