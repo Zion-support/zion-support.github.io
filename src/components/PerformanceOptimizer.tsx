@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import performanceEnhancer from '../utils/performanceEnhancements';
+import { performanceEnhancer } from '../utils/performanceEnhancements';
 
 interface PerformanceData {
   dns?: number;
