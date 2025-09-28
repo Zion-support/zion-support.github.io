@@ -28,7 +28,7 @@ const PWAManager: React.FC = () => {
   useEffect(() => {
     // Check if app is already installed
     const isInstalled = window.matchMedia('(display-mode: standalone)').matches ||
-                       (window.navigator as { standalone?: boolean }).standalone ||
+                       (window.navigator as Navigator & { standalone?: boolean }).standalone ||
                        document.referrer.includes('android-app://');
 
     setPwaState(prev => ({ ...prev, isInstalled }));
@@ -39,7 +39,7 @@ const PWAManager: React.FC = () => {
       setPwaState(prev => ({
         ...prev,
         isInstallable: true,
-        installPrompt: e as Event
+        installPrompt: e as Event & { prompt: () => Promise<void>; userChoice: Promise<{ outcome: 'accepted' | 'dismissed' }> }
       }));
       setShowInstallBanner(true);
     };
