@@ -37,17 +37,37 @@ import NotificationSystem, { Notification } from './components/NotificationSyste
 import { EnhancedNotification } from './types/comprehensive';
 import './index.css';
 
-// Lazy load heavy components for better performance
-const EnhancedSystemDashboard = lazy(() => import('./components/EnhancedSystemDashboard'));
-const KeyboardShortcutsHelp = lazy(() => import('./components/KeyboardShortcutsHelp'));
-const SystemHealthDashboard = lazy(() => import('./components/SystemHealthDashboard'));
-const PerformanceWidget = lazy(() => import('./components/PerformanceWidget'));
-const CommandPalette = lazy(() => import('./components/CommandPalette'));
-const AdvancedMonitoringDashboard = lazy(() => import('./components/AdvancedMonitoringDashboard'));
-const ComprehensivePerformanceDashboard = lazy(() => import('./components/ComprehensivePerformanceDashboard'));
-const ComprehensiveMonitoringDashboard = lazy(() => import('./components/ComprehensiveMonitoringDashboard'));
-const PerformanceOptimizationPanel = lazy(() => import('./components/PerformanceOptimizationPanel'));
-const RealTimePerformanceMonitor = lazy(() => import('./components/RealTimePerformanceMonitor'));
+// Lazy load heavy components for better performance with error boundaries
+const EnhancedSystemDashboard = lazy(() => 
+  import('./components/EnhancedSystemDashboard').catch(() => ({ default: () => <div>Component failed to load</div> }))
+);
+const KeyboardShortcutsHelp = lazy(() => 
+  import('./components/KeyboardShortcutsHelp').catch(() => ({ default: () => <div>Component failed to load</div> }))
+);
+const SystemHealthDashboard = lazy(() => 
+  import('./components/SystemHealthDashboard').catch(() => ({ default: () => <div>Component failed to load</div> }))
+);
+const PerformanceWidget = lazy(() => 
+  import('./components/PerformanceWidget').catch(() => ({ default: () => <div>Component failed to load</div> }))
+);
+const CommandPalette = lazy(() => 
+  import('./components/CommandPalette').catch(() => ({ default: () => <div>Component failed to load</div> }))
+);
+const AdvancedMonitoringDashboard = lazy(() => 
+  import('./components/AdvancedMonitoringDashboard').catch(() => ({ default: () => <div>Component failed to load</div> }))
+);
+const ComprehensivePerformanceDashboard = lazy(() => 
+  import('./components/ComprehensivePerformanceDashboard').catch(() => ({ default: () => <div>Component failed to load</div> }))
+);
+const ComprehensiveMonitoringDashboard = lazy(() => 
+  import('./components/ComprehensiveMonitoringDashboard').catch(() => ({ default: () => <div>Component failed to load</div> }))
+);
+const PerformanceOptimizationPanel = lazy(() => 
+  import('./components/PerformanceOptimizationPanel').catch(() => ({ default: () => <div>Component failed to load</div> }))
+);
+const RealTimePerformanceMonitor = lazy(() => 
+  import('./components/RealTimePerformanceMonitor').catch(() => ({ default: () => <div>Component failed to load</div> }))
+);
 const AdvancedAnalytics = lazy(() => import('./components/AdvancedAnalytics'));
 const PerformanceDashboard = lazy(() => import('./components/PerformanceDashboard'));
 const EnhancedCommandPalette = lazy(() => import('./components/EnhancedCommandPalette'));
@@ -122,9 +142,18 @@ export default function App(): React.JSX.Element {
   const [isLoading, setIsLoading] = useState(false);
   const [loadingProgress, setLoadingProgress] = useState(0);
 
-  // Performance monitoring
+  // Performance monitoring with memoization
+  const performanceMetrics = useMemo(() => ({
+    startTime: performance.now(),
+    memoryUsage: performance.memory ? {
+      used: performance.memory.usedJSHeapSize,
+      total: performance.memory.totalJSHeapSize,
+      limit: performance.memory.jsHeapSizeLimit
+    } : null
+  }), []);
+
   useEffect(() => {
-    const startTime = performance.now();
+    const startTime = performanceMetrics.startTime;
     
     const measurePerformance = () => {
       const loadTime = performance.now() - startTime;
