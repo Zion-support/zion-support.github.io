@@ -22,10 +22,6 @@ export default function App(): React.JSX.Element {
   const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
   const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
   const [showAIDashboard, setShowAIDashboard] = useState(false);
-<<<<<<< HEAD
-=======
-
->>>>>>> 36cfb714b5c14ad69f392fcbc3783f68c092511b
   // Engagement tracking data
   const engagementData = useMemo(() => ({
     startTime: Date.now(),
@@ -33,22 +29,6 @@ export default function App(): React.JSX.Element {
     clicks: 0
   }), []);
 
-<<<<<<< HEAD
-  // Simple SEO manager
-  const seoManager = useMemo(() => ({
-    updateMetaTags: (data: typeof seoData) => {
-      if (typeof document !== 'undefined') {
-        document.title = data.title;
-        const metaDescription = document.querySelector('meta[name="description"]');
-        if (metaDescription) {
-          metaDescription.setAttribute('content', data.description);
-        }
-      }
-    }
-  }), []);
-
-=======
->>>>>>> 36cfb714b5c14ad69f392fcbc3783f68c092511b
   // Initialize app with custom configuration
   const { isLoading, loadingProgress, handleScroll, handleClick, trackEngagement } = useAppInitialization({
     enablePerformanceMonitoring: true,
@@ -59,18 +39,8 @@ export default function App(): React.JSX.Element {
     enableCaching: true,
   });
 
-<<<<<<< HEAD
-  // Get current pathname for SEO
-  const currentPathname = typeof window !== 'undefined' ? window.location.pathname : '/';
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-5755
-=======
   // Get current pathname for SEO (removed unused variable)
   // const currentPathname = typeof window !== 'undefined' ? window.location.pathname : '/';
-
->>>>>>> 36cfb714b5c14ad69f392fcbc3783f68c092511b
   // Performance optimization hook
   const { preloadResource } = usePerformanceOptimization({
     enablePreloading: true,
@@ -83,19 +53,11 @@ export default function App(): React.JSX.Element {
   const handleKeyDown = useCallback((event: KeyboardEvent) => {
     if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'D') {
       event.preventDefault();
-<<<<<<< HEAD
-      // setShowSystemDashboard(prev => !prev);
-    }
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'P') {
-      event.preventDefault();
-      // setShowPerformanceOptimizer(prev => !prev);
-=======
       setShowSystemDashboard((prev: boolean) => !prev);
     }
     if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'P') {
       event.preventDefault();
       setShowPerformanceOptimizer((prev: boolean) => !prev);
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-5755
     }
     if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'M') {
       event.preventDefault();
@@ -108,10 +70,6 @@ export default function App(): React.JSX.Element {
   }, []);
 
   // Memoize the SEO data to prevent unnecessary re-renders
-<<<<<<< HEAD
-  const seoData = useSEOData(currentPathname);
-
-=======
   const seoData = useMemo(() => ({
     title: 'Zion Tech Group - Leading AI & Technology Solutions',
     description: 'Cutting-edge AI, quantum computing, and digital transformation solutions for modern enterprises. Expert consulting, cloud services, and innovative technology implementations.',
@@ -122,7 +80,6 @@ export default function App(): React.JSX.Element {
     twitterCard: 'summary_large_image' as const,
     structuredData: []
   }), []);
->>>>>>> 36cfb714b5c14ad69f392fcbc3783f68c092511b
   // Enhanced engagement tracking function
   const enhancedTrackEngagement = useCallback(() => {
     const timeOnPage = Date.now() - engagementData.startTime;
@@ -131,17 +88,9 @@ export default function App(): React.JSX.Element {
       scrollDepth: engagementData.scrollDepth,
       clicks: engagementData.clicks,
     });
-<<<<<<< HEAD
-  }, [engagementData]);
-
-<<<<<<< HEAD
-=======
     // Also call the original trackEngagement from useAppInitialization
     trackEngagement();
   }, [engagementData.clicks, engagementData.scrollDepth, engagementData.startTime, trackEngagement]);
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-5755
-=======
->>>>>>> 36cfb714b5c14ad69f392fcbc3783f68c092511b
   // Update meta tags function
   const updateMetaTags = useCallback((data: {
     title: string;
@@ -167,11 +116,7 @@ export default function App(): React.JSX.Element {
         metaDescription.setAttribute('content', data.description);
       }
     }
-<<<<<<< HEAD
-  }, [engagementData]);
-=======
   }, []);
->>>>>>> 36cfb714b5c14ad69f392fcbc3783f68c092511b
   useEffect(() => {
     // Add performance marks for better monitoring
     if (typeof window !== 'undefined' && window.performance && typeof performance.mark === 'function') {
@@ -209,23 +154,10 @@ export default function App(): React.JSX.Element {
     performanceSEO.optimizeCSS();
 
     // Set default SEO data using the correct method
-    seoManager.updateMetaTags(seoData);
+    // seoManager.updateMetaTags(seoData);
 
     // Update meta tags
     updateMetaTags(seoData);
-<<<<<<< HEAD
-
-    // Basic performance monitoring
-    if (typeof window !== 'undefined') {
-      console.log('🚀 Zion Tech Group App initialized');
-    }
-
-    // Use passive listeners for better performance
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    document.addEventListener('click', handleClick, { passive: true });
-  }, [handleClick, handleKeyDown, handleScroll, seoData, preloadResource, updateMetaTags, seoManager]);
-=======
->>>>>>> 36cfb714b5c14ad69f392fcbc3783f68c092511b
 
     // Basic performance monitoring
     if (typeof window !== 'undefined') {
@@ -243,11 +175,7 @@ export default function App(): React.JSX.Element {
       document.removeEventListener('click', handleClick);
       document.removeEventListener('keydown', handleKeyDown);
     };
-<<<<<<< HEAD
-  }, [handleScroll, handleClick, handleKeyDown, seoData, preloadResource, updateMetaTags, enhancedTrackEngagement]);
-=======
   }, [handleScroll, handleClick, handleKeyDown, seoData, preloadResource, updateMetaTags]);
->>>>>>> 36cfb714b5c14ad69f392fcbc3783f68c092511b
 
   // Main initialization and cleanup effect
   React.useEffect(() => {
