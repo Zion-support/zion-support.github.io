@@ -13,6 +13,7 @@ import { userFeedback } from './utils/userFeedbackManager';
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
 import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
 import './index.css';
+
 export default function App(): React.JSX.Element {
   // Initialize app with custom configuration
   const { isLoading, loadingProgress, engagementData, handleScroll, handleClick } = useAppInitialization({
@@ -45,20 +46,9 @@ export default function App(): React.JSX.Element {
     });
 
     // Store enhancements globally for debugging
-    (window as Record<string, unknown>).enhancements = enhancements;
+    (window as unknown as Record<string, unknown>).enhancements = enhancements;
   }, []);
 
-  // Optimized keyboard handler for system dashboard toggle
-  const handleKeyDown = useCallback((event: KeyboardEvent) => {
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'D') {
-      event.preventDefault();
-      setShowSystemDashboard(prev => !prev);
-    }
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'P') {
-      event.preventDefault();
-      setShowPerformanceOptimizer(prev => !prev);
-    }
-  }, []);
   // Memoize the SEO data to prevent unnecessary re-renders
   const seoData = useMemo(() => ({
     title: 'Zion Tech Group - Leading AI & Technology Solutions',
@@ -69,6 +59,16 @@ export default function App(): React.JSX.Element {
     ogImage: '/og-image.png',
     twitterCard: 'summary_large_image' as const
   }), []);
+
+  // Track engagement function
+  const trackEngagement = useCallback(() => {
+    const timeOnPage = Date.now() - engagementData.startTime;
+    seoAnalytics.trackUserEngagement(window.location.pathname, {
+      timeOnPage,
+      scrollDepth: engagementData.scrollDepth,
+      clicks: engagementData.clicks,
+    });
+  }, [engagementData]);
 
   useEffect(() => {
     // Add performance marks for better monitoring
@@ -88,8 +88,6 @@ export default function App(): React.JSX.Element {
     performanceSEO.preloadCriticalResources();
     performanceSEO.optimizeFonts();
     
-    // Advanced performance optimizer is now handled by the new utility
-
     // Initialize analytics system
     analytics.initialize();
     analytics.trackPageView();
@@ -103,10 +101,6 @@ export default function App(): React.JSX.Element {
       url: window.location.href,
       type: seoData.ogType as 'website' | 'article' | 'product'
     });
-
-    // Initialize enhanced security features
-    // const securityManagerInstance = SecurityManager.getInstance();
-    // securityManagerInstance.monitorSecurityEvents();
 
     // Initialize cache manager
     cacheManager.configure({
@@ -146,37 +140,13 @@ export default function App(): React.JSX.Element {
       'Zion Tech Group is now ready with enhanced performance optimizations and user experience features.'
     );
 
-    // Preload critical resources
-    preloadResource('/og-image.png', 'image');
-    preloadResource('/favicon.ico', 'image');
-
     // Set default SEO data
     seoManager.updateSEO(seoData);
-
 
     // Use passive listeners for better performance
     window.addEventListener('scroll', handleScroll, { passive: true });
     document.addEventListener('click', handleClick, { passive: true });
   }, [seoData, handleScroll, handleClick, preloadResource]);
-
-  // Add keyboard event listener
-  React.useEffect(() => {
-    document.addEventListener("keydown", handleKeyDown);
-    
-    return () => {
-      document.removeEventListener("keydown", handleKeyDown);
-    };
-  }, [handleKeyDown]);
-
-  // Track engagement function
-  const trackEngagement = useCallback(() => {
-    const timeOnPage = Date.now() - engagementData.startTime;
-    seoAnalytics.trackUserEngagement(window.location.pathname, {
-      timeOnPage,
-      scrollDepth: engagementData.scrollDepth,
-      clicks: engagementData.clicks,
-    });
-  }, [engagementData]);
 
   // Main initialization and cleanup effect
   React.useEffect(() => {
@@ -191,22 +161,11 @@ export default function App(): React.JSX.Element {
       performance.measure('app-initialization', 'app-init-start', 'app-init-complete');
     }
 
-    // Set default SEO data
-    seoManager.updateMetaTags(seoData);
-
     // Basic performance monitoring
     if (typeof window !== 'undefined') {
       console.log('🚀 Zion Tech Group App initialized');
     }
-
-    // Mark app as fully initialized
-    if (typeof window !== 'undefined' && window.performance && 
-        typeof performance.mark === 'function' && 
-        typeof performance.measure === 'function') {
-      performance.mark('app-init-complete');
-      performance.measure('app-initialization', 'app-init-start', 'app-init-complete');
-    }
-  }, [trackEngagement, seoData]);
+  }, [trackEngagement]);
 
   // Cleanup function for event listeners
   useEffect(() => {
@@ -214,9 +173,8 @@ export default function App(): React.JSX.Element {
       window.removeEventListener('beforeunload', trackEngagement);
       window.removeEventListener('scroll', handleScroll);
       document.removeEventListener('click', handleClick);
-      document.removeEventListener('keydown', handleKeyDown);
     };
-  }, [trackEngagement, handleScroll, handleClick, handleKeyDown]);
+  }, [trackEngagement, handleScroll, handleClick]);
 
   // Show loading screen while initializing
   if (isLoading) {
