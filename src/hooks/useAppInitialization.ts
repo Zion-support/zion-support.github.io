@@ -241,13 +241,12 @@ export function useAppInitialization(config: AppInitializationConfig = {}) {
         startMonitoring: () => void;
         stopMonitoring: () => void;
       }
-      const advancedPerformanceMonitor = (AdvancedPerformanceMonitor as { getInstance: () => PerformanceMonitorInstance }).getInstance();
+      const advancedPerformanceMonitor = (AdvancedPerformanceMonitor as any).getInstance();
       advancedPerformanceMonitor.updateConfig({
         enableWebVitals: true,
         enableMemoryMonitoring: true,
         enableNetworkMonitoring: true,
         enableCustomMetrics: true,
-        samplingRate: 1.0,
         reportInterval: 5000,
         thresholds: {
           pageLoadTime: 3000,

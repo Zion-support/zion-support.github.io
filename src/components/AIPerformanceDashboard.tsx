@@ -113,7 +113,7 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
       setInsights(mockInsights);
       setErrorReports(mockErrorReports);
     } catch (error) {
-      enhancedErrorHandler.handleError(error as Error, {
+      enhancedErrorHandler.handleComponentError(error as Error, {
         component: 'AIPerformanceDashboard',
         action: 'loadPerformanceData'
       });

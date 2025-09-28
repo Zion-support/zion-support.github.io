@@ -114,8 +114,8 @@ export class AdvancedSEOOptimizer {
       noindex: pageData.noindex || false,
       nofollow: pageData.nofollow || false,
       structuredData: this.generateStructuredData(pageData),
-      openGraph: this.generateOpenGraphData(title, description, image, url),
-      twitter: this.generateTwitterCardData(title, description, image, url),
+      openGraph: this.generateOpenGraphData(title, description, image, url) as any,
+      twitter: this.generateTwitterCardData(title, description, image) as any,
     };
 
     this.pages.set(url, seoData);

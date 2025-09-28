@@ -77,7 +77,7 @@ const ComprehensiveSystemDashboard: React.FC<SystemDashboardProps> = ({
       
       // Load system metrics
       const systemData = {
-        memoryUsage: (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory?.usedJSHeapSize / 1024 / 1024 || 0,
+        memoryUsage: (performance as any).memory?.usedJSHeapSize / 1024 / 1024 || 0,
         cpuUsage: Math.random() * 100, // Placeholder
         networkLatency: Math.random() * 100 // Placeholder
       };
@@ -110,7 +110,7 @@ const ComprehensiveSystemDashboard: React.FC<SystemDashboardProps> = ({
         memory: Math.random() * 100,
         network: Math.random() * 100
       }));
-      setRealTimeData(realTime);
+      setRealTimeData(realTime as any);
     } catch (error) {
       console.error('Failed to load system metrics:', error);
     } finally {

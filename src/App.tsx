@@ -180,7 +180,7 @@ export default function App(): React.JSX.Element {
       };
     } catch (error) {
       console.error('Error initializing enhancements:', error);
-      enhancedErrorHandler.handleComponentError(error, 'App', {
+      enhancedErrorHandler.handleComponentError(error as Error, 'App', {
         retryable: false,
         maxRetries: 0,
         retryDelay: 1000

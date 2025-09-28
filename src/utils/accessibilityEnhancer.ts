@@ -71,7 +71,7 @@ export class AccessibilityEnhancer {
         this.handleTabNavigation(event);
       }
       if (event.key === 'Escape') {
-        this.handleEscapeKey(event);
+        this.handleEscapeKey();
       }
     });
   }

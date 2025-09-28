@@ -79,7 +79,7 @@ const AdvancedPerformanceDashboard: React.FC<AdvancedPerformanceDashboardProps> 
         ttfb: Math.floor(Math.random() * 500) + 100
       };
       
-      setRealTimeData(prev => [...prev.slice(-9), newDataPoint]);
+      setRealTimeData(prev => [...prev.slice(-9), newDataPoint as any]);
 
       // Update optimization suggestions
       const suggestions = [
