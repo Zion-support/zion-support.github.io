@@ -5,7 +5,7 @@
 
 import { performanceOptimizer } from './performanceOptimizations';
 import { advancedPerformanceOptimizer } from './advancedPerformanceOptimizer';
-import { seoOptimizer as advancedSEOOptimizer } from './advancedSEOOptimizer';
+import { advancedSEOOptimizer } from './advancedSEOOptimizer';
 import { advancedAccessibilityEnhancer } from './advancedAccessibilityEnhancer';
 import { enhancedSecurityManager } from './enhancedSecurityManager';
 import { analytics } from './analytics';
