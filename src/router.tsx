@@ -7,6 +7,8 @@ import ScrollToTop from './components/ScrollToTop';
 import LoadingSpinner from '../components/LoadingSpinner';
 import ErrorBoundary from './components/ErrorBoundary';
 import ErrorFallback from './components/ErrorFallback';
+import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
+import { PageLoader } from './components/EnhancedLoadingSpinner';
 import SystemDashboard from './components/SystemDashboard';
 import AccessibilityTester from './components/AccessibilityTester';
 import PerformanceProfiler from './components/PerformanceProfiler';
@@ -28,7 +30,7 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
     <Header />
     
     <main id="main-content">
-      <Suspense fallback={<LoadingSpinner />}>
+      <Suspense fallback={<PageLoader text="Loading page..." />}>
         {children}
       </Suspense>
     </main>
@@ -87,7 +89,9 @@ export const router = createBrowserRouter([
 
 // Router component for backward compatibility
 export const AppRouter: React.FC = () => (
-  <ErrorBoundary fallback={<ErrorFallback />}>
-    <RouterProvider router={router} />
-  </ErrorBoundary>
+  <EnhancedErrorBoundary enableDebugMode={process.env.NODE_ENV === 'development'}>
+    <ErrorBoundary fallback={<ErrorFallback />}>
+      <RouterProvider router={router} />
+    </ErrorBoundary>
+  </EnhancedErrorBoundary>
 );

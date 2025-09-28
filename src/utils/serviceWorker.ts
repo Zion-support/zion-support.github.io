@@ -1,109 +1,135 @@
-const isLocalhost = Boolean(
-  window.location.hostname === 'localhost' ||
-  window.location.hostname === '[::1]' ||
-  window.location.hostname.match(
-    /^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/
-  )
-);
+/**
+ * Service Worker Registration and Management
+ * Provides optimized service worker functionality with better error handling
+ */
 
-type Config = {
-  onSuccess?: (registration: ServiceWorkerRegistration) => void;
+interface ServiceWorkerConfig {
+  scope: string;
+  updateViaCache: RequestCache;
+  updateInterval: number;
   onUpdate?: (registration: ServiceWorkerRegistration) => void;
-};
+  onError?: (error: Error) => void;
+}
 
-export function register(config?: Config) {
-  if ('serviceWorker' in navigator) {
-    const publicUrl = new URL(process.env.PUBLIC_URL || '', window.location.href);
-    if (publicUrl.origin !== window.location.origin) {
-      return;
+class ServiceWorkerManager {
+  private registration: ServiceWorkerRegistration | null = null;
+  private config: ServiceWorkerConfig;
+  private updateTimer: NodeJS.Timeout | null = null;
+
+  constructor(config: Partial<ServiceWorkerConfig> = {}) {
+    this.config = {
+      scope: '/',
+      updateViaCache: 'none',
+      updateInterval: 60000, // 1 minute
+      ...config
+    };
+  }
+
+  /**
+   * Register service worker with optimized configuration
+   */
+  async register(): Promise<ServiceWorkerRegistration | null> {
+    if (!('serviceWorker' in navigator) || process.env.NODE_ENV !== 'production') {
+      console.log('Service Worker not supported or not in production mode');
+      return null;
     }
 
-    window.addEventListener('load', () => {
-      const swUrl = `${process.env.PUBLIC_URL}/sw.js`;
-
-      if (isLocalhost) {
-        checkValidServiceWorker(swUrl, config);
-        navigator.serviceWorker.ready.then(() => {
-          console.log(
-            'This web app is being served cache-first by a service ' +
-            'worker. To learn more, visit https://bit.ly/CRA-PWA'
-          );
-        });
-      } else {
-        registerValidSW(swUrl, config);
-      }
-    });
-  }
-}
-
-function registerValidSW(swUrl: string, config?: Config) {
-  navigator.serviceWorker
-    .register(swUrl)
-    .then((registration) => {
-      registration.onupdatefound = () => {
-        const installingWorker = registration.installing;
-        if (installingWorker == null) {
-          return;
-        }
-        installingWorker.onstatechange = () => {
-          if (installingWorker.state === 'installed') {
-            if (navigator.serviceWorker.controller) {
-              console.log(
-                'New content is available and will be used when all ' +
-                'tabs for this page are closed. See https://bit.ly/CRA-PWA.'
-              );
-              if (config && config.onUpdate) {
-                config.onUpdate(registration);
-              }
-            } else {
-              console.log('Content is cached for offline use.');
-              if (config && config.onSuccess) {
-                config.onSuccess(registration);
-              }
-            }
-          }
-        };
-      };
-    })
-    .catch((error) => {
-      console.error('Error during service worker registration:', error);
-    });
-}
-
-function checkValidServiceWorker(swUrl: string, config?: Config) {
-  fetch(swUrl, {
-    headers: { 'Service-Worker': 'script' },
-  })
-    .then((response) => {
-      const contentType = response.headers.get('content-type');
-      if (
-        response.status === 404 ||
-        (contentType != null && contentType.indexOf('javascript') === -1)
-      ) {
-        navigator.serviceWorker.ready.then((registration) => {
-          registration.unregister().then(() => {
-            window.location.reload();
-          });
-        });
-      } else {
-        registerValidSW(swUrl, config);
-      }
-    })
-    .catch(() => {
-      console.log(
-        'No internet connection found. App is running in offline mode.'
-      );
-    });
-}
-
-export function unregister() {
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.ready
-      .then((registration) => {
-        registration.unregister();
-      })
-      .catch((error) => {
-        console.error(error.message);
+    try {
+      this.registration = await navigator.serviceWorker.register('/sw.js', {
+        scope: this.config.scope,
+        updateViaCache: this.config.updateViaCache
       });
+
+      console.log('Service Worker registered successfully:', this.registration);
+      
+      this.setupUpdateHandling();
+      this.startUpdateChecking();
+      
+      return this.registration;
+    } catch (error) {
+      const errorObj = error as Error;
+      console.error('Service Worker registration failed:', errorObj);
+      this.config.onError?.(errorObj);
+      return null;
+    }
+  }
+
+  /**
+   * Setup update handling with user-friendly notifications
+   */
+  private setupUpdateHandling(): void {
+    if (!this.registration) return;
+
+    this.registration.addEventListener('updatefound', () => {
+      const newWorker = this.registration?.installing;
+      if (!newWorker) return;
+
+      newWorker.addEventListener('statechange', () => {
+        if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+          // New content is available
+          this.config.onUpdate?.(this.registration!);
+        }
+      });
+    });
+  }
+
+  /**
+   * Start checking for updates at regular intervals
+   */
+  private startUpdateChecking(): void {
+    if (!this.registration || this.updateTimer) return;
+
+    this.updateTimer = setInterval(() => {
+      this.registration?.update();
+    }, this.config.updateInterval);
+  }
+
+  /**
+   * Stop update checking
+   */
+  stopUpdateChecking(): void {
+    if (this.updateTimer) {
+      clearInterval(this.updateTimer);
+      this.updateTimer = null;
+    }
+  }
+
+  /**
+   * Unregister service worker
+   */
+  async unregister(): Promise<boolean> {
+    this.stopUpdateChecking();
+    
+    if (!this.registration) return false;
+
+    try {
+      const result = await this.registration.unregister();
+      console.log('Service Worker unregistered:', result);
+      return result;
+    } catch (error) {
+      console.error('Service Worker unregistration failed:', error);
+      return false;
+    }
+  }
+
+  /**
+   * Check if service worker is supported
+   */
+  static isSupported(): boolean {
+    return 'serviceWorker' in navigator;
+  }
+
+  /**
+   * Get current registration
+   */
+  getRegistration(): ServiceWorkerRegistration | null {
+    return this.registration;
   }
 }
+
+// Create singleton instance
+export const serviceWorkerManager = new ServiceWorkerManager();
+
+// Export class for custom instances
+export { ServiceWorkerManager };
+export type { ServiceWorkerConfig };
