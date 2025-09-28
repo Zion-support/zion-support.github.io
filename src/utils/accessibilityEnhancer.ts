@@ -248,18 +248,3 @@ export interface AccessibilityReport {
     priority: 'low' | 'medium' | 'high';
   }>;
 }
-
-export function analyzeAccessibility(): AccessibilityReport {
-  const enhancer = new AccessibilityEnhancer();
-  return {
-    score: 85,
-    issues: [],
-    recommendations: [
-      {
-        type: 'color-contrast',
-        message: 'Ensure sufficient color contrast ratios',
-        priority: 'medium'
-      }
-    ]
-  };
-}
