@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { clsx } from 'clsx';
 
 interface PerformanceDashboardProps {
@@ -10,7 +10,7 @@ const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({
   className, 
   isVisible = true 
 }) => {
-  const [metrics, setMetrics] = useState({
+  const [metrics] = useState({
     fcp: 1200,
     lcp: 2500,
     fid: 50,
