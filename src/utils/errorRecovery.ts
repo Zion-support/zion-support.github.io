@@ -74,14 +74,6 @@ export class ErrorRecovery {
   public reset(): void {
     this.errorCount = 0;
   }
-
-  getErrorCount(): number {
-    return this.errorHistory.length;
-  }
-
-  reset(): void {
-    this.clearHistory();
-  }
 }
 
 export const errorRecoverySystem = new ErrorRecovery();
