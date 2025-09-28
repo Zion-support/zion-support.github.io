@@ -8,6 +8,19 @@ import { analytics } from './utils/analytics';
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
 import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
+import AIPerformanceDashboard from './components/AIPerformanceDashboard';
+import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
+import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
+import { enhancedAnalytics } from './utils/enhancedAnalytics';
+import { advancedCacheSystem } from './utils/advancedCacheSystem';
+import { AdvancedAutomationSystem } from './utils/advancedAutomationSystem';
+import { AccessibilityEnhancer } from './utils/accessibilityEnhancer';
+import { SecurityEnhancer } from './utils/securityEnhancer';
+import PerformanceDashboard from './components/PerformanceDashboard';
+import RealTimeMonitor from './components/RealTimeMonitor';
+import SystemMetricsDashboard from './components/SystemMetricsDashboard';
+import EnhancedNotificationSystem from './components/EnhancedNotificationSystem';
+import EnhancedAnalytics from './components/EnhancedAnalytics';
 import './index.css';
 import './styles/notifications.css';
 import './styles/system-metrics.css';
@@ -17,6 +30,7 @@ export default function App(): React.JSX.Element {
   // State for system dashboard and performance optimizer
   const [showSystemDashboard, setShowSystemDashboard] = useState(false);
   const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
+  const [showAIDashboard, setShowAIDashboard] = useState(false);
 
   // Engagement tracking data (commented out as it's not currently used)
   // const engagementData = useMemo(() => ({
@@ -52,8 +66,23 @@ export default function App(): React.JSX.Element {
       event.preventDefault();
       setShowPerformanceOptimizer(prev => !prev);
     }
+    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'A') {
+      event.preventDefault();
+      setShowAIDashboard(prev => !prev);
+    }
   }, []);
 
+  // Enhanced track engagement function
+  const enhancedTrackEngagement = useCallback(() => {
+    const timeOnPage = Date.now() - engagementData.startTime;
+    seoAnalytics.trackUserEngagement(window.location.pathname, {
+      timeOnPage,
+      scrollDepth: engagementData.scrollDepth,
+      clicks: engagementData.clicks,
+    });
+    // Also call the original trackEngagement from useAppInitialization
+    trackEngagement();
+  }, [engagementData.clicks, engagementData.scrollDepth, engagementData.startTime, trackEngagement]);
   // Memoize the SEO data to prevent unnecessary re-renders
   const seoData = useMemo(() => ({
     title: 'Zion Tech Group - Leading AI & Technology Solutions',
@@ -64,6 +93,18 @@ export default function App(): React.JSX.Element {
     ogImage: '/og-image.png',
     twitterCard: 'summary_large_image' as const
   }), []);
+
+  // Enhanced engagement tracking function
+  const enhancedTrackEngagement = useCallback(() => {
+    const timeOnPage = Date.now() - engagementData.startTime;
+    seoAnalytics.trackUserEngagement(window.location.pathname, {
+      timeOnPage,
+      scrollDepth: engagementData.scrollDepth,
+      clicks: engagementData.clicks,
+    });
+    // Also call the original trackEngagement from useAppInitialization
+    trackEngagement();
+  }, [engagementData.clicks, engagementData.scrollDepth, engagementData.startTime, trackEngagement]);
 
   // Update meta tags function
   const updateMetaTags = useCallback((data: {
@@ -147,16 +188,29 @@ export default function App(): React.JSX.Element {
   // Main initialization and cleanup effect
   React.useEffect(() => {
     // Track engagement on page unload
-    window.addEventListener('beforeunload', trackEngagement);
+    window.addEventListener('beforeunload', enhancedTrackEngagement);
 
     // Cleanup function
     return () => {
-      window.removeEventListener('beforeunload', trackEngagement);
+<<<<<<< HEAD
+      document.removeEventListener('keydown', handleKeyDown);
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-b362
+      window.removeEventListener('beforeunload', enhancedTrackEngagement);
       
       // Final engagement tracking
-      trackEngagement();
+      enhancedTrackEngagement();
+<<<<<<< HEAD
+      
+      // Remove event listeners
+      window.removeEventListener('scroll', handleScroll);
+      document.removeEventListener('click', handleClick);
     };
-  }, [trackEngagement]);
+  }, [enhancedTrackEngagement, handleKeyDown, handleScroll, handleClick, seoData, preloadResource]);
+=======
+    };
+  }, [enhancedTrackEngagement]);
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-b362
 
   // Show loading screen while initializing
   if (isLoading) {
@@ -214,6 +268,12 @@ export default function App(): React.JSX.Element {
             </div>
           </div>
         )}
+        
+        {/* AI Performance Dashboard - Toggle with Ctrl+Shift+A */}
+        <AIPerformanceDashboard
+          isVisible={showAIDashboard}
+          onClose={() => setShowAIDashboard(false)}
+        />
       </div>
     </EnhancedErrorBoundary>
   );
