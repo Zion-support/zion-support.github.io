@@ -426,9 +426,9 @@ class AdvancedCacheManager<T = unknown> {
       );
 
       const decrypted = await crypto.subtle.decrypt(
-        { name: 'AES-GCM', iv: new Uint8Array(iv) },
+        { name: 'AES-GCM', iv: new Uint8Array(Buffer.from(iv)) },
         key,
-        new Uint8Array(data)
+        new Uint8Array(Buffer.from(data))
       );
 
       return JSON.parse(new TextDecoder().decode(decrypted));

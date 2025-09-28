@@ -11,6 +11,7 @@ import { PageLoader } from './components/EnhancedLoadingSpinner';
 import SystemDashboard from './components/SystemDashboard';
 import AccessibilityTester from './components/AccessibilityTester';
 import PerformanceProfiler from './components/PerformanceProfiler';
+import ComprehensiveMonitoringDashboard from './components/ComprehensiveMonitoringDashboard';
 
 // Lazy load components for better performance
 const Home = lazy(() => import('./pages/Home'));
@@ -20,6 +21,8 @@ const About = lazy(() => import('./pages/About'));
 const Services = lazy(() => import('./pages/Services'));
 const Portfolio = lazy(() => import('./pages/Portfolio'));
 const NotFound = lazy(() => import('./pages/NotFound'));
+const ModernFeatures = lazy(() => import('./components/ModernFeatures'));
+const EnhancedPerformanceDashboard = lazy(() => import('./components/EnhancedPerformanceDashboard'));
 
 // Layout component
 export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => (
@@ -73,6 +76,21 @@ export const router = createBrowserRouter([
   {
     path: '/portfolio',
     element: <Layout><Portfolio /></Layout>,
+    errorElement: <ErrorFallback />,
+  },
+  {
+    path: '/monitoring',
+    element: <Layout><ComprehensiveMonitoringDashboard /></Layout>,
+    errorElement: <ErrorFallback />,
+  },
+  {
+    path: '/features',
+    element: <Layout><ModernFeatures /></Layout>,
+    errorElement: <ErrorFallback />,
+  },
+  {
+    path: '/performance',
+    element: <Layout><EnhancedPerformanceDashboard isVisible={true} onClose={() => {}} /></Layout>,
     errorElement: <ErrorFallback />,
   },
   {

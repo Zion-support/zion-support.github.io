@@ -1,10 +1,10 @@
 {
-  "timestamp": "2025-09-28T15:21:22.032Z",
-  "duration": 13170,
+  "timestamp": "2025-09-28T20:01:41.644Z",
+  "duration": 10981,
   "optimizations": [
     "Optimized 0 images",
     "Analyzed 11 CSS files",
-    "Analyzed 205 JavaScript files"
+    "Analyzed 226 JavaScript files"
   ],
   "recommendations": [
     "Enable code splitting for large components",
@@ -17,8 +17,8 @@
     "Implement critical CSS inlining"
   ],
   "metrics": {
-    "buildTime": 5370,
-    "bundleSize": 686247,
-    "fileCount": 216
+    "buildTime": 9616,
+    "bundleSize": 1187654,
+    "fileCount": 237
   }
 }

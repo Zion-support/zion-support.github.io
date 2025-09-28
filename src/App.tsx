@@ -4,12 +4,13 @@ import { AppRouter } from './router';
 import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import PerformanceTracker from './components/PerformanceTracker';
-// import PerformanceMonitor from './components/PerformanceMonitor';
+import PerformanceMonitor from './components/PerformanceMonitor';
 // import EnhancedPerformanceMonitor from './components/EnhancedPerformanceMonitor';
 import PerformanceDashboard from './components/PerformanceDashboard';
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import { seoAnalytics, performanceSEO } from './utils/seoEnhanced';
 import NotificationSystem, { Notification } from './components/NotificationSystem';
+import { EnhancedNotification } from './types/comprehensive';
 import './index.css';
 
 // Import new advanced systems
@@ -18,10 +19,22 @@ import { seoManager } from './utils/advancedSEOManager';
 import { errorTracker } from './utils/advancedErrorTracker';
 import { apiCache, imageCache, dataCache } from './utils/advancedCacheManager';
 
+// Import new comprehensive systems
+import { performanceOptimizer } from './utils/performanceOptimizations';
+import { accessibilityEnhancer } from './utils/accessibilityEnhancements';
+// import { securityEnhancer } from './utils/securityEnhancements';
+// import ComprehensiveMonitoringDashboard from './components/ComprehensiveMonitoringDashboard';
+
 // Import enhanced utilities
 import { enhancedErrorHandler } from './utils/enhancedErrorHandling';
 import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitoring';
 import { enhancedAccessibilityManager } from './utils/enhancedAccessibility';
+import { advancedErrorRecovery } from './utils/advancedErrorRecovery';
+import { enhancedSEOOptimizer } from './utils/enhancedSEOOptimizer';
+import { enhancedSecuritySystem } from './utils/enhancedSecuritySystem';
+import { enhancedAccessibilitySystem } from './utils/enhancedAccessibilitySystem';
+import { apiCache as apiCacheSystem, imageCache as imageCacheSystem, dataCache as dataCacheSystem } from './utils/enhancedCachingSystem';
+import { enhancedAnalyticsSystem } from './utils/enhancedAnalyticsSystem';
 
 // Lazy load heavy components for better performance
 const EnhancedSystemDashboard = lazy(() => import('./components/EnhancedSystemDashboard'));
@@ -33,6 +46,14 @@ const AdvancedMonitoringDashboard = lazy(() => import('./components/AdvancedMoni
 const ComprehensivePerformanceDashboard = lazy(() => import('./components/ComprehensivePerformanceDashboard'));
 const ComprehensiveMonitoringDashboard = lazy(() => import('./components/ComprehensiveMonitoringDashboard'));
 const PerformanceOptimizationPanel = lazy(() => import('./components/PerformanceOptimizationPanel'));
+const RealTimePerformanceMonitor = lazy(() => import('./components/RealTimePerformanceMonitor'));
+const EnhancedCommandPalette = lazy(() => import('./components/EnhancedCommandPalette'));
+const PerformanceIndicator = lazy(() => import('./components/PerformanceIndicator'));
+const AccessibilityEnhancer = lazy(() => import('./components/AccessibilityEnhancer'));
+const DynamicMetaTags = lazy(() => import('./components/DynamicMetaTags'));
+const SystemStatusIndicator = lazy(() => import('./components/SystemStatusIndicator'));
+const EnhancedNotificationSystem = lazy(() => import('./components/EnhancedNotificationSystem'));
+const KeyboardShortcutsManager = lazy(() => import('./components/KeyboardShortcutsManager'));
 
 export default function App(): React.JSX.Element {
   const navigate = useNavigate();
@@ -42,12 +63,18 @@ export default function App(): React.JSX.Element {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [showKeyboardHelp, setShowKeyboardHelp] = useState(false);
   const [notifications, setNotifications] = useState<Notification[]>([]);
+  const [enhancedNotifications, setEnhancedNotifications] = useState<EnhancedNotification[]>([]);
   const [showSystemHealth, setShowSystemHealth] = useState(false);
   const [showPerformanceWidget, setShowPerformanceWidget] = useState(false);
   const [showCommandPalette, setShowCommandPalette] = useState(false);
   const [showAdvancedMonitoring, setShowAdvancedMonitoring] = useState(false);
   const [showComprehensiveDashboard, setShowComprehensiveDashboard] = useState(false);
   const [showComprehensiveMonitoring, setShowComprehensiveMonitoring] = useState(false);
+  const [showRealTimePerformance, setShowRealTimePerformance] = useState(false);
+  const [showEnhancedCommandPalette, setShowEnhancedCommandPalette] = useState(false);
+  const [showSystemStatus, setShowSystemStatus] = useState(true);
+  const [showEnhancedNotifications] = useState(true);
+  const [showKeyboardShortcutsManager, setShowKeyboardShortcutsManager] = useState(false);
   // const [showPerformanceDashboard, setShowPerformanceDashboard] = useState(false);
 
   // Notification management
@@ -55,9 +82,87 @@ export default function App(): React.JSX.Element {
     setNotifications(prev => prev.filter(notification => notification.id !== id));
   }, []);
 
+  // Enhanced notification system
+  const addNotification = useCallback((notification: Omit<Notification, 'id'>) => {
+    const id = Date.now().toString();
+    const newNotification: Notification = {
+      ...notification,
+      id,
+      title: notification.title || 'Notification'
+    };
+    setNotifications(prev => [...prev, newNotification]);
+    
+    // Auto-remove after 5 seconds for info notifications
+    if (notification.type === 'info') {
+      setTimeout(() => removeNotification(id), 5000);
+    }
+  }, [removeNotification]);
+
   // Performance and loading state
   const [isLoading, setIsLoading] = useState(false);
   const [loadingProgress, setLoadingProgress] = useState(0);
+
+  // Performance monitoring
+  useEffect(() => {
+    const startTime = performance.now();
+    
+    const measurePerformance = () => {
+      const loadTime = performance.now() - startTime;
+      const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;
+      
+      // Log performance metrics
+      console.debug('Performance Metrics:', {
+        loadTime: `${Math.round(loadTime)}ms`,
+        renderTime: `${Math.round(performance.now() - startTime)}ms`,
+        memoryUsage: memory ? `${Math.round(memory.usedJSHeapSize / 1024 / 1024)}MB` : 'N/A'
+      });
+    };
+
+    // Measure after initial render
+    const timeoutId = setTimeout(measurePerformance, 100);
+    
+    return () => clearTimeout(timeoutId);
+  }, []);
+
+  // Service Worker registration
+  useEffect(() => {
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js')
+        .then((registration) => {
+          console.log('SW registered: ', registration);
+          addNotification({ type: 'success', title: 'PWA Ready', message: 'App is now available offline!' });
+        })
+        .catch((registrationError) => {
+          console.log('SW registration failed: ', registrationError);
+        });
+    }
+  }, [addNotification]);
+
+  // Initialize performance optimizations
+  useEffect(() => {
+    // Initialize all performance optimizations
+    performanceOptimizer.initializeOptimizations();
+    
+    // Enable caching
+    performanceOptimizer.enableCaching();
+    
+    // Optimize images
+    performanceOptimizer.optimizeImages();
+    
+    // Preload critical resources
+    performanceOptimizer.preloadCriticalResources();
+    
+    // Add resource hints
+    performanceOptimizer.addResourceHints();
+    
+    // Optimize third-party scripts
+    performanceOptimizer.optimizeThirdPartyScripts();
+    
+    // Monitor Core Web Vitals
+    performanceOptimizer.monitorCoreWebVitals();
+    
+    console.log('Performance optimizations initialized');
+  }, []);
   
   const handleScroll = useCallback(() => {
     // Track scroll depth for analytics
@@ -140,6 +245,14 @@ export default function App(): React.JSX.Element {
       enhancedPerformanceMonitor.initialize();
       enhancedErrorHandler.initialize();
       enhancedAccessibilityManager.initialize();
+      advancedErrorRecovery.initialize();
+      enhancedSEOOptimizer.initialize();
+      enhancedSecuritySystem.initialize();
+      enhancedAccessibilitySystem.initialize();
+      apiCacheSystem.initialize();
+      imageCacheSystem.initialize();
+      dataCacheSystem.initialize();
+      enhancedAnalyticsSystem.initialize();
       
       // Initialize advanced systems
       void performanceAnalytics; // Initialize performance analytics
@@ -163,12 +276,35 @@ export default function App(): React.JSX.Element {
         ogType: seoData.ogType,
         twitterCard: seoData.twitterCard
       });
+
+      // Also update with enhanced SEO optimizer
+      enhancedSEOOptimizer.updateSEO({
+        title: seoData.title,
+        description: seoData.description,
+        keywords: seoData.keywords.split(', '),
+        canonical: seoData.canonicalUrl,
+        ogTitle: seoData.title,
+        ogDescription: seoData.description,
+        ogImage: seoData.ogImage,
+        ogType: seoData.ogType,
+        twitterCard: seoData.twitterCard
+      });
       
       // Initialize security system
       console.log('Advanced security system initialized');
       
       // Initialize accessibility system
       console.log('Advanced accessibility system initialized');
+      
+      // Log system status
+      console.log('🔒 Security metrics:', enhancedSecuritySystem.getSecurityMetrics());
+      console.log('♿ Accessibility metrics:', enhancedAccessibilitySystem.getAccessibilityMetrics());
+      console.log('💾 Cache metrics:', {
+        api: apiCacheSystem.getMetrics(),
+        image: imageCacheSystem.getMetrics(),
+        data: dataCacheSystem.getMetrics()
+      });
+      console.log('📊 Analytics metrics:', enhancedAnalyticsSystem.getMetrics());
       
       // Initialize error reporting system
       console.log('Error reporting system initialized');
@@ -182,7 +318,7 @@ export default function App(): React.JSX.Element {
       };
     } catch (error) {
       console.error('Error initializing enhancements:', error);
-      enhancedErrorHandler.handleComponentError(error, 'App', {
+      enhancedErrorHandler.handleComponentError(error as Error, 'App', {
         retryable: false,
         maxRetries: 0,
         retryDelay: 1000
@@ -195,6 +331,8 @@ export default function App(): React.JSX.Element {
     if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'D') {
       event.preventDefault();
       setShowSystemDashboard((prev: boolean) => !prev);
+      seoAnalytics.trackEvent('keyboard_shortcut', { shortcut: 'cmd+shift+d', action: 'toggle_system_dashboard' });
+      addNotification({ type: 'info', title: 'Dashboard', message: 'System dashboard toggled' });
       console.debug('Keyboard shortcut used:', { shortcut: 'cmd+shift+d', action: 'toggle_system_dashboard' });
     }
     if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'H') {
@@ -225,8 +363,13 @@ export default function App(): React.JSX.Element {
     // Performance dashboard toggle removed - state variable not defined
     if ((event.ctrlKey || event.metaKey) && event.key === 'k') {
       event.preventDefault();
-      setShowCommandPalette((prev: boolean) => !prev);
-      console.debug('Keyboard shortcut used:', { shortcut: 'cmd+k', action: 'toggle_command_palette' });
+      setShowEnhancedCommandPalette((prev: boolean) => !prev);
+      seoAnalytics.trackEvent('keyboard_shortcut', { shortcut: 'cmd+k', action: 'toggle_enhanced_command_palette' });
+    }
+    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'R') {
+      event.preventDefault();
+      setShowRealTimePerformance((prev: boolean) => !prev);
+      seoAnalytics.trackEvent('keyboard_shortcut', { shortcut: 'cmd+shift+r', action: 'toggle_real_time_performance' });
     }
     if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'M') {
       event.preventDefault();
@@ -238,6 +381,16 @@ export default function App(): React.JSX.Element {
       setIsDarkMode((prev: boolean) => !prev);
       console.debug('Keyboard shortcut used:', { shortcut: 'cmd+shift+t', action: 'toggle_theme' });
     }
+    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'S') {
+      event.preventDefault();
+      setShowSystemStatus((prev: boolean) => !prev);
+      console.debug('Keyboard shortcut used:', { shortcut: 'cmd+shift+s', action: 'toggle_system_status' });
+    }
+    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === '?') {
+      event.preventDefault();
+      setShowKeyboardShortcutsManager((prev: boolean) => !prev);
+      console.debug('Keyboard shortcut used:', { shortcut: 'cmd+shift+?', action: 'toggle_keyboard_shortcuts_manager' });
+    }
     if (event.key === 'Escape') {
       setShowCommandPalette(false);
       setShowSystemDashboard(false);
@@ -246,9 +399,12 @@ export default function App(): React.JSX.Element {
       setShowKeyboardHelp(false);
       setShowAdvancedMonitoring(false);
       setShowComprehensiveDashboard(false);
-      console.debug('Keyboard shortcut used:', { shortcut: 'escape', action: 'close_modals' });
+      setShowRealTimePerformance(false);
+      setShowEnhancedCommandPalette(false);
+      setShowKeyboardShortcutsManager(false);
+      seoAnalytics.trackEvent('keyboard_shortcut', { shortcut: 'escape', action: 'close_modals' });
     }
-  }, []);
+  }, [addNotification]);
 
   // Engagement tracking data
   const engagementData = useMemo(() => ({
@@ -314,8 +470,22 @@ export default function App(): React.JSX.Element {
       document.addEventListener('click', handleClick, { passive: true });
       document.addEventListener('keydown', handleKeyDown);
 
-      // Initialize basic systems
-      console.debug('Initializing analytics system');
+      // Initialize comprehensive systems
+      console.debug('Initializing comprehensive systems');
+      
+      // Initialize performance optimizer
+      performanceOptimizer.optimizeImages();
+      performanceOptimizer.preloadCriticalResources();
+      performanceOptimizer.enableCaching();
+      performanceOptimizer.optimizeBundleSize();
+      
+      // Initialize accessibility enhancer
+      accessibilityEnhancer.announce('Application loaded successfully');
+      
+      // Initialize security enhancer
+      console.debug('Security system initialized');
+      
+      // Initialize analytics system
       
       // Initialize SEO analytics
       seoAnalytics.trackPageView(window.location.pathname);
@@ -420,8 +590,45 @@ export default function App(): React.JSX.Element {
   return (
     <PerformanceOptimizer enableMonitoring={true} enableOptimizations={true}>
       <EnhancedErrorBoundary>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-          <AppRouter />
+        <Suspense fallback={<ModernLoadingSpinner />}>
+          <AccessibilityEnhancer>
+            <Suspense fallback={null}>
+              <DynamicMetaTags
+                title="Zion Tech Group - Advanced AI and IT Solutions"
+                description="Leading provider of cutting-edge AI and IT solutions, cloud services, cybersecurity, and digital transformation services for modern enterprises."
+                keywords="AI solutions, IT services, cloud computing, cybersecurity, digital transformation, enterprise software, machine learning, data analytics"
+                canonicalUrl={window.location.href}
+                structuredData={{
+                  "@context": "https://schema.org",
+                  "@type": "Organization",
+                  "name": "Zion Tech Group",
+                  "description": "Leading provider of cutting-edge AI and IT solutions",
+                  "url": "https://ziontechgroup.com",
+                  "logo": "https://ziontechgroup.com/logo.png",
+                  "sameAs": [
+                    "https://linkedin.com/company/ziontechgroup",
+                    "https://twitter.com/ziontechgroup"
+                  ],
+                  "contactPoint": {
+                    "@type": "ContactPoint",
+                    "telephone": "+1-555-0123",
+                    "contactType": "customer service",
+                    "areaServed": "US",
+                    "availableLanguage": "English"
+                  },
+                  "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "123 Tech Street",
+                    "addressLocality": "San Francisco",
+                    "addressRegion": "CA",
+                    "postalCode": "94105",
+                    "addressCountry": "US"
+                  }
+                }}
+              />
+            </Suspense>
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+              <AppRouter />
         
         {/* System Dashboard - Toggle with Ctrl+Shift+D */}
         {showSystemDashboard && (
@@ -479,10 +686,11 @@ export default function App(): React.JSX.Element {
           />
         </Suspense>
 
-        <PerformanceDashboard
-          className="fixed bottom-4 left-4 z-30"
-          isVisible={showPerformanceWidget}
-        />
+        {showPerformanceWidget && (
+          <div className="fixed bottom-4 left-4 z-30">
+            <PerformanceDashboard />
+          </div>
+        )}
 
         <Suspense fallback={<ModernLoadingSpinner />}>
           <CommandPalette
@@ -534,6 +742,25 @@ export default function App(): React.JSX.Element {
           </Suspense>
         )}
 
+        {showRealTimePerformance && (
+          <Suspense fallback={<ModernLoadingSpinner />}>
+            <RealTimePerformanceMonitor
+              isVisible={showRealTimePerformance}
+              onClose={() => setShowRealTimePerformance(false)}
+              refreshInterval={1000}
+            />
+          </Suspense>
+        )}
+
+        {showEnhancedCommandPalette && (
+          <Suspense fallback={<ModernLoadingSpinner />}>
+            <EnhancedCommandPalette
+              isVisible={showEnhancedCommandPalette}
+              onClose={() => setShowEnhancedCommandPalette(false)}
+            />
+          </Suspense>
+        )}
+
         {showComprehensiveDashboard && (
           <Suspense fallback={<ModernLoadingSpinner />}>
             <ComprehensivePerformanceDashboard />
@@ -551,6 +778,110 @@ export default function App(): React.JSX.Element {
           <PerformanceOptimizationPanel />
         </Suspense>
 
+        {/* System Status Indicator */}
+        {showSystemStatus && (
+          <Suspense fallback={<ModernLoadingSpinner />}>
+            <SystemStatusIndicator
+              refreshInterval={30000}
+              showDetails={true}
+            />
+          </Suspense>
+        )}
+
+        {/* Enhanced Notification System */}
+        {showEnhancedNotifications && (
+          <Suspense fallback={<ModernLoadingSpinner />}>
+            <EnhancedNotificationSystem
+              notifications={enhancedNotifications}
+              onRemove={(id: string) => {
+                setEnhancedNotifications(prev => prev.filter(n => n.id !== id));
+              }}
+              maxNotifications={5}
+              position="top-right"
+              showSoundToggle={true}
+              showHistoryToggle={true}
+            />
+          </Suspense>
+        )}
+
+        {/* Keyboard Shortcuts Manager */}
+        {showKeyboardShortcutsManager && (
+          <Suspense fallback={<ModernLoadingSpinner />}>
+            <KeyboardShortcutsManager
+              shortcuts={[
+                {
+                  id: 'toggle-system-dashboard',
+                  keys: ['ctrl', 'shift', 'd'],
+                  description: 'Toggle System Dashboard',
+                  category: 'system',
+                  action: () => setShowSystemDashboard(!showSystemDashboard),
+                  enabled: true,
+                  global: true
+                },
+                {
+                  id: 'toggle-system-health',
+                  keys: ['ctrl', 'shift', 'h'],
+                  description: 'Toggle System Health Dashboard',
+                  category: 'system',
+                  action: () => setShowSystemHealth(!showSystemHealth),
+                  enabled: true,
+                  global: true
+                },
+                {
+                  id: 'toggle-performance-monitor',
+                  keys: ['ctrl', 'shift', 'r'],
+                  description: 'Toggle Real-Time Performance Monitor',
+                  category: 'tools',
+                  action: () => setShowRealTimePerformance(!showRealTimePerformance),
+                  enabled: true,
+                  global: true
+                },
+                {
+                  id: 'toggle-command-palette',
+                  keys: ['ctrl', 'k'],
+                  description: 'Toggle Enhanced Command Palette',
+                  category: 'navigation',
+                  action: () => setShowEnhancedCommandPalette(!showEnhancedCommandPalette),
+                  enabled: true,
+                  global: true
+                },
+                {
+                  id: 'toggle-theme',
+                  keys: ['ctrl', 'shift', 't'],
+                  description: 'Toggle Theme (Light/Dark)',
+                  category: 'view',
+                  action: () => setIsDarkMode(!isDarkMode),
+                  enabled: true,
+                  global: true
+                },
+                {
+                  id: 'toggle-system-status',
+                  keys: ['ctrl', 'shift', 's'],
+                  description: 'Toggle System Status Indicator',
+                  category: 'system',
+                  action: () => setShowSystemStatus(!showSystemStatus),
+                  enabled: true,
+                  global: true
+                },
+                {
+                  id: 'toggle-comprehensive-monitoring',
+                  keys: ['ctrl', 'shift', 'm'],
+                  description: 'Toggle Comprehensive Monitoring Dashboard',
+                  category: 'monitoring',
+                  action: () => setShowComprehensiveMonitoring(!showComprehensiveMonitoring),
+                  enabled: true,
+                  global: true
+                }
+              ]}
+              onShortcutTriggered={(shortcut) => {
+                console.log('Shortcut triggered:', shortcut.description);
+              }}
+              showHelpPanel={true}
+              enableGlobalShortcuts={true}
+            />
+          </Suspense>
+        )}
+
         {/* Theme Toggle Button */}
         <button
           onClick={() => setIsDarkMode(!isDarkMode)}
@@ -562,17 +893,36 @@ export default function App(): React.JSX.Element {
         </button>
 
         {/* Keyboard Shortcuts Help Panel */}
-        <div className="fixed bottom-4 left-4 z-40 bg-gray-800 text-white p-3 rounded-lg shadow-lg text-sm opacity-75 hover:opacity-100 transition-opacity duration-200">
+        <div className="fixed bottom-4 left-4 z-40 bg-gray-800 text-white p-3 rounded-lg shadow-lg text-sm opacity-75 hover:opacity-100 transition-opacity duration-200 max-w-xs">
           <div className="font-semibold mb-1">Keyboard Shortcuts:</div>
           <div>Ctrl+Shift+D: System Dashboard</div>
           <div>Ctrl+Shift+H: System Health</div>
           <div>Ctrl+Shift+M: Advanced Monitoring</div>
+          <div>Ctrl+Shift+R: Real-Time Performance</div>
+          <div>Ctrl+Shift+S: System Status</div>
           <div>Ctrl+Shift+K: Keyboard Help</div>
           <div>Ctrl+Shift+T: Toggle Theme</div>
-          <div>Ctrl+K: Command Palette</div>
+          <div>Ctrl+Shift+?: Shortcuts Manager</div>
+          <div>Ctrl+K: Enhanced Command Palette</div>
           <div>Esc: Close All Modals</div>
         </div>
       </div>
+      
+      {/* Performance Indicator */}
+      <Suspense fallback={null}>
+        <PerformanceIndicator showDetails={showAdvancedMonitoring} />
+      </Suspense>
+      
+      {/* Performance Monitor */}
+      <PerformanceMonitor 
+        showDetails={showAdvancedMonitoring}
+        enableAlerts={true}
+        onPerformanceIssue={(metric, value, threshold) => {
+          console.warn(`Performance issue detected: ${metric} = ${value} (threshold: ${threshold})`);
+        }}
+      />
+    </AccessibilityEnhancer>
+    </Suspense>
     </EnhancedErrorBoundary>
     </PerformanceOptimizer>
   );

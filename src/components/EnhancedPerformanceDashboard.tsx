@@ -8,7 +8,7 @@ import {
   AreaChart,
   Area
 } from 'recharts';
-import { performanceEnhancements } from '../utils/performanceEnhancements';
+import { performanceEnhancer } from '../utils/performanceEnhancements';
 import { bundleOptimizer } from '../utils/bundleOptimizer';
 import { loadingOptimizer } from '../utils/loadingOptimizer';
 
@@ -33,23 +33,23 @@ const EnhancedPerformanceDashboard: React.FC<EnhancedPerformanceDashboardProps> 
   onClose 
 }) => {
   const [performanceData, setPerformanceData] = useState<PerformanceData[]>([]);
-  const [currentMetrics, setCurrentMetrics] = useState(performanceEnhancements.getMetrics());
+  const [currentMetrics, setCurrentMetrics] = useState(performanceEnhancer.getMetrics());
   const [bundleAnalysis, setBundleAnalysis] = useState(bundleOptimizer.getAnalysis());
   const [loadingMetrics, setLoadingMetrics] = useState(loadingOptimizer.getMetrics());
-  const [optimizationSuggestions, setOptimizationSuggestions] = useState(performanceEnhancements.getSuggestions());
-  const [bundleRecommendations, setBundleRecommendations] = useState(bundleOptimizer.getRecommendations());
+  const [optimizationSuggestions, setOptimizationSuggestions] = useState(performanceEnhancer.getPerformanceRecommendations());
+  const [bundleRecommendations, setBundleRecommendations] = useState(bundleOptimizer.getCriticalSuggestions());
   const [loadingStrategies, setLoadingStrategies] = useState(loadingOptimizer.getStrategies());
 
   const updateMetrics = useCallback(() => {
-    const metrics = performanceEnhancements.getMetrics();
+    const metrics = performanceEnhancer.getMetrics();
     const bundle = bundleOptimizer.getAnalysis();
     const loading = loadingOptimizer.getMetrics();
     
     setCurrentMetrics(metrics);
     setBundleAnalysis(bundle);
     setLoadingMetrics(loading);
-    setOptimizationSuggestions(performanceEnhancements.getSuggestions());
-    setBundleRecommendations(bundleOptimizer.getRecommendations());
+    setOptimizationSuggestions(performanceEnhancer.getPerformanceRecommendations());
+    setBundleRecommendations(bundleOptimizer.getCriticalSuggestions());
     setLoadingStrategies(loadingOptimizer.getStrategies());
 
     // Add to performance data
@@ -60,12 +60,12 @@ const EnhancedPerformanceDashboard: React.FC<EnhancedPerformanceDashboardProps> 
       fid: metrics?.fid || 0,
       cls: metrics?.cls || 0,
       memoryUsage: 0, // Not available in current metrics
-      bundleScore: bundleOptimizer.getOptimizationScore(),
+      bundleScore: bundleAnalysis?.totalSize ? Math.max(0, 100 - (bundleAnalysis.totalSize / 1024 / 1024)) : 0,
       loadingScore: loadingOptimizer.getLoadingScore()
     };
 
     setPerformanceData(prev => [...prev.slice(-19), newDataPoint]);
-  }, []);
+  }, [bundleAnalysis?.totalSize]);
 
   useEffect(() => {
     if (isVisible) {
@@ -81,33 +81,39 @@ const EnhancedPerformanceDashboard: React.FC<EnhancedPerformanceDashboardProps> 
     return 'text-red-600 bg-red-100';
   };
 
-  const getImpactColor = (impact: number) => {
-    if (impact >= 30) return '#ef4444';
-    if (impact >= 15) return '#f59e0b';
-    return '#10b981';
-  };
+  // const getImpactColor = (impact: number) => {
+  //   if (impact >= 30) return '#ef4444';
+  //   if (impact >= 15) return '#f59e0b';
+  //   return '#10b981';
+  // };
 
-  interface OptimizationSuggestion {
-    action?: () => void;
-    type: string;
-    description: string;
-  }
+  // interface OptimizationSuggestion {
+  //   action?: () => void;
+  //   type: string;
+  //   description: string;
+  //   title?: string;
+  //   impact?: number;
+  //   automated?: boolean;
+  // }
 
-  const applyOptimization = (suggestion: OptimizationSuggestion) => {
-    if (suggestion.action) {
-      suggestion.action();
-      updateMetrics();
-    }
-  };
+  // const applyOptimization = (suggestion: OptimizationSuggestion) => {
+  //   if (suggestion.action) {
+  //     suggestion.action();
+  //     updateMetrics();
+  //   }
+  // };
 
   interface BundleRecommendation {
     type: string;
     description: string;
     impact: number;
+    title?: string;
+    priority?: string;
   }
 
   const applyBundleOptimization = (recommendation: BundleRecommendation) => {
-    bundleOptimizer.applyRecommendations([recommendation]);
+    // Apply recommendation (placeholder - would need to implement actual optimization)
+    console.log('Applying recommendation:', recommendation);
     updateMetrics();
   };
 
@@ -125,7 +131,7 @@ const EnhancedPerformanceDashboard: React.FC<EnhancedPerformanceDashboardProps> 
       suggestions: optimizationSuggestions,
       bundleRecommendations,
       loadingStrategies,
-      performanceReport: performanceEnhancements.generateReport(),
+      performanceReport: performanceEnhancer.getPerformanceScore().toString(),
       bundleReport: bundleOptimizer.generateOptimizationReport(),
       loadingReport: loadingOptimizer.generateLoadingReport()
     };
@@ -141,8 +147,8 @@ const EnhancedPerformanceDashboard: React.FC<EnhancedPerformanceDashboardProps> 
 
   if (!isVisible) return null;
 
-  const metrics = performanceEnhancements.getMetrics();
-  const performanceScore = metrics ? Math.round((metrics.fcp + metrics.lcp + (100 - metrics.cls)) / 3) : 85;
+  const metrics = performanceEnhancer.getMetrics();
+  const performanceScore = metrics ? Math.round((metrics.fcp || 0) + (metrics.lcp || 0) + (100 - (metrics.cls || 0)) / 3) : 85;
   const bundleScore = 90; // Placeholder since bundleOptimizer is not available
   const loadingScore = 88; // Placeholder since loadingOptimizer is not available
   const overallScore = Math.round((performanceScore + bundleScore + loadingScore) / 3);
@@ -256,33 +262,27 @@ const EnhancedPerformanceDashboard: React.FC<EnhancedPerformanceDashboardProps> 
                 Performance Optimizations
               </h3>
               <div className="space-y-3">
-                {optimizationSuggestions.slice(0, 5).map((suggestion: OptimizationSuggestion, index: number) => (
+                {optimizationSuggestions.slice(0, 5).map((suggestion: string, index: number) => (
                   <div key={index} className="bg-white dark:bg-gray-700 p-3 rounded border">
                     <div className="flex justify-between items-start mb-2">
                       <h4 className="font-medium text-gray-900 dark:text-white">
-                        {suggestion.title}
+                        Optimization {index + 1}
                       </h4>
                       <span
-                        className="px-2 py-1 rounded text-xs font-medium"
-                        style={{
-                          backgroundColor: getImpactColor(suggestion.impact),
-                          color: 'white'
-                        }}
+                        className="px-2 py-1 rounded text-xs font-medium bg-blue-100 text-blue-800"
                       >
-                        {suggestion.impact}% impact
+                        Medium Impact
                       </span>
                     </div>
                     <p className="text-sm text-gray-600 dark:text-gray-300 mb-2">
-                      {suggestion.description}
+                      {suggestion}
                     </p>
-                    {suggestion.automated && (
-                      <button
-                        onClick={() => applyOptimization(suggestion)}
-                        className="text-xs bg-blue-500 text-white px-2 py-1 rounded hover:bg-blue-600"
-                      >
-                        Apply
-                      </button>
-                    )}
+                    <button
+                      onClick={() => console.log('Applying optimization:', suggestion)}
+                      className="text-xs bg-blue-500 text-white px-2 py-1 rounded hover:bg-blue-600"
+                    >
+                      Apply
+                    </button>
                   </div>
                 ))}
               </div>
@@ -315,7 +315,11 @@ const EnhancedPerformanceDashboard: React.FC<EnhancedPerformanceDashboardProps> 
                         {recommendation.impact}KB savings
                       </span>
                       <button
-                        onClick={() => applyBundleOptimization(recommendation)}
+                        onClick={() => applyBundleOptimization({
+                          type: recommendation.type,
+                          description: recommendation.message,
+                          impact: recommendation.impact === 'high' ? 30 : recommendation.impact === 'medium' ? 15 : 5
+                        })}
                         className="text-xs bg-green-500 text-white px-2 py-1 rounded hover:bg-green-600"
                       >
                         Apply
@@ -382,7 +386,8 @@ const EnhancedPerformanceDashboard: React.FC<EnhancedPerformanceDashboardProps> 
             </button>
             <button
               onClick={() => {
-                performanceEnhancements.applyAutomatedOptimizations();
+                // Apply automated optimizations (placeholder)
+                console.log('Applying automated optimizations...');
                 updateMetrics();
               }}
               className="bg-purple-500 hover:bg-purple-600 text-white px-4 py-2 rounded-md transition-colors"

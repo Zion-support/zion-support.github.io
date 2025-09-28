@@ -113,7 +113,10 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
       setInsights(mockInsights);
       setErrorReports(mockErrorReports);
     } catch (error) {
-      enhancedErrorHandler.handleError(error as Error, {
+      enhancedErrorHandler.handleComponentError(error as Error, 'AIPerformanceDashboard', {
+        retryable: true,
+        maxRetries: 3,
+        retryDelay: 1000,
         component: 'AIPerformanceDashboard',
         action: 'loadPerformanceData'
       });

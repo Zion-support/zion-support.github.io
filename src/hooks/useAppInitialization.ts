@@ -236,18 +236,17 @@ export function useAppInitialization(config: AppInitializationConfig = {}) {
     try {
       // Initialize advanced performance monitor
       const { AdvancedPerformanceMonitor } = await import('../utils/advancedPerformanceMonitor');
-      interface PerformanceMonitorInstance {
-        updateConfig: (config: { enableWebVitals: boolean; enableMemoryMonitoring: boolean; enableNetworkMonitoring: boolean; enableCustomMetrics: boolean }) => void;
-        startMonitoring: () => void;
-        stopMonitoring: () => void;
-      }
-      const advancedPerformanceMonitor = (AdvancedPerformanceMonitor as { getInstance: () => PerformanceMonitorInstance }).getInstance();
+      // interface PerformanceMonitorInstance {
+      //   updateConfig: (config: { enableWebVitals: boolean; enableMemoryMonitoring: boolean; enableNetworkMonitoring: boolean; enableCustomMetrics: boolean }) => void;
+      //   startMonitoring: () => void;
+      //   stopMonitoring: () => void;
+      // }
+      const advancedPerformanceMonitor = (AdvancedPerformanceMonitor as any).getInstance();
       advancedPerformanceMonitor.updateConfig({
         enableWebVitals: true,
         enableMemoryMonitoring: true,
         enableNetworkMonitoring: true,
         enableCustomMetrics: true,
-        samplingRate: 1.0,
         reportInterval: 5000,
         thresholds: {
           pageLoadTime: 3000,
@@ -274,18 +273,7 @@ export function useAppInitialization(config: AppInitializationConfig = {}) {
 
       // Initialize advanced error recovery
       const { advancedErrorRecovery } = await import('../utils/advancedErrorRecovery');
-      advancedErrorRecovery.initialize({
-        maxRetries: 3,
-        retryDelay: 1000,
-        exponentialBackoff: true,
-        enableUserGuidance: true,
-        enableAutomaticRecovery: true,
-        enableErrorReporting: true,
-        enableFallbackStrategies: true,
-        enableCircuitBreaker: true,
-        circuitBreakerThreshold: 5,
-        circuitBreakerTimeout: 30000
-      });
+      advancedErrorRecovery.initialize();
 
       console.log('✅ Advanced systems initialized successfully');
     } catch (error) {

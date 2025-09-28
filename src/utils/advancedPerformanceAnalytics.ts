@@ -120,7 +120,7 @@ class AdvancedPerformanceAnalytics {
         const fidObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           entries.forEach((entry: PerformanceEntry) => {
-            this.metrics.fid = entry.processingStart - entry.startTime;
+            this.metrics.fid = (entry as any).processingStart - entry.startTime;
             this.checkAlert('fid', this.metrics.fid);
           });
         });
@@ -132,8 +132,8 @@ class AdvancedPerformanceAnalytics {
         const clsObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           entries.forEach((entry: PerformanceEntry) => {
-            if (!entry.hadRecentInput) {
-              clsValue += entry.value;
+            if (!(entry as any).hadRecentInput) {
+              clsValue += (entry as any).value;
               this.metrics.cls = clsValue;
               this.checkAlert('cls', this.metrics.cls);
             }
@@ -160,7 +160,7 @@ class AdvancedPerformanceAnalytics {
           const entries = list.getEntries();
           this.metrics.resourceCount = entries.length;
           this.metrics.resourceSize = entries.reduce((total, entry: PerformanceEntry) => {
-            return total + (entry.transferSize || 0);
+            return total + ((entry as any).transferSize || 0);
           }, 0);
           this.checkAlert('resourceCount', this.metrics.resourceCount);
           this.checkAlert('resourceSize', this.metrics.resourceSize);

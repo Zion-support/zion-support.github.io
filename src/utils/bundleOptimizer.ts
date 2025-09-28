@@ -36,6 +36,9 @@ interface BundleOptimizationSuggestion {
   impact: 'high' | 'medium' | 'low';
   action: string;
   estimatedSavings?: number;
+  title?: string;
+  priority?: string;
+  description?: string;
 }
 
 class BundleOptimizer {
@@ -65,7 +68,14 @@ class BundleOptimizer {
     try {
       await this.performBundleAnalysis();
       // Analysis is already set in performBundleAnalysis
-      return this.analysis || { totalSize: 0, chunks: [], recommendations: [] };
+      return this.analysis || { 
+        totalSize: 0, 
+        chunks: [], 
+        gzipSize: 0, 
+        duplicates: [], 
+        unusedExports: [], 
+        optimizationSuggestions: [] 
+      };
     } finally {
       this.isAnalyzing = false;
     }

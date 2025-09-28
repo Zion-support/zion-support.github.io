@@ -1,11 +1,12 @@
 import React, { useEffect, useState, useCallback, useMemo } from 'react';
+// import { performanceOptimizer } from '../utils/performanceOptimizations';
 import { 
   getMemoryUsage, 
   collectPerformanceMetrics, 
   checkPerformanceBudget,
   debounce,
   throttle
-} from '../utils/performanceOptimizations';
+} from '../utils/performanceHelpers';
 
 interface PerformanceMetrics {
   memory: {
@@ -47,11 +48,11 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
 
     setMetrics(prev => ({
       ...prev,
-      memory,
+      memory: memory ? { ...memory, limit: (memory as any).limit || 0 } : null,
       loadTime: performanceMetrics.loadTime || 0,
-      domContentLoaded: performanceMetrics.domContentLoaded || 0,
-      domInteractive: performanceMetrics.domInteractive || 0,
-      violations: [...prev.violations, ...violations]
+      domContentLoaded: (performanceMetrics as any).domContentLoaded || 0,
+      domInteractive: (performanceMetrics as any).domInteractive || 0,
+      violations: [...prev.violations, ...(Array.isArray(violations) ? violations : [])]
     }));
   }, []);
 
@@ -236,11 +237,11 @@ export const usePerformanceMonitoring = () => {
     const violations = checkPerformanceBudget(performanceMetrics);
 
     setMetrics({
-      memory,
+      memory: memory ? { ...memory, limit: (memory as any).limit || 0 } : null,
       loadTime: performanceMetrics.loadTime || 0,
-      domContentLoaded: performanceMetrics.domContentLoaded || 0,
-      domInteractive: performanceMetrics.domInteractive || 0,
-      violations
+      domContentLoaded: (performanceMetrics as any).domContentLoaded || 0,
+      domInteractive: (performanceMetrics as any).domInteractive || 0,
+      violations: Array.isArray(violations) ? violations : []
     });
   }, []);
 

@@ -554,13 +554,13 @@ class AdvancedAccessibilityEnhancer {
   private setupVoiceControl(): void {
     // Add voice control support (basic implementation)
     if ('speechRecognition' in window || 'webkitSpeechRecognition' in window) {
-      const SpeechRecognition = (window as Window & { SpeechRecognition?: new () => SpeechRecognition; webkitSpeechRecognition?: new () => SpeechRecognition }).SpeechRecognition || (window as Window & { webkitSpeechRecognition: new () => SpeechRecognition }).webkitSpeechRecognition;
+      const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
       const recognition = new SpeechRecognition();
       
       recognition.continuous = true;
       recognition.interimResults = true;
       
-      recognition.onresult = (event: SpeechRecognitionEvent) => {
+      recognition.onresult = (event: any) => {
         const command = event.results[event.results.length - 1][0].transcript.toLowerCase();
         
         if (command.includes('click') || command.includes('press')) {

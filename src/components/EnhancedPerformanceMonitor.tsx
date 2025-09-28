@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import { clsx } from 'clsx';
-import { performanceOptimizer, type PerformanceMetrics, type OptimizationSuggestion } from '../utils/performanceOptimizer';
+import {performanceOptimizer} from '../utils/performanceOptimizer';
+import { EnhancedPerformanceMetrics, OptimizationSuggestion } from '../types/comprehensive';
 
 interface EnhancedPerformanceMonitorProps {
   className?: string;
@@ -13,12 +14,22 @@ export const EnhancedPerformanceMonitor: React.FC<EnhancedPerformanceMonitorProp
   showDetails = false,
   showSuggestions = true
 }) => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+  const [metrics, setMetrics] = useState<EnhancedPerformanceMetrics>({
     fcp: 0,
     lcp: 0,
     fid: 0,
     cls: 0,
-    ttfb: 0
+    ttfb: 0,
+    loadTime: 0,
+    renderTime: 0,
+    memory: {
+      used: 0,
+      total: 0,
+      limit: 0
+    },
+    domContentLoaded: 0,
+    domInteractive: 0,
+    violations: []
   });
 
   const [suggestions, setSuggestions] = useState<OptimizationSuggestion[]>([]);
@@ -27,7 +38,21 @@ export const EnhancedPerformanceMonitor: React.FC<EnhancedPerformanceMonitorProp
 
   const updateMetrics = useCallback(() => {
     const newMetrics = performanceOptimizer.getMetrics();
-    setMetrics(newMetrics);
+    // Convert PerformanceMetrics to EnhancedPerformanceMetrics
+    const enhancedMetrics: EnhancedPerformanceMetrics = {
+      fcp: newMetrics.fcp,
+      lcp: newMetrics.lcp,
+      fid: newMetrics.fid,
+      cls: newMetrics.cls,
+      ttfb: newMetrics.ttfb,
+      loadTime: newMetrics.loadTime || 0,
+      renderTime: newMetrics.renderTime || 0,
+      memory: newMetrics.memory || { used: 0, total: 0, limit: 0 },
+      domContentLoaded: 0, // Will be updated from performance API
+      domInteractive: 0, // Will be updated from performance API
+      violations: [] // Will be updated from performance API
+    };
+    setMetrics(enhancedMetrics);
     
     if (showSuggestions) {
       const newSuggestions = performanceOptimizer.getSuggestions();
@@ -145,71 +170,91 @@ export const EnhancedPerformanceMonitor: React.FC<EnhancedPerformanceMonitorProp
         
         <div className="flex justify-between">
           <span className="text-gray-600 dark:text-gray-400">FCP:</span>
-          <span className={getMetricColor(metrics.fcp, { good: 1800, poor: 3000 })}>
-            {metrics.fcp.toFixed(0)}ms
+          <span className={getMetricColor(metrics.fcp || 0, { good: 1800, poor: 3000 })}>
+            {(metrics.fcp || 0).toFixed(0)}ms
           </span>
         </div>
 
         <div className="flex justify-between">
           <span className="text-gray-600 dark:text-gray-400">LCP:</span>
-          <span className={getMetricColor(metrics.lcp, { good: 2500, poor: 4000 })}>
-            {metrics.lcp.toFixed(0)}ms
+          <span className={getMetricColor(metrics.lcp || 0, { good: 2500, poor: 4000 })}>
+            {(metrics.lcp || 0).toFixed(0)}ms
           </span>
         </div>
 
         <div className="flex justify-between">
           <span className="text-gray-600 dark:text-gray-400">FID:</span>
-          <span className={getMetricColor(metrics.fid, { good: 100, poor: 300 })}>
-            {metrics.fid.toFixed(0)}ms
+          <span className={getMetricColor(metrics.fid || 0, { good: 100, poor: 300 })}>
+            {(metrics.fid || 0).toFixed(0)}ms
           </span>
         </div>
 
         <div className="flex justify-between">
           <span className="text-gray-600 dark:text-gray-400">CLS:</span>
-          <span className={getMetricColor(metrics.cls, { good: 0.1, poor: 0.25 })}>
-            {metrics.cls.toFixed(3)}
+          <span className={getMetricColor(metrics.cls || 0, { good: 0.1, poor: 0.25 })}>
+            {(metrics.cls || 0).toFixed(3)}
           </span>
         </div>
 
         <div className="flex justify-between">
           <span className="text-gray-600 dark:text-gray-400">TTFB:</span>
-          <span className={getMetricColor(metrics.ttfb, { good: 800, poor: 1800 })}>
-            {metrics.ttfb.toFixed(0)}ms
+          <span className={getMetricColor(metrics.ttfb || 0, { good: 800, poor: 1800 })}>
+            {(metrics.ttfb || 0).toFixed(0)}ms
           </span>
         </div>
       </div>
 
       {/* Additional Metrics */}
-      {(metrics.memory || metrics.bundleSize || metrics.connection) && (
+<<<<<<< HEAD
+      {metrics.memory && (
+=======
+      {(metrics.memory) && (
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-9b3e
         <div className="space-y-2 text-sm mb-4">
           <h4 className="font-medium text-gray-700 dark:text-gray-300">Additional Metrics</h4>
           
           {metrics.memory && (
             <div className="flex justify-between">
               <span className="text-gray-600 dark:text-gray-400">Memory:</span>
-              <span className={getMetricColor(metrics.memory, { good: 50, poor: 100 })}>
-                {metrics.memory.toFixed(1)}MB
+              <span className={getMetricColor(metrics.memory.used, { good: 50, poor: 100 })}>
+                {metrics.memory.used.toFixed(1)}MB
               </span>
             </div>
           )}
 
-          {metrics.bundleSize && (
+<<<<<<< HEAD
+          <div className="flex justify-between">
+            <span className="text-gray-600 dark:text-gray-400">DOM Content Loaded:</span>
+            <span className="text-gray-900 dark:text-white">
+              {metrics.domContentLoaded.toFixed(0)}ms
+            </span>
+          </div>
+
+          <div className="flex justify-between">
+            <span className="text-gray-600 dark:text-gray-400">DOM Interactive:</span>
+            <span className="text-blue-500">
+              {metrics.domInteractive.toFixed(0)}ms
+            </span>
+          </div>
+=======
+          {metrics.domContentLoaded > 0 && (
             <div className="flex justify-between">
-              <span className="text-gray-600 dark:text-gray-400">Bundle Size:</span>
+              <span className="text-gray-600 dark:text-gray-400">DOM Content Loaded:</span>
               <span className="text-gray-900 dark:text-white">
-                {(metrics.bundleSize / 1024).toFixed(1)}KB
+                {metrics.domContentLoaded.toFixed(0)}ms
               </span>
             </div>
           )}
 
-          {metrics.connection && (
+          {metrics.domInteractive > 0 && (
             <div className="flex justify-between">
-              <span className="text-gray-600 dark:text-gray-400">Connection:</span>
-              <span className="text-blue-500 capitalize">
-                {metrics.connection}
+              <span className="text-gray-600 dark:text-gray-400">DOM Interactive:</span>
+              <span className="text-blue-500">
+                {metrics.domInteractive.toFixed(0)}ms
               </span>
             </div>
           )}
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-9b3e
         </div>
       )}
 
@@ -220,9 +265,9 @@ export const EnhancedPerformanceMonitor: React.FC<EnhancedPerformanceMonitorProp
           <div className="max-h-32 overflow-y-auto space-y-1">
             {suggestions.slice(0, 3).map((suggestion, index) => (
               <div key={index} className="flex items-start gap-2 text-xs">
-                <span className="text-lg">{getSuggestionIcon(suggestion.type)}</span>
+                <span className="text-lg">{getSuggestionIcon(suggestion.type || 'info')}</span>
                 <div className="flex-1">
-                  <p className={clsx('font-medium', getSuggestionColor(suggestion.type))}>
+                  <p className={clsx('font-medium', getSuggestionColor(suggestion.type || 'info'))}>
                     {suggestion.message}
                   </p>
                   {suggestion.action && (
