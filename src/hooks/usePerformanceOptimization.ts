@@ -1,5 +1,4 @@
 import { useEffect, useCallback, useRef } from 'react';
-import { AdvancedPerformanceMonitor } from '../utils/advancedPerformanceMonitor';
 import { NetworkInformation } from '../types/global';
 
 interface PerformanceOptimizationConfig {
@@ -37,7 +36,7 @@ interface ImageOptimizationOptions {
 export const usePerformanceOptimization = (
   config: PerformanceOptimizationConfig = {}
 ): PerformanceOptimizationReturn => {
-  const monitor = useRef(new AdvancedPerformanceMonitor());
+  const monitor = useRef<any>(null);
   const configRef = useRef({
     enableLazyLoading: true,
     enablePreloading: true,
@@ -52,14 +51,14 @@ export const usePerformanceOptimization = (
 
   // Initialize performance monitoring
   useEffect(() => {
-    const perfMonitor = monitor.current;
-    
-    if (configRef.current.enableWebVitals) {
-      perfMonitor.start();
+    if (configRef.current.enableWebVitals && monitor.current) {
+      monitor.current.start();
     }
 
     return () => {
-      perfMonitor.stop();
+      if (monitor.current) {
+        monitor.current.stop();
+      }
     };
   }, []);
 
@@ -115,9 +114,9 @@ export const usePerformanceOptimization = (
   }, [recordMetric]);
 
   // Get current performance metrics
-  // const getPerformanceMetrics = useCallback(() => {
-  //   return monitor.current.getLatestMetrics();
-  // }, []);
+  const getPerformanceMetrics = useCallback(() => {
+    return monitor.current?.getMetrics() || {};
+  }, []);
 
   // Optimize images with responsive loading
   const optimizeImage = useCallback((src: string): string => {
@@ -301,20 +300,31 @@ export const usePerformanceOptimization = (
     };
   }, [recordMetric]);
 
-  const optimizePerformance = () => {
-    // Trigger all optimization techniques
-    monitor.current.start();
-    // Add other optimization logic here
-  };
+  // Performance optimization function
+  const optimizePerformance = useCallback(() => {
+    if (configRef.current.enableImageOptimization) {
+      // Optimize existing images
+      const images = document.querySelectorAll('img[src]');
+      images.forEach((img) => {
+        const optimizedSrc = optimizeImage((img as HTMLImageElement).src);
+        if (optimizedSrc !== (img as HTMLImageElement).src) {
+          (img as HTMLImageElement).src = optimizedSrc;
+        }
+      });
+    }
+    
+    if (configRef.current.enableResourceHints) {
+      // Add resource hints for critical resources
+      addResourceHint('/api/health', 'fetch');
+      addResourceHint('/images/hero-bg.webp', 'image');
+    }
+  }, [optimizeImage, addResourceHint]);
 
   return {
     preloadResource,
     recordMetric,
     measurePerformance,
-    getPerformanceMetrics: () => {
-      const metrics = monitor.current.getMetrics();
-      return metrics ? Object.fromEntries(Object.entries(metrics)) : {};
-    },
+    getPerformanceMetrics,
     optimizeImage,
     addResourceHint,
     optimizePerformance,
