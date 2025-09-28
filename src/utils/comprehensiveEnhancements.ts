@@ -253,18 +253,24 @@ class ComprehensiveEnhancements {
 
   private setupXSSProtection(): void {
     // Monitor for XSS attempts
-    const originalInnerHTML = Element.prototype.innerHTML;
-    Element.prototype.innerHTML = function(this: Element, value: string) {
-      if (typeof value === 'string' && this.containsXSS(value)) {
-        console.warn('XSS attempt blocked');
-        this.securityMetrics.xssAttempts = (this.securityMetrics.xssAttempts || 0) + 1;
-        return;
-      }
-      return originalInnerHTML.call(this, value);
-    };
+    const originalInnerHTML = Object.getOwnPropertyDescriptor(Element.prototype, 'innerHTML')?.set;
+    if (originalInnerHTML) {
+      Object.defineProperty(Element.prototype, 'innerHTML', {
+        set: function(this: any, value: string) {
+          if (typeof value === 'string' && this.containsXSS && this.containsXSS(value)) {
+            console.warn('XSS attempt blocked');
+            if (this.securityMetrics) {
+              this.securityMetrics.xssAttempts = (this.securityMetrics.xssAttempts || 0) + 1;
+            }
+            return;
+          }
+          originalInnerHTML.call(this, value);
+        }
+      });
+    }
 
     // Add XSS detection method
-    (Element.prototype as any).containsXSS = function(content: string): boolean {
+    (Element.prototype as any).containsXSS = function(this: any, content: string): boolean {
       const xssPatterns = [
         /<script[^>]*>.*?<\/script>/gi,
         /javascript:/gi,
@@ -278,7 +284,7 @@ class ComprehensiveEnhancements {
   private setupClickjackingProtection(): void {
     // Detect if page is being framed
     if (window.top !== window.self) {
-      window.top!.location = window.location;
+      window.top!.location.href = window.location.href;
     }
 
     // Set frame options
@@ -696,11 +702,11 @@ class ComprehensiveEnhancements {
               this.performanceMetrics.lcp = entry.startTime;
               break;
             case 'first-input':
-              this.performanceMetrics.fid = entry.processingStart - entry.startTime;
+              this.performanceMetrics.fid = (entry as any).processingStart - entry.startTime;
               break;
             case 'layout-shift':
-              if (!entry.hadRecentInput) {
-                this.performanceMetrics.cls = (this.performanceMetrics.cls || 0) + entry.value;
+              if (!(entry as any).hadRecentInput) {
+                this.performanceMetrics.cls = (this.performanceMetrics.cls || 0) + (entry as any).value;
               }
               break;
           }

@@ -112,7 +112,7 @@ export default function App(): React.JSX.Element {
     preloadResource('/favicon.ico', 'image');
 
     // Set default SEO data
-    seoManager.updateMetaTags(seoData);
+    (seoManager as any).updateMetaTags(seoData);
 
     // Basic performance monitoring
     if (typeof window !== 'undefined') {

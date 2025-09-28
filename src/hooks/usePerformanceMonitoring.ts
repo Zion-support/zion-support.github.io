@@ -88,7 +88,7 @@ export function usePerformanceMonitoring(options: UsePerformanceMonitoringOption
   const getMemoryUsage = useCallback((): number | undefined => {
     if (typeof window !== 'undefined' && 'memory' in performance) {
       const memory = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory;
-      return memory.usedJSHeapSize / 1024 / 1024; // Convert to MB
+      return memory?.usedJSHeapSize ? memory.usedJSHeapSize / 1024 / 1024 : undefined; // Convert to MB
     }
     return undefined;
   }, []);
@@ -98,9 +98,9 @@ export function usePerformanceMonitoring(options: UsePerformanceMonitoringOption
     if (typeof window !== 'undefined' && 'connection' in navigator) {
       const connection = (navigator as Navigator & { connection?: { effectiveType?: string; downlink?: number; rtt?: number } }).connection;
       return {
-        effectiveType: connection.effectiveType || 'unknown',
-        downlink: connection.downlink || 0,
-        rtt: connection.rtt || 0
+        effectiveType: connection?.effectiveType || 'unknown',
+        downlink: connection?.downlink || 0,
+        rtt: connection?.rtt || 0
       };
     }
     return undefined;
