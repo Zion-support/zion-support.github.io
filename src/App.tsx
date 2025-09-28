@@ -1,26 +1,12 @@
-import React, { useCallback, useState, useEffect, useMemo } from 'react';
+import React, { useMemo, useEffect } from 'react';
 import { AppRouter } from './router';
 import { useAppInitialization } from './hooks/useAppInitialization';
-import PerformanceDashboard from './components/PerformanceDashboard';
-import RealTimeMonitor from './components/RealTimeMonitor';
-import SystemMetricsDashboard from './components/SystemMetricsDashboard';
-import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
-import EnhancedNotificationSystem from './components/EnhancedNotificationSystem';
-import PerformanceOptimizer from './components/PerformanceOptimizer';
 import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import { seoManager } from './utils/seoEnhanced';
 import './index.css';
-import './styles/notifications.css';
-import './styles/system-metrics.css';
-import './styles/modern-utilities.css';
-export default function App(): React.JSX.Element {
-  // State for system metrics dashboard
-  const [showSystemDashboard, setShowSystemDashboard] = useState(false);
-  
-  // State for performance optimizer
-  const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
 
+export default function App(): React.JSX.Element {
   // Initialize app with custom configuration
   const { isLoading, loadingProgress } = useAppInitialization({
     enablePerformanceMonitoring: true,
@@ -31,28 +17,6 @@ export default function App(): React.JSX.Element {
     enableCaching: true,
   });
 
-  // Optimized scroll handler with requestAnimationFrame
-  const handleScroll = useCallback(() => {
-    // Scroll handling logic can be added here if needed
-  }, []);
-
-  // Optimized click handler with better event delegation
-  const handleClick = useCallback((event: Event) => {
-    // Click handling logic can be added here if needed
-  }, []);
-
-  // Optimized keyboard handler for system dashboard toggle
-  const handleKeyDown = useCallback((event: KeyboardEvent) => {
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'D') {
-      event.preventDefault();
-      setShowSystemDashboard(prev => !prev);
-    }
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'P') {
-      event.preventDefault();
-      setShowPerformanceOptimizer(prev => !prev);
-    }
-  }, []);
-
   // Memoize the SEO data to prevent unnecessary re-renders
   const seoData = useMemo(() => ({
     title: 'Zion Tech Group - Leading AI & Technology Solutions',
@@ -61,8 +25,7 @@ export default function App(): React.JSX.Element {
     ogType: 'website',
     ogUrl: typeof window !== 'undefined' ? window.location.href : '',
     ogImage: '/og-image.png',
-    twitterCard: 'summary_large_image' as const,
-    structuredData: []
+    twitterCard: 'summary_large_image' as const
   }), []);
 
   useEffect(() => {
@@ -74,12 +37,10 @@ export default function App(): React.JSX.Element {
     // Set default SEO data
     seoManager.updateMetaTags(seoData);
 
-    // Add keyboard event listener
-    document.addEventListener('keydown', handleKeyDown);
-
-    // Use passive listeners for better performance
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    document.addEventListener('click', handleClick, { passive: true });
+    // Basic performance monitoring
+    if (typeof window !== 'undefined') {
+      console.log('🚀 Zion Tech Group App initialized');
+    }
 
     // Mark app as fully initialized
     if (typeof window !== 'undefined' && window.performance && 
@@ -88,51 +49,24 @@ export default function App(): React.JSX.Element {
       performance.mark('app-init-complete');
       performance.measure('app-initialization', 'app-init-start', 'app-init-complete');
     }
+  }, [seoData]);
 
-    // Cleanup function
-    return () => {
-      document.removeEventListener('keydown', handleKeyDown);
-      window.removeEventListener('scroll', handleScroll);
-      document.removeEventListener('click', handleClick);
-    };
-  }, [handleKeyDown, handleScroll, handleClick, seoData]);
-
-  // Show loading screen while initializing
+  // Show loading spinner while initializing
   if (isLoading) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100">
-        <ModernLoadingSpinner
-          size="xl"
-          variant="primary"
-          text="Initializing Zion Tech Group..."
-          showProgress
-          progress={loadingProgress}
-          className="animate-fade-in-scale"
-        />
-      </div>
+      <EnhancedErrorBoundary>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+          <ModernLoadingSpinner progress={loadingProgress} />
+        </div>
+      </EnhancedErrorBoundary>
     );
   }
 
   return (
     <EnhancedErrorBoundary>
-      <AppRouter />
-      <PerformanceDashboard />
-      <RealTimeMonitor />
-      <SystemMetricsDashboard 
-        isVisible={showSystemDashboard}
-        onClose={() => setShowSystemDashboard(false)}
-      />
-      {showSystemDashboard && <EnhancedSystemDashboard />}
-      <EnhancedNotificationSystem 
-        position="top-right"
-        enableAnimations
-        enableAccessibility
-        maxNotifications={5}
-      />
-      <PerformanceOptimizer 
-        isVisible={showPerformanceOptimizer}
-        onClose={() => setShowPerformanceOptimizer(false)}
-      />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <AppRouter />
+      </div>
     </EnhancedErrorBoundary>
   );
 }
