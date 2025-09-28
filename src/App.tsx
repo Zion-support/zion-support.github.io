@@ -267,20 +267,17 @@ export default function App(): React.JSX.Element {
     performanceSEO.optimizeImages();
     performanceSEO.optimizeFonts();
     performanceSEO.optimizeCSS();
-<<<<<<< HEAD
     
     // Initialize advanced optimization systems
     // These are initialized automatically when imported
     void performanceOptimizer;
     void accessibilityEnhancements;
     void seoOptimizer;
-=======
 
     // Initialize new utility systems
     performanceAlerts.checkMetric('loadTime', performance.now(), 3000);
     accessibilityUtils.announce('Application initialized');
     securityUtils.getSecurityScore();
->>>>>>> 40efe3b3712fdd762cfe593ac1b29aeda418f16a
 
     // Set default SEO data using the correct method
     seoManager.updateMetaTags(seoData);
