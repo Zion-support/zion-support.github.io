@@ -382,6 +382,16 @@ class EnhancedSecurityManager {
   }
 
   /**
+   * Calculate security score
+   */
+  private calculateSecurityScore(): number {
+    // Simple scoring based on events and policies
+    const eventPenalty = this.events.length * 5;
+    const policyBonus = this.policies.length * 10;
+    return Math.max(0, 100 - eventPenalty + policyBonus);
+  }
+
+  /**
    * Get security metrics
    */
   getSecurityMetrics(): any {

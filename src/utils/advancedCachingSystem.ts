@@ -188,14 +188,14 @@ class AdvancedCachingSystem {
   /**
    * Initialize IndexedDB
    */
-  private async initializeIndexedDB(): Promise<void> {
+  private async initializeIndexedDB(): Promise<IDBDatabase | void> {
     if (typeof indexedDB === 'undefined') return;
 
     return new Promise((resolve, reject) => {
       const request = indexedDB.open('ZionCache', 1);
       
       request.onerror = () => reject(request.error);
-      request.onsuccess = () => resolve(request.result);
+      request.onsuccess = () => resolve(request.result as IDBDatabase);
       
       request.onupgradeneeded = (event) => {
         const db = (event.target as IDBOpenDBRequest).result;
@@ -583,7 +583,7 @@ class AdvancedCachingSystem {
       localStorage.setItem(`cache_${key}`, JSON.stringify(item));
     } catch (error) {
       // Handle quota exceeded
-      if (error.name === 'QuotaExceededError') {
+      if (error instanceof Error && error.name === 'QuotaExceededError') {
         this.evictOldestItems();
         localStorage.setItem(`cache_${key}`, JSON.stringify(item));
       } else {
@@ -612,7 +612,7 @@ class AdvancedCachingSystem {
       sessionStorage.setItem(`cache_${key}`, JSON.stringify(item));
     } catch (error) {
       // Handle quota exceeded
-      if (error.name === 'QuotaExceededError') {
+      if (error instanceof Error && error.name === 'QuotaExceededError') {
         this.evictOldestItems();
         sessionStorage.setItem(`cache_${key}`, JSON.stringify(item));
       } else {

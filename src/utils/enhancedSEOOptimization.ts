@@ -339,7 +339,7 @@ class EnhancedSEOOptimizer {
           description: `Heading level ${heading.level} follows level ${previousLevel}. Heading levels should not skip.`,
           impact: 'low',
           fixable: true,
-          element: heading.element
+          element: heading.element?.tagName || 'heading'
         });
       }
       previousLevel = heading.level;
@@ -360,7 +360,7 @@ class EnhancedSEOOptimizer {
           description: 'Image is missing alt text for accessibility and SEO.',
           impact: 'high',
           fixable: true,
-          element: img
+          element: img.tagName
         });
       }
 
@@ -374,7 +374,7 @@ class EnhancedSEOOptimizer {
           description: `Alt text is ${img.alt.length} characters. Recommended: under 125 characters.`,
           impact: 'low',
           fixable: true,
-          element: img
+          element: img.tagName
         });
       }
 
@@ -412,7 +412,7 @@ class EnhancedSEOOptimizer {
           description: 'Link is missing descriptive text.',
           impact: 'medium',
           fixable: true,
-          element: link
+          element: link.tagName
         });
       }
 
@@ -519,7 +519,7 @@ class EnhancedSEOOptimizer {
         description: 'The page has a noindex meta tag, which prevents search engine indexing.',
         impact: 'high',
         fixable: true,
-        element: robots
+        element: robots.tagName
       });
     }
 
@@ -571,7 +571,7 @@ class EnhancedSEOOptimizer {
             description: 'Structured data contains invalid JSON.',
             impact: 'medium',
             fixable: true,
-            element: script
+            element: script.tagName
           });
         }
       });
