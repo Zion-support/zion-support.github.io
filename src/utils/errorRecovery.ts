@@ -46,7 +46,7 @@ class ErrorRecoverySystem {
     this.addStrategy({
       name: 'component-reset',
       condition: (error, context) => 
-        context.component && error.message.includes('component'),
+        Boolean(context.component && error.message.includes('component')),
       action: async (error, context) => {
         console.log('🔄 Resetting component...');
         // Component reset logic would go here
@@ -154,4 +154,12 @@ class ErrorRecoverySystem {
 }
 
 export const errorRecoverySystem = new ErrorRecoverySystem();
+
+// Export errorRecovery for backward compatibility
+export const errorRecovery = {
+  getErrorCount: () => errorRecoverySystem.getErrorHistory().length,
+  reset: () => errorRecoverySystem.clearHistory(),
+  handleError: (error: Error, context?: Partial<ErrorContext>) => errorRecoverySystem.handleError(error, context)
+};
+
 export type { ErrorContext, RecoveryStrategy };
