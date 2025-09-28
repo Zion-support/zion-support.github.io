@@ -119,7 +119,6 @@ export default function App(): React.JSX.Element {
     
     // Initialize analytics system
     analytics.trackPageView();
-  }, [seoData, handleScroll, handleClick, handleKeyDown, preloadResource]);
 
     // Mark app as fully initialized
     if (typeof window !== 'undefined' && window.performance && 
@@ -133,7 +132,7 @@ export default function App(): React.JSX.Element {
     if (typeof window !== 'undefined') {
       console.log('🚀 Zion Tech Group App initialized');
     }
-  }, [seoData, handleScroll, handleClick, preloadResource]);
+  }, [seoData, handleScroll, handleClick, handleKeyDown, preloadResource]);
 
   // Main initialization and cleanup effect
   React.useEffect(() => {
