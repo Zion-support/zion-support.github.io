@@ -64,15 +64,6 @@ export default function App(): React.JSX.Element {
     structuredData: []
   }), []);
 
-  // Handle scroll events
-  const handleScroll = useCallback(() => {
-    // Scroll handling logic can be added here
-  }, []);
-
-  // Handle click events
-  const handleClick = useCallback(() => {
-    // Click handling logic can be added here
-  }, []);
 
   // Simple SEO manager
   const seoManager = {
