@@ -42,11 +42,8 @@ export default function App(): React.JSX.Element {
   const [showCommandPalette, setShowCommandPalette] = useState(false);
   const [showRealTimeMetrics, setShowRealTimeMetrics] = useState(false);
   const [notifications, setNotifications] = useState<Notification[]>([]);
-<<<<<<< HEAD
-=======
   const [showWebsiteEnhancements, setShowWebsiteEnhancements] = useState(false);
   // const [showAccessibilityPanel, setShowAccessibilityPanel] = useState(false);
->>>>>>> origin/main
   const [showRealTimeMonitor, setShowRealTimeMonitor] = useState(false);
   const [showSystemHealth, setShowSystemHealth] = useState(false);
   // User preferences state (for future use)
