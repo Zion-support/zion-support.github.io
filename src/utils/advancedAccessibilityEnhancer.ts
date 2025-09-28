@@ -25,10 +25,10 @@ interface AccessibilityMetrics {
   keyboardTraps: number;
   screenReaderCompatibility: number;
   overallScore: number;
-  totalElements: number;
-  accessibleElements: number;
-  issuesFound: number;
-  score: number;
+  totalIssues: number;
+  criticalIssues: number;
+  warningIssues: number;
+  passedChecks: number;
 }
 
 class AdvancedAccessibilityEnhancer {
@@ -60,10 +60,10 @@ class AdvancedAccessibilityEnhancer {
       keyboardTraps: 0,
       screenReaderCompatibility: 0,
       overallScore: 0,
-      totalElements: 0,
-      accessibleElements: 0,
-      issuesFound: 0,
-      score: 0
+      totalIssues: 0,
+      criticalIssues: 0,
+      warningIssues: 0,
+      passedChecks: 0
     };
   }
 
@@ -635,10 +635,10 @@ class AdvancedAccessibilityEnhancer {
     
     return `
 Accessibility Report:
-- Total Elements: ${metrics.totalElements}
-- Accessible Elements: ${metrics.accessibleElements}
-- Issues Found: ${metrics.issuesFound}
-- Score: ${metrics.score}%
+- Total Issues: ${metrics.totalIssues}
+- Critical Issues: ${metrics.criticalIssues}
+- Warning Issues: ${metrics.warningIssues}
+- Passed Checks: ${metrics.passedChecks}
 `;
   }
 }

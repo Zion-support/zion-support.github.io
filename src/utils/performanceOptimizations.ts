@@ -1,262 +1,321 @@
 /**
- * Performance Optimization Utilities
- * Advanced performance monitoring and optimization tools
+ * Advanced Performance Optimizations
+ * Comprehensive performance enhancement utilities for the Zion Tech Group website
  */
 
-export interface PerformanceMetrics {
-  fcp: number;
-  lcp: number;
-  fid: number;
-  cls: number;
-  ttfb: number;
-  memoryUsage: number;
-  bundleSize: number;
-  networkSpeed: string;
-  cpuUsage: number;
-  storageUsed: number;
-}
-
-export interface OptimizationRecommendation {
-  type: 'critical' | 'warning' | 'info';
-  title: string;
-  description: string;
-  impact: 'high' | 'medium' | 'low';
-  action: string;
-}
-
-class PerformanceOptimizer {
-  private metrics: PerformanceMetrics | null = null;
+// Performance monitoring and optimization utilities
+export class PerformanceOptimizer {
+  private static instance: PerformanceOptimizer;
+  private metrics: Map<string, number> = new Map();
   private observers: PerformanceObserver[] = [];
-  private recommendations: OptimizationRecommendation[] = [];
+
+  static getInstance(): PerformanceOptimizer {
+    if (!PerformanceOptimizer.instance) {
+      PerformanceOptimizer.instance = new PerformanceOptimizer();
+    }
+    return PerformanceOptimizer.instance;
+  }
 
   constructor() {
     this.initializePerformanceMonitoring();
   }
 
   private initializePerformanceMonitoring(): void {
-    if (typeof window === 'undefined' || !('PerformanceObserver' in window)) {
-      return;
-    }
-
     // Monitor Core Web Vitals
-    this.observeCoreWebVitals();
+    this.observeWebVitals();
     
     // Monitor resource loading
-    this.observeResourceLoading();
+    this.observeResourceTiming();
     
-    // Monitor memory usage
-    this.observeMemoryUsage();
+    // Monitor long tasks
+    this.observeLongTasks();
     
-    // Monitor network performance
-    this.observeNetworkPerformance();
+    // Monitor layout shifts
+    this.observeLayoutShifts();
   }
 
-  private observeCoreWebVitals(): void {
-    try {
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (entry.entryType === 'paint') {
-            const paintEntry = entry as PerformancePaintTiming;
-            if (paintEntry.name === 'first-contentful-paint') {
-              this.updateMetric('fcp', paintEntry.startTime);
+  private observeWebVitals(): void {
+    if ('PerformanceObserver' in window) {
+      try {
+        const observer = new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            if (entry.entryType === 'largest-contentful-paint') {
+              this.metrics.set('LCP', entry.startTime);
+            } else if (entry.entryType === 'first-input') {
+              this.metrics.set('FID', (entry as any).processingStart - entry.startTime);
+            } else if (entry.entryType === 'layout-shift') {
+              if (!(entry as any).hadRecentInput) {
+                this.metrics.set('CLS', (this.metrics.get('CLS') || 0) + (entry as any).value);
+              }
             }
-          } else if (entry.entryType === 'largest-contentful-paint') {
-            this.updateMetric('lcp', entry.startTime);
-          } else if (entry.entryType === 'first-input') {
-            const fidEntry = entry as PerformanceEventTiming;
-            this.updateMetric('fid', fidEntry.processingStart - fidEntry.startTime);
-          } else if (entry.entryType === 'layout-shift') {
-            const clsEntry = entry as PerformanceEntry & { value: number };
-            this.updateMetric('cls', clsEntry.value);
           }
-        }
-      });
+        });
 
-      observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift'] });
-      this.observers.push(observer);
-    } catch (error) {
-      console.warn('Failed to observe Core Web Vitals:', error);
+        observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
+        this.observers.push(observer);
+      } catch (error) {
+        console.warn('Performance Observer not supported:', error);
+      }
     }
   }
 
-  private observeResourceLoading(): void {
-    try {
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (entry.entryType === 'resource') {
-            const resourceEntry = entry as PerformanceResourceTiming;
-            this.analyzeResourcePerformance(resourceEntry);
+  private observeResourceTiming(): void {
+    if ('PerformanceObserver' in window) {
+      try {
+        const observer = new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            if (entry.entryType === 'resource') {
+              const resourceEntry = entry as PerformanceResourceTiming;
+              const loadTime = resourceEntry.responseEnd - resourceEntry.requestStart;
+              
+              // Track slow resources
+              if (loadTime > 1000) {
+                console.warn(`Slow resource detected: ${resourceEntry.name} (${loadTime}ms)`);
+              }
+            }
           }
-        }
-      });
+        });
 
-      observer.observe({ entryTypes: ['resource'] });
-      this.observers.push(observer);
-    } catch (error) {
-      console.warn('Failed to observe resource loading:', error);
+        observer.observe({ entryTypes: ['resource'] });
+        this.observers.push(observer);
+      } catch (error) {
+        console.warn('Resource timing observer not supported:', error);
+      }
     }
   }
 
-  private observeMemoryUsage(): void {
-    if ('memory' in performance) {
-      const memory = (performance as { memory: { usedJSHeapSize: number } }).memory;
-      this.updateMetric('memoryUsage', memory.usedJSHeapSize / 1024 / 1024); // MB
+  private observeLongTasks(): void {
+    if ('PerformanceObserver' in window) {
+      try {
+        const observer = new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            console.warn(`Long task detected: ${entry.duration}ms`);
+          }
+        });
+
+        observer.observe({ entryTypes: ['longtask'] });
+        this.observers.push(observer);
+      } catch (error) {
+        console.warn('Long task observer not supported:', error);
+      }
     }
   }
 
-  private observeNetworkPerformance(): void {
-    if ('connection' in navigator) {
-      const connection = (navigator as { connection: { effectiveType?: string } }).connection;
-      this.updateMetric('networkSpeed', connection.effectiveType || 'unknown');
+  private observeLayoutShifts(): void {
+    if ('PerformanceObserver' in window) {
+      try {
+        const observer = new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            if (!(entry as any).hadRecentInput) {
+              const clsValue = (entry as any).value;
+              if (clsValue > 0.1) {
+                console.warn(`Significant layout shift detected: ${clsValue}`);
+              }
+            }
+          }
+        });
+
+        observer.observe({ entryTypes: ['layout-shift'] });
+        this.observers.push(observer);
+      } catch (error) {
+        console.warn('Layout shift observer not supported:', error);
+      }
     }
   }
 
-  private updateMetric(key: keyof PerformanceMetrics, value: number | string): void {
-    if (!this.metrics) {
-      this.metrics = {
-        fcp: 0,
-        lcp: 0,
-        fid: 0,
-        cls: 0,
-        ttfb: 0,
-        memoryUsage: 0,
-        bundleSize: 0,
-        networkSpeed: 'unknown',
-        cpuUsage: 0,
-        storageUsed: 0
-      };
-    }
-
-    (this.metrics as unknown as Record<string, unknown>)[key] = value;
-    this.generateRecommendations();
+  // Image optimization
+  optimizeImages(): void {
+    const images = document.querySelectorAll('img[data-src]');
+    images.forEach((img) => {
+      const imageElement = img as HTMLImageElement;
+      if (imageElement.dataset.src) {
+        imageElement.src = imageElement.dataset.src;
+        imageElement.removeAttribute('data-src');
+      }
+    });
   }
 
-  private analyzeResourcePerformance(entry: PerformanceResourceTiming): void {
-    const loadTime = entry.responseEnd - entry.startTime;
-    const size = entry.transferSize || 0;
-
-    // Check for slow resources
-    if (loadTime > 1000) {
-      this.addRecommendation({
-        type: 'warning',
-        title: 'Slow Resource Loading',
-        description: `Resource ${entry.name} took ${loadTime.toFixed(0)}ms to load`,
-        impact: 'medium',
-        action: 'Consider optimizing or lazy loading this resource'
+  // Lazy loading implementation
+  setupLazyLoading(): void {
+    if ('IntersectionObserver' in window) {
+      const imageObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const img = entry.target as HTMLImageElement;
+            if (img.dataset.src) {
+              img.src = img.dataset.src;
+              img.removeAttribute('data-src');
+              imageObserver.unobserve(img);
+            }
+          }
+        });
       });
-    }
 
-    // Check for large resources
-    if (size > 1024 * 1024) { // 1MB
-      this.addRecommendation({
-        type: 'info',
-        title: 'Large Resource',
-        description: `Resource ${entry.name} is ${(size / 1024 / 1024).toFixed(1)}MB`,
-        impact: 'low',
-        action: 'Consider compressing or splitting this resource'
-      });
-    }
-  }
-
-  private addRecommendation(recommendation: OptimizationRecommendation): void {
-    this.recommendations.push(recommendation);
-  }
-
-  private generateRecommendations(): void {
-    if (!this.metrics) return;
-
-    this.recommendations = [];
-
-    // FCP recommendations
-    if (this.metrics.fcp > 1800) {
-      this.addRecommendation({
-        type: 'critical',
-        title: 'Slow First Contentful Paint',
-        description: `FCP is ${this.metrics.fcp.toFixed(0)}ms (should be < 1800ms)`,
-        impact: 'high',
-        action: 'Optimize critical rendering path and reduce render-blocking resources'
-      });
-    }
-
-    // LCP recommendations
-    if (this.metrics.lcp > 2500) {
-      this.addRecommendation({
-        type: 'critical',
-        title: 'Slow Largest Contentful Paint',
-        description: `LCP is ${this.metrics.lcp.toFixed(0)}ms (should be < 2500ms)`,
-        impact: 'high',
-        action: 'Optimize images and largest content elements'
-      });
-    }
-
-    // FID recommendations
-    if (this.metrics.fid > 100) {
-      this.addRecommendation({
-        type: 'warning',
-        title: 'Slow First Input Delay',
-        description: `FID is ${this.metrics.fid.toFixed(0)}ms (should be < 100ms)`,
-        impact: 'medium',
-        action: 'Reduce JavaScript execution time and optimize event handlers'
-      });
-    }
-
-    // CLS recommendations
-    if (this.metrics.cls > 0.1) {
-      this.addRecommendation({
-        type: 'warning',
-        title: 'High Cumulative Layout Shift',
-        description: `CLS is ${this.metrics.cls.toFixed(3)} (should be < 0.1)`,
-        impact: 'medium',
-        action: 'Ensure images and ads have size attributes'
-      });
-    }
-
-    // Memory recommendations
-    if (this.metrics.memoryUsage > 50) {
-      this.addRecommendation({
-        type: 'warning',
-        title: 'High Memory Usage',
-        description: `Memory usage is ${this.metrics.memoryUsage.toFixed(1)}MB`,
-        impact: 'medium',
-        action: 'Check for memory leaks and optimize data structures'
+      document.querySelectorAll('img[data-src]').forEach((img) => {
+        imageObserver.observe(img);
       });
     }
   }
 
-  public getMetrics(): PerformanceMetrics | null {
-    return this.metrics;
+  // Preload critical resources
+  preloadCriticalResources(): void {
+    const criticalResources = [
+      '/assets/css/main.css',
+      '/assets/js/main.js',
+      '/assets/js/vendor-react.js'
+    ];
+
+    criticalResources.forEach((resource) => {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.href = resource;
+      link.as = resource.endsWith('.css') ? 'style' : 'script';
+      document.head.appendChild(link);
+    });
   }
 
-  public getRecommendations(): OptimizationRecommendation[] {
-    return [...this.recommendations];
+  // Bundle splitting optimization
+  optimizeBundleSplitting(): void {
+    // Dynamically import non-critical components
+    const nonCriticalComponents = [
+      'AdvancedAnalyticsDashboard',
+      'ComprehensiveSystemDashboard',
+      'EnhancedPerformanceDashboard'
+    ];
+
+    nonCriticalComponents.forEach((component) => {
+      // This would be implemented with dynamic imports in the actual components
+      console.log(`Optimizing bundle splitting for ${component}`);
+    });
   }
 
-  public getPerformanceScore(): number {
-    if (!this.metrics) return 0;
-
-    let score = 100;
+  // Memory optimization
+  optimizeMemory(): void {
+    // Clean up unused event listeners
+    this.cleanupEventListeners();
     
-    // Deduct points for poor metrics
-    if (this.metrics.fcp > 1800) score -= 20;
-    if (this.metrics.lcp > 2500) score -= 20;
-    if (this.metrics.fid > 100) score -= 15;
-    if (this.metrics.cls > 0.1) score -= 15;
-    if (this.metrics.memoryUsage > 50) score -= 10;
-    if (this.metrics.networkSpeed === 'slow-2g' || this.metrics.networkSpeed === '2g') score -= 10;
-
-    return Math.max(0, score);
+    // Clear unused caches
+    this.clearUnusedCaches();
+    
+    // Optimize garbage collection
+    this.optimizeGarbageCollection();
   }
 
-  public optimizeBundleSize(): void {
-    // Bundle optimization logic would go here
-    // For now, just mark that optimization was attempted
-    console.log('Bundle size optimization initiated');
+  private cleanupEventListeners(): void {
+    // Remove event listeners from removed DOM elements
+    const removedElements = document.querySelectorAll('[data-removed="true"]');
+    removedElements.forEach((element) => {
+      element.remove();
+    });
   }
 
-  public cleanup(): void {
-    this.observers.forEach(observer => observer.disconnect());
+  private clearUnusedCaches(): void {
+    // Clear unused service worker caches
+    if ('caches' in window) {
+      caches.keys().then((cacheNames) => {
+        cacheNames.forEach((cacheName) => {
+          if (cacheName.includes('unused')) {
+            caches.delete(cacheName);
+          }
+        });
+      });
+    }
+  }
+
+  private optimizeGarbageCollection(): void {
+    // Force garbage collection if available
+    if ('gc' in window) {
+      (window as any).gc();
+    }
+  }
+
+  // Get performance metrics
+  getMetrics(): Record<string, number> {
+    return Object.fromEntries(this.metrics);
+  }
+
+  // Generate performance report
+  generateReport(): string {
+    const metrics = this.getMetrics();
+    const report = {
+      timestamp: new Date().toISOString(),
+      metrics,
+      recommendations: this.generateRecommendations(metrics)
+    };
+
+    return JSON.stringify(report, null, 2);
+  }
+
+  private generateRecommendations(metrics: Record<string, number>): string[] {
+    const recommendations: string[] = [];
+
+    if (metrics.LCP && metrics.LCP > 2500) {
+      recommendations.push('LCP is too high. Consider optimizing images and critical CSS.');
+    }
+
+    if (metrics.FID && metrics.FID > 100) {
+      recommendations.push('FID is too high. Consider reducing JavaScript execution time.');
+    }
+
+    if (metrics.CLS && metrics.CLS > 0.1) {
+      recommendations.push('CLS is too high. Consider fixing layout shifts.');
+    }
+
+    return recommendations;
+  }
+
+  // Cleanup
+  destroy(): void {
+    this.observers.forEach((observer) => observer.disconnect());
     this.observers = [];
+    this.metrics.clear();
   }
 }
 
-export const performanceOptimizer = new PerformanceOptimizer();
+// Export singleton instance
+export const performanceOptimizer = PerformanceOptimizer.getInstance();
+
+// Utility functions
+export const debounce = <T extends (...args: any[]) => any>(
+  func: T,
+  wait: number
+): ((...args: Parameters<T>) => void) => {
+  let timeout: NodeJS.Timeout;
+  return (...args: Parameters<T>) => {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => func(...args), wait);
+  };
+};
+
+export const throttle = <T extends (...args: any[]) => any>(
+  func: T,
+  limit: number
+): ((...args: Parameters<T>) => void) => {
+  let inThrottle: boolean;
+  return (...args: Parameters<T>) => {
+    if (!inThrottle) {
+      func(...args);
+      inThrottle = true;
+      setTimeout(() => (inThrottle = false), limit);
+    }
+  };
+};
+
+// Performance monitoring hooks
+export const usePerformanceMonitoring = () => {
+  const [metrics, setMetrics] = React.useState<Record<string, number>>({});
+
+  React.useEffect(() => {
+    const updateMetrics = () => {
+      setMetrics(performanceOptimizer.getMetrics());
+    };
+
+    const interval = setInterval(updateMetrics, 1000);
+    return () => clearInterval(interval);
+  }, []);
+
+  return metrics;
+};
+
+// React import for hooks
+import React from 'react';

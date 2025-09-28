@@ -69,9 +69,9 @@ const AdvancedDashboard: React.FC = () => {
   }, [isOpen]);
 
   const updateData = () => {
-    // Mock analytics data for now
+    // Mock data for now - uncomment when analytics and cache are available
     const events: any[] = [];
-    const cacheStats = { hits: 0, misses: 0, size: 0 };
+    const cacheStats = { hitRate: 0.85, size: 1024, maxSize: 2048 };
     
     // Convert analytics events to analytics data format
     const analyticsData: AnalyticsData = {

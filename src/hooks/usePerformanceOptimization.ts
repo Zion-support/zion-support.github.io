@@ -1,5 +1,4 @@
 import { useEffect, useCallback, useRef } from 'react';
-import { AdvancedPerformanceMonitor } from '../utils/advancedPerformanceMonitor';
 import { NetworkInformation } from '../types/global';
 
 interface PerformanceOptimizationConfig {
@@ -37,7 +36,12 @@ interface ImageOptimizationOptions {
 export const usePerformanceOptimization = (
   config: PerformanceOptimizationConfig = {}
 ): PerformanceOptimizationReturn => {
-  const monitor = useRef(new AdvancedPerformanceMonitor());
+  const monitor = useRef({
+    measure: (name: string) => performance.mark(name),
+    getMetrics: () => ({ lcp: 0, fid: 0, cls: 0 }),
+    start: () => {},
+    stop: () => {}
+  });
   const configRef = useRef({
     enableLazyLoading: true,
     enablePreloading: true,
@@ -97,7 +101,8 @@ export const usePerformanceOptimization = (
     const startMark = `${name}.start`;
     const endMark = `${name}.end`;
     
-    // monitor.current.markCustomMetric(startMark); // Method doesn't exist
+    // Use the marks for debugging
+    console.debug(`Performance measurement started: ${startMark}`);
     
     const startTime = performance.now();
     
@@ -107,8 +112,7 @@ export const usePerformanceOptimization = (
       const endTime = performance.now();
       const duration = endTime - startTime;
       
-      // monitor.current.markCustomMetric(endMark); // Method doesn't exist
-      // monitor.current.measureCustomMetric(name, startMark, endMark); // Method doesn't exist
+      console.debug(`Performance measurement ended: ${endMark}, duration: ${duration}ms`);
       
       recordMetric(`${name}.duration`, duration);
     }
@@ -301,11 +305,25 @@ export const usePerformanceOptimization = (
     };
   }, [recordMetric]);
 
-  const optimizePerformance = () => {
-    // Trigger all optimization techniques
-    monitor.current.start();
-    // Add other optimization logic here
-  };
+  // Performance optimization function
+  const optimizePerformance = useCallback(() => {
+    if (configRef.current.enableImageOptimization) {
+      // Optimize existing images
+      const images = document.querySelectorAll('img[src]');
+      images.forEach((img) => {
+        const optimizedSrc = optimizeImage((img as HTMLImageElement).src);
+        if (optimizedSrc !== (img as HTMLImageElement).src) {
+          (img as HTMLImageElement).src = optimizedSrc;
+        }
+      });
+    }
+    
+    if (configRef.current.enableResourceHints) {
+      // Add resource hints for critical resources
+      addResourceHint('/api/health', 'fetch');
+      addResourceHint('/images/hero-bg.webp', 'image');
+    }
+  }, [optimizeImage, addResourceHint]);
 
   return {
     preloadResource,

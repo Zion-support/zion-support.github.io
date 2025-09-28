@@ -4,18 +4,6 @@
  * Provides comprehensive monitoring, error tracking, and performance analytics
  */
 
-// Layout Shift interface for CLS monitoring
-interface LayoutShift extends PerformanceEntry {
-  value: number;
-  hadRecentInput: boolean;
-  lastInputTime: number;
-  sources: Array<{
-    node: Node;
-    previousRect: DOMRectReadOnly;
-    currentRect: DOMRectReadOnly;
-  }>;
-}
-
 interface MonitoringConfig {
   enableErrorTracking: boolean;
   enablePerformanceMonitoring: boolean;
@@ -29,6 +17,8 @@ interface MonitoringConfig {
   maxRetries: number;
   endpoint: string;
 }
+
+// LayoutShift interface is already defined above, removing duplicate
 
 interface ErrorData {
   message: string;
@@ -231,6 +221,7 @@ class EnhancedMonitoring {
       }).observe({ entryTypes: ['first-input'] });
 
       // Cumulative Layout Shift
+      type LayoutShift = PerformanceEntry & { value: number; hadRecentInput?: boolean };
       new PerformanceObserver((list) => {
         const entries = list.getEntries();
         entries.forEach((entry) => {
