@@ -1,33 +1,17 @@
-import React, { useMemo, useEffect, useCallback, useState } from 'react';
+import React, { useEffect, useCallback } from 'react';
 import { AppRouter } from './router';
 import { useAppInitialization } from './hooks/useAppInitialization';
 import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
-import PerformanceDashboard from './components/PerformanceDashboard';
-import RealTimeMonitor from './components/RealTimeMonitor';
-import SystemMetricsDashboard from './components/SystemMetricsDashboard';
-import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
-import EnhancedNotificationSystem from './components/EnhancedNotificationSystem';
-import PerformanceOptimizer from './components/PerformanceOptimizer';
-import EnhancedAnalytics from './components/EnhancedAnalytics';
 import './index.css';
 
 // Import utility modules
-import { seoManager, seoAnalytics, performanceSEO } from './utils/seoEnhanced';
+import { seoAnalytics, performanceSEO } from './utils/seoEnhanced';
 import { analytics } from './utils/analytics';
 
 export default function App(): React.JSX.Element {
-  // State for system dashboard and performance optimizer
-  const [showSystemDashboard, setShowSystemDashboard] = useState(false);
-  const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
 
-  // Engagement tracking data
-  const engagementData = useMemo(() => ({
-    startTime: Date.now(),
-    scrollDepth: 0,
-    clicks: 0
-  }), []);
 
   // Initialize app with custom configuration
   const { isLoading, loadingProgress, handleScroll, handleClick, trackEngagement } = useAppInitialization({
@@ -152,42 +136,6 @@ export default function App(): React.JSX.Element {
     <EnhancedErrorBoundary>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <AppRouter />
-        
-        {/* System Dashboard */}
-        {showSystemDashboard && (
-          <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
-            <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
-              <div className="flex justify-between items-center mb-4">
-                <h2 className="text-2xl font-bold text-gray-900">System Dashboard</h2>
-                <button
-                  onClick={() => setShowSystemDashboard(false)}
-                  className="text-gray-500 hover:text-gray-700"
-                >
-                  ✕
-                </button>
-              </div>
-              <EnhancedSystemDashboard />
-            </div>
-          </div>
-        )}
-
-        {/* Performance Optimizer */}
-        {showPerformanceOptimizer && (
-          <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
-            <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
-              <div className="flex justify-between items-center mb-4">
-                <h2 className="text-2xl font-bold text-gray-900">Performance Optimizer</h2>
-                <button
-                  onClick={() => setShowPerformanceOptimizer(false)}
-                  className="text-gray-500 hover:text-gray-700"
-                >
-                  ✕
-                </button>
-              </div>
-              <PerformanceOptimizer />
-            </div>
-          </div>
-        )}
       </div>
     </EnhancedErrorBoundary>
   );
