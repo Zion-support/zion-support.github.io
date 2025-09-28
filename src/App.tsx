@@ -87,6 +87,10 @@ export default function App(): React.JSX.Element {
           metaDescription.setAttribute('content', data.description);
         }
       }
+    },
+    updateSEO: (data: typeof seoData) => {
+      // Use updateMetaTags as the implementation
+      seoManager.updateMetaTags(data);
     }
   };
 
