@@ -14,12 +14,62 @@ import './styles/notifications.css';
 import './styles/system-metrics.css';
 import './styles/modern-utilities.css';
 
+// Import utility modules
+import { seoManager, seoAnalytics, performanceSEO } from './utils/seoEnhanced';
+import { initializeErrorReporting } from './utils/errorReporting';
+import { initOptimizations } from './utils/buildOptimizations';
+import { performanceOptimizer } from './utils/optimization';
+import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
+import { enhancedAnalytics } from './utils/enhancedAnalytics';
+import { enhancedSEO } from './utils/enhancedSEO';
+import { enhancedPerformanceOptimizer } from './utils/enhancedPerformance';
+import { enhancedSecurityManager } from './utils/enhancedSecurity';
+import { enhancedAccessibilityManager } from './utils/enhancedAccessibility';
+import { accessibilityManager } from './utils/accessibility';
+import performanceEnhancer from './utils/performanceEnhancements';
+import { PerformanceMonitor } from './utils/performanceMonitor';
+import { advancedCacheSystem } from './utils/advancedCacheSystem';
+import { advancedErrorRecovery } from './utils/advancedErrorRecovery';
+import { advancedAutomationSystem } from './utils/advancedAutomationSystem';
+import { advancedPerformanceOptimizer } from './utils/performanceOptimizer';
+import { AccessibilityEnhancer } from './utils/accessibilityEnhancer';
+import { SecurityEnhancer } from './utils/securityEnhancer';
+import AdvancedPerformanceMonitor from './utils/advancedPerformanceMonitor';
+import AdvancedAccessibilityManager from './utils/advancedAccessibilityManager';
+import AdvancedSecurityManager from './utils/advancedSecurityManager';
+import EnhancedUXManager from './utils/enhancedUXManager';
+import { analytics } from './utils/analytics';
+import { seoOptimizer } from './utils/seoOptimization';
+import { cacheManager } from './utils/cacheManager';
+import { apiClient } from './utils/apiClient';
+import { notificationManager } from './utils/notificationManager';
+
 export default function App(): React.JSX.Element {
   // State for system metrics dashboard
   const [showSystemDashboard, setShowSystemDashboard] = useState(false);
   
   // State for performance optimizer
   const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
+
+  // Engagement tracking data
+  const engagementData = useMemo(() => ({
+    startTime: Date.now(),
+    scrollDepth: 0,
+    clicks: 0
+  }), []);
+
+  // Scroll handler
+  const handleScroll = useCallback(() => {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollDepth = Math.round((scrollTop / scrollHeight) * 100);
+    engagementData.scrollDepth = Math.max(engagementData.scrollDepth, scrollDepth);
+  }, [engagementData]);
+
+  // Click handler
+  const handleClick = useCallback(() => {
+    engagementData.clicks++;
+  }, [engagementData]);
 
   // Initialize app with custom configuration
   const { isLoading, loadingProgress } = useAppInitialization({
@@ -220,18 +270,14 @@ export default function App(): React.JSX.Element {
       });
     }).catch((error) => {
       console.error('❌ Failed to load service worker manager:', error);
-      recordMetric('serviceWorkerRegistrationError', 1);
+      // recordMetric('serviceWorkerRegistrationError', 1);
     });
     
     // Initialize performance monitoring
     const performanceMonitor = PerformanceMonitor.getInstance();
     performanceMonitor.measurePageLoad();
     
-    const resourceMonitor = ResourceMonitor.getInstance();
-    resourceMonitor.startMonitoring();
-    
-    const memoryMonitor = MemoryMonitor.getInstance();
-    memoryMonitor.startMonitoring();
+    // Resource and memory monitoring removed - not available
     
     // Initialize accessibility features
     accessibilityManager.initialize({
@@ -334,6 +380,11 @@ export default function App(): React.JSX.Element {
   // Add keyboard event listener
   React.useEffect(() => {
     document.addEventListener("keydown", handleKeyDown);
+    
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [handleKeyDown]);
 
   // Main initialization and cleanup effect
   React.useEffect(() => {
@@ -359,7 +410,7 @@ export default function App(): React.JSX.Element {
       // Note: Timeout variables are now managed by the component state
       
       // Stop monitoring
-      memoryMonitor.stopMonitoring();
+      // memoryMonitor.stopMonitoring(); // Not available
       
       // Cleanup new utilities
       const advancedPerformanceMonitor = AdvancedPerformanceMonitor.getInstance();
