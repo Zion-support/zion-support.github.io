@@ -1,8 +1,4 @@
 import { useEffect, useCallback, useRef } from 'react';
-<<<<<<< HEAD
-=======
-import { AdvancedPerformanceMonitor } from '../utils/advancedPerformanceMonitor';
->>>>>>> 61be861214b50a66fa9f716d0213bc509edae316
 import { NetworkInformation } from '../types/global';
 
 interface PerformanceOptimizationConfig {
@@ -304,7 +300,6 @@ export const usePerformanceOptimization = (
     };
   }, [recordMetric]);
 
-<<<<<<< HEAD
   // Performance optimization function
   const optimizePerformance = useCallback(() => {
     if (configRef.current.enableImageOptimization) {
@@ -324,13 +319,6 @@ export const usePerformanceOptimization = (
       addResourceHint('/images/hero-bg.webp', 'image');
     }
   }, [optimizeImage, addResourceHint]);
-=======
-  const optimizePerformance = () => {
-    // Trigger all optimization techniques
-    monitor.current.start();
-    // Add other optimization logic here
-  };
->>>>>>> 61be861214b50a66fa9f716d0213bc509edae316
 
   return {
     preloadResource,

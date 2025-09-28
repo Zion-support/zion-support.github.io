@@ -69,12 +69,8 @@ const AdvancedDashboard: React.FC = () => {
   }, [isOpen]);
 
   const updateData = () => {
-<<<<<<< HEAD
     const analyticsInstance = analytics;
     const events = analyticsInstance.getEvents();
-=======
-    const events = analytics.getEvents();
->>>>>>> 61be861214b50a66fa9f716d0213bc509edae316
     const cacheStats = AdvancedCacheManager.getInstance().getStats();
     
     // Convert analytics events to analytics data format
