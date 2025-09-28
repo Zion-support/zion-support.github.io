@@ -63,7 +63,6 @@ export default function App(): React.JSX.Element {
     // Click handling logic can be added here
   }, []);
 
-<<<<<<< HEAD
   // Engagement data for tracking
   const engagementData = useMemo(() => ({
     startTime: Date.now(),
@@ -133,7 +132,7 @@ export default function App(): React.JSX.Element {
     // Initialize performance SEO optimizations
     performanceSEO.optimizeImages();
     performanceSEO.optimizeFonts();
-    performanceSEO.optimizeCSS();
+    // Note: optimizeCSS method doesn't exist in PerformanceSEO class
 
     // Set default SEO data using the correct method
     seoManager.updateMetaTags(seoData);
