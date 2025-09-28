@@ -213,6 +213,7 @@ export default function App(): React.JSX.Element {
       performance.mark('app-init-complete');
       performance.measure('app-initialization', 'app-init-start', 'app-init-complete');
     }
+  }, [trackEngagement, seoData]);
 
   // Cleanup function for event listeners
   useEffect(() => {
