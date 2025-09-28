@@ -510,7 +510,7 @@ export default function App(): React.JSX.Element {
                   ✕
                 </button>
               </div>
-              <PerformanceMonitor />
+              <PerformanceMonitor showDashboard={true} />
             </div>
           </div>
         )}
