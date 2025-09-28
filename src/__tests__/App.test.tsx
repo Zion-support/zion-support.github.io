@@ -219,11 +219,11 @@ const renderWithRouter = (ui: React.ReactElement, { route = '/' } = {}) => {
     reload: jest.fn(),
     search: '',
     hash: '',
+    origin: 'http://localhost:3000',
+    protocol: 'http:',
     host: 'localhost:3000',
     hostname: 'localhost',
     port: '3000',
-    protocol: 'http:',
-    origin: 'http://localhost:3000',
   };
   return render(ui);
 };
