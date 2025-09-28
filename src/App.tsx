@@ -47,25 +47,35 @@ export default function App(): React.JSX.Element {
   const handleKeyDown = useCallback((event: KeyboardEvent) => {
     if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'D') {
       event.preventDefault();
-      setShowSystemDashboard((prev: boolean) => !prev);
+      setShowSystemDashboard(prev => !prev);
     }
     if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'P') {
       event.preventDefault();
-      setShowPerformanceOptimizer((prev: boolean) => !prev);
-    }
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'M') {
-      event.preventDefault();
-      setShowPerformanceMonitor((prev: boolean) => !prev);
-    }
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'A') {
-      event.preventDefault();
-      setShowAIDashboard((prev: boolean) => !prev);
+      setShowPerformanceOptimizer(prev => !prev);
     }
     if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'R') {
       event.preventDefault();
+<<<<<<< HEAD
       setShowRealTimeMetrics((prev: boolean) => !prev);
     }
   }, []);
+=======
+      setShowPerformanceMonitor(prev => !prev);
+    }
+  }, []);
+
+  // Enhanced track engagement function
+  const enhancedTrackEngagement = useCallback(() => {
+    const timeOnPage = Date.now() - engagementData.startTime;
+    seoAnalytics.trackUserEngagement(window.location.pathname, {
+      timeOnPage,
+      scrollDepth: engagementData.scrollDepth,
+      clicks: engagementData.clicks,
+    });
+    trackEngagement();
+  }, [engagementData.clicks, engagementData.scrollDepth, engagementData.startTime, trackEngagement]);
+
+>>>>>>> 5f93bc0a5d49e7251411560dd3cf9502c6033295
   // Memoize the SEO data to prevent unnecessary re-renders
   const seoData = useMemo(() => ({
     title: 'Zion Tech Group - Leading AI & Technology Solutions',
@@ -77,6 +87,7 @@ export default function App(): React.JSX.Element {
     twitterCard: 'summary_large_image' as const
   }), []);
 
+<<<<<<< HEAD
   // Update meta tags function
   const updateMetaTags = useCallback((data: {
     title: string;
@@ -104,7 +115,43 @@ export default function App(): React.JSX.Element {
     }
   }, []);
 
+=======
+  // Initialize comprehensive enhancements
+>>>>>>> 5f93bc0a5d49e7251411560dd3cf9502c6033295
   useEffect(() => {
+    const enhancements = getComprehensiveEnhancements();
+    enhancements.initialize();
+    
+    // Initialize individual enhancement systems
+    enhancedPerformanceMonitor.initialize();
+    enhancedAnalytics.initialize();
+    advancedCacheSystem.initialize();
+    new AdvancedAutomationSystem().initialize();
+    new AccessibilityEnhancer().initialize();
+    new SecurityEnhancer().initialize();
+    
+    // Initialize analytics
+    analytics.initialize();
+    seoAnalytics.initialize();
+    performanceSEO.initialize();
+    seoManager.initialize();
+    
+    // Initialize SEO analytics
+    seoAnalytics.trackPageView(window.location.pathname);
+    
+    // Initialize performance SEO optimizations
+    performanceSEO.optimizeImages();
+    performanceSEO.optimizeFonts();
+    performanceSEO.optimizeCSS();
+
+    // Set default SEO data using the correct method
+    seoManager.updateMetaTags(seoData);
+    
+    // Initialize advanced optimization systems
+    performanceOptimizer.optimizeBundle();
+    accessibilityEnhancer.initialize();
+    seoOptimizer.optimizePage(seoData);
+
     // Add performance marks for better monitoring
     if (typeof window !== 'undefined' && window.performance && typeof performance.mark === 'function') {
       performance.mark('app-init-start');
@@ -119,6 +166,7 @@ export default function App(): React.JSX.Element {
     document.addEventListener('click', handleClick, { passive: true });
     document.addEventListener('keydown', handleKeyDown);
 
+<<<<<<< HEAD
     // Initialize basic systems
     analytics.initialize();
     
@@ -140,6 +188,10 @@ export default function App(): React.JSX.Element {
     if (typeof window !== 'undefined') {
       console.log('🚀 Zion Tech Group App initialized');
     }
+=======
+    // Track engagement on page unload
+    window.addEventListener('beforeunload', enhancedTrackEngagement);
+>>>>>>> 5f93bc0a5d49e7251411560dd3cf9502c6033295
 
     // Mark app as fully initialized
     if (typeof window !== 'undefined' && window.performance && 
@@ -151,10 +203,15 @@ export default function App(): React.JSX.Element {
 
     // Cleanup function
     return () => {
+<<<<<<< HEAD
+=======
+      window.removeEventListener('beforeunload', enhancedTrackEngagement);
+>>>>>>> 5f93bc0a5d49e7251411560dd3cf9502c6033295
       window.removeEventListener('scroll', handleScroll);
       document.removeEventListener('click', handleClick);
       document.removeEventListener('keydown', handleKeyDown);
     };
+<<<<<<< HEAD
   }, [handleScroll, handleClick, handleKeyDown, seoData, preloadResource, updateMetaTags]);
 
   // Add keyboard event listener
@@ -228,6 +285,10 @@ export default function App(): React.JSX.Element {
   }, [handleScroll, handleClick, trackEngagement]);
 
   // Show loading spinner while initializing
+=======
+  }, [trackEngagement, handleKeyDown, handleScroll, handleClick, enhancedTrackEngagement, seoData, preloadResource]);
+
+>>>>>>> 5f93bc0a5d49e7251411560dd3cf9502c6033295
   if (isLoading) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -245,6 +306,7 @@ export default function App(): React.JSX.Element {
 
   return (
     <EnhancedErrorBoundary>
+      <SEOOptimizer seoData={seoData} />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <AppRouter />
         
@@ -284,6 +346,7 @@ export default function App(): React.JSX.Element {
           </div>
         )}
 
+<<<<<<< HEAD
         {/* Performance Monitor - Toggle with Ctrl+Shift+M */}
         <PerformanceMonitor 
           showDashboard={showPerformanceMonitor}
@@ -327,6 +390,22 @@ export default function App(): React.JSX.Element {
                 <span>Errors:</span>
                 <span className="text-red-400">{performanceMetrics.errorCount}</span>
               </div>
+=======
+        {/* Performance Monitor */}
+        {showPerformanceMonitor && (
+          <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
+            <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+              <div className="flex justify-between items-center mb-4">
+                <h2 className="text-2xl font-bold text-gray-900">Performance Monitor</h2>
+                <button
+                  onClick={() => setShowPerformanceMonitor(false)}
+                  className="text-gray-500 hover:text-gray-700"
+                >
+                  ✕
+                </button>
+              </div>
+              <PerformanceMonitor />
+>>>>>>> 5f93bc0a5d49e7251411560dd3cf9502c6033295
             </div>
           </div>
         )}
