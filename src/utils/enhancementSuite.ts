@@ -141,7 +141,7 @@ export class EnhancementSuite {
   public initialize(): void {
     // Initialize all enhancement modules
     this.performanceOptimizer = new PerformanceOptimizer();
-    this.securityEnhancer = SecurityEnhancer.getInstance();
+    this.securityEnhancer = new SecurityEnhancer();
     this.accessibilityEnhancer = new AccessibilityEnhancer();
     this.errorHandler = ErrorHandler.getInstance();
 
