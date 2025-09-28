@@ -1,6 +1,21 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { advancedBuildOptimizer } from '../utils/advancedBuildOptimizer';
-// import { accessibilityEnhancements } from '../utils/accessibilityEnhancements';
+import { accessibilityEnhancements } from '../utils/accessibilityEnhancements';
+import { accessibilityUtils } from '../utils/accessibilityUtils';
+import {
+  ResponsiveContainer,
+  BarChart,
+  CartesianGrid,
+  XAxis,
+  YAxis,
+  Tooltip,
+  Bar,
+  PieChart,
+  Pie,
+  Cell,
+  LineChart,
+  Line
+} from 'recharts';
 
 interface AdvancedPerformanceDashboardProps {
   isVisible: boolean;
