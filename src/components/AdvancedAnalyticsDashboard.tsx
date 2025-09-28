@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-// import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, LineChart, Line, PieChart, Pie, Cell } from 'recharts';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell } from 'recharts';
 
 interface AnalyticsData {
   pageViews: number;
@@ -18,7 +18,7 @@ interface AdvancedAnalyticsDashboardProps {
   onClose: () => void;
 }
 
-// const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', '#8884D8'];
+const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', '#8884D8'];
 
 export default function AdvancedAnalyticsDashboard({ isVisible, onClose }: AdvancedAnalyticsDashboardProps) {
   const [analyticsData, setAnalyticsData] = useState<AnalyticsData | null>(null);
@@ -154,7 +154,7 @@ export default function AdvancedAnalyticsDashboard({ isVisible, onClose }: Advan
                 {/* Top Pages Chart */}
                 <div className="bg-gray-50 p-6 rounded-lg">
                   <h3 className="text-xl font-semibold mb-4">Top Pages</h3>
-                  {/* <ResponsiveContainer width="100%" height={300}>
+                  <ResponsiveContainer width="100%" height={300}>
                     <BarChart data={analyticsData.topPages}>
                       <CartesianGrid strokeDasharray="3 3" />
                       <XAxis dataKey="path" />
@@ -162,14 +162,13 @@ export default function AdvancedAnalyticsDashboard({ isVisible, onClose }: Advan
                       <Tooltip />
                       <Bar dataKey="views" fill="#3B82F6" />
                     </BarChart>
-                  </ResponsiveContainer> */}
-                  <div className="text-center text-gray-500 py-8">Chart temporarily disabled</div>
+                  </ResponsiveContainer>
                 </div>
 
                 {/* Traffic Sources Pie Chart */}
                 <div className="bg-gray-50 p-6 rounded-lg">
                   <h3 className="text-xl font-semibold mb-4">Traffic Sources</h3>
-                  {/* <ResponsiveContainer width="100%" height={300}>
+                  <ResponsiveContainer width="100%" height={300}>
                     <PieChart>
                       <Pie
                         data={analyticsData.trafficSources}
@@ -187,8 +186,7 @@ export default function AdvancedAnalyticsDashboard({ isVisible, onClose }: Advan
                       </Pie>
                       <Tooltip />
                     </PieChart>
-                  </ResponsiveContainer> */}
-                  <div className="text-center text-gray-500 py-8">Chart temporarily disabled</div>
+                  </ResponsiveContainer>
                 </div>
               </div>
 
@@ -213,7 +211,7 @@ export default function AdvancedAnalyticsDashboard({ isVisible, onClose }: Advan
               {/* Device Breakdown */}
               <div className="bg-gray-50 p-6 rounded-lg">
                 <h3 className="text-xl font-semibold mb-4">Device Breakdown</h3>
-                {/* <ResponsiveContainer width="100%" height={300}>
+                <ResponsiveContainer width="100%" height={300}>
                   <BarChart data={analyticsData.deviceBreakdown}>
                     <CartesianGrid strokeDasharray="3 3" />
                     <XAxis dataKey="device" />
@@ -221,8 +219,7 @@ export default function AdvancedAnalyticsDashboard({ isVisible, onClose }: Advan
                     <Tooltip />
                     <Bar dataKey="count" fill="#10B981" />
                   </BarChart>
-                </ResponsiveContainer> */}
-                <div className="text-center text-gray-500 py-8">Chart temporarily disabled</div>
+                </ResponsiveContainer>
               </div>
             </div>
           ) : (
