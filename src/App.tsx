@@ -6,6 +6,8 @@ import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
 import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
+import PerformanceMonitor from './components/PerformanceMonitor';
+import SEOOptimizer, { useSEOData } from './components/SEOOptimizer';
 import { analytics } from './utils/analytics';
 import { seoAnalytics, performanceSEO } from './utils/seoEnhanced';
 // Available dashboard components for future use:
@@ -34,6 +36,7 @@ export default function App(): React.JSX.Element {
   // State for system dashboard and performance optimizer
   const [showSystemDashboard, setShowSystemDashboard] = useState(false);
   const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
+  const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
 
   // Initialize app with custom configuration
   const { isLoading, loadingProgress, handleScroll, handleClick, trackEngagement: originalTrackEngagement } = useAppInitialization({
@@ -44,6 +47,10 @@ export default function App(): React.JSX.Element {
     enableNotifications: true,
     enableCaching: true,
   });
+
+  // Get current pathname for SEO
+  const currentPathname = typeof window !== 'undefined' ? window.location.pathname : '/';
+  const seoData = useSEOData(currentPathname);
 
   // Performance optimization hook
   const { preloadResource } = usePerformanceOptimization({
@@ -90,18 +97,11 @@ export default function App(): React.JSX.Element {
       event.preventDefault();
       setShowPerformanceOptimizer(prev => !prev);
     }
+    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'M') {
+      event.preventDefault();
+      setShowPerformanceMonitor(prev => !prev);
+    }
   }, []);
-  // Memoize the SEO data to prevent unnecessary re-renders
-  const seoData = useMemo(() => ({
-    title: 'Zion Tech Group - Leading AI & Technology Solutions',
-    description: 'Cutting-edge AI, quantum computing, and digital transformation solutions for modern enterprises. Expert consulting, cloud services, and innovative technology implementations.',
-    keywords: ['AI solutions', 'quantum computing', 'digital transformation', 'cloud services', 'enterprise technology', 'machine learning', 'automation', 'blockchain'],
-    ogType: 'website',
-    ogUrl: typeof window !== 'undefined' ? window.location.href : '',
-    ogImage: '/og-image.png',
-    twitterCard: 'summary_large_image' as const,
-    structuredData: []
-  }), []);
 
   // Engagement tracking data
   const engagementData = useMemo(() => ({
@@ -226,6 +226,7 @@ export default function App(): React.JSX.Element {
 
   return (
     <EnhancedErrorBoundary>
+      <SEOOptimizer seoData={seoData} />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <AppRouter />
         
@@ -253,6 +254,14 @@ export default function App(): React.JSX.Element {
             </div>
           </div>
         )}
+
+        {/* Performance Monitor - Toggle with Ctrl+Shift+M */}
+        <PerformanceMonitor 
+          showDashboard={showPerformanceMonitor}
+          onMetricsUpdate={(metrics) => {
+            console.log('Performance metrics:', metrics);
+          }}
+        />
       </div>
     </EnhancedErrorBoundary>
   );
