@@ -184,7 +184,7 @@ export const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'navigation') {
             const navEntry = entry as PerformanceNavigationTiming;
-            trackPerformance('load_time', navEntry.loadEventEnd - navEntry.navigationStart);
+            trackPerformance('load_time', navEntry.loadEventEnd - (navEntry.activationStart || 0));
           } else if (entry.entryType === 'paint') {
             trackPerformance(entry.name, entry.startTime);
           }
@@ -251,7 +251,7 @@ export const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
         return acc;
       }, new Map());
 
-      const averageSessionDuration = Array.from(sessionDurations.values()).reduce((sum, duration) => sum + duration, 0) / sessionDurations.size || 0;
+      const averageSessionDuration = Array.from(sessionDurations.values()).reduce((sum: number, duration: unknown) => sum + (typeof duration === 'number' ? duration : 0), 0) / sessionDurations.size || 0;
 
       setMetrics(prev => ({
         ...prev,

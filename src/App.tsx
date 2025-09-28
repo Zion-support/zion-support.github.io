@@ -3,7 +3,7 @@ import { AppRouter } from './router';
 import { useAppInitialization } from './hooks/useAppInitialization';
 import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
-import { seoAnalytics, performanceSEO } from './utils/seoEnhanced';
+import { seoAnalytics, performanceSEO, seoManager } from './utils/seoEnhanced';
 import { analytics } from './utils/analytics';
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
 import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
@@ -11,8 +11,6 @@ import PerformanceOptimizer from './components/PerformanceOptimizer';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import AIPerformanceDashboard from './components/AIPerformanceDashboard';
 import { SEOOptimizer, useSEOData } from './components/SEOOptimizer';
-import { analytics } from './utils/analytics';
-import { seoAnalytics, performanceSEO, seoManager } from './utils/seoEnhanced';
 import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
 import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
 import { enhancedAnalytics } from './utils/enhancedAnalytics';
@@ -101,7 +99,7 @@ export default function App(): React.JSX.Element {
   }), [currentPathname]);
 
   // Performance optimization hook
-  const { optimizePerformance, clearCache, getPerformanceMetrics } = usePerformanceOptimization();
+  const { getPerformanceMetrics } = usePerformanceOptimization();
 
   // Initialize comprehensive enhancements
   useEffect(() => {
@@ -109,18 +107,18 @@ export default function App(): React.JSX.Element {
     enhancements.initialize();
     
     // Initialize individual enhancement systems
-    enhancedPerformanceMonitor.initialize();
-    enhancedAnalytics.initialize();
-    advancedCacheSystem.initialize();
-    new AdvancedAutomationSystem().initialize();
-    new AccessibilityEnhancer().initialize();
-    new SecurityEnhancer().initialize();
+    enhancedPerformanceMonitor.startMonitoring();
+    // enhancedAnalytics.initialize(); // Method doesn't exist
+    // advancedCacheSystem.initialize(); // Method doesn't exist
+    // new AdvancedAutomationSystem().initialize(); // Method doesn't exist
+    // new AccessibilityEnhancer().initialize(); // Method doesn't exist
+    // new SecurityEnhancer().initialize(); // Method doesn't exist
     
     // Initialize analytics
-    analytics.initialize();
-    seoAnalytics.initialize();
-    performanceSEO.initialize();
-    seoManager.initialize();
+    // analytics.initialize(); // Method doesn't exist
+    // seoAnalytics.initialize(); // Method doesn't exist
+    // performanceSEO.initialize(); // Method doesn't exist
+    // seoManager.initialize(); // Method doesn't exist
     
     // Initialize SEO analytics
     seoAnalytics.trackPageView(window.location.pathname);
@@ -134,10 +132,10 @@ export default function App(): React.JSX.Element {
     seoManager.updateMetaTags(seoData);
     
     // Initialize advanced optimization systems
-    performanceOptimizer.optimizeBundle();
-    accessibilityEnhancer.initialize();
-    seoOptimizer.optimizePage(seoData);
-    securityEnhancer.initialize();
+    // performanceOptimizer.optimizeBundle(); // Method doesn't exist
+    // accessibilityEnhancer.initialize(); // Method doesn't exist
+    // seoOptimizer.optimizePage(seoData); // Method doesn't exist
+    // securityEnhancer.initialize(); // Method doesn't exist
   }, [seoData]);
 
   // Update meta tags function
@@ -499,7 +497,7 @@ export default function App(): React.JSX.Element {
                   ✕
                 </button>
               </div>
-              <SEOOptimizer />
+              <SEOOptimizer seoData={seoData} />
             </div>
           </div>
         )}
