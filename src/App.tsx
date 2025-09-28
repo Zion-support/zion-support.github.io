@@ -27,7 +27,7 @@ import { advancedPerformanceOptimizer } from './utils/advancedPerformanceOptimiz
 import { advancedSEOOptimizer } from './utils/advancedSEOOptimizer';
 import { advancedSecurityManager } from './utils/advancedSecurityManager';
 import { advancedAnalytics } from './utils/advancedAnalytics';
-import { advancedErrorHandler } from './utils/advancedErrorHandler';
+import { advancedErrorHandler } from './utils/advancedErrorHandling';
 import { advancedCachingSystem } from './utils/advancedCachingSystem';
 import { advancedUXOptimizer } from './utils/advancedUXOptimizer';
 import { advancedTestingFramework } from './utils/advancedTestingFramework';
