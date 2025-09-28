@@ -221,7 +221,7 @@ export class EnhancedSEO {
       
       if (additionalAttributes) {
         Object.entries(additionalAttributes).forEach(([attr, value]) => {
-          link!.setAttribute(attr, value);
+          link.setAttribute(attr, value);
         });
       }
       
@@ -326,9 +326,9 @@ export class EnhancedSEO {
             if (entry.entryType === 'largest-contentful-paint') {
               this.trackSEOMetric('lcp', entry.startTime);
             } else if (entry.entryType === 'first-input') {
-              this.trackSEOMetric('fid', (entry as PerformanceEntry & { processingStart?: number }).processingStart! - entry.startTime);
+              this.trackSEOMetric('fid', (entry as { processingStart: number }).processingStart - entry.startTime);
             } else if (entry.entryType === 'layout-shift') {
-              this.trackSEOMetric('cls', (entry as PerformanceEntry & { value?: number }).value!);
+              this.trackSEOMetric('cls', (entry as { value: number }).value);
             }
           });
         });
@@ -368,8 +368,8 @@ export class EnhancedSEO {
 
   private validateStructuredData(data: unknown): void {
     // Basic validation for common structured data types
-    if (data['@type'] && data['@context']) {
-      console.log(`Valid structured data found: ${data['@type']}`);
+    if (typeof data === 'object' && data !== null && '@type' in data && '@context' in data) {
+      console.log(`Valid structured data found: ${(data as { '@type': string })['@type']}`);
     } else {
       console.warn('Invalid structured data: missing @type or @context');
     }

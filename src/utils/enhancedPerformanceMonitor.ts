@@ -139,9 +139,9 @@ export class EnhancedPerformanceMonitor {
   private recordNavigationMetrics(entry: PerformanceNavigationTiming): void {
     const metrics = [
       { name: 'TTFB', value: entry.responseStart - entry.requestStart, category: 'navigation' as const },
-      { name: 'DOMContentLoaded', value: entry.domContentLoadedEventEnd, category: 'navigation' as const },
-      { name: 'LoadComplete', value: entry.loadEventEnd, category: 'navigation' as const },
-      { name: 'FirstByte', value: entry.responseStart, category: 'navigation' as const },
+      { name: 'DOMContentLoaded', value: entry.domContentLoadedEventEnd - entry.navigationStart, category: 'navigation' as const },
+      { name: 'LoadComplete', value: entry.loadEventEnd - entry.navigationStart, category: 'navigation' as const },
+      { name: 'FirstByte', value: entry.responseStart - entry.navigationStart, category: 'navigation' as const },
       { name: 'DNS', value: entry.domainLookupEnd - entry.domainLookupStart, category: 'navigation' as const },
       { name: 'TCP', value: entry.connectEnd - entry.connectStart, category: 'navigation' as const },
       { name: 'SSL', value: entry.secureConnectionStart ? entry.connectEnd - entry.secureConnectionStart : 0, category: 'navigation' as const }
@@ -258,7 +258,7 @@ export class EnhancedPerformanceMonitor {
   private monitorMemoryUsage(): void {
     if ('memory' in performance) {
       const checkMemory = () => {
-        const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
+        const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;
         const metric: PerformanceMetric = {
           name: 'MemoryUsage',
           value: memory.usedJSHeapSize / 1024 / 1024, // MB
@@ -395,7 +395,7 @@ export class EnhancedPerformanceMonitor {
 
   private getConnectionType(): string | undefined {
     if ('connection' in navigator) {
-      return (navigator as Navigator & { connection?: { effectiveType?: string } }).connection?.effectiveType;
+      return (navigator as { connection?: { effectiveType: string } }).connection?.effectiveType;
     }
     return undefined;
   }

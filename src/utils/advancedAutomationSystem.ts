@@ -76,7 +76,7 @@ export interface AutomationReport {
   tasksExecuted: number;
   tasksSucceeded: number;
   tasksFailed: number;
-  metrics: Record<string, number>;
+  metrics: Record<string, unknown>;
   recommendations: string[];
   alerts: MonitoringAlert[];
 }
@@ -607,11 +607,11 @@ export class AdvancedAutomationSystem {
     
     switch (config.deploymentStrategy) {
       case 'rolling':
-        return await this.rollingDeployment(config);
+        return await this.rollingDeployment();
       case 'blue-green':
-        return await this.blueGreenDeployment(config);
+        return await this.blueGreenDeployment();
       case 'canary':
-        return await this.canaryDeployment(config);
+        return await this.canaryDeployment();
       default:
         throw new Error(`Unknown deployment strategy: ${config.deploymentStrategy}`);
     }
@@ -704,7 +704,7 @@ export class AdvancedAutomationSystem {
     }
   }
 
-  private calculateMetrics(): Record<string, number> {
+  private calculateMetrics(): Record<string, unknown> {
     const tasks = Array.from(this.tasks.values());
     
     return {
