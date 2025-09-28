@@ -334,6 +334,11 @@ export default function App(): React.JSX.Element {
   // Add keyboard event listener
   React.useEffect(() => {
     document.addEventListener("keydown", handleKeyDown);
+    
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [handleKeyDown]);
 
   // Main initialization and cleanup effect
   React.useEffect(() => {
@@ -382,7 +387,7 @@ export default function App(): React.JSX.Element {
       // Final engagement tracking
       trackEngagement();
     };
-  }, [trackEngagement]);
+  }, [handleKeyDown]);
 
   // Show loading screen while initializing
   if (isLoading) {
@@ -421,7 +426,5 @@ export default function App(): React.JSX.Element {
         onClose={() => setShowPerformanceOptimizer(false)}
       />
     </EnhancedErrorBoundary>
-  );
-}
   );
 }
