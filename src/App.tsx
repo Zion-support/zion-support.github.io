@@ -8,20 +8,7 @@ import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import { analytics } from './utils/analytics';
 import { seoAnalytics, performanceSEO } from './utils/seoEnhanced';
-// Available for future use:
-// import { seoManager } from './utils/seoEnhanced';
-// import { seoOptimizer } from './utils/seoOptimization';
-// import { cacheManager } from './utils/cacheManager';
-// import { apiClient } from './utils/apiClient';
-// import { notificationManager } from './utils/notificationManager';
-// import { userFeedback } from './utils/userFeedbackManager';
 import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
-import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
-import { enhancedAnalytics } from './utils/enhancedAnalytics';
-import { advancedCacheSystem } from './utils/advancedCacheSystem';
-import { AdvancedAutomationSystem } from './utils/advancedAutomationSystem';
-import { AccessibilityEnhancer } from './utils/accessibilityEnhancer';
-import { SecurityEnhancer } from './utils/securityEnhancer';
 import './index.css';
 
 export default function App(): React.JSX.Element {
@@ -48,16 +35,6 @@ export default function App(): React.JSX.Element {
 
   // Initialize comprehensive enhancements
   useEffect(() => {
-    // Initialize enhanced systems
-    enhancedPerformanceMonitor.startMonitoring();
-    enhancedAnalytics.initialize();
-    advancedCacheSystem.initialize();
-    AdvancedAutomationSystem.getInstance().initialize();
-    
-    // Initialize accessibility and security enhancers
-    AccessibilityEnhancer.getInstance();
-    SecurityEnhancer.getInstance();
-    
     // Get comprehensive enhancements
     const enhancements = getComprehensiveEnhancements({
       enableAdvancedPerformance: true,
@@ -128,7 +105,6 @@ export default function App(): React.JSX.Element {
       }
     }
   }), []);
-
   useEffect(() => {
     // Add performance marks for better monitoring
     if (typeof window !== 'undefined' && window.performance && typeof performance.mark === 'function') {
