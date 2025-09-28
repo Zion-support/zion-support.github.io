@@ -19,7 +19,7 @@ const PerformanceOptimizer = lazy(() => import('./components/PerformanceOptimize
 const PerformanceMonitor = lazy(() => import('./components/PerformanceMonitor'));
 const AIPerformanceDashboard = lazy(() => import('./components/AIPerformanceDashboard'));
 const WebsiteEnhancements = lazy(() => import('./components/WebsiteEnhancements'));
-const SEOOptimizer = lazy(() => import('./components/SEOOptimizer').then(module => ({ default: module.SEOOptimizer })));
+const SEOOptimizer = lazy(() => import('./components/SEOOptimizer'));
 const AdvancedAnalytics = lazy(() => import('./components/AdvancedAnalytics'));
 const KeyboardShortcutsHelp = lazy(() => import('./components/KeyboardShortcutsHelp'));
 const CommandPalette = lazy(() => import('./components/CommandPalette'));
@@ -63,7 +63,8 @@ export default function App(): React.JSX.Element {
         setError(null);
 
         // Initialize performance monitoring
-        await performanceOptimizer.initialize();
+        // Initialize performance optimizer
+        performanceOptimizer.preloadCriticalResources();
         
         // Initialize accessibility enhancements
         await accessibilityEnhancer.initialize();
@@ -72,13 +73,15 @@ export default function App(): React.JSX.Element {
         await enhancedSecurityManager.initialize();
         
         // Initialize SEO analytics
-        await seoAnalytics.initialize();
+        // Initialize SEO analytics
+        seoAnalytics.startTracking();
         
         // Initialize comprehensive enhancements
         await getComprehensiveEnhancements();
         
         // Setup performance alerts
-        performanceAlerts.setup();
+        // Setup performance alerts
+        performanceAlerts.startMonitoring();
         
         setIsLoading(false);
         
@@ -152,12 +155,12 @@ export default function App(): React.JSX.Element {
     if (uiState.showPerformanceMonitor) {
       const interval = setInterval(() => {
         const metrics = enhancedPerformanceMonitor.getMetrics();
-        if (metrics.memoryUsage > 0.8) {
+        if (metrics.get('memoryUsage') && (metrics.get('memoryUsage') as any).value > 0.8) {
           setNotifications(prev => [...prev, {
             id: Date.now().toString(),
             type: 'warning',
             title: 'High Memory Usage',
-            message: `Memory usage is at ${(metrics.memoryUsage * 100).toFixed(1)}%`,
+            message: `Memory usage is at ${((metrics.get('memoryUsage') as any)?.value * 100 || 0).toFixed(1)}%`,
             duration: 3000
           }]);
         }
@@ -216,18 +219,18 @@ export default function App(): React.JSX.Element {
           {uiState.showSystemDashboard && <EnhancedSystemDashboard />}
           {uiState.showPerformanceOptimizer && <PerformanceOptimizer />}
           {uiState.showPerformanceMonitor && <PerformanceMonitor />}
-          {uiState.showAIDashboard && <AIPerformanceDashboard />}
+          {uiState.showAIDashboard && <AIPerformanceDashboard isVisible={uiState.showAIDashboard} onClose={() => updateUIState({ showAIDashboard: false })} />}
           {uiState.showSEOOptimizer && <SEOOptimizer />}
-          {uiState.showKeyboardHelp && <KeyboardShortcutsHelp />}
-          {uiState.showCommandPalette && <CommandPalette />}
-          {uiState.showRealTimeMetrics && <RealTimePerformanceMonitor />}
+          {uiState.showKeyboardHelp && <KeyboardShortcutsHelp isVisible={uiState.showKeyboardHelp} onClose={() => updateUIState({ showKeyboardHelp: false })} />}
+          {uiState.showCommandPalette && <CommandPalette isVisible={uiState.showCommandPalette} onClose={() => updateUIState({ showCommandPalette: false })} commands={[]} />}
+          {uiState.showRealTimeMetrics && <RealTimePerformanceMonitor isVisible={uiState.showRealTimeMetrics} onClose={() => updateUIState({ showRealTimeMetrics: false })} />}
         </Suspense>
         
         {/* Always-on Components */}
-        <WebsiteEnhancements />
+        <WebsiteEnhancements isVisible={true} onClose={() => {}} />
         <AdvancedAnalytics />
-        <SystemHealthDashboard />
-        <PerformanceMetricsDashboard />
+        <SystemHealthDashboard isVisible={true} onClose={() => {}} />
+        <PerformanceMetricsDashboard isVisible={true} onClose={() => {}} />
       </div>
     </EnhancedErrorBoundary>
   );

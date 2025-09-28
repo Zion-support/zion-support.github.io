@@ -7,7 +7,8 @@ interface PerformanceMetrics {
   fid: number;
   cls: number;
   ttfb: number;
-  memory?: number;
+  renderTime?: number;
+  memoryUsage?: number;
   connection?: string;
   bundleSize?: number;
 }
@@ -45,13 +46,13 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       if (navigation) {
         newMetrics.ttfb = navigation.responseStart - navigation.requestStart;
-        newMetrics.renderTime = navigation.loadEventEnd - navigation.navigationStart;
+        newMetrics.renderTime = navigation.loadEventEnd - navigation.fetchStart;
       }
 
       // Get memory usage
       if ('memory' in performance) {
         const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number } }).memory;
-        newMetrics.memoryUsage = memory.usedJSHeapSize;
+        newMetrics.memoryUsage = memory?.usedJSHeapSize || 0;
       }
 
       // Get paint metrics
@@ -89,7 +90,7 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     // Get memory usage
     if ('memory' in performance) {
       const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number } }).memory;
-      newMetrics.memoryUsage = memory.usedJSHeapSize;
+      newMetrics.memoryUsage = memory?.usedJSHeapSize || 0;
     }
 
     // Get paint metrics

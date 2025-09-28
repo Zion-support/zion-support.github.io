@@ -67,11 +67,41 @@ export default function App(): React.JSX.Element {
 
   // Command palette commands
   const commandPaletteCommands = useMemo(() => [
-    { id: 'dashboard', label: 'Open System Dashboard', action: () => setShowSystemDashboard(true) },
-    { id: 'health', label: 'Open System Health', action: () => setShowSystemHealth(true) },
-    { id: 'keyboard', label: 'Show Keyboard Shortcuts', action: () => setShowKeyboardHelp(true) },
-    { id: 'performance', label: 'Open Performance Widget', action: () => setShowPerformanceWidget(true) },
-    { id: 'theme', label: 'Toggle Theme', action: () => setIsDarkMode(!isDarkMode) },
+    { 
+      id: 'dashboard', 
+      title: 'Open System Dashboard', 
+      description: 'View comprehensive system metrics and health status',
+      category: 'System',
+      action: () => setShowSystemDashboard(true) 
+    },
+    { 
+      id: 'health', 
+      title: 'Open System Health', 
+      description: 'Monitor system health and performance metrics',
+      category: 'System',
+      action: () => setShowSystemHealth(true) 
+    },
+    { 
+      id: 'keyboard', 
+      title: 'Show Keyboard Shortcuts', 
+      description: 'Display available keyboard shortcuts and commands',
+      category: 'Help',
+      action: () => setShowKeyboardHelp(true) 
+    },
+    { 
+      id: 'performance', 
+      title: 'Open Performance Widget', 
+      description: 'Access real-time performance monitoring tools',
+      category: 'Performance',
+      action: () => setShowPerformanceWidget(true) 
+    },
+    { 
+      id: 'theme', 
+      title: 'Toggle Theme', 
+      description: 'Switch between light and dark mode',
+      category: 'UI',
+      action: () => setIsDarkMode(!isDarkMode) 
+    },
   ], [isDarkMode]);
 
   // Initialize comprehensive enhancements
@@ -95,7 +125,7 @@ export default function App(): React.JSX.Element {
       performanceOptimizer.optimizeServiceWorker();
       
       // Start memory optimization
-      const cleanupMemoryOptimization = performanceOptimizer.optimizeMemoryUsage();
+      const cleanupMemoryOptimization = performanceOptimizer.optimizeMemory();
       
       return () => {
         if (cleanupMemoryOptimization) {
