@@ -32,9 +32,9 @@ class ErrorRecoverySystem {
     // Network error recovery
     this.addStrategy({
       name: 'network-retry',
-      condition: (error, context) => 
+      condition: (error) => 
         error.message.includes('fetch') || error.message.includes('network'),
-      action: async (error, context) => {
+      action: async () => {
         console.log('🔄 Retrying network request...');
         await new Promise(resolve => setTimeout(resolve, 1000));
         // Retry logic would go here
@@ -47,7 +47,7 @@ class ErrorRecoverySystem {
       name: 'component-reset',
       condition: (error, context) => 
         Boolean(context.component && error.message.includes('component')),
-      action: async (error, context) => {
+      action: async () => {
         console.log('🔄 Resetting component...');
         // Component reset logic would go here
       },
@@ -57,9 +57,9 @@ class ErrorRecoverySystem {
     // Memory error recovery
     this.addStrategy({
       name: 'memory-cleanup',
-      condition: (error, context) => 
+      condition: (error) => 
         error.message.includes('memory') || error.message.includes('heap'),
-      action: async (error, context) => {
+      action: async () => {
         console.log('🧹 Cleaning up memory...');
         if ('gc' in window) {
           (window as any).gc();
@@ -72,7 +72,7 @@ class ErrorRecoverySystem {
     this.addStrategy({
       name: 'fallback',
       condition: () => true,
-      action: async (error, context) => {
+      action: async () => {
         console.log('🆘 Applying fallback recovery...');
         // Generic recovery logic
       },

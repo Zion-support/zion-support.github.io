@@ -5,15 +5,8 @@ import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
 import AdvancedErrorBoundary from './components/AdvancedErrorBoundary';
 import PerformanceTracker from './components/PerformanceTracker';
 import AccessibilityEnhancements from './components/AccessibilityEnhancements';
-import { seoAnalytics, performanceSEO, seoManager } from './utils/seoEnhanced';
-import { analytics } from './utils/analytics';
-import { performanceOptimizer } from './utils/performanceOptimizations';
-import { accessibilityEnhancer } from './utils/accessibilityEnhancer';
-import { seoOptimizer } from './utils/seoOptimizations';
+import { seoAnalytics } from './utils/seoEnhanced';
 import { initializePerformanceEnhancements } from './utils/performanceEnhancements';
-import { AdvancedAutomationSystem } from './utils/advancedAutomationSystem';
-import { AccessibilityEnhancer } from './utils/accessibilityEnhancer';
-import { SecurityEnhancer } from './utils/securityEnhancer';
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
 import RealTimeMonitor from './components/RealTimeMonitor';
 import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
@@ -22,8 +15,6 @@ import PerformanceMonitor from './components/PerformanceMonitor';
 import SEOOptimizer from './components/SEOOptimizer';
 import AIPerformanceDashboard from './components/AIPerformanceDashboard';
 import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
-import { enhancedAnalytics } from './utils/enhancedAnalytics';
-import { advancedCacheSystem } from './utils/advancedCacheSystem';
 import './index.css';
 import './styles/notifications.css';
 import './styles/system-metrics.css';
@@ -41,7 +32,7 @@ export default function App(): React.JSX.Element {
   const [showAccessibilityPanel, setShowAccessibilityPanel] = useState(false);
 
   // Engagement tracking data
-  const engagementData = useMemo(() => ({
+  useMemo(() => ({
     startTime: Date.now(),
     scrollDepth: 0,
     clicks: 0
@@ -58,7 +49,7 @@ export default function App(): React.JSX.Element {
   });
 
   // Performance optimization hook
-  const { preloadResource, optimizePerformance } = usePerformanceOptimization({
+  usePerformanceOptimization({
     enablePreloading: true,
     enableResourceHints: true,
     enableCriticalCSS: true,
@@ -66,7 +57,7 @@ export default function App(): React.JSX.Element {
   });
 
   // SEO data
-  const seoData = useMemo(() => ({
+  useMemo(() => ({
     title: 'Zion Tech Group - Leading AI & Technology Solutions',
     description: 'Cutting-edge AI, quantum computing, and digital transformation solutions for modern enterprises. Expert consulting, cloud services, and innovative technology implementations.',
     keywords: ['AI solutions', 'quantum computing', 'digital transformation', 'cloud services', 'enterprise technology', 'machine learning', 'automation', 'blockchain'],
