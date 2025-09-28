@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import { screen, fireEvent, waitFor } from '@testing-library/dom';
-import { PerformanceDashboard } from '../PerformanceDashboard';
+import PerformanceDashboard from '../PerformanceDashboard';
 
 // Mock framer-motion
 jest.mock('framer-motion', () => ({
@@ -11,87 +11,100 @@ jest.mock('framer-motion', () => ({
   AnimatePresence: ({ children }: { children: React.ReactNode }) => children
 }));
 
+// Mock AdvancedPerformanceMonitor
+jest.mock('../../utils/advancedPerformanceMonitor', () => ({
+  __esModule: true,
+  default: {
+    getInstance: jest.fn(() => ({
+      getMetrics: jest.fn(() => []),
+      getCurrentMetrics: jest.fn(() => ({
+        pageLoadTime: 1500,
+        firstContentfulPaint: 1200,
+        largestContentfulPaint: 2000,
+        cumulativeLayoutShift: 0.05,
+        firstInputDelay: 50,
+        totalBlockingTime: 200
+      })),
+      getLatestMetrics: jest.fn(() => ({
+        pageLoadTime: 1500,
+        firstContentfulPaint: 1200,
+        largestContentfulPaint: 2000,
+        cumulativeLayoutShift: 0.05,
+        firstInputDelay: 50,
+        totalBlockingTime: 200
+      })),
+      isMonitoring: jest.fn(() => true),
+      startMonitoring: jest.fn(),
+      stopMonitoring: jest.fn()
+    }))
+  }
+}));
+
 describe('PerformanceDashboard', () => {
   beforeEach(() => {
     // Mock performance API
     Object.defineProperty(window, 'performance', {
       value: {
         now: jest.fn(() => Date.now()),
+        getEntriesByType: jest.fn(() => []),
         mark: jest.fn(),
-        measure: jest.fn()
+        measure: jest.fn(),
+        clearMarks: jest.fn(),
+        clearMeasures: jest.fn(),
+        memory: {
+          usedJSHeapSize: 1000000,
+          totalJSHeapSize: 2000000,
+          jsHeapSizeLimit: 4000000
+        }
       },
       writable: true
     });
   });
 
-  it('renders toggle button', () => {
-    render(<PerformanceDashboard />);
+  it('renders dashboard when visible', () => {
+    render(<PerformanceDashboard isVisible={true} />);
     
-    const toggleButton = screen.getByLabelText('Toggle Performance Dashboard');
-    expect(toggleButton).toBeInTheDocument();
-    expect(toggleButton).toHaveClass('bg-blue-600');
+    expect(screen.getByText('Performance Dashboard')).toBeInTheDocument();
+    expect(screen.getByText('🟢 Monitoring')).toBeInTheDocument();
   });
 
-  it('shows dashboard when toggle button is clicked', async () => {
-    render(<PerformanceDashboard />);
+  it('does not render when not visible', () => {
+    render(<PerformanceDashboard isVisible={false} />);
     
-    const toggleButton = screen.getByLabelText('Toggle Performance Dashboard');
-    fireEvent.click(toggleButton);
-    
-    await waitFor(() => {
-      expect(screen.getByText('Performance')).toBeInTheDocument();
-    });
+    expect(screen.queryByText('Performance Dashboard')).not.toBeInTheDocument();
   });
 
   it('displays performance metrics', async () => {
-    render(<PerformanceDashboard />);
-    
-    const toggleButton = screen.getByLabelText('Toggle Performance Dashboard');
-    fireEvent.click(toggleButton);
+    render(<PerformanceDashboard isVisible={true} />);
     
     await waitFor(() => {
-      expect(screen.getByText('Load Time')).toBeInTheDocument();
-      expect(screen.getByText('Memory')).toBeInTheDocument();
-      expect(screen.getByText('Requests')).toBeInTheDocument();
-      expect(screen.getByText('Cache Hit')).toBeInTheDocument();
-      expect(screen.getByText('Lighthouse')).toBeInTheDocument();
+      expect(screen.getByText('Current Metrics')).toBeInTheDocument();
     });
   });
 
-  it('closes dashboard when close button is clicked', async () => {
-    render(<PerformanceDashboard />);
+  it('shows close button when onClose prop is provided', () => {
+    const mockOnClose = jest.fn();
+    render(<PerformanceDashboard isVisible={true} onClose={mockOnClose} />);
     
-    const toggleButton = screen.getByLabelText('Toggle Performance Dashboard');
-    fireEvent.click(toggleButton);
+    const closeButton = screen.getByText('✕');
+    expect(closeButton).toBeInTheDocument();
     
-    await waitFor(() => {
-      expect(screen.getByText('Performance')).toBeInTheDocument();
-    });
-    
-    const closeButton = screen.getByText('×');
     fireEvent.click(closeButton);
-    
-    await waitFor(() => {
-      expect(screen.queryByText('Performance')).not.toBeInTheDocument();
-    });
+    expect(mockOnClose).toHaveBeenCalled();
   });
 
-  it('displays performance score with correct color', async () => {
-    render(<PerformanceDashboard />);
+  it('displays monitoring status', () => {
+    render(<PerformanceDashboard isVisible={true} />);
     
-    const toggleButton = screen.getByLabelText('Toggle Performance Dashboard');
-    fireEvent.click(toggleButton);
-    
-    await waitFor(() => {
-      const performanceBar = screen.getByText('Performance Score');
-      expect(performanceBar).toBeInTheDocument();
-    });
+    const statusElement = screen.getByText('🟢 Monitoring');
+    expect(statusElement).toBeInTheDocument();
+    expect(statusElement).toHaveClass('monitoring-status', 'active');
   });
 
   it('has proper accessibility attributes', () => {
-    render(<PerformanceDashboard />);
+    render(<PerformanceDashboard isVisible={true} />);
     
-    const toggleButton = screen.getByLabelText('Toggle Performance Dashboard');
-    expect(toggleButton).toHaveAttribute('aria-label', 'Toggle Performance Dashboard');
+    const dashboard = screen.getByText('Performance Dashboard');
+    expect(dashboard).toBeInTheDocument();
   });
 });

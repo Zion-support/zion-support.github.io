@@ -165,13 +165,21 @@ export default function App(): React.JSX.Element {
     
     // Initialize advanced performance monitor
     const advancedPerformanceMonitor = AdvancedPerformanceMonitor.getInstance();
-    advancedPerformanceMonitor.configure({
-      enableRealTimeMonitoring: true,
-      enableMemoryTracking: true,
-      enableNetworkTracking: true,
-      enableRenderTracking: true,
+    advancedPerformanceMonitor.updateConfig({
+      enableWebVitals: true,
+      enableMemoryMonitoring: true,
+      enableNetworkMonitoring: true,
+      enableCustomMetrics: true,
+      samplingRate: 1.0,
       reportInterval: 5000,
-      maxMetricsHistory: 100
+      thresholds: {
+        pageLoadTime: 3000,
+        firstContentfulPaint: 1800,
+        largestContentfulPaint: 2500,
+        cumulativeLayoutShift: 0.1,
+        firstInputDelay: 100,
+        totalBlockingTime: 300
+      }
     });
     advancedPerformanceMonitor.startMonitoring();
     
