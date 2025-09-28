@@ -32,6 +32,8 @@ import { advancedErrorRecovery } from './utils/advancedErrorRecovery';
 import { enhancedSEOOptimizer } from './utils/enhancedSEOOptimizer';
 import { enhancedSecuritySystem } from './utils/enhancedSecuritySystem';
 import { enhancedAccessibilitySystem } from './utils/enhancedAccessibilitySystem';
+import { apiCache as apiCacheSystem, imageCache as imageCacheSystem, dataCache as dataCacheSystem } from './utils/enhancedCachingSystem';
+import { enhancedAnalyticsSystem } from './utils/enhancedAnalyticsSystem';
 
 // Lazy load heavy components for better performance
 const EnhancedSystemDashboard = lazy(() => import('./components/EnhancedSystemDashboard'));
@@ -218,6 +220,10 @@ export default function App(): React.JSX.Element {
       enhancedSEOOptimizer.initialize();
       enhancedSecuritySystem.initialize();
       enhancedAccessibilitySystem.initialize();
+      apiCacheSystem.initialize();
+      imageCacheSystem.initialize();
+      dataCacheSystem.initialize();
+      enhancedAnalyticsSystem.initialize();
       
       // Initialize advanced systems
       void performanceAnalytics; // Initialize performance analytics
@@ -264,6 +270,12 @@ export default function App(): React.JSX.Element {
       // Log system status
       console.log('🔒 Security metrics:', enhancedSecuritySystem.getSecurityMetrics());
       console.log('♿ Accessibility metrics:', enhancedAccessibilitySystem.getAccessibilityMetrics());
+      console.log('💾 Cache metrics:', {
+        api: apiCacheSystem.getMetrics(),
+        image: imageCacheSystem.getMetrics(),
+        data: dataCacheSystem.getMetrics()
+      });
+      console.log('📊 Analytics metrics:', enhancedAnalyticsSystem.getMetrics());
       
       // Initialize error reporting system
       console.log('Error reporting system initialized');
