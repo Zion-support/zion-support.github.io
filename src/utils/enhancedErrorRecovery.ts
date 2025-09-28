@@ -85,8 +85,8 @@ export class EnhancedErrorRecovery {
     // Resource loading errors
     window.addEventListener('error', (event) => {
       if (event.target !== window) {
-        const target = event.target as HTMLImageElement | HTMLLinkElement | HTMLScriptElement;
-        const src = 'src' in target ? target.src : 'href' in target ? target.href : 'unknown';
+        const target = event.target as HTMLImageElement | HTMLScriptElement;
+        const src = 'src' in target ? target.src : 'unknown';
         this.handleError(new Error(`Resource loading failed: ${src}`), {
           component: 'resource',
           action: 'resource_load_error',

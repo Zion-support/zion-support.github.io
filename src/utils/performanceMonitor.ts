@@ -96,8 +96,8 @@ class PerformanceMonitor {
     const clsObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry: PerformanceEntry & { hadRecentInput?: boolean; value?: number }) => {
-        if (!entry.hadRecentInput && entry.value !== undefined) {
-          clsValue += entry.value;
+        if (!entry.hadRecentInput) {
+          clsValue += entry.value || 0;
         }
       });
       this.metrics.cls = clsValue;
@@ -133,9 +133,7 @@ class PerformanceMonitor {
   private observeMemoryUsage(): void {
     if ('memory' in performance) {
       const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
-      if (memory) {
-        this.metrics.memoryUsage = memory.usedJSHeapSize / memory.jsHeapSizeLimit;
-      }
+      this.metrics.memoryUsage = (memory?.usedJSHeapSize || 0) / (memory?.jsHeapSizeLimit || 1);
     }
   }
 
