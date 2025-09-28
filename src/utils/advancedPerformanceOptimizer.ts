@@ -515,7 +515,7 @@ class AdvancedPerformanceOptimizer {
     const score = this.getPerformanceScore();
     const report = `
 Performance Report:
-==================
+====
 Score: ${score}/100
 FCP: ${this.metrics.fcp.toFixed(2)}ms
 LCP: ${this.metrics.lcp.toFixed(2)}ms

@@ -73,6 +73,7 @@ import { securityUtils } from './utils/securityUtils';
 import { enhancedSecurityManager } from './utils/enhancedSecurityManager';
 import { advancedPerformanceOptimizer } from './utils/advancedPerformanceOptimizer';
 import { advancedSEOOptimizer } from './utils/advancedSEOOptimizer';
+  // These are already imported as lazy components above
 import PerformanceMetricsDashboard from './components/PerformanceMetricsDashboard';
 import ComprehensiveImprovements from './components/ComprehensiveImprovements';
 
