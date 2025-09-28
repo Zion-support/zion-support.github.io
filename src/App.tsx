@@ -28,7 +28,7 @@ export default function App(): React.JSX.Element {
   const [showAccessibilityPanel, setShowAccessibilityPanel] = useState(false);
   
   // Performance metrics state
-  const [performanceMetrics, setPerformanceMetrics] = useState({
+  const [performanceMetrics] = useState({
     memoryUsage: 0,
     renderTime: 0,
     networkLatency: 0,

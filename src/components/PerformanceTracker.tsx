@@ -44,7 +44,7 @@ export const PerformanceTracker: React.FC<PerformanceTrackerProps> = ({
   const frameCountRef = useRef(0);
   const lastTimeRef = useRef(performance.now());
   const errorCountRef = useRef(0);
-  const [isTracking, setIsTracking] = useState(true);
+  const [isTracking] = useState(true);
 
   // Core Web Vitals tracking
   const trackCoreWebVitals = useCallback(() => {
@@ -63,7 +63,7 @@ export const PerformanceTracker: React.FC<PerformanceTrackerProps> = ({
         // Track FID (First Input Delay)
         const fidObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
-          entries.forEach((entry: any) => {
+          entries.forEach((entry: PerformanceEventTiming) => {
             metricsRef.current.fid = entry.processingStart - entry.startTime;
           });
         });
@@ -73,7 +73,7 @@ export const PerformanceTracker: React.FC<PerformanceTrackerProps> = ({
         let clsValue = 0;
         const clsObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
-          entries.forEach((entry: any) => {
+          entries.forEach((entry: LayoutShift) => {
             if (!entry.hadRecentInput) {
               clsValue += entry.value;
               metricsRef.current.cls = clsValue;
@@ -85,7 +85,7 @@ export const PerformanceTracker: React.FC<PerformanceTrackerProps> = ({
         // Track TTFB (Time to First Byte)
         const navigationObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
-          entries.forEach((entry: any) => {
+          entries.forEach((entry: PerformanceNavigationTiming) => {
             metricsRef.current.ttfb = entry.responseStart - entry.requestStart;
           });
         });
@@ -224,30 +224,22 @@ export const PerformanceTracker: React.FC<PerformanceTrackerProps> = ({
   }, [onMetricsUpdate, interval, isTracking, trackCoreWebVitals, trackAdvancedMetrics]);
 
   // Expose control methods
-  const startTracking = useCallback(() => {
-    setIsTracking(true);
-  }, []);
-
-  const stopTracking = useCallback(() => {
-    setIsTracking(false);
-  }, []);
-
-  const resetMetrics = useCallback(() => {
-    metricsRef.current = {
-      loadTime: 0,
-      renderTime: 0,
-      fps: 0,
-      errors: 0,
-      lcp: 0,
-      fid: 0,
-      cls: 0,
-      ttfb: 0,
-      networkLatency: 0,
-      domSize: 0,
-      resourceCount: 0
-    };
-    errorCountRef.current = 0;
-  }, []);
+  // const resetMetrics = useCallback(() => {
+  //   metricsRef.current = {
+  //     loadTime: 0,
+  //     renderTime: 0,
+  //     fps: 0,
+  //     errors: 0,
+  //     lcp: 0,
+  //     fid: 0,
+  //     cls: 0,
+  //     ttfb: 0,
+  //     networkLatency: 0,
+  //     domSize: 0,
+  //     resourceCount: 0
+  //   };
+  //   errorCountRef.current = 0;
+  // }, []);
 
   return null; // This component doesn't render anything
 };
