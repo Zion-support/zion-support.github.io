@@ -3,6 +3,44 @@
  * Advanced performance monitoring and optimization for the Zion website
  */
 
+// Extended Performance Entry types for better type safety
+interface FirstInputEntry extends PerformanceEntry {
+  processingStart: number;
+  processingEnd: number;
+  target: EventTarget | null;
+}
+
+interface LayoutShiftEntry extends PerformanceEntry {
+  value: number;
+  hadRecentInput: boolean;
+  sources: Array<{
+    node: Node | null;
+    previousRect: DOMRectReadOnly;
+    currentRect: DOMRectReadOnly;
+  }>;
+}
+
+interface MemoryInfo {
+  usedJSHeapSize: number;
+  totalJSHeapSize: number;
+  jsHeapSizeLimit: number;
+}
+
+interface ExtendedPerformance extends Performance {
+  memory?: MemoryInfo;
+}
+
+interface NetworkConnection {
+  effectiveType?: string;
+  downlink?: number;
+  rtt?: number;
+  saveData?: boolean;
+}
+
+interface ExtendedNavigator extends Navigator {
+  connection?: NetworkConnection;
+}
+
 interface PerformanceMetrics {
   // Core Web Vitals
   lcp: number | null; // Largest Contentful Paint
@@ -161,8 +199,9 @@ class ModernPerformanceMonitor {
       try {
         const fidObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
-          entries.forEach((entry: any) => {
-            this.metrics.fid = entry.processingStart - entry.startTime;
+          entries.forEach((entry) => {
+            const firstInputEntry = entry as FirstInputEntry;
+            this.metrics.fid = firstInputEntry.processingStart - entry.startTime;
           });
         });
         fidObserver.observe({ entryTypes: ['first-input'] });
@@ -176,9 +215,10 @@ class ModernPerformanceMonitor {
         let clsValue = 0;
         const clsObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
-          entries.forEach((entry: any) => {
-            if (!entry.hadRecentInput) {
-              clsValue += entry.value;
+          entries.forEach((entry) => {
+            const layoutShiftEntry = entry as LayoutShiftEntry;
+            if (!layoutShiftEntry.hadRecentInput) {
+              clsValue += layoutShiftEntry.value;
             }
           });
           this.metrics.cls = clsValue;
@@ -235,7 +275,7 @@ class ModernPerformanceMonitor {
   private setupMemoryTracking(): void {
     if ('memory' in performance) {
       const updateMemoryUsage = () => {
-        const memory = (performance as any).memory;
+        const memory = (performance as ExtendedPerformance).memory;
         this.metrics.memoryUsage = {
           usedJSHeapSize: memory.usedJSHeapSize,
           totalJSHeapSize: memory.totalJSHeapSize,
@@ -266,7 +306,7 @@ class ModernPerformanceMonitor {
 
   private setupNetworkMonitoring(): void {
     if ('connection' in navigator) {
-      const connection = (navigator as any).connection;
+      const connection = (navigator as ExtendedNavigator).connection;
       this.metrics.connectionType = connection.type || 'unknown';
       this.metrics.effectiveType = connection.effectiveType || 'unknown';
       this.metrics.downlink = connection.downlink || 0;
@@ -330,7 +370,7 @@ class ModernPerformanceMonitor {
   private updateRealTimeMetrics(): void {
     // Update memory usage
     if ('memory' in performance) {
-      const memory = (performance as any).memory;
+      const memory = (performance as ExtendedPerformance).memory;
       this.metrics.memoryUsage = {
         usedJSHeapSize: memory.usedJSHeapSize,
         totalJSHeapSize: memory.totalJSHeapSize,
@@ -340,7 +380,7 @@ class ModernPerformanceMonitor {
 
     // Update network metrics
     if ('connection' in navigator) {
-      const connection = (navigator as any).connection;
+      const connection = (navigator as ExtendedNavigator).connection;
       this.metrics.connectionType = connection.type || 'unknown';
       this.metrics.effectiveType = connection.effectiveType || 'unknown';
       this.metrics.downlink = connection.downlink || 0;

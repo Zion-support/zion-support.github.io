@@ -3,6 +3,16 @@
  * Provides comprehensive accessibility features and WCAG compliance
  */
 
+// Speech Recognition API types
+interface SpeechRecognitionConstructor {
+  new (): SpeechRecognition;
+}
+
+interface ExtendedWindow extends Window {
+  SpeechRecognition?: SpeechRecognitionConstructor;
+  webkitSpeechRecognition?: SpeechRecognitionConstructor;
+}
+
 interface AccessibilityConfig {
   enableScreenReader: boolean;
   enableKeyboardNavigation: boolean;
@@ -591,7 +601,7 @@ class EnhancedAccessibilityManager {
    * Setup speech recognition
    */
   private setupSpeechRecognition(): void {
-    const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
+    const SpeechRecognition = (window as ExtendedWindow).SpeechRecognition || (window as ExtendedWindow).webkitSpeechRecognition;
     const recognition = new SpeechRecognition();
     
     recognition.continuous = false;

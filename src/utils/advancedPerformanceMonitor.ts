@@ -24,6 +24,69 @@ interface PerformanceConfig {
   thresholds: PerformanceThresholds;
 }
 
+// Extended Performance Entry types for better type safety
+interface FirstInputEntry extends PerformanceEntry {
+  processingStart: number;
+  processingEnd: number;
+  target: EventTarget | null;
+  hadRecentInput: boolean;
+}
+
+interface LayoutShiftEntry extends PerformanceEntry {
+  value: number;
+  hadRecentInput: boolean;
+  sources: Array<{
+    node: Node | null;
+    previousRect: DOMRectReadOnly;
+    currentRect: DOMRectReadOnly;
+  }>;
+}
+
+interface NavigationEntry extends PerformanceEntry {
+  fetchStart: number;
+  domainLookupStart: number;
+  domainLookupEnd: number;
+  connectStart: number;
+  connectEnd: number;
+  secureConnectionStart: number;
+  requestStart: number;
+  responseStart: number;
+  responseEnd: number;
+  domContentLoadedEventStart: number;
+  domContentLoadedEventEnd: number;
+  loadEventStart: number;
+  loadEventEnd: number;
+}
+
+interface MemoryInfo {
+  usedJSHeapSize: number;
+  totalJSHeapSize: number;
+  jsHeapSizeLimit: number;
+}
+
+interface ExtendedPerformance extends Performance {
+  memory?: MemoryInfo;
+}
+
+interface NetworkConnection {
+  effectiveType?: string;
+  downlink?: number;
+  rtt?: number;
+  saveData?: boolean;
+}
+
+interface ExtendedNavigator extends Navigator {
+  connection?: NetworkConnection;
+}
+
+interface GoogleAnalytics {
+  gtag: (command: string, action: string, parameters?: Record<string, unknown>) => void;
+}
+
+interface ExtendedWindow extends Window {
+  gtag?: GoogleAnalytics['gtag'];
+}
+
 class AdvancedPerformanceMonitor {
   private static instance: AdvancedPerformanceMonitor;
   private metrics: PerformanceMetrics[] = [];
@@ -100,19 +163,21 @@ class AdvancedPerformanceMonitor {
 
     // First Input Delay (FID)
     this.observeMetric('first-input', (entry) => {
-      this.recordMetric('firstInputDelay', (entry as any).processingStart - entry.startTime);
+      const firstInputEntry = entry as FirstInputEntry;
+      this.recordMetric('firstInputDelay', firstInputEntry.processingStart - entry.startTime);
     });
 
     // Cumulative Layout Shift (CLS)
     this.observeMetric('layout-shift', (entry) => {
-      if (!(entry as any).hadRecentInput) {
-        this.recordMetric('cumulativeLayoutShift', (entry as any).value);
+      const layoutShiftEntry = entry as LayoutShiftEntry;
+      if (!layoutShiftEntry.hadRecentInput) {
+        this.recordMetric('cumulativeLayoutShift', layoutShiftEntry.value);
       }
     });
 
     // Navigation Timing
     window.addEventListener('load', () => {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const navigation = performance.getEntriesByType('navigation')[0] as NavigationEntry;
       if (navigation) {
         this.recordMetric('pageLoadTime', navigation.loadEventEnd - navigation.fetchStart);
         this.recordMetric('domContentLoaded', navigation.domContentLoadedEventEnd - navigation.fetchStart);
@@ -173,7 +238,7 @@ class AdvancedPerformanceMonitor {
       tcp: navigation.connectEnd - navigation.connectStart,
       request: navigation.responseStart - navigation.requestStart,
       response: navigation.responseEnd - navigation.responseStart,
-      processing: navigation.domComplete - ((navigation as any).domLoading || 0),
+      processing: navigation.domComplete - (navigation.domLoading || 0),
       load: navigation.loadEventEnd - navigation.loadEventStart,
     };
 
@@ -204,7 +269,7 @@ class AdvancedPerformanceMonitor {
     if (!('memory' in performance)) return;
 
     const checkMemory = () => {
-      const memory = (performance as any).memory;
+      const memory = (performance as ExtendedPerformance).memory;
       if (memory) {
         this.recordMetric('memoryUsage', {
           usedJSHeapSize: memory.usedJSHeapSize,
@@ -222,7 +287,7 @@ class AdvancedPerformanceMonitor {
   private initializeNetworkMonitoring(): void {
     if (!('connection' in navigator)) return;
 
-    const connection = (navigator as any).connection;
+    const connection = (navigator as ExtendedNavigator).connection;
     if (connection) {
       this.recordMetric('networkInfo', {
         effectiveType: connection.effectiveType,
@@ -243,14 +308,14 @@ class AdvancedPerformanceMonitor {
     });
   }
 
-  private recordMetric(key: string, value: any): void {
+  private recordMetric(key: string, value: number | object): void {
     if (!this.isMonitoring) return;
 
     const currentMetrics = this.getCurrentMetrics();
     if (key === 'memoryUsage' || key === 'networkInfo') {
-      (currentMetrics as any)[key] = value;
+      (currentMetrics as Record<string, unknown>)[key] = value;
     } else if (typeof value === 'number') {
-      (currentMetrics as any)[key] = value;
+      (currentMetrics as Record<string, unknown>)[key] = value;
     }
   }
 
@@ -306,7 +371,7 @@ class AdvancedPerformanceMonitor {
   }
 
   private calculateAverages(metrics: PerformanceMetrics[]): Partial<PerformanceMetrics> {
-    const averages: any = {
+    const averages: Partial<PerformanceMetrics> = {
       customMetrics: {},
     };
 
@@ -316,7 +381,7 @@ class AdvancedPerformanceMonitor {
     ];
 
     numericFields.forEach(field => {
-      const values = metrics.map(m => (m as any)[field]).filter(v => v > 0);
+      const values = metrics.map(m => (m as Record<string, unknown>)[field] as number).filter(v => v > 0);
       if (values.length > 0) {
         averages[field] = values.reduce((a, b) => a + b, 0) / values.length;
       }
@@ -340,7 +405,7 @@ class AdvancedPerformanceMonitor {
     const violations: string[] = [];
 
     Object.entries(this.config.thresholds).forEach(([key, threshold]) => {
-      const value = (averages as any)[key];
+      const value = (averages as Record<string, unknown>)[key] as number;
       if (value && value > threshold) {
         violations.push(`${key}: ${value.toFixed(2)} > ${threshold}`);
       }
@@ -351,10 +416,10 @@ class AdvancedPerformanceMonitor {
 
   private reportToAnalytics(averages: Partial<PerformanceMetrics>, violations: string[]): void {
     // Report to Google Analytics
-    if (typeof window !== 'undefined' && (window as any).gtag) {
+    if (typeof window !== 'undefined' && (window as ExtendedWindow).gtag) {
       Object.entries(averages).forEach(([key, value]) => {
         if (typeof value === 'number') {
-          (window as any).gtag('event', 'performance_metric', {
+          (window as ExtendedWindow).gtag!('event', 'performance_metric', {
             metric_name: key,
             metric_value: Math.round(value),
             custom_map: {
@@ -369,8 +434,8 @@ class AdvancedPerformanceMonitor {
     if (violations.length > 0) {
       console.warn('Performance threshold violations:', violations);
       
-      if (typeof window !== 'undefined' && (window as any).gtag) {
-        (window as any).gtag('event', 'performance_violation', {
+      if (typeof window !== 'undefined' && (window as ExtendedWindow).gtag) {
+        (window as ExtendedWindow).gtag!('event', 'performance_violation', {
           violations: violations.join(', '),
           violation_count: violations.length,
         });
