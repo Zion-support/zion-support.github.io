@@ -474,28 +474,58 @@ class PerformanceEnhancer {
     
     return `
 Performance Report
-Generated: ${new Date().toISOString()}
+=================
+First Contentful Paint: ${fcp.toFixed(2)}ms
+Largest Contentful Paint: ${lcp.toFixed(2)}ms
+First Input Delay: ${fid.toFixed(2)}ms
+Cumulative Layout Shift: ${cls.toFixed(3)}
+Time to First Byte: ${ttfb.toFixed(2)}ms
+Memory Usage: ${memoryUsage.toFixed(2)}MB
 
-Core Web Vitals:
-- First Contentful Paint (FCP): ${fcp || 'N/A'}ms
-- Largest Contentful Paint (LCP): ${lcp || 'N/A'}ms
-- First Input Delay (FID): ${fid || 'N/A'}ms
-- Cumulative Layout Shift (CLS): ${cls || 'N/A'}
+Performance Score: ${this.calculatePerformanceScore()}/100
+    `.trim();
+  }
 
-Additional Metrics:
-- Time to First Byte (TTFB): ${ttfb || 'N/A'}ms
-- Memory Usage: ${memoryUsage || 'N/A'}MB
+  /**
+   * Calculate overall performance score
+   */
+  private calculatePerformanceScore(): number {
+    if (!this.metrics) return 0;
 
-Performance Status:
-- FCP: ${fcp && fcp < 1800 ? 'Good' : fcp && fcp < 3000 ? 'Needs Improvement' : 'Poor'}
-- LCP: ${lcp && lcp < 2500 ? 'Good' : lcp && lcp < 4000 ? 'Needs Improvement' : 'Poor'}
-- FID: ${fid && fid < 100 ? 'Good' : fid && fid < 300 ? 'Needs Improvement' : 'Poor'}
-- CLS: ${cls && cls < 0.1 ? 'Good' : cls && cls < 0.25 ? 'Needs Improvement' : 'Poor'}
+    const { fcp, lcp, fid, cls } = this.metrics;
+    
+    let score = 100;
+    
+    // FCP scoring (good: <1.8s, needs improvement: 1.8-3.0s, poor: >3.0s)
+    if (fcp > 3000) score -= 30;
+    else if (fcp > 1800) score -= 15;
+    
+    // LCP scoring (good: <2.5s, needs improvement: 2.5-4.0s, poor: >4.0s)
+    if (lcp > 4000) score -= 30;
+    else if (lcp > 2500) score -= 15;
+    
+    // FID scoring (good: <100ms, needs improvement: 100-300ms, poor: >300ms)
+    if (fid > 300) score -= 20;
+    else if (fid > 100) score -= 10;
+    
+    // CLS scoring (good: <0.1, needs improvement: 0.1-0.25, poor: >0.25)
+    if (cls > 0.25) score -= 20;
+    else if (cls > 0.1) score -= 10;
+    
+    return Math.max(0, score);
+  }
 
-This report provides insights into the current performance state.
-`;
+  /**
+   * Cleanup observers
+   */
+  public cleanup(): void {
+    this.observers.forEach(observer => observer.disconnect());
+    this.observers = [];
   }
 }
 
-// Export a singleton instance
+// Export singleton instance
 export const performanceEnhancer = new PerformanceEnhancer();
+
+// Export class for custom instances
+export { PerformanceEnhancer };
