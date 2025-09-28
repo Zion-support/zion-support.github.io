@@ -26,7 +26,10 @@ import { initializeAccessibilityEnhancements } from './utils/accessibilityEnhanc
 import { advancedPerformanceOptimizer } from './utils/advancedPerformanceOptimizer';
 import { advancedSEOOptimizer } from './utils/advancedSEOOptimizer';
 import { advancedAccessibilityEnhancer } from './utils/advancedAccessibilityEnhancer';
+import { advancedSecurityManager } from './utils/advancedSecurityManager';
+import { advancedAnalytics } from './utils/advancedAnalytics';
 import AdvancedAnalytics from './components/AdvancedAnalytics';
+import AdvancedMonitoringDashboard from './components/AdvancedMonitoringDashboard';
 import NotificationSystem, { Notification } from './components/NotificationSystem';
 import KeyboardShortcutsHelp from './components/KeyboardShortcutsHelp';
 import CommandPalette from './components/CommandPalette';
@@ -54,6 +57,7 @@ export default function App(): React.JSX.Element {
   const [showRealTimeMonitor, setShowRealTimeMonitor] = useState(false);
   const [showSystemHealth, setShowSystemHealth] = useState(false);
   const [showComprehensiveImprovements, setShowComprehensiveImprovements] = useState(false);
+  const [showAdvancedMonitoring, setShowAdvancedMonitoring] = useState(false);
 
   // Initialize app with custom configuration
   const { isLoading, loadingProgress, handleScroll, handleClick, trackEngagement: originalTrackEngagement } = useAppInitialization({
@@ -211,6 +215,8 @@ export default function App(): React.JSX.Element {
       advancedPerformanceOptimizer.initialize();
       advancedSEOOptimizer.initialize();
       advancedAccessibilityEnhancer.initialize();
+      advancedSecurityManager.initialize();
+      advancedAnalytics.initialize();
       
       // Get comprehensive enhancements
       const enhancements = getComprehensiveEnhancements();
@@ -371,6 +377,9 @@ export default function App(): React.JSX.Element {
             break;
           case 'I':
             setShowComprehensiveImprovements(!showComprehensiveImprovements);
+            break;
+          case 'O':
+            setShowAdvancedMonitoring(!showAdvancedMonitoring);
             break;
           case 'N':
             // Show notification
@@ -640,6 +649,12 @@ export default function App(): React.JSX.Element {
           onClose={() => setShowComprehensiveImprovements(false)}
         />
 
+        {/* Advanced Monitoring Dashboard - Toggle with Ctrl+Shift+M */}
+        <AdvancedMonitoringDashboard
+          isVisible={showAdvancedMonitoring}
+          onClose={() => setShowAdvancedMonitoring(false)}
+        />
+
         {/* New Components */}
         <NotificationSystem
           notifications={notifications}
@@ -711,6 +726,15 @@ export default function App(): React.JSX.Element {
           🚀
         </button>
 
+        {/* Advanced Monitoring Button */}
+        <button
+          onClick={() => setShowAdvancedMonitoring(true)}
+          className="fixed bottom-4 right-100 z-40 bg-purple-600 hover:bg-purple-700 text-white p-3 rounded-full shadow-lg transition-colors duration-200"
+          title="Advanced Monitoring (Ctrl+Shift+O)"
+        >
+          📊
+        </button>
+
         {/* Keyboard Shortcuts Help Panel */}
         <div className="fixed bottom-4 left-4 z-40 bg-gray-800 text-white p-3 rounded-lg shadow-lg text-sm opacity-75 hover:opacity-100 transition-opacity duration-200">
           <div className="font-semibold mb-1">Keyboard Shortcuts:</div>
@@ -723,6 +747,7 @@ export default function App(): React.JSX.Element {
           <div>Ctrl+Shift+R: Real-Time Monitor</div>
           <div>Ctrl+Shift+H: System Health</div>
           <div>Ctrl+Shift+I: Comprehensive Improvements</div>
+          <div>Ctrl+Shift+O: Advanced Monitoring</div>
           <div>Ctrl+Shift+K: Keyboard Help</div>
           <div>Ctrl+K: Command Palette</div>
           <div>Escape: Close All</div>
