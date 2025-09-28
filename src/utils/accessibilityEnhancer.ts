@@ -26,7 +26,6 @@ interface AccessibilityMetrics {
 }
 
 class AccessibilityEnhancer {
-  private static instance: AccessibilityEnhancer;
   private config: AccessibilityConfig;
   private metrics: AccessibilityMetrics;
   private focusableSelectors = [
@@ -67,13 +66,6 @@ class AccessibilityEnhancer {
     };
 
     this.initialize();
-  }
-
-  public static getInstance(): AccessibilityEnhancer {
-    if (!AccessibilityEnhancer.instance) {
-      AccessibilityEnhancer.instance = new AccessibilityEnhancer();
-    }
-    return AccessibilityEnhancer.instance;
   }
 
   public initialize(): void {
@@ -336,7 +328,7 @@ class AccessibilityEnhancer {
       const backgroundColor = styles.backgroundColor;
       
       if (color && backgroundColor) {
-        const contrastRatio = this.calculateContrastRatio();
+        const contrastRatio = this.calculateContrastRatio(color, backgroundColor);
         if (contrastRatio < 4.5) {
           element.setAttribute('data-low-contrast', 'true');
           console.warn('Low contrast detected:', element, 'Ratio:', contrastRatio);
