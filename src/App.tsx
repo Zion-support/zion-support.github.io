@@ -63,6 +63,7 @@ export default function App(): React.JSX.Element {
     // Click handling logic can be added here
   }, []);
 
+<<<<<<< HEAD
   // Engagement data for tracking
   const engagementData = useMemo(() => ({
     startTime: Date.now(),
@@ -90,6 +91,23 @@ export default function App(): React.JSX.Element {
     ogImage: '/og-image.png',
     twitterCard: 'summary_large_image' as const
   }), []);
+
+  // Simple SEO manager
+  const seoManager = {
+    updateMetaTags: (data: typeof seoData) => {
+      if (typeof document !== 'undefined') {
+        document.title = data.title;
+        const metaDescription = document.querySelector('meta[name="description"]');
+        if (metaDescription) {
+          metaDescription.setAttribute('content', data.description);
+        }
+      }
+    },
+    updateSEO: (data: typeof seoData) => {
+      // Use updateMetaTags as the implementation
+      seoManager.updateMetaTags(data);
+    }
+  };
 
   useEffect(() => {
     // Add performance marks for better monitoring
