@@ -27,13 +27,13 @@ export function useLazyImage(src: string, placeholder?: string) {
 /**
  * Enhanced lazy loading utility with error boundaries and loading states
  */
-export function createLazyComponent<T extends ComponentType<any>>(
+export function createLazyComponent<T extends ComponentType<Record<string, unknown>>>(
   importFunc: () => Promise<{ default: T }>,
   fallback?: ComponentType
 ) {
   const LazyComponent = lazy(importFunc);
   
-  return function LazyWrapper(props: any) {
+  return function LazyWrapper(props: Record<string, unknown>) {
     return (
       <Suspense fallback={fallback ? React.createElement(fallback) : <div>Loading...</div>}>
         <LazyComponent {...props} />
@@ -45,7 +45,7 @@ export function createLazyComponent<T extends ComponentType<any>>(
 /**
  * Preload a component for better performance
  */
-export function preloadComponent(importFunc: () => Promise<any>) {
+export function preloadComponent(importFunc: () => Promise<{ default: ComponentType<Record<string, unknown>> }>) {
   return () => {
     const link = document.createElement('link');
     link.rel = 'modulepreload';
@@ -57,13 +57,13 @@ export function preloadComponent(importFunc: () => Promise<any>) {
 /**
  * Lazy load with intersection observer for better performance
  */
-export function createIntersectionLazyComponent<T extends ComponentType<any>>(
+export function createIntersectionLazyComponent<T extends ComponentType<Record<string, unknown>>>(
   importFunc: () => Promise<{ default: T }>,
   options?: IntersectionObserverInit
 ) {
   const LazyComponent = lazy(importFunc);
   
-  return function IntersectionLazyWrapper(props: any) {
+  return function IntersectionLazyWrapper(props: Record<string, unknown>) {
     const [isVisible, setIsVisible] = useState(false);
     const ref = useRef<HTMLDivElement>(null);
 
@@ -106,14 +106,14 @@ export function createIntersectionLazyComponent<T extends ComponentType<any>>(
 /**
  * Batch preload multiple components
  */
-export function preloadComponents(importFuncs: (() => Promise<any>)[]) {
+export function preloadComponents(importFuncs: (() => Promise<{ default: ComponentType<Record<string, unknown>> }>)[]) {
   return Promise.all(importFuncs.map(func => func()));
 }
 
 /**
  * Lazy load with retry mechanism
  */
-export function createRetryLazyComponent<T extends ComponentType<any>>(
+export function createRetryLazyComponent<T extends ComponentType<Record<string, unknown>>>(
   importFunc: () => Promise<{ default: T }>,
   maxRetries: number = 3
 ) {

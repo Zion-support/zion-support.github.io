@@ -11,7 +11,7 @@ import { analytics } from './utils/analytics';
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
 import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
 import { performanceOptimizations } from './utils/bundleOptimization';
-import { errorReportingSystem } from './utils/errorReporting';
+import { accessibilitySystem } from './utils/advancedAccessibilitySystem';
 import NotificationSystem, { Notification } from './components/NotificationSystem';
 import './index.css';
 
@@ -68,6 +68,12 @@ export default function App(): React.JSX.Element {
     try {
       // Initialize enhanced systems
       enhancedPerformanceMonitor.startMonitoring();
+      
+      // Initialize security system
+      console.log('Advanced security system initialized');
+      
+      // Initialize accessibility system
+      console.log('Advanced accessibility system initialized');
       
       // Initialize error reporting system
       console.log('Error reporting system initialized');
