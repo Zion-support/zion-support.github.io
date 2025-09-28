@@ -50,7 +50,7 @@ class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
       errorId
     });
 
-    // Report error to external service
+    // Report error if enabled
     if (enableReporting) {
       this.reportError(error, errorInfo, errorId);
     }
@@ -65,46 +65,33 @@ class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
   }
 
   private reportError = (error: Error, errorInfo: ErrorInfo, errorId: string) => {
-    const errorReport = {
-      errorId,
-      message: error.message,
-      stack: error.stack,
-      componentStack: errorInfo.componentStack,
-      timestamp: new Date().toISOString(),
-      userAgent: navigator.userAgent,
-      url: window.location.href,
-      userId: localStorage.getItem('analytics_user_id') || 'anonymous',
-      sessionId: localStorage.getItem('analytics_session_id') || 'unknown'
-    };
+    try {
+      // Send error to analytics service
+      if (typeof window !== 'undefined' && (window as any).gtag) {
+        (window as any).gtag('event', 'exception', {
+          description: error.message,
+          fatal: false,
+          custom_map: {
+            error_id: errorId,
+            component_stack: errorInfo.componentStack
+          }
+        });
+      }
 
-    // Send to error reporting service
-    if (typeof (window as Window & { gtag?: (command: string, event: string, data: Record<string, unknown>) => void }).gtag === 'function') {
-      (window as Window & { gtag: (command: string, event: string, data: Record<string, unknown>) => void }).gtag('event', 'exception', {
-        description: error.message,
-        fatal: false,
-        custom_map: {
-          error_id: errorId,
-          component_stack: errorInfo.componentStack
-        }
-      });
-    }
-
-    // Store error locally for debugging
-    const errors = JSON.parse(localStorage.getItem('error_reports') || '[]');
-    errors.push(errorReport);
-    localStorage.setItem('error_reports', JSON.stringify(errors.slice(-50))); // Keep last 50 errors
-
-    // Send to external error reporting service (if configured)
-    if (process.env.REACT_APP_ERROR_REPORTING_URL) {
-      fetch(process.env.REACT_APP_ERROR_REPORTING_URL, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(errorReport)
-      }).catch(err => {
-        console.warn('Failed to send error report:', err);
-      });
+      // Send error to custom analytics
+      if (typeof window !== 'undefined' && (window as any).analytics) {
+        (window as any).analytics.track('Error Boundary', {
+          error: error.message,
+          stack: error.stack,
+          componentStack: errorInfo.componentStack,
+          errorId,
+          timestamp: new Date().toISOString(),
+          url: window.location.href,
+          userAgent: navigator.userAgent
+        });
+      }
+    } catch (reportingError) {
+      console.error('Failed to report error:', reportingError);
     }
   };
 
@@ -124,48 +111,20 @@ class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
   };
 
   private handleReload = () => {
-    window.location.reload();
+    if (typeof window !== 'undefined') {
+      window.location.reload();
+    }
   };
-
-  private handleReset = () => {
-    this.setState({
-      hasError: false,
-      error: null,
-      errorInfo: null,
-      errorId: '',
-      retryCount: 0
-    });
-  };
-
-  componentDidMount() {
-    // Set up global error handler for unhandled errors
-    window.addEventListener('unhandledrejection', this.handleUnhandledRejection);
-    window.addEventListener('error', this.handleGlobalError);
-  }
 
   componentWillUnmount() {
-    window.removeEventListener('unhandledrejection', this.handleUnhandledRejection);
-    window.removeEventListener('error', this.handleGlobalError);
-    
     if (this.retryTimeoutId) {
       clearTimeout(this.retryTimeoutId);
     }
   }
 
-  private handleUnhandledRejection = (event: PromiseRejectionEvent) => {
-    const error = new Error(`Unhandled Promise Rejection: ${event.reason}`);
-    this.reportError(error, { componentStack: 'Global Promise Rejection' } as ErrorInfo, `promise_${Date.now()}`);
-  };
-
-  private handleGlobalError = (event: ErrorEvent) => {
-    const error = new Error(event.message);
-    error.stack = `Global Error: ${event.filename}:${event.lineno}:${event.colno}`;
-    this.reportError(error, { componentStack: 'Global Error Handler' } as ErrorInfo, `global_${Date.now()}`);
-  };
-
   render() {
-    const { hasError, error, errorInfo, errorId, retryCount } = this.state;
-    const { children, fallback, maxRetries = 3, enableRecovery = true } = this.props;
+    const { hasError, error, errorInfo, retryCount } = this.state;
+    const { children, fallback, maxRetries = 3 } = this.props;
 
     if (hasError) {
       // Use custom fallback if provided
@@ -175,72 +134,66 @@ class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
 
       // Default error UI
       return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-md w-full space-y-8">
-            <div className="text-center">
-              <div className="mx-auto h-12 w-12 text-red-500">
-                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <div className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-900">
+          <div className="max-w-md w-full bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6">
+            <div className="flex items-center mb-4">
+              <div className="flex-shrink-0">
+                <svg className="h-8 w-8 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
                 </svg>
               </div>
-              <h2 className="mt-6 text-3xl font-extrabold text-gray-900">
-                Oops! Something went wrong
-              </h2>
-              <p className="mt-2 text-sm text-gray-600">
-                We&apos;re sorry, but something unexpected happened. Our team has been notified.
-              </p>
-              {process.env.NODE_ENV === 'development' && (
-                <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-md">
-                  <h3 className="text-sm font-medium text-red-800">Error Details:</h3>
-                  <p className="mt-1 text-sm text-red-700">
-                    <strong>Error ID:</strong> {errorId}
-                  </p>
-                  <p className="mt-1 text-sm text-red-700">
-                    <strong>Message:</strong> {error?.message}
-                  </p>
-                  {errorInfo && (
-                    <details className="mt-2">
-                      <summary className="text-sm font-medium text-red-800 cursor-pointer">
-                        Component Stack
-                      </summary>
-                      <pre className="mt-1 text-xs text-red-600 whitespace-pre-wrap">
-                        {errorInfo.componentStack}
-                      </pre>
-                    </details>
-                  )}
-                </div>
-              )}
+              <div className="ml-3">
+                <h3 className="text-lg font-medium text-gray-900 dark:text-white">
+                  Something went wrong
+                </h3>
+                <p className="text-sm text-gray-500 dark:text-gray-400">
+                  We're sorry, but something unexpected happened.
+                </p>
+              </div>
             </div>
 
-            <div className="mt-8 space-y-4">
-              {enableRecovery && retryCount < maxRetries && (
+            {process.env.NODE_ENV === 'development' && error && (
+              <div className="mt-4 p-4 bg-red-50 dark:bg-red-900/20 rounded-md">
+                <h4 className="text-sm font-medium text-red-800 dark:text-red-200 mb-2">
+                  Error Details:
+                </h4>
+                <p className="text-sm text-red-700 dark:text-red-300 font-mono">
+                  {error.message}
+                </p>
+                {errorInfo && (
+                  <details className="mt-2">
+                    <summary className="text-sm text-red-600 dark:text-red-400 cursor-pointer">
+                      Component Stack
+                    </summary>
+                    <pre className="mt-2 text-xs text-red-600 dark:text-red-400 overflow-auto">
+                      {errorInfo.componentStack}
+                    </pre>
+                  </details>
+                )}
+              </div>
+            )}
+
+            <div className="mt-6 flex space-x-3">
+              {retryCount < maxRetries && (
                 <button
                   onClick={this.handleRetry}
-                  className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                  className="flex-1 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors"
                 >
                   Try Again ({maxRetries - retryCount} attempts left)
                 </button>
               )}
-
-              <button
-                onClick={this.handleReset}
-                className="w-full flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
-              >
-                Reset Application
-              </button>
-
               <button
                 onClick={this.handleReload}
-                className="w-full flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                className="flex-1 bg-gray-600 hover:bg-gray-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors"
               >
                 Reload Page
               </button>
+            </div>
 
-              <div className="text-center">
-                <p className="text-xs text-gray-500">
-                  If the problem persists, please contact support with Error ID: {errorId}
-                </p>
-              </div>
+            <div className="mt-4 text-center">
+              <p className="text-xs text-gray-500 dark:text-gray-400">
+                If this problem persists, please contact support.
+              </p>
             </div>
           </div>
         </div>
