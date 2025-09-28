@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import { clsx } from 'clsx';
-import { performanceOptimizer, type PerformanceMetrics, type OptimizationSuggestion } from '../utils/performanceOptimizer';
+import {performanceOptimizer} from '../utils/performanceOptimizer';
 
 interface EnhancedPerformanceMonitorProps {
   className?: string;

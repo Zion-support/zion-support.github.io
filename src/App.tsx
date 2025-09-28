@@ -4,7 +4,7 @@ import { AppRouter } from './router';
 import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import PerformanceTracker from './components/PerformanceTracker';
-// import PerformanceMonitor from './components/PerformanceMonitor';
+import PerformanceMonitor from './components/PerformanceMonitor';
 // import EnhancedPerformanceMonitor from './components/EnhancedPerformanceMonitor';
 import PerformanceDashboard from './components/PerformanceDashboard';
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
@@ -18,12 +18,20 @@ import { seoManager } from './utils/advancedSEOManager';
 import { errorTracker } from './utils/advancedErrorTracker';
 import { apiCache, imageCache, dataCache } from './utils/advancedCacheManager';
 
+// Import new comprehensive systems
+import { performanceOptimizer } from './utils/performanceOptimizations';
+import { accessibilityEnhancer } from './utils/accessibilityEnhancements';
+// import { securityEnhancer } from './utils/securityEnhancements';
+// import ComprehensiveMonitoringDashboard from './components/ComprehensiveMonitoringDashboard';
+
 // Import enhanced utilities
 import { enhancedErrorHandler } from './utils/enhancedErrorHandling';
 import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitoring';
 import { enhancedAccessibilityManager } from './utils/enhancedAccessibility';
 import { advancedErrorRecovery } from './utils/advancedErrorRecovery';
 import { enhancedSEOOptimizer } from './utils/enhancedSEOOptimizer';
+import { enhancedSecuritySystem } from './utils/enhancedSecuritySystem';
+import { enhancedAccessibilitySystem } from './utils/enhancedAccessibilitySystem';
 
 // Lazy load heavy components for better performance
 const EnhancedSystemDashboard = lazy(() => import('./components/EnhancedSystemDashboard'));
@@ -38,6 +46,11 @@ const EnhancedCommandPalette = lazy(() => import('./components/EnhancedCommandPa
 const PerformanceIndicator = lazy(() => import('./components/PerformanceIndicator'));
 const AccessibilityEnhancer = lazy(() => import('./components/AccessibilityEnhancer'));
 const DynamicMetaTags = lazy(() => import('./components/DynamicMetaTags'));
+const SystemStatusIndicator = lazy(() => import('./components/SystemStatusIndicator'));
+const EnhancedNotificationSystem = lazy(() => import('./components/EnhancedNotificationSystem'));
+const KeyboardShortcutsManager = lazy(() => import('./components/KeyboardShortcutsManager'));
+// const ModernFeatures = lazy(() => import('./components/ModernFeatures'));
+// const EnhancedPerformanceDashboard = lazy(() => import('./components/EnhancedPerformanceDashboard'));
 
 export default function App(): React.JSX.Element {
   const navigate = useNavigate();
@@ -54,6 +67,9 @@ export default function App(): React.JSX.Element {
   const [showComprehensiveDashboard, setShowComprehensiveDashboard] = useState(false);
   const [showRealTimePerformance, setShowRealTimePerformance] = useState(false);
   const [showEnhancedCommandPalette, setShowEnhancedCommandPalette] = useState(false);
+  const [showSystemStatus, setShowSystemStatus] = useState(true);
+  const [showEnhancedNotifications] = useState(true);
+  const [showKeyboardShortcutsManager, setShowKeyboardShortcutsManager] = useState(false);
   // const [showPerformanceDashboard, setShowPerformanceDashboard] = useState(false);
 
   // Notification management
@@ -200,6 +216,8 @@ export default function App(): React.JSX.Element {
       enhancedAccessibilityManager.initialize();
       advancedErrorRecovery.initialize();
       enhancedSEOOptimizer.initialize();
+      enhancedSecuritySystem.initialize();
+      enhancedAccessibilitySystem.initialize();
       
       // Initialize advanced systems
       void performanceAnalytics; // Initialize performance analytics
@@ -242,6 +260,10 @@ export default function App(): React.JSX.Element {
       
       // Initialize accessibility system
       console.log('Advanced accessibility system initialized');
+      
+      // Log system status
+      console.log('🔒 Security metrics:', enhancedSecuritySystem.getSecurityMetrics());
+      console.log('♿ Accessibility metrics:', enhancedAccessibilitySystem.getAccessibilityMetrics());
       
       // Initialize error reporting system
       console.log('Error reporting system initialized');
@@ -313,6 +335,16 @@ export default function App(): React.JSX.Element {
       setIsDarkMode((prev: boolean) => !prev);
       console.debug('Keyboard shortcut used:', { shortcut: 'cmd+shift+t', action: 'toggle_theme' });
     }
+    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'S') {
+      event.preventDefault();
+      setShowSystemStatus((prev: boolean) => !prev);
+      console.debug('Keyboard shortcut used:', { shortcut: 'cmd+shift+s', action: 'toggle_system_status' });
+    }
+    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === '?') {
+      event.preventDefault();
+      setShowKeyboardShortcutsManager((prev: boolean) => !prev);
+      console.debug('Keyboard shortcut used:', { shortcut: 'cmd+shift+?', action: 'toggle_keyboard_shortcuts_manager' });
+    }
     if (event.key === 'Escape') {
       setShowCommandPalette(false);
       setShowSystemDashboard(false);
@@ -323,6 +355,7 @@ export default function App(): React.JSX.Element {
       setShowComprehensiveDashboard(false);
       setShowRealTimePerformance(false);
       setShowEnhancedCommandPalette(false);
+      setShowKeyboardShortcutsManager(false);
       seoAnalytics.trackEvent('keyboard_shortcut', { shortcut: 'escape', action: 'close_modals' });
     }
   }, [addNotification]);
@@ -391,8 +424,22 @@ export default function App(): React.JSX.Element {
       document.addEventListener('click', handleClick, { passive: true });
       document.addEventListener('keydown', handleKeyDown);
 
-      // Initialize basic systems
-      console.debug('Initializing analytics system');
+      // Initialize comprehensive systems
+      console.debug('Initializing comprehensive systems');
+      
+      // Initialize performance optimizer
+      performanceOptimizer.optimizeImages();
+      performanceOptimizer.preloadCriticalResources();
+      performanceOptimizer.enableCaching();
+      performanceOptimizer.optimizeBundleSize();
+      
+      // Initialize accessibility enhancer
+      accessibilityEnhancer.announce('Application loaded successfully');
+      
+      // Initialize security enhancer
+      console.debug('Security system initialized');
+      
+      // Initialize analytics system
       
       // Initialize SEO analytics
       seoAnalytics.trackPageView(window.location.pathname);
@@ -673,6 +720,99 @@ export default function App(): React.JSX.Element {
           </Suspense>
         )}
 
+        {/* System Status Indicator */}
+        {showSystemStatus && (
+          <Suspense fallback={<ModernLoadingSpinner />}>
+            <SystemStatusIndicator
+              refreshInterval={30000}
+              showDetails={true}
+            />
+          </Suspense>
+        )}
+
+        {/* Enhanced Notification System */}
+        {showEnhancedNotifications && (
+          <Suspense fallback={<ModernLoadingSpinner />}>
+            <EnhancedNotificationSystem
+              notifications={notifications}
+              onRemove={removeNotification}
+              maxNotifications={5}
+              position="top-right"
+              showSoundToggle={true}
+              showHistoryToggle={true}
+            />
+          </Suspense>
+        )}
+
+        {/* Keyboard Shortcuts Manager */}
+        {showKeyboardShortcutsManager && (
+          <Suspense fallback={<ModernLoadingSpinner />}>
+            <KeyboardShortcutsManager
+              shortcuts={[
+                {
+                  id: 'toggle-system-dashboard',
+                  keys: ['ctrl', 'shift', 'd'],
+                  description: 'Toggle System Dashboard',
+                  category: 'system',
+                  action: () => setShowSystemDashboard(!showSystemDashboard),
+                  enabled: true,
+                  global: true
+                },
+                {
+                  id: 'toggle-system-health',
+                  keys: ['ctrl', 'shift', 'h'],
+                  description: 'Toggle System Health Dashboard',
+                  category: 'system',
+                  action: () => setShowSystemHealth(!showSystemHealth),
+                  enabled: true,
+                  global: true
+                },
+                {
+                  id: 'toggle-performance-monitor',
+                  keys: ['ctrl', 'shift', 'r'],
+                  description: 'Toggle Real-Time Performance Monitor',
+                  category: 'tools',
+                  action: () => setShowRealTimePerformance(!showRealTimePerformance),
+                  enabled: true,
+                  global: true
+                },
+                {
+                  id: 'toggle-command-palette',
+                  keys: ['ctrl', 'k'],
+                  description: 'Toggle Enhanced Command Palette',
+                  category: 'navigation',
+                  action: () => setShowEnhancedCommandPalette(!showEnhancedCommandPalette),
+                  enabled: true,
+                  global: true
+                },
+                {
+                  id: 'toggle-theme',
+                  keys: ['ctrl', 'shift', 't'],
+                  description: 'Toggle Theme (Light/Dark)',
+                  category: 'view',
+                  action: () => setIsDarkMode(!isDarkMode),
+                  enabled: true,
+                  global: true
+                },
+                {
+                  id: 'toggle-system-status',
+                  keys: ['ctrl', 'shift', 's'],
+                  description: 'Toggle System Status Indicator',
+                  category: 'system',
+                  action: () => setShowSystemStatus(!showSystemStatus),
+                  enabled: true,
+                  global: true
+                }
+              ]}
+              onShortcutTriggered={(shortcut) => {
+                console.log('Shortcut triggered:', shortcut.description);
+              }}
+              showHelpPanel={true}
+              enableGlobalShortcuts={true}
+            />
+          </Suspense>
+        )}
+
         {/* Theme Toggle Button */}
         <button
           onClick={() => setIsDarkMode(!isDarkMode)}
@@ -690,8 +830,10 @@ export default function App(): React.JSX.Element {
           <div>Ctrl+Shift+H: System Health</div>
           <div>Ctrl+Shift+M: Advanced Monitoring</div>
           <div>Ctrl+Shift+R: Real-Time Performance</div>
+          <div>Ctrl+Shift+S: System Status</div>
           <div>Ctrl+Shift+K: Keyboard Help</div>
           <div>Ctrl+Shift+T: Toggle Theme</div>
+          <div>Ctrl+Shift+?: Shortcuts Manager</div>
           <div>Ctrl+K: Enhanced Command Palette</div>
           <div>Esc: Close All Modals</div>
         </div>
@@ -701,6 +843,15 @@ export default function App(): React.JSX.Element {
       <Suspense fallback={null}>
         <PerformanceIndicator showDetails={showAdvancedMonitoring} />
       </Suspense>
+      
+      {/* Performance Monitor */}
+      <PerformanceMonitor 
+        showDetails={showAdvancedMonitoring}
+        enableAlerts={true}
+        onPerformanceIssue={(metric, value, threshold) => {
+          console.warn(`Performance issue detected: ${metric} = ${value} (threshold: ${threshold})`);
+        }}
+      />
     </AccessibilityEnhancer>
     </Suspense>
     </EnhancedErrorBoundary>

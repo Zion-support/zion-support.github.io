@@ -5,9 +5,9 @@
 
 import React, { useState, useEffect, useCallback } from 'react';
 import { clsx } from 'clsx';
-import { performanceAnalytics, type PerformanceReport } from '../utils/advancedPerformanceAnalytics';
-import { seoManager, type SEOAuditResult } from '../utils/advancedSEOManager';
-import { apiCache, imageCache, dataCache, type CacheStats } from '../utils/advancedCacheManager';
+import {performanceAnalytics} from '../utils/advancedPerformanceAnalytics';
+import {seoManager} from '../utils/advancedSEOManager';
+import {apiCache, imageCache, dataCache} from '../utils/advancedCacheManager';
 
 interface MonitoringDashboardProps {
   className?: string;

@@ -10,6 +10,14 @@ interface PerformanceData {
   memoryLimit: number;
 }
 
+interface AnalyticsEvent {
+  name?: string;
+  type?: string;
+  timestamp?: number;
+  properties?: Record<string, unknown>;
+  data?: Record<string, unknown>;
+}
+
 interface AccessibilityData {
   features: string;
 }
@@ -79,7 +87,7 @@ const AdvancedDashboard: React.FC = () => {
       startTime: Date.now() - 300000, // 5 minutes ago
       lastActivity: Date.now(),
       pageViews: events.filter((e: { name?: string; type?: string }) => e.name === 'page_view' || e.type === 'page_view').length,
-      events: events.map((e: { name?: string; type?: string; timestamp?: number; properties?: Record<string, unknown>; data?: Record<string, unknown> }) => ({
+      events: events.map((e: { name?: string; type?: string; timestamp?: number; properties?: Record<string, unknown>; data?: Record<string, unknown> }) => ({9e1f845a0a258e73f8025ac6434f
         event: e.name || e.type,
         timestamp: e.timestamp || Date.now(),
         properties: e.properties || e.data

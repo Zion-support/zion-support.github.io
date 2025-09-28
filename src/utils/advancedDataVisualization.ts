@@ -34,6 +34,13 @@ export interface ChartData {
   metadata?: Record<string, string | number | boolean>;
 }
 
+export interface StoredChart {
+  data: DataPoint[];
+  options: Record<string, unknown>;
+  container: HTMLElement;
+  type?: 'line' | 'bar' | 'pie' | 'scatter' | 'area';
+}
+
 export interface VisualizationOptions {
   title?: string;
   subtitle?: string;
@@ -50,7 +57,14 @@ export interface VisualizationOptions {
 export class AdvancedDataVisualization {
   private config: ChartConfig;
   private container: HTMLElement | null = null;
-  private charts: Map<string, { render: () => void; update: (data: DataPoint[]) => void; destroy: () => void }> = new Map();
+  private charts: Map<string, { 
+    render: () => void; 
+    update: (data: DataPoint[]) => void; 
+    destroy: () => void;
+    data?: ChartData;
+    options?: VisualizationOptions;
+    container?: HTMLElement;
+  }> = new Map();
   private dataStreams: Map<string, DataPoint[]> = new Map();
   private updateIntervals: Map<string, NodeJS.Timeout> = new Map();
 
@@ -77,7 +91,9 @@ export class AdvancedDataVisualization {
 
     this.container = container;
     this.charts.set(containerId, {
-      
+      render: () => {},
+      update: () => {},
+      destroy: () => {},
       data,
       options,
       container
@@ -96,7 +112,9 @@ export class AdvancedDataVisualization {
 
     this.container = container;
     this.charts.set(containerId, {
-      
+      render: () => {},
+      update: () => {},
+      destroy: () => {},
       data,
       options,
       container
@@ -115,7 +133,9 @@ export class AdvancedDataVisualization {
 
     this.container = container;
     this.charts.set(containerId, {
-      
+      render: () => {},
+      update: () => {},
+      destroy: () => {},
       data,
       options,
       container
@@ -134,7 +154,9 @@ export class AdvancedDataVisualization {
 
     this.container = container;
     this.charts.set(containerId, {
-      
+      render: () => {},
+      update: () => {},
+      destroy: () => {},
       data,
       options,
       container
@@ -153,7 +175,9 @@ export class AdvancedDataVisualization {
 
     this.container = container;
     this.charts.set(containerId, {
-      
+      render: () => {},
+      update: () => {},
+      destroy: () => {},
       data,
       options,
       container
@@ -166,7 +190,7 @@ export class AdvancedDataVisualization {
     const chart = this.charts.get(containerId);
     if (!chart) return;
 
-    const { data, options, container } = chart as any;
+    const { data, options, container } = chart as StoredChart;
     const { width, height, margin, colors } = this.config;
 
     // Clear container
@@ -239,7 +263,7 @@ export class AdvancedDataVisualization {
     const chart = this.charts.get(containerId);
     if (!chart) return;
 
-    const { data, options, container } = chart as any;
+    const { data, options, container } = chart as StoredChart;
     const { width, height, margin, colors } = this.config;
 
     container.innerHTML = '';
@@ -304,7 +328,7 @@ export class AdvancedDataVisualization {
     const chart = this.charts.get(containerId);
     if (!chart) return;
 
-    const { data, options, container } = chart as any;
+    const { data, options, container } = chart as StoredChart;
     const { width, height, colors } = this.config;
 
     container.innerHTML = '';
@@ -369,7 +393,7 @@ export class AdvancedDataVisualization {
     const chart = this.charts.get(containerId);
     if (!chart) return;
 
-    const { data, options, container } = chart as any;
+    const { data, options, container } = chart as StoredChart;
     const { width, height, margin, colors } = this.config;
 
     container.innerHTML = '';
@@ -429,7 +453,7 @@ export class AdvancedDataVisualization {
     const chart = this.charts.get(containerId);
     if (!chart) return;
 
-    const { data, options, container } = chart as any;
+    const { data, options, container } = chart as StoredChart;
     const { width, height, margin, colors } = this.config;
 
     container.innerHTML = '';
@@ -669,7 +693,7 @@ export class AdvancedDataVisualization {
     const chart = this.charts.get(containerId);
     if (!chart) return;
 
-    chart.data = newData as any;
+    chart.data = newData as DataPoint[];
     this.renderChart(containerId);
   }
 
@@ -677,7 +701,7 @@ export class AdvancedDataVisualization {
     const chart = this.charts.get(containerId);
     if (!chart) return;
 
-    switch ((chart as any).type) {
+    switch ((chart as StoredChart).type) {
       case 'line':
         this.renderLineChart(containerId);
         break;
@@ -722,7 +746,7 @@ export class AdvancedDataVisualization {
     if (!chart) return '';
 
     if (format === 'svg') {
-      return (chart as any).container.innerHTML;
+      return (chart as StoredChart).container.innerHTML;
     }
 
     // For PNG/JPG, would need to convert SVG to canvas

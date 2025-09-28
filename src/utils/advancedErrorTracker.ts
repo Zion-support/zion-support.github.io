@@ -167,15 +167,15 @@ class AdvancedErrorTracker {
     };
 
     // Track XMLHttpRequest errors
-    XMLHttpRequest.prototype.open = function(method, url, ...args: any[]) {
-      this._method = method as any;
-      this._url = url as any;
-      return originalXHROpen.call(this, method, url, ...args as any[]);
+    XMLHttpRequest.prototype.open = function(method, url, async = true, user = null, password = null) {
+      (this as any)._method = method;
+      (this as any)._url = url;
+      return originalXHROpen.call(this, method, url, async as boolean, user as string | null, password as string | null);
     };
 
     XMLHttpRequest.prototype.send = function(...args) {
       this.addEventListener('error', () => {
-        this.trackError({
+        (this as any).trackError({
           message: `XHR error: ${this.status} ${this.statusText}`,
           category: 'network',
           severity: this.status >= 500 ? 'high' : 'medium',
