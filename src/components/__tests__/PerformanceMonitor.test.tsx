@@ -35,25 +35,25 @@ describe('PerformanceMonitor', () => {
     mockPerformance.getEntriesByName.mockReturnValue([]);
   });
 
-  it('renders performance metrics when show is true', () => {
-    render(<PerformanceMonitor show={true} />);
+  it('renders performance metrics when showDashboard is true', () => {
+    render(<PerformanceMonitor showDashboard={true} />);
     
-    expect(screen.getByText(/Performance/i)).toBeInTheDocument();
+    expect(screen.getByText(/Performance Monitor/i)).toBeInTheDocument();
   });
 
-  it('does not render when show is false', () => {
-    render(<PerformanceMonitor show={false} />);
+  it('does not render when showDashboard is false', () => {
+    render(<PerformanceMonitor showDashboard={false} />);
     
-    expect(screen.queryByText(/Performance Metrics/i)).not.toBeInTheDocument();
+    expect(screen.queryByText(/Performance Monitor/i)).not.toBeInTheDocument();
   });
 
   it('displays performance metrics correctly', () => {
-    render(<PerformanceMonitor show={true} />);
+    render(<PerformanceMonitor showDashboard={true} />);
     
     // Wait for metrics to be calculated
     setTimeout(() => {
       expect(screen.getByText(/Load Time:/i)).toBeInTheDocument();
-      expect(screen.getByText(/DOM Content Loaded:/i)).toBeInTheDocument();
+      expect(screen.getByText(/Render Time:/i)).toBeInTheDocument();
     }, 100);
   });
 
@@ -61,8 +61,8 @@ describe('PerformanceMonitor', () => {
       // @ts-expect-error - Testing behavior when performance API is not available
     delete window.performance;
     
-    render(<PerformanceMonitor show={true} />);
+    render(<PerformanceMonitor showDashboard={true} />);
     
-    expect(screen.getByText(/Performance/i)).toBeInTheDocument();
+    expect(screen.getByText(/Performance Monitor/i)).toBeInTheDocument();
   });
 });
