@@ -46,6 +46,64 @@ const ComprehensivePerformanceMonitor: React.FC<ComprehensivePerformanceMonitorP
   const [isMonitoring, setIsMonitoring] = useState(false);
   const [, setHistory] = useState<PerformanceMetrics[]>([]);
 
+  const checkPerformanceIssues = useCallback((currentMetrics: PerformanceMetrics) => {
+    const newAlerts: PerformanceAlert[] = [];
+
+    if (currentMetrics.fcp > 1800) {
+      newAlerts.push({
+        id: `fcp-${Date.now()}`,
+        type: 'warning',
+        message: `First Contentful Paint is ${currentMetrics.fcp.toFixed(0)}ms (should be < 1800ms)`,
+        timestamp: new Date(),
+        resolved: false
+      });
+    }
+
+    if (currentMetrics.lcp > 2500) {
+      newAlerts.push({
+        id: `lcp-${Date.now()}`,
+        type: 'warning',
+        message: `Largest Contentful Paint is ${currentMetrics.lcp.toFixed(0)}ms (should be < 2500ms)`,
+        timestamp: new Date(),
+        resolved: false
+      });
+    }
+
+    if (currentMetrics.cls > 0.1) {
+      newAlerts.push({
+        id: `cls-${Date.now()}`,
+        type: 'warning',
+        message: `Cumulative Layout Shift is ${currentMetrics.cls.toFixed(3)} (should be < 0.1)`,
+        timestamp: new Date(),
+        resolved: false
+      });
+    }
+
+    if (currentMetrics.ttfb > 800) {
+      newAlerts.push({
+        id: `ttfb-${Date.now()}`,
+        type: 'warning',
+        message: `Time to First Byte is ${currentMetrics.ttfb.toFixed(0)}ms (should be < 800ms)`,
+        timestamp: new Date(),
+        resolved: false
+      });
+    }
+
+    if (currentMetrics.bundleSize > 500) {
+      newAlerts.push({
+        id: `bundle-${Date.now()}`,
+        type: 'info',
+        message: `Bundle size is ${currentMetrics.bundleSize.toFixed(1)}KB (consider optimization)`,
+        timestamp: new Date(),
+        resolved: false
+      });
+    }
+
+    if (newAlerts.length > 0) {
+      setAlerts(prev => [...prev, ...newAlerts]);
+    }
+  }, []);
+
   const measurePerformance = useCallback(() => {
     if (typeof window === 'undefined') return;
 
@@ -143,74 +201,6 @@ const ComprehensivePerformanceMonitor: React.FC<ComprehensivePerformanceMonitorP
       // Check for performance issues and create alerts
       checkPerformanceIssues(newMetrics);
     });
-  }, [checkPerformanceIssues]);
-
-  const checkPerformanceIssues = useCallback((currentMetrics: PerformanceMetrics) => {
-    const newAlerts: PerformanceAlert[] = [];
-
-    if (currentMetrics.fcp > 1800) {
-      newAlerts.push({
-        id: `fcp-${Date.now()}`,
-        type: 'warning',
-        message: `First Contentful Paint is ${currentMetrics.fcp.toFixed(0)}ms (should be < 1800ms)`,
-        timestamp: new Date(),
-        resolved: false
-      });
-    }
-
-    if (currentMetrics.lcp > 2500) {
-      newAlerts.push({
-        id: `lcp-${Date.now()}`,
-        type: 'warning',
-        message: `Largest Contentful Paint is ${currentMetrics.lcp.toFixed(0)}ms (should be < 2500ms)`,
-        timestamp: new Date(),
-        resolved: false
-      });
-    }
-
-    if (currentMetrics.cls > 0.1) {
-      newAlerts.push({
-        id: `cls-${Date.now()}`,
-        type: 'warning',
-        message: `Cumulative Layout Shift is ${currentMetrics.cls.toFixed(3)} (should be < 0.1)`,
-        timestamp: new Date(),
-        resolved: false
-      });
-    }
-
-    if (currentMetrics.ttfb > 600) {
-      newAlerts.push({
-        id: `ttfb-${Date.now()}`,
-        type: 'warning',
-        message: `Time to First Byte is ${currentMetrics.ttfb.toFixed(0)}ms (should be < 600ms)`,
-        timestamp: new Date(),
-        resolved: false
-      });
-    }
-
-    if (currentMetrics.bundleSize > 500) {
-      newAlerts.push({
-        id: `bundle-${Date.now()}`,
-        type: 'info',
-        message: `Bundle size is ${currentMetrics.bundleSize.toFixed(1)}KB (consider code splitting)`,
-        timestamp: new Date(),
-        resolved: false
-      });
-    }
-
-    if (currentMetrics.memoryUsage > 50) {
-      newAlerts.push({
-        id: `memory-${Date.now()}`,
-        type: 'warning',
-        message: `Memory usage is ${currentMetrics.memoryUsage.toFixed(1)}MB (monitor for leaks)`,
-        timestamp: new Date(),
-        resolved: false
-      });
-    }
-
-    if (newAlerts.length > 0) {
-      setAlerts(prev => [...prev, ...newAlerts]);
-    }
   }, []);
 
   const startMonitoring = useCallback(() => {
