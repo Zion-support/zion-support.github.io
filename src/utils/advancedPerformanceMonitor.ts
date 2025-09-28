@@ -79,8 +79,9 @@ export class AdvancedPerformanceMonitor {
       // FID Observer
       const fidObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        entries.forEach((entry: PerformanceEventTiming) => {
-          this.metrics.fid = entry.processingStart - entry.startTime;
+        entries.forEach((entry) => {
+          const eventEntry = entry as PerformanceEventTiming;
+          this.metrics.fid = eventEntry.processingStart - eventEntry.startTime;
         });
       });
       fidObserver.observe({ entryTypes: ['first-input'] });

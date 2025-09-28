@@ -77,7 +77,8 @@ export class ErrorRecovery {
 }
 
 export const errorRecovery = new ErrorRecovery();
-=======
+
+/**
  * Advanced Error Recovery System
  * Provides comprehensive error handling and recovery mechanisms
  */
@@ -234,4 +235,3 @@ class ErrorRecoverySystem {
 
 export const errorRecoverySystem = new ErrorRecoverySystem();
 export type { ErrorContext, RecoveryStrategy };
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-688a
