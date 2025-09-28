@@ -4,7 +4,7 @@
  */
 
 interface SecurityEvent {
-  type: 'authentication' | 'authorization' | 'data_access' | 'api_call' | 'error';
+  type: 'authentication' | 'authorization' | 'data_access' | 'api_call' | 'error' | 'security_alert';
   severity: 'low' | 'medium' | 'high' | 'critical';
   message: string;
   timestamp: Date;
@@ -12,6 +12,7 @@ interface SecurityEvent {
   ipAddress?: string;
   userAgent?: string;
   metadata?: Record<string, any>;
+  originalEvent?: SecurityEvent;
 }
 
 interface SecurityPolicy {
@@ -195,7 +196,7 @@ class EnhancedSecurityManager {
       // Monitor for suspicious network requests
       const originalFetch = window.fetch;
       window.fetch = async function(...args) {
-        const url = typeof args[0] === 'string' ? args[0] : args[0].url;
+        const url = typeof args[0] === 'string' ? args[0] : (args[0] as Request).url;
         
         // Log API calls for monitoring
         if (url.includes('/api/')) {

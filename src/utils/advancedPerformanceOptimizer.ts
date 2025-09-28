@@ -11,6 +11,14 @@ interface PerformanceMetrics {
   ttfb: number;
   fmp: number;
   tti: number;
+  loadTime?: number;
+  renderTime?: number;
+  memoryUsage?: number;
+  fps?: number;
+  cacheHitRate?: number;
+  domSize?: number;
+  resourceCount?: number;
+  compressionRatio?: number;
 }
 
 interface OptimizationStrategy {
@@ -114,6 +122,34 @@ class AdvancedPerformanceOptimizer {
   private optimizeNetworkRequests(): void {
     // Implementation for network request optimization
   }
+
+  public getMetrics(): PerformanceMetrics {
+    return this.metrics || {
+      lcp: 0,
+      fid: 0,
+      cls: 0,
+      fcp: 0,
+      ttfb: 0,
+      fmp: 0,
+      tti: 0
+    };
+  }
+
+  public getOptimizationReport(): { metrics: PerformanceMetrics | null; strategies: OptimizationStrategy[] } {
+    return {
+      metrics: this.metrics,
+      strategies: this.strategies
+    };
+  }
+
+  public getPerformanceScore(): number {
+    if (!this.metrics) return 0;
+    // Simple scoring based on available metrics
+    const lcpScore = Math.max(0, 100 - (this.metrics.lcp / 10));
+    const fcpScore = Math.max(0, 100 - (this.metrics.fcp / 5));
+    const clsScore = Math.max(0, 100 - (this.metrics.cls * 1000));
+    return Math.round((lcpScore + fcpScore + clsScore) / 3);
+  }
 }
 
 /**
@@ -136,6 +172,7 @@ class AdvancedPerformanceOptimizerV2 {
   private metrics: PerformanceMetrics;
   private observers: PerformanceObserver[];
   private isInitialized: boolean = false;
+  private strategies: OptimizationStrategy[] = [];
 
   constructor(config: Partial<PerformanceConfig> = {}) {
     this.config = {
@@ -151,15 +188,17 @@ class AdvancedPerformanceOptimizerV2 {
     };
 
     this.metrics = {
+      lcp: 0,
+      fid: 0,
+      cls: 0,
+      fcp: 0,
+      ttfb: 0,
+      fmp: 0,
+      tti: 0,
       loadTime: 0,
       renderTime: 0,
       memoryUsage: 0,
       fps: 0,
-      lcp: 0,
-      fid: 0,
-      cls: 0,
-      ttfb: 0,
-      networkLatency: 0,
       domSize: 0,
       resourceCount: 0,
       cacheHitRate: 0,
@@ -636,9 +675,9 @@ Overall Score: ${score}/100
 LCP: ${metrics.lcp.toFixed(2)}ms
 FID: ${metrics.fid.toFixed(2)}ms
 CLS: ${metrics.cls.toFixed(4)}
-Memory Usage: ${(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB
-FPS: ${metrics.fps}
-Cache Hit Rate: ${(metrics.cacheHitRate * 100).toFixed(2)}%
+Memory Usage: ${metrics.memoryUsage ? (metrics.memoryUsage / 1024 / 1024).toFixed(2) : 'N/A'}MB
+FPS: ${metrics.fps || 'N/A'}
+Cache Hit Rate: ${metrics.cacheHitRate ? (metrics.cacheHitRate * 100).toFixed(2) : 'N/A'}%
     `.trim();
   }
 
