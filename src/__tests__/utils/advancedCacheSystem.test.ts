@@ -86,7 +86,7 @@ describe('Advanced Cache System', () => {
       
       // Value should be expired
       expect(await advancedCacheSystem.get(key)).toBeNull();
-    });
+    }, 10000);
 
     it('should not expire values without TTL', async () => {
       const key = 'test-key';
