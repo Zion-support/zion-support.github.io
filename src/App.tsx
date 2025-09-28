@@ -10,6 +10,7 @@ import { performanceOptimizer } from './utils/performanceOptimizations';
 // import { seoOptimizer } from './utils/seoOptimizations';
 // Removed unused imports to reduce warnings
 import { accessibilityEnhancer } from './utils/advancedAccessibilityEnhancer';
+import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
 import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import PerformanceMonitor from './components/PerformanceMonitor';
@@ -18,6 +19,13 @@ import AIPerformanceDashboard from './components/AIPerformanceDashboard';
 import WebsiteEnhancements from './components/WebsiteEnhancements';
 import { SEOOptimizer } from './components/SEOOptimizer';
 // import EnhancedAnalytics from './components/EnhancedAnalytics';
+// Available for future use:
+// import { seoManager } from './utils/seoEnhanced';
+// import { seoOptimizer } from './utils/seoOptimization';
+// import { cacheManager } from './utils/cacheManager';
+// import { apiClient } from './utils/apiClient';
+// import { notificationManager } from './utils/notificationManager';
+// import { userFeedback } from './utils/userFeedbackManager';
 import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
 import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
 import { performanceAlerts } from './utils/performanceAlerts';
@@ -65,6 +73,75 @@ export default function App(): React.JSX.Element {
   //   analytics: true
   // });
 
+  // Initialize app with custom configuration
+  const { isLoading, loadingProgress, handleScroll, handleClick, trackEngagement: originalTrackEngagement } = useAppInitialization({
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSecurity: true,
+    enableAnalytics: true,
+    enableNotifications: true,
+    enableCaching: true,
+  });
+
+  // Get current pathname for SEO
+  const currentPathname = typeof window !== 'undefined' ? window.location.pathname : '/';
+  const seoData = useSEOData(currentPathname);
+
+  // Performance optimization hook
+  const { preloadResource } = usePerformanceOptimization({
+    enablePreloading: true,
+    enableResourceHints: true,
+    enableImageOptimization: true,
+  });
+
+  // Initialize comprehensive enhancements
+  useEffect(() => {
+    try {
+      // Initialize enhanced systems
+      enhancedPerformanceMonitor.startMonitoring();
+      enhancedAnalytics.initialize();
+      advancedCacheSystem.initialize();
+      AdvancedAutomationSystem.getInstance().initialize();
+      
+      // Initialize accessibility and security enhancers
+      AccessibilityEnhancer.getInstance();
+      SecurityEnhancer.getInstance();
+      
+      // Get comprehensive enhancements
+      const enhancements = getComprehensiveEnhancements({
+        enableAdvancedPerformance: true,
+        enableSecurityFeatures: true,
+        enableAccessibilityFeatures: true,
+        enableSEOFeatures: true,
+        enableUXFeatures: true,
+        enableAnalytics: true,
+        enableOfflineSupport: true,
+        enablePWA: true
+      });
+
+      // Store enhancements globally for debugging
+      (window as unknown as Record<string, unknown>).enhancements = enhancements;
+    } catch (error) {
+      console.error('Error initializing enhancements:', error);
+    }
+  }, []);
+
+  // Optimized keyboard handler for system dashboard toggle
+  const handleKeyDown = useCallback((event: KeyboardEvent) => {
+    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'D') {
+      event.preventDefault();
+      setShowSystemDashboard((prev: boolean) => !prev);
+    }
+    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'P') {
+      event.preventDefault();
+      setShowPerformanceOptimizer((prev: boolean) => !prev);
+    }
+    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'M') {
+      event.preventDefault();
+      setShowPerformanceMonitor(prev => !prev);
+    }
+  }, []);
+
   // Engagement tracking data
   const engagementData = useMemo(() => ({
     startTime: Date.now(),
@@ -83,21 +160,6 @@ export default function App(): React.JSX.Element {
   //   ogImage: '/og-image.png',
   //   twitterCard: 'summary_large_image' as const
   // }), []);
-
-  // Initialize app with custom configuration
-  // Temporarily disable useAppInitialization to fix build
-  // const { isLoading, loadingProgress, handleScroll, handleClick, trackEngagement } = useAppInitialization({
-  //   enablePerformanceMonitoring: true,
-  //   enableAccessibility: true,
-  //   enableSecurity: true,
-  //   enableAnalytics: true,
-  //   enableNotifications: true,
-  //   enableCaching: true,
-  // });
-  
-  const isLoading = false;
-  const loadingProgress = 100;
-  const handleScroll = useCallback(() => {}, []);
   const handleClick = useCallback((event?: Event) => {
     // Handle click events for engagement tracking
     console.debug('Click event captured for engagement tracking', event);
@@ -468,6 +530,129 @@ export default function App(): React.JSX.Element {
         setShowSystemHealth(false);
       }
     };
+
+  // Enhanced track engagement function
+  const trackEngagement = useCallback(() => {
+    try {
+      const timeOnPage = Date.now() - engagementData.startTime;
+      seoAnalytics.trackUserEngagement(window.location.pathname, {
+        timeOnPage,
+        scrollDepth: engagementData.scrollDepth,
+        clicks: engagementData.clicks,
+      });
+      // Also call the original trackEngagement from useAppInitialization
+      originalTrackEngagement();
+    } catch (error) {
+      console.error('Error tracking engagement:', error);
+    }
+  }, [engagementData.clicks, engagementData.scrollDepth, engagementData.startTime, originalTrackEngagement]);
+
+  // Simple SEO manager
+  const seoManagerInstance = useMemo(() => ({
+    updateMetaTags: (data: typeof seoData) => {
+      try {
+        if (typeof document !== 'undefined') {
+          document.title = data.title;
+          const metaDescription = document.querySelector('meta[name="description"]');
+          if (metaDescription) {
+            metaDescription.setAttribute('content', data.description);
+          }
+        }
+      } catch (error) {
+        console.error('Error updating meta tags:', error);
+      }
+    }
+  }), []);
+  useEffect(() => {
+    try {
+      // Add performance marks for better monitoring
+      if (typeof window !== 'undefined' && window.performance && typeof performance.mark === 'function') {
+        performance.mark('app-init-start');
+        
+        // Add performance observer for better monitoring
+        if ('PerformanceObserver' in window) {
+          const observer = new PerformanceObserver((list) => {
+            for (const entry of list.getEntries()) {
+              if (entry.entryType === 'navigation') {
+                console.log('Navigation timing:', entry);
+              }
+            }
+          });
+          observer.observe({ entryTypes: ['navigation', 'paint', 'largest-contentful-paint'] });
+        }
+      }
+      
+      // Preload critical resources
+      preloadResource('/og-image.png', 'image');
+      preloadResource('/favicon.ico', 'image');
+
+      // Use passive listeners for better performance
+      window.addEventListener('scroll', handleScroll, { passive: true });
+      document.addEventListener('click', handleClick, { passive: true });
+      document.addEventListener('keydown', handleKeyDown);
+
+      // Initialize basic systems
+      analytics.initialize();
+      
+      // Initialize SEO analytics
+      seoAnalytics.trackPageView(window.location.pathname);
+      
+      // Initialize performance SEO optimizations
+      performanceSEO.optimizeImages();
+      performanceSEO.preloadCriticalResources();
+      performanceSEO.optimizeFonts();
+      performanceSEO.optimizeCSS();
+      
+      // Initialize analytics system
+      analytics.initialize();
+      analytics.trackPageView();
+
+      // Set default SEO data using the correct method
+      seoManagerInstance.updateMetaTags(seoData);
+    } catch (error) {
+      console.error('Error in main initialization effect:', error);
+    }
+  }, [seoData, handleScroll, handleClick, handleKeyDown, preloadResource, seoManagerInstance]);
+
+  // Main initialization and cleanup effect
+  React.useEffect(() => {
+    try {
+      // Mark app as fully initialized
+      if (typeof window !== 'undefined' && window.performance && 
+          typeof performance.mark === 'function' && 
+          typeof performance.measure === 'function') {
+        performance.mark('app-init-complete');
+        performance.measure('app-initialization', 'app-init-start', 'app-init-complete');
+      }
+
+      // Basic performance monitoring
+      if (typeof window !== 'undefined') {
+        console.log('🚀 Zion Tech Group App initialized');
+      }
+
+      // Track engagement on page unload
+      window.addEventListener('beforeunload', trackEngagement);
+      
+      // Cleanup function
+      return () => {
+        try {
+          document.removeEventListener('keydown', handleKeyDown);
+          window.removeEventListener('beforeunload', trackEngagement);
+          
+          // Final engagement tracking
+          trackEngagement();
+          
+          // Remove event listeners
+          window.removeEventListener('scroll', handleScroll);
+          document.removeEventListener('click', handleClick);
+        } catch (error) {
+          console.error('Error in cleanup effect:', error);
+        }
+      };
+    } catch (error) {
+      console.error('Error in cleanup effect:', error);
+    }
+  }, [trackEngagement, handleKeyDown, handleScroll, handleClick]);
 
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
