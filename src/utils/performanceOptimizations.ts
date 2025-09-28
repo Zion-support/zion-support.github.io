@@ -51,7 +51,7 @@ export function useDeepMemo<T>(
   factory: () => T,
   deps: React.DependencyList
 ): T {
-  const ref = useRef<{ deps: React.DependencyList; value: T }>();
+  const ref = useRef<{ deps: React.DependencyList; value: T } | undefined>(undefined);
 
   if (!ref.current || !deepEqual(ref.current.deps, deps)) {
     ref.current = { deps, value: factory() };
@@ -218,7 +218,7 @@ export const bundleOptimizations = {
    * Lazy load routes for code splitting
    */
   createLazyRoute: (importFunc: () => Promise<any>) => {
-    return React.lazy(importFunc);
+    return import('react').then(React => React.lazy(importFunc));
   },
 
   /**
@@ -308,7 +308,7 @@ export function collectPerformanceMetrics() {
 /**
  * Check performance budget
  */
-export function checkPerformanceBudget(metrics: any): string[] {
+export function checkPerformanceBudget(metrics: any = {}): string[] {
   const violations: string[] = [];
   
   if (metrics.loadTime > 3000) {
