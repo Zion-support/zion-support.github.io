@@ -1,4 +1,4 @@
-import React, { useMemo, useEffect, useCallback, useState } from 'react';
+import React, { useMemo, useEffect, useCallback } from 'react';
 import { AppRouter } from './router';
 import { useAppInitialization } from './hooks/useAppInitialization';
 import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
@@ -7,16 +7,30 @@ import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
 import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import { analytics } from './utils/analytics';
-import { seoAnalytics, performanceSEO, seoManager } from './utils/seoEnhanced';
+import { seoAnalytics, performanceSEO } from './utils/seoEnhanced';
+// Available for future use:
+// import { seoManager } from './utils/seoEnhanced';
+// import { seoOptimizer } from './utils/seoOptimization';
+// import { cacheManager } from './utils/cacheManager';
+// import { apiClient } from './utils/apiClient';
+// import { notificationManager } from './utils/notificationManager';
+// import { userFeedback } from './utils/userFeedbackManager';
+import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
+import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
+import { enhancedAnalytics } from './utils/enhancedAnalytics';
+import { advancedCacheSystem } from './utils/advancedCacheSystem';
+import { AdvancedAutomationSystem } from './utils/advancedAutomationSystem';
+import { AccessibilityEnhancer } from './utils/accessibilityEnhancer';
+import { SecurityEnhancer } from './utils/securityEnhancer';
 import './index.css';
 
 export default function App(): React.JSX.Element {
   // State for system dashboard and performance optimizer (currently unused but reserved for future features)
-  const [showSystemDashboard, setShowSystemDashboard] = useState(false);
-  const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
+  // const [showSystemDashboard, setShowSystemDashboard] = useState(false);
+  // const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
 
   // Initialize app with custom configuration
-  const { isLoading, loadingProgress, engagementData, handleScroll, handleClick, trackEngagement } = useAppInitialization({
+  const { isLoading, loadingProgress, handleScroll, handleClick, trackEngagement } = useAppInitialization({
     enablePerformanceMonitoring: true,
     enableAccessibility: true,
     enableSecurity: true,
@@ -32,6 +46,33 @@ export default function App(): React.JSX.Element {
     enableImageOptimization: true,
   });
 
+  // Initialize comprehensive enhancements
+  useEffect(() => {
+    // Initialize enhanced systems
+    enhancedPerformanceMonitor.startMonitoring();
+    enhancedAnalytics.initialize();
+    advancedCacheSystem.initialize();
+    AdvancedAutomationSystem.getInstance().initialize();
+    
+    // Initialize accessibility and security enhancers
+    AccessibilityEnhancer.getInstance();
+    SecurityEnhancer.getInstance();
+    
+    // Get comprehensive enhancements
+    const enhancements = getComprehensiveEnhancements({
+      enableAdvancedPerformance: true,
+      enableSecurityFeatures: true,
+      enableAccessibilityFeatures: true,
+      enableSEOFeatures: true,
+      enableUXFeatures: true,
+      enableAnalytics: true,
+      enableOfflineSupport: true,
+      enablePWA: true
+    });
+
+    // Store enhancements globally for debugging
+    (window as unknown as Record<string, unknown>).enhancements = enhancements;
+  }, []);
 
   // Optimized keyboard handler for system dashboard toggle
   const handleKeyDown = useCallback((event: KeyboardEvent) => {
@@ -56,6 +97,19 @@ export default function App(): React.JSX.Element {
     structuredData: []
   }), []);
 
+
+  // Simple SEO manager
+  const seoManagerInstance = useMemo(() => ({
+    updateMetaTags: (data: typeof seoData) => {
+      if (typeof document !== 'undefined') {
+        document.title = data.title;
+        const metaDescription = document.querySelector('meta[name="description"]');
+        if (metaDescription) {
+          metaDescription.setAttribute('content', data.description);
+        }
+      }
+    }
+  }), []);
 
   useEffect(() => {
     // Add performance marks for better monitoring
@@ -92,15 +146,26 @@ export default function App(): React.JSX.Element {
     
     // Initialize performance SEO optimizations
     performanceSEO.optimizeImages();
+    performanceSEO.preloadCriticalResources();
     performanceSEO.optimizeFonts();
+    performanceSEO.optimizeCSS();
+    
+    // Initialize analytics system
+    analytics.initialize();
+    analytics.trackPageView();
 
     // Set default SEO data using the correct method
-    seoManager.updateMetaTags(seoData);
+    seoManagerInstance.updateMetaTags(seoData);
 
-    // Basic performance monitoring
-    if (typeof window !== 'undefined') {
-      console.log('🚀 Zion Tech Group App initialized');
-    }
+    // Use passive listeners for better performance
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    document.addEventListener('click', handleClick, { passive: true });
+  }, [seoData, handleScroll, handleClick, handleKeyDown, preloadResource, seoManagerInstance]);
+
+  // Main initialization and cleanup effect
+  React.useEffect(() => {
+    // Track engagement on page unload
+    window.addEventListener('beforeunload', enhancedTrackEngagement);
 
     // Mark app as fully initialized
     if (typeof window !== 'undefined' && window.performance && 
@@ -110,27 +175,29 @@ export default function App(): React.JSX.Element {
       performance.measure('app-initialization', 'app-init-start', 'app-init-complete');
     }
 
-    // Cleanup function
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-      document.removeEventListener('click', handleClick);
-      document.removeEventListener('keydown', handleKeyDown);
-    };
-  }, [handleScroll, handleClick, handleKeyDown, seoData, preloadResource]);
+    // Basic performance monitoring
+    if (typeof window !== 'undefined') {
+      console.log('🚀 Zion Tech Group App initialized');
+    }
+  }, [seoData, handleScroll, handleClick, preloadResource, seoManagerInstance]);
 
   // Main initialization and cleanup effect
   React.useEffect(() => {
     // Track engagement on page unload
     window.addEventListener('beforeunload', trackEngagement);
-
     // Cleanup function
     return () => {
+      document.removeEventListener('keydown', handleKeyDown);
       window.removeEventListener('beforeunload', trackEngagement);
       
       // Final engagement tracking
       trackEngagement();
+      
+      // Remove event listeners
+      window.removeEventListener('scroll', handleScroll);
+      document.removeEventListener('click', handleClick);
     };
-  }, [trackEngagement]);
+  }, [trackEngagement, handleKeyDown, handleScroll, handleClick, seoData, preloadResource]);
 
   // Show loading screen while initializing
   if (isLoading) {
