@@ -6,35 +6,42 @@ interface AIPerformanceDashboardProps {
   onClose: () => void;
 }
 
-// Removed unused interfaces - they were defined but never used in the component
+interface PerformanceMetrics {
+  errorRate: number;
+  criticalErrorsToday: number;
+  userImpactScore: number;
+  avgResolutionTime: number;
+  [key: string]: unknown;
+}
+
+interface AIInsights {
+  predictedHighRiskActions: string[];
+  recommendedImprovements: string[];
+  errorTrends: Array<{
+    category: string;
+    trend: 'increasing' | 'decreasing' | 'stable';
+  }>;
+  [key: string]: unknown;
+}
+
+interface ErrorReport {
+  severity: string;
+  message: string;
+  lastOccurrence: string | Date;
+  occurrenceCount: number;
+  context: {
+    component?: string;
+    action?: string;
+  };
+  aiPredictedImpact?: number;
+  resolutionSuggestions?: string[];
+  [key: string]: unknown;
+}
 
 const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisible, onClose }) => {
-  const [metrics] = useState<{
-    errorRate: number;
-    avgResolutionTime: number;
-    criticalErrorsToday: number;
-    userImpactScore: number;
-  } | null>(null);
-  const [insights] = useState<{
-    predictedHighRiskActions: string[];
-    recommendedImprovements: string[];
-    errorTrends: Array<{
-      category: string;
-      trend: 'increasing' | 'decreasing' | 'stable';
-    }>;
-  } | null>(null);
-  const [errors] = useState<Array<{
-    severity: string;
-    message: string;
-    lastOccurrence: string | Date;
-    occurrenceCount: number;
-    context: {
-      component?: string;
-      action?: string;
-    };
-    aiPredictedImpact?: number;
-    resolutionSuggestions?: string[];
-  }>>([]);
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
+  const [insights, setInsights] = useState<AIInsights | null>(null);
+  const [errors, setErrors] = useState<ErrorReport[]>([]);
 
   useEffect(() => {
     if (isVisible) {
@@ -42,6 +49,23 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
         try {
           // TODO: Implement dashboard data fetching
           console.log('Dashboard data update triggered');
+          // For now, set some mock data
+          setMetrics({
+            errorRate: 0.5,
+            criticalErrorsToday: 0,
+            userImpactScore: 95,
+            avgResolutionTime: 15
+          });
+          setInsights({
+            predictedHighRiskActions: [],
+            recommendedImprovements: ['Monitor performance metrics regularly', 'Implement error tracking'],
+            errorTrends: [
+              { category: 'API', trend: 'stable' },
+              { category: 'UI', trend: 'decreasing' },
+              { category: 'Database', trend: 'stable' }
+            ]
+          });
+          setErrors([]);
         } catch (error) {
           console.error('Failed to fetch dashboard data:', error);
         }
