@@ -6,7 +6,7 @@ set -e
 echo "🚀 Starting PR merge process using GitHub API..."
 
 # GitHub API token
-TOKEN="ghs_ARoJSTvAacep8FvSbjlT0M4kz3PRL70w75Bt"
+TOKEN="${GITHUB_TOKEN}"
 REPO="Zion-Holdings/zion.app"
 
 # PRs to merge (from API response)
