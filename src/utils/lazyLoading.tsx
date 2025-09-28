@@ -40,10 +40,17 @@ export function createIntersectionLazyComponent<T extends ComponentType<any>>(
   const LazyComponent = lazy(importFunc);
   
   return function IntersectionLazyWrapper(props: any) {
+<<<<<<< HEAD
     const [isVisible, setIsVisible] = useState(false);
     const ref = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
+=======
+    const [isVisible, setIsVisible] = React.useState(false);
+    const ref = React.useRef<HTMLDivElement>(null);
+
+    React.useEffect(() => {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-14db
       const observer = new IntersectionObserver(
         ([entry]) => {
           if (entry.isIntersecting) {
@@ -67,6 +74,7 @@ export function createIntersectionLazyComponent<T extends ComponentType<any>>(
 
     return (
       <div ref={ref}>
+<<<<<<< HEAD
         {isVisible ? (
           <Suspense fallback={<div>Loading...</div>}>
             <LazyComponent {...props} />
@@ -74,6 +82,9 @@ export function createIntersectionLazyComponent<T extends ComponentType<any>>(
         ) : (
           <div>Loading...</div>
         )}
+=======
+        {isVisible ? <LazyComponent {...props} /> : <div>Loading...</div>}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-14db
       </div>
     );
   };
