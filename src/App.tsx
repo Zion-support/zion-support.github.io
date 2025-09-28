@@ -233,6 +233,7 @@ export default function App(): React.JSX.Element {
     return () => {
       document.removeEventListener('keydown', handleKeyDown);
       window.removeEventListener('beforeunload', enhancedTrackEngagement);
+    };
       
     // Final engagement tracking
     trackEngagement();
