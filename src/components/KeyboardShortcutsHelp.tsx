@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 
 interface Shortcut {
   key: string;
@@ -15,16 +15,16 @@ const KeyboardShortcutsHelp: React.FC<KeyboardShortcutsHelpProps> = ({ isVisible
   const [searchTerm, setSearchTerm] = useState('');
   const [filteredShortcuts, setFilteredShortcuts] = useState<Shortcut[]>([]);
 
-  const shortcuts: Shortcut[] = [
-    { key: 'Ctrl+K', description: 'Open Command Palette', category: 'Navigation' },
-    { key: 'Ctrl+Shift+P', description: 'Toggle Performance Dashboard', category: 'Performance' },
-    { key: 'Ctrl+Shift+D', description: 'Toggle System Dashboard', category: 'System' },
+  const shortcuts: Shortcut[] = useMemo(() => [
+    { key: 'Ctrl+Shift+D', description: 'Toggle System Dashboard', category: 'Dashboard' },
+    { key: 'Ctrl+Shift+P', description: 'Toggle Performance Optimizer', category: 'Performance' },
+    { key: 'Ctrl+Shift+M', description: 'Toggle Performance Monitor', category: 'Performance' },
     { key: 'Ctrl+Shift+A', description: 'Toggle AI Dashboard', category: 'AI' },
     { key: 'Ctrl+Shift+S', description: 'Toggle SEO Optimizer', category: 'SEO' },
     { key: 'Ctrl+Shift+C', description: 'Open Command Palette', category: 'Navigation' },
     { key: 'Ctrl+Shift+H', description: 'Show Keyboard Shortcuts', category: 'Help' },
     { key: 'Escape', description: 'Close All Modals', category: 'Navigation' },
-  ];
+  ], []);
 
   useEffect(() => {
     if (searchTerm) {
@@ -37,7 +37,7 @@ const KeyboardShortcutsHelp: React.FC<KeyboardShortcutsHelpProps> = ({ isVisible
     } else {
       setFilteredShortcuts(shortcuts);
     }
-  }, [searchTerm]);
+  }, [searchTerm, shortcuts]);
 
   if (!isVisible) return null;
 
