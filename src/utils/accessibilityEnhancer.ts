@@ -234,17 +234,3 @@ export class AccessibilityEnhancer {
 export const accessibilityEnhancer = new AccessibilityEnhancer();
 
 // Additional exports for compatibility
-export interface AccessibilityReport {
-  score: number;
-  issues: Array<{
-    type: string;
-    message: string;
-    severity: 'low' | 'medium' | 'high';
-    element?: string;
-  }>;
-  recommendations: Array<{
-    type: string;
-    message: string;
-    priority: 'low' | 'medium' | 'high';
-  }>;
-}
