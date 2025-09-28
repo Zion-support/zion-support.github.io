@@ -165,15 +165,19 @@ export function preloadResource(url: string, type: 'image' | 'script' | 'style' 
 }
 
 /**
- * Image lazy loading hook with optimized loading
+ * Image lazy loading hook for use with LazyImage component
  */
-export function useImageLazyLoading(src: string, placeholder: string = '') {
+export function useImageLazyLoading(
+  src: string,
+  placeholder: string = ''
+) {
   const [imageSrc, setImageSrc] = useState(placeholder);
   const [isLoaded, setIsLoaded] = useState(false);
   const elementRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (!elementRef.current || !src) return;
+    const element = elementRef.current;
+    if (!element || !src) return;
 
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -194,7 +198,7 @@ export function useImageLazyLoading(src: string, placeholder: string = '') {
       { threshold: 0.1, rootMargin: '50px' }
     );
 
-    observer.observe(elementRef.current);
+    observer.observe(element);
 
     return () => observer.disconnect();
   }, [src]);
