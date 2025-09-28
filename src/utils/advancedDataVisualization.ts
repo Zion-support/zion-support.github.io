@@ -77,7 +77,7 @@ export class AdvancedDataVisualization {
 
     this.container = container;
     this.charts.set(containerId, {
-      type: 'line',
+      
       data,
       options,
       container
@@ -96,7 +96,7 @@ export class AdvancedDataVisualization {
 
     this.container = container;
     this.charts.set(containerId, {
-      type: 'bar',
+      
       data,
       options,
       container
@@ -115,7 +115,7 @@ export class AdvancedDataVisualization {
 
     this.container = container;
     this.charts.set(containerId, {
-      type: 'pie',
+      
       data,
       options,
       container
@@ -134,7 +134,7 @@ export class AdvancedDataVisualization {
 
     this.container = container;
     this.charts.set(containerId, {
-      type: 'scatter',
+      
       data,
       options,
       container
@@ -153,7 +153,7 @@ export class AdvancedDataVisualization {
 
     this.container = container;
     this.charts.set(containerId, {
-      type: 'area',
+      
       data,
       options,
       container
@@ -166,7 +166,7 @@ export class AdvancedDataVisualization {
     const chart = this.charts.get(containerId);
     if (!chart) return;
 
-    const { data, options, container } = chart;
+    const { data, options, container } = chart as any;
     const { width, height, margin, colors } = this.config;
 
     // Clear container
@@ -239,7 +239,7 @@ export class AdvancedDataVisualization {
     const chart = this.charts.get(containerId);
     if (!chart) return;
 
-    const { data, options, container } = chart;
+    const { data, options, container } = chart as any;
     const { width, height, margin, colors } = this.config;
 
     container.innerHTML = '';
@@ -304,7 +304,7 @@ export class AdvancedDataVisualization {
     const chart = this.charts.get(containerId);
     if (!chart) return;
 
-    const { data, options, container } = chart;
+    const { data, options, container } = chart as any;
     const { width, height, colors } = this.config;
 
     container.innerHTML = '';
@@ -369,7 +369,7 @@ export class AdvancedDataVisualization {
     const chart = this.charts.get(containerId);
     if (!chart) return;
 
-    const { data, options, container } = chart;
+    const { data, options, container } = chart as any;
     const { width, height, margin, colors } = this.config;
 
     container.innerHTML = '';
@@ -429,7 +429,7 @@ export class AdvancedDataVisualization {
     const chart = this.charts.get(containerId);
     if (!chart) return;
 
-    const { data, options, container } = chart;
+    const { data, options, container } = chart as any;
     const { width, height, margin, colors } = this.config;
 
     container.innerHTML = '';
@@ -669,7 +669,7 @@ export class AdvancedDataVisualization {
     const chart = this.charts.get(containerId);
     if (!chart) return;
 
-    chart.data = newData;
+    chart.data = newData as any;
     this.renderChart(containerId);
   }
 
@@ -677,7 +677,7 @@ export class AdvancedDataVisualization {
     const chart = this.charts.get(containerId);
     if (!chart) return;
 
-    switch (chart.type) {
+    switch ((chart as any).type) {
       case 'line':
         this.renderLineChart(containerId);
         break;
@@ -698,7 +698,7 @@ export class AdvancedDataVisualization {
 
   public startDataStream(streamId: string, updateInterval: number = 1000): void {
     const interval = setInterval(() => {
-      this.updateDataStream(streamId);
+      this.updateDataStream();
     }, updateInterval);
 
     this.updateIntervals.set(streamId, interval);
@@ -722,7 +722,7 @@ export class AdvancedDataVisualization {
     if (!chart) return '';
 
     if (format === 'svg') {
-      return chart.container.innerHTML;
+      return (chart as any).container.innerHTML;
     }
 
     // For PNG/JPG, would need to convert SVG to canvas

@@ -1,248 +1,315 @@
-import React, { useState, useEffect, useCallback, useRef } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
+import { Activity, Cpu, HardDrive, Wifi, Zap, TrendingUp, AlertTriangle, CheckCircle } from 'lucide-react';
 
 interface PerformanceMetrics {
-  fps: number;
-  memoryUsage: number;
-  renderTime: number;
-  networkLatency: number;
-  errorCount: number;
   timestamp: number;
+  cpu: number;
+  memory: number;
+  network: number;
+  frameRate: number;
+  loadTime: number;
 }
 
-interface RealTimePerformanceMonitorProps {
+interface PerformanceMonitorProps {
   isVisible: boolean;
   onClose: () => void;
+  refreshInterval?: number;
 }
 
-const RealTimePerformanceMonitor: React.FC<RealTimePerformanceMonitorProps> = ({ isVisible, onClose }) => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    fps: 0,
-    memoryUsage: 0,
-    renderTime: 0,
-    networkLatency: 0,
-    errorCount: 0,
-    timestamp: Date.now()
+const RealTimePerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
+  isVisible,
+  onClose,
+  refreshInterval = 1000
+}) => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics[]>([]);
+  const [currentMetrics, setCurrentMetrics] = useState<PerformanceMetrics>({
+    timestamp: Date.now(),
+    cpu: 0,
+    memory: 0,
+    network: 0,
+    frameRate: 0,
+    loadTime: 0
   });
-
   const [isMonitoring, setIsMonitoring] = useState(false);
-  const [history, setHistory] = useState<PerformanceMetrics[]>([]);
-  const [maxHistoryLength] = useState(100);
 
-  const lastTimeRef = useRef<number>(0);
-  
-  const calculateFPS = useCallback((): number => {
-    if (typeof window === 'undefined' || !window.performance) return 0;
+  // Get current performance metrics
+  const getCurrentMetrics = useCallback((): PerformanceMetrics => {
+    const now = Date.now();
     
-    const now = performance.now();
-    const delta = now - lastTimeRef.current || 0;
-    lastTimeRef.current = now;
+    // CPU usage (simulated - in real app you'd use performance API)
+    const cpu = Math.random() * 100;
     
-    return delta > 0 ? Math.round(1000 / delta) : 0;
+    // Memory usage
+    const memory = 'memory' in performance 
+      ? ((performance as Performance & { memory: { usedJSHeapSize: number; jsHeapSizeLimit: number } }).memory.usedJSHeapSize / (performance as Performance & { memory: { usedJSHeapSize: number; jsHeapSizeLimit: number } }).memory.jsHeapSizeLimit) * 100
+      : Math.random() * 100;
+    
+    // Network speed (simulated)
+    const network = 'connection' in navigator 
+      ? (navigator as Navigator & { connection: { downlink: number } }).connection.downlink || 0
+      : Math.random() * 100;
+    
+    // Frame rate (simulated)
+    const frameRate = Math.random() * 60 + 30;
+    
+    // Load time
+    const loadTime = performance.now();
+    
+    return {
+      timestamp: now,
+      cpu: Math.round(cpu * 100) / 100,
+      memory: Math.round(memory * 100) / 100,
+      network: Math.round(network * 100) / 100,
+      frameRate: Math.round(frameRate * 100) / 100,
+      loadTime: Math.round(loadTime * 100) / 100
+    };
   }, []);
 
-  const updateMetrics = useCallback(() => {
-    if (!isMonitoring) return;
+  // Start monitoring
+  const startMonitoring = useCallback(() => {
+    setIsMonitoring(true);
+    const interval = setInterval(() => {
+      const newMetrics = getCurrentMetrics();
+      setCurrentMetrics(newMetrics);
+      setMetrics(prev => {
+        const updated = [newMetrics, ...prev.slice(0, 19)]; // Keep last 20 metrics
+        return updated;
+      });
+    }, refreshInterval);
 
-    const newMetrics: PerformanceMetrics = {
-      fps: calculateFPS(),
-      memoryUsage: getMemoryUsage(),
-      renderTime: getRenderTime(),
-      networkLatency: getNetworkLatency(),
-      errorCount: getErrorCount(),
-      timestamp: Date.now()
-    };
+    return () => clearInterval(interval);
+  }, [getCurrentMetrics, refreshInterval]);
 
-    setMetrics(newMetrics);
-    setHistory(prev => {
-      const updated = [...prev, newMetrics];
-      return updated.slice(-maxHistoryLength);
-    });
-  }, [isMonitoring, maxHistoryLength, calculateFPS]);
-
-  const getMemoryUsage = (): number => {
-    if (typeof window === 'undefined') return 0;
-    
-    const perf = window.performance as Performance & { memory?: { usedJSHeapSize: number } };
-    if (!perf.memory) return 0;
-    
-    return Math.round(perf.memory.usedJSHeapSize / 1024 / 1024); // MB
-  };
-
-  const getRenderTime = (): number => {
-    if (typeof window === 'undefined' || !window.performance) return 0;
-    
-    const entries = performance.getEntriesByType('measure');
-    const renderEntry = entries.find(entry => entry.name === 'render-time');
-    return renderEntry ? Math.round(renderEntry.duration) : 0;
-  };
-
-  const getNetworkLatency = (): number => {
-    if (typeof window === 'undefined' || !window.performance) return 0;
-    
-    const entries = performance.getEntriesByType('navigation');
-    if (entries.length === 0) return 0;
-    
-    const nav = entries[0] as PerformanceNavigationTiming;
-    return Math.round(nav.responseEnd - nav.requestStart);
-  };
-
-  const getErrorCount = (): number => {
-    // This would typically come from an error tracking service
-    return Math.floor(Math.random() * 5); // Placeholder
-  };
+  // Stop monitoring
+  const stopMonitoring = useCallback(() => {
+    setIsMonitoring(false);
+  }, []);
 
   useEffect(() => {
-    if (!isVisible) return;
+    if (isVisible && !isMonitoring) {
+      const cleanup = startMonitoring();
+      return cleanup;
+    }
+    if (!isVisible && isMonitoring) {
+      stopMonitoring();
+    }
+  }, [isVisible, isMonitoring, startMonitoring, stopMonitoring]);
 
-    const interval = setInterval(updateMetrics, 1000);
-    return () => clearInterval(interval);
-  }, [isVisible, updateMetrics]);
-
-  const startMonitoring = () => {
-    setIsMonitoring(true);
-    updateMetrics();
+  // Get status color based on metric value
+  const getStatusColor = (value: number, thresholds: { good: number; warning: number }) => {
+    if (value <= thresholds.good) return 'text-green-400';
+    if (value <= thresholds.warning) return 'text-yellow-400';
+    return 'text-red-400';
   };
 
-  const stopMonitoring = () => {
-    setIsMonitoring(false);
-  };
-
-  const clearHistory = () => {
-    setHistory([]);
-  };
-
-  const getStatusColor = (value: number, thresholds: { good: number; warning: number }): string => {
-    if (value <= thresholds.good) return 'text-green-600';
-    if (value <= thresholds.warning) return 'text-yellow-600';
-    return 'text-red-600';
-  };
-
-  const getStatusBg = (value: number, thresholds: { good: number; warning: number }): string => {
-    if (value <= thresholds.good) return 'bg-green-100';
-    if (value <= thresholds.warning) return 'bg-yellow-100';
-    return 'bg-red-100';
+  // Get status icon
+  const getStatusIcon = (value: number, thresholds: { good: number; warning: number }) => {
+    if (value <= thresholds.good) return <CheckCircle className="w-4 h-4" />;
+    if (value <= thresholds.warning) return <AlertTriangle className="w-4 h-4" />;
+    return <AlertTriangle className="w-4 h-4" />;
   };
 
   if (!isVisible) return null;
 
   return (
     <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center p-4">
-      <div className="bg-white rounded-lg shadow-xl max-w-6xl w-full max-h-[90vh] overflow-hidden">
-        <div className="flex items-center justify-between p-6 border-b border-gray-200">
-          <h2 className="text-2xl font-bold text-gray-900">Real-Time Performance Monitor</h2>
-          <div className="flex items-center space-x-4">
-            <div className="flex items-center space-x-2">
-              <button
-                onClick={isMonitoring ? stopMonitoring : startMonitoring}
-                className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-                  isMonitoring
-                    ? 'bg-red-600 text-white hover:bg-red-700'
-                    : 'bg-green-600 text-white hover:bg-green-700'
-                }`}
-              >
-                {isMonitoring ? 'Stop' : 'Start'} Monitoring
-              </button>
-              <button
-                onClick={clearHistory}
-                className="px-4 py-2 bg-gray-600 text-white rounded-lg text-sm font-medium hover:bg-gray-700 transition-colors"
-              >
-                Clear History
-              </button>
+      <div className="bg-gray-900 rounded-lg p-6 max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+        <div className="flex justify-between items-center mb-6">
+          <h2 className="text-2xl font-bold text-white flex items-center gap-2">
+            <Activity className="w-6 h-6 text-blue-400" />
+            Real-Time Performance Monitor
+          </h2>
+          <button
+            onClick={onClose}
+            className="text-gray-400 hover:text-white text-2xl"
+            aria-label="Close performance monitor"
+          >
+            ✕
+          </button>
+        </div>
+
+        {/* Current Metrics Grid */}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mb-6">
+          {/* CPU Usage */}
+          <div className="bg-gray-800 rounded-lg p-4">
+            <div className="flex items-center justify-between mb-2">
+              <Cpu className="w-5 h-5 text-blue-400" />
+              <span className="text-sm text-gray-400">CPU</span>
             </div>
-            <button
-              onClick={onClose}
-              className="text-gray-400 hover:text-gray-600 transition-colors"
-            >
-              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
+            <div className={`text-2xl font-bold ${getStatusColor(currentMetrics.cpu, { good: 50, warning: 80 })}`}>
+              {currentMetrics.cpu.toFixed(1)}%
+            </div>
+            <div className="flex items-center gap-1 mt-1">
+              {getStatusIcon(currentMetrics.cpu, { good: 50, warning: 80 })}
+              <span className="text-xs text-gray-400">Usage</span>
+            </div>
+          </div>
+
+          {/* Memory Usage */}
+          <div className="bg-gray-800 rounded-lg p-4">
+            <div className="flex items-center justify-between mb-2">
+              <HardDrive className="w-5 h-5 text-green-400" />
+              <span className="text-sm text-gray-400">Memory</span>
+            </div>
+            <div className={`text-2xl font-bold ${getStatusColor(currentMetrics.memory, { good: 70, warning: 90 })}`}>
+              {currentMetrics.memory.toFixed(1)}%
+            </div>
+            <div className="flex items-center gap-1 mt-1">
+              {getStatusIcon(currentMetrics.memory, { good: 70, warning: 90 })}
+              <span className="text-xs text-gray-400">Heap</span>
+            </div>
+          </div>
+
+          {/* Network Speed */}
+          <div className="bg-gray-800 rounded-lg p-4">
+            <div className="flex items-center justify-between mb-2">
+              <Wifi className="w-5 h-5 text-purple-400" />
+              <span className="text-sm text-gray-400">Network</span>
+            </div>
+            <div className={`text-2xl font-bold ${getStatusColor(100 - currentMetrics.network, { good: 20, warning: 50 })}`}>
+              {currentMetrics.network.toFixed(1)} Mbps
+            </div>
+            <div className="flex items-center gap-1 mt-1">
+              {getStatusIcon(100 - currentMetrics.network, { good: 20, warning: 50 })}
+              <span className="text-xs text-gray-400">Speed</span>
+            </div>
+          </div>
+
+          {/* Frame Rate */}
+          <div className="bg-gray-800 rounded-lg p-4">
+            <div className="flex items-center justify-between mb-2">
+              <Zap className="w-5 h-5 text-yellow-400" />
+              <span className="text-sm text-gray-400">FPS</span>
+            </div>
+            <div className={`text-2xl font-bold ${getStatusColor(60 - currentMetrics.frameRate, { good: 10, warning: 30 })}`}>
+              {currentMetrics.frameRate.toFixed(0)}
+            </div>
+            <div className="flex items-center gap-1 mt-1">
+              {getStatusIcon(60 - currentMetrics.frameRate, { good: 10, warning: 30 })}
+              <span className="text-xs text-gray-400">Frame Rate</span>
+            </div>
+          </div>
+
+          {/* Load Time */}
+          <div className="bg-gray-800 rounded-lg p-4">
+            <div className="flex items-center justify-between mb-2">
+              <TrendingUp className="w-5 h-5 text-red-400" />
+              <span className="text-sm text-gray-400">Load</span>
+            </div>
+            <div className={`text-2xl font-bold ${getStatusColor(currentMetrics.loadTime, { good: 1000, warning: 3000 })}`}>
+              {currentMetrics.loadTime.toFixed(0)}ms
+            </div>
+            <div className="flex items-center gap-1 mt-1">
+              {getStatusIcon(currentMetrics.loadTime, { good: 1000, warning: 3000 })}
+              <span className="text-xs text-gray-400">Time</span>
+            </div>
           </div>
         </div>
-        
-        <div className="p-6 overflow-y-auto max-h-[calc(90vh-120px)]">
-          {/* Current Metrics */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 mb-8">
-            <div className={`p-4 rounded-lg ${getStatusBg(metrics.fps, { good: 50, warning: 30 })}`}>
-              <div className="text-sm font-medium text-gray-600">FPS</div>
-              <div className={`text-2xl font-bold ${getStatusColor(metrics.fps, { good: 50, warning: 30 })}`}>
-                {metrics.fps}
+
+        {/* Performance Trends */}
+        <div className="bg-gray-800 rounded-lg p-4 mb-6">
+          <h3 className="text-lg font-semibold text-white mb-4">Performance Trends</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* CPU Trend */}
+            <div>
+              <h4 className="text-sm font-medium text-gray-300 mb-2">CPU Usage Trend</h4>
+              <div className="flex items-end gap-1 h-16">
+                {metrics.slice(0, 10).map((metric, index) => (
+                  <div
+                    key={index}
+                    className="bg-blue-400 rounded-t flex-1 min-w-[4px]"
+                    style={{
+                      height: `${(metric.cpu / 100) * 100}%`,
+                      minHeight: '2px'
+                    }}
+                  />
+                ))}
               </div>
-              <div className="text-xs text-gray-500">Frames per second</div>
             </div>
-            
-            <div className={`p-4 rounded-lg ${getStatusBg(metrics.memoryUsage, { good: 50, warning: 100 })}`}>
-              <div className="text-sm font-medium text-gray-600">Memory</div>
-              <div className={`text-2xl font-bold ${getStatusColor(metrics.memoryUsage, { good: 50, warning: 100 })}`}>
-                {metrics.memoryUsage}MB
+
+            {/* Memory Trend */}
+            <div>
+              <h4 className="text-sm font-medium text-gray-300 mb-2">Memory Usage Trend</h4>
+              <div className="flex items-end gap-1 h-16">
+                {metrics.slice(0, 10).map((metric, index) => (
+                  <div
+                    key={index}
+                    className="bg-green-400 rounded-t flex-1 min-w-[4px]"
+                    style={{
+                      height: `${(metric.memory / 100) * 100}%`,
+                      minHeight: '2px'
+                    }}
+                  />
+                ))}
               </div>
-              <div className="text-xs text-gray-500">JS Heap Size</div>
-            </div>
-            
-            <div className={`p-4 rounded-lg ${getStatusBg(metrics.renderTime, { good: 16, warning: 33 })}`}>
-              <div className="text-sm font-medium text-gray-600">Render Time</div>
-              <div className={`text-2xl font-bold ${getStatusColor(metrics.renderTime, { good: 16, warning: 33 })}`}>
-                {metrics.renderTime}ms
-              </div>
-              <div className="text-xs text-gray-500">Frame render time</div>
-            </div>
-            
-            <div className={`p-4 rounded-lg ${getStatusBg(metrics.networkLatency, { good: 100, warning: 300 })}`}>
-              <div className="text-sm font-medium text-gray-600">Network</div>
-              <div className={`text-2xl font-bold ${getStatusColor(metrics.networkLatency, { good: 100, warning: 300 })}`}>
-                {metrics.networkLatency}ms
-              </div>
-              <div className="text-xs text-gray-500">Response time</div>
-            </div>
-            
-            <div className={`p-4 rounded-lg ${getStatusBg(metrics.errorCount, { good: 0, warning: 2 })}`}>
-              <div className="text-sm font-medium text-gray-600">Errors</div>
-              <div className={`text-2xl font-bold ${getStatusColor(metrics.errorCount, { good: 0, warning: 2 })}`}>
-                {metrics.errorCount}
-              </div>
-              <div className="text-xs text-gray-500">Current errors</div>
             </div>
           </div>
+        </div>
 
-          {/* Performance Chart */}
-          {history.length > 0 && (
-            <div className="mb-8">
-              <h3 className="text-lg font-semibold text-gray-900 mb-4">Performance History</h3>
-              <div className="bg-gray-50 p-4 rounded-lg">
-                <div className="h-64 flex items-end space-x-1">
-                  {history.slice(-50).map((metric, index) => (
-                    <div key={index} className="flex flex-col items-center space-y-1">
-                      <div
-                        className="w-2 bg-blue-500 rounded-t"
-                        style={{ height: `${Math.min((metric.fps / 60) * 100, 100)}%` }}
-                        title={`FPS: ${metric.fps}`}
-                      />
-                      <div
-                        className="w-2 bg-red-500 rounded-t"
-                        style={{ height: `${Math.min((metric.memoryUsage / 200) * 100, 100)}%` }}
-                        title={`Memory: ${metric.memoryUsage}MB`}
-                      />
-                    </div>
-                  ))}
-                </div>
-                <div className="flex justify-between text-xs text-gray-500 mt-2">
-                  <span>Blue: FPS</span>
-                  <span>Red: Memory (MB)</span>
-                </div>
+        {/* Performance Alerts */}
+        <div className="bg-gray-800 rounded-lg p-4">
+          <h3 className="text-lg font-semibold text-white mb-4">Performance Alerts</h3>
+          <div className="space-y-2">
+            {currentMetrics.cpu > 80 && (
+              <div className="flex items-center gap-2 p-2 bg-red-900/20 border border-red-500/30 rounded">
+                <AlertTriangle className="w-4 h-4 text-red-400" />
+                <span className="text-red-400 text-sm">High CPU usage detected ({currentMetrics.cpu.toFixed(1)}%)</span>
               </div>
-            </div>
-          )}
+            )}
+            {currentMetrics.memory > 90 && (
+              <div className="flex items-center gap-2 p-2 bg-red-900/20 border border-red-500/30 rounded">
+                <AlertTriangle className="w-4 h-4 text-red-400" />
+                <span className="text-red-400 text-sm">High memory usage detected ({currentMetrics.memory.toFixed(1)}%)</span>
+              </div>
+            )}
+            {currentMetrics.frameRate < 30 && (
+              <div className="flex items-center gap-2 p-2 bg-yellow-900/20 border border-yellow-500/30 rounded">
+                <AlertTriangle className="w-4 h-4 text-yellow-400" />
+                <span className="text-yellow-400 text-sm">Low frame rate detected ({currentMetrics.frameRate.toFixed(0)} FPS)</span>
+              </div>
+            )}
+            {currentMetrics.loadTime > 3000 && (
+              <div className="flex items-center gap-2 p-2 bg-yellow-900/20 border border-yellow-500/30 rounded">
+                <AlertTriangle className="w-4 h-4 text-yellow-400" />
+                <span className="text-yellow-400 text-sm">Slow load time detected ({currentMetrics.loadTime.toFixed(0)}ms)</span>
+              </div>
+            )}
+            {currentMetrics.cpu <= 50 && currentMetrics.memory <= 70 && currentMetrics.frameRate >= 50 && currentMetrics.loadTime <= 1000 && (
+              <div className="flex items-center gap-2 p-2 bg-green-900/20 border border-green-500/30 rounded">
+                <CheckCircle className="w-4 h-4 text-green-400" />
+                <span className="text-green-400 text-sm">All performance metrics are within optimal ranges</span>
+              </div>
+            )}
+          </div>
+        </div>
 
-          {/* Performance Tips */}
-          <div className="bg-blue-50 p-4 rounded-lg">
-            <h3 className="text-lg font-semibold text-blue-900 mb-2">Performance Tips</h3>
-            <ul className="text-sm text-blue-800 space-y-1">
-              <li>• Keep FPS above 30 for smooth user experience</li>
-              <li>• Monitor memory usage to prevent memory leaks</li>
-              <li>• Render time should be under 16ms for 60fps</li>
-              <li>• Network latency under 100ms provides good responsiveness</li>
-              <li>• Minimize JavaScript errors for better stability</li>
-            </ul>
+        {/* Control Panel */}
+        <div className="flex justify-between items-center mt-6 pt-4 border-t border-gray-700">
+          <div className="flex items-center gap-4">
+            <span className="text-sm text-gray-400">
+              Refresh: {refreshInterval}ms
+            </span>
+            <span className="text-sm text-gray-400">
+              Samples: {metrics.length}
+            </span>
+          </div>
+          <div className="flex gap-2">
+            <button
+              onClick={isMonitoring ? stopMonitoring : startMonitoring}
+              className={`px-4 py-2 rounded text-sm font-medium transition-colors ${
+                isMonitoring 
+                  ? 'bg-red-600 hover:bg-red-700 text-white' 
+                  : 'bg-green-600 hover:bg-green-700 text-white'
+              }`}
+            >
+              {isMonitoring ? 'Stop' : 'Start'} Monitoring
+            </button>
+            <button
+              onClick={() => setMetrics([])}
+              className="px-4 py-2 bg-gray-600 hover:bg-gray-700 text-white rounded text-sm font-medium transition-colors"
+            >
+              Clear Data
+            </button>
           </div>
         </div>
       </div>

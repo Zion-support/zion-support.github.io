@@ -77,7 +77,7 @@ const AdvancedPerformanceDashboard: React.FC<AdvancedPerformanceDashboardProps> 
         metric: 'lcp'
       };
       
-      setRealTimeData(prev => [...prev.slice(-9), newDataPoint]);
+      setRealTimeData(prev => [...prev.slice(-9), newDataPoint as any]);
 
       // Update optimization suggestions
       const suggestions = [

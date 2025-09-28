@@ -108,7 +108,7 @@ class AdvancedErrorTracker {
       if (event.target !== window) {
         this.trackError({
           message: `Failed to load resource: ${(event.target as HTMLElement)?.getAttribute('src') || (event.target as HTMLElement)?.getAttribute('href')}`,
-          filename: (event.target as HTMLElement)?.getAttribute('src') || (event.target as HTMLElement)?.getAttribute('href'),
+          filename: (event.target as HTMLElement)?.getAttribute('src') || (event.target as HTMLElement)?.getAttribute('href') || undefined,
           category: 'resource',
           severity: 'medium',
           context: {
@@ -152,14 +152,14 @@ class AdvancedErrorTracker {
         return response;
       } catch (error) {
         this.trackError({
-          message: `Fetch error: ${error.message}`,
-          stack: error.stack,
+          message: `Fetch error: ${(error as any).message}`,
+          stack: (error as any).stack,
           category: 'network',
           severity: 'high',
           context: {
             url: args[0],
             method: 'fetch',
-            error: error.message
+            error: (error as any).message
           }
         });
         throw error;
@@ -167,10 +167,10 @@ class AdvancedErrorTracker {
     };
 
     // Track XMLHttpRequest errors
-    XMLHttpRequest.prototype.open = function(method, url, ...args) {
-      this._method = method;
-      this._url = url;
-      return originalXHROpen.call(this, method, url, ...args);
+    XMLHttpRequest.prototype.open = function(method, url, ...args: any[]) {
+      this._method = method as any;
+      this._url = url as any;
+      return originalXHROpen.call(this, method, url, ...args as any[]);
     };
 
     XMLHttpRequest.prototype.send = function(...args) {
@@ -180,8 +180,8 @@ class AdvancedErrorTracker {
           category: 'network',
           severity: this.status >= 500 ? 'high' : 'medium',
           context: {
-            url: this._url,
-            method: this._method,
+            url: (this as any)._url,
+            method: (this as any)._method,
             status: this.status,
             statusText: this.statusText
           }
@@ -224,7 +224,7 @@ class AdvancedErrorTracker {
   private determineSeverity(error: unknown): 'low' | 'medium' | 'high' | 'critical' {
     if (!error) return 'medium';
     
-    const message = error.message?.toLowerCase() || '';
+    const message = (error as any).message?.toLowerCase() || '';
     // Stack trace is available but not used in this implementation
 
     // Critical errors

@@ -33,6 +33,8 @@ const PerformanceWidget = lazy(() => import('./components/PerformanceWidget'));
 const CommandPalette = lazy(() => import('./components/CommandPalette'));
 const AdvancedMonitoringDashboard = lazy(() => import('./components/AdvancedMonitoringDashboard'));
 const ComprehensivePerformanceDashboard = lazy(() => import('./components/ComprehensivePerformanceDashboard'));
+const RealTimePerformanceMonitor = lazy(() => import('./components/RealTimePerformanceMonitor'));
+const EnhancedCommandPalette = lazy(() => import('./components/EnhancedCommandPalette'));
 const PerformanceIndicator = lazy(() => import('./components/PerformanceIndicator'));
 const AccessibilityEnhancer = lazy(() => import('./components/AccessibilityEnhancer'));
 const DynamicMetaTags = lazy(() => import('./components/DynamicMetaTags'));
@@ -50,6 +52,8 @@ export default function App(): React.JSX.Element {
   const [showCommandPalette, setShowCommandPalette] = useState(false);
   const [showAdvancedMonitoring, setShowAdvancedMonitoring] = useState(false);
   const [showComprehensiveDashboard, setShowComprehensiveDashboard] = useState(false);
+  const [showRealTimePerformance, setShowRealTimePerformance] = useState(false);
+  const [showEnhancedCommandPalette, setShowEnhancedCommandPalette] = useState(false);
   // const [showPerformanceDashboard, setShowPerformanceDashboard] = useState(false);
 
   // Notification management
@@ -291,8 +295,13 @@ export default function App(): React.JSX.Element {
     // Performance dashboard toggle removed - state variable not defined
     if ((event.ctrlKey || event.metaKey) && event.key === 'k') {
       event.preventDefault();
-      setShowCommandPalette((prev: boolean) => !prev);
-      console.debug('Keyboard shortcut used:', { shortcut: 'cmd+k', action: 'toggle_command_palette' });
+      setShowEnhancedCommandPalette((prev: boolean) => !prev);
+      seoAnalytics.trackEvent('keyboard_shortcut', { shortcut: 'cmd+k', action: 'toggle_enhanced_command_palette' });
+    }
+    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'R') {
+      event.preventDefault();
+      setShowRealTimePerformance((prev: boolean) => !prev);
+      seoAnalytics.trackEvent('keyboard_shortcut', { shortcut: 'cmd+shift+r', action: 'toggle_real_time_performance' });
     }
     if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'M') {
       event.preventDefault();
@@ -312,7 +321,9 @@ export default function App(): React.JSX.Element {
       setShowKeyboardHelp(false);
       setShowAdvancedMonitoring(false);
       setShowComprehensiveDashboard(false);
-      console.debug('Keyboard shortcut used:', { shortcut: 'escape', action: 'close_modals' });
+      setShowRealTimePerformance(false);
+      setShowEnhancedCommandPalette(false);
+      seoAnalytics.trackEvent('keyboard_shortcut', { shortcut: 'escape', action: 'close_modals' });
     }
   }, [addNotification]);
 
@@ -637,6 +648,25 @@ export default function App(): React.JSX.Element {
           </Suspense>
         )}
 
+        {showRealTimePerformance && (
+          <Suspense fallback={<ModernLoadingSpinner />}>
+            <RealTimePerformanceMonitor
+              isVisible={showRealTimePerformance}
+              onClose={() => setShowRealTimePerformance(false)}
+              refreshInterval={1000}
+            />
+          </Suspense>
+        )}
+
+        {showEnhancedCommandPalette && (
+          <Suspense fallback={<ModernLoadingSpinner />}>
+            <EnhancedCommandPalette
+              isVisible={showEnhancedCommandPalette}
+              onClose={() => setShowEnhancedCommandPalette(false)}
+            />
+          </Suspense>
+        )}
+
         {showComprehensiveDashboard && (
           <Suspense fallback={<ModernLoadingSpinner />}>
             <ComprehensivePerformanceDashboard />
@@ -654,14 +684,15 @@ export default function App(): React.JSX.Element {
         </button>
 
         {/* Keyboard Shortcuts Help Panel */}
-        <div className="fixed bottom-4 left-4 z-40 bg-gray-800 text-white p-3 rounded-lg shadow-lg text-sm opacity-75 hover:opacity-100 transition-opacity duration-200">
+        <div className="fixed bottom-4 left-4 z-40 bg-gray-800 text-white p-3 rounded-lg shadow-lg text-sm opacity-75 hover:opacity-100 transition-opacity duration-200 max-w-xs">
           <div className="font-semibold mb-1">Keyboard Shortcuts:</div>
           <div>Ctrl+Shift+D: System Dashboard</div>
           <div>Ctrl+Shift+H: System Health</div>
           <div>Ctrl+Shift+M: Advanced Monitoring</div>
+          <div>Ctrl+Shift+R: Real-Time Performance</div>
           <div>Ctrl+Shift+K: Keyboard Help</div>
           <div>Ctrl+Shift+T: Toggle Theme</div>
-          <div>Ctrl+K: Command Palette</div>
+          <div>Ctrl+K: Enhanced Command Palette</div>
           <div>Esc: Close All Modals</div>
         </div>
       </div>

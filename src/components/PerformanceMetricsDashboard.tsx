@@ -157,7 +157,7 @@ const PerformanceMetricsDashboard: React.FC<PerformanceMetricsDashboardProps> = 
                       {performanceReport.recommendations.map((rec, index) => (
                         <li key={index} className="flex items-start">
                           <span className="text-yellow-500 mr-2">•</span>
-                          <span className="text-gray-700 dark:text-gray-300">{rec}</span>
+                          <span className="text-gray-700 dark:text-gray-300">{rec as string}</span>
                         </li>
                       ))}
                     </ul>
