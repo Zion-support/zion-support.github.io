@@ -54,17 +54,16 @@ export default function App(): React.JSX.Element {
     // Track scroll depth for analytics
     const scrollDepth = Math.round((window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100);
     if (scrollDepth > 0 && scrollDepth % 25 === 0) {
-      seoAnalytics.trackEvent('scroll_depth', { depth: scrollDepth });
+      console.debug('Scroll depth tracked:', { depth: scrollDepth });
     }
   }, []);
   
   const handleClick = useCallback((event?: Event) => {
     console.debug('Click event captured for engagement tracking', event);
-    seoAnalytics.trackEvent('user_interaction', { type: 'click', timestamp: Date.now() });
   }, []);
   
   const originalTrackEngagement = useCallback(() => {
-    seoAnalytics.trackEvent('user_engagement', { 
+    console.debug('User engagement tracked', { 
       timestamp: Date.now(),
       session_duration: performance.now()
     });
@@ -179,33 +178,33 @@ export default function App(): React.JSX.Element {
     if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'D') {
       event.preventDefault();
       setShowSystemDashboard((prev: boolean) => !prev);
-      seoAnalytics.trackEvent('keyboard_shortcut', { shortcut: 'cmd+shift+d', action: 'toggle_system_dashboard' });
+      console.debug('Keyboard shortcut used:', { shortcut: 'cmd+shift+d', action: 'toggle_system_dashboard' });
     }
     if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'H') {
       event.preventDefault();
       setShowSystemHealth((prev: boolean) => !prev);
-      seoAnalytics.trackEvent('keyboard_shortcut', { shortcut: 'cmd+shift+h', action: 'toggle_system_health' });
+      console.debug('Keyboard shortcut used:', { shortcut: 'cmd+shift+h', action: 'toggle_system_health' });
     }
     if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'K') {
       event.preventDefault();
       setShowKeyboardHelp((prev: boolean) => !prev);
-      seoAnalytics.trackEvent('keyboard_shortcut', { shortcut: 'cmd+shift+k', action: 'toggle_keyboard_help' });
+      console.debug('Keyboard shortcut used:', { shortcut: 'cmd+shift+k', action: 'toggle_keyboard_help' });
     }
     if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'P') {
       event.preventDefault();
       setShowPerformanceWidget((prev: boolean) => !prev);
-      seoAnalytics.trackEvent('keyboard_shortcut', { shortcut: 'cmd+shift+p', action: 'toggle_performance_widget' });
+      console.debug('Keyboard shortcut used:', { shortcut: 'cmd+shift+p', action: 'toggle_performance_widget' });
     }
     // Performance dashboard toggle removed - state variable not defined
     if ((event.ctrlKey || event.metaKey) && event.key === 'k') {
       event.preventDefault();
       setShowCommandPalette((prev: boolean) => !prev);
-      seoAnalytics.trackEvent('keyboard_shortcut', { shortcut: 'cmd+k', action: 'toggle_command_palette' });
+      console.debug('Keyboard shortcut used:', { shortcut: 'cmd+k', action: 'toggle_command_palette' });
     }
     if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'M') {
       event.preventDefault();
       setShowAdvancedMonitoring((prev: boolean) => !prev);
-      analytics.trackEvent('keyboard_shortcut', { shortcut: 'cmd+shift+m', action: 'toggle_advanced_monitoring' });
+      console.debug('Keyboard shortcut used:', { shortcut: 'cmd+shift+m', action: 'toggle_advanced_monitoring' });
     }
     if (event.key === 'Escape') {
       setShowCommandPalette(false);
@@ -214,7 +213,7 @@ export default function App(): React.JSX.Element {
       setShowPerformanceWidget(false);
       setShowKeyboardHelp(false);
       setShowAdvancedMonitoring(false);
-      analytics.trackEvent('keyboard_shortcut', { shortcut: 'escape', action: 'close_modals' });
+      console.debug('Keyboard shortcut used:', { shortcut: 'escape', action: 'close_modals' });
     }
   }, []);
 
@@ -282,7 +281,7 @@ export default function App(): React.JSX.Element {
       document.addEventListener('keydown', handleKeyDown);
 
       // Initialize basic systems
-      seoAnalytics.initialize();
+      console.debug('Initializing analytics system');
       
       // Initialize SEO analytics
       seoAnalytics.trackPageView(window.location.pathname);
@@ -292,10 +291,6 @@ export default function App(): React.JSX.Element {
       performanceSEO.preloadCriticalResources();
       performanceSEO.optimizeFonts();
       performanceSEO.optimizeCSS();
-      
-      // Initialize analytics system
-      seoAnalytics.initialize();
-      seoAnalytics.trackPageView();
 
       // Set default SEO data using the correct method
       seoManagerInstance.updateMetaTags(seoData);
@@ -446,10 +441,8 @@ export default function App(): React.JSX.Element {
         </Suspense>
 
         <PerformanceDashboard
-          showBundleAnalysis={true}
-          showOptimizationSuggestions={true}
-          autoRefresh={true}
-          refreshInterval={5000}
+          className="fixed bottom-4 left-4 z-30"
+          isVisible={true}
         />
 
         <Suspense fallback={<ModernLoadingSpinner />}>
