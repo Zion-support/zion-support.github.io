@@ -24,38 +24,12 @@ import './styles/notifications.css';
 import './styles/system-metrics.css';
 import './styles/modern-utilities.css';
 
-// Engagement tracking data
-const engagementData = {
-  startTime: Date.now(),
-  scrollDepth: 0,
-  clicks: 0
-};
 export default function App(): React.JSX.Element {
   // State for system metrics dashboard
   const [showSystemDashboard, setShowSystemDashboard] = useState(false);
   
   // State for performance optimizer
   const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
-
-  // Engagement tracking data
-  const engagementData = useMemo(() => ({
-    startTime: Date.now(),
-    scrollDepth: 0,
-    clicks: 0
-  }), []);
-
-  // Scroll handler
-  const handleScroll = useCallback(() => {
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
-    const scrollDepth = Math.round((scrollTop / scrollHeight) * 100);
-    engagementData.scrollDepth = Math.max(engagementData.scrollDepth, scrollDepth);
-  }, [engagementData]);
-
-  // Click handler
-  const handleClick = useCallback(() => {
-    engagementData.clicks++;
-  }, [engagementData]);
 
   // Initialize app with custom configuration
   const { isLoading, loadingProgress, engagementData, handleScroll, handleClick } = useAppInitialization({
