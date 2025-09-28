@@ -36,8 +36,8 @@ export default function App(): React.JSX.Element {
   // SEO data
   const seoData = useMemo(() => ({
     title: 'Zion Tech Group - Leading AI & Technology Solutions',
-    description: 'Cutting-edge AI, quantum computing, and digital transformation solutions for modern enterprises.',
-    keywords: ['AI solutions', 'quantum computing', 'digital transformation', 'cloud services'],
+    description: 'Cutting-edge AI, quantum computing, and digital transformation solutions for modern enterprises. Expert consulting, cloud services, and innovative technology implementations.',
+    keywords: 'AI solutions, quantum computing, digital transformation, cloud services, enterprise technology',
     canonicalUrl: `https://zion.app${currentPathname}`,
     ogType: 'website' as const,
     ogUrl: `https://zion.app${currentPathname}`,
