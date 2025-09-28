@@ -24,7 +24,7 @@
     "build:production": "NODE_ENV=production pnpm build",
     "build:fast": "vite build --mode development",
     "prebuild": "pnpm type-check && pnpm lint",
-    "postbuild": "pnpm analyze"
+    "postbuild": "if [ \"$CI\" != \"true\" ]; then pnpm analyze; fi"
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.1.13",
