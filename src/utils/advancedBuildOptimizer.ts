@@ -54,14 +54,14 @@ export class AdvancedBuildOptimizer {
       enableAnalytics: true,
       enableErrorTracking: true,
       enableMonitoring: true,
-      ...config
+      ...config,
     };
 
     this.initialize();
   }
 
   private initialize(): void {
-    if (typeof window === 'undefined') return;
+    if (typeof window === "undefined") return;
 
     this.optimizeCriticalResources();
     this.optimizeImages();
@@ -86,41 +86,41 @@ export class AdvancedBuildOptimizer {
     if (!this.config.enablePreloading) return;
 
     const criticalResources = [
-      '/api/health',
-      '/api/analytics',
-      '/api/performance',
-      '/api/security',
-      '/api/seo',
-      '/api/notifications',
-      '/api/theme',
-      '/api/accessibility',
-      '/api/error-tracking',
-      '/api/monitoring'
+      "/api/health",
+      "/api/analytics",
+      "/api/performance",
+      "/api/security",
+      "/api/seo",
+      "/api/notifications",
+      "/api/theme",
+      "/api/accessibility",
+      "/api/error-tracking",
+      "/api/monitoring",
     ];
 
-    criticalResources.forEach(resource => {
-      this.preloadResource(resource, 'fetch');
+    criticalResources.forEach((resource) => {
+      this.preloadResource(resource, "fetch");
     });
   }
 
   private optimizeImages(): void {
     if (!this.config.enableImageOptimization) return;
 
-    const images = document.querySelectorAll('img');
-    images.forEach(img => {
+    const images = document.querySelectorAll("img");
+    images.forEach((img) => {
       // Add loading="lazy" for non-critical images
-      if (!img.hasAttribute('loading')) {
-        img.setAttribute('loading', 'lazy');
+      if (!img.hasAttribute("loading")) {
+        img.setAttribute("loading", "lazy");
       }
 
       // Add decoding="async" for better performance
-      if (!img.hasAttribute('decoding')) {
-        img.setAttribute('decoding', 'async');
+      if (!img.hasAttribute("decoding")) {
+        img.setAttribute("decoding", "async");
       }
 
       // Add fetchpriority="high" for above-the-fold images
       if (img.getBoundingClientRect().top < window.innerHeight) {
-        img.setAttribute('fetchpriority', 'high');
+        img.setAttribute("fetchpriority", "high");
       }
     });
   }
@@ -130,12 +130,12 @@ export class AdvancedBuildOptimizer {
 
     // Preload critical fonts
     const criticalFonts = [
-      'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap',
-      'https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap'
+      "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap",
+      "https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap",
     ];
 
-    criticalFonts.forEach(font => {
-      this.preloadResource(font, 'style');
+    criticalFonts.forEach((font) => {
+      this.preloadResource(font, "style");
     });
   }
 
@@ -151,9 +151,9 @@ export class AdvancedBuildOptimizer {
       .to-slate-900 { --tw-gradient-to: #0f172a; }
     `;
 
-    const style = document.createElement('style');
+    const style = document.createElement("style");
     style.textContent = criticalCSS;
-    style.setAttribute('data-critical', 'true');
+    style.setAttribute("data-critical", "true");
     document.head.insertBefore(style, document.head.firstChild);
   }
 
@@ -161,10 +161,10 @@ export class AdvancedBuildOptimizer {
     if (!this.config.enableJSOptimization) return;
 
     // Defer non-critical JavaScript
-    const scripts = document.querySelectorAll('script[src]');
-    scripts.forEach(script => {
-      if (!script.hasAttribute('defer') && !script.hasAttribute('async')) {
-        script.setAttribute('defer', '');
+    const scripts = document.querySelectorAll("script[src]");
+    scripts.forEach((script) => {
+      if (!script.hasAttribute("defer") && !script.hasAttribute("async")) {
+        script.setAttribute("defer", "");
       }
     });
   }
@@ -174,16 +174,16 @@ export class AdvancedBuildOptimizer {
 
     // Add viewport meta tag if not present
     if (!document.querySelector('meta[name="viewport"]')) {
-      const viewport = document.createElement('meta');
-      viewport.setAttribute('name', 'viewport');
-      viewport.setAttribute('content', 'width=device-width, initial-scale=1.0');
+      const viewport = document.createElement("meta");
+      viewport.setAttribute("name", "viewport");
+      viewport.setAttribute("content", "width=device-width, initial-scale=1.0");
       document.head.appendChild(viewport);
     }
 
     // Add charset if not present
-    if (!document.querySelector('meta[charset]')) {
-      const charset = document.createElement('meta');
-      charset.setAttribute('charset', 'utf-8');
+    if (!document.querySelector("meta[charset]")) {
+      const charset = document.createElement("meta");
+      charset.setAttribute("charset", "utf-8");
       document.head.insertBefore(charset, document.head.firstChild);
     }
   }
@@ -192,10 +192,16 @@ export class AdvancedBuildOptimizer {
     if (!this.config.enableCaching) return;
 
     // Set up cache headers for static assets
-    const staticAssets = document.querySelectorAll('link[rel="stylesheet"], script[src], img[src]');
-    staticAssets.forEach(asset => {
-      if (asset instanceof HTMLLinkElement || asset instanceof HTMLScriptElement || asset instanceof HTMLImageElement) {
-        asset.setAttribute('data-cache', 'true');
+    const staticAssets = document.querySelectorAll(
+      'link[rel="stylesheet"], script[src], img[src]',
+    );
+    staticAssets.forEach((asset) => {
+      if (
+        asset instanceof HTMLLinkElement ||
+        asset instanceof HTMLScriptElement ||
+        asset instanceof HTMLImageElement
+      ) {
+        asset.setAttribute("data-cache", "true");
       }
     });
   }
@@ -204,9 +210,9 @@ export class AdvancedBuildOptimizer {
     if (!this.config.enablePreloading) return;
 
     // Preload critical routes
-    const criticalRoutes = ['/', '/about', '/services', '/contact'];
-    criticalRoutes.forEach(route => {
-      this.preloadResource(route, 'fetch');
+    const criticalRoutes = ["/", "/about", "/services", "/contact"];
+    criticalRoutes.forEach((route) => {
+      this.preloadResource(route, "fetch");
     });
   }
 
@@ -215,17 +221,17 @@ export class AdvancedBuildOptimizer {
 
     // Set up intersection observer for lazy loading
     const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
+      entries.forEach((entry) => {
         if (entry.isIntersecting) {
           const element = entry.target as HTMLElement;
-          element.classList.add('loaded');
+          element.classList.add("loaded");
           observer.unobserve(element);
         }
       });
     });
 
     // Observe elements with lazy-load class
-    document.querySelectorAll('.lazy-load').forEach(element => {
+    document.querySelectorAll(".lazy-load").forEach((element) => {
       observer.observe(element);
     });
   }
@@ -233,13 +239,14 @@ export class AdvancedBuildOptimizer {
   private setupServiceWorker(): void {
     if (!this.config.enableServiceWorker) return;
 
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/sw.js')
-        .then(registration => {
-          console.log('Service Worker registered:', registration);
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker
+        .register("/sw.js")
+        .then((registration) => {
+          console.log("Service Worker registered:", registration);
         })
-        .catch(error => {
-          console.error('Service Worker registration failed:', error);
+        .catch((error) => {
+          console.error("Service Worker registration failed:", error);
         });
     }
   }
@@ -248,15 +255,15 @@ export class AdvancedBuildOptimizer {
     if (!this.config.enablePWA) return;
 
     // Add PWA manifest
-    const manifest = document.createElement('link');
-    manifest.setAttribute('rel', 'manifest');
-    manifest.setAttribute('href', '/manifest.json');
+    const manifest = document.createElement("link");
+    manifest.setAttribute("rel", "manifest");
+    manifest.setAttribute("href", "/manifest.json");
     document.head.appendChild(manifest);
 
     // Add theme color
-    const themeColor = document.createElement('meta');
-    themeColor.setAttribute('name', 'theme-color');
-    themeColor.setAttribute('content', '#1e293b');
+    const themeColor = document.createElement("meta");
+    themeColor.setAttribute("name", "theme-color");
+    themeColor.setAttribute("content", "#1e293b");
     document.head.appendChild(themeColor);
   }
 
@@ -265,17 +272,20 @@ export class AdvancedBuildOptimizer {
 
     // Add security headers via meta tags
     const securityHeaders = [
-      { name: 'X-Content-Type-Options', content: 'nosniff' },
-      { name: 'X-Frame-Options', content: 'DENY' },
-      { name: 'X-XSS-Protection', content: '1; mode=block' },
-      { name: 'Referrer-Policy', content: 'strict-origin-when-cross-origin' },
-      { name: 'Permissions-Policy', content: 'camera=(), microphone=(), geolocation=()' }
+      { name: "X-Content-Type-Options", content: "nosniff" },
+      { name: "X-Frame-Options", content: "DENY" },
+      { name: "X-XSS-Protection", content: "1; mode=block" },
+      { name: "Referrer-Policy", content: "strict-origin-when-cross-origin" },
+      {
+        name: "Permissions-Policy",
+        content: "camera=(), microphone=(), geolocation=()",
+      },
     ];
 
-    securityHeaders.forEach(header => {
-      const meta = document.createElement('meta');
-      meta.setAttribute('http-equiv', header.name);
-      meta.setAttribute('content', header.content);
+    securityHeaders.forEach((header) => {
+      const meta = document.createElement("meta");
+      meta.setAttribute("http-equiv", header.name);
+      meta.setAttribute("content", header.content);
       document.head.appendChild(meta);
     });
   }
@@ -285,14 +295,14 @@ export class AdvancedBuildOptimizer {
 
     // Add performance headers
     const performanceHeaders = [
-      { name: 'Cache-Control', content: 'public, max-age=31536000' },
-      { name: 'X-DNS-Prefetch-Control', content: 'on' }
+      { name: "Cache-Control", content: "public, max-age=31536000" },
+      { name: "X-DNS-Prefetch-Control", content: "on" },
     ];
 
-    performanceHeaders.forEach(header => {
-      const meta = document.createElement('meta');
-      meta.setAttribute('http-equiv', header.name);
-      meta.setAttribute('content', header.content);
+    performanceHeaders.forEach((header) => {
+      const meta = document.createElement("meta");
+      meta.setAttribute("http-equiv", header.name);
+      meta.setAttribute("content", header.content);
       document.head.appendChild(meta);
     });
   }
@@ -302,22 +312,22 @@ export class AdvancedBuildOptimizer {
 
     // Add essential SEO meta tags
     const seoMetaTags = [
-      { name: 'robots', content: 'index, follow' },
-      { name: 'googlebot', content: 'index, follow' },
-      { name: 'author', content: 'Zion Tech Group' },
-      { name: 'generator', content: 'React + Vite' },
-      { name: 'rating', content: 'general' },
-      { name: 'distribution', content: 'global' },
-      { name: 'language', content: 'en' },
-      { name: 'geo.region', content: 'US' },
-      { name: 'geo.placename', content: 'United States' }
+      { name: "robots", content: "index, follow" },
+      { name: "googlebot", content: "index, follow" },
+      { name: "author", content: "Zion Tech Group" },
+      { name: "generator", content: "React + Vite" },
+      { name: "rating", content: "general" },
+      { name: "distribution", content: "global" },
+      { name: "language", content: "en" },
+      { name: "geo.region", content: "US" },
+      { name: "geo.placename", content: "United States" },
     ];
 
-    seoMetaTags.forEach(tag => {
+    seoMetaTags.forEach((tag) => {
       if (!document.querySelector(`meta[name="${tag.name}"]`)) {
-        const meta = document.createElement('meta');
-        meta.setAttribute('name', tag.name);
-        meta.setAttribute('content', tag.content);
+        const meta = document.createElement("meta");
+        meta.setAttribute("name", tag.name);
+        meta.setAttribute("content", tag.content);
         document.head.appendChild(meta);
       }
     });
@@ -327,19 +337,19 @@ export class AdvancedBuildOptimizer {
     if (!this.config.enableAnalytics) return;
 
     // Initialize analytics
-    console.log('Analytics initialized for build optimization');
+    console.log("Analytics initialized for build optimization");
   }
 
   private setupErrorTracking(): void {
     if (!this.config.enableErrorTracking) return;
 
     // Set up error tracking
-    window.addEventListener('error', (event) => {
-      this.trackError('JavaScript Error', event.error);
+    window.addEventListener("error", (event) => {
+      this.trackError("JavaScript Error", event.error);
     });
 
-    window.addEventListener('unhandledrejection', (event) => {
-      this.trackError('Unhandled Promise Rejection', event.reason);
+    window.addEventListener("unhandledrejection", (event) => {
+      this.trackError("Unhandled Promise Rejection", event.reason);
     });
   }
 
@@ -347,29 +357,40 @@ export class AdvancedBuildOptimizer {
     if (!this.config.enableMonitoring) return;
 
     // Set up performance monitoring
-    if ('PerformanceObserver' in window) {
+    if ("PerformanceObserver" in window) {
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           this.trackPerformance(entry);
         }
       });
 
-      observer.observe({ entryTypes: ['navigation', 'paint', 'largest-contentful-paint', 'first-input', 'layout-shift'] });
+      observer.observe({
+        entryTypes: [
+          "navigation",
+          "paint",
+          "largest-contentful-paint",
+          "first-input",
+          "layout-shift",
+        ],
+      });
     }
   }
 
   private preloadResource(href: string, as: string): void {
-    const link = document.createElement('link');
-    link.setAttribute('rel', 'preload');
-    link.setAttribute('href', href);
-    link.setAttribute('as', as);
-    link.setAttribute('crossorigin', 'anonymous');
+    const link = document.createElement("link");
+    link.setAttribute("rel", "preload");
+    link.setAttribute("href", href);
+    link.setAttribute("as", as);
+    link.setAttribute("crossorigin", "anonymous");
     document.head.appendChild(link);
   }
 
   private trackError(type: string, error: Error | string): void {
     console.error(`Build Optimization Error - ${type}:`, error);
-    this.optimizationMetrics.set('errors', (this.optimizationMetrics.get('errors') || 0) + 1);
+    this.optimizationMetrics.set(
+      "errors",
+      (this.optimizationMetrics.get("errors") || 0) + 1,
+    );
   }
 
   private trackPerformance(entry: PerformanceEntry): void {
@@ -386,13 +407,13 @@ export class AdvancedBuildOptimizer {
     let score = 100;
 
     // Deduct points for errors
-    const errors = metrics.get('errors') || 0;
+    const errors = metrics.get("errors") || 0;
     score -= errors * 5;
 
     // Check for performance metrics
-    const hasNavigation = metrics.has('perf_navigation');
-    const hasPaint = metrics.has('perf_paint');
-    const hasLCP = metrics.has('perf_largest-contentful-paint');
+    const hasNavigation = metrics.has("perf_navigation");
+    const hasPaint = metrics.has("perf_paint");
+    const hasLCP = metrics.has("perf_largest-contentful-paint");
 
     if (!hasNavigation) score -= 10;
     if (!hasPaint) score -= 5;
@@ -405,12 +426,16 @@ export class AdvancedBuildOptimizer {
     const metrics = this.getOptimizationMetrics();
     const score = this.getOptimizationScore();
 
-    return JSON.stringify({
-      score,
-      metrics: Object.fromEntries(metrics),
-      config: this.config,
-      timestamp: new Date().toISOString()
-    }, null, 2);
+    return JSON.stringify(
+      {
+        score,
+        metrics: Object.fromEntries(metrics),
+        config: this.config,
+        timestamp: new Date().toISOString(),
+      },
+      null,
+      2,
+    );
   }
 }
 

@@ -27,7 +27,7 @@ export class AdvancedAnalytics {
     clicks: 0,
     scrollDepth: 0,
     timeOnPage: 0,
-    interactions: 0
+    interactions: 0,
   };
 
   constructor() {
@@ -36,28 +36,33 @@ export class AdvancedAnalytics {
   }
 
   private generateSessionId(): string {
-    return 'session_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+    return (
+      "session_" + Date.now() + "_" + Math.random().toString(36).substr(2, 9)
+    );
   }
 
   private initializeTracking(): void {
-    if (typeof window === 'undefined') return;
+    if (typeof window === "undefined") return;
 
     // Track page views
     this.trackPageView();
 
     // Track clicks
-    document.addEventListener('click', (event) => {
+    document.addEventListener("click", (event) => {
       this.behavior.clicks++;
-      this.trackEvent('click', {
+      this.trackEvent("click", {
         element: (event.target as HTMLElement)?.tagName,
-        text: (event.target as HTMLElement)?.textContent?.slice(0, 100)
+        text: (event.target as HTMLElement)?.textContent?.slice(0, 100),
       });
     });
 
     // Track scroll depth
     let maxScrollDepth = 0;
-    window.addEventListener('scroll', () => {
-      const scrollDepth = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+    window.addEventListener("scroll", () => {
+      const scrollDepth =
+        (window.scrollY /
+          (document.documentElement.scrollHeight - window.innerHeight)) *
+        100;
       maxScrollDepth = Math.max(maxScrollDepth, scrollDepth);
       this.behavior.scrollDepth = maxScrollDepth;
     });
@@ -69,32 +74,35 @@ export class AdvancedAnalytics {
     }, 1000);
 
     // Track interactions
-    ['keydown', 'mousedown', 'touchstart'].forEach(eventType => {
+    ["keydown", "mousedown", "touchstart"].forEach((eventType) => {
       document.addEventListener(eventType, () => {
         this.behavior.interactions++;
       });
     });
   }
 
-  public trackEvent(name: string, properties: Record<string, string | number | boolean> = {}): void {
+  public trackEvent(
+    name: string,
+    properties: Record<string, string | number | boolean> = {},
+  ): void {
     const event: AnalyticsEvent = {
       name,
       properties,
       timestamp: Date.now(),
       userId: this.userId,
-      sessionId: this.sessionId
+      sessionId: this.sessionId,
     };
 
     this.events.push(event);
-    console.log('Analytics Event:', event);
+    console.log("Analytics Event:", event);
   }
 
   public trackPageView(page?: string): void {
     this.behavior.pageViews++;
-    this.trackEvent('page_view', {
+    this.trackEvent("page_view", {
       page: page || window.location.pathname,
       url: window.location.href,
-      referrer: document.referrer
+      referrer: document.referrer,
     });
   }
 
@@ -115,13 +123,17 @@ export class AdvancedAnalytics {
   }
 
   public exportData(): string {
-    return JSON.stringify({
-      sessionId: this.sessionId,
-      userId: this.userId,
-      behavior: this.behavior,
-      events: this.events,
-      timestamp: Date.now()
-    }, null, 2);
+    return JSON.stringify(
+      {
+        sessionId: this.sessionId,
+        userId: this.userId,
+        behavior: this.behavior,
+        events: this.events,
+        timestamp: Date.now(),
+      },
+      null,
+      2,
+    );
   }
 
   public clearData(): void {
@@ -131,7 +143,7 @@ export class AdvancedAnalytics {
       clicks: 0,
       scrollDepth: 0,
       timeOnPage: 0,
-      interactions: 0
+      interactions: 0,
     };
   }
 }

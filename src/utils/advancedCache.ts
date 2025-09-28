@@ -16,7 +16,7 @@ interface CacheConfig {
   maxSize: number;
   maxAge: number;
   cleanupInterval: number;
-  strategy: 'lru' | 'lfu' | 'fifo';
+  strategy: "lru" | "lfu" | "fifo";
 }
 
 type CacheKey = string;
@@ -33,11 +33,11 @@ class AdvancedCacheManager {
       maxSize: 50 * 1024 * 1024, // 50MB
       maxAge: 24 * 60 * 60 * 1000, // 24 hours
       cleanupInterval: 60 * 60 * 1000, // 1 hour
-      strategy: 'lru',
+      strategy: "lru",
     };
 
     this.startCleanupTimer();
-    console.log('🗄️ Advanced Cache Manager initialized');
+    console.log("🗄️ Advanced Cache Manager initialized");
   }
 
   public static getInstance(): AdvancedCacheManager {
@@ -127,46 +127,46 @@ class AdvancedCacheManager {
   public clear(): void {
     this.cache.clear();
     this.totalSize = 0;
-    console.log('🗄️ Cache cleared');
+    console.log("🗄️ Cache cleared");
   }
 
   public getStats() {
     const now = Date.now();
     const items = Array.from(this.cache.values());
-    
+
     return {
       size: this.cache.size,
       totalSize: this.totalSize,
       maxSize: this.config.maxSize,
       hitRate: this.calculateHitRate(),
-      expiredItems: items.filter(item => now > item.expiresAt).length,
-      oldestItem: Math.min(...items.map(item => item.timestamp)),
-      newestItem: Math.max(...items.map(item => item.timestamp)),
+      expiredItems: items.filter((item) => now > item.expiresAt).length,
+      oldestItem: Math.min(...items.map((item) => item.timestamp)),
+      newestItem: Math.max(...items.map((item) => item.timestamp)),
     };
   }
 
   public configure(config: Partial<CacheConfig>): void {
     this.config = { ...this.config, ...config };
-    
+
     if (this.cleanupTimer) {
       clearInterval(this.cleanupTimer);
     }
-    
+
     this.startCleanupTimer();
-    console.log('🗄️ Cache configuration updated:', this.config);
+    console.log("🗄️ Cache configuration updated:", this.config);
   }
 
   private evictItem(): void {
     let keyToEvict: CacheKey | null = null;
 
     switch (this.config.strategy) {
-      case 'lru':
+      case "lru":
         keyToEvict = this.findLRUItem();
         break;
-      case 'lfu':
+      case "lfu":
         keyToEvict = this.findLFUItem();
         break;
-      case 'fifo':
+      case "fifo":
         keyToEvict = this.findFIFOItem();
         break;
     }
@@ -228,7 +228,10 @@ class AdvancedCacheManager {
 
   private calculateHitRate(): number {
     const items = Array.from(this.cache.values());
-    const totalAccesses = items.reduce((sum, item) => sum + item.accessCount, 0);
+    const totalAccesses = items.reduce(
+      (sum, item) => sum + item.accessCount,
+      0,
+    );
     return totalAccesses > 0 ? items.length / totalAccesses : 0;
   }
 
@@ -248,7 +251,7 @@ class AdvancedCacheManager {
       }
     }
 
-    expiredKeys.forEach(key => this.delete(key));
+    expiredKeys.forEach((key) => this.delete(key));
 
     if (expiredKeys.length > 0) {
       console.log(`🗄️ Cleaned up ${expiredKeys.length} expired cache items`);
@@ -258,11 +261,11 @@ class AdvancedCacheManager {
   // Memory-based caching
   public memoize<T extends (...args: unknown[]) => unknown>(
     fn: T,
-    keyGenerator?: (...args: Parameters<T>) => string
+    keyGenerator?: (...args: Parameters<T>) => string,
   ): T {
     return ((...args: Parameters<T>): ReturnType<T> => {
       const key = keyGenerator ? keyGenerator(...args) : JSON.stringify(args);
-      
+
       const cached = this.get<ReturnType<T>>(key);
       if (cached !== null) {
         return cached;
@@ -278,11 +281,11 @@ class AdvancedCacheManager {
   public async memoizeAsync<T extends (...args: unknown[]) => Promise<unknown>>(
     fn: T,
     ttl?: number,
-    keyGenerator?: (...args: Parameters<T>) => string
+    keyGenerator?: (...args: Parameters<T>) => string,
   ): Promise<T> {
     return (async (...args: Parameters<T>): Promise<Awaited<ReturnType<T>>> => {
       const key = keyGenerator ? keyGenerator(...args) : JSON.stringify(args);
-      
+
       const cached = this.get<Awaited<ReturnType<T>>>(key);
       if (cached !== null) {
         return cached;
@@ -300,7 +303,7 @@ class AdvancedCacheManager {
       this.cleanupTimer = null;
     }
     this.clear();
-    console.log('🗄️ Cache manager destroyed');
+    console.log("🗄️ Cache manager destroyed");
   }
 }
 

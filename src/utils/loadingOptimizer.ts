@@ -6,17 +6,17 @@
 interface LoadingStrategy {
   name: string;
   description: string;
-  priority: 'critical' | 'high' | 'medium' | 'low';
+  priority: "critical" | "high" | "medium" | "low";
   resources: ResourceInfo[];
   estimatedImprovement: number; // percentage
 }
 
 interface ResourceInfo {
-  type: 'script' | 'stylesheet' | 'image' | 'font' | 'prefetch' | 'preload';
+  type: "script" | "stylesheet" | "image" | "font" | "prefetch" | "preload";
   url: string;
   size: number;
-  priority: 'critical' | 'high' | 'medium' | 'low';
-  loading: 'eager' | 'lazy' | 'preload' | 'prefetch';
+  priority: "critical" | "high" | "medium" | "low";
+  loading: "eager" | "lazy" | "preload" | "prefetch";
   async?: boolean;
   defer?: boolean;
 }
@@ -44,7 +44,7 @@ class LoadingOptimizer {
     timeToInteractive: 0,
     resourceLoadTimes: new Map(),
     renderBlockingResources: [],
-    unusedResources: []
+    unusedResources: [],
   };
 
   private observers: PerformanceObserver[] = [];
@@ -58,86 +58,86 @@ class LoadingOptimizer {
   private initializeStrategies(): void {
     this.strategies = [
       {
-        name: 'Critical Resource Preloading',
-        description: 'Preload critical CSS and JavaScript resources',
-        priority: 'critical',
+        name: "Critical Resource Preloading",
+        description: "Preload critical CSS and JavaScript resources",
+        priority: "critical",
         resources: [
           {
-            type: 'preload',
-            url: '/assets/css/main.css',
+            type: "preload",
+            url: "/assets/css/main.css",
             size: 25,
-            priority: 'critical',
-            loading: 'preload'
+            priority: "critical",
+            loading: "preload",
           },
           {
-            type: 'preload',
-            url: '/assets/js/main.js',
+            type: "preload",
+            url: "/assets/js/main.js",
             size: 18,
-            priority: 'critical',
-            loading: 'preload'
-          }
+            priority: "critical",
+            loading: "preload",
+          },
         ],
-        estimatedImprovement: 30
+        estimatedImprovement: 30,
       },
       {
-        name: 'Font Optimization',
-        description: 'Optimize font loading with display: swap and preloading',
-        priority: 'high',
+        name: "Font Optimization",
+        description: "Optimize font loading with display: swap and preloading",
+        priority: "high",
         resources: [
           {
-            type: 'preload',
-            url: '/fonts/inter.woff2',
+            type: "preload",
+            url: "/fonts/inter.woff2",
             size: 15,
-            priority: 'high',
-            loading: 'preload'
-          }
+            priority: "high",
+            loading: "preload",
+          },
         ],
-        estimatedImprovement: 20
+        estimatedImprovement: 20,
       },
       {
-        name: 'Image Lazy Loading',
-        description: 'Implement lazy loading for non-critical images',
-        priority: 'high',
+        name: "Image Lazy Loading",
+        description: "Implement lazy loading for non-critical images",
+        priority: "high",
         resources: [],
-        estimatedImprovement: 25
+        estimatedImprovement: 25,
       },
       {
-        name: 'Script Deferring',
-        description: 'Defer non-critical JavaScript execution',
-        priority: 'medium',
+        name: "Script Deferring",
+        description: "Defer non-critical JavaScript execution",
+        priority: "medium",
         resources: [],
-        estimatedImprovement: 15
+        estimatedImprovement: 15,
       },
       {
-        name: 'Resource Hints',
-        description: 'Add DNS prefetch and preconnect hints',
-        priority: 'medium',
+        name: "Resource Hints",
+        description: "Add DNS prefetch and preconnect hints",
+        priority: "medium",
         resources: [
           {
-            type: 'prefetch',
-            url: '//fonts.googleapis.com',
+            type: "prefetch",
+            url: "//fonts.googleapis.com",
             size: 0,
-            priority: 'low',
-            loading: 'prefetch'
-          }
+            priority: "low",
+            loading: "prefetch",
+          },
         ],
-        estimatedImprovement: 10
-      }
+        estimatedImprovement: 10,
+      },
     ];
   }
 
   private startMonitoring(): void {
     // Monitor resource loading
-    if ('PerformanceObserver' in window) {
+    if ("PerformanceObserver" in window) {
       const resourceObserver = new PerformanceObserver((list) => {
-        list.getEntries().forEach(entry => {
-          if (entry.entryType === 'resource') {
+        list.getEntries().forEach((entry) => {
+          if (entry.entryType === "resource") {
             const resourceEntry = entry as PerformanceResourceTiming;
             this.metrics.resourceLoadTimes.set(
-              resourceEntry.name, 
-              resourceEntry.responseEnd - resourceEntry.startTime
+              resourceEntry.name,
+              resourceEntry.responseEnd - resourceEntry.startTime,
             );
-            
+
             // Check for render-blocking resources
             if (this.isRenderBlocking(resourceEntry)) {
               this.metrics.renderBlockingResources.push(resourceEntry.name);
@@ -145,34 +145,34 @@ class LoadingOptimizer {
           }
         });
       });
-      
-      resourceObserver.observe({ entryTypes: ['resource'] });
+
+      resourceObserver.observe({ entryTypes: ["resource"] });
       this.observers.push(resourceObserver);
     }
 
     // Monitor page load events
-    window.addEventListener('DOMContentLoaded', () => {
+    window.addEventListener("DOMContentLoaded", () => {
       this.metrics.domContentLoaded = performance.now();
     });
 
-    window.addEventListener('load', () => {
+    window.addEventListener("load", () => {
       this.metrics.loadComplete = performance.now();
       this.analyzeUnusedResources();
     });
 
     // Monitor paint events
-    if ('PerformanceObserver' in window) {
+    if ("PerformanceObserver" in window) {
       const paintObserver = new PerformanceObserver((list) => {
-        list.getEntries().forEach(entry => {
-          if (entry.name === 'first-paint') {
+        list.getEntries().forEach((entry) => {
+          if (entry.name === "first-paint") {
             this.metrics.firstPaint = entry.startTime;
-          } else if (entry.name === 'first-contentful-paint') {
+          } else if (entry.name === "first-contentful-paint") {
             this.metrics.firstContentfulPaint = entry.startTime;
           }
         });
       });
-      
-      paintObserver.observe({ entryTypes: ['paint'] });
+
+      paintObserver.observe({ entryTypes: ["paint"] });
       this.observers.push(paintObserver);
     }
   }
@@ -180,8 +180,8 @@ class LoadingOptimizer {
   private isRenderBlocking(entry: PerformanceResourceTiming): boolean {
     const url = entry.name.toLowerCase();
     return (
-      (url.includes('.css') && !url.includes('preload')) ||
-      (url.includes('.js') && !entry.transferSize && !url.includes('async'))
+      (url.includes(".css") && !url.includes("preload")) ||
+      (url.includes(".js") && !entry.transferSize && !url.includes("async"))
     );
   }
 
@@ -189,30 +189,30 @@ class LoadingOptimizer {
     // Analyze which resources might be unused
     const allResources = Array.from(this.metrics.resourceLoadTimes.keys());
     const usedResources = this.getUsedResources();
-    
+
     this.metrics.unusedResources = allResources.filter(
-      resource => !usedResources.includes(resource)
+      (resource) => !usedResources.includes(resource),
     );
   }
 
   private getUsedResources(): string[] {
     // Simplified analysis - in reality, this would be more sophisticated
     const usedResources: string[] = [];
-    
+
     // Check for CSS usage
     const stylesheets = document.querySelectorAll('link[rel="stylesheet"]');
-    stylesheets.forEach(link => {
-      const href = link.getAttribute('href');
+    stylesheets.forEach((link) => {
+      const href = link.getAttribute("href");
       if (href) usedResources.push(href);
     });
-    
+
     // Check for JS usage
-    const scripts = document.querySelectorAll('script[src]');
-    scripts.forEach(script => {
-      const src = script.getAttribute('src');
+    const scripts = document.querySelectorAll("script[src]");
+    scripts.forEach((script) => {
+      const src = script.getAttribute("src");
       if (src) usedResources.push(src);
     });
-    
+
     return usedResources;
   }
 
@@ -221,7 +221,9 @@ class LoadingOptimizer {
   }
 
   public getCriticalStrategies(): LoadingStrategy[] {
-    return this.strategies.filter(s => s.priority === 'critical' || s.priority === 'high');
+    return this.strategies.filter(
+      (s) => s.priority === "critical" || s.priority === "high",
+    );
   }
 
   public getMetrics(): LoadingMetrics {
@@ -229,41 +231,41 @@ class LoadingOptimizer {
   }
 
   public applyStrategy(strategyName: string): void {
-    const strategy = this.strategies.find(s => s.name === strategyName);
+    const strategy = this.strategies.find((s) => s.name === strategyName);
     if (!strategy) return;
 
     switch (strategyName) {
-      case 'Critical Resource Preloading':
+      case "Critical Resource Preloading":
         this.preloadCriticalResources();
         break;
-      case 'Font Optimization':
+      case "Font Optimization":
         this.optimizeFonts();
         break;
-      case 'Image Lazy Loading':
+      case "Image Lazy Loading":
         this.implementImageLazyLoading();
         break;
-      case 'Script Deferring':
+      case "Script Deferring":
         this.deferNonCriticalScripts();
         break;
-      case 'Resource Hints':
+      case "Resource Hints":
         this.addResourceHints();
         break;
     }
   }
 
   private preloadCriticalResources(): void {
-    const criticalResources = this.strategies
-      .find(s => s.name === 'Critical Resource Preloading')
-      ?.resources || [];
+    const criticalResources =
+      this.strategies.find((s) => s.name === "Critical Resource Preloading")
+        ?.resources || [];
 
-    criticalResources.forEach(resource => {
-      if (resource.type === 'preload') {
-        const link = document.createElement('link');
-        link.rel = 'preload';
+    criticalResources.forEach((resource) => {
+      if (resource.type === "preload") {
+        const link = document.createElement("link");
+        link.rel = "preload";
         link.href = resource.url;
-        link.as = resource.type === 'preload' ? 'style' : 'script';
-        if (resource.type === 'preload') {
-          link.as = resource.url.endsWith('.css') ? 'style' : 'script';
+        link.as = resource.type === "preload" ? "style" : "script";
+        if (resource.type === "preload") {
+          link.as = resource.url.endsWith(".css") ? "style" : "script";
         }
         document.head.appendChild(link);
       }
@@ -273,76 +275,79 @@ class LoadingOptimizer {
   private optimizeFonts(): void {
     // Add font-display: swap to existing fonts
     const fontLinks = document.querySelectorAll('link[href*="font"]');
-    fontLinks.forEach(link => {
-      const href = link.getAttribute('href');
-      if (href && !href.includes('display=swap')) {
-        const newHref = href.includes('?') ? `${href}&display=swap` : `${href}?display=swap`;
-        link.setAttribute('href', newHref);
+    fontLinks.forEach((link) => {
+      const href = link.getAttribute("href");
+      if (href && !href.includes("display=swap")) {
+        const newHref = href.includes("?")
+          ? `${href}&display=swap`
+          : `${href}?display=swap`;
+        link.setAttribute("href", newHref);
       }
     });
 
     // Preload critical fonts
-    const criticalFonts = this.strategies
-      .find(s => s.name === 'Font Optimization')
-      ?.resources || [];
+    const criticalFonts =
+      this.strategies.find((s) => s.name === "Font Optimization")?.resources ||
+      [];
 
-    criticalFonts.forEach(font => {
-      const link = document.createElement('link');
-      link.rel = 'preload';
+    criticalFonts.forEach((font) => {
+      const link = document.createElement("link");
+      link.rel = "preload";
       link.href = font.url;
-      link.as = 'font';
-      link.type = 'font/woff2';
-      link.crossOrigin = 'anonymous';
+      link.as = "font";
+      link.type = "font/woff2";
+      link.crossOrigin = "anonymous";
       document.head.appendChild(link);
     });
   }
 
   private implementImageLazyLoading(): void {
-    const images = document.querySelectorAll('img[data-src]');
-    
-    if ('IntersectionObserver' in window) {
+    const images = document.querySelectorAll("img[data-src]");
+
+    if ("IntersectionObserver" in window) {
       const imageObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
+        entries.forEach((entry) => {
           if (entry.isIntersecting) {
             const img = entry.target as HTMLImageElement;
-            img.src = img.dataset.src || '';
-            img.classList.remove('lazy');
+            img.src = img.dataset.src || "";
+            img.classList.remove("lazy");
             imageObserver.unobserve(img);
           }
         });
       });
 
-      images.forEach(img => {
-        img.classList.add('lazy');
+      images.forEach((img) => {
+        img.classList.add("lazy");
         imageObserver.observe(img);
       });
     }
   }
 
   private deferNonCriticalScripts(): void {
-    const scripts = document.querySelectorAll('script[src]:not([async]):not([defer])');
-    scripts.forEach(script => {
-      const src = script.getAttribute('src');
+    const scripts = document.querySelectorAll(
+      "script[src]:not([async]):not([defer])",
+    );
+    scripts.forEach((script) => {
+      const src = script.getAttribute("src");
       if (src && !this.isCriticalScript(src)) {
-        script.setAttribute('defer', '');
+        script.setAttribute("defer", "");
       }
     });
   }
 
   private isCriticalScript(src: string): boolean {
-    const criticalPatterns = ['main', 'vendor-react', 'components'];
-    return criticalPatterns.some(pattern => src.includes(pattern));
+    const criticalPatterns = ["main", "vendor-react", "components"];
+    return criticalPatterns.some((pattern) => src.includes(pattern));
   }
 
   private addResourceHints(): void {
-    const hints = this.strategies
-      .find(s => s.name === 'Resource Hints')
-      ?.resources || [];
+    const hints =
+      this.strategies.find((s) => s.name === "Resource Hints")?.resources || [];
 
-    hints.forEach(hint => {
-      if (hint.type === 'prefetch') {
-        const link = document.createElement('link');
-        link.rel = 'dns-prefetch';
+    hints.forEach((hint) => {
+      if (hint.type === "prefetch") {
+        const link = document.createElement("link");
+        link.rel = "dns-prefetch";
         link.href = hint.url;
         document.head.appendChild(link);
       }
@@ -351,25 +356,25 @@ class LoadingOptimizer {
 
   public getLoadingScore(): number {
     let score = 100;
-    
+
     // Deduct points for slow loading
     if (this.metrics.domContentLoaded > 1000) score -= 20;
     if (this.metrics.loadComplete > 3000) score -= 30;
     if (this.metrics.firstContentfulPaint > 1800) score -= 25;
-    
+
     // Deduct points for render-blocking resources
     score -= this.metrics.renderBlockingResources.length * 5;
-    
+
     // Deduct points for unused resources
     score -= this.metrics.unusedResources.length * 3;
-    
+
     return Math.max(0, score);
   }
 
   public generateLoadingReport(): string {
     const score = this.getLoadingScore();
     const criticalStrategies = this.getCriticalStrategies();
-    
+
     return `
 Loading Performance Report
 ==========================
@@ -385,14 +390,17 @@ Render-Blocking Resources: ${this.metrics.renderBlockingResources.length}
 Unused Resources: ${this.metrics.unusedResources.length}
 
 Recommended Strategies:
-${criticalStrategies.map(s => 
-  `- ${s.name}: ${s.description} (${s.estimatedImprovement}% improvement)`
-).join('\n')}
+${criticalStrategies
+  .map(
+    (s) =>
+      `- ${s.name}: ${s.description} (${s.estimatedImprovement}% improvement)`,
+  )
+  .join("\n")}
     `.trim();
   }
 
   public cleanup(): void {
-    this.observers.forEach(observer => observer.disconnect());
+    this.observers.forEach((observer) => observer.disconnect());
     this.observers = [];
   }
 }

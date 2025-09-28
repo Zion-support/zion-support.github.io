@@ -74,7 +74,11 @@ class EnhancedAnalyticsSystem {
   private isInitialized = false;
   private flushTimer: number | null = null;
   private performanceObserver: PerformanceObserver | null = null;
-  private userJourney: Array<{ step: number; event: string; timestamp: number }> = [];
+  private userJourney: Array<{
+    step: number;
+    event: string;
+    timestamp: number;
+  }> = [];
   private currentStep = 0;
 
   constructor(config?: Partial<AnalyticsConfig>) {
@@ -88,8 +92,8 @@ class EnhancedAnalyticsSystem {
       batchSize: 50,
       flushInterval: 30000, // 30 seconds
       maxRetries: 3,
-      endpoint: '/api/analytics',
-      ...config
+      endpoint: "/api/analytics",
+      ...config,
     };
 
     this.sessionId = this.generateSessionId();
@@ -109,13 +113,20 @@ class EnhancedAnalyticsSystem {
     this.startFlushTimer();
     this.isInitialized = true;
 
-    console.log('✅ Enhanced Analytics System initialized');
+    console.log("✅ Enhanced Analytics System initialized");
   }
 
   /**
    * Track custom event
    */
-  track(eventType: string, category: string, action: string, label?: string, value?: number, properties?: Record<string, unknown>): void {
+  track(
+    eventType: string,
+    category: string,
+    action: string,
+    label?: string,
+    value?: number,
+    properties?: Record<string, unknown>,
+  ): void {
     if (!this.config.enableTracking) return;
 
     const event: AnalyticsEvent = {
@@ -129,7 +140,7 @@ class EnhancedAnalyticsSystem {
       sessionId: this.sessionId,
       userId: this.userId,
       properties,
-      metadata: this.collectMetadata()
+      metadata: this.collectMetadata(),
     };
 
     this.events.push(event);
@@ -145,10 +156,10 @@ class EnhancedAnalyticsSystem {
    * Track page view
    */
   trackPageView(page: string, title?: string): void {
-    this.track('page_view', 'navigation', 'view', page, undefined, {
+    this.track("page_view", "navigation", "view", page, undefined, {
       page,
       title: title || document.title,
-      referrer: document.referrer
+      referrer: document.referrer,
     });
   }
 
@@ -156,51 +167,59 @@ class EnhancedAnalyticsSystem {
    * Track user interaction
    */
   trackInteraction(element: string, action: string, value?: string): void {
-    this.track('interaction', 'user', action, element, undefined, {
+    this.track("interaction", "user", action, element, undefined, {
       element,
       value,
-      position: this.getElementPosition(element)
+      position: this.getElementPosition(element),
     });
   }
 
   /**
    * Track conversion
    */
-  trackConversion(conversionType: string, value?: number, properties?: Record<string, unknown>): void {
+  trackConversion(
+    conversionType: string,
+    value?: number,
+    properties?: Record<string, unknown>,
+  ): void {
     if (!this.config.enableConversionTracking) return;
 
-    this.track('conversion', 'business', 'complete', conversionType, value, {
+    this.track("conversion", "business", "complete", conversionType, value, {
       conversionType,
-      ...properties
+      ...properties,
     });
   }
 
   /**
    * Track error
    */
-  trackError(error: Error, context?: string, severity: 'low' | 'medium' | 'high' = 'medium'): void {
+  trackError(
+    error: Error,
+    context?: string,
+    severity: "low" | "medium" | "high" = "medium",
+  ): void {
     if (!this.config.enableErrorTracking) return;
 
-    this.track('error', 'technical', 'occurred', context, undefined, {
+    this.track("error", "technical", "occurred", context, undefined, {
       message: error.message,
       stack: error.stack,
       severity,
       context,
       url: window.location.href,
-      userAgent: navigator.userAgent
+      userAgent: navigator.userAgent,
     });
   }
 
   /**
    * Track performance metric
    */
-  trackPerformance(metric: string, value: number, unit: string = 'ms'): void {
+  trackPerformance(metric: string, value: number, unit: string = "ms"): void {
     if (!this.config.enablePerformanceTracking) return;
 
-    this.track('performance', 'technical', 'measured', metric, value, {
+    this.track("performance", "technical", "measured", metric, value, {
       metric,
       unit,
-      url: window.location.href
+      url: window.location.href,
     });
   }
 
@@ -215,25 +234,36 @@ class EnhancedAnalyticsSystem {
    * Get analytics metrics
    */
   getMetrics(): AnalyticsMetrics {
-    const eventsByType = this.events.reduce((acc, event) => {
-      acc[event.type] = (acc[event.type] || 0) + 1;
-      return acc;
-    }, {} as Record<string, number>);
+    const eventsByType = this.events.reduce(
+      (acc, event) => {
+        acc[event.type] = (acc[event.type] || 0) + 1;
+        return acc;
+      },
+      {} as Record<string, number>,
+    );
 
-    const eventsByCategory = this.events.reduce((acc, event) => {
-      acc[event.category] = (acc[event.category] || 0) + 1;
-      return acc;
-    }, {} as Record<string, number>);
+    const eventsByCategory = this.events.reduce(
+      (acc, event) => {
+        acc[event.category] = (acc[event.category] || 0) + 1;
+        return acc;
+      },
+      {} as Record<string, number>,
+    );
 
-    const uniqueUsers = new Set(this.events.map(e => e.userId).filter(Boolean)).size;
-    const sessions = new Set(this.events.map(e => e.sessionId)).size;
+    const uniqueUsers = new Set(
+      this.events.map((e) => e.userId).filter(Boolean),
+    ).size;
+    const sessions = new Set(this.events.map((e) => e.sessionId)).size;
 
-    const pageViews = this.events.filter(e => e.type === 'page_view');
-    const topPages = pageViews.reduce((acc, event) => {
-      const page = event.label || 'unknown';
-      acc[page] = (acc[page] || 0) + 1;
-      return acc;
-    }, {} as Record<string, number>);
+    const pageViews = this.events.filter((e) => e.type === "page_view");
+    const topPages = pageViews.reduce(
+      (acc, event) => {
+        const page = event.label || "unknown";
+        acc[page] = (acc[page] || 0) + 1;
+        return acc;
+      },
+      {} as Record<string, number>,
+    );
 
     const topEvents = Object.entries(eventsByType)
       .map(([event, count]) => ({ event, count }))
@@ -256,7 +286,7 @@ class EnhancedAnalyticsSystem {
       conversionRate: this.calculateConversionRate(),
       topPages: topPagesList,
       topEvents,
-      userJourney: this.userJourney
+      userJourney: this.userJourney,
     };
   }
 
@@ -264,23 +294,35 @@ class EnhancedAnalyticsSystem {
    * Get performance metrics
    */
   getPerformanceMetrics(): PerformanceMetrics {
-    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-    const paint = performance.getEntriesByType('paint');
-    const fcp = paint.find(entry => entry.name === 'first-contentful-paint');
-    const lcp = performance.getEntriesByType('largest-contentful-paint')[0] as PerformanceEntry & { value?: number };
-    const fid = performance.getEntriesByType('first-input')[0] as PerformanceEntry & { processingStart?: number };
-    const cls = performance.getEntriesByType('layout-shift')[0] as PerformanceEntry & { value?: number };
+    const navigation = performance.getEntriesByType(
+      "navigation",
+    )[0] as PerformanceNavigationTiming;
+    const paint = performance.getEntriesByType("paint");
+    const fcp = paint.find((entry) => entry.name === "first-contentful-paint");
+    const lcp = performance.getEntriesByType(
+      "largest-contentful-paint",
+    )[0] as PerformanceEntry & { value?: number };
+    const fid = performance.getEntriesByType(
+      "first-input",
+    )[0] as PerformanceEntry & { processingStart?: number };
+    const cls = performance.getEntriesByType(
+      "layout-shift",
+    )[0] as PerformanceEntry & { value?: number };
 
     return {
-      pageLoadTime: navigation ? navigation.loadEventEnd - navigation.fetchStart : 0,
-      domContentLoaded: navigation ? navigation.domContentLoadedEventEnd - navigation.fetchStart : 0,
+      pageLoadTime: navigation
+        ? navigation.loadEventEnd - navigation.fetchStart
+        : 0,
+      domContentLoaded: navigation
+        ? navigation.domContentLoadedEventEnd - navigation.fetchStart
+        : 0,
       firstContentfulPaint: fcp ? fcp.startTime : 0,
       largestContentfulPaint: lcp ? lcp.value || 0 : 0,
       firstInputDelay: fid ? fid.processingStart || 0 : 0,
       cumulativeLayoutShift: cls ? cls.value || 0 : 0,
       timeToInteractive: this.calculateTimeToInteractive(),
       memoryUsage: this.getMemoryUsage(),
-      networkLatency: this.calculateNetworkLatency()
+      networkLatency: this.calculateNetworkLatency(),
     };
   }
 
@@ -297,7 +339,7 @@ class EnhancedAnalyticsSystem {
       await this.sendToServer(eventsToFlush);
       console.log(`Flushed ${eventsToFlush.length} analytics events`);
     } catch (error) {
-      console.error('Failed to flush analytics events:', error);
+      console.error("Failed to flush analytics events:", error);
       // Re-add events to queue for retry
       this.events.unshift(...eventsToFlush);
     }
@@ -316,14 +358,16 @@ class EnhancedAnalyticsSystem {
     this.trackCustomMetrics();
 
     // Setup performance observer
-    if ('PerformanceObserver' in window) {
+    if ("PerformanceObserver" in window) {
       this.performanceObserver = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
-          this.trackPerformance(entry.name, entry.duration, 'ms');
+          this.trackPerformance(entry.name, entry.duration, "ms");
         }
       });
 
-      this.performanceObserver.observe({ entryTypes: ['measure', 'navigation', 'paint'] });
+      this.performanceObserver.observe({
+        entryTypes: ["measure", "navigation", "paint"],
+      });
     }
   }
 
@@ -334,36 +378,42 @@ class EnhancedAnalyticsSystem {
     // First Contentful Paint
     new PerformanceObserver((entryList) => {
       for (const entry of entryList.getEntries()) {
-        this.trackPerformance('first-contentful-paint', entry.startTime);
+        this.trackPerformance("first-contentful-paint", entry.startTime);
       }
-    }).observe({ entryTypes: ['paint'] });
+    }).observe({ entryTypes: ["paint"] });
 
     // Largest Contentful Paint
     new PerformanceObserver((entryList) => {
       const entries = entryList.getEntries();
       const lastEntry = entries[entries.length - 1];
-      this.trackPerformance('largest-contentful-paint', lastEntry.startTime);
-    }).observe({ entryTypes: ['largest-contentful-paint'] });
+      this.trackPerformance("largest-contentful-paint", lastEntry.startTime);
+    }).observe({ entryTypes: ["largest-contentful-paint"] });
 
     // First Input Delay
     new PerformanceObserver((entryList) => {
       for (const entry of entryList.getEntries()) {
         const fid = entry as PerformanceEventTiming;
-        this.trackPerformance('first-input-delay', fid.processingStart - fid.startTime);
+        this.trackPerformance(
+          "first-input-delay",
+          fid.processingStart - fid.startTime,
+        );
       }
-    }).observe({ entryTypes: ['first-input'] });
+    }).observe({ entryTypes: ["first-input"] });
 
     // Cumulative Layout Shift
     let clsValue = 0;
     new PerformanceObserver((entryList) => {
       for (const entry of entryList.getEntries()) {
-        const layoutShiftEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
+        const layoutShiftEntry = entry as PerformanceEntry & {
+          hadRecentInput?: boolean;
+          value?: number;
+        };
         if (!layoutShiftEntry.hadRecentInput) {
           clsValue += layoutShiftEntry.value || 0;
         }
       }
-      this.trackPerformance('cumulative-layout-shift', clsValue);
-    }).observe({ entryTypes: ['layout-shift'] });
+      this.trackPerformance("cumulative-layout-shift", clsValue);
+    }).observe({ entryTypes: ["layout-shift"] });
   }
 
   /**
@@ -371,21 +421,27 @@ class EnhancedAnalyticsSystem {
    */
   private trackCustomMetrics(): void {
     // Memory usage
-    if ('memory' in performance) {
-      const memory = (performance as Record<string, unknown>).memory as { usedJSHeapSize: number; totalJSHeapSize: number };
-      this.trackPerformance('memory-used', memory.usedJSHeapSize, 'bytes');
-      this.trackPerformance('memory-total', memory.totalJSHeapSize, 'bytes');
+    if ("memory" in performance) {
+      const memory = (performance as Record<string, unknown>).memory as {
+        usedJSHeapSize: number;
+        totalJSHeapSize: number;
+      };
+      this.trackPerformance("memory-used", memory.usedJSHeapSize, "bytes");
+      this.trackPerformance("memory-total", memory.totalJSHeapSize, "bytes");
     }
 
     // Network information
-    if ('connection' in navigator) {
-      const connection = (navigator as any).connection as { effectiveType?: string; rtt?: number };
-      this.track('performance', 'technical', 'measured', 'connection-type', 0, {
-        metric: 'connection-type',
-        unit: 'string',
-        value: connection.effectiveType || 'unknown'
+    if ("connection" in navigator) {
+      const connection = (navigator as any).connection as {
+        effectiveType?: string;
+        rtt?: number;
+      };
+      this.track("performance", "technical", "measured", "connection-type", 0, {
+        metric: "connection-type",
+        unit: "string",
+        value: connection.effectiveType || "unknown",
       });
-      this.trackPerformance('connection-rtt', connection.rtt || 0, 'ms');
+      this.trackPerformance("connection-rtt", connection.rtt || 0, "ms");
     }
   }
 
@@ -396,21 +452,31 @@ class EnhancedAnalyticsSystem {
     if (!this.config.enableErrorTracking) return;
 
     // Global error handler
-    window.addEventListener('error', (event) => {
-      this.trackError(event.error, 'global', 'high');
+    window.addEventListener("error", (event) => {
+      this.trackError(event.error, "global", "high");
     });
 
     // Unhandled promise rejection handler
-    window.addEventListener('unhandledrejection', (event) => {
-      this.trackError(new Error(event.reason), 'promise', 'high');
+    window.addEventListener("unhandledrejection", (event) => {
+      this.trackError(new Error(event.reason), "promise", "high");
     });
 
     // Resource loading errors
-    window.addEventListener('error', (event) => {
-      if (event.target !== window) {
-        this.trackError(new Error(`Resource loading error: ${(event.target as HTMLElement).tagName}`), 'resource', 'medium');
-      }
-    }, true);
+    window.addEventListener(
+      "error",
+      (event) => {
+        if (event.target !== window) {
+          this.trackError(
+            new Error(
+              `Resource loading error: ${(event.target as HTMLElement).tagName}`,
+            ),
+            "resource",
+            "medium",
+          );
+        }
+      },
+      true,
+    );
   }
 
   /**
@@ -423,26 +489,33 @@ class EnhancedAnalyticsSystem {
     this.trackPageView(window.location.pathname);
 
     // Track clicks
-    document.addEventListener('click', (event) => {
+    document.addEventListener("click", (event) => {
       const target = event.target as HTMLElement;
-      if (target.tagName === 'A' || target.tagName === 'BUTTON') {
-        this.trackInteraction(target.tagName.toLowerCase(), 'click', target.textContent || '');
+      if (target.tagName === "A" || target.tagName === "BUTTON") {
+        this.trackInteraction(
+          target.tagName.toLowerCase(),
+          "click",
+          target.textContent || "",
+        );
       }
     });
 
     // Track form submissions
-    document.addEventListener('submit', (event) => {
+    document.addEventListener("submit", (event) => {
       const form = event.target as HTMLFormElement;
-      this.trackInteraction('form', 'submit', form.action);
+      this.trackInteraction("form", "submit", form.action);
     });
 
     // Track scroll depth
     let maxScroll = 0;
-    window.addEventListener('scroll', () => {
-      const scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+    window.addEventListener("scroll", () => {
+      const scrollPercent = Math.round(
+        (window.scrollY / (document.body.scrollHeight - window.innerHeight)) *
+          100,
+      );
       if (scrollPercent > maxScroll) {
         maxScroll = scrollPercent;
-        this.track('scroll', 'engagement', 'depth', `${scrollPercent}%`);
+        this.track("scroll", "engagement", "depth", `${scrollPercent}%`);
       }
     });
   }
@@ -454,18 +527,18 @@ class EnhancedAnalyticsSystem {
     if (!this.config.enableConversionTracking) return;
 
     // Track successful form submissions
-    document.addEventListener('submit', (event) => {
+    document.addEventListener("submit", (event) => {
       const form = event.target as HTMLFormElement;
-      if (form.classList.contains('conversion-form')) {
-        this.trackConversion('form-submission');
+      if (form.classList.contains("conversion-form")) {
+        this.trackConversion("form-submission");
       }
     });
 
     // Track button clicks that indicate conversion
-    document.addEventListener('click', (event) => {
+    document.addEventListener("click", (event) => {
       const target = event.target as HTMLElement;
-      if (target.classList.contains('conversion-button')) {
-        this.trackConversion('button-click');
+      if (target.classList.contains("conversion-button")) {
+        this.trackConversion("button-click");
       }
     });
   }
@@ -475,27 +548,31 @@ class EnhancedAnalyticsSystem {
    */
   private setupAutomaticEvents(): void {
     // Track page load
-    window.addEventListener('load', () => {
-      this.track('page_load', 'technical', 'completed');
+    window.addEventListener("load", () => {
+      this.track("page_load", "technical", "completed");
     });
 
     // Track page unload
-    window.addEventListener('beforeunload', () => {
-      this.track('page_unload', 'technical', 'completed');
+    window.addEventListener("beforeunload", () => {
+      this.track("page_unload", "technical", "completed");
     });
 
     // Track focus/blur
-    window.addEventListener('focus', () => {
-      this.track('window_focus', 'user', 'gained');
+    window.addEventListener("focus", () => {
+      this.track("window_focus", "user", "gained");
     });
 
-    window.addEventListener('blur', () => {
-      this.track('window_blur', 'user', 'lost');
+    window.addEventListener("blur", () => {
+      this.track("window_blur", "user", "lost");
     });
 
     // Track visibility changes
-    document.addEventListener('visibilitychange', () => {
-      this.track('visibility_change', 'user', document.hidden ? 'hidden' : 'visible');
+    document.addEventListener("visibilitychange", () => {
+      this.track(
+        "visibility_change",
+        "user",
+        document.hidden ? "hidden" : "visible",
+      );
     });
   }
 
@@ -525,7 +602,7 @@ class EnhancedAnalyticsSystem {
   /**
    * Collect metadata
    */
-  private collectMetadata(): AnalyticsEvent['metadata'] {
+  private collectMetadata(): AnalyticsEvent["metadata"] {
     return {
       userAgent: navigator.userAgent,
       url: window.location.href,
@@ -534,7 +611,7 @@ class EnhancedAnalyticsSystem {
       viewportSize: `${window.innerWidth}x${window.innerHeight}`,
       timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
       language: navigator.language,
-      platform: navigator.platform
+      platform: navigator.platform,
     };
   }
 
@@ -548,7 +625,7 @@ class EnhancedAnalyticsSystem {
     this.userJourney.push({
       step: this.currentStep,
       event: `${event.category}:${event.action}`,
-      timestamp: event.timestamp
+      timestamp: event.timestamp,
     });
 
     // Keep only last 50 steps
@@ -570,7 +647,7 @@ class EnhancedAnalyticsSystem {
     } catch {
       // Ignore errors
     }
-    return 'unknown';
+    return "unknown";
   }
 
   /**
@@ -578,18 +655,23 @@ class EnhancedAnalyticsSystem {
    */
   private calculateAverageSessionDuration(): number {
     const sessions = new Map<string, { start: number; end: number }>();
-    
+
     for (const event of this.events) {
       if (!sessions.has(event.sessionId)) {
-        sessions.set(event.sessionId, { start: event.timestamp, end: event.timestamp });
+        sessions.set(event.sessionId, {
+          start: event.timestamp,
+          end: event.timestamp,
+        });
       } else {
         const session = sessions.get(event.sessionId)!;
         session.end = Math.max(session.end, event.timestamp);
       }
     }
 
-    const durations = Array.from(sessions.values()).map(s => s.end - s.start);
-    return durations.length > 0 ? durations.reduce((a, b) => a + b, 0) / durations.length : 0;
+    const durations = Array.from(sessions.values()).map((s) => s.end - s.start);
+    return durations.length > 0
+      ? durations.reduce((a, b) => a + b, 0) / durations.length
+      : 0;
   }
 
   /**
@@ -597,13 +679,15 @@ class EnhancedAnalyticsSystem {
    */
   private calculateBounceRate(): number {
     const sessions = new Map<string, number>();
-    
+
     for (const event of this.events) {
       const count = sessions.get(event.sessionId) || 0;
       sessions.set(event.sessionId, count + 1);
     }
 
-    const singleEventSessions = Array.from(sessions.values()).filter(count => count === 1).length;
+    const singleEventSessions = Array.from(sessions.values()).filter(
+      (count) => count === 1,
+    ).length;
     return sessions.size > 0 ? singleEventSessions / sessions.size : 0;
   }
 
@@ -611,8 +695,10 @@ class EnhancedAnalyticsSystem {
    * Calculate conversion rate
    */
   private calculateConversionRate(): number {
-    const conversions = this.events.filter(e => e.type === 'conversion').length;
-    const totalSessions = new Set(this.events.map(e => e.sessionId)).size;
+    const conversions = this.events.filter(
+      (e) => e.type === "conversion",
+    ).length;
+    const totalSessions = new Set(this.events.map((e) => e.sessionId)).size;
     return totalSessions > 0 ? conversions / totalSessions : 0;
   }
 
@@ -620,7 +706,9 @@ class EnhancedAnalyticsSystem {
    * Calculate time to interactive
    */
   private calculateTimeToInteractive(): number {
-    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    const navigation = performance.getEntriesByType(
+      "navigation",
+    )[0] as PerformanceNavigationTiming;
     return navigation ? navigation.domInteractive - navigation.fetchStart : 0;
   }
 
@@ -628,8 +716,10 @@ class EnhancedAnalyticsSystem {
    * Get memory usage
    */
   private getMemoryUsage(): number {
-    if ('memory' in performance) {
-      const memory = (performance as Record<string, unknown>).memory as { usedJSHeapSize: number };
+    if ("memory" in performance) {
+      const memory = (performance as Record<string, unknown>).memory as {
+        usedJSHeapSize: number;
+      };
       return memory.usedJSHeapSize;
     }
     return 0;
@@ -639,7 +729,7 @@ class EnhancedAnalyticsSystem {
    * Calculate network latency
    */
   private calculateNetworkLatency(): number {
-    if ('connection' in navigator) {
+    if ("connection" in navigator) {
       const connection = (navigator as any).connection as { rtt?: number };
       return connection.rtt || 0;
     }
@@ -654,16 +744,18 @@ class EnhancedAnalyticsSystem {
       events,
       sessionId: this.sessionId,
       userId: this.userId,
-      timestamp: Date.now()
+      timestamp: Date.now(),
     };
 
     const response = await fetch(this.config.endpoint, {
-      method: 'POST',
+      method: "POST",
       headers: {
-        'Content-Type': 'application/json',
-        ...(this.config.apiKey && { 'Authorization': `Bearer ${this.config.apiKey}` })
+        "Content-Type": "application/json",
+        ...(this.config.apiKey && {
+          Authorization: `Bearer ${this.config.apiKey}`,
+        }),
       },
-      body: JSON.stringify(payload)
+      body: JSON.stringify(payload),
     });
 
     if (!response.ok) {
@@ -701,6 +793,6 @@ class EnhancedAnalyticsSystem {
 export const enhancedAnalyticsSystem = new EnhancedAnalyticsSystem();
 
 // Auto-initialize
-if (typeof window !== 'undefined') {
+if (typeof window !== "undefined") {
   enhancedAnalyticsSystem.initialize();
 }

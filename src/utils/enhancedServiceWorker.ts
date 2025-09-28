@@ -12,7 +12,12 @@ export interface ServiceWorkerConfig {
 }
 
 export interface CacheStrategy {
-  strategy: 'cacheFirst' | 'networkFirst' | 'staleWhileRevalidate' | 'networkOnly' | 'cacheOnly';
+  strategy:
+    | "cacheFirst"
+    | "networkFirst"
+    | "staleWhileRevalidate"
+    | "networkOnly"
+    | "cacheOnly";
   cacheName: string;
   maxAge?: number;
   maxEntries?: number;
@@ -33,12 +38,12 @@ export class EnhancedServiceWorkerManager {
 
   constructor(config: Partial<ServiceWorkerConfig> = {}) {
     this.config = {
-      cacheName: 'zion-app-v1',
-      cacheVersion: '1.0.0',
-      offlinePage: '/offline.html',
+      cacheName: "zion-app-v1",
+      cacheVersion: "1.0.0",
+      offlinePage: "/offline.html",
       maxCacheSize: 50 * 1024 * 1024, // 50MB
       maxCacheAge: 24 * 60 * 60 * 1000, // 24 hours
-      ...config
+      ...config,
     };
 
     this.setupDefaultRoutes();
@@ -53,32 +58,32 @@ export class EnhancedServiceWorkerManager {
       {
         pattern: /\.(js|css|png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot)$/,
         strategy: {
-          strategy: 'cacheFirst',
-          cacheName: 'static-assets',
+          strategy: "cacheFirst",
+          cacheName: "static-assets",
           maxAge: 30 * 24 * 60 * 60 * 1000, // 30 days
-          maxEntries: 100
-        }
+          maxEntries: 100,
+        },
       },
       // API calls - Network First
       {
         pattern: /^\/api\//,
         strategy: {
-          strategy: 'networkFirst',
-          cacheName: 'api-cache',
+          strategy: "networkFirst",
+          cacheName: "api-cache",
           maxAge: 5 * 60 * 1000, // 5 minutes
-          maxEntries: 50
-        }
+          maxEntries: 50,
+        },
       },
       // HTML pages - Stale While Revalidate
       {
         pattern: /\.html$|^\/[^.]*$/,
         strategy: {
-          strategy: 'staleWhileRevalidate',
-          cacheName: 'pages-cache',
+          strategy: "staleWhileRevalidate",
+          cacheName: "pages-cache",
           maxAge: 60 * 60 * 1000, // 1 hour
-          maxEntries: 20
-        }
-      }
+          maxEntries: 20,
+        },
+      },
     ];
   }
 
@@ -86,24 +91,27 @@ export class EnhancedServiceWorkerManager {
    * Register service worker
    */
   async register(): Promise<boolean> {
-    if (!('serviceWorker' in navigator)) {
-      console.warn('Service Worker not supported');
+    if (!("serviceWorker" in navigator)) {
+      console.warn("Service Worker not supported");
       return false;
     }
 
     try {
-      const registration = await navigator.serviceWorker.register('/sw.js', {
-        scope: '/'
+      const registration = await navigator.serviceWorker.register("/sw.js", {
+        scope: "/",
       });
 
-      console.log('Service Worker registered:', registration);
+      console.log("Service Worker registered:", registration);
 
       // Listen for updates
-      registration.addEventListener('updatefound', () => {
+      registration.addEventListener("updatefound", () => {
         const newWorker = registration.installing;
         if (newWorker) {
-          newWorker.addEventListener('statechange', () => {
-            if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+          newWorker.addEventListener("statechange", () => {
+            if (
+              newWorker.state === "installed" &&
+              navigator.serviceWorker.controller
+            ) {
               // New service worker is available
               this.showUpdateNotification();
             }
@@ -114,7 +122,7 @@ export class EnhancedServiceWorkerManager {
       this.isRegistered = true;
       return true;
     } catch (error) {
-      console.error('Service Worker registration failed:', error);
+      console.error("Service Worker registration failed:", error);
       return false;
     }
   }
@@ -124,10 +132,10 @@ export class EnhancedServiceWorkerManager {
    */
   private showUpdateNotification(): void {
     // This would typically show a notification to the user
-    console.log('New service worker version available');
-    
+    console.log("New service worker version available");
+
     // Dispatch custom event for app to handle
-    window.dispatchEvent(new CustomEvent('sw-update-available'));
+    window.dispatchEvent(new CustomEvent("sw-update-available"));
   }
 
   /**
@@ -323,34 +331,34 @@ console.log('Enhanced Service Worker loaded');
    */
   async updateServiceWorkerScript(): Promise<void> {
     if (!this.isRegistered) {
-      console.warn('Service Worker not registered');
+      console.warn("Service Worker not registered");
       return;
     }
 
     const script = this.getServiceWorkerScript();
-    
+
     // This would typically update the service worker file
     // In a real implementation, you'd write this to the public/sw.js file
-    console.log('Service Worker script updated');
+    console.log("Service Worker script updated");
   }
 
   /**
    * Clear all caches
    */
   async clearAllCaches(): Promise<void> {
-    if (!('caches' in window)) {
-      console.warn('Cache API not supported');
+    if (!("caches" in window)) {
+      console.warn("Cache API not supported");
       return;
     }
 
     try {
       const cacheNames = await caches.keys();
       await Promise.all(
-        cacheNames.map(cacheName => caches.delete(cacheName))
+        cacheNames.map((cacheName) => caches.delete(cacheName)),
       );
-      console.log('All caches cleared');
+      console.log("All caches cleared");
     } catch (error) {
-      console.error('Error clearing caches:', error);
+      console.error("Error clearing caches:", error);
     }
   }
 
@@ -358,7 +366,7 @@ console.log('Enhanced Service Worker loaded');
    * Get cache status
    */
   async getCacheStatus(): Promise<Record<string, number>> {
-    if (!('caches' in window)) {
+    if (!("caches" in window)) {
       return {};
     }
 
@@ -378,24 +386,24 @@ console.log('Enhanced Service Worker loaded');
    * Preload critical resources
    */
   async preloadCriticalResources(resources: string[]): Promise<void> {
-    if (!('caches' in window)) {
+    if (!("caches" in window)) {
       return;
     }
 
-    const cache = await caches.open('critical-resources');
-    
+    const cache = await caches.open("critical-resources");
+
     await Promise.all(
       resources.map(async (resource) => {
         try {
           const response = await fetch(resource);
           if (response.ok) {
             await cache.put(resource, response);
-            console.log('Preloaded resource:', resource);
+            console.log("Preloaded resource:", resource);
           }
         } catch (error) {
-          console.error('Failed to preload resource:', resource, error);
+          console.error("Failed to preload resource:", resource, error);
         }
-      })
+      }),
     );
   }
 }
@@ -408,7 +416,7 @@ export const serviceWorkerUtils = {
    * Check if service worker is supported
    */
   isSupported(): boolean {
-    return 'serviceWorker' in navigator;
+    return "serviceWorker" in navigator;
   },
 
   /**
@@ -416,7 +424,7 @@ export const serviceWorkerUtils = {
    */
   async isRegistered(): Promise<boolean> {
     if (!this.isSupported()) return false;
-    
+
     const registration = await navigator.serviceWorker.getRegistration();
     return !!registration;
   },
@@ -426,7 +434,7 @@ export const serviceWorkerUtils = {
    */
   async getRegistration(): Promise<ServiceWorkerRegistration | null> {
     if (!this.isSupported()) return null;
-    
+
     const registration = await navigator.serviceWorker.getRegistration();
     return registration || null;
   },
@@ -436,7 +444,7 @@ export const serviceWorkerUtils = {
    */
   async unregister(): Promise<boolean> {
     if (!this.isSupported()) return false;
-    
+
     const registration = await navigator.serviceWorker.getRegistration();
     if (registration) {
       return await registration.unregister();
@@ -449,12 +457,12 @@ export const serviceWorkerUtils = {
    */
   async sendMessage(message: any): Promise<void> {
     if (!this.isSupported()) return;
-    
+
     const registration = await navigator.serviceWorker.getRegistration();
     if (registration && registration.active) {
       registration.active.postMessage(message);
     }
-  }
+  },
 };
 
 export default EnhancedServiceWorkerManager;

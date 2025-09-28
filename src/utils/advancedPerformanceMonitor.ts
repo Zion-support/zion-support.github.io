@@ -35,7 +35,7 @@ export class AdvancedPerformanceMonitor {
       loadTime: 0,
       errors: 0,
       scrollDepth: 0,
-      interactions: 0
+      interactions: 0,
     };
   }
 
@@ -44,7 +44,7 @@ export class AdvancedPerformanceMonitor {
     this.isMonitoring = true;
     this.setupObservers();
     this.startPeriodicUpdates();
-    console.log('🚀 Advanced Performance Monitor started');
+    console.log("🚀 Advanced Performance Monitor started");
   }
 
   public stop(): void {
@@ -53,19 +53,21 @@ export class AdvancedPerformanceMonitor {
     if (this.intervalId) {
       clearInterval(this.intervalId);
     }
-    console.log('🛑 Advanced Performance Monitor stopped');
+    console.log("🛑 Advanced Performance Monitor stopped");
   }
 
   public getMetrics(): PerformanceMetrics {
     return { ...this.metrics };
   }
 
-  public onMetricsUpdate(callback: (metrics: PerformanceMetrics) => void): void {
+  public onMetricsUpdate(
+    callback: (metrics: PerformanceMetrics) => void,
+  ): void {
     this.callbacks.push(callback);
   }
 
   private setupObservers(): void {
-    if (!('PerformanceObserver' in window)) return;
+    if (!("PerformanceObserver" in window)) return;
 
     try {
       // LCP Observer
@@ -74,28 +76,33 @@ export class AdvancedPerformanceMonitor {
         const lastEntry = entries[entries.length - 1];
         this.metrics.lcp = lastEntry.startTime;
       });
-      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+      lcpObserver.observe({ entryTypes: ["largest-contentful-paint"] });
 
       // FID Observer
       const fidObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
         entries.forEach((entry) => {
-          if (entry.entryType === 'first-input' && 'processingStart' in entry && 'startTime' in entry) {
-            this.metrics.fid = (entry as PerformanceEntry & { processingStart: number }).processingStart - entry.startTime;
+          if (
+            entry.entryType === "first-input" &&
+            "processingStart" in entry &&
+            "startTime" in entry
+          ) {
+            this.metrics.fid =
+              (entry as PerformanceEntry & { processingStart: number })
+                .processingStart - entry.startTime;
           }
         });
       });
-      fidObserver.observe({ entryTypes: ['first-input'] });
+      fidObserver.observe({ entryTypes: ["first-input"] });
 
       // Error tracking
       const handleError = () => {
         this.metrics.errors++;
       };
-      window.addEventListener('error', handleError);
-      window.addEventListener('unhandledrejection', handleError);
-
+      window.addEventListener("error", handleError);
+      window.addEventListener("unhandledrejection", handleError);
     } catch (error) {
-      console.warn('Performance observers setup failed:', error);
+      console.warn("Performance observers setup failed:", error);
     }
   }
 
@@ -109,15 +116,17 @@ export class AdvancedPerformanceMonitor {
   private updateMetrics(): void {
     // Update FPS
     this.updateFPS();
-    
+
     // Update memory usage
-    if ('memory' in performance) {
-      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory;
+    if ("memory" in performance) {
+      const memory = (
+        performance as Performance & { memory?: { usedJSHeapSize: number } }
+      ).memory;
       if (memory) {
         this.metrics.memoryUsage = memory.usedJSHeapSize / 1024 / 1024;
       }
     }
-    
+
     // Update load time
     this.metrics.loadTime = performance.now() - this.startTime;
   }
@@ -140,11 +149,11 @@ export class AdvancedPerformanceMonitor {
   }
 
   private notifyCallbacks(): void {
-    this.callbacks.forEach(callback => {
+    this.callbacks.forEach((callback) => {
       try {
         callback(this.getMetrics());
       } catch (error) {
-        console.error('Performance Monitor callback error:', error);
+        console.error("Performance Monitor callback error:", error);
       }
     });
   }

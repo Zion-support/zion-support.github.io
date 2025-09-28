@@ -12,13 +12,13 @@ export interface ErrorContext {
   url: string;
   userAgent: string;
   stack?: string;
-  severity?: 'low' | 'medium' | 'high' | 'critical';
+  severity?: "low" | "medium" | "high" | "critical";
 }
 
 export interface ErrorReport {
   id: string;
-  type: 'javascript' | 'network' | 'resource' | 'promise' | 'custom';
-  severity: 'low' | 'medium' | 'high' | 'critical';
+  type: "javascript" | "network" | "resource" | "promise" | "custom";
+  severity: "low" | "medium" | "high" | "critical";
   message: string;
   context: ErrorContext;
   recoveryAttempts: number;
@@ -27,7 +27,7 @@ export interface ErrorReport {
 }
 
 export interface RecoveryStrategy {
-  type: 'retry' | 'fallback' | 'redirect' | 'reload' | 'notification';
+  type: "retry" | "fallback" | "redirect" | "reload" | "notification";
   action: () => void;
   condition: (error: Error, context: ErrorContext) => boolean;
   priority: number;
@@ -55,105 +55,124 @@ export class EnhancedErrorRecovery {
     this.setupRecoveryStrategies();
     this.isInitialized = true;
 
-    console.log('🛡️ Enhanced Error Recovery System initialized');
+    console.log("🛡️ Enhanced Error Recovery System initialized");
   }
 
   private setupGlobalErrorHandlers(): void {
     // JavaScript errors
-    window.addEventListener('error', (event) => {
+    window.addEventListener("error", (event) => {
       this.handleError(new Error(event.message), {
-        component: 'global',
-        action: 'javascript_error',
+        component: "global",
+        action: "javascript_error",
         timestamp: Date.now(),
         url: window.location.href,
         userAgent: navigator.userAgent,
-        stack: event.error?.stack
+        stack: event.error?.stack,
       });
     });
 
     // Unhandled promise rejections
-    window.addEventListener('unhandledrejection', (event) => {
+    window.addEventListener("unhandledrejection", (event) => {
       this.handleError(new Error(event.reason), {
-        component: 'global',
-        action: 'unhandled_promise_rejection',
+        component: "global",
+        action: "unhandled_promise_rejection",
         timestamp: Date.now(),
         url: window.location.href,
-        userAgent: navigator.userAgent
+        userAgent: navigator.userAgent,
       });
     });
 
     // Resource loading errors
-    window.addEventListener('error', (event) => {
-      if (event.target !== window) {
-        this.handleError(new Error(`Resource loading failed: ${(event.target as any)?.src || 'unknown'}`), {
-          component: 'resource',
-          action: 'resource_load_error',
-          timestamp: Date.now(),
-          url: window.location.href,
-          userAgent: navigator.userAgent
-        });
-      }
-    }, true);
+    window.addEventListener(
+      "error",
+      (event) => {
+        if (event.target !== window) {
+          this.handleError(
+            new Error(
+              `Resource loading failed: ${(event.target as any)?.src || "unknown"}`,
+            ),
+            {
+              component: "resource",
+              action: "resource_load_error",
+              timestamp: Date.now(),
+              url: window.location.href,
+              userAgent: navigator.userAgent,
+            },
+          );
+        }
+      },
+      true,
+    );
   }
 
   private setupRecoveryStrategies(): void {
     this.recoveryStrategies = [
       // Network error retry strategy
       {
-        type: 'retry',
+        type: "retry",
         action: () => {
-          console.log('🔄 Retrying failed operation...');
+          console.log("🔄 Retrying failed operation...");
           // Implement retry logic
         },
         condition: (error, context) => {
-          return context.action === 'network_error' && 
-                 (this.retryAttempts.get(context.url || '') || 0) < this.MAX_RETRY_ATTEMPTS;
+          return (
+            context.action === "network_error" &&
+            (this.retryAttempts.get(context.url || "") || 0) <
+              this.MAX_RETRY_ATTEMPTS
+          );
         },
-        priority: 1
+        priority: 1,
       },
       // Fallback for critical components
       {
-        type: 'fallback',
+        type: "fallback",
         action: () => {
-          console.log('🔄 Loading fallback component...');
+          console.log("🔄 Loading fallback component...");
           // Implement fallback logic
         },
         condition: (error, context) => {
-          return context.component === 'critical' && context.severity === 'critical';
+          return (
+            context.component === "critical" && context.severity === "critical"
+          );
         },
-        priority: 2
+        priority: 2,
       },
       // Page reload for critical errors
       {
-        type: 'reload',
+        type: "reload",
         action: () => {
-          console.log('🔄 Reloading page to recover from critical error...');
+          console.log("🔄 Reloading page to recover from critical error...");
           window.location.reload();
         },
         condition: (error, context) => {
-          return context.severity === 'critical' && 
-                 (this.retryAttempts.get(context.url || '') || 0) >= this.MAX_RETRY_ATTEMPTS;
+          return (
+            context.severity === "critical" &&
+            (this.retryAttempts.get(context.url || "") || 0) >=
+              this.MAX_RETRY_ATTEMPTS
+          );
         },
-        priority: 3
+        priority: 3,
       },
       // User notification for recoverable errors
       {
-        type: 'notification',
+        type: "notification",
         action: () => {
-          this.showErrorNotification('An error occurred, but we\'re working to fix it.');
+          this.showErrorNotification(
+            "An error occurred, but we're working to fix it.",
+          );
         },
         condition: (error, context) => {
-          return context.severity === 'medium' || context.severity === 'low';
+          return context.severity === "medium" || context.severity === "low";
         },
-        priority: 4
-      }
+        priority: 4,
+      },
     ];
   }
 
   public handleError(error: Error, context: ErrorContext): void {
     const errorId = this.generateErrorId();
     const severity = this.determineSeverity(error, context);
-    
+
     const errorReport: ErrorReport = {
       id: errorId,
       type: this.determineErrorType(error, context),
@@ -161,10 +180,10 @@ export class EnhancedErrorRecovery {
       message: error.message,
       context: {
         ...context,
-        stack: error.stack
+        stack: error.stack,
       },
       recoveryAttempts: 0,
-      resolved: false
+      resolved: false,
     };
 
     this.errorReports.set(errorId, errorReport);
@@ -172,37 +191,53 @@ export class EnhancedErrorRecovery {
     this.logError(errorReport);
   }
 
-  private determineSeverity(error: Error, context: ErrorContext): 'low' | 'medium' | 'high' | 'critical' {
+  private determineSeverity(
+    error: Error,
+    context: ErrorContext,
+  ): "low" | "medium" | "high" | "critical" {
     // Critical: JavaScript errors in critical components
-    if (context.component === 'critical' || context.action === 'unhandled_promise_rejection') {
-      return 'critical';
+    if (
+      context.component === "critical" ||
+      context.action === "unhandled_promise_rejection"
+    ) {
+      return "critical";
     }
 
     // High: Network errors or resource loading failures
-    if (context.action === 'network_error' || context.action === 'resource_load_error') {
-      return 'high';
+    if (
+      context.action === "network_error" ||
+      context.action === "resource_load_error"
+    ) {
+      return "high";
     }
 
     // Medium: Component-specific errors
-    if (context.component && context.component !== 'global') {
-      return 'medium';
+    if (context.component && context.component !== "global") {
+      return "medium";
     }
 
     // Low: Everything else
-    return 'low';
+    return "low";
   }
 
-  private determineErrorType(error: Error, context: ErrorContext): 'javascript' | 'network' | 'resource' | 'promise' | 'custom' {
-    if (context.action === 'unhandled_promise_rejection') return 'promise';
-    if (context.action === 'network_error') return 'network';
-    if (context.action === 'resource_load_error') return 'resource';
-    if (context.component === 'global') return 'javascript';
-    return 'custom';
+  private determineErrorType(
+    error: Error,
+    context: ErrorContext,
+  ): "javascript" | "network" | "resource" | "promise" | "custom" {
+    if (context.action === "unhandled_promise_rejection") return "promise";
+    if (context.action === "network_error") return "network";
+    if (context.action === "resource_load_error") return "resource";
+    if (context.component === "global") return "javascript";
+    return "custom";
   }
 
-  private attemptRecovery(error: Error, context: ErrorContext, errorReport: ErrorReport): void {
+  private attemptRecovery(
+    error: Error,
+    context: ErrorContext,
+    errorReport: ErrorReport,
+  ): void {
     const applicableStrategies = this.recoveryStrategies
-      .filter(strategy => strategy.condition(error, context))
+      .filter((strategy) => strategy.condition(error, context))
       .sort((a, b) => a.priority - b.priority);
 
     for (const strategy of applicableStrategies) {
@@ -211,26 +246,31 @@ export class EnhancedErrorRecovery {
         errorReport.recoveryAttempts++;
         errorReport.resolved = true;
         errorReport.resolution = strategy.type;
-        
+
         // Track retry attempts
-        const currentAttempts = this.retryAttempts.get(context.url || '') || 0;
-        this.retryAttempts.set(context.url || '', currentAttempts + 1);
-        
-        console.log(`✅ Recovery strategy '${strategy.type}' applied successfully`);
+        const currentAttempts = this.retryAttempts.get(context.url || "") || 0;
+        this.retryAttempts.set(context.url || "", currentAttempts + 1);
+
+        console.log(
+          `✅ Recovery strategy '${strategy.type}' applied successfully`,
+        );
         break;
       } catch (recoveryError) {
-        console.warn(`❌ Recovery strategy '${strategy.type}' failed:`, recoveryError);
+        console.warn(
+          `❌ Recovery strategy '${strategy.type}' failed:`,
+          recoveryError,
+        );
       }
     }
 
     if (!errorReport.resolved) {
-      console.error('❌ No recovery strategy could be applied');
+      console.error("❌ No recovery strategy could be applied");
     }
   }
 
   private showErrorNotification(message: string): void {
     // Create a non-intrusive notification
-    const notification = document.createElement('div');
+    const notification = document.createElement("div");
     notification.style.cssText = `
       position: fixed;
       top: 20px;
@@ -246,7 +286,7 @@ export class EnhancedErrorRecovery {
       font-size: 14px;
       color: #495057;
     `;
-    
+
     notification.innerHTML = `
       <div style="display: flex; align-items: center; gap: 8px;">
         <span style="color: #dc3545;">⚠️</span>
@@ -261,9 +301,9 @@ export class EnhancedErrorRecovery {
         ">×</button>
       </div>
     `;
-    
+
     document.body.appendChild(notification);
-    
+
     // Auto-remove after 5 seconds
     setTimeout(() => {
       if (notification.parentNode) {
@@ -278,12 +318,12 @@ export class EnhancedErrorRecovery {
 
   private logError(errorReport: ErrorReport): void {
     console.group(`🚨 Error Report: ${errorReport.id}`);
-    console.error('Type:', errorReport.type);
-    console.error('Severity:', errorReport.severity);
-    console.error('Message:', errorReport.message);
-    console.error('Context:', errorReport.context);
-    console.error('Recovery Attempts:', errorReport.recoveryAttempts);
-    console.error('Resolved:', errorReport.resolved);
+    console.error("Type:", errorReport.type);
+    console.error("Severity:", errorReport.severity);
+    console.error("Message:", errorReport.message);
+    console.error("Context:", errorReport.context);
+    console.error("Recovery Attempts:", errorReport.recoveryAttempts);
+    console.error("Resolved:", errorReport.resolved);
     console.groupEnd();
 
     // Send to error reporting service (if configured)
@@ -293,15 +333,15 @@ export class EnhancedErrorRecovery {
   private sendToErrorService(errorReport: ErrorReport): void {
     // In a real application, you would send this to an error reporting service
     // like Sentry, LogRocket, or Bugsnag
-    if (typeof window !== 'undefined' && window.navigator.sendBeacon) {
+    if (typeof window !== "undefined" && window.navigator.sendBeacon) {
       const data = JSON.stringify({
         ...errorReport,
         timestamp: new Date().toISOString(),
         userAgent: navigator.userAgent,
-        url: window.location.href
+        url: window.location.href,
       });
-      
-      window.navigator.sendBeacon('/api/error-reporting', data);
+
+      window.navigator.sendBeacon("/api/error-reporting", data);
     }
   }
 
@@ -326,19 +366,25 @@ export class EnhancedErrorRecovery {
     unresolved: number;
   } {
     const reports = this.getErrorReports();
-    
+
     return {
       total: reports.length,
-      bySeverity: reports.reduce((acc, report) => {
-        acc[report.severity] = (acc[report.severity] || 0) + 1;
-        return acc;
-      }, {} as Record<string, number>),
-      byType: reports.reduce((acc, report) => {
-        acc[report.type] = (acc[report.type] || 0) + 1;
-        return acc;
-      }, {} as Record<string, number>),
-      resolved: reports.filter(r => r.resolved).length,
-      unresolved: reports.filter(r => !r.resolved).length
+      bySeverity: reports.reduce(
+        (acc, report) => {
+          acc[report.severity] = (acc[report.severity] || 0) + 1;
+          return acc;
+        },
+        {} as Record<string, number>,
+      ),
+      byType: reports.reduce(
+        (acc, report) => {
+          acc[report.type] = (acc[report.type] || 0) + 1;
+          return acc;
+        },
+        {} as Record<string, number>,
+      ),
+      resolved: reports.filter((r) => r.resolved).length,
+      unresolved: reports.filter((r) => !r.resolved).length,
     };
   }
 
@@ -348,7 +394,9 @@ export class EnhancedErrorRecovery {
   }
 
   public removeRecoveryStrategy(type: string): void {
-    this.recoveryStrategies = this.recoveryStrategies.filter(s => s.type !== type);
+    this.recoveryStrategies = this.recoveryStrategies.filter(
+      (s) => s.type !== type,
+    );
   }
 }
 

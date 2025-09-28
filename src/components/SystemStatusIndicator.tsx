@@ -1,5 +1,13 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { Wifi, WifiOff, AlertTriangle, CheckCircle, XCircle, Clock, Activity } from 'lucide-react';
+import React, { useState, useEffect, useCallback } from "react";
+import {
+  Wifi,
+  WifiOff,
+  AlertTriangle,
+  CheckCircle,
+  XCircle,
+  Clock,
+  Activity,
+} from "lucide-react";
 
 interface SystemStatus {
   online: boolean;
@@ -20,10 +28,10 @@ interface SystemStatusIndicatorProps {
 
 const SystemStatusIndicator: React.FC<SystemStatusIndicatorProps> = ({
   refreshInterval = 30000,
-  showDetails = false
+  showDetails = false,
 }) => {
   // Use showDetails parameter to avoid unused variable warning
-  console.debug('SystemStatusIndicator showDetails:', showDetails);
+  console.debug("SystemStatusIndicator showDetails:", showDetails);
   const [status, setStatus] = useState<SystemStatus>({
     online: navigator.onLine,
     responseTime: 0,
@@ -32,8 +40,8 @@ const SystemStatusIndicator: React.FC<SystemStatusIndicatorProps> = ({
       api: true,
       database: true,
       cdn: true,
-      monitoring: true
-    }
+      monitoring: true,
+    },
   });
 
   const [isExpanded, setIsExpanded] = useState(false);
@@ -41,17 +49,17 @@ const SystemStatusIndicator: React.FC<SystemStatusIndicatorProps> = ({
   // Check system status
   const checkSystemStatus = useCallback(async (): Promise<SystemStatus> => {
     const startTime = Date.now();
-    
+
     try {
       // Simulate API check
-      const response = await fetch('/api/health', {
-        method: 'GET',
-        cache: 'no-cache',
-        signal: AbortSignal.timeout(5000)
+      const response = await fetch("/api/health", {
+        method: "GET",
+        cache: "no-cache",
+        signal: AbortSignal.timeout(5000),
       });
-      
+
       const responseTime = Date.now() - startTime;
-      
+
       return {
         online: navigator.onLine && response.ok,
         responseTime,
@@ -60,11 +68,11 @@ const SystemStatusIndicator: React.FC<SystemStatusIndicatorProps> = ({
           api: response.ok,
           database: response.ok, // In real app, check database separately
           cdn: response.ok, // In real app, check CDN separately
-          monitoring: true // Monitoring service is always up if we're checking
-        }
+          monitoring: true, // Monitoring service is always up if we're checking
+        },
       };
     } catch (error) {
-      console.warn('System status check failed:', error);
+      console.warn("System status check failed:", error);
       return {
         online: navigator.onLine,
         responseTime: Date.now() - startTime,
@@ -73,8 +81,8 @@ const SystemStatusIndicator: React.FC<SystemStatusIndicatorProps> = ({
           api: false,
           database: navigator.onLine,
           cdn: navigator.onLine,
-          monitoring: true
-        }
+          monitoring: true,
+        },
       };
     }
   }, []);
@@ -95,33 +103,33 @@ const SystemStatusIndicator: React.FC<SystemStatusIndicatorProps> = ({
     // Listen for online/offline events
     const handleOnline = () => updateStatus();
     const handleOffline = () => {
-      setStatus(prev => ({
+      setStatus((prev) => ({
         ...prev,
         online: false,
         services: {
           api: false,
           database: false,
           cdn: false,
-          monitoring: prev.services.monitoring
-        }
+          monitoring: prev.services.monitoring,
+        },
       }));
     };
 
-    window.addEventListener('online', handleOnline);
-    window.addEventListener('offline', handleOffline);
+    window.addEventListener("online", handleOnline);
+    window.addEventListener("offline", handleOffline);
 
     return () => {
       clearInterval(interval);
-      window.removeEventListener('online', handleOnline);
-      window.removeEventListener('offline', handleOffline);
+      window.removeEventListener("online", handleOnline);
+      window.removeEventListener("offline", handleOffline);
     };
   }, [checkSystemStatus, refreshInterval]);
 
   // Get status color
   const getStatusColor = (isOnline: boolean, responseTime: number) => {
-    if (!isOnline) return 'text-red-400';
-    if (responseTime > 3000) return 'text-yellow-400';
-    return 'text-green-400';
+    if (!isOnline) return "text-red-400";
+    if (responseTime > 3000) return "text-yellow-400";
+    return "text-green-400";
   };
 
   // Get status icon
@@ -133,7 +141,11 @@ const SystemStatusIndicator: React.FC<SystemStatusIndicatorProps> = ({
 
   // Get service icon
   const getServiceIcon = (isUp: boolean) => {
-    return isUp ? <CheckCircle className="w-3 h-3 text-green-400" /> : <XCircle className="w-3 h-3 text-red-400" />;
+    return isUp ? (
+      <CheckCircle className="w-3 h-3 text-green-400" />
+    ) : (
+      <XCircle className="w-3 h-3 text-red-400" />
+    );
   };
 
   return (
@@ -143,14 +155,22 @@ const SystemStatusIndicator: React.FC<SystemStatusIndicatorProps> = ({
         <button
           onClick={() => setIsExpanded(!isExpanded)}
           className={`flex items-center gap-2 px-3 py-2 rounded-lg transition-colors ${
-            status.online ? 'hover:bg-gray-800' : 'bg-red-900/20 border-red-500/30'
+            status.online
+              ? "hover:bg-gray-800"
+              : "bg-red-900/20 border-red-500/30"
           }`}
-          title={`System Status: ${status.online ? 'Online' : 'Offline'} - Click for details`}
+          title={`System Status: ${status.online ? "Online" : "Offline"} - Click for details`}
         >
-          <div className={`flex items-center gap-1 ${getStatusColor(status.online, status.responseTime)}`}>
-            {status.online ? <Wifi className="w-4 h-4" /> : <WifiOff className="w-4 h-4" />}
+          <div
+            className={`flex items-center gap-1 ${getStatusColor(status.online, status.responseTime)}`}
+          >
+            {status.online ? (
+              <Wifi className="w-4 h-4" />
+            ) : (
+              <WifiOff className="w-4 h-4" />
+            )}
             <span className="text-sm font-medium">
-              {status.online ? 'Online' : 'Offline'}
+              {status.online ? "Online" : "Offline"}
             </span>
           </div>
           {status.responseTime > 0 && (
@@ -165,7 +185,9 @@ const SystemStatusIndicator: React.FC<SystemStatusIndicatorProps> = ({
         {isExpanded && (
           <div className="absolute top-full right-0 mt-2 w-64 bg-gray-900 border border-gray-700 rounded-lg shadow-xl p-4">
             <div className="flex items-center justify-between mb-3">
-              <h3 className="text-sm font-semibold text-white">System Status</h3>
+              <h3 className="text-sm font-semibold text-white">
+                System Status
+              </h3>
               <button
                 onClick={() => setIsExpanded(false)}
                 className="text-gray-400 hover:text-white text-sm"
@@ -176,10 +198,12 @@ const SystemStatusIndicator: React.FC<SystemStatusIndicatorProps> = ({
 
             {/* Overall Status */}
             <div className="flex items-center gap-2 mb-3 p-2 rounded bg-gray-800">
-              <div className={`flex items-center gap-1 ${getStatusColor(status.online, status.responseTime)}`}>
+              <div
+                className={`flex items-center gap-1 ${getStatusColor(status.online, status.responseTime)}`}
+              >
                 {getStatusIcon(status.online, status.responseTime)}
                 <span className="text-sm font-medium">
-                  {status.online ? 'All Systems Operational' : 'System Offline'}
+                  {status.online ? "All Systems Operational" : "System Offline"}
                 </span>
               </div>
             </div>
@@ -188,21 +212,29 @@ const SystemStatusIndicator: React.FC<SystemStatusIndicatorProps> = ({
             <div className="mb-3">
               <div className="flex items-center justify-between mb-1">
                 <span className="text-xs text-gray-400">Response Time</span>
-                <span className={`text-xs font-medium ${
-                  status.responseTime < 1000 ? 'text-green-400' :
-                  status.responseTime < 3000 ? 'text-yellow-400' : 'text-red-400'
-                }`}>
+                <span
+                  className={`text-xs font-medium ${
+                    status.responseTime < 1000
+                      ? "text-green-400"
+                      : status.responseTime < 3000
+                        ? "text-yellow-400"
+                        : "text-red-400"
+                  }`}
+                >
                   {status.responseTime}ms
                 </span>
               </div>
               <div className="w-full bg-gray-700 rounded-full h-1">
-                <div 
+                <div
                   className={`h-1 rounded-full transition-all duration-300 ${
-                    status.responseTime < 1000 ? 'bg-green-400' :
-                    status.responseTime < 3000 ? 'bg-yellow-400' : 'bg-red-400'
+                    status.responseTime < 1000
+                      ? "bg-green-400"
+                      : status.responseTime < 3000
+                        ? "bg-yellow-400"
+                        : "bg-red-400"
                   }`}
-                  style={{ 
-                    width: `${Math.min(100, (status.responseTime / 5000) * 100)}%` 
+                  style={{
+                    width: `${Math.min(100, (status.responseTime / 5000) * 100)}%`,
                   }}
                 />
               </div>
@@ -210,23 +242,25 @@ const SystemStatusIndicator: React.FC<SystemStatusIndicatorProps> = ({
 
             {/* Services Status */}
             <div className="space-y-2">
-              <h4 className="text-xs font-medium text-gray-300 mb-2">Services</h4>
-              
+              <h4 className="text-xs font-medium text-gray-300 mb-2">
+                Services
+              </h4>
+
               <div className="flex items-center justify-between">
                 <span className="text-xs text-gray-400">API</span>
                 {getServiceIcon(status.services.api)}
               </div>
-              
+
               <div className="flex items-center justify-between">
                 <span className="text-xs text-gray-400">Database</span>
                 {getServiceIcon(status.services.database)}
               </div>
-              
+
               <div className="flex items-center justify-between">
                 <span className="text-xs text-gray-400">CDN</span>
                 {getServiceIcon(status.services.cdn)}
               </div>
-              
+
               <div className="flex items-center justify-between">
                 <span className="text-xs text-gray-400">Monitoring</span>
                 {getServiceIcon(status.services.monitoring)}
