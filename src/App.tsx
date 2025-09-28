@@ -5,12 +5,13 @@ import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import { seoAnalytics, performanceSEO, seoManager } from './utils/seoEnhanced';
 import { analytics } from './utils/analytics';
+import { useSEOData } from './components/SEOOptimizer';
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
 import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import PerformanceMonitor from './components/PerformanceMonitor';
+import SEOOptimizer from './components/SEOOptimizer';
 import AIPerformanceDashboard from './components/AIPerformanceDashboard';
-import { useSEOData } from './components/SEOOptimizer';
 import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
 import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
 import { enhancedAnalytics } from './utils/enhancedAnalytics';
@@ -26,6 +27,14 @@ export default function App(): React.JSX.Element {
   const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
   const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
   const [showAIDashboard, setShowAIDashboard] = useState(false);
+  const [showSEOOptimizer, setShowSEOOptimizer] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [userPreferences, setUserPreferences] = useState({
+    theme: 'auto',
+    animations: true,
+    notifications: true,
+    analytics: true
+  });
   // Engagement tracking data
   const engagementData = useMemo(() => ({
     startTime: Date.now(),
@@ -63,27 +72,42 @@ export default function App(): React.JSX.Element {
     enableImageOptimization: true,
   });
 
-  // Optimized keyboard handler for system dashboard toggle
+  // Enhanced keyboard handler for all dashboard toggles
   const handleKeyDown = useCallback((event: KeyboardEvent) => {
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'D') {
+    if ((event.ctrlKey || event.metaKey) && event.shiftKey) {
       event.preventDefault();
-      setShowSystemDashboard(prev => !prev);
-    }
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'P') {
-      event.preventDefault();
-      setShowPerformanceOptimizer(prev => !prev);
-    }
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'M') {
-      event.preventDefault();
-      setShowPerformanceMonitor(prev => !prev);
-    }
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'A') {
-      event.preventDefault();
-      setShowAIDashboard(prev => !prev);
+      switch (event.key) {
+        case 'D':
+          setShowSystemDashboard(prev => !prev);
+          break;
+        case 'P':
+          setShowPerformanceOptimizer(prev => !prev);
+          break;
+        case 'M':
+          setShowPerformanceMonitor(prev => !prev);
+          break;
+        case 'A':
+          setShowAIDashboard(prev => !prev);
+          break;
+        case 'S':
+          setShowSEOOptimizer(prev => !prev);
+          break;
+        case 'T':
+          setIsDarkMode(prev => !prev);
+          break;
+        case 'Escape':
+          // Close all dashboards
+          setShowSystemDashboard(false);
+          setShowPerformanceOptimizer(false);
+          setShowPerformanceMonitor(false);
+          setShowAIDashboard(false);
+          setShowSEOOptimizer(false);
+          break;
+      }
     }
   }, []);
 
-  // Get SEO data using current pathname
+  // Memoize the SEO data to prevent unnecessary re-renders
   const seoData = useSEOData(currentPathname);
   // Enhanced engagement tracking function
   const enhancedTrackEngagement = useCallback(() => {
@@ -95,7 +119,10 @@ export default function App(): React.JSX.Element {
     });
     trackEngagement();
   }, [engagementData.clicks, engagementData.scrollDepth, engagementData.startTime, trackEngagement]);
+<<<<<<< HEAD
 
+=======
+>>>>>>> 1ad96f248fe2344703e9824b4d30a1db01ece6c5
   // Update meta tags function
   const updateMetaTags = useCallback((data: {
     title: string;
@@ -122,36 +149,12 @@ export default function App(): React.JSX.Element {
       }
     }
   }, []);
+<<<<<<< HEAD
   
+=======
+
+>>>>>>> 1ad96f248fe2344703e9824b4d30a1db01ece6c5
   useEffect(() => {
-    const enhancements = getComprehensiveEnhancements();
-    enhancements.initialize();
-    
-    // Initialize individual enhancement systems
-    enhancedPerformanceMonitor.initialize();
-    enhancedAnalytics.initialize();
-    advancedCacheSystem.initialize();
-    new AdvancedAutomationSystem().initialize();
-    new AccessibilityEnhancer().initialize();
-    new SecurityEnhancer().initialize();
-    
-    // Initialize analytics
-    analytics.initialize();
-    seoAnalytics.initialize();
-    performanceSEO.initialize();
-    seoManager.initialize();
-    
-    // Initialize SEO analytics
-    seoAnalytics.trackPageView(window.location.pathname);
-    
-    // Initialize performance SEO optimizations
-    performanceSEO.optimizeImages();
-    performanceSEO.optimizeFonts();
-    performanceSEO.optimizeCSS();
-
-    // Set default SEO data using the correct method
-    seoManager.updateMetaTags(seoData);
-
     // Add performance marks for better monitoring
     if (typeof window !== 'undefined' && window.performance && typeof performance.mark === 'function') {
       performance.mark('app-init-start');
@@ -160,11 +163,6 @@ export default function App(): React.JSX.Element {
     // Preload critical resources
     preloadResource('/og-image.png', 'image');
     preloadResource('/favicon.ico', 'image');
-
-    // Use passive listeners for better performance
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    document.addEventListener('click', handleClick, { passive: true });
-    document.addEventListener('keydown', handleKeyDown);
 
     // Initialize basic systems
     analytics.initialize();
@@ -188,6 +186,7 @@ export default function App(): React.JSX.Element {
       console.log('🚀 Zion Tech Group App initialized');
     }
 
+<<<<<<< HEAD
     // Use passive listeners for better performance
     window.addEventListener('scroll', handleScroll, { passive: true });
     document.addEventListener('click', handleClick, { passive: true });
@@ -207,6 +206,8 @@ export default function App(): React.JSX.Element {
     // Track engagement on page unload
     window.addEventListener('beforeunload', enhancedTrackEngagement);
 
+=======
+>>>>>>> 1ad96f248fe2344703e9824b4d30a1db01ece6c5
     // Mark app as fully initialized
     if (typeof window !== 'undefined' && window.performance && 
         typeof performance.mark === 'function' && 
@@ -215,14 +216,23 @@ export default function App(): React.JSX.Element {
       performance.measure('app-initialization', 'app-init-start', 'app-init-complete');
     }
 
+    // Use passive listeners for better performance
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    document.addEventListener('click', handleClick, { passive: true });
+    document.addEventListener('keydown', handleKeyDown);
+
     // Cleanup function
     return () => {
-      window.removeEventListener('beforeunload', enhancedTrackEngagement);
       window.removeEventListener('scroll', handleScroll);
       document.removeEventListener('click', handleClick);
       document.removeEventListener('keydown', handleKeyDown);
     };
+<<<<<<< HEAD
   }, [trackEngagement, handleKeyDown, handleScroll, handleClick, enhancedTrackEngagement, seoData, preloadResource, seoManager]);
+=======
+  }, [handleScroll, handleClick, handleKeyDown, seoData, preloadResource, updateMetaTags, enhancedTrackEngagement]);
+
+>>>>>>> 1ad96f248fe2344703e9824b4d30a1db01ece6c5
   if (isLoading) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100">
