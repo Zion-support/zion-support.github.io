@@ -90,7 +90,8 @@ class SecurityEnhancer {
   }
 
   private validateMetaTags(): void {
-    const _metaTags = document.querySelectorAll('meta');
+    const metaTags = document.querySelectorAll('meta');
+    console.log(`Found ${metaTags.length} meta tags`);
     const securityTags = [
       'referrer',
       'content-security-policy',

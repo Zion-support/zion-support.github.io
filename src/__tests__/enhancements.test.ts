@@ -56,7 +56,6 @@ describe('Performance Enhancements', () => {
   });
 
   test('should preload resources', () => {
-    const link = document.createElement('link');
     document.head.appendChild = jest.fn();
     
     performanceEnhancer.preloadResource('/test.js', 'script');
