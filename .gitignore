@@ -126,3 +126,6 @@ tsconfig.tsbuildinfo
 .yarn/cache/
 .yarn/install-state.gz
 .pnp.*
+
+# Local automation scripts (contain sensitive tokens)
+*.sh
