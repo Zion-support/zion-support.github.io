@@ -44,7 +44,9 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   // Update performance data
   const updatePerformanceData = useCallback(() => {
     const metrics = performanceEnhancer.getMetrics();
-    setPerformanceData(metrics);
+    if (metrics) {
+      setPerformanceData(metrics);
+    }
   }, []);
 
   // Add log entry
@@ -60,11 +62,15 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     try {
       // Optimize bundle
       addLogEntry('Optimizing bundle...');
-      performanceEnhancer.optimizeBundleSize();
+      if ('optimizeBundleSize' in performanceEnhancer) {
+        (performanceEnhancer as any).optimizeBundleSize();
+      }
       
       // Preload critical resources
       addLogEntry('Preloading critical resources...');
-      performanceEnhancer.preloadCriticalResources();
+      if ('preloadCriticalResources' in performanceEnhancer) {
+        (performanceEnhancer as any).preloadCriticalResources();
+      }
       
       // Update metrics
       addLogEntry('Updating performance metrics...');
