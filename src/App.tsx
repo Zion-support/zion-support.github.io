@@ -82,8 +82,7 @@ export default function App(): React.JSX.Element {
     }
   }, []);
 
-  // Get current pathname for SEO
-  const currentPathname = typeof window !== 'undefined' ? window.location.pathname : '/';
+  // Get SEO data using current pathname
   const seoData = useSEOData(currentPathname);
   // Enhanced engagement tracking function
   const enhancedTrackEngagement = useCallback(() => {
