@@ -53,7 +53,6 @@ export default function App(): React.JSX.Element {
 
   // Get current pathname for SEO
   const currentPathname = typeof window !== 'undefined' ? window.location.pathname : '/';
-  const seoData = useSEOData(currentPathname);
 
   // Performance optimization hook
   const { preloadResource } = usePerformanceOptimization({
