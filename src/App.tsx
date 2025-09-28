@@ -14,9 +14,6 @@ import PerformanceOptimizer from './components/PerformanceOptimizer';
 import EnhancedAnalytics from './components/EnhancedAnalytics';
 // Removed unused import: getComprehensiveEnhancements
 import './index.css';
-import './styles/notifications.css';
-import './styles/system-metrics.css';
-import './styles/modern-utilities.css';
 
 // Import utility modules
 import { seoManager, seoAnalytics, performanceSEO } from './utils/seoEnhanced';
@@ -52,15 +49,9 @@ export default function App(): React.JSX.Element {
   const [showSystemDashboard, setShowSystemDashboard] = useState(false);
   const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
 
-  // Engagement tracking data
-  const engagementData = useMemo(() => ({
-    startTime: Date.now(),
-    scrollDepth: 0,
-    clicks: 0
-  }), []);
 
   // Initialize app with custom configuration
-  const { isLoading, loadingProgress, handleScroll, handleClick, trackEngagement } = useAppInitialization({
+  const { isLoading, loadingProgress, engagementData, handleScroll, handleClick } = useAppInitialization({
     enablePerformanceMonitoring: true,
     enableAccessibility: true,
     enableSecurity: true,
@@ -89,6 +80,15 @@ export default function App(): React.JSX.Element {
     }
   }, []);
 
+  // Track engagement function
+  const trackEngagement = useCallback(() => {
+    const timeOnPage = Date.now() - engagementData.startTime;
+    seoAnalytics.trackUserEngagement(window.location.pathname, {
+      timeOnPage,
+      scrollDepth: engagementData.scrollDepth,
+      clicks: engagementData.clicks,
+    });
+  }, [engagementData]);
   // Memoize the SEO data to prevent unnecessary re-renders
   const seoData = useMemo(() => ({
     title: 'Zion Tech Group - Leading AI & Technology Solutions',
