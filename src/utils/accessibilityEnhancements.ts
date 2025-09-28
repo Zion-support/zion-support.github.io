@@ -143,17 +143,18 @@ export class AccessibilityEnhancer {
         const firstElement = focusableElements[0];
         const lastElement = focusableElements[focusableElements.length - 1];
 
-        modal.addEventListener('keydown', (event) => {
-          if (event.key === 'Tab') {
-            if (event.shiftKey) {
+        modal.addEventListener('keydown', (event: Event) => {
+          const keyEvent = event as KeyboardEvent;
+          if (keyEvent.key === 'Tab') {
+            if (keyEvent.shiftKey) {
               if (document.activeElement === firstElement) {
                 lastElement.focus();
-                event.preventDefault();
+                keyEvent.preventDefault();
               }
             } else {
               if (document.activeElement === lastElement) {
                 firstElement.focus();
-                event.preventDefault();
+                keyEvent.preventDefault();
               }
             }
           }
@@ -171,7 +172,7 @@ export class AccessibilityEnhancer {
       if (label) {
         input.setAttribute('aria-labelledby', label.id || 'label-' + input.id);
       } else {
-        input.setAttribute('aria-label', this.generateAriaLabel(input));
+        input.setAttribute('aria-label', this.generateAriaLabel(input as HTMLElement));
       }
     });
 
@@ -179,14 +180,14 @@ export class AccessibilityEnhancer {
     const buttons = document.querySelectorAll('button:not([aria-label])');
     buttons.forEach(button => {
       if (!button.textContent?.trim()) {
-        button.setAttribute('aria-label', this.generateAriaLabel(button));
+        button.setAttribute('aria-label', this.generateAriaLabel(button as HTMLElement));
       }
     });
 
     // Add labels to images
     const images = document.querySelectorAll('img:not([alt])');
     images.forEach(img => {
-      img.setAttribute('alt', this.generateAltText(img));
+      img.setAttribute('alt', this.generateAltText(img as HTMLImageElement));
     });
   }
 
