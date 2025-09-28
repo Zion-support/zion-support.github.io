@@ -1,8 +1,14 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 interface KeyboardShortcutsHelpProps {
   isVisible: boolean;
   onClose: () => void;
+}
+
+interface Shortcut {
+  key: string;
+  description: string;
+  category: string;
 }
 
 const KeyboardShortcutsHelp: React.FC<KeyboardShortcutsHelpProps> = ({ isVisible, onClose }) => {
@@ -18,6 +24,9 @@ const KeyboardShortcutsHelp: React.FC<KeyboardShortcutsHelpProps> = ({ isVisible
     { key: 'Ctrl+Shift+H', description: 'Show Keyboard Shortcuts', category: 'Help' },
     { key: 'Escape', description: 'Close All Modals', category: 'Navigation' },
   ];
+
+  const [searchTerm, setSearchTerm] = useState('');
+  const [filteredShortcuts, setFilteredShortcuts] = useState(shortcuts);
 
   useEffect(() => {
     if (searchTerm) {
@@ -94,9 +103,8 @@ const KeyboardShortcutsHelp: React.FC<KeyboardShortcutsHelpProps> = ({ isVisible
               <div className="text-center py-8 text-gray-500 dark:text-gray-400">
                 No shortcuts found matching &quot;{searchTerm}&quot;
               </div>
-            </div>
-          ))}
-        </div>
+            )}
+          </div>
         
         <div className="px-6 py-4 bg-gray-50 border-t border-gray-200">
           <div className="flex items-center justify-between text-sm text-gray-500">
@@ -104,6 +112,7 @@ const KeyboardShortcutsHelp: React.FC<KeyboardShortcutsHelpProps> = ({ isVisible
             <span>{shortcuts.length} shortcuts available</span>
           </div>
         </div>
+      </div>
       </div>
     </div>
   );

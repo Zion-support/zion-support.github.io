@@ -258,10 +258,10 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
                               <span className={`px-2 py-1 rounded text-xs font-medium ${getSeverityColor(report.severity)}`}>
                                 {report.severity.toUpperCase()}
                               </span>
-                            )}
-                            <span className="text-sm text-gray-500">
-                              {report.occurrenceCount} occurrences
-                            </span>
+                              <span className="text-sm text-gray-500">
+                                {report.occurrenceCount} occurrences
+                              </span>
+                            </div>
                           </div>
                           <div className="mt-2">
                             <p className="text-gray-900 font-medium">{report.message}</p>
