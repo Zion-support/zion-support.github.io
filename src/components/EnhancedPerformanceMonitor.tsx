@@ -6,14 +6,12 @@ interface EnhancedPerformanceMonitorProps {
   className?: string;
   showDetails?: boolean;
   showSuggestions?: boolean;
-  autoOptimize?: boolean;
 }
 
 export const EnhancedPerformanceMonitor: React.FC<EnhancedPerformanceMonitorProps> = ({
   className,
   showDetails = false,
-  showSuggestions = true,
-  autoOptimize: _ = false
+  showSuggestions = true
 }) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     fcp: 0,
