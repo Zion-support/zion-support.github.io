@@ -448,6 +448,39 @@ export default function App(): React.JSX.Element {
       console.log('🚀 Zion Tech Group App initialized');
     }
   }, [memoizedSeoData, updateMetaTags]);
+  // Enhanced track engagement function
+  const trackEngagement = useCallback(() => {
+    try {
+      const timeOnPage = Date.now() - engagementData.startTime;
+      seoAnalytics.trackUserEngagement(window.location.pathname, {
+        timeOnPage,
+        scrollDepth: engagementData.scrollDepth,
+        clicks: engagementData.clicks,
+      });
+      // Also call the original trackEngagement from useAppInitialization
+      originalTrackEngagement();
+    } catch (error) {
+      console.error('Error tracking engagement:', error);
+    }
+  }, [engagementData.clicks, engagementData.scrollDepth, engagementData.startTime, originalTrackEngagement]);
+
+  // Simple SEO manager
+  const seoManagerInstance = useMemo(() => ({
+    updateMetaTags: (data: typeof seoData) => {
+      try {
+        if (typeof document !== 'undefined') {
+          document.title = data.title;
+          const metaDescription = document.querySelector('meta[name="description"]');
+          if (metaDescription) {
+            metaDescription.setAttribute('content', data.description);
+          }
+        }
+      } catch (error) {
+        console.error('Error updating meta tags:', error);
+      }
+    }
+  }), []);
+
   // Enhanced keyboard shortcuts
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
@@ -551,22 +584,18 @@ export default function App(): React.JSX.Element {
     }
   }, [engagementData.clicks, engagementData.scrollDepth, engagementData.startTime, originalTrackEngagement]);
 
-  // Simple SEO manager
-  const seoManagerInstance = useMemo(() => ({
-    updateMetaTags: (data: typeof seoData) => {
-      try {
-        if (typeof document !== 'undefined') {
-          document.title = data.title;
-          const metaDescription = document.querySelector('meta[name="description"]');
-          if (metaDescription) {
-            metaDescription.setAttribute('content', data.description);
-          }
-        }
-      } catch (error) {
-        console.error('Error updating meta tags:', error);
-      }
-    }
-  }), []);
+  // Keyboard shortcuts effect
+  useEffect(() => {
+    // Add event listener
+    document.addEventListener('keydown', handleKeyDown);
+    
+    // Cleanup
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [showSystemDashboard, showPerformanceOptimizer, showPerformanceMonitor, showAIDashboard, showSEOOptimizer, isDarkMode, showRealTimeMonitor, showSystemHealth, showKeyboardHelp, showPerformanceMetrics, showCommandPalette]);
+
+  // Main initialization effect
   useEffect(() => {
     try {
       // Add performance marks for better monitoring
@@ -619,7 +648,7 @@ export default function App(): React.JSX.Element {
   }, [seoData, handleScroll, handleClick, handleKeyDown, preloadResource, seoManagerInstance]);
 
   // Main initialization and cleanup effect
-  React.useEffect(() => {
+  useEffect(() => {
     try {
       // Mark app as fully initialized
       if (typeof window !== 'undefined' && window.performance && 
@@ -657,10 +686,6 @@ export default function App(): React.JSX.Element {
       console.error('Error in cleanup effect:', error);
     }
   }, [trackEngagement, handleKeyDown, handleScroll, handleClick]);
-
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
-  }, [showSystemDashboard, showPerformanceOptimizer, showPerformanceMonitor, showAIDashboard, showSEOOptimizer, isDarkMode, showKeyboardHelp, showCommandPalette, showRealTimeMonitor, showSystemHealth, showPerformanceMetrics]);
 
 
   // Track engagement on scroll and click
