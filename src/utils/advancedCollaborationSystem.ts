@@ -300,7 +300,7 @@ class AdvancedCollaborationSystem {
   private users: Map<string, User> = new Map();
   private analytics: CollaborationAnalytics;
   private isInitialized = false;
-  private eventListeners: Map<string, Function[]> = new Map();
+  private eventListeners: Map<string, ((...args: unknown[]) => void)[]> = new Map();
   private realTimeConnection: any = null;
 
   constructor(config: Partial<CollaborationConfig> = {}) {
@@ -1005,7 +1005,7 @@ class AdvancedCollaborationSystem {
   /**
    * Add event listener
    */
-  public on(event: string, listener: Function): void {
+  public on(event: string, listener: (...args: unknown[]) => void): void {
     if (!this.eventListeners.has(event)) {
       this.eventListeners.set(event, []);
     }
@@ -1015,7 +1015,7 @@ class AdvancedCollaborationSystem {
   /**
    * Remove event listener
    */
-  public off(event: string, listener: Function): void {
+  public off(event: string, listener: (...args: unknown[]) => void): void {
     const listeners = this.eventListeners.get(event) || [];
     const index = listeners.indexOf(listener);
     if (index > -1) {

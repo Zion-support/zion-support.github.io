@@ -200,10 +200,9 @@ class AdvancedSecurityManager {
       // Check for suspicious attributes
       if (element.setAttribute) {
         const originalSetAttribute = element.setAttribute;
-        const self = this;
-        element.setAttribute = function (name: string, value: string) {
-          if (self.isSuspiciousAttribute(name, value)) {
-            self.metrics.xssAttempts++;
+        element.setAttribute = (name: string, value: string) => {
+          if (this.isSuspiciousAttribute(name, value)) {
+            this.metrics.xssAttempts++;
             console.warn("Potential XSS attempt detected:", { name, value });
             return;
           }
