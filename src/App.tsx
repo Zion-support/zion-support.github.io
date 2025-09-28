@@ -20,7 +20,16 @@ import PerformanceOptimizer from './components/PerformanceOptimizer';
 import EnhancedAnalytics from './components/EnhancedAnalytics';
 import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
 import './index.css';
+import './styles/notifications.css';
+import './styles/system-metrics.css';
+import './styles/modern-utilities.css';
+
 export default function App(): React.JSX.Element {
+  // State for system metrics dashboard
+  const [showSystemDashboard, setShowSystemDashboard] = useState(false);
+  
+  // State for performance optimizer
+  const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
   // Initialize app with custom configuration
   const { isLoading, loadingProgress, engagementData, handleScroll, handleClick } = useAppInitialization({
     enablePerformanceMonitoring: true,
@@ -86,6 +95,151 @@ export default function App(): React.JSX.Element {
     // Preload critical resources
     preloadResource('/og-image.png', 'image');
     preloadResource('/favicon.ico', 'image');
+      reportInterval: 5000,
+      thresholds: {
+        pageLoadTime: 3000,
+        firstContentfulPaint: 1800,
+        largestContentfulPaint: 2500,
+        cumulativeLayoutShift: 0.1,
+        firstInputDelay: 100,
+        totalBlockingTime: 300
+      }
+    });
+    advancedPerformanceMonitor.startMonitoring();
+    
+    // Initialize new advanced performance optimizer
+    import('./utils/performanceOptimizer').then(({ advancedPerformanceOptimizer }) => {
+      advancedPerformanceOptimizer.startMonitoring();
+      console.log('🚀 Advanced Performance Optimizer initialized');
+    }).catch((error) => {
+      console.error('❌ Failed to initialize advanced performance optimizer:', error);
+    });
+    
+    // Initialize CSS optimizer
+    import('./utils/cssOptimizer').then(({ cssOptimizer }) => {
+      cssOptimizer.initialize();
+      console.log('🎨 CSS Optimizer initialized');
+    }).catch((error) => {
+      console.error('❌ Failed to initialize CSS optimizer:', error);
+    });
+    
+    // Initialize accessibility enhancer
+    const accessibilityEnhancer = AccessibilityEnhancer.getInstance();
+    accessibilityEnhancer.initialize({
+      enableKeyboardNavigation: true,
+      enableScreenReaderSupport: true,
+      enableHighContrastMode: true,
+      enableReducedMotion: true,
+      enableFocusIndicators: true,
+      enableAriaLabels: true,
+      announceChanges: true,
+      enableSkipLinks: true
+    });
+    
+    // Initialize security enhancer
+    const securityEnhancer = SecurityEnhancer.getInstance();
+    // Set global reference for XMLHttpRequest monitoring
+    (window as Window & { __securityEnhancerInstance?: SecurityEnhancer }).__securityEnhancerInstance = securityEnhancer;
+    securityEnhancer.initialize({
+      enableCSP: true,
+      enableXSSProtection: true,
+      enableCSRFProtection: true,
+      enableClickjackingProtection: true,
+      enableContentSecurityPolicy: true,
+      enableSecureHeaders: true,
+      enableInputSanitization: true,
+      enableSecurityMonitoring: true
+    });
+    
+    // Initialize additional advanced managers
+    AdvancedAccessibilityManager.getInstance().initialize();
+    AdvancedSecurityManager.getInstance().initialize();
+    EnhancedUXManager.getInstance().initialize();
+    
+    // Initialize enhanced systems
+    enhancedPerformanceMonitor.startMonitoring();
+    enhancedAnalytics.initialize();
+    enhancedSEO.initialize();
+    
+    // Initialize advanced systems
+    advancedCacheSystem.initialize({
+      maxSize: 200,
+      ttl: 15 * 60 * 1000, // 15 minutes
+      compressionEnabled: true,
+      encryptionEnabled: false,
+      storageType: 'localStorage',
+      enableAnalytics: true,
+      enablePersistence: true
+    });
+    
+    advancedErrorRecovery.initialize({
+      maxRetries: 3,
+      retryDelay: 1000,
+      exponentialBackoff: true,
+      enableUserGuidance: true,
+      enableAutomaticRecovery: true,
+      enableErrorReporting: true,
+      enableFallbackStrategies: true,
+      enableCircuitBreaker: true,
+      circuitBreakerThreshold: 5,
+      circuitBreakerTimeout: 30000
+    });
+    
+    advancedAutomationSystem.initialize({
+      enableTesting: true,
+      enableDeployment: false, // Disabled for client-side
+      enableMonitoring: true,
+      enableMaintenance: true,
+      enableReporting: true,
+      scheduleInterval: 60000,
+      maxConcurrency: 3,
+      retryAttempts: 2,
+      timeout: 120000
+    });
+    
+    // Initialize advanced performance optimizer
+    advancedPerformanceOptimizer.addResourceHints();
+    
+    // Initialize new enhancement utilities
+    console.log('Initializing performance enhancements...');
+    // performanceEnhancer.initialize(); // Commented out due to private method
+    performanceEnhancer.optimizeBundle();
+    performanceEnhancer.preloadResource('/static/js/main.js', 'script');
+    
+    console.log('Initializing security enhancements...');
+    // const securityReport = securityEnhancer.generateSecurityReport();
+    // console.log('Security Report:', securityReport);
+    
+    console.log('Initializing accessibility enhancements...');
+    // const accessibilityMetrics = accessibilityEnhancer.getAccessibilityMetrics();
+    // console.log('Accessibility Metrics:', accessibilityMetrics);
+    advancedPerformanceOptimizer.optimizeCriticalCSS();
+    advancedPerformanceOptimizer.setupWebVitalsMonitoring();
+    
+    // Register service worker with optimized configuration
+    import('./utils/serviceWorker').then(({ serviceWorkerManager }) => {
+      serviceWorkerManager.register().then((registration) => {
+        if (registration) {
+          console.log('✅ Service Worker registered successfully');
+        }
+      });
+    }).catch((error) => {
+      console.error('❌ Failed to load service worker manager:', error);
+      // recordMetric('serviceWorkerRegistrationError', 1);
+    });
+    
+    // Initialize performance monitoring
+    const performanceMonitor = PerformanceMonitor.getInstance();
+    performanceMonitor.measurePageLoad();
+    
+    // Resource and memory monitoring removed - not available
+    
+    // Initialize accessibility features
+    accessibilityManager.initialize({
+      announceChanges: true,
+      reducedMotion: window.matchMedia('(prefers-reduced-motion: reduce)').matches,
+      highContrast: window.matchMedia('(prefers-contrast: high)').matches
+    });
 
     // Initialize SEO analytics
     seoAnalytics.trackPageView(window.location.pathname);
@@ -206,20 +360,15 @@ export default function App(): React.JSX.Element {
       console.log('🚀 Zion Tech Group App initialized');
     }
 
-    // Mark app as fully initialized
-    if (typeof window !== 'undefined' && window.performance && 
-        typeof performance.mark === 'function' && 
-        typeof performance.measure === 'function') {
-      performance.mark('app-init-complete');
-      performance.measure('app-initialization', 'app-init-start', 'app-init-complete');
-    }
-
     // Cleanup function
     return () => {
       window.removeEventListener('beforeunload', trackEngagement);
       window.removeEventListener('scroll', handleScroll);
       document.removeEventListener('click', handleClick);
       document.removeEventListener('keydown', handleKeyDown);
+      
+      // Final engagement tracking
+      trackEngagement();
     };
   }, [trackEngagement, handleScroll, handleClick, handleKeyDown, seoData]);
 
