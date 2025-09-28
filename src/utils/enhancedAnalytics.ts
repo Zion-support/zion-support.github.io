@@ -13,7 +13,7 @@ export interface AnalyticsEvent {
   timestamp: number;
   sessionId: string;
   userId?: string;
-  properties?: Record<string, any>;
+  properties?: Record<string, unknown>;
   page?: string;
   referrer?: string;
 }
@@ -304,9 +304,9 @@ export class EnhancedAnalytics {
       try {
         const fidObserver = new PerformanceObserver((list) => {
           list.getEntries().forEach(entry => {
-            this.track('performance', 'web_vital', 'FID', (entry as any).processingStart - entry.startTime, {
+            this.track('performance', 'web_vital', 'FID', undefined, (entry as PerformanceEntry & { processingStart?: number }).processingStart! - entry.startTime, {
               eventType: entry.name,
-              target: (entry as any).target?.tagName
+              target: (entry as PerformanceEntry & { target?: Element }).target?.tagName
             });
           });
         });
@@ -319,8 +319,8 @@ export class EnhancedAnalytics {
       try {
         const clsObserver = new PerformanceObserver((list) => {
           list.getEntries().forEach(entry => {
-            this.track('performance', 'web_vital', 'CLS', (entry as any).value, {
-              sources: (entry as any).sources?.map((s: any) => s.node?.tagName)
+            this.track('performance', 'web_vital', 'CLS', undefined, (entry as PerformanceEntry & { value?: number }).value!, {
+              sources: (entry as PerformanceEntry & { sources?: Array<{ node?: Element }> }).sources?.map((s) => s.node?.tagName)
             });
           });
         });
@@ -366,7 +366,7 @@ export class EnhancedAnalytics {
     action: string,
     label?: string,
     value?: number,
-    properties?: Record<string, any>
+    properties?: Record<string, unknown>
   ): void {
     const event: AnalyticsEvent = {
       id: this.generateEventId(),

@@ -76,7 +76,7 @@ export interface AutomationReport {
   tasksExecuted: number;
   tasksSucceeded: number;
   tasksFailed: number;
-  metrics: Record<string, unknown>;
+  metrics: Record<string, number>;
   recommendations: string[];
   alerts: MonitoringAlert[];
 }
@@ -589,8 +589,7 @@ export class AdvancedAutomationSystem {
     }
   }
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  private async runPreDeploymentChecks(_config: DeploymentConfig): Promise<void> {
+  private async runPreDeploymentChecks(): Promise<void> {
     console.log('Running pre-deployment checks...');
     
     // Check system health
@@ -618,22 +617,19 @@ export class AdvancedAutomationSystem {
     }
   }
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  private async rollingDeployment(_config: DeploymentConfig): Promise<boolean> {
+  private async rollingDeployment(): Promise<boolean> {
     console.log('Performing rolling deployment...');
     await this.delay(2000);
     return true;
   }
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  private async blueGreenDeployment(_config: DeploymentConfig): Promise<boolean> {
+  private async blueGreenDeployment(): Promise<boolean> {
     console.log('Performing blue-green deployment...');
     await this.delay(3000);
     return true;
   }
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  private async canaryDeployment(_config: DeploymentConfig): Promise<boolean> {
+  private async canaryDeployment(): Promise<boolean> {
     console.log('Performing canary deployment...');
     await this.delay(4000);
     return true;
@@ -652,8 +648,7 @@ export class AdvancedAutomationSystem {
     await this.runTestSuite('integration');
   }
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  private async rollbackDeployment(_config: DeploymentConfig): Promise<void> {
+  private async rollbackDeployment(): Promise<void> {
     console.log('Rolling back deployment...');
     await this.delay(2000);
   }
@@ -709,7 +704,7 @@ export class AdvancedAutomationSystem {
     }
   }
 
-  private calculateMetrics(): Record<string, unknown> {
+  private calculateMetrics(): Record<string, number> {
     const tasks = Array.from(this.tasks.values());
     
     return {

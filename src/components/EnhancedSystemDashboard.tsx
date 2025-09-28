@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { enhancedPerformanceMonitor, PerformanceMetric, OptimizationRecommendation } from '../utils/enhancedPerformanceMonitor';
 import { enhancedAnalytics, AnalyticsReport, ConversionFunnel } from '../utils/enhancedAnalytics';
 import { enhancedSEO, SEOReport, SEORecommendation } from '../utils/enhancedSEO';
@@ -34,7 +34,7 @@ export const EnhancedSystemDashboard: React.FC = () => {
     return () => {
       stopMonitoring();
     };
-  }, []);
+  }, [startMonitoring, stopMonitoring]);
 
   const initializeSystems = () => {
     // Initialize all enhanced systems
@@ -46,14 +46,21 @@ export const EnhancedSystemDashboard: React.FC = () => {
     console.log('All enhanced systems initialized');
   };
 
+  const startMonitoring = useCallback(() => {
+    const interval = setInterval(() => {
+      updateMetrics();
+    }, 5000); // Update every 5 seconds
 
-  const stopMonitoring = () => {
+    return () => clearInterval(interval);
+  }, [updateMetrics]);
+
+  const stopMonitoring = useCallback(() => {
     enhancedPerformanceMonitor.stopMonitoring();
     enhancedAnalytics.endSession();
     setIsMonitoring(false);
-  };
+  }, []);
 
-  const updateMetrics = () => {
+  const updateMetrics = useCallback(() => {
     // Get performance metrics
     const performanceMetrics = enhancedPerformanceMonitor.getMetrics();
     const performanceRecommendations = enhancedPerformanceMonitor.getOptimizationRecommendations();
@@ -87,7 +94,7 @@ export const EnhancedSystemDashboard: React.FC = () => {
         recommendations: seoRecommendations
       }
     });
-  };
+  }, []);
 
   const calculatePerformanceScore = (performanceMetrics: Map<string, PerformanceMetric[]>): number => {
     const allMetrics = Array.from(performanceMetrics.values()).flat();
