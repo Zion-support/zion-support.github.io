@@ -28,7 +28,7 @@ const PWAManager: React.FC = () => {
   useEffect(() => {
     // Check if app is already installed
     const isInstalled = window.matchMedia('(display-mode: standalone)').matches ||
-                       (window.navigator as any).standalone ||
+                       (window.navigator as Navigator & { standalone?: boolean }).standalone ||
                        document.referrer.includes('android-app://');
 
     setPwaState(prev => ({ ...prev, isInstalled }));
@@ -39,7 +39,7 @@ const PWAManager: React.FC = () => {
       setPwaState(prev => ({
         ...prev,
         isInstallable: true,
-        installPrompt: e as any
+        installPrompt: e as Event & { prompt: () => Promise<void>; userChoice: Promise<{ outcome: 'accepted' | 'dismissed' }> }
       }));
       setShowInstallBanner(true);
     };
@@ -189,7 +189,7 @@ const PWAManager: React.FC = () => {
             <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
               <path fillRule="evenodd" d="M13.477 14.89A6 6 0 015.11 6.524l8.367 8.368zm1.414-1.414L6.524 5.11a6 6 0 018.367 8.367zM18 10a8 8 0 11-16 0 8 8 0 0116 0z" clipRule="evenodd" />
             </svg>
-            <span>You're offline. Some features may be limited.</span>
+            <span>You&apos;re offline. Some features may be limited.</span>
           </div>
         </div>
       )}
