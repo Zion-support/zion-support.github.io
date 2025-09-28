@@ -521,13 +521,14 @@ export class AdvancedAutomationSystem {
   private async executeDeploymentTask(task: AutomationTask): Promise<void> {
     console.log(`Executing deployment task: ${task.name}`);
     
-    const config: DeploymentConfig = task.parameters || {
+    const config: DeploymentConfig = {
       environment: 'staging',
       version: '1.0.0',
       rollbackEnabled: true,
       healthCheckUrl: '/api/health',
       deploymentStrategy: 'rolling',
-      notifications: []
+      notifications: ['email', 'slack'],
+      ...task.parameters
     };
     
     const success = await this.deploy(config);

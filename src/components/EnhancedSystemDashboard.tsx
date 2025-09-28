@@ -30,7 +30,6 @@ export const EnhancedSystemDashboard: React.FC = () => {
 
   useEffect(() => {
     initializeSystems();
-    startMonitoring();
     
     return () => {
       stopMonitoring();
