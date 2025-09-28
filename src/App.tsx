@@ -11,6 +11,8 @@ import PerformanceOptimizer from './components/PerformanceOptimizer';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import AIPerformanceDashboard from './components/AIPerformanceDashboard';
 import { SEOOptimizer, useSEOData } from './components/SEOOptimizer';
+import { analytics } from './utils/analytics';
+import { seoAnalytics, performanceSEO, seoManager } from './utils/seoEnhanced';
 import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
 import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
 import { enhancedAnalytics } from './utils/enhancedAnalytics';
@@ -21,6 +23,8 @@ import { SecurityEnhancer } from './utils/securityEnhancer';
 import { performanceOptimizer } from './utils/performanceOptimizer';
 import { accessibilityEnhancer } from './utils/accessibilityEnhancer';
 import { seoOptimizer } from './utils/seoOptimizer';
+import { securityEnhancer } from './utils/securityEnhancer';
+import AdvancedAnalytics from './components/AdvancedAnalytics';
 import './index.css';
 
 export default function App(): React.JSX.Element {
@@ -82,6 +86,43 @@ export default function App(): React.JSX.Element {
 
   // Performance optimization hook
   const { optimizePerformance, clearCache, getPerformanceMetrics } = usePerformanceOptimization();
+
+  // Initialize comprehensive enhancements
+  useEffect(() => {
+    const enhancements = getComprehensiveEnhancements();
+    enhancements.initialize();
+    
+    // Initialize individual enhancement systems
+    enhancedPerformanceMonitor.initialize();
+    enhancedAnalytics.initialize();
+    advancedCacheSystem.initialize();
+    new AdvancedAutomationSystem().initialize();
+    new AccessibilityEnhancer().initialize();
+    new SecurityEnhancer().initialize();
+    
+    // Initialize analytics
+    analytics.initialize();
+    seoAnalytics.initialize();
+    performanceSEO.initialize();
+    seoManager.initialize();
+    
+    // Initialize SEO analytics
+    seoAnalytics.trackPageView(window.location.pathname);
+    
+    // Initialize performance SEO optimizations
+    performanceSEO.optimizeImages();
+    performanceSEO.optimizeFonts();
+    performanceSEO.optimizeCSS();
+
+    // Set default SEO data using the correct method
+    seoManager.updateMetaTags(seoData);
+    
+    // Initialize advanced optimization systems
+    performanceOptimizer.optimizeBundle();
+    accessibilityEnhancer.initialize();
+    seoOptimizer.optimizePage(seoData);
+    securityEnhancer.initialize();
+  }, [seoData]);
 
   // Update meta tags function
   const updateMetaTags = useCallback((data: typeof memoizedSeoData) => {
@@ -221,7 +262,15 @@ export default function App(): React.JSX.Element {
 
   return (
     <EnhancedErrorBoundary>
-      <div className="app">
+      <SEOOptimizer seoData={seoData} />
+      <AdvancedAnalytics 
+        enableHeatmaps={true}
+        enableUserJourney={true}
+        enableConversionTracking={true}
+        enablePerformanceTracking={true}
+        enableErrorTracking={true}
+      />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <AppRouter />
         
         {/* System Dashboard - Toggle with Ctrl+Shift+D */}
