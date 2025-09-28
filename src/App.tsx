@@ -85,14 +85,14 @@ export default function App(): React.JSX.Element {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [showKeyboardHelp, setShowKeyboardHelp] = useState(false);
   const [showCommandPalette, setShowCommandPalette] = useState(false);
-  const [showAdvancedMonitoring, setShowAdvancedMonitoring] = useState(false);
-  const [showComprehensiveDashboard, setShowComprehensiveDashboard] = useState(false);
+  const [showAdvancedMonitoring] = useState(false);
+  const [showComprehensiveDashboard] = useState(false);
   const [showComprehensiveMonitoring, setShowComprehensiveMonitoring] = useState(false);
   const [showRealTimePerformance, setShowRealTimePerformance] = useState(false);
   const [showEnhancedCommandPalette, setShowEnhancedCommandPalette] = useState(false);
   const [showSystemStatus, setShowSystemStatus] = useState(true);
   const [showEnhancedNotifications] = useState(true);
-  const [showKeyboardShortcutsManager, setShowKeyboardShortcutsManager] = useState(false);
+  const [showKeyboardShortcutsManager] = useState(false);
   const [showPerformanceWidget, setShowPerformanceWidget] = useState(false);
   const [showSystemHealth, setShowSystemHealth] = useState(false);
   const [notifications, setNotifications] = useState<Notification[]>([]);
@@ -462,7 +462,7 @@ export default function App(): React.JSX.Element {
   const trackEngagement = useCallback(() => {
     // Track user engagement metrics
     if (analytics && 'track' in analytics) {
-      (analytics as any).track('engagement', {
+      (analytics as { track: (event: string, data: object) => void }).track('engagement', {
         scrollDepth: engagementData.scrollDepth,
         clicks: engagementData.clicks,
         timeOnPage: Date.now() - engagementData.startTime
@@ -995,7 +995,7 @@ export default function App(): React.JSX.Element {
             <div className="space-y-2 text-sm">
               <div className="flex justify-between">
                 <span>Memory Usage:</span>
-                <span className="text-green-400">{Math.round(((performance as any).memory?.usedJSHeapSize || 0) / 1024 / 1024)} MB</span>
+                <span className="text-green-400">{Math.round(((performance as { memory?: { usedJSHeapSize?: number } }).memory?.usedJSHeapSize || 0) / 1024 / 1024)} MB</span>
               </div>
               <div className="flex justify-between">
                 <span>Render Time:</span>
