@@ -144,6 +144,18 @@ class PerformanceEnhancer {
   }
 
   /**
+   * Prefetch a resource for future use
+   */
+  public prefetchResource(href: string): void {
+    const link = document.createElement('link');
+    link.rel = 'prefetch';
+    link.href = href;
+
+    document.head.appendChild(link);
+    this.resourceHints.push({ href, as: 'fetch' });
+  }
+
+  /**
    * Preload critical resources
    */
   private preloadCriticalResources(): void {
