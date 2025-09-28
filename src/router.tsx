@@ -11,6 +11,7 @@ import { PageLoader } from './components/EnhancedLoadingSpinner';
 import SystemDashboard from './components/SystemDashboard';
 import AccessibilityTester from './components/AccessibilityTester';
 import PerformanceProfiler from './components/PerformanceProfiler';
+import ComprehensiveMonitoringDashboard from './components/ComprehensiveMonitoringDashboard';
 
 // Lazy load components for better performance
 const Home = lazy(() => import('./pages/Home'));
@@ -73,6 +74,11 @@ export const router = createBrowserRouter([
   {
     path: '/portfolio',
     element: <Layout><Portfolio /></Layout>,
+    errorElement: <ErrorFallback />,
+  },
+  {
+    path: '/monitoring',
+    element: <Layout><ComprehensiveMonitoringDashboard /></Layout>,
     errorElement: <ErrorFallback />,
   },
   {

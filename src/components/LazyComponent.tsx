@@ -11,8 +11,7 @@ interface LazyComponentProps {
  * Enhanced Lazy Component with better error handling and performance
  */
 export const createLazyComponent = <P extends object>(
-  importFunc: () => Promise<{ default: ComponentType<P> }>,
-  fallback?: ReactNode
+  importFunc: () => Promise<{ default: ComponentType<P> }>
 ) => {
   const LazyComponent = lazy(importFunc);
 

@@ -18,6 +18,12 @@ import { seoManager } from './utils/advancedSEOManager';
 import { errorTracker } from './utils/advancedErrorTracker';
 import { apiCache, imageCache, dataCache } from './utils/advancedCacheManager';
 
+// Import new comprehensive systems
+import { performanceOptimizer } from './utils/performanceOptimizations';
+import { accessibilityEnhancer } from './utils/accessibilityEnhancements';
+import { securityEnhancer } from './utils/securityEnhancements';
+import ComprehensiveMonitoringDashboard from './components/ComprehensiveMonitoringDashboard';
+
 // Import enhanced utilities
 import { enhancedErrorHandler } from './utils/enhancedErrorHandling';
 import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitoring';
@@ -399,8 +405,22 @@ export default function App(): React.JSX.Element {
       document.addEventListener('click', handleClick, { passive: true });
       document.addEventListener('keydown', handleKeyDown);
 
-      // Initialize basic systems
-      console.debug('Initializing analytics system');
+      // Initialize comprehensive systems
+      console.debug('Initializing comprehensive systems');
+      
+      // Initialize performance optimizer
+      performanceOptimizer.optimizeImages();
+      performanceOptimizer.preloadCriticalResources();
+      performanceOptimizer.enableCaching();
+      performanceOptimizer.optimizeBundleSize();
+      
+      // Initialize accessibility enhancer
+      accessibilityEnhancer.announce('Application loaded successfully');
+      
+      // Initialize security enhancer
+      console.debug('Security system initialized');
+      
+      // Initialize analytics system
       
       // Initialize SEO analytics
       seoAnalytics.trackPageView(window.location.pathname);

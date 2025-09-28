@@ -1,11 +1,12 @@
 import React, { useEffect, useState, useCallback, useMemo } from 'react';
+import { performanceOptimizer } from '../utils/performanceOptimizations';
 import { 
   getMemoryUsage, 
   collectPerformanceMetrics, 
   checkPerformanceBudget,
   debounce,
   throttle
-} from '../utils/performanceOptimizations';
+} from '../utils/performanceHelpers';
 
 interface PerformanceMetrics {
   memory: {
