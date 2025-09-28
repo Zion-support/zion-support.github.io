@@ -259,43 +259,43 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
               <div className="bg-gray-50 p-4 rounded-lg">
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">🐛 Error Reports</h3>
                 <div className="space-y-3">
-                  {errorReports.length > 0 ? (
-                    errorReports.map((report) => (
-                      <div key={report.id} className="bg-white p-4 rounded border">
-                        <div className="flex justify-between items-start mb-2">
-                          <div className="flex items-center space-x-2">
-                            <span className={`px-2 py-1 rounded text-xs font-medium ${getSeverityColor(report.severity || 'unknown')}`}>
-                              {(report.severity || 'unknown').toUpperCase()}
-                            </span>
-                            {report.aiPredictedImpact && (
-                              <div>
+                  {errors.length > 0 ? (
+                    errors.map((report) => (
+                      <div key={String(report.id)} className="bg-white p-4 rounded border">
+                        <div className="flex items-start justify-between">
+                          <div className="flex-1">
+                            <div className="flex items-center gap-2 mb-2">
+                              <span className={`px-2 py-1 rounded text-xs font-medium ${getSeverityColor(report.severity)}`}>
+                                {report.severity.toUpperCase()}
+                              </span>
+                              {report.aiPredictedImpact && (
                                 <span className={`text-sm font-medium ${getImpactColor(report.aiPredictedImpact)}`}>
                                   Impact: {report.aiPredictedImpact}%
                                 </span>
-                              </div>
-                            )}
-                            <span className="text-sm text-gray-500">
-                              {report.occurrenceCount} occurrences
-                            </span>
-                          </div>
-                          <div className="mt-2">
-                            <p className="text-gray-900 font-medium">{report.message}</p>
-                            <p className="text-sm text-gray-600 mt-1">
-                              Component: {report.context.component} | Action: {report.context.action}
-                            </p>
-                            {report.resolutionSuggestions && (
-                              <div className="mt-2">
-                                <p className="text-sm font-medium text-gray-700 mb-1">AI Suggestions:</p>
-                                <ul className="text-sm text-gray-600 space-y-1">
-                                  {report.resolutionSuggestions.map((suggestion, index) => (
-                                    <li key={index} className="flex items-start gap-1">
-                                      <span>•</span>
-                                      <span>{suggestion}</span>
-                                    </li>
-                                  ))}
-                                </ul>
-                              </div>
-                            )}
+                              )}
+                              <span className="text-sm text-gray-500">
+                                {report.occurrenceCount} occurrences
+                              </span>
+                            </div>
+                            <div className="mt-2">
+                              <p className="text-gray-900 font-medium">{report.message}</p>
+                              <p className="text-sm text-gray-600 mt-1">
+                                Component: {report.context.component} | Action: {report.context.action}
+                              </p>
+                              {report.resolutionSuggestions && (
+                                <div className="mt-2">
+                                  <p className="text-sm font-medium text-gray-700 mb-1">AI Suggestions:</p>
+                                  <ul className="text-sm text-gray-600 space-y-1">
+                                    {report.resolutionSuggestions.map((suggestion, index) => (
+                                      <li key={index} className="flex items-start gap-1">
+                                        <span>•</span>
+                                        <span>{suggestion}</span>
+                                      </li>
+                                    ))}
+                                  </ul>
+                                </div>
+                              )}
+                            </div>
                           </div>
                         </div>
                       </div>

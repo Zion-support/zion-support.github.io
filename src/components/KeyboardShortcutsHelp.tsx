@@ -1,20 +1,21 @@
 import React, { useState, useEffect } from 'react';
 
-interface KeyboardShortcutsHelpProps {
-  isVisible: boolean;
-  onClose: () => void;
-}
-
 interface Shortcut {
   key: string;
   description: string;
   category: string;
 }
 
+interface KeyboardShortcutsHelpProps {
+  isVisible: boolean;
+  onClose: () => void;
+}
+
 const KeyboardShortcutsHelp: React.FC<KeyboardShortcutsHelpProps> = ({ isVisible, onClose }) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [filteredShortcuts, setFilteredShortcuts] = useState<Shortcut[]>([]);
 
+  if (!isVisible) return null;
   const shortcuts: Shortcut[] = [
     { key: 'Ctrl+Shift+D', description: 'Toggle System Dashboard', category: 'Dashboard' },
     { key: 'Ctrl+Shift+P', description: 'Toggle Performance Optimizer', category: 'Performance' },
@@ -38,8 +39,6 @@ const KeyboardShortcutsHelp: React.FC<KeyboardShortcutsHelpProps> = ({ isVisible
       setFilteredShortcuts(shortcuts);
     }
   }, [searchTerm, shortcuts]);
-
-  if (!isVisible) return null;
 
   const groupedShortcuts = filteredShortcuts.reduce((acc, shortcut) => {
     if (!acc[shortcut.category]) {
