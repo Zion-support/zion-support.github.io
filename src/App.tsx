@@ -9,18 +9,13 @@ import EnhancedNotificationSystem from './components/EnhancedNotificationSystem'
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
+import { initializeErrorReporting } from './utils/errorReporting';
+import { advancedPerformanceOptimizer } from './utils/performanceOptimizer';
+import { seoOptimizer } from './utils/seoOptimization';
 import './index.css';
 import './styles/notifications.css';
 import './styles/system-metrics.css';
 import './styles/modern-utilities.css';
-
-// Import essential utility modules only
-import { SEOOptimizer } from './utils/seoUtils';
-import { initializeErrorReporting } from './utils/errorReporting';
-import { initOptimizations } from './utils/buildOptimizations';
-
-// Initialize managers
-const seoManager = SEOOptimizer.getInstance();
 
 export default function App(): React.JSX.Element {
   // State for system metrics dashboard
@@ -79,11 +74,7 @@ export default function App(): React.JSX.Element {
     ogType: 'website',
     ogUrl: typeof window !== 'undefined' ? window.location.href : '',
     ogImage: '/og-image.png',
-    twitterCard: 'summary_large_image' as const,
-    structuredData: [
-      seoManager.generateOrganizationStructuredData(),
-      seoManager.generateWebsiteStructuredData()
-    ]
+    twitterCard: 'summary_large_image' as const
   }), []);
 
   // Track engagement function
@@ -96,26 +87,32 @@ export default function App(): React.JSX.Element {
     });
   }, [engagementData]);
 
-  // Main initialization effect
   useEffect(() => {
     // Initialize error reporting
     initializeErrorReporting();
-    
-    // Initialize build optimizations
-    initOptimizations();
     
     // Add performance marks for better monitoring
     if (typeof window !== 'undefined' && window.performance && typeof performance.mark === 'function') {
       performance.mark('app-init-start');
     }
-
-    // Set default SEO data
-    seoManager.updateSEO(seoData);
-
-    // Use passive listeners for better performance
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    document.addEventListener('click', handleClick, { passive: true });
-
+    
+    // Initialize performance optimizer
+    if (advancedPerformanceOptimizer) {
+      advancedPerformanceOptimizer.startMonitoring();
+    }
+    
+    // Initialize SEO optimizer
+    if (seoOptimizer) {
+      seoOptimizer.updatePageSEO({
+        title: seoData.title,
+        description: seoData.description,
+        keywords: seoData.keywords,
+        image: seoData.ogImage,
+        url: typeof window !== 'undefined' ? window.location.href : '',
+        type: seoData.ogType as 'website' | 'article' | 'product'
+      });
+    }
+    
     // Mark app as fully initialized
     if (typeof window !== 'undefined' && window.performance && 
         typeof performance.mark === 'function' && 
@@ -123,22 +120,15 @@ export default function App(): React.JSX.Element {
       performance.mark('app-init-complete');
       performance.measure('app-initialization', 'app-init-start', 'app-init-complete');
     }
-
-    // Cleanup function
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-      document.removeEventListener('click', handleClick);
-      
-      // Final engagement tracking
-      trackEngagement();
-    };
-  }, [seoData, handleScroll, handleClick, trackEngagement]);
+  }, [seoData]);
 
   // Add keyboard event listener
-  useEffect(() => {
+  React.useEffect(() => {
     document.addEventListener("keydown", handleKeyDown);
+    
+    // Cleanup function
     return () => {
-      document.removeEventListener("keydown", handleKeyDown);
+      document.removeEventListener('keydown', handleKeyDown);
     };
   }, [handleKeyDown]);
 
