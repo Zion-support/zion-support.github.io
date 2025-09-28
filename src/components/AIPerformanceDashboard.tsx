@@ -39,6 +39,7 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
 
   useEffect(() => {
     if (isVisible) {
+      loadPerformanceData();
     }
   }, [isVisible]);
 

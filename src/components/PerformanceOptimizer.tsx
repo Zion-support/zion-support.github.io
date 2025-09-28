@@ -30,8 +30,14 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
 
   // Update performance data
   const updatePerformanceData = useCallback(() => {
-    const metrics = performanceEnhancer.getMetrics();
-    setPerformanceData(metrics);
+    const metrics = performanceEnhancer.collectPerformanceMetrics();
+    setPerformanceData({
+      loadTime: metrics.load || 0,
+      renderTime: metrics.dom || 0,
+      memoryUsage: metrics.memory?.used || 0,
+      bundleSize: 1024 * 1024, // Mock value - 1MB
+      cacheHitRate: 85 // Mock value
+    });
   }, []);
 
   // Add log entry
@@ -47,12 +53,11 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     try {
       // Optimize bundle
       addLogEntry('Optimizing bundle...');
-      performanceEnhancer.optimizeBundle();
+      performanceEnhancer.optimizeBundleSize();
       
       // Preload critical resources
       addLogEntry('Preloading critical resources...');
-      performanceEnhancer.preloadResource('/api/health', 'script');
-      performanceEnhancer.preloadResource('/images/hero-bg.webp', 'image');
+      performanceEnhancer.preloadCriticalResources();
       
       // Update metrics
       addLogEntry('Updating performance metrics...');

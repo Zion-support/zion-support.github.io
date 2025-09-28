@@ -29,7 +29,8 @@ const PerformanceMetrics: React.FC<PerformanceMetricsProps> = ({ isVisible, onCl
       // Collect Web Vitals
       const fcp = performance.getEntriesByName('first-contentful-paint')[0]?.startTime || 0;
       const lcp = performance.getEntriesByType('largest-contentful-paint')[0]?.startTime || 0;
-      const fid = performance.getEntriesByType('first-input')[0]?.processingStart || 0;
+      const fidEntry = performance.getEntriesByType('first-input')[0] as PerformanceEventTiming;
+      const fid = fidEntry ? (fidEntry.processingStart - fidEntry.startTime) : 0;
       const cls = performance.getEntriesByType('layout-shift').reduce((acc, entry) => acc + (entry as PerformanceEntry & { value: number }).value, 0);
       const ttfb = performance.getEntriesByType('navigation')[0]?.responseStart || 0;
 

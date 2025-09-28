@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, LineChart, Line, PieChart, Pie, Cell } from 'recharts';
+// import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, LineChart, Line, PieChart, Pie, Cell } from 'recharts';
 
 interface AnalyticsData {
   pageViews: number;
@@ -154,39 +154,27 @@ export default function AdvancedAnalyticsDashboard({ isVisible, onClose }: Advan
                 {/* Top Pages Chart */}
                 <div className="bg-gray-50 p-6 rounded-lg">
                   <h3 className="text-xl font-semibold mb-4">Top Pages</h3>
-                  <ResponsiveContainer width="100%" height={300}>
-                    <BarChart data={analyticsData.topPages}>
-                      <CartesianGrid strokeDasharray="3 3" />
-                      <XAxis dataKey="path" />
-                      <YAxis />
-                      <Tooltip />
-                      <Bar dataKey="views" fill="#3B82F6" />
-                    </BarChart>
-                  </ResponsiveContainer>
+                  <div className="space-y-2">
+                    {analyticsData.topPages.map((page, index) => (
+                      <div key={index} className="flex justify-between items-center">
+                        <span className="text-gray-700">{page.path}</span>
+                        <span className="text-blue-600 font-medium">{page.views} views</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
 
-                {/* Traffic Sources Pie Chart */}
+                {/* Traffic Sources Chart */}
                 <div className="bg-gray-50 p-6 rounded-lg">
                   <h3 className="text-xl font-semibold mb-4">Traffic Sources</h3>
-                  <ResponsiveContainer width="100%" height={300}>
-                    <PieChart>
-                      <Pie
-                        data={analyticsData.trafficSources}
-                        cx="50%"
-                        cy="50%"
-                        labelLine={false}
-                        label={({ source, percentage }) => `${source}: ${percentage}%`}
-                        outerRadius={80}
-                        fill="#8884d8"
-                        dataKey="visitors"
-                      >
-                        {analyticsData.trafficSources.map((entry, index) => (
-                          <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-                        ))}
-                      </Pie>
-                      <Tooltip />
-                    </PieChart>
-                  </ResponsiveContainer>
+                  <div className="space-y-2">
+                    {analyticsData.trafficSources.map((source, index) => (
+                      <div key={index} className="flex justify-between items-center">
+                        <span className="text-gray-700">{source.source}</span>
+                        <span className="text-green-600 font-medium">{source.percentage}%</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
 
@@ -211,15 +199,14 @@ export default function AdvancedAnalyticsDashboard({ isVisible, onClose }: Advan
               {/* Device Breakdown */}
               <div className="bg-gray-50 p-6 rounded-lg">
                 <h3 className="text-xl font-semibold mb-4">Device Breakdown</h3>
-                <ResponsiveContainer width="100%" height={300}>
-                  <BarChart data={analyticsData.deviceBreakdown}>
-                    <CartesianGrid strokeDasharray="3 3" />
-                    <XAxis dataKey="device" />
-                    <YAxis />
-                    <Tooltip />
-                    <Bar dataKey="count" fill="#10B981" />
-                  </BarChart>
-                </ResponsiveContainer>
+                <div className="space-y-2">
+                  {analyticsData.deviceBreakdown.map((device, index) => (
+                    <div key={index} className="flex justify-between items-center">
+                      <span className="text-gray-700">{device.device}</span>
+                      <span className="text-green-600 font-medium">{device.count} users</span>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           ) : (
