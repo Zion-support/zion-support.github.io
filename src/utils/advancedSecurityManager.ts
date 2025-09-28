@@ -10,7 +10,7 @@ interface SecurityEvent {
   timestamp: number;
   userAgent: string;
   url: string;
-  metadata?: Record<string, any>;
+  metadata?: Record<string, string | number | boolean>;
 }
 
 interface SecurityConfig {
@@ -142,7 +142,7 @@ class AdvancedSecurityManager {
     }
   }
 
-  private handleBeforeUnload(_event: BeforeUnloadEvent): void {
+  private handleBeforeUnload(): void {
     this.logEvent('page_unload', 'low', 'Page unload detected');
   }
 
