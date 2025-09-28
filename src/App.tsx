@@ -198,6 +198,10 @@ export default function App(): React.JSX.Element {
         performance.mark('app-init-complete');
         performance.measure('app-initialization', 'app-init-start', 'app-init-complete');
       }
+
+      if (typeof window !== 'undefined') {
+        console.log('🚀 Zion Tech Group App initialized');
+      }
     } catch (error) {
       console.error('Error initializing app:', error);
     }

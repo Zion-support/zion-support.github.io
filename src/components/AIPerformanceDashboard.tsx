@@ -11,6 +11,7 @@ interface PerformanceMetrics {
   criticalErrorsToday: number;
   userImpactScore: number;
   avgResolutionTime: number;
+  [key: string]: unknown;
 }
 
 interface AIInsights {
@@ -20,12 +21,13 @@ interface AIInsights {
     category: string;
     trend: 'increasing' | 'decreasing' | 'stable';
   }>;
+  [key: string]: unknown;
 }
 
 interface ErrorReport {
   severity: string;
   message: string;
-  lastOccurrence: string | number;
+  lastOccurrence: string | Date;
   occurrenceCount: number;
   context: {
     component?: string;
@@ -33,6 +35,7 @@ interface ErrorReport {
   };
   aiPredictedImpact?: number;
   resolutionSuggestions?: string[];
+  [key: string]: unknown;
 }
 
 const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisible, onClose }) => {
