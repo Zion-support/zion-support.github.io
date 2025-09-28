@@ -3,11 +3,7 @@
  * Provides comprehensive performance monitoring and optimization features
  */
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-interface LayoutShiftEntry {
-  hadRecentInput: boolean;
-  value: number;
-}
+// Removed unused interface LayoutShiftEntry
 
 interface PerformanceConfig {
   enableWebVitals: boolean;

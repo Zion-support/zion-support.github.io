@@ -6,7 +6,7 @@ import { seoManager, seoAnalytics, performanceSEO } from './utils/seoEnhanced';
 import { accessibilityManager } from './utils/accessibility';
 import { PerformanceMonitor, ResourceMonitor, MemoryMonitor } from './utils/performance';
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
-import { analytics } from './utils/analytics';
+// import { analytics } from './utils/analytics'; // Unused import removed
 import { seoOptimizer } from './utils/seoOptimization';
 import { cacheManager } from './utils/cacheManager';
 import { apiClient } from './utils/apiClient';
@@ -34,6 +34,11 @@ import { advancedAutomationSystem } from './utils/advancedAutomationSystem';
 import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
 import performanceEnhancer from './utils/performanceEnhancements';
 import EnhancedNotificationSystem from './components/EnhancedNotificationSystem';
+import PerformanceOptimizer from './components/PerformanceOptimizer';
+import AdvancedPerformanceMonitorComponent from './components/AdvancedPerformanceMonitor';
+import ThemeToggle from './components/ThemeToggle';
+import ScrollToTop from './components/ScrollToTop';
+import { analytics as advancedAnalytics } from './utils/advancedAnalytics';
 import './index.css';
 import './styles/notifications.css';
 import './styles/system-metrics.css';
@@ -44,6 +49,12 @@ export default function App(): React.JSX.Element {
   
   // State for system metrics dashboard
   const [showSystemDashboard, setShowSystemDashboard] = useState(false);
+  
+  // State for performance optimizer
+  const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
+  
+  // State for advanced performance monitor
+  const [showAdvancedMonitor, setShowAdvancedMonitor] = useState(false);
 
   // Track user engagement with throttling for better performance
   const [engagementData, setEngagementData] = useState({
@@ -100,6 +111,14 @@ export default function App(): React.JSX.Element {
     if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'D') {
       event.preventDefault();
       setShowSystemDashboard(prev => !prev);
+    }
+    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'P') {
+      event.preventDefault();
+      setShowPerformanceOptimizer(prev => !prev);
+    }
+    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'M') {
+      event.preventDefault();
+      setShowAdvancedMonitor(prev => !prev);
     }
   }, []);
 
@@ -249,6 +268,7 @@ export default function App(): React.JSX.Element {
     
     // Initialize new enhancement utilities
     console.log('Initializing performance enhancements...');
+    performanceEnhancer.initialize();
     performanceEnhancer.optimizeBundle();
     performanceEnhancer.preloadResource('/static/js/main.js', 'script');
     
@@ -301,9 +321,13 @@ export default function App(): React.JSX.Element {
     
     // Advanced performance optimizer is now handled by the new utility
 
-    // Initialize analytics system
-    analytics.initialize();
-    analytics.trackPageView();
+    // Initialize advanced analytics system
+    advancedAnalytics.enable();
+    advancedAnalytics.trackEvent('page_view', {
+      page: window.location.pathname,
+      referrer: document.referrer,
+      timestamp: Date.now()
+    });
 
     // Initialize enhanced SEO optimizer
     seoOptimizer.updatePageSEO({
@@ -445,6 +469,16 @@ export default function App(): React.JSX.Element {
         enableAccessibility
         maxNotifications={5}
       />
+      <PerformanceOptimizer 
+        isVisible={showPerformanceOptimizer}
+        onClose={() => setShowPerformanceOptimizer(false)}
+      />
+      <AdvancedPerformanceMonitorComponent 
+        isVisible={showAdvancedMonitor}
+        onToggle={() => setShowAdvancedMonitor(!showAdvancedMonitor)}
+      />
+      <ThemeToggle className="fixed top-4 left-4 z-50" />
+      <ScrollToTop />
     </>
   );
 }

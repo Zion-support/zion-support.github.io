@@ -21,15 +21,7 @@ interface Notification {
   timestamp: Date;
 }
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-interface NotificationSystemAPI {
-  success: (title: string, message: string, options?: Partial<Notification>) => string;
-  error: (title: string, message: string, options?: Partial<Notification>) => string;
-  warning: (title: string, message: string, options?: Partial<Notification>) => string;
-  info: (title: string, message: string, options?: Partial<Notification>) => string;
-  remove: (id: string) => void;
-  clear: () => void;
-}
+// Removed unused interface - using inline interface in WindowWithNotificationSystem instead
 
 interface NotificationSystemProps {
   maxNotifications?: number;
