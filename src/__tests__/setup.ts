@@ -38,8 +38,15 @@ const mockLocationInstance = {
   origin: 'http://localhost:3000',
   ancestorOrigins: [] as unknown as DOMStringList,
 } as Location;
-delete (window as unknown as { location?: Partial<Location> }).location;
-(window as unknown as { location: Partial<Location> }).location = mockLocationInstance;
+
+// Mock window.location more safely
+try {
+  delete (window as any).location;
+  (window as any).location = mockLocationInstance;
+} catch (e) {
+  // If deletion fails, try to override properties
+  Object.assign(window.location, mockLocationInstance);
+}
 // Mock window.history
 Object.defineProperty(window, 'history', {
   value: {

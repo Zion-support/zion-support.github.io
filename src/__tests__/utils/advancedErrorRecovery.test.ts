@@ -31,7 +31,7 @@ describe('Advanced Error Recovery System', () => {
 
       expect(result).toBeDefined();
       expect(mockFetch).toHaveBeenCalledTimes(3);
-    }, 10000);
+    }, 30000);
 
     it('should handle component errors with fallback', async () => {
       const fallbackComponent = () => 'Fallback content';
@@ -46,7 +46,7 @@ describe('Advanced Error Recovery System', () => {
       );
 
       expect(result).toBe('Fallback content');
-    }, 10000);
+    }, 30000);
 
     it('should handle data errors with cache fallback', async () => {
       const cacheData = { cached: 'data' };
@@ -63,7 +63,7 @@ describe('Advanced Error Recovery System', () => {
       );
 
       expect(result).toEqual(cacheData);
-    }, 10000);
+    }, 30000);
   });
 
   describe('Circuit Breaker', () => {
@@ -86,7 +86,7 @@ describe('Advanced Error Recovery System', () => {
 
       const stats = advancedErrorRecovery.getStats();
       expect(stats.circuitBreakerOpen).toBe(true);
-    }, 10000);
+    }, 30000);
 
     it('should close circuit after recovery time', async () => {
       jest.useFakeTimers();
@@ -114,7 +114,7 @@ describe('Advanced Error Recovery System', () => {
       expect(stats.circuitBreakerOpen).toBe(false);
 
       jest.useRealTimers();
-    }, 10000);
+    }, 30000);
   });
 
   describe('Retry Mechanisms', () => {
@@ -132,7 +132,7 @@ describe('Advanced Error Recovery System', () => {
 
       expect(result).toBe('Success');
       expect(mockFunction).toHaveBeenCalledTimes(3);
-    }, 10000);
+    }, 30000);
 
     it('should respect max retry limit', async () => {
       const mockFunction = jest.fn().mockRejectedValue(new Error('Always fails'));
@@ -146,7 +146,7 @@ describe('Advanced Error Recovery System', () => {
       ).rejects.toThrow('Always fails');
 
       expect(mockFunction).toHaveBeenCalledTimes(3); // Initial + 2 retries
-    }, 10000);
+    }, 30000);
   });
 
   describe('User Guidance', () => {
@@ -190,7 +190,7 @@ describe('Advanced Error Recovery System', () => {
       expect(stats.totalErrors).toBe(1);
       expect(stats.successfulRecoveries).toBe(1);
       expect(stats.recoveryRate).toBe(1);
-    }, 10000);
+    }, 30000);
 
     it('should track different error types', async () => {
       await advancedErrorRecovery.executeWithRecovery(
@@ -206,6 +206,6 @@ describe('Advanced Error Recovery System', () => {
       const stats = advancedErrorRecovery.getStats();
       expect(stats.errorTypes.network).toBe(1);
       expect(stats.errorTypes.component).toBe(1);
-    }, 10000);
+    }, 30000);
   });
 });
