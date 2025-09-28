@@ -16,13 +16,9 @@ interface PerformanceOptimizationReturn {
   preloadResource: (url: string, type?: string) => Promise<void>;
   recordMetric: (name: string, value: number) => void;
   measurePerformance: (name: string, fn: () => void) => void;
-  getPerformanceMetrics: () => PerformanceMetrics;
+  getPerformanceMetrics: () => Record<string, unknown>;
   optimizeImage: (src: string, options?: ImageOptimizationOptions) => string;
   addResourceHint: (href: string, as: string, type?: string) => void;
-}
-
-interface PerformanceMetrics {
-  [key: string]: number;
 }
 
 interface ImageOptimizationOptions {
@@ -122,25 +118,23 @@ export const usePerformanceOptimization = (
   }, []);
 
   // Optimize images with responsive loading
-  const optimizeImage = useCallback((src: string, options: ImageOptimizationOptions = {}): string => {
+  const optimizeImage = useCallback((src: string, _options: ImageOptimizationOptions = {}): string => {
     if (!configRef.current.enableImageOptimization) return src;
 
-    const {
-      width = 800,
-      height = 600,
-      quality = 80,
-      format = 'webp'
-    } = options;
+    // const {
+    //   width,
+    //   height,
+    //   quality = 80,
+    //   format = 'webp'
+    // } = options;
 
     // Check if browser supports WebP
-    const supportsWebP = document.createElement('canvas')
-      .toDataURL('image/webp')
-      .indexOf('data:image/webp') === 0;
+    // const supportsWebP = document.createElement('canvas')
+    //   .toDataURL('image/webp')
+    //   .indexOf('data:image/webp') === 0;
 
     // For now, return the original src
     // In a real implementation, this would integrate with an image optimization service
-    // Using the parameters for future implementation
-    console.log(`Image optimization requested: ${width}x${height}, quality: ${quality}, format: ${format}, supportsWebP: ${supportsWebP}`);
     return src;
   }, []);
 
@@ -270,7 +264,7 @@ export const usePerformanceOptimization = (
   useEffect(() => {
     if (!('connection' in navigator)) return;
 
-    const connection = (navigator as Navigator & { connection?: { effectiveType: string } }).connection;
+    const connection = (navigator as unknown as { connection?: { effectiveType?: string } }).connection;
     
     const handleConnectionChange = () => {
       const effectiveType = connection.effectiveType;
