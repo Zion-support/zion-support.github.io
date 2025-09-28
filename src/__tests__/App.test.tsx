@@ -210,9 +210,17 @@ jest.mock('../router', () => {
 });
 
 const renderWithRouter = (ui: React.ReactElement, { route = '/' } = {}) => {
-  // Mock window.location using delete and redefine approach
-  delete (window as unknown as { location?: unknown }).location;
-  (window as unknown as { location: { pathname: string } }).location = { pathname: route };
+  // Mock window.location using Object.defineProperty to avoid navigation errors
+  Object.defineProperty(window, 'location', {
+    value: {
+      pathname: route,
+      href: `http://localhost:3000${route}`,
+      assign: jest.fn(),
+      replace: jest.fn(),
+      reload: jest.fn(),
+    },
+    writable: true,
+  });
   return render(ui);
 };
 

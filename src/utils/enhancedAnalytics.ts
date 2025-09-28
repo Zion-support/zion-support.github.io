@@ -432,17 +432,27 @@ export class EnhancedAnalytics {
     const batch = this.eventQueue.splice(0, this.BATCH_SIZE);
     
     try {
-      await fetch('/api/analytics/batch', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          events: batch,
-          session: this.currentSession,
+      // Check if fetch is available and is a function
+      if (typeof fetch === 'function') {
+        await fetch('/api/analytics/batch', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            events: batch,
+            session: this.currentSession,
+            timestamp: Date.now()
+          })
+        });
+      } else {
+        // Fallback for test environments
+        console.log('Analytics batch (test mode):', {
+          events: batch.length,
+          sessionId: this.currentSession?.id,
           timestamp: Date.now()
-        })
-      });
+        });
+      }
     } catch (error) {
       console.warn('Failed to send analytics batch:', error);
       // Re-queue events if sending failed
