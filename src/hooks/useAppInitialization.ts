@@ -236,7 +236,7 @@ export function useAppInitialization(config: AppInitializationConfig = {}) {
     try {
       // Initialize advanced performance monitor
       const { AdvancedPerformanceMonitor } = await import('../utils/advancedPerformanceMonitor');
-      const advancedPerformanceMonitor = (AdvancedPerformanceMonitor as any).getInstance();
+      const advancedPerformanceMonitor = new AdvancedPerformanceMonitor();
       advancedPerformanceMonitor.updateConfig({
         enableWebVitals: true,
         enableMemoryMonitoring: true,

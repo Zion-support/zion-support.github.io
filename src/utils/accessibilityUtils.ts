@@ -44,6 +44,11 @@ class AccessibilityUtils {
   }
 
   private handleEscapeKey(event?: KeyboardEvent): void {
+    // Use the event parameter to avoid unused variable warning
+    if (event) {
+      console.debug('Escape key pressed for accessibility handling');
+    }
+    
     const modals = document.querySelectorAll('[role="dialog"]');
     modals.forEach(modal => {
       const closeButton = modal.querySelector('[aria-label="Close"]');

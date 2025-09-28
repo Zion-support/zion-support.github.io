@@ -348,13 +348,14 @@ ${pages.map(page => `  <url>
 
     return `
 SEO Report:
-- Title: ${data.title}
-- Description: ${data.description}
-- Keywords: ${data.keywords.join(', ')}
-- Issues: ${issues.length > 0 ? issues.join(', ') : 'None'}
+- Issues Found: ${issues.length}
+- Recommendations: ${recommendations.length}
+- Score: ${score}/100
 `;
   }
 }
 
-// Export the class as seoEnhancer
+// Export singleton instance
 export const seoEnhancer = new AdvancedSEOEnhancer();
+export { AdvancedSEOEnhancer };
+export type { SEOConfig, PageSEOData };
