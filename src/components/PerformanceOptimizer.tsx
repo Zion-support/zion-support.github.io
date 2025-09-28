@@ -60,17 +60,14 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     addLogEntry('Starting performance optimizations...');
 
     try {
-      // Optimize bundle
-      addLogEntry('Optimizing bundle...');
-      if ('optimizeBundleSize' in performanceEnhancer) {
-        (performanceEnhancer as any).optimizeBundleSize();
-      }
+      // Initialize performance enhancer
+      addLogEntry('Initializing performance enhancer...');
+      performanceEnhancer.initialize();
       
-      // Preload critical resources
-      addLogEntry('Preloading critical resources...');
-      if ('preloadCriticalResources' in performanceEnhancer) {
-        (performanceEnhancer as any).preloadCriticalResources();
-      }
+      // Generate performance report
+      addLogEntry('Generating performance report...');
+      const report = performanceEnhancer.generateReport();
+      addLogEntry(`Report generated: ${report.length} characters`);
       
       // Update metrics
       addLogEntry('Updating performance metrics...');
