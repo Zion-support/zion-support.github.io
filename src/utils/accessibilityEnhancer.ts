@@ -70,7 +70,7 @@ export class AccessibilityEnhancer {
     }
   }
 
-  private handleEscapeKey(event: KeyboardEvent): void {
+  private handleEscapeKey(_event: KeyboardEvent): void {
     const modals = document.querySelectorAll('[role="dialog"]');
     modals.forEach(modal => {
       if (modal.getAttribute('aria-hidden') !== 'true') {

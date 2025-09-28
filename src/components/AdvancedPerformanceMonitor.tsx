@@ -67,10 +67,13 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
 
       // Get layout shift
       const clsEntries = performance.getEntriesByType('layout-shift') as PerformanceEntry[];
-      const cls = clsEntries.reduce((sum, entry) => sum + (entry as any).value, 0);
+      const cls = clsEntries.reduce((sum, entry) => {
+        const layoutShiftEntry = entry as PerformanceEntry & { value?: number };
+        return sum + (layoutShiftEntry.value || 0);
+      }, 0);
 
       // Get memory usage (if available)
-      const memory = (performance as any).memory;
+      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory;
       const memoryUsage = memory ? memory.usedJSHeapSize : 0;
 
       // Get resource timing
@@ -103,7 +106,7 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
     } catch (error) {
       console.error('Error measuring performance:', error);
     }
-  }, []);
+  }, [checkPerformanceAlerts]);
 
   // Check performance against thresholds and generate alerts
   const checkPerformanceAlerts = useCallback((currentMetrics: PerformanceMetrics) => {
@@ -179,10 +182,10 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
     return () => clearInterval(interval);
   }, [measurePerformance]);
 
-  // Stop monitoring
-  const stopMonitoring = useCallback(() => {
-    setIsMonitoring(false);
-  }, []);
+  // Stop monitoring (available for future use)
+  // const stopMonitoring = useCallback(() => {
+  //   setIsMonitoring(false);
+  // }, []);
 
   // Clear alerts
   const clearAlerts = useCallback(() => {

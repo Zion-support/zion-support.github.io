@@ -30,7 +30,7 @@ interface PageSEOData {
   canonical: string;
   noindex: boolean;
   nofollow: boolean;
-  structuredData: Record<string, any>;
+  structuredData: Record<string, unknown>;
   openGraph: {
     title: string;
     description: string;
@@ -190,7 +190,7 @@ export class AdvancedSEOOptimizer {
   /**
    * Generate structured data for the page
    */
-  private generateStructuredData(pageData: Partial<PageSEOData>): Record<string, any> {
+  private generateStructuredData(pageData: Partial<PageSEOData>): Record<string, unknown> {
     if (!this.config.enableStructuredData) return {};
 
     const baseStructuredData = {
@@ -225,7 +225,7 @@ export class AdvancedSEOOptimizer {
    * Generate Open Graph data
    */
   private generateOpenGraphData(title: string, description: string, image: string, url: string) {
-    if (!this.config.enableOpenGraph) return {} as any;
+    if (!this.config.enableOpenGraph) return {} as Record<string, unknown>;
 
     return {
       title: this.optimizeTitle(title),
@@ -240,8 +240,8 @@ export class AdvancedSEOOptimizer {
   /**
    * Generate Twitter Card data
    */
-  private generateTwitterCardData(title: string, description: string, image: string, url: string) {
-    if (!this.config.enableTwitterCards) return {} as any;
+  private generateTwitterCardData(title: string, description: string, image: string, _url: string) {
+    if (!this.config.enableTwitterCards) return {} as Record<string, unknown>;
 
     return {
       card: 'summary_large_image',

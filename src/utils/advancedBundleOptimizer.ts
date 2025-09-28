@@ -127,7 +127,7 @@ export class AdvancedBundleOptimizer {
   /**
    * Generate code splitting configuration
    */
-  generateCodeSplittingConfig(): Record<string, any> {
+  generateCodeSplittingConfig(): Record<string, unknown> {
     if (!this.config.enableCodeSplitting) return {};
 
     return {
@@ -167,7 +167,7 @@ export class AdvancedBundleOptimizer {
   /**
    * Generate lazy loading configuration
    */
-  generateLazyLoadingConfig(): Record<string, any> {
+  generateLazyLoadingConfig(): Record<string, unknown> {
     if (!this.config.enableLazyLoading) return {};
 
     return {
@@ -194,7 +194,7 @@ export class AdvancedBundleOptimizer {
   /**
    * Generate compression configuration
    */
-  generateCompressionConfig(): Record<string, any> {
+  generateCompressionConfig(): Record<string, unknown> {
     if (!this.config.enableCompression) return {};
 
     return {
@@ -210,7 +210,7 @@ export class AdvancedBundleOptimizer {
   /**
    * Generate minification configuration
    */
-  generateMinificationConfig(): Record<string, any> {
+  generateMinificationConfig(): Record<string, unknown> {
     if (!this.config.enableMinification) return {};
 
     return {
@@ -231,7 +231,7 @@ export class AdvancedBundleOptimizer {
   /**
    * Generate complete optimization configuration
    */
-  generateOptimizationConfig(): Record<string, any> {
+  generateOptimizationConfig(): Record<string, unknown> {
     return {
       ...this.generateCodeSplittingConfig(),
       ...this.generateLazyLoadingConfig(),
