@@ -88,7 +88,7 @@ const LazyImage: React.FC<LazyImageProps> = ({
         onError={handleError}
         className={`transition-opacity duration-300 ${
           isLoaded ? 'opacity-100' : 'opacity-0'
-        } ${props.className || ''}`}
+        } ${className || ''}`}
         style={{
           ...props.style,
           width: '100%',

@@ -253,7 +253,7 @@ export class AdvancedErrorRecovery {
       circuitBreakerOpen: false,
       totalErrors: 0,
       recoveredErrors: 0,
-      strategies: this.strategies.length
+      strategies: this.strategies.size
     };
   }
 
