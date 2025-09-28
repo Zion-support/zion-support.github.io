@@ -71,7 +71,7 @@
     Service-Worker-Allowed = "/"
  
 [build]
-  command = "pnpm install && pnpm build"
+  command = "pnpm install && pnpm run build:prod"
   publish = "dist"
   command_timeout = "30m"
   functions = "netlify/functions"
@@ -118,11 +118,11 @@
   NPM_CONFIG_PRODUCTION = "false"
 
 [context.deploy-preview]
-  command = "pnpm build"
+  command = "pnpm run build:prod"
   [context.deploy-preview.environment]
     NODE_ENV = "production"
 
 [context.branch-deploy]
-  command = "pnpm build"
+  command = "pnpm run build:prod"
   [context.branch-deploy.environment]
     NODE_ENV = "production"

@@ -322,3 +322,8 @@ export const markErrorAsResolved = (errorId: string) => {
 export const clearErrors = () => errorReportingSystem.clearErrors();
 
 export const exportErrorReport = () => errorReportingSystem.exportErrorReport();
+
+export const initializeErrorReporting = () => {
+  // Initialize error reporting system
+  errorReportingSystem.initialize();
+};
