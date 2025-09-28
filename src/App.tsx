@@ -151,7 +151,9 @@ export default function App(): React.JSX.Element {
     enhancements.initialize();
     
     // Initialize individual enhancement systems
-    enhancedPerformanceMonitor.initialize();
+    if ('initialize' in enhancedPerformanceMonitor && typeof enhancedPerformanceMonitor.initialize === 'function') {
+      (enhancedPerformanceMonitor as any).initialize();
+    }
     enhancedAnalytics.initialize();
     advancedCacheSystem.initialize();
     new AdvancedAutomationSystem().initialize();
@@ -160,9 +162,15 @@ export default function App(): React.JSX.Element {
     
     // Initialize analytics
     analytics.initialize();
-    seoAnalytics.initialize();
-    performanceSEO.initialize();
-    seoManager.initialize();
+    if ('initialize' in seoAnalytics && typeof seoAnalytics.initialize === 'function') {
+      (seoAnalytics as any).initialize();
+    }
+    if ('initialize' in performanceSEO && typeof performanceSEO.initialize === 'function') {
+      (performanceSEO as any).initialize();
+    }
+    if ('initialize' in seoManager && typeof seoManager.initialize === 'function') {
+      (seoManager as any).initialize();
+    }
   }, [seoManager]);
 
   useEffect(() => {
@@ -194,8 +202,16 @@ export default function App(): React.JSX.Element {
     // Set default SEO data using the correct method
     seoManager.updateMetaTags(seoData);
 
-    // Update meta tags
-    updateMetaTags(seoData);
+    // Update meta tags with proper type casting
+    updateMetaTags({
+      title: seoData.title,
+      description: seoData.description,
+      keywords: seoData.keywords,
+      ogType: seoData.ogType || 'website',
+      ogUrl: seoData.ogUrl || window.location.href,
+      ogImage: seoData.ogImage || '/og-image.png',
+      twitterCard: seoData.twitterCard || 'summary_large_image'
+    });
     
     // Track engagement on page unload
     window.addEventListener('beforeunload', enhancedTrackEngagement);
