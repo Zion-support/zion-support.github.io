@@ -8,8 +8,8 @@ import { analytics } from './utils/analytics';
 import { performanceOptimizer } from './utils/performanceOptimizations';
 // import { accessibilityEnhancements } from './utils/accessibilityEnhancements';
 // import { seoOptimizer } from './utils/seoOptimizations';
-// import { seoEnhancer } from './utils/advancedSEOEnhancer';
-// import { accessibilityEnhancer } from './utils/advancedAccessibilityEnhancer';
+import { seoEnhancer } from './utils/advancedSEOEnhancer';
+import { accessibilityEnhancer } from './utils/advancedAccessibilityEnhancer';
 // Removed unused imports to reduce warnings
 import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
@@ -24,7 +24,6 @@ import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
 import { performanceAlerts } from './utils/performanceAlerts';
 import { accessibilityUtils } from './utils/accessibilityUtils';
 import { securityUtils } from './utils/securityUtils';
-// import { performanceOptimizer } from './utils/performanceOptimizer';
 import { enhancedSecurityManager } from './utils/enhancedSecurityManager';
 import AdvancedAnalytics from './components/AdvancedAnalytics';
 import NotificationSystem, { Notification } from './components/NotificationSystem';
@@ -246,8 +245,8 @@ export default function App(): React.JSX.Element {
     securityUtils.getSecurityScore();
 
     // Set default SEO data using the correct method
-    // seoManager.updateMetaTags(seoData);
-  }, []);
+    seoManager.updateMetaTags(memoizedSeoData);
+  }, [memoizedSeoData]);
 
   // Update meta tags function
   const updateMetaTags = useCallback((data: typeof memoizedSeoData) => {

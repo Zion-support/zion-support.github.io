@@ -80,9 +80,8 @@ export class AdvancedPerformanceMonitor {
       const fidObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
         entries.forEach((entry) => {
-          if (entry.entryType === 'first-input') {
-            const fidEntry = entry as PerformanceEventTiming;
-            this.metrics.fid = fidEntry.processingStart - fidEntry.startTime;
+          if (entry.entryType === 'first-input' && 'processingStart' in entry && 'startTime' in entry) {
+            this.metrics.fid = (entry as any).processingStart - entry.startTime;
           }
         });
       });
