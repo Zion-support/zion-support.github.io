@@ -308,8 +308,6 @@ export default function App(): React.JSX.Element {
       performance.mark('app-init-start');
     }
     
-<<<<<<< HEAD
-=======
     // Initialize advanced utilities
     const initializeUtilities = async () => {
       try {
@@ -324,8 +322,6 @@ export default function App(): React.JSX.Element {
     };
 
     initializeUtilities();
-    
->>>>>>> 661128003b718a4e60a600d6ec74006e5a68e60f
     // Track engagement on page unload
     window.addEventListener('beforeunload', enhancedTrackEngagement);
 
