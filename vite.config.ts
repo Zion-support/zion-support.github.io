@@ -36,6 +36,11 @@ export default defineConfig(({ mode }) => ({
       input: {
         main: './index.html'
       },
+      treeshake: {
+        moduleSideEffects: false,
+        propertyReadSideEffects: false,
+        tryCatchDeoptimization: false
+      },
       output: {
         // Manual chunk splitting for better caching
         manualChunks: (id) => {
@@ -82,13 +87,25 @@ export default defineConfig(({ mode }) => ({
         pure_funcs: ['console.log', 'console.info', 'console.debug'],
         dead_code: true,
         unused: true,
-        side_effects: false
+        side_effects: false,
+        // Additional compression options
+        passes: 2,
+        unsafe: true,
+        unsafe_comps: true,
+        unsafe_math: true,
+        unsafe_proto: true,
+        unsafe_regexp: true,
+        unsafe_undefined: true
       },
       mangle: {
-        safari10: true
+        safari10: true,
+        properties: {
+          regex: /^_/
+        }
       },
       format: {
-        comments: false
+        comments: false,
+        ascii_only: true
       }
     },
     // Set chunk size warning limit
@@ -96,7 +113,9 @@ export default defineConfig(({ mode }) => ({
     // Enable CSS code splitting
     cssCodeSplit: true,
     // Target modern browsers for better optimization
-    target: ['es2020', 'edge88', 'firefox78', 'chrome87', 'safari14']
+    target: ['es2020', 'edge88', 'firefox78', 'chrome87', 'safari14'],
+    // Additional build optimizations
+    reportCompressedSize: true
   },
   server: {
     port: 3000,

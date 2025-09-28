@@ -41,7 +41,7 @@ describe('PerformanceMonitor', () => {
     expect(screen.getByText(/Performance Monitor/i)).toBeInTheDocument();
   });
 
-  it('does not render dashboard when showDashboard is false', () => {
+  it('does not render when showDashboard is false', () => {
     render(<PerformanceMonitor showDashboard={false} />);
     
     expect(screen.queryByText(/Performance Monitor/i)).not.toBeInTheDocument();
@@ -53,7 +53,7 @@ describe('PerformanceMonitor', () => {
     // Wait for metrics to be calculated
     setTimeout(() => {
       expect(screen.getByText(/Load Time:/i)).toBeInTheDocument();
-      expect(screen.getByText(/DOM Content Loaded:/i)).toBeInTheDocument();
+      expect(screen.getByText(/Render Time:/i)).toBeInTheDocument();
     }, 100);
   });
 
