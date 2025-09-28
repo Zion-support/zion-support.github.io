@@ -24,7 +24,7 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
 
   const renderCountRef = useRef(0);
   const lastRenderTimeRef = useRef(performance.now());
-  const debounceTimeoutRef = useRef<NodeJS.Timeout>();
+  const debounceTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   // Track render performance
   useEffect(() => {
@@ -36,13 +36,14 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
 
   // Memory monitoring
   const memoryUsage = useMemo(() => {
-    if (!enableMemoryMonitoring || !performance.memory) return null;
+    if (!enableMemoryMonitoring || !(performance as any).memory) return null;
     
+    const memory = (performance as any).memory;
     return {
-      used: performance.memory.usedJSHeapSize,
-      total: performance.memory.totalJSHeapSize,
-      limit: performance.memory.jsHeapSizeLimit,
-      percentage: (performance.memory.usedJSHeapSize / performance.memory.jsHeapSizeLimit) * 100
+      used: memory.usedJSHeapSize,
+      total: memory.totalJSHeapSize,
+      limit: memory.jsHeapSizeLimit,
+      percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100
     };
   }, [enableMemoryMonitoring]);
 
