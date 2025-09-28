@@ -1,4 +1,4 @@
-import React, { useEffect, useCallback, useMemo, useState } from 'react';
+import React, { useCallback, useState, useEffect, useMemo } from 'react';
 import { AppRouter } from './router';
 import { useAppInitialization } from './hooks/useAppInitialization';
 import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
@@ -6,31 +6,19 @@ import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
 import { seoAnalytics, performanceSEO, seoManager } from './utils/seoEnhanced';
 import { analytics } from './utils/analytics';
-import PerformanceDashboard from './components/PerformanceDashboard';
-import RealTimeMonitor from './components/RealTimeMonitor';
-import SystemMetricsDashboard from './components/SystemMetricsDashboard';
-import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
-import EnhancedNotificationSystem from './components/EnhancedNotificationSystem';
-import PerformanceOptimizer from './components/PerformanceOptimizer';
-import PerformanceMonitor from './components/PerformanceMonitor';
-import AIPerformanceDashboard from './components/AIPerformanceDashboard';
-import AdvancedPerformanceDashboard from './components/AdvancedPerformanceDashboard';
-import { SEOOptimizer } from './components/SEOOptimizer';
-import EnhancedAnalytics from './components/EnhancedAnalytics';
-import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
-import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
-import { enhancedAnalytics } from './utils/enhancedAnalytics';
-import { advancedCacheSystem } from './utils/advancedCacheSystem';
+import { performanceOptimizer } from './utils/performanceOptimizations';
+import { accessibilityEnhancer } from './utils/accessibilityEnhancements';
+import { seoOptimizer } from './utils/seoOptimizations';
+import { initializePerformanceEnhancements } from './utils/performanceEnhancements';
 import { AdvancedAutomationSystem } from './utils/advancedAutomationSystem';
 import { AccessibilityEnhancer } from './utils/accessibilityEnhancer';
 import { SecurityEnhancer } from './utils/securityEnhancer';
-import { getNotificationManager, notify } from './utils/advancedNotifications';
-import { getThemeManager } from './utils/themeManager';
+import RealTimeMonitor from './components/RealTimeMonitor';
+import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
+import PerformanceOptimizer from './components/PerformanceOptimizer';
+import PerformanceMonitor from './components/PerformanceMonitor';
+import AIPerformanceDashboard from './components/AIPerformanceDashboard';
 import './index.css';
-import './styles/notifications.css';
-import './styles/system-metrics.css';
-import './styles/modern-utilities.css';
-import './styles/accessibility.css';
 
 export default function App(): React.JSX.Element {
   // State for system dashboard and performance optimizer
@@ -40,25 +28,21 @@ export default function App(): React.JSX.Element {
   const [showAIDashboard, setShowAIDashboard] = useState(false);
   const [showAdvancedDashboard, setShowAdvancedDashboard] = useState(false);
   const [showRealTimeMetrics, setShowRealTimeMetrics] = useState(false);
-  const [showSEOOptimizer, setShowSEOOptimizer] = useState(false);
+  const [showAccessibilityPanel, setShowAccessibilityPanel] = useState(false);
+  
+  // Performance metrics state
+  const [performanceMetrics, setPerformanceMetrics] = useState({
+    memoryUsage: 0,
+    renderTime: 0,
+    networkLatency: 0,
+    errorCount: 0
+  });
 
   // Engagement tracking data
   const engagementData = useMemo(() => ({
     startTime: Date.now(),
     scrollDepth: 0,
     clicks: 0
-  }), []);
-
-  // Memoize SEO data to prevent unnecessary re-renders
-  const seoData = useMemo(() => ({
-    title: 'Zion Tech Group - Advanced AI and IT Solutions',
-    description: 'Leading provider of AI-powered IT solutions, cloud services, and digital transformation consulting.',
-    keywords: ['AI', 'IT solutions', 'cloud services', 'digital transformation', 'technology consulting'],
-    ogImage: '/og-image.jpg',
-    ogUrl: window.location.href,
-    ogType: 'website' as const,
-    twitterCard: 'summary_large_image' as const,
-    canonicalUrl: window.location.href
   }), []);
 
   // Initialize app with custom configuration
@@ -72,14 +56,14 @@ export default function App(): React.JSX.Element {
   });
 
   // Performance optimization hook
-  const { preloadResource } = usePerformanceOptimization({
+  const { preloadResource, optimizePerformance } = usePerformanceOptimization({
     enablePreloading: true,
     enableResourceHints: true,
     enableCriticalCSS: true,
     enableImageOptimization: true,
   });
 
-  // Optimized keyboard handler for system dashboard toggle
+  // Enhanced keyboard handler for all dashboard toggles
   const handleKeyDown = useCallback((event: KeyboardEvent) => {
     if ((event.ctrlKey || event.metaKey) && event.shiftKey) {
       event.preventDefault();
@@ -102,11 +86,8 @@ export default function App(): React.JSX.Element {
         case 'R':
           setShowRealTimeMetrics(prev => !prev);
           break;
-        case 'S':
-          setShowSEOOptimizer(prev => !prev);
-          break;
-        case 'T':
-          // Theme toggle functionality can be added here
+        case 'X':
+          setShowAccessibilityPanel(prev => !prev);
           break;
         case 'Escape':
           // Close all dashboards
@@ -116,7 +97,7 @@ export default function App(): React.JSX.Element {
           setShowAIDashboard(false);
           setShowAdvancedDashboard(false);
           setShowRealTimeMetrics(false);
-          setShowSEOOptimizer(false);
+          setShowAccessibilityPanel(false);
           break;
       }
     }
@@ -133,58 +114,24 @@ export default function App(): React.JSX.Element {
     trackEngagement();
   }, [engagementData.clicks, engagementData.scrollDepth, engagementData.startTime, trackEngagement]);
 
-  // Update meta tags function
-  const updateMetaTags = useCallback((data: {
-    title: string;
-    description: string;
-    keywords: string[];
-    ogType: string;
-    ogUrl: string;
-    ogImage: string;
-    twitterCard: string;
-  }) => {
-    if (typeof window !== 'undefined') {
-      // Update title
-      document.title = data.title;
-      
-      // Update meta description
-      let metaDescription = document.querySelector('meta[name="description"]');
-      if (!metaDescription) {
-        metaDescription = document.createElement('meta');
-        metaDescription.setAttribute('name', 'description');
-        document.head.appendChild(metaDescription);
-      }
-      if (metaDescription) {
-        metaDescription.setAttribute('content', data.description);
-      }
-    }
-  }, []);
+  // Memoize the SEO data to prevent unnecessary re-renders
+  const seoData = useMemo(() => ({
+    title: 'Zion Tech Group - Leading AI & Technology Solutions',
+    description: 'Cutting-edge AI, quantum computing, and digital transformation solutions for modern enterprises. Expert consulting, cloud services, and innovative technology implementations.',
+    keywords: ['AI solutions', 'quantum computing', 'digital transformation', 'cloud services', 'enterprise technology', 'machine learning', 'automation', 'blockchain'],
+    canonicalUrl: typeof window !== 'undefined' ? window.location.href : '',
+    ogType: 'website' as const,
+    ogUrl: typeof window !== 'undefined' ? window.location.href : '',
+    ogImage: '/og-image.png',
+    twitterCard: 'summary_large_image' as const
+  }), []);
 
+  // Initialize comprehensive enhancements
   useEffect(() => {
-    // Initialize comprehensive enhancements
-    const enhancements = getComprehensiveEnhancements();
-    enhancements.initialize();
-    
     // Initialize individual enhancement systems
-    enhancedPerformanceMonitor.startMonitoring();
-    enhancedAnalytics.initialize();
-    advancedCacheSystem.initialize();
-    new AdvancedAutomationSystem().initialize();
     new AccessibilityEnhancer();
+    new AdvancedAutomationSystem();
     new SecurityEnhancer();
-    
-    // Initialize analytics
-    analytics.initialize();
-
-    // Initialize new utility systems
-    getNotificationManager();
-    getThemeManager();
-
-    // Show welcome notification
-    notify.success('App Initialized', 'Zion Tech Group application is ready!', {
-      duration: 3000,
-      priority: 'medium'
-    });
     
     // Initialize SEO analytics
     seoAnalytics.trackPageView(window.location.pathname);
@@ -193,33 +140,39 @@ export default function App(): React.JSX.Element {
     performanceSEO.optimizeImages();
     performanceSEO.optimizeFonts();
     performanceSEO.optimizeCSS();
+    
+    // Initialize advanced optimization systems
+    // These are initialized automatically when imported
+    void performanceOptimizer;
+    void accessibilityEnhancer;
+    void seoOptimizer;
 
     // Set default SEO data using the correct method
     seoManager.updateMetaTags(seoData);
-
-    // Update meta tags
-    updateMetaTags(seoData);
     
+    // Initialize advanced optimization systems
+    performanceOptimizer.optimizeBundleSize();
+    // accessibilityEnhancer.initialize(); // Method doesn't exist
+    seoOptimizer.optimizePage(seoData);
+
     // Add performance marks for better monitoring
     if (typeof window !== 'undefined' && window.performance && typeof performance.mark === 'function') {
       performance.mark('app-init-start');
     }
-    
+
     // Preload critical resources
     preloadResource('/og-image.png', 'image');
     preloadResource('/favicon.ico', 'image');
 
-    // Use passive listeners for better performance
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    document.addEventListener('click', handleClick, { passive: true });
-    document.addEventListener('keydown', handleKeyDown);
+    // Initialize basic systems
+    analytics.initialize();
 
-    // Track engagement on page unload
-    window.addEventListener('beforeunload', enhancedTrackEngagement);
+    // Initialize performance enhancements
+    initializePerformanceEnhancements();
 
     // Basic performance monitoring
     if (typeof window !== 'undefined') {
-      console.log('🚀 Zion Tech Group App initialized with comprehensive optimizations');
+      console.log('🚀 Zion Tech Group App initialized');
       
       // Add performance observer for better monitoring
       if ('PerformanceObserver' in window) {
@@ -238,6 +191,9 @@ export default function App(): React.JSX.Element {
       }
     }
 
+    // Use passive listeners for better performance
+    document.addEventListener('keydown', handleKeyDown);
+
     // Mark app as fully initialized
     if (typeof window !== 'undefined' && window.performance && 
         typeof performance.mark === 'function' && 
@@ -249,29 +205,24 @@ export default function App(): React.JSX.Element {
     // Cleanup function
     return () => {
       document.removeEventListener('keydown', handleKeyDown);
-      window.removeEventListener('beforeunload', enhancedTrackEngagement);
-      window.removeEventListener('scroll', handleScroll);
-      document.removeEventListener('click', handleClick);
-      trackEngagement();
     };
-  }, [handleScroll, handleClick, handleKeyDown, seoData, preloadResource, updateMetaTags, enhancedTrackEngagement, trackEngagement]);
+  }, [handleKeyDown, seoData, preloadResource]);
 
   // Optimize performance on mount
   useEffect(() => {
-    // Performance optimization is handled by the usePerformanceOptimization hook
-    preloadResource('/api/health');
-  }, [preloadResource]);
+    optimizePerformance();
+  }, [optimizePerformance]);
 
   // Track engagement on scroll and click
   useEffect(() => {
     const handleScrollWithEngagement = () => {
       handleScroll();
-      enhancedTrackEngagement();
+      trackEngagement();
     };
 
     const handleClickWithEngagement = (event: Event) => {
       handleClick(event);
-      enhancedTrackEngagement();
+      trackEngagement();
     };
 
     window.addEventListener('scroll', handleScrollWithEngagement, { passive: true });
@@ -281,34 +232,31 @@ export default function App(): React.JSX.Element {
       window.removeEventListener('scroll', handleScrollWithEngagement);
       document.removeEventListener('click', handleClickWithEngagement);
     };
-  }, [handleScroll, handleClick, enhancedTrackEngagement]);
+  }, [handleScroll, handleClick, trackEngagement]);
 
-  // Loading state
+  // Show loading spinner while initializing
   if (isLoading) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-        <div className="text-center">
-          <ModernLoadingSpinner />
-          <div className="mt-4 text-white">
-            <div className="text-lg font-semibold">Zion Tech Group</div>
-            <div className="text-sm opacity-75">Loading advanced systems...</div>
-            <div className="mt-2 w-64 bg-gray-700 rounded-full h-2 mx-auto">
-              <div 
-                className="bg-gradient-to-r from-blue-500 to-purple-600 h-2 rounded-full transition-all duration-300"
-                style={{ width: `${loadingProgress}%` }}
-              />
-            </div>
-          </div>
-        </div>
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100">
+        <ModernLoadingSpinner
+          size="xl"
+          variant="primary"
+          text="Initializing Zion Tech Group..."
+          showProgress
+          progress={loadingProgress}
+          className="animate-fade-in-scale"
+        />
       </div>
     );
   }
 
   return (
     <EnhancedErrorBoundary>
-      <SEOOptimizer seoData={seoData} />
-      <EnhancedAnalytics />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div 
+        className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"
+        role="main"
+        aria-label="Zion Tech Group Application"
+      >
         <AppRouter />
         
         {/* System Dashboard */}
@@ -318,7 +266,6 @@ export default function App(): React.JSX.Element {
             role="dialog"
             aria-modal="true"
             aria-labelledby="system-dashboard-title"
-            onClick={(e) => e.target === e.currentTarget && setShowSystemDashboard(false)}
           >
             <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
               <div className="flex justify-between items-center mb-4">
@@ -343,7 +290,6 @@ export default function App(): React.JSX.Element {
             role="dialog"
             aria-modal="true"
             aria-labelledby="performance-optimizer-title"
-            onClick={(e) => e.target === e.currentTarget && setShowPerformanceOptimizer(false)}
           >
             <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
               <div className="flex justify-between items-center mb-4">
@@ -399,20 +345,13 @@ export default function App(): React.JSX.Element {
 
         {/* Real-time Metrics */}
         {showRealTimeMetrics && (
-          <div 
-            className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center"
-            role="dialog"
-            aria-modal="true"
-            aria-labelledby="real-time-metrics-title"
-            onClick={(e) => e.target === e.currentTarget && setShowRealTimeMetrics(false)}
-          >
+          <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
             <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
               <div className="flex justify-between items-center mb-4">
-                <h2 id="real-time-metrics-title" className="text-2xl font-bold text-gray-900">Real-time Metrics</h2>
+                <h2 className="text-2xl font-bold text-gray-900">Real-time Metrics</h2>
                 <button
                   onClick={() => setShowRealTimeMetrics(false)}
-                  className="text-gray-500 hover:text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded"
-                  aria-label="Close real-time metrics"
+                  className="text-gray-500 hover:text-gray-700"
                 >
                   ✕
                 </button>
@@ -422,33 +361,28 @@ export default function App(): React.JSX.Element {
           </div>
         )}
 
-        {/* SEO Optimizer */}
-        {showSEOOptimizer && (
-          <div 
-            className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center"
-            role="dialog"
-            aria-modal="true"
-            aria-labelledby="seo-optimizer-title"
-            onClick={(e) => e.target === e.currentTarget && setShowSEOOptimizer(false)}
-          >
-            <div className="bg-white rounded-lg p-6 max-w-6xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+        {/* Accessibility Panel */}
+        {showAccessibilityPanel && (
+          <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
+            <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
               <div className="flex justify-between items-center mb-4">
-                <h2 id="seo-optimizer-title" className="text-2xl font-bold text-gray-900">SEO Optimizer</h2>
+                <h2 className="text-2xl font-bold text-gray-900">Accessibility Panel</h2>
                 <button
-                  onClick={() => setShowSEOOptimizer(false)}
-                  className="text-gray-500 hover:text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded"
-                  aria-label="Close SEO optimizer"
+                  onClick={() => setShowAccessibilityPanel(false)}
+                  className="text-gray-500 hover:text-gray-700"
                 >
                   ✕
                 </button>
               </div>
-              <SEOOptimizer seoData={seoData} />
+              <div className="text-gray-600">
+                <p>Accessibility features and controls will be available here.</p>
+              </div>
             </div>
           </div>
         )}
-        
-        {/* Keyboard shortcuts help */}
-        <div className="fixed bottom-4 right-4 bg-black/80 text-white text-xs p-3 rounded-lg opacity-50 hover:opacity-100 transition-opacity">
+
+        {/* Keyboard Shortcuts Help */}
+        <div className="fixed bottom-4 left-4 z-40 bg-gray-800 text-white p-3 rounded-lg shadow-lg text-sm opacity-75 hover:opacity-100 transition-opacity duration-200">
           <div className="font-semibold mb-1">Keyboard Shortcuts:</div>
           <div>Ctrl+Shift+D: System Dashboard</div>
           <div>Ctrl+Shift+P: Performance Optimizer</div>
@@ -456,27 +390,10 @@ export default function App(): React.JSX.Element {
           <div>Ctrl+Shift+A: AI Dashboard</div>
           <div>Ctrl+Shift+V: Advanced Dashboard</div>
           <div>Ctrl+Shift+R: Real-time Metrics</div>
-          <div>Ctrl+Shift+S: SEO Optimizer</div>
-          <div>Ctrl+Shift+T: Toggle Theme</div>
+          <div>Ctrl+Shift+X: Accessibility Panel</div>
           <div>Escape: Close All</div>
         </div>
       </div>
-      
-      {/* Additional components */}
-      <PerformanceDashboard 
-        isVisible={false}
-        onClose={() => {}}
-      />
-      <SystemMetricsDashboard 
-        isVisible={showSystemDashboard}
-        onClose={() => setShowSystemDashboard(false)}
-      />
-      <EnhancedNotificationSystem 
-        position="top-right"
-        enableAnimations
-        enableAccessibility
-        maxNotifications={5}
-      />
     </EnhancedErrorBoundary>
   );
 }
