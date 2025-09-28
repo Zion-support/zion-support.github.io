@@ -9,6 +9,7 @@ import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import { seoAnalytics, performanceSEO } from './utils/seoEnhanced';
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
 import { useAppInitialization } from './hooks/useAppInitialization';
+import { useSEOData } from './hooks/useSEOData';
 import AIPerformanceDashboard from './components/AIPerformanceDashboard';
 import WebsiteEnhancements from './components/WebsiteEnhancements';
 import SEOOptimizer from './components/SEOOptimizer';
@@ -32,6 +33,11 @@ import { accessibilityEnhancer } from './utils/accessibilityEnhancements';
 // import { securityEnhancer } from './utils/securityEnhancements';
 // import ComprehensiveMonitoringDashboard from './components/ComprehensiveMonitoringDashboard';
 import { seoManager } from './utils/advancedSEOManager';
+// import { enhancedPerfMonitor } from './utils/enhancedPerformanceMonitor';
+// import { analytics } from './utils/analytics';
+// import { advancedAccessibilityEnhancer } from './utils/advancedAccessibilityEnhancer';
+// import { seoOptimizer } from './utils/seoOptimizer';
+// import { initializePerformanceEnhancements, initializeAccessibilityEnhancements } from './utils/performanceEnhancements';
 
 // Import enhanced utilities
 import { enhancedAccessibilityManager } from './utils/enhancedAccessibility';
@@ -39,12 +45,17 @@ import { enhancedSEOOptimizer } from './utils/enhancedSEOOptimizer';
 import { enhancedSecuritySystem } from './utils/enhancedSecuritySystem';
 import { enhancedAccessibilitySystem } from './utils/enhancedAccessibilitySystem';
 import { apiCache as apiCacheSystem, imageCache as imageCacheSystem, dataCache as dataCacheSystem } from './utils/enhancedCachingSystem';
-import { enhancedAnalyticsSystem } from './utils/enhancedAnalyticsSystem';
+import { analyticsSystem as enhancedAnalyticsSystem } from './utils/enhancedAnalyticsSystem';
 import { advancedAppEnhancements } from './utils/advancedAppEnhancements';
 import { errorHandler, ErrorBoundary } from './utils/errorHandler';
 import { performanceMonitor } from './utils/performanceMonitoring';
 import { advancedErrorHandler } from './utils/advancedErrorHandling';
 import SystemMonitoringDashboard from './components/SystemMonitoringDashboard';
+// import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
+// import { advancedCacheSystem } from './utils/advancedCacheSystem';
+// import { enhancedAnalytics } from './utils/enhancedAnalytics';
+// import { advancedErrorRecovery } from './utils/advancedErrorRecovery';
+// import { AccessibilityEnhancer, SecurityEnhancer } from './utils/enhancementClasses';
 
 // Lazy load heavy components for better performance
 const EnhancedSystemDashboard = lazy(() => import('./components/EnhancedSystemDashboard'));
@@ -214,23 +225,6 @@ export default function App(): React.JSX.Element {
     clicks: 0
   }), []);
 
-  // Initialize app with custom configuration
-  const { isLoading, loadingProgress, handleScroll, handleClick, trackEngagement } = useAppInitialization({
-    enablePerformanceMonitoring: true,
-    enableAccessibility: true,
-    enableSecurity: true,
-    enableAnalytics: true,
-    enableNotifications: true,
-    enableCaching: true,
-  });
-
-  // Performance optimization hook
-  const { preloadResource } = usePerformanceOptimization({
-    enablePreloading: true,
-    enableResourceHints: true,
-    enableCriticalCSS: true,
-    enableImageOptimization: true,
-  });
 
   // Enhanced keyboard handler for all dashboard toggles
   const handleKeyDown = useCallback((event: KeyboardEvent) => {
@@ -268,7 +262,7 @@ export default function App(): React.JSX.Element {
           break;
       }
     }
-  }), []);
+  }, [setShowSystemDashboard, setShowPerformanceOptimizer, setShowPerformanceMonitor, setShowAIDashboard, setShowSEOOptimizer, setShowRealTimeMetrics, setShowAccessibilityPanel, setShowKeyboardShortcutsManager, setShowComprehensiveImprovements]);
 
   // Main initialization effect
   useEffect(() => {
