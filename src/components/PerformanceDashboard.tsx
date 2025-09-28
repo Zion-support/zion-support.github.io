@@ -198,7 +198,7 @@ const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({
           <div className="metrics-section">
             <h3>Recent History ({metrics.length} entries)</h3>
             <div className="history-chart">
-              {metrics.slice(-10).map((metric, index) => (
+              {metrics.slice(-10).map((metric) => (
                 <div key={metric.timestamp} className="history-item">
                   <div className="history-time">
                     {new Date(metric.timestamp).toLocaleTimeString()}
@@ -228,7 +228,7 @@ const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({
         )}
       </div>
 
-      <style jsx>{`
+      <style>{`
         .performance-dashboard {
           position: fixed;
           top: 20px;

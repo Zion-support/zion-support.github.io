@@ -12,7 +12,6 @@ import { cacheManager } from './utils/cacheManager';
 import { apiClient } from './utils/apiClient';
 import { notificationManager } from './utils/notificationManager';
 import { userFeedback } from './utils/userFeedbackManager';
-import { PerformanceDashboard } from './components/PerformanceDashboard';
 import RealTimeMonitor from './components/RealTimeMonitor';
 import { advancedPerformanceOptimizer } from './utils/performanceOptimizer';
 import { enhancedPerformanceOptimizer } from './utils/enhancedPerformance';

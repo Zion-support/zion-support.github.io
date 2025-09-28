@@ -122,8 +122,6 @@ export const usePerformanceOptimization = (
     if (!configRef.current.enableImageOptimization) return src;
 
     const {
-      width,
-      height,
       quality = 80,
       format = 'webp'
     } = options;
