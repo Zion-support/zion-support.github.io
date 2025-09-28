@@ -1,5 +1,10 @@
 import React, { useEffect, useRef, useState, useCallback } from 'react';
 
+interface LayoutShift extends PerformanceEntry {
+  hadRecentInput: boolean;
+  value: number;
+}
+
 interface PerformanceMetrics {
   loadTime: number;
   renderTime: number;
@@ -64,10 +69,8 @@ export const PerformanceTracker: React.FC<PerformanceTrackerProps> = ({
         const fidObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           entries.forEach((entry) => {
-            if (entry.entryType === 'first-input') {
-              const fidEntry = entry as PerformanceEventTiming;
-              metricsRef.current.fid = fidEntry.processingStart - fidEntry.startTime;
-            }
+            const eventEntry = entry as PerformanceEventTiming;
+            metricsRef.current.fid = eventEntry.processingStart - eventEntry.startTime;
           });
         });
         fidObserver.observe({ entryTypes: ['first-input'] });
@@ -77,12 +80,10 @@ export const PerformanceTracker: React.FC<PerformanceTrackerProps> = ({
         const clsObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           entries.forEach((entry) => {
-            if (entry.entryType === 'layout-shift') {
-              const layoutShiftEntry = entry as any; // LayoutShift type not available
-              if (!layoutShiftEntry.hadRecentInput) {
-                clsValue += layoutShiftEntry.value;
-                metricsRef.current.cls = clsValue;
-              }
+            const layoutEntry = entry as LayoutShift;
+            if (!layoutEntry.hadRecentInput) {
+              clsValue += layoutEntry.value;
+              metricsRef.current.cls = clsValue;
             }
           });
         });
@@ -92,10 +93,8 @@ export const PerformanceTracker: React.FC<PerformanceTrackerProps> = ({
         const navigationObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           entries.forEach((entry) => {
-            if (entry.entryType === 'navigation') {
-              const navEntry = entry as PerformanceNavigationTiming;
-              metricsRef.current.ttfb = navEntry.responseStart - navEntry.requestStart;
-            }
+            const navEntry = entry as PerformanceNavigationTiming;
+            metricsRef.current.ttfb = navEntry.responseStart - navEntry.requestStart;
           });
         });
         navigationObserver.observe({ entryTypes: ['navigation'] });
