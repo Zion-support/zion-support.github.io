@@ -27,7 +27,7 @@ import CommandPalette from './components/CommandPalette';
 import RealTimePerformanceMonitor from './components/RealTimePerformanceMonitor';
 import SystemHealthDashboard from './components/SystemHealthDashboard';
 import { performanceAlerts } from './utils/performanceAlerts';
-import { errorRecoverySystem } from './utils/errorRecovery';
+import { errorRecovery } from './utils/errorRecovery';
 import { accessibilityUtils } from './utils/accessibilityUtils';
 import { securityUtils } from './utils/securityUtils';
 import './index.css';
@@ -110,7 +110,73 @@ export default function App(): React.JSX.Element {
 
   const enhancedTrackEngagement = useCallback(() => {
     trackEngagement();
-  }, [trackEngagement]);
+  }, [engagementData.clicks, engagementData.scrollDepth, engagementData.startTime, trackEngagement]);
+
+  // Memoize the SEO data to prevent unnecessary re-renders
+  const memoizedSeoData = useMemo(() => ({
+    title: 'Zion Tech Group - Leading AI & Technology Solutions',
+    description: 'Cutting-edge AI, quantum computing, and digital transformation solutions for modern enterprises. Expert consulting, cloud services, and innovative technology implementations.',
+    keywords: ['AI solutions', 'quantum computing', 'digital transformation', 'cloud services', 'enterprise technology', 'machine learning', 'automation', 'blockchain'],
+    canonical: `https://zion.app${currentPathname}`,
+    ogTitle: 'Zion Tech Group - AI & Technology Solutions',
+    ogDescription: 'Transform your business with cutting-edge AI and technology solutions.',
+    ogImage: 'https://zion.app/og-image.jpg',
+    twitterCard: 'summary_large_image',
+    twitterTitle: 'Zion Tech Group - AI & Technology Solutions',
+    twitterDescription: 'Transform your business with cutting-edge AI and technology solutions.',
+    twitterImage: 'https://zion.app/twitter-image.jpg'
+  }), [currentPathname]);
+
+  // Performance optimization hook
+  // const { getPerformanceMetrics } = usePerformanceOptimization();
+
+  // Initialize comprehensive enhancements
+  useEffect(() => {
+    try {
+      // Initialize comprehensive enhancements first
+      const enhancements = getComprehensiveEnhancements();
+      enhancements.initialize();
+      
+      // Initialize individual enhancement systems
+      if ('startMonitoring' in enhancedPerformanceMonitor) {
+        enhancedPerformanceMonitor.startMonitoring();
+      } else if ('initialize' in enhancedPerformanceMonitor) {
+        (enhancedPerformanceMonitor as any).initialize();
+      }
+      enhancedAnalytics.initialize();
+      advancedCacheSystem.initialize();
+      new AdvancedAutomationSystem().initialize();
+      // Initialize enhancement systems
+      new AccessibilityEnhancer();
+      new SecurityEnhancer();
+    } catch (error) {
+      console.warn('Some enhancement systems failed to initialize:', error);
+      // Log error for debugging
+      console.error('Initialization error:', error);
+    }
+    
+    // Initialize basic systems
+    analytics.initialize();
+    
+    // Initialize SEO analytics
+    seoAnalytics.trackPageView(window.location.pathname);
+    
+    // Initialize performance SEO optimizations
+    performanceSEO.optimizeImages();
+    performanceSEO.optimizeFonts();
+    performanceSEO.optimizeCSS();
+
+    // Initialize new utility systems
+    performanceAlerts.checkMetric('loadTime', performance.now(), 3000);
+    accessibilityUtils.announce('Application initialized');
+    securityUtils.getSecurityScore();
+
+    // Set default SEO data using the correct method
+    seoManager.updateMetaTags(seoData);
+
+    // Update meta tags
+    updateMetaTags(memoizedSeoData);
+  }, [seoData]);
 
   // Update meta tags function
   const updateMetaTags = useCallback((data: typeof seoData) => {
