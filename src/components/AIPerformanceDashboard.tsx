@@ -12,6 +12,16 @@ interface PerformanceMetrics {
   userImpactScore: number;
   avgResolutionTime: number;
   [key: string]: unknown;
+  }
+  
+interface AIInsights {
+  predictedHighRiskActions: string[];
+  recommendedImprovements: string[];
+  errorTrends: Array<{
+    category: string;
+    trend: 'increasing' | 'decreasing' | 'stable';
+  }>;
+  [key: string]: unknown;
 }
 
 interface AIInsights {
@@ -26,6 +36,7 @@ interface AIInsights {
 
 interface ErrorReport {
   id: string;
+  severity: string;
   message: string;
   lastOccurrence: string | Date;
   occurrenceCount: number;
@@ -47,13 +58,9 @@ interface AIInsights {
 
 const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisible, onClose }) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-  const [insights, setInsights] = useState<{
-    predictedHighRiskActions: string[];
-    recommendedImprovements: string[];
-    errorTrends: Array<{ category: string; trend: string }>;
-  } | null>(null);
-  const [errorReports, setErrorReports] = useState<ErrorReport[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const [insights, setInsights] = useState<AIInsights | null>(null);
+  const [errors, setErrors] = useState<ErrorReport[]>([]);
+  const [isLoading, setIsLoading] = useState(false);
 
   const loadPerformanceData = useCallback(async () => {
     setIsLoading(true);
@@ -119,12 +126,9 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
 
       setMetrics(mockMetrics);
       setInsights(mockInsights);
-      setErrorReports(mockErrorReports);
+      setErrors(mockErrorReports);
     } catch (error) {
-      enhancedErrorHandler.handleError(error as Error, {
-        component: 'AIPerformanceDashboard',
-        action: 'loadPerformanceData'
-      });
+      console.error('Failed to load performance data:', error);
     } finally {
       setIsLoading(false);
     }
@@ -136,9 +140,10 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
     }
   }, [isVisible, loadPerformanceData]);
 
-  const getSeverityColor = (severity: unknown) => {
-    const severityStr = String(severity);
-    switch (severityStr) {
+  if (!isVisible) return null;
+
+  const getSeverityColor = (severity: string) => {
+    switch (severity) {
       case 'critical': return 'text-red-600 bg-red-100';
       case 'high': return 'text-orange-600 bg-orange-100';
       case 'medium': return 'text-yellow-600 bg-yellow-100';
