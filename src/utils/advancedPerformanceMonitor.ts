@@ -76,7 +76,7 @@ interface NetworkConnection {
 }
 
 interface ExtendedNavigator extends Navigator {
-  connection?: NetworkConnection;
+  connection?: NetworkInformation;
 }
 
 interface GoogleAnalytics {
@@ -238,7 +238,7 @@ class AdvancedPerformanceMonitor {
       tcp: navigation.connectEnd - navigation.connectStart,
       request: navigation.responseStart - navigation.requestStart,
       response: navigation.responseEnd - navigation.responseStart,
-      processing: navigation.domComplete - (navigation.domLoading || 0),
+      processing: navigation.domComplete - (navigation.domContentLoadedEventStart || 0),
       load: navigation.loadEventEnd - navigation.loadEventStart,
     };
 
@@ -290,20 +290,20 @@ class AdvancedPerformanceMonitor {
     const connection = (navigator as ExtendedNavigator).connection;
     if (connection) {
       this.recordMetric('networkInfo', {
-        effectiveType: connection.effectiveType,
-        downlink: connection.downlink,
-        rtt: connection.rtt,
-        saveData: connection.saveData,
+        effectiveType: connection?.effectiveType,
+        downlink: connection?.downlink,
+        rtt: connection?.rtt,
+        saveData: connection?.saveData,
       });
     }
 
     // Monitor connection changes
-    connection.addEventListener('change', () => {
+    connection?.addEventListener('change', () => {
       this.recordMetric('networkInfo', {
-        effectiveType: connection.effectiveType,
-        downlink: connection.downlink,
-        rtt: connection.rtt,
-        saveData: connection.saveData,
+        effectiveType: connection?.effectiveType,
+        downlink: connection?.downlink,
+        rtt: connection?.rtt,
+        saveData: connection?.saveData,
       });
     });
   }
@@ -394,6 +394,7 @@ class AdvancedPerformanceMonitor {
     customKeys.forEach(key => {
       const values = metrics.map(m => m.customMetrics[key]).filter(v => v > 0);
       if (values.length > 0) {
+        if (!averages.customMetrics) averages.customMetrics = {};
         averages.customMetrics[key] = values.reduce((a, b) => a + b, 0) / values.length;
       }
     });
