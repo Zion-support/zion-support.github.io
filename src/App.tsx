@@ -29,18 +29,18 @@ export default function App(): React.JSX.Element {
     clicks: 0
   }), []);
 
-  // Simple SEO manager
-  const seoManagerInstance = useMemo(() => ({
-    updateMetaTags: (data: typeof seoData) => {
-      if (typeof document !== 'undefined') {
-        document.title = data.title;
-        const metaDescription = document.querySelector('meta[name="description"]');
-        if (metaDescription) {
-          metaDescription.setAttribute('content', data.description);
-        }
-      }
-    }
-  }), []);
+  // Simple SEO manager (for future use)
+  // const seoManagerInstance = useMemo(() => ({
+  //   updateMetaTags: (data: typeof seoData) => {
+  //     if (typeof document !== 'undefined') {
+  //       document.title = data.title;
+  //       const metaDescription = document.querySelector('meta[name="description"]');
+  //       if (metaDescription) {
+  //         metaDescription.setAttribute('content', data.description);
+  //       }
+  //     }
+  //   }
+  // }), []);
 
   // Initialize app with custom configuration
   const { isLoading, loadingProgress, handleScroll, handleClick, trackEngagement } = useAppInitialization({
@@ -161,7 +161,7 @@ export default function App(): React.JSX.Element {
     // Use passive listeners for better performance
     window.addEventListener('scroll', handleScroll, { passive: true });
     document.addEventListener('click', handleClick, { passive: true });
-  }, [handleClick, handleKeyDown, handleScroll, seoData, preloadResource, seoManager, updateMetaTags]);
+  }, [handleClick, handleKeyDown, handleScroll, seoData, preloadResource, updateMetaTags]);
 
   // Add keyboard event listener
   React.useEffect(() => {
