@@ -26,7 +26,7 @@ import { enhancedSecurityManager } from './utils/enhancedSecurityManager';
 import { initializePerformanceEnhancements } from './utils/performanceEnhancements';
 import { initializeAccessibilityEnhancements } from './utils/accessibilityEnhancements';
 import { advancedPerformanceOptimizer } from './utils/advancedPerformanceOptimizer';
-import { advancedSEOOptimizer } from './utils/advancedSEOOptimizer';
+import { AdvancedSEOOptimizer } from './utils/advancedSEOOptimizer';
 import { performanceMonitor, getPerformanceScore, getPerformanceRecommendations } from './utils/performanceMonitoring';
 import { seoOptimizer, updatePageSEO, trackSEOEvent } from './utils/seoOptimizer';
 import { errorHandler, handleError, log, ErrorBoundary } from './utils/errorHandler';
@@ -484,7 +484,7 @@ function App(): React.JSX.Element {
       
       // Initialize advanced optimizers
       advancedPerformanceOptimizer.initialize();
-      advancedSEOOptimizer.initialize();
+      // advancedSEOOptimizer.initialize(); // Will be initialized by class instance
       advancedAccessibilityEnhancer.initialize();
       
       // Initialize new monitoring and optimization systems

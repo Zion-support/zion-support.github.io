@@ -31,6 +31,7 @@ class AdvancedPerformanceOptimizer {
   private metrics: PerformanceMetrics | null = null;
   private observers: PerformanceObserver[] = [];
   private isInitialized = false;
+  private strategies: any[] = [];
 
   constructor() {
     this.config = {
@@ -289,21 +290,6 @@ class AdvancedPerformanceOptimizer {
     };
   }
 
-  constructor(config: Partial<OptimizationConfig> = {}) {
-    this.config = {
-      enableImageOptimization: true,
-      enableCodeSplitting: true,
-      enableLazyLoading: true,
-      enablePrefetching: true,
-      enableCompression: true,
-      enableCaching: true,
-      enableServiceWorker: true,
-      enableCriticalCSS: true,
-      enableResourceHints: true,
-      enableBundleOptimization: true,
-      ...config
-    };
-  }
 
 
   /**
