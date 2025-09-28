@@ -76,7 +76,7 @@ interface SystemMetrics {
 }
 
 export class EnhancementSuite {
-  private static instance: EnhancementSuite;
+  private static instance: EnhancementSuite | null;
   private config: EnhancementConfig;
   private performanceOptimizer!: PerformanceOptimizer;
   private securityEnhancer!: SecurityEnhancer;

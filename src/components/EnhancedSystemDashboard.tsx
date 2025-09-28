@@ -28,39 +28,6 @@ export const EnhancedSystemDashboard: React.FC = () => {
   const [isMonitoring, setIsMonitoring] = useState(false);
   const [activeTab, setActiveTab] = useState<'performance' | 'analytics' | 'seo'>('performance');
 
-  useEffect(() => {
-    initializeSystems();
-    startMonitoring();
-    
-    return () => {
-      stopMonitoring();
-    };
-  }, [startMonitoring, stopMonitoring]);
-
-  const initializeSystems = () => {
-    // Initialize all enhanced systems
-    enhancedPerformanceMonitor.startMonitoring();
-    enhancedAnalytics.initialize();
-    enhancedSEO.initialize();
-    
-    setIsMonitoring(true);
-    console.log('All enhanced systems initialized');
-  };
-
-  const startMonitoring = useCallback(() => {
-    const interval = setInterval(() => {
-      updateMetrics();
-    }, 5000); // Update every 5 seconds
-
-    return () => clearInterval(interval);
-  }, [updateMetrics]);
-
-  const stopMonitoring = useCallback(() => {
-    enhancedPerformanceMonitor.stopMonitoring();
-    enhancedAnalytics.endSession();
-    setIsMonitoring(false);
-  }, []);
-
   const updateMetrics = useCallback(() => {
     // Get performance metrics
     const performanceMetrics = enhancedPerformanceMonitor.getMetrics();
@@ -112,6 +79,39 @@ export const EnhancedSystemDashboard: React.FC = () => {
 
     return Math.round(scores.reduce((sum, score) => sum + score, 0) / scores.length);
   };
+
+  const initializeSystems = () => {
+    // Initialize all enhanced systems
+    enhancedPerformanceMonitor.startMonitoring();
+    enhancedAnalytics.initialize();
+    enhancedSEO.initialize();
+    
+    setIsMonitoring(true);
+    console.log('All enhanced systems initialized');
+  };
+
+  const startMonitoring = useCallback(() => {
+    const interval = setInterval(() => {
+      updateMetrics();
+    }, 5000); // Update every 5 seconds
+
+    return () => clearInterval(interval);
+  }, [updateMetrics]);
+
+  const stopMonitoring = useCallback(() => {
+    enhancedPerformanceMonitor.stopMonitoring();
+    enhancedAnalytics.endSession();
+    setIsMonitoring(false);
+  }, []);
+
+  useEffect(() => {
+    initializeSystems();
+    startMonitoring();
+    
+    return () => {
+      stopMonitoring();
+    };
+  }, [startMonitoring, stopMonitoring]);
 
   const getScoreColor = (score: number): string => {
     if (score >= 90) return 'text-green-600';

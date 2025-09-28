@@ -290,8 +290,8 @@ export class EnhancedAnalytics {
         const lcpObserver = new PerformanceObserver((list) => {
           list.getEntries().forEach(entry => {
             this.track('performance', 'web_vital', 'LCP', entry.startTime, {
-              element: (entry as any).element?.tagName,
-              url: (entry as any).url
+              element: (entry as PerformanceEntry & { element?: Element }).element?.tagName,
+              url: (entry as PerformanceEntry & { url?: string }).url
             });
           });
         });
@@ -304,7 +304,7 @@ export class EnhancedAnalytics {
       try {
         const fidObserver = new PerformanceObserver((list) => {
           list.getEntries().forEach(entry => {
-            this.track('performance', 'web_vital', 'FID', undefined, (entry as PerformanceEntry & { processingStart?: number }).processingStart! - entry.startTime, {
+            this.track('performance', 'web_vital', 'FID', (entry as PerformanceEntry & { processingStart?: number }).processingStart! - entry.startTime, {
               eventType: entry.name,
               target: (entry as PerformanceEntry & { target?: Element }).target?.tagName
             });
@@ -319,7 +319,7 @@ export class EnhancedAnalytics {
       try {
         const clsObserver = new PerformanceObserver((list) => {
           list.getEntries().forEach(entry => {
-            this.track('performance', 'web_vital', 'CLS', undefined, (entry as PerformanceEntry & { value?: number }).value!, {
+            this.track('performance', 'web_vital', 'CLS', (entry as PerformanceEntry & { value?: number }).value!, {
               sources: (entry as PerformanceEntry & { sources?: Array<{ node?: Element }> }).sources?.map((s) => s.node?.tagName)
             });
           });

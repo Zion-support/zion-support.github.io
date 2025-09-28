@@ -368,8 +368,9 @@ export class EnhancedSEO {
 
   private validateStructuredData(data: unknown): void {
     // Basic validation for common structured data types
-    if (data['@type'] && data['@context']) {
-      console.log(`Valid structured data found: ${data['@type']}`);
+    const structuredData = data as Record<string, unknown>;
+    if (structuredData['@type'] && structuredData['@context']) {
+      console.log(`Valid structured data found: ${structuredData['@type']}`);
     } else {
       console.warn('Invalid structured data: missing @type or @context');
     }

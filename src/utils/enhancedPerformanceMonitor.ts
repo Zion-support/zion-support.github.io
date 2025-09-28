@@ -259,6 +259,8 @@ export class EnhancedPerformanceMonitor {
     if ('memory' in performance) {
       const checkMemory = () => {
         const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
+        if (!memory) return;
+        
         const metric: PerformanceMetric = {
           name: 'MemoryUsage',
           value: memory.usedJSHeapSize / 1024 / 1024, // MB

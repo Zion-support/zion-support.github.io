@@ -15,7 +15,7 @@ export interface CacheConfig {
 
 export interface CacheEntry<T = unknown> {
   key: string;
-  value: T;
+  value: T | string;
   timestamp: number;
   ttl: number;
   hits: number;
@@ -116,7 +116,7 @@ export class AdvancedCacheSystem {
     const startTime = performance.now();
     
     try {
-      let processedValue: unknown = value;
+      let processedValue: T | string = value;
       let compressed = false;
       let encrypted = false;
 
@@ -192,12 +192,12 @@ export class AdvancedCacheSystem {
 
       // Decrypt if needed
       if (entry.encrypted) {
-        value = this.decrypt(value);
+        value = this.decrypt(value as string);
       }
 
       // Decompress if needed
       if (entry.compressed) {
-        value = JSON.parse(this.decompress(value));
+        value = JSON.parse(this.decompress(value as string));
       }
 
       // Update analytics
@@ -398,7 +398,7 @@ export class AdvancedCacheSystem {
   }
 
   private encrypt(data: unknown): string {
-    if (!this.encryptionKey) return data;
+    if (!this.encryptionKey) return data as string;
     
     // Simple encryption simulation (in production, use proper encryption)
     return btoa(JSON.stringify(data) + this.encryptionKey);
