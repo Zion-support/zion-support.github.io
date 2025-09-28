@@ -23,6 +23,27 @@ export default function App(): React.JSX.Element {
   const [showSystemDashboard, setShowSystemDashboard] = useState(false);
   const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
 
+  // Engagement tracking data
+  const engagementData = useMemo(() => ({
+    startTime: Date.now(),
+    scrollDepth: 0,
+    clicks: 0
+  }), []);
+
+  // Simple SEO manager
+  const seoManagerInstance = useMemo(() => ({
+    updateMetaTags: (data: typeof seoData) => {
+      if (typeof document !== 'undefined') {
+        document.title = data.title;
+        const metaDescription = document.querySelector('meta[name="description"]');
+        if (metaDescription) {
+          metaDescription.setAttribute('content', data.description);
+        }
+      }
+    }
+  }), []);
+
+>>>>>>> origin/improvements-and-conflict-resolution
   // Initialize app with custom configuration
   const { isLoading, loadingProgress } = useAppInitialization({
     enablePerformanceMonitoring: true,
@@ -45,11 +66,11 @@ export default function App(): React.JSX.Element {
   const handleKeyDown = useCallback((event: KeyboardEvent) => {
     if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'D') {
       event.preventDefault();
-      setShowSystemDashboard(prev => !prev);
+      setShowSystemDashboard((prev: boolean) => !prev);
     }
     if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'P') {
       event.preventDefault();
-      setShowPerformanceOptimizer(prev => !prev);
+      setShowPerformanceOptimizer((prev: boolean) => !prev);
     }
   }, []);
 
@@ -154,6 +175,26 @@ export default function App(): React.JSX.Element {
     if (typeof window !== 'undefined') {
       console.log('🚀 Zion Tech Group App initialized');
     }
+
+    // Use passive listeners for better performance
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    document.addEventListener('click', handleClick, { passive: true });
+  }, [handleClick, handleKeyDown, handleScroll, seoData, preloadResource, seoManager, updateMetaTags]);
+
+  // Add keyboard event listener
+  React.useEffect(() => {
+    document.addEventListener("keydown", handleKeyDown);
+    
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [handleKeyDown]);
+
+  // Main initialization and cleanup effect
+  React.useEffect(() => {
+    // Track engagement on page unload
+    window.addEventListener('beforeunload', enhancedTrackEngagement);
+>>>>>>> origin/improvements-and-conflict-resolution
 
     // Mark app as fully initialized
     if (typeof window !== 'undefined' && window.performance && 
