@@ -338,7 +338,7 @@ export function useAppInitialization(config: AppInitializationConfig = {}) {
       // Final engagement tracking
       trackEngagement();
     };
-  }, [initializeCoreSystems, initializeAdvancedSystems, handleScroll, handleClick, engagementData, enableAnalytics]);
+  }, [initializeCoreSystems, initializeAdvancedSystems, handleScroll, handleClick, engagementData, enableAnalytics, trackEngagement]);
 
   return {
     isLoading,
