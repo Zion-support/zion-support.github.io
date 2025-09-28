@@ -15,7 +15,7 @@ import {
   Area,
   AreaChart
 } from 'recharts';
-import { performanceEnhancer } from '../utils/performanceEnhancements';
+import { performanceEnhancements } from '../utils/performanceEnhancements';
 import { bundleOptimizer } from '../utils/bundleOptimizer';
 import { loadingOptimizer } from '../utils/loadingOptimizer';
 
@@ -40,33 +40,33 @@ const EnhancedPerformanceDashboard: React.FC<EnhancedPerformanceDashboardProps> 
   onClose 
 }) => {
   const [performanceData, setPerformanceData] = useState<PerformanceData[]>([]);
-  const [currentMetrics, setCurrentMetrics] = useState(performanceEnhancer.getMetrics());
+  const [currentMetrics, setCurrentMetrics] = useState(performanceEnhancements.getMetrics());
   const [bundleAnalysis, setBundleAnalysis] = useState(bundleOptimizer.getAnalysis());
   const [loadingMetrics, setLoadingMetrics] = useState(loadingOptimizer.getMetrics());
-  const [optimizationSuggestions, setOptimizationSuggestions] = useState(performanceEnhancer.getSuggestions());
+  const [optimizationSuggestions, setOptimizationSuggestions] = useState(performanceEnhancements.getSuggestions());
   const [bundleRecommendations, setBundleRecommendations] = useState(bundleOptimizer.getRecommendations());
   const [loadingStrategies, setLoadingStrategies] = useState(loadingOptimizer.getStrategies());
 
   const updateMetrics = useCallback(() => {
-    const metrics = performanceEnhancer.getMetrics();
+    const metrics = performanceEnhancements.getMetrics();
     const bundle = bundleOptimizer.getAnalysis();
     const loading = loadingOptimizer.getMetrics();
     
     setCurrentMetrics(metrics);
     setBundleAnalysis(bundle);
     setLoadingMetrics(loading);
-    setOptimizationSuggestions(performanceEnhancer.getSuggestions());
+    setOptimizationSuggestions(performanceEnhancements.getSuggestions());
     setBundleRecommendations(bundleOptimizer.getRecommendations());
     setLoadingStrategies(loadingOptimizer.getStrategies());
 
     // Add to performance data
     const newDataPoint: PerformanceData = {
       timestamp: Date.now(),
-      lcp: metrics.lcp,
-      fcp: metrics.fcp,
-      fid: metrics.fid,
-      cls: metrics.cls,
-      memoryUsage: metrics.memoryUsage,
+      lcp: metrics?.lcp || 0,
+      fcp: metrics?.fcp || 0,
+      fid: metrics?.fid || 0,
+      cls: metrics?.cls || 0,
+      memoryUsage: 0, // Not available in current metrics
       bundleScore: bundleOptimizer.getOptimizationScore(),
       loadingScore: loadingOptimizer.getLoadingScore()
     };
@@ -120,7 +120,7 @@ const EnhancedPerformanceDashboard: React.FC<EnhancedPerformanceDashboardProps> 
       suggestions: optimizationSuggestions,
       bundleRecommendations,
       loadingStrategies,
-      performanceReport: performanceEnhancer.generateReport(),
+      performanceReport: performanceEnhancements.generateReport(),
       bundleReport: bundleOptimizer.generateOptimizationReport(),
       loadingReport: loadingOptimizer.generateLoadingReport()
     };
@@ -136,7 +136,7 @@ const EnhancedPerformanceDashboard: React.FC<EnhancedPerformanceDashboardProps> 
 
   if (!isVisible) return null;
 
-  const performanceScore = performanceEnhancer.getPerformanceScore();
+  const performanceScore = performanceEnhancements.getPerformanceScore();
   const bundleScore = bundleOptimizer.getOptimizationScore();
   const loadingScore = loadingOptimizer.getLoadingScore();
   const overallScore = Math.round((performanceScore + bundleScore + loadingScore) / 3);
@@ -250,7 +250,7 @@ const EnhancedPerformanceDashboard: React.FC<EnhancedPerformanceDashboardProps> 
                 Performance Optimizations
               </h3>
               <div className="space-y-3">
-                {optimizationSuggestions.slice(0, 5).map((suggestion, index) => (
+                {optimizationSuggestions.slice(0, 5).map((suggestion: any, index: number) => (
                   <div key={index} className="bg-white dark:bg-gray-700 p-3 rounded border">
                     <div className="flex justify-between items-start mb-2">
                       <h4 className="font-medium text-gray-900 dark:text-white">
@@ -376,7 +376,7 @@ const EnhancedPerformanceDashboard: React.FC<EnhancedPerformanceDashboardProps> 
             </button>
             <button
               onClick={() => {
-                performanceEnhancer.applyAutomatedOptimizations();
+                performanceEnhancements.applyAutomatedOptimizations();
                 updateMetrics();
               }}
               className="bg-purple-500 hover:bg-purple-600 text-white px-4 py-2 rounded-md transition-colors"

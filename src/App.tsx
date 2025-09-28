@@ -68,7 +68,7 @@ export default function App(): React.JSX.Element {
   const seoData = useMemo(() => ({
     title: 'Zion Tech Group - Leading AI & Technology Solutions',
     description: 'Cutting-edge AI, quantum computing, and digital transformation solutions for modern enterprises. Expert consulting, cloud services, and innovative technology implementations.',
-    keywords: ['AI solutions', 'quantum computing', 'digital transformation', 'cloud services', 'enterprise technology'],
+    keywords: 'AI solutions, quantum computing, digital transformation, cloud services, enterprise technology',
     canonicalUrl: `https://zion.app${currentPathname}`,
     ogImage: 'https://zion.app/og-image.jpg',
     ogUrl: `https://zion.app${currentPathname}`,
@@ -504,7 +504,7 @@ export default function App(): React.JSX.Element {
                   ✕
                 </button>
               </div>
-              <PerformanceMonitor />
+              <PerformanceMonitor showDashboard={true} />
             </div>
           </div>
         )}
