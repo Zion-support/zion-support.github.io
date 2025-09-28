@@ -247,7 +247,7 @@ class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
       );
     }
 
-    return children;
+    return this.props.children;
   }
 }
 
