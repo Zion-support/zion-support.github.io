@@ -68,23 +68,6 @@ export default function App(): React.JSX.Element {
   // }), []);
 
   // Initialize app with custom configuration
-<<<<<<< HEAD
-  // Temporarily disable useAppInitialization to fix build
-  // const { isLoading, loadingProgress, handleScroll, handleClick, trackEngagement } = useAppInitialization({
-  //   enablePerformanceMonitoring: true,
-  //   enableAccessibility: true,
-  //   enableSecurity: true,
-  //   enableAnalytics: true,
-  //   enableNotifications: true,
-  //   enableCaching: true,
-  // });
-  
-  const isLoading = false;
-  const loadingProgress = 100;
-  const handleScroll = useCallback(() => {}, []);
-  const handleClick = useCallback((_event: Event) => {}, []);
-  const trackEngagement = useCallback(() => {}, []);
-=======
   const { isLoading, loadingProgress, handleScroll, handleClick, trackEngagement, engagementData } = useAppInitialization({
     enablePerformanceMonitoring: true,
     enableAccessibility: true,
@@ -93,7 +76,6 @@ export default function App(): React.JSX.Element {
     enableNotifications: true,
     enableCaching: true,
   });
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-99ed
 
   // Performance optimization hook - Temporarily disabled
   // usePerformanceOptimization({
@@ -468,13 +450,8 @@ export default function App(): React.JSX.Element {
       trackEngagement();
     };
 
-<<<<<<< HEAD
-    const handleClickWithEngagement = (event: Event) => {
-      handleClick(event);
-=======
     const handleClickWithEngagement = (event: MouseEvent) => {
       handleClick(event as Event);
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-99ed
       trackEngagement();
     };
 
