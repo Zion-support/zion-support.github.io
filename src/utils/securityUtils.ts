@@ -91,20 +91,13 @@ class SecurityUtils {
   private sanitizeUserInput(): void {
     // Override innerHTML to sanitize content
     const originalInnerHTML = Object.getOwnPropertyDescriptor(Element.prototype, 'innerHTML');
-<<<<<<< HEAD
-    if (originalInnerHTML && originalInnerHTML.set) {
-      const self = this;
-      Object.defineProperty(Element.prototype, 'innerHTML', {
-        set: function(value) {
-          const sanitized = self.sanitizeHTML(value);
-          originalInnerHTML.set!.call(this, sanitized);
-=======
+    
     if (originalInnerHTML) {
       Object.defineProperty(Element.prototype, 'innerHTML', {
-        set: function(value) {
+        set: function(value: string) {
+          // Sanitize the value before setting
           const sanitized = this.sanitizeHTML(value);
           originalInnerHTML.set?.call(this, sanitized);
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-7cb6
         },
         get: originalInnerHTML.get
       });

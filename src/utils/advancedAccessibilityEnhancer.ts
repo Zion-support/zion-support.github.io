@@ -627,7 +627,6 @@ class AdvancedAccessibilityEnhancer {
     
     return `
 Accessibility Report:
-====================
 Overall Score: ${metrics.overallScore}/100
 Color Contrast Ratio: ${metrics.colorContrastRatio.toFixed(2)}
 Focusable Elements: ${metrics.focusableElements}

@@ -348,7 +348,6 @@ ${pages.map(page => `  <url>
 
     return `
 SEO Report:
-===========
 Title: ${data.title}
 Description: ${data.description}
 Keywords: ${data.keywords.join(', ')}

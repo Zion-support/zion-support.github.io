@@ -842,7 +842,6 @@ class ComprehensiveEnhancements {
     
     return `
 Comprehensive Enhancement Report:
-================================
 Performance:
 - FCP: ${metrics.performance.fcp?.toFixed(2) || 'N/A'}ms
 - LCP: ${metrics.performance.lcp?.toFixed(2) || 'N/A'}ms

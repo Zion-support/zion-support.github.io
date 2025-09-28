@@ -474,7 +474,6 @@ class PerformanceEnhancer {
     
     return `
 Performance Report
-=================
 First Contentful Paint: ${fcp.toFixed(2)}ms
 Largest Contentful Paint: ${lcp.toFixed(2)}ms
 First Input Delay: ${fid.toFixed(2)}ms

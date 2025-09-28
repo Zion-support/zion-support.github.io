@@ -1,39 +1,11 @@
-import React, { useState, useEffect, useCallback } from 'react';
-<<<<<<< HEAD
-=======
-import { enhancedErrorHandler } from '../utils/enhancedErrorHandling';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-7cb6
+import React, { useState, useEffect } from 'react';
 
-interface AIPerformanceDashboardProps {
-  isVisible: boolean;
-  onClose: () => void;
-}
-
-interface PerformanceMetrics {
-  errorRate: number;
-  criticalErrorsToday: number;
-  userImpactScore: number;
-  avgResolutionTime: number;
-  [key: string]: unknown;
-}
-
-<<<<<<< HEAD
-interface AIInsights {
-  predictedHighRiskActions: string[];
-  recommendedImprovements: string[];
-  errorTrends: Array<{
-    category: string;
-    trend: 'increasing' | 'decreasing' | 'stable';
-  }>;
-  [key: string]: unknown;
-}
-
-interface ErrorReport {
-  severity: string;
-=======
-interface ErrorReport {
+interface PerformanceReport {
   id: string;
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-7cb6
+  severity: 'low' | 'medium' | 'high' | 'critical';
+  category: 'performance' | 'error' | 'warning' | 'info';
+  title: string;
+  description: string;
   message: string;
   lastOccurrence: string | Date;
   occurrenceCount: number;
@@ -46,294 +18,204 @@ interface ErrorReport {
   [key: string]: unknown;
 }
 
-const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisible, onClose }) => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-<<<<<<< HEAD
-  const [insights, setInsights] = useState<AIInsights | null>(null);
-  const [errors, setErrors] = useState<ErrorReport[]>([]);
-  const [isLoading, setIsLoading] = useState(false);
-=======
-  const [insights, setInsights] = useState<{
-    predictedHighRiskActions: string[];
-    recommendedImprovements: string[];
-    errorTrends: Array<{ category: string; trend: string }>;
-  } | null>(null);
-  const [errorReports, setErrorReports] = useState<ErrorReport[]>([]);
+interface AIPerformanceDashboardProps {
+  className?: string;
+}
+
+export const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ className = '' }) => {
+  const [reports, setReports] = useState<PerformanceReport[]>([]);
   const [isLoading, setIsLoading] = useState(true);
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-7cb6
-
-  const loadPerformanceData = useCallback(async () => {
-    setIsLoading(true);
-    try {
-      // Simulate AI-powered performance analysis
-      const mockMetrics: PerformanceMetrics = {
-        errorRate: Math.random() * 5,
-        criticalErrorsToday: Math.floor(Math.random() * 10),
-        userImpactScore: Math.random() * 100,
-        avgResolutionTime: Math.random() * 120,
-      };
-
-      const mockInsights: AIInsights = {
-        predictedHighRiskActions: [
-          'High memory usage detected in component rendering',
-          'Potential race condition in async operations',
-          'Unoptimized image loading may impact LCP'
-        ],
-        recommendedImprovements: [
-          'Implement React.memo for expensive components',
-          'Add error boundaries to prevent cascade failures',
-          'Optimize bundle size with code splitting',
-          'Add request timeout configuration',
-          'Consider implementing offline fallback'
-        ],
-        errorTrends: [
-          { category: 'API', trend: 'stable' as const },
-          { category: 'UI', trend: 'decreasing' as const },
-          { category: 'Database', trend: 'stable' as const }
-        ]
-      };
-
-      const mockErrorReports: ErrorReport[] = [
-        {
-          id: '1',
-          severity: 'high',
-          message: 'Failed to load user data',
-          lastOccurrence: new Date(),
-          occurrenceCount: 15,
-          context: { component: 'UserProfile', action: 'fetchUserData' },
-          aiPredictedImpact: 75,
-          resolutionSuggestions: [
-            'Check API endpoint availability',
-            'Implement retry logic with exponential backoff',
-            'Add fallback data loading'
-          ]
-        },
-        {
-          id: '2',
-          severity: 'medium',
-          message: 'Slow rendering detected',
-          lastOccurrence: new Date(Date.now() - 300000),
-          occurrenceCount: 8,
-          context: { component: 'DataTable', action: 'render' },
-          aiPredictedImpact: 45,
-          resolutionSuggestions: [
-            'Implement virtual scrolling',
-            'Add loading states',
-            'Optimize data processing'
-          ]
-        }
-      ];
-
-      setMetrics(mockMetrics);
-      setInsights(mockInsights);
-<<<<<<< HEAD
-      setErrors(mockErrorReports);
-    } catch (error) {
-      console.error('Failed to load performance data:', error);
-=======
-      setErrorReports(mockErrorReports);
-    } catch (error) {
-      enhancedErrorHandler.handleError(error as Error, {
-        component: 'AIPerformanceDashboard',
-        action: 'loadPerformanceData'
-      });
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-7cb6
-    } finally {
-      setIsLoading(false);
-    }
-  }, []);
+  const [filter, setFilter] = useState<'all' | 'critical' | 'high' | 'medium' | 'low'>('all');
+  const [searchTerm, setSearchTerm] = useState('');
 
   useEffect(() => {
-    if (isVisible) {
-      loadPerformanceData();
-    }
-  }, [isVisible, loadPerformanceData]);
+    // Simulate loading performance reports
+    const loadReports = async () => {
+      setIsLoading(true);
+      try {
+        // Mock data - in real implementation, this would come from an API
+        const mockReports: PerformanceReport[] = [
+          {
+            id: '1',
+            severity: 'critical',
+            category: 'performance',
+            title: 'High Memory Usage',
+            description: 'Memory usage has exceeded 90% threshold',
+            message: 'Memory usage: 92% (2.1GB/2.3GB)',
+            lastOccurrence: new Date().toISOString(),
+            occurrenceCount: 15,
+            context: { component: 'MemoryMonitor' },
+            aiPredictedImpact: 85,
+            resolutionSuggestions: [
+              'Optimize memory allocation in components',
+              'Implement lazy loading for large datasets',
+              'Review memory leaks in event listeners'
+            ]
+          },
+          {
+            id: '2',
+            severity: 'high',
+            category: 'error',
+            title: 'API Response Time',
+            description: 'API calls taking longer than expected',
+            message: 'Average response time: 2.3s (threshold: 1.5s)',
+            lastOccurrence: new Date(Date.now() - 300000).toISOString(),
+            occurrenceCount: 8,
+            context: { component: 'ApiClient', action: 'fetchData' },
+            aiPredictedImpact: 65,
+            resolutionSuggestions: [
+              'Implement request caching',
+              'Optimize database queries',
+              'Add request timeout handling'
+            ]
+          }
+        ];
+        setReports(mockReports);
+      } catch (error) {
+        console.error('Failed to load performance reports:', error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
 
-<<<<<<< HEAD
-  if (!isVisible) return null;
+    loadReports();
+  }, []);
 
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-7cb6
   const getSeverityColor = (severity: string) => {
     switch (severity) {
-      case 'critical': return 'text-red-600 bg-red-100';
-      case 'high': return 'text-orange-600 bg-orange-100';
-      case 'medium': return 'text-yellow-600 bg-yellow-100';
-      case 'low': return 'text-blue-600 bg-blue-100';
-      default: return 'text-gray-600 bg-gray-100';
+      case 'critical': return 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300';
+      case 'high': return 'bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-300';
+      case 'medium': return 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300';
+      case 'low': return 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300';
+      default: return 'bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300';
     }
   };
 
-  const getImpactColor = (impact: number) => {
-    if (impact >= 70) return 'text-red-500';
-    if (impact >= 40) return 'text-yellow-500';
-    return 'text-green-500';
+  const getImpactColor = (impact?: number) => {
+    if (!impact) return 'text-gray-500';
+    if (impact >= 80) return 'text-red-600 dark:text-red-400';
+    if (impact >= 60) return 'text-orange-600 dark:text-orange-400';
+    if (impact >= 40) return 'text-yellow-600 dark:text-yellow-400';
+    return 'text-green-600 dark:text-green-400';
   };
 
-  const getTrendIcon = (trend: string) => {
-    switch (trend) {
-      case 'increasing': return '📈';
-      case 'decreasing': return '📉';
-      case 'stable': return '➡️';
-      default: return '❓';
-    }
-  };
+  const filteredReports = reports.filter(report => {
+    const matchesFilter = filter === 'all' || report.severity === filter;
+    const matchesSearch = searchTerm === '' || 
+      report.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      report.description.toLowerCase().includes(searchTerm.toLowerCase());
+    return matchesFilter && matchesSearch;
+  });
+
+  if (isLoading) {
+    return (
+      <div className={`p-6 ${className}`}>
+        <div className="animate-pulse">
+          <div className="h-8 bg-gray-200 dark:bg-gray-700 rounded mb-4"></div>
+          <div className="space-y-3">
+            {[...Array(3)].map((_, i) => (
+              <div key={i} className="h-20 bg-gray-200 dark:bg-gray-700 rounded"></div>
+            ))}
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
-    <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center p-4">
-      <div className="bg-white rounded-lg shadow-xl max-w-6xl w-full max-h-[90vh] overflow-y-auto">
-        <div className="flex justify-between items-center p-6 border-b">
-          <h2 className="text-2xl font-bold text-gray-900">🤖 AI Performance Dashboard</h2>
-          <button
-            onClick={onClose}
-            className="text-gray-500 hover:text-gray-700 text-2xl"
-            aria-label="Close dashboard"
-          >
-            ×
-          </button>
+    <div className={`p-6 ${className}`}>
+      <div className="mb-6">
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+          AI Performance Dashboard
+        </h2>
+        <p className="text-gray-600 dark:text-gray-400">
+          Monitor and analyze performance issues with AI-powered insights
+        </p>
+      </div>
+
+      <div className="mb-6 flex flex-col sm:flex-row gap-4">
+        <div className="flex-1">
+          <input
+            type="text"
+            placeholder="Search reports..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-800 dark:text-white"
+          />
         </div>
+        <select
+          value={filter}
+          onChange={(e) => setFilter(e.target.value as any)}
+          className="px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-800 dark:text-white"
+        >
+          <option value="all">All Severities</option>
+          <option value="critical">Critical</option>
+          <option value="high">High</option>
+          <option value="medium">Medium</option>
+          <option value="low">Low</option>
+        </select>
+      </div>
 
-        <div className="p-6">
-          {isLoading ? (
-            <div className="flex items-center justify-center py-12">
-              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500"></div>
-            </div>
-          ) : (
-            <div className="space-y-6">
-              {/* Performance Metrics */}
-              {metrics && (
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-                  <div className="bg-blue-50 p-4 rounded-lg">
-                    <h3 className="text-sm font-medium text-blue-600">Error Rate</h3>
-                    <p className="text-2xl font-bold text-blue-900">{metrics.errorRate.toFixed(2)}%</p>
+      <div className="space-y-4">
+        {filteredReports.length === 0 ? (
+          <div className="text-center py-8 text-gray-500 dark:text-gray-400">
+            No reports found matching your criteria
+          </div>
+        ) : (
+          filteredReports.map((report) => (
+            <div
+              key={report.id}
+              className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow"
+            >
+              <div className="flex items-start justify-between mb-3">
+                <div className="flex-1">
+                  <div className="flex items-center gap-2 mb-1">
+                    <span className={`px-2 py-1 rounded text-xs font-medium ${getSeverityColor(report.severity)}`}>
+                      {report.severity.toUpperCase()}
+                    </span>
+                    <span className="text-sm text-gray-500 dark:text-gray-400">
+                      {report.category}
+                    </span>
                   </div>
-                  <div className="bg-red-50 p-4 rounded-lg">
-                    <h3 className="text-sm font-medium text-red-600">Critical Errors Today</h3>
-                    <p className="text-2xl font-bold text-red-900">{metrics.criticalErrorsToday}</p>
-                  </div>
-                  <div className="bg-yellow-50 p-4 rounded-lg">
-                    <h3 className="text-sm font-medium text-yellow-600">User Impact Score</h3>
-                    <p className="text-2xl font-bold text-yellow-900">{metrics.userImpactScore.toFixed(0)}</p>
-                  </div>
-                  <div className="bg-green-50 p-4 rounded-lg">
-                    <h3 className="text-sm font-medium text-green-600">Avg Resolution Time</h3>
-                    <p className="text-2xl font-bold text-green-900">{metrics.avgResolutionTime.toFixed(0)}m</p>
-                  </div>
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-1">
+                    {report.title}
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-400 text-sm mb-2">
+                    {report.description}
+                  </p>
                 </div>
-              )}
-
-              {/* AI Insights */}
-              {insights && (
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                  <div className="bg-gray-50 p-4 rounded-lg">
-                    <h3 className="text-lg font-semibold text-gray-900 mb-3">🔮 AI Predictions</h3>
-                    <div className="space-y-2">
-                      {insights.predictedHighRiskActions.map((action, index) => (
-                        <div key={index} className="text-sm text-gray-700 bg-yellow-100 p-2 rounded">
-                          ⚠️ {action}
-                        </div>
-                      ))}
-                    </div>
+                <div className="text-right">
+                  <span className={`text-sm font-medium ${getImpactColor(report.aiPredictedImpact)}`}>
+                    Impact: {report.aiPredictedImpact}%
+                  </span>
+                  <div className="text-xs text-gray-500 dark:text-gray-400">
+                    {report.occurrenceCount} occurrences
                   </div>
-
-                  <div className="bg-gray-50 p-4 rounded-lg">
-                    <h3 className="text-lg font-semibold text-gray-900 mb-3">💡 AI Recommendations</h3>
-                    <div className="space-y-2">
-                      {insights.recommendedImprovements.map((improvement, index) => (
-                        <div key={index} className="text-sm text-gray-700 bg-blue-100 p-2 rounded">
-                          ✨ {improvement}
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              )}
-
-              {/* Error Trends */}
-              {insights?.errorTrends && (
-                <div className="bg-gray-50 p-4 rounded-lg">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-3">📊 Error Trends</h3>
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                    {insights.errorTrends.map((trend, index) => (
-                      <div key={index} className="bg-white p-3 rounded border">
-                        <div className="flex items-center justify-between">
-                          <span className="font-medium">{trend.category}</span>
-                          <span className="text-lg">{getTrendIcon(trend.trend)}</span>
-                        </div>
-                        <div className="text-sm text-gray-600 capitalize">{trend.trend}</div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              )}
-
-              {/* Error Reports */}
-              <div className="bg-gray-50 p-4 rounded-lg">
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">🐛 Error Reports</h3>
-                <div className="space-y-3">
-<<<<<<< HEAD
-                  {errors.length > 0 ? (
-                    errors.map((report) => (
-                      <div key={String(report.id)} className="bg-white p-4 rounded border">
-                        <div className="flex items-start justify-between">
-                          <div className="flex-1">
-                            <div className="flex items-center gap-2 mb-2">
-                              <span className={`px-2 py-1 rounded text-xs font-medium ${getSeverityColor(report.severity)}`}>
-                                {report.severity.toUpperCase()}
-=======
-                  {errorReports.length > 0 ? (
-                    errorReports.map((report) => (
-                      <div key={report.id} className="bg-white p-4 rounded border">
-                        <div className="flex justify-between items-start mb-2">
-                          <div className="flex items-center space-x-2">
-                            <span className={`px-2 py-1 rounded text-xs font-medium ${getSeverityColor(report.severity)}`}>
-                              {report.severity.toUpperCase()}
-                            </span>
-                            {report.aiPredictedImpact && (
-                              <span className={`text-sm font-medium ${getImpactColor(report.aiPredictedImpact)}`}>
-                                Impact: {report.aiPredictedImpact}%
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-7cb6
-                              </span>
-                              <span className="text-sm text-gray-500">
-                                {report.occurrenceCount} occurrences
-                              </span>
-                              {report.aiPredictedImpact && (
-                                <span className={`text-sm font-medium ${getImpactColor(report.aiPredictedImpact)}`}>
-                                  Impact: {report.aiPredictedImpact}%
-                                </span>
-                              )}
-                            </div>
-                            <p className="text-gray-900 font-medium">{report.message}</p>
-                            <p className="text-sm text-gray-600 mt-1">
-                              Component: {report.context.component} | Action: {report.context.action}
-                            </p>
-                            {report.resolutionSuggestions && (
-                              <div className="mt-2">
-                                <p className="text-sm font-medium text-gray-700 mb-1">AI Suggestions:</p>
-                                <ul className="text-sm text-gray-600 space-y-1">
-                                  {report.resolutionSuggestions.map((suggestion, index) => (
-                                    <li key={index} className="flex items-start gap-1">
-                                      <span>•</span>
-                                      <span>{suggestion}</span>
-                                    </li>
-                                  ))}
-                                </ul>
-                              </div>
-                            )}
-                          </div>
-                        </div>
-                      </div>
-                    ))
-                  ) : (
-                    <div className="text-center py-8 text-gray-500">
-                      ✨ No errors detected! Your application is running smoothly.
-                    </div>
-                  )}
                 </div>
               </div>
+
+              <div className="text-sm text-gray-700 dark:text-gray-300 mb-3">
+                {report.message}
+              </div>
+
+              {report.resolutionSuggestions && report.resolutionSuggestions.length > 0 && (
+                <div className="mt-4">
+                  <h4 className="text-sm font-medium text-gray-900 dark:text-white mb-2">
+                    AI Suggestions:
+                  </h4>
+                  <ul className="space-y-1">
+                    {report.resolutionSuggestions.map((suggestion, index) => (
+                      <li key={index} className="text-sm text-gray-600 dark:text-gray-400 flex items-start gap-2">
+                        <span className="text-blue-500 mt-1">•</span>
+                        {suggestion}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
             </div>
-          )}
-        </div>
+          ))
+        )}
       </div>
     </div>
   );

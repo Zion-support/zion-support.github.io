@@ -273,7 +273,6 @@ class BuildOptimizer {
     
     return `
 Build Optimization Report
-========================
 Bundle Size: ${metrics.bundleSize} KB
 Chunk Count: ${metrics.chunkCount}
 Load Time: ${metrics.loadTime.toFixed(2)} ms
