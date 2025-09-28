@@ -30,7 +30,12 @@ export default defineConfig(({ mode }) => ({
   build: {
     outDir: 'dist',
     // Enable source maps for production debugging
-    sourcemap: true,
+    sourcemap: mode !== 'production',
+    // Performance optimizations
+    minify: 'terser',
+    cssMinify: true,
+    reportCompressedSize: true,
+    chunkSizeWarningLimit: 1000,
     // Optimize chunk splitting
     rollupOptions: {
       input: {
@@ -44,7 +49,7 @@ export default defineConfig(({ mode }) => ({
       output: {
         // Manual chunk splitting for better caching
         manualChunks: (id) => {
-          // Vendor chunks
+          // Vendor chunks - more granular splitting
           if (id.includes('node_modules')) {
             if (id.includes('react') || id.includes('react-dom')) {
               return 'vendor-react';
@@ -52,34 +57,56 @@ export default defineConfig(({ mode }) => ({
             if (id.includes('react-router')) {
               return 'vendor-router';
             }
-            if (id.includes('framer-motion') || id.includes('lucide-react')) {
-              return 'vendor-ui';
+            if (id.includes('framer-motion')) {
+              return 'vendor-framer';
+            }
+            if (id.includes('lucide-react')) {
+              return 'vendor-icons';
+            }
+            if (id.includes('recharts')) {
+              return 'vendor-charts';
             }
             if (id.includes('clsx') || id.includes('tailwind-merge')) {
               return 'vendor-utils';
             }
+            if (id.includes('axios')) {
+              return 'vendor-http';
+            }
             // All other node_modules go to vendor
             return 'vendor';
           }
-          // App chunks
+          // App chunks - more granular splitting
           if (id.includes('src/pages/')) {
             return 'pages';
           }
           if (id.includes('src/components/')) {
+            // Split large components into separate chunks
+            if (id.includes('Advanced') || id.includes('Comprehensive')) {
+              return 'components-advanced';
+            }
             return 'components';
           }
           if (id.includes('src/utils/')) {
+            // Split utils by functionality
+            if (id.includes('advanced') || id.includes('comprehensive')) {
+              return 'utils-advanced';
+            }
             return 'utils';
+          }
+          if (id.includes('src/hooks/')) {
+            return 'hooks';
           }
         },
         // Optimize chunk file names
         chunkFileNames: 'assets/js/[name]-[hash].js',
         entryFileNames: 'assets/js/[name]-[hash].js',
         assetFileNames: 'assets/[ext]/[name]-[hash].[ext]'
-      }
+      },
+      // Enable build parallelization
+      maxParallelFileOps: 5,
+      external: [],
+      plugins: []
     },
-    // Optimize build size
-    minify: 'terser',
     terserOptions: {
       compress: {
         drop_console: true,
@@ -108,14 +135,12 @@ export default defineConfig(({ mode }) => ({
         ascii_only: true
       }
     },
-    // Set chunk size warning limit
-    chunkSizeWarningLimit: 1000,
-    // Enable CSS code splitting
-    cssCodeSplit: true,
     // Target modern browsers for better optimization
     target: ['es2020', 'edge88', 'firefox78', 'chrome87', 'safari14'],
-    // Additional build optimizations
-    reportCompressedSize: true
+    // Optimize dependencies
+    commonjsOptions: {
+      include: [/node_modules/]
+    }
   },
   server: {
     port: 3000,
@@ -133,9 +158,13 @@ export default defineConfig(({ mode }) => ({
       'framer-motion',
       'lucide-react',
       'clsx',
-      'tailwind-merge'
+      'tailwind-merge',
+      'axios',
+      'web-vitals'
     ],
-    exclude: ['@testing-library/react', '@testing-library/jest-dom']
+    exclude: ['@testing-library/react', '@testing-library/jest-dom'],
+    // Force optimization for better performance
+    force: true
   },
   // Resolve aliases for cleaner imports
   resolve: {

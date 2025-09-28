@@ -39,11 +39,14 @@ interface SecurityEvent {
 }
 
 class SecurityEnhancer {
+  private static instance: SecurityEnhancer;
   private config: SecurityConfig;
   private metrics: SecurityMetrics;
   private securityEvents: SecurityEvent[] = [];
   private blockedDomains: Set<string> = new Set();
   private suspiciousPatterns: RegExp[] = [];
+
+  // Removed duplicate getInstance method
 
   constructor(config: Partial<SecurityConfig> = {}) {
     this.config = {
@@ -73,6 +76,13 @@ class SecurityEnhancer {
 
     this.initializeSuspiciousPatterns();
     this.initialize();
+  }
+
+  public static getInstance(config?: Partial<SecurityConfig>): SecurityEnhancer {
+    if (!SecurityEnhancer.instance) {
+      SecurityEnhancer.instance = new SecurityEnhancer(config);
+    }
+    return SecurityEnhancer.instance;
   }
 
   private initializeSuspiciousPatterns(): void {
@@ -434,3 +444,6 @@ export const securityEnhancer = new SecurityEnhancer();
 // Export class for custom instances
 export { SecurityEnhancer };
 export type { SecurityConfig, SecurityMetrics, SecurityEvent };
+
+// Default export for compatibility
+export default SecurityEnhancer;

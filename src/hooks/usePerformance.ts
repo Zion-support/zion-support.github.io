@@ -36,11 +36,14 @@ export const usePerformance = (componentName: string) => {
   useEffect(() => {
     // Mark mount start
     mountStartTime.current = performance.now();
-    performanceMonitor.startMeasure(`${componentName}-mount`);
+    performance.mark(`${componentName}-mount-start`);
 
     return () => {
       // Measure mount time on unmount
-      const mountTime = performanceMonitor.endMeasure(`${componentName}-mount`);
+      performance.mark(`${componentName}-mount-end`);
+      performance.measure(`${componentName}-mount`, `${componentName}-mount-start`, `${componentName}-mount-end`);
+      const measure = performance.getEntriesByName(`${componentName}-mount`)[0];
+      const mountTime = measure ? measure.duration : 0;
       setMetrics(prev => ({ ...prev, mountTime }));
     };
   }, [componentName]);
@@ -53,11 +56,14 @@ export const usePerformance = (componentName: string) => {
 
   const startRender = () => {
     renderStartTime.current = performance.now();
-    performanceMonitor.startMeasure(`${componentName}-render`);
+    performance.mark(`${componentName}-render-start`);
   };
 
   const endRender = () => {
-    const renderTime = performanceMonitor.endMeasure(`${componentName}-render`);
+    performance.mark(`${componentName}-render-end`);
+    performance.measure(`${componentName}-render`, `${componentName}-render-start`, `${componentName}-render-end`);
+    const measure = performance.getEntriesByName(`${componentName}-render`)[0];
+    const renderTime = measure ? measure.duration : 0;
     setMetrics(prev => ({ ...prev, renderTime }));
   };
 
