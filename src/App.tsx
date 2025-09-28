@@ -22,7 +22,7 @@ import { enhancedSEOOptimizer } from './utils/enhancedSEOOptimizer';
 import { enhancedSecuritySystem } from './utils/enhancedSecuritySystem';
 import { enhancedAccessibilitySystem } from './utils/enhancedAccessibilitySystem';
 import { apiCache as apiCacheSystem, imageCache as imageCacheSystem, dataCache as dataCacheSystem } from './utils/enhancedCachingSystem';
-import { enhancedAnalyticsSystem } from './utils/enhancedAnalyticsSystem';
+import { analyticsSystem as enhancedAnalyticsSystem } from './utils/enhancedAnalyticsSystem';
 
 // Import new advanced systems
 import { performanceAnalytics } from './utils/advancedPerformanceAnalytics';
