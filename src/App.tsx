@@ -189,16 +189,7 @@ export default function App(): React.JSX.Element {
       analytics.initialize();
       
       // Get comprehensive enhancements
-      const enhancements = getComprehensiveEnhancements({
-        enableAdvancedPerformance: true,
-        enableSecurityFeatures: true,
-        enableAccessibilityFeatures: true,
-        enableSEOFeatures: true,
-        enableUXFeatures: true,
-        enableAnalytics: true,
-        enableOfflineSupport: true,
-        enablePWA: true
-      });
+      const enhancements = getComprehensiveEnhancements();
 
       // Store enhancements globally for debugging
       (window as unknown as Record<string, unknown>).enhancements = enhancements;
@@ -409,7 +400,7 @@ export default function App(): React.JSX.Element {
     };
 
     const handleClickWithEngagement = (_event: Event) => {
-      handleClick();
+      handleClick(new Event('click'));
       trackEngagement();
     };
 
