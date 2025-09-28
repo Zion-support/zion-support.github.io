@@ -56,6 +56,10 @@
   NODE_ENV = "production"
   # Optimize build performance
   CI = "true"
+  # Enable build optimizations
+  VITE_BUILD_OPTIMIZE = "true"
+  # Disable telemetry
+  VITE_TELEMETRY_DISABLED = "true"
 
 # Explicitly disable Netlify post-processing to avoid transform issues
 [build.processing]

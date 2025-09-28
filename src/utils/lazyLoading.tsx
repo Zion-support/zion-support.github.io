@@ -1,5 +1,29 @@
 import React, { lazy, ComponentType, useState, useEffect, useRef, Suspense } from 'react';
 
+// Add useLazyImage hook export
+export function useLazyImage(src: string, placeholder?: string) {
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [imageSrc, setImageSrc] = useState(placeholder || '');
+  const elementRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!src) return;
+
+    const img = new Image();
+    img.onload = () => {
+      setImageSrc(src);
+      setIsLoaded(true);
+    };
+    img.src = src;
+  }, [src]);
+
+  return {
+    elementRef,
+    imageSrc,
+    isLoaded
+  };
+}
+
 /**
  * Enhanced lazy loading utility with error boundaries and loading states
  */
@@ -11,7 +35,7 @@ export function createLazyComponent<T extends ComponentType<any>>(
   
   return function LazyWrapper(props: any) {
     return (
-      <Suspense fallback={fallback ? <fallback /> : <div>Loading...</div>}>
+      <Suspense fallback={fallback ? React.createElement(fallback) : <div>Loading...</div>}>
         <LazyComponent {...props} />
       </Suspense>
     );
