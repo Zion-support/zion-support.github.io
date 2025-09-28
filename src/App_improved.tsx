@@ -155,12 +155,13 @@ export default function App(): React.JSX.Element {
     if (uiState.showPerformanceMonitor) {
       const interval = setInterval(() => {
         const metrics = enhancedPerformanceMonitor.getMetrics();
-        if (metrics.get('memoryUsage') && (metrics.get('memoryUsage') as any).value > 0.8) {
+        const memoryMetric = metrics.get('memoryUsage') as { value: number } | undefined;
+        if (memoryMetric && memoryMetric.value > 0.8) {
           setNotifications(prev => [...prev, {
             id: Date.now().toString(),
             type: 'warning',
             title: 'High Memory Usage',
-            message: `Memory usage is at ${((metrics.get('memoryUsage') as any)?.value * 100 || 0).toFixed(1)}%`,
+            message: `Memory usage is at ${(memoryMetric.value * 100).toFixed(1)}%`,
             duration: 3000
           }]);
         }
