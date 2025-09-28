@@ -438,16 +438,13 @@ export default function App(): React.JSX.Element {
         isVisible={showSystemDashboard}
         onClose={() => setShowSystemDashboard(false)}
       />
-<<<<<<< HEAD
+      {showSystemDashboard && <EnhancedSystemDashboard />}
       <EnhancedNotificationSystem 
         position="top-right"
         enableAnimations
         enableAccessibility
         maxNotifications={5}
       />
-=======
-      {showSystemDashboard && <EnhancedSystemDashboard />}
->>>>>>> b9b158dbccab6a38a5e3df973ddf7fcd4480ec8c
     </>
   );
 }
