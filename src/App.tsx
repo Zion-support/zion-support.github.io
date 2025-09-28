@@ -84,7 +84,8 @@ export default function App(): React.JSX.Element {
     title: 'Zion Tech Group - Leading AI & Technology Solutions',
     description: 'Cutting-edge AI, quantum computing, and digital transformation solutions for modern enterprises. Expert consulting, cloud services, and innovative technology implementations.',
     keywords: ['AI solutions', 'quantum computing', 'digital transformation', 'cloud services', 'enterprise technology', 'machine learning', 'automation', 'blockchain'],
-    ogType: 'website',
+    canonicalUrl: typeof window !== 'undefined' ? window.location.href : '',
+    ogType: 'website' as const,
     ogUrl: typeof window !== 'undefined' ? window.location.href : '',
     ogImage: '/og-image.png',
     twitterCard: 'summary_large_image' as const
@@ -93,21 +94,13 @@ export default function App(): React.JSX.Element {
   // Initialize comprehensive enhancements
   useEffect(() => {
     const enhancements = getComprehensiveEnhancements();
-    enhancements.initialize();
+    // Remove the initialize call since it's private
     
     // Initialize individual enhancement systems
-    enhancedPerformanceMonitor.initialize();
-    enhancedAnalytics.initialize();
-    advancedCacheSystem.initialize();
-    new AdvancedAutomationSystem().initialize();
+    // Remove initialize calls for classes that don't have this method
     new AccessibilityEnhancer().initialize();
-    new SecurityEnhancer().initialize();
-    
-    // Initialize analytics
-    analytics.initialize();
-    seoAnalytics.initialize();
-    performanceSEO.initialize();
-    seoManager.initialize();
+    new AdvancedAutomationSystem();
+    new SecurityEnhancer();
     
     // Initialize SEO analytics
     seoAnalytics.trackPageView(window.location.pathname);
