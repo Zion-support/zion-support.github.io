@@ -214,14 +214,15 @@ export default function App(): React.JSX.Element {
       performance.measure('app-initialization', 'app-init-start', 'app-init-complete');
     }
 
-    // Cleanup function
+  // Cleanup function for event listeners
+  useEffect(() => {
     return () => {
       window.removeEventListener('beforeunload', trackEngagement);
       window.removeEventListener('scroll', handleScroll);
       document.removeEventListener('click', handleClick);
       document.removeEventListener('keydown', handleKeyDown);
     };
-  }, [trackEngagement, handleScroll, handleClick, handleKeyDown, seoData]);
+  }, [trackEngagement, handleScroll, handleClick, handleKeyDown]);
 
   // Show loading screen while initializing
   if (isLoading) {
