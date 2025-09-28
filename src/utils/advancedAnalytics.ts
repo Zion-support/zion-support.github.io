@@ -4,7 +4,7 @@
 
 export interface AnalyticsEvent {
   name: string;
-  properties: Record<string, any>;
+  properties: Record<string, unknown>;
   timestamp: number;
   userId?: string;
   sessionId: string;
@@ -76,7 +76,7 @@ export class AdvancedAnalytics {
     });
   }
 
-  public trackEvent(name: string, properties: Record<string, any> = {}): void {
+  public trackEvent(name: string, properties: Record<string, unknown> = {}): void {
     const event: AnalyticsEvent = {
       name,
       properties,
