@@ -64,8 +64,7 @@ class BundleOptimizer {
 
     try {
       await this.performBundleAnalysis();
-      this.analysis = this.analysis;
-      return this.analysis;
+      return this.analysis!;
     } finally {
       this.isAnalyzing = false;
     }
