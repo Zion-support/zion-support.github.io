@@ -12,6 +12,7 @@ export interface ErrorContext {
   url: string;
   userAgent: string;
   stack?: string;
+  severity?: 'low' | 'medium' | 'high' | 'critical';
 }
 
 export interface ErrorReport {
@@ -106,7 +107,7 @@ export class EnhancedErrorRecovery {
         },
         condition: (error, context) => {
           return context.action === 'network_error' && 
-                 this.retryAttempts.get(context.url || '') < this.MAX_RETRY_ATTEMPTS;
+                 (this.retryAttempts.get(context.url || '') || 0) < this.MAX_RETRY_ATTEMPTS;
         },
         priority: 1
       },
@@ -131,7 +132,7 @@ export class EnhancedErrorRecovery {
         },
         condition: (error, context) => {
           return context.severity === 'critical' && 
-                 this.retryAttempts.get(context.url || '') >= this.MAX_RETRY_ATTEMPTS;
+                 (this.retryAttempts.get(context.url || '') || 0) >= this.MAX_RETRY_ATTEMPTS;
         },
         priority: 3
       },
