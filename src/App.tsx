@@ -213,20 +213,12 @@ export default function App(): React.JSX.Element {
       enhancedPerformanceMonitor.startMonitoring();
       
       // Initialize new advanced systems
-<<<<<<< HEAD
-      if ('initialize' in performanceOptimizer) {
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        (performanceOptimizer as any).initialize();
-      }
-      enhancedSecurityManager.initialize();
-=======
       // performanceOptimizer is already initialized as a singleton
       enhancedSecurityManager.initialize();
       new AdvancedAutomationSystem().initialize();
       // Initialize enhancement systems
       accessibilityEnhancer.initialize();
       // securityEnhancer is already initialized in constructor
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-dff5
       
       // Initialize analytics
       if ('initialize' in analytics) {
