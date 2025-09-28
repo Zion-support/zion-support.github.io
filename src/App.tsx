@@ -54,6 +54,7 @@ const DynamicMetaTags = lazy(() => import('./components/DynamicMetaTags'));
 const SystemStatusIndicator = lazy(() => import('./components/SystemStatusIndicator'));
 const EnhancedNotificationSystem = lazy(() => import('./components/EnhancedNotificationSystem'));
 const KeyboardShortcutsManager = lazy(() => import('./components/KeyboardShortcutsManager'));
+const ErrorRecoveryDashboard = lazy(() => import('./components/ErrorRecoveryDashboard'));
 
 export default function App(): React.JSX.Element {
   const navigate = useNavigate();
@@ -776,6 +777,11 @@ export default function App(): React.JSX.Element {
         {/* Performance Optimization Panel */}
         <Suspense fallback={null}>
           <PerformanceOptimizationPanel />
+        </Suspense>
+
+        {/* Error Recovery Dashboard */}
+        <Suspense fallback={null}>
+          <ErrorRecoveryDashboard />
         </Suspense>
 
         {/* System Status Indicator */}
