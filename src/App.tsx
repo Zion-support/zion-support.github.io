@@ -8,11 +8,6 @@ import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import { analytics } from './utils/analytics';
 import { seoAnalytics, performanceSEO, seoManager } from './utils/seoEnhanced';
-import { seoOptimizer } from './utils/seoOptimization';
-import { cacheManager } from './utils/cacheManager';
-import { apiClient } from './utils/apiClient';
-import { notificationManager } from './utils/notificationManager';
-import { userFeedback } from './utils/userFeedbackManager';
 import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
 import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
 import { enhancedAnalytics } from './utils/enhancedAnalytics';
@@ -27,14 +22,8 @@ export default function App(): React.JSX.Element {
   const [showSystemDashboard, setShowSystemDashboard] = useState(false);
   const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
 
-  // Engagement tracking data
-  const engagementData = useMemo(() => ({
-    startTime: Date.now(),
-    scrollDepth: 0,
-    clicks: 0
-  }), []);
   // Initialize app with custom configuration
-  const { isLoading, loadingProgress, handleScroll, handleClick, trackEngagement } = useAppInitialization({
+  const { isLoading, loadingProgress, engagementData, handleScroll, handleClick } = useAppInitialization({
     enablePerformanceMonitoring: true,
     enableAccessibility: true,
     enableSecurity: true,
@@ -75,20 +64,9 @@ export default function App(): React.JSX.Element {
     });
 
     // Store enhancements globally for debugging
-    (window as unknown as Record<string, unknown>).enhancements = enhancements;
+    (window as Record<string, unknown>).enhancements = enhancements;
   }, []);
 
-  // Optimized keyboard handler for system dashboard toggle
-  const handleKeyDown = useCallback((event: KeyboardEvent) => {
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'D') {
-      event.preventDefault();
-      setShowSystemDashboard(prev => !prev);
-    }
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'P') {
-      event.preventDefault();
-      setShowPerformanceOptimizer(prev => !prev);
-    }
-  }, []);
   // Memoize the SEO data to prevent unnecessary re-renders
   const seoData = useMemo(() => ({
     title: 'Zion Tech Group - Leading AI & Technology Solutions',
@@ -97,34 +75,18 @@ export default function App(): React.JSX.Element {
     ogType: 'website',
     ogUrl: typeof window !== 'undefined' ? window.location.href : '',
     ogImage: '/og-image.png',
-    twitterCard: 'summary_large_image' as const,
-    structuredData: []
+    twitterCard: 'summary_large_image' as const
   }), []);
 
-  // Simple SEO manager
-  const seoManagerInstance = {
-    updateMetaTags: (data: typeof seoData) => {
-      if (typeof document !== 'undefined') {
-        document.title = data.title;
-        const metaDescription = document.querySelector('meta[name="description"]');
-        if (metaDescription) {
-          metaDescription.setAttribute('content', data.description);
-        }
-      }
-    }
-  };
-
-  // Track engagement function (enhanced version)
-  const enhancedTrackEngagement = useCallback(() => {
+  // Track engagement function
+  const trackEngagement = useCallback(() => {
     const timeOnPage = Date.now() - engagementData.startTime;
     seoAnalytics.trackUserEngagement(window.location.pathname, {
       timeOnPage,
       scrollDepth: engagementData.scrollDepth,
       clicks: engagementData.clicks,
     });
-    // Also call the original trackEngagement from useAppInitialization
-    trackEngagement();
-  }, [engagementData, trackEngagement]);
+  }, [engagementData]);
 
   useEffect(() => {
     // Add performance marks for better monitoring
@@ -139,7 +101,6 @@ export default function App(): React.JSX.Element {
     // Use passive listeners for better performance
     window.addEventListener('scroll', handleScroll, { passive: true });
     document.addEventListener('click', handleClick, { passive: true });
-    document.addEventListener('keydown', handleKeyDown);
 
     // Initialize basic systems
     analytics.initialize();
@@ -152,23 +113,12 @@ export default function App(): React.JSX.Element {
     performanceSEO.preloadCriticalResources();
     performanceSEO.optimizeFonts();
     performanceSEO.optimizeCSS();
-    
+
     // Initialize analytics system
-    analytics.initialize();
     analytics.trackPageView();
 
-    // Set default SEO data using the correct method
-    seoManagerInstance.updateMetaTags(seoData);
-
-    // Use passive listeners for better performance
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    document.addEventListener('click', handleClick, { passive: true });
-  }, [seoData, handleScroll, handleClick, handleKeyDown, preloadResource]);
-
-  // Main initialization and cleanup effect
-  React.useEffect(() => {
-    // Track engagement on page unload
-    window.addEventListener('beforeunload', enhancedTrackEngagement);
+    // Set default SEO data
+    seoManager.updateMetaTags(seoData);
 
     // Mark app as fully initialized
     if (typeof window !== 'undefined' && window.performance && 
@@ -182,19 +132,29 @@ export default function App(): React.JSX.Element {
     if (typeof window !== 'undefined') {
       console.log('🚀 Zion Tech Group App initialized');
     }
+  }, [seoData, handleScroll, handleClick, preloadResource]);
+
+  // Main initialization and cleanup effect
+  React.useEffect(() => {
+    // Track engagement on page unload
+    window.addEventListener('beforeunload', trackEngagement);
+
     // Cleanup function
     return () => {
-      document.removeEventListener('keydown', handleKeyDown);
-      window.removeEventListener('beforeunload', enhancedTrackEngagement);
+      window.removeEventListener('beforeunload', trackEngagement);
       
       // Final engagement tracking
-      enhancedTrackEngagement();
-      
-      // Remove event listeners
+      trackEngagement();
+    };
+  }, [trackEngagement]);
+
+  // Cleanup function for event listeners
+  useEffect(() => {
+    return () => {
       window.removeEventListener('scroll', handleScroll);
       document.removeEventListener('click', handleClick);
     };
-  }, [enhancedTrackEngagement, handleKeyDown, handleScroll, handleClick, seoData, preloadResource]);
+  }, [handleScroll, handleClick]);
 
   // Show loading screen while initializing
   if (isLoading) {
