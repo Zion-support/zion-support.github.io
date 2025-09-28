@@ -1,4 +1,5 @@
 import { useEffect, useCallback, useRef } from 'react';
+import { AdvancedPerformanceMonitor } from '../utils/advancedPerformanceMonitor';
 import { NetworkInformation } from '../types/global';
 
 interface PerformanceOptimizationConfig {
@@ -36,7 +37,7 @@ interface ImageOptimizationOptions {
 export const usePerformanceOptimization = (
   config: PerformanceOptimizationConfig = {}
 ): PerformanceOptimizationReturn => {
-  const monitor = useRef<any>(null);
+  const monitor = useRef(new AdvancedPerformanceMonitor());
   const configRef = useRef({
     enableLazyLoading: true,
     enablePreloading: true,
@@ -51,14 +52,14 @@ export const usePerformanceOptimization = (
 
   // Initialize performance monitoring
   useEffect(() => {
-    if (configRef.current.enableWebVitals && monitor.current) {
-      monitor.current.start();
+    const perfMonitor = monitor.current;
+    
+    if (configRef.current.enableWebVitals) {
+      perfMonitor.start();
     }
 
     return () => {
-      if (monitor.current) {
-        monitor.current.stop();
-      }
+      perfMonitor.stop();
     };
   }, []);
 
@@ -114,9 +115,9 @@ export const usePerformanceOptimization = (
   }, [recordMetric]);
 
   // Get current performance metrics
-  const getPerformanceMetrics = useCallback(() => {
-    return monitor.current?.getMetrics() || {};
-  }, []);
+  // const getPerformanceMetrics = useCallback(() => {
+  //   return monitor.current.getLatestMetrics();
+  // }, []);
 
   // Optimize images with responsive loading
   const optimizeImage = useCallback((src: string): string => {
@@ -324,7 +325,10 @@ export const usePerformanceOptimization = (
     preloadResource,
     recordMetric,
     measurePerformance,
-    getPerformanceMetrics,
+    getPerformanceMetrics: () => {
+      const metrics = monitor.current.getMetrics();
+      return metrics ? Object.fromEntries(Object.entries(metrics)) : {};
+    },
     optimizeImage,
     addResourceHint,
     optimizePerformance,
