@@ -19,14 +19,13 @@ interface ErrorReport {
   message: string;
   lastOccurrence: string | Date;
   occurrenceCount: number;
-  severity: 'low' | 'medium' | 'high' | 'critical';
+  severity?: 'low' | 'medium' | 'high' | 'critical';
   context: {
     component?: string;
     action?: string;
   };
   aiPredictedImpact?: number;
   resolutionSuggestions?: string[];
-  severity?: string;
   [key: string]: unknown;
 }
 
