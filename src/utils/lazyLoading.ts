@@ -111,3 +111,36 @@ export function createRetryLazyComponent<T extends ComponentType<any>>(
   
   return LazyComponent;
 }
+
+/**
+ * Hook for lazy loading images with intersection observer
+ */
+export function useLazyImage(src: string, placeholder?: string) {
+  const [imageSrc, setImageSrc] = React.useState(placeholder || '');
+  const [isLoaded, setIsLoaded] = React.useState(false);
+  const elementRef = React.useRef<HTMLDivElement>(null);
+
+  React.useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setImageSrc(src);
+          setIsLoaded(true);
+          observer.disconnect();
+        }
+      },
+      {
+        threshold: 0.1,
+        rootMargin: '50px'
+      }
+    );
+
+    if (elementRef.current) {
+      observer.observe(elementRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, [src]);
+
+  return { elementRef, imageSrc, isLoaded };
+}
