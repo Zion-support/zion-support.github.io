@@ -177,7 +177,7 @@ class PerformanceMetricsCollector {
   }
 
   public generateReport(): PerformanceReport {
-    const highImpactMetrics = this.getHighImpactMetrics();
+    // const highImpactMetrics = this.getHighImpactMetrics();
     const overallScore = this.calculateOverallScore();
     const recommendations = this.generateRecommendations();
 
@@ -266,19 +266,19 @@ export const getNetworkMetrics = (): PerformanceMetric[] => {
 
 export const getMemoryMetrics = (): PerformanceMetric[] => {
   if ('memory' in performance) {
-    const memory = (performance as any).memory;
+    const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
     return [
       {
         name: 'Used JS Heap Size',
-        value: memory.usedJSHeapSize,
+        value: memory?.usedJSHeapSize || 0,
         unit: 'bytes',
         timestamp: Date.now(),
         category: 'memory',
-        impact: memory.usedJSHeapSize > 50000000 ? 'high' : memory.usedJSHeapSize > 25000000 ? 'medium' : 'low'
+        impact: (memory?.usedJSHeapSize || 0) > 50000000 ? 'high' : (memory?.usedJSHeapSize || 0) > 25000000 ? 'medium' : 'low'
       },
       {
         name: 'Total JS Heap Size',
-        value: memory.totalJSHeapSize,
+        value: memory?.totalJSHeapSize || 0,
         unit: 'bytes',
         timestamp: Date.now(),
         category: 'memory',
@@ -286,7 +286,7 @@ export const getMemoryMetrics = (): PerformanceMetric[] => {
       },
       {
         name: 'JS Heap Size Limit',
-        value: memory.jsHeapSizeLimit,
+        value: memory?.jsHeapSizeLimit || 0,
         unit: 'bytes',
         timestamp: Date.now(),
         category: 'memory',

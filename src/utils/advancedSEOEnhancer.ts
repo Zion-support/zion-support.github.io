@@ -28,7 +28,7 @@ interface PageSEOData {
   twitterTitle?: string;
   twitterDescription?: string;
   twitterImage?: string;
-  structuredData?: any;
+  structuredData?: Record<string, unknown>;
   breadcrumbs?: Array<{ name: string; url: string }>;
 }
 
@@ -206,7 +206,7 @@ class AdvancedSEOEnhancer {
   /**
    * Add structured data
    */
-  private addStructuredData(structuredData: any): void {
+  private addStructuredData(structuredData: Record<string, unknown>): void {
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(structuredData);

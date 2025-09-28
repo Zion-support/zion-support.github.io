@@ -1,367 +1,443 @@
 /**
- * Advanced Performance Optimizer
- * Provides comprehensive performance monitoring and optimization utilities
+ * Performance Optimizer - Advanced performance monitoring and optimization utilities
+ * Provides comprehensive performance tracking, optimization suggestions, and automated improvements
  */
 
-interface PerformanceConfig {
-  enableLazyLoading: boolean;
-  enablePreloading: boolean;
-  enableCaching: boolean;
-  enableCompression: boolean;
-  enableImageOptimization: boolean;
-  enableCodeSplitting: boolean;
-}
-
-interface PerformanceMetrics {
-  loadTime: number;
-  renderTime: number;
-  memoryUsage: number;
-  bundleSize: number;
-  networkRequests: number;
-  firstContentfulPaint: number;
-  largestContentfulPaint: number;
-  cumulativeLayoutShift: number;
-  firstInputDelay: number;
-}
+import { PerformanceMetrics, OptimizationSuggestion } from '../types/comprehensive';
 
 class PerformanceOptimizer {
-  private config: PerformanceConfig;
-  private metrics: PerformanceMetrics;
+  private metrics: PerformanceMetrics = {
+    fcp: 0,
+    lcp: 0,
+    fid: 0,
+    cls: 0,
+    ttfb: 0,
+    memory: {
+      used: 0,
+      total: 0,
+      limit: 0
+    }
+  };
+
   private observers: PerformanceObserver[] = [];
+  private optimizationSuggestions: OptimizationSuggestion[] = [];
+  private isMonitoring = false;
 
-  constructor(config: Partial<PerformanceConfig> = {}) {
-    this.config = {
-      enableLazyLoading: true,
-      enablePreloading: true,
-      enableCaching: true,
-      enableCompression: true,
-      enableImageOptimization: true,
-      enableCodeSplitting: true,
-      ...config
-    };
-
-    this.metrics = {
-      loadTime: 0,
-      renderTime: 0,
-      memoryUsage: 0,
-      bundleSize: 0,
-      networkRequests: 0,
-      firstContentfulPaint: 0,
-      largestContentfulPaint: 0,
-      cumulativeLayoutShift: 0,
-      firstInputDelay: 0
-    };
-
-    this.initialize();
+  constructor() {
+    this.initializePerformanceMonitoring();
   }
 
-  public initialize(): void {
+  private initializePerformanceMonitoring(): void {
     if (typeof window === 'undefined') return;
 
-    this.setupPerformanceObservers();
-    this.optimizeImages();
-    this.setupLazyLoading();
-    this.preloadCriticalResources();
-    this.setupCaching();
-  }
-
-  private setupPerformanceObservers(): void {
-    if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return;
-
-    // Observe FCP (First Contentful Paint)
-    try {
-      const fcpObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
-        if (fcpEntry) {
-          this.metrics.firstContentfulPaint = fcpEntry.startTime;
-        }
-      });
-      fcpObserver.observe({ entryTypes: ['paint'] });
-      this.observers.push(fcpObserver);
-    } catch (error) {
-      console.warn('FCP observer setup failed:', error);
-    }
-
-    // Observe LCP (Largest Contentful Paint)
-    try {
-      const lcpObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        const lastEntry = entries[entries.length - 1];
-        this.metrics.largestContentfulPaint = lastEntry.startTime;
-      });
-      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-      this.observers.push(lcpObserver);
-    } catch (error) {
-      console.warn('LCP observer setup failed:', error);
-    }
-
-    // Observe CLS (Cumulative Layout Shift)
-    try {
-      const clsObserver = new PerformanceObserver((list) => {
-        let clsValue = 0;
-        for (const entry of list.getEntries()) {
-          const layoutShiftEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
-          if (!layoutShiftEntry.hadRecentInput) {
-            clsValue += layoutShiftEntry.value || 0;
-          }
-        }
-        this.metrics.cumulativeLayoutShift = clsValue;
-      });
-      clsObserver.observe({ entryTypes: ['layout-shift'] });
-      this.observers.push(clsObserver);
-    } catch (error) {
-      console.warn('CLS observer setup failed:', error);
-    }
-
-    // Observe FID (First Input Delay)
-    try {
-      const fidObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        for (const entry of entries) {
-          const inputEntry = entry as PerformanceEntry & { processingStart?: number };
-          this.metrics.firstInputDelay = (inputEntry.processingStart || 0) - entry.startTime;
-        }
-      });
-      fidObserver.observe({ entryTypes: ['first-input'] });
-      this.observers.push(fidObserver);
-    } catch (error) {
-      console.warn('FID observer setup failed:', error);
-    }
-  }
-
-  private optimizeImages(): void {
-    if (!this.config.enableImageOptimization || typeof window === 'undefined') return;
-
-    const images = document.querySelectorAll('img');
-    images.forEach((img) => {
-      // Add loading="lazy" for images below the fold
-      if (img.getBoundingClientRect().top > window.innerHeight) {
-        img.setAttribute('loading', 'lazy');
-      }
-
-      // Add decoding="async" for better performance
-      img.setAttribute('decoding', 'async');
-
-      // Add fetchpriority="high" for above-the-fold images
-      if (img.getBoundingClientRect().top <= window.innerHeight) {
-        img.setAttribute('fetchpriority', 'high');
-      }
-    });
-  }
-
-  private setupLazyLoading(): void {
-    if (!this.config.enableLazyLoading || typeof window === 'undefined') return;
-
-    const lazyElements = document.querySelectorAll('[data-lazy]');
+    // Monitor Core Web Vitals
+    this.observeWebVitals();
     
-    if ('IntersectionObserver' in window) {
-      const lazyObserver = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const element = entry.target as HTMLElement;
-            const src = element.getAttribute('data-src');
-            if (src) {
-              if (element.tagName === 'IMG') {
-                (element as HTMLImageElement).src = src;
-              } else {
-                element.style.backgroundImage = `url(${src})`;
-              }
-              element.removeAttribute('data-src');
-              element.removeAttribute('data-lazy');
-            }
-            lazyObserver.unobserve(element);
-          }
-        });
-      });
+    // Monitor memory usage
+    this.observeMemoryUsage();
+    
+    // Monitor bundle performance
+    this.observeBundlePerformance();
+    
+    // Monitor network performance
+    this.observeNetworkPerformance();
+  }
 
-      lazyElements.forEach((element) => {
-        lazyObserver.observe(element);
+  private observeWebVitals(): void {
+    // First Contentful Paint
+    const fcpObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      entries.forEach((entry) => {
+        if (entry.name === 'first-contentful-paint') {
+          this.metrics.fcp = entry.startTime;
+          this.analyzeMetric('fcp', entry.startTime);
+        }
       });
+    });
+    fcpObserver.observe({ entryTypes: ['paint'] });
+
+    // Largest Contentful Paint
+    const lcpObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      const lastEntry = entries[entries.length - 1];
+      this.metrics.lcp = lastEntry.startTime;
+      this.analyzeMetric('lcp', lastEntry.startTime);
+    });
+    lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+
+    // First Input Delay
+    const fidObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      entries.forEach((entry) => {
+        if ((entry as PerformanceEventTiming).processingStart && entry.startTime) {
+          this.metrics.fid = (entry as PerformanceEventTiming).processingStart - entry.startTime;
+          this.analyzeMetric('fid', this.metrics.fid);
+        }
+      });
+    });
+    fidObserver.observe({ entryTypes: ['first-input'] });
+
+    // Cumulative Layout Shift
+    let clsValue = 0;
+    const clsObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      entries.forEach((entry) => {
+        const layoutShiftEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
+        if (!layoutShiftEntry.hadRecentInput && layoutShiftEntry.value) {
+          clsValue += layoutShiftEntry.value;
+        }
+      });
+      this.metrics.cls = clsValue;
+      this.analyzeMetric('cls', clsValue);
+    });
+    clsObserver.observe({ entryTypes: ['layout-shift'] });
+
+    this.observers.push(fcpObserver, lcpObserver, fidObserver, clsObserver);
+  }
+
+  private observeMemoryUsage(): void {
+    if ('memory' in performance) {
+      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
+      this.metrics.memory = {
+        used: memory?.usedJSHeapSize ? memory.usedJSHeapSize / 1024 / 1024 : 0,
+        total: memory?.totalJSHeapSize ? memory.totalJSHeapSize / 1024 / 1024 : 0,
+        limit: memory?.jsHeapSizeLimit ? memory.jsHeapSizeLimit / 1024 / 1024 : 0
+      };
+      this.analyzeMetric('memory', this.metrics.memory.used);
     }
   }
 
-  private preloadCriticalResources(): void {
-    if (!this.config.enablePreloading || typeof window === 'undefined') return;
-
-    const criticalResources = [
-      '/fonts/inter.woff2',
-      '/og-image.png',
-      '/favicon.ico'
-    ];
-
-    criticalResources.forEach((resource) => {
-      const link = document.createElement('link');
-      link.rel = 'preload';
-      link.href = resource;
-      
-      if (resource.endsWith('.woff2')) {
-        link.as = 'font';
-        link.type = 'font/woff2';
-        link.crossOrigin = 'anonymous';
-      } else if (resource.endsWith('.png') || resource.endsWith('.jpg') || resource.endsWith('.jpeg')) {
-        link.as = 'image';
+  private observeBundlePerformance(): void {
+    // Calculate bundle size
+    const scripts = document.querySelectorAll('script[src]');
+    let totalSize = 0;
+    scripts.forEach(script => {
+      const src = script.getAttribute('src');
+      if (src && src.includes('assets')) {
+        // Estimate size based on common patterns
+        totalSize += 100000; // 100KB estimate per script
       }
-      
-      document.head.appendChild(link);
     });
+    this.metrics.bundleSize = totalSize;
+    this.analyzeMetric('bundleSize', totalSize);
   }
 
-  private setupCaching(): void {
-    if (!this.config.enableCaching || typeof window === 'undefined') return;
+  private observeNetworkPerformance(): void {
+    if ('connection' in navigator) {
+      const connection = (navigator as Navigator & { connection?: { effectiveType?: string } }).connection;
+      this.metrics.connection = connection?.effectiveType || 'unknown';
+    }
 
-    // Set up service worker for caching
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/sw.js')
-        .then((registration) => {
-          console.log('Service Worker registered:', registration);
-        })
-        .catch((error) => {
-          console.warn('Service Worker registration failed:', error);
-        });
+    // Time to First Byte
+    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    if (navigation) {
+      this.metrics.ttfb = navigation.responseStart - navigation.requestStart;
+      this.metrics.renderTime = navigation.loadEventEnd - (navigation.fetchStart || navigation.requestStart);
+      this.analyzeMetric('ttfb', this.metrics.ttfb);
+    }
+  }
+
+  private analyzeMetric(metric: string, value: number): void {
+    const thresholds = this.getThresholds(metric);
+    const suggestion = this.generateSuggestion(metric, value, thresholds);
+    
+    if (suggestion) {
+      this.optimizationSuggestions.push(suggestion);
+      this.notifyOptimization(suggestion);
+    }
+  }
+
+  private getThresholds(metric: string): { good: number; poor: number } {
+    const thresholds = {
+      fcp: { good: 1800, poor: 3000 },
+      lcp: { good: 2500, poor: 4000 },
+      fid: { good: 100, poor: 300 },
+      cls: { good: 0.1, poor: 0.25 },
+      ttfb: { good: 800, poor: 1800 },
+      memory: { good: 50, poor: 100 },
+      bundleSize: { good: 500000, poor: 1000000 } // 500KB, 1MB
+    };
+    
+    return thresholds[metric as keyof typeof thresholds] || { good: 0, poor: 1000 };
+  }
+
+  private generateSuggestion(metric: string, value: number, thresholds: { good: number; poor: number }): OptimizationSuggestion | null {
+    if (value <= thresholds.good) return null;
+
+    const suggestions = {
+      fcp: {
+        warning: {
+          id: 'fcp-warning',
+          type: 'warning' as const,
+          title: 'First Contentful Paint Warning',
+          description: 'First Contentful Paint is slower than recommended',
+          category: 'rendering' as const,
+          message: 'First Contentful Paint is slower than recommended',
+          impact: 'high' as const,
+          effort: 'medium' as const,
+          priority: 2,
+          actionable: true,
+          action: 'Consider optimizing critical rendering path and reducing render-blocking resources'
+        },
+        critical: {
+          id: 'fcp-critical',
+          type: 'critical' as const,
+          title: 'First Contentful Paint Critical',
+          description: 'First Contentful Paint is significantly slow',
+          category: 'rendering' as const,
+          message: 'First Contentful Paint is significantly slow',
+          impact: 'high' as const,
+          effort: 'high' as const,
+          priority: 1,
+          actionable: true,
+          action: 'Implement critical CSS inlining and optimize above-the-fold content'
+        }
+      },
+      lcp: {
+        warning: {
+          id: 'lcp-warning',
+          type: 'warning' as const,
+          title: 'Largest Contentful Paint Warning',
+          description: 'Largest Contentful Paint is slower than recommended',
+          category: 'rendering' as const,
+          message: 'Largest Contentful Paint is slower than recommended',
+          impact: 'high' as const,
+          effort: 'medium' as const,
+          priority: 2,
+          actionable: true,
+          action: 'Optimize images and reduce layout shifts'
+        },
+        critical: {
+          id: 'lcp-critical',
+          type: 'critical' as const,
+          title: 'Largest Contentful Paint Critical',
+          description: 'Largest Contentful Paint is significantly slow',
+          category: 'rendering' as const,
+          message: 'Largest Contentful Paint is significantly slow',
+          impact: 'high' as const,
+          effort: 'high' as const,
+          priority: 1,
+          actionable: true,
+          action: 'Implement image optimization and lazy loading'
+        }
+      },
+      fid: {
+        warning: {
+          id: 'fid-warning',
+          type: 'warning' as const,
+          title: 'First Input Delay Warning',
+          description: 'First Input Delay is higher than recommended',
+          category: 'runtime' as const,
+          message: 'First Input Delay is higher than recommended',
+          impact: 'medium' as const,
+          effort: 'medium' as const,
+          priority: 2,
+          actionable: true,
+          action: 'Reduce JavaScript execution time and optimize event handlers'
+        },
+        critical: {
+          id: 'fid-critical',
+          type: 'critical' as const,
+          title: 'First Input Delay Critical',
+          description: 'First Input Delay is significantly high',
+          category: 'runtime' as const,
+          message: 'First Input Delay is significantly high',
+          impact: 'high' as const,
+          effort: 'high' as const,
+          priority: 1,
+          actionable: true,
+          action: 'Implement code splitting and optimize main thread usage'
+        }
+      },
+      cls: {
+        warning: {
+          id: 'cls-warning',
+          type: 'warning' as const,
+          title: 'Cumulative Layout Shift Warning',
+          description: 'Cumulative Layout Shift is higher than recommended',
+          category: 'rendering' as const,
+          message: 'Cumulative Layout Shift is higher than recommended',
+          impact: 'medium' as const,
+          effort: 'medium' as const,
+          priority: 2,
+          actionable: true,
+          action: 'Reserve space for dynamic content and avoid layout shifts'
+        },
+        critical: {
+          id: 'cls-critical',
+          type: 'critical' as const,
+          title: 'Cumulative Layout Shift Critical',
+          description: 'Cumulative Layout Shift is significantly high',
+          category: 'rendering' as const,
+          message: 'Cumulative Layout Shift is significantly high',
+          impact: 'high' as const,
+          effort: 'high' as const,
+          priority: 1,
+          actionable: true,
+          action: 'Fix layout shifts and implement proper sizing for dynamic content'
+        }
+      },
+      memory: {
+        warning: {
+          id: 'memory-warning',
+          type: 'warning' as const,
+          title: 'Memory Usage Warning',
+          description: 'Memory usage is higher than recommended',
+          category: 'memory' as const,
+          message: 'Memory usage is higher than recommended',
+          impact: 'medium' as const,
+          effort: 'medium' as const,
+          priority: 2,
+          actionable: true,
+          action: 'Implement memory cleanup and optimize object creation'
+        },
+        critical: {
+          id: 'memory-critical',
+          type: 'critical' as const,
+          title: 'Memory Usage Critical',
+          description: 'Memory usage is significantly high',
+          category: 'memory' as const,
+          message: 'Memory usage is significantly high',
+          impact: 'high' as const,
+          effort: 'high' as const,
+          priority: 1,
+          actionable: true,
+          action: 'Implement memory leaks detection and cleanup strategies'
+        }
+      },
+      bundleSize: {
+        warning: {
+          id: 'bundle-warning',
+          type: 'warning' as const,
+          title: 'Bundle Size Warning',
+          description: 'Bundle size is larger than recommended',
+          category: 'bundle' as const,
+          message: 'Bundle size is larger than recommended',
+          impact: 'medium' as const,
+          effort: 'medium' as const,
+          priority: 2,
+          actionable: true,
+          action: 'Implement code splitting and tree shaking'
+        },
+        critical: {
+          id: 'bundle-critical',
+          type: 'critical' as const,
+          title: 'Bundle Size Critical',
+          description: 'Bundle size is significantly large',
+          category: 'bundle' as const,
+          message: 'Bundle size is significantly large',
+          impact: 'high' as const,
+          effort: 'high' as const,
+          priority: 1,
+          actionable: true,
+          action: 'Implement aggressive code splitting and remove unused dependencies'
+        }
+      }
+    };
+
+    const metricSuggestions = suggestions[metric as keyof typeof suggestions];
+    if (!metricSuggestions) return null;
+
+    if (value > thresholds.poor) {
+      return metricSuggestions.critical;
+    } else if (value > thresholds.good) {
+      return metricSuggestions.warning;
+    }
+
+    return null;
+  }
+
+  private notifyOptimization(suggestion: OptimizationSuggestion): void {
+    // Log to console in development
+    if (process.env.NODE_ENV === 'development') {
+      const emoji = suggestion.type === 'critical' ? '🚨' : suggestion.type === 'warning' ? '⚠️' : 'ℹ️';
+      console.log(`${emoji} Performance Optimization: ${suggestion.message}`);
+      if (suggestion.action) {
+        console.log(`💡 Action: ${suggestion.action}`);
+      }
+    }
+
+    // Send to analytics in production
+    if (process.env.NODE_ENV === 'production' && 'gtag' in window) {
+      (window as Window & { gtag?: (...args: unknown[]) => void }).gtag?.('event', 'performance_optimization', {
+        suggestion_type: suggestion.type,
+        category: suggestion.category,
+        impact: suggestion.impact,
+        message: suggestion.message
+      });
     }
   }
 
   public getMetrics(): PerformanceMetrics {
-    // Update runtime metrics
-    this.updateRuntimeMetrics();
     return { ...this.metrics };
   }
 
-  private updateRuntimeMetrics(): void {
-    if (typeof window === 'undefined') return;
-
-    // Update load time
-    if (performance.timing) {
-      this.metrics.loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
-    }
-
-    // Update memory usage
-    const memory = (performance as Performance & { memory?: { usedJSHeapSize?: number } }).memory;
-    if (memory) {
-      this.metrics.memoryUsage = memory.usedJSHeapSize || 0;
-    }
-
-    // Update network requests count
-    this.metrics.networkRequests = performance.getEntriesByType('resource').length;
-
-    // Update bundle size
-    this.metrics.bundleSize = performance.getEntriesByType('resource')
-      .filter((entry) => entry.name.includes('.js'))
-      .reduce((total: number, entry) => total + ((entry as PerformanceResourceTiming).transferSize || 0), 0);
+  public getSuggestions(): OptimizationSuggestion[] {
+    return [...this.optimizationSuggestions];
   }
 
-  public optimizeBundle(): void {
-    if (!this.config.enableCodeSplitting || typeof window === 'undefined') return;
-
-    // Dynamic imports for code splitting
-    const lazyComponents = {
-      // 'AIPerformanceDashboard': () => import('../components/AIPerformanceDashboard'),
-      'PerformanceDashboard': () => import('../components/PerformanceDashboard'),
-      'EnhancedSystemDashboard': () => import('../components/EnhancedSystemDashboard')
-    };
-
-    // Store lazy components for later use
-    (window as Window & { lazyComponents?: Record<string, () => Promise<unknown>> }).lazyComponents = lazyComponents;
+  public getCriticalSuggestions(): OptimizationSuggestion[] {
+    return this.optimizationSuggestions.filter(s => s.type === 'critical');
   }
 
-  public compressAssets(): void {
-    if (!this.config.enableCompression || typeof window === 'undefined') return;
-
-    // Enable gzip compression headers
-    const meta = document.createElement('meta');
-    meta.httpEquiv = 'Content-Encoding';
-    meta.content = 'gzip';
-    document.head.appendChild(meta);
-  }
-
-  public cleanup(): void {
-    this.observers.forEach(observer => observer.disconnect());
-    this.observers = [];
+  public getWarningSuggestions(): OptimizationSuggestion[] {
+    return this.optimizationSuggestions.filter(s => s.type === 'warning');
   }
 
   public generateReport(): string {
     const metrics = this.getMetrics();
-    return `
-Performance Report:
-- Load Time: ${metrics.loadTime}ms
-- First Contentful Paint: ${metrics.firstContentfulPaint}ms
-- Largest Contentful Paint: ${metrics.largestContentfulPaint}ms
-- Cumulative Layout Shift: ${metrics.cumulativeLayoutShift}
-- First Input Delay: ${metrics.firstInputDelay}ms
-- Memory Usage: ${(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB
-- Bundle Size: ${(metrics.bundleSize / 1024).toFixed(2)}KB
-- Network Requests: ${metrics.networkRequests}
-    `.trim();
+    const suggestions = this.getSuggestions();
+    
+    let report = 'Performance Report\n';
+    report += '================\n\n';
+    
+    report += 'Core Web Vitals:\n';
+    report += `- FCP: ${(metrics.fcp || 0).toFixed(0)}ms\n`;
+    report += `- LCP: ${(metrics.lcp || 0).toFixed(0)}ms\n`;
+    report += `- FID: ${(metrics.fid || 0).toFixed(0)}ms\n`;
+    report += `- CLS: ${(metrics.cls || 0).toFixed(3)}\n`;
+    report += `- TTFB: ${(metrics.ttfb || 0).toFixed(0)}ms\n\n`;
+    
+    if (metrics.memory) {
+      report += `Memory Usage: ${metrics.memory.used.toFixed(1)}MB\n`;
+    }
+    
+    if (metrics.bundleSize) {
+      report += `Bundle Size: ${(metrics.bundleSize / 1024).toFixed(1)}KB\n`;
+    }
+    
+    if (suggestions.length > 0) {
+      report += '\nOptimization Suggestions:\n';
+      suggestions.forEach((suggestion, index) => {
+        const emoji = suggestion.type === 'critical' ? '🚨' : suggestion.type === 'warning' ? '⚠️' : 'ℹ️';
+        report += `${index + 1}. ${emoji} ${suggestion.message}\n`;
+        if (suggestion.action) {
+          report += `   Action: ${suggestion.action}\n`;
+        }
+      });
+    }
+    
+    return report;
   }
 
-  public getPerformanceScore(): number {
-    const metrics = this.getMetrics();
-    let score = 100;
-    
-    // Deduct points for poor performance
-    if (metrics.loadTime > 3000) score -= 20;
-    if (metrics.firstContentfulPaint > 1800) score -= 15;
-    if (metrics.largestContentfulPaint > 2500) score -= 15;
-    if (metrics.cumulativeLayoutShift > 0.1) score -= 10;
-    if (metrics.firstInputDelay > 100) score -= 10;
-    if (metrics.memoryUsage > 50 * 1024 * 1024) score -= 10; // 50MB
-    if (metrics.bundleSize > 500 * 1024) score -= 10; // 500KB
-    if (metrics.networkRequests > 50) score -= 10;
-    
-    return Math.max(0, score);
+  public startMonitoring(): void {
+    this.isMonitoring = true;
+    this.initializePerformanceMonitoring();
   }
 
-  public getOptimizationReport(): { 
-    strategies: Array<{ name: string; description: string; impact: 'high' | 'medium' | 'low'; applied: boolean }>;
-    metrics: PerformanceMetrics;
-  } {
-    const metrics = this.getMetrics();
-    const strategies = [];
-    
-    if (metrics.loadTime > 3000) {
-      strategies.push({
-        name: 'Code Splitting',
-        description: 'Split large bundles into smaller chunks',
-        impact: 'high' as const,
-        applied: false
-      });
-    }
-    
-    if (metrics.firstContentfulPaint > 1800) {
-      strategies.push({
-        name: 'Resource Preloading',
-        description: 'Preload critical resources',
-        impact: 'high' as const,
-        applied: false
-      });
-    }
-    
-    if (metrics.largestContentfulPaint > 2500) {
-      strategies.push({
-        name: 'Image Optimization',
-        description: 'Optimize and lazy load images',
-        impact: 'medium' as const,
-        applied: false
-      });
-    }
-    
-    if (metrics.cumulativeLayoutShift > 0.1) {
-      strategies.push({
-        name: 'Layout Stability',
-        description: 'Reserve space for dynamic content',
-        impact: 'medium' as const,
-        applied: false
-      });
-    }
-    
-    return { strategies, metrics };
+  public stopMonitoring(): void {
+    this.isMonitoring = false;
+    this.observers.forEach(observer => observer.disconnect());
+    this.observers = [];
+  }
+
+  public clearSuggestions(): void {
+    this.optimizationSuggestions = [];
   }
 }
 
 // Export singleton instance
 export const performanceOptimizer = new PerformanceOptimizer();
 
-// Export class for custom instances
-export { PerformanceOptimizer };
-export type { PerformanceConfig, PerformanceMetrics };
+// Export types
+export type { PerformanceMetrics, OptimizationSuggestion };

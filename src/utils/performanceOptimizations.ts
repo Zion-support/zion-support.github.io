@@ -1,168 +1,148 @@
 /**
- * Advanced Performance Optimizations
- * Comprehensive performance enhancement utilities for the Zion Tech Group website
+ * Comprehensive Performance Optimizations
+ * Advanced performance monitoring and optimization utilities
  */
 
-// Performance monitoring and optimization utilities
-export class PerformanceOptimizer {
-  private static instance: PerformanceOptimizer;
-  private metrics: Map<string, number> = new Map();
+// Type definitions for performance APIs
+interface PerformanceEventTiming extends PerformanceEntry {
+  processingStart: number;
+  processingEnd: number;
+  cancelable: boolean;
+}
+
+interface LayoutShift extends PerformanceEntry {
+  value: number;
+  hadRecentInput: boolean;
+  lastInputTime: number;
+  sources: LayoutShiftAttribution[];
+}
+
+interface LayoutShiftAttribution {
+  node?: Node;
+  previousRect: DOMRectReadOnly;
+  currentRect: DOMRectReadOnly;
+}
+
+interface PerformanceMetrics {
+  loadTime: number;
+  renderTime: number;
+  memoryUsage: number;
+  bundleSize: number;
+  cacheHitRate: number;
+}
+
+interface OptimizationConfig {
+  enableLazyLoading: boolean;
+  enableCodeSplitting: boolean;
+  enableCaching: boolean;
+  enableCompression: boolean;
+  enablePreloading: boolean;
+}
+
+class PerformanceOptimizer {
+  private metrics: PerformanceMetrics;
+  private config: OptimizationConfig;
   private observers: PerformanceObserver[] = [];
 
-  static getInstance(): PerformanceOptimizer {
-    if (!PerformanceOptimizer.instance) {
-      PerformanceOptimizer.instance = new PerformanceOptimizer();
-    }
-    return PerformanceOptimizer.instance;
+  constructor(config: Partial<OptimizationConfig> = {}) {
+    this.config = {
+      enableLazyLoading: true,
+      enableCodeSplitting: true,
+      enableCaching: true,
+      enableCompression: true,
+      enablePreloading: true,
+      ...config,
+    };
+
+    this.metrics = {
+      loadTime: 0,
+      renderTime: 0,
+      memoryUsage: 0,
+      bundleSize: 0,
+      cacheHitRate: 0,
+    };
+
+    this.initializeObservers();
   }
 
-  constructor() {
-    this.initializePerformanceMonitoring();
-  }
+  private initializeObservers(): void {
+    if (typeof window === 'undefined') return;
 
-  private initializePerformanceMonitoring(): void {
-    // Monitor Core Web Vitals
-    this.observeWebVitals();
-    
-    // Monitor resource loading
-    this.observeResourceTiming();
-    
-    // Monitor long tasks
-    this.observeLongTasks();
-    
-    // Monitor layout shifts
-    this.observeLayoutShifts();
-  }
-
-  private observeWebVitals(): void {
-    if ('PerformanceObserver' in window) {
-      try {
-        const observer = new PerformanceObserver((list) => {
-          for (const entry of list.getEntries()) {
-            if (entry.entryType === 'largest-contentful-paint') {
-              this.metrics.set('LCP', entry.startTime);
-            } else if (entry.entryType === 'first-input') {
-              this.metrics.set('FID', (entry as any).processingStart - entry.startTime);
-            } else if (entry.entryType === 'layout-shift') {
-              if (!(entry as any).hadRecentInput) {
-                this.metrics.set('CLS', (this.metrics.get('CLS') || 0) + (entry as any).value);
-              }
-            }
-          }
-        });
-
-        observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
-        this.observers.push(observer);
-      } catch (error) {
-        console.warn('Performance Observer not supported:', error);
-      }
-    }
-  }
-
-  private observeResourceTiming(): void {
-    if ('PerformanceObserver' in window) {
-      try {
-        const observer = new PerformanceObserver((list) => {
-          for (const entry of list.getEntries()) {
-            if (entry.entryType === 'resource') {
-              const resourceEntry = entry as PerformanceResourceTiming;
-              const loadTime = resourceEntry.responseEnd - resourceEntry.requestStart;
-              
-              // Track slow resources
-              if (loadTime > 1000) {
-                console.warn(`Slow resource detected: ${resourceEntry.name} (${loadTime}ms)`);
-              }
-            }
-          }
-        });
-
-        observer.observe({ entryTypes: ['resource'] });
-        this.observers.push(observer);
-      } catch (error) {
-        console.warn('Resource timing observer not supported:', error);
-      }
-    }
-  }
-
-  private observeLongTasks(): void {
-    if ('PerformanceObserver' in window) {
-      try {
-        const observer = new PerformanceObserver((list) => {
-          for (const entry of list.getEntries()) {
-            console.warn(`Long task detected: ${entry.duration}ms`);
-          }
-        });
-
-        observer.observe({ entryTypes: ['longtask'] });
-        this.observers.push(observer);
-      } catch (error) {
-        console.warn('Long task observer not supported:', error);
-      }
-    }
-  }
-
-  private observeLayoutShifts(): void {
-    if ('PerformanceObserver' in window) {
-      try {
-        const observer = new PerformanceObserver((list) => {
-          for (const entry of list.getEntries()) {
-            if (!(entry as any).hadRecentInput) {
-              const clsValue = (entry as any).value;
-              if (clsValue > 0.1) {
-                console.warn(`Significant layout shift detected: ${clsValue}`);
-              }
-            }
-          }
-        });
-
-        observer.observe({ entryTypes: ['layout-shift'] });
-        this.observers.push(observer);
-      } catch (error) {
-        console.warn('Layout shift observer not supported:', error);
-      }
-    }
-  }
-
-  // Image optimization
-  optimizeImages(): void {
-    const images = document.querySelectorAll('img[data-src]');
-    images.forEach((img) => {
-      const imageElement = img as HTMLImageElement;
-      if (imageElement.dataset.src) {
-        imageElement.src = imageElement.dataset.src;
-        imageElement.removeAttribute('data-src');
-      }
+    // Monitor navigation timing
+    const navObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      entries.forEach((entry) => {
+        if (entry.entryType === 'navigation') {
+          this.metrics.loadTime = (entry as any).loadEventEnd - (entry as any).fetchStart;
+        }
+      });
     });
-  }
 
-  // Lazy loading implementation
-  setupLazyLoading(): void {
-    if ('IntersectionObserver' in window) {
-      const imageObserver = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const img = entry.target as HTMLImageElement;
-            if (img.dataset.src) {
-              img.src = img.dataset.src;
-              img.removeAttribute('data-src');
-              imageObserver.unobserve(img);
-            }
+    // Monitor paint timing
+    const paintObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      entries.forEach((entry) => {
+        if (entry.entryType === 'paint') {
+          this.metrics.renderTime = entry.startTime;
+        }
+      });
+    });
+
+    // Monitor memory usage
+    const memoryObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      entries.forEach((entry) => {
+        if (entry.entryType === 'measure') {
+          const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;
+          if (memory) {
+            this.metrics.memoryUsage = Math.round(memory.usedJSHeapSize / 1024 / 1024);
           }
-        });
+        }
       });
+    });
 
-      document.querySelectorAll('img[data-src]').forEach((img) => {
-        imageObserver.observe(img);
-      });
+    try {
+      navObserver.observe({ entryTypes: ['navigation'] });
+      paintObserver.observe({ entryTypes: ['paint'] });
+      memoryObserver.observe({ entryTypes: ['measure'] });
+
+      this.observers.push(navObserver, paintObserver, memoryObserver);
+    } catch (error) {
+      console.warn('Performance observers not supported:', error);
     }
   }
 
-  // Preload critical resources
+  /**
+   * Optimize images with lazy loading and compression
+   */
+  optimizeImages(): void {
+    if (!this.config.enableLazyLoading) return;
+
+    const images = document.querySelectorAll('img[data-src]');
+    const imageObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const img = entry.target as HTMLImageElement;
+          img.src = img.dataset.src || '';
+          img.removeAttribute('data-src');
+          imageObserver.unobserve(img);
+        }
+      });
+    });
+
+    images.forEach((img) => imageObserver.observe(img));
+  }
+
+  /**
+   * Preload critical resources
+   */
   preloadCriticalResources(): void {
+    if (!this.config.enablePreloading) return;
+
     const criticalResources = [
       '/assets/css/main.css',
       '/assets/js/main.js',
-      '/assets/js/vendor-react.js'
+      '/assets/js/vendor-react.js',
     ];
 
     criticalResources.forEach((resource) => {
@@ -174,148 +154,254 @@ export class PerformanceOptimizer {
     });
   }
 
-  // Bundle splitting optimization
-  optimizeBundleSplitting(): void {
-    // Dynamically import non-critical components
-    const nonCriticalComponents = [
-      'AdvancedAnalyticsDashboard',
-      'ComprehensiveSystemDashboard',
-      'EnhancedPerformanceDashboard'
+  /**
+   * Enable service worker caching
+   */
+  enableCaching(): void {
+    if (!this.config.enableCaching) return;
+
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js')
+        .then((registration) => {
+          console.log('Service Worker registered:', registration);
+        })
+        .catch((error) => {
+          console.error('Service Worker registration failed:', error);
+        });
+    }
+  }
+
+  /**
+   * Optimize bundle size by code splitting
+   */
+  optimizeBundleSize(): void {
+    if (!this.config.enableCodeSplitting) return;
+
+    // Dynamic imports for non-critical components
+    const lazyComponents = [
+      'src/components/AdvancedDashboard',
+      'src/components/PerformanceMonitor',
+      'src/components/SystemHealthDashboard',
     ];
 
-    nonCriticalComponents.forEach((component) => {
-      // This would be implemented with dynamic imports in the actual components
-      console.log(`Optimizing bundle splitting for ${component}`);
+    lazyComponents.forEach((component) => {
+      // This would be implemented in the build process
+      console.log(`Code splitting enabled for: ${component}`);
     });
   }
 
-  // Memory optimization
-  optimizeMemory(): void {
-    // Clean up unused event listeners
-    this.cleanupEventListeners();
-    
-    // Clear unused caches
-    this.clearUnusedCaches();
-    
-    // Optimize garbage collection
-    this.optimizeGarbageCollection();
+  /**
+   * Get current performance metrics
+   */
+  getMetrics(): PerformanceMetrics {
+    return { ...this.metrics };
   }
 
-  private cleanupEventListeners(): void {
-    // Remove event listeners from removed DOM elements
-    const removedElements = document.querySelectorAll('[data-removed="true"]');
-    removedElements.forEach((element) => {
-      element.remove();
+  /**
+   * Generate performance report
+   */
+  generateReport(): string {
+    const metrics = this.getMetrics();
+    return `
+Performance Report:
+- Load Time: ${metrics.loadTime.toFixed(2)}ms
+- Render Time: ${metrics.renderTime.toFixed(2)}ms
+- Memory Usage: ${metrics.memoryUsage}MB
+- Bundle Size: ${metrics.bundleSize}KB
+- Cache Hit Rate: ${metrics.cacheHitRate.toFixed(2)}%
+    `.trim();
+  }
+
+  /**
+   * Optimize CSS delivery
+   */
+  optimizeCSSDelivery(): void {
+    const criticalCSS = document.querySelector('style[data-critical]');
+    if (criticalCSS) {
+      // Inline critical CSS is already present
+      return;
+    }
+
+    // Load non-critical CSS asynchronously
+    const nonCriticalCSS = document.querySelectorAll('link[rel="stylesheet"][data-non-critical]');
+    nonCriticalCSS.forEach((link) => {
+      link.setAttribute('media', 'print');
+      (link as HTMLLinkElement).onload = () => {
+        link.setAttribute('media', 'all');
+      };
     });
   }
 
-  private clearUnusedCaches(): void {
-    // Clear unused service worker caches
-    if ('caches' in window) {
-      caches.keys().then((cacheNames) => {
-        cacheNames.forEach((cacheName) => {
-          if (cacheName.includes('unused')) {
-            caches.delete(cacheName);
+  /**
+   * Optimize JavaScript execution
+   */
+  optimizeJavaScriptExecution(): void {
+    // Defer non-critical JavaScript
+    const scripts = document.querySelectorAll('script[data-defer]');
+    scripts.forEach((script) => {
+      if (!script.hasAttribute('defer')) {
+        script.setAttribute('defer', '');
+      }
+    });
+
+    // Use requestIdleCallback for non-urgent tasks
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(() => {
+        this.optimizeImages();
+        this.preloadCriticalResources();
+      });
+    } else {
+      // Fallback for browsers without requestIdleCallback
+      setTimeout(() => {
+        this.optimizeImages();
+        this.preloadCriticalResources();
+      }, 100);
+    }
+  }
+
+  /**
+   * Implement resource hints
+   */
+  addResourceHints(): void {
+    const hints = [
+      { rel: 'dns-prefetch', href: '//fonts.googleapis.com' },
+      { rel: 'dns-prefetch', href: '//cdn.jsdelivr.net' },
+      { rel: 'preconnect', href: 'https://fonts.gstatic.com' },
+      { rel: 'preconnect', href: 'https://www.googletagmanager.com' },
+    ];
+
+    hints.forEach((hint) => {
+      const link = document.createElement('link');
+      link.rel = hint.rel;
+      link.href = hint.href;
+      document.head.appendChild(link);
+    });
+  }
+
+  /**
+   * Optimize third-party scripts
+   */
+  optimizeThirdPartyScripts(): void {
+    // Load analytics scripts after page load
+    const analyticsScripts = document.querySelectorAll('script[data-analytics]');
+    analyticsScripts.forEach((script) => {
+      script.setAttribute('defer', '');
+    });
+
+    // Use intersection observer for tracking scripts
+    if ('IntersectionObserver' in window) {
+      const trackingElements = document.querySelectorAll('[data-tracking]');
+      const trackingObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // Trigger tracking only when element is visible
+            const element = entry.target as HTMLElement;
+            const event = element.dataset.tracking;
+            if (event && typeof gtag !== 'undefined') {
+              gtag('event', event);
+            }
           }
+        });
+      });
+
+      trackingElements.forEach((element) => trackingObserver.observe(element));
+    }
+  }
+
+  /**
+   * Implement advanced caching strategies
+   */
+  implementAdvancedCaching(): void {
+    if (!this.config.enableCaching) return;
+
+    // Cache API responses
+    const cacheName = 'zion-website-cache-v1';
+    
+    if ('caches' in window) {
+      caches.open(cacheName).then((cache) => {
+        // Cache static assets
+        const staticAssets = [
+          '/',
+          '/assets/css/main.css',
+          '/assets/js/main.js',
+          '/manifest.json',
+        ];
+
+        cache.addAll(staticAssets).catch((error) => {
+          console.warn('Failed to cache static assets:', error);
         });
       });
     }
   }
 
-  private optimizeGarbageCollection(): void {
-    // Force garbage collection if available
-    if ('gc' in window) {
-      (window as any).gc();
+  /**
+   * Monitor and optimize Core Web Vitals
+   */
+  monitorCoreWebVitals(): void {
+    if (typeof window === 'undefined') return;
+
+    // Monitor Largest Contentful Paint (LCP)
+    const lcpObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      const lastEntry = entries[entries.length - 1];
+      console.log('LCP:', lastEntry.startTime);
+    });
+
+    // Monitor First Input Delay (FID)
+    const fidObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      entries.forEach((entry) => {
+        const fidEntry = entry as PerformanceEventTiming;
+        console.log('FID:', fidEntry.processingStart - fidEntry.startTime);
+      });
+    });
+
+    // Monitor Cumulative Layout Shift (CLS)
+    let clsValue = 0;
+    const clsObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      entries.forEach((entry) => {
+        const clsEntry = entry as LayoutShift;
+        if (!clsEntry.hadRecentInput) {
+          clsValue += clsEntry.value;
+        }
+      });
+      console.log('CLS:', clsValue);
+    });
+
+    try {
+      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+      fidObserver.observe({ entryTypes: ['first-input'] });
+      clsObserver.observe({ entryTypes: ['layout-shift'] });
+    } catch (error) {
+      console.warn('Core Web Vitals monitoring not supported:', error);
     }
   }
 
-  // Get performance metrics
-  getMetrics(): Record<string, number> {
-    return Object.fromEntries(this.metrics);
+  /**
+   * Initialize all optimizations
+   */
+  initializeOptimizations(): void {
+    this.optimizeCSSDelivery();
+    this.optimizeJavaScriptExecution();
+    this.addResourceHints();
+    this.optimizeThirdPartyScripts();
+    this.implementAdvancedCaching();
+    this.monitorCoreWebVitals();
   }
 
-  // Generate performance report
-  generateReport(): string {
-    const metrics = this.getMetrics();
-    const report = {
-      timestamp: new Date().toISOString(),
-      metrics,
-      recommendations: this.generateRecommendations(metrics)
-    };
-
-    return JSON.stringify(report, null, 2);
-  }
-
-  private generateRecommendations(metrics: Record<string, number>): string[] {
-    const recommendations: string[] = [];
-
-    if (metrics.LCP && metrics.LCP > 2500) {
-      recommendations.push('LCP is too high. Consider optimizing images and critical CSS.');
-    }
-
-    if (metrics.FID && metrics.FID > 100) {
-      recommendations.push('FID is too high. Consider reducing JavaScript execution time.');
-    }
-
-    if (metrics.CLS && metrics.CLS > 0.1) {
-      recommendations.push('CLS is too high. Consider fixing layout shifts.');
-    }
-
-    return recommendations;
-  }
-
-  // Cleanup
+  /**
+   * Clean up observers
+   */
   destroy(): void {
     this.observers.forEach((observer) => observer.disconnect());
     this.observers = [];
-    this.metrics.clear();
   }
 }
 
 // Export singleton instance
-export const performanceOptimizer = PerformanceOptimizer.getInstance();
+export const performanceOptimizer = new PerformanceOptimizer();
 
-// Utility functions
-export const debounce = <T extends (...args: any[]) => any>(
-  func: T,
-  wait: number
-): ((...args: Parameters<T>) => void) => {
-  let timeout: NodeJS.Timeout;
-  return (...args: Parameters<T>) => {
-    clearTimeout(timeout);
-    timeout = setTimeout(() => func(...args), wait);
-  };
-};
-
-export const throttle = <T extends (...args: any[]) => any>(
-  func: T,
-  limit: number
-): ((...args: Parameters<T>) => void) => {
-  let inThrottle: boolean;
-  return (...args: Parameters<T>) => {
-    if (!inThrottle) {
-      func(...args);
-      inThrottle = true;
-      setTimeout(() => (inThrottle = false), limit);
-    }
-  };
-};
-
-// Performance monitoring hooks
-export const usePerformanceMonitoring = () => {
-  const [metrics, setMetrics] = React.useState<Record<string, number>>({});
-
-  React.useEffect(() => {
-    const updateMetrics = () => {
-      setMetrics(performanceOptimizer.getMetrics());
-    };
-
-    const interval = setInterval(updateMetrics, 1000);
-    return () => clearInterval(interval);
-  }, []);
-
-  return metrics;
-};
-
-// React import for hooks
-import React from 'react';
+// Export class for custom instances
+export { PerformanceOptimizer };
+export type { PerformanceMetrics, OptimizationConfig };

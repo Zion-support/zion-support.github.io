@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { performanceMetrics, PerformanceMetric, PerformanceReport } from '../utils/performanceMetrics';
+import { performanceMetrics, PerformanceReport } from '../utils/performanceMetrics';
 import { analyzeSEO, SEOAnalysis } from '../utils/seoOptimizer';
 import { analyzeAccessibility, AccessibilityReport } from '../utils/accessibilityEnhancer';
 
@@ -79,7 +79,7 @@ const PerformanceMetricsDashboard: React.FC<PerformanceMetricsDashboardProps> = 
           ].map((tab) => (
             <button
               key={tab.id}
-              onClick={() => setActiveTab(tab.id as any)}
+              onClick={() => setActiveTab(tab.id as 'performance' | 'accessibility' | 'seo')}
               className={`flex items-center px-6 py-3 text-sm font-medium ${
                 activeTab === tab.id
                   ? 'text-blue-600 border-b-2 border-blue-600'
@@ -157,7 +157,7 @@ const PerformanceMetricsDashboard: React.FC<PerformanceMetricsDashboardProps> = 
                       {performanceReport.recommendations.map((rec, index) => (
                         <li key={index} className="flex items-start">
                           <span className="text-yellow-500 mr-2">•</span>
-                          <span className="text-gray-700 dark:text-gray-300">{rec}</span>
+                          <span className="text-gray-700 dark:text-gray-300">{rec as string}</span>
                         </li>
                       ))}
                     </ul>
@@ -268,7 +268,7 @@ const PerformanceMetricsDashboard: React.FC<PerformanceMetricsDashboardProps> = 
                       {accessibilityReport.recommendations.map((rec, index) => (
                         <li key={index} className="flex items-start">
                           <span className="text-green-500 mr-2">•</span>
-                          <span className="text-gray-700 dark:text-gray-300">{rec}</span>
+                          <span className="text-gray-700 dark:text-gray-300">{typeof rec === 'string' ? rec : rec.description || rec.type || 'Recommendation'}</span>
                         </li>
                       ))}
                     </ul>

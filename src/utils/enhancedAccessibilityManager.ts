@@ -93,7 +93,7 @@ class EnhancedAccessibilityManager {
       
       // Handle escape key
       if (event.key === 'Escape') {
-        this.handleEscapeKey(event);
+        this.handleEscapeKey();
       }
       
       // Handle arrow keys for custom components
@@ -164,7 +164,7 @@ class EnhancedAccessibilityManager {
     }
   }
 
-  private handleEscapeKey(event: KeyboardEvent): void {
+  private handleEscapeKey(): void {
     // Close any open modals or dropdowns
     const modals = document.querySelectorAll('[role="dialog"], [role="alertdialog"]');
     modals.forEach(modal => {

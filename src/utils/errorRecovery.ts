@@ -43,7 +43,7 @@ export class ErrorRecovery {
       name: 'component-reset',
       condition: (error, context) => 
         Boolean(context.component && error.message.includes('component')),
-      action: async (error, context) => {
+      action: async () => {
         console.log('🔄 Resetting component...');
         // Component reset logic would go here
       }

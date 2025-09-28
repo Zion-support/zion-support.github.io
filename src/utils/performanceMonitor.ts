@@ -81,7 +81,7 @@ class PerformanceMonitor {
       const entries = list.getEntries();
       entries.forEach((entry) => {
         if ('processingStart' in entry && entry.startTime) {
-          this.metrics.fid = (entry as any).processingStart - entry.startTime;
+          this.metrics.fid = ((entry as PerformanceEntry & { processingStart?: number }).processingStart || 0) - entry.startTime;
         }
       });
     });
@@ -92,9 +92,9 @@ class PerformanceMonitor {
     let clsValue = 0;
     const clsObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
-      entries.forEach((entry: any) => {
+      entries.forEach((entry: PerformanceEntry & { hadRecentInput?: boolean; value?: number }) => {
         if (!entry.hadRecentInput) {
-          clsValue += entry.value;
+          clsValue += entry.value || 0;
         }
       });
       this.metrics.cls = clsValue;
@@ -129,8 +129,8 @@ class PerformanceMonitor {
 
   private observeMemoryUsage(): void {
     if ('memory' in performance) {
-      const memory = (performance as any).memory;
-      this.metrics.memoryUsage = memory.usedJSHeapSize / memory.jsHeapSizeLimit;
+      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
+      this.metrics.memoryUsage = (memory?.usedJSHeapSize || 0) / (memory?.jsHeapSizeLimit || 1);
     }
   }
 
@@ -184,7 +184,7 @@ class PerformanceMonitor {
     this.sendToAnalytics(report);
   }
 
-  private sendToAnalytics(data: any): void {
+  private sendToAnalytics(data: Record<string, unknown>): void {
     // In production, send to your analytics service
     console.log('Performance Metrics:', data);
     
@@ -229,7 +229,7 @@ class PerformanceMonitor {
     return duration;
   }
 
-  public async measureAsyncMetric(name: string, fn: () => Promise<any>): Promise<number> {
+  public async measureAsyncMetric<T>(name: string, fn: () => Promise<T>): Promise<number> {
     const start = performance.now();
     await fn();
     const end = performance.now();

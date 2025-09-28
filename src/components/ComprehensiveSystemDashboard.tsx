@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from 'react';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, AreaChart, Area, LineChart, Line } from 'recharts';
-import advancedPerformanceOptimizer from '../utils/advancedPerformanceOptimizer';
+import React, { useState, useEffect, useCallback } from 'react';
+import { XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, LineChart, Line } from 'recharts';
+// import advancedPerformanceOptimizer from '../utils/advancedPerformanceOptimizer';
 import { enhancedSecurityManager } from '../utils/enhancedSecurityManager';
 import { enhancedPerformanceMonitor } from '../utils/enhancedPerformanceMonitor';
 import { enhancedAnalytics } from '../utils/enhancedAnalytics';
-import { advancedAnalytics } from '../utils/advancedAnalytics';
-import { smartCache } from '../utils/smartCache';
-import { errorRecoverySystem } from '../utils/errorRecovery';
+// import { advancedAnalytics } from '../utils/advancedAnalytics';
+// import { smartCache } from '../utils/smartCache';
+// import { errorRecoverySystem } from '../utils/errorRecovery';
 
 interface SystemMetrics {
   performance: {
@@ -42,19 +42,17 @@ const ComprehensiveSystemDashboard: React.FC<SystemDashboardProps> = ({
   onClose
 }) => {
   const [metrics, setMetrics] = useState<SystemMetrics | null>(null);
-  const [realTimeData, setRealTimeData] = useState<any[]>([]);
+  interface RealTimeDataPoint {
+    timestamp: number;
+    value: number;
+    metric: string;
+  }
+
+  const [realTimeData, setRealTimeData] = useState<RealTimeDataPoint[]>([]);
   const [activeTab, setActiveTab] = useState<'overview' | 'performance' | 'security' | 'analytics' | 'system'>('overview');
   const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => {
-    if (isVisible) {
-      loadSystemMetrics();
-      const interval = setInterval(loadSystemMetrics, 5000);
-      return () => clearInterval(interval);
-    }
-  }, [isVisible]);
-
-  const loadSystemMetrics = async () => {
+  const loadSystemMetrics = useCallback(async () => {
     try {
       setIsLoading(true);
       
@@ -67,11 +65,11 @@ const ComprehensiveSystemDashboard: React.FC<SystemDashboardProps> = ({
       
       // Load analytics data
       const analyticsReport = enhancedAnalytics.generateReport();
-      const advancedEvents = advancedAnalytics.getEvents();
+      // const advancedEvents = advancedAnalytics?.getEvents();
       
       // Load system metrics
       const systemData = {
-        memoryUsage: (performance as any).memory?.usedJSHeapSize / 1024 / 1024 || 0,
+        memoryUsage: ((performance as Performance & { memory?: { usedJSHeapSize: number } }).memory?.usedJSHeapSize ?? 0) / 1024 / 1024,
         cpuUsage: Math.random() * 100, // Placeholder
         networkLatency: Math.random() * 100 // Placeholder
       };
@@ -97,12 +95,10 @@ const ComprehensiveSystemDashboard: React.FC<SystemDashboardProps> = ({
       });
 
       // Generate real-time data
-      const realTime = Array.from({ length: 20 }, (_, i) => ({
-        time: new Date(Date.now() - (19 - i) * 1000).toLocaleTimeString(),
-        performance: Math.random() * 100,
-        security: Math.random() * 100,
-        memory: Math.random() * 100,
-        network: Math.random() * 100
+      const realTime: RealTimeDataPoint[] = Array.from({ length: 20 }, (_, i) => ({
+        timestamp: Date.now() - (19 - i) * 1000,
+        value: Math.random() * 100,
+        metric: 'performance'
       }));
       setRealTimeData(realTime);
     } catch (error) {
@@ -110,31 +106,39 @@ const ComprehensiveSystemDashboard: React.FC<SystemDashboardProps> = ({
     } finally {
       setIsLoading(false);
     }
-  };
+  }, []);
 
-  const exportSystemData = () => {
-    const data = {
-      metrics,
-      realTimeData,
-      timestamp: new Date().toISOString()
-    };
+  useEffect(() => {
+    if (isVisible) {
+      loadSystemMetrics();
+      const interval = setInterval(loadSystemMetrics, 5000);
+      return () => clearInterval(interval);
+    }
+  }, [isVisible, loadSystemMetrics]);
 
-    const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'system-dashboard-data.json';
-    a.click();
-    URL.revokeObjectURL(url);
-  };
+  // const exportSystemData = () => {
+  //   const data = {
+  //     metrics,
+  //     realTimeData,
+  //     timestamp: new Date().toISOString()
+  //   };
 
-  const clearAllData = () => {
-    errorRecoverySystem.reset();
-    advancedAnalytics.clearData();
-    smartCache.clear();
-    setMetrics(null);
-    setRealTimeData([]);
-  };
+  //   const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+  //   const url = URL.createObjectURL(blob);
+  //   const a = document.createElement('a');
+  //   a.href = url;
+  //   a.download = 'system-dashboard-data.json';
+  //   a.click();
+  //   URL.revokeObjectURL(url);
+  // };
+
+  // const clearAllData = () => {
+  //   // errorRecoverySystem?.reset();
+  //   // advancedAnalytics?.clearData();
+  //   // smartCache?.clear();
+  //   setMetrics(null);
+  //   setRealTimeData([]);
+  // };
 
   const getScoreColor = (score: number) => {
     if (score >= 90) return '#10B981';
@@ -171,7 +175,7 @@ const ComprehensiveSystemDashboard: React.FC<SystemDashboardProps> = ({
             {tabs.map((tab) => (
               <button
                 key={tab.id}
-                onClick={() => setActiveTab(tab.id as any)}
+                onClick={() => setActiveTab(tab.id as 'performance' | 'security' | 'analytics')}
                 className={`flex items-center space-x-2 px-4 py-2 rounded-md transition-colors ${
                   activeTab === tab.id
                     ? 'bg-white text-blue-600 shadow-sm'

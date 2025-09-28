@@ -45,22 +45,23 @@ const RealTimePerformanceMonitor: React.FC<RealTimePerformanceMonitorProps> = ({
       const updated = [...prev, newMetrics];
       return updated.slice(-maxHistoryLength);
     });
-  }, [isMonitoring, maxHistoryLength]);
+  }, [isMonitoring, maxHistoryLength, calculateFPS]);
 
   const calculateFPS = (): number => {
     if (typeof window === 'undefined' || !window.performance) return 0;
     
     const now = performance.now();
-    const delta = now - (calculateFPS as any).lastTime || 0;
-    (calculateFPS as any).lastTime = now;
+    const lastTime = (calculateFPS as unknown as { lastTime?: number }).lastTime || 0;
+    const delta = now - lastTime;
+    (calculateFPS as unknown as { lastTime: number }).lastTime = now;
     
     return delta > 0 ? Math.round(1000 / delta) : 0;
   };
 
   const getMemoryUsage = (): number => {
-    if (typeof window === 'undefined' || !(window as any).performance?.memory) return 0;
+    if (typeof window === 'undefined' || !(window as unknown as { performance?: { memory?: { usedJSHeapSize?: number } } }).performance?.memory) return 0;
     
-    const memory = (window as any).performance.memory;
+    const memory = (window as unknown as { performance: { memory: { usedJSHeapSize: number } } }).performance.memory;
     return Math.round(memory.usedJSHeapSize / 1024 / 1024); // MB
   };
 

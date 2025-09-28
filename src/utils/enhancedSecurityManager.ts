@@ -11,7 +11,7 @@ interface SecurityEvent {
   userId?: string;
   ipAddress?: string;
   userAgent?: string;
-  metadata?: Record<string, any>;
+  metadata?: Record<string, string | number | boolean>;
   originalEvent?: SecurityEvent;
 }
 
@@ -288,7 +288,7 @@ class EnhancedSecurityManager {
       severity: event.severity,
       message,
       timestamp: new Date(),
-      metadata: { originalEvent: event }
+      metadata: { originalEvent: event as any }
     };
 
     console.warn('Security Alert:', alert);

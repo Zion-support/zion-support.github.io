@@ -12,7 +12,7 @@ interface SecurityConfig {
 
 class SecurityUtils {
   private config: SecurityConfig;
-  private securityEvents: Array<{ type: string; timestamp: number; details: any }> = [];
+  private securityEvents: Array<{ type: string; timestamp: number; details: unknown }> = [];
 
   constructor(config: Partial<SecurityConfig> = {}) {
     this.config = {
@@ -92,11 +92,10 @@ class SecurityUtils {
     // Override innerHTML to sanitize content
     const originalInnerHTML = Object.getOwnPropertyDescriptor(Element.prototype, 'innerHTML');
     if (originalInnerHTML && originalInnerHTML.set) {
-      const self = this;
       Object.defineProperty(Element.prototype, 'innerHTML', {
-        set: function(value) {
-          const sanitized = self.sanitizeHTML(value);
-          originalInnerHTML.set?.call(this, sanitized);
+        set: (value: string) => {
+          const sanitized = this.sanitizeHTML(value);
+          originalInnerHTML.set?.call(Element.prototype, sanitized);
         },
         get: originalInnerHTML.get
       });
@@ -134,7 +133,7 @@ class SecurityUtils {
     const originalConsole = { ...console };
     Object.keys(console).forEach(key => {
       if (typeof (console as any)[key] === 'function') {
-        (console as any)[key] = (...args: any[]) => {
+        (console as any)[key] = (...args: unknown[]) => {
           this.logSecurityEvent('console-usage', { method: key, args });
           (originalConsole as any)[key](...args);
         };
@@ -190,7 +189,7 @@ class SecurityUtils {
     return suspiciousPatterns.some(pattern => pattern.test(url));
   }
 
-  private logSecurityEvent(type: string, details: any): void {
+  private logSecurityEvent(type: string, details: unknown): void {
     this.securityEvents.push({
       type,
       timestamp: Date.now(),
@@ -203,7 +202,7 @@ class SecurityUtils {
     }
   }
 
-  getSecurityEvents(): Array<{ type: string; timestamp: number; details: any }> {
+  getSecurityEvents(): Array<{ type: string; timestamp: number; details: unknown }> {
     return [...this.securityEvents];
   }
 

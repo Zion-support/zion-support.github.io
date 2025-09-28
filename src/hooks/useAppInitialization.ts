@@ -236,9 +236,28 @@ export function useAppInitialization(config: AppInitializationConfig = {}) {
     try {
       // Initialize advanced performance monitor
       const { AdvancedPerformanceMonitor } = await import('../utils/advancedPerformanceMonitor');
-      const advancedPerformanceMonitor = new AdvancedPerformanceMonitor();
-      // AdvancedPerformanceMonitor initializes automatically and uses start() method
-      advancedPerformanceMonitor.start();
+      // interface PerformanceMonitorInstance {
+      //   updateConfig: (config: { enableWebVitals: boolean; enableMemoryMonitoring: boolean; enableNetworkMonitoring: boolean; enableCustomMetrics: boolean }) => void;
+      //   startMonitoring: () => void;
+      //   stopMonitoring: () => void;
+      // }
+      const advancedPerformanceMonitor = (AdvancedPerformanceMonitor as any).getInstance();
+      advancedPerformanceMonitor.updateConfig({
+        enableWebVitals: true,
+        enableMemoryMonitoring: true,
+        enableNetworkMonitoring: true,
+        enableCustomMetrics: true,
+        reportInterval: 5000,
+        thresholds: {
+          pageLoadTime: 3000,
+          firstContentfulPaint: 1800,
+          largestContentfulPaint: 2500,
+          cumulativeLayoutShift: 0.1,
+          firstInputDelay: 100,
+          totalBlockingTime: 300
+        }
+      });
+      advancedPerformanceMonitor.startMonitoring();
 
       // Initialize advanced cache system
       const { advancedCacheSystem } = await import('../utils/advancedCacheSystem');
@@ -254,18 +273,7 @@ export function useAppInitialization(config: AppInitializationConfig = {}) {
 
       // Initialize advanced error recovery
       const { advancedErrorRecovery } = await import('../utils/advancedErrorRecovery');
-      advancedErrorRecovery.initialize({
-        maxRetries: 3,
-        retryDelay: 1000,
-        exponentialBackoff: true,
-        enableUserGuidance: true,
-        enableAutomaticRecovery: true,
-        enableErrorReporting: true,
-        enableFallbackStrategies: true,
-        enableCircuitBreaker: true,
-        circuitBreakerThreshold: 5,
-        circuitBreakerTimeout: 30000
-      });
+      advancedErrorRecovery.initialize();
 
       console.log('✅ Advanced systems initialized successfully');
     } catch (error) {

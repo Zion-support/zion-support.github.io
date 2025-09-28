@@ -69,17 +69,17 @@ const AdvancedDashboard: React.FC = () => {
   }, [isOpen]);
 
   const updateData = () => {
-    // Mock data for now - uncomment when analytics and cache are available
-    const events: any[] = [];
-    const cacheStats = { hitRate: 0.85, size: 1024, maxSize: 2048 };
+    // Mock analytics data for now
+    const events: Array<{ name: string; timestamp?: number }> = [];
+    const cacheStats = { hits: 0, misses: 0, size: 0 };
     
     // Convert analytics events to analytics data format
     const analyticsData: AnalyticsData = {
       id: `session_${Date.now()}`,
       startTime: Date.now() - 300000, // 5 minutes ago
       lastActivity: Date.now(),
-      pageViews: events.filter((e: { name: string }) => e.name === 'page_view').length,
-      events: events.map((e: { name: string; timestamp?: number; properties?: Record<string, unknown> }) => ({
+      pageViews: events.filter((e) => e.name === 'page_view').length,
+      events: events.map((e) => ({
         event: e.name,
         timestamp: e.timestamp || Date.now(),
         properties: e.properties
