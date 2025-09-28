@@ -79,7 +79,8 @@ const LazyImage: React.FC<LazyImageProps> = ({
       {/* Main image */}
       <img
         {...props}
-        src={currentSrc}
+        ref={imgRef}
+        src={currentSrc || undefined}
         alt={currentAlt}
         loading={loading}
         sizes={sizes}

@@ -35,7 +35,15 @@ interface ErrorReport {
   [key: string]: unknown;
 }
 
-
+interface AIInsights {
+  predictedHighRiskActions: string[];
+  recommendedImprovements: string[];
+  errorTrends: Array<{
+    category: string;
+    trend: 'increasing' | 'decreasing' | 'stable';
+  }>;
+  [key: string]: unknown;
+}
 const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisible, onClose }) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [insights, setInsights] = useState<{
@@ -253,9 +261,11 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
                               {(report.severity || 'unknown').toUpperCase()}
                             </span>
                             {report.aiPredictedImpact && (
-                              <span className={`text-sm font-medium ${getImpactColor(report.aiPredictedImpact)}`}>
-                                Impact: {report.aiPredictedImpact}%
-                              </span>
+                              <div>
+                                <span className={`text-sm font-medium ${getImpactColor(report.aiPredictedImpact)}`}>
+                                  Impact: {report.aiPredictedImpact}%
+                                </span>
+                              </div>
                             )}
                             <span className="text-sm text-gray-500">
                               {report.occurrenceCount} occurrences

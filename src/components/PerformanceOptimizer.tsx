@@ -65,6 +65,10 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       const report = performanceEnhancer.generateReport();
       addLogEntry(`Report generated: ${report.length} characters`);
       
+      // Apply automated optimizations
+      addLogEntry('Applying automated optimizations...');
+      performanceEnhancer.applyAutomatedOptimizations();
+      
       // Update metrics
       addLogEntry('Updating performance metrics...');
       updatePerformanceData();
