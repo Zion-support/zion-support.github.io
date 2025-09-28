@@ -10,6 +10,13 @@ interface BundleMetrics {
   compressionRatio: number;
   largestChunk: string;
   unusedCode: number;
+  chunks: Array<{
+    name: string;
+    size: number;
+    gzippedSize: number;
+    modules: number;
+  }>;
+  recommendations: string[];
 }
 
 interface OptimizationStrategy {
@@ -51,7 +58,9 @@ const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({ isVisible, 
         unusedModules: 5,
         compressionRatio: 0.75,
         largestChunk: 'vendor.js',
-        unusedCode: 50 * 1024 // 50KB
+        unusedCode: 50 * 1024, // 50KB
+        chunks: [],
+        recommendations: []
       };
       
       const optimizationStrategies: OptimizationStrategy[] = [
