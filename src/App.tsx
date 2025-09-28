@@ -24,10 +24,10 @@ import KeyboardShortcutsHelp from './components/KeyboardShortcutsHelp';
 import CommandPalette from './components/CommandPalette';
 import RealTimePerformanceMonitor from './components/RealTimePerformanceMonitor';
 import SystemHealthDashboard from './components/SystemHealthDashboard';
-import { getNotificationManager, notify } from './utils/advancedNotifications';
-import { getThemeManager } from './utils/themeManager';
-import { getKeyboardShortcuts, shortcuts } from './utils/advancedKeyboardShortcuts';
-import { getDataVisualization, charts } from './utils/advancedDataVisualization';
+// import { getNotificationManager, notify } from './utils/advancedNotifications';
+// import { getThemeManager } from './utils/themeManager';
+// import { getKeyboardShortcuts, shortcuts } from './utils/advancedKeyboardShortcuts';
+// import { getDataVisualization, charts } from './utils/advancedDataVisualization';
 import './index.css';
 
 export default function App(): React.JSX.Element {
@@ -76,7 +76,7 @@ export default function App(): React.JSX.Element {
   const isLoading = false;
   const loadingProgress = 100;
   const handleScroll = useCallback(() => {}, []);
-  const handleClick = useCallback((event: Event) => {}, []);
+  const handleClick = useCallback((_event: Event) => {}, []);
   const trackEngagement = useCallback(() => {}, []);
 
   // Performance optimization hook - Temporarily disabled
@@ -164,7 +164,7 @@ export default function App(): React.JSX.Element {
       clicks: engagementData.clicks,
     });
     trackEngagement();
-  }, [trackEngagement]);
+  }, [trackEngagement, engagementData.clicks, engagementData.scrollDepth, engagementData.startTime]);
 
   // Memoize the SEO data to prevent unnecessary re-renders
   const memoizedSeoData = useMemo(() => ({
