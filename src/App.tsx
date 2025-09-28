@@ -8,7 +8,7 @@ import { analytics } from './utils/analytics';
 import { performanceOptimizer } from './utils/performanceOptimizations';
 // import { accessibilityEnhancements } from './utils/accessibilityEnhancements';
 // import { seoOptimizer } from './utils/seoOptimizations';
-import { seoEnhancer } from './utils/advancedSEOEnhancer';
+// import { seoEnhancer } from './utils/advancedSEOEnhancer';
 import { accessibilityEnhancer } from './utils/advancedAccessibilityEnhancer';
 // Removed unused imports to reduce warnings
 import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
@@ -25,8 +25,8 @@ import { performanceAlerts } from './utils/performanceAlerts';
 import { accessibilityUtils } from './utils/accessibilityUtils';
 import { securityUtils } from './utils/securityUtils';
 import { enhancedSecurityManager } from './utils/enhancedSecurityManager';
-import { AdvancedAutomationSystem } from './utils/advancedAutomationSystem';
-import { securityEnhancer } from './utils/securityEnhancer';
+// import { AdvancedAutomationSystem } from './utils/advancedAutomationSystem';
+// import { securityEnhancer } from './utils/securityEnhancer';
 import AdvancedAnalytics from './components/AdvancedAnalytics';
 import NotificationSystem, { Notification } from './components/NotificationSystem';
 import KeyboardShortcutsHelp from './components/KeyboardShortcutsHelp';
@@ -45,7 +45,7 @@ export default function App(): React.JSX.Element {
   const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
   const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
   const [showAIDashboard, setShowAIDashboard] = useState(false);
-  const [showAdvancedDashboard] = useState(false);
+  // const [showAdvancedDashboard] = useState(false);
   const [showSEOOptimizer, setShowSEOOptimizer] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [showKeyboardHelp, setShowKeyboardHelp] = useState(false);
@@ -53,7 +53,7 @@ export default function App(): React.JSX.Element {
   const [showRealTimeMetrics, setShowRealTimeMetrics] = useState(false);
   const [notifications, setNotifications] = useState<Notification[]>([]);
   const [showWebsiteEnhancements, setShowWebsiteEnhancements] = useState(false);
-  const [showAccessibilityPanel] = useState(false);
+  // const [showAccessibilityPanel] = useState(false);
   const [showRealTimeMonitor, setShowRealTimeMonitor] = useState(false);
   const [showSystemHealth, setShowSystemHealth] = useState(false);
   // User preferences state (for future use)
@@ -72,16 +72,16 @@ export default function App(): React.JSX.Element {
   }), []);
 
   // SEO data
-  const seoData = useMemo(() => ({
-    title: 'Zion Tech Group - Leading AI & Technology Solutions',
-    description: 'Cutting-edge AI, quantum computing, and digital transformation solutions for modern enterprises. Expert consulting, cloud services, and innovative technology implementations.',
-    keywords: ['AI solutions', 'quantum computing', 'digital transformation', 'cloud services', 'enterprise technology', 'machine learning', 'automation', 'blockchain'],
-    canonicalUrl: typeof window !== 'undefined' ? window.location.href : '',
-    ogType: 'website' as const,
-    ogUrl: typeof window !== 'undefined' ? window.location.href : '',
-    ogImage: '/og-image.png',
-    twitterCard: 'summary_large_image' as const
-  }), []);
+  // const seoData = useMemo(() => ({
+  //   title: 'Zion Tech Group - Leading AI & Technology Solutions',
+  //   description: 'Cutting-edge AI, quantum computing, and digital transformation solutions for modern enterprises. Expert consulting, cloud services, and innovative technology implementations.',
+  //   keywords: ['AI solutions', 'quantum computing', 'digital transformation', 'cloud services', 'enterprise technology', 'machine learning', 'automation', 'blockchain'],
+  //   canonicalUrl: typeof window !== 'undefined' ? window.location.href : '',
+  //   ogType: 'website' as const,
+  //   ogUrl: typeof window !== 'undefined' ? window.location.href : '',
+  //   ogImage: '/og-image.png',
+  //   twitterCard: 'summary_large_image' as const
+  // }), []);
 
   // Initialize app with custom configuration
   // Temporarily disable useAppInitialization to fix build
@@ -475,7 +475,7 @@ export default function App(): React.JSX.Element {
       trackEngagement();
     };
 
-    const handleClickWithEngagement = (event: Event) => {
+    const handleClickWithEngagement = (_event: Event) => {
       handleClick();
       trackEngagement();
     };
