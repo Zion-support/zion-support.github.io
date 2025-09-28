@@ -1,5 +1,5 @@
 import { useEffect, useCallback, useRef } from 'react';
-import { getPerformanceMonitor } from '../utils/advancedPerformanceMonitor';
+import { AdvancedPerformanceMonitor } from '../utils/advancedPerformanceMonitor';
 import { NetworkInformation } from '../types/global';
 
 interface PerformanceOptimizationConfig {
@@ -52,8 +52,7 @@ export const usePerformanceOptimization = (
 
   // Initialize performance monitoring
   useEffect(() => {
-    if (configRef.current.enableWebVitals) {
-      monitor.current = getPerformanceMonitor();
+    if (configRef.current.enableWebVitals && monitor.current) {
       monitor.current.start();
     }
 
