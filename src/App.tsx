@@ -63,7 +63,7 @@ export default function App(): React.JSX.Element {
   const [showRealTimeMetrics, setShowRealTimeMetrics] = useState(false);
   const [notifications, setNotifications] = useState<Notification[]>([]);
   const [showWebsiteEnhancements, setShowWebsiteEnhancements] = useState(false);
-  const [showAccessibilityPanel] = useState(false);
+  const [, _setShowAccessibilityPanel] = useState(false);
   const [showPerformanceMetrics, setShowPerformanceMetrics] = useState(false);
   const [showRealTimeMonitor, setShowRealTimeMonitor] = useState(false);
   const [showSystemHealth, setShowSystemHealth] = useState(false);
@@ -401,7 +401,7 @@ export default function App(): React.JSX.Element {
   }, []);
 
   // Main initialization and cleanup effect
-  React.useEffect(() => {
+  useEffect(() => {
     // Add performance marks for better monitoring
     if (typeof window !== 'undefined' && window.performance && typeof performance.mark === 'function') {
       performance.mark('app-init-start');
@@ -441,7 +441,7 @@ export default function App(): React.JSX.Element {
   }, [handleScroll, handleClick, enhancedTrackEngagement]);
 
   // SEO and performance effect
-  React.useEffect(() => {
+  useEffect(() => {
     // Update meta tags
     updateMetaTags(memoizedSeoData);
     
@@ -537,10 +537,15 @@ export default function App(): React.JSX.Element {
       }
     };
 
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, [showSystemDashboard, showPerformanceOptimizer, showPerformanceMonitor, showAIDashboard, showSEOOptimizer, isDarkMode, showRealTimeMonitor, showSystemHealth, showKeyboardHelp, showPerformanceMetrics, showCommandPalette]);
+
   // Enhanced track engagement function
   const trackEngagement = useCallback(() => {
     try {
-      const timeOnPage = Date.now() - engagementData.startTime;
+      const _timeOnPage = Date.now() - engagementData.startTime;
+      console.log('Time on page:', _timeOnPage);
       // seoAnalytics.trackUserEngagement(window.location.pathname, {
       //   timeOnPage,
       //   scrollDepth: engagementData.scrollDepth,
@@ -551,7 +556,7 @@ export default function App(): React.JSX.Element {
     } catch (error) {
       console.error('Error tracking engagement:', error);
     }
-  }, [engagementData.clicks, engagementData.scrollDepth, engagementData.startTime, originalTrackEngagement]);
+  }, [engagementData.startTime, originalTrackEngagement]);
 
   // Simple SEO manager
   const seoManagerInstance = useMemo(() => ({
@@ -569,6 +574,8 @@ export default function App(): React.JSX.Element {
       }
     }
   }), []);
+
+  // Performance monitoring effect
   useEffect(() => {
     try {
       // Add performance marks for better monitoring
@@ -621,7 +628,7 @@ export default function App(): React.JSX.Element {
   }, [seoData, handleScroll, handleClick, handleKeyDown, preloadResource, seoManagerInstance]);
 
   // Main initialization and cleanup effect
-  React.useEffect(() => {
+  useEffect(() => {
     try {
       // Mark app as fully initialized
       if (typeof window !== 'undefined' && window.performance && 
@@ -660,10 +667,6 @@ export default function App(): React.JSX.Element {
     }
   }, [trackEngagement, handleKeyDown, handleScroll, handleClick]);
 
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
-  }, [showSystemDashboard, showPerformanceOptimizer, showPerformanceMonitor, showAIDashboard, showSEOOptimizer, isDarkMode, showKeyboardHelp, showCommandPalette, showRealTimeMonitor, showSystemHealth, showPerformanceMetrics]);
-
 
   // Track engagement on scroll and click
   useEffect(() => {
@@ -672,7 +675,7 @@ export default function App(): React.JSX.Element {
       trackEngagement();
     };
 
-    const handleClickWithEngagement = (_event: Event) => {
+    const handleClickWithEngagement = () => {
       handleClick();
       trackEngagement();
     };
