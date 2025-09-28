@@ -103,7 +103,7 @@ const ComprehensivePerformanceMonitor: React.FC<ComprehensivePerformanceMonitorP
 
     const measureLoadTime = () => {
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      return navigation ? navigation.loadEventEnd - navigation.navigationStart : 0;
+      return navigation ? navigation.loadEventEnd - navigation.fetchStart : 0;
     };
 
     const measureMemoryUsage = () => {
