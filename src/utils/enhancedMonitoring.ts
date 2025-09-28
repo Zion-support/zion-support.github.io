@@ -164,7 +164,7 @@ class EnhancedMonitoring {
         const target = event.target as HTMLElement;
         this.trackError({
           message: `Failed to load resource: ${target.tagName}`,
-          url: (target as { src?: string; href?: string }).src || (target as { src?: string; href?: string }).href || window.location.href,
+          url: (target as HTMLImageElement).src || (target as HTMLLinkElement).href || window.location.href,
           timestamp: Date.now(),
           userAgent: navigator.userAgent,
           sessionId: this.sessionId,
@@ -173,8 +173,8 @@ class EnhancedMonitoring {
           category: 'resource',
           context: {
             tagName: target.tagName,
-            src: (target as { src?: string; href?: string }).src,
-            href: (target as { src?: string; href?: string }).href
+            src: (target as HTMLImageElement).src,
+            href: (target as HTMLLinkElement).href
           }
         });
       }
@@ -206,7 +206,7 @@ class EnhancedMonitoring {
         entries.forEach((entry) => {
           this.trackPerformance({
             name: 'FID',
-            value: entry.startTime,
+            value: (entry as PerformanceEventTiming).processingStart - entry.startTime,
             type: 'measure',
             url: window.location.href,
             sessionId: this.sessionId,
@@ -221,10 +221,10 @@ class EnhancedMonitoring {
       new PerformanceObserver((list) => {
         const entries = list.getEntries();
         entries.forEach((entry) => {
-          if (!(entry as { hadRecentInput?: boolean }).hadRecentInput) {
+          if (!(entry as any).hadRecentInput) {
             this.trackPerformance({
               name: 'CLS',
-              value: (entry as any).value || 0,
+              value: (entry as any).value,
               type: 'measure',
               url: window.location.href,
               sessionId: this.sessionId,
