@@ -113,15 +113,11 @@ const AdvancedPerformanceDashboard: React.FC<AdvancedPerformanceDashboardProps> 
 
   useEffect(() => {
     if (isVisible) {
-<<<<<<< HEAD
       updateMetrics();
       generateSuggestions();
       
       const interval = setInterval(updateMetrics, 2000);
       return () => clearInterval(interval);
-=======
-      initializeDashboard();
-      startRealTimeMonitoring();
     }
   }, [isVisible]);
 
@@ -142,9 +138,8 @@ const AdvancedPerformanceDashboard: React.FC<AdvancedPerformanceDashboardProps> 
       setPerformanceScore(score);
     } catch (error) {
       console.error('Failed to initialize dashboard:', error);
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-fd3d
     }
-  }, [isVisible, updateMetrics, generateSuggestions]);
+  };
 
   const getScoreColor = (score: number) => {
     if (score >= 90) return 'text-green-600 bg-green-100';
@@ -172,8 +167,6 @@ const AdvancedPerformanceDashboard: React.FC<AdvancedPerformanceDashboardProps> 
 
   if (!isVisible) return null;
 
-<<<<<<< HEAD
-=======
   const performanceData = [
     { name: 'Build Score', value: metrics.buildScore, threshold: 80 },
     { name: 'Accessibility', value: metrics.accessibilityScore, threshold: 85 },
@@ -193,7 +186,6 @@ const AdvancedPerformanceDashboard: React.FC<AdvancedPerformanceDashboardProps> 
     { name: 'Available', value: strategies.filter((s: OptimizationStrategy) => !s.applied).length, color: '#6b7280' }
   ];
 
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-fd3d
   return (
     <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
       <div className="bg-white rounded-lg p-6 max-w-7xl w-full mx-4 max-h-[90vh] overflow-y-auto">
@@ -268,9 +260,7 @@ const AdvancedPerformanceDashboard: React.FC<AdvancedPerformanceDashboardProps> 
               <div key={index} className="bg-white p-3 rounded-lg border-l-4 border-blue-500">
                 <p className="text-sm text-gray-700">{suggestion}</p>
               </div>
-<<<<<<< HEAD
             ))}
-=======
 
               <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-4">
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
@@ -362,11 +352,9 @@ const AdvancedPerformanceDashboard: React.FC<AdvancedPerformanceDashboardProps> 
                 </div>
               ))}
             </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-fd3d
           </div>
         </div>
 
-<<<<<<< HEAD
         {/* Actions */}
         <div className="flex flex-wrap gap-4">
           <button
@@ -387,7 +375,6 @@ const AdvancedPerformanceDashboard: React.FC<AdvancedPerformanceDashboardProps> 
           >
             Reload App
           </button>
-=======
           {/* Performance Recommendations */}
           <div className="bg-gradient-to-r from-yellow-400 to-orange-500 rounded-lg p-6 text-white">
             <h3 className="text-xl font-semibold mb-2">Performance Recommendations</h3>
@@ -409,7 +396,6 @@ const AdvancedPerformanceDashboard: React.FC<AdvancedPerformanceDashboardProps> 
               )}
             </div>
           </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-fd3d
         </div>
       </div>
     </div>

@@ -30,10 +30,7 @@ interface MonitoringConfig {
   endpoint: string;
 }
 
-interface LayoutShift extends PerformanceEntry {
-  hadRecentInput: boolean;
-  value: number;
-}
+// LayoutShift interface is already defined above, removing duplicate
 
 interface ErrorData {
   message: string;

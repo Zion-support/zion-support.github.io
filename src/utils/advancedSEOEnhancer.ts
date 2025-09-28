@@ -348,3 +348,9 @@ ${pages.map(page => `  <url>
 
     return `
 SEO Report:
+- Issues Found: ${issues.length}
+- Recommendations: ${recommendations.length}
+- Score: ${score}/100
+`;
+  }
+}
