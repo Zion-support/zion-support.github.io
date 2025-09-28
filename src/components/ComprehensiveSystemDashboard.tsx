@@ -34,7 +34,7 @@ const ComprehensiveSystemDashboard: React.FC<ComprehensiveSystemDashboardProps> 
 
     const updateStats = () => {
       setSystemStats({
-        errorCount: errorRecoverySystem.getErrorHistory().length,
+        errorCount: errorRecoverySystem.getErrorCount(),
         analyticsEvents: advancedAnalytics.getEvents().length,
         cacheSize: smartCache.size(),
         cacheHitRate: smartCache.getStats().hitRate,
@@ -82,7 +82,7 @@ const ComprehensiveSystemDashboard: React.FC<ComprehensiveSystemDashboardProps> 
   };
 
   const clearAllData = () => {
-    errorRecoverySystem.clearHistory();
+    errorRecoverySystem.reset();
     advancedAnalytics.clearData();
     smartCache.clear();
     setSystemStats({
