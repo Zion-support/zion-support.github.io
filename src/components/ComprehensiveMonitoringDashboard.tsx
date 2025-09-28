@@ -389,7 +389,7 @@ export const ComprehensiveMonitoringDashboard: React.FC = () => {
                         <span className="text-red-600">❌ {failCount}</span>
                       </div>
                     </div>
-                    <span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(score)}`}>
+                    <span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(score >= 80 ? 'pass' : score >= 60 ? 'warning' : 'fail')}`}>
                       {score}%
                     </span>
                   </div>

@@ -31,8 +31,9 @@ class AdvancedPerformanceOptimizer {
   private metrics: PerformanceMetrics | null = null;
   private observers: PerformanceObserver[] = [];
   private isInitialized = false;
+  private strategies: any[] = [];
 
-  constructor(config: Partial<OptimizationConfig> = {}) {
+  constructor() {
     this.config = {
       enableImageOptimization: true,
       enableCodeSplitting: true,
@@ -43,8 +44,7 @@ class AdvancedPerformanceOptimizer {
       enableServiceWorker: true,
       enableCriticalCSS: true,
       enableResourceHints: true,
-      enableBundleOptimization: true,
-      ...config
+      enableBundleOptimization: true
     };
     this.initializeStrategies();
   }

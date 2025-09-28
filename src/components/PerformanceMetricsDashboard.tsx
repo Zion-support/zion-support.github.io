@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { performanceMetrics, PerformanceReport } from '../utils/performanceMetrics';
-import { analyzeSEO, SEOAnalysis } from '../utils/seoOptimizer';
-import { analyzeAccessibility, AccessibilityReport } from '../utils/accessibilityEnhancer';
+import { seoOptimizer } from '../utils/seoOptimizer';
+import { SEOMetrics } from '../utils/enhancedSEOOptimizer';
+import { accessibilityEnhancer, AccessibilityMetrics } from '../utils/accessibilityEnhancer';
 
 interface PerformanceMetricsDashboardProps {
   isVisible: boolean;
@@ -10,8 +11,8 @@ interface PerformanceMetricsDashboardProps {
 
 const PerformanceMetricsDashboard: React.FC<PerformanceMetricsDashboardProps> = ({ isVisible, onClose }) => {
   const [performanceReport, setPerformanceReport] = useState<PerformanceReport | null>(null);
-  const [seoAnalysis, setSeoAnalysis] = useState<SEOAnalysis | null>(null);
-  const [accessibilityReport, setAccessibilityReport] = useState<AccessibilityReport | null>(null);
+  const [seoAnalysis, setSeoAnalysis] = useState<SEOMetrics | null>(null);
+  const [accessibilityReport, setAccessibilityReport] = useState<AccessibilityMetrics | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [activeTab, setActiveTab] = useState<'performance' | 'seo' | 'accessibility'>('performance');
 
@@ -19,8 +20,8 @@ const PerformanceMetricsDashboard: React.FC<PerformanceMetricsDashboardProps> = 
     setIsLoading(true);
     try {
       const perfReport = performanceMetrics.generateReport();
-      const seoData = analyzeSEO();
-      const a11yData = analyzeAccessibility();
+      const seoData = seoOptimizer.getMetrics();
+      const a11yData = accessibilityEnhancer.getMetrics();
 
       setPerformanceReport(perfReport);
       setSeoAnalysis(seoData);

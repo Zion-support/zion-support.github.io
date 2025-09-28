@@ -3,6 +3,8 @@
  * Advanced error handling, recovery, and user experience management
  */
 
+import { useState, useEffect, useCallback } from 'react';
+
 export interface ErrorContext {
   component?: string;
   action?: string;

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 // import { advancedAnalytics as analytics } from '../utils/advancedAnalytics';
 // import AdvancedCacheManager from '../utils/advancedCache';
 import AdvancedAccessibilityManager from '../utils/advancedAccessibilityManager';
-import AdvancedSecurityManager from '../utils/advancedSecurityManager';
+import { AdvancedSecurityManager } from '../utils/advancedSecurityManager';
 import EnhancedUXManager from '../utils/enhancedUXManager';
 
 interface PerformanceData {
@@ -37,6 +37,12 @@ interface AnalyticsData {
     language: string;
     timezone: string;
   };
+}
+
+interface AnalyticsEvent {
+  type: string;
+  timestamp: number;
+  data?: Record<string, unknown>;
 }
 
 interface CacheData {
@@ -82,7 +88,7 @@ const AdvancedDashboard: React.FC = () => {
       events: events.map((e) => ({
         event: e.name,
         timestamp: e.timestamp || Date.now(),
-        properties: e.properties
+        properties: (e as any).properties || {}
       })),
       deviceInfo: {
         screenResolution: `${window.screen.width}x${window.screen.height}`,

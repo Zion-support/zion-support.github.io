@@ -86,18 +86,18 @@ export interface PerformanceMetrics {
 // Optimization Suggestion Types
 export interface OptimizationSuggestion {
   id: string;
-  type: 'performance' | 'seo' | 'accessibility' | 'security' | 'critical' | 'warning';
+  type: 'critical' | 'warning' | 'info';
+  category: 'performance' | 'seo' | 'accessibility' | 'security';
+  priority: 'high' | 'medium' | 'low';
   title: string;
   description: string;
   impact: 'high' | 'medium' | 'low';
   effort: 'low' | 'medium' | 'high';
-  priority: number;
   actionable: boolean;
   implementation?: string;
   resources?: string[];
   message?: string;
   action?: string;
-  category?: string;
 }
 
 // SEO Audit Types
@@ -154,7 +154,6 @@ export interface MonitoringMetrics {
   };
 }
 
-// Optimization Suggestion Types (duplicate removed - using the more comprehensive definition above)
 
 // Enhanced Performance Metrics
 export interface EnhancedPerformanceMetrics {

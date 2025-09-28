@@ -19,13 +19,13 @@ export const usePerformanceMonitor = () => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
         if (entry.entryType === 'largest-contentful-paint') {
-          setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
+          setMetrics(prev => prev ? { ...prev, lcp: entry.startTime } : { lcp: entry.startTime } as PerformanceMetrics);
         }
         if (entry.entryType === 'first-input') {
-          setMetrics(prev => ({ ...prev, fid: (entry as any).processingStart - entry.startTime }));
+          setMetrics(prev => prev ? { ...prev, fid: (entry as any).processingStart - entry.startTime } : { fid: (entry as any).processingStart - entry.startTime } as PerformanceMetrics);
         }
         if (entry.entryType === 'layout-shift') {
-          setMetrics(prev => ({ ...prev, cls: (prev?.cls || 0) + ((entry as any).value || 0) }));
+          setMetrics(prev => prev ? { ...prev, cls: (prev?.cls || 0) + ((entry as any).value || 0) } : { cls: (entry as any).value || 0 } as PerformanceMetrics);
         }
       });
     });
@@ -37,7 +37,7 @@ export const usePerformanceMonitor = () => {
       const entries = list.getEntries();
       const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
       if (fcpEntry) {
-        setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }));
+        setMetrics(prev => prev ? { ...prev, fcp: fcpEntry.startTime } : { fcp: fcpEntry.startTime } as PerformanceMetrics);
       }
     });
     fcpObserver.observe({ entryTypes: ['paint'] });
