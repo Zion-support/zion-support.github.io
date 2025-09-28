@@ -43,19 +43,19 @@ import './index.css';
 
 // Import new advanced systems
 import { performanceAnalytics } from './utils/advancedPerformanceAnalytics';
-import { seoManager } from './utils/advancedSEOManager';
+import { seoManager as advancedSEOManager } from './utils/advancedSEOManager';
 import { errorTracker } from './utils/advancedErrorTracker';
 import { apiCache, imageCache, dataCache } from './utils/advancedCacheManager';
 
 // Import new comprehensive systems
-import { performanceOptimizer } from './utils/performanceOptimizations';
+import { performanceOptimizer as comprehensivePerformanceOptimizer } from './utils/performanceOptimizations';
 import { accessibilityEnhancer } from './utils/accessibilityEnhancements';
 // import { securityEnhancer } from './utils/securityEnhancements';
 // import ComprehensiveMonitoringDashboard from './components/ComprehensiveMonitoringDashboard';
 
 // Import enhanced utilities
 import { enhancedErrorHandler } from './utils/enhancedErrorHandling';
-import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitoring';
+import { enhancedPerformanceMonitor as enhancedPerfMonitor } from './utils/enhancedPerformanceMonitoring';
 import { enhancedAccessibilityManager } from './utils/enhancedAccessibility';
 import { advancedErrorRecovery } from './utils/advancedErrorRecovery';
 import { enhancedSEOOptimizer } from './utils/enhancedSEOOptimizer';
@@ -65,21 +65,21 @@ import { apiCache as apiCacheSystem, imageCache as imageCacheSystem, dataCache a
 import { enhancedAnalyticsSystem } from './utils/enhancedAnalyticsSystem';
 
 // Lazy load heavy components for better performance
-const EnhancedSystemDashboard = lazy(() => import('./components/EnhancedSystemDashboard'));
-const KeyboardShortcutsHelp = lazy(() => import('./components/KeyboardShortcutsHelp'));
-const SystemHealthDashboard = lazy(() => import('./components/SystemHealthDashboard'));
-const PerformanceWidget = lazy(() => import('./components/PerformanceWidget'));
-const CommandPalette = lazy(() => import('./components/CommandPalette'));
-const AdvancedMonitoringDashboard = lazy(() => import('./components/AdvancedMonitoringDashboard'));
-const ComprehensivePerformanceDashboard = lazy(() => import('./components/ComprehensivePerformanceDashboard'));
-const RealTimePerformanceMonitor = lazy(() => import('./components/RealTimePerformanceMonitor'));
-const EnhancedCommandPalette = lazy(() => import('./components/EnhancedCommandPalette'));
-const PerformanceIndicator = lazy(() => import('./components/PerformanceIndicator'));
-const AccessibilityEnhancer = lazy(() => import('./components/AccessibilityEnhancer'));
-const DynamicMetaTags = lazy(() => import('./components/DynamicMetaTags'));
-const SystemStatusIndicator = lazy(() => import('./components/SystemStatusIndicator'));
-const EnhancedNotificationSystem = lazy(() => import('./components/EnhancedNotificationSystem'));
-const KeyboardShortcutsManager = lazy(() => import('./components/KeyboardShortcutsManager'));
+const LazyEnhancedSystemDashboard = lazy(() => import('./components/EnhancedSystemDashboard'));
+const LazyKeyboardShortcutsHelp = lazy(() => import('./components/KeyboardShortcutsHelp'));
+const LazySystemHealthDashboard = lazy(() => import('./components/SystemHealthDashboard'));
+const LazyPerformanceWidget = lazy(() => import('./components/PerformanceWidget'));
+const LazyCommandPalette = lazy(() => import('./components/CommandPalette'));
+const LazyAdvancedMonitoringDashboard = lazy(() => import('./components/AdvancedMonitoringDashboard'));
+const LazyComprehensivePerformanceDashboard = lazy(() => import('./components/ComprehensivePerformanceDashboard'));
+const LazyRealTimePerformanceMonitor = lazy(() => import('./components/RealTimePerformanceMonitor'));
+const LazyEnhancedCommandPalette = lazy(() => import('./components/EnhancedCommandPalette'));
+const LazyPerformanceIndicator = lazy(() => import('./components/PerformanceIndicator'));
+const LazyAccessibilityEnhancer = lazy(() => import('./components/AccessibilityEnhancer'));
+const LazyDynamicMetaTags = lazy(() => import('./components/DynamicMetaTags'));
+const LazySystemStatusIndicator = lazy(() => import('./components/SystemStatusIndicator'));
+const LazyEnhancedNotificationSystem = lazy(() => import('./components/EnhancedNotificationSystem'));
+const LazyKeyboardShortcutsManager = lazy(() => import('./components/KeyboardShortcutsManager'));
 // const ModernFeatures = lazy(() => import('./components/ModernFeatures'));
 // const EnhancedPerformanceDashboard = lazy(() => import('./components/EnhancedPerformanceDashboard'));
 
@@ -270,7 +270,7 @@ function App(): React.JSX.Element {
   useEffect(() => {
     try {
       // Initialize enhanced systems
-      enhancedPerformanceMonitor.initialize();
+      enhancedPerfMonitor.initialize();
       enhancedErrorHandler.initialize();
       enhancedAccessibilityManager.initialize();
       advancedErrorRecovery.initialize();
@@ -284,7 +284,7 @@ function App(): React.JSX.Element {
       
       // Initialize advanced systems
       void performanceAnalytics; // Initialize performance analytics
-      void seoManager; // Initialize SEO manager
+      void advancedSEOManager; // Initialize SEO manager
       void errorTracker; // Initialize error tracker
       
       // Initialize caching systems
@@ -293,7 +293,7 @@ function App(): React.JSX.Element {
       void dataCache;
       
       // Initialize SEO for current page
-      seoManager.updateSEO({
+      advancedSEOManager.updateSEO({
         title: seoData.title,
         description: seoData.description,
         keywords: seoData.keywords.split(', '),
@@ -342,7 +342,7 @@ function App(): React.JSX.Element {
       
       return () => {
         // Cleanup function
-        enhancedPerformanceMonitor.stopMonitoring();
+        enhancedPerfMonitor.stopMonitoring();
       };
     } catch (error) {
       console.error('Error initializing enhancements:', error);
@@ -467,7 +467,7 @@ function App(): React.JSX.Element {
   useEffect(() => {
     try {
       // Initialize enhanced systems
-      enhancedPerformanceMonitor.startMonitoring();
+      enhancedPerfMonitor.startMonitoring();
       analytics.initialize();
       
       // Initialize accessibility and security enhancers
@@ -510,7 +510,7 @@ function App(): React.JSX.Element {
       // Add performance marks for better monitoring
       if (typeof window !== 'undefined' && window.performance && typeof performance.mark === 'function') {
         performance.mark('app-init-start');
-        enhancedPerformanceMonitor.markMilestone('app-init-start');
+        enhancedPerfMonitor.markMilestone('app-init-start');
         
         // Add performance observer for better monitoring
         if ('PerformanceObserver' in window) {
@@ -538,10 +538,10 @@ function App(): React.JSX.Element {
       console.debug('Initializing comprehensive systems');
       
       // Initialize performance optimizer
-      performanceOptimizer.optimizeImages();
-      performanceOptimizer.preloadCriticalResources();
-      performanceOptimizer.enableCaching();
-      performanceOptimizer.optimizeBundleSize();
+      comprehensivePerformanceOptimizer.optimizeImages();
+      comprehensivePerformanceOptimizer.preloadCriticalResources();
+      comprehensivePerformanceOptimizer.enableCaching();
+      comprehensivePerformanceOptimizer.optimizeBundleSize();
       
       // Initialize accessibility enhancer
       accessibilityEnhancer.announce('Application loaded successfully');
@@ -579,8 +579,8 @@ function App(): React.JSX.Element {
           typeof performance.measure === 'function') {
         performance.mark('app-init-complete');
         performance.measure('app-initialization', 'app-init-start', 'app-init-complete');
-        enhancedPerformanceMonitor.markMilestone('app-init-complete');
-        enhancedPerformanceMonitor.measurePerformance('app-initialization', 'app-init-start', 'app-init-complete');
+        enhancedPerfMonitor.markMilestone('app-init-complete');
+        enhancedPerfMonitor.measurePerformance('app-initialization', 'app-init-start', 'app-init-complete');
       }
 
       // Basic performance monitoring
@@ -654,9 +654,9 @@ function App(): React.JSX.Element {
     <PerformanceOptimizer enableMonitoring={true} enableOptimizations={true}>
       <EnhancedErrorBoundary>
         <Suspense fallback={<ModernLoadingSpinner />}>
-          <AccessibilityEnhancer>
+            <LazyAccessibilityEnhancer>
             <Suspense fallback={null}>
-              <DynamicMetaTags
+              <LazyDynamicMetaTags
                 title="Zion Tech Group - Advanced AI and IT Solutions"
                 description="Leading provider of cutting-edge AI and IT solutions, cloud services, cybersecurity, and digital transformation services for modern enterprises."
                 keywords="AI solutions, IT services, cloud computing, cybersecurity, digital transformation, enterprise software, machine learning, data analytics"
@@ -712,7 +712,7 @@ function App(): React.JSX.Element {
                 </button>
               </div>
               <Suspense fallback={<ModernLoadingSpinner />}>
-                <EnhancedSystemDashboard />
+                <LazyEnhancedSystemDashboard />
               </Suspense>
             </div>
           </div>
@@ -723,7 +723,7 @@ function App(): React.JSX.Element {
         
         {/* System Health Dashboard */}
         <Suspense fallback={<ModernLoadingSpinner />}>
-          <SystemHealthDashboard
+          <LazySystemHealthDashboard
             isVisible={showSystemHealth}
             onClose={() => setShowSystemHealth(false)}
           />
@@ -742,14 +742,14 @@ function App(): React.JSX.Element {
         />
         
         <Suspense fallback={<ModernLoadingSpinner />}>
-          <KeyboardShortcutsHelp
+          <LazyKeyboardShortcutsHelp
             isVisible={showKeyboardHelp}
             onClose={() => setShowKeyboardHelp(false)}
           />
         </Suspense>
 
         <Suspense fallback={<ModernLoadingSpinner />}>
-          <PerformanceWidget
+          <LazyPerformanceWidget
             isVisible={showPerformanceWidget}
             onClose={() => setShowPerformanceWidget(false)}
           />
@@ -761,7 +761,7 @@ function App(): React.JSX.Element {
         />
 
         <Suspense fallback={<ModernLoadingSpinner />}>
-          <CommandPalette
+          <LazyCommandPalette
             isVisible={showCommandPalette}
             onClose={() => setShowCommandPalette(false)}
             commands={[
@@ -803,7 +803,7 @@ function App(): React.JSX.Element {
 
         {showAdvancedMonitoring && (
           <Suspense fallback={<ModernLoadingSpinner />}>
-            <AdvancedMonitoringDashboard
+            <LazyAdvancedMonitoringDashboard
               showRealTime={true}
               refreshInterval={5000}
             />
@@ -812,7 +812,7 @@ function App(): React.JSX.Element {
 
         {showRealTimePerformance && (
           <Suspense fallback={<ModernLoadingSpinner />}>
-            <RealTimePerformanceMonitor
+            <LazyRealTimePerformanceMonitor
               isVisible={showRealTimePerformance}
               onClose={() => setShowRealTimePerformance(false)}
               refreshInterval={1000}
@@ -822,7 +822,7 @@ function App(): React.JSX.Element {
 
         {showEnhancedCommandPalette && (
           <Suspense fallback={<ModernLoadingSpinner />}>
-            <EnhancedCommandPalette
+            <LazyEnhancedCommandPalette
               isVisible={showEnhancedCommandPalette}
               onClose={() => setShowEnhancedCommandPalette(false)}
             />
@@ -831,14 +831,14 @@ function App(): React.JSX.Element {
 
         {showComprehensiveDashboard && (
           <Suspense fallback={<ModernLoadingSpinner />}>
-            <ComprehensivePerformanceDashboard />
+            <LazyComprehensivePerformanceDashboard />
           </Suspense>
         )}
 
         {/* System Status Indicator */}
         {showSystemStatus && (
           <Suspense fallback={<ModernLoadingSpinner />}>
-            <SystemStatusIndicator
+            <LazySystemStatusIndicator
               refreshInterval={30000}
               showDetails={true}
             />
@@ -848,7 +848,7 @@ function App(): React.JSX.Element {
         {/* Enhanced Notification System */}
         {showEnhancedNotifications && (
           <Suspense fallback={<ModernLoadingSpinner />}>
-            <EnhancedNotificationSystem
+            <LazyEnhancedNotificationSystem
               notifications={enhancedNotifications}
               onRemove={(id: string) => {
                 setEnhancedNotifications(prev => prev.filter(n => n.id !== id));
@@ -864,7 +864,7 @@ function App(): React.JSX.Element {
         {/* Keyboard Shortcuts Manager */}
         {showKeyboardShortcutsManager && (
           <Suspense fallback={<ModernLoadingSpinner />}>
-            <KeyboardShortcutsManager
+            <LazyKeyboardShortcutsManager
               shortcuts={[
                 {
                   id: 'toggle-system-dashboard',
@@ -960,7 +960,7 @@ function App(): React.JSX.Element {
 
         {/* Real-Time Monitor Button */}
         <button
-          onClick={() => setShowRealTimeMonitor(true)}
+          onClick={() => setShowRealTimePerformance(true)}
           className="fixed bottom-4 right-52 z-40 bg-orange-600 hover:bg-orange-700 text-white p-3 rounded-full shadow-lg transition-colors duration-200"
           title="Real-Time Monitor (Ctrl+Shift+R)"
         >
@@ -1003,7 +1003,7 @@ function App(): React.JSX.Element {
       
       {/* Performance Indicator */}
       <Suspense fallback={null}>
-        <PerformanceIndicator showDetails={showAdvancedMonitoring} />
+        <LazyPerformanceIndicator showDetails={showAdvancedMonitoring} />
       </Suspense>
       
       {/* Performance Monitor */}
@@ -1014,7 +1014,7 @@ function App(): React.JSX.Element {
           console.warn(`Performance issue detected: ${metric} = ${value} (threshold: ${threshold})`);
         }}
       />
-    </AccessibilityEnhancer>
+    </LazyAccessibilityEnhancer>
     </Suspense>
     </EnhancedErrorBoundary>
     </PerformanceOptimizer>
