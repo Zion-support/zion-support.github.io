@@ -88,18 +88,20 @@ export const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({
     return `${(value / 1000).toFixed(1)}s`;
   };
 
-  // Keyboard shortcut handler
-  useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.ctrlKey && event.shiftKey && event.key === 'D') {
-        event.preventDefault();
-        setIsVisible(prev => !prev);
-      }
-    };
+  const getMetricColor = (value: number, thresholds: { good: number; poor: number }) => {
+    if (value <= thresholds.good) return 'text-green-500';
+    if (value <= thresholds.poor) return 'text-yellow-500';
+    return 'text-red-500';
+  };
 
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
-  }, []);
+  const getSuggestionIcon = (type: string) => {
+    switch (type) {
+      case 'critical': return '🚨';
+      case 'warning': return '⚠️';
+      case 'info': return 'ℹ️';
+      default: return 'ℹ️';
+    }
+  };
 
   return (
     <div className={clsx('bg-white dark:bg-gray-900 rounded-lg shadow-lg p-6', className)}>
@@ -123,133 +125,90 @@ export const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({
         </div>
       </div>
 
-      {/* Performance Metrics Grid */}
+      {/* Performance Metrics */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-        {/* Core Web Vitals */}
         <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-4">
-          <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
-            Core Web Vitals
-          </h3>
-          <div className="space-y-3">
-            <div className="flex justify-between items-center">
-              <span className="text-sm text-gray-600 dark:text-gray-400">LCP</span>
-              <span className={getMetricColor(metrics.lcp, { good: 2500, poor: 4000 })}>
-                {formatMetric(metrics.lcp)}
-              </span>
-            </div>
-            <div className="flex justify-between items-center">
-              <span className="text-sm text-gray-600 dark:text-gray-400">FID</span>
-              <span className={getMetricColor(metrics.fid, { good: 100, poor: 300 })}>
-                {formatMetric(metrics.fid)}
-              </span>
-            </div>
-            <div className="flex justify-between items-center">
-              <span className="text-sm text-gray-600 dark:text-gray-400">CLS</span>
-              <span className={getMetricColor(metrics.cls, { good: 0.1, poor: 0.25 })}>
-                {metrics.cls.toFixed(3)}
-              </span>
-            </div>
+          <div className="flex items-center justify-between mb-2">
+            <h3 className="text-sm font-medium text-gray-600 dark:text-gray-400">First Contentful Paint</h3>
+            <span className={getMetricColor(metrics.fcp, { good: 1800, poor: 3000 })}>
+              {getPerformanceLabel(metrics.fcp, { good: 1800, poor: 3000 })}
+            </span>
           </div>
+          <p className="text-2xl font-bold text-gray-900 dark:text-white">
+            {formatMetric(metrics.fcp)}
+          </p>
         </div>
 
-        {/* Performance Metrics */}
         <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-4">
-          <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
-            Performance
-          </h3>
-          <div className="space-y-3">
-            <div className="flex justify-between items-center">
-              <span className="text-sm text-gray-600 dark:text-gray-400">FCP</span>
-              <span className={getMetricColor(metrics.fcp, { good: 1800, poor: 3000 })}>
-                {formatMetric(metrics.fcp)}
-              </span>
-            </div>
-            <div className="flex justify-between items-center">
-              <span className="text-sm text-gray-600 dark:text-gray-400">TTFB</span>
-              <span className={getMetricColor(metrics.ttfb, { good: 800, poor: 1800 })}>
-                {formatMetric(metrics.ttfb)}
-              </span>
-            </div>
-            <div className="flex justify-between items-center">
-              <span className="text-sm text-gray-600 dark:text-gray-400">FMP</span>
-              <span className={getMetricColor(metrics.fmp, { good: 2000, poor: 3000 })}>
-                {formatMetric(metrics.fmp)}
-              </span>
-            </div>
+          <div className="flex items-center justify-between mb-2">
+            <h3 className="text-sm font-medium text-gray-600 dark:text-gray-400">Largest Contentful Paint</h3>
+            <span className={getMetricColor(metrics.lcp, { good: 2500, poor: 4000 })}>
+              {getPerformanceLabel(metrics.lcp, { good: 2500, poor: 4000 })}
+            </span>
           </div>
+          <p className="text-2xl font-bold text-gray-900 dark:text-white">
+            {formatMetric(metrics.lcp)}
+          </p>
         </div>
 
-        {/* Resource Metrics */}
         <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-4">
-          <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
-            Resources
-          </h3>
-          <div className="space-y-3">
-            <div className="flex justify-between items-center">
-              <span className="text-sm text-gray-600 dark:text-gray-400">Resources</span>
-              <span className="text-sm text-gray-900 dark:text-white">
-                {metrics.resourceCount}
-              </span>
-            </div>
-            <div className="flex justify-between items-center">
-              <span className="text-sm text-gray-600 dark:text-gray-400">Size</span>
-              <span className="text-sm text-gray-900 dark:text-white">
-                {(metrics.resourceSize / 1024).toFixed(1)} KB
-              </span>
-            </div>
-            <div className="flex justify-between items-center">
-              <span className="text-sm text-gray-600 dark:text-gray-400">DOM Nodes</span>
-              <span className="text-sm text-gray-900 dark:text-white">
-                {metrics.domNodes}
-              </span>
-            </div>
+          <div className="flex items-center justify-between mb-2">
+            <h3 className="text-sm font-medium text-gray-600 dark:text-gray-400">First Input Delay</h3>
+            <span className={getMetricColor(metrics.fid, { good: 100, poor: 300 })}>
+              {getPerformanceLabel(metrics.fid, { good: 100, poor: 300 })}
+            </span>
           </div>
+          <p className="text-2xl font-bold text-gray-900 dark:text-white">
+            {formatMetric(metrics.fid)}
+          </p>
+        </div>
+
+        <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-4">
+          <div className="flex items-center justify-between mb-2">
+            <h3 className="text-sm font-medium text-gray-600 dark:text-gray-400">Cumulative Layout Shift</h3>
+            <span className={getMetricColor(metrics.cls, { good: 0.1, poor: 0.25 })}>
+              {getPerformanceLabel(metrics.cls, { good: 0.1, poor: 0.25 })}
+            </span>
+          </div>
+          <p className="text-2xl font-bold text-gray-900 dark:text-white">
+            {metrics.cls.toFixed(3)}
+          </p>
+        </div>
+
+        <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-4">
+          <div className="flex items-center justify-between mb-2">
+            <h3 className="text-sm font-medium text-gray-600 dark:text-gray-400">Time to First Byte</h3>
+            <span className={getMetricColor(metrics.ttfb, { good: 800, poor: 1800 })}>
+              {getPerformanceLabel(metrics.ttfb, { good: 800, poor: 1800 })}
+            </span>
+          </div>
+          <p className="text-2xl font-bold text-gray-900 dark:text-white">
+            {formatMetric(metrics.ttfb)}
+          </p>
         </div>
       </div>
 
-      {/* Performance Score */}
-      <div className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-lg p-6 mb-8">
-        <div className="flex items-center justify-between">
-          <div>
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-              Performance Score
-            </h3>
-            <p className="text-sm text-gray-600 dark:text-gray-400">
-              Based on Core Web Vitals and performance metrics
-            </p>
-          </div>
-          <div className="text-right">
-            <div className={clsx('text-4xl font-bold', getMetricColor(performanceScore, { good: 90, poor: 70 }))}>
-              {performanceScore}
-            </div>
-            <div className="text-sm text-gray-600 dark:text-gray-400">
-              out of 100
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Suggestions */}
-      {suggestions.length > 0 && (
+      {/* Optimization Suggestions */}
+      {showOptimizationSuggestions && optimizationSuggestions.length > 0 && (
         <div className="mb-8">
           <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
             Optimization Suggestions
           </h3>
           <div className="space-y-3">
-            {suggestions.map((suggestion, index) => (
+            {optimizationSuggestions.map((suggestion, index) => (
               <div key={index} className="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-lg p-4">
-                <div className="flex items-start gap-3">
+                <div className="flex items-start space-x-3">
                   <span className="text-lg">{getSuggestionIcon(suggestion.type)}</span>
-                  <div className="flex-1">
-                    <h4 className={clsx('font-medium', getSuggestionColor(suggestion.type))}>
+                  <div>
+                    <h4 className="font-medium text-yellow-800 dark:text-yellow-200">
                       {suggestion.title}
                     </h4>
-                    <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                    <p className="text-sm text-yellow-700 dark:text-yellow-300 mt-1">
                       {suggestion.description}
                     </p>
-                    {suggestion.potentialSavings && (
-                      <p className="text-xs text-gray-500 dark:text-gray-500 mt-2">
-                        Potential savings: {suggestion.potentialSavings}
+                    {suggestion.impact && (
+                      <p className="text-xs text-yellow-600 dark:text-yellow-400 mt-2">
+                        Expected impact: {suggestion.impact}
                       </p>
                     )}
                   </div>
@@ -266,54 +225,39 @@ export const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({
           <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
             Bundle Analysis
           </h3>
-          <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-4">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-gray-900 dark:text-white">
-                  {bundleAnalysis.totalChunks}
-                </div>
-                <div className="text-sm text-gray-600 dark:text-gray-400">Total Chunks</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-gray-900 dark:text-white">
-                  {(bundleAnalysis.totalSize / 1024).toFixed(1)} KB
-                </div>
-                <div className="text-sm text-gray-600 dark:text-gray-400">Total Size</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-gray-900 dark:text-white">
-                  {bundleAnalysis.averageChunkSize.toFixed(1)} KB
-                </div>
-                <div className="text-sm text-gray-600 dark:text-gray-400">Avg Chunk Size</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-gray-900 dark:text-white">
-                  {(bundleAnalysis.largestChunkSize / 1024).toFixed(1)} KB
-                </div>
-                <div className="text-sm text-gray-600 dark:text-gray-400">Largest Chunk</div>
-              </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-4">
+              <h4 className="font-medium text-gray-900 dark:text-white mb-2">Total Bundle Size</h4>
+              <p className="text-2xl font-bold text-blue-600">
+                {(bundleAnalysis.totalSize / 1024).toFixed(1)} KB
+              </p>
+            </div>
+            <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-4">
+              <h4 className="font-medium text-gray-900 dark:text-white mb-2">Number of Chunks</h4>
+              <p className="text-2xl font-bold text-green-600">
+                {bundleAnalysis.chunks.length}
+              </p>
             </div>
           </div>
 
+          {/* Bundle Suggestions */}
           {bundleSuggestions.length > 0 && (
             <div className="mt-6">
-              <h4 className="text-md font-medium text-gray-900 dark:text-white mb-3">
-                Bundle Optimization Suggestions
-              </h4>
+              <h4 className="font-medium text-gray-900 dark:text-white mb-3">Bundle Optimizations</h4>
               <div className="space-y-2">
                 {bundleSuggestions.map((suggestion, index) => (
                   <div key={index} className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-3">
-                    <h5 className="text-sm font-medium text-blue-800 dark:text-blue-200">
-                      {suggestion.title}
-                    </h5>
-                    <p className="text-sm text-blue-700 dark:text-blue-300 mt-1">
-                      {suggestion.description}
-                    </p>
-                    {suggestion.potentialSavings && (
-                      <p className="text-xs text-blue-600 dark:text-blue-400 mt-1">
-                        Potential savings: {suggestion.potentialSavings}
-                      </p>
-                    )}
+                    <div className="flex items-start space-x-2">
+                      <span className="text-sm">💡</span>
+                      <div>
+                        <h5 className="font-medium text-blue-800 dark:text-blue-200 text-sm">
+                          {suggestion.title}
+                        </h5>
+                        <p className="text-xs text-blue-700 dark:text-blue-300 mt-1">
+                          {suggestion.description}
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 ))}
               </div>
@@ -324,5 +268,3 @@ export const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({
     </div>
   );
 };
-
-export default PerformanceDashboard;
