@@ -5,7 +5,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { advancedPerformanceOptimizer } from '../utils/advancedPerformanceOptimizer';
-import { advancedSEOOptimizer } from '../utils/advancedSEOOptimizer';
+import { seoOptimizer } from '../utils/advancedSEOOptimizer';
 import { advancedAccessibilityEnhancer } from '../utils/advancedAccessibilityEnhancer';
 
 interface ImprovementsProps {
@@ -23,7 +23,7 @@ export default function ComprehensiveImprovements({ isVisible, onClose }: Improv
     if (isVisible) {
       // Update metrics when component becomes visible
       setPerformanceMetrics(advancedPerformanceOptimizer.getMetrics());
-      setSeoData(advancedSEOOptimizer.getCurrentPageData());
+      setSeoData(seoOptimizer.getCurrentPageData());
       setAccessibilityMetrics(advancedAccessibilityEnhancer.getMetrics());
     }
   }, [isVisible]);

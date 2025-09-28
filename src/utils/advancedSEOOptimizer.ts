@@ -437,6 +437,5 @@ export const generateMetaTags = (pageData: PageSEOData) => {
   return seoOptimizer.generateMetaTags(pageData);
 };
 
-// Export class for custom instances
-export { AdvancedSEOOptimizer };
+// Export types for external use
 export type { SEOConfig, PageSEOData };
