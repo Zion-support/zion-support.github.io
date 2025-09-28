@@ -431,7 +431,7 @@ export default function App(): React.JSX.Element {
     };
 
     const handleClickWithEngagement = (event: Event) => {
-      handleClick();
+      handleClick(event);
       trackEngagement();
     };
 
