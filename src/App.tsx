@@ -4,20 +4,13 @@ import { useAppInitialization } from './hooks/useAppInitialization';
 import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import { seoAnalytics, performanceSEO } from './utils/seoEnhanced';
-import { analytics } from './utils/analytics';
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
 import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import AIPerformanceDashboard from './components/AIPerformanceDashboard';
-import { SEOOptimizer, useSEOData } from './components/SEOOptimizer';
-import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
-import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
-import { enhancedAnalytics } from './utils/enhancedAnalytics';
-import { advancedCacheSystem } from './utils/advancedCacheSystem';
-import { AdvancedAutomationSystem } from './utils/advancedAutomationSystem';
+import { SEOOptimizer } from './components/SEOOptimizer';
 import { AccessibilityEnhancer } from './utils/accessibilityEnhancer';
-import { SecurityEnhancer } from './utils/securityEnhancer';
 import './index.css';
 
 export default function App(): React.JSX.Element {
@@ -74,6 +67,17 @@ export default function App(): React.JSX.Element {
     });
     trackEngagement();
   }, [engagementData.clicks, engagementData.scrollDepth, engagementData.startTime, trackEngagement]);
+  // SEO data for the app
+  const seoData = useMemo(() => ({
+    title: 'Zion Tech Group - Advanced AI and IT Solutions',
+    description: 'Leading provider of cutting-edge AI solutions, IT services, and digital transformation for modern businesses.',
+    keywords: ['AI solutions', 'IT services', 'digital transformation', 'automation', 'technology consulting'],
+    ogType: 'website',
+    ogUrl: 'https://ziontechgroup.com',
+    ogImage: '/og-image.png',
+    twitterCard: 'summary_large_image'
+  }), []);
+
   // Update meta tags function
   const updateMetaTags = useCallback((data: {
     title: string;
@@ -103,11 +107,7 @@ export default function App(): React.JSX.Element {
 
   // Initialize comprehensive enhancements
   useEffect(() => {
-    const enhancements = getComprehensiveEnhancements();
-    // Remove the initialize call since it's private
-    
     // Initialize individual enhancement systems
-    // Remove initialize calls for classes that don't have this method
     new AccessibilityEnhancer().initialize();
     // Add performance marks for better monitoring
     if (typeof window !== 'undefined' && window.performance && typeof performance.mark === 'function') {
@@ -131,9 +131,6 @@ export default function App(): React.JSX.Element {
     performanceSEO.optimizeImages();
     performanceSEO.optimizeFonts();
     performanceSEO.optimizeCSS();
-
-    // Set default SEO data using the correct method
-    seoManager.updateMetaTags(seoData);
 
     // Update meta tags
     updateMetaTags(seoData);
@@ -159,7 +156,7 @@ export default function App(): React.JSX.Element {
       document.removeEventListener('click', handleClick);
       document.removeEventListener('keydown', handleKeyDown);
     };
-  }, [trackEngagement, handleKeyDown, handleScroll, handleClick, enhancedTrackEngagement, seoData, preloadResource]);
+  }, [trackEngagement, handleKeyDown, handleScroll, handleClick, enhancedTrackEngagement, updateMetaTags, preloadResource, seoData]);
 
   if (isLoading) {
     return (
@@ -178,7 +175,7 @@ export default function App(): React.JSX.Element {
 
   return (
     <EnhancedErrorBoundary>
-      <SEOOptimizer seoData={seoData} />
+      <SEOOptimizer />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <AppRouter />
         

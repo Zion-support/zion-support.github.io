@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { enhancedErrorHandler } from '../utils/enhancedErrorHandling';
 
 interface AIPerformanceDashboardProps {
   isVisible: boolean;
@@ -9,13 +8,13 @@ interface AIPerformanceDashboardProps {
 // Removed unused interfaces - they were defined but never used in the component
 
 const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisible, onClose }) => {
-  const [metrics, setMetrics] = useState<{
+  const [metrics] = useState<{
     errorRate: number;
     avgResolutionTime: number;
     criticalErrorsToday: number;
     userImpactScore: number;
   } | null>(null);
-  const [insights, setInsights] = useState<{
+  const [insights] = useState<{
     predictedHighRiskActions: string[];
     recommendedImprovements: string[];
     errorTrends: Array<{
@@ -23,7 +22,7 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
       trend: 'increasing' | 'decreasing' | 'stable';
     }>;
   } | null>(null);
-  const [errors, setErrors] = useState<Array<{
+  const [errors] = useState<Array<{
     severity: string;
     message: string;
     lastOccurrence: string | Date;
@@ -40,6 +39,8 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
     if (isVisible) {
       const updateData = () => {
         try {
+          // TODO: Implement actual data fetching logic
+          console.log('Updating dashboard data...');
         } catch (error) {
           console.error('Failed to fetch dashboard data:', error);
         }
