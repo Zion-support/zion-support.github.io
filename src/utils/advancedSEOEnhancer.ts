@@ -348,3 +348,13 @@ ${pages.map(page => `  <url>
 
     return `
 SEO Report:
+==========
+Title: ${data.title || 'Not specified'}
+Description: ${data.description || 'Not specified'}
+Keywords: ${data.keywords.join(', ') || 'None'}
+URL: ${data.url || 'Not specified'}
+Issues Found: ${issues.length}
+${issues.length > 0 ? 'Issues: ' + issues.join(', ') : 'No issues found'}
+`;
+  }
+}
