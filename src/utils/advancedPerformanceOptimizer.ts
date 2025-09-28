@@ -1,6 +1,5 @@
 /**
  * Advanced Performance Optimizer
-<<<<<<< HEAD
  * Provides comprehensive performance optimization strategies
  */
 
@@ -83,8 +82,42 @@ class AdvancedPerformanceOptimizer {
     ];
   }
 
-=======
- * Provides comprehensive performance monitoring and optimization utilities
+  // Additional methods for the existing class
+  private preloadCriticalResources(): void {
+    // Implementation for critical resource preloading
+  }
+
+  private optimizeImages(): void {
+    // Implementation for image optimization
+  }
+
+  private optimizeJavaScriptBundles(): void {
+    // Implementation for JavaScript bundle optimization
+  }
+
+  private optimizeCSS(): void {
+    // Implementation for CSS optimization
+  }
+
+  private implementServiceWorkerCaching(): void {
+    // Implementation for service worker caching
+  }
+
+  private optimizeDatabaseQueries(): void {
+    // Implementation for database query optimization
+  }
+
+  private optimizeMemoryUsage(): void {
+    // Implementation for memory usage optimization
+  }
+
+  private optimizeNetworkRequests(): void {
+    // Implementation for network request optimization
+  }
+}
+
+/**
+ * Additional Performance Optimizer with different configuration
  */
 
 interface PerformanceConfig {
@@ -98,23 +131,7 @@ interface PerformanceConfig {
   enableResourceHints: boolean;
 }
 
-interface PerformanceMetrics {
-  loadTime: number;
-  renderTime: number;
-  memoryUsage: number;
-  fps: number;
-  lcp: number;
-  fid: number;
-  cls: number;
-  ttfb: number;
-  networkLatency: number;
-  domSize: number;
-  resourceCount: number;
-  cacheHitRate: number;
-  compressionRatio: number;
-}
-
-class AdvancedPerformanceOptimizer {
+class AdvancedPerformanceOptimizerV2 {
   private config: PerformanceConfig;
   private metrics: PerformanceMetrics;
   private observers: PerformanceObserver[];
@@ -155,17 +172,13 @@ class AdvancedPerformanceOptimizer {
   /**
    * Initialize the performance optimizer
    */
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-7cb6
   public async initialize(): Promise<void> {
     if (this.isInitialized) return;
 
     try {
-<<<<<<< HEAD
       await this.collectPerformanceMetrics();
       await this.analyzeAndOptimize();
-      this.isInitialized = true;
       
-=======
       // Initialize performance observers
       this.initializePerformanceObservers();
       
@@ -200,14 +213,12 @@ class AdvancedPerformanceOptimizer {
       }
 
       this.isInitialized = true;
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-7cb6
       console.log('Advanced Performance Optimizer initialized successfully');
     } catch (error) {
       console.error('Failed to initialize Advanced Performance Optimizer:', error);
     }
   }
 
-<<<<<<< HEAD
   private async collectPerformanceMetrics(): Promise<void> {
     if (typeof window === 'undefined' || !window.performance) return;
 
@@ -381,7 +392,8 @@ class AdvancedPerformanceOptimizer {
       strategies: this.strategies,
       appliedOptimizations: this.strategies.map(s => s.name)
     };
-=======
+  }
+
   /**
    * Initialize performance observers for Core Web Vitals
    */
@@ -584,7 +596,6 @@ class AdvancedPerformanceOptimizer {
    */
   public getMetrics(): PerformanceMetrics {
     return { ...this.metrics };
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-7cb6
   }
 
   /**
@@ -601,21 +612,9 @@ class AdvancedPerformanceOptimizer {
    * Get performance score (0-100)
    */
   public getPerformanceScore(): number {
-<<<<<<< HEAD
     if (!this.metrics) return 0;
 
-    // Calculate a performance score based on metrics
-    const lcpScore = Math.max(0, 100 - (this.metrics.lcp / 10));
-    const fcpScore = Math.max(0, 100 - (this.metrics.fcp / 10));
-    const ttfbScore = Math.max(0, 100 - (this.metrics.ttfb / 10));
-
-    return Math.round((lcpScore + fcpScore + ttfbScore) / 3);
-  }
-}
-
-export const advancedPerformanceOptimizer = new AdvancedPerformanceOptimizer();
-export default AdvancedPerformanceOptimizer;
-=======
+    // Calculate a performance score based on Core Web Vitals
     const lcpScore = this.metrics.lcp < 2500 ? 100 : Math.max(0, 100 - (this.metrics.lcp - 2500) / 25);
     const fidScore = this.metrics.fid < 100 ? 100 : Math.max(0, 100 - (this.metrics.fid - 100) / 10);
     const clsScore = this.metrics.cls < 0.1 ? 100 : Math.max(0, 100 - this.metrics.cls * 1000);
@@ -659,4 +658,3 @@ export const performanceOptimizer = new AdvancedPerformanceOptimizer();
 // Export class for custom instances
 export { AdvancedPerformanceOptimizer };
 export type { PerformanceConfig, PerformanceMetrics };
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-7cb6
