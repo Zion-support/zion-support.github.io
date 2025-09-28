@@ -91,11 +91,11 @@ class SecurityUtils {
   private sanitizeUserInput(): void {
     // Override innerHTML to sanitize content
     const originalInnerHTML = Object.getOwnPropertyDescriptor(Element.prototype, 'innerHTML');
-    if (originalInnerHTML && originalInnerHTML.set) {
+    if (originalInnerHTML) {
       Object.defineProperty(Element.prototype, 'innerHTML', {
-        set: function(value: string) {
+        set: function(value) {
           const sanitized = this.sanitizeHTML(value);
-          originalInnerHTML.set!.call(this, sanitized);
+          originalInnerHTML.set?.call(this, sanitized);
         },
         get: originalInnerHTML.get
       });
