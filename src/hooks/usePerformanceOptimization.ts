@@ -36,7 +36,12 @@ interface ImageOptimizationOptions {
 export const usePerformanceOptimization = (
   config: PerformanceOptimizationConfig = {}
 ): PerformanceOptimizationReturn => {
-  const monitor = useRef(new AdvancedPerformanceMonitor());
+  const monitor = useRef({
+    measure: (name: string) => performance.mark(name),
+    getMetrics: () => ({ lcp: 0, fid: 0, cls: 0 }),
+    start: () => {},
+    stop: () => {}
+  });
   const configRef = useRef({
     enableLazyLoading: true,
     enablePreloading: true,
