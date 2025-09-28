@@ -9,7 +9,6 @@ import { performanceOptimizer } from './utils/performanceOptimizations';
 import { accessibilityEnhancer } from './utils/advancedAccessibilityEnhancer';
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
 import { useAppInitialization } from './hooks/useAppInitialization';
-import { useSEOData } from './hooks/useSEOData';
 import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import PerformanceMonitor from './components/PerformanceMonitor';
@@ -504,7 +503,7 @@ export default function App(): React.JSX.Element {
                   ✕
                 </button>
               </div>
-              <PerformanceMonitor />
+              <PerformanceMonitor showDashboard={true} />
             </div>
           </div>
         )}

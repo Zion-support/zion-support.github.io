@@ -45,12 +45,11 @@ export const performanceEnhancements = {
   // Monitor Core Web Vitals
   monitorCoreWebVitals: () => {
     if ('web-vitals' in window) {
-      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-        getCLS(console.log);
-        getFID(console.log);
-        getFCP(console.log);
-        getLCP(console.log);
-        getTTFB(console.log);
+      import('web-vitals').then(({ onCLS, onFCP, onLCP, onTTFB }) => {
+        onCLS(console.log);
+        onFCP(console.log);
+        onLCP(console.log);
+        onTTFB(console.log);
       });
     }
   },
@@ -59,10 +58,11 @@ export const performanceEnhancements = {
   optimizeFonts: () => {
     const fontLinks = document.querySelectorAll('link[href*="fonts.googleapis.com"]');
     fontLinks.forEach(link => {
-      link.rel = 'preload';
-      link.as = 'style';
-      link.onload = () => {
-        link.rel = 'stylesheet';
+      const linkElement = link as HTMLLinkElement;
+      linkElement.rel = 'preload';
+      linkElement.as = 'style';
+      linkElement.onload = () => {
+        linkElement.rel = 'stylesheet';
       };
     });
   },
@@ -86,6 +86,32 @@ export const performanceEnhancements = {
       fid: 0, // Would need to be measured with PerformanceObserver
       cls: 0  // Would need to be measured with PerformanceObserver
     };
+  },
+
+  // Get optimization suggestions
+  getSuggestions: () => {
+    return [
+      { title: 'Enable compression', impact: 15, description: 'Enable gzip compression for better loading times', automated: true },
+      { title: 'Optimize images', impact: 25, description: 'Convert images to WebP format and optimize sizes', automated: true },
+      { title: 'Minify CSS/JS', impact: 10, description: 'Remove unnecessary whitespace and comments', automated: true },
+      { title: 'Enable caching', impact: 20, description: 'Set appropriate cache headers for static assets', automated: true },
+      { title: 'Lazy load images', impact: 30, description: 'Load images only when they come into viewport', automated: true }
+    ];
+  },
+
+  // Get performance score
+  getPerformanceScore: () => {
+    const metrics = performanceEnhancements.getMetrics();
+    if (!metrics) return 0;
+    
+    // Simple scoring based on Core Web Vitals
+    let score = 100;
+    if (metrics.lcp > 2500) score -= 30;
+    if (metrics.fcp > 1800) score -= 20;
+    if (metrics.fid > 100) score -= 20;
+    if (metrics.cls > 0.1) score -= 30;
+    
+    return Math.max(0, score);
   },
 
   // Generate performance report
