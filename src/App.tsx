@@ -27,6 +27,9 @@ import { initializePerformanceEnhancements } from './utils/performanceEnhancemen
 import { initializeAccessibilityEnhancements } from './utils/accessibilityEnhancements';
 import { advancedPerformanceOptimizer } from './utils/advancedPerformanceOptimizer';
 import { advancedSEOOptimizer } from './utils/advancedSEOOptimizer';
+import { performanceMonitor, getPerformanceScore, getPerformanceRecommendations } from './utils/performanceMonitoring';
+import { seoOptimizer, updatePageSEO, trackSEOEvent } from './utils/seoOptimizer';
+import { errorHandler, handleError, log, ErrorBoundary } from './utils/errorHandler';
 import AdvancedAnalytics from './components/AdvancedAnalytics';
 import NotificationSystem, { Notification } from './components/NotificationSystem';
 import KeyboardShortcutsHelp from './components/KeyboardShortcutsHelp';
@@ -80,7 +83,7 @@ const KeyboardShortcutsManager = lazy(() => import('./components/KeyboardShortcu
 // const ModernFeatures = lazy(() => import('./components/ModernFeatures'));
 // const EnhancedPerformanceDashboard = lazy(() => import('./components/EnhancedPerformanceDashboard'));
 
-export default function App(): React.JSX.Element {
+function App(): React.JSX.Element {
   const navigate = useNavigate();
   
   // State for system dashboard
@@ -483,6 +486,11 @@ export default function App(): React.JSX.Element {
       advancedPerformanceOptimizer.initialize();
       advancedSEOOptimizer.initialize();
       advancedAccessibilityEnhancer.initialize();
+      
+      // Initialize new monitoring and optimization systems
+      performanceMonitor.initialize();
+      seoOptimizer.initialize();
+      errorHandler.initialize();
       
       // Get comprehensive enhancements
       const enhancements = getComprehensiveEnhancements();
@@ -1010,5 +1018,14 @@ export default function App(): React.JSX.Element {
     </Suspense>
     </EnhancedErrorBoundary>
     </PerformanceOptimizer>
+  );
+}
+
+// Wrap App with ErrorBoundary
+export default function AppWithErrorBoundary(): React.JSX.Element {
+  return (
+    <ErrorBoundary>
+      <App />
+    </ErrorBoundary>
   );
 }
