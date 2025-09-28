@@ -337,7 +337,7 @@ export default function App(): React.JSX.Element {
     }
     
     // Initialize advanced utilities
-    const initializeUtilities = async () => {
+    const initializeUtilities = () => {
       try {
         // performanceOptimizer is already initialized in constructor
         // await seoEnhancer.initialize();
