@@ -71,12 +71,15 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         }
       });
       newMetrics.bundleSize = totalSize;
+      
+      setMetrics(prev => ({
         ...prev,
         fcp: vitals.fcp || 0,
         lcp: vitals.lcp || 0,
         fid: vitals.fid || 0,
         cls: vitals.cls || 0,
-        ttfb: vitals.ttfb || 0
+        ttfb: vitals.ttfb || 0,
+        ...newMetrics
       }));
     }
 
