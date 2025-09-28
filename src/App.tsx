@@ -84,14 +84,14 @@ export default function App(): React.JSX.Element {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [showKeyboardHelp, setShowKeyboardHelp] = useState(false);
   const [showCommandPalette, setShowCommandPalette] = useState(false);
-  const [showAdvancedMonitoring, setShowAdvancedMonitoring] = useState(false);
-  const [showComprehensiveDashboard, setShowComprehensiveDashboard] = useState(false);
+  // const [showAdvancedMonitoring, setShowAdvancedMonitoring] = useState(false);
+  // const [showComprehensiveDashboard, setShowComprehensiveDashboard] = useState(false);
   const [showComprehensiveMonitoring, setShowComprehensiveMonitoring] = useState(false);
   const [showRealTimePerformance, setShowRealTimePerformance] = useState(false);
   const [showEnhancedCommandPalette, setShowEnhancedCommandPalette] = useState(false);
   const [showSystemStatus, setShowSystemStatus] = useState(true);
   const [showEnhancedNotifications] = useState(true);
-  const [showKeyboardShortcutsManager, setShowKeyboardShortcutsManager] = useState(false);
+  // const [showKeyboardShortcutsManager, setShowKeyboardShortcutsManager] = useState(false);
   const [showPerformanceWidget, setShowPerformanceWidget] = useState(false);
   const [showSystemHealth, setShowSystemHealth] = useState(false);
   const [notifications, setNotifications] = useState<Notification[]>([]);
@@ -461,7 +461,7 @@ export default function App(): React.JSX.Element {
   const trackEngagement = useCallback(() => {
     // Track user engagement metrics
     if (analytics && 'track' in analytics) {
-      (analytics as any).track('engagement', {
+      (analytics as { track: (event: string, data: Record<string, unknown>) => void }).track('engagement', {
         scrollDepth: engagementData.scrollDepth,
         clicks: engagementData.clicks,
         timeOnPage: Date.now() - engagementData.startTime
@@ -470,14 +470,14 @@ export default function App(): React.JSX.Element {
   }, [engagementData]);
 
   // Handle scroll events
-  const handleScrollEngagement = useCallback(() => {
-    engagementData.scrollDepth = Math.max(engagementData.scrollDepth, window.scrollY / (document.documentElement.scrollHeight - window.innerHeight) * 100);
-  }, [engagementData]);
+  // const handleScrollEngagement = useCallback(() => {
+  //   engagementData.scrollDepth = Math.max(engagementData.scrollDepth, window.scrollY / (document.documentElement.scrollHeight - window.innerHeight) * 100);
+  // }, [engagementData]);
 
   // Handle click events
-  const handleClickEngagement = useCallback(() => {
-    engagementData.clicks++;
-  }, [engagementData]);
+  // const handleClickEngagement = useCallback(() => {
+  //   engagementData.clicks++;
+  // }, [engagementData]);
 
   // Initialize app with custom configuration
   // Temporarily disable useAppInitialization to fix build
@@ -870,7 +870,7 @@ export default function App(): React.JSX.Element {
       window.removeEventListener('scroll', handleScrollWithEngagement);
       document.removeEventListener('click', handleClickWithEngagement);
     };
-  }, [handleScrollEngagement, handleClickEngagement, trackEngagement]);
+  }, [handleScroll, handleClick, trackEngagement]);
 
   if (isLoading) {
     return <ModernLoadingSpinner progress={loadingProgress} />;
@@ -994,7 +994,7 @@ export default function App(): React.JSX.Element {
             <div className="space-y-2 text-sm">
               <div className="flex justify-between">
                 <span>Memory Usage:</span>
-                <span className="text-green-400">{Math.round(((performance as any).memory?.usedJSHeapSize || 0) / 1024 / 1024)} MB</span>
+                <span className="text-green-400">{Math.round(((performance as { memory?: { usedJSHeapSize?: number } }).memory?.usedJSHeapSize || 0) / 1024 / 1024)} MB</span>
               </div>
               <div className="flex justify-between">
                 <span>Render Time:</span>
