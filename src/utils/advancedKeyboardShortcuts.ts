@@ -181,7 +181,7 @@ export class AdvancedKeyboardShortcuts {
     }
   }
 
-  private handleKeyUp(event: KeyboardEvent): void {
+  private handleKeyUp(): void {
     // Handle key up events if needed
   }
 

@@ -2,61 +2,89 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 interface ErrorReport {
   id: string;
-  level: string;
+  timestamp: number;
+  type: 'javascript' | 'network' | 'performance' | 'security' | 'user' | 'system';
+  severity: 'low' | 'medium' | 'high' | 'critical';
   message: string;
   stack?: string;
-  componentStack?: string;
-  timestamp: string;
-  userAgent: string;
   url: string;
-  userId: string;
+  userAgent: string;
+  userId?: string;
   sessionId: string;
-  retryCount: number;
-  memoryUsage?: any;
-  performanceMetrics?: any;
+  context: Record<string, unknown>;
+  resolved: boolean;
 }
 
-export default function handler(
+interface ErrorReportingResponse {
+  success: boolean;
+  message: string;
+  errorId?: string;
+}
+
+export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse
+  res: NextApiResponse<ErrorReportingResponse>
 ) {
   if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' });
+    return res.status(405).json({
+      success: false,
+      message: 'Method not allowed'
+    });
   }
 
   try {
     const errorReport: ErrorReport = req.body;
 
     // Validate required fields
-    if (!errorReport.id || !errorReport.message || !errorReport.timestamp) {
-      return res.status(400).json({ error: 'Missing required fields' });
+    if (!errorReport.id || !errorReport.message || !errorReport.type) {
+      return res.status(400).json({
+        success: false,
+        message: 'Missing required fields'
+      });
     }
 
-    // Log the error (in production, you'd send this to an error tracking service)
-    console.error('Error Report:', {
+    // Log the error (in production, this would be stored in a database)
+    console.log('Error Report Received:', {
       id: errorReport.id,
-      level: errorReport.level,
+      type: errorReport.type,
+      severity: errorReport.severity,
       message: errorReport.message,
       url: errorReport.url,
-      timestamp: errorReport.timestamp,
-      userId: errorReport.userId
+      timestamp: new Date(errorReport.timestamp).toISOString(),
+      userId: errorReport.userId,
+      sessionId: errorReport.sessionId
     });
 
     // In a real application, you would:
-    // 1. Send to error tracking service (Sentry, LogRocket, etc.)
-    // 2. Store in database for analysis
-    // 3. Send alerts for critical errors
-    // 4. Generate reports for monitoring
+    // 1. Store the error in a database
+    // 2. Send alerts for critical errors
+    // 3. Update error metrics
+    // 4. Trigger monitoring systems
 
-    // For demo purposes, we'll just acknowledge receipt
-    res.status(200).json({
+    // For now, we'll just log and return success
+    const errorId = errorReport.id;
+
+    return res.status(200).json({
       success: true,
-      message: 'Error report received',
-      errorId: errorReport.id
+      message: 'Error report received successfully',
+      errorId
     });
 
   } catch (error) {
-    console.error('Failed to process error report:', error);
-    res.status(500).json({ error: 'Internal server error' });
+    console.error('Error processing error report:', error);
+    
+    return res.status(500).json({
+      success: false,
+      message: 'Internal server error'
+    });
   }
 }
+
+// Configure API route
+export const config = {
+  api: {
+    bodyParser: {
+      sizeLimit: '1mb',
+    },
+  },
+};

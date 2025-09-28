@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from 'react';
-import { performanceMonitor } from '../utils/performanceMonitor';
 
 interface PerformanceMemory {
   usedJSHeapSize: number;

@@ -23,7 +23,7 @@ export interface DataPoint {
   y: number;
   label?: string;
   color?: string;
-  metadata?: Record<string, any>;
+  metadata?: Record<string, string | number | boolean>;
 }
 
 export interface ChartData {
@@ -31,7 +31,7 @@ export interface ChartData {
   data: DataPoint[];
   type: 'line' | 'bar' | 'pie' | 'scatter' | 'area';
   color?: string;
-  metadata?: Record<string, any>;
+  metadata?: Record<string, string | number | boolean>;
 }
 
 export interface VisualizationOptions {
@@ -50,7 +50,7 @@ export interface VisualizationOptions {
 export class AdvancedDataVisualization {
   private config: ChartConfig;
   private container: HTMLElement | null = null;
-  private charts: Map<string, any> = new Map();
+  private charts: Map<string, { render: () => void; update: (data: DataPoint[]) => void; destroy: () => void }> = new Map();
   private dataStreams: Map<string, DataPoint[]> = new Map();
   private updateIntervals: Map<string, NodeJS.Timeout> = new Map();
 
@@ -491,13 +491,13 @@ export class AdvancedDataVisualization {
     }
   }
 
-  private createXScale(data: DataPoint[], width: number): (value: any) => number {
+  private createXScale(data: DataPoint[], width: number): (value: number | string) => number {
     const values = data.map(d => typeof d.x === 'number' ? d.x : 0);
     const min = Math.min(...values);
     const max = Math.max(...values);
     const range = max - min || 1;
 
-    return (value: any) => {
+    return (value: number | string) => {
       const numValue = typeof value === 'number' ? value : 0;
       return ((numValue - min) / range) * width;
     };
@@ -514,7 +514,7 @@ export class AdvancedDataVisualization {
     };
   }
 
-  private createLineGenerator(xScale: (value: any) => number, yScale: (value: number) => number): (data: DataPoint[]) => string {
+  private createLineGenerator(xScale: (value: number | string) => number, yScale: (value: number) => number): (data: DataPoint[]) => string {
     return (data: DataPoint[]) => {
       return data.map((point, index) => {
         const x = xScale(point.x);
@@ -524,7 +524,7 @@ export class AdvancedDataVisualization {
     };
   }
 
-  private createAreaGenerator(xScale: (value: any) => number, yScale: (value: number) => number, height: number): (data: DataPoint[]) => string {
+  private createAreaGenerator(xScale: (value: number | string) => number, yScale: (value: number) => number, height: number): (data: DataPoint[]) => string {
     return (data: DataPoint[]) => {
       const line = this.createLineGenerator(xScale, yScale);
       const linePath = line(data);
@@ -534,7 +534,7 @@ export class AdvancedDataVisualization {
     };
   }
 
-  private addGrid(g: SVGElement, xScale: (value: any) => number, yScale: (value: number) => number, width: number, height: number): void {
+  private addGrid(g: SVGElement, xScale: (value: number | string) => number, yScale: (value: number) => number, width: number, height: number): void {
     // Add horizontal grid lines
     for (let i = 0; i <= 5; i++) {
       const y = (height / 5) * i;
@@ -564,7 +564,7 @@ export class AdvancedDataVisualization {
     }
   }
 
-  private addAxes(g: SVGElement, xScale: (value: any) => number, yScale: (value: number) => number, width: number, height: number, options: VisualizationOptions): void {
+  private addAxes(g: SVGElement, xScale: (value: number | string) => number, yScale: (value: number) => number, width: number, height: number, options: VisualizationOptions): void {
     // X-axis
     const xAxis = document.createElementNS('http://www.w3.org/2000/svg', 'line');
     xAxis.setAttribute('x1', '0');
@@ -610,7 +610,7 @@ export class AdvancedDataVisualization {
     }
   }
 
-  private addDataPoints(g: SVGElement, data: DataPoint[], xScale: (value: any) => number, yScale: (value: number) => number): void {
+  private addDataPoints(g: SVGElement, data: DataPoint[], xScale: (value: number | string) => number, yScale: (value: number) => number): void {
     data.forEach((point, index) => {
       const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
       circle.setAttribute('cx', xScale(point.x).toString());
@@ -712,7 +712,7 @@ export class AdvancedDataVisualization {
     }
   }
 
-  private updateDataStream(streamId: string): void {
+  private updateDataStream(_streamId: string): void {
     // This would be implemented to update real-time data streams
     // Implementation depends on the specific data source
   }
