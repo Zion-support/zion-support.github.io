@@ -51,12 +51,6 @@ export default function App(): React.JSX.Element {
   }, []);
 
 
-  // Engagement data for tracking
-  const engagementData = useMemo(() => ({
-    startTime: Date.now(),
-    scrollDepth: 0,
-    clicks: 0
-  }), []);
 
   // Track engagement function
   const trackEngagement = useCallback(() => {
