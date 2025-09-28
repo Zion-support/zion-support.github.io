@@ -627,7 +627,7 @@ export class AdvancedAutomationSystem {
     }
   }
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+   
   private async rollingDeployment(_config: DeploymentConfig): Promise<boolean> {
     console.log("Performing rolling deployment...");
     await this.delay(2000);
@@ -642,7 +642,7 @@ export class AdvancedAutomationSystem {
     return true;
   }
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+   
   private async canaryDeployment(_config: DeploymentConfig): Promise<boolean> {
     console.log("Performing canary deployment...");
     await this.delay(4000);
@@ -664,7 +664,7 @@ export class AdvancedAutomationSystem {
     await this.runTestSuite("integration");
   }
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+   
   private async rollbackDeployment(_config: DeploymentConfig): Promise<void> {
     console.log("Rolling back deployment...");
     await this.delay(2000);

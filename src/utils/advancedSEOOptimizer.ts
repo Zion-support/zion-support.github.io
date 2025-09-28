@@ -676,6 +676,25 @@ Allow: /blog/
   getPages(): Map<string, PageSEOData> {
     return new Map(this.pages);
   }
+
+  /**
+   * Get current page SEO data
+   */
+  getCurrentPageData(): any {
+    return this.generatePageSEO({
+      url: window.location.href,
+      title: document.title,
+      description: this.getMetaContent("description"),
+    });
+  }
+
+  /**
+   * Get meta content by name
+   */
+  private getMetaContent(name: string): string {
+    const meta = document.querySelector(`meta[name="${name}"]`);
+    return meta ? meta.getAttribute("content") || "" : "";
+  }
 }
 
 // Export singleton instance

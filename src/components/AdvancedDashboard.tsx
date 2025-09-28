@@ -76,7 +76,7 @@ const AdvancedDashboard: React.FC = () => {
 
   const updateData = () => {
     // Mock analytics data for now
-    const events: Array<{ name: string; timestamp?: number }> = [];
+    const events: Array<{ name: string; timestamp?: number; type?: string; properties?: Record<string, any> }> = [];
     const cacheStats = { hits: 0, misses: 0, size: 0 };
     
     // Convert analytics events to analytics data format
@@ -86,9 +86,9 @@ const AdvancedDashboard: React.FC = () => {
       lastActivity: Date.now(),
       pageViews: events.filter((e) => e.type === 'page_view').length,
       events: events.map((e) => ({
-        event: e.type,
+        event: e.type || e.name,
         timestamp: e.timestamp || Date.now(),
-        properties: (e as any).properties || {}
+        properties: e.properties || {}
       })),
       deviceInfo: {
         screenResolution: `${window.screen.width}x${window.screen.height}`,
