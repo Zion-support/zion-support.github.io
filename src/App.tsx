@@ -17,6 +17,7 @@ import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements'
 import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
 import { performanceAlerts } from './utils/performanceAlerts';
 import { accessibilityUtils } from './utils/accessibilityUtils';
+import { accessibilityEnhancements } from './utils/accessibilityEnhancements';
 import { securityUtils } from './utils/securityUtils';
 import AdvancedAnalytics from './components/AdvancedAnalytics';
 import NotificationSystem, { Notification } from './components/NotificationSystem';
