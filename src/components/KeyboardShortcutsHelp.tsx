@@ -26,7 +26,6 @@ const KeyboardShortcutsHelp: React.FC<KeyboardShortcutsHelpProps> = ({ isVisible
     { key: 'Escape', description: 'Close All Modals', category: 'Navigation' },
   ], []);
 
-  if (!isVisible) return null;
   useEffect(() => {
     if (searchTerm) {
       const filtered = shortcuts.filter(shortcut =>

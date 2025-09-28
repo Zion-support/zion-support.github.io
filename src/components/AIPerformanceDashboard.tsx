@@ -19,7 +19,7 @@ interface ErrorReport {
   message: string;
   lastOccurrence: string | Date;
   occurrenceCount: number;
-  severity: 'low' | 'medium' | 'high' | 'critical';
+  severity?: 'low' | 'medium' | 'high' | 'critical';
   context: {
     component?: string;
     action?: string;
@@ -78,7 +78,15 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
           'Enable gzip compression',
           'Implement lazy loading',
           'Add service worker caching'
-        ]
+        ],
+        performancePredictions: {
+          nextHour: 85,
+          nextDay: 92
+        },
+        riskAssessment: {
+          level: 'medium' as const,
+          factors: ['Memory usage', 'Bundle size', 'API response times']
+        }
       };
 
       const mockErrorReports: ErrorReport[] = [
@@ -253,8 +261,8 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
                       <div key={report.id} className="bg-white p-4 rounded border">
                         <div className="flex justify-between items-start mb-2">
                           <div className="flex items-center space-x-2">
-                            <span className={`px-2 py-1 rounded text-xs font-medium ${getSeverityColor(report.severity)}`}>
-                              {report.severity.toUpperCase()}
+                            <span className={`px-2 py-1 rounded text-xs font-medium ${getSeverityColor(report.severity || 'unknown')}`}>
+                              {(report.severity || 'unknown').toUpperCase()}
                             </span>
                             {report.aiPredictedImpact && (
                               <span className={`text-sm font-medium ${getImpactColor(report.aiPredictedImpact)}`}>
