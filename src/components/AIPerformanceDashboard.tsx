@@ -268,10 +268,12 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
                               {(report.severity || 'unknown').toUpperCase()}
                             </span>
                             {report.aiPredictedImpact && (
-                              <span className={`text-sm font-medium ${getImpactColor(report.aiPredictedImpact)}`}>
-                                Impact: {report.aiPredictedImpact}%
-                              </span>
-                            </div>
+                              <div>
+                                <span className={`text-sm font-medium ${getImpactColor(report.aiPredictedImpact)}`}>
+                                  Impact: {report.aiPredictedImpact}%
+                                </span>
+                              </div>
+                            )}
                             <span className="text-sm text-gray-500">
                               {report.occurrenceCount} occurrences
                             </span>
