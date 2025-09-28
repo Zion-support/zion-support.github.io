@@ -31,6 +31,8 @@ import { advancedAnalytics } from './utils/advancedAnalytics';
 import { advancedErrorHandler } from './utils/advancedErrorHandler';
 import { advancedCachingSystem } from './utils/advancedCachingSystem';
 import { advancedUXOptimizer } from './utils/advancedUXOptimizer';
+import { advancedTestingFramework } from './utils/advancedTestingFramework';
+import { advancedI18n } from './utils/advancedI18n';
 import AdvancedAnalytics from './components/AdvancedAnalytics';
 import AdvancedMonitoringDashboard from './components/AdvancedMonitoringDashboard';
 import AdvancedAnalyticsDashboard from './components/AdvancedAnalyticsDashboard';
@@ -225,6 +227,8 @@ export default function App(): React.JSX.Element {
       advancedErrorHandler.initialize();
       advancedCachingSystem.initialize();
       advancedUXOptimizer.initialize();
+      advancedTestingFramework.initialize();
+      advancedI18n.initialize();
       
       // Get comprehensive enhancements
       const enhancements = getComprehensiveEnhancements();
@@ -239,6 +243,8 @@ export default function App(): React.JSX.Element {
       (window as unknown as Record<string, unknown>).errorHandler = advancedErrorHandler;
       (window as unknown as Record<string, unknown>).cachingSystem = advancedCachingSystem;
       (window as unknown as Record<string, unknown>).uxOptimizer = advancedUXOptimizer;
+      (window as unknown as Record<string, unknown>).testingFramework = advancedTestingFramework;
+      (window as unknown as Record<string, unknown>).i18n = advancedI18n;
     } catch (error) {
       console.error('Error initializing enhancements:', error);
     }
