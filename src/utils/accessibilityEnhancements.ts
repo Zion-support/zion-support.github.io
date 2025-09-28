@@ -208,10 +208,20 @@ export class AccessibilityEnhancements {
 
   public getAccessibilityScore(): number {
     const issues = this.getIssues();
-    const totalChecks = 10; // Total number of accessibility checks
-    const issueCount = issues.length;
-    const score = Math.max(0, Math.floor(((totalChecks - issueCount) / totalChecks) * 100));
-    return score;
+    const totalIssues = issues.length;
+    
+    if (totalIssues === 0) return 100;
+    
+    // Calculate score based on issues
+    const errorCount = issues.filter(issue => issue.type === 'error').length;
+    const warningCount = issues.filter(issue => issue.type === 'warning').length;
+    const infoCount = issues.filter(issue => issue.type === 'info').length;
+    
+    // Weight errors more heavily
+    const penalty = (errorCount * 10) + (warningCount * 5) + (infoCount * 2);
+    const score = Math.max(0, 100 - penalty);
+    
+    return Math.round(score);
   }
 }
 
