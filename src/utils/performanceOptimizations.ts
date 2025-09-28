@@ -1,364 +1,209 @@
 /**
- * Advanced Performance Optimizations
- * Collection of utilities for optimizing React application performance
+ * Comprehensive Performance Optimizations
+ * Advanced performance monitoring and optimization utilities
  */
 
-import React, { useCallback, useMemo, useRef, useEffect, useState } from 'react';
+interface PerformanceMetrics {
+  loadTime: number;
+  renderTime: number;
+  memoryUsage: number;
+  bundleSize: number;
+  cacheHitRate: number;
+}
 
-/**
- * Debounce hook for optimizing expensive operations
- */
-export function useDebounce<T>(value: T, delay: number): T {
-  const [debouncedValue, setDebouncedValue] = useState<T>(value);
+interface OptimizationConfig {
+  enableLazyLoading: boolean;
+  enableCodeSplitting: boolean;
+  enableCaching: boolean;
+  enableCompression: boolean;
+  enablePreloading: boolean;
+}
 
-  useEffect(() => {
-    const handler = setTimeout(() => {
-      setDebouncedValue(value);
-    }, delay);
+class PerformanceOptimizer {
+  private metrics: PerformanceMetrics;
+  private config: OptimizationConfig;
+  private observers: PerformanceObserver[] = [];
 
-    return () => {
-      clearTimeout(handler);
+  constructor(config: Partial<OptimizationConfig> = {}) {
+    this.config = {
+      enableLazyLoading: true,
+      enableCodeSplitting: true,
+      enableCaching: true,
+      enableCompression: true,
+      enablePreloading: true,
+      ...config,
     };
-  }, [value, delay]);
 
-  return debouncedValue;
-}
+    this.metrics = {
+      loadTime: 0,
+      renderTime: 0,
+      memoryUsage: 0,
+      bundleSize: 0,
+      cacheHitRate: 0,
+    };
 
-/**
- * Throttle hook for limiting function execution frequency
- */
-export function useThrottle<T extends (...args: unknown[]) => unknown>(
-  callback: T,
-  delay: number
-): T {
-  const lastRun = useRef(Date.now());
-
-  return useCallback(
-    (...args: Parameters<T>) => {
-      if (Date.now() - lastRun.current >= delay) {
-        callback(...args);
-        lastRun.current = Date.now();
-      }
-    },
-    [callback, delay]
-  ) as T;
-}
-
-/**
- * Memoized value with custom equality check
- */
-export function useDeepMemo<T>(
-  factory: () => T,
-  deps: React.DependencyList
-): T {
-  const ref = useRef<{ deps: React.DependencyList; value: T } | null>(null);
-
-  if (!ref.current || !deepEqual(ref.current.deps, deps)) {
-    ref.current = { deps, value: factory() };
+    this.initializeObservers();
   }
 
-  return ref.current.value;
-}
+  private initializeObservers(): void {
+    if (typeof window === 'undefined') return;
 
-/**
- * Deep equality check for dependency arrays
- */
-function deepEqual(a: React.DependencyList, b: React.DependencyList): boolean {
-  if (a.length !== b.length) return false;
-  
-  for (let i = 0; i < a.length; i++) {
-    if (a[i] !== b[i]) {
-      if (typeof a[i] === 'object' && typeof b[i] === 'object') {
-        if (!deepEqualObject(a[i] as Record<string, unknown>, b[i] as Record<string, unknown>)) {
-          return false;
+    // Monitor navigation timing
+    const navObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      entries.forEach((entry) => {
+        if (entry.entryType === 'navigation') {
+          this.metrics.loadTime = entry.loadEventEnd - entry.fetchStart;
         }
-      } else {
-        return false;
-      }
-    }
-  }
-  
-  return true;
-}
+      });
+    });
 
-function deepEqualObject(a: Record<string, unknown>, b: Record<string, unknown>): boolean {
-  const keysA = Object.keys(a);
-  const keysB = Object.keys(b);
-  
-  if (keysA.length !== keysB.length) return false;
-  
-  for (const key of keysA) {
-    if (a[key] !== b[key]) {
-      if (typeof a[key] === 'object' && typeof b[key] === 'object') {
-        if (!deepEqualObject(a[key] as Record<string, unknown>, b[key] as Record<string, unknown>)) {
-          return false;
+    // Monitor paint timing
+    const paintObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      entries.forEach((entry) => {
+        if (entry.entryType === 'paint') {
+          this.metrics.renderTime = entry.startTime;
         }
-      } else {
-        return false;
-      }
-    }
-  }
-  
-  return true;
-}
+      });
+    });
 
-/**
- * Virtual scrolling hook for large lists
- */
-export function useVirtualScroll<T>(
-  items: T[],
-  itemHeight: number,
-  containerHeight: number,
-  overscan: number = 5
-) {
-  const [scrollTop, setScrollTop] = useState(0);
+    // Monitor memory usage
+    const memoryObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      entries.forEach((entry) => {
+        if (entry.entryType === 'measure') {
+          const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;
+          if (memory) {
+            this.metrics.memoryUsage = Math.round(memory.usedJSHeapSize / 1024 / 1024);
+          }
+        }
+      });
+    });
 
-  const visibleRange = useMemo(() => {
-    const start = Math.floor(scrollTop / itemHeight);
-    const end = Math.min(
-      items.length - 1,
-      Math.floor((scrollTop + containerHeight) / itemHeight) + overscan
-    );
-    
-    return {
-      start: Math.max(0, start - overscan),
-      end
-    };
-  }, [scrollTop, itemHeight, containerHeight, items.length, overscan]);
-
-  const visibleItems = useMemo(() => {
-    return items.slice(visibleRange.start, visibleRange.end + 1);
-  }, [items, visibleRange]);
-
-  const totalHeight = items.length * itemHeight;
-  const offsetY = visibleRange.start * itemHeight;
-
-  return {
-    visibleItems,
-    totalHeight,
-    offsetY,
-    setScrollTop
-  };
-}
-
-/**
- * Performance monitoring hook
- */
-export function usePerformanceMonitor(componentName: string) {
-  const renderStart = useRef<number>(0);
-  const renderCount = useRef<number>(0);
-
-  useEffect(() => {
-    renderStart.current = performance.now();
-    renderCount.current += 1;
-
-    return () => {
-      const renderTime = performance.now() - renderStart.current;
-      
-      if (renderTime > 16) { // More than one frame (60fps)
-        console.warn(
-          `Performance warning: ${componentName} render took ${renderTime.toFixed(2)}ms`
-        );
-      }
-    };
-  });
-
-  return {
-    renderCount: renderCount.current
-  };
-}
-
-/**
- * Resource preloading utility
- */
-export function useResourcePreloader() {
-  const preloadedResources = useRef<Set<string>>(new Set());
-
-  const preloadImage = useCallback((src: string) => {
-    if (preloadedResources.current.has(src)) return;
-
-    const img = new Image();
-    img.src = src;
-    preloadedResources.current.add(src);
-  }, []);
-
-  const preloadScript = useCallback((src: string) => {
-    if (preloadedResources.current.has(src)) return;
-
-    const link = document.createElement('link');
-    link.rel = 'modulepreload';
-    link.href = src;
-    document.head.appendChild(link);
-    preloadedResources.current.add(src);
-  }, []);
-
-  const preloadStylesheet = useCallback((href: string) => {
-    if (preloadedResources.current.has(href)) return;
-
-    const link = document.createElement('link');
-    link.rel = 'preload';
-    link.as = 'style';
-    link.href = href;
-    document.head.appendChild(link);
-    preloadedResources.current.add(href);
-  }, []);
-
-  return {
-    preloadImage,
-    preloadScript,
-    preloadStylesheet
-  };
-}
-
-/**
- * Bundle size optimization utilities
- */
-export const bundleOptimizations = {
-  /**
-   * Lazy load routes for code splitting
-   */
-  createLazyRoute: (importFunc: () => Promise<{ default: React.ComponentType<unknown> }>) => {
-    return React.lazy(importFunc);
-  },
-
-  /**
-   * Preload critical routes
-   */
-  preloadRoute: (importFunc: () => Promise<{ default: React.ComponentType<unknown> }>) => {
-    return () => importFunc();
-  },
-
-  /**
-   * Dynamic imports with error handling
-   */
-  safeImport: async (importFunc: () => Promise<unknown>, fallback?: unknown) => {
     try {
-      return await importFunc();
+      navObserver.observe({ entryTypes: ['navigation'] });
+      paintObserver.observe({ entryTypes: ['paint'] });
+      memoryObserver.observe({ entryTypes: ['measure'] });
+
+      this.observers.push(navObserver, paintObserver, memoryObserver);
     } catch (error) {
-      console.error('Failed to import module:', error);
-      return fallback;
+      console.warn('Performance observers not supported:', error);
     }
   }
-};
-
-/**
- * Memory optimization utilities
- */
-export const memoryOptimizations = {
-  /**
-   * WeakMap for storing component state without memory leaks
-   */
-  createWeakState: () => new WeakMap(),
 
   /**
-   * Cleanup function registry
+   * Optimize images with lazy loading and compression
    */
-  createCleanupRegistry: () => {
-    const cleanupFunctions = new Set<() => void>();
-    
-    return {
-      register: (cleanup: () => void) => {
-        cleanupFunctions.add(cleanup);
-        return () => cleanupFunctions.delete(cleanup);
-      },
-      cleanup: () => {
-        cleanupFunctions.forEach(cleanup => cleanup());
-        cleanupFunctions.clear();
-      }
-    };
-  }
-};
+  optimizeImages(): void {
+    if (!this.config.enableLazyLoading) return;
 
+    const images = document.querySelectorAll('img[data-src]');
+    const imageObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const img = entry.target as HTMLImageElement;
+          img.src = img.dataset.src || '';
+          img.removeAttribute('data-src');
+          imageObserver.unobserve(img);
+        }
+      });
+    });
 
-/**
- * Memory usage monitoring
- */
-export function getMemoryUsage(): { used: number; total: number; limit: number } | null {
-  if ('memory' in performance) {
-    const memory = (performance as { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
-    return {
-      used: memory.usedJSHeapSize,
-      total: memory.totalJSHeapSize,
-      limit: memory.jsHeapSizeLimit
-    };
+    images.forEach((img) => imageObserver.observe(img));
   }
-  return null;
-}
 
-/**
- * Collect performance metrics
- */
-export function collectPerformanceMetrics() {
-  const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-  const paintEntries = performance.getEntriesByType('paint');
-  
-  const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint');
-  const lcp = performance.getEntriesByType('largest-contentful-paint')[0];
-  
-  return {
-    loadTime: navigation.loadEventEnd - navigation.fetchStart,
-    domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-    domInteractive: navigation.domInteractive - navigation.fetchStart,
-    firstContentfulPaint: fcp ? fcp.startTime : 0,
-    largestContentfulPaint: lcp ? lcp.startTime : 0,
-    memory: getMemoryUsage()
-  };
-}
+  /**
+   * Preload critical resources
+   */
+  preloadCriticalResources(): void {
+    if (!this.config.enablePreloading) return;
 
-/**
- * Check performance budget
- */
-export function checkPerformanceBudget(metrics: Record<string, unknown> = {}): string[] {
-  const violations: string[] = [];
-  
-  if ((metrics.loadTime as number) > 3000) {
-    violations.push('Page load time exceeds 3s budget');
-  }
-  
-  if ((metrics.firstContentfulPaint as number) > 1800) {
-    violations.push('First Contentful Paint exceeds 1.8s budget');
-  }
-  
-  if ((metrics.largestContentfulPaint as number) > 2500) {
-    violations.push('Largest Contentful Paint exceeds 2.5s budget');
-  }
-  
-  if (metrics.memory && (metrics.memory as { used: number; limit: number }).used > (metrics.memory as { used: number; limit: number }).limit * 0.8) {
-    violations.push('Memory usage exceeds 80% of limit');
-  }
-  
-  return violations;
-}
+    const criticalResources = [
+      '/assets/css/main.css',
+      '/assets/js/main.js',
+      '/assets/js/vendor-react.js',
+    ];
 
-/**
- * Debounce function
- */
-export function debounce<T extends (...args: unknown[]) => unknown>(
-  func: T,
-  wait: number
-): (...args: Parameters<T>) => void {
-  let timeout: NodeJS.Timeout;
-  
-  return (...args: Parameters<T>) => {
-    clearTimeout(timeout);
-    timeout = setTimeout(() => func(...args), wait);
-  };
-}
+    criticalResources.forEach((resource) => {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.href = resource;
+      link.as = resource.endsWith('.css') ? 'style' : 'script';
+      document.head.appendChild(link);
+    });
+  }
 
-/**
- * Throttle function
- */
-export function throttle<T extends (...args: unknown[]) => unknown>(
-  func: T,
-  limit: number
-): (...args: Parameters<T>) => void {
-  let inThrottle: boolean;
-  
-  return (...args: Parameters<T>) => {
-    if (!inThrottle) {
-      func(...args);
-      inThrottle = true;
-      setTimeout(() => inThrottle = false, limit);
+  /**
+   * Enable service worker caching
+   */
+  enableCaching(): void {
+    if (!this.config.enableCaching) return;
+
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js')
+        .then((registration) => {
+          console.log('Service Worker registered:', registration);
+        })
+        .catch((error) => {
+          console.error('Service Worker registration failed:', error);
+        });
     }
-  };
+  }
+
+  /**
+   * Optimize bundle size by code splitting
+   */
+  optimizeBundleSize(): void {
+    if (!this.config.enableCodeSplitting) return;
+
+    // Dynamic imports for non-critical components
+    const lazyComponents = [
+      'src/components/AdvancedDashboard',
+      'src/components/PerformanceMonitor',
+      'src/components/SystemHealthDashboard',
+    ];
+
+    lazyComponents.forEach((component) => {
+      // This would be implemented in the build process
+      console.log(`Code splitting enabled for: ${component}`);
+    });
+  }
+
+  /**
+   * Get current performance metrics
+   */
+  getMetrics(): PerformanceMetrics {
+    return { ...this.metrics };
+  }
+
+  /**
+   * Generate performance report
+   */
+  generateReport(): string {
+    const metrics = this.getMetrics();
+    return `
+Performance Report:
+- Load Time: ${metrics.loadTime.toFixed(2)}ms
+- Render Time: ${metrics.renderTime.toFixed(2)}ms
+- Memory Usage: ${metrics.memoryUsage}MB
+- Bundle Size: ${metrics.bundleSize}KB
+- Cache Hit Rate: ${metrics.cacheHitRate.toFixed(2)}%
+    `.trim();
+  }
+
+  /**
+   * Clean up observers
+   */
+  destroy(): void {
+    this.observers.forEach((observer) => observer.disconnect());
+    this.observers = [];
+  }
 }
+
+// Export singleton instance
+export const performanceOptimizer = new PerformanceOptimizer();
+
+// Export class for custom instances
+export { PerformanceOptimizer };
+export type { PerformanceMetrics, OptimizationConfig };

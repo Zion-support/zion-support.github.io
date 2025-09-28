@@ -21,6 +21,8 @@ export interface ErrorRecoveryOptions {
   maxRetries: number;
   retryDelay: number;
   fallbackAction?: () => void;
+  component?: string;
+  action?: string;
 }
 
 class EnhancedErrorHandler {

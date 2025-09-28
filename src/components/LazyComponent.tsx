@@ -2,7 +2,7 @@ import React, { Suspense, lazy, ComponentType, ReactNode } from 'react';
 import { ModernLoadingSpinner } from './ModernLoadingSpinner';
 
 interface LazyComponentProps {
-  fallback?: ReactNode;
+  fallback?: ReactNode | (() => ReactNode);
   delay?: number;
   [key: string]: unknown;
 }
@@ -11,13 +11,12 @@ interface LazyComponentProps {
  * Enhanced Lazy Component with better error handling and performance
  */
 export const createLazyComponent = <P extends object>(
-  importFunc: () => Promise<{ default: ComponentType<P> }>,
-  fallback?: ReactNode
+  importFunc: () => Promise<{ default: ComponentType<P> }>
 ) => {
   const LazyComponent = lazy(importFunc);
 
   const LazyComponentWrapper = React.forwardRef<unknown, P & LazyComponentProps>((props, ref) => {
-    const { fallback: customFallback, delay = 0, ...restProps } = props;
+    const { delay = 0, ...restProps } = props;
     
     const [show, setShow] = React.useState(delay === 0);
     
@@ -33,7 +32,7 @@ export const createLazyComponent = <P extends object>(
     }
 
     return (
-      <Suspense fallback={customFallback || (fallback && typeof fallback === 'function' ? fallback() : fallback) || <ModernLoadingSpinner />}>
+      <Suspense fallback={fallback || <ModernLoadingSpinner />}>
         <LazyComponent {...(restProps as P)} ref={ref as React.Ref<P>} />
       </Suspense>
     );

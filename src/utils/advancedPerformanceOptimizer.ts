@@ -253,9 +253,9 @@ class AdvancedPerformanceOptimizer {
       if ('memory' in performance) {
         const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
         console.log('Memory usage:', {
-          used: Math.round(memory.usedJSHeapSize / 1048576) + ' MB',
-          total: Math.round(memory.totalJSHeapSize / 1048576) + ' MB',
-          limit: Math.round(memory.jsHeapSizeLimit / 1048576) + ' MB'
+          used: Math.round((memory as any).usedJSHeapSize / 1048576) + ' MB',
+          total: Math.round((memory as any).totalJSHeapSize / 1048576) + ' MB',
+          limit: Math.round((memory as any).jsHeapSizeLimit / 1048576) + ' MB'
         });
       }
     }

@@ -4,7 +4,7 @@ import { AppRouter } from './router';
 import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import PerformanceTracker from './components/PerformanceTracker';
-// import PerformanceMonitor from './components/PerformanceMonitor';
+import PerformanceMonitor from './components/PerformanceMonitor';
 // import EnhancedPerformanceMonitor from './components/EnhancedPerformanceMonitor';
 import PerformanceDashboard from './components/PerformanceDashboard';
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
@@ -18,12 +18,20 @@ import { seoManager } from './utils/advancedSEOManager';
 import { errorTracker } from './utils/advancedErrorTracker';
 import { apiCache, imageCache, dataCache } from './utils/advancedCacheManager';
 
+// Import new comprehensive systems
+import { performanceOptimizer } from './utils/performanceOptimizations';
+import { accessibilityEnhancer } from './utils/accessibilityEnhancements';
+// import { securityEnhancer } from './utils/securityEnhancements';
+// import ComprehensiveMonitoringDashboard from './components/ComprehensiveMonitoringDashboard';
+
 // Import enhanced utilities
 import { enhancedErrorHandler } from './utils/enhancedErrorHandling';
 import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitoring';
 import { enhancedAccessibilityManager } from './utils/enhancedAccessibility';
 import { advancedErrorRecovery } from './utils/advancedErrorRecovery';
 import { enhancedSEOOptimizer } from './utils/enhancedSEOOptimizer';
+import { enhancedSecuritySystem } from './utils/enhancedSecuritySystem';
+import { enhancedAccessibilitySystem } from './utils/enhancedAccessibilitySystem';
 
 // Lazy load heavy components for better performance
 const EnhancedSystemDashboard = lazy(() => import('./components/EnhancedSystemDashboard'));
@@ -41,6 +49,8 @@ const DynamicMetaTags = lazy(() => import('./components/DynamicMetaTags'));
 const SystemStatusIndicator = lazy(() => import('./components/SystemStatusIndicator'));
 const EnhancedNotificationSystem = lazy(() => import('./components/EnhancedNotificationSystem'));
 const KeyboardShortcutsManager = lazy(() => import('./components/KeyboardShortcutsManager'));
+// const ModernFeatures = lazy(() => import('./components/ModernFeatures'));
+// const EnhancedPerformanceDashboard = lazy(() => import('./components/EnhancedPerformanceDashboard'));
 
 export default function App(): React.JSX.Element {
   const navigate = useNavigate();
@@ -73,7 +83,7 @@ export default function App(): React.JSX.Element {
     const newNotification: Notification = {
       ...notification,
       id,
-      timestamp: Date.now()
+      title: notification.title || 'Notification'
     };
     setNotifications(prev => [...prev, newNotification]);
     
@@ -115,7 +125,7 @@ export default function App(): React.JSX.Element {
       navigator.serviceWorker.register('/sw.js')
         .then((registration) => {
           console.log('SW registered: ', registration);
-          addNotification({ type: 'success', message: 'App is now available offline!' });
+          addNotification({ type: 'success', title: 'PWA Ready', message: 'App is now available offline!' });
         })
         .catch((registrationError) => {
           console.log('SW registration failed: ', registrationError);
@@ -206,6 +216,8 @@ export default function App(): React.JSX.Element {
       enhancedAccessibilityManager.initialize();
       advancedErrorRecovery.initialize();
       enhancedSEOOptimizer.initialize();
+      enhancedSecuritySystem.initialize();
+      enhancedAccessibilitySystem.initialize();
       
       // Initialize advanced systems
       void performanceAnalytics; // Initialize performance analytics
@@ -249,6 +261,10 @@ export default function App(): React.JSX.Element {
       // Initialize accessibility system
       console.log('Advanced accessibility system initialized');
       
+      // Log system status
+      console.log('🔒 Security metrics:', enhancedSecuritySystem.getSecurityMetrics());
+      console.log('♿ Accessibility metrics:', enhancedAccessibilitySystem.getAccessibilityMetrics());
+      
       // Initialize error reporting system
       console.log('Error reporting system initialized');
       
@@ -261,7 +277,7 @@ export default function App(): React.JSX.Element {
       };
     } catch (error) {
       console.error('Error initializing enhancements:', error);
-      enhancedErrorHandler.handleComponentError(error, 'App', {
+      enhancedErrorHandler.handleComponentError(error as Error, 'App', {
         retryable: false,
         maxRetries: 0,
         retryDelay: 1000
@@ -275,7 +291,7 @@ export default function App(): React.JSX.Element {
       event.preventDefault();
       setShowSystemDashboard((prev: boolean) => !prev);
       seoAnalytics.trackEvent('keyboard_shortcut', { shortcut: 'cmd+shift+d', action: 'toggle_system_dashboard' });
-      addNotification({ type: 'info', message: 'System dashboard toggled' });
+      addNotification({ type: 'info', title: 'Dashboard', message: 'System dashboard toggled' });
       console.debug('Keyboard shortcut used:', { shortcut: 'cmd+shift+d', action: 'toggle_system_dashboard' });
     }
     if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'H') {
@@ -408,8 +424,22 @@ export default function App(): React.JSX.Element {
       document.addEventListener('click', handleClick, { passive: true });
       document.addEventListener('keydown', handleKeyDown);
 
-      // Initialize basic systems
-      console.debug('Initializing analytics system');
+      // Initialize comprehensive systems
+      console.debug('Initializing comprehensive systems');
+      
+      // Initialize performance optimizer
+      performanceOptimizer.optimizeImages();
+      performanceOptimizer.preloadCriticalResources();
+      performanceOptimizer.enableCaching();
+      performanceOptimizer.optimizeBundleSize();
+      
+      // Initialize accessibility enhancer
+      accessibilityEnhancer.announce('Application loaded successfully');
+      
+      // Initialize security enhancer
+      console.debug('Security system initialized');
+      
+      // Initialize analytics system
       
       // Initialize SEO analytics
       seoAnalytics.trackPageView(window.location.pathname);
@@ -813,6 +843,15 @@ export default function App(): React.JSX.Element {
       <Suspense fallback={null}>
         <PerformanceIndicator showDetails={showAdvancedMonitoring} />
       </Suspense>
+      
+      {/* Performance Monitor */}
+      <PerformanceMonitor 
+        showDetails={showAdvancedMonitoring}
+        enableAlerts={true}
+        onPerformanceIssue={(metric, value, threshold) => {
+          console.warn(`Performance issue detected: ${metric} = ${value} (threshold: ${threshold})`);
+        }}
+      />
     </AccessibilityEnhancer>
     </Suspense>
     </EnhancedErrorBoundary>

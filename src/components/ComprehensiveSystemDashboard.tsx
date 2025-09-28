@@ -52,14 +52,6 @@ const ComprehensiveSystemDashboard: React.FC<SystemDashboardProps> = ({
   const [activeTab, setActiveTab] = useState<'overview' | 'performance' | 'security' | 'analytics' | 'system'>('overview');
   const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => {
-    if (isVisible) {
-      loadSystemMetrics();
-      const interval = setInterval(loadSystemMetrics, 5000);
-      return () => clearInterval(interval);
-    }
-  }, [isVisible, loadSystemMetrics]);
-
   const loadSystemMetrics = useCallback(async () => {
     try {
       setIsLoading(true);
@@ -77,7 +69,7 @@ const ComprehensiveSystemDashboard: React.FC<SystemDashboardProps> = ({
       
       // Load system metrics
       const systemData = {
-        memoryUsage: ((performance as Performance & { memory?: { usedJSHeapSize: number } }).memory?.usedJSHeapSize ?? 0) / 1024 / 1024,
+        memoryUsage: ((performance as any).memory?.usedJSHeapSize ?? 0) / 1024 / 1024,
         cpuUsage: Math.random() * 100, // Placeholder
         networkLatency: Math.random() * 100 // Placeholder
       };
@@ -108,13 +100,21 @@ const ComprehensiveSystemDashboard: React.FC<SystemDashboardProps> = ({
         value: Math.random() * 100,
         metric: 'performance'
       }));
-      setRealTimeData(realTime);
+      setRealTimeData(realTime as any);
     } catch (error) {
       console.error('Failed to load system metrics:', error);
     } finally {
       setIsLoading(false);
     }
   }, []);
+
+  useEffect(() => {
+    if (isVisible) {
+      loadSystemMetrics();
+      const interval = setInterval(loadSystemMetrics, 5000);
+      return () => clearInterval(interval);
+    }
+  }, [isVisible, loadSystemMetrics]);
 
   // const exportSystemData = () => {
   //   const data = {

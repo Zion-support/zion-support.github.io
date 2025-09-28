@@ -19,6 +19,10 @@ interface PerformanceAlert {
   message: string;
   timestamp: Date;
   resolved: boolean;
+  metric?: string;
+  value?: number;
+  threshold?: number;
+  suggestion?: string;
 }
 
 interface ComprehensivePerformanceMonitorProps {
@@ -54,6 +58,8 @@ const ComprehensivePerformanceMonitor: React.FC<ComprehensivePerformanceMonitorP
         id: `fcp-${Date.now()}`,
         type: 'warning',
         message: 'First Contentful Paint is slow',
+        timestamp: new Date(),
+        resolved: false,
         metric: 'FCP',
         value: currentMetrics.fcp,
         threshold: 1800,
@@ -66,6 +72,8 @@ const ComprehensivePerformanceMonitor: React.FC<ComprehensivePerformanceMonitorP
         id: `lcp-${Date.now()}`,
         type: 'error',
         message: 'Largest Contentful Paint is too slow',
+        timestamp: new Date(),
+        resolved: false,
         metric: 'LCP',
         value: currentMetrics.lcp,
         threshold: 2500,
@@ -78,6 +86,8 @@ const ComprehensivePerformanceMonitor: React.FC<ComprehensivePerformanceMonitorP
         id: `cls-${Date.now()}`,
         type: 'warning',
         message: 'Cumulative Layout Shift detected',
+        timestamp: new Date(),
+        resolved: false,
         metric: 'CLS',
         value: currentMetrics.cls,
         threshold: 0.1,

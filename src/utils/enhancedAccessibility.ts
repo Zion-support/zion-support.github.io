@@ -199,7 +199,7 @@ class EnhancedAccessibilityManager {
     if (element.id) {
       const label = document.querySelector(`label[for="${element.id}"]`);
       if (label) {
-        return label.textContent || label.innerText;
+        return label.textContent || (label as any).innerText;
       }
     }
 
