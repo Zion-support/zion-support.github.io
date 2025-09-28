@@ -206,7 +206,7 @@ class AdvancedSecurityManager {
             console.warn("Potential XSS attempt detected:", { name, value });
             return;
           }
-          return originalSetAttribute.call(this, name, value);
+          return originalSetAttribute.call(element, name, value);
         };
       }
 
