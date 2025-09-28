@@ -64,6 +64,25 @@ class PerformanceEnhancer {
   private setupPerformanceMonitoring(): void {
     // Monitor Core Web Vitals - using built-in Performance Observer instead of web-vitals
     this.monitorCoreWebVitals();
+  }
+
+  private monitorCoreWebVitals(): void {
+    // Basic performance monitoring implementation
+    if ('PerformanceObserver' in window) {
+      try {
+        const observer = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          entries.forEach((entry) => {
+            if (entry.entryType === 'paint') {
+              console.log('Paint metric:', entry.name, entry.startTime);
+            }
+          });
+        });
+        observer.observe({ entryTypes: ['paint'] });
+      } catch (error) {
+        console.warn('Performance monitoring not supported:', error);
+      }
+    }
 
     // Monitor memory usage
     if ('memory' in performance) {

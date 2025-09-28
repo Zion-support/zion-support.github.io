@@ -140,7 +140,16 @@ export class EnhancementSuite {
 
   public initialize(): void {
     // Initialize all enhancement modules
-    this.performanceOptimizer = PerformanceOptimizer.getInstance(this.config.performance);
+    // Map enhancement config to performance config
+    const performanceConfig = {
+      enableWebVitals: true,
+      enableResourceMonitoring: this.config.performance.enableImageOptimization,
+      enableMemoryTracking: true,
+      enableRenderTracking: true,
+      reportInterval: 5000,
+      maxMetricsHistory: 100
+    };
+    this.performanceOptimizer = new PerformanceOptimizer(performanceConfig);
     this.securityEnhancer = SecurityEnhancer.getInstance();
     this.accessibilityEnhancer = AccessibilityEnhancer.getInstance();
     this.errorHandler = ErrorHandler.getInstance();

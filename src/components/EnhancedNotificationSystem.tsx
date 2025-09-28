@@ -46,6 +46,36 @@ const EnhancedNotificationSystem: React.FC<NotificationSystemProps> = ({
   const [isVisible, setIsVisible] = useState(false);
   const timeoutRefs = useRef<Map<string, NodeJS.Timeout>>(new Map());
 
+  // Play notification sound
+  const playNotificationSound = useCallback((type: string) => {
+    try {
+      const audioContext = new (window.AudioContext || (window as any).webkitAudioContext)();
+      const oscillator = audioContext.createOscillator();
+      const gainNode = audioContext.createGain();
+      
+      oscillator.connect(gainNode);
+      gainNode.connect(audioContext.destination);
+      
+      const frequencies = {
+        success: 800,
+        error: 400,
+        warning: 600,
+        info: 500
+      };
+      
+      oscillator.frequency.setValueAtTime(frequencies[type as keyof typeof frequencies] || 500, audioContext.currentTime);
+      oscillator.type = 'sine';
+      
+      gainNode.gain.setValueAtTime(0.1, audioContext.currentTime);
+      gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.5);
+      
+      oscillator.start(audioContext.currentTime);
+      oscillator.stop(audioContext.currentTime + 0.5);
+    } catch (error) {
+      console.warn('Could not play notification sound:', error);
+    }
+  }, []);
+
   // Position classes
   const positionClasses = {
     'top-right': 'top-4 right-4',
@@ -154,7 +184,7 @@ const EnhancedNotificationSystem: React.FC<NotificationSystemProps> = ({
 
     // Play sound if enabled
     if (enableSounds) {
-      this.playNotificationSound(notification.type);
+      playNotificationSound(notification.type);
     }
 
     // Vibrate if enabled

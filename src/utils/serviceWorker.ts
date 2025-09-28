@@ -5,7 +5,7 @@
 
 interface ServiceWorkerConfig {
   scope: string;
-  updateViaCache: RequestCache;
+  updateViaCache: ServiceWorkerUpdateViaCache;
   updateInterval: number;
   onUpdate?: (registration: ServiceWorkerRegistration) => void;
   onError?: (error: Error) => void;
@@ -19,7 +19,7 @@ class ServiceWorkerManager {
   constructor(config: Partial<ServiceWorkerConfig> = {}) {
     this.config = {
       scope: '/',
-      updateViaCache: 'none',
+      updateViaCache: 'none' as ServiceWorkerUpdateViaCache,
       updateInterval: 60000, // 1 minute
       ...config
     };

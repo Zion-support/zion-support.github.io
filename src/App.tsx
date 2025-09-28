@@ -35,9 +35,14 @@ import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
 import performanceEnhancer from './utils/performanceEnhancements';
 import EnhancedNotificationSystem from './components/EnhancedNotificationSystem';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
+import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
+import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
+import { modernAccessibilityEnhancer } from './utils/modernAccessibilityEnhancer';
+import { modernPerformanceMonitor } from './utils/modernPerformanceMonitor';
 import './index.css';
 import './styles/notifications.css';
 import './styles/system-metrics.css';
+import './styles/modern-utilities.css';
 
 export default function App(): React.JSX.Element {
   // Initialize performance optimizations
@@ -48,6 +53,26 @@ export default function App(): React.JSX.Element {
   
   // State for performance optimizer
   const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
+  
+  // State for loading
+  const [isLoading, setIsLoading] = useState(true);
+  const [loadingProgress, setLoadingProgress] = useState(0);
+
+  // Simulate loading progress
+  useEffect(() => {
+    const loadingInterval = setInterval(() => {
+      setLoadingProgress(prev => {
+        if (prev >= 100) {
+          setIsLoading(false);
+          clearInterval(loadingInterval);
+          return 100;
+        }
+        return prev + Math.random() * 15;
+      });
+    }, 200);
+
+    return () => clearInterval(loadingInterval);
+  }, []);
 
   // Track user engagement with throttling for better performance
   const [engagementData, setEngagementData] = useState({
@@ -438,8 +463,24 @@ export default function App(): React.JSX.Element {
     };
   }, [preloadResource, recordMetric, seoData, engagementData.clicks, engagementData.scrollDepth, engagementData.startTime, handleClick, handleKeyDown, handleScroll]);
 
+  // Show loading screen while initializing
+  if (isLoading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100">
+        <ModernLoadingSpinner
+          size="xl"
+          variant="primary"
+          text="Initializing Zion Tech Group..."
+          showProgress
+          progress={loadingProgress}
+          className="animate-fade-in-scale"
+        />
+      </div>
+    );
+  }
+
   return (
-    <>
+    <EnhancedErrorBoundary>
       <AppRouter />
       <PerformanceDashboard />
       <RealTimeMonitor />
@@ -458,6 +499,6 @@ export default function App(): React.JSX.Element {
         isVisible={showPerformanceOptimizer}
         onClose={() => setShowPerformanceOptimizer(false)}
       />
-    </>
+    </EnhancedErrorBoundary>
   );
 }
