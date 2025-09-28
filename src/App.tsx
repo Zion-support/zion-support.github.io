@@ -11,7 +11,9 @@ import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import AIPerformanceDashboard from './components/AIPerformanceDashboard';
-import { SEOOptimizer } from './components/SEOOptimizer';
+import AdvancedPerformanceDashboard from './components/AdvancedPerformanceDashboard';
+import ComprehensiveSystemDashboard from './components/ComprehensiveSystemDashboard';
+import { SEOOptimizer, useSEOData } from './components/SEOOptimizer';
 import EnhancedAnalytics from './components/EnhancedAnalytics';
 import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
 import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
@@ -34,6 +36,8 @@ import { performanceAlerts } from './utils/performanceAlerts';
 // import { errorRecovery } from './utils/errorRecovery';
 import { accessibilityUtils } from './utils/accessibilityUtils';
 import { securityUtils } from './utils/securityUtils';
+import { advancedPerformanceOptimizer } from './utils/advancedPerformanceOptimizer';
+import { enhancedSecurityManager } from './utils/enhancedSecurityManager';
 import './index.css';
 
 export default function App(): React.JSX.Element {
@@ -42,6 +46,8 @@ export default function App(): React.JSX.Element {
   const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
   const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
   const [showAIDashboard, setShowAIDashboard] = useState(false);
+  const [showAdvancedPerformanceDashboard, setShowAdvancedPerformanceDashboard] = useState(false);
+  const [showComprehensiveSystemDashboard, setShowComprehensiveSystemDashboard] = useState(false);
   const [showRealTimeMetrics, setShowRealTimeMetrics] = useState(false);
   // const [showSEOOptimizer, setShowSEOOptimizer] = useState(false);
   // const [isDarkMode, setIsDarkMode] = useState(false);
@@ -69,6 +75,93 @@ export default function App(): React.JSX.Element {
     enableAccessibility: true
   });
 
+<<<<<<< HEAD
+=======
+  // Get current pathname for SEO
+  const currentPathname = typeof window !== 'undefined' ? window.location.pathname : '/';
+
+  // Get SEO data using current pathname
+  const seoData = useSEOData(currentPathname);
+
+  // Command palette commands
+  const commands = useMemo(() => [
+    {
+      id: 'system-dashboard',
+      title: 'Toggle System Dashboard',
+      description: 'Open/close the system metrics dashboard',
+      category: 'Dashboard',
+      action: () => setShowSystemDashboard(prev => !prev),
+      shortcut: 'Ctrl+Shift+D'
+    },
+    {
+      id: 'performance-optimizer',
+      title: 'Toggle Performance Optimizer',
+      description: 'Open/close the performance optimization panel',
+      category: 'Performance',
+      action: () => setShowPerformanceOptimizer(prev => !prev),
+      shortcut: 'Ctrl+Shift+P'
+    },
+    {
+      id: 'performance-monitor',
+      title: 'Toggle Performance Monitor',
+      description: 'Open/close the performance monitoring panel',
+      category: 'Performance',
+      action: () => setShowPerformanceMonitor(prev => !prev),
+      shortcut: 'Ctrl+Shift+M'
+    },
+    {
+      id: 'ai-dashboard',
+      title: 'Toggle AI Dashboard',
+      description: 'Open/close the AI performance dashboard',
+      category: 'AI',
+      action: () => setShowAIDashboard(prev => !prev),
+      shortcut: 'Ctrl+Shift+A'
+    },
+    {
+      id: 'advanced-performance-dashboard',
+      title: 'Toggle Advanced Performance Dashboard',
+      description: 'Open/close the advanced performance dashboard',
+      category: 'Performance',
+      action: () => setShowAdvancedPerformanceDashboard(prev => !prev),
+      shortcut: 'Ctrl+Shift+V'
+    },
+    {
+      id: 'comprehensive-system-dashboard',
+      title: 'Toggle Comprehensive System Dashboard',
+      description: 'Open/close the comprehensive system dashboard',
+      category: 'System',
+      action: () => setShowComprehensiveSystemDashboard(prev => !prev),
+      shortcut: 'Ctrl+Shift+Q'
+    },
+    {
+      id: 'keyboard-help',
+      title: 'Show Keyboard Shortcuts',
+      description: 'Display all available keyboard shortcuts',
+      category: 'Help',
+      action: () => setShowKeyboardHelp(true),
+      shortcut: 'Ctrl+Shift+H'
+    },
+    {
+      id: 'close-all',
+      title: 'Close All Modals',
+      description: 'Close all open modals and dashboards',
+      category: 'Navigation',
+      action: () => {
+        setShowSystemDashboard(false);
+        setShowPerformanceOptimizer(false);
+        setShowPerformanceMonitor(false);
+        setShowAIDashboard(false);
+        setShowAdvancedPerformanceDashboard(false);
+        setShowComprehensiveSystemDashboard(false);
+        setShowRealTimeMetrics(false);
+        setShowCommandPalette(false);
+        setShowKeyboardHelp(false);
+      },
+      shortcut: 'Escape'
+    }
+  ], []);
+
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-eae1
   // Optimized keyboard handler for system dashboard toggle
   const handleKeyDown = useCallback((event: KeyboardEvent) => {
     if (event.ctrlKey && event.shiftKey) {
@@ -89,9 +182,23 @@ export default function App(): React.JSX.Element {
           event.preventDefault();
           setShowAIDashboard(prev => !prev);
           break;
+<<<<<<< HEAD
         case 'R':
           event.preventDefault();
           setShowRealTimeMetrics(prev => !prev);
+=======
+        case 'V':
+          setShowAdvancedPerformanceDashboard(prev => !prev);
+          break;
+        case 'Q':
+          setShowComprehensiveSystemDashboard(prev => !prev);
+          break;
+        case 'C':
+          setShowCommandPalette(prev => !prev);
+          break;
+        case 'H':
+          setShowKeyboardHelp(prev => !prev);
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-eae1
           break;
         case 'S':
           event.preventDefault();
@@ -149,6 +256,10 @@ export default function App(): React.JSX.Element {
       }
       enhancedAnalytics.initialize();
       advancedCacheSystem.initialize();
+      
+      // Initialize new advanced systems
+      advancedPerformanceOptimizer.initialize();
+      enhancedSecurityManager.initialize();
       new AdvancedAutomationSystem().initialize();
       // Initialize enhancement systems
       new AccessibilityEnhancer();
@@ -343,6 +454,54 @@ export default function App(): React.JSX.Element {
           onClose={() => setShowAIDashboard(false)}
         />
 
+<<<<<<< HEAD
+=======
+        {/* Advanced Performance Dashboard - Toggle with Ctrl+Shift+P */}
+        <AdvancedPerformanceDashboard
+          isVisible={showAdvancedPerformanceDashboard}
+          onClose={() => setShowAdvancedPerformanceDashboard(false)}
+        />
+
+        {/* Comprehensive System Dashboard - Toggle with Ctrl+Shift+S */}
+        <ComprehensiveSystemDashboard
+          isVisible={showComprehensiveSystemDashboard}
+          onClose={() => setShowComprehensiveSystemDashboard(false)}
+        />
+
+        {/* Real-time Metrics Display */}
+        {showRealTimeMetrics && (
+          <div className="fixed top-4 right-4 z-50 bg-black bg-opacity-90 text-white p-4 rounded-lg shadow-lg min-w-[300px]">
+            <div className="flex justify-between items-center mb-3">
+              <h3 className="text-lg font-bold">Real-time Metrics</h3>
+              <button
+                onClick={() => setShowRealTimeMetrics(false)}
+                className="text-gray-300 hover:text-white text-xl"
+              >
+                ✕
+              </button>
+            </div>
+            <div className="space-y-2 text-sm">
+              <div className="flex justify-between">
+                <span>Memory Usage:</span>
+                <span className="text-green-400">{performanceMetrics.memoryUsage} MB</span>
+              </div>
+              <div className="flex justify-between">
+                <span>Render Time:</span>
+                <span className="text-blue-400">{performanceMetrics.renderTime} ms</span>
+              </div>
+              <div className="flex justify-between">
+                <span>Network Latency:</span>
+                <span className="text-yellow-400">{performanceMetrics.networkLatency} ms</span>
+              </div>
+              <div className="flex justify-between">
+                <span>Errors:</span>
+                <span className="text-red-400">{performanceMetrics.errorCount}</span>
+              </div>
+            </div>
+          </div>
+        )}
+
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-eae1
         {/* Real-Time Performance Monitor */}
         {showRealTimeMetrics && (
           <RealTimePerformanceMonitor
@@ -376,11 +535,66 @@ export default function App(): React.JSX.Element {
           onClose={() => {}}
         />
 
+<<<<<<< HEAD
         {/* SEO Optimizer */}
         <SEOOptimizer seoData={seoData} />
         
         {/* Enhanced Analytics */}
         <EnhancedAnalytics />
+=======
+        {/* Keyboard Shortcuts Help Button */}
+        <button
+          onClick={() => setShowKeyboardHelp(true)}
+          className="fixed bottom-4 right-20 z-40 bg-gray-600 hover:bg-gray-700 text-white p-3 rounded-full shadow-lg transition-colors duration-200"
+          title="Keyboard Shortcuts (Ctrl+/)"
+        >
+          ⌨️
+        </button>
+
+        {/* Command Palette Button */}
+        <button
+          onClick={() => setShowCommandPalette(true)}
+          className="fixed bottom-4 right-36 z-40 bg-purple-600 hover:bg-purple-700 text-white p-3 rounded-full shadow-lg transition-colors duration-200"
+          title="Command Palette (Ctrl+K)"
+        >
+          ⌘
+        </button>
+
+        {/* Real-Time Monitor Button */}
+        <button
+          onClick={() => setShowRealTimeMonitor(true)}
+          className="fixed bottom-4 right-52 z-40 bg-orange-600 hover:bg-orange-700 text-white p-3 rounded-full shadow-lg transition-colors duration-200"
+          title="Real-Time Monitor (Ctrl+Shift+R)"
+        >
+          📊
+        </button>
+
+        {/* System Health Button */}
+        <button
+          onClick={() => setShowSystemHealth(true)}
+          className="fixed bottom-4 right-68 z-40 bg-green-600 hover:bg-green-700 text-white p-3 rounded-full shadow-lg transition-colors duration-200"
+          title="System Health (Ctrl+Shift+H)"
+        >
+          🏥
+        </button>
+
+        {/* Keyboard Shortcuts Help Panel */}
+        <div className="fixed bottom-4 left-4 z-40 bg-gray-800 text-white p-3 rounded-lg shadow-lg text-sm opacity-75 hover:opacity-100 transition-opacity duration-200">
+          <div className="font-semibold mb-1">Keyboard Shortcuts:</div>
+          <div>Ctrl+Shift+D: System Dashboard</div>
+          <div>Ctrl+Shift+V: Advanced Performance Dashboard</div>
+          <div>Ctrl+Shift+M: Performance Monitor</div>
+          <div>Ctrl+Shift+A: AI Dashboard</div>
+          <div>Ctrl+Shift+Q: Comprehensive System Dashboard</div>
+          <div>Ctrl+Shift+S: SEO Optimizer</div>
+          <div>Ctrl+Shift+T: Toggle Theme</div>
+          <div>Ctrl+Shift+R: Real-Time Monitor</div>
+          <div>Ctrl+Shift+H: System Health</div>
+          <div>Ctrl+Shift+K: Keyboard Help</div>
+          <div>Ctrl+K: Command Palette</div>
+          <div>Escape: Close All</div>
+        </div>
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-eae1
       </div>
     </EnhancedErrorBoundary>
   );
