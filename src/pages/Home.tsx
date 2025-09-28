@@ -27,6 +27,7 @@ const Home = () => {
         <div className='absolute -bottom-40 -left-40 w-80 h-80 bg-zion-purple rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float' style={{animationDelay: '2s'}}></div>
         <div className='absolute top-40 left-1/2 w-60 h-60 bg-zion-cyan rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float' style={{animationDelay: '4s'}}></div>
       </div>
+      
       {/* Hero Section */}
       <section className='container mx-auto px-6 py-20 relative z-10'>
         <div className='text-center max-w-5xl mx-auto'>

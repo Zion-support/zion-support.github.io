@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import AdvancedAnalyticsManager from '../utils/advancedAnalytics';
+import analytics from '../utils/advancedAnalytics';
 import AdvancedCacheManager from '../utils/advancedCache';
 import AdvancedAccessibilityManager from '../utils/advancedAccessibilityManager';
 import AdvancedSecurityManager from '../utils/advancedSecurityManager';
@@ -23,27 +23,27 @@ interface UXData {
 }
 
 interface AnalyticsData {
-  id?: string;
-  startTime?: number;
-  lastActivity?: number;
-  pageViews?: number;
-  events?: Array<{
+  id: string;
+  startTime: number;
+  lastActivity: number;
+  pageViews: number;
+  events: Array<{
     event: string;
     timestamp: number;
     properties?: Record<string, unknown>;
   }>;
-  deviceInfo?: {
-    screenResolution?: string;
-    language?: string;
-    timezone?: string;
+  deviceInfo: {
+    screenResolution: string;
+    language: string;
+    timezone: string;
   };
 }
 
 interface CacheData {
-  size?: number;
-  totalSize?: number;
-  maxSize?: number;
-  hitRate?: number;
+  size: number;
+  totalSize: number;
+  maxSize: number;
+  hitRate: number;
 }
 
 interface DashboardData {
@@ -69,11 +69,37 @@ const AdvancedDashboard: React.FC = () => {
   }, [isOpen]);
 
   const updateData = () => {
-    const analytics = AdvancedAnalyticsManager.getInstance().getSessionData();
-    const cache = AdvancedCacheManager.getInstance().getStats();
+    const events = analytics.getEvents();
+    const cacheStats = AdvancedCacheManager.getInstance().getStats();
+    
+    // Convert analytics events to analytics data format
+    const analyticsData: AnalyticsData = {
+      id: `session_${Date.now()}`,
+      startTime: Date.now() - 300000, // 5 minutes ago
+      lastActivity: Date.now(),
+      pageViews: events.filter(e => e.name === 'page_view').length,
+      events: events.map(e => ({
+        event: e.name,
+        timestamp: e.timestamp || Date.now(),
+        properties: e.properties
+      })),
+      deviceInfo: {
+        screenResolution: `${window.screen.width}x${window.screen.height}`,
+        language: navigator.language,
+        timezone: Intl.DateTimeFormat().resolvedOptions().timeZone
+      }
+    };
+
+    // Convert cache stats to proper format
+    const cache: CacheData = {
+      size: typeof cacheStats === 'object' && cacheStats !== null ? (cacheStats as Record<string, unknown>).size as number || 0 : 0,
+      totalSize: typeof cacheStats === 'object' && cacheStats !== null ? (cacheStats as Record<string, unknown>).totalSize as number || 0 : 0,
+      maxSize: typeof cacheStats === 'object' && cacheStats !== null ? (cacheStats as Record<string, unknown>).maxSize as number || 0 : 0,
+      hitRate: typeof cacheStats === 'object' && cacheStats !== null ? (cacheStats as Record<string, unknown>).hitRate as number || 0 : 0
+    };
     
     setData({
-      analytics: analytics || {},
+      analytics: analyticsData || {},
       cache: cache || {},
       performance: {
         memoryUsage: (performance as Performance & { memory?: { usedJSHeapSize?: number } }).memory?.usedJSHeapSize || 0,

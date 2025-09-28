@@ -1,100 +1,117 @@
-import { Component, ErrorInfo, ReactNode } from 'react';
-import { analytics } from '../utils/analytics';
+import React, { Component, ErrorInfo, ReactNode } from 'react';
+import { ErrorBoundaryProps, ErrorBoundaryState } from '../types/global';
 
-interface Props {
-  children: ReactNode;
-  fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
-  showDetails?: boolean;
-}
-
-interface State {
-  hasError: boolean;
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
-  errorId: string;
-}
-
-class AdvancedErrorBoundary extends Component<Props, State> {
+/**
+ * Advanced Error Boundary with comprehensive error handling
+ * Features:
+ * - Error logging and reporting
+ * - Fallback UI with recovery options
+ * - Error context preservation
+ * - Performance monitoring integration
+ */
+class AdvancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
   private retryCount = 0;
   private maxRetries = 3;
+  private errorHistory: Error[] = [];
 
-  constructor(props: Props) {
+  constructor(props: ErrorBoundaryProps) {
     super(props);
     this.state = {
       hasError: false,
       error: null,
       errorInfo: null,
-      errorId: ''
+      retryAttempts: 0,
+      lastErrorTime: null,
     };
   }
 
-  static getDerivedStateFromError(error: Error): Partial<State> {
-    // Update state so the next render will show the fallback UI
+  static getDerivedStateFromError(error: Error): Partial<ErrorBoundaryState> {
     return {
       hasError: true,
       error,
-      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+      lastErrorTime: new Date(),
     };
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    // Log error details
-    console.error('ErrorBoundary caught an error:', error, errorInfo);
-    
-    // Update state with error info
     this.setState({
-      error,
-      errorInfo
+      errorInfo,
     });
 
-    // Track error in analytics
-    analytics.trackEvent('error_boundary_catch', {
-      error_name: error.name,
-      error_message: error.message,
-      error_stack: error.stack,
-      component_stack: errorInfo.componentStack,
-      error_id: this.state.errorId
-    });
+    // Log error for monitoring
+    this.logError(error, errorInfo);
 
-    // Call custom error handler
-    if (this.props.onError) {
-      this.props.onError(error, errorInfo);
-    }
+    // Track error patterns
+    this.trackErrorPattern(error);
 
-    // Send error report to server
+    // Report to external services
     this.reportError(error, errorInfo);
   }
 
-  private async reportError(error: Error, errorInfo: ErrorInfo) {
-    try {
-      const errorReport = {
-        errorId: this.state.errorId,
-        error: {
-          name: error.name,
-          message: error.message,
-          stack: error.stack
-        },
-        errorInfo: {
-          componentStack: errorInfo.componentStack
-        },
-        userAgent: navigator.userAgent,
-        url: window.location.href,
-        timestamp: new Date().toISOString(),
-        retryCount: this.retryCount
-      };
+  private logError = (error: Error, errorInfo: ErrorInfo) => {
+    const errorData = {
+      message: error.message,
+      stack: error.stack,
+      componentStack: errorInfo.componentStack,
+      timestamp: new Date().toISOString(),
+      userAgent: navigator.userAgent,
+      url: window.location.href,
+      retryAttempts: this.retryCount,
+    };
 
-      await fetch('/api/error-report', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(errorReport)
-      });
-    } catch (reportError) {
-      console.error('Failed to report error:', reportError);
+    console.error('Error Boundary caught an error:', errorData);
+
+    // Store in localStorage for debugging
+    try {
+      const existingErrors = JSON.parse(localStorage.getItem('errorHistory') || '[]');
+      existingErrors.push(errorData);
+      localStorage.setItem('errorHistory', JSON.stringify(existingErrors.slice(-10))); // Keep last 10 errors
+    } catch (e) {
+      console.warn('Could not store error in localStorage:', e);
     }
-  }
+  };
+
+  private trackErrorPattern = (error: Error) => {
+    this.errorHistory.push(error);
+    
+    // Check for error patterns
+    const recentErrors = this.errorHistory.slice(-5);
+    const similarErrors = recentErrors.filter(e => 
+      e.message === error.message || e.name === error.name
+    );
+
+    if (similarErrors.length >= 3) {
+      console.warn('Detected error pattern:', {
+        errorType: error.name,
+        message: error.message,
+        count: similarErrors.length,
+      });
+    }
+  };
+
+  private reportError = (error: Error, errorInfo: ErrorInfo) => {
+    // Report to analytics or error tracking service
+    if (typeof window !== 'undefined' && (window as unknown as { gtag?: (event: string, action: string, params: Record<string, unknown>) => void }).gtag) {
+      (window as unknown as { gtag: (event: string, action: string, params: Record<string, unknown>) => void }).gtag('event', 'exception', {
+        description: error.message,
+        fatal: false,
+        custom_map: {
+          component_stack: errorInfo.componentStack,
+          retry_attempts: this.retryCount,
+        },
+      });
+    }
+
+    // Report to custom analytics
+    if (typeof window !== 'undefined' && (window as unknown as { analytics?: { track: (event: string, params: Record<string, unknown>) => void } }).analytics) {
+      (window as unknown as { analytics: { track: (event: string, params: Record<string, unknown>) => void } }).analytics.track('Error Boundary Triggered', {
+        error_message: error.message,
+        error_name: error.name,
+        component_stack: errorInfo.componentStack,
+        timestamp: new Date().toISOString(),
+      });
+    }
+  };
 
   private handleRetry = () => {
     if (this.retryCount < this.maxRetries) {
@@ -103,94 +120,65 @@ class AdvancedErrorBoundary extends Component<Props, State> {
         hasError: false,
         error: null,
         errorInfo: null,
-        errorId: ''
-      });
-
-      analytics.trackEvent('error_boundary_retry', {
-        error_id: this.state.errorId,
-        retry_count: this.retryCount
+        retryAttempts: this.retryCount,
       });
     }
   };
 
   private handleReload = () => {
-    analytics.trackEvent('error_boundary_reload', {
-      error_id: this.state.errorId
-    });
-    
     window.location.reload();
   };
 
   private handleReportBug = () => {
-    // Open email client with bug report
-    const subject = encodeURIComponent(`Bug Report - Error ID: ${this.state.errorId}`);
+    const errorData = {
+      message: this.state.error?.message,
+      stack: this.state.error?.stack,
+      componentStack: this.state.errorInfo?.componentStack,
+      timestamp: new Date().toISOString(),
+      userAgent: navigator.userAgent,
+      url: window.location.href,
+    };
+
+    // Create a mailto link with error details
+    const subject = encodeURIComponent('Bug Report - Error Boundary');
     const body = encodeURIComponent(`
 Error Details:
-- Error ID: ${this.state.errorId}
-- Error: ${this.state.error?.message}
-- URL: ${window.location.href}
-- User Agent: ${navigator.userAgent}
-- Timestamp: ${new Date().toISOString()}
+${JSON.stringify(errorData, null, 2)}
 
 Please describe what you were doing when this error occurred:
-[Your description here]
     `);
-    
+
     window.open(`mailto:support@ziontechgroup.com?subject=${subject}&body=${body}`);
   };
 
-  render() {
+  render(): ReactNode {
     if (this.state.hasError) {
-      // Custom fallback UI
-      if (this.props.fallback) {
-        return this.props.fallback;
-      }
+      const canRetry = this.retryCount < this.maxRetries;
 
-      // Default error UI
       return (
-        <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center px-4">
-          <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6">
-            <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full mb-4">
-              <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
-              </svg>
-            </div>
-            
-            <h1 className="text-xl font-semibold text-gray-900 text-center mb-2">
-              Oops! Something went wrong
-            </h1>
-            
-            <p className="text-gray-600 text-center mb-6">
-              We&apos;re sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
+        <div className="error-boundary">
+          <div className="error-boundary-content">
+            <div className="error-icon">⚠️</div>
+            <h2 className="error-title">Something went wrong</h2>
+            <p className="error-description">
+              We&apos;re sorry, but something unexpected happened. Our team has been notified.
             </p>
-
-            {this.props.showDetails && this.state.error && (
-              <div className="bg-gray-100 rounded-lg p-4 mb-6">
-                <h3 className="font-medium text-gray-900 mb-2">Error Details:</h3>
-                <p className="text-sm text-gray-600 mb-1">
-                  <strong>Error ID:</strong> {this.state.errorId}
-                </p>
-                <p className="text-sm text-gray-600 mb-1">
-                  <strong>Error:</strong> {this.state.error.message}
-                </p>
-                {this.state.error.stack && (
-                  <details className="mt-2">
-                    <summary className="text-sm text-gray-600 cursor-pointer hover:text-gray-800">
-                      Stack Trace
-                    </summary>
-                    <pre className="text-xs text-gray-500 mt-2 overflow-auto">
-                      {this.state.error.stack}
-                    </pre>
-                  </details>
-                )}
-              </div>
+            
+            {process.env.NODE_ENV === 'development' && (
+              <details className="error-details">
+                <summary>Error Details (Development)</summary>
+                <pre className="error-stack">
+                  {this.state.error?.toString()}
+                  {this.state.errorInfo?.componentStack}
+                </pre>
+              </details>
             )}
 
-            <div className="space-y-3">
-              {this.retryCount < this.maxRetries && (
+            <div className="error-actions">
+              {canRetry && (
                 <button
                   onClick={this.handleRetry}
-                  className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                  className="error-button error-button-primary"
                 >
                   Try Again ({this.maxRetries - this.retryCount} attempts left)
                 </button>
@@ -198,31 +186,177 @@ Please describe what you were doing when this error occurred:
               
               <button
                 onClick={this.handleReload}
-                className="w-full bg-gray-600 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors"
+                className="error-button error-button-secondary"
               >
                 Reload Page
               </button>
               
               <button
                 onClick={this.handleReportBug}
-                className="w-full border border-gray-300 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-50 transition-colors"
+                className="error-button error-button-secondary"
               >
                 Report Bug
               </button>
             </div>
 
-            <div className="mt-6 text-center">
-              <p className="text-sm text-gray-500">
-                Need immediate help?{' '}
-                <a 
-                  href="mailto:support@ziontechgroup.com" 
-                  className="text-blue-600 hover:text-blue-800"
-                >
-                  Contact Support
-                </a>
-              </p>
+            <div className="error-help">
+              <p>If this problem persists, please:</p>
+              <ul>
+                <li>Check your internet connection</li>
+                <li>Clear your browser cache</li>
+                <li>Try using a different browser</li>
+                <li>Contact support if the issue continues</li>
+              </ul>
             </div>
           </div>
+
+          <style>{`
+            .error-boundary {
+              min-height: 100vh;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              padding: 2rem;
+              background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+              font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            }
+
+            .error-boundary-content {
+              max-width: 600px;
+              background: white;
+              border-radius: 12px;
+              padding: 2rem;
+              box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+              text-align: center;
+            }
+
+            .error-icon {
+              font-size: 4rem;
+              margin-bottom: 1rem;
+            }
+
+            .error-title {
+              color: #2d3748;
+              font-size: 1.5rem;
+              font-weight: 600;
+              margin-bottom: 1rem;
+            }
+
+            .error-description {
+              color: #4a5568;
+              font-size: 1rem;
+              line-height: 1.6;
+              margin-bottom: 2rem;
+            }
+
+            .error-details {
+              margin: 1rem 0;
+              text-align: left;
+              background: #f7fafc;
+              border-radius: 8px;
+              padding: 1rem;
+            }
+
+            .error-details summary {
+              cursor: pointer;
+              font-weight: 600;
+              color: #2d3748;
+              margin-bottom: 0.5rem;
+            }
+
+            .error-stack {
+              font-family: 'Monaco', 'Menlo', monospace;
+              font-size: 0.8rem;
+              color: #e53e3e;
+              background: #fed7d7;
+              padding: 1rem;
+              border-radius: 4px;
+              overflow-x: auto;
+              white-space: pre-wrap;
+            }
+
+            .error-actions {
+              display: flex;
+              gap: 1rem;
+              justify-content: center;
+              flex-wrap: wrap;
+              margin-bottom: 2rem;
+            }
+
+            .error-button {
+              padding: 0.75rem 1.5rem;
+              border: none;
+              border-radius: 8px;
+              font-size: 0.9rem;
+              font-weight: 600;
+              cursor: pointer;
+              transition: all 0.2s ease;
+              text-decoration: none;
+              display: inline-block;
+            }
+
+            .error-button-primary {
+              background: #3182ce;
+              color: white;
+            }
+
+            .error-button-primary:hover {
+              background: #2c5aa0;
+              transform: translateY(-1px);
+            }
+
+            .error-button-secondary {
+              background: #e2e8f0;
+              color: #4a5568;
+            }
+
+            .error-button-secondary:hover {
+              background: #cbd5e0;
+              transform: translateY(-1px);
+            }
+
+            .error-help {
+              text-align: left;
+              background: #f7fafc;
+              border-radius: 8px;
+              padding: 1rem;
+              border-left: 4px solid #3182ce;
+            }
+
+            .error-help p {
+              margin: 0 0 0.5rem 0;
+              font-weight: 600;
+              color: #2d3748;
+            }
+
+            .error-help ul {
+              margin: 0;
+              padding-left: 1.5rem;
+              color: #4a5568;
+            }
+
+            .error-help li {
+              margin-bottom: 0.25rem;
+            }
+
+            @media (max-width: 640px) {
+              .error-boundary {
+                padding: 1rem;
+              }
+
+              .error-boundary-content {
+                padding: 1.5rem;
+              }
+
+              .error-actions {
+                flex-direction: column;
+              }
+
+              .error-button {
+                width: 100%;
+              }
+            }
+          `}</style>
         </div>
       );
     }
