@@ -173,7 +173,7 @@ export default function App(): React.JSX.Element {
     advancedCacheSystem.initialize();
     new AdvancedAutomationSystem().initialize();
     new AccessibilityEnhancer().initialize();
-    new SecurityEnhancer().initialize();
+    new SecurityEnhancer();
     
     // Initialize analytics
     analytics.initialize();
