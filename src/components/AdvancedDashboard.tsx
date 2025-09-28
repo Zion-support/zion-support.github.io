@@ -39,6 +39,12 @@ interface AnalyticsData {
   };
 }
 
+interface AnalyticsEvent {
+  type: string;
+  timestamp: number;
+  data?: Record<string, unknown>;
+}
+
 interface CacheData {
   size: number;
   totalSize: number;
@@ -78,11 +84,11 @@ const AdvancedDashboard: React.FC = () => {
       id: `session_${Date.now()}`,
       startTime: Date.now() - 300000, // 5 minutes ago
       lastActivity: Date.now(),
-      pageViews: events.filter((e: { name: string }) => e.name === 'page_view').length,
-      events: events.map((e: { name: string; timestamp?: number; properties?: Record<string, unknown> }) => ({
-        event: e.name,
-        timestamp: e.timestamp || Date.now(),
-        properties: e.properties
+      pageViews: events.filter((e) => e.type === 'page_view').length,
+      events: events.map((e) => ({
+        event: e.type,
+        timestamp: e.timestamp,
+        properties: e.data
       })),
       deviceInfo: {
         screenResolution: `${window.screen.width}x${window.screen.height}`,
