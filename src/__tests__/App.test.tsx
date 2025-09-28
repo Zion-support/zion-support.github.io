@@ -211,8 +211,20 @@ jest.mock('../router', () => {
 
 const renderWithRouter = (ui: React.ReactElement, { route = '/' } = {}) => {
   // Update the existing location mock with new route
-  (window.location as any).pathname = route;
-  (window.location as any).href = `http://localhost:3000${route}`;
+  (window as unknown as { location: Partial<Location> }).location = {
+    pathname: route,
+    href: `http://localhost:3000${route}`,
+    assign: jest.fn(),
+    replace: jest.fn(),
+    reload: jest.fn(),
+    search: '',
+    hash: '',
+    origin: 'http://localhost:3000',
+    protocol: 'http:',
+    host: 'localhost:3000',
+    hostname: 'localhost',
+    port: '3000',
+  };
   return render(ui);
 };
 

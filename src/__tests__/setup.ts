@@ -25,8 +25,9 @@ const mockLocation = {
   ancestorOrigins: [] as any,
 };
 
-// Replace window.location with our mock
-(window as any).location = mockLocation;
+// Mock window.location using a simple assignment
+delete (window as unknown as { location?: Partial<Location> }).location;
+(window as unknown as { location: Partial<Location> }).location = mockLocation;
 // Mock window.history
 Object.defineProperty(window, 'history', {
   value: {
