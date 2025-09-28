@@ -63,6 +63,43 @@ export interface PerformanceRecommendation {
   implementation?: string;
 }
 
+// Performance Metrics Types
+export interface PerformanceMetrics {
+  lcp: number;
+  fcp: number;
+  fid: number;
+  cls: number;
+  ttfb: number;
+  loadTime?: number;
+  renderTime?: number;
+  memoryUsage?: number;
+  bundleSize?: number;
+  cacheHitRate?: number;
+  memory?: {
+    used: number;
+    total: number;
+    limit: number;
+  };
+  connection?: string;
+}
+
+// Optimization Suggestion Types
+export interface OptimizationSuggestion {
+  id: string;
+  type: 'performance' | 'seo' | 'accessibility' | 'security' | 'critical' | 'warning';
+  title: string;
+  description: string;
+  impact: 'high' | 'medium' | 'low';
+  effort: 'low' | 'medium' | 'high';
+  priority: number;
+  actionable: boolean;
+  implementation?: string;
+  resources?: string[];
+  message?: string;
+  action?: string;
+  category?: string;
+}
+
 // SEO Audit Types
 export interface SEOAuditResult {
   score: number;
@@ -117,25 +154,7 @@ export interface MonitoringMetrics {
   };
 }
 
-// Optimization Suggestion Types
-export interface OptimizationSuggestion {
-  id?: string;
-  category?: 'performance' | 'seo' | 'accessibility' | 'security' | 'bundle' | 'runtime' | 'network' | 'memory' | 'rendering';
-  priority?: 'high' | 'medium' | 'low';
-  title?: string;
-  description?: string;
-  impact?: 'low' | 'medium' | 'high';
-  effort?: 'low' | 'medium' | 'high';
-  implementation?: string;
-  estimatedSavings?: {
-    time?: number;
-    size?: number;
-    score?: number;
-  };
-  type?: string;
-  message?: string;
-  action?: string;
-}
+// Duplicate interface removed - using the one defined above
 
 // Enhanced Performance Metrics
 export interface EnhancedPerformanceMetrics {
@@ -260,25 +279,4 @@ export interface ErrorRecoveryStrategy {
   fallbackAction?: () => void;
 }
 
-// Additional missing types
-export interface PerformanceMetrics {
-  lcp?: number;
-  fcp?: number;
-  fid?: number;
-  cls?: number;
-  ttfb?: number;
-  memory?: {
-    used: number;
-    total: number;
-    limit?: number;
-  };
-  domContentLoaded?: number;
-  domInteractive?: number;
-  violations?: string[];
-  bundleSize?: number;
-  connection?: string;
-  renderTime?: number;
-}
-
-
-// All types are already exported as interfaces above
+// All types are already exported above

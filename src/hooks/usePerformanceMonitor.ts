@@ -1,5 +1,12 @@
 import { useEffect, useState } from 'react';
-import { PerformanceMetrics } from '../types/comprehensive';
+
+interface PerformanceMetrics {
+  fcp: number;
+  lcp: number;
+  fid: number;
+  cls: number;
+  ttfb: number;
+}
 
 export const usePerformanceMonitor = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
@@ -12,37 +19,13 @@ export const usePerformanceMonitor = () => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
         if (entry.entryType === 'largest-contentful-paint') {
-          setMetrics(prev => ({ 
-            ...prev, 
-            lcp: entry.startTime,
-            fcp: prev?.fcp || 0,
-            fid: prev?.fid || 0,
-            cls: prev?.cls || 0,
-            ttfb: prev?.ttfb || 0,
-            memory: prev?.memory || { used: 0, total: 0, limit: 0 }
-          }));
+          setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
         }
         if (entry.entryType === 'first-input') {
-          setMetrics(prev => ({ 
-            ...prev, 
-            fid: (entry as any).processingStart - entry.startTime,
-            fcp: prev?.fcp || 0,
-            lcp: prev?.lcp || 0,
-            cls: prev?.cls || 0,
-            ttfb: prev?.ttfb || 0,
-            memory: prev?.memory || { used: 0, total: 0, limit: 0 }
-          }));
+          setMetrics(prev => ({ ...prev, fid: (entry as any).processingStart - entry.startTime }));
         }
         if (entry.entryType === 'layout-shift') {
-          setMetrics(prev => ({ 
-            ...prev, 
-            cls: (prev?.cls || 0) + ((entry as any).value || 0),
-            fcp: prev?.fcp || 0,
-            lcp: prev?.lcp || 0,
-            fid: prev?.fid || 0,
-            ttfb: prev?.ttfb || 0,
-            memory: prev?.memory || { used: 0, total: 0, limit: 0 }
-          }));
+          setMetrics(prev => ({ ...prev, cls: (prev?.cls || 0) + ((entry as any).value || 0) }));
         }
       });
     });
@@ -54,15 +37,7 @@ export const usePerformanceMonitor = () => {
       const entries = list.getEntries();
       const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
       if (fcpEntry) {
-        setMetrics(prev => ({ 
-          ...prev, 
-          fcp: fcpEntry.startTime,
-          lcp: prev?.lcp || 0,
-          fid: prev?.fid || 0,
-          cls: prev?.cls || 0,
-          ttfb: prev?.ttfb || 0,
-          memory: prev?.memory || { used: 0, total: 0, limit: 0 }
-        }));
+        setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }));
       }
     });
     fcpObserver.observe({ entryTypes: ['paint'] });

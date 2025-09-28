@@ -54,7 +54,7 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
     // Get FID
     const fidEntries = performance.getEntriesByType('first-input');
-    const firstInputDelay = fidEntries[0] ? 
+    const firstInputDelay = (fidEntries[0] as any)?.processingStart ? 
       (fidEntries[0] as any).processingStart - fidEntries[0].startTime : 0;
 
     // Get CLS

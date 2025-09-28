@@ -167,97 +167,169 @@ class PerformanceOptimizer {
     const suggestions = {
       fcp: {
         warning: {
+          id: 'fcp-warning',
           type: 'warning' as const,
+          title: 'First Contentful Paint Warning',
+          description: 'First Contentful Paint is slower than recommended',
           category: 'rendering' as const,
           message: 'First Contentful Paint is slower than recommended',
           impact: 'high' as const,
+          effort: 'medium' as const,
+          priority: 2,
+          actionable: true,
           action: 'Consider optimizing critical rendering path and reducing render-blocking resources'
         },
         critical: {
+          id: 'fcp-critical',
           type: 'critical' as const,
+          title: 'First Contentful Paint Critical',
+          description: 'First Contentful Paint is significantly slow',
           category: 'rendering' as const,
           message: 'First Contentful Paint is significantly slow',
           impact: 'high' as const,
+          effort: 'high' as const,
+          priority: 1,
+          actionable: true,
           action: 'Implement critical CSS inlining and optimize above-the-fold content'
         }
       },
       lcp: {
         warning: {
+          id: 'lcp-warning',
           type: 'warning' as const,
+          title: 'Largest Contentful Paint Warning',
+          description: 'Largest Contentful Paint is slower than recommended',
           category: 'rendering' as const,
           message: 'Largest Contentful Paint is slower than recommended',
           impact: 'high' as const,
+          effort: 'medium' as const,
+          priority: 2,
+          actionable: true,
           action: 'Optimize images and reduce layout shifts'
         },
         critical: {
+          id: 'lcp-critical',
           type: 'critical' as const,
+          title: 'Largest Contentful Paint Critical',
+          description: 'Largest Contentful Paint is significantly slow',
           category: 'rendering' as const,
           message: 'Largest Contentful Paint is significantly slow',
           impact: 'high' as const,
+          effort: 'high' as const,
+          priority: 1,
+          actionable: true,
           action: 'Implement image optimization and lazy loading'
         }
       },
       fid: {
         warning: {
+          id: 'fid-warning',
           type: 'warning' as const,
+          title: 'First Input Delay Warning',
+          description: 'First Input Delay is higher than recommended',
           category: 'runtime' as const,
           message: 'First Input Delay is higher than recommended',
           impact: 'medium' as const,
+          effort: 'medium' as const,
+          priority: 2,
+          actionable: true,
           action: 'Reduce JavaScript execution time and optimize event handlers'
         },
         critical: {
+          id: 'fid-critical',
           type: 'critical' as const,
+          title: 'First Input Delay Critical',
+          description: 'First Input Delay is significantly high',
           category: 'runtime' as const,
           message: 'First Input Delay is significantly high',
           impact: 'high' as const,
+          effort: 'high' as const,
+          priority: 1,
+          actionable: true,
           action: 'Implement code splitting and optimize main thread usage'
         }
       },
       cls: {
         warning: {
+          id: 'cls-warning',
           type: 'warning' as const,
+          title: 'Cumulative Layout Shift Warning',
+          description: 'Cumulative Layout Shift is higher than recommended',
           category: 'rendering' as const,
           message: 'Cumulative Layout Shift is higher than recommended',
           impact: 'medium' as const,
+          effort: 'medium' as const,
+          priority: 2,
+          actionable: true,
           action: 'Reserve space for dynamic content and avoid layout shifts'
         },
         critical: {
+          id: 'cls-critical',
           type: 'critical' as const,
+          title: 'Cumulative Layout Shift Critical',
+          description: 'Cumulative Layout Shift is significantly high',
           category: 'rendering' as const,
           message: 'Cumulative Layout Shift is significantly high',
           impact: 'high' as const,
+          effort: 'high' as const,
+          priority: 1,
+          actionable: true,
           action: 'Fix layout shifts and implement proper sizing for dynamic content'
         }
       },
       memory: {
         warning: {
+          id: 'memory-warning',
           type: 'warning' as const,
+          title: 'Memory Usage Warning',
+          description: 'Memory usage is higher than recommended',
           category: 'memory' as const,
           message: 'Memory usage is higher than recommended',
           impact: 'medium' as const,
+          effort: 'medium' as const,
+          priority: 2,
+          actionable: true,
           action: 'Implement memory cleanup and optimize object creation'
         },
         critical: {
+          id: 'memory-critical',
           type: 'critical' as const,
+          title: 'Memory Usage Critical',
+          description: 'Memory usage is significantly high',
           category: 'memory' as const,
           message: 'Memory usage is significantly high',
           impact: 'high' as const,
+          effort: 'high' as const,
+          priority: 1,
+          actionable: true,
           action: 'Implement memory leaks detection and cleanup strategies'
         }
       },
       bundleSize: {
         warning: {
+          id: 'bundle-warning',
           type: 'warning' as const,
+          title: 'Bundle Size Warning',
+          description: 'Bundle size is larger than recommended',
           category: 'bundle' as const,
           message: 'Bundle size is larger than recommended',
           impact: 'medium' as const,
+          effort: 'medium' as const,
+          priority: 2,
+          actionable: true,
           action: 'Implement code splitting and tree shaking'
         },
         critical: {
+          id: 'bundle-critical',
           type: 'critical' as const,
+          title: 'Bundle Size Critical',
+          description: 'Bundle size is significantly large',
           category: 'bundle' as const,
           message: 'Bundle size is significantly large',
           impact: 'high' as const,
+          effort: 'high' as const,
+          priority: 1,
+          actionable: true,
           action: 'Implement aggressive code splitting and remove unused dependencies'
         }
       }

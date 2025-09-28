@@ -1,19 +1,7 @@
 {
-  "timestamp": "2025-09-28T15:01:04.184Z",
-  "duration": 17,
-  "optimizations": [
-    "Optimized src/index.css: 285 bytes saved",
-    "Optimized src/styles/accessibility-enhancements.css: 1468 bytes saved",
-    "Optimized src/styles/accessibility.css: 274 bytes saved",
-    "Optimized src/styles/animations.css: 423 bytes saved",
-    "Optimized src/styles/enhanced-features.css: 626 bytes saved",
-    "Optimized src/styles/enhanced.css: 576 bytes saved",
-    "Optimized src/styles/improvements.css: 409 bytes saved",
-    "Optimized src/styles/modern-utilities.css: 709 bytes saved",
-    "Optimized src/styles/notifications.css: 496 bytes saved",
-    "Optimized src/styles/system-metrics.css: 269 bytes saved",
-    "Optimized src/styles/theme.css: 322 bytes saved"
-  ],
+  "timestamp": "2025-09-28T20:07:56.783Z",
+  "duration": 9,
+  "optimizations": [],
   "recommendations": [
     "Use CSS custom properties for better maintainability",
     "Implement critical CSS inlining",
