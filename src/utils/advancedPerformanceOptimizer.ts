@@ -1,6 +1,5 @@
 /**
  * Advanced Performance Optimizer
-<<<<<<< HEAD
  * Provides comprehensive performance optimization strategies
  */
 
@@ -12,6 +11,15 @@ interface PerformanceMetrics {
   ttfb: number;
   fmp: number;
   tti: number;
+  loadTime: number;
+  renderTime: number;
+  memoryUsage: number;
+  fps: number;
+  networkLatency: number;
+  domSize: number;
+  resourceCount: number;
+  cacheHitRate: number;
+  compressionRatio: number;
 }
 
 interface OptimizationStrategy {
@@ -21,71 +29,6 @@ interface OptimizationStrategy {
   implementation: () => void;
 }
 
-class AdvancedPerformanceOptimizer {
-  private metrics: PerformanceMetrics | null = null;
-  private strategies: OptimizationStrategy[] = [];
-  private isInitialized = false;
-
-  constructor() {
-    this.initializeStrategies();
-  }
-
-  private initializeStrategies(): void {
-    this.strategies = [
-      {
-        name: 'Critical Resource Preloading',
-        description: 'Preload critical resources to improve LCP',
-        impact: 'high',
-        implementation: () => this.preloadCriticalResources()
-      },
-      {
-        name: 'Image Optimization',
-        description: 'Optimize images for better performance',
-        impact: 'high',
-        implementation: () => this.optimizeImages()
-      },
-      {
-        name: 'JavaScript Bundle Splitting',
-        description: 'Split JavaScript bundles for better loading',
-        impact: 'high',
-        implementation: () => this.optimizeJavaScriptBundles()
-      },
-      {
-        name: 'CSS Optimization',
-        description: 'Optimize CSS delivery and unused styles',
-        impact: 'medium',
-        implementation: () => this.optimizeCSS()
-      },
-      {
-        name: 'Service Worker Caching',
-        description: 'Implement intelligent caching strategies',
-        impact: 'high',
-        implementation: () => this.implementServiceWorkerCaching()
-      },
-      {
-        name: 'Database Query Optimization',
-        description: 'Optimize database queries and API calls',
-        impact: 'medium',
-        implementation: () => this.optimizeDatabaseQueries()
-      },
-      {
-        name: 'Memory Management',
-        description: 'Optimize memory usage and garbage collection',
-        impact: 'medium',
-        implementation: () => this.optimizeMemoryUsage()
-      },
-      {
-        name: 'Network Optimization',
-        description: 'Optimize network requests and responses',
-        impact: 'medium',
-        implementation: () => this.optimizeNetworkRequests()
-      }
-    ];
-  }
-
-=======
- * Provides comprehensive performance monitoring and optimization utilities
- */
 
 interface PerformanceConfig {
   enableLazyLoading: boolean;
@@ -96,22 +39,6 @@ interface PerformanceConfig {
   enablePrefetching: boolean;
   enableServiceWorker: boolean;
   enableResourceHints: boolean;
-}
-
-interface PerformanceMetrics {
-  loadTime: number;
-  renderTime: number;
-  memoryUsage: number;
-  fps: number;
-  lcp: number;
-  fid: number;
-  cls: number;
-  ttfb: number;
-  networkLatency: number;
-  domSize: number;
-  resourceCount: number;
-  cacheHitRate: number;
-  compressionRatio: number;
 }
 
 class AdvancedPerformanceOptimizer {
@@ -155,17 +82,10 @@ class AdvancedPerformanceOptimizer {
   /**
    * Initialize the performance optimizer
    */
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-7cb6
   public async initialize(): Promise<void> {
     if (this.isInitialized) return;
 
     try {
-<<<<<<< HEAD
-      await this.collectPerformanceMetrics();
-      await this.analyzeAndOptimize();
-      this.isInitialized = true;
-      
-=======
       // Initialize performance observers
       this.initializePerformanceObservers();
       
@@ -200,14 +120,12 @@ class AdvancedPerformanceOptimizer {
       }
 
       this.isInitialized = true;
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-7cb6
       console.log('Advanced Performance Optimizer initialized successfully');
     } catch (error) {
       console.error('Failed to initialize Advanced Performance Optimizer:', error);
     }
   }
 
-<<<<<<< HEAD
   private async collectPerformanceMetrics(): Promise<void> {
     if (typeof window === 'undefined' || !window.performance) return;
 
@@ -381,7 +299,8 @@ class AdvancedPerformanceOptimizer {
       strategies: this.strategies,
       appliedOptimizations: this.strategies.map(s => s.name)
     };
-=======
+  }
+
   /**
    * Initialize performance observers for Core Web Vitals
    */
@@ -584,7 +503,6 @@ class AdvancedPerformanceOptimizer {
    */
   public getMetrics(): PerformanceMetrics {
     return { ...this.metrics };
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-7cb6
   }
 
   /**
@@ -601,7 +519,6 @@ class AdvancedPerformanceOptimizer {
    * Get performance score (0-100)
    */
   public getPerformanceScore(): number {
-<<<<<<< HEAD
     if (!this.metrics) return 0;
 
     // Calculate a performance score based on metrics
@@ -615,48 +532,3 @@ class AdvancedPerformanceOptimizer {
 
 export const advancedPerformanceOptimizer = new AdvancedPerformanceOptimizer();
 export default AdvancedPerformanceOptimizer;
-=======
-    const lcpScore = this.metrics.lcp < 2500 ? 100 : Math.max(0, 100 - (this.metrics.lcp - 2500) / 25);
-    const fidScore = this.metrics.fid < 100 ? 100 : Math.max(0, 100 - (this.metrics.fid - 100) / 10);
-    const clsScore = this.metrics.cls < 0.1 ? 100 : Math.max(0, 100 - this.metrics.cls * 1000);
-    
-    return Math.round((lcpScore + fidScore + clsScore) / 3);
-  }
-
-  /**
-   * Generate performance report
-   */
-  public generateReport(): string {
-    const score = this.getPerformanceScore();
-    const metrics = this.getMetrics();
-    
-    return `
-Performance Report:
-==================
-Overall Score: ${score}/100
-LCP: ${metrics.lcp.toFixed(2)}ms
-FID: ${metrics.fid.toFixed(2)}ms
-CLS: ${metrics.cls.toFixed(4)}
-Memory Usage: ${(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB
-FPS: ${metrics.fps}
-Cache Hit Rate: ${(metrics.cacheHitRate * 100).toFixed(2)}%
-    `.trim();
-  }
-
-  /**
-   * Cleanup resources
-   */
-  public cleanup(): void {
-    this.observers.forEach(observer => observer.disconnect());
-    this.observers = [];
-    this.isInitialized = false;
-  }
-}
-
-// Export singleton instance
-export const performanceOptimizer = new AdvancedPerformanceOptimizer();
-
-// Export class for custom instances
-export { AdvancedPerformanceOptimizer };
-export type { PerformanceConfig, PerformanceMetrics };
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-7cb6
