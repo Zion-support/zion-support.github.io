@@ -8,7 +8,6 @@ import { analytics } from './utils/analytics';
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
 import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
 import { performanceOptimizations } from './utils/bundleOptimization';
-import { accessibilitySystem } from './utils/advancedAccessibilitySystem';
 import NotificationSystem, { Notification } from './components/NotificationSystem';
 import './index.css';
 
@@ -33,7 +32,7 @@ export default function App(): React.JSX.Element {
   const isLoading = false;
   const loadingProgress = 100;
   const handleScroll = useCallback(() => {}, []);
-  const handleClick = useCallback((event?: Event) => {
+  const handleClick = useCallback((event?: MouseEvent) => {
     console.debug('Click event captured for engagement tracking', event);
   }, []);
   const originalTrackEngagement = useCallback(() => {}, []);
