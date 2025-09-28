@@ -9,13 +9,46 @@ export default function Contact(): JSX.Element {
     name: '',
     email: '',
     company: '',
-    subject: '',
+    phone: '',
+    service: '',
+    budget: '',
+    timeline: '',
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  // Removed unused visibility state
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
   const { trackClick } = useAnalytics();
+
+  const serviceOptions = [
+    'AI & Machine Learning',
+    'Cloud Infrastructure',
+    'Cybersecurity',
+    'DevOps & Automation',
+    'Data Analytics & BI',
+    'Mobile Development',
+    'Web Development',
+    'Consulting',
+    'Other'
+  ];
+
+  const budgetOptions = [
+    'Under $10,000',
+    '$10,000 - $50,000',
+    '$50,000 - $100,000',
+    '$100,000 - $500,000',
+    'Over $500,000',
+    'Not specified'
+  ];
+
+  const timelineOptions = [
+    'ASAP',
+    'Within 1 month',
+    '1-3 months',
+    '3-6 months',
+    '6+ months',
+    'Flexible'
+  ];
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -25,25 +58,53 @@ export default function Contact(): JSX.Element {
     }));
   };
 
+  const validateForm = () => {
+    const errors: string[] = [];
+    
+    if (!formData.name.trim()) errors.push('Name is required');
+    if (!formData.email.trim()) errors.push('Email is required');
+    if (!formData.email.includes('@')) errors.push('Valid email is required');
+    if (!formData.message.trim()) errors.push('Message is required');
+    
+    return errors;
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    const errors = validateForm();
+    if (errors.length > 0) {
+      alert(errors.join('\n'));
+      return;
+    }
+    
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    setIsSubmitting(false);
-    trackClick('contact-form-submit', 'conversion');
-    alert('Thank you for your message! We\'ll get back to you soon.');
-    
-    // Reset form
-    setFormData({
-      name: '',
-      email: '',
-      company: '',
-      subject: '',
-      message: ''
-    });
+    setSubmitStatus('idle');
+
+    try {
+      // Simulate API call
+      await new Promise(resolve => setTimeout(resolve, 2000));
+      
+      // Reset form
+      setFormData({
+        name: '',
+        email: '',
+        company: '',
+        phone: '',
+        service: '',
+        budget: '',
+        timeline: '',
+        message: ''
+      });
+      
+      setSubmitStatus('success');
+      trackClick('contact-form', 'submission');
+    } catch (error) {
+      console.error('Form submission error:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const contactInfo = [
