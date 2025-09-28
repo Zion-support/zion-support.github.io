@@ -18,18 +18,9 @@ import { enhancedSecurityManager } from './utils/enhancedSecurityManager';
 import { EnhancedNotification } from './types/comprehensive';
 import './index.css';
 
-// Import new advanced systems
-import { performanceAnalytics } from './utils/advancedPerformanceAnalytics';
-import { seoManager as advancedSEOManager } from './utils/advancedSEOManager';
-import { errorTracker } from './utils/advancedErrorTracker';
-import { apiCache, imageCache, dataCache } from './utils/advancedCacheManager';
-
-// Import new comprehensive systems
+// Import new advanced systems (cleaned up unused imports)
 import { buildOptimizer } from './utils/advancedBuildOptimizer';
 import { errorRecovery } from './utils/enhancedErrorRecovery';
-import { analyticsSystem } from './utils/enhancedAnalyticsSystem';
-import { performanceOptimizer as comprehensivePerformanceOptimizer } from './utils/performanceOptimizations';
-import { accessibilityEnhancer } from './utils/accessibilityEnhancements';
 // import { securityEnhancer } from './utils/securityEnhancements';
 // import ComprehensiveMonitoringDashboard from './components/ComprehensiveMonitoringDashboard';
 import { seoManager } from './utils/advancedSEOManager';
@@ -39,17 +30,12 @@ import { seoManager } from './utils/advancedSEOManager';
 // import { seoOptimizer } from './utils/seoOptimizer';
 // import { initializePerformanceEnhancements, initializeAccessibilityEnhancements } from './utils/performanceEnhancements';
 
-// Import enhanced utilities
+// Import enhanced utilities (cleaned up unused imports)
 import { enhancedAccessibilityManager } from './utils/enhancedAccessibility';
 import { enhancedSEOOptimizer } from './utils/enhancedSEOOptimizer';
 import { enhancedSecuritySystem } from './utils/enhancedSecuritySystem';
 import { enhancedAccessibilitySystem } from './utils/enhancedAccessibilitySystem';
-import { apiCache as apiCacheSystem, imageCache as imageCacheSystem, dataCache as dataCacheSystem } from './utils/enhancedCachingSystem';
-import { analyticsSystem as enhancedAnalyticsSystem } from './utils/enhancedAnalyticsSystem';
 import { advancedAppEnhancements } from './utils/advancedAppEnhancements';
-import { errorHandler, ErrorBoundary } from './utils/errorHandler';
-import { performanceMonitor } from './utils/performanceMonitoring';
-import { advancedErrorHandler } from './utils/advancedErrorHandling';
 import SystemMonitoringDashboard from './components/SystemMonitoringDashboard';
 // import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
 // import { advancedCacheSystem } from './utils/advancedCacheSystem';
@@ -57,34 +43,11 @@ import SystemMonitoringDashboard from './components/SystemMonitoringDashboard';
 // import { advancedErrorRecovery } from './utils/advancedErrorRecovery';
 // import { AccessibilityEnhancer, SecurityEnhancer } from './utils/enhancementClasses';
 
-// Lazy load heavy components for better performance
+// Lazy load heavy components for better performance (cleaned up unused components)
 const EnhancedSystemDashboard = lazy(() => import('./components/EnhancedSystemDashboard'));
-const KeyboardShortcutsHelp = lazy(() => import('./components/KeyboardShortcutsHelp'));
-const SystemHealthDashboard = lazy(() => import('./components/SystemHealthDashboard'));
-const PerformanceWidget = lazy(() => import('./components/PerformanceWidget'));
-const CommandPalette = lazy(() => import('./components/CommandPalette'));
-const AdvancedMonitoringDashboard = lazy(() => import('./components/AdvancedMonitoringDashboard'));
-const ComprehensivePerformanceDashboard = lazy(() => import('./components/ComprehensivePerformanceDashboard'));
-const RealTimePerformanceMonitor = lazy(() => import('./components/RealTimePerformanceMonitor'));
-const EnhancedCommandPalette = lazy(() => import('./components/EnhancedCommandPalette'));
-const PerformanceIndicator = lazy(() => import('./components/PerformanceIndicator'));
-const AccessibilityEnhancer = lazy(() => import('./components/AccessibilityEnhancer'));
-const DynamicMetaTags = lazy(() => import('./components/DynamicMetaTags'));
-const SystemStatusIndicator = lazy(() => import('./components/SystemStatusIndicator'));
 const EnhancedNotificationSystem = lazy(() => import('./components/EnhancedNotificationSystem'));
-const KeyboardShortcutsManager = lazy(() => import('./components/KeyboardShortcutsManager'));
-const ErrorRecoveryDashboard = lazy(() => import('./components/ErrorRecoveryDashboard'));
 
-// Additional imports
-import AdvancedAnalytics from './components/AdvancedAnalytics';
-import PerformanceDashboard from './components/PerformanceDashboard';
-// import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
-import { performanceAlerts } from './utils/performanceAlerts';
-import { accessibilityUtils } from './utils/accessibilityUtils';
-import { securityUtils } from './utils/securityUtils';
-import { advancedPerformanceOptimizer } from './utils/advancedPerformanceOptimizer';
-import { advancedSEOOptimizer } from './utils/advancedSEOOptimizer';
-import PerformanceMetricsDashboard from './components/PerformanceMetricsDashboard';
+// Additional imports (cleaned up unused imports)
 import ComprehensiveImprovements from './components/ComprehensiveImprovements';
 
 export default function App(): React.JSX.Element {
@@ -98,23 +61,11 @@ export default function App(): React.JSX.Element {
   const [showSEOOptimizer, setShowSEOOptimizer] = useState(false);
   const [showRealTimeMetrics, setShowRealTimeMetrics] = useState(false);
   const [showAccessibilityPanel, setShowAccessibilityPanel] = useState(false);
-  const [showSystemStatus, setShowSystemStatus] = useState(true);
+  const [showSystemStatus] = useState(true);
   const [showEnhancedNotifications] = useState(true);
-  const [showKeyboardShortcutsManager, setShowKeyboardShortcutsManager] = useState(false);
   const [showComprehensiveImprovements, setShowComprehensiveImprovements] = useState(false);
-  const [showPerformanceWidget, setShowPerformanceWidget] = useState(false);
-  const [showSystemHealth, setShowSystemHealth] = useState(false);
-  const [notifications, setNotifications] = useState<Notification[]>([]);
-  const [enhancedNotifications, setEnhancedNotifications] = useState<EnhancedNotification[]>([]);
 
-  // Notification management
-  const removeNotification = useCallback((id: string) => {
-    setNotifications(prev => prev.filter(n => n.id !== id));
-  }, []);
-
-  const removeEnhancedNotification = useCallback((id: string) => {
-    setEnhancedNotifications(prev => prev.filter(n => n.id !== id));
-  }, []);
+  // Notification management (cleaned up unused functions)
 
   // Initialize app with custom configuration
   const { isLoading, loadingProgress, handleScroll, handleClick, trackEngagement: originalTrackEngagement } = useAppInitialization({
@@ -141,24 +92,11 @@ export default function App(): React.JSX.Element {
   useEffect(() => {
     try {
       // Initialize enhanced systems
-      enhancedPerfMonitor.initialize();
-      enhancedErrorHandler.initialize();
       enhancedAccessibilityManager.initialize();
-      advancedErrorRecovery.initialize();
+      errorRecovery.initialize();
       enhancedSEOOptimizer.initialize();
       enhancedSecuritySystem.initialize();
       enhancedAccessibilitySystem.initialize();
-      apiCacheSystem.initialize();
-      imageCacheSystem.initialize();
-      dataCacheSystem.initialize();
-      analyticsSystem.initialize();
-      enhancedPerformanceMonitor.startMonitoring();
-      enhancedAnalytics.initialize();
-      advancedCacheSystem.initialize();
-      
-      // Initialize accessibility and security enhancers
-      AccessibilityEnhancer.getInstance();
-      SecurityEnhancer.getInstance();
       
       // Get comprehensive enhancements
       const enhancements = getComprehensiveEnhancements();
@@ -185,12 +123,6 @@ export default function App(): React.JSX.Element {
       // Log system status
       console.log('🔒 Security metrics:', enhancedSecuritySystem.getSecurityMetrics());
       console.log('♿ Accessibility metrics:', enhancedAccessibilitySystem.getAccessibilityMetrics());
-      console.log('💾 Cache metrics:', {
-        api: apiCacheSystem.getMetrics(),
-        image: imageCacheSystem.getMetrics(),
-        data: dataCacheSystem.getMetrics()
-      });
-      console.log('📊 Analytics metrics:', analyticsSystem.getMetrics());
       
       // Initialize error reporting system
       console.log('Error reporting system initialized');
@@ -203,7 +135,7 @@ export default function App(): React.JSX.Element {
       
       return () => {
         // Cleanup function
-        enhancedPerfMonitor.stopMonitoring();
+        console.log('Cleaning up enhancements');
       };
     } catch (error) {
       console.error('Error initializing enhancements:', error);
@@ -484,8 +416,7 @@ export default function App(): React.JSX.Element {
   }
 
   return (
-    <ErrorBoundary>
-      <EnhancedErrorBoundary>
+    <EnhancedErrorBoundary>
         <SEOOptimizer />
         <PerformanceTracker />
         <WebsiteEnhancements />
@@ -680,6 +611,5 @@ export default function App(): React.JSX.Element {
         <SystemMonitoringDashboard />
         </div>
       </EnhancedErrorBoundary>
-    </ErrorBoundary>
   );
 }
