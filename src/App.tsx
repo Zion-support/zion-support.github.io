@@ -537,6 +537,15 @@ export default function App(): React.JSX.Element {
       }
     };
 
+    // Add event listener
+    document.addEventListener('keydown', handleKeyDown);
+    
+    // Cleanup function
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [showSystemDashboard, showPerformanceOptimizer, showPerformanceMonitor, showAIDashboard, showSEOOptimizer, isDarkMode, showRealTimeMonitor, showSystemHealth, showKeyboardHelp, showPerformanceMetrics, showCommandPalette]);
+
   // Enhanced track engagement function
   const trackEngagement = useCallback(() => {
     try {
@@ -569,6 +578,8 @@ export default function App(): React.JSX.Element {
       }
     }
   }), []);
+
+  // Main initialization and cleanup effect
   useEffect(() => {
     try {
       // Add performance marks for better monitoring
@@ -621,7 +632,7 @@ export default function App(): React.JSX.Element {
   }, [seoData, handleScroll, handleClick, handleKeyDown, preloadResource, seoManagerInstance]);
 
   // Main initialization and cleanup effect
-  React.useEffect(() => {
+  useEffect(() => {
     try {
       // Mark app as fully initialized
       if (typeof window !== 'undefined' && window.performance && 
@@ -659,10 +670,6 @@ export default function App(): React.JSX.Element {
       console.error('Error in cleanup effect:', error);
     }
   }, [trackEngagement, handleKeyDown, handleScroll, handleClick]);
-
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
-  }, [showSystemDashboard, showPerformanceOptimizer, showPerformanceMonitor, showAIDashboard, showSEOOptimizer, isDarkMode, showKeyboardHelp, showCommandPalette, showRealTimeMonitor, showSystemHealth, showPerformanceMetrics]);
 
 
   // Track engagement on scroll and click
