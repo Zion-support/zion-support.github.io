@@ -29,7 +29,15 @@ interface ErrorReport {
   [key: string]: unknown;
 }
 
-
+interface AIInsights {
+  predictedHighRiskActions: string[];
+  recommendedImprovements: string[];
+  errorTrends: Array<{
+    category: string;
+    trend: 'increasing' | 'decreasing' | 'stable';
+  }>;
+  [key: string]: unknown;
+}
 const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisible, onClose }) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [insights, setInsights] = useState<{
