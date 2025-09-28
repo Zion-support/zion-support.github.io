@@ -145,9 +145,14 @@ export class ErrorRecoverySystem {
     return [...this.errorHistory];
   }
 
+  public getErrors(): ErrorContext[] {
+    return [...this.errors];
+  }
+
   public reset(): void {
     this.errorCount = 0;
     this.errorHistory = [];
+    this.errors = [];
   }
 
   public addRecoveryStrategy(strategy: RecoveryStrategy): void {
