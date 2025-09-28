@@ -68,114 +68,7 @@ export default function App(): React.JSX.Element {
   // Get SEO data using current pathname
   const seoData = useSEOData(currentPathname);
 
-<<<<<<< HEAD
-  // Command palette commands
-  const commands = useMemo(() => [
-    {
-      id: 'system-dashboard',
-      title: 'Toggle System Dashboard',
-      description: 'Open/close the system metrics dashboard',
-      category: 'Dashboard',
-      action: () => setShowSystemDashboard(prev => !prev),
-      shortcut: 'Ctrl+Shift+D'
-    },
-    {
-      id: 'performance-optimizer',
-      title: 'Toggle Performance Optimizer',
-      description: 'Open/close the performance optimization panel',
-      category: 'Performance',
-      action: () => setShowPerformanceOptimizer(prev => !prev),
-      shortcut: 'Ctrl+Shift+P'
-    },
-    {
-      id: 'performance-monitor',
-      title: 'Toggle Performance Monitor',
-      description: 'Open/close the performance monitoring panel',
-      category: 'Performance',
-      action: () => setShowPerformanceMonitor(prev => !prev),
-      shortcut: 'Ctrl+Shift+M'
-    },
-    {
-      id: 'ai-dashboard',
-      title: 'Toggle AI Dashboard',
-      description: 'Open/close the AI performance dashboard',
-      category: 'AI',
-      action: () => setShowAIDashboard(prev => !prev),
-      shortcut: 'Ctrl+Shift+A'
-    },
-    {
-      id: 'keyboard-help',
-      title: 'Show Keyboard Shortcuts',
-      description: 'Display all available keyboard shortcuts',
-      category: 'Help',
-      action: () => setShowKeyboardHelp(true),
-      shortcut: 'Ctrl+Shift+H'
-    },
-    {
-      id: 'close-all',
-      title: 'Close All Modals',
-      description: 'Close all open modals and dashboards',
-      category: 'Navigation',
-      action: () => {
-        setShowSystemDashboard(false);
-        setShowPerformanceOptimizer(false);
-        setShowPerformanceMonitor(false);
-        setShowAIDashboard(false);
-        setShowRealTimeMetrics(false);
-        setShowCommandPalette(false);
-        setShowKeyboardHelp(false);
-      },
-      shortcut: 'Escape'
-    }
-  ], []);
-
-  // Optimized keyboard handler for system dashboard toggle
-  const handleKeyDown = useCallback((event: KeyboardEvent) => {
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey) {
-      event.preventDefault();
-      switch (event.key) {
-        case 'D':
-          setShowSystemDashboard(prev => !prev);
-          break;
-        case 'P':
-          setShowPerformanceOptimizer(prev => !prev);
-          break;
-        case 'R':
-          setShowRealTimeMetrics(prev => !prev);
-          break;
-        case 'M':
-          setShowPerformanceMonitor(prev => !prev);
-          break;
-        case 'A':
-          setShowAIDashboard(prev => !prev);
-          break;
-        case 'C':
-          setShowCommandPalette(prev => !prev);
-          break;
-        case 'H':
-          setShowKeyboardHelp(prev => !prev);
-          break;
-        case 'S':
-          setShowSEOOptimizer(prev => !prev);
-          break;
-        case 'Escape':
-          // Close all modals and dashboards
-          setShowSystemDashboard(false);
-          setShowPerformanceOptimizer(false);
-          setShowPerformanceMonitor(false);
-          setShowAIDashboard(false);
-          setShowRealTimeMetrics(false);
-          setShowCommandPalette(false);
-          setShowKeyboardHelp(false);
-          setShowSEOOptimizer(false);
-          setShowAccessibilityPanel(false);
-          break;
-      }
-    }
-  }, []);
-=======
   // Enhanced engagement tracking function
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a11a
   const enhancedTrackEngagement = useCallback(() => {
     const timeOnPage = Date.now() - engagementData.startTime;
     seoAnalytics.trackUserEngagement(window.location.pathname, {
@@ -539,7 +432,6 @@ export default function App(): React.JSX.Element {
     }
   ];
 
-<<<<<<< HEAD
   // Track engagement on scroll and click
   useEffect(() => {
     const handleScrollWithEngagement = () => {
@@ -665,43 +557,6 @@ export default function App(): React.JSX.Element {
           isVisible={showAIDashboard}
           onClose={() => setShowAIDashboard(false)}
         />
-
-<<<<<<< HEAD
-        {/* Real-time Metrics Display */}
-        {showRealTimeMetrics && (
-          <div className="fixed top-4 right-4 z-50 bg-black bg-opacity-90 text-white p-4 rounded-lg shadow-lg min-w-[300px]">
-            <div className="flex justify-between items-center mb-3">
-              <h3 className="text-lg font-bold">Real-time Metrics</h3>
-              <button
-                onClick={() => setShowRealTimeMetrics(false)}
-                className="text-gray-300 hover:text-white text-xl"
-              >
-                ✕
-              </button>
-            </div>
-            <div className="space-y-2 text-sm">
-              <div className="flex justify-between">
-                <span>Memory Usage:</span>
-                <span className="text-green-400">{performanceMetrics.memoryUsage} MB</span>
-              </div>
-              <div className="flex justify-between">
-                <span>Render Time:</span>
-                <span className="text-blue-400">{performanceMetrics.renderTime} ms</span>
-              </div>
-              <div className="flex justify-between">
-                <span>Network Latency:</span>
-                <span className="text-yellow-400">{performanceMetrics.networkLatency} ms</span>
-              </div>
-              <div className="flex justify-between">
-                <span>Errors:</span>
-                <span className="text-red-400">{performanceMetrics.errorCount}</span>
-              </div>
-            </div>
-          </div>
-        )}
-
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a11a
         {/* Real-Time Performance Monitor */}
         <RealTimePerformanceMonitor
           isVisible={showRealTimeMonitor}
