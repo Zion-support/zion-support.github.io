@@ -42,11 +42,14 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ showDashboard, 
       .filter((entry) => entry.name.includes('.js'))
       .reduce((total, entry) => total + (entry.transferSize || 0), 0);
 
-    newMetrics.bundleSize = Math.round(bundleSize / 1024); // Convert to KB
+    const updatedMetrics = {
+      ...metrics,
+      bundleSize: Math.round(bundleSize / 1024) // Convert to KB
+    };
 
-    setMetrics(prev => ({ ...prev, ...newMetrics }));
+    setMetrics(updatedMetrics);
     if (onMetricsUpdate) {
-      onMetricsUpdate(newMetrics as PerformanceMetrics);
+      onMetricsUpdate(updatedMetrics as PerformanceMetrics);
     }
   }, [onMetricsUpdate]);
 
