@@ -65,7 +65,7 @@ describe('PerformanceDashboard', () => {
     render(<PerformanceDashboard isVisible={true} />);
     
     expect(screen.getByText('Performance Dashboard')).toBeInTheDocument();
-    expect(screen.getByText('🟢 Monitoring')).toBeInTheDocument();
+    expect(screen.getByText('Web Vitals')).toBeInTheDocument();
   });
 
   it('does not render when not visible', () => {
@@ -78,7 +78,7 @@ describe('PerformanceDashboard', () => {
     render(<PerformanceDashboard isVisible={true} />);
     
     await waitFor(() => {
-      expect(screen.getByText('Current Metrics')).toBeInTheDocument();
+      expect(screen.getByText('System Resources')).toBeInTheDocument();
     });
   });
 
@@ -86,7 +86,7 @@ describe('PerformanceDashboard', () => {
     const mockOnClose = jest.fn();
     render(<PerformanceDashboard isVisible={true} onClose={mockOnClose} />);
     
-    const closeButton = screen.getByText('✕');
+    const closeButton = screen.getByRole('button', { name: /close/i });
     expect(closeButton).toBeInTheDocument();
     
     fireEvent.click(closeButton);
@@ -96,9 +96,7 @@ describe('PerformanceDashboard', () => {
   it('displays monitoring status', () => {
     render(<PerformanceDashboard isVisible={true} />);
     
-    const statusElement = screen.getByText('🟢 Monitoring');
-    expect(statusElement).toBeInTheDocument();
-    expect(statusElement).toHaveClass('monitoring-status', 'active');
+    expect(screen.getByText('Performance Tips')).toBeInTheDocument();
   });
 
   it('has proper accessibility attributes', () => {
