@@ -16,6 +16,8 @@ import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import AIPerformanceDashboard from './components/AIPerformanceDashboard';
+import AdvancedPerformanceDashboard from './components/AdvancedPerformanceDashboard';
+import ComprehensiveSystemDashboard from './components/ComprehensiveSystemDashboard';
 import { SEOOptimizer, useSEOData } from './components/SEOOptimizer';
 import EnhancedAnalytics from './components/EnhancedAnalytics';
 import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
@@ -34,6 +36,8 @@ import { performanceAlerts } from './utils/performanceAlerts';
 import { errorRecovery } from './utils/errorRecovery';
 import { accessibilityUtils } from './utils/accessibilityUtils';
 import { securityUtils } from './utils/securityUtils';
+import { advancedPerformanceOptimizer } from './utils/advancedPerformanceOptimizer';
+import { enhancedSecurityManager } from './utils/enhancedSecurityManager';
 import './index.css';
 
 export default function App(): React.JSX.Element {
@@ -42,6 +46,8 @@ export default function App(): React.JSX.Element {
   const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
   const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
   const [showAIDashboard, setShowAIDashboard] = useState(false);
+  const [showAdvancedPerformanceDashboard, setShowAdvancedPerformanceDashboard] = useState(false);
+  const [showComprehensiveSystemDashboard, setShowComprehensiveSystemDashboard] = useState(false);
   const [showRealTimeMetrics, setShowRealTimeMetrics] = useState(false);
   const [showCommandPalette, setShowCommandPalette] = useState(false);
   const [showKeyboardHelp, setShowKeyboardHelp] = useState(false);
@@ -138,6 +144,22 @@ export default function App(): React.JSX.Element {
       shortcut: 'Ctrl+Shift+A'
     },
     {
+      id: 'advanced-performance-dashboard',
+      title: 'Toggle Advanced Performance Dashboard',
+      description: 'Open/close the advanced performance dashboard',
+      category: 'Performance',
+      action: () => setShowAdvancedPerformanceDashboard(prev => !prev),
+      shortcut: 'Ctrl+Shift+V'
+    },
+    {
+      id: 'comprehensive-system-dashboard',
+      title: 'Toggle Comprehensive System Dashboard',
+      description: 'Open/close the comprehensive system dashboard',
+      category: 'System',
+      action: () => setShowComprehensiveSystemDashboard(prev => !prev),
+      shortcut: 'Ctrl+Shift+Q'
+    },
+    {
       id: 'keyboard-help',
       title: 'Show Keyboard Shortcuts',
       description: 'Display all available keyboard shortcuts',
@@ -155,6 +177,8 @@ export default function App(): React.JSX.Element {
         setShowPerformanceOptimizer(false);
         setShowPerformanceMonitor(false);
         setShowAIDashboard(false);
+        setShowAdvancedPerformanceDashboard(false);
+        setShowComprehensiveSystemDashboard(false);
         setShowRealTimeMetrics(false);
         setShowCommandPalette(false);
         setShowKeyboardHelp(false);
@@ -162,7 +186,6 @@ export default function App(): React.JSX.Element {
       shortcut: 'Escape'
     }
   ], []);
-
   // Optimized keyboard handler for system dashboard toggle
   const handleKeyDown = useCallback((event: KeyboardEvent) => {
     if ((event.ctrlKey || event.metaKey) && event.shiftKey) {
@@ -182,6 +205,12 @@ export default function App(): React.JSX.Element {
           break;
         case 'A':
           setShowAIDashboard(prev => !prev);
+          break;
+        case 'V':
+          setShowAdvancedPerformanceDashboard(prev => !prev);
+          break;
+        case 'Q':
+          setShowComprehensiveSystemDashboard(prev => !prev);
           break;
         case 'C':
           setShowCommandPalette(prev => !prev);
@@ -250,6 +279,10 @@ export default function App(): React.JSX.Element {
       }
       enhancedAnalytics.initialize();
       advancedCacheSystem.initialize();
+      
+      // Initialize new advanced systems
+      advancedPerformanceOptimizer.initialize();
+      enhancedSecurityManager.initialize();
       new AdvancedAutomationSystem().initialize();
       // Initialize enhancement systems
       new AccessibilityEnhancer();
@@ -485,99 +518,6 @@ export default function App(): React.JSX.Element {
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, [showSystemDashboard, showPerformanceOptimizer, showPerformanceMonitor, showAIDashboard, showSEOOptimizer, isDarkMode, showKeyboardHelp, showCommandPalette, showRealTimeMonitor, showSystemHealth, showRealTimeMetrics]);
 
-  // Command palette commands
-  const commandPaletteCommands = [
-    {
-      id: 'toggle-system-dashboard',
-      title: 'Toggle System Dashboard',
-      description: 'Open or close the system dashboard',
-      category: 'Dashboard',
-      action: () => setShowSystemDashboard(!showSystemDashboard),
-      shortcut: 'Ctrl+Shift+D'
-    },
-    {
-      id: 'toggle-performance-optimizer',
-      title: 'Toggle Performance Optimizer',
-      description: 'Open or close the performance optimizer',
-      category: 'Dashboard',
-      action: () => setShowPerformanceOptimizer(!showPerformanceOptimizer),
-      shortcut: 'Ctrl+Shift+P'
-    },
-    {
-      id: 'toggle-performance-monitor',
-      title: 'Toggle Performance Monitor',
-      description: 'Open or close the performance monitor',
-      category: 'Dashboard',
-      action: () => setShowPerformanceMonitor(!showPerformanceMonitor),
-      shortcut: 'Ctrl+Shift+M'
-    },
-    {
-      id: 'toggle-ai-dashboard',
-      title: 'Toggle AI Dashboard',
-      description: 'Open or close the AI performance dashboard',
-      category: 'Dashboard',
-      action: () => setShowAIDashboard(!showAIDashboard),
-      shortcut: 'Ctrl+Shift+A'
-    },
-    {
-      id: 'toggle-seo-optimizer',
-      title: 'Toggle SEO Optimizer',
-      description: 'Open or close the SEO optimizer',
-      category: 'Dashboard',
-      action: () => setShowSEOOptimizer(!showSEOOptimizer),
-      shortcut: 'Ctrl+Shift+S'
-    },
-    {
-      id: 'toggle-theme',
-      title: 'Toggle Theme',
-      description: 'Switch between dark and light theme',
-      category: 'Appearance',
-      action: () => setIsDarkMode(!isDarkMode),
-      shortcut: 'Ctrl+Shift+T'
-    },
-    {
-      id: 'toggle-real-time-monitor',
-      title: 'Toggle Real-Time Monitor',
-      description: 'Open or close the real-time performance monitor',
-      category: 'Dashboard',
-      action: () => setShowRealTimeMonitor(!showRealTimeMonitor),
-      shortcut: 'Ctrl+Shift+R'
-    },
-    {
-      id: 'toggle-system-health',
-      title: 'Toggle System Health',
-      description: 'Open or close the system health dashboard',
-      category: 'Dashboard',
-      action: () => setShowSystemHealth(!showSystemHealth),
-      shortcut: 'Ctrl+Shift+H'
-    },
-    {
-      id: 'show-keyboard-help',
-      title: 'Show Keyboard Shortcuts',
-      description: 'Display all available keyboard shortcuts',
-      category: 'Help',
-      action: () => setShowKeyboardHelp(true),
-      shortcut: 'Ctrl+Shift+K'
-    },
-    {
-      id: 'show-notifications',
-      title: 'Test Notifications',
-      description: 'Show a test notification',
-      category: 'Testing',
-      action: () => {
-        if ((window as any).notifications) {
-          (window as any).notifications.add({
-            type: 'success',
-            title: 'Command Executed',
-            message: 'Test notification sent successfully!',
-            duration: 3000
-          });
-        }
-      },
-      shortcut: 'Ctrl+Shift+N'
-    }
-  ];
-
   // Track engagement on scroll and click
   useEffect(() => {
     const handleScrollWithEngagement = () => {
@@ -585,8 +525,8 @@ export default function App(): React.JSX.Element {
       trackEngagement();
     };
 
-    const handleClickWithEngagement = (event: Event) => {
-      handleClick(event);
+    const handleClickWithEngagement = () => {
+      handleClick();
       trackEngagement();
     };
 
@@ -675,6 +615,44 @@ export default function App(): React.JSX.Element {
           </div>
         )}
 
+        {/* AI Performance Dashboard */}
+        <AIPerformanceDashboard
+          isVisible={showAIDashboard}
+          onClose={() => setShowAIDashboard(false)}
+        />
+
+        {/* Advanced Performance Dashboard */}
+        <AdvancedPerformanceDashboard
+          isVisible={showAdvancedDashboard}
+          onClose={() => setShowAdvancedDashboard(false)}
+        />
+
+        {/* Real-time Metrics */}
+        {showRealTimeMetrics && (
+          <div 
+            className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="real-time-metrics-title"
+            onClick={(e) => e.target === e.currentTarget && setShowRealTimeMetrics(false)}
+          >
+            <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+              <div className="flex justify-between items-center mb-4">
+                <h2 id="real-time-metrics-title" className="text-2xl font-bold">Real-time Metrics</h2>
+                <button
+                  onClick={() => setShowRealTimeMetrics(false)}
+                  className="text-gray-500 hover:text-gray-700 text-2xl"
+                >
+                  ✕
+                </button>
+              </div>
+              <div className="space-y-4">
+                <p>Real-time performance metrics will be displayed here.</p>
+              </div>
+            </div>
+          </div>
+        )}
+
         {/* SEO Optimizer - Toggle with Ctrl+Shift+S */}
         {showSEOOptimizer && (
           <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
@@ -697,6 +675,18 @@ export default function App(): React.JSX.Element {
         <AIPerformanceDashboard
           isVisible={showAIDashboard}
           onClose={() => setShowAIDashboard(false)}
+        />
+
+        {/* Advanced Performance Dashboard - Toggle with Ctrl+Shift+P */}
+        <AdvancedPerformanceDashboard
+          isVisible={showAdvancedPerformanceDashboard}
+          onClose={() => setShowAdvancedPerformanceDashboard(false)}
+        />
+
+        {/* Comprehensive System Dashboard - Toggle with Ctrl+Shift+S */}
+        <ComprehensiveSystemDashboard
+          isVisible={showComprehensiveSystemDashboard}
+          onClose={() => setShowComprehensiveSystemDashboard(false)}
         />
 
         {/* Real-time Metrics Display */}
@@ -810,9 +800,10 @@ export default function App(): React.JSX.Element {
         <div className="fixed bottom-4 left-4 z-40 bg-gray-800 text-white p-3 rounded-lg shadow-lg text-sm opacity-75 hover:opacity-100 transition-opacity duration-200">
           <div className="font-semibold mb-1">Keyboard Shortcuts:</div>
           <div>Ctrl+Shift+D: System Dashboard</div>
-          <div>Ctrl+Shift+P: Performance Optimizer</div>
+          <div>Ctrl+Shift+V: Advanced Performance Dashboard</div>
           <div>Ctrl+Shift+M: Performance Monitor</div>
           <div>Ctrl+Shift+A: AI Dashboard</div>
+          <div>Ctrl+Shift+Q: Comprehensive System Dashboard</div>
           <div>Ctrl+Shift+S: SEO Optimizer</div>
           <div>Ctrl+Shift+T: Toggle Theme</div>
           <div>Ctrl+Shift+R: Real-Time Monitor</div>
