@@ -61,6 +61,30 @@ export default function App(): React.JSX.Element {
     structuredData: []
   }), []);
 
+  // Track engagement function
+  const trackEngagement = useCallback(() => {
+    const timeOnPage = Date.now() - engagementData.startTime;
+    seoAnalytics.trackUserEngagement(window.location.pathname, {
+      timeOnPage,
+      scrollDepth: engagementData.scrollDepth,
+      clicks: engagementData.clicks,
+    });
+    // Also call the original trackEngagement from useAppInitialization
+    trackEngagement();
+  }, [engagementData.clicks, engagementData.scrollDepth, engagementData.startTime]);
+
+  // Simple SEO manager
+  const seoManagerInstance = useMemo(() => ({
+    updateMetaTags: (data: typeof seoData) => {
+      if (typeof document !== 'undefined') {
+        document.title = data.title;
+        const metaDescription = document.querySelector('meta[name="description"]');
+        if (metaDescription) {
+          metaDescription.setAttribute('content', data.description);
+        }
+      }
+    }
+  }), []);
 
   useEffect(() => {
     // Add performance marks for better monitoring
@@ -100,7 +124,7 @@ export default function App(): React.JSX.Element {
     performanceSEO.optimizeFonts();
 
     // Set default SEO data using the correct method
-    seoManager.updateMetaTags(seoData);
+    seoManagerInstance.updateMetaTags(seoData);
 
     // Basic performance monitoring
     if (typeof window !== 'undefined') {
@@ -121,7 +145,7 @@ export default function App(): React.JSX.Element {
       document.removeEventListener('click', handleClick);
       document.removeEventListener('keydown', handleKeyDown);
     };
-  }, [handleScroll, handleClick, handleKeyDown, seoData, preloadResource]);
+  }, [handleScroll, handleClick, handleKeyDown, seoData, preloadResource, seoManagerInstance]);
 
   // Main initialization and cleanup effect
   React.useEffect(() => {
