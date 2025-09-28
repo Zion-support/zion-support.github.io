@@ -1,13 +1,12 @@
 import React, { useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
 
-export type SEOProps = {
+interface SEOProps {
   title?: string;
   description?: string;
-  keywords?: string;
+  keywords?: string[];
   image?: string;
   url?: string;
-  type?: 'website' | 'article' | 'profile' | 'product';
+  type?: 'website' | 'article' | 'profile';
   author?: string;
   publishedTime?: string;
   modifiedTime?: string;
@@ -16,136 +15,161 @@ export type SEOProps = {
   noindex?: boolean;
   nofollow?: boolean;
   canonical?: string;
+  alternate?: { hreflang: string; href: string }[];
+  structuredData?: object;
 }
 
-export function SEO({
-  title = 'Zion Tech Group - The Future of Tech Marketplace',
-  description = 'Connect with AI experts, discover innovative services, and accelerate your digital transformation with Zion Tech Group\'s comprehensive platform.',
-  keywords = 'AI services, tech marketplace, digital transformation, IT consulting, cloud solutions, cybersecurity, talent placement',
-  image = '/og-image.jpg',
+const SEO: React.FC<SEOProps> = ({
+  title = 'Zion Tech Group - Advanced AI and IT Solutions',
+  description = 'Leading provider of cutting-edge AI solutions, enterprise security, and digital transformation services. Trusted by 500+ companies worldwide.',
+  keywords = [
+    'AI solutions',
+    'artificial intelligence',
+    'enterprise security',
+    'digital transformation',
+    'machine learning',
+    'cybersecurity',
+    'cloud computing',
+    'software development',
+    'IT consulting',
+    'Zion Tech Group'
+  ],
+  image = '/images/og-image.jpg',
   url = 'https://ziontechgroup.com',
   type = 'website',
   author = 'Zion Tech Group',
-  publishedTime,
-  modifiedTime,
-  section,
-  tags = [],
   noindex = false,
   nofollow = false,
-  canonical
-}: SEOProps) {
+  canonical,
+  structuredData
+}) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
-  const fullUrl = canonical || url;
+  const fullUrl = canonical || (url.startsWith('http') ? url : `https://ziontechgroup.com${url}`);
+  const fullImage = image.startsWith('http') ? image : `https://ziontechgroup.com${image}`;
+
+  const defaultStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Zion Tech Group",
+    "url": "https://ziontechgroup.com",
+    "logo": "https://ziontechgroup.com/images/logo.png",
+    "description": description,
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "123 Innovation Drive",
+      "addressLocality": "Tech Valley",
+      "addressRegion": "CA",
+      "postalCode": "94043",
+      "addressCountry": "US"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-555-012-3456",
+      "contactType": "customer service",
+      "email": "hello@ziontechgroup.com"
+    },
+    "sameAs": [
+      "https://linkedin.com/company/zion-tech-group",
+      "https://twitter.com/ziontechgroup",
+      "https://github.com/zion-tech-group"
+    ]
+  };
+
+  const finalStructuredData = structuredData || defaultStructuredData;
 
   useEffect(() => {
-    // Update document title for accessibility
+    // Update document title
     document.title = fullTitle;
     
-    // Add structured data for better SEO
-    const structuredData = {
-      '@context': 'https://schema.org',
-      '@type': type === 'website' ? 'Organization' : 'Article',
-      name: 'Zion Tech Group',
-      url: 'https://ziontechgroup.com',
-      logo: 'https://ziontechgroup.com/logo.png',
-      description: description,
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: '364 E Main St STE 1008',
-        addressLocality: 'Middletown',
-        addressRegion: 'DE',
-        postalCode: '19709',
-        addressCountry: 'US'
-      },
-      contactPoint: {
-        '@type': 'ContactPoint',
-        telephone: '+1-302-464-0950',
-        contactType: 'customer service',
-        areaServed: 'US',
-        availableLanguage: 'English'
-      },
-      sameAs: [
-        'https://facebook.com/ziontechgroup',
-        'https://twitter.com/ziontechgroup',
-        'https://linkedin.com/company/ziontechgroup',
-        'https://instagram.com/ziontechgroup'
-      ]
+    // Update meta description
+    const updateMetaTag = (name: string, content: string) => {
+      let meta = document.querySelector(`meta[name="${name}"]`) as HTMLMetaElement;
+      if (meta) {
+        meta.content = content;
+      } else {
+        meta = document.createElement('meta');
+        meta.name = name;
+        meta.content = content;
+        document.head.appendChild(meta);
+      }
     };
 
-    // Add structured data to page
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.text = JSON.stringify(structuredData);
-    document.head.appendChild(script);
-
-    return () => {
-      document.head.removeChild(script);
+    // Update meta property tags
+    const updateMetaProperty = (property: string, content: string) => {
+      let meta = document.querySelector(`meta[property="${property}"]`) as HTMLMetaElement;
+      if (meta) {
+        meta.content = content;
+      } else {
+        meta = document.createElement('meta');
+        meta.setAttribute('property', property);
+        meta.content = content;
+        document.head.appendChild(meta);
+      }
     };
-  }, [fullTitle, description, type]);
 
-  return (
-    <Helmet>
-      {/* Basic Meta Tags */}
-      <title>{fullTitle}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
-      <meta name="author" content={author} />
-      
-      {/* Open Graph Meta Tags */}
-      <meta property="og:title" content={fullTitle} />
-      <meta property="og:description" content={description} />
-      <meta property="og:type" content={type} />
-      <meta property="og:url" content={fullUrl} />
-      <meta property="og:image" content={image} />
-      <meta property="og:site_name" content="Zion Tech Group" />
-      <meta property="og:locale" content="en_US" />
-      
-      {/* Twitter Card Meta Tags */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={fullTitle} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image} />
-      <meta name="twitter:site" content="@ziontechgroup" />
-      
-      {/* Additional Meta Tags */}
-      <meta name="robots" content={`${noindex ? 'noindex' : 'index'},${nofollow ? 'nofollow' : 'follow'}`} />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta name="theme-color" content="#0f172a" />
-      <meta name="msapplication-TileColor" content="#0f172a" />
-      
-      {/* Canonical URL */}
-      {canonical && <link rel="canonical" href={canonical} />}
-      
-      {/* Article specific meta tags */}
-      {type === 'article' && publishedTime && (
-        <meta property="article:published_time" content={publishedTime} />
-      )}
-      {type === 'article' && modifiedTime && (
-        <meta property="article:modified_time" content={modifiedTime} />
-      )}
-      {type === 'article' && section && (
-        <meta property="article:section" content={section} />
-      )}
-      {type === 'article' && tags.length > 0 && (
-        tags.map((tag, index) => (
-          <meta key={index} property="article:tag" content={tag} />
-        ))
-      )}
-      
-      {/* Preconnect to external domains for performance */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      
-      {/* Favicon */}
-      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-      
-      {/* Manifest */}
-      <link rel="manifest" href="/site.webmanifest" />
-    </Helmet>
-  );
-}
+    // Update link tags
+    const updateLinkTag = (rel: string, href: string) => {
+      let link = document.querySelector(`link[rel="${rel}"]`) as HTMLLinkElement;
+      if (link) {
+        link.href = href;
+      } else {
+        link = document.createElement('link');
+        link.rel = rel;
+        link.href = href;
+        document.head.appendChild(link);
+      }
+    };
+
+    // Update basic meta tags
+    updateMetaTag('description', description);
+    updateMetaTag('keywords', keywords.join(', '));
+    updateMetaTag('author', author);
+    updateMetaTag('robots', `${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`);
+    updateMetaTag('googlebot', 'index, follow');
+    updateMetaTag('language', 'English');
+    updateMetaTag('revisit-after', '7 days');
+    updateMetaTag('distribution', 'global');
+    updateMetaTag('rating', 'general');
+    updateMetaTag('theme-color', '#2563eb');
+
+    // Update Open Graph tags
+    updateMetaProperty('og:type', type);
+    updateMetaProperty('og:url', fullUrl);
+    updateMetaProperty('og:title', fullTitle);
+    updateMetaProperty('og:description', description);
+    updateMetaProperty('og:image', fullImage);
+    updateMetaProperty('og:site_name', 'Zion Tech Group');
+    updateMetaProperty('og:locale', 'en_US');
+
+    // Update Twitter tags
+    updateMetaTag('twitter:card', 'summary_large_image');
+    updateMetaTag('twitter:url', fullUrl);
+    updateMetaTag('twitter:title', fullTitle);
+    updateMetaTag('twitter:description', description);
+    updateMetaTag('twitter:image', fullImage);
+    updateMetaTag('twitter:site', '@ziontechgroup');
+    updateMetaTag('twitter:creator', '@ziontechgroup');
+
+    // Update canonical link
+    updateLinkTag('canonical', fullUrl);
+
+    // Update favicon links
+    updateLinkTag('icon', '/favicon.ico');
+    updateLinkTag('manifest', '/site.webmanifest');
+
+    // Add structured data
+    const existingScript = document.querySelector('script[type="application/ld+json"]');
+    if (existingScript) {
+      existingScript.textContent = JSON.stringify(finalStructuredData);
+    } else {
+      const script = document.createElement('script');
+      script.type = 'application/ld+json';
+      script.textContent = JSON.stringify(finalStructuredData);
+      document.head.appendChild(script);
+    }
+  }, [fullTitle, description, keywords, author, type, fullUrl, fullImage, finalStructuredData, noindex, nofollow]);
+
+  return null;
+};
 
 export default SEO;
