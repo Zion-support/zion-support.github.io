@@ -114,6 +114,26 @@ const EnhancedNotificationSystem: React.FC<NotificationSystemProps> = ({
     )
   };
 
+  // Remove notification
+  const removeNotification = useCallback((id: string) => {
+    setNotifications(prev => prev.filter(n => n.id !== id));
+    
+    // Clear timeout if exists
+    const timeout = timeoutRefs.current.get(id);
+    if (timeout) {
+      clearTimeout(timeout);
+      timeoutRefs.current.delete(id);
+    }
+
+    // Hide container if no notifications
+    setNotifications(current => {
+      if (current.length === 1) {
+        setIsVisible(false);
+      }
+      return current;
+    });
+  }, []);
+
   // Add notification
   const addNotification = useCallback((notification: Omit<Notification, 'id' | 'timestamp'>) => {
     const id = `notification_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
@@ -156,27 +176,7 @@ const EnhancedNotificationSystem: React.FC<NotificationSystemProps> = ({
     }
 
     return id;
-  }, [maxNotifications, enableSounds, enableVibrations]);
-
-  // Remove notification
-  const removeNotification = useCallback((id: string) => {
-    setNotifications(prev => prev.filter(n => n.id !== id));
-    
-    // Clear timeout if exists
-    const timeout = timeoutRefs.current.get(id);
-    if (timeout) {
-      clearTimeout(timeout);
-      timeoutRefs.current.delete(id);
-    }
-
-    // Hide container if no notifications
-    setNotifications(current => {
-      if (current.length === 1) {
-        setIsVisible(false);
-      }
-      return current;
-    });
-  }, []);
+  }, [maxNotifications, enableSounds, enableVibrations, removeNotification]);
 
   // Clear all notifications
   const clearAll = useCallback(() => {
@@ -185,22 +185,29 @@ const EnhancedNotificationSystem: React.FC<NotificationSystemProps> = ({
     });
   }, [notifications, removeNotification]);
 
-  // Play notification sound
-  const playNotificationSound = (type: Notification['type']) => {
-    // In a real implementation, you would play actual sound files
-    console.log(`🔊 Playing ${type} notification sound`);
-  };
 
   // Cleanup timeouts on unmount
   useEffect(() => {
+    const timeouts = timeoutRefs.current;
     return () => {
-      timeoutRefs.current.forEach(timeout => clearTimeout(timeout));
+      timeouts.forEach(timeout => clearTimeout(timeout));
     };
   }, []);
 
   // Expose methods globally for easy access
   useEffect(() => {
-    (window as any).notificationSystem = {
+    interface WindowWithNotificationSystem extends Window {
+      notificationSystem?: {
+        success: (title: string, message: string, options?: Partial<Notification>) => string;
+        error: (title: string, message: string, options?: Partial<Notification>) => string;
+        warning: (title: string, message: string, options?: Partial<Notification>) => string;
+        info: (title: string, message: string, options?: Partial<Notification>) => string;
+        remove: (id: string) => void;
+        clear: () => void;
+      };
+    }
+    
+    (window as WindowWithNotificationSystem).notificationSystem = {
       success: (title: string, message: string, options?: Partial<Notification>) =>
         addNotification({ type: 'success', title, message, ...options }),
       error: (title: string, message: string, options?: Partial<Notification>) =>

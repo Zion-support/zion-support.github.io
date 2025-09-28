@@ -158,8 +158,9 @@ class AdvancedPerformanceOptimizer {
       const clsObserver = new PerformanceObserver((list) => {
         let clsValue = 0;
         for (const entry of list.getEntries()) {
-          if (!(entry as any).hadRecentInput) {
-            clsValue += (entry as any).value;
+          const layoutShiftEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
+          if (!layoutShiftEntry.hadRecentInput) {
+            clsValue += layoutShiftEntry.value || 0;
           }
         }
         this.metrics.webVitals.CLS = clsValue;
@@ -206,7 +207,7 @@ class AdvancedPerformanceOptimizer {
     if (!('memory' in performance)) return;
 
     const updateMemoryMetrics = () => {
-      const memory = (performance as any).memory;
+      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
       this.metrics.memory = {
         usedJSHeapSize: memory.usedJSHeapSize,
         totalJSHeapSize: memory.totalJSHeapSize,
@@ -371,17 +372,6 @@ class AdvancedPerformanceOptimizer {
     // and defer non-critical CSS loading
   }
 
-  /**
-   * Setup Web Vitals monitoring (public interface)
-   */
-  setupWebVitalsMonitoring(): void {
-    console.log('📊 Setting up Web Vitals monitoring');
-    
-    if (this.config.enableWebVitals) {
-      // This method is already called from startMonitoring()
-      console.log('Web Vitals monitoring already configured');
-    }
-  }
 }
 
 // Create singleton instance
