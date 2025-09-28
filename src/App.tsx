@@ -8,14 +8,17 @@ import { analytics } from './utils/analytics';
 import { performanceOptimizer } from './utils/performanceOptimizations';
 // import { accessibilityEnhancements } from './utils/accessibilityEnhancements';
 // import { seoOptimizer } from './utils/seoOptimizations';
-// import { seoEnhancer } from './utils/advancedSEOEnhancer';
-// import { accessibilityEnhancer } from './utils/advancedAccessibilityEnhancer';
+import { seoEnhancer } from './utils/advancedSEOEnhancer';
+import { accessibilityEnhancer } from './utils/advancedAccessibilityEnhancer';
+import { AdvancedAutomationSystem } from './utils/advancedAutomationSystem';
+import { AccessibilityEnhancer } from './utils/accessibilityEnhancer';
+import { SecurityEnhancer } from './utils/securityEnhancer';
 // Removed unused imports to reduce warnings
 import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import AIPerformanceDashboard from './components/AIPerformanceDashboard';
-// import AdvancedPerformanceDashboard from './components/AdvancedPerformanceDashboard';
+import AdvancedPerformanceDashboard from './components/AdvancedPerformanceDashboard';
 import WebsiteEnhancements from './components/WebsiteEnhancements';
 import { SEOOptimizer } from './components/SEOOptimizer';
 // import EnhancedAnalytics from './components/EnhancedAnalytics';
@@ -44,7 +47,7 @@ export default function App(): React.JSX.Element {
   const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
   const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
   const [showAIDashboard, setShowAIDashboard] = useState(false);
-  const [showAdvancedDashboard] = useState(false);
+  const [showAdvancedDashboard, setShowAdvancedDashboard] = useState(false);
   const [showSEOOptimizer, setShowSEOOptimizer] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [showKeyboardHelp, setShowKeyboardHelp] = useState(false);
@@ -183,11 +186,14 @@ export default function App(): React.JSX.Element {
     ogTitle: 'Zion Tech Group - AI & Technology Solutions',
     ogDescription: 'Transform your business with cutting-edge AI and technology solutions.',
     ogImage: 'https://zion.app/og-image.jpg',
-    twitterCard: 'summary_large_image',
+    twitterCard: 'summary_large_image' as const,
     twitterTitle: 'Zion Tech Group - AI & Technology Solutions',
     twitterDescription: 'Transform your business with cutting-edge AI and technology solutions.',
     twitterImage: 'https://zion.app/twitter-image.jpg'
   }), [currentPathname]);
+
+  // Alias for compatibility
+  const seoData = memoizedSeoData;
 
   // Performance optimization hook (for future use)
   // const { getPerformanceMetrics } = usePerformanceOptimization();
@@ -203,7 +209,7 @@ export default function App(): React.JSX.Element {
       enhancedPerformanceMonitor.startMonitoring();
       
       // Initialize new advanced systems
-      performanceOptimizer.initialize();
+      // performanceOptimizer initializes automatically in constructor
       enhancedSecurityManager.initialize();
       new AdvancedAutomationSystem().initialize();
       // Initialize enhancement systems
@@ -634,7 +640,7 @@ export default function App(): React.JSX.Element {
             <div className="space-y-2 text-sm">
               <div className="flex justify-between">
                 <span>Memory Usage:</span>
-                <span className="text-green-400">{Math.round((performance as Performance & { memory?: { usedJSHeapSize: number } }).memory?.usedJSHeapSize / 1024 / 1024 || 0)} MB</span>
+                <span className="text-green-400">{Math.round(((performance as Performance & { memory?: { usedJSHeapSize: number } }).memory?.usedJSHeapSize || 0) / 1024 / 1024)} MB</span>
               </div>
               <div className="flex justify-between">
                 <span>Render Time:</span>

@@ -19,6 +19,7 @@ interface ErrorReport {
   message: string;
   lastOccurrence: string | Date;
   occurrenceCount: number;
+  severity: 'low' | 'medium' | 'high' | 'critical';
   context: {
     component?: string;
     action?: string;
@@ -26,6 +27,14 @@ interface ErrorReport {
   aiPredictedImpact?: number;
   resolutionSuggestions?: string[];
   [key: string]: unknown;
+}
+
+interface AIInsights {
+  predictedHighRiskActions: string[];
+  recommendedImprovements: string[];
+  performanceTrends: string[];
+  optimizationSuggestions: string[];
+  errorTrends: Array<{ category: string; trend: string }>;
 }
 
 const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisible, onClose }) => {
@@ -66,6 +75,16 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
           { category: 'API', trend: 'stable' as const },
           { category: 'UI', trend: 'decreasing' as const },
           { category: 'Database', trend: 'stable' as const }
+        ],
+        performanceTrends: [
+          'Page load time improving by 15%',
+          'Memory usage stable',
+          'Error rate decreasing'
+        ],
+        optimizationSuggestions: [
+          'Enable gzip compression',
+          'Implement lazy loading',
+          'Add service worker caching'
         ]
       };
 

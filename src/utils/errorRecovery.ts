@@ -2,9 +2,26 @@
  * Error Recovery System
  */
 
+export interface ErrorContext {
+  component?: string;
+  action?: string;
+  timestamp: number;
+  userAgent?: string;
+  url?: string;
+}
+
+export interface RecoveryStrategy {
+  name: string;
+  condition: (error: Error, context: ErrorContext) => boolean;
+  action: (error: Error, context: ErrorContext) => Promise<void>;
+}
+
 export class ErrorRecovery {
   private errorCount = 0;
   private maxRetries = 3;
+  private errorHistory: ErrorContext[] = [];
+  private errors: ErrorContext[] = [];
+  private recoveryStrategies: RecoveryStrategy[] = [];
 
   constructor() {
     this.setupErrorHandling();
@@ -29,8 +46,7 @@ export class ErrorRecovery {
       action: async (error, context) => {
         console.log('🔄 Resetting component...');
         // Component reset logic would go here
-      },
-      priority: 2
+      }
     });
   }
 
@@ -97,10 +113,14 @@ export class ErrorRecovery {
     this.errors = [];
   }
 
+  public addStrategy(strategy: RecoveryStrategy): void {
+    this.recoveryStrategies.push(strategy);
+  }
+
   public addRecoveryStrategy(strategy: RecoveryStrategy): void {
     this.recoveryStrategies.push(strategy);
   }
 }
 
-export const errorRecoverySystem = new ErrorRecoverySystem();
+export const errorRecoverySystem = new ErrorRecovery();
 export const errorRecovery = errorRecoverySystem;
