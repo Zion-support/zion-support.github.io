@@ -5,14 +5,17 @@ import '@testing-library/jest-dom';
 global.fetch = jest.fn();
 
 // Mock window.location to prevent navigation errors
-delete (window as any).location;
-(window as any).location = {
+const mockLocation = {
   pathname: '/',
   href: 'http://localhost:3000/',
   assign: jest.fn(),
   replace: jest.fn(),
   reload: jest.fn(),
 };
+
+// Delete the existing location property and redefine it
+delete (window as any).location;
+(window as any).location = mockLocation;
 
 // Mock window.history
 Object.defineProperty(window, 'history', {
