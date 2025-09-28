@@ -160,10 +160,3 @@ export class ErrorRecovery {
   }
 }
 
-<<<<<<< HEAD
-export const errorRecoverySystem = new ErrorRecoverySystem();
-export type { ErrorContext, RecoveryStrategy };
-=======
-export const errorRecoverySystem = new ErrorRecovery();
-export const errorRecovery = errorRecoverySystem;
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-3daa
