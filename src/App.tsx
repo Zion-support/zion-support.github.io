@@ -11,6 +11,7 @@ import PerformanceOptimizer from './components/PerformanceOptimizer';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import SEOOptimizer from './components/SEOOptimizer';
 import AIPerformanceDashboard from './components/AIPerformanceDashboard';
+import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
 // Removed unused imports to fix linting warnings
 import './index.css';
 import './styles/notifications.css';
@@ -56,11 +57,11 @@ export default function App(): React.JSX.Element {
   const handleKeyDown = useCallback((event: KeyboardEvent) => {
     if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'D') {
       event.preventDefault();
-      setShowSystemDashboard(prev => !prev);
+      // setShowSystemDashboard(prev => !prev);
     }
     if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'P') {
       event.preventDefault();
-      setShowPerformanceOptimizer(prev => !prev);
+      // setShowPerformanceOptimizer(prev => !prev);
     }
     if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'M') {
       event.preventDefault();
@@ -91,9 +92,7 @@ export default function App(): React.JSX.Element {
       scrollDepth: engagementData.scrollDepth,
       clicks: engagementData.clicks,
     });
-    // Also call the original trackEngagement from useAppInitialization
-    trackEngagement();
-  }, [engagementData.clicks, engagementData.scrollDepth, engagementData.startTime, trackEngagement]);
+  }, [engagementData]);
 
   // Update meta tags function
   const updateMetaTags = useCallback((data: {
@@ -121,7 +120,6 @@ export default function App(): React.JSX.Element {
       }
     }
   }, []);
-
   useEffect(() => {
     // Add performance marks for better monitoring
     if (typeof window !== 'undefined' && window.performance && typeof performance.mark === 'function') {
@@ -129,6 +127,16 @@ export default function App(): React.JSX.Element {
     }
     
     // Preload critical resources
+    const preloadResource = (href: string, as: string) => {
+      if (typeof document !== 'undefined') {
+        const link = document.createElement('link');
+        link.rel = 'preload';
+        link.href = href;
+        link.as = as;
+        document.head.appendChild(link);
+      }
+    };
+    
     preloadResource('/og-image.png', 'image');
     preloadResource('/favicon.ico', 'image');
 
@@ -160,11 +168,8 @@ export default function App(): React.JSX.Element {
     }
 
     // Mark app as fully initialized
-    if (typeof window !== 'undefined' && window.performance && 
-        typeof performance.mark === 'function' && 
-        typeof performance.measure === 'function') {
+    if (typeof window !== 'undefined' && window.performance && typeof performance.mark === 'function') {
       performance.mark('app-init-complete');
-      performance.measure('app-initialization', 'app-init-start', 'app-init-complete');
     }
 
     // Cleanup function
@@ -191,10 +196,40 @@ export default function App(): React.JSX.Element {
       // Remove event listeners
       window.removeEventListener('scroll', handleScroll);
       document.removeEventListener('click', handleClick);
+      document.removeEventListener('keydown', handleKeyDown);
     };
   }, [enhancedTrackEngagement, handleKeyDown, handleScroll, handleClick]);
 
-  // Show loading screen while initializing
+  // Performance optimization hook
+  const { optimizePerformance } = usePerformanceOptimization();
+
+  // Optimize performance on mount
+  useEffect(() => {
+    optimizePerformance();
+  }, [optimizePerformance]);
+
+  // Track engagement on scroll and click
+  useEffect(() => {
+    const handleScrollWithEngagement = () => {
+      handleScroll();
+      trackEngagement();
+    };
+
+    const handleClickWithEngagement = (event: Event) => {
+      handleClick(event);
+      trackEngagement();
+    };
+
+    window.addEventListener('scroll', handleScrollWithEngagement, { passive: true });
+    document.addEventListener('click', handleClickWithEngagement, { passive: true });
+
+    return () => {
+      window.removeEventListener('scroll', handleScrollWithEngagement);
+      document.removeEventListener('click', handleClickWithEngagement);
+    };
+  }, [handleScroll, handleClick, trackEngagement]);
+
+  // Show loading spinner while initializing
   if (isLoading) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -266,8 +301,6 @@ export default function App(): React.JSX.Element {
           onClose={() => setShowAIDashboard(false)}
         />
       </div>
-      
-      {/* Removed undefined components to fix build errors */}
     </EnhancedErrorBoundary>
   );
 }
