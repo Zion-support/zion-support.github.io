@@ -150,9 +150,12 @@ export function useImageLazyLoading(
   const [imageSrc, setImageSrc] = useState(placeholder || '');
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(false);
+  const [hasError, setHasError] = useState(false);
   const elementRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    if (!elementRef.current) return;
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -160,30 +163,42 @@ export function useImageLazyLoading(
           observer.disconnect();
         }
       },
-      { threshold: 0.1 }
+      { 
+        threshold: 0.1,
+        rootMargin: '50px'
+      }
     );
 
-    if (elementRef.current) {
-      observer.observe(elementRef.current);
-    }
+    observer.observe(elementRef.current);
 
     return () => observer.disconnect();
   }, []);
 
   useEffect(() => {
-    if (isInView && src) {
+    if (isInView && src && !hasError) {
       const img = new Image();
+      
       img.onload = () => {
         setImageSrc(src);
         setIsLoaded(true);
+        setHasError(false);
       };
+      
+      img.onerror = () => {
+        setHasError(true);
+        setIsLoaded(false);
+        console.warn(`Failed to load image: ${src}`);
+      };
+      
       img.src = src;
     }
-  }, [isInView, src]);
+  }, [isInView, src, hasError]);
 
   return {
     elementRef,
     imageSrc,
-    isLoaded
+    isLoaded,
+    hasError,
+    isInView
   };
 }

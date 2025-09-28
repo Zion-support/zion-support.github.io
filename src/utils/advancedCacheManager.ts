@@ -12,7 +12,7 @@ export interface CacheConfig {
   enablePersistence: boolean;
 }
 
-export interface CacheEntry<T = any> {
+export interface CacheEntry<T = unknown> {
   key: string;
   value: T;
   timestamp: number;
@@ -40,7 +40,7 @@ export interface CacheOptions {
   priority?: 'high' | 'medium' | 'low';
 }
 
-class AdvancedCacheManager<T = any> {
+class AdvancedCacheManager<T = unknown> {
   private cache: Map<string, CacheEntry<T>> = new Map();
   private config: CacheConfig;
   private stats: CacheStats;
@@ -180,7 +180,7 @@ class AdvancedCacheManager<T = any> {
 
   public async set(key: string, value: T, options: CacheOptions = {}): Promise<void> {
     const now = Date.now();
-    const ttl = options.ttl || this.config.maxAge;
+    // TTL is available in options but not used in this implementation
     const size = this.calculateSize(value);
 
     let processedValue = value;
@@ -325,7 +325,7 @@ class AdvancedCacheManager<T = any> {
     return this.stats.size;
   }
 
-  private calculateSize(value: any): number {
+  private calculateSize(value: unknown): number {
     try {
       return new Blob([JSON.stringify(value)]).size;
     } catch {
@@ -415,7 +415,7 @@ class AdvancedCacheManager<T = any> {
     }
 
     try {
-      const { data, iv } = value as any;
+      const { data, iv } = value as { data: string; iv: string };
       
       const key = await crypto.subtle.importKey(
         'raw',

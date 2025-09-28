@@ -41,7 +41,7 @@
     Service-Worker-Allowed = "/"
  
 [build]
-  command = "pnpm install && pnpm run build:no-check"
+  command = "pnpm install --frozen-lockfile && pnpm run build:no-check"
   publish = "dist"
   command_timeout = "30m"
   functions = "netlify/functions"
