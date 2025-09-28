@@ -71,10 +71,33 @@ export class ErrorRecovery {
     return this.errorCount;
   }
 
+<<<<<<< HEAD
   public reset(): void {
     this.errorCount = 0;
   }
 }
 
 export const errorRecoverySystem = new ErrorRecovery();
+=======
+  public getErrorHistory(): ErrorContext[] {
+    return [...this.errorHistory];
+  }
+
+  public getErrors(): ErrorContext[] {
+    return [...this.errors];
+  }
+
+  public reset(): void {
+    this.errorCount = 0;
+    this.errorHistory = [];
+    this.errors = [];
+  }
+
+  public addRecoveryStrategy(strategy: RecoveryStrategy): void {
+    this.recoveryStrategies.push(strategy);
+  }
+}
+
+export const errorRecoverySystem = new ErrorRecoverySystem();
+>>>>>>> 61be861214b50a66fa9f716d0213bc509edae316
 export const errorRecovery = errorRecoverySystem;

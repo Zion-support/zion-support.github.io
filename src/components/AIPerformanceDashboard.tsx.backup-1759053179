@@ -12,8 +12,9 @@ interface PerformanceMetrics {
   userImpactScore: number;
   avgResolutionTime: number;
   [key: string]: unknown;
-  }
-  
+}
+
+<<<<<<< HEAD
 interface AIInsights {
   predictedHighRiskActions: string[];
   recommendedImprovements: string[];
