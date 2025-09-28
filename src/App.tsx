@@ -28,6 +28,8 @@ import AdvancedAnalytics from './components/AdvancedAnalytics';
 import NotificationSystem from './components/NotificationSystem';
 import KeyboardShortcutsHelp from './components/KeyboardShortcutsHelp';
 import CommandPalette from './components/CommandPalette';
+import RealTimePerformanceMonitor from './components/RealTimePerformanceMonitor';
+import SystemHealthDashboard from './components/SystemHealthDashboard';
 import './index.css';
 
 export default function App(): React.JSX.Element {
@@ -40,6 +42,8 @@ export default function App(): React.JSX.Element {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [showKeyboardHelp, setShowKeyboardHelp] = useState(false);
   const [showCommandPalette, setShowCommandPalette] = useState(false);
+  const [showRealTimeMonitor, setShowRealTimeMonitor] = useState(false);
+  const [showSystemHealth, setShowSystemHealth] = useState(false);
   const [userPreferences, setUserPreferences] = useState({
     theme: 'auto',
     animations: true,
@@ -259,7 +263,13 @@ export default function App(): React.JSX.Element {
           case 'T':
             setIsDarkMode(!isDarkMode);
             break;
+          case 'R':
+            setShowRealTimeMonitor(!showRealTimeMonitor);
+            break;
           case 'H':
+            setShowSystemHealth(!showSystemHealth);
+            break;
+          case 'K':
             setShowKeyboardHelp(!showKeyboardHelp);
             break;
           case 'N':
@@ -303,6 +313,8 @@ export default function App(): React.JSX.Element {
         setShowSEOOptimizer(false);
         setShowKeyboardHelp(false);
         setShowCommandPalette(false);
+        setShowRealTimeMonitor(false);
+        setShowSystemHealth(false);
       }
     };
 
@@ -361,12 +373,28 @@ export default function App(): React.JSX.Element {
       shortcut: 'Ctrl+Shift+T'
     },
     {
+      id: 'toggle-real-time-monitor',
+      title: 'Toggle Real-Time Monitor',
+      description: 'Open or close the real-time performance monitor',
+      category: 'Dashboard',
+      action: () => setShowRealTimeMonitor(!showRealTimeMonitor),
+      shortcut: 'Ctrl+Shift+R'
+    },
+    {
+      id: 'toggle-system-health',
+      title: 'Toggle System Health',
+      description: 'Open or close the system health dashboard',
+      category: 'Dashboard',
+      action: () => setShowSystemHealth(!showSystemHealth),
+      shortcut: 'Ctrl+Shift+H'
+    },
+    {
       id: 'show-keyboard-help',
       title: 'Show Keyboard Shortcuts',
       description: 'Display all available keyboard shortcuts',
       category: 'Help',
       action: () => setShowKeyboardHelp(true),
-      shortcut: 'Ctrl+/'
+      shortcut: 'Ctrl+Shift+K'
     },
     {
       id: 'show-notifications',
@@ -482,6 +510,18 @@ export default function App(): React.JSX.Element {
           onClose={() => setShowAIDashboard(false)}
         />
 
+        {/* Real-Time Performance Monitor */}
+        <RealTimePerformanceMonitor
+          isVisible={showRealTimeMonitor}
+          onClose={() => setShowRealTimeMonitor(false)}
+        />
+
+        {/* System Health Dashboard */}
+        <SystemHealthDashboard
+          isVisible={showSystemHealth}
+          onClose={() => setShowSystemHealth(false)}
+        />
+
         {/* New Components */}
         <NotificationSystem />
         
@@ -523,6 +563,24 @@ export default function App(): React.JSX.Element {
           ⌘
         </button>
 
+        {/* Real-Time Monitor Button */}
+        <button
+          onClick={() => setShowRealTimeMonitor(true)}
+          className="fixed bottom-4 right-52 z-40 bg-orange-600 hover:bg-orange-700 text-white p-3 rounded-full shadow-lg transition-colors duration-200"
+          title="Real-Time Monitor (Ctrl+Shift+R)"
+        >
+          📊
+        </button>
+
+        {/* System Health Button */}
+        <button
+          onClick={() => setShowSystemHealth(true)}
+          className="fixed bottom-4 right-68 z-40 bg-green-600 hover:bg-green-700 text-white p-3 rounded-full shadow-lg transition-colors duration-200"
+          title="System Health (Ctrl+Shift+H)"
+        >
+          🏥
+        </button>
+
         {/* Keyboard Shortcuts Help Panel */}
         <div className="fixed bottom-4 left-4 z-40 bg-gray-800 text-white p-3 rounded-lg shadow-lg text-sm opacity-75 hover:opacity-100 transition-opacity duration-200">
           <div className="font-semibold mb-1">Keyboard Shortcuts:</div>
@@ -532,8 +590,10 @@ export default function App(): React.JSX.Element {
           <div>Ctrl+Shift+A: AI Dashboard</div>
           <div>Ctrl+Shift+S: SEO Optimizer</div>
           <div>Ctrl+Shift+T: Toggle Theme</div>
+          <div>Ctrl+Shift+R: Real-Time Monitor</div>
+          <div>Ctrl+Shift+H: System Health</div>
+          <div>Ctrl+Shift+K: Keyboard Help</div>
           <div>Ctrl+K: Command Palette</div>
-          <div>Ctrl+/: Help</div>
           <div>Escape: Close All</div>
         </div>
       </div>
