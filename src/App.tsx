@@ -218,14 +218,10 @@ export default function App(): React.JSX.Element {
       if (enhancedSecurityManager && typeof enhancedSecurityManager.initialize === 'function') {
         enhancedSecurityManager.initialize();
       }
-      if (typeof AdvancedAutomationSystem === 'function') {
-        new AdvancedAutomationSystem().initialize();
-      }
       // Initialize enhancement systems
       if (accessibilityEnhancer && typeof accessibilityEnhancer.initialize === 'function') {
         accessibilityEnhancer.initialize();
       }
-      // securityEnhancer is already initialized in constructor
       
       // Initialize analytics
       if ('initialize' in analytics) {
