@@ -421,7 +421,6 @@ const AdvancedPerformanceDashboard: React.FC<AdvancedPerformanceDashboardProps> 
         </div>
       </div>
     </div>
-    </div>
   );
 };
 
