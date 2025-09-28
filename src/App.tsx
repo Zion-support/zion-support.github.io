@@ -193,37 +193,6 @@ export default function App(): React.JSX.Element {
     window.addEventListener('scroll', handleScroll, { passive: true });
     document.addEventListener('click', handleClick, { passive: true });
     document.addEventListener('keydown', handleKeyDown);
-
-<<<<<<< HEAD
-    // Update meta tags
-    updateMetaTags(seoData);
-
-    // Basic performance monitoring
-    if (typeof window !== 'undefined') {
-      console.log('🚀 Zion Tech Group App initialized with comprehensive optimizations');
-    }
-
-    // Cleanup function
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-      document.removeEventListener('click', handleClick);
-      document.removeEventListener('keydown', handleKeyDown);
-    };
-  }, [handleClick, handleKeyDown, handleScroll, seoData, preloadResource, updateMetaTags]);
-
-  // Add keyboard event listener
-  React.useEffect(() => {
-    document.addEventListener("keydown", handleKeyDown);
-    
-    return () => {
-      document.removeEventListener("keydown", handleKeyDown);
-    };
-  }, [handleKeyDown]);
-
-  // Main initialization and cleanup effect
-  React.useEffect(() => {
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-3cb0
     // Track engagement on page unload
     window.addEventListener('beforeunload', enhancedTrackEngagement);
 
