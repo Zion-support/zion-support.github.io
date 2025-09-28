@@ -28,14 +28,6 @@ export const EnhancedSystemDashboard: React.FC = () => {
   const [isMonitoring, setIsMonitoring] = useState(false);
   const [activeTab, setActiveTab] = useState<'performance' | 'analytics' | 'seo'>('performance');
 
-  useEffect(() => {
-    initializeSystems();
-    
-    return () => {
-      stopMonitoring();
-    };
-  }, [startMonitoring, stopMonitoring]);
-
   const initializeSystems = () => {
     // Initialize all enhanced systems
     enhancedPerformanceMonitor.startMonitoring();
@@ -45,20 +37,6 @@ export const EnhancedSystemDashboard: React.FC = () => {
     setIsMonitoring(true);
     console.log('All enhanced systems initialized');
   };
-
-  const startMonitoring = useCallback(() => {
-    const interval = setInterval(() => {
-      updateMetrics();
-    }, 5000); // Update every 5 seconds
-
-    return () => clearInterval(interval);
-  }, [updateMetrics]);
-
-  const stopMonitoring = useCallback(() => {
-    enhancedPerformanceMonitor.stopMonitoring();
-    enhancedAnalytics.endSession();
-    setIsMonitoring(false);
-  }, []);
 
   const updateMetrics = useCallback(() => {
     // Get performance metrics
@@ -76,8 +54,14 @@ export const EnhancedSystemDashboard: React.FC = () => {
     const analyticsFunnels = Array.from(enhancedAnalytics.getFunnels().values());
 
     // Get SEO data
-    const seoReport = enhancedSEO.generateSEOReport();
-    const seoRecommendations = seoReport.recommendations;
+    let seoReport: SEOReport | null = null;
+    let seoRecommendations: SEORecommendation[] = [];
+    try {
+      seoReport = enhancedSEO.generateReport();
+      seoRecommendations = enhancedSEO.getRecommendations();
+    } catch (error) {
+      console.warn('Failed to generate SEO report:', error);
+    }
 
     setMetrics({
       performance: {
@@ -95,6 +79,29 @@ export const EnhancedSystemDashboard: React.FC = () => {
       }
     });
   }, []);
+
+  const startMonitoring = useCallback(() => {
+    const interval = setInterval(() => {
+      updateMetrics();
+    }, 5000); // Update every 5 seconds
+
+    return () => clearInterval(interval);
+  }, [updateMetrics]);
+
+  const stopMonitoring = useCallback(() => {
+    enhancedPerformanceMonitor.stopMonitoring();
+    enhancedAnalytics.endSession();
+    setIsMonitoring(false);
+  }, []);
+
+  useEffect(() => {
+    initializeSystems();
+    
+    return () => {
+      stopMonitoring();
+    };
+  }, [startMonitoring, stopMonitoring]);
+
 
   const calculatePerformanceScore = (performanceMetrics: Map<string, PerformanceMetric[]>): number => {
     const allMetrics = Array.from(performanceMetrics.values()).flat();

@@ -218,7 +218,7 @@ export class AdvancedAutomationSystem {
     
     try {
       // Pre-deployment checks
-      await this.runPreDeploymentChecks(config);
+      await this.runPreDeploymentChecks();
       
       // Execute deployment strategy
       const success = await this.executeDeploymentStrategy(config);
@@ -237,7 +237,7 @@ export class AdvancedAutomationSystem {
       
       // Attempt rollback if enabled
       if (config.rollbackEnabled) {
-        await this.rollbackDeployment(config);
+        await this.rollbackDeployment();
       }
       
       return false;
@@ -510,7 +510,7 @@ export class AdvancedAutomationSystem {
     await this.delay(1000);
     
     // Run actual tests based on parameters
-    const suiteName = task.parameters?.suite || 'unit';
+    const suiteName = (task.parameters?.suite as string) || 'unit';
     const suite = this.testSuites.get(suiteName);
     
     if (suite) {
