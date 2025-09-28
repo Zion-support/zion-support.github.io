@@ -3,10 +3,7 @@
  * Provides comprehensive performance monitoring and optimization features
  */
 
-// interface LayoutShiftEntry {
-//   hadRecentInput: boolean;
-//   value: number;
-// }
+// Removed unused interface LayoutShiftEntry
 
 interface PerformanceConfig {
   enableWebVitals: boolean;
