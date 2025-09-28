@@ -31,7 +31,7 @@ export function useAppInitialization(config: AppInitializationConfig = {}) {
   const {
     enablePerformanceMonitoring = true,
     enableAccessibility = true,
-    enableSecurity = true,
+    enableSecurity = true, // eslint-disable-line @typescript-eslint/no-unused-vars
     enableAnalytics = true,
     enableNotifications = true,
     enableCaching = true,
@@ -338,7 +338,7 @@ export function useAppInitialization(config: AppInitializationConfig = {}) {
       // Final engagement tracking
       trackEngagement();
     };
-  }, [initializeCoreSystems, initializeAdvancedSystems, handleScroll, handleClick, engagementData, enableAnalytics]);
+  }, [initializeCoreSystems, initializeAdvancedSystems, handleScroll, handleClick, engagementData, enableAnalytics, trackEngagement]);
 
   return {
     isLoading,

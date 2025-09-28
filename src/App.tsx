@@ -78,7 +78,7 @@ export default function App(): React.JSX.Element {
     });
     // Also call the original trackEngagement from useAppInitialization
     trackEngagement();
-  }, [engagementData, trackEngagement]);
+  }, [trackEngagement]);
 
   useEffect(() => {
     // Add performance marks for better monitoring
@@ -117,7 +117,7 @@ export default function App(): React.JSX.Element {
     // Use passive listeners for better performance
     window.addEventListener('scroll', handleScroll, { passive: true });
     document.addEventListener('click', handleClick, { passive: true });
-  }, [seoData, handleScroll, handleClick, preloadResource]);
+  }, [seoData, handleScroll, handleClick, handleKeyDown, preloadResource]);
 
   // Main initialization and cleanup effect
   React.useEffect(() => {
