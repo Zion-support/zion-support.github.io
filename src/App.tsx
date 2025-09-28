@@ -32,7 +32,7 @@ import CommandPalette from './components/CommandPalette';
 import RealTimePerformanceMonitor from './components/RealTimePerformanceMonitor';
 import SystemHealthDashboard from './components/SystemHealthDashboard';
 import { performanceAlerts } from './utils/performanceAlerts';
-import { errorRecoverySystem } from './utils/errorRecovery';
+import { errorRecovery } from './utils/errorRecovery';
 import { accessibilityUtils } from './utils/accessibilityUtils';
 import { securityUtils } from './utils/securityUtils';
 import './index.css';
@@ -138,11 +138,8 @@ export default function App(): React.JSX.Element {
       new SecurityEnhancer();
     } catch (error) {
       console.warn('Some enhancement systems failed to initialize:', error);
-      // Use error recovery system
-      errorRecoverySystem.handleError(error as Error, {
-        component: 'App',
-        action: 'initialization'
-      });
+      // Log error for monitoring
+      console.error('Enhancement system initialization error:', error);
     }
     
     // Initialize basic systems
