@@ -43,7 +43,7 @@ class AccessibilityUtils {
     event.preventDefault();
   }
 
-  private handleEscapeKey(): void {
+  private handleEscapeKey(event?: KeyboardEvent): void {
     const modals = document.querySelectorAll('[role="dialog"]');
     modals.forEach(modal => {
       const closeButton = modal.querySelector('[aria-label="Close"]');

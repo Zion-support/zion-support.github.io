@@ -63,8 +63,11 @@ export const PerformanceTracker: React.FC<PerformanceTrackerProps> = ({
         // Track FID (First Input Delay)
         const fidObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
-          entries.forEach((entry: PerformanceEventTiming) => {
-            metricsRef.current.fid = entry.processingStart - entry.startTime;
+          entries.forEach((entry) => {
+            if (entry.entryType === 'first-input' && 'processingStart' in entry) {
+              const fidEntry = entry as PerformanceEventTiming;
+              metricsRef.current.fid = fidEntry.processingStart - fidEntry.startTime;
+            }
           });
         });
         fidObserver.observe({ entryTypes: ['first-input'] });
@@ -73,10 +76,13 @@ export const PerformanceTracker: React.FC<PerformanceTrackerProps> = ({
         let clsValue = 0;
         const clsObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
-          entries.forEach((entry: LayoutShift) => {
-            if (!entry.hadRecentInput) {
-              clsValue += entry.value;
-              metricsRef.current.cls = clsValue;
+          entries.forEach((entry) => {
+            if (entry.entryType === 'layout-shift' && 'value' in entry && 'hadRecentInput' in entry) {
+              const clsEntry = entry as any; // LayoutShift type is not available in all environments
+              if (!clsEntry.hadRecentInput) {
+                clsValue += clsEntry.value;
+                metricsRef.current.cls = clsValue;
+              }
             }
           });
         });
@@ -85,8 +91,11 @@ export const PerformanceTracker: React.FC<PerformanceTrackerProps> = ({
         // Track TTFB (Time to First Byte)
         const navigationObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
-          entries.forEach((entry: PerformanceNavigationTiming) => {
-            metricsRef.current.ttfb = entry.responseStart - entry.requestStart;
+          entries.forEach((entry) => {
+            if (entry.entryType === 'navigation' && 'responseStart' in entry && 'requestStart' in entry) {
+              const navEntry = entry as PerformanceNavigationTiming;
+              metricsRef.current.ttfb = navEntry.responseStart - navEntry.requestStart;
+            }
           });
         });
         navigationObserver.observe({ entryTypes: ['navigation'] });
