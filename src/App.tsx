@@ -5,6 +5,7 @@ import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
 import PerformanceDashboard from './components/PerformanceDashboard';
+import ProductionMonitoringDashboard from './components/ProductionMonitoringDashboard';
 import { analytics } from './utils/analytics';
 import { seoAnalytics, performanceSEO } from './utils/seoEnhanced';
 import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
@@ -17,6 +18,9 @@ import { SecurityEnhancer } from './utils/securityEnhancer';
 import { performanceOptimizer } from './utils/performanceOptimizer';
 import { accessibilityEnhancer } from './utils/accessibilityEnhancer';
 import { seoOptimizer } from './utils/seoOptimizer';
+import { logger, performanceLogger } from './utils/logger';
+import { productionOptimizer } from './utils/productionOptimizer';
+import { errorMonitoring } from './utils/errorMonitoring';
 
 // Lazy load heavy components for better performance
 const EnhancedSystemDashboard = lazy(() => import('./components/EnhancedSystemDashboard'));
@@ -39,6 +43,7 @@ export default function App(): React.JSX.Element {
   const [showSEOOptimizer, setShowSEOOptimizer] = useState(false);
   const [showPerformanceDashboard, setShowPerformanceDashboard] = useState(false);
   const [showPerformanceMetrics, setShowPerformanceMetrics] = useState(false);
+  const [showProductionMonitoring, setShowProductionMonitoring] = useState(false);
 
   // Engagement tracking data
   const engagementData = useMemo(() => ({
@@ -103,6 +108,9 @@ export default function App(): React.JSX.Element {
           break;
         case 'R':
           setShowPerformanceMetrics(prev => !prev);
+          break;
+        case 'O':
+          setShowProductionMonitoring(prev => !prev);
           break;
         case 'T':
           // Theme toggle functionality can be added here
@@ -189,6 +197,17 @@ export default function App(): React.JSX.Element {
     performanceSEO.optimizeImages();
     performanceSEO.optimizeFonts();
     performanceSEO.optimizeCSS();
+    
+    // Initialize production optimizations
+    logger.info('Initializing production optimizations', 'App');
+    productionOptimizer.optimizeImages();
+    productionOptimizer.enableServiceWorker();
+    productionOptimizer.optimizeMemoryUsage();
+    productionOptimizer.preloadCriticalResources();
+    
+    // Initialize error monitoring
+    errorMonitoring.setUserId('anonymous'); // In a real app, set actual user ID
+    logger.info('Error monitoring initialized', 'App');
 
     // Set default SEO data using the correct method
     updateMetaTags(seoData);
@@ -196,6 +215,7 @@ export default function App(): React.JSX.Element {
     // Add performance marks for better monitoring
     if (typeof window !== 'undefined' && window.performance && typeof performance.mark === 'function') {
       performance.mark('app-init-start');
+      performanceLogger.mark('app-initialization-start');
     }
     
     // Preload critical resources
@@ -243,7 +263,11 @@ export default function App(): React.JSX.Element {
         typeof performance.measure === 'function') {
       performance.mark('app-init-complete');
       performance.measure('app-initialization', 'app-init-start', 'app-init-complete');
+      performanceLogger.mark('app-initialization-complete');
+      performanceLogger.measure('app-initialization', 'app-initialization-start', 'app-initialization-complete');
     }
+    
+    logger.info('App initialization completed successfully', 'App');
 
     // Cleanup function
     return () => {
@@ -373,6 +397,12 @@ export default function App(): React.JSX.Element {
             onClose={() => setShowPerformanceMetrics(false)}
           />
         </Suspense>
+
+        {/* Production Monitoring Dashboard */}
+        <ProductionMonitoringDashboard
+          isVisible={showProductionMonitoring}
+          onClose={() => setShowProductionMonitoring(false)}
+        />
 
         {/* SEO Optimizer */}
         {showSEOOptimizer && (
