@@ -76,7 +76,7 @@ export default function App(): React.JSX.Element {
   const isLoading = false;
   const loadingProgress = 100;
   const handleScroll = useCallback(() => {}, []);
-  const handleClick = useCallback((_event: Event) => {}, []);
+  const handleClick = useCallback(() => {}, []);
   const trackEngagement = useCallback(() => {}, []);
 
   // Performance optimization hook - Temporarily disabled
