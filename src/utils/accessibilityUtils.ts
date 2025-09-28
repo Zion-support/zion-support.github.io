@@ -16,7 +16,7 @@ class AccessibilityUtils {
       if (event.key === 'Tab') {
         this.handleTabNavigation(event);
       } else if (event.key === 'Escape') {
-        this.handleEscapeKey(event);
+        this.handleEscapeKey();
       }
     });
   }

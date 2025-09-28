@@ -592,13 +592,7 @@ export default function App(): React.JSX.Element {
   return (
     <EnhancedErrorBoundary>
       <SEOOptimizer seoData={seoData} />
-      <AdvancedAnalytics 
-        enableHeatmaps={true}
-        enableUserJourney={true}
-        enableConversionTracking={true}
-        enablePerformanceTracking={true}
-        enableErrorTracking={true}
-      />
+      <EnhancedAnalytics />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <AppRouter />
         
@@ -736,7 +730,10 @@ export default function App(): React.JSX.Element {
         />
 
         {/* New Components */}
-        <NotificationSystem />
+        <NotificationSystem
+          notifications={notifications}
+          onRemove={(id) => setNotifications(prev => prev.filter(n => n.id !== id))}
+        />
         
         <KeyboardShortcutsHelp
           isVisible={showKeyboardHelp}
@@ -812,19 +809,14 @@ export default function App(): React.JSX.Element {
       </div>
       
       {/* Additional components */}
-      <PerformanceDashboard 
+      <AIPerformanceDashboard 
         isVisible={showPerformanceOptimizer}
         onClose={() => setShowPerformanceOptimizer(false)}
       />
-      <SystemMetricsDashboard 
-        isVisible={showSystemDashboard}
-        onClose={() => setShowSystemDashboard(false)}
-      />
-      <EnhancedNotificationSystem 
-        position="top-right"
-        enableAnimations
-        enableAccessibility
-        maxNotifications={5}
+      <EnhancedSystemDashboard />
+      <NotificationSystem
+        notifications={notifications}
+        onRemove={(id) => setNotifications(prev => prev.filter(n => n.id !== id))}
       />
       <SEOOptimizer seoData={seoData} />
       <EnhancedAnalytics />
@@ -847,6 +839,6 @@ export default function App(): React.JSX.Element {
         notifications={notifications}
         onRemove={(id) => setNotifications(prev => prev.filter(n => n.id !== id))}
       />
-    </AdvancedErrorBoundary>
+    </EnhancedErrorBoundary>
   );
 }

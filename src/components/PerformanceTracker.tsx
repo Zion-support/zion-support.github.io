@@ -63,8 +63,11 @@ export const PerformanceTracker: React.FC<PerformanceTrackerProps> = ({
         // Track FID (First Input Delay)
         const fidObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
-          entries.forEach((entry: PerformanceEventTiming) => {
-            metricsRef.current.fid = entry.processingStart - entry.startTime;
+          entries.forEach((entry) => {
+            if (entry.entryType === 'first-input') {
+              const fidEntry = entry as PerformanceEventTiming;
+              metricsRef.current.fid = fidEntry.processingStart - fidEntry.startTime;
+            }
           });
         });
         fidObserver.observe({ entryTypes: ['first-input'] });
@@ -73,10 +76,13 @@ export const PerformanceTracker: React.FC<PerformanceTrackerProps> = ({
         let clsValue = 0;
         const clsObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
-          entries.forEach((entry: LayoutShift) => {
-            if (!entry.hadRecentInput) {
-              clsValue += entry.value;
-              metricsRef.current.cls = clsValue;
+          entries.forEach((entry) => {
+            if (entry.entryType === 'layout-shift') {
+              const layoutShiftEntry = entry as any; // LayoutShift type not available
+              if (!layoutShiftEntry.hadRecentInput) {
+                clsValue += layoutShiftEntry.value;
+                metricsRef.current.cls = clsValue;
+              }
             }
           });
         });
@@ -85,8 +91,11 @@ export const PerformanceTracker: React.FC<PerformanceTrackerProps> = ({
         // Track TTFB (Time to First Byte)
         const navigationObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
-          entries.forEach((entry: PerformanceNavigationTiming) => {
-            metricsRef.current.ttfb = entry.responseStart - entry.requestStart;
+          entries.forEach((entry) => {
+            if (entry.entryType === 'navigation') {
+              const navEntry = entry as PerformanceNavigationTiming;
+              metricsRef.current.ttfb = navEntry.responseStart - navEntry.requestStart;
+            }
           });
         });
         navigationObserver.observe({ entryTypes: ['navigation'] });
