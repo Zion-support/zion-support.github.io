@@ -89,9 +89,7 @@ export default function App(): React.JSX.Element {
 
     // Initialize basic systems
     analytics.initialize();
-    cacheManager.initialize();
-    apiClient.initialize();
-    notificationManager.initialize();
+    // Note: cacheManager, apiClient, and notificationManager are already initialized as singletons
     
     // Initialize SEO analytics
     seoAnalytics.trackPageView(window.location.pathname);
@@ -99,10 +97,10 @@ export default function App(): React.JSX.Element {
     // Initialize performance SEO optimizations
     performanceSEO.optimizeImages();
     performanceSEO.optimizeFonts();
-    performanceSEO.optimizeCSS();
+    // Note: optimizeCSS method doesn't exist, using available methods
 
     // Set default SEO data
-    seoManager.updateMetaTags(seoData);
+    seoManager.updateSEO(seoData);
 
     // Basic performance monitoring
     if (typeof window !== 'undefined') {
