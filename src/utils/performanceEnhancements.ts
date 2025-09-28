@@ -107,7 +107,10 @@ class PerformanceEnhancer {
           this.handleWebVital({
             name: 'FID',
             value: (entry as PerformanceEventTiming).processingStart - entry.startTime,
-            id: (entry as PerformanceEventTiming).target?.tagName || 'unknown'
+            id: (() => {
+              const target = (entry as PerformanceEventTiming).target;
+              return target && target instanceof Element ? target.tagName : 'unknown';
+            })()
           });
         });
       });

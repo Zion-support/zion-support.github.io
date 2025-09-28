@@ -39,6 +39,8 @@ import AdvancedPerformanceMonitorComponent from './components/AdvancedPerformanc
 import ThemeToggle from './components/ThemeToggle';
 import ScrollToTop from './components/ScrollToTop';
 import { analytics as advancedAnalytics } from './utils/advancedAnalytics';
+import AdvancedErrorBoundary from './components/AdvancedErrorBoundary';
+import PerformanceDashboard from './components/PerformanceDashboard';
 import './index.css';
 import './styles/notifications.css';
 import './styles/system-metrics.css';
@@ -49,6 +51,7 @@ export default function App(): React.JSX.Element {
   
   // State for system metrics dashboard
   const [showSystemDashboard, setShowSystemDashboard] = useState(false);
+  const [showPerformanceDashboard, setShowPerformanceDashboard] = useState(false);
   
   // State for performance optimizer
   const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
@@ -454,9 +457,12 @@ export default function App(): React.JSX.Element {
   }, [preloadResource, recordMetric, seoData, engagementData.clicks, engagementData.scrollDepth, engagementData.startTime, handleClick, handleKeyDown, handleScroll]);
 
   return (
-    <>
+    <AdvancedErrorBoundary>
       <AppRouter />
-      <PerformanceDashboard />
+      <PerformanceDashboard 
+        isVisible={showPerformanceDashboard}
+        onClose={() => setShowPerformanceDashboard(false)}
+      />
       <RealTimeMonitor />
       <SystemMetricsDashboard 
         isVisible={showSystemDashboard}
@@ -479,6 +485,26 @@ export default function App(): React.JSX.Element {
       />
       <ThemeToggle className="fixed top-4 left-4 z-50" />
       <ScrollToTop />
-    </>
+      
+      {/* Development Tools Toggle */}
+      {process.env.NODE_ENV === 'development' && (
+        <div className="fixed bottom-4 right-4 z-50 flex flex-col gap-2">
+          <button
+            onClick={() => setShowPerformanceDashboard(!showPerformanceDashboard)}
+            className="bg-blue-600 text-white px-3 py-2 rounded-lg text-sm font-medium shadow-lg hover:bg-blue-700 transition-colors"
+            title="Toggle Performance Dashboard"
+          >
+            📊 Performance
+          </button>
+          <button
+            onClick={() => setShowSystemDashboard(!showSystemDashboard)}
+            className="bg-green-600 text-white px-3 py-2 rounded-lg text-sm font-medium shadow-lg hover:bg-green-700 transition-colors"
+            title="Toggle System Dashboard"
+          >
+            🔧 System
+          </button>
+        </div>
+      )}
+    </AdvancedErrorBoundary>
   );
 }

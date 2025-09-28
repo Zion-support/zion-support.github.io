@@ -19,13 +19,12 @@ const mockLocation = {
   port: '3000',
   protocol: 'http:',
   origin: 'http://localhost:3000',
-  ancestorOrigins: [] as string[],
+  ancestorOrigins: [] as unknown as DOMStringList,
 };
 
 // Mock window.location using a simple assignment
 delete (window as unknown as { location?: typeof window.location }).location;
 (window as unknown as { location: typeof window.location }).location = mockLocation;
-
 // Mock window.history
 Object.defineProperty(window, 'history', {
   value: {
