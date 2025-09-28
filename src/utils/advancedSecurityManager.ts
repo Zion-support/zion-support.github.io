@@ -194,7 +194,6 @@ class AdvancedSecurityManager {
 
     // Monitor for potential XSS attempts
     const originalCreateElement = document.createElement;
-    const self = this;
     document.createElement = function (tagName: string) {
       const element = originalCreateElement.call(document, tagName);
 

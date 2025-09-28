@@ -73,7 +73,6 @@ import { securityUtils } from './utils/securityUtils';
 // import { useAppInitialization } from './hooks/useAppInitialization';
 import { enhancedSecurityManager } from './utils/enhancedSecurityManager';
 import { initializePerformanceEnhancements } from './utils/performanceEnhancements';
-import { accessibilityEnhancer } from './utils/accessibilityEnhancements';
 import { advancedPerformanceOptimizer } from './utils/advancedPerformanceOptimizer';
 import { advancedSEOOptimizer } from './utils/advancedSEOOptimizer';
 import { advancedSecurityManager } from './utils/advancedSecurityManager';
