@@ -214,31 +214,6 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
     </div>
   );
 };
-          {insights?.errorTrends && (
-            <div className="bg-gray-50 p-4 rounded-lg mb-8">
-              <h3 className="text-lg font-semibold mb-3 text-gray-800">📊 Error Trends (7 days)</h3>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-<<<<<<< HEAD
-                {insights.errorTrends.map((trend, index: number) => (
-=======
-                {insights.errorTrends && insights.errorTrends.map((trend: { category: string; trend: string }, index: number) => (
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-b24f
-                  <div key={index} className="bg-white p-3 rounded border">
-                    <div className="flex items-center justify-between">
-                      <span className="font-medium capitalize">{trend.category}</span>
-                      <span className="text-lg">{getTrendIcon(trend.trend)}</span>
-                    </div>
-                    <div className={`text-sm mt-1 ${
-                      trend.trend === 'increasing' ? 'text-red-600' :
-                      trend.trend === 'decreasing' ? 'text-green-600' : 'text-gray-600'
-                    }`}>
-                      {trend.trend}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
 
           {/* Recent Errors */}
           <div className="bg-gray-50 p-4 rounded-lg">
