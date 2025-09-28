@@ -84,9 +84,9 @@ import { advancedCachingSystem } from './utils/advancedCachingSystem';
 import { advancedUXOptimizer } from './utils/advancedUXOptimizer';
 import { advancedTestingFramework } from './utils/advancedTestingFramework';
 import { advancedI18n } from './utils/advancedI18n';
-import AdvancedAnalyticsDashboard from './components/AdvancedAnalyticsDashboard';
-import PerformanceMetricsDashboard from './components/PerformanceMetricsDashboard';
-import ComprehensiveImprovements from './components/ComprehensiveImprovements';
+// import AdvancedAnalyticsDashboard from './components/AdvancedAnalyticsDashboard';
+// import PerformanceMetricsDashboard from './components/PerformanceMetricsDashboard';
+// import ComprehensiveImprovements from './components/ComprehensiveImprovements';
 import './index.css';
 
 export default function App(): React.JSX.Element {
@@ -664,20 +664,20 @@ export default function App(): React.JSX.Element {
   }, []);
 
   // Optimized keyboard handler for system dashboard toggle
-  const handleKeyDown = useCallback((event: KeyboardEvent) => {
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'D') {
-      event.preventDefault();
-      setShowSystemDashboard((prev: boolean) => !prev);
-    }
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'P') {
-      event.preventDefault();
-      setShowPerformanceOptimizer((prev: boolean) => !prev);
-    }
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'M') {
-      event.preventDefault();
-      setShowPerformanceMonitor(prev => !prev);
-    }
-  }, []);
+  // const handleKeyDown = useCallback((event: KeyboardEvent) => {
+  //   if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'D') {
+  //     event.preventDefault();
+  //     setShowSystemDashboard((prev: boolean) => !prev);
+  //   }
+  //   if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'P') {
+  //     event.preventDefault();
+  //     setShowPerformanceOptimizer((prev: boolean) => !prev);
+  //   }
+  //   if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'M') {
+  //     event.preventDefault();
+  //     setShowPerformanceMonitor(prev => !prev);
+  //   }
+  // }, []);
 
   useEffect(() => {
     try {
@@ -700,19 +700,19 @@ export default function App(): React.JSX.Element {
       
       // Initialize analytics
       if ('initialize' in analytics) {
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+         
         (analytics as any).initialize();
       }
       if ('initialize' in seoAnalytics) {
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+         
         (seoAnalytics as any).initialize();
       }
       if ('initialize' in performanceSEO) {
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+         
         (performanceSEO as any).initialize();
       }
       if ('initialize' in seoManager) {
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+         
         (seoManager as any).initialize();
       }
     } catch (error) {
@@ -894,9 +894,9 @@ export default function App(): React.JSX.Element {
             break;
           case 'N':
             // Show notification
-            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+             
             if ((window as any).notifications) {
-              // eslint-disable-next-line @typescript-eslint/no-explicit-any
+               
               (window as any).notifications.add({
                 type: 'info',
                 title: 'Notification Test',
@@ -907,9 +907,9 @@ export default function App(): React.JSX.Element {
             break;
           case 'C':
             // Clear notifications
-            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+             
             if ((window as any).notifications) {
-              // eslint-disable-next-line @typescript-eslint/no-explicit-any
+               
               (window as any).notifications.clear();
             }
             break;
