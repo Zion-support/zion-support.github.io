@@ -69,8 +69,37 @@ const AdvancedDashboard: React.FC = () => {
   }, [isOpen]);
 
   const updateData = () => {
-    const analytics = AdvancedAnalyticsManager.getInstance().getSessionData();
-    const cache = AdvancedCacheManager.getInstance().getStats();
+    const sessionData = AdvancedAnalyticsManager.getInstance().getSessionData();
+    const cacheStats = AdvancedCacheManager.getInstance().getStats();
+    
+    // Convert session data to analytics data format
+    const analytics: AnalyticsData = sessionData ? {
+      id: sessionData.id,
+      startTime: sessionData.startTime,
+      lastActivity: sessionData.lastActivity,
+      pageViews: sessionData.pageViews,
+      events: sessionData.events,
+      deviceInfo: sessionData.deviceInfo
+    } : {
+      id: '',
+      startTime: 0,
+      lastActivity: 0,
+      pageViews: 0,
+      events: [],
+      deviceInfo: {
+        screenResolution: '',
+        language: '',
+        timezone: ''
+      }
+    };
+
+    // Convert cache stats to proper format
+    const cache: CacheData = {
+      size: typeof cacheStats === 'object' && cacheStats !== null ? (cacheStats as Record<string, unknown>).size as number || 0 : 0,
+      totalSize: typeof cacheStats === 'object' && cacheStats !== null ? (cacheStats as Record<string, unknown>).totalSize as number || 0 : 0,
+      maxSize: typeof cacheStats === 'object' && cacheStats !== null ? (cacheStats as Record<string, unknown>).maxSize as number || 0 : 0,
+      hitRate: typeof cacheStats === 'object' && cacheStats !== null ? (cacheStats as Record<string, unknown>).hitRate as number || 0 : 0
+    };
     
     setData({
       analytics: analytics || {},
