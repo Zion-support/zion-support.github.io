@@ -35,6 +35,7 @@ import KeyboardShortcutsHelp from './components/KeyboardShortcutsHelp';
 import CommandPalette from './components/CommandPalette';
 import RealTimePerformanceMonitor from './components/RealTimePerformanceMonitor';
 import SystemHealthDashboard from './components/SystemHealthDashboard';
+import PerformanceMetricsDashboard from './components/PerformanceMetricsDashboard';
 // import { getNotificationManager, notify } from './utils/advancedNotifications';
 // import { getThemeManager } from './utils/themeManager';
 // import { getKeyboardShortcuts, shortcuts } from './utils/advancedKeyboardShortcuts';
@@ -56,6 +57,7 @@ export default function App(): React.JSX.Element {
   const [notifications, setNotifications] = useState<Notification[]>([]);
   const [showWebsiteEnhancements, setShowWebsiteEnhancements] = useState(false);
   const [showAccessibilityPanel] = useState(false);
+  const [showPerformanceMetrics, setShowPerformanceMetrics] = useState(false);
   const [showRealTimeMonitor, setShowRealTimeMonitor] = useState(false);
   const [showSystemHealth, setShowSystemHealth] = useState(false);
   // User preferences state (for future use)
@@ -411,6 +413,9 @@ export default function App(): React.JSX.Element {
           case 'K':
             setShowKeyboardHelp(!showKeyboardHelp);
             break;
+          case 'X':
+            setShowPerformanceMetrics(!showPerformanceMetrics);
+            break;
           case 'N':
             // Show notification
             // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -463,7 +468,7 @@ export default function App(): React.JSX.Element {
 
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
-  }, [showSystemDashboard, showPerformanceOptimizer, showPerformanceMonitor, showAIDashboard, showSEOOptimizer, isDarkMode, showKeyboardHelp, showCommandPalette, showRealTimeMonitor, showSystemHealth]);
+  }, [showSystemDashboard, showPerformanceOptimizer, showPerformanceMonitor, showAIDashboard, showSEOOptimizer, isDarkMode, showKeyboardHelp, showCommandPalette, showRealTimeMonitor, showSystemHealth, showPerformanceMetrics]);
 
 
   // Track engagement on scroll and click
@@ -703,6 +708,12 @@ export default function App(): React.JSX.Element {
         <SystemHealthDashboard
           isVisible={showSystemHealth}
           onClose={() => setShowSystemHealth(false)}
+        />
+
+        {/* Performance Metrics Dashboard - Toggle with Ctrl+Shift+X */}
+        <PerformanceMetricsDashboard
+          isVisible={showPerformanceMetrics}
+          onClose={() => setShowPerformanceMetrics(false)}
         />
 
         {/* New Components */}
