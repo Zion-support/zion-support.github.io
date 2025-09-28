@@ -197,7 +197,11 @@ export default function App(): React.JSX.Element {
     
     // Initialize new enhancement utilities
     console.log('Initializing performance enhancements...');
+<<<<<<< HEAD
     // performanceEnhancer.initialize(); // Private method, removing call
+=======
+    // performanceEnhancer.initialize(); // Commented out due to private method
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a426
     performanceEnhancer.optimizeBundle();
     performanceEnhancer.preloadResource('/static/js/main.js', 'script');
     
@@ -329,15 +333,62 @@ export default function App(): React.JSX.Element {
     // Use passive listeners for better performance
     window.addEventListener('scroll', handleScroll, { passive: true });
     document.addEventListener('click', handleClick, { passive: true });
+  }, [seoData]);
+
+  // Add keyboard event listener
+  React.useEffect(() => {
     document.addEventListener('keydown', handleKeyDown);
-    
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, [handleKeyDown]);
+
+  // Main initialization and cleanup effect
+  React.useEffect(() => {
+    // Track engagement on page unload
+    window.addEventListener('beforeunload', trackEngagement);
+
+    // Mark app as fully initialized
+    if (typeof window !== 'undefined' && window.performance && 
+        typeof performance.mark === 'function' && 
+        typeof performance.measure === 'function') {
+      performance.mark('app-init-complete');
+      performance.measure('app-initialization', 'app-init-start', 'app-init-complete');
+    }
+
     // Cleanup function
     return () => {
       window.removeEventListener('scroll', handleScroll);
       document.removeEventListener('click', handleClick);
       document.removeEventListener('keydown', handleKeyDown);
+      window.removeEventListener('beforeunload', trackEngagement);
+      
+      // Clear timeouts (if any exist)
+      // Note: Timeout variables are now managed by the component state
+      
+      // Stop monitoring
+      memoryMonitor.stopMonitoring();
+      
+      // Cleanup new utilities
+      const advancedPerformanceMonitor = AdvancedPerformanceMonitor.getInstance();
+      advancedPerformanceMonitor.stopMonitoring();
+      
+      const accessibilityEnhancer = AccessibilityEnhancer.getInstance();
+      accessibilityEnhancer.cleanup();
+      
+      const securityEnhancer = SecurityEnhancer.getInstance();
+      securityEnhancer.cleanup();
+      
+      // Cleanup enhanced systems
+      enhancedPerformanceMonitor.stopMonitoring();
+      enhancedAnalytics.endSession();
+      
+      // Cleanup advanced systems
+      advancedCacheSystem.clear();
+      advancedAutomationSystem.stop();
+      
+      // Final engagement tracking
+      trackEngagement();
     };
-  }, [handleKeyDown]);
+  }, [trackEngagement]);
 
   // Show loading screen while initializing
   if (isLoading) {
