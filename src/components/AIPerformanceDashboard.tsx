@@ -40,10 +40,9 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
     if (isVisible) {
       const updateData = () => {
         try {
-<<<<<<< HEAD
           const performanceMetrics = enhancedErrorHandler.getPerformanceMetrics();
           const aiInsights = enhancedErrorHandler.getAIInsights();
-          const errorReports: ErrorReport[] = enhancedErrorHandler.getErrorReports().slice(0, 10);
+          const errorReports = enhancedErrorHandler.getErrorReports().slice(0, 10);
           
           // Type-safe conversion
           setMetrics(performanceMetrics as {
@@ -60,19 +59,14 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
           });
           
           setErrors(errorReports as Array<{
-            id: string;
-            message: string;
             severity: string;
-            lastOccurrence: string;
+            message: string;
+            lastOccurrence: string | Date;
+            occurrenceCount: number;
             context: { component?: string; action?: string };
             aiPredictedImpact?: number;
             resolutionSuggestions?: string[];
           }>);
-=======
-          setMetrics(enhancedErrorHandler.getPerformanceMetrics() as PerformanceMetrics);
-          setInsights(enhancedErrorHandler.getAIInsights() as AIInsights);
-          setErrors(enhancedErrorHandler.getErrorReports().slice(0, 10) as unknown as ErrorReport[]);
->>>>>>> 096e1c5f4cb1b59160bae4e84d482bdeaef6dab2
         } catch (error) {
           console.error('Failed to fetch dashboard data:', error);
         }
