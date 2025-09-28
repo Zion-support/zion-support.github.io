@@ -9,15 +9,6 @@ export interface BuildMetrics {
   loadTime: number;
   compressionRatio: number;
   treeShakingEfficiency: number;
-  treeShaking: boolean;
-  codeSplitting: boolean;
-  minification: boolean;
-  lazyLoading: boolean;
-  imageOptimization: boolean;
-  cssOptimization: boolean;
-  jsOptimization: boolean;
-  overallScore: number;
-  optimizationLevel: string;
 }
 
 export interface OptimizationConfig {
@@ -43,11 +34,6 @@ class BuildOptimizer {
       targetBrowsers: ['es2020', 'chrome87', 'firefox78', 'safari14'],
       ...config
     };
-  }
-
-  public initialize(): void {
-    // Initialize build optimizer
-    console.log('Build optimizer initialized');
   }
 
   /**
@@ -275,16 +261,7 @@ class BuildOptimizer {
       chunkCount,
       loadTime: performance.now(),
       compressionRatio: 0.7, // Estimated
-      treeShakingEfficiency: 0.85, // Estimated
-      treeShaking: true,
-      codeSplitting: true,
-      minification: true,
-      lazyLoading: true,
-      imageOptimization: true,
-      cssOptimization: true,
-      jsOptimization: true,
-      overallScore: 85,
-      optimizationLevel: 'High'
+      treeShakingEfficiency: 0.85 // Estimated
     };
   }
 
@@ -296,24 +273,39 @@ class BuildOptimizer {
     
     return `
 Build Optimization Report
-Generated: ${new Date().toISOString()}
+========================
+Bundle Size: ${metrics.bundleSize} KB
+Chunk Count: ${metrics.chunkCount}
+Load Time: ${metrics.loadTime.toFixed(2)} ms
+Compression Ratio: ${(metrics.compressionRatio * 100).toFixed(1)}%
+Tree Shaking Efficiency: ${(metrics.treeShakingEfficiency * 100).toFixed(1)}%
 
-Build Metrics:
-- Bundle Size: ${metrics.bundleSize || 'N/A'}KB
-- Chunk Count: ${metrics.chunkCount || 'N/A'}
-- Load Time: ${metrics.loadTime || 'N/A'}ms
-- Compression Ratio: ${metrics.compressionRatio || 'N/A'}%
-- Tree Shaking Efficiency: ${metrics.treeShakingEfficiency || 'N/A'}%
+Recommendations:
+- ${metrics.bundleSize > 500 ? 'Consider code splitting' : 'Bundle size is optimal'}
+- ${metrics.chunkCount > 10 ? 'Consider reducing chunk count' : 'Chunk count is optimal'}
+- ${metrics.compressionRatio < 0.8 ? 'Enable better compression' : 'Compression is optimal'}
+    `.trim();
+  }
 
-This report provides insights into the current build optimization state.
-`;
+  /**
+   * Initialize all optimizations
+   */
+  public initialize(): void {
+    this.optimizeBundleSize();
+    this.enableServiceWorker();
+    this.optimizeFonts();
+    this.enableCompression();
+    
+    console.log('Build optimizations initialized');
+    console.log(this.generateReport());
   }
 }
 
-// Export a singleton instance
+// Export singleton instance
 export const buildOptimizer = new BuildOptimizer();
 
-// Export initialization function
-export function initOptimizations(): void {
-  buildOptimizer.optimizeBundleSize();
-}
+// Export initialization function for compatibility
+export const initOptimizations = () => buildOptimizer.initialize();
+
+// Export class for custom instances
+export { BuildOptimizer };

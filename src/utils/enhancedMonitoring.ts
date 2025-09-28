@@ -1,8 +1,20 @@
-// Removed triple slash reference - using import style instead
+// Global types are available through tsconfig.json
 /**
  * Enhanced Monitoring and Analytics System
  * Provides comprehensive monitoring, error tracking, and performance analytics
  */
+
+// Layout Shift interface for CLS monitoring
+interface LayoutShift extends PerformanceEntry {
+  value: number;
+  hadRecentInput: boolean;
+  lastInputTime: number;
+  sources: Array<{
+    node: Node;
+    previousRect: DOMRectReadOnly;
+    currentRect: DOMRectReadOnly;
+  }>;
+}
 
 interface MonitoringConfig {
   enableErrorTracking: boolean;
@@ -16,11 +28,6 @@ interface MonitoringConfig {
   flushInterval: number;
   maxRetries: number;
   endpoint: string;
-}
-
-interface LayoutShift extends PerformanceEntry {
-  hadRecentInput: boolean;
-  value: number;
 }
 
 interface ErrorData {
