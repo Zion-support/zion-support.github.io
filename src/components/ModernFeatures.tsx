@@ -156,12 +156,13 @@ const ModernFeatures: React.FC = () => {
     }
   ];
 
-  const stats = [
-    { icon: <Users className="w-6 h-6" />, value: "500+", label: "Happy Clients" },
-    { icon: <Award className="w-6 h-6" />, value: "99.9%", label: "Uptime" },
-    { icon: <TrendingUp className="w-6 h-6" />, value: "50%", label: "Cost Reduction" },
-    { icon: <Clock className="w-6 h-6" />, value: "24/7", label: "Support"     }
-  ];
+  // Stats data for potential future use
+  // const stats = [
+  //   { icon: <Users className="w-6 h-6" />, value: "500+", label: "Happy Clients" },
+  //   { icon: <Award className="w-6 h-6" />, value: "99.9%", label: "Uptime" },
+  //   { icon: <TrendingUp className="w-6 h-6" />, value: "50%", label: "Cost Reduction" },
+  //   { icon: <Clock className="w-6 h-6" />, value: "24/7", label: "Support"     }
+  // ];
 
   useEffect(() => {
     if (!isAutoPlaying) return;

@@ -138,7 +138,8 @@ const EnhancedContactForm: React.FC = () => {
         newsletter: false
       });
       setCurrentStep(1);
-    } catch (error) {
+    } catch (err) {
+      console.error('Form submission error:', err);
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
@@ -152,7 +153,7 @@ const EnhancedContactForm: React.FC = () => {
           <div className="space-y-6">
             <div className="text-center mb-8">
               <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
-                Let's Get Started
+                Let&apos;s Get Started
               </h2>
               <p className="text-gray-600 dark:text-gray-400">
                 Tell us a bit about yourself
@@ -363,7 +364,7 @@ const EnhancedContactForm: React.FC = () => {
             Thank You!
           </h3>
           <p className="text-gray-600 dark:text-gray-400 mb-6">
-            Your message has been sent successfully. We'll get back to you within 24 hours.
+            Your message has been sent successfully. We&apos;ll get back to you within 24 hours.
           </p>
           <button
             onClick={() => setSubmitStatus('idle')}
