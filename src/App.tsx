@@ -8,6 +8,11 @@ import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import { analytics } from './utils/analytics';
 import { seoAnalytics, performanceSEO } from './utils/seoEnhanced';
+import PerformanceDashboard from './components/PerformanceDashboard';
+import RealTimeMonitor from './components/RealTimeMonitor';
+import SystemMetricsDashboard from './components/SystemMetricsDashboard';
+import EnhancedNotificationSystem from './components/EnhancedNotificationSystem';
+import EnhancedAnalytics from './components/EnhancedAnalytics';
 // Available for future use:
 // import { seoManager } from './utils/seoEnhanced';
 // import { seoOptimizer } from './utils/seoOptimization';
@@ -128,7 +133,6 @@ export default function App(): React.JSX.Element {
       }
     }
   }), []);
-
   useEffect(() => {
     // Add performance marks for better monitoring
     if (typeof window !== 'undefined' && window.performance && typeof performance.mark === 'function') {
@@ -167,6 +171,10 @@ export default function App(): React.JSX.Element {
     performanceSEO.preloadCriticalResources();
     performanceSEO.optimizeFonts();
     performanceSEO.optimizeCSS();
+    
+    // Initialize analytics system
+    analytics.initialize();
+    analytics.trackPageView();
 
     // Set default SEO data using the correct method
     seoManagerInstance.updateMetaTags(seoData);
