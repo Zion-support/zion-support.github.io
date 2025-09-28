@@ -512,6 +512,7 @@ export default function App(): React.JSX.Element {
   //   enableImageOptimization: true,
   // });
 
+
   // Command palette commands
   const commandPaletteCommands = useMemo(() => [
     {
@@ -628,6 +629,7 @@ export default function App(): React.JSX.Element {
       
       // Initialize new performance and accessibility enhancements
       initializePerformanceEnhancements();
+      accessibilityEnhancer.initialize();
       
       // Initialize advanced optimizers
       advancedPerformanceOptimizer.initialize();
@@ -853,6 +855,7 @@ export default function App(): React.JSX.Element {
       console.log('🚀 Zion Tech Group App initialized');
     }
   }, [memoizedSeoData, updateMetaTags]);
+
   // Enhanced keyboard shortcuts
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
@@ -1050,6 +1053,7 @@ export default function App(): React.JSX.Element {
           isVisible={showAIDashboard}
           onClose={() => setShowAIDashboard(false)}
         />
+
         {/* Real-time Metrics Display */}
         {showRealTimeMetrics && (
           <div className="fixed top-4 right-4 z-50 bg-black bg-opacity-90 text-white p-4 rounded-lg shadow-lg min-w-[300px]">
