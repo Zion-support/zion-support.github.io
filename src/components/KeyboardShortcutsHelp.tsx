@@ -30,7 +30,7 @@ const KeyboardShortcutsHelp: React.FC<KeyboardShortcutsHelpProps> = ({ isVisible
     } else {
       setFilteredShortcuts(shortcuts);
     }
-  }, [searchTerm]);
+  }, [searchTerm, shortcuts]);
 
   if (!isVisible) return null;
 

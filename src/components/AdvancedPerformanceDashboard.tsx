@@ -56,7 +56,6 @@ const AdvancedPerformanceDashboard: React.FC<PerformanceDashboardProps> = ({
 
   const startRealTimeMonitoring = () => {
     const interval = setInterval(() => {
-      // Simulate real-time performance data
       const newData = {
         time: new Date().toLocaleTimeString(),
         lcp: Math.random() * 1000 + 500,
@@ -72,9 +71,9 @@ const AdvancedPerformanceDashboard: React.FC<PerformanceDashboardProps> = ({
   };
 
   const getScoreColor = (score: number) => {
-    if (score >= 90) return '#10b981'; // green
-    if (score >= 70) return '#f59e0b'; // yellow
-    return '#ef4444'; // red
+    if (score >= 90) return '#10b981';
+    if (score >= 70) return '#f59e0b';
+    return '#ef4444';
   };
 
   const getImpactColor = (impact: string) => {
@@ -86,6 +85,26 @@ const AdvancedPerformanceDashboard: React.FC<PerformanceDashboardProps> = ({
     }
   };
 
+  const exportReport = () => {
+    const report = {
+      performanceScore,
+      metrics,
+      strategies,
+      timestamp: new Date().toISOString()
+    };
+    const blob = new Blob([JSON.stringify(report, null, 2)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `performance-report-${Date.now()}.json`;
+    a.click();
+    URL.revokeObjectURL(url);
+  };
+
+  const updateMetrics = async () => {
+    await initializeDashboard();
+  };
+
   if (!isVisible) return null;
 
   const performanceData = metrics ? [
@@ -95,12 +114,6 @@ const AdvancedPerformanceDashboard: React.FC<PerformanceDashboardProps> = ({
     { name: 'FID', value: metrics.fid, threshold: 100 },
     { name: 'CLS', value: metrics.cls, threshold: 0.1 }
   ] : [];
-
-  const optimizationData = strategies.map(strategy => ({
-    name: strategy.name,
-    impact: strategy.impact,
-    applied: strategy.applied
-  }));
 
   const pieData = [
     { name: 'Applied', value: strategies.filter(s => s.applied).length, color: '#10b981' },
@@ -127,7 +140,6 @@ const AdvancedPerformanceDashboard: React.FC<PerformanceDashboardProps> = ({
         </div>
 
         <div className="p-6 space-y-6">
-          {/* Performance Score */}
           <div className="bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg p-6 text-white">
             <div className="flex items-center justify-between">
               <div>
@@ -146,7 +158,6 @@ const AdvancedPerformanceDashboard: React.FC<PerformanceDashboardProps> = ({
             </div>
           </div>
 
-          {/* Performance Metrics */}
           {metrics && (
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
               <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-4">
@@ -164,55 +175,53 @@ const AdvancedPerformanceDashboard: React.FC<PerformanceDashboardProps> = ({
                 </ResponsiveContainer>
               </div>
 
-            {pieData.length > 0 && (
-              <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-4">
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
-                  Optimization Status
-                </h3>
-                <ResponsiveContainer width="100%" height={300}>
-                  <PieChart>
-                    <Pie
-                      data={pieData}
-                      cx="50%"
-                      cy="50%"
-                      outerRadius={80}
-                      dataKey="value"
-                      label={({ name, value }) => `${name}: ${value}`}
-                    >
-                      {pieData.map((entry, index) => (
-                        <Cell key={`cell-${index}`} fill={entry.color} />
-                      ))}
-                    </Pie>
-                    <Tooltip />
-                  </PieChart>
-                </ResponsiveContainer>
-              </div>
-            )}
-          </div>
-        </div>
+              {pieData.length > 0 && (
+                <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-4">
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
+                    Optimization Status
+                  </h3>
+                  <ResponsiveContainer width="100%" height={300}>
+                    <PieChart>
+                      <Pie
+                        data={pieData}
+                        cx="50%"
+                        cy="50%"
+                        outerRadius={80}
+                        dataKey="value"
+                        label={({ name, value }) => `${name}: ${value}`}
+                      >
+                        {pieData.map((entry, index) => (
+                          <Cell key={`cell-${index}`} fill={entry.color} />
+                        ))}
+                      </Pie>
+                      <Tooltip />
+                    </PieChart>
+                  </ResponsiveContainer>
+                </div>
+              )}
+            </div>
+          )}
 
-        {/* Real-time Monitoring */}
-        {realTimeData.length > 0 && (
+          {realTimeData.length > 0 && (
+            <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-4">
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
+                Real-time Performance Monitoring
+              </h3>
+              <ResponsiveContainer width="100%" height={300}>
+                <LineChart data={realTimeData}>
+                  <CartesianGrid strokeDasharray="3 3" />
+                  <XAxis dataKey="time" />
+                  <YAxis />
+                  <Tooltip />
+                  <Line type="monotone" dataKey="lcp" stroke="#ef4444" name="LCP (ms)" />
+                  <Line type="monotone" dataKey="fcp" stroke="#f59e0b" name="FCP (ms)" />
+                  <Line type="monotone" dataKey="ttfb" stroke="#3b82f6" name="TTFB (ms)" />
+                </LineChart>
+              </ResponsiveContainer>
+            </div>
+          )}
+
           <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-4">
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
-              Real-time Performance Monitoring
-            </h3>
-            <ResponsiveContainer width="100%" height={300}>
-              <LineChart data={realTimeData}>
-                <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="time" />
-                <YAxis />
-                <Tooltip />
-                <Line type="monotone" dataKey="lcp" stroke="#ef4444" name="LCP (ms)" />
-                <Line type="monotone" dataKey="fcp" stroke="#f59e0b" name="FCP (ms)" />
-                <Line type="monotone" dataKey="ttfb" stroke="#3b82f6" name="TTFB (ms)" />
-              </LineChart>
-            </ResponsiveContainer>
-          </div>
-        )}
-
-        {/* Optimization Strategies */}
-        <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-4">
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
               Optimization Strategies
             </h3>
@@ -258,30 +267,28 @@ const AdvancedPerformanceDashboard: React.FC<PerformanceDashboardProps> = ({
             </div>
           </div>
 
-        {/* Actions */}
-        <div className="flex flex-wrap gap-4">
-          <button
-            onClick={exportReport}
-            className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md transition-colors"
-          >
-            Export Report
-          </button>
-          <button
-            onClick={updateMetrics}
-            className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-md transition-colors"
-          >
-            Refresh Metrics
-          </button>
-          <button
-            onClick={() => window.location.reload()}
-            className="bg-purple-500 hover:bg-purple-600 text-white px-4 py-2 rounded-md transition-colors"
-          >
-            Reload App
-          </button>
-        </div>
+          <div className="flex flex-wrap gap-4">
+            <button
+              onClick={exportReport}
+              className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md transition-colors"
+            >
+              Export Report
+            </button>
+            <button
+              onClick={updateMetrics}
+              className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-md transition-colors"
+            >
+              Refresh Metrics
+            </button>
+            <button
+              onClick={() => window.location.reload()}
+              className="bg-purple-500 hover:bg-purple-600 text-white px-4 py-2 rounded-md transition-colors"
+            >
+              Reload App
+            </button>
+          </div>
 
-        {/* Performance Recommendations */}
-        <div className="bg-gradient-to-r from-yellow-400 to-orange-500 rounded-lg p-6 text-white">
+          <div className="bg-gradient-to-r from-yellow-400 to-orange-500 rounded-lg p-6 text-white">
             <h3 className="text-xl font-semibold mb-2">Performance Recommendations</h3>
             <div className="space-y-2">
               {performanceScore < 70 && (
