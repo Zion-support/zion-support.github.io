@@ -21,6 +21,10 @@ import KeyboardShortcutsHelp from './components/KeyboardShortcutsHelp';
 import CommandPalette from './components/CommandPalette';
 import RealTimePerformanceMonitor from './components/RealTimePerformanceMonitor';
 import SystemHealthDashboard from './components/SystemHealthDashboard';
+import { getNotificationManager, notify } from './utils/advancedNotifications';
+import { getThemeManager } from './utils/themeManager';
+import { getKeyboardShortcuts, shortcuts } from './utils/advancedKeyboardShortcuts';
+import { getDataVisualization, charts } from './utils/advancedDataVisualization';
 import './index.css';
 
 export default function App(): React.JSX.Element {
@@ -505,6 +509,44 @@ export default function App(): React.JSX.Element {
                 </button>
               </div>
               <PerformanceMonitor />
+            </div>
+          </div>
+        )}
+
+        {/* AI Performance Dashboard */}
+        <AIPerformanceDashboard
+          isVisible={showAIDashboard}
+          onClose={() => setShowAIDashboard(false)}
+        />
+
+        {/* Advanced Performance Dashboard */}
+        <AdvancedPerformanceDashboard
+          isVisible={showAdvancedDashboard}
+          onClose={() => setShowAdvancedDashboard(false)}
+        />
+
+        {/* Real-time Metrics */}
+        {showRealTimeMetrics && (
+          <div 
+            className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="real-time-metrics-title"
+            onClick={(e) => e.target === e.currentTarget && setShowRealTimeMetrics(false)}
+          >
+            <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+              <div className="flex justify-between items-center mb-4">
+                <h2 id="real-time-metrics-title" className="text-2xl font-bold">Real-time Metrics</h2>
+                <button
+                  onClick={() => setShowRealTimeMetrics(false)}
+                  className="text-gray-500 hover:text-gray-700 text-2xl"
+                >
+                  ✕
+                </button>
+              </div>
+              <div className="space-y-4">
+                <p>Real-time performance metrics will be displayed here.</p>
+              </div>
             </div>
           </div>
         )}
