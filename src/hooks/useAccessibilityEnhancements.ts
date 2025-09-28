@@ -32,11 +32,11 @@ export function useAccessibilityEnhancements(options: UseAccessibilityEnhancemen
   const {
     enableKeyboardNavigation = true,
     enableScreenReaderSupport = true,
-    enableHighContrastMode: _enableHighContrastMode = true,
-    enableReducedMotion: _enableReducedMotion = true,
+    enableHighContrastMode = true,
+    enableReducedMotion = true,
     enableFocusIndicators = true,
     enableAriaLabels = true,
-    announceChanges: _announceChanges = true,
+    announceChanges = true,
     enableSkipLinks = true,
     enableFocusTrap = true,
     enableAnnouncements = true
