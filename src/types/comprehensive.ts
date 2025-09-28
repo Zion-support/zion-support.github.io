@@ -57,6 +57,34 @@ export interface PerformanceRecommendation {
   implementation?: string;
 }
 
+// Performance Metrics Types
+export interface PerformanceMetrics {
+  lcp: number;
+  fcp: number;
+  fid: number;
+  cls: number;
+  ttfb: number;
+  loadTime: number;
+  renderTime: number;
+  memoryUsage: number;
+  bundleSize: number;
+  cacheHitRate: number;
+}
+
+// Optimization Suggestion Types
+export interface OptimizationSuggestion {
+  id: string;
+  type: 'performance' | 'seo' | 'accessibility' | 'security';
+  title: string;
+  description: string;
+  impact: 'high' | 'medium' | 'low';
+  effort: 'low' | 'medium' | 'high';
+  priority: number;
+  actionable: boolean;
+  implementation?: string;
+  resources?: string[];
+}
+
 // SEO Audit Types
 export interface SEOAuditResult {
   score: number;
