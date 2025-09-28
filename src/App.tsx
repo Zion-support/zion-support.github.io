@@ -1,4 +1,4 @@
-import React, { useMemo, useEffect, useCallback } from 'react';
+import React, { useMemo, useEffect, useCallback, useState } from 'react';
 import { AppRouter } from './router';
 import { useAppInitialization } from './hooks/useAppInitialization';
 import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
@@ -8,13 +8,6 @@ import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import { analytics } from './utils/analytics';
 import { seoAnalytics, performanceSEO } from './utils/seoEnhanced';
-// Available for future use:
-// import { seoManager } from './utils/seoEnhanced';
-// import { seoOptimizer } from './utils/seoOptimization';
-// import { cacheManager } from './utils/cacheManager';
-// import { apiClient } from './utils/apiClient';
-// import { notificationManager } from './utils/notificationManager';
-// import { userFeedback } from './utils/userFeedbackManager';
 import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
 import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
 import { enhancedAnalytics } from './utils/enhancedAnalytics';
@@ -25,9 +18,9 @@ import { SecurityEnhancer } from './utils/securityEnhancer';
 import './index.css';
 
 export default function App(): React.JSX.Element {
-  // State for system dashboard and performance optimizer (currently unused but reserved for future features)
-  // const [showSystemDashboard, setShowSystemDashboard] = useState(false);
-  // const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
+  // State for system dashboard and performance optimizer
+  const [showSystemDashboard, setShowSystemDashboard] = useState(false);
+  const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
 
   // Engagement tracking data
   const engagementData = useMemo(() => ({
@@ -104,7 +97,7 @@ export default function App(): React.JSX.Element {
   }), []);
 
   // Track engagement function
-  const trackEngagement = useCallback(() => {
+  const handleTrackEngagement = useCallback(() => {
     const timeOnPage = Date.now() - engagementData.startTime;
     seoAnalytics.trackUserEngagement(window.location.pathname, {
       timeOnPage,
@@ -113,7 +106,7 @@ export default function App(): React.JSX.Element {
     });
     // Also call the original trackEngagement from useAppInitialization
     trackEngagement();
-  }, [engagementData.clicks, engagementData.scrollDepth, engagementData.startTime]);
+  }, [engagementData.clicks, engagementData.scrollDepth, engagementData.startTime, trackEngagement]);
   // Simple SEO manager
   const seoManagerInstance = useMemo(() => ({
     updateMetaTags: (data: typeof seoData) => {
@@ -164,11 +157,6 @@ export default function App(): React.JSX.Element {
     performanceSEO.optimizeImages();
     performanceSEO.preloadCriticalResources();
     performanceSEO.optimizeFonts();
-    performanceSEO.optimizeCSS();
-    
-    // Initialize analytics system
-    analytics.initialize();
-    analytics.trackPageView();
 
     // Set default SEO data using the correct method
     seoManagerInstance.updateMetaTags(seoData);
@@ -181,7 +169,7 @@ export default function App(): React.JSX.Element {
   // Main initialization and cleanup effect
   React.useEffect(() => {
     // Track engagement on page unload
-    window.addEventListener('beforeunload', enhancedTrackEngagement);
+    window.addEventListener('beforeunload', handleTrackEngagement);
 
     // Mark app as fully initialized
     if (typeof window !== 'undefined' && window.performance && 
@@ -200,20 +188,20 @@ export default function App(): React.JSX.Element {
   // Main initialization and cleanup effect
   React.useEffect(() => {
     // Track engagement on page unload
-    window.addEventListener('beforeunload', trackEngagement);
+    window.addEventListener('beforeunload', handleTrackEngagement);
     // Cleanup function
     return () => {
       document.removeEventListener('keydown', handleKeyDown);
-      window.removeEventListener('beforeunload', trackEngagement);
+      window.removeEventListener('beforeunload', handleTrackEngagement);
       
       // Final engagement tracking
-      trackEngagement();
+      handleTrackEngagement();
       
       // Remove event listeners
       window.removeEventListener('scroll', handleScroll);
       document.removeEventListener('click', handleClick);
     };
-  }, [trackEngagement, handleKeyDown, handleScroll, handleClick, seoData, preloadResource]);
+  }, [handleTrackEngagement, handleKeyDown, handleScroll, handleClick]);
 
   // Show loading screen while initializing
   if (isLoading) {
