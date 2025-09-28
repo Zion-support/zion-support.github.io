@@ -10,11 +10,10 @@ export function createLazyComponent<T extends ComponentType<any>>(
   const LazyComponent = lazy(importFunc);
   
   return function LazyWrapper(props: any) {
-    return (
-      <LazyComponent
-        {...props}
-        fallback={fallback}
-      />
+    return React.createElement(
+      React.Suspense,
+      { fallback: fallback ? React.createElement(fallback) : React.createElement('div', null, 'Loading...') },
+      React.createElement(LazyComponent, props)
     );
   };
 }
@@ -66,10 +65,12 @@ export function createIntersectionLazyComponent<T extends ComponentType<any>>(
       return () => observer.disconnect();
     }, []);
 
-    return (
-      <div ref={ref}>
-        {isVisible ? <LazyComponent {...props} /> : <div>Loading...</div>}
-      </div>
+    return React.createElement(
+      'div',
+      { ref },
+      isVisible 
+        ? React.createElement(LazyComponent, props)
+        : React.createElement('div', null, 'Loading...')
     );
   };
 }
