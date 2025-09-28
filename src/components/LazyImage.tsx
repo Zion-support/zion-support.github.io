@@ -40,9 +40,9 @@ const LazyImage: React.FC<LazyImageProps> = ({
   const blurPlaceholder = placeholder || imageOptimizer.generateBlurPlaceholder();
   
   // Use lazy loading hook
-  const { elementRef, imageSrc, isLoaded } = useLazyImage(
+  const { imgRef, imageSrc, isLoaded } = useLazyImage(
     optimizedSrc,
-    blurPlaceholder
+    { threshold: 0.1, rootMargin: '50px' }
   );
 
   const handleLoad = useCallback(() => {
@@ -57,12 +57,12 @@ const LazyImage: React.FC<LazyImageProps> = ({
   }, [onError]);
 
   // Determine which image source to use
-  const currentSrc = hasError && fallbackSrc ? fallbackSrc : imageSrc;
+  const currentSrc = hasError && fallbackSrc ? fallbackSrc : (imageSrc || '');
   const currentAlt = hasError ? `${alt} (fallback)` : alt;
 
   return (
     <div
-      ref={elementRef}
+      ref={imgRef}
       className={`relative overflow-hidden ${className}`}
       style={{ aspectRatio: optimizationOptions.width && optimizationOptions.height 
         ? `${optimizationOptions.width}/${optimizationOptions.height}` 

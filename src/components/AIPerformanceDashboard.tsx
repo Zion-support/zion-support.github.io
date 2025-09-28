@@ -14,6 +14,12 @@ interface PerformanceMetrics {
   [key: string]: unknown;
 }
 
+interface AIInsights {
+  predictedHighRiskActions: string[];
+  recommendedImprovements: string[];
+  errorTrends: Array<{ category: string; trend: string }>;
+}
+
 interface ErrorReport {
   id: string;
   message: string;
@@ -68,25 +74,7 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
           { category: 'API', trend: 'stable' as const },
           { category: 'UI', trend: 'decreasing' as const },
           { category: 'Database', trend: 'stable' as const }
-        ],
-        performanceTrends: [
-          'Page load time improving by 15%',
-          'Memory usage stable',
-          'Error rate decreasing'
-        ],
-        optimizationSuggestions: [
-          'Enable gzip compression',
-          'Implement lazy loading',
-          'Add service worker caching'
-        ],
-        performancePredictions: {
-          nextHour: 85,
-          nextDay: 92
-        },
-        riskAssessment: {
-          level: 'medium' as const,
-          factors: ['Memory usage', 'Bundle size', 'API response times']
-        }
+        ]
       };
 
       const mockErrorReports: ErrorReport[] = [
