@@ -48,11 +48,11 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
 
     setMetrics(prev => ({
       ...prev,
-      memory: memory ? { ...memory, limit: memory.limit || 0 } : null,
+      memory: memory ? { ...memory, limit: (memory as any).limit || 0 } : null,
       loadTime: performanceMetrics.loadTime || 0,
-      domContentLoaded: (performanceMetrics as PerformanceMetrics & { domContentLoaded?: number }).domContentLoaded || 0,
-      domInteractive: (performanceMetrics as PerformanceMetrics & { domInteractive?: number }).domInteractive || 0,
-      violations: [...prev.violations, ...(violations || [])]
+      domContentLoaded: (performanceMetrics as any).domContentLoaded || 0,
+      domInteractive: (performanceMetrics as any).domInteractive || 0,
+      violations: [...prev.violations, ...(Array.isArray(violations) ? violations : [])]
     }));
   }, []);
 
@@ -237,11 +237,11 @@ export const usePerformanceMonitoring = () => {
     const violations = checkPerformanceBudget(performanceMetrics);
 
     setMetrics({
-      memory: memory ? { ...memory, limit: memory.limit || 0 } : null,
+      memory: memory ? { ...memory, limit: (memory as any).limit || 0 } : null,
       loadTime: performanceMetrics.loadTime || 0,
-      domContentLoaded: (performanceMetrics as PerformanceMetrics & { domContentLoaded?: number }).domContentLoaded || 0,
-      domInteractive: (performanceMetrics as PerformanceMetrics & { domInteractive?: number }).domInteractive || 0,
-      violations: violations || []
+      domContentLoaded: (performanceMetrics as any).domContentLoaded || 0,
+      domInteractive: (performanceMetrics as any).domInteractive || 0,
+      violations: Array.isArray(violations) ? violations : []
     });
   }, []);
 

@@ -52,7 +52,7 @@ export interface PerformanceRecommendation {
   priority: 'high' | 'medium' | 'low';
   title: string;
   description: string;
-  impact: string;
+  impact: 'low' | 'medium' | 'high';
   effort: 'low' | 'medium' | 'high';
   implementation?: string;
 }
@@ -116,7 +116,7 @@ export interface OptimizationSuggestion {
   priority: 'high' | 'medium' | 'low';
   title: string;
   description: string;
-  impact: string;
+  impact: 'low' | 'medium' | 'high';
   effort: 'low' | 'medium' | 'high';
   implementation?: string;
   estimatedSavings?: {
@@ -245,29 +245,33 @@ export interface ErrorRecoveryStrategy {
   fallbackAction?: () => void;
 }
 
-// Export all types
-export type {
-  EnhancedNotification,
-  NotificationAction,
-  PerformanceReport,
-  PerformanceAlert,
-  PerformanceRecommendation,
-  SEOAuditResult,
-  SEOIssue,
-  CacheStats,
-  MonitoringMetrics,
-  OptimizationSuggestion,
-  EnhancedPerformanceMetrics,
-  DataPoint,
-  ChartData,
-  VisualizationOptions,
-  StoredChart,
-  AnalyticsData,
-  EnhancedPerformanceDashboardProps,
-  LazyComponentProps,
-  KeyboardShortcuts,
-  SecuritySystem,
-  SecurityEvent,
-  AccessibilityEnhancement,
-  ErrorRecoveryStrategy,
-};
+// Additional missing types
+export interface PerformanceMetrics {
+  lcp?: number;
+  fcp?: number;
+  fid?: number;
+  cls?: number;
+  ttfb?: number;
+  memory?: {
+    used: number;
+    total: number;
+    limit?: number;
+  };
+  domContentLoaded?: number;
+  domInteractive?: number;
+  violations: string[];
+}
+
+export interface OptimizationSuggestion {
+  id: string;
+  type: 'performance' | 'accessibility' | 'seo' | 'security';
+  title: string;
+  description: string;
+  impact: 'low' | 'medium' | 'high';
+  effort: 'low' | 'medium' | 'high';
+  status: 'pending' | 'in-progress' | 'completed' | 'dismissed';
+  createdAt: number;
+  updatedAt: number;
+}
+
+// All types are already exported as interfaces above

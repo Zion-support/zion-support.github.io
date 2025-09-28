@@ -8,6 +8,7 @@ import { clsx } from 'clsx';
 import {performanceAnalytics} from '../utils/advancedPerformanceAnalytics';
 import {seoManager} from '../utils/advancedSEOManager';
 import {apiCache, imageCache, dataCache} from '../utils/advancedCacheManager';
+import { PerformanceReport, SEOAuditResult, CacheStats } from '../types/comprehensive';
 
 interface MonitoringDashboardProps {
   className?: string;

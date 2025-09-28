@@ -22,10 +22,10 @@ export const usePerformanceMonitor = () => {
           setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
         }
         if (entry.entryType === 'first-input') {
-          setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }));
+          setMetrics(prev => ({ ...prev, fid: (entry as any).processingStart - entry.startTime }));
         }
         if (entry.entryType === 'layout-shift') {
-          setMetrics(prev => ({ ...prev, cls: (prev?.cls || 0) + entry.value }));
+          setMetrics(prev => ({ ...prev, cls: (prev?.cls || 0) + ((entry as any).value || 0) }));
         }
       });
     });
