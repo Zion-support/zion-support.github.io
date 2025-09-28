@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import { clsx } from 'clsx';
 import {performanceOptimizer} from '../utils/performanceOptimizer';
-import { EnhancedPerformanceMetrics as PerformanceMetrics, OptimizationSuggestion } from '../types/comprehensive';
+import { EnhancedPerformanceMetrics, OptimizationSuggestion } from '../types/comprehensive';
 
 interface EnhancedPerformanceMonitorProps {
   className?: string;
@@ -14,17 +14,22 @@ export const EnhancedPerformanceMonitor: React.FC<EnhancedPerformanceMonitorProp
   showDetails = false,
   showSuggestions = true
 }) => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+  const [metrics, setMetrics] = useState<EnhancedPerformanceMetrics>({
     fcp: 0,
     lcp: 0,
     fid: 0,
     cls: 0,
     ttfb: 0,
+    loadTime: 0,
+    renderTime: 0,
     memory: {
       used: 0,
       total: 0,
       limit: 0
-    }
+    },
+    domContentLoaded: 0,
+    domInteractive: 0,
+    violations: []
   });
 
   const [suggestions, setSuggestions] = useState<OptimizationSuggestion[]>([]);
@@ -32,7 +37,23 @@ export const EnhancedPerformanceMonitor: React.FC<EnhancedPerformanceMonitorProp
   const [isMonitoring, setIsMonitoring] = useState(false);
 
   const updateMetrics = useCallback(() => {
-    const newMetrics = performanceOptimizer.getMetrics();
+    const rawMetrics = performanceOptimizer.getMetrics();
+    
+    // Map PerformanceMetrics to EnhancedPerformanceMetrics
+    const newMetrics: EnhancedPerformanceMetrics = {
+      fcp: rawMetrics.fcp,
+      lcp: rawMetrics.lcp,
+      fid: rawMetrics.fid,
+      cls: rawMetrics.cls,
+      ttfb: rawMetrics.ttfb,
+      loadTime: rawMetrics.loadTime || 0,
+      renderTime: rawMetrics.renderTime || 0,
+      memory: rawMetrics.memory || { used: 0, total: 0, limit: 0 },
+      domContentLoaded: performance.timing ? performance.timing.domContentLoadedEventEnd - performance.timing.navigationStart : 0,
+      domInteractive: performance.timing ? performance.timing.domInteractive - performance.timing.navigationStart : 0,
+      violations: []
+    };
+    
     setMetrics(newMetrics);
     
     if (showSuggestions) {
@@ -186,7 +207,7 @@ export const EnhancedPerformanceMonitor: React.FC<EnhancedPerformanceMonitorProp
       </div>
 
       {/* Additional Metrics */}
-      {(metrics.memory || metrics.bundleSize || metrics.connection) && (
+      {metrics.memory && (
         <div className="space-y-2 text-sm mb-4">
           <h4 className="font-medium text-gray-700 dark:text-gray-300">Additional Metrics</h4>
           
@@ -199,23 +220,19 @@ export const EnhancedPerformanceMonitor: React.FC<EnhancedPerformanceMonitorProp
             </div>
           )}
 
-          {metrics.bundleSize && (
-            <div className="flex justify-between">
-              <span className="text-gray-600 dark:text-gray-400">Bundle Size:</span>
-              <span className="text-gray-900 dark:text-white">
-                {(metrics.bundleSize / 1024).toFixed(1)}KB
-              </span>
-            </div>
-          )}
+          <div className="flex justify-between">
+            <span className="text-gray-600 dark:text-gray-400">DOM Content Loaded:</span>
+            <span className="text-gray-900 dark:text-white">
+              {metrics.domContentLoaded.toFixed(0)}ms
+            </span>
+          </div>
 
-          {metrics.connection && (
-            <div className="flex justify-between">
-              <span className="text-gray-600 dark:text-gray-400">Connection:</span>
-              <span className="text-blue-500 capitalize">
-                {metrics.connection}
-              </span>
-            </div>
-          )}
+          <div className="flex justify-between">
+            <span className="text-gray-600 dark:text-gray-400">DOM Interactive:</span>
+            <span className="text-blue-500">
+              {metrics.domInteractive.toFixed(0)}ms
+            </span>
+          </div>
         </div>
       )}
 

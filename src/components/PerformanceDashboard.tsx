@@ -1,145 +1,130 @@
-import React, { useState } from 'react';
-import { clsx } from 'clsx';
+import React, { useState, useEffect } from 'react';
+import { Activity, Zap, Clock, Database, Wifi, Shield } from 'lucide-react';
 
-interface PerformanceDashboardProps {
-  className?: string;
-  isVisible?: boolean;
+interface PerformanceMetrics {
+  loadTime: number;
+  firstContentfulPaint: number;
+  largestContentfulPaint: number;
+  firstInputDelay: number;
+  cumulativeLayoutShift: number;
+  memoryUsage: number;
+  networkSpeed: string;
+  securityScore: number;
 }
 
-// Helper function to get performance color
-// const getPerformanceColor = (value: number, thresholds: { good: number; poor: number }): string => {
-//   if (value <= thresholds.good) return 'text-green-600 bg-green-100';
-//   if (value <= thresholds.poor) return 'text-yellow-600 bg-yellow-100';
-//   return 'text-red-600 bg-red-100';
-// };
-
-const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({ 
-  className, 
-  isVisible = true 
-}) => {
-  const [metrics] = useState({
-    fcp: 1200,
-    lcp: 2500,
-    fid: 50,
-    cls: 0.1,
-    ttfb: 800
+export const PerformanceDashboard: React.FC = () => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    loadTime: 0,
+    firstContentfulPaint: 0,
+    largestContentfulPaint: 0,
+    firstInputDelay: 0,
+    cumulativeLayoutShift: 0,
+    memoryUsage: 0,
+    networkSpeed: 'Unknown',
+    securityScore: 0
   });
-  const [isLoading, setIsLoading] = useState(false);
-  const [lastRefresh, setLastRefresh] = useState<Date | null>(null);
 
-  const refreshMetrics = async () => {
-    setIsLoading(true);
-    try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      setLastRefresh(new Date());
-    } finally {
-      setIsLoading(false);
-    }
+  useEffect(() => {
+    const collectMetrics = () => {
+      // Collect Web Vitals
+      if ('web-vitals' in window) {
+        import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+          getCLS((metric) => setMetrics(prev => ({ ...prev, cumulativeLayoutShift: metric.value })));
+          getFID((metric) => setMetrics(prev => ({ ...prev, firstInputDelay: metric.value })));
+          getFCP((metric) => setMetrics(prev => ({ ...prev, firstContentfulPaint: metric.value })));
+          getLCP((metric) => setMetrics(prev => ({ ...prev, largestContentfulPaint: metric.value })));
+          getTTFB((metric) => setMetrics(prev => ({ ...prev, loadTime: metric.value })));
+        });
+      }
+
+      // Memory usage
+      if ('memory' in performance) {
+        const memory = (performance as any).memory;
+        setMetrics(prev => ({ 
+          ...prev, 
+          memoryUsage: memory.usedJSHeapSize / memory.jsHeapSizeLimit * 100 
+        }));
+      }
+
+      // Network speed
+      if ('connection' in navigator) {
+        const connection = (navigator as any).connection;
+        setMetrics(prev => ({ ...prev, networkSpeed: connection.effectiveType || 'Unknown' }));
+      }
+
+      // Security score
+      let securityScore = 100;
+      if (!location.protocol.includes('https')) securityScore -= 20;
+      if (!('serviceWorker' in navigator)) securityScore -= 10;
+      setMetrics(prev => ({ ...prev, securityScore }));
+    };
+
+    collectMetrics();
+    const interval = setInterval(collectMetrics, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const getPerformanceColor = (value, thresholds) => {
+    if (value <= thresholds.good) return 'text-green-600';
+    if (value <= thresholds.poor) return 'text-yellow-600';
+    return 'text-red-600';
   };
-
-
-  const getPerformanceLabel = (value: number, thresholds: { good: number; poor: number }) => {
-    if (value <= thresholds.good) return 'Good';
-    if (value <= thresholds.poor) return 'Needs Improvement';
-    return 'Poor';
-  };
-
-  const formatMetric = (value: number, unit: string = 'ms') => {
-    if (value < 1000) return `${Math.round(value)}${unit}`;
-    return `${(value / 1000).toFixed(1)}s`;
-  };
-
-  const getMetricColor = (value: number, thresholds: { good: number; poor: number }) => {
-    if (value <= thresholds.good) return 'text-green-500';
-    if (value <= thresholds.poor) return 'text-yellow-500';
-    return 'text-red-500';
-  };
-  if (!isVisible) {
-    return null;
-  }
 
   return (
-    <div className={clsx('bg-white dark:bg-gray-900 rounded-lg shadow-lg p-6', className)}>
-      <div className="flex items-center justify-between mb-6">
-        <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
-          Performance Dashboard
-        </h2>
-        <div className="flex items-center space-x-4">
-          <button
-            onClick={refreshMetrics}
-            disabled={isLoading}
-            className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 transition-colors"
-          >
-            {isLoading ? 'Refreshing...' : 'Refresh'}
-          </button>
-          {lastRefresh && (
-            <span className="text-sm text-gray-500 dark:text-gray-400">
-              Last updated: {lastRefresh.toLocaleTimeString()}
-            </span>
-          )}
-        </div>
-      </div>
-
-      {/* Core Web Vitals */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 mb-8">
-        <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-4">
+    <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
+      <h2 className="text-2xl font-bold mb-6 flex items-center">
+        <Activity className="mr-2" />
+        Performance Dashboard
+      </h2>
+      
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
           <div className="flex items-center justify-between mb-2">
-            <h3 className="text-sm font-medium text-gray-600 dark:text-gray-400">FCP</h3>
-            <span className={`text-xs px-2 py-1 rounded ${getMetricColor(metrics.fcp, { good: 1800, poor: 3000 })} bg-opacity-10`}>
-              {getPerformanceLabel(metrics.fcp, { good: 1800, poor: 3000 })}
-            </span>
+            <h3 className="font-semibold">Load Time</h3>
+            <Clock className="w-5 h-5 text-blue-600" />
           </div>
-          <p className="text-2xl font-bold text-gray-900 dark:text-white">
-            {formatMetric(metrics.fcp)}
+          <p className={`text-2xl font-bold ${getPerformanceColor(metrics.loadTime, { good: 1000, poor: 3000 })}`}>
+            {metrics.loadTime.toFixed(0)}ms
           </p>
         </div>
 
-        <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-4">
+        <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
           <div className="flex items-center justify-between mb-2">
-            <h3 className="text-sm font-medium text-gray-600 dark:text-gray-400">LCP</h3>
-            <span className={`text-xs px-2 py-1 rounded ${getMetricColor(metrics.lcp, { good: 2500, poor: 4000 })} bg-opacity-10`}>
-              {getPerformanceLabel(metrics.lcp, { good: 2500, poor: 4000 })}
-            </span>
+            <h3 className="font-semibold">First Contentful Paint</h3>
+            <Zap className="w-5 h-5 text-yellow-600" />
           </div>
-          <p className="text-2xl font-bold text-gray-900 dark:text-white">
-            {formatMetric(metrics.lcp)}
+          <p className={`text-2xl font-bold ${getPerformanceColor(metrics.firstContentfulPaint, { good: 1800, poor: 3000 })}`}>
+            {metrics.firstContentfulPaint.toFixed(0)}ms
           </p>
         </div>
 
-        <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-4">
+        <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
           <div className="flex items-center justify-between mb-2">
-            <h3 className="text-sm font-medium text-gray-600 dark:text-gray-400">FID</h3>
-            <span className={`text-xs px-2 py-1 rounded ${getMetricColor(metrics.fid, { good: 100, poor: 300 })} bg-opacity-10`}>
-              {getPerformanceLabel(metrics.fid, { good: 100, poor: 300 })}
-            </span>
+            <h3 className="font-semibold">Memory Usage</h3>
+            <Database className="w-5 h-5 text-green-600" />
           </div>
-          <p className="text-2xl font-bold text-gray-900 dark:text-white">
-            {formatMetric(metrics.fid)}
+          <p className={`text-2xl font-bold ${getPerformanceColor(metrics.memoryUsage, { good: 50, poor: 80 })}`}>
+            {metrics.memoryUsage.toFixed(1)}%
           </p>
         </div>
 
-        <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-4">
+        <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
           <div className="flex items-center justify-between mb-2">
-            <h3 className="text-sm font-medium text-gray-600 dark:text-gray-400">Cumulative Layout Shift</h3>
-            <span className={getMetricColor(metrics.cls, { good: 0.1, poor: 0.25 })}>
-              {getPerformanceLabel(metrics.cls, { good: 0.1, poor: 0.25 })}
-            </span>
+            <h3 className="font-semibold">Network Speed</h3>
+            <Wifi className="w-5 h-5 text-blue-600" />
           </div>
-          <p className="text-2xl font-bold text-gray-900 dark:text-white">
-            {metrics.cls.toFixed(3)}
+          <p className="text-2xl font-bold text-gray-800 dark:text-gray-200">
+            {metrics.networkSpeed}
           </p>
         </div>
 
-        <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-4">
+        <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
           <div className="flex items-center justify-between mb-2">
-            <h3 className="text-sm font-medium text-gray-600 dark:text-gray-400">TTFB</h3>
-            <span className={`text-xs px-2 py-1 rounded ${getMetricColor(metrics.ttfb, { good: 800, poor: 1800 })} bg-opacity-10`}>
-              {getPerformanceLabel(metrics.ttfb, { good: 800, poor: 1800 })}
-            </span>
+            <h3 className="font-semibold">Security Score</h3>
+            <Shield className="w-5 h-5 text-green-600" />
           </div>
-          <p className="text-2xl font-bold text-gray-900 dark:text-white">
-            {formatMetric(metrics.ttfb)}
+          <p className={`text-2xl font-bold ${getPerformanceColor(100 - metrics.securityScore, { good: 20, poor: 50 })}`}>
+            {metrics.securityScore}/100
           </p>
         </div>
       </div>
