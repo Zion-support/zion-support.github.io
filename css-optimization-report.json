@@ -1,18 +1,15 @@
 {
-  "timestamp": "2025-09-28T15:01:04.184Z",
-  "duration": 17,
+  "timestamp": "2025-09-28T20:01:55.046Z",
+  "duration": 13,
   "optimizations": [
-    "Optimized src/index.css: 285 bytes saved",
-    "Optimized src/styles/accessibility-enhancements.css: 1468 bytes saved",
-    "Optimized src/styles/accessibility.css: 274 bytes saved",
-    "Optimized src/styles/animations.css: 423 bytes saved",
-    "Optimized src/styles/enhanced-features.css: 626 bytes saved",
-    "Optimized src/styles/enhanced.css: 576 bytes saved",
-    "Optimized src/styles/improvements.css: 409 bytes saved",
-    "Optimized src/styles/modern-utilities.css: 709 bytes saved",
-    "Optimized src/styles/notifications.css: 496 bytes saved",
-    "Optimized src/styles/system-metrics.css: 269 bytes saved",
-    "Optimized src/styles/theme.css: 322 bytes saved"
+    "Optimized src/styles/accessibility-enhancements.css: 1 bytes saved",
+    "Optimized src/styles/animations.css: 68 bytes saved",
+    "Optimized src/styles/enhanced-features.css: 1 bytes saved",
+    "Optimized src/styles/enhanced.css: 42 bytes saved",
+    "Optimized src/styles/improvements.css: 39 bytes saved",
+    "Optimized src/styles/modern-utilities.css: 34 bytes saved",
+    "Optimized src/styles/notifications.css: 42 bytes saved",
+    "Optimized src/styles/system-metrics.css: 83 bytes saved"
   ],
   "recommendations": [
     "Use CSS custom properties for better maintainability",
