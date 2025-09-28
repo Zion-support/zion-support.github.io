@@ -151,6 +151,24 @@ export default function App(): React.JSX.Element {
   // Main initialization effect
   useEffect(() => {
     try {
+      // Initialize basic systems
+      analytics.initialize();
+      
+      // Initialize SEO analytics
+      seoAnalytics.trackPageView(window.location.pathname);
+      
+      // Initialize performance SEO optimizations
+      performanceSEO.optimizeImages();
+      performanceSEO.optimizeFonts();
+      performanceSEO.optimizeCSS();
+
+      // Set default SEO data using the correct method
+      seoManager.updateMetaTags(seoData);
+
+      // Update meta tags
+      updateMetaTags(seoData);
+
+      // Initialize comprehensive enhancements
       const enhancements = getComprehensiveEnhancements();
       enhancements.initialize();
       
@@ -164,8 +182,7 @@ export default function App(): React.JSX.Element {
       new AccessibilityEnhancer().initialize();
       new SecurityEnhancer().initialize();
       
-      // Initialize analytics
-      analytics.initialize();
+      // Initialize additional analytics
       if ('initialize' in seoAnalytics && typeof seoAnalytics.initialize === 'function') {
         (seoAnalytics as any).initialize();
       }
@@ -175,76 +192,54 @@ export default function App(): React.JSX.Element {
       if ('initialize' in seoManager && typeof seoManager.initialize === 'function') {
         (seoManager as any).initialize();
       }
+
+      // Initialize enhancement systems
+      performanceOptimizer.optimizeBundle();
+      accessibilityEnhancer.initialize();
+      seoOptimizer.optimizePage(seoData);
+
+      // Basic performance monitoring
+      if (typeof window !== 'undefined') {
+        console.log('🚀 Zion Tech Group App initialized');
+      }
+
+      // Update meta tags with proper type casting
+      updateMetaTags({
+        title: seoData.title,
+        description: seoData.description,
+        keywords: seoData.keywords,
+        ogType: seoData.ogType || 'website',
+        ogUrl: seoData.ogUrl || window.location.href,
+        ogImage: seoData.ogImage || '/og-image.png',
+        twitterCard: seoData.twitterCard || 'summary_large_image'
+      });
+      
+      // Add performance marks for better monitoring
+      if (typeof window !== 'undefined' && window.performance && typeof performance.mark === 'function') {
+        performance.mark('app-init-start');
+      }
+      
+      // Preload critical resources
+      preloadResource('/og-image.png', 'image');
+      preloadResource('/favicon.ico', 'image');
+      
+      // Track engagement on page unload
+      window.addEventListener('beforeunload', enhancedTrackEngagement);
+
+      // Use passive listeners for better performance
+      window.addEventListener('scroll', handleScroll, { passive: true });
+      document.addEventListener('click', handleClick, { passive: true });
+      document.addEventListener('keydown', handleKeyDown);
+
+      // Mark app as fully initialized
+      if (typeof window !== 'undefined' && window.performance && 
+          typeof performance.mark === 'function' && 
+          typeof performance.measure === 'function') {
+        performance.mark('app-init-complete');
+        performance.measure('app-initialization', 'app-init-start', 'app-init-complete');
+      }
     } catch (error) {
-      console.error('Error initializing enhancements:', error);
-    }
-  }, [seoManager]);
-
-  // Initialize basic systems
-  useEffect(() => {
-    analytics.initialize();
-    
-    // Initialize SEO analytics
-    seoAnalytics.trackPageView(window.location.pathname);
-    
-    // Initialize performance SEO optimizations
-    performanceSEO.optimizeImages();
-    performanceSEO.optimizeFonts();
-    performanceSEO.optimizeCSS();
-
-    // Set default SEO data using the correct method
-    seoManager.updateMetaTags(seoData);
-
-    // Update meta tags
-    updateMetaTags(seoData);
-
-    // Initialize enhancement systems
-    // performanceOptimizer.optimizeBundle();
-    // accessibilityEnhancer.initialize();
-    // seoOptimizer.optimizePage(seoData);
-
-    // Basic performance monitoring
-    if (typeof window !== 'undefined') {
-      console.log('🚀 Zion Tech Group App initialized');
-    }
-
-    // Update meta tags with proper type casting
-    updateMetaTags({
-      title: seoData.title,
-      description: seoData.description,
-      keywords: seoData.keywords,
-      ogType: seoData.ogType || 'website',
-      ogUrl: seoData.ogUrl || window.location.href,
-      ogImage: seoData.ogImage || '/og-image.png',
-      twitterCard: seoData.twitterCard || 'summary_large_image'
-    });
-    
-    // Add performance marks for better monitoring
-    if (typeof window !== 'undefined' && window.performance && typeof performance.mark === 'function') {
-      performance.mark('app-init-start');
-    }
-    
-    // Preload critical resources
-    preloadResource('/og-image.png', 'image');
-    preloadResource('/favicon.ico', 'image');
-    
-    // Track engagement on page unload
-    window.addEventListener('beforeunload', enhancedTrackEngagement);
-
-    // Use passive listeners for better performance
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    document.addEventListener('click', handleClick, { passive: true });
-    document.addEventListener('keydown', handleKeyDown);
-
-    // Track engagement on page unload
-    window.addEventListener('beforeunload', enhancedTrackEngagement);
-
-    // Mark app as fully initialized
-    if (typeof window !== 'undefined' && window.performance && 
-        typeof performance.mark === 'function' && 
-        typeof performance.measure === 'function') {
-      performance.mark('app-init-complete');
-      performance.measure('app-initialization', 'app-init-start', 'app-init-complete');
+      console.error('Error in app initialization:', error);
     }
 
     // Cleanup function
