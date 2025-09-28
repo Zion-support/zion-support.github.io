@@ -72,6 +72,9 @@ export default defineConfig(({ mode }) => ({
             if (id.includes('axios')) {
               return 'vendor-http';
             }
+            if (id.includes('web-vitals')) {
+              return 'vendor-vitals';
+            }
             // All other node_modules go to vendor
             return 'vendor';
           }
@@ -84,12 +87,18 @@ export default defineConfig(({ mode }) => ({
             if (id.includes('Advanced') || id.includes('Comprehensive')) {
               return 'components-advanced';
             }
+            if (id.includes('Dashboard') || id.includes('Monitor')) {
+              return 'components-dashboard';
+            }
             return 'components';
           }
           if (id.includes('src/utils/')) {
             // Split utils by functionality
             if (id.includes('advanced') || id.includes('comprehensive')) {
               return 'utils-advanced';
+            }
+            if (id.includes('performance') || id.includes('monitor')) {
+              return 'utils-performance';
             }
             return 'utils';
           }

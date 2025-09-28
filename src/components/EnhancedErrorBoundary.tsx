@@ -55,7 +55,59 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     }
   }
 
-  handleRetry = () => {
+  private reportError = (error: Error, errorInfo: ErrorInfo) => {
+    const errorReport = {
+      message: error.message,
+      stack: error.stack,
+      componentStack: errorInfo.componentStack,
+      timestamp: new Date().toISOString(),
+      userAgent: navigator.userAgent,
+      url: window.location.href,
+      errorId: this.state.errorId,
+      userId: this.getUserId(),
+      sessionId: this.getSessionId()
+    };
+
+    // Send to error reporting service (e.g., Sentry, LogRocket, etc.)
+    if ('gtag' in window) {
+      (window as Window & { gtag?: (command: string, eventName: string, params: Record<string, unknown>) => void }).gtag?.('event', 'exception', {
+        description: error.message,
+        fatal: false,
+        custom_map: {
+          error_id: this.state.errorId,
+          component_stack: errorInfo.componentStack
+        }
+      });
+    }
+
+    // Store in localStorage for debugging
+    try {
+      const existingErrors = JSON.parse(localStorage.getItem('errorReports') || '[]');
+      existingErrors.push(errorReport);
+      // Keep only last 10 errors
+      const recentErrors = existingErrors.slice(-10);
+      localStorage.setItem('errorReports', JSON.stringify(recentErrors));
+    } catch (e) {
+      console.warn('Failed to store error report:', e);
+    }
+  };
+
+  private getUserId = (): string => {
+    // Get user ID from your auth system
+    return localStorage.getItem('userId') || 'anonymous';
+  };
+
+  private getSessionId = (): string => {
+    // Generate or get session ID
+    let sessionId = sessionStorage.getItem('sessionId');
+    if (!sessionId) {
+      sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+      sessionStorage.setItem('sessionId', sessionId);
+    }
+    return sessionId;
+  };
+
+  private handleRetry = () => {
     this.setState({
       hasError: false,
       error: null,

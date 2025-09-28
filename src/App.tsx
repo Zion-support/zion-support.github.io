@@ -3,15 +3,30 @@ import { AppRouter } from './router';
 import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import PerformanceTracker from './components/PerformanceTracker';
-import PerformanceMonitor from './components/PerformanceMonitor';
-import SEOEnhancer from './components/SEOEnhancer';
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-import { seoAnalytics, performanceSEO } from './utils/seoEnhanced';
+import { seoAnalytics, performanceSEO, seoManager } from './utils/seoEnhanced';
 import { analytics } from './utils/analytics';
-import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
+import { performanceOptimizer } from './utils/performanceOptimizations';
+// Removed unused imports to reduce warnings
+import { accessibilityEnhancer } from './utils/advancedAccessibilityEnhancer';
+import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
+import PerformanceOptimizer from './components/PerformanceOptimizer';
+import PerformanceMonitor from './components/PerformanceMonitor';
+import AIPerformanceDashboard from './components/AIPerformanceDashboard';
+import WebsiteEnhancements from './components/WebsiteEnhancements';
+import { SEOOptimizer } from './components/SEOOptimizer';
+import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
 import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
-import { performanceOptimizations } from './utils/bundleOptimization';
+import { performanceAlerts } from './utils/performanceAlerts';
+import { accessibilityUtils } from './utils/accessibilityUtils';
+import { securityUtils } from './utils/securityUtils';
+import { enhancedSecurityManager } from './utils/enhancedSecurityManager';
+import AdvancedAnalytics from './components/AdvancedAnalytics';
 import NotificationSystem, { Notification } from './components/NotificationSystem';
+import KeyboardShortcutsHelp from './components/KeyboardShortcutsHelp';
+import CommandPalette from './components/CommandPalette';
+import RealTimePerformanceMonitor from './components/RealTimePerformanceMonitor';
+import SystemHealthDashboard from './components/SystemHealthDashboard';
+import PerformanceMetricsDashboard from './components/PerformanceMetricsDashboard';
 import './index.css';
 
 // Lazy load heavy components for better performance
@@ -24,6 +39,10 @@ const CommandPalette = lazy(() => import('./components/CommandPalette'));
 export default function App(): React.JSX.Element {
   // State for system dashboard
   const [showSystemDashboard, setShowSystemDashboard] = useState(false);
+  const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
+  const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
+  const [showAIDashboard, setShowAIDashboard] = useState(false);
+  const [showSEOOptimizer, setShowSEOOptimizer] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [showKeyboardHelp, setShowKeyboardHelp] = useState(false);
   const [notifications, setNotifications] = useState<Notification[]>([]);
