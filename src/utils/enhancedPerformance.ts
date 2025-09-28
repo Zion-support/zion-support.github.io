@@ -54,8 +54,7 @@ class EnhancedPerformanceOptimizer {
     }
   };
 
-  private performanceObservers: PerformanceObserver[] = [];
-  private intersectionObservers: IntersectionObserver[] = [];
+  private observers: (PerformanceObserver | IntersectionObserver)[] = [];
   private isInitialized = false;
 
   constructor(config?: Partial<OptimizationConfig>) {
@@ -279,7 +278,7 @@ class EnhancedPerformanceOptimizer {
       observer.observe(img);
     });
 
-    this.observers.push(observer as any);
+    this.observers.push(observer);
   }
 
   /**
