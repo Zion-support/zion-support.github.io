@@ -212,7 +212,7 @@ export default function App(): React.JSX.Element {
     if (!isLoading) {
       const interval = setInterval(() => {
         if (typeof window !== 'undefined' && window.performance) {
-          const memory = (window.performance as any).memory;
+          const memory = (window.performance as Performance & { memory?: { usedJSHeapSize: number } }).memory;
           const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
           
           setPerformanceMetrics({

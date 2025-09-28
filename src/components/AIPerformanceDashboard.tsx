@@ -35,9 +35,9 @@ interface ErrorReport {
 }
 
 const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisible, onClose }) => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-  const [insights, setInsights] = useState<AIInsights | null>(null);
-  const [errors, setErrors] = useState<ErrorReport[]>([]);
+  const [metrics] = useState<PerformanceMetrics | null>(null);
+  const [insights] = useState<AIInsights | null>(null);
+  const [errors] = useState<ErrorReport[]>([]);
 
   useEffect(() => {
     if (isVisible) {
