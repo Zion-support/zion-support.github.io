@@ -151,7 +151,12 @@ class ErrorRecoverySystem {
   clearHistory(): void {
     this.errorHistory = [];
   }
+
+  public reset(): void {
+    this.errorCount = 0;
+  }
 }
 
 export const errorRecoverySystem = new ErrorRecoverySystem();
+export const errorRecovery = errorRecoverySystem;
 export type { ErrorContext, RecoveryStrategy };
