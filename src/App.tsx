@@ -1,16 +1,32 @@
-import React, { useEffect, useCallback } from 'react';
+import React, { useMemo, useEffect, useCallback, useState } from 'react';
 import { AppRouter } from './router';
 import { useAppInitialization } from './hooks/useAppInitialization';
 import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
+import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
+import PerformanceOptimizer from './components/PerformanceOptimizer';
+import { analytics } from './utils/analytics';
+import { seoAnalytics, performanceSEO, seoManager } from './utils/seoEnhanced';
+import { seoOptimizer } from './utils/seoOptimization';
+import { cacheManager } from './utils/cacheManager';
+import { apiClient } from './utils/apiClient';
+import { notificationManager } from './utils/notificationManager';
+import { userFeedback } from './utils/userFeedbackManager';
+import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
 import './index.css';
 
-// Import utility modules
-import { seoAnalytics, performanceSEO } from './utils/seoEnhanced';
-import { analytics } from './utils/analytics';
 export default function App(): React.JSX.Element {
+  // State for system dashboard and performance optimizer
+  const [showSystemDashboard, setShowSystemDashboard] = useState(false);
+  const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
 
+  // Engagement tracking data
+  const engagementData = useMemo(() => ({
+    startTime: Date.now(),
+    scrollDepth: 0,
+    clicks: 0
+  }), []);
   // Initialize app with custom configuration
   const { isLoading, loadingProgress, handleScroll, handleClick, trackEngagement } = useAppInitialization({
     enablePerformanceMonitoring: true,
@@ -80,6 +96,19 @@ export default function App(): React.JSX.Element {
     trackEngagement();
   }, [engagementData, trackEngagement]);
 
+  // Simple SEO manager
+  const seoManagerInstance = {
+    updateMetaTags: (data: typeof seoData) => {
+      if (typeof document !== 'undefined') {
+        document.title = data.title;
+        const metaDescription = document.querySelector('meta[name="description"]');
+        if (metaDescription) {
+          metaDescription.setAttribute('content', data.description);
+        }
+      }
+    }
+  };
+
   useEffect(() => {
     // Add performance marks for better monitoring
     if (typeof window !== 'undefined' && window.performance && typeof performance.mark === 'function') {
@@ -106,18 +135,10 @@ export default function App(): React.JSX.Element {
     performanceSEO.preloadCriticalResources();
     performanceSEO.optimizeFonts();
     performanceSEO.optimizeCSS();
-    
-    // Initialize analytics system
-    analytics.initialize();
-    analytics.trackPageView();
 
     // Set default SEO data using the correct method
-    seoManager.updateMetaTags(seoData);
-
-    // Use passive listeners for better performance
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    document.addEventListener('click', handleClick, { passive: true });
-  }, [seoData, handleScroll, handleClick, preloadResource]);
+    seoManagerInstance.updateMetaTags(seoData);
+  }, [seoData, handleScroll, handleClick, handleKeyDown, preloadResource]);
 
   // Main initialization and cleanup effect
   React.useEffect(() => {
@@ -136,6 +157,7 @@ export default function App(): React.JSX.Element {
     if (typeof window !== 'undefined') {
       console.log('🚀 Zion Tech Group App initialized');
     }
+
     // Cleanup function
     return () => {
       document.removeEventListener('keydown', handleKeyDown);
@@ -165,6 +187,42 @@ export default function App(): React.JSX.Element {
     <EnhancedErrorBoundary>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <AppRouter />
+        
+        {/* System Dashboard */}
+        {showSystemDashboard && (
+          <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
+            <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+              <div className="flex justify-between items-center mb-4">
+                <h2 className="text-2xl font-bold text-gray-900">System Dashboard</h2>
+                <button
+                  onClick={() => setShowSystemDashboard(false)}
+                  className="text-gray-500 hover:text-gray-700"
+                >
+                  ✕
+                </button>
+              </div>
+              <EnhancedSystemDashboard />
+            </div>
+          </div>
+        )}
+
+        {/* Performance Optimizer */}
+        {showPerformanceOptimizer && (
+          <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
+            <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+              <div className="flex justify-between items-center mb-4">
+                <h2 className="text-2xl font-bold text-gray-900">Performance Optimizer</h2>
+                <button
+                  onClick={() => setShowPerformanceOptimizer(false)}
+                  className="text-gray-500 hover:text-gray-700"
+                >
+                  ✕
+                </button>
+              </div>
+              <PerformanceOptimizer />
+            </div>
+          </div>
+        )}
       </div>
     </EnhancedErrorBoundary>
   );
