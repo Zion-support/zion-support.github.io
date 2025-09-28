@@ -1,4 +1,4 @@
-import React, { useMemo, useEffect, useCallback, useState } from 'react';
+import React, { useMemo, useEffect, useCallback } from 'react';
 import { AppRouter } from './router';
 import { useAppInitialization } from './hooks/useAppInitialization';
 import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
@@ -10,9 +10,9 @@ import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements'
 import './index.css';
 
 export default function App(): React.JSX.Element {
-  // State for system dashboard and performance optimizer
-  const [showSystemDashboard, setShowSystemDashboard] = useState(false);
-  const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
+  // State for system dashboard and performance optimizer (currently unused but reserved for future features)
+  // const [showSystemDashboard, setShowSystemDashboard] = useState(false);
+  // const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
 
   // Initialize app with custom configuration
   const { isLoading, loadingProgress, engagementData, handleScroll, handleClick } = useAppInitialization({
@@ -69,10 +69,10 @@ export default function App(): React.JSX.Element {
     });
     // Also call the original trackEngagement from useAppInitialization
     trackEngagement();
-  }, [trackEngagement]);
+  }, [engagementData.clicks, engagementData.scrollDepth, engagementData.startTime]);
 
   // Simple SEO manager
-  const seoManagerInstance = {
+  const seoManagerInstance = useMemo(() => ({
     updateMetaTags: (data: typeof seoData) => {
       if (typeof document !== 'undefined') {
         document.title = data.title;
@@ -82,7 +82,7 @@ export default function App(): React.JSX.Element {
         }
       }
     }
-  };
+  }), []);
 
   useEffect(() => {
     // Add performance marks for better monitoring
@@ -132,7 +132,7 @@ export default function App(): React.JSX.Element {
     if (typeof window !== 'undefined') {
       console.log('🚀 Zion Tech Group App initialized');
     }
-  }, [seoData, handleScroll, handleClick, handleKeyDown, preloadResource]);
+  }, [seoData, handleScroll, handleClick, preloadResource, seoManagerInstance]);
 
   // Main initialization and cleanup effect
   React.useEffect(() => {
