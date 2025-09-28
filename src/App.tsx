@@ -84,7 +84,6 @@ export default function App(): React.JSX.Element {
   // Get SEO data using current pathname
   const seoData = useSEOData(currentPathname);
 
-<<<<<<< HEAD
   // Command palette commands
   const commandPaletteCommands = useMemo(() => [
     {
