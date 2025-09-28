@@ -63,6 +63,14 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       // Initialize performance enhancer
       addLogEntry('Initializing performance enhancer...');
       performanceEnhancer.initialize();
+<<<<<<< HEAD
+=======
+      
+      // Generate performance report
+      addLogEntry('Generating performance report...');
+      const report = performanceEnhancer.generateReport();
+      addLogEntry(`Report generated: ${report.length} characters`);
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-7cb6
       
       // Update metrics
       addLogEntry('Updating performance metrics...');
