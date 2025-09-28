@@ -122,6 +122,7 @@ export default function App(): React.JSX.Element {
   }, []);
 
   // Get SEO data using current pathname
+  const currentPathname = typeof window !== 'undefined' ? window.location.pathname : '/';
   const seoData = useSEOData(currentPathname);
   const enhancedTrackEngagement = useCallback(() => {
     try {
@@ -169,21 +170,21 @@ export default function App(): React.JSX.Element {
       try {
         // Critical systems first
         analytics.initialize();
-        seoAnalytics.initialize();
+        // seoAnalytics doesn't have initialize method
         
         // Performance optimizations
-        performanceSEO.initialize();
+        // performanceSEO doesn't have initialize method
         performanceSEO.optimizeImages();
         performanceSEO.optimizeFonts();
         performanceSEO.optimizeCSS();
         
         // Enhanced systems
         const enhancements = getComprehensiveEnhancements();
-        enhancements.initialize();
+        // enhancements doesn't have public initialize method
         
         // Initialize individual enhancement systems asynchronously
         Promise.all([
-          enhancedPerformanceMonitor.initialize(),
+          enhancedPerformanceMonitor.startMonitoring(),
           enhancedAnalytics.initialize(),
           advancedCacheSystem.initialize(),
         ]).catch(console.error);
@@ -217,8 +218,7 @@ export default function App(): React.JSX.Element {
     
     // Initialize analytics
     analytics.initialize();
-    seoAnalytics.initialize();
-    performanceSEO.initialize();
+    // seoAnalytics and performanceSEO don't have initialize methods
     
     // Initialize SEO analytics
     seoAnalytics.trackPageView(window.location.pathname);
@@ -245,7 +245,15 @@ export default function App(): React.JSX.Element {
     document.addEventListener('keydown', handleKeyDown);
 
     // Update meta tags
-    updateMetaTags(seoData);
+    updateMetaTags({
+      title: seoData.title,
+      description: seoData.description,
+      keywords: seoData.keywords || [],
+      ogType: seoData.ogType || 'website',
+      ogUrl: seoData.ogUrl || (typeof window !== 'undefined' ? window.location.href : ''),
+      ogImage: seoData.ogImage || '/og-image.png',
+      twitterCard: seoData.twitterCard || 'summary_large_image'
+    });
 
     // Basic performance monitoring
     if (typeof window !== 'undefined') {
