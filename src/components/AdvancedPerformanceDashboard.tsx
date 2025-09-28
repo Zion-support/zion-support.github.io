@@ -113,17 +113,13 @@ const AdvancedPerformanceDashboard: React.FC<AdvancedPerformanceDashboardProps> 
 
   useEffect(() => {
     if (isVisible) {
-<<<<<<< HEAD
       updateMetrics();
       generateSuggestions();
       
       const interval = setInterval(updateMetrics, 2000);
       return () => clearInterval(interval);
-=======
-      initializeDashboard();
-      startRealTimeMonitoring();
     }
-  }, [isVisible]);
+  }, [isVisible, updateMetrics, generateSuggestions]);
 
   const initializeDashboard = async () => {
     try {
@@ -142,9 +138,8 @@ const AdvancedPerformanceDashboard: React.FC<AdvancedPerformanceDashboardProps> 
       setPerformanceScore(score);
     } catch (error) {
       console.error('Failed to initialize dashboard:', error);
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-fd3d
     }
-  }, [isVisible, updateMetrics, generateSuggestions]);
+  };
 
   const getScoreColor = (score: number) => {
     if (score >= 90) return 'text-green-600 bg-green-100';
@@ -172,8 +167,6 @@ const AdvancedPerformanceDashboard: React.FC<AdvancedPerformanceDashboardProps> 
 
   if (!isVisible) return null;
 
-<<<<<<< HEAD
-=======
   const performanceData = [
     { name: 'Build Score', value: metrics.buildScore, threshold: 80 },
     { name: 'Accessibility', value: metrics.accessibilityScore, threshold: 85 },
@@ -192,8 +185,6 @@ const AdvancedPerformanceDashboard: React.FC<AdvancedPerformanceDashboardProps> 
     { name: 'Applied', value: strategies.filter((s: OptimizationStrategy) => s.applied).length, color: '#10b981' },
     { name: 'Available', value: strategies.filter((s: OptimizationStrategy) => !s.applied).length, color: '#6b7280' }
   ];
-
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-fd3d
   return (
     <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
       <div className="bg-white rounded-lg p-6 max-w-7xl w-full mx-4 max-h-[90vh] overflow-y-auto">
@@ -268,54 +259,9 @@ const AdvancedPerformanceDashboard: React.FC<AdvancedPerformanceDashboardProps> 
               <div key={index} className="bg-white p-3 rounded-lg border-l-4 border-blue-500">
                 <p className="text-sm text-gray-700">{suggestion}</p>
               </div>
-<<<<<<< HEAD
             ))}
-=======
-
-              <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-4">
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
-                  Optimization Status
-                </h3>
-                <ResponsiveContainer width="100%" height={300}>
-                  <PieChart>
-                    <Pie
-                      data={pieData}
-                      cx="50%"
-                      cy="50%"
-                      outerRadius={80}
-                      dataKey="value"
-                      label={(entry: any) => `${entry.name}: ${entry.value}`}
-                    >
-                      {pieData.map((entry, index) => (
-                        <Cell key={`cell-${index}`} fill={entry.color} />
-                      ))}
-                    </Pie>
-                    <Tooltip />
-                  </PieChart>
-                </ResponsiveContainer>
-              </div>
-            </div>
-          )}
-
-          {/* Real-time Monitoring */}
-          {realTimeData.length > 0 && (
-            <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-4">
-              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
-                Real-time Performance Monitoring
-              </h3>
-              <ResponsiveContainer width="100%" height={300}>
-                <LineChart data={realTimeData}>
-                  <CartesianGrid strokeDasharray="3 3" />
-                  <XAxis dataKey="time" />
-                  <YAxis />
-                  <Tooltip />
-                  <Line type="monotone" dataKey="lcp" stroke="#ef4444" name="LCP (ms)" />
-                  <Line type="monotone" dataKey="fcp" stroke="#f59e0b" name="FCP (ms)" />
-                  <Line type="monotone" dataKey="ttfb" stroke="#3b82f6" name="TTFB (ms)" />
-                </LineChart>
-              </ResponsiveContainer>
-            </div>
-          )}
+          </div>
+        </div>
 
           {/* Optimization Strategies */}
           <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-4">
@@ -362,11 +308,8 @@ const AdvancedPerformanceDashboard: React.FC<AdvancedPerformanceDashboardProps> 
                 </div>
               ))}
             </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-fd3d
           </div>
         </div>
-
-<<<<<<< HEAD
         {/* Actions */}
         <div className="flex flex-wrap gap-4">
           <button
@@ -387,15 +330,13 @@ const AdvancedPerformanceDashboard: React.FC<AdvancedPerformanceDashboardProps> 
           >
             Reload App
           </button>
-=======
-          {/* Performance Recommendations */}
-          <div className="bg-gradient-to-r from-yellow-400 to-orange-500 rounded-lg p-6 text-white">
-            <h3 className="text-xl font-semibold mb-2">Performance Recommendations</h3>
-            <div className="space-y-2">
-              {performanceScore < 70 && (
-                <p>• Consider implementing additional optimization strategies</p>
-              )}
-              {metrics && metrics.buildScore < 80 && (
+        </div>
+
+        {/* Performance Recommendations */}
+        <div className="bg-gradient-to-r from-yellow-400 to-orange-500 rounded-lg p-6 text-white">
+          <h3 className="text-xl font-semibold mb-2">Performance Recommendations</h3>
+          <div className="space-y-2">
+            {metrics && metrics.buildScore < 80 && (
                 <p>• Optimize build process - currently {metrics.buildScore}/100</p>
               )}
               {metrics && metrics.accessibilityScore < 85 && (
@@ -409,7 +350,6 @@ const AdvancedPerformanceDashboard: React.FC<AdvancedPerformanceDashboardProps> 
               )}
             </div>
           </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-fd3d
         </div>
       </div>
     </div>
