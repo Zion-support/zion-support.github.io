@@ -21,7 +21,7 @@ export const SystemMetricsDashboard: React.FC<SystemMetricsDashboardProps> = ({
     if (isVisible) {
       const updateMetrics = () => {
         const perfMonitor = AdvancedPerformanceMonitor.getInstance();
-        const accEnhancer = AccessibilityEnhancer.getInstance();
+        const accEnhancer = new AccessibilityEnhancer();
         const secEnhancer = SecurityEnhancer.getInstance();
 
         const perfMetrics = perfMonitor.getLatestMetrics();
