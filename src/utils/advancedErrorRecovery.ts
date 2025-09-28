@@ -275,7 +275,7 @@ export class AdvancedErrorRecovery {
         try {
           // Simulate memory cleanup
           if (typeof window !== 'undefined' && 'gc' in window) {
-            (window as Window & { gc?: () => void }).gc?.();
+            (window as unknown as { gc: () => void }).gc();
           }
           return true;
         } catch {
