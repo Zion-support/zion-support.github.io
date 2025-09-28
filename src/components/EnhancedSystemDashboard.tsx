@@ -30,7 +30,6 @@ export const EnhancedSystemDashboard: React.FC = () => {
 
   useEffect(() => {
     initializeSystems();
-    startMonitoring();
     
     return () => {
       stopMonitoring();
@@ -47,13 +46,6 @@ export const EnhancedSystemDashboard: React.FC = () => {
     console.log('All enhanced systems initialized');
   };
 
-  const startMonitoring = () => {
-    const interval = setInterval(() => {
-      updateMetrics();
-    }, 5000); // Update every 5 seconds
-
-    return () => clearInterval(interval);
-  };
 
   const stopMonitoring = () => {
     enhancedPerformanceMonitor.stopMonitoring();
