@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { EnhancedServiceWorkerManager } from '../utils/enhancedServiceWorker';
+import React, { useState, useEffect, useCallback } from "react";
+import { EnhancedServiceWorkerManager } from "../utils/enhancedServiceWorker";
 
 /**
  * Performance Optimization Panel
@@ -14,11 +14,15 @@ export const PerformanceOptimizationPanel: React.FC = () => {
     largestContentfulPaint: 0,
     cumulativeLayoutShift: 0,
     firstInputDelay: 0,
-    totalBlockingTime: 0
+    totalBlockingTime: 0,
   });
 
-  const [optimizationSuggestions, setOptimizationSuggestions] = useState<string[]>([]);
-  const [serviceWorkerStatus, setServiceWorkerStatus] = useState<'not-supported' | 'not-registered' | 'registered' | 'updating'>('not-supported');
+  const [optimizationSuggestions, setOptimizationSuggestions] = useState<
+    string[]
+  >([]);
+  const [serviceWorkerStatus, setServiceWorkerStatus] = useState<
+    "not-supported" | "not-registered" | "registered" | "updating"
+  >("not-supported");
   const [cacheStatus, setCacheStatus] = useState<Record<string, number>>({});
 
   const swManager = new EnhancedServiceWorkerManager();
@@ -27,19 +31,25 @@ export const PerformanceOptimizationPanel: React.FC = () => {
    * Collect performance metrics
    */
   const collectPerformanceMetrics = useCallback(() => {
-    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-    
+    const navigation = performance.getEntriesByType(
+      "navigation",
+    )[0] as PerformanceNavigationTiming;
+
     // Core Web Vitals
-    const fcpEntries = performance.getEntriesByName('first-contentful-paint');
-    const lcpEntries = performance.getEntriesByType('largest-contentful-paint');
-    const clsEntries = performance.getEntriesByType('layout-shift');
-    
+    const fcpEntries = performance.getEntriesByName("first-contentful-paint");
+    const lcpEntries = performance.getEntriesByType("largest-contentful-paint");
+    const clsEntries = performance.getEntriesByType("layout-shift");
+
     // Calculate metrics
     const loadTime = navigation.loadEventEnd - navigation.fetchStart;
-    const domContentLoaded = navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart;
-    const firstContentfulPaint = fcpEntries.length > 0 ? fcpEntries[0].startTime : 0;
-    const largestContentfulPaint = lcpEntries.length > 0 ? lcpEntries[lcpEntries.length - 1].startTime : 0;
-    
+    const domContentLoaded =
+      navigation.domContentLoadedEventEnd -
+      navigation.domContentLoadedEventStart;
+    const firstContentfulPaint =
+      fcpEntries.length > 0 ? fcpEntries[0].startTime : 0;
+    const largestContentfulPaint =
+      lcpEntries.length > 0 ? lcpEntries[lcpEntries.length - 1].startTime : 0;
+
     let cumulativeLayoutShift = 0;
     clsEntries.forEach((entry: any) => {
       if (!entry.hadRecentInput) {
@@ -48,12 +58,18 @@ export const PerformanceOptimizationPanel: React.FC = () => {
     });
 
     // First Input Delay (approximation)
-    const fidEntries = performance.getEntriesByType('first-input');
-    const firstInputDelay = fidEntries.length > 0 ? (fidEntries[0] as any).processingStart - fidEntries[0].startTime : 0;
+    const fidEntries = performance.getEntriesByType("first-input");
+    const firstInputDelay =
+      fidEntries.length > 0
+        ? (fidEntries[0] as any).processingStart - fidEntries[0].startTime
+        : 0;
 
     // Total Blocking Time (approximation)
-    const longTasks = performance.getEntriesByType('longtask');
-    const totalBlockingTime = longTasks.reduce((total, task) => total + (task.duration - 50), 0);
+    const longTasks = performance.getEntriesByType("longtask");
+    const totalBlockingTime = longTasks.reduce(
+      (total, task) => total + (task.duration - 50),
+      0,
+    );
 
     setPerformanceMetrics({
       loadTime,
@@ -62,7 +78,7 @@ export const PerformanceOptimizationPanel: React.FC = () => {
       largestContentfulPaint,
       cumulativeLayoutShift,
       firstInputDelay,
-      totalBlockingTime
+      totalBlockingTime,
     });
   }, []);
 
@@ -73,31 +89,39 @@ export const PerformanceOptimizationPanel: React.FC = () => {
     const suggestions: string[] = [];
 
     if (performanceMetrics.loadTime > 3000) {
-      suggestions.push('Consider optimizing bundle size and enabling compression');
+      suggestions.push(
+        "Consider optimizing bundle size and enabling compression",
+      );
     }
 
     if (performanceMetrics.firstContentfulPaint > 1800) {
-      suggestions.push('Optimize critical rendering path and preload key resources');
+      suggestions.push(
+        "Optimize critical rendering path and preload key resources",
+      );
     }
 
     if (performanceMetrics.largestContentfulPaint > 2500) {
-      suggestions.push('Optimize images and implement lazy loading');
+      suggestions.push("Optimize images and implement lazy loading");
     }
 
     if (performanceMetrics.cumulativeLayoutShift > 0.1) {
-      suggestions.push('Add explicit dimensions to images and avoid dynamic content insertion');
+      suggestions.push(
+        "Add explicit dimensions to images and avoid dynamic content insertion",
+      );
     }
 
     if (performanceMetrics.firstInputDelay > 100) {
-      suggestions.push('Reduce JavaScript execution time and split long tasks');
+      suggestions.push("Reduce JavaScript execution time and split long tasks");
     }
 
     if (performanceMetrics.totalBlockingTime > 300) {
-      suggestions.push('Optimize JavaScript bundles and reduce main thread blocking');
+      suggestions.push(
+        "Optimize JavaScript bundles and reduce main thread blocking",
+      );
     }
 
     if (suggestions.length === 0) {
-      suggestions.push('Performance is excellent! Keep up the good work.');
+      suggestions.push("Performance is excellent! Keep up the good work.");
     }
 
     setOptimizationSuggestions(suggestions);
@@ -107,21 +131,21 @@ export const PerformanceOptimizationPanel: React.FC = () => {
    * Check service worker status
    */
   const checkServiceWorkerStatus = useCallback(async () => {
-    if (!('serviceWorker' in navigator)) {
-      setServiceWorkerStatus('not-supported');
+    if (!("serviceWorker" in navigator)) {
+      setServiceWorkerStatus("not-supported");
       return;
     }
 
     try {
       const registration = await navigator.serviceWorker.getRegistration();
       if (registration) {
-        setServiceWorkerStatus('registered');
+        setServiceWorkerStatus("registered");
       } else {
-        setServiceWorkerStatus('not-registered');
+        setServiceWorkerStatus("not-registered");
       }
     } catch (error) {
-      console.error('Error checking service worker status:', error);
-      setServiceWorkerStatus('not-supported');
+      console.error("Error checking service worker status:", error);
+      setServiceWorkerStatus("not-supported");
     }
   }, []);
 
@@ -133,7 +157,7 @@ export const PerformanceOptimizationPanel: React.FC = () => {
       const status = await swManager.getCacheStatus();
       setCacheStatus(status);
     } catch (error) {
-      console.error('Error getting cache status:', error);
+      console.error("Error getting cache status:", error);
     }
   }, [swManager]);
 
@@ -141,17 +165,17 @@ export const PerformanceOptimizationPanel: React.FC = () => {
    * Register service worker
    */
   const registerServiceWorker = useCallback(async () => {
-    setServiceWorkerStatus('updating');
+    setServiceWorkerStatus("updating");
     try {
       const success = await swManager.register();
       if (success) {
-        setServiceWorkerStatus('registered');
+        setServiceWorkerStatus("registered");
       } else {
-        setServiceWorkerStatus('not-registered');
+        setServiceWorkerStatus("not-registered");
       }
     } catch (error) {
-      console.error('Error registering service worker:', error);
-      setServiceWorkerStatus('not-registered');
+      console.error("Error registering service worker:", error);
+      setServiceWorkerStatus("not-registered");
     }
   }, [swManager]);
 
@@ -163,7 +187,7 @@ export const PerformanceOptimizationPanel: React.FC = () => {
       await swManager.clearAllCaches();
       await getCacheStatus();
     } catch (error) {
-      console.error('Error clearing caches:', error);
+      console.error("Error clearing caches:", error);
     }
   }, [swManager, getCacheStatus]);
 
@@ -172,16 +196,16 @@ export const PerformanceOptimizationPanel: React.FC = () => {
    */
   const preloadCriticalResources = useCallback(async () => {
     const criticalResources = [
-      '/',
-      '/assets/css/main.css',
-      '/assets/js/main.js'
+      "/",
+      "/assets/css/main.css",
+      "/assets/js/main.js",
     ];
 
     try {
       await swManager.preloadCriticalResources(criticalResources);
       await getCacheStatus();
     } catch (error) {
-      console.error('Error preloading resources:', error);
+      console.error("Error preloading resources:", error);
     }
   }, [swManager, getCacheStatus]);
 
@@ -197,16 +221,24 @@ export const PerformanceOptimizationPanel: React.FC = () => {
     generateOptimizationSuggestions();
   }, [generateOptimizationSuggestions]);
 
-  const getMetricStatus = (value: number, thresholds: { good: number; needsImprovement: number }) => {
-    if (value <= thresholds.good) return { status: 'good', color: 'text-green-600' };
-    if (value <= thresholds.needsImprovement) return { status: 'needs-improvement', color: 'text-yellow-600' };
-    return { status: 'poor', color: 'text-red-600' };
+  const getMetricStatus = (
+    value: number,
+    thresholds: { good: number; needsImprovement: number },
+  ) => {
+    if (value <= thresholds.good)
+      return { status: "good", color: "text-green-600" };
+    if (value <= thresholds.needsImprovement)
+      return { status: "needs-improvement", color: "text-yellow-600" };
+    return { status: "poor", color: "text-red-600" };
   };
 
-  const getMetricIcon = (value: number, thresholds: { good: number; needsImprovement: number }) => {
-    if (value <= thresholds.good) return '✅';
-    if (value <= thresholds.needsImprovement) return '⚠️';
-    return '❌';
+  const getMetricIcon = (
+    value: number,
+    thresholds: { good: number; needsImprovement: number },
+  ) => {
+    if (value <= thresholds.good) return "✅";
+    if (value <= thresholds.needsImprovement) return "⚠️";
+    return "❌";
   };
 
   if (!isVisible) {
@@ -226,7 +258,9 @@ export const PerformanceOptimizationPanel: React.FC = () => {
     <div className="fixed bottom-4 right-4 z-40 bg-white rounded-lg shadow-xl border border-gray-200 w-96 max-h-96 overflow-y-auto">
       {/* Header */}
       <div className="flex items-center justify-between p-4 border-b border-gray-200">
-        <h3 className="text-lg font-semibold text-gray-800">Performance Optimization</h3>
+        <h3 className="text-lg font-semibold text-gray-800">
+          Performance Optimization
+        </h3>
         <button
           onClick={() => setIsVisible(false)}
           className="text-gray-500 hover:text-gray-700 focus:outline-none focus:ring-2 focus:ring-purple-500 rounded"
@@ -243,29 +277,49 @@ export const PerformanceOptimizationPanel: React.FC = () => {
           <div className="space-y-2 text-sm">
             <div className="flex justify-between items-center">
               <span>Load Time</span>
-              <span className={`flex items-center ${getMetricStatus(performanceMetrics.loadTime, { good: 1500, needsImprovement: 3000 }).color}`}>
-                {getMetricIcon(performanceMetrics.loadTime, { good: 1500, needsImprovement: 3000 })}
+              <span
+                className={`flex items-center ${getMetricStatus(performanceMetrics.loadTime, { good: 1500, needsImprovement: 3000 }).color}`}
+              >
+                {getMetricIcon(performanceMetrics.loadTime, {
+                  good: 1500,
+                  needsImprovement: 3000,
+                })}
                 {performanceMetrics.loadTime.toFixed(0)}ms
               </span>
             </div>
             <div className="flex justify-between items-center">
               <span>FCP</span>
-              <span className={`flex items-center ${getMetricStatus(performanceMetrics.firstContentfulPaint, { good: 1000, needsImprovement: 1800 }).color}`}>
-                {getMetricIcon(performanceMetrics.firstContentfulPaint, { good: 1000, needsImprovement: 1800 })}
+              <span
+                className={`flex items-center ${getMetricStatus(performanceMetrics.firstContentfulPaint, { good: 1000, needsImprovement: 1800 }).color}`}
+              >
+                {getMetricIcon(performanceMetrics.firstContentfulPaint, {
+                  good: 1000,
+                  needsImprovement: 1800,
+                })}
                 {performanceMetrics.firstContentfulPaint.toFixed(0)}ms
               </span>
             </div>
             <div className="flex justify-between items-center">
               <span>LCP</span>
-              <span className={`flex items-center ${getMetricStatus(performanceMetrics.largestContentfulPaint, { good: 1200, needsImprovement: 2500 }).color}`}>
-                {getMetricIcon(performanceMetrics.largestContentfulPaint, { good: 1200, needsImprovement: 2500 })}
+              <span
+                className={`flex items-center ${getMetricStatus(performanceMetrics.largestContentfulPaint, { good: 1200, needsImprovement: 2500 }).color}`}
+              >
+                {getMetricIcon(performanceMetrics.largestContentfulPaint, {
+                  good: 1200,
+                  needsImprovement: 2500,
+                })}
                 {performanceMetrics.largestContentfulPaint.toFixed(0)}ms
               </span>
             </div>
             <div className="flex justify-between items-center">
               <span>CLS</span>
-              <span className={`flex items-center ${getMetricStatus(performanceMetrics.cumulativeLayoutShift, { good: 0.05, needsImprovement: 0.1 }).color}`}>
-                {getMetricIcon(performanceMetrics.cumulativeLayoutShift, { good: 0.05, needsImprovement: 0.1 })}
+              <span
+                className={`flex items-center ${getMetricStatus(performanceMetrics.cumulativeLayoutShift, { good: 0.05, needsImprovement: 0.1 }).color}`}
+              >
+                {getMetricIcon(performanceMetrics.cumulativeLayoutShift, {
+                  good: 0.05,
+                  needsImprovement: 0.1,
+                })}
                 {performanceMetrics.cumulativeLayoutShift.toFixed(3)}
               </span>
             </div>
@@ -277,16 +331,21 @@ export const PerformanceOptimizationPanel: React.FC = () => {
           <h4 className="font-medium text-gray-800 mb-2">Service Worker</h4>
           <div className="flex items-center justify-between">
             <span className="text-sm">Status</span>
-            <span className={`text-sm px-2 py-1 rounded-full ${
-              serviceWorkerStatus === 'registered' ? 'bg-green-100 text-green-800' :
-              serviceWorkerStatus === 'not-registered' ? 'bg-yellow-100 text-yellow-800' :
-              serviceWorkerStatus === 'updating' ? 'bg-blue-100 text-blue-800' :
-              'bg-red-100 text-red-800'
-            }`}>
+            <span
+              className={`text-sm px-2 py-1 rounded-full ${
+                serviceWorkerStatus === "registered"
+                  ? "bg-green-100 text-green-800"
+                  : serviceWorkerStatus === "not-registered"
+                    ? "bg-yellow-100 text-yellow-800"
+                    : serviceWorkerStatus === "updating"
+                      ? "bg-blue-100 text-blue-800"
+                      : "bg-red-100 text-red-800"
+              }`}
+            >
               {serviceWorkerStatus}
             </span>
           </div>
-          {serviceWorkerStatus === 'not-registered' && (
+          {serviceWorkerStatus === "not-registered" && (
             <button
               onClick={registerServiceWorker}
               className="w-full mt-2 px-3 py-1 bg-blue-600 hover:bg-blue-700 text-white text-sm rounded"

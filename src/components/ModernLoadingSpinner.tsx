@@ -1,9 +1,9 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 
 interface ModernLoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg' | 'xl';
-  variant?: 'primary' | 'secondary' | 'accent';
+  size?: "sm" | "md" | "lg" | "xl";
+  variant?: "primary" | "secondary" | "accent";
   text?: string;
   showProgress?: boolean;
   progress?: number;
@@ -11,25 +11,25 @@ interface ModernLoadingSpinnerProps {
 }
 
 const sizeClasses = {
-  sm: 'w-4 h-4',
-  md: 'w-8 h-8',
-  lg: 'w-12 h-12',
-  xl: 'w-16 h-16'
+  sm: "w-4 h-4",
+  md: "w-8 h-8",
+  lg: "w-12 h-12",
+  xl: "w-16 h-16",
 };
 
 const variantClasses = {
-  primary: 'text-blue-600',
-  secondary: 'text-gray-600',
-  accent: 'text-purple-600'
+  primary: "text-blue-600",
+  secondary: "text-gray-600",
+  accent: "text-purple-600",
 };
 
 export const ModernLoadingSpinner: React.FC<ModernLoadingSpinnerProps> = ({
-  size = 'md',
-  variant = 'primary',
+  size = "md",
+  variant = "primary",
   text,
   showProgress = false,
   progress = 0,
-  className = ''
+  className = "",
 }) => {
   const spinnerVariants = {
     animate: {
@@ -37,9 +37,9 @@ export const ModernLoadingSpinner: React.FC<ModernLoadingSpinnerProps> = ({
       transition: {
         duration: 1,
         repeat: Infinity,
-        ease: 'linear' as const
-      }
-    }
+        ease: "linear" as const,
+      },
+    },
   };
 
   const pulseVariants = {
@@ -49,13 +49,15 @@ export const ModernLoadingSpinner: React.FC<ModernLoadingSpinnerProps> = ({
       transition: {
         duration: 1.5,
         repeat: Infinity,
-        ease: 'easeInOut' as const
-      }
-    }
+        ease: "easeInOut" as const,
+      },
+    },
   };
 
   return (
-    <div className={`flex flex-col items-center justify-center space-y-4 ${className}`}>
+    <div
+      className={`flex flex-col items-center justify-center space-y-4 ${className}`}
+    >
       <div className="relative">
         {/* Outer rotating ring */}
         <motion.div
@@ -63,7 +65,7 @@ export const ModernLoadingSpinner: React.FC<ModernLoadingSpinnerProps> = ({
           variants={spinnerVariants}
           animate="animate"
         />
-        
+
         {/* Inner pulsing dot */}
         <motion.div
           className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-2 h-2 bg-current rounded-full ${variantClasses[variant]}`}
@@ -76,10 +78,10 @@ export const ModernLoadingSpinner: React.FC<ModernLoadingSpinnerProps> = ({
       {showProgress && (
         <div className="w-32 bg-gray-200 rounded-full h-2 overflow-hidden">
           <motion.div
-            className={`h-full ${variant === 'primary' ? 'bg-blue-600' : variant === 'secondary' ? 'bg-gray-600' : 'bg-purple-600'}`}
+            className={`h-full ${variant === "primary" ? "bg-blue-600" : variant === "secondary" ? "bg-gray-600" : "bg-purple-600"}`}
             initial={{ width: 0 }}
             animate={{ width: `${Math.min(100, Math.max(0, progress))}%` }}
-            transition={{ duration: 0.3, ease: 'easeOut' }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
           />
         </div>
       )}

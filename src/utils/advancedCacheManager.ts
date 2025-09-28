@@ -6,7 +6,7 @@
 export interface CacheConfig {
   maxSize: number; // Maximum cache size in bytes
   maxAge: number; // Maximum age in milliseconds
-  strategy: 'lru' | 'lfu' | 'fifo'; // Cache eviction strategy
+  strategy: "lru" | "lfu" | "fifo"; // Cache eviction strategy
   enableCompression: boolean;
   enableEncryption: boolean;
   enablePersistence: boolean;
@@ -37,7 +37,7 @@ export interface CacheOptions {
   ttl?: number; // Time to live in milliseconds
   compress?: boolean;
   encrypt?: boolean;
-  priority?: 'high' | 'medium' | 'low';
+  priority?: "high" | "medium" | "low";
 }
 
 class AdvancedCacheManager<T = unknown> {
@@ -51,11 +51,11 @@ class AdvancedCacheManager<T = unknown> {
     this.config = {
       maxSize: 50 * 1024 * 1024, // 50MB
       maxAge: 24 * 60 * 60 * 1000, // 24 hours
-      strategy: 'lru',
+      strategy: "lru",
       enableCompression: true,
       enableEncryption: false,
       enablePersistence: true,
-      ...config
+      ...config,
     };
 
     this.stats = {
@@ -66,7 +66,7 @@ class AdvancedCacheManager<T = unknown> {
       hitRate: 0,
       entryCount: 0,
       oldestEntry: 0,
-      newestEntry: 0
+      newestEntry: 0,
     };
 
     this.initializeCache();
@@ -118,10 +118,10 @@ class AdvancedCacheManager<T = unknown> {
         };
       `;
 
-      const blob = new Blob([workerCode], { type: 'application/javascript' });
+      const blob = new Blob([workerCode], { type: "application/javascript" });
       this.compressionWorker = new Worker(URL.createObjectURL(blob));
     } catch (error) {
-      console.warn('Failed to initialize compression worker:', error);
+      console.warn("Failed to initialize compression worker:", error);
       this.config.enableCompression = false;
     }
   }
@@ -130,22 +130,24 @@ class AdvancedCacheManager<T = unknown> {
     try {
       // Generate a simple encryption key
       const key = await crypto.subtle.generateKey(
-        { name: 'AES-GCM', length: 256 },
+        { name: "AES-GCM", length: 256 },
         true,
-        ['encrypt', 'decrypt']
+        ["encrypt", "decrypt"],
       );
-      
-      const exportedKey = await crypto.subtle.exportKey('raw', key);
-      this.encryptionKey = Array.from(new Uint8Array(exportedKey)).map(b => b.toString(16).padStart(2, '0')).join('');
+
+      const exportedKey = await crypto.subtle.exportKey("raw", key);
+      this.encryptionKey = Array.from(new Uint8Array(exportedKey))
+        .map((b) => b.toString(16).padStart(2, "0"))
+        .join("");
     } catch (error) {
-      console.warn('Failed to initialize encryption:', error);
+      console.warn("Failed to initialize encryption:", error);
       this.config.enableEncryption = false;
     }
   }
 
   private async loadPersistedCache(): Promise<void> {
     try {
-      const persisted = localStorage.getItem('advanced_cache');
+      const persisted = localStorage.getItem("advanced_cache");
       if (persisted) {
         const data = JSON.parse(persisted);
         for (const [key, entry] of Object.entries(data)) {
@@ -154,7 +156,7 @@ class AdvancedCacheManager<T = unknown> {
         this.updateStats();
       }
     } catch (error) {
-      console.warn('Failed to load persisted cache:', error);
+      console.warn("Failed to load persisted cache:", error);
     }
   }
 
@@ -166,9 +168,9 @@ class AdvancedCacheManager<T = unknown> {
       for (const [key, entry] of this.cache.entries()) {
         data[key] = entry;
       }
-      localStorage.setItem('advanced_cache', JSON.stringify(data));
+      localStorage.setItem("advanced_cache", JSON.stringify(data));
     } catch (error) {
-      console.warn('Failed to persist cache:', error);
+      console.warn("Failed to persist cache:", error);
     }
   }
 
@@ -178,7 +180,11 @@ class AdvancedCacheManager<T = unknown> {
     }, 60000); // Cleanup every minute
   }
 
-  public async set(key: string, value: T, options: CacheOptions = {}): Promise<void> {
+  public async set(
+    key: string,
+    value: T,
+    options: CacheOptions = {},
+  ): Promise<void> {
     const now = Date.now();
     // TTL is available in options but not used in this implementation
     const size = this.calculateSize(value);
@@ -193,7 +199,7 @@ class AdvancedCacheManager<T = unknown> {
         processedValue = await this.compress(value);
         compressed = true;
       } catch (error) {
-        console.warn('Compression failed:', error);
+        console.warn("Compression failed:", error);
       }
     }
 
@@ -203,7 +209,7 @@ class AdvancedCacheManager<T = unknown> {
         processedValue = await this.encrypt(processedValue);
         encrypted = true;
       } catch (error) {
-        console.warn('Encryption failed:', error);
+        console.warn("Encryption failed:", error);
       }
     }
 
@@ -214,7 +220,7 @@ class AdvancedCacheManager<T = unknown> {
       accessCount: 0,
       size: this.calculateSize(processedValue),
       compressed,
-      encrypted
+      encrypted,
     };
 
     // Check if we need to evict entries
@@ -229,7 +235,7 @@ class AdvancedCacheManager<T = unknown> {
 
   public async get(key: string): Promise<T | null> {
     const entry = this.cache.get(key);
-    
+
     if (!entry) {
       this.stats.misses++;
       this.updateHitRate();
@@ -258,7 +264,7 @@ class AdvancedCacheManager<T = unknown> {
       try {
         value = await this.decrypt(value);
       } catch (error) {
-        console.warn('Decryption failed:', error);
+        console.warn("Decryption failed:", error);
         return null;
       }
     }
@@ -268,7 +274,7 @@ class AdvancedCacheManager<T = unknown> {
       try {
         value = await this.decompress(value);
       } catch (error) {
-        console.warn('Decompression failed:', error);
+        console.warn("Decompression failed:", error);
         return null;
       }
     }
@@ -279,13 +285,13 @@ class AdvancedCacheManager<T = unknown> {
   public has(key: string): boolean {
     const entry = this.cache.get(key);
     if (!entry) return false;
-    
+
     // Check if entry has expired
     if (Date.now() - entry.timestamp > this.config.maxAge) {
       this.cache.delete(key);
       return false;
     }
-    
+
     return true;
   }
 
@@ -308,7 +314,7 @@ class AdvancedCacheManager<T = unknown> {
       hitRate: 0,
       entryCount: 0,
       oldestEntry: 0,
-      newestEntry: 0
+      newestEntry: 0,
     };
     this.persistCache();
   }
@@ -335,12 +341,12 @@ class AdvancedCacheManager<T = unknown> {
 
   private async compress(value: T): Promise<T> {
     if (!this.compressionWorker) {
-      throw new Error('Compression worker not available');
+      throw new Error("Compression worker not available");
     }
 
     return new Promise((resolve, reject) => {
       const timeout = setTimeout(() => {
-        reject(new Error('Compression timeout'));
+        reject(new Error("Compression timeout"));
       }, 5000);
 
       this.compressionWorker!.onmessage = (e) => {
@@ -352,18 +358,18 @@ class AdvancedCacheManager<T = unknown> {
         }
       };
 
-      this.compressionWorker!.postMessage({ type: 'compress', data: value });
+      this.compressionWorker!.postMessage({ type: "compress", data: value });
     });
   }
 
   private async decompress(value: T): Promise<T> {
     if (!this.compressionWorker) {
-      throw new Error('Compression worker not available');
+      throw new Error("Compression worker not available");
     }
 
     return new Promise((resolve, reject) => {
       const timeout = setTimeout(() => {
-        reject(new Error('Decompression timeout'));
+        reject(new Error("Decompression timeout"));
       }, 5000);
 
       this.compressionWorker!.onmessage = (e) => {
@@ -375,34 +381,36 @@ class AdvancedCacheManager<T = unknown> {
         }
       };
 
-      this.compressionWorker!.postMessage({ type: 'decompress', data: value });
+      this.compressionWorker!.postMessage({ type: "decompress", data: value });
     });
   }
 
   private async encrypt(value: T): Promise<T> {
     if (!this.encryptionKey) {
-      throw new Error('Encryption key not available');
+      throw new Error("Encryption key not available");
     }
 
     try {
       const key = await crypto.subtle.importKey(
-        'raw',
-        new Uint8Array(this.encryptionKey.match(/.{2}/g)!.map(byte => parseInt(byte, 16))),
-        { name: 'AES-GCM' },
+        "raw",
+        new Uint8Array(
+          this.encryptionKey.match(/.{2}/g)!.map((byte) => parseInt(byte, 16)),
+        ),
+        { name: "AES-GCM" },
         false,
-        ['encrypt']
+        ["encrypt"],
       );
 
       const iv = crypto.getRandomValues(new Uint8Array(12));
       const encrypted = await crypto.subtle.encrypt(
-        { name: 'AES-GCM', iv },
+        { name: "AES-GCM", iv },
         key,
-        new TextEncoder().encode(JSON.stringify(value))
+        new TextEncoder().encode(JSON.stringify(value)),
       );
 
       return {
         data: Array.from(new Uint8Array(encrypted)),
-        iv: Array.from(iv)
+        iv: Array.from(iv),
       } as T;
     } catch (error) {
       throw new Error(`Encryption failed: ${error}`);
@@ -411,24 +419,26 @@ class AdvancedCacheManager<T = unknown> {
 
   private async decrypt(value: T): Promise<T> {
     if (!this.encryptionKey) {
-      throw new Error('Encryption key not available');
+      throw new Error("Encryption key not available");
     }
 
     try {
       const { data, iv } = value as { data: string; iv: string };
-      
+
       const key = await crypto.subtle.importKey(
-        'raw',
-        new Uint8Array(this.encryptionKey.match(/.{2}/g)!.map(byte => parseInt(byte, 16))),
-        { name: 'AES-GCM' },
+        "raw",
+        new Uint8Array(
+          this.encryptionKey.match(/.{2}/g)!.map((byte) => parseInt(byte, 16)),
+        ),
+        { name: "AES-GCM" },
         false,
-        ['decrypt']
+        ["decrypt"],
       );
 
       const decrypted = await crypto.subtle.decrypt(
-        { name: 'AES-GCM', iv: new Uint8Array(Buffer.from(iv)) },
+        { name: "AES-GCM", iv: new Uint8Array(Buffer.from(iv)) },
         key,
-        new Uint8Array(Buffer.from(data))
+        new Uint8Array(Buffer.from(data)),
       );
 
       return JSON.parse(new TextDecoder().decode(decrypted));
@@ -441,13 +451,13 @@ class AdvancedCacheManager<T = unknown> {
     let entryToEvict: string | null = null;
 
     switch (this.config.strategy) {
-      case 'lru':
+      case "lru":
         entryToEvict = this.findLRUEntry();
         break;
-      case 'lfu':
+      case "lfu":
         entryToEvict = this.findLFUEntry();
         break;
-      case 'fifo':
+      case "fifo":
         entryToEvict = this.findFIFOEntry();
         break;
     }
@@ -497,8 +507,14 @@ class AdvancedCacheManager<T = unknown> {
 
     for (const entry of this.cache.values()) {
       this.stats.size += entry.size;
-      this.stats.oldestEntry = Math.min(this.stats.oldestEntry, entry.timestamp);
-      this.stats.newestEntry = Math.max(this.stats.newestEntry, entry.timestamp);
+      this.stats.oldestEntry = Math.min(
+        this.stats.oldestEntry,
+        entry.timestamp,
+      );
+      this.stats.newestEntry = Math.max(
+        this.stats.newestEntry,
+        entry.timestamp,
+      );
     }
   }
 
@@ -517,8 +533,8 @@ class AdvancedCacheManager<T = unknown> {
       }
     }
 
-    expiredKeys.forEach(key => this.cache.delete(key));
-    
+    expiredKeys.forEach((key) => this.cache.delete(key));
+
     if (expiredKeys.length > 0) {
       this.updateStats();
       this.persistCache();
@@ -537,28 +553,28 @@ class AdvancedCacheManager<T = unknown> {
 export const apiCache = new AdvancedCacheManager({
   maxSize: 10 * 1024 * 1024, // 10MB
   maxAge: 5 * 60 * 1000, // 5 minutes
-  strategy: 'lru',
+  strategy: "lru",
   enableCompression: true,
   enableEncryption: false,
-  enablePersistence: true
+  enablePersistence: true,
 });
 
 export const imageCache = new AdvancedCacheManager({
   maxSize: 50 * 1024 * 1024, // 50MB
   maxAge: 24 * 60 * 60 * 1000, // 24 hours
-  strategy: 'lru',
+  strategy: "lru",
   enableCompression: true,
   enableEncryption: false,
-  enablePersistence: true
+  enablePersistence: true,
 });
 
 export const dataCache = new AdvancedCacheManager({
   maxSize: 20 * 1024 * 1024, // 20MB
   maxAge: 60 * 60 * 1000, // 1 hour
-  strategy: 'lfu',
+  strategy: "lfu",
   enableCompression: true,
   enableEncryption: true,
-  enablePersistence: true
+  enablePersistence: true,
 });
 
 export default AdvancedCacheManager;

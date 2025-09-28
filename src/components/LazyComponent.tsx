@@ -1,5 +1,5 @@
-import React, { Suspense, lazy, ComponentType, ReactNode } from 'react';
-import { ModernLoadingSpinner } from './ModernLoadingSpinner';
+import React, { Suspense, lazy, ComponentType, ReactNode } from "react";
+import { ModernLoadingSpinner } from "./ModernLoadingSpinner";
 
 interface LazyComponentProps {
   fallback?: ReactNode | (() => ReactNode);
@@ -11,34 +11,44 @@ interface LazyComponentProps {
  * Enhanced Lazy Component with better error handling and performance
  */
 export const createLazyComponent = <P extends object>(
-  importFunc: () => Promise<{ default: ComponentType<P> }>
+  importFunc: () => Promise<{ default: ComponentType<P> }>,
+  _fallback?: ReactNode
 ) => {
   const LazyComponent = lazy(importFunc);
 
-  const LazyComponentWrapper = React.forwardRef<unknown, P & LazyComponentProps>((props, ref) => {
+  const LazyComponentWrapper = React.forwardRef<
+    unknown,
+    P & LazyComponentProps
+  >((props, ref) => {
     const { delay = 0, fallback, ...restProps } = props;
-    
+
     const [show, setShow] = React.useState(delay === 0);
-    
+
     React.useEffect(() => {
-      if (typeof delay === 'number' && delay > 0) {
+      if (typeof delay === "number" && delay > 0) {
         const timer = setTimeout(() => setShow(true), delay);
         return () => clearTimeout(timer);
       }
     }, [delay]);
 
     if (!show) {
-      return <div style={{ minHeight: '200px' }} />;
+      return <div style={{ minHeight: "200px" }} />;
     }
 
     return (
-      <Suspense fallback={typeof fallback === 'function' ? fallback() : (fallback || <ModernLoadingSpinner />)}>
+      <Suspense
+        fallback={
+          typeof fallback === "function"
+            ? fallback()
+            : fallback || <ModernLoadingSpinner />
+        }
+      >
         <LazyComponent {...(restProps as P)} ref={ref as React.Ref<P>} />
       </Suspense>
     );
   });
 
-  LazyComponentWrapper.displayName = 'LazyComponentWrapper';
+  LazyComponentWrapper.displayName = "LazyComponentWrapper";
   return LazyComponentWrapper;
 };
 
@@ -50,9 +60,9 @@ export const LazyWrapper: React.FC<{
   fallback?: ReactNode;
   delay?: number;
   minHeight?: string;
-}> = ({ children, fallback, delay = 0, minHeight = '200px' }) => {
+}> = ({ children, fallback, delay = 0, minHeight = "200px" }) => {
   const [show, setShow] = React.useState(delay === 0);
-  
+
   React.useEffect(() => {
     if (delay > 0) {
       const timer = setTimeout(() => setShow(true), delay);
@@ -80,12 +90,12 @@ export const LazyIntersection: React.FC<{
   rootMargin?: string;
   threshold?: number;
   minHeight?: string;
-}> = ({ 
-  children, 
-  fallback, 
-  rootMargin = '50px 0px', 
+}> = ({
+  children,
+  fallback,
+  rootMargin = "50px 0px",
   threshold = 0.1,
-  minHeight = '200px'
+  minHeight = "200px",
 }) => {
   const [isVisible, setIsVisible] = React.useState(false);
   const [hasLoaded, setHasLoaded] = React.useState(false);
@@ -100,7 +110,7 @@ export const LazyIntersection: React.FC<{
           observer.disconnect();
         }
       },
-      { rootMargin, threshold }
+      { rootMargin, threshold },
     );
 
     if (ref.current) {
@@ -117,9 +127,18 @@ export const LazyIntersection: React.FC<{
           {children}
         </Suspense>
       ) : (
-        fallback || <div style={{ minHeight, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-          <ModernLoadingSpinner />
-        </div>
+        fallback || (
+          <div
+            style={{
+              minHeight,
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            <ModernLoadingSpinner />
+          </div>
+        )
       )}
     </div>
   );
@@ -130,12 +149,12 @@ export const LazyIntersection: React.FC<{
  */
 export const PreloadComponent: React.FC<{
   href: string;
-  as: 'script' | 'style' | 'image' | 'font' | 'fetch';
-  crossOrigin?: 'anonymous' | 'use-credentials';
+  as: "script" | "style" | "image" | "font" | "fetch";
+  crossOrigin?: "anonymous" | "use-credentials";
 }> = ({ href, as, crossOrigin }) => {
   React.useEffect(() => {
-    const link = document.createElement('link');
-    link.rel = 'preload';
+    const link = document.createElement("link");
+    link.rel = "preload";
     link.href = href;
     link.as = as;
     if (crossOrigin) {
@@ -171,21 +190,23 @@ export class LazyErrorBoundary extends React.Component<
   }
 
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    console.error('Lazy component error:', error, errorInfo);
+    console.error("Lazy component error:", error, errorInfo);
   }
 
   render() {
     if (this.state.hasError) {
-      return this.props.fallback || (
-        <div className="p-4 text-center text-red-600">
-          <p>Failed to load component</p>
-          <button 
-            onClick={() => this.setState({ hasError: false })}
-            className="mt-2 px-4 py-2 bg-red-100 hover:bg-red-200 rounded"
-          >
-            Retry
-          </button>
-        </div>
+      return (
+        this.props.fallback || (
+          <div className="p-4 text-center text-red-600">
+            <p>Failed to load component</p>
+            <button
+              onClick={() => this.setState({ hasError: false })}
+              className="mt-2 px-4 py-2 bg-red-100 hover:bg-red-200 rounded"
+            >
+              Retry
+            </button>
+          </div>
+        )
       );
     }
 

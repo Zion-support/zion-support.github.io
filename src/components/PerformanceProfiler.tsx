@@ -1,5 +1,11 @@
-import React, { useState, useEffect, useRef, useCallback } from 'react';
-import { BarChart3, Activity, Zap, TrendingUp, AlertCircle } from 'lucide-react';
+import React, { useState, useEffect, useRef, useCallback } from "react";
+import {
+  BarChart3,
+  Activity,
+  Zap,
+  TrendingUp,
+  AlertCircle,
+} from "lucide-react";
 
 interface PerformanceData {
   timestamp: number;
@@ -34,36 +40,54 @@ interface ComponentPerformance {
 const PerformanceProfiler: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [performanceData, setPerformanceData] = useState<PerformanceData[]>([]);
-  const [componentData, setComponentData] = useState<ComponentPerformance[]>([]);
+  const [componentData, setComponentData] = useState<ComponentPerformance[]>(
+    [],
+  );
   const [isProfiling, setIsProfiling] = useState(false);
-  const [selectedTimeRange, setSelectedTimeRange] = useState<'1m' | '5m' | '15m' | '1h'>('5m');
-  
+  const [selectedTimeRange, setSelectedTimeRange] = useState<
+    "1m" | "5m" | "15m" | "1h"
+  >("5m");
+
   const observerRef = useRef<PerformanceObserver | null>(null);
 
   const collectPerformanceData = useCallback(() => {
     const now = Date.now();
-    
+
     // Get Core Web Vitals
-    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-    const paintEntries = performance.getEntriesByType('paint');
-    const fcpEntry = paintEntries.find(entry => entry.name === 'first-contentful-paint');
-    
+    const navigation = performance.getEntriesByType(
+      "navigation",
+    )[0] as PerformanceNavigationTiming;
+    const paintEntries = performance.getEntriesByType("paint");
+    const fcpEntry = paintEntries.find(
+      (entry) => entry.name === "first-contentful-paint",
+    );
+
     const fcp = fcpEntry ? fcpEntry.startTime : 0;
-    const lcp = performance.getEntriesByName('largest-contentful-paint')[0]?.startTime || performance.now();
-    const fidEntry = performance.getEntriesByName('first-input')[0] as PerformanceEntry & { processingStart?: number };
+    const lcp =
+      performance.getEntriesByName("largest-contentful-paint")[0]?.startTime ||
+      performance.now();
+    const fidEntry = performance.getEntriesByName(
+      "first-input",
+    )[0] as PerformanceEntry & { processingStart?: number };
     const fid = fidEntry?.processingStart || 0;
-    const clsEntry = performance.getEntriesByName('layout-shift')[0] as PerformanceEntry & { value?: number };
+    const clsEntry = performance.getEntriesByName(
+      "layout-shift",
+    )[0] as PerformanceEntry & { value?: number };
     const cls = clsEntry?.value || 0;
-    const ttfb = navigation ? navigation.responseStart - navigation.requestStart : 0;
-    const loadTime = navigation ? navigation.loadEventEnd - navigation.fetchStart : 0;
-    
+    const ttfb = navigation
+      ? navigation.responseStart - navigation.requestStart
+      : 0;
+    const loadTime = navigation
+      ? navigation.loadEventEnd - navigation.fetchStart
+      : 0;
+
     // Get memory usage if available
     const memory = (performance as PerformanceWithMemory).memory;
     const memoryUsage = memory ? memory.usedJSHeapSize / 1024 / 1024 : 0;
-    
+
     // Calculate render time (simplified)
     const renderTime = performance.now();
-    
+
     const newData: PerformanceData = {
       timestamp: now,
       fcp,
@@ -73,14 +97,14 @@ const PerformanceProfiler: React.FC = () => {
       ttfb,
       loadTime,
       memoryUsage,
-      renderTime
+      renderTime,
     };
 
-    setPerformanceData(prev => {
+    setPerformanceData((prev) => {
       const updated = [...prev, newData];
       // Keep only data within selected time range
       const cutoff = now - getTimeRangeMs(selectedTimeRange);
-      return updated.filter(data => data.timestamp > cutoff);
+      return updated.filter((data) => data.timestamp > cutoff);
     });
   }, [selectedTimeRange]);
 
@@ -90,18 +114,20 @@ const PerformanceProfiler: React.FC = () => {
     setComponentData([]);
 
     // Set up performance observer
-    if ('PerformanceObserver' in window) {
+    if ("PerformanceObserver" in window) {
       observerRef.current = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        entries.forEach(entry => {
-          if (entry.entryType === 'measure') {
+        entries.forEach((entry) => {
+          if (entry.entryType === "measure") {
             const measure = entry as PerformanceMeasure;
             updateComponentPerformance(measure.name, measure.duration);
           }
         });
       });
 
-      observerRef.current.observe({ entryTypes: ['measure', 'navigation', 'paint'] });
+      observerRef.current.observe({
+        entryTypes: ["measure", "navigation", "paint"],
+      });
     }
 
     // Start collecting performance data
@@ -134,65 +160,75 @@ const PerformanceProfiler: React.FC = () => {
   }, [isProfiling, startProfiling]);
 
   // Only render in development mode
-  if (process.env.NODE_ENV !== 'development') {
+  if (process.env.NODE_ENV !== "development") {
     return null;
   }
 
-  const updateComponentPerformance = (componentName: string, duration: number) => {
-    setComponentData(prev => {
-      const existing = prev.find(comp => comp.name === componentName);
+  const updateComponentPerformance = (
+    componentName: string,
+    duration: number,
+  ) => {
+    setComponentData((prev) => {
+      const existing = prev.find((comp) => comp.name === componentName);
       if (existing) {
-        return prev.map(comp => 
-          comp.name === componentName 
+        return prev.map((comp) =>
+          comp.name === componentName
             ? {
                 ...comp,
                 renderTime: (comp.renderTime + duration) / 2, // Average
                 updateCount: comp.updateCount + 1,
-                lastUpdate: Date.now()
+                lastUpdate: Date.now(),
               }
-            : comp
+            : comp,
         );
       } else {
-        return [...prev, {
-          name: componentName,
-          renderTime: duration,
-          mountTime: duration,
-          updateCount: 1,
-          lastUpdate: Date.now()
-        }];
+        return [
+          ...prev,
+          {
+            name: componentName,
+            renderTime: duration,
+            mountTime: duration,
+            updateCount: 1,
+            lastUpdate: Date.now(),
+          },
+        ];
       }
     });
   };
 
   const getTimeRangeMs = (range: string): number => {
     switch (range) {
-      case '1m': return 60 * 1000;
-      case '5m': return 5 * 60 * 1000;
-      case '15m': return 15 * 60 * 1000;
-      case '1h': return 60 * 60 * 1000;
-      default: return 5 * 60 * 1000;
+      case "1m":
+        return 60 * 1000;
+      case "5m":
+        return 5 * 60 * 1000;
+      case "15m":
+        return 15 * 60 * 1000;
+      case "1h":
+        return 60 * 60 * 1000;
+      default:
+        return 5 * 60 * 1000;
     }
   };
 
   const getPerformanceScore = (data: PerformanceData): number => {
     // Simplified performance score calculation
     let score = 100;
-    
+
     if (data.fcp > 1800) score -= 20;
     if (data.lcp > 2500) score -= 20;
     if (data.fid > 100) score -= 20;
     if (data.cls > 0.1) score -= 20;
     if (data.ttfb > 800) score -= 20;
-    
+
     return Math.max(0, score);
   };
 
   const getScoreColor = (score: number): string => {
-    if (score >= 90) return 'text-green-500';
-    if (score >= 70) return 'text-yellow-500';
-    return 'text-red-500';
+    if (score >= 90) return "text-green-500";
+    if (score >= 70) return "text-yellow-500";
+    return "text-red-500";
   };
-
 
   const formatTime = (ms: number): string => {
     if (ms < 1000) return `${Math.round(ms)}ms`;
@@ -212,9 +248,13 @@ const PerformanceProfiler: React.FC = () => {
   }
 
   const latestData = performanceData[performanceData.length - 1];
-  const avgScore = performanceData.length > 0 
-    ? performanceData.reduce((sum, data) => sum + getPerformanceScore(data), 0) / performanceData.length 
-    : 0;
+  const avgScore =
+    performanceData.length > 0
+      ? performanceData.reduce(
+          (sum, data) => sum + getPerformanceScore(data),
+          0,
+        ) / performanceData.length
+      : 0;
 
   return (
     <div className="fixed top-4 right-4 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg shadow-xl p-4 max-w-lg z-50">
@@ -237,16 +277,18 @@ const PerformanceProfiler: React.FC = () => {
         <button
           onClick={() => setIsProfiling(!isProfiling)}
           className={`px-3 py-1 rounded text-sm ${
-            isProfiling 
-              ? 'bg-red-600 text-white hover:bg-red-700' 
-              : 'bg-green-600 text-white hover:bg-green-700'
+            isProfiling
+              ? "bg-red-600 text-white hover:bg-red-700"
+              : "bg-green-600 text-white hover:bg-green-700"
           }`}
         >
-          {isProfiling ? 'Stop' : 'Start'} Profiling
+          {isProfiling ? "Stop" : "Start"} Profiling
         </button>
         <select
           value={selectedTimeRange}
-          onChange={(e) => setSelectedTimeRange(e.target.value as '1m' | '5m' | '15m' | '1h')}
+          onChange={(e) =>
+            setSelectedTimeRange(e.target.value as "1m" | "5m" | "15m" | "1h")
+          }
           className="px-2 py-1 border border-gray-300 rounded text-sm"
         >
           <option value="1m">1 minute</option>
@@ -295,17 +337,23 @@ const PerformanceProfiler: React.FC = () => {
           </h4>
           <div className="space-y-1 text-sm">
             <div className="flex justify-between">
-              <span className="text-gray-600 dark:text-gray-400">Average Score:</span>
+              <span className="text-gray-600 dark:text-gray-400">
+                Average Score:
+              </span>
               <span className={getScoreColor(avgScore)}>
                 {Math.round(avgScore)}/100
               </span>
             </div>
             <div className="flex justify-between">
-              <span className="text-gray-600 dark:text-gray-400">Data Points:</span>
+              <span className="text-gray-600 dark:text-gray-400">
+                Data Points:
+              </span>
               <span>{performanceData.length}</span>
             </div>
             <div className="flex justify-between">
-              <span className="text-gray-600 dark:text-gray-400">Duration:</span>
+              <span className="text-gray-600 dark:text-gray-400">
+                Duration:
+              </span>
               <span>{formatTime(performanceData.length * 1000)}</span>
             </div>
           </div>
@@ -351,7 +399,7 @@ const PerformanceProfiler: React.FC = () => {
       <div className="mt-4 pt-3 border-t border-gray-200 dark:border-gray-600">
         <button
           onClick={() => {
-            localStorage.setItem('showPerformanceProfiler', 'false');
+            localStorage.setItem("showPerformanceProfiler", "false");
             setIsVisible(false);
           }}
           className="text-xs text-green-600 hover:text-green-800 dark:text-green-400 dark:hover:text-green-200"

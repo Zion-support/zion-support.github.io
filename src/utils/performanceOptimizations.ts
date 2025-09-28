@@ -66,14 +66,15 @@ class PerformanceOptimizer {
   }
 
   private initializeObservers(): void {
-    if (typeof window === 'undefined') return;
+    if (typeof window === "undefined") return;
 
     // Monitor navigation timing
     const navObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
-        if (entry.entryType === 'navigation') {
-          this.metrics.loadTime = (entry as any).loadEventEnd - (entry as any).fetchStart;
+        if (entry.entryType === "navigation") {
+          this.metrics.loadTime =
+            (entry as any).loadEventEnd - (entry as any).fetchStart;
         }
       });
     });
@@ -82,7 +83,7 @@ class PerformanceOptimizer {
     const paintObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
-        if (entry.entryType === 'paint') {
+        if (entry.entryType === "paint") {
           this.metrics.renderTime = entry.startTime;
         }
       });
@@ -92,23 +93,27 @@ class PerformanceOptimizer {
     const memoryObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
-        if (entry.entryType === 'measure') {
-          const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;
+        if (entry.entryType === "measure") {
+          const memory = (
+            performance as { memory?: { usedJSHeapSize: number } }
+          ).memory;
           if (memory) {
-            this.metrics.memoryUsage = Math.round(memory.usedJSHeapSize / 1024 / 1024);
+            this.metrics.memoryUsage = Math.round(
+              memory.usedJSHeapSize / 1024 / 1024,
+            );
           }
         }
       });
     });
 
     try {
-      navObserver.observe({ entryTypes: ['navigation'] });
-      paintObserver.observe({ entryTypes: ['paint'] });
-      memoryObserver.observe({ entryTypes: ['measure'] });
+      navObserver.observe({ entryTypes: ["navigation"] });
+      paintObserver.observe({ entryTypes: ["paint"] });
+      memoryObserver.observe({ entryTypes: ["measure"] });
 
       this.observers.push(navObserver, paintObserver, memoryObserver);
     } catch (error) {
-      console.warn('Performance observers not supported:', error);
+      console.warn("Performance observers not supported:", error);
     }
   }
 
@@ -118,13 +123,13 @@ class PerformanceOptimizer {
   optimizeImages(): void {
     if (!this.config.enableLazyLoading) return;
 
-    const images = document.querySelectorAll('img[data-src]');
+    const images = document.querySelectorAll("img[data-src]");
     const imageObserver = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           const img = entry.target as HTMLImageElement;
-          img.src = img.dataset.src || '';
-          img.removeAttribute('data-src');
+          img.src = img.dataset.src || "";
+          img.removeAttribute("data-src");
           imageObserver.unobserve(img);
         }
       });
@@ -140,16 +145,16 @@ class PerformanceOptimizer {
     if (!this.config.enablePreloading) return;
 
     const criticalResources = [
-      '/assets/css/main.css',
-      '/assets/js/main.js',
-      '/assets/js/vendor-react.js',
+      "/assets/css/main.css",
+      "/assets/js/main.js",
+      "/assets/js/vendor-react.js",
     ];
 
     criticalResources.forEach((resource) => {
-      const link = document.createElement('link');
-      link.rel = 'preload';
+      const link = document.createElement("link");
+      link.rel = "preload";
       link.href = resource;
-      link.as = resource.endsWith('.css') ? 'style' : 'script';
+      link.as = resource.endsWith(".css") ? "style" : "script";
       document.head.appendChild(link);
     });
   }
@@ -160,13 +165,14 @@ class PerformanceOptimizer {
   enableCaching(): void {
     if (!this.config.enableCaching) return;
 
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/sw.js')
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker
+        .register("/sw.js")
         .then((registration) => {
-          console.log('Service Worker registered:', registration);
+          console.log("Service Worker registered:", registration);
         })
         .catch((error) => {
-          console.error('Service Worker registration failed:', error);
+          console.error("Service Worker registration failed:", error);
         });
     }
   }
@@ -179,9 +185,9 @@ class PerformanceOptimizer {
 
     // Dynamic imports for non-critical components
     const lazyComponents = [
-      'src/components/AdvancedDashboard',
-      'src/components/PerformanceMonitor',
-      'src/components/SystemHealthDashboard',
+      "src/components/AdvancedDashboard",
+      "src/components/PerformanceMonitor",
+      "src/components/SystemHealthDashboard",
     ];
 
     lazyComponents.forEach((component) => {
@@ -216,18 +222,20 @@ Performance Report:
    * Optimize CSS delivery
    */
   optimizeCSSDelivery(): void {
-    const criticalCSS = document.querySelector('style[data-critical]');
+    const criticalCSS = document.querySelector("style[data-critical]");
     if (criticalCSS) {
       // Inline critical CSS is already present
       return;
     }
 
     // Load non-critical CSS asynchronously
-    const nonCriticalCSS = document.querySelectorAll('link[rel="stylesheet"][data-non-critical]');
+    const nonCriticalCSS = document.querySelectorAll(
+      'link[rel="stylesheet"][data-non-critical]',
+    );
     nonCriticalCSS.forEach((link) => {
-      link.setAttribute('media', 'print');
+      link.setAttribute("media", "print");
       (link as HTMLLinkElement).onload = () => {
-        link.setAttribute('media', 'all');
+        link.setAttribute("media", "all");
       };
     });
   }
@@ -237,15 +245,15 @@ Performance Report:
    */
   optimizeJavaScriptExecution(): void {
     // Defer non-critical JavaScript
-    const scripts = document.querySelectorAll('script[data-defer]');
+    const scripts = document.querySelectorAll("script[data-defer]");
     scripts.forEach((script) => {
-      if (!script.hasAttribute('defer')) {
-        script.setAttribute('defer', '');
+      if (!script.hasAttribute("defer")) {
+        script.setAttribute("defer", "");
       }
     });
 
     // Use requestIdleCallback for non-urgent tasks
-    if ('requestIdleCallback' in window) {
+    if ("requestIdleCallback" in window) {
       requestIdleCallback(() => {
         this.optimizeImages();
         this.preloadCriticalResources();
@@ -264,14 +272,14 @@ Performance Report:
    */
   addResourceHints(): void {
     const hints = [
-      { rel: 'dns-prefetch', href: '//fonts.googleapis.com' },
-      { rel: 'dns-prefetch', href: '//cdn.jsdelivr.net' },
-      { rel: 'preconnect', href: 'https://fonts.gstatic.com' },
-      { rel: 'preconnect', href: 'https://www.googletagmanager.com' },
+      { rel: "dns-prefetch", href: "//fonts.googleapis.com" },
+      { rel: "dns-prefetch", href: "//cdn.jsdelivr.net" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com" },
+      { rel: "preconnect", href: "https://www.googletagmanager.com" },
     ];
 
     hints.forEach((hint) => {
-      const link = document.createElement('link');
+      const link = document.createElement("link");
       link.rel = hint.rel;
       link.href = hint.href;
       document.head.appendChild(link);
@@ -283,22 +291,24 @@ Performance Report:
    */
   optimizeThirdPartyScripts(): void {
     // Load analytics scripts after page load
-    const analyticsScripts = document.querySelectorAll('script[data-analytics]');
+    const analyticsScripts = document.querySelectorAll(
+      "script[data-analytics]",
+    );
     analyticsScripts.forEach((script) => {
-      script.setAttribute('defer', '');
+      script.setAttribute("defer", "");
     });
 
     // Use intersection observer for tracking scripts
-    if ('IntersectionObserver' in window) {
-      const trackingElements = document.querySelectorAll('[data-tracking]');
+    if ("IntersectionObserver" in window) {
+      const trackingElements = document.querySelectorAll("[data-tracking]");
       const trackingObserver = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             // Trigger tracking only when element is visible
             const element = entry.target as HTMLElement;
             const event = element.dataset.tracking;
-            if (event && typeof gtag !== 'undefined') {
-              gtag('event', event);
+            if (event && typeof gtag !== "undefined") {
+              gtag("event", event);
             }
           }
         });
@@ -315,20 +325,20 @@ Performance Report:
     if (!this.config.enableCaching) return;
 
     // Cache API responses
-    const cacheName = 'zion-website-cache-v1';
-    
-    if ('caches' in window) {
+    const cacheName = "zion-website-cache-v1";
+
+    if ("caches" in window) {
       caches.open(cacheName).then((cache) => {
         // Cache static assets
         const staticAssets = [
-          '/',
-          '/assets/css/main.css',
-          '/assets/js/main.js',
-          '/manifest.json',
+          "/",
+          "/assets/css/main.css",
+          "/assets/js/main.js",
+          "/manifest.json",
         ];
 
         cache.addAll(staticAssets).catch((error) => {
-          console.warn('Failed to cache static assets:', error);
+          console.warn("Failed to cache static assets:", error);
         });
       });
     }
@@ -338,13 +348,13 @@ Performance Report:
    * Monitor and optimize Core Web Vitals
    */
   monitorCoreWebVitals(): void {
-    if (typeof window === 'undefined') return;
+    if (typeof window === "undefined") return;
 
     // Monitor Largest Contentful Paint (LCP)
     const lcpObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       const lastEntry = entries[entries.length - 1];
-      console.log('LCP:', lastEntry.startTime);
+      console.log("LCP:", lastEntry.startTime);
     });
 
     // Monitor First Input Delay (FID)
@@ -352,7 +362,7 @@ Performance Report:
       const entries = list.getEntries();
       entries.forEach((entry) => {
         const fidEntry = entry as PerformanceEventTiming;
-        console.log('FID:', fidEntry.processingStart - fidEntry.startTime);
+        console.log("FID:", fidEntry.processingStart - fidEntry.startTime);
       });
     });
 
@@ -366,15 +376,15 @@ Performance Report:
           clsValue += clsEntry.value;
         }
       });
-      console.log('CLS:', clsValue);
+      console.log("CLS:", clsValue);
     });
 
     try {
-      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-      fidObserver.observe({ entryTypes: ['first-input'] });
-      clsObserver.observe({ entryTypes: ['layout-shift'] });
+      lcpObserver.observe({ entryTypes: ["largest-contentful-paint"] });
+      fidObserver.observe({ entryTypes: ["first-input"] });
+      clsObserver.observe({ entryTypes: ["layout-shift"] });
     } catch (error) {
-      console.warn('Core Web Vitals monitoring not supported:', error);
+      console.warn("Core Web Vitals monitoring not supported:", error);
     }
   }
 

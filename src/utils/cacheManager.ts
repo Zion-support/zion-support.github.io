@@ -6,7 +6,7 @@
 interface CacheConfig {
   maxSize: number;
   ttl: number; // Time to live in milliseconds
-  storageType: 'memory' | 'sessionStorage' | 'localStorage';
+  storageType: "memory" | "sessionStorage" | "localStorage";
   enableCompression: boolean;
   enableEncryption: boolean;
 }
@@ -41,9 +41,9 @@ export class CacheManager {
     this.config = {
       maxSize: 100,
       ttl: 5 * 60 * 1000, // 5 minutes
-      storageType: 'memory',
+      storageType: "memory",
       enableCompression: false,
-      enableEncryption: false
+      enableEncryption: false,
     };
 
     this.stats = {
@@ -52,7 +52,7 @@ export class CacheManager {
       size: 0,
       maxSize: this.config.maxSize,
       hitRate: 0,
-      memoryUsage: 0
+      memoryUsage: 0,
     };
 
     this.startCleanupInterval();
@@ -77,7 +77,7 @@ export class CacheManager {
       value,
       timestamp: Date.now(),
       ttl: customTtl || this.config.ttl,
-      hits: 0
+      hits: 0,
     };
 
     // Handle compression
@@ -188,13 +188,13 @@ export class CacheManager {
   private evictOldest(): void {
     const entries = Array.from(this.cache.entries());
     entries.sort(([, a], [, b]) => a.timestamp - b.timestamp);
-    
+
     // Remove oldest 10% of entries
     const toRemove = Math.ceil(entries.length * 0.1);
     for (let i = 0; i < toRemove; i++) {
       this.cache.delete(entries[i][0]);
     }
-    
+
     this.stats.size = this.cache.size;
   }
 
@@ -219,8 +219,8 @@ export class CacheManager {
       }
     }
 
-    expiredKeys.forEach(key => this.cache.delete(key));
-    
+    expiredKeys.forEach((key) => this.cache.delete(key));
+
     if (expiredKeys.length > 0) {
       this.stats.size = this.cache.size;
       this.saveToStorage();
@@ -252,31 +252,37 @@ export class CacheManager {
   }
 
   private saveToStorage(): void {
-    if (this.config.storageType === 'memory') return;
+    if (this.config.storageType === "memory") return;
 
     try {
       const data = Array.from(this.cache.entries());
-      const storage = this.config.storageType === 'localStorage' ? localStorage : sessionStorage;
-      storage.setItem('cache_data', JSON.stringify(data));
+      const storage =
+        this.config.storageType === "localStorage"
+          ? localStorage
+          : sessionStorage;
+      storage.setItem("cache_data", JSON.stringify(data));
     } catch (error) {
-      console.warn('Failed to save cache to storage:', error);
+      console.warn("Failed to save cache to storage:", error);
     }
   }
 
   private loadFromStorage(): void {
-    if (this.config.storageType === 'memory') return;
+    if (this.config.storageType === "memory") return;
 
     try {
-      const storage = this.config.storageType === 'localStorage' ? localStorage : sessionStorage;
-      const data = storage.getItem('cache_data');
-      
+      const storage =
+        this.config.storageType === "localStorage"
+          ? localStorage
+          : sessionStorage;
+      const data = storage.getItem("cache_data");
+
       if (data) {
         const entries: Array<[string, CacheEntry]> = JSON.parse(data);
         this.cache = new Map(entries);
         this.stats.size = this.cache.size;
       }
     } catch (error) {
-      console.warn('Failed to load cache from storage:', error);
+      console.warn("Failed to load cache from storage:", error);
     }
   }
 
@@ -292,12 +298,12 @@ export class CacheManager {
 export const cacheManager = CacheManager.getInstance();
 
 // Auto-configure for production
-if (typeof window !== 'undefined') {
+if (typeof window !== "undefined") {
   cacheManager.configure({
     maxSize: 200,
     ttl: 10 * 60 * 1000, // 10 minutes
-    storageType: 'localStorage',
+    storageType: "localStorage",
     enableCompression: true,
-    enableEncryption: false
+    enableEncryption: false,
   });
 }

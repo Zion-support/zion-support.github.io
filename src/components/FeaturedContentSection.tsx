@@ -1,23 +1,23 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 
 const FeaturedContentSection: React.FC = () => {
   const features = [
     {
-      title: 'Advanced Analytics',
-      description: 'Get insights with our powerful analytics dashboard.',
-      icon: '📊'
+      title: "Advanced Analytics",
+      description: "Get insights with our powerful analytics dashboard.",
+      icon: "📊",
     },
     {
-      title: 'Secure Platform',
-      description: 'Enterprise-grade security for your peace of mind.',
-      icon: '🔒'
+      title: "Secure Platform",
+      description: "Enterprise-grade security for your peace of mind.",
+      icon: "🔒",
     },
     {
-      title: '24/7 Support',
-      description: 'Round-the-clock support from our expert team.',
-      icon: '🛠️'
-    }
+      title: "24/7 Support",
+      description: "Round-the-clock support from our expert team.",
+      icon: "🛠️",
+    },
   ];
 
   return (
@@ -41,7 +41,9 @@ const FeaturedContentSection: React.FC = () => {
               className="text-center p-6 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow"
             >
               <div className="text-4xl mb-4">{feature.icon}</div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">{feature.title}</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                {feature.title}
+              </h3>
               <p className="text-gray-600">{feature.description}</p>
             </motion.div>
           ))}

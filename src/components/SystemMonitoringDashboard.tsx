@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { useErrorHandler } from '../utils/advancedErrorHandling';
+import React, { useState, useEffect, useCallback } from "react";
+import { useErrorHandler } from "../utils/advancedErrorHandling";
 
 interface SystemMetrics {
   performance: {
@@ -23,43 +23,53 @@ interface SystemMetrics {
 
 export const SystemMonitoringDashboard: React.FC = () => {
   const [metrics, setMetrics] = useState<SystemMetrics>({
-    performance: { loadTime: 0, memoryUsage: 0, cpuUsage: 0, networkLatency: 0 },
+    performance: {
+      loadTime: 0,
+      memoryUsage: 0,
+      cpuUsage: 0,
+      networkLatency: 0,
+    },
     errors: { total: 0, unresolved: 0, critical: 0 },
     users: { active: 0, total: 0, new: 0 },
-    uptime: 0
+    uptime: 0,
   });
-  
+
   const [isVisible, setIsVisible] = useState(false);
   const [refreshInterval, setRefreshInterval] = useState(5000);
   const { getStats } = useErrorHandler();
 
   const updateMetrics = useCallback(() => {
     // Performance metrics
-    const performance = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-    const loadTime = performance ? performance.loadEventEnd - performance.loadEventStart : 0;
-    
+    const performance = performance.getEntriesByType(
+      "navigation",
+    )[0] as PerformanceNavigationTiming;
+    const loadTime = performance
+      ? performance.loadEventEnd - performance.loadEventStart
+      : 0;
+
     // Memory usage (if available)
     const memoryInfo = (performance as any).memory || {};
-    const memoryUsage = memoryInfo.usedJSHeapSize / memoryInfo.totalJSHeapSize * 100 || 0;
-    
+    const memoryUsage =
+      (memoryInfo.usedJSHeapSize / memoryInfo.totalJSHeapSize) * 100 || 0;
+
     // Error stats
     const errorStats = getStats();
-    
+
     // Update metrics
-    setMetrics(prev => ({
+    setMetrics((prev) => ({
       ...prev,
       performance: {
         loadTime,
         memoryUsage,
         cpuUsage: Math.random() * 100, // Simulated
-        networkLatency: Math.random() * 200
+        networkLatency: Math.random() * 200,
       },
       errors: {
         total: errorStats.total,
         unresolved: errorStats.unresolved,
-        critical: errorStats.bySeverity.critical || 0
+        critical: errorStats.bySeverity.critical || 0,
       },
-      uptime: Date.now() - performance.timing.navigationStart
+      uptime: Date.now() - performance.timing.navigationStart,
     }));
   }, [getStats]);
 
@@ -74,22 +84,22 @@ export const SystemMonitoringDashboard: React.FC = () => {
   // Keyboard shortcut to toggle dashboard
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.ctrlKey && event.shiftKey && event.key === 'M') {
+      if (event.ctrlKey && event.shiftKey && event.key === "M") {
         event.preventDefault();
-        setIsVisible(prev => !prev);
+        setIsVisible((prev) => !prev);
       }
     };
 
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
   }, []);
 
   if (!isVisible) return null;
 
   const getStatusColor = (value: number, thresholds: [number, number]) => {
-    if (value <= thresholds[0]) return 'text-green-500';
-    if (value <= thresholds[1]) return 'text-yellow-500';
-    return 'text-red-500';
+    if (value <= thresholds[0]) return "text-green-500";
+    if (value <= thresholds[1]) return "text-yellow-500";
+    return "text-red-500";
   };
 
   const formatUptime = (ms: number) => {
@@ -97,7 +107,7 @@ export const SystemMonitoringDashboard: React.FC = () => {
     const minutes = Math.floor(seconds / 60);
     const hours = Math.floor(minutes / 60);
     const days = Math.floor(hours / 24);
-    
+
     if (days > 0) return `${days}d ${hours % 24}h`;
     if (hours > 0) return `${hours}h ${minutes % 60}m`;
     if (minutes > 0) return `${minutes}m ${seconds % 60}s`;
@@ -112,10 +122,12 @@ export const SystemMonitoringDashboard: React.FC = () => {
         </h3>
         <div className="flex gap-2">
           <button
-            onClick={() => setRefreshInterval(prev => prev === 5000 ? 1000 : 5000)}
+            onClick={() =>
+              setRefreshInterval((prev) => (prev === 5000 ? 1000 : 5000))
+            }
             className="text-xs px-2 py-1 bg-blue-500 text-white rounded hover:bg-blue-600"
           >
-            {refreshInterval === 5000 ? 'Fast' : 'Slow'}
+            {refreshInterval === 5000 ? "Fast" : "Slow"}
           </button>
           <button
             onClick={() => setIsVisible(false)}
@@ -135,25 +147,45 @@ export const SystemMonitoringDashboard: React.FC = () => {
           <div className="grid grid-cols-2 gap-2 text-xs">
             <div className="flex justify-between">
               <span>Load Time:</span>
-              <span className={getStatusColor(metrics.performance.loadTime, [1000, 3000])}>
+              <span
+                className={getStatusColor(
+                  metrics.performance.loadTime,
+                  [1000, 3000],
+                )}
+              >
                 {metrics.performance.loadTime.toFixed(0)}ms
               </span>
             </div>
             <div className="flex justify-between">
               <span>Memory:</span>
-              <span className={getStatusColor(metrics.performance.memoryUsage, [70, 90])}>
+              <span
+                className={getStatusColor(
+                  metrics.performance.memoryUsage,
+                  [70, 90],
+                )}
+              >
                 {metrics.performance.memoryUsage.toFixed(1)}%
               </span>
             </div>
             <div className="flex justify-between">
               <span>CPU:</span>
-              <span className={getStatusColor(metrics.performance.cpuUsage, [70, 90])}>
+              <span
+                className={getStatusColor(
+                  metrics.performance.cpuUsage,
+                  [70, 90],
+                )}
+              >
                 {metrics.performance.cpuUsage.toFixed(1)}%
               </span>
             </div>
             <div className="flex justify-between">
               <span>Latency:</span>
-              <span className={getStatusColor(metrics.performance.networkLatency, [100, 300])}>
+              <span
+                className={getStatusColor(
+                  metrics.performance.networkLatency,
+                  [100, 300],
+                )}
+              >
                 {metrics.performance.networkLatency.toFixed(0)}ms
               </span>
             </div>
@@ -174,13 +206,21 @@ export const SystemMonitoringDashboard: React.FC = () => {
             </div>
             <div className="flex justify-between">
               <span>Unresolved:</span>
-              <span className={getStatusColor(metrics.errors.unresolved, [5, 20])}>
+              <span
+                className={getStatusColor(metrics.errors.unresolved, [5, 20])}
+              >
                 {metrics.errors.unresolved}
               </span>
             </div>
             <div className="flex justify-between">
               <span>Critical:</span>
-              <span className={metrics.errors.critical > 0 ? 'text-red-500' : 'text-green-500'}>
+              <span
+                className={
+                  metrics.errors.critical > 0
+                    ? "text-red-500"
+                    : "text-green-500"
+                }
+              >
                 {metrics.errors.critical}
               </span>
             </div>
@@ -220,10 +260,14 @@ export const SystemMonitoringDashboard: React.FC = () => {
             </button>
             <button
               onClick={() => {
-                if ('serviceWorker' in navigator) {
-                  navigator.serviceWorker.getRegistrations().then(registrations => {
-                    registrations.forEach(registration => registration.update());
-                  });
+                if ("serviceWorker" in navigator) {
+                  navigator.serviceWorker
+                    .getRegistrations()
+                    .then((registrations) => {
+                      registrations.forEach((registration) =>
+                        registration.update(),
+                      );
+                    });
                 }
               }}
               className="text-xs px-2 py-1 bg-green-500 text-white rounded hover:bg-green-600"

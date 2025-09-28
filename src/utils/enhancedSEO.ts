@@ -34,21 +34,27 @@ export interface SEOReport {
 }
 
 export interface SEOIssue {
-  type: 'error' | 'warning' | 'info';
-  category: 'title' | 'meta' | 'content' | 'structure' | 'performance' | 'accessibility';
+  type: "error" | "warning" | "info";
+  category:
+    | "title"
+    | "meta"
+    | "content"
+    | "structure"
+    | "performance"
+    | "accessibility";
   message: string;
   element?: string;
   suggestion?: string;
-  impact: 'high' | 'medium' | 'low';
+  impact: "high" | "medium" | "low";
 }
 
 export interface SEORecommendation {
-  type: 'critical' | 'warning' | 'info';
+  type: "critical" | "warning" | "info";
   title: string;
   description: string;
-  impact: 'high' | 'medium' | 'low';
-  effort: 'low' | 'medium' | 'high';
-  category: 'content' | 'technical' | 'performance' | 'user-experience';
+  impact: "high" | "medium" | "low";
+  effort: "low" | "medium" | "high";
+  category: "content" | "technical" | "performance" | "user-experience";
   implementation: string;
 }
 
@@ -92,7 +98,7 @@ export class EnhancedSEO {
     this.setupAccessibilityChecks();
 
     this.isInitialized = true;
-    console.log('Enhanced SEO system initialized');
+    console.log("Enhanced SEO system initialized");
   }
 
   public updatePageSEO(config: SEOConfig): void {
@@ -109,61 +115,70 @@ export class EnhancedSEO {
     this.updateStructuredData(config.structuredData);
     this.updateBreadcrumbs(config.breadcrumbs);
     this.updateFAQ(config.faq);
-    
+
     // Generate and store SEO report
     this.generateSEOReport();
   }
 
   private updateTitle(title: string): void {
     document.title = title;
-    
+
     // Update Open Graph title if not explicitly set
     if (!this.config?.ogTitle) {
-      this.updateMetaTag('og:title', title);
+      this.updateMetaTag("og:title", title);
     }
   }
 
   private updateMetaDescription(description: string): void {
-    this.updateMetaTag('description', description);
-    
+    this.updateMetaTag("description", description);
+
     // Update Open Graph description if not explicitly set
     if (!this.config?.ogDescription) {
-      this.updateMetaTag('og:description', description);
+      this.updateMetaTag("og:description", description);
     }
   }
 
   private updateKeywords(keywords: string[]): void {
-    const keywordsString = keywords.join(', ');
-    this.updateMetaTag('keywords', keywordsString);
+    const keywordsString = keywords.join(", ");
+    this.updateMetaTag("keywords", keywordsString);
   }
 
   private updateOpenGraph(config: SEOConfig): void {
     const ogTags = [
-      { property: 'og:title', content: config.ogTitle || config.title },
-      { property: 'og:description', content: config.ogDescription || config.description },
-      { property: 'og:image', content: config.ogImage },
-      { property: 'og:type', content: config.ogType || 'website' },
-      { property: 'og:url', content: config.ogUrl || window.location.href }
+      { property: "og:title", content: config.ogTitle || config.title },
+      {
+        property: "og:description",
+        content: config.ogDescription || config.description,
+      },
+      { property: "og:image", content: config.ogImage },
+      { property: "og:type", content: config.ogType || "website" },
+      { property: "og:url", content: config.ogUrl || window.location.href },
     ];
 
-    ogTags.forEach(tag => {
+    ogTags.forEach((tag) => {
       if (tag.content) {
-        this.updateMetaTag(tag.property, tag.content, 'property');
+        this.updateMetaTag(tag.property, tag.content, "property");
       }
     });
   }
 
   private updateTwitterCard(config: SEOConfig): void {
     const twitterTags = [
-      { name: 'twitter:card', content: config.twitterCard || 'summary_large_image' },
-      { name: 'twitter:site', content: config.twitterSite },
-      { name: 'twitter:creator', content: config.twitterCreator },
-      { name: 'twitter:title', content: config.ogTitle || config.title },
-      { name: 'twitter:description', content: config.ogDescription || config.description },
-      { name: 'twitter:image', content: config.ogImage }
+      {
+        name: "twitter:card",
+        content: config.twitterCard || "summary_large_image",
+      },
+      { name: "twitter:site", content: config.twitterSite },
+      { name: "twitter:creator", content: config.twitterCreator },
+      { name: "twitter:title", content: config.ogTitle || config.title },
+      {
+        name: "twitter:description",
+        content: config.ogDescription || config.description,
+      },
+      { name: "twitter:image", content: config.ogImage },
     ];
 
-    twitterTags.forEach(tag => {
+    twitterTags.forEach((tag) => {
       if (tag.content) {
         this.updateMetaTag(tag.name, tag.content);
       }
@@ -172,59 +187,69 @@ export class EnhancedSEO {
 
   private updateCanonical(canonical?: string): void {
     if (canonical) {
-      this.updateLinkTag('canonical', canonical);
+      this.updateLinkTag("canonical", canonical);
     }
   }
 
   private updateRobots(robots?: string): void {
     if (robots) {
-      this.updateMetaTag('robots', robots);
+      this.updateMetaTag("robots", robots);
     }
   }
 
   private updateLanguage(language?: string): void {
     if (language) {
       document.documentElement.lang = language;
-      this.updateMetaTag('language', language);
+      this.updateMetaTag("language", language);
     }
   }
 
-  private updateAlternateLanguages(alternateLanguages?: Array<{ hreflang: string; href: string }>): void {
+  private updateAlternateLanguages(
+    alternateLanguages?: Array<{ hreflang: string; href: string }>,
+  ): void {
     if (alternateLanguages) {
-      alternateLanguages.forEach(alt => {
-        this.updateLinkTag('alternate', alt.href, { hreflang: alt.hreflang });
+      alternateLanguages.forEach((alt) => {
+        this.updateLinkTag("alternate", alt.href, { hreflang: alt.hreflang });
       });
     }
   }
 
-  private updateMetaTag(name: string, content: string, attribute: 'name' | 'property' = 'name'): void {
+  private updateMetaTag(
+    name: string,
+    content: string,
+    attribute: "name" | "property" = "name",
+  ): void {
     let meta = this.metaTags.get(name);
-    
+
     if (!meta) {
-      meta = document.createElement('meta');
+      meta = document.createElement("meta");
       meta.setAttribute(attribute, name);
       document.head.appendChild(meta);
       this.metaTags.set(name, meta);
     }
-    
+
     meta.content = content;
   }
 
-  private updateLinkTag(rel: string, href: string, additionalAttributes?: Record<string, string>): void {
+  private updateLinkTag(
+    rel: string,
+    href: string,
+    additionalAttributes?: Record<string, string>,
+  ): void {
     const key = `${rel}_${href}`;
     let link = this.linkTags.get(key);
-    
+
     if (!link) {
-      link = document.createElement('link');
+      link = document.createElement("link");
       link.rel = rel;
       link.href = href;
-      
+
       if (additionalAttributes) {
         Object.entries(additionalAttributes).forEach(([attr, value]) => {
           link!.setAttribute(attr, value);
         });
       }
-      
+
       document.head.appendChild(link);
       this.linkTags.set(key, link);
     } else {
@@ -234,13 +259,13 @@ export class EnhancedSEO {
 
   private updateStructuredData(structuredData?: unknown[]): void {
     // Remove existing structured data
-    this.structuredDataElements.forEach(element => element.remove());
+    this.structuredDataElements.forEach((element) => element.remove());
     this.structuredDataElements = [];
 
     if (structuredData) {
-      structuredData.forEach(data => {
-        const script = document.createElement('script');
-        script.type = 'application/ld+json';
+      structuredData.forEach((data) => {
+        const script = document.createElement("script");
+        script.type = "application/ld+json";
         script.textContent = JSON.stringify(data);
         document.head.appendChild(script);
         this.structuredDataElements.push(script);
@@ -248,17 +273,19 @@ export class EnhancedSEO {
     }
   }
 
-  private updateBreadcrumbs(breadcrumbs?: Array<{ name: string; url: string }>): void {
+  private updateBreadcrumbs(
+    breadcrumbs?: Array<{ name: string; url: string }>,
+  ): void {
     if (breadcrumbs) {
       const structuredData = {
-        '@context': 'https://schema.org',
-        '@type': 'BreadcrumbList',
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
         itemListElement: breadcrumbs.map((crumb, index) => ({
-          '@type': 'ListItem',
+          "@type": "ListItem",
           position: index + 1,
           name: crumb.name,
-          item: crumb.url
-        }))
+          item: crumb.url,
+        })),
       };
 
       this.updateStructuredData([structuredData]);
@@ -268,16 +295,16 @@ export class EnhancedSEO {
   private updateFAQ(faq?: Array<{ question: string; answer: string }>): void {
     if (faq) {
       const structuredData = {
-        '@context': 'https://schema.org',
-        '@type': 'FAQPage',
-        mainEntity: faq.map(item => ({
-          '@type': 'Question',
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: faq.map((item) => ({
+          "@type": "Question",
           name: item.question,
           acceptedAnswer: {
-            '@type': 'Answer',
-            text: item.answer
-          }
-        }))
+            "@type": "Answer",
+            text: item.answer,
+          },
+        })),
       };
 
       this.updateStructuredData([structuredData]);
@@ -287,12 +314,12 @@ export class EnhancedSEO {
   private setupMetaTagManagement(): void {
     // Monitor meta tag changes
     const observer = new MutationObserver((mutations) => {
-      mutations.forEach(mutation => {
-        if (mutation.type === 'childList') {
-          mutation.addedNodes.forEach(node => {
+      mutations.forEach((mutation) => {
+        if (mutation.type === "childList") {
+          mutation.addedNodes.forEach((node) => {
             if (node.nodeType === Node.ELEMENT_NODE) {
               const element = node as Element;
-              if (element.tagName === 'META') {
+              if (element.tagName === "META") {
                 this.validateMetaTag(element as HTMLMetaElement);
               }
             }
@@ -306,35 +333,50 @@ export class EnhancedSEO {
 
   private setupStructuredData(): void {
     // Validate existing structured data
-    const existingScripts = document.querySelectorAll('script[type="application/ld+json"]');
-    existingScripts.forEach(script => {
+    const existingScripts = document.querySelectorAll(
+      'script[type="application/ld+json"]',
+    );
+    existingScripts.forEach((script) => {
       try {
-        const data = JSON.parse(script.textContent || '');
+        const data = JSON.parse(script.textContent || "");
         this.validateStructuredData(data);
       } catch (error) {
-        console.warn('Invalid structured data found:', error);
+        console.warn("Invalid structured data found:", error);
       }
     });
   }
 
   private setupPerformanceMonitoring(): void {
     // Monitor Core Web Vitals for SEO impact
-    if ('PerformanceObserver' in window) {
+    if ("PerformanceObserver" in window) {
       try {
         const observer = new PerformanceObserver((list) => {
-          list.getEntries().forEach(entry => {
-            if (entry.entryType === 'largest-contentful-paint') {
-              this.trackSEOMetric('lcp', entry.startTime);
-            } else if (entry.entryType === 'first-input') {
-              this.trackSEOMetric('fid', (entry as PerformanceEntry & { processingStart?: number }).processingStart! - entry.startTime);
-            } else if (entry.entryType === 'layout-shift') {
-              this.trackSEOMetric('cls', (entry as PerformanceEntry & { value?: number }).value!);
+          list.getEntries().forEach((entry) => {
+            if (entry.entryType === "largest-contentful-paint") {
+              this.trackSEOMetric("lcp", entry.startTime);
+            } else if (entry.entryType === "first-input") {
+              this.trackSEOMetric(
+                "fid",
+                (entry as PerformanceEntry & { processingStart?: number })
+                  .processingStart! - entry.startTime,
+              );
+            } else if (entry.entryType === "layout-shift") {
+              this.trackSEOMetric(
+                "cls",
+                (entry as PerformanceEntry & { value?: number }).value!,
+              );
             }
           });
         });
-        observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
+        observer.observe({
+          entryTypes: [
+            "largest-contentful-paint",
+            "first-input",
+            "layout-shift",
+          ],
+        });
       } catch (e) {
-        console.warn('Performance monitoring for SEO not supported:', e);
+        console.warn("Performance monitoring for SEO not supported:", e);
       }
     }
   }
@@ -345,22 +387,26 @@ export class EnhancedSEO {
   }
 
   private validateMetaTag(meta: HTMLMetaElement): void {
-    const name = meta.getAttribute('name') || meta.getAttribute('property');
-    const content = meta.getAttribute('content');
+    const name = meta.getAttribute("name") || meta.getAttribute("property");
+    const content = meta.getAttribute("content");
 
     if (!name || !content) return;
 
     switch (name) {
-      case 'description':
+      case "description":
         if (content.length < 120) {
-          console.warn('Meta description is too short (recommended: 120-160 characters)');
+          console.warn(
+            "Meta description is too short (recommended: 120-160 characters)",
+          );
         } else if (content.length > 160) {
-          console.warn('Meta description is too long (recommended: 120-160 characters)');
+          console.warn(
+            "Meta description is too long (recommended: 120-160 characters)",
+          );
         }
         break;
-      case 'keywords':
-        if (content.split(',').length > 10) {
-          console.warn('Too many keywords (recommended: 5-10 keywords)');
+      case "keywords":
+        if (content.split(",").length > 10) {
+          console.warn("Too many keywords (recommended: 5-10 keywords)");
         }
         break;
     }
@@ -369,49 +415,57 @@ export class EnhancedSEO {
   private validateStructuredData(data: unknown): void {
     // Basic validation for common structured data types
     const structuredData = data as Record<string, unknown>;
-    if (structuredData['@type'] && structuredData['@context']) {
-      console.log(`Valid structured data found: ${structuredData['@type']}`);
+    if (structuredData["@type"] && structuredData["@context"]) {
+      console.log(`Valid structured data found: ${structuredData["@type"]}`);
     } else {
-      console.warn('Invalid structured data: missing @type or @context');
+      console.warn("Invalid structured data: missing @type or @context");
     }
   }
 
   private trackSEOMetric(metric: string, value: number): void {
     // Send SEO metrics to analytics
-    if (typeof fetch !== 'undefined') {
-      fetch('/api/seo-metrics', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ metric, value, timestamp: Date.now() })
-      }).catch(error => console.warn('Failed to send SEO metric:', error));
+    if (typeof fetch !== "undefined") {
+      fetch("/api/seo-metrics", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ metric, value, timestamp: Date.now() }),
+      }).catch((error) => console.warn("Failed to send SEO metric:", error));
     }
   }
 
   private checkAccessibilityForSEO(): void {
     // Check for images without alt text
-    const imagesWithoutAlt = document.querySelectorAll('img:not([alt])');
+    const imagesWithoutAlt = document.querySelectorAll("img:not([alt])");
     if (imagesWithoutAlt.length > 0) {
-      console.warn(`Found ${imagesWithoutAlt.length} images without alt text - this affects SEO`);
+      console.warn(
+        `Found ${imagesWithoutAlt.length} images without alt text - this affects SEO`,
+      );
     }
 
     // Check heading structure with a small delay to allow React to render
     setTimeout(() => {
-      const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+      const headings = document.querySelectorAll("h1, h2, h3, h4, h5, h6");
       let hasH1 = false;
-      headings.forEach(heading => {
-        if (heading.tagName === 'H1') hasH1 = true;
+      headings.forEach((heading) => {
+        if (heading.tagName === "H1") hasH1 = true;
       });
 
       if (!hasH1) {
-        console.warn('No H1 tag found - this affects SEO');
+        console.warn("No H1 tag found - this affects SEO");
       }
     }, 100);
 
     // Check for internal links
-    const internalLinks = document.querySelectorAll('a[href^="/"], a[href^="./"]');
-    const externalLinks = document.querySelectorAll('a[href^="http"]:not([href*="' + window.location.hostname + '"])');
-    
-    console.log(`Found ${internalLinks.length} internal links and ${externalLinks.length} external links`);
+    const internalLinks = document.querySelectorAll(
+      'a[href^="/"], a[href^="./"]',
+    );
+    const externalLinks = document.querySelectorAll(
+      'a[href^="http"]:not([href*="' + window.location.hostname + '"])',
+    );
+
+    console.log(
+      `Found ${internalLinks.length} internal links and ${externalLinks.length} external links`,
+    );
   }
 
   public generateSEOReport(): SEOReport {
@@ -427,7 +481,7 @@ export class EnhancedSEO {
       score,
       issues,
       recommendations,
-      metrics
+      metrics,
     };
   }
 
@@ -438,28 +492,28 @@ export class EnhancedSEO {
     const title = document.title;
     if (!title) {
       issues.push({
-        type: 'error',
-        category: 'title',
-        message: 'Page title is missing',
-        impact: 'high'
+        type: "error",
+        category: "title",
+        message: "Page title is missing",
+        impact: "high",
       });
     } else if (title.length < 30) {
       issues.push({
-        type: 'warning',
-        category: 'title',
-        message: 'Page title is too short',
-        element: 'title',
-        suggestion: 'Add more descriptive text to the title',
-        impact: 'medium'
+        type: "warning",
+        category: "title",
+        message: "Page title is too short",
+        element: "title",
+        suggestion: "Add more descriptive text to the title",
+        impact: "medium",
       });
     } else if (title.length > 60) {
       issues.push({
-        type: 'warning',
-        category: 'title',
-        message: 'Page title is too long',
-        element: 'title',
-        suggestion: 'Shorten the title to under 60 characters',
-        impact: 'medium'
+        type: "warning",
+        category: "title",
+        message: "Page title is too long",
+        element: "title",
+        suggestion: "Shorten the title to under 60 characters",
+        impact: "medium",
       });
     }
 
@@ -467,74 +521,74 @@ export class EnhancedSEO {
     const metaDescription = document.querySelector('meta[name="description"]');
     if (!metaDescription) {
       issues.push({
-        type: 'error',
-        category: 'meta',
-        message: 'Meta description is missing',
-        impact: 'high'
+        type: "error",
+        category: "meta",
+        message: "Meta description is missing",
+        impact: "high",
       });
     } else {
-      const content = metaDescription.getAttribute('content') || '';
+      const content = metaDescription.getAttribute("content") || "";
       if (content.length < 120) {
         issues.push({
-          type: 'warning',
-          category: 'meta',
-          message: 'Meta description is too short',
+          type: "warning",
+          category: "meta",
+          message: "Meta description is too short",
           element: 'meta[name="description"]',
-          suggestion: 'Expand the description to 120-160 characters',
-          impact: 'medium'
+          suggestion: "Expand the description to 120-160 characters",
+          impact: "medium",
         });
       } else if (content.length > 160) {
         issues.push({
-          type: 'warning',
-          category: 'meta',
-          message: 'Meta description is too long',
+          type: "warning",
+          category: "meta",
+          message: "Meta description is too long",
           element: 'meta[name="description"]',
-          suggestion: 'Shorten the description to 120-160 characters',
-          impact: 'medium'
+          suggestion: "Shorten the description to 120-160 characters",
+          impact: "medium",
         });
       }
     }
 
     // Check headings with delay to allow React rendering
-    const h1Tags = document.querySelectorAll('h1');
+    const h1Tags = document.querySelectorAll("h1");
     if (h1Tags.length === 0) {
       // Only add as warning in test environments, not error
-      if (process.env.NODE_ENV === 'test') {
+      if (process.env.NODE_ENV === "test") {
         issues.push({
-          type: 'warning',
-          category: 'structure',
-          message: 'No H1 tag found (may be due to test environment)',
-          impact: 'medium'
+          type: "warning",
+          category: "structure",
+          message: "No H1 tag found (may be due to test environment)",
+          impact: "medium",
         });
       } else {
         issues.push({
-          type: 'error',
-          category: 'structure',
-          message: 'No H1 tag found',
-          impact: 'high'
+          type: "error",
+          category: "structure",
+          message: "No H1 tag found",
+          impact: "high",
         });
       }
     } else if (h1Tags.length > 1) {
       issues.push({
-        type: 'warning',
-        category: 'structure',
-        message: 'Multiple H1 tags found',
-        element: 'h1',
-        suggestion: 'Use only one H1 tag per page',
-        impact: 'medium'
+        type: "warning",
+        category: "structure",
+        message: "Multiple H1 tags found",
+        element: "h1",
+        suggestion: "Use only one H1 tag per page",
+        impact: "medium",
       });
     }
 
     // Check images without alt text
-    const imagesWithoutAlt = document.querySelectorAll('img:not([alt])');
+    const imagesWithoutAlt = document.querySelectorAll("img:not([alt])");
     if (imagesWithoutAlt.length > 0) {
       issues.push({
-        type: 'warning',
-        category: 'content',
+        type: "warning",
+        category: "content",
         message: `${imagesWithoutAlt.length} images without alt text`,
-        element: 'img',
-        suggestion: 'Add descriptive alt text to all images',
-        impact: 'medium'
+        element: "img",
+        suggestion: "Add descriptive alt text to all images",
+        impact: "medium",
       });
     }
 
@@ -542,11 +596,11 @@ export class EnhancedSEO {
     const canonical = document.querySelector('link[rel="canonical"]');
     if (!canonical) {
       issues.push({
-        type: 'warning',
-        category: 'meta',
-        message: 'Canonical URL not set',
-        suggestion: 'Add a canonical URL to prevent duplicate content issues',
-        impact: 'medium'
+        type: "warning",
+        category: "meta",
+        message: "Canonical URL not set",
+        suggestion: "Add a canonical URL to prevent duplicate content issues",
+        impact: "medium",
       });
     }
 
@@ -556,53 +610,58 @@ export class EnhancedSEO {
   public generateRecommendations(issues: SEOIssue[]): SEORecommendation[] {
     const recommendations: SEORecommendation[] = [];
 
-    const criticalIssues = issues.filter(issue => issue.type === 'error');
-    const warningIssues = issues.filter(issue => issue.type === 'warning');
+    const criticalIssues = issues.filter((issue) => issue.type === "error");
+    const warningIssues = issues.filter((issue) => issue.type === "warning");
 
     if (criticalIssues.length > 0) {
       recommendations.push({
-        type: 'critical',
-        title: 'Fix Critical SEO Issues',
+        type: "critical",
+        title: "Fix Critical SEO Issues",
         description: `Address ${criticalIssues.length} critical SEO issues that are negatively impacting search rankings`,
-        impact: 'high',
-        effort: 'low',
-        category: 'technical',
-        implementation: 'Review and fix all critical issues identified in the SEO analysis'
+        impact: "high",
+        effort: "low",
+        category: "technical",
+        implementation:
+          "Review and fix all critical issues identified in the SEO analysis",
       });
     }
 
     if (warningIssues.length > 0) {
       recommendations.push({
-        type: 'warning',
-        title: 'Improve SEO Elements',
+        type: "warning",
+        title: "Improve SEO Elements",
         description: `Optimize ${warningIssues.length} SEO elements to improve search visibility`,
-        impact: 'medium',
-        effort: 'low',
-        category: 'content',
-        implementation: 'Review warning issues and implement suggested improvements'
+        impact: "medium",
+        effort: "low",
+        category: "content",
+        implementation:
+          "Review warning issues and implement suggested improvements",
       });
     }
 
     // Performance recommendations
     recommendations.push({
-      type: 'info',
-      title: 'Optimize Page Speed',
-      description: 'Improve page loading speed for better SEO rankings',
-      impact: 'high',
-      effort: 'medium',
-      category: 'performance',
-      implementation: 'Compress images, minify CSS/JS, enable caching, and optimize server response times'
+      type: "info",
+      title: "Optimize Page Speed",
+      description: "Improve page loading speed for better SEO rankings",
+      impact: "high",
+      effort: "medium",
+      category: "performance",
+      implementation:
+        "Compress images, minify CSS/JS, enable caching, and optimize server response times",
     });
 
     // Content recommendations
     recommendations.push({
-      type: 'info',
-      title: 'Enhance Content Quality',
-      description: 'Improve content quality and relevance for better search rankings',
-      impact: 'high',
-      effort: 'high',
-      category: 'content',
-      implementation: 'Create high-quality, original content with relevant keywords and proper structure'
+      type: "info",
+      title: "Enhance Content Quality",
+      description:
+        "Improve content quality and relevance for better search rankings",
+      impact: "high",
+      effort: "high",
+      category: "content",
+      implementation:
+        "Create high-quality, original content with relevant keywords and proper structure",
     });
 
     return recommendations;
@@ -611,34 +670,45 @@ export class EnhancedSEO {
   private calculateSEOMetrics(): SEOMetrics {
     const title = document.title;
     const metaDescription = document.querySelector('meta[name="description"]');
-    const description = metaDescription?.getAttribute('content') || '';
+    const description = metaDescription?.getAttribute("content") || "";
 
     // Heading structure
-    const headings = Array.from(document.querySelectorAll('h1, h2, h3, h4, h5, h6'))
-      .map(heading => ({
-        level: parseInt(heading.tagName.substring(1)),
-        count: 1,
-        text: heading.textContent?.slice(0, 50) || ''
-      }));
+    const headings = Array.from(
+      document.querySelectorAll("h1, h2, h3, h4, h5, h6"),
+    ).map((heading) => ({
+      level: parseInt(heading.tagName.substring(1)),
+      count: 1,
+      text: heading.textContent?.slice(0, 50) || "",
+    }));
 
     // Images
-    const images = document.querySelectorAll('img');
-    const imagesWithAlt = document.querySelectorAll('img[alt]');
+    const images = document.querySelectorAll("img");
+    const imagesWithAlt = document.querySelectorAll("img[alt]");
 
     // Links
-    const links = document.querySelectorAll('a');
-    const internalLinks = document.querySelectorAll('a[href^="/"], a[href^="./"]');
-    const externalLinks = document.querySelectorAll('a[href^="http"]:not([href*="' + window.location.hostname + '"])');
+    const links = document.querySelectorAll("a");
+    const internalLinks = document.querySelectorAll(
+      'a[href^="/"], a[href^="./"]',
+    );
+    const externalLinks = document.querySelectorAll(
+      'a[href^="http"]:not([href*="' + window.location.hostname + '"])',
+    );
 
     // Word count
-    const textContent = document.body.textContent || '';
-    const wordCount = textContent.split(/\s+/).filter(word => word.length > 0).length;
+    const textContent = document.body.textContent || "";
+    const wordCount = textContent
+      .split(/\s+/)
+      .filter((word) => word.length > 0).length;
 
     // Readability score (simplified)
     const sentences = textContent.split(/[.!?]+/).length;
     const words = textContent.split(/\s+/).length;
     const syllables = this.estimateSyllables(textContent);
-    const readabilityScore = this.calculateReadabilityScore(sentences, words, syllables);
+    const readabilityScore = this.calculateReadabilityScore(
+      sentences,
+      words,
+      syllables,
+    );
 
     return {
       titleLength: title.length,
@@ -652,7 +722,7 @@ export class EnhancedSEO {
       wordCount,
       readabilityScore,
       mobileFriendly: this.checkMobileFriendly(),
-      sslEnabled: window.location.protocol === 'https:'
+      sslEnabled: window.location.protocol === "https:",
     };
   }
 
@@ -664,46 +734,64 @@ export class EnhancedSEO {
     }, 0);
   }
 
-  private calculateReadabilityScore(sentences: number, words: number, syllables: number): number {
+  private calculateReadabilityScore(
+    sentences: number,
+    words: number,
+    syllables: number,
+  ): number {
     if (sentences === 0 || words === 0) return 0;
-    
+
     const avgWordsPerSentence = words / sentences;
     const avgSyllablesPerWord = syllables / words;
-    
+
     // Simplified Flesch Reading Ease Score
-    return Math.max(0, Math.min(100, 206.835 - (1.015 * avgWordsPerSentence) - (84.6 * avgSyllablesPerWord)));
+    return Math.max(
+      0,
+      Math.min(
+        100,
+        206.835 - 1.015 * avgWordsPerSentence - 84.6 * avgSyllablesPerWord,
+      ),
+    );
   }
 
   private checkMobileFriendly(): boolean {
     const viewport = document.querySelector('meta[name="viewport"]');
     if (!viewport) return false;
-    
-    const content = viewport.getAttribute('content') || '';
-    return content.includes('width=device-width');
+
+    const content = viewport.getAttribute("content") || "";
+    return content.includes("width=device-width");
   }
 
   private calculateSEOScore(issues: SEOIssue[], metrics: SEOMetrics): number {
     let score = 100;
 
     // Deduct points for issues
-    issues.forEach(issue => {
+    issues.forEach((issue) => {
       switch (issue.type) {
-        case 'error':
-          score -= issue.impact === 'high' ? 20 : issue.impact === 'medium' ? 15 : 10;
+        case "error":
+          score -=
+            issue.impact === "high" ? 20 : issue.impact === "medium" ? 15 : 10;
           break;
-        case 'warning':
-          score -= issue.impact === 'high' ? 10 : issue.impact === 'medium' ? 7 : 5;
+        case "warning":
+          score -=
+            issue.impact === "high" ? 10 : issue.impact === "medium" ? 7 : 5;
           break;
-        case 'info':
-          score -= issue.impact === 'high' ? 5 : issue.impact === 'medium' ? 3 : 1;
+        case "info":
+          score -=
+            issue.impact === "high" ? 5 : issue.impact === "medium" ? 3 : 1;
           break;
       }
     });
 
     // Bonus points for good metrics
     if (metrics.titleLength >= 30 && metrics.titleLength <= 60) score += 5;
-    if (metrics.descriptionLength >= 120 && metrics.descriptionLength <= 160) score += 5;
-    if (metrics.imageAltTextCount === metrics.imageCount && metrics.imageCount > 0) score += 5;
+    if (metrics.descriptionLength >= 120 && metrics.descriptionLength <= 160)
+      score += 5;
+    if (
+      metrics.imageAltTextCount === metrics.imageCount &&
+      metrics.imageCount > 0
+    )
+      score += 5;
     if (metrics.readabilityScore > 60) score += 5;
     if (metrics.mobileFriendly) score += 5;
     if (metrics.sslEnabled) score += 5;
