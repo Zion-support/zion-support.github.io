@@ -119,7 +119,6 @@ export default function App(): React.JSX.Element {
     // Also call the original trackEngagement from useAppInitialization
     trackEngagement();
   }, [engagementData, trackEngagement]);
->>>>>>> a3acd2c475f398f6599074e2c829d8216910e982
 
   useEffect(() => {
     // Add performance marks for better monitoring
@@ -154,16 +153,11 @@ export default function App(): React.JSX.Element {
 
     // Set default SEO data using the correct method
     seoManagerInstance.updateMetaTags(seoData);
-  }, [seoData, handleScroll, handleClick, handleKeyDown, preloadResource]);
-
-    // Set default SEO data using the correct method
-    seoManager.updateMetaTags(seoData);
 
     // Use passive listeners for better performance
     window.addEventListener('scroll', handleScroll, { passive: true });
     document.addEventListener('click', handleClick, { passive: true });
-  }, [seoData, handleScroll, handleClick, preloadResource]);
->>>>>>> a3acd2c475f398f6599074e2c829d8216910e982
+  }, [seoData, handleScroll, handleClick, handleKeyDown, preloadResource]);
 
   // Main initialization and cleanup effect
   React.useEffect(() => {
