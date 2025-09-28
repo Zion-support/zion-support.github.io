@@ -334,6 +334,10 @@ export default function App(): React.JSX.Element {
   // Add keyboard event listener
   React.useEffect(() => {
     document.addEventListener("keydown", handleKeyDown);
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [handleKeyDown]);
 
   // Main initialization and cleanup effect
   React.useEffect(() => {
