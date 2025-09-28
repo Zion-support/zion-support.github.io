@@ -1,0 +1,24 @@
+{
+  "timestamp": "2025-09-28T20:01:41.644Z",
+  "duration": 10981,
+  "optimizations": [
+    "Optimized 0 images",
+    "Analyzed 11 CSS files",
+    "Analyzed 226 JavaScript files"
+  ],
+  "recommendations": [
+    "Enable code splitting for large components",
+    "Implement lazy loading for images",
+    "Use React.memo for expensive components",
+    "Optimize bundle size with tree shaking",
+    "Implement service worker for caching",
+    "Use CDN for static assets",
+    "Enable gzip compression",
+    "Implement critical CSS inlining"
+  ],
+  "metrics": {
+    "buildTime": 9616,
+    "bundleSize": 1187654,
+    "fileCount": 237
+  }
+}

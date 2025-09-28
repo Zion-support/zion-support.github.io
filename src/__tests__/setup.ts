@@ -22,7 +22,7 @@ global.fetch = jest.fn();
 //   ancestorOrigins: [] as string[],
 // } as Location;
 
-// Mock window.location using a simple assignment
+// Mock window.location using Object.defineProperty to avoid navigation errors
 const mockLocationInstance = {
   pathname: '/',
   href: 'http://localhost:3000/',
@@ -38,8 +38,10 @@ const mockLocationInstance = {
   origin: 'http://localhost:3000',
   ancestorOrigins: [] as unknown as DOMStringList,
 } as Location;
-delete (window as unknown as { location?: Partial<Location> }).location;
-(window as unknown as { location: Partial<Location> }).location = mockLocationInstance;
+
+// Mock location more safely
+delete (window as unknown as Record<string, unknown>).location;
+(window as unknown as Record<string, unknown>).location = mockLocationInstance;
 // Mock window.history
 Object.defineProperty(window, 'history', {
   value: {

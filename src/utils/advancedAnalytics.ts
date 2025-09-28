@@ -1,259 +1,139 @@
-interface AnalyticsEvent {
+/**
+ * Advanced Analytics System
+ */
+
+export interface AnalyticsEvent {
   name: string;
-  properties?: Record<string, unknown>;
-  timestamp?: number;
+  properties: Record<string, string | number | boolean>;
+  timestamp: number;
+  userId?: string;
+  sessionId: string;
 }
 
-interface PerformanceMetrics {
-  loadTime: number;
-  firstContentfulPaint: number;
-  largestContentfulPaint: number;
-  firstInputDelay: number;
-  cumulativeLayoutShift: number;
-  timeToInteractive: number;
+export interface UserBehavior {
+  pageViews: number;
+  clicks: number;
+  scrollDepth: number;
+  timeOnPage: number;
+  interactions: number;
 }
 
-class AdvancedAnalytics {
+export class AdvancedAnalytics {
   private events: AnalyticsEvent[] = [];
   private sessionId: string;
   private userId?: string;
-  private isEnabled: boolean;
+  private behavior: UserBehavior = {
+    pageViews: 0,
+    clicks: 0,
+    scrollDepth: 0,
+    timeOnPage: 0,
+    interactions: 0
+  };
 
   constructor() {
     this.sessionId = this.generateSessionId();
-    this.isEnabled = this.shouldEnableAnalytics();
-    this.initializePerformanceTracking();
+    this.initializeTracking();
   }
 
   private generateSessionId(): string {
-    return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+    return 'session_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
   }
 
-  private shouldEnableAnalytics(): boolean {
-    // Check for analytics consent
-    const consent = localStorage.getItem('analytics-consent');
-    if (consent === 'false') return false;
+  private initializeTracking(): void {
+    if (typeof window === 'undefined') return;
 
-    // Check for development mode
-    if (process.env.NODE_ENV === 'development') return false;
-
-    // Check for privacy mode
-    if (navigator.doNotTrack === '1') return false;
-
-    return true;
-  }
-
-  private initializePerformanceTracking(): void {
-    if (!this.isEnabled || typeof window === 'undefined') return;
-
-    // Track page load performance
-    window.addEventListener('load', () => {
-      this.trackPerformanceMetrics();
-    });
-
-    // Track Web Vitals
-    this.trackWebVitals();
-
-    // Track user interactions
-    this.trackUserInteractions();
-  }
-
-  private async trackPerformanceMetrics(): Promise<void> {
-    if (!this.isEnabled) return;
-
-    try {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      
-      const metrics: PerformanceMetrics = {
-        loadTime: navigation.loadEventEnd - navigation.loadEventStart,
-        firstContentfulPaint: 0,
-        largestContentfulPaint: 0,
-        firstInputDelay: 0,
-        cumulativeLayoutShift: 0,
-        timeToInteractive: 0
-      };
-
-      // Get FCP
-      const fcpEntry = performance.getEntriesByName('first-contentful-paint')[0];
-      if (fcpEntry) {
-        metrics.firstContentfulPaint = fcpEntry.startTime;
-      }
-
-      // Get LCP
-      const lcpEntries = performance.getEntriesByType('largest-contentful-paint');
-      if (lcpEntries.length > 0) {
-        metrics.largestContentfulPaint = lcpEntries[lcpEntries.length - 1].startTime;
-      }
-
-      this.trackEvent('performance_metrics', {
-        ...metrics,
-        url: window.location.href,
-        userAgent: navigator.userAgent,
-        viewport: {
-          width: window.innerWidth,
-          height: window.innerHeight
-        }
-      });
-    } catch (error) {
-      console.warn('Failed to track performance metrics:', error);
-    }
-  }
-
-  private trackWebVitals(): void {
-    if (!this.isEnabled) return;
-
-    // Track Core Web Vitals
-    import('web-vitals').then(({ onCLS, onFCP, onLCP, onTTFB, onINP }) => {
-      onCLS((metric: { value: number; delta: number; id: string }) => {
-        this.trackEvent('web_vital', {
-          name: 'CLS',
-          value: metric.value,
-          delta: metric.delta,
-          id: metric.id
-        });
-      });
-
-      onINP((metric: { value: number; delta: number; id: string }) => {
-        this.trackEvent('web_vital', {
-          name: 'INP',
-          value: metric.value,
-          delta: metric.delta,
-          id: metric.id
-        });
-      });
-
-      onFCP((metric: { value: number; delta: number; id: string }) => {
-        this.trackEvent('web_vital', {
-          name: 'FCP',
-          value: metric.value,
-          delta: metric.delta,
-          id: metric.id
-        });
-      });
-
-      onLCP((metric: { value: number; delta: number; id: string }) => {
-        this.trackEvent('web_vital', {
-          name: 'LCP',
-          value: metric.value,
-          delta: metric.delta,
-          id: metric.id
-        });
-      });
-
-      onTTFB((metric: { value: number; delta: number; id: string }) => {
-        this.trackEvent('web_vital', {
-          name: 'TTFB',
-          value: metric.value,
-          delta: metric.delta,
-          id: metric.id
-        });
-      });
-    }).catch((error) => {
-      console.warn('Failed to load web-vitals:', error);
-    });
-  }
-
-  private trackUserInteractions(): void {
-    if (!this.isEnabled) return;
+    // Track page views
+    this.trackPageView();
 
     // Track clicks
     document.addEventListener('click', (event) => {
-      const target = event.target as HTMLElement;
+      this.behavior.clicks++;
       this.trackEvent('click', {
-        element: target.tagName,
-        id: target.id,
-        className: target.className,
-        text: target.textContent?.slice(0, 100),
-        x: event.clientX,
-        y: event.clientY
-      });
-    });
-
-    // Track form submissions
-    document.addEventListener('submit', (event) => {
-      const form = event.target as HTMLFormElement;
-      this.trackEvent('form_submit', {
-        formId: form.id,
-        formClass: form.className,
-        action: form.action,
-        method: form.method
+        element: (event.target as HTMLElement)?.tagName,
+        text: (event.target as HTMLElement)?.textContent?.slice(0, 100)
       });
     });
 
     // Track scroll depth
     let maxScrollDepth = 0;
     window.addEventListener('scroll', () => {
-      const scrollDepth = Math.round(
-        (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100
-      );
-      
-      if (scrollDepth > maxScrollDepth) {
-        maxScrollDepth = scrollDepth;
-        this.trackEvent('scroll_depth', {
-          depth: maxScrollDepth,
-          url: window.location.href
-        });
-      }
+      const scrollDepth = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+      maxScrollDepth = Math.max(maxScrollDepth, scrollDepth);
+      this.behavior.scrollDepth = maxScrollDepth;
+    });
+
+    // Track time on page
+    const startTime = Date.now();
+    setInterval(() => {
+      this.behavior.timeOnPage = Date.now() - startTime;
+    }, 1000);
+
+    // Track interactions
+    ['keydown', 'mousedown', 'touchstart'].forEach(eventType => {
+      document.addEventListener(eventType, () => {
+        this.behavior.interactions++;
+      });
     });
   }
 
-  public trackEvent(name: string, properties?: Record<string, unknown>): void {
-    if (!this.isEnabled) return;
-
+  public trackEvent(name: string, properties: Record<string, string | number | boolean> = {}): void {
     const event: AnalyticsEvent = {
       name,
-      properties: {
-        ...properties,
-        sessionId: this.sessionId,
-        userId: this.userId,
-        timestamp: Date.now(),
-        url: window.location.href
-      },
-      timestamp: Date.now()
+      properties,
+      timestamp: Date.now(),
+      userId: this.userId,
+      sessionId: this.sessionId
     };
 
     this.events.push(event);
-    this.sendEvent(event);
+    console.log('Analytics Event:', event);
   }
 
-  private async sendEvent(event: AnalyticsEvent): Promise<void> {
-    try {
-      // Send to analytics service
-      await fetch('/api/analytics', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(event)
-      });
-    } catch (error) {
-      console.warn('Failed to send analytics event:', error);
-    }
+  public trackPageView(page?: string): void {
+    this.behavior.pageViews++;
+    this.trackEvent('page_view', {
+      page: page || window.location.pathname,
+      url: window.location.href,
+      referrer: document.referrer
+    });
   }
 
   public setUserId(userId: string): void {
     this.userId = userId;
   }
 
-  public enable(): void {
-    this.isEnabled = true;
-    localStorage.setItem('analytics-consent', 'true');
-  }
-
-  public disable(): void {
-    this.isEnabled = false;
-    localStorage.setItem('analytics-consent', 'false');
+  public getUserBehavior(): UserBehavior {
+    return { ...this.behavior };
   }
 
   public getEvents(): AnalyticsEvent[] {
     return [...this.events];
   }
 
-  public clearEvents(): void {
+  public getSessionId(): string {
+    return this.sessionId;
+  }
+
+  public exportData(): string {
+    return JSON.stringify({
+      sessionId: this.sessionId,
+      userId: this.userId,
+      behavior: this.behavior,
+      events: this.events,
+      timestamp: Date.now()
+    }, null, 2);
+  }
+
+  public clearData(): void {
     this.events = [];
+    this.behavior = {
+      pageViews: 0,
+      clicks: 0,
+      scrollDepth: 0,
+      timeOnPage: 0,
+      interactions: 0
+    };
   }
 }
 
-// Export singleton instance
-export const analytics = new AdvancedAnalytics();
-export default analytics;
+export const advancedAnalytics = new AdvancedAnalytics();

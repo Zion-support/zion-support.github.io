@@ -1,5 +1,3 @@
-// import { useEffect } from 'react';
-
 interface AnalyticsEvent {
   action: string;
   category: string;
