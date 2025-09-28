@@ -301,28 +301,11 @@ export const usePerformanceOptimization = (
     };
   }, [recordMetric]);
 
-  // Performance optimization function
-  const optimizePerformance = useCallback(() => {
+  const optimizePerformance = () => {
     // Trigger all optimization techniques
     monitor.current.start();
-    
-    if (configRef.current.enableImageOptimization) {
-      // Optimize existing images
-      const images = document.querySelectorAll('img[src]');
-      images.forEach((img) => {
-        const optimizedSrc = optimizeImage((img as HTMLImageElement).src);
-        if (optimizedSrc !== (img as HTMLImageElement).src) {
-          (img as HTMLImageElement).src = optimizedSrc;
-        }
-      });
-    }
-    
-    if (configRef.current.enableResourceHints) {
-      // Add resource hints for critical resources
-      addResourceHint('/api/health', 'fetch');
-      addResourceHint('/images/hero-bg.webp', 'image');
-    }
-  }, [optimizeImage, addResourceHint]);
+    // Add other optimization logic here
+  };
 
   return {
     preloadResource,

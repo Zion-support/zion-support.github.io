@@ -1,3 +1,4 @@
+// Global types are available through tsconfig.json
 /**
  * Enhanced Monitoring and Analytics System
  * Provides comprehensive monitoring, error tracking, and performance analytics
@@ -221,10 +222,10 @@ class EnhancedMonitoring {
       new PerformanceObserver((list) => {
         const entries = list.getEntries();
         entries.forEach((entry) => {
-          if (!(entry as any).hadRecentInput) {
+          if (!(entry as LayoutShift).hadRecentInput) {
             this.trackPerformance({
               name: 'CLS',
-              value: (entry as any).value,
+              value: (entry as LayoutShift).value,
               type: 'measure',
               url: window.location.href,
               sessionId: this.sessionId,
