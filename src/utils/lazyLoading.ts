@@ -1,4 +1,4 @@
-import { lazy, ComponentType } from 'react';
+import React, { lazy, ComponentType } from 'react';
 
 /**
  * Enhanced lazy loading utility with error boundaries and loading states

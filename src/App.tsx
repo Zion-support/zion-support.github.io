@@ -577,10 +577,10 @@ export default function App(): React.JSX.Element {
         />
 
         {/* Advanced Performance Dashboard */}
-        <AdvancedPerformanceDashboard
+        {/* <AdvancedPerformanceDashboard
           isVisible={showAdvancedDashboard}
           onClose={() => setShowAdvancedDashboard(false)}
-        />
+        /> */}
 
         {/* Real-time Metrics */}
         {showRealTimeMetrics && (
