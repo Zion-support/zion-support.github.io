@@ -193,6 +193,8 @@ export default function App(): React.JSX.Element {
     ogTitle: 'Zion Tech Group - AI & Technology Solutions',
     ogDescription: 'Transform your business with cutting-edge AI and technology solutions.',
     ogImage: 'https://zion.app/og-image.jpg',
+    ogUrl: `https://zion.app${currentPathname}`,
+    ogType: 'website' as const,
     twitterCard: 'summary_large_image' as const,
     twitterTitle: 'Zion Tech Group - AI & Technology Solutions',
     twitterDescription: 'Transform your business with cutting-edge AI and technology solutions.',
@@ -213,12 +215,12 @@ export default function App(): React.JSX.Element {
       enhancedPerformanceMonitor.startMonitoring();
       
       // Initialize new advanced systems
-      // performanceOptimizer is already initialized as a singleton
+      // performanceOptimizer.initialize();
       enhancedSecurityManager.initialize();
-      new AdvancedAutomationSystem().initialize();
+      // new AdvancedAutomationSystem().initialize();
       // Initialize enhancement systems
-      accessibilityEnhancer.initialize();
-      // securityEnhancer is already initialized in constructor
+      // new AccessibilityEnhancer();
+      // new SecurityEnhancer();
       
       // Initialize analytics
       if ('initialize' in analytics) {
@@ -257,13 +259,8 @@ export default function App(): React.JSX.Element {
     securityUtils.getSecurityScore();
 
     // Set default SEO data using the correct method
-<<<<<<< HEAD
-    // seoManager.updateMetaTags(seoData);
-  }, []);
-=======
     seoManager.updateMetaTags(memoizedSeoData);
   }, [memoizedSeoData]);
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-7a75
 
   // Update meta tags function
   const updateMetaTags = useCallback((data: typeof memoizedSeoData) => {
