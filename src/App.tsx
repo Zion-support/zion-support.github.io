@@ -467,7 +467,7 @@ function App(): React.JSX.Element {
   useEffect(() => {
     try {
       // Initialize enhanced systems
-      enhancedPerfMonitor.startMonitoring();
+      enhancedPerfMonitor.initialize();
       analytics.initialize();
       
       // Initialize accessibility and security enhancers
@@ -488,9 +488,8 @@ function App(): React.JSX.Element {
       advancedAccessibilityEnhancer.initialize();
       
       // Initialize new monitoring and optimization systems
-      performanceMonitor.initialize();
-      seoOptimizer.initialize();
-      errorHandler.initialize();
+      // Note: PerformanceMonitor is auto-initialized in constructor
+      // seoOptimizer and errorHandler will be initialized by their respective classes
       
       // Get comprehensive enhancements
       const enhancements = getComprehensiveEnhancements();
@@ -755,10 +754,11 @@ function App(): React.JSX.Element {
           />
         </Suspense>
 
-        <PerformanceDashboard
-          className="fixed bottom-4 left-4 z-30"
-          isVisible={showPerformanceWidget}
-        />
+        {showPerformanceWidget && (
+          <div className="fixed bottom-4 left-4 z-30">
+            <PerformanceDashboard />
+          </div>
+        )}
 
         <Suspense fallback={<ModernLoadingSpinner />}>
           <LazyCommandPalette
@@ -815,7 +815,6 @@ function App(): React.JSX.Element {
             <LazyRealTimePerformanceMonitor
               isVisible={showRealTimePerformance}
               onClose={() => setShowRealTimePerformance(false)}
-              refreshInterval={1000}
             />
           </Suspense>
         )}
