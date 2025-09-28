@@ -161,7 +161,7 @@ export default function App(): React.JSX.Element {
       clicks: engagementData.clicks,
     });
     trackEngagement();
-  }, [trackEngagement]);
+  }, [trackEngagement, engagementData.clicks, engagementData.scrollDepth, engagementData.startTime]);
 
   // Memoize the SEO data to prevent unnecessary re-renders
   const memoizedSeoData = useMemo(() => ({
