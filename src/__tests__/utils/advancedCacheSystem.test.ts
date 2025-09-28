@@ -81,12 +81,18 @@ describe('Advanced Cache System', () => {
       // Value should exist before TTL expires
       expect(await advancedCacheSystem.get(key)).toEqual(value);
       
-      // Wait for TTL to expire
-      await new Promise(resolve => setTimeout(resolve, 1100));
+      // Fast-forward time by 500ms
+      jest.advanceTimersByTime(500);
       
-      // Value should be expired
+      // Value should still exist
+      expect(await advancedCacheSystem.get(key)).toEqual(value);
+      
+      // Fast-forward time by another 600ms (total 1100ms)
+      jest.advanceTimersByTime(600);
+      
+      // Value should now be expired
       expect(await advancedCacheSystem.get(key)).toBeNull();
-    }, 10000);
+    }, 15000);
 
     it('should not expire values without TTL', async () => {
       const key = 'test-key';
