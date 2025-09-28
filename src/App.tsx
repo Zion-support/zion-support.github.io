@@ -1,9 +1,10 @@
-import React, { useCallback, useState, useEffect } from 'react';
+import React, { useCallback, useState, useEffect, useMemo } from 'react';
 import { AppRouter } from './router';
 import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import PerformanceTracker from './components/PerformanceTracker';
-import { seoAnalytics } from './utils/seoEnhanced';
+import { seoAnalytics, performanceSEO, seoManager } from './utils/seoEnhanced';
+import { analytics } from './utils/analytics';
 import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import PerformanceMonitor from './components/PerformanceMonitor';
@@ -26,6 +27,7 @@ import { getNotificationManager } from './utils/advancedNotifications';
 import { getThemeManager } from './utils/themeManager';
 import { getKeyboardShortcuts } from './utils/advancedKeyboardShortcuts';
 import { getDataVisualization } from './utils/advancedDataVisualization';
+import { useAppInitialization } from './hooks/useAppInitialization';
 import './index.css';
 
 export default function App(): React.JSX.Element {
@@ -60,8 +62,7 @@ export default function App(): React.JSX.Element {
   // }), []);
 
   // Initialize app with custom configuration
-  // Temporarily disable useAppInitialization to fix build
-  // const { isLoading, loadingProgress, handleScroll, handleClick, trackEngagement } = useAppInitialization({
+  const { isLoading, loadingProgress, handleScroll, handleClick, trackEngagement, engagementData } = useAppInitialization({
   //   enablePerformanceMonitoring: true,
   //   enableAccessibility: true,
   //   enableSecurity: true,
