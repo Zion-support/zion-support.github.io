@@ -7,7 +7,6 @@ import { seoAnalytics, performanceSEO, seoManager } from './utils/seoEnhanced';
 import { analytics } from './utils/analytics';
 import { performanceOptimizer } from './utils/performanceOptimizations';
 import { accessibilityEnhancer } from './utils/accessibilityEnhancements';
-import { seoOptimizer } from './utils/seoOptimizer';
 // Removed unused imports to reduce warnings
 import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
@@ -233,7 +232,6 @@ export default function App(): React.JSX.Element {
     // These are initialized automatically when imported
     void performanceOptimizer;
     void accessibilityEnhancer;
-    void seoOptimizer;
 
     // Initialize new utility systems
     performanceAlerts.checkMetric('loadTime', performance.now(), 3000);
