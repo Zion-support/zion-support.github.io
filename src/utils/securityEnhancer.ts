@@ -405,10 +405,12 @@ class SecurityEnhancer {
     const originalXHR = XMLHttpRequest.prototype.open;
     (XMLHttpRequest.prototype.open as unknown) = function(this: XMLHttpRequest, method: string, url: string | URL, ...args: unknown[]) {
       // Access the security enhancer instance through a global reference
-      const securityEnhancer = window.__securityEnhancerInstance;
-      if (securityEnhancer && typeof url === 'string' && securityEnhancer.isSuspiciousURL(url)) {
-        securityEnhancer.recordSecurityEvent('blocked', `Suspicious XHR URL blocked: ${url}`, 'high', 'network');
-        securityEnhancer.metrics.blockedRequests++;
+      const securityEnhancer = (window as any).__securityEnhancerInstance;
+      if (securityEnhancer && typeof url === 'string' && securityEnhancer.isSuspiciousURL?.(url)) {
+        securityEnhancer.recordSecurityEvent?.('blocked', `Suspicious XHR URL blocked: ${url}`, 'high', 'network');
+        if (securityEnhancer.metrics) {
+          securityEnhancer.metrics.blockedRequests++;
+        }
         throw new Error('Suspicious URL blocked');
       }
       

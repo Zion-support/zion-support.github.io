@@ -64,19 +64,6 @@ class PerformanceEnhancer {
   private setupPerformanceMonitoring(): void {
     // Monitor Core Web Vitals - using built-in Performance Observer instead of web-vitals
     this.monitorCoreWebVitals();
-
-    // Monitor memory usage
-    if ('memory' in performance) {
-      setInterval(() => {
-        const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;
-        if (memory) {
-          this.metrics.memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // MB
-        }
-      }, 5000);
-    }
-
-    // Monitor bundle size
-    this.measureBundleSize();
   }
 
   /**

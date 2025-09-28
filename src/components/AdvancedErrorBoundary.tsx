@@ -91,8 +91,8 @@ class AdvancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
 
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
     // Report to analytics or error tracking service
-    if (typeof window !== 'undefined' && (window as Window & { gtag?: (command: string, action: string, params: Record<string, unknown>) => void }).gtag) {
-      (window as Window & { gtag: (command: string, action: string, params: Record<string, unknown>) => void }).gtag('event', 'exception', {
+    if (typeof window !== 'undefined' && (window as unknown as { gtag?: (event: string, action: string, params: Record<string, unknown>) => void }).gtag) {
+      (window as unknown as { gtag: (event: string, action: string, params: Record<string, unknown>) => void }).gtag('event', 'exception', {
         description: error.message,
         fatal: false,
         custom_map: {
@@ -103,8 +103,8 @@ class AdvancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
     }
 
     // Report to custom analytics
-    if (typeof window !== 'undefined' && (window as Window & { analytics?: { track: (event: string, params: Record<string, unknown>) => void } }).analytics) {
-      (window as Window & { analytics: { track: (event: string, params: Record<string, unknown>) => void } }).analytics.track('Error Boundary Triggered', {
+    if (typeof window !== 'undefined' && (window as unknown as { analytics?: { track: (event: string, params: Record<string, unknown>) => void } }).analytics) {
+      (window as unknown as { analytics: { track: (event: string, params: Record<string, unknown>) => void } }).analytics.track('Error Boundary Triggered', {
         error_message: error.message,
         error_name: error.name,
         component_stack: errorInfo.componentStack,

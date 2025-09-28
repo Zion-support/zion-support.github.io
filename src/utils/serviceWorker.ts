@@ -5,7 +5,7 @@
 
 interface ServiceWorkerConfig {
   scope: string;
-  updateViaCache: 'none' | 'imports' | 'all';
+  updateViaCache: ServiceWorkerUpdateViaCache;
   updateInterval: number;
   onUpdate?: (registration: ServiceWorkerRegistration) => void;
   onError?: (error: Error) => void;
@@ -19,7 +19,7 @@ class ServiceWorkerManager {
   constructor(config: Partial<ServiceWorkerConfig> = {}) {
     this.config = {
       scope: '/',
-      updateViaCache: 'none' as RequestCache,
+      updateViaCache: 'none' as ServiceWorkerUpdateViaCache,
       updateInterval: 60000, // 1 minute
       ...config
     };
@@ -37,7 +37,7 @@ class ServiceWorkerManager {
     try {
       this.registration = await navigator.serviceWorker.register('/sw.js', {
         scope: this.config.scope,
-        updateViaCache: this.config.updateViaCache as ServiceWorkerUpdateViaCache
+        updateViaCache: this.config.updateViaCache
       });
 
       console.log('Service Worker registered successfully:', this.registration);

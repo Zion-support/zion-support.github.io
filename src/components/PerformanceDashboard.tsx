@@ -6,12 +6,17 @@ interface PerformanceDashboardProps {
   onClose?: () => void;
 }
 
+interface PerformanceMetric {
+  timestamp: number;
+  [key: string]: unknown;
+}
+
 const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({ 
   isVisible = false, 
   onClose 
 }) => {
-  const [metrics, setMetrics] = useState<any[]>([]);
-  const [currentMetrics, setCurrentMetrics] = useState<any>(null);
+  const [metrics, setMetrics] = useState<PerformanceMetric[]>([]);
+  const [currentMetrics, setCurrentMetrics] = useState<PerformanceMetric | null>(null);
   const [isMonitoring, setIsMonitoring] = useState(false);
 
   useEffect(() => {
@@ -38,7 +43,7 @@ const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({
     };
   }, []);
 
-  const formatMetricValue = (value: any): string => {
+  const formatMetricValue = (value: unknown): string => {
     if (typeof value === 'number') {
       if (value < 1) {
         return value.toFixed(3);
@@ -420,4 +425,5 @@ const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({
   );
 };
 
+export { PerformanceDashboard };
 export default PerformanceDashboard;

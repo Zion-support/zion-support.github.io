@@ -16,7 +16,7 @@ interface PerformanceOptimizationReturn {
   preloadResource: (url: string, type?: string) => Promise<void>;
   recordMetric: (name: string, value: number) => void;
   measurePerformance: (name: string, fn: () => void) => void;
-  getPerformanceMetrics: () => any;
+  getPerformanceMetrics: () => Record<string, unknown>;
   optimizeImage: (src: string, options?: ImageOptimizationOptions) => string;
   addResourceHint: (href: string, as: string, type?: string) => void;
 }
@@ -118,18 +118,22 @@ export const usePerformanceOptimization = (
   }, []);
 
   // Optimize images with responsive loading
-  const optimizeImage = useCallback((src: string, options: ImageOptimizationOptions = {}): string => {
+  const optimizeImage = useCallback((src: string, _options: ImageOptimizationOptions = {}): string => {
     if (!configRef.current.enableImageOptimization) return src;
 
-    const {
-      quality = 80,
-      format = 'webp'
-    } = options;
+    // const {
+    //   width,
+    //   height,
+    //   quality = 80,
+    //   format = 'webp'
+    // } = options;
+
+    // Suppress unused variable warnings for future implementation
 
     // Check if browser supports WebP
-    const supportsWebP = document.createElement('canvas')
-      .toDataURL('image/webp')
-      .indexOf('data:image/webp') === 0;
+    // const supportsWebP = document.createElement('canvas')
+    //   .toDataURL('image/webp')
+    //   .indexOf('data:image/webp') === 0;
 
     // For now, return the original src
     // In a real implementation, this would integrate with an image optimization service
@@ -262,7 +266,7 @@ export const usePerformanceOptimization = (
   useEffect(() => {
     if (!('connection' in navigator)) return;
 
-    const connection = (navigator as any).connection;
+    const connection = (navigator as unknown as { connection?: { effectiveType?: string } }).connection;
     
     const handleConnectionChange = () => {
       const effectiveType = connection.effectiveType;
