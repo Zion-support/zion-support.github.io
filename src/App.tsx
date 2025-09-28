@@ -1,4 +1,4 @@
-import React, { useMemo, useEffect, useCallback, useState } from 'react';
+import React, { useMemo, useEffect, useCallback } from 'react';
 import { AppRouter } from './router';
 import { useAppInitialization } from './hooks/useAppInitialization';
 import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
@@ -25,9 +25,9 @@ import { SecurityEnhancer } from './utils/securityEnhancer';
 import './index.css';
 
 export default function App(): React.JSX.Element {
-  // State for system dashboard and performance optimizer
-  const [showSystemDashboard, setShowSystemDashboard] = useState(false);
-  const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
+  // State for system dashboard and performance optimizer (currently unused but reserved for future features)
+  // const [showSystemDashboard, setShowSystemDashboard] = useState(false);
+  // const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
 
   // Engagement tracking data
   const engagementData = useMemo(() => ({
@@ -103,6 +103,17 @@ export default function App(): React.JSX.Element {
     structuredData: []
   }), []);
 
+  // Track engagement function
+  const trackEngagement = useCallback(() => {
+    const timeOnPage = Date.now() - engagementData.startTime;
+    seoAnalytics.trackUserEngagement(window.location.pathname, {
+      timeOnPage,
+      scrollDepth: engagementData.scrollDepth,
+      clicks: engagementData.clicks,
+    });
+    // Also call the original trackEngagement from useAppInitialization
+    trackEngagement();
+  }, [engagementData.clicks, engagementData.scrollDepth, engagementData.startTime]);
   // Simple SEO manager
   const seoManagerInstance = useMemo(() => ({
     updateMetaTags: (data: typeof seoData) => {
@@ -115,22 +126,6 @@ export default function App(): React.JSX.Element {
       }
     }
   }), []);
-
-  // Track engagement function (enhanced version)
-  const enhancedTrackEngagement = useCallback(() => {
-    try {
-      const timeOnPage = Date.now() - engagementData.startTime;
-      seoAnalytics.trackUserEngagement(window.location.pathname, {
-        timeOnPage,
-        scrollDepth: engagementData.scrollDepth,
-        clicks: engagementData.clicks,
-      });
-      // Also call the original trackEngagement from useAppInitialization
-      trackEngagement();
-    } catch (error) {
-      console.warn('Failed to track engagement:', error);
-    }
-  }, [engagementData, trackEngagement]);
 
   useEffect(() => {
     // Add performance marks for better monitoring
@@ -200,19 +195,25 @@ export default function App(): React.JSX.Element {
     if (typeof window !== 'undefined') {
       console.log('🚀 Zion Tech Group App initialized');
     }
+  }, [seoData, handleScroll, handleClick, preloadResource, seoManagerInstance]);
+
+  // Main initialization and cleanup effect
+  React.useEffect(() => {
+    // Track engagement on page unload
+    window.addEventListener('beforeunload', trackEngagement);
     // Cleanup function
     return () => {
       document.removeEventListener('keydown', handleKeyDown);
-      window.removeEventListener('beforeunload', enhancedTrackEngagement);
+      window.removeEventListener('beforeunload', trackEngagement);
       
       // Final engagement tracking
-      enhancedTrackEngagement();
+      trackEngagement();
       
       // Remove event listeners
       window.removeEventListener('scroll', handleScroll);
       document.removeEventListener('click', handleClick);
     };
-  }, [enhancedTrackEngagement, handleKeyDown, handleScroll, handleClick, seoData, preloadResource]);
+  }, [trackEngagement, handleKeyDown, handleScroll, handleClick, seoData, preloadResource]);
 
   // Show loading screen while initializing
   if (isLoading) {
