@@ -56,7 +56,7 @@ export default function App(): React.JSX.Element {
     enhancedPerformanceMonitor.startMonitoring();
     enhancedAnalytics.initialize();
     advancedCacheSystem.initialize();
-    advancedAutomationSystem.start();
+    advancedAutomationSystem.initialize();
     
     // Initialize accessibility and security enhancers
     const accessibilityEnhancer = AccessibilityEnhancer.getInstance();
