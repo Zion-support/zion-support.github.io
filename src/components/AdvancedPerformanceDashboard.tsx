@@ -167,6 +167,12 @@ const AdvancedPerformanceDashboard: React.FC<AdvancedPerformanceDashboardProps> 
     return 'text-red-600 bg-red-100';
   };
 
+  const getImpactColor = (impact: number) => {
+    if (impact >= 8) return '#10b981';
+    if (impact >= 5) return '#f59e0b';
+    return '#ef4444';
+  };
+
   const exportReport = () => {
     const report = {
       timestamp: new Date().toISOString(),
