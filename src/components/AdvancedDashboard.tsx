@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { advancedAnalytics as analytics } from '../utils/advancedAnalytics';
+import { advancedAnalytics as analytics, AdvancedAnalytics } from '../utils/advancedAnalytics';
 import AdvancedCacheManager from '../utils/advancedCache';
 import AdvancedAccessibilityManager from '../utils/advancedAccessibilityManager';
 import AdvancedSecurityManager from '../utils/advancedSecurityManager';
