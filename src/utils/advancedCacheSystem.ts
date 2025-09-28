@@ -8,7 +8,7 @@ export interface CacheConfig {
   ttl: number; // Time to live in milliseconds
   compressionEnabled: boolean;
   encryptionEnabled: boolean;
-  storageType: 'memory' | 'localStorage' | 'sessionStorage' | 'indexedDB';
+  storageType: "memory" | "localStorage" | "sessionStorage" | "indexedDB";
   enableAnalytics: boolean;
   enablePersistence: boolean;
 }
@@ -38,7 +38,7 @@ export interface CacheAnalytics {
 export interface CacheStrategy {
   name: string;
   description: string;
-  evictionPolicy: 'lru' | 'lfu' | 'fifo' | 'ttl' | 'size';
+  evictionPolicy: "lru" | "lfu" | "fifo" | "ttl" | "size";
   compressionThreshold: number;
   prefetchEnabled: boolean;
   prefetchThreshold: number;
@@ -60,9 +60,9 @@ export class AdvancedCacheSystem {
       ttl: 10 * 60 * 1000, // 10 minutes
       compressionEnabled: true,
       encryptionEnabled: false,
-      storageType: 'memory',
+      storageType: "memory",
       enableAnalytics: true,
-      enablePersistence: true
+      enablePersistence: true,
     };
 
     this.analytics = {
@@ -72,7 +72,7 @@ export class AdvancedCacheSystem {
       compressionRatio: 0,
       averageAccessTime: 0,
       storageUsed: 0,
-      hitRate: 0
+      hitRate: 0,
     };
 
     this.initializeStrategies();
@@ -89,7 +89,7 @@ export class AdvancedCacheSystem {
     if (this.isInitialized) return;
 
     this.config = { ...this.config, ...config };
-    
+
     // Initialize compression worker if enabled
     if (this.config.compressionEnabled) {
       this.initializeCompressionWorker();
@@ -101,7 +101,7 @@ export class AdvancedCacheSystem {
     }
 
     // Load persisted data
-    if (this.config.enablePersistence && this.config.storageType !== 'memory') {
+    if (this.config.enablePersistence && this.config.storageType !== "memory") {
       this.loadPersistedData();
     }
 
@@ -109,12 +109,16 @@ export class AdvancedCacheSystem {
     this.startCleanupInterval();
 
     this.isInitialized = true;
-    console.log('Advanced Cache System initialized');
+    console.log("Advanced Cache System initialized");
   }
 
-  public set<T>(key: string, value: T, options?: { ttl?: number; metadata?: Record<string, unknown> }): void {
+  public set<T>(
+    key: string,
+    value: T,
+    options?: { ttl?: number; metadata?: Record<string, unknown> },
+  ): void {
     const startTime = performance.now();
-    
+
     try {
       let processedValue: T | string = value;
       let compressed = false;
@@ -141,7 +145,7 @@ export class AdvancedCacheSystem {
         lastAccessed: Date.now(),
         compressed,
         encrypted,
-        metadata: options?.metadata
+        metadata: options?.metadata,
       };
 
       // Check if we need to evict entries
@@ -150,37 +154,39 @@ export class AdvancedCacheSystem {
       }
 
       this.cache.set(key, entry);
-      
+
       // Persist to storage if enabled
-      if (this.config.enablePersistence && this.config.storageType !== 'memory') {
+      if (
+        this.config.enablePersistence &&
+        this.config.storageType !== "memory"
+      ) {
         this.persistEntry(key, entry);
       }
 
       // Update analytics
       if (this.config.enableAnalytics) {
-        this.updateAnalytics('set', performance.now() - startTime);
+        this.updateAnalytics("set", performance.now() - startTime);
       }
-
     } catch (error) {
-      console.error('Error setting cache entry:', error);
+      console.error("Error setting cache entry:", error);
     }
   }
 
   public get<T>(key: string): T | null {
     const startTime = performance.now();
-    
+
     try {
       const entry = this.cache.get(key);
-      
+
       if (!entry) {
-        this.updateAnalytics('miss', performance.now() - startTime);
+        this.updateAnalytics("miss", performance.now() - startTime);
         return null;
       }
 
       // Check if entry has expired
       if (this.isExpired(entry)) {
         this.cache.delete(key);
-        this.updateAnalytics('miss', performance.now() - startTime);
+        this.updateAnalytics("miss", performance.now() - startTime);
         return null;
       }
 
@@ -201,13 +207,12 @@ export class AdvancedCacheSystem {
       }
 
       // Update analytics
-      this.updateAnalytics('hit', performance.now() - startTime);
+      this.updateAnalytics("hit", performance.now() - startTime);
 
       return value as T;
-
     } catch (error) {
-      console.error('Error getting cache entry:', error);
-      this.updateAnalytics('miss', performance.now() - startTime);
+      console.error("Error getting cache entry:", error);
+      this.updateAnalytics("miss", performance.now() - startTime);
       return null;
     }
   }
@@ -215,14 +220,17 @@ export class AdvancedCacheSystem {
   public delete(key: string): boolean {
     try {
       const deleted = this.cache.delete(key);
-      
-      if (this.config.enablePersistence && this.config.storageType !== 'memory') {
+
+      if (
+        this.config.enablePersistence &&
+        this.config.storageType !== "memory"
+      ) {
         this.removePersistedEntry(key);
       }
 
       return deleted;
     } catch (error) {
-      console.error('Error deleting cache entry:', error);
+      console.error("Error deleting cache entry:", error);
       return false;
     }
   }
@@ -230,8 +238,11 @@ export class AdvancedCacheSystem {
   public clear(): void {
     try {
       this.cache.clear();
-      
-      if (this.config.enablePersistence && this.config.storageType !== 'memory') {
+
+      if (
+        this.config.enablePersistence &&
+        this.config.storageType !== "memory"
+      ) {
         this.clearPersistedData();
       }
 
@@ -243,11 +254,10 @@ export class AdvancedCacheSystem {
         compressionRatio: 0,
         averageAccessTime: 0,
         storageUsed: 0,
-        hitRate: 0
+        hitRate: 0,
       };
-
     } catch (error) {
-      console.error('Error clearing cache:', error);
+      console.error("Error clearing cache:", error);
     }
   }
 
@@ -257,7 +267,7 @@ export class AdvancedCacheSystem {
   }
 
   public keys(): string[] {
-    return Array.from(this.cache.keys()).filter(key => {
+    return Array.from(this.cache.keys()).filter((key) => {
       const entry = this.cache.get(key);
       return entry && !this.isExpired(entry);
     });
@@ -269,8 +279,9 @@ export class AdvancedCacheSystem {
 
   public getAnalytics(): CacheAnalytics {
     const totalRequests = this.analytics.hits + this.analytics.misses;
-    this.analytics.hitRate = totalRequests > 0 ? (this.analytics.hits / totalRequests) * 100 : 0;
-    
+    this.analytics.hitRate =
+      totalRequests > 0 ? (this.analytics.hits / totalRequests) * 100 : 0;
+
     return { ...this.analytics };
   }
 
@@ -286,7 +297,10 @@ export class AdvancedCacheSystem {
     return this.strategies.get(name);
   }
 
-  public prefetch<T>(keys: string[], fetcher: (key: string) => Promise<T>): Promise<void[]> {
+  public prefetch<T>(
+    keys: string[],
+    fetcher: (key: string) => Promise<T>,
+  ): Promise<void[]> {
     const promises = keys.map(async (key) => {
       if (!this.has(key)) {
         try {
@@ -303,7 +317,7 @@ export class AdvancedCacheSystem {
 
   public invalidatePattern(pattern: RegExp): number {
     let invalidatedCount = 0;
-    
+
     for (const key of this.cache.keys()) {
       if (pattern.test(key)) {
         this.delete(key);
@@ -316,7 +330,7 @@ export class AdvancedCacheSystem {
 
   public getMemoryUsage(): number {
     let totalSize = 0;
-    
+
     for (const [key, entry] of this.cache) {
       totalSize += this.estimateSize(key) + this.estimateSize(entry);
     }
@@ -327,55 +341,55 @@ export class AdvancedCacheSystem {
   public optimize(): void {
     // Remove expired entries
     this.removeExpiredEntries();
-    
+
     // Compress large entries if compression is enabled
     if (this.config.compressionEnabled) {
       this.compressLargeEntries();
     }
-    
+
     // Update analytics
     this.analytics.storageUsed = this.getMemoryUsage();
   }
 
   private initializeStrategies(): void {
     this.addStrategy({
-      name: 'performance',
-      description: 'Optimized for performance with LRU eviction',
-      evictionPolicy: 'lru',
+      name: "performance",
+      description: "Optimized for performance with LRU eviction",
+      evictionPolicy: "lru",
       compressionThreshold: 1024, // 1KB
       prefetchEnabled: true,
-      prefetchThreshold: 0.8
+      prefetchThreshold: 0.8,
     });
 
     this.addStrategy({
-      name: 'memory',
-      description: 'Memory-optimized with size-based eviction',
-      evictionPolicy: 'size',
+      name: "memory",
+      description: "Memory-optimized with size-based eviction",
+      evictionPolicy: "size",
       compressionThreshold: 512, // 512B
       prefetchEnabled: false,
-      prefetchThreshold: 0.9
+      prefetchThreshold: 0.9,
     });
 
     this.addStrategy({
-      name: 'balanced',
-      description: 'Balanced performance and memory usage',
-      evictionPolicy: 'lfu',
+      name: "balanced",
+      description: "Balanced performance and memory usage",
+      evictionPolicy: "lfu",
       compressionThreshold: 2048, // 2KB
       prefetchEnabled: true,
-      prefetchThreshold: 0.7
+      prefetchThreshold: 0.7,
     });
   }
 
   private initializeCompressionWorker(): void {
     // In a real implementation, you would create a Web Worker for compression
     // For now, we'll use a simple compression simulation
-    console.log('Compression worker initialized');
+    console.log("Compression worker initialized");
   }
 
   private initializeEncryption(): void {
     // Generate a simple encryption key (in production, use proper key management)
     this.encryptionKey = btoa(Math.random().toString(36).substring(2));
-    console.log('Encryption initialized');
+    console.log("Encryption initialized");
   }
 
   private shouldCompress(value: unknown): boolean {
@@ -399,17 +413,17 @@ export class AdvancedCacheSystem {
 
   private encrypt(data: unknown): string {
     if (!this.encryptionKey) return data as string;
-    
+
     // Simple encryption simulation (in production, use proper encryption)
     return btoa(JSON.stringify(data) + this.encryptionKey);
   }
 
   private decrypt(data: string): unknown {
     if (!this.encryptionKey) return data;
-    
+
     try {
       const decrypted = atob(data);
-      return JSON.parse(decrypted.replace(this.encryptionKey, ''));
+      return JSON.parse(decrypted.replace(this.encryptionKey, ""));
     } catch {
       return data;
     }
@@ -421,13 +435,13 @@ export class AdvancedCacheSystem {
 
   private evictEntries(): void {
     const entries = Array.from(this.cache.entries());
-    
+
     // Sort by last accessed time (LRU)
     entries.sort((a, b) => a[1].lastAccessed - b[1].lastAccessed);
-    
+
     // Remove oldest entries until we're under the limit
     const toRemove = entries.slice(0, entries.length - this.config.maxSize + 1);
-    
+
     for (const [key] of toRemove) {
       this.cache.delete(key);
       this.analytics.evictions++;
@@ -436,7 +450,7 @@ export class AdvancedCacheSystem {
 
   private removeExpiredEntries(): void {
     const expiredKeys: string[] = [];
-    
+
     for (const [key, entry] of this.cache) {
       if (this.isExpired(entry)) {
         expiredKeys.push(key);
@@ -464,17 +478,21 @@ export class AdvancedCacheSystem {
     }, 60000); // Cleanup every minute
   }
 
-  private updateAnalytics(operation: 'hit' | 'miss' | 'set', accessTime: number): void {
-    if (operation === 'hit') {
+  private updateAnalytics(
+    operation: "hit" | "miss" | "set",
+    accessTime: number,
+  ): void {
+    if (operation === "hit") {
       this.analytics.hits++;
-    } else if (operation === 'miss') {
+    } else if (operation === "miss") {
       this.analytics.misses++;
     }
 
     // Update average access time
     const totalRequests = this.analytics.hits + this.analytics.misses;
-    this.analytics.averageAccessTime = 
-      (this.analytics.averageAccessTime * (totalRequests - 1) + accessTime) / totalRequests;
+    this.analytics.averageAccessTime =
+      (this.analytics.averageAccessTime * (totalRequests - 1) + accessTime) /
+      totalRequests;
   }
 
   private estimateSize(obj: unknown): number {
@@ -483,45 +501,45 @@ export class AdvancedCacheSystem {
 
   private loadPersistedData(): void {
     try {
-      const data = localStorage.getItem('advanced-cache');
+      const data = localStorage.getItem("advanced-cache");
       if (data) {
         const parsed = JSON.parse(data);
         this.cache = new Map(parsed);
       }
     } catch (error) {
-      console.error('Error loading persisted cache data:', error);
+      console.error("Error loading persisted cache data:", error);
     }
   }
 
   private persistEntry(key: string, entry: CacheEntry): void {
     try {
-      const data = localStorage.getItem('advanced-cache');
+      const data = localStorage.getItem("advanced-cache");
       const cache = data ? JSON.parse(data) : {};
       cache[key] = entry;
-      localStorage.setItem('advanced-cache', JSON.stringify(cache));
+      localStorage.setItem("advanced-cache", JSON.stringify(cache));
     } catch (error) {
-      console.error('Error persisting cache entry:', error);
+      console.error("Error persisting cache entry:", error);
     }
   }
 
   private removePersistedEntry(key: string): void {
     try {
-      const data = localStorage.getItem('advanced-cache');
+      const data = localStorage.getItem("advanced-cache");
       if (data) {
         const cache = JSON.parse(data);
         delete cache[key];
-        localStorage.setItem('advanced-cache', JSON.stringify(cache));
+        localStorage.setItem("advanced-cache", JSON.stringify(cache));
       }
     } catch (error) {
-      console.error('Error removing persisted cache entry:', error);
+      console.error("Error removing persisted cache entry:", error);
     }
   }
 
   private clearPersistedData(): void {
     try {
-      localStorage.removeItem('advanced-cache');
+      localStorage.removeItem("advanced-cache");
     } catch (error) {
-      console.error('Error clearing persisted cache data:', error);
+      console.error("Error clearing persisted cache data:", error);
     }
   }
 }

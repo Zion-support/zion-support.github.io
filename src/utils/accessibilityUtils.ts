@@ -12,10 +12,10 @@ class AccessibilityUtils {
   }
 
   private setupKeyboardNavigation(): void {
-    document.addEventListener('keydown', (event) => {
-      if (event.key === 'Tab') {
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Tab") {
         this.handleTabNavigation(event);
-      } else if (event.key === 'Escape') {
+      } else if (event.key === "Escape") {
         this.handleEscapeKey();
       }
     });
@@ -46,11 +46,11 @@ class AccessibilityUtils {
   private handleEscapeKey(event?: KeyboardEvent): void {
     // Use the event parameter to avoid unused variable warning
     if (event) {
-      console.debug('Escape key pressed for accessibility handling');
+      console.debug("Escape key pressed for accessibility handling");
     }
-    
+
     const modals = document.querySelectorAll('[role="dialog"]');
-    modals.forEach(modal => {
+    modals.forEach((modal) => {
       const closeButton = modal.querySelector('[aria-label="Close"]');
       if (closeButton) {
         (closeButton as HTMLElement).click();
@@ -64,40 +64,40 @@ class AccessibilityUtils {
   }
 
   private addAriaLabels(): void {
-    const buttons = document.querySelectorAll('button:not([aria-label])');
-    buttons.forEach(button => {
+    const buttons = document.querySelectorAll("button:not([aria-label])");
+    buttons.forEach((button) => {
       if (!button.textContent?.trim()) {
-        button.setAttribute('aria-label', 'Button');
+        button.setAttribute("aria-label", "Button");
       }
     });
   }
 
   private setupPageAnnouncements(): void {
-    const announcementRegion = document.createElement('div');
-    announcementRegion.setAttribute('aria-live', 'polite');
-    announcementRegion.setAttribute('aria-atomic', 'true');
-    announcementRegion.className = 'sr-only';
-    announcementRegion.id = 'announcement-region';
+    const announcementRegion = document.createElement("div");
+    announcementRegion.setAttribute("aria-live", "polite");
+    announcementRegion.setAttribute("aria-atomic", "true");
+    announcementRegion.className = "sr-only";
+    announcementRegion.id = "announcement-region";
     document.body.appendChild(announcementRegion);
   }
 
   private getFocusableElements(): HTMLElement[] {
     const selectors = [
-      'button:not([disabled])',
-      'input:not([disabled])',
-      'select:not([disabled])',
-      'textarea:not([disabled])',
-      'a[href]',
-      '[tabindex]:not([tabindex="-1"])'
+      "button:not([disabled])",
+      "input:not([disabled])",
+      "select:not([disabled])",
+      "textarea:not([disabled])",
+      "a[href]",
+      '[tabindex]:not([tabindex="-1"])',
     ];
 
     return Array.from(
-      document.querySelectorAll(selectors.join(', '))
+      document.querySelectorAll(selectors.join(", ")),
     ) as HTMLElement[];
   }
 
   announce(message: string): void {
-    const announcementRegion = document.getElementById('announcement-region');
+    const announcementRegion = document.getElementById("announcement-region");
     if (announcementRegion) {
       announcementRegion.textContent = message;
     }
@@ -105,13 +105,15 @@ class AccessibilityUtils {
 
   getAccessibilityScore(): number {
     let score = 100;
-    
-    const images = document.querySelectorAll('img:not([alt])');
+
+    const images = document.querySelectorAll("img:not([alt])");
     score -= images.length * 5;
-    
-    const inputs = document.querySelectorAll('input:not([aria-label]):not([aria-labelledby])');
+
+    const inputs = document.querySelectorAll(
+      "input:not([aria-label]):not([aria-labelledby])",
+    );
     score -= inputs.length * 3;
-    
+
     return Math.max(0, Math.round(score));
   }
 }
