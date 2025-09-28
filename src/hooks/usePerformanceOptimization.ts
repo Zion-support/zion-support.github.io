@@ -24,7 +24,11 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
 
   const renderCountRef = useRef(0);
   const lastRenderTimeRef = useRef(performance.now());
+<<<<<<< HEAD
   const debounceTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+=======
+  const debounceTimeoutRef = useRef<NodeJS.Timeout | undefined>(undefined);
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-5d5c
 
   // Track render performance
   useEffect(() => {
@@ -38,12 +42,21 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
   const memoryUsage = useMemo(() => {
     if (!enableMemoryMonitoring || !(performance as any).memory) return null;
     
+<<<<<<< HEAD
     const memory = (performance as any).memory;
     return {
       used: memory.usedJSHeapSize,
       total: memory.totalJSHeapSize,
       limit: memory.jsHeapSizeLimit,
       percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100
+=======
+    const mem = (performance as any).memory;
+    return {
+      used: mem.usedJSHeapSize,
+      total: mem.totalJSHeapSize,
+      limit: mem.jsHeapSizeLimit,
+      percentage: (mem.usedJSHeapSize / mem.jsHeapSizeLimit) * 100
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-5d5c
     };
   }, [enableMemoryMonitoring]);
 
@@ -80,16 +93,32 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
     };
   }, []);
 
-  // Mock functions for compatibility
-  const preloadResource = (url: string, type: string) => {
-    // Mock implementation
-    console.log(`Preloading ${type}: ${url}`);
-  };
+  // Preload resource function
+  const preloadResource = useCallback((url: string, type: 'script' | 'style' | 'image' = 'script') => {
+    if (type === 'image') {
+      const img = document.createElement('img');
+      img.src = url;
+    } else {
+      const link = document.createElement(type === 'script' ? 'script' : 'link');
+      if (type === 'script') {
+        (link as HTMLScriptElement).src = url;
+        (link as HTMLScriptElement).async = true;
+      } else {
+        (link as HTMLLinkElement).rel = 'stylesheet';
+        (link as HTMLLinkElement).href = url;
+      }
+      document.head.appendChild(link);
+    }
+  }, []);
 
-  const recordMetric = (name: string, value: number) => {
-    // Mock implementation
-    console.log(`Recording metric: ${name} = ${value}`);
-  };
+  // Record metric function
+  const recordMetric = useCallback((name: string, value: number, tags?: Record<string, string>) => {
+    (metrics as any)[name] = {
+      value,
+      timestamp: Date.now(),
+      tags: tags || {}
+    };
+  }, [metrics]);
 
   return {
     metrics,
