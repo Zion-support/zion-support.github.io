@@ -67,7 +67,6 @@ export default function App(): React.JSX.Element {
   }), []);
 
   // Missing state variables
-  const [showWebsiteEnhancements, setShowWebsiteEnhancements] = useState(false);
   const [showComprehensivePerformance, setShowComprehensivePerformance] = useState(false);
   const [showAdvancedSEO, setShowAdvancedSEO] = useState(false);
   const [showAccessibilityPanel, setShowAccessibilityPanel] = useState(false);
