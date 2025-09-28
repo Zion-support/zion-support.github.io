@@ -38,6 +38,9 @@ const EnhancedCommandPalette = lazy(() => import('./components/EnhancedCommandPa
 const PerformanceIndicator = lazy(() => import('./components/PerformanceIndicator'));
 const AccessibilityEnhancer = lazy(() => import('./components/AccessibilityEnhancer'));
 const DynamicMetaTags = lazy(() => import('./components/DynamicMetaTags'));
+const SystemStatusIndicator = lazy(() => import('./components/SystemStatusIndicator'));
+const EnhancedNotificationSystem = lazy(() => import('./components/EnhancedNotificationSystem'));
+const KeyboardShortcutsManager = lazy(() => import('./components/KeyboardShortcutsManager'));
 
 export default function App(): React.JSX.Element {
   const navigate = useNavigate();
@@ -54,6 +57,9 @@ export default function App(): React.JSX.Element {
   const [showComprehensiveDashboard, setShowComprehensiveDashboard] = useState(false);
   const [showRealTimePerformance, setShowRealTimePerformance] = useState(false);
   const [showEnhancedCommandPalette, setShowEnhancedCommandPalette] = useState(false);
+  const [showSystemStatus, setShowSystemStatus] = useState(true);
+  const [showEnhancedNotifications] = useState(true);
+  const [showKeyboardShortcutsManager, setShowKeyboardShortcutsManager] = useState(false);
   // const [showPerformanceDashboard, setShowPerformanceDashboard] = useState(false);
 
   // Notification management
@@ -313,6 +319,16 @@ export default function App(): React.JSX.Element {
       setIsDarkMode((prev: boolean) => !prev);
       console.debug('Keyboard shortcut used:', { shortcut: 'cmd+shift+t', action: 'toggle_theme' });
     }
+    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'S') {
+      event.preventDefault();
+      setShowSystemStatus((prev: boolean) => !prev);
+      console.debug('Keyboard shortcut used:', { shortcut: 'cmd+shift+s', action: 'toggle_system_status' });
+    }
+    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === '?') {
+      event.preventDefault();
+      setShowKeyboardShortcutsManager((prev: boolean) => !prev);
+      console.debug('Keyboard shortcut used:', { shortcut: 'cmd+shift+?', action: 'toggle_keyboard_shortcuts_manager' });
+    }
     if (event.key === 'Escape') {
       setShowCommandPalette(false);
       setShowSystemDashboard(false);
@@ -323,6 +339,7 @@ export default function App(): React.JSX.Element {
       setShowComprehensiveDashboard(false);
       setShowRealTimePerformance(false);
       setShowEnhancedCommandPalette(false);
+      setShowKeyboardShortcutsManager(false);
       seoAnalytics.trackEvent('keyboard_shortcut', { shortcut: 'escape', action: 'close_modals' });
     }
   }, [addNotification]);
@@ -673,6 +690,99 @@ export default function App(): React.JSX.Element {
           </Suspense>
         )}
 
+        {/* System Status Indicator */}
+        {showSystemStatus && (
+          <Suspense fallback={<ModernLoadingSpinner />}>
+            <SystemStatusIndicator
+              refreshInterval={30000}
+              showDetails={true}
+            />
+          </Suspense>
+        )}
+
+        {/* Enhanced Notification System */}
+        {showEnhancedNotifications && (
+          <Suspense fallback={<ModernLoadingSpinner />}>
+            <EnhancedNotificationSystem
+              notifications={notifications}
+              onRemove={removeNotification}
+              maxNotifications={5}
+              position="top-right"
+              showSoundToggle={true}
+              showHistoryToggle={true}
+            />
+          </Suspense>
+        )}
+
+        {/* Keyboard Shortcuts Manager */}
+        {showKeyboardShortcutsManager && (
+          <Suspense fallback={<ModernLoadingSpinner />}>
+            <KeyboardShortcutsManager
+              shortcuts={[
+                {
+                  id: 'toggle-system-dashboard',
+                  keys: ['ctrl', 'shift', 'd'],
+                  description: 'Toggle System Dashboard',
+                  category: 'system',
+                  action: () => setShowSystemDashboard(!showSystemDashboard),
+                  enabled: true,
+                  global: true
+                },
+                {
+                  id: 'toggle-system-health',
+                  keys: ['ctrl', 'shift', 'h'],
+                  description: 'Toggle System Health Dashboard',
+                  category: 'system',
+                  action: () => setShowSystemHealth(!showSystemHealth),
+                  enabled: true,
+                  global: true
+                },
+                {
+                  id: 'toggle-performance-monitor',
+                  keys: ['ctrl', 'shift', 'r'],
+                  description: 'Toggle Real-Time Performance Monitor',
+                  category: 'tools',
+                  action: () => setShowRealTimePerformance(!showRealTimePerformance),
+                  enabled: true,
+                  global: true
+                },
+                {
+                  id: 'toggle-command-palette',
+                  keys: ['ctrl', 'k'],
+                  description: 'Toggle Enhanced Command Palette',
+                  category: 'navigation',
+                  action: () => setShowEnhancedCommandPalette(!showEnhancedCommandPalette),
+                  enabled: true,
+                  global: true
+                },
+                {
+                  id: 'toggle-theme',
+                  keys: ['ctrl', 'shift', 't'],
+                  description: 'Toggle Theme (Light/Dark)',
+                  category: 'view',
+                  action: () => setIsDarkMode(!isDarkMode),
+                  enabled: true,
+                  global: true
+                },
+                {
+                  id: 'toggle-system-status',
+                  keys: ['ctrl', 'shift', 's'],
+                  description: 'Toggle System Status Indicator',
+                  category: 'system',
+                  action: () => setShowSystemStatus(!showSystemStatus),
+                  enabled: true,
+                  global: true
+                }
+              ]}
+              onShortcutTriggered={(shortcut) => {
+                console.log('Shortcut triggered:', shortcut.description);
+              }}
+              showHelpPanel={true}
+              enableGlobalShortcuts={true}
+            />
+          </Suspense>
+        )}
+
         {/* Theme Toggle Button */}
         <button
           onClick={() => setIsDarkMode(!isDarkMode)}
@@ -690,8 +800,10 @@ export default function App(): React.JSX.Element {
           <div>Ctrl+Shift+H: System Health</div>
           <div>Ctrl+Shift+M: Advanced Monitoring</div>
           <div>Ctrl+Shift+R: Real-Time Performance</div>
+          <div>Ctrl+Shift+S: System Status</div>
           <div>Ctrl+Shift+K: Keyboard Help</div>
           <div>Ctrl+Shift+T: Toggle Theme</div>
+          <div>Ctrl+Shift+?: Shortcuts Manager</div>
           <div>Ctrl+K: Enhanced Command Palette</div>
           <div>Esc: Close All Modals</div>
         </div>
