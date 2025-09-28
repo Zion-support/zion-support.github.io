@@ -1,4 +1,4 @@
-import React, { useCallback, useState, useEffect, useMemo } from 'react';
+import React, { useCallback, useState, useEffect, useMemo, lazy, Suspense } from 'react';
 import { AppRouter } from './router';
 import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
@@ -18,11 +18,26 @@ import { useAppInitialization } from './hooks/useAppInitialization';
 import { useSEOData } from './components/SEOOptimizer';
 import './index.css';
 
+// Lazy load heavy components for better performance
+const EnhancedSystemDashboard = lazy(() => import('./components/EnhancedSystemDashboard'));
+const AIPerformanceDashboard = lazy(() => import('./components/AIPerformanceDashboard'));
+const WebsiteEnhancements = lazy(() => import('./components/WebsiteEnhancements'));
+const AdvancedAnalytics = lazy(() => import('./components/AdvancedAnalytics'));
+const PerformanceDashboard = lazy(() => import('./components/PerformanceDashboard'));
+const SystemMonitoringDashboard = lazy(() => import('./components/SystemMonitoringDashboard'));
+const ComprehensiveImprovements = lazy(() => import('./components/ComprehensiveImprovements'));
+
 export default function App(): React.JSX.Element {
   // State for system dashboard and performance optimizer
   const [showSystemDashboard, setShowSystemDashboard] = useState(false);
   const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
   const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
+  const [showAIDashboard, setShowAIDashboard] = useState(false);
+  const [showSEOOptimizer, setShowSEOOptimizer] = useState(false);
+  const [showRealTimeMetrics, setShowRealTimeMetrics] = useState(false);
+  const [showAccessibilityPanel, setShowAccessibilityPanel] = useState(false);
+  const [showSystemStatus, setShowSystemStatus] = useState(true);
+  const [showComprehensiveImprovements, setShowComprehensiveImprovements] = useState(false);
 
   // Initialize app with custom configuration
   const { isLoading, loadingProgress, handleScroll, handleClick, trackEngagement: originalTrackEngagement } = useAppInitialization({
@@ -89,6 +104,18 @@ export default function App(): React.JSX.Element {
     if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'M') {
       event.preventDefault();
       setShowPerformanceMonitor(prev => !prev);
+    }
+    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'A') {
+      event.preventDefault();
+      setShowAIDashboard(prev => !prev);
+    }
+    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'S') {
+      event.preventDefault();
+      setShowSEOOptimizer(prev => !prev);
+    }
+    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'I') {
+      event.preventDefault();
+      setShowComprehensiveImprovements(prev => !prev);
     }
   }, []);
 
@@ -236,6 +263,24 @@ export default function App(): React.JSX.Element {
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <AppRouter />
         
+        {/* System Dashboard - Toggle with Ctrl+Shift+D */}
+        {showSystemDashboard && (
+          <Suspense fallback={<div>Loading...</div>}>
+            <EnhancedSystemDashboard
+              onClose={() => setShowSystemDashboard(false)}
+            />
+          </Suspense>
+        )}
+        
+        {/* AI Performance Dashboard - Toggle with Ctrl+Shift+A */}
+        {showAIDashboard && (
+          <Suspense fallback={<div>Loading...</div>}>
+            <AIPerformanceDashboard
+              onClose={() => setShowAIDashboard(false)}
+            />
+          </Suspense>
+        )}
+        
         {/* Performance Optimizer - Toggle with Ctrl+Shift+P */}
         {showPerformanceOptimizer && (
           <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
@@ -254,6 +299,35 @@ export default function App(): React.JSX.Element {
           </div>
         )}
 
+        {/* SEO Optimizer - Toggle with Ctrl+Shift+S */}
+        {showSEOOptimizer && (
+          <Suspense fallback={<div>Loading...</div>}>
+            <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
+              <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+                <div className="flex justify-between items-center mb-4">
+                  <h2 className="text-2xl font-bold text-gray-900">SEO Optimizer</h2>
+                  <button
+                    onClick={() => setShowSEOOptimizer(false)}
+                    className="text-gray-500 hover:text-gray-700"
+                  >
+                    ✕
+                  </button>
+                </div>
+                <SEOOptimizer seoData={seoData} />
+              </div>
+            </div>
+          </Suspense>
+        )}
+
+        {/* Comprehensive Improvements - Toggle with Ctrl+Shift+I */}
+        {showComprehensiveImprovements && (
+          <Suspense fallback={<div>Loading...</div>}>
+            <ComprehensiveImprovements
+              onClose={() => setShowComprehensiveImprovements(false)}
+            />
+          </Suspense>
+        )}
+
         {/* Performance Monitor - Toggle with Ctrl+Shift+M */}
         <PerformanceMonitor 
           showDashboard={showPerformanceMonitor}
@@ -261,6 +335,15 @@ export default function App(): React.JSX.Element {
             console.log('Performance metrics:', metrics);
           }}
         />
+
+        {/* System Status Indicator */}
+        {showSystemStatus && (
+          <div className="fixed top-4 right-4 z-40">
+            <div className="bg-green-500 text-white px-3 py-1 rounded-full text-xs font-medium">
+              System Online
+            </div>
+          </div>
+        )}
       </div>
     </EnhancedErrorBoundary>
   );

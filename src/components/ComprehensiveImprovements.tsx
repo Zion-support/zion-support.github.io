@@ -23,7 +23,7 @@ export default function ComprehensiveImprovements({ isVisible, onClose }: Improv
     if (isVisible) {
       // Update metrics when component becomes visible
       setPerformanceMetrics(advancedPerformanceOptimizer.getMetrics());
-      setSeoData(advancedSEOOptimizer.getCurrentPageData());
+      setSeoData(advancedSEOOptimizer.getPages());
       setAccessibilityMetrics(advancedAccessibilityEnhancer.getMetrics());
     }
   }, [isVisible]);

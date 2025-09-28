@@ -48,7 +48,8 @@
     "audit:seo": "echo \"Running SEO audit...\"",
     "audit:all": "pnpm run audit:accessibility && pnpm run audit:seo && pnpm run audit:security",
     "analyze:performance": "node scripts/performance-optimizer.js",
-    "build:analyze": "vite build --mode analyze && npx vite-bundle-analyzer dist/stats.html"
+    "build:analyze": "vite build --mode analyze && npx vite-bundle-analyzer dist/stats.html",
+    "build:prod": "NODE_ENV=production vite build --minify terser --sourcemap false"
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.1.13",
