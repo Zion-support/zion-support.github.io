@@ -52,14 +52,6 @@ const ComprehensiveSystemDashboard: React.FC<SystemDashboardProps> = ({
   const [activeTab, setActiveTab] = useState<'overview' | 'performance' | 'security' | 'analytics' | 'system'>('overview');
   const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => {
-    if (isVisible) {
-      loadSystemMetrics();
-      const interval = setInterval(loadSystemMetrics, 5000);
-      return () => clearInterval(interval);
-    }
-  }, [isVisible, loadSystemMetrics]);
-
   const loadSystemMetrics = useCallback(async () => {
     try {
       setIsLoading(true);
@@ -115,6 +107,14 @@ const ComprehensiveSystemDashboard: React.FC<SystemDashboardProps> = ({
       setIsLoading(false);
     }
   }, []);
+
+  useEffect(() => {
+    if (isVisible) {
+      loadSystemMetrics();
+      const interval = setInterval(loadSystemMetrics, 5000);
+      return () => clearInterval(interval);
+    }
+  }, [isVisible, loadSystemMetrics]);
 
   // const exportSystemData = () => {
   //   const data = {

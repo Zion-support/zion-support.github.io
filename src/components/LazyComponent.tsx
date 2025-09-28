@@ -2,7 +2,7 @@ import React, { Suspense, lazy, ComponentType, ReactNode } from 'react';
 import { ModernLoadingSpinner } from './ModernLoadingSpinner';
 
 interface LazyComponentProps {
-  fallback?: ReactNode;
+  fallback?: ReactNode | (() => ReactNode);
   delay?: number;
   [key: string]: unknown;
 }
@@ -33,7 +33,7 @@ export const createLazyComponent = <P extends object>(
     }
 
     return (
-      <Suspense fallback={customFallback || (fallback && typeof fallback === 'function' ? fallback() : fallback) || <ModernLoadingSpinner />}>
+      <Suspense fallback={customFallback || (fallback as ReactNode) || <ModernLoadingSpinner />}>
         <LazyComponent {...(restProps as P)} ref={ref as React.Ref<P>} />
       </Suspense>
     );

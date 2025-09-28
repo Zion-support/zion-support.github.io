@@ -36,6 +36,9 @@ interface BundleOptimizationSuggestion {
   impact: 'high' | 'medium' | 'low';
   action: string;
   estimatedSavings?: number;
+  title?: string;
+  priority?: string;
+  description?: string;
 }
 
 class BundleOptimizer {

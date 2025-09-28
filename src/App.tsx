@@ -63,7 +63,7 @@ export default function App(): React.JSX.Element {
     const newNotification: Notification = {
       ...notification,
       id,
-      timestamp: Date.now()
+      title: notification.title || 'Notification'
     };
     setNotifications(prev => [...prev, newNotification]);
     
@@ -105,7 +105,7 @@ export default function App(): React.JSX.Element {
       navigator.serviceWorker.register('/sw.js')
         .then((registration) => {
           console.log('SW registered: ', registration);
-          addNotification({ type: 'success', message: 'App is now available offline!' });
+          addNotification({ type: 'success', title: 'PWA Ready', message: 'App is now available offline!' });
         })
         .catch((registrationError) => {
           console.log('SW registration failed: ', registrationError);
@@ -251,7 +251,7 @@ export default function App(): React.JSX.Element {
       };
     } catch (error) {
       console.error('Error initializing enhancements:', error);
-      enhancedErrorHandler.handleComponentError(error, 'App', {
+      enhancedErrorHandler.handleComponentError(error as Error, 'App', {
         retryable: false,
         maxRetries: 0,
         retryDelay: 1000
@@ -265,7 +265,7 @@ export default function App(): React.JSX.Element {
       event.preventDefault();
       setShowSystemDashboard((prev: boolean) => !prev);
       seoAnalytics.trackEvent('keyboard_shortcut', { shortcut: 'cmd+shift+d', action: 'toggle_system_dashboard' });
-      addNotification({ type: 'info', message: 'System dashboard toggled' });
+      addNotification({ type: 'info', title: 'Dashboard', message: 'System dashboard toggled' });
       console.debug('Keyboard shortcut used:', { shortcut: 'cmd+shift+d', action: 'toggle_system_dashboard' });
     }
     if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'H') {
