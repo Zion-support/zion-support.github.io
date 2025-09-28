@@ -1,20 +1,25 @@
-import React, { useMemo, useEffect, useCallback } from 'react';
+import React, { useCallback, useState, useEffect, useMemo } from 'react';
 import { AppRouter } from './router';
 import { useAppInitialization } from './hooks/useAppInitialization';
 import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
-import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
-import { seoAnalytics, performanceSEO, seoManager } from './utils/seoEnhanced';
+import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
+import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
+import PerformanceOptimizer from './components/PerformanceOptimizer';
 import { analytics } from './utils/analytics';
+import { seoAnalytics, performanceSEO, seoManager } from './utils/seoEnhanced';
 import { seoOptimizer } from './utils/seoOptimization';
 import { cacheManager } from './utils/cacheManager';
 import { apiClient } from './utils/apiClient';
 import { notificationManager } from './utils/notificationManager';
 import { userFeedback } from './utils/userFeedbackManager';
-import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
 import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
 import './index.css';
 
 export default function App(): React.JSX.Element {
+  // State for system dashboard and performance optimizer
+  const [showSystemDashboard, setShowSystemDashboard] = useState(false);
+  const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
+
   // Initialize app with custom configuration
   const { isLoading, loadingProgress, engagementData, handleScroll, handleClick } = useAppInitialization({
     enablePerformanceMonitoring: true,
@@ -47,6 +52,18 @@ export default function App(): React.JSX.Element {
 
     // Store enhancements globally for debugging
     (window as unknown as Record<string, unknown>).enhancements = enhancements;
+  }, []);
+
+  // Optimized keyboard handler for system dashboard toggle
+  const handleKeyDown = useCallback((event: KeyboardEvent) => {
+    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'D') {
+      event.preventDefault();
+      setShowSystemDashboard(prev => !prev);
+    }
+    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'P') {
+      event.preventDefault();
+      setShowPerformanceOptimizer(prev => !prev);
+    }
   }, []);
 
   // Memoize the SEO data to prevent unnecessary re-renders
@@ -174,24 +191,30 @@ export default function App(): React.JSX.Element {
       window.removeEventListener('scroll', handleScroll);
       document.removeEventListener('click', handleClick);
     };
-  }, [trackEngagement, handleScroll, handleClick]);
+  }, [trackEngagement, handleScroll, handleClick, handleKeyDown]);
 
   // Show loading screen while initializing
   if (isLoading) {
     return (
-      <EnhancedErrorBoundary>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-          <ModernLoadingSpinner progress={loadingProgress} />
-        </div>
-      </EnhancedErrorBoundary>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+        <ModernLoadingSpinner progress={loadingProgress} />
+      </div>
     );
   }
 
   return (
-    <EnhancedErrorBoundary>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <AppRouter />
-      </div>
-    </EnhancedErrorBoundary>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <AppRouter />
+      
+      {/* System Dashboard - Toggle with Ctrl+Shift+D */}
+      {showSystemDashboard && (
+        <EnhancedSystemDashboard onClose={() => setShowSystemDashboard(false)} />
+      )}
+      
+      {/* Performance Optimizer - Toggle with Ctrl+Shift+P */}
+      {showPerformanceOptimizer && (
+        <PerformanceOptimizer onClose={() => setShowPerformanceOptimizer(false)} />
+      )}
+    </div>
   );
 }
