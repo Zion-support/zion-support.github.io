@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
+import { enhancedErrorHandler } from '../utils/enhancedErrorHandling';
 
 interface AIPerformanceDashboardProps {
   isVisible: boolean;
@@ -24,6 +25,7 @@ interface AIInsights {
 }
 
 interface ErrorReport {
+  id: string;
   severity: string;
   message: string;
   lastOccurrence: string | Date;
@@ -40,7 +42,7 @@ interface ErrorReport {
 const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisible, onClose }) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [insights, setInsights] = useState<AIInsights | null>(null);
-  const [errors, setErrors] = useState<ErrorReport[]>([]);
+  const [errorReports, setErrorReports] = useState<ErrorReport[]>([]);
   const [isLoading, setIsLoading] = useState(false);
 
   const loadPerformanceData = useCallback(async () => {
@@ -107,9 +109,12 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
 
       setMetrics(mockMetrics);
       setInsights(mockInsights);
-      setErrors(mockErrorReports);
+      setErrorReports(mockErrorReports);
     } catch (error) {
-      console.error('Failed to load performance data:', error);
+      enhancedErrorHandler.handleError(error as Error, {
+        component: 'AIPerformanceDashboard',
+        action: 'loadPerformanceData'
+      });
     } finally {
       setIsLoading(false);
     }
@@ -122,7 +127,6 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
   }, [isVisible, loadPerformanceData]);
 
   if (!isVisible) return null;
-
   const getSeverityColor = (severity: string) => {
     switch (severity) {
       case 'critical': return 'text-red-600 bg-red-100';
@@ -240,9 +244,9 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
               <div className="bg-gray-50 p-4 rounded-lg">
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">🐛 Error Reports</h3>
                 <div className="space-y-3">
-                  {errors.length > 0 ? (
-                    errors.map((report) => (
-                      <div key={String(report.id)} className="bg-white p-4 rounded border">
+                  {errorReports.length > 0 ? (
+                    errorReports.map((report) => (
+                      <div key={report.id} className="bg-white p-4 rounded border">
                         <div className="flex items-start justify-between">
                           <div className="flex-1">
                             <div className="flex items-center gap-2 mb-2">

@@ -237,7 +237,6 @@ export function useAppInitialization(config: AppInitializationConfig = {}) {
       // Initialize advanced performance monitor
       const { getPerformanceMonitor } = await import('../utils/advancedPerformanceMonitor');
       const advancedPerformanceMonitor = getPerformanceMonitor();
-      // Start monitoring
       advancedPerformanceMonitor.start();
 
       // Initialize advanced cache system

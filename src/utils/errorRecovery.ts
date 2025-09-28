@@ -44,31 +44,46 @@ export class ErrorRecovery {
 
     // Wait before retry
     await new Promise(resolve => setTimeout(resolve, 1000 * this.errorCount));
+
+    // Reload page
+    window.location.reload();
   }
 
   private showFallbackUI(): void {
-    const fallback = document.createElement('div');
-    fallback.innerHTML = `
-      <div style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
-                  background: #f8f9fa; display: flex; align-items: center; 
-                  justify-content: center; z-index: 9999;">
-        <div style="text-align: center; padding: 2rem; background: white; 
-                    border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-          <h2 style="color: #dc3545;">Something went wrong</h2>
-          <p>Please refresh the page to continue.</p>
-          <button onclick="window.location.reload()" 
-                  style="background: #007bff; color: white; border: none; 
-                         padding: 0.5rem 1rem; border-radius: 4px; cursor: pointer;">
-            Refresh Page
-          </button>
+    console.error('Max retries reached, showing fallback UI');
+    
+    // Create a simple fallback UI
+    const fallbackDiv = document.createElement('div');
+    fallbackDiv.innerHTML = `
+      <div style="
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #f0f0f0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: Arial, sans-serif;
+        z-index: 9999;
+      ">
+        <div style="text-align: center; padding: 20px;">
+          <h1>Something went wrong</h1>
+          <p>We're having trouble loading the application.</p>
+          <button onclick="window.location.reload()" style="
+            padding: 10px 20px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+          ">Try Again</button>
         </div>
       </div>
     `;
-    document.body.appendChild(fallback);
-  }
-
-  public getErrorCount(): number {
-    return this.errorCount;
+    
+    document.body.appendChild(fallbackDiv);
   }
 
   public reset(): void {
