@@ -94,8 +94,8 @@ const KeyboardShortcutsHelp: React.FC<KeyboardShortcutsHelpProps> = ({ isVisible
               <div className="text-center py-8 text-gray-500 dark:text-gray-400">
                 No shortcuts found matching &quot;{searchTerm}&quot;
               </div>
-            </div>
-          ))}
+            )}
+          </div>
         </div>
         
         <div className="px-6 py-4 bg-gray-50 border-t border-gray-200">
