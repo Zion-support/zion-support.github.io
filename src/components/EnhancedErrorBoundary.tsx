@@ -1,5 +1,4 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-
 interface ErrorBoundaryState {
   hasError: boolean;
   error: Error | null;
@@ -242,13 +241,5 @@ class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
                 </p>
               </div>
             </div>
-          </div>
-        </div>
-      );
-    }
-
-    return children;
-  }
-}
 
 export default EnhancedErrorBoundary;
