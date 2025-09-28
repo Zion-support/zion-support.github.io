@@ -9,12 +9,9 @@ import { analytics } from './utils/analytics';
 import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import PerformanceMonitor from './components/PerformanceMonitor';
-import SEOOptimizer, { useSEOData } from './components/SEOOptimizer';
+import SEOOptimizer from './components/SEOOptimizer';
 import AIPerformanceDashboard from './components/AIPerformanceDashboard';
 import './index.css';
-import './styles/notifications.css';
-import './styles/system-metrics.css';
-import './styles/modern-utilities.css';
 
 export default function App(): React.JSX.Element {
   // State for system dashboard and performance optimizer
@@ -28,19 +25,6 @@ export default function App(): React.JSX.Element {
     scrollDepth: 0,
     clicks: 0
   }), []);
-
-  // Enhanced track engagement function
-  const enhancedTrackEngagement = useCallback(() => {
-    if (typeof window !== 'undefined') {
-      const timeSpent = Date.now() - engagementData.startTime;
-      analytics.track('engagement', {
-        timeSpent,
-        scrollDepth: engagementData.scrollDepth,
-        clicks: engagementData.clicks,
-        page: window.location.pathname
-      });
-    }
-  }, [engagementData]);
   // Initialize app with custom configuration
   const { isLoading, loadingProgress, handleScroll, handleClick, trackEngagement } = useAppInitialization({
     enablePerformanceMonitoring: true,
@@ -77,6 +61,10 @@ export default function App(): React.JSX.Element {
       event.preventDefault();
       setShowAIDashboard((prev: boolean) => !prev);
     }
+    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'M') {
+      event.preventDefault();
+      setShowPerformanceMonitor(prev => !prev);
+    }
   }, []);
   // Memoize the SEO data to prevent unnecessary re-renders
   const seoData = useMemo(() => ({
@@ -88,7 +76,6 @@ export default function App(): React.JSX.Element {
     ogImage: '/og-image.png',
     twitterCard: 'summary_large_image' as const
   }), []);
-
 
   // Update meta tags function
   const updateMetaTags = useCallback((data: {
@@ -193,7 +180,30 @@ export default function App(): React.JSX.Element {
     };
   }, [trackEngagement]);
 
-  // Show loading screen while initializing
+  // Performance optimization is handled by the hook automatically
+
+  // Track engagement on scroll and click
+  useEffect(() => {
+    const handleScrollWithEngagement = () => {
+      handleScroll();
+        trackEngagement();
+      };
+
+    const handleClickWithEngagement = (event: Event) => {
+      handleClick(event);
+      trackEngagement();
+    };
+
+    window.addEventListener('scroll', handleScrollWithEngagement, { passive: true });
+    document.addEventListener('click', handleClickWithEngagement, { passive: true });
+
+    return () => {
+      window.removeEventListener('scroll', handleScrollWithEngagement);
+      document.removeEventListener('click', handleClickWithEngagement);
+    };
+  }, [handleScroll, handleClick, trackEngagement]);
+
+  // Show loading spinner while initializing
   if (isLoading) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100">

@@ -10,7 +10,7 @@ interface SEOData {
   ogType?: 'website' | 'article' | 'product';
   twitterCard?: 'summary' | 'summary_large_image';
   canonicalUrl?: string;
-  structuredData?: Record<string, unknown>;
+  structuredData?: Record<string, unknown>[];
   author?: string;
   publishedTime?: string;
   modifiedTime?: string;
