@@ -227,7 +227,7 @@ export class AccessibilityEnhancer {
     });
   }
 
-  private calculateContrast(_color1: string, _color2: string): number {
+  private calculateContrast(): number {
     // Simplified contrast calculation
     // In a real implementation, you'd use a proper color contrast library
     return 4.5; // Placeholder

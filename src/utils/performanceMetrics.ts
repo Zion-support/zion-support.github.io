@@ -177,6 +177,7 @@ class PerformanceMetricsCollector {
   }
 
   public generateReport(): PerformanceReport {
+    // const highImpactMetrics = this.getHighImpactMetrics();
     const overallScore = this.calculateOverallScore();
     const recommendations = this.generateRecommendations();
 

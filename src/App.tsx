@@ -108,65 +108,6 @@ export default function App(): React.JSX.Element {
     clicks: 0
   }), []);
 
-  // Command palette commands
-  const commandPaletteCommands = useMemo(() => [
-    {
-      id: 'system-dashboard',
-      title: 'Toggle System Dashboard',
-      description: 'Open/close the system metrics dashboard',
-      category: 'Dashboard',
-      action: () => setShowSystemDashboard(prev => !prev),
-      shortcut: 'Ctrl+Shift+D'
-    },
-    {
-      id: 'performance-optimizer',
-      title: 'Toggle Performance Optimizer',
-      description: 'Open/close the performance optimization panel',
-      category: 'Performance',
-      action: () => setShowPerformanceOptimizer(prev => !prev),
-      shortcut: 'Ctrl+Shift+P'
-    },
-    {
-      id: 'performance-monitor',
-      title: 'Toggle Performance Monitor',
-      description: 'Open/close the performance monitoring panel',
-      category: 'Performance',
-      action: () => setShowPerformanceMonitor(prev => !prev),
-      shortcut: 'Ctrl+Shift+M'
-    },
-    {
-      id: 'ai-dashboard',
-      title: 'Toggle AI Dashboard',
-      description: 'Open/close the AI performance dashboard',
-      category: 'AI',
-      action: () => setShowAIDashboard(prev => !prev),
-      shortcut: 'Ctrl+Shift+A'
-    },
-    {
-      id: 'keyboard-help',
-      title: 'Show Keyboard Shortcuts',
-      description: 'Display all available keyboard shortcuts',
-      category: 'Help',
-      action: () => setShowKeyboardHelp(true),
-      shortcut: 'Ctrl+Shift+H'
-    },
-    {
-      id: 'close-all',
-      title: 'Close All Modals',
-      description: 'Close all open modals and dashboards',
-      category: 'Navigation',
-      action: () => {
-        setShowSystemDashboard(false);
-        setShowPerformanceOptimizer(false);
-        setShowPerformanceMonitor(false);
-        setShowAIDashboard(false);
-        setShowRealTimeMetrics(false);
-        setShowCommandPalette(false);
-        setShowKeyboardHelp(false);
-      },
-      shortcut: 'Escape'
-    }
-  ], []);
 
   // Enhanced track engagement function
   const trackEngagement = useCallback(() => {
