@@ -1,0 +1,10 @@
+{
+  "buildTime": 7951,
+  "bundleSize": 1137249,
+  "chunkCount": 16,
+  "timestamp": "2025-09-28T23:04:16.877Z",
+  "recommendations": [
+    "High chunk count - consider consolidating chunks"
+  ],
+  "score": 85
+}
