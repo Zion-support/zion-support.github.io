@@ -3,47 +3,22 @@ import { AppRouter } from './router';
 import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import PerformanceTracker from './components/PerformanceTracker';
-import { seoAnalytics, performanceSEO, seoManager } from './utils/seoEnhanced';
+import { seoAnalytics, performanceSEO } from './utils/seoEnhanced';
 import { analytics } from './utils/analytics';
-import { performanceOptimizer } from './utils/performanceOptimizations';
-import { accessibilityEnhancer } from './utils/advancedAccessibilityEnhancer';
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
 import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
-import PerformanceOptimizer from './components/PerformanceOptimizer';
-import PerformanceMonitor from './components/PerformanceMonitor';
-import AIPerformanceDashboard from './components/AIPerformanceDashboard';
-import WebsiteEnhancements from './components/WebsiteEnhancements';
-import SEOOptimizer from './components/SEOOptimizer';
-import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
 import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
-import { performanceAlerts } from './utils/performanceAlerts';
-import { accessibilityUtils } from './utils/accessibilityUtils';
-import { securityUtils } from './utils/securityUtils';
-import { enhancedSecurityManager } from './utils/enhancedSecurityManager';
-import AdvancedAnalytics from './components/AdvancedAnalytics';
 import NotificationSystem, { Notification } from './components/NotificationSystem';
 import KeyboardShortcutsHelp from './components/KeyboardShortcutsHelp';
-import CommandPalette from './components/CommandPalette';
-import RealTimePerformanceMonitor from './components/RealTimePerformanceMonitor';
 import SystemHealthDashboard from './components/SystemHealthDashboard';
-import PerformanceMetricsDashboard from './components/PerformanceMetricsDashboard';
 import './index.css';
 
 export default function App(): React.JSX.Element {
-  // State for system dashboard and performance optimizer
+  // State for system dashboard
   const [showSystemDashboard, setShowSystemDashboard] = useState(false);
-  const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
-  const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
-  const [showAIDashboard, setShowAIDashboard] = useState(false);
-  const [showSEOOptimizer, setShowSEOOptimizer] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [showKeyboardHelp, setShowKeyboardHelp] = useState(false);
-  const [showCommandPalette, setShowCommandPalette] = useState(false);
-  const [showRealTimeMetrics, setShowRealTimeMetrics] = useState(false);
   const [notifications, setNotifications] = useState<Notification[]>([]);
-  const [showWebsiteEnhancements, setShowWebsiteEnhancements] = useState(false);
-  const [showPerformanceMetrics, setShowPerformanceMetrics] = useState(false);
-  const [showRealTimeMonitor, setShowRealTimeMonitor] = useState(false);
   const [showSystemHealth, setShowSystemHealth] = useState(false);
 
   // Temporary placeholders
@@ -68,7 +43,7 @@ export default function App(): React.JSX.Element {
     ogUrl: typeof window !== 'undefined' ? window.location.href : '',
     ogImage: '/og-image.png',
     twitterCard: 'summary_large_image' as const
-  }), [currentPathname]);
+  }), []);
 
   // Performance optimization hook
   const { preloadResource } = usePerformanceOptimization({
@@ -93,13 +68,13 @@ export default function App(): React.JSX.Element {
       event.preventDefault();
       setShowSystemDashboard((prev: boolean) => !prev);
     }
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'P') {
+    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'H') {
       event.preventDefault();
-      setShowPerformanceOptimizer((prev: boolean) => !prev);
+      setShowSystemHealth((prev: boolean) => !prev);
     }
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'M') {
+    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'K') {
       event.preventDefault();
-      setShowPerformanceMonitor(prev => !prev);
+      setShowKeyboardHelp((prev: boolean) => !prev);
     }
   }, []);
 
@@ -113,12 +88,11 @@ export default function App(): React.JSX.Element {
   // Enhanced track engagement function
   const trackEngagement = useCallback(() => {
     try {
-      const timeOnPage = Date.now() - engagementData.startTime;
       originalTrackEngagement();
     } catch (error) {
       console.error('Error tracking engagement:', error);
     }
-  }, [engagementData.clicks, engagementData.scrollDepth, engagementData.startTime, originalTrackEngagement]);
+  }, [originalTrackEngagement]);
 
   // Simple SEO manager
   const seoManagerInstance = useMemo(() => ({
@@ -243,7 +217,7 @@ export default function App(): React.JSX.Element {
       }
     };
 
-    const handleClickWithEngagement = (_event: Event) => {
+    const handleClickWithEngagement = () => {
       handleClick();
       // Track engagement without calling hooks inside callback
       try {
@@ -329,16 +303,9 @@ export default function App(): React.JSX.Element {
         <div className="fixed bottom-4 left-4 z-40 bg-gray-800 text-white p-3 rounded-lg shadow-lg text-sm opacity-75 hover:opacity-100 transition-opacity duration-200">
           <div className="font-semibold mb-1">Keyboard Shortcuts:</div>
           <div>Ctrl+Shift+D: System Dashboard</div>
-          <div>Ctrl+Shift+P: Performance Optimizer</div>
-          <div>Ctrl+Shift+M: Performance Monitor</div>
-          <div>Ctrl+Shift+A: AI Dashboard</div>
-          <div>Ctrl+Shift+S: SEO Optimizer</div>
-          <div>Ctrl+Shift+T: Toggle Theme</div>
-          <div>Ctrl+Shift+R: Real-Time Monitor</div>
           <div>Ctrl+Shift+H: System Health</div>
           <div>Ctrl+Shift+K: Keyboard Help</div>
-          <div>Ctrl+K: Command Palette</div>
-          <div>Escape: Close All</div>
+          <div>Click Theme Button: Toggle Theme</div>
         </div>
       </div>
     </EnhancedErrorBoundary>
