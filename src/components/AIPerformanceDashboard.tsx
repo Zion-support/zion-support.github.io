@@ -25,21 +25,40 @@ interface ErrorReport {
   };
   aiPredictedImpact?: number;
   resolutionSuggestions?: string[];
+  [key: string]: unknown;
+}
+
+interface AIInsights {
+  predictedHighRiskActions: string[];
+  recommendedImprovements: string[];
+  errorTrends: Array<{
+    category: string;
+    trend: 'increasing' | 'decreasing' | 'stable';
+  }>;
 }
 
 const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisible, onClose }) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-  const [insights, setInsights] = useState<{
-    predictedHighRiskActions: string[];
-    recommendedImprovements: string[];
-    errorTrends: Array<{ category: string; trend: string }>;
-  } | null>(null);
+  const [insights, setInsights] = useState<AIInsights | null>(null);
   const [errorReports, setErrorReports] = useState<ErrorReport[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     if (isVisible) {
-      loadPerformanceData();
+      const updateData = () => {
+        try {
+          setMetrics(enhancedErrorHandler.getPerformanceMetrics() as PerformanceMetrics);
+          setInsights(enhancedErrorHandler.getAIInsights() as AIInsights);
+          setErrorReports(enhancedErrorHandler.getErrorReports().slice(0, 10) as unknown as ErrorReport[]);
+        } catch (error) {
+          console.error('Failed to fetch dashboard data:', error);
+        }
+      };
+
+      updateData();
+      const interval = setInterval(updateData, 5000); // Update every 5 seconds
+
+      return () => clearInterval(interval);
     }
   }, [isVisible]);
 
@@ -173,28 +192,93 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
                 </div>
               )}
 
-              {/* AI Insights */}
-              {insights && (
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                  <div className="bg-gray-50 p-4 rounded-lg">
-                    <h3 className="text-lg font-semibold text-gray-900 mb-3">Predicted High-Risk Actions</h3>
-                    <ul className="space-y-2">
-                      {insights.predictedHighRiskActions.map((action, index) => (
-                        <li key={index} className="text-sm text-gray-700 flex items-start">
-                          <span className="text-red-500 mr-2">⚠️</span>
+          {/* AI Insights */}
+          <div className="bg-blue-50 rounded-lg p-6">
+            <h3 className="text-xl font-semibold mb-4">AI Insights</h3>
+            {insights && (
+              <div className="space-y-4">
+                <div>
+                  <h4 className="font-medium text-gray-800 mb-2">Predicted High-Risk Actions</h4>
+                  {insights.predictedHighRiskActions.length > 0 ? (
+                    <ul className="space-y-1">
+                      {insights.predictedHighRiskActions.map((action: string, index: number) => (
+                        <li key={index} className="text-sm text-red-600 flex items-center">
+                          <span className="w-2 h-2 bg-red-500 rounded-full mr-2"></span>
                           {action}
                         </li>
                       ))}
                     </ul>
-                  </div>
+                  ) : (
+                    <p className="text-sm text-green-600">No high-risk actions predicted</p>
+                  )}
+                </div>
 
-                  <div className="bg-gray-50 p-4 rounded-lg">
-                    <h3 className="text-lg font-semibold text-gray-900 mb-3">Recommended Improvements</h3>
-                    <ul className="space-y-2">
-                      {insights.recommendedImprovements.map((improvement, index) => (
-                        <li key={index} className="text-sm text-gray-700 flex items-start">
-                          <span className="text-green-500 mr-2">💡</span>
-                          {improvement}
+                <div>
+                  <h4 className="font-medium text-gray-800 mb-2">Recommended Improvements</h4>
+                  <ul className="space-y-1">
+                    {insights.recommendedImprovements.map((improvement: string, index: number) => (
+                      <li key={index} className="text-sm text-blue-600 flex items-center">
+                        <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
+                        {improvement}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div>
+                  <h4 className="font-medium text-gray-800 mb-2">Error Trends</h4>
+                  <div className="space-y-2">
+                    {insights.errorTrends.map((trend, index: number) => (
+                      <div key={index} className="flex items-center justify-between">
+                        <span className="font-medium capitalize">{trend.category}</span>
+                        <div className="flex items-center space-x-2">
+                          <span className="text-lg">{getTrendIcon(trend.trend)}</span>
+                          <span className="text-sm text-gray-600">
+                            {trend.trend}
+                          </span>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+
+        {/* Recent Errors */}
+        <div className="mt-6">
+          <h3 className="text-xl font-semibold mb-4">Recent Errors</h3>
+          <div className="space-y-3">
+            {errors.map((error) => (
+              <div key={error.id} className="border rounded-lg p-4 bg-white">
+                <div className="flex items-center justify-between mb-2">
+                  <span className={`px-2 py-1 rounded text-xs font-medium ${getSeverityColor(error.severity)}`}>
+                    {error.severity}
+                  </span>
+                  <span className="text-xs text-gray-500">
+                    {new Date(error.lastOccurrence).toLocaleString()}
+                  </span>
+                </div>
+                <h4 className="font-medium text-gray-800 mb-1">{error.message}</h4>
+                <div className="text-sm text-gray-600 mb-2">
+                  Component: {error.context.component || 'Unknown'} |
+                  Action: {error.context.action || 'Unknown'} |
+                  ID: {error.id}
+                </div>
+                {error.aiPredictedImpact && (
+                  <div className="text-sm text-blue-600 mt-1">
+                    🤖 AI Impact Score: {Math.round(Number(error.aiPredictedImpact) * 100)}%
+                  </div>
+                )}
+                {error.resolutionSuggestions && error.resolutionSuggestions.length > 0 && (
+                  <div className="mt-3 p-3 bg-green-50 rounded">
+                    <h5 className="font-medium text-green-800 mb-2">Resolution Suggestions:</h5>
+                    <ul className="space-y-1">
+                      {error.resolutionSuggestions.map((suggestion: string, idx: number) => (
+                        <li key={idx} className="text-sm text-green-700 flex items-start">
+                          <span className="w-1.5 h-1.5 bg-green-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>
+                          {suggestion}
                         </li>
                       ))}
                     </ul>

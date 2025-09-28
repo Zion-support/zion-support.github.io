@@ -3,8 +3,9 @@ import { AppRouter } from './router';
 import { useAppInitialization } from './hooks/useAppInitialization';
 import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
-import { seoAnalytics, performanceSEO, seoManager } from './utils/seoEnhanced';
+import { seoAnalytics } from './utils/seoEnhanced';
 import { analytics } from './utils/analytics';
+import { useSEOData } from './components/SEOOptimizer';
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
 import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
@@ -12,7 +13,7 @@ import PerformanceMonitor from './components/PerformanceMonitor';
 import SEOOptimizer from './components/SEOOptimizer';
 import AIPerformanceDashboard from './components/AIPerformanceDashboard';
 import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
-import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
+// import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
 import { enhancedAnalytics } from './utils/enhancedAnalytics';
 import { advancedCacheSystem } from './utils/advancedCacheSystem';
 import { AdvancedAutomationSystem } from './utils/advancedAutomationSystem';
@@ -30,7 +31,6 @@ export default function App(): React.JSX.Element {
   const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
   const [showAIDashboard, setShowAIDashboard] = useState(false);
   const [showSEOOptimizer, setShowSEOOptimizer] = useState(false);
-  // Removed unused state variables to fix linting warnings
   // const [isDarkMode, setIsDarkMode] = useState(false);
   // const [userPreferences, setUserPreferences] = useState({
   //   theme: 'auto',
@@ -56,8 +56,12 @@ export default function App(): React.JSX.Element {
     enableCaching: true,
   });
 
+  // Get current pathname for SEO
+  const currentPathname = typeof window !== 'undefined' ? window.location.pathname : '/';
+  const seoData = useSEOData(currentPathname);
+
   // Performance optimization hook
-  const { preloadResource } = usePerformanceOptimization({
+  const { /* preloadResource */ } = usePerformanceOptimization({
     enablePreloading: true,
     enableResourceHints: true,
     enableCriticalCSS: true,
@@ -88,7 +92,7 @@ export default function App(): React.JSX.Element {
     }
   }, []);
 
-  // Enhanced engagement tracking function
+  // Enhanced track engagement function
   const enhancedTrackEngagement = useCallback(() => {
     const timeOnPage = Date.now() - engagementData.startTime;
     seoAnalytics.trackUserEngagement(window.location.pathname, {
@@ -99,17 +103,6 @@ export default function App(): React.JSX.Element {
     // Also call the original trackEngagement from useAppInitialization
     trackEngagement();
   }, [engagementData.clicks, engagementData.scrollDepth, engagementData.startTime, trackEngagement]);
-
-  // Memoize the SEO data to prevent unnecessary re-renders
-  const seoData = useMemo(() => ({
-    title: 'Zion Tech Group - Leading AI & Technology Solutions',
-    description: 'Cutting-edge AI, quantum computing, and digital transformation solutions for modern enterprises. Expert consulting, cloud services, and innovative technology implementations.',
-    keywords: ['AI solutions', 'quantum computing', 'digital transformation', 'cloud services', 'enterprise technology', 'machine learning', 'automation', 'blockchain'],
-    ogType: 'website' as const,
-    ogUrl: typeof window !== 'undefined' ? window.location.href : '',
-    ogImage: '/og-image.png',
-    twitterCard: 'summary_large_image' as const
-  }), []);
 
   // Update meta tags function
   const updateMetaTags = useCallback((data: {
@@ -235,6 +228,51 @@ export default function App(): React.JSX.Element {
           progress={loadingProgress}
           className="animate-fade-in-scale"
         />
+=======
+  // Initialize comprehensive enhancements
+  useEffect(() => {
+    try {
+      getComprehensiveEnhancements();
+      // Initialize enhancement systems safely
+      if (enhancedAnalytics && typeof enhancedAnalytics.initialize === 'function') {
+        enhancedAnalytics.initialize();
+      }
+      if (advancedCacheSystem && typeof advancedCacheSystem.initialize === 'function') {
+        advancedCacheSystem.initialize();
+      }
+      
+      // Initialize automation systems
+      new AdvancedAutomationSystem().initialize();
+      new AccessibilityEnhancer().initialize();
+      new SecurityEnhancer().initialize();
+      
+      // Initialize analytics safely
+      if (analytics && typeof analytics.initialize === 'function') {
+        analytics.initialize();
+      }
+      
+      // Add event listeners
+      window.addEventListener('beforeunload', enhancedTrackEngagement);
+      window.addEventListener('scroll', handleScroll);
+      document.addEventListener('click', handleClick);
+      document.addEventListener('keydown', handleKeyDown);
+      
+      return () => {
+        window.removeEventListener('beforeunload', enhancedTrackEngagement);
+        window.removeEventListener('scroll', handleScroll);
+        document.removeEventListener('click', handleClick);
+        document.removeEventListener('keydown', handleKeyDown);
+      };
+    } catch (error) {
+      console.error('Error initializing enhancements:', error);
+    }
+  }, [trackEngagement, handleKeyDown, handleScroll, handleClick, enhancedTrackEngagement]);
+
+  if (isLoading) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+        <ModernLoadingSpinner progress={loadingProgress} />
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8e59
       </div>
     );
   }
@@ -280,14 +318,6 @@ export default function App(): React.JSX.Element {
             </div>
           </div>
         )}
-
-        {/* Performance Monitor - Toggle with Ctrl+Shift+M */}
-        <PerformanceMonitor 
-          showDashboard={showPerformanceMonitor}
-          onMetricsUpdate={(metrics) => {
-            console.log('Performance metrics:', metrics);
-          }}
-        />
         
         {/* AI Performance Dashboard - Toggle with Ctrl+Shift+A */}
         <AIPerformanceDashboard
@@ -296,6 +326,38 @@ export default function App(): React.JSX.Element {
         />
 
         {/* SEO Optimizer - Toggle with Ctrl+Shift+S */}
+        <SEOOptimizer
+          isVisible={showSEOOptimizer}
+          onClose={() => setShowSEOOptimizer(false)}
+        />
+
+        {/* Performance Monitor - Toggle with Ctrl+Shift+M */}
+        <PerformanceMonitor 
+          showDashboard={showPerformanceMonitor}
+          onMetricsUpdate={(metrics) => {
+            console.log('Performance metrics:', metrics);
+                <button
+                  onClick={() => setShowPerformanceMonitor(false)}
+                  className="text-gray-500 hover:text-gray-700"
+                >
+                  ✕
+                </button>
+              </div>
+              <PerformanceMonitor />
+            </div>
+          </div>
+        )}
+
+        {/* AI Performance Dashboard */}
+        {showAIDashboard && (
+          <AIPerformanceDashboard 
+            isVisible={showAIDashboard}
+            onClose={() => setShowAIDashboard(false)}
+          />
+        )}
+
+        {/* SEO Optimizer */}
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8e59
         {showSEOOptimizer && (
           <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
             <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
