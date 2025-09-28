@@ -4,7 +4,7 @@ import { AppRouter } from './router';
 import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import PerformanceTracker from './components/PerformanceTracker';
-import PerformanceMonitor from './components/PerformanceMonitor';
+// import PerformanceMonitor from './components/PerformanceMonitor';
 import PerformanceDashboard from './components/PerformanceDashboard';
 import { seoAnalytics, performanceSEO } from './utils/seoEnhanced';
 import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
@@ -29,7 +29,7 @@ export default function App(): React.JSX.Element {
   const [showSystemHealth, setShowSystemHealth] = useState(false);
   const [showPerformanceWidget, setShowPerformanceWidget] = useState(false);
   const [showCommandPalette, setShowCommandPalette] = useState(false);
-  const [showPerformanceDashboard, setShowPerformanceDashboard] = useState(false);
+  // const [showPerformanceDashboard, setShowPerformanceDashboard] = useState(false);
 
   // Notification management
   const removeNotification = useCallback((id: string) => {
