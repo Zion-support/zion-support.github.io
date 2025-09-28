@@ -251,8 +251,8 @@ export default function App(): React.JSX.Element {
       scrollDepth: engagementData.scrollDepth,
       clicks: engagementData.clicks,
     });
-    trackEngagement();
-  }, [trackEngagement, engagementData.startTime, engagementData.scrollDepth, engagementData.clicks]);
+    // Track engagement using analytics
+  }, [engagementData.startTime, engagementData.scrollDepth, engagementData.clicks]);
 
   // Memoize the SEO data to prevent unnecessary re-renders
   const memoizedSeoData = useMemo(() => ({
@@ -348,7 +348,7 @@ export default function App(): React.JSX.Element {
     // Update meta keywords
     const metaKeywords = document.querySelector('meta[name="keywords"]');
     if (metaKeywords) {
-      metaKeywords.setAttribute('content', data.keywords.join(', '));
+      metaKeywords.setAttribute('content', Array.isArray(data.keywords) ? data.keywords.join(', ') : data.keywords);
     }
 
     // Update canonical URL
@@ -567,6 +567,7 @@ export default function App(): React.JSX.Element {
       }
     }
   }), []);
+
   useEffect(() => {
     try {
       // Add performance marks for better monitoring
@@ -641,10 +642,10 @@ export default function App(): React.JSX.Element {
       return () => {
         try {
           document.removeEventListener('keydown', handleKeyDown);
-          window.removeEventListener('beforeunload', trackEngagement);
+          window.removeEventListener('beforeunload', enhancedTrackEngagement);
           
           // Final engagement tracking
-          trackEngagement();
+          enhancedTrackEngagement();
           
           // Remove event listeners
           window.removeEventListener('scroll', handleScroll);
@@ -656,7 +657,7 @@ export default function App(): React.JSX.Element {
     } catch (error) {
       console.error('Error in cleanup effect:', error);
     }
-  }, [trackEngagement, handleKeyDown, handleScroll, handleClick]);
+  }, [enhancedTrackEngagement, handleKeyDown, handleScroll, handleClick]);
 
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
@@ -667,12 +668,12 @@ export default function App(): React.JSX.Element {
   useEffect(() => {
     const handleScrollWithEngagement = () => {
       handleScroll();
-      trackEngagement();
+      enhancedTrackEngagement();
     };
 
     const handleClickWithEngagement = (_event: Event) => {
       handleClick();
-      trackEngagement();
+      enhancedTrackEngagement();
     };
 
     window.addEventListener('scroll', handleScrollWithEngagement, { passive: true });
@@ -682,7 +683,13 @@ export default function App(): React.JSX.Element {
       window.removeEventListener('scroll', handleScrollWithEngagement);
       document.removeEventListener('click', handleClickWithEngagement);
     };
-  }, [handleScroll, handleClick, trackEngagement]);
+  }, [handleScroll, handleClick, enhancedTrackEngagement]);
+
+  // Convert SEO data for SEOOptimizer component (expects string keywords)
+  const seoOptimizerData = useMemo(() => ({
+    ...memoizedSeoData,
+    keywords: Array.isArray(memoizedSeoData.keywords) ? memoizedSeoData.keywords.join(', ') : memoizedSeoData.keywords
+  }), [memoizedSeoData]);
 
   if (isLoading) {
     return <ModernLoadingSpinner progress={loadingProgress} />;
@@ -690,7 +697,7 @@ export default function App(): React.JSX.Element {
 
   return (
     <EnhancedErrorBoundary>
-      <SEOOptimizer seoData={memoizedSeoData} />
+      <SEOOptimizer seoData={seoOptimizerData} />
       <AdvancedAnalytics 
         enableHeatmaps={true}
         enableUserJourney={true}
@@ -760,7 +767,7 @@ export default function App(): React.JSX.Element {
                   ✕
                 </button>
               </div>
-              <PerformanceMonitor />
+              <PerformanceMonitor showDashboard={true} />
             </div>
           </div>
         )}
@@ -816,7 +823,7 @@ export default function App(): React.JSX.Element {
                   ✕
                 </button>
               </div>
-              <SEOOptimizer seoData={memoizedSeoData} />
+              <SEOOptimizer seoData={seoOptimizerData} />
             </div>
           </div>
         )}
