@@ -218,7 +218,7 @@ export class AdvancedAutomationSystem {
     
     try {
       // Pre-deployment checks
-      await this.runPreDeploymentChecks();
+      await this.runPreDeploymentChecks(config);
       
       // Execute deployment strategy
       const success = await this.executeDeploymentStrategy(config);
@@ -237,7 +237,7 @@ export class AdvancedAutomationSystem {
       
       // Attempt rollback if enabled
       if (config.rollbackEnabled) {
-        await this.rollbackDeployment();
+        await this.rollbackDeployment(config);
       }
       
       return false;
@@ -608,11 +608,11 @@ export class AdvancedAutomationSystem {
     
     switch (config.deploymentStrategy) {
       case 'rolling':
-        return await this.rollingDeployment();
+        return await this.rollingDeployment(config);
       case 'blue-green':
-        return await this.blueGreenDeployment();
+        return await this.blueGreenDeployment(config);
       case 'canary':
-        return await this.canaryDeployment();
+        return await this.canaryDeployment(config);
       default:
         throw new Error(`Unknown deployment strategy: ${config.deploymentStrategy}`);
     }

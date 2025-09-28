@@ -553,7 +553,7 @@ export class EnhancedSEO {
     return issues;
   }
 
-  private generateRecommendations(issues: SEOIssue[]): SEORecommendation[] {
+  public generateRecommendations(issues: SEOIssue[]): SEORecommendation[] {
     const recommendations: SEORecommendation[] = [];
 
     const criticalIssues = issues.filter(issue => issue.type === 'error');

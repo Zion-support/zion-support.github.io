@@ -57,8 +57,8 @@ export const EnhancedSystemDashboard: React.FC = () => {
     let seoReport: SEOReport | null = null;
     let seoRecommendations: SEORecommendation[] = [];
     try {
-      seoReport = enhancedSEO.generateReport();
-      seoRecommendations = enhancedSEO.getRecommendations();
+      seoReport = enhancedSEO.generateSEOReport();
+      seoRecommendations = enhancedSEO.generateRecommendations([]);
     } catch (error) {
       console.warn('Failed to generate SEO report:', error);
     }

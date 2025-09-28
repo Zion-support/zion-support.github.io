@@ -14,8 +14,8 @@ const mockLocation = {
 };
 
 // Delete the existing location property and redefine it
-delete (window as any).location;
-(window as any).location = mockLocation;
+delete (window as unknown as { location?: Location }).location;
+(window as unknown as { location: Partial<Location> }).location = mockLocation;
 
 // Mock window.history
 Object.defineProperty(window, 'history', {
