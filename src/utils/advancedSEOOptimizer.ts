@@ -1,6 +1,6 @@
 /**
  * Advanced SEO Optimizer
- * Comprehensive SEO optimization utilities for Zion Tech Group website
+ * Comprehensive SEO optimization utilities for the Zion Tech Group website
  */
 
 interface SEOConfig {
@@ -19,6 +19,12 @@ interface SEOConfig {
   enableCanonical: boolean;
   enableOpenGraph: boolean;
   enableTwitterCards: boolean;
+  enableMetaOptimization: boolean;
+  enableSitemapGeneration: boolean;
+  enableCanonicalUrls: boolean;
+  enableSchemaMarkup: boolean;
+  enablePerformanceSEO: boolean;
+  enableAccessibilitySEO: boolean;
 }
 
 interface PageSEOData {
@@ -252,245 +258,9 @@ export class AdvancedSEOOptimizer {
       site: this.config.twitterHandle,
     };
   }
-
-  /**
-   * Generate robots.txt content
-   */
-  generateRobotsTxt(): string {
-    if (!this.config.enableRobotsTxt) return '';
-
-    return `User-agent: *
-Allow: /
-
-# Sitemap
-Sitemap: ${this.config.siteUrl}/sitemap.xml
-
-# Disallow admin and private areas
-Disallow: /admin/
-Disallow: /private/
-Disallow: /api/
-Disallow: /_next/
-Disallow: /static/
-
-# Allow important pages
-Allow: /
-Allow: /services/
-Allow: /about/
-Allow: /contact/
-Allow: /blog/
-`;
-  }
-
-  /**
-   * Generate sitemap XML
-   */
-  generateSitemap(): string {
-    if (!this.config.enableSitemap) return '';
-
-    const pages = Array.from(this.pages.values());
-    const staticPages = [
-      { url: '/', priority: '1.0', changefreq: 'daily' },
-      { url: '/about', priority: '0.8', changefreq: 'monthly' },
-      { url: '/services', priority: '0.9', changefreq: 'weekly' },
-      { url: '/contact', priority: '0.7', changefreq: 'monthly' },
-      { url: '/blog', priority: '0.8', changefreq: 'weekly' },
-    ];
-
-    const allPages = [...staticPages, ...pages.map(page => ({
-      url: page.url.replace(this.config.siteUrl, ''),
-      priority: '0.6',
-      changefreq: 'weekly'
-    }))];
-
-    let sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">`;
-
-    allPages.forEach(page => {
-      sitemap += `
-  <url>
-    <loc>${this.config.siteUrl}${page.url}</loc>
-    <lastmod>${new Date().toISOString()}</lastmod>
-    <changefreq>${page.changefreq}</changefreq>
-    <priority>${page.priority}</priority>
-  </url>`;
-    });
-
-    sitemap += `
-</urlset>`;
-
-    return sitemap;
-  }
-
-  /**
-   * Audit page SEO
-   */
-  async auditPageSEO(url: string): Promise<SEOAuditResult> {
-    const pageData = this.pages.get(url);
-    if (!pageData) {
-      throw new Error(`No SEO data found for page: ${url}`);
-    }
-
-    const issues: SEOAuditResult['issues'] = [];
-    const recommendations: string[] = [];
-    let score = 100;
-
-    // Check title length
-    if (pageData.title.length < 30) {
-      issues.push({
-        type: 'warning',
-        message: 'Title is too short (less than 30 characters)',
-        suggestion: 'Add more descriptive words to your title',
-        priority: 'medium'
-      });
-      score -= 10;
-    } else if (pageData.title.length > 60) {
-      issues.push({
-        type: 'warning',
-        message: 'Title is too long (more than 60 characters)',
-        suggestion: 'Shorten your title to improve search engine display',
-        priority: 'medium'
-      });
-      score -= 5;
-    }
-
-    // Check description length
-    if (pageData.description.length < 120) {
-      issues.push({
-        type: 'warning',
-        message: 'Meta description is too short (less than 120 characters)',
-        suggestion: 'Add more compelling content to your description',
-        priority: 'medium'
-      });
-      score -= 10;
-    } else if (pageData.description.length > 160) {
-      issues.push({
-        type: 'warning',
-        message: 'Meta description is too long (more than 160 characters)',
-        suggestion: 'Shorten your description to avoid truncation',
-        priority: 'medium'
-      });
-      score -= 5;
-    }
-
-    // Check for keywords
-    if (pageData.keywords.length === 0) {
-      issues.push({
-        type: 'error',
-        message: 'No keywords defined for this page',
-        suggestion: 'Add relevant keywords to improve search visibility',
-        priority: 'high'
-      });
-      score -= 20;
-    }
-
-    // Check for image alt text (would need DOM analysis in real implementation)
-    issues.push({
-      type: 'info',
-      message: 'Verify all images have descriptive alt text',
-      suggestion: 'Add alt attributes to all images for better accessibility',
-      priority: 'low'
-    });
-
-    // Generate recommendations
-    if (score < 80) {
-      recommendations.push('Focus on improving title and description optimization');
-    }
-    if (pageData.keywords.length < 5) {
-      recommendations.push('Add more relevant keywords to improve search visibility');
-    }
-    if (!pageData.structuredData || Object.keys(pageData.structuredData).length === 0) {
-      recommendations.push('Add structured data to help search engines understand your content');
-    }
-
-    const metrics = {
-      titleLength: pageData.title.length,
-      descriptionLength: pageData.description.length,
-      keywordDensity: pageData.keywords.length,
-      headingStructure: true, // Would need DOM analysis
-      imageAltText: true, // Would need DOM analysis
-      internalLinks: 0, // Would need DOM analysis
-      externalLinks: 0, // Would need DOM analysis
-    };
-
-    return {
-      score: Math.max(0, score),
-      issues,
-      recommendations,
-      metrics
-    };
-  }
-
-  /**
-   * Generate meta tags for HTML head
-   */
-  generateMetaTags(pageData: PageSEOData): string {
-    let metaTags = '';
-
-    // Basic meta tags
-    metaTags += `<title>${pageData.title}</title>\n`;
-    metaTags += `<meta name="description" content="${pageData.description}">\n`;
-    metaTags += `<meta name="keywords" content="${pageData.keywords.join(', ')}">\n`;
-    
-    if (pageData.canonical) {
-      metaTags += `<link rel="canonical" href="${pageData.canonical}">\n`;
-    }
-
-    // Robots meta
-    if (pageData.noindex || pageData.nofollow) {
-      const robots = [];
-      if (pageData.noindex) robots.push('noindex');
-      if (pageData.nofollow) robots.push('nofollow');
-      metaTags += `<meta name="robots" content="${robots.join(', ')}">\n`;
-    }
-
-    // Open Graph tags
-    if (this.config.enableOpenGraph) {
-      metaTags += `<meta property="og:title" content="${pageData.openGraph.title}">\n`;
-      metaTags += `<meta property="og:description" content="${pageData.openGraph.description}">\n`;
-      metaTags += `<meta property="og:image" content="${pageData.openGraph.image}">\n`;
-      metaTags += `<meta property="og:url" content="${pageData.openGraph.url}">\n`;
-      metaTags += `<meta property="og:type" content="${pageData.openGraph.type}">\n`;
-      metaTags += `<meta property="og:site_name" content="${pageData.openGraph.siteName}">\n`;
-    }
-
-    // Twitter Card tags
-    if (this.config.enableTwitterCards) {
-      metaTags += `<meta name="twitter:card" content="${pageData.twitter.card}">\n`;
-      metaTags += `<meta name="twitter:title" content="${pageData.twitter.title}">\n`;
-      metaTags += `<meta name="twitter:description" content="${pageData.twitter.description}">\n`;
-      metaTags += `<meta name="twitter:image" content="${pageData.twitter.image}">\n`;
-      metaTags += `<meta name="twitter:creator" content="${pageData.twitter.creator}">\n`;
-      metaTags += `<meta name="twitter:site" content="${pageData.twitter.site}">\n`;
-    }
-
-    // Structured data
-    if (this.config.enableStructuredData && Object.keys(pageData.structuredData).length > 0) {
-      metaTags += `<script type="application/ld+json">${JSON.stringify(pageData.structuredData)}</script>\n`;
-    }
-
-    return metaTags;
-  }
-
-  /**
-   * Update configuration
-   */
-  updateConfig(newConfig: Partial<SEOConfig>): void {
-    this.config = { ...this.config, ...newConfig };
-  }
-
-  /**
-   * Get current configuration
-   */
-  getConfig(): SEOConfig {
-    return { ...this.config };
-  }
-
-  /**
-   * Get all pages
-   */
-  getPages(): Map<string, PageSEOData> {
-    return new Map(this.pages);
-  }
+  modifiedTime?: string;
+  section?: string;
+  tags?: string[];
 }
 
 // Export default instance
@@ -501,10 +271,20 @@ export const generatePageSEO = (pageData: Partial<PageSEOData>) => {
   return seoOptimizer.generatePageSEO(pageData);
 };
 
-export const auditPageSEO = (url: string) => {
-  return seoOptimizer.auditPageSEO(url);
+export const updatePageSEO = (pageData: Partial<PageSEOData>) => {
+  return seoOptimizer.updatePageSEO(pageData);
 };
 
-export const generateMetaTags = (pageData: PageSEOData) => {
-  return seoOptimizer.generateMetaTags(pageData);
+export const generateSitemap = () => {
+  return seoOptimizer.generateSitemap();
 };
+
+export const generateRobotsTxt = () => {
+  return seoOptimizer.generateRobotsTxt();
+};
+
+// Export additional instance with different name
+export const advancedSEOOptimizer = seoOptimizer;
+
+// Export types
+export type { SEOConfig, PageSEOData };

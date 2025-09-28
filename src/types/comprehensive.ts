@@ -154,6 +154,7 @@ export interface MonitoringMetrics {
   };
 }
 
+// Duplicate interface removed - using the one defined above
 
 // Enhanced Performance Metrics
 export interface EnhancedPerformanceMetrics {
