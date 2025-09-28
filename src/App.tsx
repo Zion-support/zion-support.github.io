@@ -9,6 +9,7 @@ import PerformanceOptimizer from './components/PerformanceOptimizer';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import SEOOptimizer from './components/SEOOptimizer';
 import AIPerformanceDashboard from './components/AIPerformanceDashboard';
+import PerformanceDashboard from './components/PerformanceDashboard';
 import { analytics } from './utils/analytics';
 import { seoAnalytics, performanceSEO } from './utils/seoEnhanced';
 import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
@@ -33,6 +34,7 @@ export default function App(): React.JSX.Element {
   const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
   const [showAIDashboard, setShowAIDashboard] = useState(false);
   const [showSEOOptimizer, setShowSEOOptimizer] = useState(false);
+  const [showPerformanceDashboard, setShowPerformanceDashboard] = useState(false);
 
   // Engagement tracking data
   const engagementData = useMemo(() => ({
@@ -79,6 +81,9 @@ export default function App(): React.JSX.Element {
           break;
         case 'S':
           setShowSEOOptimizer(prev => !prev);
+          break;
+        case 'B':
+          setShowPerformanceDashboard(prev => !prev);
           break;
         case 'T':
           // Theme toggle functionality can be added here
@@ -335,6 +340,12 @@ export default function App(): React.JSX.Element {
         <AIPerformanceDashboard
           isVisible={showAIDashboard}
           onClose={() => setShowAIDashboard(false)}
+        />
+
+        {/* Performance Dashboard */}
+        <PerformanceDashboard
+          isVisible={showPerformanceDashboard}
+          onClose={() => setShowPerformanceDashboard(false)}
         />
 
         {/* SEO Optimizer */}
