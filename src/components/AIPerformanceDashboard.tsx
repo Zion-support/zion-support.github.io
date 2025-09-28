@@ -263,7 +263,6 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
                           </ul>
                         </div>
                       )}
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-b01b
                     </div>
                   ))}
                 </div>
