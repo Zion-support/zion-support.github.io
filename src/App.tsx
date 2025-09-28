@@ -253,13 +253,8 @@ export default function App(): React.JSX.Element {
     securityUtils.getSecurityScore();
 
     // Set default SEO data using the correct method
-    const defaultSeoData = {
-      title: 'Zion Tech Group - Advanced AI and IT Solutions',
-      description: 'Leading provider of AI-powered IT solutions, automation, and digital transformation services.',
-      keywords: ['AI', 'IT solutions', 'automation', 'digital transformation', 'technology consulting']
-    };
-    seoManager.updateMetaTags(defaultSeoData);
-  }, []);
+    seoManager.updateMetaTags(memoizedSeoData);
+  }, [memoizedSeoData]);
 
   // Update meta tags function
   const updateMetaTags = useCallback((data: typeof memoizedSeoData) => {
