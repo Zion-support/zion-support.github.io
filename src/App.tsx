@@ -362,7 +362,32 @@ export default function App(): React.JSX.Element {
           <CommandPalette
             isVisible={showCommandPalette}
             onClose={() => setShowCommandPalette(false)}
-            commands={commandPaletteCommands}
+            commands={[
+              {
+                id: 'home',
+                label: 'Go to Home',
+                action: () => navigate('/'),
+                shortcut: 'Ctrl+H'
+              },
+              {
+                id: 'about',
+                label: 'Go to About',
+                action: () => navigate('/about'),
+                shortcut: 'Ctrl+A'
+              },
+              {
+                id: 'services',
+                label: 'Go to Services',
+                action: () => navigate('/services'),
+                shortcut: 'Ctrl+S'
+              },
+              {
+                id: 'contact',
+                label: 'Go to Contact',
+                action: () => navigate('/contact'),
+                shortcut: 'Ctrl+C'
+              }
+            ]}
           />
         </Suspense>
 
