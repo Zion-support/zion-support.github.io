@@ -9,6 +9,10 @@ declare global {
   }
 }
 
+interface ExtendedWindow extends Window {
+  __securityEnhancerInstance?: SecurityEnhancer;
+}
+
 export interface SecurityConfig {
   enableCSP: boolean;
   enableXSSProtection: boolean;
@@ -403,9 +407,9 @@ class SecurityEnhancer {
 
     // Monitor XMLHttpRequest
     const originalXHR = XMLHttpRequest.prototype.open;
-    (XMLHttpRequest.prototype.open as any) = function(this: XMLHttpRequest, method: string, url: string | URL, ...args: unknown[]) {
+    (XMLHttpRequest.prototype.open as typeof XMLHttpRequest.prototype.open) = function(this: XMLHttpRequest, method: string, url: string | URL, ...args: unknown[]) {
       // Access the security enhancer instance through a global reference
-      const securityEnhancer = (window as any).__securityEnhancerInstance;
+      const securityEnhancer = (window as ExtendedWindow).__securityEnhancerInstance;
       if (securityEnhancer && typeof url === 'string' && securityEnhancer.isSuspiciousURL?.(url)) {
         securityEnhancer.recordSecurityEvent?.('blocked', `Suspicious XHR URL blocked: ${url}`, 'high', 'network');
         if (securityEnhancer.metrics) {
@@ -414,7 +418,7 @@ class SecurityEnhancer {
         throw new Error('Suspicious URL blocked');
       }
       
-      return (originalXHR as typeof XMLHttpRequest.prototype.open).apply(this, [method, url, ...args] as any);
+      return (originalXHR as any).apply(this, [method, url, ...args]);
     };
   }
 
