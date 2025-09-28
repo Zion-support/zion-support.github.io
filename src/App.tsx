@@ -105,7 +105,7 @@ export default function App(): React.JSX.Element {
     }
   }, []);
 
-  // Enhanced track engagement function
+  // Enhanced track engagement function with better performance
   const engagementData = useMemo(() => ({
     clicks: 0,
     scrollDepth: 0,
@@ -114,7 +114,7 @@ export default function App(): React.JSX.Element {
 
   const enhancedTrackEngagement = useCallback(() => {
     trackEngagement();
-  }, [engagementData.clicks, engagementData.scrollDepth, engagementData.startTime, trackEngagement]);
+  }, [trackEngagement]);
 
   // Memoize the SEO data to prevent unnecessary re-renders
   const memoizedSeoData = useMemo(() => ({
@@ -132,78 +132,67 @@ export default function App(): React.JSX.Element {
   }), []);
 
   // Performance optimization hook
-  // const { getPerformanceMetrics } = usePerformanceOptimization();
+  const { measurePerformance } = usePerformanceOptimization();
 
-  // Initialize comprehensive enhancements
+  // Initialize comprehensive enhancements with performance monitoring
   useEffect(() => {
-    try {
-      // Initialize comprehensive enhancements first
-      const enhancements = getComprehensiveEnhancements();
-      enhancements.initialize();
+    measurePerformance('app-initialization', () => {
+      try {
+        // Initialize comprehensive enhancements first
+        const enhancements = getComprehensiveEnhancements();
+        enhancements.initialize();
       
-      // Initialize individual enhancement systems
-      if ('startMonitoring' in enhancedPerformanceMonitor) {
+        // Initialize individual enhancement systems
+        if ('startMonitoring' in enhancedPerformanceMonitor) {
+          enhancedPerformanceMonitor.startMonitoring();
+        } else if ('initialize' in enhancedPerformanceMonitor) {
+          (enhancedPerformanceMonitor as any).initialize();
+        }
+        enhancedAnalytics.initialize();
+        advancedCacheSystem.initialize();
+        new AdvancedAutomationSystem().initialize();
+        // Initialize enhancement systems
+        new AccessibilityEnhancer();
+        new SecurityEnhancer();
+        
+        // Initialize individual enhancement systems
         enhancedPerformanceMonitor.startMonitoring();
-      } else if ('initialize' in enhancedPerformanceMonitor) {
-        (enhancedPerformanceMonitor as any).initialize();
+        comprehensivePerformanceMonitor.startMonitoring();
+        enhancedErrorRecovery.initialize();
+        accessibilityEnhancements.initialize();
+        pwaEnhancements.initialize();
+        
+        // Initialize basic systems
+        analytics.initialize();
+        
+        // Initialize SEO analytics
+        seoAnalytics.trackPageView(window.location.pathname);
+        
+        // Initialize performance SEO optimizations
+        performanceSEO.optimizeImages();
+        performanceSEO.optimizeFonts();
+        performanceSEO.optimizeCSS();
+
+        // Initialize new utility systems
+        performanceAlerts.checkMetric('loadTime', performance.now(), 3000);
+        accessibilityUtils.announce('Application initialized');
+        securityUtils.getSecurityScore();
+
+        // Set default SEO data using the correct method
+        seoManager.updateMetaTags(seoData);
+
+        // Update meta tags
+        updateMetaTags({
+          title: memoizedSeoData.title,
+          description: memoizedSeoData.description,
+          keywords: memoizedSeoData.keywords,
+          canonicalUrl: memoizedSeoData.canonical
+        });
+      } catch (error) {
+        console.error('Error during app initialization:', error);
       }
-      enhancedAnalytics.initialize();
-      advancedCacheSystem.initialize();
-      new AdvancedAutomationSystem().initialize();
-      // Initialize enhancement systems
-      new AccessibilityEnhancer();
-      new SecurityEnhancer();
-    } catch (error) {
-      console.warn('Some enhancement systems failed to initialize:', error);
-      // Log error for debugging
-      console.error('Initialization error:', error);
-    }
-    
-    // Initialize individual enhancement systems
-    enhancedPerformanceMonitor.startMonitoring();
-    comprehensivePerformanceMonitor.startMonitoring();
-    enhancedErrorRecovery.initialize();
-    accessibilityEnhancements.initialize();
-    pwaEnhancements.initialize();
-    
-    // Initialize basic systems
-    analytics.initialize();
-    
-    // enhancedAnalytics.initialize(); // Method doesn't exist
-    // advancedCacheSystem.initialize(); // Method doesn't exist
-    // new AdvancedAutomationSystem().initialize(); // Method doesn't exist
-    // new AccessibilityEnhancer().initialize(); // Method doesn't exist
-    // new SecurityEnhancer().initialize(); // Method doesn't exist
-    
-    // Initialize analytics
-    // seoAnalytics.initialize(); // Method doesn't exist
-    // performanceSEO.initialize(); // Method doesn't exist
-    // seoManager.initialize(); // Method doesn't exist
-    
-    // Initialize SEO analytics
-    seoAnalytics.trackPageView(window.location.pathname);
-    
-    // Initialize performance SEO optimizations
-    performanceSEO.optimizeImages();
-    performanceSEO.optimizeFonts();
-    performanceSEO.optimizeCSS();
-
-    // Initialize new utility systems
-    performanceAlerts.checkMetric('loadTime', performance.now(), 3000);
-    accessibilityUtils.announce('Application initialized');
-    securityUtils.getSecurityScore();
-
-    // Set default SEO data using the correct method
-    seoManager.updateMetaTags(seoData);
-
-    // Update meta tags
-    updateMetaTags({
-      title: memoizedSeoData.title,
-      description: memoizedSeoData.description,
-      keywords: memoizedSeoData.keywords,
-      canonicalUrl: memoizedSeoData.canonical
     });
-  }, [seoData]);
+  }, [seoData, measurePerformance, memoizedSeoData]);
 
   // Update meta tags function
   const updateMetaTags = useCallback((data: typeof seoData) => {
@@ -265,36 +254,56 @@ export default function App(): React.JSX.Element {
     preloadResource('/og-image.png', 'image');
     preloadResource('/favicon.ico', 'image');
 
-    // Use passive listeners for better performance
-    document.addEventListener('scroll', handleScroll, { passive: true });
-    document.addEventListener('click', handleClick, { passive: true });
+    // Use passive listeners for better performance with debouncing
+    let scrollTimeout: ReturnType<typeof setTimeout>;
+    let clickTimeout: ReturnType<typeof setTimeout>;
+
+    const debouncedScroll = () => {
+      clearTimeout(scrollTimeout);
+      scrollTimeout = setTimeout(handleScroll, 100) as unknown as ReturnType<typeof setTimeout>;
+    };
+
+    const debouncedClick = () => {
+      clearTimeout(clickTimeout);
+      clickTimeout = setTimeout(handleClick, 50) as unknown as ReturnType<typeof setTimeout>;
+    };
+
+    document.addEventListener('scroll', debouncedScroll, { passive: true });
+    document.addEventListener('click', debouncedClick, { passive: true });
     document.addEventListener('keydown', handleKeyDown);
 
     // Track engagement on page unload
     window.addEventListener('beforeunload', enhancedTrackEngagement);
 
     return () => {
-      document.removeEventListener('scroll', handleScroll);
-      document.removeEventListener('click', handleClick);
+      clearTimeout(scrollTimeout);
+      clearTimeout(clickTimeout);
+      document.removeEventListener('scroll', debouncedScroll);
+      document.removeEventListener('click', debouncedClick);
       document.removeEventListener('keydown', handleKeyDown);
+      window.removeEventListener('beforeunload', enhancedTrackEngagement);
     };
   }, [handleScroll, handleClick, handleKeyDown, seoData, updateMetaTags, enhancedTrackEngagement]);
 
-  // Real-time performance metrics monitoring
+  // Real-time performance metrics monitoring with better error handling
   useEffect(() => {
     if (!showRealTimeMetrics) return;
 
     const updateMetrics = () => {
-      if (typeof window !== 'undefined' && window.performance) {
-        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        const memory = (performance as any).memory;
+      try {
+        if (typeof window !== 'undefined' && window.performance) {
+          const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+          const memory = (performance as any).memory;
         
-        setPerformanceMetrics({
-          loadTime: navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0,
-          renderTime: navigation ? navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart : 0,
-          memoryUsage: memory ? memory.usedJSHeapSize / 1024 / 1024 : 0,
-          errorCount: 0 // This would be tracked by error monitoring
-        });
+          setPerformanceMetrics({
+            loadTime: navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0,
+            renderTime: navigation ? navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart : 0,
+            memoryUsage: memory ? memory.usedJSHeapSize / 1024 / 1024 : 0,
+            errorCount: 0 // This would be tracked by error monitoring
+          });
+        }
+      } catch (error) {
+        console.error('Error updating performance metrics:', error);
       }
     };
 
@@ -303,15 +312,57 @@ export default function App(): React.JSX.Element {
     return () => clearInterval(interval);
   }, [showRealTimeMetrics]);
 
-  // Command palette commands
-  const commandPaletteCommands = [
-    { id: 'toggle-dashboard', title: 'Toggle System Dashboard', description: 'Open system dashboard', category: 'System', action: () => setShowSystemDashboard(prev => !prev) },
-    { id: 'toggle-optimizer', title: 'Toggle Performance Optimizer', description: 'Open performance optimizer', category: 'Performance', action: () => setShowPerformanceOptimizer(prev => !prev) },
-    { id: 'toggle-monitor', title: 'Toggle Performance Monitor', description: 'Open performance monitor', category: 'Performance', action: () => setShowPerformanceMonitor(prev => !prev) },
-    { id: 'toggle-ai-dashboard', title: 'Toggle AI Dashboard', description: 'Open AI dashboard', category: 'AI', action: () => setShowAIDashboard(prev => !prev) },
-    { id: 'toggle-metrics', title: 'Toggle Real-time Metrics', description: 'Open real-time metrics', category: 'Performance', action: () => setShowRealTimeMetrics(prev => !prev) },
-    { id: 'toggle-seo', title: 'Toggle SEO Optimizer', description: 'Open SEO optimizer', category: 'SEO', action: () => setShowSEOOptimizer(prev => !prev) }
-  ];
+  // Command palette commands with improved accessibility
+  const commandPaletteCommands = useMemo(() => [
+    { 
+      id: 'toggle-dashboard', 
+      title: 'Toggle System Dashboard', 
+      description: 'Open system dashboard to view system health and metrics', 
+      category: 'System', 
+      action: () => setShowSystemDashboard(prev => !prev),
+      shortcut: 'Ctrl+Shift+D'
+    },
+    { 
+      id: 'toggle-optimizer', 
+      title: 'Toggle Performance Optimizer', 
+      description: 'Open performance optimizer to improve app performance', 
+      category: 'Performance', 
+      action: () => setShowPerformanceOptimizer(prev => !prev),
+      shortcut: 'Ctrl+Shift+O'
+    },
+    { 
+      id: 'toggle-monitor', 
+      title: 'Toggle Performance Monitor', 
+      description: 'Open performance monitor to track real-time metrics', 
+      category: 'Performance', 
+      action: () => setShowPerformanceMonitor(prev => !prev),
+      shortcut: 'Ctrl+Shift+M'
+    },
+    { 
+      id: 'toggle-ai-dashboard', 
+      title: 'Toggle AI Dashboard', 
+      description: 'Open AI dashboard to view AI performance insights', 
+      category: 'AI', 
+      action: () => setShowAIDashboard(prev => !prev),
+      shortcut: 'Ctrl+Shift+A'
+    },
+    { 
+      id: 'toggle-metrics', 
+      title: 'Toggle Real-time Metrics', 
+      description: 'Open real-time metrics dashboard', 
+      category: 'Performance', 
+      action: () => setShowRealTimeMetrics(prev => !prev),
+      shortcut: 'Ctrl+Shift+R'
+    },
+    { 
+      id: 'toggle-seo', 
+      title: 'Toggle SEO Optimizer', 
+      description: 'Open SEO optimizer to improve search engine optimization', 
+      category: 'SEO', 
+      action: () => setShowSEOOptimizer(prev => !prev),
+      shortcut: 'Ctrl+Shift+S'
+    }
+  ], []);
 
   if (isLoading) {
     return <ModernLoadingSpinner progress={loadingProgress} />;
