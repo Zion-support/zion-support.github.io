@@ -56,7 +56,7 @@ const ComprehensiveSystemDashboard: React.FC<SystemDashboardProps> = ({
       await Promise.all([
         advancedPerformanceOptimizer.initialize(),
         enhancedSecurityManager.initialize(),
-        enhancedPerformanceMonitor.initialize(),
+        Promise.resolve(), // enhancedPerformanceMonitor.initialize(),
         enhancedAnalytics.initialize()
       ]);
 

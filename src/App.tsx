@@ -623,8 +623,8 @@ export default function App(): React.JSX.Element {
 
         {/* Advanced Performance Dashboard */}
         <AdvancedPerformanceDashboard
-          isVisible={showAdvancedDashboard}
-          onClose={() => setShowAdvancedDashboard(false)}
+          isVisible={showAdvancedPerformanceDashboard}
+          onClose={() => setShowAdvancedPerformanceDashboard(false)}
         />
 
         {/* Real-time Metrics */}
@@ -748,7 +748,7 @@ export default function App(): React.JSX.Element {
         <CommandPalette
           isVisible={showCommandPalette}
           onClose={() => setShowCommandPalette(false)}
-          commands={commandPaletteCommands}
+          commands={commands}
         />
 
         {/* Theme Toggle Button */}
