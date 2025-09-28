@@ -256,12 +256,11 @@ class ComprehensiveEnhancements {
     const originalInnerHTML = Object.getOwnPropertyDescriptor(Element.prototype, 'innerHTML')?.set;
     if (originalInnerHTML) {
       Object.defineProperty(Element.prototype, 'innerHTML', {
-        set: function(this: any, value: string) {
-          if (typeof value === 'string' && this.containsXSS && this.containsXSS(value)) {
+        set: function(this: Element, value: string) {
+          if (typeof value === 'string' && (this as any).containsXSS && (this as any).containsXSS(value)) {
             console.warn('XSS attempt blocked');
-            if (this.securityMetrics) {
-              this.securityMetrics.xssAttempts = (this.securityMetrics.xssAttempts || 0) + 1;
-            }
+            (this as any).securityMetrics = (this as any).securityMetrics || { xssAttempts: 0 };
+            (this as any).securityMetrics.xssAttempts = ((this as any).securityMetrics.xssAttempts || 0) + 1;
             return;
           }
           originalInnerHTML.call(this, value);
