@@ -1,347 +1,426 @@
+import React, { useState, useEffect, useCallback } from 'react';
+import { 
+  ComprehensiveTestingSuite, 
+  TestSuite, 
+  TestResult 
+} from '../utils/comprehensiveTestingSystem';
+import { 
+  useSEOOptimization 
+} from '../utils/seoOptimizations';
+import { 
+  useKeyboardNavigation,
+  useFocusManagement,
+  useScreenReaderAnnouncements,
+  useHighContrastMode,
+  useReducedMotion
+} from '../utils/accessibilityOptimizations';
+
 /**
  * Comprehensive Monitoring Dashboard
- * Advanced monitoring and analytics dashboard component
+ * Real-time monitoring with automated testing and reporting
  */
+export const ComprehensiveMonitoringDashboard: React.FC = () => {
+  const [isRunningTests, setIsRunningTests] = useState(false);
+  const [testSuite, setTestSuite] = useState<TestSuite | null>(null);
+  const [testHistory, setTestHistory] = useState<TestSuite[]>([]);
+  const [autoRefresh, setAutoRefresh] = useState(false);
+  const [refreshInterval, setRefreshInterval] = useState(30000); // 30 seconds
 
-import React, { useState, useEffect, useCallback } from 'react';
-import { performanceOptimizer, PerformanceMetrics } from '../utils/performanceOptimizations';
-import { accessibilityEnhancer, AccessibilityMetrics } from '../utils/accessibilityEnhancements';
-import { securityEnhancer, SecurityMetrics } from '../utils/securityEnhancements';
+  // Initialize SEO optimization
+  const seoOptimization = useSEOOptimization();
+  
+  // Initialize accessibility hooks
+  const keyboardNavigation = useKeyboardNavigation();
+  const focusManagement = useFocusManagement();
+  const screenReaderAnnouncements = useScreenReaderAnnouncements();
+  const isHighContrast = useHighContrastMode();
+  const prefersReducedMotion = useReducedMotion();
 
-interface DashboardMetrics {
-  performance: PerformanceMetrics;
-  accessibility: AccessibilityMetrics;
-  security: SecurityMetrics;
-  timestamp: number;
-}
-
-interface MonitoringConfig {
-  refreshInterval: number;
-  enableRealTimeUpdates: boolean;
-  enableAlerts: boolean;
-  alertThresholds: {
-    performance: number;
-    accessibility: number;
-    security: number;
-  };
-}
-
-const ComprehensiveMonitoringDashboard: React.FC = () => {
-  const [metrics, setMetrics] = useState<DashboardMetrics | null>(null);
-  const [config, setConfig] = useState<MonitoringConfig>({
-    refreshInterval: 5000,
-    enableRealTimeUpdates: true,
-    enableAlerts: true,
-    alertThresholds: {
-      performance: 80,
-      accessibility: 85,
-      security: 90,
-    },
-  });
-  const [isLoading, setIsLoading] = useState(true);
-  const [alerts, setAlerts] = useState<string[]>([]);
-
-  const collectMetrics = useCallback((): DashboardMetrics => {
-    return {
-      performance: performanceOptimizer.getMetrics(),
-      accessibility: accessibilityEnhancer.getMetrics(),
-      security: securityEnhancer.getMetrics(),
-      timestamp: Date.now(),
-    };
-  }, []);
-
-  const checkAlerts = useCallback((currentMetrics: DashboardMetrics) => {
-    if (!config.enableAlerts) return;
-
-    const newAlerts: string[] = [];
-
-    // Performance alerts
-    if (currentMetrics.performance.loadTime > config.alertThresholds.performance * 10) {
-      newAlerts.push(`High load time detected: ${currentMetrics.performance.loadTime.toFixed(2)}ms`);
-    }
-
-    if (currentMetrics.performance.memoryUsage > 100) {
-      newAlerts.push(`High memory usage: ${currentMetrics.performance.memoryUsage}MB`);
-    }
-
-    // Accessibility alerts
-    if (currentMetrics.accessibility.overallScore < config.alertThresholds.accessibility) {
-      newAlerts.push(`Low accessibility score: ${currentMetrics.accessibility.overallScore.toFixed(1)}%`);
-    }
-
-    // Security alerts
-    if (currentMetrics.security.securityScore < config.alertThresholds.security) {
-      newAlerts.push(`Security score below threshold: ${currentMetrics.security.securityScore.toFixed(1)}%`);
-    }
-
-    if (currentMetrics.security.cspViolations > 0) {
-      newAlerts.push(`${currentMetrics.security.cspViolations} CSP violations detected`);
-    }
-
-    if (newAlerts.length > 0) {
-      setAlerts(prev => [...prev, ...newAlerts]);
-    }
-  }, [config]);
-
-  const refreshMetrics = useCallback(() => {
-    setIsLoading(true);
+  /**
+   * Run comprehensive test suite
+   */
+  const runTestSuite = useCallback(async () => {
+    if (isRunningTests) return;
+    
+    setIsRunningTests(true);
     try {
-      const newMetrics = collectMetrics();
-      setMetrics(newMetrics);
-      checkAlerts(newMetrics);
+      const suite = await ComprehensiveTestingSuite.runCompleteSuite();
+      setTestSuite(suite);
+      setTestHistory(prev => [suite, ...prev.slice(0, 9)]); // Keep last 10 tests
+      
+      // Announce results to screen reader
+      const passCount = suite.tests.filter(t => t.status === 'pass').length;
+      const failCount = suite.tests.filter(t => t.status === 'fail').length;
+      screenReaderAnnouncements.announceToScreenReader(
+        `Testing complete. ${passCount} tests passed, ${failCount} tests failed.`,
+        failCount > 0 ? 'assertive' : 'polite'
+      );
+      
     } catch (error) {
-      console.error('Error collecting metrics:', error);
+      console.error('Error running test suite:', error);
+      screenReaderAnnouncements.announceToScreenReader(
+        'Error occurred while running tests.',
+        'assertive'
+      );
     } finally {
-      setIsLoading(false);
+      setIsRunningTests(false);
     }
-  }, [collectMetrics, checkAlerts]);
+  }, [isRunningTests, screenReaderAnnouncements]);
 
+  /**
+   * Download test report
+   */
+  const downloadReport = useCallback(() => {
+    if (!testSuite) return;
+    
+    const report = ComprehensiveTestingSuite.generateReport(testSuite);
+    const blob = new Blob([report], { type: 'text/markdown' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `test-report-${testSuite.timestamp.toISOString().split('T')[0]}.md`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  }, [testSuite]);
+
+  /**
+   * Export test data as JSON
+   */
+  const exportTestData = useCallback(() => {
+    const data = {
+      currentTestSuite: testSuite,
+      testHistory,
+      exportDate: new Date().toISOString()
+    };
+    
+    const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `test-data-${new Date().toISOString().split('T')[0]}.json`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  }, [testSuite, testHistory]);
+
+  // Auto-refresh effect
   useEffect(() => {
-    refreshMetrics();
+    if (!autoRefresh) return;
+    
+    const interval = setInterval(() => {
+      runTestSuite();
+    }, refreshInterval);
+    
+    return () => clearInterval(interval);
+  }, [autoRefresh, refreshInterval, runTestSuite]);
 
-    if (config.enableRealTimeUpdates) {
-      const interval = setInterval(refreshMetrics, config.refreshInterval);
-      return () => clearInterval(interval);
+  // Initial test run
+  useEffect(() => {
+    runTestSuite();
+  }, [runTestSuite]);
+
+  const getStatusColor = (status: TestResult['status']) => {
+    switch (status) {
+      case 'pass': return 'text-green-600 bg-green-100';
+      case 'warning': return 'text-yellow-600 bg-yellow-100';
+      case 'fail': return 'text-red-600 bg-red-100';
+      default: return 'text-gray-600 bg-gray-100';
     }
-  }, [config.enableRealTimeUpdates, config.refreshInterval, refreshMetrics]);
+  };
 
-  const getScoreColor = (score: number, threshold: number): string => {
-    if (score >= threshold) return 'text-green-600';
-    if (score >= threshold * 0.8) return 'text-yellow-600';
+  const getStatusIcon = (status: TestResult['status']) => {
+    switch (status) {
+      case 'pass': return '✅';
+      case 'warning': return '⚠️';
+      case 'fail': return '❌';
+      default: return '❓';
+    }
+  };
+
+  const getOverallScore = () => {
+    if (!testSuite) return 0;
+    
+    const totalTests = testSuite.tests.length;
+    const passCount = testSuite.tests.filter(t => t.status === 'pass').length;
+    const warningCount = testSuite.tests.filter(t => t.status === 'warning').length;
+    
+    // Calculate weighted score: pass = 1, warning = 0.5, fail = 0
+    const score = (passCount + (warningCount * 0.5)) / totalTests * 100;
+    return Math.round(score);
+  };
+
+  const overallScore = getOverallScore();
+  const getScoreColor = (score: number) => {
+    if (score >= 90) return 'text-green-600';
+    if (score >= 70) return 'text-yellow-600';
     return 'text-red-600';
   };
 
-
-  if (isLoading && !metrics) {
-    return (
-      <div className="flex items-center justify-center h-64">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
-      </div>
-    );
-  }
-
-  if (!metrics) {
-    return (
-      <div className="text-center py-8">
-        <p className="text-gray-600">No metrics available</p>
-      </div>
-    );
-  }
+  const getScoreBgColor = (score: number) => {
+    if (score >= 90) return 'bg-green-100';
+    if (score >= 70) return 'bg-yellow-100';
+    return 'bg-red-100';
+  };
 
   return (
-    <div className="p-6 space-y-6">
+    <div className="comprehensive-monitoring-dashboard p-6 bg-white rounded-lg shadow-lg max-w-7xl mx-auto">
       {/* Header */}
-      <div className="flex justify-between items-center">
-        <h1 className="text-3xl font-bold text-gray-900">Comprehensive Monitoring Dashboard</h1>
-        <div className="flex space-x-4">
+      <div className="mb-6">
+        <div className="flex items-center justify-between mb-4">
+          <div>
+            <h2 className="text-2xl font-bold text-gray-800 mb-2">
+              Comprehensive Monitoring Dashboard
+            </h2>
+            <p className="text-gray-600">
+              Automated testing and real-time monitoring of performance, accessibility, and SEO
+            </p>
+          </div>
+          
+          {/* Overall Score */}
+          <div className={`inline-flex items-center px-4 py-2 rounded-full ${getScoreBgColor(overallScore)}`}>
+            <span className={`text-2xl font-bold ${getScoreColor(overallScore)}`}>
+              {overallScore}
+            </span>
+            <span className="ml-2 text-gray-700 font-medium">Overall Score</span>
+          </div>
+        </div>
+
+        {/* Controls */}
+        <div className="flex flex-wrap gap-4 items-center">
           <button
-            onClick={refreshMetrics}
-            className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+            onClick={runTestSuite}
+            disabled={isRunningTests}
+            className={`px-4 py-2 rounded-md font-medium transition-colors ${
+              isRunningTests
+                ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
+                : 'bg-blue-600 hover:bg-blue-700 text-white'
+            }`}
+            aria-label={isRunningTests ? 'Tests are running' : 'Run comprehensive tests'}
           >
-            Refresh
+            {isRunningTests ? '🔄 Running Tests...' : '🧪 Run Tests'}
           </button>
-          <div className="flex items-center space-x-2">
-            <span className="text-sm text-gray-600">Real-time:</span>
-            <label className="relative inline-flex items-center cursor-pointer">
-              <input
-                type="checkbox"
-                checked={config.enableRealTimeUpdates}
-                onChange={(e) => setConfig(prev => ({ ...prev, enableRealTimeUpdates: e.target.checked }))}
-                className="sr-only peer"
-              />
-              <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"></div>
-            </label>
+
+          <label className="flex items-center space-x-2">
+            <input
+              type="checkbox"
+              checked={autoRefresh}
+              onChange={(e) => setAutoRefresh(e.target.checked)}
+              className="rounded"
+            />
+            <span className="text-sm text-gray-700">Auto-refresh</span>
+          </label>
+
+          {autoRefresh && (
+            <select
+              value={refreshInterval}
+              onChange={(e) => setRefreshInterval(Number(e.target.value))}
+              className="px-3 py-1 border border-gray-300 rounded-md text-sm"
+            >
+              <option value={10000}>10 seconds</option>
+              <option value={30000}>30 seconds</option>
+              <option value={60000}>1 minute</option>
+              <option value={300000}>5 minutes</option>
+            </select>
+          )}
+
+          <div className="flex gap-2">
+            <button
+              onClick={downloadReport}
+              disabled={!testSuite}
+              className="px-3 py-1 text-sm bg-gray-100 hover:bg-gray-200 text-gray-700 rounded-md disabled:opacity-50 disabled:cursor-not-allowed"
+            >
+              📄 Download Report
+            </button>
+            <button
+              onClick={exportTestData}
+              disabled={testHistory.length === 0}
+              className="px-3 py-1 text-sm bg-gray-100 hover:bg-gray-200 text-gray-700 rounded-md disabled:opacity-50 disabled:cursor-not-allowed"
+            >
+              📊 Export Data
+            </button>
           </div>
         </div>
       </div>
 
-      {/* Alerts */}
-      {alerts.length > 0 && (
-        <div className="bg-red-50 border border-red-200 rounded-lg p-4">
-          <h3 className="text-lg font-semibold text-red-800 mb-2">Alerts</h3>
-          <ul className="space-y-1">
-            {alerts.slice(-5).map((alert, index) => (
-              <li key={index} className="text-red-700 text-sm">
-                {alert}
-              </li>
-            ))}
-          </ul>
+      {/* Test Results */}
+      {testSuite && (
+        <div className="mb-8">
+          <div className="flex items-center justify-between mb-4">
+            <h3 className="text-lg font-semibold text-gray-800">Latest Test Results</h3>
+            <span className="text-sm text-gray-500">
+              {testSuite.timestamp.toLocaleString()}
+            </span>
+          </div>
+
+          {/* Test Categories */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6">
+            {/* Performance Tests */}
+            <div className="bg-gray-50 rounded-lg p-4">
+              <h4 className="font-semibold text-gray-800 mb-3">Performance</h4>
+              <div className="space-y-2">
+                {testSuite.tests.filter(t => 
+                  t.name.includes('Performance') || 
+                  t.name.includes('Bundle') || 
+                  t.name.includes('Contentful') ||
+                  t.name.includes('Layout')
+                ).map((test, index) => (
+                  <div key={index} className="flex items-center justify-between text-sm">
+                    <span className="flex items-center">
+                      <span className="mr-2">{getStatusIcon(test.status)}</span>
+                      {test.name}
+                    </span>
+                    <span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(test.status)}`}>
+                      {test.status}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Accessibility Tests */}
+            <div className="bg-gray-50 rounded-lg p-4">
+              <h4 className="font-semibold text-gray-800 mb-3">Accessibility</h4>
+              <div className="space-y-2">
+                {testSuite.tests.filter(t => 
+                  t.name.includes('Accessibility') || 
+                  t.name.includes('Keyboard') || 
+                  t.name.includes('Contrast')
+                ).map((test, index) => (
+                  <div key={index} className="flex items-center justify-between text-sm">
+                    <span className="flex items-center">
+                      <span className="mr-2">{getStatusIcon(test.status)}</span>
+                      {test.name}
+                    </span>
+                    <span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(test.status)}`}>
+                      {test.status}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* SEO Tests */}
+            <div className="bg-gray-50 rounded-lg p-4">
+              <h4 className="font-semibold text-gray-800 mb-3">SEO</h4>
+              <div className="space-y-2">
+                {testSuite.tests.filter(t => 
+                  t.name.includes('SEO') || 
+                  t.name.includes('Meta') || 
+                  t.name.includes('Structured')
+                ).map((test, index) => (
+                  <div key={index} className="flex items-center justify-between text-sm">
+                    <span className="flex items-center">
+                      <span className="mr-2">{getStatusIcon(test.status)}</span>
+                      {test.name}
+                    </span>
+                    <span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(test.status)}`}>
+                      {test.status}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Detailed Test Results */}
+          <div className="bg-gray-50 rounded-lg p-4">
+            <h4 className="font-semibold text-gray-800 mb-3">Detailed Results</h4>
+            <div className="space-y-3">
+              {testSuite.tests.map((test, index) => (
+                <div key={index} className="bg-white rounded-lg p-3 border border-gray-200">
+                  <div className="flex items-center justify-between mb-2">
+                    <div className="flex items-center">
+                      <span className="mr-2">{getStatusIcon(test.status)}</span>
+                      <span className="font-medium text-gray-800">{test.name}</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(test.status)}`}>
+                        {test.status}
+                      </span>
+                      {test.duration && (
+                        <span className="text-xs text-gray-500">
+                          {test.duration.toFixed(0)}ms
+                        </span>
+                      )}
+                    </div>
+                  </div>
+                  <p className="text-sm text-gray-600 mb-2">{test.message}</p>
+                  {test.details && (
+                    <details className="text-xs">
+                      <summary className="cursor-pointer text-gray-500 hover:text-gray-700">
+                        View Details
+                      </summary>
+                      <pre className="mt-2 p-2 bg-gray-100 rounded text-xs overflow-auto">
+                        {JSON.stringify(test.details, null, 2)}
+                      </pre>
+                    </details>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       )}
 
-      {/* Metrics Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {/* Performance Metrics */}
-        <div className="bg-white rounded-lg shadow-md p-6">
-          <h2 className="text-xl font-semibold text-gray-900 mb-4">Performance</h2>
-          <div className="space-y-3">
-            <div className="flex justify-between">
-              <span className="text-gray-600">Load Time:</span>
-              <span className="font-medium">{metrics.performance.loadTime.toFixed(2)}ms</span>
-            </div>
-            <div className="flex justify-between">
-              <span className="text-gray-600">Render Time:</span>
-              <span className="font-medium">{metrics.performance.renderTime.toFixed(2)}ms</span>
-            </div>
-            <div className="flex justify-between">
-              <span className="text-gray-600">Memory Usage:</span>
-              <span className="font-medium">{metrics.performance.memoryUsage}MB</span>
-            </div>
-            <div className="flex justify-between">
-              <span className="text-gray-600">Bundle Size:</span>
-              <span className="font-medium">{metrics.performance.bundleSize}KB</span>
-            </div>
-            <div className="flex justify-between">
-              <span className="text-gray-600">Cache Hit Rate:</span>
-              <span className="font-medium">{metrics.performance.cacheHitRate.toFixed(1)}%</span>
+      {/* Test History */}
+      {testHistory.length > 0 && (
+        <div className="mb-8">
+          <h3 className="text-lg font-semibold text-gray-800 mb-4">Test History</h3>
+          <div className="bg-gray-50 rounded-lg p-4">
+            <div className="space-y-2">
+              {testHistory.map((suite, index) => {
+                const passCount = suite.tests.filter(t => t.status === 'pass').length;
+                const warningCount = suite.tests.filter(t => t.status === 'warning').length;
+                const failCount = suite.tests.filter(t => t.status === 'fail').length;
+                const score = Math.round((passCount + (warningCount * 0.5)) / suite.tests.length * 100);
+                
+                return (
+                  <div key={index} className="flex items-center justify-between bg-white rounded p-2">
+                    <div className="flex items-center space-x-4">
+                      <span className="text-sm font-medium">
+                        {suite.timestamp.toLocaleTimeString()}
+                      </span>
+                      <div className="flex items-center space-x-2 text-xs">
+                        <span className="text-green-600">✅ {passCount}</span>
+                        <span className="text-yellow-600">⚠️ {warningCount}</span>
+                        <span className="text-red-600">❌ {failCount}</span>
+                      </div>
+                    </div>
+                    <span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(score)}`}>
+                      {score}%
+                    </span>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>
+      )}
 
-        {/* Accessibility Metrics */}
-        <div className="bg-white rounded-lg shadow-md p-6">
-          <h2 className="text-xl font-semibold text-gray-900 mb-4">Accessibility</h2>
-          <div className="space-y-3">
-            <div className="flex justify-between">
-              <span className="text-gray-600">Overall Score:</span>
-              <span className={`font-medium ${getScoreColor(metrics.accessibility.overallScore, config.alertThresholds.accessibility)}`}>
-                {metrics.accessibility.overallScore.toFixed(1)}%
-              </span>
-            </div>
-            <div className="flex justify-between">
-              <span className="text-gray-600">Keyboard Navigation:</span>
-              <span className="font-medium">{metrics.accessibility.keyboardNavigationScore.toFixed(1)}%</span>
-            </div>
-            <div className="flex justify-between">
-              <span className="text-gray-600">Screen Reader:</span>
-              <span className="font-medium">{metrics.accessibility.screenReaderCompatibility.toFixed(1)}%</span>
-            </div>
-            <div className="flex justify-between">
-              <span className="text-gray-600">Color Contrast:</span>
-              <span className="font-medium">{metrics.accessibility.colorContrastRatio.toFixed(1)}%</span>
-            </div>
-            <div className="flex justify-between">
-              <span className="text-gray-600">Focus Indicators:</span>
-              <span className="font-medium">{metrics.accessibility.focusIndicatorVisibility.toFixed(1)}%</span>
-            </div>
+      {/* Accessibility Status */}
+      <div className="bg-blue-50 rounded-lg p-4">
+        <h4 className="font-semibold text-blue-800 mb-2">Accessibility Status</h4>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
+          <div className="flex items-center">
+            <span className="mr-2">🎯</span>
+            <span>Focus Index: {keyboardNavigation.focusedIndex}</span>
+          </div>
+          <div className="flex items-center">
+            <span className="mr-2">⌨️</span>
+            <span>Navigating: {keyboardNavigation.isNavigating ? 'Yes' : 'No'}</span>
+          </div>
+          <div className="flex items-center">
+            <span className="mr-2">🔍</span>
+            <span>High Contrast: {isHighContrast ? 'On' : 'Off'}</span>
+          </div>
+          <div className="flex items-center">
+            <span className="mr-2">🎬</span>
+            <span>Reduced Motion: {prefersReducedMotion ? 'On' : 'Off'}</span>
           </div>
         </div>
-
-        {/* Security Metrics */}
-        <div className="bg-white rounded-lg shadow-md p-6">
-          <h2 className="text-xl font-semibold text-gray-900 mb-4">Security</h2>
-          <div className="space-y-3">
-            <div className="flex justify-between">
-              <span className="text-gray-600">Security Score:</span>
-              <span className={`font-medium ${getScoreColor(metrics.security.securityScore, config.alertThresholds.security)}`}>
-                {metrics.security.securityScore.toFixed(1)}%
-              </span>
-            </div>
-            <div className="flex justify-between">
-              <span className="text-gray-600">CSP Violations:</span>
-              <span className="font-medium">{metrics.security.cspViolations}</span>
-            </div>
-            <div className="flex justify-between">
-              <span className="text-gray-600">XSS Attempts:</span>
-              <span className="font-medium">{metrics.security.xssAttempts}</span>
-            </div>
-            <div className="flex justify-between">
-              <span className="text-gray-600">CSRF Attempts:</span>
-              <span className="font-medium">{metrics.security.csrfAttempts}</span>
-            </div>
-            <div className="flex justify-between">
-              <span className="text-gray-600">Suspicious Activity:</span>
-              <span className="font-medium">{metrics.security.suspiciousActivity}</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Configuration Panel */}
-      <div className="bg-white rounded-lg shadow-md p-6">
-        <h2 className="text-xl font-semibold text-gray-900 mb-4">Configuration</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
-              Refresh Interval (ms)
-            </label>
-            <input
-              type="number"
-              value={config.refreshInterval}
-              onChange={(e) => setConfig(prev => ({ ...prev, refreshInterval: parseInt(e.target.value) || 5000 }))}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-          </div>
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
-              Performance Threshold (%)
-            </label>
-            <input
-              type="number"
-              value={config.alertThresholds.performance}
-              onChange={(e) => setConfig(prev => ({ 
-                ...prev, 
-                alertThresholds: { ...prev.alertThresholds, performance: parseInt(e.target.value) || 80 }
-              }))}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-          </div>
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
-              Accessibility Threshold (%)
-            </label>
-            <input
-              type="number"
-              value={config.alertThresholds.accessibility}
-              onChange={(e) => setConfig(prev => ({ 
-                ...prev, 
-                alertThresholds: { ...prev.alertThresholds, accessibility: parseInt(e.target.value) || 85 }
-              }))}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-          </div>
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
-              Security Threshold (%)
-            </label>
-            <input
-              type="number"
-              value={config.alertThresholds.security}
-              onChange={(e) => setConfig(prev => ({ 
-                ...prev, 
-                alertThresholds: { ...prev.alertThresholds, security: parseInt(e.target.value) || 90 }
-              }))}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-          </div>
-        </div>
-      </div>
-
-      {/* Reports */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        <div className="bg-white rounded-lg shadow-md p-6">
-          <h3 className="text-lg font-semibold text-gray-900 mb-3">Performance Report</h3>
-          <pre className="text-xs text-gray-600 whitespace-pre-wrap">
-            {performanceOptimizer.generateReport()}
-          </pre>
-        </div>
-        <div className="bg-white rounded-lg shadow-md p-6">
-          <h3 className="text-lg font-semibold text-gray-900 mb-3">Accessibility Report</h3>
-          <pre className="text-xs text-gray-600 whitespace-pre-wrap">
-            {accessibilityEnhancer.generateReport()}
-          </pre>
-        </div>
-        <div className="bg-white rounded-lg shadow-md p-6">
-          <h3 className="text-lg font-semibold text-gray-900 mb-3">Security Report</h3>
-          <pre className="text-xs text-gray-600 whitespace-pre-wrap">
-            {securityEnhancer.generateReport()}
-          </pre>
-        </div>
-      </div>
-
-      {/* Last Updated */}
-      <div className="text-center text-sm text-gray-500">
-        Last updated: {new Date(metrics.timestamp).toLocaleString()}
       </div>
     </div>
   );
