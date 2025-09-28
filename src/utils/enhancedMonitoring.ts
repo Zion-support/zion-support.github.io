@@ -206,7 +206,7 @@ class EnhancedMonitoring {
         entries.forEach((entry) => {
           this.trackPerformance({
             name: 'FID',
-            value: (entry as any).processingStart - entry.startTime,
+            value: entry.startTime,
             type: 'measure',
             url: window.location.href,
             sessionId: this.sessionId,

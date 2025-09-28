@@ -83,6 +83,13 @@ class SecurityEnhancer {
     this.initialize();
   }
 
+  public static getInstance(config?: Partial<SecurityConfig>): SecurityEnhancer {
+    if (!SecurityEnhancer.instance) {
+      SecurityEnhancer.instance = new SecurityEnhancer(config);
+    }
+    return SecurityEnhancer.instance;
+  }
+
   private initializeSuspiciousPatterns(): void {
     this.suspiciousPatterns = [
       // XSS patterns
