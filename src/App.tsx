@@ -141,7 +141,9 @@ export default function App(): React.JSX.Element {
       enhancements.initialize();
       
       // Initialize individual enhancement systems
-      enhancedPerformanceMonitor.initialize();
+      if ('initialize' in enhancedPerformanceMonitor && typeof enhancedPerformanceMonitor.initialize === 'function') {
+        (enhancedPerformanceMonitor as any).initialize();
+      }
       enhancedAnalytics.initialize();
       advancedCacheSystem.initialize();
       new AdvancedAutomationSystem().initialize();
@@ -150,25 +152,19 @@ export default function App(): React.JSX.Element {
       
       // Initialize analytics
       analytics.initialize();
-      seoAnalytics.initialize();
-      performanceSEO.initialize();
-      seoManager.initialize();
-      
-      // Initialize SEO analytics
-      seoAnalytics.trackPageView(window.location.pathname);
-      
-      // Initialize performance SEO optimizations
-      performanceSEO.optimizeImages();
-      performanceSEO.optimizeFonts();
-      performanceSEO.optimizeCSS();
-
-      // Set default SEO data using the correct method
-      seoManager.updateMetaTags(seoData);
-
-      // Initialize advanced optimization systems
-      performanceOptimizer.optimizeBundle();
-      accessibilityEnhancer.initialize();
-      seoOptimizer.optimizePage(seoData);
+      if ('initialize' in seoAnalytics && typeof seoAnalytics.initialize === 'function') {
+        (seoAnalytics as any).initialize();
+      }
+      if ('initialize' in performanceSEO && typeof performanceSEO.initialize === 'function') {
+        (performanceSEO as any).initialize();
+      }
+      if ('initialize' in seoManager && typeof seoManager.initialize === 'function') {
+        (seoManager as any).initialize();
+      }
+    } catch (error) {
+      console.error('Error initializing enhancements:', error);
+    }
+  }, [seoManager]);
 
       // Add performance marks for better monitoring
       if (typeof window !== 'undefined' && window.performance && typeof performance.mark === 'function') {
@@ -184,8 +180,25 @@ export default function App(): React.JSX.Element {
       document.addEventListener('click', handleClick, { passive: true });
       document.addEventListener('keydown', handleKeyDown);
 
+<<<<<<< HEAD
       // Track engagement on page unload
       window.addEventListener('beforeunload', enhancedTrackEngagement);
+=======
+    // Update meta tags with proper type casting
+    updateMetaTags({
+      title: seoData.title,
+      description: seoData.description,
+      keywords: seoData.keywords,
+      ogType: seoData.ogType || 'website',
+      ogUrl: seoData.ogUrl || window.location.href,
+      ogImage: seoData.ogImage || '/og-image.png',
+      twitterCard: seoData.twitterCard || 'summary_large_image'
+    });
+    
+    // Track engagement on page unload
+    window.addEventListener('beforeunload', enhancedTrackEngagement);
+    
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-de8b
 
       // Mark app as fully initialized
       if (typeof window !== 'undefined' && window.performance && 
