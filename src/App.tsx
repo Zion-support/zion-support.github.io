@@ -46,6 +46,8 @@ const EnhancedCommandPalette = lazy(() => import('./components/EnhancedCommandPa
 const PerformanceIndicator = lazy(() => import('./components/PerformanceIndicator'));
 const AccessibilityEnhancer = lazy(() => import('./components/AccessibilityEnhancer'));
 const DynamicMetaTags = lazy(() => import('./components/DynamicMetaTags'));
+const ModernFeatures = lazy(() => import('./components/ModernFeatures'));
+const EnhancedPerformanceDashboard = lazy(() => import('./components/EnhancedPerformanceDashboard'));
 
 export default function App(): React.JSX.Element {
   const navigate = useNavigate();

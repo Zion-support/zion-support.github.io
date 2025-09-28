@@ -21,6 +21,8 @@ const About = lazy(() => import('./pages/About'));
 const Services = lazy(() => import('./pages/Services'));
 const Portfolio = lazy(() => import('./pages/Portfolio'));
 const NotFound = lazy(() => import('./pages/NotFound'));
+const ModernFeatures = lazy(() => import('./components/ModernFeatures'));
+const EnhancedPerformanceDashboard = lazy(() => import('./components/EnhancedPerformanceDashboard'));
 
 // Layout component
 export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => (
@@ -79,6 +81,16 @@ export const router = createBrowserRouter([
   {
     path: '/monitoring',
     element: <Layout><ComprehensiveMonitoringDashboard /></Layout>,
+    errorElement: <ErrorFallback />,
+  },
+  {
+    path: '/features',
+    element: <Layout><ModernFeatures /></Layout>,
+    errorElement: <ErrorFallback />,
+  },
+  {
+    path: '/performance',
+    element: <Layout><EnhancedPerformanceDashboard /></Layout>,
     errorElement: <ErrorFallback />,
   },
   {
