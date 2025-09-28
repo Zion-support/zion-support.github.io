@@ -70,7 +70,7 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
 
     // Send to error reporting service (e.g., Sentry, LogRocket, etc.)
     if ('gtag' in window) {
-      (window as any).gtag('event', 'exception', {
+      (window as { gtag: (event: string, action: string, params: Record<string, unknown>) => void }).gtag('event', 'exception', {
         description: error.message,
         fatal: false,
         custom_map: {
