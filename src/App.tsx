@@ -80,15 +80,17 @@ export default function App(): React.JSX.Element {
     structuredData: []
   }), []);
 
-  // Track engagement function
-  const trackEngagement = useCallback(() => {
+  // Track engagement function (enhanced version)
+  const enhancedTrackEngagement = useCallback(() => {
     const timeOnPage = Date.now() - engagementData.startTime;
     seoAnalytics.trackUserEngagement(window.location.pathname, {
       timeOnPage,
       scrollDepth: engagementData.scrollDepth,
       clicks: engagementData.clicks,
     });
-  }, [engagementData]);
+    // Also call the original trackEngagement from useAppInitialization
+    trackEngagement();
+  }, [engagementData, trackEngagement]);
 
   useEffect(() => {
     // Add performance marks for better monitoring
@@ -132,7 +134,7 @@ export default function App(): React.JSX.Element {
   // Main initialization and cleanup effect
   React.useEffect(() => {
     // Track engagement on page unload
-    window.addEventListener('beforeunload', trackEngagement);
+    window.addEventListener('beforeunload', enhancedTrackEngagement);
 
     // Mark app as fully initialized
     if (typeof window !== 'undefined' && window.performance && 
@@ -149,16 +151,16 @@ export default function App(): React.JSX.Element {
     // Cleanup function
     return () => {
       document.removeEventListener('keydown', handleKeyDown);
-      window.removeEventListener('beforeunload', trackEngagement);
+      window.removeEventListener('beforeunload', enhancedTrackEngagement);
       
       // Final engagement tracking
-      trackEngagement();
+      enhancedTrackEngagement();
       
       // Remove event listeners
       window.removeEventListener('scroll', handleScroll);
       document.removeEventListener('click', handleClick);
     };
-  }, [trackEngagement, handleKeyDown, handleScroll, handleClick, seoData, preloadResource]);
+  }, [enhancedTrackEngagement, handleKeyDown, handleScroll, handleClick, seoData, preloadResource]);
 
   // Show loading screen while initializing
   if (isLoading) {
