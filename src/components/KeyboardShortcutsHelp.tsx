@@ -39,7 +39,7 @@ const KeyboardShortcutsHelp: React.FC<KeyboardShortcutsHelpProps> = ({ isVisible
     } else {
       setFilteredShortcuts(shortcuts);
     }
-  }, [searchTerm]);
+  }, [searchTerm, shortcuts]);
 
   if (!isVisible) return null;
 
@@ -103,7 +103,7 @@ const KeyboardShortcutsHelp: React.FC<KeyboardShortcutsHelpProps> = ({ isVisible
               ))
             ) : (
               <div className="text-center py-8 text-gray-500 dark:text-gray-400">
-                No shortcuts found matching "{searchTerm}"
+                No shortcuts found matching &quot;{searchTerm}&quot;
               </div>
             )}
           </div>
