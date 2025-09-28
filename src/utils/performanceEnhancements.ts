@@ -66,7 +66,7 @@ class PerformanceEnhancer {
     this.monitorCoreWebVitals();
   }
 
-  private monitorCoreWebVitals(): void {
+  private setupBasicPerformanceMonitoring(): void {
     // Basic performance monitoring implementation
     if ('PerformanceObserver' in window) {
       try {
