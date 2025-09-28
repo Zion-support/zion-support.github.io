@@ -308,6 +308,20 @@ export default function App(): React.JSX.Element {
       performance.mark('app-init-start');
     }
     
+    // Initialize advanced utilities
+    const initializeUtilities = async () => {
+      try {
+        await performanceOptimizer.initialize();
+        await seoEnhancer.initialize();
+        await accessibilityEnhancer.initialize();
+        console.log('All advanced utilities initialized successfully');
+      } catch (error) {
+        console.error('Failed to initialize some utilities:', error);
+      }
+    };
+
+    initializeUtilities();
+    
     // Track engagement on page unload
     window.addEventListener('beforeunload', enhancedTrackEngagement);
 
@@ -324,6 +338,7 @@ export default function App(): React.JSX.Element {
       window.removeEventListener('beforeunload', enhancedTrackEngagement);
       window.removeEventListener('scroll', handleScroll);
       document.removeEventListener('click', handleClick);
+      performanceOptimizer.cleanup();
     };
   }, [handleScroll, handleClick, enhancedTrackEngagement]);
 
