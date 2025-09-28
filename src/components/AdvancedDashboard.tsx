@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { advancedAnalytics as analytics } from '../utils/advancedAnalytics';
-import AdvancedCacheManager from '../utils/advancedCache';
+// import { advancedAnalytics as analytics } from '../utils/advancedAnalytics';
+// import AdvancedCacheManager from '../utils/advancedCache';
 import AdvancedAccessibilityManager from '../utils/advancedAccessibilityManager';
 import AdvancedSecurityManager from '../utils/advancedSecurityManager';
 import EnhancedUXManager from '../utils/enhancedUXManager';
@@ -70,7 +70,7 @@ const AdvancedDashboard: React.FC = () => {
 
   const updateData = () => {
     // Mock analytics data for now
-    const events: any[] = [];
+    const events: Array<{ name: string; timestamp?: number }> = [];
     const cacheStats = { hits: 0, misses: 0, size: 0 };
     
     // Convert analytics events to analytics data format
@@ -78,8 +78,8 @@ const AdvancedDashboard: React.FC = () => {
       id: `session_${Date.now()}`,
       startTime: Date.now() - 300000, // 5 minutes ago
       lastActivity: Date.now(),
-      pageViews: events.filter((e: any) => e.name === 'page_view').length,
-      events: events.map((e: any) => ({
+      pageViews: events.filter((e) => e.name === 'page_view').length,
+      events: events.map((e) => ({
         event: e.name,
         timestamp: e.timestamp || Date.now(),
         properties: e.properties

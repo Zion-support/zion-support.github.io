@@ -201,7 +201,7 @@ const ComprehensivePerformanceMonitor: React.FC<ComprehensivePerformanceMonitorP
       // Check for performance issues and create alerts
       checkPerformanceIssues(newMetrics);
     });
-  }, []);
+  }, [checkPerformanceIssues]);
 
   const startMonitoring = useCallback(() => {
     setIsMonitoring(true);

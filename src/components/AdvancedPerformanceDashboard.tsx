@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { advancedBuildOptimizer } from '../utils/advancedBuildOptimizer';
-import { accessibilityEnhancements } from '../utils/accessibilityEnhancements';
+// import { accessibilityEnhancements } from '../utils/accessibilityEnhancements';
 import { accessibilityUtils } from '../utils/accessibilityUtils';
 
 interface AdvancedPerformanceDashboardProps {
@@ -54,7 +54,7 @@ const AdvancedPerformanceDashboard: React.FC<AdvancedPerformanceDashboardProps> 
 
     // Update real-time data
     if ('memory' in performance) {
-      const memory = (performance as any).memory;
+      const memory = (performance as unknown as { memory?: { usedJSHeapSize?: number } }).memory;
       setRealTimeData(prev => ({
         ...prev,
         memoryUsage: memory.usedJSHeapSize / 1024 / 1024,
