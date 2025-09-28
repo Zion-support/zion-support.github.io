@@ -289,9 +289,10 @@ export class EnhancedAnalytics {
       try {
         const lcpObserver = new PerformanceObserver((list) => {
           list.getEntries().forEach(entry => {
+            const lcpEntry = entry as PerformanceEntry & { element?: Element; url?: string };
             this.track('performance', 'web_vital', 'LCP', entry.startTime, {
-              element: (entry as PerformanceEntry & { element?: Element }).element?.tagName,
-              url: (entry as PerformanceEntry & { url?: string }).url
+              element: lcpEntry.element?.tagName,
+              url: lcpEntry.url
             });
           });
         });
