@@ -25,7 +25,6 @@ import { initializePerformanceEnhancements } from './utils/performanceEnhancemen
 import { initializeAccessibilityEnhancements } from './utils/accessibilityEnhancements';
 import { advancedPerformanceOptimizer } from './utils/advancedPerformanceOptimizer';
 import { advancedSEOOptimizer } from './utils/advancedSEOOptimizer';
-import { advancedAccessibilityEnhancer } from './utils/advancedAccessibilityEnhancer';
 import AdvancedAnalytics from './components/AdvancedAnalytics';
 import NotificationSystem, { Notification } from './components/NotificationSystem';
 import KeyboardShortcutsHelp from './components/KeyboardShortcutsHelp';
