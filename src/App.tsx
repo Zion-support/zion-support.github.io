@@ -23,6 +23,10 @@ import { accessibilityEnhancer } from './utils/accessibilityEnhancer';
 import { seoOptimizer } from './utils/seoOptimizer';
 import { securityEnhancer } from './utils/securityEnhancer';
 import AdvancedAnalytics from './components/AdvancedAnalytics';
+import { comprehensivePerformanceMonitor } from './utils/comprehensivePerformanceMonitor';
+import { enhancedErrorRecovery } from './utils/enhancedErrorRecovery';
+import { accessibilityEnhancements } from './utils/accessibilityEnhancements';
+import { pwaEnhancements } from './utils/pwaEnhancements';
 import NotificationSystem from './components/NotificationSystem';
 import KeyboardShortcutsHelp from './components/KeyboardShortcutsHelp';
 import CommandPalette from './components/CommandPalette';
@@ -108,6 +112,10 @@ export default function App(): React.JSX.Element {
     
     // Initialize individual enhancement systems
     enhancedPerformanceMonitor.startMonitoring();
+    comprehensivePerformanceMonitor.startMonitoring();
+    enhancedErrorRecovery.initialize();
+    accessibilityEnhancements.initialize();
+    pwaEnhancements.initialize();
     // enhancedAnalytics.initialize(); // Method doesn't exist
     // advancedCacheSystem.initialize(); // Method doesn't exist
     // new AdvancedAutomationSystem().initialize(); // Method doesn't exist
