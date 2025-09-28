@@ -1,5 +1,5 @@
 import { useEffect, useCallback, useRef } from 'react';
-import AdvancedPerformanceMonitor from '../utils/advancedPerformanceMonitor';
+import { getPerformanceMonitor } from '../utils/advancedPerformanceMonitor';
 import { NetworkInformation } from '../types/global';
 
 interface PerformanceOptimizationConfig {
@@ -36,7 +36,7 @@ interface ImageOptimizationOptions {
 export const usePerformanceOptimization = (
   config: PerformanceOptimizationConfig = {}
 ): PerformanceOptimizationReturn => {
-  const monitor = useRef(AdvancedPerformanceMonitor.getInstance());
+  const monitor = useRef<any>(null);
   const configRef = useRef({
     enableLazyLoading: true,
     enablePreloading: true,
@@ -54,11 +54,11 @@ export const usePerformanceOptimization = (
     const perfMonitor = monitor.current;
     
     if (configRef.current.enableWebVitals) {
-      perfMonitor.startMonitoring();
+      perfMonitor?.startMonitoring();
     }
 
     return () => {
-      perfMonitor.stopMonitoring();
+      perfMonitor?.stopMonitoring();
     };
   }, []);
 
@@ -73,12 +73,12 @@ export const usePerformanceOptimization = (
       link.as = type;
 
       link.onload = () => {
-        monitor.current.markCustomMetric(`preload.${type}.success`);
+        monitor.current?.markCustomMetric(`preload.${type}.success`);
         resolve();
       };
 
       link.onerror = () => {
-        monitor.current.markCustomMetric(`preload.${type}.error`);
+        monitor.current?.markCustomMetric(`preload.${type}.error`);
         reject(new Error(`Failed to preload ${url}`));
       };
 
@@ -88,7 +88,7 @@ export const usePerformanceOptimization = (
 
   // Record custom performance metrics
   const recordMetric = useCallback((name: string, value: number) => {
-    monitor.current.markCustomMetric(name, value);
+    monitor.current?.markCustomMetric(name, value);
   }, []);
 
   // Measure performance of functions
@@ -96,7 +96,7 @@ export const usePerformanceOptimization = (
     const startMark = `${name}.start`;
     const endMark = `${name}.end`;
     
-    monitor.current.markCustomMetric(startMark);
+    monitor.current?.markCustomMetric(startMark);
     
     const startTime = performance.now();
     
@@ -106,8 +106,8 @@ export const usePerformanceOptimization = (
       const endTime = performance.now();
       const duration = endTime - startTime;
       
-      monitor.current.markCustomMetric(endMark);
-      monitor.current.measureCustomMetric(name, startMark, endMark);
+      monitor.current?.markCustomMetric(endMark);
+      monitor.current?.measureCustomMetric(name, startMark, endMark);
       
       recordMetric(`${name}.duration`, duration);
     }
@@ -115,7 +115,7 @@ export const usePerformanceOptimization = (
 
   // Get current performance metrics
   // const getPerformanceMetrics = useCallback(() => {
-  //   return monitor.current.getLatestMetrics();
+  //   return monitor.current.getMetrics();
   // }, []);
 
   // Optimize images with responsive loading
@@ -304,7 +304,7 @@ export const usePerformanceOptimization = (
     preloadResource,
     recordMetric,
     measurePerformance,
-    getPerformanceMetrics: () => monitor.current.getLatestMetrics() || {},
+    getPerformanceMetrics: () => monitor.current?.getMetrics() || {},
     optimizeImage,
     addResourceHint,
   };
