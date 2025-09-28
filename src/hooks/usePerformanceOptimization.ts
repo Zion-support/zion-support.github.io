@@ -24,11 +24,7 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
 
   const renderCountRef = useRef(0);
   const lastRenderTimeRef = useRef(performance.now());
-<<<<<<< HEAD
   const debounceTimeoutRef = useRef<NodeJS.Timeout | null>(null);
-=======
-  const debounceTimeoutRef = useRef<NodeJS.Timeout | undefined>(undefined);
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-5d5c
 
   // Track render performance
   useEffect(() => {
@@ -42,21 +38,12 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
   const memoryUsage = useMemo(() => {
     if (!enableMemoryMonitoring || !(performance as any).memory) return null;
     
-<<<<<<< HEAD
     const memory = (performance as any).memory;
     return {
       used: memory.usedJSHeapSize,
       total: memory.totalJSHeapSize,
       limit: memory.jsHeapSizeLimit,
       percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100
-=======
-    const mem = (performance as any).memory;
-    return {
-      used: mem.usedJSHeapSize,
-      total: mem.totalJSHeapSize,
-      limit: mem.jsHeapSizeLimit,
-      percentage: (mem.usedJSHeapSize / mem.jsHeapSizeLimit) * 100
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-5d5c
     };
   }, [enableMemoryMonitoring]);
 
