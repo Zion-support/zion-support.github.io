@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { enhancedErrorHandler } from '../utils/enhancedErrorHandling';
 
 interface AIPerformanceDashboardProps {
@@ -39,10 +39,11 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
 
   useEffect(() => {
     if (isVisible) {
+      loadPerformanceData();
     }
-  }, [isVisible]);
+  }, [isVisible, loadPerformanceData]);
 
-  const loadPerformanceData = async () => {
+  const loadPerformanceData = useCallback(async () => {
     setIsLoading(true);
     try {
       // Simulate AI-powered performance analysis
@@ -111,7 +112,7 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
     } finally {
       setIsLoading(false);
     }
-  };
+  }, []);
 
   const getSeverityColor = (severity: string) => {
     switch (severity) {
