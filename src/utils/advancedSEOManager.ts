@@ -45,12 +45,8 @@ export interface SEOAuditResult {
   metrics: SEOMetrics;
 }
 
-export interface SEOIssue {
-  type: 'error' | 'warning' | 'info';
-  message: string;
-  element?: string;
-  suggestion?: string;
-}
+import { SEOIssue } from '../types/comprehensive';
+
 
 export interface SEOMetrics {
   titleLength: number;
@@ -294,36 +290,81 @@ class AdvancedSEOManager {
     // Check title
     const title = document.title;
     if (!title) {
-      issues.push({ type: 'error', message: 'Missing page title' });
+      issues.push({ 
+        type: 'error', 
+        message: 'Missing page title',
+        category: 'content',
+        impact: 'high'
+      });
       score -= 20;
     } else if (title.length < 30) {
-      issues.push({ type: 'warning', message: 'Title too short (recommended: 30-60 characters)', suggestion: 'Add more descriptive words' });
+      issues.push({ 
+        type: 'warning', 
+        message: 'Title too short (recommended: 30-60 characters)', 
+        suggestion: 'Add more descriptive words',
+        category: 'content',
+        impact: 'medium'
+      });
       score -= 5;
     } else if (title.length > 60) {
-      issues.push({ type: 'warning', message: 'Title too long (recommended: 30-60 characters)', suggestion: 'Shorten the title' });
+      issues.push({ 
+        type: 'warning', 
+        message: 'Title too long (recommended: 30-60 characters)', 
+        suggestion: 'Shorten the title',
+        category: 'content',
+        impact: 'medium'
+      });
       score -= 5;
     }
 
     // Check description
     const description = this.getMetaContent('description');
     if (!description) {
-      issues.push({ type: 'error', message: 'Missing meta description' });
+      issues.push({ 
+        type: 'error', 
+        message: 'Missing meta description',
+        category: 'content',
+        impact: 'high'
+      });
       score -= 15;
     } else if (description.length < 120) {
-      issues.push({ type: 'warning', message: 'Description too short (recommended: 120-160 characters)', suggestion: 'Add more details about the page' });
+      issues.push({ 
+        type: 'warning', 
+        message: 'Description too short (recommended: 120-160 characters)', 
+        suggestion: 'Add more details about the page',
+        category: 'content',
+        impact: 'medium'
+      });
       score -= 3;
     } else if (description.length > 160) {
-      issues.push({ type: 'warning', message: 'Description too long (recommended: 120-160 characters)', suggestion: 'Shorten the description' });
+      issues.push({ 
+        type: 'warning', 
+        message: 'Description too long (recommended: 120-160 characters)', 
+        suggestion: 'Shorten the description',
+        category: 'content',
+        impact: 'medium'
+      });
       score -= 3;
     }
 
     // Check headings
     const h1Count = document.querySelectorAll('h1').length;
     if (h1Count === 0) {
-      issues.push({ type: 'error', message: 'Missing H1 heading' });
+      issues.push({ 
+        type: 'error', 
+        message: 'Missing H1 heading',
+        category: 'content',
+        impact: 'high'
+      });
       score -= 10;
     } else if (h1Count > 1) {
-      issues.push({ type: 'warning', message: 'Multiple H1 headings found', suggestion: 'Use only one H1 per page' });
+      issues.push({ 
+        type: 'warning', 
+        message: 'Multiple H1 headings found', 
+        suggestion: 'Use only one H1 per page',
+        category: 'content',
+        impact: 'medium'
+      });
       score -= 5;
     }
 
@@ -340,7 +381,9 @@ class AdvancedSEOManager {
       issues.push({ 
         type: 'warning', 
         message: `${imagesWithoutAlt} images missing alt text`, 
-        suggestion: 'Add descriptive alt text to all images' 
+        suggestion: 'Add descriptive alt text to all images',
+        category: 'accessibility',
+        impact: 'medium'
       });
       score -= imagesWithoutAlt * 2;
     }

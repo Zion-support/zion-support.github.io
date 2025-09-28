@@ -19,7 +19,11 @@ export const EnhancedPerformanceMonitor: React.FC<EnhancedPerformanceMonitorProp
     lcp: 0,
     fid: 0,
     cls: 0,
-    ttfb: 0
+    ttfb: 0,
+    memory: {
+      used: 0,
+      total: 0
+    }
   });
 
   const [suggestions, setSuggestions] = useState<OptimizationSuggestion[]>([]);
@@ -146,36 +150,36 @@ export const EnhancedPerformanceMonitor: React.FC<EnhancedPerformanceMonitorProp
         
         <div className="flex justify-between">
           <span className="text-gray-600 dark:text-gray-400">FCP:</span>
-          <span className={getMetricColor(metrics.fcp, { good: 1800, poor: 3000 })}>
-            {metrics.fcp.toFixed(0)}ms
+          <span className={getMetricColor(metrics.fcp || 0, { good: 1800, poor: 3000 })}>
+            {(metrics.fcp || 0).toFixed(0)}ms
           </span>
         </div>
 
         <div className="flex justify-between">
           <span className="text-gray-600 dark:text-gray-400">LCP:</span>
-          <span className={getMetricColor(metrics.lcp, { good: 2500, poor: 4000 })}>
-            {metrics.lcp.toFixed(0)}ms
+          <span className={getMetricColor(metrics.lcp || 0, { good: 2500, poor: 4000 })}>
+            {(metrics.lcp || 0).toFixed(0)}ms
           </span>
         </div>
 
         <div className="flex justify-between">
           <span className="text-gray-600 dark:text-gray-400">FID:</span>
-          <span className={getMetricColor(metrics.fid, { good: 100, poor: 300 })}>
-            {metrics.fid.toFixed(0)}ms
+          <span className={getMetricColor(metrics.fid || 0, { good: 100, poor: 300 })}>
+            {(metrics.fid || 0).toFixed(0)}ms
           </span>
         </div>
 
         <div className="flex justify-between">
           <span className="text-gray-600 dark:text-gray-400">CLS:</span>
-          <span className={getMetricColor(metrics.cls, { good: 0.1, poor: 0.25 })}>
-            {metrics.cls.toFixed(3)}
+          <span className={getMetricColor(metrics.cls || 0, { good: 0.1, poor: 0.25 })}>
+            {(metrics.cls || 0).toFixed(3)}
           </span>
         </div>
 
         <div className="flex justify-between">
           <span className="text-gray-600 dark:text-gray-400">TTFB:</span>
-          <span className={getMetricColor(metrics.ttfb, { good: 800, poor: 1800 })}>
-            {metrics.ttfb.toFixed(0)}ms
+          <span className={getMetricColor(metrics.ttfb || 0, { good: 800, poor: 1800 })}>
+            {(metrics.ttfb || 0).toFixed(0)}ms
           </span>
         </div>
       </div>
@@ -188,8 +192,8 @@ export const EnhancedPerformanceMonitor: React.FC<EnhancedPerformanceMonitorProp
           {metrics.memory && (
             <div className="flex justify-between">
               <span className="text-gray-600 dark:text-gray-400">Memory:</span>
-              <span className={getMetricColor(metrics.memory, { good: 50, poor: 100 })}>
-                {metrics.memory.toFixed(1)}MB
+              <span className={getMetricColor(metrics.memory.used, { good: 50, poor: 100 })}>
+                {metrics.memory.used.toFixed(1)}MB
               </span>
             </div>
           )}
@@ -221,9 +225,9 @@ export const EnhancedPerformanceMonitor: React.FC<EnhancedPerformanceMonitorProp
           <div className="max-h-32 overflow-y-auto space-y-1">
             {suggestions.slice(0, 3).map((suggestion, index) => (
               <div key={index} className="flex items-start gap-2 text-xs">
-                <span className="text-lg">{getSuggestionIcon(suggestion.type)}</span>
+                <span className="text-lg">{getSuggestionIcon(suggestion.type || 'info')}</span>
                 <div className="flex-1">
-                  <p className={clsx('font-medium', getSuggestionColor(suggestion.type))}>
+                  <p className={clsx('font-medium', getSuggestionColor(suggestion.type || 'info'))}>
                     {suggestion.message}
                   </p>
                   {suggestion.action && (

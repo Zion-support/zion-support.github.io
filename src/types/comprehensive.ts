@@ -120,7 +120,7 @@ export interface MonitoringMetrics {
 // Optimization Suggestion Types
 export interface OptimizationSuggestion {
   id?: string;
-  category?: 'performance' | 'seo' | 'accessibility' | 'security';
+  category?: 'performance' | 'seo' | 'accessibility' | 'security' | 'bundle' | 'runtime' | 'network' | 'memory' | 'rendering';
   priority?: 'high' | 'medium' | 'low';
   title?: string;
   description?: string;
@@ -180,13 +180,19 @@ export interface VisualizationOptions {
   showLegend?: boolean;
   showGrid?: boolean;
   colors?: string[];
+  color?: string;
   animation?: boolean;
+  showDataLabels?: boolean;
 }
 
 export interface StoredChart {
   data: ChartData;
   options: VisualizationOptions;
   container: HTMLElement;
+  type: string;
+  render: () => void;
+  update: (data: DataPoint[]) => void;
+  destroy: () => void;
 }
 
 // Analytics Types
@@ -273,6 +279,7 @@ export interface PerformanceMetrics {
   violations?: string[];
   bundleSize?: number;
   connection?: string;
+  renderTime?: number;
 }
 
 

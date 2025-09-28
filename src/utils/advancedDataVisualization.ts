@@ -190,11 +190,13 @@ export class AdvancedDataVisualization {
     const chart = this.charts.get(containerId);
     if (!chart) return;
 
-    const { data, options, container } = chart as StoredChart;
+    const { data, options, container } = chart;
+    if (!data || !options || !container) return;
+    
     const { width, height, margin, colors } = this.config;
 
     // Clear container
-    container.innerHTML = '';
+    if (container) container.innerHTML = '';
 
     // Create SVG
     const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
@@ -230,7 +232,7 @@ export class AdvancedDataVisualization {
     const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
     path.setAttribute('d', line(data.data));
     path.setAttribute('fill', 'none');
-    path.setAttribute('stroke', data.color || colors[0]);
+    path.setAttribute('stroke', data.color || '#3b82f6' || colors[0]);
     path.setAttribute('stroke-width', '2');
     path.setAttribute('stroke-linecap', 'round');
     path.setAttribute('stroke-linejoin', 'round');
@@ -251,11 +253,11 @@ export class AdvancedDataVisualization {
     }
 
     svg.appendChild(g);
-    container.appendChild(svg);
+    container?.appendChild(svg);
 
     // Add title if provided
-    if (options.title) {
-      this.addTitle(container, options.title, options.subtitle);
+    if (options?.title || '') {
+      this.addTitle(container!, options?.title || '', options?.subtitle);
     }
   }
 
@@ -263,10 +265,12 @@ export class AdvancedDataVisualization {
     const chart = this.charts.get(containerId);
     if (!chart) return;
 
-    const { data, options, container } = chart as StoredChart;
+    const { data, options, container } = chart;
+    if (!data || !options || !container) return;
+    
     const { width, height, margin, colors } = this.config;
 
-    container.innerHTML = '';
+    if (container) container.innerHTML = '';
 
     const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
     svg.setAttribute('width', width.toString());
@@ -292,7 +296,7 @@ export class AdvancedDataVisualization {
     this.addAxes(g, xScale, yScale, chartWidth, chartHeight, options);
 
     // Add bars
-    data.data.forEach((point: DataPoint, index: number) => {
+    data?.data?.forEach((point: DataPoint, index: number) => {
       const bar = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
       const barWidth = chartWidth / data.data.length * 0.8;
       const barHeight = chartHeight - yScale(point.y);
@@ -302,7 +306,7 @@ export class AdvancedDataVisualization {
       bar.setAttribute('y', yScale(point.y).toString());
       bar.setAttribute('width', barWidth.toString());
       bar.setAttribute('height', barHeight.toString());
-      bar.setAttribute('fill', point.color || data.color || colors[index % colors.length]);
+      bar.setAttribute('fill', point.color || data.color || '#3b82f6' || colors[index % colors.length]);
       bar.setAttribute('rx', '2');
 
       if (this.config.animations) {
@@ -317,10 +321,10 @@ export class AdvancedDataVisualization {
     });
 
     svg.appendChild(g);
-    container.appendChild(svg);
+    container?.appendChild(svg);
 
-    if (options.title) {
-      this.addTitle(container, options.title, options.subtitle);
+    if (options?.title || '') {
+      this.addTitle(container!, options?.title || '', options?.subtitle);
     }
   }
 
@@ -328,10 +332,10 @@ export class AdvancedDataVisualization {
     const chart = this.charts.get(containerId);
     if (!chart) return;
 
-    const { data, options, container } = chart as StoredChart;
+    const { data, options, container } = chart;
     const { width, height, colors } = this.config;
 
-    container.innerHTML = '';
+    if (container) container.innerHTML = '';
 
     const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
     svg.setAttribute('width', width.toString());
@@ -343,10 +347,10 @@ export class AdvancedDataVisualization {
     const centerY = height / 2;
     const radius = Math.min(width, height) / 2 - 40;
 
-    const total = data.data.reduce((sum: number, point: DataPoint) => sum + point.y, 0);
+    const total = data?.data?.reduce((sum: number, point: DataPoint) => sum + point.y, 0) || 0;
     let currentAngle = 0;
 
-    data.data.forEach((point: DataPoint, index: number) => {
+    data?.data?.forEach((point: DataPoint, index: number) => {
       const sliceAngle = (point.y / total) * 2 * Math.PI;
       const startAngle = currentAngle;
       const endAngle = currentAngle + sliceAngle;
@@ -382,10 +386,10 @@ export class AdvancedDataVisualization {
       currentAngle += sliceAngle;
     });
 
-    container.appendChild(svg);
+    container?.appendChild(svg);
 
-    if (options.title) {
-      this.addTitle(container, options.title, options.subtitle);
+    if (options?.title || '') {
+      this.addTitle(container!, options?.title || '', options?.subtitle);
     }
   }
 
@@ -393,10 +397,12 @@ export class AdvancedDataVisualization {
     const chart = this.charts.get(containerId);
     if (!chart) return;
 
-    const { data, options, container } = chart as StoredChart;
+    const { data, options, container } = chart;
+    if (!data || !options || !container) return;
+    
     const { width, height, margin, colors } = this.config;
 
-    container.innerHTML = '';
+    if (container) container.innerHTML = '';
 
     const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
     svg.setAttribute('width', width.toString());
@@ -422,12 +428,12 @@ export class AdvancedDataVisualization {
     this.addAxes(g, xScale, yScale, chartWidth, chartHeight, options);
 
     // Add scatter points
-    data.data.forEach((point: DataPoint, index: number) => {
+    data?.data?.forEach((point: DataPoint, index: number) => {
       const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
       circle.setAttribute('cx', xScale(point.x).toString());
       circle.setAttribute('cy', yScale(point.y).toString());
       circle.setAttribute('r', '4');
-      circle.setAttribute('fill', point.color || data.color || colors[0]);
+      circle.setAttribute('fill', point.color || data.color || '#3b82f6' || colors[0]);
       circle.setAttribute('opacity', '0.7');
 
       if (this.config.animations) {
@@ -442,10 +448,10 @@ export class AdvancedDataVisualization {
     });
 
     svg.appendChild(g);
-    container.appendChild(svg);
+    container?.appendChild(svg);
 
-    if (options.title) {
-      this.addTitle(container, options.title, options.subtitle);
+    if (options?.title || '') {
+      this.addTitle(container!, options?.title || '', options?.subtitle);
     }
   }
 
@@ -453,10 +459,12 @@ export class AdvancedDataVisualization {
     const chart = this.charts.get(containerId);
     if (!chart) return;
 
-    const { data, options, container } = chart as StoredChart;
+    const { data, options, container } = chart;
+    if (!data || !options || !container) return;
+    
     const { width, height, margin, colors } = this.config;
 
-    container.innerHTML = '';
+    if (container) container.innerHTML = '';
 
     const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
     svg.setAttribute('width', width.toString());
@@ -485,7 +493,7 @@ export class AdvancedDataVisualization {
     const areaPath = this.createAreaGenerator(xScale, yScale, chartHeight);
     const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
     path.setAttribute('d', areaPath(data.data));
-    path.setAttribute('fill', data.color || colors[0]);
+    path.setAttribute('fill', data.color || '#3b82f6' || colors[0]);
     path.setAttribute('opacity', '0.3');
 
     if (this.config.animations) {
@@ -503,15 +511,15 @@ export class AdvancedDataVisualization {
     const linePath = document.createElementNS('http://www.w3.org/2000/svg', 'path');
     linePath.setAttribute('d', line(data.data));
     linePath.setAttribute('fill', 'none');
-    linePath.setAttribute('stroke', data.color || colors[0]);
+    linePath.setAttribute('stroke', data.color || '#3b82f6' || colors[0]);
     linePath.setAttribute('stroke-width', '2');
 
     g.appendChild(linePath);
     svg.appendChild(g);
-    container.appendChild(svg);
+    container?.appendChild(svg);
 
-    if (options.title) {
-      this.addTitle(container, options.title, options.subtitle);
+    if (options?.title || '') {
+      this.addTitle(container!, options?.title || '', options?.subtitle);
     }
   }
 
@@ -693,7 +701,7 @@ export class AdvancedDataVisualization {
     const chart = this.charts.get(containerId);
     if (!chart) return;
 
-    chart.data = newData as DataPoint[];
+    chart.data = newData;
     this.renderChart(containerId);
   }
 
@@ -701,7 +709,7 @@ export class AdvancedDataVisualization {
     const chart = this.charts.get(containerId);
     if (!chart) return;
 
-    switch ((chart as StoredChart).type) {
+    switch ((chart as unknown as StoredChart)?.type) {
       case 'line':
         this.renderLineChart(containerId);
         break;
@@ -746,7 +754,7 @@ export class AdvancedDataVisualization {
     if (!chart) return '';
 
     if (format === 'svg') {
-      return (chart as StoredChart).container.innerHTML;
+      return chart?.container?.innerHTML || '';
     }
 
     // For PNG/JPG, would need to convert SVG to canvas

@@ -3,26 +3,7 @@
  * Provides comprehensive performance tracking, optimization suggestions, and automated improvements
  */
 
-interface PerformanceMetrics {
-  fcp: number;
-  lcp: number;
-  fid: number;
-  cls: number;
-  ttfb: number;
-  memory?: number;
-  connection?: string;
-  bundleSize?: number;
-  renderTime?: number;
-  memoryUsage?: number;
-}
-
-interface OptimizationSuggestion {
-  type: 'critical' | 'warning' | 'info';
-  category: 'bundle' | 'runtime' | 'network' | 'memory' | 'rendering';
-  message: string;
-  impact: 'high' | 'medium' | 'low';
-  action?: string;
-}
+import { PerformanceMetrics, OptimizationSuggestion } from '../types/comprehensive';
 
 class PerformanceOptimizer {
   private metrics: PerformanceMetrics = {
@@ -30,7 +11,11 @@ class PerformanceOptimizer {
     lcp: 0,
     fid: 0,
     cls: 0,
-    ttfb: 0
+    ttfb: 0,
+    memory: {
+      used: 0,
+      total: 0
+    }
   };
 
   private observers: PerformanceObserver[] = [];
@@ -111,9 +96,12 @@ class PerformanceOptimizer {
 
   private observeMemoryUsage(): void {
     if ('memory' in performance) {
-      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory;
-      this.metrics.memory = memory?.usedJSHeapSize ? memory.usedJSHeapSize / 1024 / 1024 : 0; // Convert to MB
-      this.analyzeMetric('memory', this.metrics.memory);
+      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number } }).memory;
+      this.metrics.memory = {
+        used: memory?.usedJSHeapSize ? memory.usedJSHeapSize / 1024 / 1024 : 0,
+        total: memory?.totalJSHeapSize ? memory.totalJSHeapSize / 1024 / 1024 : 0
+      }; // Convert to MB
+      this.analyzeMetric('memory', this.metrics.memory.used);
     }
   }
 
@@ -330,14 +318,14 @@ class PerformanceOptimizer {
     report += '================\n\n';
     
     report += 'Core Web Vitals:\n';
-    report += `- FCP: ${metrics.fcp.toFixed(0)}ms\n`;
-    report += `- LCP: ${metrics.lcp.toFixed(0)}ms\n`;
-    report += `- FID: ${metrics.fid.toFixed(0)}ms\n`;
-    report += `- CLS: ${metrics.cls.toFixed(3)}\n`;
-    report += `- TTFB: ${metrics.ttfb.toFixed(0)}ms\n\n`;
+    report += `- FCP: ${(metrics.fcp || 0).toFixed(0)}ms\n`;
+    report += `- LCP: ${(metrics.lcp || 0).toFixed(0)}ms\n`;
+    report += `- FID: ${(metrics.fid || 0).toFixed(0)}ms\n`;
+    report += `- CLS: ${(metrics.cls || 0).toFixed(3)}\n`;
+    report += `- TTFB: ${(metrics.ttfb || 0).toFixed(0)}ms\n\n`;
     
     if (metrics.memory) {
-      report += `Memory Usage: ${metrics.memory.toFixed(1)}MB\n`;
+      report += `Memory Usage: ${metrics.memory.used.toFixed(1)}MB\n`;
     }
     
     if (metrics.bundleSize) {

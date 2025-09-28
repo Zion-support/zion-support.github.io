@@ -128,9 +128,9 @@ class EnhancedSecuritySystem {
       
       // Monitor script tag creation
       if (tagName.toLowerCase() === 'script') {
-        const securitySystem = (window as Record<string, unknown>).__securitySystem;
+        const securitySystem = (window as any).__securitySystem;
         if (securitySystem) {
-          securitySystem.logSecurityEvent({
+          (securitySystem as any).logSecurityEvent({
             type: 'xss_attempt',
             severity: 'high',
             message: 'Script tag creation detected',
@@ -149,9 +149,9 @@ class EnhancedSecuritySystem {
     if (originalInnerHTML) {
       Object.defineProperty(Element.prototype, 'innerHTML', {
         set: function(value: string) {
-          const securitySystem = (window as Record<string, unknown>).__securitySystem;
-          if (securitySystem && securitySystem.detectSuspiciousContent(value)) {
-            securitySystem.logSecurityEvent({
+          const securitySystem = (window as any).__securitySystem;
+          if (securitySystem && (securitySystem as any).detectSuspiciousContent(value)) {
+            (securitySystem as any).logSecurityEvent({
               type: 'xss_attempt',
               severity: 'high',
               message: 'Suspicious content detected in innerHTML',
@@ -168,7 +168,7 @@ class EnhancedSecuritySystem {
     }
 
     // Store reference for monitoring
-    (window as Record<string, unknown>).__securitySystem = this;
+    (window as any).__securitySystem = this;
   }
 
   /**

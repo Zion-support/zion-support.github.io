@@ -90,8 +90,8 @@ class AccessibilityEnhancer {
       }
     };
 
-    document.addEventListener('keydown', handleKeyDown);
-    this.eventListeners.set('keydown', handleKeyDown);
+    document.addEventListener('keydown', handleKeyDown as EventListener);
+    this.eventListeners.set('keydown', handleKeyDown as EventListener);
   }
 
   /**
@@ -249,7 +249,7 @@ class AccessibilityEnhancer {
 
     const mediaQuery = window.matchMedia('(prefers-contrast: high)');
     this.handleHighContrastChange(mediaQuery);
-    mediaQuery.addEventListener('change', this.handleHighContrastChange);
+    mediaQuery.addEventListener('change', this.handleHighContrastChange as unknown as EventListener);
   }
 
   private handleHighContrastChange = (mediaQuery: MediaQueryList): void => {
@@ -268,7 +268,7 @@ class AccessibilityEnhancer {
 
     const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
     this.handleReducedMotionChange(mediaQuery);
-    mediaQuery.addEventListener('change', this.handleReducedMotionChange);
+    mediaQuery.addEventListener('change', this.handleReducedMotionChange as unknown as EventListener);
   }
 
   private handleReducedMotionChange = (mediaQuery: MediaQueryList): void => {
