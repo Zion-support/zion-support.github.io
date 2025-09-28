@@ -9,13 +9,12 @@ import { performanceOptimizer } from './utils/performanceOptimizations';
 import { accessibilityEnhancer } from './utils/advancedAccessibilityEnhancer';
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
 import { useAppInitialization } from './hooks/useAppInitialization';
-import { useSEOData } from './hooks/useSEOData';
 import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import AIPerformanceDashboard from './components/AIPerformanceDashboard';
 import WebsiteEnhancements from './components/WebsiteEnhancements';
-import { SEOOptimizer } from './components/SEOOptimizer';
+import SEOOptimizer from './components/SEOOptimizer';
 import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
 import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
 import { performanceAlerts } from './utils/performanceAlerts';
@@ -61,7 +60,19 @@ export default function App(): React.JSX.Element {
 
   // Get current pathname for SEO
   const currentPathname = typeof window !== 'undefined' ? window.location.pathname : '/';
-  const seoData = useSEOData(currentPathname);
+  
+  // Simple SEO data
+  const seoData = useMemo(() => ({
+    title: 'Zion Tech Group - Leading AI & Technology Solutions',
+    description: 'Cutting-edge AI, quantum computing, and digital transformation solutions for modern enterprises. Expert consulting, cloud services, and innovative technology implementations.',
+    keywords: ['AI solutions', 'quantum computing', 'digital transformation', 'cloud services', 'enterprise technology'],
+    canonicalUrl: `https://zion.app${currentPathname}`,
+    ogImage: 'https://zion.app/og-image.jpg',
+    ogUrl: `https://zion.app${currentPathname}`,
+    ogType: 'website' as const,
+    twitterCard: 'summary_large_image' as const,
+    siteName: 'Zion Tech Group'
+  }), [currentPathname]);
 
   // Performance optimization hook
   const { preloadResource } = usePerformanceOptimization({
