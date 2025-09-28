@@ -25,9 +25,10 @@ interface AIInsights {
 }
 
 interface ErrorReport {
-  severity: string;
+  id: string;
   message: string;
-  lastOccurrence: string | Date;
+  severity: string;
+  lastOccurrence: string | number;
   occurrenceCount: number;
   context: {
     component?: string;
@@ -47,6 +48,7 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
     if (isVisible) {
       const updateData = () => {
         try {
+<<<<<<< HEAD
           // TODO: Implement dashboard data fetching
           console.log('Dashboard data update triggered');
           // For now, set some mock data
@@ -66,6 +68,11 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
             ]
           });
           setErrors([]);
+=======
+          setMetrics(enhancedErrorHandler.getPerformanceMetrics() as PerformanceMetrics);
+          setInsights(enhancedErrorHandler.getAIInsights() as AIInsights);
+          setErrors(enhancedErrorHandler.getErrorReports().slice(0, 10) as unknown as ErrorReport[]);
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-62de
         } catch (error) {
           console.error('Failed to fetch dashboard data:', error);
         }
