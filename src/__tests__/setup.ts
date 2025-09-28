@@ -20,7 +20,7 @@ delete (window as unknown as { location?: Location }).location;
   port: '3000',
   protocol: 'http:',
   origin: 'http://localhost:3000',
-  ancestorOrigins: [] as any,
+  ancestorOrigins: [] as unknown as DOMStringList,
 } as Location;
 // Mock window.history
 Object.defineProperty(window, 'history', {
