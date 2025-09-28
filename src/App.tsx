@@ -90,10 +90,10 @@ export default function App(): React.JSX.Element {
     });
     // Also call the original trackEngagement from useAppInitialization
     trackEngagement();
-  }, [trackEngagement]);
+  }, [engagementData.clicks, engagementData.scrollDepth, engagementData.startTime]);
 
   // Simple SEO manager
-  const seoManagerInstance = {
+  const seoManagerInstance = useMemo(() => ({
     updateMetaTags: (data: typeof seoData) => {
       if (typeof document !== 'undefined') {
         document.title = data.title;
@@ -103,7 +103,7 @@ export default function App(): React.JSX.Element {
         }
       }
     }
-  };
+  }), []);
 
   useEffect(() => {
     // Add performance marks for better monitoring
@@ -153,7 +153,7 @@ export default function App(): React.JSX.Element {
     if (typeof window !== 'undefined') {
       console.log('🚀 Zion Tech Group App initialized');
     }
-  }, [seoData, handleScroll, handleClick, handleKeyDown, preloadResource]);
+  }, [seoData, handleScroll, handleClick, preloadResource, seoManagerInstance]);
 
   // Main initialization and cleanup effect
   React.useEffect(() => {
