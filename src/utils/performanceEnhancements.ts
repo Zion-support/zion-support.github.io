@@ -398,12 +398,7 @@ export const getPerformanceRecommendations = (): string[] => {
 };
 
 export const initializePerformanceEnhancements = (): void => {
-  try {
-    performanceEnhancer.initialize();
-    console.log('Performance enhancements initialized');
-  } catch (error) {
-    console.error('Error initializing performance enhancements:', error);
-  }
+  performanceEnhancer.getMetrics(); // This will trigger initialization
 };
 
 export default PerformanceEnhancer;
