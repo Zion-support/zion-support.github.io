@@ -217,6 +217,11 @@ const AdvancedPerformanceDashboard: React.FC<AdvancedPerformanceDashboardProps> 
     { name: 'Security', value: metrics.securityScore, threshold: 95 }
   ];
 
+  const optimizationDataMap = strategies.map((strategy: OptimizationStrategy) => ({
+    name: strategy.name,
+    impact: strategy.impact,
+    applied: strategy.applied
+  }));
   const pieData = [
     { name: 'Build', value: metrics.buildScore, color: '#3b82f6' },
     { name: 'Accessibility', value: metrics.accessibilityScore, color: '#10b981' },

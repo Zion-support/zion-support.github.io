@@ -32,19 +32,12 @@ interface ErrorReport {
 interface AIInsights {
   predictedHighRiskActions: string[];
   recommendedImprovements: string[];
-  performanceTrends: string[];
-  optimizationSuggestions: string[];
-  errorTrends: Array<{ category: string; trend: string }>;
-  performancePredictions: {
-    nextHour: number;
-    nextDay: number;
-  };
-  riskAssessment: {
-    level: 'low' | 'medium' | 'high' | 'critical';
-    factors: string[];
-  };
+  errorTrends: Array<{
+    category: string;
+    trend: 'increasing' | 'decreasing' | 'stable';
+  }>;
+  [key: string]: unknown;
 }
-
 const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisible, onClose }) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [insights, setInsights] = useState<{
