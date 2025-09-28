@@ -5,9 +5,9 @@ import '@testing-library/jest-dom';
 global.fetch = jest.fn();
 
 // Mock window.location to prevent navigation errors
-// Use delete and redefine approach for JSDOM compatibility
-delete (window as Window & { location?: Location }).location;
-(window as Window & { location: Partial<Location> }).location = {
+// Delete and recreate to avoid JSDOM navigation issues
+delete (window as unknown as { location: Location }).location;
+(window as unknown as { location: Location }).location = {
   pathname: '/',
   href: 'http://localhost:3000/',
   assign: jest.fn(),
@@ -20,7 +20,7 @@ delete (window as Window & { location?: Location }).location;
   port: '3000',
   protocol: 'http:',
   origin: 'http://localhost:3000',
-  ancestorOrigins: [] as any,
+  ancestorOrigins: [] as string[],
 };
 // Mock window.location using a simple assignment
 delete (window as unknown as { location?: typeof window.location }).location;
