@@ -55,7 +55,7 @@ const SystemHealthDashboard: React.FC<SystemHealthDashboardProps> = ({ isVisible
   const getMemoryUsage = (): number => {
     if (typeof window === 'undefined' || !(window as Window & { performance?: { memory?: { usedJSHeapSize: number; totalJSHeapSize: number } } }).performance?.memory) return Math.random() * 100;
     
-    const memory = (window as any).performance.memory as {
+    const memory = (window as Window & { performance?: { memory?: { usedJSHeapSize: number; totalJSHeapSize: number } } }).performance?.memory as {
       usedJSHeapSize: number;
       totalJSHeapSize: number;
     };
@@ -75,7 +75,7 @@ const SystemHealthDashboard: React.FC<SystemHealthDashboardProps> = ({ isVisible
     if (!navigator.onLine) return 'offline';
     
     // Simulate slow network based on connection type
-    const connection = (navigator as any).connection as {
+    const connection = (navigator as Navigator & { connection?: { effectiveType?: string } }).connection as {
       effectiveType?: string;
     };
     if (connection && connection.effectiveType) {
