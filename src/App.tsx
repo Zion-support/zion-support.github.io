@@ -1,19 +1,12 @@
-import React, { useCallback, useState, useEffect, useMemo } from 'react';
+import React, { useCallback, useState, useEffect } from 'react';
 import { AppRouter } from './router';
 import { useAppInitialization } from './hooks/useAppInitialization';
 import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
 import AdvancedErrorBoundary from './components/AdvancedErrorBoundary';
 import PerformanceTracker from './components/PerformanceTracker';
 import AccessibilityEnhancements from './components/AccessibilityEnhancements';
-import { seoAnalytics, performanceSEO, seoManager } from './utils/seoEnhanced';
-import { analytics } from './utils/analytics';
-import { performanceOptimizer } from './utils/performanceOptimizations';
-import { accessibilityEnhancer } from './utils/accessibilityEnhancer';
-import { seoOptimizer } from './utils/seoOptimizations';
+import { seoAnalytics } from './utils/seoEnhanced';
 import { initializePerformanceEnhancements } from './utils/performanceEnhancements';
-import { AdvancedAutomationSystem } from './utils/advancedAutomationSystem';
-import { AccessibilityEnhancer } from './utils/accessibilityEnhancer';
-import { SecurityEnhancer } from './utils/securityEnhancer';
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
 import RealTimeMonitor from './components/RealTimeMonitor';
 import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
@@ -25,8 +18,6 @@ import WebsiteEnhancements from './components/WebsiteEnhancements';
 import ComprehensivePerformanceMonitor from './components/ComprehensivePerformanceMonitor';
 import AdvancedSEOOptimizer from './components/AdvancedSEOOptimizer';
 import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
-import { enhancedAnalytics } from './utils/enhancedAnalytics';
-import { advancedCacheSystem } from './utils/advancedCacheSystem';
 import './index.css';
 import './styles/notifications.css';
 import './styles/system-metrics.css';
@@ -47,11 +38,11 @@ export default function App(): React.JSX.Element {
   const [showAdvancedSEO, setShowAdvancedSEO] = useState(false);
 
   // Engagement tracking data
-  const engagementData = useMemo(() => ({
-    startTime: Date.now(),
-    scrollDepth: 0,
-    clicks: 0
-  }), []);
+  // const engagementData = useMemo(() => ({
+  //   startTime: Date.now(),
+  //   scrollDepth: 0,
+  //   clicks: 0
+  // }), []);
 
   // Initialize app with custom configuration
   const { isLoading, loadingProgress, handleScroll, handleClick, trackEngagement } = useAppInitialization({
@@ -64,7 +55,7 @@ export default function App(): React.JSX.Element {
   });
 
   // Performance optimization hook
-  const { preloadResource, optimizePerformance } = usePerformanceOptimization({
+  usePerformanceOptimization({
     enablePreloading: true,
     enableResourceHints: true,
     enableCriticalCSS: true,
@@ -72,14 +63,14 @@ export default function App(): React.JSX.Element {
   });
 
   // SEO data
-  const seoData = useMemo(() => ({
-    title: 'Zion Tech Group - Leading AI & Technology Solutions',
-    description: 'Cutting-edge AI, quantum computing, and digital transformation solutions for modern enterprises. Expert consulting, cloud services, and innovative technology implementations.',
-    keywords: ['AI solutions', 'quantum computing', 'digital transformation', 'cloud services', 'enterprise technology', 'machine learning', 'automation', 'blockchain'],
-    canonicalUrl: typeof window !== 'undefined' ? window.location.href : '',
-    ogImage: '/og-image.png',
-    twitterCard: 'summary_large_image' as const
-  }), []);
+  // const seoData = useMemo(() => ({
+  //   title: 'Zion Tech Group - Leading AI & Technology Solutions',
+  //   description: 'Cutting-edge AI, quantum computing, and digital transformation solutions for modern enterprises. Expert consulting, cloud services, and innovative technology implementations.',
+  //   keywords: ['AI solutions', 'quantum computing', 'digital transformation', 'cloud services', 'enterprise technology', 'machine learning', 'automation', 'blockchain'],
+  //   canonicalUrl: typeof window !== 'undefined' ? window.location.href : '',
+  //   ogImage: '/og-image.png',
+  //   twitterCard: 'summary_large_image' as const
+  // }), []);
 
   // Initialize SEO analytics
   useEffect(() => {
