@@ -97,11 +97,11 @@ export function usePerformanceMonitoring(options: UsePerformanceMonitoringOption
   const getNetworkInfo = useCallback(() => {
     if (typeof window !== 'undefined' && 'connection' in navigator) {
       const connection = (navigator as Navigator & { connection?: { effectiveType?: string; downlink?: number; rtt?: number } }).connection;
-      return connection ? {
-        effectiveType: connection.effectiveType || 'unknown',
-        downlink: connection.downlink || 0,
-        rtt: connection.rtt || 0
-      } : undefined;
+      return {
+        effectiveType: connection?.effectiveType || 'unknown',
+        downlink: connection?.downlink || 0,
+        rtt: connection?.rtt || 0
+      };
     }
     return undefined;
   }, []);
@@ -150,8 +150,8 @@ export function usePerformanceMonitoring(options: UsePerformanceMonitoringOption
     // First Input Delay
     const fidEntries = performance.getEntriesByType('first-input') as PerformanceEntry[];
     if (fidEntries.length > 0) {
-      const fid = fidEntries[0] as PerformanceEntry & { processingStart: number; startTime: number };
-      newMetrics.firstInputDelay = fid.processingStart - fid.startTime;
+      const fid = fidEntries[0] as PerformanceEntry & { processingStart?: number; startTime?: number };
+      newMetrics.firstInputDelay = (fid.processingStart || 0) - (fid.startTime || 0);
       checkThreshold('firstInputDelay', newMetrics.firstInputDelay, thresholdsRef.current.firstInputDelay);
     }
 
