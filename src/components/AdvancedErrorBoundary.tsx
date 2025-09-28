@@ -91,8 +91,8 @@ class AdvancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
 
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
     // Report to analytics or error tracking service
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'exception', {
+    if (typeof window !== 'undefined' && (window as unknown as { gtag?: (event: string, action: string, params: Record<string, unknown>) => void }).gtag) {
+      (window as unknown as { gtag: (event: string, action: string, params: Record<string, unknown>) => void }).gtag('event', 'exception', {
         description: error.message,
         fatal: false,
         custom_map: {
@@ -103,8 +103,8 @@ class AdvancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
     }
 
     // Report to custom analytics
-    if (typeof window !== 'undefined' && (window as any).analytics) {
-      (window as any).analytics.track('Error Boundary Triggered', {
+    if (typeof window !== 'undefined' && (window as unknown as { analytics?: { track: (event: string, params: Record<string, unknown>) => void } }).analytics) {
+      (window as unknown as { analytics: { track: (event: string, params: Record<string, unknown>) => void } }).analytics.track('Error Boundary Triggered', {
         error_message: error.message,
         error_name: error.name,
         component_stack: errorInfo.componentStack,
@@ -154,9 +154,9 @@ Please describe what you were doing when this error occurred:
   render(): ReactNode {
     if (this.state.hasError) {
       const canRetry = this.retryCount < this.maxRetries;
-      const timeSinceError = this.state.lastErrorTime 
-        ? Date.now() - this.state.lastErrorTime.getTime()
-        : 0;
+      // const timeSinceError = this.state.lastErrorTime 
+      //   ? Date.now() - this.state.lastErrorTime.getTime()
+      //   : 0;
 
       return (
         <div className="error-boundary">
@@ -164,7 +164,7 @@ Please describe what you were doing when this error occurred:
             <div className="error-icon">⚠️</div>
             <h2 className="error-title">Something went wrong</h2>
             <p className="error-description">
-              We're sorry, but something unexpected happened. Our team has been notified.
+              We&apos;re sorry, but something unexpected happened. Our team has been notified.
             </p>
             
             {process.env.NODE_ENV === 'development' && (
