@@ -1,4 +1,18 @@
 import React, { useState, useEffect, useCallback } from 'react';
+import { 
+  ResponsiveContainer, 
+  BarChart, 
+  CartesianGrid, 
+  XAxis, 
+  YAxis, 
+  Tooltip, 
+  Bar, 
+  PieChart, 
+  Pie, 
+  Cell, 
+  LineChart, 
+  Line 
+} from 'recharts';
 import { advancedBuildOptimizer } from '../utils/advancedBuildOptimizer';
 // import { accessibilityEnhancements } from '../utils/accessibilityEnhancements';
 import { accessibilityUtils } from '../utils/accessibilityUtils';
