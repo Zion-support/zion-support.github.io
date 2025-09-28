@@ -21,7 +21,7 @@ export default function App(): React.JSX.Element {
   const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
 
   // Initialize app with custom configuration
-  const { isLoading, loadingProgress } = useAppInitialization({
+  const { isLoading, loadingProgress, handleScroll, handleClick } = useAppInitialization({
     enablePerformanceMonitoring: true,
     enableAccessibility: true,
     enableSecurity: true,
@@ -59,9 +59,6 @@ export default function App(): React.JSX.Element {
     if (typeof window !== 'undefined' && window.performance && typeof performance.mark === 'function') {
       performance.mark('app-init-start');
     }
-
-    // Set default SEO data
-    seoManager.updateMetaTags(seoData);
 
     // Add keyboard event listener
     document.addEventListener('keydown', handleKeyDown);
