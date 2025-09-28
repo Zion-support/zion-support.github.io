@@ -31,9 +31,8 @@ class AdvancedPerformanceOptimizer {
   private metrics: PerformanceMetrics | null = null;
   private observers: PerformanceObserver[] = [];
   private isInitialized = false;
-  private strategies: OptimizationStrategy[] = [];
 
-  constructor(config: Partial<OptimizationConfig> = {}) {
+  constructor() {
     this.config = {
       enableImageOptimization: true,
       enableCodeSplitting: true,
@@ -44,8 +43,7 @@ class AdvancedPerformanceOptimizer {
       enableServiceWorker: true,
       enableCriticalCSS: true,
       enableResourceHints: true,
-      enableBundleOptimization: true,
-      ...config
+      enableBundleOptimization: true
     };
     this.initializeStrategies();
   }
@@ -291,6 +289,22 @@ class AdvancedPerformanceOptimizer {
     };
   }
 
+  constructor(config: Partial<OptimizationConfig> = {}) {
+    this.config = {
+      enableImageOptimization: true,
+      enableCodeSplitting: true,
+      enableLazyLoading: true,
+      enablePrefetching: true,
+      enableCompression: true,
+      enableCaching: true,
+      enableServiceWorker: true,
+      enableCriticalCSS: true,
+      enableResourceHints: true,
+      enableBundleOptimization: true,
+      ...config
+    };
+  }
+
 
   /**
    * Initialize performance monitoring
@@ -347,28 +361,6 @@ class AdvancedPerformanceOptimizer {
     }
   }
 
-
-  /**
-   * Optimize image format based on browser support
-   */
-  private optimizeImageFormat(img: HTMLImageElement): void {
-    const src = img.src;
-    if (!src) return;
-
-    // Check for WebP support
-    const canvas = document.createElement('canvas');
-    const supportsWebP = canvas.toDataURL('image/webp').indexOf('data:image/webp') === 0;
-
-    if (supportsWebP && !src.includes('.webp')) {
-      // Try to load WebP version
-      const webpSrc = src.replace(/\.(jpg|jpeg|png)$/i, '.webp');
-      const webpImg = new Image();
-      webpImg.onload = () => {
-        img.src = webpSrc;
-      };
-      webpImg.src = webpSrc;
-    }
-  }
 
   /**
    * Initialize lazy loading for images and components
