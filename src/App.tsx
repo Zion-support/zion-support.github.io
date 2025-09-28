@@ -8,7 +8,6 @@ import { analytics } from './utils/analytics';
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
 import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
-import PerformanceMonitor from './components/PerformanceMonitor';
 import SEOOptimizer from './components/SEOOptimizer';
 import AIPerformanceDashboard from './components/AIPerformanceDashboard';
 import './index.css';
@@ -77,6 +76,17 @@ export default function App(): React.JSX.Element {
     trackEngagement();
   }, [engagementData.clicks, engagementData.scrollDepth, engagementData.startTime, trackEngagement]);
 
+  // Default SEO data
+  const defaultSeoData = {
+    title: 'Zion Tech Group - Advanced AI and IT Solutions',
+    description: 'Leading provider of cutting-edge AI, cloud computing, and IT solutions. Transform your business with our innovative technology services.',
+    keywords: ['AI', 'artificial intelligence', 'cloud computing', 'IT solutions', 'technology consulting', 'digital transformation'],
+    ogType: 'website' as const,
+    ogUrl: typeof window !== 'undefined' ? window.location.href : 'https://ziontechgroup.com',
+    ogImage: '/og-image.jpg',
+    twitterCard: 'summary_large_image' as const
+  };
+
   // Update meta tags function
   const updateMetaTags = useCallback((data: {
     title: string;
@@ -130,10 +140,10 @@ export default function App(): React.JSX.Element {
     performanceSEO.optimizeCSS();
 
     // Set default SEO data using the correct method
-    seoManager.updateMetaTags(seoData);
+    seoManager.updateMetaTags(defaultSeoData);
 
     // Update meta tags
-    updateMetaTags(seoData);
+    updateMetaTags(defaultSeoData);
 
     // Basic performance monitoring
     if (typeof window !== 'undefined') {
@@ -154,7 +164,7 @@ export default function App(): React.JSX.Element {
       document.removeEventListener('click', handleClick);
       document.removeEventListener('keydown', handleKeyDown);
     };
-  }, [handleScroll, handleClick, handleKeyDown, seoData, preloadResource, updateMetaTags]);
+  }, [handleScroll, handleClick, handleKeyDown, preloadResource, updateMetaTags]);
 
   // Main initialization and cleanup effect
   React.useEffect(() => {
@@ -193,7 +203,7 @@ export default function App(): React.JSX.Element {
 
   return (
     <EnhancedErrorBoundary>
-      <SEOOptimizer seoData={seoData} />
+      <SEOOptimizer seoData={defaultSeoData} />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <AppRouter />
         
