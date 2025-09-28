@@ -181,7 +181,7 @@ export default function AdvancedAnalyticsDashboard({ isVisible, onClose }: Advan
                         dataKey="visitors"
                       >
                         {analyticsData.trafficSources.map((entry, index) => (
-                          <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                          <Cell key={`cell-${index}`} fill={['#8884d8', '#82ca9d', '#ffc658', '#ff7300', '#00ff00'][index % 5]} />
                         ))}
                       </Pie>
                       <Tooltip />
