@@ -72,17 +72,6 @@ export default function App(): React.JSX.Element {
     }
   }, []);
 
-  // Enhanced track engagement function
-  const enhancedTrackEngagement = useCallback(() => {
-    const timeOnPage = Date.now() - engagementData.startTime;
-    seoAnalytics.trackUserEngagement(window.location.pathname, {
-      timeOnPage,
-      scrollDepth: engagementData.scrollDepth,
-      clicks: engagementData.clicks,
-    });
-    // Also call the original trackEngagement from useAppInitialization
-    trackEngagement();
-  }, [engagementData.clicks, engagementData.scrollDepth, engagementData.startTime, trackEngagement]);
   // Memoize the SEO data to prevent unnecessary re-renders
   const seoData = useMemo(() => ({
     title: 'Zion Tech Group - Leading AI & Technology Solutions',
@@ -193,25 +182,17 @@ export default function App(): React.JSX.Element {
 
     // Cleanup function
     return () => {
-<<<<<<< HEAD
-      document.removeEventListener('keydown', handleKeyDown);
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-b362
       window.removeEventListener('beforeunload', enhancedTrackEngagement);
       
       // Final engagement tracking
       enhancedTrackEngagement();
-<<<<<<< HEAD
       
       // Remove event listeners
       window.removeEventListener('scroll', handleScroll);
       document.removeEventListener('click', handleClick);
+      document.removeEventListener('keydown', handleKeyDown);
     };
   }, [enhancedTrackEngagement, handleKeyDown, handleScroll, handleClick, seoData, preloadResource]);
-=======
-    };
-  }, [enhancedTrackEngagement]);
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-b362
 
   // Show loading screen while initializing
   if (isLoading) {
