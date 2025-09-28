@@ -7,14 +7,8 @@ import PerformanceTracker from './components/PerformanceTracker';
 import PerformanceMonitor from './components/PerformanceMonitor';
 // import EnhancedPerformanceMonitor from './components/EnhancedPerformanceMonitor';
 import PerformanceDashboard from './components/PerformanceDashboard';
-import SEOEnhancer from './components/SEOEnhancer';
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import { seoAnalytics, performanceSEO } from './utils/seoEnhanced';
-import { analytics } from './utils/analytics';
-import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
 import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
-import { performanceOptimizations } from './utils/bundleOptimization';
-// import { accessibilitySystem } from './utils/advancedAccessibilitySystem';
 import NotificationSystem, { Notification } from './components/NotificationSystem';
 import './index.css';
 
@@ -36,7 +30,7 @@ export default function App(): React.JSX.Element {
   const [showSystemHealth, setShowSystemHealth] = useState(false);
   const [showPerformanceWidget, setShowPerformanceWidget] = useState(false);
   const [showCommandPalette, setShowCommandPalette] = useState(false);
-  // const [showPerformanceDashboard, setShowPerformanceDashboard] = useState(false);
+  const [, setShowPerformanceDashboard] = useState(false);
 
   // Notification management
   const removeNotification = useCallback((id: string) => {
@@ -357,19 +351,8 @@ export default function App(): React.JSX.Element {
 
   return (
     <EnhancedErrorBoundary showDetails={process.env.NODE_ENV === 'development'}>
-      <SEOEnhancer 
-        title={seoData.title}
-        description={seoData.description}
-        keywords={seoData.keywords}
-        canonicalUrl={seoData.canonicalUrl}
-        ogType={seoData.ogType}
-        ogImage={seoData.ogImage}
-        ogImageAlt="Zion Tech Group - AI & Technology Solutions"
-        twitterCard={seoData.twitterCard}
-      >
-        <AccessibilityEnhancer>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-            <AppRouter />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <AppRouter />
         
         {/* System Dashboard - Toggle with Ctrl+Shift+D */}
         {showSystemDashboard && (
@@ -398,7 +381,6 @@ export default function App(): React.JSX.Element {
 
         {/* Performance Components */}
         <PerformanceTracker />
-        <PerformanceMonitor />
         
         {/* System Health Dashboard */}
         <Suspense fallback={<ModernLoadingSpinner />}>
@@ -495,9 +477,7 @@ export default function App(): React.JSX.Element {
           <div>Ctrl+K: Command Palette</div>
           <div>Click Theme Button: Toggle Theme</div>
         </div>
-        </div>
-        </AccessibilityEnhancer>
-      </SEOEnhancer>
+      </div>
     </EnhancedErrorBoundary>
   );
 }

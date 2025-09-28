@@ -14,9 +14,21 @@ import {
 const EnhancedTestimonials = () => {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const [isPlaying, setIsPlaying] = useState(true);
+  const [, setIsVisible] = useState(false);
+
   useEffect(() => {
-    // Component mounted
+    setIsVisible(true);
   }, []);
+
+  useEffect(() => {
+    if (!isPlaying) return;
+    
+    const interval = setInterval(() => {
+      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
+    }, 5000);
+    
+    return () => clearInterval(interval);
+  }, [isPlaying, testimonials.length]);
 
   const testimonials = [
     {
