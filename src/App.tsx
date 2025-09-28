@@ -65,12 +65,6 @@ import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
 import { performanceAlerts } from './utils/performanceAlerts';
 import { accessibilityUtils } from './utils/accessibilityUtils';
 import { securityUtils } from './utils/securityUtils';
-import AdvancedAnalytics from './components/AdvancedAnalytics';
-import NotificationSystem, { Notification } from './components/NotificationSystem';
-import KeyboardShortcutsHelp from './components/KeyboardShortcutsHelp';
-import CommandPalette from './components/CommandPalette';
-import RealTimePerformanceMonitor from './components/RealTimePerformanceMonitor';
-import SystemHealthDashboard from './components/SystemHealthDashboard';
 // import { getNotificationManager } from './utils/advancedNotifications';
 // import { getThemeManager } from './utils/themeManager';
 // import { getKeyboardShortcuts } from './utils/advancedKeyboardShortcuts';
@@ -99,7 +93,6 @@ export default function App(): React.JSX.Element {
   const [showKeyboardShortcutsManager, setShowKeyboardShortcutsManager] = useState(false);
   const [showPerformanceWidget, setShowPerformanceWidget] = useState(false);
   const [showSystemHealth, setShowSystemHealth] = useState(false);
-  const [showSystemDashboard, setShowSystemDashboard] = useState(false);
   const [notifications, setNotifications] = useState<Notification[]>([]);
   const [enhancedNotifications, setEnhancedNotifications] = useState<EnhancedNotification[]>([]);
   // const [showPerformanceDashboard, setShowPerformanceDashboard] = useState(false);
@@ -433,11 +426,9 @@ export default function App(): React.JSX.Element {
     }
   }, [addNotification]);
   const [showRealTimeMetrics, setShowRealTimeMetrics] = useState(false);
-  const [notifications, setNotifications] = useState<Notification[]>([]);
   const [showWebsiteEnhancements, setShowWebsiteEnhancements] = useState(false);
   // const [showAccessibilityPanel, setShowAccessibilityPanel] = useState(false);
   const [showRealTimeMonitor, setShowRealTimeMonitor] = useState(false);
-  const [showSystemHealth, setShowSystemHealth] = useState(false);
   // User preferences state (for future use)
   // const [userPreferences, setUserPreferences] = useState({
   //   theme: 'auto',
@@ -464,11 +455,6 @@ export default function App(): React.JSX.Element {
   //   enableCaching: true,
   // });
   
-  const isLoading = false;
-  const loadingProgress = 100;
-  const handleScroll = useCallback(() => {}, []);
-  const handleClick = useCallback(() => {}, []);
-  const trackEngagement = useCallback(() => {}, []);
 
   // Performance optimization hook - Temporarily disabled
   // usePerformanceOptimization({
@@ -478,11 +464,6 @@ export default function App(): React.JSX.Element {
   //   enableImageOptimization: true,
   // });
 
-  // Get current pathname for SEO
-  const currentPathname = typeof window !== 'undefined' ? window.location.pathname : '/';
-
-  // Get SEO data using current pathname
-  const seoData = useSEOData(currentPathname);
 
   // Command palette commands
   const commandPaletteCommands = useMemo(() => [
