@@ -91,14 +91,11 @@ class SecurityUtils {
   private sanitizeUserInput(): void {
     // Override innerHTML to sanitize content
     const originalInnerHTML = Object.getOwnPropertyDescriptor(Element.prototype, 'innerHTML');
-    if (originalInnerHTML && originalInnerHTML.set) {
-      const self = this;
+    if (originalInnerHTML) {
       Object.defineProperty(Element.prototype, 'innerHTML', {
         set: function(value) {
-          const sanitized = self.sanitizeHTML(value);
-          if (originalInnerHTML.set) {
-            originalInnerHTML.set.call(this, sanitized);
-          }
+          const sanitized = this.sanitizeHTML(value);
+          originalInnerHTML.set?.call(this, sanitized);
         },
         get: originalInnerHTML.get
       });
@@ -135,8 +132,7 @@ class SecurityUtils {
     // Monitor for suspicious console usage
     const originalConsole = { ...console };
     Object.keys(console).forEach(key => {
-      const consoleMethod = (console as any)[key];
-      if (typeof consoleMethod === 'function') {
+      if (typeof (console as any)[key] === 'function') {
         (console as any)[key] = (...args: any[]) => {
           this.logSecurityEvent('console-usage', { method: key, args });
           (originalConsole as any)[key](...args);

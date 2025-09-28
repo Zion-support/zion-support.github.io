@@ -175,7 +175,7 @@ export default function AdvancedAnalyticsDashboard({ isVisible, onClose }: Advan
                         cx="50%"
                         cy="50%"
                         labelLine={false}
-                        label={({ source, percentage }) => `${source}: ${percentage}%`}
+                        label={(props: any) => `${props.source}: ${props.percentage}%`}
                         outerRadius={80}
                         fill="#8884d8"
                         dataKey="visitors"
