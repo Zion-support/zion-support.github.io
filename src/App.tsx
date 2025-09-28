@@ -61,6 +61,8 @@ const ErrorRecoveryDashboard = lazy(() => import('./components/ErrorRecoveryDash
 // import AdvancedPerformanceDashboard from './components/AdvancedPerformanceDashboard';
 import WebsiteEnhancements from './components/WebsiteEnhancements';
 import SEOOptimizer from './components/SEOOptimizer';
+import PerformanceEnhancer from './components/PerformanceEnhancer';
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 // import EnhancedAnalytics from './components/EnhancedAnalytics';
 import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
 import { performanceAlerts } from './utils/performanceAlerts';
@@ -114,6 +116,8 @@ export default function App(): React.JSX.Element {
   const [showRealTimeMetrics, setShowRealTimeMetrics] = useState(false);
   const [showRealTimeMonitor, setShowRealTimeMonitor] = useState(false);
   const [showWebsiteEnhancements, setShowWebsiteEnhancements] = useState(false);
+  const [showPerformanceEnhancer, setShowPerformanceEnhancer] = useState(false);
+  const [showAccessibilityEnhancer, setShowAccessibilityEnhancer] = useState(false);
   const [userPreferences, setUserPreferences] = useState({
     theme: 'auto',
     animations: true,
@@ -340,6 +344,12 @@ export default function App(): React.JSX.Element {
           case 'K':
             setShowKeyboardHelp(!showKeyboardHelp);
             break;
+          case 'E':
+            setShowPerformanceEnhancer(!showPerformanceEnhancer);
+            break;
+          case 'X':
+            setShowAccessibilityEnhancer(!showAccessibilityEnhancer);
+            break;
           case 'N':
             // Show notification
              
@@ -546,6 +556,24 @@ export default function App(): React.JSX.Element {
         <WebsiteEnhancements 
           isVisible={showWebsiteEnhancements} 
           onClose={() => setShowWebsiteEnhancements(false)} 
+        />
+
+        {/* Performance Enhancer */}
+        <PerformanceEnhancer 
+          enabled={true}
+          showMetrics={showPerformanceEnhancer}
+          onMetricsUpdate={(metrics) => {
+            console.log('Performance metrics updated:', metrics);
+          }}
+        />
+
+        {/* Accessibility Enhancer */}
+        <AccessibilityEnhancer 
+          enabled={true}
+          showMetrics={showAccessibilityEnhancer}
+          onMetricsUpdate={(metrics) => {
+            console.log('Accessibility metrics updated:', metrics);
+          }}
         />
 
         {/* Comprehensive Performance Monitor */}
@@ -845,6 +873,24 @@ export default function App(): React.JSX.Element {
           🏥
         </button>
 
+        {/* Performance Enhancer Button */}
+        <button
+          onClick={() => setShowPerformanceEnhancer(!showPerformanceEnhancer)}
+          className="fixed bottom-4 right-84 z-40 bg-indigo-600 hover:bg-indigo-700 text-white p-3 rounded-full shadow-lg transition-colors duration-200"
+          title="Performance Enhancer (Ctrl+Shift+E)"
+        >
+          ⚡
+        </button>
+
+        {/* Accessibility Enhancer Button */}
+        <button
+          onClick={() => setShowAccessibilityEnhancer(!showAccessibilityEnhancer)}
+          className="fixed bottom-4 right-100 z-40 bg-pink-600 hover:bg-pink-700 text-white p-3 rounded-full shadow-lg transition-colors duration-200"
+          title="Accessibility Enhancer (Ctrl+Shift+X)"
+        >
+          ♿
+        </button>
+
         {/* Keyboard Shortcuts Help Panel */}
         <div className="fixed bottom-4 left-4 z-40 bg-gray-800 text-white p-3 rounded-lg shadow-lg text-sm opacity-75 hover:opacity-100 transition-opacity duration-200">
           <div className="font-semibold mb-1">Keyboard Shortcuts:</div>
@@ -856,6 +902,8 @@ export default function App(): React.JSX.Element {
           <div>Ctrl+Shift+T: Toggle Theme</div>
           <div>Ctrl+Shift+R: Real-Time Monitor</div>
           <div>Ctrl+Shift+H: System Health</div>
+          <div>Ctrl+Shift+E: Performance Enhancer</div>
+          <div>Ctrl+Shift+X: Accessibility Enhancer</div>
           <div>Ctrl+Shift+K: Keyboard Help</div>
           <div>Ctrl+K: Command Palette</div>
           <div>Escape: Close All</div>
