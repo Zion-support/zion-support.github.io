@@ -245,29 +245,4 @@ export interface ErrorRecoveryStrategy {
   fallbackAction?: () => void;
 }
 
-// Export all types
-export type {
-  EnhancedNotification,
-  NotificationAction,
-  PerformanceReport,
-  PerformanceAlert,
-  PerformanceRecommendation,
-  SEOAuditResult,
-  SEOIssue,
-  CacheStats,
-  MonitoringMetrics,
-  OptimizationSuggestion,
-  EnhancedPerformanceMetrics,
-  DataPoint,
-  ChartData,
-  VisualizationOptions,
-  StoredChart,
-  AnalyticsData,
-  EnhancedPerformanceDashboardProps,
-  LazyComponentProps,
-  KeyboardShortcuts,
-  SecuritySystem,
-  SecurityEvent,
-  AccessibilityEnhancement,
-  ErrorRecoveryStrategy,
-};
+// All types are already exported above
