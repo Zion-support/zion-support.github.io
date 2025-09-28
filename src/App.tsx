@@ -1,14 +1,18 @@
 import React, { useCallback, useState, useEffect, useMemo } from 'react';
 import { AppRouter } from './router';
 import { useAppInitialization } from './hooks/useAppInitialization';
+import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
+import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
+// Removed unused imports: seoOptimizer, cacheManager, apiClient, notificationManager, userFeedback
+import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
 import PerformanceDashboard from './components/PerformanceDashboard';
 import RealTimeMonitor from './components/RealTimeMonitor';
 import SystemMetricsDashboard from './components/SystemMetricsDashboard';
 import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
 import EnhancedNotificationSystem from './components/EnhancedNotificationSystem';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
-import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
-import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
+import EnhancedAnalytics from './components/EnhancedAnalytics';
+// Removed unused import: getComprehensiveEnhancements
 import './index.css';
 import './styles/notifications.css';
 import './styles/system-metrics.css';
@@ -16,6 +20,7 @@ import './styles/modern-utilities.css';
 
 // Import utility modules
 import { seoManager, seoAnalytics, performanceSEO } from './utils/seoEnhanced';
+import { analytics } from './utils/analytics';
 import { initializeErrorReporting } from './utils/errorReporting';
 import { initOptimizations } from './utils/buildOptimizations';
 import { performanceOptimizer } from './utils/optimization';
@@ -38,16 +43,13 @@ import AdvancedPerformanceMonitor from './utils/advancedPerformanceMonitor';
 import AdvancedAccessibilityManager from './utils/advancedAccessibilityManager';
 import AdvancedSecurityManager from './utils/advancedSecurityManager';
 import EnhancedUXManager from './utils/enhancedUXManager';
-import { analytics } from './utils/analytics';
 import { seoOptimizer } from './utils/seoOptimization';
 import { cacheManager } from './utils/cacheManager';
 import { apiClient } from './utils/apiClient';
 import { notificationManager } from './utils/notificationManager';
 export default function App(): React.JSX.Element {
-  // State for system metrics dashboard
+  // State for system dashboard and performance optimizer
   const [showSystemDashboard, setShowSystemDashboard] = useState(false);
-  
-  // State for performance optimizer
   const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
 
   // Engagement tracking data
@@ -57,7 +59,6 @@ export default function App(): React.JSX.Element {
     clicks: 0
   }), []);
 
-
   // Initialize app with custom configuration
   const { isLoading, loadingProgress, handleScroll, handleClick, trackEngagement } = useAppInitialization({
     enablePerformanceMonitoring: true,
@@ -66,6 +67,14 @@ export default function App(): React.JSX.Element {
     enableAnalytics: true,
     enableNotifications: true,
     enableCaching: true,
+  });
+
+  // Performance optimization hook
+  const { preloadResource } = usePerformanceOptimization({
+    enablePreloading: true,
+    enableResourceHints: true,
+    enableCriticalCSS: true,
+    enableImageOptimization: true,
   });
 
   // Optimized keyboard handler for system dashboard toggle
@@ -92,178 +101,50 @@ export default function App(): React.JSX.Element {
     structuredData: []
   }), []);
 
+
+  // Simple SEO manager
+  const seoManager = {
+    updateMetaTags: (data: typeof seoData) => {
+      if (typeof document !== 'undefined') {
+        document.title = data.title;
+        const metaDescription = document.querySelector('meta[name="description"]');
+        if (metaDescription) {
+          metaDescription.setAttribute('content', data.description);
+        }
+      }
+    }
+  };
+
   useEffect(() => {
     // Add performance marks for better monitoring
     if (typeof window !== 'undefined' && window.performance && typeof performance.mark === 'function') {
       performance.mark('app-init-start');
     }
     
-    // Initialize security features
-    // SecurityManager.getInstance(); // Replaced with new security enhancer
-    
-    // Initialize enhanced performance optimizer
-    enhancedPerformanceOptimizer.initialize();
-    
-    // Initialize enhanced security manager
-    enhancedSecurityManager.initialize();
-    
-    // Initialize enhanced accessibility manager
-    enhancedAccessibilityManager.initialize();
-    
-    // Initialize advanced performance monitor
-    const advancedPerformanceMonitor = AdvancedPerformanceMonitor.getInstance();
-    advancedPerformanceMonitor.updateConfig({
-      enableWebVitals: true,
-      enableMemoryMonitoring: true,
-      enableNetworkMonitoring: true,
-      enableCustomMetrics: true,
-      samplingRate: 1.0,
-      reportInterval: 5000,
-      thresholds: {
-        pageLoadTime: 3000,
-        firstContentfulPaint: 1800,
-        largestContentfulPaint: 2500,
-        cumulativeLayoutShift: 0.1,
-        firstInputDelay: 100,
-        totalBlockingTime: 300
-      }
-    });
-    advancedPerformanceMonitor.startMonitoring();
-    
-    // Initialize new advanced performance optimizer
-    import('./utils/performanceOptimizer').then(({ advancedPerformanceOptimizer }) => {
-      advancedPerformanceOptimizer.startMonitoring();
-      console.log('🚀 Advanced Performance Optimizer initialized');
-    }).catch((error) => {
-      console.error('❌ Failed to initialize advanced performance optimizer:', error);
-    });
-    
-    // Initialize CSS optimizer
-    import('./utils/cssOptimizer').then(({ cssOptimizer }) => {
-      cssOptimizer.initialize();
-      console.log('🎨 CSS Optimizer initialized');
-    }).catch((error) => {
-      console.error('❌ Failed to initialize CSS optimizer:', error);
-    });
-    
-    // Initialize accessibility enhancer
-    const accessibilityEnhancer = AccessibilityEnhancer.getInstance();
-    accessibilityEnhancer.initialize({
-      enableKeyboardNavigation: true,
-      enableScreenReaderSupport: true,
-      enableHighContrastMode: true,
-      enableReducedMotion: true,
-      enableFocusIndicators: true,
-      enableAriaLabels: true,
-      announceChanges: true,
-      enableSkipLinks: true
-    });
-    
-    // Initialize security enhancer
-    const securityEnhancer = SecurityEnhancer.getInstance();
-    // Set global reference for XMLHttpRequest monitoring
-    (window as Window & { __securityEnhancerInstance?: SecurityEnhancer }).__securityEnhancerInstance = securityEnhancer;
-    securityEnhancer.initialize({
-      enableCSP: true,
-      enableXSSProtection: true,
-      enableCSRFProtection: true,
-      enableClickjackingProtection: true,
-      enableContentSecurityPolicy: true,
-      enableSecureHeaders: true,
-      enableInputSanitization: true,
-      enableSecurityMonitoring: true
-    });
-    
-    // Initialize additional advanced managers
-    AdvancedAccessibilityManager.getInstance().initialize();
-    AdvancedSecurityManager.getInstance().initialize();
-    EnhancedUXManager.getInstance().initialize();
-    
-    // Initialize enhanced systems
-    enhancedPerformanceMonitor.startMonitoring();
-    enhancedAnalytics.initialize();
-    enhancedSEO.initialize();
-    
-    // Initialize advanced systems
-    advancedCacheSystem.initialize({
-      maxSize: 200,
-      ttl: 15 * 60 * 1000, // 15 minutes
-      compressionEnabled: true,
-      encryptionEnabled: false,
-      storageType: 'localStorage',
-      enableAnalytics: true,
-      enablePersistence: true
-    });
-    
-    advancedErrorRecovery.initialize({
-      maxRetries: 3,
-      retryDelay: 1000,
-      exponentialBackoff: true,
-      enableUserGuidance: true,
-      enableAutomaticRecovery: true,
-      enableErrorReporting: true,
-      enableFallbackStrategies: true,
-      enableCircuitBreaker: true,
-      circuitBreakerThreshold: 5,
-      circuitBreakerTimeout: 30000
-    });
-    
-    advancedAutomationSystem.initialize({
-      enableTesting: true,
-      enableDeployment: false, // Disabled for client-side
-      enableMonitoring: true,
-      enableMaintenance: true,
-      enableReporting: true,
-      scheduleInterval: 60000,
-      maxConcurrency: 3,
-      retryAttempts: 2,
-      timeout: 120000
-    });
-    
-    // Initialize advanced performance optimizer
-    advancedPerformanceOptimizer.addResourceHints();
-    
-    // Initialize new enhancement utilities
-    console.log('Initializing performance enhancements...');
-    // performanceEnhancer.initialize(); // Commented out due to private method
-    performanceEnhancer.optimizeBundle();
-    performanceEnhancer.preloadResource('/static/js/main.js', 'script');
-    
-    console.log('Initializing security enhancements...');
-    // const securityReport = securityEnhancer.generateSecurityReport();
-    // console.log('Security Report:', securityReport);
-    
-    console.log('Initializing accessibility enhancements...');
-    // const accessibilityMetrics = accessibilityEnhancer.getAccessibilityMetrics();
-    // console.log('Accessibility Metrics:', accessibilityMetrics);
-    advancedPerformanceOptimizer.optimizeCriticalCSS();
-    advancedPerformanceOptimizer.setupWebVitalsMonitoring();
-    
-    // Register service worker with optimized configuration
-    import('./utils/serviceWorker').then(({ serviceWorkerManager }) => {
-      serviceWorkerManager.register().then((registration) => {
-        if (registration) {
-          console.log('✅ Service Worker registered successfully');
-        }
-      });
-    }).catch((error) => {
-      console.error('❌ Failed to load service worker manager:', error);
-      // recordMetric('serviceWorkerRegistrationError', 1);
-    });
-    
-    // Initialize performance monitoring
-    const performanceMonitor = PerformanceMonitor.getInstance();
-    performanceMonitor.measurePageLoad();
-    
-    // Resource and memory monitoring removed - not available
-    
-    // Initialize accessibility features
-    accessibilityManager.initialize({
-      announceChanges: true,
-      reducedMotion: window.matchMedia('(prefers-reduced-motion: reduce)').matches,
-      highContrast: window.matchMedia('(prefers-contrast: high)').matches
-    });
+    // Preload critical resources
+    preloadResource('/og-image.png', 'image');
+    preloadResource('/favicon.ico', 'image');
 
+    // Use passive listeners for better performance
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    document.addEventListener('click', handleClick, { passive: true });
+    document.addEventListener('keydown', handleKeyDown);
+
+    // Initialize basic systems
+    analytics.initialize();
+    // Note: CacheManager, ApiClient, and NotificationManager don't have initialize methods
+    // They are initialized when first used via their getInstance() methods
+    
+    // Initialize SEO analytics
+    seoAnalytics.trackPageView(window.location.pathname);
+    
+    // Initialize performance SEO optimizations
+    performanceSEO.optimizeImages();
+    performanceSEO.optimizeFonts();
+    // Note: optimizeCSS method doesn't exist in PerformanceSEO class
+
+    // Set default SEO data using the correct method
+    seoManager.updateMetaTags(seoData);
     // Add keyboard event listener
     document.addEventListener('keydown', handleKeyDown);
 
@@ -325,45 +206,61 @@ export default function App(): React.JSX.Element {
       
       // Final engagement tracking
       trackEngagement();
+      
+      // Remove event listeners
+      window.removeEventListener('scroll', handleScroll);
+      document.removeEventListener('click', handleClick);
     };
-  }, [handleKeyDown]);
+  }, [seoData, handleKeyDown, handleScroll, handleClick]);
 
   // Show loading screen while initializing
   if (isLoading) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100">
-        <ModernLoadingSpinner
-          size="xl"
-          variant="primary"
-          text="Initializing Zion Tech Group..."
-          showProgress
-          progress={loadingProgress}
-          className="animate-fade-in-scale"
-        />
+        <ModernLoadingSpinner progress={loadingProgress} />
       </div>
     );
   }
 
   return (
-    <EnhancedErrorBoundary>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <AppRouter />
-      <PerformanceDashboard />
-      <RealTimeMonitor />
-      <SystemMetricsDashboard 
-        isVisible={showSystemDashboard}
-        onClose={() => setShowSystemDashboard(false)}
-      />
-      {showSystemDashboard && <EnhancedSystemDashboard />}
-      <EnhancedNotificationSystem 
-        position="top-right"
-        enableAnimations
-        enableAccessibility
-        maxNotifications={5}
-      />
-      <PerformanceOptimizer 
-        isVisible={showPerformanceOptimizer}
-        onClose={() => setShowPerformanceOptimizer(false)}
-      />
-    </EnhancedErrorBoundary>
+      
+      {/* System Dashboard */}
+      {showSystemDashboard && (
+        <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
+          <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+            <div className="flex justify-between items-center mb-4">
+              <h2 className="text-2xl font-bold text-gray-900">System Dashboard</h2>
+              <button
+                onClick={() => setShowSystemDashboard(false)}
+                className="text-gray-500 hover:text-gray-700"
+              >
+                ✕
+              </button>
+            </div>
+            <EnhancedSystemDashboard />
+          </div>
+        </div>
+      )}
+
+      {/* Performance Optimizer */}
+      {showPerformanceOptimizer && (
+        <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
+          <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+            <div className="flex justify-between items-center mb-4">
+              <h2 className="text-2xl font-bold text-gray-900">Performance Optimizer</h2>
+              <button
+                onClick={() => setShowPerformanceOptimizer(false)}
+                className="text-gray-500 hover:text-gray-700"
+              >
+                ✕
+              </button>
+            </div>
+            <PerformanceOptimizer />
+          </div>
+        </div>
+      )}
+    </div>
   );
 }

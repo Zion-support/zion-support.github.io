@@ -35,11 +35,12 @@ interface NetworkConnection {
   downlink?: number;
   rtt?: number;
   saveData?: boolean;
+  type?: string;
+  addEventListener?: (type: string, listener: EventListener) => void;
+  removeEventListener?: (type: string, listener: EventListener) => void;
 }
 
-interface ExtendedNavigator extends Navigator {
-  connection?: NetworkInformation;
-}
+// Use type assertion instead of extending Navigator to avoid interface conflicts
 
 interface PerformanceMetrics {
   // Core Web Vitals
@@ -306,18 +307,18 @@ class ModernPerformanceMonitor {
 
   private setupNetworkMonitoring(): void {
     if ('connection' in navigator) {
-      const connection = (navigator as ExtendedNavigator).connection;
+      const connection = (navigator as any).connection as NetworkConnection | undefined;
       if (connection) {
-        this.metrics.connectionType = connection.effectiveType || 'unknown';
+        this.metrics.connectionType = connection.type || 'unknown';
         this.metrics.effectiveType = connection.effectiveType || 'unknown';
         this.metrics.downlink = connection.downlink || 0;
         this.metrics.rtt = connection.rtt || 0;
       }
 
       // Listen for connection changes
-      if (connection && 'addEventListener' in connection) {
+      if (connection?.addEventListener) {
         connection.addEventListener('change', () => {
-          this.metrics.connectionType = connection.effectiveType || 'unknown';
+          this.metrics.connectionType = connection.type || 'unknown';
           this.metrics.effectiveType = connection.effectiveType || 'unknown';
           this.metrics.downlink = connection.downlink || 0;
           this.metrics.rtt = connection.rtt || 0;
@@ -384,9 +385,9 @@ class ModernPerformanceMonitor {
 
     // Update network metrics
     if ('connection' in navigator) {
-      const connection = (navigator as ExtendedNavigator).connection;
+      const connection = (navigator as any).connection as NetworkConnection | undefined;
       if (connection) {
-        this.metrics.connectionType = connection.effectiveType || 'unknown';
+        this.metrics.connectionType = connection.type || 'unknown';
         this.metrics.effectiveType = connection.effectiveType || 'unknown';
         this.metrics.downlink = connection.downlink || 0;
         this.metrics.rtt = connection.rtt || 0;

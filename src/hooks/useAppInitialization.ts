@@ -31,7 +31,7 @@ export function useAppInitialization(config: AppInitializationConfig = {}) {
   const {
     enablePerformanceMonitoring = true,
     enableAccessibility = true,
-    enableSecurity: _enableSecurity = true,
+    enableSecurity = true,
     enableAnalytics = true,
     enableNotifications = true,
     enableCaching = true,
