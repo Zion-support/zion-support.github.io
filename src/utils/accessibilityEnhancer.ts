@@ -26,6 +26,7 @@ interface AccessibilityMetrics {
 }
 
 class AccessibilityEnhancer {
+  private static instance: AccessibilityEnhancer;
   private config: AccessibilityConfig;
   private metrics: AccessibilityMetrics;
   private focusableSelectors = [
@@ -68,7 +69,14 @@ class AccessibilityEnhancer {
     this.initialize();
   }
 
-  private initialize(): void {
+  public static getInstance(): AccessibilityEnhancer {
+    if (!AccessibilityEnhancer.instance) {
+      AccessibilityEnhancer.instance = new AccessibilityEnhancer();
+    }
+    return AccessibilityEnhancer.instance;
+  }
+
+  public initialize(): void {
     if (typeof window === 'undefined') return;
 
     this.setupKeyboardNavigation();
