@@ -18,10 +18,8 @@ import './styles/system-metrics.css';
 import './styles/modern-utilities.css';
 
 export default function App(): React.JSX.Element {
-  // State for system metrics dashboard
+  // State for system dashboard and performance optimizer
   const [showSystemDashboard, setShowSystemDashboard] = useState(false);
-  
-  // State for performance optimizer
   const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
 
   // Initialize app with custom configuration
@@ -96,11 +94,65 @@ export default function App(): React.JSX.Element {
   React.useEffect(() => {
     document.addEventListener("keydown", handleKeyDown);
     
+<<<<<<< HEAD
     // Cleanup function
+=======
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [handleKeyDown]);
+
+  // Track engagement function
+  const trackEngagement = useCallback(() => {
+    const timeOnPage = Date.now() - engagementData.startTime;
+    seoAnalytics.trackUserEngagement(window.location.pathname, {
+      timeOnPage,
+      scrollDepth: engagementData.scrollDepth,
+      clicks: engagementData.clicks,
+    });
+  }, [engagementData]);
+
+  // Main initialization and cleanup effect
+  React.useEffect(() => {
+    // Track engagement on page unload
+    window.addEventListener('beforeunload', trackEngagement);
+
+    // Mark app as fully initialized
+    if (typeof window !== 'undefined' && window.performance && 
+        typeof performance.mark === 'function' && 
+        typeof performance.measure === 'function') {
+      performance.mark('app-init-complete');
+      performance.measure('app-initialization', 'app-init-start', 'app-init-complete');
+    }
+
+    // Set default SEO data
+    seoManager.updateMetaTags(seoData);
+
+    // Basic performance monitoring
+    if (typeof window !== 'undefined') {
+      console.log('🚀 Zion Tech Group App initialized');
+    }
+
+    // Mark app as fully initialized
+    if (typeof window !== 'undefined' && window.performance && 
+        typeof performance.mark === 'function' && 
+        typeof performance.measure === 'function') {
+      performance.mark('app-init-complete');
+      performance.measure('app-initialization', 'app-init-start', 'app-init-complete');
+    }
+  }, [trackEngagement, seoData]);
+
+  // Cleanup function for event listeners
+  useEffect(() => {
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-18ca
     return () => {
       document.removeEventListener('keydown', handleKeyDown);
     };
+<<<<<<< HEAD
   }, [handleKeyDown]);
+=======
+  }, [trackEngagement, handleScroll, handleClick, handleKeyDown]);
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-18ca
 
   // Show loading screen while initializing
   if (isLoading) {
