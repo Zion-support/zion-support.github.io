@@ -348,3 +348,19 @@ ${pages.map(page => `  <url>
 
     return `
 SEO Report:
+- Title: ${data.title}
+- Description: ${data.description}
+- Keywords: ${data.keywords.join(', ')}
+- Issues Found: ${issues.length}
+
+Issues:
+${issues.map(issue => `- ${issue}`).join('\n')}
+
+Recommendations:
+- Optimize title length (30-60 characters)
+- Optimize description length (120-160 characters)
+- Add relevant keywords
+- Include Open Graph image
+`;
+  }
+}

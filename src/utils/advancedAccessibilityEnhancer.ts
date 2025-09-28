@@ -627,3 +627,14 @@ class AdvancedAccessibilityEnhancer {
     
     return `
 Accessibility Report:
+- Overall Score: ${metrics.overallScore}%
+- Color Contrast Ratio: ${metrics.colorContrastRatio}
+- Focusable Elements: ${metrics.focusableElements}
+- ARIA Labels: ${metrics.ariaLabels}
+- Heading Structure: ${metrics.headingStructure}
+- Alt Texts: ${metrics.altTexts}
+- Keyboard Traps: ${metrics.keyboardTraps}
+- Screen Reader Compatibility: ${metrics.screenReaderCompatibility}
+`;
+  }
+}

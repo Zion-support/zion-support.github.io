@@ -278,19 +278,9 @@ Generated: ${new Date().toISOString()}
 Build Metrics:
 - Bundle Size: ${metrics.bundleSize || 'N/A'}KB
 - Chunk Count: ${metrics.chunkCount || 'N/A'}
-- Tree Shaking: ${metrics.treeShaking ? 'Enabled' : 'Disabled'}
-- Code Splitting: ${metrics.codeSplitting ? 'Enabled' : 'Disabled'}
-- Minification: ${metrics.minification ? 'Enabled' : 'Disabled'}
-
-Performance Optimizations:
-- Lazy Loading: ${metrics.lazyLoading ? 'Enabled' : 'Disabled'}
-- Image Optimization: ${metrics.imageOptimization ? 'Enabled' : 'Disabled'}
-- CSS Optimization: ${metrics.cssOptimization ? 'Enabled' : 'Disabled'}
-- JavaScript Optimization: ${metrics.jsOptimization ? 'Enabled' : 'Disabled'}
-
-Build Status:
-- Overall Score: ${metrics.overallScore || 'N/A'}/100
-- Optimization Level: ${metrics.optimizationLevel || 'N/A'}
+- Load Time: ${metrics.loadTime || 'N/A'}ms
+- Compression Ratio: ${metrics.compressionRatio || 'N/A'}%
+- Tree Shaking Efficiency: ${metrics.treeShakingEfficiency || 'N/A'}%
 
 This report provides insights into the current build optimization state.
 `;
@@ -302,5 +292,5 @@ export const buildOptimizer = new BuildOptimizer();
 
 // Export initialization function
 export function initOptimizations(): void {
-  buildOptimizer.initialize();
+  buildOptimizer.optimizeBundleSize();
 }

@@ -845,34 +845,37 @@ Comprehensive Enhancement Report:
 Generated: ${new Date().toISOString()}
 
 Performance Metrics:
-- Load Time: ${metrics.performance.loadTime || 'N/A'}ms
-- Render Time: ${metrics.performance.renderTime || 'N/A'}ms
-- FPS: ${metrics.performance.fps || 'N/A'}
-- Memory Usage: ${metrics.performance.memoryUsage || 'N/A'}MB
+- FCP: ${metrics.performance.fcp || 'N/A'}ms
 - LCP: ${metrics.performance.lcp || 'N/A'}ms
 - FID: ${metrics.performance.fid || 'N/A'}ms
 - CLS: ${metrics.performance.cls || 'N/A'}
 - TTFB: ${metrics.performance.ttfb || 'N/A'}ms
+- Memory Usage: ${metrics.performance.memoryUsage || 'N/A'}MB
+- Bundle Size: ${metrics.performance.bundleSize || 'N/A'}KB
 
 Security Metrics:
-- XSS Protection: ${metrics.security.xssProtection ? 'Enabled' : 'Disabled'}
-- CSRF Protection: ${metrics.security.csrfProtection ? 'Enabled' : 'Disabled'}
-- Content Security Policy: ${metrics.security.cspEnabled ? 'Enabled' : 'Disabled'}
+- Threats Blocked: ${metrics.security.threatsBlocked || 'N/A'}
+- Vulnerabilities Fixed: ${metrics.security.vulnerabilitiesFixed || 'N/A'}
+- CSP Violations: ${metrics.security.cspViolations || 'N/A'}
+- XSS Attempts: ${metrics.security.xssAttempts || 'N/A'}
 
 Accessibility Metrics:
 - WCAG Compliance: ${metrics.accessibility.wcagCompliance || 'N/A'}%
-- Keyboard Navigation: ${metrics.accessibility.keyboardNavigation ? 'Enabled' : 'Disabled'}
-- Screen Reader Support: ${metrics.accessibility.screenReaderSupport ? 'Enabled' : 'Disabled'}
+- Keyboard Navigation Score: ${metrics.accessibility.keyboardNavigationScore || 'N/A'}%
+- Screen Reader Score: ${metrics.accessibility.screenReaderScore || 'N/A'}%
+- Color Contrast Score: ${metrics.accessibility.colorContrastScore || 'N/A'}%
 
 SEO Metrics:
-- Meta Tags: ${metrics.seo.metaTags ? 'Optimized' : 'Needs Optimization'}
-- Structured Data: ${metrics.seo.structuredData ? 'Present' : 'Missing'}
-- Sitemap: ${metrics.seo.sitemap ? 'Present' : 'Missing'}
+- Meta Tags Score: ${metrics.seo.metaTagsScore || 'N/A'}%
+- Structured Data Score: ${metrics.seo.structuredDataScore || 'N/A'}%
+- Page Speed Score: ${metrics.seo.pageSpeedScore || 'N/A'}%
+- Mobile Friendliness Score: ${metrics.seo.mobileFriendlinessScore || 'N/A'}%
 
 UX Metrics:
-- User Satisfaction: ${metrics.ux.userSatisfaction || 'N/A'}/10
+- Engagement Score: ${metrics.ux.engagementScore || 'N/A'}%
+- Bounce Rate: ${metrics.ux.bounceRate || 'N/A'}%
 - Task Completion Rate: ${metrics.ux.taskCompletionRate || 'N/A'}%
-- Error Rate: ${metrics.ux.errorRate || 'N/A'}%
+- User Satisfaction Score: ${metrics.ux.userSatisfactionScore || 'N/A'}/10
 
 This report provides a comprehensive overview of the current state of enhancements.
 `;
@@ -880,7 +883,7 @@ This report provides a comprehensive overview of the current state of enhancemen
 }
 
 // Export a singleton instance
-export const comprehensiveEnhancer = new ComprehensiveEnhancer();
+export const comprehensiveEnhancer = new ComprehensiveEnhancements();
 
 // Export function to get comprehensive enhancements
 export function getComprehensiveEnhancements() {
