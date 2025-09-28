@@ -8,8 +8,8 @@ import { analytics } from './utils/analytics';
 import { performanceOptimizer } from './utils/performanceOptimizations';
 // import { accessibilityEnhancements } from './utils/accessibilityEnhancements';
 // import { seoOptimizer } from './utils/seoOptimizations';
-// import { seoEnhancer } from './utils/advancedSEOEnhancer';
-// import { accessibilityEnhancer } from './utils/advancedAccessibilityEnhancer';
+import { seoEnhancer } from './utils/advancedSEOEnhancer';
+import { accessibilityEnhancer } from './utils/advancedAccessibilityEnhancer';
 // Removed unused imports to reduce warnings
 import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
@@ -24,7 +24,6 @@ import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
 import { performanceAlerts } from './utils/performanceAlerts';
 import { accessibilityUtils } from './utils/accessibilityUtils';
 import { securityUtils } from './utils/securityUtils';
-// import { performanceOptimizer } from './utils/performanceOptimizer';
 import { enhancedSecurityManager } from './utils/enhancedSecurityManager';
 import AdvancedAnalytics from './components/AdvancedAnalytics';
 import NotificationSystem, { Notification } from './components/NotificationSystem';
@@ -203,11 +202,20 @@ export default function App(): React.JSX.Element {
       enhancedPerformanceMonitor.startMonitoring();
       
       // Initialize new advanced systems
+<<<<<<< HEAD
       if ('initialize' in performanceOptimizer) {
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         (performanceOptimizer as any).initialize();
       }
       enhancedSecurityManager.initialize();
+=======
+      // performanceOptimizer.initialize();
+      enhancedSecurityManager.initialize();
+      // new AdvancedAutomationSystem().initialize();
+      // Initialize enhancement systems
+      // new AccessibilityEnhancer();
+      // new SecurityEnhancer();
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-7a75
       
       // Initialize analytics
       if ('initialize' in analytics) {
@@ -246,8 +254,13 @@ export default function App(): React.JSX.Element {
     securityUtils.getSecurityScore();
 
     // Set default SEO data using the correct method
+<<<<<<< HEAD
     // seoManager.updateMetaTags(seoData);
   }, []);
+=======
+    seoManager.updateMetaTags(memoizedSeoData);
+  }, [memoizedSeoData]);
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-7a75
 
   // Update meta tags function
   const updateMetaTags = useCallback((data: typeof memoizedSeoData) => {
