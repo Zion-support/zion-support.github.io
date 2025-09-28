@@ -22,6 +22,11 @@ delete (window as unknown as { location: Location }).location;
   origin: 'http://localhost:3000',
   ancestorOrigins: [] as string[],
 };
+
+// Mock window.location using a simple assignment
+delete (window as unknown as { location?: typeof window.location }).location;
+(window as unknown as { location: typeof window.location }).location = mockLocation;
+
 // Mock window.history
 Object.defineProperty(window, 'history', {
   value: {
