@@ -198,12 +198,12 @@ export default function App(): React.JSX.Element {
     console.debug('Click event captured for engagement tracking', event);
   }, []);
   
-  const originalTrackEngagement = useCallback(() => {
-    console.debug('User engagement tracked', { 
-      timestamp: Date.now(),
-      session_duration: performance.now()
-    });
-  }, []);
+  // const originalTrackEngagement = useCallback(() => {
+  //   console.debug('User engagement tracked', { 
+  //     timestamp: Date.now(),
+  //     session_duration: performance.now()
+  //   });
+  // }, []);
 
   // Simulate loading for demonstration
   useEffect(() => {
@@ -259,17 +259,17 @@ export default function App(): React.JSX.Element {
   }), [currentPathname]);
 
   // Simple preload function
-  const preloadResource = useCallback((url: string, type: string) => {
-    try {
-      const link = document.createElement('link');
-      link.rel = 'preload';
-      link.href = url;
-      link.as = type;
-      document.head.appendChild(link);
-    } catch (error) {
-      console.error('Error preloading resource:', error);
-    }
-  }, []);
+  // const preloadResource = useCallback((url: string, type: string) => {
+  //   try {
+  //     const link = document.createElement('link');
+  //     link.rel = 'preload';
+  //     link.href = url;
+  //     link.as = type;
+  //     document.head.appendChild(link);
+  //   } catch (error) {
+  //     console.error('Error preloading resource:', error);
+  //   }
+  // }, []);
 
   // Initialize comprehensive enhancements
   useEffect(() => {
@@ -359,85 +359,85 @@ export default function App(): React.JSX.Element {
     }
   }, [seoData.title, seoData.description, seoData.keywords, seoData.canonicalUrl, seoData.ogImage, seoData.ogType, seoData.twitterCard]);
 
-  // Optimized keyboard handler for system dashboard toggle
-  const handleKeyDown = useCallback((event: KeyboardEvent) => {
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'D') {
-      event.preventDefault();
-      setShowSystemDashboard((prev: boolean) => !prev);
-      seoAnalytics.trackEvent('keyboard_shortcut', { shortcut: 'cmd+shift+d', action: 'toggle_system_dashboard' });
-      addNotification({ type: 'info', title: 'Dashboard', message: 'System dashboard toggled' });
-      console.debug('Keyboard shortcut used:', { shortcut: 'cmd+shift+d', action: 'toggle_system_dashboard' });
-    }
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'H') {
-      event.preventDefault();
-      setShowSystemHealth((prev: boolean) => !prev);
-      console.debug('Keyboard shortcut used:', { shortcut: 'cmd+shift+h', action: 'toggle_system_health' });
-    }
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'K') {
-      event.preventDefault();
-      setShowKeyboardHelp((prev: boolean) => !prev);
-      console.debug('Keyboard shortcut used:', { shortcut: 'cmd+shift+k', action: 'toggle_keyboard_help' });
-    }
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'P') {
-      event.preventDefault();
-      setShowPerformanceWidget((prev: boolean) => !prev);
-      console.debug('Keyboard shortcut used:', { shortcut: 'cmd+shift+p', action: 'toggle_performance_widget' });
-    }
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'C') {
-      event.preventDefault();
-      setShowComprehensiveDashboard((prev: boolean) => !prev);
-      seoAnalytics.trackEvent('keyboard_shortcut', { shortcut: 'cmd+shift+c', action: 'toggle_comprehensive_dashboard' });
-    }
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'M') {
-      event.preventDefault();
-      setShowComprehensiveMonitoring((prev: boolean) => !prev);
-      seoAnalytics.trackEvent('keyboard_shortcut', { shortcut: 'cmd+shift+m', action: 'toggle_comprehensive_monitoring' });
-    }
-    // Performance dashboard toggle removed - state variable not defined
-    if ((event.ctrlKey || event.metaKey) && event.key === 'k') {
-      event.preventDefault();
-      setShowEnhancedCommandPalette((prev: boolean) => !prev);
-      seoAnalytics.trackEvent('keyboard_shortcut', { shortcut: 'cmd+k', action: 'toggle_enhanced_command_palette' });
-    }
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'R') {
-      event.preventDefault();
-      setShowRealTimePerformance((prev: boolean) => !prev);
-      seoAnalytics.trackEvent('keyboard_shortcut', { shortcut: 'cmd+shift+r', action: 'toggle_real_time_performance' });
-    }
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'M') {
-      event.preventDefault();
-      setShowAdvancedMonitoring((prev: boolean) => !prev);
-      console.debug('Keyboard shortcut used:', { shortcut: 'cmd+shift+m', action: 'toggle_advanced_monitoring' });
-    }
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'T') {
-      event.preventDefault();
-      setIsDarkMode((prev: boolean) => !prev);
-      console.debug('Keyboard shortcut used:', { shortcut: 'cmd+shift+t', action: 'toggle_theme' });
-    }
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'S') {
-      event.preventDefault();
-      setShowSystemStatus((prev: boolean) => !prev);
-      console.debug('Keyboard shortcut used:', { shortcut: 'cmd+shift+s', action: 'toggle_system_status' });
-    }
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === '?') {
-      event.preventDefault();
-      setShowKeyboardShortcutsManager((prev: boolean) => !prev);
-      console.debug('Keyboard shortcut used:', { shortcut: 'cmd+shift+?', action: 'toggle_keyboard_shortcuts_manager' });
-    }
-    if (event.key === 'Escape') {
-      setShowCommandPalette(false);
-      setShowSystemDashboard(false);
-      setShowSystemHealth(false);
-      setShowPerformanceWidget(false);
-      setShowKeyboardHelp(false);
-      setShowAdvancedMonitoring(false);
-      setShowComprehensiveDashboard(false);
-      setShowRealTimePerformance(false);
-      setShowEnhancedCommandPalette(false);
-      setShowKeyboardShortcutsManager(false);
-      seoAnalytics.trackEvent('keyboard_shortcut', { shortcut: 'escape', action: 'close_modals' });
-    }
-  }, [addNotification]);
+  // Optimized keyboard handler for system dashboard toggle (moved to useEffect below)
+  // const handleKeyDown = useCallback((event: KeyboardEvent) => {
+  //   if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'D') {
+  //     event.preventDefault();
+  //     setShowSystemDashboard((prev: boolean) => !prev);
+  //     seoAnalytics.trackEvent('keyboard_shortcut', { shortcut: 'cmd+shift+d', action: 'toggle_system_dashboard' });
+  //     addNotification({ type: 'info', title: 'Dashboard', message: 'System dashboard toggled' });
+  //     console.debug('Keyboard shortcut used:', { shortcut: 'cmd+shift+d', action: 'toggle_system_dashboard' });
+  //   }
+  //   if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'H') {
+  //     event.preventDefault();
+  //     setShowSystemHealth((prev: boolean) => !prev);
+  //     console.debug('Keyboard shortcut used:', { shortcut: 'cmd+shift+h', action: 'toggle_system_health' });
+  //   }
+  //   if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'K') {
+  //     event.preventDefault();
+  //     setShowKeyboardHelp((prev: boolean) => !prev);
+  //     console.debug('Keyboard shortcut used:', { shortcut: 'cmd+shift+k', action: 'toggle_keyboard_help' });
+  //   }
+  //   if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'P') {
+  //     event.preventDefault();
+  //     setShowPerformanceWidget((prev: boolean) => !prev);
+  //     console.debug('Keyboard shortcut used:', { shortcut: 'cmd+shift+p', action: 'toggle_performance_widget' });
+  //   }
+  //   if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'C') {
+  //     event.preventDefault();
+  //     setShowComprehensiveDashboard((prev: boolean) => !prev);
+  //     seoAnalytics.trackEvent('keyboard_shortcut', { shortcut: 'cmd+shift+c', action: 'toggle_comprehensive_dashboard' });
+  //   }
+  //   if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'M') {
+  //     event.preventDefault();
+  //     setShowComprehensiveMonitoring((prev: boolean) => !prev);
+  //     seoAnalytics.trackEvent('keyboard_shortcut', { shortcut: 'cmd+shift+m', action: 'toggle_comprehensive_monitoring' });
+  //   }
+  //   // Performance dashboard toggle removed - state variable not defined
+  //   if ((event.ctrlKey || event.metaKey) && event.key === 'k') {
+  //     event.preventDefault();
+  //     setShowEnhancedCommandPalette((prev: boolean) => !prev);
+  //     seoAnalytics.trackEvent('keyboard_shortcut', { shortcut: 'cmd+k', action: 'toggle_enhanced_command_palette' });
+  //   }
+  //   if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'R') {
+  //     event.preventDefault();
+  //     setShowRealTimePerformance((prev: boolean) => !prev);
+  //     seoAnalytics.trackEvent('keyboard_shortcut', { shortcut: 'cmd+shift+r', action: 'toggle_real_time_performance' });
+  //   }
+  //   if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'M') {
+  //     event.preventDefault();
+  //     setShowAdvancedMonitoring((prev: boolean) => !prev);
+  //     console.debug('Keyboard shortcut used:', { shortcut: 'cmd+shift+m', action: 'toggle_advanced_monitoring' });
+  //   }
+  //   if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'T') {
+  //     event.preventDefault();
+  //     setIsDarkMode((prev: boolean) => !prev);
+  //     console.debug('Keyboard shortcut used:', { shortcut: 'cmd+shift+t', action: 'toggle_theme' });
+  //   }
+  //   if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'S') {
+  //     event.preventDefault();
+  //     setShowSystemStatus((prev: boolean) => !prev);
+  //     console.debug('Keyboard shortcut used:', { shortcut: 'cmd+shift+s', action: 'toggle_system_status' });
+  //   }
+  //   if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === '?') {
+  //     event.preventDefault();
+  //     setShowKeyboardShortcutsManager((prev: boolean) => !prev);
+  //     console.debug('Keyboard shortcut used:', { shortcut: 'cmd+shift+?', action: 'toggle_keyboard_shortcuts_manager' });
+  //   }
+  //   if (event.key === 'Escape') {
+  //     setShowCommandPalette(false);
+  //     setShowSystemDashboard(false);
+  //     setShowSystemHealth(false);
+  //     setShowPerformanceWidget(false);
+  //     setShowKeyboardHelp(false);
+  //     setShowAdvancedMonitoring(false);
+  //     setShowComprehensiveDashboard(false);
+  //     setShowRealTimePerformance(false);
+  //     setShowEnhancedCommandPalette(false);
+  //     setShowKeyboardShortcutsManager(false);
+  //     seoAnalytics.trackEvent('keyboard_shortcut', { shortcut: 'escape', action: 'close_modals' });
+  //   }
+  // }, [addNotification]);
   const [showRealTimeMetrics, setShowRealTimeMetrics] = useState(false);
   const [showWebsiteEnhancements, setShowWebsiteEnhancements] = useState(false);
   // const [showAccessibilityPanel, setShowAccessibilityPanel] = useState(false);
