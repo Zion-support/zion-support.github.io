@@ -674,7 +674,7 @@ class ComprehensiveEnhancements {
       document.body.classList.add('high-contrast');
     }
 
-    if ((preferences as any).reduceMotion) {
+    if ((preferences as Record<string, unknown>).reduceMotion) {
       document.body.classList.add('reduce-motion');
     }
   }
