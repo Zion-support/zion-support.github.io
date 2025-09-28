@@ -105,8 +105,10 @@ export default function App(): React.JSX.Element {
     // Cleanup function
     return () => {
       document.removeEventListener('keydown', handleKeyDown);
+      window.removeEventListener('scroll', handleScroll);
+      document.removeEventListener('click', handleClick);
     };
-  }, [handleKeyDown]);
+  }, [handleKeyDown, handleScroll, handleClick, seoData, seoManager]);
 
   // Show loading screen while initializing
   if (isLoading) {
