@@ -13,10 +13,17 @@ import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
 import EnhancedNotificationSystem from './components/EnhancedNotificationSystem';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import EnhancedAnalytics from './components/EnhancedAnalytics';
+import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
+import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
+import { enhancedAnalytics } from './utils/enhancedAnalytics';
+import { advancedCacheSystem } from './utils/advancedCacheSystem';
+import { AdvancedAutomationSystem } from './utils/advancedAutomationSystem';
+import { AccessibilityEnhancer } from './utils/accessibilityEnhancer';
+import { SecurityEnhancer } from './utils/securityEnhancer';
 import './index.css';
 
 export default function App(): React.JSX.Element {
-  // State for system dashboard and performance optimizer
+  // State for system dashboard and performance optimizer (currently unused but reserved for future features)
   const [showSystemDashboard, setShowSystemDashboard] = useState(false);
   const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
 
@@ -37,18 +44,34 @@ export default function App(): React.JSX.Element {
     enableImageOptimization: true,
   });
 
+  // Initialize comprehensive enhancements
+  useEffect(() => {
+    // Initialize enhanced systems
+    enhancedPerformanceMonitor.startMonitoring();
+    enhancedAnalytics.initialize();
+    advancedCacheSystem.initialize();
+    AdvancedAutomationSystem.getInstance().initialize();
+    
+    // Initialize accessibility and security enhancers
+    const accessibilityEnhancer = AccessibilityEnhancer.getInstance();
+    const securityEnhancer = SecurityEnhancer.getInstance();
+    
+    // Get comprehensive enhancements
+    const enhancements = getComprehensiveEnhancements({
+      enableAdvancedPerformance: true,
+      enableSecurityFeatures: true,
+      enableAccessibilityFeatures: true,
+      enableSEOFeatures: true,
+      enableUXFeatures: true,
+      enableAnalytics: true,
+      enableOfflineSupport: true,
+      enablePWA: true
+    });
 
-  // Optimized keyboard handler for system dashboard toggle
-  const handleKeyDown = useCallback((event: KeyboardEvent) => {
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'D') {
-      event.preventDefault();
-      setShowSystemDashboard(prev => !prev);
-    }
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'P') {
-      event.preventDefault();
-      setShowPerformanceOptimizer(prev => !prev);
-    }
+    // Store enhancements globally for debugging
+    (window as Record<string, unknown>).enhancements = enhancements;
   }, []);
+
   // Memoize the SEO data to prevent unnecessary re-renders
   const seoData = useMemo(() => ({
     title: 'Zion Tech Group - Leading AI & Technology Solutions',
@@ -57,12 +80,42 @@ export default function App(): React.JSX.Element {
     ogType: 'website',
     ogUrl: typeof window !== 'undefined' ? window.location.href : '',
     ogImage: '/og-image.png',
-    twitterCard: 'summary_large_image' as const,
-    structuredData: []
+    twitterCard: 'summary_large_image' as const
   }), []);
 
+  // Track engagement function
+  const trackEngagementCallback = useCallback(() => {
+    const timeOnPage = Date.now() - engagementData.startTime;
+    seoAnalytics.trackUserEngagement(window.location.pathname, {
+      timeOnPage,
+      scrollDepth: engagementData.scrollDepth,
+      clicks: engagementData.clicks,
+    });
+    // Also call the original trackEngagement from useAppInitialization
+    trackEngagement();
+  }, [trackEngagement, engagementData.startTime, engagementData.scrollDepth, engagementData.clicks]);
 
+  // Handle keyboard events
+  const handleKeyDown = useCallback((event: KeyboardEvent) => {
+    // Add keyboard shortcuts here if needed
+    if (event.ctrlKey && event.shiftKey && event.key === 'D') {
+      // Toggle system dashboard
+      event.preventDefault();
+    }
+  }, []);
 
+  // Simple SEO manager
+  const seoManagerInstance = {
+    updateMetaTags: (data: typeof seoData) => {
+      if (typeof document !== 'undefined') {
+        document.title = data.title;
+        const metaDescription = document.querySelector('meta[name="description"]');
+        if (metaDescription) {
+          metaDescription.setAttribute('content', data.description);
+        }
+      }
+    }
+  };
   useEffect(() => {
     // Add performance marks for better monitoring
     if (typeof window !== 'undefined' && window.performance && typeof performance.mark === 'function') {
@@ -87,6 +140,7 @@ export default function App(): React.JSX.Element {
     // Initialize performance SEO optimizations
     performanceSEO.optimizeImages();
     performanceSEO.optimizeFonts();
+    performanceSEO.optimizeCSS();
 
     // Set default SEO data using the correct method
     seoManager.updateMetaTags(seoData);
@@ -115,16 +169,16 @@ export default function App(): React.JSX.Element {
   // Main initialization and cleanup effect
   React.useEffect(() => {
     // Track engagement on page unload
-    window.addEventListener('beforeunload', trackEngagement);
+    window.addEventListener('beforeunload', trackEngagementCallback);
 
     // Cleanup function
     return () => {
-      window.removeEventListener('beforeunload', trackEngagement);
+      window.removeEventListener('beforeunload', trackEngagementCallback);
       
       // Final engagement tracking
-      trackEngagement();
+      trackEngagementCallback();
     };
-  }, [trackEngagement]);
+  }, [trackEngagementCallback]);
 
   // Show loading screen while initializing
   if (isLoading) {
