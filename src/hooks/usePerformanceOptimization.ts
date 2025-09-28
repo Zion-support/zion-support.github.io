@@ -1,5 +1,5 @@
 import { useEffect, useCallback, useRef } from 'react';
-// import { getPerformanceMonitor } from '../utils/advancedPerformanceMonitor';
+import { AdvancedPerformanceMonitor } from '../utils/advancedPerformanceMonitor';
 import { NetworkInformation } from '../types/global';
 
 interface PerformanceOptimizationConfig {

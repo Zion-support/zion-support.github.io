@@ -235,7 +235,7 @@ export function useAppInitialization(config: AppInitializationConfig = {}) {
   const initializeAdvancedSystems = useCallback(async () => {
     try {
       // Initialize advanced performance monitor
-      const AdvancedPerformanceMonitor = (await import('../utils/advancedPerformanceMonitor')).default;
+      const { AdvancedPerformanceMonitor } = await import('../utils/advancedPerformanceMonitor');
       const advancedPerformanceMonitor = AdvancedPerformanceMonitor.getInstance();
       advancedPerformanceMonitor.updateConfig({
         enableWebVitals: true,
