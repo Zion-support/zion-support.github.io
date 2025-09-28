@@ -21,6 +21,13 @@ delete (window as any).location;
   protocol: 'http:',
   origin: 'http://localhost:3000',
 };
+<<<<<<< HEAD
+=======
+
+// Mock window.location using a simple assignment
+delete (window as unknown as { location?: Partial<Location> }).location;
+(window as unknown as { location: Partial<Location> }).location = mockLocation;
+>>>>>>> 6bf348ec72ce427c7fcfd02863a65a528db7911b
 // Mock window.history
 Object.defineProperty(window, 'history', {
   value: {
