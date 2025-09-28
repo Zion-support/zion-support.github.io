@@ -91,13 +91,11 @@ class SecurityUtils {
   private sanitizeUserInput(): void {
     // Override innerHTML to sanitize content
     const originalInnerHTML = Object.getOwnPropertyDescriptor(Element.prototype, 'innerHTML');
-    if (originalInnerHTML) {
+    if (originalInnerHTML && originalInnerHTML.set) {
       Object.defineProperty(Element.prototype, 'innerHTML', {
-        set: function(value) {
+        set: function(value: string) {
           const sanitized = this.sanitizeHTML(value);
-          if (originalInnerHTML.set) {
-            originalInnerHTML.set.call(this, sanitized);
-          }
+          originalInnerHTML.set!.call(this, sanitized);
         },
         get: originalInnerHTML.get
       });
@@ -168,8 +166,9 @@ class SecurityUtils {
   private monitorDataExfiltration(): void {
     // Monitor for suspicious network requests
     const originalFetch = window.fetch;
-    window.fetch = async (input, init) => {
-      const url = typeof input === 'string' ? input : (input as Request).url;
+    window.fetch = async (input: RequestInfo | URL, init?: RequestInit) => {
+      const url = typeof input === 'string' ? input : 
+        input instanceof URL ? input.toString() : input.url;
       
       // Check for suspicious patterns
       if (this.isSuspiciousURL(url)) {
