@@ -122,7 +122,6 @@ export default function App(): React.JSX.Element {
       }
     }
   }, []);
->>>>>>> 6677fd2a9f61a178f59f501792116bb6a84d6a5f
 
   useEffect(() => {
     // Add performance marks for better monitoring
