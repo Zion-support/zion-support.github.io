@@ -5,6 +5,10 @@ import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import PerformanceTracker from './components/PerformanceTracker';
 import { seoAnalytics, performanceSEO, seoManager } from './utils/seoEnhanced';
 import { analytics } from './utils/analytics';
+import { performanceOptimizer } from './utils/performanceOptimizations';
+import { accessibilityEnhancements } from './utils/accessibilityEnhancements';
+import { seoOptimizer } from './utils/seoOptimizations';
+// Removed unused imports to reduce warnings
 import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import PerformanceMonitor from './components/PerformanceMonitor';
@@ -24,10 +28,11 @@ import KeyboardShortcutsHelp from './components/KeyboardShortcutsHelp';
 import CommandPalette from './components/CommandPalette';
 import RealTimePerformanceMonitor from './components/RealTimePerformanceMonitor';
 import SystemHealthDashboard from './components/SystemHealthDashboard';
-// import { getNotificationManager, notify } from './utils/advancedNotifications';
-// import { getThemeManager } from './utils/themeManager';
-// import { getKeyboardShortcuts, shortcuts } from './utils/advancedKeyboardShortcuts';
-// import { getDataVisualization, charts } from './utils/advancedDataVisualization';
+import { getNotificationManager } from './utils/advancedNotifications';
+import { getThemeManager } from './utils/themeManager';
+import { getKeyboardShortcuts } from './utils/advancedKeyboardShortcuts';
+import { getDataVisualization } from './utils/advancedDataVisualization';
+import { useAppInitialization } from './hooks/useAppInitialization';
 import './index.css';
 
 export default function App(): React.JSX.Element {
@@ -44,7 +49,7 @@ export default function App(): React.JSX.Element {
   const [showRealTimeMetrics, setShowRealTimeMetrics] = useState(false);
   const [notifications, setNotifications] = useState<Notification[]>([]);
   const [showWebsiteEnhancements, setShowWebsiteEnhancements] = useState(false);
-  // const [showAccessibilityPanel, setShowAccessibilityPanel] = useState(false);
+  const [, setShowAccessibilityPanel] = useState(false);
   const [showRealTimeMonitor, setShowRealTimeMonitor] = useState(false);
   const [showSystemHealth, setShowSystemHealth] = useState(false);
   // User preferences state (for future use)
@@ -56,28 +61,21 @@ export default function App(): React.JSX.Element {
   // });
 
   // Engagement tracking data
-  const engagementData = useMemo(() => ({
-    startTime: Date.now(),
-    scrollDepth: 0,
-    clicks: 0
-  }), []);
+  // const engagementData = useMemo(() => ({
+  //   startTime: Date.now(),
+  //   scrollDepth: 0,
+  //   clicks: 0
+  // }), []);
 
   // Initialize app with custom configuration
-  // Temporarily disable useAppInitialization to fix build
-  // const { isLoading, loadingProgress, handleScroll, handleClick, trackEngagement } = useAppInitialization({
-  //   enablePerformanceMonitoring: true,
-  //   enableAccessibility: true,
-  //   enableSecurity: true,
-  //   enableAnalytics: true,
-  //   enableNotifications: true,
-  //   enableCaching: true,
-  // });
-  
-  const isLoading = false;
-  const loadingProgress = 100;
-  const handleScroll = useCallback(() => {}, []);
-  const handleClick = useCallback((_event: Event) => {}, []);
-  const trackEngagement = useCallback(() => {}, []);
+  const { isLoading, loadingProgress, handleScroll, handleClick, trackEngagement, engagementData } = useAppInitialization({
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSecurity: true,
+    enableAnalytics: true,
+    enableNotifications: true,
+    enableCaching: true,
+  });
 
   // Performance optimization hook - Temporarily disabled
   // usePerformanceOptimization({
@@ -154,7 +152,6 @@ export default function App(): React.JSX.Element {
   ], []);
 
   // Optimized keyboard handler for system dashboard toggle - removed unused function
-
   // Enhanced engagement tracking function
   const enhancedTrackEngagement = useCallback(() => {
     const timeOnPage = Date.now() - engagementData.startTime;
@@ -224,6 +221,12 @@ export default function App(): React.JSX.Element {
     performanceSEO.optimizeImages();
     performanceSEO.optimizeFonts();
     performanceSEO.optimizeCSS();
+    
+    // Initialize advanced optimization systems
+    // These are initialized automatically when imported
+    void performanceOptimizer;
+    void accessibilityEnhancements;
+    void seoOptimizer;
 
     // Initialize new utility systems
     performanceAlerts.checkMetric('loadTime', performance.now(), 3000);
@@ -307,6 +310,20 @@ export default function App(): React.JSX.Element {
       performance.mark('app-init-start');
     }
     
+    // Initialize advanced utilities
+    const initializeUtilities = async () => {
+      try {
+        await performanceOptimizer.initialize();
+        await seoEnhancer.initialize();
+        await accessibilityEnhancer.initialize();
+        console.log('All advanced utilities initialized successfully');
+      } catch (error) {
+        console.error('Failed to initialize some utilities:', error);
+      }
+    };
+
+    initializeUtilities();
+    
     // Track engagement on page unload
     window.addEventListener('beforeunload', enhancedTrackEngagement);
 
@@ -323,6 +340,7 @@ export default function App(): React.JSX.Element {
       window.removeEventListener('beforeunload', enhancedTrackEngagement);
       window.removeEventListener('scroll', handleScroll);
       document.removeEventListener('click', handleClick);
+      performanceOptimizer.cleanup();
     };
   }, [handleScroll, handleClick, enhancedTrackEngagement]);
 
@@ -432,8 +450,8 @@ export default function App(): React.JSX.Element {
       trackEngagement();
     };
 
-    const handleClickWithEngagement = (event: Event) => {
-      handleClick(event);
+    const handleClickWithEngagement = (event: MouseEvent) => {
+      handleClick(event as Event);
       trackEngagement();
     };
 
