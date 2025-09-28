@@ -311,10 +311,11 @@ export default function App(): React.JSX.Element {
     // Initialize advanced utilities
     const initializeUtilities = async () => {
       try {
-        await performanceOptimizer.initialize();
-        await seoEnhancer.initialize();
-        await accessibilityEnhancer.initialize();
-        console.log('All advanced utilities initialized successfully');
+        // Initialize accessibility enhancements if available
+        if (accessibilityEnhancements && typeof accessibilityEnhancements.initialize === 'function') {
+          await accessibilityEnhancements.initialize();
+        }
+        console.log('Advanced utilities initialized successfully');
       } catch (error) {
         console.error('Failed to initialize some utilities:', error);
       }
