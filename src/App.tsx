@@ -3,10 +3,18 @@ import { AppRouter } from './router';
 import { useAppInitialization } from './hooks/useAppInitialization';
 import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
-import { seoAnalytics, performanceSEO } from './utils/seoEnhanced';
-import { analytics } from './utils/analytics';
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
+import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
+import PerformanceOptimizer from './components/PerformanceOptimizer';
+import { analytics } from './utils/analytics';
+import { seoAnalytics, performanceSEO, seoManager } from './utils/seoEnhanced';
 import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
+import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
+import { enhancedAnalytics } from './utils/enhancedAnalytics';
+import { advancedCacheSystem } from './utils/advancedCacheSystem';
+import { AdvancedAutomationSystem } from './utils/advancedAutomationSystem';
+import { AccessibilityEnhancer } from './utils/accessibilityEnhancer';
+import { SecurityEnhancer } from './utils/securityEnhancer';
 import './index.css';
 
 export default function App(): React.JSX.Element {
@@ -33,6 +41,17 @@ export default function App(): React.JSX.Element {
 
   // Initialize comprehensive enhancements
   useEffect(() => {
+    // Initialize enhanced systems
+    enhancedPerformanceMonitor.startMonitoring();
+    enhancedAnalytics.initialize();
+    advancedCacheSystem.initialize();
+    AdvancedAutomationSystem.getInstance().initialize();
+    
+    // Initialize accessibility and security enhancers
+    const accessibilityEnhancer = AccessibilityEnhancer.getInstance();
+    const securityEnhancer = SecurityEnhancer.getInstance();
+    
+    // Get comprehensive enhancements
     const enhancements = getComprehensiveEnhancements({
       enableAdvancedPerformance: true,
       enableSecurityFeatures: true,
@@ -171,6 +190,31 @@ export default function App(): React.JSX.Element {
     <EnhancedErrorBoundary>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <AppRouter />
+        
+        {/* System Dashboard - Toggle with Ctrl+Shift+D */}
+        {showSystemDashboard && (
+          <EnhancedSystemDashboard
+            onClose={() => setShowSystemDashboard(false)}
+          />
+        )}
+        
+        {/* Performance Optimizer - Toggle with Ctrl+Shift+P */}
+        {showPerformanceOptimizer && (
+          <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
+            <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+              <div className="flex justify-between items-center mb-4">
+                <h2 className="text-2xl font-bold text-gray-900">Performance Optimizer</h2>
+                <button
+                  onClick={() => setShowPerformanceOptimizer(false)}
+                  className="text-gray-500 hover:text-gray-700"
+                >
+                  ✕
+                </button>
+              </div>
+              <PerformanceOptimizer />
+            </div>
+          </div>
+        )}
       </div>
     </EnhancedErrorBoundary>
   );
