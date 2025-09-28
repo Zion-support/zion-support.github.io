@@ -23,6 +23,26 @@ delete (window as any).location;
   ancestorOrigins: [] as any,
 };
 
+// Mock window.location using a simple assignment
+const mockLocation = {
+  pathname: '/',
+  href: 'http://localhost:3000/',
+  assign: jest.fn(),
+  replace: jest.fn(),
+  reload: jest.fn(),
+  search: '',
+  hash: '',
+  host: 'localhost:3000',
+  hostname: 'localhost',
+  port: '3000',
+  protocol: 'http:',
+  origin: 'http://localhost:3000',
+  ancestorOrigins: [] as any,
+};
+
+delete (window as unknown as { location?: typeof window.location }).location;
+(window as unknown as { location: typeof window.location }).location = mockLocation;
+
 // Mock window.history
 Object.defineProperty(window, 'history', {
   value: {
