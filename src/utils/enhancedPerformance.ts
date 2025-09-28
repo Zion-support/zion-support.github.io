@@ -54,7 +54,8 @@ class EnhancedPerformanceOptimizer {
     }
   };
 
-  private observers: PerformanceObserver[] = [];
+  private performanceObservers: PerformanceObserver[] = [];
+  private intersectionObservers: IntersectionObserver[] = [];
   private isInitialized = false;
 
   constructor(config?: Partial<OptimizationConfig>) {
@@ -86,34 +87,40 @@ class EnhancedPerformanceOptimizer {
     if (!this.config.enableMonitoring) return;
 
     // First Contentful Paint
-    new PerformanceObserver((entryList) => {
+    const fcpObserver = new PerformanceObserver((entryList) => {
       const entries = entryList.getEntries();
       const lastEntry = entries[entries.length - 1] as PerformanceEventTiming;
       this.metrics.fcp = lastEntry.startTime;
       this.reportMetric('FCP', lastEntry.startTime);
-    }).observe({ type: 'paint', buffered: true });
+    });
+    fcpObserver.observe({ type: 'paint', buffered: true });
+    this.performanceObservers.push(fcpObserver);
 
     // Largest Contentful Paint
-    new PerformanceObserver((entryList) => {
+    const lcpObserver = new PerformanceObserver((entryList) => {
       const entries = entryList.getEntries();
       const lastEntry = entries[entries.length - 1] as PerformanceEventTiming;
       this.metrics.lcp = lastEntry.startTime;
       this.reportMetric('LCP', lastEntry.startTime);
-    }).observe({ type: 'largest-contentful-paint', buffered: true });
+    });
+    lcpObserver.observe({ type: 'largest-contentful-paint', buffered: true });
+    this.performanceObservers.push(lcpObserver);
 
     // First Input Delay
-    new PerformanceObserver((entryList) => {
+    const fidObserver = new PerformanceObserver((entryList) => {
       const entries = entryList.getEntries();
       entries.forEach((entry) => {
         const fid = entry as PerformanceEventTiming;
         this.metrics.fid = fid.processingStart - fid.startTime;
         this.reportMetric('FID', this.metrics.fid);
       });
-    }).observe({ type: 'first-input', buffered: true });
+    });
+    fidObserver.observe({ type: 'first-input', buffered: true });
+    this.performanceObservers.push(fidObserver);
 
     // Cumulative Layout Shift
     let clsValue = 0;
-    new PerformanceObserver((entryList) => {
+    const clsObserver = new PerformanceObserver((entryList) => {
       const entries = entryList.getEntries();
       entries.forEach((entry) => {
         if (!(entry as PerformanceEntry & { hadRecentInput?: boolean }).hadRecentInput) {
@@ -122,10 +129,12 @@ class EnhancedPerformanceOptimizer {
       });
       this.metrics.cls = clsValue;
       this.reportMetric('CLS', clsValue);
-    }).observe({ type: 'layout-shift', buffered: true });
+    });
+    clsObserver.observe({ type: 'layout-shift', buffered: true });
+    this.performanceObservers.push(clsObserver);
 
     // Time to First Byte
-    new PerformanceObserver((entryList) => {
+    const ttfbObserver = new PerformanceObserver((entryList) => {
       const entries = entryList.getEntries();
       entries.forEach((entry) => {
         if (entry.entryType === 'navigation') {
@@ -134,7 +143,9 @@ class EnhancedPerformanceOptimizer {
           this.reportMetric('TTFB', this.metrics.ttfb);
         }
       });
-    }).observe({ type: 'navigation', buffered: true });
+    });
+    ttfbObserver.observe({ type: 'navigation', buffered: true });
+    this.performanceObservers.push(ttfbObserver);
   }
 
   /**
@@ -165,7 +176,7 @@ class EnhancedPerformanceOptimizer {
   private setupResourceMonitoring(): void {
     if (!this.config.enableMonitoring) return;
 
-    new PerformanceObserver((entryList) => {
+    const resourceObserver = new PerformanceObserver((entryList) => {
       const entries = entryList.getEntries();
       entries.forEach((entry) => {
         if (entry.entryType === 'resource') {
@@ -175,7 +186,9 @@ class EnhancedPerformanceOptimizer {
           }
         }
       });
-    }).observe({ type: 'resource', buffered: true });
+    });
+    resourceObserver.observe({ type: 'resource', buffered: true });
+    this.performanceObservers.push(resourceObserver);
   }
 
   /**
@@ -266,7 +279,7 @@ class EnhancedPerformanceOptimizer {
       observer.observe(img);
     });
 
-    this.observers.push(observer);
+    this.intersectionObservers.push(observer);
   }
 
   /**
@@ -389,8 +402,10 @@ class EnhancedPerformanceOptimizer {
    * Cleanup observers and resources
    */
   public cleanup(): void {
-    this.observers.forEach((observer) => observer.disconnect());
-    this.observers = [];
+    this.performanceObservers.forEach((observer) => observer.disconnect());
+    this.intersectionObservers.forEach((observer) => observer.disconnect());
+    this.performanceObservers = [];
+    this.intersectionObservers = [];
     this.isInitialized = false;
   }
 }
