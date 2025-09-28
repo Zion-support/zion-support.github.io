@@ -76,7 +76,7 @@ interface NetworkConnection {
 }
 
 interface ExtendedNavigator extends Navigator {
-  connection?: NetworkConnection;
+  connection?: NetworkInformation;
 }
 
 interface GoogleAnalytics {
@@ -238,7 +238,7 @@ class AdvancedPerformanceMonitor {
       tcp: navigation.connectEnd - navigation.connectStart,
       request: navigation.responseStart - navigation.requestStart,
       response: navigation.responseEnd - navigation.responseStart,
-      processing: navigation.domComplete - (navigation.domLoading || 0),
+      processing: navigation.domComplete - navigation.fetchStart,
       load: navigation.loadEventEnd - navigation.loadEventStart,
     };
 
@@ -298,14 +298,16 @@ class AdvancedPerformanceMonitor {
     }
 
     // Monitor connection changes
-    connection.addEventListener('change', () => {
-      this.recordMetric('networkInfo', {
-        effectiveType: connection.effectiveType,
-        downlink: connection.downlink,
-        rtt: connection.rtt,
-        saveData: connection.saveData,
+    if (connection && 'addEventListener' in connection) {
+      connection.addEventListener('change', () => {
+        this.recordMetric('networkInfo', {
+          effectiveType: connection.effectiveType,
+          downlink: connection.downlink,
+          rtt: connection.rtt,
+          saveData: connection.saveData,
+        });
       });
-    });
+    }
   }
 
   private recordMetric(key: string, value: number | object): void {
@@ -392,8 +394,9 @@ class AdvancedPerformanceMonitor {
     metrics.forEach(m => Object.keys(m.customMetrics).forEach(k => customKeys.add(k)));
 
     customKeys.forEach(key => {
-      const values = metrics.map(m => m.customMetrics[key]).filter(v => v > 0);
+      const values = metrics.map(m => m.customMetrics?.[key]).filter(v => v && v > 0) as number[];
       if (values.length > 0) {
+        if (!averages.customMetrics) averages.customMetrics = {};
         averages.customMetrics[key] = values.reduce((a, b) => a + b, 0) / values.length;
       }
     });

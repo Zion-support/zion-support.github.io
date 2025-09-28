@@ -60,8 +60,15 @@ export default function App(): React.JSX.Element {
       performance.mark('app-init-start');
     }
 
+    // Set default SEO data
+    seoManager.updateMetaTags(seoData);
+
     // Add keyboard event listener
     document.addEventListener('keydown', handleKeyDown);
+
+    // Use passive listeners for better performance
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    document.addEventListener('click', handleClick, { passive: true });
 
     // Mark app as fully initialized
     if (typeof window !== 'undefined' && window.performance && 
