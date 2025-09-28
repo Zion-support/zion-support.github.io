@@ -1,132 +1,112 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import React, { useState, useCallback } from 'react';
+import { useImageLazyLoading } from '../utils/lazyLoading';
+import { imageOptimizer, ImageOptimizationOptions } from '../utils/imageOptimization';
 
-interface LazyImageProps {
+interface LazyImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
   src: string;
   alt: string;
-  className?: string;
   placeholder?: string;
-  blurDataURL?: string;
-  width?: number;
-  height?: number;
-  priority?: boolean;
+  optimizationOptions?: ImageOptimizationOptions;
+  fallbackSrc?: string;
   onLoad?: () => void;
   onError?: () => void;
+  className?: string;
+  loading?: 'lazy' | 'eager';
+  sizes?: string;
+  srcSet?: string;
 }
 
 const LazyImage: React.FC<LazyImageProps> = ({
   src,
   alt,
-  className = '',
   placeholder,
-  blurDataURL,
-  width,
-  height,
-  priority = false,
+  optimizationOptions = {},
+  fallbackSrc,
   onLoad,
-  onError
+  onError,
+  className = '',
+  loading = 'lazy',
+  sizes,
+  srcSet,
+  ...props
 }) => {
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [isInView, setIsInView] = useState(priority);
   const [hasError, setHasError] = useState(false);
-  const imgRef = useRef<HTMLImageElement>(null);
+  const [isLoading, setIsLoading] = useState(true);
+  
+  // Generate optimized image URL
+  const optimizedSrc = imageOptimizer.generateOptimizedUrl(src, optimizationOptions);
+  
+  // Generate blur placeholder if none provided
+  const blurPlaceholder = placeholder || imageOptimizer.generateBlurPlaceholder();
+  
+  // Use lazy loading hook
+  const { elementRef, imageSrc, isLoaded } = useImageLazyLoading(
+    optimizedSrc,
+    blurPlaceholder
+  );
 
-  useEffect(() => {
-    if (priority) return;
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsInView(true);
-          observer.disconnect();
-        }
-      },
-      {
-        threshold: 0.1,
-        rootMargin: '50px'
-      }
-    );
-
-    if (imgRef.current) {
-      observer.observe(imgRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, [priority]);
-
-  const handleLoad = () => {
-    setIsLoaded(true);
+  const handleLoad = useCallback(() => {
+    setIsLoading(false);
     onLoad?.();
-  };
+  }, [onLoad]);
 
-  const handleError = () => {
+  const handleError = useCallback(() => {
+    setIsLoading(false);
     setHasError(true);
     onError?.();
-  };
+  }, [onError]);
 
-  const imageVariants = {
-    hidden: { opacity: 0, scale: 1.05 },
-    visible: { 
-      opacity: 1, 
-      scale: 1,
-      transition: { duration: 0.3, ease: 'easeOut' }
-    }
-  };
+  // Determine which image source to use
+  const currentSrc = hasError && fallbackSrc ? fallbackSrc : imageSrc;
+  const currentAlt = hasError ? `${alt} (fallback)` : alt;
 
   return (
-    <div 
-      ref={imgRef}
+    <div
+      ref={elementRef}
       className={`relative overflow-hidden ${className}`}
-      style={{ width, height }}
+      style={{ aspectRatio: optimizationOptions.width && optimizationOptions.height 
+        ? `${optimizationOptions.width}/${optimizationOptions.height}` 
+        : undefined 
+      }}
     >
-      {/* Placeholder/Blur */}
-      {!isLoaded && !hasError && (
-        <motion.div
-          className="absolute inset-0 bg-gray-200 dark:bg-gray-700 flex items-center justify-center"
-          initial={{ opacity: 1 }}
-          animate={{ opacity: isLoaded ? 0 : 1 }}
-          transition={{ duration: 0.3 }}
-        >
-          {blurDataURL ? (
-            <img
-              src={blurDataURL}
-              alt=""
-              className="w-full h-full object-cover filter blur-sm"
-            />
-          ) : (
-            <div className="w-8 h-8 border-2 border-gray-300 dark:border-gray-600 border-t-transparent rounded-full animate-spin" />
-          )}
-        </motion.div>
-      )}
-
-      {/* Error State */}
-      {hasError && (
-        <div className="absolute inset-0 bg-gray-100 dark:bg-gray-800 flex items-center justify-center">
-          <div className="text-center text-gray-500 dark:text-gray-400">
-            <div className="w-8 h-8 mx-auto mb-2">
-              <svg viewBox="0 0 24 24" fill="currentColor" className="w-full h-full">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-              </svg>
-            </div>
-            <p className="text-xs">Failed to load</p>
-          </div>
+      {/* Loading skeleton */}
+      {isLoading && (
+        <div className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center">
+          <div className="w-8 h-8 border-2 border-gray-300 border-t-blue-500 rounded-full animate-spin"></div>
         </div>
       )}
-
-      {/* Actual Image */}
-      {isInView && !hasError && (
-        <motion.img
-          src={src}
-          alt={alt}
-          className="w-full h-full object-cover"
-          variants={imageVariants}
-          initial="hidden"
-          animate={isLoaded ? "visible" : "hidden"}
-          onLoad={handleLoad}
-          onError={handleError}
-          loading={priority ? "eager" : "lazy"}
-          decoding="async"
-        />
+      
+      {/* Main image */}
+      <img
+        {...props}
+        src={currentSrc}
+        alt={currentAlt}
+        loading={loading}
+        sizes={sizes}
+        srcSet={srcSet}
+        onLoad={handleLoad}
+        onError={handleError}
+        className={`transition-opacity duration-300 ${
+          isLoaded ? 'opacity-100' : 'opacity-0'
+        } ${props.className || ''}`}
+        style={{
+          ...props.style,
+          width: '100%',
+          height: '100%',
+          objectFit: 'cover'
+        }}
+      />
+      
+      {/* Error state */}
+      {hasError && !fallbackSrc && (
+        <div className="absolute inset-0 bg-gray-100 flex items-center justify-center">
+          <div className="text-center text-gray-500">
+            <svg className="w-8 h-8 mx-auto mb-2" fill="currentColor" viewBox="0 0 20 20">
+              <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
+            </svg>
+            <p className="text-sm">Failed to load image</p>
+          </div>
+        </div>
       )}
     </div>
   );

@@ -5,11 +5,9 @@ import '@testing-library/jest-dom';
 global.fetch = jest.fn();
 
 // Mock window.location to prevent navigation errors
-// Use a simpler approach that works with JSDOM
-const originalLocation = window.location;
-
-// Create a mock location object
-const mockLocation = {
+// Use delete and redefine approach for JSDOM compatibility
+delete (window as any).location;
+(window as any).location = {
   pathname: '/',
   href: 'http://localhost:3000/',
   assign: jest.fn(),
@@ -22,7 +20,6 @@ const mockLocation = {
   port: '3000',
   protocol: 'http:',
   origin: 'http://localhost:3000',
-  ancestorOrigins: [] as any,
 };
 
 // Mock window.location using a simple assignment
