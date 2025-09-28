@@ -125,16 +125,6 @@ export class ErrorRecoverySystem {
     return this.errorCount;
   }
 
-<<<<<<< HEAD
-  public reset(): void {
-    this.errorCount = 0;
-  }
-}
-
-export const errorRecoverySystem = new ErrorRecovery();
-export const errorRecovery = errorRecoverySystem;
-
-=======
   public getErrors(): ErrorContext[] {
     return [...this.errors];
   }
@@ -151,4 +141,3 @@ export const errorRecovery = errorRecoverySystem;
 
 export const errorRecoverySystem = new ErrorRecoverySystem();
 export const errorRecovery = errorRecoverySystem;
->>>>>>> 8f31276972406891e28b4609e6555eec8bab76ce
