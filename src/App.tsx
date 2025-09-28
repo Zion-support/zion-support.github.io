@@ -4,16 +4,10 @@ import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import { seoAnalytics, performanceSEO, seoManager } from './utils/seoEnhanced';
 import { analytics } from './utils/analytics';
-import { performanceOptimizer } from './utils/performanceOptimizations';
-import { accessibilityEnhancements } from './utils/accessibilityEnhancements';
-import { seoOptimizer } from './utils/seoOptimizations';
-// Removed unused imports to reduce warnings
 import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
-// import EnhancedNotificationSystem from './components/EnhancedNotificationSystem';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import AIPerformanceDashboard from './components/AIPerformanceDashboard';
-import WebsiteEnhancements from './components/WebsiteEnhancements';
 import { SEOOptimizer, useSEOData } from './components/SEOOptimizer';
 // import EnhancedAnalytics from './components/EnhancedAnalytics';
 import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
@@ -21,8 +15,6 @@ import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
 import { performanceAlerts } from './utils/performanceAlerts';
 import { accessibilityUtils } from './utils/accessibilityUtils';
 import { securityUtils } from './utils/securityUtils';
-import { buildOptimizer } from './utils/buildOptimizations';
-import { performanceEnhancer } from './utils/performanceEnhancements';
 import AdvancedAnalytics from './components/AdvancedAnalytics';
 import NotificationSystem, { Notification } from './components/NotificationSystem';
 import KeyboardShortcutsHelp from './components/KeyboardShortcutsHelp';
@@ -30,10 +22,10 @@ import CommandPalette from './components/CommandPalette';
 import RealTimePerformanceMonitor from './components/RealTimePerformanceMonitor';
 import SystemHealthDashboard from './components/SystemHealthDashboard';
 import PerformanceTracker from './components/PerformanceTracker';
-import { getNotificationManager } from './utils/advancedNotifications';
-import { getThemeManager } from './utils/themeManager';
-import { getKeyboardShortcuts } from './utils/advancedKeyboardShortcuts';
-import { getDataVisualization } from './utils/advancedDataVisualization';
+// import { getNotificationManager } from './utils/advancedNotifications';
+// import { getThemeManager } from './utils/themeManager';
+// import { getKeyboardShortcuts } from './utils/advancedKeyboardShortcuts';
+// import { getDataVisualization } from './utils/advancedDataVisualization';
 import './index.css';
 
 export default function App(): React.JSX.Element {
@@ -48,9 +40,10 @@ export default function App(): React.JSX.Element {
   const [showCommandPalette, setShowCommandPalette] = useState(false);
   const [showRealTimeMetrics, setShowRealTimeMetrics] = useState(false);
   const [notifications, setNotifications] = useState<Notification[]>([]);
+  // const [showWebsiteEnhancements, setShowWebsiteEnhancements] = useState(false);
+  // const [showAccessibilityPanel, setShowAccessibilityPanel] = useState(false);
   const [showRealTimeMonitor, setShowRealTimeMonitor] = useState(false);
   const [showSystemHealth, setShowSystemHealth] = useState(false);
-  const [showWebsiteEnhancements, setShowWebsiteEnhancements] = useState(false);
   // User preferences state (for future use)
   // const [userPreferences, setUserPreferences] = useState({
   //   theme: 'auto',
@@ -60,20 +53,10 @@ export default function App(): React.JSX.Element {
   // });
 
   // Engagement tracking data
-  const engagementData = useMemo(() => ({
-    startTime: Date.now(),
-    scrollDepth: 0,
-    clicks: 0
-  }), []);
-
-  // SEO data
-  // const seoData = useMemo(() => ({
-  //   title: 'Zion Tech Group - Leading AI & Technology Solutions',
-  //   description: 'Cutting-edge AI, quantum computing, and digital transformation solutions for modern enterprises. Expert consulting, cloud services, and innovative technology implementations.',
-  //   keywords: ['AI solutions', 'quantum computing', 'digital transformation', 'cloud services', 'enterprise technology', 'machine learning', 'automation', 'blockchain'],
-  //   canonicalUrl: typeof window !== 'undefined' ? window.location.href : '',
-  //   ogImage: '/og-image.png',
-  //   twitterCard: 'summary_large_image' as const
+  // const engagementData = useMemo(() => ({
+  //   startTime: Date.now(),
+  //   scrollDepth: 0,
+  //   clicks: 0
   // }), []);
 
   // Initialize app with custom configuration
@@ -90,7 +73,7 @@ export default function App(): React.JSX.Element {
   const isLoading = false;
   const loadingProgress = 100;
   const handleScroll = useCallback(() => {}, []);
-  const handleClick = useCallback(() => {}, []);
+  const handleClick = useCallback((_event: Event) => {}, []);
   const trackEngagement = useCallback(() => {}, []);
 
   // Performance optimization hook - Temporarily disabled
@@ -107,16 +90,74 @@ export default function App(): React.JSX.Element {
   // Get SEO data using current pathname
   const seoData = useSEOData(currentPathname);
 
-  // Command palette commands (removed to reduce warnings)
+  // Command palette commands
+  const commandPaletteCommands = useMemo(() => [
+    {
+      id: 'system-dashboard',
+      title: 'Toggle System Dashboard',
+      description: 'Open/close the system metrics dashboard',
+      category: 'Dashboard',
+      action: () => setShowSystemDashboard(prev => !prev),
+      shortcut: 'Ctrl+Shift+D'
+    },
+    {
+      id: 'performance-optimizer',
+      title: 'Toggle Performance Optimizer',
+      description: 'Open/close the performance optimization panel',
+      category: 'Performance',
+      action: () => setShowPerformanceOptimizer(prev => !prev),
+      shortcut: 'Ctrl+Shift+P'
+    },
+    {
+      id: 'performance-monitor',
+      title: 'Toggle Performance Monitor',
+      description: 'Open/close the performance monitoring panel',
+      category: 'Performance',
+      action: () => setShowPerformanceMonitor(prev => !prev),
+      shortcut: 'Ctrl+Shift+M'
+    },
+    {
+      id: 'ai-dashboard',
+      title: 'Toggle AI Dashboard',
+      description: 'Open/close the AI performance dashboard',
+      category: 'AI',
+      action: () => setShowAIDashboard(prev => !prev),
+      shortcut: 'Ctrl+Shift+A'
+    },
+    {
+      id: 'keyboard-help',
+      title: 'Show Keyboard Shortcuts',
+      description: 'Display all available keyboard shortcuts',
+      category: 'Help',
+      action: () => setShowKeyboardHelp(true),
+      shortcut: 'Ctrl+Shift+H'
+    },
+    {
+      id: 'close-all',
+      title: 'Close All Modals',
+      description: 'Close all open modals and dashboards',
+      category: 'Navigation',
+      action: () => {
+        setShowSystemDashboard(false);
+        setShowPerformanceOptimizer(false);
+        setShowPerformanceMonitor(false);
+        setShowAIDashboard(false);
+        setShowRealTimeMetrics(false);
+        setShowCommandPalette(false);
+        setShowKeyboardHelp(false);
+      },
+      shortcut: 'Escape'
+    }
+  ], []);
 
-  // Optimized keyboard handler for system dashboard toggle (commented out to reduce warnings)
+  // Optimized keyboard handler for system dashboard toggle - removed unused function
   // Enhanced engagement tracking function
   const enhancedTrackEngagement = useCallback(() => {
-    const timeOnPage = Date.now() - engagementData.startTime;
+    // Basic engagement tracking without complex data structures
     seoAnalytics.trackUserEngagement(window.location.pathname, {
-      timeOnPage,
-      scrollDepth: engagementData.scrollDepth,
-      clicks: engagementData.clicks,
+      timeOnPage: Date.now(),
+      scrollDepth: 0,
+      clicks: 0,
     });
     trackEngagement();
   }, [trackEngagement]);
@@ -380,101 +421,6 @@ export default function App(): React.JSX.Element {
   }, [showSystemDashboard, showPerformanceOptimizer, showPerformanceMonitor, showAIDashboard, showSEOOptimizer, isDarkMode, showKeyboardHelp, showCommandPalette, showRealTimeMonitor, showSystemHealth]);
 
 
-  // Command palette commands
-  const commandPaletteCommands = [
-    {
-      id: 'toggle-system-dashboard',
-      title: 'Toggle System Dashboard',
-      description: 'Open or close the system dashboard',
-      category: 'Dashboard',
-      action: () => setShowSystemDashboard(!showSystemDashboard),
-      shortcut: 'Ctrl+Shift+D'
-    },
-    {
-      id: 'toggle-performance-optimizer',
-      title: 'Toggle Performance Optimizer',
-      description: 'Open or close the performance optimizer',
-      category: 'Dashboard',
-      action: () => setShowPerformanceOptimizer(!showPerformanceOptimizer),
-      shortcut: 'Ctrl+Shift+P'
-    },
-    {
-      id: 'toggle-performance-monitor',
-      title: 'Toggle Performance Monitor',
-      description: 'Open or close the performance monitor',
-      category: 'Dashboard',
-      action: () => setShowPerformanceMonitor(!showPerformanceMonitor),
-      shortcut: 'Ctrl+Shift+M'
-    },
-    {
-      id: 'toggle-ai-dashboard',
-      title: 'Toggle AI Dashboard',
-      description: 'Open or close the AI performance dashboard',
-      category: 'Dashboard',
-      action: () => setShowAIDashboard(!showAIDashboard),
-      shortcut: 'Ctrl+Shift+A'
-    },
-    {
-      id: 'toggle-seo-optimizer',
-      title: 'Toggle SEO Optimizer',
-      description: 'Open or close the SEO optimizer',
-      category: 'Dashboard',
-      action: () => setShowSEOOptimizer(!showSEOOptimizer),
-      shortcut: 'Ctrl+Shift+S'
-    },
-    {
-      id: 'toggle-theme',
-      title: 'Toggle Theme',
-      description: 'Switch between dark and light theme',
-      category: 'Appearance',
-      action: () => setIsDarkMode(!isDarkMode),
-      shortcut: 'Ctrl+Shift+T'
-    },
-    {
-      id: 'toggle-real-time-monitor',
-      title: 'Toggle Real-Time Monitor',
-      description: 'Open or close the real-time performance monitor',
-      category: 'Dashboard',
-      action: () => setShowRealTimeMonitor(!showRealTimeMonitor),
-      shortcut: 'Ctrl+Shift+R'
-    },
-    {
-      id: 'toggle-system-health',
-      title: 'Toggle System Health',
-      description: 'Open or close the system health dashboard',
-      category: 'Dashboard',
-      action: () => setShowSystemHealth(!showSystemHealth),
-      shortcut: 'Ctrl+Shift+H'
-    },
-    {
-      id: 'show-keyboard-help',
-      title: 'Show Keyboard Shortcuts',
-      description: 'Display all available keyboard shortcuts',
-      category: 'Help',
-      action: () => setShowKeyboardHelp(true),
-      shortcut: 'Ctrl+Shift+K'
-    },
-    {
-      id: 'show-notifications',
-      title: 'Test Notifications',
-      description: 'Show a test notification',
-      category: 'Testing',
-      action: () => {
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        if ((window as any).notifications) {
-          // eslint-disable-next-line @typescript-eslint/no-explicit-any
-          (window as any).notifications.add({
-            type: 'success',
-            title: 'Command Executed',
-            message: 'Test notification sent successfully!',
-            duration: 3000
-          });
-        }
-      },
-      shortcut: 'Ctrl+Shift+N'
-    }
-  ];
-
   // Track engagement on scroll and click
   useEffect(() => {
     const handleScrollWithEngagement = () => {
@@ -483,7 +429,7 @@ export default function App(): React.JSX.Element {
     };
 
     const handleClickWithEngagement = (event: Event) => {
-      handleClick();
+      handleClick(event);
       trackEngagement();
     };
 
@@ -616,7 +562,7 @@ export default function App(): React.JSX.Element {
             <div className="space-y-2 text-sm">
               <div className="flex justify-between">
                 <span>Memory Usage:</span>
-                <span className="text-green-400">{Math.round((performance as any).memory?.usedJSHeapSize / 1024 / 1024 || 0)} MB</span>
+                <span className="text-green-400">{Math.round((performance as { memory?: { usedJSHeapSize?: number } }).memory?.usedJSHeapSize / 1024 / 1024 || 0)} MB</span>
               </div>
               <div className="flex justify-between">
                 <span>Render Time:</span>
@@ -640,11 +586,11 @@ export default function App(): React.JSX.Element {
           onClose={() => setShowRealTimeMonitor(false)}
         />
 
-        {/* Website Enhancements */}
-        <WebsiteEnhancements 
+        {/* Website Enhancements - Temporarily disabled */}
+        {/* <WebsiteEnhancements 
           isVisible={showWebsiteEnhancements} 
           onClose={() => setShowWebsiteEnhancements(false)} 
-        />
+        /> */}
 
         {/* Comprehensive Performance Monitor */}
         {/* ComprehensivePerformanceMonitor - Temporarily disabled */}
