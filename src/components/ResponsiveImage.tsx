@@ -39,9 +39,11 @@ const ResponsiveImage: React.FC<ResponsiveImageProps> = ({
     })
     .join(', ');
 
+  const { onLoad, onError, ...restProps } = props;
+  
   return (
     <LazyImage
-      {...props}
+      {...restProps}
       src={src}
       alt={alt}
       optimizationOptions={optimizationOptions}
@@ -49,8 +51,10 @@ const ResponsiveImage: React.FC<ResponsiveImageProps> = ({
       className={`responsive-image ${className}`}
       srcSet={srcSet}
       sizes={sizes}
+      onLoad={onLoad ? () => onLoad({} as React.SyntheticEvent<HTMLImageElement>) : undefined}
+      onError={onError ? () => onError({} as React.SyntheticEvent<HTMLImageElement>) : undefined}
       style={{
-        ...props.style,
+        ...restProps.style,
         aspectRatio: aspectRatio || (optimizationOptions.width && optimizationOptions.height 
           ? `${optimizationOptions.width}/${optimizationOptions.height}` 
           : undefined

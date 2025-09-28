@@ -5,7 +5,7 @@
 
 interface ServiceWorkerConfig {
   scope: string;
-  updateViaCache: RequestCache;
+  updateViaCache: 'none' | 'imports' | 'all';
   updateInterval: number;
   onUpdate?: (registration: ServiceWorkerRegistration) => void;
   onError?: (error: Error) => void;

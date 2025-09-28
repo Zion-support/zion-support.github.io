@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import AdvancedAnalyticsManager from '../utils/advancedAnalytics';
+import analytics from '../utils/advancedAnalytics';
 import AdvancedCacheManager from '../utils/advancedCache';
 import AdvancedAccessibilityManager from '../utils/advancedAccessibilityManager';
 import AdvancedSecurityManager from '../utils/advancedSecurityManager';
@@ -69,27 +69,24 @@ const AdvancedDashboard: React.FC = () => {
   }, [isOpen]);
 
   const updateData = () => {
-    const sessionData = AdvancedAnalyticsManager.getInstance().getSessionData();
+    const events = analytics.getEvents();
     const cacheStats = AdvancedCacheManager.getInstance().getStats();
     
-    // Convert session data to analytics data format
-    const analytics: AnalyticsData = sessionData ? {
-      id: sessionData.id,
-      startTime: sessionData.startTime,
-      lastActivity: sessionData.lastActivity,
-      pageViews: sessionData.pageViews,
-      events: sessionData.events,
-      deviceInfo: sessionData.deviceInfo
-    } : {
-      id: '',
-      startTime: 0,
-      lastActivity: 0,
-      pageViews: 0,
-      events: [],
+    // Convert analytics events to analytics data format
+    const analyticsData: AnalyticsData = {
+      id: `session_${Date.now()}`,
+      startTime: Date.now() - 300000, // 5 minutes ago
+      lastActivity: Date.now(),
+      pageViews: events.filter(e => e.name === 'page_view').length,
+      events: events.map(e => ({
+        event: e.name,
+        timestamp: e.timestamp || Date.now(),
+        properties: e.properties
+      })),
       deviceInfo: {
-        screenResolution: '',
-        language: '',
-        timezone: ''
+        screenResolution: `${window.screen.width}x${window.screen.height}`,
+        language: navigator.language,
+        timezone: Intl.DateTimeFormat().resolvedOptions().timeZone
       }
     };
 
@@ -102,7 +99,7 @@ const AdvancedDashboard: React.FC = () => {
     };
     
     setData({
-      analytics: analytics || {},
+      analytics: analyticsData || {},
       cache: cache || {},
       performance: {
         memoryUsage: (performance as Performance & { memory?: { usedJSHeapSize?: number } }).memory?.usedJSHeapSize || 0,
