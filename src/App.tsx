@@ -25,6 +25,8 @@ import { performanceAlerts } from './utils/performanceAlerts';
 import { accessibilityUtils } from './utils/accessibilityUtils';
 import { securityUtils } from './utils/securityUtils';
 import { enhancedSecurityManager } from './utils/enhancedSecurityManager';
+import { AdvancedAutomationSystem } from './utils/advancedAutomationSystem';
+import { securityEnhancer } from './utils/securityEnhancer';
 import AdvancedAnalytics from './components/AdvancedAnalytics';
 import NotificationSystem, { Notification } from './components/NotificationSystem';
 import KeyboardShortcutsHelp from './components/KeyboardShortcutsHelp';
@@ -69,6 +71,18 @@ export default function App(): React.JSX.Element {
     clicks: 0
   }), []);
 
+  // SEO data
+  const seoData = useMemo(() => ({
+    title: 'Zion Tech Group - Leading AI & Technology Solutions',
+    description: 'Cutting-edge AI, quantum computing, and digital transformation solutions for modern enterprises. Expert consulting, cloud services, and innovative technology implementations.',
+    keywords: ['AI solutions', 'quantum computing', 'digital transformation', 'cloud services', 'enterprise technology', 'machine learning', 'automation', 'blockchain'],
+    canonicalUrl: typeof window !== 'undefined' ? window.location.href : '',
+    ogType: 'website' as const,
+    ogUrl: typeof window !== 'undefined' ? window.location.href : '',
+    ogImage: '/og-image.png',
+    twitterCard: 'summary_large_image' as const
+  }), []);
+
   // Initialize app with custom configuration
   // Temporarily disable useAppInitialization to fix build
   // const { isLoading, loadingProgress, handleScroll, handleClick, trackEngagement } = useAppInitialization({
@@ -83,10 +97,7 @@ export default function App(): React.JSX.Element {
   const isLoading = false;
   const loadingProgress = 100;
   const handleScroll = useCallback(() => {}, []);
-  const handleClick = useCallback((event?: Event) => {
-    // Handle click events for engagement tracking
-    console.debug('Click event captured for engagement tracking', event);
-  }, []);
+  const handleClick = useCallback((event?: Event) => {}, []);
   const trackEngagement = useCallback(() => {}, []);
 
   // Performance optimization hook - Temporarily disabled
@@ -179,13 +190,11 @@ export default function App(): React.JSX.Element {
     description: 'Cutting-edge AI, quantum computing, and digital transformation solutions for modern enterprises. Expert consulting, cloud services, and innovative technology implementations.',
     keywords: ['AI solutions', 'quantum computing', 'digital transformation', 'cloud services', 'enterprise technology'],
     canonicalUrl: `https://zion.app${currentPathname}`,
-    ogTitle: 'Zion Tech Group - AI & Technology Solutions',
-    ogDescription: 'Transform your business with cutting-edge AI and technology solutions.',
     ogImage: 'https://zion.app/og-image.jpg',
+    ogUrl: `https://zion.app${currentPathname}`,
+    ogType: 'website' as const,
     twitterCard: 'summary_large_image' as const,
-    twitterTitle: 'Zion Tech Group - AI & Technology Solutions',
-    twitterDescription: 'Transform your business with cutting-edge AI and technology solutions.',
-    twitterImage: 'https://zion.app/twitter-image.jpg'
+    siteName: 'Zion Tech Group'
   }), [currentPathname]);
 
   // Performance optimization hook (for future use)
@@ -206,7 +215,13 @@ export default function App(): React.JSX.Element {
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         (performanceOptimizer as any).initialize();
       }
-      enhancedSecurityManager.initialize();
+      if (enhancedSecurityManager && typeof enhancedSecurityManager.initialize === 'function') {
+        enhancedSecurityManager.initialize();
+      }
+      // Initialize enhancement systems
+      if (accessibilityEnhancer && typeof accessibilityEnhancer.initialize === 'function') {
+        accessibilityEnhancer.initialize();
+      }
       
       // Initialize analytics
       if ('initialize' in analytics) {
@@ -279,12 +294,12 @@ export default function App(): React.JSX.Element {
     // Update Open Graph tags
     const ogTitle = document.querySelector('meta[property="og:title"]');
     if (ogTitle) {
-      ogTitle.setAttribute('content', data.ogTitle);
+      ogTitle.setAttribute('content', data.title);
     }
 
     const ogDescription = document.querySelector('meta[property="og:description"]');
     if (ogDescription) {
-      ogDescription.setAttribute('content', data.ogDescription);
+      ogDescription.setAttribute('content', data.description);
     }
 
     const ogImage = document.querySelector('meta[property="og:image"]');
@@ -300,17 +315,17 @@ export default function App(): React.JSX.Element {
 
     const twitterTitle = document.querySelector('meta[name="twitter:title"]');
     if (twitterTitle) {
-      twitterTitle.setAttribute('content', data.twitterTitle);
+      twitterTitle.setAttribute('content', data.title);
     }
 
     const twitterDescription = document.querySelector('meta[name="twitter:description"]');
     if (twitterDescription) {
-      twitterDescription.setAttribute('content', data.twitterDescription);
+      twitterDescription.setAttribute('content', data.description);
     }
 
     const twitterImage = document.querySelector('meta[name="twitter:image"]');
     if (twitterImage) {
-      twitterImage.setAttribute('content', data.twitterImage);
+      twitterImage.setAttribute('content', data.ogImage);
     }
   }, []);
 
@@ -562,10 +577,10 @@ export default function App(): React.JSX.Element {
         />
 
         {/* Advanced Performance Dashboard */}
-        <AdvancedPerformanceDashboard
+        {/* <AdvancedPerformanceDashboard
           isVisible={showAdvancedDashboard}
           onClose={() => setShowAdvancedDashboard(false)}
-        />
+        /> */}
 
         {/* Real-time Metrics */}
         {showRealTimeMetrics && (
