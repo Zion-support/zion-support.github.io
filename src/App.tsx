@@ -27,6 +27,9 @@ const PerformanceWidget = lazy(() => import('./components/PerformanceWidget'));
 const CommandPalette = lazy(() => import('./components/CommandPalette'));
 const AdvancedMonitoringDashboard = lazy(() => import('./components/AdvancedMonitoringDashboard'));
 const ComprehensivePerformanceDashboard = lazy(() => import('./components/ComprehensivePerformanceDashboard'));
+const PerformanceIndicator = lazy(() => import('./components/PerformanceIndicator'));
+const AccessibilityEnhancer = lazy(() => import('./components/AccessibilityEnhancer'));
+const DynamicMetaTags = lazy(() => import('./components/DynamicMetaTags'));
 
 export default function App(): React.JSX.Element {
   const navigate = useNavigate();
@@ -48,9 +51,71 @@ export default function App(): React.JSX.Element {
     setNotifications(prev => prev.filter(notification => notification.id !== id));
   }, []);
 
+  // Enhanced notification system
+  const addNotification = useCallback((notification: Omit<Notification, 'id'>) => {
+    const id = Date.now().toString();
+    const newNotification: Notification = {
+      ...notification,
+      id,
+      timestamp: Date.now()
+    };
+    setNotifications(prev => [...prev, newNotification]);
+    
+    // Auto-remove after 5 seconds for info notifications
+    if (notification.type === 'info') {
+      setTimeout(() => removeNotification(id), 5000);
+    }
+  }, [removeNotification]);
+
   // Performance and loading state
   const [isLoading, setIsLoading] = useState(false);
   const [loadingProgress, setLoadingProgress] = useState(0);
+  const [performanceMetrics, setPerformanceMetrics] = useState({
+    loadTime: 0,
+    renderTime: 0,
+    memoryUsage: 0
+  });
+
+  // Performance monitoring
+  useEffect(() => {
+    const startTime = performance.now();
+    
+    const measurePerformance = () => {
+      const loadTime = performance.now() - startTime;
+      const memory = (performance as any).memory;
+      
+      setPerformanceMetrics({
+        loadTime: Math.round(loadTime),
+        renderTime: Math.round(performance.now() - startTime),
+        memoryUsage: memory ? Math.round(memory.usedJSHeapSize / 1024 / 1024) : 0
+      });
+
+      // Log performance metrics
+      console.log('Performance Metrics:', {
+        loadTime: `${Math.round(loadTime)}ms`,
+        memoryUsage: memory ? `${Math.round(memory.usedJSHeapSize / 1024 / 1024)}MB` : 'N/A'
+      });
+    };
+
+    // Measure after initial render
+    const timeoutId = setTimeout(measurePerformance, 100);
+    
+    return () => clearTimeout(timeoutId);
+  }, []);
+
+  // Service Worker registration
+  useEffect(() => {
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js')
+        .then((registration) => {
+          console.log('SW registered: ', registration);
+          addNotification({ type: 'success', message: 'App is now available offline!' });
+        })
+        .catch((registrationError) => {
+          console.log('SW registration failed: ', registrationError);
+        });
+    }
+  }, [addNotification]);
   
   const handleScroll = useCallback(() => {
     // Track scroll depth for analytics
@@ -182,6 +247,7 @@ export default function App(): React.JSX.Element {
       event.preventDefault();
       setShowSystemDashboard((prev: boolean) => !prev);
       seoAnalytics.trackEvent('keyboard_shortcut', { shortcut: 'cmd+shift+d', action: 'toggle_system_dashboard' });
+      addNotification({ type: 'info', message: 'System dashboard toggled' });
     }
     if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'H') {
       event.preventDefault();
@@ -393,8 +459,45 @@ export default function App(): React.JSX.Element {
   return (
     <PerformanceOptimizer enableMonitoring={true} enableOptimizations={true}>
       <EnhancedErrorBoundary>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-          <AppRouter />
+        <Suspense fallback={<ModernLoadingSpinner />}>
+          <AccessibilityEnhancer>
+            <Suspense fallback={null}>
+              <DynamicMetaTags
+                title="Zion Tech Group - Advanced AI and IT Solutions"
+                description="Leading provider of cutting-edge AI and IT solutions, cloud services, cybersecurity, and digital transformation services for modern enterprises."
+                keywords="AI solutions, IT services, cloud computing, cybersecurity, digital transformation, enterprise software, machine learning, data analytics"
+                canonicalUrl={window.location.href}
+                structuredData={{
+                  "@context": "https://schema.org",
+                  "@type": "Organization",
+                  "name": "Zion Tech Group",
+                  "description": "Leading provider of cutting-edge AI and IT solutions",
+                  "url": "https://ziontechgroup.com",
+                  "logo": "https://ziontechgroup.com/logo.png",
+                  "sameAs": [
+                    "https://linkedin.com/company/ziontechgroup",
+                    "https://twitter.com/ziontechgroup"
+                  ],
+                  "contactPoint": {
+                    "@type": "ContactPoint",
+                    "telephone": "+1-555-0123",
+                    "contactType": "customer service",
+                    "areaServed": "US",
+                    "availableLanguage": "English"
+                  },
+                  "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "123 Tech Street",
+                    "addressLocality": "San Francisco",
+                    "addressRegion": "CA",
+                    "postalCode": "94105",
+                    "addressCountry": "US"
+                  }
+                }}
+              />
+            </Suspense>
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+              <AppRouter />
         
         {/* System Dashboard - Toggle with Ctrl+Shift+D */}
         {showSystemDashboard && (
@@ -533,6 +636,13 @@ export default function App(): React.JSX.Element {
           <div>Click Theme Button: Toggle Theme</div>
         </div>
       </div>
+      
+      {/* Performance Indicator */}
+      <Suspense fallback={null}>
+        <PerformanceIndicator showDetails={showAdvancedMonitoring} />
+      </Suspense>
+    </AccessibilityEnhancer>
+    </Suspense>
     </EnhancedErrorBoundary>
     </PerformanceOptimizer>
   );
