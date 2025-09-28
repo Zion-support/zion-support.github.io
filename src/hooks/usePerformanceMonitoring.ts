@@ -87,7 +87,7 @@ export function usePerformanceMonitoring(options: UsePerformanceMonitoringOption
   // Get memory usage
   const getMemoryUsage = useCallback((): number | undefined => {
     if (typeof window !== 'undefined' && 'memory' in performance) {
-      const memory = (performance as any).memory;
+      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory;
       return memory.usedJSHeapSize / 1024 / 1024; // Convert to MB
     }
     return undefined;
@@ -96,7 +96,7 @@ export function usePerformanceMonitoring(options: UsePerformanceMonitoringOption
   // Get network information
   const getNetworkInfo = useCallback(() => {
     if (typeof window !== 'undefined' && 'connection' in navigator) {
-      const connection = (navigator as any).connection;
+      const connection = (navigator as Navigator & { connection?: { effectiveType?: string; downlink?: number; rtt?: number } }).connection;
       return {
         effectiveType: connection.effectiveType || 'unknown',
         downlink: connection.downlink || 0,
@@ -139,8 +139,9 @@ export function usePerformanceMonitoring(options: UsePerformanceMonitoringOption
     let clsValue = 0;
     const clsEntries = performance.getEntriesByType('layout-shift') as PerformanceEntry[];
     clsEntries.forEach(entry => {
-      if (!(entry as any).hadRecentInput) {
-        clsValue += (entry as any).value;
+      const layoutShiftEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
+      if (!layoutShiftEntry.hadRecentInput) {
+        clsValue += layoutShiftEntry.value || 0;
       }
     });
     newMetrics.cumulativeLayoutShift = clsValue;
@@ -149,7 +150,7 @@ export function usePerformanceMonitoring(options: UsePerformanceMonitoringOption
     // First Input Delay
     const fidEntries = performance.getEntriesByType('first-input') as PerformanceEntry[];
     if (fidEntries.length > 0) {
-      const fid = fidEntries[0] as any;
+      const fid = fidEntries[0] as PerformanceEntry & { processingStart: number; startTime: number };
       newMetrics.firstInputDelay = fid.processingStart - fid.startTime;
       checkThreshold('firstInputDelay', newMetrics.firstInputDelay, thresholdsRef.current.firstInputDelay);
     }
