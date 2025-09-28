@@ -629,13 +629,13 @@ class AdvancedAccessibilityEnhancer {
 Accessibility Report:
 ==================
 Overall Score: ${metrics.overallScore}/100
-WCAG Compliance: ${metrics.wcagCompliance}%
-Keyboard Navigation: ${metrics.keyboardNavigation ? 'Enabled' : 'Disabled'}
-Screen Reader Support: ${metrics.screenReaderSupport ? 'Enabled' : 'Disabled'}
-Color Contrast: ${metrics.colorContrast ? 'Passed' : 'Failed'}
-Focus Management: ${metrics.focusManagement ? 'Proper' : 'Issues Found'}
-ARIA Labels: ${metrics.ariaLabels ? 'Present' : 'Missing'}
-Semantic HTML: ${metrics.semanticHTML ? 'Proper' : 'Needs Improvement'}
+Color Contrast Ratio: ${metrics.colorContrastRatio}
+Focusable Elements: ${metrics.focusableElements}
+ARIA Labels: ${metrics.ariaLabels}
+Heading Structure: ${metrics.headingStructure}
+Alt Texts: ${metrics.altTexts}
+Keyboard Traps: ${metrics.keyboardTraps}
+Screen Reader Compatibility: ${metrics.screenReaderCompatibility}
 `;
   }
 }
