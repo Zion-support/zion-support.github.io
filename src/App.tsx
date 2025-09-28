@@ -9,7 +9,6 @@ import PerformanceTracker from './components/PerformanceTracker';
 import PerformanceDashboard from './components/PerformanceDashboard';
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import { seoAnalytics, performanceSEO } from './utils/seoEnhanced';
-import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
 import NotificationSystem, { Notification } from './components/NotificationSystem';
 import './index.css';
 
@@ -18,6 +17,13 @@ import { performanceAnalytics } from './utils/advancedPerformanceAnalytics';
 import { seoManager } from './utils/advancedSEOManager';
 import { errorTracker } from './utils/advancedErrorTracker';
 import { apiCache, imageCache, dataCache } from './utils/advancedCacheManager';
+
+// Import enhanced utilities
+import { enhancedErrorHandler } from './utils/enhancedErrorHandling';
+import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitoring';
+import { enhancedAccessibilityManager } from './utils/enhancedAccessibility';
+import { advancedErrorRecovery } from './utils/advancedErrorRecovery';
+import { enhancedSEOOptimizer } from './utils/enhancedSEOOptimizer';
 
 // Lazy load heavy components for better performance
 const EnhancedSystemDashboard = lazy(() => import('./components/EnhancedSystemDashboard'));
@@ -121,17 +127,16 @@ export default function App(): React.JSX.Element {
     // Track scroll depth for analytics
     const scrollDepth = Math.round((window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100);
     if (scrollDepth > 0 && scrollDepth % 25 === 0) {
-      seoAnalytics.trackEvent('scroll_depth', { depth: scrollDepth });
+      console.debug('Scroll depth tracked:', { depth: scrollDepth });
     }
   }, []);
   
   const handleClick = useCallback((event?: Event) => {
     console.debug('Click event captured for engagement tracking', event);
-    seoAnalytics.trackEvent('user_interaction', { type: 'click', timestamp: Date.now() });
   }, []);
   
   const originalTrackEngagement = useCallback(() => {
-    seoAnalytics.trackEvent('user_engagement', { 
+    console.debug('User engagement tracked', { 
       timestamp: Date.now(),
       session_duration: performance.now()
     });
@@ -196,7 +201,11 @@ export default function App(): React.JSX.Element {
   useEffect(() => {
     try {
       // Initialize enhanced systems
-      enhancedPerformanceMonitor.startMonitoring();
+      enhancedPerformanceMonitor.initialize();
+      enhancedErrorHandler.initialize();
+      enhancedAccessibilityManager.initialize();
+      advancedErrorRecovery.initialize();
+      enhancedSEOOptimizer.initialize();
       
       // Initialize advanced systems
       void performanceAnalytics; // Initialize performance analytics
@@ -210,6 +219,19 @@ export default function App(): React.JSX.Element {
       
       // Initialize SEO for current page
       seoManager.updateSEO({
+        title: seoData.title,
+        description: seoData.description,
+        keywords: seoData.keywords.split(', '),
+        canonical: seoData.canonicalUrl,
+        ogTitle: seoData.title,
+        ogDescription: seoData.description,
+        ogImage: seoData.ogImage,
+        ogType: seoData.ogType,
+        twitterCard: seoData.twitterCard
+      });
+
+      // Also update with enhanced SEO optimizer
+      enhancedSEOOptimizer.updateSEO({
         title: seoData.title,
         description: seoData.description,
         keywords: seoData.keywords.split(', '),
@@ -235,9 +257,15 @@ export default function App(): React.JSX.Element {
       
       return () => {
         // Cleanup function
+        enhancedPerformanceMonitor.stopMonitoring();
       };
     } catch (error) {
       console.error('Error initializing enhancements:', error);
+      enhancedErrorHandler.handleComponentError(error, 'App', {
+        retryable: false,
+        maxRetries: 0,
+        retryDelay: 1000
+      });
     }
   }, [seoData.title, seoData.description, seoData.keywords, seoData.canonicalUrl, seoData.ogImage, seoData.ogType, seoData.twitterCard]);
 
@@ -248,21 +276,22 @@ export default function App(): React.JSX.Element {
       setShowSystemDashboard((prev: boolean) => !prev);
       seoAnalytics.trackEvent('keyboard_shortcut', { shortcut: 'cmd+shift+d', action: 'toggle_system_dashboard' });
       addNotification({ type: 'info', message: 'System dashboard toggled' });
+      console.debug('Keyboard shortcut used:', { shortcut: 'cmd+shift+d', action: 'toggle_system_dashboard' });
     }
     if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'H') {
       event.preventDefault();
       setShowSystemHealth((prev: boolean) => !prev);
-      seoAnalytics.trackEvent('keyboard_shortcut', { shortcut: 'cmd+shift+h', action: 'toggle_system_health' });
+      console.debug('Keyboard shortcut used:', { shortcut: 'cmd+shift+h', action: 'toggle_system_health' });
     }
     if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'K') {
       event.preventDefault();
       setShowKeyboardHelp((prev: boolean) => !prev);
-      seoAnalytics.trackEvent('keyboard_shortcut', { shortcut: 'cmd+shift+k', action: 'toggle_keyboard_help' });
+      console.debug('Keyboard shortcut used:', { shortcut: 'cmd+shift+k', action: 'toggle_keyboard_help' });
     }
     if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'P') {
       event.preventDefault();
       setShowPerformanceWidget((prev: boolean) => !prev);
-      seoAnalytics.trackEvent('keyboard_shortcut', { shortcut: 'cmd+shift+p', action: 'toggle_performance_widget' });
+      console.debug('Keyboard shortcut used:', { shortcut: 'cmd+shift+p', action: 'toggle_performance_widget' });
     }
     if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'C') {
       event.preventDefault();
@@ -273,12 +302,17 @@ export default function App(): React.JSX.Element {
     if ((event.ctrlKey || event.metaKey) && event.key === 'k') {
       event.preventDefault();
       setShowCommandPalette((prev: boolean) => !prev);
-      seoAnalytics.trackEvent('keyboard_shortcut', { shortcut: 'cmd+k', action: 'toggle_command_palette' });
+      console.debug('Keyboard shortcut used:', { shortcut: 'cmd+k', action: 'toggle_command_palette' });
     }
     if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'M') {
       event.preventDefault();
       setShowAdvancedMonitoring((prev: boolean) => !prev);
-      seoAnalytics.trackEvent('keyboard_shortcut', { shortcut: 'cmd+shift+m', action: 'toggle_advanced_monitoring' });
+      console.debug('Keyboard shortcut used:', { shortcut: 'cmd+shift+m', action: 'toggle_advanced_monitoring' });
+    }
+    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'T') {
+      event.preventDefault();
+      setIsDarkMode((prev: boolean) => !prev);
+      console.debug('Keyboard shortcut used:', { shortcut: 'cmd+shift+t', action: 'toggle_theme' });
     }
     if (event.key === 'Escape') {
       setShowCommandPalette(false);
@@ -287,7 +321,8 @@ export default function App(): React.JSX.Element {
       setShowPerformanceWidget(false);
       setShowKeyboardHelp(false);
       setShowAdvancedMonitoring(false);
-      seoAnalytics.trackEvent('keyboard_shortcut', { shortcut: 'escape', action: 'close_modals' });
+      setShowComprehensiveDashboard(false);
+      console.debug('Keyboard shortcut used:', { shortcut: 'escape', action: 'close_modals' });
     }
   }, []);
 
@@ -331,6 +366,7 @@ export default function App(): React.JSX.Element {
       // Add performance marks for better monitoring
       if (typeof window !== 'undefined' && window.performance && typeof performance.mark === 'function') {
         performance.mark('app-init-start');
+        enhancedPerformanceMonitor.markMilestone('app-init-start');
         
         // Add performance observer for better monitoring
         if ('PerformanceObserver' in window) {
@@ -355,7 +391,7 @@ export default function App(): React.JSX.Element {
       document.addEventListener('keydown', handleKeyDown);
 
       // Initialize basic systems
-      seoAnalytics.initialize();
+      console.debug('Initializing analytics system');
       
       // Initialize SEO analytics
       seoAnalytics.trackPageView(window.location.pathname);
@@ -367,7 +403,6 @@ export default function App(): React.JSX.Element {
       performanceSEO.optimizeCSS();
       
       // Initialize analytics system
-      seoAnalytics.initialize();
       seoAnalytics.trackPageView(window.location.pathname);
 
       // Set default SEO data using the correct method
@@ -386,6 +421,8 @@ export default function App(): React.JSX.Element {
           typeof performance.measure === 'function') {
         performance.mark('app-init-complete');
         performance.measure('app-initialization', 'app-init-start', 'app-init-complete');
+        enhancedPerformanceMonitor.markMilestone('app-init-complete');
+        enhancedPerformanceMonitor.measurePerformance('app-initialization', 'app-init-start', 'app-init-complete');
       }
 
       // Basic performance monitoring
@@ -556,6 +593,7 @@ export default function App(): React.JSX.Element {
         </Suspense>
 
         <PerformanceDashboard
+          className="fixed bottom-4 left-4 z-30"
           isVisible={showPerformanceWidget}
         />
 
@@ -632,8 +670,9 @@ export default function App(): React.JSX.Element {
           <div>Ctrl+Shift+H: System Health</div>
           <div>Ctrl+Shift+M: Advanced Monitoring</div>
           <div>Ctrl+Shift+K: Keyboard Help</div>
+          <div>Ctrl+Shift+T: Toggle Theme</div>
           <div>Ctrl+K: Command Palette</div>
-          <div>Click Theme Button: Toggle Theme</div>
+          <div>Esc: Close All Modals</div>
         </div>
       </div>
       
