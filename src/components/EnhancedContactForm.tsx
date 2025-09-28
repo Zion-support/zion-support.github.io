@@ -74,7 +74,7 @@ const EnhancedContactForm = () => {
         else delete newErrors.email;
         break;
       case 'phone':
-        if (value && !/^[+]?[1-9][\d]{0,15}$/.test(value.replace(/[\s\-()]/g, ''))) {
+        if (value && !/^[+]?[1-9]\d{0,15}$/.test(value.replace(/[\s\-()]/g, ''))) {
           newErrors.phone = 'Please enter a valid phone number';
         } else delete newErrors.phone;
         break;

@@ -48,7 +48,7 @@ const EnhancedTestimonials = () => {
       company: "InnovateLabs",
       image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
       rating: 5,
-      text: "The quantum computing implementation was flawless. We're now processing data 10x faster than before. Zion's expertise is unmatched in the industry.",
+      text: "The quantum computing implementation was flawless. We&apos;re now processing data 10x faster than before. Zion&apos;s expertise is unmatched in the industry.",
       results: "10x faster processing"
     },
     {
@@ -68,7 +68,7 @@ const EnhancedTestimonials = () => {
       company: "StartupX",
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
       rating: 5,
-      text: "From concept to deployment in record time. Zion's agile approach and cutting-edge solutions helped us scale from 0 to 1M users in just 6 months.",
+      text: "From concept to deployment in record time. Zion&apos;s agile approach and cutting-edge solutions helped us scale from 0 to 1M users in just 6 months.",
       results: "0 to 1M users in 6 months"
     }
   ];
@@ -84,6 +84,16 @@ const EnhancedTestimonials = () => {
   const togglePlayPause = () => {
     setIsPlaying(!isPlaying);
   };
+
+  useEffect(() => {
+    if (!isPlaying) return;
+    
+    const interval = setInterval(() => {
+      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
+    }, 5000);
+    
+    return () => clearInterval(interval);
+  }, [isPlaying, testimonials.length]);
 
   return (
     <section className="py-20 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 relative overflow-hidden">

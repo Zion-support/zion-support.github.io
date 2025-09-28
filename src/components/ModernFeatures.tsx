@@ -66,8 +66,15 @@ const ModernFeatures = () => {
     { icon: <Users className="w-6 h-6" />, value: "500+", label: "Happy Clients" },
     { icon: <Award className="w-6 h-6" />, value: "99.9%", label: "Uptime" },
     { icon: <TrendingUp className="w-6 h-6" />, value: "50%", label: "Cost Reduction" },
-    { icon: <Clock className="w-6 h-6" />, value: "24/7", label: "Support" }
+    { icon: <Clock className="w-6 h-6" />, value: "24/7", label: "Support"     }
   ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentFeature((prev) => (prev + 1) % features.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, [features.length]);
 
   return (
     <section className="py-20 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">

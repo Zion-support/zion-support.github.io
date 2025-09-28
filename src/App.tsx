@@ -1,8 +1,12 @@
 import React, { useCallback, useState, useEffect, useMemo, lazy, Suspense } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { AppRouter } from './router';
 import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import PerformanceTracker from './components/PerformanceTracker';
+import PerformanceMonitor from './components/PerformanceMonitor';
+import EnhancedPerformanceMonitor from './components/EnhancedPerformanceMonitor';
+import PerformanceDashboard from './components/PerformanceDashboard';
 import { seoAnalytics, performanceSEO } from './utils/seoEnhanced';
 import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
 import NotificationSystem, { Notification } from './components/NotificationSystem';
@@ -16,6 +20,8 @@ const PerformanceWidget = lazy(() => import('./components/PerformanceWidget'));
 const CommandPalette = lazy(() => import('./components/CommandPalette'));
 
 export default function App(): React.JSX.Element {
+  const navigate = useNavigate();
+  
   // State for system dashboard
   const [showSystemDashboard, setShowSystemDashboard] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -24,15 +30,63 @@ export default function App(): React.JSX.Element {
   const [showSystemHealth, setShowSystemHealth] = useState(false);
   const [showPerformanceWidget, setShowPerformanceWidget] = useState(false);
   const [showCommandPalette, setShowCommandPalette] = useState(false);
+  const [showPerformanceDashboard, setShowPerformanceDashboard] = useState(false);
 
-  // Temporary placeholders
-  const isLoading = false;
-  const loadingProgress = 100;
-  const handleScroll = useCallback(() => {}, []);
-  const handleClick = useCallback((event?: MouseEvent) => {
-    console.debug('Click event captured for engagement tracking', event);
+  // Notification management
+  const removeNotification = useCallback((id: string) => {
+    setNotifications(prev => prev.filter(notification => notification.id !== id));
   }, []);
-  const originalTrackEngagement = useCallback(() => {}, []);
+
+  // Performance and loading state
+  const [isLoading, setIsLoading] = useState(false);
+  const [loadingProgress, setLoadingProgress] = useState(0);
+  
+  const handleScroll = useCallback(() => {
+    // Track scroll depth for analytics
+    const scrollDepth = Math.round((window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100);
+    if (scrollDepth > 0 && scrollDepth % 25 === 0) {
+      analytics.track('scroll_depth', { depth: scrollDepth });
+    }
+  }, []);
+  
+  const handleClick = useCallback((event?: Event) => {
+    console.debug('Click event captured for engagement tracking', event);
+    analytics.track('user_interaction', { type: 'click', timestamp: Date.now() });
+  }, []);
+  
+  const originalTrackEngagement = useCallback(() => {
+    analytics.track('user_engagement', { 
+      timestamp: Date.now(),
+      session_duration: performance.now()
+    });
+  }, []);
+
+  // Simulate loading for demonstration
+  useEffect(() => {
+    setIsLoading(true);
+    setLoadingProgress(0);
+    
+    const loadingInterval = setInterval(() => {
+      setLoadingProgress(prev => {
+        if (prev >= 100) {
+          setIsLoading(false);
+          clearInterval(loadingInterval);
+          // Show welcome notification
+          setNotifications(prev => [...prev, {
+            id: Date.now().toString(),
+            type: 'success',
+            title: 'Welcome to Zion Tech Group',
+            message: 'Your advanced AI and technology solutions platform is ready!',
+            duration: 5000
+          }]);
+          return 100;
+        }
+        return prev + 10;
+      });
+    }, 100);
+    
+    return () => clearInterval(loadingInterval);
+  }, []);
 
   // Get current pathname for SEO (used in seoData)
   const currentPathname = typeof window !== 'undefined' ? window.location.pathname : '/';
@@ -94,22 +148,39 @@ export default function App(): React.JSX.Element {
     if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'D') {
       event.preventDefault();
       setShowSystemDashboard((prev: boolean) => !prev);
+      analytics.track('keyboard_shortcut', { shortcut: 'cmd+shift+d', action: 'toggle_system_dashboard' });
     }
     if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'H') {
       event.preventDefault();
       setShowSystemHealth((prev: boolean) => !prev);
+      analytics.track('keyboard_shortcut', { shortcut: 'cmd+shift+h', action: 'toggle_system_health' });
     }
     if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'K') {
       event.preventDefault();
       setShowKeyboardHelp((prev: boolean) => !prev);
+      analytics.track('keyboard_shortcut', { shortcut: 'cmd+shift+k', action: 'toggle_keyboard_help' });
     }
     if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'P') {
       event.preventDefault();
       setShowPerformanceWidget((prev: boolean) => !prev);
+      analytics.track('keyboard_shortcut', { shortcut: 'cmd+shift+p', action: 'toggle_performance_widget' });
+    }
+    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'O') {
+      event.preventDefault();
+      setShowPerformanceDashboard((prev: boolean) => !prev);
     }
     if ((event.ctrlKey || event.metaKey) && event.key === 'k') {
       event.preventDefault();
       setShowCommandPalette((prev: boolean) => !prev);
+      analytics.track('keyboard_shortcut', { shortcut: 'cmd+k', action: 'toggle_command_palette' });
+    }
+    if (event.key === 'Escape') {
+      setShowCommandPalette(false);
+      setShowSystemDashboard(false);
+      setShowSystemHealth(false);
+      setShowPerformanceWidget(false);
+      setShowKeyboardHelp(false);
+      analytics.track('keyboard_shortcut', { shortcut: 'escape', action: 'close_modals' });
     }
   }, []);
 
@@ -322,7 +393,7 @@ export default function App(): React.JSX.Element {
         {/* New Components */}
         <NotificationSystem
           notifications={notifications}
-          onRemove={(id) => setNotifications(prev => prev.filter(n => n.id !== id))}
+          onRemove={removeNotification}
         />
         
         <Suspense fallback={<ModernLoadingSpinner />}>
@@ -339,11 +410,51 @@ export default function App(): React.JSX.Element {
           />
         </Suspense>
 
+        <PerformanceDashboard
+          showBundleAnalysis={true}
+          showOptimizationSuggestions={true}
+          autoRefresh={true}
+          refreshInterval={5000}
+        />
+
         <Suspense fallback={<ModernLoadingSpinner />}>
           <CommandPalette
             isVisible={showCommandPalette}
             onClose={() => setShowCommandPalette(false)}
-            commands={commandPaletteCommands}
+            commands={[
+              {
+                id: 'home',
+                title: 'Go to Home',
+                description: 'Navigate to the home page',
+                category: 'Navigation',
+                action: () => navigate('/'),
+                shortcut: 'Ctrl+H'
+              },
+              {
+                id: 'about',
+                title: 'Go to About',
+                description: 'Navigate to the about page',
+                category: 'Navigation',
+                action: () => navigate('/about'),
+                shortcut: 'Ctrl+A'
+              },
+              {
+                id: 'services',
+                title: 'Go to Services',
+                description: 'Navigate to the services page',
+                category: 'Navigation',
+                action: () => navigate('/services'),
+                shortcut: 'Ctrl+S'
+              },
+              {
+                id: 'contact',
+                title: 'Go to Contact',
+                description: 'Navigate to the contact page',
+                category: 'Navigation',
+                action: () => navigate('/contact'),
+                shortcut: 'Ctrl+C'
+              }
+            ]}
           />
         </Suspense>
 

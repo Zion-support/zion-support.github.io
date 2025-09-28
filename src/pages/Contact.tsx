@@ -186,7 +186,7 @@ export default function Contact(): React.JSX.Element {
                   answer: "We typically begin new projects within 1-2 weeks of contract signing. Rush projects can be accommodated with additional planning."
                 },
                 {
-                  question: "What's your typical project timeline?",
+                  question: "What&apos;s your typical project timeline?",
                   answer: "Project timelines vary based on complexity. Simple websites take 2-4 weeks, while complex AI implementations can take 3-6 months."
                 },
                 {

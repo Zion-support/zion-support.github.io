@@ -1,250 +1,376 @@
-import React, { useState, useEffect } from 'react';
-
-interface BundleMetrics {
-  totalSize: number;
-  gzippedSize: number;
-  chunkCount: number;
-  duplicateModules: number;
-  unusedModules: number;
-  compressionRatio: number;
-  largestChunk: string;
-  unusedCode: number;
-  chunks: Array<{
-    name: string;
-    size: number;
-    gzippedSize: number;
-    modules: number;
-  }>;
-  recommendations: string[];
-}
-
-interface OptimizationStrategy {
-  name: string;
-  description: string;
-  impact: 'high' | 'medium' | 'low';
-  applied: boolean;
-  priority: 'high' | 'medium' | 'low';
-  type: string;
-  implementation: string;
-}
+import React, { useEffect, useState, useCallback } from 'react';
+import { clsx } from 'clsx';
+import { performanceOptimizer, type PerformanceMetrics, type OptimizationSuggestion } from '../utils/performanceOptimizer';
+import { bundleOptimizer, type BundleAnalysis, type BundleOptimizationSuggestion } from '../utils/bundleOptimizer';
 
 interface PerformanceDashboardProps {
-  isVisible: boolean;
-  onClose: () => void;
+  className?: string;
+  showBundleAnalysis?: boolean;
+  showOptimizationSuggestions?: boolean;
+  autoRefresh?: boolean;
+  refreshInterval?: number;
 }
 
-const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({ isVisible, onClose }) => {
-  const [metrics, setMetrics] = useState<BundleMetrics | null>(null);
-  const [strategies, setStrategies] = useState<OptimizationStrategy[]>([]);
-  const [isLoading, setIsLoading] = useState(false);
-  const [report, setReport] = useState('');
+export const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({
+  className,
+  showBundleAnalysis = true,
+  showOptimizationSuggestions = true,
+  autoRefresh = true,
+  refreshInterval = 5000
+}) => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    fcp: 0,
+    lcp: 0,
+    fid: 0,
+    cls: 0,
+    ttfb: 0
+  });
+
+  const [bundleAnalysis, setBundleAnalysis] = useState<BundleAnalysis | null>(null);
+  const [performanceSuggestions, setPerformanceSuggestions] = useState<OptimizationSuggestion[]>([]);
+  const [bundleSuggestions, setBundleSuggestions] = useState<BundleOptimizationSuggestion[]>([]);
+  const [isVisible, setIsVisible] = useState(false);
+  const [isAnalyzing, setIsAnalyzing] = useState(false);
+
+  const updateMetrics = useCallback(async () => {
+    // Update performance metrics
+    const newMetrics = performanceOptimizer.getMetrics();
+    setMetrics(newMetrics);
+    
+    if (showOptimizationSuggestions) {
+      const newSuggestions = performanceOptimizer.getSuggestions();
+      setPerformanceSuggestions(newSuggestions);
+    }
+
+    // Update bundle analysis
+    if (showBundleAnalysis) {
+      setIsAnalyzing(true);
+      try {
+        const analysis = await bundleOptimizer.analyzeBundle();
+        setBundleAnalysis(analysis);
+        setBundleSuggestions(analysis.optimizationSuggestions);
+      } catch (error) {
+        console.error('Bundle analysis failed:', error);
+      } finally {
+        setIsAnalyzing(false);
+      }
+    }
+  }, [showBundleAnalysis, showOptimizationSuggestions]);
 
   useEffect(() => {
-    if (isVisible) {
-      loadPerformanceData();
+    // Start monitoring
+    performanceOptimizer.startMonitoring();
+    
+    // Initial update
+    updateMetrics();
+
+    // Set up periodic updates
+    let interval: NodeJS.Timeout | null = null;
+    if (autoRefresh) {
+      interval = setInterval(updateMetrics, refreshInterval);
     }
-  }, [isVisible]);
 
-  const loadPerformanceData = async () => {
-    setIsLoading(true);
-    try {
-      // Mock data for now since the bundleOptimizer methods are not available
-      const bundleMetrics: BundleMetrics = {
-        totalSize: 1024 * 1024, // 1MB
-        gzippedSize: 256 * 1024, // 256KB
-        chunkCount: 15,
-        duplicateModules: 3,
-        unusedModules: 5,
-        compressionRatio: 0.75,
-        largestChunk: 'vendor.js',
-        unusedCode: 50 * 1024, // 50KB
-        chunks: [],
-        recommendations: []
-      };
-      
-      const optimizationStrategies: OptimizationStrategy[] = [
-        { 
-          name: 'Tree Shaking', 
-          description: 'Remove unused code', 
-          impact: 'high', 
-          applied: false,
-          priority: 'high',
-          type: 'tree-shaking',
-          implementation: 'Configure webpack tree shaking'
-        },
-        { 
-          name: 'Code Splitting', 
-          description: 'Split code into smaller chunks', 
-          impact: 'medium', 
-          applied: true,
-          priority: 'medium',
-          type: 'code-splitting',
-          implementation: 'Use dynamic imports'
-        },
-        { 
-          name: 'Minification', 
-          description: 'Minify JavaScript and CSS', 
-          impact: 'medium', 
-          applied: true,
-          priority: 'medium',
-          type: 'minification',
-          implementation: 'Configure terser plugin'
-        }
-      ];
-      
-      const optimizationReport = 'Bundle analysis complete. Found 3 duplicate modules and 5 unused modules.';
+    return () => {
+      if (interval) clearInterval(interval);
+      performanceOptimizer.stopMonitoring();
+    };
+  }, [updateMetrics, autoRefresh, refreshInterval]);
 
-      setMetrics(bundleMetrics);
-      setStrategies(optimizationStrategies);
-      setReport(optimizationReport);
-    } catch (error) {
-      console.error('Failed to load performance data:', error);
-    } finally {
-      setIsLoading(false);
-    }
-  };
+  // Keyboard shortcut to toggle visibility
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.ctrlKey && event.shiftKey && event.key === 'D') {
+        event.preventDefault();
+        setIsVisible(prev => !prev);
+      }
+    };
 
-  const getPriorityColor = (priority: string) => {
-    switch (priority) {
-      case 'high': return 'text-red-500 bg-red-100';
-      case 'medium': return 'text-yellow-500 bg-yellow-100';
-      case 'low': return 'text-green-500 bg-green-100';
-      default: return 'text-gray-500 bg-gray-100';
-    }
-  };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, []);
 
-  const getImpactColor = (impact: 'high' | 'medium' | 'low') => {
-    if (impact === 'high') return 'text-green-500';
-    if (impact === 'medium') return 'text-yellow-500';
+  const getMetricColor = (value: number, thresholds: { good: number; poor: number }) => {
+    if (value <= thresholds.good) return 'text-green-500';
+    if (value <= thresholds.poor) return 'text-yellow-500';
     return 'text-red-500';
   };
 
-  if (!isVisible) return null;
+  const getSuggestionIcon = (type: string) => {
+    switch (type) {
+      case 'critical': return '🚨';
+      case 'warning': return '⚠️';
+      case 'info': return 'ℹ️';
+      default: return '📊';
+    }
+  };
+
+  const getSuggestionColor = (type: string) => {
+    switch (type) {
+      case 'critical': return 'text-red-500';
+      case 'warning': return 'text-yellow-500';
+      case 'info': return 'text-blue-500';
+      default: return 'text-gray-500';
+    }
+  };
+
+  const handleOptimizeAll = async () => {
+    // Clear all suggestions
+    performanceOptimizer.clearSuggestions();
+    setPerformanceSuggestions([]);
+    setBundleSuggestions([]);
+    
+    // Run optimizations
+    await bundleOptimizer.optimizeBundle();
+    
+    // Refresh metrics
+    updateMetrics();
+  };
+
+  const handleExportFullReport = () => {
+    const performanceReport = performanceOptimizer.generateReport();
+    const bundleReport = bundleAnalysis ? bundleOptimizer.generateOptimizationReport() : 'No bundle analysis available';
+    
+    const fullReport = `${performanceReport}\n\n${bundleReport}`;
+    
+    const blob = new Blob([fullReport], { type: 'text/plain' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `performance-dashboard-report-${new Date().toISOString().split('T')[0]}.txt`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  };
+
+  if (!isVisible) {
+    return null;
+  }
 
   return (
-    <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center p-4">
-      <div className="bg-white rounded-lg shadow-xl max-w-6xl w-full max-h-[90vh] overflow-y-auto">
-        <div className="flex justify-between items-center p-6 border-b">
-          <h2 className="text-2xl font-bold text-gray-900">Performance Dashboard</h2>
-          <button
-            onClick={onClose}
-            className="text-gray-500 hover:text-gray-700 text-2xl"
-          >
-            ×
-          </button>
+    <div className={clsx(
+      'fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4',
+      className
+    )}>
+      <div className="bg-white dark:bg-gray-800 rounded-lg shadow-xl max-w-4xl w-full max-h-[90vh] overflow-hidden">
+        {/* Header */}
+        <div className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700">
+          <h2 className="text-xl font-semibold text-gray-900 dark:text-white">
+            Performance Dashboard
+          </h2>
+          <div className="flex items-center gap-2">
+            {isAnalyzing && (
+              <div className="flex items-center gap-2 text-sm text-gray-500">
+                <div className="animate-spin w-4 h-4 border-2 border-blue-500 border-t-transparent rounded-full" />
+                Analyzing...
+              </div>
+            )}
+            <button
+              onClick={() => setIsVisible(false)}
+              className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
         </div>
 
-        <div className="p-6">
-          {isLoading ? (
-            <div className="flex items-center justify-center py-12">
-              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500"></div>
-            </div>
-          ) : (
-            <div className="space-y-6">
-              {/* Bundle Metrics */}
-              {metrics && (
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                  <div className="bg-blue-50 p-4 rounded-lg">
-                    <h3 className="text-sm font-medium text-blue-600">Total Bundle Size</h3>
-                    <p className="text-2xl font-bold text-blue-900">
-                      {(metrics.totalSize / 1024).toFixed(2)} KB
-                    </p>
-                  </div>
-                  <div className="bg-green-50 p-4 rounded-lg">
-                    <h3 className="text-sm font-medium text-green-600">Gzipped Size</h3>
-                    <p className="text-2xl font-bold text-green-900">
-                      {(metrics.gzippedSize / 1024).toFixed(2)} KB
-                    </p>
-                  </div>
-                  <div className="bg-purple-50 p-4 rounded-lg">
-                    <h3 className="text-sm font-medium text-purple-600">Compression Ratio</h3>
-                    <p className="text-2xl font-bold text-purple-900">
-                      {(metrics.compressionRatio * 100).toFixed(1)}%
-                    </p>
+        {/* Content */}
+        <div className="p-4 overflow-y-auto max-h-[calc(90vh-80px)]">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            {/* Performance Metrics */}
+            <div className="space-y-4">
+              <h3 className="text-lg font-medium text-gray-900 dark:text-white">Core Web Vitals</h3>
+              
+              <div className="grid grid-cols-2 gap-4">
+                <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-3">
+                  <div className="text-sm text-gray-600 dark:text-gray-400">First Contentful Paint</div>
+                  <div className={clsx('text-lg font-semibold', getMetricColor(metrics.fcp, { good: 1800, poor: 3000 }))}>
+                    {metrics.fcp.toFixed(0)}ms
                   </div>
                 </div>
-              )}
 
-              {/* Additional Metrics */}
-              {metrics && (
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-                  <div className="bg-gray-50 p-4 rounded-lg">
-                    <h3 className="text-sm font-medium text-gray-600">Chunk Count</h3>
-                    <p className="text-xl font-bold text-gray-900">{metrics.chunkCount}</p>
-                  </div>
-                  <div className="bg-gray-50 p-4 rounded-lg">
-                    <h3 className="text-sm font-medium text-gray-600">Largest Chunk</h3>
-                    <p className="text-sm font-bold text-gray-900 truncate">{metrics.largestChunk}</p>
-                  </div>
-                  <div className="bg-gray-50 p-4 rounded-lg">
-                    <h3 className="text-sm font-medium text-gray-600">Duplicate Modules</h3>
-                    <p className="text-xl font-bold text-gray-900">{metrics.duplicateModules}</p>
-                  </div>
-                  <div className="bg-gray-50 p-4 rounded-lg">
-                    <h3 className="text-sm font-medium text-gray-600">Unused Code</h3>
-                    <p className="text-xl font-bold text-gray-900">
-                      {(metrics.unusedCode / 1024).toFixed(2)} KB
-                    </p>
+                <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-3">
+                  <div className="text-sm text-gray-600 dark:text-gray-400">Largest Contentful Paint</div>
+                  <div className={clsx('text-lg font-semibold', getMetricColor(metrics.lcp, { good: 2500, poor: 4000 }))}>
+                    {metrics.lcp.toFixed(0)}ms
                   </div>
                 </div>
-              )}
 
-              {/* Optimization Strategies */}
-              <div className="bg-gray-50 p-4 rounded-lg">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">Optimization Strategies</h3>
-                <div className="space-y-3">
-                  {strategies.map((strategy, index) => (
-                    <div key={index} className="bg-white p-4 rounded border">
-                      <div className="flex justify-between items-start mb-2">
-                        <div className="flex items-center space-x-2">
-                          <span className={`px-2 py-1 rounded text-xs font-medium ${getPriorityColor(strategy.priority)}`}>
-                            {strategy.priority.toUpperCase()}
-                          </span>
-                          <span className={`text-sm font-medium ${getImpactColor(strategy.impact)}`}>
-                            {strategy.impact.toUpperCase()} Impact
-                          </span>
-                        </div>
-                        <span className="text-xs text-gray-500 capitalize">
-                          {strategy.type.replace('-', ' ')}
-                        </span>
-                      </div>
-                      <p className="text-sm text-gray-700 mb-2">{strategy.description}</p>
-                      <p className="text-xs text-gray-500">{strategy.implementation}</p>
-                    </div>
-                  ))}
+                <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-3">
+                  <div className="text-sm text-gray-600 dark:text-gray-400">First Input Delay</div>
+                  <div className={clsx('text-lg font-semibold', getMetricColor(metrics.fid, { good: 100, poor: 300 }))}>
+                    {metrics.fid.toFixed(0)}ms
+                  </div>
+                </div>
+
+                <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-3">
+                  <div className="text-sm text-gray-600 dark:text-gray-400">Cumulative Layout Shift</div>
+                  <div className={clsx('text-lg font-semibold', getMetricColor(metrics.cls, { good: 0.1, poor: 0.25 }))}>
+                    {metrics.cls.toFixed(3)}
+                  </div>
                 </div>
               </div>
 
-              {/* Optimization Report */}
-              {report && (
-                <div className="bg-gray-50 p-4 rounded-lg">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-4">Optimization Report</h3>
-                  <pre className="text-xs text-gray-700 whitespace-pre-wrap bg-white p-4 rounded border overflow-x-auto">
-                    {report}
-                  </pre>
+              {/* Additional Metrics */}
+              {(metrics.memory || metrics.bundleSize || metrics.connection) && (
+                <div className="space-y-2">
+                  <h4 className="font-medium text-gray-700 dark:text-gray-300">Additional Metrics</h4>
+                  
+                  {metrics.memory && (
+                    <div className="flex justify-between text-sm">
+                      <span className="text-gray-600 dark:text-gray-400">Memory Usage:</span>
+                      <span className={getMetricColor(metrics.memory, { good: 50, poor: 100 })}>
+                        {metrics.memory.toFixed(1)}MB
+                      </span>
+                    </div>
+                  )}
+
+                  {metrics.bundleSize && (
+                    <div className="flex justify-between text-sm">
+                      <span className="text-gray-600 dark:text-gray-400">Bundle Size:</span>
+                      <span className="text-gray-900 dark:text-white">
+                        {(metrics.bundleSize / 1024).toFixed(1)}KB
+                      </span>
+                    </div>
+                  )}
+
+                  {metrics.connection && (
+                    <div className="flex justify-between text-sm">
+                      <span className="text-gray-600 dark:text-gray-400">Connection:</span>
+                      <span className="text-blue-500 capitalize">
+                        {metrics.connection}
+                      </span>
+                    </div>
+                  )}
                 </div>
               )}
+            </div>
 
-              {/* Action Buttons */}
-              <div className="flex space-x-4">
-                <button
-                  onClick={loadPerformanceData}
-                  className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors"
-                >
-                  Refresh Analysis
-                </button>
-                <button
-                  onClick={() => {
-                    navigator.clipboard.writeText(report);
-                    alert('Report copied to clipboard!');
-                  }}
-                  className="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600 transition-colors"
-                >
-                  Copy Report
-                </button>
+            {/* Bundle Analysis */}
+            {showBundleAnalysis && bundleAnalysis && (
+              <div className="space-y-4">
+                <h3 className="text-lg font-medium text-gray-900 dark:text-white">Bundle Analysis</h3>
+                
+                <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
+                  <div className="grid grid-cols-2 gap-4 mb-4">
+                    <div>
+                      <div className="text-sm text-gray-600 dark:text-gray-400">Total Size</div>
+                      <div className="text-lg font-semibold text-gray-900 dark:text-white">
+                        {(bundleAnalysis.totalSize / 1024).toFixed(1)}KB
+                      </div>
+                    </div>
+                    <div>
+                      <div className="text-sm text-gray-600 dark:text-gray-400">Gzipped Size</div>
+                      <div className="text-lg font-semibold text-gray-900 dark:text-white">
+                        {(bundleAnalysis.gzipSize / 1024).toFixed(1)}KB
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="text-sm text-gray-600 dark:text-gray-400">
+                    Compression Ratio: {((bundleAnalysis.gzipSize / bundleAnalysis.totalSize) * 100).toFixed(1)}%
+                  </div>
+                </div>
+
+                <div className="space-y-2">
+                  <h4 className="font-medium text-gray-700 dark:text-gray-300">Chunks</h4>
+                  <div className="space-y-1 max-h-32 overflow-y-auto">
+                    {bundleAnalysis.chunks.map((chunk, index) => (
+                      <div key={index} className="flex justify-between text-sm">
+                        <span className="text-gray-600 dark:text-gray-400">{chunk.name}</span>
+                        <span className="text-gray-900 dark:text-white">
+                          {(chunk.size / 1024).toFixed(1)}KB
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
+
+          {/* Optimization Suggestions */}
+          {showOptimizationSuggestions && (performanceSuggestions.length > 0 || bundleSuggestions.length > 0) && (
+            <div className="mt-6 space-y-4">
+              <h3 className="text-lg font-medium text-gray-900 dark:text-white">Optimization Suggestions</h3>
+              
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                {/* Performance Suggestions */}
+                {performanceSuggestions.length > 0 && (
+                  <div className="space-y-2">
+                    <h4 className="font-medium text-gray-700 dark:text-gray-300">Performance</h4>
+                    <div className="space-y-2 max-h-40 overflow-y-auto">
+                      {performanceSuggestions.slice(0, 5).map((suggestion, index) => (
+                        <div key={index} className="flex items-start gap-2 text-sm">
+                          <span className="text-lg">{getSuggestionIcon(suggestion.type)}</span>
+                          <div className="flex-1">
+                            <p className={clsx('font-medium', getSuggestionColor(suggestion.type))}>
+                              {suggestion.message}
+                            </p>
+                            {suggestion.action && (
+                              <p className="text-gray-500 dark:text-gray-400 text-xs mt-1">
+                                {suggestion.action}
+                              </p>
+                            )}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Bundle Suggestions */}
+                {bundleSuggestions.length > 0 && (
+                  <div className="space-y-2">
+                    <h4 className="font-medium text-gray-700 dark:text-gray-300">Bundle</h4>
+                    <div className="space-y-2 max-h-40 overflow-y-auto">
+                      {bundleSuggestions.slice(0, 5).map((suggestion, index) => (
+                        <div key={index} className="flex items-start gap-2 text-sm">
+                          <span className="text-lg">{getSuggestionIcon(suggestion.type)}</span>
+                          <div className="flex-1">
+                            <p className={clsx('font-medium', getSuggestionColor(suggestion.type))}>
+                              {suggestion.message}
+                            </p>
+                            <p className="text-gray-500 dark:text-gray-400 text-xs mt-1">
+                              {suggestion.action}
+                            </p>
+                            {suggestion.estimatedSavings && (
+                              <p className="text-green-500 text-xs mt-1">
+                                Estimated savings: {(suggestion.estimatedSavings / 1024).toFixed(1)}KB
+                              </p>
+                            )}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
           )}
+        </div>
+
+        {/* Footer */}
+        <div className="flex items-center justify-between p-4 border-t border-gray-200 dark:border-gray-700">
+          <p className="text-sm text-gray-500 dark:text-gray-400">
+            Press <kbd className="px-1 py-0.5 bg-gray-100 dark:bg-gray-700 rounded text-xs">Ctrl+Shift+D</kbd> to toggle
+          </p>
+          <div className="flex gap-2">
+            <button
+              onClick={handleOptimizeAll}
+              className="px-3 py-1 bg-blue-500 text-white text-sm rounded hover:bg-blue-600 transition-colors"
+            >
+              Optimize All
+            </button>
+            <button
+              onClick={handleExportFullReport}
+              className="px-3 py-1 bg-gray-500 text-white text-sm rounded hover:bg-gray-600 transition-colors"
+            >
+              Export Report
+            </button>
+          </div>
         </div>
       </div>
     </div>
