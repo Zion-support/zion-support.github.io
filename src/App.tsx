@@ -11,7 +11,6 @@ import { initializePerformanceEnhancements } from './utils/performanceEnhancemen
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
 import RealTimeMonitor from './components/RealTimeMonitor';
 import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
-import EnhancedNotificationSystem from './components/EnhancedNotificationSystem';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import AIPerformanceDashboard from './components/AIPerformanceDashboard';
@@ -25,11 +24,7 @@ import { advancedCacheSystem } from './utils/advancedCacheSystem';
 import { AdvancedAutomationSystem } from './utils/advancedAutomationSystem';
 import { AccessibilityEnhancer } from './utils/accessibilityEnhancer';
 import { SecurityEnhancer } from './utils/securityEnhancer';
-import { useSEOData } from './components/SEOOptimizer';
-import { performanceAlerts } from './utils/performanceAlerts';
 import { errorRecoverySystem } from './utils/errorRecovery';
-import { accessibilityUtils } from './utils/accessibilityUtils';
-import { securityUtils } from './utils/securityUtils';
 import './index.css';
 import './styles/notifications.css';
 import './styles/system-metrics.css';
@@ -49,13 +44,6 @@ export default function App(): React.JSX.Element {
   const [showComprehensivePerformance, setShowComprehensivePerformance] = useState(false);
   const [showAdvancedSEO, setShowAdvancedSEO] = useState(false);
 
-  // Performance metrics state
-  const [performanceMetrics, setPerformanceMetrics] = useState({
-    memoryUsage: 0,
-    renderTime: 0,
-    networkLatency: 0,
-    errorCount: 0
-  });
 
   // Engagement tracking data
   const engagementData = useMemo(() => ({
@@ -188,18 +176,18 @@ export default function App(): React.JSX.Element {
       if ('startMonitoring' in enhancedPerformanceMonitor) {
         enhancedPerformanceMonitor.startMonitoring();
       } else if ('initialize' in enhancedPerformanceMonitor) {
-        (enhancedPerformanceMonitor as any).initialize();
+        (enhancedPerformanceMonitor as { initialize: () => void }).initialize();
       }
       enhancedAnalytics.initialize();
       advancedCacheSystem.initialize();
       new AdvancedAutomationSystem().initialize();
       const accessibilityEnhancer = new AccessibilityEnhancer();
       if ('initialize' in accessibilityEnhancer) {
-        (accessibilityEnhancer as any).initialize();
+        (accessibilityEnhancer as { initialize: () => void }).initialize();
       }
       const securityEnhancer = new SecurityEnhancer();
       if ('initialize' in securityEnhancer) {
-        (securityEnhancer as any).initialize();
+        (securityEnhancer as { initialize: () => void }).initialize();
       }
     } catch (error) {
       console.warn('Some enhancement systems failed to initialize:', error);
@@ -340,7 +328,7 @@ export default function App(): React.JSX.Element {
   }, [handleKeyDown]);
 
   // Enhanced scroll handler
-  const handleEnhancedScroll = useCallback((event: Event) => {
+  const handleEnhancedScroll = useCallback(() => {
     handleScroll();
     trackEngagement();
   }, [handleScroll, trackEngagement]);
