@@ -17,6 +17,7 @@ export interface PerformanceMetrics {
 }
 
 export class AdvancedPerformanceMonitor {
+  private static instance: AdvancedPerformanceMonitor | null = null;
   private metrics: PerformanceMetrics;
   private isMonitoring = false;
   private callbacks: ((metrics: PerformanceMetrics) => void)[] = [];
@@ -37,6 +38,13 @@ export class AdvancedPerformanceMonitor {
       scrollDepth: 0,
       interactions: 0
     };
+  }
+
+  public static getInstance(): AdvancedPerformanceMonitor {
+    if (!AdvancedPerformanceMonitor.instance) {
+      AdvancedPerformanceMonitor.instance = new AdvancedPerformanceMonitor();
+    }
+    return AdvancedPerformanceMonitor.instance;
   }
 
   public start(): void {
@@ -79,8 +87,11 @@ export class AdvancedPerformanceMonitor {
       // FID Observer
       const fidObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        entries.forEach((entry: any) => {
-          this.metrics.fid = entry.processingStart - entry.startTime;
+        entries.forEach((entry) => {
+          if (entry.entryType === 'first-input') {
+            const fidEntry = entry as PerformanceEventTiming;
+            this.metrics.fid = fidEntry.processingStart - fidEntry.startTime;
+          }
         });
       });
       fidObserver.observe({ entryTypes: ['first-input'] });
@@ -110,8 +121,10 @@ export class AdvancedPerformanceMonitor {
     
     // Update memory usage
     if ('memory' in performance) {
-      const memory = (performance as any).memory;
-      this.metrics.memoryUsage = memory.usedJSHeapSize / 1024 / 1024;
+      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory;
+      if (memory) {
+        this.metrics.memoryUsage = memory.usedJSHeapSize / 1024 / 1024;
+      }
     }
     
     // Update load time

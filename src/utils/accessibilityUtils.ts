@@ -16,7 +16,7 @@ class AccessibilityUtils {
       if (event.key === 'Tab') {
         this.handleTabNavigation(event);
       } else if (event.key === 'Escape') {
-        this.handleEscapeKey(event);
+        this.handleEscapeKey();
       }
     });
   }
@@ -43,7 +43,7 @@ class AccessibilityUtils {
     event.preventDefault();
   }
 
-  private handleEscapeKey(event: KeyboardEvent): void {
+  private handleEscapeKey(event?: KeyboardEvent): void {
     const modals = document.querySelectorAll('[role="dialog"]');
     modals.forEach(modal => {
       const closeButton = modal.querySelector('[aria-label="Close"]');

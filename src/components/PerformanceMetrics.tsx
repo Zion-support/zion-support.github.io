@@ -29,19 +29,20 @@ const PerformanceMetrics: React.FC<PerformanceMetricsProps> = ({ isVisible, onCl
       // Collect Web Vitals
       const fcp = performance.getEntriesByName('first-contentful-paint')[0]?.startTime || 0;
       const lcp = performance.getEntriesByType('largest-contentful-paint')[0]?.startTime || 0;
-      const fid = performance.getEntriesByType('first-input')[0]?.startTime || 0;
+      const fid = (performance.getEntriesByType('first-input')[0] as any)?.processingStart || 0;
       const cls = performance.getEntriesByType('layout-shift').reduce((acc, entry) => acc + (entry as PerformanceEntry & { value: number }).value, 0);
-      const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      const ttfb = navigationEntry?.responseStart || 0;
+      const navEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const ttfb = navEntry?.responseStart || 0;
 
       // Collect memory usage
       const memoryInfo = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory;
       const memoryUsage = memoryInfo ? memoryInfo.usedJSHeapSize / 1024 / 1024 : 0;
 
       // Estimate bundle size
-      const bundleSize = (performance.getEntriesByType('resource') as PerformanceResourceTiming[])
-        .filter((entry: PerformanceResourceTiming) => entry.name.includes('.js'))
-        .reduce((acc, entry: PerformanceResourceTiming) => acc + entry.transferSize, 0) / 1024;
+      const resourceEntries = performance.getEntriesByType('resource') as PerformanceResourceTiming[];
+      const bundleSize = resourceEntries
+        .filter((entry) => entry.name.includes('.js'))
+        .reduce((acc, entry) => acc + (entry.transferSize || 0), 0) / 1024;
 
       // Get network speed
       const connection = (navigator as Navigator & { connection?: { effectiveType?: string } }).connection;

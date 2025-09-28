@@ -10,6 +10,12 @@ export interface EnhancementConfig {
   enableSEOFeatures: boolean;
   enableUXFeatures: boolean;
   enableAnalytics: boolean;
+  enableAdvancedAnalytics?: boolean;
+  enablePerformanceOptimization?: boolean;
+  enableAccessibilityEnhancements?: boolean;
+  enableAutomation?: boolean;
+  enableCaching?: boolean;
+  enableSEOOptimization?: boolean;
   enableOfflineSupport: boolean;
   enablePWA: boolean;
 }
