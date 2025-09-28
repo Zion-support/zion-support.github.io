@@ -94,9 +94,6 @@ export default function App(): React.JSX.Element {
   React.useEffect(() => {
     document.addEventListener("keydown", handleKeyDown);
     
-<<<<<<< HEAD
-    // Cleanup function
-=======
     return () => {
       document.removeEventListener("keydown", handleKeyDown);
     };
@@ -144,15 +141,13 @@ export default function App(): React.JSX.Element {
 
   // Cleanup function for event listeners
   useEffect(() => {
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-18ca
     return () => {
+      window.removeEventListener('beforeunload', trackEngagement);
+      window.removeEventListener('scroll', handleScroll);
+      document.removeEventListener('click', handleClick);
       document.removeEventListener('keydown', handleKeyDown);
     };
-<<<<<<< HEAD
-  }, [handleKeyDown]);
-=======
   }, [trackEngagement, handleScroll, handleClick, handleKeyDown]);
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-18ca
 
   // Show loading screen while initializing
   if (isLoading) {
