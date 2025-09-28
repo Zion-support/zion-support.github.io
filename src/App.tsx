@@ -11,7 +11,7 @@ import PerformanceOptimizer from './components/PerformanceOptimizer';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import SEOOptimizer from './components/SEOOptimizer';
 import AIPerformanceDashboard from './components/AIPerformanceDashboard';
-import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
+// import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
 import { useSEOData } from './components/SEOOptimizer';
 // Removed unused imports to fix linting warnings
 import './index.css';
@@ -45,7 +45,7 @@ export default function App(): React.JSX.Element {
   const currentPathname = typeof window !== 'undefined' ? window.location.pathname : '/';
 
   // Initialize app with custom configuration
-  const { isLoading, loadingProgress, handleScroll, handleClick, trackEngagement } = useAppInitialization({
+  const { isLoading, loadingProgress, handleScroll, handleClick } = useAppInitialization({
     enablePerformanceMonitoring: true,
     enableAccessibility: true,
     enableSecurity: true,
@@ -55,7 +55,7 @@ export default function App(): React.JSX.Element {
   });
 
   // Performance optimization hook
-  const { preloadResource, optimizePerformance } = usePerformanceOptimization({
+  const { preloadResource } = usePerformanceOptimization({
     enablePreloading: true,
     enableResourceHints: true,
     enableCriticalCSS: true,
@@ -108,18 +108,17 @@ export default function App(): React.JSX.Element {
       scrollDepth: engagementData.scrollDepth,
       clicks: engagementData.clicks,
     });
-    trackEngagement();
-  }, [engagementData.clicks, engagementData.scrollDepth, engagementData.startTime, trackEngagement]);
+  }, [engagementData.clicks, engagementData.scrollDepth, engagementData.startTime]);
 
   // Update meta tags function
   const updateMetaTags = useCallback((data: {
     title: string;
     description: string;
     keywords: string[];
-    ogType: string;
-    ogUrl: string;
-    ogImage: string;
-    twitterCard: string;
+    ogType?: string;
+    ogUrl?: string;
+    ogImage?: string;
+    twitterCard?: string;
   }) => {
     if (typeof document !== 'undefined') {
       // Update title
@@ -192,19 +191,20 @@ export default function App(): React.JSX.Element {
 
   // Optimize performance on mount
   useEffect(() => {
-    optimizePerformance();
-  }, [optimizePerformance]);
+    // Performance optimization is handled by the usePerformanceOptimization hook
+    preloadResource('/api/health');
+  }, [preloadResource]);
 
   // Track engagement on scroll and click
   useEffect(() => {
     const handleScrollWithEngagement = () => {
       handleScroll();
-      trackEngagement();
+      enhancedTrackEngagement();
     };
 
     const handleClickWithEngagement = (event: Event) => {
       handleClick(event);
-      trackEngagement();
+      enhancedTrackEngagement();
     };
 
     window.addEventListener('scroll', handleScrollWithEngagement, { passive: true });
@@ -214,7 +214,7 @@ export default function App(): React.JSX.Element {
       window.removeEventListener('scroll', handleScrollWithEngagement);
       document.removeEventListener('click', handleClickWithEngagement);
     };
-  }, [handleScroll, handleClick, trackEngagement]);
+  }, [handleScroll, handleClick, enhancedTrackEngagement]);
 
   // Theme and preferences persistence
   useEffect(() => {
@@ -256,7 +256,7 @@ export default function App(): React.JSX.Element {
         <ModernLoadingSpinner
           size="xl"
           progress={loadingProgress}
-          message="Initializing Zion Tech Group..."
+          text="Initializing Zion Tech Group..."
         />
       </div>
     );
