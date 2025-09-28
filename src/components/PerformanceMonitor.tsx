@@ -33,7 +33,7 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     // Get Web Vitals metrics if available
     if ('web-vitals' in window) {
       // This would be populated by web-vitals library
-      const vitals = (window as any)['__webVitals'] as Record<string, number> || {};
+      const vitals = (window as { __webVitals?: Record<string, number> })['__webVitals'] || {};
       setMetrics(prev => ({
         ...prev,
         fcp: vitals.fcp || 0,
@@ -46,7 +46,7 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
     // Get memory info if available
     if ('memory' in performance) {
-      const memory = (performance as any).memory as { usedJSHeapSize: number };
+      const memory = (performance as { memory: { usedJSHeapSize: number } }).memory;
       setMetrics(prev => ({
         ...prev,
         memory: memory.usedJSHeapSize / 1024 / 1024 // Convert to MB
@@ -55,7 +55,7 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
     // Get connection info if available
     if ('connection' in navigator) {
-      const connection = (navigator as any).connection as { effectiveType: string };
+      const connection = (navigator as { connection: { effectiveType: string } }).connection;
       setMetrics(prev => ({
         ...prev,
         connection: connection.effectiveType || 'unknown'
