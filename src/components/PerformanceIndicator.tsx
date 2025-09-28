@@ -31,7 +31,7 @@ const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
     
     const measureMetrics = () => {
       const loadTime = performance.now() - startTime;
-      const memory = (performance as any).memory;
+      const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;
       
       setMetrics({
         loadTime: Math.round(loadTime),

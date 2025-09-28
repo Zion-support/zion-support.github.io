@@ -76,11 +76,6 @@ export default function App(): React.JSX.Element {
   // Performance and loading state
   const [isLoading, setIsLoading] = useState(false);
   const [loadingProgress, setLoadingProgress] = useState(0);
-  const [performanceMetrics, setPerformanceMetrics] = useState({
-    loadTime: 0,
-    renderTime: 0,
-    memoryUsage: 0
-  });
 
   // Performance monitoring
   useEffect(() => {
@@ -88,17 +83,12 @@ export default function App(): React.JSX.Element {
     
     const measurePerformance = () => {
       const loadTime = performance.now() - startTime;
-      const memory = (performance as any).memory;
+      const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;
       
-      setPerformanceMetrics({
-        loadTime: Math.round(loadTime),
-        renderTime: Math.round(performance.now() - startTime),
-        memoryUsage: memory ? Math.round(memory.usedJSHeapSize / 1024 / 1024) : 0
-      });
-
       // Log performance metrics
-      console.log('Performance Metrics:', {
+      console.debug('Performance Metrics:', {
         loadTime: `${Math.round(loadTime)}ms`,
+        renderTime: `${Math.round(performance.now() - startTime)}ms`,
         memoryUsage: memory ? `${Math.round(memory.usedJSHeapSize / 1024 / 1024)}MB` : 'N/A'
       });
     };
@@ -324,7 +314,7 @@ export default function App(): React.JSX.Element {
       setShowComprehensiveDashboard(false);
       console.debug('Keyboard shortcut used:', { shortcut: 'escape', action: 'close_modals' });
     }
-  }, []);
+  }, [addNotification]);
 
   // Engagement tracking data
   const engagementData = useMemo(() => ({
