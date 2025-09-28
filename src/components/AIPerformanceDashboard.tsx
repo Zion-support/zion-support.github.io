@@ -26,7 +26,6 @@ interface ErrorReport {
   aiPredictedImpact?: number;
   resolutionSuggestions?: string[];
   [key: string]: unknown;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5060
 }
 
 interface AIInsights {
@@ -120,15 +119,9 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
           </div>
 
           {/* AI Insights */}
-<<<<<<< HEAD
           {insights && (
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
-              <div className="bg-gray-50 p-4 rounded-lg">
-                <h3 className="text-lg font-semibold mb-3 text-gray-800">🎯 High-Risk Actions</h3>
-                <div className="space-y-2">
-          <div className="bg-blue-50 rounded-lg p-6">
-            <h3 className="text-xl font-semibold mb-4">AI Insights</h3>
-            {insights && (
+            <div className="bg-blue-50 rounded-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">AI Insights</h3>
               <div className="space-y-4">
                 <div>
                   <h4 className="font-medium text-gray-800 mb-2">Predicted High-Risk Actions</h4>
@@ -146,16 +139,6 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
                   )}
                 </div>
 
-<<<<<<< HEAD
-              <div className="bg-gray-50 p-4 rounded-lg">
-                <h3 className="text-lg font-semibold mb-3 text-gray-800">💡 AI Recommendations</h3>
-                <div className="space-y-2">
-                  {insights.recommendedImprovements && insights.recommendedImprovements.map((improvement: string, index: number) => (
-                    <div key={index} className="bg-blue-100 text-blue-800 px-3 py-2 rounded text-sm">
-                      💡 {improvement}
-                    </div>
-                  ))}
-=======
                 <div>
                   <h4 className="font-medium text-gray-800 mb-2">Recommended Improvements</h4>
                   <ul className="space-y-1">
@@ -166,11 +149,71 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
                       </li>
                     ))}
                   </ul>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5060
                 </div>
 
-<<<<<<< HEAD
-          {/* Error Trends */}
+                <div>
+                  <h4 className="font-medium text-gray-800 mb-2">Error Trends</h4>
+                  <div className="space-y-2">
+                    {insights.errorTrends.map((trend: any, index: number) => (
+                      <div key={index} className="flex items-center justify-between p-2 bg-gray-100 rounded">
+                        <span className="text-sm text-gray-700">{trend.category}</span>
+                        <div className="flex items-center space-x-2">
+                          <span className="text-sm text-gray-600">
+                            {trend.trend}
+                          </span>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* Error Reports */}
+          {errors && errors.length > 0 && (
+            <div className="bg-red-50 rounded-lg p-6">
+              <h3 className="text-xl font-semibold mb-4 text-red-800">Recent Errors</h3>
+              <div className="space-y-3">
+                {errors.slice(0, 5).map((error: any, index: number) => (
+                  <div key={index} className="bg-white p-4 rounded-lg border border-red-200">
+                    <div className="flex justify-between items-start mb-2">
+                      <span className={`px-2 py-1 rounded text-xs font-medium ${getSeverityColor(error.severity)}`}>
+                        {error.severity.toUpperCase()}
+                      </span>
+                      <span className="text-xs text-gray-500">
+                        {error.lastOccurrence}
+                      </span>
+                    </div>
+                    <p className="text-sm text-gray-700 mb-2">{error.message}</p>
+                    {error.context && (
+                      <div className="text-xs text-gray-500">
+                        <span className="font-medium">Context:</span> {error.context.component || 'Unknown'} - {error.context.action || 'Unknown'}
+                      </div>
+                    )}
+                    {error.resolutionSuggestions && error.resolutionSuggestions.length > 0 && (
+                      <div className="mt-2">
+                        <span className="text-xs font-medium text-gray-600">Suggestions:</span>
+                        <ul className="mt-1 space-y-1">
+                          {error.resolutionSuggestions.map((suggestion: string, suggestionIndex: number) => (
+                            <li key={suggestionIndex} className="text-xs text-gray-600 flex items-start">
+                              <span className="w-1 h-1 bg-gray-400 rounded-full mr-2 mt-2"></span>
+                              {suggestion}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+};
           {insights?.errorTrends && (
             <div className="bg-gray-50 p-4 rounded-lg mb-8">
               <h3 className="text-lg font-semibold mb-3 text-gray-800">📊 Error Trends (7 days)</h3>
@@ -256,7 +299,6 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
                         </div>
                       </div>
                     ))}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5060
                   </div>
                 </div>
               </div>

@@ -295,8 +295,6 @@ export default function App(): React.JSX.Element {
       console.error('Error initializing enhancements:', error);
     }
   }, [trackEngagement, handleKeyDown, handleScroll, handleClick, enhancedTrackEngagement]);
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5060
   if (isLoading) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -396,7 +394,6 @@ export default function App(): React.JSX.Element {
             </div>
           </div>
         )}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5060
       </div>
     </EnhancedErrorBoundary>
   );
