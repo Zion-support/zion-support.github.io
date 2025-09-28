@@ -27,6 +27,8 @@ const PerformanceWidget = lazy(() => import('./components/PerformanceWidget'));
 const CommandPalette = lazy(() => import('./components/CommandPalette'));
 const AdvancedMonitoringDashboard = lazy(() => import('./components/AdvancedMonitoringDashboard'));
 const ComprehensivePerformanceDashboard = lazy(() => import('./components/ComprehensivePerformanceDashboard'));
+const ComprehensiveMonitoringDashboard = lazy(() => import('./components/ComprehensiveMonitoringDashboard'));
+const PerformanceOptimizationPanel = lazy(() => import('./components/PerformanceOptimizationPanel'));
 
 export default function App(): React.JSX.Element {
   const navigate = useNavigate();
@@ -41,6 +43,7 @@ export default function App(): React.JSX.Element {
   const [showCommandPalette, setShowCommandPalette] = useState(false);
   const [showAdvancedMonitoring, setShowAdvancedMonitoring] = useState(false);
   const [showComprehensiveDashboard, setShowComprehensiveDashboard] = useState(false);
+  const [showComprehensiveMonitoring, setShowComprehensiveMonitoring] = useState(false);
   // const [showPerformanceDashboard, setShowPerformanceDashboard] = useState(false);
 
   // Notification management
@@ -202,6 +205,11 @@ export default function App(): React.JSX.Element {
       event.preventDefault();
       setShowComprehensiveDashboard((prev: boolean) => !prev);
       seoAnalytics.trackEvent('keyboard_shortcut', { shortcut: 'cmd+shift+c', action: 'toggle_comprehensive_dashboard' });
+    }
+    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'M') {
+      event.preventDefault();
+      setShowComprehensiveMonitoring((prev: boolean) => !prev);
+      seoAnalytics.trackEvent('keyboard_shortcut', { shortcut: 'cmd+shift+m', action: 'toggle_comprehensive_monitoring' });
     }
     // Performance dashboard toggle removed - state variable not defined
     if ((event.ctrlKey || event.metaKey) && event.key === 'k') {
@@ -514,6 +522,17 @@ export default function App(): React.JSX.Element {
             <ComprehensivePerformanceDashboard />
           </Suspense>
         )}
+
+        {showComprehensiveMonitoring && (
+          <Suspense fallback={<ModernLoadingSpinner />}>
+            <ComprehensiveMonitoringDashboard />
+          </Suspense>
+        )}
+
+        {/* Performance Optimization Panel */}
+        <Suspense fallback={null}>
+          <PerformanceOptimizationPanel />
+        </Suspense>
 
         {/* Theme Toggle Button */}
         <button
