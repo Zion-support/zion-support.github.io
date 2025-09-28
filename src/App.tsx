@@ -1,28 +1,16 @@
-import React, { useEffect, useCallback, useState, useMemo } from 'react';
+import React, { useEffect, useCallback, useMemo } from 'react';
 import { AppRouter } from './router';
 import { useAppInitialization } from './hooks/useAppInitialization';
 import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
-import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
-import PerformanceOptimizer from './components/PerformanceOptimizer';
 import './index.css';
 
 // Import utility modules
 import { seoAnalytics, performanceSEO } from './utils/seoEnhanced';
 import { analytics } from './utils/analytics';
-import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
-import { enhancedAnalytics } from './utils/enhancedAnalytics';
-import { advancedCacheSystem } from './utils/advancedCacheSystem';
-import { advancedAutomationSystem } from './utils/advancedAutomationSystem';
-import { AccessibilityEnhancer } from './utils/accessibilityEnhancer';
-import { SecurityEnhancer } from './utils/securityEnhancer';
-import AdvancedPerformanceMonitor from './utils/advancedPerformanceMonitor';
 
 export default function App(): React.JSX.Element {
-  // State for system dashboard and performance optimizer
-  const [showSystemDashboard, setShowSystemDashboard] = useState(false);
-  const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
 
   // Engagement tracking data
   const engagementData = useMemo(() => ({
@@ -32,7 +20,7 @@ export default function App(): React.JSX.Element {
   }), []);
 
   // Simple SEO manager
-  const seoManager = {
+  const seoManager = useMemo(() => ({
     updateMetaTags: (data: typeof seoData) => {
       if (typeof document !== 'undefined') {
         document.title = data.title;
@@ -42,7 +30,7 @@ export default function App(): React.JSX.Element {
         }
       }
     }
-  };
+  }), []);
 
   // Initialize app with custom configuration
   const { isLoading, loadingProgress, handleScroll, handleClick, trackEngagement } = useAppInitialization({
@@ -174,7 +162,7 @@ export default function App(): React.JSX.Element {
       window.removeEventListener('scroll', handleScroll);
       document.removeEventListener('click', handleClick);
     };
-  }, [seoData, handleKeyDown, handleScroll, handleClick, trackEngagement]);
+  }, [seoData, handleKeyDown, handleScroll, handleClick, trackEngagement, enhancedTrackEngagement]);
 
   // Show loading screen while initializing
   if (isLoading) {
