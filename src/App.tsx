@@ -72,6 +72,22 @@ import { securityUtils } from './utils/securityUtils';
 // import { getKeyboardShortcuts } from './utils/advancedKeyboardShortcuts';
 // import { getDataVisualization } from './utils/advancedDataVisualization';
 // import { useAppInitialization } from './hooks/useAppInitialization';
+import { enhancedSecurityManager } from './utils/enhancedSecurityManager';
+import { initializePerformanceEnhancements } from './utils/performanceEnhancements';
+import { initializeAccessibilityEnhancements } from './utils/accessibilityEnhancements';
+import { advancedPerformanceOptimizer } from './utils/advancedPerformanceOptimizer';
+import { advancedSEOOptimizer } from './utils/advancedSEOOptimizer';
+import { advancedAccessibilityEnhancer } from './utils/advancedAccessibilityEnhancer';
+import { advancedSecurityManager } from './utils/advancedSecurityManager';
+import { advancedAnalytics } from './utils/advancedAnalytics';
+import { advancedErrorHandler } from './utils/advancedErrorHandler';
+import { advancedCachingSystem } from './utils/advancedCachingSystem';
+import { advancedUXOptimizer } from './utils/advancedUXOptimizer';
+import { advancedTestingFramework } from './utils/advancedTestingFramework';
+import { advancedI18n } from './utils/advancedI18n';
+import AdvancedAnalyticsDashboard from './components/AdvancedAnalyticsDashboard';
+import PerformanceMetricsDashboard from './components/PerformanceMetricsDashboard';
+import ComprehensiveImprovements from './components/ComprehensiveImprovements';
 import './index.css';
 
 export default function App(): React.JSX.Element {
@@ -85,14 +101,14 @@ export default function App(): React.JSX.Element {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [showKeyboardHelp, setShowKeyboardHelp] = useState(false);
   const [showCommandPalette, setShowCommandPalette] = useState(false);
-  const [showAdvancedMonitoring, setShowAdvancedMonitoring] = useState(false);
-  const [showComprehensiveDashboard, setShowComprehensiveDashboard] = useState(false);
+  // const [showAdvancedMonitoring, setShowAdvancedMonitoring] = useState(false);
+  // const [showComprehensiveDashboard, setShowComprehensiveDashboard] = useState(false);
   const [showComprehensiveMonitoring, setShowComprehensiveMonitoring] = useState(false);
   const [showRealTimePerformance, setShowRealTimePerformance] = useState(false);
   const [showEnhancedCommandPalette, setShowEnhancedCommandPalette] = useState(false);
   const [showSystemStatus, setShowSystemStatus] = useState(true);
   const [showEnhancedNotifications] = useState(true);
-  const [showKeyboardShortcutsManager, setShowKeyboardShortcutsManager] = useState(false);
+  // const [showKeyboardShortcutsManager, setShowKeyboardShortcutsManager] = useState(false);
   const [showPerformanceWidget, setShowPerformanceWidget] = useState(false);
   const [showSystemHealth, setShowSystemHealth] = useState(false);
   const [notifications, setNotifications] = useState<Notification[]>([]);
@@ -462,7 +478,7 @@ export default function App(): React.JSX.Element {
   const trackEngagement = useCallback(() => {
     // Track user engagement metrics
     if (analytics && 'track' in analytics) {
-      (analytics as any).track('engagement', {
+      (analytics as { track: (event: string, data: Record<string, unknown>) => void }).track('engagement', {
         scrollDepth: engagementData.scrollDepth,
         clicks: engagementData.clicks,
         timeOnPage: Date.now() - engagementData.startTime
@@ -471,14 +487,14 @@ export default function App(): React.JSX.Element {
   }, [engagementData]);
 
   // Handle scroll events
-  const handleScrollEngagement = useCallback(() => {
-    engagementData.scrollDepth = Math.max(engagementData.scrollDepth, window.scrollY / (document.documentElement.scrollHeight - window.innerHeight) * 100);
-  }, [engagementData]);
+  // const handleScrollEngagement = useCallback(() => {
+  //   engagementData.scrollDepth = Math.max(engagementData.scrollDepth, window.scrollY / (document.documentElement.scrollHeight - window.innerHeight) * 100);
+  // }, [engagementData]);
 
   // Handle click events
-  const handleClickEngagement = useCallback(() => {
-    engagementData.clicks++;
-  }, [engagementData]);
+  // const handleClickEngagement = useCallback(() => {
+  //   engagementData.clicks++;
+  // }, [engagementData]);
 
   // Initialize app with custom configuration
   // Temporarily disable useAppInitialization to fix build
@@ -601,6 +617,86 @@ export default function App(): React.JSX.Element {
       // Initialize individual enhancement systems
       if (enhancedPerformanceMonitor && typeof enhancedPerformanceMonitor.initialize === 'function') {
         enhancedPerformanceMonitor.initialize();
+      }
+      
+      // Initialize enhanced systems
+      enhancedPerformanceMonitor.startMonitoring();
+      analytics.initialize();
+      
+      // Initialize accessibility and security enhancers
+      if (advancedAccessibilityEnhancer && typeof advancedAccessibilityEnhancer.initialize === 'function') {
+        advancedAccessibilityEnhancer.initialize();
+      }
+      if (enhancedSecurityManager && typeof enhancedSecurityManager.initialize === 'function') {
+        enhancedSecurityManager.initialize();
+      }
+      
+      // Initialize new performance and accessibility enhancements
+      initializePerformanceEnhancements();
+      initializeAccessibilityEnhancements();
+      
+      // Initialize advanced optimizers
+      advancedPerformanceOptimizer.initialize();
+      advancedSEOOptimizer.initialize();
+      advancedAccessibilityEnhancer.initialize();
+      advancedSecurityManager.initialize();
+      advancedAnalytics.initialize();
+      advancedErrorHandler.initialize();
+      advancedCachingSystem.initialize();
+      advancedUXOptimizer.initialize();
+      advancedTestingFramework.initialize();
+      advancedI18n.initialize();
+      
+      // Store enhancements globally for debugging
+      (window as unknown as Record<string, unknown>).enhancements = enhancements;
+      (window as unknown as Record<string, unknown>).performanceOptimizer = advancedPerformanceOptimizer;
+      (window as unknown as Record<string, unknown>).seoOptimizer = advancedSEOOptimizer;
+      (window as unknown as Record<string, unknown>).accessibilityEnhancer = advancedAccessibilityEnhancer;
+      (window as unknown as Record<string, unknown>).securityManager = advancedSecurityManager;
+      (window as unknown as Record<string, unknown>).analytics = advancedAnalytics;
+      (window as unknown as Record<string, unknown>).errorHandler = advancedErrorHandler;
+      (window as unknown as Record<string, unknown>).cachingSystem = advancedCachingSystem;
+      (window as unknown as Record<string, unknown>).uxOptimizer = advancedUXOptimizer;
+      (window as unknown as Record<string, unknown>).testingFramework = advancedTestingFramework;
+      (window as unknown as Record<string, unknown>).i18n = advancedI18n;
+    } catch (error) {
+      console.error('Error initializing enhancements:', error);
+    }
+  }, []);
+
+  // Optimized keyboard handler for system dashboard toggle
+  const handleKeyDown = useCallback((event: KeyboardEvent) => {
+    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'D') {
+      event.preventDefault();
+      setShowSystemDashboard((prev: boolean) => !prev);
+    }
+    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'P') {
+      event.preventDefault();
+      setShowPerformanceOptimizer((prev: boolean) => !prev);
+    }
+    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'M') {
+      event.preventDefault();
+      setShowPerformanceMonitor(prev => !prev);
+    }
+  }, []);
+
+  useEffect(() => {
+    try {
+      // Add performance marks for better monitoring
+      if (typeof window !== 'undefined' && window.performance && typeof performance.mark === 'function') {
+        performance.mark('app-init-start');
+        
+        // Add performance observer for better monitoring
+        if ('PerformanceObserver' in window) {
+          const observer = new PerformanceObserver((list) => {
+            for (const entry of list.getEntries()) {
+              if (entry.entryType === 'navigation') {
+                console.log('Navigation timing:', entry);
+              }
+            }
+          });
+          observer.observe({ entryTypes: ['navigation', 'paint', 'largest-contentful-paint'] });
+        }
       }
       
       // Initialize analytics
@@ -871,7 +967,7 @@ export default function App(): React.JSX.Element {
       window.removeEventListener('scroll', handleScrollWithEngagement);
       document.removeEventListener('click', handleClickWithEngagement);
     };
-  }, [handleScrollEngagement, handleClickEngagement, trackEngagement]);
+  }, [handleScroll, handleClick, trackEngagement]);
 
   if (isLoading) {
     return <ModernLoadingSpinner progress={loadingProgress} />;
@@ -995,7 +1091,7 @@ export default function App(): React.JSX.Element {
             <div className="space-y-2 text-sm">
               <div className="flex justify-between">
                 <span>Memory Usage:</span>
-                <span className="text-green-400">{Math.round(((performance as any).memory?.usedJSHeapSize || 0) / 1024 / 1024)} MB</span>
+                <span className="text-green-400">{Math.round(((performance as { memory?: { usedJSHeapSize?: number } }).memory?.usedJSHeapSize || 0) / 1024 / 1024)} MB</span>
               </div>
               <div className="flex justify-between">
                 <span>Render Time:</span>
