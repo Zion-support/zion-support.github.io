@@ -5,8 +5,10 @@
 
 // Speech Recognition API types
 interface SpeechRecognitionConstructor {
-  new (): SpeechRecognition;
+  new (): any; // Use any to avoid type conflicts
 }
+
+// Speech Recognition types are handled by the browser's built-in types
 
 interface ExtendedWindow extends Window {
   SpeechRecognition?: SpeechRecognitionConstructor;
@@ -602,6 +604,7 @@ class EnhancedAccessibilityManager {
    */
   private setupSpeechRecognition(): void {
     const SpeechRecognition = (window as ExtendedWindow).SpeechRecognition || (window as ExtendedWindow).webkitSpeechRecognition;
+    if (!SpeechRecognition) return;
     const recognition = new SpeechRecognition();
     
     recognition.continuous = false;
