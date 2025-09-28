@@ -1,336 +1,217 @@
-import React, { useEffect, useState, useCallback } from "react";
-import { clsx } from "clsx";
-import { performanceOptimizer } from "../utils/performanceOptimizer";
-import {
-  PerformanceMetrics,
-  OptimizationSuggestion,
-} from "../types/comprehensive";
+import React, { useState, useEffect, useCallback } from 'react';
 
-interface EnhancedPerformanceMonitorProps {
-  className?: string;
-  showDetails?: boolean;
-  showSuggestions?: boolean;
+interface PerformanceMetrics {
+  fcp: number;
+  lcp: number;
+  fid: number;
+  cls: number;
+  ttfb: number;
+  memoryUsage: number;
+  bundleSize: number;
 }
 
-export const EnhancedPerformanceMonitor: React.FC<
-  EnhancedPerformanceMonitorProps
-> = ({ className, showDetails = false, showSuggestions = true }) => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    fcp: 0,
-    lcp: 0,
-    fid: 0,
-    cls: 0,
-    ttfb: 0,
-    memory: {
-      used: 0,
-      total: 0,
-      limit: 0,
-    },
-  });
+interface EnhancedPerformanceMonitorProps {
+  showDashboard: boolean;
+  onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
+}
 
-  const [suggestions, setSuggestions] = useState<OptimizationSuggestion[]>([]);
+const EnhancedPerformanceMonitor: React.FC<EnhancedPerformanceMonitorProps> = ({ 
+  showDashboard, 
+  onMetricsUpdate 
+}) => {
+  const [metrics, setMetrics] = useState<Partial<PerformanceMetrics>>({});
   const [isVisible, setIsVisible] = useState(false);
-  const [isMonitoring, setIsMonitoring] = useState(false);
+  const [performanceScore, setPerformanceScore] = useState<number>(0);
 
   const updateMetrics = useCallback(() => {
-    const newMetrics = performanceOptimizer.getMetrics();
-    setMetrics(newMetrics);
+    const newMetrics: Partial<PerformanceMetrics> = {};
 
-    if (showSuggestions) {
-      const newSuggestions = performanceOptimizer.getSuggestions();
-      setSuggestions(newSuggestions);
+    // Get performance metrics
+    if (typeof window !== 'undefined' && window.performance) {
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      if (navigation) {
+        newMetrics.ttfb = navigation.responseStart - navigation.requestStart;
+      }
+
+      // Get memory usage
+      if ('memory' in performance) {
+        const memory = (performance as any).memory;
+        newMetrics.memoryUsage = memory.usedJSHeapSize;
+      }
     }
-  }, [showSuggestions]);
+
+    setMetrics(prev => ({ ...prev, ...newMetrics }));
+    if (onMetricsUpdate) {
+      onMetricsUpdate(newMetrics as PerformanceMetrics);
+    }
+  }, [onMetricsUpdate]);
+
+  const calculatePerformanceScore = useCallback(() => {
+    const scores = [];
+    
+    // FCP score (First Contentful Paint)
+    if (metrics.fcp) {
+      if (metrics.fcp <= 1800) scores.push(100);
+      else if (metrics.fcp <= 3000) scores.push(75);
+      else scores.push(50);
+    }
+    
+    // LCP score (Largest Contentful Paint)
+    if (metrics.lcp) {
+      if (metrics.lcp <= 2500) scores.push(100);
+      else if (metrics.lcp <= 4000) scores.push(75);
+      else scores.push(50);
+    }
+    
+    // FID score (First Input Delay)
+    if (metrics.fid) {
+      if (metrics.fid <= 100) scores.push(100);
+      else if (metrics.fid <= 300) scores.push(75);
+      else scores.push(50);
+    }
+    
+    // CLS score (Cumulative Layout Shift)
+    if (metrics.cls !== undefined) {
+      if (metrics.cls <= 0.1) scores.push(100);
+      else if (metrics.cls <= 0.25) scores.push(75);
+      else scores.push(50);
+    }
+    
+    const averageScore = scores.length > 0 ? scores.reduce((a, b) => a + b, 0) / scores.length : 0;
+    setPerformanceScore(averageScore);
+  }, [metrics]);
 
   useEffect(() => {
-    // Start monitoring
-    performanceOptimizer.startMonitoring();
-    setIsMonitoring(true);
+    calculatePerformanceScore();
+  }, [calculatePerformanceScore]);
 
-    // Initial metrics collection
-    updateMetrics();
+  useEffect(() => {
+    if (!showDashboard) return;
 
-    // Set up periodic updates
-    const interval = setInterval(updateMetrics, 5000);
+    const observer = new PerformanceObserver((list) => {
+      for (const entry of list.getEntries()) {
+        switch (entry.entryType) {
+          case 'paint':
+            if (entry.name === 'first-contentful-paint') {
+              setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
+            }
+            break;
+          case 'largest-contentful-paint':
+            setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
+            break;
+          case 'first-input': {
+            const fidEntry = entry as PerformanceEntry & { processingStart: number };
+            setMetrics(prev => ({ ...prev, fid: fidEntry.processingStart - entry.startTime }));
+            break;
+          }
+          case 'layout-shift': {
+            const layoutShiftEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
+            if (!layoutShiftEntry.hadRecentInput) {
+              setMetrics(prev => ({ 
+                ...prev, 
+                cls: (prev.cls || 0) + (layoutShiftEntry.value || 0) 
+              }));
+            }
+            break;
+          }
+        }
+      }
+    });
+
+    try {
+      observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift'] });
+    } catch (error) {
+      console.warn('Performance observer not supported:', error);
+    }
+
+    // Update metrics periodically
+    const interval = setInterval(updateMetrics, 1000);
 
     return () => {
+      observer.disconnect();
       clearInterval(interval);
-      performanceOptimizer.stopMonitoring();
-      setIsMonitoring(false);
     };
-  }, [updateMetrics]);
+  }, [showDashboard, updateMetrics]);
 
-  // Keyboard shortcut to toggle visibility
-  useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.ctrlKey && event.shiftKey && event.key === "P") {
-        event.preventDefault();
-        setIsVisible((prev) => !prev);
-      }
-    };
+  if (!showDashboard) return null;
 
-    window.addEventListener("keydown", handleKeyDown);
-    return () => window.removeEventListener("keydown", handleKeyDown);
-  }, []);
-
-  const getMetricColor = (
-    value: number,
-    thresholds: { good: number; poor: number },
-  ) => {
-    if (value <= thresholds.good) return "text-green-500";
-    if (value <= thresholds.poor) return "text-yellow-500";
-    return "text-red-500";
+  const getScoreColor = (score: number) => {
+    if (score >= 90) return 'text-green-500';
+    if (score >= 70) return 'text-yellow-500';
+    return 'text-red-500';
   };
-
-  const getSuggestionIcon = (type: string) => {
-    switch (type) {
-      case "critical":
-        return "🚨";
-      case "warning":
-        return "⚠️";
-      case "info":
-        return "ℹ️";
-      default:
-        return "📊";
-    }
-  };
-
-  const getSuggestionColor = (type: string) => {
-    switch (type) {
-      case "critical":
-        return "text-red-500";
-      case "warning":
-        return "text-yellow-500";
-      case "info":
-        return "text-blue-500";
-      default:
-        return "text-gray-500";
-    }
-  };
-
-  const handleOptimize = () => {
-    // Clear suggestions and restart monitoring
-    performanceOptimizer.clearSuggestions();
-    setSuggestions([]);
-    updateMetrics();
-  };
-
-  const handleExportReport = () => {
-    const report = performanceOptimizer.generateReport();
-    const blob = new Blob([report], { type: "text/plain" });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = `performance-report-${new Date().toISOString().split("T")[0]}.txt`;
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
-  };
-
-  if (!isVisible && !showDetails) {
-    return null;
-  }
 
   return (
-    <div
-      className={clsx(
-        "fixed top-4 right-4 bg-white dark:bg-gray-800 rounded-lg shadow-lg p-4 border border-gray-200 dark:border-gray-700 z-50 min-w-[300px] max-w-[400px]",
-        className,
-      )}
-    >
-      <div className="flex items-center justify-between mb-3">
-        <h3 className="text-sm font-semibold text-gray-900 dark:text-white">
-          Enhanced Performance Monitor
-        </h3>
-        <div className="flex items-center gap-2">
-          <div
-            className={clsx(
-              "w-2 h-2 rounded-full",
-              isMonitoring ? "bg-green-500" : "bg-red-500",
-            )}
-          />
-          <button
-            onClick={() => setIsVisible(false)}
-            className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
-          >
-            <svg
-              className="w-4 h-4"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M6 18L18 6M6 6l12 12"
-              />
-            </svg>
-          </button>
+    <div className="fixed bottom-4 right-4 bg-black bg-opacity-90 text-white p-4 rounded-lg max-w-sm border border-gray-600">
+      <div className="flex justify-between items-center mb-3">
+        <h3 className="text-sm font-bold">Enhanced Performance Monitor</h3>
+        <button
+          onClick={() => setIsVisible(!isVisible)}
+          className="text-xs text-gray-400 hover:text-white transition-colors"
+        >
+          {isVisible ? '−' : '+'}
+        </button>
+      </div>
+      
+      {/* Performance Score */}
+      <div className="mb-3">
+        <div className="flex items-center justify-between">
+          <span className="text-xs text-gray-300">Performance Score</span>
+          <span className={`text-sm font-bold ${getScoreColor(performanceScore)}`}>
+            {performanceScore.toFixed(0)}/100
+          </span>
+        </div>
+        <div className="w-full bg-gray-700 rounded-full h-2 mt-1">
+          <div 
+            className={`h-2 rounded-full transition-all duration-300 ${
+              performanceScore >= 90 ? 'bg-green-500' : 
+              performanceScore >= 70 ? 'bg-yellow-500' : 'bg-red-500'
+            }`}
+            style={{ width: `${performanceScore}%` }}
+          ></div>
         </div>
       </div>
-
-      {/* Core Web Vitals */}
-      <div className="space-y-2 text-sm mb-4">
-        <h4 className="font-medium text-gray-700 dark:text-gray-300">
-          Core Web Vitals
-        </h4>
-
-        <div className="flex justify-between">
-          <span className="text-gray-600 dark:text-gray-400">FCP:</span>
-          <span
-            className={getMetricColor(metrics.fcp, { good: 1800, poor: 3000 })}
-          >
-            {metrics.fcp.toFixed(0)}ms
-          </span>
-        </div>
-
-        <div className="flex justify-between">
-          <span className="text-gray-600 dark:text-gray-400">LCP:</span>
-          <span
-            className={getMetricColor(metrics.lcp, { good: 2500, poor: 4000 })}
-          >
-            {metrics.lcp.toFixed(0)}ms
-          </span>
-        </div>
-
-        <div className="flex justify-between">
-          <span className="text-gray-600 dark:text-gray-400">FID:</span>
-          <span
-            className={getMetricColor(metrics.fid, { good: 100, poor: 300 })}
-          >
-            {metrics.fid.toFixed(0)}ms
-          </span>
-        </div>
-
-        <div className="flex justify-between">
-          <span className="text-gray-600 dark:text-gray-400">CLS:</span>
-          <span
-            className={getMetricColor(metrics.cls, { good: 0.1, poor: 0.25 })}
-          >
-            {metrics.cls.toFixed(3)}
-          </span>
-        </div>
-
-        <div className="flex justify-between">
-          <span className="text-gray-600 dark:text-gray-400">TTFB:</span>
-          <span
-            className={getMetricColor(metrics.ttfb, { good: 800, poor: 1800 })}
-          >
-            {metrics.ttfb.toFixed(0)}ms
-          </span>
-        </div>
-      </div>
-
-      {/* Additional Metrics */}
-      {metrics.memory && (
-        <div className="space-y-2 text-sm mb-4">
-          <h4 className="font-medium text-gray-700 dark:text-gray-300">
-            Additional Metrics
-          </h4>
-
-          {metrics.memory && (
-            <div className="flex justify-between">
-              <span className="text-gray-600 dark:text-gray-400">Memory:</span>
-              <span
-                className={getMetricColor(metrics.memory.used, {
-                  good: 50,
-                  poor: 100,
-                })}
-              >
-                {metrics.memory.used.toFixed(1)}MB
-              </span>
-            </div>
-          )}
-
-          {metrics.loadTime && metrics.loadTime > 0 && (
-            <div className="flex justify-between">
-              <span className="text-gray-600 dark:text-gray-400">
-                Load Time:
-              </span>
-              <span className="text-gray-900 dark:text-white">
-                {metrics.loadTime.toFixed(0)}ms
-              </span>
-            </div>
-          )}
-
-          {metrics.renderTime && metrics.renderTime > 0 && (
-            <div className="flex justify-between">
-              <span className="text-gray-600 dark:text-gray-400">
-                Render Time:
-              </span>
-              <span className="text-blue-500">
-                {metrics.renderTime.toFixed(0)}ms
-              </span>
-            </div>
-          )}
-        </div>
-      )}
-
-      {/* Optimization Suggestions */}
-      {showSuggestions && suggestions.length > 0 && (
-        <div className="space-y-2 text-sm mb-4">
-          <h4 className="font-medium text-gray-700 dark:text-gray-300">
-            Optimization Suggestions
-          </h4>
-          <div className="max-h-32 overflow-y-auto space-y-1">
-            {suggestions.slice(0, 3).map((suggestion, index) => (
-              <div key={index} className="flex items-start gap-2 text-xs">
-                <span className="text-lg">
-                  {getSuggestionIcon(suggestion.category)}
-                </span>
-                <div className="flex-1">
-                  <p
-                    className={clsx(
-                      "font-medium",
-                      getSuggestionColor(suggestion.category),
-                    )}
-                  >
-                    {suggestion.message}
-                  </p>
-                  {suggestion.action && (
-                    <p className="text-gray-500 dark:text-gray-400 mt-1">
-                      {suggestion.action}
-                    </p>
-                  )}
-                </div>
-              </div>
-            ))}
-            {suggestions.length > 3 && (
-              <p className="text-xs text-gray-500 dark:text-gray-400">
-                +{suggestions.length - 3} more suggestions
-              </p>
-            )}
+      
+      {isVisible && (
+        <div className="space-y-2 text-xs">
+          <div className="flex justify-between">
+            <span>FCP:</span>
+            <span className={metrics.fcp && metrics.fcp <= 1800 ? 'text-green-400' : 'text-yellow-400'}>
+              {metrics.fcp?.toFixed(0) || 'N/A'}ms
+            </span>
+          </div>
+          <div className="flex justify-between">
+            <span>LCP:</span>
+            <span className={metrics.lcp && metrics.lcp <= 2500 ? 'text-green-400' : 'text-yellow-400'}>
+              {metrics.lcp?.toFixed(0) || 'N/A'}ms
+            </span>
+          </div>
+          <div className="flex justify-between">
+            <span>FID:</span>
+            <span className={metrics.fid && metrics.fid <= 100 ? 'text-green-400' : 'text-yellow-400'}>
+              {metrics.fid?.toFixed(0) || 'N/A'}ms
+            </span>
+          </div>
+          <div className="flex justify-between">
+            <span>CLS:</span>
+            <span className={metrics.cls && metrics.cls <= 0.1 ? 'text-green-400' : 'text-yellow-400'}>
+              {metrics.cls?.toFixed(3) || 'N/A'}
+            </span>
+          </div>
+          <div className="flex justify-between">
+            <span>TTFB:</span>
+            <span className={metrics.ttfb && metrics.ttfb <= 600 ? 'text-green-400' : 'text-yellow-400'}>
+              {metrics.ttfb?.toFixed(0) || 'N/A'}ms
+            </span>
+          </div>
+          <div className="flex justify-between">
+            <span>Memory:</span>
+            <span className={metrics.memoryUsage && metrics.memoryUsage / 1024 / 1024 <= 50 ? 'text-green-400' : 'text-yellow-400'}>
+              {metrics.memoryUsage ? (metrics.memoryUsage / 1024 / 1024).toFixed(1) + 'MB' : 'N/A'}
+            </span>
           </div>
         </div>
       )}
-
-      {/* Action Buttons */}
-      <div className="flex gap-2 text-xs">
-        <button
-          onClick={handleOptimize}
-          className="px-2 py-1 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors"
-        >
-          Optimize
-        </button>
-        <button
-          onClick={handleExportReport}
-          className="px-2 py-1 bg-gray-500 text-white rounded hover:bg-gray-600 transition-colors"
-        >
-          Export Report
-        </button>
-      </div>
-
-      <div className="mt-3 pt-2 border-t border-gray-200 dark:border-gray-700">
-        <p className="text-xs text-gray-500 dark:text-gray-400">
-          Press{" "}
-          <kbd className="px-1 py-0.5 bg-gray-100 dark:bg-gray-700 rounded text-xs">
-            Ctrl+Shift+P
-          </kbd>{" "}
-          to toggle
-        </p>
-      </div>
     </div>
   );
 };

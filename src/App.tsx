@@ -61,7 +61,6 @@ const ErrorRecoveryDashboard = lazy(() => import('./components/ErrorRecoveryDash
 // import AdvancedPerformanceDashboard from './components/AdvancedPerformanceDashboard';
 import WebsiteEnhancements from './components/WebsiteEnhancements';
 import SEOOptimizer from './components/SEOOptimizer';
-// import { useSEOData } from './components/SEOOptimizer';
 // import EnhancedAnalytics from './components/EnhancedAnalytics';
 import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
 import { performanceAlerts } from './utils/performanceAlerts';
@@ -360,7 +359,7 @@ export default function App(): React.JSX.Element {
     }
   }, [seoData.title, seoData.description, seoData.keywords, seoData.canonicalUrl, seoData.ogImage, seoData.ogType, seoData.twitterCard]);
 
-  // Optimized keyboard handler for system dashboard toggle
+  // Optimized keyboard handler for system dashboard toggle (moved to useEffect below)
   // const handleKeyDown = useCallback((event: KeyboardEvent) => {
   //   if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'D') {
   //     event.preventDefault();
@@ -462,7 +461,7 @@ export default function App(): React.JSX.Element {
   const trackEngagement = useCallback(() => {
     // Track user engagement metrics
     if (analytics && 'track' in analytics) {
-      (analytics as any).track('engagement', {
+      (analytics as { track: (event: string, data: Record<string, unknown>) => void }).track('engagement', {
         scrollDepth: engagementData.scrollDepth,
         clicks: engagementData.clicks,
         timeOnPage: Date.now() - engagementData.startTime
@@ -471,14 +470,14 @@ export default function App(): React.JSX.Element {
   }, [engagementData]);
 
   // Handle scroll events
-  const handleScrollEngagement = useCallback(() => {
-    engagementData.scrollDepth = Math.max(engagementData.scrollDepth, window.scrollY / (document.documentElement.scrollHeight - window.innerHeight) * 100);
-  }, [engagementData]);
+  // const handleScrollEngagement = useCallback(() => {
+  //   engagementData.scrollDepth = Math.max(engagementData.scrollDepth, window.scrollY / (document.documentElement.scrollHeight - window.innerHeight) * 100);
+  // }, [engagementData]);
 
   // Handle click events
-  const handleClickEngagement = useCallback(() => {
-    engagementData.clicks++;
-  }, [engagementData]);
+  // const handleClickEngagement = useCallback(() => {
+  //   engagementData.clicks++;
+  // }, [engagementData]);
 
   // Initialize app with custom configuration
   // Temporarily disable useAppInitialization to fix build
@@ -871,7 +870,7 @@ export default function App(): React.JSX.Element {
       window.removeEventListener('scroll', handleScrollWithEngagement);
       document.removeEventListener('click', handleClickWithEngagement);
     };
-  }, [handleScrollEngagement, handleClickEngagement, trackEngagement]);
+  }, [handleScroll, handleClick, trackEngagement]);
 
   if (isLoading) {
     return <ModernLoadingSpinner progress={loadingProgress} />;
@@ -995,7 +994,7 @@ export default function App(): React.JSX.Element {
             <div className="space-y-2 text-sm">
               <div className="flex justify-between">
                 <span>Memory Usage:</span>
-                <span className="text-green-400">{Math.round(((performance as any).memory?.usedJSHeapSize || 0) / 1024 / 1024)} MB</span>
+                <span className="text-green-400">{Math.round(((performance as { memory?: { usedJSHeapSize?: number } }).memory?.usedJSHeapSize || 0) / 1024 / 1024)} MB</span>
               </div>
               <div className="flex justify-between">
                 <span>Render Time:</span>

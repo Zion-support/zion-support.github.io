@@ -380,6 +380,18 @@ class EnhancedSecurityManager {
 
     return Math.max(0, Math.min(100, score));
   }
+
+  /**
+   * Get security metrics
+   */
+  getSecurityMetrics(): any {
+    return {
+      events: this.events.length,
+      policies: this.policies.length,
+      score: this.calculateSecurityScore(),
+      isInitialized: this.isInitialized,
+    };
+  }
 }
 
 export const enhancedSecurityManager = new EnhancedSecurityManager();
