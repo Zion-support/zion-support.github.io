@@ -137,7 +137,7 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
 
             {/* Error Message */}
             <p className="text-gray-600 mb-6">
-              We're sorry, but something unexpected happened. Our team has been notified and is working to fix it.
+              We&apos;re sorry, but something unexpected happened. Our team has been notified and is working to fix it.
             </p>
 
             {/* Error Details (Development Only) */}

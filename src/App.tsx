@@ -37,8 +37,8 @@ import EnhancedNotificationSystem from './components/EnhancedNotificationSystem'
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
-import { modernAccessibilityEnhancer } from './utils/modernAccessibilityEnhancer';
-import { modernPerformanceMonitor } from './utils/modernPerformanceMonitor';
+// import { modernAccessibilityEnhancer } from './utils/modernAccessibilityEnhancer';
+// import { modernPerformanceMonitor } from './utils/modernPerformanceMonitor';
 import './index.css';
 import './styles/notifications.css';
 import './styles/system-metrics.css';

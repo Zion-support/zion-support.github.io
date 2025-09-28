@@ -113,12 +113,12 @@ export const usePerformanceOptimization = (
   }, [recordMetric]);
 
   // Get current performance metrics
-  const getPerformanceMetrics = useCallback(() => {
-    return monitor.current.getLatestMetrics();
-  }, []);
+  // const getPerformanceMetrics = useCallback(() => {
+  //   return monitor.current.getLatestMetrics();
+  // }, []);
 
   // Optimize images with responsive loading
-  const optimizeImage = useCallback((src: string, _options: ImageOptimizationOptions = {}): string => {
+  const optimizeImage = useCallback((src: string): string => {
     if (!configRef.current.enableImageOptimization) return src;
 
     // const {

@@ -307,7 +307,7 @@ class ModernPerformanceMonitor {
     let totalInteractionDelay = 0;
 
     ['click', 'keydown', 'pointerdown'].forEach(event => {
-      document.addEventListener(event, (e) => {
+      document.addEventListener(event, () => {
         const startTime = performance.now();
         requestAnimationFrame(() => {
           const endTime = performance.now();
