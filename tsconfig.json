@@ -1,52 +1,51 @@
 {
   "compilerOptions": {
-    "target": "ES2022",
-    "lib": [
-      "ES2022",
-      "DOM",
-      "DOM.Iterable"
-    ],
-    "allowJs": true,
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "strict": false,
-    "forceConsistentCasingInFileNames": true,
+
+    /* Bundler mode */
     "moduleResolution": "bundler",
-    "useDefineForClassFields": true,
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
+<<<<<<< HEAD
     "baseUrl": ".",
     "paths": {
       "@/*": [
         "src.corrupted/*"
       ]
     },
+=======
+
+    /* Linting */
+    "strict": true,
+>>>>>>> 366f0ca472b7b633095eeea402480ac669b10b74
     "noUnusedLocals": false,
     "noUnusedParameters": false,
-    "noFallthroughCasesInSwitch": false,
-    "noUncheckedIndexedAccess": false,
-    "noImplicitReturns": false,
-    "noImplicitAny": false,
-    "noImplicitThis": false,
-    "noImplicitOverride": false,
-    "types": [
-      "node",
-      "react",
-      "react-dom"
-    ],
-    "incremental": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
-    "strictNullChecks": false
+    "noFallthroughCasesInSwitch": true,
+
+    /* Path mapping */
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@/components/*": ["./src/components/*"],
+      "@/pages/*": ["./src/pages/*"],
+      "@/utils/*": ["./src/utils/*"],
+      "@/hooks/*": ["./src/hooks/*"],
+      "@/types/*": ["./src/types/*"]
+    },
+
+    /* Types */
+    "types": ["jest", "node"]
   },
+<<<<<<< HEAD
   "include": [
     "src.corrupted/**/*"
   ],
@@ -70,4 +69,8 @@
     "vite.config.ts",
     "vitest.config.ts"
   ]
+=======
+  "include": ["src", "index.html", "src/types/**/*"],
+  "references": [{ "path": "./tsconfig.node.json" }]
+>>>>>>> 366f0ca472b7b633095eeea402480ac669b10b74
 }

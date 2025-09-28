@@ -4,52 +4,42 @@
   status = 200
  
 [build]
-  command = "npm run build"
-<<<<<<< HEAD
-=======
+  command = "pnpm build"
   publish = "dist"
->>>>>>> origin/backup-main-20250924-182607
-  functions = "netlify/functions"
   command_timeout = "30m"
 
 [build.environment]
   NODE_VERSION = "24.0.0"
-<<<<<<< HEAD
-  YARN_ENABLE_IMMUTABLE_INSTALLS = "false"
+  PNPM_VERSION = "10.17.1"
+  NETLIFY_USE_PNPM = "true"
+  # Disable Next.js auto-detection
+  NETLIFY_NEXT_PLUGIN_SKIP = "true"
+
+# Explicitly disable Next.js plugin to prevent auto-detection
+[build.processing]
+  skip_processing = false
+
+[build.processing.css]
+  bundle = true
+  minify = true
+
+[build.processing.js]
+  bundle = true
+  minify = true
+
+[build.processing.html]
+  pretty_urls = true
 
 [[plugins]]
   package = "netlify-plugin-cloudinary"
   [plugins.inputs]
 
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
-  [plugins.inputs]
-
-# Compression is handled by Netlify's built-in compression
-# No additional plugin needed
-
 [context.production.environment]
   NODE_ENV = "production"
   NPM_CONFIG_PRODUCTION = "false"
 
 [context.deploy-preview]
-  command = "npm run build"
+  command = "pnpm build"
 
-=======
-
-[[plugins]]
-  package = "netlify-plugin-compress"
-  [plugins.inputs]
-    gzip = true
-    brotli = true
-
-[context.production.environment]
-  NODE_ENV = "production"
-  NPM_CONFIG_PRODUCTION = "false"
-
-[context.deploy-preview]
-  command = "npm run build"
-
->>>>>>> origin/backup-main-20250924-182607
 [context.branch-deploy]
-  command = "npm run build"
+  command = "pnpm build"
