@@ -591,7 +591,6 @@ export class AdvancedAutomationSystem {
     }
   }
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   private async runPreDeploymentChecks(
     _config: DeploymentConfig,
   ): Promise<void> {
@@ -635,7 +634,6 @@ export class AdvancedAutomationSystem {
     return true;
   }
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   private async blueGreenDeployment(
     _config: DeploymentConfig,
   ): Promise<boolean> {

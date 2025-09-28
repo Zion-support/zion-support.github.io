@@ -6,7 +6,6 @@ import React, {
   lazy,
   Suspense,
 } from "react";
-import { useNavigate } from "react-router-dom";
 import { AppRouter } from "./router";
 import { ModernLoadingSpinner } from "./components/ModernLoadingSpinner";
 import EnhancedErrorBoundary from "./components/EnhancedErrorBoundary";
@@ -21,7 +20,6 @@ import WebsiteEnhancements from "./components/WebsiteEnhancements";
 import SEOOptimizer from "./components/SEOOptimizer";
 import { getComprehensiveEnhancements } from "./utils/comprehensiveEnhancements";
 import { enhancedSecurityManager } from "./utils/enhancedSecurityManager";
-import { EnhancedNotification } from "./types/comprehensive";
 import "./index.css";
 
 // Import new advanced systems
