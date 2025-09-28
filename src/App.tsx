@@ -257,13 +257,8 @@ export default function App(): React.JSX.Element {
     securityUtils.getSecurityScore();
 
     // Set default SEO data using the correct method
-<<<<<<< HEAD
-    // seoManager.updateMetaTags(seoData);
-  }, []);
-=======
-    seoManager.updateMetaTags(memoizedSeoData);
-  }, [memoizedSeoData]);
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-7a75
+    seoManager.updateMetaTags(seoData);
+  }, [seoData]);
 
   // Update meta tags function
   const updateMetaTags = useCallback((data: typeof memoizedSeoData) => {
