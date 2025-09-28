@@ -26,6 +26,7 @@ const SystemHealthDashboard = lazy(() => import('./components/SystemHealthDashbo
 const PerformanceWidget = lazy(() => import('./components/PerformanceWidget'));
 const CommandPalette = lazy(() => import('./components/CommandPalette'));
 const AdvancedMonitoringDashboard = lazy(() => import('./components/AdvancedMonitoringDashboard'));
+const ComprehensivePerformanceDashboard = lazy(() => import('./components/ComprehensivePerformanceDashboard'));
 
 export default function App(): React.JSX.Element {
   const navigate = useNavigate();
@@ -39,6 +40,7 @@ export default function App(): React.JSX.Element {
   const [showPerformanceWidget, setShowPerformanceWidget] = useState(false);
   const [showCommandPalette, setShowCommandPalette] = useState(false);
   const [showAdvancedMonitoring, setShowAdvancedMonitoring] = useState(false);
+  const [showComprehensiveDashboard, setShowComprehensiveDashboard] = useState(false);
   // const [showPerformanceDashboard, setShowPerformanceDashboard] = useState(false);
 
   // Notification management
@@ -195,6 +197,11 @@ export default function App(): React.JSX.Element {
       event.preventDefault();
       setShowPerformanceWidget((prev: boolean) => !prev);
       seoAnalytics.trackEvent('keyboard_shortcut', { shortcut: 'cmd+shift+p', action: 'toggle_performance_widget' });
+    }
+    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'C') {
+      event.preventDefault();
+      setShowComprehensiveDashboard((prev: boolean) => !prev);
+      seoAnalytics.trackEvent('keyboard_shortcut', { shortcut: 'cmd+shift+c', action: 'toggle_comprehensive_dashboard' });
     }
     // Performance dashboard toggle removed - state variable not defined
     if ((event.ctrlKey || event.metaKey) && event.key === 'k') {
@@ -499,6 +506,12 @@ export default function App(): React.JSX.Element {
               showRealTime={true}
               refreshInterval={5000}
             />
+          </Suspense>
+        )}
+
+        {showComprehensiveDashboard && (
+          <Suspense fallback={<ModernLoadingSpinner />}>
+            <ComprehensivePerformanceDashboard />
           </Suspense>
         )}
 

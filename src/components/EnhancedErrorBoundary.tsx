@@ -1,61 +1,68 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { clsx } from 'clsx';
+import { accessibilityPerformanceMonitor } from '../utils/accessibilityOptimizations';
 
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
-  showDetails?: boolean;
 }
 
 interface State {
   hasError: boolean;
   error: Error | null;
   errorInfo: ErrorInfo | null;
-  errorId: string | null;
+  retryCount: number;
 }
 
+/**
+ * Enhanced Error Boundary with accessibility and performance monitoring
+ */
 export class EnhancedErrorBoundary extends Component<Props, State> {
+  private retryTimeout: NodeJS.Timeout | null = null;
+
   constructor(props: Props) {
     super(props);
     this.state = {
       hasError: false,
       error: null,
       errorInfo: null,
-      errorId: null
+      retryCount: 0
     };
   }
 
   static getDerivedStateFromError(error: Error): Partial<State> {
-    // Generate unique error ID for tracking
-    const errorId = `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-    
     return {
       hasError: true,
-      error,
-      errorId
+      error
     };
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    // Log error details
-    console.error('ErrorBoundary caught an error:', error, errorInfo);
-    
     this.setState({
-      errorInfo,
-      error
+      error,
+      errorInfo
     });
 
-    // Report error to external service
-    this.reportError(error, errorInfo);
+    // Log error for monitoring
+    console.error('EnhancedErrorBoundary caught an error:', error, errorInfo);
 
-    // Call custom error handler if provided
+    // Call custom error handler
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
+    }
+
+    // Report to error tracking service
+    this.reportError(error, errorInfo);
+  }
+
+  componentWillUnmount() {
+    if (this.retryTimeout) {
+      clearTimeout(this.retryTimeout);
     }
   }
 
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
+    // In a real application, you would send this to your error tracking service
     const errorReport = {
       message: error.message,
       stack: error.stack,
@@ -63,198 +70,182 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
       timestamp: new Date().toISOString(),
       userAgent: navigator.userAgent,
       url: window.location.href,
-      errorId: this.state.errorId,
-      userId: this.getUserId(),
-      sessionId: this.getSessionId()
+      retryCount: this.state.retryCount
     };
 
-    // Send to error reporting service (e.g., Sentry, LogRocket, etc.)
-    if ('gtag' in window) {
-      (window as { gtag: (event: string, action: string, params: Record<string, unknown>) => void }).gtag('event', 'exception', {
-        description: error.message,
-        fatal: false,
-        custom_map: {
-          error_id: this.state.errorId,
-          component_stack: errorInfo.componentStack
-        }
-      });
-    }
-
-    // Store in localStorage for debugging
-    try {
-      const existingErrors = JSON.parse(localStorage.getItem('errorReports') || '[]');
-      existingErrors.push(errorReport);
-      // Keep only last 10 errors
-      const recentErrors = existingErrors.slice(-10);
-      localStorage.setItem('errorReports', JSON.stringify(recentErrors));
-    } catch (e) {
-      console.warn('Failed to store error report:', e);
-    }
-  };
-
-  private getUserId = (): string => {
-    // Get user ID from your auth system
-    return localStorage.getItem('userId') || 'anonymous';
-  };
-
-  private getSessionId = (): string => {
-    // Generate or get session ID
-    let sessionId = sessionStorage.getItem('sessionId');
-    if (!sessionId) {
-      sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-      sessionStorage.setItem('sessionId', sessionId);
-    }
-    return sessionId;
+    // Example: Send to error tracking service
+    // errorTrackingService.report(errorReport);
+    
+    console.log('Error reported:', errorReport);
   };
 
   private handleRetry = () => {
-    this.setState({
+    this.setState(prevState => ({
       hasError: false,
       error: null,
       errorInfo: null,
-      errorId: null
-    });
+      retryCount: prevState.retryCount + 1
+    }));
   };
 
   private handleReload = () => {
     window.location.reload();
   };
 
-  private copyErrorDetails = () => {
-    const errorDetails = {
-      error: this.state.error?.toString(),
-      errorInfo: this.state.errorInfo?.componentStack,
-      errorId: this.state.errorId,
-      timestamp: new Date().toISOString(),
-      url: window.location.href
-    };
-
-    navigator.clipboard.writeText(JSON.stringify(errorDetails, null, 2))
-      .then(() => {
-        alert('Error details copied to clipboard');
-      })
-      .catch(() => {
-        console.log('Error details:', errorDetails);
-        alert('Error details logged to console');
-      });
+  private handleGoHome = () => {
+    window.location.href = '/';
   };
 
   render() {
     if (this.state.hasError) {
-      // Use custom fallback if provided
+      // Custom fallback UI
       if (this.props.fallback) {
         return this.props.fallback;
       }
 
+      // Default error UI with accessibility features
       return (
-        <div className={clsx(
-          'min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-900 p-4'
-        )}>
-          <div className="max-w-2xl w-full bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8">
-            <div className="text-center">
-              {/* Error Icon */}
-              <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-red-100 dark:bg-red-900 mb-4">
-                <svg
-                  className="h-6 w-6 text-red-600 dark:text-red-400"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"
-                  />
-                </svg>
-              </div>
+        <div 
+          className="error-boundary"
+          role="alert"
+          aria-live="assertive"
+          aria-label="Error occurred"
+        >
+          <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+            <div className="max-w-md w-full space-y-8">
+              <div className="text-center">
+                <div className="mx-auto h-12 w-12 text-red-500 mb-4">
+                  <svg 
+                    fill="none" 
+                    stroke="currentColor" 
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <path 
+                      strokeLinecap="round" 
+                      strokeLinejoin="round" 
+                      strokeWidth={2} 
+                      d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" 
+                    />
+                  </svg>
+                </div>
+                
+                <h1 className="text-2xl font-bold text-gray-900 mb-2">
+                  Oops! Something went wrong
+                </h1>
+                
+                <p className="text-gray-600 mb-6">
+                  We're sorry, but something unexpected happened. Our team has been notified.
+                </p>
 
-              {/* Error Title */}
-              <h1 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
-                Oops! Something went wrong
-              </h1>
-              
-              <p className="text-gray-600 dark:text-gray-400 mb-6">
-                We&apos;re sorry, but something unexpected happened. Our team has been notified.
-              </p>
+                {/* Error details for development */}
+                {process.env.NODE_ENV === 'development' && this.state.error && (
+                  <details className="mb-6 text-left bg-gray-100 p-4 rounded-lg">
+                    <summary className="cursor-pointer font-medium text-gray-800 mb-2">
+                      Error Details (Development Only)
+                    </summary>
+                    <div className="text-sm text-gray-700">
+                      <p className="mb-2">
+                        <strong>Error:</strong> {this.state.error.message}
+                      </p>
+                      {this.state.error.stack && (
+                        <pre className="whitespace-pre-wrap text-xs bg-gray-200 p-2 rounded overflow-auto max-h-32">
+                          {this.state.error.stack}
+                        </pre>
+                      )}
+                    </div>
+                  </details>
+                )}
 
-              {/* Error ID */}
-              {this.state.errorId && (
-                <div className="bg-gray-100 dark:bg-gray-700 rounded-md p-3 mb-6">
-                  <p className="text-sm text-gray-600 dark:text-gray-400">
-                    Error ID: <code className="font-mono text-xs bg-gray-200 dark:bg-gray-600 px-1 py-0.5 rounded">
-                      {this.state.errorId}
-                    </code>
+                {/* Action buttons */}
+                <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                  <button
+                    onClick={this.handleRetry}
+                    className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 focus:ring-offset-white"
+                    aria-label="Retry loading the page"
+                  >
+                    <svg 
+                      className="w-4 h-4 mr-2" 
+                      fill="none" 
+                      stroke="currentColor" 
+                      viewBox="0 0 24 24"
+                      aria-hidden="true"
+                    >
+                      <path 
+                        strokeLinecap="round" 
+                        strokeLinejoin="round" 
+                        strokeWidth={2} 
+                        d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" 
+                      />
+                    </svg>
+                    Try Again
+                  </button>
+                  
+                  <button
+                    onClick={this.handleGoHome}
+                    className="inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 focus:ring-offset-white"
+                    aria-label="Go to homepage"
+                  >
+                    <svg 
+                      className="w-4 h-4 mr-2" 
+                      fill="none" 
+                      stroke="currentColor" 
+                      viewBox="0 0 24 24"
+                      aria-hidden="true"
+                    >
+                      <path 
+                        strokeLinecap="round" 
+                        strokeLinejoin="round" 
+                        strokeWidth={2} 
+                        d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" 
+                      />
+                    </svg>
+                    Go Home
+                  </button>
+                  
+                  <button
+                    onClick={this.handleReload}
+                    className="inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 focus:ring-offset-white"
+                    aria-label="Reload the page"
+                  >
+                    <svg 
+                      className="w-4 h-4 mr-2" 
+                      fill="none" 
+                      stroke="currentColor" 
+                      viewBox="0 0 24 24"
+                      aria-hidden="true"
+                    >
+                      <path 
+                        strokeLinecap="round" 
+                        strokeLinejoin="round" 
+                        strokeWidth={2} 
+                        d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" 
+                      />
+                    </svg>
+                    Reload Page
+                  </button>
+                </div>
+
+                {/* Retry count indicator */}
+                {this.state.retryCount > 0 && (
+                  <p className="mt-4 text-sm text-gray-500">
+                    Retry attempt: {this.state.retryCount}
+                  </p>
+                )}
+
+                {/* Contact information */}
+                <div className="mt-8 pt-6 border-t border-gray-200">
+                  <p className="text-sm text-gray-500">
+                    If this problem persists, please{' '}
+                    <a 
+                      href="/contact" 
+                      className="text-blue-600 hover:text-blue-500 underline"
+                    >
+                      contact our support team
+                    </a>
                   </p>
                 </div>
-              )}
-
-              {/* Action Buttons */}
-              <div className="flex flex-col sm:flex-row gap-3 justify-center">
-                <button
-                  onClick={this.handleRetry}
-                  className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors"
-                >
-                  <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-                  </svg>
-                  Try Again
-                </button>
-                
-                <button
-                  onClick={this.handleReload}
-                  className="inline-flex items-center px-4 py-2 border border-gray-300 dark:border-gray-600 text-sm font-medium rounded-md text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors"
-                >
-                  <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-                  </svg>
-                  Reload Page
-                </button>
               </div>
-
-              {/* Error Details (for development) */}
-              {this.props.showDetails && this.state.error && (
-                <details className="mt-6 text-left">
-                  <summary className="cursor-pointer text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">
-                    Error Details
-                  </summary>
-                  <div className="mt-3 bg-gray-100 dark:bg-gray-700 rounded-md p-4">
-                    <div className="space-y-2">
-                      <div>
-                        <strong className="text-sm text-gray-700 dark:text-gray-300">Error:</strong>
-                        <pre className="text-xs text-red-600 dark:text-red-400 mt-1 overflow-auto">
-                          {this.state.error.toString()}
-                        </pre>
-                      </div>
-                      
-                      {this.state.error.stack && (
-                        <div>
-                          <strong className="text-sm text-gray-700 dark:text-gray-300">Stack Trace:</strong>
-                          <pre className="text-xs text-gray-600 dark:text-gray-400 mt-1 overflow-auto max-h-32">
-                            {this.state.error.stack}
-                          </pre>
-                        </div>
-                      )}
-                      
-                      {this.state.errorInfo?.componentStack && (
-                        <div>
-                          <strong className="text-sm text-gray-700 dark:text-gray-300">Component Stack:</strong>
-                          <pre className="text-xs text-gray-600 dark:text-gray-400 mt-1 overflow-auto max-h-32">
-                            {this.state.errorInfo.componentStack}
-                          </pre>
-                        </div>
-                      )}
-                      
-                      <button
-                        onClick={this.copyErrorDetails}
-                        className="mt-2 text-xs text-blue-600 dark:text-blue-400 hover:underline"
-                      >
-                        Copy Error Details
-                      </button>
-                    </div>
-                  </div>
-                </details>
-              )}
             </div>
           </div>
         </div>

@@ -269,7 +269,6 @@ export const accessibilityUtils = {
     // Check for required ARIA attributes
     const hasAriaLabel = element.hasAttribute('aria-label');
     const hasAriaLabelledBy = element.hasAttribute('aria-labelledby');
-    const hasAriaDescribedBy = element.hasAttribute('aria-describedby');
 
     if (!hasAriaLabel && !hasAriaLabelledBy) {
       // Check if element has accessible name
@@ -359,11 +358,11 @@ export const accessibilityPerformanceMonitor = {
     let keyDownTime = 0;
     let keyUpTime = 0;
 
-    const handleKeyDown = (event: KeyboardEvent) => {
+    const handleKeyDown = () => {
       keyDownTime = performance.now();
     };
 
-    const handleKeyUp = (event: KeyboardEvent) => {
+    const handleKeyUp = () => {
       keyUpTime = performance.now();
       const responseTime = keyUpTime - keyDownTime;
 
@@ -387,11 +386,11 @@ export const accessibilityPerformanceMonitor = {
   monitorFocusPerformance: () => {
     let focusStartTime = 0;
 
-    const handleFocusIn = (event: FocusEvent) => {
+    const handleFocusIn = () => {
       focusStartTime = performance.now();
     };
 
-    const handleFocusOut = (event: FocusEvent) => {
+    const handleFocusOut = () => {
       const focusTime = performance.now() - focusStartTime;
       
       if (focusTime > 50) {
