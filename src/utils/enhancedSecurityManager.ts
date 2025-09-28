@@ -294,7 +294,7 @@ class EnhancedSecurityManager {
     
     // In a real application, you would send this to a security monitoring service
     // For now, we'll just log it
-    this.logSecurityEvent(alert);
+    this.logSecurityEvent(alert as unknown as SecurityEvent);
   }
 
   public addEventListener(eventType: string, listener: (event: SecurityEvent) => void): void {
