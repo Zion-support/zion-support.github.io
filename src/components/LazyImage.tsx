@@ -54,7 +54,7 @@ const LazyImage: React.FC<LazyImageProps> = ({
   }, [onError]);
 
   // Determine which image source to use
-  const currentSrc = hasError && fallbackSrc ? fallbackSrc : optimizedSrc;
+  const currentSrc = hasError && fallbackSrc ? fallbackSrc : (imageSrc || '');
   const currentAlt = hasError ? `${alt} (fallback)` : alt;
 
   return (
