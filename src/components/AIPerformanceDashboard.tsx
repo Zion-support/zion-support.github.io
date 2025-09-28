@@ -214,39 +214,6 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
     </div>
   );
 };
-
-          {/* Recent Errors */}
-          <div className="bg-gray-50 p-4 rounded-lg">
-            <h3 className="text-lg font-semibold mb-3 text-gray-800">🚨 Recent Errors</h3>
-            <div className="space-y-3 max-h-96 overflow-y-auto">
-              {errors.length > 0 ? (
-                errors.map((error, index) => (
-                  <div key={index} className="bg-white p-4 rounded border">
-                    <div className="flex items-start justify-between mb-2">
-                      <div className="flex-1">
-                        <div className="flex items-center gap-2 mb-1">
-                          <span className={`px-2 py-1 rounded text-xs font-medium ${getSeverityColor(error.severity)}`}>
-                            {error.severity}
-                          </span>
-                          <span className="text-xs text-gray-500">
-                            {new Date(typeof error.lastOccurrence === 'string' ? error.lastOccurrence : error.lastOccurrence).toLocaleString()}
-                          </span>
-                        </div>
-                        <h4 className="font-medium text-gray-800 mb-1">{error.message}</h4>
-                        <div className="text-sm text-gray-600">
-                          Component: {error.context?.component || 'Unknown'} | 
-                          Action: {error.context?.action || 'Unknown'} |
-                          Count: {(error as { occurrenceCount?: number }).occurrenceCount || 0}
-                        </div>
-                        {error.aiPredictedImpact && (
-                          <div className="text-sm text-blue-600 mt-1">
-                            🤖 AI Impact Score: {Math.round((error.aiPredictedImpact as number) * 100)}%
-                          </div>
-                        )}
-                      </div>
-                    </div>
-                    
-                    {error.resolutionSuggestions && Array.isArray(error.resolutionSuggestions) && error.resolutionSuggestions.length > 0 && (
                       <div className="mt-3 p-3 bg-green-50 rounded">
                         <h5 className="text-sm font-medium text-green-800 mb-2">💡 AI Suggestions:</h5>
                         <ul className="text-sm text-green-700 space-y-1">
