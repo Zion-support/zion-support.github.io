@@ -5,7 +5,7 @@
 
 // Speech Recognition API types
 interface SpeechRecognitionConstructor {
-  new (): SpeechRecognition;
+  new (): any;
 }
 
 interface ExtendedWindow extends Window {
@@ -602,6 +602,7 @@ class EnhancedAccessibilityManager {
    */
   private setupSpeechRecognition(): void {
     const SpeechRecognition = (window as ExtendedWindow).SpeechRecognition || (window as ExtendedWindow).webkitSpeechRecognition;
+    if (!SpeechRecognition) return;
     const recognition = new SpeechRecognition();
     
     recognition.continuous = false;
