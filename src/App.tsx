@@ -129,7 +129,7 @@ export default function App(): React.JSX.Element {
     title: 'Zion Tech Group - Leading AI & Technology Solutions',
     description: 'Cutting-edge AI, quantum computing, and digital transformation solutions for modern enterprises. Expert consulting, cloud services, and innovative technology implementations.',
     keywords: ['AI solutions', 'quantum computing', 'digital transformation', 'cloud services', 'enterprise technology', 'machine learning', 'automation', 'blockchain'],
-    ogType: 'website',
+    ogType: 'website' as const,
     ogUrl: typeof window !== 'undefined' ? window.location.href : '',
     ogImage: '/og-image.png',
     twitterCard: 'summary_large_image' as const,
@@ -229,10 +229,10 @@ export default function App(): React.JSX.Element {
 
     // Initialize advanced systems
     enhancedAnalytics.initialize();
-    enhancedPerformanceMonitor.start();
+    enhancedPerformanceMonitor.startMonitoring();
     advancedCacheSystem.initialize();
     accessibilityEnhancer.initialize();
-    performanceOptimizer.initialize();
+    // performanceOptimizer.initialize(); // Method is private
     seoOptimizer.initialize();
 
     // Set default SEO data using the correct method
@@ -247,7 +247,7 @@ export default function App(): React.JSX.Element {
       
       // Enhanced performance monitoring
       if (enhancedPerformanceMonitor) {
-        enhancedPerformanceMonitor.trackAppInitialization();
+        // enhancedPerformanceMonitor.trackAppInitialization(); // Method doesn't exist
       }
       
       // Track performance metrics
@@ -288,14 +288,14 @@ export default function App(): React.JSX.Element {
       
       // Cleanup enhanced systems
       if (enhancedPerformanceMonitor) {
-        enhancedPerformanceMonitor.stop();
+        enhancedPerformanceMonitor.stopMonitoring();
       }
-      if (advancedCacheSystem) {
-        advancedCacheSystem.cleanup();
-      }
-      if (comprehensiveEnhancements) {
-        comprehensiveEnhancements.cleanup();
-      }
+      // if (advancedCacheSystem) {
+      //   advancedCacheSystem.cleanup(); // Method doesn't exist
+      // }
+      // if (comprehensiveEnhancements) {
+      //   comprehensiveEnhancements.cleanup(); // Method doesn't exist
+      // }
       if (advancedAppEnhancements) {
         advancedAppEnhancements.cleanup();
       }

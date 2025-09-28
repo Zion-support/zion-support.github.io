@@ -6,7 +6,15 @@ interface AIPerformanceDashboardProps {
   onClose: () => void;
 }
 
-// Interfaces removed as they were unused - types are defined inline where needed
+// Import the actual types from enhancedErrorHandling
+import type { PerformanceMetrics, ErrorReport } from '../utils/enhancedErrorHandling';
+
+// Define AIInsights based on what getAIInsights actually returns
+interface AIInsights {
+  predictedHighRiskActions: string[];
+  recommendedImprovements: string[];
+  errorTrends: { category: string; trend: 'increasing' | 'decreasing' | 'stable' }[];
+}
 
 const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisible, onClose }) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
@@ -17,9 +25,9 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
     if (isVisible) {
       const updateData = () => {
         try {
-          setMetrics(enhancedErrorHandler.getPerformanceMetrics() as PerformanceMetrics);
-          setInsights(enhancedErrorHandler.getAIInsights() as AIInsights);
-          setErrors(enhancedErrorHandler.getErrorReports().slice(0, 10) as ErrorReport[]);
+          setMetrics(enhancedErrorHandler.getPerformanceMetrics());
+          setInsights(enhancedErrorHandler.getAIInsights());
+          setErrors(enhancedErrorHandler.getErrorReports().slice(0, 10));
         } catch (error) {
           console.error('Failed to fetch dashboard data:', error);
         }
@@ -130,14 +138,14 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
               {insights.errorTrends.map((trend, index: number) => (
                 <div key={index} className="bg-white p-3 rounded border">
                   <div className="flex items-center justify-between">
-                    <span className="font-medium capitalize">{String(trend.category)}</span>
-                    <span className="text-lg">{getTrendIcon(String(trend.trend))}</span>
+                    <span className="font-medium capitalize">{trend.category}</span>
+                    <span className="text-lg">{getTrendIcon(trend.trend)}</span>
                   </div>
                   <div className={`text-sm mt-1 ${
                     trend.trend === 'increasing' ? 'text-red-600' :
                     trend.trend === 'decreasing' ? 'text-green-600' : 'text-gray-600'
                   }`}>
-                    {String(trend.trend)}
+                    {trend.trend}
                   </div>
                 </div>
               ))}
@@ -157,14 +165,14 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
                       {error.severity}
                     </span>
                     <span className="text-xs text-gray-500">
-                      {new Date(typeof error.lastOccurrence === 'string' ? error.lastOccurrence : error.lastOccurrence).toLocaleString()}
+                      {new Date(error.lastOccurrence).toLocaleString()}
                     </span>
                   </div>
                   <h4 className="font-medium text-gray-800 mb-1">{error.message}</h4>
                   <div className="text-sm text-gray-600">
-                    Component: {error.context.component || 'Unknown'} | 
-                    Action: {error.context.action || 'Unknown'} |
-                    Count: {String(error.occurrenceCount)}
+                    Component: {error.context?.component || 'Unknown'} |
+                    Action: {error.context?.action || 'Unknown'} |
+                    Count: {error.occurrenceCount}
                   </div>
                   {error.aiPredictedImpact && (
                     <div className="text-sm text-blue-600 mt-1">
