@@ -26,7 +26,7 @@ import { enhancedSecurityManager } from './utils/enhancedSecurityManager';
 import { initializePerformanceEnhancements } from './utils/performanceEnhancements';
 import { initializeAccessibilityEnhancements } from './utils/accessibilityEnhancements';
 import { advancedPerformanceOptimizer } from './utils/advancedPerformanceOptimizer';
-import { advancedSEOOptimizer } from './utils/advancedSEOOptimizer';
+import { seoOptimizer } from './utils/advancedSEOOptimizer';
 import { performanceMonitor, getPerformanceScore, getPerformanceRecommendations } from './utils/performanceMonitoring';
 import { seoOptimizer, updatePageSEO, trackSEOEvent } from './utils/seoOptimizer';
 import { errorHandler, handleError, log, ErrorBoundary } from './utils/errorHandler';
@@ -484,7 +484,7 @@ function App(): React.JSX.Element {
       
       // Initialize advanced optimizers
       advancedPerformanceOptimizer.initialize();
-      advancedSEOOptimizer.initialize();
+      seoOptimizer.initialize();
       advancedAccessibilityEnhancer.initialize();
       
       // Initialize new monitoring and optimization systems
@@ -497,7 +497,7 @@ function App(): React.JSX.Element {
       // Store enhancements globally for debugging
       (window as unknown as Record<string, unknown>).enhancements = enhancements;
       (window as unknown as Record<string, unknown>).performanceOptimizer = advancedPerformanceOptimizer;
-      (window as unknown as Record<string, unknown>).seoOptimizer = advancedSEOOptimizer;
+      (window as unknown as Record<string, unknown>).seoOptimizer = seoOptimizer;
       (window as unknown as Record<string, unknown>).accessibilityEnhancer = advancedAccessibilityEnhancer;
     } catch (error) {
       console.error('Error initializing enhancements:', error);
