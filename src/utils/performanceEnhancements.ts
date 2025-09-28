@@ -3,6 +3,16 @@
  * Advanced performance optimizations for the Zion website
  */
 
+interface MemoryInfo {
+  usedJSHeapSize: number;
+  totalJSHeapSize: number;
+  jsHeapSizeLimit: number;
+}
+
+interface ExtendedPerformance extends Performance {
+  memory?: MemoryInfo;
+}
+
 interface PerformanceConfig {
   enableImageOptimization: boolean;
   enableLazyLoading: boolean;
@@ -309,7 +319,7 @@ class PerformanceEnhancer {
     const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
     const loadTime = navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0;
     
-    const memory = (performance as any).memory;
+    const memory = (performance as ExtendedPerformance).memory;
     const memoryUsage = memory ? memory.usedJSHeapSize / 1024 / 1024 : 0;
     
     // Estimate bundle size (this would be more accurate with actual bundle analysis)
