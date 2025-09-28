@@ -108,7 +108,7 @@ class SecurityEnhancer {
     ];
   }
 
-  private initialize(): void {
+  public initialize(): void {
     if (typeof window === 'undefined') return;
 
     this.setupCSP();
@@ -268,7 +268,9 @@ class SecurityEnhancer {
       this.metrics.securityViolations++;
       
       // Redirect to prevent clickjacking
-      window.top.location = window.location;
+      if (window.top && window.top !== window) {
+        window.top.location.href = window.location.href;
+      }
     }
   }
 
