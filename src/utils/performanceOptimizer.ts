@@ -256,7 +256,7 @@ class PerformanceOptimizer {
 
     // Dynamic imports for code splitting
     const lazyComponents = {
-      'AIPerformanceDashboard': () => import('../components/AIPerformanceDashboard'),
+      // 'AIPerformanceDashboard': () => import('../components/AIPerformanceDashboard'),
       'PerformanceDashboard': () => import('../components/PerformanceDashboard'),
       'EnhancedSystemDashboard': () => import('../components/EnhancedSystemDashboard')
     };
