@@ -1,217 +1,222 @@
-import React, { ComponentType, lazy, Suspense, useState, useEffect, useRef } from 'react';
-import { ModernLoadingSpinner } from '../components/ModernLoadingSpinner';
+import React, {
+  lazy,
+  ComponentType,
+  useState,
+  useEffect,
+  useRef,
+  Suspense,
+} from "react";
+
+// Add useLazyImage hook export
+export function useLazyImage(src: string, placeholder?: string) {
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [imageSrc, setImageSrc] = useState(placeholder || "");
+  const elementRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!src) return;
+
+    const img = new Image();
+    img.onload = () => {
+      setImageSrc(src);
+      setIsLoaded(true);
+    };
+    img.src = src;
+  }, [src]);
+
+  return {
+    elementRef,
+    imageSrc,
+    isLoaded,
+  };
+}
 
 /**
- * Higher-order component for lazy loading with fallback
+ * Enhanced lazy loading utility with error boundaries and loading states
  */
-export function withLazyLoading<T extends object>(
-  importFunc: () => Promise<{ default: ComponentType<T> }>,
-  fallback?: React.ComponentType
-) {
+export function createLazyComponent<
+  T extends ComponentType<Record<string, unknown>>,
+>(importFunc: () => Promise<{ default: T }>, fallback?: ComponentType) {
   const LazyComponent = lazy(importFunc);
-  
-  return function LazyWrapper(props: T) {
-    const FallbackComponent = fallback || (() => (
-      <div className="flex items-center justify-center min-h-[200px]">
-        <ModernLoadingSpinner progress={0} />
-      </div>
-    ));
 
+  return function LazyWrapper(props: Record<string, unknown>) {
     return (
-      <Suspense fallback={<FallbackComponent />}>
-        <LazyComponent {...props} />
+      <Suspense
+        fallback={
+          fallback ? React.createElement(fallback) : <div>Loading...</div>
+        }
+      >
+        <LazyComponent {...(props as any)} />
       </Suspense>
     );
   };
 }
 
 /**
- * Intersection Observer based lazy loading hook
+ * Preload a component for better performance
  */
-export function useLazyLoad(
-  threshold: number = 0.1,
-  rootMargin: string = '50px'
+export function preloadComponent(
+  importFunc: () => Promise<{
+    default: ComponentType<Record<string, unknown>>;
+  }>,
 ) {
-  const [isVisible, setIsVisible] = useState(false);
-  const [hasLoaded, setHasLoaded] = useState(false);
-  const ref = useRef<HTMLElement>(null);
-
-  useEffect(() => {
-    const element = ref.current;
-    if (!element || hasLoaded) return;
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          setHasLoaded(true);
-          observer.disconnect();
-        }
-      },
-      { threshold, rootMargin }
-    );
-
-    observer.observe(element);
-
-    return () => observer.disconnect();
-  }, [threshold, rootMargin, hasLoaded]);
-
-  return { ref, isVisible, hasLoaded };
+  return () => {
+    const link = document.createElement("link");
+    link.rel = "modulepreload";
+    link.href = importFunc.toString();
+    document.head.appendChild(link);
+  };
 }
 
 /**
- * Image lazy loading component
+ * Lazy load with intersection observer for better performance
  */
-interface LazyImageProps {
-  src: string;
-  alt: string;
-  placeholder?: string;
-  className?: string;
-  onLoad?: () => void;
-  onError?: () => void;
-}
-
-export const LazyImage: React.FC<LazyImageProps> = ({
-  src,
-  alt,
-  placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzljYTNhZiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkxvYWRpbmcuLi48L3RleHQ+PC9zdmc+',
-  className = '',
-  onLoad,
-  onError
-}) => {
-  const [imageSrc, setImageSrc] = useState(placeholder);
-  const [isLoading, setIsLoading] = useState(true);
-  const { ref, isVisible } = useLazyLoad();
-
-  useEffect(() => {
-    if (isVisible && src) {
-      const img = new Image();
-      img.onload = () => {
-        setImageSrc(src);
-        setIsLoading(false);
-        onLoad?.();
-      };
-      img.onerror = () => {
-        setIsLoading(false);
-        onError?.();
-      };
-      img.src = src;
-    }
-  }, [isVisible, src, onLoad, onError]);
-
-  return (
-    <img
-      ref={ref as React.RefObject<HTMLImageElement>}
-      src={imageSrc}
-      alt={alt}
-      className={`${className} ${isLoading ? 'blur-sm' : 'blur-0'} transition-all duration-300`}
-      loading="lazy"
-    />
-  );
-};
-
-/**
- * Component lazy loading hook
- */
-export function useComponentLazyLoad<T extends ComponentType<Record<string, unknown>>>(
+export function createIntersectionLazyComponent<
+  T extends ComponentType<Record<string, unknown>>,
+>(
   importFunc: () => Promise<{ default: T }>,
-  shouldLoad: boolean = true
+  options?: IntersectionObserverInit,
 ) {
-  const [Component, setComponent] = useState<T | null>(null);
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState<Error | null>(null);
+  const LazyComponent = lazy(importFunc);
 
-  useEffect(() => {
-    if (!shouldLoad || Component) return;
+  return function IntersectionLazyWrapper(props: Record<string, unknown>) {
+    const [isVisible, setIsVisible] = useState(false);
+    const ref = useRef<HTMLDivElement>(null);
 
-    setIsLoading(true);
-    setError(null);
+    useEffect(() => {
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+            observer.disconnect();
+          }
+        },
+        {
+          threshold: 0.1,
+          rootMargin: "50px",
+          ...options,
+        },
+      );
 
-    importFunc()
-      .then((module) => {
-        setComponent(() => module.default);
-      })
-      .catch((err) => {
-        setError(err);
-      })
-      .finally(() => {
-        setIsLoading(false);
-      });
-  }, [shouldLoad, Component, importFunc]);
+      if (ref.current) {
+        observer.observe(ref.current);
+      }
 
-  return { Component, isLoading, error };
+      return () => observer.disconnect();
+    }, []);
+
+    return (
+      <div ref={ref}>
+        {isVisible ? (
+          <Suspense fallback={<div>Loading...</div>}>
+            <LazyComponent {...(props as any)} />
+          </Suspense>
+        ) : (
+          <div>Loading...</div>
+        )}
+      </div>
+    );
+  };
 }
 
 /**
- * Preload critical resources
+ * Batch preload multiple components
  */
-export function preloadResource(url: string, type: 'image' | 'script' | 'style' | 'font' = 'script') {
-  const link = document.createElement('link');
-  link.rel = type === 'image' ? 'preload' : 'prefetch';
-  link.href = url;
-  
-  if (type === 'image') {
-    link.as = 'image';
-  } else if (type === 'font') {
-    link.as = 'font';
-    link.crossOrigin = 'anonymous';
-  } else if (type === 'style') {
-    link.as = 'style';
-  } else if (type === 'script') {
-    link.as = 'script';
-  }
-
-  document.head.appendChild(link);
+export function preloadComponents(
+  importFuncs: (() => Promise<{
+    default: ComponentType<Record<string, unknown>>;
+  }>)[],
+) {
+  return Promise.all(importFuncs.map((func) => func()));
 }
 
 /**
- * Image lazy loading hook for use with LazyImage component
+ * Lazy load with retry mechanism
  */
-export function useImageLazyLoading(
-  src: string,
-  placeholder: string = ''
-) {
-  const [imageSrc, setImageSrc] = useState(placeholder);
+export function createRetryLazyComponent<
+  T extends ComponentType<Record<string, unknown>>,
+>(importFunc: () => Promise<{ default: T }>, maxRetries: number = 3) {
+  const LazyComponent = lazy(() => {
+    let retries = 0;
+
+    const loadComponent = async () => {
+      try {
+        return await importFunc();
+      } catch (error) {
+        if (retries < maxRetries) {
+          retries++;
+          console.warn(
+            `Failed to load component, retrying... (${retries}/${maxRetries})`,
+          );
+          await new Promise((resolve) => setTimeout(resolve, 1000 * retries));
+          return loadComponent();
+        }
+        throw error;
+      }
+    };
+
+    return loadComponent();
+  });
+
+  return LazyComponent;
+}
+
+/**
+ * Hook for lazy loading images with intersection observer
+ */
+export function useImageLazyLoading(src: string, placeholder?: string) {
+  const [imageSrc, setImageSrc] = useState(placeholder || "");
   const [isLoaded, setIsLoaded] = useState(false);
+  const [isInView, setIsInView] = useState(false);
+  const [hasError, setHasError] = useState(false);
   const elementRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const element = elementRef.current;
-    if (!element || !src) return;
+    if (!elementRef.current) return;
 
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          const img = new Image();
-          img.onload = () => {
-            setImageSrc(src);
-            setIsLoaded(true);
-          };
-          img.onerror = () => {
-            // Keep placeholder on error
-            setIsLoaded(false);
-          };
-          img.src = src;
+          setIsInView(true);
           observer.disconnect();
         }
       },
-      { threshold: 0.1, rootMargin: '50px' }
+      {
+        threshold: 0.1,
+        rootMargin: "50px",
+      },
     );
 
-    observer.observe(element);
+    observer.observe(elementRef.current);
 
     return () => observer.disconnect();
-  }, [src]);
+  }, []);
 
-  return { elementRef, imageSrc, isLoaded };
-}
+  useEffect(() => {
+    if (isInView && src && !hasError) {
+      const img = new Image();
 
-/**
- * Preload critical routes
- */
-export function preloadRoute(routePath: string) {
-  // This would typically preload the route's JavaScript bundle
-  // Implementation depends on your routing setup
-  const routeName = routePath.replace(/\//g, '_') || 'index';
-  preloadResource(`/assets/pages-${routeName}.js`, 'script');
+      img.onload = () => {
+        setImageSrc(src);
+        setIsLoaded(true);
+        setHasError(false);
+      };
+
+      img.onerror = () => {
+        setHasError(true);
+        setIsLoaded(false);
+        console.warn(`Failed to load image: ${src}`);
+      };
+
+      img.src = src;
+    }
+  }, [isInView, src, hasError]);
+
+  return {
+    elementRef,
+    imageSrc,
+    isLoaded,
+    hasError,
+    isInView,
+  };
 }

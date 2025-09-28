@@ -10,6 +10,12 @@ export interface EnhancementConfig {
   enableSEOFeatures: boolean;
   enableUXFeatures: boolean;
   enableAnalytics: boolean;
+  enableAdvancedAnalytics?: boolean;
+  enablePerformanceOptimization?: boolean;
+  enableAccessibilityEnhancements?: boolean;
+  enableAutomation?: boolean;
+  enableCaching?: boolean;
+  enableSEOOptimization?: boolean;
   enableOfflineSupport: boolean;
   enablePWA: boolean;
 }
@@ -22,6 +28,9 @@ export interface PerformanceMetrics {
   ttfb: number;
   memoryUsage: number;
   bundleSize: number;
+  loadTime: number;
+  renderTime: number;
+  fps: number;
 }
 
 export interface SecurityMetrics {
@@ -29,6 +38,9 @@ export interface SecurityMetrics {
   vulnerabilitiesFixed: number;
   cspViolations: number;
   xssAttempts: number;
+  xssProtection: boolean;
+  csrfProtection: boolean;
+  cspEnabled: boolean;
 }
 
 export interface AccessibilityMetrics {
@@ -36,6 +48,8 @@ export interface AccessibilityMetrics {
   keyboardNavigationScore: number;
   screenReaderScore: number;
   colorContrastScore: number;
+  keyboardNavigation: boolean;
+  screenReaderSupport: boolean;
 }
 
 export interface SEOMetrics {
@@ -43,6 +57,9 @@ export interface SEOMetrics {
   structuredDataScore: number;
   pageSpeedScore: number;
   mobileFriendlinessScore: number;
+  metaTags: boolean;
+  structuredData: boolean;
+  sitemap: boolean;
 }
 
 export interface UXMetrics {
@@ -50,6 +67,8 @@ export interface UXMetrics {
   bounceRate: number;
   taskCompletionRate: number;
   userSatisfactionScore: number;
+  userSatisfaction: number;
+  errorRate: number;
 }
 
 class ComprehensiveEnhancements {
@@ -70,14 +89,14 @@ class ComprehensiveEnhancements {
       enableAnalytics: true,
       enableOfflineSupport: true,
       enablePWA: true,
-      ...config
+      ...config,
     };
 
     this.initialize();
   }
 
   public initialize(): void {
-    if (typeof window === 'undefined') return;
+    if (typeof window === "undefined") return;
 
     if (this.config.enableAdvancedPerformance) {
       this.setupPerformanceOptimizations();
@@ -115,37 +134,37 @@ class ComprehensiveEnhancements {
   private setupPerformanceOptimizations(): void {
     // Image optimization
     this.optimizeImages();
-    
+
     // Resource hints
     this.addResourceHints();
-    
+
     // Critical CSS inlining
     this.inlineCriticalCSS();
-    
+
     // Bundle optimization
     this.optimizeBundles();
-    
+
     // Memory management
     this.setupMemoryManagement();
   }
 
   private optimizeImages(): void {
-    const images = document.querySelectorAll('img');
-    
-    images.forEach(img => {
+    const images = document.querySelectorAll("img");
+
+    images.forEach((img) => {
       // Add lazy loading
-      if (!img.hasAttribute('loading')) {
-        img.loading = 'lazy';
+      if (!img.hasAttribute("loading")) {
+        img.loading = "lazy";
       }
-      
+
       // Add decoding
-      if (!img.hasAttribute('decoding')) {
-        img.decoding = 'async';
+      if (!img.hasAttribute("decoding")) {
+        img.decoding = "async";
       }
-      
+
       // WebP support
-      if (this.supportsWebP() && !img.src.includes('.webp')) {
-        const webpSrc = img.src.replace(/\.(jpg|jpeg|png)$/, '.webp');
+      if (this.supportsWebP() && !img.src.includes(".webp")) {
+        const webpSrc = img.src.replace(/\.(jpg|jpeg|png)$/, ".webp");
         const testImg = new Image();
         testImg.onload = () => {
           img.src = webpSrc;
@@ -157,14 +176,14 @@ class ComprehensiveEnhancements {
 
   private addResourceHints(): void {
     const hints = [
-      { rel: 'dns-prefetch', href: '//fonts.googleapis.com' },
-      { rel: 'dns-prefetch', href: '//fonts.gstatic.com' },
-      { rel: 'preconnect', href: 'https://api.ziontechgroup.com' },
-      { rel: 'prefetch', href: '/api/health' }
+      { rel: "dns-prefetch", href: "//fonts.googleapis.com" },
+      { rel: "dns-prefetch", href: "//fonts.gstatic.com" },
+      { rel: "preconnect", href: "https://api.ziontechgroup.com" },
+      { rel: "prefetch", href: "/api/health" },
     ];
 
-    hints.forEach(hint => {
-      const link = document.createElement('link');
+    hints.forEach((hint) => {
+      const link = document.createElement("link");
       link.rel = hint.rel;
       link.href = hint.href;
       document.head.appendChild(link);
@@ -180,14 +199,14 @@ class ComprehensiveEnhancements {
       .loading { display: flex; align-items: center; justify-content: center; min-height: 100vh; }
     `;
 
-    const style = document.createElement('style');
+    const style = document.createElement("style");
     style.textContent = criticalCSS;
     document.head.appendChild(style);
   }
 
   private optimizeBundles(): void {
     // Enable code splitting
-    if ('requestIdleCallback' in window) {
+    if ("requestIdleCallback" in window) {
       requestIdleCallback(() => {
         this.preloadCriticalRoutes();
       });
@@ -195,10 +214,10 @@ class ComprehensiveEnhancements {
   }
 
   private preloadCriticalRoutes(): void {
-    const criticalRoutes = ['/about', '/services', '/contact'];
-    criticalRoutes.forEach(route => {
-      const link = document.createElement('link');
-      link.rel = 'prefetch';
+    const criticalRoutes = ["/about", "/services", "/contact"];
+    criticalRoutes.forEach((route) => {
+      const link = document.createElement("link");
+      link.rel = "prefetch";
       link.href = route;
       document.head.appendChild(link);
     });
@@ -206,9 +225,11 @@ class ComprehensiveEnhancements {
 
   private setupMemoryManagement(): void {
     // Monitor memory usage
-    if ('memory' in performance) {
+    if ("memory" in performance) {
       const updateMemoryMetrics = () => {
-        const memory = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory;
+        const memory = (
+          performance as Performance & { memory?: { usedJSHeapSize: number } }
+        ).memory;
         if (memory) {
           this.performanceMetrics.memoryUsage = memory.usedJSHeapSize;
         }
@@ -222,13 +243,13 @@ class ComprehensiveEnhancements {
   private setupSecurityFeatures(): void {
     // Content Security Policy
     this.setupCSP();
-    
+
     // XSS Protection
     this.setupXSSProtection();
-    
+
     // Clickjacking Protection
     this.setupClickjackingProtection();
-    
+
     // Input Sanitization
     this.setupInputSanitization();
   }
@@ -241,45 +262,64 @@ class ComprehensiveEnhancements {
       "font-src 'self' https://fonts.gstatic.com",
       "img-src 'self' data: https:",
       "connect-src 'self' https://api.ziontechgroup.com",
-      "frame-ancestors 'none'"
+      "frame-ancestors 'none'",
     ];
 
-    let cspMeta = document.querySelector('meta[http-equiv="Content-Security-Policy"]');
+    let cspMeta = document.querySelector(
+      'meta[http-equiv="Content-Security-Policy"]',
+    );
     if (!cspMeta) {
-      cspMeta = document.createElement('meta');
-      cspMeta.setAttribute('http-equiv', 'Content-Security-Policy');
+      cspMeta = document.createElement("meta");
+      cspMeta.setAttribute("http-equiv", "Content-Security-Policy");
       document.head.appendChild(cspMeta);
     }
-    cspMeta.setAttribute('content', cspDirectives.join('; '));
+    cspMeta.setAttribute("content", cspDirectives.join("; "));
   }
 
   private setupXSSProtection(): void {
     // Monitor for XSS attempts
-    const originalInnerHTML = Object.getOwnPropertyDescriptor(Element.prototype, 'innerHTML')?.set;
+    const originalInnerHTML = Object.getOwnPropertyDescriptor(
+      Element.prototype,
+      "innerHTML",
+    )?.set;
     if (originalInnerHTML) {
-      Object.defineProperty(Element.prototype, 'innerHTML', {
-        set: function(this: Element, value: string) {
-          const element = this as Element & { containsXSS?: (value: string) => boolean; securityMetrics?: { xssAttempts: number } };
-          if (typeof value === 'string' && element.containsXSS && element.containsXSS(value)) {
-            console.warn('XSS attempt blocked');
-            element.securityMetrics = element.securityMetrics || { xssAttempts: 0 };
-            element.securityMetrics.xssAttempts = (element.securityMetrics.xssAttempts || 0) + 1;
+      Object.defineProperty(Element.prototype, "innerHTML", {
+        set: function (this: Element, value: string) {
+          const element = this as Element & {
+            containsXSS?: (value: string) => boolean;
+            securityMetrics?: { xssAttempts: number };
+          };
+          if (
+            typeof value === "string" &&
+            element.containsXSS &&
+            element.containsXSS(value)
+          ) {
+            console.warn("XSS attempt blocked");
+            element.securityMetrics = element.securityMetrics || {
+              xssAttempts: 0,
+            };
+            element.securityMetrics.xssAttempts =
+              (element.securityMetrics.xssAttempts || 0) + 1;
             return;
           }
           originalInnerHTML.call(this, value);
-        }
+        },
       });
     }
 
     // Add XSS detection method
-    (Element.prototype as Element & { containsXSS?: (content: string) => boolean }).containsXSS = function(this: Element, content: string): boolean {
+    (
+      Element.prototype as Element & {
+        containsXSS?: (content: string) => boolean;
+      }
+    ).containsXSS = function (this: Element, content: string): boolean {
       const xssPatterns = [
         /<script[^>]*>.*?<\/script>/gi,
         /javascript:/gi,
         /on\w+\s*=/gi,
-        /<iframe[^>]*>/gi
+        /<iframe[^>]*>/gi,
       ];
-      return xssPatterns.some(pattern => pattern.test(content));
+      return xssPatterns.some((pattern) => pattern.test(content));
     };
   }
 
@@ -290,19 +330,21 @@ class ComprehensiveEnhancements {
     }
 
     // Set frame options
-    let frameOptionsMeta = document.querySelector('meta[http-equiv="X-Frame-Options"]');
+    let frameOptionsMeta = document.querySelector(
+      'meta[http-equiv="X-Frame-Options"]',
+    );
     if (!frameOptionsMeta) {
-      frameOptionsMeta = document.createElement('meta');
-      frameOptionsMeta.setAttribute('http-equiv', 'X-Frame-Options');
-      frameOptionsMeta.setAttribute('content', 'DENY');
+      frameOptionsMeta = document.createElement("meta");
+      frameOptionsMeta.setAttribute("http-equiv", "X-Frame-Options");
+      frameOptionsMeta.setAttribute("content", "DENY");
       document.head.appendChild(frameOptionsMeta);
     }
   }
 
   private setupInputSanitization(): void {
-    document.addEventListener('input', (event) => {
+    document.addEventListener("input", (event) => {
       const target = event.target as HTMLInputElement;
-      if (target.tagName === 'INPUT' || target.tagName === 'TEXTAREA') {
+      if (target.tagName === "INPUT" || target.tagName === "TEXTAREA") {
         const sanitized = this.sanitizeInput(target.value);
         if (sanitized !== target.value) {
           target.value = sanitized;
@@ -313,32 +355,32 @@ class ComprehensiveEnhancements {
 
   private sanitizeInput(input: string): string {
     return input
-      .replace(/<script[^>]*>.*?<\/script>/gi, '')
-      .replace(/<[^>]*>/g, '')
-      .replace(/javascript:/gi, '')
-      .replace(/on\w+\s*=/gi, '');
+      .replace(/<script[^>]*>.*?<\/script>/gi, "")
+      .replace(/<[^>]*>/g, "")
+      .replace(/javascript:/gi, "")
+      .replace(/on\w+\s*=/gi, "");
   }
 
   private setupAccessibilityFeatures(): void {
     // Screen reader support
     this.setupScreenReaderSupport();
-    
+
     // Keyboard navigation
     this.setupKeyboardNavigation();
-    
+
     // Focus management
     this.setupFocusManagement();
-    
+
     // ARIA enhancements
     this.setupARIAEnhancements();
   }
 
   private setupScreenReaderSupport(): void {
     // Create live region
-    const announcer = document.createElement('div');
-    announcer.setAttribute('aria-live', 'polite');
-    announcer.setAttribute('aria-atomic', 'true');
-    announcer.className = 'sr-only';
+    const announcer = document.createElement("div");
+    announcer.setAttribute("aria-live", "polite");
+    announcer.setAttribute("aria-atomic", "true");
+    announcer.className = "sr-only";
     announcer.style.cssText = `
       position: absolute !important;
       width: 1px !important;
@@ -351,21 +393,23 @@ class ComprehensiveEnhancements {
     document.body.appendChild(announcer);
 
     // Store reference for announcements
-    (window as Window & { screenReaderAnnouncer?: HTMLElement }).screenReaderAnnouncer = announcer;
+    (
+      window as Window & { screenReaderAnnouncer?: HTMLElement }
+    ).screenReaderAnnouncer = announcer;
   }
 
   private setupKeyboardNavigation(): void {
-    document.addEventListener('keydown', (event) => {
+    document.addEventListener("keydown", (event) => {
       // Skip links
-      if (event.key === 'Tab' && !event.shiftKey) {
-        const skipLink = document.querySelector('.skip-link');
+      if (event.key === "Tab" && !event.shiftKey) {
+        const skipLink = document.querySelector(".skip-link");
         if (skipLink && document.activeElement === document.body) {
           (skipLink as HTMLElement).focus();
         }
       }
 
       // Escape key handling
-      if (event.key === 'Escape') {
+      if (event.key === "Escape") {
         const modal = document.querySelector('[role="dialog"]:not([hidden])');
         if (modal) {
           const closeButton = modal.querySelector('[aria-label*="close"]');
@@ -381,8 +425,8 @@ class ComprehensiveEnhancements {
   }
 
   private addSkipLinks(): void {
-    const skipContainer = document.createElement('div');
-    skipContainer.className = 'skip-links';
+    const skipContainer = document.createElement("div");
+    skipContainer.className = "skip-links";
     skipContainer.style.cssText = `
       position: absolute;
       top: -40px;
@@ -390,10 +434,10 @@ class ComprehensiveEnhancements {
       z-index: 10000;
     `;
 
-    const skipLink = document.createElement('a');
-    skipLink.href = '#main';
-    skipLink.textContent = 'Skip to main content';
-    skipLink.className = 'skip-link';
+    const skipLink = document.createElement("a");
+    skipLink.href = "#main";
+    skipLink.textContent = "Skip to main content";
+    skipLink.className = "skip-link";
     skipLink.style.cssText = `
       background: #000;
       color: #fff;
@@ -402,12 +446,12 @@ class ComprehensiveEnhancements {
       border-radius: 0 0 4px 4px;
     `;
 
-    skipLink.addEventListener('focus', () => {
-      skipContainer.style.top = '6px';
+    skipLink.addEventListener("focus", () => {
+      skipContainer.style.top = "6px";
     });
 
-    skipLink.addEventListener('blur', () => {
-      skipContainer.style.top = '-40px';
+    skipLink.addEventListener("blur", () => {
+      skipContainer.style.top = "-40px";
     });
 
     skipContainer.appendChild(skipLink);
@@ -418,7 +462,7 @@ class ComprehensiveEnhancements {
     // Track focus history
     const focusHistory: Element[] = [];
 
-    document.addEventListener('focusin', (event) => {
+    document.addEventListener("focusin", (event) => {
       focusHistory.push(event.target as Element);
       if (focusHistory.length > 10) {
         focusHistory.shift();
@@ -426,30 +470,33 @@ class ComprehensiveEnhancements {
     });
 
     // Store focus history globally
-    (window as Window & { focusHistory?: Element[] }).focusHistory = focusHistory;
+    (window as Window & { focusHistory?: Element[] }).focusHistory =
+      focusHistory;
   }
 
   private setupARIAEnhancements(): void {
     // Enhance buttons without labels
-    const buttons = document.querySelectorAll('button:not([aria-label])');
-    buttons.forEach(button => {
+    const buttons = document.querySelectorAll("button:not([aria-label])");
+    buttons.forEach((button) => {
       if (!button.textContent?.trim()) {
-        button.setAttribute('aria-label', 'Button');
+        button.setAttribute("aria-label", "Button");
       }
     });
 
     // Enhance images without alt text
-    const images = document.querySelectorAll('img:not([alt])');
-    images.forEach(img => {
-      img.setAttribute('alt', 'Image');
+    const images = document.querySelectorAll("img:not([alt])");
+    images.forEach((img) => {
+      img.setAttribute("alt", "Image");
     });
 
     // Enhance form inputs without labels
-    const inputs = document.querySelectorAll('input:not([aria-label]):not([aria-labelledby])');
-    inputs.forEach(input => {
+    const inputs = document.querySelectorAll(
+      "input:not([aria-label]):not([aria-labelledby])",
+    );
+    inputs.forEach((input) => {
       const label = document.querySelector(`label[for="${input.id}"]`);
-      if (!label && input.getAttribute('type') !== 'hidden') {
-        input.setAttribute('aria-label', 'Input field');
+      if (!label && input.getAttribute("type") !== "hidden") {
+        input.setAttribute("aria-label", "Input field");
       }
     });
   }
@@ -457,99 +504,99 @@ class ComprehensiveEnhancements {
   private setupSEOFeatures(): void {
     // Meta tags
     this.setupMetaTags();
-    
+
     // Structured data
     this.setupStructuredData();
-    
+
     // Open Graph
     this.setupOpenGraph();
-    
+
     // Canonical URLs
     this.setupCanonicalUrls();
   }
 
   private setupMetaTags(): void {
     const metaTags = {
-      'viewport': 'width=device-width, initial-scale=1',
-      'theme-color': '#1a1a1a',
-      'robots': 'index, follow',
-      'author': 'Zion Tech Group',
-      'generator': 'Vite + React'
+      viewport: "width=device-width, initial-scale=1",
+      "theme-color": "#1a1a1a",
+      robots: "index, follow",
+      author: "Zion Tech Group",
+      generator: "Vite + React",
     };
 
     Object.entries(metaTags).forEach(([name, content]) => {
       let meta = document.querySelector(`meta[name="${name}"]`);
       if (!meta) {
-        meta = document.createElement('meta');
-        meta.setAttribute('name', name);
+        meta = document.createElement("meta");
+        meta.setAttribute("name", name);
         document.head.appendChild(meta);
       }
-      meta.setAttribute('content', content);
+      meta.setAttribute("content", content);
     });
   }
 
   private setupStructuredData(): void {
     const organizationSchema = {
-      '@context': 'https://schema.org',
-      '@type': 'Organization',
-      name: 'Zion Tech Group',
-      url: 'https://ziontechgroup.com',
-      logo: 'https://ziontechgroup.com/logo.png',
-      description: 'Leading AI and technology solutions provider'
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      name: "Zion Tech Group",
+      url: "https://ziontechgroup.com",
+      logo: "https://ziontechgroup.com/logo.png",
+      description: "Leading AI and technology solutions provider",
     };
 
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
     script.textContent = JSON.stringify(organizationSchema);
     document.head.appendChild(script);
   }
 
   private setupOpenGraph(): void {
     const ogTags = {
-      'og:type': 'website',
-      'og:site_name': 'Zion Tech Group',
-      'og:locale': 'en_US'
+      "og:type": "website",
+      "og:site_name": "Zion Tech Group",
+      "og:locale": "en_US",
     };
 
     Object.entries(ogTags).forEach(([property, content]) => {
       let meta = document.querySelector(`meta[property="${property}"]`);
       if (!meta) {
-        meta = document.createElement('meta');
-        meta.setAttribute('property', property);
+        meta = document.createElement("meta");
+        meta.setAttribute("property", property);
         document.head.appendChild(meta);
       }
-      meta.setAttribute('content', content);
+      meta.setAttribute("content", content);
     });
   }
 
   private setupCanonicalUrls(): void {
     let canonical = document.querySelector('link[rel="canonical"]');
     if (!canonical) {
-      canonical = document.createElement('link');
-      canonical.setAttribute('rel', 'canonical');
+      canonical = document.createElement("link");
+      canonical.setAttribute("rel", "canonical");
       document.head.appendChild(canonical);
     }
-    canonical.setAttribute('href', window.location.href);
+    canonical.setAttribute("href", window.location.href);
   }
 
   private setupUXFeatures(): void {
     // Smart loading
     this.setupSmartLoading();
-    
+
     // Error recovery
     this.setupErrorRecovery();
-    
+
     // User feedback
     this.setupUserFeedback();
-    
+
     // Personalization
     this.setupPersonalization();
   }
 
   private setupSmartLoading(): void {
     // Global loading indicator
-    const indicator = document.createElement('div');
-    indicator.id = 'global-loading-indicator';
+    const indicator = document.createElement("div");
+    indicator.id = "global-loading-indicator";
     indicator.style.cssText = `
       position: fixed;
       top: 0;
@@ -567,23 +614,23 @@ class ComprehensiveEnhancements {
     // Monitor fetch requests
     const originalFetch = window.fetch;
     window.fetch = async (...args) => {
-      const indicator = document.getElementById('global-loading-indicator');
+      const indicator = document.getElementById("global-loading-indicator");
       if (indicator) {
-        indicator.style.opacity = '1';
-        indicator.style.transform = 'translateX(0)';
+        indicator.style.opacity = "1";
+        indicator.style.transform = "translateX(0)";
       }
 
       try {
         const response = await originalFetch(...args);
         if (indicator) {
-          indicator.style.opacity = '0';
-          indicator.style.transform = 'translateX(-100%)';
+          indicator.style.opacity = "0";
+          indicator.style.transform = "translateX(-100%)";
         }
         return response;
       } catch (error) {
         if (indicator) {
-          indicator.style.opacity = '0';
-          indicator.style.transform = 'translateX(-100%)';
+          indicator.style.opacity = "0";
+          indicator.style.transform = "translateX(-100%)";
         }
         throw error;
       }
@@ -592,25 +639,38 @@ class ComprehensiveEnhancements {
 
   private setupErrorRecovery(): void {
     // Global error handler
-    window.addEventListener('error', (event) => {
-      console.error('Application error:', event.error);
-      this.showNotification('Something went wrong. We\'re working to fix it.', 'error');
+    window.addEventListener("error", (event) => {
+      console.error("Application error:", event.error);
+      this.showNotification(
+        "Something went wrong. We're working to fix it.",
+        "error",
+      );
     });
 
     // Unhandled promise rejection handler
-    window.addEventListener('unhandledrejection', (event) => {
-      console.error('Unhandled promise rejection:', event.reason);
-      this.showNotification('An unexpected error occurred.', 'error');
+    window.addEventListener("unhandledrejection", (event) => {
+      console.error("Unhandled promise rejection:", event.reason);
+      this.showNotification("An unexpected error occurred.", "error");
     });
   }
 
   private setupUserFeedback(): void {
     // Store notification function globally
-    (window as Window & { showNotification?: (message: string, type?: 'success' | 'error' | 'warning' | 'info') => void }).showNotification = this.showNotification.bind(this);
+    (
+      window as Window & {
+        showNotification?: (
+          message: string,
+          type?: "success" | "error" | "warning" | "info",
+        ) => void;
+      }
+    ).showNotification = this.showNotification.bind(this);
   }
 
-  private showNotification(message: string, type: 'success' | 'error' | 'warning' | 'info' = 'info'): void {
-    const notification = document.createElement('div');
+  private showNotification(
+    message: string,
+    type: "success" | "error" | "warning" | "info" = "info",
+  ): void {
+    const notification = document.createElement("div");
     notification.className = `notification notification-${type}`;
     notification.textContent = message;
     notification.style.cssText = `
@@ -629,21 +689,21 @@ class ComprehensiveEnhancements {
     `;
 
     const colors = {
-      success: '#10b981',
-      error: '#ef4444',
-      warning: '#f59e0b',
-      info: '#3b82f6'
+      success: "#10b981",
+      error: "#ef4444",
+      warning: "#f59e0b",
+      info: "#3b82f6",
     };
     notification.style.backgroundColor = colors[type];
 
     document.body.appendChild(notification);
 
     setTimeout(() => {
-      notification.style.transform = 'translateX(0)';
+      notification.style.transform = "translateX(0)";
     }, 100);
 
     setTimeout(() => {
-      notification.style.transform = 'translateX(100%)';
+      notification.style.transform = "translateX(100%)";
       setTimeout(() => {
         if (notification.parentNode) {
           notification.parentNode.removeChild(notification);
@@ -654,64 +714,77 @@ class ComprehensiveEnhancements {
 
   private setupPersonalization(): void {
     // Load user preferences
-    const preferences = localStorage.getItem('user-preferences');
+    const preferences = localStorage.getItem("user-preferences");
     if (preferences) {
       try {
         const prefs = JSON.parse(preferences);
         this.applyPreferences(prefs);
       } catch (error) {
-        console.warn('Failed to load user preferences:', error);
+        console.warn("Failed to load user preferences:", error);
       }
     }
   }
 
-  private applyPreferences(preferences: { theme?: string; highContrast?: boolean; fontSize?: string; reduceMotion?: boolean }): void {
-    if (preferences.theme === 'dark') {
-      document.body.classList.add('dark-theme');
+  private applyPreferences(preferences: {
+    theme?: string;
+    highContrast?: boolean;
+    fontSize?: string;
+    reduceMotion?: boolean;
+  }): void {
+    if (preferences.theme === "dark") {
+      document.body.classList.add("dark-theme");
     }
 
     if (preferences.highContrast) {
-      document.body.classList.add('high-contrast');
+      document.body.classList.add("high-contrast");
     }
 
     if (preferences.reduceMotion) {
-      document.body.classList.add('reduce-motion');
+      document.body.classList.add("reduce-motion");
     }
   }
 
   private setupAnalytics(): void {
     // Performance monitoring
     this.setupPerformanceMonitoring();
-    
+
     // User engagement tracking
     this.setupEngagementTracking();
-    
+
     // Error tracking
     this.setupErrorTracking();
   }
 
   private setupPerformanceMonitoring(): void {
-    if ('PerformanceObserver' in window) {
+    if ("PerformanceObserver" in window) {
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           switch (entry.entryType) {
-            case 'paint':
-              if (entry.name === 'first-contentful-paint') {
+            case "paint":
+              if (entry.name === "first-contentful-paint") {
                 this.performanceMetrics.fcp = entry.startTime;
               }
               break;
-            case 'largest-contentful-paint':
+            case "largest-contentful-paint":
               this.performanceMetrics.lcp = entry.startTime;
               break;
-            case 'first-input': {
-              const fidEntry = entry as PerformanceEntry & { processingStart: number };
-              this.performanceMetrics.fid = fidEntry.processingStart - entry.startTime;
+            case "first-input": {
+              const fidEntry = entry as PerformanceEntry & {
+                processingStart: number;
+              };
+              this.performanceMetrics.fid =
+                fidEntry.processingStart - entry.startTime;
               break;
             }
-            case 'layout-shift': {
-              const layoutShiftEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
+            case "layout-shift": {
+              const layoutShiftEntry = entry as PerformanceEntry & {
+                hadRecentInput?: boolean;
+                value?: number;
+              };
               if (!layoutShiftEntry.hadRecentInput) {
-                this.performanceMetrics.cls = (this.performanceMetrics.cls || 0) + (layoutShiftEntry.value || 0);
+                this.performanceMetrics.cls =
+                  (this.performanceMetrics.cls || 0) +
+                  (layoutShiftEntry.value || 0);
               }
               break;
             }
@@ -720,9 +793,16 @@ class ComprehensiveEnhancements {
       });
 
       try {
-        observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift'] });
+        observer.observe({
+          entryTypes: [
+            "paint",
+            "largest-contentful-paint",
+            "first-input",
+            "layout-shift",
+          ],
+        });
       } catch (error) {
-        console.warn('Performance observer not supported:', error);
+        console.warn("Performance observer not supported:", error);
       }
     }
   }
@@ -732,59 +812,74 @@ class ComprehensiveEnhancements {
     let clickCount = 0;
 
     // Scroll tracking
-    window.addEventListener('scroll', () => {
-      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
-      scrollDepth = Math.max(scrollDepth, (scrollTop / scrollHeight) * 100);
-    }, { passive: true });
+    window.addEventListener(
+      "scroll",
+      () => {
+        const scrollTop =
+          window.pageYOffset || document.documentElement.scrollTop;
+        const scrollHeight =
+          document.documentElement.scrollHeight - window.innerHeight;
+        scrollDepth = Math.max(scrollDepth, (scrollTop / scrollHeight) * 100);
+      },
+      { passive: true },
+    );
 
     // Click tracking
-    document.addEventListener('click', () => {
-      clickCount++;
-    }, { passive: true });
+    document.addEventListener(
+      "click",
+      () => {
+        clickCount++;
+      },
+      { passive: true },
+    );
 
     // Store metrics
     this.uxMetrics.engagementScore = scrollDepth;
-    (window as Window & { engagementMetrics?: { scrollDepth: number; clickCount: number } }).engagementMetrics = { scrollDepth, clickCount };
+    (
+      window as Window & {
+        engagementMetrics?: { scrollDepth: number; clickCount: number };
+      }
+    ).engagementMetrics = { scrollDepth, clickCount };
   }
 
   private setupErrorTracking(): void {
     // Track JavaScript errors
-    window.addEventListener('error', (event) => {
-      console.error('Error tracked:', {
+    window.addEventListener("error", (event) => {
+      console.error("Error tracked:", {
         message: event.message,
         filename: event.filename,
         lineno: event.lineno,
         colno: event.colno,
-        error: event.error
+        error: event.error,
       });
     });
 
     // Track promise rejections
-    window.addEventListener('unhandledrejection', (event) => {
-      console.error('Promise rejection tracked:', event.reason);
+    window.addEventListener("unhandledrejection", (event) => {
+      console.error("Promise rejection tracked:", event.reason);
     });
   }
 
   private setupOfflineSupport(): void {
     // Register service worker
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/sw.js')
-        .then(registration => {
-          console.log('Service Worker registered:', registration);
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker
+        .register("/sw.js")
+        .then((registration) => {
+          console.log("Service Worker registered:", registration);
         })
-        .catch(error => {
-          console.error('Service Worker registration failed:', error);
+        .catch((error) => {
+          console.error("Service Worker registration failed:", error);
         });
     }
 
     // Online/offline handling
-    window.addEventListener('online', () => {
-      this.showNotification('Connection restored', 'success');
+    window.addEventListener("online", () => {
+      this.showNotification("Connection restored", "success");
     });
 
-    window.addEventListener('offline', () => {
-      this.showNotification('You are offline', 'warning');
+    window.addEventListener("offline", () => {
+      this.showNotification("You are offline", "warning");
     });
   }
 
@@ -792,27 +887,27 @@ class ComprehensiveEnhancements {
     // Add manifest link
     let manifest = document.querySelector('link[rel="manifest"]');
     if (!manifest) {
-      manifest = document.createElement('link');
-      manifest.setAttribute('rel', 'manifest');
-      manifest.setAttribute('href', '/manifest.json');
+      manifest = document.createElement("link");
+      manifest.setAttribute("rel", "manifest");
+      manifest.setAttribute("href", "/manifest.json");
       document.head.appendChild(manifest);
     }
 
     // Add theme color
     let themeColor = document.querySelector('meta[name="theme-color"]');
     if (!themeColor) {
-      themeColor = document.createElement('meta');
-      themeColor.setAttribute('name', 'theme-color');
-      themeColor.setAttribute('content', '#1a1a1a');
+      themeColor = document.createElement("meta");
+      themeColor.setAttribute("name", "theme-color");
+      themeColor.setAttribute("content", "#1a1a1a");
       document.head.appendChild(themeColor);
     }
   }
 
   private supportsWebP(): boolean {
-    const canvas = document.createElement('canvas');
+    const canvas = document.createElement("canvas");
     canvas.width = 1;
     canvas.height = 1;
-    return canvas.toDataURL('image/webp').indexOf('data:image/webp') === 0;
+    return canvas.toDataURL("image/webp").indexOf("data:image/webp") === 0;
   }
 
   public getMetrics(): {
@@ -827,50 +922,59 @@ class ComprehensiveEnhancements {
       security: this.securityMetrics,
       accessibility: this.accessibilityMetrics,
       seo: this.seoMetrics,
-      ux: this.uxMetrics
+      ux: this.uxMetrics,
     };
   }
 
   public generateReport(): string {
     const metrics = this.getMetrics();
-    
+
     return `
 Comprehensive Enhancement Report:
-================================
-Performance:
-- FCP: ${metrics.performance.fcp?.toFixed(2) || 'N/A'}ms
-- LCP: ${metrics.performance.lcp?.toFixed(2) || 'N/A'}ms
-- FID: ${metrics.performance.fid?.toFixed(2) || 'N/A'}ms
-- CLS: ${metrics.performance.cls?.toFixed(4) || 'N/A'}
-- Memory: ${metrics.performance.memoryUsage ? (metrics.performance.memoryUsage / 1024 / 1024).toFixed(2) + 'MB' : 'N/A'}
+Generated: ${new Date().toISOString()}
 
-Security:
-- XSS Attempts Blocked: ${metrics.security.xssAttempts || 0}
-- Threats Blocked: ${metrics.security.threatsBlocked || 0}
+Performance Metrics:
+- FCP: ${metrics.performance.fcp || "N/A"}ms
+- LCP: ${metrics.performance.lcp || "N/A"}ms
+- FID: ${metrics.performance.fid || "N/A"}ms
+- CLS: ${metrics.performance.cls || "N/A"}
+- TTFB: ${metrics.performance.ttfb || "N/A"}ms
+- Memory Usage: ${metrics.performance.memoryUsage || "N/A"}MB
+- Bundle Size: ${metrics.performance.bundleSize || "N/A"}KB
 
-Accessibility:
-- WCAG Compliance: ${metrics.accessibility.wcagCompliance || 'N/A'}%
-- Keyboard Navigation: ${metrics.accessibility.keyboardNavigationScore || 'N/A'}%
+Security Metrics:
+- Threats Blocked: ${metrics.security.threatsBlocked || "N/A"}
+- Vulnerabilities Fixed: ${metrics.security.vulnerabilitiesFixed || "N/A"}
+- CSP Violations: ${metrics.security.cspViolations || "N/A"}
+- XSS Attempts: ${metrics.security.xssAttempts || "N/A"}
 
-UX:
-- Engagement Score: ${metrics.ux.engagementScore?.toFixed(1) || 'N/A'}%
-- User Satisfaction: ${metrics.ux.userSatisfactionScore || 'N/A'}%
-    `.trim();
+Accessibility Metrics:
+- WCAG Compliance: ${metrics.accessibility.wcagCompliance || "N/A"}%
+- Keyboard Navigation Score: ${metrics.accessibility.keyboardNavigationScore || "N/A"}%
+- Screen Reader Score: ${metrics.accessibility.screenReaderScore || "N/A"}%
+- Color Contrast Score: ${metrics.accessibility.colorContrastScore || "N/A"}%
+
+SEO Metrics:
+- Meta Tags Score: ${metrics.seo.metaTagsScore || "N/A"}%
+- Structured Data Score: ${metrics.seo.structuredDataScore || "N/A"}%
+- Page Speed Score: ${metrics.seo.pageSpeedScore || "N/A"}%
+- Mobile Friendliness Score: ${metrics.seo.mobileFriendlinessScore || "N/A"}%
+
+UX Metrics:
+- Engagement Score: ${metrics.ux.engagementScore || "N/A"}%
+- Bounce Rate: ${metrics.ux.bounceRate || "N/A"}%
+- Task Completion Rate: ${metrics.ux.taskCompletionRate || "N/A"}%
+- User Satisfaction Score: ${metrics.ux.userSatisfactionScore || "N/A"}/10
+
+This report provides a comprehensive overview of the current state of enhancements.
+`;
   }
 }
 
-// Singleton instance
-let enhancements: ComprehensiveEnhancements | null = null;
+// Export a singleton instance
+export const comprehensiveEnhancer = new ComprehensiveEnhancements();
 
-export function getComprehensiveEnhancements(config?: Partial<EnhancementConfig>): ComprehensiveEnhancements {
-  if (!enhancements) {
-    enhancements = new ComprehensiveEnhancements(config);
-  }
-  return enhancements;
+// Export function to get comprehensive enhancements
+export function getComprehensiveEnhancements() {
+  return comprehensiveEnhancer;
 }
-
-export function initializeEnhancements(config?: Partial<EnhancementConfig>): ComprehensiveEnhancements {
-  return getComprehensiveEnhancements(config);
-}
-
-export default ComprehensiveEnhancements;

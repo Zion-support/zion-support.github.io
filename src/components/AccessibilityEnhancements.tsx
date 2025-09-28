@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 
 interface AccessibilityEnhancementsProps {
   enableHighContrast?: boolean;
@@ -7,11 +7,13 @@ interface AccessibilityEnhancementsProps {
   enableScreenReader?: boolean;
 }
 
-export const AccessibilityEnhancements: React.FC<AccessibilityEnhancementsProps> = ({
+export const AccessibilityEnhancements: React.FC<
+  AccessibilityEnhancementsProps
+> = ({
   enableHighContrast = true,
   enableReducedMotion = true,
   enableFocusIndicators = true,
-  enableScreenReader = true
+  enableScreenReader = true,
 }) => {
   // Use the enableFocusIndicators prop to avoid unused variable warning
   const _enableFocusIndicators = enableFocusIndicators;
@@ -19,7 +21,7 @@ export const AccessibilityEnhancements: React.FC<AccessibilityEnhancementsProps>
     highContrast: false,
     reducedMotion: false,
     focusIndicators: true,
-    screenReader: false
+    screenReader: false,
   });
 
   useEffect(() => {
@@ -27,23 +29,28 @@ export const AccessibilityEnhancements: React.FC<AccessibilityEnhancementsProps>
     const checkPreferences = () => {
       // Check for high contrast preference
       if (enableHighContrast) {
-        const highContrast = window.matchMedia('(prefers-contrast: high)').matches;
-        setPreferences(prev => ({ ...prev, highContrast }));
+        const highContrast = window.matchMedia(
+          "(prefers-contrast: high)",
+        ).matches;
+        setPreferences((prev) => ({ ...prev, highContrast }));
       }
 
       // Check for reduced motion preference
       if (enableReducedMotion) {
-        const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-        setPreferences(prev => ({ ...prev, reducedMotion }));
+        const reducedMotion = window.matchMedia(
+          "(prefers-reduced-motion: reduce)",
+        ).matches;
+        setPreferences((prev) => ({ ...prev, reducedMotion }));
       }
 
       // Check for screen reader usage
       if (enableScreenReader) {
-        const screenReader = window.matchMedia('(prefers-reduced-motion: reduce)').matches ||
-                           navigator.userAgent.includes('NVDA') ||
-                           navigator.userAgent.includes('JAWS') ||
-                           navigator.userAgent.includes('VoiceOver');
-        setPreferences(prev => ({ ...prev, screenReader }));
+        const screenReader =
+          window.matchMedia("(prefers-reduced-motion: reduce)").matches ||
+          navigator.userAgent.includes("NVDA") ||
+          navigator.userAgent.includes("JAWS") ||
+          navigator.userAgent.includes("VoiceOver");
+        setPreferences((prev) => ({ ...prev, screenReader }));
       }
     };
 
@@ -51,15 +58,17 @@ export const AccessibilityEnhancements: React.FC<AccessibilityEnhancementsProps>
 
     // Listen for preference changes
     const mediaQueries = [
-      window.matchMedia('(prefers-contrast: high)'),
-      window.matchMedia('(prefers-reduced-motion: reduce)')
+      window.matchMedia("(prefers-contrast: high)"),
+      window.matchMedia("(prefers-reduced-motion: reduce)"),
     ];
 
     const handleChange = () => checkPreferences();
-    mediaQueries.forEach(mq => mq.addEventListener('change', handleChange));
+    mediaQueries.forEach((mq) => mq.addEventListener("change", handleChange));
 
     return () => {
-      mediaQueries.forEach(mq => mq.removeEventListener('change', handleChange));
+      mediaQueries.forEach((mq) =>
+        mq.removeEventListener("change", handleChange),
+      );
     };
   }, [enableHighContrast, enableReducedMotion, enableScreenReader]);
 
@@ -69,63 +78,64 @@ export const AccessibilityEnhancements: React.FC<AccessibilityEnhancementsProps>
 
     // High contrast mode
     if (preferences.highContrast) {
-      root.classList.add('high-contrast');
+      root.classList.add("high-contrast");
     } else {
-      root.classList.remove('high-contrast');
+      root.classList.remove("high-contrast");
     }
 
     // Reduced motion
     if (preferences.reducedMotion) {
-      root.classList.add('reduced-motion');
+      root.classList.add("reduced-motion");
     } else {
-      root.classList.remove('reduced-motion');
+      root.classList.remove("reduced-motion");
     }
 
     // Focus indicators
     if (preferences.focusIndicators && _enableFocusIndicators) {
-      root.classList.add('focus-indicators');
+      root.classList.add("focus-indicators");
     } else {
-      root.classList.remove('focus-indicators');
+      root.classList.remove("focus-indicators");
     }
 
     // Screen reader optimizations
     if (preferences.screenReader) {
-      root.classList.add('screen-reader-optimized');
+      root.classList.add("screen-reader-optimized");
     } else {
-      root.classList.remove('screen-reader-optimized');
+      root.classList.remove("screen-reader-optimized");
     }
   }, [preferences, _enableFocusIndicators]);
 
   useEffect(() => {
     // Add skip links
-    const skipLinks = document.querySelectorAll('.skip-link');
+    const skipLinks = document.querySelectorAll(".skip-link");
     if (skipLinks.length === 0) {
-      const skipLink = document.createElement('a');
-      skipLink.href = '#main-content';
-      skipLink.textContent = 'Skip to main content';
-      skipLink.className = 'skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
+      const skipLink = document.createElement("a");
+      skipLink.href = "#main-content";
+      skipLink.textContent = "Skip to main content";
+      skipLink.className =
+        "skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50";
       document.body.insertBefore(skipLink, document.body.firstChild);
     }
 
     // Add ARIA landmarks
-    const main = document.querySelector('main');
+    const main = document.querySelector("main");
     if (!main) {
-      const app = document.querySelector('#root');
+      const app = document.querySelector("#root");
       if (app) {
-        app.setAttribute('role', 'main');
-        app.id = 'main-content';
+        app.setAttribute("role", "main");
+        app.id = "main-content";
       }
     }
 
     // Announce page changes to screen readers
     const announcePageChange = () => {
-      const announcement = document.createElement('div');
-      announcement.setAttribute('aria-live', 'polite');
-      announcement.setAttribute('aria-atomic', 'true');
-      announcement.className = 'sr-only';
+      const announcement = document.createElement("div");
+      announcement.setAttribute("aria-live", "polite");
+      announcement.setAttribute("aria-atomic", "true");
+      announcement.className = "sr-only";
       announcement.textContent = `Page loaded: ${document.title}`;
       document.body.appendChild(announcement);
-      
+
       setTimeout(() => {
         document.body.removeChild(announcement);
       }, 1000);

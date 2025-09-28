@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback } from 'react';
+import React, { useEffect, useState, useCallback } from "react";
 
 interface PerformanceMetricsData {
   fcp: number;
@@ -18,41 +18,74 @@ interface PerformanceMetricsProps {
   onClose: () => void;
 }
 
-const PerformanceMetrics: React.FC<PerformanceMetricsProps> = ({ isVisible, onClose }) => {
+const PerformanceMetrics: React.FC<PerformanceMetricsProps> = ({
+  isVisible,
+  onClose,
+}) => {
   const [metrics, setMetrics] = useState<PerformanceMetricsData | null>(null);
   const [isLoading, setIsLoading] = useState(true);
 
   const collectMetrics = useCallback(async () => {
     try {
       setIsLoading(true);
-      
+
       // Collect Web Vitals
-      const fcp = performance.getEntriesByName('first-contentful-paint')[0]?.startTime || 0;
-      const lcp = performance.getEntriesByType('largest-contentful-paint')[0]?.startTime || 0;
-      const fidEntry = performance.getEntriesByType('first-input')[0] as PerformanceEventTiming;
-      const fid = fidEntry ? (fidEntry.processingStart - fidEntry.startTime) : 0;
-      const cls = performance.getEntriesByType('layout-shift').reduce((acc, entry) => acc + (entry as PerformanceEntry & { value: number }).value, 0);
-      const ttfb = performance.getEntriesByType('navigation')[0]?.responseStart || 0;
+      const fcp =
+        performance.getEntriesByName("first-contentful-paint")[0]?.startTime ||
+        0;
+      const lcp =
+        performance.getEntriesByType("largest-contentful-paint")[0]
+          ?.startTime || 0;
+      const fid =
+        (
+          performance.getEntriesByType("first-input")[0] as PerformanceEntry & {
+            processingStart?: number;
+          }
+        )?.processingStart || 0;
+      const cls = performance
+        .getEntriesByType("layout-shift")
+        .reduce(
+          (acc, entry) =>
+            acc + (entry as PerformanceEntry & { value: number }).value,
+          0,
+        );
+      const navEntry = performance.getEntriesByType(
+        "navigation",
+      )[0] as PerformanceNavigationTiming;
+      const ttfb = navEntry?.responseStart || 0;
 
       // Collect memory usage
-      const memoryInfo = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory;
-      const memoryUsage = memoryInfo ? memoryInfo.usedJSHeapSize / 1024 / 1024 : 0;
+      const memoryInfo = (
+        performance as Performance & { memory?: { usedJSHeapSize: number } }
+      ).memory;
+      const memoryUsage = memoryInfo
+        ? memoryInfo.usedJSHeapSize / 1024 / 1024
+        : 0;
 
       // Estimate bundle size
-      const bundleSize = performance.getEntriesByType('resource')
-        .filter((entry: PerformanceResourceTiming) => entry.name.includes('.js'))
-        .reduce((acc, entry: PerformanceResourceTiming) => acc + entry.transferSize, 0) / 1024;
+      const resourceEntries = performance.getEntriesByType(
+        "resource",
+      ) as PerformanceResourceTiming[];
+      const bundleSize =
+        resourceEntries
+          .filter((entry) => entry.name.includes(".js"))
+          .reduce((acc, entry) => acc + (entry.transferSize || 0), 0) / 1024;
 
       // Get network speed
-      const connection = (navigator as Navigator & { connection?: { effectiveType?: string } }).connection;
-      const networkSpeed = connection ? connection.effectiveType || 'unknown' : 'unknown';
+      const connection = (
+        navigator as Navigator & { connection?: { effectiveType?: string } }
+      ).connection;
+      const networkSpeed = connection
+        ? connection.effectiveType || "unknown"
+        : "unknown";
 
       // Estimate CPU usage (simplified)
       const cpuUsage = performance.now() / 1000;
 
       // Get storage usage
-      const storageUsed = navigator.storage ? 
-        (await navigator.storage.estimate()).usage || 0 : 0;
+      const storageUsed = navigator.storage
+        ? (await navigator.storage.estimate()).usage || 0
+        : 0;
 
       setMetrics({
         fcp,
@@ -64,10 +97,10 @@ const PerformanceMetrics: React.FC<PerformanceMetricsProps> = ({ isVisible, onCl
         bundleSize,
         networkSpeed,
         cpuUsage,
-        storageUsed: storageUsed / 1024 / 1024
+        storageUsed: storageUsed / 1024 / 1024,
       });
     } catch (error) {
-      console.error('Error collecting performance metrics:', error);
+      console.error("Error collecting performance metrics:", error);
     } finally {
       setIsLoading(false);
     }
@@ -85,7 +118,9 @@ const PerformanceMetrics: React.FC<PerformanceMetricsProps> = ({ isVisible, onCl
     <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
       <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
         <div className="flex justify-between items-center mb-6">
-          <h2 className="text-2xl font-bold text-gray-900">Performance Metrics</h2>
+          <h2 className="text-2xl font-bold text-gray-900">
+            Performance Metrics
+          </h2>
           <button
             onClick={onClose}
             className="text-gray-500 hover:text-gray-700 text-2xl"
@@ -103,35 +138,51 @@ const PerformanceMetrics: React.FC<PerformanceMetricsProps> = ({ isVisible, onCl
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* Web Vitals */}
             <div className="bg-gray-50 p-4 rounded-lg">
-              <h3 className="text-lg font-semibold mb-4 text-gray-800">Web Vitals</h3>
+              <h3 className="text-lg font-semibold mb-4 text-gray-800">
+                Web Vitals
+              </h3>
               <div className="space-y-2">
                 <div className="flex justify-between">
                   <span className="text-gray-600">First Contentful Paint:</span>
-                  <span className={`font-mono ${metrics.fcp < 1800 ? 'text-green-600' : 'text-red-600'}`}>
+                  <span
+                    className={`font-mono ${metrics.fcp < 1800 ? "text-green-600" : "text-red-600"}`}
+                  >
                     {metrics.fcp.toFixed(2)}ms
                   </span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-gray-600">Largest Contentful Paint:</span>
-                  <span className={`font-mono ${metrics.lcp < 2500 ? 'text-green-600' : 'text-red-600'}`}>
+                  <span className="text-gray-600">
+                    Largest Contentful Paint:
+                  </span>
+                  <span
+                    className={`font-mono ${metrics.lcp < 2500 ? "text-green-600" : "text-red-600"}`}
+                  >
                     {metrics.lcp.toFixed(2)}ms
                   </span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-gray-600">First Input Delay:</span>
-                  <span className={`font-mono ${metrics.fid < 100 ? 'text-green-600' : 'text-red-600'}`}>
+                  <span
+                    className={`font-mono ${metrics.fid < 100 ? "text-green-600" : "text-red-600"}`}
+                  >
                     {metrics.fid.toFixed(2)}ms
                   </span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-gray-600">Cumulative Layout Shift:</span>
-                  <span className={`font-mono ${metrics.cls < 0.1 ? 'text-green-600' : 'text-red-600'}`}>
+                  <span className="text-gray-600">
+                    Cumulative Layout Shift:
+                  </span>
+                  <span
+                    className={`font-mono ${metrics.cls < 0.1 ? "text-green-600" : "text-red-600"}`}
+                  >
                     {metrics.cls.toFixed(3)}
                   </span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-gray-600">Time to First Byte:</span>
-                  <span className={`font-mono ${metrics.ttfb < 600 ? 'text-green-600' : 'text-red-600'}`}>
+                  <span
+                    className={`font-mono ${metrics.ttfb < 600 ? "text-green-600" : "text-red-600"}`}
+                  >
                     {metrics.ttfb.toFixed(2)}ms
                   </span>
                 </div>
@@ -140,7 +191,9 @@ const PerformanceMetrics: React.FC<PerformanceMetricsProps> = ({ isVisible, onCl
 
             {/* Resource Usage */}
             <div className="bg-gray-50 p-4 rounded-lg">
-              <h3 className="text-lg font-semibold mb-4 text-gray-800">Resource Usage</h3>
+              <h3 className="text-lg font-semibold mb-4 text-gray-800">
+                Resource Usage
+              </h3>
               <div className="space-y-2">
                 <div className="flex justify-between">
                   <span className="text-gray-600">Memory Usage:</span>

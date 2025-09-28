@@ -19,13 +19,16 @@ export class ImageOptimizer {
   }
 
   // Generate optimized image URL
-  generateOptimizedUrl(src: string, options: ImageOptimizationOptions = {}): string {
+  generateOptimizedUrl(
+    src: string,
+    options: ImageOptimizationOptions = {},
+  ): string {
     const {
       width,
       height,
       quality = 80,
       format = "webp",
-      blur = false
+      blur = false,
     } = options;
 
     // Check cache first
@@ -55,7 +58,10 @@ export class ImageOptimizer {
   }
 
   // Generate responsive image sources
-  generateResponsiveSources(src: string, options: ImageOptimizationOptions = {}): {
+  generateResponsiveSources(
+    src: string,
+    options: ImageOptimizationOptions = {},
+  ): {
     src: string;
     width: number;
     media?: string;
@@ -64,7 +70,7 @@ export class ImageOptimizer {
     return sizes.map((width, index) => ({
       src: this.generateOptimizedUrl(src, { ...options, width }),
       width,
-      media: index === 0 ? undefined : `(min-width: ${sizes[index - 1]}px)`
+      media: index === 0 ? undefined : `(min-width: ${sizes[index - 1]}px)`,
     }));
   }
 
@@ -74,7 +80,7 @@ export class ImageOptimizer {
     canvas.width = width;
     canvas.height = height;
     const ctx = canvas.getContext("2d");
-    
+
     if (ctx) {
       // Create a simple gradient placeholder
       const gradient = ctx.createLinearGradient(0, 0, width, height);
@@ -83,7 +89,7 @@ export class ImageOptimizer {
       ctx.fillStyle = gradient;
       ctx.fillRect(0, 0, width, height);
     }
-    
+
     return canvas.toDataURL("image/jpeg", 0.1);
   }
 
@@ -92,15 +98,18 @@ export class ImageOptimizer {
     const words = filename
       .replace(/[^a-zA-Z0-9\s]/g, " ")
       .split(/\s+/)
-      .filter(word => word.length > 0)
-      .map(word => word.toLowerCase());
-    
+      .filter((word) => word.length > 0)
+      .map((word) => word.toLowerCase());
+
     const baseAlt = words.join(" ");
     return context ? `${baseAlt} - ${context}` : baseAlt;
   }
 
   // Preload critical images
-  preloadImage(src: string, options: ImageOptimizationOptions = {}): Promise<void> {
+  preloadImage(
+    src: string,
+    options: ImageOptimizationOptions = {},
+  ): Promise<void> {
     return new Promise((resolve, reject) => {
       const img = new Image();
       img.onload = () => resolve();

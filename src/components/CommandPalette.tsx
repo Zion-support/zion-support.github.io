@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback } from "react";
 
 interface Command {
   id: string;
@@ -16,14 +16,18 @@ interface CommandPaletteProps {
   commands: Command[];
 }
 
-const CommandPalette: React.FC<CommandPaletteProps> = ({ isVisible, onClose, commands }) => {
-  const [query, setQuery] = useState('');
+const CommandPalette: React.FC<CommandPaletteProps> = ({
+  isVisible,
+  onClose,
+  commands,
+}) => {
+  const [query, setQuery] = useState("");
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [filteredCommands, setFilteredCommands] = useState<Command[]>(commands);
 
   useEffect(() => {
     if (isVisible) {
-      setQuery('');
+      setQuery("");
       setSelectedIndex(0);
       setFilteredCommands(commands);
     }
@@ -34,22 +38,22 @@ const CommandPalette: React.FC<CommandPaletteProps> = ({ isVisible, onClose, com
 
     const handleKeyDown = (e: KeyboardEvent) => {
       switch (e.key) {
-        case 'Escape':
+        case "Escape":
           onClose();
           break;
-        case 'ArrowDown':
+        case "ArrowDown":
           e.preventDefault();
-          setSelectedIndex(prev => 
-            prev < filteredCommands.length - 1 ? prev + 1 : 0
+          setSelectedIndex((prev) =>
+            prev < filteredCommands.length - 1 ? prev + 1 : 0,
           );
           break;
-        case 'ArrowUp':
+        case "ArrowUp":
           e.preventDefault();
-          setSelectedIndex(prev => 
-            prev > 0 ? prev - 1 : filteredCommands.length - 1
+          setSelectedIndex((prev) =>
+            prev > 0 ? prev - 1 : filteredCommands.length - 1,
           );
           break;
-        case 'Enter':
+        case "Enter":
           e.preventDefault();
           if (filteredCommands[selectedIndex]) {
             filteredCommands[selectedIndex].action();
@@ -59,8 +63,8 @@ const CommandPalette: React.FC<CommandPaletteProps> = ({ isVisible, onClose, com
       }
     };
 
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
+    document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
   }, [isVisible, onClose, filteredCommands, selectedIndex]);
 
   useEffect(() => {
@@ -70,8 +74,9 @@ const CommandPalette: React.FC<CommandPaletteProps> = ({ isVisible, onClose, com
       return;
     }
 
-    const filtered = commands.filter(command => {
-      const searchText = `${command.title} ${command.description} ${command.category} ${command.keywords?.join(' ') || ''}`.toLowerCase();
+    const filtered = commands.filter((command) => {
+      const searchText =
+        `${command.title} ${command.description} ${command.category} ${command.keywords?.join(" ") || ""}`.toLowerCase();
       return searchText.includes(query.toLowerCase());
     });
 
@@ -79,10 +84,13 @@ const CommandPalette: React.FC<CommandPaletteProps> = ({ isVisible, onClose, com
     setSelectedIndex(0);
   }, [query, commands]);
 
-  const handleCommandClick = useCallback((command: Command) => {
-    command.action();
-    onClose();
-  }, [onClose]);
+  const handleCommandClick = useCallback(
+    (command: Command) => {
+      command.action();
+      onClose();
+    },
+    [onClose],
+  );
 
   if (!isVisible) return null;
 
@@ -92,8 +100,18 @@ const CommandPalette: React.FC<CommandPaletteProps> = ({ isVisible, onClose, com
         <div className="p-4 border-b border-gray-200">
           <div className="relative">
             <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-              <svg className="h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              <svg
+                className="h-5 w-5 text-gray-400"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                />
               </svg>
             </div>
             <input
@@ -106,11 +124,11 @@ const CommandPalette: React.FC<CommandPaletteProps> = ({ isVisible, onClose, com
             />
           </div>
         </div>
-        
+
         <div className="max-h-80 overflow-y-auto">
           {filteredCommands.length === 0 ? (
             <div className="p-4 text-center text-gray-500">
-              <p>No commands found for "{query}"</p>
+              <p>No commands found for &quot;{query}&quot;</p>
             </div>
           ) : (
             <div className="py-2">
@@ -120,7 +138,7 @@ const CommandPalette: React.FC<CommandPaletteProps> = ({ isVisible, onClose, com
                   onClick={() => handleCommandClick(command)}
                   className={`
                     w-full px-4 py-3 text-left hover:bg-gray-50 focus:outline-none focus:bg-gray-50
-                    ${index === selectedIndex ? 'bg-gray-50' : ''}
+                    ${index === selectedIndex ? "bg-gray-50" : ""}
                   `}
                 >
                   <div className="flex items-center justify-between">
@@ -143,8 +161,18 @@ const CommandPalette: React.FC<CommandPaletteProps> = ({ isVisible, onClose, com
                       </p>
                     </div>
                     <div className="ml-4 flex-shrink-0">
-                      <svg className="h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      <svg
+                        className="h-5 w-5 text-gray-400"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M9 5l7 7-7 7"
+                        />
                       </svg>
                     </div>
                   </div>
@@ -153,11 +181,14 @@ const CommandPalette: React.FC<CommandPaletteProps> = ({ isVisible, onClose, com
             </div>
           )}
         </div>
-        
+
         <div className="px-4 py-2 bg-gray-50 border-t border-gray-200 text-xs text-gray-500">
           <div className="flex items-center justify-between">
             <span>Use ↑↓ to navigate, Enter to select, Esc to close</span>
-            <span>{filteredCommands.length} command{filteredCommands.length !== 1 ? 's' : ''}</span>
+            <span>
+              {filteredCommands.length} command
+              {filteredCommands.length !== 1 ? "s" : ""}
+            </span>
           </div>
         </div>
       </div>

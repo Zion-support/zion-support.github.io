@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback } from 'react';
+import React, { useEffect, useState, useCallback } from "react";
 
 interface AnalyticsEvent {
   event: string;
@@ -40,7 +40,7 @@ interface AdvancedAnalyticsProps {
 export const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
   enableConversionTracking = true,
   enablePerformanceTracking = true,
-  enableErrorTracking = true
+  enableErrorTracking = true,
 }) => {
   const [metrics, setMetrics] = useState<AnalyticsMetrics>({
     pageViews: 0,
@@ -49,111 +49,162 @@ export const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
     averageSessionDuration: 0,
     topPages: [],
     userJourney: [],
-    conversionEvents: []
+    conversionEvents: [],
   });
 
-  const [sessionId] = useState(() => `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`);
+  const [sessionId] = useState(
+    () => `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+  );
   const [userId] = useState(() => {
-    const stored = localStorage.getItem('analytics_user_id');
+    const stored = localStorage.getItem("analytics_user_id");
     if (stored) return stored;
     const newId = `user_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-    localStorage.setItem('analytics_user_id', newId);
+    localStorage.setItem("analytics_user_id", newId);
     return newId;
   });
 
-  const trackEvent = useCallback((event: string, category: string, action: string, label?: string, value?: number) => {
-    const analyticsEvent: AnalyticsEvent = {
-      event,
-      category,
-      action,
-      label,
-      value,
-      timestamp: Date.now(),
-      userId,
-      sessionId
-    };
+  const trackEvent = useCallback(
+    (
+      event: string,
+      category: string,
+      action: string,
+      label?: string,
+      value?: number,
+    ) => {
+      const analyticsEvent: AnalyticsEvent = {
+        event,
+        category,
+        action,
+        label,
+        value,
+        timestamp: Date.now(),
+        userId,
+        sessionId,
+      };
 
-    // Store in local storage for persistence
-    const events = JSON.parse(localStorage.getItem('analytics_events') || '[]');
-    events.push(analyticsEvent);
-    localStorage.setItem('analytics_events', JSON.stringify(events.slice(-1000))); // Keep last 1000 events
+      // Store in local storage for persistence
+      const events = JSON.parse(
+        localStorage.getItem("analytics_events") || "[]",
+      );
+      events.push(analyticsEvent);
+      localStorage.setItem(
+        "analytics_events",
+        JSON.stringify(events.slice(-1000)),
+      ); // Keep last 1000 events
 
-    // Send to analytics service
-    if (typeof (window as Window & { gtag?: (command: string, event: string, data: Record<string, unknown>) => void }).gtag === 'function') {
-      (window as Window & { gtag: (command: string, event: string, data: Record<string, unknown>) => void }).gtag('event', action, {
-        event_category: category,
-        event_label: label,
-        value: value
-      });
-    }
+      // Send to analytics service
+      if (
+        typeof (
+          window as Window & {
+            gtag?: (
+              command: string,
+              event: string,
+              data: Record<string, unknown>,
+            ) => void;
+          }
+        ).gtag === "function"
+      ) {
+        (
+          window as Window & {
+            gtag: (
+              command: string,
+              event: string,
+              data: Record<string, unknown>,
+            ) => void;
+          }
+        ).gtag("event", action, {
+          event_category: category,
+          event_label: label,
+          value: value,
+        });
+      }
 
-    // Update metrics
-    setMetrics(prev => ({
-      ...prev,
-      conversionEvents: [...prev.conversionEvents, analyticsEvent].slice(-100)
-    }));
-  }, [userId, sessionId]);
+      // Update metrics
+      setMetrics((prev) => ({
+        ...prev,
+        conversionEvents: [...prev.conversionEvents, analyticsEvent].slice(
+          -100,
+        ),
+      }));
+    },
+    [userId, sessionId],
+  );
 
-  const trackPageView = useCallback((page: string) => {
-    const pageView: UserJourney = {
-      page,
-      timestamp: Date.now(),
-      duration: 0,
-      interactions: 0,
-      scrollDepth: 0
-    };
+  const trackPageView = useCallback(
+    (page: string) => {
+      const pageView: UserJourney = {
+        page,
+        timestamp: Date.now(),
+        duration: 0,
+        interactions: 0,
+        scrollDepth: 0,
+      };
 
-    setMetrics(prev => ({
-      ...prev,
-      pageViews: prev.pageViews + 1,
-      userJourney: [...prev.userJourney, pageView].slice(-50),
-      topPages: updateTopPages(prev.topPages, page)
-    }));
+      setMetrics((prev) => ({
+        ...prev,
+        pageViews: prev.pageViews + 1,
+        userJourney: [...prev.userJourney, pageView].slice(-50),
+        topPages: updateTopPages(prev.topPages, page),
+      }));
 
-    trackEvent('page_view', 'navigation', 'view', page);
-  }, [trackEvent]);
+      trackEvent("page_view", "navigation", "view", page);
+    },
+    [trackEvent],
+  );
 
-  const trackUserInteraction = useCallback((interaction: string, element?: string) => {
-    setMetrics(prev => ({
-      ...prev,
-      userJourney: prev.userJourney.map((journey, index) => 
-        index === prev.userJourney.length - 1 
-          ? { ...journey, interactions: journey.interactions + 1 }
-          : journey
-      )
-    }));
+  const trackUserInteraction = useCallback(
+    (interaction: string, element?: string) => {
+      setMetrics((prev) => ({
+        ...prev,
+        userJourney: prev.userJourney.map((journey, index) =>
+          index === prev.userJourney.length - 1
+            ? { ...journey, interactions: journey.interactions + 1 }
+            : journey,
+        ),
+      }));
 
-    trackEvent('user_interaction', 'engagement', interaction, element);
-  }, [trackEvent]);
+      trackEvent("user_interaction", "engagement", interaction, element);
+    },
+    [trackEvent],
+  );
 
   const trackScrollDepth = useCallback((depth: number) => {
-    setMetrics(prev => ({
+    setMetrics((prev) => ({
       ...prev,
-      userJourney: prev.userJourney.map((journey, index) => 
-        index === prev.userJourney.length - 1 
+      userJourney: prev.userJourney.map((journey, index) =>
+        index === prev.userJourney.length - 1
           ? { ...journey, scrollDepth: Math.max(journey.scrollDepth, depth) }
-          : journey
-      )
+          : journey,
+      ),
     }));
   }, []);
 
-  const trackPerformance = useCallback((metric: string, value: number) => {
-    if (enablePerformanceTracking) {
-      trackEvent('performance', 'metrics', metric, undefined, value);
-    }
-  }, [enablePerformanceTracking, trackEvent]);
+  const trackPerformance = useCallback(
+    (metric: string, value: number) => {
+      if (enablePerformanceTracking) {
+        trackEvent("performance", "metrics", metric, undefined, value);
+      }
+    },
+    [enablePerformanceTracking, trackEvent],
+  );
 
-  const trackError = useCallback((error: Error, context?: string) => {
-    if (enableErrorTracking) {
-      trackEvent('error', 'exception', error.message, context);
-    }
-  }, [enableErrorTracking, trackEvent]);
+  const trackError = useCallback(
+    (error: Error, context?: string) => {
+      if (enableErrorTracking) {
+        trackEvent("error", "exception", error.message, context);
+      }
+    },
+    [enableErrorTracking, trackEvent],
+  );
 
-  const trackConversion = useCallback((conversionType: string, value?: number) => {
-    if (enableConversionTracking) {
-      trackEvent('conversion', 'business', conversionType, undefined, value);
-    }
-  }, [enableConversionTracking, trackEvent]);
+  const trackConversion = useCallback(
+    (conversionType: string, value?: number) => {
+      if (enableConversionTracking) {
+        trackEvent("conversion", "business", conversionType, undefined, value);
+      }
+    },
+    [enableConversionTracking, trackEvent],
+  );
 
   // Initialize analytics
   useEffect(() => {
@@ -165,7 +216,11 @@ export const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
     const handleScroll = () => {
       clearTimeout(scrollTimeout);
       scrollTimeout = setTimeout(() => {
-        const scrollDepth = Math.round((window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100);
+        const scrollDepth = Math.round(
+          (window.scrollY /
+            (document.documentElement.scrollHeight - window.innerHeight)) *
+            100,
+        );
         trackScrollDepth(scrollDepth);
       }, 100);
     };
@@ -174,23 +229,26 @@ export const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
     const handleClick = (event: MouseEvent) => {
       const target = event.target as HTMLElement;
       const element = target.tagName.toLowerCase();
-      const text = target.textContent?.slice(0, 50) || '';
-      trackUserInteraction('click', `${element}: ${text}`);
+      const text = target.textContent?.slice(0, 50) || "";
+      trackUserInteraction("click", `${element}: ${text}`);
     };
 
     // Set up performance tracking
     if (enablePerformanceTracking) {
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
-          if (entry.entryType === 'navigation') {
+          if (entry.entryType === "navigation") {
             const navEntry = entry as PerformanceNavigationTiming;
-            trackPerformance('load_time', navEntry.loadEventEnd - (navEntry.activationStart || 0));
-          } else if (entry.entryType === 'paint') {
+            trackPerformance(
+              "load_time",
+              navEntry.loadEventEnd - (navEntry.fetchStart || 0),
+            );
+          } else if (entry.entryType === "paint") {
             trackPerformance(entry.name, entry.startTime);
           }
         }
       });
-      observer.observe({ entryTypes: ['navigation', 'paint'] });
+      observer.observe({ entryTypes: ["navigation", "paint"] });
     }
 
     // Set up error tracking
@@ -200,64 +258,96 @@ export const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
       };
 
       const handleUnhandledRejection = (event: PromiseRejectionEvent) => {
-        trackError(new Error(event.reason), 'unhandled_promise_rejection');
+        trackError(new Error(event.reason), "unhandled_promise_rejection");
       };
 
-      window.addEventListener('error', handleError);
-      window.addEventListener('unhandledrejection', handleUnhandledRejection);
+      window.addEventListener("error", handleError);
+      window.addEventListener("unhandledrejection", handleUnhandledRejection);
 
       return () => {
-        window.removeEventListener('error', handleError);
-        window.removeEventListener('unhandledrejection', handleUnhandledRejection);
+        window.removeEventListener("error", handleError);
+        window.removeEventListener(
+          "unhandledrejection",
+          handleUnhandledRejection,
+        );
       };
     }
 
     // Add event listeners
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    document.addEventListener('click', handleClick);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    document.addEventListener("click", handleClick);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
-      document.removeEventListener('click', handleClick);
+      window.removeEventListener("scroll", handleScroll);
+      document.removeEventListener("click", handleClick);
     };
-  }, [trackPageView, trackScrollDepth, trackUserInteraction, trackPerformance, trackError, enablePerformanceTracking, enableErrorTracking]);
+  }, [
+    trackPageView,
+    trackScrollDepth,
+    trackUserInteraction,
+    trackPerformance,
+    trackError,
+    enablePerformanceTracking,
+    enableErrorTracking,
+  ]);
 
   // Calculate metrics
   useEffect(() => {
     const calculateMetrics = () => {
-      const events = JSON.parse(localStorage.getItem('analytics_events') || '[]');
-      const uniqueUsers = new Set(events.map((e: AnalyticsEvent) => e.userId)).size;
-      const sessions = new Set(events.map((e: AnalyticsEvent) => e.sessionId)).size;
-      
-      // Calculate bounce rate (sessions with only one page view)
-      const singlePageSessions = events.reduce((acc: Set<string>, event: AnalyticsEvent) => {
-        if (event.event === 'page_view') {
-          const sessionEvents = events.filter((e: AnalyticsEvent) => e.sessionId === event.sessionId);
-          if (sessionEvents.length === 1) {
-            acc.add(event.sessionId);
-          }
-        }
-        return acc;
-      }, new Set()).size;
+      const events = JSON.parse(
+        localStorage.getItem("analytics_events") || "[]",
+      );
+      const uniqueUsers = new Set(events.map((e: AnalyticsEvent) => e.userId))
+        .size;
+      const sessions = new Set(events.map((e: AnalyticsEvent) => e.sessionId))
+        .size;
 
-      const bounceRate = sessions > 0 ? (singlePageSessions / sessions) * 100 : 0;
+      // Calculate bounce rate (sessions with only one page view)
+      const singlePageSessions = events.reduce(
+        (acc: Set<string>, event: AnalyticsEvent) => {
+          if (event.event === "page_view") {
+            const sessionEvents = events.filter(
+              (e: AnalyticsEvent) => e.sessionId === event.sessionId,
+            );
+            if (sessionEvents.length === 1) {
+              acc.add(event.sessionId);
+            }
+          }
+          return acc;
+        },
+        new Set(),
+      ).size;
+
+      const bounceRate =
+        sessions > 0 ? (singlePageSessions / sessions) * 100 : 0;
 
       // Calculate average session duration
-      const sessionDurations = events.reduce((acc: Map<string, number>, event: AnalyticsEvent) => {
-        if (event.event === 'page_view') {
-          const sessionStart = events.find((e: AnalyticsEvent) => e.sessionId === event.sessionId)?.timestamp || 0;
-          acc.set(event.sessionId, event.timestamp - sessionStart);
-        }
-        return acc;
-      }, new Map());
+      const sessionDurations = events.reduce(
+        (acc: Map<string, number>, event: AnalyticsEvent) => {
+          if (event.event === "page_view") {
+            const sessionStart =
+              events.find(
+                (e: AnalyticsEvent) => e.sessionId === event.sessionId,
+              )?.timestamp || 0;
+            acc.set(event.sessionId, event.timestamp - sessionStart);
+          }
+          return acc;
+        },
+        new Map(),
+      );
 
-      const averageSessionDuration = Array.from(sessionDurations.values()).reduce((sum: number, duration: unknown) => sum + (typeof duration === 'number' ? duration : 0), 0) / sessionDurations.size || 0;
+      const averageSessionDuration =
+        Array.from(sessionDurations.values()).reduce(
+          (sum: number, duration: unknown) =>
+            sum + (typeof duration === "number" ? duration : 0),
+          0,
+        ) / sessionDurations.size || 0;
 
-      setMetrics(prev => ({
+      setMetrics((prev) => ({
         ...prev,
         uniqueVisitors: uniqueUsers,
         bounceRate,
-        averageSessionDuration
+        averageSessionDuration,
       }));
     };
 
@@ -277,16 +367,28 @@ export const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
       trackPerformance,
       trackError,
       trackConversion,
-      getMetrics: () => metrics
+      getMetrics: () => metrics,
     };
-  }, [trackEvent, trackPageView, trackUserInteraction, trackScrollDepth, trackPerformance, trackError, trackConversion, metrics]);
+  }, [
+    trackEvent,
+    trackPageView,
+    trackUserInteraction,
+    trackScrollDepth,
+    trackPerformance,
+    trackError,
+    trackConversion,
+    metrics,
+  ]);
 
   return null; // This component doesn't render anything
 };
 
 // Helper function to update top pages
-function updateTopPages(topPages: Array<{ page: string; views: number }>, page: string): Array<{ page: string; views: number }> {
-  const existing = topPages.find(p => p.page === page);
+function updateTopPages(
+  topPages: Array<{ page: string; views: number }>,
+  page: string,
+): Array<{ page: string; views: number }> {
+  const existing = topPages.find((p) => p.page === page);
   if (existing) {
     existing.views += 1;
   } else {

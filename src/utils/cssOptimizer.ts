@@ -34,7 +34,7 @@ class CSSOptimizer {
       enableTreeShaking: true,
       removeUnusedCSS: true,
       optimizeSelectors: true,
-      ...config
+      ...config,
     };
 
     this.metrics = {
@@ -42,7 +42,7 @@ class CSSOptimizer {
       unusedRules: 0,
       duplicateRules: 0,
       complexSelectors: 0,
-      optimizationScore: 0
+      optimizationScore: 0,
     };
   }
 
@@ -50,14 +50,14 @@ class CSSOptimizer {
    * Initialize CSS optimizations
    */
   initialize(): void {
-    console.log('🎨 Initializing CSS Optimizer...');
-    
+    console.log("🎨 Initializing CSS Optimizer...");
+
     this.optimizeCriticalCSS();
     this.removeUnusedCSS();
     this.optimizeSelectors();
     this.setupCSSMonitoring();
-    
-    console.log('✅ CSS Optimizer initialized');
+
+    console.log("✅ CSS Optimizer initialized");
   }
 
   /**
@@ -68,11 +68,11 @@ class CSSOptimizer {
 
     // Extract critical CSS for above-the-fold content
     const criticalCSS = this.extractCriticalCSS();
-    
+
     if (criticalCSS) {
       // Inject critical CSS inline
       this.injectCriticalCSS(criticalCSS);
-      
+
       // Load non-critical CSS asynchronously
       this.loadNonCriticalCSS();
     }
@@ -84,7 +84,7 @@ class CSSOptimizer {
   private extractCriticalCSS(): string | null {
     // In a real implementation, this would use a tool like critical
     // For now, we'll simulate the extraction
-    
+
     const criticalStyles = `
       /* Critical CSS for above-the-fold content */
       body { margin: 0; padding: 0; font-family: system-ui, -apple-system, sans-serif; }
@@ -102,9 +102,9 @@ class CSSOptimizer {
    * Inject critical CSS inline
    */
   private injectCriticalCSS(css: string): void {
-    const style = document.createElement('style');
+    const style = document.createElement("style");
     style.textContent = css;
-    style.setAttribute('data-critical', 'true');
+    style.setAttribute("data-critical", "true");
     document.head.appendChild(style);
   }
 
@@ -112,12 +112,12 @@ class CSSOptimizer {
    * Load non-critical CSS asynchronously
    */
   private loadNonCriticalCSS(): void {
-    const link = document.createElement('link');
-    link.rel = 'preload';
-    link.as = 'style';
-    link.href = '/assets/css/main.css';
+    const link = document.createElement("link");
+    link.rel = "preload";
+    link.as = "style";
+    link.href = "/assets/css/main.css";
     link.onload = () => {
-      link.rel = 'stylesheet';
+      link.rel = "stylesheet";
     };
     document.head.appendChild(link);
   }
@@ -130,9 +130,9 @@ class CSSOptimizer {
 
     // In a real implementation, this would use PurgeCSS
     // For now, we'll simulate the process
-    
+
     const unusedSelectors = this.findUnusedSelectors();
-    
+
     if (unusedSelectors.length > 0) {
       console.log(`🧹 Found ${unusedSelectors.length} unused CSS selectors`);
       this.metrics.unusedRules = unusedSelectors.length;
@@ -146,10 +146,10 @@ class CSSOptimizer {
     // Simulate finding unused selectors
     // In reality, this would analyze the DOM and CSS rules
     return [
-      '.unused-class',
-      '#unused-id',
-      '.old-component',
-      '.deprecated-style'
+      ".unused-class",
+      "#unused-id",
+      ".old-component",
+      ".deprecated-style",
     ];
   }
 
@@ -161,9 +161,11 @@ class CSSOptimizer {
 
     // Find complex selectors that can be optimized
     const complexSelectors = this.findComplexSelectors();
-    
+
     if (complexSelectors.length > 0) {
-      console.log(`🔧 Found ${complexSelectors.length} complex selectors to optimize`);
+      console.log(
+        `🔧 Found ${complexSelectors.length} complex selectors to optimize`,
+      );
       this.metrics.complexSelectors = complexSelectors.length;
     }
   }
@@ -174,9 +176,9 @@ class CSSOptimizer {
   private findComplexSelectors(): string[] {
     // Simulate finding complex selectors
     return [
-      'div > ul > li > a:hover',
-      '.container .row .col-md-6 .card .card-body .btn',
-      'body.home .hero .container .row .col .btn.primary:hover'
+      "div > ul > li > a:hover",
+      ".container .row .col-md-6 .card .card-body .btn",
+      "body.home .hero .container .row .col .btn.primary:hover",
     ];
   }
 
@@ -185,20 +187,21 @@ class CSSOptimizer {
    */
   private setupCSSMonitoring(): void {
     // Monitor CSS performance
-    if ('PerformanceObserver' in window) {
+    if ("PerformanceObserver" in window) {
       try {
         const observer = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           entries.forEach((entry) => {
-            if (entry.entryType === 'resource' && entry.name.includes('.css')) {
-              this.metrics.totalSize += (entry as PerformanceResourceTiming).transferSize || 0;
+            if (entry.entryType === "resource" && entry.name.includes(".css")) {
+              this.metrics.totalSize +=
+                (entry as PerformanceResourceTiming).transferSize || 0;
             }
           });
         });
-        
-        observer.observe({ entryTypes: ['resource'] });
+
+        observer.observe({ entryTypes: ["resource"] });
       } catch (error) {
-        console.warn('CSS monitoring not supported:', error);
+        console.warn("CSS monitoring not supported:", error);
       }
     }
   }
@@ -228,11 +231,13 @@ class CSSOptimizer {
     }
 
     // Penalize for large CSS size
-    if (this.metrics.totalSize > 100000) { // 100KB
+    if (this.metrics.totalSize > 100000) {
+      // 100KB
       score -= 10;
     }
 
-    if (this.metrics.totalSize > 500000) { // 500KB
+    if (this.metrics.totalSize > 500000) {
+      // 500KB
       score -= 20;
     }
 
@@ -246,19 +251,23 @@ class CSSOptimizer {
     const recommendations: string[] = [];
 
     if (this.metrics.unusedRules > 0) {
-      recommendations.push(`Remove ${this.metrics.unusedRules} unused CSS rules`);
+      recommendations.push(
+        `Remove ${this.metrics.unusedRules} unused CSS rules`,
+      );
     }
 
     if (this.metrics.complexSelectors > 0) {
-      recommendations.push(`Simplify ${this.metrics.complexSelectors} complex selectors`);
+      recommendations.push(
+        `Simplify ${this.metrics.complexSelectors} complex selectors`,
+      );
     }
 
     if (this.metrics.totalSize > 100000) {
-      recommendations.push('Consider CSS minification and compression');
+      recommendations.push("Consider CSS minification and compression");
     }
 
     if (this.metrics.optimizationScore < 80) {
-      recommendations.push('Overall CSS optimization needed');
+      recommendations.push("Overall CSS optimization needed");
     }
 
     return recommendations;
@@ -268,8 +277,8 @@ class CSSOptimizer {
    * Apply CSS optimizations
    */
   applyOptimizations(): void {
-    console.log('🔧 Applying CSS optimizations...');
-    
+    console.log("🔧 Applying CSS optimizations...");
+
     if (this.config.enableMinification) {
       this.minifyCSS();
     }
@@ -282,7 +291,7 @@ class CSSOptimizer {
       this.treeShakeCSS();
     }
 
-    console.log('✅ CSS optimizations applied');
+    console.log("✅ CSS optimizations applied");
   }
 
   /**
@@ -290,7 +299,7 @@ class CSSOptimizer {
    */
   private minifyCSS(): void {
     // Simulate CSS minification
-    console.log('📦 Minifying CSS...');
+    console.log("📦 Minifying CSS...");
   }
 
   /**
@@ -298,7 +307,7 @@ class CSSOptimizer {
    */
   private compressCSS(): void {
     // Simulate CSS compression
-    console.log('🗜️ Compressing CSS...');
+    console.log("🗜️ Compressing CSS...");
   }
 
   /**
@@ -306,7 +315,7 @@ class CSSOptimizer {
    */
   private treeShakeCSS(): void {
     // Simulate CSS tree shaking
-    console.log('🌳 Tree shaking CSS...');
+    console.log("🌳 Tree shaking CSS...");
   }
 }
 

@@ -4,7 +4,7 @@
 
 export interface FeedbackMessage {
   id: string;
-  type: 'success' | 'error' | 'warning' | 'info';
+  type: "success" | "error" | "warning" | "info";
   title: string;
   message: string;
   duration?: number;
@@ -37,11 +37,11 @@ export class UserFeedbackManager {
   }
 
   private createContainer(): void {
-    if (typeof document === 'undefined') return;
+    if (typeof document === "undefined") return;
 
-    this.container = document.createElement('div');
-    this.container.id = 'feedback-container';
-    this.container.className = 'fixed top-4 right-4 z-50 space-y-2';
+    this.container = document.createElement("div");
+    this.container.id = "feedback-container";
+    this.container.className = "fixed top-4 right-4 z-50 space-y-2";
     this.container.style.cssText = `
       position: fixed;
       top: 16px;
@@ -57,22 +57,28 @@ export class UserFeedbackManager {
   }
 
   private setupGlobalErrorHandler(): void {
-    if (typeof window === 'undefined') return;
+    if (typeof window === "undefined") return;
 
-    window.addEventListener('error', (event) => {
-      this.showError('Application Error', event.message || 'An unexpected error occurred');
+    window.addEventListener("error", (event) => {
+      this.showError(
+        "Application Error",
+        event.message || "An unexpected error occurred",
+      );
     });
 
-    window.addEventListener('unhandledrejection', (event) => {
-      this.showError('Promise Rejection', event.reason?.message || 'An unexpected error occurred');
+    window.addEventListener("unhandledrejection", (event) => {
+      this.showError(
+        "Promise Rejection",
+        event.reason?.message || "An unexpected error occurred",
+      );
     });
   }
 
-  public showMessage(message: Omit<FeedbackMessage, 'id' | 'timestamp'>): void {
+  public showMessage(message: Omit<FeedbackMessage, "id" | "timestamp">): void {
     const feedbackMessage: FeedbackMessage = {
       ...message,
       id: this.generateId(),
-      timestamp: Date.now()
+      timestamp: Date.now(),
     };
 
     this.messages.push(feedbackMessage);
@@ -96,53 +102,53 @@ export class UserFeedbackManager {
 
   public showSuccess(title: string, message: string, duration = 5000): void {
     this.showMessage({
-      type: 'success',
+      type: "success",
       title,
       message,
-      duration
+      duration,
     });
   }
 
   public showError(title: string, message: string, duration = 8000): void {
     this.showMessage({
-      type: 'error',
+      type: "error",
       title,
       message,
-      duration
+      duration,
     });
   }
 
   public showWarning(title: string, message: string, duration = 6000): void {
     this.showMessage({
-      type: 'warning',
+      type: "warning",
       title,
       message,
-      duration
+      duration,
     });
   }
 
   public showInfo(title: string, message: string, duration = 4000): void {
     this.showMessage({
-      type: 'info',
+      type: "info",
       title,
       message,
-      duration
+      duration,
     });
   }
 
   public showLoading(title: string, message: string): string {
     const id = this.generateId();
     this.showMessage({
-      type: 'info',
+      type: "info",
       title,
       message,
-      duration: 0 // Don't auto-remove
+      duration: 0, // Don't auto-remove
     });
     return id;
   }
 
   public removeMessage(id: string): void {
-    const index = this.messages.findIndex(msg => msg.id === id);
+    const index = this.messages.findIndex((msg) => msg.id === id);
     if (index !== -1) {
       this.messages.splice(index, 1);
       this.removeMessageElement(id);
@@ -150,7 +156,7 @@ export class UserFeedbackManager {
   }
 
   public clearAll(): void {
-    this.messages.forEach(message => {
+    this.messages.forEach((message) => {
       this.removeMessageElement(message.id);
     });
     this.messages = [];
@@ -159,7 +165,7 @@ export class UserFeedbackManager {
   private renderMessage(message: FeedbackMessage): void {
     if (!this.container) return;
 
-    const messageElement = document.createElement('div');
+    const messageElement = document.createElement("div");
     messageElement.id = `feedback-${message.id}`;
     messageElement.className = `feedback-message feedback-${message.type}`;
     messageElement.style.cssText = `
@@ -179,12 +185,12 @@ export class UserFeedbackManager {
         <button class="feedback-close" style="background: none; border: none; color: white; cursor: pointer; font-size: 18px; line-height: 1;">&times;</button>
       </div>
       <p style="margin: 0; font-size: 13px; line-height: 1.4; opacity: 0.9;">${message.message}</p>
-      ${message.actions ? this.renderActions(message.actions) : ''}
+      ${message.actions ? this.renderActions(message.actions) : ""}
     `;
 
     // Add close functionality
-    const closeButton = messageElement.querySelector('.feedback-close');
-    closeButton?.addEventListener('click', () => {
+    const closeButton = messageElement.querySelector(".feedback-close");
+    closeButton?.addEventListener("click", () => {
       this.removeMessage(message.id);
     });
 
@@ -192,19 +198,21 @@ export class UserFeedbackManager {
 
     // Animate in
     setTimeout(() => {
-      messageElement.style.transform = 'translateX(0)';
+      messageElement.style.transform = "translateX(0)";
     }, 10);
   }
 
   private renderActions(actions: FeedbackAction[]): string {
     return `
       <div style="margin-top: 12px; display: flex; gap: 8px; justify-content: flex-end;">
-        ${actions.map(action => `
+        ${actions
+          .map(
+            (action) => `
           <button 
             class="feedback-action" 
             data-action="${action.label}"
             style="
-              background: ${action.primary ? 'rgba(255, 255, 255, 0.2)' : 'transparent'};
+              background: ${action.primary ? "rgba(255, 255, 255, 0.2)" : "transparent"};
               border: 1px solid rgba(255, 255, 255, 0.3);
               color: white;
               padding: 6px 12px;
@@ -216,7 +224,9 @@ export class UserFeedbackManager {
           >
             ${action.label}
           </button>
-        `).join('')}
+        `,
+          )
+          .join("")}
       </div>
     `;
   }
@@ -226,7 +236,7 @@ export class UserFeedbackManager {
 
     const element = document.getElementById(`feedback-${id}`);
     if (element) {
-      element.style.transform = 'translateX(100%)';
+      element.style.transform = "translateX(100%)";
       setTimeout(() => {
         element.remove();
       }, 300);
@@ -235,10 +245,10 @@ export class UserFeedbackManager {
 
   private getBackgroundColor(type: string): string {
     const colors = {
-      success: '#10b981',
-      error: '#ef4444',
-      warning: '#f59e0b',
-      info: '#3b82f6'
+      success: "#10b981",
+      error: "#ef4444",
+      warning: "#f59e0b",
+      info: "#3b82f6",
     };
     return colors[type as keyof typeof colors] || colors.info;
   }
