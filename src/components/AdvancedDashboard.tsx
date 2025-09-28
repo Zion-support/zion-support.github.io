@@ -82,7 +82,7 @@ const AdvancedDashboard: React.FC = () => {
       events: events.map((e) => ({
         event: e.name,
         timestamp: e.timestamp || Date.now(),
-        properties: e.properties
+        properties: (e as any).properties || {}
       })),
       deviceInfo: {
         screenResolution: `${window.screen.width}x${window.screen.height}`,

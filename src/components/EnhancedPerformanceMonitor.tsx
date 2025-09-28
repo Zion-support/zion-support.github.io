@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import { clsx } from 'clsx';
 import {performanceOptimizer} from '../utils/performanceOptimizer';
-import { EnhancedPerformanceMetrics as PerformanceMetrics, OptimizationSuggestion } from '../types/comprehensive';
+import { PerformanceMetrics, OptimizationSuggestion } from '../types/comprehensive';
 
 interface EnhancedPerformanceMonitorProps {
   className?: string;
@@ -19,7 +19,12 @@ export const EnhancedPerformanceMonitor: React.FC<EnhancedPerformanceMonitorProp
     lcp: 0,
     fid: 0,
     cls: 0,
-    ttfb: 0
+    ttfb: 0,
+    memory: {
+      used: 0,
+      total: 0,
+      limit: 0
+    }
   });
 
   const [suggestions, setSuggestions] = useState<OptimizationSuggestion[]>([]);
@@ -188,26 +193,26 @@ export const EnhancedPerformanceMonitor: React.FC<EnhancedPerformanceMonitorProp
           {metrics.memory && (
             <div className="flex justify-between">
               <span className="text-gray-600 dark:text-gray-400">Memory:</span>
-              <span className={getMetricColor(metrics.memory, { good: 50, poor: 100 })}>
-                {metrics.memory.toFixed(1)}MB
+              <span className={getMetricColor(metrics.memory.used, { good: 50, poor: 100 })}>
+                {metrics.memory.used.toFixed(1)}MB
               </span>
             </div>
           )}
 
-          {metrics.domContentLoaded > 0 && (
+          {metrics.loadTime && metrics.loadTime > 0 && (
             <div className="flex justify-between">
-              <span className="text-gray-600 dark:text-gray-400">DOM Content Loaded:</span>
+              <span className="text-gray-600 dark:text-gray-400">Load Time:</span>
               <span className="text-gray-900 dark:text-white">
-                {metrics.domContentLoaded.toFixed(0)}ms
+                {metrics.loadTime.toFixed(0)}ms
               </span>
             </div>
           )}
 
-          {metrics.domInteractive > 0 && (
+          {metrics.renderTime && metrics.renderTime > 0 && (
             <div className="flex justify-between">
-              <span className="text-gray-600 dark:text-gray-400">DOM Interactive:</span>
+              <span className="text-gray-600 dark:text-gray-400">Render Time:</span>
               <span className="text-blue-500">
-                {metrics.domInteractive.toFixed(0)}ms
+                {metrics.renderTime.toFixed(0)}ms
               </span>
             </div>
           )}
@@ -221,9 +226,9 @@ export const EnhancedPerformanceMonitor: React.FC<EnhancedPerformanceMonitorProp
           <div className="max-h-32 overflow-y-auto space-y-1">
             {suggestions.slice(0, 3).map((suggestion, index) => (
               <div key={index} className="flex items-start gap-2 text-xs">
-                <span className="text-lg">{getSuggestionIcon(suggestion.type)}</span>
+                <span className="text-lg">{getSuggestionIcon(suggestion.category)}</span>
                 <div className="flex-1">
-                  <p className={clsx('font-medium', getSuggestionColor(suggestion.type))}>
+                  <p className={clsx('font-medium', getSuggestionColor(suggestion.category))}>
                     {suggestion.message}
                   </p>
                   {suggestion.action && (

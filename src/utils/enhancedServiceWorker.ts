@@ -427,7 +427,8 @@ export const serviceWorkerUtils = {
   async getRegistration(): Promise<ServiceWorkerRegistration | null> {
     if (!this.isSupported()) return null;
     
-    return await navigator.serviceWorker.getRegistration();
+    const registration = await navigator.serviceWorker.getRegistration();
+    return registration || null;
   },
 
   /**

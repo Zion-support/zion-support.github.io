@@ -30,7 +30,7 @@ import { errorTracker } from './utils/advancedErrorTracker';
 import { apiCache, imageCache, dataCache } from './utils/advancedCacheManager';
 
 // Import comprehensive systems
-import { enhancedErrorRecovery } from './utils/comprehensiveErrorRecovery';
+import enhancedErrorRecovery from './utils/comprehensiveErrorRecovery';
 
 // Import types
 import NotificationSystem, { Notification } from './components/NotificationSystem';
@@ -48,6 +48,8 @@ const ComprehensivePerformanceDashboard = lazy(() => import('./components/Compre
 const ComprehensiveMonitoringDashboard = lazy(() => import('./components/ComprehensiveMonitoringDashboard'));
 const PerformanceOptimizationPanel = lazy(() => import('./components/PerformanceOptimizationPanel'));
 const RealTimePerformanceMonitor = lazy(() => import('./components/RealTimePerformanceMonitor'));
+const AdvancedAnalytics = lazy(() => import('./components/AdvancedAnalytics'));
+const PerformanceDashboard = lazy(() => import('./components/PerformanceDashboard'));
 const EnhancedCommandPalette = lazy(() => import('./components/EnhancedCommandPalette'));
 const PerformanceIndicator = lazy(() => import('./components/PerformanceIndicator'));
 const AccessibilityEnhancer = lazy(() => import('./components/AccessibilityEnhancer'));
@@ -61,7 +63,6 @@ import WebsiteEnhancements from './components/WebsiteEnhancements';
 import SEOOptimizer, { useSEOData } from './components/SEOOptimizer';
 // import EnhancedAnalytics from './components/EnhancedAnalytics';
 import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
-import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
 import { performanceAlerts } from './utils/performanceAlerts';
 import { accessibilityUtils } from './utils/accessibilityUtils';
 import { securityUtils } from './utils/securityUtils';
@@ -96,6 +97,7 @@ export default function App(): React.JSX.Element {
   const [notifications, setNotifications] = useState<Notification[]>([]);
   const [enhancedNotifications, setEnhancedNotifications] = useState<EnhancedNotification[]>([]);
   // const [showPerformanceDashboard, setShowPerformanceDashboard] = useState(false);
+  const navigate = useNavigate();
 
   // Notification management
   const removeNotification = useCallback((id: string) => {
@@ -233,16 +235,27 @@ export default function App(): React.JSX.Element {
   // Get current pathname for SEO (used in seoData)
   const currentPathname = typeof window !== 'undefined' ? window.location.pathname : '/';
   
-  // SEO data
+  // SEO data for seoManager (expects string[])
   const seoData = useMemo(() => ({
     title: 'Zion Tech Group - Leading AI & Technology Solutions',
     description: 'Cutting-edge AI, quantum computing, and digital transformation solutions for modern enterprises. Expert consulting, cloud services, and innovative technology implementations.',
-    keywords: 'AI solutions, quantum computing, digital transformation, cloud services, enterprise technology',
+    keywords: ['AI solutions', 'quantum computing', 'digital transformation', 'cloud services', 'enterprise technology'],
     canonicalUrl: `https://zion.app${currentPathname}`,
     ogType: 'website' as const,
     ogUrl: `https://zion.app${currentPathname}`,
     ogImage: '/og-image.png',
     twitterCard: 'summary_large_image' as const
+  }), [currentPathname]);
+
+  // SEO data for SEOOptimizer component (expects string)
+  const seoDataForOptimizer = useMemo(() => ({
+    title: 'Zion Tech Group - Leading AI & Technology Solutions',
+    description: 'Cutting-edge AI, quantum computing, and digital transformation solutions for modern enterprises. Expert consulting, cloud services, and innovative technology implementations.',
+    keywords: 'AI solutions, quantum computing, digital transformation, cloud services, enterprise technology',
+    canonical: `https://zion.app${currentPathname}`,
+    ogType: 'website',
+    ogImage: '/og-image.png',
+    twitterCard: 'summary_large_image'
   }), [currentPathname]);
 
   // Simple preload function
@@ -288,7 +301,7 @@ export default function App(): React.JSX.Element {
       seoManager.updateSEO({
         title: seoData.title,
         description: seoData.description,
-        keywords: seoData.keywords.split(', '),
+        keywords: seoData.keywords,
         canonical: seoData.canonicalUrl,
         ogTitle: seoData.title,
         ogDescription: seoData.description,
@@ -301,7 +314,7 @@ export default function App(): React.JSX.Element {
       enhancedSEOOptimizer.updateSEO({
         title: seoData.title,
         description: seoData.description,
-        keywords: seoData.keywords.split(', '),
+        keywords: seoData.keywords,
         canonical: seoData.canonicalUrl,
         ogTitle: seoData.title,
         ogDescription: seoData.description,
@@ -444,6 +457,28 @@ export default function App(): React.JSX.Element {
     clicks: 0
   }), []);
 
+  // Track engagement function
+  const trackEngagement = useCallback(() => {
+    // Track user engagement metrics
+    if (analytics && 'track' in analytics) {
+      (analytics as any).track('engagement', {
+        scrollDepth: engagementData.scrollDepth,
+        clicks: engagementData.clicks,
+        timeOnPage: Date.now() - engagementData.startTime
+      });
+    }
+  }, [engagementData]);
+
+  // Handle scroll events
+  const handleScrollEngagement = useCallback(() => {
+    engagementData.scrollDepth = Math.max(engagementData.scrollDepth, window.scrollY / (document.documentElement.scrollHeight - window.innerHeight) * 100);
+  }, [engagementData]);
+
+  // Handle click events
+  const handleClickEngagement = useCallback(() => {
+    engagementData.clicks++;
+  }, [engagementData]);
+
   // Initialize app with custom configuration
   // Temporarily disable useAppInitialization to fix build
   // const { isLoading, loadingProgress, handleScroll, handleClick, trackEngagement } = useAppInitialization({
@@ -563,7 +598,9 @@ export default function App(): React.JSX.Element {
       enhancements.initialize();
       
       // Initialize individual enhancement systems
-      enhancedPerformanceMonitor.startMonitoring();
+      if (enhancedPerformanceMonitor && typeof enhancedPerformanceMonitor.initialize === 'function') {
+        enhancedPerformanceMonitor.initialize();
+      }
       
       // Initialize analytics
       if ('initialize' in analytics) {
@@ -688,9 +725,7 @@ export default function App(): React.JSX.Element {
     const initializeUtilities = async () => {
       try {
         // Initialize accessibility enhancements if available
-        if (accessibilityEnhancer && typeof accessibilityEnhancer.initialize === 'function') {
-          await accessibilityEnhancer.initialize();
-        }
+        // Accessibility enhancer is initialized in constructor
         console.log('Advanced utilities initialized successfully');
       } catch (error) {
         console.error('Failed to initialize some utilities:', error);
@@ -835,7 +870,7 @@ export default function App(): React.JSX.Element {
       window.removeEventListener('scroll', handleScrollWithEngagement);
       document.removeEventListener('click', handleClickWithEngagement);
     };
-  }, [handleScroll, handleClick, trackEngagement]);
+  }, [handleScrollEngagement, handleClickEngagement, trackEngagement]);
 
   if (isLoading) {
     return <ModernLoadingSpinner progress={loadingProgress} />;
@@ -843,7 +878,7 @@ export default function App(): React.JSX.Element {
 
   return (
     <EnhancedErrorBoundary>
-      <SEOOptimizer seoData={seoData} />
+      <SEOOptimizer seoData={seoDataForOptimizer} />
       <AdvancedAnalytics 
         enableHeatmaps={true}
         enableUserJourney={true}
@@ -895,7 +930,9 @@ export default function App(): React.JSX.Element {
                   ✕
                 </button>
               </div>
-              <PerformanceOptimizer />
+              <PerformanceOptimizer>
+                <div>Performance optimization in progress...</div>
+              </PerformanceOptimizer>
             </div>
           </div>
         )}
@@ -931,7 +968,7 @@ export default function App(): React.JSX.Element {
                   ✕
                 </button>
               </div>
-              <SEOOptimizer seoData={seoData} />
+              <SEOOptimizer seoData={seoDataForOptimizer} />
             </div>
           </div>
         )}
@@ -957,7 +994,7 @@ export default function App(): React.JSX.Element {
             <div className="space-y-2 text-sm">
               <div className="flex justify-between">
                 <span>Memory Usage:</span>
-                <span className="text-green-400">{Math.round((performance as unknown as { memory?: { usedJSHeapSize?: number } }).memory?.usedJSHeapSize / 1024 / 1024 || 0)} MB</span>
+                <span className="text-green-400">{Math.round(((performance as any).memory?.usedJSHeapSize || 0) / 1024 / 1024)} MB</span>
               </div>
               <div className="flex justify-between">
                 <span>Render Time:</span>
@@ -1090,7 +1127,6 @@ export default function App(): React.JSX.Element {
             <RealTimePerformanceMonitor
               isVisible={showRealTimePerformance}
               onClose={() => setShowRealTimePerformance(false)}
-              refreshInterval={1000}
             />
           </Suspense>
         )}
