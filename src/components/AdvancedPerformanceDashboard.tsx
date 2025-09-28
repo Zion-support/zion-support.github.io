@@ -39,7 +39,13 @@ const AdvancedPerformanceDashboard: React.FC<AdvancedPerformanceDashboardProps> 
     overallScore: 0
   });
 
-  const [realTimeData, setRealTimeData] = useState<{ timestamp: number; value: number; metric: string }[]>([]);
+  interface RealTimeDataPoint {
+    timestamp: number;
+    value: number;
+    metric: string;
+  }
+
+  const [realTimeData, setRealTimeData] = useState<RealTimeDataPoint[]>([]);
   // const [optimizationData, setOptimizationData] = useState<any[]>([]); // Removed unused variables
   const [optimizationSuggestions, setOptimizationSuggestions] = useState<string[]>([]);
   const [strategies, setStrategies] = useState<OptimizationStrategy[]>([]);

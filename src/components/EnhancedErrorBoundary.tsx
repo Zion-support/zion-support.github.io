@@ -165,7 +165,8 @@ class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
 
   render() {
     const { hasError, error, errorInfo, errorId, retryCount } = this.state;
-    const { fallback, maxRetries = 3, enableRecovery = true } = this.props;
+    const { children, fallback, maxRetries = 3, enableRecovery = true } = this.props; // eslint-disable-line @typescript-eslint/no-unused-vars
+    // Note: children is used in the return statement below
 
     if (hasError) {
       // Use custom fallback if provided
