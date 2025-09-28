@@ -55,7 +55,7 @@ class PerformanceOptimizer {
     this.initialize();
   }
 
-  private initialize(): void {
+  public initialize(): void {
     if (typeof window === 'undefined') return;
 
     this.setupPerformanceObservers();
@@ -256,7 +256,7 @@ class PerformanceOptimizer {
 
     // Dynamic imports for code splitting
     const lazyComponents = {
-      'AIPerformanceDashboard': () => import('../components/AIPerformanceDashboard'),
+      // 'AIPerformanceDashboard': () => import('../components/AIPerformanceDashboard'),
       'PerformanceDashboard': () => import('../components/PerformanceDashboard'),
       'EnhancedSystemDashboard': () => import('../components/EnhancedSystemDashboard')
     };
@@ -293,6 +293,69 @@ Performance Report:
 - Bundle Size: ${(metrics.bundleSize / 1024).toFixed(2)}KB
 - Network Requests: ${metrics.networkRequests}
     `.trim();
+  }
+
+  public getPerformanceScore(): number {
+    const metrics = this.getMetrics();
+    let score = 100;
+    
+    // Deduct points for poor performance
+    if (metrics.loadTime > 3000) score -= 20;
+    if (metrics.firstContentfulPaint > 1800) score -= 15;
+    if (metrics.largestContentfulPaint > 2500) score -= 15;
+    if (metrics.cumulativeLayoutShift > 0.1) score -= 10;
+    if (metrics.firstInputDelay > 100) score -= 10;
+    if (metrics.memoryUsage > 50 * 1024 * 1024) score -= 10; // 50MB
+    if (metrics.bundleSize > 500 * 1024) score -= 10; // 500KB
+    if (metrics.networkRequests > 50) score -= 10;
+    
+    return Math.max(0, score);
+  }
+
+  public getOptimizationReport(): { 
+    strategies: Array<{ name: string; description: string; impact: 'high' | 'medium' | 'low'; applied: boolean }>;
+    metrics: PerformanceMetrics;
+  } {
+    const metrics = this.getMetrics();
+    const strategies = [];
+    
+    if (metrics.loadTime > 3000) {
+      strategies.push({
+        name: 'Code Splitting',
+        description: 'Split large bundles into smaller chunks',
+        impact: 'high' as const,
+        applied: false
+      });
+    }
+    
+    if (metrics.firstContentfulPaint > 1800) {
+      strategies.push({
+        name: 'Resource Preloading',
+        description: 'Preload critical resources',
+        impact: 'high' as const,
+        applied: false
+      });
+    }
+    
+    if (metrics.largestContentfulPaint > 2500) {
+      strategies.push({
+        name: 'Image Optimization',
+        description: 'Optimize and lazy load images',
+        impact: 'medium' as const,
+        applied: false
+      });
+    }
+    
+    if (metrics.cumulativeLayoutShift > 0.1) {
+      strategies.push({
+        name: 'Layout Stability',
+        description: 'Reserve space for dynamic content',
+        impact: 'medium' as const,
+        applied: false
+      });
+    }
+    
+    return { strategies, metrics };
   }
 }
 

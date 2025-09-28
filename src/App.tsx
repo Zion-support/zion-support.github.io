@@ -8,9 +8,8 @@ import { analytics } from './utils/analytics';
 import { performanceOptimizer } from './utils/performanceOptimizations';
 // import { accessibilityEnhancements } from './utils/accessibilityEnhancements';
 // import { seoOptimizer } from './utils/seoOptimizations';
-import { seoEnhancer } from './utils/advancedSEOEnhancer';
-import { accessibilityEnhancer } from './utils/advancedAccessibilityEnhancer';
 // Removed unused imports to reduce warnings
+import { accessibilityEnhancer } from './utils/advancedAccessibilityEnhancer';
 import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import PerformanceMonitor from './components/PerformanceMonitor';
@@ -25,14 +24,15 @@ import { performanceAlerts } from './utils/performanceAlerts';
 import { accessibilityUtils } from './utils/accessibilityUtils';
 import { securityUtils } from './utils/securityUtils';
 import { enhancedSecurityManager } from './utils/enhancedSecurityManager';
-import { AdvancedAutomationSystem } from './utils/advancedAutomationSystem';
-import { securityEnhancer } from './utils/securityEnhancer';
+// import { AdvancedAutomationSystem } from './utils/advancedAutomationSystem';
+// import { securityEnhancer } from './utils/securityEnhancer';
 import AdvancedAnalytics from './components/AdvancedAnalytics';
 import NotificationSystem, { Notification } from './components/NotificationSystem';
 import KeyboardShortcutsHelp from './components/KeyboardShortcutsHelp';
 import CommandPalette from './components/CommandPalette';
 import RealTimePerformanceMonitor from './components/RealTimePerformanceMonitor';
 import SystemHealthDashboard from './components/SystemHealthDashboard';
+import PerformanceMetricsDashboard from './components/PerformanceMetricsDashboard';
 // import { getNotificationManager, notify } from './utils/advancedNotifications';
 // import { getThemeManager } from './utils/themeManager';
 // import { getKeyboardShortcuts, shortcuts } from './utils/advancedKeyboardShortcuts';
@@ -45,7 +45,7 @@ export default function App(): React.JSX.Element {
   const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
   const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
   const [showAIDashboard, setShowAIDashboard] = useState(false);
-  const [showAdvancedDashboard] = useState(false);
+  // const [showAdvancedDashboard] = useState(false);
   const [showSEOOptimizer, setShowSEOOptimizer] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [showKeyboardHelp, setShowKeyboardHelp] = useState(false);
@@ -54,6 +54,7 @@ export default function App(): React.JSX.Element {
   const [notifications, setNotifications] = useState<Notification[]>([]);
   const [showWebsiteEnhancements, setShowWebsiteEnhancements] = useState(false);
   const [showAccessibilityPanel] = useState(false);
+  const [showPerformanceMetrics, setShowPerformanceMetrics] = useState(false);
   const [showRealTimeMonitor, setShowRealTimeMonitor] = useState(false);
   const [showSystemHealth, setShowSystemHealth] = useState(false);
   // User preferences state (for future use)
@@ -72,16 +73,16 @@ export default function App(): React.JSX.Element {
   }), []);
 
   // SEO data
-  const seoData = useMemo(() => ({
-    title: 'Zion Tech Group - Leading AI & Technology Solutions',
-    description: 'Cutting-edge AI, quantum computing, and digital transformation solutions for modern enterprises. Expert consulting, cloud services, and innovative technology implementations.',
-    keywords: ['AI solutions', 'quantum computing', 'digital transformation', 'cloud services', 'enterprise technology', 'machine learning', 'automation', 'blockchain'],
-    canonicalUrl: typeof window !== 'undefined' ? window.location.href : '',
-    ogType: 'website' as const,
-    ogUrl: typeof window !== 'undefined' ? window.location.href : '',
-    ogImage: '/og-image.png',
-    twitterCard: 'summary_large_image' as const
-  }), []);
+  // const seoData = useMemo(() => ({
+  //   title: 'Zion Tech Group - Leading AI & Technology Solutions',
+  //   description: 'Cutting-edge AI, quantum computing, and digital transformation solutions for modern enterprises. Expert consulting, cloud services, and innovative technology implementations.',
+  //   keywords: ['AI solutions', 'quantum computing', 'digital transformation', 'cloud services', 'enterprise technology', 'machine learning', 'automation', 'blockchain'],
+  //   canonicalUrl: typeof window !== 'undefined' ? window.location.href : '',
+  //   ogType: 'website' as const,
+  //   ogUrl: typeof window !== 'undefined' ? window.location.href : '',
+  //   ogImage: '/og-image.png',
+  //   twitterCard: 'summary_large_image' as const
+  // }), []);
 
   // Initialize app with custom configuration
   // Temporarily disable useAppInitialization to fix build
@@ -97,7 +98,10 @@ export default function App(): React.JSX.Element {
   const isLoading = false;
   const loadingProgress = 100;
   const handleScroll = useCallback(() => {}, []);
-  const handleClick = useCallback((event?: Event) => {}, []);
+  const handleClick = useCallback((event?: Event) => {
+    // Handle click events for engagement tracking
+    console.debug('Click event captured for engagement tracking', event);
+  }, []);
   const trackEngagement = useCallback(() => {}, []);
 
   // Performance optimization hook - Temporarily disabled
@@ -196,7 +200,6 @@ export default function App(): React.JSX.Element {
     twitterCard: 'summary_large_image' as const,
     siteName: 'Zion Tech Group'
   }), [currentPathname]);
-
   // Performance optimization hook (for future use)
   // const { getPerformanceMetrics } = usePerformanceOptimization();
 
@@ -337,7 +340,7 @@ export default function App(): React.JSX.Element {
     }
     
     // Initialize advanced utilities
-    const initializeUtilities = async () => {
+    const initializeUtilities = () => {
       try {
         // performanceOptimizer is already initialized in constructor
         // await seoEnhancer.initialize();
@@ -413,6 +416,9 @@ export default function App(): React.JSX.Element {
           case 'K':
             setShowKeyboardHelp(!showKeyboardHelp);
             break;
+          case 'X':
+            setShowPerformanceMetrics(!showPerformanceMetrics);
+            break;
           case 'N':
             // Show notification
             // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -465,7 +471,7 @@ export default function App(): React.JSX.Element {
 
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
-  }, [showSystemDashboard, showPerformanceOptimizer, showPerformanceMonitor, showAIDashboard, showSEOOptimizer, isDarkMode, showKeyboardHelp, showCommandPalette, showRealTimeMonitor, showSystemHealth]);
+  }, [showSystemDashboard, showPerformanceOptimizer, showPerformanceMonitor, showAIDashboard, showSEOOptimizer, isDarkMode, showKeyboardHelp, showCommandPalette, showRealTimeMonitor, showSystemHealth, showPerformanceMetrics]);
 
 
   // Track engagement on scroll and click
@@ -475,7 +481,7 @@ export default function App(): React.JSX.Element {
       trackEngagement();
     };
 
-    const handleClickWithEngagement = (event: Event) => {
+    const handleClickWithEngagement = (_event: Event) => {
       handleClick();
       trackEngagement();
     };
@@ -697,6 +703,12 @@ export default function App(): React.JSX.Element {
         <SystemHealthDashboard
           isVisible={showSystemHealth}
           onClose={() => setShowSystemHealth(false)}
+        />
+
+        {/* Performance Metrics Dashboard - Toggle with Ctrl+Shift+X */}
+        <PerformanceMetricsDashboard
+          isVisible={showPerformanceMetrics}
+          onClose={() => setShowPerformanceMetrics(false)}
         />
 
         {/* New Components */}

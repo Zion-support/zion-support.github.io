@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from 'react';
-import { useImageLazyLoading } from '../utils/lazyLoading';
+import { useLazyImage } from '../utils/lazyLoading';
 import { imageOptimizer, ImageOptimizationOptions } from '../utils/imageOptimization';
 
 interface LazyImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
@@ -40,10 +40,7 @@ const LazyImage: React.FC<LazyImageProps> = ({
   const blurPlaceholder = placeholder || imageOptimizer.generateBlurPlaceholder();
   
   // Use lazy loading hook
-  const { elementRef, imageSrc, isLoaded } = useImageLazyLoading(
-    optimizedSrc,
-    blurPlaceholder
-  );
+  const { elementRef, imageSrc, isLoaded } = useLazyImage(optimizedSrc, blurPlaceholder);
 
   const handleLoad = useCallback(() => {
     setIsLoading(false);
@@ -57,7 +54,7 @@ const LazyImage: React.FC<LazyImageProps> = ({
   }, [onError]);
 
   // Determine which image source to use
-  const currentSrc = hasError && fallbackSrc ? fallbackSrc : imageSrc;
+  const currentSrc = hasError && fallbackSrc ? fallbackSrc : (imageSrc || '');
   const currentAlt = hasError ? `${alt} (fallback)` : alt;
 
   return (
@@ -79,7 +76,7 @@ const LazyImage: React.FC<LazyImageProps> = ({
       {/* Main image */}
       <img
         {...props}
-        src={currentSrc}
+        src={currentSrc || undefined}
         alt={currentAlt}
         loading={loading}
         sizes={sizes}
