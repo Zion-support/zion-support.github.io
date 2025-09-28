@@ -2,7 +2,7 @@
  * Smart Caching System
  */
 
-export interface CacheItem<T = any> {
+export interface CacheItem<T = unknown> {
   data: T;
   timestamp: number;
   expiresAt: number;

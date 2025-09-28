@@ -101,7 +101,6 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({ isVisible, onClose 
     await new Promise(resolve => setTimeout(resolve, 500));
     setAnalysisProgress(40);
 
-    const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
     const h1Count = document.querySelectorAll('h1').length;
     
     if (h1Count === 0) {
