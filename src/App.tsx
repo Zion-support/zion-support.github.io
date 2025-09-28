@@ -3,7 +3,7 @@ import { AppRouter } from './router';
 import { useAppInitialization } from './hooks/useAppInitialization';
 import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
-import { seoAnalytics, performanceSEO } from './utils/seoEnhanced';
+import { seoAnalytics } from './utils/seoEnhanced';
 import { analytics } from './utils/analytics';
 import { useSEOData } from './components/SEOOptimizer';
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
@@ -13,7 +13,7 @@ import PerformanceMonitor from './components/PerformanceMonitor';
 import SEOOptimizer from './components/SEOOptimizer';
 import AIPerformanceDashboard from './components/AIPerformanceDashboard';
 import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
-import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
+// import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
 import { enhancedAnalytics } from './utils/enhancedAnalytics';
 import { advancedCacheSystem } from './utils/advancedCacheSystem';
 import { AdvancedAutomationSystem } from './utils/advancedAutomationSystem';
@@ -31,13 +31,13 @@ export default function App(): React.JSX.Element {
   const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
   const [showAIDashboard, setShowAIDashboard] = useState(false);
   const [showSEOOptimizer, setShowSEOOptimizer] = useState(false);
-  const [isDarkMode, setIsDarkMode] = useState(false);
-  const [userPreferences, setUserPreferences] = useState({
-    theme: 'auto',
-    animations: true,
-    notifications: true,
-    analytics: true
-  });
+  // const [isDarkMode, setIsDarkMode] = useState(false);
+  // const [userPreferences, setUserPreferences] = useState({
+  //   theme: 'auto',
+  //   animations: true,
+  //   notifications: true,
+  //   analytics: true
+  // });
 
   // Engagement tracking data
   const engagementData = useMemo(() => ({
@@ -61,7 +61,7 @@ export default function App(): React.JSX.Element {
   const seoData = useSEOData(currentPathname);
 
   // Performance optimization hook
-  const { preloadResource } = usePerformanceOptimization({
+  const { /* preloadResource */ } = usePerformanceOptimization({
     enablePreloading: true,
     enableResourceHints: true,
     enableCriticalCSS: true,
@@ -106,7 +106,7 @@ export default function App(): React.JSX.Element {
   // Initialize comprehensive enhancements
   useEffect(() => {
     try {
-      const enhancements = getComprehensiveEnhancements();
+      getComprehensiveEnhancements();
       // Initialize enhancement systems safely
       if (enhancedAnalytics && typeof enhancedAnalytics.initialize === 'function') {
         enhancedAnalytics.initialize();

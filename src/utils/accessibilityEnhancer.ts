@@ -68,7 +68,7 @@ class AccessibilityEnhancer {
     this.initialize();
   }
 
-  private initialize(): void {
+  public initialize(): void {
     if (typeof window === 'undefined') return;
 
     this.setupKeyboardNavigation();

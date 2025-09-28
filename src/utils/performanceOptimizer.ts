@@ -239,7 +239,7 @@ class PerformanceOptimizer {
     // Update memory usage
     const memory = (performance as Performance & { memory?: { usedJSHeapSize?: number } }).memory;
     if (memory) {
-      this.metrics.memoryUsage = memory.usedJSHeapSize;
+      this.metrics.memoryUsage = memory.usedJSHeapSize || 0;
     }
 
     // Update network requests count
