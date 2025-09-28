@@ -71,12 +71,10 @@ const AdvancedPerformanceDashboard: React.FC<AdvancedPerformanceDashboardProps> 
       setMetrics(newMetrics);
 
       // Update real-time data
-      const now = new Date();
-      const newDataPoint = {
-        time: now.toLocaleTimeString(),
-        lcp: Math.floor(Math.random() * 2000) + 500,
-        fcp: Math.floor(Math.random() * 1000) + 200,
-        ttfb: Math.floor(Math.random() * 500) + 100
+      const newDataPoint: RealTimeDataPoint = {
+        timestamp: Date.now(),
+        value: Math.floor(Math.random() * 2000) + 500,
+        metric: 'lcp'
       };
       
       setRealTimeData(prev => [...prev.slice(-9), newDataPoint]);
