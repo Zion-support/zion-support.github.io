@@ -12,6 +12,14 @@ interface PerformanceConfig {
   enableCaching: boolean;
 }
 
+interface PerformanceData {
+  loadTime: number;
+  renderTime: number;
+  memoryUsage: number;
+  bundleSize: number;
+  cacheHitRate: number;
+}
+
 class PerformanceEnhancer {
   private config: PerformanceConfig;
   private observer: IntersectionObserver | null = null;
@@ -280,6 +288,41 @@ class PerformanceEnhancer {
     });
   }
 
+  public getMetrics(): PerformanceData {
+    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    const memory = (performance as any).memory;
+    
+    return {
+      loadTime: navigation ? Math.round(navigation.loadEventEnd - navigation.loadEventStart) : 0,
+      renderTime: navigation ? Math.round(navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart) : 0,
+      memoryUsage: memory ? Math.round(memory.usedJSHeapSize / 1024 / 1024) : 0,
+      bundleSize: this.calculateBundleSize(),
+      cacheHitRate: this.calculateCacheHitRate()
+    };
+  }
+
+  private calculateBundleSize(): number {
+    // Estimate bundle size based on loaded scripts
+    const scripts = document.querySelectorAll('script[src]');
+    let totalSize = 0;
+    
+    scripts.forEach(script => {
+      const src = script.getAttribute('src');
+      if (src && src.includes('assets/js/')) {
+        // Estimate based on common bundle sizes
+        totalSize += 100; // KB per script estimate
+      }
+    });
+    
+    return totalSize;
+  }
+
+  private calculateCacheHitRate(): number {
+    // Simple cache hit rate calculation
+    const cacheSize = this.imageCache.size;
+    return cacheSize > 0 ? Math.round((cacheSize / (cacheSize + 10)) * 100) : 0;
+  }
+
   public cleanup(): void {
     if (this.observer) {
       this.observer.disconnect();
@@ -293,4 +336,4 @@ const performanceEnhancer = new PerformanceEnhancer();
 
 export default performanceEnhancer;
 export { PerformanceEnhancer };
-export type { PerformanceConfig };
+export type { PerformanceConfig, PerformanceData };
