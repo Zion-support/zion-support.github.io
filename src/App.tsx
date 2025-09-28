@@ -168,7 +168,7 @@ export default function App(): React.JSX.Element {
     enhancements.initialize();
     
     // Initialize individual enhancement systems
-    enhancedPerformanceMonitor.initialize();
+    enhancedPerformanceMonitor.startMonitoring();
     enhancedAnalytics.initialize();
     advancedCacheSystem.initialize();
     new AdvancedAutomationSystem().initialize();
@@ -177,9 +177,14 @@ export default function App(): React.JSX.Element {
     
     // Initialize analytics
     analytics.initialize();
-    seoAnalytics.initialize();
-    performanceSEO.initialize();
-    seoManager.initialize();
+    seoAnalytics.trackPageView(window.location.pathname);
+    performanceSEO.optimizeImages();
+    seoManager.updateSEO({
+      title: document.title,
+      description: document.querySelector('meta[name="description"]')?.getAttribute('content') || '',
+      keywords: document.querySelector('meta[name="keywords"]')?.getAttribute('content')?.split(',').map(k => k.trim()) || [],
+      canonical: window.location.href
+    });
     
     // Initialize SEO analytics
     seoAnalytics.trackPageView(window.location.pathname);
@@ -456,7 +461,7 @@ export default function App(): React.JSX.Element {
       </div>
       
       {/* Additional components */}
-      <PerformanceDashboard />
+      <PerformanceDashboard isVisible={false} onClose={() => {}} />
       <SystemMetricsDashboard 
         isVisible={showSystemDashboard}
         onClose={() => setShowSystemDashboard(false)}
