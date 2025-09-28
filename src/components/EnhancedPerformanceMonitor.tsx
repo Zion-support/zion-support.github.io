@@ -6,7 +6,6 @@ interface EnhancedPerformanceMonitorProps {
   className?: string;
   showDetails?: boolean;
   showSuggestions?: boolean;
-  autoOptimize?: boolean;
 }
 
 export const EnhancedPerformanceMonitor: React.FC<EnhancedPerformanceMonitorProps> = ({

@@ -72,6 +72,12 @@
 #   package = "netlify-plugin-cloudinary"
 #   [plugins.inputs]
 
+# Disable Next.js plugin since we're using Vite
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+  [plugins.inputs]
+    disable = true
+
 [context.production.environment]
   NODE_ENV = "production"
   NPM_CONFIG_PRODUCTION = "false"
