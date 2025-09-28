@@ -11,8 +11,7 @@ interface EnhancedPerformanceMonitorProps {
 export const EnhancedPerformanceMonitor: React.FC<EnhancedPerformanceMonitorProps> = ({
   className,
   showDetails = false,
-  showSuggestions = true,
-  autoOptimize: _ = false // eslint-disable-line @typescript-eslint/no-unused-vars
+  showSuggestions = true
 }) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     fcp: 0,
