@@ -28,6 +28,18 @@ const RealTimePerformanceMonitor: React.FC<RealTimePerformanceMonitorProps> = ({
   const [history, setHistory] = useState<PerformanceMetrics[]>([]);
   const [maxHistoryLength] = useState(100);
 
+  const lastTimeRef = useRef<number>(0);
+  
+  const calculateFPS = useCallback((): number => {
+    if (typeof window === 'undefined' || !window.performance) return 0;
+    
+    const now = performance.now();
+    const delta = now - lastTimeRef.current || 0;
+    lastTimeRef.current = now;
+    
+    return delta > 0 ? Math.round(1000 / delta) : 0;
+  }, []);
+
   const updateMetrics = useCallback(() => {
     if (!isMonitoring) return;
 
@@ -46,18 +58,6 @@ const RealTimePerformanceMonitor: React.FC<RealTimePerformanceMonitorProps> = ({
       return updated.slice(-maxHistoryLength);
     });
   }, [isMonitoring, maxHistoryLength, calculateFPS]);
-
-  const lastTimeRef = useRef<number>(0);
-  
-  const calculateFPS = useCallback((): number => {
-    if (typeof window === 'undefined' || !window.performance) return 0;
-    
-    const now = performance.now();
-    const delta = now - lastTimeRef.current || 0;
-    lastTimeRef.current = now;
-    
-    return delta > 0 ? Math.round(1000 / delta) : 0;
-  }, []);
 
   const getMemoryUsage = (): number => {
     if (typeof window === 'undefined') return 0;
