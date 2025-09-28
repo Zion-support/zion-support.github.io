@@ -5,13 +5,38 @@ import AdvancedAccessibilityManager from '../utils/advancedAccessibilityManager'
 import AdvancedSecurityManager from '../utils/advancedSecurityManager';
 import EnhancedUXManager from '../utils/enhancedUXManager';
 
+interface PerformanceData {
+  memoryUsage: number;
+  memoryLimit: number;
+}
+
+interface AccessibilityData {
+  features: string;
+}
+
+interface SecurityData {
+  status: string;
+}
+
+interface UXData {
+  status: string;
+}
+
+interface AnalyticsData {
+  [key: string]: unknown;
+}
+
+interface CacheData {
+  [key: string]: unknown;
+}
+
 interface DashboardData {
-  analytics: any;
-  cache: any;
-  performance: any;
-  accessibility: any;
-  security: any;
-  ux: any;
+  analytics: AnalyticsData;
+  cache: CacheData;
+  performance: PerformanceData;
+  accessibility: AccessibilityData;
+  security: SecurityData;
+  ux: UXData;
 }
 
 const AdvancedDashboard: React.FC = () => {
@@ -35,8 +60,8 @@ const AdvancedDashboard: React.FC = () => {
       analytics,
       cache,
       performance: {
-        memoryUsage: (performance as any).memory?.usedJSHeapSize || 0,
-        memoryLimit: (performance as any).memory?.jsHeapSizeLimit || 0,
+        memoryUsage: (performance as Performance & { memory?: { usedJSHeapSize?: number } }).memory?.usedJSHeapSize || 0,
+        memoryLimit: (performance as Performance & { memory?: { jsHeapSizeLimit?: number } }).memory?.jsHeapSizeLimit || 0,
       },
       accessibility: {
         // Get accessibility stats from manager
@@ -206,7 +231,7 @@ const AdvancedDashboard: React.FC = () => {
                 <h3 className="font-semibold mb-3">Recent Events ({data.analytics.events.length})</h3>
                 <div className="max-h-64 overflow-y-auto">
                   <div className="space-y-2">
-                    {data.analytics.events.slice(-10).map((event: any, index: number) => (
+                    {data.analytics.events.slice(-10).map((event: unknown, index: number) => (
                       <div key={index} className="bg-white p-2 rounded text-sm">
                         <div className="font-medium">{event.event}</div>
                         <div className="text-gray-600">{new Date(event.timestamp).toLocaleString()}</div>
