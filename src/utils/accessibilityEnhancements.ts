@@ -403,3 +403,8 @@ export const trapFocus = (container: HTMLElement): void => {
     }
   });
 };
+
+// Initialize accessibility enhancements
+export const initializeAccessibilityEnhancements = (): void => {
+  accessibilityEnhancer.initialize();
+};
