@@ -5,13 +5,43 @@ import AdvancedAccessibilityManager from '../utils/advancedAccessibilityManager'
 import AdvancedSecurityManager from '../utils/advancedSecurityManager';
 import EnhancedUXManager from '../utils/enhancedUXManager';
 
+interface AnalyticsData {
+  sessionId?: string;
+  timestamp?: number;
+  events?: Record<string, unknown>;
+}
+
+interface CacheData {
+  hits?: number;
+  misses?: number;
+  size?: number;
+  entries?: number;
+}
+
+interface PerformanceData {
+  memoryUsage: number;
+  memoryLimit: number;
+}
+
+interface AccessibilityData {
+  features: string;
+}
+
+interface SecurityData {
+  status: string;
+}
+
+interface UXData {
+  improvements?: string;
+}
+
 interface DashboardData {
-  analytics: any;
-  cache: any;
-  performance: any;
-  accessibility: any;
-  security: any;
-  ux: any;
+  analytics: AnalyticsData;
+  cache: CacheData;
+  performance: PerformanceData;
+  accessibility: AccessibilityData;
+  security: SecurityData;
+  ux: UXData;
 }
 
 const AdvancedDashboard: React.FC = () => {
@@ -35,8 +65,8 @@ const AdvancedDashboard: React.FC = () => {
       analytics,
       cache,
       performance: {
-        memoryUsage: (performance as any).memory?.usedJSHeapSize || 0,
-        memoryLimit: (performance as any).memory?.jsHeapSizeLimit || 0,
+        memoryUsage: (performance as Performance & { memory?: { usedJSHeapSize?: number; jsHeapSizeLimit?: number } }).memory?.usedJSHeapSize || 0,
+        memoryLimit: (performance as Performance & { memory?: { usedJSHeapSize?: number; jsHeapSizeLimit?: number } }).memory?.jsHeapSizeLimit || 0,
       },
       accessibility: {
         // Get accessibility stats from manager
@@ -203,14 +233,14 @@ const AdvancedDashboard: React.FC = () => {
               </div>
 
               <div className="bg-gray-50 p-4 rounded-lg">
-                <h3 className="font-semibold mb-3">Recent Events ({data.analytics.events.length})</h3>
+                <h3 className="font-semibold mb-3">Recent Events ({data.analytics.events?.length || 0})</h3>
                 <div className="max-h-64 overflow-y-auto">
                   <div className="space-y-2">
-                    {data.analytics.events.slice(-10).map((event: any, index: number) => (
+                    {data.analytics.events?.slice(-10).map((event: Record<string, unknown>, index: number) => (
                       <div key={index} className="bg-white p-2 rounded text-sm">
-                        <div className="font-medium">{event.event}</div>
-                        <div className="text-gray-600">{new Date(event.timestamp).toLocaleString()}</div>
-                        {event.properties && Object.keys(event.properties).length > 0 && (
+                        <div className="font-medium">{String(event.event || 'Unknown')}</div>
+                        <div className="text-gray-600">{event.timestamp ? new Date(Number(event.timestamp)).toLocaleString() : 'No timestamp'}</div>
+                        {event.properties && typeof event.properties === 'object' && Object.keys(event.properties as Record<string, unknown>).length > 0 && (
                           <div className="text-gray-500 text-xs mt-1">
                             {JSON.stringify(event.properties, null, 2)}
                           </div>

@@ -54,7 +54,7 @@ class AdvancedSecurityManager {
     this.setupSecurityHeaders();
   }
 
-  public getSecurityReport(): any {
+  public getSecurityReport(): unknown {
     const criticalEvents = this.events.filter(e => e.severity === 'critical');
     const highEvents = this.events.filter(e => e.severity === 'high');
     
@@ -204,7 +204,7 @@ class AdvancedSecurityManager {
     }
   }
 
-  private logEvent(type: string, severity: SecurityEvent['severity'], message: string, metadata?: Record<string, any>): void {
+  private logEvent(type: string, severity: SecurityEvent['severity'], message: string, metadata?: Record<string, unknown>): void {
     const event: SecurityEvent = {
       type,
       severity,

@@ -44,7 +44,7 @@ global.PerformanceObserver = jest.fn().mockImplementation(() => ({
   observe: jest.fn(),
   disconnect: jest.fn(),
   supportedEntryTypes: [],
-})) as any;
+})) as typeof PerformanceObserver;
 
 describe('Performance Enhancements', () => {
   beforeEach(() => {

@@ -5,7 +5,7 @@
 
 interface AnalyticsEvent {
   event: string;
-  properties?: Record<string, any>;
+  properties?: Record<string, unknown>;
   timestamp: number;
   userId?: string;
   sessionId: string;
@@ -124,7 +124,7 @@ class AdvancedAnalyticsManager {
     return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
   }
 
-  public trackEvent(event: string, properties?: Record<string, any>): void {
+  public trackEvent(event: string, properties?: Record<string, unknown>): void {
     if (!this.session) return;
 
     const analyticsEvent: AnalyticsEvent = {
@@ -199,7 +199,7 @@ class AdvancedAnalyticsManager {
     }
   }
 
-  public trackUserAction(action: string, element?: string, properties?: Record<string, any>): void {
+  public trackUserAction(action: string, element?: string, properties?: Record<string, unknown>): void {
     this.trackEvent('user_action', {
       action,
       element,
@@ -207,7 +207,7 @@ class AdvancedAnalyticsManager {
     });
   }
 
-  public trackPerformance(metric: string, value: number, properties?: Record<string, any>): void {
+  public trackPerformance(metric: string, value: number, properties?: Record<string, unknown>): void {
     this.trackEvent('performance_metric', {
       metric,
       value,
@@ -228,9 +228,9 @@ class AdvancedAnalyticsManager {
     return this.session;
   }
 
-  public identifyUser(userId: string, traits?: Record<string, any>): void {
+  public identifyUser(userId: string, traits?: Record<string, unknown>): void {
     if (this.session) {
-      (this.session as any).userId = userId;
+      (this.session as unknown).userId = userId;
     }
 
     this.trackEvent('user_identified', {
@@ -239,13 +239,13 @@ class AdvancedAnalyticsManager {
     });
   }
 
-  public setUserProperties(properties: Record<string, any>): void {
+  public setUserProperties(properties: Record<string, unknown>): void {
     this.trackEvent('user_properties_updated', {
       properties,
     });
   }
 
-  public trackConversion(conversionType: string, value?: number, properties?: Record<string, any>): void {
+  public trackConversion(conversionType: string, value?: number, properties?: Record<string, unknown>): void {
     this.trackEvent('conversion', {
       conversionType,
       value,

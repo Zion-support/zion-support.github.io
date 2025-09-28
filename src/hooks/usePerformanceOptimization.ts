@@ -42,7 +42,7 @@ export const usePerformanceOptimization = () => {
   // Preload resource
   const preloadResource = useCallback(async (src: string, type: 'image' | 'script' | 'stylesheet' = 'image') => {
     try {
-      performanceEnhancer.preloadResource(src, type as any);
+      performanceEnhancer.preloadResource(src, type as 'image' | 'script' | 'stylesheet');
     } catch (error) {
       console.warn(`Failed to preload ${type}: ${src}`, error);
     }
@@ -57,7 +57,7 @@ export const usePerformanceOptimization = () => {
   const getMetrics = useCallback(() => {
     return {
       loadTime: performance.now() - performanceStartTime.current,
-      memoryUsage: (performance as any).memory?.usedJSHeapSize || 0,
+      memoryUsage: (performance as Performance & { memory?: { usedJSHeapSize?: number } }).memory?.usedJSHeapSize || 0,
     };
   }, []);
 
