@@ -15,8 +15,8 @@ export interface ErrorInfo {
   userAgent: string;
   userId?: string;
   sessionId: string;
-  severity: 'low' | 'medium' | 'high' | 'critical';
-  category: 'javascript' | 'network' | 'promise' | 'resource' | 'custom';
+  severity: "low" | "medium" | "high" | "critical";
+  category: "javascript" | "network" | "promise" | "resource" | "custom";
   context: Record<string, unknown>;
   resolved: boolean;
   resolvedAt?: Date;
@@ -51,74 +51,85 @@ class AdvancedErrorTracker {
   private reportEndpoint?: string;
   private filters: ErrorFilter = {};
 
-  constructor(config: {
-    maxErrors?: number;
-    reportEndpoint?: string;
-    userId?: string;
-  } = {}) {
+  constructor(
+    config: {
+      maxErrors?: number;
+      reportEndpoint?: string;
+      userId?: string;
+    } = {},
+  ) {
     this.maxErrors = config.maxErrors || 1000;
     this.reportEndpoint = config.reportEndpoint;
     this.userId = config.userId;
     this.sessionId = this.generateSessionId();
-    
+
     this.initializeErrorTracking();
   }
 
   private generateSessionId(): string {
-    return 'session_' + Math.random().toString(36).substr(2, 9) + '_' + Date.now();
+    return (
+      "session_" + Math.random().toString(36).substr(2, 9) + "_" + Date.now()
+    );
   }
 
   private initializeErrorTracking(): void {
-    if (typeof window === 'undefined') return;
+    if (typeof window === "undefined") return;
 
     // Global error handler
-    window.addEventListener('error', (event) => {
+    window.addEventListener("error", (event) => {
       this.trackError({
         message: event.message,
         stack: event.error?.stack,
         filename: event.filename,
         lineno: event.lineno,
         colno: event.colno,
-        category: 'javascript',
+        category: "javascript",
         severity: this.determineSeverity(event.error),
         context: {
           type: event.type,
           target: event.target?.constructor?.name,
-          isTrusted: event.isTrusted
-        }
+          isTrusted: event.isTrusted,
+        },
       });
     });
 
     // Unhandled promise rejection handler
-    window.addEventListener('unhandledrejection', (event) => {
+    window.addEventListener("unhandledrejection", (event) => {
       this.trackError({
-        message: event.reason?.message || 'Unhandled Promise Rejection',
+        message: event.reason?.message || "Unhandled Promise Rejection",
         stack: event.reason?.stack,
-        category: 'promise',
+        category: "promise",
         severity: this.determineSeverity(event.reason),
         context: {
           reason: event.reason,
-          promise: event.promise
-        }
+          promise: event.promise,
+        },
       });
     });
 
     // Resource loading error handler
-    window.addEventListener('error', (event) => {
-      if (event.target !== window) {
-        this.trackError({
-          message: `Failed to load resource: ${(event.target as HTMLElement)?.getAttribute('src') || (event.target as HTMLElement)?.getAttribute('href')}`,
-          filename: (event.target as HTMLElement)?.getAttribute('src') || (event.target as HTMLElement)?.getAttribute('href') || undefined,
-          category: 'resource',
-          severity: 'medium',
-          context: {
-            tagName: (event.target as HTMLElement)?.tagName,
-            src: (event.target as HTMLElement)?.getAttribute('src'),
-            href: (event.target as HTMLElement)?.getAttribute('href')
-          }
-        });
-      }
-    }, true);
+    window.addEventListener(
+      "error",
+      (event) => {
+        if (event.target !== window) {
+          this.trackError({
+            message: `Failed to load resource: ${(event.target as HTMLElement)?.getAttribute("src") || (event.target as HTMLElement)?.getAttribute("href")}`,
+            filename:
+              (event.target as HTMLElement)?.getAttribute("src") ||
+              (event.target as HTMLElement)?.getAttribute("href") ||
+              undefined,
+            category: "resource",
+            severity: "medium",
+            context: {
+              tagName: (event.target as HTMLElement)?.tagName,
+              src: (event.target as HTMLElement)?.getAttribute("src"),
+              href: (event.target as HTMLElement)?.getAttribute("href"),
+            },
+          });
+        }
+      },
+      true,
+    );
 
     // Network error tracking
     this.trackNetworkErrors();
@@ -139,14 +150,14 @@ class AdvancedErrorTracker {
         if (!response.ok) {
           this.trackError({
             message: `HTTP ${response.status}: ${response.statusText}`,
-            category: 'network',
-            severity: response.status >= 500 ? 'high' : 'medium',
+            category: "network",
+            severity: response.status >= 500 ? "high" : "medium",
             context: {
               url: args[0],
               status: response.status,
               statusText: response.statusText,
-              method: 'fetch'
-            }
+              method: "fetch",
+            },
           });
         }
         return response;
@@ -154,37 +165,50 @@ class AdvancedErrorTracker {
         this.trackError({
           message: `Fetch error: ${(error as any).message}`,
           stack: (error as any).stack,
-          category: 'network',
-          severity: 'high',
+          category: "network",
+          severity: "high",
           context: {
             url: args[0],
-            method: 'fetch',
-            error: (error as any).message
-          }
+            method: "fetch",
+            error: (error as any).message,
+          },
         });
         throw error;
       }
     };
 
     // Track XMLHttpRequest errors
-    XMLHttpRequest.prototype.open = function(method, url, async = true, user = null, password = null) {
+    XMLHttpRequest.prototype.open = function (
+      method,
+      url,
+      async = true,
+      user = null,
+      password = null,
+    ) {
       (this as any)._method = method;
       (this as any)._url = url;
-      return originalXHROpen.call(this, method, url, async as boolean, user as string | null, password as string | null);
+      return originalXHROpen.call(
+        this,
+        method,
+        url,
+        async as boolean,
+        user as string | null,
+        password as string | null,
+      );
     };
 
-    XMLHttpRequest.prototype.send = function(...args) {
-      this.addEventListener('error', () => {
+    XMLHttpRequest.prototype.send = function (...args) {
+      this.addEventListener("error", () => {
         (this as any).trackError({
           message: `XHR error: ${this.status} ${this.statusText}`,
-          category: 'network',
-          severity: this.status >= 500 ? 'high' : 'medium',
+          category: "network",
+          severity: this.status >= 500 ? "high" : "medium",
           context: {
             url: (this as any)._url,
             method: (this as any)._method,
             status: this.status,
-            statusText: this.statusText
-          }
+            statusText: this.statusText,
+          },
         });
       });
       return originalXHRSend.call(this, ...args);
@@ -192,65 +216,75 @@ class AdvancedErrorTracker {
   }
 
   private trackPerformanceErrors(): void {
-    if ('PerformanceObserver' in window) {
+    if ("PerformanceObserver" in window) {
       try {
         const observer = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           entries.forEach((entry) => {
-            if (entry.entryType === 'navigation') {
+            if (entry.entryType === "navigation") {
               const navEntry = entry as PerformanceNavigationTiming;
               if (navEntry.loadEventEnd - navEntry.loadEventStart > 5000) {
                 this.trackError({
-                  message: 'Page load timeout',
-                  category: 'custom',
-                  severity: 'medium',
+                  message: "Page load timeout",
+                  category: "custom",
+                  severity: "medium",
                   context: {
                     loadTime: navEntry.loadEventEnd - navEntry.loadEventStart,
-                    domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.domContentLoadedEventStart,
-                    firstPaint: navEntry.responseEnd - navEntry.requestStart
-                  }
+                    domContentLoaded:
+                      navEntry.domContentLoadedEventEnd -
+                      navEntry.domContentLoadedEventStart,
+                    firstPaint: navEntry.responseEnd - navEntry.requestStart,
+                  },
                 });
               }
             }
           });
         });
-        observer.observe({ entryTypes: ['navigation'] });
+        observer.observe({ entryTypes: ["navigation"] });
       } catch (error) {
-        console.warn('Performance Observer not supported:', error);
+        console.warn("Performance Observer not supported:", error);
       }
     }
   }
 
-  private determineSeverity(error: unknown): 'low' | 'medium' | 'high' | 'critical' {
-    if (!error) return 'medium';
-    
-    const message = (error as any).message?.toLowerCase() || '';
+  private determineSeverity(
+    error: unknown,
+  ): "low" | "medium" | "high" | "critical" {
+    if (!error) return "medium";
+
+    const message = (error as any).message?.toLowerCase() || "";
     // Stack trace is available but not used in this implementation
 
     // Critical errors
-    if (message.includes('out of memory') || 
-        message.includes('maximum call stack') ||
-        message.includes('cannot read property') ||
-        message.includes('cannot read properties')) {
-      return 'critical';
+    if (
+      message.includes("out of memory") ||
+      message.includes("maximum call stack") ||
+      message.includes("cannot read property") ||
+      message.includes("cannot read properties")
+    ) {
+      return "critical";
     }
 
     // High severity errors
-    if (message.includes('network error') ||
-        message.includes('timeout') ||
-        message.includes('failed to fetch') ||
-        message.includes('cors')) {
-      return 'high';
+    if (
+      message.includes("network error") ||
+      message.includes("timeout") ||
+      message.includes("failed to fetch") ||
+      message.includes("cors")
+    ) {
+      return "high";
     }
 
     // Medium severity errors
-    if (message.includes('undefined') ||
-        message.includes('null') ||
-        message.includes('typeerror')) {
-      return 'medium';
+    if (
+      message.includes("undefined") ||
+      message.includes("null") ||
+      message.includes("typeerror")
+    ) {
+      return "medium";
     }
 
-    return 'low';
+    return "low";
   }
 
   public trackError(errorData: {
@@ -259,8 +293,8 @@ class AdvancedErrorTracker {
     filename?: string;
     lineno?: number;
     colno?: number;
-    category: 'javascript' | 'network' | 'promise' | 'resource' | 'custom';
-    severity: 'low' | 'medium' | 'high' | 'critical';
+    category: "javascript" | "network" | "promise" | "resource" | "custom";
+    severity: "low" | "medium" | "high" | "critical";
     context?: Record<string, unknown>;
   }): void {
     if (!this.isEnabled) return;
@@ -280,7 +314,7 @@ class AdvancedErrorTracker {
       severity: errorData.severity,
       category: errorData.category,
       context: errorData.context || {},
-      resolved: false
+      resolved: false,
     };
 
     this.errors.push(error);
@@ -296,13 +330,15 @@ class AdvancedErrorTracker {
     }
 
     // Log to console in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('Error tracked:', error);
+    if (process.env.NODE_ENV === "development") {
+      console.error("Error tracked:", error);
     }
   }
 
   private generateErrorId(): string {
-    return 'error_' + Math.random().toString(36).substr(2, 9) + '_' + Date.now();
+    return (
+      "error_" + Math.random().toString(36).substr(2, 9) + "_" + Date.now()
+    );
   }
 
   private async sendErrorReport(error: ErrorInfo): Promise<void> {
@@ -310,14 +346,14 @@ class AdvancedErrorTracker {
 
     try {
       await fetch(this.reportEndpoint, {
-        method: 'POST',
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
-        body: JSON.stringify(error)
+        body: JSON.stringify(error),
       });
     } catch (err) {
-      console.warn('Failed to send error report:', err);
+      console.warn("Failed to send error report:", err);
     }
   }
 
@@ -326,49 +362,65 @@ class AdvancedErrorTracker {
 
     if (filter) {
       if (filter.category) {
-        filteredErrors = filteredErrors.filter(error => error.category === filter.category);
+        filteredErrors = filteredErrors.filter(
+          (error) => error.category === filter.category,
+        );
       }
       if (filter.severity) {
-        filteredErrors = filteredErrors.filter(error => error.severity === filter.severity);
+        filteredErrors = filteredErrors.filter(
+          (error) => error.severity === filter.severity,
+        );
       }
       if (filter.resolved !== undefined) {
-        filteredErrors = filteredErrors.filter(error => error.resolved === filter.resolved);
+        filteredErrors = filteredErrors.filter(
+          (error) => error.resolved === filter.resolved,
+        );
       }
       if (filter.userId) {
-        filteredErrors = filteredErrors.filter(error => error.userId === filter.userId);
+        filteredErrors = filteredErrors.filter(
+          (error) => error.userId === filter.userId,
+        );
       }
       if (filter.dateRange) {
-        filteredErrors = filteredErrors.filter(error => 
-          error.timestamp >= filter.dateRange!.start && 
-          error.timestamp <= filter.dateRange!.end
+        filteredErrors = filteredErrors.filter(
+          (error) =>
+            error.timestamp >= filter.dateRange!.start &&
+            error.timestamp <= filter.dateRange!.end,
         );
       }
     }
 
-    return filteredErrors.sort((a, b) => b.timestamp.getTime() - a.timestamp.getTime());
+    return filteredErrors.sort(
+      (a, b) => b.timestamp.getTime() - a.timestamp.getTime(),
+    );
   }
 
   public getErrorStats(): ErrorStats {
     const now = new Date();
     const last24Hours = new Date(now.getTime() - 24 * 60 * 60 * 1000);
-    const recentErrors = this.errors.filter(error => error.timestamp >= last24Hours);
+    const recentErrors = this.errors.filter(
+      (error) => error.timestamp >= last24Hours,
+    );
 
     const errorsByCategory: Record<string, number> = {};
     const errorsBySeverity: Record<string, number> = {};
     const errorsByHour: Record<string, number> = {};
     const errorMessages: Record<string, number> = {};
 
-    recentErrors.forEach(error => {
+    recentErrors.forEach((error) => {
       // Count by category
-      errorsByCategory[error.category] = (errorsByCategory[error.category] || 0) + 1;
-      
+      errorsByCategory[error.category] =
+        (errorsByCategory[error.category] || 0) + 1;
+
       // Count by severity
-      errorsBySeverity[error.severity] = (errorsBySeverity[error.severity] || 0) + 1;
-      
+      errorsBySeverity[error.severity] =
+        (errorsBySeverity[error.severity] || 0) + 1;
+
       // Count by hour
-      const hour = error.timestamp.getHours().toString().padStart(2, '0') + ':00';
+      const hour =
+        error.timestamp.getHours().toString().padStart(2, "0") + ":00";
       errorsByHour[hour] = (errorsByHour[hour] || 0) + 1;
-      
+
       // Count by message
       errorMessages[error.message] = (errorMessages[error.message] || 0) + 1;
     });
@@ -378,9 +430,11 @@ class AdvancedErrorTracker {
       .sort((a, b) => b.count - a.count)
       .slice(0, 10);
 
-    const sessions = new Set(this.errors.map(error => error.sessionId)).size;
-    const averageErrorsPerSession = sessions > 0 ? recentErrors.length / sessions : 0;
-    const errorRate = recentErrors.length / Math.max(1, this.getPageViews()) * 1000;
+    const sessions = new Set(this.errors.map((error) => error.sessionId)).size;
+    const averageErrorsPerSession =
+      sessions > 0 ? recentErrors.length / sessions : 0;
+    const errorRate =
+      (recentErrors.length / Math.max(1, this.getPageViews())) * 1000;
 
     return {
       totalErrors: this.errors.length,
@@ -390,7 +444,7 @@ class AdvancedErrorTracker {
       averageErrorsPerSession,
       errorRate,
       topErrors,
-      recentErrors: recentErrors.slice(0, 50)
+      recentErrors: recentErrors.slice(0, 50),
     };
   }
 
@@ -400,7 +454,7 @@ class AdvancedErrorTracker {
   }
 
   public resolveError(errorId: string, resolvedBy?: string): boolean {
-    const error = this.errors.find(e => e.id === errorId);
+    const error = this.errors.find((e) => e.id === errorId);
     if (error) {
       error.resolved = true;
       error.resolvedAt = new Date();
@@ -433,7 +487,7 @@ class AdvancedErrorTracker {
         this.errors = [...this.errors, ...importedErrors];
       }
     } catch (error) {
-      console.error('Failed to import errors:', error);
+      console.error("Failed to import errors:", error);
     }
   }
 }
@@ -441,11 +495,13 @@ class AdvancedErrorTracker {
 // Export singleton instance
 export const errorTracker = new AdvancedErrorTracker({
   maxErrors: 1000,
-  reportEndpoint: process.env.REACT_APP_ERROR_REPORTING_ENDPOINT
+  reportEndpoint: process.env.REACT_APP_ERROR_REPORTING_ENDPOINT,
 });
 
 // Export utility functions
-export const trackError = (errorData: Parameters<typeof errorTracker.trackError>[0]) => {
+export const trackError = (
+  errorData: Parameters<typeof errorTracker.trackError>[0],
+) => {
   errorTracker.trackError(errorData);
 };
 

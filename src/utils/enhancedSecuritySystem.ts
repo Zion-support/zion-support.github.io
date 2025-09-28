@@ -4,8 +4,13 @@
  */
 
 export interface SecurityEvent {
-  type: 'xss_attempt' | 'csrf_attempt' | 'injection_attempt' | 'suspicious_activity' | 'rate_limit_exceeded';
-  severity: 'low' | 'medium' | 'high' | 'critical';
+  type:
+    | "xss_attempt"
+    | "csrf_attempt"
+    | "injection_attempt"
+    | "suspicious_activity"
+    | "rate_limit_exceeded";
+  severity: "low" | "medium" | "high" | "critical";
   message: string;
   timestamp: number;
   source: string;
@@ -55,15 +60,15 @@ class EnhancedSecuritySystem {
         /expression\s*\(/gi,
         /url\s*\(/gi,
         /import\s*\(/gi,
-        /require\s*\(/gi
+        /require\s*\(/gi,
       ],
       trustedDomains: [
         window.location.hostname,
-        'cdn.jsdelivr.net',
-        'fonts.googleapis.com',
-        'fonts.gstatic.com',
-        'unpkg.com'
-      ]
+        "cdn.jsdelivr.net",
+        "fonts.googleapis.com",
+        "fonts.gstatic.com",
+        "unpkg.com",
+      ],
     };
   }
 
@@ -81,7 +86,7 @@ class EnhancedSecuritySystem {
     this.setupInputSanitization();
     this.isInitialized = true;
 
-    console.log('✅ Enhanced Security System initialized');
+    console.log("✅ Enhanced Security System initialized");
   }
 
   /**
@@ -100,19 +105,21 @@ class EnhancedSecuritySystem {
       "frame-src 'none'",
       "object-src 'none'",
       "base-uri 'self'",
-      "form-action 'self'"
-    ].join('; ');
+      "form-action 'self'",
+    ].join("; ");
 
     // Create CSP meta tag if not exists
-    let cspMeta = document.querySelector('meta[http-equiv="Content-Security-Policy"]') as HTMLMetaElement;
+    let cspMeta = document.querySelector(
+      'meta[http-equiv="Content-Security-Policy"]',
+    ) as HTMLMetaElement;
     if (!cspMeta) {
-      cspMeta = document.createElement('meta');
-      cspMeta.setAttribute('http-equiv', 'Content-Security-Policy');
+      cspMeta = document.createElement("meta");
+      cspMeta.setAttribute("http-equiv", "Content-Security-Policy");
       document.head.appendChild(cspMeta);
     }
     cspMeta.content = cspHeader;
 
-    console.log('CSP configured:', cspHeader);
+    console.log("CSP configured:", cspHeader);
   }
 
   /**
@@ -123,52 +130,64 @@ class EnhancedSecuritySystem {
 
     // Monitor for XSS attempts
     const originalCreateElement = document.createElement;
-    document.createElement = function(tagName: string) {
+    document.createElement = function (tagName: string) {
       const element = originalCreateElement.call(this, tagName);
-      
+
       // Monitor script tag creation
-      if (tagName.toLowerCase() === 'script') {
-        const securitySystem = (window as Record<string, unknown>).__securitySystem;
-        if (securitySystem) {
+      if (tagName.toLowerCase() === "script") {
+        const securitySystem = (window as any).__securitySystem;
+        if (
+          securitySystem &&
+          typeof securitySystem.logSecurityEvent === "function"
+        ) {
           securitySystem.logSecurityEvent({
-            type: 'xss_attempt',
-            severity: 'high',
-            message: 'Script tag creation detected',
+            type: "xss_attempt",
+            severity: "high",
+            message: "Script tag creation detected",
             timestamp: Date.now(),
-            source: 'DOM',
-            userAgent: navigator.userAgent
+            source: "DOM",
+            userAgent: navigator.userAgent,
           });
         }
       }
-      
+
       return element;
     };
 
     // Monitor innerHTML assignments
-    const originalInnerHTML = Object.getOwnPropertyDescriptor(Element.prototype, 'innerHTML');
+    const originalInnerHTML = Object.getOwnPropertyDescriptor(
+      Element.prototype,
+      "innerHTML",
+    );
     if (originalInnerHTML) {
-      Object.defineProperty(Element.prototype, 'innerHTML', {
-        set: function(value: string) {
-          const securitySystem = (window as Record<string, unknown>).__securitySystem;
-          if (securitySystem && securitySystem.detectSuspiciousContent(value)) {
-            securitySystem.logSecurityEvent({
-              type: 'xss_attempt',
-              severity: 'high',
-              message: 'Suspicious content detected in innerHTML',
-              timestamp: Date.now(),
-              source: 'innerHTML',
-              userAgent: navigator.userAgent,
-              metadata: { content: value.substring(0, 100) }
-            });
+      Object.defineProperty(Element.prototype, "innerHTML", {
+        set: function (value: string) {
+          const securitySystem = (window as any).__securitySystem;
+          if (
+            securitySystem &&
+            typeof securitySystem.detectSuspiciousContent === "function" &&
+            securitySystem.detectSuspiciousContent(value)
+          ) {
+            if (typeof securitySystem.logSecurityEvent === "function") {
+              securitySystem.logSecurityEvent({
+                type: "xss_attempt",
+                severity: "high",
+                message: "Suspicious content detected in innerHTML",
+                timestamp: Date.now(),
+                source: "innerHTML",
+                userAgent: navigator.userAgent,
+                metadata: { content: value.substring(0, 100) },
+              });
+            }
           }
           originalInnerHTML.set?.call(this, value);
         },
-        get: originalInnerHTML.get
+        get: originalInnerHTML.get,
       });
     }
 
     // Store reference for monitoring
-    (window as Record<string, unknown>).__securitySystem = this;
+    (window as any).__securitySystem = this;
   }
 
   /**
@@ -179,33 +198,37 @@ class EnhancedSecuritySystem {
 
     // Generate CSRF token
     const csrfToken = this.generateCSRFToken();
-    
+
     // Store token in meta tag
-    let csrfMeta = document.querySelector('meta[name="csrf-token"]') as HTMLMetaElement;
+    let csrfMeta = document.querySelector(
+      'meta[name="csrf-token"]',
+    ) as HTMLMetaElement;
     if (!csrfMeta) {
-      csrfMeta = document.createElement('meta');
-      csrfMeta.name = 'csrf-token';
+      csrfMeta = document.createElement("meta");
+      csrfMeta.name = "csrf-token";
       document.head.appendChild(csrfMeta);
     }
     csrfMeta.content = csrfToken;
 
     // Store token in session storage
-    sessionStorage.setItem('csrf-token', csrfToken);
+    sessionStorage.setItem("csrf-token", csrfToken);
 
     // Monitor form submissions
-    document.addEventListener('submit', (event) => {
+    document.addEventListener("submit", (event) => {
       const form = event.target as HTMLFormElement;
-      const token = form.querySelector('input[name="csrf-token"]') as HTMLInputElement;
-      
+      const token = form.querySelector(
+        'input[name="csrf-token"]',
+      ) as HTMLInputElement;
+
       if (!token || token.value !== csrfToken) {
         event.preventDefault();
         this.logSecurityEvent({
-          type: 'csrf_attempt',
-          severity: 'high',
-          message: 'CSRF token validation failed',
+          type: "csrf_attempt",
+          severity: "high",
+          message: "CSRF token validation failed",
           timestamp: Date.now(),
-          source: 'Form',
-          userAgent: navigator.userAgent
+          source: "Form",
+          userAgent: navigator.userAgent,
         });
       }
     });
@@ -222,21 +245,21 @@ class EnhancedSecuritySystem {
     window.fetch = async (input: RequestInfo | URL, init?: RequestInit) => {
       const clientId = this.getClientId();
       const now = Date.now();
-      
+
       // Check rate limit
       if (!this.checkRateLimit(clientId, now)) {
         this.logSecurityEvent({
-          type: 'rate_limit_exceeded',
-          severity: 'medium',
-          message: 'Rate limit exceeded',
+          type: "rate_limit_exceeded",
+          severity: "medium",
+          message: "Rate limit exceeded",
           timestamp: now,
-          source: 'Fetch',
-          userAgent: navigator.userAgent
+          source: "Fetch",
+          userAgent: navigator.userAgent,
         });
-        
-        throw new Error('Rate limit exceeded');
+
+        throw new Error("Rate limit exceeded");
       }
-      
+
       return originalFetch(input, init);
     };
   }
@@ -248,34 +271,34 @@ class EnhancedSecuritySystem {
     // Monitor console errors for security issues
     const originalConsoleError = console.error;
     console.error = (...args: unknown[]) => {
-      const message = args.join(' ');
-      
+      const message = args.join(" ");
+
       if (this.detectSuspiciousContent(message)) {
         this.logSecurityEvent({
-          type: 'suspicious_activity',
-          severity: 'medium',
-          message: 'Suspicious activity detected in console',
+          type: "suspicious_activity",
+          severity: "medium",
+          message: "Suspicious activity detected in console",
           timestamp: Date.now(),
-          source: 'Console',
+          source: "Console",
           userAgent: navigator.userAgent,
-          metadata: { message: message.substring(0, 200) }
+          metadata: { message: message.substring(0, 200) },
         });
       }
-      
+
       originalConsoleError.apply(console, args);
     };
 
     // Monitor uncaught errors
-    window.addEventListener('error', (event) => {
+    window.addEventListener("error", (event) => {
       if (this.detectSuspiciousContent(event.message)) {
         this.logSecurityEvent({
-          type: 'suspicious_activity',
-          severity: 'medium',
-          message: 'Suspicious error detected',
+          type: "suspicious_activity",
+          severity: "medium",
+          message: "Suspicious error detected",
           timestamp: Date.now(),
-          source: 'Error',
+          source: "Error",
           userAgent: navigator.userAgent,
-          metadata: { error: event.message }
+          metadata: { error: event.message },
         });
       }
     });
@@ -286,21 +309,21 @@ class EnhancedSecuritySystem {
    */
   private setupInputSanitization(): void {
     // Monitor input elements for suspicious content
-    document.addEventListener('input', (event) => {
+    document.addEventListener("input", (event) => {
       const input = event.target as HTMLInputElement;
       if (input && this.detectSuspiciousContent(input.value)) {
         this.logSecurityEvent({
-          type: 'injection_attempt',
-          severity: 'high',
-          message: 'Suspicious input detected',
+          type: "injection_attempt",
+          severity: "high",
+          message: "Suspicious input detected",
           timestamp: Date.now(),
-          source: 'Input',
+          source: "Input",
           userAgent: navigator.userAgent,
-          metadata: { 
+          metadata: {
             inputType: input.type,
             inputName: input.name,
-            value: input.value.substring(0, 100)
-          }
+            value: input.value.substring(0, 100),
+          },
         });
       }
     });
@@ -310,7 +333,9 @@ class EnhancedSecuritySystem {
    * Detect suspicious content
    */
   detectSuspiciousContent(content: string): boolean {
-    return this.config.suspiciousPatterns.some(pattern => pattern.test(content));
+    return this.config.suspiciousPatterns.some((pattern) =>
+      pattern.test(content),
+    );
   }
 
   /**
@@ -319,17 +344,19 @@ class EnhancedSecuritySystem {
   private generateCSRFToken(): string {
     const array = new Uint8Array(32);
     crypto.getRandomValues(array);
-    return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('');
+    return Array.from(array, (byte) => byte.toString(16).padStart(2, "0")).join(
+      "",
+    );
   }
 
   /**
    * Get client identifier
    */
   private getClientId(): string {
-    let clientId = sessionStorage.getItem('client-id');
+    let clientId = sessionStorage.getItem("client-id");
     if (!clientId) {
       clientId = this.generateClientId();
-      sessionStorage.setItem('client-id', clientId);
+      sessionStorage.setItem("client-id", clientId);
     }
     return clientId;
   }
@@ -348,18 +375,20 @@ class EnhancedSecuritySystem {
    */
   private checkRateLimit(clientId: string, now: number): boolean {
     const requests = this.rateLimitMap.get(clientId) || [];
-    const oneMinuteAgo = now - (60 * 1000);
-    
+    const oneMinuteAgo = now - 60 * 1000;
+
     // Remove old requests
-    const recentRequests = requests.filter(timestamp => timestamp > oneMinuteAgo);
-    
+    const recentRequests = requests.filter(
+      (timestamp) => timestamp > oneMinuteAgo,
+    );
+
     if (recentRequests.length >= this.config.maxRequestsPerMinute) {
       return false;
     }
-    
+
     recentRequests.push(now);
     this.rateLimitMap.set(clientId, recentRequests);
-    
+
     return true;
   }
 
@@ -368,15 +397,15 @@ class EnhancedSecuritySystem {
    */
   logSecurityEvent(event: SecurityEvent): void {
     this.events.unshift(event);
-    
+
     // Keep only recent events
     if (this.events.length > this.maxEvents) {
       this.events = this.events.slice(0, this.maxEvents);
     }
 
     // Log critical events to console
-    if (event.severity === 'critical' || event.severity === 'high') {
-      console.warn('🚨 Security Event:', event);
+    if (event.severity === "critical" || event.severity === "high") {
+      console.warn("🚨 Security Event:", event);
     }
 
     // Send to monitoring service (in real implementation)
@@ -388,8 +417,8 @@ class EnhancedSecuritySystem {
    */
   private sendToMonitoringService(event: SecurityEvent): void {
     // In a real implementation, this would send to a security monitoring service
-    if (event.severity === 'critical') {
-      console.error('Critical security event detected:', event);
+    if (event.severity === "critical") {
+      console.error("Critical security event detected:", event);
       // Could trigger alerts, notifications, etc.
     }
   }
@@ -399,26 +428,36 @@ class EnhancedSecuritySystem {
    */
   getSecurityMetrics(): SecurityMetrics {
     const now = Date.now();
-    const oneHourAgo = now - (60 * 60 * 1000);
-    
-    const recentEvents = this.events.filter(event => event.timestamp > oneHourAgo);
-    
-    const eventsByType = this.events.reduce((acc, event) => {
-      acc[event.type] = (acc[event.type] || 0) + 1;
-      return acc;
-    }, {} as Record<string, number>);
+    const oneHourAgo = now - 60 * 60 * 1000;
 
-    const eventsBySeverity = this.events.reduce((acc, event) => {
-      acc[event.severity] = (acc[event.severity] || 0) + 1;
-      return acc;
-    }, {} as Record<string, number>);
+    const recentEvents = this.events.filter(
+      (event) => event.timestamp > oneHourAgo,
+    );
 
-    const blockedRequests = this.events.filter(event => 
-      event.type === 'rate_limit_exceeded' || event.type === 'csrf_attempt'
+    const eventsByType = this.events.reduce(
+      (acc, event) => {
+        acc[event.type] = (acc[event.type] || 0) + 1;
+        return acc;
+      },
+      {} as Record<string, number>,
+    );
+
+    const eventsBySeverity = this.events.reduce(
+      (acc, event) => {
+        acc[event.severity] = (acc[event.severity] || 0) + 1;
+        return acc;
+      },
+      {} as Record<string, number>,
+    );
+
+    const blockedRequests = this.events.filter(
+      (event) =>
+        event.type === "rate_limit_exceeded" || event.type === "csrf_attempt",
     ).length;
 
-    const suspiciousActivities = this.events.filter(event => 
-      event.type === 'suspicious_activity' || event.type === 'xss_attempt'
+    const suspiciousActivities = this.events.filter(
+      (event) =>
+        event.type === "suspicious_activity" || event.type === "xss_attempt",
     ).length;
 
     return {
@@ -427,7 +466,7 @@ class EnhancedSecuritySystem {
       eventsBySeverity,
       recentEvents: recentEvents.slice(0, 20),
       blockedRequests,
-      suspiciousActivities
+      suspiciousActivities,
     };
   }
 
@@ -435,7 +474,7 @@ class EnhancedSecuritySystem {
    * Sanitize HTML content
    */
   sanitizeHTML(html: string): string {
-    const div = document.createElement('div');
+    const div = document.createElement("div");
     div.textContent = html;
     return div.innerHTML;
   }
@@ -464,7 +503,7 @@ class EnhancedSecuritySystem {
    */
   updateConfig(newConfig: Partial<SecurityConfig>): void {
     this.config = { ...this.config, ...newConfig };
-    
+
     // Reinitialize if needed
     if (this.isInitialized) {
       this.initialize();
@@ -483,6 +522,6 @@ class EnhancedSecuritySystem {
 export const enhancedSecuritySystem = new EnhancedSecuritySystem();
 
 // Auto-initialize
-if (typeof window !== 'undefined') {
+if (typeof window !== "undefined") {
   enhancedSecuritySystem.initialize();
 }

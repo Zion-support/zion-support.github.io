@@ -11,7 +11,7 @@ export interface SEOData {
   ogDescription?: string;
   ogImage?: string;
   ogType?: string;
-  twitterCard?: 'summary' | 'summary_large_image' | 'app' | 'player';
+  twitterCard?: "summary" | "summary_large_image" | "app" | "player";
   twitterTitle?: string;
   twitterDescription?: string;
   twitterImage?: string;
@@ -46,6 +46,8 @@ class SEOManager {
     this.updateStructuredData(data.structuredData);
     this.updateCanonical(data.canonical);
     this.updateAlternateLanguages(data.alternateLanguages);
+    this.updatePerformanceMeta(data);
+    this.updateSecurityMeta(data);
   }
 
   private updateTitle(title: string): void {
@@ -53,101 +55,129 @@ class SEOManager {
   }
 
   public updateMetaTags(data: SEOData): void {
-    this.setMetaTag('description', data.description);
-    
+    this.setMetaTag("description", data.description);
+
     if (data.keywords?.length) {
-      this.setMetaTag('keywords', data.keywords.join(', '));
+      this.setMetaTag("keywords", data.keywords.join(", "));
     }
 
     if (data.robots) {
-      this.setMetaTag('robots', data.robots);
+      this.setMetaTag("robots", data.robots);
     }
 
     if (data.author) {
-      this.setMetaTag('author', data.author);
+      this.setMetaTag("author", data.author);
     }
 
     if (data.publishedTime) {
-      this.setMetaTag('article:published_time', data.publishedTime);
+      this.setMetaTag("article:published_time", data.publishedTime);
     }
 
     if (data.modifiedTime) {
-      this.setMetaTag('article:modified_time', data.modifiedTime);
+      this.setMetaTag("article:modified_time", data.modifiedTime);
     }
 
     if (data.section) {
-      this.setMetaTag('article:section', data.section);
+      this.setMetaTag("article:section", data.section);
     }
 
     if (data.tags?.length) {
-      data.tags.forEach(tag => {
-        this.addMetaTag('article:tag', tag);
+      data.tags.forEach((tag) => {
+        this.addMetaTag("article:tag", tag);
       });
     }
 
     if (data.locale) {
-      this.setMetaTag('og:locale', data.locale);
+      this.setMetaTag("og:locale", data.locale);
     }
 
     // Add viewport meta tag if not present
     if (!document.querySelector('meta[name="viewport"]')) {
-      this.setMetaTag('viewport', 'width=device-width, initial-scale=1.0');
+      this.setMetaTag("viewport", "width=device-width, initial-scale=1.0");
     }
 
     // Add charset meta tag if not present
-    if (!document.querySelector('meta[charset]')) {
-      const charsetMeta = document.createElement('meta');
-      charsetMeta.setAttribute('charset', 'utf-8');
+    if (!document.querySelector("meta[charset]")) {
+      const charsetMeta = document.createElement("meta");
+      charsetMeta.setAttribute("charset", "utf-8");
       document.head.insertBefore(charsetMeta, document.head.firstChild);
     }
   }
 
   private updateOpenGraph(data: SEOData): void {
-    this.setMetaTag('og:title', data.ogTitle || data.title, 'property');
-    this.setMetaTag('og:description', data.ogDescription || data.description, 'property');
-    this.setMetaTag('og:type', data.ogType || 'website', 'property');
-    this.setMetaTag('og:url', data.canonical || window.location.href, 'property');
-    
+    this.setMetaTag("og:title", data.ogTitle || data.title, "property");
+    this.setMetaTag(
+      "og:description",
+      data.ogDescription || data.description,
+      "property",
+    );
+    this.setMetaTag("og:type", data.ogType || "website", "property");
+    this.setMetaTag(
+      "og:url",
+      data.canonical || window.location.href,
+      "property",
+    );
+
     if (data.ogImage) {
-      this.setMetaTag('og:image', data.ogImage, 'property');
-      this.setMetaTag('og:image:alt', data.ogTitle || data.title, 'property');
+      this.setMetaTag("og:image", data.ogImage, "property");
+      this.setMetaTag("og:image:alt", data.ogTitle || data.title, "property");
     }
 
     // Add site name if not present
     if (!document.querySelector('meta[property="og:site_name"]')) {
-      this.setMetaTag('og:site_name', 'Zion Tech Group', 'property');
+      this.setMetaTag("og:site_name", "Zion Tech Group", "property");
     }
   }
 
   private updateTwitterCard(data: SEOData): void {
-    this.setMetaTag('twitter:card', data.twitterCard || 'summary_large_image', 'name');
-    this.setMetaTag('twitter:title', data.twitterTitle || data.ogTitle || data.title, 'name');
-    this.setMetaTag('twitter:description', data.twitterDescription || data.ogDescription || data.description, 'name');
-    
+    this.setMetaTag(
+      "twitter:card",
+      data.twitterCard || "summary_large_image",
+      "name",
+    );
+    this.setMetaTag(
+      "twitter:title",
+      data.twitterTitle || data.ogTitle || data.title,
+      "name",
+    );
+    this.setMetaTag(
+      "twitter:description",
+      data.twitterDescription || data.ogDescription || data.description,
+      "name",
+    );
+
     if (data.twitterImage || data.ogImage) {
-      this.setMetaTag('twitter:image', data.twitterImage || data.ogImage!, 'name');
+      this.setMetaTag(
+        "twitter:image",
+        data.twitterImage || data.ogImage!,
+        "name",
+      );
     }
 
     // Add Twitter site handle if not present
     if (!document.querySelector('meta[name="twitter:site"]')) {
-      this.setMetaTag('twitter:site', '@ziontechgroup', 'name');
+      this.setMetaTag("twitter:site", "@ziontechgroup", "name");
     }
   }
 
-  private updateStructuredData(structuredData?: Record<string, unknown>[]): void {
+  private updateStructuredData(
+    structuredData?: Record<string, unknown>[],
+  ): void {
     // Remove existing structured data
-    const existingScripts = document.querySelectorAll('script[type="application/ld+json"]');
-    existingScripts.forEach(script => {
-      if (script.getAttribute('data-seo-manager') === 'true') {
+    const existingScripts = document.querySelectorAll(
+      'script[type="application/ld+json"]',
+    );
+    existingScripts.forEach((script) => {
+      if (script.getAttribute("data-seo-manager") === "true") {
         script.remove();
       }
     });
 
     if (structuredData?.length) {
-      structuredData.forEach(data => {
-        const script = document.createElement('script');
-        script.type = 'application/ld+json';
-        script.setAttribute('data-seo-manager', 'true');
+      structuredData.forEach((data) => {
+        const script = document.createElement("script");
+        script.type = "application/ld+json";
+        script.setAttribute("data-seo-manager", "true");
         script.textContent = JSON.stringify(data);
         document.head.appendChild(script);
       });
@@ -155,26 +185,32 @@ class SEOManager {
   }
 
   private updateCanonical(canonical?: string): void {
-    let canonicalLink = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
-    
+    let canonicalLink = document.querySelector(
+      'link[rel="canonical"]',
+    ) as HTMLLinkElement;
+
     if (!canonicalLink) {
-      canonicalLink = document.createElement('link');
-      canonicalLink.rel = 'canonical';
+      canonicalLink = document.createElement("link");
+      canonicalLink.rel = "canonical";
       document.head.appendChild(canonicalLink);
     }
 
     canonicalLink.href = canonical || window.location.href;
   }
 
-  private updateAlternateLanguages(alternateLanguages?: { hreflang: string; href: string }[]): void {
+  private updateAlternateLanguages(
+    alternateLanguages?: { hreflang: string; href: string }[],
+  ): void {
     // Remove existing alternate language links
-    const existingAlternates = document.querySelectorAll('link[rel="alternate"][hreflang]');
-    existingAlternates.forEach(link => link.remove());
+    const existingAlternates = document.querySelectorAll(
+      'link[rel="alternate"][hreflang]',
+    );
+    existingAlternates.forEach((link) => link.remove());
 
     if (alternateLanguages?.length) {
       alternateLanguages.forEach(({ hreflang, href }) => {
-        const link = document.createElement('link');
-        link.rel = 'alternate';
+        const link = document.createElement("link");
+        link.rel = "alternate";
         link.hreflang = hreflang;
         link.href = href;
         document.head.appendChild(link);
@@ -182,11 +218,17 @@ class SEOManager {
     }
   }
 
-  private setMetaTag(name: string, content: string, attribute: 'name' | 'property' = 'name'): void {
-    let meta = document.querySelector(`meta[${attribute}="${name}"]`) as HTMLMetaElement;
-    
+  private setMetaTag(
+    name: string,
+    content: string,
+    attribute: "name" | "property" = "name",
+  ): void {
+    let meta = document.querySelector(
+      `meta[${attribute}="${name}"]`,
+    ) as HTMLMetaElement;
+
     if (!meta) {
-      meta = document.createElement('meta');
+      meta = document.createElement("meta");
       meta.setAttribute(attribute, name);
       document.head.appendChild(meta);
     }
@@ -194,27 +236,29 @@ class SEOManager {
     meta.content = content;
   }
 
-  private addMetaTag(name: string, content: string, attribute: 'name' | 'property' = 'name'): void {
-    const meta = document.createElement('meta');
+  private addMetaTag(
+    name: string,
+    content: string,
+    attribute: "name" | "property" = "name",
+  ): void {
+    const meta = document.createElement("meta");
     meta.setAttribute(attribute, name);
     meta.content = content;
     document.head.appendChild(meta);
   }
 
-  public getCurrentData(): SEOData | null {
-    return this.currentData;
-  }
-
-  public generateBreadcrumbStructuredData(breadcrumbs: { name: string; url: string }[]): Record<string, unknown> {
+  public generateBreadcrumbStructuredData(
+    breadcrumbs: { name: string; url: string }[],
+  ): Record<string, unknown> {
     return {
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
-      "itemListElement": breadcrumbs.map((crumb, index) => ({
+      itemListElement: breadcrumbs.map((crumb, index) => ({
         "@type": "ListItem",
-        "position": index + 1,
-        "name": crumb.name,
-        "item": crumb.url
-      }))
+        position: index + 1,
+        name: crumb.name,
+        item: crumb.url,
+      })),
     };
   }
 
@@ -230,27 +274,29 @@ class SEOManager {
     return {
       "@context": "https://schema.org",
       "@type": "Article",
-      "headline": article.headline,
-      "description": article.description,
-      "author": {
+      headline: article.headline,
+      description: article.description,
+      author: {
         "@type": "Person",
-        "name": article.author
+        name: article.author,
       },
-      "publisher": {
+      publisher: {
         "@type": "Organization",
-        "name": "Zion Tech Group",
-        "logo": {
+        name: "Zion Tech Group",
+        logo: {
           "@type": "ImageObject",
-          "url": "/logo.png"
-        }
+          url: "/logo.png",
+        },
       },
-      "datePublished": article.publishedDate,
-      "dateModified": article.modifiedDate || article.publishedDate,
-      "image": article.image ? {
-        "@type": "ImageObject",
-        "url": article.image
-      } : undefined,
-      "url": article.url
+      datePublished: article.publishedDate,
+      dateModified: article.modifiedDate || article.publishedDate,
+      image: article.image
+        ? {
+            "@type": "ImageObject",
+            url: article.image,
+          }
+        : undefined,
+      url: article.url,
     };
   }
 
@@ -258,21 +304,21 @@ class SEOManager {
     return {
       "@context": "https://schema.org",
       "@type": "Organization",
-      "name": "Zion Tech Group",
-      "url": "https://ziontechgroup.com",
-      "logo": "https://ziontechgroup.com/logo.png",
-      "description": "Leading technology solutions and consulting services",
-      "contactPoint": {
+      name: "Zion Tech Group",
+      url: "https://ziontechgroup.com",
+      logo: "https://ziontechgroup.com/logo.png",
+      description: "Leading technology solutions and consulting services",
+      contactPoint: {
         "@type": "ContactPoint",
-        "telephone": "+1-555-0123",
-        "contactType": "customer service",
-        "email": "support@ziontechgroup.com"
+        telephone: "+1-555-0123",
+        contactType: "customer service",
+        email: "support@ziontechgroup.com",
       },
-      "sameAs": [
+      sameAs: [
         "https://twitter.com/ziontechgroup",
         "https://linkedin.com/company/ziontechgroup",
-        "https://github.com/zion-holdings"
-      ]
+        "https://github.com/zion-holdings",
+      ],
     };
   }
 
@@ -280,18 +326,59 @@ class SEOManager {
     return {
       "@context": "https://schema.org",
       "@type": "WebSite",
-      "name": "Zion Tech Group",
-      "url": "https://ziontechgroup.com",
-      "description": "Leading technology solutions and consulting services",
-      "potentialAction": {
+      name: "Zion Tech Group",
+      url: "https://ziontechgroup.com",
+      description: "Leading technology solutions and consulting services",
+      potentialAction: {
         "@type": "SearchAction",
-        "target": {
+        target: {
           "@type": "EntryPoint",
-          "urlTemplate": "https://ziontechgroup.com/search?q={search_term_string}"
+          urlTemplate:
+            "https://ziontechgroup.com/search?q={search_term_string}",
         },
-        "query-input": "required name=search_term_string"
-      }
+        "query-input": "required name=search_term_string",
+      },
     };
+  }
+
+  private updatePerformanceMeta(data: SEOData): void {
+    // Add performance-related meta tags
+    const performanceMeta = [
+      { name: "theme-color", content: "#0f172a" },
+      { name: "apple-mobile-web-app-capable", content: "yes" },
+      {
+        name: "apple-mobile-web-app-status-bar-style",
+        content: "black-translucent",
+      },
+      { name: "apple-mobile-web-app-title", content: data.title },
+      { name: "msapplication-TileColor", content: "#0f172a" },
+      { name: "msapplication-config", content: "/browserconfig.xml" },
+    ];
+
+    performanceMeta.forEach((meta) => {
+      this.setMetaTag(meta.name, meta.content);
+    });
+  }
+
+  private updateSecurityMeta(data: SEOData): void {
+    // Add security-related meta tags
+    const securityMeta = [
+      { name: "referrer", content: "strict-origin-when-cross-origin" },
+      { name: "x-ua-compatible", content: "IE=edge" },
+      {
+        name: "viewport",
+        content:
+          "width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes",
+      },
+    ];
+
+    securityMeta.forEach((meta) => {
+      this.setMetaTag(meta.name, meta.content);
+    });
+  }
+
+  public getCurrentData(): SEOData | null {
+    return this.currentData;
   }
 }
 
@@ -308,32 +395,34 @@ export const getCurrentSEOData = () => {
 };
 
 // SEO validation utilities
-export const validateSEO = (data: SEOData): { isValid: boolean; warnings: string[] } => {
+export const validateSEO = (
+  data: SEOData,
+): { isValid: boolean; warnings: string[] } => {
   const warnings: string[] = [];
 
   if (!data.title) {
-    warnings.push('Title is required');
+    warnings.push("Title is required");
   } else if (data.title.length > 60) {
-    warnings.push('Title should be under 60 characters');
+    warnings.push("Title should be under 60 characters");
   }
 
   if (!data.description) {
-    warnings.push('Description is required');
+    warnings.push("Description is required");
   } else if (data.description.length > 160) {
-    warnings.push('Description should be under 160 characters');
+    warnings.push("Description should be under 160 characters");
   }
 
   if (data.keywords && data.keywords.length > 10) {
-    warnings.push('Consider using fewer than 10 keywords');
+    warnings.push("Consider using fewer than 10 keywords");
   }
 
   if (!data.ogImage) {
-    warnings.push('Open Graph image is recommended');
+    warnings.push("Open Graph image is recommended");
   }
 
   return {
     isValid: warnings.length === 0,
-    warnings
+    warnings,
   };
 };
 
@@ -341,7 +430,10 @@ export const validateSEO = (data: SEOData): { isValid: boolean; warnings: string
 export class AdvancedSEOAnalytics {
   private static instance: AdvancedSEOAnalytics;
   private pageViews: Map<string, number> = new Map();
-  private userEngagement: Map<string, { timeOnPage: number; scrollDepth: number; clicks: number }> = new Map();
+  private userEngagement: Map<
+    string,
+    { timeOnPage: number; scrollDepth: number; clicks: number }
+  > = new Map();
 
   public static getInstance(): AdvancedSEOAnalytics {
     if (!AdvancedSEOAnalytics.instance) {
@@ -355,25 +447,28 @@ export class AdvancedSEOAnalytics {
     this.pageViews.set(url, currentViews + 1);
 
     // Track in analytics
-    if (typeof gtag !== 'undefined') {
-      gtag('config', 'GA_MEASUREMENT_ID', {
+    if (typeof gtag !== "undefined") {
+      gtag("config", "GA_MEASUREMENT_ID", {
         page_title: document.title,
-        page_location: url
+        page_location: url,
       });
     }
   }
 
-  public trackUserEngagement(url: string, metrics: { timeOnPage: number; scrollDepth: number; clicks: number }): void {
+  public trackUserEngagement(
+    url: string,
+    metrics: { timeOnPage: number; scrollDepth: number; clicks: number },
+  ): void {
     this.userEngagement.set(url, metrics);
   }
 
   public trackEvent(eventName: string, data?: Record<string, unknown>): void {
-    console.log('Tracking event:', eventName, data);
+    console.log("Tracking event:", eventName, data);
     // Implementation for event tracking
   }
 
   public initialize(): void {
-    console.log('SEO Analytics initialized');
+    console.log("SEO Analytics initialized");
     // Initialize analytics
   }
 
@@ -390,21 +485,27 @@ export class AdvancedSEOAnalytics {
     const engagementMetrics = Object.fromEntries(this.userEngagement);
 
     const recommendations: string[] = [];
-    
+
     // Analyze engagement and provide recommendations
     this.userEngagement.forEach((metrics, url) => {
-      if (metrics.timeOnPage < 30000) { // Less than 30 seconds
-        recommendations.push(`Consider improving content quality for ${url} - low time on page`);
+      if (metrics.timeOnPage < 30000) {
+        // Less than 30 seconds
+        recommendations.push(
+          `Consider improving content quality for ${url} - low time on page`,
+        );
       }
-      if (metrics.scrollDepth < 0.5) { // Less than 50% scroll depth
-        recommendations.push(`Improve content structure for ${url} - low scroll depth`);
+      if (metrics.scrollDepth < 0.5) {
+        // Less than 50% scroll depth
+        recommendations.push(
+          `Improve content structure for ${url} - low scroll depth`,
+        );
       }
     });
 
     return {
       topPages,
       engagementMetrics,
-      recommendations
+      recommendations,
     };
   }
 }
@@ -412,7 +513,12 @@ export class AdvancedSEOAnalytics {
 // Sitemap generation utilities
 export class SitemapGenerator {
   private static instance: SitemapGenerator;
-  private pages: Array<{ url: string; lastModified: string; priority: number; changefreq: string }> = [];
+  private pages: Array<{
+    url: string;
+    lastModified: string;
+    priority: number;
+    changefreq: string;
+  }> = [];
 
   public static getInstance(): SitemapGenerator {
     if (!SitemapGenerator.instance) {
@@ -421,42 +527,50 @@ export class SitemapGenerator {
     return SitemapGenerator.instance;
   }
 
-  public addPage(url: string, lastModified: string = new Date().toISOString(), priority: number = 0.5, changefreq: string = 'weekly'): void {
+  public addPage(
+    url: string,
+    lastModified: string = new Date().toISOString(),
+    priority: number = 0.5,
+    changefreq: string = "weekly",
+  ): void {
     this.pages.push({ url, lastModified, priority, changefreq });
   }
 
   public generateSitemap(): string {
     const baseUrl = window.location.origin;
-    
+
     let sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n';
     sitemap += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
-    
-    this.pages.forEach(page => {
-      sitemap += '  <url>\n';
+
+    this.pages.forEach((page) => {
+      sitemap += "  <url>\n";
       sitemap += `    <loc>${baseUrl}${page.url}</loc>\n`;
       sitemap += `    <lastmod>${page.lastModified}</lastmod>\n`;
       sitemap += `    <changefreq>${page.changefreq}</changefreq>\n`;
       sitemap += `    <priority>${page.priority}</priority>\n`;
-      sitemap += '  </url>\n';
+      sitemap += "  </url>\n";
     });
-    
-    sitemap += '</urlset>';
+
+    sitemap += "</urlset>";
     return sitemap;
   }
 }
 
 // Robots.txt generation
-export const generateRobotsTxt = (disallowPaths: string[] = [], sitemapUrl?: string): string => {
-  let robots = 'User-agent: *\n';
-  
-  disallowPaths.forEach(path => {
+export const generateRobotsTxt = (
+  disallowPaths: string[] = [],
+  sitemapUrl?: string,
+): string => {
+  let robots = "User-agent: *\n";
+
+  disallowPaths.forEach((path) => {
     robots += `Disallow: ${path}\n`;
   });
-  
+
   if (sitemapUrl) {
     robots += `Sitemap: ${sitemapUrl}\n`;
   }
-  
+
   return robots;
 };
 
@@ -479,7 +593,7 @@ export class RedirectManager {
   public handleRedirect(): void {
     const currentPath = window.location.pathname;
     const redirectTo = this.redirects.get(currentPath);
-    
+
     if (redirectTo) {
       // Use 301 redirect (permanent)
       window.location.replace(redirectTo);
@@ -487,7 +601,7 @@ export class RedirectManager {
   }
 
   public generateRedirectRules(): string {
-    let rules = '';
+    let rules = "";
     this.redirects.forEach((to, from) => {
       rules += `Redirect 301 ${from} ${to}\n`;
     });
@@ -498,7 +612,7 @@ export class RedirectManager {
 // Performance SEO utilities
 export class PerformanceSEO {
   private static instance: PerformanceSEO;
-  
+
   public static getInstance(): PerformanceSEO {
     if (!PerformanceSEO.instance) {
       PerformanceSEO.instance = new PerformanceSEO();
@@ -507,49 +621,49 @@ export class PerformanceSEO {
   }
 
   public optimizeImages(): void {
-    const images = document.querySelectorAll('img');
-    images.forEach(img => {
+    const images = document.querySelectorAll("img");
+    images.forEach((img) => {
       // Add loading="lazy" for images below the fold
-      if (!img.hasAttribute('loading')) {
-        img.setAttribute('loading', 'lazy');
+      if (!img.hasAttribute("loading")) {
+        img.setAttribute("loading", "lazy");
       }
-      
+
       // Add alt text if missing
-      if (!img.hasAttribute('alt')) {
-        img.setAttribute('alt', '');
+      if (!img.hasAttribute("alt")) {
+        img.setAttribute("alt", "");
       }
     });
   }
 
   public preloadCriticalResources(): void {
     const criticalResources = [
-      '/fonts/main-font.woff2',
-      '/css/critical.css',
-      '/js/critical.js'
+      "/fonts/main-font.woff2",
+      "/css/critical.css",
+      "/js/critical.js",
     ];
 
-    criticalResources.forEach(resource => {
-      const link = document.createElement('link');
-      link.rel = 'preload';
+    criticalResources.forEach((resource) => {
+      const link = document.createElement("link");
+      link.rel = "preload";
       link.href = resource;
-      
-      if (resource.endsWith('.woff2')) {
-        link.as = 'font';
-        link.type = 'font/woff2';
-        link.crossOrigin = 'anonymous';
-      } else if (resource.endsWith('.css')) {
-        link.as = 'style';
-      } else if (resource.endsWith('.js')) {
-        link.as = 'script';
+
+      if (resource.endsWith(".woff2")) {
+        link.as = "font";
+        link.type = "font/woff2";
+        link.crossOrigin = "anonymous";
+      } else if (resource.endsWith(".css")) {
+        link.as = "style";
+      } else if (resource.endsWith(".js")) {
+        link.as = "script";
       }
-      
+
       document.head.appendChild(link);
     });
   }
 
   public optimizeFonts(): void {
     // Add font-display: swap for better performance
-    const style = document.createElement('style');
+    const style = document.createElement("style");
     style.textContent = `
       @font-face {
         font-family: 'CustomFont';
@@ -563,18 +677,18 @@ export class PerformanceSEO {
   public optimizeCSS(): void {
     // Optimize CSS delivery and performance
     const styleSheets = document.querySelectorAll('link[rel="stylesheet"]');
-    styleSheets.forEach(link => {
+    styleSheets.forEach((link) => {
       // Add media="print" for non-critical CSS and load on demand
-      if (!link.hasAttribute('media')) {
-        link.setAttribute('media', 'all');
+      if (!link.hasAttribute("media")) {
+        link.setAttribute("media", "all");
       }
-      
+
       // Add preload for critical CSS
-      if (link.getAttribute('href')?.includes('critical')) {
-        const preloadLink = document.createElement('link');
-        preloadLink.rel = 'preload';
-        preloadLink.as = 'style';
-        preloadLink.href = link.getAttribute('href')!;
+      if (link.getAttribute("href")?.includes("critical")) {
+        const preloadLink = document.createElement("link");
+        preloadLink.rel = "preload";
+        preloadLink.as = "style";
+        preloadLink.href = link.getAttribute("href")!;
         document.head.insertBefore(preloadLink, link);
       }
     });
@@ -589,11 +703,108 @@ export class PerformanceSEO {
       .items-center { align-items: center; }
       .justify-center { justify-content: center; }
     `;
-    
-    const criticalStyle = document.createElement('style');
+
+    const criticalStyle = document.createElement("style");
     criticalStyle.textContent = criticalCSS;
-    criticalStyle.setAttribute('data-critical', 'true');
+    criticalStyle.setAttribute("data-critical", "true");
     document.head.insertBefore(criticalStyle, document.head.firstChild);
+  }
+
+  private updatePerformanceMeta(data: SEOData): void {
+    // Add performance-related meta tags
+    const performanceMeta = [
+      { name: "theme-color", content: "#0f172a" },
+      { name: "color-scheme", content: "dark light" },
+      { name: "format-detection", content: "telephone=no" },
+      { name: "mobile-web-app-capable", content: "yes" },
+      { name: "apple-mobile-web-app-capable", content: "yes" },
+      {
+        name: "apple-mobile-web-app-status-bar-style",
+        content: "black-translucent",
+      },
+      { name: "apple-mobile-web-app-title", content: data.title },
+      { name: "msapplication-TileColor", content: "#0f172a" },
+      { name: "msapplication-config", content: "/browserconfig.xml" },
+    ];
+
+    performanceMeta.forEach((meta) => {
+      this.setMetaTag(meta.name, meta.content);
+    });
+  }
+
+  private updateSecurityMeta(data: SEOData): void {
+    // Add security-related meta tags
+    const securityMeta = [
+      { name: "referrer", content: "strict-origin-when-cross-origin" },
+      { name: "x-ua-compatible", content: "IE=edge" },
+      {
+        name: "viewport",
+        content:
+          "width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes",
+      },
+    ];
+
+    securityMeta.forEach((meta) => {
+      this.setMetaTag(meta.name, meta.content);
+    });
+  }
+
+  public generateSitemap(): string {
+    // Generate XML sitemap
+    const baseUrl = "https://zion.app";
+    const pages = [
+      { url: "/", priority: "1.0", changefreq: "daily" },
+      { url: "/about", priority: "0.8", changefreq: "monthly" },
+      { url: "/services", priority: "0.9", changefreq: "weekly" },
+      { url: "/contact", priority: "0.7", changefreq: "monthly" },
+      { url: "/blog", priority: "0.8", changefreq: "weekly" },
+    ];
+
+    const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${pages
+  .map(
+    (page) => `  <url>
+    <loc>${baseUrl}${page.url}</loc>
+    <lastmod>${new Date().toISOString()}</lastmod>
+    <changefreq>${page.changefreq}</changefreq>
+    <priority>${page.priority}</priority>
+  </url>`,
+  )
+  .join("\n")}
+</urlset>`;
+
+    return sitemap;
+  }
+
+  public generateRobotsTxt(): string {
+    // Generate robots.txt
+    return `User-agent: *
+Allow: /
+
+Sitemap: https://zion.app/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /static/`;
+  }
+
+  private setMetaTag(name: string, content: string): void {
+    let meta = document.querySelector(
+      `meta[name="${name}"]`,
+    ) as HTMLMetaElement;
+    if (!meta) {
+      meta = document.createElement("meta");
+      meta.name = name;
+      document.head.appendChild(meta);
+    }
+    meta.content = content;
   }
 }
 

@@ -1,6 +1,6 @@
 /**
  * Advanced SEO Optimizer
- * Comprehensive SEO optimization utilities for Zion Tech Group website
+ * Comprehensive SEO optimization utilities for the Zion Tech Group website
  */
 
 interface SEOConfig {
@@ -19,6 +19,12 @@ interface SEOConfig {
   enableCanonical: boolean;
   enableOpenGraph: boolean;
   enableTwitterCards: boolean;
+  enableMetaOptimization: boolean;
+  enableSitemapGeneration: boolean;
+  enableCanonicalUrls: boolean;
+  enableSchemaMarkup: boolean;
+  enablePerformanceSEO: boolean;
+  enableAccessibilitySEO: boolean;
 }
 
 interface PageSEOData {
@@ -52,10 +58,10 @@ interface PageSEOData {
 interface SEOAuditResult {
   score: number;
   issues: Array<{
-    type: 'error' | 'warning' | 'info';
+    type: "error" | "warning" | "info";
     message: string;
     suggestion: string;
-    priority: 'high' | 'medium' | 'low';
+    priority: "high" | "medium" | "low";
   }>;
   recommendations: string[];
   metrics: {
@@ -70,15 +76,16 @@ interface SEOAuditResult {
 }
 
 const defaultConfig: SEOConfig = {
-  siteName: 'Zion Tech Group',
-  siteUrl: 'https://ziontechgroup.com',
-  defaultTitle: 'Zion Tech Group - Advanced AI and IT Solutions',
-  defaultDescription: 'Leading provider of AI-powered IT solutions, cloud services, and digital transformation consulting for enterprises worldwide.',
-  defaultImage: 'https://ziontechgroup.com/og-image.jpg',
-  twitterHandle: '@ZionTechGroup',
-  facebookAppId: '',
-  googleAnalyticsId: '',
-  googleTagManagerId: '',
+  siteName: "Zion Tech Group",
+  siteUrl: "https://ziontechgroup.com",
+  defaultTitle: "Zion Tech Group - Advanced AI and IT Solutions",
+  defaultDescription:
+    "Leading provider of AI-powered IT solutions, cloud services, and digital transformation consulting for enterprises worldwide.",
+  defaultImage: "https://ziontechgroup.com/og-image.jpg",
+  twitterHandle: "@ZionTechGroup",
+  facebookAppId: "",
+  googleAnalyticsId: "",
+  googleTagManagerId: "",
   enableStructuredData: true,
   enableSitemap: true,
   enableRobotsTxt: true,
@@ -114,7 +121,12 @@ export class AdvancedSEOOptimizer {
       noindex: pageData.noindex || false,
       nofollow: pageData.nofollow || false,
       structuredData: this.generateStructuredData(pageData),
-      openGraph: this.generateOpenGraphData(title, description, image, url) as any,
+      openGraph: this.generateOpenGraphData(
+        title,
+        description,
+        image,
+        url,
+      ) as any,
       twitter: this.generateTwitterCardData(title, description, image) as any,
     };
 
@@ -128,9 +140,9 @@ export class AdvancedSEOOptimizer {
   private optimizeTitle(title: string): string {
     // Ensure title is within optimal length (50-60 characters)
     if (title.length > 60) {
-      title = title.substring(0, 57) + '...';
+      title = title.substring(0, 57) + "...";
     }
-    
+
     // Add site name if not present
     if (!title.includes(this.config.siteName)) {
       title = `${title} | ${this.config.siteName}`;
@@ -145,10 +157,10 @@ export class AdvancedSEOOptimizer {
   private optimizeDescription(description: string): string {
     // Ensure description is within optimal length (150-160 characters)
     if (description.length > 160) {
-      description = description.substring(0, 157) + '...';
+      description = description.substring(0, 157) + "...";
     } else if (description.length < 120) {
       // Add call-to-action if description is too short
-      description += ' Contact us for a free consultation.';
+      description += " Contact us for a free consultation.";
     }
 
     return description;
@@ -159,16 +171,34 @@ export class AdvancedSEOOptimizer {
    */
   private extractKeywords(title: string, description: string): string[] {
     const text = `${title} ${description}`.toLowerCase();
-    const commonWords = ['the', 'and', 'or', 'but', 'in', 'on', 'at', 'to', 'for', 'of', 'with', 'by', 'a', 'an'];
-    
+    const commonWords = [
+      "the",
+      "and",
+      "or",
+      "but",
+      "in",
+      "on",
+      "at",
+      "to",
+      "for",
+      "of",
+      "with",
+      "by",
+      "a",
+      "an",
+    ];
+
     const words = text
-      .replace(/[^\w\s]/g, '')
+      .replace(/[^\w\s]/g, "")
       .split(/\s+/)
-      .filter(word => word.length > 3 && !commonWords.includes(word))
-      .reduce((acc, word) => {
-        acc[word] = (acc[word] || 0) + 1;
-        return acc;
-      }, {} as Record<string, number>);
+      .filter((word) => word.length > 3 && !commonWords.includes(word))
+      .reduce(
+        (acc, word) => {
+          acc[word] = (acc[word] || 0) + 1;
+          return acc;
+        },
+        {} as Record<string, number>,
+      );
 
     return Object.entries(words)
       .sort(([, a], [, b]) => b - a)
@@ -180,37 +210,39 @@ export class AdvancedSEOOptimizer {
    * Generate canonical URL
    */
   private generateCanonicalUrl(url: string): string {
-    if (!this.config.enableCanonical) return '';
-    
+    if (!this.config.enableCanonical) return "";
+
     // Remove query parameters and fragments
-    const canonical = url.split('?')[0].split('#')[0];
+    const canonical = url.split("?")[0].split("#")[0];
     return canonical;
   }
 
   /**
    * Generate structured data for the page
    */
-  private generateStructuredData(pageData: Partial<PageSEOData>): Record<string, unknown> {
+  private generateStructuredData(
+    pageData: Partial<PageSEOData>,
+  ): Record<string, unknown> {
     if (!this.config.enableStructuredData) return {};
 
     const baseStructuredData = {
-      '@context': 'https://schema.org',
-      '@type': 'Organization',
+      "@context": "https://schema.org",
+      "@type": "Organization",
       name: this.config.siteName,
       url: this.config.siteUrl,
       logo: `${this.config.siteUrl}/logo.png`,
       description: this.config.defaultDescription,
       contactPoint: {
-        '@type': 'ContactPoint',
-        telephone: '+1-555-0123',
-        contactType: 'customer service',
-        availableLanguage: 'English'
+        "@type": "ContactPoint",
+        telephone: "+1-555-0123",
+        contactType: "customer service",
+        availableLanguage: "English",
       },
       sameAs: [
-        'https://twitter.com/ZionTechGroup',
-        'https://linkedin.com/company/zion-tech-group',
-        'https://github.com/Zion-Holdings'
-      ]
+        "https://twitter.com/ZionTechGroup",
+        "https://linkedin.com/company/zion-tech-group",
+        "https://github.com/Zion-Holdings",
+      ],
     };
 
     // Add page-specific structured data
@@ -224,7 +256,12 @@ export class AdvancedSEOOptimizer {
   /**
    * Generate Open Graph data
    */
-  private generateOpenGraphData(title: string, description: string, image: string, url: string) {
+  private generateOpenGraphData(
+    title: string,
+    description: string,
+    image: string,
+    url: string,
+  ) {
     if (!this.config.enableOpenGraph) return {};
 
     return {
@@ -232,7 +269,7 @@ export class AdvancedSEOOptimizer {
       description: this.optimizeDescription(description),
       image,
       url,
-      type: 'website',
+      type: "website",
       siteName: this.config.siteName,
     };
   }
@@ -240,11 +277,15 @@ export class AdvancedSEOOptimizer {
   /**
    * Generate Twitter Card data
    */
-  private generateTwitterCardData(title: string, description: string, image: string) {
+  private generateTwitterCardData(
+    title: string,
+    description: string,
+    image: string,
+  ) {
     if (!this.config.enableTwitterCards) return {};
 
     return {
-      card: 'summary_large_image',
+      card: "summary_large_image",
       title: this.optimizeTitle(title),
       description: this.optimizeDescription(description),
       image,
@@ -254,10 +295,139 @@ export class AdvancedSEOOptimizer {
   }
 
   /**
+   * Initialize the SEO optimizer
+   */
+  public async initialize(): Promise<void> {
+    if (this.isInitialized) return;
+
+    try {
+      if (this.config.enableMetaOptimization) {
+        this.optimizeMetaTags();
+      }
+
+      if (this.config.enableStructuredData) {
+        this.addStructuredData();
+      }
+
+      if (this.config.enableSitemapGeneration) {
+        await this.generateSitemap();
+      }
+
+      if (this.config.enableRobotsTxt) {
+        await this.generateRobotsTxt();
+      }
+
+      if (this.config.enablePerformanceSEO) {
+        this.optimizeForPerformance();
+      }
+
+      if (this.config.enableAccessibilitySEO) {
+        this.optimizeForAccessibility();
+      }
+
+      this.isInitialized = true;
+      console.log("🔍 Advanced SEO Optimizer initialized");
+    } catch (error) {
+      console.error("Error initializing SEO optimizer:", error);
+    }
+  }
+
+  /**
+   * Optimize meta tags for better SEO
+   */
+  private optimizeMetaTags(): void {
+    if (typeof document === "undefined") return;
+
+    // Ensure viewport meta tag
+    this.ensureMetaTag("viewport", "width=device-width, initial-scale=1.0");
+
+    // Add charset if not present
+    if (!document.querySelector("meta[charset]")) {
+      const charset = document.createElement("meta");
+      charset.setAttribute("charset", "utf-8");
+      document.head.insertBefore(charset, document.head.firstChild);
+    }
+
+    // Add theme color
+    this.ensureMetaTag("theme-color", "#667eea");
+
+    // Add mobile web app capabilities
+    this.ensureMetaTag("apple-mobile-web-app-capable", "yes");
+    this.ensureMetaTag("apple-mobile-web-app-status-bar-style", "default");
+    this.ensureMetaTag("apple-mobile-web-app-title", "Zion Tech Group");
+  }
+
+  /**
+   * Ensure a meta tag exists with the given name and content
+   */
+  private ensureMetaTag(name: string, content: string): void {
+    if (typeof document === "undefined") return;
+
+    let meta = document.querySelector(
+      `meta[name="${name}"]`,
+    ) as HTMLMetaElement;
+    if (!meta) {
+      meta = document.createElement("meta");
+      meta.name = name;
+      document.head.appendChild(meta);
+    }
+    meta.content = content;
+  }
+
+  /**
+   * Add structured data for better search engine understanding
+   */
+  private addStructuredData(): void {
+    if (typeof document === "undefined") return;
+
+    const organizationSchema = {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      name: "Zion Tech Group",
+      description: "Leading AI and Technology Solutions Provider",
+      url: "https://zion.app",
+      logo: "https://zion.app/logo.png",
+      contactPoint: {
+        "@type": "ContactPoint",
+        telephone: "+1-555-0123",
+        contactType: "customer service",
+        areaServed: "US",
+        availableLanguage: "English",
+      },
+      sameAs: [
+        "https://linkedin.com/company/zion-tech-group",
+        "https://twitter.com/ziontechgroup",
+      ],
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "123 Tech Street",
+        addressLocality: "San Francisco",
+        addressRegion: "CA",
+        postalCode: "94105",
+        addressCountry: "US",
+      },
+    };
+
+    this.addStructuredDataScript(organizationSchema);
+  }
+
+  /**
+   * Add structured data script to the page
+   */
+  private addStructuredDataScript(data: any): void {
+    if (typeof document === "undefined") return;
+
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.textContent = JSON.stringify(data);
+    document.head.appendChild(script);
+  }
+
+  /**
    * Generate robots.txt content
    */
   generateRobotsTxt(): string {
-    if (!this.config.enableRobotsTxt) return '';
+    if (!this.config.enableRobotsTxt) return "";
 
     return `User-agent: *
 Allow: /
@@ -285,27 +455,30 @@ Allow: /blog/
    * Generate sitemap XML
    */
   generateSitemap(): string {
-    if (!this.config.enableSitemap) return '';
+    if (!this.config.enableSitemap) return "";
 
     const pages = Array.from(this.pages.values());
     const staticPages = [
-      { url: '/', priority: '1.0', changefreq: 'daily' },
-      { url: '/about', priority: '0.8', changefreq: 'monthly' },
-      { url: '/services', priority: '0.9', changefreq: 'weekly' },
-      { url: '/contact', priority: '0.7', changefreq: 'monthly' },
-      { url: '/blog', priority: '0.8', changefreq: 'weekly' },
+      { url: "/", priority: "1.0", changefreq: "daily" },
+      { url: "/about", priority: "0.8", changefreq: "monthly" },
+      { url: "/services", priority: "0.9", changefreq: "weekly" },
+      { url: "/contact", priority: "0.7", changefreq: "monthly" },
+      { url: "/blog", priority: "0.8", changefreq: "weekly" },
     ];
 
-    const allPages = [...staticPages, ...pages.map(page => ({
-      url: page.url.replace(this.config.siteUrl, ''),
-      priority: '0.6',
-      changefreq: 'weekly'
-    }))];
+    const allPages = [
+      ...staticPages,
+      ...pages.map((page) => ({
+        url: page.url.replace(this.config.siteUrl, ""),
+        priority: "0.6",
+        changefreq: "weekly",
+      })),
+    ];
 
     let sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">`;
 
-    allPages.forEach(page => {
+    allPages.forEach((page) => {
       sitemap += `
   <url>
     <loc>${this.config.siteUrl}${page.url}</loc>
@@ -330,25 +503,25 @@ Allow: /blog/
       throw new Error(`No SEO data found for page: ${url}`);
     }
 
-    const issues: SEOAuditResult['issues'] = [];
+    const issues: SEOAuditResult["issues"] = [];
     const recommendations: string[] = [];
     let score = 100;
 
     // Check title length
     if (pageData.title.length < 30) {
       issues.push({
-        type: 'warning',
-        message: 'Title is too short (less than 30 characters)',
-        suggestion: 'Add more descriptive words to your title',
-        priority: 'medium'
+        type: "warning",
+        message: "Title is too short (less than 30 characters)",
+        suggestion: "Add more descriptive words to your title",
+        priority: "medium",
       });
       score -= 10;
     } else if (pageData.title.length > 60) {
       issues.push({
-        type: 'warning',
-        message: 'Title is too long (more than 60 characters)',
-        suggestion: 'Shorten your title to improve search engine display',
-        priority: 'medium'
+        type: "warning",
+        message: "Title is too long (more than 60 characters)",
+        suggestion: "Shorten your title to improve search engine display",
+        priority: "medium",
       });
       score -= 5;
     }
@@ -356,18 +529,18 @@ Allow: /blog/
     // Check description length
     if (pageData.description.length < 120) {
       issues.push({
-        type: 'warning',
-        message: 'Meta description is too short (less than 120 characters)',
-        suggestion: 'Add more compelling content to your description',
-        priority: 'medium'
+        type: "warning",
+        message: "Meta description is too short (less than 120 characters)",
+        suggestion: "Add more compelling content to your description",
+        priority: "medium",
       });
       score -= 10;
     } else if (pageData.description.length > 160) {
       issues.push({
-        type: 'warning',
-        message: 'Meta description is too long (more than 160 characters)',
-        suggestion: 'Shorten your description to avoid truncation',
-        priority: 'medium'
+        type: "warning",
+        message: "Meta description is too long (more than 160 characters)",
+        suggestion: "Shorten your description to avoid truncation",
+        priority: "medium",
       });
       score -= 5;
     }
@@ -375,31 +548,40 @@ Allow: /blog/
     // Check for keywords
     if (pageData.keywords.length === 0) {
       issues.push({
-        type: 'error',
-        message: 'No keywords defined for this page',
-        suggestion: 'Add relevant keywords to improve search visibility',
-        priority: 'high'
+        type: "error",
+        message: "No keywords defined for this page",
+        suggestion: "Add relevant keywords to improve search visibility",
+        priority: "high",
       });
       score -= 20;
     }
 
     // Check for image alt text (would need DOM analysis in real implementation)
     issues.push({
-      type: 'info',
-      message: 'Verify all images have descriptive alt text',
-      suggestion: 'Add alt attributes to all images for better accessibility',
-      priority: 'low'
+      type: "info",
+      message: "Verify all images have descriptive alt text",
+      suggestion: "Add alt attributes to all images for better accessibility",
+      priority: "low",
     });
 
     // Generate recommendations
     if (score < 80) {
-      recommendations.push('Focus on improving title and description optimization');
+      recommendations.push(
+        "Focus on improving title and description optimization",
+      );
     }
     if (pageData.keywords.length < 5) {
-      recommendations.push('Add more relevant keywords to improve search visibility');
+      recommendations.push(
+        "Add more relevant keywords to improve search visibility",
+      );
     }
-    if (!pageData.structuredData || Object.keys(pageData.structuredData).length === 0) {
-      recommendations.push('Add structured data to help search engines understand your content');
+    if (
+      !pageData.structuredData ||
+      Object.keys(pageData.structuredData).length === 0
+    ) {
+      recommendations.push(
+        "Add structured data to help search engines understand your content",
+      );
     }
 
     const metrics = {
@@ -416,7 +598,7 @@ Allow: /blog/
       score: Math.max(0, score),
       issues,
       recommendations,
-      metrics
+      metrics,
     };
   }
 
@@ -424,13 +606,13 @@ Allow: /blog/
    * Generate meta tags for HTML head
    */
   generateMetaTags(pageData: PageSEOData): string {
-    let metaTags = '';
+    let metaTags = "";
 
     // Basic meta tags
     metaTags += `<title>${pageData.title}</title>\n`;
     metaTags += `<meta name="description" content="${pageData.description}">\n`;
-    metaTags += `<meta name="keywords" content="${pageData.keywords.join(', ')}">\n`;
-    
+    metaTags += `<meta name="keywords" content="${pageData.keywords.join(", ")}">\n`;
+
     if (pageData.canonical) {
       metaTags += `<link rel="canonical" href="${pageData.canonical}">\n`;
     }
@@ -438,9 +620,9 @@ Allow: /blog/
     // Robots meta
     if (pageData.noindex || pageData.nofollow) {
       const robots = [];
-      if (pageData.noindex) robots.push('noindex');
-      if (pageData.nofollow) robots.push('nofollow');
-      metaTags += `<meta name="robots" content="${robots.join(', ')}">\n`;
+      if (pageData.noindex) robots.push("noindex");
+      if (pageData.nofollow) robots.push("nofollow");
+      metaTags += `<meta name="robots" content="${robots.join(", ")}">\n`;
     }
 
     // Open Graph tags
@@ -464,7 +646,10 @@ Allow: /blog/
     }
 
     // Structured data
-    if (this.config.enableStructuredData && Object.keys(pageData.structuredData).length > 0) {
+    if (
+      this.config.enableStructuredData &&
+      Object.keys(pageData.structuredData).length > 0
+    ) {
       metaTags += `<script type="application/ld+json">${JSON.stringify(pageData.structuredData)}</script>\n`;
     }
 
@@ -493,18 +678,8 @@ Allow: /blog/
   }
 }
 
-// Export default instance
-export const seoOptimizer = new AdvancedSEOOptimizer();
+// Export singleton instance
+export const advancedSEOOptimizer = new AdvancedSEOOptimizer();
 
-// Export utility functions
-export const generatePageSEO = (pageData: Partial<PageSEOData>) => {
-  return seoOptimizer.generatePageSEO(pageData);
-};
-
-export const auditPageSEO = (url: string) => {
-  return seoOptimizer.auditPageSEO(url);
-};
-
-export const generateMetaTags = (pageData: PageSEOData) => {
-  return seoOptimizer.generateMetaTags(pageData);
-};
+// Export class for custom instances
+export type { SEOConfig, PageSEOData };

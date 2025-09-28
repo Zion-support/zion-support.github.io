@@ -1,6 +1,9 @@
 // Error handling utilities
 export class AppError extends Error {
-  constructor(message: string, public code: string) {
+  constructor(
+    message: string,
+    public code: string,
+  ) {
     super(message);
     this.name = "AppError";
   }
@@ -40,46 +43,57 @@ export const storage = {
       localStorage.removeItem(key);
       return true;
     } catch (error) {
-      console.error(`Error removing from localStorage for key "${key}":`, error);
+      console.error(
+        `Error removing from localStorage for key "${key}":`,
+        error,
+      );
       return false;
     }
-  }
+  },
 };
 
 // Currency formatting
-export const formatCurrency = (amount: number, currency = 'USD'): string => {
-  const formatter = new Intl.NumberFormat('en-US', {
-    style: 'currency',
+export const formatCurrency = (amount: number, currency = "USD"): string => {
+  const formatter = new Intl.NumberFormat("en-US", {
+    style: "currency",
     currency: currency,
   });
   return formatter.format(amount);
 };
 
 // Date formatting
-export const formatDate = (date: Date, format: 'short' | 'long' | 'medium' = 'medium'): string => {
+export const formatDate = (
+  date: Date,
+  format: "short" | "long" | "medium" = "medium",
+): string => {
   let options: Intl.DateTimeFormatOptions;
-  
+
   switch (format) {
-    case 'short':
-      options = { month: 'numeric', day: 'numeric', year: 'numeric' };
+    case "short":
+      options = { month: "numeric", day: "numeric", year: "numeric" };
       break;
-    case 'medium':
-      options = { year: 'numeric', month: 'long', day: 'numeric' };
+    case "medium":
+      options = { year: "numeric", month: "long", day: "numeric" };
       break;
-    case 'long':
-      options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    case "long":
+      options = {
+        weekday: "long",
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+      };
       break;
     default:
-      options = { year: 'numeric', month: 'long', day: 'numeric' };
+      options = { year: "numeric", month: "long", day: "numeric" };
   }
 
-  return new Intl.DateTimeFormat('en-US', options).format(date);
+  return new Intl.DateTimeFormat("en-US", options).format(date);
 };
 
 // Debounce function
 export const debounce = <T extends (...args: unknown[]) => unknown>(
   func: T,
-  wait: number
+  wait: number,
 ): ((...args: Parameters<T>) => void) => {
   let timeout: NodeJS.Timeout;
   return (...args: Parameters<T>) => {
@@ -91,7 +105,7 @@ export const debounce = <T extends (...args: unknown[]) => unknown>(
 // Throttle function
 export const throttle = <T extends (...args: unknown[]) => unknown>(
   func: T,
-  limit: number
+  limit: number,
 ): ((...args: Parameters<T>) => void) => {
   let inThrottle: boolean;
   return (...args: Parameters<T>) => {
@@ -116,7 +130,7 @@ export const isValidEmail = (email: string): boolean => {
 
 // HTML sanitization
 export const sanitizeHtml = (html: string): string => {
-  const div = document.createElement('div');
+  const div = document.createElement("div");
   div.textContent = html;
   return div.innerHTML;
 };
@@ -124,7 +138,7 @@ export const sanitizeHtml = (html: string): string => {
 // Text truncation
 export const truncateText = (text: string, maxLength: number): string => {
   if (text.length <= maxLength) return text;
-  return text.substr(0, maxLength) + '...';
+  return text.substr(0, maxLength) + "...";
 };
 
 // Capitalize first letter
@@ -134,8 +148,8 @@ export const capitalizeFirst = (str: string): string => {
 
 // Generate random color
 export const getRandomColor = (): string => {
-  const letters = '0123456789ABCDEF';
-  let color = '#';
+  const letters = "0123456789ABCDEF";
+  let color = "#";
   for (let i = 0; i < 6; i++) {
     color += letters[Math.floor(Math.random() * 16)];
   }
@@ -149,7 +163,7 @@ export const performanceMonitor = {
     fn();
     const end = performance.now();
     console.log(`${name} took ${end - start} milliseconds`);
-  }
+  },
 };
 
 // Date utilities
@@ -161,20 +175,23 @@ export const dateUtils = {
     return date.toLocaleDateString("en-US", {
       year: "numeric",
       month: "long",
-      day: "numeric"
+      day: "numeric",
     });
   },
   timeAgo: (date: Date): string => {
     const now = new Date();
     const diffInSeconds = Math.floor((now.getTime() - date.getTime()) / 1000);
-    
+
     if (diffInSeconds < 60) return `${diffInSeconds} seconds ago`;
-    if (diffInSeconds < 3600) return `${Math.floor(diffInSeconds / 60)} minutes ago`;
-    if (diffInSeconds < 86400) return `${Math.floor(diffInSeconds / 3600)} hours ago`;
-    if (diffInSeconds < 2592000) return `${Math.floor(diffInSeconds / 86400)} days ago`;
-    
+    if (diffInSeconds < 3600)
+      return `${Math.floor(diffInSeconds / 60)} minutes ago`;
+    if (diffInSeconds < 86400)
+      return `${Math.floor(diffInSeconds / 3600)} hours ago`;
+    if (diffInSeconds < 2592000)
+      return `${Math.floor(diffInSeconds / 86400)} days ago`;
+
     return dateUtils.format(date, "short");
-  }
+  },
 };
 
 // String utilities
@@ -193,7 +210,7 @@ export const stringUtils = {
       .replace(/\s+/g, "-")
       .replace(/-+/g, "-")
       .trim();
-  }
+  },
 };
 
 // Array utilities
@@ -202,12 +219,15 @@ export const arrayUtils = {
     return [...new Set(arr)];
   },
   groupBy: <T, K extends keyof T>(arr: T[], key: K): Record<string, T[]> => {
-    return arr.reduce((groups, item) => {
-      const group = String(item[key]);
-      groups[group] = groups[group] || [];
-      groups[group].push(item);
-      return groups;
-    }, {} as Record<string, T[]>);
+    return arr.reduce(
+      (groups, item) => {
+        const group = String(item[key]);
+        groups[group] = groups[group] || [];
+        groups[group].push(item);
+        return groups;
+      },
+      {} as Record<string, T[]>,
+    );
   },
   shuffle: <T>(arr: T[]): T[] => {
     const shuffled = [...arr];
@@ -216,7 +236,7 @@ export const arrayUtils = {
       [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
     }
     return shuffled;
-  }
+  },
 };
 
 // Object utilities
@@ -227,15 +247,18 @@ export const objectUtils = {
   isEmpty: (obj: Record<string, unknown>): boolean => {
     return Object.keys(obj).length === 0;
   },
-  pick: <T extends object, K extends keyof T>(obj: T, keys: K[]): Pick<T, K> => {
+  pick: <T extends object, K extends keyof T>(
+    obj: T,
+    keys: K[],
+  ): Pick<T, K> => {
     const result = {} as Pick<T, K>;
-    keys.forEach(key => {
+    keys.forEach((key) => {
       if (key in obj) {
         result[key] = obj[key];
       }
     });
     return result;
-  }
+  },
 };
 
 // Validation utilities
@@ -255,5 +278,5 @@ export const validationUtils = {
     } catch {
       return false;
     }
-  }
+  },
 };

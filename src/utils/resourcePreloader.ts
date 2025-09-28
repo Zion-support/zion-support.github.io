@@ -4,9 +4,9 @@
  */
 
 interface PreloadOptions {
-  priority?: 'high' | 'low';
-  crossorigin?: 'anonymous' | 'use-credentials';
-  as?: 'script' | 'style' | 'image' | 'font' | 'fetch' | 'document';
+  priority?: "high" | "low";
+  crossorigin?: "anonymous" | "use-credentials";
+  as?: "script" | "style" | "image" | "font" | "fetch" | "document";
   media?: string;
   type?: string;
 }
@@ -35,28 +35,29 @@ class ResourcePreloader {
   preloadResource(resource: PreloadResource): Promise<void> {
     return new Promise((resolve, reject) => {
       const { href, options = {} } = resource;
-      
+
       if (this.preloadedResources.has(href)) {
         resolve();
         return;
       }
 
-      const link = document.createElement('link');
-      link.rel = 'preload';
+      const link = document.createElement("link");
+      link.rel = "preload";
       link.href = href;
-      
+
       // Set options
-      if (options.as) link.setAttribute('as', options.as);
-      if (options.crossorigin) link.setAttribute('crossorigin', options.crossorigin);
-      if (options.media) link.setAttribute('media', options.media);
-      if (options.type) link.setAttribute('type', options.type);
-      
+      if (options.as) link.setAttribute("as", options.as);
+      if (options.crossorigin)
+        link.setAttribute("crossorigin", options.crossorigin);
+      if (options.media) link.setAttribute("media", options.media);
+      if (options.type) link.setAttribute("type", options.type);
+
       // Handle load events
       link.onload = () => {
         this.preloadedResources.add(href);
         resolve();
       };
-      
+
       link.onerror = () => {
         console.warn(`Failed to preload resource: ${href}`);
         reject(new Error(`Failed to preload resource: ${href}`));
@@ -71,7 +72,9 @@ class ResourcePreloader {
    * Preload multiple resources
    */
   async preloadResources(resources: PreloadResource[]): Promise<void> {
-    const promises = resources.map(resource => this.preloadResource(resource));
+    const promises = resources.map((resource) =>
+      this.preloadResource(resource),
+    );
     await Promise.allSettled(promises);
   }
 
@@ -79,12 +82,12 @@ class ResourcePreloader {
    * Preload critical CSS
    */
   preloadCriticalCSS(cssFiles: string[]): Promise<void> {
-    const resources = cssFiles.map(href => ({
+    const resources = cssFiles.map((href) => ({
       href,
       options: {
-        as: 'style' as const,
-        priority: 'high' as const
-      }
+        as: "style" as const,
+        priority: "high" as const,
+      },
     }));
     return this.preloadResources(resources);
   }
@@ -93,12 +96,12 @@ class ResourcePreloader {
    * Preload critical JavaScript
    */
   preloadCriticalJS(jsFiles: string[]): Promise<void> {
-    const resources = jsFiles.map(href => ({
+    const resources = jsFiles.map((href) => ({
       href,
       options: {
-        as: 'script' as const,
-        priority: 'high' as const
-      }
+        as: "script" as const,
+        priority: "high" as const,
+      },
     }));
     return this.preloadResources(resources);
   }
@@ -107,12 +110,12 @@ class ResourcePreloader {
    * Preload critical images
    */
   preloadCriticalImages(imageFiles: string[]): Promise<void> {
-    const resources = imageFiles.map(href => ({
+    const resources = imageFiles.map((href) => ({
       href,
       options: {
-        as: 'image' as const,
-        priority: 'high' as const
-      }
+        as: "image" as const,
+        priority: "high" as const,
+      },
     }));
     return this.preloadResources(resources);
   }
@@ -121,13 +124,13 @@ class ResourcePreloader {
    * Preload fonts
    */
   preloadFonts(fontFiles: string[]): Promise<void> {
-    const resources = fontFiles.map(href => ({
+    const resources = fontFiles.map((href) => ({
       href,
       options: {
-        as: 'font' as const,
-        crossorigin: 'anonymous' as const,
-        priority: 'high' as const
-      }
+        as: "font" as const,
+        crossorigin: "anonymous" as const,
+        priority: "high" as const,
+      },
     }));
     return this.preloadResources(resources);
   }
@@ -136,13 +139,13 @@ class ResourcePreloader {
    * Preload API endpoints
    */
   preloadAPIEndpoints(endpoints: string[]): Promise<void> {
-    const resources = endpoints.map(href => ({
+    const resources = endpoints.map((href) => ({
       href,
       options: {
-        as: 'fetch' as const,
-        crossorigin: 'anonymous' as const,
-        priority: 'low' as const
-      }
+        as: "fetch" as const,
+        crossorigin: "anonymous" as const,
+        priority: "low" as const,
+      },
     }));
     return this.preloadResources(resources);
   }
@@ -186,7 +189,7 @@ class ResourcePreloader {
           }
         });
       },
-      { rootMargin: '50px' }
+      { rootMargin: "50px" },
     );
 
     observer.observe(element);
@@ -195,7 +198,10 @@ class ResourcePreloader {
   /**
    * Preload on user interaction
    */
-  preloadOnInteraction(resource: PreloadResource, event: 'hover' | 'click' | 'focus' = 'hover'): void {
+  preloadOnInteraction(
+    resource: PreloadResource,
+    event: "hover" | "click" | "focus" = "hover",
+  ): void {
     const preloadHandler = () => {
       this.preloadResource(resource);
     };
