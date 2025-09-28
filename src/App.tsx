@@ -30,7 +30,7 @@ import { errorTracker } from './utils/advancedErrorTracker';
 import { apiCache, imageCache, dataCache } from './utils/advancedCacheManager';
 
 // Import comprehensive systems
-import enhancedErrorRecovery from './utils/comprehensiveErrorRecovery';
+// import enhancedErrorRecovery from './utils/comprehensiveErrorRecovery';
 
 // Import types
 import NotificationSystem, { Notification } from './components/NotificationSystem';
@@ -51,16 +51,16 @@ const RealTimePerformanceMonitor = lazy(() => import('./components/RealTimePerfo
 const AdvancedAnalytics = lazy(() => import('./components/AdvancedAnalytics'));
 const PerformanceDashboard = lazy(() => import('./components/PerformanceDashboard'));
 const EnhancedCommandPalette = lazy(() => import('./components/EnhancedCommandPalette'));
-const PerformanceIndicator = lazy(() => import('./components/PerformanceIndicator'));
-const AccessibilityEnhancer = lazy(() => import('./components/AccessibilityEnhancer'));
-const DynamicMetaTags = lazy(() => import('./components/DynamicMetaTags'));
+// const PerformanceIndicator = lazy(() => import('./components/PerformanceIndicator'));
+// const AccessibilityEnhancer = lazy(() => import('./components/AccessibilityEnhancer'));
+// const DynamicMetaTags = lazy(() => import('./components/DynamicMetaTags'));
 const SystemStatusIndicator = lazy(() => import('./components/SystemStatusIndicator'));
 const EnhancedNotificationSystem = lazy(() => import('./components/EnhancedNotificationSystem'));
 const KeyboardShortcutsManager = lazy(() => import('./components/KeyboardShortcutsManager'));
 const ErrorRecoveryDashboard = lazy(() => import('./components/ErrorRecoveryDashboard'));
 // import AdvancedPerformanceDashboard from './components/AdvancedPerformanceDashboard';
 import WebsiteEnhancements from './components/WebsiteEnhancements';
-import SEOOptimizer, { useSEOData } from './components/SEOOptimizer';
+import SEOOptimizer from './components/SEOOptimizer';
 // import EnhancedAnalytics from './components/EnhancedAnalytics';
 import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
 import { performanceAlerts } from './utils/performanceAlerts';
@@ -360,7 +360,7 @@ export default function App(): React.JSX.Element {
   }, [seoData.title, seoData.description, seoData.keywords, seoData.canonicalUrl, seoData.ogImage, seoData.ogType, seoData.twitterCard]);
 
   // Optimized keyboard handler for system dashboard toggle
-  const handleKeyDown = useCallback((event: KeyboardEvent) => {
+  // const handleKeyDown = useCallback((event: KeyboardEvent) => {
     if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'D') {
       event.preventDefault();
       setShowSystemDashboard((prev: boolean) => !prev);
