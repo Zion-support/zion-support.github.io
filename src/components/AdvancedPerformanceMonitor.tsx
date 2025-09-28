@@ -91,7 +91,7 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
         largestContentfulPaint: lcp,
         cumulativeLayoutShift: cls,
         firstInputDelay: 0, // Would need to measure this separately
-        timeToInteractive: navigation.domInteractive - navigation.navigationStart,
+        timeToInteractive: navigation.domInteractive - (navigation as any).navigationStart || 0,
         bundleSize: 0, // Would need to calculate from actual bundle
         memoryUsage,
         renderTime,
@@ -106,7 +106,7 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
     } catch (error) {
       console.error('Error measuring performance:', error);
     }
-  }, [checkPerformanceAlerts]);
+  }, []);
 
   // Check performance against thresholds and generate alerts
   const checkPerformanceAlerts = useCallback((currentMetrics: PerformanceMetrics) => {

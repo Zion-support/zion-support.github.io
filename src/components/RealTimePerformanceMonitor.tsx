@@ -45,7 +45,7 @@ const RealTimePerformanceMonitor: React.FC<RealTimePerformanceMonitorProps> = ({
       const updated = [...prev, newMetrics];
       return updated.slice(-maxHistoryLength);
     });
-  }, [isMonitoring, maxHistoryLength, calculateFPS]);
+  }, [isMonitoring, maxHistoryLength]);
 
   const lastTimeRef = useRef<number>(0);
   
