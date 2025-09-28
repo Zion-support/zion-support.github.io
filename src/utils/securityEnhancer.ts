@@ -3,6 +3,12 @@
  * Provides comprehensive security features and monitoring
  */
 
+declare global {
+  interface Window {
+    __securityEnhancerInstance?: SecurityEnhancer;
+  }
+}
+
 export interface SecurityConfig {
   enableCSP: boolean;
   enableXSSProtection: boolean;

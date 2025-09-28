@@ -74,7 +74,18 @@ jest.mock('../hooks/usePerformanceOptimization', () => ({
 jest.mock('../utils/analytics', () => ({
   analytics: {
     initialize: jest.fn(),
-    trackPageView: jest.fn()
+    trackPageView: jest.fn(),
+    enable: jest.fn(),
+    trackEvent: jest.fn()
+  }
+}));
+
+jest.mock('../utils/advancedAnalytics', () => ({
+  analytics: {
+    enable: jest.fn(),
+    trackEvent: jest.fn(),
+    trackPageView: jest.fn(),
+    initialize: jest.fn()
   }
 }));
 
@@ -179,6 +190,12 @@ jest.mock('../components/PerformanceProfiler', () => {
   };
 });
 
+jest.mock('../components/ThemeToggle', () => {
+  return function MockThemeToggle() {
+    return null;
+  };
+});
+
 // Components are mocked above, no need to import them
 
 // Mock the router to use MemoryRouter for tests
@@ -211,7 +228,7 @@ jest.mock('../router', () => {
 
 const renderWithRouter = (ui: React.ReactElement, { route = '/' } = {}) => {
   // Update the existing location mock with new route
-  (window as unknown as { location: typeof window.location }).location = {
+  (window as unknown as { location: Partial<Location> }).location = {
     pathname: route,
     href: `http://localhost:3000${route}`,
     assign: jest.fn(),

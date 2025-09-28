@@ -1,4 +1,4 @@
-interface ImageOptimizationOptions {
+export interface ImageOptimizationOptions {
   width?: number;
   height?: number;
   quality?: number;
