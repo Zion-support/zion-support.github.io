@@ -46,6 +46,8 @@ class SEOManager {
     this.updateStructuredData(data.structuredData);
     this.updateCanonical(data.canonical);
     this.updateAlternateLanguages(data.alternateLanguages);
+    this.updatePerformanceMeta(data);
+    this.updateSecurityMeta(data);
   }
 
   private updateTitle(title: string): void {
@@ -201,10 +203,6 @@ class SEOManager {
     document.head.appendChild(meta);
   }
 
-  public getCurrentData(): SEOData | null {
-    return this.currentData;
-  }
-
   public generateBreadcrumbStructuredData(breadcrumbs: { name: string; url: string }[]): Record<string, unknown> {
     return {
       "@context": "https://schema.org",
@@ -292,6 +290,39 @@ class SEOManager {
         "query-input": "required name=search_term_string"
       }
     };
+  }
+
+  private updatePerformanceMeta(data: SEOData): void {
+    // Add performance-related meta tags
+    const performanceMeta = [
+      { name: 'theme-color', content: '#0f172a' },
+      { name: 'apple-mobile-web-app-capable', content: 'yes' },
+      { name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' },
+      { name: 'apple-mobile-web-app-title', content: data.title },
+      { name: 'msapplication-TileColor', content: '#0f172a' },
+      { name: 'msapplication-config', content: '/browserconfig.xml' },
+    ];
+
+    performanceMeta.forEach(meta => {
+      this.setMetaTag(meta.name, meta.content);
+    });
+  }
+
+  private updateSecurityMeta(data: SEOData): void {
+    // Add security-related meta tags
+    const securityMeta = [
+      { name: 'referrer', content: 'strict-origin-when-cross-origin' },
+      { name: 'x-ua-compatible', content: 'IE=edge' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes' },
+    ];
+
+    securityMeta.forEach(meta => {
+      this.setMetaTag(meta.name, meta.content);
+    });
+  }
+
+  public getCurrentData(): SEOData | null {
+    return this.currentData;
   }
 }
 
@@ -594,6 +625,90 @@ export class PerformanceSEO {
     criticalStyle.textContent = criticalCSS;
     criticalStyle.setAttribute('data-critical', 'true');
     document.head.insertBefore(criticalStyle, document.head.firstChild);
+  }
+
+  private updatePerformanceMeta(data: SEOData): void {
+    // Add performance-related meta tags
+    const performanceMeta = [
+      { name: 'theme-color', content: '#0f172a' },
+      { name: 'color-scheme', content: 'dark light' },
+      { name: 'format-detection', content: 'telephone=no' },
+      { name: 'mobile-web-app-capable', content: 'yes' },
+      { name: 'apple-mobile-web-app-capable', content: 'yes' },
+      { name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' },
+      { name: 'apple-mobile-web-app-title', content: data.title },
+      { name: 'msapplication-TileColor', content: '#0f172a' },
+      { name: 'msapplication-config', content: '/browserconfig.xml' },
+    ];
+
+    performanceMeta.forEach(meta => {
+      this.setMetaTag(meta.name, meta.content);
+    });
+  }
+
+  private updateSecurityMeta(data: SEOData): void {
+    // Add security-related meta tags
+    const securityMeta = [
+      { name: 'referrer', content: 'strict-origin-when-cross-origin' },
+      { name: 'x-ua-compatible', content: 'IE=edge' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes' },
+    ];
+
+    securityMeta.forEach(meta => {
+      this.setMetaTag(meta.name, meta.content);
+    });
+  }
+
+  public generateSitemap(): string {
+    // Generate XML sitemap
+    const baseUrl = 'https://zion.app';
+    const pages = [
+      { url: '/', priority: '1.0', changefreq: 'daily' },
+      { url: '/about', priority: '0.8', changefreq: 'monthly' },
+      { url: '/services', priority: '0.9', changefreq: 'weekly' },
+      { url: '/contact', priority: '0.7', changefreq: 'monthly' },
+      { url: '/blog', priority: '0.8', changefreq: 'weekly' },
+    ];
+
+    const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${pages.map(page => `  <url>
+    <loc>${baseUrl}${page.url}</loc>
+    <lastmod>${new Date().toISOString()}</lastmod>
+    <changefreq>${page.changefreq}</changefreq>
+    <priority>${page.priority}</priority>
+  </url>`).join('\n')}
+</urlset>`;
+
+    return sitemap;
+  }
+
+  public generateRobotsTxt(): string {
+    // Generate robots.txt
+    return `User-agent: *
+Allow: /
+
+Sitemap: https://zion.app/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /static/`;
+  }
+
+  private setMetaTag(name: string, content: string): void {
+    let meta = document.querySelector(`meta[name="${name}"]`) as HTMLMetaElement;
+    if (!meta) {
+      meta = document.createElement('meta');
+      meta.name = name;
+      document.head.appendChild(meta);
+    }
+    meta.content = content;
   }
 }
 

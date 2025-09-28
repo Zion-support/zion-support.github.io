@@ -6,15 +6,28 @@ import { ThemeProvider } from './contexts/ThemeContext';
 import App from './App';
 import './index.css';
 
-// Register service worker
+// Register enhanced service worker
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/sw.js')
+    navigator.serviceWorker.register('/sw-enhanced.js')
       .then((registration) => {
-        console.log('Service Worker registered successfully:', registration.scope);
+        console.log('🚀 Enhanced Service Worker registered successfully:', registration.scope);
+        
+        // Check for updates
+        registration.addEventListener('updatefound', () => {
+          const newWorker = registration.installing;
+          if (newWorker) {
+            newWorker.addEventListener('statechange', () => {
+              if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                console.log('🔄 New service worker available. Reloading...');
+                window.location.reload();
+              }
+            });
+          }
+        });
       })
       .catch((error) => {
-        console.log('Service Worker registration failed:', error);
+        console.error('❌ Service Worker registration failed:', error);
       });
   });
 }
