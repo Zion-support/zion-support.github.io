@@ -6,13 +6,16 @@ import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import { seoAnalytics, performanceSEO, seoManager } from './utils/seoEnhanced';
 import { analytics } from './utils/analytics';
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
-import PerformanceDashboard from './components/PerformanceDashboard';
-import RealTimeMonitor from './components/RealTimeMonitor';
-import SystemMetricsDashboard from './components/SystemMetricsDashboard';
 import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
-import EnhancedNotificationSystem from './components/EnhancedNotificationSystem';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
-import EnhancedAnalytics from './components/EnhancedAnalytics';
+import AIPerformanceDashboard from './components/AIPerformanceDashboard';
+import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
+import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
+import { enhancedAnalytics } from './utils/enhancedAnalytics';
+import { advancedCacheSystem } from './utils/advancedCacheSystem';
+import { AdvancedAutomationSystem } from './utils/advancedAutomationSystem';
+import { AccessibilityEnhancer } from './utils/accessibilityEnhancer';
+import { SecurityEnhancer } from './utils/securityEnhancer';
 import './index.css';
 import './styles/notifications.css';
 import './styles/system-metrics.css';
@@ -24,6 +27,7 @@ export default function App(): React.JSX.Element {
   const [showSystemDashboard, setShowSystemDashboard] = useState(false);
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
+  const [showAIDashboard, setShowAIDashboard] = useState(false);
 
   // Engagement tracking data
   const engagementData = useMemo(() => ({
@@ -44,10 +48,8 @@ export default function App(): React.JSX.Element {
       }
     }
   }), []);
-
->>>>>>> origin/improvements-and-conflict-resolution
   // Initialize app with custom configuration
-  const { isLoading, loadingProgress } = useAppInitialization({
+  const { isLoading, loadingProgress, handleScroll, handleClick, trackEngagement } = useAppInitialization({
     enablePerformanceMonitoring: true,
     enableAccessibility: true,
     enableSecurity: true,
@@ -74,34 +76,11 @@ export default function App(): React.JSX.Element {
       event.preventDefault();
       setShowPerformanceOptimizer((prev: boolean) => !prev);
     }
+    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'A') {
+      event.preventDefault();
+      setShowAIDashboard(prev => !prev);
+    }
   }, []);
-
-  // Handle scroll events
-  const handleScroll = useCallback(() => {
-    // Scroll handling logic can be added here
-  }, []);
-
-  // Handle click events
-  const handleClick = useCallback(() => {
-    // Click handling logic can be added here
-  }, []);
-
-  // Engagement data for tracking
-  const engagementData = useMemo(() => ({
-    startTime: Date.now(),
-    scrollDepth: 0,
-    clicks: 0
-  }), []);
-
-  // Track engagement function
-  const trackEngagement = useCallback(() => {
-    const timeOnPage = Date.now() - engagementData.startTime;
-    seoAnalytics.trackUserEngagement(window.location.pathname, {
-      timeOnPage,
-      scrollDepth: engagementData.scrollDepth,
-      clicks: engagementData.clicks,
-    });
-  }, [engagementData]);
 
   // Memoize the SEO data to prevent unnecessary re-renders
   const seoData = useMemo(() => ({
@@ -113,6 +92,18 @@ export default function App(): React.JSX.Element {
     ogImage: '/og-image.png',
     twitterCard: 'summary_large_image' as const
   }), []);
+
+  // Enhanced engagement tracking function
+  const enhancedTrackEngagement = useCallback(() => {
+    const timeOnPage = Date.now() - engagementData.startTime;
+    seoAnalytics.trackUserEngagement(window.location.pathname, {
+      timeOnPage,
+      scrollDepth: engagementData.scrollDepth,
+      clicks: engagementData.clicks,
+    });
+    // Also call the original trackEngagement from useAppInitialization
+    trackEngagement();
+  }, [engagementData.clicks, engagementData.scrollDepth, engagementData.startTime, trackEngagement]);
 
   // Update meta tags function
   const updateMetaTags = useCallback((data: {
@@ -217,16 +208,21 @@ export default function App(): React.JSX.Element {
   // Main initialization and cleanup effect
   React.useEffect(() => {
     // Track engagement on page unload
-    window.addEventListener('beforeunload', trackEngagement);
+    window.addEventListener('beforeunload', enhancedTrackEngagement);
 
     // Cleanup function
     return () => {
-      window.removeEventListener('beforeunload', trackEngagement);
+      document.removeEventListener('keydown', handleKeyDown);
+      window.removeEventListener('beforeunload', enhancedTrackEngagement);
       
       // Final engagement tracking
-      trackEngagement();
+      enhancedTrackEngagement();
+      
+      // Remove event listeners
+      window.removeEventListener('scroll', handleScroll);
+      document.removeEventListener('click', handleClick);
     };
-  }, [trackEngagement]);
+  }, [enhancedTrackEngagement, handleKeyDown, handleScroll, handleClick, seoData, preloadResource]);
 
   // Show loading screen while initializing
   if (isLoading) {
@@ -284,6 +280,12 @@ export default function App(): React.JSX.Element {
             </div>
           </div>
         )}
+        
+        {/* AI Performance Dashboard - Toggle with Ctrl+Shift+A */}
+        <AIPerformanceDashboard
+          isVisible={showAIDashboard}
+          onClose={() => setShowAIDashboard(false)}
+        />
       </div>
       
       <PerformanceDashboard />
