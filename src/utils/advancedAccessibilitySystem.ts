@@ -643,7 +643,7 @@ class AdvancedAccessibilitySystem {
   }
 
   private updateAccessibilityScore(): void {
-    const totalIssues = this.metrics.totalIssues;
+    // const totalIssues = this.metrics.totalIssues;
     const criticalIssues = this.metrics.issuesBySeverity.critical || 0;
     const highIssues = this.metrics.issuesBySeverity.high || 0;
     const mediumIssues = this.metrics.issuesBySeverity.medium || 0;
