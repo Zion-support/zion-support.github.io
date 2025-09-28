@@ -80,10 +80,7 @@ export default function App(): React.JSX.Element {
       clicks: engagementData.clicks,
     });
   }, [engagementData]);
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-6382
   useEffect(() => {
     // Add performance marks for better monitoring
     if (typeof window !== 'undefined' && window.performance && typeof performance.mark === 'function') {
