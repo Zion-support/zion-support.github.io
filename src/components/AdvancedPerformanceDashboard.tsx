@@ -374,8 +374,9 @@ const AdvancedPerformanceDashboard: React.FC<AdvancedPerformanceDashboardProps> 
               </div>
             ))}
           </div>
+        </div>
 
-          {/* Actions */}
+        {/* Actions */}
           <div className="flex flex-wrap gap-4">
             <button
               onClick={exportReport}
