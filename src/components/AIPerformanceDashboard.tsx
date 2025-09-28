@@ -7,9 +7,9 @@ interface AIPerformanceDashboardProps {
 }
 
 const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisible, onClose }) => {
-  const [metrics, setMetrics] = useState<any>(null);
-  const [insights, setInsights] = useState<any>(null);
-  const [errors, setErrors] = useState<any[]>([]);
+  const [metrics, setMetrics] = useState<Record<string, unknown> | null>(null);
+  const [insights, setInsights] = useState<Record<string, unknown> | null>(null);
+  const [errors, setErrors] = useState<Record<string, unknown>[]>([]);
 
   useEffect(() => {
     if (isVisible) {
@@ -124,7 +124,7 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
             <div className="bg-gray-50 p-4 rounded-lg mb-8">
               <h3 className="text-lg font-semibold mb-3 text-gray-800">📊 Error Trends (7 days)</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                {insights.errorTrends.map((trend: any, index: number) => (
+                {insights.errorTrends.map((trend: Record<string, unknown>, index: number) => (
                   <div key={index} className="bg-white p-3 rounded border">
                     <div className="flex items-center justify-between">
                       <span className="font-medium capitalize">{trend.category}</span>
