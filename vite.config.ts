@@ -26,6 +26,8 @@ export default defineConfig({
     target: 'esnext',
     minify: 'terser',
     sourcemap: false,
+    cssCodeSplit: true,
+    reportCompressedSize: true,
     rollupOptions: {
       input: {
         main: './index.html'
@@ -118,6 +120,20 @@ export default defineConfig({
     },
     // Optimize chunk size
     chunkSizeWarningLimit: 1000,
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
+        pure_funcs: ['console.log', 'console.info'],
+        passes: 2,
+      },
+      mangle: {
+        safari10: true,
+      },
+      format: {
+        comments: false,
+      },
+    },
   },
   server: {
     port: 3000,

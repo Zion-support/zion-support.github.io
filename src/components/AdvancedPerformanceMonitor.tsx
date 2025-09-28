@@ -67,7 +67,10 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
 
       // Get layout shift
       const clsEntries = performance.getEntriesByType('layout-shift') as PerformanceEntry[];
-      const cls = clsEntries.reduce((sum, entry) => sum + (entry as PerformanceEntry & { value: number }).value, 0);
+      const cls = clsEntries.reduce((sum, entry) => {
+        const layoutShiftEntry = entry as PerformanceEntry & { value?: number };
+        return sum + (layoutShiftEntry.value || 0);
+      }, 0);
 
       // Get memory usage (if available)
       const memory = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory;
