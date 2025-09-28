@@ -3,6 +3,7 @@
  * Provides comprehensive performance monitoring and optimization features
  */
 
+// Removed unused interface LayoutShiftEntry
 
 interface PerformanceConfig {
   enableWebVitals: boolean;
