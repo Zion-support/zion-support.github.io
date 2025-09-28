@@ -367,6 +367,16 @@ export class AdvancedSEOAnalytics {
     this.userEngagement.set(url, metrics);
   }
 
+  public trackEvent(eventName: string, data?: Record<string, unknown>): void {
+    console.log('Tracking event:', eventName, data);
+    // Implementation for event tracking
+  }
+
+  public initialize(): void {
+    console.log('SEO Analytics initialized');
+    // Initialize analytics
+  }
+
   public generateSEOReport(): {
     topPages: Array<{ url: string; views: number }>;
     engagementMetrics: Record<string, unknown>;

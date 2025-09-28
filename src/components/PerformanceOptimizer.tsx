@@ -43,12 +43,12 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   const updateMetrics = useCallback(() => {
     const memory = getMemoryUsage();
     const performanceMetrics = collectPerformanceMetrics();
-    const violations = checkPerformanceBudget();
+    const violations = checkPerformanceBudget(performanceMetrics);
 
     setMetrics(prev => ({
       ...prev,
       memory,
-      loadTime: performanceMetrics.loadComplete || 0,
+      loadTime: performanceMetrics.loadTime || 0,
       domContentLoaded: performanceMetrics.domContentLoaded || 0,
       domInteractive: performanceMetrics.domInteractive || 0,
       violations: [...prev.violations, ...violations]
@@ -233,11 +233,11 @@ export const usePerformanceMonitoring = () => {
   const updateMetrics = useCallback(() => {
     const memory = getMemoryUsage();
     const performanceMetrics = collectPerformanceMetrics();
-    const violations = checkPerformanceBudget();
+    const violations = checkPerformanceBudget(performanceMetrics);
 
     setMetrics({
       memory,
-      loadTime: performanceMetrics.loadComplete || 0,
+      loadTime: performanceMetrics.loadTime || 0,
       domContentLoaded: performanceMetrics.domContentLoaded || 0,
       domInteractive: performanceMetrics.domInteractive || 0,
       violations

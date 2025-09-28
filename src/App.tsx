@@ -30,6 +30,7 @@ const SystemHealthDashboard = lazy(() => import('./components/SystemHealthDashbo
 const PerformanceWidget = lazy(() => import('./components/PerformanceWidget'));
 const CommandPalette = lazy(() => import('./components/CommandPalette'));
 const AdvancedMonitoringDashboard = lazy(() => import('./components/AdvancedMonitoringDashboard'));
+const ComprehensivePerformanceDashboard = lazy(() => import('./components/ComprehensivePerformanceDashboard'));
 
 export default function App(): React.JSX.Element {
   const navigate = useNavigate();
@@ -43,6 +44,7 @@ export default function App(): React.JSX.Element {
   const [showPerformanceWidget, setShowPerformanceWidget] = useState(false);
   const [showCommandPalette, setShowCommandPalette] = useState(false);
   const [showAdvancedMonitoring, setShowAdvancedMonitoring] = useState(false);
+  const [showComprehensiveDashboard, setShowComprehensiveDashboard] = useState(false);
   // const [showPerformanceDashboard, setShowPerformanceDashboard] = useState(false);
 
   // Notification management
@@ -208,6 +210,11 @@ export default function App(): React.JSX.Element {
       setShowPerformanceWidget((prev: boolean) => !prev);
       seoAnalytics.trackEvent('keyboard_shortcut', { shortcut: 'cmd+shift+p', action: 'toggle_performance_widget' });
     }
+    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'C') {
+      event.preventDefault();
+      setShowComprehensiveDashboard((prev: boolean) => !prev);
+      seoAnalytics.trackEvent('keyboard_shortcut', { shortcut: 'cmd+shift+c', action: 'toggle_comprehensive_dashboard' });
+    }
     // Performance dashboard toggle removed - state variable not defined
     if ((event.ctrlKey || event.metaKey) && event.key === 'k') {
       event.preventDefault();
@@ -313,7 +320,7 @@ export default function App(): React.JSX.Element {
       
       // Initialize analytics system
       seoAnalytics.initialize();
-      seoAnalytics.trackPageView();
+      seoAnalytics.trackPageView(window.location.pathname);
 
       // Set default SEO data using the correct method
       seoManagerInstance.updateMetaTags(seoData);
@@ -405,7 +412,7 @@ export default function App(): React.JSX.Element {
 
   return (
     <PerformanceOptimizer enableMonitoring={true} enableOptimizations={true}>
-      <EnhancedErrorBoundary showDetails={process.env.NODE_ENV === 'development'}>
+      <EnhancedErrorBoundary>
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
           <AppRouter />
         
@@ -466,10 +473,7 @@ export default function App(): React.JSX.Element {
         </Suspense>
 
         <PerformanceDashboard
-          showBundleAnalysis={true}
-          showOptimizationSuggestions={true}
-          autoRefresh={true}
-          refreshInterval={5000}
+          isVisible={showPerformanceWidget}
         />
 
         <Suspense fallback={<ModernLoadingSpinner />}>
@@ -519,6 +523,12 @@ export default function App(): React.JSX.Element {
               showRealTime={true}
               refreshInterval={5000}
             />
+          </Suspense>
+        )}
+
+        {showComprehensiveDashboard && (
+          <Suspense fallback={<ModernLoadingSpinner />}>
+            <ComprehensivePerformanceDashboard />
           </Suspense>
         )}
 
