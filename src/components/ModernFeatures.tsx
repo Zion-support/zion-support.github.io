@@ -204,7 +204,7 @@ const ModernFeatures: React.FC = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentFeature((prev) => (prev + 1) % features.length);
+      setActiveFeature((prev) => (prev + 1) % features.length);
     }, 3000);
     return () => clearInterval(interval);
   }, [features.length]);

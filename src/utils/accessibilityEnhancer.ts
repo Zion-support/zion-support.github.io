@@ -1,206 +1,211 @@
 /**
- * Advanced Accessibility Enhancement Utility
+ * Accessibility Enhancer
+ * Core accessibility utilities for Zion Tech Group website
  */
 
-export interface AccessibilityIssue {
-  type: 'error' | 'warning' | 'info';
-  element: string;
-  message: string;
-  severity: 'high' | 'medium' | 'low';
-  fixable: boolean;
+interface AccessibilityConfig {
+  enableKeyboardNavigation: boolean;
+  enableScreenReaderSupport: boolean;
+  enableFocusManagement: boolean;
+  announceChanges: boolean;
 }
 
-export interface AccessibilityReport {
-  score: number;
-  issues: AccessibilityIssue[];
-  recommendations: string[];
-  timestamp: number;
-}
+const defaultConfig: AccessibilityConfig = {
+  enableKeyboardNavigation: true,
+  enableScreenReaderSupport: true,
+  enableFocusManagement: true,
+  announceChanges: true,
+};
 
-class AccessibilityEnhancer {
-  private document: Document;
+export class AccessibilityEnhancer {
+  private config: AccessibilityConfig;
+  private liveRegions: Map<string, HTMLElement> = new Map();
 
-  constructor() {
-    this.document = document;
+  constructor(config: Partial<AccessibilityConfig> = {}) {
+    this.config = { ...defaultConfig, ...config };
+    this.initialize();
   }
 
-  public analyzeAccessibility(): AccessibilityReport {
-    const issues = this.detectIssues();
-    const recommendations = this.generateRecommendations(issues);
-    const score = this.calculateScore(issues);
+  private initialize(): void {
+    if (typeof window === 'undefined') return;
+
+    if (this.config.enableKeyboardNavigation) {
+      this.setupKeyboardNavigation();
+    }
+
+    if (this.config.enableScreenReaderSupport) {
+      this.setupScreenReaderSupport();
+    }
+
+    if (this.config.enableFocusManagement) {
+      this.setupFocusManagement();
+    }
+  }
+
+  private setupKeyboardNavigation(): void {
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Tab') {
+        this.handleTabNavigation(event);
+      }
+      if (event.key === 'Escape') {
+        this.handleEscapeKey(event);
+      }
+    });
+  }
+
+  private handleTabNavigation(event: KeyboardEvent): void {
+    const focusableElements = this.getFocusableElements();
+    const currentIndex = focusableElements.indexOf(document.activeElement as HTMLElement);
+
+    if (event.shiftKey) {
+      if (currentIndex <= 0) {
+        event.preventDefault();
+        focusableElements[focusableElements.length - 1]?.focus();
+      }
+    } else {
+      if (currentIndex >= focusableElements.length - 1) {
+        event.preventDefault();
+        focusableElements[0]?.focus();
+      }
+    }
+  }
+
+  private handleEscapeKey(): void {
+    const modals = document.querySelectorAll('[role="dialog"]');
+    modals.forEach(modal => {
+      if (modal.getAttribute('aria-hidden') !== 'true') {
+        this.closeModal(modal as HTMLElement);
+      }
+    });
+  }
+
+  private setupScreenReaderSupport(): void {
+    this.createLiveRegion('status', 'polite');
+    this.createLiveRegion('alert', 'assertive');
+  }
+
+  private createLiveRegion(id: string, politeness: 'polite' | 'assertive'): HTMLElement {
+    let region = document.getElementById(`live-region-${id}`);
+    if (!region) {
+      region = document.createElement('div');
+      region.id = `live-region-${id}`;
+      region.setAttribute('aria-live', politeness);
+      region.setAttribute('aria-atomic', 'true');
+      region.style.position = 'absolute';
+      region.style.left = '-10000px';
+      region.style.width = '1px';
+      region.style.height = '1px';
+      region.style.overflow = 'hidden';
+      document.body.appendChild(region);
+    }
+    this.liveRegions.set(id, region);
+    return region;
+  }
+
+  private setupFocusManagement(): void {
+    document.addEventListener('focusin', (event) => {
+      const element = event.target as HTMLElement;
+      if (element) {
+        this.announce(`Focused on ${this.getElementDescription(element)}`);
+      }
+    });
+  }
+
+  private getFocusableElements(): HTMLElement[] {
+    const focusableSelectors = [
+      'a[href]',
+      'button:not([disabled])',
+      'input:not([disabled])',
+      'select:not([disabled])',
+      'textarea:not([disabled])',
+      '[tabindex]:not([tabindex="-1"])'
+    ].join(', ');
+
+    return Array.from(document.querySelectorAll(focusableSelectors)) as HTMLElement[];
+  }
+
+  private getElementDescription(element: HTMLElement): string {
+    const ariaLabel = element.getAttribute('aria-label');
+    const ariaLabelledBy = element.getAttribute('aria-labelledby');
+    const textContent = element.textContent?.trim();
+    
+    return ariaLabel || ariaLabelledBy || textContent || element.tagName.toLowerCase();
+  }
+
+  private closeModal(modal: HTMLElement): void {
+    modal.setAttribute('aria-hidden', 'true');
+    const closeButton = modal.querySelector('[aria-label*="close"], [aria-label*="Close"]') as HTMLElement;
+    if (closeButton) {
+      closeButton.focus();
+    }
+  }
+
+  announce(message: string, type: 'status' | 'alert' = 'status'): void {
+    if (!this.config.announceChanges) return;
+
+    const region = this.liveRegions.get(type);
+    if (region) {
+      region.textContent = message;
+      setTimeout(() => {
+        region.textContent = '';
+      }, 1000);
+    }
+  }
+
+  async auditAccessibility(): Promise<{
+    score: number;
+    issues: Array<{
+      type: 'error' | 'warning' | 'info';
+      message: string;
+      suggestion: string;
+    }>;
+  }> {
+    const issues: Array<{
+      type: 'error' | 'warning' | 'info';
+      message: string;
+      suggestion: string;
+    }> = [];
+    let score = 100;
+
+    // Check for missing alt text
+    const images = document.querySelectorAll('img');
+    images.forEach(img => {
+      if (!img.getAttribute('alt')) {
+        issues.push({
+          type: 'error',
+          message: 'Image missing alt text',
+          suggestion: 'Add descriptive alt text to all images'
+        });
+        score -= 10;
+      }
+    });
+
+    // Check for missing labels
+    const formElements = document.querySelectorAll('input, select, textarea');
+    formElements.forEach(element => {
+      const id = element.getAttribute('id');
+      const ariaLabel = element.getAttribute('aria-label');
+      const label = id ? document.querySelector(`label[for="${id}"]`) : null;
+
+      if (!ariaLabel && !label) {
+        issues.push({
+          type: 'error',
+          message: 'Form element missing label',
+          suggestion: 'Add a label or aria-label to all form elements'
+        });
+        score -= 10;
+      }
+    });
 
     return {
-      score,
-      issues,
-      recommendations,
-      timestamp: Date.now()
+      score: Math.max(0, score),
+      issues
     };
   }
 
-  private detectIssues(): AccessibilityIssue[] {
-    const issues: AccessibilityIssue[] = [];
-
-    // Check images without alt text
-    const images = this.document.querySelectorAll('img');
-    images.forEach((img, index) => {
-      if (!img.alt) {
-        issues.push({
-          type: 'error',
-          element: `img[src="${img.src}"]`,
-          message: `Image ${index + 1} missing alt text`,
-          severity: 'high',
-          fixable: true
-        });
-      }
-    });
-
-    // Check buttons without accessible names
-    const buttons = this.document.querySelectorAll('button');
-    buttons.forEach((button, index) => {
-      if (!button.textContent?.trim() && !button.getAttribute('aria-label')) {
-        issues.push({
-          type: 'error',
-          element: `button[${index}]`,
-          message: `Button ${index + 1} missing accessible name`,
-          severity: 'high',
-          fixable: true
-        });
-      }
-    });
-
-    // Check form inputs without labels
-    const inputs = this.document.querySelectorAll('input, textarea, select');
-    inputs.forEach((input, index) => {
-      const id = input.getAttribute('id');
-      const label = id ? this.document.querySelector(`label[for="${id}"]`) : null;
-      const ariaLabel = input.getAttribute('aria-label');
-      
-      if (!label && !ariaLabel) {
-        issues.push({
-          type: 'error',
-          element: `${input.tagName.toLowerCase()}[${index}]`,
-          message: `Form input ${index + 1} missing label`,
-          severity: 'high',
-          fixable: true
-        });
-      }
-    });
-
-    // Check color contrast (simplified)
-    const textElements = this.document.querySelectorAll('p, h1, h2, h3, h4, h5, h6, span, div');
-    textElements.forEach((element, index) => {
-      const style = window.getComputedStyle(element);
-      const color = style.color;
-      const backgroundColor = style.backgroundColor;
-      
-      if (color === backgroundColor) {
-        issues.push({
-          type: 'warning',
-          element: `${element.tagName.toLowerCase()}[${index}]`,
-          message: 'Potential color contrast issue',
-          severity: 'medium',
-          fixable: true
-        });
-      }
-    });
-
-    return issues;
-  }
-
-  private generateRecommendations(issues: AccessibilityIssue[]): string[] {
-    const recommendations: string[] = [];
-
-    if (issues.some(issue => issue.message.includes('alt text'))) {
-      recommendations.push('Add descriptive alt text to all images');
-    }
-
-    if (issues.some(issue => issue.message.includes('accessible name'))) {
-      recommendations.push('Ensure all interactive elements have accessible names');
-    }
-
-    if (issues.some(issue => issue.message.includes('label'))) {
-      recommendations.push('Associate form inputs with proper labels');
-    }
-
-    if (issues.some(issue => issue.message.includes('contrast'))) {
-      recommendations.push('Improve color contrast for better readability');
-    }
-
-    if (recommendations.length === 0) {
-      recommendations.push('Accessibility looks good! Continue monitoring for improvements.');
-    }
-
-    return recommendations;
-  }
-
-  private calculateScore(issues: AccessibilityIssue[]): number {
-    if (issues.length === 0) return 100;
-
-    const errorCount = issues.filter(issue => issue.type === 'error').length;
-    const warningCount = issues.filter(issue => issue.type === 'warning').length;
-    const infoCount = issues.filter(issue => issue.type === 'info').length;
-
-    const penalty = (errorCount * 25) + (warningCount * 10) + (infoCount * 5);
-    const score = Math.max(0, 100 - penalty);
-
-    return Math.round(score);
-  }
-
-  public enhanceKeyboardNavigation(): void {
-    // Add keyboard navigation enhancements
-    this.document.addEventListener('keydown', (event) => {
-      if (event.key === 'Tab') {
-        this.highlightFocusableElements();
-      }
-    });
-  }
-
-  private highlightFocusableElements(): void {
-    const focusableElements = this.document.querySelectorAll(
-      'a[href], button, input, textarea, select, [tabindex]:not([tabindex="-1"])'
-    );
-
-    focusableElements.forEach(element => {
-      element.addEventListener('focus', () => {
-        (element as HTMLElement).style.outline = '2px solid #007acc';
-      });
-
-      element.addEventListener('blur', () => {
-        (element as HTMLElement).style.outline = '';
-      });
-    });
-  }
-
-  public addSkipLinks(): void {
-    const skipLink = this.document.createElement('a');
-    skipLink.href = '#main-content';
-    skipLink.textContent = 'Skip to main content';
-    skipLink.style.cssText = `
-      position: absolute;
-      top: -40px;
-      left: 6px;
-      background: #000;
-      color: #fff;
-      padding: 8px;
-      text-decoration: none;
-      z-index: 1000;
-    `;
-    
-    skipLink.addEventListener('focus', () => {
-      skipLink.style.top = '6px';
-    });
-    
-    skipLink.addEventListener('blur', () => {
-      skipLink.style.top = '-40px';
-    });
-
-    this.document.body.insertBefore(skipLink, this.document.body.firstChild);
+  updateConfig(newConfig: Partial<AccessibilityConfig>): void {
+    this.config = { ...this.config, ...newConfig };
   }
 }
 
 export const accessibilityEnhancer = new AccessibilityEnhancer();
-export const analyzeAccessibility = () => accessibilityEnhancer.analyzeAccessibility();
-export const getAccessibilityScore = () => accessibilityEnhancer.analyzeAccessibility().score;
-
-// Export the class for other modules
-export { AccessibilityEnhancer };

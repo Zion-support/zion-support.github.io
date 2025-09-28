@@ -138,7 +138,8 @@ const EnhancedContactForm: React.FC = () => {
         newsletter: false
       });
       setCurrentStep(1);
-    } catch {
+    } catch (err) {
+      console.error('Form submission error:', err);
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
