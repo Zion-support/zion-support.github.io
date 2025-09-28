@@ -155,7 +155,7 @@ const EnhancedNotificationSystem: React.FC<NotificationSystemProps> = ({
     // Play sound if enabled
     if (enableSounds) {
       // Play notification sound based on type
-      const audioContext = new (window.AudioContext || (window as any).webkitAudioContext)();
+      const audioContext = new (window.AudioContext || (window as unknown as { webkitAudioContext: typeof AudioContext }).webkitAudioContext)();
       const oscillator = audioContext.createOscillator();
       const gainNode = audioContext.createGain();
       

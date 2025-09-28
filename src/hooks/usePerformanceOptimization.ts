@@ -126,6 +126,10 @@ export const usePerformanceOptimization = (
       format = 'webp'
     } = options;
 
+    // Suppress unused variable warnings for future implementation
+    void quality;
+    void format;
+
     // Check if browser supports WebP
     // const supportsWebP = document.createElement('canvas')
     //   .toDataURL('image/webp')

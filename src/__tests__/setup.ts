@@ -19,7 +19,7 @@ global.fetch = jest.fn();
 //   port: '3000',
 //   protocol: 'http:',
 //   origin: 'http://localhost:3000',
-//   ancestorOrigins: [] as any,
+//   ancestorOrigins: [] as string[],
 // } as Location;
 
 // Mock window.location using a simple assignment
@@ -36,7 +36,7 @@ const mockLocationInstance = {
   port: '3000',
   protocol: 'http:',
   origin: 'http://localhost:3000',
-  ancestorOrigins: [] as any,
+  ancestorOrigins: [] as string[],
 } as Location;
 
 delete (window as unknown as { location?: Partial<Location> }).location;
