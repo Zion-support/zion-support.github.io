@@ -112,9 +112,9 @@ class PerformanceEnhancer {
     const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
     if (navigation) {
       this.metrics.ttfb = navigation.responseStart - navigation.requestStart;
-      this.metrics.domContentLoaded = navigation.domContentLoadedEventEnd - (navigation as PerformanceNavigationTiming).navigationStart || 0;
-      this.metrics.loadComplete = navigation.loadEventEnd - (navigation as PerformanceNavigationTiming).navigationStart || 0;
-      this.metrics.renderTime = navigation.loadEventEnd - (navigation as PerformanceNavigationTiming).navigationStart || 0;
+      this.metrics.domContentLoaded = navigation.domContentLoadedEventEnd - (navigation.fetchStart || navigation.requestStart) || 0;
+      this.metrics.loadComplete = navigation.loadEventEnd - (navigation.fetchStart || navigation.requestStart) || 0;
+      this.metrics.renderTime = navigation.loadEventEnd - (navigation.fetchStart || navigation.requestStart) || 0;
     }
   }
 

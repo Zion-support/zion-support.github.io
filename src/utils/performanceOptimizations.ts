@@ -3,7 +3,7 @@
  * Collection of utilities for optimizing React application performance
  */
 
-import { useCallback, useMemo, useRef, useEffect, useState } from 'react';
+import React, { useCallback, useMemo, useRef, useEffect, useState } from 'react';
 
 /**
  * Debounce hook for optimizing expensive operations
@@ -27,7 +27,7 @@ export function useDebounce<T>(value: T, delay: number): T {
 /**
  * Throttle hook for limiting function execution frequency
  */
-export function useThrottle<T extends (...args: any[]) => any>(
+export function useThrottle<T extends (...args: unknown[]) => unknown>(
   callback: T,
   delay: number
 ): T {
@@ -51,7 +51,7 @@ export function useDeepMemo<T>(
   factory: () => T,
   deps: React.DependencyList
 ): T {
-  const ref = useRef<{ deps: React.DependencyList; value: T }>();
+  const ref = useRef<{ deps: React.DependencyList; value: T } | null>(null);
 
   if (!ref.current || !deepEqual(ref.current.deps, deps)) {
     ref.current = { deps, value: factory() };
@@ -69,7 +69,7 @@ function deepEqual(a: React.DependencyList, b: React.DependencyList): boolean {
   for (let i = 0; i < a.length; i++) {
     if (a[i] !== b[i]) {
       if (typeof a[i] === 'object' && typeof b[i] === 'object') {
-        if (!deepEqualObject(a[i] as Record<string, any>, b[i] as Record<string, any>)) {
+        if (!deepEqualObject(a[i] as Record<string, unknown>, b[i] as Record<string, unknown>)) {
           return false;
         }
       } else {
@@ -81,7 +81,7 @@ function deepEqual(a: React.DependencyList, b: React.DependencyList): boolean {
   return true;
 }
 
-function deepEqualObject(a: Record<string, any>, b: Record<string, any>): boolean {
+function deepEqualObject(a: Record<string, unknown>, b: Record<string, unknown>): boolean {
   const keysA = Object.keys(a);
   const keysB = Object.keys(b);
   
@@ -90,7 +90,7 @@ function deepEqualObject(a: Record<string, any>, b: Record<string, any>): boolea
   for (const key of keysA) {
     if (a[key] !== b[key]) {
       if (typeof a[key] === 'object' && typeof b[key] === 'object') {
-        if (!deepEqualObject(a[key], b[key])) {
+        if (!deepEqualObject(a[key] as Record<string, unknown>, b[key] as Record<string, unknown>)) {
           return false;
         }
       } else {
@@ -217,21 +217,21 @@ export const bundleOptimizations = {
   /**
    * Lazy load routes for code splitting
    */
-  createLazyRoute: (importFunc: () => Promise<any>) => {
+  createLazyRoute: (importFunc: () => Promise<{ default: React.ComponentType<unknown> }>) => {
     return React.lazy(importFunc);
   },
 
   /**
    * Preload critical routes
    */
-  preloadRoute: (importFunc: () => Promise<any>) => {
+  preloadRoute: (importFunc: () => Promise<{ default: React.ComponentType<unknown> }>) => {
     return () => importFunc();
   },
 
   /**
    * Dynamic imports with error handling
    */
-  safeImport: async (importFunc: () => Promise<any>, fallback?: any) => {
+  safeImport: async (importFunc: () => Promise<unknown>, fallback?: unknown) => {
     try {
       return await importFunc();
     } catch (error) {
@@ -275,7 +275,7 @@ export const memoryOptimizations = {
  */
 export function getMemoryUsage(): { used: number; total: number; limit: number } | null {
   if ('memory' in performance) {
-    const memory = (performance as any).memory;
+    const memory = (performance as { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
     return {
       used: memory.usedJSHeapSize,
       total: memory.totalJSHeapSize,
@@ -308,22 +308,22 @@ export function collectPerformanceMetrics() {
 /**
  * Check performance budget
  */
-export function checkPerformanceBudget(metrics: any): string[] {
+export function checkPerformanceBudget(metrics: Record<string, unknown> = {}): string[] {
   const violations: string[] = [];
   
-  if (metrics.loadTime > 3000) {
+  if ((metrics.loadTime as number) > 3000) {
     violations.push('Page load time exceeds 3s budget');
   }
   
-  if (metrics.firstContentfulPaint > 1800) {
+  if ((metrics.firstContentfulPaint as number) > 1800) {
     violations.push('First Contentful Paint exceeds 1.8s budget');
   }
   
-  if (metrics.largestContentfulPaint > 2500) {
+  if ((metrics.largestContentfulPaint as number) > 2500) {
     violations.push('Largest Contentful Paint exceeds 2.5s budget');
   }
   
-  if (metrics.memory && metrics.memory.used > metrics.memory.limit * 0.8) {
+  if (metrics.memory && (metrics.memory as { used: number; limit: number }).used > (metrics.memory as { used: number; limit: number }).limit * 0.8) {
     violations.push('Memory usage exceeds 80% of limit');
   }
   
@@ -333,7 +333,7 @@ export function checkPerformanceBudget(metrics: any): string[] {
 /**
  * Debounce function
  */
-export function debounce<T extends (...args: any[]) => any>(
+export function debounce<T extends (...args: unknown[]) => unknown>(
   func: T,
   wait: number
 ): (...args: Parameters<T>) => void {
@@ -348,7 +348,7 @@ export function debounce<T extends (...args: any[]) => any>(
 /**
  * Throttle function
  */
-export function throttle<T extends (...args: any[]) => any>(
+export function throttle<T extends (...args: unknown[]) => unknown>(
   func: T,
   limit: number
 ): (...args: Parameters<T>) => void {

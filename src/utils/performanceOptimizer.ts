@@ -83,8 +83,8 @@ class PerformanceOptimizer {
     const fidObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
-        if (entry.processingStart && entry.startTime) {
-          this.metrics.fid = entry.processingStart - entry.startTime;
+        if ((entry as PerformanceEventTiming).processingStart && entry.startTime) {
+          this.metrics.fid = (entry as PerformanceEventTiming).processingStart - entry.startTime;
           this.analyzeMetric('fid', this.metrics.fid);
         }
       });
@@ -112,7 +112,7 @@ class PerformanceOptimizer {
   private observeMemoryUsage(): void {
     if ('memory' in performance) {
       const memory = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory;
-      this.metrics.memory = memory.usedJSHeapSize / 1024 / 1024; // Convert to MB
+      this.metrics.memory = memory?.usedJSHeapSize ? memory.usedJSHeapSize / 1024 / 1024 : 0; // Convert to MB
       this.analyzeMetric('memory', this.metrics.memory);
     }
   }
@@ -135,14 +135,14 @@ class PerformanceOptimizer {
   private observeNetworkPerformance(): void {
     if ('connection' in navigator) {
       const connection = (navigator as Navigator & { connection?: { effectiveType?: string } }).connection;
-      this.metrics.connection = connection.effectiveType || 'unknown';
+      this.metrics.connection = connection?.effectiveType || 'unknown';
     }
 
     // Time to First Byte
     const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
     if (navigation) {
       this.metrics.ttfb = navigation.responseStart - navigation.requestStart;
-      this.metrics.renderTime = navigation.loadEventEnd - navigation.navigationStart;
+      this.metrics.renderTime = navigation.loadEventEnd - (navigation.fetchStart || navigation.requestStart);
       this.analyzeMetric('ttfb', this.metrics.ttfb);
     }
   }

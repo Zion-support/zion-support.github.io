@@ -17,6 +17,10 @@ export interface ErrorReport {
   resolved: boolean;
 }
 
+export function initializeErrorReporting(config?: Record<string, unknown>): void {
+  console.log('Error reporting initialized', config);
+}
+
 export interface ErrorMetrics {
   totalErrors: number;
   errorsByType: Record<string, number>;

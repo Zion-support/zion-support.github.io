@@ -1,5 +1,5 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { accessibilityPerformanceMonitor } from '../utils/accessibilityOptimizations';
+// import { accessibilityPerformanceMonitor } from '../utils/accessibilityOptimizations';
 
 interface Props {
   children: ReactNode;
@@ -135,7 +135,7 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
                 </h1>
                 
                 <p className="text-gray-600 mb-6">
-                  We're sorry, but something unexpected happened. Our team has been notified.
+                  We&apos;re sorry, but something unexpected happened. Our team has been notified.
                 </p>
 
                 {/* Error details for development */}
