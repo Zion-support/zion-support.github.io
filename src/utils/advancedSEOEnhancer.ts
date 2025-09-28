@@ -356,4 +356,5 @@ SEO Report:
   }
 }
 
+// Export the class as seoEnhancer
 export const seoEnhancer = new AdvancedSEOEnhancer();
