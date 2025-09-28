@@ -84,14 +84,10 @@ export default function App(): React.JSX.Element {
   const isLoading = false;
   const loadingProgress = 100;
   const handleScroll = useCallback(() => {}, []);
-<<<<<<< HEAD
   const handleClick = useCallback((event: Event) => {
     // Handle click events for engagement tracking
     console.debug('Click event captured for engagement tracking', event);
   }, []);
-=======
-  const handleClick = useCallback(() => {}, []);
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-b394
   const trackEngagement = useCallback(() => {}, []);
 
   // Performance optimization hook - Temporarily disabled
