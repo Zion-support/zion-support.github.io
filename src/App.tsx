@@ -6,8 +6,13 @@ import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import { seoAnalytics, performanceSEO, seoManager } from './utils/seoEnhanced';
 import { analytics } from './utils/analytics';
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
+import PerformanceDashboard from './components/PerformanceDashboard';
+import RealTimeMonitor from './components/RealTimeMonitor';
+import SystemMetricsDashboard from './components/SystemMetricsDashboard';
 import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
+import EnhancedNotificationSystem from './components/EnhancedNotificationSystem';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
+import EnhancedAnalytics from './components/EnhancedAnalytics';
 import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
 import './index.css';
 
@@ -15,6 +20,7 @@ export default function App(): React.JSX.Element {
   // State for system dashboard and performance optimizer
   const [showSystemDashboard, setShowSystemDashboard] = useState(false);
   const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
+
   // Initialize app with custom configuration
   const { isLoading, loadingProgress, engagementData, handleScroll, handleClick } = useAppInitialization({
     enablePerformanceMonitoring: true,
@@ -29,6 +35,7 @@ export default function App(): React.JSX.Element {
   const { preloadResource } = usePerformanceOptimization({
     enablePreloading: true,
     enableResourceHints: true,
+    enableCriticalCSS: true,
     enableImageOptimization: true,
   });
 
@@ -60,16 +67,6 @@ export default function App(): React.JSX.Element {
       setShowPerformanceOptimizer(prev => !prev);
     }
   }, []);
-  // Memoize the SEO data to prevent unnecessary re-renders
-  const seoData = useMemo(() => ({
-    title: 'Zion Tech Group - Leading AI & Technology Solutions',
-    description: 'Cutting-edge AI, quantum computing, and digital transformation solutions for modern enterprises. Expert consulting, cloud services, and innovative technology implementations.',
-    keywords: ['AI solutions', 'quantum computing', 'digital transformation', 'cloud services', 'enterprise technology', 'machine learning', 'automation', 'blockchain'],
-    ogType: 'website',
-    ogUrl: typeof window !== 'undefined' ? window.location.href : '',
-    ogImage: '/og-image.png',
-    twitterCard: 'summary_large_image' as const
-  }), []);
 
   // Track engagement function
   const trackEngagement = useCallback(() => {
@@ -81,6 +78,17 @@ export default function App(): React.JSX.Element {
     });
   }, [engagementData]);
 
+  // Memoize the SEO data to prevent unnecessary re-renders
+  const seoData = useMemo(() => ({
+    title: 'Zion Tech Group - Leading AI & Technology Solutions',
+    description: 'Cutting-edge AI, quantum computing, and digital transformation solutions for modern enterprises. Expert consulting, cloud services, and innovative technology implementations.',
+    keywords: ['AI solutions', 'quantum computing', 'digital transformation', 'cloud services', 'enterprise technology', 'machine learning', 'automation', 'blockchain'],
+    ogType: 'website',
+    ogUrl: typeof window !== 'undefined' ? window.location.href : '',
+    ogImage: '/og-image.png',
+    twitterCard: 'summary_large_image' as const
+  }), []);
+
   useEffect(() => {
     // Add performance marks for better monitoring
     if (typeof window !== 'undefined' && window.performance && typeof performance.mark === 'function') {
@@ -91,12 +99,19 @@ export default function App(): React.JSX.Element {
     preloadResource('/og-image.png', 'image');
     preloadResource('/favicon.ico', 'image');
 
+    // Use passive listeners for better performance
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    document.addEventListener('click', handleClick, { passive: true });
+    document.addEventListener('keydown', handleKeyDown);
+
+    // Initialize basic systems
+    analytics.initialize();
+    
     // Initialize SEO analytics
     seoAnalytics.trackPageView(window.location.pathname);
     
     // Initialize performance SEO optimizations
     performanceSEO.optimizeImages();
-    performanceSEO.preloadCriticalResources();
     performanceSEO.optimizeFonts();
     performanceSEO.optimizeCSS();
     // Initialize analytics system
@@ -106,9 +121,10 @@ export default function App(): React.JSX.Element {
     // Set default SEO data using the correct method
     seoManager.updateMetaTags(seoData);
 
-    // Use passive listeners for better performance
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    document.addEventListener('click', handleClick, { passive: true });
+    // Basic performance monitoring
+    if (typeof window !== 'undefined') {
+      console.log('🚀 Zion Tech Group App initialized');
+    }
 
     // Mark app as fully initialized
     if (typeof window !== 'undefined' && window.performance && 
@@ -118,11 +134,13 @@ export default function App(): React.JSX.Element {
       performance.measure('app-initialization', 'app-init-start', 'app-init-complete');
     }
 
-    // Basic performance monitoring
-    if (typeof window !== 'undefined') {
-      console.log('🚀 Zion Tech Group App initialized');
-    }
-  }, [seoData, handleScroll, handleClick, preloadResource]);
+    // Cleanup function
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      document.removeEventListener('click', handleClick);
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [handleScroll, handleClick, handleKeyDown, seoData, preloadResource]);
 
   // Main initialization and cleanup effect
   React.useEffect(() => {
@@ -138,30 +156,19 @@ export default function App(): React.JSX.Element {
     };
   }, [trackEngagement]);
 
-  // Add keyboard event listener for system dashboard toggle
-  useEffect(() => {
-    document.addEventListener('keydown', handleKeyDown);
-    return () => {
-      document.removeEventListener('keydown', handleKeyDown);
-    };
-  }, [handleKeyDown]);
-
-  // Cleanup function for event listeners
-  useEffect(() => {
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-      document.removeEventListener('click', handleClick);
-    };
-  }, [handleScroll, handleClick]);
-
   // Show loading screen while initializing
   if (isLoading) {
     return (
-      <EnhancedErrorBoundary>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-          <ModernLoadingSpinner progress={loadingProgress} />
-        </div>
-      </EnhancedErrorBoundary>
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100">
+        <ModernLoadingSpinner
+          size="xl"
+          variant="primary"
+          text="Initializing Zion Tech Group..."
+          showProgress
+          progress={loadingProgress}
+          className="animate-fade-in-scale"
+        />
+      </div>
     );
   }
 
@@ -171,11 +178,55 @@ export default function App(): React.JSX.Element {
         <AppRouter />
         
         {/* System Dashboard - Toggle with Ctrl+Shift+D */}
-        {showSystemDashboard && <EnhancedSystemDashboard />}
+        {showSystemDashboard && (
+          <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
+            <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+              <div className="flex justify-between items-center mb-4">
+                <h2 className="text-2xl font-bold text-gray-900">System Dashboard</h2>
+                <button
+                  onClick={() => setShowSystemDashboard(false)}
+                  className="text-gray-500 hover:text-gray-700"
+                >
+                  ✕
+                </button>
+              </div>
+              <EnhancedSystemDashboard />
+            </div>
+          </div>
+        )}
         
         {/* Performance Optimizer - Toggle with Ctrl+Shift+P */}
-        {showPerformanceOptimizer && <PerformanceOptimizer />}
+        {showPerformanceOptimizer && (
+          <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
+            <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+              <div className="flex justify-between items-center mb-4">
+                <h2 className="text-2xl font-bold text-gray-900">Performance Optimizer</h2>
+                <button
+                  onClick={() => setShowPerformanceOptimizer(false)}
+                  className="text-gray-500 hover:text-gray-700"
+                >
+                  ✕
+                </button>
+              </div>
+              <PerformanceOptimizer />
+            </div>
+          </div>
+        )}
       </div>
+      
+      <PerformanceDashboard />
+      <RealTimeMonitor />
+      <SystemMetricsDashboard 
+        isVisible={showSystemDashboard}
+        onClose={() => setShowSystemDashboard(false)}
+      />
+      <EnhancedNotificationSystem 
+        position="top-right"
+        enableAnimations
+        enableAccessibility
+        maxNotifications={5}
+      />
+      <EnhancedAnalytics />
     </EnhancedErrorBoundary>
   );
 }
