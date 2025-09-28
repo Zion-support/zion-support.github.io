@@ -5,8 +5,8 @@ import {
   XAxis, 
   YAxis, 
   Tooltip, 
-  LineChart, 
-  Line
+  AreaChart,
+  Area
 } from 'recharts';
 import { performanceEnhancements } from '../utils/performanceEnhancements';
 import { bundleOptimizer } from '../utils/bundleOptimizer';
