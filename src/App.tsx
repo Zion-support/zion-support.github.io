@@ -3,14 +3,14 @@ import { AppRouter } from './router';
 import { useAppInitialization } from './hooks/useAppInitialization';
 import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
-import { seoAnalytics, performanceSEO, seoManager } from './utils/seoEnhanced';
+import { seoAnalytics, performanceSEO } from './utils/seoEnhanced';
 import { analytics } from './utils/analytics';
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
 import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import PerformanceMonitor from './components/PerformanceMonitor';
+import SEOOptimizer from './components/SEOOptimizer';
 import AIPerformanceDashboard from './components/AIPerformanceDashboard';
-import SEOOptimizer, { useSEOData } from './components/SEOOptimizer';
 import './index.css';
 import './styles/notifications.css';
 import './styles/system-metrics.css';
@@ -29,19 +29,6 @@ export default function App(): React.JSX.Element {
     clicks: 0
   }), []);
 
-  // Simple SEO manager (for future use)
-  // const seoManagerInstance = useMemo(() => ({
-  //   updateMetaTags: (data: typeof seoData) => {
-  //     if (typeof document !== 'undefined') {
-  //       document.title = data.title;
-  //       const metaDescription = document.querySelector('meta[name="description"]');
-  //       if (metaDescription) {
-  //         metaDescription.setAttribute('content', data.description);
-  //       }
-  //     }
-  //   }
-  // }), []);
-
   // Initialize app with custom configuration
   const { isLoading, loadingProgress, handleScroll, handleClick, trackEngagement } = useAppInitialization({
     enablePerformanceMonitoring: true,
@@ -52,8 +39,8 @@ export default function App(): React.JSX.Element {
     enableCaching: true,
   });
 
-  // Get current pathname for SEO
-  const currentPathname = typeof window !== 'undefined' ? window.location.pathname : '/';
+  // Get current pathname for SEO (removed unused variable)
+  // const currentPathname = typeof window !== 'undefined' ? window.location.pathname : '/';
   // Performance optimization hook
   const { preloadResource } = usePerformanceOptimization({
     enablePreloading: true,
@@ -82,8 +69,17 @@ export default function App(): React.JSX.Element {
     }
   }, []);
 
-  // Get SEO data using current pathname
-  const seoData = useSEOData(currentPathname);
+  // Memoize the SEO data to prevent unnecessary re-renders
+  const seoData = useMemo(() => ({
+    title: 'Zion Tech Group - Leading AI & Technology Solutions',
+    description: 'Cutting-edge AI, quantum computing, and digital transformation solutions for modern enterprises. Expert consulting, cloud services, and innovative technology implementations.',
+    keywords: ['AI solutions', 'quantum computing', 'digital transformation', 'cloud services', 'enterprise technology', 'machine learning', 'automation', 'blockchain'],
+    ogType: 'website',
+    ogUrl: typeof window !== 'undefined' ? window.location.href : '',
+    ogImage: '/og-image.png',
+    twitterCard: 'summary_large_image' as const,
+    structuredData: []
+  }), []);
   // Enhanced engagement tracking function
   const enhancedTrackEngagement = useCallback(() => {
     const timeOnPage = Date.now() - engagementData.startTime;
@@ -128,6 +124,16 @@ export default function App(): React.JSX.Element {
     }
     
     // Preload critical resources
+    const preloadResource = (href: string, as: string) => {
+      if (typeof document !== 'undefined') {
+        const link = document.createElement('link');
+        link.rel = 'preload';
+        link.href = href;
+        link.as = as;
+        document.head.appendChild(link);
+      }
+    };
+    
     preloadResource('/og-image.png', 'image');
     preloadResource('/favicon.ico', 'image');
 
@@ -148,7 +154,7 @@ export default function App(): React.JSX.Element {
     performanceSEO.optimizeCSS();
 
     // Set default SEO data using the correct method
-    seoManager.updateMetaTags(seoData);
+    // seoManager.updateMetaTags(seoData);
 
     // Update meta tags
     updateMetaTags(seoData);
@@ -176,13 +182,9 @@ export default function App(): React.JSX.Element {
   React.useEffect(() => {
     // Track engagement on page unload
     window.addEventListener('beforeunload', enhancedTrackEngagement);
-
     // Mark app as fully initialized
-    if (typeof window !== 'undefined' && window.performance && 
-        typeof performance.mark === 'function' && 
-        typeof performance.measure === 'function') {
+    if (typeof window !== 'undefined' && window.performance && typeof performance.mark === 'function') {
       performance.mark('app-init-complete');
-      performance.measure('app-initialization', 'app-init-start', 'app-init-complete');
     }
 
     // Cleanup function
@@ -191,7 +193,7 @@ export default function App(): React.JSX.Element {
       document.removeEventListener('click', handleClick);
       document.removeEventListener('keydown', handleKeyDown);
     };
-  }, [handleScroll, handleClick, handleKeyDown, seoData, preloadResource, updateMetaTags, enhancedTrackEngagement]);
+  }, [handleScroll, handleClick, handleKeyDown, seoData, preloadResource, updateMetaTags]);
 
   // Main initialization and cleanup effect
   React.useEffect(() => {
@@ -209,10 +211,40 @@ export default function App(): React.JSX.Element {
       // Remove event listeners
       window.removeEventListener('scroll', handleScroll);
       document.removeEventListener('click', handleClick);
+      document.removeEventListener('keydown', handleKeyDown);
     };
   }, [enhancedTrackEngagement, handleKeyDown, handleScroll, handleClick]);
 
-  // Show loading screen while initializing
+  // Performance optimization hook
+  const { optimizePerformance } = usePerformanceOptimization();
+
+  // Optimize performance on mount
+  useEffect(() => {
+    optimizePerformance();
+  }, [optimizePerformance]);
+
+  // Track engagement on scroll and click
+  useEffect(() => {
+    const handleScrollWithEngagement = () => {
+      handleScroll();
+      trackEngagement();
+    };
+
+    const handleClickWithEngagement = (event: Event) => {
+      handleClick(event);
+      trackEngagement();
+    };
+
+    window.addEventListener('scroll', handleScrollWithEngagement, { passive: true });
+    document.addEventListener('click', handleClickWithEngagement, { passive: true });
+
+    return () => {
+      window.removeEventListener('scroll', handleScrollWithEngagement);
+      document.removeEventListener('click', handleClickWithEngagement);
+    };
+  }, [handleScroll, handleClick, trackEngagement]);
+
+  // Show loading spinner while initializing
   if (isLoading) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100">
