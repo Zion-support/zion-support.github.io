@@ -6,12 +6,6 @@ import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
 import { seoAnalytics, performanceSEO, seoManager } from './utils/seoEnhanced';
 import { analytics } from './utils/analytics';
-// import { performanceOptimizer } from './utils/performanceOptimizations';
-// import { accessibilityEnhancer } from './utils/accessibilityEnhancements';
-// import { seoOptimizer } from './utils/seoOptimizations';
-// import PerformanceDashboard from './components/PerformanceDashboard';
-// import RealTimeMonitor from './components/RealTimeMonitor';
-// import SystemMetricsDashboard from './components/SystemMetricsDashboard';
 import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
 import EnhancedNotificationSystem from './components/EnhancedNotificationSystem';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
@@ -45,333 +39,153 @@ export default function App(): React.JSX.Element {
   const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
   const [showAIDashboard, setShowAIDashboard] = useState(false);
   const [showRealTimeMetrics, setShowRealTimeMetrics] = useState(false);
-<<<<<<< HEAD
   const [showSEOOptimizer, setShowSEOOptimizer] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
-  const [showKeyboardHelp, setShowKeyboardHelp] = useState(false);
-  const [showCommandPalette, setShowCommandPalette] = useState(false);
-  const [showRealTimeMonitor, setShowRealTimeMonitor] = useState(false);
-  const [showSystemHealth, setShowSystemHealth] = useState(false);
-  // const [userPreferences, setUserPreferences] = useState({
-  //   theme: 'auto',
-  //   animations: true,
-  //   notifications: true,
-  //   analytics: true
-  // });
 
-=======
-  
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-3086
   // Performance metrics state
   const [performanceMetrics, setPerformanceMetrics] = useState({
-    memoryUsage: 0,
+    loadTime: 0,
     renderTime: 0,
-    networkLatency: 0,
+    memoryUsage: 0,
     errorCount: 0
   });
 
-  // Engagement tracking data
-  const engagementData = useMemo(() => ({
-    startTime: Date.now(),
-    scrollDepth: 0,
-    clicks: 0
-  }), []);
-
-<<<<<<< HEAD
-=======
   // Memoize SEO data to prevent unnecessary re-renders
   const seoData = useMemo(() => ({
     title: 'Zion Tech Group - Advanced AI and IT Solutions',
     description: 'Leading provider of AI-powered IT solutions, cloud services, and digital transformation consulting.',
-    keywords: ['AI', 'IT solutions', 'cloud services', 'digital transformation', 'technology consulting'],
-    ogImage: '/og-image.jpg',
-    ogUrl: window.location.href,
-    ogType: 'website' as const,
-    twitterCard: 'summary_large_image' as const,
-    canonicalUrl: window.location.href
+    keywords: ['AI solutions', 'IT consulting', 'cloud services', 'digital transformation'],
+    canonicalUrl: typeof window !== 'undefined' ? window.location.href : ''
   }), []);
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-3086
+
   // Initialize app with custom configuration
   const { isLoading, loadingProgress, handleScroll, handleClick, trackEngagement } = useAppInitialization({
     enablePerformanceMonitoring: true,
-    enableAccessibility: true,
-    enableSecurity: true,
     enableAnalytics: true,
-    enableNotifications: true,
-    enableCaching: true,
+    enableAccessibility: true
   });
 
-  // Performance optimization hook
-  const { preloadResource } = usePerformanceOptimization({
-    enablePreloading: true,
-    enableResourceHints: true,
-    enableCriticalCSS: true,
-    enableImageOptimization: true,
-  });
-
-<<<<<<< HEAD
-  // Get SEO data using current pathname
-  const seoData = useSEOData(currentPathname);
-=======
   // Optimized keyboard handler for system dashboard toggle
   const handleKeyDown = useCallback((event: KeyboardEvent) => {
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'D') {
-      event.preventDefault();
-      setShowSystemDashboard(prev => !prev);
-    }
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'P') {
-      event.preventDefault();
-      setShowPerformanceOptimizer(prev => !prev);
-    }
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'R') {
-      event.preventDefault();
-      setShowRealTimeMetrics((prev: boolean) => !prev);
-    }
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'M') {
-      event.preventDefault();
-      setShowPerformanceMonitor(prev => !prev);
-    }
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'A') {
-      event.preventDefault();
-      setShowAIDashboard(prev => !prev);
+    if (event.ctrlKey && event.shiftKey) {
+      switch (event.key) {
+        case 'D':
+          event.preventDefault();
+          setShowSystemDashboard(prev => !prev);
+          break;
+        case 'P':
+          event.preventDefault();
+          setShowPerformanceOptimizer(prev => !prev);
+          break;
+        case 'M':
+          event.preventDefault();
+          setShowPerformanceMonitor(prev => !prev);
+          break;
+        case 'A':
+          event.preventDefault();
+          setShowAIDashboard(prev => !prev);
+          break;
+        case 'R':
+          event.preventDefault();
+          setShowRealTimeMetrics(prev => !prev);
+          break;
+        case 'S':
+          event.preventDefault();
+          setShowSEOOptimizer(prev => !prev);
+          break;
+        case 'H':
+          event.preventDefault();
+          // Toggle help modal
+          break;
+      }
     }
   }, []);
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-3086
 
   // Enhanced track engagement function
+  const engagementData = useMemo(() => ({
+    clicks: 0,
+    scrollDepth: 0,
+    startTime: Date.now()
+  }), []);
+
   const enhancedTrackEngagement = useCallback(() => {
-    const timeOnPage = Date.now() - engagementData.startTime;
-    seoAnalytics.trackUserEngagement(window.location.pathname, {
-      timeOnPage,
-      scrollDepth: engagementData.scrollDepth,
-      clicks: engagementData.clicks,
-    });
     trackEngagement();
-  }, [engagementData.clicks, engagementData.scrollDepth, engagementData.startTime, trackEngagement]);
-
-<<<<<<< HEAD
-  // Memoize the SEO data to prevent unnecessary re-renders
-  const memoizedSeoData = useMemo(() => ({
-    title: 'Zion Tech Group - Leading AI & Technology Solutions',
-    description: 'Cutting-edge AI, quantum computing, and digital transformation solutions for modern enterprises. Expert consulting, cloud services, and innovative technology implementations.',
-    keywords: ['AI solutions', 'quantum computing', 'digital transformation', 'cloud services', 'enterprise technology', 'machine learning', 'automation', 'blockchain'],
-    canonical: `https://zion.app${currentPathname}`,
-    ogTitle: 'Zion Tech Group - AI & Technology Solutions',
-    ogDescription: 'Transform your business with cutting-edge AI and technology solutions.',
-    ogImage: 'https://zion.app/og-image.jpg',
-    twitterCard: 'summary_large_image',
-    twitterTitle: 'Zion Tech Group - AI & Technology Solutions',
-    twitterDescription: 'Transform your business with cutting-edge AI and technology solutions.',
-    twitterImage: 'https://zion.app/twitter-image.jpg'
-  }), [currentPathname]);
-
-  // Performance optimization hook
-  // const { getPerformanceMetrics } = usePerformanceOptimization();
-
-  // Initialize comprehensive enhancements
-=======
+  }, [trackEngagement]);
 
   // Update meta tags function
-  const updateMetaTags = useCallback((data: {
-    title: string;
-    description: string;
-    keywords: string[];
-    ogType: string;
-    ogUrl: string;
-    ogImage: string;
-    twitterCard: string;
-  }) => {
-    if (typeof window !== 'undefined') {
-      // Update title
-      document.title = data.title;
-      
-      // Update meta description
-      let metaDescription = document.querySelector('meta[name="description"]');
-      if (!metaDescription) {
-        metaDescription = document.createElement('meta');
-        metaDescription.setAttribute('name', 'description');
-        document.head.appendChild(metaDescription);
-      }
-      if (metaDescription) {
-        metaDescription.setAttribute('content', data.description);
-      }
+  const updateMetaTags = useCallback((data: typeof seoData) => {
+    if (typeof document === 'undefined') return;
+    
+    // Update title
+    document.title = data.title;
+    
+    // Update meta description
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', data.description);
+    }
+    
+    // Update canonical URL
+    const canonicalLink = document.querySelector('link[rel="canonical"]');
+    if (canonicalLink) {
+      canonicalLink.setAttribute('href', data.canonicalUrl);
     }
   }, []);
 
   // Main initialization effect
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-3086
   useEffect(() => {
     try {
-      const enhancements = getComprehensiveEnhancements();
-      enhancements.initialize();
+      // Initialize core systems
+      analytics.initialize();
+      performanceSEO.optimizeImages();
+      performanceSEO.optimizeFonts();
+      performanceSEO.optimizeCSS();
       
-      // Initialize individual enhancement systems
-      enhancedPerformanceMonitor.startMonitoring();
-      enhancedAnalytics.initialize();
+      // Initialize advanced systems
       advancedCacheSystem.initialize();
       new AdvancedAutomationSystem().initialize();
-<<<<<<< HEAD
+      
       // Initialize enhancement systems
       new AccessibilityEnhancer();
       new SecurityEnhancer();
-=======
-      // new AccessibilityEnhancer().initialize();
-      // new SecurityEnhancer().initialize();
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-3086
     } catch (error) {
       console.warn('Some enhancement systems failed to initialize:', error);
     }
-    
-    // Initialize basic systems
-    analytics.initialize();
-    
-    // Initialize SEO analytics
-    seoAnalytics.trackPageView(window.location.pathname);
-    
-    // Initialize performance SEO optimizations
-    performanceSEO.optimizeImages();
-    performanceSEO.optimizeFonts();
-    performanceSEO.optimizeCSS();
-<<<<<<< HEAD
 
-    // Initialize new utility systems
-    performanceAlerts.checkMetric('loadTime', performance.now(), 3000);
-    accessibilityUtils.announce('Application initialized');
-    securityUtils.getSecurityScore();
-=======
-    
-    // Initialize advanced optimization systems
-    // These are initialized automatically when imported
-    void performanceOptimizer;
-    void accessibilityEnhancer;
-    void seoOptimizer;
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-3086
-
-    // Set default SEO data using the correct method
-    seoManager.updateMetaTags(seoData);
-
-    // Update meta tags
-<<<<<<< HEAD
-    updateMetaTags(memoizedSeoData);
-  }, [seoData]);
-=======
+    // Set default SEO data
     updateMetaTags(seoData);
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-3086
 
-    // Basic performance monitoring
-    if (typeof window !== 'undefined') {
-      console.log('🚀 Zion Tech Group App initialized');
-      
-      // Add performance observer for better monitoring
-      if ('PerformanceObserver' in window) {
-        try {
-          const observer = new PerformanceObserver((list) => {
-            for (const entry of list.getEntries()) {
-              if (entry.entryType === 'navigation') {
-                console.log('Navigation timing:', entry);
-              }
-            }
-          });
-          observer.observe({ entryTypes: ['navigation', 'paint', 'largest-contentful-paint'] });
-        } catch (error) {
-          console.warn('Performance observer failed to initialize:', error);
-        }
-      }
-    }
-
-<<<<<<< HEAD
-    // Update meta keywords
-    const metaKeywords = document.querySelector('meta[name="keywords"]');
-    if (metaKeywords) {
-      metaKeywords.setAttribute('content', data.keywords.join(', '));
-    }
-=======
     // Add performance marks for better monitoring
     if (typeof window !== 'undefined' && window.performance && typeof performance.mark === 'function') {
-      performance.mark('app-init-start');
+      performance.mark('app-initialized');
     }
-    
+
     // Preload critical resources
+    const preloadResource = (href: string, as: string) => {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.href = href;
+      link.as = as;
+      document.head.appendChild(link);
+    };
+    
     preloadResource('/og-image.png', 'image');
     preloadResource('/favicon.ico', 'image');
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-3086
 
     // Use passive listeners for better performance
-    window.addEventListener('scroll', handleScroll, { passive: true });
+    document.addEventListener('scroll', handleScroll, { passive: true });
     document.addEventListener('click', handleClick, { passive: true });
     document.addEventListener('keydown', handleKeyDown);
 
-<<<<<<< HEAD
-    // Update Open Graph tags
-    const ogTitle = document.querySelector('meta[property="og:title"]');
-    if (ogTitle) {
-      ogTitle.setAttribute('content', data.ogTitle);
-    }
-
-    const ogDescription = document.querySelector('meta[property="og:description"]');
-    if (ogDescription) {
-      ogDescription.setAttribute('content', data.ogDescription);
-    }
-
-    const ogImage = document.querySelector('meta[property="og:image"]');
-    if (ogImage) {
-      ogImage.setAttribute('content', data.ogImage);
-    }
-
-    // Update Twitter Card tags
-    const twitterCard = document.querySelector('meta[name="twitter:card"]');
-    if (twitterCard) {
-      twitterCard.setAttribute('content', data.twitterCard);
-    }
-
-    const twitterTitle = document.querySelector('meta[name="twitter:title"]');
-    if (twitterTitle) {
-      twitterTitle.setAttribute('content', data.twitterTitle);
-    }
-
-    const twitterDescription = document.querySelector('meta[name="twitter:description"]');
-    if (twitterDescription) {
-      twitterDescription.setAttribute('content', data.twitterDescription);
-    }
-
-    const twitterImage = document.querySelector('meta[name="twitter:image"]');
-    if (twitterImage) {
-      twitterImage.setAttribute('content', data.twitterImage);
-    }
-  }, []);
-
-  // Main initialization and cleanup effect
-  React.useEffect(() => {
-    // Add performance marks for better monitoring
-    if (typeof window !== 'undefined' && window.performance && typeof performance.mark === 'function') {
-      performance.mark('app-init-start');
-    }
-    
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-3086
     // Track engagement on page unload
     window.addEventListener('beforeunload', enhancedTrackEngagement);
 
-    // Mark app as fully initialized
-    if (typeof window !== 'undefined' && window.performance && 
-        typeof performance.mark === 'function' && 
-        typeof performance.measure === 'function') {
-      performance.mark('app-init-complete');
-      performance.measure('app-initialization', 'app-init-start', 'app-init-complete');
-    }
-
-    // Cleanup function
     return () => {
-      window.removeEventListener('beforeunload', enhancedTrackEngagement);
-      window.removeEventListener('scroll', handleScroll);
+      document.removeEventListener('scroll', handleScroll);
       document.removeEventListener('click', handleClick);
       document.removeEventListener('keydown', handleKeyDown);
     };
-<<<<<<< HEAD
-  }, [handleScroll, handleClick, enhancedTrackEngagement]);
-=======
-  }, [handleScroll, handleClick, handleKeyDown, seoData, preloadResource, updateMetaTags, enhancedTrackEngagement]);
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-3086
+  }, [handleScroll, handleClick, handleKeyDown, seoData, updateMetaTags, enhancedTrackEngagement]);
 
   // Real-time performance metrics monitoring
   useEffect(() => {
@@ -379,496 +193,104 @@ export default function App(): React.JSX.Element {
 
     const updateMetrics = () => {
       if (typeof window !== 'undefined' && window.performance) {
-        const memory = (window.performance as Performance & { memory?: { usedJSHeapSize: number } }).memory;
-        const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+        const memory = (performance as any).memory;
         
-        setPerformanceMetrics(prev => ({
-          memoryUsage: memory ? Math.round(memory.usedJSHeapSize / 1024 / 1024) : 0,
-          renderTime: navigation ? Math.round(navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart) : 0,
-          networkLatency: navigation ? Math.round(navigation.responseEnd - navigation.requestStart) : 0,
-          errorCount: prev.errorCount
-        }));
+        setPerformanceMetrics({
+          loadTime: navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0,
+          renderTime: navigation ? navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart : 0,
+          memoryUsage: memory ? memory.usedJSHeapSize / 1024 / 1024 : 0,
+          errorCount: 0 // This would be tracked by error monitoring
+        });
       }
     };
 
+    updateMetrics();
     const interval = setInterval(updateMetrics, 1000);
-    updateMetrics(); // Initial update
-
     return () => clearInterval(interval);
   }, [showRealTimeMetrics]);
 
-<<<<<<< HEAD
-  // Enhanced keyboard shortcuts
-  useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {
-      // Dashboard shortcuts
-      if (event.ctrlKey && event.shiftKey) {
-        event.preventDefault();
-        switch (event.key) {
-          case 'D':
-            setShowSystemDashboard(!showSystemDashboard);
-            break;
-          case 'P':
-            setShowPerformanceOptimizer(!showPerformanceOptimizer);
-            break;
-          case 'M':
-            setShowPerformanceMonitor(!showPerformanceMonitor);
-            break;
-          case 'A':
-            setShowAIDashboard(!showAIDashboard);
-            break;
-          case 'S':
-            setShowSEOOptimizer(!showSEOOptimizer);
-            break;
-          case 'T':
-            setIsDarkMode(!isDarkMode);
-            break;
-          case 'R':
-            setShowRealTimeMetrics(!showRealTimeMetrics);
-            setShowRealTimeMonitor(!showRealTimeMonitor);
-            break;
-          case 'H':
-            setShowSystemHealth(!showSystemHealth);
-            break;
-          case 'K':
-            setShowKeyboardHelp(!showKeyboardHelp);
-            break;
-          case 'N':
-            // Show notification
-            if ((window as any).notifications) {
-              (window as any).notifications.add({
-                type: 'info',
-                title: 'Notification Test',
-                message: 'This is a test notification!',
-                duration: 3000
-              });
-            }
-            break;
-          case 'C':
-            // Clear notifications
-            if ((window as any).notifications) {
-              (window as any).notifications.clear();
-            }
-            break;
-        }
-      }
-      
-      // Command palette shortcut
-      if (event.ctrlKey && event.key === 'k') {
-        event.preventDefault();
-        setShowCommandPalette(!showCommandPalette);
-      }
-      
-      // Help shortcut
-      if (event.ctrlKey && event.key === '/') {
-        event.preventDefault();
-        setShowKeyboardHelp(!showKeyboardHelp);
-      }
-      
-      // Escape to close all modals
-      if (event.key === 'Escape') {
-        setShowSystemDashboard(false);
-        setShowPerformanceOptimizer(false);
-        setShowPerformanceMonitor(false);
-        setShowAIDashboard(false);
-        setShowSEOOptimizer(false);
-        setShowKeyboardHelp(false);
-        setShowCommandPalette(false);
-        setShowRealTimeMonitor(false);
-        setShowSystemHealth(false);
-        setShowRealTimeMetrics(false);
-      }
-    };
-
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
-  }, [showSystemDashboard, showPerformanceOptimizer, showPerformanceMonitor, showAIDashboard, showSEOOptimizer, isDarkMode, showKeyboardHelp, showCommandPalette, showRealTimeMonitor, showSystemHealth, showRealTimeMetrics]);
-
   // Command palette commands
   const commandPaletteCommands = [
-    {
-      id: 'toggle-system-dashboard',
-      title: 'Toggle System Dashboard',
-      description: 'Open or close the system dashboard',
-      category: 'Dashboard',
-      action: () => setShowSystemDashboard(!showSystemDashboard),
-      shortcut: 'Ctrl+Shift+D'
-    },
-    {
-      id: 'toggle-performance-optimizer',
-      title: 'Toggle Performance Optimizer',
-      description: 'Open or close the performance optimizer',
-      category: 'Dashboard',
-      action: () => setShowPerformanceOptimizer(!showPerformanceOptimizer),
-      shortcut: 'Ctrl+Shift+P'
-    },
-    {
-      id: 'toggle-performance-monitor',
-      title: 'Toggle Performance Monitor',
-      description: 'Open or close the performance monitor',
-      category: 'Dashboard',
-      action: () => setShowPerformanceMonitor(!showPerformanceMonitor),
-      shortcut: 'Ctrl+Shift+M'
-    },
-    {
-      id: 'toggle-ai-dashboard',
-      title: 'Toggle AI Dashboard',
-      description: 'Open or close the AI performance dashboard',
-      category: 'Dashboard',
-      action: () => setShowAIDashboard(!showAIDashboard),
-      shortcut: 'Ctrl+Shift+A'
-    },
-    {
-      id: 'toggle-seo-optimizer',
-      title: 'Toggle SEO Optimizer',
-      description: 'Open or close the SEO optimizer',
-      category: 'Dashboard',
-      action: () => setShowSEOOptimizer(!showSEOOptimizer),
-      shortcut: 'Ctrl+Shift+S'
-    },
-    {
-      id: 'toggle-theme',
-      title: 'Toggle Theme',
-      description: 'Switch between dark and light theme',
-      category: 'Appearance',
-      action: () => setIsDarkMode(!isDarkMode),
-      shortcut: 'Ctrl+Shift+T'
-    },
-    {
-      id: 'toggle-real-time-monitor',
-      title: 'Toggle Real-Time Monitor',
-      description: 'Open or close the real-time performance monitor',
-      category: 'Dashboard',
-      action: () => setShowRealTimeMonitor(!showRealTimeMonitor),
-      shortcut: 'Ctrl+Shift+R'
-    },
-    {
-      id: 'toggle-system-health',
-      title: 'Toggle System Health',
-      description: 'Open or close the system health dashboard',
-      category: 'Dashboard',
-      action: () => setShowSystemHealth(!showSystemHealth),
-      shortcut: 'Ctrl+Shift+H'
-    },
-    {
-      id: 'show-keyboard-help',
-      title: 'Show Keyboard Shortcuts',
-      description: 'Display all available keyboard shortcuts',
-      category: 'Help',
-      action: () => setShowKeyboardHelp(true),
-      shortcut: 'Ctrl+Shift+K'
-    },
-    {
-      id: 'show-notifications',
-      title: 'Test Notifications',
-      description: 'Show a test notification',
-      category: 'Testing',
-      action: () => {
-        if ((window as any).notifications) {
-          (window as any).notifications.add({
-            type: 'success',
-            title: 'Command Executed',
-            message: 'Test notification sent successfully!',
-            duration: 3000
-          });
-        }
-      },
-      shortcut: 'Ctrl+Shift+N'
-    }
+    { id: 'toggle-dashboard', title: 'Toggle System Dashboard', description: 'Open system dashboard', category: 'System', action: () => setShowSystemDashboard(prev => !prev) },
+    { id: 'toggle-optimizer', title: 'Toggle Performance Optimizer', description: 'Open performance optimizer', category: 'Performance', action: () => setShowPerformanceOptimizer(prev => !prev) },
+    { id: 'toggle-monitor', title: 'Toggle Performance Monitor', description: 'Open performance monitor', category: 'Performance', action: () => setShowPerformanceMonitor(prev => !prev) },
+    { id: 'toggle-ai-dashboard', title: 'Toggle AI Dashboard', description: 'Open AI dashboard', category: 'AI', action: () => setShowAIDashboard(prev => !prev) },
+    { id: 'toggle-metrics', title: 'Toggle Real-time Metrics', description: 'Open real-time metrics', category: 'Performance', action: () => setShowRealTimeMetrics(prev => !prev) },
+    { id: 'toggle-seo', title: 'Toggle SEO Optimizer', description: 'Open SEO optimizer', category: 'SEO', action: () => setShowSEOOptimizer(prev => !prev) }
   ];
 
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-3086
-  // Track engagement on scroll and click
-  useEffect(() => {
-    const handleScrollWithEngagement = () => {
-      handleScroll();
-      trackEngagement();
-    };
-
-    const handleClickWithEngagement = (event: Event) => {
-      handleClick(event);
-      trackEngagement();
-    };
-
-    window.addEventListener('scroll', handleScrollWithEngagement, { passive: true });
-    document.addEventListener('click', handleClickWithEngagement, { passive: true });
-
-    return () => {
-      window.removeEventListener('scroll', handleScrollWithEngagement);
-      document.removeEventListener('click', handleClickWithEngagement);
-    };
-  }, [handleScroll, handleClick, trackEngagement]);
-
-  // Show loading spinner while initializing
   if (isLoading) {
-    return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100">
-        <ModernLoadingSpinner
-          size="xl"
-          variant="primary"
-          text="Initializing Zion Tech Group..."
-          showProgress
-          progress={loadingProgress}
-          className="animate-fade-in-scale"
-        />
-      </div>
-    );
+    return <ModernLoadingSpinner progress={loadingProgress} />;
   }
 
   return (
     <EnhancedErrorBoundary>
-      <div 
-        className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"
-        role="main"
-        aria-label="Zion Tech Group Application"
-      >
+      <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
         <AppRouter />
         
         {/* System Dashboard */}
         {showSystemDashboard && (
-          <div 
-            className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center"
-            role="dialog"
-            aria-modal="true"
-            aria-labelledby="system-dashboard-title"
-          >
-            <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
-              <div className="flex justify-between items-center mb-4">
-                <h2 id="system-dashboard-title" className="text-2xl font-bold text-gray-900">System Dashboard</h2>
-                <button
-                  onClick={() => setShowSystemDashboard(false)}
-                  className="text-gray-500 hover:text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded"
-                  aria-label="Close system dashboard"
-                >
-                  ✕
-                </button>
-              </div>
-              <EnhancedSystemDashboard />
-            </div>
-          </div>
+          <EnhancedSystemDashboard
+            onClose={() => setShowSystemDashboard(false)}
+          />
         )}
 
         {/* Performance Optimizer */}
         {showPerformanceOptimizer && (
-          <div 
-            className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center"
-            role="dialog"
-            aria-modal="true"
-            aria-labelledby="performance-optimizer-title"
-          >
-            <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
-              <div className="flex justify-between items-center mb-4">
-                <h2 id="performance-optimizer-title" className="text-2xl font-bold text-gray-900">Performance Optimizer</h2>
-                <button
-                  onClick={() => setShowPerformanceOptimizer(false)}
-                  className="text-gray-500 hover:text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded"
-                  aria-label="Close performance optimizer"
-                >
-                  ✕
-                </button>
-              </div>
-              <PerformanceOptimizer />
-            </div>
-          </div>
+          <PerformanceOptimizer
+            isVisible={showPerformanceOptimizer}
+            onClose={() => setShowPerformanceOptimizer(false)}
+          />
         )}
 
-<<<<<<< HEAD
-        {/* Performance Monitor - Toggle with Ctrl+Shift+M */}
-=======
         {/* Performance Monitor */}
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-3086
         {showPerformanceMonitor && (
-          <div 
-            className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center"
-            role="dialog"
-            aria-modal="true"
-            aria-labelledby="performance-monitor-title"
-          >
-            <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
-              <div className="flex justify-between items-center mb-4">
-                <h2 id="performance-monitor-title" className="text-2xl font-bold text-gray-900">Performance Monitor</h2>
-                <button
-                  onClick={() => setShowPerformanceMonitor(false)}
-                  className="text-gray-500 hover:text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded"
-                  aria-label="Close performance monitor"
-                >
-                  ✕
-                </button>
-              </div>
-              <PerformanceMonitor />
-            </div>
-          </div>
+          <PerformanceMonitor />
         )}
 
-<<<<<<< HEAD
-        {/* SEO Optimizer - Toggle with Ctrl+Shift+S */}
-        {showSEOOptimizer && (
-          <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
-            <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
-              <div className="flex justify-between items-center mb-4">
-                <h2 className="text-2xl font-bold">SEO Optimizer</h2>
-                <button
-                  onClick={() => setShowSEOOptimizer(false)}
-                  className="text-gray-500 hover:text-gray-700 text-2xl"
-                >
-                  ✕
-                </button>
-              </div>
-              <SEOOptimizer seoData={seoData} />
-            </div>
-          </div>
-        )}
-        
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-3086
-        {/* AI Performance Dashboard - Toggle with Ctrl+Shift+A */}
+        {/* AI Performance Dashboard */}
         <AIPerformanceDashboard
           isVisible={showAIDashboard}
           onClose={() => setShowAIDashboard(false)}
         />
 
-        {/* Real-time Metrics Display */}
-        {showRealTimeMetrics && (
-          <div className="fixed top-4 right-4 z-50 bg-black bg-opacity-90 text-white p-4 rounded-lg shadow-lg min-w-[300px]">
-            <div className="flex justify-between items-center mb-3">
-              <h3 className="text-lg font-bold">Real-time Metrics</h3>
-              <button
-                onClick={() => setShowRealTimeMetrics(false)}
-                className="text-gray-300 hover:text-white text-xl"
-              >
-                ✕
-              </button>
-            </div>
-            <div className="space-y-2 text-sm">
-              <div className="flex justify-between">
-                <span>Memory Usage:</span>
-                <span className="text-green-400">{performanceMetrics.memoryUsage} MB</span>
-              </div>
-              <div className="flex justify-between">
-                <span>Render Time:</span>
-                <span className="text-blue-400">{performanceMetrics.renderTime} ms</span>
-              </div>
-              <div className="flex justify-between">
-                <span>Network Latency:</span>
-                <span className="text-yellow-400">{performanceMetrics.networkLatency} ms</span>
-              </div>
-              <div className="flex justify-between">
-                <span>Errors:</span>
-                <span className="text-red-400">{performanceMetrics.errorCount}</span>
-              </div>
-            </div>
-          </div>
-        )}
-<<<<<<< HEAD
-
         {/* Real-Time Performance Monitor */}
-        <RealTimePerformanceMonitor
-          isVisible={showRealTimeMonitor}
-          onClose={() => setShowRealTimeMonitor(false)}
-        />
+        {showRealTimeMetrics && (
+          <RealTimePerformanceMonitor
+            isVisible={showRealTimeMetrics}
+            onClose={() => setShowRealTimeMetrics(false)}
+          />
+        )}
 
         {/* System Health Dashboard */}
         <SystemHealthDashboard
-          isVisible={showSystemHealth}
-          onClose={() => setShowSystemHealth(false)}
+          isVisible={false}
+          onClose={() => {}}
         />
 
-        {/* New Components */}
+        {/* Notification System */}
         <NotificationSystem />
-        
-        <KeyboardShortcutsHelp
-          isVisible={showKeyboardHelp}
-          onClose={() => setShowKeyboardHelp(false)}
-        />
-        
+
+        {/* Command Palette */}
         <CommandPalette
-          isVisible={showCommandPalette}
-          onClose={() => setShowCommandPalette(false)}
+          isVisible={false}
+          onClose={() => {}}
           commands={commandPaletteCommands}
         />
 
-        {/* Theme Toggle Button */}
-        <button
-          onClick={() => setIsDarkMode(!isDarkMode)}
-          className="fixed bottom-4 right-4 z-40 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-colors duration-200"
-          title="Toggle Theme (Ctrl+Shift+T)"
-        >
-          {isDarkMode ? '☀️' : '🌙'}
-        </button>
+        {/* Keyboard Shortcuts Help */}
+        <KeyboardShortcutsHelp
+          isVisible={false}
+          onClose={() => {}}
+        />
 
-        {/* Keyboard Shortcuts Help Button */}
-        <button
-          onClick={() => setShowKeyboardHelp(true)}
-          className="fixed bottom-4 right-20 z-40 bg-gray-600 hover:bg-gray-700 text-white p-3 rounded-full shadow-lg transition-colors duration-200"
-          title="Keyboard Shortcuts (Ctrl+/)"
-        >
-          ⌨️
-        </button>
-
-        {/* Command Palette Button */}
-        <button
-          onClick={() => setShowCommandPalette(true)}
-          className="fixed bottom-4 right-36 z-40 bg-purple-600 hover:bg-purple-700 text-white p-3 rounded-full shadow-lg transition-colors duration-200"
-          title="Command Palette (Ctrl+K)"
-        >
-          ⌘
-        </button>
-
-        {/* Real-Time Monitor Button */}
-        <button
-          onClick={() => setShowRealTimeMonitor(true)}
-          className="fixed bottom-4 right-52 z-40 bg-orange-600 hover:bg-orange-700 text-white p-3 rounded-full shadow-lg transition-colors duration-200"
-          title="Real-Time Monitor (Ctrl+Shift+R)"
-        >
-          📊
-        </button>
-
-        {/* System Health Button */}
-        <button
-          onClick={() => setShowSystemHealth(true)}
-          className="fixed bottom-4 right-68 z-40 bg-green-600 hover:bg-green-700 text-white p-3 rounded-full shadow-lg transition-colors duration-200"
-          title="System Health (Ctrl+Shift+H)"
-        >
-          🏥
-        </button>
-
-        {/* Keyboard Shortcuts Help Panel */}
-        <div className="fixed bottom-4 left-4 z-40 bg-gray-800 text-white p-3 rounded-lg shadow-lg text-sm opacity-75 hover:opacity-100 transition-opacity duration-200">
-          <div className="font-semibold mb-1">Keyboard Shortcuts:</div>
-          <div>Ctrl+Shift+D: System Dashboard</div>
-          <div>Ctrl+Shift+P: Performance Optimizer</div>
-          <div>Ctrl+Shift+M: Performance Monitor</div>
-          <div>Ctrl+Shift+A: AI Dashboard</div>
-          <div>Ctrl+Shift+S: SEO Optimizer</div>
-          <div>Ctrl+Shift+T: Toggle Theme</div>
-          <div>Ctrl+Shift+R: Real-Time Monitor</div>
-          <div>Ctrl+Shift+H: System Health</div>
-          <div>Ctrl+Shift+K: Keyboard Help</div>
-          <div>Ctrl+K: Command Palette</div>
-          <div>Escape: Close All</div>
-        </div>
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-3086
+        {/* SEO Optimizer */}
+        <SEOOptimizer seoData={seoData} />
+        
+        {/* Enhanced Analytics */}
+        <EnhancedAnalytics />
       </div>
-      
-      <PerformanceDashboard 
-        isVisible={false}
-        onClose={() => {}}
-      />
-      <RealTimeMonitor />
-      <SystemMetricsDashboard 
-        isVisible={showSystemDashboard}
-        onClose={() => setShowSystemDashboard(false)}
-      />
-      <EnhancedNotificationSystem 
-        position="top-right"
-        enableAnimations
-        enableAccessibility
-        maxNotifications={5}
-      />
-      <SEOOptimizer seoData={seoData} />
-      <EnhancedAnalytics />
     </EnhancedErrorBoundary>
   );
 }
