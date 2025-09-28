@@ -55,7 +55,11 @@ const ComprehensivePerformanceMonitor: React.FC<ComprehensivePerformanceMonitorP
         type: 'warning',
         message: 'First Contentful Paint is slow',
         timestamp: new Date(),
-        resolved: false
+        resolved: false,
+        metric: 'FCP',
+        value: currentMetrics.fcp,
+        threshold: 1800,
+        suggestion: 'Optimize critical rendering path'
       });
     }
 
@@ -65,7 +69,11 @@ const ComprehensivePerformanceMonitor: React.FC<ComprehensivePerformanceMonitorP
         type: 'error',
         message: 'Largest Contentful Paint is too slow',
         timestamp: new Date(),
-        resolved: false
+        resolved: false,
+        metric: 'LCP',
+        value: currentMetrics.lcp,
+        threshold: 2500,
+        suggestion: 'Optimize images and fonts'
       });
     }
 
@@ -75,7 +83,11 @@ const ComprehensivePerformanceMonitor: React.FC<ComprehensivePerformanceMonitorP
         type: 'warning',
         message: 'Cumulative Layout Shift detected',
         timestamp: new Date(),
-        resolved: false
+        resolved: false,
+        metric: 'CLS',
+        value: currentMetrics.cls,
+        threshold: 0.1,
+        suggestion: 'Set explicit dimensions for images'
       });
     }
 

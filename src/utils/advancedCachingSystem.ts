@@ -189,7 +189,7 @@ class AdvancedCachingSystem {
   /**
    * Initialize IndexedDB
    */
-  private async initializeIndexedDB(): Promise<void> {
+  private async initializeIndexedDB(): Promise<IDBDatabase | void> {
     if (typeof indexedDB === 'undefined') return;
 
     return new Promise((resolve, reject) => {
