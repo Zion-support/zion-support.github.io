@@ -2,18 +2,11 @@ import React, { useCallback, useState, useEffect, useMemo } from 'react';
 import { AppRouter } from './router';
 import { useAppInitialization } from './hooks/useAppInitialization';
 import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
-import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
-import { seoAnalytics, performanceSEO, seoManager } from './utils/seoEnhanced';
-import { analytics } from './utils/analytics';
-// Removed unused imports: seoOptimizer, cacheManager, apiClient, notificationManager, userFeedback
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
-import PerformanceDashboard from './components/PerformanceDashboard';
-import RealTimeMonitor from './components/RealTimeMonitor';
-import SystemMetricsDashboard from './components/SystemMetricsDashboard';
 import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
-import EnhancedNotificationSystem from './components/EnhancedNotificationSystem';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
-import EnhancedAnalytics from './components/EnhancedAnalytics';
+import { analytics } from './utils/analytics';
+import { seoAnalytics, performanceSEO } from './utils/seoEnhanced';
 // Removed unused import: getComprehensiveEnhancements
 import './index.css';
 
@@ -23,7 +16,7 @@ export default function App(): React.JSX.Element {
   const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
 
   // Initialize app with custom configuration
-  const { isLoading, loadingProgress, engagementData, handleScroll, handleClick } = useAppInitialization({
+  const { isLoading, loadingProgress, handleScroll, handleClick } = useAppInitialization({
     enablePerformanceMonitoring: true,
     enableAccessibility: true,
     enableSecurity: true,
@@ -66,7 +59,7 @@ export default function App(): React.JSX.Element {
 
 
   // Simple SEO manager
-  const seoManager = {
+  const seoManager = useMemo(() => ({
     updateMetaTags: (data: typeof seoData) => {
       if (typeof document !== 'undefined') {
         document.title = data.title;
@@ -76,7 +69,7 @@ export default function App(): React.JSX.Element {
         }
       }
     }
-  };
+  }), []);
 
   useEffect(() => {
     // Add performance marks for better monitoring
@@ -130,7 +123,7 @@ export default function App(): React.JSX.Element {
       window.removeEventListener('scroll', handleScroll);
       document.removeEventListener('click', handleClick);
     };
-  }, [seoData, handleKeyDown, handleScroll, handleClick]);
+  }, [seoData, handleKeyDown, handleScroll, handleClick, preloadResource, seoManager]);
 
   // Show loading screen while initializing
   if (isLoading) {
