@@ -208,8 +208,10 @@ class ComprehensiveEnhancements {
     // Monitor memory usage
     if ('memory' in performance) {
       const updateMemoryMetrics = () => {
-        const memory = (performance as any).memory;
-        this.performanceMetrics.memoryUsage = memory.usedJSHeapSize;
+        const memory = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory;
+        if (memory) {
+          this.performanceMetrics.memoryUsage = memory.usedJSHeapSize;
+        }
       };
 
       updateMemoryMetrics();
@@ -264,7 +266,7 @@ class ComprehensiveEnhancements {
     };
 
     // Add XSS detection method
-    (Element.prototype as any).containsXSS = function(content: string): boolean {
+    (Element.prototype as Element & { containsXSS?: (content: string) => boolean }).containsXSS = function(content: string): boolean {
       const xssPatterns = [
         /<script[^>]*>.*?<\/script>/gi,
         /javascript:/gi,
@@ -343,7 +345,7 @@ class ComprehensiveEnhancements {
     document.body.appendChild(announcer);
 
     // Store reference for announcements
-    (window as any).screenReaderAnnouncer = announcer;
+    (window as Window & { screenReaderAnnouncer?: HTMLElement }).screenReaderAnnouncer = announcer;
   }
 
   private setupKeyboardNavigation(): void {
@@ -418,7 +420,7 @@ class ComprehensiveEnhancements {
     });
 
     // Store focus history globally
-    (window as any).focusHistory = focusHistory;
+    (window as Window & { focusHistory?: HTMLElement[] }).focusHistory = focusHistory;
   }
 
   private setupARIAEnhancements(): void {
@@ -598,7 +600,7 @@ class ComprehensiveEnhancements {
 
   private setupUserFeedback(): void {
     // Store notification function globally
-    (window as any).showNotification = this.showNotification.bind(this);
+    (window as Window & { showNotification?: (message: string, type?: string) => void }).showNotification = this.showNotification.bind(this);
   }
 
   private showNotification(message: string, type: 'success' | 'error' | 'warning' | 'info' = 'info'): void {
@@ -657,7 +659,7 @@ class ComprehensiveEnhancements {
     }
   }
 
-  private applyPreferences(preferences: any): void {
+  private applyPreferences(preferences: Record<string, unknown>): void {
     if (preferences.theme === 'dark') {
       document.body.classList.add('dark-theme');
     }
@@ -733,7 +735,7 @@ class ComprehensiveEnhancements {
 
     // Store metrics
     this.uxMetrics.engagementScore = scrollDepth;
-    (window as any).engagementMetrics = { scrollDepth, clickCount };
+    (window as Window & { engagementMetrics?: { scrollDepth: number; clickCount: number } }).engagementMetrics = { scrollDepth, clickCount };
   }
 
   private setupErrorTracking(): void {

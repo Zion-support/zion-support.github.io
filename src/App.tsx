@@ -17,10 +17,7 @@ import './styles/system-metrics.css';
 import './styles/modern-utilities.css';
 
 // Import utility modules
-import { seoManager, seoAnalytics, performanceSEO } from './utils/seoEnhanced';
-import { initializeErrorReporting } from './utils/errorReporting';
-import { initOptimizations } from './utils/buildOptimizations';
-import { performanceOptimizer } from './utils/optimization';
+import { seoAnalytics, performanceSEO } from './utils/seoEnhanced';
 import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
 import { enhancedAnalytics } from './utils/enhancedAnalytics';
 import { enhancedSEO } from './utils/enhancedSEO';
@@ -105,7 +102,7 @@ export default function App(): React.JSX.Element {
     });
 
     // Store enhancements globally for debugging
-    (window as any).enhancements = enhancements;
+    (window as Window & { enhancements?: unknown }).enhancements = enhancements;
   }, []);
 
   // Optimized keyboard handler for system dashboard toggle
@@ -435,7 +432,7 @@ export default function App(): React.JSX.Element {
       // Final engagement tracking
       trackEngagement();
     };
-  }, [handleKeyDown]);
+  }, [handleKeyDown, handleClick, handleScroll]);
 
   // Show loading screen while initializing
   if (isLoading) {
