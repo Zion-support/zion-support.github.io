@@ -1,14 +1,9 @@
-import React, { useEffect, useCallback, useMemo, useState } from 'react';
+import React, { useEffect, useCallback, useMemo, useState, lazy, Suspense } from 'react';
 import { AppRouter } from './router';
 import { useAppInitialization } from './hooks/useAppInitialization';
 import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
-import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
-import PerformanceOptimizer from './components/PerformanceOptimizer';
-import PerformanceMonitor from './components/PerformanceMonitor';
-import SEOOptimizer from './components/SEOOptimizer';
-import AIPerformanceDashboard from './components/AIPerformanceDashboard';
 import PerformanceDashboard from './components/PerformanceDashboard';
 import { analytics } from './utils/analytics';
 import { seoAnalytics, performanceSEO } from './utils/seoEnhanced';
@@ -22,6 +17,14 @@ import { SecurityEnhancer } from './utils/securityEnhancer';
 import { performanceOptimizer } from './utils/performanceOptimizer';
 import { accessibilityEnhancer } from './utils/accessibilityEnhancer';
 import { seoOptimizer } from './utils/seoOptimizer';
+
+// Lazy load heavy components for better performance
+const EnhancedSystemDashboard = lazy(() => import('./components/EnhancedSystemDashboard'));
+const PerformanceOptimizer = lazy(() => import('./components/PerformanceOptimizer'));
+const PerformanceMonitor = lazy(() => import('./components/PerformanceMonitor'));
+const SEOOptimizer = lazy(() => import('./components/SEOOptimizer'));
+const AIPerformanceDashboard = lazy(() => import('./components/AIPerformanceDashboard'));
+const PerformanceMetrics = lazy(() => import('./components/PerformanceMetrics'));
 import './index.css';
 import './styles/notifications.css';
 import './styles/system-metrics.css';
@@ -35,12 +38,25 @@ export default function App(): React.JSX.Element {
   const [showAIDashboard, setShowAIDashboard] = useState(false);
   const [showSEOOptimizer, setShowSEOOptimizer] = useState(false);
   const [showPerformanceDashboard, setShowPerformanceDashboard] = useState(false);
+  const [showPerformanceMetrics, setShowPerformanceMetrics] = useState(false);
 
   // Engagement tracking data
   const engagementData = useMemo(() => ({
     startTime: Date.now(),
     scrollDepth: 0,
     clicks: 0
+  }), []);
+
+  // Memoize SEO data to prevent unnecessary re-renders
+  const seoData = useMemo(() => ({
+    title: 'Zion Tech Group - Advanced AI and IT Solutions',
+    description: 'Leading provider of AI-powered IT solutions, cloud services, and digital transformation consulting.',
+    keywords: 'AI, IT solutions, cloud services, digital transformation, technology consulting',
+    canonical: window.location.href,
+    ogTitle: 'Zion Tech Group - Advanced AI and IT Solutions',
+    ogDescription: 'Leading provider of AI-powered IT solutions and digital transformation consulting.',
+    ogImage: '/og-image.jpg',
+    twitterCard: 'summary_large_image'
   }), []);
 
 
@@ -85,6 +101,9 @@ export default function App(): React.JSX.Element {
         case 'B':
           setShowPerformanceDashboard(prev => !prev);
           break;
+        case 'R':
+          setShowPerformanceMetrics(prev => !prev);
+          break;
         case 'T':
           // Theme toggle functionality can be added here
           break;
@@ -95,6 +114,7 @@ export default function App(): React.JSX.Element {
           setShowPerformanceMonitor(false);
           setShowAIDashboard(false);
           setShowSEOOptimizer(false);
+          setShowPerformanceMetrics(false);
           break;
       }
     }
@@ -111,16 +131,6 @@ export default function App(): React.JSX.Element {
     trackEngagement();
   }, [engagementData.clicks, engagementData.scrollDepth, engagementData.startTime, trackEngagement]);
 
-  // Memoize the SEO data to prevent unnecessary re-renders
-  const seoData = useMemo(() => ({
-    title: 'Zion Tech Group - Leading AI & Technology Solutions',
-    description: 'Cutting-edge AI, quantum computing, and digital transformation solutions for modern enterprises. Expert consulting, cloud services, and innovative technology implementations.',
-    keywords: ['AI solutions', 'quantum computing', 'digital transformation', 'cloud services', 'enterprise technology', 'machine learning', 'automation', 'blockchain'],
-    ogType: 'website' as const,
-    ogUrl: typeof window !== 'undefined' ? window.location.href : 'https://ziontechgroup.com',
-    ogImage: '/og-image.png',
-    twitterCard: 'summary_large_image' as const
-  }), []);
 
   // Update meta tags function
   const updateMetaTags = useCallback((data: {
@@ -304,18 +314,22 @@ export default function App(): React.JSX.Element {
         
         {/* System Dashboard */}
         {showSystemDashboard && (
-          <EnhancedSystemDashboard
-            isVisible={showSystemDashboard}
-            onClose={() => setShowSystemDashboard(false)}
-          />
+          <Suspense fallback={<ModernLoadingSpinner />}>
+            <EnhancedSystemDashboard
+              isVisible={showSystemDashboard}
+              onClose={() => setShowSystemDashboard(false)}
+            />
+          </Suspense>
         )}
 
         {/* Performance Optimizer */}
         {showPerformanceOptimizer && (
-          <PerformanceOptimizer
-            isVisible={showPerformanceOptimizer}
-            onClose={() => setShowPerformanceOptimizer(false)}
-          />
+          <Suspense fallback={<ModernLoadingSpinner />}>
+            <PerformanceOptimizer
+              isVisible={showPerformanceOptimizer}
+              onClose={() => setShowPerformanceOptimizer(false)}
+            />
+          </Suspense>
         )}
 
         {/* Performance Monitor */}
@@ -331,16 +345,20 @@ export default function App(): React.JSX.Element {
                   ✕
                 </button>
               </div>
-              <PerformanceMonitor />
+              <Suspense fallback={<ModernLoadingSpinner />}>
+                <PerformanceMonitor />
+              </Suspense>
             </div>
           </div>
         )}
 
         {/* AI Performance Dashboard */}
-        <AIPerformanceDashboard
-          isVisible={showAIDashboard}
-          onClose={() => setShowAIDashboard(false)}
-        />
+        <Suspense fallback={<ModernLoadingSpinner />}>
+          <AIPerformanceDashboard
+            isVisible={showAIDashboard}
+            onClose={() => setShowAIDashboard(false)}
+          />
+        </Suspense>
 
         {/* Performance Dashboard */}
         <PerformanceDashboard
@@ -348,11 +366,31 @@ export default function App(): React.JSX.Element {
           onClose={() => setShowPerformanceDashboard(false)}
         />
 
+        {/* Performance Metrics */}
+        <Suspense fallback={<ModernLoadingSpinner />}>
+          <PerformanceMetrics
+            isVisible={showPerformanceMetrics}
+            onClose={() => setShowPerformanceMetrics(false)}
+          />
+        </Suspense>
+
         {/* SEO Optimizer */}
         {showSEOOptimizer && (
-          <SEOOptimizer
-            seoData={seoData}
-          />
+          <Suspense fallback={<ModernLoadingSpinner />}>
+            <SEOOptimizer
+              seoData={seoData}
+            />
+          </Suspense>
+        )}
+
+        {/* Performance Metrics */}
+        {showPerformanceMetrics && (
+          <Suspense fallback={<ModernLoadingSpinner />}>
+            <PerformanceMetrics
+              isVisible={showPerformanceMetrics}
+              onClose={() => setShowPerformanceMetrics(false)}
+            />
+          </Suspense>
         )}
 
         {/* Keyboard shortcuts help */}
@@ -361,6 +399,7 @@ export default function App(): React.JSX.Element {
           <div>Ctrl+Shift+D: System Dashboard</div>
           <div>Ctrl+Shift+P: Performance Optimizer</div>
           <div>Ctrl+Shift+M: Performance Monitor</div>
+          <div>Ctrl+Shift+R: Performance Metrics</div>
           <div>Ctrl+Shift+A: AI Dashboard</div>
           <div>Ctrl+Shift+S: SEO Optimizer</div>
           <div>Ctrl+Shift+T: Toggle Theme</div>
