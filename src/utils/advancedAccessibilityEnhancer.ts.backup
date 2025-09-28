@@ -633,5 +633,21 @@ Color Contrast Ratio: ${metrics.colorContrastRatio.toFixed(2)}
 Focusable Elements: ${metrics.focusableElements}
 ARIA Labels: ${metrics.ariaLabels}
 Heading Structure: ${metrics.headingStructure}
+Alt Texts: ${metrics.altTexts}
+Screen Reader Compatibility: ${metrics.screenReaderCompatibility}/100
+
+Recommendations:
+${metrics.overallScore < 80 ? '- Improve color contrast ratios' : ''}
+${metrics.ariaLabels < metrics.focusableElements * 0.8 ? '- Add more ARIA labels' : ''}
+${metrics.headingStructure === 0 ? '- Add proper heading structure' : ''}
+${metrics.altTexts === 0 ? '- Add alt text to images' : ''}
     `.trim();
   }
+}
+
+// Export singleton instance
+export const accessibilityEnhancer = new AdvancedAccessibilityEnhancer();
+
+// Export class for custom instances
+export { AdvancedAccessibilityEnhancer };
+export type { AccessibilityConfig, AccessibilityMetrics };

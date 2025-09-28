@@ -195,7 +195,7 @@ class EnhancedSecurityManager {
       // Monitor for suspicious network requests
       const originalFetch = window.fetch;
       window.fetch = async function(...args) {
-        const url = typeof args[0] === 'string' ? args[0] : args[0].url;
+        const url = typeof args[0] === 'string' ? args[0] : (args[0] as Request).url;
         
         // Log API calls for monitoring
         if (url.includes('/api/')) {
@@ -282,12 +282,12 @@ class EnhancedSecurityManager {
   }
 
   private triggerSecurityAlert(message: string, event: SecurityEvent): void {
-    const alert = {
-      type: 'security_alert' as const,
+    const alert: SecurityEvent = {
+      type: 'error',
       severity: event.severity,
       message,
       timestamp: new Date(),
-      originalEvent: event
+      metadata: { originalEvent: event }
     };
 
     console.warn('Security Alert:', alert);
