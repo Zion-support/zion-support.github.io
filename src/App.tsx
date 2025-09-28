@@ -113,6 +113,8 @@ export default function App(): React.JSX.Element {
   React.useEffect(() => {
     // Track engagement on page unload
     window.addEventListener('beforeunload', trackEngagement);
+    window.addEventListener('scroll', handleScroll);
+    document.addEventListener('click', handleClick);
 
     // Mark app as fully initialized
     if (typeof window !== 'undefined' && window.performance && 
