@@ -1,13 +1,18 @@
-import React, { useMemo, useEffect, useCallback } from 'react';
+import React, { useCallback, useState, useEffect, useMemo } from 'react';
 import { AppRouter } from './router';
 import { useAppInitialization } from './hooks/useAppInitialization';
 import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
-import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
-import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
-import PerformanceOptimizer from './components/PerformanceOptimizer';
-import { analytics } from './utils/analytics';
 import { seoAnalytics, performanceSEO, seoManager } from './utils/seoEnhanced';
+import { analytics } from './utils/analytics';
+import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
+import PerformanceDashboard from './components/PerformanceDashboard';
+import RealTimeMonitor from './components/RealTimeMonitor';
+import SystemMetricsDashboard from './components/SystemMetricsDashboard';
+import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
+import EnhancedNotificationSystem from './components/EnhancedNotificationSystem';
+import PerformanceOptimizer from './components/PerformanceOptimizer';
+import EnhancedAnalytics from './components/EnhancedAnalytics';
 import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
 import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
 import { enhancedAnalytics } from './utils/enhancedAnalytics';
@@ -19,11 +24,11 @@ import './index.css';
 
 export default function App(): React.JSX.Element {
   // State for system dashboard and performance optimizer (currently unused but reserved for future features)
-  // const [showSystemDashboard, setShowSystemDashboard] = useState(false);
-  // const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
+  const [showSystemDashboard, setShowSystemDashboard] = useState(false);
+  const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
 
   // Initialize app with custom configuration
-  const { isLoading, loadingProgress, engagementData, handleScroll, handleClick } = useAppInitialization({
+  const { isLoading, loadingProgress, engagementData, handleScroll, handleClick, trackEngagement } = useAppInitialization({
     enablePerformanceMonitoring: true,
     enableAccessibility: true,
     enableSecurity: true,
@@ -79,7 +84,7 @@ export default function App(): React.JSX.Element {
   }), []);
 
   // Track engagement function
-  const trackEngagement = useCallback(() => {
+  const trackEngagementCallback = useCallback(() => {
     const timeOnPage = Date.now() - engagementData.startTime;
     seoAnalytics.trackUserEngagement(window.location.pathname, {
       timeOnPage,
@@ -88,7 +93,16 @@ export default function App(): React.JSX.Element {
     });
     // Also call the original trackEngagement from useAppInitialization
     trackEngagement();
-  }, [trackEngagement]);
+  }, [trackEngagement, engagementData.startTime, engagementData.scrollDepth, engagementData.clicks]);
+
+  // Handle keyboard events
+  const handleKeyDown = useCallback((event: KeyboardEvent) => {
+    // Add keyboard shortcuts here if needed
+    if (event.ctrlKey && event.shiftKey && event.key === 'D') {
+      // Toggle system dashboard
+      event.preventDefault();
+    }
+  }, []);
 
   // Simple SEO manager
   const seoManagerInstance = {
@@ -102,7 +116,6 @@ export default function App(): React.JSX.Element {
       }
     }
   };
-
   useEffect(() => {
     // Add performance marks for better monitoring
     if (typeof window !== 'undefined' && window.performance && typeof performance.mark === 'function') {
@@ -116,6 +129,7 @@ export default function App(): React.JSX.Element {
     // Use passive listeners for better performance
     window.addEventListener('scroll', handleScroll, { passive: true });
     document.addEventListener('click', handleClick, { passive: true });
+    document.addEventListener('keydown', handleKeyDown);
 
     // Initialize basic systems
     analytics.initialize();
@@ -125,19 +139,16 @@ export default function App(): React.JSX.Element {
     
     // Initialize performance SEO optimizations
     performanceSEO.optimizeImages();
-    performanceSEO.preloadCriticalResources();
     performanceSEO.optimizeFonts();
     performanceSEO.optimizeCSS();
 
     // Set default SEO data using the correct method
-    seoManagerInstance.updateMetaTags(seoData);
+    seoManager.updateMetaTags(seoData);
 
-    // Use passive listeners for better performance
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    document.addEventListener('click', handleClick, { passive: true });
-    
-    // Initialize analytics system
-    analytics.trackPageView();
+    // Basic performance monitoring
+    if (typeof window !== 'undefined') {
+      console.log('🚀 Zion Tech Group App initialized');
+    }
 
     // Mark app as fully initialized
     if (typeof window !== 'undefined' && window.performance && 
@@ -147,33 +158,27 @@ export default function App(): React.JSX.Element {
       performance.measure('app-initialization', 'app-init-start', 'app-init-complete');
     }
 
-    // Basic performance monitoring
-    if (typeof window !== 'undefined') {
-      console.log('🚀 Zion Tech Group App initialized');
-    }
-  }, [seoData, handleScroll, handleClick, handleKeyDown, preloadResource]);
+    // Cleanup function
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      document.removeEventListener('click', handleClick);
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [handleScroll, handleClick, handleKeyDown, seoData, preloadResource]);
 
   // Main initialization and cleanup effect
   React.useEffect(() => {
     // Track engagement on page unload
-    window.addEventListener('beforeunload', trackEngagement);
+    window.addEventListener('beforeunload', trackEngagementCallback);
 
     // Cleanup function
     return () => {
-      window.removeEventListener('beforeunload', trackEngagement);
+      window.removeEventListener('beforeunload', trackEngagementCallback);
       
       // Final engagement tracking
-      trackEngagement();
+      trackEngagementCallback();
     };
-  }, [trackEngagement]);
-
-  // Cleanup function for event listeners
-  useEffect(() => {
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-      document.removeEventListener('click', handleClick);
-    };
-  }, [handleScroll, handleClick]);
+  }, [trackEngagementCallback]);
 
   // Show loading screen while initializing
   if (isLoading) {
