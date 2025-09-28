@@ -32,8 +32,11 @@ interface ExtendedPerformance extends Performance {
 
 // NetworkConnection interface removed as it's not currently used
 
-interface ExtendedNavigator extends Navigator {
-  connection?: NetworkInformation;
+interface ExtendedNavigator {
+  connection?: NetworkConnection & {
+    addEventListener?: (event: string, listener: () => void) => void;
+    removeEventListener?: (event: string, listener: () => void) => void;
+  };
 }
 
 interface PerformanceMetrics {
@@ -271,11 +274,13 @@ class ModernPerformanceMonitor {
     if ('memory' in performance) {
       const updateMemoryUsage = () => {
         const memory = (performance as ExtendedPerformance).memory;
-        this.metrics.memoryUsage = {
-          usedJSHeapSize: memory?.usedJSHeapSize || 0,
-          totalJSHeapSize: memory?.totalJSHeapSize || 0,
-          jsHeapSizeLimit: memory?.jsHeapSizeLimit || 0
-        };
+        if (memory) {
+          this.metrics.memoryUsage = {
+            usedJSHeapSize: memory.usedJSHeapSize,
+            totalJSHeapSize: memory.totalJSHeapSize,
+            jsHeapSizeLimit: memory.jsHeapSizeLimit
+          };
+        }
       };
 
       updateMemoryUsage();
@@ -303,20 +308,20 @@ class ModernPerformanceMonitor {
     if ('connection' in navigator) {
       const connection = (navigator as ExtendedNavigator).connection;
       if (connection) {
-        this.metrics.connectionType = connection.effectiveType || 'unknown';
+        this.metrics.connectionType = 'unknown'; // NetworkConnection doesn't have type property
         this.metrics.effectiveType = connection.effectiveType || 'unknown';
         this.metrics.downlink = connection.downlink || 0;
         this.metrics.rtt = connection.rtt || 0;
-      }
 
-      // Listen for connection changes
-      if (connection && 'addEventListener' in connection) {
-        connection.addEventListener('change', () => {
-          this.metrics.connectionType = connection.effectiveType || 'unknown';
-          this.metrics.effectiveType = connection.effectiveType || 'unknown';
-          this.metrics.downlink = connection.downlink || 0;
-          this.metrics.rtt = connection.rtt || 0;
-        });
+        // Listen for connection changes
+        if (connection.addEventListener) {
+          connection.addEventListener('change', () => {
+            this.metrics.connectionType = 'unknown';
+            this.metrics.effectiveType = connection.effectiveType || 'unknown';
+            this.metrics.downlink = connection.downlink || 0;
+            this.metrics.rtt = connection.rtt || 0;
+          });
+        }
       }
     }
   }
@@ -370,18 +375,20 @@ class ModernPerformanceMonitor {
     // Update memory usage
     if ('memory' in performance) {
       const memory = (performance as ExtendedPerformance).memory;
-      this.metrics.memoryUsage = {
-        usedJSHeapSize: memory?.usedJSHeapSize || 0,
-        totalJSHeapSize: memory?.totalJSHeapSize || 0,
-        jsHeapSizeLimit: memory?.jsHeapSizeLimit || 0
-      };
+      if (memory) {
+        this.metrics.memoryUsage = {
+          usedJSHeapSize: memory.usedJSHeapSize,
+          totalJSHeapSize: memory.totalJSHeapSize,
+          jsHeapSizeLimit: memory.jsHeapSizeLimit
+        };
+      }
     }
 
     // Update network metrics
     if ('connection' in navigator) {
       const connection = (navigator as ExtendedNavigator).connection;
       if (connection) {
-        this.metrics.connectionType = connection.effectiveType || 'unknown';
+        this.metrics.connectionType = 'unknown';
         this.metrics.effectiveType = connection.effectiveType || 'unknown';
         this.metrics.downlink = connection.downlink || 0;
         this.metrics.rtt = connection.rtt || 0;
