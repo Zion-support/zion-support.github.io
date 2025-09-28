@@ -124,7 +124,7 @@ export default function App(): React.JSX.Element {
   // Initialize comprehensive enhancements
   useEffect(() => {
     // Initialize individual enhancement systems
-    new AccessibilityEnhancer().initialize();
+    new AccessibilityEnhancer();
     new AdvancedAutomationSystem();
     new SecurityEnhancer();
     
@@ -146,8 +146,8 @@ export default function App(): React.JSX.Element {
     seoManager.updateMetaTags(seoData);
     
     // Initialize advanced optimization systems
-    performanceOptimizer.optimizeBundle();
-    accessibilityEnhancer.initialize();
+    performanceOptimizer.optimizeBundleSize();
+    // accessibilityEnhancer.initialize(); // Method doesn't exist
     seoOptimizer.optimizePage(seoData);
 
     // Add performance marks for better monitoring
