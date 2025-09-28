@@ -11,7 +11,7 @@ import { analytics } from './utils/analytics';
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
 import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
 import { performanceOptimizations } from './utils/bundleOptimization';
-import { accessibilitySystem } from './utils/advancedAccessibilitySystem';
+// import { accessibilitySystem } from './utils/advancedAccessibilitySystem';
 // import { errorReportingSystem } from './utils/errorReporting';
 import NotificationSystem, { Notification } from './components/NotificationSystem';
 import './index.css';
