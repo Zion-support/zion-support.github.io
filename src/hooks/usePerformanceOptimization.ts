@@ -96,7 +96,8 @@ export const usePerformanceOptimization = (
     const startMark = `${name}.start`;
     const endMark = `${name}.end`;
     
-    // monitor.current.markCustomMetric(startMark); // Method doesn't exist
+    // Use the marks for debugging
+    console.debug(`Performance measurement started: ${startMark}`);
     
     const startTime = performance.now();
     
@@ -106,8 +107,7 @@ export const usePerformanceOptimization = (
       const endTime = performance.now();
       const duration = endTime - startTime;
       
-      // monitor.current.markCustomMetric(endMark); // Method doesn't exist
-      // monitor.current.measureCustomMetric(name, startMark, endMark); // Method doesn't exist
+      console.debug(`Performance measurement ended: ${endMark}, duration: ${duration}ms`);
       
       recordMetric(`${name}.duration`, duration);
     }
