@@ -591,7 +591,7 @@ class EnhancedAccessibilityManager {
    * Setup speech recognition
    */
   private setupSpeechRecognition(): void {
-    const SpeechRecognition = (window as { SpeechRecognition?: any; webkitSpeechRecognition?: any }).SpeechRecognition || (window as { SpeechRecognition?: any; webkitSpeechRecognition?: any }).webkitSpeechRecognition;
+    const SpeechRecognition = (window as { SpeechRecognition?: unknown; webkitSpeechRecognition?: unknown }).SpeechRecognition || (window as { SpeechRecognition?: unknown; webkitSpeechRecognition?: unknown }).webkitSpeechRecognition;
     const recognition = new SpeechRecognition();
     
     recognition.continuous = false;

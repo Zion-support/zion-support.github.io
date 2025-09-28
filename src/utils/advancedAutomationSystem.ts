@@ -23,8 +23,8 @@ export interface AutomationTask {
   priority: 'low' | 'medium' | 'high' | 'critical';
   schedule?: string; // Cron expression
   dependencies?: string[];
-  parameters?: Record<string, any>;
-  result?: any;
+  parameters?: Record<string, unknown>;
+  result?: unknown;
   error?: string;
   startTime?: number;
   endTime?: number;
@@ -76,7 +76,7 @@ export interface AutomationReport {
   tasksExecuted: number;
   tasksSucceeded: number;
   tasksFailed: number;
-  metrics: Record<string, any>;
+  metrics: Record<string, number>;
   recommendations: string[];
   alerts: MonitoringAlert[];
 }
@@ -449,7 +449,7 @@ export class AdvancedAutomationSystem {
             actions: ['check_server', 'restart_service']
           });
         }
-      } catch (error) {
+      } catch {
         this.addMonitoringAlert({
           id: `availability_${Date.now()}`,
           type: 'availability',
@@ -588,7 +588,7 @@ export class AdvancedAutomationSystem {
     }
   }
 
-  private async runPreDeploymentChecks(config: DeploymentConfig): Promise<void> {
+  private async runPreDeploymentChecks(): Promise<void> {
     console.log('Running pre-deployment checks...');
     
     // Check system health
@@ -616,19 +616,19 @@ export class AdvancedAutomationSystem {
     }
   }
 
-  private async rollingDeployment(config: DeploymentConfig): Promise<boolean> {
+  private async rollingDeployment(): Promise<boolean> {
     console.log('Performing rolling deployment...');
     await this.delay(2000);
     return true;
   }
 
-  private async blueGreenDeployment(config: DeploymentConfig): Promise<boolean> {
+  private async blueGreenDeployment(): Promise<boolean> {
     console.log('Performing blue-green deployment...');
     await this.delay(3000);
     return true;
   }
 
-  private async canaryDeployment(config: DeploymentConfig): Promise<boolean> {
+  private async canaryDeployment(): Promise<boolean> {
     console.log('Performing canary deployment...');
     await this.delay(4000);
     return true;
@@ -647,7 +647,7 @@ export class AdvancedAutomationSystem {
     await this.runTestSuite('integration');
   }
 
-  private async rollbackDeployment(config: DeploymentConfig): Promise<void> {
+  private async rollbackDeployment(): Promise<void> {
     console.log('Rolling back deployment...');
     await this.delay(2000);
   }
@@ -703,7 +703,7 @@ export class AdvancedAutomationSystem {
     }
   }
 
-  private calculateMetrics(): Record<string, any> {
+  private calculateMetrics(): Record<string, number> {
     const tasks = Array.from(this.tasks.values());
     
     return {
