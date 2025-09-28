@@ -21,6 +21,15 @@ interface Notification {
   timestamp: Date;
 }
 
+interface NotificationSystem {
+  success: (title: string, message: string, options?: Partial<Notification>) => string;
+  error: (title: string, message: string, options?: Partial<Notification>) => string;
+  warning: (title: string, message: string, options?: Partial<Notification>) => string;
+  info: (title: string, message: string, options?: Partial<Notification>) => string;
+  remove: (id: string) => void;
+  clear: () => void;
+}
+
 interface NotificationSystemProps {
   maxNotifications?: number;
   position?: 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left' | 'top-center' | 'bottom-center';
@@ -184,7 +193,6 @@ const EnhancedNotificationSystem: React.FC<NotificationSystemProps> = ({
       removeNotification(notification.id);
     });
   }, [notifications, removeNotification]);
-
 
   // Cleanup timeouts on unmount
   useEffect(() => {
