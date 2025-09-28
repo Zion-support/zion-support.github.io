@@ -15,7 +15,7 @@ import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import AIPerformanceDashboard from './components/AIPerformanceDashboard';
-// import AdvancedPerformanceDashboard from './components/AdvancedPerformanceDashboard';
+import AdvancedPerformanceDashboard from './components/AdvancedPerformanceDashboard';
 import WebsiteEnhancements from './components/WebsiteEnhancements';
 import { SEOOptimizer } from './components/SEOOptimizer';
 // import EnhancedAnalytics from './components/EnhancedAnalytics';
@@ -202,20 +202,11 @@ export default function App(): React.JSX.Element {
       enhancedPerformanceMonitor.startMonitoring();
       
       // Initialize new advanced systems
-<<<<<<< HEAD
       if ('initialize' in performanceOptimizer) {
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         (performanceOptimizer as any).initialize();
       }
       enhancedSecurityManager.initialize();
-=======
-      // performanceOptimizer.initialize();
-      enhancedSecurityManager.initialize();
-      // new AdvancedAutomationSystem().initialize();
-      // Initialize enhancement systems
-      // new AccessibilityEnhancer();
-      // new SecurityEnhancer();
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-7a75
       
       // Initialize analytics
       if ('initialize' in analytics) {
@@ -254,13 +245,8 @@ export default function App(): React.JSX.Element {
     securityUtils.getSecurityScore();
 
     // Set default SEO data using the correct method
-<<<<<<< HEAD
-    // seoManager.updateMetaTags(seoData);
-  }, []);
-=======
     seoManager.updateMetaTags(memoizedSeoData);
   }, [memoizedSeoData]);
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-7a75
 
   // Update meta tags function
   const updateMetaTags = useCallback((data: typeof memoizedSeoData) => {

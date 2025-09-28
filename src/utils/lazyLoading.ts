@@ -1,4 +1,4 @@
-import { lazy, ComponentType } from 'react';
+import React, { lazy, ComponentType } from 'react';
 
 /**
  * Enhanced lazy loading utility with error boundaries and loading states
@@ -10,12 +10,10 @@ export function createLazyComponent<T extends ComponentType<any>>(
   const LazyComponent = lazy(importFunc);
   
   return function LazyWrapper(props: any) {
-    return (
-      <LazyComponent
-        {...props}
-        fallback={fallback}
-      />
-    );
+    return React.createElement(LazyComponent, {
+      ...props,
+      fallback: fallback
+    });
   };
 }
 
@@ -66,10 +64,8 @@ export function createIntersectionLazyComponent<T extends ComponentType<any>>(
       return () => observer.disconnect();
     }, []);
 
-    return (
-      <div ref={ref}>
-        {isVisible ? <LazyComponent {...props} /> : <div>Loading...</div>}
-      </div>
+    return React.createElement('div', { ref }, 
+      isVisible ? React.createElement(LazyComponent, props) : React.createElement('div', null, 'Loading...')
     );
   };
 }

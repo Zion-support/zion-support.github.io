@@ -31,6 +31,12 @@ import {
   Line 
 } from 'recharts';
 
+interface OptimizationStrategy {
+  name: string;
+  impact: number;
+  applied: boolean;
+}
+
 interface AdvancedPerformanceDashboardProps {
   isVisible: boolean;
   onClose: () => void;
@@ -275,8 +281,12 @@ const AdvancedPerformanceDashboard: React.FC<AdvancedPerformanceDashboardProps> 
                 <p className="text-sm text-gray-700">{suggestion}</p>
               </div>
             ))}
+          </div>
+        </div>
 
-              <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-4">
+        {/* Optimization Status */}
+        {optimizationData.length > 0 && (
+          <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-4">
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
                   Optimization Status
                 </h3>
@@ -297,9 +307,8 @@ const AdvancedPerformanceDashboard: React.FC<AdvancedPerformanceDashboardProps> 
                     <Tooltip />
                   </PieChart>
                 </ResponsiveContainer>
-              </div>
-            </div>
-          )}
+          </div>
+        )}
 
           {/* Real-time Monitoring */}
           {realTimeData.length > 0 && (
