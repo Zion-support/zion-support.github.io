@@ -2,14 +2,14 @@ import React, { useState, useCallback } from 'react';
 import { useImageLazyLoading } from '../utils/lazyLoading';
 import { imageOptimizer, ImageOptimizationOptions } from '../utils/imageOptimization';
 
-interface LazyImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
+interface LazyImageProps extends Omit<React.ImgHTMLAttributes<HTMLImageElement>, 'onLoad' | 'onError'> {
   src: string;
   alt: string;
   placeholder?: string;
   optimizationOptions?: ImageOptimizationOptions;
   fallbackSrc?: string;
-  onLoad?: () => void;
-  onError?: () => void;
+  onLoad?: React.ReactEventHandler<HTMLImageElement>;
+  onError?: React.ReactEventHandler<HTMLImageElement>;
   className?: string;
   loading?: 'lazy' | 'eager';
   sizes?: string;
@@ -45,15 +45,15 @@ const LazyImage: React.FC<LazyImageProps> = ({
     blurPlaceholder
   );
 
-  const handleLoad = useCallback(() => {
+  const handleLoad = useCallback((event: React.SyntheticEvent<HTMLImageElement>) => {
     setIsLoading(false);
-    onLoad?.();
+    onLoad?.(event);
   }, [onLoad]);
 
-  const handleError = useCallback(() => {
+  const handleError = useCallback((event: React.SyntheticEvent<HTMLImageElement>) => {
     setIsLoading(false);
     setHasError(true);
-    onError?.();
+    onError?.(event);
   }, [onError]);
 
   // Determine which image source to use
@@ -62,7 +62,7 @@ const LazyImage: React.FC<LazyImageProps> = ({
 
   return (
     <div
-      ref={elementRef}
+      ref={elementRef as React.RefObject<HTMLDivElement>}
       className={`relative overflow-hidden ${className}`}
       style={{ aspectRatio: optimizationOptions.width && optimizationOptions.height 
         ? `${optimizationOptions.width}/${optimizationOptions.height}` 
@@ -88,7 +88,7 @@ const LazyImage: React.FC<LazyImageProps> = ({
         onError={handleError}
         className={`transition-opacity duration-300 ${
           isLoaded ? 'opacity-100' : 'opacity-0'
-        } ${props.className || ''}`}
+        } ${(props as any).className || ''}`}
         style={{
           ...props.style,
           width: '100%',

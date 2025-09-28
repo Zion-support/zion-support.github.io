@@ -69,7 +69,7 @@ const AdvancedDashboard: React.FC = () => {
   }, [isOpen]);
 
   const updateData = () => {
-    const sessionData = AdvancedAnalyticsManager.getInstance().getSessionData();
+    const sessionData = (AdvancedAnalyticsManager as any).getInstance().getSessionData();
     const cacheStats = AdvancedCacheManager.getInstance().getStats();
     
     // Convert session data to analytics data format

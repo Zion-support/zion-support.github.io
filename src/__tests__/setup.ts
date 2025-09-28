@@ -18,7 +18,12 @@ const mockLocation = {
   port: '3000',
   protocol: 'http:',
   origin: 'http://localhost:3000',
-  ancestorOrigins: [] as string[],
+  ancestorOrigins: {
+    contains: () => false,
+    item: () => null,
+    length: 0,
+    [Symbol.iterator]: function* () {}
+  } as DOMStringList,
 };
 
 // Delete and recreate to avoid JSDOM navigation issues

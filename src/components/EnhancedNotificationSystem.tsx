@@ -153,8 +153,12 @@ const EnhancedNotificationSystem: React.FC<NotificationSystemProps> = ({
     setIsVisible(true);
 
     // Play sound if enabled
-    if (enableSounds) {
-      this.playNotificationSound(notification.type);
+    if (enableSounds && (this as any).playNotificationSound) {
+      try {
+        (this as any).playNotificationSound?.(notification.type);
+      } catch (error) {
+        console.warn('Failed to play notification sound:', error);
+      }
     }
 
     // Vibrate if enabled

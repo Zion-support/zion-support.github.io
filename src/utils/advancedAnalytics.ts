@@ -103,51 +103,61 @@ class AdvancedAnalytics {
     if (!this.isEnabled) return;
 
     // Track Core Web Vitals
-    import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-      getCLS((metric) => {
-        this.trackEvent('web_vital', {
-          name: 'CLS',
-          value: metric.value,
-          delta: metric.delta,
-          id: metric.id
+    import('web-vitals').then((webVitals) => {
+      if (webVitals.onCLS) {
+        webVitals.onCLS((metric: any) => {
+          this.trackEvent('web_vital', {
+            name: 'CLS',
+            value: metric.value,
+            delta: metric.delta,
+            id: metric.id
+          });
         });
-      });
+      }
 
-      getFID((metric) => {
-        this.trackEvent('web_vital', {
-          name: 'FID',
-          value: metric.value,
-          delta: metric.delta,
-          id: metric.id
+      if (webVitals.onINP) {
+        webVitals.onINP((metric: any) => {
+          this.trackEvent('web_vital', {
+            name: 'INP',
+            value: metric.value,
+            delta: metric.delta,
+            id: metric.id
+          });
         });
-      });
+      }
 
-      getFCP((metric) => {
-        this.trackEvent('web_vital', {
-          name: 'FCP',
-          value: metric.value,
-          delta: metric.delta,
-          id: metric.id
+      if (webVitals.onFCP) {
+        webVitals.onFCP((metric: any) => {
+          this.trackEvent('web_vital', {
+            name: 'FCP',
+            value: metric.value,
+            delta: metric.delta,
+            id: metric.id
+          });
         });
-      });
+      }
 
-      getLCP((metric) => {
-        this.trackEvent('web_vital', {
-          name: 'LCP',
-          value: metric.value,
-          delta: metric.delta,
-          id: metric.id
+      if (webVitals.onLCP) {
+        webVitals.onLCP((metric: any) => {
+          this.trackEvent('web_vital', {
+            name: 'LCP',
+            value: metric.value,
+            delta: metric.delta,
+            id: metric.id
+          });
         });
-      });
+      }
 
-      getTTFB((metric) => {
-        this.trackEvent('web_vital', {
-          name: 'TTFB',
-          value: metric.value,
-          delta: metric.delta,
-          id: metric.id
+      if (webVitals.onTTFB) {
+        webVitals.onTTFB((metric: any) => {
+          this.trackEvent('web_vital', {
+            name: 'TTFB',
+            value: metric.value,
+            delta: metric.delta,
+            id: metric.id
+          });
         });
-      });
+      }
     });
   }
 
