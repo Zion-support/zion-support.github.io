@@ -26,6 +26,11 @@ import { advancedCacheSystem } from './utils/advancedCacheSystem';
 import { AdvancedAutomationSystem } from './utils/advancedAutomationSystem';
 import { AccessibilityEnhancer } from './utils/accessibilityEnhancer';
 import { SecurityEnhancer } from './utils/securityEnhancer';
+import { useSEOData } from './components/SEOOptimizer';
+import { performanceAlerts } from './utils/performanceAlerts';
+import { errorRecoverySystem } from './utils/errorRecovery';
+import { accessibilityUtils } from './utils/accessibilityUtils';
+import { securityUtils } from './utils/securityUtils';
 import './index.css';
 import './styles/notifications.css';
 import './styles/system-metrics.css';
@@ -163,9 +168,39 @@ export default function App(): React.JSX.Element {
   }, []);
 
   useEffect(() => {
+<<<<<<< HEAD
     // Initialize comprehensive enhancements
     const enhancements = getComprehensiveEnhancements();
     enhancements.initialize();
+=======
+    try {
+      // Initialize comprehensive enhancements first
+      const enhancements = getComprehensiveEnhancements();
+      enhancements.initialize();
+      
+      // Initialize individual enhancement systems
+      if ('startMonitoring' in enhancedPerformanceMonitor) {
+        enhancedPerformanceMonitor.startMonitoring();
+      } else if ('initialize' in enhancedPerformanceMonitor) {
+        (enhancedPerformanceMonitor as any).initialize();
+      }
+      enhancedAnalytics.initialize();
+      advancedCacheSystem.initialize();
+      new AdvancedAutomationSystem().initialize();
+      const accessibilityEnhancer = new AccessibilityEnhancer();
+      if ('initialize' in accessibilityEnhancer) {
+        (accessibilityEnhancer as any).initialize();
+      }
+      new SecurityEnhancer().initialize();
+    } catch (error) {
+      console.warn('Some enhancement systems failed to initialize:', error);
+      // Use error recovery system
+      errorRecoverySystem.handleError(error as Error, {
+        component: 'App',
+        action: 'initialization'
+      });
+    }
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-4efd
     
     // Initialize individual enhancement systems
     enhancedPerformanceMonitor.startMonitoring();
@@ -235,6 +270,25 @@ export default function App(): React.JSX.Element {
       }
     }
 
+<<<<<<< HEAD
+=======
+    // Add performance marks for better monitoring
+    if (typeof window !== 'undefined' && window.performance && typeof performance.mark === 'function') {
+      performance.mark('app-init-start');
+    }
+    
+    // Preload critical resources
+    preloadResource('/og-image.png', 'image');
+    preloadResource('/favicon.ico', 'image');
+    
+    // Track engagement on page unload
+    window.addEventListener('beforeunload', enhancedTrackEngagement);
+
+    // Use passive listeners for better performance
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    document.addEventListener('click', handleClick, { passive: true });
+    document.addEventListener('keydown', handleKeyDown);
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-4efd
     // Mark app as fully initialized
     if (typeof window !== 'undefined' && window.performance && 
         typeof performance.mark === 'function' && 
@@ -249,6 +303,7 @@ export default function App(): React.JSX.Element {
       window.removeEventListener('beforeunload', enhancedTrackEngagement);
       window.removeEventListener('scroll', handleScroll);
       document.removeEventListener('click', handleClick);
+<<<<<<< HEAD
       trackEngagement();
     };
   }, [handleScroll, handleClick, handleKeyDown, seoData, preloadResource, updateMetaTags, enhancedTrackEngagement, trackEngagement]);
@@ -258,6 +313,35 @@ export default function App(): React.JSX.Element {
     // Performance optimization is handled by the usePerformanceOptimization hook
     preloadResource('/api/health');
   }, [preloadResource]);
+=======
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [handleScroll, handleClick, handleKeyDown, seoData, preloadResource, updateMetaTags, enhancedTrackEngagement]);
+
+  // Real-time performance metrics monitoring
+  useEffect(() => {
+    if (!showRealTimeMetrics) return;
+
+    const updateMetrics = () => {
+      if (typeof window !== 'undefined' && window.performance) {
+        const memory = (window.performance as Performance & { memory?: { usedJSHeapSize: number } }).memory;
+        const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+        
+        setPerformanceMetrics(prev => ({
+          memoryUsage: memory ? Math.round(memory.usedJSHeapSize / 1024 / 1024) : 0,
+          renderTime: navigation ? Math.round(navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart) : 0,
+          networkLatency: navigation ? Math.round(navigation.responseEnd - navigation.requestStart) : 0,
+          errorCount: prev.errorCount
+        }));
+      }
+    };
+
+    const interval = setInterval(updateMetrics, 1000);
+    updateMetrics(); // Initial update
+
+    return () => clearInterval(interval);
+  }, [showRealTimeMetrics]);
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-4efd
 
   // Track engagement on scroll and click
   useEffect(() => {
