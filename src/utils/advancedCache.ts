@@ -3,7 +3,7 @@
  * Provides intelligent caching with multiple strategies and automatic cleanup
  */
 
-interface CacheItem<T = any> {
+interface CacheItem<T = unknown> {
   value: T;
   timestamp: number;
   expiresAt: number;
@@ -218,7 +218,7 @@ class AdvancedCacheManager {
     return oldestKey;
   }
 
-  private calculateSize(value: any): number {
+  private calculateSize(value: unknown): number {
     try {
       return new Blob([JSON.stringify(value)]).size;
     } catch {
@@ -256,7 +256,7 @@ class AdvancedCacheManager {
   }
 
   // Memory-based caching
-  public memoize<T extends (...args: any[]) => any>(
+  public memoize<T extends (...args: unknown[]) => unknown>(
     fn: T,
     keyGenerator?: (...args: Parameters<T>) => string
   ): T {
@@ -275,7 +275,7 @@ class AdvancedCacheManager {
   }
 
   // Async function caching
-  public async memoizeAsync<T extends (...args: any[]) => Promise<any>>(
+  public async memoizeAsync<T extends (...args: unknown[]) => Promise<unknown>>(
     fn: T,
     ttl?: number,
     keyGenerator?: (...args: Parameters<T>) => string

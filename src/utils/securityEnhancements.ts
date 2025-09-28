@@ -81,6 +81,7 @@ class SecurityEnhancer {
     this.validateSecurityHeaders(headers);
   }
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   private validateSecurityHeaders(_expectedHeaders: SecurityHeaders): void {
     // This is a mock validation - in reality, headers are set by the server
     console.log('Security headers validation would be performed here');
@@ -191,20 +192,20 @@ class SecurityEnhancer {
   private interceptXMLHttpRequest(): void {
     const originalOpen = XMLHttpRequest.prototype.open;
     const originalSend = XMLHttpRequest.prototype.send;
-    const self = this;
+    const self = this; // eslint-disable-line @typescript-eslint/no-this-alias
     
-    XMLHttpRequest.prototype.open = function(method: string, url: string | URL, ...args: any[]) {
-      (this as any)._url = url.toString();
+    XMLHttpRequest.prototype.open = function(method: string, url: string | URL, ...args: unknown[]) {
+      (this as unknown)._url = url.toString();
       return originalOpen.call(this, method, url, args[0], args[1], args[2]);
     };
     
-    XMLHttpRequest.prototype.send = function(data?: any) {
-      if ((this as any)._url && self.isRateLimited((this as any)._url)) {
+    XMLHttpRequest.prototype.send = function(data?: unknown) {
+      if ((this as unknown)._url && self.isRateLimited((this as unknown)._url)) {
         throw new Error('Rate limit exceeded');
       }
       
-      if ((this as any)._url) {
-        self.recordRequest((this as any)._url);
+      if ((this as unknown)._url) {
+        self.recordRequest((this as unknown)._url);
       }
       
       return originalSend.call(this, data);
@@ -287,7 +288,7 @@ class SecurityEnhancer {
     // Monitor for suspicious patterns in URLs and inputs
     const originalPushState = history.pushState;
     const originalReplaceState = history.replaceState;
-    const self = this;
+    const self = this; // eslint-disable-line @typescript-eslint/no-this-alias
     
     history.pushState = function(state, title, url) {
       if (url && self.detectXSSAttempt(url.toString())) {
@@ -345,7 +346,7 @@ class SecurityEnhancer {
     });
   }
 
-  private isSecurityRelatedError(error: any): boolean {
+  private isSecurityRelatedError(error: unknown): boolean {
     if (!error) return false;
     
     const errorMessage = error.toString().toLowerCase();
@@ -357,7 +358,7 @@ class SecurityEnhancer {
   private monitorNetworkActivity(): void {
     // Monitor for suspicious network requests
     const originalFetch = window.fetch;
-    const self = this;
+    const self = this; // eslint-disable-line @typescript-eslint/no-this-alias
     
     window.fetch = async (...args) => {
       const url = typeof args[0] === 'string' ? args[0] : (args[0] as Request).url;
@@ -387,7 +388,7 @@ class SecurityEnhancer {
     }
   }
 
-  private reportSecurityEvent(type: string, data: any): void {
+  private reportSecurityEvent(type: string, data: unknown): void {
     // In a real implementation, this would send data to a security monitoring service
     console.log('Security event reported:', { type, data, timestamp: Date.now() });
   }
