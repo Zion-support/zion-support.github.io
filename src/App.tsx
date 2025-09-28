@@ -33,9 +33,11 @@ import { advancedCachingSystem } from './utils/advancedCachingSystem';
 import { advancedUXOptimizer } from './utils/advancedUXOptimizer';
 import { advancedTestingFramework } from './utils/advancedTestingFramework';
 import { advancedI18n } from './utils/advancedI18n';
+import { advancedAIAssistant } from './utils/advancedAIAssistant';
 import AdvancedAnalytics from './components/AdvancedAnalytics';
 import AdvancedMonitoringDashboard from './components/AdvancedMonitoringDashboard';
 import AdvancedAnalyticsDashboard from './components/AdvancedAnalyticsDashboard';
+import AdvancedAIAssistant from './components/AdvancedAIAssistant';
 import NotificationSystem, { Notification } from './components/NotificationSystem';
 import KeyboardShortcutsHelp from './components/KeyboardShortcutsHelp';
 import CommandPalette from './components/CommandPalette';
@@ -65,6 +67,7 @@ export default function App(): React.JSX.Element {
   const [showComprehensiveImprovements, setShowComprehensiveImprovements] = useState(false);
   const [showAdvancedMonitoring, setShowAdvancedMonitoring] = useState(false);
   const [showAdvancedAnalytics, setShowAdvancedAnalytics] = useState(false);
+  const [showAIAssistant, setShowAIAssistant] = useState(false);
 
   // Initialize app with custom configuration
   const { isLoading, loadingProgress, handleScroll, handleClick, trackEngagement: originalTrackEngagement } = useAppInitialization({
@@ -229,6 +232,7 @@ export default function App(): React.JSX.Element {
       advancedUXOptimizer.initialize();
       advancedTestingFramework.initialize();
       advancedI18n.initialize();
+      advancedAIAssistant.initialize();
       
       // Get comprehensive enhancements
       const enhancements = getComprehensiveEnhancements();
@@ -245,6 +249,7 @@ export default function App(): React.JSX.Element {
       (window as unknown as Record<string, unknown>).uxOptimizer = advancedUXOptimizer;
       (window as unknown as Record<string, unknown>).testingFramework = advancedTestingFramework;
       (window as unknown as Record<string, unknown>).i18n = advancedI18n;
+      (window as unknown as Record<string, unknown>).aiAssistant = advancedAIAssistant;
     } catch (error) {
       console.error('Error initializing enhancements:', error);
     }
@@ -403,6 +408,9 @@ export default function App(): React.JSX.Element {
           case 'L':
             setShowAdvancedAnalytics(!showAdvancedAnalytics);
             break;
+          case 'B':
+            setShowAIAssistant(!showAIAssistant);
+            break;
           case 'N':
             // Show notification
             if ((window as any).notifications) {
@@ -449,6 +457,7 @@ export default function App(): React.JSX.Element {
         setShowComprehensiveImprovements(false);
         setShowAdvancedMonitoring(false);
         setShowAdvancedAnalytics(false);
+        setShowAIAssistant(false);
       }
     };
 
@@ -686,6 +695,12 @@ export default function App(): React.JSX.Element {
           onClose={() => setShowAdvancedAnalytics(false)}
         />
 
+        {/* AI Assistant - Toggle with Ctrl+Shift+B */}
+        <AdvancedAIAssistant
+          isVisible={showAIAssistant}
+          onClose={() => setShowAIAssistant(false)}
+        />
+
         {/* New Components */}
         <NotificationSystem
           notifications={notifications}
@@ -775,6 +790,15 @@ export default function App(): React.JSX.Element {
           📈
         </button>
 
+        {/* AI Assistant Button */}
+        <button
+          onClick={() => setShowAIAssistant(true)}
+          className="fixed bottom-4 right-132 z-40 bg-indigo-600 hover:bg-indigo-700 text-white p-3 rounded-full shadow-lg transition-colors duration-200"
+          title="AI Assistant (Ctrl+Shift+B)"
+        >
+          🤖
+        </button>
+
         {/* Keyboard Shortcuts Help Panel */}
         <div className="fixed bottom-4 left-4 z-40 bg-gray-800 text-white p-3 rounded-lg shadow-lg text-sm opacity-75 hover:opacity-100 transition-opacity duration-200">
           <div className="font-semibold mb-1">Keyboard Shortcuts:</div>
@@ -789,6 +813,7 @@ export default function App(): React.JSX.Element {
           <div>Ctrl+Shift+I: Comprehensive Improvements</div>
           <div>Ctrl+Shift+O: Advanced Monitoring</div>
           <div>Ctrl+Shift+L: Advanced Analytics</div>
+          <div>Ctrl+Shift+B: AI Assistant</div>
           <div>Ctrl+Shift+K: Keyboard Help</div>
           <div>Ctrl+K: Command Palette</div>
           <div>Escape: Close All</div>
