@@ -84,7 +84,7 @@ export default function App(): React.JSX.Element {
   const isLoading = false;
   const loadingProgress = 100;
   const handleScroll = useCallback(() => {}, []);
-  const handleClick = useCallback((event: Event) => {
+  const handleClick = useCallback((event?: Event) => {
     // Handle click events for engagement tracking
     console.debug('Click event captured for engagement tracking', event);
   }, []);
