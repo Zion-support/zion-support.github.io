@@ -258,7 +258,7 @@ export class AdvancedNotifications {
   private playNotificationSound(type: string): void {
     // Create audio context for notification sounds
     try {
-      const audioContext = new (window.AudioContext || (window as any).webkitAudioContext)();
+      const audioContext = new (window.AudioContext || (window as Window & { webkitAudioContext?: typeof AudioContext }).webkitAudioContext)();
       const oscillator = audioContext.createOscillator();
       const gainNode = audioContext.createGain();
 
@@ -379,7 +379,7 @@ export function getNotificationManager(config?: Partial<NotificationConfig>): Ad
     notificationManager = new AdvancedNotifications(config);
     // Make it globally available for onclick handlers
     if (typeof window !== 'undefined') {
-      (window as any).notificationManager = notificationManager;
+      (window as Window & { notificationManager?: AdvancedNotifications }).notificationManager = notificationManager;
     }
   }
   return notificationManager;

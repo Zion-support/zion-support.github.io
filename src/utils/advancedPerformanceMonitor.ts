@@ -81,7 +81,7 @@ export class AdvancedPerformanceMonitor {
         const entries = list.getEntries();
         entries.forEach((entry) => {
           if (entry.entryType === 'first-input' && 'processingStart' in entry && 'startTime' in entry) {
-            this.metrics.fid = (entry as any).processingStart - entry.startTime;
+            this.metrics.fid = (entry as PerformanceEntry & { processingStart: number }).processingStart - entry.startTime;
           }
         });
       });
