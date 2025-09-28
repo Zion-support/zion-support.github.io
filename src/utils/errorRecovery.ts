@@ -2,12 +2,29 @@
  * Error Recovery System
  */
 
-export class ErrorRecovery {
+export interface ErrorContext {
+  error: Error;
+  timestamp: number;
+  userAgent: string;
+  url: string;
+  stack?: string;
+}
+
+export interface RecoveryStrategy {
+  name: string;
+  condition: (error: Error) => boolean;
+  action: () => Promise<void>;
+}
+
+export class ErrorRecoverySystem {
   private errorCount = 0;
   private maxRetries = 3;
 
+  private strategies: RecoveryStrategy[] = [];
+
   constructor() {
     this.setupErrorHandling();
+    this.setupRecoveryStrategies();
   }
 
   private setupErrorHandling(): void {
@@ -22,24 +39,49 @@ export class ErrorRecovery {
     });
   }
 
+  private setupRecoveryStrategies(): void {
+    this.strategies = [
+      {
+        name: 'cache_clear',
+        condition: () => true,
+        action: async () => {
+          if ('caches' in window) {
+            const cacheNames = await caches.keys();
+            await Promise.all(cacheNames.map(name => caches.delete(name)));
+          }
+        }
+      },
+      {
+        name: 'page_reload',
+        condition: (error) => error.message.includes('chunk') || error.message.includes('loading'),
+        action: async () => {
+          window.location.reload();
+        }
+      }
+    ];
+  }
   private handleError(error: Error): void {
     console.error('Error Recovery - Error caught:', error);
     this.errorCount++;
 
     if (this.errorCount <= this.maxRetries) {
-      this.attemptRecovery();
+      this.attemptRecovery(error);
     } else {
       this.showFallbackUI();
     }
   }
 
-  private async attemptRecovery(): Promise<void> {
+  private async attemptRecovery(error: Error): Promise<void> {
     console.log(`Attempting recovery (${this.errorCount}/${this.maxRetries})`);
     
-    // Clear caches
-    if ('caches' in window) {
-      const cacheNames = await caches.keys();
-      await Promise.all(cacheNames.map(name => caches.delete(name)));
+    // Find appropriate recovery strategy
+    const strategy = this.strategies.find(s => s.condition(error));
+    if (strategy) {
+      try {
+        await strategy.action();
+      } catch (recoveryError) {
+        console.error('Recovery failed:', recoveryError);
+      }
     }
 
     // Wait before retry
@@ -76,4 +118,5 @@ export class ErrorRecovery {
   }
 }
 
-export const errorRecovery = new ErrorRecovery();
+export const errorRecoverySystem = new ErrorRecoverySystem();
+export const errorRecovery = errorRecoverySystem;
