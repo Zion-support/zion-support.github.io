@@ -8,6 +8,9 @@ import { seoAnalytics, performanceSEO, seoManager } from './utils/seoEnhanced';
 import { analytics } from './utils/analytics';
 import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
+import PerformanceMonitor from './components/PerformanceMonitor';
+import SEOOptimizer, { useSEOData } from './components/SEOOptimizer';
+import AIPerformanceDashboard from './components/AIPerformanceDashboard';
 import './index.css';
 import './styles/notifications.css';
 import './styles/system-metrics.css';
@@ -17,6 +20,8 @@ export default function App(): React.JSX.Element {
   // State for system dashboard and performance optimizer
   const [showSystemDashboard, setShowSystemDashboard] = useState(false);
   const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
+  const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
+  const [showAIDashboard, setShowAIDashboard] = useState(false);
   // Engagement tracking data
   const engagementData = useMemo(() => ({
     startTime: Date.now(),
@@ -64,6 +69,14 @@ export default function App(): React.JSX.Element {
       event.preventDefault();
       setShowPerformanceOptimizer((prev: boolean) => !prev);
     }
+    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'M') {
+      event.preventDefault();
+      setShowPerformanceMonitor((prev: boolean) => !prev);
+    }
+    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'A') {
+      event.preventDefault();
+      setShowAIDashboard((prev: boolean) => !prev);
+    }
   }, []);
   // Memoize the SEO data to prevent unnecessary re-renders
   const seoData = useMemo(() => ({
@@ -75,6 +88,7 @@ export default function App(): React.JSX.Element {
     ogImage: '/og-image.png',
     twitterCard: 'summary_large_image' as const
   }), []);
+
 
   // Update meta tags function
   const updateMetaTags = useCallback((data: {
@@ -199,6 +213,56 @@ export default function App(): React.JSX.Element {
     <EnhancedErrorBoundary>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <AppRouter />
+        
+        {/* System Dashboard */}
+        {showSystemDashboard && (
+          <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
+            <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+              <div className="flex justify-between items-center mb-4">
+                <h2 className="text-2xl font-bold text-gray-900">System Dashboard</h2>
+                <button
+                  onClick={() => setShowSystemDashboard(false)}
+                  className="text-gray-500 hover:text-gray-700"
+                >
+                  ✕
+                </button>
+              </div>
+              <EnhancedSystemDashboard />
+            </div>
+          </div>
+        )}
+
+        {/* Performance Optimizer */}
+        {showPerformanceOptimizer && (
+          <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
+            <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+              <div className="flex justify-between items-center mb-4">
+                <h2 className="text-2xl font-bold text-gray-900">Performance Optimizer</h2>
+                <button
+                  onClick={() => setShowPerformanceOptimizer(false)}
+                  className="text-gray-500 hover:text-gray-700"
+                >
+                  ✕
+                </button>
+              </div>
+              <PerformanceOptimizer />
+            </div>
+          </div>
+        )}
+
+        {/* Performance Monitor - Toggle with Ctrl+Shift+M */}
+        <PerformanceMonitor 
+          showDashboard={showPerformanceMonitor}
+          onMetricsUpdate={(metrics) => {
+            console.log('Performance metrics:', metrics);
+          }}
+        />
+        
+        {/* AI Performance Dashboard - Toggle with Ctrl+Shift+A */}
+        <AIPerformanceDashboard
+          isVisible={showAIDashboard}
+          onClose={() => setShowAIDashboard(false)}
+        />
       </div>
     </EnhancedErrorBoundary>
   );
