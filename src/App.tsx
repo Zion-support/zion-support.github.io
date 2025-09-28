@@ -117,7 +117,7 @@ export default function App(): React.JSX.Element {
     title: 'Zion Tech Group - Leading AI & Technology Solutions',
     description: 'Cutting-edge AI, quantum computing, and digital transformation solutions for modern enterprises. Expert consulting, cloud services, and innovative technology implementations.',
     keywords: ['AI solutions', 'quantum computing', 'digital transformation', 'cloud services', 'enterprise technology', 'machine learning', 'automation', 'blockchain'],
-    canonical: `https://zion.app${currentPathname}`,
+    canonicalUrl: `https://zion.app${typeof window !== 'undefined' ? window.location.pathname : ''}`,
     ogTitle: 'Zion Tech Group - AI & Technology Solutions',
     ogDescription: 'Transform your business with cutting-edge AI and technology solutions.',
     ogImage: 'https://zion.app/og-image.jpg',
@@ -125,7 +125,7 @@ export default function App(): React.JSX.Element {
     twitterTitle: 'Zion Tech Group - AI & Technology Solutions',
     twitterDescription: 'Transform your business with cutting-edge AI and technology solutions.',
     twitterImage: 'https://zion.app/twitter-image.jpg'
-  }), [currentPathname]);
+  }), []);
 
   // Performance optimization hook
   // const { getPerformanceMetrics } = usePerformanceOptimization();
