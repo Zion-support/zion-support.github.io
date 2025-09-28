@@ -22,8 +22,8 @@ global.fetch = jest.fn();
 };
 
 // Mock window.location using a simple assignment
-delete (window as any).location;
-(window as any).location = mockLocation;
+delete (window as unknown as { location?: Partial<Location> }).location;
+(window as unknown as { location: Partial<Location> }).location = mockLocation;
 
 // Mock window.history
 Object.defineProperty(window, 'history', {

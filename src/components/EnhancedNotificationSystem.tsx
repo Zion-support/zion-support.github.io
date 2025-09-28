@@ -21,6 +21,7 @@ interface Notification {
   timestamp: Date;
 }
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 interface NotificationSystem {
   success: (title: string, message: string, options?: Partial<Notification>) => string;
   error: (title: string, message: string, options?: Partial<Notification>) => string;
