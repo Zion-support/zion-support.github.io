@@ -209,12 +209,17 @@ export default function App(): React.JSX.Element {
       enhancedPerformanceMonitor.startMonitoring();
       
       // Initialize new advanced systems
-      // performanceOptimizer initializes automatically in constructor
-      enhancedSecurityManager.initialize();
-      // new AdvancedAutomationSystem().initialize(); // Commented out - class does not exist
+      if ('initialize' in performanceOptimizer) {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        (performanceOptimizer as any).initialize();
+      }
+      if (enhancedSecurityManager && typeof enhancedSecurityManager.initialize === 'function') {
+        enhancedSecurityManager.initialize();
+      }
       // Initialize enhancement systems
-      // new AccessibilityEnhancer(); // Commented out - class does not exist
-      // new SecurityEnhancer(); // Commented out - class does not exist
+      if (accessibilityEnhancer && typeof accessibilityEnhancer.initialize === 'function') {
+        accessibilityEnhancer.initialize();
+      }
       
       // Initialize analytics
       if ('initialize' in analytics) {
