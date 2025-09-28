@@ -1,6 +1,11 @@
-import React, { useCallback, useState, useMemo, useEffect } from 'react';
+import React, { useCallback, useState, useEffect, useMemo } from 'react';
 import { AppRouter } from './router';
 import { useAppInitialization } from './hooks/useAppInitialization';
+import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
+import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
+import { seoAnalytics, performanceSEO, seoManager } from './utils/seoEnhanced';
+import { analytics } from './utils/analytics';
+import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
 import PerformanceDashboard from './components/PerformanceDashboard';
 import RealTimeMonitor from './components/RealTimeMonitor';
 import SystemMetricsDashboard from './components/SystemMetricsDashboard';
@@ -13,16 +18,15 @@ import { initializeErrorReporting } from './utils/errorReporting';
 import { advancedPerformanceOptimizer } from './utils/performanceOptimizer';
 import { seoOptimizer } from './utils/seoOptimization';
 import { enhancedErrorHandler } from './utils/enhancedErrorHandling';
+import EnhancedAnalytics from './components/EnhancedAnalytics';
 import './index.css';
 import './styles/notifications.css';
 import './styles/system-metrics.css';
 import './styles/modern-utilities.css';
 
 export default function App(): React.JSX.Element {
-  // State for system metrics dashboard
+  // State for system dashboard and performance optimizer
   const [showSystemDashboard, setShowSystemDashboard] = useState(false);
-  
-  // State for performance optimizer
   const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
 
   // Initialize app with custom configuration
@@ -33,6 +37,14 @@ export default function App(): React.JSX.Element {
     enableAnalytics: true,
     enableNotifications: true,
     enableCaching: true,
+  });
+
+  // Performance optimization hook
+  const { preloadResource } = usePerformanceOptimization({
+    enablePreloading: true,
+    enableResourceHints: true,
+    enableCriticalCSS: true,
+    enableImageOptimization: true,
   });
 
   // Optimized keyboard handler for system dashboard toggle
@@ -46,6 +58,33 @@ export default function App(): React.JSX.Element {
       setShowPerformanceOptimizer(prev => !prev);
     }
   }, []);
+
+  // Handle scroll events
+  const handleScroll = useCallback(() => {
+    // Scroll handling logic can be added here
+  }, []);
+
+  // Handle click events
+  const handleClick = useCallback(() => {
+    // Click handling logic can be added here
+  }, []);
+
+  // Engagement data for tracking
+  const engagementData = useMemo(() => ({
+    startTime: Date.now(),
+    scrollDepth: 0,
+    clicks: 0
+  }), []);
+
+  // Track engagement function
+  const trackEngagement = useCallback(() => {
+    const timeOnPage = Date.now() - engagementData.startTime;
+    seoAnalytics.trackUserEngagement(window.location.pathname, {
+      timeOnPage,
+      scrollDepth: engagementData.scrollDepth,
+      clicks: engagementData.clicks,
+    });
+  }, [engagementData]);
 
   // Memoize the SEO data to prevent unnecessary re-renders
   const seoData = useMemo(() => ({
@@ -74,23 +113,34 @@ export default function App(): React.JSX.Element {
       performance.mark('app-init-start');
     }
     
-    // Initialize performance optimizer
-    if (advancedPerformanceOptimizer) {
-      advancedPerformanceOptimizer.startMonitoring();
-    }
+    // Preload critical resources
+    preloadResource('/og-image.png', 'image');
+    preloadResource('/favicon.ico', 'image');
+
+    // Use passive listeners for better performance
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    document.addEventListener('click', handleClick, { passive: true });
+    document.addEventListener('keydown', handleKeyDown);
+
+    // Initialize basic systems
+    analytics.initialize();
     
-    // Initialize SEO optimizer
-    if (seoOptimizer) {
-      seoOptimizer.updatePageSEO({
-        title: seoData.title,
-        description: seoData.description,
-        keywords: seoData.keywords,
-        image: seoData.ogImage,
-        url: typeof window !== 'undefined' ? window.location.href : '',
-        type: seoData.ogType as 'website' | 'article' | 'product'
-      });
-    }
+    // Initialize SEO analytics
+    seoAnalytics.trackPageView(window.location.pathname);
     
+    // Initialize performance SEO optimizations
+    performanceSEO.optimizeImages();
+    performanceSEO.optimizeFonts();
+    performanceSEO.optimizeCSS();
+
+    // Set default SEO data using the correct method
+    seoManager.updateMetaTags(seoData);
+
+    // Basic performance monitoring
+    if (typeof window !== 'undefined') {
+      console.log('🚀 Zion Tech Group App initialized');
+    }
+
     // Mark app as fully initialized
     if (typeof window !== 'undefined' && window.performance && 
         typeof performance.mark === 'function' && 
@@ -98,17 +148,28 @@ export default function App(): React.JSX.Element {
       performance.mark('app-init-complete');
       performance.measure('app-initialization', 'app-init-start', 'app-init-complete');
     }
-  }, [seoData]);
 
-  // Add keyboard event listener
-  React.useEffect(() => {
-    document.addEventListener("keydown", handleKeyDown);
-    
     // Cleanup function
     return () => {
+      window.removeEventListener('scroll', handleScroll);
+      document.removeEventListener('click', handleClick);
       document.removeEventListener('keydown', handleKeyDown);
     };
-  }, [handleKeyDown]);
+  }, [handleScroll, handleClick, handleKeyDown, seoData, preloadResource]);
+
+  // Main initialization and cleanup effect
+  React.useEffect(() => {
+    // Track engagement on page unload
+    window.addEventListener('beforeunload', trackEngagement);
+
+    // Cleanup function
+    return () => {
+      window.removeEventListener('beforeunload', trackEngagement);
+      
+      // Final engagement tracking
+      trackEngagement();
+    };
+  }, [trackEngagement]);
 
   // Show loading screen while initializing
   if (isLoading) {
@@ -128,24 +189,59 @@ export default function App(): React.JSX.Element {
 
   return (
     <EnhancedErrorBoundary>
-      <AppRouter />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <AppRouter />
+        
+        {/* System Dashboard */}
+        {showSystemDashboard && (
+          <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
+            <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+              <div className="flex justify-between items-center mb-4">
+                <h2 className="text-2xl font-bold text-gray-900">System Dashboard</h2>
+                <button
+                  onClick={() => setShowSystemDashboard(false)}
+                  className="text-gray-500 hover:text-gray-700"
+                >
+                  ✕
+                </button>
+              </div>
+              <EnhancedSystemDashboard />
+            </div>
+          </div>
+        )}
+
+        {/* Performance Optimizer */}
+        {showPerformanceOptimizer && (
+          <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
+            <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+              <div className="flex justify-between items-center mb-4">
+                <h2 className="text-2xl font-bold text-gray-900">Performance Optimizer</h2>
+                <button
+                  onClick={() => setShowPerformanceOptimizer(false)}
+                  className="text-gray-500 hover:text-gray-700"
+                >
+                  ✕
+                </button>
+              </div>
+              <PerformanceOptimizer />
+            </div>
+          </div>
+        )}
+      </div>
+      
       <PerformanceDashboard />
       <RealTimeMonitor />
       <SystemMetricsDashboard 
         isVisible={showSystemDashboard}
         onClose={() => setShowSystemDashboard(false)}
       />
-      {showSystemDashboard && <EnhancedSystemDashboard />}
       <EnhancedNotificationSystem 
         position="top-right"
         enableAnimations
         enableAccessibility
         maxNotifications={5}
       />
-      <PerformanceOptimizer 
-        isVisible={showPerformanceOptimizer}
-        onClose={() => setShowPerformanceOptimizer(false)}
-      />
+      <EnhancedAnalytics />
     </EnhancedErrorBoundary>
   );
 }
