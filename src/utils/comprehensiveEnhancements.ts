@@ -208,8 +208,10 @@ class ComprehensiveEnhancements {
     // Monitor memory usage
     if ('memory' in performance) {
       const updateMemoryMetrics = () => {
-        const memory = (performance as any).memory;
-        this.performanceMetrics.memoryUsage = memory.usedJSHeapSize;
+        const memory = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory;
+        if (memory) {
+          this.performanceMetrics.memoryUsage = memory.usedJSHeapSize;
+        }
       };
 
       updateMemoryMetrics();
@@ -257,10 +259,11 @@ class ComprehensiveEnhancements {
     if (originalInnerHTML) {
       Object.defineProperty(Element.prototype, 'innerHTML', {
         set: function(this: Element, value: string) {
-          if (typeof value === 'string' && (this as any).containsXSS && (this as any).containsXSS(value)) {
+          const element = this as Element & { containsXSS?: (value: string) => boolean; securityMetrics?: { xssAttempts: number } };
+          if (typeof value === 'string' && element.containsXSS && element.containsXSS(value)) {
             console.warn('XSS attempt blocked');
-            (this as any).securityMetrics = (this as any).securityMetrics || { xssAttempts: 0 };
-            (this as any).securityMetrics.xssAttempts = ((this as any).securityMetrics.xssAttempts || 0) + 1;
+            element.securityMetrics = element.securityMetrics || { xssAttempts: 0 };
+            element.securityMetrics.xssAttempts = (element.securityMetrics.xssAttempts || 0) + 1;
             return;
           }
           originalInnerHTML.call(this, value);
@@ -269,7 +272,7 @@ class ComprehensiveEnhancements {
     }
 
     // Add XSS detection method
-    (Element.prototype as any).containsXSS = function(this: any, content: string): boolean {
+    (Element.prototype as Element & { containsXSS?: (content: string) => boolean }).containsXSS = function(this: Element, content: string): boolean {
       const xssPatterns = [
         /<script[^>]*>.*?<\/script>/gi,
         /javascript:/gi,
@@ -348,7 +351,7 @@ class ComprehensiveEnhancements {
     document.body.appendChild(announcer);
 
     // Store reference for announcements
-    (window as any).screenReaderAnnouncer = announcer;
+    (window as Window & { screenReaderAnnouncer?: HTMLElement }).screenReaderAnnouncer = announcer;
   }
 
   private setupKeyboardNavigation(): void {
@@ -423,7 +426,7 @@ class ComprehensiveEnhancements {
     });
 
     // Store focus history globally
-    (window as any).focusHistory = focusHistory;
+    (window as Window & { focusHistory?: Element[] }).focusHistory = focusHistory;
   }
 
   private setupARIAEnhancements(): void {
@@ -603,7 +606,7 @@ class ComprehensiveEnhancements {
 
   private setupUserFeedback(): void {
     // Store notification function globally
-    (window as any).showNotification = this.showNotification.bind(this);
+    (window as Window & { showNotification?: (message: string, type?: 'success' | 'error' | 'warning' | 'info') => void }).showNotification = this.showNotification.bind(this);
   }
 
   private showNotification(message: string, type: 'success' | 'error' | 'warning' | 'info' = 'info'): void {
@@ -662,7 +665,7 @@ class ComprehensiveEnhancements {
     }
   }
 
-  private applyPreferences(preferences: any): void {
+  private applyPreferences(preferences: { theme?: string; highContrast?: boolean; fontSize?: string; reduceMotion?: boolean }): void {
     if (preferences.theme === 'dark') {
       document.body.classList.add('dark-theme');
     }
@@ -671,7 +674,7 @@ class ComprehensiveEnhancements {
       document.body.classList.add('high-contrast');
     }
 
-    if (preferences.reduceMotion) {
+    if ('reduceMotion' in preferences && (preferences as { reduceMotion?: boolean }).reduceMotion) {
       document.body.classList.add('reduce-motion');
     }
   }
@@ -700,14 +703,18 @@ class ComprehensiveEnhancements {
             case 'largest-contentful-paint':
               this.performanceMetrics.lcp = entry.startTime;
               break;
-            case 'first-input':
-              this.performanceMetrics.fid = (entry as any).processingStart - entry.startTime;
+            case 'first-input': {
+              const fidEntry = entry as PerformanceEntry & { processingStart: number };
+              this.performanceMetrics.fid = fidEntry.processingStart - entry.startTime;
               break;
-            case 'layout-shift':
-              if (!(entry as any).hadRecentInput) {
-                this.performanceMetrics.cls = (this.performanceMetrics.cls || 0) + (entry as any).value;
+            }
+            case 'layout-shift': {
+              const layoutShiftEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
+              if (!layoutShiftEntry.hadRecentInput) {
+                this.performanceMetrics.cls = (this.performanceMetrics.cls || 0) + (layoutShiftEntry.value || 0);
               }
               break;
+            }
           }
         }
       });
@@ -738,7 +745,7 @@ class ComprehensiveEnhancements {
 
     // Store metrics
     this.uxMetrics.engagementScore = scrollDepth;
-    (window as any).engagementMetrics = { scrollDepth, clickCount };
+    (window as Window & { engagementMetrics?: { scrollDepth: number; clickCount: number } }).engagementMetrics = { scrollDepth, clickCount };
   }
 
   private setupErrorTracking(): void {

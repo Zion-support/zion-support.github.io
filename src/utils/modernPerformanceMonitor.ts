@@ -307,7 +307,7 @@ class ModernPerformanceMonitor {
 
   private setupNetworkMonitoring(): void {
     if ('connection' in navigator) {
-      const connection = (navigator as any).connection as NetworkConnection | undefined;
+      const connection = (navigator as Navigator & { connection?: NetworkConnection }).connection;
       if (connection) {
         this.metrics.connectionType = connection.type || 'unknown';
         this.metrics.effectiveType = connection.effectiveType || 'unknown';
@@ -385,7 +385,7 @@ class ModernPerformanceMonitor {
 
     // Update network metrics
     if ('connection' in navigator) {
-      const connection = (navigator as any).connection as NetworkConnection | undefined;
+      const connection = (navigator as Navigator & { connection?: NetworkConnection }).connection;
       if (connection) {
         this.metrics.connectionType = connection.type || 'unknown';
         this.metrics.effectiveType = connection.effectiveType || 'unknown';

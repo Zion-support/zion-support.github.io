@@ -437,7 +437,7 @@ export const EnhancedSystemDashboard: React.FC<EnhancedSystemDashboardProps> = (
             {onClose && (
               <button
                 onClick={onClose}
-                className="px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors"
+                className="bg-gray-200 hover:bg-gray-300 text-gray-700 px-4 py-2 rounded-lg transition-colors duration-200"
               >
                 Close
               </button>
