@@ -91,11 +91,11 @@ class SecurityUtils {
   private sanitizeUserInput(): void {
     // Override innerHTML to sanitize content
     const originalInnerHTML = Object.getOwnPropertyDescriptor(Element.prototype, 'innerHTML');
-    if (originalInnerHTML && originalInnerHTML.set) {
+    if (originalInnerHTML) {
       Object.defineProperty(Element.prototype, 'innerHTML', {
-        set: function(value: string) {
+        set: function(value) {
           const sanitized = this.sanitizeHTML(value);
-          originalInnerHTML.set!.call(this, sanitized);
+          originalInnerHTML.set?.call(this, sanitized);
         },
         get: originalInnerHTML.get
       });
@@ -132,8 +132,7 @@ class SecurityUtils {
     // Monitor for suspicious console usage
     const originalConsole = { ...console };
     Object.keys(console).forEach(key => {
-      const consoleMethod = (console as any)[key];
-      if (typeof consoleMethod === 'function') {
+      if (typeof (console as any)[key] === 'function') {
         (console as any)[key] = (...args: any[]) => {
           this.logSecurityEvent('console-usage', { method: key, args });
           (originalConsole as any)[key](...args);
@@ -166,9 +165,8 @@ class SecurityUtils {
   private monitorDataExfiltration(): void {
     // Monitor for suspicious network requests
     const originalFetch = window.fetch;
-    window.fetch = async (input: RequestInfo | URL, init?: RequestInit) => {
-      const url = typeof input === 'string' ? input : 
-        input instanceof URL ? input.toString() : input.url;
+    window.fetch = async (input, init) => {
+      const url = typeof input === 'string' ? input : (input as Request).url;
       
       // Check for suspicious patterns
       if (this.isSuspiciousURL(url)) {
