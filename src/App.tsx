@@ -5,9 +5,9 @@ import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import { seoAnalytics, performanceSEO } from './utils/seoEnhanced';
 import { analytics } from './utils/analytics';
-import { performanceOptimizer } from './utils/performanceOptimizations';
-import { accessibilityEnhancer } from './utils/accessibilityEnhancements';
-import { seoOptimizer } from './utils/seoOptimizations';
+import { performanceOptimizer } from './utils/performanceOptimizer';
+import { accessibilityEnhancer } from './utils/accessibilityEnhancer';
+import { seoOptimizer } from './utils/seoOptimizer';
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
 import PerformanceDashboard from './components/PerformanceDashboard';
 import RealTimeMonitor from './components/RealTimeMonitor';
@@ -145,22 +145,30 @@ export default function App(): React.JSX.Element {
       const enhancements = getComprehensiveEnhancements();
       enhancements.initialize();
       
-      // Initialize individual enhancement systems
-      enhancedPerformanceMonitor.initialize();
-      enhancedAnalytics.initialize();
-      advancedCacheSystem.initialize();
-      new AdvancedAutomationSystem().initialize();
-      new AccessibilityEnhancer().initialize();
-      new SecurityEnhancer().initialize();
+    // Initialize individual enhancement systems
+    try {
+      // Initialize enhancement systems
+      if (typeof enhancedAnalytics.initialize === 'function') {
+        enhancedAnalytics.initialize();
+      }
+      if (typeof advancedCacheSystem.initialize === 'function') {
+        advancedCacheSystem.initialize();
+      }
+      const automationSystem = new AdvancedAutomationSystem();
+      if (typeof automationSystem.initialize === 'function') {
+        automationSystem.initialize();
+      }
+    } catch (error) {
+      console.warn('Some enhancement systems failed to initialize:', error);
+    }
     } catch (error) {
       console.warn('Some enhancement systems failed to initialize:', error);
     }
     
     // Initialize analytics
-    analytics.initialize();
-    seoAnalytics.initialize();
-    performanceSEO.initialize();
-    seoManager.initialize();
+    if (typeof analytics.initialize === 'function') {
+      analytics.initialize();
+    }
     
     // Initialize SEO analytics
     seoAnalytics.trackPageView(window.location.pathname);
@@ -199,13 +207,12 @@ export default function App(): React.JSX.Element {
     performanceSEO.optimizeCSS();
     
     // Initialize advanced optimization systems
-    // These are initialized automatically when imported
-    void performanceOptimizer;
-    void accessibilityEnhancer;
-    void seoOptimizer;
+    performanceOptimizer.initialize();
+    accessibilityEnhancer.initialize();
+    seoOptimizer.initialize();
 
     // Set default SEO data using the correct method
-    seoManager.updateMetaTags(seoData);
+    seoOptimizer.updateSEO(seoData);
 
     // Update meta tags
     updateMetaTags(seoData);
@@ -366,7 +373,7 @@ export default function App(): React.JSX.Element {
         enableAccessibility
         maxNotifications={5}
       />
-      <SEOOptimizer />
+      <SEOOptimizer seoData={seoData} />
       <EnhancedAnalytics />
     </EnhancedErrorBoundary>
   );
