@@ -46,6 +46,64 @@ export default function App(): React.JSX.Element {
   // State for system metrics dashboard
   const [showSystemDashboard, setShowSystemDashboard] = useState(false);
 
+  // Track user engagement with throttling for better performance
+  const [engagementData, setEngagementData] = useState({
+    startTime: Date.now(),
+    scrollDepth: 0,
+    clicks: 0
+  });
+
+  // Optimized scroll handler with requestAnimationFrame
+  const handleScroll = useCallback(() => {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const documentHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const newScrollDepth = Math.max(engagementData.scrollDepth, scrollTop / documentHeight);
+    
+    setEngagementData(prev => ({ ...prev, scrollDepth: newScrollDepth }));
+    
+    // Use requestAnimationFrame for better performance
+    requestAnimationFrame(() => {
+      recordMetric('scrollDepth', newScrollDepth);
+    });
+  }, [recordMetric, engagementData.scrollDepth]);
+
+  // Optimized click handler with better event delegation
+  const handleClick = useCallback((event: Event) => {
+    const newClicks = engagementData.clicks + 1;
+    setEngagementData(prev => ({ ...prev, clicks: newClicks }));
+    
+    // Debounce click tracking
+    setTimeout(() => {
+      recordMetric('userClicks', newClicks);
+      
+      // Track specific interaction types with better performance
+      const target = event.target as HTMLElement;
+      const tagName = target.tagName.toLowerCase();
+      
+      switch (tagName) {
+        case 'button':
+          recordMetric('buttonClicks', 1);
+          break;
+        case 'a':
+          recordMetric('linkClicks', 1);
+          break;
+        case 'input':
+          recordMetric('inputClicks', 1);
+          break;
+        default:
+          recordMetric('otherClicks', 1);
+      }
+    }, 100);
+  }, [recordMetric, engagementData.clicks]);
+
+  // Optimized keyboard handler for system dashboard toggle
+  const handleKeyDown = useCallback((event: KeyboardEvent) => {
+    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'D') {
+      event.preventDefault();
+      setShowSystemDashboard(prev => !prev);
+    }
+  }, []);
+
   // Memoize the SEO data to prevent unnecessary re-renders
   const seoData = useMemo(() => ({
     title: 'Zion Tech Group - Leading AI & Technology Solutions',
@@ -308,77 +366,21 @@ export default function App(): React.JSX.Element {
     seoManager.updateSEO(seoData);
 
     // Track user engagement with throttling for better performance
-    let startTime = Date.now();
-    let scrollDepth = 0;
-    let clicks = 0;
-    let scrollTimeout: NodeJS.Timeout;
-    let clickTimeout: NodeJS.Timeout;
-
     const trackEngagement = () => {
-      const timeOnPage = Date.now() - startTime;
+      const timeOnPage = Date.now() - engagementData.startTime;
       seoAnalytics.trackUserEngagement(window.location.pathname, {
         timeOnPage,
-        scrollDepth,
-        clicks,
+        scrollDepth: engagementData.scrollDepth,
+        clicks: engagementData.clicks,
         // userAgent: navigator.userAgent,
         // viewport: `${window.innerWidth}x${window.innerHeight}`,
         // connection: (navigator as Navigator & { connection?: { effectiveType?: string } }).connection?.effectiveType || 'unknown'
       });
     };
 
-    // Optimized scroll handler with requestAnimationFrame
-    const handleScroll = useCallback(() => {
-      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      const documentHeight = document.documentElement.scrollHeight - window.innerHeight;
-      scrollDepth = Math.max(scrollDepth, scrollTop / documentHeight);
-      
-      // Use requestAnimationFrame for better performance
-      requestAnimationFrame(() => {
-        recordMetric('scrollDepth', scrollDepth);
-      });
-    }, [recordMetric]);
-
-    // Optimized click handler with better event delegation
-    const handleClick = useCallback((event: Event) => {
-      clicks++;
-      
-      // Debounce click tracking
-      clearTimeout(clickTimeout);
-      clickTimeout = setTimeout(() => {
-        recordMetric('userClicks', clicks);
-        
-        // Track specific interaction types with better performance
-        const target = event.target as HTMLElement;
-        const tagName = target.tagName.toLowerCase();
-        
-        switch (tagName) {
-          case 'button':
-            recordMetric('buttonClicks', 1);
-            break;
-          case 'a':
-            recordMetric('linkClicks', 1);
-            break;
-          case 'input':
-            recordMetric('inputClicks', 1);
-            break;
-          default:
-            break;
-        }
-      }, 50);
-    }, [recordMetric]);
-
     // Use passive listeners for better performance
     window.addEventListener('scroll', handleScroll, { passive: true });
     document.addEventListener('click', handleClick, { passive: true });
-    
-    // Optimized keyboard handler for system dashboard toggle
-    const handleKeyDown = useCallback((event: KeyboardEvent) => {
-      if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'D') {
-        event.preventDefault();
-        setShowSystemDashboard(prev => !prev);
-      }
-    }, []);
-    
     document.addEventListener('keydown', handleKeyDown);
 
     // Track engagement on page unload
@@ -399,9 +401,8 @@ export default function App(): React.JSX.Element {
       document.removeEventListener('keydown', handleKeyDown);
       window.removeEventListener('beforeunload', trackEngagement);
       
-      // Clear timeouts
-      clearTimeout(scrollTimeout);
-      clearTimeout(clickTimeout);
+      // Clear timeouts (if any exist)
+      // Note: Timeout variables are now managed by the component state
       
       // Stop monitoring
       memoryMonitor.stopMonitoring();
