@@ -146,11 +146,19 @@ export default function App(): React.JSX.Element {
   // Main initialization effect
   useEffect(() => {
     try {
+<<<<<<< HEAD
+=======
+      // Initialize comprehensive enhancements first
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-7e06
       const enhancements = getComprehensiveEnhancements();
       enhancements.initialize();
       
       // Initialize individual enhancement systems
-      enhancedPerformanceMonitor.startMonitoring();
+      if ('startMonitoring' in enhancedPerformanceMonitor) {
+        enhancedPerformanceMonitor.startMonitoring();
+      } else if ('initialize' in enhancedPerformanceMonitor) {
+        (enhancedPerformanceMonitor as any).initialize();
+      }
       enhancedAnalytics.initialize();
       advancedCacheSystem.initialize();
       new AdvancedAutomationSystem().initialize();
@@ -172,7 +180,6 @@ export default function App(): React.JSX.Element {
     performanceSEO.optimizeCSS();
     
     // Initialize advanced optimization systems
-    // These are initialized automatically when imported
     void performanceOptimizer;
     void accessibilityEnhancer;
     void seoOptimizer;
@@ -212,6 +219,7 @@ export default function App(): React.JSX.Element {
     // Preload critical resources
     preloadResource('/og-image.png', 'image');
     preloadResource('/favicon.ico', 'image');
+<<<<<<< HEAD
 
     // Use passive listeners for better performance
     window.addEventListener('scroll', handleScroll, { passive: true });
@@ -221,6 +229,17 @@ export default function App(): React.JSX.Element {
     // Track engagement on page unload
     window.addEventListener('beforeunload', enhancedTrackEngagement);
 
+=======
+    
+    // Track engagement on page unload
+    window.addEventListener('beforeunload', enhancedTrackEngagement);
+
+    // Use passive listeners for better performance
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    document.addEventListener('click', handleClick, { passive: true });
+    document.addEventListener('keydown', handleKeyDown);
+
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-7e06
     // Mark app as fully initialized
     if (typeof window !== 'undefined' && window.performance && 
         typeof performance.mark === 'function' && 
@@ -261,6 +280,47 @@ export default function App(): React.JSX.Element {
 
     return () => clearInterval(interval);
   }, [showRealTimeMetrics]);
+<<<<<<< HEAD
+=======
+
+  // Add keyboard event listener
+  React.useEffect(() => {
+    document.addEventListener("keydown", handleKeyDown);
+    
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [handleKeyDown]);
+
+  // Main initialization and cleanup effect
+  React.useEffect(() => {
+    // Track engagement on page unload
+    window.addEventListener('beforeunload', enhancedTrackEngagement);
+
+    // Mark app as fully initialized
+    if (typeof window !== 'undefined' && window.performance && 
+        typeof performance.mark === 'function' && 
+        typeof performance.measure === 'function') {
+      performance.mark('app-init-complete');
+      performance.measure('app-initialization', 'app-init-start', 'app-init-complete');
+    }
+
+    // Cleanup function
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+      window.removeEventListener('beforeunload', enhancedTrackEngagement);
+      
+      // Final engagement tracking
+      trackEngagement();
+    };
+  }, [enhancedTrackEngagement, trackEngagement, handleKeyDown]);
+
+  // Optimize performance on mount
+  useEffect(() => {
+    // Performance optimization is handled by the usePerformanceOptimization hook
+    preloadResource('/api/health');
+  }, [preloadResource]);
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-7e06
 
   // Track engagement on scroll and click
   useEffect(() => {
