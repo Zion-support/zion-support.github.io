@@ -4,12 +4,14 @@
   status = 200
  
 [build]
-  command = "yarn build"
+  command = "pnpm build"
   publish = "dist"
   command_timeout = "30m"
 
 [build.environment]
   NODE_VERSION = "24.0.0"
+  PNPM_VERSION = "10.17.1"
+  NETLIFY_USE_PNPM = "true"
   # Disable Next.js auto-detection
   NETLIFY_NEXT_PLUGIN_SKIP = "true"
 
@@ -37,7 +39,7 @@
   NPM_CONFIG_PRODUCTION = "false"
 
 [context.deploy-preview]
-  command = "yarn build"
+  command = "pnpm build"
 
 [context.branch-deploy]
-  command = "yarn build"
+  command = "pnpm build"
