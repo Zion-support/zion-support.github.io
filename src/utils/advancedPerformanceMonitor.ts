@@ -68,12 +68,7 @@ interface ExtendedPerformance extends Performance {
   memory?: MemoryInfo;
 }
 
-interface NetworkConnection {
-  effectiveType?: string;
-  downlink?: number;
-  rtt?: number;
-  saveData?: boolean;
-}
+// NetworkConnection interface removed as it's not currently used
 
 interface ExtendedNavigator {
   connection?: NetworkConnection & {

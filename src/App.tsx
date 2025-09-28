@@ -11,6 +11,7 @@ import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import EnhancedAnalytics from './components/EnhancedAnalytics';
 import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
+import { seoManager } from './utils/seoEnhanced';
 import './index.css';
 import './styles/notifications.css';
 import './styles/system-metrics.css';
@@ -373,6 +374,14 @@ export default function App(): React.JSX.Element {
     preloadResource('/og-image.png', 'image');
     preloadResource('/favicon.ico', 'image');
 
+    // Set default SEO data
+    (seoManager as any).updateMetaTags(seoData);
+
+    // Basic performance monitoring
+    if (typeof window !== 'undefined') {
+      console.log('🚀 Zion Tech Group App initialized');
+    }
+
     // Use passive listeners for better performance
     window.addEventListener('scroll', handleScroll, { passive: true });
     document.addEventListener('click', handleClick, { passive: true });
@@ -392,6 +401,14 @@ export default function App(): React.JSX.Element {
   React.useEffect(() => {
     // Track engagement on page unload
     window.addEventListener('beforeunload', trackEngagement);
+
+    // Mark app as fully initialized
+    if (typeof window !== 'undefined' && window.performance && 
+        typeof performance.mark === 'function' && 
+        typeof performance.measure === 'function') {
+      performance.mark('app-init-complete');
+      performance.measure('app-initialization', 'app-init-start', 'app-init-complete');
+    }
 
     // Mark app as fully initialized
     if (typeof window !== 'undefined' && window.performance && 
@@ -435,7 +452,7 @@ export default function App(): React.JSX.Element {
       // Final engagement tracking
       trackEngagement();
     };
-  }, [handleKeyDown]);
+  }, [handleKeyDown, seoData]);
 
   // Show loading screen while initializing
   if (isLoading) {

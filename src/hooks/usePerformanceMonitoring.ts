@@ -97,11 +97,11 @@ export function usePerformanceMonitoring(options: UsePerformanceMonitoringOption
   const getNetworkInfo = useCallback(() => {
     if (typeof window !== 'undefined' && 'connection' in navigator) {
       const connection = (navigator as Navigator & { connection?: { effectiveType?: string; downlink?: number; rtt?: number } }).connection;
-      return connection ? {
-        effectiveType: connection.effectiveType || 'unknown',
-        downlink: connection.downlink || 0,
-        rtt: connection.rtt || 0
-      } : undefined;
+      return {
+        effectiveType: connection?.effectiveType || 'unknown',
+        downlink: connection?.downlink || 0,
+        rtt: connection?.rtt || 0
+      };
     }
     return undefined;
   }, []);
