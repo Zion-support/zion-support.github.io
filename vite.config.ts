@@ -66,28 +66,6 @@ export default defineConfig({
           if (id.includes('src/hooks/')) {
             return 'hooks';
           }
-        },
-            if (id.includes('framer-motion') || id.includes('lucide-react') || id.includes('@headlessui')) {
-              return 'ui-vendor';
-            }
-            if (id.includes('lodash') || id.includes('date-fns') || id.includes('axios')) {
-              return 'utils-vendor';
-            }
-            // Group all other node_modules into a single vendor chunk
-            return 'vendor';
-          }
-          // Consolidate component chunks
-          if (id.includes('src/components/')) {
-            return 'components';
-          }
-          // Consolidate utility chunks
-          if (id.includes('src/utils/')) {
-            return 'utils';
-          }
-          // Consolidate hooks
-          if (id.includes('src/hooks/')) {
-            return 'hooks';
-          }
           // Consolidate pages
           if (id.includes('src/pages/')) {
             return 'pages';
