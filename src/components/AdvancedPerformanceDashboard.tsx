@@ -77,7 +77,7 @@ const AdvancedPerformanceDashboard: React.FC<AdvancedPerformanceDashboardProps> 
         metric: 'lcp'
       };
       
-      setRealTimeData(prev => [...prev.slice(-9), newDataPoint as any]);
+      setRealTimeData(prev => [...prev.slice(-9), newDataPoint]);
 
       // Update optimization suggestions
       const suggestions = [
@@ -302,7 +302,7 @@ const AdvancedPerformanceDashboard: React.FC<AdvancedPerformanceDashboardProps> 
                   cy="50%"
                   outerRadius={80}
                   dataKey="value"
-                  label={(entry: any) => `${entry.name}: ${entry.value}`}
+                  label={(entry: { name: string; value: number }) => `${entry.name}: ${entry.value}`}
                 >
                   {pieData.map((entry, index) => (
                     <Cell key={`cell-${index}`} fill={entry.color} />
