@@ -25,7 +25,22 @@ interface ErrorReport {
   };
   aiPredictedImpact?: number;
   resolutionSuggestions?: string[];
+  severity?: string;
   [key: string]: unknown;
+}
+
+interface AIInsights {
+  predictedHighRiskActions: string[];
+  recommendedImprovements: string[];
+  errorTrends: Array<{ category: string; trend: string }>;
+  performancePredictions: {
+    nextHour: number;
+    nextDay: number;
+  };
+  riskAssessment: {
+    level: 'low' | 'medium' | 'high' | 'critical';
+    factors: string[];
+  };
 }
 
 const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisible, onClose }) => {
@@ -66,7 +81,15 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
           { category: 'API', trend: 'stable' as const },
           { category: 'UI', trend: 'decreasing' as const },
           { category: 'Database', trend: 'stable' as const }
-        ]
+        ],
+        performancePredictions: {
+          nextHour: 85,
+          nextDay: 92
+        },
+        riskAssessment: {
+          level: 'medium' as const,
+          factors: ['Memory usage', 'Bundle size', 'API response times']
+        }
       };
 
       const mockErrorReports: ErrorReport[] = [
@@ -241,8 +264,8 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
                       <div key={report.id} className="bg-white p-4 rounded border">
                         <div className="flex justify-between items-start mb-2">
                           <div className="flex items-center space-x-2">
-                            <span className={`px-2 py-1 rounded text-xs font-medium ${getSeverityColor(report.severity)}`}>
-                              {report.severity.toUpperCase()}
+                            <span className={`px-2 py-1 rounded text-xs font-medium ${getSeverityColor(report.severity || 'unknown')}`}>
+                              {(report.severity || 'unknown').toUpperCase()}
                             </span>
                             {report.aiPredictedImpact && (
                               <span className={`text-sm font-medium ${getImpactColor(report.aiPredictedImpact)}`}>
