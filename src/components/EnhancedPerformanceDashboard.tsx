@@ -87,14 +87,6 @@ const EnhancedPerformanceDashboard: React.FC<EnhancedPerformanceDashboardProps> 
   //   return '#10b981';
   // };
 
-  interface OptimizationSuggestion {
-    action?: () => void;
-    type: string;
-    description: string;
-    title?: string;
-    impact?: number;
-    automated?: boolean;
-  }
 
   // const applyOptimization = (suggestion: OptimizationSuggestion) => {
   //   if (suggestion.action) {
