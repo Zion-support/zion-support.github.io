@@ -1,19 +1,12 @@
-import React, { useCallback, useState, useEffect, useMemo } from 'react';
+import React, { useCallback, useState, useEffect } from 'react';
 import { AppRouter } from './router';
 import { useAppInitialization } from './hooks/useAppInitialization';
 import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
 import AdvancedErrorBoundary from './components/AdvancedErrorBoundary';
 import PerformanceTracker from './components/PerformanceTracker';
 import AccessibilityEnhancements from './components/AccessibilityEnhancements';
-import { seoAnalytics, performanceSEO, seoManager } from './utils/seoEnhanced';
-import { analytics } from './utils/analytics';
-import { performanceOptimizer } from './utils/performanceOptimizations';
-import { accessibilityEnhancer } from './utils/accessibilityEnhancer';
-import { seoOptimizer } from './utils/seoOptimizations';
+import { seoAnalytics } from './utils/seoEnhanced';
 import { initializePerformanceEnhancements } from './utils/performanceEnhancements';
-import { AdvancedAutomationSystem } from './utils/advancedAutomationSystem';
-import { AccessibilityEnhancer } from './utils/accessibilityEnhancer';
-import { SecurityEnhancer } from './utils/securityEnhancer';
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
 import RealTimeMonitor from './components/RealTimeMonitor';
 import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
@@ -25,8 +18,6 @@ import WebsiteEnhancements from './components/WebsiteEnhancements';
 import ComprehensivePerformanceMonitor from './components/ComprehensivePerformanceMonitor';
 import AdvancedSEOOptimizer from './components/AdvancedSEOOptimizer';
 import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
-import { enhancedAnalytics } from './utils/enhancedAnalytics';
-import { advancedCacheSystem } from './utils/advancedCacheSystem';
 import './index.css';
 import './styles/notifications.css';
 import './styles/system-metrics.css';
@@ -47,11 +38,11 @@ export default function App(): React.JSX.Element {
   const [showAdvancedSEO, setShowAdvancedSEO] = useState(false);
 
   // Engagement tracking data
-  const engagementData = useMemo(() => ({
-    startTime: Date.now(),
-    scrollDepth: 0,
-    clicks: 0
-  }), []);
+  // const engagementData = useMemo(() => ({
+  //   startTime: Date.now(),
+  //   scrollDepth: 0,
+  //   clicks: 0
+  // }), []);
 
   // SEO data
   const seoData = useMemo(() => ({
@@ -74,13 +65,12 @@ export default function App(): React.JSX.Element {
   });
 
   // Performance optimization hook
-  const { preloadResource, optimizePerformance } = usePerformanceOptimization({
+  usePerformanceOptimization({
     enablePreloading: true,
     enableResourceHints: true,
     enableCriticalCSS: true,
     enableImageOptimization: true,
   });
-
   // Initialize SEO analytics
   useEffect(() => {
     if (typeof window !== 'undefined') {
