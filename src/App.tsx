@@ -7,6 +7,7 @@ import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
 import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import PerformanceMonitor from './components/PerformanceMonitor';
+// import SEOOptimizer from './components/SEOOptimizer';
 import { analytics } from './utils/analytics';
 import { seoAnalytics, performanceSEO, seoManager } from './utils/seoEnhanced';
 import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
@@ -88,22 +89,40 @@ export default function App(): React.JSX.Element {
 
   // Initialize comprehensive enhancements
   useEffect(() => {
-    const enhancements = getComprehensiveEnhancements();
-    enhancements.initialize();
+    // Get comprehensive enhancements (initialization happens in constructor)
+    getComprehensiveEnhancements();
     
     // Initialize individual enhancement systems
-    enhancedPerformanceMonitor.initialize();
-    enhancedAnalytics.initialize();
-    advancedCacheSystem.initialize();
-    new AdvancedAutomationSystem().initialize();
-    new AccessibilityEnhancer().initialize();
-    new SecurityEnhancer().initialize();
+    if (enhancedPerformanceMonitor && typeof enhancedPerformanceMonitor.startMonitoring === 'function') {
+      enhancedPerformanceMonitor.startMonitoring();
+    }
+    if (enhancedAnalytics && typeof enhancedAnalytics.initialize === 'function') {
+      enhancedAnalytics.initialize();
+    }
+    if (advancedCacheSystem && typeof advancedCacheSystem.initialize === 'function') {
+      advancedCacheSystem.initialize();
+    }
+    
+    // Initialize new instances
+    const automationSystem = new AdvancedAutomationSystem();
+    if (typeof automationSystem.initialize === 'function') {
+      automationSystem.initialize();
+    }
+    
+    const accessibilityEnhancer = new AccessibilityEnhancer();
+    if (typeof accessibilityEnhancer.initialize === 'function') {
+      accessibilityEnhancer.initialize();
+    }
+    
+    const securityEnhancer = new SecurityEnhancer();
+    if (typeof securityEnhancer.initialize === 'function') {
+      securityEnhancer.initialize();
+    }
     
     // Initialize analytics
-    analytics.initialize();
-    seoAnalytics.initialize();
-    performanceSEO.initialize();
-    seoManager.initialize();
+    if (analytics && typeof analytics.initialize === 'function') {
+      analytics.initialize();
+    }
     
     // Initialize SEO analytics
     seoAnalytics.trackPageView(window.location.pathname);

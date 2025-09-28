@@ -38,17 +38,58 @@ interface ErrorReport {
 }
 
 const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisible, onClose }) => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-  const [insights, setInsights] = useState<AIInsights | null>(null);
-  const [errors, setErrors] = useState<ErrorReport[]>([]);
+  const [metrics, setMetrics] = useState<{
+    errorRate: number;
+    avgResolutionTime: number;
+    criticalErrorsToday: number;
+    userImpactScore: number;
+  } | null>(null);
+  const [insights, setInsights] = useState<{
+    predictedHighRiskActions: string[];
+    recommendedImprovements: string[];
+    errorTrends: Array<{ category: string; trend: string }>;
+  } | null>(null);
+  const [errors, setErrors] = useState<Array<{
+    id: string;
+    message: string;
+    severity: string;
+    lastOccurrence: string;
+    context: { component?: string; action?: string };
+    aiPredictedImpact?: number;
+    resolutionSuggestions?: string[];
+  }>>([]);
 
   useEffect(() => {
     if (isVisible) {
       const updateData = () => {
         try {
-          setMetrics(enhancedErrorHandler.getPerformanceMetrics() as PerformanceMetrics);
-          setInsights(enhancedErrorHandler.getAIInsights() as AIInsights);
-          setErrors(enhancedErrorHandler.getErrorReports().slice(0, 10) as unknown as ErrorReport[]);
+          const performanceMetrics = enhancedErrorHandler.getPerformanceMetrics();
+          const aiInsights = enhancedErrorHandler.getAIInsights();
+          const errorReports = enhancedErrorHandler.getErrorReports().slice(0, 10);
+          
+          // Type-safe conversion
+          setMetrics(performanceMetrics as {
+            errorRate: number;
+            avgResolutionTime: number;
+            criticalErrorsToday: number;
+            userImpactScore: number;
+          });
+          
+          setInsights(aiInsights as {
+            predictedHighRiskActions: string[];
+            recommendedImprovements: string[];
+            errorTrends: Array<{ category: string; trend: string }>;
+          });
+          
+          setErrors(errorReports as Array<{
+            id: string;
+            message: string;
+            severity: string;
+            lastOccurrence: string;
+            context: { component?: string; action?: string };
+            aiPredictedImpact?: number;
+            resolutionSuggestions?: string[];
+          }>);
         } catch (error) {
           console.error('Failed to fetch dashboard data:', error);
         }
@@ -125,7 +166,7 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
               <div className="bg-gray-50 p-4 rounded-lg">
                 <h3 className="text-lg font-semibold mb-3 text-gray-800">🎯 High-Risk Actions</h3>
                 <div className="space-y-2">
-                  {insights.predictedHighRiskActions.length > 0 ? (
+                  {insights.predictedHighRiskActions && insights.predictedHighRiskActions.length > 0 ? (
                     insights.predictedHighRiskActions.map((action: string, index: number) => (
                       <div key={index} className="bg-red-100 text-red-800 px-3 py-2 rounded text-sm">
                         ⚠️ {action}
@@ -140,7 +181,7 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
               <div className="bg-gray-50 p-4 rounded-lg">
                 <h3 className="text-lg font-semibold mb-3 text-gray-800">💡 AI Recommendations</h3>
                 <div className="space-y-2">
-                  {insights.recommendedImprovements.map((improvement: string, index: number) => (
+                  {insights.recommendedImprovements && insights.recommendedImprovements.map((improvement: string, index: number) => (
                     <div key={index} className="bg-blue-100 text-blue-800 px-3 py-2 rounded text-sm">
                       💡 {improvement}
                     </div>
@@ -155,7 +196,7 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
             <div className="bg-gray-50 p-4 rounded-lg mb-8">
               <h3 className="text-lg font-semibold mb-3 text-gray-800">📊 Error Trends (7 days)</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                {insights.errorTrends.map((trend: Record<string, unknown>, index: number) => (
+                {insights.errorTrends && insights.errorTrends.map((trend: { category: string; trend: string }, index: number) => (
                   <div key={index} className="bg-white p-3 rounded border">
                     <div className="flex items-center justify-between">
                       <span className="font-medium capitalize">{String(trend.category)}</span>
@@ -192,19 +233,19 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
                         </div>
                         <h4 className="font-medium text-gray-800 mb-1">{error.message}</h4>
                         <div className="text-sm text-gray-600">
-                          Component: {error.context.component || 'Unknown'} | 
-                          Action: {error.context.action || 'Unknown'} |
-                          Count: {String(error.occurrenceCount)}
+                          Component: {error.context?.component || 'Unknown'} | 
+                          Action: {error.context?.action || 'Unknown'} |
+                          Count: {(error as { occurrenceCount?: number }).occurrenceCount || 0}
                         </div>
                         {error.aiPredictedImpact && (
                           <div className="text-sm text-blue-600 mt-1">
-                            🤖 AI Impact Score: {Math.round(error.aiPredictedImpact * 100)}%
+                            🤖 AI Impact Score: {Math.round((error.aiPredictedImpact as number) * 100)}%
                           </div>
                         )}
                       </div>
                     </div>
                     
-                    {error.resolutionSuggestions && error.resolutionSuggestions.length > 0 && (
+                    {error.resolutionSuggestions && Array.isArray(error.resolutionSuggestions) && error.resolutionSuggestions.length > 0 && (
                       <div className="mt-3 p-3 bg-green-50 rounded">
                         <h5 className="text-sm font-medium text-green-800 mb-2">💡 AI Suggestions:</h5>
                         <ul className="text-sm text-green-700 space-y-1">
