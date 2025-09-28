@@ -13,7 +13,7 @@ export const EnhancedPerformanceMonitor: React.FC<EnhancedPerformanceMonitorProp
   className,
   showDetails = false,
   showSuggestions = true,
-  autoOptimize: _ = false
+  autoOptimize: _ = false // eslint-disable-line @typescript-eslint/no-unused-vars
 }) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     fcp: 0,

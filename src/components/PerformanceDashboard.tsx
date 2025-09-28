@@ -113,35 +113,6 @@ export const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({
     }
   };
 
-  const handleOptimizeAll = async () => {
-    // Clear all suggestions
-    performanceOptimizer.clearSuggestions();
-    setPerformanceSuggestions([]);
-    setBundleSuggestions([]);
-    
-    // Run optimizations
-    await bundleOptimizer.optimizeBundle();
-    
-    // Refresh metrics
-    updateMetrics();
-  };
-
-  const handleExportFullReport = () => {
-    const performanceReport = performanceOptimizer.generateReport();
-    const bundleReport = bundleAnalysis ? bundleOptimizer.generateOptimizationReport() : 'No bundle analysis available';
-    
-    const fullReport = `${performanceReport}\n\n${bundleReport}`;
-    
-    const blob = new Blob([fullReport], { type: 'text/plain' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = `performance-dashboard-report-${new Date().toISOString().split('T')[0]}.txt`;
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
-  };
 
   if (!isVisible) {
     return null;
