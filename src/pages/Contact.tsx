@@ -53,7 +53,7 @@ export default function Contact(): React.JSX.Element {
       icon: Mail,
       title: 'Email Us',
       details: 'contact@ziontechgroup.com',
-      subtitle: 'We\'ll respond within 24 hours'
+                        subtitle: 'We&apos;ll respond within 24 hours'
     },
     {
       icon: Phone,
