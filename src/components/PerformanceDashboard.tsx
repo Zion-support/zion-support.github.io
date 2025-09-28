@@ -6,6 +6,13 @@ interface PerformanceDashboardProps {
   isVisible?: boolean;
 }
 
+// Helper function to get performance color
+const getPerformanceColor = (value: number, thresholds: { good: number; poor: number }): string => {
+  if (value <= thresholds.good) return 'text-green-600 bg-green-100';
+  if (value <= thresholds.poor) return 'text-yellow-600 bg-yellow-100';
+  return 'text-red-600 bg-red-100';
+};
+
 const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({ 
   className, 
   isVisible = true 

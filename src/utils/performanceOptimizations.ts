@@ -3,7 +3,7 @@
  * Collection of utilities for optimizing React application performance
  */
 
-import { useCallback, useMemo, useRef, useEffect, useState } from 'react';
+import React, { useCallback, useMemo, useRef, useEffect, useState } from 'react';
 
 /**
  * Debounce hook for optimizing expensive operations
@@ -51,7 +51,7 @@ export function useDeepMemo<T>(
   factory: () => T,
   deps: React.DependencyList
 ): T {
-  const ref = useRef<{ deps: React.DependencyList; value: T }>();
+  const ref = useRef<{ deps: React.DependencyList; value: T } | undefined>(undefined);
 
   if (!ref.current || !deepEqual(ref.current.deps, deps)) {
     ref.current = { deps, value: factory() };
@@ -308,7 +308,7 @@ export function collectPerformanceMetrics() {
 /**
  * Check performance budget
  */
-export function checkPerformanceBudget(metrics: Record<string, unknown>): string[] {
+export function checkPerformanceBudget(metrics: Record<string, unknown> = {}): string[] {
   const violations: string[] = [];
   
   if (metrics.loadTime > 3000) {
