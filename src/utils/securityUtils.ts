@@ -92,9 +92,10 @@ class SecurityUtils {
     // Override innerHTML to sanitize content
     const originalInnerHTML = Object.getOwnPropertyDescriptor(Element.prototype, 'innerHTML');
     if (originalInnerHTML && originalInnerHTML.set) {
+      const self = this;
       Object.defineProperty(Element.prototype, 'innerHTML', {
-        set: function(value: string) {
-          const sanitized = this.sanitizeHTML(value);
+        set: function(value) {
+          const sanitized = self.sanitizeHTML(value);
           originalInnerHTML.set!.call(this, sanitized);
         },
         get: originalInnerHTML.get
@@ -132,11 +133,10 @@ class SecurityUtils {
     // Monitor for suspicious console usage
     const originalConsole = { ...console };
     Object.keys(console).forEach(key => {
-      const consoleKey = key as keyof Console;
-      if (typeof console[consoleKey] === 'function') {
-        (console as any)[consoleKey] = (...args: any[]) => {
+      if (typeof (console as any)[key] === 'function') {
+        (console as any)[key] = (...args: any[]) => {
           this.logSecurityEvent('console-usage', { method: key, args });
-          (originalConsole as any)[consoleKey](...args);
+          (originalConsole as any)[key](...args);
         };
       }
     });
@@ -166,7 +166,7 @@ class SecurityUtils {
   private monitorDataExfiltration(): void {
     // Monitor for suspicious network requests
     const originalFetch = window.fetch;
-    window.fetch = async (input: RequestInfo | URL, init) => {
+    window.fetch = async (input, init) => {
       const url = typeof input === 'string' ? input : (input as Request).url;
       
       // Check for suspicious patterns
