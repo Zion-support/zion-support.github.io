@@ -204,7 +204,7 @@ export const performanceLogger = {
 // Error boundary helper
 export const logError = (error: Error, context?: string, additionalData?: unknown): void => {
   logger.error(`Error in ${context || 'Unknown'}: ${error.message}`, context, {
-    ...additionalData,
+    ...(typeof additionalData === 'object' && additionalData !== null ? additionalData as Record<string, unknown> : {}),
     stack: error.stack,
     name: error.name
   });
@@ -213,7 +213,7 @@ export const logError = (error: Error, context?: string, additionalData?: unknow
 // API call logging
 export const logApiCall = (method: string, url: string, status?: number, duration?: number): void => {
   const level = status && status >= 400 ? LogLevel.ERROR : LogLevel.INFO;
-  logger.log(level, `${method} ${url}`, 'API', {
+  (logger as any).log(level, `${method} ${url}`, 'API', {
     status,
     duration: duration ? `${duration}ms` : undefined
   });
@@ -223,6 +223,6 @@ export const logApiCall = (method: string, url: string, status?: number, duratio
 export const logUserInteraction = (action: string, element?: string, data?: unknown): void => {
   logger.debug(`User interaction: ${action}`, 'UserInteraction', {
     element,
-    ...data
+    ...(typeof data === 'object' && data !== null ? data as Record<string, unknown> : {})
   });
 };
