@@ -141,7 +141,7 @@ export class AdvancedAppEnhancements {
 
     if (this.config.performance.monitoring) {
       // Initialize performance monitoring
-      performanceOptimizer.initialize();
+      // performanceOptimizer is already initialized in constructor
     }
 
     if (this.config.performance.optimization) {
@@ -205,19 +205,9 @@ export class AdvancedAppEnhancements {
   private async initializeSecurityEnhancements(): Promise<void> {
     console.log("🔒 Initializing security enhancements...");
 
-    if (this.config.security.csp) {
-      // Initialize Content Security Policy
-      enhancedSecurityManager.initializeCSP();
-    }
-
-    if (this.config.security.xssProtection) {
-      // Initialize XSS protection
-      enhancedSecurityManager.initializeXSSProtection();
-    }
-
-    if (this.config.security.csrfProtection) {
-      // Initialize CSRF protection
-      enhancedSecurityManager.initializeCSRFProtection();
+    if (this.config.security.csp || this.config.security.xssProtection || this.config.security.csrfProtection) {
+      // Initialize security manager
+      await enhancedSecurityManager.initialize();
     }
   }
 
@@ -272,7 +262,9 @@ export class AdvancedAppEnhancements {
 
     // Cache API responses
     const originalFetch = window.fetch;
-    window.fetch = async (url: string, options?: RequestInit) => {
+    window.fetch = async (input: RequestInfo | URL, init?: RequestInit) => {
+      const url = typeof input === 'string' ? input : input.toString();
+      const options = init;
       const cacheKey = `${url}-${JSON.stringify(options)}`;
 
       if (cache.has(cacheKey)) {
