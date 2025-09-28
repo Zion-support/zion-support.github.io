@@ -35,7 +35,7 @@ export function createLazyComponent<T extends ComponentType<any>>(
   
   return function LazyWrapper(props: any) {
     return (
-      <Suspense fallback={fallback ? <fallback /> : <div>Loading...</div>}>
+      <Suspense fallback={fallback ? React.createElement(fallback) : <div>Loading...</div>}>
         <LazyComponent {...props} />
       </Suspense>
     );
