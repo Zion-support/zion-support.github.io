@@ -11,7 +11,7 @@ interface SEOData {
   canonical?: string;
   twitterCard?: string;
   twitterSite?: string;
-  structuredData?: Record<string, any>;
+  structuredData?: Record<string, unknown>;
 }
 
 interface SEOOptimizerProps {
@@ -211,7 +211,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ seoData, children }) => {
     canonical.setAttribute('href', href);
   };
 
-  const updateStructuredData = (data: Record<string, any>) => {
+  const updateStructuredData = (data: Record<string, unknown>) => {
     let script = document.querySelector('script[type="application/ld+json"]');
     if (!script) {
       script = document.createElement('script');

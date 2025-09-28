@@ -30,11 +30,47 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   const [isVisible, setIsVisible] = useState(false);
 
   const updateMetrics = useCallback(() => {
-    // Get Web Vitals metrics if available
-    if ('web-vitals' in window) {
-      // This would be populated by web-vitals library
-      const vitals = (window as any)['__webVitals'] || {};
-      setMetrics(prev => ({
+    const newMetrics: Partial<PerformanceMetrics> = {};
+
+    // Get performance metrics
+    if (typeof window !== 'undefined' && window.performance) {
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      if (navigation) {
+        newMetrics.ttfb = navigation.responseStart - navigation.requestStart;
+        newMetrics.renderTime = navigation.loadEventEnd - navigation.navigationStart;
+      }
+
+      // Get memory usage
+      if ('memory' in performance) {
+        const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number } }).memory;
+        newMetrics.memoryUsage = memory.usedJSHeapSize;
+      }
+
+      // Get paint metrics
+      const paintEntries = performance.getEntriesByType('paint');
+      paintEntries.forEach(entry => {
+        if (entry.name === 'first-contentful-paint') {
+          newMetrics.fcp = entry.startTime;
+        }
+      });
+
+      // Get LCP
+      const lcpEntries = performance.getEntriesByType('largest-contentful-paint');
+      if (lcpEntries.length > 0) {
+        newMetrics.lcp = lcpEntries[lcpEntries.length - 1].startTime;
+      }
+
+      // Calculate bundle size (approximate)
+      const scripts = document.querySelectorAll('script[src]');
+      let totalSize = 0;
+      scripts.forEach(script => {
+        const src = script.getAttribute('src');
+        if (src && src.includes('assets')) {
+          // This is a rough estimation - in real implementation you'd fetch and measure
+          totalSize += 100000; // Assume 100KB per script
+        }
+      });
+      newMetrics.bundleSize = totalSize;
         ...prev,
         fcp: vitals.fcp || 0,
         lcp: vitals.lcp || 0,

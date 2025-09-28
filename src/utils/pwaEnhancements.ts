@@ -356,5 +356,5 @@ export const pwaEnhancements = PWAEnhancements.getInstance();
 
 // Make it globally available for the update button
 if (typeof window !== 'undefined') {
-  (window as any).pwaEnhancements = pwaEnhancements;
+  (window as Window & { pwaEnhancements?: PWAEnhancements }).pwaEnhancements = pwaEnhancements;
 }
