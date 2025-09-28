@@ -108,6 +108,12 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
     }
   }, []);
 
+  useEffect(() => {
+    if (isVisible) {
+      loadPerformanceData();
+    }
+  }, [isVisible, loadPerformanceData]);
+
   const getSeverityColor = (severity: string) => {
     switch (severity) {
       case 'high': return 'text-red-500 bg-red-100';

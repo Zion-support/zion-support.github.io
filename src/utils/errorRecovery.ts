@@ -46,7 +46,7 @@ class ErrorRecoverySystem {
     this.addStrategy({
       name: 'component-reset',
       condition: (error, context) => 
-        context.component && error.message.includes('component'),
+        Boolean(context.component && error.message.includes('component')),
       action: async (error, context) => {
         console.log('🔄 Resetting component...');
         // Component reset logic would go here
