@@ -64,7 +64,7 @@ export const PerformanceTracker: React.FC<PerformanceTrackerProps> = ({
         const fidObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           entries.forEach((entry) => {
-            if (entry.entryType === 'first-input') {
+            if (entry.entryType === 'first-input' && 'processingStart' in entry) {
               const fidEntry = entry as PerformanceEventTiming;
               metricsRef.current.fid = fidEntry.processingStart - fidEntry.startTime;
             }
@@ -77,10 +77,10 @@ export const PerformanceTracker: React.FC<PerformanceTrackerProps> = ({
         const clsObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           entries.forEach((entry) => {
-            if (entry.entryType === 'layout-shift') {
-              const layoutShiftEntry = entry as any; // LayoutShift type not available
-              if (!layoutShiftEntry.hadRecentInput) {
-                clsValue += layoutShiftEntry.value;
+            if (entry.entryType === 'layout-shift' && 'value' in entry && 'hadRecentInput' in entry) {
+              const clsEntry = entry as any; // LayoutShift type is not available in all environments
+              if (!clsEntry.hadRecentInput) {
+                clsValue += clsEntry.value;
                 metricsRef.current.cls = clsValue;
               }
             }
@@ -92,7 +92,7 @@ export const PerformanceTracker: React.FC<PerformanceTrackerProps> = ({
         const navigationObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           entries.forEach((entry) => {
-            if (entry.entryType === 'navigation') {
+            if (entry.entryType === 'navigation' && 'responseStart' in entry && 'requestStart' in entry) {
               const navEntry = entry as PerformanceNavigationTiming;
               metricsRef.current.ttfb = navEntry.responseStart - navEntry.requestStart;
             }

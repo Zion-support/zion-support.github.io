@@ -154,12 +154,4 @@ class ErrorRecoverySystem {
 }
 
 export const errorRecoverySystem = new ErrorRecoverySystem();
-
-// Export errorRecovery for backward compatibility
-export const errorRecovery = {
-  getErrorCount: () => errorRecoverySystem.getErrorHistory().length,
-  reset: () => errorRecoverySystem.clearHistory(),
-  handleError: (error: Error, context?: Partial<ErrorContext>) => errorRecoverySystem.handleError(error, context)
-};
-
 export type { ErrorContext, RecoveryStrategy };
