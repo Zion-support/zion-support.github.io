@@ -25,6 +25,70 @@ export interface ErrorReport {
   createdAt: string;
   lastOccurrence: string;
   occurrenceCount: number;
+  aiPredictedImpact?: number;
+  resolutionSuggestions?: string[];
+}
+
+export interface PerformanceMetrics {
+  errorRate: number;
+  avgResolutionTime: number;
+  criticalErrorsToday: number;
+  userImpactScore: number;
+}
+
+class AIErrorPredictionEngine {
+  private errorPatterns: Map<string, number> = new Map();
+  private userBehaviorData: Array<{ action: string; timestamp: number; errorOccurred: boolean }> = [];
+
+  predictErrorLikelihood(context: ErrorContext): number {
+    // Simple AI prediction based on historical patterns
+    const patternKey = `${context.component}_${context.action}`;
+    const historicalFailureRate = this.errorPatterns.get(patternKey) || 0;
+    
+    // Factor in user behavior patterns
+    const recentBehavior = this.userBehaviorData.slice(-10);
+    const recentErrorRate = recentBehavior.filter(b => b.errorOccurred).length / recentBehavior.length;
+    
+    return Math.min(historicalFailureRate * 0.7 + recentErrorRate * 0.3, 1);
+  }
+
+  updatePatterns(context: ErrorContext, errorOccurred: boolean): void {
+    const patternKey = `${context.component}_${context.action}`;
+    const currentRate = this.errorPatterns.get(patternKey) || 0;
+    const newRate = errorOccurred ? Math.min(currentRate + 0.1, 1) : Math.max(currentRate - 0.05, 0);
+    this.errorPatterns.set(patternKey, newRate);
+
+    this.userBehaviorData.push({
+      action: `${context.component}_${context.action}`,
+      timestamp: Date.now(),
+      errorOccurred
+    });
+
+    // Keep only recent data
+    if (this.userBehaviorData.length > 100) {
+      this.userBehaviorData = this.userBehaviorData.slice(-50);
+    }
+  }
+
+  generateResolutionSuggestions(error: ErrorReport): string[] {
+    const suggestions: string[] = [];
+    
+    if (error.category === 'network') {
+      suggestions.push('Check network connectivity');
+      suggestions.push('Implement retry mechanism with exponential backoff');
+      suggestions.push('Add offline fallback functionality');
+    } else if (error.category === 'javascript') {
+      suggestions.push('Review error stack trace for null/undefined values');
+      suggestions.push('Add input validation');
+      suggestions.push('Implement graceful error boundaries');
+    } else if (error.category === 'performance') {
+      suggestions.push('Optimize resource loading');
+      suggestions.push('Implement lazy loading');
+      suggestions.push('Add performance monitoring');
+    }
+
+    return suggestions;
+  }
 }
 
 class EnhancedErrorHandler {
@@ -32,10 +96,19 @@ class EnhancedErrorHandler {
   private maxReports = 100;
   private sessionId: string;
   private userId?: string;
+  private aiPredictionEngine: AIErrorPredictionEngine;
+  private performanceMetrics: PerformanceMetrics = {
+    errorRate: 0,
+    avgResolutionTime: 0,
+    criticalErrorsToday: 0,
+    userImpactScore: 0
+  };
 
   constructor() {
     this.sessionId = this.generateSessionId();
+    this.aiPredictionEngine = new AIErrorPredictionEngine();
     this.initializeErrorTracking();
+    this.initializeAIAnalytics();
   }
 
   private generateSessionId(): string {
@@ -65,6 +138,72 @@ class EnhancedErrorHandler {
           reason: event.reason?.toString()
         }
       });
+    });
+  }
+
+  private initializeAIAnalytics(): void {
+    // Periodically update performance metrics
+    setInterval(() => {
+      this.updatePerformanceMetrics();
+    }, 60000); // Update every minute
+
+    // Monitor user behavior patterns
+    this.trackUserBehavior();
+  }
+
+  private updatePerformanceMetrics(): void {
+    const errors = Array.from(this.errorReports.values());
+    const now = Date.now();
+    const dayMs = 24 * 60 * 60 * 1000;
+    
+    // Calculate error rate (errors per hour)
+    const recentErrors = errors.filter(e => now - new Date(e.lastOccurrence).getTime() < 60 * 60 * 1000);
+    this.performanceMetrics.errorRate = recentErrors.length;
+
+    // Calculate critical errors today
+    this.performanceMetrics.criticalErrorsToday = errors.filter(e => 
+      e.severity === 'critical' && now - new Date(e.createdAt).getTime() < dayMs
+    ).length;
+
+    // Calculate user impact score (0-100)
+    const criticalWeight = 4;
+    const highWeight = 3;
+    const mediumWeight = 2;
+    const lowWeight = 1;
+
+    const impact = errors.reduce((score, error) => {
+      const weight = error.severity === 'critical' ? criticalWeight :
+                    error.severity === 'high' ? highWeight :
+                    error.severity === 'medium' ? mediumWeight : lowWeight;
+      return score + (weight * error.occurrenceCount);
+    }, 0);
+
+    this.performanceMetrics.userImpactScore = Math.min(impact, 100);
+  }
+
+  private trackUserBehavior(): void {
+    // Track clicks with error prediction
+    document.addEventListener('click', (event) => {
+      const target = event.target as HTMLElement;
+      const context: ErrorContext = {
+        url: window.location.href,
+        userAgent: navigator.userAgent,
+        timestamp: new Date().toISOString(),
+        component: target.tagName.toLowerCase(),
+        action: 'click',
+        metadata: {
+          targetId: target.id,
+          targetClass: target.className
+        }
+      };
+
+      const errorLikelihood = this.aiPredictionEngine.predictErrorLikelihood(context);
+      if (errorLikelihood > 0.7) {
+        console.warn(`High error likelihood detected for action: ${context.component}_${context.action}`);
+        // Could implement preventive measures here
+      }
+
+      this.aiPredictionEngine.updatePatterns(context, false);
     });
 
     // Performance observer for errors
@@ -125,8 +264,9 @@ class EnhancedErrorHandler {
         existingReport.severity = 'critical';
       }
     } else {
-      // Create new report
-      const report: ErrorReport = {
+      // Create new report with AI predictions
+      const aiPredictedImpact = this.aiPredictionEngine.predictErrorLikelihood(fullContext);
+      const resolutionSuggestions = this.aiPredictionEngine.generateResolutionSuggestions({
         id: errorId,
         message: error.message,
         stack: error.stack,
@@ -137,6 +277,21 @@ class EnhancedErrorHandler {
         createdAt: fullContext.timestamp,
         lastOccurrence: fullContext.timestamp,
         occurrenceCount: 1
+      } as ErrorReport);
+
+      const report: ErrorReport = {
+        id: errorId,
+        message: error.message,
+        stack: error.stack,
+        context: fullContext,
+        severity,
+        category,
+        resolved: false,
+        createdAt: fullContext.timestamp,
+        lastOccurrence: fullContext.timestamp,
+        occurrenceCount: 1,
+        aiPredictedImpact,
+        resolutionSuggestions
       };
 
       this.errorReports.set(errorId, report);
@@ -291,6 +446,56 @@ class EnhancedErrorHandler {
     if (report) {
       report.resolved = true;
     }
+  }
+
+  public getPerformanceMetrics(): PerformanceMetrics {
+    this.updatePerformanceMetrics();
+    return { ...this.performanceMetrics };
+  }
+
+  public getAIInsights(): {
+    predictedHighRiskActions: string[];
+    recommendedImprovements: string[];
+    errorTrends: { category: string; trend: 'increasing' | 'decreasing' | 'stable' }[];
+  } {
+    const errors = this.getErrorReports();
+    const now = Date.now();
+    const dayMs = 24 * 60 * 60 * 1000;
+    
+    // Analyze error trends
+    const categoryTrends = new Map<string, number[]>();
+    errors.forEach(error => {
+      const daysSinceError = Math.floor((now - new Date(error.createdAt).getTime()) / dayMs);
+      if (daysSinceError <= 7) { // Last 7 days
+        if (!categoryTrends.has(error.category)) {
+          categoryTrends.set(error.category, new Array(7).fill(0));
+        }
+        categoryTrends.get(error.category)![6 - daysSinceError] += error.occurrenceCount;
+      }
+    });
+
+    const errorTrends = Array.from(categoryTrends.entries()).map(([category, counts]) => {
+      const recentAvg = counts.slice(-3).reduce((a, b) => a + b, 0) / 3;
+      const olderAvg = counts.slice(0, 4).reduce((a, b) => a + b, 0) / 4;
+      const trend = recentAvg > olderAvg * 1.2 ? 'increasing' : 
+                   recentAvg < olderAvg * 0.8 ? 'decreasing' : 'stable';
+      return { category, trend };
+    });
+
+    return {
+      predictedHighRiskActions: Array.from(this.aiPredictionEngine['errorPatterns'].entries())
+        .filter(([, rate]) => rate > 0.5)
+        .map(([action]) => action)
+        .slice(0, 5),
+      recommendedImprovements: [
+        'Implement circuit breakers for network calls',
+        'Add comprehensive input validation',
+        'Enhance error boundaries in React components',
+        'Implement retry mechanisms with exponential backoff',
+        'Add performance monitoring for critical paths'
+      ],
+      errorTrends
+    };
   }
 
   public clearResolvedErrors(): void {
