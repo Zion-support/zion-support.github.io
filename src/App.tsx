@@ -25,6 +25,9 @@ import { AccessibilityEnhancer } from './utils/accessibilityEnhancer';
 import { SecurityEnhancer } from './utils/securityEnhancer';
 import { getNotificationManager, notify } from './utils/advancedNotifications';
 import { getThemeManager } from './utils/themeManager';
+import { advancedPerformanceOptimizer } from './utils/advancedPerformanceOptimizer';
+import { enhancedSecurityManager } from './utils/enhancedSecurityManager';
+import { SystemStatusIndicator } from './components/SystemStatusIndicator';
 import './index.css';
 import './styles/notifications.css';
 import './styles/system-metrics.css';
@@ -304,6 +307,9 @@ export default function App(): React.JSX.Element {
       <EnhancedAnalytics />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <AppRouter />
+        
+        {/* System Status Indicator */}
+        <SystemStatusIndicator />
         
         {/* System Dashboard */}
         {showSystemDashboard && (
