@@ -181,7 +181,7 @@ export const EnhancedPerformanceMonitor: React.FC<EnhancedPerformanceMonitorProp
       </div>
 
       {/* Additional Metrics */}
-      {(metrics.memory || metrics.bundleSize || metrics.connection) && (
+      {metrics.memory && (
         <div className="space-y-2 text-sm mb-4">
           <h4 className="font-medium text-gray-700 dark:text-gray-300">Additional Metrics</h4>
           
@@ -194,20 +194,20 @@ export const EnhancedPerformanceMonitor: React.FC<EnhancedPerformanceMonitorProp
             </div>
           )}
 
-          {metrics.bundleSize && (
+          {metrics.domContentLoaded > 0 && (
             <div className="flex justify-between">
-              <span className="text-gray-600 dark:text-gray-400">Bundle Size:</span>
+              <span className="text-gray-600 dark:text-gray-400">DOM Content Loaded:</span>
               <span className="text-gray-900 dark:text-white">
-                {(metrics.bundleSize / 1024).toFixed(1)}KB
+                {metrics.domContentLoaded.toFixed(0)}ms
               </span>
             </div>
           )}
 
-          {metrics.connection && (
+          {metrics.domInteractive > 0 && (
             <div className="flex justify-between">
-              <span className="text-gray-600 dark:text-gray-400">Connection:</span>
-              <span className="text-blue-500 capitalize">
-                {metrics.connection}
+              <span className="text-gray-600 dark:text-gray-400">DOM Interactive:</span>
+              <span className="text-blue-500">
+                {metrics.domInteractive.toFixed(0)}ms
               </span>
             </div>
           )}
