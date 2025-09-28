@@ -308,7 +308,7 @@ export function collectPerformanceMetrics() {
 /**
  * Check performance budget
  */
-export function checkPerformanceBudget(metrics: Record<string, unknown>): string[] {
+export function checkPerformanceBudget(metrics: Record<string, unknown> = {}): string[] {
   const violations: string[] = [];
   
   if ((metrics.loadTime as number) > 3000) {

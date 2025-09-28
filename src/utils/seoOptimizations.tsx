@@ -336,12 +336,12 @@ export const seoPerformanceMonitor = {
    */
   trackCoreWebVitals: () => {
     if (typeof window !== 'undefined' && 'web-vitals' in window) {
-      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-        getCLS(console.log);
-        getFID(console.log);
-        getFCP(console.log);
-        getLCP(console.log);
-        getTTFB(console.log);
+      import('web-vitals').then((webVitals) => {
+        if (webVitals.onCLS) webVitals.onCLS(console.log);
+        if ('onFID' in webVitals) (webVitals as { onFID: (callback: (metric: unknown) => void) => void }).onFID(console.log);
+        if (webVitals.onFCP) webVitals.onFCP(console.log);
+        if (webVitals.onLCP) webVitals.onLCP(console.log);
+        if (webVitals.onTTFB) webVitals.onTTFB(console.log);
       });
     }
   },
