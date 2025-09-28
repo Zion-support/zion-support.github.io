@@ -28,7 +28,7 @@ import { initializeAccessibilityEnhancements } from './utils/accessibilityEnhanc
 import { advancedPerformanceOptimizer } from './utils/advancedPerformanceOptimizer';
 import { seoOptimizer } from './utils/advancedSEOOptimizer';
 import { performanceMonitor, getPerformanceScore, getPerformanceRecommendations } from './utils/performanceMonitoring';
-import { seoOptimizer, updatePageSEO, trackSEOEvent } from './utils/seoOptimizer';
+import { updatePageSEO, trackSEOEvent } from './utils/seoOptimizer';
 import { errorHandler, handleError, log, ErrorBoundary } from './utils/errorHandler';
 import AdvancedAnalytics from './components/AdvancedAnalytics';
 import NotificationSystem, { Notification } from './components/NotificationSystem';
