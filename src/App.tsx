@@ -1,4 +1,4 @@
-import React, { useMemo, useEffect, useCallback } from 'react';
+import React, { useMemo, useEffect, useCallback, useState } from 'react';
 import { AppRouter } from './router';
 import { useAppInitialization } from './hooks/useAppInitialization';
 import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
@@ -25,12 +25,12 @@ import { SecurityEnhancer } from './utils/securityEnhancer';
 import './index.css';
 
 export default function App(): React.JSX.Element {
-  // State for system dashboard and performance optimizer (currently unused but reserved for future features)
-  const [showSystemDashboard, setShowSystemDashboard] = React.useState(false);
-  const [showPerformanceOptimizer, setShowPerformanceOptimizer] = React.useState(false);
+  // State for system dashboard and performance optimizer
+  const [showSystemDashboard, setShowSystemDashboard] = useState(false);
+  const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
 
   // Initialize app with custom configuration
-  const { isLoading, loadingProgress, handleScroll, handleClick, trackEngagement } = useAppInitialization({
+  const { isLoading, loadingProgress, handleScroll, handleClick, trackEngagement: originalTrackEngagement } = useAppInitialization({
     enablePerformanceMonitoring: true,
     enableAccessibility: true,
     enableSecurity: true,
@@ -97,6 +97,7 @@ export default function App(): React.JSX.Element {
     structuredData: []
   }), []);
 
+<<<<<<< HEAD
   // Engagement tracking data
   const engagementData = useMemo(() => ({
     startTime: Date.now(),
@@ -106,6 +107,10 @@ export default function App(): React.JSX.Element {
 
   // Enhanced track engagement function
   const enhancedTrackEngagement = useCallback(() => {
+=======
+  // Enhanced track engagement function
+  const trackEngagement = useCallback(() => {
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-54b7
     const timeOnPage = Date.now() - engagementData.startTime;
     seoAnalytics.trackUserEngagement(window.location.pathname, {
       timeOnPage,
@@ -113,8 +118,13 @@ export default function App(): React.JSX.Element {
       clicks: engagementData.clicks,
     });
     // Also call the original trackEngagement from useAppInitialization
+<<<<<<< HEAD
     trackEngagement();
   }, [engagementData.clicks, engagementData.scrollDepth, engagementData.startTime, trackEngagement]);
+=======
+    originalTrackEngagement();
+  }, [engagementData.clicks, engagementData.scrollDepth, engagementData.startTime, originalTrackEngagement]);
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-54b7
 
   // Simple SEO manager
   const seoManagerInstance = useMemo(() => ({
@@ -167,24 +177,13 @@ export default function App(): React.JSX.Element {
     performanceSEO.preloadCriticalResources();
     performanceSEO.optimizeFonts();
     performanceSEO.optimizeCSS();
-    
-    // Initialize analytics system
-    analytics.initialize();
-    analytics.trackPageView();
 
     // Set default SEO data using the correct method
     seoManagerInstance.updateMetaTags(seoData);
-
-    // Use passive listeners for better performance
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    document.addEventListener('click', handleClick, { passive: true });
   }, [seoData, handleScroll, handleClick, handleKeyDown, preloadResource, seoManagerInstance]);
 
   // Main initialization and cleanup effect
   React.useEffect(() => {
-    // Track engagement on page unload
-    window.addEventListener('beforeunload', enhancedTrackEngagement);
-
     // Mark app as fully initialized
     if (typeof window !== 'undefined' && window.performance && 
         typeof performance.mark === 'function' && 
@@ -197,10 +196,17 @@ export default function App(): React.JSX.Element {
     if (typeof window !== 'undefined') {
       console.log('🚀 Zion Tech Group App initialized');
     }
+<<<<<<< HEAD
   }, [enhancedTrackEngagement]);
 
   // Cleanup effect
   React.useEffect(() => {
+=======
+
+    // Track engagement on page unload
+    window.addEventListener('beforeunload', trackEngagement);
+    
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-54b7
     // Cleanup function
     return () => {
       document.removeEventListener('keydown', handleKeyDown);
@@ -213,7 +219,11 @@ export default function App(): React.JSX.Element {
       window.removeEventListener('scroll', handleScroll);
       document.removeEventListener('click', handleClick);
     };
+<<<<<<< HEAD
   }, [enhancedTrackEngagement, handleKeyDown, handleScroll, handleClick]);
+=======
+  }, [trackEngagement, handleKeyDown, handleScroll, handleClick]);
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-54b7
 
   // Show loading screen while initializing
   if (isLoading) {
