@@ -17,6 +17,11 @@ interface MonitoringConfig {
   endpoint: string;
 }
 
+interface LayoutShift {
+  value: number;
+  hadRecentInput: boolean;
+}
+
 interface ErrorData {
   message: string;
   stack?: string;
@@ -221,10 +226,10 @@ class EnhancedMonitoring {
       new PerformanceObserver((list) => {
         const entries = list.getEntries();
         entries.forEach((entry) => {
-          if (!(entry as LayoutShift).hadRecentInput) {
+          if (!(entry as unknown as LayoutShift).hadRecentInput) {
             this.trackPerformance({
               name: 'CLS',
-              value: (entry as LayoutShift).value,
+              value: (entry as unknown as LayoutShift).value,
               type: 'measure',
               url: window.location.href,
               sessionId: this.sessionId,

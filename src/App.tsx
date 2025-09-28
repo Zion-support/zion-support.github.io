@@ -313,9 +313,18 @@ export default function App(): React.JSX.Element {
     // Initialize advanced utilities
     const initializeUtilities = async () => {
       try {
-        await performanceOptimizer.initialize();
-        await seoEnhancer.initialize();
-        await accessibilityEnhancer.initialize();
+        // Initialize performance optimizer if it has initialize method
+        if (performanceOptimizer && typeof (performanceOptimizer as any).initialize === 'function') {
+          await (performanceOptimizer as any).initialize();
+        }
+        // Initialize SEO optimizer if available
+        if (seoOptimizer && typeof (seoOptimizer as any).initialize === 'function') {
+          await (seoOptimizer as any).initialize();
+        }
+        // Initialize accessibility enhancements if available
+        if (accessibilityEnhancements && typeof (accessibilityEnhancements as any).initialize === 'function') {
+          await (accessibilityEnhancements as any).initialize();
+        }
         console.log('All advanced utilities initialized successfully');
       } catch (error) {
         console.error('Failed to initialize some utilities:', error);
