@@ -1,4 +1,5 @@
 import React, { useCallback, useState, useEffect, useMemo, lazy, Suspense } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { AppRouter } from './router';
 import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
@@ -23,6 +24,8 @@ const PerformanceWidget = lazy(() => import('./components/PerformanceWidget'));
 const CommandPalette = lazy(() => import('./components/CommandPalette'));
 
 export default function App(): React.JSX.Element {
+  const navigate = useNavigate();
+  
   // State for system dashboard
   const [showSystemDashboard, setShowSystemDashboard] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -365,25 +368,33 @@ export default function App(): React.JSX.Element {
             commands={[
               {
                 id: 'home',
-                label: 'Go to Home',
+                title: 'Go to Home',
+                description: 'Navigate to the home page',
+                category: 'Navigation',
                 action: () => navigate('/'),
                 shortcut: 'Ctrl+H'
               },
               {
                 id: 'about',
-                label: 'Go to About',
+                title: 'Go to About',
+                description: 'Navigate to the about page',
+                category: 'Navigation',
                 action: () => navigate('/about'),
                 shortcut: 'Ctrl+A'
               },
               {
                 id: 'services',
-                label: 'Go to Services',
+                title: 'Go to Services',
+                description: 'Navigate to the services page',
+                category: 'Navigation',
                 action: () => navigate('/services'),
                 shortcut: 'Ctrl+S'
               },
               {
                 id: 'contact',
-                label: 'Go to Contact',
+                title: 'Go to Contact',
+                description: 'Navigate to the contact page',
+                category: 'Navigation',
                 action: () => navigate('/contact'),
                 shortcut: 'Ctrl+C'
               }

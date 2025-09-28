@@ -18,16 +18,6 @@ const EnhancedTestimonials = () => {
     // Component mounted
   }, []);
 
-  useEffect(() => {
-    if (!isPlaying) return;
-    
-    const interval = setInterval(() => {
-      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
-    }, 5000);
-    
-    return () => clearInterval(interval);
-  }, [isPlaying, testimonials.length]);
-
   const testimonials = [
     {
       id: 1,
@@ -82,6 +72,16 @@ const EnhancedTestimonials = () => {
   const togglePlayPause = () => {
     setIsPlaying(!isPlaying);
   };
+
+  useEffect(() => {
+    if (!isPlaying) return;
+    
+    const interval = setInterval(() => {
+      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
+    }, 5000);
+    
+    return () => clearInterval(interval);
+  }, [isPlaying, testimonials.length]);
 
   return (
     <section className="py-20 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 relative overflow-hidden">
