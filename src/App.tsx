@@ -20,6 +20,8 @@ import { SecurityEnhancer } from './utils/securityEnhancer';
 import { performanceOptimizer } from './utils/performanceOptimizer';
 import { accessibilityEnhancer } from './utils/accessibilityEnhancer';
 import { seoOptimizer } from './utils/seoOptimizer';
+import { securityEnhancer } from './utils/securityEnhancer';
+import AdvancedAnalytics from './components/AdvancedAnalytics';
 import './index.css';
 
 export default function App(): React.JSX.Element {
@@ -124,6 +126,7 @@ export default function App(): React.JSX.Element {
     performanceOptimizer.optimizeBundle();
     accessibilityEnhancer.initialize();
     seoOptimizer.optimizePage(seoData);
+    securityEnhancer.initialize();
 
     // Add performance marks for better monitoring
     if (typeof window !== 'undefined' && window.performance && typeof performance.mark === 'function') {
@@ -177,6 +180,13 @@ export default function App(): React.JSX.Element {
   return (
     <EnhancedErrorBoundary>
       <SEOOptimizer seoData={seoData} />
+      <AdvancedAnalytics 
+        enableHeatmaps={true}
+        enableUserJourney={true}
+        enableConversionTracking={true}
+        enablePerformanceTracking={true}
+        enableErrorTracking={true}
+      />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <AppRouter />
         
