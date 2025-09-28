@@ -213,7 +213,7 @@ export const logError = (error: Error, context?: string, additionalData?: unknow
 // API call logging
 export const logApiCall = (method: string, url: string, status?: number, duration?: number): void => {
   const level = status && status >= 400 ? LogLevel.ERROR : LogLevel.INFO;
-  (logger as any).log(level, `${method} ${url}`, 'API', {
+  (logger as Logger).log(level, `${method} ${url}`, 'API', {
     status,
     duration: duration ? `${duration}ms` : undefined
   });
