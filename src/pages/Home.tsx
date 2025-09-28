@@ -2,6 +2,8 @@ import { ArrowRight, Shield, Zap, Users, Globe, Star, CheckCircle, Sparkles, Roc
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
+import ModernFeatures from '../components/ModernFeatures';
+import EnhancedTestimonials from '../components/EnhancedTestimonials';
 
 const Home = () => {
   return (
@@ -216,6 +218,12 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      {/* Modern Features Section */}
+      <ModernFeatures />
+
+      {/* Enhanced Testimonials Section */}
+      <EnhancedTestimonials />
 
       {/* CTA Section */}
       <section className='py-20 bg-gradient-to-r from-zion-blue to-zion-purple relative overflow-hidden'>

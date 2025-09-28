@@ -1,5 +1,6 @@
 /* Import enhanced features */
 @import './styles/enhanced-features.css';
+@import './styles/animations.css';
 
 @tailwind base;
 @tailwind components;
