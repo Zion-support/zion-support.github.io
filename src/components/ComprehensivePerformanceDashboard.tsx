@@ -1,12 +1,12 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { 
-  useSEOOptimization, 
+  // useSEOOptimization, 
   seoPerformanceMonitor 
 } from '../utils/seoOptimizations';
 import { 
-  useKeyboardNavigation,
-  useFocusManagement,
-  useScreenReaderAnnouncements,
+  // useKeyboardNavigation,
+  // useFocusManagement,
+  // useScreenReaderAnnouncements,
   useHighContrastMode,
   useReducedMotion,
   accessibilityPerformanceMonitor
@@ -42,12 +42,12 @@ export const ComprehensivePerformanceDashboard: React.FC = () => {
   });
 
   // Initialize SEO optimization
-  const seoOptimization = useSEOOptimization();
+  // const seoOptimization = useSEOOptimization();
   
   // Initialize accessibility hooks
-  const keyboardNavigation = useKeyboardNavigation();
-  const focusManagement = useFocusManagement();
-  const screenReaderAnnouncements = useScreenReaderAnnouncements();
+  // const keyboardNavigation = useKeyboardNavigation();
+  // const focusManagement = useFocusManagement();
+  // const screenReaderAnnouncements = useScreenReaderAnnouncements();
   const isHighContrast = useHighContrastMode();
   const prefersReducedMotion = useReducedMotion();
 
