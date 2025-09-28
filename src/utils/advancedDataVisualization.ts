@@ -50,7 +50,14 @@ export interface VisualizationOptions {
 export class AdvancedDataVisualization {
   private config: ChartConfig;
   private container: HTMLElement | null = null;
-  private charts: Map<string, { render: () => void; update: (data: DataPoint[]) => void; destroy: () => void }> = new Map();
+  private charts: Map<string, { 
+    render: () => void; 
+    update: (data: DataPoint[]) => void; 
+    destroy: () => void;
+    data?: ChartData;
+    options?: VisualizationOptions;
+    container?: HTMLElement;
+  }> = new Map();
   private dataStreams: Map<string, DataPoint[]> = new Map();
   private updateIntervals: Map<string, NodeJS.Timeout> = new Map();
 
@@ -78,8 +85,11 @@ export class AdvancedDataVisualization {
     this.container = container;
     this.charts.set(containerId, {
       render: () => {},
-      update: (newData: DataPoint[]) => {},
-      destroy: () => {}
+      update: (_data: DataPoint[]) => {},
+      destroy: () => {},
+      data,
+      options,
+      container
     });
 
     this.renderLineChart(containerId);
@@ -96,8 +106,11 @@ export class AdvancedDataVisualization {
     this.container = container;
     this.charts.set(containerId, {
       render: () => {},
-      update: (newData: DataPoint[]) => {},
-      destroy: () => {}
+      update: (_data: DataPoint[]) => {},
+      destroy: () => {},
+      data,
+      options,
+      container
     });
 
     this.renderBarChart(containerId);
@@ -114,8 +127,11 @@ export class AdvancedDataVisualization {
     this.container = container;
     this.charts.set(containerId, {
       render: () => {},
-      update: (newData: DataPoint[]) => {},
-      destroy: () => {}
+      update: (_data: DataPoint[]) => {},
+      destroy: () => {},
+      data,
+      options,
+      container
     });
 
     this.renderPieChart(containerId);
@@ -132,8 +148,11 @@ export class AdvancedDataVisualization {
     this.container = container;
     this.charts.set(containerId, {
       render: () => {},
-      update: (newData: DataPoint[]) => {},
-      destroy: () => {}
+      update: (_data: DataPoint[]) => {},
+      destroy: () => {},
+      data,
+      options,
+      container
     });
 
     this.renderScatterPlot(containerId);
@@ -150,8 +169,11 @@ export class AdvancedDataVisualization {
     this.container = container;
     this.charts.set(containerId, {
       render: () => {},
-      update: (newData: DataPoint[]) => {},
-      destroy: () => {}
+      update: (_data: DataPoint[]) => {},
+      destroy: () => {},
+      data,
+      options,
+      container
     });
 
     this.renderAreaChart(containerId);
@@ -664,7 +686,7 @@ export class AdvancedDataVisualization {
     const chart = this.charts.get(containerId);
     if (!chart) return;
 
-    // chart.data = newData as any;
+    chart.data = newData as any;
     this.renderChart(containerId);
   }
 
