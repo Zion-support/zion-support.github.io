@@ -120,6 +120,22 @@ export default function App(): React.JSX.Element {
       'a': () => {
         event.preventDefault();
         setShowAIDashboard(prev => !prev);
+      },
+      'n': () => {
+        event.preventDefault();
+        setShowAnalyticsDashboard(prev => !prev);
+      },
+      'i': () => {
+        event.preventDefault();
+        setShowPerformanceInsights(prev => !prev);
+      },
+      'u': () => {
+        event.preventDefault();
+        setShowUXMonitor(prev => !prev);
+      },
+      's': () => {
+        event.preventDefault();
+        setShowSecurityDashboard(prev => !prev);
       }
     };
     
@@ -201,7 +217,7 @@ export default function App(): React.JSX.Element {
         setTimeout(() => {
           try {
             new AdvancedAutomationSystem().initialize();
-            new AccessibilityEnhancer().initialize();
+            // AccessibilityEnhancer doesn't have a public initialize method
             new SecurityEnhancer().initialize();
           } catch (error) {
             console.warn('Non-critical system initialization failed:', error);
@@ -221,7 +237,7 @@ export default function App(): React.JSX.Element {
     enhancedAnalytics.initialize();
     advancedCacheSystem.initialize();
     new AdvancedAutomationSystem().initialize();
-    new AccessibilityEnhancer().initialize();
+    // AccessibilityEnhancer doesn't have a public initialize method
     new SecurityEnhancer().initialize();
     
     // Initialize analytics
@@ -421,6 +437,30 @@ export default function App(): React.JSX.Element {
           isVisible={showAIDashboard}
           onClose={() => setShowAIDashboard(false)}
         />
+
+        {/* Advanced Analytics Dashboard */}
+        <AdvancedAnalyticsDashboard
+          isVisible={showAnalyticsDashboard}
+          onClose={() => setShowAnalyticsDashboard(false)}
+        />
+
+        {/* Performance Insights */}
+        <PerformanceInsights
+          isVisible={showPerformanceInsights}
+          onClose={() => setShowPerformanceInsights(false)}
+        />
+
+        {/* User Experience Monitor */}
+        <UserExperienceMonitor
+          isVisible={showUXMonitor}
+          onClose={() => setShowUXMonitor(false)}
+        />
+
+        {/* Security Dashboard */}
+        <SecurityDashboard
+          isVisible={showSecurityDashboard}
+          onClose={() => setShowSecurityDashboard(false)}
+        />
         
         {/* Performance Tracker - Background monitoring */}
         <PerformanceTracker
@@ -440,6 +480,23 @@ export default function App(): React.JSX.Element {
           enableFocusIndicators={true}
           enableScreenReader={true}
         />
+
+        {/* Help Section - Keyboard Shortcuts */}
+        <div className="fixed bottom-4 right-4 z-40">
+          <div className="bg-black bg-opacity-80 text-white p-4 rounded-lg text-sm max-w-xs">
+            <h3 className="font-bold mb-2">Keyboard Shortcuts</h3>
+            <div className="space-y-1 text-xs">
+              <div>Ctrl+Shift+D - System Dashboard</div>
+              <div>Ctrl+Shift+P - Performance Optimizer</div>
+              <div>Ctrl+Shift+M - Performance Monitor</div>
+              <div>Ctrl+Shift+A - AI Dashboard</div>
+              <div>Ctrl+Shift+N - Analytics Dashboard</div>
+              <div>Ctrl+Shift+I - Performance Insights</div>
+              <div>Ctrl+Shift+U - UX Monitor</div>
+              <div>Ctrl+Shift+S - Security Dashboard</div>
+            </div>
+          </div>
+        </div>
         </div>
       </EnhancedErrorBoundary>
     </AdvancedErrorBoundary>
