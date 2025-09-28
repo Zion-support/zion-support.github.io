@@ -4,11 +4,14 @@ import {
   CartesianGrid, 
   XAxis, 
   YAxis, 
-  Tooltip
-  // Removed unused chart components to reduce warnings
+  Tooltip,
+  PieChart,
+  Pie,
+  Cell,
+  LineChart,
+  Line
 } from 'recharts';
-import { advancedBuildOptimizer } from '../utils/advancedBuildOptimizer';
-import { accessibilityUtils } from '../utils/accessibilityUtils';
+// Removed unused imports to reduce warnings
 
 interface AdvancedPerformanceDashboardProps {
   isVisible: boolean;
@@ -160,11 +163,7 @@ const AdvancedPerformanceDashboard: React.FC<AdvancedPerformanceDashboardProps> 
   //   }
   // };
 
-  const getScoreColor = (score: number) => {
-    if (score >= 90) return 'text-green-600 bg-green-100';
-    if (score >= 70) return 'text-yellow-600 bg-yellow-100';
-    return 'text-red-600 bg-red-100';
-  };
+  // Removed unused getScoreColor function
 
   const exportReport = useCallback(() => {
     const report = {
@@ -204,19 +203,7 @@ const AdvancedPerformanceDashboard: React.FC<AdvancedPerformanceDashboardProps> 
 
   if (!isVisible) return null;
 
-  const performanceData = [
-    { name: 'Build Score', value: metrics.buildScore, threshold: 80 },
-    { name: 'Accessibility', value: metrics.accessibilityScore, threshold: 85 },
-    { name: 'Performance', value: metrics.performanceScore, threshold: 90 },
-    { name: 'SEO', value: metrics.seoScore, threshold: 90 },
-    { name: 'Security', value: metrics.securityScore, threshold: 95 }
-  ];
-
-  const optimizationDataMap = strategies.map((strategy: OptimizationStrategy) => ({
-    name: strategy.name,
-    impact: strategy.impact,
-    applied: strategy.applied
-  }));
+  // Removed unused performanceData and optimizationDataMap variables
   const pieData = [
     { name: 'Build', value: metrics.buildScore, color: '#3b82f6' },
     { name: 'Accessibility', value: metrics.accessibilityScore, color: '#10b981' },

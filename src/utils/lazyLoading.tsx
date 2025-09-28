@@ -23,7 +23,6 @@ export function useLazyImage(src: string, placeholder?: string) {
     isLoaded
   };
 }
->>>>>>> aba880010ab3331c74621236056fb02395946b9c
 
 /**
  * Enhanced lazy loading utility with error boundaries and loading states
