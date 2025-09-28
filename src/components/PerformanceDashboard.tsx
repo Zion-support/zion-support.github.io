@@ -142,19 +142,19 @@ const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({
               <div className="memory-item">
                 <span className="memory-label">Used:</span>
                 <span className="memory-value">
-                  {((currentMetrics.memoryUsage as any).usedJSHeapSize / 1024 / 1024).toFixed(1)} MB
+                  {((currentMetrics.memoryUsage as MemoryInfo).usedJSHeapSize / 1024 / 1024).toFixed(1)} MB
                 </span>
               </div>
               <div className="memory-item">
                 <span className="memory-label">Total:</span>
                 <span className="memory-value">
-                  {((currentMetrics.memoryUsage as any).totalJSHeapSize / 1024 / 1024).toFixed(1)} MB
+                  {((currentMetrics.memoryUsage as MemoryInfo).totalJSHeapSize / 1024 / 1024).toFixed(1)} MB
                 </span>
               </div>
               <div className="memory-item">
                 <span className="memory-label">Limit:</span>
                 <span className="memory-value">
-                  {((currentMetrics.memoryUsage as any).jsHeapSizeLimit / 1024 / 1024).toFixed(1)} MB
+                  {((currentMetrics.memoryUsage as MemoryInfo).jsHeapSizeLimit / 1024 / 1024).toFixed(1)} MB
                 </span>
               </div>
             </div>
@@ -169,22 +169,22 @@ const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({
               <div className="network-item">
                 <span className="network-label">Connection:</span>
                 <span className="network-value">
-                  {(currentMetrics.networkInfo as any).effectiveType}
+                  {(currentMetrics.networkInfo as NetworkInformation).effectiveType}
                 </span>
               </div>
               <div className="network-item">
                 <span className="network-label">Downlink:</span>
                 <span className="network-value">
-                  {(currentMetrics.networkInfo as any).downlink} Mbps
+                  {(currentMetrics.networkInfo as NetworkInformation).downlink} Mbps
                 </span>
               </div>
               <div className="network-item">
                 <span className="network-label">RTT:</span>
                 <span className="network-value">
-                  {(currentMetrics.networkInfo as any).rtt} ms
+                  {(currentMetrics.networkInfo as NetworkInformation).rtt} ms
                 </span>
               </div>
-              {(currentMetrics.networkInfo as any).saveData && (
+              {(currentMetrics.networkInfo as NetworkInformation).saveData && (
                 <div className="network-item">
                   <span className="network-label">Data Saver:</span>
                   <span className="network-value">Enabled</span>

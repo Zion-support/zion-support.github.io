@@ -61,12 +61,6 @@ declare global {
   };
 }
 
-// Service Worker event interface
-interface ServiceWorkerEvent extends Event {
-  request: Request;
-  respondWith(response: Promise<Response>): void;
-}
-
 // XMLHttpRequest interface extensions
 interface XMLHttpRequest {
   _url?: string;

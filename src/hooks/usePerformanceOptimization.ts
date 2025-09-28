@@ -269,7 +269,7 @@ export const usePerformanceOptimization = (
     const connection = (navigator as unknown as { connection?: { effectiveType?: string } }).connection;
     
     const handleConnectionChange = () => {
-      const effectiveType = (connection as any).effectiveType;
+      const effectiveType = (connection as NetworkInformation).effectiveType;
       
       // Adjust loading strategy based on connection
       if (effectiveType === 'slow-2g' || effectiveType === '2g') {
@@ -287,14 +287,14 @@ export const usePerformanceOptimization = (
       }
     };
 
-    if (connection && typeof (connection as any).addEventListener === 'function') {
-      (connection as any).addEventListener('change', handleConnectionChange);
+    if (connection && typeof (connection as NetworkInformation).addEventListener === 'function') {
+      (connection as NetworkInformation).addEventListener('change', handleConnectionChange);
       handleConnectionChange(); // Initial check
     }
 
     return () => {
-      if (connection && typeof (connection as any).removeEventListener === 'function') {
-        (connection as any).removeEventListener('change', handleConnectionChange);
+      if (connection && typeof (connection as NetworkInformation).removeEventListener === 'function') {
+        (connection as NetworkInformation).removeEventListener('change', handleConnectionChange);
       }
     };
   }, [recordMetric]);
