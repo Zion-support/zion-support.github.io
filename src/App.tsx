@@ -9,6 +9,7 @@ import { accessibilityEnhancements } from './utils/accessibilityEnhancements';
 import { seoOptimizer } from './utils/seoOptimizations';
 // Removed unused imports to reduce warnings
 import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
+// import EnhancedNotificationSystem from './components/EnhancedNotificationSystem';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import AIPerformanceDashboard from './components/AIPerformanceDashboard';
@@ -49,6 +50,7 @@ export default function App(): React.JSX.Element {
   const [notifications, setNotifications] = useState<Notification[]>([]);
   const [showRealTimeMonitor, setShowRealTimeMonitor] = useState(false);
   const [showSystemHealth, setShowSystemHealth] = useState(false);
+  const [showWebsiteEnhancements, setShowWebsiteEnhancements] = useState(false);
   // User preferences state (for future use)
   // const [userPreferences, setUserPreferences] = useState({
   //   theme: 'auto',
@@ -69,6 +71,16 @@ export default function App(): React.JSX.Element {
   const [showComprehensivePerformance, setShowComprehensivePerformance] = useState(false);
   const [showAdvancedSEO, setShowAdvancedSEO] = useState(false);
   const [showAccessibilityPanel, setShowAccessibilityPanel] = useState(false);
+  
+  // SEO data
+  // const seoData = useMemo(() => ({
+  //   title: 'Zion Tech Group - Leading AI & Technology Solutions',
+  //   description: 'Cutting-edge AI, quantum computing, and digital transformation solutions for modern enterprises. Expert consulting, cloud services, and innovative technology implementations.',
+  //   keywords: ['AI solutions', 'quantum computing', 'digital transformation', 'cloud services', 'enterprise technology', 'machine learning', 'automation', 'blockchain'],
+  //   canonicalUrl: typeof window !== 'undefined' ? window.location.href : '',
+  //   ogImage: '/og-image.png',
+  //   twitterCard: 'summary_large_image' as const
+  // }), []);
 
   // Initialize app with custom configuration
   // Temporarily disable useAppInitialization to fix build
@@ -101,6 +113,9 @@ export default function App(): React.JSX.Element {
   // Get SEO data using current pathname
   const seoData = useSEOData(currentPathname);
 
+  // Command palette commands (removed to reduce warnings)
+
+  // Optimized keyboard handler for system dashboard toggle (commented out to reduce warnings)
   // Enhanced engagement tracking function
   const enhancedTrackEngagement = useCallback(() => {
     const timeOnPage = Date.now() - engagementData.startTime;
@@ -474,7 +489,7 @@ export default function App(): React.JSX.Element {
     };
 
     const handleClickWithEngagement = (event: Event) => {
-      handleClick(event);
+      handleClick();
       trackEngagement();
     };
 

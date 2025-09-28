@@ -3,32 +3,34 @@
  * Provides comprehensive error handling and recovery mechanisms
  */
 
-interface ErrorContext {
-  component: string;
-  action: string;
+export interface ErrorContext {
+  error: Error;
+  component?: string;
+  action?: string;
   timestamp: number;
   userAgent: string;
   url: string;
   stack?: string;
 }
 
-interface RecoveryStrategy {
+export interface RecoveryStrategy {
   name: string;
-  condition: (error: Error, context: ErrorContext) => boolean;
-  action: (error: Error, context: ErrorContext) => void;
-  priority: number;
+  condition: (error: Error, context?: ErrorContext) => boolean;
+  action: (error: Error, context?: ErrorContext) => Promise<void> | void;
+  priority?: number;
 }
 
 export class ErrorRecoverySystem {
-  private errorHistory: Error[] = [];
-  private recoveryStrategies: RecoveryStrategy[] = [];
-  private maxHistorySize = 100;
   private errorCount = 0;
   private maxRetries = 3;
+  private errors: ErrorContext[] = [];
+  private strategies: RecoveryStrategy[] = [];
+  private errorHistory: Error[] = [];
+  private maxHistorySize = 100;
 
   constructor() {
     this.setupErrorHandling();
-    this.initializeRecoveryStrategies();
+    this.setupRecoveryStrategies();
   }
 
   private setupErrorHandling(): void {
@@ -36,6 +38,7 @@ export class ErrorRecoverySystem {
 
     window.addEventListener('error', (event) => {
       this.handleError(event.error || new Error(event.message), {
+        error: event.error || new Error(event.message),
         component: 'Global',
         action: 'error',
         timestamp: Date.now(),
@@ -47,6 +50,7 @@ export class ErrorRecoverySystem {
 
     window.addEventListener('unhandledrejection', (event) => {
       this.handleError(new Error(event.reason), {
+        error: new Error(event.reason),
         component: 'Global',
         action: 'unhandledrejection',
         timestamp: Date.now(),
@@ -56,13 +60,13 @@ export class ErrorRecoverySystem {
     });
   }
 
-  private initializeRecoveryStrategies(): void {
-    this.recoveryStrategies = [
+  private setupRecoveryStrategies(): void {
+    this.strategies = [
       {
         name: 'ChunkLoadError Recovery',
-        condition: (error, context) => 
+        condition: (error) => 
           error.message.includes('ChunkLoadError') || error.message.includes('Loading chunk'),
-        action: (error, context) => {
+        action: async () => {
           console.log('Attempting chunk load recovery');
           window.location.reload();
         },
@@ -70,9 +74,9 @@ export class ErrorRecoverySystem {
       },
       {
         name: 'Network Error Recovery',
-        condition: (error, context) => 
+        condition: (error) => 
           error.message.includes('NetworkError') || error.message.includes('fetch'),
-        action: (error, context) => {
+        action: async () => {
           console.log('Attempting network error recovery');
           setTimeout(() => {
             this.errorCount = 0;
@@ -83,18 +87,18 @@ export class ErrorRecoverySystem {
       {
         name: 'Component Error Recovery',
         condition: (error, context) => 
-          Boolean(context.component && error.message.includes('component')),
-        action: (error, context) => {
-          console.log(`Attempting component recovery for ${context.component}`);
+          Boolean(context?.component && error.message.includes('component')),
+        action: async (error, context) => {
+          console.log(`Attempting component recovery for ${context?.component}`);
           // Component-specific recovery logic
         },
         priority: 3
       },
       {
         name: 'Memory Error Recovery',
-        condition: (error, context) => 
+        condition: (error) => 
           error.message.includes('out of memory') || error.message.includes('Memory'),
-        action: (error, context) => {
+        action: async () => {
           console.log('Attempting memory error recovery');
           // Clear caches, reduce memory usage
           if ('caches' in window) {
@@ -106,9 +110,20 @@ export class ErrorRecoverySystem {
         priority: 4
       },
       {
+        name: 'Cache Clear Recovery',
+        condition: () => true,
+        action: async () => {
+          if ('caches' in window) {
+            const cacheNames = await caches.keys();
+            await Promise.all(cacheNames.map(name => caches.delete(name)));
+          }
+        },
+        priority: 5
+      },
+      {
         name: 'Fallback Recovery',
         condition: () => true, // Always matches as fallback
-        action: (error, context) => {
+        action: async () => {
           console.log('Applying fallback recovery');
           // Generic fallback recovery
         },
@@ -121,6 +136,7 @@ export class ErrorRecoverySystem {
     console.error('Error caught by recovery system:', error, context);
     
     this.addToHistory(error);
+    this.errors.push(context);
     this.errorCount++;
 
     if (this.errorCount <= this.maxRetries) {
@@ -137,19 +153,23 @@ export class ErrorRecoverySystem {
     }
   }
 
-  private attemptRecovery(error: Error, context: ErrorContext): void {
+  private async attemptRecovery(error: Error, context: ErrorContext): Promise<void> {
     console.log(`Attempting recovery for error: ${error.message}`);
     
     // Find applicable recovery strategies
-    const applicableStrategies = this.recoveryStrategies
+    const applicableStrategies = this.strategies
       .filter(strategy => strategy.condition(error, context))
-      .sort((a, b) => a.priority - b.priority);
+      .sort((a, b) => (a.priority || 999) - (b.priority || 999));
 
     // Execute the first applicable strategy
     if (applicableStrategies.length > 0) {
       const strategy = applicableStrategies[0];
       console.log(`Executing recovery strategy: ${strategy.name}`);
-      strategy.action(error, context);
+      try {
+        await strategy.action(error, context);
+      } catch (recoveryError) {
+        console.error('Recovery failed:', recoveryError);
+      }
     }
   }
 
@@ -176,8 +196,17 @@ export class ErrorRecoverySystem {
     return this.errorCount;
   }
 
+  public getErrors(): ErrorContext[] {
+    return [...this.errors];
+  }
+
+  public addRecoveryStrategy(strategy: RecoveryStrategy): void {
+    this.strategies.push(strategy);
+  }
+
   public reset(): void {
     this.errorCount = 0;
+    this.errors = [];
   }
 
   public clearHistory(): void {
