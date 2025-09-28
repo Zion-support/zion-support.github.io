@@ -416,66 +416,15 @@ export default function App(): React.JSX.Element {
     }
   }, []);
 
-  useEffect(() => {
-    try {
-      // Add performance marks for better monitoring
-      if (typeof window !== 'undefined' && window.performance && typeof performance.mark === 'function') {
-        performance.mark('app-init-start');
-        
-        // Add performance observer for better monitoring
-        if ('PerformanceObserver' in window) {
-          const observer = new PerformanceObserver((list) => {
-            for (const entry of list.getEntries()) {
-              if (entry.entryType === 'navigation') {
-                console.log('Navigation timing:', entry);
-              }
-            }
-          });
-          observer.observe({ entryTypes: ['navigation', 'paint', 'largest-contentful-paint'] });
-        }
-      }
-      
-      // Initialize analytics
-      if ('initialize' in analytics) {
-        (analytics as any).initialize();
-      }
-      if ('initialize' in seoAnalytics) {
-        (seoAnalytics as any).initialize();
-      }
-      if ('initialize' in performanceSEO) {
-        (performanceSEO as any).initialize();
-      }
-      if ('initialize' in seoManager) {
-        (seoManager as any).initialize();
-      }
-    } catch (error) {
-      console.warn('Some enhancement systems failed to initialize:', error);
-      // Log error for debugging
-      console.error('Initialization error:', error);
-    }
-    
-    // Initialize SEO analytics
-    seoAnalytics.trackPageView(window.location.pathname);
-    
-    // Initialize performance SEO optimizations
-    performanceSEO.optimizeImages();
-    performanceSEO.optimizeFonts();
-    performanceSEO.optimizeCSS();
-    
-    // Initialize advanced optimization systems
-    // These are initialized automatically when imported
-    void performanceOptimizer;
-    void accessibilityEnhancer;
-    void seoOptimizer;
-
-    // Initialize new utility systems
-    performanceAlerts.checkMetric('loadTime', performance.now(), 3000);
-    accessibilityUtils.announce('Application initialized');
-    securityUtils.getSecurityScore();
-
-    // Set default SEO data using the correct method
-    seoManager.updateMetaTags(seoData);
-  }, [seoData]);
+  // Get SEO data using current pathname
+  const seoData = { 
+    title: 'Zion Tech Group - Advanced AI and IT Solutions',
+    description: 'Leading provider of AI-powered IT solutions, cloud computing, cybersecurity, and digital transformation services for enterprises worldwide.',
+    keywords: 'AI, IT Solutions, Cloud Computing, Cybersecurity, Digital Transformation',
+    image: '/images/og-default.jpg',
+    url: `https://ziontechgroup.com${currentPathname}`,
+    type: 'website' as const
+  };
 
   // Enhanced engagement tracking function
   const enhancedTrackEngagement = useCallback(() => {
@@ -502,6 +451,47 @@ export default function App(): React.JSX.Element {
     twitterDescription: 'Transform your business with cutting-edge AI and technology solutions.',
     twitterImage: 'https://zion.app/twitter-image.jpg'
   }), [currentPathname]);
+
+  // Performance optimization hook
+  const { getPerformanceMetrics } = usePerformanceOptimization();
+
+  // Initialize comprehensive enhancements
+  useEffect(() => {
+    const enhancements = getComprehensiveEnhancements();
+    enhancements.initialize();
+    
+    // Initialize individual enhancement systems
+    enhancedPerformanceMonitor.startMonitoring();
+    // enhancedAnalytics.initialize(); // Method doesn't exist
+    // advancedCacheSystem.initialize(); // Method doesn't exist
+    // new AdvancedAutomationSystem().initialize(); // Method doesn't exist
+    // new AccessibilityEnhancer().initialize(); // Method doesn't exist
+    // new SecurityEnhancer().initialize(); // Method doesn't exist
+    
+    // Initialize analytics
+    // analytics.initialize(); // Method doesn't exist
+    // seoAnalytics.initialize(); // Method doesn't exist
+    // performanceSEO.initialize(); // Method doesn't exist
+    // seoManager.initialize(); // Method doesn't exist
+    
+    // Initialize SEO analytics
+    seoAnalytics.trackPageView(window.location.pathname);
+    
+    // Initialize performance SEO optimizations
+    performanceSEO.optimizeImages();
+    performanceSEO.optimizeFonts();
+    performanceSEO.optimizeCSS();
+
+    // Set default SEO data using the correct method
+    const seoDataFormatted = { ...seoData, keywords: seoData.keywords ? [seoData.keywords] : ['AI'] };
+    seoManager.updateMetaTags(seoDataFormatted);
+    
+    // Initialize advanced optimization systems
+    // performanceOptimizer.optimizeBundle(); // Method doesn't exist
+    // accessibilityEnhancer.initialize(); // Method doesn't exist
+    // seoOptimizer.optimizePage(seoData); // Method doesn't exist
+    // securityEnhancer.initialize(); // Method doesn't exist
+  }, [seoData]);
 
   // Update meta tags function
   const updateMetaTags = useCallback((data: typeof memoizedSeoData) => {
