@@ -15,6 +15,8 @@ import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
 import { performanceAlerts } from './utils/performanceAlerts';
 import { accessibilityUtils } from './utils/accessibilityUtils';
 import { securityUtils } from './utils/securityUtils';
+import { buildOptimizer } from './utils/buildOptimizations';
+import { performanceEnhancer } from './utils/performanceEnhancements';
 import AdvancedAnalytics from './components/AdvancedAnalytics';
 import NotificationSystem, { Notification } from './components/NotificationSystem';
 import KeyboardShortcutsHelp from './components/KeyboardShortcutsHelp';
@@ -247,6 +249,10 @@ export default function App(): React.JSX.Element {
     performanceAlerts.checkMetric('loadTime', performance.now(), 3000);
     accessibilityUtils.announce('Application initialized');
     securityUtils.getSecurityScore();
+    
+    // Initialize performance enhancements
+    buildOptimizer.initialize();
+    performanceEnhancer.initialize();
 
     // Set default SEO data using the correct method
     seoManager.updateMetaTags(seoData);
