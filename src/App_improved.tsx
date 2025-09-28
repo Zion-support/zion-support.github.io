@@ -3,15 +3,12 @@ import { AppRouter } from './router';
 import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import PerformanceTracker from './components/PerformanceTracker';
-import { seoAnalytics, performanceSEO, seoManager } from './utils/seoEnhanced';
-import { analytics } from './utils/analytics';
+import { seoAnalytics } from './utils/seoEnhanced';
 import { performanceOptimizer } from './utils/performanceOptimizations';
 import { accessibilityEnhancer } from './utils/advancedAccessibilityEnhancer';
 import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
 import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
 import { performanceAlerts } from './utils/performanceAlerts';
-import { accessibilityUtils } from './utils/accessibilityUtils';
-import { securityUtils } from './utils/securityUtils';
 import { enhancedSecurityManager } from './utils/enhancedSecurityManager';
 import NotificationSystem, { Notification } from './components/NotificationSystem';
 import './index.css';
@@ -54,9 +51,9 @@ export default function App(): React.JSX.Element {
   }, []);
 
   // Performance optimization: memoize heavy computations
-  const performanceMetrics = useMemo(() => {
+  useMemo(() => {
     return enhancedPerformanceMonitor.getMetrics();
-  }, [uiState.showPerformanceMonitor]);
+  }, []);
 
   // Initialize app with error handling
   useEffect(() => {
