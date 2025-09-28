@@ -39,6 +39,7 @@
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.1.0",
     "@types/jest": "^30.0.0",
+    "@types/node": "^24.5.2",
     "@types/react": "^19.1.14",
     "@types/react-dom": "^19.1.9",
     "@types/react-helmet": "^6.1.11",
