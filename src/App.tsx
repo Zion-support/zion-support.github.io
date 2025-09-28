@@ -26,8 +26,6 @@ import { advancedCacheSystem } from './utils/advancedCacheSystem';
 import { AdvancedAutomationSystem } from './utils/advancedAutomationSystem';
 import { AccessibilityEnhancer } from './utils/accessibilityEnhancer';
 import { SecurityEnhancer } from './utils/securityEnhancer';
-import { analytics } from './utils/analytics';
-import { seoAnalytics, performanceSEO, seoManager } from './utils/seoEnhanced';
 import { useSEOData } from './components/SEOOptimizer';
 import { performanceAlerts } from './utils/performanceAlerts';
 import { errorRecoverySystem } from './utils/errorRecovery';
@@ -166,7 +164,10 @@ export default function App(): React.JSX.Element {
       enhancedAnalytics.initialize();
       advancedCacheSystem.initialize();
       new AdvancedAutomationSystem().initialize();
-      new AccessibilityEnhancer().initialize();
+      const accessibilityEnhancer = new AccessibilityEnhancer();
+      if ('initialize' in accessibilityEnhancer) {
+        (accessibilityEnhancer as any).initialize();
+      }
       new SecurityEnhancer().initialize();
     } catch (error) {
       console.warn('Some enhancement systems failed to initialize:', error);
