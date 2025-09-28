@@ -124,6 +124,12 @@ export default function App(): React.JSX.Element {
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         (seoManager as any).initialize();
       }
+      
+      enhancedAnalytics.initialize();
+      advancedCacheSystem.initialize();
+      new AdvancedAutomationSystem().initialize();
+      // new AccessibilityEnhancer().initialize(); // Commented out due to private method
+      SecurityEnhancer.getInstance();
     } catch (error) {
       console.warn('Some enhancement systems failed to initialize:', error);
       // Log error for debugging
