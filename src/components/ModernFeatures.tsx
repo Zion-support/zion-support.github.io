@@ -17,13 +17,6 @@ import {
 
 const ModernFeatures = () => {
   const [currentFeature, setCurrentFeature] = useState(0);
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentFeature((prev) => (prev + 1) % features.length);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, [features.length]);
-
   const features = [
     {
       icon: <Sparkles className="w-8 h-8" />,
@@ -58,6 +51,13 @@ const ModernFeatures = () => {
       borderColor: "border-cyan-500/20"
     }
   ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentFeature((prev) => (prev + 1) % features.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, [features.length]);
 
   const stats = [
     { icon: <Users className="w-6 h-6" />, value: "500+", label: "Happy Clients" },

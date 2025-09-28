@@ -18,16 +18,6 @@ const EnhancedTestimonials = () => {
     // Component mounted
   }, []);
 
-  useEffect(() => {
-    if (!isPlaying) return;
-    
-    const interval = setInterval(() => {
-      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
-    }, 5000);
-    
-    return () => clearInterval(interval);
-  }, [isPlaying, testimonials.length]);
-
   const testimonials = [
     {
       id: 1,
@@ -78,6 +68,16 @@ const EnhancedTestimonials = () => {
   const prevTestimonial = () => {
     setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length);
   };
+
+  useEffect(() => {
+    if (!isPlaying) return;
+    
+    const interval = setInterval(() => {
+      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
+    }, 5000);
+    
+    return () => clearInterval(interval);
+  }, [isPlaying, testimonials.length]);
 
   const togglePlayPause = () => {
     setIsPlaying(!isPlaying);
