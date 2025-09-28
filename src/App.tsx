@@ -29,7 +29,6 @@ export default function App(): React.JSX.Element {
     enableNotifications: true,
     enableCaching: true,
   });
-
   // Optimized keyboard handler for system dashboard toggle
   const handleKeyDown = useCallback((event: KeyboardEvent) => {
     if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'D') {
@@ -82,6 +81,32 @@ export default function App(): React.JSX.Element {
     if (typeof window !== 'undefined' && window.performance && typeof performance.mark === 'function') {
       performance.mark('app-init-start');
     }
+<<<<<<< HEAD
+=======
+    
+    // Preload critical resources
+    preloadResource('/og-image.png', 'image');
+    preloadResource('/favicon.ico', 'image');
+
+    // Use passive listeners for better performance
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    document.addEventListener('click', handleClick, { passive: true });
+    document.addEventListener('keydown', handleKeyDown);
+
+    // Initialize basic systems
+    analytics.initialize();
+    cacheManager.initialize();
+    apiClient.initialize();
+    notificationManager.initialize();
+    
+    // Initialize SEO analytics
+    seoAnalytics.trackPageView(window.location.pathname);
+    
+    // Initialize performance SEO optimizations
+    performanceSEO.optimizeImages();
+    performanceSEO.optimizeFonts();
+    performanceSEO.optimizeCSS();
+>>>>>>> 6e5f3a400804a9d02406b84d082f404faa9217de
 
     // Set default SEO data
     seoManager.updateMetaTags(seoData);
@@ -103,9 +128,41 @@ export default function App(): React.JSX.Element {
 
     // Cleanup function
     return () => {
+<<<<<<< HEAD
       document.removeEventListener('keydown', handleKeyDown);
     };
   }, [handleKeyDown]);
+=======
+      window.removeEventListener('scroll', handleScroll);
+      document.removeEventListener('click', handleClick);
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [handleScroll, handleClick, handleKeyDown, seoData, preloadResource]);
+
+  // Track engagement function
+  const trackEngagement = useCallback(() => {
+    const timeOnPage = Date.now() - engagementData.startTime;
+    seoAnalytics.trackUserEngagement(window.location.pathname, {
+      timeOnPage,
+      scrollDepth: engagementData.scrollDepth,
+      clicks: engagementData.clicks,
+    });
+  }, [engagementData]);
+
+  // Main initialization and cleanup effect
+  React.useEffect(() => {
+    // Track engagement on page unload
+    window.addEventListener('beforeunload', trackEngagement);
+
+    // Cleanup function
+    return () => {
+      window.removeEventListener('beforeunload', trackEngagement);
+      
+      // Final engagement tracking
+      trackEngagement();
+    };
+  }, [trackEngagement]);
+>>>>>>> 6e5f3a400804a9d02406b84d082f404faa9217de
 
   // Show loading screen while initializing
   if (isLoading) {
@@ -143,6 +200,10 @@ export default function App(): React.JSX.Element {
         isVisible={showPerformanceOptimizer}
         onClose={() => setShowPerformanceOptimizer(false)}
       />
+<<<<<<< HEAD
+=======
+      <EnhancedAnalytics />
+>>>>>>> 6e5f3a400804a9d02406b84d082f404faa9217de
     </EnhancedErrorBoundary>
   );
 }
