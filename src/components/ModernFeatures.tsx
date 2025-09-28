@@ -22,7 +22,6 @@ interface Feature {
   details: string[];
   benefits: string[];
 }
->>>>>>> c9ed9e5bb494ff044c041d17a8f03422cd899aac
 
 const ModernFeatures: React.FC = () => {
   const [activeFeature, setActiveFeature] = useState(0);
@@ -157,14 +156,13 @@ const ModernFeatures: React.FC = () => {
     }
   ];
 
-<<<<<<< HEAD
   const stats = [
     { icon: <Users className="w-6 h-6" />, value: "500+", label: "Happy Clients" },
     { icon: <Award className="w-6 h-6" />, value: "99.9%", label: "Uptime" },
     { icon: <TrendingUp className="w-6 h-6" />, value: "50%", label: "Cost Reduction" },
     { icon: <Clock className="w-6 h-6" />, value: "24/7", label: "Support"     }
   ];
-=======
+
   useEffect(() => {
     if (!isAutoPlaying) return;
 
@@ -184,7 +182,6 @@ const ModernFeatures: React.FC = () => {
     setIsAutoPlaying(true);
     setActiveFeature(0);
   };
->>>>>>> c9ed9e5bb494ff044c041d17a8f03422cd899aac
 
   useEffect(() => {
     const interval = setInterval(() => {
