@@ -23,11 +23,27 @@ interface UXData {
 }
 
 interface AnalyticsData {
-  [key: string]: unknown;
+  id?: string;
+  startTime?: number;
+  lastActivity?: number;
+  pageViews?: number;
+  events?: Array<{
+    event: string;
+    timestamp: number;
+    properties?: Record<string, unknown>;
+  }>;
+  deviceInfo?: {
+    screenResolution?: string;
+    language?: string;
+    timezone?: string;
+  };
 }
 
 interface CacheData {
-  [key: string]: unknown;
+  size?: number;
+  totalSize?: number;
+  maxSize?: number;
+  hitRate?: number;
 }
 
 interface DashboardData {
@@ -57,8 +73,8 @@ const AdvancedDashboard: React.FC = () => {
     const cache = AdvancedCacheManager.getInstance().getStats();
     
     setData({
-      analytics,
-      cache,
+      analytics: analytics || {},
+      cache: cache || {},
       performance: {
         memoryUsage: (performance as Performance & { memory?: { usedJSHeapSize?: number } }).memory?.usedJSHeapSize || 0,
         memoryLimit: (performance as Performance & { memory?: { jsHeapSizeLimit?: number } }).memory?.jsHeapSizeLimit || 0,
@@ -152,7 +168,7 @@ const AdvancedDashboard: React.FC = () => {
               <div className="bg-blue-50 p-4 rounded-lg">
                 <h3 className="font-semibold text-blue-900 mb-2">Analytics</h3>
                 <div className="space-y-1 text-sm">
-                  <div>Session: {data.analytics?.id?.substring(0, 12)}...</div>
+                  <div>Session: {data.analytics?.id?.substring(0, 12) || 'N/A'}...</div>
                   <div>Duration: {formatDuration(Date.now() - (data.analytics?.startTime || 0))}</div>
                   <div>Page Views: {data.analytics?.pageViews || 0}</div>
                   <div>Events: {data.analytics?.events?.length || 0}</div>
@@ -210,28 +226,28 @@ const AdvancedDashboard: React.FC = () => {
                 <div className="bg-gray-50 p-4 rounded-lg">
                   <h3 className="font-semibold mb-3">Session Information</h3>
                   <div className="space-y-2 text-sm">
-                    <div><strong>ID:</strong> {data.analytics.id}</div>
-                    <div><strong>Start Time:</strong> {new Date(data.analytics.startTime).toLocaleString()}</div>
-                    <div><strong>Last Activity:</strong> {new Date(data.analytics.lastActivity).toLocaleString()}</div>
-                    <div><strong>Page Views:</strong> {data.analytics.pageViews}</div>
+                    <div><strong>ID:</strong> {data.analytics.id || 'N/A'}</div>
+                    <div><strong>Start Time:</strong> {data.analytics.startTime ? new Date(data.analytics.startTime).toLocaleString() : 'N/A'}</div>
+                    <div><strong>Last Activity:</strong> {data.analytics.lastActivity ? new Date(data.analytics.lastActivity).toLocaleString() : 'N/A'}</div>
+                    <div><strong>Page Views:</strong> {data.analytics.pageViews || 0}</div>
                   </div>
                 </div>
 
                 <div className="bg-gray-50 p-4 rounded-lg">
                   <h3 className="font-semibold mb-3">Device Information</h3>
                   <div className="space-y-2 text-sm">
-                    <div><strong>Screen:</strong> {data.analytics.deviceInfo.screenResolution}</div>
-                    <div><strong>Language:</strong> {data.analytics.deviceInfo.language}</div>
-                    <div><strong>Timezone:</strong> {data.analytics.deviceInfo.timezone}</div>
+                    <div><strong>Screen:</strong> {data.analytics.deviceInfo?.screenResolution || 'N/A'}</div>
+                    <div><strong>Language:</strong> {data.analytics.deviceInfo?.language || 'N/A'}</div>
+                    <div><strong>Timezone:</strong> {data.analytics.deviceInfo?.timezone || 'N/A'}</div>
                   </div>
                 </div>
               </div>
 
               <div className="bg-gray-50 p-4 rounded-lg">
-                <h3 className="font-semibold mb-3">Recent Events ({data.analytics.events.length})</h3>
+                <h3 className="font-semibold mb-3">Recent Events ({data.analytics.events?.length || 0})</h3>
                 <div className="max-h-64 overflow-y-auto">
                   <div className="space-y-2">
-                    {data.analytics.events.slice(-10).map((event: unknown, index: number) => (
+                    {(data.analytics.events || []).slice(-10).map((event, index: number) => (
                       <div key={index} className="bg-white p-2 rounded text-sm">
                         <div className="font-medium">{event.event}</div>
                         <div className="text-gray-600">{new Date(event.timestamp).toLocaleString()}</div>
@@ -280,10 +296,10 @@ const AdvancedDashboard: React.FC = () => {
                 <div className="bg-gray-50 p-4 rounded-lg">
                   <h3 className="font-semibold mb-3">Cache Statistics</h3>
                   <div className="space-y-2 text-sm">
-                    <div><strong>Items:</strong> {data.cache.size}</div>
-                    <div><strong>Total Size:</strong> {formatBytes(data.cache.totalSize)}</div>
-                    <div><strong>Max Size:</strong> {formatBytes(data.cache.maxSize)}</div>
-                    <div><strong>Hit Rate:</strong> {(data.cache.hitRate * 100).toFixed(1)}%</div>
+                    <div><strong>Items:</strong> {data.cache.size || 0}</div>
+                    <div><strong>Total Size:</strong> {formatBytes(data.cache.totalSize || 0)}</div>
+                    <div><strong>Max Size:</strong> {formatBytes(data.cache.maxSize || 0)}</div>
+                    <div><strong>Hit Rate:</strong> {((data.cache.hitRate || 0) * 100).toFixed(1)}%</div>
                   </div>
                 </div>
 
@@ -292,17 +308,17 @@ const AdvancedDashboard: React.FC = () => {
                   <div className="space-y-2">
                     <div className="flex justify-between">
                       <span>Used Space:</span>
-                      <span>{formatBytes(data.cache.totalSize)}</span>
+                      <span>{formatBytes(data.cache.totalSize || 0)}</span>
                     </div>
                     <div className="flex justify-between">
                       <span>Available:</span>
-                      <span>{formatBytes(data.cache.maxSize - data.cache.totalSize)}</span>
+                      <span>{formatBytes((data.cache.maxSize || 0) - (data.cache.totalSize || 0))}</span>
                     </div>
                     <div className="w-full bg-gray-200 rounded-full h-2">
                       <div
                         className="bg-green-600 h-2 rounded-full"
                         style={{
-                          width: `${(data.cache.totalSize / data.cache.maxSize) * 100}%`,
+                          width: `${((data.cache.totalSize || 0) / (data.cache.maxSize || 1)) * 100}%`,
                         }}
                       ></div>
                     </div>
