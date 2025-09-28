@@ -384,7 +384,7 @@ export default function App(): React.JSX.Element {
       // Final engagement tracking
       trackEngagement();
     };
-  }, [trackEngagement]);
+  }, [trackEngagement, handleKeyDown]);
 
   // Show loading screen while initializing
   if (isLoading) {
