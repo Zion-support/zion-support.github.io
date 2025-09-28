@@ -1,27 +1,16 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, LineChart, Line, PieChart, Pie, Cell } from 'recharts';
-
-interface PerformanceMetrics {
-  lcp: number;
-  fcp: number;
-  ttfb: number;
-  fid: number;
-  cls: number;
-  overallScore: number;
-}
+import { enhancedErrorHandler } from '../utils/enhancedErrorHandling';
 
 interface AIPerformanceDashboardProps {
   isVisible: boolean;
   onClose: () => void;
 }
 
-interface AIInsights {
-  predictedHighRiskActions: string[];
-  recommendedImprovements: string[];
-  errorTrends: Array<{
-    category: string;
-    trend: 'increasing' | 'decreasing' | 'stable';
-  }>;
+interface PerformanceMetrics {
+  errorRate: number;
+  criticalErrorsToday: number;
+  userImpactScore: number;
+  avgResolutionTime: number;
   [key: string]: unknown;
 }
 
@@ -30,127 +19,155 @@ interface ErrorReport {
   message: string;
   lastOccurrence: string | Date;
   occurrenceCount: number;
+  severity: 'low' | 'medium' | 'high' | 'critical';
   context: {
     component?: string;
     action?: string;
   };
   aiPredictedImpact?: number;
   resolutionSuggestions?: string[];
-  severity?: string;
   [key: string]: unknown;
+}
+
+interface AIInsights {
+  predictedHighRiskActions: string[];
+  recommendedImprovements: string[];
+  performanceTrends: string[];
+  optimizationSuggestions: string[];
+  errorTrends: Array<{ category: string; trend: string }>;
 }
 
 const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisible, onClose }) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-  const [insights, setInsights] = useState<AIInsights | null>(null);
-  const [errors, setErrors] = useState<ErrorReport[]>([]);
-  const [isLoading, setIsLoading] = useState(false);
+  const [insights, setInsights] = useState<{
+    predictedHighRiskActions: string[];
+    recommendedImprovements: string[];
+    errorTrends: Array<{ category: string; trend: string }>;
+  } | null>(null);
+  const [errorReports, setErrorReports] = useState<ErrorReport[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   const loadPerformanceData = useCallback(async () => {
-    if (!isVisible) return;
-    
     setIsLoading(true);
     try {
-      // Mock data for demonstration
+      // Simulate AI-powered performance analysis
       const mockMetrics: PerformanceMetrics = {
-        lcp: Math.random() * 1000 + 500,
-        fcp: Math.random() * 500 + 200,
-        ttfb: Math.random() * 200 + 100,
-        fid: Math.random() * 50 + 10,
-        cls: Math.random() * 0.1,
-        overallScore: Math.floor(Math.random() * 40) + 60
+        errorRate: Math.random() * 5,
+        criticalErrorsToday: Math.floor(Math.random() * 10),
+        userImpactScore: Math.random() * 100,
+        avgResolutionTime: Math.random() * 120,
       };
 
       const mockInsights: AIInsights = {
         predictedHighRiskActions: [
-          'Memory leak detected in component unmounting',
+          'High memory usage detected in component rendering',
           'Potential race condition in async operations',
-          'Large bundle size affecting load times'
+          'Unoptimized image loading may impact LCP'
         ],
         recommendedImprovements: [
           'Implement React.memo for expensive components',
-          'Add error boundaries for better error handling',
-          'Optimize image loading with lazy loading'
+          'Add error boundaries to prevent cascade failures',
+          'Optimize bundle size with code splitting',
+          'Add request timeout configuration',
+          'Consider implementing offline fallback'
         ],
         errorTrends: [
-          { category: 'JavaScript Errors', trend: 'decreasing' },
-          { category: 'Network Errors', trend: 'stable' },
-          { category: 'Performance Issues', trend: 'increasing' }
+          { category: 'API', trend: 'stable' as const },
+          { category: 'UI', trend: 'decreasing' as const },
+          { category: 'Database', trend: 'stable' as const }
+        ],
+        performanceTrends: [
+          'Page load time improving by 15%',
+          'Memory usage stable',
+          'Error rate decreasing'
+        ],
+        optimizationSuggestions: [
+          'Enable gzip compression',
+          'Implement lazy loading',
+          'Add service worker caching'
         ]
       };
 
       const mockErrorReports: ErrorReport[] = [
         {
           id: '1',
-          message: 'Uncaught TypeError: Cannot read property of undefined',
+          severity: 'high',
+          message: 'Failed to load user data',
           lastOccurrence: new Date(),
           occurrenceCount: 15,
-          context: { component: 'UserProfile', action: 'loadData' },
-          aiPredictedImpact: 0.8,
-          resolutionSuggestions: ['Add null checks before property access', 'Implement proper error boundaries'],
-          severity: 'high'
+          context: { component: 'UserProfile', action: 'fetchUserData' },
+          aiPredictedImpact: 75,
+          resolutionSuggestions: [
+            'Check API endpoint availability',
+            'Implement retry logic with exponential backoff',
+            'Add fallback data loading'
+          ]
         },
         {
           id: '2',
-          message: 'Network request failed',
-          lastOccurrence: new Date(),
-          occurrenceCount: 3,
-          context: { component: 'DataFetcher', action: 'fetchUserData' },
-          aiPredictedImpact: 0.3,
-          resolutionSuggestions: ['Implement retry logic', 'Add offline fallback'],
-          severity: 'medium'
+          severity: 'medium',
+          message: 'Slow rendering detected',
+          lastOccurrence: new Date(Date.now() - 300000),
+          occurrenceCount: 8,
+          context: { component: 'DataTable', action: 'render' },
+          aiPredictedImpact: 45,
+          resolutionSuggestions: [
+            'Implement virtual scrolling',
+            'Add loading states',
+            'Optimize data processing'
+          ]
         }
       ];
 
       setMetrics(mockMetrics);
       setInsights(mockInsights);
-      setErrors(mockErrorReports);
+      setErrorReports(mockErrorReports);
     } catch (error) {
-      console.error('Failed to load performance data:', error);
+      enhancedErrorHandler.handleError(error as Error, {
+        component: 'AIPerformanceDashboard',
+        action: 'loadPerformanceData'
+      });
     } finally {
       setIsLoading(false);
     }
-  }, [isVisible]);
+  }, []);
 
   useEffect(() => {
-    loadPerformanceData();
-  }, [loadPerformanceData]);
-
-  if (!isVisible) return null;
+    if (isVisible) {
+      loadPerformanceData();
+    }
+  }, [isVisible, loadPerformanceData]);
 
   const getSeverityColor = (severity: string) => {
     switch (severity) {
-      case 'high': return 'text-red-600 bg-red-100';
+      case 'critical': return 'text-red-600 bg-red-100';
+      case 'high': return 'text-orange-600 bg-orange-100';
       case 'medium': return 'text-yellow-600 bg-yellow-100';
-      case 'low': return 'text-green-600 bg-green-100';
+      case 'low': return 'text-blue-600 bg-blue-100';
       default: return 'text-gray-600 bg-gray-100';
     }
   };
 
-  const getScoreColor = (score: number) => {
-    if (score >= 90) return 'text-green-600';
-    if (score >= 70) return 'text-yellow-600';
-    return 'text-red-600';
+  const getImpactColor = (impact: number) => {
+    if (impact >= 70) return 'text-red-500';
+    if (impact >= 40) return 'text-yellow-500';
+    return 'text-green-500';
   };
 
-  const performanceData = metrics ? [
-    { name: 'LCP', value: metrics.lcp, threshold: 2500 },
-    { name: 'FCP', value: metrics.fcp, threshold: 1800 },
-    { name: 'TTFB', value: metrics.ttfb, threshold: 800 },
-    { name: 'FID', value: metrics.fid, threshold: 100 },
-    { name: 'CLS', value: metrics.cls * 1000, threshold: 100 }
-  ] : [];
-
-  const trendData = insights?.errorTrends.map(trend => ({
-    name: trend.category,
-    trend: trend.trend === 'increasing' ? 1 : trend.trend === 'decreasing' ? -1 : 0
-  })) || [];
+  const getTrendIcon = (trend: string) => {
+    switch (trend) {
+      case 'increasing': return '📈';
+      case 'decreasing': return '📉';
+      case 'stable': return '➡️';
+      default: return '❓';
+    }
+  };
 
   return (
     <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center p-4">
-      <div className="bg-white rounded-lg p-6 max-w-6xl w-full max-h-[90vh] overflow-y-auto">
-        <div className="flex justify-between items-center mb-6">
-          <h2 className="text-2xl font-bold text-gray-800">🤖 AI Performance Dashboard</h2>
+      <div className="bg-white rounded-lg shadow-xl max-w-6xl w-full max-h-[90vh] overflow-y-auto">
+        <div className="flex justify-between items-center p-6 border-b">
+          <h2 className="text-2xl font-bold text-gray-900">🤖 AI Performance Dashboard</h2>
           <button
             onClick={onClose}
             className="text-gray-500 hover:text-gray-700 text-2xl"
@@ -160,127 +177,133 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
           </button>
         </div>
 
-        {isLoading ? (
-          <div className="flex items-center justify-center h-64">
-            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500"></div>
-          </div>
-        ) : (
-          <div className="space-y-6">
-            {/* Overall Score */}
-            {metrics && (
-              <div className="bg-gradient-to-r from-blue-500 to-purple-600 text-white p-6 rounded-lg">
-                <div className="text-center">
-                  <h3 className="text-xl font-semibold mb-2">AI Performance Score</h3>
-                  <div className={`text-4xl font-bold ${getScoreColor(metrics.overallScore)}`}>
-                    {metrics.overallScore}/100
+        <div className="p-6">
+          {isLoading ? (
+            <div className="flex items-center justify-center py-12">
+              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500"></div>
+            </div>
+          ) : (
+            <div className="space-y-6">
+              {/* Performance Metrics */}
+              {metrics && (
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+                  <div className="bg-blue-50 p-4 rounded-lg">
+                    <h3 className="text-sm font-medium text-blue-600">Error Rate</h3>
+                    <p className="text-2xl font-bold text-blue-900">{metrics.errorRate.toFixed(2)}%</p>
                   </div>
-                  <div className="mt-2 text-blue-100">
-                    {metrics.overallScore >= 90 ? 'Excellent' : 
-                     metrics.overallScore >= 70 ? 'Good' : 'Needs Improvement'}
+                  <div className="bg-red-50 p-4 rounded-lg">
+                    <h3 className="text-sm font-medium text-red-600">Critical Errors Today</h3>
+                    <p className="text-2xl font-bold text-red-900">{metrics.criticalErrorsToday}</p>
+                  </div>
+                  <div className="bg-yellow-50 p-4 rounded-lg">
+                    <h3 className="text-sm font-medium text-yellow-600">User Impact Score</h3>
+                    <p className="text-2xl font-bold text-yellow-900">{metrics.userImpactScore.toFixed(0)}</p>
+                  </div>
+                  <div className="bg-green-50 p-4 rounded-lg">
+                    <h3 className="text-sm font-medium text-green-600">Avg Resolution Time</h3>
+                    <p className="text-2xl font-bold text-green-900">{metrics.avgResolutionTime.toFixed(0)}m</p>
                   </div>
                 </div>
-              </div>
-            )}
+              )}
 
-            {/* Performance Metrics */}
-            {metrics && (
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                <div className="bg-gray-50 rounded-lg p-4">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-4">Core Web Vitals</h3>
-                  <ResponsiveContainer width="100%" height={300}>
-                    <BarChart data={performanceData}>
-                      <CartesianGrid strokeDasharray="3 3" />
-                      <XAxis dataKey="name" />
-                      <YAxis />
-                      <Tooltip />
-                      <Bar dataKey="value" fill="#3b82f6" />
-                    </BarChart>
-                  </ResponsiveContainer>
+              {/* AI Insights */}
+              {insights && (
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                  <div className="bg-gray-50 p-4 rounded-lg">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-3">🔮 AI Predictions</h3>
+                    <div className="space-y-2">
+                      {insights.predictedHighRiskActions.map((action, index) => (
+                        <div key={index} className="text-sm text-gray-700 bg-yellow-100 p-2 rounded">
+                          ⚠️ {action}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="bg-gray-50 p-4 rounded-lg">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-3">💡 AI Recommendations</h3>
+                    <div className="space-y-2">
+                      {insights.recommendedImprovements.map((improvement, index) => (
+                        <div key={index} className="text-sm text-gray-700 bg-blue-100 p-2 rounded">
+                          ✨ {improvement}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
                 </div>
+              )}
 
-                <div className="bg-gray-50 rounded-lg p-4">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-4">Error Trends</h3>
-                  <ResponsiveContainer width="100%" height={300}>
-                    <LineChart data={trendData}>
-                      <CartesianGrid strokeDasharray="3 3" />
-                      <XAxis dataKey="name" />
-                      <YAxis domain={[-1, 1]} />
-                      <Tooltip />
-                      <Line type="monotone" dataKey="trend" stroke="#ef4444" />
-                    </LineChart>
-                  </ResponsiveContainer>
-                </div>
-              </div>
-            )}
-
-            {/* AI Insights */}
-            {insights && (
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
-                  <h3 className="text-lg font-semibold text-yellow-800 mb-3">⚠️ Predicted High-Risk Actions</h3>
-                  <ul className="space-y-2">
-                    {insights.predictedHighRiskActions.map((action, index) => (
-                      <li key={index} className="text-sm text-yellow-700">• {action}</li>
+              {/* Error Trends */}
+              {insights?.errorTrends && (
+                <div className="bg-gray-50 p-4 rounded-lg">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-3">📊 Error Trends</h3>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    {insights.errorTrends.map((trend, index) => (
+                      <div key={index} className="bg-white p-3 rounded border">
+                        <div className="flex items-center justify-between">
+                          <span className="font-medium">{trend.category}</span>
+                          <span className="text-lg">{getTrendIcon(trend.trend)}</span>
+                        </div>
+                        <div className="text-sm text-gray-600 capitalize">{trend.trend}</div>
+                      </div>
                     ))}
-                  </ul>
+                  </div>
                 </div>
+              )}
 
-                <div className="bg-green-50 border border-green-200 rounded-lg p-4">
-                  <h3 className="text-lg font-semibold text-green-800 mb-3">💡 AI Recommendations</h3>
-                  <ul className="space-y-2">
-                    {insights.recommendedImprovements.map((improvement, index) => (
-                      <li key={index} className="text-sm text-green-700">• {improvement}</li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            )}
-
-            {/* Error Reports */}
-            <div className="bg-gray-50 rounded-lg p-4">
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">🐛 Error Reports</h3>
-              <div className="space-y-3">
-                {errors.length > 0 ? (
-                  errors.map((report) => (
-                    <div key={report.id} className="bg-white p-4 rounded border">
-                      <div className="flex items-start justify-between">
-                        <div className="flex-1">
-                          <div className="flex items-center gap-2 mb-2">
-                            <span className={`px-2 py-1 rounded text-xs font-medium ${getSeverityColor(report.severity || 'low')}`}>
-                              {report.severity?.toUpperCase() || 'LOW'}
+              {/* Error Reports */}
+              <div className="bg-gray-50 p-4 rounded-lg">
+                <h3 className="text-lg font-semibold text-gray-900 mb-3">🐛 Error Reports</h3>
+                <div className="space-y-3">
+                  {errorReports.length > 0 ? (
+                    errorReports.map((report) => (
+                      <div key={report.id} className="bg-white p-4 rounded border">
+                        <div className="flex justify-between items-start mb-2">
+                          <div className="flex items-center space-x-2">
+                            <span className={`px-2 py-1 rounded text-xs font-medium ${getSeverityColor(report.severity)}`}>
+                              {report.severity.toUpperCase()}
                             </span>
+                            {report.aiPredictedImpact && (
+                              <span className={`text-sm font-medium ${getImpactColor(report.aiPredictedImpact)}`}>
+                                Impact: {report.aiPredictedImpact}%
+                              </span>
+                            )}
                             <span className="text-sm text-gray-500">
                               {report.occurrenceCount} occurrences
                             </span>
                           </div>
-                          <p className="text-sm text-gray-800 mb-2">{report.message}</p>
-                          {report.resolutionSuggestions && (
-                            <div className="mt-2">
-                              <p className="text-xs font-medium text-gray-600 mb-1">AI Suggestions:</p>
-                              <ul className="text-xs text-gray-600 space-y-1">
-                                {report.resolutionSuggestions.map((suggestion, index) => (
-                                  <li key={index}>• {suggestion}</li>
-                                ))}
-                              </ul>
-                            </div>
-                          )}
-                        </div>
-                        <div className="text-right text-xs text-gray-500">
-                          <div>Last: {new Date(report.lastOccurrence).toLocaleDateString()}</div>
-                          {report.aiPredictedImpact && (
-                            <div>Impact: {(report.aiPredictedImpact * 100).toFixed(0)}%</div>
-                          )}
+                          <div className="mt-2">
+                            <p className="text-gray-900 font-medium">{report.message}</p>
+                            <p className="text-sm text-gray-600 mt-1">
+                              Component: {report.context.component} | Action: {report.context.action}
+                            </p>
+                            {report.resolutionSuggestions && (
+                              <div className="mt-2">
+                                <p className="text-sm font-medium text-gray-700 mb-1">AI Suggestions:</p>
+                                <ul className="text-sm text-gray-600 space-y-1">
+                                  {report.resolutionSuggestions.map((suggestion, index) => (
+                                    <li key={index} className="flex items-start gap-1">
+                                      <span>•</span>
+                                      <span>{suggestion}</span>
+                                    </li>
+                                  ))}
+                                </ul>
+                              </div>
+                            )}
+                          </div>
                         </div>
                       </div>
+                    ))
+                  ) : (
+                    <div className="text-center py-8 text-gray-500">
+                      ✨ No errors detected! Your application is running smoothly.
                     </div>
-                  ))
-                ) : (
-                  <p className="text-gray-500 text-center py-4">No errors detected</p>
-                )}
+                  )}
+                </div>
               </div>
             </div>
-          </div>
-        )}
+          )}
+        </div>
       </div>
     </div>
   );
