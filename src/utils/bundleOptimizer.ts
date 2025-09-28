@@ -1,227 +1,113 @@
 /**
- * Bundle Optimization Utilities
- * Advanced bundle size optimization and code splitting tools
+ * Bundle Optimization Utilities for better performance
  */
 
-import React from 'react';
-
-export interface BundleMetrics {
+interface BundleAnalysis {
   totalSize: number;
   gzippedSize: number;
-  chunkCount: number;
-  largestChunk: string;
-  duplicateModules: number;
-  unusedCode: number;
-  compressionRatio: number;
-}
-
-export interface OptimizationStrategy {
-  type: 'code-splitting' | 'tree-shaking' | 'lazy-loading' | 'compression' | 'caching';
-  priority: 'high' | 'medium' | 'low';
-  impact: number; // Percentage improvement
-  description: string;
-  implementation: string;
+  chunks: Array<{
+    name: string;
+    size: number;
+    gzippedSize: number;
+    modules: number;
+  }>;
+  recommendations: string[];
 }
 
 class BundleOptimizer {
-  private metrics: BundleMetrics | null = null;
-  private strategies: OptimizationStrategy[] = [];
-  private isAnalyzing = false;
+  private static instance: BundleOptimizer;
+  private analysis: BundleAnalysis | null = null;
 
   constructor() {
-    this.initializeOptimizationStrategies();
+    this.analyzeBundle();
   }
 
-  private initializeOptimizationStrategies(): void {
-    this.strategies = [
-      {
-        type: 'code-splitting',
-        priority: 'high',
-        impact: 25,
-        description: 'Split large bundles into smaller, focused chunks',
-        implementation: 'Use dynamic imports and React.lazy() for route-based splitting'
-      },
-      {
-        type: 'tree-shaking',
-        priority: 'high',
-        impact: 15,
-        description: 'Remove unused code from bundles',
-        implementation: 'Ensure proper ES6 module imports and configure bundler tree-shaking'
-      },
-      {
-        type: 'lazy-loading',
-        priority: 'medium',
-        impact: 20,
-        description: 'Load components and resources on-demand',
-        implementation: 'Implement lazy loading for images, components, and non-critical resources'
-      },
-      {
-        type: 'compression',
-        priority: 'medium',
-        impact: 30,
-        description: 'Optimize compression algorithms and settings',
-        implementation: 'Use Brotli compression and optimize gzip settings'
-      },
-      {
-        type: 'caching',
-        priority: 'low',
-        impact: 10,
-        description: 'Implement effective caching strategies',
-        implementation: 'Use service workers and HTTP caching headers'
-      }
-    ];
-  }
-
-  async analyzeBundle(): Promise<BundleMetrics> {
-    if (this.isAnalyzing) {
-      return this.metrics || this.getDefaultMetrics();
+  static getInstance(): BundleOptimizer {
+    if (!BundleOptimizer.instance) {
+      BundleOptimizer.instance = new BundleOptimizer();
     }
+    return BundleOptimizer.instance;
+  }
 
-    this.isAnalyzing = true;
-
+  private async analyzeBundle(): Promise<void> {
     try {
-      // Simulate bundle analysis
-      const mockMetrics: BundleMetrics = {
-        totalSize: 750000, // 750KB
-        gzippedSize: 200000, // 200KB
-        chunkCount: 8,
-        largestChunk: 'vendor-react',
-        duplicateModules: 12,
-        unusedCode: 45000, // 45KB
-        compressionRatio: 0.73
+      // This would typically analyze the actual bundle
+      // For now, we'll create a mock analysis
+      this.analysis = {
+        totalSize: 0,
+        gzippedSize: 0,
+        chunks: [],
+        recommendations: []
       };
 
-      this.metrics = mockMetrics;
-      return mockMetrics;
+      this.generateRecommendations();
     } catch (error) {
-      console.error('Bundle analysis failed:', error);
-      return this.getDefaultMetrics();
-    } finally {
-      this.isAnalyzing = false;
+      console.warn('Failed to analyze bundle:', error);
     }
   }
 
-  private getDefaultMetrics(): BundleMetrics {
-    return {
-      totalSize: 0,
-      gzippedSize: 0,
-      chunkCount: 0,
-      largestChunk: '',
-      duplicateModules: 0,
-      unusedCode: 0,
-      compressionRatio: 0
-    };
-  }
+  private generateRecommendations(): void {
+    if (!this.analysis) return;
 
-  getOptimizationStrategies(): OptimizationStrategy[] {
-    return this.strategies;
-  }
+    const recommendations: string[] = [];
 
-  getRecommendedOptimizations(): OptimizationStrategy[] {
-    if (!this.metrics) {
-      return this.strategies.filter(s => s.priority === 'high');
+    // Check for large chunks
+    const largeChunks = this.analysis.chunks.filter(chunk => chunk.size > 250000);
+    if (largeChunks.length > 0) {
+      recommendations.push(`Consider splitting large chunks: ${largeChunks.map(c => c.name).join(', ')}`);
     }
 
-    return this.strategies.filter(strategy => {
-      // Recommend optimizations based on current metrics
-      if (strategy.type === 'code-splitting' && this.metrics!.chunkCount < 5) {
-        return true;
-      }
-      if (strategy.type === 'tree-shaking' && this.metrics!.unusedCode > 30000) {
-        return true;
-      }
-      if (strategy.type === 'compression' && this.metrics!.compressionRatio < 0.8) {
-        return true;
-      }
-      return strategy.priority === 'high';
-    });
+    // Check for duplicate dependencies
+    recommendations.push('Use bundle analyzer to identify duplicate dependencies');
+
+    // Check for unused code
+    recommendations.push('Enable tree shaking to remove unused code');
+
+    // Check for dynamic imports
+    recommendations.push('Consider using dynamic imports for large components');
+
+    this.analysis.recommendations = recommendations;
   }
 
-  calculatePotentialSavings(): number {
-    if (!this.metrics) return 0;
-
-    const recommended = this.getRecommendedOptimizations();
-    return recommended.reduce((total, strategy) => {
-      return total + (this.metrics!.totalSize * (strategy.impact / 100));
-    }, 0);
+  public getAnalysis(): BundleAnalysis | null {
+    return this.analysis;
   }
 
-  generateOptimizationReport(): string {
-    const metrics = this.metrics || this.getDefaultMetrics();
-    const recommended = this.getRecommendedOptimizations();
-    const potentialSavings = this.calculatePotentialSavings();
-
-    return `
-# Bundle Optimization Report
-
-## Current Metrics
-- **Total Size**: ${(metrics.totalSize / 1024).toFixed(2)} KB
-- **Gzipped Size**: ${(metrics.gzippedSize / 1024).toFixed(2)} KB
-- **Chunk Count**: ${metrics.chunkCount}
-- **Largest Chunk**: ${metrics.largestChunk}
-- **Duplicate Modules**: ${metrics.duplicateModules}
-- **Unused Code**: ${(metrics.unusedCode / 1024).toFixed(2)} KB
-- **Compression Ratio**: ${(metrics.compressionRatio * 100).toFixed(1)}%
-
-## Recommended Optimizations
-${recommended.map(strategy => `
-### ${strategy.type.replace('-', ' ').toUpperCase()}
-- **Priority**: ${strategy.priority}
-- **Impact**: ${strategy.impact}% size reduction
-- **Description**: ${strategy.description}
-- **Implementation**: ${strategy.implementation}
-`).join('')}
-
-## Potential Savings
-- **Estimated Size Reduction**: ${(potentialSavings / 1024).toFixed(2)} KB
-- **Percentage Improvement**: ${((potentialSavings / metrics.totalSize) * 100).toFixed(1)}%
-    `.trim();
+  public optimizeImports(): void {
+    // This would typically use tools like babel-plugin-import or similar
+    console.log('Optimizing imports...');
   }
 
-  // Utility methods for implementing optimizations
-  static createLazyComponent<T extends React.ComponentType<unknown>>(
-    importFunc: () => Promise<{ default: T }>
-  ): React.LazyExoticComponent<T> {
-    return React.lazy(importFunc as any);
+  public suggestCodeSplitting(): string[] {
+    const suggestions: string[] = [];
+
+    // Suggest splitting based on common patterns
+    suggestions.push('Split vendor libraries into separate chunks');
+    suggestions.push('Use dynamic imports for route-based code splitting');
+    suggestions.push('Split large utility files into smaller modules');
+    suggestions.push('Consider lazy loading for heavy components');
+
+    return suggestions;
   }
 
-  static preloadComponent(importFunc: () => Promise<unknown>): void {
-    // Preload component for better perceived performance
-    importFunc().catch(console.error);
+  public getBundleSize(): number {
+    // This would calculate actual bundle size
+    return 0;
   }
 
-  static optimizeImages(): void {
-    // Implement image optimization strategies
-    const images = document.querySelectorAll('img[data-src]');
-    images.forEach(img => {
-      const lazyImage = img as HTMLImageElement;
-      if (lazyImage.dataset.src) {
-        lazyImage.src = lazyImage.dataset.src;
-        lazyImage.removeAttribute('data-src');
-      }
-    });
+  public getGzippedSize(): number {
+    // This would calculate gzipped size
+    return 0;
   }
 
-  static enableServiceWorker(): void {
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/sw.js')
-        .then(registration => {
-          console.log('Service Worker registered:', registration);
-        })
-        .catch(error => {
-          console.error('Service Worker registration failed:', error);
-        });
-    }
+  public getChunkCount(): number {
+    return this.analysis?.chunks.length || 0;
+  }
+
+  public getRecommendations(): string[] {
+    return this.analysis?.recommendations || [];
   }
 }
 
-// Export singleton instance
-export const bundleOptimizer = new BundleOptimizer();
-
-// Export utility functions
-export const {
-  createLazyComponent,
-  preloadComponent,
-  optimizeImages,
-  enableServiceWorker
-} = BundleOptimizer;
+export const bundleOptimizer = BundleOptimizer.getInstance();
+export default BundleOptimizer;
