@@ -27,6 +27,8 @@ import { enhancedAnalyticsSystem } from './utils/enhancedAnalyticsSystem';
 import { advancedAppEnhancements } from './utils/advancedAppEnhancements';
 import { errorHandler, ErrorBoundary } from './utils/errorHandler';
 import { performanceMonitor } from './utils/performanceMonitoring';
+import { advancedErrorHandler } from './utils/advancedErrorHandling';
+import SystemMonitoringDashboard from './components/SystemMonitoringDashboard';
 
 // Lazy load heavy components for better performance
 const EnhancedSystemDashboard = lazy(() => import('./components/EnhancedSystemDashboard'));
@@ -462,6 +464,9 @@ export default function App(): React.JSX.Element {
 
         {/* Enhanced Notification System */}
         <EnhancedNotificationSystem />
+
+        {/* System Monitoring Dashboard */}
+        <SystemMonitoringDashboard />
         </div>
       </EnhancedErrorBoundary>
     </ErrorBoundary>
