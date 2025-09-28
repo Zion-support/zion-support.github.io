@@ -49,7 +49,6 @@ export default function App(): React.JSX.Element {
     (window as Record<string, unknown>).enhancements = enhancements;
   }, []);
 
-<<<<<<< HEAD
   // Memoize the SEO data to prevent unnecessary re-renders
   const seoData = useMemo(() => ({
     title: 'Zion Tech Group - Leading AI & Technology Solutions',
@@ -59,23 +58,6 @@ export default function App(): React.JSX.Element {
     ogUrl: typeof window !== 'undefined' ? window.location.href : '',
     ogImage: '/og-image.png',
     twitterCard: 'summary_large_image' as const
-=======
-  // Handle scroll events
-  const handleScroll = useCallback(() => {
-    // Scroll handling logic can be added here
-  }, []);
-
-  // Handle click events
-  const handleClick = useCallback(() => {
-    // Click handling logic can be added here
-  }, []);
-
-  // Engagement data for tracking
-  const engagementData = useMemo(() => ({
-    startTime: Date.now(),
-    scrollDepth: 0,
-    clicks: 0
->>>>>>> f001e418736d617468b45ba940ac3637b9acc1d3
   }), []);
 
   // Track engagement function
@@ -87,20 +69,6 @@ export default function App(): React.JSX.Element {
       clicks: engagementData.clicks,
     });
   }, [engagementData]);
-<<<<<<< HEAD
-=======
-
-  // Memoize the SEO data to prevent unnecessary re-renders
-  const seoData = useMemo(() => ({
-    title: 'Zion Tech Group - Leading AI & Technology Solutions',
-    description: 'Cutting-edge AI, quantum computing, and digital transformation solutions for modern enterprises. Expert consulting, cloud services, and innovative technology implementations.',
-    keywords: ['AI solutions', 'quantum computing', 'digital transformation', 'cloud services', 'enterprise technology', 'machine learning', 'automation', 'blockchain'],
-    ogType: 'website',
-    ogUrl: typeof window !== 'undefined' ? window.location.href : '',
-    ogImage: '/og-image.png',
-    twitterCard: 'summary_large_image' as const
-  }), []);
->>>>>>> f001e418736d617468b45ba940ac3637b9acc1d3
 
   useEffect(() => {
     // Add performance marks for better monitoring
@@ -112,17 +80,13 @@ export default function App(): React.JSX.Element {
     preloadResource('/og-image.png', 'image');
     preloadResource('/favicon.ico', 'image');
 
-<<<<<<< HEAD
-=======
     // Use passive listeners for better performance
     window.addEventListener('scroll', handleScroll, { passive: true });
     document.addEventListener('click', handleClick, { passive: true });
-    document.addEventListener('keydown', handleKeyDown);
 
     // Initialize basic systems
     analytics.initialize();
     
->>>>>>> f001e418736d617468b45ba940ac3637b9acc1d3
     // Initialize SEO analytics
     seoAnalytics.trackPageView(window.location.pathname);
     
@@ -130,10 +94,9 @@ export default function App(): React.JSX.Element {
     performanceSEO.optimizeImages();
     performanceSEO.preloadCriticalResources();
     performanceSEO.optimizeFonts();
-<<<<<<< HEAD
-    
+    performanceSEO.optimizeCSS();
+
     // Initialize analytics system
-    analytics.initialize();
     analytics.trackPageView();
 
     // Initialize enhanced SEO optimizer
@@ -185,28 +148,7 @@ export default function App(): React.JSX.Element {
     );
 
     // Set default SEO data
-    seoManager.updateSEO(seoData);
-
-    // Use passive listeners for better performance
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    document.addEventListener('click', handleClick, { passive: true });
-  }, [seoData, handleScroll, handleClick, preloadResource]);
-
-  // Main initialization and cleanup effect
-  React.useEffect(() => {
-    // Track engagement on page unload
-    window.addEventListener('beforeunload', trackEngagement);
-=======
-    performanceSEO.optimizeCSS();
-
-    // Set default SEO data using the correct method
     seoManager.updateMetaTags(seoData);
-
-    // Basic performance monitoring
-    if (typeof window !== 'undefined') {
-      console.log('🚀 Zion Tech Group App initialized');
-    }
->>>>>>> f001e418736d617468b45ba940ac3637b9acc1d3
 
     // Mark app as fully initialized
     if (typeof window !== 'undefined' && window.performance && 
@@ -216,30 +158,11 @@ export default function App(): React.JSX.Element {
       performance.measure('app-initialization', 'app-init-start', 'app-init-complete');
     }
 
-    // Set default SEO data
-    seoManager.updateMetaTags(seoData);
-
     // Basic performance monitoring
     if (typeof window !== 'undefined') {
       console.log('🚀 Zion Tech Group App initialized');
     }
-  }, [trackEngagement, seoData]);
-
-  // Cleanup function for event listeners
-  useEffect(() => {
-    return () => {
-<<<<<<< HEAD
-      window.removeEventListener('beforeunload', trackEngagement);
-=======
->>>>>>> f001e418736d617468b45ba940ac3637b9acc1d3
-      window.removeEventListener('scroll', handleScroll);
-      document.removeEventListener('click', handleClick);
-      document.removeEventListener('keydown', handleKeyDown);
-    };
-<<<<<<< HEAD
-  }, [trackEngagement, handleScroll, handleClick]);
-=======
-  }, [handleScroll, handleClick, handleKeyDown, seoData, preloadResource]);
+  }, [seoData, handleScroll, handleClick, preloadResource]);
 
   // Main initialization and cleanup effect
   React.useEffect(() => {
@@ -254,29 +177,23 @@ export default function App(): React.JSX.Element {
       trackEngagement();
     };
   }, [trackEngagement]);
->>>>>>> f001e418736d617468b45ba940ac3637b9acc1d3
+
+  // Cleanup function for event listeners
+  useEffect(() => {
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      document.removeEventListener('click', handleClick);
+    };
+  }, [handleScroll, handleClick]);
 
   // Show loading screen while initializing
   if (isLoading) {
     return (
-<<<<<<< HEAD
       <EnhancedErrorBoundary>
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
           <ModernLoadingSpinner progress={loadingProgress} />
         </div>
       </EnhancedErrorBoundary>
-=======
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100">
-        <ModernLoadingSpinner
-          size="xl"
-          variant="primary"
-          text="Initializing Zion Tech Group..."
-          showProgress
-          progress={loadingProgress}
-          className="animate-fade-in-scale"
-        />
-      </div>
->>>>>>> f001e418736d617468b45ba940ac3637b9acc1d3
     );
   }
 
@@ -284,61 +201,7 @@ export default function App(): React.JSX.Element {
     <EnhancedErrorBoundary>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <AppRouter />
-<<<<<<< HEAD
       </div>
-=======
-        
-        {/* System Dashboard */}
-        {showSystemDashboard && (
-          <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
-            <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
-              <div className="flex justify-between items-center mb-4">
-                <h2 className="text-2xl font-bold text-gray-900">System Dashboard</h2>
-                <button
-                  onClick={() => setShowSystemDashboard(false)}
-                  className="text-gray-500 hover:text-gray-700"
-                >
-                  ✕
-                </button>
-              </div>
-              <EnhancedSystemDashboard />
-            </div>
-          </div>
-        )}
-
-        {/* Performance Optimizer */}
-        {showPerformanceOptimizer && (
-          <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
-            <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
-              <div className="flex justify-between items-center mb-4">
-                <h2 className="text-2xl font-bold text-gray-900">Performance Optimizer</h2>
-                <button
-                  onClick={() => setShowPerformanceOptimizer(false)}
-                  className="text-gray-500 hover:text-gray-700"
-                >
-                  ✕
-                </button>
-              </div>
-              <PerformanceOptimizer />
-            </div>
-          </div>
-        )}
-      </div>
-      
-      <PerformanceDashboard />
-      <RealTimeMonitor />
-      <SystemMetricsDashboard 
-        isVisible={showSystemDashboard}
-        onClose={() => setShowSystemDashboard(false)}
-      />
-      <EnhancedNotificationSystem 
-        position="top-right"
-        enableAnimations
-        enableAccessibility
-        maxNotifications={5}
-      />
-      <EnhancedAnalytics />
->>>>>>> f001e418736d617468b45ba940ac3637b9acc1d3
     </EnhancedErrorBoundary>
   );
 }
