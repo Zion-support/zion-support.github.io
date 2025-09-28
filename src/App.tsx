@@ -401,26 +401,6 @@ export default function App(): React.JSX.Element {
   //   enableCaching: true,
   // });
 
-  // Mock functions for missing dependencies
-  const handleScroll = useCallback(() => {
-    // Mock scroll handler
-  }, []);
-
-  const handleClick = useCallback((event: Event) => {
-    // Mock click handler
-  }, []);
-
-  const trackEngagement = useCallback(() => {
-    // Mock engagement tracking
-  }, []);
-
-  // Mock SEO data
-  const seoDataForOptimizer = useMemo(() => ({
-    title: 'Zion Tech Group - Advanced AI and IT Solutions',
-    description: 'Leading provider of AI and IT solutions',
-    keywords: 'AI, IT Solutions, Technology',
-    canonical: window.location.href
-  }), []);
 
   // Mock enhancements object
   const enhancements = useMemo(() => ({
