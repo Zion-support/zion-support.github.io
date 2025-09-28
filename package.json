@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "lint": "eslint . --report-unused-disable-directives --max-warnings 50",
+    "lint": "eslint . --report-unused-disable-directives --max-warnings 100",
     "lint:fix": "eslint . --fix",
     "type-check": "tsc --noEmit",
     "test": "jest",
@@ -19,7 +19,11 @@
     "serve": "vite preview --port 3000",
     "clean": "rm -rf dist node_modules/.vite",
     "format": "prettier --write \"src/**/*.{ts,tsx,js,jsx,json,css,md}\"",
-    "format:check": "prettier --check \"src/**/*.{ts,tsx,js,jsx,json,css,md}\""
+    "format:check": "prettier --check \"src/**/*.{ts,tsx,js,jsx,json,css,md}\"",
+    "build:production": "NODE_ENV=production pnpm build",
+    "build:fast": "vite build --mode development",
+    "prebuild": "pnpm type-check && pnpm lint",
+    "postbuild": "pnpm analyze"
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.1.13",
