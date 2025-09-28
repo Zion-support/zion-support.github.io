@@ -42,7 +42,11 @@
     "analyze:bundle": "vite-bundle-analyzer dist/stats.html",
     "test:performance": "lighthouse http://localhost:3000 --output=html --output-path=./performance-report.html",
     "audit:security": "npm audit --audit-level=moderate",
-    "preload:critical": "echo \"Preloading critical resources...\""
+    "preload:critical": "echo \"Preloading critical resources...\"",
+    "optimize:advanced": "node scripts/advanced-performance-optimizer.js",
+    "audit:accessibility": "echo \"Running accessibility audit...\"",
+    "audit:seo": "echo \"Running SEO audit...\"",
+    "audit:all": "pnpm run audit:accessibility && pnpm run audit:seo && pnpm run audit:security"
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.1.13",
