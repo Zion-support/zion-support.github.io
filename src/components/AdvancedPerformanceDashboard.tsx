@@ -71,7 +71,6 @@ const AdvancedPerformanceDashboard: React.FC<AdvancedPerformanceDashboardProps> 
       setMetrics(newMetrics);
 
       // Update real-time data
-      const now = new Date();
       const newDataPoint: RealTimeDataPoint = {
         timestamp: Date.now(),
         value: Math.floor(Math.random() * 2000) + 500,
@@ -303,7 +302,7 @@ const AdvancedPerformanceDashboard: React.FC<AdvancedPerformanceDashboardProps> 
                   cy="50%"
                   outerRadius={80}
                   dataKey="value"
-                  label={(entry: any) => `${entry.name}: ${entry.value}`}
+                  label={(entry: { name: string; value: number }) => `${entry.name}: ${entry.value}`}
                 >
                   {pieData.map((entry, index) => (
                     <Cell key={`cell-${index}`} fill={entry.color} />

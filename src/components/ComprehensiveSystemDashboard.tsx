@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, LineChart, Line } from 'recharts';
 // import advancedPerformanceOptimizer from '../utils/advancedPerformanceOptimizer';
 import { enhancedSecurityManager } from '../utils/enhancedSecurityManager';
@@ -58,9 +58,9 @@ const ComprehensiveSystemDashboard: React.FC<SystemDashboardProps> = ({
       const interval = setInterval(loadSystemMetrics, 5000);
       return () => clearInterval(interval);
     }
-  }, [isVisible]);
+  }, [isVisible, loadSystemMetrics]);
 
-  const loadSystemMetrics = async () => {
+  const loadSystemMetrics = useCallback(async () => {
     try {
       setIsLoading(true);
       
@@ -114,7 +114,7 @@ const ComprehensiveSystemDashboard: React.FC<SystemDashboardProps> = ({
     } finally {
       setIsLoading(false);
     }
-  };
+  }, []);
 
   // const exportSystemData = () => {
   //   const data = {
