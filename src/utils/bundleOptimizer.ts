@@ -118,7 +118,7 @@ class BundleOptimizer {
   }
 
   private extractChunkName(src: string): string {
-    const match = src.match(/assets\/js\/([^-\/]+)-/);
+    const match = src.match(/assets\/js\/([^-/]+)-/);
     return match ? match[1] : 'unknown';
   }
 
@@ -347,7 +347,7 @@ class BundleOptimizer {
   public async optimizeBundle(): Promise<void> {
     // This would implement actual optimization strategies
     // For now, just log suggestions
-    const analysis = await this.analyzeBundle();
+    await this.analyzeBundle();
     const criticalSuggestions = this.getCriticalSuggestions();
     
     if (criticalSuggestions.length > 0) {

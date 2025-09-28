@@ -5,7 +5,6 @@ import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import PerformanceTracker from './components/PerformanceTracker';
 import PerformanceMonitor from './components/PerformanceMonitor';
-import EnhancedPerformanceMonitor from './components/EnhancedPerformanceMonitor';
 import PerformanceDashboard from './components/PerformanceDashboard';
 import SEOEnhancer from './components/SEOEnhancer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
@@ -36,7 +35,6 @@ export default function App(): React.JSX.Element {
   const [showSystemHealth, setShowSystemHealth] = useState(false);
   const [showPerformanceWidget, setShowPerformanceWidget] = useState(false);
   const [showCommandPalette, setShowCommandPalette] = useState(false);
-  const [showPerformanceDashboard, setShowPerformanceDashboard] = useState(false);
 
   // Notification management
   const removeNotification = useCallback((id: string) => {
@@ -51,17 +49,17 @@ export default function App(): React.JSX.Element {
     // Track scroll depth for analytics
     const scrollDepth = Math.round((window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100);
     if (scrollDepth > 0 && scrollDepth % 25 === 0) {
-      analytics.track('scroll_depth', { depth: scrollDepth });
+      analytics.trackEvent('scroll_depth', { depth: scrollDepth });
     }
   }, []);
   
   const handleClick = useCallback((event?: Event) => {
     console.debug('Click event captured for engagement tracking', event);
-    analytics.track('user_interaction', { type: 'click', timestamp: Date.now() });
+    analytics.trackEvent('user_interaction', { type: 'click', timestamp: Date.now() });
   }, []);
   
   const originalTrackEngagement = useCallback(() => {
-    analytics.track('user_engagement', { 
+    analytics.trackEvent('user_engagement', { 
       timestamp: Date.now(),
       session_duration: performance.now()
     });
@@ -154,22 +152,22 @@ export default function App(): React.JSX.Element {
     if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'D') {
       event.preventDefault();
       setShowSystemDashboard((prev: boolean) => !prev);
-      analytics.track('keyboard_shortcut', { shortcut: 'cmd+shift+d', action: 'toggle_system_dashboard' });
+      analytics.trackEvent('keyboard_shortcut', { shortcut: 'cmd+shift+d', action: 'toggle_system_dashboard' });
     }
     if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'H') {
       event.preventDefault();
       setShowSystemHealth((prev: boolean) => !prev);
-      analytics.track('keyboard_shortcut', { shortcut: 'cmd+shift+h', action: 'toggle_system_health' });
+      analytics.trackEvent('keyboard_shortcut', { shortcut: 'cmd+shift+h', action: 'toggle_system_health' });
     }
     if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'K') {
       event.preventDefault();
       setShowKeyboardHelp((prev: boolean) => !prev);
-      analytics.track('keyboard_shortcut', { shortcut: 'cmd+shift+k', action: 'toggle_keyboard_help' });
+      analytics.trackEvent('keyboard_shortcut', { shortcut: 'cmd+shift+k', action: 'toggle_keyboard_help' });
     }
     if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'P') {
       event.preventDefault();
       setShowPerformanceWidget((prev: boolean) => !prev);
-      analytics.track('keyboard_shortcut', { shortcut: 'cmd+shift+p', action: 'toggle_performance_widget' });
+      analytics.trackEvent('keyboard_shortcut', { shortcut: 'cmd+shift+p', action: 'toggle_performance_widget' });
     }
     if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'O') {
       event.preventDefault();
@@ -178,7 +176,7 @@ export default function App(): React.JSX.Element {
     if ((event.ctrlKey || event.metaKey) && event.key === 'k') {
       event.preventDefault();
       setShowCommandPalette((prev: boolean) => !prev);
-      analytics.track('keyboard_shortcut', { shortcut: 'cmd+k', action: 'toggle_command_palette' });
+      analytics.trackEvent('keyboard_shortcut', { shortcut: 'cmd+k', action: 'toggle_command_palette' });
     }
     if (event.key === 'Escape') {
       setShowCommandPalette(false);
@@ -186,7 +184,7 @@ export default function App(): React.JSX.Element {
       setShowSystemHealth(false);
       setShowPerformanceWidget(false);
       setShowKeyboardHelp(false);
-      analytics.track('keyboard_shortcut', { shortcut: 'escape', action: 'close_modals' });
+      analytics.trackEvent('keyboard_shortcut', { shortcut: 'escape', action: 'close_modals' });
     }
   }, []);
 

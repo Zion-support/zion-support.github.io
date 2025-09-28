@@ -96,8 +96,9 @@ class PerformanceOptimizer {
     const clsObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
-        if (!(entry as any).hadRecentInput) {
-          clsValue += (entry as any).value;
+        const layoutShiftEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
+        if (!layoutShiftEntry.hadRecentInput && layoutShiftEntry.value) {
+          clsValue += layoutShiftEntry.value;
         }
       });
       this.metrics.cls = clsValue;
@@ -110,7 +111,7 @@ class PerformanceOptimizer {
 
   private observeMemoryUsage(): void {
     if ('memory' in performance) {
-      const memory = (performance as any).memory;
+      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory;
       this.metrics.memory = memory.usedJSHeapSize / 1024 / 1024; // Convert to MB
       this.analyzeMetric('memory', this.metrics.memory);
     }
@@ -133,7 +134,7 @@ class PerformanceOptimizer {
 
   private observeNetworkPerformance(): void {
     if ('connection' in navigator) {
-      const connection = (navigator as any).connection;
+      const connection = (navigator as Navigator & { connection?: { effectiveType?: string } }).connection;
       this.metrics.connection = connection.effectiveType || 'unknown';
     }
 
@@ -296,7 +297,7 @@ class PerformanceOptimizer {
 
     // Send to analytics in production
     if (process.env.NODE_ENV === 'production' && 'gtag' in window) {
-      (window as any).gtag?.('event', 'performance_optimization', {
+      (window as Window & { gtag?: (...args: unknown[]) => void }).gtag?.('event', 'performance_optimization', {
         suggestion_type: suggestion.type,
         category: suggestion.category,
         impact: suggestion.impact,
