@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, LineChart, Line, PieChart, Pie, Cell, AreaChart, Area } from 'recharts';
-import { advancedPerformanceOptimizer } from '../utils/advancedPerformanceOptimizer';
+import { performanceOptimizer } from '../utils/performanceOptimizer';
 import { enhancedSecurityManager } from '../utils/enhancedSecurityManager';
 import { enhancedPerformanceMonitor } from '../utils/enhancedPerformanceMonitor';
 import { enhancedAnalytics } from '../utils/enhancedAnalytics';
@@ -54,7 +54,7 @@ const ComprehensiveSystemDashboard: React.FC<SystemDashboardProps> = ({
     setIsLoading(true);
     try {
       await Promise.all([
-        advancedPerformanceOptimizer.initialize(),
+        performanceOptimizer.initialize(),
         enhancedSecurityManager.initialize(),
         enhancedPerformanceMonitor.initialize(),
         enhancedAnalytics.initialize()
@@ -70,8 +70,8 @@ const ComprehensiveSystemDashboard: React.FC<SystemDashboardProps> = ({
   };
 
   const collectSystemMetrics = async (): Promise<SystemMetrics> => {
-    const perfScore = advancedPerformanceOptimizer.getPerformanceScore();
-    const perfReport = advancedPerformanceOptimizer.getOptimizationReport();
+    const perfScore = performanceOptimizer.getPerformanceScore();
+    const perfReport = performanceOptimizer.getOptimizationReport();
     
     const securityReport = enhancedSecurityManager.getSecurityReport();
     const securityScore = enhancedSecurityManager.getSecurityScore();

@@ -36,7 +36,7 @@ import { performanceAlerts } from './utils/performanceAlerts';
 // import { errorRecovery } from './utils/errorRecovery';
 import { accessibilityUtils } from './utils/accessibilityUtils';
 import { securityUtils } from './utils/securityUtils';
-import { advancedPerformanceOptimizer } from './utils/advancedPerformanceOptimizer';
+import { performanceOptimizer } from './utils/performanceOptimizer';
 import { enhancedSecurityManager } from './utils/enhancedSecurityManager';
 import './index.css';
 
@@ -75,13 +75,8 @@ export default function App(): React.JSX.Element {
     enableAccessibility: true
   });
 
-<<<<<<< HEAD
-=======
   // Get current pathname for SEO
   const currentPathname = typeof window !== 'undefined' ? window.location.pathname : '/';
-
-  // Get SEO data using current pathname
-  const seoData = useSEOData(currentPathname);
 
   // Command palette commands
   const commands = useMemo(() => [
@@ -161,7 +156,6 @@ export default function App(): React.JSX.Element {
     }
   ], []);
 
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-eae1
   // Optimized keyboard handler for system dashboard toggle
   const handleKeyDown = useCallback((event: KeyboardEvent) => {
     if (event.ctrlKey && event.shiftKey) {
@@ -182,11 +176,6 @@ export default function App(): React.JSX.Element {
           event.preventDefault();
           setShowAIDashboard(prev => !prev);
           break;
-<<<<<<< HEAD
-        case 'R':
-          event.preventDefault();
-          setShowRealTimeMetrics(prev => !prev);
-=======
         case 'V':
           setShowAdvancedPerformanceDashboard(prev => !prev);
           break;
@@ -198,15 +187,10 @@ export default function App(): React.JSX.Element {
           break;
         case 'H':
           setShowKeyboardHelp(prev => !prev);
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-eae1
           break;
         case 'S':
           event.preventDefault();
           setShowSEOOptimizer(prev => !prev);
-          break;
-        case 'H':
-          event.preventDefault();
-          // Toggle help modal
           break;
       }
     }
@@ -258,7 +242,7 @@ export default function App(): React.JSX.Element {
       advancedCacheSystem.initialize();
       
       // Initialize new advanced systems
-      advancedPerformanceOptimizer.initialize();
+      performanceOptimizer.initialize();
       enhancedSecurityManager.initialize();
       new AdvancedAutomationSystem().initialize();
       // Initialize enhancement systems
@@ -454,8 +438,6 @@ export default function App(): React.JSX.Element {
           onClose={() => setShowAIDashboard(false)}
         />
 
-<<<<<<< HEAD
-=======
         {/* Advanced Performance Dashboard - Toggle with Ctrl+Shift+P */}
         <AdvancedPerformanceDashboard
           isVisible={showAdvancedPerformanceDashboard}
@@ -501,7 +483,6 @@ export default function App(): React.JSX.Element {
           </div>
         )}
 
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-eae1
         {/* Real-Time Performance Monitor */}
         {showRealTimeMetrics && (
           <RealTimePerformanceMonitor
@@ -535,13 +516,12 @@ export default function App(): React.JSX.Element {
           onClose={() => {}}
         />
 
-<<<<<<< HEAD
         {/* SEO Optimizer */}
         <SEOOptimizer seoData={seoData} />
         
         {/* Enhanced Analytics */}
         <EnhancedAnalytics />
-=======
+
         {/* Keyboard Shortcuts Help Button */}
         <button
           onClick={() => setShowKeyboardHelp(true)}
@@ -594,7 +574,6 @@ export default function App(): React.JSX.Element {
           <div>Ctrl+K: Command Palette</div>
           <div>Escape: Close All</div>
         </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-eae1
       </div>
     </EnhancedErrorBoundary>
   );

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, LineChart, Line, PieChart, Pie, Cell } from 'recharts';
-import { advancedPerformanceOptimizer } from '../utils/advancedPerformanceOptimizer';
+import { performanceOptimizer } from '../utils/performanceOptimizer';
 
 interface PerformanceMetrics {
   lcp: number;
@@ -28,12 +28,6 @@ const AdvancedPerformanceDashboard: React.FC<PerformanceDashboardProps> = ({
   isVisible,
   onClose
 }) => {
-<<<<<<< HEAD
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-  const [strategies, setStrategies] = useState<OptimizationStrategy[]>([]);
-  const [performanceScore, setPerformanceScore] = useState(0);
-  const [realTimeData, setRealTimeData] = useState<any[]>([]);
-=======
   const [metrics, setMetrics] = useState({
     buildScore: 0,
     accessibilityScore: 0,
@@ -116,7 +110,6 @@ const AdvancedPerformanceDashboard: React.FC<PerformanceDashboardProps> = ({
 
     setOptimizationSuggestions(suggestions);
   }, [metrics]);
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-7cb6
 
   useEffect(() => {
     if (isVisible) {
@@ -127,9 +120,9 @@ const AdvancedPerformanceDashboard: React.FC<PerformanceDashboardProps> = ({
 
   const initializeDashboard = async () => {
     try {
-      await advancedPerformanceOptimizer.initialize();
-      const report = advancedPerformanceOptimizer.getOptimizationReport();
-      const score = advancedPerformanceOptimizer.getPerformanceScore();
+      await performanceOptimizer.initialize();
+      const report = performanceOptimizer.getOptimizationReport();
+      const score = performanceOptimizer.getPerformanceScore();
       
       setMetrics(report.metrics);
       setStrategies(report.strategies.map(s => ({ ...s, applied: true })));
