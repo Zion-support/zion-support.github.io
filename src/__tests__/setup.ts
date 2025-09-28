@@ -6,6 +6,7 @@ global.fetch = jest.fn();
 
 // Mock window.location to prevent navigation errors
 // Create mock location object
+<<<<<<< HEAD
 // const mockLocation = {
 //   pathname: '/',
 //   href: 'http://localhost:3000/',
@@ -23,7 +24,7 @@ global.fetch = jest.fn();
 // } as Location;
 
 // Mock window.location using a simple assignment
-const mockLocationInstance = {
+const mockLocation = {
   pathname: '/',
   href: 'http://localhost:3000/',
   assign: jest.fn(),
@@ -36,11 +37,11 @@ const mockLocationInstance = {
   port: '3000',
   protocol: 'http:',
   origin: 'http://localhost:3000',
-  ancestorOrigins: [] as any,
+  ancestorOrigins: [] as unknown[],
 } as Location;
 
 delete (window as unknown as { location?: Partial<Location> }).location;
-(window as unknown as { location: Partial<Location> }).location = mockLocationInstance;
+(window as unknown as { location: Partial<Location> }).location = mockLocation;
 // Mock window.history
 Object.defineProperty(window, 'history', {
   value: {

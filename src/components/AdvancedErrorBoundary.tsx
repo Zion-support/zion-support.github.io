@@ -154,9 +154,9 @@ Please describe what you were doing when this error occurred:
   render(): ReactNode {
     if (this.state.hasError) {
       const canRetry = this.retryCount < this.maxRetries;
-      const timeSinceError = this.state.lastErrorTime 
-        ? Date.now() - this.state.lastErrorTime.getTime()
-        : 0;
+      // const timeSinceError = this.state.lastErrorTime 
+      //   ? Date.now() - this.state.lastErrorTime.getTime()
+      //   : 0;
 
       return (
         <div className="error-boundary">
