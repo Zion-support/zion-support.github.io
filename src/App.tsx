@@ -213,7 +213,10 @@ export default function App(): React.JSX.Element {
       enhancedPerformanceMonitor.startMonitoring();
       
       // Initialize new advanced systems
-      // performanceOptimizer is already initialized as a singleton
+      if ('initialize' in performanceOptimizer) {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        (performanceOptimizer as any).initialize();
+      }
       enhancedSecurityManager.initialize();
       new AdvancedAutomationSystem().initialize();
       // Initialize enhancement systems
@@ -257,8 +260,8 @@ export default function App(): React.JSX.Element {
     securityUtils.getSecurityScore();
 
     // Set default SEO data using the correct method
-    seoManager.updateMetaTags(seoData);
-  }, [seoData]);
+    seoManager.updateMetaTags(memoizedSeoData);
+  }, [memoizedSeoData]);
 
   // Update meta tags function
   const updateMetaTags = useCallback((data: typeof memoizedSeoData) => {
