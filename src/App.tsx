@@ -39,6 +39,7 @@ export default function App(): React.JSX.Element {
     scrollDepth: 0,
     clicks: 0
   }), []);
+
   // Initialize app with custom configuration
   const { isLoading, loadingProgress, handleScroll, handleClick, trackEngagement } = useAppInitialization({
     enablePerformanceMonitoring: true,
@@ -103,10 +104,7 @@ export default function App(): React.JSX.Element {
       setShowPerformanceOptimizer(prev => !prev);
     }
   }, []);
-<<<<<<< HEAD
-=======
 
->>>>>>> 054fcbbc76da5d048d426fc47efa18f1beaac27d
   // Memoize the SEO data to prevent unnecessary re-renders
   const seoData = useMemo(() => ({
     title: 'Zion Tech Group - Leading AI & Technology Solutions',
@@ -131,10 +129,7 @@ export default function App(): React.JSX.Element {
       }
     }
   };
-<<<<<<< HEAD
 
-=======
->>>>>>> 054fcbbc76da5d048d426fc47efa18f1beaac27d
   useEffect(() => {
     // Add performance marks for better monitoring
     if (typeof window !== 'undefined' && window.performance && typeof performance.mark === 'function') {
@@ -152,6 +147,7 @@ export default function App(): React.JSX.Element {
 
     // Initialize basic systems
     analytics.initialize();
+    analytics.trackPageView();
     
     // Initialize SEO analytics
     seoAnalytics.trackPageView(window.location.pathname);
@@ -160,13 +156,6 @@ export default function App(): React.JSX.Element {
     performanceSEO.optimizeImages();
     performanceSEO.preloadCriticalResources();
     performanceSEO.optimizeFonts();
-<<<<<<< HEAD
-=======
-    
-    // Initialize analytics system
-    analytics.initialize();
-    analytics.trackPageView();
->>>>>>> 054fcbbc76da5d048d426fc47efa18f1beaac27d
 
     // Initialize enhanced SEO optimizer
     seoOptimizer.updatePageSEO({
@@ -217,20 +206,8 @@ export default function App(): React.JSX.Element {
     );
 
     // Set default SEO data using the correct method
-<<<<<<< HEAD
     seoManagerInstance.updateMetaTags(seoData);
   }, [seoData, handleScroll, handleClick, handleKeyDown, preloadResource]);
-=======
-    seoManager.updateMetaTags(seoData);
-    
-    // Add keyboard event listener
-    document.addEventListener('keydown', handleKeyDown);
-
-    // Use passive listeners for better performance
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    document.addEventListener('click', handleClick, { passive: true });
-  }, [handleClick, handleKeyDown, handleScroll, seoData, preloadResource, seoManager]);
->>>>>>> 054fcbbc76da5d048d426fc47efa18f1beaac27d
 
   // Main initialization and cleanup effect
   React.useEffect(() => {
@@ -249,21 +226,12 @@ export default function App(): React.JSX.Element {
     if (typeof window !== 'undefined') {
       console.log('🚀 Zion Tech Group App initialized');
     }
-<<<<<<< HEAD
 
     // Cleanup function
-=======
-  }, [trackEngagement]);
-
-  // Cleanup function for event listeners
-  useEffect(() => {
->>>>>>> 054fcbbc76da5d048d426fc47efa18f1beaac27d
     return () => {
       document.removeEventListener('keydown', handleKeyDown);
       window.removeEventListener('beforeunload', trackEngagement);
       
-<<<<<<< HEAD
-=======
       // Cleanup new utilities
       const advancedPerformanceMonitor = AdvancedPerformanceMonitor.getInstance();
       advancedPerformanceMonitor.stopMonitoring();
@@ -285,31 +253,20 @@ export default function App(): React.JSX.Element {
       // Final engagement tracking
       trackEngagement();
       
->>>>>>> 054fcbbc76da5d048d426fc47efa18f1beaac27d
       // Remove event listeners
       window.removeEventListener('scroll', handleScroll);
       document.removeEventListener('click', handleClick);
     };
-<<<<<<< HEAD
   }, [trackEngagement, handleKeyDown, handleScroll, handleClick]);
-=======
-  }, [seoData, handleKeyDown, handleScroll, handleClick, trackEngagement]);
->>>>>>> 054fcbbc76da5d048d426fc47efa18f1beaac27d
 
   // Show loading screen while initializing
   if (isLoading) {
     return (
-<<<<<<< HEAD
       <EnhancedErrorBoundary>
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
           <ModernLoadingSpinner progress={loadingProgress} />
         </div>
       </EnhancedErrorBoundary>
-=======
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-        <ModernLoadingSpinner progress={loadingProgress} />
-      </div>
->>>>>>> 054fcbbc76da5d048d426fc47efa18f1beaac27d
     );
   }
 
@@ -318,8 +275,7 @@ export default function App(): React.JSX.Element {
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <AppRouter />
         
-<<<<<<< HEAD
-        {/* System Dashboard */}
+        {/* System Dashboard - Toggle with Ctrl+Shift+D */}
         {showSystemDashboard && (
           <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
             <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
@@ -337,7 +293,7 @@ export default function App(): React.JSX.Element {
           </div>
         )}
 
-        {/* Performance Optimizer */}
+        {/* Performance Optimizer - Toggle with Ctrl+Shift+P */}
         {showPerformanceOptimizer && (
           <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
             <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
@@ -353,20 +309,6 @@ export default function App(): React.JSX.Element {
               <PerformanceOptimizer />
             </div>
           </div>
-=======
-        {/* System Dashboard - Toggle with Ctrl+Shift+D */}
-        {showSystemDashboard && (
-          <EnhancedSystemDashboard
-            onClose={() => setShowSystemDashboard(false)}
-          />
-        )}
-        
-        {/* Performance Optimizer - Toggle with Ctrl+Shift+P */}
-        {showPerformanceOptimizer && (
-          <PerformanceOptimizer
-            onClose={() => setShowPerformanceOptimizer(false)}
-          />
->>>>>>> 054fcbbc76da5d048d426fc47efa18f1beaac27d
         )}
       </div>
     </EnhancedErrorBoundary>
