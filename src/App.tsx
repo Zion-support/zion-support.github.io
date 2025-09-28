@@ -30,13 +30,14 @@ export default function App(): React.JSX.Element {
   const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
   const [showAIDashboard, setShowAIDashboard] = useState(false);
   const [showSEOOptimizer, setShowSEOOptimizer] = useState(false);
-  const [isDarkMode, setIsDarkMode] = useState(false);
-  const [userPreferences, setUserPreferences] = useState({
-    theme: 'auto',
-    animations: true,
-    notifications: true,
-    analytics: true
-  });
+  // Removed unused state variables to fix linting warnings
+  // const [isDarkMode, setIsDarkMode] = useState(false);
+  // const [userPreferences, setUserPreferences] = useState({
+  //   theme: 'auto',
+  //   animations: true,
+  //   notifications: true,
+  //   analytics: true
+  // });
 
   // Engagement tracking data
   const engagementData = useMemo(() => ({
