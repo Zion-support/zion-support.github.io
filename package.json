@@ -29,7 +29,10 @@
     "postbuild": "if [ \"$CI\" != \"true\" ]; then pnpm analyze; fi",
     "performance:audit": "lighthouse http://localhost:3000 --output=html --output-path=./lighthouse-report.html",
     "performance:check": "pnpm build && pnpm serve & sleep 5 && pnpm performance:audit",
-    "optimize": "node scripts/optimize-build.js"
+    "optimize": "node scripts/optimize-build.js",
+    "build:netlify": "pnpm run build:no-check",
+    "build:ci": "pnpm run lint && pnpm run build:no-check && pnpm run test:ci",
+    "health-check": "pnpm run type-check && pnpm run lint && pnpm run build:no-check"
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.1.13",

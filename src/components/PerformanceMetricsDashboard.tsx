@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { performanceMetrics, PerformanceMetric, PerformanceReport } from '../utils/performanceMetrics';
+import { performanceMetrics, PerformanceReport } from '../utils/performanceMetrics';
 import { analyzeSEO, SEOAnalysis } from '../utils/seoOptimizer';
 import { analyzeAccessibility, AccessibilityReport } from '../utils/accessibilityEnhancer';
 
@@ -79,7 +79,7 @@ const PerformanceMetricsDashboard: React.FC<PerformanceMetricsDashboardProps> = 
           ].map((tab) => (
             <button
               key={tab.id}
-              onClick={() => setActiveTab(tab.id as any)}
+              onClick={() => setActiveTab(tab.id as 'overview' | 'performance' | 'security' | 'analytics')}
               className={`flex items-center px-6 py-3 text-sm font-medium ${
                 activeTab === tab.id
                   ? 'text-blue-600 border-b-2 border-blue-600'

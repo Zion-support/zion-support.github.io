@@ -3,77 +3,46 @@ import { AppRouter } from './router';
 import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import PerformanceTracker from './components/PerformanceTracker';
-import { seoAnalytics, performanceSEO, seoManager } from './utils/seoEnhanced';
+import { seoAnalytics, performanceSEO } from './utils/seoEnhanced';
 import { analytics } from './utils/analytics';
-import { performanceOptimizer } from './utils/performanceOptimizations';
-import { accessibilityEnhancer } from './utils/advancedAccessibilityEnhancer';
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
-import { useAppInitialization } from './hooks/useAppInitialization';
 import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
-import PerformanceOptimizer from './components/PerformanceOptimizer';
-import PerformanceMonitor from './components/PerformanceMonitor';
-import AIPerformanceDashboard from './components/AIPerformanceDashboard';
-import WebsiteEnhancements from './components/WebsiteEnhancements';
-import SEOOptimizer from './components/SEOOptimizer';
-import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
 import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
-import { performanceAlerts } from './utils/performanceAlerts';
-import { accessibilityUtils } from './utils/accessibilityUtils';
-import { securityUtils } from './utils/securityUtils';
-import { enhancedSecurityManager } from './utils/enhancedSecurityManager';
-import { initializePerformanceEnhancements } from './utils/performanceEnhancements';
-import { initializeAccessibilityEnhancements } from './utils/accessibilityEnhancements';
-import AdvancedAnalytics from './components/AdvancedAnalytics';
 import NotificationSystem, { Notification } from './components/NotificationSystem';
 import KeyboardShortcutsHelp from './components/KeyboardShortcutsHelp';
-import CommandPalette from './components/CommandPalette';
-import RealTimePerformanceMonitor from './components/RealTimePerformanceMonitor';
 import SystemHealthDashboard from './components/SystemHealthDashboard';
-import PerformanceMetricsDashboard from './components/PerformanceMetricsDashboard';
 import './index.css';
 
 export default function App(): React.JSX.Element {
-  // State for system dashboard and performance optimizer
+  // State for system dashboard
   const [showSystemDashboard, setShowSystemDashboard] = useState(false);
-  const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
-  const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
-  const [showAIDashboard, setShowAIDashboard] = useState(false);
-  const [showSEOOptimizer, setShowSEOOptimizer] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [showKeyboardHelp, setShowKeyboardHelp] = useState(false);
-  const [showCommandPalette, setShowCommandPalette] = useState(false);
-  const [showRealTimeMetrics, setShowRealTimeMetrics] = useState(false);
   const [notifications, setNotifications] = useState<Notification[]>([]);
-  const [showWebsiteEnhancements, setShowWebsiteEnhancements] = useState(false);
-  const [showAccessibilityPanel] = useState(false);
-  const [showPerformanceMetrics, setShowPerformanceMetrics] = useState(false);
-  const [showRealTimeMonitor, setShowRealTimeMonitor] = useState(false);
   const [showSystemHealth, setShowSystemHealth] = useState(false);
 
-  // Initialize app with custom configuration
-  const { isLoading, loadingProgress, handleScroll, handleClick, trackEngagement: originalTrackEngagement } = useAppInitialization({
-    enablePerformanceMonitoring: true,
-    enableAccessibility: true,
-    enableSecurity: true,
-    enableAnalytics: true,
-    enableNotifications: true,
-    enableCaching: true,
-  });
+  // Temporary placeholders
+  const isLoading = false;
+  const loadingProgress = 100;
+  const handleScroll = useCallback(() => {}, []);
+  const handleClick = useCallback((event?: Event) => {
+    console.debug('Click event captured for engagement tracking', event);
+  }, []);
+  const originalTrackEngagement = useCallback(() => {}, []);
 
-  // Get current pathname for SEO
+  // Get current pathname for SEO (used in seoData)
   const currentPathname = typeof window !== 'undefined' ? window.location.pathname : '/';
   
-  // Simple SEO data
+  // SEO data
   const seoData = useMemo(() => ({
     title: 'Zion Tech Group - Leading AI & Technology Solutions',
     description: 'Cutting-edge AI, quantum computing, and digital transformation solutions for modern enterprises. Expert consulting, cloud services, and innovative technology implementations.',
-    keywords: ['AI solutions', 'quantum computing', 'digital transformation', 'cloud services', 'enterprise technology'],
+    keywords: 'AI solutions, quantum computing, digital transformation, cloud services, enterprise technology',
     canonicalUrl: `https://zion.app${currentPathname}`,
-    ogImage: 'https://zion.app/og-image.jpg',
-    ogUrl: `https://zion.app${currentPathname}`,
     ogType: 'website' as const,
-    twitterCard: 'summary_large_image' as const,
-    siteName: 'Zion Tech Group'
+    ogUrl: `https://zion.app${currentPathname}`,
+    ogImage: '/og-image.png',
+    twitterCard: 'summary_large_image' as const
   }), [currentPathname]);
 
   // Performance optimization hook
@@ -82,6 +51,32 @@ export default function App(): React.JSX.Element {
     enableResourceHints: true,
     enableImageOptimization: true,
   });
+
+  // Initialize comprehensive enhancements
+  useEffect(() => {
+    try {
+      // Initialize enhanced systems
+      enhancedPerformanceMonitor.startMonitoring();
+    } catch (error) {
+      console.error('Error initializing enhancements:', error);
+    }
+  }, []);
+
+  // Optimized keyboard handler for system dashboard toggle
+  const handleKeyDown = useCallback((event: KeyboardEvent) => {
+    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'D') {
+      event.preventDefault();
+      setShowSystemDashboard((prev: boolean) => !prev);
+    }
+    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'H') {
+      event.preventDefault();
+      setShowSystemHealth((prev: boolean) => !prev);
+    }
+    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'K') {
+      event.preventDefault();
+      setShowKeyboardHelp((prev: boolean) => !prev);
+    }
+  }, []);
 
   // Engagement tracking data
   const engagementData = useMemo(() => ({
@@ -153,18 +148,11 @@ export default function App(): React.JSX.Element {
   // Enhanced track engagement function
   const trackEngagement = useCallback(() => {
     try {
-      const timeOnPage = Date.now() - engagementData.startTime;
-      seoAnalytics.trackUserEngagement(window.location.pathname, {
-        timeOnPage,
-        scrollDepth: engagementData.scrollDepth,
-        clicks: engagementData.clicks,
-      });
-      // Also call the original trackEngagement from useAppInitialization
       originalTrackEngagement();
     } catch (error) {
       console.error('Error tracking engagement:', error);
     }
-  }, [engagementData.clicks, engagementData.scrollDepth, engagementData.startTime, originalTrackEngagement]);
+  }, [originalTrackEngagement]);
 
   // Simple SEO manager
   const seoManagerInstance = useMemo(() => ({
@@ -183,51 +171,7 @@ export default function App(): React.JSX.Element {
     }
   }), []);
 
-  // Initialize comprehensive enhancements
-  useEffect(() => {
-    try {
-      // Initialize enhanced systems
-      enhancedPerformanceMonitor.startMonitoring();
-      analytics.initialize();
-      
-      // Initialize accessibility and security enhancers
-      if (accessibilityEnhancer && typeof accessibilityEnhancer.initialize === 'function') {
-        accessibilityEnhancer.initialize();
-      }
-      if (enhancedSecurityManager && typeof enhancedSecurityManager.initialize === 'function') {
-        enhancedSecurityManager.initialize();
-      }
-      
-      // Initialize new performance and accessibility enhancements
-      initializePerformanceEnhancements();
-      initializeAccessibilityEnhancements();
-      
-      // Get comprehensive enhancements
-      const enhancements = getComprehensiveEnhancements();
-
-      // Store enhancements globally for debugging
-      (window as unknown as Record<string, unknown>).enhancements = enhancements;
-    } catch (error) {
-      console.error('Error initializing enhancements:', error);
-    }
-  }, []);
-
-  // Optimized keyboard handler for system dashboard toggle
-  const handleKeyDown = useCallback((event: KeyboardEvent) => {
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'D') {
-      event.preventDefault();
-      setShowSystemDashboard((prev: boolean) => !prev);
-    }
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'P') {
-      event.preventDefault();
-      setShowPerformanceOptimizer((prev: boolean) => !prev);
-    }
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'M') {
-      event.preventDefault();
-      setShowPerformanceMonitor(prev => !prev);
-    }
-  }, []);
-
+  // Main initialization effect
   useEffect(() => {
     try {
       // Add performance marks for better monitoring
@@ -280,7 +224,7 @@ export default function App(): React.JSX.Element {
   }, [seoData, handleScroll, handleClick, handleKeyDown, preloadResource, seoManagerInstance]);
 
   // Main initialization and cleanup effect
-  React.useEffect(() => {
+  useEffect(() => {
     try {
       // Mark app as fully initialized
       if (typeof window !== 'undefined' && window.performance && 
@@ -319,103 +263,30 @@ export default function App(): React.JSX.Element {
     }
   }, [trackEngagement, handleKeyDown, handleScroll, handleClick]);
 
-  // Enhanced keyboard shortcuts
-  useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {
-      // Dashboard shortcuts
-      if (event.ctrlKey && event.shiftKey) {
-        event.preventDefault();
-        switch (event.key) {
-          case 'D':
-            setShowSystemDashboard(!showSystemDashboard);
-            break;
-          case 'P':
-            setShowPerformanceOptimizer(!showPerformanceOptimizer);
-            break;
-          case 'M':
-            setShowPerformanceMonitor(!showPerformanceMonitor);
-            break;
-          case 'A':
-            setShowAIDashboard(!showAIDashboard);
-            break;
-          case 'S':
-            setShowSEOOptimizer(!showSEOOptimizer);
-            break;
-          case 'T':
-            setIsDarkMode(!isDarkMode);
-            break;
-          case 'R':
-            setShowRealTimeMonitor(!showRealTimeMonitor);
-            break;
-          case 'H':
-            setShowSystemHealth(!showSystemHealth);
-            break;
-          case 'K':
-            setShowKeyboardHelp(!showKeyboardHelp);
-            break;
-          case 'X':
-            setShowPerformanceMetrics(!showPerformanceMetrics);
-            break;
-          case 'N':
-            // Show notification
-            if ((window as any).notifications) {
-              (window as any).notifications.add({
-                type: 'info',
-                title: 'Notification Test',
-                message: 'This is a test notification!',
-                duration: 3000
-              });
-            }
-            break;
-          case 'C':
-            // Clear notifications
-            if ((window as any).notifications) {
-              (window as any).notifications.clear();
-            }
-            break;
-        }
-      }
-      
-      // Command palette shortcut
-      if (event.ctrlKey && event.key === 'k') {
-        event.preventDefault();
-        setShowCommandPalette(!showCommandPalette);
-      }
-      
-      // Help shortcut
-      if (event.ctrlKey && event.key === '/') {
-        event.preventDefault();
-        setShowKeyboardHelp(!showKeyboardHelp);
-      }
-      
-      // Escape to close all modals
-      if (event.key === 'Escape') {
-        setShowSystemDashboard(false);
-        setShowPerformanceOptimizer(false);
-        setShowPerformanceMonitor(false);
-        setShowAIDashboard(false);
-        setShowSEOOptimizer(false);
-        setShowKeyboardHelp(false);
-        setShowCommandPalette(false);
-        setShowRealTimeMonitor(false);
-        setShowSystemHealth(false);
-      }
-    };
-
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
-  }, [showSystemDashboard, showPerformanceOptimizer, showPerformanceMonitor, showAIDashboard, showSEOOptimizer, isDarkMode, showKeyboardHelp, showCommandPalette, showRealTimeMonitor, showSystemHealth, showPerformanceMetrics]);
-
   // Track engagement on scroll and click
   useEffect(() => {
     const handleScrollWithEngagement = () => {
       handleScroll();
-      trackEngagement();
+      // Track engagement without calling hooks inside callback
+      try {
+        const timeOnPage = Date.now() - engagementData.startTime;
+        // Simple engagement tracking without hooks
+        console.debug('Scroll engagement tracked', { timeOnPage });
+      } catch (error) {
+        console.error('Error tracking scroll engagement:', error);
+      }
     };
 
-    const handleClickWithEngagement = (_event: Event) => {
-      handleClick(new Event('click'));
-      trackEngagement();
+    const handleClickWithEngagement = () => {
+      handleClick();
+      // Track engagement without calling hooks inside callback
+      try {
+        const timeOnPage = Date.now() - engagementData.startTime;
+        // Simple engagement tracking without hooks
+        console.debug('Click engagement tracked', { timeOnPage });
+      } catch (error) {
+        console.error('Error tracking click engagement:', error);
+      }
     };
 
     window.addEventListener('scroll', handleScrollWithEngagement, { passive: true });
@@ -425,7 +296,7 @@ export default function App(): React.JSX.Element {
       window.removeEventListener('scroll', handleScrollWithEngagement);
       document.removeEventListener('click', handleClickWithEngagement);
     };
-  }, [handleScroll, handleClick, trackEngagement]);
+  }, [handleScroll, handleClick, engagementData.startTime]);
 
   if (isLoading) {
     return <ModernLoadingSpinner progress={loadingProgress} />;
@@ -433,14 +304,6 @@ export default function App(): React.JSX.Element {
 
   return (
     <EnhancedErrorBoundary>
-      <SEOOptimizer seoData={seoData} />
-      <AdvancedAnalytics 
-        enableHeatmaps={true}
-        enableUserJourney={true}
-        enableConversionTracking={true}
-        enablePerformanceTracking={true}
-        enableErrorTracking={true}
-      />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <AppRouter />
         
@@ -467,155 +330,13 @@ export default function App(): React.JSX.Element {
           </div>
         )}
 
-        {/* Performance Optimizer - Toggle with Ctrl+Shift+P */}
-        {showPerformanceOptimizer && (
-          <div 
-            className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center"
-            role="dialog"
-            aria-modal="true"
-            aria-labelledby="performance-optimizer-title"
-          >
-            <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
-              <div className="flex justify-between items-center mb-4">
-                <h2 className="text-2xl font-bold">Performance Optimizer</h2>
-                <button
-                  onClick={() => setShowPerformanceOptimizer(false)}
-                  className="text-gray-500 hover:text-gray-700 text-2xl"
-                >
-                  ✕
-                </button>
-              </div>
-              <PerformanceOptimizer />
-            </div>
-          </div>
-        )}
-
-        {/* Performance Monitor - Toggle with Ctrl+Shift+M */}
-        {showPerformanceMonitor && (
-          <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
-            <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
-              <div className="flex justify-between items-center mb-4">
-                <h2 className="text-2xl font-bold">Performance Monitor</h2>
-                <button
-                  onClick={() => setShowPerformanceMonitor(false)}
-                  className="text-gray-500 hover:text-gray-700 text-2xl"
-                >
-                  ✕
-                </button>
-              </div>
-              <PerformanceMonitor showDashboard={true} />
-            </div>
-          </div>
-        )}
-
-        {/* AI Performance Dashboard */}
-        <AIPerformanceDashboard
-          isVisible={showAIDashboard}
-          onClose={() => setShowAIDashboard(false)}
-        />
-
-        {/* Real-time Metrics */}
-        {showRealTimeMetrics && (
-          <div 
-            className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center"
-            role="dialog"
-            aria-modal="true"
-            aria-labelledby="real-time-metrics-title"
-            onClick={(e) => e.target === e.currentTarget && setShowRealTimeMetrics(false)}
-          >
-            <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
-              <div className="flex justify-between items-center mb-4">
-                <h2 id="real-time-metrics-title" className="text-2xl font-bold">Real-time Metrics</h2>
-                <button
-                  onClick={() => setShowRealTimeMetrics(false)}
-                  className="text-gray-500 hover:text-gray-700 text-2xl"
-                >
-                  ✕
-                </button>
-              </div>
-              <div className="space-y-4">
-                <p>Real-time performance metrics will be displayed here.</p>
-              </div>
-            </div>
-          </div>
-        )}
-
-        {/* SEO Optimizer - Toggle with Ctrl+Shift+S */}
-        {showSEOOptimizer && (
-          <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
-            <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
-              <div className="flex justify-between items-center mb-4">
-                <h2 className="text-2xl font-bold">SEO Optimizer</h2>
-                <button
-                  onClick={() => setShowSEOOptimizer(false)}
-                  className="text-gray-500 hover:text-gray-700 text-2xl"
-                >
-                  ✕
-                </button>
-              </div>
-              <SEOOptimizer seoData={seoData} />
-            </div>
-          </div>
-        )}
-
-        {/* Real-time Metrics Display */}
-        {showRealTimeMetrics && (
-          <div className="fixed top-4 right-4 z-50 bg-black bg-opacity-90 text-white p-4 rounded-lg shadow-lg min-w-[300px]">
-            <div className="flex justify-between items-center mb-3">
-              <h3 className="text-lg font-bold">Real-time Metrics</h3>
-              <button
-                onClick={() => setShowRealTimeMetrics(false)}
-                className="text-gray-300 hover:text-white text-xl"
-              >
-                ✕
-              </button>
-            </div>
-            <div className="space-y-2 text-sm">
-              <div className="flex justify-between">
-                <span>Memory Usage:</span>
-                <span className="text-green-400">{Math.round(((performance as Performance & { memory?: { usedJSHeapSize: number } }).memory?.usedJSHeapSize || 0) / 1024 / 1024)} MB</span>
-              </div>
-              <div className="flex justify-between">
-                <span>Render Time:</span>
-                <span className="text-blue-400">{Math.round(performance.now())} ms</span>
-              </div>
-              <div className="flex justify-between">
-                <span>Network Latency:</span>
-                <span className="text-yellow-400">0 ms</span>
-              </div>
-              <div className="flex justify-between">
-                <span>Errors:</span>
-                <span className="text-red-400">0</span>
-              </div>
-            </div>
-          </div>
-        )}
-
-        {/* Real-Time Performance Monitor */}
-        <RealTimePerformanceMonitor
-          isVisible={showRealTimeMonitor}
-          onClose={() => setShowRealTimeMonitor(false)}
-        />
-
-        {/* Website Enhancements */}
-        <WebsiteEnhancements 
-          isVisible={showWebsiteEnhancements} 
-          onClose={() => setShowWebsiteEnhancements(false)} 
-        />
-
-        {/* Performance Tracker */}
+        {/* Performance Components */}
         <PerformanceTracker />
-
+        
         {/* System Health Dashboard */}
         <SystemHealthDashboard
           isVisible={showSystemHealth}
           onClose={() => setShowSystemHealth(false)}
-        />
-
-        {/* Performance Metrics Dashboard - Toggle with Ctrl+Shift+X */}
-        <PerformanceMetricsDashboard
-          isVisible={showPerformanceMetrics}
-          onClose={() => setShowPerformanceMetrics(false)}
         />
 
         {/* New Components */}
@@ -628,12 +349,6 @@ export default function App(): React.JSX.Element {
           isVisible={showKeyboardHelp}
           onClose={() => setShowKeyboardHelp(false)}
         />
-        
-        <CommandPalette
-          isVisible={showCommandPalette}
-          onClose={() => setShowCommandPalette(false)}
-          commands={commandPaletteCommands}
-        />
 
         {/* Theme Toggle Button */}
         <button
@@ -644,56 +359,13 @@ export default function App(): React.JSX.Element {
           {isDarkMode ? '☀️' : '🌙'}
         </button>
 
-        {/* Keyboard Shortcuts Help Button */}
-        <button
-          onClick={() => setShowKeyboardHelp(true)}
-          className="fixed bottom-4 right-20 z-40 bg-gray-600 hover:bg-gray-700 text-white p-3 rounded-full shadow-lg transition-colors duration-200"
-          title="Keyboard Shortcuts (Ctrl+/)"
-        >
-          ⌨️
-        </button>
-
-        {/* Command Palette Button */}
-        <button
-          onClick={() => setShowCommandPalette(true)}
-          className="fixed bottom-4 right-36 z-40 bg-purple-600 hover:bg-purple-700 text-white p-3 rounded-full shadow-lg transition-colors duration-200"
-          title="Command Palette (Ctrl+K)"
-        >
-          ⌘
-        </button>
-
-        {/* Real-Time Monitor Button */}
-        <button
-          onClick={() => setShowRealTimeMonitor(true)}
-          className="fixed bottom-4 right-52 z-40 bg-orange-600 hover:bg-orange-700 text-white p-3 rounded-full shadow-lg transition-colors duration-200"
-          title="Real-Time Monitor (Ctrl+Shift+R)"
-        >
-          📊
-        </button>
-
-        {/* System Health Button */}
-        <button
-          onClick={() => setShowSystemHealth(true)}
-          className="fixed bottom-4 right-68 z-40 bg-green-600 hover:bg-green-700 text-white p-3 rounded-full shadow-lg transition-colors duration-200"
-          title="System Health (Ctrl+Shift+H)"
-        >
-          🏥
-        </button>
-
         {/* Keyboard Shortcuts Help Panel */}
         <div className="fixed bottom-4 left-4 z-40 bg-gray-800 text-white p-3 rounded-lg shadow-lg text-sm opacity-75 hover:opacity-100 transition-opacity duration-200">
           <div className="font-semibold mb-1">Keyboard Shortcuts:</div>
           <div>Ctrl+Shift+D: System Dashboard</div>
-          <div>Ctrl+Shift+P: Performance Optimizer</div>
-          <div>Ctrl+Shift+M: Performance Monitor</div>
-          <div>Ctrl+Shift+A: AI Dashboard</div>
-          <div>Ctrl+Shift+S: SEO Optimizer</div>
-          <div>Ctrl+Shift+T: Toggle Theme</div>
-          <div>Ctrl+Shift+R: Real-Time Monitor</div>
           <div>Ctrl+Shift+H: System Health</div>
           <div>Ctrl+Shift+K: Keyboard Help</div>
-          <div>Ctrl+K: Command Palette</div>
-          <div>Escape: Close All</div>
+          <div>Click Theme Button: Toggle Theme</div>
         </div>
       </div>
     </EnhancedErrorBoundary>
