@@ -42,10 +42,10 @@ export class PerformanceOptimizer {
             if (entry.entryType === 'largest-contentful-paint') {
               this.metrics.set('LCP', entry.startTime);
             } else if (entry.entryType === 'first-input') {
-              this.metrics.set('FID', (entry as any).processingStart - entry.startTime);
+              this.metrics.set('FID', (entry as PerformanceEntry & { processingStart?: number }).processingStart - entry.startTime);
             } else if (entry.entryType === 'layout-shift') {
-              if (!(entry as any).hadRecentInput) {
-                this.metrics.set('CLS', (this.metrics.get('CLS') || 0) + (entry as any).value);
+              if (!(entry as PerformanceEntry & { hadRecentInput?: boolean }).hadRecentInput) {
+                this.metrics.set('CLS', (this.metrics.get('CLS') || 0) + (entry as PerformanceEntry & { value?: number }).value);
               }
             }
           }
@@ -106,8 +106,8 @@ export class PerformanceOptimizer {
       try {
         const observer = new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
-            if (!(entry as any).hadRecentInput) {
-              const clsValue = (entry as any).value;
+            if (!(entry as PerformanceEntry & { hadRecentInput?: boolean }).hadRecentInput) {
+              const clsValue = (entry as PerformanceEntry & { value?: number }).value;
               if (clsValue > 0.1) {
                 console.warn(`Significant layout shift detected: ${clsValue}`);
               }
@@ -225,7 +225,7 @@ export class PerformanceOptimizer {
   private optimizeGarbageCollection(): void {
     // Force garbage collection if available
     if ('gc' in window) {
-      (window as any).gc();
+      (window as Window & { gc?: () => void }).gc?.();
     }
   }
 
@@ -276,7 +276,7 @@ export class PerformanceOptimizer {
 export const performanceOptimizer = PerformanceOptimizer.getInstance();
 
 // Utility functions
-export const debounce = <T extends (...args: any[]) => any>(
+export const debounce = <T extends (...args: unknown[]) => unknown>(
   func: T,
   wait: number
 ): ((...args: Parameters<T>) => void) => {
@@ -287,7 +287,7 @@ export const debounce = <T extends (...args: any[]) => any>(
   };
 };
 
-export const throttle = <T extends (...args: any[]) => any>(
+export const throttle = <T extends (...args: unknown[]) => unknown>(
   func: T,
   limit: number
 ): ((...args: Parameters<T>) => void) => {
