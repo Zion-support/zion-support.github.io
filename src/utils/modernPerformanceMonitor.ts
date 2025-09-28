@@ -49,7 +49,7 @@ interface PerformanceMetrics {
   cls: number | null; // Cumulative Layout Shift
   fcp: number | null; // First Contentful Paint
   ttfb: number | null; // Time to First Byte
-  
+
   // Custom Metrics
   pageLoadTime: number;
   domContentLoaded: number;
@@ -59,15 +59,15 @@ interface PerformanceMetrics {
     totalJSHeapSize: number;
     jsHeapSizeLimit: number;
   } | null;
-  
+
   // Resource Metrics
   resourceTimings: PerformanceResourceTiming[];
   navigationTiming: PerformanceNavigationTiming | null;
-  
+
   // User Experience Metrics
   interactionToNextPaint: number | null;
   timeToInteractive: number | null;
-  
+
   // Network Metrics
   connectionType: string;
   effectiveType: string;
@@ -106,7 +106,7 @@ class ModernPerformanceMonitor {
       reportInterval: 5000,
       maxMetricsHistory: 100,
       enableRealTimeMonitoring: true,
-      ...config
+      ...config,
     };
 
     this.metrics = this.initializeMetrics();
@@ -128,10 +128,10 @@ class ModernPerformanceMonitor {
       navigationTiming: null,
       interactionToNextPaint: null,
       timeToInteractive: null,
-      connectionType: 'unknown',
-      effectiveType: 'unknown',
+      connectionType: "unknown",
+      effectiveType: "unknown",
       downlink: 0,
-      rtt: 0
+      rtt: 0,
     };
   }
 
@@ -139,8 +139,10 @@ class ModernPerformanceMonitor {
     if (this.isInitialized) return;
 
     // Wait for DOM to be ready
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', () => this.startMonitoring());
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", () =>
+        this.startMonitoring(),
+      );
     } else {
       this.startMonitoring();
     }
@@ -183,17 +185,17 @@ class ModernPerformanceMonitor {
 
   private setupCoreWebVitals(): void {
     // LCP - Largest Contentful Paint
-    if ('PerformanceObserver' in window) {
+    if ("PerformanceObserver" in window) {
       try {
         const lcpObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           const lastEntry = entries[entries.length - 1] as PerformanceEntry;
           this.metrics.lcp = lastEntry.startTime;
         });
-        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+        lcpObserver.observe({ entryTypes: ["largest-contentful-paint"] });
         this.observers.push(lcpObserver);
       } catch (error) {
-        console.warn('LCP monitoring not supported:', error);
+        console.warn("LCP monitoring not supported:", error);
       }
 
       // FID - First Input Delay
@@ -202,13 +204,14 @@ class ModernPerformanceMonitor {
           const entries = list.getEntries();
           entries.forEach((entry) => {
             const firstInputEntry = entry as FirstInputEntry;
-            this.metrics.fid = firstInputEntry.processingStart - entry.startTime;
+            this.metrics.fid =
+              firstInputEntry.processingStart - entry.startTime;
           });
         });
-        fidObserver.observe({ entryTypes: ['first-input'] });
+        fidObserver.observe({ entryTypes: ["first-input"] });
         this.observers.push(fidObserver);
       } catch (error) {
-        console.warn('FID monitoring not supported:', error);
+        console.warn("FID monitoring not supported:", error);
       }
 
       // CLS - Cumulative Layout Shift
@@ -224,10 +227,10 @@ class ModernPerformanceMonitor {
           });
           this.metrics.cls = clsValue;
         });
-        clsObserver.observe({ entryTypes: ['layout-shift'] });
+        clsObserver.observe({ entryTypes: ["layout-shift"] });
         this.observers.push(clsObserver);
       } catch (error) {
-        console.warn('CLS monitoring not supported:', error);
+        console.warn("CLS monitoring not supported:", error);
       }
 
       // FCP - First Contentful Paint
@@ -235,52 +238,55 @@ class ModernPerformanceMonitor {
         const fcpObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           entries.forEach((entry) => {
-            if (entry.name === 'first-contentful-paint') {
+            if (entry.name === "first-contentful-paint") {
               this.metrics.fcp = entry.startTime;
             }
           });
         });
-        fcpObserver.observe({ entryTypes: ['paint'] });
+        fcpObserver.observe({ entryTypes: ["paint"] });
         this.observers.push(fcpObserver);
       } catch (error) {
-        console.warn('FCP monitoring not supported:', error);
+        console.warn("FCP monitoring not supported:", error);
       }
     }
 
     // TTFB - Time to First Byte
     if (performance.timing) {
-      this.metrics.ttfb = performance.timing.responseStart - performance.timing.navigationStart;
+      this.metrics.ttfb =
+        performance.timing.responseStart - performance.timing.navigationStart;
     }
   }
 
   private setupResourceMonitoring(): void {
-    if ('PerformanceObserver' in window) {
+    if ("PerformanceObserver" in window) {
       try {
         const resourceObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries() as PerformanceResourceTiming[];
           this.metrics.resourceTimings.push(...entries);
         });
-        resourceObserver.observe({ entryTypes: ['resource'] });
+        resourceObserver.observe({ entryTypes: ["resource"] });
         this.observers.push(resourceObserver);
       } catch (error) {
-        console.warn('Resource monitoring not supported:', error);
+        console.warn("Resource monitoring not supported:", error);
       }
     }
 
     // Navigation timing
     if (performance.navigation) {
-      this.metrics.navigationTiming = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      this.metrics.navigationTiming = performance.getEntriesByType(
+        "navigation",
+      )[0] as PerformanceNavigationTiming;
     }
   }
 
   private setupMemoryTracking(): void {
-    if ('memory' in performance) {
+    if ("memory" in performance) {
       const updateMemoryUsage = () => {
         const memory = (performance as ExtendedPerformance).memory;
         this.metrics.memoryUsage = {
           usedJSHeapSize: memory?.usedJSHeapSize || 0,
           totalJSHeapSize: memory?.totalJSHeapSize || 0,
-          jsHeapSizeLimit: memory?.jsHeapSizeLimit || 0
+          jsHeapSizeLimit: memory?.jsHeapSizeLimit || 0,
         };
       };
 
@@ -291,35 +297,38 @@ class ModernPerformanceMonitor {
 
   private setupUserTiming(): void {
     // Track page load events
-    window.addEventListener('load', () => {
+    window.addEventListener("load", () => {
       this.metrics.windowLoad = performance.now();
     });
 
-    document.addEventListener('DOMContentLoaded', () => {
+    document.addEventListener("DOMContentLoaded", () => {
       this.metrics.domContentLoaded = performance.now();
     });
 
     // Track page load time
     if (performance.timing) {
-      this.metrics.pageLoadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
+      this.metrics.pageLoadTime =
+        performance.timing.loadEventEnd - performance.timing.navigationStart;
     }
   }
 
   private setupNetworkMonitoring(): void {
-    if ('connection' in navigator) {
-      const connection = (navigator as Navigator & { connection?: NetworkConnection }).connection;
+    if ("connection" in navigator) {
+      const connection = (
+        navigator as Navigator & { connection?: NetworkConnection }
+      ).connection;
       if (connection) {
-        this.metrics.connectionType = connection.type || 'unknown';
-        this.metrics.effectiveType = connection.effectiveType || 'unknown';
+        this.metrics.connectionType = connection.type || "unknown";
+        this.metrics.effectiveType = connection.effectiveType || "unknown";
         this.metrics.downlink = connection.downlink || 0;
         this.metrics.rtt = connection.rtt || 0;
       }
 
       // Listen for connection changes
       if (connection?.addEventListener) {
-        connection.addEventListener('change', () => {
-          this.metrics.connectionType = connection.type || 'unknown';
-          this.metrics.effectiveType = connection.effectiveType || 'unknown';
+        connection.addEventListener("change", () => {
+          this.metrics.connectionType = connection.type || "unknown";
+          this.metrics.effectiveType = connection.effectiveType || "unknown";
           this.metrics.downlink = connection.downlink || 0;
           this.metrics.rtt = connection.rtt || 0;
         });
@@ -340,28 +349,39 @@ class ModernPerformanceMonitor {
     };
 
     // Track user activity
-    ['mousedown', 'mousemove', 'keypress', 'scroll', 'touchstart'].forEach(event => {
-      document.addEventListener(event, () => {
-        lastActivityTime = Date.now();
-        updateTTI();
-      }, { passive: true });
-    });
+    ["mousedown", "mousemove", "keypress", "scroll", "touchstart"].forEach(
+      (event) => {
+        document.addEventListener(
+          event,
+          () => {
+            lastActivityTime = Date.now();
+            updateTTI();
+          },
+          { passive: true },
+        );
+      },
+    );
 
     // Interaction to Next Paint (INP) - simplified version
     let interactionCount = 0;
     let totalInteractionDelay = 0;
 
-    ['click', 'keydown', 'pointerdown'].forEach(event => {
-      document.addEventListener(event, () => {
-        const startTime = performance.now();
-        requestAnimationFrame(() => {
-          const endTime = performance.now();
-          const delay = endTime - startTime;
-          interactionCount++;
-          totalInteractionDelay += delay;
-          this.metrics.interactionToNextPaint = totalInteractionDelay / interactionCount;
-        });
-      }, { passive: true });
+    ["click", "keydown", "pointerdown"].forEach((event) => {
+      document.addEventListener(
+        event,
+        () => {
+          const startTime = performance.now();
+          requestAnimationFrame(() => {
+            const endTime = performance.now();
+            const delay = endTime - startTime;
+            interactionCount++;
+            totalInteractionDelay += delay;
+            this.metrics.interactionToNextPaint =
+              totalInteractionDelay / interactionCount;
+          });
+        },
+        { passive: true },
+      );
     });
   }
 
@@ -374,21 +394,23 @@ class ModernPerformanceMonitor {
 
   private updateRealTimeMetrics(): void {
     // Update memory usage
-    if ('memory' in performance) {
+    if ("memory" in performance) {
       const memory = (performance as ExtendedPerformance).memory;
       this.metrics.memoryUsage = {
         usedJSHeapSize: memory?.usedJSHeapSize || 0,
         totalJSHeapSize: memory?.totalJSHeapSize || 0,
-        jsHeapSizeLimit: memory?.jsHeapSizeLimit || 0
+        jsHeapSizeLimit: memory?.jsHeapSizeLimit || 0,
       };
     }
 
     // Update network metrics
-    if ('connection' in navigator) {
-      const connection = (navigator as Navigator & { connection?: NetworkConnection }).connection;
+    if ("connection" in navigator) {
+      const connection = (
+        navigator as Navigator & { connection?: NetworkConnection }
+      ).connection;
       if (connection) {
-        this.metrics.connectionType = connection.type || 'unknown';
-        this.metrics.effectiveType = connection.effectiveType || 'unknown';
+        this.metrics.connectionType = connection.type || "unknown";
+        this.metrics.effectiveType = connection.effectiveType || "unknown";
         this.metrics.downlink = connection.downlink || 0;
         this.metrics.rtt = connection.rtt || 0;
       }
@@ -416,18 +438,18 @@ class ModernPerformanceMonitor {
     this.emitMetricsEvent();
 
     // Log metrics in development
-    if (process.env.NODE_ENV === 'development') {
-      console.log('Performance Metrics:', this.metrics);
+    if (process.env.NODE_ENV === "development") {
+      console.log("Performance Metrics:", this.metrics);
     }
   }
 
   private emitMetricsEvent(): void {
-    const event = new CustomEvent('performance-metrics', {
+    const event = new CustomEvent("performance-metrics", {
       detail: {
         current: this.metrics,
         history: this.metricsHistory,
-        timestamp: Date.now()
-      }
+        timestamp: Date.now(),
+      },
     });
     window.dispatchEvent(event);
   }
@@ -441,13 +463,19 @@ class ModernPerformanceMonitor {
     return [...this.metricsHistory];
   }
 
-  public getCoreWebVitals(): { lcp: number | null; fid: number | null; cls: number | null; fcp: number | null; ttfb: number | null } {
+  public getCoreWebVitals(): {
+    lcp: number | null;
+    fid: number | null;
+    cls: number | null;
+    fcp: number | null;
+    ttfb: number | null;
+  } {
     return {
       lcp: this.metrics.lcp,
       fid: this.metrics.fid,
       cls: this.metrics.cls,
       fcp: this.metrics.fcp,
-      ttfb: this.metrics.ttfb
+      ttfb: this.metrics.ttfb,
     };
   }
 
@@ -476,16 +504,26 @@ class ModernPerformanceMonitor {
     return Math.max(0, score);
   }
 
-  public getResourcePerformance(): { slowResources: PerformanceResourceTiming[]; totalResources: number; averageLoadTime: number } {
+  public getResourcePerformance(): {
+    slowResources: PerformanceResourceTiming[];
+    totalResources: number;
+    averageLoadTime: number;
+  } {
     const resources = this.metrics.resourceTimings;
-    const slowResources = resources.filter(resource => resource.duration > 1000);
-    const totalLoadTime = resources.reduce((sum, resource) => sum + resource.duration, 0);
-    const averageLoadTime = resources.length > 0 ? totalLoadTime / resources.length : 0;
+    const slowResources = resources.filter(
+      (resource) => resource.duration > 1000,
+    );
+    const totalLoadTime = resources.reduce(
+      (sum, resource) => sum + resource.duration,
+      0,
+    );
+    const averageLoadTime =
+      resources.length > 0 ? totalLoadTime / resources.length : 0;
 
     return {
       slowResources,
       totalResources: resources.length,
-      averageLoadTime
+      averageLoadTime,
     };
   }
 
@@ -497,26 +535,36 @@ class ModernPerformanceMonitor {
     }
   }
 
-  public measureUserTiming(name: string, startMark: string, endMark: string): number {
+  public measureUserTiming(
+    name: string,
+    startMark: string,
+    endMark: string,
+  ): number {
     try {
       performance.measure(name, startMark, endMark);
-      const measures = performance.getEntriesByName(name, 'measure');
+      const measures = performance.getEntriesByName(name, "measure");
       return measures.length > 0 ? measures[0].duration : 0;
     } catch (error) {
-      console.warn('Failed to measure user timing:', error);
+      console.warn("Failed to measure user timing:", error);
       return 0;
     }
   }
 
-  public getMemoryUsage(): { used: number; total: number; limit: number; percentage: number } | null {
+  public getMemoryUsage(): {
+    used: number;
+    total: number;
+    limit: number;
+    percentage: number;
+  } | null {
     if (!this.metrics.memoryUsage) return null;
 
-    const { usedJSHeapSize, totalJSHeapSize, jsHeapSizeLimit } = this.metrics.memoryUsage;
+    const { usedJSHeapSize, totalJSHeapSize, jsHeapSizeLimit } =
+      this.metrics.memoryUsage;
     return {
       used: usedJSHeapSize,
       total: totalJSHeapSize,
       limit: jsHeapSizeLimit,
-      percentage: (usedJSHeapSize / jsHeapSizeLimit) * 100
+      percentage: (usedJSHeapSize / jsHeapSizeLimit) * 100,
     };
   }
 
@@ -530,25 +578,35 @@ class ModernPerformanceMonitor {
     const vitals = this.getCoreWebVitals();
 
     if (vitals.lcp && vitals.lcp > 2500) {
-      recommendations.push('Optimize Largest Contentful Paint - consider image optimization and critical CSS');
+      recommendations.push(
+        "Optimize Largest Contentful Paint - consider image optimization and critical CSS",
+      );
     }
 
     if (vitals.fid && vitals.fid > 100) {
-      recommendations.push('Reduce First Input Delay - minimize JavaScript execution time');
+      recommendations.push(
+        "Reduce First Input Delay - minimize JavaScript execution time",
+      );
     }
 
     if (vitals.cls && vitals.cls > 0.1) {
-      recommendations.push('Improve Cumulative Layout Shift - ensure stable layout and proper image dimensions');
+      recommendations.push(
+        "Improve Cumulative Layout Shift - ensure stable layout and proper image dimensions",
+      );
     }
 
     const memoryUsage = this.getMemoryUsage();
     if (memoryUsage && memoryUsage.percentage > 80) {
-      recommendations.push('High memory usage detected - consider optimizing memory usage');
+      recommendations.push(
+        "High memory usage detected - consider optimizing memory usage",
+      );
     }
 
     const resourcePerf = this.getResourcePerformance();
     if (resourcePerf.slowResources.length > 0) {
-      recommendations.push(`Optimize ${resourcePerf.slowResources.length} slow resources`);
+      recommendations.push(
+        `Optimize ${resourcePerf.slowResources.length} slow resources`,
+      );
     }
 
     return recommendations;
@@ -556,7 +614,7 @@ class ModernPerformanceMonitor {
 
   public destroy(): void {
     // Clear observers
-    this.observers.forEach(observer => observer.disconnect());
+    this.observers.forEach((observer) => observer.disconnect());
     this.observers = [];
 
     // Clear timers

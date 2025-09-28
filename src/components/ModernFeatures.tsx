@@ -1,15 +1,15 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Zap, 
-  Shield, 
-  Globe, 
-  Cpu, 
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import {
+  Zap,
+  Shield,
+  Globe,
+  Cpu,
   Lock,
   ArrowRight,
   CheckCircle,
-  Sparkles
-} from 'lucide-react';
+  Sparkles,
+} from "lucide-react";
 
 interface Feature {
   id: string;
@@ -17,11 +17,11 @@ interface Feature {
   description: string;
   icon: React.ReactNode;
   benefits: string[];
-  category: 'ai' | 'security' | 'performance' | 'scalability';
+  category: "ai" | "security" | "performance" | "scalability";
 }
 
 const ModernFeatures: React.FC = () => {
-  const [activeFeature, setActiveFeature] = useState<string>('ai-powered');
+  const [activeFeature, setActiveFeature] = useState<string>("ai-powered");
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -30,60 +30,64 @@ const ModernFeatures: React.FC = () => {
 
   const features: Feature[] = [
     {
-      id: 'ai-powered',
-      title: 'AI-Powered Solutions',
-      description: 'Leverage cutting-edge artificial intelligence to automate processes and enhance decision-making.',
+      id: "ai-powered",
+      title: "AI-Powered Solutions",
+      description:
+        "Leverage cutting-edge artificial intelligence to automate processes and enhance decision-making.",
       icon: <Cpu className="w-8 h-8" />,
       benefits: [
-        'Machine Learning Integration',
-        'Natural Language Processing',
-        'Predictive Analytics',
-        'Intelligent Automation'
+        "Machine Learning Integration",
+        "Natural Language Processing",
+        "Predictive Analytics",
+        "Intelligent Automation",
       ],
-      category: 'ai'
+      category: "ai",
     },
     {
-      id: 'security',
-      title: 'Enterprise Security',
-      description: 'Advanced security protocols and compliance frameworks to protect your data and infrastructure.',
+      id: "security",
+      title: "Enterprise Security",
+      description:
+        "Advanced security protocols and compliance frameworks to protect your data and infrastructure.",
       icon: <Shield className="w-8 h-8" />,
       benefits: [
-        'Zero Trust Architecture',
-        'End-to-End Encryption',
-        'SOC 2 Compliance',
-        '24/7 Security Monitoring'
+        "Zero Trust Architecture",
+        "End-to-End Encryption",
+        "SOC 2 Compliance",
+        "24/7 Security Monitoring",
       ],
-      category: 'security'
+      category: "security",
     },
     {
-      id: 'performance',
-      title: 'High Performance',
-      description: 'Optimized for speed and efficiency with global CDN and advanced caching strategies.',
+      id: "performance",
+      title: "High Performance",
+      description:
+        "Optimized for speed and efficiency with global CDN and advanced caching strategies.",
       icon: <Zap className="w-8 h-8" />,
       benefits: [
-        'Global CDN Network',
-        'Advanced Caching',
-        'Auto-scaling Infrastructure',
-        'Real-time Monitoring'
+        "Global CDN Network",
+        "Advanced Caching",
+        "Auto-scaling Infrastructure",
+        "Real-time Monitoring",
       ],
-      category: 'performance'
+      category: "performance",
     },
     {
-      id: 'scalability',
-      title: 'Infinite Scalability',
-      description: 'Cloud-native architecture that scales automatically with your business needs.',
+      id: "scalability",
+      title: "Infinite Scalability",
+      description:
+        "Cloud-native architecture that scales automatically with your business needs.",
       icon: <Globe className="w-8 h-8" />,
       benefits: [
-        'Auto-scaling Resources',
-        'Multi-cloud Deployment',
-        'Load Balancing',
-        'Disaster Recovery'
+        "Auto-scaling Resources",
+        "Multi-cloud Deployment",
+        "Load Balancing",
+        "Disaster Recovery",
       ],
-      category: 'scalability'
-    }
+      category: "scalability",
+    },
   ];
 
-  const activeFeatureData = features.find(f => f.id === activeFeature);
+  const activeFeatureData = features.find((f) => f.id === activeFeature);
 
   return (
     <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
@@ -102,8 +106,9 @@ const ModernFeatures: React.FC = () => {
             Built for the Future
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Our platform combines cutting-edge technologies to deliver exceptional 
-            performance, security, and scalability for modern enterprises.
+            Our platform combines cutting-edge technologies to deliver
+            exceptional performance, security, and scalability for modern
+            enterprises.
           </p>
         </motion.div>
 
@@ -118,30 +123,32 @@ const ModernFeatures: React.FC = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className={`p-6 rounded-xl cursor-pointer transition-all duration-300 ${
                   activeFeature === feature.id
-                    ? 'bg-blue-600 text-white shadow-lg transform scale-105'
-                    : 'bg-white text-gray-700 shadow-md hover:shadow-lg hover:scale-102'
+                    ? "bg-blue-600 text-white shadow-lg transform scale-105"
+                    : "bg-white text-gray-700 shadow-md hover:shadow-lg hover:scale-102"
                 }`}
                 onClick={() => setActiveFeature(feature.id)}
               >
                 <div className="flex items-center gap-4">
-                  <div className={`p-3 rounded-lg ${
-                    activeFeature === feature.id 
-                      ? 'bg-blue-500' 
-                      : 'bg-gray-100'
-                  }`}>
+                  <div
+                    className={`p-3 rounded-lg ${
+                      activeFeature === feature.id
+                        ? "bg-blue-500"
+                        : "bg-gray-100"
+                    }`}
+                  >
                     {feature.icon}
                   </div>
                   <div className="flex-1">
                     <h3 className="font-semibold text-lg mb-1">
                       {feature.title}
                     </h3>
-                    <p className="text-sm opacity-90">
-                      {feature.description}
-                    </p>
+                    <p className="text-sm opacity-90">{feature.description}</p>
                   </div>
-                  <ArrowRight className={`w-5 h-5 transition-transform ${
-                    activeFeature === feature.id ? 'rotate-0' : 'rotate-180'
-                  }`} />
+                  <ArrowRight
+                    className={`w-5 h-5 transition-transform ${
+                      activeFeature === feature.id ? "rotate-0" : "rotate-180"
+                    }`}
+                  />
                 </div>
               </motion.div>
             ))}
@@ -210,10 +217,26 @@ const ModernFeatures: React.FC = () => {
           className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8"
         >
           {[
-            { label: 'Uptime', value: '99.9%', icon: <Lock className="w-6 h-6" /> },
-            { label: 'Performance', value: '<100ms', icon: <Zap className="w-6 h-6" /> },
-            { label: 'Security', value: 'SOC 2', icon: <Shield className="w-6 h-6" /> },
-            { label: 'Scalability', value: 'Global', icon: <Globe className="w-6 h-6" /> }
+            {
+              label: "Uptime",
+              value: "99.9%",
+              icon: <Lock className="w-6 h-6" />,
+            },
+            {
+              label: "Performance",
+              value: "<100ms",
+              icon: <Zap className="w-6 h-6" />,
+            },
+            {
+              label: "Security",
+              value: "SOC 2",
+              icon: <Shield className="w-6 h-6" />,
+            },
+            {
+              label: "Scalability",
+              value: "Global",
+              icon: <Globe className="w-6 h-6" />,
+            },
           ].map((stat) => (
             <div key={stat.label} className="text-center">
               <div className="inline-flex items-center justify-center w-12 h-12 bg-blue-100 text-blue-600 rounded-lg mb-3">
@@ -222,9 +245,7 @@ const ModernFeatures: React.FC = () => {
               <div className="text-2xl font-bold text-gray-900 mb-1">
                 {stat.value}
               </div>
-              <div className="text-sm text-gray-600">
-                {stat.label}
-              </div>
+              <div className="text-sm text-gray-600">{stat.label}</div>
             </div>
           ))}
         </motion.div>

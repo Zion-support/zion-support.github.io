@@ -3,8 +3,8 @@
  * Comprehensive error handling and recovery system
  */
 
-import React from 'react';
-import { analytics } from './analytics';
+import React from "react";
+import { analytics } from "./analytics";
 
 export interface ErrorInfo {
   componentStack: string;
@@ -47,26 +47,26 @@ export class EnhancedErrorHandler {
    */
   private setupErrorHandlers(): void {
     // Global error handler
-    window.addEventListener('error', (event) => {
+    window.addEventListener("error", (event) => {
       this.handleError({
         message: event.message,
         stack: event.error?.stack,
-        componentStack: '',
+        componentStack: "",
         timestamp: new Date().toISOString(),
         userAgent: navigator.userAgent,
-        url: window.location.href
+        url: window.location.href,
       });
     });
 
     // Unhandled promise rejection handler
-    window.addEventListener('unhandledrejection', (event) => {
+    window.addEventListener("unhandledrejection", (event) => {
       this.handleError({
         message: `Unhandled Promise Rejection: ${event.reason}`,
         stack: event.reason?.stack,
-        componentStack: '',
+        componentStack: "",
         timestamp: new Date().toISOString(),
         userAgent: navigator.userAgent,
-        url: window.location.href
+        url: window.location.href,
       });
     });
   }
@@ -75,12 +75,12 @@ export class EnhancedErrorHandler {
    * Setup network monitoring
    */
   private setupNetworkMonitoring(): void {
-    window.addEventListener('online', () => {
+    window.addEventListener("online", () => {
       this.isOnline = true;
       this.flushErrorQueue();
     });
 
-    window.addEventListener('offline', () => {
+    window.addEventListener("offline", () => {
       this.isOnline = false;
     });
   }
@@ -96,7 +96,7 @@ export class EnhancedErrorHandler {
       errorBoundary: errorInfo.errorBoundary,
       timestamp: new Date().toISOString(),
       userAgent: navigator.userAgent,
-      url: window.location.href
+      url: window.location.href,
     });
   }
 
@@ -113,8 +113,8 @@ export class EnhancedErrorHandler {
     }
 
     // Log to console in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('Error captured:', errorDetails);
+    if (process.env.NODE_ENV === "development") {
+      console.error("Error captured:", errorDetails);
     }
 
     // Send to analytics
@@ -131,39 +131,41 @@ export class EnhancedErrorHandler {
    */
   private sendToAnalytics(errorDetails: ErrorDetails): void {
     try {
-      analytics.track('error_occurred', {
+      analytics.track("error_occurred", {
         message: errorDetails.message,
         stack: errorDetails.stack?.slice(0, 1000), // Truncate stack trace
         componentStack: errorDetails.componentStack?.slice(0, 1000),
         errorBoundary: errorDetails.errorBoundary,
         timestamp: errorDetails.timestamp,
         url: errorDetails.url,
-        userAgent: errorDetails.userAgent
+        userAgent: errorDetails.userAgent,
       });
     } catch (error) {
-      console.error('Failed to send error to analytics:', error);
+      console.error("Failed to send error to analytics:", error);
     }
   }
 
   /**
    * Send error to external service
    */
-  private async sendToExternalService(errorDetails: ErrorDetails): Promise<void> {
+  private async sendToExternalService(
+    errorDetails: ErrorDetails,
+  ): Promise<void> {
     try {
       // In a real application, this would send to your error tracking service
       // like Sentry, LogRocket, or Bugsnag
-      console.log('Sending error to external service:', errorDetails);
-      
+      console.log("Sending error to external service:", errorDetails);
+
       // Simulate API call
-      await fetch('/api/errors', {
-        method: 'POST',
+      await fetch("/api/errors", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
-        body: JSON.stringify(errorDetails)
+        body: JSON.stringify(errorDetails),
       });
     } catch (error) {
-      console.error('Failed to send error to external service:', error);
+      console.error("Failed to send error to external service:", error);
     }
   }
 
@@ -192,11 +194,11 @@ export class EnhancedErrorHandler {
     const last7Days = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000);
 
     const recentErrors = this.errorQueue.filter(
-      error => new Date(error.timestamp) > last24Hours
+      (error) => new Date(error.timestamp) > last24Hours,
     );
 
     const weeklyErrors = this.errorQueue.filter(
-      error => new Date(error.timestamp) > last7Days
+      (error) => new Date(error.timestamp) > last7Days,
     );
 
     return {
@@ -205,7 +207,7 @@ export class EnhancedErrorHandler {
       last7Days: weeklyErrors.length,
       isOnline: this.isOnline,
       queueSize: this.errorQueue.length,
-      maxQueueSize: this.maxQueueSize
+      maxQueueSize: this.maxQueueSize,
     };
   }
 
@@ -221,7 +223,10 @@ export class EnhancedErrorHandler {
    */
   public getRecentErrors(limit: number = 10): ErrorDetails[] {
     return this.errorQueue
-      .sort((a, b) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime())
+      .sort(
+        (a, b) =>
+          new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime(),
+      )
       .slice(0, limit);
   }
 }
@@ -241,7 +246,10 @@ interface ErrorBoundaryProps {
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
 }
 
-export class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundaryState> {
+export class ErrorBoundary extends React.Component<
+  ErrorBoundaryProps,
+  ErrorBoundaryState
+> {
   private errorHandler = EnhancedErrorHandler.getInstance();
 
   constructor(props: ErrorBoundaryProps) {
@@ -255,10 +263,10 @@ export class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoun
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo): void {
     this.setState({ errorInfo });
-    
+
     // Handle the error
     this.errorHandler.handleReactError(error, errorInfo);
-    
+
     // Call custom error handler if provided
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
@@ -273,7 +281,9 @@ export class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoun
     if (this.state.hasError) {
       if (this.props.fallback) {
         const FallbackComponent = this.props.fallback;
-        return <FallbackComponent error={this.state.error!} retry={this.retry} />;
+        return (
+          <FallbackComponent error={this.state.error!} retry={this.retry} />
+        );
       }
 
       return (
@@ -281,8 +291,18 @@ export class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoun
           <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
             <div className="flex items-center mb-4">
               <div className="flex-shrink-0">
-                <svg className="h-8 w-8 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
+                <svg
+                  className="h-8 w-8 text-red-500"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"
+                  />
                 </svg>
               </div>
               <div className="ml-3">
@@ -291,12 +311,13 @@ export class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoun
                 </h3>
               </div>
             </div>
-            
+
             <div className="mt-4">
               <p className="text-sm text-gray-500 mb-4">
-                We're sorry, but something unexpected happened. Our team has been notified.
+                We're sorry, but something unexpected happened. Our team has
+                been notified.
               </p>
-              
+
               <div className="flex space-x-3">
                 <button
                   onClick={this.retry}
@@ -304,7 +325,7 @@ export class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoun
                 >
                   Try Again
                 </button>
-                
+
                 <button
                   onClick={() => window.location.reload()}
                   className="inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
@@ -314,7 +335,7 @@ export class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoun
               </div>
             </div>
 
-            {process.env.NODE_ENV === 'development' && this.state.error && (
+            {process.env.NODE_ENV === "development" && this.state.error && (
               <details className="mt-4">
                 <summary className="text-sm font-medium text-gray-700 cursor-pointer">
                   Error Details (Development)
@@ -336,12 +357,25 @@ export class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoun
 /**
  * Default error fallback component
  */
-export const DefaultErrorFallback: React.FC<{ error: Error; retry: () => void }> = ({ error, retry }) => (
+export const DefaultErrorFallback: React.FC<{
+  error: Error;
+  retry: () => void;
+}> = ({ error, retry }) => (
   <div className="min-h-screen flex items-center justify-center bg-gray-50">
     <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
       <div className="text-center">
-        <svg className="mx-auto h-12 w-12 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
+        <svg
+          className="mx-auto h-12 w-12 text-red-500"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"
+          />
         </svg>
         <h3 className="mt-2 text-sm font-medium text-gray-900">Error</h3>
         <p className="mt-1 text-sm text-gray-500">{error.message}</p>

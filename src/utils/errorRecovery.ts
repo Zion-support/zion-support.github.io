@@ -28,30 +28,34 @@ export class ErrorRecovery {
   }
 
   private setupErrorHandling(): void {
-    if (typeof window === 'undefined') return;
+    if (typeof window === "undefined") return;
 
-    window.addEventListener('error', (event) => {
+    window.addEventListener("error", (event) => {
       this.handleError(event.error || new Error(event.message));
     });
 
-    window.addEventListener('unhandledrejection', (event) => {
-      this.handleError(event.reason instanceof Error ? event.reason : new Error(String(event.reason)));
+    window.addEventListener("unhandledrejection", (event) => {
+      this.handleError(
+        event.reason instanceof Error
+          ? event.reason
+          : new Error(String(event.reason)),
+      );
     });
 
     // Component error recovery
     this.addStrategy({
-      name: 'component-reset',
-      condition: (error, context) => 
-        Boolean(context.component && error.message.includes('component')),
+      name: "component-reset",
+      condition: (error, context) =>
+        Boolean(context.component && error.message.includes("component")),
       action: async () => {
-        console.log('🔄 Resetting component...');
+        console.log("🔄 Resetting component...");
         // Component reset logic would go here
-      }
+      },
     });
   }
 
   private handleError(error: Error): void {
-    console.error('Error Recovery - Error caught:', error);
+    console.error("Error Recovery - Error caught:", error);
     this.errorCount++;
 
     if (this.errorCount <= this.maxRetries) {
@@ -63,19 +67,19 @@ export class ErrorRecovery {
 
   private async attemptRecovery(): Promise<void> {
     console.log(`Attempting recovery (${this.errorCount}/${this.maxRetries})`);
-    
+
     // Clear caches
-    if ('caches' in window) {
+    if ("caches" in window) {
       const cacheNames = await caches.keys();
-      await Promise.all(cacheNames.map(name => caches.delete(name)));
+      await Promise.all(cacheNames.map((name) => caches.delete(name)));
     }
 
     // Wait before retry
-    await new Promise(resolve => setTimeout(resolve, 1000 * this.errorCount));
+    await new Promise((resolve) => setTimeout(resolve, 1000 * this.errorCount));
   }
 
   private showFallbackUI(): void {
-    const fallback = document.createElement('div');
+    const fallback = document.createElement("div");
     fallback.innerHTML = `
       <div style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
                   background: #f8f9fa; display: flex; align-items: center; 

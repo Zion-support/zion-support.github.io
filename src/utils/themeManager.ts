@@ -3,10 +3,10 @@
  * Comprehensive theme management with system detection and persistence
  */
 
-import React from 'react';
+import React from "react";
 
 export interface ThemeConfig {
-  defaultTheme: 'light' | 'dark' | 'auto';
+  defaultTheme: "light" | "dark" | "auto";
   enableSystemDetection: boolean;
   enablePersistence: boolean;
   enableSmoothTransitions: boolean;
@@ -45,23 +45,23 @@ export interface CustomTheme {
   };
 }
 
-export type Theme = 'light' | 'dark' | 'auto' | string;
+export type Theme = "light" | "dark" | "auto" | string;
 
 export class ThemeManager {
   private config: ThemeConfig;
   private currentTheme: Theme;
-  private systemTheme: 'light' | 'dark';
+  private systemTheme: "light" | "dark";
   private listeners: Set<(theme: Theme) => void> = new Set();
   private mediaQuery: MediaQueryList | null = null;
 
   constructor(config: Partial<ThemeConfig> = {}) {
     this.config = {
-      defaultTheme: 'auto',
+      defaultTheme: "auto",
       enableSystemDetection: true,
       enablePersistence: true,
       enableSmoothTransitions: true,
       customThemes: {},
-      ...config
+      ...config,
     };
 
     this.systemTheme = this.detectSystemTheme();
@@ -70,7 +70,7 @@ export class ThemeManager {
   }
 
   private initialize(): void {
-    if (typeof window === 'undefined') return;
+    if (typeof window === "undefined") return;
 
     this.setupSystemDetection();
     this.applyTheme(this.currentTheme);
@@ -78,44 +78,51 @@ export class ThemeManager {
     this.injectCSSVariables();
   }
 
-  private detectSystemTheme(): 'light' | 'dark' {
-    if (typeof window === 'undefined') return 'light';
-    
-    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  private detectSystemTheme(): "light" | "dark" {
+    if (typeof window === "undefined") return "light";
+
+    return window.matchMedia("(prefers-color-scheme: dark)").matches
+      ? "dark"
+      : "light";
   }
 
   private loadTheme(): Theme {
-    if (!this.config.enablePersistence || typeof window === 'undefined') {
+    if (!this.config.enablePersistence || typeof window === "undefined") {
       return this.config.defaultTheme;
     }
 
-    const saved = localStorage.getItem('theme');
+    const saved = localStorage.getItem("theme");
     return saved || this.config.defaultTheme;
   }
 
   private saveTheme(theme: Theme): void {
-    if (!this.config.enablePersistence || typeof window === 'undefined') return;
-    
-    localStorage.setItem('theme', theme);
+    if (!this.config.enablePersistence || typeof window === "undefined") return;
+
+    localStorage.setItem("theme", theme);
   }
 
   private setupSystemDetection(): void {
-    if (!this.config.enableSystemDetection || typeof window === 'undefined') return;
+    if (!this.config.enableSystemDetection || typeof window === "undefined")
+      return;
 
-    this.mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-    this.mediaQuery.addEventListener('change', (e) => {
-      this.systemTheme = e.matches ? 'dark' : 'light';
-      if (this.currentTheme === 'auto') {
-        this.applyTheme('auto');
+    this.mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+    this.mediaQuery.addEventListener("change", (e) => {
+      this.systemTheme = e.matches ? "dark" : "light";
+      if (this.currentTheme === "auto") {
+        this.applyTheme("auto");
       }
     });
   }
 
   private setupKeyboardShortcuts(): void {
-    if (typeof window === 'undefined') return;
+    if (typeof window === "undefined") return;
 
-    document.addEventListener('keydown', (event) => {
-      if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'T') {
+    document.addEventListener("keydown", (event) => {
+      if (
+        (event.ctrlKey || event.metaKey) &&
+        event.shiftKey &&
+        event.key === "T"
+      ) {
         event.preventDefault();
         this.toggleTheme();
       }
@@ -123,13 +130,13 @@ export class ThemeManager {
   }
 
   private injectCSSVariables(): void {
-    if (typeof document === 'undefined') return;
+    if (typeof document === "undefined") return;
 
-    const style = document.createElement('style');
-    style.id = 'theme-variables';
+    const style = document.createElement("style");
+    style.id = "theme-variables";
     style.textContent = `
       :root {
-        --theme-transition: ${this.config.enableSmoothTransitions ? 'all 0.3s ease-in-out' : 'none'};
+        --theme-transition: ${this.config.enableSmoothTransitions ? "all 0.3s ease-in-out" : "none"};
       }
       
       * {
@@ -140,7 +147,7 @@ export class ThemeManager {
         transition: var(--theme-transition);
       }
     `;
-    
+
     document.head.appendChild(style);
   }
 
@@ -155,35 +162,36 @@ export class ThemeManager {
     return this.currentTheme;
   }
 
-  public getEffectiveTheme(): 'light' | 'dark' {
-    if (this.currentTheme === 'auto') {
+  public getEffectiveTheme(): "light" | "dark" {
+    if (this.currentTheme === "auto") {
       return this.systemTheme;
     }
-    return this.currentTheme as 'light' | 'dark';
+    return this.currentTheme as "light" | "dark";
   }
 
   public toggleTheme(): void {
     const current = this.getEffectiveTheme();
-    const newTheme = current === 'light' ? 'dark' : 'light';
+    const newTheme = current === "light" ? "dark" : "light";
     this.setTheme(newTheme);
   }
 
   public cycleTheme(): void {
-    const themes: Theme[] = ['light', 'dark', 'auto'];
+    const themes: Theme[] = ["light", "dark", "auto"];
     const currentIndex = themes.indexOf(this.currentTheme);
     const nextIndex = (currentIndex + 1) % themes.length;
     this.setTheme(themes[nextIndex]);
   }
 
   private applyTheme(theme: Theme): void {
-    if (typeof document === 'undefined') return;
+    if (typeof document === "undefined") return;
 
-    const effectiveTheme = theme === 'auto' ? this.systemTheme : (theme as 'light' | 'dark');
+    const effectiveTheme =
+      theme === "auto" ? this.systemTheme : (theme as "light" | "dark");
     const root = document.documentElement;
 
     // Remove existing theme classes
-    root.classList.remove('light', 'dark');
-    
+    root.classList.remove("light", "dark");
+
     // Add new theme class
     root.classList.add(effectiveTheme);
 
@@ -198,33 +206,33 @@ export class ThemeManager {
     this.updateMetaThemeColor(effectiveTheme);
   }
 
-  private applyDefaultTheme(theme: 'light' | 'dark'): void {
+  private applyDefaultTheme(theme: "light" | "dark"): void {
     const root = document.documentElement;
-    
+
     const lightColors = {
-      '--color-primary': '#3b82f6',
-      '--color-secondary': '#6b7280',
-      '--color-background': '#ffffff',
-      '--color-surface': '#f9fafb',
-      '--color-text': '#111827',
-      '--color-text-secondary': '#6b7280',
-      '--color-border': '#e5e7eb',
-      '--color-accent': '#8b5cf6'
+      "--color-primary": "#3b82f6",
+      "--color-secondary": "#6b7280",
+      "--color-background": "#ffffff",
+      "--color-surface": "#f9fafb",
+      "--color-text": "#111827",
+      "--color-text-secondary": "#6b7280",
+      "--color-border": "#e5e7eb",
+      "--color-accent": "#8b5cf6",
     };
 
     const darkColors = {
-      '--color-primary': '#60a5fa',
-      '--color-secondary': '#9ca3af',
-      '--color-background': '#111827',
-      '--color-surface': '#1f2937',
-      '--color-text': '#f9fafb',
-      '--color-text-secondary': '#d1d5db',
-      '--color-border': '#374151',
-      '--color-accent': '#a78bfa'
+      "--color-primary": "#60a5fa",
+      "--color-secondary": "#9ca3af",
+      "--color-background": "#111827",
+      "--color-surface": "#1f2937",
+      "--color-text": "#f9fafb",
+      "--color-text-secondary": "#d1d5db",
+      "--color-border": "#374151",
+      "--color-accent": "#a78bfa",
     };
 
-    const colors = theme === 'light' ? lightColors : darkColors;
-    
+    const colors = theme === "light" ? lightColors : darkColors;
+
     Object.entries(colors).forEach(([property, value]) => {
       root.style.setProperty(property, value);
     });
@@ -232,7 +240,7 @@ export class ThemeManager {
 
   private applyCustomTheme(theme: CustomTheme): void {
     const root = document.documentElement;
-    
+
     // Apply colors
     Object.entries(theme.colors).forEach(([key, value]) => {
       root.style.setProperty(`--color-${key}`, value);
@@ -254,15 +262,15 @@ export class ThemeManager {
     });
   }
 
-  private updateMetaThemeColor(theme: 'light' | 'dark'): void {
+  private updateMetaThemeColor(theme: "light" | "dark"): void {
     const metaThemeColor = document.querySelector('meta[name="theme-color"]');
-    const color = theme === 'light' ? '#ffffff' : '#111827';
-    
+    const color = theme === "light" ? "#ffffff" : "#111827";
+
     if (metaThemeColor) {
-      metaThemeColor.setAttribute('content', color);
+      metaThemeColor.setAttribute("content", color);
     } else {
-      const meta = document.createElement('meta');
-      meta.name = 'theme-color';
+      const meta = document.createElement("meta");
+      meta.name = "theme-color";
       meta.content = color;
       document.head.appendChild(meta);
     }
@@ -286,11 +294,11 @@ export class ThemeManager {
   }
 
   private notifyListeners(theme: Theme): void {
-    this.listeners.forEach(listener => {
+    this.listeners.forEach((listener) => {
       try {
         listener(theme);
       } catch (error) {
-        console.error('Theme listener error:', error);
+        console.error("Theme listener error:", error);
       }
     });
   }
@@ -304,16 +312,16 @@ export class ThemeManager {
   }
 
   public isSystemDark(): boolean {
-    return this.systemTheme === 'dark';
+    return this.systemTheme === "dark";
   }
 
   public getAvailableThemes(): Theme[] {
-    return ['light', 'dark', 'auto', ...Object.keys(this.config.customThemes)];
+    return ["light", "dark", "auto", ...Object.keys(this.config.customThemes)];
   }
 
   public cleanup(): void {
     if (this.mediaQuery) {
-      this.mediaQuery.removeEventListener('change', () => {});
+      this.mediaQuery.removeEventListener("change", () => {});
     }
     this.listeners.clear();
   }
@@ -331,12 +339,14 @@ export function getThemeManager(config?: Partial<ThemeConfig>): ThemeManager {
 
 // React hook for theme management
 export function useTheme() {
-  const [theme, setTheme] = React.useState<Theme>('auto');
-  const [effectiveTheme, setEffectiveTheme] = React.useState<'light' | 'dark'>('light');
+  const [theme, setTheme] = React.useState<Theme>("auto");
+  const [effectiveTheme, setEffectiveTheme] = React.useState<"light" | "dark">(
+    "light",
+  );
 
   React.useEffect(() => {
     const manager = getThemeManager();
-    
+
     setTheme(manager.getTheme());
     setEffectiveTheme(manager.getEffectiveTheme());
 
@@ -355,6 +365,6 @@ export function useTheme() {
     toggleTheme: () => getThemeManager().toggleTheme(),
     cycleTheme: () => getThemeManager().cycleTheme(),
     isSystemDark: () => getThemeManager().isSystemDark(),
-    getAvailableThemes: () => getThemeManager().getAvailableThemes()
+    getAvailableThemes: () => getThemeManager().getAvailableThemes(),
   };
 }

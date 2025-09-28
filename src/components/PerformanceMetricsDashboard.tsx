@@ -1,19 +1,31 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { performanceMetrics, PerformanceReport } from '../utils/performanceMetrics';
-import { seoOptimizer, SEOMetrics } from '../utils/seoOptimizer';
-import { accessibilityEnhancer, AccessibilityMetrics } from '../utils/accessibilityEnhancer';
+import React, { useState, useEffect, useCallback } from "react";
+import {
+  performanceMetrics,
+  PerformanceReport,
+} from "../utils/performanceMetrics";
+import { seoOptimizer, SEOMetrics } from "../utils/seoOptimizer";
+import {
+  accessibilityEnhancer,
+  AccessibilityMetrics,
+} from "../utils/accessibilityEnhancer";
 
 interface PerformanceMetricsDashboardProps {
   isVisible: boolean;
   onClose: () => void;
 }
 
-const PerformanceMetricsDashboard: React.FC<PerformanceMetricsDashboardProps> = ({ isVisible, onClose }) => {
-  const [performanceReport, setPerformanceReport] = useState<PerformanceReport | null>(null);
+const PerformanceMetricsDashboard: React.FC<
+  PerformanceMetricsDashboardProps
+> = ({ isVisible, onClose }) => {
+  const [performanceReport, setPerformanceReport] =
+    useState<PerformanceReport | null>(null);
   const [seoAnalysis, setSeoAnalysis] = useState<SEOMetrics | null>(null);
-  const [accessibilityReport, setAccessibilityReport] = useState<AccessibilityMetrics | null>(null);
+  const [accessibilityReport, setAccessibilityReport] =
+    useState<AccessibilityMetrics | null>(null);
   const [isLoading, setIsLoading] = useState(false);
-  const [activeTab, setActiveTab] = useState<'performance' | 'seo' | 'accessibility'>('performance');
+  const [activeTab, setActiveTab] = useState<
+    "performance" | "seo" | "accessibility"
+  >("performance");
 
   const refreshData = useCallback(async () => {
     setIsLoading(true);
@@ -26,7 +38,7 @@ const PerformanceMetricsDashboard: React.FC<PerformanceMetricsDashboardProps> = 
       setSeoAnalysis(seoData);
       setAccessibilityReport(a11yData);
     } catch (error) {
-      console.error('Error refreshing metrics:', error);
+      console.error("Error refreshing metrics:", error);
     } finally {
       setIsLoading(false);
     }
@@ -39,15 +51,15 @@ const PerformanceMetricsDashboard: React.FC<PerformanceMetricsDashboardProps> = 
   }, [isVisible, refreshData]);
 
   const getScoreColor = (score: number): string => {
-    if (score >= 90) return 'text-green-600';
-    if (score >= 70) return 'text-yellow-600';
-    return 'text-red-600';
+    if (score >= 90) return "text-green-600";
+    if (score >= 70) return "text-yellow-600";
+    return "text-red-600";
   };
 
   const getScoreBgColor = (score: number): string => {
-    if (score >= 90) return 'bg-green-100';
-    if (score >= 70) return 'bg-yellow-100';
-    return 'bg-red-100';
+    if (score >= 90) return "bg-green-100";
+    if (score >= 70) return "bg-yellow-100";
+    return "bg-red-100";
   };
 
   if (!isVisible) return null;
@@ -64,8 +76,18 @@ const PerformanceMetricsDashboard: React.FC<PerformanceMetricsDashboardProps> = 
             onClick={onClose}
             className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
           >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M6 18L18 6M6 6l12 12"
+              />
             </svg>
           </button>
         </div>
@@ -73,17 +95,19 @@ const PerformanceMetricsDashboard: React.FC<PerformanceMetricsDashboardProps> = 
         {/* Tabs */}
         <div className="flex border-b border-gray-200 dark:border-gray-700">
           {[
-            { id: 'performance', label: 'Performance', icon: '⚡' },
-            { id: 'seo', label: 'SEO', icon: '🔍' },
-            { id: 'accessibility', label: 'Accessibility', icon: '♿' }
+            { id: "performance", label: "Performance", icon: "⚡" },
+            { id: "seo", label: "SEO", icon: "🔍" },
+            { id: "accessibility", label: "Accessibility", icon: "♿" },
           ].map((tab) => (
             <button
               key={tab.id}
-              onClick={() => setActiveTab(tab.id as 'performance' | 'accessibility' | 'seo')}
+              onClick={() =>
+                setActiveTab(tab.id as "performance" | "accessibility" | "seo")
+              }
               className={`flex items-center px-6 py-3 text-sm font-medium ${
                 activeTab === tab.id
-                  ? 'text-blue-600 border-b-2 border-blue-600'
-                  : 'text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300'
+                  ? "text-blue-600 border-b-2 border-blue-600"
+                  : "text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300"
               }`}
             >
               <span className="mr-2">{tab.icon}</span>
@@ -101,7 +125,7 @@ const PerformanceMetricsDashboard: React.FC<PerformanceMetricsDashboardProps> = 
           ) : (
             <>
               {/* Performance Tab */}
-              {activeTab === 'performance' && performanceReport && (
+              {activeTab === "performance" && performanceReport && (
                 <div className="space-y-6">
                   {/* Overall Score */}
                   <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-6">
@@ -109,15 +133,20 @@ const PerformanceMetricsDashboard: React.FC<PerformanceMetricsDashboardProps> = 
                       <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
                         Overall Performance Score
                       </h3>
-                      <div className={`px-3 py-1 rounded-full text-sm font-medium ${getScoreBgColor(performanceReport.overallScore)} ${getScoreColor(performanceReport.overallScore)}`}>
+                      <div
+                        className={`px-3 py-1 rounded-full text-sm font-medium ${getScoreBgColor(performanceReport.overallScore)} ${getScoreColor(performanceReport.overallScore)}`}
+                      >
                         {performanceReport.overallScore}/100
                       </div>
                     </div>
                     <div className="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2">
                       <div
                         className={`h-2 rounded-full ${
-                          performanceReport.overallScore >= 90 ? 'bg-green-500' :
-                          performanceReport.overallScore >= 70 ? 'bg-yellow-500' : 'bg-red-500'
+                          performanceReport.overallScore >= 90
+                            ? "bg-green-500"
+                            : performanceReport.overallScore >= 70
+                              ? "bg-yellow-500"
+                              : "bg-red-500"
                         }`}
                         style={{ width: `${performanceReport.overallScore}%` }}
                       ></div>
@@ -126,16 +155,31 @@ const PerformanceMetricsDashboard: React.FC<PerformanceMetricsDashboardProps> = 
 
                   {/* Metrics by Category */}
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {['core', 'rendering', 'network', 'memory', 'user-interaction'].map((category) => {
-                      const categoryMetrics = performanceReport.metrics.filter(m => m.category === category);
-                      const avgValue = categoryMetrics.length > 0 
-                        ? categoryMetrics.reduce((sum, m) => sum + m.value, 0) / categoryMetrics.length 
-                        : 0;
-                      
+                    {[
+                      "core",
+                      "rendering",
+                      "network",
+                      "memory",
+                      "user-interaction",
+                    ].map((category) => {
+                      const categoryMetrics = performanceReport.metrics.filter(
+                        (m) => m.category === category,
+                      );
+                      const avgValue =
+                        categoryMetrics.length > 0
+                          ? categoryMetrics.reduce(
+                              (sum, m) => sum + m.value,
+                              0,
+                            ) / categoryMetrics.length
+                          : 0;
+
                       return (
-                        <div key={category} className="bg-white dark:bg-gray-700 rounded-lg p-4 border border-gray-200 dark:border-gray-600">
+                        <div
+                          key={category}
+                          className="bg-white dark:bg-gray-700 rounded-lg p-4 border border-gray-200 dark:border-gray-600"
+                        >
                           <h4 className="font-semibold text-gray-900 dark:text-white capitalize mb-2">
-                            {category.replace('-', ' ')}
+                            {category.replace("-", " ")}
                           </h4>
                           <p className="text-2xl font-bold text-blue-600 dark:text-blue-400">
                             {avgValue.toFixed(1)}ms
@@ -157,7 +201,9 @@ const PerformanceMetricsDashboard: React.FC<PerformanceMetricsDashboardProps> = 
                       {performanceReport.recommendations.map((rec, index) => (
                         <li key={index} className="flex items-start">
                           <span className="text-yellow-500 mr-2">•</span>
-                          <span className="text-gray-700 dark:text-gray-300">{rec as string}</span>
+                          <span className="text-gray-700 dark:text-gray-300">
+                            {rec as string}
+                          </span>
                         </li>
                       ))}
                     </ul>
@@ -166,22 +212,27 @@ const PerformanceMetricsDashboard: React.FC<PerformanceMetricsDashboardProps> = 
               )}
 
               {/* SEO Tab */}
-              {activeTab === 'seo' && seoAnalysis && (
+              {activeTab === "seo" && seoAnalysis && (
                 <div className="space-y-6">
                   <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-6">
                     <div className="flex items-center justify-between mb-4">
                       <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
                         SEO Score
                       </h3>
-                      <div className={`px-3 py-1 rounded-full text-sm font-medium ${getScoreBgColor(seoAnalysis.score)} ${getScoreColor(seoAnalysis.score)}`}>
+                      <div
+                        className={`px-3 py-1 rounded-full text-sm font-medium ${getScoreBgColor(seoAnalysis.score)} ${getScoreColor(seoAnalysis.score)}`}
+                      >
                         {seoAnalysis.score}/100
                       </div>
                     </div>
                     <div className="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2">
                       <div
                         className={`h-2 rounded-full ${
-                          seoAnalysis.score >= 90 ? 'bg-green-500' :
-                          seoAnalysis.score >= 70 ? 'bg-yellow-500' : 'bg-red-500'
+                          seoAnalysis.score >= 90
+                            ? "bg-green-500"
+                            : seoAnalysis.score >= 70
+                              ? "bg-yellow-500"
+                              : "bg-red-500"
                         }`}
                         style={{ width: `${seoAnalysis.score}%` }}
                       ></div>
@@ -190,13 +241,17 @@ const PerformanceMetricsDashboard: React.FC<PerformanceMetricsDashboardProps> = 
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="bg-white dark:bg-gray-700 rounded-lg p-4 border border-gray-200 dark:border-gray-600">
-                      <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Issues Found</h4>
+                      <h4 className="font-semibold text-gray-900 dark:text-white mb-2">
+                        Issues Found
+                      </h4>
                       <p className="text-2xl font-bold text-red-600 dark:text-red-400">
                         {seoAnalysis.issues.length}
                       </p>
                     </div>
                     <div className="bg-white dark:bg-gray-700 rounded-lg p-4 border border-gray-200 dark:border-gray-600">
-                      <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Recommendations</h4>
+                      <h4 className="font-semibold text-gray-900 dark:text-white mb-2">
+                        Recommendations
+                      </h4>
                       <p className="text-2xl font-bold text-blue-600 dark:text-blue-400">
                         {seoAnalysis.recommendations.length}
                       </p>
@@ -212,8 +267,12 @@ const PerformanceMetricsDashboard: React.FC<PerformanceMetricsDashboardProps> = 
                         <li key={index} className="flex items-start">
                           <span className="text-blue-500 mr-2">•</span>
                           <div>
-                            <span className="font-medium text-gray-900 dark:text-white">{rec.title}</span>
-                            <p className="text-sm text-gray-600 dark:text-gray-400">{rec.description}</p>
+                            <span className="font-medium text-gray-900 dark:text-white">
+                              {rec.title}
+                            </span>
+                            <p className="text-sm text-gray-600 dark:text-gray-400">
+                              {rec.description}
+                            </p>
                           </div>
                         </li>
                       ))}
@@ -223,22 +282,27 @@ const PerformanceMetricsDashboard: React.FC<PerformanceMetricsDashboardProps> = 
               )}
 
               {/* Accessibility Tab */}
-              {activeTab === 'accessibility' && accessibilityReport && (
+              {activeTab === "accessibility" && accessibilityReport && (
                 <div className="space-y-6">
                   <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-6">
                     <div className="flex items-center justify-between mb-4">
                       <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
                         Accessibility Score
                       </h3>
-                      <div className={`px-3 py-1 rounded-full text-sm font-medium ${getScoreBgColor(accessibilityReport.score)} ${getScoreColor(accessibilityReport.score)}`}>
+                      <div
+                        className={`px-3 py-1 rounded-full text-sm font-medium ${getScoreBgColor(accessibilityReport.score)} ${getScoreColor(accessibilityReport.score)}`}
+                      >
                         {accessibilityReport.score}/100
                       </div>
                     </div>
                     <div className="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2">
                       <div
                         className={`h-2 rounded-full ${
-                          accessibilityReport.score >= 90 ? 'bg-green-500' :
-                          accessibilityReport.score >= 70 ? 'bg-yellow-500' : 'bg-red-500'
+                          accessibilityReport.score >= 90
+                            ? "bg-green-500"
+                            : accessibilityReport.score >= 70
+                              ? "bg-yellow-500"
+                              : "bg-red-500"
                         }`}
                         style={{ width: `${accessibilityReport.score}%` }}
                       ></div>
@@ -247,13 +311,17 @@ const PerformanceMetricsDashboard: React.FC<PerformanceMetricsDashboardProps> = 
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="bg-white dark:bg-gray-700 rounded-lg p-4 border border-gray-200 dark:border-gray-600">
-                      <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Issues Found</h4>
+                      <h4 className="font-semibold text-gray-900 dark:text-white mb-2">
+                        Issues Found
+                      </h4>
                       <p className="text-2xl font-bold text-red-600 dark:text-red-400">
                         {accessibilityReport.issues.length}
                       </p>
                     </div>
                     <div className="bg-white dark:bg-gray-700 rounded-lg p-4 border border-gray-200 dark:border-gray-600">
-                      <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Recommendations</h4>
+                      <h4 className="font-semibold text-gray-900 dark:text-white mb-2">
+                        Recommendations
+                      </h4>
                       <p className="text-2xl font-bold text-blue-600 dark:text-blue-400">
                         {accessibilityReport.recommendations.length}
                       </p>
@@ -268,7 +336,11 @@ const PerformanceMetricsDashboard: React.FC<PerformanceMetricsDashboardProps> = 
                       {accessibilityReport.recommendations.map((rec, index) => (
                         <li key={index} className="flex items-start">
                           <span className="text-green-500 mr-2">•</span>
-                          <span className="text-gray-700 dark:text-gray-300">{typeof rec === 'string' ? rec : rec.description || rec.type || 'Recommendation'}</span>
+                          <span className="text-gray-700 dark:text-gray-300">
+                            {typeof rec === "string"
+                              ? rec
+                              : rec.description || rec.type || "Recommendation"}
+                          </span>
                         </li>
                       ))}
                     </ul>
@@ -286,7 +358,7 @@ const PerformanceMetricsDashboard: React.FC<PerformanceMetricsDashboardProps> = 
             disabled={isLoading}
             className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50"
           >
-            {isLoading ? 'Refreshing...' : 'Refresh Data'}
+            {isLoading ? "Refreshing..." : "Refresh Data"}
           </button>
           <button
             onClick={onClose}

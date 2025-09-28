@@ -2,12 +2,12 @@
  * Comprehensive type definitions for all components and utilities
  */
 
-import { ReactNode } from 'react';
+import { ReactNode } from "react";
 
 // Enhanced Notification Types
 export interface EnhancedNotification {
   id: string;
-  type: 'success' | 'error' | 'warning' | 'info';
+  type: "success" | "error" | "warning" | "info";
   title: string;
   message: string;
   timestamp: number;
@@ -19,7 +19,7 @@ export interface EnhancedNotification {
 export interface NotificationAction {
   label: string;
   action: () => void;
-  variant?: 'primary' | 'secondary';
+  variant?: "primary" | "secondary";
 }
 
 // Performance Report Types
@@ -44,7 +44,7 @@ export interface PerformanceReport {
 
 export interface PerformanceAlert {
   id: string;
-  type: 'warning' | 'error' | 'info';
+  type: "warning" | "error" | "info";
   metric: string;
   threshold: number;
   currentValue: number;
@@ -54,12 +54,12 @@ export interface PerformanceAlert {
 }
 
 export interface PerformanceRecommendation {
-  category: 'performance' | 'seo' | 'accessibility' | 'security';
-  priority: 'high' | 'medium' | 'low';
+  category: "performance" | "seo" | "accessibility" | "security";
+  priority: "high" | "medium" | "low";
   title: string;
   description: string;
-  impact: 'low' | 'medium' | 'high';
-  effort: 'low' | 'medium' | 'high';
+  impact: "low" | "medium" | "high";
+  effort: "low" | "medium" | "high";
   implementation?: string;
 }
 
@@ -86,18 +86,18 @@ export interface PerformanceMetrics {
 // Optimization Suggestion Types
 export interface OptimizationSuggestion {
   id: string;
-  type: 'performance' | 'seo' | 'accessibility' | 'security' | 'critical' | 'warning';
+  type: "critical" | "warning" | "info";
+  category: "performance" | "seo" | "accessibility" | "security";
+  priority: "high" | "medium" | "low";
   title: string;
   description: string;
-  impact: 'high' | 'medium' | 'low';
-  effort: 'low' | 'medium' | 'high';
-  priority: number;
+  impact: "high" | "medium" | "low";
+  effort: "low" | "medium" | "high";
   actionable: boolean;
   implementation?: string;
   resources?: string[];
   message?: string;
   action?: string;
-  category?: string;
 }
 
 // SEO Audit Types
@@ -120,13 +120,13 @@ export interface SEOAuditResult {
 }
 
 export interface SEOIssue {
-  type: 'error' | 'warning' | 'info';
+  type: "error" | "warning" | "info";
   category?: string;
   message: string;
   element?: string;
   line?: number;
   column?: number;
-  impact?: 'high' | 'medium' | 'low';
+  impact?: "high" | "medium" | "low";
   fix?: string;
   suggestion?: string;
 }
@@ -153,8 +153,6 @@ export interface MonitoringMetrics {
     data: CacheStats;
   };
 }
-
-// Optimization Suggestion Types (duplicate removed - using the more comprehensive definition above)
 
 // Enhanced Performance Metrics
 export interface EnhancedPerformanceMetrics {
@@ -187,7 +185,7 @@ export interface DataPoint {
 export interface ChartData {
   name: string;
   data: DataPoint[];
-  type: 'line' | 'bar' | 'pie' | 'area' | 'scatter';
+  type: "line" | "bar" | "pie" | "area" | "scatter";
   color?: string;
 }
 
@@ -209,7 +207,7 @@ export interface StoredChart {
   data: ChartData;
   options: VisualizationOptions;
   container: HTMLElement;
-  type?: 'line' | 'bar' | 'pie' | 'area' | 'scatter';
+  type?: "line" | "bar" | "pie" | "area" | "scatter";
 }
 
 // Analytics Types
@@ -256,8 +254,8 @@ export interface SecuritySystem {
 }
 
 export interface SecurityEvent {
-  type: 'xss' | 'injection' | 'csrf' | 'suspicious';
-  severity: 'low' | 'medium' | 'high' | 'critical';
+  type: "xss" | "injection" | "csrf" | "suspicious";
+  severity: "low" | "medium" | "high" | "critical";
   message: string;
   timestamp: number;
   source?: string;
@@ -266,14 +264,14 @@ export interface SecurityEvent {
 
 // Accessibility Types
 export interface AccessibilityEnhancement {
-  type: 'keyboard' | 'screenreader' | 'high-contrast' | 'reduced-motion';
+  type: "keyboard" | "screenreader" | "high-contrast" | "reduced-motion";
   enabled: boolean;
   options?: Record<string, unknown>;
 }
 
 // Error Recovery Types
 export interface ErrorRecoveryStrategy {
-  type: 'retry' | 'fallback' | 'circuit-breaker' | 'graceful-degradation';
+  type: "retry" | "fallback" | "circuit-breaker" | "graceful-degradation";
   maxAttempts: number;
   backoffMs: number;
   fallbackAction?: () => void;

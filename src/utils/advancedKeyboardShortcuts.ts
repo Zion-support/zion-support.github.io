@@ -48,14 +48,14 @@ export class AdvancedKeyboardShortcuts {
       enableHapticFeedback: false,
       preventDefault: true,
       stopPropagation: true,
-      ...config
+      ...config,
     };
 
     this.initialize();
   }
 
   private initialize(): void {
-    if (typeof window === 'undefined') return;
+    if (typeof window === "undefined") return;
 
     this.setupEventListeners();
     this.setupContextDetection();
@@ -63,21 +63,21 @@ export class AdvancedKeyboardShortcuts {
   }
 
   private setupEventListeners(): void {
-    document.addEventListener('keydown', this.handleKeyDown.bind(this), true);
-    document.addEventListener('keyup', this.handleKeyUp.bind(this), true);
+    document.addEventListener("keydown", this.handleKeyDown.bind(this), true);
+    document.addEventListener("keyup", this.handleKeyUp.bind(this), true);
   }
 
   private setupContextDetection(): void {
     if (!this.config.enableContextAwareness) return;
 
     // Detect context based on active element
-    document.addEventListener('focusin', (event) => {
+    document.addEventListener("focusin", (event) => {
       const element = event.target as HTMLElement;
       this.updateContext(element);
     });
 
     // Detect context based on URL changes
-    window.addEventListener('popstate', () => {
+    window.addEventListener("popstate", () => {
       this.updateContextFromURL();
     });
   }
@@ -86,8 +86,8 @@ export class AdvancedKeyboardShortcuts {
     if (!this.config.enableVisualFeedback) return;
 
     // Create visual feedback element
-    const feedback = document.createElement('div');
-    feedback.id = 'keyboard-shortcut-feedback';
+    const feedback = document.createElement("div");
+    feedback.id = "keyboard-shortcut-feedback";
     feedback.style.cssText = `
       position: fixed;
       top: 20px;
@@ -110,23 +110,23 @@ export class AdvancedKeyboardShortcuts {
     const contexts: string[] = [];
 
     // Detect input contexts
-    if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
-      contexts.push('input');
+    if (element.tagName === "INPUT" || element.tagName === "TEXTAREA") {
+      contexts.push("input");
     }
 
     // Detect modal contexts
-    if (element.closest('[role="dialog"]') || element.closest('.modal')) {
-      contexts.push('modal');
+    if (element.closest('[role="dialog"]') || element.closest(".modal")) {
+      contexts.push("modal");
     }
 
     // Detect sidebar contexts
-    if (element.closest('.sidebar') || element.closest('[data-sidebar]')) {
-      contexts.push('sidebar');
+    if (element.closest(".sidebar") || element.closest("[data-sidebar]")) {
+      contexts.push("sidebar");
     }
 
     // Detect dashboard contexts
-    if (element.closest('.dashboard') || element.closest('[data-dashboard]')) {
-      contexts.push('dashboard');
+    if (element.closest(".dashboard") || element.closest("[data-dashboard]")) {
+      contexts.push("dashboard");
     }
 
     this.currentContext = contexts;
@@ -136,9 +136,9 @@ export class AdvancedKeyboardShortcuts {
     const path = window.location.pathname;
     const contexts: string[] = [];
 
-    if (path.includes('/dashboard')) contexts.push('dashboard');
-    if (path.includes('/settings')) contexts.push('settings');
-    if (path.includes('/admin')) contexts.push('admin');
+    if (path.includes("/dashboard")) contexts.push("dashboard");
+    if (path.includes("/settings")) contexts.push("settings");
+    if (path.includes("/admin")) contexts.push("admin");
 
     this.currentContext = [...this.currentContext, ...contexts];
   }
@@ -155,8 +155,8 @@ export class AdvancedKeyboardShortcuts {
 
     // Check context awareness
     if (this.config.enableContextAwareness && shortcut.context) {
-      const hasMatchingContext = shortcut.context.some(ctx => 
-        this.currentContext.includes(ctx)
+      const hasMatchingContext = shortcut.context.some((ctx) =>
+        this.currentContext.includes(ctx),
       );
       if (!hasMatchingContext) return;
     }
@@ -177,7 +177,7 @@ export class AdvancedKeyboardShortcuts {
       this.playSoundFeedback();
       this.triggerHapticFeedback();
     } catch (error) {
-      console.error('Error executing keyboard shortcut:', error);
+      console.error("Error executing keyboard shortcut:", error);
     }
   }
 
@@ -194,7 +194,10 @@ export class AdvancedKeyboardShortcuts {
     return null;
   }
 
-  private matchesShortcut(event: KeyboardEvent, shortcut: KeyboardShortcut): boolean {
+  private matchesShortcut(
+    event: KeyboardEvent,
+    shortcut: KeyboardShortcut,
+  ): boolean {
     return (
       event.key.toLowerCase() === shortcut.key.toLowerCase() &&
       !!event.ctrlKey === !!shortcut.ctrlKey &&
@@ -214,21 +217,21 @@ export class AdvancedKeyboardShortcuts {
   private showVisualFeedback(shortcut: KeyboardShortcut): void {
     if (!this.config.enableVisualFeedback) return;
 
-    const feedback = document.getElementById('keyboard-shortcut-feedback');
+    const feedback = document.getElementById("keyboard-shortcut-feedback");
     if (!feedback) return;
 
     const keys = [];
-    if (shortcut.ctrlKey) keys.push('Ctrl');
-    if (shortcut.shiftKey) keys.push('Shift');
-    if (shortcut.altKey) keys.push('Alt');
-    if (shortcut.metaKey) keys.push('Cmd');
+    if (shortcut.ctrlKey) keys.push("Ctrl");
+    if (shortcut.shiftKey) keys.push("Shift");
+    if (shortcut.altKey) keys.push("Alt");
+    if (shortcut.metaKey) keys.push("Cmd");
     keys.push(shortcut.key);
 
-    feedback.textContent = `${keys.join(' + ')}: ${shortcut.description}`;
-    feedback.style.opacity = '1';
+    feedback.textContent = `${keys.join(" + ")}: ${shortcut.description}`;
+    feedback.style.opacity = "1";
 
     setTimeout(() => {
-      feedback.style.opacity = '0';
+      feedback.style.opacity = "0";
     }, 2000);
   }
 
@@ -236,7 +239,9 @@ export class AdvancedKeyboardShortcuts {
     if (!this.config.enableSoundFeedback) return;
 
     try {
-      const audioContext = new (window.AudioContext || (window as Window & { webkitAudioContext?: typeof AudioContext }).webkitAudioContext)();
+      const audioContext = new (window.AudioContext ||
+        (window as Window & { webkitAudioContext?: typeof AudioContext })
+          .webkitAudioContext)();
       const oscillator = audioContext.createOscillator();
       const gainNode = audioContext.createGain();
 
@@ -245,17 +250,20 @@ export class AdvancedKeyboardShortcuts {
 
       oscillator.frequency.setValueAtTime(800, audioContext.currentTime);
       gainNode.gain.setValueAtTime(0.1, audioContext.currentTime);
-      gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.1);
+      gainNode.gain.exponentialRampToValueAtTime(
+        0.01,
+        audioContext.currentTime + 0.1,
+      );
 
       oscillator.start();
       oscillator.stop(audioContext.currentTime + 0.1);
     } catch (error) {
-      console.warn('Could not play sound feedback:', error);
+      console.warn("Could not play sound feedback:", error);
     }
   }
 
   private triggerHapticFeedback(): void {
-    if (!this.config.enableHapticFeedback || !('vibrate' in navigator)) return;
+    if (!this.config.enableHapticFeedback || !("vibrate" in navigator)) return;
 
     navigator.vibrate(50);
   }
@@ -284,12 +292,14 @@ export class AdvancedKeyboardShortcuts {
   }
 
   public getShortcutsByCategory(category: string): KeyboardShortcut[] {
-    return Array.from(this.shortcuts.values()).filter(s => s.category === category);
+    return Array.from(this.shortcuts.values()).filter(
+      (s) => s.category === category,
+    );
   }
 
   public getShortcutsByContext(context: string): KeyboardShortcut[] {
-    return Array.from(this.shortcuts.values()).filter(s => 
-      !s.context || s.context.includes(context)
+    return Array.from(this.shortcuts.values()).filter(
+      (s) => !s.context || s.context.includes(context),
     );
   }
 
@@ -308,13 +318,13 @@ export class AdvancedKeyboardShortcuts {
   }
 
   public enableAllShortcuts(): void {
-    this.shortcuts.forEach(shortcut => {
+    this.shortcuts.forEach((shortcut) => {
       shortcut.enabled = true;
     });
   }
 
   public disableAllShortcuts(): void {
-    this.shortcuts.forEach(shortcut => {
+    this.shortcuts.forEach((shortcut) => {
       shortcut.enabled = false;
     });
   }
@@ -343,7 +353,7 @@ export class AdvancedKeyboardShortcuts {
   }
 
   public removeContext(context: string): void {
-    this.currentContext = this.currentContext.filter(c => c !== context);
+    this.currentContext = this.currentContext.filter((c) => c !== context);
   }
 
   public getKeyHistory(): string[] {
@@ -354,17 +364,19 @@ export class AdvancedKeyboardShortcuts {
     this.keyHistory = [];
   }
 
-  public addListener(listener: (shortcut: KeyboardShortcut) => void): () => void {
+  public addListener(
+    listener: (shortcut: KeyboardShortcut) => void,
+  ): () => void {
     this.listeners.add(listener);
     return () => this.listeners.delete(listener);
   }
 
   private notifyListeners(shortcut: KeyboardShortcut): void {
-    this.listeners.forEach(listener => {
+    this.listeners.forEach((listener) => {
       try {
         listener(shortcut);
       } catch (error) {
-        console.error('Error in keyboard shortcut listener:', error);
+        console.error("Error in keyboard shortcut listener:", error);
       }
     });
   }
@@ -388,7 +400,7 @@ export class AdvancedKeyboardShortcuts {
         this.addShortcut(shortcut);
       });
     } catch (error) {
-      console.error('Error importing shortcuts:', error);
+      console.error("Error importing shortcuts:", error);
     }
   }
 
@@ -403,8 +415,12 @@ export class AdvancedKeyboardShortcuts {
   }
 
   public cleanup(): void {
-    document.removeEventListener('keydown', this.handleKeyDown.bind(this), true);
-    document.removeEventListener('keyup', this.handleKeyUp.bind(this), true);
+    document.removeEventListener(
+      "keydown",
+      this.handleKeyDown.bind(this),
+      true,
+    );
+    document.removeEventListener("keyup", this.handleKeyUp.bind(this), true);
     this.shortcuts.clear();
     this.listeners.clear();
     this.keyHistory = [];
@@ -414,7 +430,9 @@ export class AdvancedKeyboardShortcuts {
 // Singleton instance
 let keyboardShortcuts: AdvancedKeyboardShortcuts | null = null;
 
-export function getKeyboardShortcuts(config?: Partial<KeyboardShortcutConfig>): AdvancedKeyboardShortcuts {
+export function getKeyboardShortcuts(
+  config?: Partial<KeyboardShortcutConfig>,
+): AdvancedKeyboardShortcuts {
   if (!keyboardShortcuts) {
     keyboardShortcuts = new AdvancedKeyboardShortcuts(config);
   }
@@ -423,11 +441,14 @@ export function getKeyboardShortcuts(config?: Partial<KeyboardShortcutConfig>): 
 
 // Convenience functions
 export const shortcuts = {
-  add: (shortcut: KeyboardShortcut) => getKeyboardShortcuts().addShortcut(shortcut),
+  add: (shortcut: KeyboardShortcut) =>
+    getKeyboardShortcuts().addShortcut(shortcut),
   remove: (id: string) => getKeyboardShortcuts().removeShortcut(id),
   enable: (id: string) => getKeyboardShortcuts().enableShortcut(id),
   disable: (id: string) => getKeyboardShortcuts().disableShortcut(id),
   getAll: () => getKeyboardShortcuts().getAllShortcuts(),
-  getByCategory: (category: string) => getKeyboardShortcuts().getShortcutsByCategory(category),
-  getByContext: (context: string) => getKeyboardShortcuts().getShortcutsByContext(context)
+  getByCategory: (category: string) =>
+    getKeyboardShortcuts().getShortcutsByCategory(category),
+  getByContext: (context: string) =>
+    getKeyboardShortcuts().getShortcutsByContext(context),
 };

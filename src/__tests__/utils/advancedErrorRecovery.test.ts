@@ -1,9 +1,9 @@
-import { advancedErrorRecovery } from '../../utils/advancedErrorRecovery';
+import { advancedErrorRecovery } from "../../utils/advancedErrorRecovery";
 
 // Mock fetch
 global.fetch = jest.fn();
 
-describe('Advanced Error Recovery System', () => {
+describe("Advanced Error Recovery System", () => {
   beforeEach(() => {
     jest.clearAllMocks();
     // Reset any internal state if needed
@@ -12,64 +12,64 @@ describe('Advanced Error Recovery System', () => {
     advancedErrorRecovery.configure({
       retryDelay: 0,
       enableCircuitBreaker: false,
-      maxRetries: 2
+      maxRetries: 2,
     });
   });
 
-  describe('Error Recovery Strategies', () => {
-    it('should handle network errors with retry', async () => {
+  describe("Error Recovery Strategies", () => {
+    it("should handle network errors with retry", async () => {
       const mockFetch = fetch as jest.MockedFunction<typeof fetch>;
       mockFetch
-        .mockRejectedValueOnce(new Error('Network error'))
-        .mockRejectedValueOnce(new Error('Network error'))
-        .mockResolvedValueOnce('Success');
+        .mockRejectedValueOnce(new Error("Network error"))
+        .mockRejectedValueOnce(new Error("Network error"))
+        .mockResolvedValueOnce("Success");
 
       const result = await advancedErrorRecovery.executeWithRecovery(
-        () => fetch('/api/test'),
-        'network'
+        () => fetch("/api/test"),
+        "network",
       );
 
       expect(result).toBeDefined();
       expect(mockFetch).toHaveBeenCalledTimes(3);
     }, 15000);
 
-    it('should handle component errors with fallback', async () => {
-      const fallbackComponent = () => 'Fallback content';
+    it("should handle component errors with fallback", async () => {
+      const fallbackComponent = () => "Fallback content";
       const errorComponent = () => {
-        throw new Error('Component error');
+        throw new Error("Component error");
       };
 
       const result = await advancedErrorRecovery.executeWithRecovery(
         errorComponent,
-        'component',
-        { fallbackComponent }
+        "component",
+        { fallbackComponent },
       );
 
-      expect(result).toBe('Fallback content');
+      expect(result).toBe("Fallback content");
     }, 15000);
 
-    it('should handle data errors with cache fallback', async () => {
-      const cacheData = { cached: 'data' };
-      advancedErrorRecovery.setCacheData('test-key', cacheData);
+    it("should handle data errors with cache fallback", async () => {
+      const cacheData = { cached: "data" };
+      advancedErrorRecovery.setCacheData("test-key", cacheData);
 
       const errorFunction = () => {
-        throw new Error('Data error');
+        throw new Error("Data error");
       };
 
       const result = await advancedErrorRecovery.executeWithRecovery(
         errorFunction,
-        'data',
-        { cacheKey: 'test-key' }
+        "data",
+        { cacheKey: "test-key" },
       );
 
       expect(result).toEqual(cacheData);
     }, 15000);
   });
 
-  describe('Circuit Breaker', () => {
-    it('should open circuit after failure threshold', async () => {
+  describe("Circuit Breaker", () => {
+    it("should open circuit after failure threshold", async () => {
       const failingFunction = () => {
-        throw new Error('Always fails');
+        throw new Error("Always fails");
       };
 
       // Execute multiple times to trigger circuit breaker
@@ -77,7 +77,7 @@ describe('Advanced Error Recovery System', () => {
         try {
           await advancedErrorRecovery.executeWithRecovery(
             failingFunction,
-            'network'
+            "network",
           );
         } catch {
           // Expected to fail
@@ -88,11 +88,11 @@ describe('Advanced Error Recovery System', () => {
       expect(stats.circuitBreakerOpen).toBe(true);
     }, 15000);
 
-    it('should close circuit after recovery time', async () => {
+    it("should close circuit after recovery time", async () => {
       jest.useFakeTimers();
 
       const failingFunction = () => {
-        throw new Error('Always fails');
+        throw new Error("Always fails");
       };
 
       // Trigger circuit breaker
@@ -100,7 +100,7 @@ describe('Advanced Error Recovery System', () => {
         try {
           await advancedErrorRecovery.executeWithRecovery(
             failingFunction,
-            'network'
+            "network",
           );
         } catch {
           // Expected to fail
@@ -117,74 +117,73 @@ describe('Advanced Error Recovery System', () => {
     }, 15000);
   });
 
-  describe('Retry Mechanisms', () => {
-    it('should retry with exponential backoff', async () => {
-      const mockFunction = jest.fn()
-        .mockRejectedValueOnce(new Error('Error 1'))
-        .mockRejectedValueOnce(new Error('Error 2'))
-        .mockResolvedValueOnce('Success');
+  describe("Retry Mechanisms", () => {
+    it("should retry with exponential backoff", async () => {
+      const mockFunction = jest
+        .fn()
+        .mockRejectedValueOnce(new Error("Error 1"))
+        .mockRejectedValueOnce(new Error("Error 2"))
+        .mockResolvedValueOnce("Success");
 
       const result = await advancedErrorRecovery.executeWithRecovery(
         mockFunction,
-        'network',
-        { maxRetries: 3 }
+        "network",
+        { maxRetries: 3 },
       );
 
-      expect(result).toBe('Success');
+      expect(result).toBe("Success");
       expect(mockFunction).toHaveBeenCalledTimes(3);
     }, 15000);
 
-    it('should respect max retry limit', async () => {
-      const mockFunction = jest.fn().mockRejectedValue(new Error('Always fails'));
+    it("should respect max retry limit", async () => {
+      const mockFunction = jest
+        .fn()
+        .mockRejectedValue(new Error("Always fails"));
 
       await expect(
-        advancedErrorRecovery.executeWithRecovery(
-          mockFunction,
-          'network',
-          { maxRetries: 2 }
-        )
-      ).rejects.toThrow('Always fails');
+        advancedErrorRecovery.executeWithRecovery(mockFunction, "network", {
+          maxRetries: 2,
+        }),
+      ).rejects.toThrow("Always fails");
 
       expect(mockFunction).toHaveBeenCalledTimes(3); // Initial + 2 retries
     }, 15000);
   });
 
-  describe('User Guidance', () => {
-    it('should provide user guidance for errors', async () => {
+  describe("User Guidance", () => {
+    it("should provide user guidance for errors", async () => {
       const guidance = await advancedErrorRecovery.getUserGuidance(
-        new Error('Network error'),
-        'network'
+        new Error("Network error"),
+        "network",
       );
 
-      expect(guidance).toContain('Network');
-      expect(guidance).toContain('connection');
+      expect(guidance).toContain("Network");
+      expect(guidance).toContain("connection");
     });
 
-    it('should provide different guidance for different error types', async () => {
+    it("should provide different guidance for different error types", async () => {
       const networkGuidance = await advancedErrorRecovery.getUserGuidance(
-        new Error('Network error'),
-        'network'
+        new Error("Network error"),
+        "network",
       );
 
       const componentGuidance = await advancedErrorRecovery.getUserGuidance(
-        new Error('Component error'),
-        'component'
+        new Error("Component error"),
+        "component",
       );
 
       expect(networkGuidance).not.toBe(componentGuidance);
     });
   });
 
-  describe('Statistics and Monitoring', () => {
-    it('should track recovery statistics', async () => {
-      const mockFunction = jest.fn()
-        .mockRejectedValueOnce(new Error('Error'))
-        .mockResolvedValueOnce('Success');
+  describe("Statistics and Monitoring", () => {
+    it("should track recovery statistics", async () => {
+      const mockFunction = jest
+        .fn()
+        .mockRejectedValueOnce(new Error("Error"))
+        .mockResolvedValueOnce("Success");
 
-      await advancedErrorRecovery.executeWithRecovery(
-        mockFunction,
-        'network'
-      );
+      await advancedErrorRecovery.executeWithRecovery(mockFunction, "network");
 
       const stats = advancedErrorRecovery.getStats();
       expect(stats.totalErrors).toBe(1);
@@ -192,16 +191,14 @@ describe('Advanced Error Recovery System', () => {
       expect(stats.recoveryRate).toBe(1);
     }, 15000);
 
-    it('should track different error types', async () => {
-      await advancedErrorRecovery.executeWithRecovery(
-        () => { throw new Error('Network error'); },
-        'network'
-      );
+    it("should track different error types", async () => {
+      await advancedErrorRecovery.executeWithRecovery(() => {
+        throw new Error("Network error");
+      }, "network");
 
-      await advancedErrorRecovery.executeWithRecovery(
-        () => { throw new Error('Component error'); },
-        'component'
-      );
+      await advancedErrorRecovery.executeWithRecovery(() => {
+        throw new Error("Component error");
+      }, "component");
 
       const stats = advancedErrorRecovery.getStats();
       expect(stats.errorTypes.network).toBe(1);

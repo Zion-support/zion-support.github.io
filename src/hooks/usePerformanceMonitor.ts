@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
 interface PerformanceMetrics {
   fcp: number;
@@ -13,34 +13,59 @@ export const usePerformanceMonitor = () => {
   const [isMonitoring, setIsMonitoring] = useState(false);
 
   useEffect(() => {
-    if (typeof window === 'undefined') return;
+    if (typeof window === "undefined") return;
 
     const observer = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
-        if (entry.entryType === 'largest-contentful-paint') {
-          setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
+        if (entry.entryType === "largest-contentful-paint") {
+          setMetrics((prev) =>
+            prev
+              ? { ...prev, lcp: entry.startTime }
+              : ({ lcp: entry.startTime } as PerformanceMetrics),
+          );
         }
-        if (entry.entryType === 'first-input') {
-          setMetrics(prev => ({ ...prev, fid: (entry as any).processingStart - entry.startTime }));
+        if (entry.entryType === "first-input") {
+          setMetrics((prev) =>
+            prev
+              ? {
+                  ...prev,
+                  fid: (entry as any).processingStart - entry.startTime,
+                }
+              : ({
+                  fid: (entry as any).processingStart - entry.startTime,
+                } as PerformanceMetrics),
+          );
         }
-        if (entry.entryType === 'layout-shift') {
-          setMetrics(prev => ({ ...prev, cls: (prev?.cls || 0) + ((entry as any).value || 0) }));
+        if (entry.entryType === "layout-shift") {
+          setMetrics((prev) =>
+            prev
+              ? { ...prev, cls: (prev?.cls || 0) + ((entry as any).value || 0) }
+              : ({ cls: (entry as any).value || 0 } as PerformanceMetrics),
+          );
         }
       });
     });
 
-    observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
+    observer.observe({
+      entryTypes: ["largest-contentful-paint", "first-input", "layout-shift"],
+    });
 
     // Measure FCP
     const fcpObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
-      const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
+      const fcpEntry = entries.find(
+        (entry) => entry.name === "first-contentful-paint",
+      );
       if (fcpEntry) {
-        setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }));
+        setMetrics((prev) =>
+          prev
+            ? { ...prev, fcp: fcpEntry.startTime }
+            : ({ fcp: fcpEntry.startTime } as PerformanceMetrics),
+        );
       }
     });
-    fcpObserver.observe({ entryTypes: ['paint'] });
+    fcpObserver.observe({ entryTypes: ["paint"] });
 
     setIsMonitoring(true);
 
