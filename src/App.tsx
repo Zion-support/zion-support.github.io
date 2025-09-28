@@ -52,6 +52,7 @@ export default function App(): React.JSX.Element {
     ogUrl: typeof window !== 'undefined' ? window.location.href : '',
     ogImage: '/og-image.png',
     twitterCard: 'summary_large_image' as const,
+<<<<<<< HEAD
     structuredData: [
       seoManager.generateOrganizationStructuredData(),
       seoManager.generateWebsiteStructuredData()
@@ -65,10 +66,17 @@ export default function App(): React.JSX.Element {
     // Initialize build optimizations with performance monitoring
     initOptimizations();
     
+=======
+    structuredData: []
+  }), []);
+
+  useEffect(() => {
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-3352
     // Add performance marks for better monitoring
     if (typeof window !== 'undefined' && window.performance && typeof performance.mark === 'function') {
       performance.mark('app-init-start');
     }
+<<<<<<< HEAD
     
     // Initialize security features
     // SecurityManager.getInstance(); // Replaced with new security enhancer
@@ -335,6 +343,14 @@ export default function App(): React.JSX.Element {
     return () => {
       window.removeEventListener('scroll', handleScroll);
       document.removeEventListener('click', handleClick);
+=======
+
+    // Add keyboard event listener
+    document.addEventListener('keydown', handleKeyDown);
+
+    // Cleanup
+    return () => {
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-3352
       document.removeEventListener('keydown', handleKeyDown);
     };
   }, [handleKeyDown]);
@@ -342,39 +358,92 @@ export default function App(): React.JSX.Element {
   // Show loading screen while initializing
   if (isLoading) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100">
-        <ModernLoadingSpinner
-          size="xl"
-          variant="primary"
-          text="Initializing Zion Tech Group..."
-          showProgress
-          progress={loadingProgress}
-          className="animate-fade-in-scale"
-        />
-      </div>
+      <EnhancedErrorBoundary>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+          <div className="text-center">
+            <ModernLoadingSpinner size="xl" />
+            <div className="mt-6 text-white">
+              <h2 className="text-2xl font-bold mb-2">Initializing Zion Tech Group</h2>
+              <p className="text-lg opacity-80">Loading advanced technology solutions...</p>
+              <div className="mt-4 w-64 bg-gray-700 rounded-full h-2 mx-auto">
+                <div 
+                  className="bg-gradient-to-r from-blue-500 to-purple-500 h-2 rounded-full transition-all duration-300"
+                  style={{ width: `${loadingProgress}%` }}
+                />
+              </div>
+              <p className="mt-2 text-sm opacity-60">{Math.round(loadingProgress)}% Complete</p>
+            </div>
+          </div>
+        </div>
+      </EnhancedErrorBoundary>
     );
   }
 
   return (
     <EnhancedErrorBoundary>
-      <AppRouter />
-      <PerformanceDashboard />
-      <RealTimeMonitor />
-      <SystemMetricsDashboard 
-        isVisible={showSystemDashboard}
-        onClose={() => setShowSystemDashboard(false)}
-      />
-      {showSystemDashboard && <EnhancedSystemDashboard />}
-      <EnhancedNotificationSystem 
-        position="top-right"
-        enableAnimations
-        enableAccessibility
-        maxNotifications={5}
-      />
-      <PerformanceOptimizer 
-        isVisible={showPerformanceOptimizer}
-        onClose={() => setShowPerformanceOptimizer(false)}
-      />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Main Application Router */}
+        <AppRouter />
+        
+        {/* System Metrics Dashboard - Toggle with Ctrl+Shift+D */}
+        {showSystemDashboard && (
+          <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center p-4">
+            <div className="bg-white rounded-lg shadow-2xl max-w-6xl w-full max-h-[90vh] overflow-hidden">
+              <div className="flex justify-between items-center p-4 border-b">
+                <h2 className="text-2xl font-bold text-gray-800">System Metrics Dashboard</h2>
+                <button
+                  onClick={() => setShowSystemDashboard(false)}
+                  className="text-gray-500 hover:text-gray-700 text-2xl font-bold"
+                  aria-label="Close dashboard"
+                >
+                  ×
+                </button>
+              </div>
+              <div className="p-4 overflow-y-auto max-h-[calc(90vh-80px)]">
+                <EnhancedSystemDashboard />
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Performance Optimizer - Toggle with Ctrl+Shift+P */}
+        {showPerformanceOptimizer && (
+          <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center p-4">
+            <div className="bg-white rounded-lg shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-hidden">
+              <div className="flex justify-between items-center p-4 border-b">
+                <h2 className="text-2xl font-bold text-gray-800">Performance Optimizer</h2>
+                <button
+                  onClick={() => setShowPerformanceOptimizer(false)}
+                  className="text-gray-500 hover:text-gray-700 text-2xl font-bold"
+                  aria-label="Close optimizer"
+                >
+                  ×
+                </button>
+              </div>
+              <div className="p-4 overflow-y-auto max-h-[calc(90vh-80px)]">
+                <PerformanceOptimizer />
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Performance Dashboard - Always visible in development */}
+        {process.env.NODE_ENV === 'development' && (
+          <div className="fixed bottom-4 right-4 z-40">
+            <PerformanceDashboard />
+          </div>
+        )}
+
+        {/* Real-time Monitor - Always visible in development */}
+        {process.env.NODE_ENV === 'development' && (
+          <div className="fixed top-4 right-4 z-40">
+            <RealTimeMonitor />
+          </div>
+        )}
+
+        {/* Enhanced Notification System */}
+        <EnhancedNotificationSystem />
+      </div>
     </EnhancedErrorBoundary>
   );
 }
