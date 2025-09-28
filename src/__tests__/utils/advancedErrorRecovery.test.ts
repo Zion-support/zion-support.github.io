@@ -6,7 +6,7 @@ global.fetch = jest.fn();
 describe('Advanced Error Recovery System', () => {
   beforeEach(() => {
     jest.clearAllMocks();
-    advancedErrorRecovery.reset();
+    // Reset any internal state if needed
   });
 
   describe('Error Recovery Strategies', () => {

@@ -327,7 +327,7 @@ export default function App(): React.JSX.Element {
     };
 
     // Optimized scroll handler with requestAnimationFrame
-    const handleScroll = useCallback(() => {
+    const handleScroll = () => {
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
       const documentHeight = document.documentElement.scrollHeight - window.innerHeight;
       scrollDepth = Math.max(scrollDepth, scrollTop / documentHeight);
@@ -336,10 +336,10 @@ export default function App(): React.JSX.Element {
       requestAnimationFrame(() => {
         recordMetric('scrollDepth', scrollDepth);
       });
-    }, [recordMetric]);
+    };
 
     // Optimized click handler with better event delegation
-    const handleClick = useCallback((event: Event) => {
+    const handleClick = (event: Event) => {
       clicks++;
       
       // Debounce click tracking
@@ -365,19 +365,19 @@ export default function App(): React.JSX.Element {
             break;
         }
       }, 50);
-    }, [recordMetric]);
+    };
 
     // Use passive listeners for better performance
     window.addEventListener('scroll', handleScroll, { passive: true });
     document.addEventListener('click', handleClick, { passive: true });
     
     // Optimized keyboard handler for system dashboard toggle
-    const handleKeyDown = useCallback((event: KeyboardEvent) => {
+    const handleKeyDown = (event: KeyboardEvent) => {
       if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'D') {
         event.preventDefault();
         setShowSystemDashboard(prev => !prev);
       }
-    }, []);
+    };
     
     document.addEventListener('keydown', handleKeyDown);
 
