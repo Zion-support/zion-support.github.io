@@ -236,11 +236,11 @@ export function useAppInitialization(config: AppInitializationConfig = {}) {
     try {
       // Initialize advanced performance monitor
       const { AdvancedPerformanceMonitor } = await import('../utils/advancedPerformanceMonitor');
-      interface PerformanceMonitorInstance {
-        updateConfig: (config: { enableWebVitals: boolean; enableMemoryMonitoring: boolean; enableNetworkMonitoring: boolean; enableCustomMetrics: boolean }) => void;
-        startMonitoring: () => void;
-        stopMonitoring: () => void;
-      }
+      // interface PerformanceMonitorInstance {
+      //   updateConfig: (config: { enableWebVitals: boolean; enableMemoryMonitoring: boolean; enableNetworkMonitoring: boolean; enableCustomMetrics: boolean }) => void;
+      //   startMonitoring: () => void;
+      //   stopMonitoring: () => void;
+      // }
       const advancedPerformanceMonitor = (AdvancedPerformanceMonitor as any).getInstance();
       advancedPerformanceMonitor.updateConfig({
         enableWebVitals: true,

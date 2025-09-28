@@ -65,7 +65,7 @@ const EnhancedPerformanceDashboard: React.FC<EnhancedPerformanceDashboardProps> 
     };
 
     setPerformanceData(prev => [...prev.slice(-19), newDataPoint]);
-  }, []);
+  }, [bundleAnalysis.totalSize]);
 
   useEffect(() => {
     if (isVisible) {
@@ -81,11 +81,11 @@ const EnhancedPerformanceDashboard: React.FC<EnhancedPerformanceDashboardProps> 
     return 'text-red-600 bg-red-100';
   };
 
-  const getImpactColor = (impact: number) => {
-    if (impact >= 30) return '#ef4444';
-    if (impact >= 15) return '#f59e0b';
-    return '#10b981';
-  };
+  // const getImpactColor = (impact: number) => {
+  //   if (impact >= 30) return '#ef4444';
+  //   if (impact >= 15) return '#f59e0b';
+  //   return '#10b981';
+  // };
 
   interface OptimizationSuggestion {
     action?: () => void;
@@ -96,12 +96,12 @@ const EnhancedPerformanceDashboard: React.FC<EnhancedPerformanceDashboardProps> 
     automated?: boolean;
   }
 
-  const applyOptimization = (suggestion: OptimizationSuggestion) => {
-    if (suggestion.action) {
-      suggestion.action();
-      updateMetrics();
-    }
-  };
+  // const applyOptimization = (suggestion: OptimizationSuggestion) => {
+  //   if (suggestion.action) {
+  //     suggestion.action();
+  //     updateMetrics();
+  //   }
+  // };
 
   interface BundleRecommendation {
     type: string;
