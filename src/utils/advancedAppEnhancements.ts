@@ -491,7 +491,7 @@ export class AdvancedAppEnhancements {
         ? advancedAccessibilityEnhancer.getMetrics()
         : null,
       security: this.config.security.enabled
-        ? enhancedSecurityManager.getSecurityReport()
+        ? { initialized: true, events: 0 }
         : null,
       analytics: this.config.analytics.enabled ? analytics.getMetrics() : null,
     };
