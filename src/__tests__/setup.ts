@@ -5,9 +5,7 @@ import '@testing-library/jest-dom';
 global.fetch = jest.fn();
 
 // Mock window.location to prevent navigation errors
-// Delete and recreate to avoid JSDOM navigation issues
-delete (window as unknown as { location: Location }).location;
-(window as unknown as { location: Location }).location = {
+const mockLocation = {
   pathname: '/',
   href: 'http://localhost:3000/',
   assign: jest.fn(),
@@ -22,7 +20,8 @@ delete (window as unknown as { location: Location }).location;
   origin: 'http://localhost:3000',
   ancestorOrigins: [] as string[],
 };
-// Mock window.location using a simple assignment
+
+// Delete and recreate to avoid JSDOM navigation issues
 delete (window as unknown as { location?: typeof window.location }).location;
 (window as unknown as { location: typeof window.location }).location = mockLocation;
 // Mock window.history
