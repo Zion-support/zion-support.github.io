@@ -52,7 +52,7 @@ class SEOManager {
     document.title = title;
   }
 
-  private updateMetaTags(data: SEOData): void {
+  public updateMetaTags(data: SEOData): void {
     this.setMetaTag('description', data.description);
     
     if (data.keywords?.length) {
@@ -548,6 +548,42 @@ export class PerformanceSEO {
       }
     `;
     document.head.appendChild(style);
+  }
+
+  public optimizeCSS(): void {
+    // Optimize CSS delivery and performance
+    const styleSheets = document.querySelectorAll('link[rel="stylesheet"]');
+    styleSheets.forEach(link => {
+      // Add media="print" for non-critical CSS and load on demand
+      if (!link.hasAttribute('media')) {
+        link.setAttribute('media', 'all');
+      }
+      
+      // Add preload for critical CSS
+      if (link.getAttribute('href')?.includes('critical')) {
+        const preloadLink = document.createElement('link');
+        preloadLink.rel = 'preload';
+        preloadLink.as = 'style';
+        preloadLink.href = link.getAttribute('href')!;
+        document.head.insertBefore(preloadLink, link);
+      }
+    });
+
+    // Inline critical CSS for better performance
+    const criticalCSS = `
+      /* Critical CSS for above-the-fold content */
+      body { margin: 0; font-family: system-ui, -apple-system, sans-serif; }
+      .min-h-screen { min-height: 100vh; }
+      .bg-gradient-to-br { background: linear-gradient(to bottom right, #0f172a, #581c87, #0f172a); }
+      .flex { display: flex; }
+      .items-center { align-items: center; }
+      .justify-center { justify-content: center; }
+    `;
+    
+    const criticalStyle = document.createElement('style');
+    criticalStyle.textContent = criticalCSS;
+    criticalStyle.setAttribute('data-critical', 'true');
+    document.head.insertBefore(criticalStyle, document.head.firstChild);
   }
 }
 
