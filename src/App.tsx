@@ -159,7 +159,6 @@ export default function App(): React.JSX.Element {
 
   // Main initialization effect
   useEffect(() => {
-<<<<<<< HEAD
     try {
       // Initialize comprehensive enhancements first
       const enhancements = getComprehensiveEnhancements();
@@ -239,21 +238,6 @@ export default function App(): React.JSX.Element {
     window.addEventListener('scroll', handleScroll, { passive: true });
     document.addEventListener('click', handleClick, { passive: true });
     document.addEventListener('keydown', handleKeyDown);
-
-<<<<<<< HEAD
-      // Mark app as fully initialized
-      if (typeof window !== 'undefined' && window.performance && 
-          typeof performance.mark === 'function' && 
-          typeof performance.measure === 'function') {
-        performance.mark('app-init-complete');
-        performance.measure('app-initialization', 'app-init-start', 'app-init-complete');
-      }
-    } catch (error) {
-      console.error('Error in app initialization:', error);
-    }
-
-    // Track engagement on page unload
-    window.addEventListener('beforeunload', enhancedTrackEngagement);
 
     // Mark app as fully initialized
     if (typeof window !== 'undefined' && window.performance && 
@@ -430,14 +414,12 @@ export default function App(): React.JSX.Element {
 
         {/* Performance Monitor */}
         {showPerformanceMonitor && (
-<<<<<<< HEAD
           <div 
             className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center"
             role="dialog"
             aria-modal="true"
             aria-labelledby="performance-monitor-title"
           >
-          <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
             <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
               <div className="flex justify-between items-center mb-4">
                 <h2 id="performance-monitor-title" className="text-2xl font-bold text-gray-900">Performance Monitor</h2>
@@ -493,7 +475,6 @@ export default function App(): React.JSX.Element {
           </div>
         )}
       </div>
-<<<<<<< HEAD
       
       <PerformanceDashboard />
       <RealTimeMonitor />
