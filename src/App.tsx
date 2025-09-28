@@ -248,7 +248,7 @@ export default function App(): React.JSX.Element {
       document.removeEventListener('click', handleClick);
       trackEngagement();
     };
-  }, [handleScroll, handleClick, handleKeyDown, seoData, preloadResource, updateMetaTags, enhancedTrackEngagement]);
+  }, [handleScroll, handleClick, handleKeyDown, seoData, preloadResource, updateMetaTags, enhancedTrackEngagement, trackEngagement]);
 
   // Optimize performance on mount
   useEffect(() => {
