@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, LineChart, Line, PieChart, Pie, Cell, AreaChart, Area } from 'recharts';
-import { advancedPerformanceOptimizer } from '../utils/advancedPerformanceOptimizer';
+import { performanceOptimizer } from '../utils/advancedPerformanceOptimizer';
 import { enhancedSecurityManager } from '../utils/enhancedSecurityManager';
 import { enhancedPerformanceMonitor } from '../utils/enhancedPerformanceMonitor';
 import { enhancedAnalytics } from '../utils/enhancedAnalytics';
@@ -59,14 +59,14 @@ const ComprehensiveSystemDashboard: React.FC<SystemDashboardProps> = ({
       
       // Load performance metrics
       const performanceData = await enhancedPerformanceMonitor.getMetrics();
-      const performanceScore = await advancedPerformanceOptimizer.calculatePerformanceScore();
+      const performanceScore = performanceOptimizer.getPerformanceScore();
       
       // Load security metrics
-      const securityData = await enhancedSecurityManager.getSecurityMetrics();
+      const securityData = enhancedSecurityManager.getSecurityReport();
       
       // Load analytics data
-      const analyticsData = await enhancedAnalytics.getMetrics();
-      const advancedAnalyticsData = await advancedAnalytics.getMetrics();
+      const analyticsData = enhancedAnalytics.generateReport();
+      const advancedAnalyticsData = advancedAnalytics.exportData();
       
       // Load system metrics
       const systemData = {
@@ -78,19 +78,19 @@ const ComprehensiveSystemDashboard: React.FC<SystemDashboardProps> = ({
       setMetrics({
         performance: {
           score: performanceScore,
-          lcp: performanceData.lcp || 0,
-          fcp: performanceData.fcp || 0,
-          ttfb: performanceData.ttfb || 0
+          lcp: performanceData.get('lcp')?.[0]?.value || 0,
+          fcp: performanceData.get('fcp')?.[0]?.value || 0,
+          ttfb: performanceData.get('ttfb')?.[0]?.value || 0
         },
         security: {
-          score: securityData.score || 0,
+          score: securityData.totalEvents > 0 ? Math.max(0, 100 - securityData.totalEvents) : 100,
           totalEvents: securityData.totalEvents || 0,
-          criticalEvents: securityData.criticalEvents || 0
+          criticalEvents: securityData.eventsBySeverity.critical || 0
         },
         analytics: {
-          pageViews: analyticsData.pageViews || advancedAnalyticsData.pageViews || 0,
-          uniqueVisitors: analyticsData.uniqueVisitors || advancedAnalyticsData.uniqueVisitors || 0,
-          bounceRate: analyticsData.bounceRate || advancedAnalyticsData.bounceRate || 0
+          pageViews: analyticsData.pageViews || 0,
+          uniqueVisitors: analyticsData.uniqueVisitors || 0,
+          bounceRate: analyticsData.bounceRate || 0
         },
         system: systemData
       });

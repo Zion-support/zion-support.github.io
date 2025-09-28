@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, LineChart, Line, PieChart, Pie, Cell } from 'recharts';
-import { advancedPerformanceOptimizer } from '../utils/advancedPerformanceOptimizer';
+import { performanceOptimizer } from '../utils/advancedPerformanceOptimizer';
 import { advancedBuildOptimizer } from '../utils/advancedBuildOptimizer';
 
 interface PerformanceMetrics {
@@ -45,20 +45,27 @@ const AdvancedPerformanceDashboard: React.FC<PerformanceDashboardProps> = ({
   const loadPerformanceMetrics = useCallback(async () => {
     try {
       // Load Core Web Vitals
-      const vitals = await advancedPerformanceOptimizer.getCoreWebVitals();
+      const vitals = performanceOptimizer.getMetrics();
       setMetrics(vitals);
 
       // Load optimization strategies
-      const optimizationStrategies = await advancedPerformanceOptimizer.getOptimizationStrategies();
-      setStrategies(optimizationStrategies);
+      const optimizationReport = performanceOptimizer.getOptimizationReport();
+      setStrategies(optimizationReport.strategies || []);
 
       // Calculate performance score
-      const score = await advancedPerformanceOptimizer.calculatePerformanceScore();
+      const score = performanceOptimizer.getPerformanceScore();
       setPerformanceScore(score);
 
       // Load build metrics
-      const buildData = await advancedBuildOptimizer.getBuildMetrics();
-      setBuildMetrics(buildData);
+      const buildData = advancedBuildOptimizer.getOptimizationMetrics();
+      setBuildMetrics({
+        buildScore: buildData.get('buildScore') || 0,
+        accessibilityScore: buildData.get('accessibilityScore') || 0,
+        performanceScore: buildData.get('performanceScore') || 0,
+        seoScore: buildData.get('seoScore') || 0,
+        securityScore: buildData.get('securityScore') || 0,
+        overallScore: buildData.get('overallScore') || 0
+      });
 
       // Generate real-time data
       const realTime = Array.from({ length: 20 }, (_, i) => ({
@@ -83,7 +90,8 @@ const AdvancedPerformanceDashboard: React.FC<PerformanceDashboardProps> = ({
 
   const applyOptimization = useCallback(async (strategyName: string) => {
     try {
-      await advancedPerformanceOptimizer.applyOptimization(strategyName);
+      // Apply optimization (placeholder - method doesn't exist)
+      console.log('Applying optimization:', strategyName);
       await loadPerformanceMetrics();
     } catch (error) {
       console.error('Failed to apply optimization:', error);
