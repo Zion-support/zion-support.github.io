@@ -76,7 +76,7 @@ class ComprehensiveEnhancements {
     this.initialize();
   }
 
-  private initialize(): void {
+  public initialize(): void {
     if (typeof window === 'undefined') return;
 
     if (this.config.enableAdvancedPerformance) {
