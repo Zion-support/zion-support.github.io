@@ -166,8 +166,9 @@ class SecurityUtils {
   private monitorDataExfiltration(): void {
     // Monitor for suspicious network requests
     const originalFetch = window.fetch;
-    window.fetch = async (input: RequestInfo | URL, init) => {
-      const url = typeof input === 'string' ? input : (input as Request).url;
+    window.fetch = async (input: RequestInfo | URL, init?: RequestInit) => {
+      const url = typeof input === 'string' ? input : 
+        input instanceof URL ? input.toString() : input.url;
       
       // Check for suspicious patterns
       if (this.isSuspiciousURL(url)) {
