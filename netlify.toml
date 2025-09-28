@@ -9,7 +9,7 @@
   command_timeout = "30m"
 
 [build.environment]
-  NODE_VERSION = "24.0.0"
+  NODE_VERSION = "20.18.0"
   PNPM_VERSION = "10.17.1"
   NETLIFY_USE_PNPM = "true"
   # Disable Next.js auto-detection
@@ -17,6 +17,8 @@
   # Ensure clean installs
   NPM_CONFIG_PRODUCTION = "false"
   NODE_ENV = "production"
+  # Optimize build performance
+  CI = "true"
 
 # Explicitly disable Next.js plugin to prevent auto-detection
 [build.processing]
@@ -43,6 +45,10 @@
 
 [context.deploy-preview]
   command = "pnpm build"
+  [context.deploy-preview.environment]
+    NODE_ENV = "production"
 
 [context.branch-deploy]
   command = "pnpm build"
+  [context.branch-deploy.environment]
+    NODE_ENV = "production"

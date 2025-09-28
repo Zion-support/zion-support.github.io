@@ -61,17 +61,15 @@ declare global {
   };
 }
 
-// Service Worker event interface
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-interface ServiceWorkerEvent extends Event {
-  request: Request;
-  respondWith(response: Promise<Response>): void;
-}
+// Service Worker event interface (unused - can be removed if not needed)
+// interface ServiceWorkerEvent extends Event {
+//   request: Request;
+//   respondWith(response: Promise<Response>): void;
+// }
 
-// XMLHttpRequest interface extensions
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-interface XMLHttpRequest {
-  _url?: string;
-}
+// XMLHttpRequest interface extensions (unused - can be removed if not needed)
+// interface XMLHttpRequest {
+//   _url?: string;
+// }
 
 export {};

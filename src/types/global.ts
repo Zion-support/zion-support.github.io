@@ -66,6 +66,16 @@ export interface PerformanceMetrics extends Record<string, unknown> {
   customMetrics: Record<string, number>;
 }
 
+// Network Information Type Export
+export interface NetworkInformation {
+  effectiveType: string;
+  downlink: number;
+  rtt: number;
+  saveData: boolean;
+  addEventListener: (event: string, listener: EventListener) => void;
+  removeEventListener: (event: string, listener: EventListener) => void;
+}
+
 // Browser API Extensions
 declare global {
   interface MemoryInfo {
