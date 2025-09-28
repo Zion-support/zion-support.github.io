@@ -1,17 +1,11 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { 
   ResponsiveContainer, 
-  BarChart, 
   CartesianGrid, 
   XAxis, 
   YAxis, 
-  Tooltip, 
-  Bar, 
-  PieChart, 
-  Pie, 
-  Cell, 
-  LineChart, 
-  Line 
+  Tooltip
+  // Removed unused chart components to reduce warnings
 } from 'recharts';
 import { advancedBuildOptimizer } from '../utils/advancedBuildOptimizer';
 import { accessibilityUtils } from '../utils/accessibilityUtils';
@@ -42,7 +36,7 @@ const AdvancedPerformanceDashboard: React.FC<AdvancedPerformanceDashboardProps> 
   });
 
   const [realTimeData, setRealTimeData] = useState<any[]>([]);
-  const [optimizationData, setOptimizationData] = useState<any[]>([]);
+  // const [optimizationData, setOptimizationData] = useState<any[]>([]); // Removed unused variables
   const [optimizationSuggestions, setOptimizationSuggestions] = useState<string[]>([]);
   const [strategies, setStrategies] = useState<OptimizationStrategy[]>([]);
 
@@ -146,24 +140,25 @@ const AdvancedPerformanceDashboard: React.FC<AdvancedPerformanceDashboardProps> 
     setOptimizationSuggestions(suggestions);
   }, [metrics]);
 
-  const initializeDashboard = async () => {
-    try {
-      const score = advancedBuildOptimizer.getOptimizationScore();
-      const report = advancedBuildOptimizer.generateOptimizationReport();
-      
-      setMetrics({
-        buildScore: score,
-        accessibilityScore: accessibilityUtils.getAccessibilityScore(),
-        performanceScore: Math.floor(Math.random() * 20) + 80,
-        seoScore: Math.floor(Math.random() * 15) + 85,
-        securityScore: Math.floor(Math.random() * 10) + 90,
-        overallScore: score
-      });
-      setStrategies([]);
-    } catch (error) {
-      console.error('Failed to initialize dashboard:', error);
-    }
-  };
+  // Removed unused function to reduce warnings
+  // const initializeDashboard = async () => {
+  //   try {
+  //     const score = advancedBuildOptimizer.getOptimizationScore();
+  //     const report = advancedBuildOptimizer.generateOptimizationReport();
+  //     
+  //     setMetrics({
+  //       buildScore: score,
+  //       accessibilityScore: accessibilityUtils.getAccessibilityScore(),
+  //       performanceScore: Math.floor(Math.random() * 20) + 80,
+  //       seoScore: Math.floor(Math.random() * 15) + 85,
+  //       securityScore: Math.floor(Math.random() * 10) + 90,
+  //       overallScore: score
+  //     });
+  //     setStrategies([]);
+  //   } catch (error) {
+  //     console.error('Failed to initialize dashboard:', error);
+  //   }
+  // };
 
   const getScoreColor = (score: number) => {
     if (score >= 90) return 'text-green-600 bg-green-100';

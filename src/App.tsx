@@ -8,11 +8,7 @@ import { analytics } from './utils/analytics';
 import { performanceOptimizer } from './utils/performanceOptimizations';
 // import { accessibilityEnhancements } from './utils/accessibilityEnhancements';
 // import { seoOptimizer } from './utils/seoOptimizations';
-import { seoEnhancer } from './utils/advancedSEOEnhancer';
-import { accessibilityEnhancer } from './utils/advancedAccessibilityEnhancer';
-import { AdvancedAutomationSystem } from './utils/advancedAutomationSystem';
-import { AccessibilityEnhancer } from './utils/accessibilityEnhancer';
-import { SecurityEnhancer } from './utils/securityEnhancer';
+// Removed unused imports to reduce warnings
 // Removed unused imports to reduce warnings
 import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
@@ -55,7 +51,7 @@ export default function App(): React.JSX.Element {
   const [showRealTimeMetrics, setShowRealTimeMetrics] = useState(false);
   const [notifications, setNotifications] = useState<Notification[]>([]);
   const [showWebsiteEnhancements, setShowWebsiteEnhancements] = useState(false);
-  const [showAccessibilityPanel] = useState(false);
+  // const [showAccessibilityPanel] = useState(false); // Removed unused variable
   const [showRealTimeMonitor, setShowRealTimeMonitor] = useState(false);
   const [showSystemHealth, setShowSystemHealth] = useState(false);
   // User preferences state (for future use)
@@ -87,9 +83,9 @@ export default function App(): React.JSX.Element {
   const isLoading = false;
   const loadingProgress = 100;
   const handleScroll = useCallback(() => {}, []);
-  const handleClick = useCallback((event?: Event) => {
+  const handleClick = useCallback(() => {
     // Handle click events for engagement tracking
-    console.debug('Click event captured for engagement tracking', event);
+    console.debug('Click event captured for engagement tracking');
   }, []);
   const trackEngagement = useCallback(() => {}, []);
 
@@ -192,8 +188,8 @@ export default function App(): React.JSX.Element {
     twitterImage: 'https://zion.app/twitter-image.jpg'
   }), [currentPathname]);
 
-  // Alias for compatibility
-  const seoData = memoizedSeoData;
+  // Alias for compatibility - removed unused variable
+  // const seoData = memoizedSeoData;
 
   // Performance optimization hook (for future use)
   // const { getPerformanceMetrics } = usePerformanceOptimization();
