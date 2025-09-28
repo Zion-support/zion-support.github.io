@@ -23,8 +23,6 @@
     "format:check": "prettier --check \"src/**/*.{ts,tsx,js,jsx,json,css,md}\"",
     "build:production": "NODE_ENV=production pnpm build",
     "build:fast": "vite build --mode development",
-    "build:optimized": "NODE_ENV=production vite build --mode production --minify terser",
-    "build:minimal": "NODE_ENV=production vite build --mode production --minify terser --sourcemap false",
     "prebuild": "pnpm type-check && pnpm lint",
     "postbuild": "if [ \"$CI\" != \"true\" ]; then pnpm analyze; fi"
   },
