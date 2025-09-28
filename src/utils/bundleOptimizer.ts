@@ -182,7 +182,7 @@ ${recommended.map(strategy => `
   static createLazyComponent<T extends React.ComponentType<unknown>>(
     importFunc: () => Promise<{ default: T }>
   ): React.LazyExoticComponent<T> {
-    return React.lazy(importFunc);
+    return React.lazy(importFunc as any);
   }
 
   static preloadComponent(importFunc: () => Promise<unknown>): void {
