@@ -34,7 +34,6 @@ interface ErrorReport {
   aiPredictedImpact?: number;
   resolutionSuggestions?: string[];
 }
-// Interfaces removed as they were unused - types are defined inline where needed
 
 const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisible, onClose }) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
@@ -45,9 +44,29 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
     if (isVisible) {
       const updateData = () => {
         try {
-          setMetrics(enhancedErrorHandler.getPerformanceMetrics() as PerformanceMetrics);
-          setInsights(enhancedErrorHandler.getAIInsights() as AIInsights);
-          setErrors(enhancedErrorHandler.getErrorReports().slice(0, 10) as ErrorReport[]);
+          const performanceMetrics = enhancedErrorHandler.getPerformanceMetrics();
+          const aiInsights = enhancedErrorHandler.getAIInsights();
+          const errorReports = enhancedErrorHandler.getErrorReports().slice(0, 10);
+          
+          // Type-safe conversion
+          setMetrics(performanceMetrics as {
+            errorRate: number;
+            avgResolutionTime: number;
+            criticalErrorsToday: number;
+            userImpactScore: number;
+          });
+          
+          setInsights(aiInsights as {
+            predictedHighRiskActions: string[];
+            recommendedImprovements: string[];
+            errorTrends: Array<{ category: string; trend: "increasing" | "decreasing" | "stable" }>;
+          });
+          
+          setErrors(errorReports.map(error => ({
+            ...error,
+            occurrenceCount: 1,
+            lastOccurrence: new Date(error.lastOccurrence).getTime()
+          })));
         } catch (error) {
           console.error('Failed to fetch dashboard data:', error);
         }
@@ -196,7 +215,6 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
             </div>
           </div>
         )}
-        </div>
       </div>
     </div>
   );

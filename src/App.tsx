@@ -1,16 +1,16 @@
-import React, { useCallback, useState, useEffect, useMemo } from 'react';
+import React, { useEffect, useCallback, useMemo, useState } from 'react';
 import { AppRouter } from './router';
 import { useAppInitialization } from './hooks/useAppInitialization';
 import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
-import { seoAnalytics, performanceSEO } from './utils/seoEnhanced';
-import { analytics } from './utils/analytics';
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
 import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import SEOOptimizer from './components/SEOOptimizer';
 import AIPerformanceDashboard from './components/AIPerformanceDashboard';
+import { analytics } from './utils/analytics';
+import { seoAnalytics, performanceSEO } from './utils/seoEnhanced';
 import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
 import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
 import { enhancedAnalytics } from './utils/enhancedAnalytics';
@@ -21,8 +21,6 @@ import { SecurityEnhancer } from './utils/securityEnhancer';
 import { performanceOptimizer } from './utils/performanceOptimizer';
 import { accessibilityEnhancer } from './utils/accessibilityEnhancer';
 import { seoOptimizer } from './utils/seoOptimizer';
-import { createAdvancedAppEnhancements } from './utils/advancedAppEnhancements';
-import { getPerformanceMonitor } from './utils/advancedPerformanceMonitor';
 import './index.css';
 import './styles/notifications.css';
 import './styles/system-metrics.css';
@@ -35,6 +33,7 @@ export default function App(): React.JSX.Element {
   const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
   const [showAIDashboard, setShowAIDashboard] = useState(false);
   const [showSEOOptimizer, setShowSEOOptimizer] = useState(false);
+
   // Engagement tracking data
   const engagementData = useMemo(() => ({
     startTime: Date.now(),
@@ -53,8 +52,6 @@ export default function App(): React.JSX.Element {
     enableCaching: true,
   });
 
-  // Get current pathname for SEO (removed unused variable)
-  // const currentPathname = typeof window !== 'undefined' ? window.location.pathname : '/';
   // Performance optimization hook
   const { preloadResource } = usePerformanceOptimization({
     enablePreloading: true,
@@ -63,49 +60,10 @@ export default function App(): React.JSX.Element {
     enableImageOptimization: true,
   });
 
-<<<<<<< HEAD
   // Enhanced keyboard handler for all dashboard toggles
-=======
-  // Initialize comprehensive enhancement suite
-  const comprehensiveEnhancements = useMemo(() => {
-    return getComprehensiveEnhancements({
-      enableAdvancedAnalytics: true,
-      enablePerformanceOptimization: true,
-      enableAccessibilityEnhancements: true,
-      enableSecurityFeatures: true,
-      enableAutomation: true,
-      enableCaching: true,
-      enableSEOOptimization: true
-    });
-  }, []);
-
-  // Initialize advanced app enhancements
-  const advancedAppEnhancements = useMemo(() => {
-    return createAdvancedAppEnhancements({
-      enableAdvancedAnalytics: true,
-      enablePerformanceOptimization: true,
-      enableAccessibilityEnhancements: true,
-      enableSecurityFeatures: true,
-      enableAutomation: true,
-      enableCaching: true,
-      enableSEOOptimization: true,
-      enableRealTimeMonitoring: true,
-      enableErrorRecovery: true,
-      enableUserExperienceOptimization: true
-    });
-  }, []);
-
-  // Initialize advanced performance monitor
-  const performanceMonitor = useMemo(() => {
-    return getPerformanceMonitor();
-  }, []);
-
-  // Optimized keyboard handler for system dashboard toggle
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-993e
   const handleKeyDown = useCallback((event: KeyboardEvent) => {
     if ((event.ctrlKey || event.metaKey) && event.shiftKey) {
       event.preventDefault();
-<<<<<<< HEAD
       switch (event.key) {
         case 'D':
           setShowSystemDashboard(prev => !prev);
@@ -134,35 +92,9 @@ export default function App(): React.JSX.Element {
           setShowSEOOptimizer(false);
           break;
       }
-=======
-      setShowSystemDashboard((prev: boolean) => !prev);
-    }
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'P') {
-      event.preventDefault();
-      setShowPerformanceOptimizer((prev: boolean) => !prev);
-    }
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'M') {
-      event.preventDefault();
-      setShowPerformanceMonitor(prev => !prev);
-    }
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'A') {
-      event.preventDefault();
-      setShowAIDashboard(prev => !prev);
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-993e
     }
   }, []);
 
-  // Memoize the SEO data to prevent unnecessary re-renders
-  const seoData = useMemo(() => ({
-    title: 'Zion Tech Group - Leading AI & Technology Solutions',
-    description: 'Cutting-edge AI, quantum computing, and digital transformation solutions for modern enterprises. Expert consulting, cloud services, and innovative technology implementations.',
-    keywords: ['AI solutions', 'quantum computing', 'digital transformation', 'cloud services', 'enterprise technology', 'machine learning', 'automation', 'blockchain'],
-    ogType: 'website',
-    ogUrl: typeof window !== 'undefined' ? window.location.href : '',
-    ogImage: '/og-image.png',
-    twitterCard: 'summary_large_image' as const,
-    structuredData: []
-  }), []);
   // Enhanced engagement tracking function
   const enhancedTrackEngagement = useCallback(() => {
     const timeOnPage = Date.now() - engagementData.startTime;
@@ -173,7 +105,6 @@ export default function App(): React.JSX.Element {
     });
     trackEngagement();
   }, [engagementData.clicks, engagementData.scrollDepth, engagementData.startTime, trackEngagement]);
-<<<<<<< HEAD
 
   // Memoize the SEO data to prevent unnecessary re-renders
   const seoData = useMemo(() => ({
@@ -186,8 +117,6 @@ export default function App(): React.JSX.Element {
     twitterCard: 'summary_large_image' as const
   }), []);
 
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-993e
   // Update meta tags function
   const updateMetaTags = useCallback((data: {
     title: string;
@@ -214,7 +143,6 @@ export default function App(): React.JSX.Element {
       }
     }
   }, []);
-<<<<<<< HEAD
 
   useEffect(() => {
     // Initialize comprehensive enhancements
@@ -238,35 +166,6 @@ export default function App(): React.JSX.Element {
     analytics.initialize();
     seoAnalytics.initialize();
     performanceSEO.initialize();
-=======
-  useEffect(() => {
-    // Add performance marks for better monitoring
-    if (typeof window !== 'undefined' && window.performance && typeof performance.mark === 'function') {
-      performance.mark('app-init-start');
-    }
-    
-    // Preload critical resources
-    const preloadResource = (href: string, as: string) => {
-      if (typeof document !== 'undefined') {
-        const link = document.createElement('link');
-        link.rel = 'preload';
-        link.href = href;
-        link.as = as;
-        document.head.appendChild(link);
-      }
-    };
-    
-    preloadResource('/og-image.png', 'image');
-    preloadResource('/favicon.ico', 'image');
-
-    // Use passive listeners for better performance
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    document.addEventListener('click', handleClick, { passive: true });
-    document.addEventListener('keydown', handleKeyDown);
-
-    // Initialize basic systems
-    analytics.initialize();
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-993e
     
     // Initialize SEO analytics
     seoAnalytics.trackPageView(window.location.pathname);
@@ -276,31 +175,7 @@ export default function App(): React.JSX.Element {
     performanceSEO.optimizeFonts();
     performanceSEO.optimizeCSS();
 
-    // Initialize comprehensive enhancement suite
-    if (comprehensiveEnhancements) {
-      comprehensiveEnhancements.initialize();
-    }
-
-    // Initialize advanced app enhancements
-    if (advancedAppEnhancements) {
-      advancedAppEnhancements.initialize();
-    }
-
-    // Initialize advanced performance monitor
-    if (performanceMonitor) {
-      performanceMonitor.start();
-    }
-
-    // Initialize advanced systems
-    enhancedAnalytics.initialize();
-    enhancedPerformanceMonitor.start();
-    advancedCacheSystem.initialize();
-    accessibilityEnhancer.initialize();
-    performanceOptimizer.initialize();
-    seoOptimizer.initialize();
-
     // Set default SEO data using the correct method
-<<<<<<< HEAD
     updateMetaTags(seoData);
     
     // Add performance marks for better monitoring
@@ -311,35 +186,12 @@ export default function App(): React.JSX.Element {
     // Preload critical resources
     preloadResource('/og-image.png', 'image');
     preloadResource('/favicon.ico', 'image');
-=======
-    // seoManager.updateMetaTags(seoData);
-
-    // Update meta tags
-    updateMetaTags(seoData);
-
-    // Basic performance monitoring
-    if (typeof window !== 'undefined') {
-      console.log('🚀 Zion Tech Group App initialized');
-      
-      // Enhanced performance monitoring
-      if (enhancedPerformanceMonitor) {
-        enhancedPerformanceMonitor.trackAppInitialization();
-      }
-      
-      // Track performance metrics
-      if (typeof performance !== 'undefined' && performance.mark) {
-        performance.mark('app-fully-loaded');
-        performance.measure('app-load-time', 'app-init-start', 'app-fully-loaded');
-      }
-    }
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-993e
 
     // Use passive listeners for better performance
     window.addEventListener('scroll', handleScroll, { passive: true });
     document.addEventListener('click', handleClick, { passive: true });
-  }, [handleClick, handleKeyDown, handleScroll, seoData, preloadResource, updateMetaTags]);
+    document.addEventListener('keydown', handleKeyDown);
 
-<<<<<<< HEAD
     // Update meta tags
     updateMetaTags(seoData);
 
@@ -356,13 +208,10 @@ export default function App(): React.JSX.Element {
     };
   }, [handleClick, handleKeyDown, handleScroll, seoData, preloadResource, updateMetaTags]);
 
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-993e
   // Add keyboard event listener
   React.useEffect(() => {
     document.addEventListener("keydown", handleKeyDown);
     
-<<<<<<< HEAD
     return () => {
       document.removeEventListener("keydown", handleKeyDown);
     };
@@ -392,74 +241,6 @@ export default function App(): React.JSX.Element {
   }, [enhancedTrackEngagement, trackEngagement, handleKeyDown]);
 
   // Performance optimization is handled by the hook automatically
-=======
-    return () => {
-      document.removeEventListener("keydown", handleKeyDown);
-    };
-  }, [handleKeyDown]);
-
-  // Main initialization and cleanup effect
-  React.useEffect(() => {
-    // Track engagement on page unload
-    window.addEventListener('beforeunload', enhancedTrackEngagement);
-    // Mark app as fully initialized
-    if (typeof window !== 'undefined' && window.performance && typeof performance.mark === 'function') {
-      performance.mark('app-init-complete');
-    }
-
-    // Cleanup function
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-      document.removeEventListener('click', handleClick);
-      document.removeEventListener('keydown', handleKeyDown);
-      
-      // Cleanup enhanced systems
-      if (enhancedPerformanceMonitor) {
-        enhancedPerformanceMonitor.stop();
-      }
-      if (advancedCacheSystem) {
-        advancedCacheSystem.cleanup();
-      }
-      if (comprehensiveEnhancements) {
-        comprehensiveEnhancements.cleanup();
-      }
-      if (advancedAppEnhancements) {
-        advancedAppEnhancements.cleanup();
-      }
-      if (performanceMonitor) {
-        performanceMonitor.stop();
-      }
-    };
-  }, [handleScroll, handleClick, handleKeyDown, seoData, preloadResource, updateMetaTags]);
-
-  // Main initialization and cleanup effect
-  React.useEffect(() => {
-    // Track engagement on page unload
-    window.addEventListener('beforeunload', enhancedTrackEngagement);
-
-    // Cleanup function
-    return () => {
-      document.removeEventListener('keydown', handleKeyDown);
-      window.removeEventListener('beforeunload', enhancedTrackEngagement);
-      
-      // Final engagement tracking
-      enhancedTrackEngagement();
-      
-      // Remove event listeners
-      window.removeEventListener('scroll', handleScroll);
-      document.removeEventListener('click', handleClick);
-      document.removeEventListener('keydown', handleKeyDown);
-    };
-  }, [enhancedTrackEngagement, handleKeyDown, handleScroll, handleClick]);
-
-  // Performance optimization hook
-  const { optimizePerformance } = usePerformanceOptimization();
-
-  // Optimize performance on mount
-  useEffect(() => {
-    optimizePerformance();
-  }, [optimizePerformance]);
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-993e
 
   // Track engagement on scroll and click
   useEffect(() => {
@@ -482,7 +263,6 @@ export default function App(): React.JSX.Element {
     };
   }, [handleScroll, handleClick, trackEngagement]);
 
-<<<<<<< HEAD
   // Performance monitoring effect
   React.useEffect(() => {
     if (typeof window !== 'undefined' && window.performance && typeof performance.mark === 'function') {
@@ -492,9 +272,6 @@ export default function App(): React.JSX.Element {
   }, []);
 
   // Loading state
-=======
-  // Show loading spinner while initializing
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-993e
   if (isLoading) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
@@ -517,10 +294,6 @@ export default function App(): React.JSX.Element {
 
   return (
     <EnhancedErrorBoundary>
-<<<<<<< HEAD
-=======
-      <SEOOptimizer seoData={seoData} />
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-993e
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <AppRouter />
         
@@ -540,7 +313,6 @@ export default function App(): React.JSX.Element {
           />
         )}
 
-<<<<<<< HEAD
         {/* Performance Monitor */}
         {showPerformanceMonitor && (
           <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
@@ -560,22 +332,10 @@ export default function App(): React.JSX.Element {
         )}
 
         {/* AI Performance Dashboard */}
-=======
-        {/* Performance Monitor - Toggle with Ctrl+Shift+M */}
-        <PerformanceMonitor 
-          showDashboard={showPerformanceMonitor}
-          onMetricsUpdate={(metrics) => {
-            console.log('Performance metrics:', metrics);
-          }}
-        />
-        
-        {/* AI Performance Dashboard - Toggle with Ctrl+Shift+A */}
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-993e
         <AIPerformanceDashboard
           isVisible={showAIDashboard}
           onClose={() => setShowAIDashboard(false)}
         />
-<<<<<<< HEAD
 
         {/* SEO Optimizer */}
         {showSEOOptimizer && (
@@ -595,8 +355,6 @@ export default function App(): React.JSX.Element {
           <div>Ctrl+Shift+T: Toggle Theme</div>
           <div>Escape: Close All</div>
         </div>
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-993e
       </div>
     </EnhancedErrorBoundary>
   );
