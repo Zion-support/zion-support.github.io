@@ -121,50 +121,6 @@ export default function App(): React.JSX.Element {
     twitterCard: 'summary_large_image' as const
   }), []);
 
-  // Performance optimization hook
-  const { preloadResource, optimizePerformance } = usePerformanceOptimization({
-    enablePreloading: true,
-    enableResourceHints: true,
-    enableCriticalCSS: true,
-    enableImageOptimization: true,
-  });
-
-  // Enhanced keyboard handler for all dashboard toggles
-  const handleKeyDown = useCallback((event: KeyboardEvent) => {
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey) {
-      event.preventDefault();
-      switch (event.key) {
-        case 'D':
-          setShowSystemDashboard(prev => !prev);
-          break;
-        case 'P':
-          setShowPerformanceOptimizer(prev => !prev);
-          break;
-        case 'M':
-          setShowPerformanceMonitor(prev => !prev);
-          break;
-        case 'A':
-          setShowAIDashboard(prev => !prev);
-          break;
-        case 'R':
-          setShowRealTimeMetrics(prev => !prev);
-          break;
-        case 'X':
-          setShowAccessibilityPanel(prev => !prev);
-          break;
-        case 'Escape':
-          // Close all dashboards
-          setShowSystemDashboard(false);
-          setShowPerformanceOptimizer(false);
-          setShowPerformanceMonitor(false);
-          setShowAIDashboard(false);
-          setShowRealTimeMetrics(false);
-          setShowAccessibilityPanel(false);
-          break;
-      }
-    }
-  }, []);
-
   // Initialize comprehensive enhancements
   useEffect(() => {
     // Initialize individual enhancement systems
