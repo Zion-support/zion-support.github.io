@@ -33,7 +33,7 @@ export class AdvancedBundleOptimizer {
       enableCompression: true,
       enableMinification: true,
       targetBundleSize: 500, // 500KB target
-      ...config
+      ...config,
     };
   }
 
@@ -41,8 +41,8 @@ export class AdvancedBundleOptimizer {
    * Analyze bundle composition and identify optimization opportunities
    */
   async analyzeBundle(): Promise<BundleMetrics> {
-    console.log('🔍 Analyzing bundle composition...');
-    
+    console.log("🔍 Analyzing bundle composition...");
+
     // Simulate bundle analysis
     const metrics: BundleMetrics = {
       totalSize: 0,
@@ -50,14 +50,14 @@ export class AdvancedBundleOptimizer {
       chunkCount: 0,
       duplicateModules: [],
       largeModules: [],
-      unusedExports: []
+      unusedExports: [],
     };
 
     // In a real implementation, this would analyze the actual bundle
     // For now, we'll provide a structure for the analysis
     this.metrics = metrics;
-    
-    console.log('✅ Bundle analysis completed');
+
+    console.log("✅ Bundle analysis completed");
     return metrics;
   }
 
@@ -66,29 +66,39 @@ export class AdvancedBundleOptimizer {
    */
   generateRecommendations(): string[] {
     if (!this.metrics) {
-      throw new Error('Bundle analysis required before generating recommendations');
+      throw new Error(
+        "Bundle analysis required before generating recommendations",
+      );
     }
 
     const recommendations: string[] = [];
 
     // Size-based recommendations
     if (this.metrics.totalSize > this.config.targetBundleSize * 1024) {
-      recommendations.push('Bundle size exceeds target. Consider code splitting.');
+      recommendations.push(
+        "Bundle size exceeds target. Consider code splitting.",
+      );
     }
 
     // Duplicate module recommendations
     if (this.metrics.duplicateModules.length > 0) {
-      recommendations.push(`Found ${this.metrics.duplicateModules.length} duplicate modules. Consider deduplication.`);
+      recommendations.push(
+        `Found ${this.metrics.duplicateModules.length} duplicate modules. Consider deduplication.`,
+      );
     }
 
     // Large module recommendations
     if (this.metrics.largeModules.length > 0) {
-      recommendations.push(`Found ${this.metrics.largeModules.length} large modules. Consider lazy loading.`);
+      recommendations.push(
+        `Found ${this.metrics.largeModules.length} large modules. Consider lazy loading.`,
+      );
     }
 
     // Unused export recommendations
     if (this.metrics.unusedExports.length > 0) {
-      recommendations.push(`Found ${this.metrics.unusedExports.length} unused exports. Enable tree shaking.`);
+      recommendations.push(
+        `Found ${this.metrics.unusedExports.length} unused exports. Enable tree shaking.`,
+      );
     }
 
     return recommendations;
@@ -106,7 +116,7 @@ export class AdvancedBundleOptimizer {
     // Optimize React imports
     optimizedCode = optimizedCode.replace(
       /import React from ['"]react['"];?\s*import\s*{([^}]+)}\s*from\s*['"]react['"];?/g,
-      'import React, { $1 } from "react";'
+      'import React, { $1 } from "react";',
     );
 
     // Optimize utility imports
@@ -114,11 +124,11 @@ export class AdvancedBundleOptimizer {
       /import\s+\*\s+as\s+(\w+)\s+from\s+['"]([^'"]+)['"];?/g,
       (match, alias, module) => {
         // Only optimize if the module is small and commonly used
-        if (module.includes('utils') || module.includes('helpers')) {
+        if (module.includes("utils") || module.includes("helpers")) {
           return `import { ${alias} } from "${module}";`;
         }
         return match;
-      }
+      },
     );
 
     return optimizedCode;
@@ -132,35 +142,35 @@ export class AdvancedBundleOptimizer {
 
     return {
       splitChunks: {
-        chunks: 'all',
+        chunks: "all",
         cacheGroups: {
           vendor: {
             test: /[\\/]node_modules[\\/]/,
-            name: 'vendors',
-            chunks: 'all',
-            priority: 10
+            name: "vendors",
+            chunks: "all",
+            priority: 10,
           },
           common: {
-            name: 'common',
+            name: "common",
             minChunks: 2,
-            chunks: 'all',
+            chunks: "all",
             priority: 5,
-            reuseExistingChunk: true
+            reuseExistingChunk: true,
           },
           react: {
             test: /[\\/]node_modules[\\/](react|react-dom)[\\/]/,
-            name: 'react',
-            chunks: 'all',
-            priority: 20
+            name: "react",
+            chunks: "all",
+            priority: 20,
           },
           ui: {
             test: /[\\/]src[\\/]components[\\/]/,
-            name: 'ui',
-            chunks: 'all',
-            priority: 15
-          }
-        }
-      }
+            name: "ui",
+            chunks: "all",
+            priority: 15,
+          },
+        },
+      },
     };
   }
 
@@ -174,20 +184,15 @@ export class AdvancedBundleOptimizer {
       lazy: {
         // Components to lazy load
         components: [
-          'EnhancedSystemDashboard',
-          'SystemHealthDashboard',
-          'PerformanceWidget',
-          'CommandPalette',
-          'KeyboardShortcutsHelp'
+          "EnhancedSystemDashboard",
+          "SystemHealthDashboard",
+          "PerformanceWidget",
+          "CommandPalette",
+          "KeyboardShortcutsHelp",
         ],
         // Routes to lazy load
-        routes: [
-          '/dashboard',
-          '/analytics',
-          '/settings',
-          '/admin'
-        ]
-      }
+        routes: ["/dashboard", "/analytics", "/settings", "/admin"],
+      },
     };
   }
 
@@ -199,11 +204,11 @@ export class AdvancedBundleOptimizer {
 
     return {
       compression: {
-        algorithm: 'gzip',
+        algorithm: "gzip",
         threshold: 1024, // 1KB
         minRatio: 0.8,
-        level: 6
-      }
+        level: 6,
+      },
     };
   }
 
@@ -222,9 +227,9 @@ export class AdvancedBundleOptimizer {
           removeRedundantAttributes: true,
           collapseWhitespace: true,
           minifyCSS: true,
-          minifyJS: true
-        }
-      }
+          minifyJS: true,
+        },
+      },
     };
   }
 
@@ -238,7 +243,7 @@ export class AdvancedBundleOptimizer {
       ...this.generateCompressionConfig(),
       ...this.generateMinificationConfig(),
       treeShaking: this.config.enableTreeShaking,
-      target: this.config.targetBundleSize
+      target: this.config.targetBundleSize,
     };
   }
 
@@ -252,7 +257,7 @@ export class AdvancedBundleOptimizer {
     optimizedContent = this.optimizeImports(optimizedContent);
 
     // Apply other optimizations based on file type
-    if (filePath.endsWith('.tsx') || filePath.endsWith('.jsx')) {
+    if (filePath.endsWith(".tsx") || filePath.endsWith(".jsx")) {
       optimizedContent = this.optimizeReactComponent(optimizedContent);
     }
 
@@ -268,19 +273,19 @@ export class AdvancedBundleOptimizer {
     // Add React.memo for functional components
     optimizedCode = optimizedCode.replace(
       /const\s+(\w+)\s*=\s*\(\s*props\s*:\s*(\w+Props)\s*\)\s*=>\s*{/g,
-      'const $1 = React.memo((props: $2Props) => {'
+      "const $1 = React.memo((props: $2Props) => {",
     );
 
     // Add useMemo for expensive calculations
     optimizedCode = optimizedCode.replace(
       /const\s+(\w+)\s*=\s*useMemo\(/g,
-      'const $1 = useMemo('
+      "const $1 = useMemo(",
     );
 
     // Add useCallback for event handlers
     optimizedCode = optimizedCode.replace(
       /const\s+(\w+)\s*=\s*useCallback\(/g,
-      'const $1 = useCallback('
+      "const $1 = useCallback(",
     );
 
     return optimizedCode;
@@ -300,7 +305,7 @@ export class AdvancedBundleOptimizer {
     return {
       metrics,
       recommendations,
-      config: this.config
+      config: this.config,
     };
   }
 

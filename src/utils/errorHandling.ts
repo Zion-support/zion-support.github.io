@@ -25,7 +25,10 @@ export class ErrorHandler {
     return ErrorHandler.instance;
   }
 
-  public logError(error: Error, errorInfo?: { componentStack?: string; errorBoundary?: string }): void {
+  public logError(
+    error: Error,
+    errorInfo?: { componentStack?: string; errorBoundary?: string },
+  ): void {
     const errorData: ErrorInfo = {
       message: error.message,
       stack: error.stack,
@@ -34,23 +37,23 @@ export class ErrorHandler {
       timestamp: new Date().toISOString(),
       userAgent: navigator.userAgent,
       url: window.location.href,
-      userId: this.getUserId()
+      userId: this.getUserId(),
     };
 
     this.errorLog.push(errorData);
-    
+
     // Keep only the most recent errors
     if (this.errorLog.length > this.maxLogSize) {
       this.errorLog = this.errorLog.slice(-this.maxLogSize);
     }
 
     // Log to console in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('Error logged:', errorData);
+    if (process.env.NODE_ENV === "development") {
+      console.error("Error logged:", errorData);
     }
 
     // Send to external service in production
-    if (process.env.NODE_ENV === 'production') {
+    if (process.env.NODE_ENV === "production") {
       this.sendErrorToService(errorData);
     }
   }
@@ -66,7 +69,7 @@ export class ErrorHandler {
   private getUserId(): string | undefined {
     // Try to get user ID from localStorage or other sources
     try {
-      return localStorage.getItem('userId') || undefined;
+      return localStorage.getItem("userId") || undefined;
     } catch {
       return undefined;
     }
@@ -75,15 +78,15 @@ export class ErrorHandler {
   private async sendErrorToService(errorData: ErrorInfo): Promise<void> {
     try {
       // Send to your error tracking service
-      await fetch('/api/error-reporting', {
-        method: 'POST',
+      await fetch("/api/error-reporting", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify(errorData),
       });
     } catch (error) {
-      console.error('Failed to send error to service:', error);
+      console.error("Failed to send error to service:", error);
     }
   }
 }
@@ -93,12 +96,12 @@ export const errorHandler = ErrorHandler.getInstance();
 // Global error handlers
 export const setupGlobalErrorHandlers = (): void => {
   // Unhandled promise rejections
-  window.addEventListener('unhandledrejection', (event) => {
+  window.addEventListener("unhandledrejection", (event) => {
     errorHandler.logError(new Error(event.reason));
   });
 
   // Global JavaScript errors
-  window.addEventListener('error', (event) => {
+  window.addEventListener("error", (event) => {
     errorHandler.logError(event.error || new Error(event.message));
   });
 };
@@ -108,7 +111,7 @@ export const createErrorBoundaryHandler = (errorBoundaryName: string) => {
   return (error: Error, errorInfo: { componentStack: string }) => {
     errorHandler.logError(error, {
       componentStack: errorInfo.componentStack,
-      errorBoundary: errorBoundaryName
+      errorBoundary: errorBoundaryName,
     });
   };
 };

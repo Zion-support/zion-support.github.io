@@ -1,12 +1,12 @@
-import React, { useEffect, useState, useCallback, useMemo } from 'react';
+import React, { useEffect, useState, useCallback, useMemo } from "react";
 // import { performanceOptimizer } from '../utils/performanceOptimizations';
-import { 
-  getMemoryUsage, 
-  collectPerformanceMetrics, 
+import {
+  getMemoryUsage,
+  collectPerformanceMetrics,
   checkPerformanceBudget,
   debounce,
-  throttle
-} from '../utils/performanceHelpers';
+  throttle,
+} from "../utils/performanceHelpers";
 
 interface PerformanceMetrics {
   memory: {
@@ -29,16 +29,15 @@ interface PerformanceOptimizerProps {
 export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   children,
   enableMonitoring = true,
-  enableOptimizations = true
+  enableOptimizations = true,
 }) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     memory: null,
     loadTime: 0,
     domContentLoaded: 0,
     domInteractive: 0,
-    violations: []
+    violations: [],
   });
-
 
   // Debounced metrics collection
   const updateMetrics = useCallback(() => {
@@ -46,36 +45,41 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     const performanceMetrics = collectPerformanceMetrics();
     const violations = checkPerformanceBudget(performanceMetrics);
 
-    setMetrics(prev => ({
+    setMetrics((prev) => ({
       ...prev,
       memory: memory ? { ...memory, limit: (memory as any).limit || 0 } : null,
       loadTime: performanceMetrics.loadTime || 0,
       domContentLoaded: (performanceMetrics as any).domContentLoaded || 0,
       domInteractive: (performanceMetrics as any).domInteractive || 0,
-      violations: [...prev.violations, ...(Array.isArray(violations) ? violations : [])]
+      violations: [
+        ...prev.violations,
+        ...(Array.isArray(violations) ? violations : []),
+      ],
     }));
   }, []);
 
   const debouncedUpdateMetrics = useMemo(
     () => debounce(updateMetrics, 1000),
-    [updateMetrics]
+    [updateMetrics],
   );
 
   // Throttled scroll handler
   const handleScrollCallback = useCallback(() => {
     // Track scroll performance
     const scrollDepth = Math.round(
-      (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100
+      (window.scrollY /
+        (document.documentElement.scrollHeight - window.innerHeight)) *
+        100,
     );
-    
+
     if (scrollDepth > 0 && scrollDepth % 25 === 0) {
-      console.debug('Scroll depth:', scrollDepth);
+      console.debug("Scroll depth:", scrollDepth);
     }
   }, []);
 
   const handleScroll = useMemo(
     () => throttle(handleScrollCallback, 100),
-    [handleScrollCallback]
+    [handleScrollCallback],
   );
 
   // Performance optimizations
@@ -83,41 +87,41 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     if (!enableOptimizations) return;
 
     // Optimize images
-    const images = document.querySelectorAll('img');
-    images.forEach(img => {
+    const images = document.querySelectorAll("img");
+    images.forEach((img) => {
       if (!img.loading) {
-        img.loading = 'lazy';
+        img.loading = "lazy";
       }
     });
 
     // Optimize fonts
     const fontLinks = document.querySelectorAll('link[href*="font"]');
-    fontLinks.forEach(link => {
-      link.setAttribute('rel', 'preload');
-      link.setAttribute('as', 'font');
-      link.setAttribute('crossorigin', 'anonymous');
+    fontLinks.forEach((link) => {
+      link.setAttribute("rel", "preload");
+      link.setAttribute("as", "font");
+      link.setAttribute("crossorigin", "anonymous");
     });
 
     // Optimize CSS
     const stylesheets = document.querySelectorAll('link[rel="stylesheet"]');
-    stylesheets.forEach(link => {
-      if (!link.hasAttribute('media')) {
-        link.setAttribute('media', 'all');
+    stylesheets.forEach((link) => {
+      if (!link.hasAttribute("media")) {
+        link.setAttribute("media", "all");
       }
     });
 
-    console.debug('Performance optimizations applied');
+    console.debug("Performance optimizations applied");
   }, [enableOptimizations]);
 
   // Memory cleanup
   const cleanup = useCallback(() => {
     // Clean up unused event listeners
-    const unusedElements = document.querySelectorAll('[data-unused]');
-    unusedElements.forEach(el => el.remove());
+    const unusedElements = document.querySelectorAll("[data-unused]");
+    unusedElements.forEach((el) => el.remove());
 
     // Clean up unused styles
-    const unusedStyles = document.querySelectorAll('style[data-unused]');
-    unusedStyles.forEach(style => style.remove());
+    const unusedStyles = document.querySelectorAll("style[data-unused]");
+    unusedStyles.forEach((style) => style.remove());
 
     // Force garbage collection if available
     if (window.gc) {
@@ -135,34 +139,34 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     // Set up performance observer
     const observer = new PerformanceObserver((list) => {
       const entries = list.getEntries();
-      entries.forEach(entry => {
-        if (entry.entryType === 'measure' && entry.duration > 100) {
-          console.debug('Slow operation detected:', entry.name, entry.duration);
+      entries.forEach((entry) => {
+        if (entry.entryType === "measure" && entry.duration > 100) {
+          console.debug("Slow operation detected:", entry.name, entry.duration);
         }
       });
     });
 
     try {
-      observer.observe({ entryTypes: ['measure', 'navigation', 'resource'] });
+      observer.observe({ entryTypes: ["measure", "navigation", "resource"] });
     } catch (error) {
-      console.debug('Performance Observer not supported:', error);
+      console.debug("Performance Observer not supported:", error);
     }
 
     // Set up scroll monitoring
-    window.addEventListener('scroll', handleScroll, { passive: true });
+    window.addEventListener("scroll", handleScroll, { passive: true });
 
     // Set up resize monitoring
     const handleResize = throttle(() => {
       debouncedUpdateMetrics();
     }, 500);
 
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
 
     // Cleanup on unmount
     return () => {
       observer.disconnect();
-      window.removeEventListener('scroll', handleScroll);
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleResize);
     };
   }, [enableMonitoring, debouncedUpdateMetrics, handleScroll]);
 
@@ -180,32 +184,42 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   // Performance status
   const performanceStatus = useMemo(() => {
     const { memory, loadTime, violations } = metrics;
-    
+
     if (violations.length > 0) {
-      return { status: 'warning', message: `${violations.length} performance issues detected` };
+      return {
+        status: "warning",
+        message: `${violations.length} performance issues detected`,
+      };
     }
-    
+
     if (memory && memory.used > 100) {
-      return { status: 'warning', message: `High memory usage: ${memory.used}MB` };
+      return {
+        status: "warning",
+        message: `High memory usage: ${memory.used}MB`,
+      };
     }
-    
+
     if (loadTime > 3000) {
-      return { status: 'warning', message: `Slow load time: ${loadTime}ms` };
+      return { status: "warning", message: `Slow load time: ${loadTime}ms` };
     }
-    
-    return { status: 'good', message: 'Performance is optimal' };
+
+    return { status: "good", message: "Performance is optimal" };
   }, [metrics]);
 
   // Render performance indicator in development
-  if (process.env.NODE_ENV === 'development' && enableMonitoring) {
+  if (process.env.NODE_ENV === "development" && enableMonitoring) {
     return (
       <div className="relative">
         {children}
         <div className="fixed bottom-4 right-4 bg-black bg-opacity-75 text-white p-2 rounded text-xs z-50">
           <div className="flex items-center gap-2">
-            <div className={`w-2 h-2 rounded-full ${
-              performanceStatus.status === 'good' ? 'bg-green-500' : 'bg-yellow-500'
-            }`} />
+            <div
+              className={`w-2 h-2 rounded-full ${
+                performanceStatus.status === "good"
+                  ? "bg-green-500"
+                  : "bg-yellow-500"
+              }`}
+            />
             <span>{performanceStatus.message}</span>
           </div>
           {metrics.memory && (
@@ -228,7 +242,7 @@ export const usePerformanceMonitoring = () => {
     loadTime: 0,
     domContentLoaded: 0,
     domInteractive: 0,
-    violations: []
+    violations: [],
   });
 
   const updateMetrics = useCallback(() => {
@@ -241,7 +255,7 @@ export const usePerformanceMonitoring = () => {
       loadTime: performanceMetrics.loadTime || 0,
       domContentLoaded: (performanceMetrics as any).domContentLoaded || 0,
       domInteractive: (performanceMetrics as any).domInteractive || 0,
-      violations: Array.isArray(violations) ? violations : []
+      violations: Array.isArray(violations) ? violations : [],
     });
   }, []);
 
@@ -266,13 +280,17 @@ export const PerformanceBudget: React.FC<{
 
   const violations = useMemo(() => {
     const violations: string[] = [];
-    
+
     if (metrics.memory && metrics.memory.used > budget.maxMemoryUsage) {
-      violations.push(`Memory usage ${metrics.memory.used}MB exceeds budget ${budget.maxMemoryUsage}MB`);
+      violations.push(
+        `Memory usage ${metrics.memory.used}MB exceeds budget ${budget.maxMemoryUsage}MB`,
+      );
     }
-    
+
     if (metrics.loadTime > budget.maxLoadTime) {
-      violations.push(`Load time ${metrics.loadTime}ms exceeds budget ${budget.maxLoadTime}ms`);
+      violations.push(
+        `Load time ${metrics.loadTime}ms exceeds budget ${budget.maxLoadTime}ms`,
+      );
     }
 
     return violations;

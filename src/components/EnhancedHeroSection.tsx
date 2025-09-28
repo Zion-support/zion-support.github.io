@@ -1,5 +1,5 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 
 const EnhancedHeroSection: React.FC = () => {
   return (
@@ -24,7 +24,8 @@ const EnhancedHeroSection: React.FC = () => {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto"
         >
-          Discover innovative solutions and cutting-edge technology that will transform your business.
+          Discover innovative solutions and cutting-edge technology that will
+          transform your business.
         </motion.p>
         <motion.div
           initial={{ opacity: 0, y: 20 }}

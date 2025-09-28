@@ -1,16 +1,16 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { 
-  // useSEOOptimization, 
-  seoPerformanceMonitor 
-} from '../utils/seoOptimizations';
-import { 
+import React, { useState, useEffect, useCallback } from "react";
+import {
+  // useSEOOptimization,
+  seoPerformanceMonitor,
+} from "../utils/seoOptimizations";
+import {
   // useKeyboardNavigation,
   // useFocusManagement,
   // useScreenReaderAnnouncements,
   useHighContrastMode,
   useReducedMotion,
-  accessibilityPerformanceMonitor
-} from '../utils/accessibilityOptimizations';
+  accessibilityPerformanceMonitor,
+} from "../utils/accessibilityOptimizations";
 
 /**
  * Comprehensive Performance Dashboard
@@ -23,7 +23,7 @@ export const ComprehensivePerformanceDashboard: React.FC = () => {
     firstContentfulPaint: 0,
     largestContentfulPaint: 0,
     cumulativeLayoutShift: 0,
-    firstInputDelay: 0
+    firstInputDelay: 0,
   });
 
   const [accessibilityMetrics, setAccessibilityMetrics] = useState({
@@ -31,19 +31,19 @@ export const ComprehensivePerformanceDashboard: React.FC = () => {
     focusTransitionTime: 0,
     screenReaderCompatibility: true,
     highContrastMode: false,
-    reducedMotion: false
+    reducedMotion: false,
   });
 
   const [seoMetrics, setSeoMetrics] = useState({
     metaTagsComplete: true,
     structuredDataValid: true,
     coreWebVitalsPassed: true,
-    pageLoadOptimized: true
+    pageLoadOptimized: true,
   });
 
   // Initialize SEO optimization
   // const seoOptimization = useSEOOptimization();
-  
+
   // Initialize accessibility hooks
   // const keyboardNavigation = useKeyboardNavigation();
   // const focusManagement = useFocusManagement();
@@ -53,40 +53,48 @@ export const ComprehensivePerformanceDashboard: React.FC = () => {
 
   // Monitor performance metrics
   const updatePerformanceMetrics = useCallback(() => {
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      
-      setPerformanceMetrics(prev => ({
+    if (typeof window !== "undefined" && "performance" in window) {
+      const navigation = performance.getEntriesByType(
+        "navigation",
+      )[0] as PerformanceNavigationTiming;
+
+      setPerformanceMetrics((prev) => ({
         ...prev,
         loadTime: navigation.loadEventEnd - navigation.fetchStart,
-        domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
+        domContentLoaded:
+          navigation.domContentLoadedEventEnd -
+          navigation.domContentLoadedEventStart,
         firstContentfulPaint: 0, // Will be updated by Core Web Vitals
         largestContentfulPaint: 0, // Will be updated by Core Web Vitals
         cumulativeLayoutShift: 0, // Will be updated by Core Web Vitals
-        firstInputDelay: 0 // Will be updated by Core Web Vitals
+        firstInputDelay: 0, // Will be updated by Core Web Vitals
       }));
     }
   }, []);
 
   // Monitor accessibility metrics
   const updateAccessibilityMetrics = useCallback(() => {
-    setAccessibilityMetrics(prev => ({
+    setAccessibilityMetrics((prev) => ({
       ...prev,
       screenReaderCompatibility: true, // Assume true for now
       highContrastMode: isHighContrast,
-      reducedMotion: prefersReducedMotion
+      reducedMotion: prefersReducedMotion,
     }));
   }, [isHighContrast, prefersReducedMotion]);
 
   // Monitor SEO metrics
   const updateSEOMetrics = useCallback(() => {
-    const metaTags = document.querySelectorAll('meta[name="description"], meta[property="og:title"]');
-    const structuredData = document.querySelectorAll('script[type="application/ld+json"]');
-    
-    setSeoMetrics(prev => ({
+    const metaTags = document.querySelectorAll(
+      'meta[name="description"], meta[property="og:title"]',
+    );
+    const structuredData = document.querySelectorAll(
+      'script[type="application/ld+json"]',
+    );
+
+    setSeoMetrics((prev) => ({
       ...prev,
       metaTagsComplete: metaTags.length >= 2,
-      structuredDataValid: structuredData.length > 0
+      structuredDataValid: structuredData.length > 0,
     }));
   }, []);
 
@@ -94,21 +102,23 @@ export const ComprehensivePerformanceDashboard: React.FC = () => {
   useEffect(() => {
     // Performance monitoring
     updatePerformanceMetrics();
-    
+
     // Accessibility monitoring
     updateAccessibilityMetrics();
-    
+
     // SEO monitoring
     updateSEOMetrics();
-    
+
     // Core Web Vitals monitoring
     seoPerformanceMonitor.trackCoreWebVitals();
     seoPerformanceMonitor.monitorPageLoad();
-    
+
     // Accessibility performance monitoring
-    const cleanupKeyboard = accessibilityPerformanceMonitor.monitorKeyboardNavigation();
-    const cleanupFocus = accessibilityPerformanceMonitor.monitorFocusPerformance();
-    
+    const cleanupKeyboard =
+      accessibilityPerformanceMonitor.monitorKeyboardNavigation();
+    const cleanupFocus =
+      accessibilityPerformanceMonitor.monitorFocusPerformance();
+
     return () => {
       cleanupKeyboard();
       cleanupFocus();
@@ -128,53 +138,55 @@ export const ComprehensivePerformanceDashboard: React.FC = () => {
 
   const getPerformanceScore = () => {
     let score = 100;
-    
+
     if (performanceMetrics.loadTime > 3000) score -= 20;
     if (performanceMetrics.domContentLoaded > 1000) score -= 15;
     if (performanceMetrics.firstContentfulPaint > 1800) score -= 15;
     if (performanceMetrics.largestContentfulPaint > 2500) score -= 20;
     if (performanceMetrics.cumulativeLayoutShift > 0.1) score -= 15;
     if (performanceMetrics.firstInputDelay > 100) score -= 15;
-    
+
     return Math.max(0, score);
   };
 
   const getAccessibilityScore = () => {
     let score = 100;
-    
+
     if (!accessibilityMetrics.screenReaderCompatibility) score -= 30;
     if (accessibilityMetrics.keyboardNavigationTime > 100) score -= 20;
     if (accessibilityMetrics.focusTransitionTime > 50) score -= 15;
-    
+
     return Math.max(0, score);
   };
 
   const getSEOScore = () => {
     let score = 100;
-    
+
     if (!seoMetrics.metaTagsComplete) score -= 25;
     if (!seoMetrics.structuredDataValid) score -= 20;
     if (!seoMetrics.coreWebVitalsPassed) score -= 30;
     if (!seoMetrics.pageLoadOptimized) score -= 25;
-    
+
     return Math.max(0, score);
   };
 
   const performanceScore = getPerformanceScore();
   const accessibilityScore = getAccessibilityScore();
   const seoScore = getSEOScore();
-  const overallScore = Math.round((performanceScore + accessibilityScore + seoScore) / 3);
+  const overallScore = Math.round(
+    (performanceScore + accessibilityScore + seoScore) / 3,
+  );
 
   const getScoreColor = (score: number) => {
-    if (score >= 90) return 'text-green-600';
-    if (score >= 70) return 'text-yellow-600';
-    return 'text-red-600';
+    if (score >= 90) return "text-green-600";
+    if (score >= 70) return "text-yellow-600";
+    return "text-red-600";
   };
 
   const getScoreBgColor = (score: number) => {
-    if (score >= 90) return 'bg-green-100';
-    if (score >= 70) return 'bg-yellow-100';
-    return 'bg-red-100';
+    if (score >= 90) return "bg-green-100";
+    if (score >= 70) return "bg-yellow-100";
+    return "bg-red-100";
   };
 
   return (
@@ -190,7 +202,9 @@ export const ComprehensivePerformanceDashboard: React.FC = () => {
 
       {/* Overall Score */}
       <div className="mb-8">
-        <div className={`inline-flex items-center px-4 py-2 rounded-full ${getScoreBgColor(overallScore)}`}>
+        <div
+          className={`inline-flex items-center px-4 py-2 rounded-full ${getScoreBgColor(overallScore)}`}
+        >
           <span className={`text-2xl font-bold ${getScoreColor(overallScore)}`}>
             {overallScore}
           </span>
@@ -204,7 +218,9 @@ export const ComprehensivePerformanceDashboard: React.FC = () => {
         <div className="bg-gray-50 rounded-lg p-4">
           <div className="flex items-center justify-between mb-4">
             <h3 className="text-lg font-semibold text-gray-800">Performance</h3>
-            <span className={`text-lg font-bold ${getScoreColor(performanceScore)}`}>
+            <span
+              className={`text-lg font-bold ${getScoreColor(performanceScore)}`}
+            >
               {performanceScore}
             </span>
           </div>
@@ -219,11 +235,15 @@ export const ComprehensivePerformanceDashboard: React.FC = () => {
             </div>
             <div className="flex justify-between text-sm">
               <span>FCP:</span>
-              <span>{performanceMetrics.firstContentfulPaint.toFixed(0)}ms</span>
+              <span>
+                {performanceMetrics.firstContentfulPaint.toFixed(0)}ms
+              </span>
             </div>
             <div className="flex justify-between text-sm">
               <span>LCP:</span>
-              <span>{performanceMetrics.largestContentfulPaint.toFixed(0)}ms</span>
+              <span>
+                {performanceMetrics.largestContentfulPaint.toFixed(0)}ms
+              </span>
             </div>
           </div>
         </div>
@@ -231,33 +251,57 @@ export const ComprehensivePerformanceDashboard: React.FC = () => {
         {/* Accessibility Metrics */}
         <div className="bg-gray-50 rounded-lg p-4">
           <div className="flex items-center justify-between mb-4">
-            <h3 className="text-lg font-semibold text-gray-800">Accessibility</h3>
-            <span className={`text-lg font-bold ${getScoreColor(accessibilityScore)}`}>
+            <h3 className="text-lg font-semibold text-gray-800">
+              Accessibility
+            </h3>
+            <span
+              className={`text-lg font-bold ${getScoreColor(accessibilityScore)}`}
+            >
               {accessibilityScore}
             </span>
           </div>
           <div className="space-y-2">
             <div className="flex justify-between text-sm">
               <span>Screen Reader:</span>
-              <span className={accessibilityMetrics.screenReaderCompatibility ? 'text-green-600' : 'text-red-600'}>
-                {accessibilityMetrics.screenReaderCompatibility ? '✓' : '✗'}
+              <span
+                className={
+                  accessibilityMetrics.screenReaderCompatibility
+                    ? "text-green-600"
+                    : "text-red-600"
+                }
+              >
+                {accessibilityMetrics.screenReaderCompatibility ? "✓" : "✗"}
               </span>
             </div>
             <div className="flex justify-between text-sm">
               <span>High Contrast:</span>
-              <span className={accessibilityMetrics.highContrastMode ? 'text-blue-600' : 'text-gray-600'}>
-                {accessibilityMetrics.highContrastMode ? 'On' : 'Off'}
+              <span
+                className={
+                  accessibilityMetrics.highContrastMode
+                    ? "text-blue-600"
+                    : "text-gray-600"
+                }
+              >
+                {accessibilityMetrics.highContrastMode ? "On" : "Off"}
               </span>
             </div>
             <div className="flex justify-between text-sm">
               <span>Reduced Motion:</span>
-              <span className={accessibilityMetrics.reducedMotion ? 'text-blue-600' : 'text-gray-600'}>
-                {accessibilityMetrics.reducedMotion ? 'On' : 'Off'}
+              <span
+                className={
+                  accessibilityMetrics.reducedMotion
+                    ? "text-blue-600"
+                    : "text-gray-600"
+                }
+              >
+                {accessibilityMetrics.reducedMotion ? "On" : "Off"}
               </span>
             </div>
             <div className="flex justify-between text-sm">
               <span>Focus Time:</span>
-              <span>{accessibilityMetrics.focusTransitionTime.toFixed(0)}ms</span>
+              <span>
+                {accessibilityMetrics.focusTransitionTime.toFixed(0)}ms
+              </span>
             </div>
           </div>
         </div>
@@ -273,26 +317,50 @@ export const ComprehensivePerformanceDashboard: React.FC = () => {
           <div className="space-y-2">
             <div className="flex justify-between text-sm">
               <span>Meta Tags:</span>
-              <span className={seoMetrics.metaTagsComplete ? 'text-green-600' : 'text-red-600'}>
-                {seoMetrics.metaTagsComplete ? '✓' : '✗'}
+              <span
+                className={
+                  seoMetrics.metaTagsComplete
+                    ? "text-green-600"
+                    : "text-red-600"
+                }
+              >
+                {seoMetrics.metaTagsComplete ? "✓" : "✗"}
               </span>
             </div>
             <div className="flex justify-between text-sm">
               <span>Structured Data:</span>
-              <span className={seoMetrics.structuredDataValid ? 'text-green-600' : 'text-red-600'}>
-                {seoMetrics.structuredDataValid ? '✓' : '✗'}
+              <span
+                className={
+                  seoMetrics.structuredDataValid
+                    ? "text-green-600"
+                    : "text-red-600"
+                }
+              >
+                {seoMetrics.structuredDataValid ? "✓" : "✗"}
               </span>
             </div>
             <div className="flex justify-between text-sm">
               <span>Core Web Vitals:</span>
-              <span className={seoMetrics.coreWebVitalsPassed ? 'text-green-600' : 'text-red-600'}>
-                {seoMetrics.coreWebVitalsPassed ? '✓' : '✗'}
+              <span
+                className={
+                  seoMetrics.coreWebVitalsPassed
+                    ? "text-green-600"
+                    : "text-red-600"
+                }
+              >
+                {seoMetrics.coreWebVitalsPassed ? "✓" : "✗"}
               </span>
             </div>
             <div className="flex justify-between text-sm">
               <span>Page Load:</span>
-              <span className={seoMetrics.pageLoadOptimized ? 'text-green-600' : 'text-red-600'}>
-                {seoMetrics.pageLoadOptimized ? '✓' : '✗'}
+              <span
+                className={
+                  seoMetrics.pageLoadOptimized
+                    ? "text-green-600"
+                    : "text-red-600"
+                }
+              >
+                {seoMetrics.pageLoadOptimized ? "✓" : "✗"}
               </span>
             </div>
           </div>

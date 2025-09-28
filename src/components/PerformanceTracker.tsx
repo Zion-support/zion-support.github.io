@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState, useCallback } from 'react';
+import React, { useEffect, useRef, useState, useCallback } from "react";
 
 interface PerformanceMetrics {
   loadTime: number;
@@ -26,7 +26,7 @@ export const PerformanceTracker: React.FC<PerformanceTrackerProps> = ({
   onMetricsUpdate,
   interval = 5000,
   enableCoreWebVitals = true,
-  enableAdvancedMetrics = true
+  enableAdvancedMetrics = true,
 }) => {
   const metricsRef = useRef<PerformanceMetrics>({
     loadTime: 0,
@@ -39,7 +39,7 @@ export const PerformanceTracker: React.FC<PerformanceTrackerProps> = ({
     ttfb: 0,
     networkLatency: 0,
     domSize: 0,
-    resourceCount: 0
+    resourceCount: 0,
   });
   const frameCountRef = useRef(0);
   const lastTimeRef = useRef(performance.now());
@@ -51,34 +51,38 @@ export const PerformanceTracker: React.FC<PerformanceTrackerProps> = ({
     if (!enableCoreWebVitals || !isTracking) return;
 
     // Track LCP (Largest Contentful Paint)
-    if ('PerformanceObserver' in window) {
+    if ("PerformanceObserver" in window) {
       try {
         const lcpObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           const lastEntry = entries[entries.length - 1] as PerformanceEntry;
           metricsRef.current.lcp = lastEntry.startTime;
         });
-        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+        lcpObserver.observe({ entryTypes: ["largest-contentful-paint"] });
 
         // Track FID (First Input Delay)
         const fidObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           entries.forEach((entry) => {
-            if (entry.entryType === 'first-input') {
+            if (entry.entryType === "first-input") {
               const fidEntry = entry as PerformanceEventTiming;
-              metricsRef.current.fid = fidEntry.processingStart - fidEntry.startTime;
+              metricsRef.current.fid =
+                fidEntry.processingStart - fidEntry.startTime;
             }
           });
         });
-        fidObserver.observe({ entryTypes: ['first-input'] });
+        fidObserver.observe({ entryTypes: ["first-input"] });
 
         // Track CLS (Cumulative Layout Shift)
         let clsValue = 0;
         const clsObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           entries.forEach((entry) => {
-            if (entry.entryType === 'layout-shift') {
-              const layoutShiftEntry = entry as PerformanceEntry & { hadRecentInput: boolean; value: number };
+            if (entry.entryType === "layout-shift") {
+              const layoutShiftEntry = entry as PerformanceEntry & {
+                hadRecentInput: boolean;
+                value: number;
+              };
               if (!layoutShiftEntry.hadRecentInput) {
                 clsValue += layoutShiftEntry.value;
                 metricsRef.current.cls = clsValue;
@@ -86,19 +90,20 @@ export const PerformanceTracker: React.FC<PerformanceTrackerProps> = ({
             }
           });
         });
-        clsObserver.observe({ entryTypes: ['layout-shift'] });
+        clsObserver.observe({ entryTypes: ["layout-shift"] });
 
         // Track TTFB (Time to First Byte)
         const navigationObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           entries.forEach((entry) => {
-            if (entry.entryType === 'navigation') {
+            if (entry.entryType === "navigation") {
               const navEntry = entry as PerformanceNavigationTiming;
-              metricsRef.current.ttfb = navEntry.responseStart - navEntry.requestStart;
+              metricsRef.current.ttfb =
+                navEntry.responseStart - navEntry.requestStart;
             }
           });
         });
-        navigationObserver.observe({ entryTypes: ['navigation'] });
+        navigationObserver.observe({ entryTypes: ["navigation"] });
 
         return () => {
           lcpObserver.disconnect();
@@ -107,7 +112,7 @@ export const PerformanceTracker: React.FC<PerformanceTrackerProps> = ({
           navigationObserver.disconnect();
         };
       } catch (error) {
-        console.warn('Core Web Vitals tracking failed:', error);
+        console.warn("Core Web Vitals tracking failed:", error);
       }
     }
   }, [enableCoreWebVitals, isTracking]);
@@ -118,17 +123,17 @@ export const PerformanceTracker: React.FC<PerformanceTrackerProps> = ({
 
     // Track DOM size
     const trackDOMSize = () => {
-      metricsRef.current.domSize = document.querySelectorAll('*').length;
+      metricsRef.current.domSize = document.querySelectorAll("*").length;
     };
 
     // Track resource count
     const trackResourceCount = () => {
-      if ('PerformanceObserver' in window) {
+      if ("PerformanceObserver" in window) {
         const resourceObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           metricsRef.current.resourceCount = entries.length;
         });
-        resourceObserver.observe({ entryTypes: ['resource'] });
+        resourceObserver.observe({ entryTypes: ["resource"] });
         return () => resourceObserver.disconnect();
       }
     };
@@ -136,15 +141,18 @@ export const PerformanceTracker: React.FC<PerformanceTrackerProps> = ({
     // Track network latency
     const trackNetworkLatency = () => {
       const start = performance.now();
-      fetch('/api/health', { method: 'HEAD' })
+      fetch("/api/health", { method: "HEAD" })
         .then(() => {
           metricsRef.current.networkLatency = performance.now() - start;
         })
         .catch(() => {
           // Fallback to navigation timing
-          const nav = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+          const nav = performance.getEntriesByType(
+            "navigation",
+          )[0] as PerformanceNavigationTiming;
           if (nav) {
-            metricsRef.current.networkLatency = nav.responseEnd - nav.requestStart;
+            metricsRef.current.networkLatency =
+              nav.responseEnd - nav.requestStart;
           }
         });
     };
@@ -166,13 +174,15 @@ export const PerformanceTracker: React.FC<PerformanceTrackerProps> = ({
     // Track FPS
     const trackFPS = () => {
       if (!isTracking) return;
-      
+
       frameCountRef.current++;
       const currentTime = performance.now();
       const deltaTime = currentTime - lastTimeRef.current;
 
       if (deltaTime >= 1000) {
-        metricsRef.current.fps = Math.round((frameCountRef.current * 1000) / deltaTime);
+        metricsRef.current.fps = Math.round(
+          (frameCountRef.current * 1000) / deltaTime,
+        );
         frameCountRef.current = 0;
         lastTimeRef.current = currentTime;
       }
@@ -182,8 +192,9 @@ export const PerformanceTracker: React.FC<PerformanceTrackerProps> = ({
 
     // Track memory usage if available
     const trackMemory = () => {
-      if ('memory' in performance) {
-        const memory = (performance as { memory: { usedJSHeapSize: number } }).memory;
+      if ("memory" in performance) {
+        const memory = (performance as { memory: { usedJSHeapSize: number } })
+          .memory;
         metricsRef.current.memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // MB
       }
     };
@@ -202,15 +213,15 @@ export const PerformanceTracker: React.FC<PerformanceTrackerProps> = ({
 
     // Set up tracking
     requestAnimationFrame(trackFPS);
-    window.addEventListener('error', handleError);
-    window.addEventListener('unhandledrejection', handleError);
+    window.addEventListener("error", handleError);
+    window.addEventListener("unhandledrejection", handleError);
 
     // Initial render time tracking
     requestAnimationFrame(trackRenderTime);
 
     // Set up Core Web Vitals tracking
     const cleanupCoreWebVitals = trackCoreWebVitals();
-    
+
     // Set up advanced metrics tracking
     const cleanupAdvancedMetrics = trackAdvancedMetrics();
 
@@ -225,12 +236,18 @@ export const PerformanceTracker: React.FC<PerformanceTrackerProps> = ({
     // Cleanup
     return () => {
       clearInterval(metricsInterval);
-      window.removeEventListener('error', handleError);
-      window.removeEventListener('unhandledrejection', handleError);
+      window.removeEventListener("error", handleError);
+      window.removeEventListener("unhandledrejection", handleError);
       cleanupCoreWebVitals?.();
       cleanupAdvancedMetrics?.();
     };
-  }, [onMetricsUpdate, interval, isTracking, trackCoreWebVitals, trackAdvancedMetrics]);
+  }, [
+    onMetricsUpdate,
+    interval,
+    isTracking,
+    trackCoreWebVitals,
+    trackAdvancedMetrics,
+  ]);
 
   // Expose control methods
   // const resetMetrics = useCallback(() => {
@@ -271,13 +288,16 @@ export const usePerformanceTracker = (options?: {
     ttfb: 0,
     networkLatency: 0,
     domSize: 0,
-    resourceCount: 0
+    resourceCount: 0,
   });
 
-  const handleMetricsUpdate = useCallback((newMetrics: PerformanceMetrics) => {
-    setMetrics(newMetrics);
-    options?.onMetricsUpdate?.(newMetrics);
-  }, [options]);
+  const handleMetricsUpdate = useCallback(
+    (newMetrics: PerformanceMetrics) => {
+      setMetrics(newMetrics);
+      options?.onMetricsUpdate?.(newMetrics);
+    },
+    [options],
+  );
 
   return {
     metrics,
@@ -288,7 +308,7 @@ export const usePerformanceTracker = (options?: {
         enableCoreWebVitals={options?.enableCoreWebVitals}
         enableAdvancedMetrics={options?.enableAdvancedMetrics}
       />
-    )
+    ),
   };
 };
 

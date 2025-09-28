@@ -47,7 +47,7 @@ class SecurityEnhancer {
   }
 
   private initializeSecurity(): void {
-    if (typeof window === 'undefined') return;
+    if (typeof window === "undefined") return;
 
     this.setupCSP();
     this.setupXSSProtection();
@@ -63,7 +63,7 @@ class SecurityEnhancer {
     if (!this.config.enableCSP) return;
 
     // Monitor CSP violations
-    document.addEventListener('securitypolicyviolation', (event) => {
+    document.addEventListener("securitypolicyviolation", (event) => {
       this.handleCSPViolation(event);
     });
 
@@ -73,9 +73,9 @@ class SecurityEnhancer {
 
   private handleCSPViolation(event: SecurityPolicyViolationEvent): void {
     this.metrics.cspViolations++;
-    this.violationCounts.set('csp', (this.violationCounts.get('csp') || 0) + 1);
+    this.violationCounts.set("csp", (this.violationCounts.get("csp") || 0) + 1);
 
-    console.warn('CSP Violation:', {
+    console.warn("CSP Violation:", {
       violatedDirective: event.violatedDirective,
       blockedURI: event.blockedURI,
       sourceFile: event.sourceFile,
@@ -84,18 +84,19 @@ class SecurityEnhancer {
     });
 
     // Report to analytics or monitoring service
-    this.reportSecurityEvent('csp_violation', {
+    this.reportSecurityEvent("csp_violation", {
       directive: event.violatedDirective,
       blockedURI: event.blockedURI,
     });
   }
 
   private addCSPMetaTag(): void {
-    const csp = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net https://unpkg.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https: blob:; connect-src 'self' https: wss:; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self';";
-    
-    const metaTag = document.createElement('meta');
-    metaTag.setAttribute('http-equiv', 'Content-Security-Policy');
-    metaTag.setAttribute('content', csp);
+    const csp =
+      "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net https://unpkg.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https: blob:; connect-src 'self' https: wss:; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self';";
+
+    const metaTag = document.createElement("meta");
+    metaTag.setAttribute("http-equiv", "Content-Security-Policy");
+    metaTag.setAttribute("content", csp);
     document.head.appendChild(metaTag);
   }
 
@@ -116,15 +117,17 @@ class SecurityEnhancer {
   }
 
   private sanitizeInputs(): void {
-    const inputs = document.querySelectorAll('input, textarea, select');
+    const inputs = document.querySelectorAll("input, textarea, select");
     inputs.forEach((input) => {
-      input.addEventListener('input', (event) => {
+      input.addEventListener("input", (event) => {
         const target = event.target as HTMLInputElement;
         const sanitized = this.sanitizeString(target.value);
         if (sanitized !== target.value) {
           this.metrics.xssAttempts++;
           target.value = sanitized;
-          this.reportSecurityEvent('xss_attempt', { input: target.name || target.id });
+          this.reportSecurityEvent("xss_attempt", {
+            input: target.name || target.id,
+          });
         }
       });
     });
@@ -132,32 +135,32 @@ class SecurityEnhancer {
 
   private sanitizeString(input: string): string {
     return input
-      .replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '')
-      .replace(/javascript:/gi, '')
-      .replace(/on\w+\s*=/gi, '')
-      .replace(/<iframe\b[^<]*(?:(?!<\/iframe>)<[^<]*)*<\/iframe>/gi, '')
-      .replace(/<object\b[^<]*(?:(?!<\/object>)<[^<]*)*<\/object>/gi, '')
-      .replace(/<embed\b[^<]*(?:(?!<\/embed>)<[^<]*)*<\/embed>/gi, '');
+      .replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, "")
+      .replace(/javascript:/gi, "")
+      .replace(/on\w+\s*=/gi, "")
+      .replace(/<iframe\b[^<]*(?:(?!<\/iframe>)<[^<]*)*<\/iframe>/gi, "")
+      .replace(/<object\b[^<]*(?:(?!<\/object>)<[^<]*)*<\/object>/gi, "")
+      .replace(/<embed\b[^<]*(?:(?!<\/embed>)<[^<]*)*<\/embed>/gi, "");
   }
 
   private monitorScriptExecution(): void {
     const originalCreateElement = document.createElement;
-    document.createElement = function(tagName: string) {
+    document.createElement = function (tagName: string) {
       const element = originalCreateElement.call(this, tagName);
-      
-      if (tagName.toLowerCase() === 'script') {
-        console.warn('Dynamic script creation detected:', element);
+
+      if (tagName.toLowerCase() === "script") {
+        console.warn("Dynamic script creation detected:", element);
       }
-      
+
       return element;
     };
   }
 
   private addXSSProtectionHeaders(): void {
     // These would typically be set by the server, but we can add meta tags as fallback
-    const metaTag = document.createElement('meta');
-    metaTag.setAttribute('http-equiv', 'X-XSS-Protection');
-    metaTag.setAttribute('content', '1; mode=block');
+    const metaTag = document.createElement("meta");
+    metaTag.setAttribute("http-equiv", "X-XSS-Protection");
+    metaTag.setAttribute("content", "1; mode=block");
     document.head.appendChild(metaTag);
   }
 
@@ -172,12 +175,12 @@ class SecurityEnhancer {
   }
 
   private addCSRFTokens(): void {
-    const forms = document.querySelectorAll('form');
+    const forms = document.querySelectorAll("form");
     forms.forEach((form) => {
       const token = this.generateCSRFToken();
-      const tokenInput = document.createElement('input');
-      tokenInput.type = 'hidden';
-      tokenInput.name = 'csrf_token';
+      const tokenInput = document.createElement("input");
+      tokenInput.type = "hidden";
+      tokenInput.name = "csrf_token";
       tokenInput.value = token;
       form.appendChild(tokenInput);
     });
@@ -186,15 +189,17 @@ class SecurityEnhancer {
   private generateCSRFToken(): string {
     const array = new Uint8Array(32);
     crypto.getRandomValues(array);
-    return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('');
+    return Array.from(array, (byte) => byte.toString(16).padStart(2, "0")).join(
+      "",
+    );
   }
 
   private validateCSRFTokens(): void {
     // This would typically be handled by the server
     // For client-side, we can store tokens and validate them
-    const storedToken = sessionStorage.getItem('csrf_token');
+    const storedToken = sessionStorage.getItem("csrf_token");
     if (!storedToken) {
-      sessionStorage.setItem('csrf_token', this.generateCSRFToken());
+      sessionStorage.setItem("csrf_token", this.generateCSRFToken());
     }
   }
 
@@ -212,17 +217,17 @@ class SecurityEnhancer {
   private monitorFileUploads(): void {
     const fileInputs = document.querySelectorAll('input[type="file"]');
     fileInputs.forEach((input) => {
-      input.addEventListener('change', (event) => {
+      input.addEventListener("change", (event) => {
         const target = event.target as HTMLInputElement;
         const files = target.files;
-        
+
         if (files) {
           Array.from(files).forEach((file) => {
             if (!this.isValidFileType(file)) {
               this.metrics.suspiciousActivity++;
-              this.reportSecurityEvent('invalid_file_type', { 
-                fileName: file.name, 
-                fileType: file.type 
+              this.reportSecurityEvent("invalid_file_type", {
+                fileName: file.name,
+                fileType: file.type,
               });
             }
           });
@@ -233,26 +238,26 @@ class SecurityEnhancer {
 
   private isValidFileType(file: File): boolean {
     const allowedTypes = [
-      'image/jpeg',
-      'image/png',
-      'image/gif',
-      'image/webp',
-      'application/pdf',
-      'text/plain',
-      'application/msword',
-      'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+      "image/jpeg",
+      "image/png",
+      "image/gif",
+      "image/webp",
+      "application/pdf",
+      "text/plain",
+      "application/msword",
+      "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
     ];
-    
+
     return allowedTypes.includes(file.type);
   }
 
   private validateURLs(): void {
-    const links = document.querySelectorAll('a[href]');
+    const links = document.querySelectorAll("a[href]");
     links.forEach((link) => {
-      const href = link.getAttribute('href');
+      const href = link.getAttribute("href");
       if (href && this.isSuspiciousURL(href)) {
         this.metrics.suspiciousActivity++;
-        this.reportSecurityEvent('suspicious_url', { url: href });
+        this.reportSecurityEvent("suspicious_url", { url: href });
       }
     });
   }
@@ -264,15 +269,15 @@ class SecurityEnhancer {
       /vbscript:/i,
       /file:/i,
     ];
-    
-    return suspiciousPatterns.some(pattern => pattern.test(url));
+
+    return suspiciousPatterns.some((pattern) => pattern.test(url));
   }
 
   private preventClickjacking(): void {
     // Add X-Frame-Options via meta tag
-    const metaTag = document.createElement('meta');
-    metaTag.setAttribute('http-equiv', 'X-Frame-Options');
-    metaTag.setAttribute('content', 'DENY');
+    const metaTag = document.createElement("meta");
+    metaTag.setAttribute("http-equiv", "X-Frame-Options");
+    metaTag.setAttribute("content", "DENY");
     document.head.appendChild(metaTag);
 
     // Additional client-side protection
@@ -290,29 +295,32 @@ class SecurityEnhancer {
     // Monitor for suspicious network activity
     const originalFetch = window.fetch;
     window.fetch = async (input, init) => {
-      const url = typeof input === 'string' ? input : (input as Request).url;
-      
+      const url = typeof input === "string" ? input : (input as Request).url;
+
       if (this.isSuspiciousURL(url)) {
         this.metrics.suspiciousActivity++;
-        this.reportSecurityEvent('suspicious_fetch', { url });
-        throw new Error('Suspicious URL blocked');
+        this.reportSecurityEvent("suspicious_fetch", { url });
+        throw new Error("Suspicious URL blocked");
       }
-      
+
       return originalFetch(input, init);
     };
 
     // Monitor for suspicious DOM modifications
     const observer = new MutationObserver((mutations) => {
       mutations.forEach((mutation) => {
-        if (mutation.type === 'childList') {
+        if (mutation.type === "childList") {
           mutation.addedNodes.forEach((node) => {
             if (node.nodeType === Node.ELEMENT_NODE) {
               const element = node as Element;
-              if (element.tagName === 'SCRIPT' || element.tagName === 'IFRAME') {
+              if (
+                element.tagName === "SCRIPT" ||
+                element.tagName === "IFRAME"
+              ) {
                 this.metrics.suspiciousActivity++;
-                this.reportSecurityEvent('suspicious_dom_modification', {
+                this.reportSecurityEvent("suspicious_dom_modification", {
                   tagName: element.tagName,
-                  src: element.getAttribute('src'),
+                  src: element.getAttribute("src"),
                 });
               }
             }
@@ -330,10 +338,13 @@ class SecurityEnhancer {
   /**
    * Report security events
    */
-  private reportSecurityEvent(type: string, data: Record<string, unknown>): void {
+  private reportSecurityEvent(
+    type: string,
+    data: Record<string, unknown>,
+  ): void {
     // In a real implementation, this would send data to a security monitoring service
     console.warn(`Security Event: ${type}`, data);
-    
+
     // Could integrate with services like:
     // - Sentry for error tracking
     // - DataDog for monitoring
@@ -344,11 +355,14 @@ class SecurityEnhancer {
    * Calculate security score
    */
   private calculateSecurityScore(): void {
-    const violations = this.metrics.cspViolations + this.metrics.xssAttempts + 
-                      this.metrics.csrfAttempts + this.metrics.suspiciousActivity;
-    
+    const violations =
+      this.metrics.cspViolations +
+      this.metrics.xssAttempts +
+      this.metrics.csrfAttempts +
+      this.metrics.suspiciousActivity;
+
     // Score decreases with violations
-    this.metrics.securityScore = Math.max(0, 100 - (violations * 10));
+    this.metrics.securityScore = Math.max(0, 100 - violations * 10);
   }
 
   /**

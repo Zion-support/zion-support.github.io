@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback } from "react";
 
 interface PerformanceMetrics {
   fcp: number;
@@ -15,7 +15,10 @@ interface PerformanceMonitorProps {
   onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
 }
 
-const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ showDashboard, onMetricsUpdate }) => {
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
+  showDashboard,
+  onMetricsUpdate,
+}) => {
   const [metrics, setMetrics] = useState<Partial<PerformanceMetrics>>({});
   const [isVisible, setIsVisible] = useState(false);
 
@@ -23,20 +26,22 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ showDashboard, 
     const newMetrics: Partial<PerformanceMetrics> = {};
 
     // Get performance metrics
-    if (typeof window !== 'undefined' && window.performance) {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    if (typeof window !== "undefined" && window.performance) {
+      const navigation = performance.getEntriesByType(
+        "navigation",
+      )[0] as PerformanceNavigationTiming;
       if (navigation) {
         newMetrics.ttfb = navigation.responseStart - navigation.requestStart;
       }
 
       // Get memory usage
-      if ('memory' in performance) {
+      if ("memory" in performance) {
         const memory = (performance as any).memory;
         newMetrics.memoryUsage = memory.usedJSHeapSize;
       }
     }
 
-    setMetrics(prev => ({ ...prev, ...newMetrics }));
+    setMetrics((prev) => ({ ...prev, ...newMetrics }));
     if (onMetricsUpdate) {
       onMetricsUpdate(newMetrics as PerformanceMetrics);
     }
@@ -48,25 +53,33 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ showDashboard, 
     const observer = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {
         switch (entry.entryType) {
-          case 'paint':
-            if (entry.name === 'first-contentful-paint') {
-              setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
+          case "paint":
+            if (entry.name === "first-contentful-paint") {
+              setMetrics((prev) => ({ ...prev, fcp: entry.startTime }));
             }
             break;
-          case 'largest-contentful-paint':
-            setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
+          case "largest-contentful-paint":
+            setMetrics((prev) => ({ ...prev, lcp: entry.startTime }));
             break;
-          case 'first-input': {
-            const fidEntry = entry as PerformanceEntry & { processingStart: number };
-            setMetrics(prev => ({ ...prev, fid: fidEntry.processingStart - entry.startTime }));
+          case "first-input": {
+            const fidEntry = entry as PerformanceEntry & {
+              processingStart: number;
+            };
+            setMetrics((prev) => ({
+              ...prev,
+              fid: fidEntry.processingStart - entry.startTime,
+            }));
             break;
           }
-          case 'layout-shift': {
-            const layoutShiftEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
+          case "layout-shift": {
+            const layoutShiftEntry = entry as PerformanceEntry & {
+              hadRecentInput?: boolean;
+              value?: number;
+            };
             if (!layoutShiftEntry.hadRecentInput) {
-              setMetrics(prev => ({ 
-                ...prev, 
-                cls: (prev.cls || 0) + (layoutShiftEntry.value || 0) 
+              setMetrics((prev) => ({
+                ...prev,
+                cls: (prev.cls || 0) + (layoutShiftEntry.value || 0),
               }));
             }
             break;
@@ -76,9 +89,16 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ showDashboard, 
     });
 
     try {
-      observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift'] });
+      observer.observe({
+        entryTypes: [
+          "paint",
+          "largest-contentful-paint",
+          "first-input",
+          "layout-shift",
+        ],
+      });
     } catch (error) {
-      console.warn('Performance observer not supported:', error);
+      console.warn("Performance observer not supported:", error);
     }
 
     // Update metrics periodically
@@ -100,18 +120,23 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ showDashboard, 
           onClick={() => setIsVisible(!isVisible)}
           className="text-xs text-gray-400 hover:text-white"
         >
-          {isVisible ? '−' : '+'}
+          {isVisible ? "−" : "+"}
         </button>
       </div>
-      
+
       {isVisible && (
         <div className="space-y-1 text-xs">
-          <div>FCP: {metrics.fcp?.toFixed(2) || 'N/A'}ms</div>
-          <div>LCP: {metrics.lcp?.toFixed(2) || 'N/A'}ms</div>
-          <div>FID: {metrics.fid?.toFixed(2) || 'N/A'}ms</div>
-          <div>CLS: {metrics.cls?.toFixed(4) || 'N/A'}</div>
-          <div>TTFB: {metrics.ttfb?.toFixed(2) || 'N/A'}ms</div>
-          <div>Memory: {metrics.memoryUsage ? (metrics.memoryUsage / 1024 / 1024).toFixed(2) + 'MB' : 'N/A'}</div>
+          <div>FCP: {metrics.fcp?.toFixed(2) || "N/A"}ms</div>
+          <div>LCP: {metrics.lcp?.toFixed(2) || "N/A"}ms</div>
+          <div>FID: {metrics.fid?.toFixed(2) || "N/A"}ms</div>
+          <div>CLS: {metrics.cls?.toFixed(4) || "N/A"}</div>
+          <div>TTFB: {metrics.ttfb?.toFixed(2) || "N/A"}ms</div>
+          <div>
+            Memory:{" "}
+            {metrics.memoryUsage
+              ? (metrics.memoryUsage / 1024 / 1024).toFixed(2) + "MB"
+              : "N/A"}
+          </div>
         </div>
       )}
     </div>

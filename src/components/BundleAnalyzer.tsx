@@ -1,12 +1,23 @@
-import React, { useState, useEffect, useMemo } from 'react';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell } from 'recharts';
+import React, { useState, useEffect, useMemo } from "react";
+import {
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  ResponsiveContainer,
+  PieChart,
+  Pie,
+  Cell,
+} from "recharts";
 
 interface BundleChunk {
   name: string;
   size: number;
   gzipSize: number;
   modules: number;
-  type: 'vendor' | 'app' | 'page' | 'component' | 'util';
+  type: "vendor" | "app" | "page" | "component" | "util";
 }
 
 interface BundleAnalysis {
@@ -25,31 +36,70 @@ interface BundleAnalyzerProps {
 export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({
   data,
   showRecommendations = true,
-  showCharts = true
+  showCharts = true,
 }) => {
   const [analysis, setAnalysis] = useState<BundleAnalysis | null>(data || null);
   const [isLoading, setIsLoading] = useState(false);
 
   // Mock data for demonstration
-  const mockData: BundleAnalysis = useMemo(() => ({
-    totalSize: 645840, // bytes
-    totalGzipSize: 230640, // bytes
-    chunks: [
-      { name: 'vendor-react', size: 120000, gzipSize: 35000, modules: 15, type: 'vendor' },
-      { name: 'vendor-framer', size: 180000, gzipSize: 45000, modules: 8, type: 'vendor' },
-      { name: 'vendor-icons', size: 45000, gzipSize: 12000, modules: 12, type: 'vendor' },
-      { name: 'main', size: 14000, gzipSize: 4700, modules: 5, type: 'app' },
-      { name: 'pages', size: 38000, gzipSize: 12000, modules: 8, type: 'page' },
-      { name: 'components', size: 49000, gzipSize: 15000, modules: 12, type: 'component' },
-      { name: 'utils', size: 25000, gzipSize: 8000, modules: 6, type: 'util' },
-    ],
-    recommendations: [
-      'Consider code splitting for large vendor chunks',
-      'Implement lazy loading for non-critical components',
-      'Optimize icon imports to reduce bundle size',
-      'Use dynamic imports for heavy libraries',
-    ]
-  }), []);
+  const mockData: BundleAnalysis = useMemo(
+    () => ({
+      totalSize: 645840, // bytes
+      totalGzipSize: 230640, // bytes
+      chunks: [
+        {
+          name: "vendor-react",
+          size: 120000,
+          gzipSize: 35000,
+          modules: 15,
+          type: "vendor",
+        },
+        {
+          name: "vendor-framer",
+          size: 180000,
+          gzipSize: 45000,
+          modules: 8,
+          type: "vendor",
+        },
+        {
+          name: "vendor-icons",
+          size: 45000,
+          gzipSize: 12000,
+          modules: 12,
+          type: "vendor",
+        },
+        { name: "main", size: 14000, gzipSize: 4700, modules: 5, type: "app" },
+        {
+          name: "pages",
+          size: 38000,
+          gzipSize: 12000,
+          modules: 8,
+          type: "page",
+        },
+        {
+          name: "components",
+          size: 49000,
+          gzipSize: 15000,
+          modules: 12,
+          type: "component",
+        },
+        {
+          name: "utils",
+          size: 25000,
+          gzipSize: 8000,
+          modules: 6,
+          type: "util",
+        },
+      ],
+      recommendations: [
+        "Consider code splitting for large vendor chunks",
+        "Implement lazy loading for non-critical components",
+        "Optimize icon imports to reduce bundle size",
+        "Use dynamic imports for heavy libraries",
+      ],
+    }),
+    [],
+  );
 
   useEffect(() => {
     if (!data) {
@@ -63,52 +113,55 @@ export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({
   }, [data, mockData]);
 
   const formatBytes = (bytes: number) => {
-    if (bytes === 0) return '0 Bytes';
+    if (bytes === 0) return "0 Bytes";
     const k = 1024;
-    const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+    const sizes = ["Bytes", "KB", "MB", "GB"];
     const i = Math.floor(Math.log(bytes) / Math.log(k));
-    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + " " + sizes[i];
   };
 
   const getTypeColor = (type: string) => {
     const colors = {
-      vendor: '#8884d8',
-      app: '#82ca9d',
-      page: '#ffc658',
-      component: '#ff7300',
-      util: '#00ff00'
+      vendor: "#8884d8",
+      app: "#82ca9d",
+      page: "#ffc658",
+      component: "#ff7300",
+      util: "#00ff00",
     };
-    return colors[type as keyof typeof colors] || '#8884d8';
+    return colors[type as keyof typeof colors] || "#8884d8";
   };
 
   const chartData = useMemo(() => {
     if (!analysis) return [];
-    
-    return analysis.chunks.map(chunk => ({
+
+    return analysis.chunks.map((chunk) => ({
       name: chunk.name,
       size: chunk.size,
       gzipSize: chunk.gzipSize,
       modules: chunk.modules,
       type: chunk.type,
-      fill: getTypeColor(chunk.type)
+      fill: getTypeColor(chunk.type),
     }));
   }, [analysis]);
 
   const pieData = useMemo(() => {
     if (!analysis) return [];
-    
-    const typeGroups = analysis.chunks.reduce((acc, chunk) => {
-      if (!acc[chunk.type]) {
-        acc[chunk.type] = { name: chunk.type, value: 0, count: 0 };
-      }
-      acc[chunk.type].value += chunk.size;
-      acc[chunk.type].count += 1;
-      return acc;
-    }, {} as Record<string, { name: string; value: number; count: number }>);
 
-    return Object.values(typeGroups).map(group => ({
+    const typeGroups = analysis.chunks.reduce(
+      (acc, chunk) => {
+        if (!acc[chunk.type]) {
+          acc[chunk.type] = { name: chunk.type, value: 0, count: 0 };
+        }
+        acc[chunk.type].value += chunk.size;
+        acc[chunk.type].count += 1;
+        return acc;
+      },
+      {} as Record<string, { name: string; value: number; count: number }>,
+    );
+
+    return Object.values(typeGroups).map((group) => ({
       ...group,
-      fill: getTypeColor(group.name)
+      fill: getTypeColor(group.name),
     }));
   }, [analysis]);
 
@@ -171,7 +224,12 @@ export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({
             <ResponsiveContainer width="100%" height={300}>
               <BarChart data={chartData}>
                 <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="name" angle={-45} textAnchor="end" height={100} />
+                <XAxis
+                  dataKey="name"
+                  angle={-45}
+                  textAnchor="end"
+                  height={100}
+                />
                 <YAxis />
                 <Tooltip formatter={(value) => formatBytes(Number(value))} />
                 <Bar dataKey="size" fill="#8884d8" />
@@ -189,7 +247,9 @@ export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({
                   cx="50%"
                   cy="50%"
                   labelLine={false}
-                  label={(props: any) => `${props.name} ${(props.percent * 100).toFixed(0)}%`}
+                  label={(props: any) =>
+                    `${props.name} ${(props.percent * 100).toFixed(0)}%`
+                  }
                   outerRadius={80}
                   fill="#8884d8"
                   dataKey="value"
@@ -238,11 +298,11 @@ export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({
                     {chunk.name}
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap">
-                    <span 
+                    <span
                       className="inline-flex px-2 py-1 text-xs font-semibold rounded-full"
-                      style={{ 
-                        backgroundColor: getTypeColor(chunk.type) + '20',
-                        color: getTypeColor(chunk.type)
+                      style={{
+                        backgroundColor: getTypeColor(chunk.type) + "20",
+                        color: getTypeColor(chunk.type),
                       }}
                     >
                       {chunk.type}
@@ -267,7 +327,9 @@ export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({
       {/* Recommendations */}
       {showRecommendations && analysis.recommendations.length > 0 && (
         <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-6">
-          <h3 className="text-lg font-semibold text-yellow-800 mb-4">Optimization Recommendations</h3>
+          <h3 className="text-lg font-semibold text-yellow-800 mb-4">
+            Optimization Recommendations
+          </h3>
           <ul className="space-y-2">
             {analysis.recommendations.map((recommendation, index) => (
               <li key={index} className="flex items-start">
@@ -292,15 +354,15 @@ export const useBundleAnalysis = () => {
     try {
       // In a real implementation, this would fetch actual bundle analysis data
       // For now, we'll use mock data
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      await new Promise((resolve) => setTimeout(resolve, 1000));
       setAnalysis({
         totalSize: 645840,
         totalGzipSize: 230640,
         chunks: [],
-        recommendations: []
+        recommendations: [],
       });
     } catch (error) {
-      console.error('Bundle analysis failed:', error);
+      console.error("Bundle analysis failed:", error);
     } finally {
       setIsLoading(false);
     }

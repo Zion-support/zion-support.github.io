@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from "react";
 
 interface UseLazyLoadOptions {
   threshold?: number;
@@ -7,11 +7,7 @@ interface UseLazyLoadOptions {
 }
 
 export const useLazyLoad = (options: UseLazyLoadOptions = {}) => {
-  const {
-    threshold = 0.1,
-    rootMargin = '50px',
-    triggerOnce = true
-  } = options;
+  const { threshold = 0.1, rootMargin = "50px", triggerOnce = true } = options;
 
   const [isIntersecting, setIsIntersecting] = useState(false);
   const [hasIntersected, setHasIntersected] = useState(false);
@@ -25,15 +21,15 @@ export const useLazyLoad = (options: UseLazyLoadOptions = {}) => {
       ([entry]) => {
         const isElementIntersecting = entry.isIntersecting;
         setIsIntersecting(isElementIntersecting);
-        
+
         if (isElementIntersecting && !hasIntersected) {
           setHasIntersected(true);
         }
       },
       {
         threshold,
-        rootMargin
-      }
+        rootMargin,
+      },
     );
 
     observer.observe(element);
@@ -46,6 +42,6 @@ export const useLazyLoad = (options: UseLazyLoadOptions = {}) => {
   return {
     elementRef,
     isIntersecting,
-    hasIntersected: triggerOnce ? hasIntersected : isIntersecting
+    hasIntersected: triggerOnce ? hasIntersected : isIntersecting,
   };
 };
