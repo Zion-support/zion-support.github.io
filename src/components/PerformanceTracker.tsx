@@ -64,14 +64,8 @@ export const PerformanceTracker: React.FC<PerformanceTrackerProps> = ({
         const fidObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           entries.forEach((entry) => {
-<<<<<<< HEAD
             if (entry.entryType === 'first-input' && 'processingStart' in entry && 'startTime' in entry) {
               metricsRef.current.fid = (entry as any).processingStart - entry.startTime;
-=======
-            if (entry.entryType === 'first-input') {
-              const fidEntry = entry as PerformanceEventTiming;
-              metricsRef.current.fid = fidEntry.processingStart - fidEntry.startTime;
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-7cb6
             }
           });
         });
@@ -82,16 +76,9 @@ export const PerformanceTracker: React.FC<PerformanceTrackerProps> = ({
         const clsObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           entries.forEach((entry) => {
-<<<<<<< HEAD
             if (entry.entryType === 'layout-shift' && 'hadRecentInput' in entry && 'value' in entry) {
               if (!(entry as any).hadRecentInput) {
                 clsValue += (entry as any).value;
-=======
-            if (entry.entryType === 'layout-shift') {
-              const layoutShiftEntry = entry as any; // LayoutShift type not available
-              if (!layoutShiftEntry.hadRecentInput) {
-                clsValue += layoutShiftEntry.value;
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-7cb6
                 metricsRef.current.cls = clsValue;
               }
             }
@@ -103,14 +90,8 @@ export const PerformanceTracker: React.FC<PerformanceTrackerProps> = ({
         const navigationObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           entries.forEach((entry) => {
-<<<<<<< HEAD
             if (entry.entryType === 'navigation' && 'responseStart' in entry && 'requestStart' in entry) {
               metricsRef.current.ttfb = (entry as any).responseStart - (entry as any).requestStart;
-=======
-            if (entry.entryType === 'navigation') {
-              const navEntry = entry as PerformanceNavigationTiming;
-              metricsRef.current.ttfb = navEntry.responseStart - navEntry.requestStart;
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-7cb6
             }
           });
         });

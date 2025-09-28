@@ -1,8 +1,4 @@
 import { useEffect, useCallback, useRef } from 'react';
-<<<<<<< HEAD
-=======
-import { AdvancedPerformanceMonitor } from '../utils/advancedPerformanceMonitor';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-7cb6
 import { NetworkInformation } from '../types/global';
 
 interface PerformanceOptimizationConfig {
@@ -304,7 +300,6 @@ export const usePerformanceOptimization = (
     };
   }, [recordMetric]);
 
-<<<<<<< HEAD
   // Performance optimization function
   const optimizePerformance = useCallback(() => {
     if (configRef.current.enableImageOptimization) {
@@ -324,13 +319,6 @@ export const usePerformanceOptimization = (
       addResourceHint('/images/hero-bg.webp', 'image');
     }
   }, [optimizeImage, addResourceHint]);
-=======
-  const optimizePerformance = () => {
-    // Trigger all optimization techniques
-    monitor.current.start();
-    // Add other optimization logic here
-  };
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-7cb6
 
   return {
     preloadResource,

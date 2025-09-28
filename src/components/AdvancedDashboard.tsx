@@ -69,15 +69,9 @@ const AdvancedDashboard: React.FC = () => {
   }, [isOpen]);
 
   const updateData = () => {
-<<<<<<< HEAD
     const analyticsInstance = analytics;
     const events = analyticsInstance.getEvents();
     const cacheStats = AdvancedCacheManager.getInstance().getStats();
-=======
-    // Mock analytics data for now
-    const events: any[] = [];
-    const cacheStats = { hits: 0, misses: 0, size: 0 };
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-7cb6
     
     // Convert analytics events to analytics data format
     const analyticsData: AnalyticsData = {

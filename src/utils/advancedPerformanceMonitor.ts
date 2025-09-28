@@ -80,14 +80,8 @@ export class AdvancedPerformanceMonitor {
       const fidObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
         entries.forEach((entry) => {
-<<<<<<< HEAD
           if (entry.entryType === 'first-input' && 'processingStart' in entry && 'startTime' in entry) {
             this.metrics.fid = (entry as any).processingStart - entry.startTime;
-=======
-          if (entry.entryType === 'first-input') {
-            const fidEntry = entry as PerformanceEventTiming;
-            this.metrics.fid = fidEntry.processingStart - fidEntry.startTime;
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-7cb6
           }
         });
       });

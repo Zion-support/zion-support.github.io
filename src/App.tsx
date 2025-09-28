@@ -49,7 +49,9 @@ export default function App(): React.JSX.Element {
   const [showAdvancedPerformanceDashboard, setShowAdvancedPerformanceDashboard] = useState(false);
   const [showComprehensiveSystemDashboard, setShowComprehensiveSystemDashboard] = useState(false);
   const [showRealTimeMetrics, setShowRealTimeMetrics] = useState(false);
-  // const [showSEOOptimizer, setShowSEOOptimizer] = useState(false);
+  const [showCommandPalette, setShowCommandPalette] = useState(false);
+  const [showKeyboardHelp, setShowKeyboardHelp] = useState(false);
+  const [showSEOOptimizer, setShowSEOOptimizer] = useState(false);
   // const [isDarkMode, setIsDarkMode] = useState(false);
 
   // Performance metrics state - commented out to reduce warnings
@@ -60,14 +62,6 @@ export default function App(): React.JSX.Element {
   //   errorCount: 0
   // });
 
-  // Memoize SEO data to prevent unnecessary re-renders
-  const seoData = useMemo(() => ({
-    title: 'Zion Tech Group - Advanced AI and IT Solutions',
-    description: 'Leading provider of AI-powered IT solutions, cloud services, and digital transformation consulting.',
-    keywords: ['AI solutions', 'IT consulting', 'cloud services', 'digital transformation'],
-    canonicalUrl: typeof window !== 'undefined' ? window.location.href : ''
-  }), []);
-
   // Initialize app with custom configuration
   const { isLoading, loadingProgress, handleScroll, handleClick, trackEngagement } = useAppInitialization({
     enablePerformanceMonitoring: true,
@@ -75,8 +69,6 @@ export default function App(): React.JSX.Element {
     enableAccessibility: true
   });
 
-<<<<<<< HEAD
-=======
   // Get current pathname for SEO
   const currentPathname = typeof window !== 'undefined' ? window.location.pathname : '/';
 
@@ -160,8 +152,6 @@ export default function App(): React.JSX.Element {
       shortcut: 'Escape'
     }
   ], []);
-
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-eae1
   // Optimized keyboard handler for system dashboard toggle
   const handleKeyDown = useCallback((event: KeyboardEvent) => {
     if (event.ctrlKey && event.shiftKey) {
@@ -182,31 +172,29 @@ export default function App(): React.JSX.Element {
           event.preventDefault();
           setShowAIDashboard(prev => !prev);
           break;
-<<<<<<< HEAD
         case 'R':
           event.preventDefault();
           setShowRealTimeMetrics(prev => !prev);
-=======
+          break;
         case 'V':
+          event.preventDefault();
           setShowAdvancedPerformanceDashboard(prev => !prev);
           break;
         case 'Q':
+          event.preventDefault();
           setShowComprehensiveSystemDashboard(prev => !prev);
           break;
         case 'C':
+          event.preventDefault();
           setShowCommandPalette(prev => !prev);
           break;
         case 'H':
+          event.preventDefault();
           setShowKeyboardHelp(prev => !prev);
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-eae1
           break;
         case 'S':
           event.preventDefault();
           setShowSEOOptimizer(prev => !prev);
-          break;
-        case 'H':
-          event.preventDefault();
-          // Toggle help modal
           break;
       }
     }
@@ -454,54 +442,17 @@ export default function App(): React.JSX.Element {
           onClose={() => setShowAIDashboard(false)}
         />
 
-<<<<<<< HEAD
-=======
-        {/* Advanced Performance Dashboard - Toggle with Ctrl+Shift+P */}
+        {/* Advanced Performance Dashboard - Toggle with Ctrl+Shift+V */}
         <AdvancedPerformanceDashboard
           isVisible={showAdvancedPerformanceDashboard}
           onClose={() => setShowAdvancedPerformanceDashboard(false)}
         />
 
-        {/* Comprehensive System Dashboard - Toggle with Ctrl+Shift+S */}
+        {/* Comprehensive System Dashboard - Toggle with Ctrl+Shift+Q */}
         <ComprehensiveSystemDashboard
           isVisible={showComprehensiveSystemDashboard}
           onClose={() => setShowComprehensiveSystemDashboard(false)}
         />
-
-        {/* Real-time Metrics Display */}
-        {showRealTimeMetrics && (
-          <div className="fixed top-4 right-4 z-50 bg-black bg-opacity-90 text-white p-4 rounded-lg shadow-lg min-w-[300px]">
-            <div className="flex justify-between items-center mb-3">
-              <h3 className="text-lg font-bold">Real-time Metrics</h3>
-              <button
-                onClick={() => setShowRealTimeMetrics(false)}
-                className="text-gray-300 hover:text-white text-xl"
-              >
-                ✕
-              </button>
-            </div>
-            <div className="space-y-2 text-sm">
-              <div className="flex justify-between">
-                <span>Memory Usage:</span>
-                <span className="text-green-400">{performanceMetrics.memoryUsage} MB</span>
-              </div>
-              <div className="flex justify-between">
-                <span>Render Time:</span>
-                <span className="text-blue-400">{performanceMetrics.renderTime} ms</span>
-              </div>
-              <div className="flex justify-between">
-                <span>Network Latency:</span>
-                <span className="text-yellow-400">{performanceMetrics.networkLatency} ms</span>
-              </div>
-              <div className="flex justify-between">
-                <span>Errors:</span>
-                <span className="text-red-400">{performanceMetrics.errorCount}</span>
-              </div>
-            </div>
-          </div>
-        )}
-
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-eae1
         {/* Real-Time Performance Monitor */}
         {showRealTimeMetrics && (
           <RealTimePerformanceMonitor
@@ -531,70 +482,15 @@ export default function App(): React.JSX.Element {
 
         {/* Keyboard Shortcuts Help */}
         <KeyboardShortcutsHelp
-          isVisible={false}
-          onClose={() => {}}
+          isVisible={showKeyboardHelp}
+          onClose={() => setShowKeyboardHelp(false)}
         />
 
-<<<<<<< HEAD
         {/* SEO Optimizer */}
         <SEOOptimizer seoData={seoData} />
         
         {/* Enhanced Analytics */}
         <EnhancedAnalytics />
-=======
-        {/* Keyboard Shortcuts Help Button */}
-        <button
-          onClick={() => setShowKeyboardHelp(true)}
-          className="fixed bottom-4 right-20 z-40 bg-gray-600 hover:bg-gray-700 text-white p-3 rounded-full shadow-lg transition-colors duration-200"
-          title="Keyboard Shortcuts (Ctrl+/)"
-        >
-          ⌨️
-        </button>
-
-        {/* Command Palette Button */}
-        <button
-          onClick={() => setShowCommandPalette(true)}
-          className="fixed bottom-4 right-36 z-40 bg-purple-600 hover:bg-purple-700 text-white p-3 rounded-full shadow-lg transition-colors duration-200"
-          title="Command Palette (Ctrl+K)"
-        >
-          ⌘
-        </button>
-
-        {/* Real-Time Monitor Button */}
-        <button
-          onClick={() => setShowRealTimeMonitor(true)}
-          className="fixed bottom-4 right-52 z-40 bg-orange-600 hover:bg-orange-700 text-white p-3 rounded-full shadow-lg transition-colors duration-200"
-          title="Real-Time Monitor (Ctrl+Shift+R)"
-        >
-          📊
-        </button>
-
-        {/* System Health Button */}
-        <button
-          onClick={() => setShowSystemHealth(true)}
-          className="fixed bottom-4 right-68 z-40 bg-green-600 hover:bg-green-700 text-white p-3 rounded-full shadow-lg transition-colors duration-200"
-          title="System Health (Ctrl+Shift+H)"
-        >
-          🏥
-        </button>
-
-        {/* Keyboard Shortcuts Help Panel */}
-        <div className="fixed bottom-4 left-4 z-40 bg-gray-800 text-white p-3 rounded-lg shadow-lg text-sm opacity-75 hover:opacity-100 transition-opacity duration-200">
-          <div className="font-semibold mb-1">Keyboard Shortcuts:</div>
-          <div>Ctrl+Shift+D: System Dashboard</div>
-          <div>Ctrl+Shift+V: Advanced Performance Dashboard</div>
-          <div>Ctrl+Shift+M: Performance Monitor</div>
-          <div>Ctrl+Shift+A: AI Dashboard</div>
-          <div>Ctrl+Shift+Q: Comprehensive System Dashboard</div>
-          <div>Ctrl+Shift+S: SEO Optimizer</div>
-          <div>Ctrl+Shift+T: Toggle Theme</div>
-          <div>Ctrl+Shift+R: Real-Time Monitor</div>
-          <div>Ctrl+Shift+H: System Health</div>
-          <div>Ctrl+Shift+K: Keyboard Help</div>
-          <div>Ctrl+K: Command Palette</div>
-          <div>Escape: Close All</div>
-        </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-eae1
       </div>
     </EnhancedErrorBoundary>
   );
