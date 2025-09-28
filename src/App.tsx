@@ -13,7 +13,7 @@ import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import AIPerformanceDashboard from './components/AIPerformanceDashboard';
-import AdvancedPerformanceDashboard from './components/AdvancedPerformanceDashboard';
+// import AdvancedPerformanceDashboard from './components/AdvancedPerformanceDashboard';
 import WebsiteEnhancements from './components/WebsiteEnhancements';
 import { SEOOptimizer, useSEOData } from './components/SEOOptimizer';
 // import EnhancedAnalytics from './components/EnhancedAnalytics';
@@ -32,7 +32,7 @@ import SystemHealthDashboard from './components/SystemHealthDashboard';
 // import { getThemeManager } from './utils/themeManager';
 // import { getKeyboardShortcuts } from './utils/advancedKeyboardShortcuts';
 // import { getDataVisualization } from './utils/advancedDataVisualization';
-import { useAppInitialization } from './hooks/useAppInitialization';
+// import { useAppInitialization } from './hooks/useAppInitialization';
 import './index.css';
 
 export default function App(): React.JSX.Element {
@@ -41,7 +41,7 @@ export default function App(): React.JSX.Element {
   const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
   const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
   const [showAIDashboard, setShowAIDashboard] = useState(false);
-  const [showAdvancedDashboard, setShowAdvancedDashboard] = useState(false);
+  const [showAdvancedDashboard] = useState(false);
   const [showSEOOptimizer, setShowSEOOptimizer] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [showKeyboardHelp, setShowKeyboardHelp] = useState(false);
@@ -81,7 +81,10 @@ export default function App(): React.JSX.Element {
   const isLoading = false;
   const loadingProgress = 100;
   const handleScroll = useCallback(() => {}, []);
-  const handleClick = useCallback((_event: Event) => {}, []);
+  const handleClick = useCallback((event: Event) => {
+    // Handle click events for engagement tracking
+    console.debug('Click event captured for engagement tracking', event);
+  }, []);
   const trackEngagement = useCallback(() => {}, []);
 
   // Performance optimization hook - Temporarily disabled
