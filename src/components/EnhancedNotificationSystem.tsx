@@ -21,6 +21,15 @@ interface Notification {
   timestamp: Date;
 }
 
+interface NotificationSystem {
+  success: (title: string, message: string, options?: Partial<Notification>) => string;
+  error: (title: string, message: string, options?: Partial<Notification>) => string;
+  warning: (title: string, message: string, options?: Partial<Notification>) => string;
+  info: (title: string, message: string, options?: Partial<Notification>) => string;
+  remove: (id: string) => void;
+  clear: () => void;
+}
+
 interface NotificationSystemProps {
   maxNotifications?: number;
   position?: 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left' | 'top-center' | 'bottom-center';
@@ -185,22 +194,23 @@ const EnhancedNotificationSystem: React.FC<NotificationSystemProps> = ({
     });
   }, [notifications, removeNotification]);
 
-  // Play notification sound
-  const playNotificationSound = (type: Notification['type']) => {
-    // In a real implementation, you would play actual sound files
-    console.log(`🔊 Playing ${type} notification sound`);
-  };
+  // Play notification sound (placeholder for future implementation)
+  // const playNotificationSound = (type: Notification['type']) => {
+  //   // In a real implementation, you would play actual sound files
+  //   console.log(`🔊 Playing ${type} notification sound`);
+  // };
 
   // Cleanup timeouts on unmount
   useEffect(() => {
+    const currentTimeouts = timeoutRefs.current;
     return () => {
-      timeoutRefs.current.forEach(timeout => clearTimeout(timeout));
+      currentTimeouts.forEach(timeout => clearTimeout(timeout));
     };
   }, []);
 
   // Expose methods globally for easy access
   useEffect(() => {
-    (window as any).notificationSystem = {
+    (window as Window & { notificationSystem?: NotificationSystem }).notificationSystem = {
       success: (title: string, message: string, options?: Partial<Notification>) =>
         addNotification({ type: 'success', title, message, ...options }),
       error: (title: string, message: string, options?: Partial<Notification>) =>

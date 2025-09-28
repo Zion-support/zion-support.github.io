@@ -4,7 +4,6 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import SkipLink from './components/SkipLink';
 import ScrollToTop from './components/ScrollToTop';
-import LoadingSpinner from '../components/LoadingSpinner';
 import ErrorBoundary from './components/ErrorBoundary';
 import ErrorFallback from './components/ErrorFallback';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
