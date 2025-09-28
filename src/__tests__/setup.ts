@@ -6,7 +6,7 @@ global.fetch = jest.fn();
 
 // Mock window.location to prevent navigation errors
 // Use delete and redefine approach for JSDOM compatibility
-delete (window as unknown as { location: Location }).location;
+delete (window as unknown as { location?: Location }).location;
 (window as unknown as { location: Location }).location = {
   pathname: '/',
   href: 'http://localhost:3000/',
@@ -20,24 +20,8 @@ delete (window as unknown as { location: Location }).location;
   port: '3000',
   protocol: 'http:',
   origin: 'http://localhost:3000',
-};
-
-// Mock window.location using a simple assignment
-delete (window as unknown as { location?: typeof window.location }).location;
-(window as unknown as { location: typeof window.location }).location = {
-  pathname: '/',
-  href: 'http://localhost:3000/',
-  assign: jest.fn(),
-  replace: jest.fn(),
-  reload: jest.fn(),
-  search: '',
-  hash: '',
-  host: 'localhost:3000',
-  hostname: 'localhost',
-  port: '3000',
-  protocol: 'http:',
-  origin: 'http://localhost:3000',
-};
+  ancestorOrigins: [] as any,
+} as Location;
 // Mock window.history
 Object.defineProperty(window, 'history', {
   value: {
