@@ -12,6 +12,7 @@ interface LazyComponentProps {
  */
 export const createLazyComponent = <P extends object>(
   importFunc: () => Promise<{ default: ComponentType<P> }>,
+  _fallback?: ReactNode
 ) => {
   const LazyComponent = lazy(importFunc);
 
