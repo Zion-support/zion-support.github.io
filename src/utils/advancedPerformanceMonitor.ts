@@ -79,7 +79,7 @@ export class AdvancedPerformanceMonitor {
       // FID Observer
       const fidObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        entries.forEach((entry: any) => {
+        entries.forEach((entry: PerformanceEventTiming) => {
           this.metrics.fid = entry.processingStart - entry.startTime;
         });
       });
@@ -110,8 +110,10 @@ export class AdvancedPerformanceMonitor {
     
     // Update memory usage
     if ('memory' in performance) {
-      const memory = (performance as any).memory;
-      this.metrics.memoryUsage = memory.usedJSHeapSize / 1024 / 1024;
+      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory;
+      if (memory) {
+        this.metrics.memoryUsage = memory.usedJSHeapSize / 1024 / 1024;
+      }
     }
     
     // Update load time
