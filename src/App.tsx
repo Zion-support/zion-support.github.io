@@ -26,6 +26,9 @@ import { advancedCacheSystem } from './utils/advancedCacheSystem';
 import { AdvancedAutomationSystem } from './utils/advancedAutomationSystem';
 import { AccessibilityEnhancer } from './utils/accessibilityEnhancer';
 import { SecurityEnhancer } from './utils/securityEnhancer';
+import { analytics } from './utils/analytics';
+import { seoAnalytics, performanceSEO, seoManager } from './utils/seoEnhanced';
+import { useSEOData } from './components/SEOOptimizer';
 import './index.css';
 
 export default function App(): React.JSX.Element {
@@ -279,6 +282,44 @@ export default function App(): React.JSX.Element {
 
     return () => clearInterval(interval);
   }, [showRealTimeMetrics]);
+
+  // Add keyboard event listener
+  React.useEffect(() => {
+    document.addEventListener("keydown", handleKeyDown);
+    
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [handleKeyDown]);
+
+  // Main initialization and cleanup effect
+  React.useEffect(() => {
+    // Track engagement on page unload
+    window.addEventListener('beforeunload', enhancedTrackEngagement);
+
+    // Mark app as fully initialized
+    if (typeof window !== 'undefined' && window.performance && 
+        typeof performance.mark === 'function' && 
+        typeof performance.measure === 'function') {
+      performance.mark('app-init-complete');
+      performance.measure('app-initialization', 'app-init-start', 'app-init-complete');
+    }
+
+    // Cleanup function
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+      window.removeEventListener('beforeunload', enhancedTrackEngagement);
+      
+      // Final engagement tracking
+      trackEngagement();
+    };
+  }, [enhancedTrackEngagement, trackEngagement]);
+
+  // Optimize performance on mount
+  useEffect(() => {
+    // Performance optimization is handled by the usePerformanceOptimization hook
+    preloadResource('/api/health');
+  }, [preloadResource]);
 
   // Track engagement on scroll and click
   useEffect(() => {
