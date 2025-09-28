@@ -115,7 +115,7 @@ export const usePerformanceOptimization = (
 
   // Get current performance metrics
   // const getPerformanceMetrics = useCallback(() => {
-  //   return monitor.current.getLatestMetrics();
+  //   return monitor.current.getMetrics();
   // }, []);
 
   // Optimize images with responsive loading
@@ -304,7 +304,7 @@ export const usePerformanceOptimization = (
     preloadResource,
     recordMetric,
     measurePerformance,
-    getPerformanceMetrics: () => monitor.current?.getLatestMetrics() || {},
+    getPerformanceMetrics: () => monitor.current?.getMetrics() || {},
     optimizeImage,
     addResourceHint,
   };
