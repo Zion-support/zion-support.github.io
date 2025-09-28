@@ -250,15 +250,11 @@ export default function App(): React.JSX.Element {
     };
   }, [enhancedTrackEngagement, trackEngagement]);
 
-<<<<<<< HEAD
-  // Performance optimization is handled by the hook automatically
-=======
   // Optimize performance on mount
   useEffect(() => {
     // Performance optimization is handled by the usePerformanceOptimization hook
     preloadResource('/api/health');
   }, [preloadResource]);
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-fa73
 
   // Track engagement on scroll and click
   useEffect(() => {
@@ -292,29 +288,12 @@ export default function App(): React.JSX.Element {
   // Loading state
   if (isLoading) {
     return (
-<<<<<<< HEAD
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-        <div className="text-center">
-          <ModernLoadingSpinner />
-          <div className="mt-4 text-white">
-            <div className="text-lg font-semibold">Zion Tech Group</div>
-            <div className="text-sm opacity-75">Loading advanced systems...</div>
-            <div className="mt-2 w-64 bg-gray-700 rounded-full h-2 mx-auto">
-              <div 
-                className="bg-gradient-to-r from-blue-500 to-purple-600 h-2 rounded-full transition-all duration-300"
-                style={{ width: `${loadingProgress}%` }}
-              />
-            </div>
-          </div>
-        </div>
-=======
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100">
         <ModernLoadingSpinner
           size="xl"
           progress={loadingProgress}
           text="Initializing Zion Tech Group..."
         />
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-fa73
       </div>
     );
   }
