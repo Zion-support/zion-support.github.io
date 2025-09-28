@@ -47,21 +47,14 @@ export default function App(): React.JSX.Element {
   const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
   const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
   const [showAIDashboard, setShowAIDashboard] = useState(false);
-<<<<<<< HEAD
   const [showAdvancedDashboard, setShowAdvancedDashboard] = useState(false);
   const [showSEOOptimizer, setShowSEOOptimizer] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [showKeyboardHelp, setShowKeyboardHelp] = useState(false);
   const [showCommandPalette, setShowCommandPalette] = useState(false);
-=======
   const [showAdvancedPerformanceDashboard, setShowAdvancedPerformanceDashboard] = useState(false);
   const [showComprehensiveSystemDashboard, setShowComprehensiveSystemDashboard] = useState(false);
->>>>>>> e4af42176aa73687d1b2bd3a3147ac6c6d1e9deb
   const [showRealTimeMetrics, setShowRealTimeMetrics] = useState(false);
-  const [showCommandPalette, setShowCommandPalette] = useState(false);
-  const [showKeyboardHelp, setShowKeyboardHelp] = useState(false);
-  const [showSEOOptimizer, setShowSEOOptimizer] = useState(false);
-  // const [isDarkMode, setIsDarkMode] = useState(false);
 
   // Performance metrics state - commented out to reduce warnings
   // const [performanceMetrics, setPerformanceMetrics] = useState({
