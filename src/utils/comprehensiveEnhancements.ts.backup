@@ -842,47 +842,41 @@ class ComprehensiveEnhancements {
     
     return `
 Comprehensive Enhancement Report:
-Generated: ${new Date().toISOString()}
+================================
+Performance:
+- FCP: ${metrics.performance.fcp?.toFixed(2) || 'N/A'}ms
+- LCP: ${metrics.performance.lcp?.toFixed(2) || 'N/A'}ms
+- FID: ${metrics.performance.fid?.toFixed(2) || 'N/A'}ms
+- CLS: ${metrics.performance.cls?.toFixed(4) || 'N/A'}
+- Memory: ${metrics.performance.memoryUsage ? (metrics.performance.memoryUsage / 1024 / 1024).toFixed(2) + 'MB' : 'N/A'}
 
-Performance Metrics:
-- Load Time: ${metrics.performance.loadTime || 'N/A'}ms
-- Render Time: ${metrics.performance.renderTime || 'N/A'}ms
-- FPS: ${metrics.performance.fps || 'N/A'}
-- Memory Usage: ${metrics.performance.memoryUsage || 'N/A'}MB
-- LCP: ${metrics.performance.lcp || 'N/A'}ms
-- FID: ${metrics.performance.fid || 'N/A'}ms
-- CLS: ${metrics.performance.cls || 'N/A'}
-- TTFB: ${metrics.performance.ttfb || 'N/A'}ms
+Security:
+- XSS Attempts Blocked: ${metrics.security.xssAttempts || 0}
+- Threats Blocked: ${metrics.security.threatsBlocked || 0}
 
-Security Metrics:
-- XSS Protection: ${metrics.security.xssProtection ? 'Enabled' : 'Disabled'}
-- CSRF Protection: ${metrics.security.csrfProtection ? 'Enabled' : 'Disabled'}
-- Content Security Policy: ${metrics.security.cspEnabled ? 'Enabled' : 'Disabled'}
-
-Accessibility Metrics:
+Accessibility:
 - WCAG Compliance: ${metrics.accessibility.wcagCompliance || 'N/A'}%
-- Keyboard Navigation: ${metrics.accessibility.keyboardNavigation ? 'Enabled' : 'Disabled'}
-- Screen Reader Support: ${metrics.accessibility.screenReaderSupport ? 'Enabled' : 'Disabled'}
+- Keyboard Navigation: ${metrics.accessibility.keyboardNavigationScore || 'N/A'}%
 
-SEO Metrics:
-- Meta Tags: ${metrics.seo.metaTags ? 'Optimized' : 'Needs Optimization'}
-- Structured Data: ${metrics.seo.structuredData ? 'Present' : 'Missing'}
-- Sitemap: ${metrics.seo.sitemap ? 'Present' : 'Missing'}
-
-UX Metrics:
-- User Satisfaction: ${metrics.ux.userSatisfaction || 'N/A'}/10
-- Task Completion Rate: ${metrics.ux.taskCompletionRate || 'N/A'}%
-- Error Rate: ${metrics.ux.errorRate || 'N/A'}%
-
-This report provides a comprehensive overview of the current state of enhancements.
-`;
+UX:
+- Engagement Score: ${metrics.ux.engagementScore?.toFixed(1) || 'N/A'}%
+- User Satisfaction: ${metrics.ux.userSatisfactionScore || 'N/A'}%
+    `.trim();
   }
 }
 
-// Export a singleton instance
-export const comprehensiveEnhancer = new ComprehensiveEnhancer();
+// Singleton instance
+let enhancements: ComprehensiveEnhancements | null = null;
 
-// Export function to get comprehensive enhancements
-export function getComprehensiveEnhancements() {
-  return comprehensiveEnhancer;
+export function getComprehensiveEnhancements(config?: Partial<EnhancementConfig>): ComprehensiveEnhancements {
+  if (!enhancements) {
+    enhancements = new ComprehensiveEnhancements(config);
+  }
+  return enhancements;
 }
+
+export function initializeEnhancements(config?: Partial<EnhancementConfig>): ComprehensiveEnhancements {
+  return getComprehensiveEnhancements(config);
+}
+
+export default ComprehensiveEnhancements;
