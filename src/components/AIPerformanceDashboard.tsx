@@ -6,22 +6,6 @@ interface AIPerformanceDashboardProps {
   onClose: () => void;
 }
 
-interface PerformanceMetrics {
-  errorRate: number;
-  criticalErrorsToday: number;
-  userImpactScore: number;
-  avgResolutionTime: number;
-}
-
-interface AIInsights {
-  predictedHighRiskActions: string[];
-  recommendedImprovements: string[];
-  errorTrends: Array<{
-    category: string;
-    trend: 'increasing' | 'decreasing' | 'stable';
-  }>;
-}
-
 interface ErrorReport {
   severity: string;
   message: string;
@@ -63,7 +47,7 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
         try {
           const performanceMetrics = enhancedErrorHandler.getPerformanceMetrics();
           const aiInsights = enhancedErrorHandler.getAIInsights();
-          const errorReports = enhancedErrorHandler.getErrorReports().slice(0, 10);
+          const errorReports: ErrorReport[] = enhancedErrorHandler.getErrorReports().slice(0, 10);
           
           // Type-safe conversion
           setMetrics(performanceMetrics as {
