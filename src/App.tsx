@@ -119,10 +119,7 @@ export default function App(): React.JSX.Element {
     });
     trackEngagement();
   }, [engagementData.clicks, engagementData.scrollDepth, engagementData.startTime, trackEngagement]);
-<<<<<<< HEAD
 
-=======
->>>>>>> 1ad96f248fe2344703e9824b4d30a1db01ece6c5
   // Update meta tags function
   const updateMetaTags = useCallback((data: {
     title: string;
@@ -149,11 +146,7 @@ export default function App(): React.JSX.Element {
       }
     }
   }, []);
-<<<<<<< HEAD
   
-=======
-
->>>>>>> 1ad96f248fe2344703e9824b4d30a1db01ece6c5
   useEffect(() => {
     // Add performance marks for better monitoring
     if (typeof window !== 'undefined' && window.performance && typeof performance.mark === 'function') {
@@ -186,28 +179,11 @@ export default function App(): React.JSX.Element {
       console.log('🚀 Zion Tech Group App initialized');
     }
 
-<<<<<<< HEAD
     // Use passive listeners for better performance
     window.addEventListener('scroll', handleScroll, { passive: true });
     document.addEventListener('click', handleClick, { passive: true });
-  }, [handleClick, handleKeyDown, handleScroll, seoData, preloadResource, seoManager, updateMetaTags]);
+    document.addEventListener('keydown', handleKeyDown);
 
-  // Add keyboard event listener
-  React.useEffect(() => {
-    document.addEventListener("keydown", handleKeyDown);
-    
-    return () => {
-      document.removeEventListener("keydown", handleKeyDown);
-    };
-  }, [handleKeyDown]);
-
-  // Main initialization and cleanup effect
-  React.useEffect(() => {
-    // Track engagement on page unload
-    window.addEventListener('beforeunload', enhancedTrackEngagement);
-
-=======
->>>>>>> 1ad96f248fe2344703e9824b4d30a1db01ece6c5
     // Mark app as fully initialized
     if (typeof window !== 'undefined' && window.performance && 
         typeof performance.mark === 'function' && 
@@ -227,12 +203,7 @@ export default function App(): React.JSX.Element {
       document.removeEventListener('click', handleClick);
       document.removeEventListener('keydown', handleKeyDown);
     };
-<<<<<<< HEAD
-  }, [trackEngagement, handleKeyDown, handleScroll, handleClick, enhancedTrackEngagement, seoData, preloadResource, seoManager]);
-=======
-  }, [handleScroll, handleClick, handleKeyDown, seoData, preloadResource, updateMetaTags, enhancedTrackEngagement]);
-
->>>>>>> 1ad96f248fe2344703e9824b4d30a1db01ece6c5
+  }, [trackEngagement, handleKeyDown, handleScroll, handleClick, enhancedTrackEngagement, seoData, preloadResource, seoManager, updateMetaTags]);
   if (isLoading) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100">
