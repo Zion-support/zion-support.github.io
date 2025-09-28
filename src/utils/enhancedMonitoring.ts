@@ -195,6 +195,7 @@ class EnhancedMonitoring {
           url: window.location.href,
           sessionId: this.sessionId,
           userId: this.userId,
+          timestamp: Date.now(),
           metadata: { entry: lastEntry }
         });
       }).observe({ entryTypes: ['largest-contentful-paint'] });
@@ -205,11 +206,12 @@ class EnhancedMonitoring {
         entries.forEach((entry) => {
           this.trackPerformance({
             name: 'FID',
-            value: entry.processingStart - entry.startTime,
+            value: entry.startTime,
             type: 'measure',
             url: window.location.href,
             sessionId: this.sessionId,
             userId: this.userId,
+            timestamp: Date.now(),
             metadata: { entry }
           });
         });
@@ -227,6 +229,7 @@ class EnhancedMonitoring {
               url: window.location.href,
               sessionId: this.sessionId,
               userId: this.userId,
+              timestamp: Date.now(),
               metadata: { entry }
             });
           }
@@ -245,6 +248,7 @@ class EnhancedMonitoring {
             url: window.location.href,
             sessionId: this.sessionId,
             userId: this.userId,
+            timestamp: Date.now(),
             metadata: { entry: fcpEntry }
           });
         }
@@ -261,7 +265,8 @@ class EnhancedMonitoring {
           type: 'navigation',
           url: window.location.href,
           sessionId: this.sessionId,
-          userId: this.userId
+          userId: this.userId,
+          timestamp: Date.now()
         });
 
         this.trackPerformance({
@@ -270,7 +275,8 @@ class EnhancedMonitoring {
           type: 'navigation',
           url: window.location.href,
           sessionId: this.sessionId,
-          userId: this.userId
+          userId: this.userId,
+          timestamp: Date.now()
         });
       }
     });
@@ -338,6 +344,7 @@ class EnhancedMonitoring {
           url: args[0] as string,
           sessionId: this.sessionId,
           userId: this.userId,
+          timestamp: Date.now(),
           metadata: {
             method: args[1]?.method || 'GET',
             status: response.status,
@@ -440,6 +447,7 @@ class EnhancedMonitoring {
       url: window.location.href,
       sessionId: this.sessionId,
       userId: this.userId,
+      timestamp: Date.now(),
       metadata
     });
   }

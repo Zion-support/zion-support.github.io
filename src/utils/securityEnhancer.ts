@@ -39,6 +39,7 @@ interface SecurityEvent {
 }
 
 class SecurityEnhancer {
+  private static instance: SecurityEnhancer;
   private config: SecurityConfig;
   private metrics: SecurityMetrics;
   private securityEvents: SecurityEvent[] = [];
@@ -73,6 +74,13 @@ class SecurityEnhancer {
 
     this.initializeSuspiciousPatterns();
     this.initialize();
+  }
+
+  public static getInstance(config?: Partial<SecurityConfig>): SecurityEnhancer {
+    if (!SecurityEnhancer.instance) {
+      SecurityEnhancer.instance = new SecurityEnhancer(config);
+    }
+    return SecurityEnhancer.instance;
   }
 
   private initializeSuspiciousPatterns(): void {
