@@ -11,6 +11,7 @@ import { seoOptimizer } from './utils/seoOptimizations';
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
 import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
+import PerformanceMonitor from './components/PerformanceMonitor';
 import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
 import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
 import { enhancedAnalytics } from './utils/enhancedAnalytics';
@@ -122,22 +123,40 @@ export default function App(): React.JSX.Element {
 
   // Initialize comprehensive enhancements
   useEffect(() => {
-    const enhancements = getComprehensiveEnhancements();
-    enhancements.initialize();
+    // Get comprehensive enhancements (initialization happens in constructor)
+    getComprehensiveEnhancements();
     
     // Initialize individual enhancement systems
-    enhancedPerformanceMonitor.initialize();
-    enhancedAnalytics.initialize();
-    advancedCacheSystem.initialize();
-    new AdvancedAutomationSystem().initialize();
-    new AccessibilityEnhancer().initialize();
-    new SecurityEnhancer().initialize();
+    if (enhancedPerformanceMonitor && typeof enhancedPerformanceMonitor.startMonitoring === 'function') {
+      enhancedPerformanceMonitor.startMonitoring();
+    }
+    if (enhancedAnalytics && typeof enhancedAnalytics.initialize === 'function') {
+      enhancedAnalytics.initialize();
+    }
+    if (advancedCacheSystem && typeof advancedCacheSystem.initialize === 'function') {
+      advancedCacheSystem.initialize();
+    }
+    
+    // Initialize new instances
+    const automationSystem = new AdvancedAutomationSystem();
+    if (typeof automationSystem.initialize === 'function') {
+      automationSystem.initialize();
+    }
+    
+    const accessibilityEnhancer = new AccessibilityEnhancer();
+    if (typeof accessibilityEnhancer.initialize === 'function') {
+      accessibilityEnhancer.initialize();
+    }
+    
+    const securityEnhancer = new SecurityEnhancer();
+    if (typeof securityEnhancer.initialize === 'function') {
+      securityEnhancer.initialize();
+    }
     
     // Initialize analytics
-    analytics.initialize();
-    seoAnalytics.initialize();
-    performanceSEO.initialize();
-    seoManager.initialize();
+    if (analytics && typeof analytics.initialize === 'function') {
+      analytics.initialize();
+    }
     
     // Initialize SEO analytics
     seoAnalytics.trackPageView(window.location.pathname);
@@ -210,7 +229,11 @@ export default function App(): React.JSX.Element {
       document.removeEventListener('click', handleClick);
       document.removeEventListener('keydown', handleKeyDown);
     };
+<<<<<<< HEAD
   }, [handleScroll, handleClick, handleKeyDown, seoData, preloadResource, updateMetaTags, enhancedTrackEngagement]);
+=======
+  }, [trackEngagement, handleKeyDown, handleScroll, handleClick, enhancedTrackEngagement, seoData, preloadResource]);
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-b24f
 
   // Performance optimization is handled by the hook automatically
 
