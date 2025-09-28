@@ -71,6 +71,22 @@ import { securityUtils } from './utils/securityUtils';
 // import { getKeyboardShortcuts } from './utils/advancedKeyboardShortcuts';
 // import { getDataVisualization } from './utils/advancedDataVisualization';
 // import { useAppInitialization } from './hooks/useAppInitialization';
+import { enhancedSecurityManager } from './utils/enhancedSecurityManager';
+import { initializePerformanceEnhancements } from './utils/performanceEnhancements';
+import { initializeAccessibilityEnhancements } from './utils/accessibilityEnhancements';
+import { advancedPerformanceOptimizer } from './utils/advancedPerformanceOptimizer';
+import { advancedSEOOptimizer } from './utils/advancedSEOOptimizer';
+import { advancedAccessibilityEnhancer } from './utils/advancedAccessibilityEnhancer';
+import { advancedSecurityManager } from './utils/advancedSecurityManager';
+import { advancedAnalytics } from './utils/advancedAnalytics';
+import { advancedErrorHandler } from './utils/advancedErrorHandler';
+import { advancedCachingSystem } from './utils/advancedCachingSystem';
+import { advancedUXOptimizer } from './utils/advancedUXOptimizer';
+import { advancedTestingFramework } from './utils/advancedTestingFramework';
+import { advancedI18n } from './utils/advancedI18n';
+import AdvancedAnalyticsDashboard from './components/AdvancedAnalyticsDashboard';
+import PerformanceMetricsDashboard from './components/PerformanceMetricsDashboard';
+import ComprehensiveImprovements from './components/ComprehensiveImprovements';
 import './index.css';
 
 export default function App(): React.JSX.Element {
@@ -600,6 +616,86 @@ export default function App(): React.JSX.Element {
       // Initialize individual enhancement systems
       if (enhancedPerformanceMonitor && typeof enhancedPerformanceMonitor.initialize === 'function') {
         enhancedPerformanceMonitor.initialize();
+      }
+      
+      // Initialize enhanced systems
+      enhancedPerformanceMonitor.startMonitoring();
+      analytics.initialize();
+      
+      // Initialize accessibility and security enhancers
+      if (advancedAccessibilityEnhancer && typeof advancedAccessibilityEnhancer.initialize === 'function') {
+        advancedAccessibilityEnhancer.initialize();
+      }
+      if (enhancedSecurityManager && typeof enhancedSecurityManager.initialize === 'function') {
+        enhancedSecurityManager.initialize();
+      }
+      
+      // Initialize new performance and accessibility enhancements
+      initializePerformanceEnhancements();
+      initializeAccessibilityEnhancements();
+      
+      // Initialize advanced optimizers
+      advancedPerformanceOptimizer.initialize();
+      advancedSEOOptimizer.initialize();
+      advancedAccessibilityEnhancer.initialize();
+      advancedSecurityManager.initialize();
+      advancedAnalytics.initialize();
+      advancedErrorHandler.initialize();
+      advancedCachingSystem.initialize();
+      advancedUXOptimizer.initialize();
+      advancedTestingFramework.initialize();
+      advancedI18n.initialize();
+      
+      // Store enhancements globally for debugging
+      (window as unknown as Record<string, unknown>).enhancements = enhancements;
+      (window as unknown as Record<string, unknown>).performanceOptimizer = advancedPerformanceOptimizer;
+      (window as unknown as Record<string, unknown>).seoOptimizer = advancedSEOOptimizer;
+      (window as unknown as Record<string, unknown>).accessibilityEnhancer = advancedAccessibilityEnhancer;
+      (window as unknown as Record<string, unknown>).securityManager = advancedSecurityManager;
+      (window as unknown as Record<string, unknown>).analytics = advancedAnalytics;
+      (window as unknown as Record<string, unknown>).errorHandler = advancedErrorHandler;
+      (window as unknown as Record<string, unknown>).cachingSystem = advancedCachingSystem;
+      (window as unknown as Record<string, unknown>).uxOptimizer = advancedUXOptimizer;
+      (window as unknown as Record<string, unknown>).testingFramework = advancedTestingFramework;
+      (window as unknown as Record<string, unknown>).i18n = advancedI18n;
+    } catch (error) {
+      console.error('Error initializing enhancements:', error);
+    }
+  }, []);
+
+  // Optimized keyboard handler for system dashboard toggle
+  const handleKeyDown = useCallback((event: KeyboardEvent) => {
+    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'D') {
+      event.preventDefault();
+      setShowSystemDashboard((prev: boolean) => !prev);
+    }
+    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'P') {
+      event.preventDefault();
+      setShowPerformanceOptimizer((prev: boolean) => !prev);
+    }
+    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'M') {
+      event.preventDefault();
+      setShowPerformanceMonitor(prev => !prev);
+    }
+  }, []);
+
+  useEffect(() => {
+    try {
+      // Add performance marks for better monitoring
+      if (typeof window !== 'undefined' && window.performance && typeof performance.mark === 'function') {
+        performance.mark('app-init-start');
+        
+        // Add performance observer for better monitoring
+        if ('PerformanceObserver' in window) {
+          const observer = new PerformanceObserver((list) => {
+            for (const entry of list.getEntries()) {
+              if (entry.entryType === 'navigation') {
+                console.log('Navigation timing:', entry);
+              }
+            }
+          });
+          observer.observe({ entryTypes: ['navigation', 'paint', 'largest-contentful-paint'] });
+        }
       }
       
       // Initialize analytics

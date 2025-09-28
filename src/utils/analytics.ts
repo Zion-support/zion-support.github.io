@@ -297,6 +297,18 @@ export class AnalyticsManager {
     return { ...this.session };
   }
 
+  public track(eventName: string, properties?: Record<string, unknown>): void {
+    this.trackEvent(eventName, properties);
+  }
+
+  public getMetrics(): any {
+    return {
+      session: this.session,
+      eventCount: this.eventQueue.length,
+      isInitialized: this.isInitialized,
+    };
+  }
+
   public getEventCount(): number {
     return this.eventQueue.length;
   }
