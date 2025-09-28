@@ -86,7 +86,7 @@ const Home = () => {
           <h2 className='text-4xl font-bold text-white mb-4 animate-slide-up'>
             Why Choose Zion Tech Group?
           </h2>
-          <p className='text-xl text-zion-slate-light max-w-2xl mx-auto animate-fade-in'>
+          <p className='text-xl text-zion-slate-light max-w-2xl mx-auto'>
             We deliver exceptional technology solutions that drive business growth and innovation.
           </p>
         </div>

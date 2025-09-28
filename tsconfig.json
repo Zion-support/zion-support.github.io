@@ -58,7 +58,6 @@
     "zion-ai-assistant",
     "types.disabled",
     "**/*.config.ts",
-    "vite.config.ts",
     "vitest.config.ts"
   ],
   "references": [{ "path": "./tsconfig.node.json" }]
