@@ -563,7 +563,7 @@ class EnhancedAnalyticsSystem {
         const rect = element.getBoundingClientRect();
         return `${rect.x},${rect.y}`;
       }
-    } catch (error) {
+    } catch {
       // Ignore errors
     }
     return 'unknown';

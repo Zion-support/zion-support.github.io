@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useCallback, useMemo } from 'react';
-import { performanceOptimizer } from '../utils/performanceOptimizations';
+// import { performanceOptimizer } from '../utils/performanceOptimizations';
 import { 
   getMemoryUsage, 
   collectPerformanceMetrics, 
