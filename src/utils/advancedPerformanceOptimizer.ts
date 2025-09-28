@@ -3,6 +3,8 @@
  * Comprehensive performance optimization utilities for the Zion Tech Group website
  */
 
+import { OptimizationStrategy } from './advancedBuildOptimizer';
+
 interface PerformanceMetrics {
   fcp: number;
   lcp: number;
@@ -339,17 +341,19 @@ class AdvancedPerformanceOptimizer {
     });
 
     this.observeMetric("first-input", (entry) => {
+      const fidEntry = entry as PerformanceEventTiming;
       this.metrics = {
         ...this.metrics,
-        fid: entry.processingStart - entry.startTime,
+        fid: fidEntry.processingStart - fidEntry.startTime,
       } as PerformanceMetrics;
     });
 
     this.observeMetric("layout-shift", (entry) => {
-      if (!entry.hadRecentInput) {
+      const clsEntry = entry as any; // LayoutShift entries have different properties
+      if (!clsEntry.hadRecentInput) {
         this.metrics = {
           ...this.metrics,
-          cls: (this.metrics?.cls || 0) + entry.value,
+          cls: (this.metrics?.cls || 0) + clsEntry.value,
         } as PerformanceMetrics;
       }
     });
@@ -360,8 +364,8 @@ class AdvancedPerformanceOptimizer {
       this.metrics = {
         ...this.metrics,
         ttfb: navEntry.responseStart - navEntry.requestStart,
-        fmp: navEntry.domContentLoadedEventEnd - navEntry.navigationStart,
-        tti: navEntry.loadEventEnd - navEntry.navigationStart,
+        fmp: navEntry.domContentLoadedEventEnd - navEntry.fetchStart,
+        tti: navEntry.loadEventEnd - navEntry.fetchStart,
       } as PerformanceMetrics;
     });
   }

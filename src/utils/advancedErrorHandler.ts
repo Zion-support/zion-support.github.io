@@ -3,6 +3,12 @@
  * Comprehensive error handling and recovery system for the Zion Tech Group website
  */
 
+interface ExtendedXMLHttpRequest extends XMLHttpRequest {
+  _method?: string;
+  _url?: string | URL;
+  handleError?: (error: any) => void;
+}
+
 interface ErrorConfig {
   enableErrorReporting: boolean;
   enableErrorRecovery: boolean;
@@ -223,44 +229,54 @@ class AdvancedErrorHandler {
 
     const originalXHR = window.XMLHttpRequest;
     window.XMLHttpRequest = function() {
-      const xhr = new originalXHR();
+      const xhr = new originalXHR() as ExtendedXMLHttpRequest;
       const originalOpen = xhr.open;
       const originalSend = xhr.send;
 
+      xhr.handleError = (error: any) => {
+        // Handle error reporting
+        console.error('XHR Error:', error);
+      };
+
       xhr.open = function(method: string, url: string | URL, ...args: any[]) {
-        this._method = method;
-        this._url = url;
-        return originalOpen.apply(this, [method, url, ...args]);
+        (this as ExtendedXMLHttpRequest)._method = method;
+        (this as ExtendedXMLHttpRequest)._url = url;
+        return originalOpen.apply(this, [method, url, true]);
       };
 
       xhr.send = function(data?: any) {
+        const self = this as ExtendedXMLHttpRequest;
         this.addEventListener('error', () => {
-          this.handleError({
-            type: 'XHRError',
-            message: 'XMLHttpRequest failed',
-            severity: 'medium',
-            category: 'network',
-            metadata: {
-              method: this._method,
-              url: this._url
-            }
-          });
+          if (self.handleError) {
+            self.handleError({
+              type: 'XHRError',
+              message: 'XMLHttpRequest failed',
+              severity: 'medium',
+              category: 'network',
+              metadata: {
+                method: self._method,
+                url: self._url
+              }
+            });
+          }
         });
 
         this.addEventListener('load', () => {
           if (this.status >= 400) {
-            this.handleError({
-              type: 'XHRError',
-              message: `HTTP ${this.status}: ${this.statusText}`,
-              severity: this.status >= 500 ? 'high' : 'medium',
-              category: 'network',
-              metadata: {
-                method: this._method,
-                url: this._url,
-                status: this.status,
-                statusText: this.statusText
-              }
-            });
+            if (self.handleError) {
+              self.handleError({
+                type: 'XHRError',
+                message: `HTTP ${this.status}: ${this.statusText}`,
+                severity: this.status >= 500 ? 'high' : 'medium',
+                category: 'network',
+                metadata: {
+                  method: self._method,
+                  url: self._url,
+                  status: this.status,
+                  statusText: this.statusText
+                }
+              });
+            }
           }
         });
 

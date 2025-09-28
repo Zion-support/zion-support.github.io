@@ -146,6 +146,12 @@ export class AdvancedAnalytics {
       interactions: 0,
     };
   }
+
+  public initialize(): void {
+    // Analytics is already initialized in constructor
+    // This method exists for consistency with other services
+    console.log('AdvancedAnalytics initialized');
+  }
 }
 
 export const advancedAnalytics = new AdvancedAnalytics();
