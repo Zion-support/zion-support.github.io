@@ -1,20 +1,16 @@
-import { useCallback, useEffect, useMemo, useState } from "react";
-import { initializeErrorReporting } from "../utils/errorReporting";
-import { initOptimizations } from "../utils/buildOptimizations";
-import { seoManager, seoAnalytics, performanceSEO } from "../utils/seoEnhanced";
-import { accessibilityManager } from "../utils/accessibility";
-import {
-  PerformanceMonitor,
-  ResourceMonitor,
-  MemoryMonitor,
-} from "../utils/performance";
-import { usePerformanceOptimization } from "./usePerformanceOptimization";
-import { analytics } from "../utils/analytics";
-import { seoOptimizer } from "../utils/seoOptimization";
-import { cacheManager } from "../utils/cacheManager";
-import { apiClient } from "../utils/apiClient";
-import { notificationManager } from "../utils/notificationManager";
-import { userFeedback } from "../utils/userFeedbackManager";
+import { useCallback, useEffect, useMemo, useState } from 'react';
+import { initializeErrorReporting } from '../utils/errorReporting';
+import { initOptimizations } from '../utils/buildOptimizations';
+import { seoManager, seoAnalytics, performanceSEO } from '../utils/seoEnhanced';
+import { accessibilityManager } from '../utils/accessibility';
+import { PerformanceMonitor, ResourceMonitor, MemoryMonitor } from '../utils/performance';
+import { usePerformanceOptimization } from './usePerformanceOptimization';
+import { analytics } from '../utils/analytics';
+import { seoOptimizer } from '../utils/seoOptimization';
+import { cacheManager } from '../utils/cacheManager';
+import { apiClient } from '../utils/apiClient';
+import { notificationManager } from '../utils/notificationManager';
+import { userFeedback } from '../utils/userFeedbackManager';
 
 interface AppInitializationConfig {
   enablePerformanceMonitoring?: boolean;
@@ -35,7 +31,7 @@ export function useAppInitialization(config: AppInitializationConfig = {}) {
   const {
     enablePerformanceMonitoring = true,
     enableAccessibility = true,
-     
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     enableSecurity = true,
     enableAnalytics = true,
     enableNotifications = true,
@@ -43,92 +39,72 @@ export function useAppInitialization(config: AppInitializationConfig = {}) {
   } = config;
 
   const { preloadResource, recordMetric } = usePerformanceOptimization();
-
+  
   const [isLoading, setIsLoading] = useState(true);
   const [loadingProgress, setLoadingProgress] = useState(0);
   const [engagementData, setEngagementData] = useState<EngagementData>({
     startTime: Date.now(),
     scrollDepth: 0,
-    clicks: 0,
+    clicks: 0
   });
 
   // Memoize the SEO data to prevent unnecessary re-renders
-  const seoData = useMemo(
-    () => ({
-      title: "Zion Tech Group - Leading AI & Technology Solutions",
-      description:
-        "Cutting-edge AI, quantum computing, and digital transformation solutions for modern enterprises. Expert consulting, cloud services, and innovative technology implementations.",
-      keywords: [
-        "AI solutions",
-        "quantum computing",
-        "digital transformation",
-        "cloud services",
-        "enterprise technology",
-        "machine learning",
-        "automation",
-        "blockchain",
-      ],
-      ogType: "website",
-      ogUrl: typeof window !== "undefined" ? window.location.href : "",
-      ogImage: "/og-image.png",
-      twitterCard: "summary_large_image" as const,
-      structuredData: [
-        seoManager.generateOrganizationStructuredData(),
-        seoManager.generateWebsiteStructuredData(),
-      ],
-    }),
-    [],
-  );
+  const seoData = useMemo(() => ({
+    title: 'Zion Tech Group - Leading AI & Technology Solutions',
+    description: 'Cutting-edge AI, quantum computing, and digital transformation solutions for modern enterprises. Expert consulting, cloud services, and innovative technology implementations.',
+    keywords: ['AI solutions', 'quantum computing', 'digital transformation', 'cloud services', 'enterprise technology', 'machine learning', 'automation', 'blockchain'],
+    ogType: 'website',
+    ogUrl: typeof window !== 'undefined' ? window.location.href : '',
+    ogImage: '/og-image.png',
+    twitterCard: 'summary_large_image' as const,
+    structuredData: [
+      seoManager.generateOrganizationStructuredData(),
+      seoManager.generateWebsiteStructuredData()
+    ]
+  }), []);
 
   // Optimized scroll handler with requestAnimationFrame
   const handleScroll = useCallback(() => {
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    const documentHeight =
-      document.documentElement.scrollHeight - window.innerHeight;
-    const newScrollDepth = Math.max(
-      engagementData.scrollDepth,
-      scrollTop / documentHeight,
-    );
-
-    setEngagementData((prev) => ({ ...prev, scrollDepth: newScrollDepth }));
-
+    const documentHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const newScrollDepth = Math.max(engagementData.scrollDepth, scrollTop / documentHeight);
+    
+    setEngagementData(prev => ({ ...prev, scrollDepth: newScrollDepth }));
+    
     // Use requestAnimationFrame for better performance
     requestAnimationFrame(() => {
-      recordMetric("scrollDepth", newScrollDepth);
+      recordMetric('scrollDepth', newScrollDepth);
     });
   }, [recordMetric, engagementData.scrollDepth]);
 
   // Optimized click handler with better event delegation
-  const handleClick = useCallback(
-    (event: Event) => {
-      const newClicks = engagementData.clicks + 1;
-      setEngagementData((prev) => ({ ...prev, clicks: newClicks }));
-
-      // Debounce click tracking
-      setTimeout(() => {
-        recordMetric("userClicks", newClicks);
-
-        // Track specific interaction types with better performance
-        const target = event.target as HTMLElement;
-        const tagName = target.tagName.toLowerCase();
-
-        switch (tagName) {
-          case "button":
-            recordMetric("buttonClicks", 1);
-            break;
-          case "a":
-            recordMetric("linkClicks", 1);
-            break;
-          case "input":
-            recordMetric("inputClicks", 1);
-            break;
-          default:
-            recordMetric("otherClicks", 1);
-        }
-      }, 100);
-    },
-    [recordMetric, engagementData.clicks],
-  );
+  const handleClick = useCallback((event: Event) => {
+    const newClicks = engagementData.clicks + 1;
+    setEngagementData(prev => ({ ...prev, clicks: newClicks }));
+    
+    // Debounce click tracking
+    setTimeout(() => {
+      recordMetric('userClicks', newClicks);
+      
+      // Track specific interaction types with better performance
+      const target = event.target as HTMLElement;
+      const tagName = target.tagName.toLowerCase();
+      
+      switch (tagName) {
+        case 'button':
+          recordMetric('buttonClicks', 1);
+          break;
+        case 'a':
+          recordMetric('linkClicks', 1);
+          break;
+        case 'input':
+          recordMetric('inputClicks', 1);
+          break;
+        default:
+          recordMetric('otherClicks', 1);
+      }
+    }, 100);
+  }, [recordMetric, engagementData.clicks]);
 
   // Track engagement function
   const trackEngagement = useCallback(() => {
@@ -147,27 +123,23 @@ export function useAppInitialization(config: AppInitializationConfig = {}) {
     try {
       // Initialize error reporting
       initializeErrorReporting();
-
+      
       // Initialize build optimizations
       initOptimizations();
-
+      
       // Add performance marks for better monitoring
-      if (
-        typeof window !== "undefined" &&
-        window.performance &&
-        typeof performance.mark === "function"
-      ) {
-        performance.mark("app-init-start");
+      if (typeof window !== 'undefined' && window.performance && typeof performance.mark === 'function') {
+        performance.mark('app-init-start');
       }
 
       // Initialize performance monitoring
       if (enablePerformanceMonitoring) {
         const performanceMonitor = PerformanceMonitor.getInstance();
         performanceMonitor.measurePageLoad();
-
+        
         const resourceMonitor = ResourceMonitor.getInstance();
         resourceMonitor.startMonitoring();
-
+        
         const memoryMonitor = MemoryMonitor.getInstance();
         memoryMonitor.startMonitoring();
       }
@@ -176,9 +148,8 @@ export function useAppInitialization(config: AppInitializationConfig = {}) {
       if (enableAccessibility) {
         accessibilityManager.initialize({
           announceChanges: true,
-          reducedMotion: window.matchMedia("(prefers-reduced-motion: reduce)")
-            .matches,
-          highContrast: window.matchMedia("(prefers-contrast: high)").matches,
+          reducedMotion: window.matchMedia('(prefers-reduced-motion: reduce)').matches,
+          highContrast: window.matchMedia('(prefers-contrast: high)').matches
         });
       }
 
@@ -201,7 +172,7 @@ export function useAppInitialization(config: AppInitializationConfig = {}) {
         keywords: seoData.keywords,
         image: seoData.ogImage,
         url: window.location.href,
-        type: seoData.ogType as "website" | "article" | "product",
+        type: seoData.ogType as 'website' | 'article' | 'product'
       });
 
       // Initialize cache manager
@@ -209,132 +180,103 @@ export function useAppInitialization(config: AppInitializationConfig = {}) {
         cacheManager.configure({
           maxSize: 100,
           ttl: 10 * 60 * 1000, // 10 minutes
-          storageType: "localStorage",
+          storageType: 'localStorage',
           enableCompression: true,
-          enableEncryption: false,
+          enableEncryption: false
         });
       }
 
       // Initialize API client
       apiClient.configure({
-        baseURL: "/api",
+        baseURL: '/api',
         timeout: 30000,
         retries: 3,
         enableCaching: enableCaching,
-        enableLogging: process.env.NODE_ENV === "development",
+        enableLogging: process.env.NODE_ENV === 'development'
       });
 
       // Initialize notification manager
       if (enableNotifications) {
         notificationManager.configure({
-          position: "top-right",
+          position: 'top-right',
           duration: 5000,
           maxNotifications: 5,
           enableSound: true,
           enableVibration: true,
           enableBrowserNotifications: true,
-          theme: "auto",
+          theme: 'auto'
         });
 
         // Show welcome notification
-        notificationManager.info(
-          "Welcome to Zion Tech Group",
-          "Your advanced technology solutions platform is ready!",
-        );
+        notificationManager.info('Welcome to Zion Tech Group', 'Your advanced technology solutions platform is ready!');
 
         // Show welcome feedback
         userFeedback.showSuccess(
-          "Welcome!",
-          "Zion Tech Group is now ready with enhanced performance optimizations and user experience features.",
+          'Welcome!',
+          'Zion Tech Group is now ready with enhanced performance optimizations and user experience features.'
         );
       }
 
       // Preload critical resources
-      preloadResource("/og-image.png", "image");
-      preloadResource("/favicon.ico", "image");
+      preloadResource('/og-image.png', 'image');
+      preloadResource('/favicon.ico', 'image');
 
       // Set default SEO data
       seoManager.updateSEO(seoData);
 
-      console.log("✅ Core systems initialized successfully");
+      console.log('✅ Core systems initialized successfully');
     } catch (error) {
-      console.error("❌ Failed to initialize core systems:", error);
-      recordMetric("initializationError", 1);
+      console.error('❌ Failed to initialize core systems:', error);
+      recordMetric('initializationError', 1);
     }
-  }, [
-    enablePerformanceMonitoring,
-    enableAccessibility,
-    enableAnalytics,
-    enableCaching,
-    enableNotifications,
-    preloadResource,
-    recordMetric,
-    seoData,
-  ]);
+  }, [enablePerformanceMonitoring, enableAccessibility, enableAnalytics, enableCaching, enableNotifications, preloadResource, recordMetric, seoData]);
 
   // Initialize advanced systems
   const initializeAdvancedSystems = useCallback(async () => {
     try {
       // Initialize advanced performance monitor
-      const { AdvancedPerformanceMonitor } = await import(
-        "../utils/advancedPerformanceMonitor"
-      );
-      // interface PerformanceMonitorInstance {
-      //   updateConfig: (config: { enableWebVitals: boolean; enableMemoryMonitoring: boolean; enableNetworkMonitoring: boolean; enableCustomMetrics: boolean }) => void;
-      //   startMonitoring: () => void;
-      //   stopMonitoring: () => void;
-      // }
-      const advancedPerformanceMonitor = (
-        AdvancedPerformanceMonitor as any
-      ).getInstance();
-      advancedPerformanceMonitor.updateConfig({
-        enableWebVitals: true,
-        enableMemoryMonitoring: true,
-        enableNetworkMonitoring: true,
-        enableCustomMetrics: true,
-        reportInterval: 5000,
-        thresholds: {
-          pageLoadTime: 3000,
-          firstContentfulPaint: 1800,
-          largestContentfulPaint: 2500,
-          cumulativeLayoutShift: 0.1,
-          firstInputDelay: 100,
-          totalBlockingTime: 300,
-        },
-      });
-      advancedPerformanceMonitor.startMonitoring();
+      const { getPerformanceMonitor } = await import('../utils/advancedPerformanceMonitor');
+      const advancedPerformanceMonitor = getPerformanceMonitor();
+      advancedPerformanceMonitor.start();
 
       // Initialize advanced cache system
-      const { advancedCacheSystem } = await import(
-        "../utils/advancedCacheSystem"
-      );
+      const { advancedCacheSystem } = await import('../utils/advancedCacheSystem');
       advancedCacheSystem.initialize({
         maxSize: 200,
         ttl: 15 * 60 * 1000, // 15 minutes
         compressionEnabled: true,
         encryptionEnabled: false,
-        storageType: "localStorage",
+        storageType: 'localStorage',
         enableAnalytics: true,
-        enablePersistence: true,
+        enablePersistence: true
       });
 
       // Initialize advanced error recovery
-      const { advancedErrorRecovery } = await import(
-        "../utils/advancedErrorRecovery"
-      );
-      advancedErrorRecovery.initialize();
+      const { advancedErrorRecovery } = await import('../utils/advancedErrorRecovery');
+      advancedErrorRecovery.initialize({
+        maxRetries: 3,
+        retryDelay: 1000,
+        exponentialBackoff: true,
+        enableUserGuidance: true,
+        enableAutomaticRecovery: true,
+        enableErrorReporting: true,
+        enableFallbackStrategies: true,
+        enableCircuitBreaker: true,
+        circuitBreakerThreshold: 5,
+        circuitBreakerTimeout: 30000
+      });
 
-      console.log("✅ Advanced systems initialized successfully");
+      console.log('✅ Advanced systems initialized successfully');
     } catch (error) {
-      console.error("❌ Failed to initialize advanced systems:", error);
-      recordMetric("advancedInitializationError", 1);
+      console.error('❌ Failed to initialize advanced systems:', error);
+      recordMetric('advancedInitializationError', 1);
     }
   }, [recordMetric]);
 
   // Simulate loading progress
   useEffect(() => {
     const loadingInterval = setInterval(() => {
-      setLoadingProgress((prev) => {
+      setLoadingProgress(prev => {
         if (prev >= 100) {
           setIsLoading(false);
           clearInterval(loadingInterval);
@@ -357,46 +299,31 @@ export function useAppInitialization(config: AppInitializationConfig = {}) {
     initialize();
 
     // Use passive listeners for better performance
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    document.addEventListener("click", handleClick, { passive: true });
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    document.addEventListener('click', handleClick, { passive: true });
 
     // Track engagement on page unload
 
-    window.addEventListener("beforeunload", trackEngagement);
+    window.addEventListener('beforeunload', trackEngagement);
 
     // Mark app as fully initialized
-    if (
-      typeof window !== "undefined" &&
-      window.performance &&
-      typeof performance.mark === "function" &&
-      typeof performance.measure === "function"
-    ) {
-      performance.mark("app-init-complete");
-      performance.measure(
-        "app-initialization",
-        "app-init-start",
-        "app-init-complete",
-      );
+    if (typeof window !== 'undefined' && window.performance && 
+        typeof performance.mark === 'function' && 
+        typeof performance.measure === 'function') {
+      performance.mark('app-init-complete');
+      performance.measure('app-initialization', 'app-init-start', 'app-init-complete');
     }
 
     // Cleanup function
     return () => {
-      window.removeEventListener("scroll", handleScroll);
-      document.removeEventListener("click", handleClick);
-      window.removeEventListener("beforeunload", trackEngagement);
-
+      window.removeEventListener('scroll', handleScroll);
+      document.removeEventListener('click', handleClick);
+      window.removeEventListener('beforeunload', trackEngagement);
+      
       // Final engagement tracking
       trackEngagement();
     };
-  }, [
-    initializeCoreSystems,
-    initializeAdvancedSystems,
-    handleScroll,
-    handleClick,
-    engagementData,
-    enableAnalytics,
-    trackEngagement,
-  ]);
+  }, [initializeCoreSystems, initializeAdvancedSystems, handleScroll, handleClick, engagementData, enableAnalytics, trackEngagement]);
 
   return {
     isLoading,
@@ -405,6 +332,6 @@ export function useAppInitialization(config: AppInitializationConfig = {}) {
     seoData,
     handleScroll,
     handleClick,
-    trackEngagement,
+    trackEngagement
   };
 }
