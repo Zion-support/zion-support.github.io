@@ -71,6 +71,8 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         }
       });
       newMetrics.bundleSize = totalSize;
+      
+      setMetrics(prev => ({
         ...prev,
         fcp: vitals.fcp || 0,
         lcp: vitals.lcp || 0,
