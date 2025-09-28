@@ -1,14 +1,20 @@
 import React, { useCallback, useState, useEffect, useMemo } from 'react';
 import { AppRouter } from './router';
 import { useAppInitialization } from './hooks/useAppInitialization';
+import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
+import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
+import { seoAnalytics, performanceSEO, seoManager } from './utils/seoEnhanced';
+import { analytics } from './utils/analytics';
+// Removed unused imports: seoOptimizer, cacheManager, apiClient, notificationManager, userFeedback
+import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
 import PerformanceDashboard from './components/PerformanceDashboard';
 import RealTimeMonitor from './components/RealTimeMonitor';
 import SystemMetricsDashboard from './components/SystemMetricsDashboard';
 import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
 import EnhancedNotificationSystem from './components/EnhancedNotificationSystem';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
-import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
-import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
+import EnhancedAnalytics from './components/EnhancedAnalytics';
+// Removed unused import: getComprehensiveEnhancements
 import './index.css';
 import './styles/notifications.css';
 import './styles/system-metrics.css';
@@ -83,9 +89,31 @@ export default function App(): React.JSX.Element {
     if (typeof window !== 'undefined' && window.performance && typeof performance.mark === 'function') {
       performance.mark('app-init-start');
     }
+    
+    // Preload critical resources
+    preloadResource('/og-image.png', 'image');
+    preloadResource('/favicon.ico', 'image');
 
-    // Set default SEO data
-    seoManager.updateMetaTags(seoData);
+    // Use passive listeners for better performance
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    document.addEventListener('click', handleClick, { passive: true });
+    document.addEventListener('keydown', handleKeyDown);
+
+    // Initialize basic systems
+    analytics.initialize();
+    // Note: CacheManager, ApiClient, and NotificationManager don't have initialize methods
+    // They are initialized when first used via their getInstance() methods
+    
+    // Initialize SEO analytics
+    seoAnalytics.trackPageView(window.location.pathname);
+    
+    // Initialize performance SEO optimizations
+    performanceSEO.optimizeImages();
+    performanceSEO.optimizeFonts();
+    // Note: optimizeCSS method doesn't exist in PerformanceSEO class
+
+    // Set default SEO data using the correct method
+    seoManager.updateSEO(seoData);
 
     // Add keyboard event listener
     document.addEventListener('keydown', handleKeyDown);
