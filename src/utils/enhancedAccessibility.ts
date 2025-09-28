@@ -3,6 +3,25 @@
  * Provides comprehensive accessibility features and WCAG compliance
  */
 
+// Speech Recognition API types
+interface SpeechRecognition extends EventTarget {
+  continuous: boolean;
+  interimResults: boolean;
+  lang: string;
+  onresult: ((event: { results: Array<Array<{ transcript: string }>> }) => void) | null;
+  start(): void;
+  stop(): void;
+}
+
+interface SpeechRecognitionConstructor {
+  new (): SpeechRecognition;
+}
+
+interface ExtendedWindow extends Window {
+  SpeechRecognition?: SpeechRecognitionConstructor;
+  webkitSpeechRecognition?: SpeechRecognitionConstructor;
+}
+
 interface AccessibilityConfig {
   enableScreenReader: boolean;
   enableKeyboardNavigation: boolean;
@@ -591,7 +610,9 @@ class EnhancedAccessibilityManager {
    * Setup speech recognition
    */
   private setupSpeechRecognition(): void {
-    const SpeechRecognition = (window as { SpeechRecognition?: any; webkitSpeechRecognition?: any }).SpeechRecognition || (window as { SpeechRecognition?: any; webkitSpeechRecognition?: any }).webkitSpeechRecognition;
+    const SpeechRecognition = (window as ExtendedWindow).SpeechRecognition || (window as ExtendedWindow).webkitSpeechRecognition;
+    if (!SpeechRecognition) return;
+    
     const recognition = new SpeechRecognition();
     
     recognition.continuous = false;

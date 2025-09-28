@@ -1,4 +1,4 @@
-import React, { useCallback, useState, useEffect, useMemo } from 'react';
+import React, { useCallback, useState, useMemo, useEffect } from 'react';
 import { AppRouter } from './router';
 import { useAppInitialization } from './hooks/useAppInitialization';
 import PerformanceDashboard from './components/PerformanceDashboard';
@@ -9,77 +9,17 @@ import EnhancedNotificationSystem from './components/EnhancedNotificationSystem'
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
-import EnhancedAnalytics from './components/EnhancedAnalytics';
-import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
 import './index.css';
 import './styles/notifications.css';
 import './styles/system-metrics.css';
 import './styles/modern-utilities.css';
 
-// Import utility modules
-import { seoManager, seoAnalytics, performanceSEO } from './utils/seoEnhanced';
-import { initializeErrorReporting } from './utils/errorReporting';
-import { initOptimizations } from './utils/buildOptimizations';
-import { performanceOptimizer } from './utils/optimization';
-import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
-import { enhancedAnalytics } from './utils/enhancedAnalytics';
-import { enhancedSEO } from './utils/enhancedSEO';
-import { enhancedPerformanceOptimizer } from './utils/enhancedPerformance';
-import { enhancedSecurityManager } from './utils/enhancedSecurity';
-import { enhancedAccessibilityManager } from './utils/enhancedAccessibility';
-import { accessibilityManager } from './utils/accessibility';
-import performanceEnhancer from './utils/performanceEnhancements';
-import { PerformanceMonitor } from './utils/performanceMonitor';
-import { advancedCacheSystem } from './utils/advancedCacheSystem';
-import { advancedErrorRecovery } from './utils/advancedErrorRecovery';
-import { advancedAutomationSystem } from './utils/advancedAutomationSystem';
-import { advancedPerformanceOptimizer } from './utils/performanceOptimizer';
-import { AccessibilityEnhancer } from './utils/accessibilityEnhancer';
-import { SecurityEnhancer } from './utils/securityEnhancer';
-import AdvancedPerformanceMonitor from './utils/advancedPerformanceMonitor';
-import AdvancedAccessibilityManager from './utils/advancedAccessibilityManager';
-import AdvancedSecurityManager from './utils/advancedSecurityManager';
-import EnhancedUXManager from './utils/enhancedUXManager';
-import { analytics } from './utils/analytics';
-import { seoOptimizer } from './utils/seoOptimization';
-import { cacheManager } from './utils/cacheManager';
-import { apiClient } from './utils/apiClient';
-import { notificationManager } from './utils/notificationManager';
-
-// Simple utility functions
-const preloadResource = (href: string, as: string) => {
-  const link = document.createElement('link');
-  link.rel = 'preload';
-  link.href = href;
-  link.as = as;
-  document.head.appendChild(link);
-};
 export default function App(): React.JSX.Element {
   // State for system metrics dashboard
   const [showSystemDashboard, setShowSystemDashboard] = useState(false);
   
   // State for performance optimizer
   const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
-
-  // Engagement tracking data
-  const engagementData = useMemo(() => ({
-    startTime: Date.now(),
-    scrollDepth: 0,
-    clicks: 0
-  }), []);
-
-  // Scroll handler
-  const handleScroll = useCallback(() => {
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
-    const scrollDepth = Math.round((scrollTop / scrollHeight) * 100);
-    engagementData.scrollDepth = Math.max(engagementData.scrollDepth, scrollDepth);
-  }, [engagementData]);
-
-  // Click handler
-  const handleClick = useCallback(() => {
-    engagementData.clicks++;
-  }, [engagementData]);
 
   // Initialize app with custom configuration
   const { isLoading, loadingProgress } = useAppInitialization({
@@ -90,23 +30,6 @@ export default function App(): React.JSX.Element {
     enableNotifications: true,
     enableCaching: true,
   });
-
-  // Initialize comprehensive enhancements
-  useEffect(() => {
-    const enhancements = getComprehensiveEnhancements({
-      enableAdvancedPerformance: true,
-      enableSecurityFeatures: true,
-      enableAccessibilityFeatures: true,
-      enableSEOFeatures: true,
-      enableUXFeatures: true,
-      enableAnalytics: true,
-      enableOfflineSupport: true,
-      enablePWA: true
-    });
-
-    // Store enhancements globally for debugging
-    (window as any).enhancements = enhancements;
-  }, []);
 
   // Optimized keyboard handler for system dashboard toggle
   const handleKeyDown = useCallback((event: KeyboardEvent) => {
@@ -129,10 +52,19 @@ export default function App(): React.JSX.Element {
     ogUrl: typeof window !== 'undefined' ? window.location.href : '',
     ogImage: '/og-image.png',
     twitterCard: 'summary_large_image' as const,
-    structuredData: []
+    structuredData: [
+      seoManager.generateOrganizationStructuredData(),
+      seoManager.generateWebsiteStructuredData()
+    ]
   }), []);
 
   useEffect(() => {
+    // Initialize error reporting with enhanced configuration
+    initializeErrorReporting();
+    
+    // Initialize build optimizations with performance monitoring
+    initOptimizations();
+    
     // Add performance marks for better monitoring
     if (typeof window !== 'undefined' && window.performance && typeof performance.mark === 'function') {
       performance.mark('app-init-start');
@@ -288,14 +220,18 @@ export default function App(): React.JSX.Element {
       });
     }).catch((error) => {
       console.error('❌ Failed to load service worker manager:', error);
-      // recordMetric('serviceWorkerRegistrationError', 1);
+      recordMetric('serviceWorkerRegistrationError', 1);
     });
     
     // Initialize performance monitoring
     const performanceMonitor = PerformanceMonitor.getInstance();
     performanceMonitor.measurePageLoad();
     
-    // Resource and memory monitoring removed - not available
+    const resourceMonitor = ResourceMonitor.getInstance();
+    resourceMonitor.startMonitoring();
+    
+    const memoryMonitor = MemoryMonitor.getInstance();
+    memoryMonitor.startMonitoring();
     
     // Initialize accessibility features
     accessibilityManager.initialize({
@@ -369,24 +305,35 @@ export default function App(): React.JSX.Element {
       'Welcome!',
       'Zion Tech Group is now ready with enhanced performance optimizations and user experience features.'
     );
+
     // Preload critical resources
     preloadResource('/og-image.png', 'image');
     preloadResource('/favicon.ico', 'image');
 
+    // Set default SEO data
+    seoManager.updateSEO(seoData);
+
+    // Track user engagement with throttling for better performance
+    const trackEngagement = () => {
+      const timeOnPage = Date.now() - engagementData.startTime;
+      seoAnalytics.trackUserEngagement(window.location.pathname, {
+        timeOnPage,
+        scrollDepth: engagementData.scrollDepth,
+        clicks: engagementData.clicks,
+        // userAgent: navigator.userAgent,
+        // viewport: `${window.innerWidth}x${window.innerHeight}`,
+        // connection: (navigator as Navigator & { connection?: { effectiveType?: string } }).connection?.effectiveType || 'unknown'
+      });
+    };
+
     // Use passive listeners for better performance
     window.addEventListener('scroll', handleScroll, { passive: true });
     document.addEventListener('click', handleClick, { passive: true });
-    document.addEventListener('keydown', handleKeyDown);
-  }, [seoData, handleScroll, handleClick, handleKeyDown]);
+  }, [seoData]);
 
   // Add keyboard event listener
   React.useEffect(() => {
     document.addEventListener("keydown", handleKeyDown);
-    
-    return () => {
-      document.removeEventListener("keydown", handleKeyDown);
-    };
-  }, [handleKeyDown]);
 
   // Main initialization and cleanup effect
   React.useEffect(() => {
@@ -412,7 +359,7 @@ export default function App(): React.JSX.Element {
       // Note: Timeout variables are now managed by the component state
       
       // Stop monitoring
-      // memoryMonitor.stopMonitoring(); // Not available
+      memoryMonitor.stopMonitoring();
       
       // Cleanup new utilities
       const advancedPerformanceMonitor = AdvancedPerformanceMonitor.getInstance();
@@ -435,7 +382,7 @@ export default function App(): React.JSX.Element {
       // Final engagement tracking
       trackEngagement();
     };
-  }, [handleKeyDown]);
+  }, [trackEngagement]);
 
   // Show loading screen while initializing
   if (isLoading) {
@@ -473,7 +420,7 @@ export default function App(): React.JSX.Element {
         isVisible={showPerformanceOptimizer}
         onClose={() => setShowPerformanceOptimizer(false)}
       />
-      <EnhancedAnalytics />
     </EnhancedErrorBoundary>
   );
 }
+

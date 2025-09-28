@@ -31,6 +31,7 @@ export function useAppInitialization(config: AppInitializationConfig = {}) {
   const {
     enablePerformanceMonitoring = true,
     enableAccessibility = true,
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     enableSecurity: _enableSecurity = true,
     enableAnalytics = true,
     enableNotifications = true,
@@ -222,7 +223,7 @@ export function useAppInitialization(config: AppInitializationConfig = {}) {
   const initializeAdvancedSystems = useCallback(async () => {
     try {
       // Initialize advanced performance monitor
-      const { AdvancedPerformanceMonitor } = await import('../utils/advancedPerformanceMonitor');
+      const AdvancedPerformanceMonitor = (await import('../utils/advancedPerformanceMonitor')).default;
       const advancedPerformanceMonitor = AdvancedPerformanceMonitor.getInstance();
       advancedPerformanceMonitor.updateConfig({
         enableWebVitals: true,
