@@ -163,7 +163,7 @@ class SEOOptimizer {
   /**
    * Generate and update structured data
    */
-  private generateStructuredData(_data: SEOData): void {
+  private generateStructuredData(): void {
     if (!this.config.enableStructuredData) return;
 
     const structuredData = {
@@ -220,7 +220,7 @@ class SEOOptimizer {
   /**
    * Generate breadcrumb structured data
    */
-  private generateBreadcrumb(): Record<string, unknown> {
+  private generateBreadcrumb(): object {
     const pathSegments = window.location.pathname.split('/').filter(Boolean);
     const breadcrumb = {
       '@type': 'BreadcrumbList',
@@ -278,7 +278,7 @@ class SEOOptimizer {
   /**
    * Set structured data
    */
-  private setStructuredData(data: Record<string, unknown>): void {
+  private setStructuredData(data: object): void {
     // Remove existing structured data
     const existingScript = document.querySelector('script[type="application/ld+json"]');
     if (existingScript) {
@@ -317,7 +317,7 @@ class SEOOptimizer {
    */
   private trackPageView(data: SEOData): void {
     if ('gtag' in window) {
-      (window as { gtag: (command: string, targetId: string, config: Record<string, unknown>) => void }).gtag('config', 'GA_MEASUREMENT_ID', {
+      (window as { gtag: (command: string, id: string, config: object) => void }).gtag('config', 'GA_MEASUREMENT_ID', {
         page_title: data.title,
         page_location: window.location.href
       });
