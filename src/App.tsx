@@ -119,7 +119,7 @@ export default function App(): React.JSX.Element {
     // Note: optimizeCSS method doesn't exist in PerformanceSEO class
 
     // Set default SEO data using the correct method
-    seoManager.updateSEO(seoData);
+    seoManager.updateMetaTags(seoData);
 
     // Add keyboard event listener
     document.addEventListener('keydown', handleKeyDown);
