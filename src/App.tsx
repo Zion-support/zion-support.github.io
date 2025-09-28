@@ -80,10 +80,7 @@ export default function App(): React.JSX.Element {
     ogUrl: typeof window !== 'undefined' ? window.location.href : '',
     ogImage: '/og-image.png',
     twitterCard: 'summary_large_image' as const,
-    structuredData: [
-      seoManager.generateOrganizationStructuredData(),
-      seoManager.generateWebsiteStructuredData()
-    ]
+    structuredData: []
   }), []);
 
   // Track engagement function
@@ -110,7 +107,7 @@ export default function App(): React.JSX.Element {
     }
 
     // Set default SEO data
-    seoManager.updateSEO(seoData);
+    seoManager.updateMetaTags(seoData);
 
     // Use passive listeners for better performance
     window.addEventListener('scroll', handleScroll, { passive: true });
