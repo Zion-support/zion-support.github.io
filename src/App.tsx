@@ -207,14 +207,10 @@ export default function App(): React.JSX.Element {
       <AppRouter />
       
       {/* System Dashboard - Toggle with Ctrl+Shift+D */}
-      {showSystemDashboard && (
-        <EnhancedSystemDashboard onClose={() => setShowSystemDashboard(false)} />
-      )}
+      {showSystemDashboard && <EnhancedSystemDashboard />}
       
       {/* Performance Optimizer - Toggle with Ctrl+Shift+P */}
-      {showPerformanceOptimizer && (
-        <PerformanceOptimizer onClose={() => setShowPerformanceOptimizer(false)} />
-      )}
+      {showPerformanceOptimizer && <PerformanceOptimizer />}
     </div>
   );
 }
