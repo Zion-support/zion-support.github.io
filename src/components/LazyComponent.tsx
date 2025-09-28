@@ -32,7 +32,7 @@ export const createLazyComponent = <P extends object>(
     }
 
     return (
-      <Suspense fallback={fallback || <ModernLoadingSpinner />}>
+      <Suspense fallback={(fallback || <ModernLoadingSpinner />) as ReactNode}>
         <LazyComponent {...(restProps as P)} ref={ref as React.Ref<P>} />
       </Suspense>
     );

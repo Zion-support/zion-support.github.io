@@ -57,6 +57,34 @@ export interface PerformanceRecommendation {
   implementation?: string;
 }
 
+// Performance Metrics Types
+export interface PerformanceMetrics {
+  lcp: number;
+  fcp: number;
+  fid: number;
+  cls: number;
+  ttfb: number;
+  loadTime: number;
+  renderTime: number;
+  memoryUsage: number;
+  bundleSize: number;
+  cacheHitRate: number;
+}
+
+// Optimization Suggestion Types
+export interface OptimizationSuggestion {
+  id: string;
+  type: 'performance' | 'seo' | 'accessibility' | 'security';
+  title: string;
+  description: string;
+  impact: 'high' | 'medium' | 'low';
+  effort: 'low' | 'medium' | 'high';
+  priority: number;
+  actionable: boolean;
+  implementation?: string;
+  resources?: string[];
+}
+
 // SEO Audit Types
 export interface SEOAuditResult {
   score: number;
@@ -109,22 +137,6 @@ export interface MonitoringMetrics {
   };
 }
 
-// Optimization Suggestion Types
-export interface OptimizationSuggestion {
-  id: string;
-  category: 'performance' | 'seo' | 'accessibility' | 'security';
-  priority: 'high' | 'medium' | 'low';
-  title: string;
-  description: string;
-  impact: string;
-  effort: 'low' | 'medium' | 'high';
-  implementation?: string;
-  estimatedSavings?: {
-    time?: number;
-    size?: number;
-    score?: number;
-  };
-}
 
 // Enhanced Performance Metrics
 export interface EnhancedPerformanceMetrics {
@@ -245,29 +257,4 @@ export interface ErrorRecoveryStrategy {
   fallbackAction?: () => void;
 }
 
-// Export all types
-export type {
-  EnhancedNotification,
-  NotificationAction,
-  PerformanceReport,
-  PerformanceAlert,
-  PerformanceRecommendation,
-  SEOAuditResult,
-  SEOIssue,
-  CacheStats,
-  MonitoringMetrics,
-  OptimizationSuggestion,
-  EnhancedPerformanceMetrics,
-  DataPoint,
-  ChartData,
-  VisualizationOptions,
-  StoredChart,
-  AnalyticsData,
-  EnhancedPerformanceDashboardProps,
-  LazyComponentProps,
-  KeyboardShortcuts,
-  SecuritySystem,
-  SecurityEvent,
-  AccessibilityEnhancement,
-  ErrorRecoveryStrategy,
-};
+// All types are already exported above as interfaces

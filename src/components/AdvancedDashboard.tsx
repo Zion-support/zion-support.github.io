@@ -88,7 +88,7 @@ const AdvancedDashboard: React.FC = () => {
       lastActivity: Date.now(),
       pageViews: events.filter((e: { name?: string; type?: string }) => e.name === 'page_view' || e.type === 'page_view').length,
       events: events.map((e: { name?: string; type?: string; timestamp?: number; properties?: Record<string, unknown>; data?: Record<string, unknown> }) => ({
-        event: e.name || e.type,
+        event: e.name || e.type || 'unknown',
         timestamp: e.timestamp || Date.now(),
         properties: e.properties || e.data
       })),
