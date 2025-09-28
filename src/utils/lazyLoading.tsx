@@ -1,4 +1,4 @@
-import React, { lazy, ComponentType, useState, useEffect, useRef, Suspense } from 'react';
+import React, { lazy, ComponentType } from 'react';
 
 /**
  * Enhanced lazy loading utility with error boundaries and loading states
@@ -11,9 +11,10 @@ export function createLazyComponent<T extends ComponentType<any>>(
   
   return function LazyWrapper(props: any) {
     return (
-      <Suspense fallback={fallback ? <fallback /> : <div>Loading...</div>}>
-        <LazyComponent {...props} />
-      </Suspense>
+      <LazyComponent
+        {...props}
+        fallback={fallback}
+      />
     );
   };
 }
@@ -40,10 +41,10 @@ export function createIntersectionLazyComponent<T extends ComponentType<any>>(
   const LazyComponent = lazy(importFunc);
   
   return function IntersectionLazyWrapper(props: any) {
-    const [isVisible, setIsVisible] = useState(false);
-    const ref = useRef<HTMLDivElement>(null);
+    const [isVisible, setIsVisible] = React.useState(false);
+    const ref = React.useRef<HTMLDivElement>(null);
 
-    useEffect(() => {
+    React.useEffect(() => {
       const observer = new IntersectionObserver(
         ([entry]) => {
           if (entry.isIntersecting) {
@@ -67,13 +68,7 @@ export function createIntersectionLazyComponent<T extends ComponentType<any>>(
 
     return (
       <div ref={ref}>
-        {isVisible ? (
-          <Suspense fallback={<div>Loading...</div>}>
-            <LazyComponent {...props} />
-          </Suspense>
-        ) : (
-          <div>Loading...</div>
-        )}
+        {isVisible ? <LazyComponent {...props} /> : <div>Loading...</div>}
       </div>
     );
   };
