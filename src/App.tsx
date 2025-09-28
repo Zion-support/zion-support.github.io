@@ -25,6 +25,9 @@ import { accessibilityEnhancer } from './utils/accessibilityEnhancer';
 import { seoOptimizer } from './utils/seoOptimizer';
 import { securityEnhancer } from './utils/securityEnhancer';
 import AdvancedAnalytics from './components/AdvancedAnalytics';
+import NotificationSystem from './components/NotificationSystem';
+import KeyboardShortcutsHelp from './components/KeyboardShortcutsHelp';
+import CommandPalette from './components/CommandPalette';
 import './index.css';
 
 export default function App(): React.JSX.Element {
@@ -34,6 +37,15 @@ export default function App(): React.JSX.Element {
   const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
   const [showAIDashboard, setShowAIDashboard] = useState(false);
   const [showSEOOptimizer, setShowSEOOptimizer] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [showKeyboardHelp, setShowKeyboardHelp] = useState(false);
+  const [showCommandPalette, setShowCommandPalette] = useState(false);
+  const [userPreferences, setUserPreferences] = useState({
+    theme: 'auto',
+    animations: true,
+    notifications: true,
+    analytics: true
+  });
 
   // Engagement tracking data
   const engagementData = useMemo(() => ({
@@ -222,39 +234,158 @@ export default function App(): React.JSX.Element {
     }
   }, [memoizedSeoData, updateMetaTags]);
 
-  // Keyboard shortcuts
+  // Enhanced keyboard shortcuts
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
-      // Ctrl+Shift+D for System Dashboard
-      if (event.ctrlKey && event.shiftKey && event.key === 'D') {
+      // Dashboard shortcuts
+      if (event.ctrlKey && event.shiftKey) {
         event.preventDefault();
-        setShowSystemDashboard(!showSystemDashboard);
+        switch (event.key) {
+          case 'D':
+            setShowSystemDashboard(!showSystemDashboard);
+            break;
+          case 'P':
+            setShowPerformanceOptimizer(!showPerformanceOptimizer);
+            break;
+          case 'M':
+            setShowPerformanceMonitor(!showPerformanceMonitor);
+            break;
+          case 'A':
+            setShowAIDashboard(!showAIDashboard);
+            break;
+          case 'S':
+            setShowSEOOptimizer(!showSEOOptimizer);
+            break;
+          case 'T':
+            setIsDarkMode(!isDarkMode);
+            break;
+          case 'H':
+            setShowKeyboardHelp(!showKeyboardHelp);
+            break;
+          case 'N':
+            // Show notification
+            if ((window as any).notifications) {
+              (window as any).notifications.add({
+                type: 'info',
+                title: 'Notification Test',
+                message: 'This is a test notification!',
+                duration: 3000
+              });
+            }
+            break;
+          case 'C':
+            // Clear notifications
+            if ((window as any).notifications) {
+              (window as any).notifications.clear();
+            }
+            break;
+        }
       }
-      // Ctrl+Shift+P for Performance Optimizer
-      if (event.ctrlKey && event.shiftKey && event.key === 'P') {
+      
+      // Command palette shortcut
+      if (event.ctrlKey && event.key === 'k') {
         event.preventDefault();
-        setShowPerformanceOptimizer(!showPerformanceOptimizer);
+        setShowCommandPalette(!showCommandPalette);
       }
-      // Ctrl+Shift+M for Performance Monitor
-      if (event.ctrlKey && event.shiftKey && event.key === 'M') {
+      
+      // Help shortcut
+      if (event.ctrlKey && event.key === '/') {
         event.preventDefault();
-        setShowPerformanceMonitor(!showPerformanceMonitor);
+        setShowKeyboardHelp(!showKeyboardHelp);
       }
-      // Ctrl+Shift+A for AI Dashboard
-      if (event.ctrlKey && event.shiftKey && event.key === 'A') {
-        event.preventDefault();
-        setShowAIDashboard(!showAIDashboard);
-      }
-      // Ctrl+Shift+S for SEO Optimizer
-      if (event.ctrlKey && event.shiftKey && event.key === 'S') {
-        event.preventDefault();
-        setShowSEOOptimizer(!showSEOOptimizer);
+      
+      // Escape to close all modals
+      if (event.key === 'Escape') {
+        setShowSystemDashboard(false);
+        setShowPerformanceOptimizer(false);
+        setShowPerformanceMonitor(false);
+        setShowAIDashboard(false);
+        setShowSEOOptimizer(false);
+        setShowKeyboardHelp(false);
+        setShowCommandPalette(false);
       }
     };
 
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
-  }, [showSystemDashboard, showPerformanceOptimizer, showPerformanceMonitor, showAIDashboard, showSEOOptimizer]);
+  }, [showSystemDashboard, showPerformanceOptimizer, showPerformanceMonitor, showAIDashboard, showSEOOptimizer, isDarkMode, showKeyboardHelp, showCommandPalette]);
+
+  // Command palette commands
+  const commandPaletteCommands = [
+    {
+      id: 'toggle-system-dashboard',
+      title: 'Toggle System Dashboard',
+      description: 'Open or close the system dashboard',
+      category: 'Dashboard',
+      action: () => setShowSystemDashboard(!showSystemDashboard),
+      shortcut: 'Ctrl+Shift+D'
+    },
+    {
+      id: 'toggle-performance-optimizer',
+      title: 'Toggle Performance Optimizer',
+      description: 'Open or close the performance optimizer',
+      category: 'Dashboard',
+      action: () => setShowPerformanceOptimizer(!showPerformanceOptimizer),
+      shortcut: 'Ctrl+Shift+P'
+    },
+    {
+      id: 'toggle-performance-monitor',
+      title: 'Toggle Performance Monitor',
+      description: 'Open or close the performance monitor',
+      category: 'Dashboard',
+      action: () => setShowPerformanceMonitor(!showPerformanceMonitor),
+      shortcut: 'Ctrl+Shift+M'
+    },
+    {
+      id: 'toggle-ai-dashboard',
+      title: 'Toggle AI Dashboard',
+      description: 'Open or close the AI performance dashboard',
+      category: 'Dashboard',
+      action: () => setShowAIDashboard(!showAIDashboard),
+      shortcut: 'Ctrl+Shift+A'
+    },
+    {
+      id: 'toggle-seo-optimizer',
+      title: 'Toggle SEO Optimizer',
+      description: 'Open or close the SEO optimizer',
+      category: 'Dashboard',
+      action: () => setShowSEOOptimizer(!showSEOOptimizer),
+      shortcut: 'Ctrl+Shift+S'
+    },
+    {
+      id: 'toggle-theme',
+      title: 'Toggle Theme',
+      description: 'Switch between dark and light theme',
+      category: 'Appearance',
+      action: () => setIsDarkMode(!isDarkMode),
+      shortcut: 'Ctrl+Shift+T'
+    },
+    {
+      id: 'show-keyboard-help',
+      title: 'Show Keyboard Shortcuts',
+      description: 'Display all available keyboard shortcuts',
+      category: 'Help',
+      action: () => setShowKeyboardHelp(true),
+      shortcut: 'Ctrl+/'
+    },
+    {
+      id: 'show-notifications',
+      title: 'Test Notifications',
+      description: 'Show a test notification',
+      category: 'Testing',
+      action: () => {
+        if ((window as any).notifications) {
+          (window as any).notifications.add({
+            type: 'success',
+            title: 'Command Executed',
+            message: 'Test notification sent successfully!',
+            duration: 3000
+          });
+        }
+      },
+      shortcut: 'Ctrl+Shift+N'
+    }
+  ];
 
   if (isLoading) {
     return <ModernLoadingSpinner progress={loadingProgress} />;
@@ -350,6 +481,61 @@ export default function App(): React.JSX.Element {
           isVisible={showAIDashboard}
           onClose={() => setShowAIDashboard(false)}
         />
+
+        {/* New Components */}
+        <NotificationSystem />
+        
+        <KeyboardShortcutsHelp
+          isVisible={showKeyboardHelp}
+          onClose={() => setShowKeyboardHelp(false)}
+        />
+        
+        <CommandPalette
+          isVisible={showCommandPalette}
+          onClose={() => setShowCommandPalette(false)}
+          commands={commandPaletteCommands}
+        />
+
+        {/* Theme Toggle Button */}
+        <button
+          onClick={() => setIsDarkMode(!isDarkMode)}
+          className="fixed bottom-4 right-4 z-40 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-colors duration-200"
+          title="Toggle Theme (Ctrl+Shift+T)"
+        >
+          {isDarkMode ? '☀️' : '🌙'}
+        </button>
+
+        {/* Keyboard Shortcuts Help Button */}
+        <button
+          onClick={() => setShowKeyboardHelp(true)}
+          className="fixed bottom-4 right-20 z-40 bg-gray-600 hover:bg-gray-700 text-white p-3 rounded-full shadow-lg transition-colors duration-200"
+          title="Keyboard Shortcuts (Ctrl+/)"
+        >
+          ⌨️
+        </button>
+
+        {/* Command Palette Button */}
+        <button
+          onClick={() => setShowCommandPalette(true)}
+          className="fixed bottom-4 right-36 z-40 bg-purple-600 hover:bg-purple-700 text-white p-3 rounded-full shadow-lg transition-colors duration-200"
+          title="Command Palette (Ctrl+K)"
+        >
+          ⌘
+        </button>
+
+        {/* Keyboard Shortcuts Help Panel */}
+        <div className="fixed bottom-4 left-4 z-40 bg-gray-800 text-white p-3 rounded-lg shadow-lg text-sm opacity-75 hover:opacity-100 transition-opacity duration-200">
+          <div className="font-semibold mb-1">Keyboard Shortcuts:</div>
+          <div>Ctrl+Shift+D: System Dashboard</div>
+          <div>Ctrl+Shift+P: Performance Optimizer</div>
+          <div>Ctrl+Shift+M: Performance Monitor</div>
+          <div>Ctrl+Shift+A: AI Dashboard</div>
+          <div>Ctrl+Shift+S: SEO Optimizer</div>
+          <div>Ctrl+Shift+T: Toggle Theme</div>
+          <div>Ctrl+K: Command Palette</div>
+          <div>Ctrl+/: Help</div>
+          <div>Escape: Close All</div>
+        </div>
       </div>
     </EnhancedErrorBoundary>
   );
