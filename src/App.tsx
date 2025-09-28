@@ -181,14 +181,6 @@ export default function App(): React.JSX.Element {
   //   twitterCard: 'summary_large_image' as const
   // }), []);
 
-  // Performance optimization hook - Temporarily disabled
-  // usePerformanceOptimization({
-  //   enablePreloading: true,
-  //   enableResourceHints: true,
-  //   enableCriticalCSS: true,
-  //   enableImageOptimization: true,
-  // });
-
   // Command palette commands
   const commandPaletteCommands = useMemo(() => [
     {
