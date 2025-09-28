@@ -1,16 +1,16 @@
-import React, { useCallback, useState, useEffect, useMemo } from 'react';
+import React, { useEffect, useCallback, useMemo, useState } from 'react';
 import { AppRouter } from './router';
 import { useAppInitialization } from './hooks/useAppInitialization';
 import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
-import { seoAnalytics, performanceSEO, seoManager } from './utils/seoEnhanced';
-import { analytics } from './utils/analytics';
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
 import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import SEOOptimizer from './components/SEOOptimizer';
 import AIPerformanceDashboard from './components/AIPerformanceDashboard';
+import { analytics } from './utils/analytics';
+import { seoAnalytics, performanceSEO, seoManager } from './utils/seoEnhanced';
 import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
 import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
 import { enhancedAnalytics } from './utils/enhancedAnalytics';
@@ -18,6 +18,9 @@ import { advancedCacheSystem } from './utils/advancedCacheSystem';
 import { AdvancedAutomationSystem } from './utils/advancedAutomationSystem';
 import { AccessibilityEnhancer } from './utils/accessibilityEnhancer';
 import { SecurityEnhancer } from './utils/securityEnhancer';
+import { performanceOptimizer } from './utils/performanceOptimizer';
+import { accessibilityEnhancer } from './utils/accessibilityEnhancer';
+import { seoOptimizer } from './utils/seoOptimizer';
 import './index.css';
 import './styles/notifications.css';
 import './styles/system-metrics.css';
@@ -161,6 +164,7 @@ export default function App(): React.JSX.Element {
   }, []);
 
   useEffect(() => {
+    // Initialize comprehensive enhancements
     const enhancements = getComprehensiveEnhancements();
     enhancements.initialize();
     
@@ -171,6 +175,11 @@ export default function App(): React.JSX.Element {
     new AdvancedAutomationSystem().initialize();
     new AccessibilityEnhancer().initialize();
     new SecurityEnhancer().initialize();
+    
+    // Initialize additional optimizers
+    performanceOptimizer.initialize();
+    accessibilityEnhancer.initialize();
+    seoOptimizer.initialize();
     
     // Initialize analytics
     analytics.initialize();
@@ -207,7 +216,7 @@ export default function App(): React.JSX.Element {
 
     // Basic performance monitoring
     if (typeof window !== 'undefined') {
-      console.log('🚀 Zion Tech Group App initialized');
+      console.log('🚀 Zion Tech Group App initialized with comprehensive optimizations');
     }
 
     // Cleanup function
