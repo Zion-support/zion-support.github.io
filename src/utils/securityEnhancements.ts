@@ -200,12 +200,13 @@ class SecurityEnhancer {
     };
     
     XMLHttpRequest.prototype.send = function(data?: unknown) {
-      if ((this as { _url?: string })._url && self.isRateLimited((this as { _url?: string })._url)) {
+      const url = (this as { _url?: string })._url;
+      if (url && self.isRateLimited(url)) {
         throw new Error('Rate limit exceeded');
       }
       
-      if ((this as { _url?: string })._url) {
-        self.recordRequest((this as { _url?: string })._url);
+      if (url) {
+        self.recordRequest(url);
       }
       
       return originalSend.call(this, data as Document | XMLHttpRequestBodyInit | null | undefined);

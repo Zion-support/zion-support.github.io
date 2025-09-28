@@ -236,6 +236,6 @@ export class EnhancementSuite {
   public destroy(): void {
     this.stopMetricsCollection();
     this.cleanup();
-    EnhancementSuite.instance = null as EnhancementSuite | null;
+    EnhancementSuite.instance = null as any;
   }
 }
