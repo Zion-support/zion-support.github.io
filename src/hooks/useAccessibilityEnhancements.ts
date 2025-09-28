@@ -34,13 +34,13 @@ export function useAccessibilityEnhancements(
   const {
     enableKeyboardNavigation = true,
     enableScreenReaderSupport = true,
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+     
     enableHighContrastMode = true,
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+     
     enableReducedMotion = true,
     enableFocusIndicators = true,
     enableAriaLabels = true,
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+     
     announceChanges = true,
     enableSkipLinks = true,
     enableFocusTrap = true,

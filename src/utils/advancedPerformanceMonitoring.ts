@@ -169,9 +169,9 @@ class AdvancedPerformanceMonitor {
       { name: 'tcp-connection', value: entry.connectEnd - entry.connectStart },
       { name: 'ssl-negotiation', value: entry.secureConnectionStart > 0 ? entry.connectEnd - entry.secureConnectionStart : 0 },
       { name: 'request-response', value: entry.responseEnd - entry.requestStart },
-      { name: 'dom-processing', value: entry.domComplete - entry.domLoading },
+      { name: 'dom-processing', value: entry.domComplete - entry.domContentLoadedEventStart },
       { name: 'load-complete', value: entry.loadEventEnd - entry.loadEventStart },
-      { name: 'total-load-time', value: entry.loadEventEnd - entry.navigationStart }
+      { name: 'total-load-time', value: entry.loadEventEnd - entry.fetchStart }
     ];
 
     metrics.forEach(metric => {
@@ -225,11 +225,11 @@ class AdvancedPerformanceMonitor {
 
   private calculateDerivedMetrics(entry: PerformanceNavigationTiming): void {
     // Time to Interactive (TTI) approximation
-    const tti = entry.domContentLoadedEventEnd - entry.navigationStart;
+    const tti = entry.domContentLoadedEventEnd - entry.fetchStart;
     this.recordMetric('time-to-interactive', tti, 'ms');
 
     // Speed Index approximation
-    const speedIndex = entry.domContentLoadedEventEnd - entry.domLoading;
+    const speedIndex = entry.domContentLoadedEventEnd - entry.domContentLoadedEventStart;
     this.recordMetric('speed-index', speedIndex, 'ms');
 
     // Total Blocking Time (TBT) approximation
@@ -427,7 +427,7 @@ class AdvancedPerformanceMonitor {
     const alerts: any[] = [];
     
     // Collect recent alerts (this would be stored in a real implementation)
-    const alertsByLevel = recentMetrics.reduce((acc, metric) => {
+    const alertsByLevel = recentMetrics.reduce((acc: { critical: any[], warning: any[] }, metric) => {
       const threshold = this.thresholds.find(t => t.metric === metric.name);
       if (threshold) {
         if (metric.value > threshold.critical) {
