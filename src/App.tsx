@@ -8,6 +8,7 @@ import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import SEOOptimizer from './components/SEOOptimizer';
+import AIPerformanceDashboard from './components/AIPerformanceDashboard';
 import { analytics } from './utils/analytics';
 import { seoAnalytics, performanceSEO, seoManager } from './utils/seoEnhanced';
 import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
@@ -29,6 +30,15 @@ export default function App(): React.JSX.Element {
   const [showSystemDashboard, setShowSystemDashboard] = useState(false);
   const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
   const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
+  const [showAIDashboard, setShowAIDashboard] = useState(false);
+  const [showSEOOptimizer, setShowSEOOptimizer] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [userPreferences, setUserPreferences] = useState({
+    theme: 'auto',
+    animations: true,
+    notifications: true,
+    analytics: true
+  });
 
   // Engagement tracking data
   const engagementData = useMemo(() => ({
@@ -45,6 +55,10 @@ export default function App(): React.JSX.Element {
     enableNotifications: true,
     enableCaching: true,
   });
+
+  // Get current pathname for SEO
+  const currentPathname = typeof window !== 'undefined' ? window.location.pathname : '/';
+  const seoData = useSEOData(currentPathname);
 
   // Performance optimization hook
   const { preloadResource } = usePerformanceOptimization({
@@ -68,6 +82,14 @@ export default function App(): React.JSX.Element {
       event.preventDefault();
       setShowPerformanceMonitor(prev => !prev);
     }
+    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'A') {
+      event.preventDefault();
+      setShowAIDashboard(prev => !prev);
+    }
+    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'S') {
+      event.preventDefault();
+      setShowSEOOptimizer(prev => !prev);
+    }
   }, []);
 
   // Enhanced track engagement function
@@ -80,17 +102,6 @@ export default function App(): React.JSX.Element {
     });
     trackEngagement();
   }, [engagementData.clicks, engagementData.scrollDepth, engagementData.startTime, trackEngagement]);
-
-  // Memoize the SEO data to prevent unnecessary re-renders
-  const seoData = useMemo(() => ({
-    title: 'Zion Tech Group - Leading AI & Technology Solutions',
-    description: 'Cutting-edge AI, quantum computing, and digital transformation solutions for modern enterprises. Expert consulting, cloud services, and innovative technology implementations.',
-    keywords: ['AI solutions', 'quantum computing', 'digital transformation', 'cloud services', 'enterprise technology', 'machine learning', 'automation', 'blockchain'],
-    ogType: 'website',
-    ogUrl: typeof window !== 'undefined' ? window.location.href : '',
-    ogImage: '/og-image.png',
-    twitterCard: 'summary_large_image' as const
-  }), []);
 
   // Initialize comprehensive enhancements
   useEffect(() => {
@@ -240,6 +251,32 @@ export default function App(): React.JSX.Element {
                 </button>
               </div>
               <PerformanceMonitor />
+            </div>
+          </div>
+        )}
+
+        {/* AI Performance Dashboard */}
+        {showAIDashboard && (
+          <AIPerformanceDashboard 
+            isVisible={showAIDashboard}
+            onClose={() => setShowAIDashboard(false)}
+          />
+        )}
+
+        {/* SEO Optimizer */}
+        {showSEOOptimizer && (
+          <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
+            <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+              <div className="flex justify-between items-center mb-4">
+                <h2 className="text-2xl font-bold text-gray-900">SEO Optimizer</h2>
+                <button
+                  onClick={() => setShowSEOOptimizer(false)}
+                  className="text-gray-500 hover:text-gray-700"
+                >
+                  ✕
+                </button>
+              </div>
+              <SEOOptimizer seoData={seoData} />
             </div>
           </div>
         )}
