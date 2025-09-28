@@ -12,7 +12,7 @@ import { accessibilityEnhancer } from './utils/accessibilityEnhancements';
 import { seoOptimizer } from './utils/seoOptimization';
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
 import { useAppInitialization } from './hooks/useAppInitialization';
-import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
+// EnhancedSystemDashboard is imported lazily below
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import AIPerformanceDashboard from './components/AIPerformanceDashboard';
 

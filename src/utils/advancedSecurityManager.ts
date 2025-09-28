@@ -194,7 +194,7 @@ class AdvancedSecurityManager {
 
     // Monitor for potential XSS attempts
     const originalCreateElement = document.createElement;
-    const self = this;
+    const context = this;
     document.createElement = function (tagName: string) {
       const element = originalCreateElement.call(document, tagName);
 
@@ -202,8 +202,8 @@ class AdvancedSecurityManager {
       if (element.setAttribute) {
         const originalSetAttribute = element.setAttribute;
         element.setAttribute = function (name: string, value: string) {
-          if (self.isSuspiciousAttribute(name, value)) {
-            self.metrics.xssAttempts++;
+          if (context.isSuspiciousAttribute(name, value)) {
+            context.metrics.xssAttempts++;
             console.warn("Potential XSS attempt detected:", { name, value });
             return;
           }
