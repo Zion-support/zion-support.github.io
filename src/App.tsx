@@ -35,6 +35,10 @@ import { apiCache, imageCache, dataCache } from './utils/advancedCacheManager';
 // Import types
 import NotificationSystem, { Notification } from './components/NotificationSystem';
 import { EnhancedNotification } from './types/comprehensive';
+import AdvancedAIAssistant from './components/AdvancedAIAssistant';
+import AdvancedCollaborationDashboard from './components/AdvancedCollaborationDashboard';
+import { advancedAIAssistant } from './utils/advancedAIAssistant';
+import { advancedCollaborationSystem } from './utils/advancedCollaborationSystem';
 import './index.css';
 
 // Lazy load heavy components for better performance
@@ -105,6 +109,8 @@ export default function App(): React.JSX.Element {
   const [showKeyboardShortcutsManager] = useState(false);
   const [showPerformanceWidget, setShowPerformanceWidget] = useState(false);
   const [showSystemHealth, setShowSystemHealth] = useState(false);
+  const [showAIAssistant, setShowAIAssistant] = useState(false);
+  const [showCollaborationDashboard, setShowCollaborationDashboard] = useState(false);
 
   // Initialize app with custom configuration
   // Temporarily disable useAppInitialization to fix build
@@ -207,6 +213,8 @@ export default function App(): React.JSX.Element {
       advancedUXOptimizer.initialize();
       advancedTestingFramework.initialize();
       advancedI18n.initialize();
+      advancedAIAssistant.initialize();
+      advancedCollaborationSystem.initialize();
       // Store enhancements globally for debugging
       (window as unknown as Record<string, unknown>).enhancements = enhancements;
       (window as unknown as Record<string, unknown>).performanceOptimizer = advancedPerformanceOptimizer;
@@ -219,6 +227,8 @@ export default function App(): React.JSX.Element {
       (window as unknown as Record<string, unknown>).uxOptimizer = advancedUXOptimizer;
       (window as unknown as Record<string, unknown>).testingFramework = advancedTestingFramework;
       (window as unknown as Record<string, unknown>).i18n = advancedI18n;
+      (window as unknown as Record<string, unknown>).aiAssistant = advancedAIAssistant;
+      (window as unknown as Record<string, unknown>).collaborationSystem = advancedCollaborationSystem;
     } catch (error) {
       console.error('Error initializing enhancements:', error);
     }
@@ -283,6 +293,12 @@ export default function App(): React.JSX.Element {
           case 'K':
             setShowKeyboardHelp(!showKeyboardHelp);
             break;
+          case 'B':
+            setShowAIAssistant(!showAIAssistant);
+            break;
+          case 'V':
+            setShowCollaborationDashboard(!showCollaborationDashboard);
+            break;
           case 'N':
             // Show notification
              
@@ -330,6 +346,8 @@ export default function App(): React.JSX.Element {
         setShowCommandPalette(false);
         setShowRealTimeMonitor(false);
         setShowSystemHealth(false);
+        setShowAIAssistant(false);
+        setShowCollaborationDashboard(false);
       }
     };
 
@@ -511,6 +529,18 @@ export default function App(): React.JSX.Element {
         <SystemHealthDashboard
           isVisible={showSystemHealth}
           onClose={() => setShowSystemHealth(false)}
+        />
+
+        {/* AI Assistant - Toggle with Ctrl+Shift+B */}
+        <AdvancedAIAssistant
+          isVisible={showAIAssistant}
+          onClose={() => setShowAIAssistant(false)}
+        />
+
+        {/* Collaboration Dashboard - Toggle with Ctrl+Shift+V */}
+        <AdvancedCollaborationDashboard
+          isVisible={showCollaborationDashboard}
+          onClose={() => setShowCollaborationDashboard(false)}
         />
 
         {/* New Components */}
@@ -761,10 +791,28 @@ export default function App(): React.JSX.Element {
           ⌨️
         </button>
 
+        {/* AI Assistant Button */}
+        <button
+          onClick={() => setShowAIAssistant(true)}
+          className="fixed bottom-4 right-36 z-40 bg-indigo-600 hover:bg-indigo-700 text-white p-3 rounded-full shadow-lg transition-colors duration-200"
+          title="AI Assistant (Ctrl+Shift+B)"
+        >
+          🤖
+        </button>
+
+        {/* Collaboration Dashboard Button */}
+        <button
+          onClick={() => setShowCollaborationDashboard(true)}
+          className="fixed bottom-4 right-52 z-40 bg-purple-600 hover:bg-purple-700 text-white p-3 rounded-full shadow-lg transition-colors duration-200"
+          title="Collaboration Dashboard (Ctrl+Shift+V)"
+        >
+          🤝
+        </button>
+
         {/* Command Palette Button */}
         <button
           onClick={() => setShowCommandPalette(true)}
-          className="fixed bottom-4 right-36 z-40 bg-purple-600 hover:bg-purple-700 text-white p-3 rounded-full shadow-lg transition-colors duration-200"
+          className="fixed bottom-4 right-68 z-40 bg-purple-600 hover:bg-purple-700 text-white p-3 rounded-full shadow-lg transition-colors duration-200"
           title="Command Palette (Ctrl+K)"
         >
           ⌘
@@ -800,6 +848,8 @@ export default function App(): React.JSX.Element {
           <div>Ctrl+Shift+R: Real-Time Monitor</div>
           <div>Ctrl+Shift+H: System Health</div>
           <div>Ctrl+Shift+K: Keyboard Help</div>
+          <div>Ctrl+Shift+B: AI Assistant</div>
+          <div>Ctrl+Shift+V: Collaboration Dashboard</div>
           <div>Ctrl+K: Command Palette</div>
           <div>Escape: Close All</div>
         </div>
