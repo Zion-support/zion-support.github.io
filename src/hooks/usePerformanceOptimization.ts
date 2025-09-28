@@ -92,7 +92,7 @@ export const usePerformanceOptimization = (
   }, []);
 
   // Record custom performance metrics
-  const recordMetric = useCallback(() => {
+  const recordMetric = useCallback((name: string, value: number) => {
     // monitor.current.markCustomMetric(name, value); // Method doesn't exist
     console.log(`Performance metric: ${name} = ${value}`);
   }, []);

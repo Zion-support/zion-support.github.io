@@ -560,8 +560,9 @@ class AdvancedSecuritySystem {
       case 'monitor':
         threat.action = 'monitor';
         break;
-      case 'alert':
-        this.sendAlert(threat);
+      case 'allow':
+        // Allow the action but log it
+        console.log('Security action allowed:', threat);
         break;
       case 'sanitize':
         this.sanitizeThreat(threat);

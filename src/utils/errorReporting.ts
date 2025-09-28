@@ -322,3 +322,49 @@ export const markErrorAsResolved = (errorId: string) => {
 export const clearErrors = () => errorReportingSystem.clearErrors();
 
 export const exportErrorReport = () => errorReportingSystem.exportErrorReport();
+
+// Initialize error reporting system
+export const initializeErrorReporting = () => {
+  // Set up global error handlers
+  window.addEventListener('error', (event) => {
+    errorReportingSystem.reportError({
+      type: 'javascript',
+      severity: 'high',
+      message: event.message,
+      stack: event.error?.stack,
+      context: {
+        line: event.lineno,
+        column: event.colno,
+        filename: event.filename,
+        url: event.filename,
+        userAgent: navigator.userAgent,
+        sessionId: getSessionId()
+      }
+    });
+  });
+
+  window.addEventListener('unhandledrejection', (event) => {
+    errorReportingSystem.reportError({
+      type: 'javascript',
+      severity: 'high',
+      message: `Unhandled Promise Rejection: ${event.reason}`,
+      stack: event.reason?.stack,
+      context: {
+        reason: event.reason,
+        url: window.location.href,
+        userAgent: navigator.userAgent,
+        sessionId: getSessionId()
+      }
+    });
+  });
+};
+
+// Helper function to get session ID
+const getSessionId = (): string => {
+  let sessionId = sessionStorage.getItem('error-reporting-session-id');
+  if (!sessionId) {
+    sessionId = `session-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
+    sessionStorage.setItem('error-reporting-session-id', sessionId);
+  }
+  return sessionId;
+};

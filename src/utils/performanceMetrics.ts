@@ -267,6 +267,10 @@ export const getNetworkMetrics = (): PerformanceMetric[] => {
 export const getMemoryMetrics = (): PerformanceMetric[] => {
   if ('memory' in performance) {
     const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
+    if (!memory) {
+      return [];
+    }
+
     return [
       {
         name: 'Used JS Heap Size',

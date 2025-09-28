@@ -288,7 +288,7 @@ class EnhancedSecurityManager {
       severity: event.severity,
       message,
       timestamp: new Date(),
-      metadata: { originalEvent: event }
+      originalEvent: event
     };
 
     console.warn('Security Alert:', alert);

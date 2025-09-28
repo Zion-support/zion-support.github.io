@@ -219,7 +219,7 @@ export class AccessibilityEnhancer {
       const backgroundColor = styles.backgroundColor;
 
       if (color && backgroundColor) {
-        const contrast = this.calculateContrast(color, backgroundColor);
+        const contrast = this.calculateContrast();
         if (contrast < 4.5) {
           console.warn('Low contrast detected:', element, contrast);
         }

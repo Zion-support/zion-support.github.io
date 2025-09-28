@@ -189,8 +189,8 @@ export class PWAEnhancements {
     }
 
     try {
-      this.deferredPrompt.prompt();
-      const { outcome } = await this.deferredPrompt.userChoice;
+      (this.deferredPrompt as any).prompt();
+      const { outcome } = await (this.deferredPrompt as any).userChoice;
       
       if (outcome === 'accepted') {
         console.log('User accepted the install prompt');

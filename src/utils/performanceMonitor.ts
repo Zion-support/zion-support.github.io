@@ -81,7 +81,10 @@ class PerformanceMonitor {
       const entries = list.getEntries();
       entries.forEach((entry) => {
         if ('processingStart' in entry && entry.startTime) {
-          this.metrics.fid = (entry as PerformanceEntry & { processingStart?: number }).processingStart - entry.startTime;
+          const processingStart = (entry as PerformanceEntry & { processingStart?: number }).processingStart;
+          if (processingStart) {
+            this.metrics.fid = processingStart - entry.startTime;
+          }
         }
       });
     });
@@ -93,7 +96,7 @@ class PerformanceMonitor {
     const clsObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry: PerformanceEntry & { hadRecentInput?: boolean; value?: number }) => {
-        if (!entry.hadRecentInput) {
+        if (!entry.hadRecentInput && entry.value !== undefined) {
           clsValue += entry.value;
         }
       });
@@ -130,7 +133,9 @@ class PerformanceMonitor {
   private observeMemoryUsage(): void {
     if ('memory' in performance) {
       const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
-      this.metrics.memoryUsage = memory.usedJSHeapSize / memory.jsHeapSizeLimit;
+      if (memory) {
+        this.metrics.memoryUsage = memory.usedJSHeapSize / memory.jsHeapSizeLimit;
+      }
     }
   }
 

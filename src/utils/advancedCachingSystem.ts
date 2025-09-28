@@ -52,6 +52,7 @@ class AdvancedCachingSystem {
   private isInitialized = false;
   private compressionWorker: Worker | null = null;
   private encryptionKey: string | null = null;
+  private db: IDBDatabase | null = null;
 
   constructor(config: Partial<CacheConfig> = {}) {
     this.config = {
@@ -195,7 +196,10 @@ class AdvancedCachingSystem {
       const request = indexedDB.open('ZionCache', 1);
       
       request.onerror = () => reject(request.error);
-      request.onsuccess = () => resolve(request.result);
+      request.onsuccess = () => {
+        this.db = request.result;
+        resolve();
+      };
       
       request.onupgradeneeded = (event) => {
         const db = (event.target as IDBOpenDBRequest).result;
@@ -583,7 +587,7 @@ class AdvancedCachingSystem {
       localStorage.setItem(`cache_${key}`, JSON.stringify(item));
     } catch (error) {
       // Handle quota exceeded
-      if (error.name === 'QuotaExceededError') {
+      if (error instanceof Error && error.name === 'QuotaExceededError') {
         this.evictOldestItems();
         localStorage.setItem(`cache_${key}`, JSON.stringify(item));
       } else {
@@ -612,7 +616,7 @@ class AdvancedCachingSystem {
       sessionStorage.setItem(`cache_${key}`, JSON.stringify(item));
     } catch (error) {
       // Handle quota exceeded
-      if (error.name === 'QuotaExceededError') {
+      if (error instanceof Error && error.name === 'QuotaExceededError') {
         this.evictOldestItems();
         sessionStorage.setItem(`cache_${key}`, JSON.stringify(item));
       } else {

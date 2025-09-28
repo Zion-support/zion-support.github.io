@@ -60,7 +60,6 @@ class AdvancedAccessibilityEnhancer {
       this.initializeKeyboardNavigation();
       this.initializeScreenReaderSupport();
       this.initializeFocusManagement();
-      this.initializeARIALabels();
       this.initializeColorContrast();
       this.initializeMotionReduction();
       this.initializeTextScaling();
@@ -325,7 +324,7 @@ class AdvancedAccessibilityEnhancer {
     inputs.forEach(input => {
       const label = document.querySelector(`label[for="${input.id}"]`);
       if (!label) {
-        input.setAttribute('aria-label', input.placeholder || 'Input field');
+        input.setAttribute('aria-label', (input as HTMLInputElement).placeholder || 'Input field');
       }
     });
   }

@@ -170,7 +170,7 @@ export class ComprehensivePerformanceMonitor {
       },
       {
         name: 'DOM Processing',
-        value: entry.domComplete - (entry as PerformanceNavigationTiming).domLoading || 0,
+        value: entry.domComplete - (entry as PerformanceNavigationTiming).domContentLoadedEventStart || 0,
         unit: 'ms',
         timestamp: Date.now(),
         category: 'navigation'
