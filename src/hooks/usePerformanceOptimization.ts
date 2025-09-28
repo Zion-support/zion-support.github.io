@@ -1,131 +1,306 @@
 import { useEffect, useCallback, useRef } from 'react';
-import performanceEnhancer from '../utils/performanceEnhancements';
+import AdvancedPerformanceMonitor from '../utils/advancedPerformanceMonitor';
+
+interface PerformanceOptimizationConfig {
+  enableLazyLoading?: boolean;
+  enablePreloading?: boolean;
+  enableResourceHints?: boolean;
+  enableImageOptimization?: boolean;
+  enableCriticalCSS?: boolean;
+  enableWebVitals?: boolean;
+  preloadThreshold?: number;
+  lazyLoadThreshold?: number;
+}
+
+interface PerformanceOptimizationReturn {
+  preloadResource: (url: string, type?: string) => Promise<void>;
+  recordMetric: (name: string, value: number) => void;
+  measurePerformance: (name: string, fn: () => void) => void;
+  getPerformanceMetrics: () => any;
+  optimizeImage: (src: string, options?: ImageOptimizationOptions) => string;
+  addResourceHint: (href: string, as: string, type?: string) => void;
+}
+
+interface ImageOptimizationOptions {
+  width?: number;
+  height?: number;
+  quality?: number;
+  format?: 'webp' | 'jpeg' | 'png' | 'avif';
+}
 
 /**
- * Custom hook for performance optimizations
+ * Advanced Performance Optimization Hook
+ * Provides comprehensive performance optimization utilities
  */
-export const usePerformanceOptimization = () => {
-  const performanceStartTime = useRef<number>(0);
+export const usePerformanceOptimization = (
+  config: PerformanceOptimizationConfig = {}
+): PerformanceOptimizationReturn => {
+  const monitor = useRef(AdvancedPerformanceMonitor.getInstance());
+  const configRef = useRef({
+    enableLazyLoading: true,
+    enablePreloading: true,
+    enableResourceHints: true,
+    enableImageOptimization: true,
+    enableCriticalCSS: true,
+    enableWebVitals: true,
+    preloadThreshold: 0.8,
+    lazyLoadThreshold: 0.1,
+    ...config,
+  });
 
   // Initialize performance monitoring
   useEffect(() => {
-    performanceStartTime.current = performance.now();
+    const perfMonitor = monitor.current;
     
-    // Record initial performance metrics
-    const recordInitialMetrics = () => {
-      const loadTime = performance.now() - performanceStartTime.current;
-      console.log('Initial load time:', loadTime);
+    if (configRef.current.enableWebVitals) {
+      perfMonitor.startMonitoring();
+    }
+
+    return () => {
+      perfMonitor.stopMonitoring();
+    };
+  }, []);
+
+  // Preload critical resources
+  const preloadResource = useCallback(async (url: string, type: string = 'fetch'): Promise<void> => {
+    if (!configRef.current.enablePreloading) return;
+
+    return new Promise((resolve, reject) => {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.href = url;
+      link.as = type;
+
+      link.onload = () => {
+        monitor.current.markCustomMetric(`preload.${type}.success`);
+        resolve();
+      };
+
+      link.onerror = () => {
+        monitor.current.markCustomMetric(`preload.${type}.error`);
+        reject(new Error(`Failed to preload ${url}`));
+      };
+
+      document.head.appendChild(link);
+    });
+  }, []);
+
+  // Record custom performance metrics
+  const recordMetric = useCallback((name: string, value: number) => {
+    monitor.current.markCustomMetric(name, value);
+  }, []);
+
+  // Measure performance of functions
+  const measurePerformance = useCallback((name: string, fn: () => void) => {
+    const startMark = `${name}.start`;
+    const endMark = `${name}.end`;
+    
+    monitor.current.markCustomMetric(startMark);
+    
+    const startTime = performance.now();
+    
+    try {
+      fn();
+    } finally {
+      const endTime = performance.now();
+      const duration = endTime - startTime;
       
-      // Record Core Web Vitals
-      if ('web-vital' in window) {
-        // This would integrate with web-vitals library
-        console.log('Core Web Vitals monitoring initialized');
+      monitor.current.markCustomMetric(endMark);
+      monitor.current.measureCustomMetric(name, startMark, endMark);
+      
+      recordMetric(`${name}.duration`, duration);
+    }
+  }, [recordMetric]);
+
+  // Get current performance metrics
+  const getPerformanceMetrics = useCallback(() => {
+    return monitor.current.getLatestMetrics();
+  }, []);
+
+  // Optimize images with responsive loading
+  const optimizeImage = useCallback((src: string, options: ImageOptimizationOptions = {}): string => {
+    if (!configRef.current.enableImageOptimization) return src;
+
+    const {
+      // width,
+      // height,
+      // quality = 80,
+      // format = 'webp'
+    } = options;
+
+    // Check if browser supports WebP
+    // const supportsWebP = document.createElement('canvas')
+    //   .toDataURL('image/webp')
+    //   .indexOf('data:image/webp') === 0;
+
+    // For now, return the original src
+    // In a real implementation, this would integrate with an image optimization service
+    return src;
+  }, []);
+
+  // Add resource hints for performance
+  const addResourceHint = useCallback((href: string, as: string, type?: string) => {
+    if (!configRef.current.enableResourceHints) return;
+
+    const link = document.createElement('link');
+    link.rel = 'prefetch';
+    link.href = href;
+    link.as = as;
+    
+    if (type) {
+      link.type = type;
+    }
+
+    document.head.appendChild(link);
+  }, []);
+
+  // Critical CSS optimization
+  useEffect(() => {
+    if (!configRef.current.enableCriticalCSS) return;
+
+    const loadCriticalCSS = () => {
+      // This would load critical CSS for above-the-fold content
+      const criticalCSS = `
+        /* Critical CSS would be injected here */
+        body { margin: 0; padding: 0; }
+        .hero { min-height: 100vh; }
+        .navigation { position: fixed; top: 0; width: 100%; }
+      `;
+
+      const style = document.createElement('style');
+      style.textContent = criticalCSS;
+      document.head.appendChild(style);
+    };
+
+    loadCriticalCSS();
+  }, []);
+
+  // Lazy loading implementation
+  useEffect(() => {
+    if (!configRef.current.enableLazyLoading) return;
+
+    const observerOptions = {
+      root: null,
+      rootMargin: '50px',
+      threshold: configRef.current.lazyLoadThreshold,
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const element = entry.target as HTMLElement;
+          
+          // Handle lazy images
+          if (element.tagName === 'IMG' && element.dataset.src) {
+            const img = element as HTMLImageElement;
+            img.src = img.dataset.src;
+            img.removeAttribute('data-src');
+            observer.unobserve(element);
+            
+            recordMetric('lazy.image.loaded', 1);
+          }
+          
+          // Handle lazy background images
+          if (element.dataset.bgSrc) {
+            element.style.backgroundImage = `url(${element.dataset.bgSrc})`;
+            element.removeAttribute('data-bg-src');
+            observer.unobserve(element);
+            
+            recordMetric('lazy.background.loaded', 1);
+          }
+        }
+      });
+    }, observerOptions);
+
+    // Observe all elements with lazy loading attributes
+    const lazyElements = document.querySelectorAll('[data-src], [data-bg-src]');
+    lazyElements.forEach((el) => observer.observe(el));
+
+    return () => {
+      observer.disconnect();
+    };
+  }, [recordMetric]);
+
+  // Preload critical resources on page load
+  useEffect(() => {
+    if (!configRef.current.enablePreloading) return;
+
+    const preloadCriticalResources = () => {
+      // Preload critical fonts
+      const criticalFonts = [
+        '/fonts/inter-var.woff2',
+        '/fonts/inter-var.woff',
+      ];
+
+      criticalFonts.forEach((font) => {
+        preloadResource(font, 'font');
+      });
+
+      // Preload critical images
+      const criticalImages = [
+        '/images/hero-bg.webp',
+        '/images/logo.svg',
+      ];
+
+      criticalImages.forEach((image) => {
+        preloadResource(image, 'image');
+      });
+
+      // Preload critical scripts
+      const criticalScripts = [
+        '/js/critical.js',
+      ];
+
+      criticalScripts.forEach((script) => {
+        preloadResource(script, 'script');
+      });
+    };
+
+    // Delay preloading to not block initial render
+    setTimeout(preloadCriticalResources, 100);
+  }, [preloadResource]);
+
+  // Network-aware loading
+  useEffect(() => {
+    if (!('connection' in navigator)) return;
+
+    const connection = (navigator as any).connection;
+    
+    const handleConnectionChange = () => {
+      const effectiveType = connection.effectiveType;
+      
+      // Adjust loading strategy based on connection
+      if (effectiveType === 'slow-2g' || effectiveType === '2g') {
+        // Disable some features for slow connections
+        configRef.current.enablePreloading = false;
+        configRef.current.preloadThreshold = 0.5;
+        
+        recordMetric('connection.slow', 1);
+      } else {
+        // Re-enable features for better connections
+        configRef.current.enablePreloading = true;
+        configRef.current.preloadThreshold = 0.8;
+        
+        recordMetric('connection.fast', 1);
       }
     };
 
-    // Record metrics after a short delay to ensure everything is loaded
-    const timeoutId = setTimeout(recordInitialMetrics, 1000);
+    connection.addEventListener('change', handleConnectionChange);
+    handleConnectionChange(); // Initial check
 
     return () => {
-      clearTimeout(timeoutId);
+      connection.removeEventListener('change', handleConnectionChange);
     };
-  }, []);
-
-  // Lazy load element
-  const observeElement = useCallback((element: Element | null) => {
-    if (element) {
-      // Use the performance enhancer's lazy loading functionality
-      console.log('Observing element for lazy loading:', element);
-    }
-  }, []);
-
-  // Preload resource
-  const preloadResource = useCallback(async (src: string, type: 'image' | 'script' | 'stylesheet' = 'image') => {
-    try {
-      const resourceType = type === 'stylesheet' ? 'style' : type;
-      performanceEnhancer.preloadResource(src, resourceType as 'image' | 'script' | 'style');
-    } catch (error) {
-      console.warn(`Failed to preload ${type}: ${src}`, error);
-    }
-  }, []);
-
-  // Record custom metric
-  const recordMetric = useCallback((name: string, value: number) => {
-    console.log(`Recording metric: ${name} = ${value}`);
-  }, []);
-
-  // Get performance metrics
-  const getMetrics = useCallback(() => {
-    return {
-      loadTime: performance.now() - performanceStartTime.current,
-      memoryUsage: (performance as Performance & { memory?: { usedJSHeapSize?: number } }).memory?.usedJSHeapSize || 0,
-    };
-  }, []);
+  }, [recordMetric]);
 
   return {
-    observeElement,
     preloadResource,
     recordMetric,
-    getMetrics
+    measurePerformance,
+    getPerformanceMetrics,
+    optimizeImage,
+    addResourceHint,
   };
 };
 
-/**
- * Hook for lazy loading images
- */
-export const useLazyImage = (src: string, placeholder?: string) => {
-  const imgRef = useRef<HTMLImageElement>(null);
-  const { observeElement } = usePerformanceOptimization();
-
-  useEffect(() => {
-    if (imgRef.current) {
-      observeElement(imgRef.current);
-    }
-  }, [observeElement]);
-
-  return {
-    ref: imgRef,
-    src: placeholder || src,
-    'data-src': src,
-    className: 'lazy'
-  };
-};
-
-/**
- * Hook for performance monitoring
- */
-export const usePerformanceMonitor = () => {
-  const { recordMetric, getMetrics } = usePerformanceOptimization();
-
-  // Monitor component render time
-  const measureRender = useCallback((componentName: string, renderFn: () => void) => {
-    const start = performance.now();
-    renderFn();
-    const end = performance.now();
-    recordMetric(`${componentName}_renderTime`, end - start);
-  }, [recordMetric]);
-
-  // Monitor async operations
-  const measureAsync = useCallback(async <T>(
-    operationName: string, 
-    operation: () => Promise<T>
-  ): Promise<T> => {
-    const start = performance.now();
-    try {
-      const result = await operation();
-      const end = performance.now();
-      recordMetric(`${operationName}_duration`, end - start);
-      return result;
-    } catch (error) {
-      const end = performance.now();
-      recordMetric(`${operationName}_error_duration`, end - start);
-      throw error;
-    }
-  }, [recordMetric]);
-
-  return {
-    measureRender,
-    measureAsync,
-    getMetrics
-  };
-};
+export default usePerformanceOptimization;
