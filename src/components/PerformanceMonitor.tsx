@@ -32,7 +32,9 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
   const [fps, setFps] = useState(0);
   const [frameCount, setFrameCount] = useState(0);
-  const [lastTime, setLastTime] = useState(performance.now());
+  const [lastTime, setLastTime] = useState(
+    typeof performance !== 'undefined' ? performance.now() : Date.now()
+  );
 
   const { metrics, memoryUsage } = usePerformanceOptimization({
     enableMemoryMonitoring: true,
@@ -41,7 +43,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
   // FPS calculation
   const calculateFPS = useCallback(() => {
-    const now = performance.now();
+    const now = typeof performance !== 'undefined' ? performance.now() : Date.now();
     const delta = now - lastTime;
     
     if (delta >= 1000) {
