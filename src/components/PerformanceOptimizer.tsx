@@ -62,7 +62,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     try {
       // Initialize performance enhancer
       addLogEntry('Initializing performance enhancer...');
-      performanceEnhancer.initialize();
+      // Performance enhancer is already initialized in constructor
       
       // Generate performance report
       addLogEntry('Generating performance report...');
