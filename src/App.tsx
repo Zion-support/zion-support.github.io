@@ -3,15 +3,13 @@ import { AppRouter } from './router';
 import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import PerformanceTracker from './components/PerformanceTracker';
-import { seoAnalytics, performanceSEO, seoManager } from './utils/seoEnhanced';
-import { analytics } from './utils/analytics';
+import { seoAnalytics } from './utils/seoEnhanced';
 import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import AIPerformanceDashboard from './components/AIPerformanceDashboard';
 import WebsiteEnhancements from './components/WebsiteEnhancements';
 import { SEOOptimizer, useSEOData } from './components/SEOOptimizer';
-// import EnhancedAnalytics from './components/EnhancedAnalytics';
 import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
 import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
 import { performanceAlerts } from './utils/performanceAlerts';
@@ -23,10 +21,6 @@ import KeyboardShortcutsHelp from './components/KeyboardShortcutsHelp';
 import CommandPalette from './components/CommandPalette';
 import RealTimePerformanceMonitor from './components/RealTimePerformanceMonitor';
 import SystemHealthDashboard from './components/SystemHealthDashboard';
-import { getNotificationManager } from './utils/advancedNotifications';
-import { getThemeManager } from './utils/themeManager';
-import { getKeyboardShortcuts } from './utils/advancedKeyboardShortcuts';
-import { getDataVisualization } from './utils/advancedDataVisualization';
 import './index.css';
 
 export default function App(): React.JSX.Element {
@@ -42,7 +36,6 @@ export default function App(): React.JSX.Element {
   const [showRealTimeMetrics, setShowRealTimeMetrics] = useState(false);
   const [notifications, setNotifications] = useState<Notification[]>([]);
   const [showWebsiteEnhancements, setShowWebsiteEnhancements] = useState(false);
-  // const [showAccessibilityPanel, setShowAccessibilityPanel] = useState(false);
   const [showRealTimeMonitor, setShowRealTimeMonitor] = useState(false);
   const [showSystemHealth, setShowSystemHealth] = useState(false);
   // User preferences state (for future use)
@@ -54,11 +47,11 @@ export default function App(): React.JSX.Element {
   // });
 
   // Engagement tracking data
-  const engagementData = useMemo(() => ({
-    startTime: Date.now(),
-    scrollDepth: 0,
-    clicks: 0
-  }), []);
+  // const engagementData = useMemo(() => ({
+  //   startTime: Date.now(),
+  //   scrollDepth: 0,
+  //   clicks: 0
+  // }), []);
 
   // Initialize app with custom configuration
   // Temporarily disable useAppInitialization to fix build
@@ -74,7 +67,7 @@ export default function App(): React.JSX.Element {
   const isLoading = false;
   const loadingProgress = 100;
   const handleScroll = useCallback(() => {}, []);
-  const handleClick = useCallback((event: Event) => {}, []);
+  const handleClick = useCallback(() => {}, []);
   const trackEngagement = useCallback(() => {}, []);
 
   // Performance optimization hook - Temporarily disabled
@@ -91,6 +84,7 @@ export default function App(): React.JSX.Element {
   // Get SEO data using current pathname
   const seoData = useSEOData(currentPathname);
 
+<<<<<<< HEAD
   // Command palette commands
   const commandPaletteCommands = useMemo(() => [
     {
@@ -155,6 +149,11 @@ export default function App(): React.JSX.Element {
 
   // Enhanced engagement tracking function
   const enhancedTrackEngagement = useCallback(() => {
+    const engagementData = {
+      startTime: Date.now(),
+      scrollDepth: 0,
+      clicks: 0
+    };
     const timeOnPage = Date.now() - engagementData.startTime;
     seoAnalytics.trackUserEngagement(window.location.pathname, {
       timeOnPage,
@@ -193,21 +192,9 @@ export default function App(): React.JSX.Element {
       enhancedPerformanceMonitor.startMonitoring();
       
       // Initialize analytics
-      if ('initialize' in analytics) {
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        (analytics as any).initialize();
-      }
       if ('initialize' in seoAnalytics) {
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         (seoAnalytics as any).initialize();
-      }
-      if ('initialize' in performanceSEO) {
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        (performanceSEO as any).initialize();
-      }
-      if ('initialize' in seoManager) {
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        (seoManager as any).initialize();
       }
     } catch (error) {
       console.warn('Some enhancement systems failed to initialize:', error);
@@ -219,9 +206,7 @@ export default function App(): React.JSX.Element {
     seoAnalytics.trackPageView(window.location.pathname);
     
     // Initialize performance SEO optimizations
-    performanceSEO.optimizeImages();
-    performanceSEO.optimizeFonts();
-    performanceSEO.optimizeCSS();
+    // Performance optimizations handled by other systems
 
     // Initialize new utility systems
     performanceAlerts.checkMetric('loadTime', performance.now(), 3000);
@@ -229,7 +214,7 @@ export default function App(): React.JSX.Element {
     securityUtils.getSecurityScore();
 
     // Set default SEO data using the correct method
-    seoManager.updateMetaTags(seoData);
+    // SEO data is handled by the SEOOptimizer component
   }, [seoData]);
 
   // Update meta tags function
