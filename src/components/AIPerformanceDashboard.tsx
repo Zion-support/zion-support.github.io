@@ -87,7 +87,7 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
           message: 'Network request timeout',
           severity: 'medium',
           lastOccurrence: '15 minutes ago',
-          occurrenceCount: 2,
+          occurrenceCount: 3,
           context: { component: 'DataFetcher', action: 'fetchUserData' },
           aiPredictedImpact: 45,
           resolutionSuggestions: [
@@ -138,10 +138,11 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
     <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center p-4">
       <div className="bg-white rounded-lg shadow-xl max-w-6xl w-full max-h-[90vh] overflow-y-auto">
         <div className="flex justify-between items-center p-6 border-b">
-          <h2 className="text-2xl font-bold text-gray-900">AI Performance Dashboard</h2>
+          <h2 className="text-2xl font-bold text-gray-900">🤖 AI Performance Dashboard</h2>
           <button
             onClick={onClose}
             className="text-gray-500 hover:text-gray-700 text-2xl"
+            aria-label="Close dashboard"
           >
             ×
           </button>
@@ -180,7 +181,7 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
               {insights && (
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                   <div className="bg-gray-50 p-4 rounded-lg">
-                    <h3 className="text-lg font-semibold text-gray-900 mb-3">Predicted High-Risk Actions</h3>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-3">🎯 Predicted High-Risk Actions</h3>
                     <ul className="space-y-2">
                       {insights.predictedHighRiskActions.map((action, index) => (
                         <li key={index} className="text-sm text-gray-700 flex items-start">
@@ -192,7 +193,7 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
                   </div>
 
                   <div className="bg-gray-50 p-4 rounded-lg">
-                    <h3 className="text-lg font-semibold text-gray-900 mb-3">Recommended Improvements</h3>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-3">💡 Recommended Improvements</h3>
                     <ul className="space-y-2">
                       {insights.recommendedImprovements.map((improvement, index) => (
                         <li key={index} className="text-sm text-gray-700 flex items-start">
@@ -208,7 +209,7 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
               {/* Error Trends */}
               {insights && (
                 <div className="bg-gray-50 p-4 rounded-lg">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-3">Error Trends</h3>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-3">📊 Error Trends</h3>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                     {insights.errorTrends.map((trend, index) => (
                       <div key={index} className="text-center">
@@ -227,44 +228,50 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
 
               {/* Error Reports */}
               <div className="bg-gray-50 p-4 rounded-lg">
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">Recent Error Reports</h3>
+                <h3 className="text-lg font-semibold text-gray-900 mb-3">🚨 Recent Error Reports</h3>
                 <div className="space-y-3">
-                  {errorReports.map((report) => (
-                    <div key={report.id} className="bg-white p-4 rounded border">
-                      <div className="flex justify-between items-start mb-2">
-                        <div className="flex items-center space-x-2">
-                          <span className={`px-2 py-1 rounded text-xs font-medium ${getSeverityColor(report.severity)}`}>
-                            {report.severity.toUpperCase()}
-                          </span>
-                          {report.aiPredictedImpact && (
-                            <span className={`text-sm font-medium ${getImpactColor(report.aiPredictedImpact)}`}>
-                              Impact: {report.aiPredictedImpact}%
+                  {errorReports.length > 0 ? (
+                    errorReports.map((report) => (
+                      <div key={report.id} className="bg-white p-4 rounded border">
+                        <div className="flex justify-between items-start mb-2">
+                          <div className="flex items-center space-x-2">
+                            <span className={`px-2 py-1 rounded text-xs font-medium ${getSeverityColor(report.severity)}`}>
+                              {report.severity.toUpperCase()}
                             </span>
-                          )}
+                            {report.aiPredictedImpact && (
+                              <span className={`text-sm font-medium ${getImpactColor(report.aiPredictedImpact)}`}>
+                                Impact: {report.aiPredictedImpact}%
+                              </span>
+                            )}
+                          </div>
+                          <span className="text-xs text-gray-500">{report.lastOccurrence}</span>
                         </div>
-                        <span className="text-xs text-gray-500">{report.lastOccurrence}</span>
+                        <p className="text-sm text-gray-700 mb-2">{report.message}</p>
+                        {report.context.component && (
+                          <p className="text-xs text-gray-500 mb-2">
+                            Component: {report.context.component} | Action: {report.context.action} | Count: {report.occurrenceCount}
+                          </p>
+                        )}
+                        {report.resolutionSuggestions && report.resolutionSuggestions.length > 0 && (
+                          <div className="mt-2">
+                            <p className="text-xs font-medium text-gray-600 mb-1">AI Suggestions:</p>
+                            <ul className="text-xs text-gray-600 space-y-1">
+                              {report.resolutionSuggestions.map((suggestion, index) => (
+                                <li key={index} className="flex items-start">
+                                  <span className="text-blue-500 mr-1">•</span>
+                                  {suggestion}
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        )}
                       </div>
-                      <p className="text-sm text-gray-700 mb-2">{report.message}</p>
-                      {report.context.component && (
-                        <p className="text-xs text-gray-500 mb-2">
-                          Component: {report.context.component} | Action: {report.context.action}
-                        </p>
-                      )}
-                      {report.resolutionSuggestions && report.resolutionSuggestions.length > 0 && (
-                        <div className="mt-2">
-                          <p className="text-xs font-medium text-gray-600 mb-1">AI Suggestions:</p>
-                          <ul className="text-xs text-gray-600 space-y-1">
-                            {report.resolutionSuggestions.map((suggestion, index) => (
-                              <li key={index} className="flex items-start">
-                                <span className="text-blue-500 mr-1">•</span>
-                                {suggestion}
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      )}
+                    ))
+                  ) : (
+                    <div className="text-center text-gray-500 py-8">
+                      ✨ No errors detected! Your application is running smoothly.
                     </div>
-                  ))}
+                  )}
                 </div>
               </div>
             </div>
