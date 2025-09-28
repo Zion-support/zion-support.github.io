@@ -332,13 +332,13 @@ export default function App(): React.JSX.Element {
   }, [seoData]);
 
   // Add keyboard event listener
-  React.useEffect(() => {
-    document.addEventListener("keydown", handleKeyDown);
-
   // Main initialization and cleanup effect
   React.useEffect(() => {
     // Track engagement on page unload
     window.addEventListener('beforeunload', trackEngagement);
+
+    // Add keyboard event listener
+    document.addEventListener('keydown', handleKeyDown);
 
     // Mark app as fully initialized
     if (typeof window !== 'undefined' && window.performance && 

@@ -116,7 +116,7 @@ export function usePerformanceMonitoring(options: UsePerformanceMonitoringOption
     const newMetrics: Partial<PerformanceMetrics> = {};
 
     // Page Load Time
-    const pageLoadTime = navigation.loadEventEnd - navigation.navigationStart;
+    const pageLoadTime = navigation.loadEventEnd - (navigation.fetchStart || 0);
     newMetrics.pageLoadTime = pageLoadTime;
     checkThreshold('pageLoadTime', pageLoadTime, thresholdsRef.current.pageLoadTime);
 
