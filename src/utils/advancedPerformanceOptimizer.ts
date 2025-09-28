@@ -286,7 +286,9 @@ class AdvancedPerformanceOptimizer {
       metrics: this.metrics,
       strategies: this.strategies,
       appliedOptimizations: this.strategies.map(s => s.name)
-=======
+    };
+  }
+
   constructor(config: Partial<OptimizationConfig> = {}) {
     this.config = {
       enableImageOptimization: true,
@@ -300,51 +302,9 @@ class AdvancedPerformanceOptimizer {
       enableResourceHints: true,
       enableBundleOptimization: true,
       ...config
->>>>>>> e8ff974a982d4b1d788e95a271dee39afcb5ce06
     };
   }
 
-  /**
-   * Initialize the performance optimizer
-   */
-  public async initialize(): Promise<void> {
-    if (this.isInitialized) return;
-
-    try {
-      // Initialize performance monitoring
-      this.initializePerformanceMonitoring();
-      
-      // Apply optimizations based on configuration
-      if (this.config.enableImageOptimization) {
-        this.optimizeImages();
-      }
-      
-      if (this.config.enableLazyLoading) {
-        this.initializeLazyLoading();
-      }
-      
-      if (this.config.enablePrefetching) {
-        this.initializePrefetching();
-      }
-      
-      if (this.config.enableResourceHints) {
-        this.addResourceHints();
-      }
-      
-      if (this.config.enableCriticalCSS) {
-        this.optimizeCriticalCSS();
-      }
-      
-      if (this.config.enableBundleOptimization) {
-        this.optimizeBundleLoading();
-      }
-
-      this.isInitialized = true;
-      console.log('🚀 Advanced Performance Optimizer initialized');
-    } catch (error) {
-      console.error('Error initializing performance optimizer:', error);
-    }
-  }
 
   /**
    * Initialize performance monitoring
@@ -401,50 +361,6 @@ class AdvancedPerformanceOptimizer {
     }
   }
 
-  /**
-   * Optimize images for better performance
-   */
-  private optimizeImages(): void {
-    if (typeof window === 'undefined') return;
-
-    const images = document.querySelectorAll('img');
-    images.forEach((img) => {
-      // Add loading="lazy" for images below the fold
-      if (!img.hasAttribute('loading')) {
-        img.setAttribute('loading', 'lazy');
-      }
-
-      // Add decoding="async" for better performance
-      if (!img.hasAttribute('decoding')) {
-        img.setAttribute('decoding', 'async');
-      }
-
-      // Optimize image formats
-      this.optimizeImageFormat(img);
-    });
-  }
-
-  /**
-   * Optimize image format based on browser support
-   */
-  private optimizeImageFormat(img: HTMLImageElement): void {
-    const src = img.src;
-    if (!src) return;
-
-    // Check for WebP support
-    const canvas = document.createElement('canvas');
-    const supportsWebP = canvas.toDataURL('image/webp').indexOf('data:image/webp') === 0;
-
-    if (supportsWebP && !src.includes('.webp')) {
-      // Try to load WebP version
-      const webpSrc = src.replace(/\.(jpg|jpeg|png)$/i, '.webp');
-      const webpImg = new Image();
-      webpImg.onload = () => {
-        img.src = webpSrc;
-      };
-      webpImg.src = webpSrc;
-    }
-  }
 
   /**
    * Initialize lazy loading for images and components
