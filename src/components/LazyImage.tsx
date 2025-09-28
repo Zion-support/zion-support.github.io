@@ -62,10 +62,7 @@ const LazyImage: React.FC<LazyImageProps> = ({
 
   return (
     <div
-<<<<<<< HEAD
-=======
       ref={imgRef}
->>>>>>> 5ac0de28992ebac4183b5f8e216af15852a40221
       className={`relative overflow-hidden ${className}`}
       style={{ aspectRatio: optimizationOptions.width && optimizationOptions.height 
         ? `${optimizationOptions.width}/${optimizationOptions.height}` 
