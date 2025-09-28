@@ -17,6 +17,11 @@ interface MonitoringConfig {
   endpoint: string;
 }
 
+interface LayoutShift extends PerformanceEntry {
+  hadRecentInput: boolean;
+  value: number;
+}
+
 interface ErrorData {
   message: string;
   stack?: string;
