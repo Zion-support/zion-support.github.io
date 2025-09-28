@@ -24,7 +24,7 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
 
   const renderCountRef = useRef(0);
   const lastRenderTimeRef = useRef(performance.now());
-  const debounceTimeoutRef = useRef<NodeJS.Timeout>();
+  const debounceTimeoutRef = useRef<NodeJS.Timeout | undefined>(undefined);
 
   // Track render performance
   useEffect(() => {
@@ -36,13 +36,14 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
 
   // Memory monitoring
   const memoryUsage = useMemo(() => {
-    if (!enableMemoryMonitoring || !performance.memory) return null;
+    if (!enableMemoryMonitoring || !(performance as any).memory) return null;
     
+    const mem = (performance as any).memory;
     return {
-      used: performance.memory.usedJSHeapSize,
-      total: performance.memory.totalJSHeapSize,
-      limit: performance.memory.jsHeapSizeLimit,
-      percentage: (performance.memory.usedJSHeapSize / performance.memory.jsHeapSizeLimit) * 100
+      used: mem.usedJSHeapSize,
+      total: mem.totalJSHeapSize,
+      limit: mem.jsHeapSizeLimit,
+      percentage: (mem.usedJSHeapSize / mem.jsHeapSizeLimit) * 100
     };
   }, [enableMemoryMonitoring]);
 
@@ -79,10 +80,39 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
     };
   }, []);
 
+  // Preload resource function
+  const preloadResource = useCallback((url: string, type: 'script' | 'style' | 'image' = 'script') => {
+    if (type === 'image') {
+      const img = document.createElement('img');
+      img.src = url;
+    } else {
+      const link = document.createElement(type === 'script' ? 'script' : 'link');
+      if (type === 'script') {
+        (link as HTMLScriptElement).src = url;
+        (link as HTMLScriptElement).async = true;
+      } else {
+        (link as HTMLLinkElement).rel = 'stylesheet';
+        (link as HTMLLinkElement).href = url;
+      }
+      document.head.appendChild(link);
+    }
+  }, []);
+
+  // Record metric function
+  const recordMetric = useCallback((name: string, value: number, tags?: Record<string, string>) => {
+    (metrics as any)[name] = {
+      value,
+      timestamp: Date.now(),
+      tags: tags || {}
+    };
+  }, [metrics]);
+
   return {
     metrics,
     debouncedCallback,
     memoryUsage,
-    renderCount: renderCountRef.current
+    renderCount: renderCountRef.current,
+    preloadResource,
+    recordMetric
   };
 };
