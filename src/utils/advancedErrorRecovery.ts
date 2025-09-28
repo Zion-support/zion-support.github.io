@@ -211,8 +211,7 @@ export class AdvancedErrorRecovery {
   // Additional methods for testing compatibility
   public async executeWithRecovery<T>(
     fn: () => Promise<T> | T,
-    errorType: string = 'general',
-    options?: Partial<ErrorRecoveryConfig>
+    errorType: string = 'general'
   ): Promise<T> {
     try {
       const result = await fn();
@@ -234,14 +233,14 @@ export class AdvancedErrorRecovery {
     }
   }
 
-  public setCacheData(key: string, data: any): void {
+  public setCacheData(key: string, data: unknown): void {
     // Simple cache implementation for testing
     if (typeof window !== 'undefined' && window.localStorage) {
       window.localStorage.setItem(`cache_${key}`, JSON.stringify(data));
     }
   }
 
-  public getCacheData(key: string): any {
+  public getCacheData(key: string): unknown {
     if (typeof window !== 'undefined' && window.localStorage) {
       const data = window.localStorage.getItem(`cache_${key}`);
       return data ? JSON.parse(data) : null;
@@ -249,7 +248,7 @@ export class AdvancedErrorRecovery {
     return null;
   }
 
-  public getStats(): any {
+  public getStats(): Record<string, unknown> {
     return {
       circuitBreakerOpen: false,
       totalErrors: 0,
