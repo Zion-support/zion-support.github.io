@@ -642,3 +642,6 @@ Accessibility Report:
 `;
   }
 }
+
+// Export the class as accessibilityEnhancer
+export const accessibilityEnhancer = new AdvancedAccessibilityEnhancer();
