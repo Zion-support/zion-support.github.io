@@ -88,7 +88,7 @@ export function usePerformanceMonitoring(options: UsePerformanceMonitoringOption
   const getMemoryUsage = useCallback((): number | undefined => {
     if (typeof window !== 'undefined' && 'memory' in performance) {
       const memory = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory;
-      return memory.usedJSHeapSize / 1024 / 1024; // Convert to MB
+      return memory?.usedJSHeapSize ? memory.usedJSHeapSize / 1024 / 1024 : undefined; // Convert to MB
     }
     return undefined;
   }, []);
@@ -97,11 +97,11 @@ export function usePerformanceMonitoring(options: UsePerformanceMonitoringOption
   const getNetworkInfo = useCallback(() => {
     if (typeof window !== 'undefined' && 'connection' in navigator) {
       const connection = (navigator as Navigator & { connection?: { effectiveType?: string; downlink?: number; rtt?: number } }).connection;
-      return {
+      return connection ? {
         effectiveType: connection.effectiveType || 'unknown',
         downlink: connection.downlink || 0,
         rtt: connection.rtt || 0
-      };
+      } : undefined;
     }
     return undefined;
   }, []);
@@ -150,8 +150,8 @@ export function usePerformanceMonitoring(options: UsePerformanceMonitoringOption
     // First Input Delay
     const fidEntries = performance.getEntriesByType('first-input') as PerformanceEntry[];
     if (fidEntries.length > 0) {
-      const fid = fidEntries[0] as PerformanceEntry & { processingStart?: number; startTime?: number };
-      newMetrics.firstInputDelay = (fid.processingStart || 0) - (fid.startTime || 0);
+      const fid = fidEntries[0] as PerformanceEntry & { processingStart: number; startTime: number };
+      newMetrics.firstInputDelay = fid.processingStart - fid.startTime;
       checkThreshold('firstInputDelay', newMetrics.firstInputDelay, thresholdsRef.current.firstInputDelay);
     }
 

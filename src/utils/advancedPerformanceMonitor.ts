@@ -75,8 +75,11 @@ interface NetworkConnection {
   saveData?: boolean;
 }
 
-interface ExtendedNavigator extends Navigator {
-  connection?: NetworkInformation;
+interface ExtendedNavigator {
+  connection?: NetworkConnection & {
+    addEventListener?: (event: string, listener: () => void) => void;
+    removeEventListener?: (event: string, listener: () => void) => void;
+  };
 }
 
 interface GoogleAnalytics {
@@ -298,13 +301,13 @@ class AdvancedPerformanceMonitor {
     }
 
     // Monitor connection changes
-    if (connection && 'addEventListener' in connection) {
+    if (connection && connection.addEventListener) {
       connection.addEventListener('change', () => {
         this.recordMetric('networkInfo', {
-          effectiveType: connection.effectiveType,
-          downlink: connection.downlink,
-          rtt: connection.rtt,
-          saveData: connection.saveData,
+          effectiveType: connection?.effectiveType,
+          downlink: connection?.downlink,
+          rtt: connection?.rtt,
+          saveData: connection?.saveData,
         });
       });
     }
@@ -394,9 +397,8 @@ class AdvancedPerformanceMonitor {
     metrics.forEach(m => Object.keys(m.customMetrics).forEach(k => customKeys.add(k)));
 
     customKeys.forEach(key => {
-      const values = metrics.map(m => m.customMetrics?.[key]).filter(v => v && v > 0) as number[];
-      if (values.length > 0) {
-        if (!averages.customMetrics) averages.customMetrics = {};
+      const values = metrics.map(m => m.customMetrics[key]).filter(v => v > 0);
+      if (values.length > 0 && averages.customMetrics) {
         averages.customMetrics[key] = values.reduce((a, b) => a + b, 0) / values.length;
       }
     });
