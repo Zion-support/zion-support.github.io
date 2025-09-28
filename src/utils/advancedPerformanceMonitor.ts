@@ -287,7 +287,7 @@ class AdvancedPerformanceMonitor {
   private initializeNetworkMonitoring(): void {
     if (!('connection' in navigator)) return;
 
-    const connection = (navigator as any).connection as NetworkConnection | undefined;
+    const connection = (navigator as Navigator & { connection?: NetworkConnection }).connection;
     if (connection) {
       this.recordMetric('networkInfo', {
         effectiveType: connection.effectiveType,

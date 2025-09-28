@@ -1,99 +1,65 @@
 /**
  * Enhanced Loading Spinner Component
- * Provides multiple loading animations and accessibility features
+ * Provides multiple loading states and animations
  */
 
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import { Loader2, Sparkles } from 'lucide-react';
 
-interface LoadingSpinnerProps {
-  size?: 'small' | 'medium' | 'large';
-  variant?: 'spinner' | 'dots' | 'pulse' | 'skeleton' | 'progress';
-  color?: 'primary' | 'secondary' | 'white' | 'gray';
+export interface EnhancedLoadingSpinnerProps {
+  size?: 'sm' | 'md' | 'lg' | 'xl';
+  variant?: 'default' | 'primary' | 'success' | 'warning' | 'error';
   text?: string;
   showProgress?: boolean;
   progress?: number;
-  enableAccessibility?: boolean;
   className?: string;
+  type?: 'spinner' | 'dots' | 'pulse' | 'wave' | 'orbit';
 }
 
-const EnhancedLoadingSpinner: React.FC<LoadingSpinnerProps> = ({
-  size = 'medium',
-  variant = 'spinner',
-  color = 'primary',
+const EnhancedLoadingSpinner: React.FC<EnhancedLoadingSpinnerProps> = ({
+  size = 'md',
+  variant = 'default',
   text,
   showProgress = false,
   progress = 0,
-  enableAccessibility = true,
-  className = ''
+  className = '',
+  type = 'spinner'
 }) => {
-  const [displayedProgress, setDisplayedProgress] = useState(0);
-
-  // Animate progress changes
-  useEffect(() => {
-    if (showProgress) {
-      const timer = setTimeout(() => {
-        setDisplayedProgress(progress);
-      }, 100);
-      return () => clearTimeout(timer);
-    }
-  }, [progress, showProgress]);
-
   const sizeClasses = {
-    small: 'w-4 h-4',
-    medium: 'w-8 h-8',
-    large: 'w-12 h-12'
+    sm: 'w-4 h-4',
+    md: 'w-6 h-6',
+    lg: 'w-8 h-8',
+    xl: 'w-12 h-12'
   };
 
-  const colorClasses = {
-    primary: 'text-blue-600',
-    secondary: 'text-gray-600',
-    white: 'text-white',
-    gray: 'text-gray-400'
+  const variantClasses = {
+    default: 'text-gray-600 dark:text-gray-300',
+    primary: 'text-blue-600 dark:text-blue-400',
+    success: 'text-green-600 dark:text-green-400',
+    warning: 'text-yellow-600 dark:text-yellow-400',
+    error: 'text-red-600 dark:text-red-400'
   };
 
   const textSizeClasses = {
-    small: 'text-sm',
-    medium: 'text-base',
-    large: 'text-lg'
+    sm: 'text-sm',
+    md: 'text-base',
+    lg: 'text-lg',
+    xl: 'text-xl'
   };
 
   const renderSpinner = () => {
-    switch (variant) {
-      case 'spinner':
-        return (
-          <svg
-            className={`animate-spin ${sizeClasses[size]} ${colorClasses[color]} ${className}`}
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            role={enableAccessibility ? 'status' : undefined}
-            aria-label={enableAccessibility ? 'Loading' : undefined}
-          >
-            <circle
-              className="opacity-25"
-              cx="12"
-              cy="12"
-              r="10"
-              stroke="currentColor"
-              strokeWidth="4"
-            />
-            <path
-              className="opacity-75"
-              fill="currentColor"
-              d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-            />
-          </svg>
-        );
-
+    switch (type) {
       case 'dots':
         return (
-          <div className={`flex space-x-1 ${className}`} role={enableAccessibility ? 'status' : undefined}>
+          <div className="flex space-x-1">
             {[0, 1, 2].map((i) => (
               <div
                 key={i}
-                className={`w-2 h-2 rounded-full ${colorClasses[color]} animate-pulse`}
-                style={{ animationDelay: `${i * 0.2}s` }}
-                aria-hidden="true"
+                className={`${sizeClasses[size]} rounded-full bg-current animate-bounce`}
+                style={{
+                  animationDelay: `${i * 0.1}s`,
+                  animationDuration: '0.6s'
+                }}
               />
             ))}
           </div>
@@ -102,117 +68,102 @@ const EnhancedLoadingSpinner: React.FC<LoadingSpinnerProps> = ({
       case 'pulse':
         return (
           <div
-            className={`${sizeClasses[size]} rounded-full ${colorClasses[color]} animate-pulse ${className}`}
-            role={enableAccessibility ? 'status' : undefined}
-            aria-label={enableAccessibility ? 'Loading' : undefined}
+            className={`${sizeClasses[size]} rounded-full bg-current animate-pulse`}
+            style={{
+              animationDuration: '1.5s'
+            }}
           />
         );
 
-      case 'skeleton':
+      case 'wave':
         return (
-          <div className={`animate-pulse ${className}`} role={enableAccessibility ? 'status' : undefined}>
-            <div className="space-y-3">
-              <div className={`h-4 bg-gray-300 rounded ${sizeClasses[size]}`} />
-              <div className="space-y-2">
-                <div className="h-3 bg-gray-300 rounded w-5/6" />
-                <div className="h-3 bg-gray-300 rounded w-4/6" />
-              </div>
-            </div>
+          <div className="flex space-x-1">
+            {[0, 1, 2, 3, 4].map((i) => (
+              <div
+                key={i}
+                className="w-1 bg-current rounded-full animate-pulse"
+                style={{
+                  height: size === 'sm' ? '8px' : size === 'md' ? '12px' : size === 'lg' ? '16px' : '20px',
+                  animationDelay: `${i * 0.1}s`,
+                  animationDuration: '1s'
+                }}
+              />
+            ))}
           </div>
         );
 
-      case 'progress':
+      case 'orbit':
         return (
-          <div className={`${className}`} role={enableAccessibility ? 'status' : undefined}>
-            <div className="w-full bg-gray-200 rounded-full h-2">
-              <div
-                className="bg-blue-600 h-2 rounded-full transition-all duration-300 ease-out"
-                style={{ width: `${displayedProgress}%` }}
-                aria-valuenow={displayedProgress}
-                aria-valuemin={0}
-                aria-valuemax={100}
-                aria-label={enableAccessibility ? `Loading ${displayedProgress}%` : undefined}
-              />
+          <div className="relative">
+            <div className={`${sizeClasses[size]} rounded-full border-2 border-current border-t-transparent animate-spin`} />
+            <div
+              className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+              style={{
+                width: size === 'sm' ? '6px' : size === 'md' ? '8px' : size === 'lg' ? '12px' : '16px',
+                height: size === 'sm' ? '6px' : size === 'md' ? '8px' : size === 'lg' ? '12px' : '16px'
+              }}
+            >
+              <div className="w-full h-full rounded-full bg-current animate-ping opacity-75" />
             </div>
-            {showProgress && (
-              <div className="text-center mt-2">
-                <span className={`text-sm ${colorClasses[color]}`}>
-                  {Math.round(displayedProgress)}%
-                </span>
-              </div>
-            )}
           </div>
         );
 
       default:
-        return null;
+        return (
+          <Loader2 className={`${sizeClasses[size]} animate-spin`} />
+        );
     }
   };
 
   return (
-    <div className="flex flex-col items-center justify-center space-y-2">
-      {renderSpinner()}
+    <div className={`flex flex-col items-center justify-center ${className}`}>
+      {/* Loading Animation */}
+      <div className={`${variantClasses[variant]} mb-4`}>
+        {renderSpinner()}
+      </div>
+
+      {/* Progress Bar */}
+      {showProgress && (
+        <div className="w-full max-w-xs mb-4">
+          <div className="flex justify-between text-sm text-gray-600 dark:text-gray-300 mb-1">
+            <span>Loading...</span>
+            <span>{Math.round(progress)}%</span>
+          </div>
+          <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+            <div
+              className={`h-2 rounded-full transition-all duration-300 ${
+                variant === 'primary' ? 'bg-blue-600' :
+                variant === 'success' ? 'bg-green-600' :
+                variant === 'warning' ? 'bg-yellow-600' :
+                variant === 'error' ? 'bg-red-600' :
+                'bg-gray-600'
+              }`}
+              style={{ width: `${Math.min(100, Math.max(0, progress))}%` }}
+            />
+          </div>
+        </div>
+      )}
+
+      {/* Loading Text */}
       {text && (
-        <p className={`${colorClasses[color]} ${textSizeClasses[size]} font-medium`}>
+        <p className={`${variantClasses[variant]} ${textSizeClasses[size]} font-medium text-center`}>
           {text}
         </p>
       )}
-      {enableAccessibility && (
-        <span className="sr-only">
-          {showProgress ? `Loading ${displayedProgress}%` : 'Loading'}
-        </span>
+
+      {/* Additional Visual Elements */}
+      {type === 'orbit' && (
+        <div className="mt-2 flex items-center space-x-1">
+          <Sparkles className="w-3 h-3 text-blue-400 animate-pulse" />
+          <span className="text-xs text-gray-500 dark:text-gray-400">Initializing...</span>
+          <Sparkles className="w-3 h-3 text-purple-400 animate-pulse" style={{ animationDelay: '0.5s' }} />
+        </div>
       )}
     </div>
   );
 };
 
-// Preset loading components for common use cases
-export const PageLoader: React.FC<{ text?: string }> = ({ text = 'Loading page...' }) => (
-  <div className="min-h-screen flex items-center justify-center">
-    <EnhancedLoadingSpinner
-      size="large"
-      variant="spinner"
-      color="primary"
-      text={text}
-      enableAccessibility
-    />
-  </div>
-);
+export { EnhancedLoadingSpinner };
 
-export const ButtonLoader: React.FC<{ text?: string }> = ({ text }) => (
-  <EnhancedLoadingSpinner
-    size="small"
-    variant="spinner"
-    color="white"
-    text={text}
-    enableAccessibility
-  />
-);
-
-export const CardLoader: React.FC = () => (
-  <div className="p-4">
-    <EnhancedLoadingSpinner
-      size="medium"
-      variant="skeleton"
-      color="gray"
-      enableAccessibility
-    />
-  </div>
-);
-
-export const ProgressLoader: React.FC<{ progress: number; text?: string }> = ({ 
-  progress, 
-  text = 'Loading...' 
-}) => (
-  <EnhancedLoadingSpinner
-    size="medium"
-    variant="progress"
-    color="primary"
-    text={text}
-    showProgress
-    progress={progress}
-    enableAccessibility
-  />
-);
-
-export default EnhancedLoadingSpinner;
+// Export PageLoader as an alias for compatibility
+export const PageLoader = EnhancedLoadingSpinner;
