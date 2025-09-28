@@ -16,6 +16,8 @@ import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import AIPerformanceDashboard from './components/AIPerformanceDashboard';
+import AdvancedPerformanceDashboard from './components/AdvancedPerformanceDashboard';
+import ComprehensiveSystemDashboard from './components/ComprehensiveSystemDashboard';
 import { SEOOptimizer, useSEOData } from './components/SEOOptimizer';
 import EnhancedAnalytics from './components/EnhancedAnalytics';
 import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
@@ -34,6 +36,8 @@ import { performanceAlerts } from './utils/performanceAlerts';
 import { errorRecovery } from './utils/errorRecovery';
 import { accessibilityUtils } from './utils/accessibilityUtils';
 import { securityUtils } from './utils/securityUtils';
+import { advancedPerformanceOptimizer } from './utils/advancedPerformanceOptimizer';
+import { enhancedSecurityManager } from './utils/enhancedSecurityManager';
 import './index.css';
 
 export default function App(): React.JSX.Element {
@@ -42,6 +46,8 @@ export default function App(): React.JSX.Element {
   const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
   const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
   const [showAIDashboard, setShowAIDashboard] = useState(false);
+  const [showAdvancedPerformanceDashboard, setShowAdvancedPerformanceDashboard] = useState(false);
+  const [showComprehensiveSystemDashboard, setShowComprehensiveSystemDashboard] = useState(false);
   const [showRealTimeMetrics, setShowRealTimeMetrics] = useState(false);
   const [showCommandPalette, setShowCommandPalette] = useState(false);
   const [showKeyboardHelp, setShowKeyboardHelp] = useState(false);
@@ -123,6 +129,22 @@ export default function App(): React.JSX.Element {
       shortcut: 'Ctrl+Shift+A'
     },
     {
+      id: 'advanced-performance-dashboard',
+      title: 'Toggle Advanced Performance Dashboard',
+      description: 'Open/close the advanced performance dashboard',
+      category: 'Performance',
+      action: () => setShowAdvancedPerformanceDashboard(prev => !prev),
+      shortcut: 'Ctrl+Shift+V'
+    },
+    {
+      id: 'comprehensive-system-dashboard',
+      title: 'Toggle Comprehensive System Dashboard',
+      description: 'Open/close the comprehensive system dashboard',
+      category: 'System',
+      action: () => setShowComprehensiveSystemDashboard(prev => !prev),
+      shortcut: 'Ctrl+Shift+Q'
+    },
+    {
       id: 'keyboard-help',
       title: 'Show Keyboard Shortcuts',
       description: 'Display all available keyboard shortcuts',
@@ -140,6 +162,8 @@ export default function App(): React.JSX.Element {
         setShowPerformanceOptimizer(false);
         setShowPerformanceMonitor(false);
         setShowAIDashboard(false);
+        setShowAdvancedPerformanceDashboard(false);
+        setShowComprehensiveSystemDashboard(false);
         setShowRealTimeMetrics(false);
         setShowCommandPalette(false);
         setShowKeyboardHelp(false);
@@ -167,6 +191,12 @@ export default function App(): React.JSX.Element {
           break;
         case 'A':
           setShowAIDashboard(prev => !prev);
+          break;
+        case 'V':
+          setShowAdvancedPerformanceDashboard(prev => !prev);
+          break;
+        case 'Q':
+          setShowComprehensiveSystemDashboard(prev => !prev);
           break;
         case 'C':
           setShowCommandPalette(prev => !prev);
@@ -235,6 +265,10 @@ export default function App(): React.JSX.Element {
       }
       enhancedAnalytics.initialize();
       advancedCacheSystem.initialize();
+      
+      // Initialize new advanced systems
+      advancedPerformanceOptimizer.initialize();
+      enhancedSecurityManager.initialize();
       new AdvancedAutomationSystem().initialize();
       // Initialize enhancement systems
       new AccessibilityEnhancer();
@@ -684,6 +718,18 @@ export default function App(): React.JSX.Element {
           onClose={() => setShowAIDashboard(false)}
         />
 
+        {/* Advanced Performance Dashboard - Toggle with Ctrl+Shift+P */}
+        <AdvancedPerformanceDashboard
+          isVisible={showAdvancedPerformanceDashboard}
+          onClose={() => setShowAdvancedPerformanceDashboard(false)}
+        />
+
+        {/* Comprehensive System Dashboard - Toggle with Ctrl+Shift+S */}
+        <ComprehensiveSystemDashboard
+          isVisible={showComprehensiveSystemDashboard}
+          onClose={() => setShowComprehensiveSystemDashboard(false)}
+        />
+
         {/* Real-time Metrics Display */}
         {showRealTimeMetrics && (
           <div className="fixed top-4 right-4 z-50 bg-black bg-opacity-90 text-white p-4 rounded-lg shadow-lg min-w-[300px]">
@@ -795,9 +841,10 @@ export default function App(): React.JSX.Element {
         <div className="fixed bottom-4 left-4 z-40 bg-gray-800 text-white p-3 rounded-lg shadow-lg text-sm opacity-75 hover:opacity-100 transition-opacity duration-200">
           <div className="font-semibold mb-1">Keyboard Shortcuts:</div>
           <div>Ctrl+Shift+D: System Dashboard</div>
-          <div>Ctrl+Shift+P: Performance Optimizer</div>
+          <div>Ctrl+Shift+V: Advanced Performance Dashboard</div>
           <div>Ctrl+Shift+M: Performance Monitor</div>
           <div>Ctrl+Shift+A: AI Dashboard</div>
+          <div>Ctrl+Shift+Q: Comprehensive System Dashboard</div>
           <div>Ctrl+Shift+S: SEO Optimizer</div>
           <div>Ctrl+Shift+T: Toggle Theme</div>
           <div>Ctrl+Shift+R: Real-Time Monitor</div>
