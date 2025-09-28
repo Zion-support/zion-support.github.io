@@ -51,18 +51,17 @@ export default function App(): React.JSX.Element {
     clicks: 0
   }), []);
 
-  // Simple SEO manager (unused for now)
-  // const seoManager = useMemo(() => ({
-  //   updateMetaTags: (data: typeof seoData) => {
-  //     if (typeof document !== 'undefined') {
-  //       document.title = data.title;
-  //       const metaDescription = document.querySelector('meta[name="description"]');
-  //       if (metaDescription) {
-  //         metaDescription.setAttribute('content', data.description);
-  //       }
-  //     }
-  //   }
-  // }), []);
+  // Memoize SEO data to prevent unnecessary re-renders
+  const seoData = useMemo(() => ({
+    title: 'Zion Tech Group - Advanced AI and IT Solutions',
+    description: 'Leading provider of AI-powered IT solutions, cloud services, and digital transformation consulting.',
+    keywords: ['AI', 'IT solutions', 'cloud services', 'digital transformation', 'technology consulting'],
+    ogImage: '/og-image.jpg',
+    ogUrl: window.location.href,
+    ogType: 'website' as const,
+    twitterCard: 'summary_large_image' as const,
+    canonicalUrl: window.location.href
+  }), []);
   // Initialize app with custom configuration
   const { isLoading, loadingProgress, handleScroll, handleClick, trackEngagement } = useAppInitialization({
     enablePerformanceMonitoring: true,
@@ -116,16 +115,6 @@ export default function App(): React.JSX.Element {
     trackEngagement();
   }, [engagementData.clicks, engagementData.scrollDepth, engagementData.startTime, trackEngagement]);
 
-  // Memoize the SEO data to prevent unnecessary re-renders
-  const seoData = useMemo(() => ({
-    title: 'Zion Tech Group - Leading AI & Technology Solutions',
-    description: 'Cutting-edge AI, quantum computing, and digital transformation solutions for modern enterprises. Expert consulting, cloud services, and innovative technology implementations.',
-    keywords: ['AI solutions', 'quantum computing', 'digital transformation', 'cloud services', 'enterprise technology', 'machine learning', 'automation', 'blockchain'],
-    ogType: 'website' as const,
-    ogUrl: typeof window !== 'undefined' ? window.location.href : '',
-    ogImage: '/og-image.png',
-    twitterCard: 'summary_large_image' as const
-  }), []);
 
   // Update meta tags function
   const updateMetaTags = useCallback((data: {
