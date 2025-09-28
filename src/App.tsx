@@ -11,12 +11,19 @@ import { performanceOptimizer } from './utils/performanceOptimizations';
 // Removed unused imports to reduce warnings
 import { accessibilityEnhancer } from './utils/advancedAccessibilityEnhancer';
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
+<<<<<<< HEAD
 import { useAppInitialization } from './hooks/useAppInitialization';
+=======
+>>>>>>> 47684f6bfaf5d9a372a7c083c0c7e3f8f561aa41
 import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import AIPerformanceDashboard from './components/AIPerformanceDashboard';
+<<<<<<< HEAD
 // import AdvancedPerformanceDashboard from './components/AdvancedPerformanceDashboard';
+=======
+import AdvancedPerformanceDashboard from './components/AdvancedPerformanceDashboard';
+>>>>>>> 47684f6bfaf5d9a372a7c083c0c7e3f8f561aa41
 import WebsiteEnhancements from './components/WebsiteEnhancements';
 import SEOOptimizer from './components/SEOOptimizer';
 // import EnhancedAnalytics from './components/EnhancedAnalytics';
@@ -33,11 +40,14 @@ import { performanceAlerts } from './utils/performanceAlerts';
 import { accessibilityUtils } from './utils/accessibilityUtils';
 import { securityUtils } from './utils/securityUtils';
 import { enhancedSecurityManager } from './utils/enhancedSecurityManager';
+<<<<<<< HEAD
 import { advancedCacheSystem } from './utils/advancedCacheSystem';
 import { AccessibilityEnhancer } from './utils/accessibilityEnhancer';
 import { SecurityEnhancer } from './utils/securityEnhancer';
 import { AdvancedAutomationSystem } from './utils/advancedAutomationSystem';
 import { enhancedAnalytics } from './utils/enhancedAnalytics';
+=======
+>>>>>>> 47684f6bfaf5d9a372a7c083c0c7e3f8f561aa41
 // import { AdvancedAutomationSystem } from './utils/advancedAutomationSystem';
 // import { securityEnhancer } from './utils/securityEnhancer';
 import AdvancedAnalytics from './components/AdvancedAnalytics';
@@ -178,6 +188,20 @@ export default function App(): React.JSX.Element {
   //   ogImage: '/og-image.png',
   //   twitterCard: 'summary_large_image' as const
   // }), []);
+<<<<<<< HEAD
+=======
+  // handleClick and trackEngagement are already provided by useAppInitialization
+
+  // Performance optimization hook - Temporarily disabled
+  // usePerformanceOptimization({
+  //   enablePreloading: true,
+  //   enableResourceHints: true,
+  //   enableCriticalCSS: true,
+  //   enableImageOptimization: true,
+  // });
+
+  // Get current pathname for SEO (already declared above)
+>>>>>>> 47684f6bfaf5d9a372a7c083c0c7e3f8f561aa41
 
   // Command palette commands
   const commandPaletteCommands = useMemo(() => [
@@ -536,7 +560,6 @@ export default function App(): React.JSX.Element {
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, [showSystemDashboard, showPerformanceOptimizer, showPerformanceMonitor, showAIDashboard, showSEOOptimizer, isDarkMode, showKeyboardHelp, showCommandPalette, showRealTimeMonitor, showSystemHealth, showPerformanceMetrics]);
-
   // Enhanced track engagement function
   const trackEngagement = useCallback(() => {
     try {
@@ -569,6 +592,53 @@ export default function App(): React.JSX.Element {
       }
     }
   }), []);
+<<<<<<< HEAD
+=======
+  // Initialize comprehensive enhancements
+  useEffect(() => {
+    try {
+      // Initialize enhanced systems
+      enhancedPerformanceMonitor.startMonitoring();
+      analytics.initialize();
+      
+      // Initialize accessibility and security enhancers
+      if (accessibilityEnhancer && typeof accessibilityEnhancer.initialize === 'function') {
+        accessibilityEnhancer.initialize();
+      }
+      if (enhancedSecurityManager && typeof enhancedSecurityManager.initialize === 'function') {
+        enhancedSecurityManager.initialize();
+      }
+      
+      // Initialize new performance and accessibility enhancements
+      initializePerformanceEnhancements();
+      initializeAccessibilityEnhancements();
+      
+      // Get comprehensive enhancements
+      const enhancements = getComprehensiveEnhancements();
+
+      // Store enhancements globally for debugging
+      (window as unknown as Record<string, unknown>).enhancements = enhancements;
+    } catch (error) {
+      console.error('Error initializing enhancements:', error);
+    }
+  }, []);
+
+  // Optimized keyboard handler for system dashboard toggle
+  const handleKeyDown = useCallback((event: KeyboardEvent) => {
+    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'D') {
+      event.preventDefault();
+      setShowSystemDashboard((prev: boolean) => !prev);
+    }
+    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'P') {
+      event.preventDefault();
+      setShowPerformanceOptimizer((prev: boolean) => !prev);
+    }
+    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'M') {
+      event.preventDefault();
+      setShowPerformanceMonitor(prev => !prev);
+    }
+  }, []);
+>>>>>>> 47684f6bfaf5d9a372a7c083c0c7e3f8f561aa41
   useEffect(() => {
     try {
       // Add performance marks for better monitoring
@@ -660,6 +730,13 @@ export default function App(): React.JSX.Element {
     }
   }, [trackEngagement, handleKeyDown, handleScroll, handleClick]);
 
+<<<<<<< HEAD
+=======
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, [showSystemDashboard, showPerformanceOptimizer, showPerformanceMonitor, showAIDashboard, showSEOOptimizer, isDarkMode, showKeyboardHelp, showCommandPalette, showRealTimeMonitor, showSystemHealth, showPerformanceMetrics]);
+>>>>>>> 47684f6bfaf5d9a372a7c083c0c7e3f8f561aa41
+
 
   // Track engagement on scroll and click
   useEffect(() => {
@@ -668,8 +745,8 @@ export default function App(): React.JSX.Element {
       trackEngagement();
     };
 
-    const handleClickWithEngagement = (_event: Event) => {
-      handleClick(new Event('click'));
+    const handleClickWithEngagement = (event: MouseEvent) => {
+      handleClick(event as Event);
       trackEngagement();
     };
 
