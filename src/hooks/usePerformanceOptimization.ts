@@ -1,8 +1,5 @@
 import { useEffect, useCallback, useRef } from 'react';
-<<<<<<< HEAD
-=======
-import { AdvancedPerformanceMonitor } from '../utils/advancedPerformanceMonitor';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-7cb6
+import { getPerformanceMonitor } from '../utils/advancedPerformanceMonitor';
 import { NetworkInformation } from '../types/global';
 
 interface PerformanceOptimizationConfig {
@@ -55,7 +52,8 @@ export const usePerformanceOptimization = (
 
   // Initialize performance monitoring
   useEffect(() => {
-    if (configRef.current.enableWebVitals && monitor.current) {
+    if (configRef.current.enableWebVitals) {
+      monitor.current = getPerformanceMonitor();
       monitor.current.start();
     }
 
@@ -304,7 +302,6 @@ export const usePerformanceOptimization = (
     };
   }, [recordMetric]);
 
-<<<<<<< HEAD
   // Performance optimization function
   const optimizePerformance = useCallback(() => {
     if (configRef.current.enableImageOptimization) {
@@ -324,13 +321,6 @@ export const usePerformanceOptimization = (
       addResourceHint('/images/hero-bg.webp', 'image');
     }
   }, [optimizeImage, addResourceHint]);
-=======
-  const optimizePerformance = () => {
-    // Trigger all optimization techniques
-    monitor.current.start();
-    // Add other optimization logic here
-  };
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-7cb6
 
   return {
     preloadResource,
