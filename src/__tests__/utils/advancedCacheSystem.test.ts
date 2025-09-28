@@ -84,8 +84,15 @@ describe('Advanced Cache System', () => {
       // Fast forward time past TTL
       jest.advanceTimersByTime(1001);
       
+      // Mock Date.now to return a time after TTL
+      const originalDateNow = Date.now;
+      Date.now = jest.fn(() => originalDateNow() + 1001);
+      
       // Value should be expired
       expect(await advancedCacheSystem.get(key)).toBeNull();
+      
+      // Restore original Date.now
+      Date.now = originalDateNow;
     });
 
     it('should not expire values without TTL', async () => {
