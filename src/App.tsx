@@ -47,6 +47,17 @@ export default function App(): React.JSX.Element {
 
   // Initialize comprehensive enhancements
   useEffect(() => {
+    // Initialize enhanced systems
+    enhancedPerformanceMonitor.startMonitoring();
+    enhancedAnalytics.initialize();
+    advancedCacheSystem.initialize();
+    advancedAutomationSystem.initialize();
+    
+    // Initialize accessibility and security enhancers
+    const accessibilityEnhancer = AccessibilityEnhancer.getInstance();
+    const securityEnhancer = SecurityEnhancer.getInstance();
+    
+    // Get comprehensive enhancements
     const enhancements = getComprehensiveEnhancements({
       enableAdvancedPerformance: true,
       enableSecurityFeatures: true,
