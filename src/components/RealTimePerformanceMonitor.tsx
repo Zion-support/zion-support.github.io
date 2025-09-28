@@ -32,6 +32,7 @@ const RealTimePerformanceMonitor: React.FC<RealTimePerformanceMonitorProps> = ({
   const [maxHistoryLength] = useState(100);
 
   const calculateFPS = (): number => {
+<<<<<<< HEAD
     if (typeof window === "undefined" || !window.performance) return 0;
 
     const now = performance.now();
@@ -40,6 +41,15 @@ const RealTimePerformanceMonitor: React.FC<RealTimePerformanceMonitorProps> = ({
     const delta = now - lastTime;
     (calculateFPS as unknown as { lastTime: number }).lastTime = now;
 
+=======
+    if (typeof window === 'undefined' || !window.performance) return 0;
+    
+    const now = performance.now();
+    const lastTime = (calculateFPS as unknown as { lastTime?: number }).lastTime || 0;
+    const delta = now - lastTime;
+    (calculateFPS as unknown as { lastTime: number }).lastTime = now;
+    
+>>>>>>> 4ba245a45fc5 (Checkpoint before follow-up message)
     return delta > 0 ? Math.round(1000 / delta) : 0;
   };
 

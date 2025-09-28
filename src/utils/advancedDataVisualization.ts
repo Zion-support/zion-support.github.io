@@ -171,7 +171,7 @@ export class AdvancedDataVisualization {
     const chart = this.charts.get(containerId);
     if (!chart) return;
 
-    const { data, options, container } = chart;
+    const { data, options, container } = chart as any;
     if (!data || !options || !container) return;
 
     const { width, height, margin, colors } = this.config;
@@ -246,7 +246,7 @@ export class AdvancedDataVisualization {
     const chart = this.charts.get(containerId);
     if (!chart) return;
 
-    const { data, options, container } = chart;
+    const { data, options, container } = chart as any;
     if (!data || !options || !container) return;
 
     const { width, height, margin, colors } = this.config;
@@ -319,7 +319,7 @@ export class AdvancedDataVisualization {
     const chart = this.charts.get(containerId);
     if (!chart) return;
 
-    const { data, options, container } = chart;
+    const { data, options, container } = chart as any;
     const { width, height, colors } = this.config;
 
     if (container) container.innerHTML = "";
@@ -389,7 +389,7 @@ export class AdvancedDataVisualization {
     const chart = this.charts.get(containerId);
     if (!chart) return;
 
-    const { data, options, container } = chart;
+    const { data, options, container } = chart as any;
     if (!data || !options || !container) return;
 
     const { width, height, margin, colors } = this.config;
@@ -457,7 +457,7 @@ export class AdvancedDataVisualization {
     const chart = this.charts.get(containerId);
     if (!chart) return;
 
-    const { data, options, container } = chart;
+    const { data, options, container } = chart as any;
     if (!data || !options || !container) return;
 
     const { width, height, margin, colors } = this.config;
@@ -760,7 +760,7 @@ export class AdvancedDataVisualization {
     const chart = this.charts.get(containerId);
     if (!chart) return;
 
-    chart.data = newData;
+    chart.data = newData as any;
     this.renderChart(containerId);
   }
 

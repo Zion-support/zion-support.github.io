@@ -7,20 +7,37 @@ import React, {
   Suspense,
 } from "react";
 import { useNavigate } from 'react-router-dom';
-import { AppRouter } from "./router";
-import { ModernLoadingSpinner } from "./components/ModernLoadingSpinner";
-import EnhancedErrorBoundary from "./components/EnhancedErrorBoundary";
-import PerformanceTracker from "./components/PerformanceTracker";
-import PerformanceMonitor from "./components/PerformanceMonitor";
-import { PerformanceOptimizer } from "./components/PerformanceOptimizer";
-import { seoAnalytics, performanceSEO } from "./utils/seoEnhanced";
-import { usePerformanceOptimization } from "./hooks/usePerformanceOptimization";
-import { useAppInitialization } from "./hooks/useAppInitialization";
-import AIPerformanceDashboard from "./components/AIPerformanceDashboard";
-import WebsiteEnhancements from "./components/WebsiteEnhancements";
-import SEOOptimizer from "./components/SEOOptimizer";
-import { getComprehensiveEnhancements } from "./utils/comprehensiveEnhancements";
-import { enhancedSecurityManager } from "./utils/enhancedSecurityManager";
+import { AppRouter } from './router';
+import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
+import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
+import PerformanceTracker from './components/PerformanceTracker';
+import PerformanceMonitor from './components/PerformanceMonitor';
+import PerformanceDashboard from './components/PerformanceDashboard';
+import { PerformanceOptimizer } from './components/PerformanceOptimizer';
+import { seoAnalytics, performanceSEO } from './utils/seoEnhanced';
+import { analytics } from './utils/analytics';
+import { performanceOptimizer } from './utils/performanceOptimizations';
+import { advancedAccessibilityEnhancer } from './utils/advancedAccessibilityEnhancer';
+import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
+import { useAppInitialization } from './hooks/useAppInitialization';
+import AIPerformanceDashboard from './components/AIPerformanceDashboard';
+import WebsiteEnhancements from './components/WebsiteEnhancements';
+import SEOOptimizer from './components/SEOOptimizer';
+import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
+import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
+import { performanceAlerts } from './utils/performanceAlerts';
+import { accessibilityUtils } from './utils/accessibilityUtils';
+import { securityUtils } from './utils/securityUtils';
+import { enhancedSecurityManager } from './utils/enhancedSecurityManager';
+// import { initializePerformanceEnhancements } from './utils/performanceEnhancements';
+// import { initializeAccessibilityEnhancements } from './utils/accessibilityEnhancements';
+import { advancedPerformanceOptimizer } from './utils/advancedPerformanceOptimizer';
+import { AdvancedSEOOptimizer } from './utils/advancedSEOOptimizer';
+import AdvancedAnalytics from './components/AdvancedAnalytics';
+import NotificationSystem, { Notification } from './components/NotificationSystem';
+import PerformanceMetricsDashboard from './components/PerformanceMetricsDashboard';
+import ComprehensiveImprovements from './components/ComprehensiveImprovements';
+>>>>>>> 4ba245a45fc5 (Checkpoint before follow-up message)
 import { EnhancedNotification } from './types/comprehensive';
 import "./index.css";
 
@@ -409,11 +426,18 @@ export default function App(): React.JSX.Element {
       // Update meta tags
       updateMetaTags(memoizedSeoData);
 
+<<<<<<< HEAD
       // performanceOptimizer initialization removed due to undefined variable
       if (enhancedAccessibilityManager && typeof enhancedAccessibilityManager.initialize === 'function') {
         enhancedAccessibilityManager.initialize();
       }
       // enhancedSEOOptimizer.optimizePage removed due to type issues
+=======
+      // Initialize enhancement systems
+      performanceOptimizer.optimizeBundleSize();
+      enhancedAccessibilityManager.initialize();
+      enhancedSEOOptimizer.optimizePage(memoizedSeoData);
+>>>>>>> 4ba245a45fc5 (Checkpoint before follow-up message)
 
       // Basic performance monitoring
       if (typeof window !== 'undefined') {
@@ -502,9 +526,15 @@ export default function App(): React.JSX.Element {
   return (
     <ErrorBoundary>
       <EnhancedErrorBoundary>
+<<<<<<< HEAD
         <SEOOptimizer seoData={seoData} />
         <PerformanceTracker />
         <WebsiteEnhancements isVisible={false} onClose={() => {}} />
+=======
+        <SEOOptimizer seoData={memoizedSeoData} />
+        <PerformanceTracker />
+        <WebsiteEnhancements isVisible={true} onClose={() => {}} />
+>>>>>>> 4ba245a45fc5 (Checkpoint before follow-up message)
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <AppRouter />
         
@@ -552,9 +582,13 @@ export default function App(): React.JSX.Element {
                 </button>
               </div>
               <PerformanceOptimizer>
+<<<<<<< HEAD
                 <div className="text-center py-8">
                   <p className="text-gray-600">Performance optimization tools are being loaded...</p>
                 </div>
+=======
+                <div>Performance optimization in progress...</div>
+>>>>>>> 4ba245a45fc5 (Checkpoint before follow-up message)
               </PerformanceOptimizer>
             </div>
           </div>
@@ -628,7 +662,11 @@ export default function App(): React.JSX.Element {
                   ✕
                 </button>
               </div>
+<<<<<<< HEAD
               <SEOOptimizer seoData={seoData} />
+=======
+              <SEOOptimizer seoData={memoizedSeoData} />
+>>>>>>> 4ba245a45fc5 (Checkpoint before follow-up message)
             </div>
           </div>
         )}
@@ -691,12 +729,18 @@ export default function App(): React.JSX.Element {
 
         {/* Enhanced Notification System */}
         <EnhancedNotificationSystem 
+<<<<<<< HEAD
           notifications={enhancedNotifications}
           onRemove={removeEnhancedNotification}
         />
 
         {/* System Monitoring Dashboard */}
         <SystemMonitoringDashboard />
+=======
+          notifications={[]} 
+          onRemove={() => {}} 
+        />
+>>>>>>> 4ba245a45fc5 (Checkpoint before follow-up message)
         </div>
       </EnhancedErrorBoundary>
     </ErrorBoundary>

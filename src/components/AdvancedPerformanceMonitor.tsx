@@ -60,6 +60,7 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
   const [history, setHistory] = useState<PerformanceMetrics[]>([]);
 
   // Check performance against thresholds and generate alerts
+<<<<<<< HEAD
   const checkPerformanceAlerts = useCallback(
     (currentMetrics: PerformanceMetrics) => {
       const newAlerts: PerformanceAlert[] = [];
@@ -217,6 +218,8 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
   const clearAlerts = useCallback(() => {
     setAlerts([]);
   }, []);
+=======
+>>>>>>> 4ba245a45fc5 (Checkpoint before follow-up message)
 
   // Resolve alert
   const resolveAlert = useCallback((alertId: string) => {
