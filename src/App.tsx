@@ -152,19 +152,14 @@ export default function App(): React.JSX.Element {
         case 'A':
           setShowAIDashboard(prev => !prev);
           break;
-<<<<<<< HEAD
         case 'V':
           setShowAdvancedDashboard(prev => !prev);
           break;
-        case 'R':
-          setShowRealTimeMetrics(prev => !prev);
-=======
         case 'C':
           setShowCommandPalette(prev => !prev);
           break;
         case 'H':
           setShowKeyboardHelp(prev => !prev);
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-78bc
           break;
         case 'S':
           setShowSEOOptimizer(prev => !prev);
@@ -651,7 +646,6 @@ export default function App(): React.JSX.Element {
           </div>
         )}
 
-<<<<<<< HEAD
         {/* AI Performance Dashboard */}
         <AIPerformanceDashboard
           isVisible={showAIDashboard}
@@ -673,11 +667,26 @@ export default function App(): React.JSX.Element {
             aria-labelledby="real-time-metrics-title"
             onClick={(e) => e.target === e.currentTarget && setShowRealTimeMetrics(false)}
           >
-=======
+            <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+              <div className="flex justify-between items-center mb-4">
+                <h2 id="real-time-metrics-title" className="text-2xl font-bold">Real-time Metrics</h2>
+                <button
+                  onClick={() => setShowRealTimeMetrics(false)}
+                  className="text-gray-500 hover:text-gray-700 text-2xl"
+                >
+                  ✕
+                </button>
+              </div>
+              <div className="space-y-4">
+                <p>Real-time performance metrics will be displayed here.</p>
+              </div>
+            </div>
+          </div>
+        )}
+
         {/* SEO Optimizer - Toggle with Ctrl+Shift+S */}
         {showSEOOptimizer && (
           <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-78bc
             <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
               <div className="flex justify-between items-center mb-4">
                 <h2 className="text-2xl font-bold">SEO Optimizer</h2>
@@ -813,11 +822,8 @@ export default function App(): React.JSX.Element {
           <div>Ctrl+Shift+P: Performance Optimizer</div>
           <div>Ctrl+Shift+M: Performance Monitor</div>
           <div>Ctrl+Shift+A: AI Dashboard</div>
-<<<<<<< HEAD
           <div>Ctrl+Shift+V: Advanced Dashboard</div>
           <div>Ctrl+Shift+R: Real-time Metrics</div>
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-78bc
           <div>Ctrl+Shift+S: SEO Optimizer</div>
           <div>Ctrl+Shift+T: Toggle Theme</div>
           <div>Ctrl+Shift+R: Real-Time Monitor</div>
