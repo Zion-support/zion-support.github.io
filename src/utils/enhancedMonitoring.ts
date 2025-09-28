@@ -1,4 +1,4 @@
-// Removed triple slash reference - using import style instead
+// Global types are available through tsconfig.json
 /**
  * Enhanced Monitoring and Analytics System
  * Provides comprehensive monitoring, error tracking, and performance analytics
@@ -18,10 +18,7 @@ interface MonitoringConfig {
   endpoint: string;
 }
 
-interface LayoutShift extends PerformanceEntry {
-  hadRecentInput: boolean;
-  value: number;
-}
+// LayoutShift interface is already defined above, removing duplicate
 
 interface ErrorData {
   message: string;
@@ -224,13 +221,14 @@ class EnhancedMonitoring {
       }).observe({ entryTypes: ['first-input'] });
 
       // Cumulative Layout Shift
+      // type LayoutShift = PerformanceEntry & { value: number; hadRecentInput?: boolean };
       new PerformanceObserver((list) => {
         const entries = list.getEntries();
         entries.forEach((entry) => {
-          if (!(entry as any).hadRecentInput) {
+          if (!(entry as PerformanceEntry & { hadRecentInput?: boolean }).hadRecentInput) {
             this.trackPerformance({
               name: 'CLS',
-              value: (entry as any).value,
+              value: (entry as PerformanceEntry & { value?: number }).value || 0,
               type: 'measure',
               url: window.location.href,
               sessionId: this.sessionId,

@@ -12,7 +12,7 @@ interface SecurityConfig {
 
 class SecurityUtils {
   private config: SecurityConfig;
-  private securityEvents: Array<{ type: string; timestamp: number; details: any }> = [];
+  private securityEvents: Array<{ type: string; timestamp: number; details: unknown }> = [];
 
   constructor(config: Partial<SecurityConfig> = {}) {
     this.config = {
@@ -91,11 +91,11 @@ class SecurityUtils {
   private sanitizeUserInput(): void {
     // Override innerHTML to sanitize content
     const originalInnerHTML = Object.getOwnPropertyDescriptor(Element.prototype, 'innerHTML');
-    if (originalInnerHTML) {
+    if (originalInnerHTML && originalInnerHTML.set) {
       Object.defineProperty(Element.prototype, 'innerHTML', {
-        set: function(value) {
+        set: (value: string) => {
           const sanitized = this.sanitizeHTML(value);
-          originalInnerHTML.set?.call(this, sanitized);
+          originalInnerHTML.set?.call(Element.prototype, sanitized);
         },
         get: originalInnerHTML.get
       });
@@ -132,11 +132,10 @@ class SecurityUtils {
     // Monitor for suspicious console usage
     const originalConsole = { ...console };
     Object.keys(console).forEach(key => {
-      const consoleKey = key as keyof Console;
-      if (typeof console[consoleKey] === 'function') {
-        (console as any)[consoleKey] = (...args: any[]) => {
+      if (typeof (console as any)[key] === 'function') {
+        (console as any)[key] = (...args: unknown[]) => {
           this.logSecurityEvent('console-usage', { method: key, args });
-          (originalConsole as any)[consoleKey](...args);
+          (originalConsole as any)[key](...args);
         };
       }
     });
@@ -166,7 +165,7 @@ class SecurityUtils {
   private monitorDataExfiltration(): void {
     // Monitor for suspicious network requests
     const originalFetch = window.fetch;
-    window.fetch = async (input: RequestInfo | URL, init) => {
+    window.fetch = async (input, init) => {
       const url = typeof input === 'string' ? input : (input as Request).url;
       
       // Check for suspicious patterns
@@ -190,7 +189,7 @@ class SecurityUtils {
     return suspiciousPatterns.some(pattern => pattern.test(url));
   }
 
-  private logSecurityEvent(type: string, details: any): void {
+  private logSecurityEvent(type: string, details: unknown): void {
     this.securityEvents.push({
       type,
       timestamp: Date.now(),
@@ -203,7 +202,7 @@ class SecurityUtils {
     }
   }
 
-  getSecurityEvents(): Array<{ type: string; timestamp: number; details: any }> {
+  getSecurityEvents(): Array<{ type: string; timestamp: number; details: unknown }> {
     return [...this.securityEvents];
   }
 

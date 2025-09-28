@@ -1,181 +1,132 @@
 import React, { useState, useEffect } from 'react';
-import { bundleOptimizer, BundleMetrics, OptimizationStrategy } from '../utils/bundleOptimizer';
+import { Activity, Zap, Clock, Database, Wifi, Shield } from 'lucide-react';
 
-interface PerformanceDashboardProps {
-  isVisible: boolean;
-  onClose: () => void;
+interface PerformanceMetrics {
+  loadTime: number;
+  firstContentfulPaint: number;
+  largestContentfulPaint: number;
+  firstInputDelay: number;
+  cumulativeLayoutShift: number;
+  memoryUsage: number;
+  networkSpeed: string;
+  securityScore: number;
 }
 
-const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({ isVisible, onClose }) => {
-  const [metrics, setMetrics] = useState<BundleMetrics | null>(null);
-  const [strategies, setStrategies] = useState<OptimizationStrategy[]>([]);
-  const [isLoading, setIsLoading] = useState(false);
-  const [report, setReport] = useState('');
+export const PerformanceDashboard: React.FC = () => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    loadTime: 0,
+    firstContentfulPaint: 0,
+    largestContentfulPaint: 0,
+    firstInputDelay: 0,
+    cumulativeLayoutShift: 0,
+    memoryUsage: 0,
+    networkSpeed: 'Unknown',
+    securityScore: 0
+  });
 
   useEffect(() => {
-    if (isVisible) {
-      loadPerformanceData();
-    }
-  }, [isVisible]);
+    const collectMetrics = () => {
+      // Collect Web Vitals
+      if ('web-vitals' in window) {
+        import('web-vitals').then((webVitals) => {
+          webVitals.onCLS((metric: any) => setMetrics(prev => ({ ...prev, cumulativeLayoutShift: metric.value })));
+          webVitals.onFCP((metric: any) => setMetrics(prev => ({ ...prev, firstContentfulPaint: metric.value })));
+          webVitals.onLCP((metric: any) => setMetrics(prev => ({ ...prev, largestContentfulPaint: metric.value })));
+          webVitals.onTTFB((metric: any) => setMetrics(prev => ({ ...prev, loadTime: metric.value })));
+          // Note: FID is deprecated, using INP instead
+          webVitals.onINP((metric: any) => setMetrics(prev => ({ ...prev, firstInputDelay: metric.value })));
+        });
+      }
 
-  const loadPerformanceData = async () => {
-    setIsLoading(true);
-    try {
-      const bundleMetrics = await bundleOptimizer.analyzeBundle();
-      const optimizationStrategies = bundleOptimizer.getOptimizationStrategies();
-      const optimizationReport = bundleOptimizer.generateOptimizationReport();
+      // Memory usage
+      if ('memory' in performance) {
+        const memory = (performance as any).memory;
+        setMetrics(prev => ({ 
+          ...prev, 
+          memoryUsage: memory.usedJSHeapSize / memory.jsHeapSizeLimit * 100 
+        }));
+      }
 
-      setMetrics(bundleMetrics);
-      setStrategies(optimizationStrategies);
-      setReport(optimizationReport);
-    } catch (error) {
-      console.error('Failed to load performance data:', error);
-    } finally {
-      setIsLoading(false);
-    }
+      // Network speed
+      if ('connection' in navigator) {
+        const connection = (navigator as any).connection;
+        setMetrics(prev => ({ ...prev, networkSpeed: connection.effectiveType || 'Unknown' }));
+      }
+
+      // Security score
+      let securityScore = 100;
+      if (!location.protocol.includes('https')) securityScore -= 20;
+      if (!('serviceWorker' in navigator)) securityScore -= 10;
+      setMetrics(prev => ({ ...prev, securityScore }));
+    };
+
+    collectMetrics();
+    const interval = setInterval(collectMetrics, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const getPerformanceColor = (value: number, thresholds: { good: number; poor: number }) => {
+    if (value <= thresholds.good) return 'text-green-600';
+    if (value <= thresholds.poor) return 'text-yellow-600';
+    return 'text-red-600';
   };
-
-  const getPriorityColor = (priority: string) => {
-    switch (priority) {
-      case 'high': return 'text-red-500 bg-red-100';
-      case 'medium': return 'text-yellow-500 bg-yellow-100';
-      case 'low': return 'text-green-500 bg-green-100';
-      default: return 'text-gray-500 bg-gray-100';
-    }
-  };
-
-  const getImpactColor = (impact: number) => {
-    if (impact >= 25) return 'text-green-500';
-    if (impact >= 15) return 'text-yellow-500';
-    return 'text-red-500';
-  };
-
-  if (!isVisible) return null;
 
   return (
-    <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center p-4">
-      <div className="bg-white rounded-lg shadow-xl max-w-6xl w-full max-h-[90vh] overflow-y-auto">
-        <div className="flex justify-between items-center p-6 border-b">
-          <h2 className="text-2xl font-bold text-gray-900">Performance Dashboard</h2>
-          <button
-            onClick={onClose}
-            className="text-gray-500 hover:text-gray-700 text-2xl"
-          >
-            ×
-          </button>
+    <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
+      <h2 className="text-2xl font-bold mb-6 flex items-center">
+        <Activity className="mr-2" />
+        Performance Dashboard
+      </h2>
+      
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
+          <div className="flex items-center justify-between mb-2">
+            <h3 className="font-semibold">Load Time</h3>
+            <Clock className="w-5 h-5 text-blue-600" />
+          </div>
+          <p className={`text-2xl font-bold ${getPerformanceColor(metrics.loadTime, { good: 1000, poor: 3000 })}`}>
+            {metrics.loadTime.toFixed(0)}ms
+          </p>
         </div>
 
-        <div className="p-6">
-          {isLoading ? (
-            <div className="flex items-center justify-center py-12">
-              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500"></div>
-            </div>
-          ) : (
-            <div className="space-y-6">
-              {/* Bundle Metrics */}
-              {metrics && (
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                  <div className="bg-blue-50 p-4 rounded-lg">
-                    <h3 className="text-sm font-medium text-blue-600">Total Bundle Size</h3>
-                    <p className="text-2xl font-bold text-blue-900">
-                      {(metrics.totalSize / 1024).toFixed(2)} KB
-                    </p>
-                  </div>
-                  <div className="bg-green-50 p-4 rounded-lg">
-                    <h3 className="text-sm font-medium text-green-600">Gzipped Size</h3>
-                    <p className="text-2xl font-bold text-green-900">
-                      {(metrics.gzippedSize / 1024).toFixed(2)} KB
-                    </p>
-                  </div>
-                  <div className="bg-purple-50 p-4 rounded-lg">
-                    <h3 className="text-sm font-medium text-purple-600">Compression Ratio</h3>
-                    <p className="text-2xl font-bold text-purple-900">
-                      {(metrics.compressionRatio * 100).toFixed(1)}%
-                    </p>
-                  </div>
-                </div>
-              )}
+        <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
+          <div className="flex items-center justify-between mb-2">
+            <h3 className="font-semibold">First Contentful Paint</h3>
+            <Zap className="w-5 h-5 text-yellow-600" />
+          </div>
+          <p className={`text-2xl font-bold ${getPerformanceColor(metrics.firstContentfulPaint, { good: 1800, poor: 3000 })}`}>
+            {metrics.firstContentfulPaint.toFixed(0)}ms
+          </p>
+        </div>
 
-              {/* Additional Metrics */}
-              {metrics && (
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-                  <div className="bg-gray-50 p-4 rounded-lg">
-                    <h3 className="text-sm font-medium text-gray-600">Chunk Count</h3>
-                    <p className="text-xl font-bold text-gray-900">{metrics.chunkCount}</p>
-                  </div>
-                  <div className="bg-gray-50 p-4 rounded-lg">
-                    <h3 className="text-sm font-medium text-gray-600">Largest Chunk</h3>
-                    <p className="text-sm font-bold text-gray-900 truncate">{metrics.largestChunk}</p>
-                  </div>
-                  <div className="bg-gray-50 p-4 rounded-lg">
-                    <h3 className="text-sm font-medium text-gray-600">Duplicate Modules</h3>
-                    <p className="text-xl font-bold text-gray-900">{metrics.duplicateModules}</p>
-                  </div>
-                  <div className="bg-gray-50 p-4 rounded-lg">
-                    <h3 className="text-sm font-medium text-gray-600">Unused Code</h3>
-                    <p className="text-xl font-bold text-gray-900">
-                      {(metrics.unusedCode / 1024).toFixed(2)} KB
-                    </p>
-                  </div>
-                </div>
-              )}
+        <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
+          <div className="flex items-center justify-between mb-2">
+            <h3 className="font-semibold">Memory Usage</h3>
+            <Database className="w-5 h-5 text-green-600" />
+          </div>
+          <p className={`text-2xl font-bold ${getPerformanceColor(metrics.memoryUsage, { good: 50, poor: 80 })}`}>
+            {metrics.memoryUsage.toFixed(1)}%
+          </p>
+        </div>
 
-              {/* Optimization Strategies */}
-              <div className="bg-gray-50 p-4 rounded-lg">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">Optimization Strategies</h3>
-                <div className="space-y-3">
-                  {strategies.map((strategy, index) => (
-                    <div key={index} className="bg-white p-4 rounded border">
-                      <div className="flex justify-between items-start mb-2">
-                        <div className="flex items-center space-x-2">
-                          <span className={`px-2 py-1 rounded text-xs font-medium ${getPriorityColor(strategy.priority)}`}>
-                            {strategy.priority.toUpperCase()}
-                          </span>
-                          <span className={`text-sm font-medium ${getImpactColor(strategy.impact)}`}>
-                            {strategy.impact}% Impact
-                          </span>
-                        </div>
-                        <span className="text-xs text-gray-500 capitalize">
-                          {strategy.type.replace('-', ' ')}
-                        </span>
-                      </div>
-                      <p className="text-sm text-gray-700 mb-2">{strategy.description}</p>
-                      <p className="text-xs text-gray-500">{strategy.implementation}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
+        <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
+          <div className="flex items-center justify-between mb-2">
+            <h3 className="font-semibold">Network Speed</h3>
+            <Wifi className="w-5 h-5 text-blue-600" />
+          </div>
+          <p className="text-2xl font-bold text-gray-800 dark:text-gray-200">
+            {metrics.networkSpeed}
+          </p>
+        </div>
 
-              {/* Optimization Report */}
-              {report && (
-                <div className="bg-gray-50 p-4 rounded-lg">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-4">Optimization Report</h3>
-                  <pre className="text-xs text-gray-700 whitespace-pre-wrap bg-white p-4 rounded border overflow-x-auto">
-                    {report}
-                  </pre>
-                </div>
-              )}
-
-              {/* Action Buttons */}
-              <div className="flex space-x-4">
-                <button
-                  onClick={loadPerformanceData}
-                  className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors"
-                >
-                  Refresh Analysis
-                </button>
-                <button
-                  onClick={() => {
-                    navigator.clipboard.writeText(report);
-                    alert('Report copied to clipboard!');
-                  }}
-                  className="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600 transition-colors"
-                >
-                  Copy Report
-                </button>
-              </div>
-            </div>
-          )}
+        <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
+          <div className="flex items-center justify-between mb-2">
+            <h3 className="font-semibold">Security Score</h3>
+            <Shield className="w-5 h-5 text-green-600" />
+          </div>
+          <p className={`text-2xl font-bold ${getPerformanceColor(100 - metrics.securityScore, { good: 20, poor: 50 })}`}>
+            {metrics.securityScore}/100
+          </p>
         </div>
       </div>
     </div>

@@ -3,6 +3,8 @@
  * Comprehensive data visualization and charting utilities with real-time updates
  */
 
+import { DataPoint, ChartData, StoredChart, VisualizationOptions } from '../types/comprehensive';
+
 export interface ChartConfig {
   width: number;
   height: number;
@@ -18,39 +20,17 @@ export interface ChartConfig {
   theme: 'light' | 'dark';
 }
 
-export interface DataPoint {
-  x: number | string;
-  y: number;
-  label?: string;
-  color?: string;
-  metadata?: Record<string, any>;
-}
-
-export interface ChartData {
-  name: string;
-  data: DataPoint[];
-  type: 'line' | 'bar' | 'pie' | 'scatter' | 'area';
-  color?: string;
-  metadata?: Record<string, any>;
-}
-
-export interface VisualizationOptions {
-  title?: string;
-  subtitle?: string;
-  xAxisLabel?: string;
-  yAxisLabel?: string;
-  showLegend?: boolean;
-  showGrid?: boolean;
-  showTooltips?: boolean;
-  showDataLabels?: boolean;
-  interactive?: boolean;
-  exportable?: boolean;
-}
-
 export class AdvancedDataVisualization {
   private config: ChartConfig;
   private container: HTMLElement | null = null;
-  private charts: Map<string, any> = new Map();
+  private charts: Map<string, { 
+    render: () => void; 
+    update: (data: DataPoint[]) => void; 
+    destroy: () => void;
+    data?: ChartData;
+    options?: VisualizationOptions;
+    container?: HTMLElement;
+  }> = new Map();
   private dataStreams: Map<string, DataPoint[]> = new Map();
   private updateIntervals: Map<string, NodeJS.Timeout> = new Map();
 
@@ -77,7 +57,9 @@ export class AdvancedDataVisualization {
 
     this.container = container;
     this.charts.set(containerId, {
-      type: 'line',
+      render: () => {},
+      update: () => {},
+      destroy: () => {},
       data,
       options,
       container
@@ -96,7 +78,9 @@ export class AdvancedDataVisualization {
 
     this.container = container;
     this.charts.set(containerId, {
-      type: 'bar',
+      render: () => {},
+      update: () => {},
+      destroy: () => {},
       data,
       options,
       container
@@ -115,7 +99,9 @@ export class AdvancedDataVisualization {
 
     this.container = container;
     this.charts.set(containerId, {
-      type: 'pie',
+      render: () => {},
+      update: () => {},
+      destroy: () => {},
       data,
       options,
       container
@@ -134,7 +120,9 @@ export class AdvancedDataVisualization {
 
     this.container = container;
     this.charts.set(containerId, {
-      type: 'scatter',
+      render: () => {},
+      update: () => {},
+      destroy: () => {},
       data,
       options,
       container
@@ -153,7 +141,9 @@ export class AdvancedDataVisualization {
 
     this.container = container;
     this.charts.set(containerId, {
-      type: 'area',
+      render: () => {},
+      update: () => {},
+      destroy: () => {},
       data,
       options,
       container
@@ -167,10 +157,12 @@ export class AdvancedDataVisualization {
     if (!chart) return;
 
     const { data, options, container } = chart;
+    if (!data || !options || !container) return;
+    
     const { width, height, margin, colors } = this.config;
 
     // Clear container
-    container.innerHTML = '';
+    if (container) container.innerHTML = '';
 
     // Create SVG
     const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
@@ -206,7 +198,7 @@ export class AdvancedDataVisualization {
     const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
     path.setAttribute('d', line(data.data));
     path.setAttribute('fill', 'none');
-    path.setAttribute('stroke', data.color || colors[0]);
+    path.setAttribute('stroke', data.color || colors[0] || '#3b82f6');
     path.setAttribute('stroke-width', '2');
     path.setAttribute('stroke-linecap', 'round');
     path.setAttribute('stroke-linejoin', 'round');
@@ -227,11 +219,11 @@ export class AdvancedDataVisualization {
     }
 
     svg.appendChild(g);
-    container.appendChild(svg);
+    container?.appendChild(svg);
 
     // Add title if provided
-    if (options.title) {
-      this.addTitle(container, options.title, options.subtitle);
+    if (options?.title || '') {
+      this.addTitle(container!, options?.title || '', options?.subtitle);
     }
   }
 
@@ -240,9 +232,11 @@ export class AdvancedDataVisualization {
     if (!chart) return;
 
     const { data, options, container } = chart;
+    if (!data || !options || !container) return;
+    
     const { width, height, margin, colors } = this.config;
 
-    container.innerHTML = '';
+    if (container) container.innerHTML = '';
 
     const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
     svg.setAttribute('width', width.toString());
@@ -268,7 +262,7 @@ export class AdvancedDataVisualization {
     this.addAxes(g, xScale, yScale, chartWidth, chartHeight, options);
 
     // Add bars
-    data.data.forEach((point: DataPoint, index: number) => {
+    data?.data?.forEach((point: DataPoint, index: number) => {
       const bar = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
       const barWidth = chartWidth / data.data.length * 0.8;
       const barHeight = chartHeight - yScale(point.y);
@@ -278,7 +272,7 @@ export class AdvancedDataVisualization {
       bar.setAttribute('y', yScale(point.y).toString());
       bar.setAttribute('width', barWidth.toString());
       bar.setAttribute('height', barHeight.toString());
-      bar.setAttribute('fill', point.color || data.color || colors[index % colors.length]);
+      bar.setAttribute('fill', point.color || data.color || colors[index % colors.length] || '#3b82f6');
       bar.setAttribute('rx', '2');
 
       if (this.config.animations) {
@@ -293,10 +287,10 @@ export class AdvancedDataVisualization {
     });
 
     svg.appendChild(g);
-    container.appendChild(svg);
+    container?.appendChild(svg);
 
-    if (options.title) {
-      this.addTitle(container, options.title, options.subtitle);
+    if (options?.title || '') {
+      this.addTitle(container!, options?.title || '', options?.subtitle);
     }
   }
 
@@ -307,7 +301,7 @@ export class AdvancedDataVisualization {
     const { data, options, container } = chart;
     const { width, height, colors } = this.config;
 
-    container.innerHTML = '';
+    if (container) container.innerHTML = '';
 
     const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
     svg.setAttribute('width', width.toString());
@@ -319,10 +313,10 @@ export class AdvancedDataVisualization {
     const centerY = height / 2;
     const radius = Math.min(width, height) / 2 - 40;
 
-    const total = data.data.reduce((sum: number, point: DataPoint) => sum + point.y, 0);
+    const total = data?.data?.reduce((sum: number, point: DataPoint) => sum + point.y, 0) || 0;
     let currentAngle = 0;
 
-    data.data.forEach((point: DataPoint, index: number) => {
+    data?.data?.forEach((point: DataPoint, index: number) => {
       const sliceAngle = (point.y / total) * 2 * Math.PI;
       const startAngle = currentAngle;
       const endAngle = currentAngle + sliceAngle;
@@ -358,10 +352,10 @@ export class AdvancedDataVisualization {
       currentAngle += sliceAngle;
     });
 
-    container.appendChild(svg);
+    container?.appendChild(svg);
 
-    if (options.title) {
-      this.addTitle(container, options.title, options.subtitle);
+    if (options?.title || '') {
+      this.addTitle(container!, options?.title || '', options?.subtitle);
     }
   }
 
@@ -370,9 +364,11 @@ export class AdvancedDataVisualization {
     if (!chart) return;
 
     const { data, options, container } = chart;
+    if (!data || !options || !container) return;
+    
     const { width, height, margin, colors } = this.config;
 
-    container.innerHTML = '';
+    if (container) container.innerHTML = '';
 
     const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
     svg.setAttribute('width', width.toString());
@@ -398,12 +394,12 @@ export class AdvancedDataVisualization {
     this.addAxes(g, xScale, yScale, chartWidth, chartHeight, options);
 
     // Add scatter points
-    data.data.forEach((point: DataPoint, index: number) => {
+    data?.data?.forEach((point: DataPoint, index: number) => {
       const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
       circle.setAttribute('cx', xScale(point.x).toString());
       circle.setAttribute('cy', yScale(point.y).toString());
       circle.setAttribute('r', '4');
-      circle.setAttribute('fill', point.color || data.color || colors[0]);
+      circle.setAttribute('fill', point.color || data.color || colors[0] || '#3b82f6');
       circle.setAttribute('opacity', '0.7');
 
       if (this.config.animations) {
@@ -418,10 +414,10 @@ export class AdvancedDataVisualization {
     });
 
     svg.appendChild(g);
-    container.appendChild(svg);
+    container?.appendChild(svg);
 
-    if (options.title) {
-      this.addTitle(container, options.title, options.subtitle);
+    if (options?.title || '') {
+      this.addTitle(container!, options?.title || '', options?.subtitle);
     }
   }
 
@@ -430,9 +426,11 @@ export class AdvancedDataVisualization {
     if (!chart) return;
 
     const { data, options, container } = chart;
+    if (!data || !options || !container) return;
+    
     const { width, height, margin, colors } = this.config;
 
-    container.innerHTML = '';
+    if (container) container.innerHTML = '';
 
     const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
     svg.setAttribute('width', width.toString());
@@ -461,7 +459,7 @@ export class AdvancedDataVisualization {
     const areaPath = this.createAreaGenerator(xScale, yScale, chartHeight);
     const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
     path.setAttribute('d', areaPath(data.data));
-    path.setAttribute('fill', data.color || colors[0]);
+    path.setAttribute('fill', data.color || colors[0] || '#3b82f6');
     path.setAttribute('opacity', '0.3');
 
     if (this.config.animations) {
@@ -479,25 +477,25 @@ export class AdvancedDataVisualization {
     const linePath = document.createElementNS('http://www.w3.org/2000/svg', 'path');
     linePath.setAttribute('d', line(data.data));
     linePath.setAttribute('fill', 'none');
-    linePath.setAttribute('stroke', data.color || colors[0]);
+    linePath.setAttribute('stroke', data.color || colors[0] || '#3b82f6');
     linePath.setAttribute('stroke-width', '2');
 
     g.appendChild(linePath);
     svg.appendChild(g);
-    container.appendChild(svg);
+    container?.appendChild(svg);
 
-    if (options.title) {
-      this.addTitle(container, options.title, options.subtitle);
+    if (options?.title || '') {
+      this.addTitle(container!, options?.title || '', options?.subtitle);
     }
   }
 
-  private createXScale(data: DataPoint[], width: number): (value: any) => number {
+  private createXScale(data: DataPoint[], width: number): (value: number | string) => number {
     const values = data.map(d => typeof d.x === 'number' ? d.x : 0);
     const min = Math.min(...values);
     const max = Math.max(...values);
     const range = max - min || 1;
 
-    return (value: any) => {
+    return (value: number | string) => {
       const numValue = typeof value === 'number' ? value : 0;
       return ((numValue - min) / range) * width;
     };
@@ -514,7 +512,7 @@ export class AdvancedDataVisualization {
     };
   }
 
-  private createLineGenerator(xScale: (value: any) => number, yScale: (value: number) => number): (data: DataPoint[]) => string {
+  private createLineGenerator(xScale: (value: number | string) => number, yScale: (value: number) => number): (data: DataPoint[]) => string {
     return (data: DataPoint[]) => {
       return data.map((point, index) => {
         const x = xScale(point.x);
@@ -524,7 +522,7 @@ export class AdvancedDataVisualization {
     };
   }
 
-  private createAreaGenerator(xScale: (value: any) => number, yScale: (value: number) => number, height: number): (data: DataPoint[]) => string {
+  private createAreaGenerator(xScale: (value: number | string) => number, yScale: (value: number) => number, height: number): (data: DataPoint[]) => string {
     return (data: DataPoint[]) => {
       const line = this.createLineGenerator(xScale, yScale);
       const linePath = line(data);
@@ -534,7 +532,7 @@ export class AdvancedDataVisualization {
     };
   }
 
-  private addGrid(g: SVGElement, xScale: (value: any) => number, yScale: (value: number) => number, width: number, height: number): void {
+  private addGrid(g: SVGElement, xScale: (value: number | string) => number, yScale: (value: number) => number, width: number, height: number): void {
     // Add horizontal grid lines
     for (let i = 0; i <= 5; i++) {
       const y = (height / 5) * i;
@@ -564,7 +562,7 @@ export class AdvancedDataVisualization {
     }
   }
 
-  private addAxes(g: SVGElement, xScale: (value: any) => number, yScale: (value: number) => number, width: number, height: number, options: VisualizationOptions): void {
+  private addAxes(g: SVGElement, xScale: (value: number | string) => number, yScale: (value: number) => number, width: number, height: number, options: VisualizationOptions): void {
     // X-axis
     const xAxis = document.createElementNS('http://www.w3.org/2000/svg', 'line');
     xAxis.setAttribute('x1', '0');
@@ -610,7 +608,7 @@ export class AdvancedDataVisualization {
     }
   }
 
-  private addDataPoints(g: SVGElement, data: DataPoint[], xScale: (value: any) => number, yScale: (value: number) => number): void {
+  private addDataPoints(g: SVGElement, data: DataPoint[], xScale: (value: number | string) => number, yScale: (value: number) => number): void {
     data.forEach((point, index) => {
       const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
       circle.setAttribute('cx', xScale(point.x).toString());
@@ -677,7 +675,7 @@ export class AdvancedDataVisualization {
     const chart = this.charts.get(containerId);
     if (!chart) return;
 
-    switch (chart.type) {
+    switch ((chart as unknown as StoredChart)?.type) {
       case 'line':
         this.renderLineChart(containerId);
         break;
@@ -698,7 +696,7 @@ export class AdvancedDataVisualization {
 
   public startDataStream(streamId: string, updateInterval: number = 1000): void {
     const interval = setInterval(() => {
-      this.updateDataStream(streamId);
+      this.updateDataStream();
     }, updateInterval);
 
     this.updateIntervals.set(streamId, interval);
@@ -712,7 +710,7 @@ export class AdvancedDataVisualization {
     }
   }
 
-  private updateDataStream(streamId: string): void {
+  private updateDataStream(): void {
     // This would be implemented to update real-time data streams
     // Implementation depends on the specific data source
   }
@@ -722,7 +720,7 @@ export class AdvancedDataVisualization {
     if (!chart) return '';
 
     if (format === 'svg') {
-      return chart.container.innerHTML;
+      return chart?.container?.innerHTML || '';
     }
 
     // For PNG/JPG, would need to convert SVG to canvas

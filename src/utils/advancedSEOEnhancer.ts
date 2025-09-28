@@ -28,7 +28,7 @@ interface PageSEOData {
   twitterTitle?: string;
   twitterDescription?: string;
   twitterImage?: string;
-  structuredData?: any;
+  structuredData?: Record<string, unknown>;
   breadcrumbs?: Array<{ name: string; url: string }>;
 }
 
@@ -206,7 +206,7 @@ class AdvancedSEOEnhancer {
   /**
    * Add structured data
    */
-  private addStructuredData(structuredData: any): void {
+  private addStructuredData(structuredData: Record<string, unknown>): void {
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(structuredData);
@@ -325,46 +325,49 @@ ${pages.map(page => `  <url>
 
     const data = this.currentPageData;
     const issues: string[] = [];
+    const recommendations: string[] = [];
 
     // Check title length
     if (data.title.length < 30 || data.title.length > 60) {
       issues.push(`Title length should be 30-60 characters (current: ${data.title.length})`);
+    } else {
+      recommendations.push('Title length is optimal');
     }
 
     // Check description length
     if (data.description.length < 120 || data.description.length > 160) {
       issues.push(`Description length should be 120-160 characters (current: ${data.description.length})`);
+    } else {
+      recommendations.push('Description length is optimal');
     }
 
     // Check for missing Open Graph image
     if (!data.ogImage) {
       issues.push('Missing Open Graph image');
+    } else {
+      recommendations.push('Open Graph image is present');
     }
 
     // Check for missing keywords
     if (data.keywords.length === 0) {
       issues.push('No keywords specified');
+    } else {
+      recommendations.push('Keywords are specified');
     }
+
+    // Calculate score based on issues
+    const score = Math.max(0, 100 - (issues.length * 20));
 
     return `
 SEO Report:
-===========
-Title: ${data.title}
-Description: ${data.description}
-Keywords: ${data.keywords.join(', ')}
-Canonical: ${data.canonical}
-
-Issues Found:
-${issues.length > 0 ? issues.map(issue => `- ${issue}`).join('\n') : '- No issues found'}
-
-Score: ${issues.length === 0 ? '100/100' : `${Math.max(0, 100 - issues.length * 20)}/100`}
-    `.trim();
+- Issues Found: ${issues.length}
+- Recommendations: ${recommendations.length}
+- Score: ${score}/100
+`;
   }
 }
 
 // Export singleton instance
 export const seoEnhancer = new AdvancedSEOEnhancer();
-
-// Export class for custom instances
 export { AdvancedSEOEnhancer };
 export type { SEOConfig, PageSEOData };

@@ -367,7 +367,7 @@ export class AdvancedBuildOptimizer {
     document.head.appendChild(link);
   }
 
-  private trackError(type: string, error: any): void {
+  private trackError(type: string, error: Error | string): void {
     console.error(`Build Optimization Error - ${type}:`, error);
     this.optimizationMetrics.set('errors', (this.optimizationMetrics.get('errors') || 0) + 1);
   }

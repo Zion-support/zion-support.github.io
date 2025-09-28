@@ -25,6 +25,10 @@ interface AccessibilityMetrics {
   keyboardTraps: number;
   screenReaderCompatibility: number;
   overallScore: number;
+  totalIssues: number;
+  criticalIssues: number;
+  warningIssues: number;
+  passedChecks: number;
 }
 
 class AdvancedAccessibilityEnhancer {
@@ -55,7 +59,11 @@ class AdvancedAccessibilityEnhancer {
       altTexts: 0,
       keyboardTraps: 0,
       screenReaderCompatibility: 0,
-      overallScore: 0
+      overallScore: 0,
+      totalIssues: 0,
+      criticalIssues: 0,
+      warningIssues: 0,
+      passedChecks: 0
     };
   }
 
@@ -627,27 +635,15 @@ class AdvancedAccessibilityEnhancer {
     
     return `
 Accessibility Report:
-====================
-Overall Score: ${metrics.overallScore}/100
-Color Contrast Ratio: ${metrics.colorContrastRatio.toFixed(2)}
-Focusable Elements: ${metrics.focusableElements}
-ARIA Labels: ${metrics.ariaLabels}
-Heading Structure: ${metrics.headingStructure}
-Alt Texts: ${metrics.altTexts}
-Screen Reader Compatibility: ${metrics.screenReaderCompatibility}/100
-
-Recommendations:
-${metrics.overallScore < 80 ? '- Improve color contrast ratios' : ''}
-${metrics.ariaLabels < metrics.focusableElements * 0.8 ? '- Add more ARIA labels' : ''}
-${metrics.headingStructure === 0 ? '- Add proper heading structure' : ''}
-${metrics.altTexts === 0 ? '- Add alt text to images' : ''}
-    `.trim();
+- Total Issues: ${metrics.totalIssues}
+- Critical Issues: ${metrics.criticalIssues}
+- Warning Issues: ${metrics.warningIssues}
+- Passed Checks: ${metrics.passedChecks}
+`;
   }
 }
 
 // Export singleton instance
 export const accessibilityEnhancer = new AdvancedAccessibilityEnhancer();
-
-// Export class for custom instances
 export { AdvancedAccessibilityEnhancer };
 export type { AccessibilityConfig, AccessibilityMetrics };

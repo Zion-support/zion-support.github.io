@@ -13,13 +13,19 @@
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
     Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
-    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https:; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self';"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net https://unpkg.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https: blob:; connect-src 'self' https: wss:; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self';"
+    X-DNS-Prefetch-Control = "on"
+    Cross-Origin-Embedder-Policy = "require-corp"
+    Cross-Origin-Opener-Policy = "same-origin"
+    Cross-Origin-Resource-Policy = "same-origin"
 
 # Cache static assets
 [[headers]]
   for = "/assets/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
+    Vary = "Accept-Encoding"
+    X-Content-Type-Options = "nosniff"
 
 # Cache HTML files
 [[headers]]
@@ -35,9 +41,10 @@
     Service-Worker-Allowed = "/"
  
 [build]
-  command = "pnpm run build:no-check"
+  command = "pnpm install --frozen-lockfile && pnpm run build:no-check"
   publish = "dist"
   command_timeout = "30m"
+  functions = "netlify/functions"
 
 [build.environment]
   NODE_VERSION = "22.16.0"
@@ -50,25 +57,26 @@
   NODE_ENV = "production"
   # Optimize build performance
   CI = "true"
+  # Enable build optimizations
+  VITE_BUILD_OPTIMIZE = "true"
+  # Disable telemetry
+  VITE_TELEMETRY_DISABLED = "true"
 
-# Explicitly disable Next.js plugin to prevent auto-detection
+# Explicitly disable Netlify post-processing to avoid transform issues
 [build.processing]
-  skip_processing = false
+  skip_processing = true
 
-[build.processing.css]
-  bundle = true
-  minify = true
+# Remove custom plugins that may cause build failures
+# (Cloudinary plugin disabled)
+# [[plugins]]
+#   package = "netlify-plugin-cloudinary"
+#   [plugins.inputs]
 
-[build.processing.js]
-  bundle = true
-  minify = true
-
-[build.processing.html]
-  pretty_urls = true
-
+# Disable Next.js plugin since we're using Vite
 [[plugins]]
-  package = "netlify-plugin-cloudinary"
+  package = "@netlify/plugin-nextjs"
   [plugins.inputs]
+    disable = true
 
 [context.production.environment]
   NODE_ENV = "production"
