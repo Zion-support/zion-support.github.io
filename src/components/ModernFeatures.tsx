@@ -5,7 +5,6 @@ import {
   Shield, 
   Globe, 
   Cpu, 
-  Database, 
   Lock,
   ArrowRight,
   CheckCircle,
@@ -215,7 +214,7 @@ const ModernFeatures: React.FC = () => {
             { label: 'Performance', value: '<100ms', icon: <Zap className="w-6 h-6" /> },
             { label: 'Security', value: 'SOC 2', icon: <Shield className="w-6 h-6" /> },
             { label: 'Scalability', value: 'Global', icon: <Globe className="w-6 h-6" /> }
-          ].map((stat, index) => (
+          ].map((stat) => (
             <div key={stat.label} className="text-center">
               <div className="inline-flex items-center justify-center w-12 h-12 bg-blue-100 text-blue-600 rounded-lg mb-3">
                 {stat.icon}

@@ -8,6 +8,7 @@
 const fs = require('fs');
 const path = require('path');
 
+// eslint-disable-next-line no-undef
 console.log('🚀 Starting comprehensive enhancements...');
 
 // 1. Enhanced SEO Component
@@ -204,6 +205,7 @@ const writeFile = (filePath, content) => {
     fs.mkdirSync(dir, { recursive: true });
   }
   fs.writeFileSync(filePath, content);
+  // eslint-disable-next-line no-undef
   console.log(`✅ Created ${filePath}`);
 };
 
@@ -212,4 +214,5 @@ writeFile('src/components/EnhancedSEO.tsx', enhancedSEO);
 writeFile('src/hooks/usePerformanceMonitor.ts', performanceMonitor);
 writeFile('src/components/AdvancedErrorBoundary.tsx', errorBoundary);
 
+// eslint-disable-next-line no-undef
 console.log('🎉 Comprehensive enhancements completed!');
