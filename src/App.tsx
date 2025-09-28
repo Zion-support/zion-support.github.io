@@ -5,11 +5,36 @@ import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import PerformanceTracker from './components/PerformanceTracker';
 import PerformanceMonitor from './components/PerformanceMonitor';
-// import EnhancedPerformanceMonitor from './components/EnhancedPerformanceMonitor';
 import PerformanceDashboard from './components/PerformanceDashboard';
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
-import { seoAnalytics, performanceSEO } from './utils/seoEnhanced';
+import { seoAnalytics, performanceSEO, seoManager } from './utils/seoEnhanced';
+import { analytics } from './utils/analytics';
+import { performanceOptimizer } from './utils/performanceOptimizations';
+import { advancedAccessibilityEnhancer } from './utils/advancedAccessibilityEnhancer';
+import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
+import { useAppInitialization } from './hooks/useAppInitialization';
+import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
+import AIPerformanceDashboard from './components/AIPerformanceDashboard';
+import WebsiteEnhancements from './components/WebsiteEnhancements';
+import SEOOptimizer from './components/SEOOptimizer';
+import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
+import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
+import { performanceAlerts } from './utils/performanceAlerts';
+import { accessibilityUtils } from './utils/accessibilityUtils';
+import { securityUtils } from './utils/securityUtils';
+import { enhancedSecurityManager } from './utils/enhancedSecurityManager';
+import { initializePerformanceEnhancements } from './utils/performanceEnhancements';
+import { initializeAccessibilityEnhancements } from './utils/accessibilityEnhancements';
+import { advancedPerformanceOptimizer } from './utils/advancedPerformanceOptimizer';
+import { advancedSEOOptimizer } from './utils/advancedSEOOptimizer';
+import AdvancedAnalytics from './components/AdvancedAnalytics';
 import NotificationSystem, { Notification } from './components/NotificationSystem';
+import KeyboardShortcutsHelp from './components/KeyboardShortcutsHelp';
+import CommandPalette from './components/CommandPalette';
+import RealTimePerformanceMonitor from './components/RealTimePerformanceMonitor';
+import SystemHealthDashboard from './components/SystemHealthDashboard';
+import PerformanceMetricsDashboard from './components/PerformanceMetricsDashboard';
+import ComprehensiveImprovements from './components/ComprehensiveImprovements';
 import { EnhancedNotification } from './types/comprehensive';
 import './index.css';
 
@@ -65,6 +90,7 @@ export default function App(): React.JSX.Element {
   const [notifications, setNotifications] = useState<Notification[]>([]);
   const [enhancedNotifications, setEnhancedNotifications] = useState<EnhancedNotification[]>([]);
   const [showSystemHealth, setShowSystemHealth] = useState(false);
+<<<<<<< HEAD
   const [showPerformanceWidget, setShowPerformanceWidget] = useState(false);
   const [showCommandPalette, setShowCommandPalette] = useState(false);
   const [showAdvancedMonitoring, setShowAdvancedMonitoring] = useState(false);
@@ -75,6 +101,9 @@ export default function App(): React.JSX.Element {
   const [showEnhancedNotifications] = useState(true);
   const [showKeyboardShortcutsManager, setShowKeyboardShortcutsManager] = useState(false);
   // const [showPerformanceDashboard, setShowPerformanceDashboard] = useState(false);
+=======
+  const [showComprehensiveImprovements, setShowComprehensiveImprovements] = useState(false);
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-61cc
 
   // Notification management
   const removeNotification = useCallback((id: string) => {
@@ -434,7 +463,63 @@ export default function App(): React.JSX.Element {
     }
   }), []);
 
+<<<<<<< HEAD
   // Main initialization effect
+=======
+  // Initialize comprehensive enhancements
+  useEffect(() => {
+    try {
+      // Initialize enhanced systems
+      enhancedPerformanceMonitor.startMonitoring();
+      analytics.initialize();
+      
+      // Initialize accessibility and security enhancers
+      if (advancedAccessibilityEnhancer && typeof advancedAccessibilityEnhancer.initialize === 'function') {
+        advancedAccessibilityEnhancer.initialize();
+      }
+      if (enhancedSecurityManager && typeof enhancedSecurityManager.initialize === 'function') {
+        enhancedSecurityManager.initialize();
+      }
+      
+      // Initialize new performance and accessibility enhancements
+      initializePerformanceEnhancements();
+      initializeAccessibilityEnhancements();
+      
+      // Initialize advanced optimizers
+      advancedPerformanceOptimizer.initialize();
+      advancedSEOOptimizer.initialize();
+      advancedAccessibilityEnhancer.initialize();
+      
+      // Get comprehensive enhancements
+      const enhancements = getComprehensiveEnhancements();
+
+      // Store enhancements globally for debugging
+      (window as unknown as Record<string, unknown>).enhancements = enhancements;
+      (window as unknown as Record<string, unknown>).performanceOptimizer = advancedPerformanceOptimizer;
+      (window as unknown as Record<string, unknown>).seoOptimizer = advancedSEOOptimizer;
+      (window as unknown as Record<string, unknown>).accessibilityEnhancer = advancedAccessibilityEnhancer;
+    } catch (error) {
+      console.error('Error initializing enhancements:', error);
+    }
+  }, []);
+
+  // Optimized keyboard handler for system dashboard toggle
+  const handleKeyDown = useCallback((event: KeyboardEvent) => {
+    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'D') {
+      event.preventDefault();
+      setShowSystemDashboard((prev: boolean) => !prev);
+    }
+    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'P') {
+      event.preventDefault();
+      setShowPerformanceOptimizer((prev: boolean) => !prev);
+    }
+    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'M') {
+      event.preventDefault();
+      setShowPerformanceMonitor(prev => !prev);
+    }
+  }, []);
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-61cc
   useEffect(() => {
     try {
       // Add performance marks for better monitoring
@@ -542,6 +627,99 @@ export default function App(): React.JSX.Element {
     }
   }, [trackEngagement, handleKeyDown, handleScroll, handleClick]);
 
+<<<<<<< HEAD
+=======
+  // Enhanced keyboard shortcuts
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      // Dashboard shortcuts
+      if (event.ctrlKey && event.shiftKey) {
+        event.preventDefault();
+        switch (event.key) {
+          case 'D':
+            setShowSystemDashboard(!showSystemDashboard);
+            break;
+          case 'P':
+            setShowPerformanceOptimizer(!showPerformanceOptimizer);
+            break;
+          case 'M':
+            setShowPerformanceMonitor(!showPerformanceMonitor);
+            break;
+          case 'A':
+            setShowAIDashboard(!showAIDashboard);
+            break;
+          case 'S':
+            setShowSEOOptimizer(!showSEOOptimizer);
+            break;
+          case 'T':
+            setIsDarkMode(!isDarkMode);
+            break;
+          case 'R':
+            setShowRealTimeMonitor(!showRealTimeMonitor);
+            break;
+          case 'H':
+            setShowSystemHealth(!showSystemHealth);
+            break;
+          case 'K':
+            setShowKeyboardHelp(!showKeyboardHelp);
+            break;
+          case 'X':
+            setShowPerformanceMetrics(!showPerformanceMetrics);
+            break;
+          case 'I':
+            setShowComprehensiveImprovements(!showComprehensiveImprovements);
+            break;
+          case 'N':
+            // Show notification
+            if ((window as any).notifications) {
+              (window as any).notifications.add({
+                type: 'info',
+                title: 'Notification Test',
+                message: 'This is a test notification!',
+                duration: 3000
+              });
+            }
+            break;
+          case 'C':
+            // Clear notifications
+            if ((window as any).notifications) {
+              (window as any).notifications.clear();
+            }
+            break;
+        }
+      }
+      
+      // Command palette shortcut
+      if (event.ctrlKey && event.key === 'k') {
+        event.preventDefault();
+        setShowCommandPalette(!showCommandPalette);
+      }
+      
+      // Help shortcut
+      if (event.ctrlKey && event.key === '/') {
+        event.preventDefault();
+        setShowKeyboardHelp(!showKeyboardHelp);
+      }
+      
+      // Escape to close all modals
+      if (event.key === 'Escape') {
+        setShowSystemDashboard(false);
+        setShowPerformanceOptimizer(false);
+        setShowPerformanceMonitor(false);
+        setShowAIDashboard(false);
+        setShowSEOOptimizer(false);
+        setShowKeyboardHelp(false);
+        setShowCommandPalette(false);
+        setShowRealTimeMonitor(false);
+        setShowSystemHealth(false);
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, [showSystemDashboard, showPerformanceOptimizer, showPerformanceMonitor, showAIDashboard, showSEOOptimizer, isDarkMode, showKeyboardHelp, showCommandPalette, showRealTimeMonitor, showSystemHealth, showPerformanceMetrics]);
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-61cc
   // Track engagement on scroll and click
   useEffect(() => {
     const handleScrollWithEngagement = () => {
@@ -659,6 +837,12 @@ export default function App(): React.JSX.Element {
             onClose={() => setShowSystemHealth(false)}
           />
         </Suspense>
+
+        {/* Comprehensive Improvements Dashboard - Toggle with Ctrl+Shift+I */}
+        <ComprehensiveImprovements
+          isVisible={showComprehensiveImprovements}
+          onClose={() => setShowComprehensiveImprovements(false)}
+        />
 
         {/* New Components */}
         <NotificationSystem
@@ -865,14 +1049,66 @@ export default function App(): React.JSX.Element {
           {isDarkMode ? '☀️' : '🌙'}
         </button>
 
+<<<<<<< HEAD
+=======
+        {/* Keyboard Shortcuts Help Button */}
+        <button
+          onClick={() => setShowKeyboardHelp(true)}
+          className="fixed bottom-4 right-20 z-40 bg-gray-600 hover:bg-gray-700 text-white p-3 rounded-full shadow-lg transition-colors duration-200"
+          title="Keyboard Shortcuts (Ctrl+/)"
+        >
+          ⌨️
+        </button>
+
+        {/* Command Palette Button */}
+        <button
+          onClick={() => setShowCommandPalette(true)}
+          className="fixed bottom-4 right-36 z-40 bg-purple-600 hover:bg-purple-700 text-white p-3 rounded-full shadow-lg transition-colors duration-200"
+          title="Command Palette (Ctrl+K)"
+        >
+          ⌘
+        </button>
+
+        {/* Real-Time Monitor Button */}
+        <button
+          onClick={() => setShowRealTimeMonitor(true)}
+          className="fixed bottom-4 right-52 z-40 bg-orange-600 hover:bg-orange-700 text-white p-3 rounded-full shadow-lg transition-colors duration-200"
+          title="Real-Time Monitor (Ctrl+Shift+R)"
+        >
+          📊
+        </button>
+
+        {/* System Health Button */}
+        <button
+          onClick={() => setShowSystemHealth(true)}
+          className="fixed bottom-4 right-68 z-40 bg-green-600 hover:bg-green-700 text-white p-3 rounded-full shadow-lg transition-colors duration-200"
+          title="System Health (Ctrl+Shift+H)"
+        >
+          🏥
+        </button>
+
+        {/* Comprehensive Improvements Button */}
+        <button
+          onClick={() => setShowComprehensiveImprovements(true)}
+          className="fixed bottom-4 right-84 z-40 bg-indigo-600 hover:bg-indigo-700 text-white p-3 rounded-full shadow-lg transition-colors duration-200"
+          title="Comprehensive Improvements (Ctrl+Shift+I)"
+        >
+          🚀
+        </button>
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-61cc
         {/* Keyboard Shortcuts Help Panel */}
         <div className="fixed bottom-4 left-4 z-40 bg-gray-800 text-white p-3 rounded-lg shadow-lg text-sm opacity-75 hover:opacity-100 transition-opacity duration-200 max-w-xs">
           <div className="font-semibold mb-1">Keyboard Shortcuts:</div>
           <div>Ctrl+Shift+D: System Dashboard</div>
           <div>Ctrl+Shift+H: System Health</div>
+<<<<<<< HEAD
           <div>Ctrl+Shift+M: Advanced Monitoring</div>
           <div>Ctrl+Shift+R: Real-Time Performance</div>
           <div>Ctrl+Shift+S: System Status</div>
+=======
+          <div>Ctrl+Shift+I: Comprehensive Improvements</div>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-61cc
           <div>Ctrl+Shift+K: Keyboard Help</div>
           <div>Ctrl+Shift+T: Toggle Theme</div>
           <div>Ctrl+Shift+?: Shortcuts Manager</div>
