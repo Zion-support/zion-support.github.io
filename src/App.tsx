@@ -2,7 +2,9 @@ import React, { useCallback, useState, useEffect, useMemo } from 'react';
 import { AppRouter } from './router';
 import { useAppInitialization } from './hooks/useAppInitialization';
 import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
-import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
+import AdvancedErrorBoundary from './components/AdvancedErrorBoundary';
+import PerformanceTracker from './components/PerformanceTracker';
+import AccessibilityEnhancements from './components/AccessibilityEnhancements';
 import { seoAnalytics, performanceSEO } from './utils/seoEnhanced';
 import { analytics } from './utils/analytics';
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
@@ -13,11 +15,17 @@ import SEOOptimizer from './components/SEOOptimizer';
 import AIPerformanceDashboard from './components/AIPerformanceDashboard';
 import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
 import { useSEOData } from './components/SEOOptimizer';
-// Removed unused imports to fix linting warnings
+import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
+import { enhancedAnalytics } from './utils/enhancedAnalytics';
+import { advancedCacheSystem } from './utils/advancedCacheSystem';
+import { AdvancedAutomationSystem } from './utils/advancedAutomationSystem';
+import { AccessibilityEnhancer } from './utils/accessibilityEnhancer';
+import { SecurityEnhancer } from './utils/securityEnhancer';
 import './index.css';
 import './styles/notifications.css';
 import './styles/system-metrics.css';
 import './styles/modern-utilities.css';
+import './styles/accessibility.css';
 
 export default function App(): React.JSX.Element {
   // State for system dashboard and performance optimizer
@@ -157,6 +165,22 @@ export default function App(): React.JSX.Element {
     // Initialize performance SEO optimizations
     performanceSEO.optimizeImages();
     performanceSEO.optimizeCSS();
+    
+    // Initialize comprehensive enhancement systems
+    try {
+      const enhancements = getComprehensiveEnhancements();
+      enhancements.initialize();
+      
+      // Initialize individual enhancement systems
+      enhancedPerformanceMonitor.initialize();
+      enhancedAnalytics.initialize();
+      advancedCacheSystem.initialize();
+      new AdvancedAutomationSystem().initialize();
+      new AccessibilityEnhancer().initialize();
+      new SecurityEnhancer().initialize();
+    } catch (error) {
+      console.warn('Some enhancement systems failed to initialize:', error);
+    }
 
     // Set default SEO data using the correct method
     // seoManager.updateMetaTags(seoData);
@@ -199,12 +223,12 @@ export default function App(): React.JSX.Element {
   useEffect(() => {
     const handleScrollWithEngagement = () => {
       handleScroll();
-      trackEngagement();
+      enhancedTrackEngagement();
     };
 
     const handleClickWithEngagement = (event: Event) => {
       handleClick(event);
-      trackEngagement();
+      enhancedTrackEngagement();
     };
 
     window.addEventListener('scroll', handleScrollWithEngagement, { passive: true });
@@ -214,7 +238,7 @@ export default function App(): React.JSX.Element {
       window.removeEventListener('scroll', handleScrollWithEngagement);
       document.removeEventListener('click', handleClickWithEngagement);
     };
-  }, [handleScroll, handleClick, trackEngagement]);
+  }, [handleScroll, handleClick, enhancedTrackEngagement]);
 
   // Theme and preferences persistence
   useEffect(() => {
@@ -263,8 +287,10 @@ export default function App(): React.JSX.Element {
   }
 
   return (
-    <EnhancedErrorBoundary>
+    <AdvancedErrorBoundary>
       <SEOOptimizer seoData={seoData} />
+      <PerformanceTracker />
+      <AccessibilityEnhancements />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <AppRouter />
         
@@ -357,6 +383,6 @@ export default function App(): React.JSX.Element {
           <div>Escape: Close All</div>
         </div>
       </div>
-    </EnhancedErrorBoundary>
+    </AdvancedErrorBoundary>
   );
 }
