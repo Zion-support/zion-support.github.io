@@ -14,6 +14,12 @@ import { apiClient } from './utils/apiClient';
 import { notificationManager } from './utils/notificationManager';
 import { userFeedback } from './utils/userFeedbackManager';
 import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
+import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
+import { enhancedAnalytics } from './utils/enhancedAnalytics';
+import { advancedCacheSystem } from './utils/advancedCacheSystem';
+import { AdvancedAutomationSystem } from './utils/advancedAutomationSystem';
+import { AccessibilityEnhancer } from './utils/accessibilityEnhancer';
+import { SecurityEnhancer } from './utils/securityEnhancer';
 import './index.css';
 
 export default function App(): React.JSX.Element {
@@ -50,7 +56,7 @@ export default function App(): React.JSX.Element {
     enhancedPerformanceMonitor.startMonitoring();
     enhancedAnalytics.initialize();
     advancedCacheSystem.initialize();
-    advancedAutomationSystem.initialize();
+    AdvancedAutomationSystem.getInstance().initialize();
     
     // Initialize accessibility and security enhancers
     const accessibilityEnhancer = AccessibilityEnhancer.getInstance();
