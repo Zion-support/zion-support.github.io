@@ -560,7 +560,7 @@ class AdvancedSecuritySystem {
       case 'monitor':
         threat.action = 'monitor';
         break;
-      case 'alert':
+      case 'monitor':
         this.sendAlert(threat);
         break;
       case 'sanitize':

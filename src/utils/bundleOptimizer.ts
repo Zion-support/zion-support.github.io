@@ -68,7 +68,7 @@ class BundleOptimizer {
     try {
       await this.performBundleAnalysis();
       // Analysis is already set in performBundleAnalysis
-      return this.analysis || { totalSize: 0, chunks: [], recommendations: [] };
+      return this.analysis || { totalSize: 0, gzipSize: 0, chunks: [], duplicates: [], unusedExports: [], optimizationSuggestions: [] };
     } finally {
       this.isAnalyzing = false;
     }

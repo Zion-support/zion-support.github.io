@@ -328,8 +328,8 @@ class AdvancedErrorRecovery {
     }
 
     // Force garbage collection if available
-    if ('gc' in window && typeof (window as Record<string, unknown>).gc === 'function') {
-      ((window as Record<string, unknown>).gc as () => void)();
+    if ('gc' in window && typeof (window as unknown as Record<string, unknown>).gc === 'function') {
+      ((window as unknown as Record<string, unknown>).gc as () => void)();
     }
 
     console.log('Memory cleanup performed');

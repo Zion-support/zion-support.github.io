@@ -32,8 +32,20 @@ export const createLazyComponent = <P extends object>(
       return <div style={{ minHeight: '200px' }} />;
     }
 
+    let fallbackElement: ReactNode = <ModernLoadingSpinner />;
+    
+    if (customFallback && typeof customFallback === 'object' && 'type' in customFallback) {
+      fallbackElement = customFallback as ReactNode;
+    } else if (fallback) {
+      if (typeof fallback === 'function') {
+        fallbackElement = (fallback as () => ReactNode)();
+      } else {
+        fallbackElement = fallback;
+      }
+    }
+    
     return (
-      <Suspense fallback={customFallback || (fallback as ReactNode) || <ModernLoadingSpinner />}>
+      <Suspense fallback={fallbackElement}>
         <LazyComponent {...(restProps as P)} ref={ref as React.Ref<P>} />
       </Suspense>
     );

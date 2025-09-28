@@ -50,7 +50,14 @@ export interface VisualizationOptions {
 export class AdvancedDataVisualization {
   private config: ChartConfig;
   private container: HTMLElement | null = null;
-  private charts: Map<string, { render: () => void; update: (data: DataPoint[]) => void; destroy: () => void }> = new Map();
+  private charts: Map<string, { 
+    render: () => void; 
+    update: (data: DataPoint[]) => void; 
+    destroy: () => void;
+    data?: ChartData;
+    options?: VisualizationOptions;
+    container?: HTMLElement;
+  }> = new Map();
   private dataStreams: Map<string, DataPoint[]> = new Map();
   private updateIntervals: Map<string, NodeJS.Timeout> = new Map();
 
@@ -77,7 +84,9 @@ export class AdvancedDataVisualization {
 
     this.container = container;
     this.charts.set(containerId, {
-      
+      render: () => {},
+      update: (data: DataPoint[]) => {},
+      destroy: () => {},
       data,
       options,
       container
@@ -96,7 +105,9 @@ export class AdvancedDataVisualization {
 
     this.container = container;
     this.charts.set(containerId, {
-      
+      render: () => {},
+      update: (data: DataPoint[]) => {},
+      destroy: () => {},
       data,
       options,
       container
@@ -115,7 +126,9 @@ export class AdvancedDataVisualization {
 
     this.container = container;
     this.charts.set(containerId, {
-      
+      render: () => {},
+      update: (data: DataPoint[]) => {},
+      destroy: () => {},
       data,
       options,
       container
@@ -134,7 +147,9 @@ export class AdvancedDataVisualization {
 
     this.container = container;
     this.charts.set(containerId, {
-      
+      render: () => {},
+      update: (data: DataPoint[]) => {},
+      destroy: () => {},
       data,
       options,
       container
@@ -153,7 +168,9 @@ export class AdvancedDataVisualization {
 
     this.container = container;
     this.charts.set(containerId, {
-      
+      render: () => {},
+      update: (data: DataPoint[]) => {},
+      destroy: () => {},
       data,
       options,
       container
