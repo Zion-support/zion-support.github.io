@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell } from 'recharts';
 
-const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', '#8884D8', '#82CA9D', '#FFC658', '#FF7C7C'];
-
 interface AnalyticsData {
   pageViews: number;
   uniqueVisitors: number;
@@ -20,6 +18,7 @@ interface AdvancedAnalyticsDashboardProps {
   onClose: () => void;
 }
 
+const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', '#8884D8'];
 
 export default function AdvancedAnalyticsDashboard({ isVisible, onClose }: AdvancedAnalyticsDashboardProps) {
   const [analyticsData, setAnalyticsData] = useState<AnalyticsData | null>(null);

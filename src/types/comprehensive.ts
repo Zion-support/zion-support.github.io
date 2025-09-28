@@ -154,6 +154,7 @@ export interface MonitoringMetrics {
   };
 }
 
+// Optimization Suggestion Types (duplicate removed - using the more comprehensive definition above)
 
 // Enhanced Performance Metrics
 export interface EnhancedPerformanceMetrics {
