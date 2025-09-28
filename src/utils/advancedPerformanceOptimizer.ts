@@ -32,7 +32,7 @@ class AdvancedPerformanceOptimizer {
   private observers: PerformanceObserver[] = [];
   private isInitialized = false;
 
-  constructor(config: Partial<OptimizationConfig> = {}) {
+  constructor() {
     this.config = {
       enableImageOptimization: true,
       enableCodeSplitting: true,
@@ -43,8 +43,7 @@ class AdvancedPerformanceOptimizer {
       enableServiceWorker: true,
       enableCriticalCSS: true,
       enableResourceHints: true,
-      enableBundleOptimization: true,
-      ...config
+      enableBundleOptimization: true
     };
     this.initializeStrategies();
   }
@@ -290,7 +289,6 @@ class AdvancedPerformanceOptimizer {
     };
   }
 
-  // Duplicate initialize method removed
 
   /**
    * Initialize performance monitoring
@@ -347,7 +345,6 @@ class AdvancedPerformanceOptimizer {
     }
   }
 
-  // Duplicate optimizeImages method removed
 
   /**
    * Initialize lazy loading for images and components
@@ -518,7 +515,7 @@ class AdvancedPerformanceOptimizer {
     const score = this.getPerformanceScore();
     const report = `
 Performance Report:
-====
+==================
 Score: ${score}/100
 FCP: ${this.metrics.fcp.toFixed(2)}ms
 LCP: ${this.metrics.lcp.toFixed(2)}ms
