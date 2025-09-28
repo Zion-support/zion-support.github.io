@@ -197,11 +197,7 @@ export default function App(): React.JSX.Element {
     
     // Initialize new enhancement utilities
     console.log('Initializing performance enhancements...');
-<<<<<<< HEAD
-    // performanceEnhancer.initialize(); // Private method, removing call
-=======
     // performanceEnhancer.initialize(); // Commented out due to private method
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a426
     performanceEnhancer.optimizeBundle();
     performanceEnhancer.preloadResource('/static/js/main.js', 'script');
     
