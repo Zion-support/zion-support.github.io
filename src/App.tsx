@@ -103,20 +103,19 @@ export default function App(): React.JSX.Element {
 
   // Track engagement function
   const trackEngagement = useCallback(() => {
-    const timeOnPage = Date.now() - engagementData.startTime;
-    seoAnalytics.trackUserEngagement(window.location.pathname, {
-      timeOnPage,
-      scrollDepth: engagementData.scrollDepth,
-      clicks: engagementData.clicks,
-    });
-  }, [engagementData]);
+    // TODO: Implement engagement tracking when analytics are properly set up
+    // const timeOnPage = Date.now() - engagementData.startTime;
+    // seoAnalytics.trackUserEngagement(window.location.pathname, {
+    //   timeOnPage,
+    //   scrollDepth: engagementData.scrollDepth,
+    //   clicks: engagementData.clicks,
+    // });
+  }, []);
 
   // Main initialization and cleanup effect
   React.useEffect(() => {
     // Track engagement on page unload
     window.addEventListener('beforeunload', trackEngagement);
-    window.addEventListener('scroll', handleScroll);
-    document.addEventListener('click', handleClick);
 
     // Mark app as fully initialized
     if (typeof window !== 'undefined' && window.performance && 
@@ -126,8 +125,8 @@ export default function App(): React.JSX.Element {
       performance.measure('app-initialization', 'app-init-start', 'app-init-complete');
     }
 
-    // Set default SEO data
-    seoManager.updateMetaTags(seoData);
+    // TODO: Set default SEO data when seoManager is properly implemented
+    // seoManager.updateMetaTags(seoData);
 
     // Basic performance monitoring
     if (typeof window !== 'undefined') {
@@ -137,10 +136,8 @@ export default function App(): React.JSX.Element {
     // Cleanup function
     return () => {
       window.removeEventListener('beforeunload', trackEngagement);
-      window.removeEventListener('scroll', handleScroll);
-      document.removeEventListener('click', handleClick);
     };
-  }, [trackEngagement, handleScroll, handleClick, seoData]);
+  }, [trackEngagement, seoData]);
 
   // Show loading screen while initializing
   if (isLoading) {
