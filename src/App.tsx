@@ -160,11 +160,7 @@ export default function App(): React.JSX.Element {
   //   ogImage: '/og-image.png',
   //   twitterCard: 'summary_large_image' as const
   // }), []);
-  const handleClick = useCallback((event?: Event) => {
-    // Handle click events for engagement tracking
-    console.debug('Click event captured for engagement tracking', event);
-  }, []);
-  const trackEngagement = useCallback(() => {}, []);
+  // handleClick and trackEngagement are already provided by useAppInitialization
 
   // Performance optimization hook - Temporarily disabled
   // usePerformanceOptimization({
@@ -174,8 +170,7 @@ export default function App(): React.JSX.Element {
   //   enableImageOptimization: true,
   // });
 
-  // Get current pathname for SEO
-  const currentPathname = typeof window !== 'undefined' ? window.location.pathname : '/';
+  // Get current pathname for SEO (already declared above)
 
   // Command palette commands
   const commandPaletteCommands = useMemo(() => [
