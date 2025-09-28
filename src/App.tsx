@@ -6,7 +6,7 @@ import PerformanceTracker from './components/PerformanceTracker';
 import { seoAnalytics, performanceSEO, seoManager } from './utils/seoEnhanced';
 import { analytics } from './utils/analytics';
 import { performanceOptimizer } from './utils/performanceOptimizations';
-import { accessibilityEnhancer } from './utils/advancedAccessibilityEnhancer';
+import { advancedAccessibilityEnhancer } from './utils/advancedAccessibilityEnhancer';
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
 import { useAppInitialization } from './hooks/useAppInitialization';
 import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
@@ -23,6 +23,9 @@ import { securityUtils } from './utils/securityUtils';
 import { enhancedSecurityManager } from './utils/enhancedSecurityManager';
 import { initializePerformanceEnhancements } from './utils/performanceEnhancements';
 import { initializeAccessibilityEnhancements } from './utils/accessibilityEnhancements';
+import { advancedPerformanceOptimizer } from './utils/advancedPerformanceOptimizer';
+import { advancedSEOOptimizer } from './utils/advancedSEOOptimizer';
+import { advancedAccessibilityEnhancer } from './utils/advancedAccessibilityEnhancer';
 import AdvancedAnalytics from './components/AdvancedAnalytics';
 import NotificationSystem, { Notification } from './components/NotificationSystem';
 import KeyboardShortcutsHelp from './components/KeyboardShortcutsHelp';
@@ -30,6 +33,7 @@ import CommandPalette from './components/CommandPalette';
 import RealTimePerformanceMonitor from './components/RealTimePerformanceMonitor';
 import SystemHealthDashboard from './components/SystemHealthDashboard';
 import PerformanceMetricsDashboard from './components/PerformanceMetricsDashboard';
+import ComprehensiveImprovements from './components/ComprehensiveImprovements';
 import './index.css';
 
 export default function App(): React.JSX.Element {
@@ -49,6 +53,7 @@ export default function App(): React.JSX.Element {
   const [showPerformanceMetrics, setShowPerformanceMetrics] = useState(false);
   const [showRealTimeMonitor, setShowRealTimeMonitor] = useState(false);
   const [showSystemHealth, setShowSystemHealth] = useState(false);
+  const [showComprehensiveImprovements, setShowComprehensiveImprovements] = useState(false);
 
   // Initialize app with custom configuration
   const { isLoading, loadingProgress, handleScroll, handleClick, trackEngagement: originalTrackEngagement } = useAppInitialization({
@@ -191,8 +196,8 @@ export default function App(): React.JSX.Element {
       analytics.initialize();
       
       // Initialize accessibility and security enhancers
-      if (accessibilityEnhancer && typeof accessibilityEnhancer.initialize === 'function') {
-        accessibilityEnhancer.initialize();
+      if (advancedAccessibilityEnhancer && typeof advancedAccessibilityEnhancer.initialize === 'function') {
+        advancedAccessibilityEnhancer.initialize();
       }
       if (enhancedSecurityManager && typeof enhancedSecurityManager.initialize === 'function') {
         enhancedSecurityManager.initialize();
@@ -202,11 +207,19 @@ export default function App(): React.JSX.Element {
       initializePerformanceEnhancements();
       initializeAccessibilityEnhancements();
       
+      // Initialize advanced optimizers
+      advancedPerformanceOptimizer.initialize();
+      advancedSEOOptimizer.initialize();
+      advancedAccessibilityEnhancer.initialize();
+      
       // Get comprehensive enhancements
       const enhancements = getComprehensiveEnhancements();
 
       // Store enhancements globally for debugging
       (window as unknown as Record<string, unknown>).enhancements = enhancements;
+      (window as unknown as Record<string, unknown>).performanceOptimizer = advancedPerformanceOptimizer;
+      (window as unknown as Record<string, unknown>).seoOptimizer = advancedSEOOptimizer;
+      (window as unknown as Record<string, unknown>).accessibilityEnhancer = advancedAccessibilityEnhancer;
     } catch (error) {
       console.error('Error initializing enhancements:', error);
     }
@@ -355,6 +368,9 @@ export default function App(): React.JSX.Element {
             break;
           case 'X':
             setShowPerformanceMetrics(!showPerformanceMetrics);
+            break;
+          case 'I':
+            setShowComprehensiveImprovements(!showComprehensiveImprovements);
             break;
           case 'N':
             // Show notification
@@ -618,6 +634,12 @@ export default function App(): React.JSX.Element {
           onClose={() => setShowPerformanceMetrics(false)}
         />
 
+        {/* Comprehensive Improvements Dashboard - Toggle with Ctrl+Shift+I */}
+        <ComprehensiveImprovements
+          isVisible={showComprehensiveImprovements}
+          onClose={() => setShowComprehensiveImprovements(false)}
+        />
+
         {/* New Components */}
         <NotificationSystem
           notifications={notifications}
@@ -680,6 +702,15 @@ export default function App(): React.JSX.Element {
           🏥
         </button>
 
+        {/* Comprehensive Improvements Button */}
+        <button
+          onClick={() => setShowComprehensiveImprovements(true)}
+          className="fixed bottom-4 right-84 z-40 bg-indigo-600 hover:bg-indigo-700 text-white p-3 rounded-full shadow-lg transition-colors duration-200"
+          title="Comprehensive Improvements (Ctrl+Shift+I)"
+        >
+          🚀
+        </button>
+
         {/* Keyboard Shortcuts Help Panel */}
         <div className="fixed bottom-4 left-4 z-40 bg-gray-800 text-white p-3 rounded-lg shadow-lg text-sm opacity-75 hover:opacity-100 transition-opacity duration-200">
           <div className="font-semibold mb-1">Keyboard Shortcuts:</div>
@@ -691,6 +722,7 @@ export default function App(): React.JSX.Element {
           <div>Ctrl+Shift+T: Toggle Theme</div>
           <div>Ctrl+Shift+R: Real-Time Monitor</div>
           <div>Ctrl+Shift+H: System Health</div>
+          <div>Ctrl+Shift+I: Comprehensive Improvements</div>
           <div>Ctrl+Shift+K: Keyboard Help</div>
           <div>Ctrl+K: Command Palette</div>
           <div>Escape: Close All</div>
