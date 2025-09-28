@@ -132,31 +132,6 @@ export const performanceEnhancements = {
     performanceEnhancements.optimizeFonts();
   },
 
-  // Get optimization suggestions
-  getSuggestions: () => {
-    return [
-      { title: 'Enable Service Worker', description: 'Improve caching and offline experience', impact: 'high' },
-      { title: 'Optimize Images', description: 'Use WebP format and lazy loading', impact: 'medium' },
-      { title: 'Preload Critical Resources', description: 'Reduce initial load time', impact: 'high' },
-      { title: 'Minimize JavaScript', description: 'Reduce bundle size', impact: 'medium' },
-      { title: 'Enable Compression', description: 'Use gzip compression', impact: 'low' }
-    ];
-  },
-
-  // Get performance score
-  getPerformanceScore: () => {
-    const metrics = performanceEnhancements.getMetrics();
-    if (!metrics) return 0;
-    
-    let score = 100;
-    if (metrics.fcp > 1800) score -= 20;
-    if (metrics.lcp > 2500) score -= 20;
-    if (metrics.fid > 100) score -= 20;
-    if (metrics.cls > 0.1) score -= 20;
-    if (metrics.load > 3000) score -= 20;
-    
-    return Math.max(0, score);
-  }
 };
 
 // Initialize performance enhancements
