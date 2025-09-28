@@ -213,7 +213,6 @@ export default function App(): React.JSX.Element {
       performance.mark('app-init-complete');
       performance.measure('app-initialization', 'app-init-start', 'app-init-complete');
     }
-  }, []);
 
     // Cleanup function
     return () => {
