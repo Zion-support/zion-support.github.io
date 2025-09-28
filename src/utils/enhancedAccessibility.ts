@@ -4,6 +4,15 @@
  */
 
 // Speech Recognition API types
+interface SpeechRecognition extends EventTarget {
+  continuous: boolean;
+  interimResults: boolean;
+  lang: string;
+  onresult: ((event: { results: Array<Array<{ transcript: string }>> }) => void) | null;
+  start(): void;
+  stop(): void;
+}
+
 interface SpeechRecognitionConstructor {
   new (): SpeechRecognition;
 }
@@ -602,6 +611,8 @@ class EnhancedAccessibilityManager {
    */
   private setupSpeechRecognition(): void {
     const SpeechRecognition = (window as ExtendedWindow).SpeechRecognition || (window as ExtendedWindow).webkitSpeechRecognition;
+    if (!SpeechRecognition) return;
+    
     const recognition = new SpeechRecognition();
     
     recognition.continuous = false;
