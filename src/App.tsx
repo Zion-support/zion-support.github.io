@@ -174,7 +174,20 @@ export default function App(): React.JSX.Element {
   const memoizedSeoData = useMemo(() => ({
     title: 'Zion Tech Group - Leading AI & Technology Solutions',
     description: 'Transform your business with cutting-edge AI solutions, advanced technology consulting, and innovative digital transformation services.',
+    keywords: 'AI solutions, technology consulting, digital transformation, machine learning, automation',
+    canonical: 'https://ziontechgroup.com',
+    ogType: 'website',
+    ogUrl: 'https://ziontechgroup.com',
+    ogImage: '/og-image.png',
+    twitterCard: 'summary_large_image'
+  }), []);
+
+  // SEO data for enhanced optimizer (expects keywords as array)
+  const enhancedSeoData = useMemo(() => ({
+    title: 'Zion Tech Group - Leading AI & Technology Solutions',
+    description: 'Transform your business with cutting-edge AI solutions, advanced technology consulting, and innovative digital transformation services.',
     keywords: ['AI solutions', 'technology consulting', 'digital transformation', 'machine learning', 'automation'],
+    canonical: 'https://ziontechgroup.com',
     ogType: 'website',
     ogUrl: 'https://ziontechgroup.com',
     ogImage: '/og-image.png',
@@ -236,15 +249,15 @@ export default function App(): React.JSX.Element {
       performanceSEO.optimizeCSS();
 
       // Set default SEO data using the correct method
-      seoManager.updateMetaTags(memoizedSeoData);
+      seoManager.updateSEO(enhancedSeoData);
 
       // Update meta tags
       updateMetaTags(memoizedSeoData);
 
       // Initialize enhancement systems
-      performanceOptimizer.optimizeBundle();
+      performanceOptimizer.optimizeBundleSize();
       enhancedAccessibilityManager.initialize();
-      enhancedSEOOptimizer.optimizePage(memoizedSeoData);
+      enhancedSEOOptimizer.updateSEO(enhancedSeoData);
 
       // Basic performance monitoring
       if (typeof window !== 'undefined') {
@@ -333,9 +346,9 @@ export default function App(): React.JSX.Element {
   return (
     <ErrorBoundary>
       <EnhancedErrorBoundary>
-        <SEOOptimizer />
+        <SEOOptimizer seoData={memoizedSeoData} />
         <PerformanceTracker />
-        <WebsiteEnhancements />
+        <WebsiteEnhancements isVisible={false} onClose={() => {}} />
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <AppRouter />
         
@@ -372,7 +385,9 @@ export default function App(): React.JSX.Element {
                   ✕
                 </button>
               </div>
-              <PerformanceOptimizer />
+              <PerformanceOptimizer>
+                <div>Performance optimization content</div>
+              </PerformanceOptimizer>
             </div>
           </div>
         )}
@@ -414,7 +429,7 @@ export default function App(): React.JSX.Element {
                   ✕
                 </button>
               </div>
-              <SEOOptimizer />
+              <SEOOptimizer seoData={memoizedSeoData} />
             </div>
           </div>
         )}
@@ -476,7 +491,10 @@ export default function App(): React.JSX.Element {
         </div>
 
         {/* Enhanced Notification System */}
-        <EnhancedNotificationSystem />
+        <EnhancedNotificationSystem 
+          notifications={[]} 
+          onRemove={() => {}} 
+        />
 
         {/* System Monitoring Dashboard */}
         <SystemMonitoringDashboard />
