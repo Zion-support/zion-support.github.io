@@ -19,6 +19,7 @@ interface ErrorReport {
   message: string;
   severity: string;
   lastOccurrence: string;
+  occurrenceCount?: number;
   context: {
     component?: string;
     action?: string;

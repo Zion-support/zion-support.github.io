@@ -32,6 +32,11 @@ interface ErrorData {
   context?: Record<string, unknown>;
 }
 
+interface LayoutShift extends PerformanceEntry {
+  hadRecentInput: boolean;
+  value: number;
+}
+
 interface PerformanceData {
   name: string;
   value: number;
