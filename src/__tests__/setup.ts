@@ -5,9 +5,8 @@ import '@testing-library/jest-dom';
 global.fetch = jest.fn();
 
 // Mock window.location to prevent navigation errors
-// Delete and recreate to avoid JSDOM navigation issues
-delete (window as unknown as { location: Location }).location;
-(window as unknown as { location: Location }).location = {
+// Create mock location object
+const mockLocation = {
   pathname: '/',
   href: 'http://localhost:3000/',
   assign: jest.fn(),
