@@ -35,12 +35,9 @@ export default function App(): React.JSX.Element {
     enableCaching: true,
   });
 
-<<<<<<< HEAD
-=======
   // Get current pathname for SEO (currently unused but kept for future use)
   // const currentPathname = typeof window !== 'undefined' ? window.location.pathname : '/';
 
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-bd16
   // Performance optimization hook
   const { preloadResource } = usePerformanceOptimization({
     enablePreloading: true,
