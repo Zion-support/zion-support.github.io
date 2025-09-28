@@ -21,7 +21,6 @@ interface AIInsights {
     category: string;
     trend: 'increasing' | 'decreasing' | 'stable';
   }>;
-  [key: string]: unknown;
 }
 
 interface ErrorReport {
