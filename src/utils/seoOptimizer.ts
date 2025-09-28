@@ -163,7 +163,7 @@ class SEOOptimizer {
   /**
    * Generate and update structured data
    */
-  private generateStructuredData(data: SEOData): void {
+  private generateStructuredData(_data: SEOData): void {
     if (!this.config.enableStructuredData) return;
 
     const structuredData = {

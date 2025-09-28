@@ -110,7 +110,7 @@ const CommandPalette: React.FC<CommandPaletteProps> = ({ isVisible, onClose, com
         <div className="max-h-80 overflow-y-auto">
           {filteredCommands.length === 0 ? (
             <div className="p-4 text-center text-gray-500">
-              <p>No commands found for "{query}"</p>
+              <p>No commands found for &quot;{query}&quot;</p>
             </div>
           ) : (
             <div className="py-2">
