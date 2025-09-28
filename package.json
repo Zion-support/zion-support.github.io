@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "build:no-check": "vite build --mode production",
+    "build:no-check": "vite build",
     "preview": "vite preview",
     "lint": "eslint . --report-unused-disable-directives --max-warnings 120",
     "lint:fix": "eslint . --fix",
@@ -26,7 +26,7 @@
     "build:optimized": "vite build --mode production --minify terser",
     "build:minimal": "vite build --mode production --minify terser --sourcemap false",
     "prebuild": "pnpm type-check && pnpm lint",
-    "postbuild": "echo 'Build completed successfully'",
+    "postbuild": "if [ \"$CI\" != \"true\" ]; then pnpm analyze; fi",
     "optimize": "pnpm build:optimized && pnpm analyze",
     "deploy": "pnpm build:minimal && echo 'Ready for deployment'"
   },
