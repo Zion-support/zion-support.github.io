@@ -139,9 +139,9 @@ export class EnhancedPerformanceMonitor {
   private recordNavigationMetrics(entry: PerformanceNavigationTiming): void {
     const metrics = [
       { name: 'TTFB', value: entry.responseStart - entry.requestStart, category: 'navigation' as const },
-      { name: 'DOMContentLoaded', value: entry.domContentLoadedEventEnd - entry.navigationStart, category: 'navigation' as const },
-      { name: 'LoadComplete', value: entry.loadEventEnd - entry.navigationStart, category: 'navigation' as const },
-      { name: 'FirstByte', value: entry.responseStart - entry.navigationStart, category: 'navigation' as const },
+      { name: 'DOMContentLoaded', value: entry.domContentLoadedEventEnd, category: 'navigation' as const },
+      { name: 'LoadComplete', value: entry.loadEventEnd, category: 'navigation' as const },
+      { name: 'FirstByte', value: entry.responseStart, category: 'navigation' as const },
       { name: 'DNS', value: entry.domainLookupEnd - entry.domainLookupStart, category: 'navigation' as const },
       { name: 'TCP', value: entry.connectEnd - entry.connectStart, category: 'navigation' as const },
       { name: 'SSL', value: entry.secureConnectionStart ? entry.connectEnd - entry.secureConnectionStart : 0, category: 'navigation' as const }
