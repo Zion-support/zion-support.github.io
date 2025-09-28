@@ -13,7 +13,7 @@ import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import AIPerformanceDashboard from './components/AIPerformanceDashboard';
-import { SEOOptimizer } from './components/SEOOptimizer';
+import { SEOOptimizer, useSEOData } from './components/SEOOptimizer';
 import EnhancedAnalytics from './components/EnhancedAnalytics';
 import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
 import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
@@ -30,6 +30,9 @@ export default function App(): React.JSX.Element {
   const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
   const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
   const [showAIDashboard, setShowAIDashboard] = useState(false);
+
+  // Get current pathname for SEO data
+  const currentPathname = typeof window !== 'undefined' ? window.location.pathname : '/';
 
   // Engagement tracking data
   const engagementData = useMemo(() => ({
@@ -69,6 +72,7 @@ export default function App(): React.JSX.Element {
     if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'M') {
       event.preventDefault();
       setShowPerformanceMonitor(prev => !prev);
+      setShowSystemDashboard((prev: boolean) => !prev);
     }
     if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'A') {
       event.preventDefault();
@@ -114,17 +118,6 @@ export default function App(): React.JSX.Element {
     }
   }, []);
 
-  // Memoize the SEO data to prevent unnecessary re-renders
-  const seoData = useMemo(() => ({
-    title: 'Zion Tech Group - Leading AI & Technology Solutions',
-    description: 'Cutting-edge AI, quantum computing, and digital transformation solutions for modern enterprises. Expert consulting, cloud services, and innovative technology implementations.',
-    keywords: ['AI solutions', 'quantum computing', 'digital transformation', 'cloud services', 'enterprise technology', 'machine learning', 'automation', 'blockchain'],
-    ogType: 'website',
-    ogUrl: typeof window !== 'undefined' ? window.location.href : '',
-    ogImage: '/og-image.png',
-    twitterCard: 'summary_large_image' as const
-  }), []);
-
   // Simple SEO manager
   const seoManager = useMemo(() => ({
     updateMetaTags: (data: typeof seoData) => {
@@ -137,6 +130,9 @@ export default function App(): React.JSX.Element {
       // Initialize SEO manager
     }
   }), [updateMetaTags]);
+
+  // Memoize the SEO data to prevent unnecessary re-renders
+  const seoData = useSEOData(currentPathname);
 
   // Initialize comprehensive enhancements
   useEffect(() => {
@@ -215,6 +211,25 @@ export default function App(): React.JSX.Element {
     };
   }, [handleScroll, handleClick, handleKeyDown, seoData, preloadResource, updateMetaTags, enhancedTrackEngagement, seoManager]);
 
+  // Track engagement on scroll and click
+  useEffect(() => {
+    const handleScrollTrack = () => {
+      engagementData.scrollDepth = Math.max(engagementData.scrollDepth, window.scrollY / (document.body.scrollHeight - window.innerHeight));
+    };
+
+    const handleClickTrack = () => {
+      engagementData.clicks++;
+    };
+
+    window.addEventListener('scroll', handleScrollTrack, { passive: true });
+    document.addEventListener('click', handleClickTrack, { passive: true });
+
+    return () => {
+      window.removeEventListener('scroll', handleScrollTrack);
+      document.removeEventListener('click', handleClickTrack);
+    };
+  }, [engagementData]);
+
   if (isLoading) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -272,23 +287,11 @@ export default function App(): React.JSX.Element {
           </div>
         )}
 
-        {/* Performance Monitor */}
-        {showPerformanceMonitor && (
-          <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
-            <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
-              <div className="flex justify-between items-center mb-4">
-                <h2 className="text-2xl font-bold text-gray-900">Performance Monitor</h2>
-                <button
-                  onClick={() => setShowPerformanceMonitor(false)}
-                  className="text-gray-500 hover:text-gray-700"
-                >
-                  ✕
-                </button>
-              </div>
-              <PerformanceMonitor />
-            </div>
-          </div>
-        )}
+        {/* Performance Monitor - Toggle with Ctrl+Shift+M */}
+        <PerformanceMonitor 
+          showDashboard={showPerformanceMonitor}
+          onClose={() => setShowPerformanceMonitor(false)}
+        />
         
         {/* AI Performance Dashboard - Toggle with Ctrl+Shift+A */}
         <AIPerformanceDashboard
