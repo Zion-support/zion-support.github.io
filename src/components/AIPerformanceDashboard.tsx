@@ -37,12 +37,6 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
   const [errorReports, setErrorReports] = useState<ErrorReport[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => {
-    if (isVisible) {
-      loadPerformanceData();
-    }
-  }, [isVisible, loadPerformanceData]);
-
   const loadPerformanceData = useCallback(async () => {
     setIsLoading(true);
     try {
