@@ -6,7 +6,7 @@ global.fetch = jest.fn();
 
 // Mock window.location to prevent navigation errors
 // Use a global mock that can be updated
-(global as any).mockLocation = {
+(global as unknown as { mockLocation: Partial<Location> }).mockLocation = {
   pathname: '/',
   href: 'http://localhost:3000/',
   assign: jest.fn(),
@@ -22,7 +22,7 @@ global.fetch = jest.fn();
 };
 
 // Mock window.location using a simple assignment
-(window as any).location = (global as any).mockLocation;
+(window as unknown as { location: Partial<Location> }).location = (global as unknown as { mockLocation: Partial<Location> }).mockLocation;
 
 // Mock window.history
 Object.defineProperty(window, 'history', {
