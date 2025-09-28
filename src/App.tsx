@@ -7,7 +7,7 @@ import { seoAnalytics, performanceSEO, seoManager } from './utils/seoEnhanced';
 import { analytics } from './utils/analytics';
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
 import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
-import PerformanceOptimizer from './components/PerformanceOptimizer';
+import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import AIPerformanceDashboard from './components/AIPerformanceDashboard';
 import SEOOptimizer from './components/SEOOptimizer';
