@@ -15,7 +15,7 @@ import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import AIPerformanceDashboard from './components/AIPerformanceDashboard';
-import AdvancedPerformanceDashboard from './components/AdvancedPerformanceDashboard';
+// import AdvancedPerformanceDashboard from './components/AdvancedPerformanceDashboard';
 import WebsiteEnhancements from './components/WebsiteEnhancements';
 import { SEOOptimizer } from './components/SEOOptimizer';
 // import EnhancedAnalytics from './components/EnhancedAnalytics';
@@ -40,13 +40,12 @@ import SystemHealthDashboard from './components/SystemHealthDashboard';
 import './index.css';
 
 export default function App(): React.JSX.Element {
-
   // State for system dashboard and performance optimizer
   const [showSystemDashboard, setShowSystemDashboard] = useState(false);
   const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
   const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
   const [showAIDashboard, setShowAIDashboard] = useState(false);
-  const [showAdvancedDashboard, setShowAdvancedDashboard] = useState(false);
+  const [showAdvancedDashboard] = useState(false);
   const [showSEOOptimizer, setShowSEOOptimizer] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [showKeyboardHelp, setShowKeyboardHelp] = useState(false);
@@ -194,13 +193,8 @@ export default function App(): React.JSX.Element {
     ogImage: 'https://zion.app/og-image.jpg',
     ogUrl: `https://zion.app${currentPathname}`,
     ogType: 'website' as const,
-    ogTitle: 'Zion Tech Group - AI & Technology Solutions',
-    ogDescription: 'Transform your business with cutting-edge AI and technology solutions.',
     twitterCard: 'summary_large_image' as const,
-    siteName: 'Zion Tech Group',
-    twitterTitle: 'Zion Tech Group - AI & Technology Solutions',
-    twitterDescription: 'Transform your business with cutting-edge AI and technology solutions.',
-    twitterImage: 'https://zion.app/twitter-image.jpg'
+    siteName: 'Zion Tech Group'
   }), [currentPathname]);
 
   // Performance optimization hook (for future use)
@@ -228,11 +222,6 @@ export default function App(): React.JSX.Element {
       if (accessibilityEnhancer && typeof accessibilityEnhancer.initialize === 'function') {
         accessibilityEnhancer.initialize();
       }
-      enhancedSecurityManager.initialize();
-      // new AdvancedAutomationSystem().initialize();
-      // Initialize enhancement systems
-      // new AccessibilityEnhancer();
-      // new SecurityEnhancer();
       
       // Initialize analytics
       if ('initialize' in analytics) {
@@ -348,7 +337,7 @@ export default function App(): React.JSX.Element {
     }
     
     // Initialize advanced utilities
-    const initializeUtilities = async () => {
+    const initializeUtilities = () => {
       try {
         // performanceOptimizer is already initialized in constructor
         // await seoEnhancer.initialize();
@@ -588,10 +577,10 @@ export default function App(): React.JSX.Element {
         />
 
         {/* Advanced Performance Dashboard */}
-        <AIPerformanceDashboard
+        {/* <AdvancedPerformanceDashboard
           isVisible={showAdvancedDashboard}
           onClose={() => setShowAdvancedDashboard(false)}
-        />
+        /> */}
 
         {/* Real-time Metrics */}
         {showRealTimeMetrics && (
@@ -658,7 +647,7 @@ export default function App(): React.JSX.Element {
             <div className="space-y-2 text-sm">
               <div className="flex justify-between">
                 <span>Memory Usage:</span>
-                <span className="text-green-400">{Math.round(((performance as Performance & { memory?: { usedJSHeapSize?: number } }).memory?.usedJSHeapSize || 0) / 1024 / 1024)} MB</span>
+                <span className="text-green-400">{Math.round(((performance as Performance & { memory?: { usedJSHeapSize: number } }).memory?.usedJSHeapSize || 0) / 1024 / 1024)} MB</span>
               </div>
               <div className="flex justify-between">
                 <span>Render Time:</span>

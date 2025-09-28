@@ -24,16 +24,6 @@ interface AIInsights {
   [key: string]: unknown;
 }
 
-interface AIInsights {
-  predictedHighRiskActions: string[];
-  recommendedImprovements: string[];
-  errorTrends: Array<{
-    category: string;
-    trend: 'increasing' | 'decreasing' | 'stable';
-  }>;
-  [key: string]: unknown;
-}
-
 interface ErrorReport {
   id: string;
   severity: string;
@@ -50,7 +40,7 @@ interface ErrorReport {
   [key: string]: unknown;
 }
 
-interface AIInsightsData {
+interface AIInsights {
   predictedHighRiskActions: string[];
   recommendedImprovements: string[];
   errorTrends: Array<{ category: string; trend: string }>;
@@ -58,7 +48,7 @@ interface AIInsightsData {
 
 const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisible, onClose }) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-  const [insights, setInsights] = useState<AIInsightsData | null>(null);
+  const [insights, setInsights] = useState<AIInsights | null>(null);
   const [errors, setErrors] = useState<ErrorReport[]>([]);
   const [isLoading, setIsLoading] = useState(false);
 
@@ -268,34 +258,29 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
                               <span className={`px-2 py-1 rounded text-xs font-medium ${getSeverityColor(report.severity)}`}>
                                 {report.severity.toUpperCase()}
                               </span>
-                              {report.aiPredictedImpact && (
-                                <span className={`text-sm font-medium ${getImpactColor(report.aiPredictedImpact)}`}>
-                                  Impact: {report.aiPredictedImpact}%
-                                </span>
-                              )}
                               <span className="text-sm text-gray-500">
                                 {report.occurrenceCount} occurrences
                               </span>
                             </div>
-                            <div className="mt-2">
-                              <p className="text-gray-900 font-medium">{report.message}</p>
-                              <p className="text-sm text-gray-600 mt-1">
-                                Component: {report.context.component} | Action: {report.context.action}
-                              </p>
-                              {report.resolutionSuggestions && (
-                                <div className="mt-2">
-                                  <p className="text-sm font-medium text-gray-700 mb-1">AI Suggestions:</p>
-                                  <ul className="text-sm text-gray-600 space-y-1">
-                                    {report.resolutionSuggestions.map((suggestion, index) => (
-                                      <li key={index} className="flex items-start gap-1">
-                                        <span>•</span>
-                                        <span>{suggestion}</span>
-                                      </li>
-                                    ))}
-                                  </ul>
-                                </div>
-                              )}
-                            </div>
+                          </div>
+                          <div className="mt-2">
+                            <p className="text-gray-900 font-medium">{report.message}</p>
+                            <p className="text-sm text-gray-600 mt-1">
+                              Component: {report.context.component} | Action: {report.context.action}
+                            </p>
+                            {report.resolutionSuggestions && (
+                              <div className="mt-2">
+                                <p className="text-sm font-medium text-gray-700 mb-1">AI Suggestions:</p>
+                                <ul className="text-sm text-gray-600 space-y-1">
+                                  {report.resolutionSuggestions.map((suggestion, index) => (
+                                    <li key={index} className="flex items-start gap-1">
+                                      <span>•</span>
+                                      <span>{suggestion}</span>
+                                    </li>
+                                  ))}
+                                </ul>
+                              </div>
+                            )}
                           </div>
                         </div>
                       </div>
