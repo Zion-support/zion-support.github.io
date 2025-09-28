@@ -25,7 +25,14 @@ interface ErrorReport {
   };
   aiPredictedImpact?: number;
   resolutionSuggestions?: string[];
+  severity?: string;
   [key: string]: unknown;
+}
+
+interface AIInsights {
+  predictedHighRiskActions: string[];
+  recommendedImprovements: string[];
+  errorTrends: Array<{ category: string; trend: string }>;
 }
 
 const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisible, onClose }) => {
@@ -119,8 +126,9 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
     }
   }, [isVisible, loadPerformanceData]);
 
-  const getSeverityColor = (severity: string) => {
-    switch (severity) {
+  const getSeverityColor = (severity: unknown) => {
+    const severityStr = String(severity);
+    switch (severityStr) {
       case 'critical': return 'text-red-600 bg-red-100';
       case 'high': return 'text-orange-600 bg-orange-100';
       case 'medium': return 'text-yellow-600 bg-yellow-100';
@@ -242,7 +250,7 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
                         <div className="flex justify-between items-start mb-2">
                           <div className="flex items-center space-x-2">
                             <span className={`px-2 py-1 rounded text-xs font-medium ${getSeverityColor(report.severity)}`}>
-                              {report.severity.toUpperCase()}
+                              {String(report.severity).toUpperCase()}
                             </span>
                             {report.aiPredictedImpact && (
                               <span className={`text-sm font-medium ${getImpactColor(report.aiPredictedImpact)}`}>
