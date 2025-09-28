@@ -24,26 +24,6 @@ export default function App(): React.JSX.Element {
   // State for performance optimizer
   const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
 
-  // Engagement tracking data
-  const engagementData = useMemo(() => ({
-    startTime: Date.now(),
-    scrollDepth: 0,
-    clicks: 0
-  }), []);
-
-  // Scroll handler
-  const handleScroll = useCallback(() => {
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-    const scrollPercent = (scrollTop / docHeight) * 100;
-    engagementData.scrollDepth = Math.max(engagementData.scrollDepth, scrollPercent);
-  }, [engagementData]);
-
-  // Click handler
-  const handleClick = useCallback(() => {
-    engagementData.clicks += 1;
-  }, [engagementData]);
-
   // Initialize app with custom configuration
   const { isLoading, loadingProgress } = useAppInitialization({
     enablePerformanceMonitoring: true,
@@ -76,16 +56,6 @@ export default function App(): React.JSX.Element {
     ogImage: '/og-image.png',
     twitterCard: 'summary_large_image' as const
   }), []);
-
-  // Track engagement function
-  const trackEngagement = useCallback(() => {
-    const timeOnPage = Date.now() - engagementData.startTime;
-    console.log('User engagement:', {
-      timeOnPage,
-      scrollDepth: engagementData.scrollDepth,
-      clicks: engagementData.clicks,
-    });
-  }, [engagementData]);
 
   useEffect(() => {
     // Initialize error reporting
