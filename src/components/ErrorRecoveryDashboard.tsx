@@ -60,7 +60,7 @@ export const ErrorRecoveryDashboard: React.FC = () => {
     }
   };
 
-  const groupedReports = errorReports.reduce((groups, report) => {
+  const groupedReports = errorReports.reduce((groups: Record<string, ErrorReport[]>, report: ErrorReport) => {
     const key = report.context.category;
     if (!groups[key]) {
       groups[key] = [];
@@ -70,9 +70,9 @@ export const ErrorRecoveryDashboard: React.FC = () => {
   }, {} as Record<string, ErrorReport[]>);
 
   const totalErrors = errorReports.length;
-  const pendingErrors = errorReports.filter(r => r.status === 'pending').length;
-  const recoveredErrors = errorReports.filter(r => r.status === 'recovered').length;
-  const failedErrors = errorReports.filter(r => r.status === 'failed').length;
+  const pendingErrors = errorReports.filter((r: ErrorReport) => r.status === 'pending').length;
+  const recoveredErrors = errorReports.filter((r: ErrorReport) => r.status === 'recovered').length;
+  const failedErrors = errorReports.filter((r: ErrorReport) => r.status === 'failed').length;
 
   if (!isVisible) {
     return (
@@ -131,11 +131,11 @@ export const ErrorRecoveryDashboard: React.FC = () => {
                       <span className="mr-2">{getCategoryIcon(category as any)}</span>
                       <span className="font-medium capitalize">{category}</span>
                     </div>
-                    <span className="text-sm text-gray-500">{reports.length} errors</span>
+                    <span className="text-sm text-gray-500">{(reports as ErrorReport[]).length} errors</span>
                   </div>
                   
                   <div className="space-y-2">
-                    {reports.slice(0, 3).map((report) => (
+                    {(reports as ErrorReport[]).slice(0, 3).map((report: ErrorReport) => (
                       <div
                         key={report.id}
                         className={`p-2 rounded cursor-pointer transition-colors ${
@@ -158,9 +158,9 @@ export const ErrorRecoveryDashboard: React.FC = () => {
                       </div>
                     ))}
                     
-                    {reports.length > 3 && (
+                    {(reports as ErrorReport[]).length > 3 && (
                       <div className="text-xs text-gray-500 text-center">
-                        +{reports.length - 3} more errors
+                        +{(reports as ErrorReport[]).length - 3} more errors
                       </div>
                     )}
                   </div>
