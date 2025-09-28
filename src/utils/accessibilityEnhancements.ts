@@ -205,6 +205,24 @@ export class AccessibilityEnhancements {
   public clearIssues(): void {
     this.issues.clear();
   }
+
+  public getAccessibilityScore(): number {
+    const issues = this.getIssues();
+    const totalIssues = issues.length;
+    
+    if (totalIssues === 0) return 100;
+    
+    // Calculate score based on issues
+    const errorCount = issues.filter(issue => issue.type === 'error').length;
+    const warningCount = issues.filter(issue => issue.type === 'warning').length;
+    const infoCount = issues.filter(issue => issue.type === 'info').length;
+    
+    // Weight errors more heavily
+    const penalty = (errorCount * 10) + (warningCount * 5) + (infoCount * 2);
+    const score = Math.max(0, 100 - penalty);
+    
+    return Math.round(score);
+  }
 }
 
 // Export singleton instance
