@@ -245,22 +245,4 @@ export interface ErrorRecoveryStrategy {
   fallbackAction?: () => void;
 }
 
-// Additional missing types
-export interface PerformanceMetrics {
-  lcp?: number;
-  fcp?: number;
-  fid?: number;
-  cls?: number;
-  ttfb?: number;
-  memory?: {
-    used: number;
-    total: number;
-    limit?: number;
-  };
-  domContentLoaded?: number;
-  domInteractive?: number;
-  violations: string[];
-}
-
-
-// All types are already exported as interfaces above
+// All types are already exported above
