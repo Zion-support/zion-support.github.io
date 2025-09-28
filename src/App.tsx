@@ -12,6 +12,7 @@ import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import { initializeErrorReporting } from './utils/errorReporting';
 import { advancedPerformanceOptimizer } from './utils/performanceOptimizer';
 import { seoOptimizer } from './utils/seoOptimization';
+import { enhancedErrorHandler } from './utils/enhancedErrorHandling';
 import './index.css';
 import './styles/notifications.css';
 import './styles/system-metrics.css';
@@ -60,6 +61,13 @@ export default function App(): React.JSX.Element {
   useEffect(() => {
     // Initialize error reporting
     initializeErrorReporting();
+    
+    // Initialize enhanced error handling
+    try {
+      enhancedErrorHandler.setUserId('anonymous'); // In a real app, you'd get this from auth
+    } catch (error) {
+      console.warn('Failed to initialize enhanced error handler:', error);
+    }
     
     // Add performance marks for better monitoring
     if (typeof window !== 'undefined' && window.performance && typeof performance.mark === 'function') {
