@@ -89,6 +89,49 @@ export default function App(): React.JSX.Element {
     setEnhancedNotifications(prev => prev.filter(n => n.id !== id));
   }, []);
 
+  // Initialize app with custom configuration
+  const { isLoading, loadingProgress, handleScroll, handleClick, trackEngagement: originalTrackEngagement } = useAppInitialization({
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSecurity: true,
+    enableAnalytics: true,
+    enableNotifications: true,
+    enableCaching: true,
+  });
+
+  // Get current pathname for SEO
+  const currentPathname = typeof window !== 'undefined' ? window.location.pathname : '/';
+  const seoData = useSEOData(currentPathname);
+
+  // Performance optimization hook
+  const { preloadResource } = usePerformanceOptimization({
+    enablePreloading: true,
+    enableResourceHints: true,
+    enableImageOptimization: true,
+  });
+
+  // Initialize comprehensive enhancements
+  useEffect(() => {
+    try {
+      // Initialize enhanced systems
+      enhancedPerformanceMonitor.startMonitoring();
+      enhancedAnalytics.initialize();
+      advancedCacheSystem.initialize();
+      
+      // Initialize accessibility and security enhancers
+      AccessibilityEnhancer.getInstance();
+      SecurityEnhancer.getInstance();
+      
+      // Get comprehensive enhancements
+      const enhancements = getComprehensiveEnhancements();
+
+      // Store enhancements globally for debugging
+      (window as unknown as Record<string, unknown>).enhancements = enhancements;
+    } catch (error) {
+      console.error('Error initializing enhancements:', error);
+    }
+  }, []);
+
   // Performance metrics state
   const [performanceMetrics, setPerformanceMetrics] = useState({
     memoryUsage: 0,
@@ -359,7 +402,17 @@ export default function App(): React.JSX.Element {
           </Suspense>
         )}
 
-        {/* Performance Optimizer */}
+        {/* AI Performance Dashboard - Toggle with Ctrl+Shift+A */}
+        {showAIDashboard && (
+          <Suspense fallback={<div>Loading...</div>}>
+            <AIPerformanceDashboard
+              isVisible={showAIDashboard}
+              onClose={() => setShowAIDashboard(false)}
+            />
+          </Suspense>
+        )}
+        
+        {/* Performance Optimizer - Toggle with Ctrl+Shift+P */}
         {showPerformanceOptimizer && (
           <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
             <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
@@ -372,7 +425,11 @@ export default function App(): React.JSX.Element {
                   ✕
                 </button>
               </div>
-              <PerformanceOptimizer />
+              <PerformanceOptimizer>
+                <div className="text-center py-8">
+                  <p className="text-gray-600">Performance optimization tools are being loaded...</p>
+                </div>
+              </PerformanceOptimizer>
             </div>
           </div>
         )}
@@ -390,7 +447,38 @@ export default function App(): React.JSX.Element {
                   ✕
                 </button>
               </div>
-              <PerformanceMonitor />
+              <PerformanceOptimizer>
+                <div className="text-center py-8">
+                  <p className="text-gray-600">Performance optimization tools are being loaded...</p>
+                </div>
+              </PerformanceOptimizer>
+            </div>
+          </div>
+        )}
+
+        {/* Comprehensive Improvements - Toggle with Ctrl+Shift+I */}
+        {showComprehensiveImprovements && (
+          <Suspense fallback={<div>Loading...</div>}>
+            <ComprehensiveImprovements
+              isVisible={showComprehensiveImprovements}
+              onClose={() => setShowComprehensiveImprovements(false)}
+            />
+          </Suspense>
+        )}
+
+        {/* Performance Monitor - Toggle with Ctrl+Shift+M */}
+        <PerformanceMonitor 
+          showDashboard={showPerformanceMonitor}
+          onMetricsUpdate={(metrics) => {
+            console.log('Performance metrics:', metrics);
+          }}
+        />
+
+        {/* System Status Indicator */}
+        {showSystemStatus && (
+          <div className="fixed top-4 right-4 z-40">
+            <div className="bg-green-500 text-white px-3 py-1 rounded-full text-xs font-medium">
+              System Online
             </div>
           </div>
         )}
