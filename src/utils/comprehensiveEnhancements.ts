@@ -28,6 +28,9 @@ export interface PerformanceMetrics {
   ttfb: number;
   memoryUsage: number;
   bundleSize: number;
+  loadTime: number;
+  renderTime: number;
+  fps: number;
 }
 
 export interface SecurityMetrics {
@@ -35,6 +38,9 @@ export interface SecurityMetrics {
   vulnerabilitiesFixed: number;
   cspViolations: number;
   xssAttempts: number;
+  xssProtection: boolean;
+  csrfProtection: boolean;
+  cspEnabled: boolean;
 }
 
 export interface AccessibilityMetrics {
@@ -42,6 +48,8 @@ export interface AccessibilityMetrics {
   keyboardNavigationScore: number;
   screenReaderScore: number;
   colorContrastScore: number;
+  keyboardNavigation: boolean;
+  screenReaderSupport: boolean;
 }
 
 export interface SEOMetrics {
@@ -49,6 +57,9 @@ export interface SEOMetrics {
   structuredDataScore: number;
   pageSpeedScore: number;
   mobileFriendlinessScore: number;
+  metaTags: boolean;
+  structuredData: boolean;
+  sitemap: boolean;
 }
 
 export interface UXMetrics {
@@ -56,6 +67,8 @@ export interface UXMetrics {
   bounceRate: number;
   taskCompletionRate: number;
   userSatisfactionScore: number;
+  userSatisfaction: number;
+  errorRate: number;
 }
 
 class ComprehensiveEnhancements {
@@ -880,7 +893,7 @@ This report provides a comprehensive overview of the current state of enhancemen
 }
 
 // Export a singleton instance
-export const comprehensiveEnhancer = new ComprehensiveEnhancer();
+export const comprehensiveEnhancer = new ComprehensiveEnhancements();
 
 // Export function to get comprehensive enhancements
 export function getComprehensiveEnhancements() {
