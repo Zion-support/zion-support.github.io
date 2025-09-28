@@ -9,7 +9,11 @@ import {
   ChevronRight,
   Play,
   Pause,
-  RotateCcw
+  RotateCcw,
+  Users,
+  Award,
+  TrendingUp,
+  Clock
 } from 'lucide-react';
 
 interface Feature {
@@ -163,6 +167,21 @@ const ModernFeatures: React.FC = () => {
     { icon: <Clock className="w-6 h-6" />, value: "24/7", label: "Support" }
   ];
 
+  // Use stats in the component
+  const renderStats = () => (
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+      {stats.map((stat, index) => (
+        <div key={index} className="text-center">
+          <div className="flex justify-center mb-2">
+            {stat.icon}
+          </div>
+          <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
+          <div className="text-sm text-gray-300">{stat.label}</div>
+        </div>
+      ))}
+    </div>
+  );
+
   useEffect(() => {
     if (!isAutoPlaying) return;
 
@@ -203,6 +222,9 @@ const ModernFeatures: React.FC = () => {
             accelerate your digital transformation and drive business growth.
           </p>
         </div>
+
+        {/* Stats */}
+        {renderStats()}
 
         {/* Controls */}
         <div className="flex justify-center items-center space-x-4 mb-12">
