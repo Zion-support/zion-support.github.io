@@ -28,12 +28,13 @@ export const PerformanceDashboard: React.FC = () => {
     const collectMetrics = () => {
       // Collect Web Vitals
       if ('web-vitals' in window) {
-        import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-          getCLS((metric) => setMetrics(prev => ({ ...prev, cumulativeLayoutShift: metric.value })));
-          getFID((metric) => setMetrics(prev => ({ ...prev, firstInputDelay: metric.value })));
-          getFCP((metric) => setMetrics(prev => ({ ...prev, firstContentfulPaint: metric.value })));
-          getLCP((metric) => setMetrics(prev => ({ ...prev, largestContentfulPaint: metric.value })));
-          getTTFB((metric) => setMetrics(prev => ({ ...prev, loadTime: metric.value })));
+        import('web-vitals').then((webVitals) => {
+          webVitals.onCLS((metric: any) => setMetrics(prev => ({ ...prev, cumulativeLayoutShift: metric.value })));
+          webVitals.onFCP((metric: any) => setMetrics(prev => ({ ...prev, firstContentfulPaint: metric.value })));
+          webVitals.onLCP((metric: any) => setMetrics(prev => ({ ...prev, largestContentfulPaint: metric.value })));
+          webVitals.onTTFB((metric: any) => setMetrics(prev => ({ ...prev, loadTime: metric.value })));
+          // Note: FID is deprecated, using INP instead
+          webVitals.onINP((metric: any) => setMetrics(prev => ({ ...prev, firstInputDelay: metric.value })));
         });
       }
 
@@ -64,7 +65,7 @@ export const PerformanceDashboard: React.FC = () => {
     return () => clearInterval(interval);
   }, []);
 
-  const getPerformanceColor = (value, thresholds) => {
+  const getPerformanceColor = (value: number, thresholds: { good: number; poor: number }) => {
     if (value <= thresholds.good) return 'text-green-600';
     if (value <= thresholds.poor) return 'text-yellow-600';
     return 'text-red-600';

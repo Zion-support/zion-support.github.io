@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import { clsx } from 'clsx';
 import {performanceOptimizer} from '../utils/performanceOptimizer';
-import { EnhancedPerformanceMetrics as PerformanceMetrics, OptimizationSuggestion } from '../types/comprehensive';
+import { EnhancedPerformanceMetrics, OptimizationSuggestion } from '../types/comprehensive';
 
 interface EnhancedPerformanceMonitorProps {
   className?: string;
@@ -14,17 +14,22 @@ export const EnhancedPerformanceMonitor: React.FC<EnhancedPerformanceMonitorProp
   showDetails = false,
   showSuggestions = true
 }) => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+  const [metrics, setMetrics] = useState<EnhancedPerformanceMetrics>({
     fcp: 0,
     lcp: 0,
     fid: 0,
     cls: 0,
     ttfb: 0,
+    loadTime: 0,
+    renderTime: 0,
     memory: {
       used: 0,
       total: 0,
       limit: 0
-    }
+    },
+    domContentLoaded: 0,
+    domInteractive: 0,
+    violations: []
   });
 
   const [suggestions, setSuggestions] = useState<OptimizationSuggestion[]>([]);
@@ -33,7 +38,21 @@ export const EnhancedPerformanceMonitor: React.FC<EnhancedPerformanceMonitorProp
 
   const updateMetrics = useCallback(() => {
     const newMetrics = performanceOptimizer.getMetrics();
-    setMetrics(newMetrics);
+    // Convert PerformanceMetrics to EnhancedPerformanceMetrics
+    const enhancedMetrics: EnhancedPerformanceMetrics = {
+      fcp: newMetrics.fcp,
+      lcp: newMetrics.lcp,
+      fid: newMetrics.fid,
+      cls: newMetrics.cls,
+      ttfb: newMetrics.ttfb,
+      loadTime: newMetrics.loadTime || 0,
+      renderTime: newMetrics.renderTime || 0,
+      memory: newMetrics.memory || { used: 0, total: 0, limit: 0 },
+      domContentLoaded: 0, // Will be updated from performance API
+      domInteractive: 0, // Will be updated from performance API
+      violations: [] // Will be updated from performance API
+    };
+    setMetrics(enhancedMetrics);
     
     if (showSuggestions) {
       const newSuggestions = performanceOptimizer.getSuggestions();
@@ -186,7 +205,7 @@ export const EnhancedPerformanceMonitor: React.FC<EnhancedPerformanceMonitorProp
       </div>
 
       {/* Additional Metrics */}
-      {(metrics.memory || metrics.bundleSize || metrics.connection) && (
+      {(metrics.memory) && (
         <div className="space-y-2 text-sm mb-4">
           <h4 className="font-medium text-gray-700 dark:text-gray-300">Additional Metrics</h4>
           
@@ -199,20 +218,20 @@ export const EnhancedPerformanceMonitor: React.FC<EnhancedPerformanceMonitorProp
             </div>
           )}
 
-          {metrics.bundleSize && (
+          {metrics.domContentLoaded > 0 && (
             <div className="flex justify-between">
-              <span className="text-gray-600 dark:text-gray-400">Bundle Size:</span>
+              <span className="text-gray-600 dark:text-gray-400">DOM Content Loaded:</span>
               <span className="text-gray-900 dark:text-white">
-                {(metrics.bundleSize / 1024).toFixed(1)}KB
+                {metrics.domContentLoaded.toFixed(0)}ms
               </span>
             </div>
           )}
 
-          {metrics.connection && (
+          {metrics.domInteractive > 0 && (
             <div className="flex justify-between">
-              <span className="text-gray-600 dark:text-gray-400">Connection:</span>
-              <span className="text-blue-500 capitalize">
-                {metrics.connection}
+              <span className="text-gray-600 dark:text-gray-400">DOM Interactive:</span>
+              <span className="text-blue-500">
+                {metrics.domInteractive.toFixed(0)}ms
               </span>
             </div>
           )}
