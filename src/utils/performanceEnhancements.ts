@@ -99,20 +99,6 @@ export const performanceEnhancements = {
     ];
   },
 
-  // Get performance score
-  getPerformanceScore: () => {
-    const metrics = performanceEnhancements.getMetrics();
-    if (!metrics) return 0;
-    
-    // Simple scoring based on Core Web Vitals
-    let score = 100;
-    if (metrics.lcp > 2500) score -= 30;
-    if (metrics.fcp > 1800) score -= 20;
-    if (metrics.fid > 100) score -= 20;
-    if (metrics.cls > 0.1) score -= 30;
-    
-    return Math.max(0, score);
-  },
 
   // Generate performance report
   generateReport: () => {
