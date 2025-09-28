@@ -216,19 +216,6 @@ export default function App(): React.JSX.Element {
     };
   }, [enhancedTrackEngagement, handleKeyDown, handleScroll, handleClick]);
 
-  // Show loading screen while initializing
-  if (isLoading) {
-    return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100">
-        <ModernLoadingSpinner
-          size="xl"
-          variant="primary"
-          text="Initializing Zion Tech Group..."
-          showProgress
-          progress={loadingProgress}
-          className="animate-fade-in-scale"
-        />
-=======
   // Initialize comprehensive enhancements
   useEffect(() => {
     try {
@@ -251,132 +238,90 @@ export default function App(): React.JSX.Element {
         analytics.initialize();
       }
       
-      // Add event listeners
-      window.addEventListener('beforeunload', enhancedTrackEngagement);
-      window.addEventListener('scroll', handleScroll);
-      document.addEventListener('click', handleClick);
-      document.addEventListener('keydown', handleKeyDown);
-      
-      return () => {
-        window.removeEventListener('beforeunload', enhancedTrackEngagement);
-        window.removeEventListener('scroll', handleScroll);
-        document.removeEventListener('click', handleClick);
-        document.removeEventListener('keydown', handleKeyDown);
-      };
+      // Initialize SEO analytics
+      if (seoAnalytics && typeof seoAnalytics.initialize === 'function') {
+        seoAnalytics.initialize();
+      }
     } catch (error) {
       console.error('Error initializing enhancements:', error);
     }
   }, [trackEngagement, handleKeyDown, handleScroll, handleClick, enhancedTrackEngagement]);
 
+  // Show loading screen while initializing
   if (isLoading) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-        <ModernLoadingSpinner progress={loadingProgress} />
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8e59
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100">
+        <ModernLoadingSpinner
+          size="xl"
+          variant="primary"
+          text="Initializing Zion Tech Group..."
+          showProgress
+          progress={loadingProgress}
+          className="animate-fade-in-scale"
+        />
       </div>
     );
   }
 
   return (
     <EnhancedErrorBoundary>
-      <SEOOptimizer seoData={seoData} />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <AppRouter />
-        
-        {/* System Dashboard */}
-        {showSystemDashboard && (
-          <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
-            <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
-              <div className="flex justify-between items-center mb-4">
-                <h2 className="text-2xl font-bold text-gray-900">System Dashboard</h2>
-                <button
-                  onClick={() => setShowSystemDashboard(false)}
-                  className="text-gray-500 hover:text-gray-700"
-                >
-                  ✕
-                </button>
-              </div>
-              <EnhancedSystemDashboard />
-            </div>
-          </div>
-        )}
-
-        {/* Performance Optimizer */}
-        {showPerformanceOptimizer && (
-          <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
-            <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
-              <div className="flex justify-between items-center mb-4">
-                <h2 className="text-2xl font-bold text-gray-900">Performance Optimizer</h2>
-                <button
-                  onClick={() => setShowPerformanceOptimizer(false)}
-                  className="text-gray-500 hover:text-gray-700"
-                >
-                  ✕
-                </button>
-              </div>
-              <PerformanceOptimizer />
-            </div>
-          </div>
-        )}
-        
-        {/* AI Performance Dashboard - Toggle with Ctrl+Shift+A */}
-        <AIPerformanceDashboard
-          isVisible={showAIDashboard}
-          onClose={() => setShowAIDashboard(false)}
-        />
-
-        {/* SEO Optimizer - Toggle with Ctrl+Shift+S */}
-        <SEOOptimizer
-          isVisible={showSEOOptimizer}
-          onClose={() => setShowSEOOptimizer(false)}
-        />
-
-        {/* Performance Monitor - Toggle with Ctrl+Shift+M */}
-        <PerformanceMonitor 
-          showDashboard={showPerformanceMonitor}
-          onMetricsUpdate={(metrics) => {
-            console.log('Performance metrics:', metrics);
-                <button
-                  onClick={() => setShowPerformanceMonitor(false)}
-                  className="text-gray-500 hover:text-gray-700"
-                >
-                  ✕
-                </button>
-              </div>
-              <PerformanceMonitor />
-            </div>
-          </div>
-        )}
-
-        {/* AI Performance Dashboard */}
-        {showAIDashboard && (
-          <AIPerformanceDashboard 
-            isVisible={showAIDashboard}
-            onClose={() => setShowAIDashboard(false)}
-          />
-        )}
-
-        {/* SEO Optimizer */}
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8e59
-        {showSEOOptimizer && (
-          <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
-            <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
-              <div className="flex justify-between items-center mb-4">
-                <h2 className="text-2xl font-bold text-gray-900">SEO Optimizer</h2>
-                <button
-                  onClick={() => setShowSEOOptimizer(false)}
-                  className="text-gray-500 hover:text-gray-700"
-                >
-                  ✕
-                </button>
-              </div>
-              <SEOOptimizer seoData={seoData} />
-            </div>
-          </div>
-        )}
-      </div>
+      <SEOOptimizer 
+        seoData={{
+          title: seoData.title,
+          description: seoData.description,
+          keywords: seoData.keywords,
+          ogType: seoData.ogType,
+          ogUrl: seoData.ogUrl,
+          ogImage: seoData.ogImage,
+          twitterCard: seoData.twitterCard
+        }}
+      />
       
-      {/* Removed undefined components to fix build errors */}
+      <AppRouter />
+      
+      {/* System Dashboard - Toggle with Ctrl+Shift+D */}
+      <EnhancedSystemDashboard
+        isVisible={showSystemDashboard}
+        onClose={() => setShowSystemDashboard(false)}
+      />
+
+      {/* Performance Optimizer - Toggle with Ctrl+Shift+P */}
+      {showPerformanceOptimizer && (
+        <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
+          <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+            <div className="flex justify-between items-center mb-4">
+              <h2 className="text-2xl font-bold text-gray-900">Performance Optimizer</h2>
+              <button
+                onClick={() => setShowPerformanceOptimizer(false)}
+                className="text-gray-500 hover:text-gray-700"
+              >
+                ✕
+              </button>
+            </div>
+            <PerformanceOptimizer />
+          </div>
+        </div>
+      )}
+        
+      {/* AI Performance Dashboard - Toggle with Ctrl+Shift+A */}
+      <AIPerformanceDashboard
+        isVisible={showAIDashboard}
+        onClose={() => setShowAIDashboard(false)}
+      />
+
+      {/* SEO Optimizer - Toggle with Ctrl+Shift+S */}
+      <SEOOptimizer
+        isVisible={showSEOOptimizer}
+        onClose={() => setShowSEOOptimizer(false)}
+      />
+
+      {/* Performance Monitor - Toggle with Ctrl+Shift+M */}
+      <PerformanceMonitor 
+        showDashboard={showPerformanceMonitor}
+        onMetricsUpdate={(metrics) => {
+          console.log('Performance metrics:', metrics);
+        }}
+      />
     </EnhancedErrorBoundary>
   );
 }

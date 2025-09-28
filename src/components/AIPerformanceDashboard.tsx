@@ -245,6 +245,7 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
             )}
           </div>
         </div>
+        )}
 
         {/* Recent Errors */}
         <div className="mt-6">
