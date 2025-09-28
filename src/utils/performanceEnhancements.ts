@@ -166,7 +166,7 @@ class PerformanceEnhancer {
   private observeMemoryUsage(): void {
     if (typeof window === 'undefined' || !('memory' in performance)) return;
 
-    const memory = (performance as any).memory;
+    const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number } }).memory;
     if (memory) {
       this.metrics.memoryUsage = memory.usedJSHeapSize;
     }
@@ -263,12 +263,12 @@ class PerformanceEnhancer {
 
   private reportMetrics(): void {
     // Send metrics to analytics or monitoring service
-    if (typeof window !== 'undefined' && (window as any).gtag) {
+    if (typeof window !== 'undefined' && (window as Window & { gtag?: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag) {
       const metrics = this.getMetrics();
       
       // Report Core Web Vitals
       if (metrics.fcp) {
-        (window as any).gtag('event', 'web_vitals', {
+        (window as Window & { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag('event', 'web_vitals', {
           name: 'FCP',
           value: Math.round(metrics.fcp),
           event_category: 'Performance'

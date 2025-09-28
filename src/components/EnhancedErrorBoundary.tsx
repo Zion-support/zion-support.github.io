@@ -32,8 +32,8 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     }
     
     // Log error to analytics
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'exception', {
+    if (typeof window !== 'undefined' && (window as Window & { gtag?: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag) {
+      (window as Window & { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag('event', 'exception', {
         description: error.message,
         fatal: false
       });
@@ -48,7 +48,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
             <div className="text-6xl mb-4">⚠️</div>
             <h1 className="text-2xl font-bold text-red-600 mb-4">Something went wrong</h1>
             <p className="text-gray-600 mb-6">
-              We're sorry, but something unexpected happened. Please try refreshing the page.
+              We&apos;re sorry, but something unexpected happened. Please try refreshing the page.
             </p>
             <div className="space-y-3">
               <button
