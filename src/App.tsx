@@ -20,7 +20,6 @@ export default function App(): React.JSX.Element {
   // State for system dashboard and performance optimizer
   const [showSystemDashboard, setShowSystemDashboard] = useState(false);
   const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
-  const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
   const [showAIDashboard, setShowAIDashboard] = useState(false);
 
   // Engagement tracking data
@@ -60,26 +59,11 @@ export default function App(): React.JSX.Element {
       event.preventDefault();
       setShowPerformanceOptimizer(prev => !prev);
     }
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'M') {
-      event.preventDefault();
-      setShowPerformanceMonitor(prev => !prev);
-    }
     if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'A') {
       event.preventDefault();
-      setShowAIDashboard(prev => !prev);
+      setShowAIDashboard((prev: boolean) => !prev);
     }
   }, []);
-
-  // Memoize the SEO data to prevent unnecessary re-renders
-  const seoData = useMemo(() => ({
-    title: 'Zion Tech Group - Leading AI & Technology Solutions',
-    description: 'Cutting-edge AI, quantum computing, and digital transformation solutions for modern enterprises. Expert consulting, cloud services, and innovative technology implementations.',
-    keywords: ['AI solutions', 'quantum computing', 'digital transformation', 'cloud services', 'enterprise technology', 'machine learning', 'automation', 'blockchain'],
-    ogType: 'website',
-    ogUrl: typeof window !== 'undefined' ? window.location.href : '',
-    ogImage: '/og-image.png',
-    twitterCard: 'summary_large_image' as const
-  }), []);
 
   // Enhanced engagement tracking function
   const enhancedTrackEngagement = useCallback(() => {
@@ -119,7 +103,6 @@ export default function App(): React.JSX.Element {
       }
     }
   }, []);
-
   useEffect(() => {
     // Add performance marks for better monitoring
     if (typeof window !== 'undefined' && window.performance && typeof performance.mark === 'function') {
