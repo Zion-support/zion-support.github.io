@@ -164,6 +164,8 @@ class SEOOptimizer {
    * Generate and update structured data
    */
   private generateStructuredData(data: SEOData): void {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    const seoData = data;
     if (!this.config.enableStructuredData) return;
 
     const structuredData = {

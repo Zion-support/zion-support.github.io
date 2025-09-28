@@ -23,7 +23,7 @@
     "build:production": "NODE_ENV=production pnpm build",
     "build:fast": "vite build --mode development",
     "prebuild": "pnpm type-check && pnpm lint",
-    "postbuild": "pnpm analyze"
+    "postbuild": "echo 'Build completed successfully'"
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.1.13",
