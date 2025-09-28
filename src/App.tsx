@@ -1,5 +1,4 @@
 import React, { useCallback, useState, useEffect, useMemo, lazy, Suspense } from 'react';
-import { useNavigate } from 'react-router-dom';
 import { AppRouter } from './router';
 import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
@@ -9,9 +8,6 @@ import { seoAnalytics, performanceSEO, seoManager } from './utils/seoEnhanced';
 import { analytics } from './utils/analytics';
 import { performanceOptimizer } from './utils/performanceOptimizations';
 import { advancedAccessibilityEnhancer } from './utils/advancedAccessibilityEnhancer';
-import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
-import { useAppInitialization } from './hooks/useAppInitialization';
-import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import { accessibilityEnhancer } from './utils/accessibilityEnhancements';
 import { seoOptimizer } from './utils/seoOptimization';
@@ -34,7 +30,6 @@ import { errorTracker } from './utils/advancedErrorTracker';
 import { apiCache, imageCache, dataCache } from './utils/advancedCacheManager';
 
 // Import comprehensive systems
-import { enhancedErrorRecovery } from './utils/comprehensiveErrorRecovery';
 
 // Import types
 import NotificationSystem, { Notification } from './components/NotificationSystem';
@@ -53,35 +48,25 @@ const ComprehensiveMonitoringDashboard = lazy(() => import('./components/Compreh
 const PerformanceOptimizationPanel = lazy(() => import('./components/PerformanceOptimizationPanel'));
 const RealTimePerformanceMonitor = lazy(() => import('./components/RealTimePerformanceMonitor'));
 const EnhancedCommandPalette = lazy(() => import('./components/EnhancedCommandPalette'));
-const PerformanceIndicator = lazy(() => import('./components/PerformanceIndicator'));
-const AccessibilityEnhancer = lazy(() => import('./components/AccessibilityEnhancer'));
-const DynamicMetaTags = lazy(() => import('./components/DynamicMetaTags'));
 const SystemStatusIndicator = lazy(() => import('./components/SystemStatusIndicator'));
 const EnhancedNotificationSystem = lazy(() => import('./components/EnhancedNotificationSystem'));
 const KeyboardShortcutsManager = lazy(() => import('./components/KeyboardShortcutsManager'));
 const ErrorRecoveryDashboard = lazy(() => import('./components/ErrorRecoveryDashboard'));
-// import AdvancedPerformanceDashboard from './components/AdvancedPerformanceDashboard';
+
+// Direct imports
 import WebsiteEnhancements from './components/WebsiteEnhancements';
-import SEOOptimizer, { useSEOData } from './components/SEOOptimizer';
+import SEOOptimizer from './components/SEOOptimizer';
 import AdvancedAnalytics from './components/AdvancedAnalytics';
 import PerformanceDashboard from './components/PerformanceDashboard';
 import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
-// import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
 import { performanceAlerts } from './utils/performanceAlerts';
 import { accessibilityUtils } from './utils/accessibilityUtils';
 import { securityUtils } from './utils/securityUtils';
 import { enhancedSecurityManager } from './utils/enhancedSecurityManager';
-// These functions don't exist, commenting out
-// import { initializePerformanceEnhancements } from './utils/performanceEnhancements';
-// import { initializeAccessibilityEnhancements } from './utils/accessibilityEnhancements';
 import { advancedPerformanceOptimizer } from './utils/advancedPerformanceOptimizer';
 import { advancedSEOOptimizer } from './utils/advancedSEOOptimizer';
-import AdvancedAnalytics from './components/AdvancedAnalytics';
-import NotificationSystem, { Notification } from './components/NotificationSystem';
-// These are already imported as lazy components above
 import PerformanceMetricsDashboard from './components/PerformanceMetricsDashboard';
 import ComprehensiveImprovements from './components/ComprehensiveImprovements';
-import './index.css';
 
 export default function App(): React.JSX.Element {
   // State for system dashboard and performance optimizer
@@ -208,12 +193,6 @@ export default function App(): React.JSX.Element {
     console.debug('Click event captured for engagement tracking', event);
   }, []);
   
-  const originalTrackEngagement = useCallback(() => {
-    console.debug('User engagement tracked', { 
-      timestamp: Date.now(),
-      session_duration: performance.now()
-    });
-  }, []);
 
   // Simulate loading for demonstration
   useEffect(() => {
@@ -257,18 +236,6 @@ export default function App(): React.JSX.Element {
     twitterCard: 'summary_large_image' as const
   }), [currentPathname]);
 
-  // Simple preload function
-  const preloadResource = useCallback((url: string, type: string) => {
-    try {
-      const link = document.createElement('link');
-      link.rel = 'preload';
-      link.href = url;
-      link.as = type;
-      document.head.appendChild(link);
-    } catch (error) {
-      console.error('Error preloading resource:', error);
-    }
-  }, []);
 
   // Initialize comprehensive enhancements
   useEffect(() => {
@@ -358,85 +325,6 @@ export default function App(): React.JSX.Element {
     }
   }, [seoData.title, seoData.description, seoData.keywords, seoData.canonicalUrl, seoData.ogImage, seoData.ogType, seoData.twitterCard]);
 
-  // Optimized keyboard handler for system dashboard toggle
-  const handleKeyDown = useCallback((event: KeyboardEvent) => {
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'D') {
-      event.preventDefault();
-      setShowSystemDashboard((prev: boolean) => !prev);
-      seoAnalytics.trackEvent('keyboard_shortcut', { shortcut: 'cmd+shift+d', action: 'toggle_system_dashboard' });
-      addNotification({ type: 'info', title: 'Dashboard', message: 'System dashboard toggled' });
-      console.debug('Keyboard shortcut used:', { shortcut: 'cmd+shift+d', action: 'toggle_system_dashboard' });
-    }
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'H') {
-      event.preventDefault();
-      setShowSystemHealth((prev: boolean) => !prev);
-      console.debug('Keyboard shortcut used:', { shortcut: 'cmd+shift+h', action: 'toggle_system_health' });
-    }
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'K') {
-      event.preventDefault();
-      setShowKeyboardHelp((prev: boolean) => !prev);
-      console.debug('Keyboard shortcut used:', { shortcut: 'cmd+shift+k', action: 'toggle_keyboard_help' });
-    }
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'P') {
-      event.preventDefault();
-      setShowPerformanceWidget((prev: boolean) => !prev);
-      console.debug('Keyboard shortcut used:', { shortcut: 'cmd+shift+p', action: 'toggle_performance_widget' });
-    }
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'C') {
-      event.preventDefault();
-      setShowComprehensiveDashboard((prev: boolean) => !prev);
-      seoAnalytics.trackEvent('keyboard_shortcut', { shortcut: 'cmd+shift+c', action: 'toggle_comprehensive_dashboard' });
-    }
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'M') {
-      event.preventDefault();
-      setShowComprehensiveMonitoring((prev: boolean) => !prev);
-      seoAnalytics.trackEvent('keyboard_shortcut', { shortcut: 'cmd+shift+m', action: 'toggle_comprehensive_monitoring' });
-    }
-    // Performance dashboard toggle removed - state variable not defined
-    if ((event.ctrlKey || event.metaKey) && event.key === 'k') {
-      event.preventDefault();
-      setShowEnhancedCommandPalette((prev: boolean) => !prev);
-      seoAnalytics.trackEvent('keyboard_shortcut', { shortcut: 'cmd+k', action: 'toggle_enhanced_command_palette' });
-    }
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'R') {
-      event.preventDefault();
-      setShowRealTimePerformance((prev: boolean) => !prev);
-      seoAnalytics.trackEvent('keyboard_shortcut', { shortcut: 'cmd+shift+r', action: 'toggle_real_time_performance' });
-    }
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'M') {
-      event.preventDefault();
-      setShowAdvancedMonitoring((prev: boolean) => !prev);
-      console.debug('Keyboard shortcut used:', { shortcut: 'cmd+shift+m', action: 'toggle_advanced_monitoring' });
-    }
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'T') {
-      event.preventDefault();
-      setIsDarkMode((prev: boolean) => !prev);
-      console.debug('Keyboard shortcut used:', { shortcut: 'cmd+shift+t', action: 'toggle_theme' });
-    }
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'S') {
-      event.preventDefault();
-      setShowSystemStatus((prev: boolean) => !prev);
-      console.debug('Keyboard shortcut used:', { shortcut: 'cmd+shift+s', action: 'toggle_system_status' });
-    }
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === '?') {
-      event.preventDefault();
-      setShowKeyboardShortcutsManager((prev: boolean) => !prev);
-      console.debug('Keyboard shortcut used:', { shortcut: 'cmd+shift+?', action: 'toggle_keyboard_shortcuts_manager' });
-    }
-    if (event.key === 'Escape') {
-      setShowCommandPalette(false);
-      setShowSystemDashboard(false);
-      setShowSystemHealth(false);
-      setShowPerformanceWidget(false);
-      setShowKeyboardHelp(false);
-      setShowAdvancedMonitoring(false);
-      setShowComprehensiveDashboard(false);
-      setShowRealTimePerformance(false);
-      setShowEnhancedCommandPalette(false);
-      setShowKeyboardShortcutsManager(false);
-      seoAnalytics.trackEvent('keyboard_shortcut', { shortcut: 'escape', action: 'close_modals' });
-    }
-  }, [addNotification]);
   const [showRealTimeMetrics, setShowRealTimeMetrics] = useState(false);
   const [showWebsiteEnhancements, setShowWebsiteEnhancements] = useState(false);
   // const [showAccessibilityPanel, setShowAccessibilityPanel] = useState(false);
