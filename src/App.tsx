@@ -21,10 +21,7 @@ import KeyboardShortcutsHelp from './components/KeyboardShortcutsHelp';
 import CommandPalette from './components/CommandPalette';
 import RealTimePerformanceMonitor from './components/RealTimePerformanceMonitor';
 import SystemHealthDashboard from './components/SystemHealthDashboard';
-import { getNotificationManager, notify } from './utils/advancedNotifications';
-import { getThemeManager } from './utils/themeManager';
-import { getKeyboardShortcuts, shortcuts } from './utils/advancedKeyboardShortcuts';
-import { getDataVisualization, charts } from './utils/advancedDataVisualization';
+import AdvancedPerformanceDashboard from './components/AdvancedPerformanceDashboard';
 import './index.css';
 
 export default function App(): React.JSX.Element {
@@ -418,7 +415,7 @@ export default function App(): React.JSX.Element {
       trackEngagement();
     };
 
-    const handleClickWithEngagement = (event: Event) => {
+    const handleClickWithEngagement = () => {
       handleClick();
       trackEngagement();
     };
