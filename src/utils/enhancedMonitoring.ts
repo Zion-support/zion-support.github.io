@@ -1,4 +1,4 @@
-// Global types are available through tsconfig.json
+// Enhanced monitoring types are defined in global.d.ts
 /**
  * Enhanced Monitoring and Analytics System
  * Provides comprehensive monitoring, error tracking, and performance analytics
@@ -28,6 +28,11 @@ interface MonitoringConfig {
   flushInterval: number;
   maxRetries: number;
   endpoint: string;
+}
+
+interface LayoutShiftEntry extends PerformanceEntry {
+  hadRecentInput: boolean;
+  value: number;
 }
 
 interface ErrorData {

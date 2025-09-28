@@ -348,13 +348,11 @@ ${pages.map(page => `  <url>
 
     return `
 SEO Report:
-- Title: ${data.title}
-- Description: ${data.description}
-- Keywords: ${data.keywords.join(', ')}
-- Issues: ${issues.length > 0 ? issues.join(', ') : 'None'}
+- Title: ${data.title || 'Not specified'}
+- Description: ${data.description || 'Not specified'}
+- Keywords: ${data.keywords.join(', ') || 'Not specified'}
+- Issues: ${issues.length}
+- Score: ${score}/100
 `;
   }
 }
-
-// Export the class as seoEnhancer
-export const seoEnhancer = new AdvancedSEOEnhancer();
