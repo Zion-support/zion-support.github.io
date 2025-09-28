@@ -261,13 +261,26 @@ const AdvancedPerformanceDashboard: React.FC<PerformanceDashboardProps> = ({
         {/* Actions */}
         <div className="flex flex-wrap gap-4">
           <button
-            onClick={exportReport}
+            onClick={() => {
+              // Export report functionality
+              const dataStr = JSON.stringify(metrics, null, 2);
+              const dataBlob = new Blob([dataStr], { type: 'application/json' });
+              const url = URL.createObjectURL(dataBlob);
+              const link = document.createElement('a');
+              link.href = url;
+              link.download = 'performance-report.json';
+              link.click();
+              URL.revokeObjectURL(url);
+            }}
             className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md transition-colors"
           >
             Export Report
           </button>
           <button
-            onClick={updateMetrics}
+            onClick={() => {
+              // Refresh metrics functionality
+              window.location.reload();
+            }}
             className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-md transition-colors"
           >
             Refresh Metrics

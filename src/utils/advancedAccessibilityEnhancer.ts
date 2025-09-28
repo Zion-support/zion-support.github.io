@@ -25,6 +25,10 @@ interface AccessibilityMetrics {
   keyboardTraps: number;
   screenReaderCompatibility: number;
   overallScore: number;
+  totalIssues: number;
+  criticalIssues: number;
+  warningIssues: number;
+  passedChecks: number;
 }
 
 class AdvancedAccessibilityEnhancer {
@@ -55,7 +59,11 @@ class AdvancedAccessibilityEnhancer {
       altTexts: 0,
       keyboardTraps: 0,
       screenReaderCompatibility: 0,
-      overallScore: 0
+      overallScore: 0,
+      totalIssues: 0,
+      criticalIssues: 0,
+      warningIssues: 0,
+      passedChecks: 0
     };
   }
 

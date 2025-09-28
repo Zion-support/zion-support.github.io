@@ -80,8 +80,8 @@ class PerformanceMonitor {
     const fidObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
-        if (entry.processingStart && entry.startTime) {
-          this.metrics.fid = entry.processingStart - entry.startTime;
+        if ('processingStart' in entry && entry.startTime) {
+          this.metrics.fid = (entry as any).processingStart - entry.startTime;
         }
       });
     });

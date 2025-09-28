@@ -325,26 +325,38 @@ ${pages.map(page => `  <url>
 
     const data = this.currentPageData;
     const issues: string[] = [];
+    const recommendations: string[] = [];
 
     // Check title length
     if (data.title.length < 30 || data.title.length > 60) {
       issues.push(`Title length should be 30-60 characters (current: ${data.title.length})`);
+    } else {
+      recommendations.push('Title length is optimal');
     }
 
     // Check description length
     if (data.description.length < 120 || data.description.length > 160) {
       issues.push(`Description length should be 120-160 characters (current: ${data.description.length})`);
+    } else {
+      recommendations.push('Description length is optimal');
     }
 
     // Check for missing Open Graph image
     if (!data.ogImage) {
       issues.push('Missing Open Graph image');
+    } else {
+      recommendations.push('Open Graph image is present');
     }
 
     // Check for missing keywords
     if (data.keywords.length === 0) {
       issues.push('No keywords specified');
+    } else {
+      recommendations.push('Keywords are specified');
     }
+
+    // Calculate score based on issues
+    const score = Math.max(0, 100 - (issues.length * 20));
 
     return `
 SEO Report:
