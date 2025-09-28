@@ -30,7 +30,7 @@ export default defineConfig(({ mode }) => ({
   build: {
     outDir: 'dist',
     // Enable source maps for production debugging
-    sourcemap: true,
+    sourcemap: mode !== 'production',
     // Optimize chunk splitting
     rollupOptions: {
       input: {
