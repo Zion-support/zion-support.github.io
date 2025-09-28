@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+// import { enhancedErrorHandler } from '../utils/enhancedErrorHandling';
 
 interface AIPerformanceDashboardProps {
   isVisible: boolean;
@@ -24,9 +25,10 @@ interface AIInsights {
 }
 
 interface ErrorReport {
-  severity: string;
+  id: string;
   message: string;
-  lastOccurrence: string | Date;
+  severity: string;
+  lastOccurrence: string | number;
   occurrenceCount: number;
   context: {
     component?: string;
@@ -77,6 +79,8 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
     }
   }, [isVisible]);
 
+  if (!isVisible) return null;
+
   const getSeverityColor = (severity: string) => {
     switch (severity) {
       case 'critical': return 'text-red-600 bg-red-100';
@@ -95,8 +99,6 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
       default: return '❓';
     }
   };
-
-  if (!isVisible) return null;
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
@@ -219,6 +221,20 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
                         )}
                       </div>
                     </div>
+                    
+                    {error.resolutionSuggestions && error.resolutionSuggestions.length > 0 && (
+                      <div className="mt-3 p-3 bg-green-50 rounded">
+                        <h5 className="text-sm font-medium text-green-800 mb-2">💡 AI Suggestions:</h5>
+                        <ul className="text-sm text-green-700 space-y-1">
+                          {error.resolutionSuggestions.map((suggestion: string, idx: number) => (
+                            <li key={idx} className="flex items-start gap-2">
+                              <span className="text-green-600">•</span>
+                              {suggestion}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
                   </div>
                 ))
               ) : (
