@@ -74,7 +74,18 @@ jest.mock('../hooks/usePerformanceOptimization', () => ({
 jest.mock('../utils/analytics', () => ({
   analytics: {
     initialize: jest.fn(),
-    trackPageView: jest.fn()
+    trackPageView: jest.fn(),
+    enable: jest.fn(),
+    trackEvent: jest.fn()
+  }
+}));
+
+jest.mock('../utils/advancedAnalytics', () => ({
+  analytics: {
+    enable: jest.fn(),
+    trackEvent: jest.fn(),
+    trackPageView: jest.fn(),
+    initialize: jest.fn()
   }
 }));
 
@@ -175,6 +186,12 @@ jest.mock('../components/AccessibilityTester', () => {
 
 jest.mock('../components/PerformanceProfiler', () => {
   return function MockPerformanceProfiler() {
+    return null;
+  };
+});
+
+jest.mock('../components/ThemeToggle', () => {
+  return function MockThemeToggle() {
     return null;
   };
 });
