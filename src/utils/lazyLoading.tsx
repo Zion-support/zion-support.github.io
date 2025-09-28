@@ -169,7 +169,7 @@ export function preloadResource(url: string, type: 'image' | 'script' | 'style' 
  */
 export function useImageLazyLoading(
   src: string,
-  placeholder: string
+  placeholder: string = ''
 ) {
   const [imageSrc, setImageSrc] = useState(placeholder);
   const [isLoaded, setIsLoaded] = useState(false);
@@ -177,17 +177,18 @@ export function useImageLazyLoading(
 
   useEffect(() => {
     const element = elementRef.current;
-    if (!element) return;
+    if (!element || !src) return;
 
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting && src) {
+        if (entry.isIntersecting) {
           const img = new Image();
           img.onload = () => {
             setImageSrc(src);
             setIsLoaded(true);
           };
           img.onerror = () => {
+            // Keep placeholder on error
             setIsLoaded(false);
           };
           img.src = src;
