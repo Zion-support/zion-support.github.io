@@ -379,8 +379,12 @@ class EnhancedAnalyticsSystem {
 
     // Network information
     if ('connection' in navigator) {
-      const connection = (navigator as Record<string, unknown>).connection as { effectiveType?: string; rtt?: number };
-      this.trackPerformance('connection-type', connection.effectiveType || 'unknown');
+      const connection = (navigator as any).connection as { effectiveType?: string; rtt?: number };
+      this.track('performance', 'technical', 'measured', 'connection-type', 0, {
+        metric: 'connection-type',
+        unit: 'string',
+        value: connection.effectiveType || 'unknown'
+      });
       this.trackPerformance('connection-rtt', connection.rtt || 0, 'ms');
     }
   }
@@ -636,7 +640,7 @@ class EnhancedAnalyticsSystem {
    */
   private calculateNetworkLatency(): number {
     if ('connection' in navigator) {
-      const connection = (navigator as Record<string, unknown>).connection as { rtt?: number };
+      const connection = (navigator as any).connection as { rtt?: number };
       return connection.rtt || 0;
     }
     return 0;

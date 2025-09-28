@@ -84,12 +84,12 @@ export interface SEOAuditResult {
 
 export interface SEOIssue {
   type: 'error' | 'warning' | 'info';
-  category: string;
+  category?: string;
   message: string;
   element?: string;
   line?: number;
   column?: number;
-  impact: 'high' | 'medium' | 'low';
+  impact?: 'high' | 'medium' | 'low';
   fix?: string;
   suggestion?: string;
 }
@@ -120,7 +120,7 @@ export interface MonitoringMetrics {
 // Optimization Suggestion Types
 export interface OptimizationSuggestion {
   id?: string;
-  category?: 'performance' | 'seo' | 'accessibility' | 'security';
+  category?: 'performance' | 'seo' | 'accessibility' | 'security' | 'bundle' | 'runtime' | 'network' | 'memory' | 'rendering';
   priority?: 'high' | 'medium' | 'low';
   title?: string;
   description?: string;
@@ -168,7 +168,7 @@ export interface DataPoint {
 export interface ChartData {
   name: string;
   data: DataPoint[];
-  type: 'line' | 'bar' | 'pie' | 'area';
+  type: 'line' | 'bar' | 'pie' | 'area' | 'scatter';
   color?: string;
 }
 
@@ -181,12 +181,16 @@ export interface VisualizationOptions {
   showGrid?: boolean;
   colors?: string[];
   animation?: boolean;
+  showDataLabels?: boolean;
+  xAxisLabel?: string;
+  yAxisLabel?: string;
 }
 
 export interface StoredChart {
   data: ChartData;
   options: VisualizationOptions;
   container: HTMLElement;
+  type?: 'line' | 'bar' | 'pie' | 'area' | 'scatter';
 }
 
 // Analytics Types
@@ -273,6 +277,7 @@ export interface PerformanceMetrics {
   violations?: string[];
   bundleSize?: number;
   connection?: string;
+  renderTime?: number;
 }
 
 

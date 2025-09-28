@@ -465,9 +465,10 @@ class EnhancedAccessibilitySystem {
     const modals = document.querySelectorAll('[role="dialog"], .modal');
     
     modals.forEach(modal => {
-      modal.addEventListener('keydown', (event: KeyboardEvent) => {
-        if (event.key === 'Tab') {
-          this.trapFocus(event, modal as HTMLElement);
+      modal.addEventListener('keydown', (event: Event) => {
+        const keyboardEvent = event as KeyboardEvent;
+        if (keyboardEvent.key === 'Tab') {
+          this.trapFocus(keyboardEvent, modal as HTMLElement);
         }
       });
     });
@@ -508,7 +509,7 @@ class EnhancedAccessibilitySystem {
     });
     
     // Store last focused element for restoration
-    (window as Record<string, unknown>).__lastFocusedElement = lastFocusedElement;
+    (window as any).__lastFocusedElement = lastFocusedElement;
   }
 
   /**

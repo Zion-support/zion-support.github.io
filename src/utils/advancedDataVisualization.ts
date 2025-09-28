@@ -3,6 +3,8 @@
  * Comprehensive data visualization and charting utilities with real-time updates
  */
 
+import { DataPoint, ChartData, StoredChart, VisualizationOptions } from '../types/comprehensive';
+
 export interface ChartConfig {
   width: number;
   height: number;
@@ -16,42 +18,6 @@ export interface ChartConfig {
   animations: boolean;
   responsive: boolean;
   theme: 'light' | 'dark';
-}
-
-export interface DataPoint {
-  x: number | string;
-  y: number;
-  label?: string;
-  color?: string;
-  metadata?: Record<string, string | number | boolean>;
-}
-
-export interface ChartData {
-  name: string;
-  data: DataPoint[];
-  type: 'line' | 'bar' | 'pie' | 'scatter' | 'area';
-  color?: string;
-  metadata?: Record<string, string | number | boolean>;
-}
-
-export interface StoredChart {
-  data: DataPoint[];
-  options: Record<string, unknown>;
-  container: HTMLElement;
-  type?: 'line' | 'bar' | 'pie' | 'scatter' | 'area';
-}
-
-export interface VisualizationOptions {
-  title?: string;
-  subtitle?: string;
-  xAxisLabel?: string;
-  yAxisLabel?: string;
-  showLegend?: boolean;
-  showGrid?: boolean;
-  showTooltips?: boolean;
-  showDataLabels?: boolean;
-  interactive?: boolean;
-  exportable?: boolean;
 }
 
 export class AdvancedDataVisualization {
@@ -693,7 +659,7 @@ export class AdvancedDataVisualization {
     const chart = this.charts.get(containerId);
     if (!chart) return;
 
-    chart.data = newData as DataPoint[];
+    chart.data = newData;
     this.renderChart(containerId);
   }
 
