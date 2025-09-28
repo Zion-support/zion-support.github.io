@@ -21,6 +21,10 @@ import KeyboardShortcutsHelp from './components/KeyboardShortcutsHelp';
 import CommandPalette from './components/CommandPalette';
 import RealTimePerformanceMonitor from './components/RealTimePerformanceMonitor';
 import SystemHealthDashboard from './components/SystemHealthDashboard';
+import { getNotificationManager, notify } from './utils/advancedNotifications';
+import { getThemeManager } from './utils/themeManager';
+import { getKeyboardShortcuts, shortcuts } from './utils/advancedKeyboardShortcuts';
+import { getDataVisualization, charts } from './utils/advancedDataVisualization';
 import './index.css';
 
 export default function App(): React.JSX.Element {
@@ -217,6 +221,12 @@ export default function App(): React.JSX.Element {
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         (analytics as any).initialize();
       }
+
+      // Initialize new utility systems
+      getNotificationManager();
+      getThemeManager();
+      getKeyboardShortcuts();
+      getDataVisualization();
       if ('initialize' in seoAnalytics) {
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         (seoAnalytics as any).initialize();
@@ -491,6 +501,22 @@ export default function App(): React.JSX.Element {
       category: 'Appearance',
       action: () => setIsDarkMode(!isDarkMode),
       shortcut: 'Ctrl+Shift+T'
+    },
+    {
+      id: 'clear-notifications',
+      title: 'Clear Notifications',
+      description: 'Clear all notifications',
+      category: 'UI',
+      action: () => setNotifications([]),
+      shortcut: 'Ctrl+Shift+N'
+    },
+    {
+      id: 'show-keyboard-help',
+      title: 'Show Keyboard Help',
+      description: 'Display keyboard shortcuts help',
+      category: 'Help',
+      action: () => setShowKeyboardHelp(!showKeyboardHelp),
+      shortcut: 'Ctrl+Shift+H'
     },
     {
       id: 'toggle-real-time-monitor',
