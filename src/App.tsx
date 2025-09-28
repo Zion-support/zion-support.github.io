@@ -46,6 +46,23 @@ const DynamicMetaTags = lazy(() => import('./components/DynamicMetaTags'));
 const SystemStatusIndicator = lazy(() => import('./components/SystemStatusIndicator'));
 const EnhancedNotificationSystem = lazy(() => import('./components/EnhancedNotificationSystem'));
 const KeyboardShortcutsManager = lazy(() => import('./components/KeyboardShortcutsManager'));
+const ErrorRecoveryDashboard = lazy(() => import('./components/ErrorRecoveryDashboard'));
+
+// Direct imports
+import WebsiteEnhancements from './components/WebsiteEnhancements';
+import SEOOptimizer from './components/SEOOptimizer';
+import AdvancedAnalytics from './components/AdvancedAnalytics';
+import PerformanceDashboard from './components/PerformanceDashboard';
+import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
+// import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
+import { performanceAlerts } from './utils/performanceAlerts';
+import { accessibilityUtils } from './utils/accessibilityUtils';
+import { securityUtils } from './utils/securityUtils';
+import { enhancedSecurityManager } from './utils/enhancedSecurityManager';
+import { advancedPerformanceOptimizer } from './utils/advancedPerformanceOptimizer';
+import { advancedSEOOptimizer } from './utils/advancedSEOOptimizer';
+import PerformanceMetricsDashboard from './components/PerformanceMetricsDashboard';
+import ComprehensiveImprovements from './components/ComprehensiveImprovements';
 
 export default function App(): React.JSX.Element {
   const navigate = useNavigate();
@@ -211,8 +228,8 @@ export default function App(): React.JSX.Element {
       performanceMonitor.initialize();
       
       // Initialize performance and accessibility enhancements
-      // initializePerformanceEnhancements();
-      // initializeAccessibilityEnhancements();
+      initializePerformanceEnhancements();
+      initializeAccessibilityEnhancements();
       
       // Initialize SEO analytics
       seoAnalytics.trackPageView(window.location.pathname);
