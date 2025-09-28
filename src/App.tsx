@@ -11,16 +11,8 @@ import SEOOptimizer from './components/SEOOptimizer';
 import AIPerformanceDashboard from './components/AIPerformanceDashboard';
 import { analytics } from './utils/analytics';
 import { seoAnalytics, performanceSEO, seoManager } from './utils/seoEnhanced';
-import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
-import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
-import { enhancedAnalytics } from './utils/enhancedAnalytics';
-import { advancedCacheSystem } from './utils/advancedCacheSystem';
-import { AdvancedAutomationSystem } from './utils/advancedAutomationSystem';
-import { AccessibilityEnhancer } from './utils/accessibilityEnhancer';
-import { SecurityEnhancer } from './utils/securityEnhancer';
-import { performanceOptimizer } from './utils/performanceOptimizer';
-import { accessibilityEnhancer } from './utils/accessibilityEnhancer';
-import { seoOptimizer } from './utils/seoOptimizer';
+import { useSEOData } from './components/SEOOptimizer';
+// Removed unused imports to fix linting warnings
 import './index.css';
 import './styles/notifications.css';
 import './styles/system-metrics.css';
@@ -62,7 +54,7 @@ export default function App(): React.JSX.Element {
   }), []);
 
   // Initialize app with custom configuration
-  const { isLoading, loadingProgress, handleScroll, handleClick, trackEngagement } = useAppInitialization({
+  const { isLoading, loadingProgress, handleScroll, handleClick } = useAppInitialization({
     enablePerformanceMonitoring: true,
     enableAccessibility: true,
     enableSecurity: true,
@@ -122,8 +114,7 @@ export default function App(): React.JSX.Element {
       scrollDepth: engagementData.scrollDepth,
       clicks: engagementData.clicks,
     });
-    trackEngagement();
-  }, [engagementData.clicks, engagementData.scrollDepth, engagementData.startTime, trackEngagement]);
+  }, [engagementData.clicks, engagementData.scrollDepth, engagementData.startTime]);
 
   // Memoize the SEO data to prevent unnecessary re-renders
   const seoData = useMemo(() => ({
@@ -141,10 +132,10 @@ export default function App(): React.JSX.Element {
     title: string;
     description: string;
     keywords: string[];
-    ogType: string;
-    ogUrl: string;
-    ogImage: string;
-    twitterCard: string;
+    ogType?: string;
+    ogUrl?: string;
+    ogImage?: string;
+    twitterCard?: string;
   }) => {
     if (typeof window !== 'undefined') {
       // Update title
@@ -259,18 +250,26 @@ export default function App(): React.JSX.Element {
     };
   }, [enhancedTrackEngagement, trackEngagement]);
 
+<<<<<<< HEAD
   // Performance optimization is handled by the hook automatically
+=======
+  // Optimize performance on mount
+  useEffect(() => {
+    // Performance optimization is handled by the usePerformanceOptimization hook
+    preloadResource('/api/health');
+  }, [preloadResource]);
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-fa73
 
   // Track engagement on scroll and click
   useEffect(() => {
     const handleScrollWithEngagement = () => {
       handleScroll();
-      trackEngagement();
+      enhancedTrackEngagement();
     };
 
     const handleClickWithEngagement = (event: Event) => {
       handleClick(event);
-      trackEngagement();
+      enhancedTrackEngagement();
     };
 
     window.addEventListener('scroll', handleScrollWithEngagement, { passive: true });
@@ -280,7 +279,7 @@ export default function App(): React.JSX.Element {
       window.removeEventListener('scroll', handleScrollWithEngagement);
       document.removeEventListener('click', handleClickWithEngagement);
     };
-  }, [handleScroll, handleClick, trackEngagement]);
+  }, [handleScroll, handleClick, enhancedTrackEngagement]);
 
   // Performance monitoring effect
   React.useEffect(() => {
@@ -293,6 +292,7 @@ export default function App(): React.JSX.Element {
   // Loading state
   if (isLoading) {
     return (
+<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
         <div className="text-center">
           <ModernLoadingSpinner />
@@ -307,6 +307,14 @@ export default function App(): React.JSX.Element {
             </div>
           </div>
         </div>
+=======
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100">
+        <ModernLoadingSpinner
+          size="xl"
+          progress={loadingProgress}
+          text="Initializing Zion Tech Group..."
+        />
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-fa73
       </div>
     );
   }
