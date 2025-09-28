@@ -40,8 +40,8 @@ const mockLocationInstance = {
 } as Location;
 
 // Mock location more safely
-delete (window as any).location;
-(window as any).location = mockLocationInstance;
+delete (window as unknown as { location?: Location }).location;
+(window as unknown as { location: Location }).location = mockLocationInstance;
 // Mock window.history
 Object.defineProperty(window, 'history', {
   value: {

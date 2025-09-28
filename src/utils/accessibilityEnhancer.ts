@@ -337,7 +337,7 @@ class AccessibilityEnhancer {
     });
   }
 
-  private calculateContrastRatio(_color: string, _backgroundColor: string): number {
+  private calculateContrastRatio(): number {
     // Simplified contrast ratio calculation
     // In a real implementation, you'd parse the colors and calculate luminance
     return 4.5; // Placeholder
