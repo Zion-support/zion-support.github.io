@@ -43,7 +43,7 @@ const ComprehensiveSystemDashboard: React.FC<ComprehensiveSystemDashboardProps> 
 
       // Get performance metrics
       if ('memory' in performance) {
-        const memory = (performance as { memory: { usedJSHeapSize: number } }).memory;
+        const memory = (performance as any).memory;
         setPerformanceMetrics(prev => ({
           ...prev,
           memoryUsage: memory.usedJSHeapSize / 1024 / 1024
