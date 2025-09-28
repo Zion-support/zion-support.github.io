@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-const https = require('https');
+import https from 'https';
 
 const TOKEN = 'ghs_ARoJSTvAacep8FvSbjlT0M4kz3PRL70w75Bt';
 const REPO = 'Zion-Holdings/zion.app';
@@ -22,7 +22,7 @@ async function makeRequest(url, options = {}) {
             res.on('end', () => {
                 try {
                     resolve(JSON.parse(data));
-                } catch (e) {
+                } catch {
                     resolve(data);
                 }
             });

@@ -14,10 +14,8 @@ import {
 const EnhancedTestimonials = () => {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const [isPlaying, setIsPlaying] = useState(true);
-  const [isVisible, setIsVisible] = useState(false);
-
   useEffect(() => {
-    setIsVisible(true);
+    // Component mounted
   }, []);
 
   useEffect(() => {
@@ -28,7 +26,7 @@ const EnhancedTestimonials = () => {
     }, 5000);
     
     return () => clearInterval(interval);
-  }, [isPlaying]);
+  }, [isPlaying, testimonials.length]);
 
   const testimonials = [
     {
@@ -48,7 +46,7 @@ const EnhancedTestimonials = () => {
       company: "InnovateLabs",
       image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
       rating: 5,
-      text: "The quantum computing implementation was flawless. We're now processing data 10x faster than before. Zion's expertise is unmatched in the industry.",
+      text: "The quantum computing implementation was flawless. We&apos;re now processing data 10x faster than before. Zion&apos;s expertise is unmatched in the industry.",
       results: "10x faster processing"
     },
     {
@@ -68,7 +66,7 @@ const EnhancedTestimonials = () => {
       company: "StartupX",
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
       rating: 5,
-      text: "From concept to deployment in record time. Zion's agile approach and cutting-edge solutions helped us scale from 0 to 1M users in just 6 months.",
+      text: "From concept to deployment in record time. Zion&apos;s agile approach and cutting-edge solutions helped us scale from 0 to 1M users in just 6 months.",
       results: "0 to 1M users in 6 months"
     }
   ];
@@ -105,7 +103,7 @@ const EnhancedTestimonials = () => {
             What Our Clients Say
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Don't just take our word for it. Here's what industry leaders say about 
+            Don&apos;t just take our word for it. Here&apos;s what industry leaders say about 
             working with Zion Tech Group.
           </p>
         </div>
@@ -125,7 +123,7 @@ const EnhancedTestimonials = () => {
                 <Quote className="w-12 h-12 text-blue-400 mb-4" />
                 
                 <blockquote className="text-xl md:text-2xl text-white font-medium leading-relaxed mb-6">
-                  "{testimonials[currentTestimonial].text}"
+                  &ldquo;{testimonials[currentTestimonial].text}&rdquo;
                 </blockquote>
                 
                 <div className="flex items-center space-x-4">

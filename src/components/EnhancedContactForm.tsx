@@ -1,16 +1,13 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef } from 'react';
 import { 
   Send, 
   CheckCircle, 
   AlertCircle, 
   Mail, 
   Phone, 
-  MapPin, 
-  Clock,
   MessageSquare,
   User,
   Building,
-  Zap,
   Sparkles
 } from 'lucide-react';
 
@@ -77,7 +74,7 @@ const EnhancedContactForm = () => {
         else delete newErrors.email;
         break;
       case 'phone':
-        if (value && !/^[\+]?[1-9][\d]{0,15}$/.test(value.replace(/[\s\-\(\)]/g, ''))) {
+        if (value && !/^[+]?[1-9]\d{0,15}$/.test(value.replace(/[\s\-()]/g, ''))) {
           newErrors.phone = 'Please enter a valid phone number';
         } else delete newErrors.phone;
         break;
@@ -140,7 +137,7 @@ const EnhancedContactForm = () => {
         newsletter: false
       });
       setCurrentStep(1);
-    } catch (error) {
+    } catch {
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
@@ -196,9 +193,9 @@ const EnhancedContactForm = () => {
       <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden">
         {/* Header */}
         <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-8 text-white text-center">
-          <h2 className="text-3xl font-bold mb-4">Let's Build Something Amazing</h2>
+          <h2 className="text-3xl font-bold mb-4">Let&apos;s Build Something Amazing</h2>
           <p className="text-xl opacity-90">
-            Tell us about your project and we'll get back to you within 24 hours
+            Tell us about your project and we&apos;ll get back to you within 24 hours
           </p>
         </div>
 

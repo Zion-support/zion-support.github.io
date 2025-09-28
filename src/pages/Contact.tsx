@@ -67,7 +67,7 @@ export default function Contact(): React.JSX.Element {
           <div className="container mx-auto px-6 text-center relative z-10">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm text-white text-sm font-medium mb-6">
               <MessageSquare className="w-4 h-4 mr-2" />
-              Let's Start a Conversation
+              Let&apos;s Start a Conversation
             </div>
             
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -76,7 +76,7 @@ export default function Contact(): React.JSX.Element {
             
             <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto">
               Ready to transform your business with cutting-edge technology? 
-              Let's discuss your project and explore the possibilities.
+              Let&apos;s discuss your project and explore the possibilities.
             </p>
           </div>
         </section>
@@ -186,7 +186,7 @@ export default function Contact(): React.JSX.Element {
                   answer: "We typically begin new projects within 1-2 weeks of contract signing. Rush projects can be accommodated with additional planning."
                 },
                 {
-                  question: "What's your typical project timeline?",
+                  question: "What&apos;s your typical project timeline?",
                   answer: "Project timelines vary based on complexity. Simple websites take 2-4 weeks, while complex AI implementations can take 3-6 months."
                 },
                 {
@@ -224,7 +224,7 @@ export default function Contact(): React.JSX.Element {
               </div>
               
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Let's Build Something Amazing Together
+                Let&apos;s Build Something Amazing Together
               </h2>
               
               <p className="text-xl text-gray-300 mb-8">

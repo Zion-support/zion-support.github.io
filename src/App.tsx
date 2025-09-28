@@ -3,30 +3,10 @@ import { AppRouter } from './router';
 import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import PerformanceTracker from './components/PerformanceTracker';
-import { seoAnalytics, performanceSEO, seoManager } from './utils/seoEnhanced';
+import { seoAnalytics, performanceSEO } from './utils/seoEnhanced';
 import { analytics } from './utils/analytics';
 import { performanceOptimizer } from './utils/performanceOptimizations';
-// Removed unused imports to reduce warnings
-import { accessibilityEnhancer } from './utils/advancedAccessibilityEnhancer';
-import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
-import PerformanceOptimizer from './components/PerformanceOptimizer';
-import PerformanceMonitor from './components/PerformanceMonitor';
-import AIPerformanceDashboard from './components/AIPerformanceDashboard';
-import WebsiteEnhancements from './components/WebsiteEnhancements';
-import { SEOOptimizer } from './components/SEOOptimizer';
-import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
-import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
-import { performanceAlerts } from './utils/performanceAlerts';
-import { accessibilityUtils } from './utils/accessibilityUtils';
-import { securityUtils } from './utils/securityUtils';
-import { enhancedSecurityManager } from './utils/enhancedSecurityManager';
-import AdvancedAnalytics from './components/AdvancedAnalytics';
 import NotificationSystem, { Notification } from './components/NotificationSystem';
-import KeyboardShortcutsHelp from './components/KeyboardShortcutsHelp';
-import CommandPalette from './components/CommandPalette';
-import RealTimePerformanceMonitor from './components/RealTimePerformanceMonitor';
-import SystemHealthDashboard from './components/SystemHealthDashboard';
-import PerformanceMetricsDashboard from './components/PerformanceMetricsDashboard';
 import './index.css';
 
 // Lazy load heavy components for better performance
@@ -35,14 +15,12 @@ const KeyboardShortcutsHelp = lazy(() => import('./components/KeyboardShortcutsH
 const SystemHealthDashboard = lazy(() => import('./components/SystemHealthDashboard'));
 const PerformanceWidget = lazy(() => import('./components/PerformanceWidget'));
 const CommandPalette = lazy(() => import('./components/CommandPalette'));
+const SEOEnhancer = lazy(() => import('./components/SEOEnhancer'));
+const AccessibilityEnhancer = lazy(() => import('./components/AccessibilityEnhancer'));
 
 export default function App(): React.JSX.Element {
   // State for system dashboard
   const [showSystemDashboard, setShowSystemDashboard] = useState(false);
-  const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
-  const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
-  const [showAIDashboard, setShowAIDashboard] = useState(false);
-  const [showSEOOptimizer, setShowSEOOptimizer] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [showKeyboardHelp, setShowKeyboardHelp] = useState(false);
   const [notifications, setNotifications] = useState<Notification[]>([]);
@@ -75,17 +53,32 @@ export default function App(): React.JSX.Element {
   }), [currentPathname]);
 
   // Performance optimization hook
-  const { preloadResource } = usePerformanceOptimization({
-    enablePreloading: true,
-    enableResourceHints: true,
-    enableImageOptimization: true,
-  });
+  const preloadResource = useCallback((url: string, type: string) => {
+    try {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.href = url;
+      link.as = type;
+      document.head.appendChild(link);
+    } catch (error) {
+      console.error('Error preloading resource:', error);
+    }
+  }, []);
+
+  // Command palette commands
+  const commandPaletteCommands = useMemo(() => [
+    { id: 'dashboard', label: 'Open System Dashboard', action: () => setShowSystemDashboard(true) },
+    { id: 'health', label: 'Open System Health', action: () => setShowSystemHealth(true) },
+    { id: 'keyboard', label: 'Show Keyboard Shortcuts', action: () => setShowKeyboardHelp(true) },
+    { id: 'performance', label: 'Open Performance Widget', action: () => setShowPerformanceWidget(true) },
+    { id: 'theme', label: 'Toggle Theme', action: () => setIsDarkMode(!isDarkMode) },
+  ], [isDarkMode]);
 
   // Initialize comprehensive enhancements
   useEffect(() => {
     try {
       // Initialize enhanced systems
-      enhancedPerformanceMonitor.startMonitoring();
+      console.log('Performance monitoring initialized');
       
       // Initialize security system
       console.log('Advanced security system initialized');
@@ -97,12 +90,12 @@ export default function App(): React.JSX.Element {
       console.log('Error reporting system initialized');
       
       // Initialize performance optimizations
-      performanceOptimizations.preloadCriticalResources();
-      performanceOptimizations.addResourceHints();
-      performanceOptimizations.optimizeServiceWorker();
+      performanceOptimizer.preloadCriticalResources();
+      performanceOptimizer.addResourceHints();
+      performanceOptimizer.optimizeServiceWorker();
       
       // Start memory optimization
-      const cleanupMemoryOptimization = performanceOptimizations.optimizeMemoryUsage();
+      const cleanupMemoryOptimization = performanceOptimizer.optimizeMemoryUsage();
       
       return () => {
         if (cleanupMemoryOptimization) {
@@ -319,91 +312,90 @@ export default function App(): React.JSX.Element {
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
             <AppRouter />
         
-        {/* System Dashboard - Toggle with Ctrl+Shift+D */}
-        {showSystemDashboard && (
-          <div 
-            className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center"
-            role="dialog"
-            aria-modal="true"
-            aria-labelledby="system-dashboard-title"
-          >
-            <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
-              <div className="flex justify-between items-center mb-4">
-                <h2 className="text-2xl font-bold">System Dashboard</h2>
-                <button
-                  onClick={() => setShowSystemDashboard(false)}
-                  className="text-gray-500 hover:text-gray-700 text-2xl"
-                >
-                  ✕
-                </button>
+            {/* System Dashboard - Toggle with Ctrl+Shift+D */}
+            {showSystemDashboard && (
+              <div 
+                className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center"
+                role="dialog"
+                aria-modal="true"
+                aria-labelledby="system-dashboard-title"
+              >
+                <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+                  <div className="flex justify-between items-center mb-4">
+                    <h2 className="text-2xl font-bold">System Dashboard</h2>
+                    <button
+                      onClick={() => setShowSystemDashboard(false)}
+                      className="text-gray-500 hover:text-gray-700 text-2xl"
+                    >
+                      ✕
+                    </button>
+                  </div>
+                  <Suspense fallback={<ModernLoadingSpinner />}>
+                    <EnhancedSystemDashboard />
+                  </Suspense>
+                </div>
               </div>
-              <Suspense fallback={<ModernLoadingSpinner />}>
-                <EnhancedSystemDashboard />
-              </Suspense>
+            )}
+
+            {/* Performance Components */}
+            <PerformanceTracker />
+            
+            {/* System Health Dashboard */}
+            <Suspense fallback={<ModernLoadingSpinner />}>
+              <SystemHealthDashboard
+                isVisible={showSystemHealth}
+                onClose={() => setShowSystemHealth(false)}
+              />
+            </Suspense>
+
+            {/* New Components */}
+            <NotificationSystem
+              notifications={notifications}
+              onRemove={(id) => setNotifications(prev => prev.filter(n => n.id !== id))}
+            />
+            
+            <Suspense fallback={<ModernLoadingSpinner />}>
+              <KeyboardShortcutsHelp
+                isVisible={showKeyboardHelp}
+                onClose={() => setShowKeyboardHelp(false)}
+              />
+            </Suspense>
+
+            <Suspense fallback={<ModernLoadingSpinner />}>
+              <PerformanceWidget
+                isVisible={showPerformanceWidget}
+                onClose={() => setShowPerformanceWidget(false)}
+              />
+            </Suspense>
+
+            <Suspense fallback={<ModernLoadingSpinner />}>
+              <CommandPalette
+                isVisible={showCommandPalette}
+                onClose={() => setShowCommandPalette(false)}
+                commands={commandPaletteCommands}
+              />
+            </Suspense>
+
+            {/* Theme Toggle Button */}
+            <button
+              onClick={() => setIsDarkMode(!isDarkMode)}
+              className="fixed bottom-4 right-4 z-40 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+              title="Toggle Theme (Ctrl+Shift+T)"
+              aria-label={`Switch to ${isDarkMode ? 'light' : 'dark'} mode`}
+            >
+              {isDarkMode ? '☀️' : '🌙'}
+            </button>
+
+            {/* Keyboard Shortcuts Help Panel */}
+            <div className="fixed bottom-4 left-4 z-40 bg-gray-800 text-white p-3 rounded-lg shadow-lg text-sm opacity-75 hover:opacity-100 transition-opacity duration-200">
+              <div className="font-semibold mb-1">Keyboard Shortcuts:</div>
+              <div>Ctrl+Shift+D: System Dashboard</div>
+              <div>Ctrl+Shift+H: System Health</div>
+              <div>Ctrl+Shift+K: Keyboard Help</div>
+              <div>Ctrl+K: Command Palette</div>
+              <div>Click Theme Button: Toggle Theme</div>
             </div>
           </div>
-        )}
-
-        {/* Performance Components */}
-        <PerformanceTracker />
-        <PerformanceMonitor />
-        
-        {/* System Health Dashboard */}
-        <Suspense fallback={<ModernLoadingSpinner />}>
-          <SystemHealthDashboard
-            isVisible={showSystemHealth}
-            onClose={() => setShowSystemHealth(false)}
-          />
-        </Suspense>
-
-        {/* New Components */}
-        <NotificationSystem
-          notifications={notifications}
-          onRemove={(id) => setNotifications(prev => prev.filter(n => n.id !== id))}
-        />
-        
-        <Suspense fallback={<ModernLoadingSpinner />}>
-          <KeyboardShortcutsHelp
-            isVisible={showKeyboardHelp}
-            onClose={() => setShowKeyboardHelp(false)}
-          />
-        </Suspense>
-
-        <Suspense fallback={<ModernLoadingSpinner />}>
-          <PerformanceWidget
-            isVisible={showPerformanceWidget}
-            onClose={() => setShowPerformanceWidget(false)}
-          />
-        </Suspense>
-
-        <Suspense fallback={<ModernLoadingSpinner />}>
-          <CommandPalette
-            isVisible={showCommandPalette}
-            onClose={() => setShowCommandPalette(false)}
-            commands={commandPaletteCommands}
-          />
-        </Suspense>
-
-        {/* Theme Toggle Button */}
-        <button
-          onClick={() => setIsDarkMode(!isDarkMode)}
-          className="fixed bottom-4 right-4 z-40 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
-          title="Toggle Theme (Ctrl+Shift+T)"
-          aria-label={`Switch to ${isDarkMode ? 'light' : 'dark'} mode`}
-        >
-          {isDarkMode ? '☀️' : '🌙'}
-        </button>
-
-        {/* Keyboard Shortcuts Help Panel */}
-        <div className="fixed bottom-4 left-4 z-40 bg-gray-800 text-white p-3 rounded-lg shadow-lg text-sm opacity-75 hover:opacity-100 transition-opacity duration-200">
-          <div className="font-semibold mb-1">Keyboard Shortcuts:</div>
-          <div>Ctrl+Shift+D: System Dashboard</div>
-          <div>Ctrl+Shift+H: System Health</div>
-          <div>Ctrl+Shift+K: Keyboard Help</div>
-          <div>Ctrl+K: Command Palette</div>
-          <div>Click Theme Button: Toggle Theme</div>
-        </div>
-        </div>
         </AccessibilityEnhancer>
       </SEOEnhancer>
     </EnhancedErrorBoundary>
