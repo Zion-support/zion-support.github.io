@@ -21,6 +21,9 @@ import PerformanceOptimizer from './components/PerformanceOptimizer';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import SEOOptimizer from './components/SEOOptimizer';
 import AIPerformanceDashboard from './components/AIPerformanceDashboard';
+import WebsiteEnhancements from './components/WebsiteEnhancements';
+import ComprehensivePerformanceMonitor from './components/ComprehensivePerformanceMonitor';
+import AdvancedSEOOptimizer from './components/AdvancedSEOOptimizer';
 import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
 import { enhancedAnalytics } from './utils/enhancedAnalytics';
 import { advancedCacheSystem } from './utils/advancedCacheSystem';
@@ -39,6 +42,9 @@ export default function App(): React.JSX.Element {
   const [showSEOOptimizer, setShowSEOOptimizer] = useState(false);
   const [showRealTimeMetrics, setShowRealTimeMetrics] = useState(false);
   const [showAccessibilityPanel, setShowAccessibilityPanel] = useState(false);
+  const [showWebsiteEnhancements, setShowWebsiteEnhancements] = useState(false);
+  const [showComprehensivePerformance, setShowComprehensivePerformance] = useState(false);
+  const [showAdvancedSEO, setShowAdvancedSEO] = useState(false);
 
   // Engagement tracking data
   const engagementData = useMemo(() => ({
@@ -124,6 +130,18 @@ export default function App(): React.JSX.Element {
         case 'h':
           event.preventDefault();
           setShowAccessibilityPanel(prev => !prev);
+          break;
+        case 'w':
+          event.preventDefault();
+          setShowWebsiteEnhancements(prev => !prev);
+          break;
+        case 'c':
+          event.preventDefault();
+          setShowComprehensivePerformance(prev => !prev);
+          break;
+        case 'e':
+          event.preventDefault();
+          setShowAdvancedSEO(prev => !prev);
           break;
       }
     }
@@ -304,6 +322,24 @@ export default function App(): React.JSX.Element {
             <AccessibilityEnhancements />
           </div>
         )}
+
+        {/* Website Enhancements */}
+        <WebsiteEnhancements 
+          isVisible={showWebsiteEnhancements} 
+          onClose={() => setShowWebsiteEnhancements(false)} 
+        />
+
+        {/* Comprehensive Performance Monitor */}
+        <ComprehensivePerformanceMonitor 
+          isVisible={showComprehensivePerformance} 
+          onClose={() => setShowComprehensivePerformance(false)} 
+        />
+
+        {/* Advanced SEO Optimizer */}
+        <AdvancedSEOOptimizer 
+          isVisible={showAdvancedSEO} 
+          onClose={() => setShowAdvancedSEO(false)} 
+        />
 
         {/* Performance Tracker */}
         <PerformanceTracker />
