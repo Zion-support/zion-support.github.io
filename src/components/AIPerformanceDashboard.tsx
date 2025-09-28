@@ -11,7 +11,6 @@ interface PerformanceMetrics {
   criticalErrorsToday: number;
   userImpactScore: number;
   avgResolutionTime: number;
-  [key: string]: unknown;
 }
 
 interface AIInsights {
@@ -21,20 +20,19 @@ interface AIInsights {
     category: string;
     trend: 'increasing' | 'decreasing' | 'stable';
   }>;
-  [key: string]: unknown;
 }
 
 interface ErrorReport {
   severity: string;
-  lastOccurrence: string | Date;
   message: string;
+  lastOccurrence: string | number;
+  occurrenceCount: number;
   context: {
     component?: string;
     action?: string;
   };
   aiPredictedImpact?: number;
   resolutionSuggestions?: string[];
-  [key: string]: unknown;
 }
 
 const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisible, onClose }) => {
@@ -228,7 +226,7 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
                             {error.severity}
                           </span>
                           <span className="text-xs text-gray-500">
-                            {new Date(error.lastOccurrence).toLocaleString()}
+                            {new Date(typeof error.lastOccurrence === 'string' ? error.lastOccurrence : error.lastOccurrence).toLocaleString()}
                           </span>
                         </div>
                         <h4 className="font-medium text-gray-800 mb-1">{error.message}</h4>

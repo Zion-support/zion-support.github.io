@@ -1,14 +1,16 @@
-import React, { useEffect, useCallback, useMemo, useState } from 'react';
+import React, { useCallback, useState, useEffect, useMemo } from 'react';
 import { AppRouter } from './router';
 import { useAppInitialization } from './hooks/useAppInitialization';
 import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
+import { seoAnalytics, performanceSEO } from './utils/seoEnhanced';
+import { analytics } from './utils/analytics';
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
 import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import PerformanceMonitor from './components/PerformanceMonitor';
 // import SEOOptimizer from './components/SEOOptimizer';
-import { analytics } from './utils/analytics';
+import AIPerformanceDashboard from './components/AIPerformanceDashboard';
 import { seoAnalytics, performanceSEO, seoManager } from './utils/seoEnhanced';
 import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
 import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
@@ -24,12 +26,25 @@ export default function App(): React.JSX.Element {
   const [showSystemDashboard, setShowSystemDashboard] = useState(false);
   const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
   const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
-
+  const [showAIDashboard, setShowAIDashboard] = useState(false);
   // Engagement tracking data
   const engagementData = useMemo(() => ({
     startTime: Date.now(),
     scrollDepth: 0,
     clicks: 0
+  }), []);
+
+  // Simple SEO manager
+  const seoManager = useMemo(() => ({
+    updateMetaTags: (data: typeof seoData) => {
+      if (typeof document !== 'undefined') {
+        document.title = data.title;
+        const metaDescription = document.querySelector('meta[name="description"]');
+        if (metaDescription) {
+          metaDescription.setAttribute('content', data.description);
+        }
+      }
+    }
   }), []);
   // Initialize app with custom configuration
   const { isLoading, loadingProgress, handleScroll, handleClick, trackEngagement } = useAppInitialization({
@@ -63,9 +78,15 @@ export default function App(): React.JSX.Element {
       event.preventDefault();
       setShowPerformanceMonitor(prev => !prev);
     }
+    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'A') {
+      event.preventDefault();
+      setShowAIDashboard(prev => !prev);
+    }
   }, []);
 
-  // Enhanced track engagement function
+  // Get SEO data using current pathname
+  const seoData = useSEOData(currentPathname);
+  // Enhanced engagement tracking function
   const enhancedTrackEngagement = useCallback(() => {
     const timeOnPage = Date.now() - engagementData.startTime;
     seoAnalytics.trackUserEngagement(window.location.pathname, {
@@ -76,18 +97,33 @@ export default function App(): React.JSX.Element {
     trackEngagement();
   }, [engagementData.clicks, engagementData.scrollDepth, engagementData.startTime, trackEngagement]);
 
-  // Memoize the SEO data to prevent unnecessary re-renders
-  const seoData = useMemo(() => ({
-    title: 'Zion Tech Group - Leading AI & Technology Solutions',
-    description: 'Cutting-edge AI, quantum computing, and digital transformation solutions for modern enterprises. Expert consulting, cloud services, and innovative technology implementations.',
-    keywords: ['AI solutions', 'quantum computing', 'digital transformation', 'cloud services', 'enterprise technology', 'machine learning', 'automation', 'blockchain'],
-    ogType: 'website',
-    ogUrl: typeof window !== 'undefined' ? window.location.href : '',
-    ogImage: '/og-image.png',
-    twitterCard: 'summary_large_image' as const
-  }), []);
-
-  // Initialize comprehensive enhancements
+  // Update meta tags function
+  const updateMetaTags = useCallback((data: {
+    title: string;
+    description: string;
+    keywords: string[];
+    ogType: string;
+    ogUrl: string;
+    ogImage: string;
+    twitterCard: string;
+  }) => {
+    if (typeof window !== 'undefined') {
+      // Update title
+      document.title = data.title;
+      
+      // Update meta description
+      let metaDescription = document.querySelector('meta[name="description"]');
+      if (!metaDescription) {
+        metaDescription = document.createElement('meta');
+        metaDescription.setAttribute('name', 'description');
+        document.head.appendChild(metaDescription);
+      }
+      if (metaDescription) {
+        metaDescription.setAttribute('content', data.description);
+      }
+    }
+  }, []);
+  
   useEffect(() => {
     // Get comprehensive enhancements (initialization happens in constructor)
     getComprehensiveEnhancements();
@@ -149,6 +185,44 @@ export default function App(): React.JSX.Element {
     document.addEventListener('click', handleClick, { passive: true });
     document.addEventListener('keydown', handleKeyDown);
 
+    // Initialize basic systems
+    analytics.initialize();
+    
+    // Initialize SEO analytics
+    seoAnalytics.trackPageView(window.location.pathname);
+    
+    // Initialize performance SEO optimizations
+    performanceSEO.optimizeImages();
+    performanceSEO.optimizeFonts();
+    performanceSEO.optimizeCSS();
+
+    // Set default SEO data using the correct method
+    seoManager.updateMetaTags(seoData);
+
+    // Update meta tags
+    updateMetaTags(seoData);
+
+    // Basic performance monitoring
+    if (typeof window !== 'undefined') {
+      console.log('🚀 Zion Tech Group App initialized');
+    }
+
+    // Use passive listeners for better performance
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    document.addEventListener('click', handleClick, { passive: true });
+  }, [handleClick, handleKeyDown, handleScroll, seoData, preloadResource, seoManager, updateMetaTags]);
+
+  // Add keyboard event listener
+  React.useEffect(() => {
+    document.addEventListener("keydown", handleKeyDown);
+    
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [handleKeyDown]);
+
+  // Main initialization and cleanup effect
+  React.useEffect(() => {
     // Track engagement on page unload
     window.addEventListener('beforeunload', enhancedTrackEngagement);
 
@@ -241,6 +315,19 @@ export default function App(): React.JSX.Element {
             </div>
           </div>
         )}
+        {/* Performance Monitor - Toggle with Ctrl+Shift+M */}
+        <PerformanceMonitor 
+          showDashboard={showPerformanceMonitor}
+          onMetricsUpdate={(metrics) => {
+            console.log('Performance metrics:', metrics);
+          }}
+        />
+        
+        {/* AI Performance Dashboard - Toggle with Ctrl+Shift+A */}
+        <AIPerformanceDashboard
+          isVisible={showAIDashboard}
+          onClose={() => setShowAIDashboard(false)}
+        />
       </div>
     </EnhancedErrorBoundary>
   );
