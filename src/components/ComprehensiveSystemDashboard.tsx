@@ -93,9 +93,9 @@ const ComprehensiveSystemDashboard: React.FC<SystemDashboardProps> = ({
     return {
       performance: {
         score: perfScore,
-        lcp: perfReport.metrics?.lcp || 0,
-        fcp: perfReport.metrics?.fcp || 0,
-        ttfb: perfReport.metrics?.ttfb || 0
+        lcp: perfReport.metrics?.largestContentfulPaint || 0,
+        fcp: perfReport.metrics?.firstContentfulPaint || 0,
+        ttfb: perfReport.metrics?.loadTime || 0
       },
       security: {
         score: securityScore,

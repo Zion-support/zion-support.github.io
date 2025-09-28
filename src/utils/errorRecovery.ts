@@ -19,6 +19,7 @@ export interface RecoveryStrategy {
 export class ErrorRecoverySystem {
   private errorCount = 0;
   private maxRetries = 3;
+  private errorHistory: ErrorContext[] = [];
 
   private strategies: RecoveryStrategy[] = [];
 
@@ -143,7 +144,7 @@ export class ErrorRecoverySystem {
   }
 
   public addRecoveryStrategy(strategy: RecoveryStrategy): void {
-    this.recoveryStrategies.push(strategy);
+    this.strategies.push(strategy);
   }
 }
 

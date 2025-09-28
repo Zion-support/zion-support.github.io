@@ -48,6 +48,9 @@ export default function App(): React.JSX.Element {
   const [showAIDashboard, setShowAIDashboard] = useState(false);
   const [showAdvancedPerformanceDashboard, setShowAdvancedPerformanceDashboard] = useState(false);
   const [showComprehensiveSystemDashboard, setShowComprehensiveSystemDashboard] = useState(false);
+  
+  // Get SEO data using the hook
+  const seoData = useSEOData(typeof window !== 'undefined' ? window.location.pathname : '/');
   const [showRealTimeMetrics, setShowRealTimeMetrics] = useState(false);
   const [showCommandPalette, setShowCommandPalette] = useState(false);
   const [showKeyboardHelp, setShowKeyboardHelp] = useState(false);
