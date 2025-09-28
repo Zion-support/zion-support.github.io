@@ -5,7 +5,6 @@ import {
   Shield, 
   Globe, 
   Rocket, 
-  Target, 
   Users, 
   CheckCircle,
   ArrowRight,
@@ -18,7 +17,7 @@ import {
 
 const ModernFeatures = () => {
   const [currentFeature, setCurrentFeature] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
+  const [, setIsVisible] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
@@ -26,7 +25,7 @@ const ModernFeatures = () => {
       setCurrentFeature((prev) => (prev + 1) % features.length);
     }, 3000);
     return () => clearInterval(interval);
-  }, []);
+  }, [features.length]);
 
   const features = [
     {

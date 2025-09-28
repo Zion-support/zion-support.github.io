@@ -14,7 +14,7 @@ import {
 const EnhancedTestimonials = () => {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const [isPlaying, setIsPlaying] = useState(true);
-  const [isVisible, setIsVisible] = useState(false);
+  const [, setIsVisible] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
@@ -28,7 +28,7 @@ const EnhancedTestimonials = () => {
     }, 5000);
     
     return () => clearInterval(interval);
-  }, [isPlaying]);
+  }, [isPlaying, testimonials.length]);
 
   const testimonials = [
     {
@@ -105,7 +105,7 @@ const EnhancedTestimonials = () => {
             What Our Clients Say
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Don't just take our word for it. Here's what industry leaders say about 
+            Don&apos;t just take our word for it. Here&apos;s what industry leaders say about 
             working with Zion Tech Group.
           </p>
         </div>
@@ -125,7 +125,7 @@ const EnhancedTestimonials = () => {
                 <Quote className="w-12 h-12 text-blue-400 mb-4" />
                 
                 <blockquote className="text-xl md:text-2xl text-white font-medium leading-relaxed mb-6">
-                  "{testimonials[currentTestimonial].text}"
+                  &ldquo;{testimonials[currentTestimonial].text}&rdquo;
                 </blockquote>
                 
                 <div className="flex items-center space-x-4">
