@@ -1,8 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-<<<<<<< HEAD
-=======
 import { enhancedErrorHandler } from '../utils/enhancedErrorHandling';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-7cb6
 
 interface AIPerformanceDashboardProps {
   isVisible: boolean;
@@ -10,134 +7,125 @@ interface AIPerformanceDashboardProps {
 }
 
 interface PerformanceMetrics {
-  errorRate: number;
-  criticalErrorsToday: number;
-  userImpactScore: number;
-  avgResolutionTime: number;
-  [key: string]: unknown;
+  loadTime: number;
+  renderTime: number;
+  memoryUsage: number;
+  fps: number;
+  lcp: number;
+  fid: number;
+  cls: number;
+  ttfb: number;
 }
 
-<<<<<<< HEAD
 interface AIInsights {
   predictedHighRiskActions: string[];
   recommendedImprovements: string[];
   errorTrends: Array<{
     category: string;
+    count: number;
     trend: 'increasing' | 'decreasing' | 'stable';
   }>;
-  [key: string]: unknown;
+  performanceScore: number;
+  optimizationSuggestions: string[];
 }
 
 interface ErrorReport {
-  severity: string;
-=======
-interface ErrorReport {
   id: string;
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-7cb6
   message: string;
-  lastOccurrence: string | Date;
-  occurrenceCount: number;
-  context: {
-    component?: string;
-    action?: string;
-  };
-  aiPredictedImpact?: number;
-  resolutionSuggestions?: string[];
-  [key: string]: unknown;
+  stack: string;
+  timestamp: number;
+  severity: 'low' | 'medium' | 'high' | 'critical';
+  category: string;
+  userAgent: string;
+  url: string;
+  lineNumber?: number;
+  columnNumber?: number;
 }
 
 const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisible, onClose }) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-<<<<<<< HEAD
   const [insights, setInsights] = useState<AIInsights | null>(null);
   const [errors, setErrors] = useState<ErrorReport[]>([]);
   const [isLoading, setIsLoading] = useState(false);
-=======
-  const [insights, setInsights] = useState<{
-    predictedHighRiskActions: string[];
-    recommendedImprovements: string[];
-    errorTrends: Array<{ category: string; trend: string }>;
-  } | null>(null);
-  const [errorReports, setErrorReports] = useState<ErrorReport[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-7cb6
+
+  // Mock data for demonstration
+  const mockMetrics: PerformanceMetrics = {
+    loadTime: 1250,
+    renderTime: 850,
+    memoryUsage: 45.2,
+    fps: 58,
+    lcp: 2100,
+    fid: 85,
+    cls: 0.05,
+    ttfb: 180
+  };
+
+  const mockInsights: AIInsights = {
+    predictedHighRiskActions: [
+      'Large image files detected',
+      'Unused CSS rules found',
+      'JavaScript bundle size exceeds threshold'
+    ],
+    recommendedImprovements: [
+      'Implement image compression',
+      'Remove unused CSS',
+      'Enable code splitting',
+      'Add service worker caching'
+    ],
+    errorTrends: [
+      { category: 'JavaScript', count: 12, trend: 'decreasing' },
+      { category: 'Network', count: 3, trend: 'stable' },
+      { category: 'Rendering', count: 8, trend: 'increasing' }
+    ],
+    performanceScore: 78,
+    optimizationSuggestions: [
+      'Consider lazy loading for below-the-fold images',
+      'Implement critical CSS inlining',
+      'Add resource preloading for critical assets'
+    ]
+  };
+
+  const mockErrorReports: ErrorReport[] = [
+    {
+      id: '1',
+      message: 'Uncaught TypeError: Cannot read property of undefined',
+      stack: 'Error: Cannot read property of undefined\n    at Component.render (App.js:45:12)',
+      timestamp: Date.now() - 3600000,
+      severity: 'high',
+      category: 'JavaScript',
+      userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+      url: 'https://example.com/app',
+      lineNumber: 45,
+      columnNumber: 12
+    },
+    {
+      id: '2',
+      message: 'Failed to load resource: net::ERR_CONNECTION_TIMED_OUT',
+      stack: '',
+      timestamp: Date.now() - 7200000,
+      severity: 'medium',
+      category: 'Network',
+      userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+      url: 'https://api.example.com/data'
+    }
+  ];
 
   const loadPerformanceData = useCallback(async () => {
     setIsLoading(true);
     try {
-      // Simulate AI-powered performance analysis
-      const mockMetrics: PerformanceMetrics = {
-        errorRate: Math.random() * 5,
-        criticalErrorsToday: Math.floor(Math.random() * 10),
-        userImpactScore: Math.random() * 100,
-        avgResolutionTime: Math.random() * 120,
-      };
-
-      const mockInsights: AIInsights = {
-        predictedHighRiskActions: [
-          'High memory usage detected in component rendering',
-          'Potential race condition in async operations',
-          'Unoptimized image loading may impact LCP'
-        ],
-        recommendedImprovements: [
-          'Implement React.memo for expensive components',
-          'Add error boundaries to prevent cascade failures',
-          'Optimize bundle size with code splitting',
-          'Add request timeout configuration',
-          'Consider implementing offline fallback'
-        ],
-        errorTrends: [
-          { category: 'API', trend: 'stable' as const },
-          { category: 'UI', trend: 'decreasing' as const },
-          { category: 'Database', trend: 'stable' as const }
-        ]
-      };
-
-      const mockErrorReports: ErrorReport[] = [
-        {
-          id: '1',
-          severity: 'high',
-          message: 'Failed to load user data',
-          lastOccurrence: new Date(),
-          occurrenceCount: 15,
-          context: { component: 'UserProfile', action: 'fetchUserData' },
-          aiPredictedImpact: 75,
-          resolutionSuggestions: [
-            'Check API endpoint availability',
-            'Implement retry logic with exponential backoff',
-            'Add fallback data loading'
-          ]
-        },
-        {
-          id: '2',
-          severity: 'medium',
-          message: 'Slow rendering detected',
-          lastOccurrence: new Date(Date.now() - 300000),
-          occurrenceCount: 8,
-          context: { component: 'DataTable', action: 'render' },
-          aiPredictedImpact: 45,
-          resolutionSuggestions: [
-            'Implement virtual scrolling',
-            'Add loading states',
-            'Optimize data processing'
-          ]
-        }
-      ];
-
+      // Simulate API call
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      
       setMetrics(mockMetrics);
       setInsights(mockInsights);
-<<<<<<< HEAD
       setErrors(mockErrorReports);
     } catch (error) {
       console.error('Failed to load performance data:', error);
-=======
-      setErrorReports(mockErrorReports);
-    } catch (error) {
       enhancedErrorHandler.handleError(error as Error, {
-        component: 'AIPerformanceDashboard',
-        action: 'loadPerformanceData'
+        context: 'AIPerformanceDashboard',
+        userId: 'anonymous',
+        sessionId: 'session-123'
       });
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-7cb6
     } finally {
       setIsLoading(false);
     }
@@ -149,25 +137,16 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
     }
   }, [isVisible, loadPerformanceData]);
 
-<<<<<<< HEAD
   if (!isVisible) return null;
 
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-7cb6
   const getSeverityColor = (severity: string) => {
     switch (severity) {
       case 'critical': return 'text-red-600 bg-red-100';
-      case 'high': return 'text-orange-600 bg-orange-100';
+      case 'high': return 'text-red-500 bg-red-50';
       case 'medium': return 'text-yellow-600 bg-yellow-100';
-      case 'low': return 'text-blue-600 bg-blue-100';
+      case 'low': return 'text-green-600 bg-green-100';
       default: return 'text-gray-600 bg-gray-100';
     }
-  };
-
-  const getImpactColor = (impact: number) => {
-    if (impact >= 70) return 'text-red-500';
-    if (impact >= 40) return 'text-yellow-500';
-    return 'text-green-500';
   };
 
   const getTrendIcon = (trend: string) => {
@@ -180,153 +159,144 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
   };
 
   return (
-    <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center p-4">
-      <div className="bg-white rounded-lg shadow-xl max-w-6xl w-full max-h-[90vh] overflow-y-auto">
-        <div className="flex justify-between items-center p-6 border-b">
-          <h2 className="text-2xl font-bold text-gray-900">🤖 AI Performance Dashboard</h2>
+    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+      <div className="bg-white dark:bg-gray-800 rounded-lg shadow-xl max-w-6xl w-full mx-4 max-h-[90vh] overflow-hidden">
+        {/* Header */}
+        <div className="flex items-center justify-between p-6 border-b border-gray-200 dark:border-gray-700">
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
+            🤖 AI Performance Dashboard
+          </h2>
           <button
             onClick={onClose}
-            className="text-gray-500 hover:text-gray-700 text-2xl"
-            aria-label="Close dashboard"
+            className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
           >
-            ×
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
           </button>
         </div>
 
-        <div className="p-6">
+        {/* Content */}
+        <div className="p-6 overflow-y-auto max-h-[calc(90vh-120px)]">
           {isLoading ? (
-            <div className="flex items-center justify-center py-12">
-              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500"></div>
+            <div className="flex items-center justify-center h-64">
+              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
             </div>
           ) : (
-            <div className="space-y-6">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
               {/* Performance Metrics */}
-              {metrics && (
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-                  <div className="bg-blue-50 p-4 rounded-lg">
-                    <h3 className="text-sm font-medium text-blue-600">Error Rate</h3>
-                    <p className="text-2xl font-bold text-blue-900">{metrics.errorRate.toFixed(2)}%</p>
+              <div className="space-y-4">
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white">📊 Performance Metrics</h3>
+                {metrics && (
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg">
+                      <h4 className="text-sm font-medium text-blue-600 dark:text-blue-400">Load Time</h4>
+                      <p className="text-2xl font-bold text-blue-900 dark:text-blue-100">{metrics.loadTime}ms</p>
+                    </div>
+                    <div className="bg-green-50 dark:bg-green-900/20 p-4 rounded-lg">
+                      <h4 className="text-sm font-medium text-green-600 dark:text-green-400">Memory Usage</h4>
+                      <p className="text-2xl font-bold text-green-900 dark:text-green-100">{metrics.memoryUsage}MB</p>
+                    </div>
+                    <div className="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-lg">
+                      <h4 className="text-sm font-medium text-purple-600 dark:text-purple-400">FPS</h4>
+                      <p className="text-2xl font-bold text-purple-900 dark:text-purple-100">{metrics.fps}</p>
+                    </div>
+                    <div className="bg-orange-50 dark:bg-orange-900/20 p-4 rounded-lg">
+                      <h4 className="text-sm font-medium text-orange-600 dark:text-orange-400">LCP</h4>
+                      <p className="text-2xl font-bold text-orange-900 dark:text-orange-100">{metrics.lcp}ms</p>
+                    </div>
                   </div>
-                  <div className="bg-red-50 p-4 rounded-lg">
-                    <h3 className="text-sm font-medium text-red-600">Critical Errors Today</h3>
-                    <p className="text-2xl font-bold text-red-900">{metrics.criticalErrorsToday}</p>
-                  </div>
-                  <div className="bg-yellow-50 p-4 rounded-lg">
-                    <h3 className="text-sm font-medium text-yellow-600">User Impact Score</h3>
-                    <p className="text-2xl font-bold text-yellow-900">{metrics.userImpactScore.toFixed(0)}</p>
-                  </div>
-                  <div className="bg-green-50 p-4 rounded-lg">
-                    <h3 className="text-sm font-medium text-green-600">Avg Resolution Time</h3>
-                    <p className="text-2xl font-bold text-green-900">{metrics.avgResolutionTime.toFixed(0)}m</p>
-                  </div>
-                </div>
-              )}
+                )}
+              </div>
 
               {/* AI Insights */}
-              {insights && (
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                  <div className="bg-gray-50 p-4 rounded-lg">
-                    <h3 className="text-lg font-semibold text-gray-900 mb-3">🔮 AI Predictions</h3>
-                    <div className="space-y-2">
-                      {insights.predictedHighRiskActions.map((action, index) => (
-                        <div key={index} className="text-sm text-gray-700 bg-yellow-100 p-2 rounded">
-                          ⚠️ {action}
+              <div className="space-y-4">
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white">🧠 AI Insights</h3>
+                {insights && (
+                  <div className="space-y-4">
+                    <div className="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
+                      <h4 className="font-medium text-gray-900 dark:text-white mb-2">Performance Score</h4>
+                      <div className="flex items-center">
+                        <div className="flex-1 bg-gray-200 dark:bg-gray-600 rounded-full h-2 mr-3">
+                          <div 
+                            className="bg-blue-600 h-2 rounded-full" 
+                            style={{ width: `${insights.performanceScore}%` }}
+                          ></div>
                         </div>
-                      ))}
+                        <span className="text-sm font-medium text-gray-900 dark:text-white">{insights.performanceScore}/100</span>
+                      </div>
                     </div>
-                  </div>
 
-                  <div className="bg-gray-50 p-4 rounded-lg">
-                    <h3 className="text-lg font-semibold text-gray-900 mb-3">💡 AI Recommendations</h3>
-                    <div className="space-y-2">
-                      {insights.recommendedImprovements.map((improvement, index) => (
-                        <div key={index} className="text-sm text-gray-700 bg-blue-100 p-2 rounded">
-                          ✨ {improvement}
-                        </div>
-                      ))}
+                    <div className="bg-yellow-50 dark:bg-yellow-900/20 p-4 rounded-lg">
+                      <h4 className="font-medium text-yellow-800 dark:text-yellow-200 mb-2">⚠️ High Risk Actions</h4>
+                      <ul className="text-sm text-yellow-700 dark:text-yellow-300 space-y-1">
+                        {insights.predictedHighRiskActions.map((action, index) => (
+                          <li key={index}>• {action}</li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    <div className="bg-green-50 dark:bg-green-900/20 p-4 rounded-lg">
+                      <h4 className="font-medium text-green-800 dark:text-green-200 mb-2">💡 Recommendations</h4>
+                      <ul className="text-sm text-green-700 dark:text-green-300 space-y-1">
+                        {insights.recommendedImprovements.map((improvement, index) => (
+                          <li key={index}>• {improvement}</li>
+                        ))}
+                      </ul>
                     </div>
                   </div>
-                </div>
-              )}
+                )}
+              </div>
 
               {/* Error Trends */}
-              {insights?.errorTrends && (
-                <div className="bg-gray-50 p-4 rounded-lg">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-3">📊 Error Trends</h3>
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div className="space-y-4">
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white">📈 Error Trends</h3>
+                {insights?.errorTrends && (
+                  <div className="space-y-3">
                     {insights.errorTrends.map((trend, index) => (
-                      <div key={index} className="bg-white p-3 rounded border">
-                        <div className="flex items-center justify-between">
-                          <span className="font-medium">{trend.category}</span>
+                      <div key={index} className="flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                        <span className="text-gray-900 dark:text-white">{trend.category}</span>
+                        <div className="flex items-center space-x-2">
+                          <span className="text-sm text-gray-600 dark:text-gray-400">{trend.count} errors</span>
                           <span className="text-lg">{getTrendIcon(trend.trend)}</span>
                         </div>
-                        <div className="text-sm text-gray-600 capitalize">{trend.trend}</div>
                       </div>
                     ))}
                   </div>
-                </div>
-              )}
+                )}
+              </div>
 
               {/* Error Reports */}
-              <div className="bg-gray-50 p-4 rounded-lg">
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">🐛 Error Reports</h3>
+              <div className="space-y-4">
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white">🐛 Error Reports</h3>
                 <div className="space-y-3">
-<<<<<<< HEAD
                   {errors.length > 0 ? (
                     errors.map((report) => (
-                      <div key={String(report.id)} className="bg-white p-4 rounded border">
+                      <div key={report.id} className="bg-white dark:bg-gray-700 p-4 rounded border border-gray-200 dark:border-gray-600">
                         <div className="flex items-start justify-between">
                           <div className="flex-1">
-                            <div className="flex items-center gap-2 mb-2">
+                            <div className="flex items-center space-x-2 mb-2">
                               <span className={`px-2 py-1 rounded text-xs font-medium ${getSeverityColor(report.severity)}`}>
                                 {report.severity.toUpperCase()}
-=======
-                  {errorReports.length > 0 ? (
-                    errorReports.map((report) => (
-                      <div key={report.id} className="bg-white p-4 rounded border">
-                        <div className="flex justify-between items-start mb-2">
-                          <div className="flex items-center space-x-2">
-                            <span className={`px-2 py-1 rounded text-xs font-medium ${getSeverityColor(report.severity)}`}>
-                              {report.severity.toUpperCase()}
-                            </span>
-                            {report.aiPredictedImpact && (
-                              <span className={`text-sm font-medium ${getImpactColor(report.aiPredictedImpact)}`}>
-                                Impact: {report.aiPredictedImpact}%
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-7cb6
                               </span>
-                              <span className="text-sm text-gray-500">
-                                {report.occurrenceCount} occurrences
-                              </span>
-                              {report.aiPredictedImpact && (
-                                <span className={`text-sm font-medium ${getImpactColor(report.aiPredictedImpact)}`}>
-                                  Impact: {report.aiPredictedImpact}%
-                                </span>
-                              )}
+                              <span className="text-xs text-gray-500 dark:text-gray-400">{report.category}</span>
                             </div>
-                            <p className="text-gray-900 font-medium">{report.message}</p>
-                            <p className="text-sm text-gray-600 mt-1">
-                              Component: {report.context.component} | Action: {report.context.action}
+                            <p className="text-sm text-gray-900 dark:text-white font-medium mb-1">{report.message}</p>
+                            <p className="text-xs text-gray-500 dark:text-gray-400">
+                              {new Date(report.timestamp).toLocaleString()}
                             </p>
-                            {report.resolutionSuggestions && (
-                              <div className="mt-2">
-                                <p className="text-sm font-medium text-gray-700 mb-1">AI Suggestions:</p>
-                                <ul className="text-sm text-gray-600 space-y-1">
-                                  {report.resolutionSuggestions.map((suggestion, index) => (
-                                    <li key={index} className="flex items-start gap-1">
-                                      <span>•</span>
-                                      <span>{suggestion}</span>
-                                    </li>
-                                  ))}
-                                </ul>
-                              </div>
+                            {report.lineNumber && (
+                              <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+                                Line {report.lineNumber}, Column {report.columnNumber}
+                              </p>
                             )}
                           </div>
                         </div>
                       </div>
                     ))
                   ) : (
-                    <div className="text-center py-8 text-gray-500">
-                      ✨ No errors detected! Your application is running smoothly.
+                    <div className="text-center py-8 text-gray-500 dark:text-gray-400">
+                      No errors reported
                     </div>
                   )}
                 </div>
