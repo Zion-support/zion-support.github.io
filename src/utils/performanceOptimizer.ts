@@ -210,13 +210,11 @@ class AdvancedPerformanceOptimizer {
 
     const updateMemoryMetrics = () => {
       const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
-      if (memory) {
-        this.metrics.memory = {
-          usedJSHeapSize: memory.usedJSHeapSize,
-          totalJSHeapSize: memory.totalJSHeapSize,
-          jsHeapSizeLimit: memory.jsHeapSizeLimit
-        };
-      }
+      this.metrics.memory = {
+        usedJSHeapSize: memory?.usedJSHeapSize || 0,
+        totalJSHeapSize: memory?.totalJSHeapSize || 0,
+        jsHeapSizeLimit: memory?.jsHeapSizeLimit || 0
+      };
     };
 
     // Initial measurement

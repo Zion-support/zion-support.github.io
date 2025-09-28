@@ -6,12 +6,13 @@ import { seoManager, seoAnalytics, performanceSEO } from './utils/seoEnhanced';
 import { accessibilityManager } from './utils/accessibility';
 import { PerformanceMonitor, ResourceMonitor, MemoryMonitor } from './utils/performance';
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
-// import { analytics } from './utils/analytics'; // Unused import removed
+import { analytics } from './utils/analytics';
 import { seoOptimizer } from './utils/seoOptimization';
 import { cacheManager } from './utils/cacheManager';
 import { apiClient } from './utils/apiClient';
 import { notificationManager } from './utils/notificationManager';
 import { userFeedback } from './utils/userFeedbackManager';
+import PerformanceDashboard from './components/PerformanceDashboard';
 import RealTimeMonitor from './components/RealTimeMonitor';
 import { advancedPerformanceOptimizer } from './utils/performanceOptimizer';
 import { enhancedPerformanceOptimizer } from './utils/enhancedPerformance';
@@ -34,15 +35,14 @@ import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
 import performanceEnhancer from './utils/performanceEnhancements';
 import EnhancedNotificationSystem from './components/EnhancedNotificationSystem';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
-import AdvancedPerformanceMonitorComponent from './components/AdvancedPerformanceMonitor';
-import ThemeToggle from './components/ThemeToggle';
-import ScrollToTop from './components/ScrollToTop';
-import { analytics as advancedAnalytics } from './utils/advancedAnalytics';
-import AdvancedErrorBoundary from './components/AdvancedErrorBoundary';
-import PerformanceDashboard from './components/PerformanceDashboard';
+import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
+import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
+import { modernAccessibilityEnhancer } from './utils/modernAccessibilityEnhancer';
+import { modernPerformanceMonitor } from './utils/modernPerformanceMonitor';
 import './index.css';
 import './styles/notifications.css';
 import './styles/system-metrics.css';
+import './styles/modern-utilities.css';
 
 export default function App(): React.JSX.Element {
   // Initialize performance optimizations
@@ -50,13 +50,29 @@ export default function App(): React.JSX.Element {
   
   // State for system metrics dashboard
   const [showSystemDashboard, setShowSystemDashboard] = useState(false);
-  const [showPerformanceDashboard, setShowPerformanceDashboard] = useState(false);
   
   // State for performance optimizer
   const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
   
-  // State for advanced performance monitor
-  const [showAdvancedMonitor, setShowAdvancedMonitor] = useState(false);
+  // State for loading
+  const [isLoading, setIsLoading] = useState(true);
+  const [loadingProgress, setLoadingProgress] = useState(0);
+
+  // Simulate loading progress
+  useEffect(() => {
+    const loadingInterval = setInterval(() => {
+      setLoadingProgress(prev => {
+        if (prev >= 100) {
+          setIsLoading(false);
+          clearInterval(loadingInterval);
+          return 100;
+        }
+        return prev + Math.random() * 15;
+      });
+    }, 200);
+
+    return () => clearInterval(loadingInterval);
+  }, []);
 
   // Track user engagement with throttling for better performance
   const [engagementData, setEngagementData] = useState({
@@ -117,10 +133,6 @@ export default function App(): React.JSX.Element {
     if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'P') {
       event.preventDefault();
       setShowPerformanceOptimizer(prev => !prev);
-    }
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'M') {
-      event.preventDefault();
-      setShowAdvancedMonitor(prev => !prev);
     }
   }, []);
 
@@ -323,13 +335,9 @@ export default function App(): React.JSX.Element {
     
     // Advanced performance optimizer is now handled by the new utility
 
-    // Initialize advanced analytics system
-    advancedAnalytics.enable();
-    advancedAnalytics.trackEvent('page_view', {
-      page: window.location.pathname,
-      referrer: document.referrer,
-      timestamp: Date.now()
-    });
+    // Initialize analytics system
+    analytics.initialize();
+    analytics.trackPageView();
 
     // Initialize enhanced SEO optimizer
     seoOptimizer.updatePageSEO({
@@ -455,13 +463,26 @@ export default function App(): React.JSX.Element {
     };
   }, [preloadResource, recordMetric, seoData, engagementData.clicks, engagementData.scrollDepth, engagementData.startTime, handleClick, handleKeyDown, handleScroll]);
 
+  // Show loading screen while initializing
+  if (isLoading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100">
+        <ModernLoadingSpinner
+          size="xl"
+          variant="primary"
+          text="Initializing Zion Tech Group..."
+          showProgress
+          progress={loadingProgress}
+          className="animate-fade-in-scale"
+        />
+      </div>
+    );
+  }
+
   return (
-    <AdvancedErrorBoundary>
+    <EnhancedErrorBoundary>
       <AppRouter />
-      <PerformanceDashboard 
-        isVisible={showPerformanceDashboard}
-        onClose={() => setShowPerformanceDashboard(false)}
-      />
+      <PerformanceDashboard />
       <RealTimeMonitor />
       <SystemMetricsDashboard 
         isVisible={showSystemDashboard}
@@ -478,32 +499,6 @@ export default function App(): React.JSX.Element {
         isVisible={showPerformanceOptimizer}
         onClose={() => setShowPerformanceOptimizer(false)}
       />
-      <AdvancedPerformanceMonitorComponent 
-        isVisible={showAdvancedMonitor}
-        onToggle={() => setShowAdvancedMonitor(!showAdvancedMonitor)}
-      />
-      <ThemeToggle className="fixed top-4 left-4 z-50" />
-      <ScrollToTop />
-      
-      {/* Development Tools Toggle */}
-      {process.env.NODE_ENV === 'development' && (
-        <div className="fixed bottom-4 right-4 z-50 flex flex-col gap-2">
-          <button
-            onClick={() => setShowPerformanceDashboard(!showPerformanceDashboard)}
-            className="bg-blue-600 text-white px-3 py-2 rounded-lg text-sm font-medium shadow-lg hover:bg-blue-700 transition-colors"
-            title="Toggle Performance Dashboard"
-          >
-            📊 Performance
-          </button>
-          <button
-            onClick={() => setShowSystemDashboard(!showSystemDashboard)}
-            className="bg-green-600 text-white px-3 py-2 rounded-lg text-sm font-medium shadow-lg hover:bg-green-700 transition-colors"
-            title="Toggle System Dashboard"
-          >
-            🔧 System
-          </button>
-        </div>
-      )}
-    </AdvancedErrorBoundary>
+    </EnhancedErrorBoundary>
   );
 }
