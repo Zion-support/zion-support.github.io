@@ -194,23 +194,28 @@ const EnhancedNotificationSystem: React.FC<NotificationSystemProps> = ({
     });
   }, [notifications, removeNotification]);
 
-  // Play notification sound (placeholder for future implementation)
-  // const playNotificationSound = (type: Notification['type']) => {
-  //   // In a real implementation, you would play actual sound files
-  //   console.log(`🔊 Playing ${type} notification sound`);
-  // };
-
   // Cleanup timeouts on unmount
   useEffect(() => {
-    const currentTimeouts = timeoutRefs.current;
+    const timeouts = timeoutRefs.current;
     return () => {
-      currentTimeouts.forEach(timeout => clearTimeout(timeout));
+      timeouts.forEach(timeout => clearTimeout(timeout));
     };
   }, []);
 
   // Expose methods globally for easy access
   useEffect(() => {
-    (window as Window & { notificationSystem?: NotificationSystem }).notificationSystem = {
+    interface WindowWithNotificationSystem extends Window {
+      notificationSystem?: {
+        success: (title: string, message: string, options?: Partial<Notification>) => string;
+        error: (title: string, message: string, options?: Partial<Notification>) => string;
+        warning: (title: string, message: string, options?: Partial<Notification>) => string;
+        info: (title: string, message: string, options?: Partial<Notification>) => string;
+        remove: (id: string) => void;
+        clear: () => void;
+      };
+    }
+    
+    (window as WindowWithNotificationSystem).notificationSystem = {
       success: (title: string, message: string, options?: Partial<Notification>) =>
         addNotification({ type: 'success', title, message, ...options }),
       error: (title: string, message: string, options?: Partial<Notification>) =>

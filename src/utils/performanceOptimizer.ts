@@ -163,8 +163,9 @@ class AdvancedPerformanceOptimizer {
       const clsObserver = new PerformanceObserver((list) => {
         let clsValue = 0;
         for (const entry of list.getEntries()) {
-          if (!(entry as LayoutShiftEntry).hadRecentInput) {
-            clsValue += (entry as LayoutShiftEntry).value;
+          const layoutShiftEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
+          if (!layoutShiftEntry.hadRecentInput) {
+            clsValue += layoutShiftEntry.value || 0;
           }
         }
         this.metrics.webVitals.CLS = clsValue;
@@ -211,7 +212,7 @@ class AdvancedPerformanceOptimizer {
     if (!('memory' in performance)) return;
 
     const updateMemoryMetrics = () => {
-      const memory = (performance as Performance & { memory?: MemoryInfo }).memory;
+      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
       this.metrics.memory = {
         usedJSHeapSize: memory.usedJSHeapSize,
         totalJSHeapSize: memory.totalJSHeapSize,
