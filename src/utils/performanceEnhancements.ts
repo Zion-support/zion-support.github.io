@@ -397,4 +397,8 @@ export const getPerformanceRecommendations = (): string[] => {
   return performanceEnhancer.getPerformanceRecommendations();
 };
 
+export const initializePerformanceEnhancements = (): void => {
+  performanceEnhancer.getMetrics(); // This will trigger initialization
+};
+
 export default PerformanceEnhancer;

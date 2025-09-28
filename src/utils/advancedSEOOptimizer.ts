@@ -257,45 +257,6 @@ export class AdvancedSEOOptimizer {
       creator: this.config.twitterHandle,
       site: this.config.twitterHandle,
     };
-=======
-  canonicalUrl: string;
-  ogTitle?: string;
-  ogDescription?: string;
-  ogImage?: string;
-  ogUrl?: string;
-  ogType?: string;
-  twitterCard?: string;
-  twitterTitle?: string;
-  twitterDescription?: string;
-  twitterImage?: string;
-  schemaMarkup?: any;
-  robots?: string;
-  author?: string;
-  publishedTime?: string;
-  modifiedTime?: string;
-  section?: string;
-  tags?: string[];
-}
-
-class AdvancedSEOOptimizer {
-  private config: SEOConfig;
-  private isInitialized = false;
-  private currentPageData: PageSEOData | null = null;
-
-  constructor(config: Partial<SEOConfig> = {}) {
-    this.config = {
-      enableMetaOptimization: true,
-      enableStructuredData: true,
-      enableSitemapGeneration: true,
-      enableRobotsTxt: true,
-      enableCanonicalUrls: true,
-      enableOpenGraph: true,
-      enableTwitterCards: true,
-      enableSchemaMarkup: true,
-      enablePerformanceSEO: true,
-      enableAccessibilitySEO: true,
-      ...config
-    };
   }
 
   /**
@@ -425,40 +386,10 @@ class AdvancedSEOOptimizer {
     document.head.appendChild(script);
   }
 
-  /**
-   * Generate sitemap for better crawling
-   */
-  private async generateSitemap(): Promise<void> {
-    if (typeof window === 'undefined') return;
-
-    const pages = [
-      { url: '/', priority: 1.0, changefreq: 'daily' },
-      { url: '/about', priority: 0.8, changefreq: 'monthly' },
-      { url: '/services', priority: 0.9, changefreq: 'weekly' },
-      { url: '/contact', priority: 0.7, changefreq: 'monthly' },
-      { url: '/blog', priority: 0.8, changefreq: 'weekly' },
-      { url: '/portfolio', priority: 0.6, changefreq: 'monthly' }
-    ];
-
-    const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${pages.map(page => `  <url>
-    <loc>https://zion.app${page.url}</loc>
-    <lastmod>${new Date().toISOString()}</lastmod>
-    <changefreq>${page.changefreq}</changefreq>
-    <priority>${page.priority}</priority>
-  </url>`).join('\n')}
-</urlset>`;
-
-    // Store sitemap in localStorage for now (in production, this would be server-generated)
-    localStorage.setItem('sitemap', sitemap);
->>>>>>> e8ff974a982d4b1d788e95a271dee39afcb5ce06
-  }
 
   /**
    * Generate robots.txt content
    */
-<<<<<<< HEAD
   generateRobotsTxt(): string {
     if (!this.config.enableRobotsTxt) return '';
 
@@ -467,21 +398,11 @@ Allow: /
 
 # Sitemap
 Sitemap: ${this.config.siteUrl}/sitemap.xml
-=======
-  private async generateRobotsTxt(): Promise<void> {
-    if (typeof window === 'undefined') return;
-
-    const robotsTxt = `User-agent: *
-Allow: /
-
-Sitemap: https://zion.app/sitemap.xml
->>>>>>> e8ff974a982d4b1d788e95a271dee39afcb5ce06
 
 # Disallow admin and private areas
 Disallow: /admin/
 Disallow: /private/
 Disallow: /api/
-<<<<<<< HEAD
 Disallow: /_next/
 Disallow: /static/
 
@@ -706,248 +627,10 @@ Allow: /blog/
   }
 }
 
-// Export default instance
-export const seoOptimizer = new AdvancedSEOOptimizer();
-
-// Export utility functions
-export const generatePageSEO = (pageData: Partial<PageSEOData>) => {
-  return seoOptimizer.generatePageSEO(pageData);
-};
-
-export const auditPageSEO = (url: string) => {
-  return seoOptimizer.auditPageSEO(url);
-};
-
-export const generateMetaTags = (pageData: PageSEOData) => {
-  return seoOptimizer.generateMetaTags(pageData);
-};
-=======
-
-# Allow important pages
-Allow: /services/
-Allow: /blog/
-Allow: /portfolio/`;
-
-    // Store robots.txt in localStorage for now
-    localStorage.setItem('robots.txt', robotsTxt);
-  }
-
-  /**
-   * Optimize for performance-related SEO
-   */
-  private optimizeForPerformance(): void {
-    if (typeof window === 'undefined') return;
-
-    // Add performance hints
-    const hints = [
-      { rel: 'preload', href: '/fonts/inter.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' },
-      { rel: 'preload', href: '/images/hero-bg.webp', as: 'image' },
-      { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
-      { rel: 'dns-prefetch', href: 'https://cdn.jsdelivr.net' }
-    ];
-
-    hints.forEach(hint => {
-      const link = document.createElement('link');
-      Object.entries(hint).forEach(([key, value]) => {
-        link.setAttribute(key, value as string);
-      });
-      document.head.appendChild(link);
-    });
-  }
-
-  /**
-   * Optimize for accessibility-related SEO
-   */
-  private optimizeForAccessibility(): void {
-    if (typeof document === 'undefined') return;
-
-    // Add skip links
-    const skipLink = document.createElement('a');
-    skipLink.href = '#main-content';
-    skipLink.textContent = 'Skip to main content';
-    skipLink.className = 'skip-link';
-    skipLink.style.cssText = `
-      position: absolute;
-      top: -40px;
-      left: 6px;
-      background: #000;
-      color: #fff;
-      padding: 8px;
-      text-decoration: none;
-      z-index: 1000;
-    `;
-    document.body.insertBefore(skipLink, document.body.firstChild);
-
-    // Add ARIA landmarks
-    const main = document.querySelector('main');
-    if (main && !main.hasAttribute('role')) {
-      main.setAttribute('role', 'main');
-    }
-
-    // Add language attribute
-    if (!document.documentElement.hasAttribute('lang')) {
-      document.documentElement.setAttribute('lang', 'en');
-    }
-  }
-
-  /**
-   * Update page SEO data
-   */
-  public updatePageSEO(data: PageSEOData): void {
-    this.currentPageData = data;
-    this.applyPageSEO();
-  }
-
-  /**
-   * Apply page SEO data to the document
-   */
-  private applyPageSEO(): void {
-    if (!this.currentPageData || typeof document === 'undefined') return;
-
-    const data = this.currentPageData;
-
-    // Update title
-    document.title = data.title;
-
-    // Update meta description
-    this.ensureMetaTag('description', data.description);
-
-    // Update keywords
-    if (data.keywords.length > 0) {
-      this.ensureMetaTag('keywords', data.keywords.join(', '));
-    }
-
-    // Update canonical URL
-    this.ensureCanonicalUrl(data.canonicalUrl);
-
-    // Update Open Graph tags
-    if (this.config.enableOpenGraph) {
-      this.updateOpenGraphTags(data);
-    }
-
-    // Update Twitter Card tags
-    if (this.config.enableTwitterCards) {
-      this.updateTwitterCardTags(data);
-    }
-
-    // Update schema markup
-    if (this.config.enableSchemaMarkup && data.schemaMarkup) {
-      this.addStructuredDataScript(data.schemaMarkup);
-    }
-
-    // Update robots
-    if (data.robots) {
-      this.ensureMetaTag('robots', data.robots);
-    }
-  }
-
-  /**
-   * Ensure canonical URL is set
-   */
-  private ensureCanonicalUrl(url: string): void {
-    if (typeof document === 'undefined') return;
-
-    let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
-    if (!canonical) {
-      canonical = document.createElement('link');
-      canonical.rel = 'canonical';
-      document.head.appendChild(canonical);
-    }
-    canonical.href = url;
-  }
-
-  /**
-   * Update Open Graph tags
-   */
-  private updateOpenGraphTags(data: PageSEOData): void {
-    if (typeof document === 'undefined') return;
-
-    const ogTags = [
-      { property: 'og:title', content: data.ogTitle || data.title },
-      { property: 'og:description', content: data.ogDescription || data.description },
-      { property: 'og:image', content: data.ogImage || 'https://zion.app/og-image.jpg' },
-      { property: 'og:url', content: data.ogUrl || data.canonicalUrl },
-      { property: 'og:type', content: data.ogType || 'website' },
-      { property: 'og:site_name', content: 'Zion Tech Group' }
-    ];
-
-    ogTags.forEach(tag => {
-      this.ensureMetaTag(tag.property, tag.content);
-    });
-  }
-
-  /**
-   * Update Twitter Card tags
-   */
-  private updateTwitterCardTags(data: PageSEOData): void {
-    if (typeof document === 'undefined') return;
-
-    const twitterTags = [
-      { name: 'twitter:card', content: data.twitterCard || 'summary_large_image' },
-      { name: 'twitter:title', content: data.twitterTitle || data.title },
-      { name: 'twitter:description', content: data.twitterDescription || data.description },
-      { name: 'twitter:image', content: data.twitterImage || data.ogImage || 'https://zion.app/og-image.jpg' }
-    ];
-
-    twitterTags.forEach(tag => {
-      this.ensureMetaTag(tag.name, tag.content);
-    });
-  }
-
-  /**
-   * Generate breadcrumb schema
-   */
-  public generateBreadcrumbSchema(items: Array<{ name: string; url: string }>): any {
-    return {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": items.map((item, index) => ({
-        "@type": "ListItem",
-        "position": index + 1,
-        "name": item.name,
-        "item": `https://zion.app${item.url}`
-      }))
-    };
-  }
-
-  /**
-   * Generate FAQ schema
-   */
-  public generateFAQSchema(faqs: Array<{ question: string; answer: string }>): any {
-    return {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": faqs.map(faq => ({
-        "@type": "Question",
-        "name": faq.question,
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": faq.answer
-        }
-      }))
-    };
-  }
-
-  /**
-   * Get current page SEO data
-   */
-  public getCurrentPageData(): PageSEOData | null {
-    return this.currentPageData;
-  }
-
-  /**
-   * Cleanup resources
-   */
-  public cleanup(): void {
-    this.isInitialized = false;
-    this.currentPageData = null;
-  }
-}
 
 // Export singleton instance
 export const advancedSEOOptimizer = new AdvancedSEOOptimizer();
 
 // Export class for custom instances
-export { AdvancedSEOOptimizer };
 export type { SEOConfig, PageSEOData };
->>>>>>> e8ff974a982d4b1d788e95a271dee39afcb5ce06
+
