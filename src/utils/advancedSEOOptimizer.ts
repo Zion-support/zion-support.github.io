@@ -4,13 +4,24 @@
  */
 
 interface SEOConfig {
-  enableMetaOptimization: boolean;
+  siteName: string;
+  siteUrl: string;
+  defaultTitle: string;
+  defaultDescription: string;
+  defaultImage: string;
+  twitterHandle: string;
+  facebookAppId: string;
+  googleAnalyticsId: string;
+  googleTagManagerId: string;
   enableStructuredData: boolean;
-  enableSitemapGeneration: boolean;
+  enableSitemap: boolean;
   enableRobotsTxt: boolean;
-  enableCanonicalUrls: boolean;
+  enableCanonical: boolean;
   enableOpenGraph: boolean;
   enableTwitterCards: boolean;
+  enableMetaOptimization: boolean;
+  enableSitemapGeneration: boolean;
+  enableCanonicalUrls: boolean;
   enableSchemaMarkup: boolean;
   enablePerformanceSEO: boolean;
   enableAccessibilitySEO: boolean;

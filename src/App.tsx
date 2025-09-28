@@ -63,7 +63,6 @@ const ErrorRecoveryDashboard = lazy(() => import('./components/ErrorRecoveryDash
 // import AdvancedPerformanceDashboard from './components/AdvancedPerformanceDashboard';
 import WebsiteEnhancements from './components/WebsiteEnhancements';
 import SEOOptimizer, { useSEOData } from './components/SEOOptimizer';
-import AdvancedAnalytics from './components/AdvancedAnalytics';
 import PerformanceDashboard from './components/PerformanceDashboard';
 import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
 // import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
@@ -71,17 +70,10 @@ import { performanceAlerts } from './utils/performanceAlerts';
 import { accessibilityUtils } from './utils/accessibilityUtils';
 import { securityUtils } from './utils/securityUtils';
 import { enhancedSecurityManager } from './utils/enhancedSecurityManager';
-// These functions don't exist, commenting out
-// import { initializePerformanceEnhancements } from './utils/performanceEnhancements';
-// import { initializeAccessibilityEnhancements } from './utils/accessibilityEnhancements';
 import { advancedPerformanceOptimizer } from './utils/advancedPerformanceOptimizer';
 import { advancedSEOOptimizer } from './utils/advancedSEOOptimizer';
-import AdvancedAnalytics from './components/AdvancedAnalytics';
-import NotificationSystem, { Notification } from './components/NotificationSystem';
-// These are already imported as lazy components above
 import PerformanceMetricsDashboard from './components/PerformanceMetricsDashboard';
 import ComprehensiveImprovements from './components/ComprehensiveImprovements';
-import './index.css';
 
 export default function App(): React.JSX.Element {
   // State for system dashboard and performance optimizer
@@ -582,8 +574,6 @@ export default function App(): React.JSX.Element {
       }
       
       // Initialize new performance and accessibility enhancements
-      // initializePerformanceEnhancements();
-      // initializeAccessibilityEnhancements();
       
       // Initialize advanced optimizers
       advancedPerformanceOptimizer.initialize();
@@ -603,7 +593,6 @@ export default function App(): React.JSX.Element {
     }
   }, []);
 
-  // Duplicate function removed - using the one defined above
 
   useEffect(() => {
     try {
