@@ -6,16 +6,16 @@ import PerformanceTracker from './components/PerformanceTracker';
 import { seoAnalytics, performanceSEO, seoManager } from './utils/seoEnhanced';
 import { analytics } from './utils/analytics';
 import { performanceOptimizer } from './utils/performanceOptimizations';
-import { accessibilityEnhancements } from './utils/accessibilityEnhancements';
-import { seoOptimizer } from './utils/seoOptimizations';
+import { accessibilityEnhancer } from './utils/accessibilityEnhancements';
+import { seoOptimizer } from './utils/seoOptimization';
 // Removed unused imports to reduce warnings
 import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
-import PerformanceOptimizer from './components/PerformanceOptimizer';
+import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import AIPerformanceDashboard from './components/AIPerformanceDashboard';
 // import AdvancedPerformanceDashboard from './components/AdvancedPerformanceDashboard';
 import WebsiteEnhancements from './components/WebsiteEnhancements';
-import { SEOOptimizer, useSEOData } from './components/SEOOptimizer';
+import SEOOptimizer, { useSEOData } from './components/SEOOptimizer';
 // import EnhancedAnalytics from './components/EnhancedAnalytics';
 import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
 import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
@@ -232,7 +232,7 @@ export default function App(): React.JSX.Element {
     // Initialize advanced optimization systems
     // These are initialized automatically when imported
     void performanceOptimizer;
-    void accessibilityEnhancements;
+    void accessibilityEnhancer;
     void seoOptimizer;
 
     // Initialize new utility systems
@@ -321,8 +321,8 @@ export default function App(): React.JSX.Element {
     const initializeUtilities = async () => {
       try {
         // Initialize accessibility enhancements if available
-        if (accessibilityEnhancements && typeof accessibilityEnhancements.initialize === 'function') {
-          await accessibilityEnhancements.initialize();
+        if (accessibilityEnhancer && typeof accessibilityEnhancer.initialize === 'function') {
+          await accessibilityEnhancer.initialize();
         }
         console.log('Advanced utilities initialized successfully');
       } catch (error) {
