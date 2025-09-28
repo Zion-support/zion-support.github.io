@@ -337,6 +337,8 @@ export default function App(): React.JSX.Element {
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, [handleKeyDown]);
 
+  // Main app initialization and cleanup effect
+  React.useEffect(() => {
     // Track engagement on page unload
     window.addEventListener('beforeunload', trackEngagement);
 
