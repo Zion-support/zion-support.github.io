@@ -64,7 +64,7 @@ class BuildOptimizer {
     for (let i = 0; i < styleSheets.length; i++) {
       try {
         const sheet = styleSheets[i];
-        if (sheet.ownerNode && sheet.ownerNode.tagName === 'STYLE') {
+        if (sheet.ownerNode && 'tagName' in sheet.ownerNode && sheet.ownerNode.tagName === 'STYLE') {
           const rules = sheet.cssRules || sheet.rules;
           if (rules) {
             for (let j = rules.length - 1; j >= 0; j--) {
@@ -309,4 +309,3 @@ export const initOptimizations = () => buildOptimizer.initialize();
 
 // Export class for custom instances
 export { BuildOptimizer };
-export type { OptimizationConfig };

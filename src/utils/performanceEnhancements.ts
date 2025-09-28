@@ -529,4 +529,3 @@ export const performanceEnhancer = new PerformanceEnhancer();
 
 // Export class for custom instances
 export { PerformanceEnhancer };
-export type { PerformanceConfig };
