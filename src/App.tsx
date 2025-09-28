@@ -3,7 +3,8 @@ import { AppRouter } from './router';
 import { useAppInitialization } from './hooks/useAppInitialization';
 import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
-// Removed unused imports: seoOptimizer, cacheManager, apiClient, notificationManager, userFeedback
+import { seoAnalytics, performanceSEO, seoManager } from './utils/seoEnhanced';
+import { analytics } from './utils/analytics';
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
 import PerformanceDashboard from './components/PerformanceDashboard';
 import RealTimeMonitor from './components/RealTimeMonitor';
@@ -12,43 +13,12 @@ import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
 import EnhancedNotificationSystem from './components/EnhancedNotificationSystem';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import EnhancedAnalytics from './components/EnhancedAnalytics';
-// Removed unused import: getComprehensiveEnhancements
 import './index.css';
 
-// Import utility modules
-import { seoManager, seoAnalytics, performanceSEO } from './utils/seoEnhanced';
-import { analytics } from './utils/analytics';
-import { initializeErrorReporting } from './utils/errorReporting';
-import { initOptimizations } from './utils/buildOptimizations';
-import { performanceOptimizer } from './utils/optimization';
-import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
-import { enhancedAnalytics } from './utils/enhancedAnalytics';
-import { enhancedSEO } from './utils/enhancedSEO';
-import { enhancedPerformanceOptimizer } from './utils/enhancedPerformance';
-import { enhancedSecurityManager } from './utils/enhancedSecurity';
-import { enhancedAccessibilityManager } from './utils/enhancedAccessibility';
-import { accessibilityManager } from './utils/accessibility';
-import performanceEnhancer from './utils/performanceEnhancements';
-import { PerformanceMonitor } from './utils/performanceMonitor';
-import { advancedCacheSystem } from './utils/advancedCacheSystem';
-import { advancedErrorRecovery } from './utils/advancedErrorRecovery';
-import { advancedAutomationSystem } from './utils/advancedAutomationSystem';
-import { advancedPerformanceOptimizer } from './utils/performanceOptimizer';
-import { AccessibilityEnhancer } from './utils/accessibilityEnhancer';
-import { SecurityEnhancer } from './utils/securityEnhancer';
-import AdvancedPerformanceMonitor from './utils/advancedPerformanceMonitor';
-import AdvancedAccessibilityManager from './utils/advancedAccessibilityManager';
-import AdvancedSecurityManager from './utils/advancedSecurityManager';
-import EnhancedUXManager from './utils/enhancedUXManager';
-import { seoOptimizer } from './utils/seoOptimization';
-import { cacheManager } from './utils/cacheManager';
-import { apiClient } from './utils/apiClient';
-import { notificationManager } from './utils/notificationManager';
 export default function App(): React.JSX.Element {
   // State for system dashboard and performance optimizer
   const [showSystemDashboard, setShowSystemDashboard] = useState(false);
   const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
-
 
   // Initialize app with custom configuration
   const { isLoading, loadingProgress, engagementData, handleScroll, handleClick } = useAppInitialization({
@@ -89,6 +59,7 @@ export default function App(): React.JSX.Element {
       clicks: engagementData.clicks,
     });
   }, [engagementData]);
+
   // Memoize the SEO data to prevent unnecessary re-renders
   const seoData = useMemo(() => ({
     title: 'Zion Tech Group - Leading AI & Technology Solutions',
@@ -97,23 +68,8 @@ export default function App(): React.JSX.Element {
     ogType: 'website',
     ogUrl: typeof window !== 'undefined' ? window.location.href : '',
     ogImage: '/og-image.png',
-    twitterCard: 'summary_large_image' as const,
-    structuredData: []
+    twitterCard: 'summary_large_image' as const
   }), []);
-
-
-  // Simple SEO manager
-  const seoManager = {
-    updateMetaTags: (data: typeof seoData) => {
-      if (typeof document !== 'undefined') {
-        document.title = data.title;
-        const metaDescription = document.querySelector('meta[name="description"]');
-        if (metaDescription) {
-          metaDescription.setAttribute('content', data.description);
-        }
-      }
-    }
-  };
 
   useEffect(() => {
     // Add performance marks for better monitoring
@@ -132,8 +88,6 @@ export default function App(): React.JSX.Element {
 
     // Initialize basic systems
     analytics.initialize();
-    // Note: CacheManager, ApiClient, and NotificationManager don't have initialize methods
-    // They are initialized when first used via their getInstance() methods
     
     // Initialize SEO analytics
     seoAnalytics.trackPageView(window.location.pathname);
@@ -141,31 +95,14 @@ export default function App(): React.JSX.Element {
     // Initialize performance SEO optimizations
     performanceSEO.optimizeImages();
     performanceSEO.optimizeFonts();
-    // Note: optimizeCSS method doesn't exist in PerformanceSEO class
 
     // Set default SEO data using the correct method
     seoManager.updateMetaTags(seoData);
-    // Add keyboard event listener
-    document.addEventListener('keydown', handleKeyDown);
 
-    // Use passive listeners for better performance
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    document.addEventListener('click', handleClick, { passive: true });
-  }, [seoData]);
-
-  // Add keyboard event listener
-  React.useEffect(() => {
-    document.addEventListener("keydown", handleKeyDown);
-    
-    return () => {
-      document.removeEventListener("keydown", handleKeyDown);
-    };
-  }, [handleKeyDown]);
-
-  // Main initialization and cleanup effect
-  React.useEffect(() => {
-    // Track engagement on page unload
-    window.addEventListener('beforeunload', trackEngagement);
+    // Basic performance monitoring
+    if (typeof window !== 'undefined') {
+      console.log('🚀 Zion Tech Group App initialized');
+    }
 
     // Mark app as fully initialized
     if (typeof window !== 'undefined' && window.performance && 
@@ -177,90 +114,97 @@ export default function App(): React.JSX.Element {
 
     // Cleanup function
     return () => {
+      window.removeEventListener('scroll', handleScroll);
+      document.removeEventListener('click', handleClick);
       document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [handleScroll, handleClick, handleKeyDown, seoData, preloadResource]);
+
+  // Main initialization and cleanup effect
+  React.useEffect(() => {
+    // Track engagement on page unload
+    window.addEventListener('beforeunload', trackEngagement);
+
+    // Cleanup function
+    return () => {
       window.removeEventListener('beforeunload', trackEngagement);
-      
-      // Clear timeouts (if any exist)
-      // Note: Timeout variables are now managed by the component state
-      
-      // Stop monitoring
-      // memoryMonitor.stopMonitoring(); // Not available
-      
-      // Cleanup new utilities
-      const advancedPerformanceMonitor = AdvancedPerformanceMonitor.getInstance();
-      advancedPerformanceMonitor.stopMonitoring();
-      
-      const accessibilityEnhancer = AccessibilityEnhancer.getInstance();
-      accessibilityEnhancer.cleanup();
-      
-      const securityEnhancer = SecurityEnhancer.getInstance();
-      securityEnhancer.cleanup();
-      
-      // Cleanup enhanced systems
-      enhancedPerformanceMonitor.stopMonitoring();
-      enhancedAnalytics.endSession();
-      
-      // Cleanup advanced systems
-      advancedCacheSystem.clear();
-      advancedAutomationSystem.stop();
       
       // Final engagement tracking
       trackEngagement();
-      
-      // Remove event listeners
-      window.removeEventListener('scroll', handleScroll);
-      document.removeEventListener('click', handleClick);
     };
-  }, [seoData, handleKeyDown, handleScroll, handleClick]);
+  }, [trackEngagement]);
 
   // Show loading screen while initializing
   if (isLoading) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100">
-        <ModernLoadingSpinner progress={loadingProgress} />
+        <ModernLoadingSpinner
+          size="xl"
+          variant="primary"
+          text="Initializing Zion Tech Group..."
+          showProgress
+          progress={loadingProgress}
+          className="animate-fade-in-scale"
+        />
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <AppRouter />
-      
-      {/* System Dashboard */}
-      {showSystemDashboard && (
-        <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
-          <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
-            <div className="flex justify-between items-center mb-4">
-              <h2 className="text-2xl font-bold text-gray-900">System Dashboard</h2>
-              <button
-                onClick={() => setShowSystemDashboard(false)}
-                className="text-gray-500 hover:text-gray-700"
-              >
-                ✕
-              </button>
+    <EnhancedErrorBoundary>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <AppRouter />
+        
+        {/* System Dashboard */}
+        {showSystemDashboard && (
+          <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
+            <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+              <div className="flex justify-between items-center mb-4">
+                <h2 className="text-2xl font-bold text-gray-900">System Dashboard</h2>
+                <button
+                  onClick={() => setShowSystemDashboard(false)}
+                  className="text-gray-500 hover:text-gray-700"
+                >
+                  ✕
+                </button>
+              </div>
+              <EnhancedSystemDashboard />
             </div>
-            <EnhancedSystemDashboard />
           </div>
-        </div>
-      )}
+        )}
 
-      {/* Performance Optimizer */}
-      {showPerformanceOptimizer && (
-        <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
-          <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
-            <div className="flex justify-between items-center mb-4">
-              <h2 className="text-2xl font-bold text-gray-900">Performance Optimizer</h2>
-              <button
-                onClick={() => setShowPerformanceOptimizer(false)}
-                className="text-gray-500 hover:text-gray-700"
-              >
-                ✕
-              </button>
+        {/* Performance Optimizer */}
+        {showPerformanceOptimizer && (
+          <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
+            <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+              <div className="flex justify-between items-center mb-4">
+                <h2 className="text-2xl font-bold text-gray-900">Performance Optimizer</h2>
+                <button
+                  onClick={() => setShowPerformanceOptimizer(false)}
+                  className="text-gray-500 hover:text-gray-700"
+                >
+                  ✕
+                </button>
+              </div>
+              <PerformanceOptimizer />
             </div>
-            <PerformanceOptimizer />
           </div>
-        </div>
-      )}
-    </div>
+        )}
+      </div>
+      
+      <PerformanceDashboard />
+      <RealTimeMonitor />
+      <SystemMetricsDashboard 
+        isVisible={showSystemDashboard}
+        onClose={() => setShowSystemDashboard(false)}
+      />
+      <EnhancedNotificationSystem 
+        position="top-right"
+        enableAnimations
+        enableAccessibility
+        maxNotifications={5}
+      />
+      <EnhancedAnalytics />
+    </EnhancedErrorBoundary>
   );
 }
