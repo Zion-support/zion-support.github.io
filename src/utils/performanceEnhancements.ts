@@ -80,6 +80,75 @@ class PerformanceEnhancer {
   }
 
   /**
+   * Monitor Core Web Vitals using Performance Observer
+   */
+  private monitorCoreWebVitals(): void {
+    if (typeof window === 'undefined' || !('PerformanceObserver' in window)) {
+      return;
+    }
+
+    try {
+      // Monitor LCP (Largest Contentful Paint)
+      const lcpObserver = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        const lastEntry = entries[entries.length - 1] as PerformanceEntry & { element?: Element };
+        this.handleWebVital({
+          name: 'LCP',
+          value: lastEntry.startTime,
+          id: lastEntry.element?.tagName || 'unknown'
+        });
+      });
+      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+
+      // Monitor FID (First Input Delay)
+      const fidObserver = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        entries.forEach((entry) => {
+          this.handleWebVital({
+            name: 'FID',
+            value: (entry as PerformanceEventTiming).processingStart - entry.startTime,
+            id: (entry as PerformanceEventTiming).target?.tagName || 'unknown'
+          });
+        });
+      });
+      fidObserver.observe({ entryTypes: ['first-input'] });
+
+      // Monitor CLS (Cumulative Layout Shift)
+      let clsValue = 0;
+      const clsObserver = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        entries.forEach((entry) => {
+          if (!(entry as any).hadRecentInput) {
+            clsValue += (entry as any).value;
+          }
+        });
+        this.handleWebVital({
+          name: 'CLS',
+          value: clsValue,
+          id: 'cumulative'
+        });
+      });
+      clsObserver.observe({ entryTypes: ['layout-shift'] });
+
+      // Monitor FCP (First Contentful Paint)
+      const fcpObserver = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        entries.forEach((entry) => {
+          this.handleWebVital({
+            name: 'FCP',
+            value: entry.startTime,
+            id: entry.name
+          });
+        });
+      });
+      fcpObserver.observe({ entryTypes: ['paint'] });
+
+    } catch (error) {
+      console.warn('Failed to setup Core Web Vitals monitoring:', error);
+    }
+  }
+
+  /**
    * Handle Web Vitals metrics
    */
   private handleWebVital = (metric: { name: string; value: number; id: string }): void => {
