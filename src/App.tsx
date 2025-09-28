@@ -46,7 +46,7 @@ export default function App(): React.JSX.Element {
     });
 
     // Store enhancements globally for debugging
-    (window as Record<string, unknown>).enhancements = enhancements;
+    (window as unknown as Record<string, unknown>).enhancements = enhancements;
   }, []);
 
   // Memoize the SEO data to prevent unnecessary re-renders
@@ -162,7 +162,7 @@ export default function App(): React.JSX.Element {
     }
 
     // Set default SEO data
-    seoManager.updateMetaTags(seoData);
+    seoManager.updateSEO(seoData);
 
     // Basic performance monitoring
     if (typeof window !== 'undefined') {
