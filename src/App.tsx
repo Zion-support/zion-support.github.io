@@ -114,6 +114,7 @@ export default function App(): React.JSX.Element {
     // Also call the original trackEngagement from useAppInitialization
     trackEngagement();
   }, [engagementData.clicks, engagementData.scrollDepth, engagementData.startTime]);
+
   // Simple SEO manager
   const seoManagerInstance = useMemo(() => ({
     updateMetaTags: (data: typeof seoData) => {
