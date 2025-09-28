@@ -134,20 +134,24 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
     // Get memory info if available
     if ('memory' in performance) {
-      const memory = (performance as any).memory;
-      setMetrics(prev => ({
-        ...prev,
-        memory: memory.usedJSHeapSize / 1024 / 1024 // Convert to MB
-      }));
+      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory;
+      if (memory) {
+        setMetrics(prev => ({
+          ...prev,
+          memory: memory.usedJSHeapSize / 1024 / 1024 // Convert to MB
+        }));
+      }
     }
 
     // Get connection info if available
     if ('connection' in navigator) {
-      const connection = (navigator as any).connection;
-      setMetrics(prev => ({
-        ...prev,
-        connection: connection.effectiveType || 'unknown'
-      }));
+      const connection = (navigator as Navigator & { connection?: { effectiveType?: string } }).connection;
+      if (connection) {
+        setMetrics(prev => ({
+          ...prev,
+          connection: connection.effectiveType || 'unknown'
+        }));
+      }
     }
   }, []);
 
