@@ -1,5 +1,4 @@
-import React, { useState, useCallback } from 'react';
-import { useImageLazyLoading } from '../utils/lazyLoading';
+import React, { useState, useCallback, useRef, useEffect } from 'react';
 import { imageOptimizer, ImageOptimizationOptions } from '../utils/imageOptimization';
 
 interface LazyImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
@@ -39,11 +38,29 @@ const LazyImage: React.FC<LazyImageProps> = ({
   // Generate blur placeholder if none provided
   const blurPlaceholder = placeholder || imageOptimizer.generateBlurPlaceholder();
   
-  // Use lazy loading hook
-  const { elementRef, imageSrc, isLoaded } = useImageLazyLoading(
-    optimizedSrc,
-    blurPlaceholder
-  );
+  // Simple lazy loading implementation
+  const elementRef = useRef<HTMLDivElement>(null);
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [imageSrc, setImageSrc] = useState(blurPlaceholder);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setImageSrc(optimizedSrc);
+          setIsLoaded(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1, rootMargin: '50px' }
+    );
+
+    if (elementRef.current) {
+      observer.observe(elementRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, [optimizedSrc, blurPlaceholder]);
 
   const handleLoad = useCallback(() => {
     setIsLoading(false);
