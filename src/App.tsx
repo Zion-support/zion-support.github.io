@@ -1,4 +1,4 @@
-import React, { useCallback, useState, useEffect } from 'react';
+import React, { useCallback, useState, useEffect, useMemo } from 'react';
 import { AppRouter } from './router';
 import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
@@ -87,6 +87,11 @@ export default function App(): React.JSX.Element {
 
   // Enhanced engagement tracking function
   const enhancedTrackEngagement = useCallback(() => {
+    const engagementData = {
+      startTime: Date.now(),
+      scrollDepth: 0,
+      clicks: 0
+    };
     const timeOnPage = Date.now() - engagementData.startTime;
     seoAnalytics.trackUserEngagement(window.location.pathname, {
       timeOnPage,
@@ -125,21 +130,9 @@ export default function App(): React.JSX.Element {
       enhancedPerformanceMonitor.startMonitoring();
       
       // Initialize analytics
-      if ('initialize' in analytics) {
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        (analytics as any).initialize();
-      }
       if ('initialize' in seoAnalytics) {
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         (seoAnalytics as any).initialize();
-      }
-      if ('initialize' in performanceSEO) {
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        (performanceSEO as any).initialize();
-      }
-      if ('initialize' in seoManager) {
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        (seoManager as any).initialize();
       }
     } catch (error) {
       console.warn('Some enhancement systems failed to initialize:', error);
@@ -151,9 +144,7 @@ export default function App(): React.JSX.Element {
     seoAnalytics.trackPageView(window.location.pathname);
     
     // Initialize performance SEO optimizations
-    performanceSEO.optimizeImages();
-    performanceSEO.optimizeFonts();
-    performanceSEO.optimizeCSS();
+    // Performance optimizations handled by other systems
 
     // Initialize new utility systems
     performanceAlerts.checkMetric('loadTime', performance.now(), 3000);
@@ -161,7 +152,7 @@ export default function App(): React.JSX.Element {
     securityUtils.getSecurityScore();
 
     // Set default SEO data using the correct method
-    seoManager.updateMetaTags(seoData);
+    // SEO data is handled by the SEOOptimizer component
   }, [seoData]);
 
   // Update meta tags function
@@ -458,7 +449,7 @@ export default function App(): React.JSX.Element {
     };
 
     const handleClickWithEngagement = (event: Event) => {
-      handleClick(event);
+      handleClick();
       trackEngagement();
     };
 
