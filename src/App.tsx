@@ -3,6 +3,9 @@ import { AppRouter } from './router';
 import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import PerformanceTracker from './components/PerformanceTracker';
+import PerformanceMonitor from './components/PerformanceMonitor';
+import SEOEnhancer from './components/SEOEnhancer';
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import { seoAnalytics, performanceSEO } from './utils/seoEnhanced';
 import { analytics } from './utils/analytics';
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
@@ -282,9 +285,20 @@ export default function App(): React.JSX.Element {
   }
 
   return (
-    <EnhancedErrorBoundary>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <AppRouter />
+    <EnhancedErrorBoundary showDetails={process.env.NODE_ENV === 'development'}>
+      <SEOEnhancer 
+        title={seoData.title}
+        description={seoData.description}
+        keywords={seoData.keywords}
+        canonicalUrl={seoData.canonicalUrl}
+        ogType={seoData.ogType}
+        ogImage={seoData.ogImage}
+        ogImageAlt="Zion Tech Group - AI & Technology Solutions"
+        twitterCard={seoData.twitterCard}
+      >
+        <AccessibilityEnhancer>
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+            <AppRouter />
         
         {/* System Dashboard - Toggle with Ctrl+Shift+D */}
         {showSystemDashboard && (
@@ -313,6 +327,7 @@ export default function App(): React.JSX.Element {
 
         {/* Performance Components */}
         <PerformanceTracker />
+        <PerformanceMonitor />
         
         {/* System Health Dashboard */}
         <Suspense fallback={<ModernLoadingSpinner />}>
@@ -353,8 +368,9 @@ export default function App(): React.JSX.Element {
         {/* Theme Toggle Button */}
         <button
           onClick={() => setIsDarkMode(!isDarkMode)}
-          className="fixed bottom-4 right-4 z-40 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-colors duration-200"
+          className="fixed bottom-4 right-4 z-40 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
           title="Toggle Theme (Ctrl+Shift+T)"
+          aria-label={`Switch to ${isDarkMode ? 'light' : 'dark'} mode`}
         >
           {isDarkMode ? '☀️' : '🌙'}
         </button>
@@ -368,7 +384,9 @@ export default function App(): React.JSX.Element {
           <div>Ctrl+K: Command Palette</div>
           <div>Click Theme Button: Toggle Theme</div>
         </div>
-      </div>
+        </div>
+        </AccessibilityEnhancer>
+      </SEOEnhancer>
     </EnhancedErrorBoundary>
   );
 }
