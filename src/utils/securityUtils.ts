@@ -131,12 +131,11 @@ class SecurityUtils {
   private monitorSuspiciousActivities(): void {
     // Monitor for suspicious console usage
     const originalConsole = { ...console };
-    Object.keys(console).forEach(key => {
-      const consoleKey = key as keyof Console;
-      if (typeof console[consoleKey] === 'function') {
-        (console as any)[consoleKey] = (...args: any[]) => {
+    Object.keys(console).forEach((key: string) => {
+      if (typeof (console as any)[key] === 'function') {
+        (console as any)[key] = (...args: any[]) => {
           this.logSecurityEvent('console-usage', { method: key, args });
-          (originalConsole as any)[consoleKey](...args);
+          (originalConsole as any)[key](...args);
         };
       }
     });

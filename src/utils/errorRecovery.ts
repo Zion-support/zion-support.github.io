@@ -38,6 +38,18 @@ export class ErrorRecoverySystem {
     window.addEventListener('unhandledrejection', (event) => {
       this.handleError(event.reason instanceof Error ? event.reason : new Error(String(event.reason)));
     });
+
+    // Component error recovery
+    this.addStrategy({
+      name: 'component-reset',
+      condition: (error, context) => 
+        Boolean(context.component && error.message.includes('component')),
+      action: async (error, context) => {
+        console.log('🔄 Resetting component...');
+        // Component reset logic would go here
+      },
+      priority: 2
+    });
   }
 
   private setupRecoveryStrategies(): void {

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { errorRecoverySystem as errorRecovery } from '../utils/errorRecovery';
+import { errorRecoverySystem } from '../utils/errorRecovery';
 import { advancedAnalytics } from '../utils/advancedAnalytics';
 import { smartCache } from '../utils/smartCache';
 
@@ -34,7 +34,7 @@ const ComprehensiveSystemDashboard: React.FC<ComprehensiveSystemDashboardProps> 
 
     const updateStats = () => {
       setSystemStats({
-        errorCount: 0, // errorRecovery.getErrorCount(),
+        errorCount: errorRecoverySystem.getErrorHistory().length,
         analyticsEvents: advancedAnalytics.getEvents().length,
         cacheSize: smartCache.size(),
         cacheHitRate: smartCache.getStats().hitRate,
@@ -82,7 +82,7 @@ const ComprehensiveSystemDashboard: React.FC<ComprehensiveSystemDashboardProps> 
   };
 
   const clearAllData = () => {
-    // errorRecovery.reset();
+    errorRecoverySystem.clearHistory();
     advancedAnalytics.clearData();
     smartCache.clear();
     setSystemStats({
