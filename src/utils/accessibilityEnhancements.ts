@@ -192,7 +192,6 @@ export class AccessibilityEnhancer {
 
   private generateAriaLabel(element: HTMLElement): string {
     const className = element.className;
-    const id = element.id;
     const type = element.tagName.toLowerCase();
 
     if (className.includes('close')) return 'Close';
@@ -228,7 +227,7 @@ export class AccessibilityEnhancer {
     });
   }
 
-  private calculateContrast(color1: string, color2: string): number {
+  private calculateContrast(_color1: string, _color2: string): number {
     // Simplified contrast calculation
     // In a real implementation, you'd use a proper color contrast library
     return 4.5; // Placeholder

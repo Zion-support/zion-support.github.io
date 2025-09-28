@@ -71,7 +71,7 @@ export const SystemStatusIndicator: React.FC = () => {
         const performanceMetrics = {
           loadTime: performance.now(),
           renderTime: performance.now(),
-          memoryUsage: (performance as any).memory?.usedJSHeapSize || 0,
+          memoryUsage: (performance as any).memory?.usedJSHeapSize as number || 0,
           networkRequests: 0
         };
         const performanceScore = Math.min(100, Math.max(0, 100 - (performanceMetrics.loadTime / 100)));

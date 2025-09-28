@@ -216,7 +216,7 @@ export default function SecurityDashboard({ isVisible, onClose }: SecurityDashbo
           <div className="flex items-center space-x-4">
             <select
               value={selectedFilter}
-              onChange={(e) => setSelectedFilter(e.target.value as any)}
+              onChange={(e) => setSelectedFilter(e.target.value as 'all' | 'critical' | 'high' | 'medium' | 'low')}
               className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             >
               <option value="all">All Alerts</option>
