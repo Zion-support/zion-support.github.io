@@ -205,11 +205,7 @@ export const EnhancedPerformanceMonitor: React.FC<EnhancedPerformanceMonitorProp
       </div>
 
       {/* Additional Metrics */}
-<<<<<<< HEAD
       {metrics.memory && (
-=======
-      {(metrics.memory) && (
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-9b3e
         <div className="space-y-2 text-sm mb-4">
           <h4 className="font-medium text-gray-700 dark:text-gray-300">Additional Metrics</h4>
           
@@ -222,21 +218,6 @@ export const EnhancedPerformanceMonitor: React.FC<EnhancedPerformanceMonitorProp
             </div>
           )}
 
-<<<<<<< HEAD
-          <div className="flex justify-between">
-            <span className="text-gray-600 dark:text-gray-400">DOM Content Loaded:</span>
-            <span className="text-gray-900 dark:text-white">
-              {metrics.domContentLoaded.toFixed(0)}ms
-            </span>
-          </div>
-
-          <div className="flex justify-between">
-            <span className="text-gray-600 dark:text-gray-400">DOM Interactive:</span>
-            <span className="text-blue-500">
-              {metrics.domInteractive.toFixed(0)}ms
-            </span>
-          </div>
-=======
           {metrics.domContentLoaded > 0 && (
             <div className="flex justify-between">
               <span className="text-gray-600 dark:text-gray-400">DOM Content Loaded:</span>
@@ -254,7 +235,6 @@ export const EnhancedPerformanceMonitor: React.FC<EnhancedPerformanceMonitorProp
               </span>
             </div>
           )}
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-9b3e
         </div>
       )}
 
