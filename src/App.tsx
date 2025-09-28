@@ -49,20 +49,17 @@ const EnhancedNotificationSystem = lazy(() => import('./components/EnhancedNotif
 const KeyboardShortcutsManager = lazy(() => import('./components/KeyboardShortcutsManager'));
 const ErrorRecoveryDashboard = lazy(() => import('./components/ErrorRecoveryDashboard'));
 
-// Additional imports
+// Direct imports
 import AdvancedAnalytics from './components/AdvancedAnalytics';
 import PerformanceDashboard from './components/PerformanceDashboard';
-// import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
 import { performanceAlerts } from './utils/performanceAlerts';
 import { accessibilityUtils } from './utils/accessibilityUtils';
 import { securityUtils } from './utils/securityUtils';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-b36a
 import { advancedPerformanceOptimizer } from './utils/advancedPerformanceOptimizer';
 import { AdvancedSEOOptimizer } from './utils/advancedSEOOptimizer';
 import { performanceMonitor, getPerformanceScore, getPerformanceRecommendations } from './utils/performanceMonitoring';
 import { seoOptimizer, updatePageSEO, trackSEOEvent } from './utils/seoOptimizer';
 import { errorHandler, handleError, log, ErrorBoundary } from './utils/errorHandler';
-import AdvancedAnalytics from './components/AdvancedAnalytics';
 import NotificationSystem, { Notification } from './components/NotificationSystem';
 import KeyboardShortcutsHelp from './components/KeyboardShortcutsHelp';
 import CommandPalette from './components/CommandPalette';
