@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useCallback, useState, useEffect, useMemo } from 'react';
 import { AppRouter } from './router';
 import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
@@ -23,7 +22,6 @@ import { accessibilityUtils } from './utils/accessibilityUtils';
 import { securityUtils } from './utils/securityUtils';
 import { enhancedSecurityManager } from './utils/enhancedSecurityManager';
 import { initializePerformanceEnhancements } from './utils/performanceEnhancements';
-import { initializeAccessibilityEnhancements } from './utils/accessibilityEnhancements';
 import { advancedPerformanceOptimizer } from './utils/advancedPerformanceOptimizer';
 import { advancedSEOOptimizer } from './utils/advancedSEOOptimizer';
 import { advancedSecurityManager } from './utils/advancedSecurityManager';
@@ -490,4 +488,72 @@ export default function App(): React.JSX.Element {
     return <ModernLoadingSpinner progress={loadingProgress} />;
   }
 
-export default App;
+  return (
+    <EnhancedErrorBoundary>
+      <div className="app">
+        <PerformanceTracker />
+        <NotificationSystem />
+        <KeyboardShortcutsHelp 
+          isOpen={showKeyboardHelp}
+          onClose={() => setShowKeyboardHelp(false)}
+        />
+        <CommandPalette 
+          isOpen={showCommandPalette}
+          onClose={() => setShowCommandPalette(false)}
+        />
+        
+        {showSystemDashboard && (
+          <EnhancedSystemDashboard 
+            onClose={() => setShowSystemDashboard(false)}
+          />
+        )}
+        
+        {showPerformanceOptimizer && (
+          <PerformanceOptimizer 
+            onClose={() => setShowPerformanceOptimizer(false)}
+          />
+        )}
+        
+        {showPerformanceMonitor && (
+          <PerformanceMonitor 
+            onClose={() => setShowPerformanceMonitor(false)}
+          />
+        )}
+        
+        {showAIDashboard && (
+          <AIPerformanceDashboard 
+            onClose={() => setShowAIDashboard(false)}
+          />
+        )}
+        
+        {showSEOOptimizer && (
+          <SEOOptimizer 
+            onClose={() => setSEOOptimizer(false)}
+          />
+        )}
+        
+        {showRealTimeMonitor && (
+          <RealTimePerformanceMonitor 
+            onClose={() => setShowRealTimeMonitor(false)}
+          />
+        )}
+        
+        {showSystemHealth && (
+          <SystemHealthDashboard 
+            onClose={() => setShowSystemHealth(false)}
+          />
+        )}
+        
+        {showPerformanceMetrics && (
+          <PerformanceMetricsDashboard 
+            onClose={() => setShowPerformanceMetrics(false)}
+          />
+        )}
+        
+        <ComprehensiveImprovements />
+        <WebsiteEnhancements />
+        <AppRouter />
+      </div>
+    </EnhancedErrorBoundary>
+  );
+}
