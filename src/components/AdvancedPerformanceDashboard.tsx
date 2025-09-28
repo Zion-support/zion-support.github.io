@@ -33,7 +33,7 @@ const AdvancedPerformanceDashboard: React.FC<AdvancedPerformanceDashboardProps> 
 
   const updateMetrics = useCallback(() => {
     const buildScore = advancedBuildOptimizer.getOptimizationScore();
-    const accessibilityScore = accessibilityEnhancements.getAccessibilityScore();
+    const accessibilityScore = 100 - (accessibilityEnhancements.getIssues().length * 5); // Calculate score based on issues
     
     // Calculate other scores (simplified)
     const performanceScore = Math.floor(Math.random() * 20) + 80;
