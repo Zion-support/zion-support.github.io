@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, AreaChart, Area, LineChart, Line } from 'recharts';
-import { performanceOptimizer } from '../utils/advancedPerformanceOptimizer';
+import { advancedPerformanceOptimizer as performanceOptimizer } from '../utils/advancedPerformanceOptimizer';
 import { enhancedSecurityManager } from '../utils/enhancedSecurityManager';
 import { enhancedPerformanceMonitor } from '../utils/enhancedPerformanceMonitor';
 import { enhancedAnalytics } from '../utils/enhancedAnalytics';

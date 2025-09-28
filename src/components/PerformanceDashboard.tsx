@@ -1,5 +1,23 @@
 import React, { useState, useEffect } from 'react';
-import { bundleOptimizer, BundleMetrics, OptimizationStrategy } from '../utils/bundleOptimizer';
+import { bundleOptimizer } from '../utils/bundleOptimizer';
+
+interface BundleMetrics {
+  totalSize: number;
+  gzippedSize: number;
+  chunks: Array<{
+    name: string;
+    size: number;
+    gzippedSize: number;
+    modules: number;
+  }>;
+  recommendations: string[];
+}
+
+interface OptimizationStrategy {
+  name: string;
+  description: string;
+  impact: 'high' | 'medium' | 'low';
+}
 
 interface PerformanceDashboardProps {
   isVisible: boolean;
@@ -21,9 +39,13 @@ const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({ isVisible, 
   const loadPerformanceData = async () => {
     setIsLoading(true);
     try {
-      const bundleMetrics = await bundleOptimizer.analyzeBundle();
-      const optimizationStrategies = bundleOptimizer.getOptimizationStrategies();
-      const optimizationReport = bundleOptimizer.generateOptimizationReport();
+      const bundleMetrics = bundleOptimizer.getAnalysis();
+      const optimizationStrategies: OptimizationStrategy[] = [
+        { name: 'Code Splitting', description: 'Split large chunks into smaller ones', impact: 'high' },
+        { name: 'Tree Shaking', description: 'Remove unused code', impact: 'medium' },
+        { name: 'Dynamic Imports', description: 'Load components on demand', impact: 'medium' }
+      ];
+      const optimizationReport = bundleOptimizer.suggestCodeSplitting().join('\n');
 
       setMetrics(bundleMetrics);
       setStrategies(optimizationStrategies);

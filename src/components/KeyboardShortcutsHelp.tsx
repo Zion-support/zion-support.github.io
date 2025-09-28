@@ -1,4 +1,10 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+
+interface Shortcut {
+  key: string;
+  description: string;
+  category: string;
+}
 
 interface KeyboardShortcutsHelpProps {
   isVisible: boolean;
@@ -6,9 +12,10 @@ interface KeyboardShortcutsHelpProps {
 }
 
 const KeyboardShortcutsHelp: React.FC<KeyboardShortcutsHelpProps> = ({ isVisible, onClose }) => {
-  if (!isVisible) return null;
+  const [searchTerm, setSearchTerm] = useState('');
+  const [filteredShortcuts, setFilteredShortcuts] = useState<Shortcut[]>([]);
 
-  const shortcuts = [
+  const shortcuts: Shortcut[] = [
     { key: 'Ctrl+Shift+D', description: 'Toggle System Dashboard', category: 'Dashboard' },
     { key: 'Ctrl+Shift+P', description: 'Toggle Performance Optimizer', category: 'Performance' },
     { key: 'Ctrl+Shift+M', description: 'Toggle Performance Monitor', category: 'Performance' },
