@@ -5,6 +5,8 @@ import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import PerformanceTracker from './components/PerformanceTracker';
 import PerformanceMonitor from './components/PerformanceMonitor';
+import EnhancedPerformanceMonitor from './components/EnhancedPerformanceMonitor';
+import PerformanceDashboard from './components/PerformanceDashboard';
 import SEOEnhancer from './components/SEOEnhancer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import { seoAnalytics, performanceSEO } from './utils/seoEnhanced';
@@ -34,6 +36,7 @@ export default function App(): React.JSX.Element {
   const [showSystemHealth, setShowSystemHealth] = useState(false);
   const [showPerformanceWidget, setShowPerformanceWidget] = useState(false);
   const [showCommandPalette, setShowCommandPalette] = useState(false);
+  const [showPerformanceDashboard, setShowPerformanceDashboard] = useState(false);
 
   // Notification management
   const removeNotification = useCallback((id: string) => {
@@ -167,6 +170,10 @@ export default function App(): React.JSX.Element {
       event.preventDefault();
       setShowPerformanceWidget((prev: boolean) => !prev);
       analytics.track('keyboard_shortcut', { shortcut: 'cmd+shift+p', action: 'toggle_performance_widget' });
+    }
+    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'O') {
+      event.preventDefault();
+      setShowPerformanceDashboard((prev: boolean) => !prev);
     }
     if ((event.ctrlKey || event.metaKey) && event.key === 'k') {
       event.preventDefault();
@@ -420,6 +427,13 @@ export default function App(): React.JSX.Element {
             onClose={() => setShowPerformanceWidget(false)}
           />
         </Suspense>
+
+        <PerformanceDashboard
+          showBundleAnalysis={true}
+          showOptimizationSuggestions={true}
+          autoRefresh={true}
+          refreshInterval={5000}
+        />
 
         <Suspense fallback={<ModernLoadingSpinner />}>
           <CommandPalette
