@@ -164,6 +164,7 @@ const AdvancedPerformanceDashboard: React.FC<PerformanceDashboardProps> = ({
                 </ResponsiveContainer>
               </div>
 
+            {pieData.length > 0 && (
               <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-4">
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
                   Optimization Status
@@ -186,31 +187,32 @@ const AdvancedPerformanceDashboard: React.FC<PerformanceDashboardProps> = ({
                   </PieChart>
                 </ResponsiveContainer>
               </div>
-            </div>
-          )}
+            )}
+          </div>
+        </div>
 
-          {/* Real-time Monitoring */}
-          {realTimeData.length > 0 && (
-            <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-4">
-              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
-                Real-time Performance Monitoring
-              </h3>
-              <ResponsiveContainer width="100%" height={300}>
-                <LineChart data={realTimeData}>
-                  <CartesianGrid strokeDasharray="3 3" />
-                  <XAxis dataKey="time" />
-                  <YAxis />
-                  <Tooltip />
-                  <Line type="monotone" dataKey="lcp" stroke="#ef4444" name="LCP (ms)" />
-                  <Line type="monotone" dataKey="fcp" stroke="#f59e0b" name="FCP (ms)" />
-                  <Line type="monotone" dataKey="ttfb" stroke="#3b82f6" name="TTFB (ms)" />
-                </LineChart>
-              </ResponsiveContainer>
-            </div>
-          )}
-
-          {/* Optimization Strategies */}
+        {/* Real-time Monitoring */}
+        {realTimeData.length > 0 && (
           <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-4">
+            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
+              Real-time Performance Monitoring
+            </h3>
+            <ResponsiveContainer width="100%" height={300}>
+              <LineChart data={realTimeData}>
+                <CartesianGrid strokeDasharray="3 3" />
+                <XAxis dataKey="time" />
+                <YAxis />
+                <Tooltip />
+                <Line type="monotone" dataKey="lcp" stroke="#ef4444" name="LCP (ms)" />
+                <Line type="monotone" dataKey="fcp" stroke="#f59e0b" name="FCP (ms)" />
+                <Line type="monotone" dataKey="ttfb" stroke="#3b82f6" name="TTFB (ms)" />
+              </LineChart>
+            </ResponsiveContainer>
+          </div>
+        )}
+
+        {/* Optimization Strategies */}
+        <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-4">
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
               Optimization Strategies
             </h3>
@@ -256,8 +258,30 @@ const AdvancedPerformanceDashboard: React.FC<PerformanceDashboardProps> = ({
             </div>
           </div>
 
-          {/* Performance Recommendations */}
-          <div className="bg-gradient-to-r from-yellow-400 to-orange-500 rounded-lg p-6 text-white">
+        {/* Actions */}
+        <div className="flex flex-wrap gap-4">
+          <button
+            onClick={exportReport}
+            className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md transition-colors"
+          >
+            Export Report
+          </button>
+          <button
+            onClick={updateMetrics}
+            className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-md transition-colors"
+          >
+            Refresh Metrics
+          </button>
+          <button
+            onClick={() => window.location.reload()}
+            className="bg-purple-500 hover:bg-purple-600 text-white px-4 py-2 rounded-md transition-colors"
+          >
+            Reload App
+          </button>
+        </div>
+
+        {/* Performance Recommendations */}
+        <div className="bg-gradient-to-r from-yellow-400 to-orange-500 rounded-lg p-6 text-white">
             <h3 className="text-xl font-semibold mb-2">Performance Recommendations</h3>
             <div className="space-y-2">
               {performanceScore < 70 && (
