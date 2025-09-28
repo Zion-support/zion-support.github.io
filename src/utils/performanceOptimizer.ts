@@ -238,8 +238,8 @@ class PerformanceOptimizer {
 
     // Update memory usage
     const memory = (performance as Performance & { memory?: { usedJSHeapSize?: number } }).memory;
-    if (memory && memory.usedJSHeapSize !== undefined) {
-      this.metrics.memoryUsage = memory.usedJSHeapSize;
+    if (memory) {
+      this.metrics.memoryUsage = memory.usedJSHeapSize || 0;
     }
 
     // Update network requests count
@@ -247,8 +247,8 @@ class PerformanceOptimizer {
 
     // Update bundle size
     this.metrics.bundleSize = performance.getEntriesByType('resource')
-      .filter((entry: PerformanceResourceTiming) => entry.name.includes('.js'))
-      .reduce((total: number, entry: PerformanceResourceTiming) => total + (entry.transferSize || 0), 0);
+      .filter((entry) => entry.name.includes('.js'))
+      .reduce((total: number, entry) => total + ((entry as PerformanceResourceTiming).transferSize || 0), 0);
   }
 
   public optimizeBundle(): void {
