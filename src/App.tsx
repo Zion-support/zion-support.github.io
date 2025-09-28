@@ -6,12 +6,18 @@ import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import PerformanceTracker from './components/PerformanceTracker';
 // import PerformanceMonitor from './components/PerformanceMonitor';
 // import EnhancedPerformanceMonitor from './components/EnhancedPerformanceMonitor';
-import PerformanceDashboard from './components/PerformanceDashboard';
+import { PerformanceDashboard } from './components/PerformanceDashboard';
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import { seoAnalytics, performanceSEO } from './utils/seoEnhanced';
 import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
 import NotificationSystem, { Notification } from './components/NotificationSystem';
 import './index.css';
+
+// Import new advanced systems
+import { performanceAnalytics } from './utils/advancedPerformanceAnalytics';
+import { seoManager } from './utils/advancedSEOManager';
+import { errorTracker } from './utils/advancedErrorTracker';
+import { apiCache, imageCache, dataCache } from './utils/advancedCacheManager';
 
 // Lazy load heavy components for better performance
 const EnhancedSystemDashboard = lazy(() => import('./components/EnhancedSystemDashboard'));
@@ -19,6 +25,7 @@ const KeyboardShortcutsHelp = lazy(() => import('./components/KeyboardShortcutsH
 const SystemHealthDashboard = lazy(() => import('./components/SystemHealthDashboard'));
 const PerformanceWidget = lazy(() => import('./components/PerformanceWidget'));
 const CommandPalette = lazy(() => import('./components/CommandPalette'));
+const AdvancedMonitoringDashboard = lazy(() => import('./components/AdvancedMonitoringDashboard'));
 
 export default function App(): React.JSX.Element {
   const navigate = useNavigate();
@@ -31,6 +38,7 @@ export default function App(): React.JSX.Element {
   const [showSystemHealth, setShowSystemHealth] = useState(false);
   const [showPerformanceWidget, setShowPerformanceWidget] = useState(false);
   const [showCommandPalette, setShowCommandPalette] = useState(false);
+  const [showAdvancedMonitoring, setShowAdvancedMonitoring] = useState(false);
   // const [showPerformanceDashboard, setShowPerformanceDashboard] = useState(false);
 
   // Notification management
@@ -123,6 +131,29 @@ export default function App(): React.JSX.Element {
       // Initialize enhanced systems
       enhancedPerformanceMonitor.startMonitoring();
       
+      // Initialize advanced systems
+      void performanceAnalytics; // Initialize performance analytics
+      void seoManager; // Initialize SEO manager
+      void errorTracker; // Initialize error tracker
+      
+      // Initialize caching systems
+      void apiCache;
+      void imageCache;
+      void dataCache;
+      
+      // Initialize SEO for current page
+      seoManager.updateSEO({
+        title: seoData.title,
+        description: seoData.description,
+        keywords: seoData.keywords.split(', '),
+        canonical: seoData.canonicalUrl,
+        ogTitle: seoData.title,
+        ogDescription: seoData.description,
+        ogImage: seoData.ogImage,
+        ogType: seoData.ogType,
+        twitterCard: seoData.twitterCard
+      });
+      
       // Initialize security system
       console.log('Advanced security system initialized');
       
@@ -141,7 +172,7 @@ export default function App(): React.JSX.Element {
     } catch (error) {
       console.error('Error initializing enhancements:', error);
     }
-  }, []);
+  }, [seoData.title, seoData.description, seoData.keywords, seoData.canonicalUrl, seoData.ogImage, seoData.ogType, seoData.twitterCard]);
 
   // Optimized keyboard handler for system dashboard toggle
   const handleKeyDown = useCallback((event: KeyboardEvent) => {
@@ -171,13 +202,19 @@ export default function App(): React.JSX.Element {
       setShowCommandPalette((prev: boolean) => !prev);
       seoAnalytics.trackEvent('keyboard_shortcut', { shortcut: 'cmd+k', action: 'toggle_command_palette' });
     }
+    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'M') {
+      event.preventDefault();
+      setShowAdvancedMonitoring((prev: boolean) => !prev);
+      analytics.trackEvent('keyboard_shortcut', { shortcut: 'cmd+shift+m', action: 'toggle_advanced_monitoring' });
+    }
     if (event.key === 'Escape') {
       setShowCommandPalette(false);
       setShowSystemDashboard(false);
       setShowSystemHealth(false);
       setShowPerformanceWidget(false);
       setShowKeyboardHelp(false);
-      seoAnalytics.trackEvent('keyboard_shortcut', { shortcut: 'escape', action: 'close_modals' });
+      setShowAdvancedMonitoring(false);
+      analytics.trackEvent('keyboard_shortcut', { shortcut: 'escape', action: 'close_modals' });
     }
   }, []);
 
@@ -456,6 +493,15 @@ export default function App(): React.JSX.Element {
           />
         </Suspense>
 
+        {showAdvancedMonitoring && (
+          <Suspense fallback={<ModernLoadingSpinner />}>
+            <AdvancedMonitoringDashboard
+              showRealTime={true}
+              refreshInterval={5000}
+            />
+          </Suspense>
+        )}
+
         {/* Theme Toggle Button */}
         <button
           onClick={() => setIsDarkMode(!isDarkMode)}
@@ -471,6 +517,7 @@ export default function App(): React.JSX.Element {
           <div className="font-semibold mb-1">Keyboard Shortcuts:</div>
           <div>Ctrl+Shift+D: System Dashboard</div>
           <div>Ctrl+Shift+H: System Health</div>
+          <div>Ctrl+Shift+M: Advanced Monitoring</div>
           <div>Ctrl+Shift+K: Keyboard Help</div>
           <div>Ctrl+K: Command Palette</div>
           <div>Click Theme Button: Toggle Theme</div>
