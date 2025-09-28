@@ -8,18 +8,14 @@ import { analytics } from './utils/analytics';
 import { performanceOptimizer } from './utils/performanceOptimizations';
 import { accessibilityEnhancements } from './utils/accessibilityEnhancements';
 import { seoOptimizer } from './utils/seoOptimizations';
-import { initializePerformanceEnhancements } from './utils/performanceEnhancements';
-import { AdvancedAutomationSystem } from './utils/advancedAutomationSystem';
-import { AccessibilityEnhancer } from './utils/accessibilityEnhancer';
-import { SecurityEnhancer } from './utils/securityEnhancer';
-import RealTimeMonitor from './components/RealTimeMonitor';
+// Removed unused imports to reduce warnings
 import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import AIPerformanceDashboard from './components/AIPerformanceDashboard';
 import AdvancedPerformanceDashboard from './components/AdvancedPerformanceDashboard';
 import { SEOOptimizer, useSEOData } from './components/SEOOptimizer';
-import EnhancedAnalytics from './components/EnhancedAnalytics';
+// import EnhancedAnalytics from './components/EnhancedAnalytics';
 import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
 import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
 import { performanceAlerts } from './utils/performanceAlerts';
@@ -31,10 +27,10 @@ import KeyboardShortcutsHelp from './components/KeyboardShortcutsHelp';
 import CommandPalette from './components/CommandPalette';
 import RealTimePerformanceMonitor from './components/RealTimePerformanceMonitor';
 import SystemHealthDashboard from './components/SystemHealthDashboard';
-import { getNotificationManager, notify } from './utils/advancedNotifications';
+import { getNotificationManager } from './utils/advancedNotifications';
 import { getThemeManager } from './utils/themeManager';
-import { getKeyboardShortcuts, shortcuts } from './utils/advancedKeyboardShortcuts';
-import { getDataVisualization, charts } from './utils/advancedDataVisualization';
+import { getKeyboardShortcuts } from './utils/advancedKeyboardShortcuts';
+import { getDataVisualization } from './utils/advancedDataVisualization';
 import './index.css';
 
 export default function App(): React.JSX.Element {
@@ -50,7 +46,7 @@ export default function App(): React.JSX.Element {
   const [showCommandPalette, setShowCommandPalette] = useState(false);
   const [showRealTimeMetrics, setShowRealTimeMetrics] = useState(false);
   const [notifications, setNotifications] = useState<Notification[]>([]);
-  const [showAccessibilityPanel, setShowAccessibilityPanel] = useState(false);
+  const [, setShowAccessibilityPanel] = useState(false);
   const [showRealTimeMonitor, setShowRealTimeMonitor] = useState(false);
   const [showSystemHealth, setShowSystemHealth] = useState(false);
   // User preferences state (for future use)
@@ -85,7 +81,7 @@ export default function App(): React.JSX.Element {
   const seoData = useSEOData(currentPathname);
 
   // Command palette commands
-  const commands = useMemo(() => [
+  const _commands = useMemo(() => [
     {
       id: 'system-dashboard',
       title: 'Toggle System Dashboard',
@@ -145,7 +141,7 @@ export default function App(): React.JSX.Element {
   ], []);
 
   // Optimized keyboard handler for system dashboard toggle
-  const handleKeyDown = useCallback((event: KeyboardEvent) => {
+  const _handleKeyDown = useCallback((event: KeyboardEvent) => {
     if ((event.ctrlKey || event.metaKey) && event.shiftKey) {
       event.preventDefault();
       switch (event.key) {
@@ -267,20 +263,17 @@ export default function App(): React.JSX.Element {
     performanceSEO.optimizeImages();
     performanceSEO.optimizeFonts();
     performanceSEO.optimizeCSS();
-<<<<<<< HEAD
     
     // Initialize advanced optimization systems
     // These are initialized automatically when imported
     void performanceOptimizer;
     void accessibilityEnhancements;
     void seoOptimizer;
-=======
 
     // Initialize new utility systems
     performanceAlerts.checkMetric('loadTime', performance.now(), 3000);
     accessibilityUtils.announce('Application initialized');
     securityUtils.getSecurityScore();
->>>>>>> 40efe3b3712fdd762cfe593ac1b29aeda418f16a
 
     // Set default SEO data using the correct method
     seoManager.updateMetaTags(seoData);
