@@ -3,37 +3,24 @@ import { AppRouter } from './router';
 import { useAppInitialization } from './hooks/useAppInitialization';
 import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
-import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
 import { seoAnalytics, performanceSEO, seoManager } from './utils/seoEnhanced';
 import { analytics } from './utils/analytics';
-// import { performanceOptimizer } from './utils/performanceOptimizations';
-// import { accessibilityEnhancer } from './utils/accessibilityEnhancements';
-// import { seoOptimizer } from './utils/seoOptimizations';
-// import PerformanceDashboard from './components/PerformanceDashboard';
-// import RealTimeMonitor from './components/RealTimeMonitor';
-// import SystemMetricsDashboard from './components/SystemMetricsDashboard';
 import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import AIPerformanceDashboard from './components/AIPerformanceDashboard';
 import { SEOOptimizer, useSEOData } from './components/SEOOptimizer';
-import EnhancedAnalytics from './components/EnhancedAnalytics';
 import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
 import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
-import { enhancedAnalytics } from './utils/enhancedAnalytics';
-import { advancedCacheSystem } from './utils/advancedCacheSystem';
-import { AdvancedAutomationSystem } from './utils/advancedAutomationSystem';
-import { AccessibilityEnhancer } from './utils/accessibilityEnhancer';
-import { SecurityEnhancer } from './utils/securityEnhancer';
-import CommandPalette from './components/CommandPalette';
-import KeyboardShortcutsHelp from './components/KeyboardShortcutsHelp';
-import NotificationSystem, { Notification } from './components/NotificationSystem';
-import RealTimePerformanceMonitor from './components/RealTimePerformanceMonitor';
-import SystemHealthDashboard from './components/SystemHealthDashboard';
 import { performanceAlerts } from './utils/performanceAlerts';
-import { errorRecovery } from './utils/errorRecovery';
 import { accessibilityUtils } from './utils/accessibilityUtils';
 import { securityUtils } from './utils/securityUtils';
+import AdvancedAnalytics from './components/AdvancedAnalytics';
+import NotificationSystem, { Notification } from './components/NotificationSystem';
+import KeyboardShortcutsHelp from './components/KeyboardShortcutsHelp';
+import CommandPalette from './components/CommandPalette';
+import RealTimePerformanceMonitor from './components/RealTimePerformanceMonitor';
+import SystemHealthDashboard from './components/SystemHealthDashboard';
 import './index.css';
 
 export default function App(): React.JSX.Element {
@@ -42,28 +29,21 @@ export default function App(): React.JSX.Element {
   const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
   const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
   const [showAIDashboard, setShowAIDashboard] = useState(false);
-  const [showRealTimeMetrics, setShowRealTimeMetrics] = useState(false);
-  const [showCommandPalette, setShowCommandPalette] = useState(false);
-  const [showKeyboardHelp, setShowKeyboardHelp] = useState(false);
-  const [notifications, setNotifications] = useState<Notification[]>([]);
   const [showSEOOptimizer, setShowSEOOptimizer] = useState(false);
-  const [showAccessibilityPanel, setShowAccessibilityPanel] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const [showKeyboardHelp, setShowKeyboardHelp] = useState(false);
+  const [showCommandPalette, setShowCommandPalette] = useState(false);
+  const [notifications, setNotifications] = useState<Notification[]>([]);
+  const [showAccessibilityPanel, setShowAccessibilityPanel] = useState(false);
   const [showRealTimeMonitor, setShowRealTimeMonitor] = useState(false);
   const [showSystemHealth, setShowSystemHealth] = useState(false);
+  // User preferences state (for future use)
   // const [userPreferences, setUserPreferences] = useState({
   //   theme: 'auto',
   //   animations: true,
   //   notifications: true,
   //   analytics: true
   // });
-  // Performance metrics state
-  const [performanceMetrics, setPerformanceMetrics] = useState({
-    memoryUsage: 0,
-    renderTime: 0,
-    networkLatency: 0,
-    errorCount: 0
-  });
 
   // Engagement tracking data
   const engagementData = useMemo(() => ({
@@ -88,6 +68,7 @@ export default function App(): React.JSX.Element {
   // Get SEO data using current pathname
   const seoData = useSEOData(currentPathname);
 
+<<<<<<< HEAD
   // Command palette commands
   const commands = useMemo(() => [
     {
@@ -192,6 +173,9 @@ export default function App(): React.JSX.Element {
       }
     }
   }, []);
+=======
+  // Enhanced engagement tracking function
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a11a
   const enhancedTrackEngagement = useCallback(() => {
     const timeOnPage = Date.now() - engagementData.startTime;
     seoAnalytics.trackUserEngagement(window.location.pathname, {
@@ -206,7 +190,7 @@ export default function App(): React.JSX.Element {
   const memoizedSeoData = useMemo(() => ({
     title: 'Zion Tech Group - Leading AI & Technology Solutions',
     description: 'Cutting-edge AI, quantum computing, and digital transformation solutions for modern enterprises. Expert consulting, cloud services, and innovative technology implementations.',
-    keywords: ['AI solutions', 'quantum computing', 'digital transformation', 'cloud services', 'enterprise technology', 'machine learning', 'automation', 'blockchain'],
+    keywords: ['AI solutions', 'quantum computing', 'digital transformation', 'cloud services', 'enterprise technology'],
     canonical: `https://zion.app${currentPathname}`,
     ogTitle: 'Zion Tech Group - AI & Technology Solutions',
     ogDescription: 'Transform your business with cutting-edge AI and technology solutions.',
@@ -217,7 +201,7 @@ export default function App(): React.JSX.Element {
     twitterImage: 'https://zion.app/twitter-image.jpg'
   }), [currentPathname]);
 
-  // Performance optimization hook
+  // Performance optimization hook (for future use)
   // const { getPerformanceMetrics } = usePerformanceOptimization();
 
   // Initialize comprehensive enhancements
@@ -228,25 +212,30 @@ export default function App(): React.JSX.Element {
       enhancements.initialize();
       
       // Initialize individual enhancement systems
-      if ('startMonitoring' in enhancedPerformanceMonitor) {
-        enhancedPerformanceMonitor.startMonitoring();
-      } else if ('initialize' in enhancedPerformanceMonitor) {
-        (enhancedPerformanceMonitor as any).initialize();
+      enhancedPerformanceMonitor.startMonitoring();
+      
+      // Initialize analytics
+      if ('initialize' in analytics) {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        (analytics as any).initialize();
       }
-      enhancedAnalytics.initialize();
-      advancedCacheSystem.initialize();
-      new AdvancedAutomationSystem().initialize();
-      // Initialize enhancement systems
-      new AccessibilityEnhancer();
-      new SecurityEnhancer();
+      if ('initialize' in seoAnalytics) {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        (seoAnalytics as any).initialize();
+      }
+      if ('initialize' in performanceSEO) {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        (performanceSEO as any).initialize();
+      }
+      if ('initialize' in seoManager) {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        (seoManager as any).initialize();
+      }
     } catch (error) {
       console.warn('Some enhancement systems failed to initialize:', error);
       // Log error for debugging
       console.error('Initialization error:', error);
     }
-    
-    // Initialize basic systems
-    analytics.initialize();
     
     // Initialize SEO analytics
     seoAnalytics.trackPageView(window.location.pathname);
@@ -263,9 +252,6 @@ export default function App(): React.JSX.Element {
 
     // Set default SEO data using the correct method
     seoManager.updateMetaTags(seoData);
-
-    // Update meta tags
-    updateMetaTags(memoizedSeoData);
   }, [seoData]);
 
   // Update meta tags function
@@ -360,30 +346,16 @@ export default function App(): React.JSX.Element {
     };
   }, [handleScroll, handleClick, enhancedTrackEngagement]);
 
-  // Real-time performance metrics monitoring
-  useEffect(() => {
-    if (!showRealTimeMetrics) return;
-
-    const updateMetrics = () => {
-      if (typeof window !== 'undefined' && window.performance) {
-        const memory = (window.performance as Performance & { memory?: { usedJSHeapSize: number } }).memory;
-        const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        
-        setPerformanceMetrics(prev => ({
-          memoryUsage: memory ? Math.round(memory.usedJSHeapSize / 1024 / 1024) : 0,
-          renderTime: navigation ? Math.round(navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart) : 0,
-          networkLatency: navigation ? Math.round(navigation.responseEnd - navigation.requestStart) : 0,
-          errorCount: prev.errorCount
-        }));
-      }
-    };
-
-    const interval = setInterval(updateMetrics, 1000);
-    updateMetrics(); // Initial update
-
-    return () => clearInterval(interval);
-  }, [showRealTimeMetrics]);
-
+  // SEO and performance effect
+  React.useEffect(() => {
+    // Update meta tags
+    updateMetaTags(memoizedSeoData);
+    
+    // Basic performance monitoring
+    if (typeof window !== 'undefined') {
+      console.log('🚀 Zion Tech Group App initialized');
+    }
+  }, [memoizedSeoData, updateMetaTags]);
   // Enhanced keyboard shortcuts
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
@@ -410,7 +382,6 @@ export default function App(): React.JSX.Element {
             setIsDarkMode(!isDarkMode);
             break;
           case 'R':
-            setShowRealTimeMetrics(!showRealTimeMetrics);
             setShowRealTimeMonitor(!showRealTimeMonitor);
             break;
           case 'H':
@@ -421,7 +392,9 @@ export default function App(): React.JSX.Element {
             break;
           case 'N':
             // Show notification
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
             if ((window as any).notifications) {
+              // eslint-disable-next-line @typescript-eslint/no-explicit-any
               (window as any).notifications.add({
                 type: 'info',
                 title: 'Notification Test',
@@ -432,7 +405,9 @@ export default function App(): React.JSX.Element {
             break;
           case 'C':
             // Clear notifications
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
             if ((window as any).notifications) {
+              // eslint-disable-next-line @typescript-eslint/no-explicit-any
               (window as any).notifications.clear();
             }
             break;
@@ -462,13 +437,12 @@ export default function App(): React.JSX.Element {
         setShowCommandPalette(false);
         setShowRealTimeMonitor(false);
         setShowSystemHealth(false);
-        setShowRealTimeMetrics(false);
       }
     };
 
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
-  }, [showSystemDashboard, showPerformanceOptimizer, showPerformanceMonitor, showAIDashboard, showSEOOptimizer, isDarkMode, showKeyboardHelp, showCommandPalette, showRealTimeMonitor, showSystemHealth, showRealTimeMetrics]);
+  }, [showSystemDashboard, showPerformanceOptimizer, showPerformanceMonitor, showAIDashboard, showSEOOptimizer, isDarkMode, showKeyboardHelp, showCommandPalette, showRealTimeMonitor, showSystemHealth]);
 
   // Command palette commands
   const commandPaletteCommands = [
@@ -550,7 +524,9 @@ export default function App(): React.JSX.Element {
       description: 'Show a test notification',
       category: 'Testing',
       action: () => {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         if ((window as any).notifications) {
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
           (window as any).notifications.add({
             type: 'success',
             title: 'Command Executed',
@@ -563,6 +539,7 @@ export default function App(): React.JSX.Element {
     }
   ];
 
+<<<<<<< HEAD
   // Track engagement on scroll and click
   useEffect(() => {
     const handleScrollWithEngagement = () => {
@@ -584,7 +561,6 @@ export default function App(): React.JSX.Element {
     };
   }, [handleScroll, handleClick, trackEngagement]);
 
-  // Show loading spinner while initializing
   if (isLoading) {
     return <ModernLoadingSpinner progress={loadingProgress} />;
   }
@@ -592,7 +568,13 @@ export default function App(): React.JSX.Element {
   return (
     <EnhancedErrorBoundary>
       <SEOOptimizer seoData={seoData} />
-      <EnhancedAnalytics />
+      <AdvancedAnalytics 
+        enableHeatmaps={true}
+        enableUserJourney={true}
+        enableConversionTracking={true}
+        enablePerformanceTracking={true}
+        enableErrorTracking={true}
+      />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <AppRouter />
         
@@ -684,6 +666,7 @@ export default function App(): React.JSX.Element {
           onClose={() => setShowAIDashboard(false)}
         />
 
+<<<<<<< HEAD
         {/* Real-time Metrics Display */}
         {showRealTimeMetrics && (
           <div className="fixed top-4 right-4 z-50 bg-black bg-opacity-90 text-white p-4 rounded-lg shadow-lg min-w-[300px]">
@@ -717,6 +700,8 @@ export default function App(): React.JSX.Element {
           </div>
         )}
 
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a11a
         {/* Real-Time Performance Monitor */}
         <RealTimePerformanceMonitor
           isVisible={showRealTimeMonitor}
@@ -807,38 +792,6 @@ export default function App(): React.JSX.Element {
           <div>Escape: Close All</div>
         </div>
       </div>
-      
-      {/* Additional components */}
-      <AIPerformanceDashboard 
-        isVisible={showPerformanceOptimizer}
-        onClose={() => setShowPerformanceOptimizer(false)}
-      />
-      <EnhancedSystemDashboard />
-      <NotificationSystem
-        notifications={notifications}
-        onRemove={(id) => setNotifications(prev => prev.filter(n => n.id !== id))}
-      />
-      <SEOOptimizer seoData={seoData} />
-      <EnhancedAnalytics />
-      
-      {/* Command Palette */}
-      <CommandPalette
-        isVisible={showCommandPalette}
-        onClose={() => setShowCommandPalette(false)}
-        commands={commands}
-      />
-      
-      {/* Keyboard Shortcuts Help */}
-      <KeyboardShortcutsHelp
-        isVisible={showKeyboardHelp}
-        onClose={() => setShowKeyboardHelp(false)}
-      />
-      
-      {/* Notification System */}
-      <NotificationSystem
-        notifications={notifications}
-        onRemove={(id) => setNotifications(prev => prev.filter(n => n.id !== id))}
-      />
     </EnhancedErrorBoundary>
   );
 }
