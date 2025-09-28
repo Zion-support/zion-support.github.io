@@ -1,13 +1,10 @@
-import React, { useCallback, useState, useMemo, useEffect } from 'react';
+import React, { useCallback, useState, useEffect, useMemo } from 'react';
 import { AppRouter } from './router';
 import { useAppInitialization } from './hooks/useAppInitialization';
 import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import { seoAnalytics, performanceSEO, seoManager } from './utils/seoEnhanced';
 import { analytics } from './utils/analytics';
-import { cacheManager } from './utils/cacheManager';
-import { apiClient } from './utils/apiClient';
-import { notificationManager } from './utils/notificationManager';
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
 import PerformanceDashboard from './components/PerformanceDashboard';
 import RealTimeMonitor from './components/RealTimeMonitor';
@@ -16,9 +13,6 @@ import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
 import EnhancedNotificationSystem from './components/EnhancedNotificationSystem';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import EnhancedAnalytics from './components/EnhancedAnalytics';
-import { initializeErrorReporting } from './utils/errorReporting';
-import { advancedPerformanceOptimizer } from './utils/performanceOptimizer';
-import { seoOptimizer } from './utils/seoOptimization';
 import './index.css';
 import './styles/notifications.css';
 import './styles/system-metrics.css';
@@ -98,26 +92,22 @@ export default function App(): React.JSX.Element {
   }), []);
 
   useEffect(() => {
-    // Initialize error reporting
-    initializeErrorReporting();
-    
     // Add performance marks for better monitoring
     if (typeof window !== 'undefined' && window.performance && typeof performance.mark === 'function') {
       performance.mark('app-init-start');
     }
     
-    // Initialize performance optimizer
-    advancedPerformanceOptimizer.initialize();
-    
     // Preload critical resources
     preloadResource('/og-image.png', 'image');
     preloadResource('/favicon.ico', 'image');
 
+    // Use passive listeners for better performance
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    document.addEventListener('click', handleClick, { passive: true });
+    document.addEventListener('keydown', handleKeyDown);
+
     // Initialize basic systems
     analytics.initialize();
-    cacheManager.initialize();
-    apiClient.initialize();
-    notificationManager.initialize();
     
     // Initialize SEO analytics
     seoAnalytics.trackPageView(window.location.pathname);
@@ -129,16 +119,6 @@ export default function App(): React.JSX.Element {
 
     // Set default SEO data
     seoManager.updateMetaTags(seoData);
-
-    // Initialize SEO optimizer
-    seoOptimizer.updatePageSEO({
-      title: seoData.title,
-      description: seoData.description,
-      keywords: seoData.keywords,
-      image: seoData.ogImage,
-      url: window.location.href,
-      type: seoData.ogType as 'website' | 'article' | 'product'
-    });
 
     // Basic performance monitoring
     if (typeof window !== 'undefined') {
@@ -153,14 +133,13 @@ export default function App(): React.JSX.Element {
       performance.measure('app-initialization', 'app-init-start', 'app-init-complete');
     }
 
-    // Add keyboard event listener
-    document.addEventListener("keydown", handleKeyDown);
-    
     // Cleanup function
     return () => {
-      document.removeEventListener("keydown", handleKeyDown);
+      window.removeEventListener('scroll', handleScroll);
+      document.removeEventListener('click', handleClick);
+      document.removeEventListener('keydown', handleKeyDown);
     };
-  }, [seoData, preloadResource, handleKeyDown]);
+  }, [handleScroll, handleClick, handleKeyDown, seoData, preloadResource]);
 
   // Main initialization and cleanup effect
   React.useEffect(() => {
