@@ -14,8 +14,9 @@ import './styles/notifications.css';
 import './styles/system-metrics.css';
 import './styles/modern-utilities.css';
 
-// Import utility managers - simplified for build compatibility
-import { seoOptimizer } from './utils/seoUtils';
+// Import utility functions and managers
+import { initializeErrorReporting } from './utils/errorReporting';
+import { initOptimizations } from './utils/buildOptimizations';
 
 export default function App(): React.JSX.Element {
   // State for system metrics dashboard
@@ -31,15 +32,15 @@ export default function App(): React.JSX.Element {
     clicks: 0
   }), []);
 
-  // Scroll handler
+  // Scroll handler for engagement tracking
   const handleScroll = useCallback(() => {
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
-    const scrollDepth = Math.min((scrollTop / scrollHeight) * 100, 100);
-    engagementData.scrollDepth = scrollDepth;
+    const scrollDepth = Math.min(scrollTop / scrollHeight, 1);
+    engagementData.scrollDepth = Math.max(engagementData.scrollDepth, scrollDepth);
   }, [engagementData]);
 
-  // Click handler
+  // Click handler for engagement tracking
   const handleClick = useCallback(() => {
     engagementData.clicks += 1;
   }, [engagementData]);
@@ -74,48 +75,50 @@ export default function App(): React.JSX.Element {
     ogType: 'website',
     ogUrl: typeof window !== 'undefined' ? window.location.href : '',
     ogImage: '/og-image.png',
-    twitterCard: 'summary_large_image' as const
+    twitterCard: 'summary_large_image' as const,
+    structuredData: []
   }), []);
 
-  // Main initialization effect
   useEffect(() => {
+    // Initialize error reporting with enhanced configuration
+    initializeErrorReporting();
+    
+    // Initialize build optimizations with performance monitoring
+    initOptimizations();
+    
     // Add performance marks for better monitoring
     if (typeof window !== 'undefined' && window.performance && typeof performance.mark === 'function') {
       performance.mark('app-init-start');
     }
 
-    // Initialize SEO optimizer
-    seoOptimizer.updateMetaTags({
-      title: seoData.title,
-      description: seoData.description,
-      keywords: seoData.keywords,
-      image: seoData.ogImage,
-      url: typeof window !== 'undefined' ? window.location.href : '',
-      type: seoData.ogType
-    });
-
     // Use passive listeners for better performance
     window.addEventListener('scroll', handleScroll, { passive: true });
     document.addEventListener('click', handleClick, { passive: true });
-
-    // Cleanup function
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-      document.removeEventListener('click', handleClick);
-    };
   }, [seoData, handleScroll, handleClick]);
 
   // Add keyboard event listener
   React.useEffect(() => {
     document.addEventListener("keydown", handleKeyDown);
-    
     return () => {
       document.removeEventListener("keydown", handleKeyDown);
     };
   }, [handleKeyDown]);
 
+  // Track user engagement with throttling for better performance
+  const trackEngagement = useCallback(() => {
+    const timeOnPage = Date.now() - engagementData.startTime;
+    console.log('User engagement tracked:', {
+      timeOnPage,
+      scrollDepth: engagementData.scrollDepth,
+      clicks: engagementData.clicks,
+    });
+  }, [engagementData]);
+
   // Main initialization and cleanup effect
   React.useEffect(() => {
+    // Track engagement on page unload
+    window.addEventListener('beforeunload', trackEngagement);
+
     // Mark app as fully initialized
     if (typeof window !== 'undefined' && window.performance && 
         typeof performance.mark === 'function' && 
@@ -126,9 +129,15 @@ export default function App(): React.JSX.Element {
 
     // Cleanup function
     return () => {
+      window.removeEventListener('scroll', handleScroll);
+      document.removeEventListener('click', handleClick);
       document.removeEventListener('keydown', handleKeyDown);
+      window.removeEventListener('beforeunload', trackEngagement);
+      
+      // Final engagement tracking
+      trackEngagement();
     };
-  }, [handleKeyDown]);
+  }, [trackEngagement, handleScroll, handleClick, handleKeyDown]);
 
   // Show loading screen while initializing
   if (isLoading) {
