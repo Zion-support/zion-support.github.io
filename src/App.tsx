@@ -1,112 +1,37 @@
 import React, { useCallback, useState, useEffect, useMemo, lazy, Suspense } from 'react';
-import { useNavigate } from 'react-router-dom';
 import { AppRouter } from './router';
 import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import PerformanceTracker from './components/PerformanceTracker';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
-import { seoAnalytics, performanceSEO } from './utils/seoEnhanced';
+import { seoAnalytics, performanceSEO, seoManager } from './utils/seoEnhanced';
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
 import { useAppInitialization } from './hooks/useAppInitialization';
 import AIPerformanceDashboard from './components/AIPerformanceDashboard';
 import WebsiteEnhancements from './components/WebsiteEnhancements';
 import SEOOptimizer from './components/SEOOptimizer';
 import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
-import { enhancedSecurityManager } from './utils/enhancedSecurityManager';
 import { EnhancedNotification } from './types/comprehensive';
 import './index.css';
 
-// Import new advanced systems
-import { seoManager } from './utils/advancedSEOManager';
-
-// Import enhanced utilities
-import { enhancedAccessibilityManager } from './utils/enhancedAccessibility';
-import { enhancedSEOOptimizer } from './utils/enhancedSEOOptimizer';
-import { enhancedAnalyticsSystem } from './utils/enhancedAnalyticsSystem';
-import { advancedAppEnhancements } from './utils/advancedAppEnhancements';
-import { errorHandler, ErrorBoundary } from './utils/errorHandler';
-import { performanceMonitor } from './utils/performanceMonitoring';
-import { advancedErrorHandler } from './utils/advancedErrorHandling';
-import SystemMonitoringDashboard from './components/SystemMonitoringDashboard';
-
 // Lazy load heavy components for better performance
 const EnhancedSystemDashboard = lazy(() => import('./components/EnhancedSystemDashboard'));
-const KeyboardShortcutsHelp = lazy(() => import('./components/KeyboardShortcutsHelp'));
-const SystemHealthDashboard = lazy(() => import('./components/SystemHealthDashboard'));
-const PerformanceWidget = lazy(() => import('./components/PerformanceWidget'));
-const CommandPalette = lazy(() => import('./components/CommandPalette'));
-const AdvancedMonitoringDashboard = lazy(() => import('./components/AdvancedMonitoringDashboard'));
-const ComprehensivePerformanceDashboard = lazy(() => import('./components/ComprehensivePerformanceDashboard'));
-const RealTimePerformanceMonitor = lazy(() => import('./components/RealTimePerformanceMonitor'));
-const EnhancedCommandPalette = lazy(() => import('./components/EnhancedCommandPalette'));
-const PerformanceIndicator = lazy(() => import('./components/PerformanceIndicator'));
-const AccessibilityEnhancer = lazy(() => import('./components/AccessibilityEnhancer'));
-const DynamicMetaTags = lazy(() => import('./components/DynamicMetaTags'));
-const SystemStatusIndicator = lazy(() => import('./components/SystemStatusIndicator'));
-const EnhancedNotificationSystem = lazy(() => import('./components/EnhancedNotificationSystem'));
-const KeyboardShortcutsManager = lazy(() => import('./components/KeyboardShortcutsManager'));
-const ErrorRecoveryDashboard = lazy(() => import('./components/ErrorRecoveryDashboard'));
-
-// Direct imports
-import WebsiteEnhancements from './components/WebsiteEnhancements';
-import SEOOptimizer from './components/SEOOptimizer';
-import AdvancedAnalytics from './components/AdvancedAnalytics';
-import PerformanceDashboard from './components/PerformanceDashboard';
-import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
-// import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
-import { performanceAlerts } from './utils/performanceAlerts';
-import { accessibilityUtils } from './utils/accessibilityUtils';
-import { securityUtils } from './utils/securityUtils';
-import { enhancedSecurityManager } from './utils/enhancedSecurityManager';
-import { advancedPerformanceOptimizer } from './utils/advancedPerformanceOptimizer';
-import { advancedSEOOptimizer } from './utils/advancedSEOOptimizer';
-import PerformanceMetricsDashboard from './components/PerformanceMetricsDashboard';
-import ComprehensiveImprovements from './components/ComprehensiveImprovements';
 
 export default function App(): React.JSX.Element {
-  const navigate = useNavigate();
-  
   // State for system dashboard and performance optimizer
   const [showSystemDashboard, setShowSystemDashboard] = useState(false);
   const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
   const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
   const [showAIDashboard, setShowAIDashboard] = useState(false);
   const [showSEOOptimizer, setShowSEOOptimizer] = useState(false);
-  const [showRealTimeMetrics, setShowRealTimeMetrics] = useState(false);
-  const [showAccessibilityPanel, setShowAccessibilityPanel] = useState(false);
-  const [showSystemStatus, setShowSystemStatus] = useState(true);
-  const [showEnhancedNotifications] = useState(true);
-  const [showKeyboardShortcutsManager, setShowKeyboardShortcutsManager] = useState(false);
-  const [showComprehensiveImprovements, setShowComprehensiveImprovements] = useState(false);
-  const [showPerformanceWidget, setShowPerformanceWidget] = useState(false);
-  const [showSystemHealth, setShowSystemHealth] = useState(false);
-  const [notifications, setNotifications] = useState<Notification[]>([]);
-  const [enhancedNotifications, setEnhancedNotifications] = useState<EnhancedNotification[]>([]);
 
-  // Notification management
-  const removeNotification = useCallback((id: string) => {
-    setNotifications(prev => prev.filter(n => n.id !== id));
-  }, []);
-
-  const removeEnhancedNotification = useCallback((id: string) => {
-    setEnhancedNotifications(prev => prev.filter(n => n.id !== id));
-  }, []);
-
-  // Performance metrics state
-  const [performanceMetrics, setPerformanceMetrics] = useState({
-    memoryUsage: 0,
-    renderTime: 0,
-    networkLatency: 0,
-    errorCount: 0
-  });
-
-  // Engagement tracking data
-  const engagementData = useMemo(() => ({
-    startTime: Date.now(),
-    scrollDepth: 0,
-    clicks: 0
-  }), []);
+  // Engagement tracking data (commented out as it's not currently used)
+  // const engagementData = useMemo(() => ({
+  //   startTime: Date.now(),
+  //   scrollDepth: 0,
+  //   clicks: 0
+  // }), []);
 
   // Initialize app with custom configuration
   const { isLoading, loadingProgress, handleScroll, handleClick, trackEngagement } = useAppInitialization({
@@ -146,56 +71,21 @@ export default function App(): React.JSX.Element {
         case 'S':
           setShowSEOOptimizer(prev => !prev);
           break;
-        case 'R':
-          setShowRealTimeMetrics(prev => !prev);
-          break;
-        case 'H':
-          setShowAccessibilityPanel(prev => !prev);
-          break;
-        case 'K':
-          setShowKeyboardShortcutsManager(prev => !prev);
-          break;
-        case 'I':
-          setShowComprehensiveImprovements(prev => !prev);
-          break;
         default:
           break;
       }
     }
   }, []);
 
-  const enhancedTrackEngagement = useCallback(() => {
-    const timeOnPage = Date.now() - engagementData.startTime;
-    seoAnalytics.trackUserEngagement(window.location.pathname, {
-      timeOnPage,
-      scrollDepth: engagementData.scrollDepth,
-      clicks: engagementData.clicks,
-    });
-    trackEngagement();
-  }, [trackEngagement, engagementData.clicks, engagementData.scrollDepth, engagementData.startTime]);
-
   // Memoize the SEO data to prevent unnecessary re-renders
-  const memoizedSeoData = useMemo(() => ({
+  const seoData = useMemo(() => ({
     title: 'Zion Tech Group - Leading AI & Technology Solutions',
-    description: 'Transform your business with cutting-edge AI solutions, advanced technology consulting, and innovative digital transformation services.',
-    keywords: 'AI solutions, technology consulting, digital transformation, machine learning, automation',
-    canonical: 'https://ziontechgroup.com',
+    description: 'Cutting-edge AI, quantum computing, and digital transformation solutions for modern enterprises. Expert consulting, cloud services, and innovative technology implementations.',
+    keywords: ['AI solutions', 'quantum computing', 'digital transformation', 'cloud services', 'enterprise technology', 'machine learning', 'automation', 'blockchain'],
     ogType: 'website',
-    ogUrl: 'https://ziontechgroup.com',
+    ogUrl: typeof window !== 'undefined' ? window.location.href : '',
     ogImage: '/og-image.png',
-    twitterCard: 'summary_large_image'
-  }), []);
-
-  // SEO data for enhanced optimizer (expects keywords as array)
-  const enhancedSeoData = useMemo(() => ({
-    title: 'Zion Tech Group - Leading AI & Technology Solutions',
-    description: 'Transform your business with cutting-edge AI solutions, advanced technology consulting, and innovative digital transformation services.',
-    keywords: ['AI solutions', 'technology consulting', 'digital transformation', 'machine learning', 'automation'],
-    canonical: 'https://ziontechgroup.com',
-    ogType: 'website',
-    ogUrl: 'https://ziontechgroup.com',
-    ogImage: '/og-image.png',
-    twitterCard: 'summary_large_image'
+    twitterCard: 'summary_large_image' as const
   }), []);
 
   // Update meta tags function
@@ -225,113 +115,71 @@ export default function App(): React.JSX.Element {
     }
   }, []);
 
-  // Initialize comprehensive enhancements
   useEffect(() => {
-    try {
-      // Initialize comprehensive enhancements first
-      const enhancements = getComprehensiveEnhancements();
-      
-      // Initialize individual enhancement systems
-      advancedAccessibilityEnhancer.initialize();
-      enhancedSecurityManager.initialize();
-      enhancedAnalyticsSystem.initialize();
-      
-      // Initialize new advanced enhancements
-      advancedAppEnhancements.initialize();
-      performanceMonitor.initialize();
-      
-      // Initialize performance and accessibility enhancements
-      initializePerformanceEnhancements();
-      initializeAccessibilityEnhancements();
-      
-      // Initialize SEO analytics
-      seoAnalytics.trackPageView(window.location.pathname);
-      
-      // Initialize performance SEO optimizations
-      performanceSEO.optimizeImages();
-      performanceSEO.optimizeFonts();
-      performanceSEO.optimizeCSS();
-
-      // Set default SEO data using the correct method
-      seoManager.updateSEO(enhancedSeoData);
-
-      // Update meta tags
-      updateMetaTags(memoizedSeoData);
-
-      // Initialize enhancement systems
-      performanceOptimizer.optimizeBundleSize();
-      enhancedAccessibilityManager.initialize();
-      enhancedSEOOptimizer.updateSEO(enhancedSeoData);
-
-      // Basic performance monitoring
-      if (typeof window !== 'undefined') {
-        console.log('🚀 Zion Tech Group App initialized');
-      }
-
-      // Add performance marks for better monitoring
-      if (typeof window !== 'undefined' && window.performance && typeof performance.mark === 'function') {
-        performance.mark('app-init-start');
-      }
-      
-      // Preload critical resources
-      preloadResource('/og-image.png', 'image');
-      preloadResource('/favicon.ico', 'image');
-
-      // Use passive listeners for better performance
-      window.addEventListener('scroll', handleScroll, { passive: true });
-      document.addEventListener('click', handleClick, { passive: true });
-      document.addEventListener('keydown', handleKeyDown);
-
-      // Track engagement on page unload
-      window.addEventListener('beforeunload', enhancedTrackEngagement);
-
-      // Mark app as fully initialized
-      if (typeof window !== 'undefined' && window.performance && 
-          typeof performance.mark === 'function' && 
-          typeof performance.measure === 'function') {
-        performance.mark('app-init-complete');
-        performance.measure('app-initialization', 'app-init-start', 'app-init-complete');
-      }
-
-      // Cleanup function
-      return () => {
-        window.removeEventListener('beforeunload', enhancedTrackEngagement);
-        window.removeEventListener('scroll', handleScroll);
-        document.removeEventListener('click', handleClick);
-        document.removeEventListener('keydown', handleKeyDown);
-        
-        // Final engagement tracking
-        enhancedTrackEngagement();
-      };
-    } catch (error) {
-      console.error('Error initializing enhancements:', error);
+    // Add performance marks for better monitoring
+    if (typeof window !== 'undefined' && window.performance && typeof performance.mark === 'function') {
+      performance.mark('app-init-start');
     }
-  }, [handleScroll, handleClick, handleKeyDown, memoizedSeoData, preloadResource, updateMetaTags, enhancedTrackEngagement, trackEngagement]);
+    
+    // Preload critical resources
+    preloadResource('/og-image.png', 'image');
+    preloadResource('/favicon.ico', 'image');
 
-  // Real-time performance metrics monitoring
-  useEffect(() => {
-    if (!isLoading) {
-      const interval = setInterval(() => {
-        if (typeof window !== 'undefined' && window.performance) {
-          const memory = (window.performance as Performance & { memory?: { usedJSHeapSize: number } }).memory;
-          const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-          
-          setPerformanceMetrics({
-            memoryUsage: memory ? Math.round(memory.usedJSHeapSize / 1024 / 1024) : 0,
-            renderTime: navigation ? Math.round(navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart) : 0,
-            networkLatency: navigation ? Math.round(navigation.responseEnd - navigation.requestStart) : 0,
-            errorCount: window.performance.getEntriesByType('resource').filter(entry => 
-              entry.name.includes('error') || entry.name.includes('404')
-            ).length
-          });
-        }
-      }, 1000);
+    // Use passive listeners for better performance
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    document.addEventListener('click', handleClick, { passive: true });
+    document.addEventListener('keydown', handleKeyDown);
 
-      return () => clearInterval(interval);
+    // Initialize basic systems
+    seoAnalytics.trackPageView(window.location.pathname);
+    
+    // Initialize performance SEO optimizations
+    performanceSEO.optimizeImages();
+    performanceSEO.optimizeFonts();
+    performanceSEO.optimizeCSS();
+
+    // Set default SEO data using the correct method
+    seoManager.updateMetaTags(seoData);
+
+    // Update meta tags
+    updateMetaTags(seoData);
+
+    // Basic performance monitoring
+    if (typeof window !== 'undefined') {
+      console.log('🚀 Zion Tech Group App initialized');
     }
-  }, [isLoading]);
 
-  // Show loading spinner while initializing
+    // Mark app as fully initialized
+    if (typeof window !== 'undefined' && window.performance && 
+        typeof performance.mark === 'function' && 
+        typeof performance.measure === 'function') {
+      performance.mark('app-init-complete');
+      performance.measure('app-initialization', 'app-init-start', 'app-init-complete');
+    }
+
+    // Cleanup function
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      document.removeEventListener('click', handleClick);
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [handleScroll, handleClick, handleKeyDown, seoData, preloadResource, updateMetaTags]);
+
+  // Main initialization and cleanup effect
+  React.useEffect(() => {
+    // Track engagement on page unload
+    window.addEventListener('beforeunload', trackEngagement);
+
+    // Cleanup function
+    return () => {
+      window.removeEventListener('beforeunload', trackEngagement);
+      
+      // Final engagement tracking
+      trackEngagement();
+    };
+  }, [trackEngagement]);
+
+  // Show loading screen while initializing
   if (isLoading) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -348,32 +196,28 @@ export default function App(): React.JSX.Element {
   }
 
   return (
-    <ErrorBoundary>
-      <EnhancedErrorBoundary>
-        <SEOOptimizer seoData={memoizedSeoData} />
-        <PerformanceTracker />
-        <WebsiteEnhancements isVisible={false} onClose={() => {}} />
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <EnhancedErrorBoundary>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <AppRouter />
         
         {/* System Dashboard */}
         {showSystemDashboard && (
-          <Suspense fallback={<div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">Loading...</div>}>
-            <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
-              <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
-                <div className="flex justify-between items-center mb-4">
-                  <h2 className="text-2xl font-bold text-gray-900">System Dashboard</h2>
-                  <button
-                    onClick={() => setShowSystemDashboard(false)}
-                    className="text-gray-500 hover:text-gray-700"
-                  >
-                    ✕
-                  </button>
-                </div>
-                <EnhancedSystemDashboard />
+          <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
+            <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+              <div className="flex justify-between items-center mb-4">
+                <h2 className="text-2xl font-bold text-gray-900">System Dashboard</h2>
+                <button
+                  onClick={() => setShowSystemDashboard(false)}
+                  className="text-gray-500 hover:text-gray-700"
+                >
+                  ✕
+                </button>
               </div>
+              <Suspense fallback={<ModernLoadingSpinner size="md" />}>
+                <EnhancedSystemDashboard />
+              </Suspense>
             </div>
-          </Suspense>
+          </div>
         )}
 
         {/* Performance Optimizer */}
@@ -389,9 +233,7 @@ export default function App(): React.JSX.Element {
                   ✕
                 </button>
               </div>
-              <PerformanceOptimizer>
-                <div>Performance optimization content</div>
-              </PerformanceOptimizer>
+              <PerformanceOptimizer />
             </div>
           </div>
         )}
@@ -414,11 +256,23 @@ export default function App(): React.JSX.Element {
           </div>
         )}
 
-        {/* AI Performance Dashboard */}
-        <AIPerformanceDashboard
-          isVisible={showAIDashboard}
-          onClose={() => setShowAIDashboard(false)}
-        />
+        {/* AI Dashboard */}
+        {showAIDashboard && (
+          <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
+            <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+              <div className="flex justify-between items-center mb-4">
+                <h2 className="text-2xl font-bold text-gray-900">AI Performance Dashboard</h2>
+                <button
+                  onClick={() => setShowAIDashboard(false)}
+                  className="text-gray-500 hover:text-gray-700"
+                >
+                  ✕
+                </button>
+              </div>
+              <AIPerformanceDashboard />
+            </div>
+          </div>
+        )}
 
         {/* SEO Optimizer */}
         {showSEOOptimizer && (
@@ -433,77 +287,17 @@ export default function App(): React.JSX.Element {
                   ✕
                 </button>
               </div>
-              <SEOOptimizer seoData={memoizedSeoData} />
+              <SEOOptimizer />
             </div>
           </div>
         )}
 
-        {/* Real-time Metrics Display */}
-        {showRealTimeMetrics && (
-          <div className="fixed top-4 right-4 z-40 bg-black bg-opacity-80 text-white p-4 rounded-lg">
-            <h3 className="text-lg font-bold mb-2">Real-time Metrics</h3>
-            <div className="space-y-1 text-sm">
-              <div>Memory: {performanceMetrics.memoryUsage}MB</div>
-              <div>Render: {performanceMetrics.renderTime}ms</div>
-              <div>Network: {performanceMetrics.networkLatency}ms</div>
-              <div>Errors: {performanceMetrics.errorCount}</div>
-            </div>
-            <button
-              onClick={() => setShowRealTimeMetrics(false)}
-              className="mt-2 text-xs text-gray-400 hover:text-white"
-            >
-              Close
-            </button>
-          </div>
-        )}
-
-        {/* Accessibility Panel */}
-        {showAccessibilityPanel && (
-          <div className="fixed bottom-4 left-4 z-40 bg-white rounded-lg shadow-lg p-4 max-w-sm">
-            <h3 className="text-lg font-bold mb-2">Accessibility Tools</h3>
-            <div className="space-y-2">
-              <button className="w-full text-left px-3 py-2 bg-blue-100 rounded hover:bg-blue-200">
-                Increase Text Size
-              </button>
-              <button className="w-full text-left px-3 py-2 bg-blue-100 rounded hover:bg-blue-200">
-                High Contrast Mode
-              </button>
-              <button className="w-full text-left px-3 py-2 bg-blue-100 rounded hover:bg-blue-200">
-                Screen Reader Mode
-              </button>
-            </div>
-            <button
-              onClick={() => setShowAccessibilityPanel(false)}
-              className="mt-2 text-sm text-gray-500 hover:text-gray-700"
-            >
-              Close Panel
-            </button>
-          </div>
-        )}
-
-        {/* Keyboard Shortcuts Help Panel */}
-        <div className="fixed bottom-4 left-4 z-40 bg-gray-800 text-white p-3 rounded-lg shadow-lg text-sm opacity-75 hover:opacity-100 transition-opacity duration-200">
-          <div className="font-semibold mb-1">Keyboard Shortcuts:</div>
-          <div>Ctrl+Shift+D: System Dashboard</div>
-          <div>Ctrl+Shift+P: Performance Optimizer</div>
-          <div>Ctrl+Shift+M: Performance Monitor</div>
-          <div>Ctrl+Shift+A: AI Dashboard</div>
-          <div>Ctrl+Shift+S: SEO Optimizer</div>
-          <div>Ctrl+Shift+T: Toggle Theme</div>
-          <div>Ctrl+Shift+R: Real-Time Monitor</div>
-          <div>Ctrl+Shift+H: System Health</div>
-        </div>
-
-        {/* Enhanced Notification System */}
-        <EnhancedNotificationSystem 
-          notifications={[]} 
-          onRemove={() => {}} 
-        />
-
-        {/* System Monitoring Dashboard */}
-        <SystemMonitoringDashboard />
-        </div>
-      </EnhancedErrorBoundary>
-    </ErrorBoundary>
+        {/* Performance Tracker */}
+        <PerformanceTracker />
+        
+        {/* Website Enhancements */}
+        <WebsiteEnhancements />
+      </div>
+    </EnhancedErrorBoundary>
   );
 }
