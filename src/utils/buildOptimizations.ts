@@ -309,4 +309,3 @@ export const initOptimizations = () => buildOptimizer.initialize();
 
 // Export class for custom instances
 export { BuildOptimizer };
-export type { BuildMetrics, OptimizationConfig };

@@ -8,6 +8,8 @@ import { analytics } from './utils/analytics';
 import { performanceOptimizer } from './utils/performanceOptimizations';
 import { accessibilityEnhancements } from './utils/accessibilityEnhancements';
 import { seoOptimizer } from './utils/seoOptimizations';
+import { seoEnhancer } from './utils/advancedSEOEnhancer';
+import { accessibilityEnhancer } from './utils/advancedAccessibilityEnhancer';
 // Removed unused imports to reduce warnings
 import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
@@ -311,7 +313,7 @@ export default function App(): React.JSX.Element {
     // Initialize advanced utilities
     const initializeUtilities = async () => {
       try {
-        await performanceOptimizer.initialize();
+        // performanceOptimizer is already initialized in constructor
         await seoEnhancer.initialize();
         await accessibilityEnhancer.initialize();
         console.log('All advanced utilities initialized successfully');

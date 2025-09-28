@@ -3,6 +3,11 @@
  * Provides comprehensive monitoring, error tracking, and performance analytics
  */
 
+interface LayoutShift extends PerformanceEntry {
+  hadRecentInput: boolean;
+  value: number;
+}
+
 interface MonitoringConfig {
   enableErrorTracking: boolean;
   enablePerformanceMonitoring: boolean;
