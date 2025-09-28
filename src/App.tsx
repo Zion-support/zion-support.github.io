@@ -14,6 +14,33 @@ import './styles/notifications.css';
 import './styles/system-metrics.css';
 import './styles/modern-utilities.css';
 
+// Simple utility functions
+const preloadResource = (href: string, as: string) => {
+  const link = document.createElement('link');
+  link.rel = 'preload';
+  link.href = href;
+  link.as = as;
+  document.head.appendChild(link);
+};
+
+// Engagement tracking data
+const engagementData = {
+  startTime: Date.now(),
+  scrollDepth: 0,
+  clicks: 0
+};
+
+// Scroll and click handlers
+const handleScroll = () => {
+  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  engagementData.scrollDepth = Math.max(engagementData.scrollDepth, (scrollTop / docHeight) * 100);
+};
+
+const handleClick = () => {
+  engagementData.clicks++;
+};
+
 export default function App(): React.JSX.Element {
   // State for system metrics dashboard
   const [showSystemDashboard, setShowSystemDashboard] = useState(false);
@@ -55,29 +82,25 @@ export default function App(): React.JSX.Element {
     structuredData: []
   }), []);
 
-  // Main initialization effect
   useEffect(() => {
     // Add performance marks for better monitoring
     if (typeof window !== 'undefined' && window.performance && typeof performance.mark === 'function') {
       performance.mark('app-init-start');
     }
     
-    // Register service worker with optimized configuration
-    import('./utils/serviceWorker').then(({ serviceWorkerManager }) => {
-      serviceWorkerManager.register().then((registration) => {
-        if (registration) {
-          console.log('✅ Service Worker registered successfully');
-        }
-      });
-    }).catch((error) => {
-      console.error('❌ Failed to load service worker manager:', error);
-    });
+    // Preload critical resources
+    preloadResource('/og-image.png', 'image');
+    preloadResource('/favicon.ico', 'image');
 
     // Use passive listeners for better performance
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    document.addEventListener('click', handleClick, { passive: true });
     document.addEventListener('keydown', handleKeyDown);
 
     // Cleanup function
     return () => {
+      window.removeEventListener('scroll', handleScroll);
+      document.removeEventListener('click', handleClick);
       document.removeEventListener('keydown', handleKeyDown);
     };
   }, [handleKeyDown]);
