@@ -6,7 +6,6 @@ import PerformanceTracker from './components/PerformanceTracker';
 import { seoAnalytics, performanceSEO, seoManager } from './utils/seoEnhanced';
 import { analytics } from './utils/analytics';
 import { performanceOptimizer } from './utils/performanceOptimizations';
-import { advancedAccessibilityEnhancer } from './utils/advancedAccessibilityEnhancer';
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
 import { useAppInitialization } from './hooks/useAppInitialization';
 import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
