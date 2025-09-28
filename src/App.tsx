@@ -17,45 +17,18 @@ import { apiClient } from './utils/apiClient';
 import { notificationManager } from './utils/notificationManager';
 import { userFeedback } from './utils/userFeedbackManager';
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
-import PerformanceDashboard from './components/PerformanceDashboard';
-import RealTimeMonitor from './components/RealTimeMonitor';
-import SystemMetricsDashboard from './components/SystemMetricsDashboard';
-import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
-import EnhancedNotificationSystem from './components/EnhancedNotificationSystem';
-import PerformanceOptimizer from './components/PerformanceOptimizer';
 import EnhancedAnalytics from './components/EnhancedAnalytics';
 import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
-import { seoManager } from './utils/seoEnhanced';
 import './index.css';
 import './styles/notifications.css';
 import './styles/system-metrics.css';
 import './styles/modern-utilities.css';
-
-// Simple utility functions
-const preloadResource = (href: string, as: string) => {
-  const link = document.createElement('link');
-  link.rel = 'preload';
-  link.href = href;
-  link.as = as;
-  document.head.appendChild(link);
-};
 
 // Engagement tracking data
 const engagementData = {
   startTime: Date.now(),
   scrollDepth: 0,
   clicks: 0
-};
-
-// Scroll and click handlers
-const handleScroll = () => {
-  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-  engagementData.scrollDepth = Math.max(engagementData.scrollDepth, (scrollTop / docHeight) * 100);
-};
-
-const handleClick = () => {
-  engagementData.clicks++;
 };
 export default function App(): React.JSX.Element {
   // State for system metrics dashboard
@@ -96,7 +69,7 @@ export default function App(): React.JSX.Element {
     });
 
     // Store enhancements globally for debugging
-    (window as any).enhancements = enhancements;
+    (window as unknown as { enhancements?: unknown }).enhancements = enhancements;
   }, []);
 
   // Optimized keyboard handler for system dashboard toggle
@@ -208,9 +181,19 @@ export default function App(): React.JSX.Element {
 
 
     // Use passive listeners for better performance
+    const handleScroll = () => {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      engagementData.scrollDepth = Math.max(engagementData.scrollDepth, (scrollTop / docHeight) * 100);
+    };
+
+    const handleClick = () => {
+      engagementData.clicks++;
+    };
+
     window.addEventListener('scroll', handleScroll, { passive: true });
     document.addEventListener('click', handleClick, { passive: true });
-  }, [seoData, handleScroll, handleClick]);
+  }, [seoData, preloadResource, engagementData]);
 
   // Add keyboard event listener
   React.useEffect(() => {
