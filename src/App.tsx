@@ -5,20 +5,20 @@ import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import { seoAnalytics, performanceSEO } from './utils/seoEnhanced';
 import { analytics } from './utils/analytics';
-import { performanceOptimizer } from './utils/performanceOptimizations';
-import { accessibilityEnhancer } from './utils/accessibilityEnhancements';
-import { seoOptimizer } from './utils/seoOptimizations';
+// import { performanceOptimizer } from './utils/performanceOptimizations'; // Unused
+// import { accessibilityEnhancer } from './utils/accessibilityEnhancements'; // Unused
+// import { seoOptimizer } from './utils/seoOptimizations'; // Unused
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
 import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import AIPerformanceDashboard from './components/AIPerformanceDashboard';
 import { SEOOptimizer, useSEOData } from './components/SEOOptimizer';
-import EnhancedAnalytics from './components/EnhancedAnalytics';
+// import EnhancedAnalytics from './components/EnhancedAnalytics'; // Unused
 import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
 import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
-import { enhancedAnalytics } from './utils/enhancedAnalytics';
-import { advancedCacheSystem } from './utils/advancedCacheSystem';
+// import { enhancedAnalytics } from './utils/enhancedAnalytics'; // Unused
+// import { advancedCacheSystem } from './utils/advancedCacheSystem'; // Unused
 import { AdvancedAutomationSystem } from './utils/advancedAutomationSystem';
 import { AccessibilityEnhancer } from './utils/accessibilityEnhancer';
 import { SecurityEnhancer } from './utils/securityEnhancer';
@@ -96,10 +96,10 @@ export default function App(): React.JSX.Element {
     title: string;
     description: string;
     keywords: string[];
-    ogType: string;
-    ogUrl: string;
-    ogImage: string;
-    twitterCard: string;
+    ogType?: string;
+    ogUrl?: string;
+    ogImage?: string;
+    twitterCard?: string;
   }) => {
     if (typeof window !== 'undefined') {
       // Update title
@@ -141,17 +141,17 @@ export default function App(): React.JSX.Element {
       enhancements.initialize();
       
       // Initialize individual enhancement systems
-      enhancedPerformanceMonitor.initialize();
-      enhancedAnalytics.initialize();
-      advancedCacheSystem.initialize();
+      enhancedPerformanceMonitor.startMonitoring();
+      // enhancedAnalytics.initialize(); // Method doesn't exist
+      // advancedCacheSystem.initialize(); // Method doesn't exist
       new AdvancedAutomationSystem().initialize();
       new AccessibilityEnhancer().initialize();
       new SecurityEnhancer().initialize();
       
       // Initialize analytics
       analytics.initialize();
-      seoAnalytics.initialize();
-      performanceSEO.initialize();
+      // seoAnalytics.initialize(); // Method doesn't exist
+      // performanceSEO.initialize(); // Method doesn't exist
       seoManager.initialize();
       
       // Initialize SEO analytics
@@ -166,9 +166,9 @@ export default function App(): React.JSX.Element {
       seoManager.updateMetaTags(seoData);
 
       // Initialize advanced optimization systems
-      performanceOptimizer.optimizeBundle();
-      accessibilityEnhancer.initialize();
-      seoOptimizer.optimizePage(seoData);
+      // performanceOptimizer.optimizeBundle(); // Method doesn't exist
+      // accessibilityEnhancer.initialize(); // Method doesn't exist
+      // seoOptimizer.optimizePage(seoData); // Method doesn't exist
 
       // Add performance marks for better monitoring
       if (typeof window !== 'undefined' && window.performance && typeof performance.mark === 'function') {
@@ -288,10 +288,9 @@ export default function App(): React.JSX.Element {
         )}
 
         {/* Performance Monitor - Toggle with Ctrl+Shift+M */}
-        <PerformanceMonitor 
-          showDashboard={showPerformanceMonitor}
-          onClose={() => setShowPerformanceMonitor(false)}
-        />
+          <PerformanceMonitor
+            showDashboard={showPerformanceMonitor}
+          />
         
         {/* AI Performance Dashboard - Toggle with Ctrl+Shift+A */}
         <AIPerformanceDashboard

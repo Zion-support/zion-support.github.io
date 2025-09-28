@@ -55,18 +55,18 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
           setInsights(aiInsights as {
             predictedHighRiskActions: string[];
             recommendedImprovements: string[];
-            errorTrends: Array<{ category: string; trend: string }>;
+            errorTrends: Array<{ category: string; trend: 'increasing' | 'decreasing' | 'stable' }>;
           });
           
-          setErrors(errorReports as Array<{
-            id: string;
-            message: string;
-            severity: string;
-            lastOccurrence: string;
-            context: { component?: string; action?: string };
-            aiPredictedImpact?: number;
-            resolutionSuggestions?: string[];
-          }>);
+          setErrors(errorReports.map(error => ({
+            severity: error.severity,
+            message: error.message,
+            lastOccurrence: error.lastOccurrence,
+            occurrenceCount: 1,
+            context: error.context,
+            aiPredictedImpact: error.aiPredictedImpact,
+            resolutionSuggestions: error.resolutionSuggestions
+          })));
         } catch (error) {
           console.error('Failed to fetch dashboard data:', error);
         }

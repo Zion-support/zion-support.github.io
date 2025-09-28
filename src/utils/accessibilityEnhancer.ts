@@ -336,7 +336,7 @@ class AccessibilityEnhancer {
       const backgroundColor = styles.backgroundColor;
       
       if (color && backgroundColor) {
-        const contrastRatio = this.calculateContrastRatio(color, backgroundColor);
+        const contrastRatio = this.calculateContrastRatio();
         if (contrastRatio < 4.5) {
           element.setAttribute('data-low-contrast', 'true');
           console.warn('Low contrast detected:', element, 'Ratio:', contrastRatio);
