@@ -317,3 +317,6 @@ export const buildOptimizer = new BuildOptimizer();
 export function initOptimizations(): void {
   buildOptimizer.optimizeBundleSize();
 }
+
+// Export class for custom instances
+export { BuildOptimizer };
