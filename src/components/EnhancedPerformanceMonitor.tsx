@@ -13,7 +13,7 @@ export const EnhancedPerformanceMonitor: React.FC<EnhancedPerformanceMonitorProp
   className,
   showDetails = false,
   showSuggestions = true,
-  autoOptimize = false
+  autoOptimize: _ = false
 }) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     fcp: 0,
