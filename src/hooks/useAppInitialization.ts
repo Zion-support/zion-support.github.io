@@ -235,12 +235,6 @@ export function useAppInitialization(config: AppInitializationConfig = {}) {
   const initializeAdvancedSystems = useCallback(async () => {
     try {
       // Initialize advanced performance monitor
-<<<<<<< HEAD
-      const { getPerformanceMonitor } = await import('../utils/advancedPerformanceMonitor');
-      const advancedPerformanceMonitor = getPerformanceMonitor();
-      // Start monitoring
-      advancedPerformanceMonitor.start();
-=======
       const { AdvancedPerformanceMonitor } = await import('../utils/advancedPerformanceMonitor');
       const advancedPerformanceMonitor = (AdvancedPerformanceMonitor as any).getInstance();
       advancedPerformanceMonitor.updateConfig({
@@ -260,7 +254,6 @@ export function useAppInitialization(config: AppInitializationConfig = {}) {
         }
       });
       advancedPerformanceMonitor.startMonitoring();
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-7cb6
 
       // Initialize advanced cache system
       const { advancedCacheSystem } = await import('../utils/advancedCacheSystem');

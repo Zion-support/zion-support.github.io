@@ -1,131 +1,139 @@
-import React from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 
 interface KeyboardShortcutsHelpProps {
   isVisible: boolean;
   onClose: () => void;
 }
 
-const KeyboardShortcutsHelp: React.FC<KeyboardShortcutsHelpProps> = ({ isVisible, onClose }) => {
-  if (!isVisible) return null;
+interface Shortcut {
+  key: string;
+  description: string;
+  category: string;
+}
 
-  const shortcuts = [
+const KeyboardShortcutsHelp: React.FC<KeyboardShortcutsHelpProps> = ({
+  isVisible,
+  onClose
+}) => {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+
+  const shortcuts: Shortcut[] = useMemo(() => [
     { key: 'Ctrl+Shift+D', description: 'Toggle System Dashboard', category: 'Dashboard' },
     { key: 'Ctrl+Shift+P', description: 'Toggle Performance Optimizer', category: 'Performance' },
     { key: 'Ctrl+Shift+M', description: 'Toggle Performance Monitor', category: 'Performance' },
     { key: 'Ctrl+Shift+A', description: 'Toggle AI Dashboard', category: 'AI' },
+    { key: 'Ctrl+Shift+R', description: 'Toggle Real-time Metrics', category: 'Performance' },
     { key: 'Ctrl+Shift+S', description: 'Toggle SEO Optimizer', category: 'SEO' },
-    { key: 'Ctrl+Shift+C', description: 'Open Command Palette', category: 'Navigation' },
-    { key: 'Ctrl+Shift+H', description: 'Show Keyboard Shortcuts', category: 'Help' },
-    { key: 'Escape', description: 'Close All Modals', category: 'Navigation' },
-  ];
+    { key: 'Ctrl+K', description: 'Open Command Palette', category: 'Navigation' },
+    { key: 'Ctrl+/', description: 'Show Keyboard Shortcuts', category: 'Help' },
+    { key: 'Escape', description: 'Close All Modals', category: 'Navigation' }
+  ], []);
 
-<<<<<<< HEAD
+  const categories = useMemo(() => {
+    const cats = [...new Set(shortcuts.map(s => s.category))];
+    return ['all', ...cats];
+  }, [shortcuts]);
+
+  const filteredShortcuts = useMemo(() => {
+    return shortcuts.filter(shortcut => {
+      const matchesSearch = shortcut.key.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                           shortcut.description.toLowerCase().includes(searchTerm.toLowerCase());
+      const matchesCategory = selectedCategory === 'all' || shortcut.category === selectedCategory;
+      return matchesSearch && matchesCategory;
+    });
+  }, [shortcuts, searchTerm, selectedCategory]);
+
   useEffect(() => {
-    if (searchTerm) {
-      const filtered = shortcuts.filter(shortcut =>
-        shortcut.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        shortcut.key.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        shortcut.category.toLowerCase().includes(searchTerm.toLowerCase())
-      );
-      setFilteredShortcuts(filtered);
-    } else {
-      setFilteredShortcuts(shortcuts);
+    if (isVisible) {
+      const handleKeyDown = (event: KeyboardEvent) => {
+        if (event.key === 'Escape') {
+          onClose();
+        }
+      };
+      document.addEventListener('keydown', handleKeyDown);
+      return () => document.removeEventListener('keydown', handleKeyDown);
     }
-  }, [searchTerm, shortcuts]);
+  }, [isVisible, onClose]);
 
   if (!isVisible) return null;
 
-  const groupedShortcuts = filteredShortcuts.reduce((acc, shortcut) => {
-    if (!acc[shortcut.category]) {
-      acc[shortcut.category] = [];
-    }
-    acc[shortcut.category].push(shortcut);
-    return acc;
-  }, {} as Record<string, Shortcut[]>);
-=======
-  const categories = [...new Set(shortcuts.map(s => s.category))];
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-7cb6
-
   return (
-    <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
-      <div className="bg-white rounded-lg shadow-xl max-w-2xl w-full mx-4 max-h-[80vh] overflow-hidden">
-        <div className="p-6 border-b border-gray-200">
-          <div className="flex items-center justify-between">
+    <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center p-4">
+      <div className="bg-white rounded-lg shadow-xl max-w-4xl w-full max-h-[90vh] overflow-hidden">
+        <div className="p-6">
+          <div className="flex justify-between items-center mb-6">
             <h2 className="text-2xl font-bold text-gray-900">Keyboard Shortcuts</h2>
             <button
               onClick={onClose}
-              className="text-gray-400 hover:text-gray-600 transition-colors"
+              className="text-gray-500 hover:text-gray-700 text-2xl"
             >
-              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              </svg>
+              ✕
             </button>
           </div>
-<<<<<<< HEAD
 
-          {/* Search functionality */}
-          <div className="mb-6">
-            <input
-              type="text"
-              placeholder="Search shortcuts..."
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
-            />
+          {/* Search and Filter */}
+          <div className="mb-6 space-y-4">
+            <div>
+              <input
+                type="text"
+                placeholder="Search shortcuts..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              />
+            </div>
+            <div className="flex flex-wrap gap-2">
+              {categories.map(category => (
+                <button
+                  key={category}
+                  onClick={() => setSelectedCategory(category)}
+                  className={`px-3 py-1 rounded-full text-sm font-medium transition-colors ${
+                    selectedCategory === category
+                      ? 'bg-blue-600 text-white'
+                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                  }`}
+                >
+                  {category === 'all' ? 'All' : category}
+                </button>
+              ))}
+            </div>
           </div>
 
-          <div className="space-y-6">
-            {Object.entries(groupedShortcuts).length > 0 ? (
-              Object.entries(groupedShortcuts).map(([category, shortcuts]) => (
-                <div key={category}>
-                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
-                    {category}
-                  </h3>
-                  <div className="space-y-2">
-                    {shortcuts.map((shortcut, index) => (
-                      <div key={index} className="flex justify-between items-center py-2 px-3 bg-gray-50 dark:bg-gray-700 rounded">
-                        <span className="text-gray-700 dark:text-gray-300">
-                          {shortcut.description}
-                        </span>
-                        <kbd className="px-2 py-1 bg-gray-200 dark:bg-gray-600 text-gray-800 dark:text-gray-200 rounded text-sm font-mono">
-                          {shortcut.key}
-                        </kbd>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              ))
-            ) : (
-              <div className="text-center py-8 text-gray-500 dark:text-gray-400">
-                No shortcuts found matching &quot;{searchTerm}&quot;
-=======
-        </div>
-        
-        <div className="p-6 overflow-y-auto max-h-96">
-          {categories.map(category => (
-            <div key={category} className="mb-6">
-              <h3 className="text-lg font-semibold text-gray-800 mb-3 capitalize">{category}</h3>
-              <div className="space-y-2">
-                {shortcuts
-                  .filter(shortcut => shortcut.category === category)
-                  .map((shortcut, index) => (
-                    <div key={index} className="flex items-center justify-between py-2 px-3 bg-gray-50 rounded-md">
-                      <span className="text-sm text-gray-700">{shortcut.description}</span>
-                      <kbd className="px-2 py-1 text-xs font-mono bg-gray-200 text-gray-600 rounded border">
-                        {shortcut.key}
-                      </kbd>
-                    </div>
-                  ))}
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-7cb6
+          {/* Shortcuts List */}
+          <div className="max-h-96 overflow-y-auto">
+            {filteredShortcuts.length === 0 ? (
+              <div className="text-center py-8 text-gray-500">
+                No shortcuts found matching your search.
               </div>
+            ) : (
+              <div className="space-y-2">
+                {filteredShortcuts.map((shortcut, index) => (
+                  <div key={index} className="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
+                    <div className="flex-1">
+                      <div className="font-mono text-sm font-semibold text-gray-900">
+                        {shortcut.key}
+                      </div>
+                      <div className="text-gray-600 text-sm">
+                        {shortcut.description}
+                      </div>
+                    </div>
+                    <div className="ml-4">
+                      <span className="px-2 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded">
+                        {shortcut.category}
+                      </span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+
+          {/* Footer */}
+          <div className="mt-6 pt-4 border-t border-gray-200">
+            <div className="text-sm text-gray-500 text-center">
+              Press <kbd className="px-2 py-1 bg-gray-100 rounded text-xs">Escape</kbd> to close
             </div>
-          ))}
-        </div>
-        
-        <div className="px-6 py-4 bg-gray-50 border-t border-gray-200">
-          <div className="flex items-center justify-between text-sm text-gray-500">
-            <span>Press Escape to close</span>
-            <span>{shortcuts.length} shortcuts available</span>
           </div>
         </div>
       </div>
