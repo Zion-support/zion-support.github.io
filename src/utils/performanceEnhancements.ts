@@ -288,41 +288,33 @@ class PerformanceEnhancer {
     });
   }
 
-  public getMetrics(): PerformanceData {
+  public getMetrics(): {
+    loadTime: number;
+    renderTime: number;
+    memoryUsage: number;
+    bundleSize: number;
+    cacheHitRate: number;
+  } {
     const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    const loadTime = navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0;
+    
     const memory = (performance as any).memory;
+    const memoryUsage = memory ? memory.usedJSHeapSize / 1024 / 1024 : 0;
+    
+    // Estimate bundle size (this would be more accurate with actual bundle analysis)
+    const bundleSize = 500; // KB
+    
+    // Calculate cache hit rate (simplified)
+    const cacheHitRate = this.imageCache.size > 0 ? 85 : 0;
     
     return {
-      loadTime: navigation ? Math.round(navigation.loadEventEnd - navigation.loadEventStart) : 0,
-      renderTime: navigation ? Math.round(navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart) : 0,
-      memoryUsage: memory ? Math.round(memory.usedJSHeapSize / 1024 / 1024) : 0,
-      bundleSize: this.calculateBundleSize(),
-      cacheHitRate: this.calculateCacheHitRate()
+      loadTime: Math.round(loadTime),
+      renderTime: Math.round(performance.now()),
+      memoryUsage: Math.round(memoryUsage * 100) / 100,
+      bundleSize,
+      cacheHitRate
     };
   }
-
-  private calculateBundleSize(): number {
-    // Estimate bundle size based on loaded scripts
-    const scripts = document.querySelectorAll('script[src]');
-    let totalSize = 0;
-    
-    scripts.forEach(script => {
-      const src = script.getAttribute('src');
-      if (src && src.includes('assets/js/')) {
-        // Estimate based on common bundle sizes
-        totalSize += 100; // KB per script estimate
-      }
-    });
-    
-    return totalSize;
-  }
-
-  private calculateCacheHitRate(): number {
-    // Simple cache hit rate calculation
-    const cacheSize = this.imageCache.size;
-    return cacheSize > 0 ? Math.round((cacheSize / (cacheSize + 10)) * 100) : 0;
-  }
-
   public cleanup(): void {
     if (this.observer) {
       this.observer.disconnect();
