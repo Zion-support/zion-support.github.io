@@ -182,12 +182,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                     <strong>Component Stack:</strong>
                     {this.state.errorInfo?.componentStack}
                   </pre>
-                  <button
-                    onClick={this.copyErrorDetails}
-                    className="mt-2 text-xs text-blue-600 dark:text-blue-400 hover:underline"
-                  >
-                    Copy Error Details
-                  </button>
                 </div>
               </details>
             )}
