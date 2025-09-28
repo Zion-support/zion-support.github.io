@@ -62,7 +62,6 @@ export default function App(): React.JSX.Element {
     twitterCard: 'summary_large_image' as const,
     canonicalUrl: window.location.href
   }), []);
->>>>>>> 05553cdc58997f27fc642dfae25b67cf6efa0dd4
   // Initialize app with custom configuration
   const { isLoading, loadingProgress, handleScroll, handleClick, trackEngagement } = useAppInitialization({
     enablePerformanceMonitoring: true,
