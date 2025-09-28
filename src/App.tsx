@@ -26,6 +26,7 @@ export default function App(): React.JSX.Element {
   const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
   const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
   const [showAIDashboard, setShowAIDashboard] = useState(false);
+
   // Engagement tracking data
   const engagementData = useMemo(() => ({
     startTime: Date.now(),
@@ -45,6 +46,7 @@ export default function App(): React.JSX.Element {
       }
     }
   }), []);
+
   // Initialize app with custom configuration
   const { isLoading, loadingProgress, handleScroll, handleClick, trackEngagement } = useAppInitialization({
     enablePerformanceMonitoring: true,
@@ -131,6 +133,7 @@ export default function App(): React.JSX.Element {
       }
     }
   }, []);
+
   useEffect(() => {
     const enhancements = getComprehensiveEnhancements();
     enhancements.initialize();
@@ -147,7 +150,6 @@ export default function App(): React.JSX.Element {
     analytics.initialize();
     seoAnalytics.initialize();
     performanceSEO.initialize();
-    seoManager.initialize();
     
     // Initialize SEO analytics
     seoAnalytics.trackPageView(window.location.pathname);
@@ -174,20 +176,6 @@ export default function App(): React.JSX.Element {
     document.addEventListener('click', handleClick, { passive: true });
     document.addEventListener('keydown', handleKeyDown);
 
-    // Initialize basic systems
-    analytics.initialize();
-    
-    // Initialize SEO analytics
-    seoAnalytics.trackPageView(window.location.pathname);
-    
-    // Initialize performance SEO optimizations
-    performanceSEO.optimizeImages();
-    performanceSEO.optimizeFonts();
-    performanceSEO.optimizeCSS();
-
-    // Set default SEO data using the correct method
-    seoManager.updateMetaTags(seoData);
-
     // Update meta tags
     updateMetaTags(seoData);
 
@@ -196,9 +184,12 @@ export default function App(): React.JSX.Element {
       console.log('🚀 Zion Tech Group App initialized');
     }
 
-    // Use passive listeners for better performance
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    document.addEventListener('click', handleClick, { passive: true });
+    // Cleanup function
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      document.removeEventListener('click', handleClick);
+      document.removeEventListener('keydown', handleKeyDown);
+    };
   }, [handleClick, handleKeyDown, handleScroll, seoData, preloadResource, seoManager, updateMetaTags]);
 
   // Add keyboard event listener
@@ -226,11 +217,8 @@ export default function App(): React.JSX.Element {
     // Cleanup function
     return () => {
       window.removeEventListener('beforeunload', enhancedTrackEngagement);
-      window.removeEventListener('scroll', handleScroll);
-      document.removeEventListener('click', handleClick);
-      document.removeEventListener('keydown', handleKeyDown);
     };
-  }, [handleScroll, handleClick, handleKeyDown, seoData, preloadResource, updateMetaTags, enhancedTrackEngagement]);
+  }, [enhancedTrackEngagement]);
 
   if (isLoading) {
     return (
@@ -305,15 +293,8 @@ export default function App(): React.JSX.Element {
             </div>
           </div>
         )}
-        {/* Performance Monitor - Toggle with Ctrl+Shift+M */}
-        <PerformanceMonitor 
-          showDashboard={showPerformanceMonitor}
-          onMetricsUpdate={(metrics) => {
-            console.log('Performance metrics:', metrics);
-          }}
-        />
-        
-        {/* AI Performance Dashboard - Toggle with Ctrl+Shift+A */}
+
+        {/* AI Performance Dashboard */}
         <AIPerformanceDashboard
           isVisible={showAIDashboard}
           onClose={() => setShowAIDashboard(false)}
