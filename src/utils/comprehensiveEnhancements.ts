@@ -209,7 +209,9 @@ class ComprehensiveEnhancements {
     if ('memory' in performance) {
       const updateMemoryMetrics = () => {
         const memory = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory;
-        this.performanceMetrics.memoryUsage = memory.usedJSHeapSize;
+        if (memory) {
+          this.performanceMetrics.memoryUsage = memory.usedJSHeapSize;
+        }
       };
 
       updateMemoryMetrics();
@@ -663,7 +665,7 @@ class ComprehensiveEnhancements {
     }
   }
 
-  private applyPreferences(preferences: { theme?: string; highContrast?: boolean; fontSize?: string }): void {
+  private applyPreferences(preferences: { theme?: string; highContrast?: boolean; fontSize?: string; reduceMotion?: boolean }): void {
     if (preferences.theme === 'dark') {
       document.body.classList.add('dark-theme');
     }
