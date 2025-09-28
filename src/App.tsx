@@ -62,10 +62,9 @@ import { enhancedSecurityManager } from './utils/enhancedSecurityManager';
 import { initializePerformanceEnhancements } from './utils/performanceEnhancements';
 import { advancedPerformanceOptimizer } from './utils/advancedPerformanceOptimizer';
 import { advancedSEOOptimizer } from './utils/advancedSEOOptimizer';
-import { advancedAccessibilityEnhancer } from './utils/advancedAccessibilityEnhancer';
 import { advancedSecurityManager } from './utils/advancedSecurityManager';
 import { advancedAnalytics } from './utils/advancedAnalytics';
-import { advancedErrorHandler } from './utils/advancedErrorHandler';
+import { advancedErrorHandler } from './utils/advancedErrorHandling';
 import { advancedCachingSystem } from './utils/advancedCachingSystem';
 import { advancedUXOptimizer } from './utils/advancedUXOptimizer';
 import { advancedTestingFramework } from './utils/advancedTestingFramework';
@@ -820,7 +819,6 @@ export default function App(): React.JSX.Element {
             </div>
           </div>
         )}
-        
         {/* AI Performance Dashboard - Toggle with Ctrl+Shift+A */}
         <AIPerformanceDashboard
           isVisible={showAIDashboard}
