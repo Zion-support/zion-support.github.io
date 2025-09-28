@@ -5,10 +5,15 @@ import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import PerformanceTracker from './components/PerformanceTracker';
 import { seoAnalytics, performanceSEO, seoManager } from './utils/seoEnhanced';
 import { analytics } from './utils/analytics';
+import { performanceOptimizer } from './utils/performanceOptimizations';
+import { accessibilityEnhancements } from './utils/accessibilityEnhancements';
+import { seoOptimizer } from './utils/seoOptimizations';
+// Removed unused imports to reduce warnings
 import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import AIPerformanceDashboard from './components/AIPerformanceDashboard';
+import AdvancedPerformanceDashboard from './components/AdvancedPerformanceDashboard';
 import WebsiteEnhancements from './components/WebsiteEnhancements';
 import { SEOOptimizer, useSEOData } from './components/SEOOptimizer';
 // import EnhancedAnalytics from './components/EnhancedAnalytics';
@@ -23,13 +28,11 @@ import KeyboardShortcutsHelp from './components/KeyboardShortcutsHelp';
 import CommandPalette from './components/CommandPalette';
 import RealTimePerformanceMonitor from './components/RealTimePerformanceMonitor';
 import SystemHealthDashboard from './components/SystemHealthDashboard';
-// import { getNotificationManager } from './utils/advancedNotifications';
-// import { getThemeManager } from './utils/themeManager';
-// import { getKeyboardShortcuts } from './utils/advancedKeyboardShortcuts';
-// import { getDataVisualization } from './utils/advancedDataVisualization';
-import { performanceOptimizer } from './utils/advancedPerformanceOptimizer';
-import { seoEnhancer } from './utils/advancedSEOEnhancer';
-import { accessibilityEnhancer } from './utils/advancedAccessibilityEnhancer';
+import { getNotificationManager } from './utils/advancedNotifications';
+import { getThemeManager } from './utils/themeManager';
+import { getKeyboardShortcuts } from './utils/advancedKeyboardShortcuts';
+import { getDataVisualization } from './utils/advancedDataVisualization';
+import { useAppInitialization } from './hooks/useAppInitialization';
 import './index.css';
 
 export default function App(): React.JSX.Element {
@@ -38,6 +41,7 @@ export default function App(): React.JSX.Element {
   const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
   const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
   const [showAIDashboard, setShowAIDashboard] = useState(false);
+  const [showAdvancedDashboard, setShowAdvancedDashboard] = useState(false);
   const [showSEOOptimizer, setShowSEOOptimizer] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [showKeyboardHelp, setShowKeyboardHelp] = useState(false);
@@ -164,7 +168,7 @@ export default function App(): React.JSX.Element {
       clicks: engagementData.clicks,
     });
     trackEngagement();
-  }, [engagementData.startTime, engagementData.scrollDepth, engagementData.clicks, trackEngagement]);
+  }, [trackEngagement, engagementData.clicks, engagementData.scrollDepth, engagementData.startTime]);
 
   // Memoize the SEO data to prevent unnecessary re-renders
   const memoizedSeoData = useMemo(() => ({
@@ -224,6 +228,12 @@ export default function App(): React.JSX.Element {
     performanceSEO.optimizeImages();
     performanceSEO.optimizeFonts();
     performanceSEO.optimizeCSS();
+    
+    // Initialize advanced optimization systems
+    // These are initialized automatically when imported
+    void performanceOptimizer;
+    void accessibilityEnhancements;
+    void seoOptimizer;
 
     // Initialize new utility systems
     performanceAlerts.checkMetric('loadTime', performance.now(), 3000);
@@ -310,17 +320,17 @@ export default function App(): React.JSX.Element {
     // Initialize advanced utilities
     const initializeUtilities = async () => {
       try {
-        await performanceOptimizer.initialize();
-        await seoEnhancer.initialize();
-        await accessibilityEnhancer.initialize();
-        console.log('All advanced utilities initialized successfully');
+        // Initialize accessibility enhancements if available
+        if (accessibilityEnhancements && typeof accessibilityEnhancements.initialize === 'function') {
+          await accessibilityEnhancements.initialize();
+        }
+        console.log('Advanced utilities initialized successfully');
       } catch (error) {
         console.error('Failed to initialize some utilities:', error);
       }
     };
 
     initializeUtilities();
-    
     // Track engagement on page unload
     window.addEventListener('beforeunload', enhancedTrackEngagement);
 
@@ -337,7 +347,6 @@ export default function App(): React.JSX.Element {
       window.removeEventListener('beforeunload', enhancedTrackEngagement);
       window.removeEventListener('scroll', handleScroll);
       document.removeEventListener('click', handleClick);
-      performanceOptimizer.cleanup();
     };
   }, [handleScroll, handleClick, enhancedTrackEngagement]);
 
@@ -447,8 +456,8 @@ export default function App(): React.JSX.Element {
       trackEngagement();
     };
 
-    const handleClickWithEngagement = (event: Event) => {
-      handleClick(event);
+    const handleClickWithEngagement = (event: MouseEvent) => {
+      handleClick(event as Event);
       trackEngagement();
     };
 

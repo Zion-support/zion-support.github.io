@@ -15,7 +15,7 @@
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
     "test:ci": "jest --ci --coverage --watchAll=false",
-    "analyze": "npx vite-bundle-analyzer dist/stats.html --open=false",
+    "analyze": "npx vite-bundle-analyzer dist/stats.html",
     "build:analyze": "vite build --mode analyze",
     "serve": "vite preview --port 3000",
     "clean": "rm -rf dist node_modules/.vite",
@@ -23,8 +23,12 @@
     "format:check": "prettier --check \"src/**/*.{ts,tsx,js,jsx,json,css,md}\"",
     "build:production": "NODE_ENV=production pnpm build",
     "build:fast": "vite build --mode development",
+    "build:optimized": "vite build --mode production --minify terser",
+    "build:minimal": "vite build --mode production --minify terser --sourcemap false",
     "prebuild": "pnpm type-check && pnpm lint",
-    "postbuild": "if [ \"$CI\" != \"true\" ]; then pnpm analyze; fi"
+    "postbuild": "if [ \"$CI\" != \"true\" ]; then pnpm analyze; fi",
+    "optimize": "pnpm build:optimized && pnpm analyze",
+    "deploy": "pnpm build:minimal && echo 'Ready for deployment'"
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.1.13",
