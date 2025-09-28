@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState, useCallback } from 'react';
 import { AppRouter } from './router';
 import { initializeErrorReporting } from './utils/errorReporting';
 import { initOptimizations } from './utils/buildOptimizations';
@@ -9,14 +9,13 @@ import { PerformanceOptimizer } from './utils/performanceOptimizer';
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
 import { analytics } from './utils/analytics';
 import { seoOptimizer } from './utils/seoOptimization';
-// import securityEnhancer from './utils/securityEnhancements';
 import { cacheManager } from './utils/cacheManager';
 import { apiClient } from './utils/apiClient';
 import { notificationManager } from './utils/notificationManager';
 import { userFeedback } from './utils/userFeedbackManager';
 import { PerformanceDashboard } from './components/PerformanceDashboard';
 import RealTimeMonitor from './components/RealTimeMonitor';
-import { performanceOptimizer as advancedPerformanceOptimizer } from './utils/performanceOptimizer';
+import { advancedPerformanceOptimizer } from './utils/performanceOptimizer';
 import { enhancedPerformanceOptimizer } from './utils/enhancedPerformance';
 import { enhancedSecurityManager } from './utils/enhancedSecurity';
 import { enhancedAccessibilityManager } from './utils/enhancedAccessibility';
@@ -35,6 +34,7 @@ import { advancedErrorRecovery } from './utils/advancedErrorRecovery';
 import { advancedAutomationSystem } from './utils/advancedAutomationSystem';
 import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
 import performanceEnhancer from './utils/performanceEnhancements';
+import EnhancedNotificationSystem from './components/EnhancedNotificationSystem';
 import './index.css';
 import './styles/notifications.css';
 import './styles/system-metrics.css';
@@ -96,6 +96,22 @@ export default function App(): React.JSX.Element {
       maxMetricsHistory: 100
     });
     advancedPerformanceMonitor.startMonitoring();
+    
+    // Initialize new advanced performance optimizer
+    import('./utils/performanceOptimizer').then(({ advancedPerformanceOptimizer }) => {
+      advancedPerformanceOptimizer.startMonitoring();
+      console.log('🚀 Advanced Performance Optimizer initialized');
+    }).catch((error) => {
+      console.error('❌ Failed to initialize advanced performance optimizer:', error);
+    });
+    
+    // Initialize CSS optimizer
+    import('./utils/cssOptimizer').then(({ cssOptimizer }) => {
+      cssOptimizer.initialize();
+      console.log('🎨 CSS Optimizer initialized');
+    }).catch((error) => {
+      console.error('❌ Failed to initialize CSS optimizer:', error);
+    });
     
     // Initialize accessibility enhancer
     const accessibilityEnhancer = AccessibilityEnhancer.getInstance();
@@ -189,46 +205,17 @@ export default function App(): React.JSX.Element {
     advancedPerformanceOptimizer.optimizeCriticalCSS();
     advancedPerformanceOptimizer.setupWebVitalsMonitoring();
     
-    // Register service worker for offline support and caching
-    if ('serviceWorker' in navigator && process.env.NODE_ENV === 'production') {
-      navigator.serviceWorker.register('/sw.js', {
-        scope: '/',
-        updateViaCache: 'none'
-      })
-        .then((registration) => {
-          console.log('Service Worker registered successfully:', registration);
-          
-          // Check for updates
-          registration.addEventListener('updatefound', () => {
-            const newWorker = registration.installing;
-            if (newWorker) {
-              newWorker.addEventListener('statechange', () => {
-                if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
-                  // New content is available - show user-friendly notification
-                  notificationManager.info(
-                    'Update Available',
-                    'A new version of the application is available. Click to update.',
-                    {
-                      duration: 10000,
-                      onClick: () => window.location.reload()
-                    }
-                  );
-                }
-              });
-            }
-          });
-          
-          // Check for updates every 60 seconds
-          setInterval(() => {
-            registration.update();
-          }, 60000);
-        })
-        .catch((error) => {
-          console.error('Service Worker registration failed:', error);
-          // Track the error for monitoring
-          recordMetric('serviceWorkerRegistrationError', 1);
-        });
-    }
+    // Register service worker with optimized configuration
+    import('./utils/serviceWorker').then(({ serviceWorkerManager }) => {
+      serviceWorkerManager.register().then((registration) => {
+        if (registration) {
+          console.log('✅ Service Worker registered successfully');
+        }
+      });
+    }).catch((error) => {
+      console.error('❌ Failed to load service worker manager:', error);
+      recordMetric('serviceWorkerRegistrationError', 1);
+    });
     
     // Initialize performance monitoring
     const performanceMonitor = PerformanceMonitor.getInstance();
@@ -255,11 +242,7 @@ export default function App(): React.JSX.Element {
     performanceSEO.preloadCriticalResources();
     performanceSEO.optimizeFonts();
     
-    // Initialize advanced performance optimizer
-    const performanceOptimizer = PerformanceOptimizer.getInstance();
-    performanceOptimizer.addResourceHints();
-    performanceOptimizer.optimizeCriticalCSS();
-    performanceOptimizer.setupWebVitalsMonitoring();
+    // Advanced performance optimizer is now handled by the new utility
 
     // Initialize analytics system
     analytics.initialize();
@@ -343,21 +326,20 @@ export default function App(): React.JSX.Element {
       });
     };
 
-    // Track scroll depth with throttling
-    const handleScroll = () => {
+    // Optimized scroll handler with requestAnimationFrame
+    const handleScroll = useCallback(() => {
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
       const documentHeight = document.documentElement.scrollHeight - window.innerHeight;
       scrollDepth = Math.max(scrollDepth, scrollTop / documentHeight);
       
-      // Throttle scroll tracking
-      clearTimeout(scrollTimeout);
-      scrollTimeout = setTimeout(() => {
+      // Use requestAnimationFrame for better performance
+      requestAnimationFrame(() => {
         recordMetric('scrollDepth', scrollDepth);
-      }, 100);
-    };
+      });
+    }, [recordMetric]);
 
-    // Track clicks with debouncing
-    const handleClick = (event: Event) => {
+    // Optimized click handler with better event delegation
+    const handleClick = useCallback((event: Event) => {
       clicks++;
       
       // Debounce click tracking
@@ -365,29 +347,37 @@ export default function App(): React.JSX.Element {
       clickTimeout = setTimeout(() => {
         recordMetric('userClicks', clicks);
         
-        // Track specific interaction types
+        // Track specific interaction types with better performance
         const target = event.target as HTMLElement;
-        if (target.tagName === 'BUTTON') {
-          recordMetric('buttonClicks', 1);
-        } else if (target.tagName === 'A') {
-          recordMetric('linkClicks', 1);
-        } else if (target.tagName === 'INPUT') {
-          recordMetric('inputClicks', 1);
+        const tagName = target.tagName.toLowerCase();
+        
+        switch (tagName) {
+          case 'button':
+            recordMetric('buttonClicks', 1);
+            break;
+          case 'a':
+            recordMetric('linkClicks', 1);
+            break;
+          case 'input':
+            recordMetric('inputClicks', 1);
+            break;
+          default:
+            break;
         }
       }, 50);
-    };
+    }, [recordMetric]);
 
     // Use passive listeners for better performance
     window.addEventListener('scroll', handleScroll, { passive: true });
     document.addEventListener('click', handleClick, { passive: true });
     
-    // Handle system dashboard toggle (Ctrl/Cmd + Shift + D)
-    const handleKeyDown = (event: KeyboardEvent) => {
+    // Optimized keyboard handler for system dashboard toggle
+    const handleKeyDown = useCallback((event: KeyboardEvent) => {
       if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'D') {
         event.preventDefault();
         setShowSystemDashboard(prev => !prev);
       }
-    };
+    }, []);
     
     document.addEventListener('keydown', handleKeyDown);
 
@@ -449,6 +439,12 @@ export default function App(): React.JSX.Element {
         onClose={() => setShowSystemDashboard(false)}
       />
       {showSystemDashboard && <EnhancedSystemDashboard />}
+      <EnhancedNotificationSystem 
+        position="top-right"
+        enableAnimations
+        enableAccessibility
+        maxNotifications={5}
+      />
     </>
   );
 }

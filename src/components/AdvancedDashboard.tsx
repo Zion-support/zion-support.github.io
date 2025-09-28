@@ -29,8 +29,8 @@ interface AnalyticsData {
   pageViews: number;
   events: Array<{
     event: string;
-    properties?: Record<string, unknown>;
     timestamp: number;
+    properties?: Record<string, unknown>;
   }>;
   deviceInfo: {
     screenResolution: string;
@@ -276,7 +276,7 @@ const AdvancedDashboard: React.FC = () => {
                 <h3 className="font-semibold mb-3">Recent Events ({data.analytics.events?.length || 0})</h3>
                 <div className="max-h-64 overflow-y-auto">
                   <div className="space-y-2">
-                    {data.analytics.events.slice(-10).map((event, index: number) => (
+                    {(data.analytics.events || []).slice(-10).map((event, index: number) => (
                       <div key={index} className="bg-white p-2 rounded text-sm">
                         <div className="font-medium">{event.event}</div>
                         <div className="text-gray-600">{new Date(event.timestamp).toLocaleString()}</div>

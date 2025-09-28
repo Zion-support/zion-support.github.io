@@ -54,7 +54,7 @@ class EnhancedPerformanceOptimizer {
     }
   };
 
-  private observers: (PerformanceObserver | IntersectionObserver)[] = [];
+  private observers: PerformanceObserver[] = [];
   private isInitialized = false;
 
   constructor(config?: Partial<OptimizationConfig>) {

@@ -164,7 +164,7 @@ class PerformanceEnhancer {
 
       // Cache-first for static assets
       if (url.pathname.startsWith('/static/')) {
-        (event as { respondWith: (response: Promise<Response>) => void }).respondWith(
+        event.respondWith(
           caches.match(request).then((response) => {
             return response || fetch(request).then((fetchResponse) => {
               const responseClone = fetchResponse.clone();
