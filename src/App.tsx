@@ -9,10 +9,7 @@ import { performanceOptimizer } from './utils/performanceOptimizations';
 import { accessibilityEnhancer } from './utils/advancedAccessibilityEnhancer';
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
 import { useAppInitialization } from './hooks/useAppInitialization';
-<<<<<<< HEAD
 import { useSEOData } from './hooks/useSEOData';
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-3b75
 import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import PerformanceMonitor from './components/PerformanceMonitor';
@@ -25,11 +22,8 @@ import { performanceAlerts } from './utils/performanceAlerts';
 import { accessibilityUtils } from './utils/accessibilityUtils';
 import { securityUtils } from './utils/securityUtils';
 import { enhancedSecurityManager } from './utils/enhancedSecurityManager';
-<<<<<<< HEAD
 import { initializePerformanceEnhancements } from './utils/performanceEnhancements';
 import { initializeAccessibilityEnhancements } from './utils/accessibilityEnhancements';
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-3b75
 import AdvancedAnalytics from './components/AdvancedAnalytics';
 import NotificationSystem, { Notification } from './components/NotificationSystem';
 import KeyboardShortcutsHelp from './components/KeyboardShortcutsHelp';
