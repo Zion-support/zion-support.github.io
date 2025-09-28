@@ -577,7 +577,7 @@ async function executeImprovements() {
         log('5. Test performance: Run Lighthouse audit', 'yellow');
         
     } catch (error) {
-        log(\`❌ Error implementing improvements: \${error.message}\`, 'red');
+        log(`❌ Error implementing improvements: ${error.message}`, 'red');
         process.exit(1);
     }
 }
