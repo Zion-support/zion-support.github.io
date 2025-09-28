@@ -60,14 +60,6 @@ export default function App(): React.JSX.Element {
   //   errorCount: 0
   // });
 
-  // Memoize SEO data to prevent unnecessary re-renders
-  const seoData = useMemo(() => ({
-    title: 'Zion Tech Group - Advanced AI and IT Solutions',
-    description: 'Leading provider of AI-powered IT solutions, cloud services, and digital transformation consulting.',
-    keywords: ['AI solutions', 'IT consulting', 'cloud services', 'digital transformation'],
-    canonicalUrl: typeof window !== 'undefined' ? window.location.href : ''
-  }), []);
-
   // Initialize app with custom configuration
   const { isLoading, loadingProgress, handleScroll, handleClick, trackEngagement } = useAppInitialization({
     enablePerformanceMonitoring: true,
@@ -75,8 +67,6 @@ export default function App(): React.JSX.Element {
     enableAccessibility: true
   });
 
-<<<<<<< HEAD
-=======
   // Get current pathname for SEO
   const currentPathname = typeof window !== 'undefined' ? window.location.pathname : '/';
 
@@ -161,7 +151,6 @@ export default function App(): React.JSX.Element {
     }
   ], []);
 
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-eae1
   // Optimized keyboard handler for system dashboard toggle
   const handleKeyDown = useCallback((event: KeyboardEvent) => {
     if (event.ctrlKey && event.shiftKey) {
@@ -182,11 +171,10 @@ export default function App(): React.JSX.Element {
           event.preventDefault();
           setShowAIDashboard(prev => !prev);
           break;
-<<<<<<< HEAD
         case 'R':
           event.preventDefault();
           setShowRealTimeMetrics(prev => !prev);
-=======
+          break;
         case 'V':
           setShowAdvancedPerformanceDashboard(prev => !prev);
           break;
@@ -198,15 +186,10 @@ export default function App(): React.JSX.Element {
           break;
         case 'H':
           setShowKeyboardHelp(prev => !prev);
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-eae1
           break;
         case 'S':
           event.preventDefault();
           setShowSEOOptimizer(prev => !prev);
-          break;
-        case 'H':
-          event.preventDefault();
-          // Toggle help modal
           break;
       }
     }
@@ -454,8 +437,6 @@ export default function App(): React.JSX.Element {
           onClose={() => setShowAIDashboard(false)}
         />
 
-<<<<<<< HEAD
-=======
         {/* Advanced Performance Dashboard - Toggle with Ctrl+Shift+P */}
         <AdvancedPerformanceDashboard
           isVisible={showAdvancedPerformanceDashboard}
@@ -499,10 +480,9 @@ export default function App(): React.JSX.Element {
               </div>
             </div>
           </div>
-        )}
+          )}
 
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-eae1
-        {/* Real-Time Performance Monitor */}
+          {/* Real-Time Performance Monitor */}
         {showRealTimeMetrics && (
           <RealTimePerformanceMonitor
             isVisible={showRealTimeMetrics}
@@ -535,13 +515,12 @@ export default function App(): React.JSX.Element {
           onClose={() => {}}
         />
 
-<<<<<<< HEAD
         {/* SEO Optimizer */}
         <SEOOptimizer seoData={seoData} />
         
         {/* Enhanced Analytics */}
         <EnhancedAnalytics />
-=======
+
         {/* Keyboard Shortcuts Help Button */}
         <button
           onClick={() => setShowKeyboardHelp(true)}
@@ -592,10 +571,9 @@ export default function App(): React.JSX.Element {
           <div>Ctrl+Shift+H: System Health</div>
           <div>Ctrl+Shift+K: Keyboard Help</div>
           <div>Ctrl+K: Command Palette</div>
-          <div>Escape: Close All</div>
+            <div>Escape: Close All</div>
+          </div>
         </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-eae1
-      </div>
     </EnhancedErrorBoundary>
   );
 }
