@@ -10,6 +10,12 @@ export interface EnhancementConfig {
   enableSEOFeatures: boolean;
   enableUXFeatures: boolean;
   enableAnalytics: boolean;
+  enableAdvancedAnalytics?: boolean;
+  enablePerformanceOptimization?: boolean;
+  enableAccessibilityEnhancements?: boolean;
+  enableAutomation?: boolean;
+  enableCaching?: boolean;
+  enableSEOOptimization?: boolean;
   enableOfflineSupport: boolean;
   enablePWA: boolean;
 }
@@ -22,6 +28,9 @@ export interface PerformanceMetrics {
   ttfb: number;
   memoryUsage: number;
   bundleSize: number;
+  loadTime: number;
+  renderTime: number;
+  fps: number;
 }
 
 export interface SecurityMetrics {
@@ -29,6 +38,9 @@ export interface SecurityMetrics {
   vulnerabilitiesFixed: number;
   cspViolations: number;
   xssAttempts: number;
+  xssProtection: boolean;
+  csrfProtection: boolean;
+  cspEnabled: boolean;
 }
 
 export interface AccessibilityMetrics {
@@ -36,6 +48,8 @@ export interface AccessibilityMetrics {
   keyboardNavigationScore: number;
   screenReaderScore: number;
   colorContrastScore: number;
+  keyboardNavigation: boolean;
+  screenReaderSupport: boolean;
 }
 
 export interface SEOMetrics {
@@ -43,6 +57,9 @@ export interface SEOMetrics {
   structuredDataScore: number;
   pageSpeedScore: number;
   mobileFriendlinessScore: number;
+  metaTags: boolean;
+  structuredData: boolean;
+  sitemap: boolean;
 }
 
 export interface UXMetrics {
@@ -50,6 +67,8 @@ export interface UXMetrics {
   bounceRate: number;
   taskCompletionRate: number;
   userSatisfactionScore: number;
+  userSatisfaction: number;
+  errorRate: number;
 }
 
 class ComprehensiveEnhancements {
@@ -76,7 +95,7 @@ class ComprehensiveEnhancements {
     this.initialize();
   }
 
-  private initialize(): void {
+  public initialize(): void {
     if (typeof window === 'undefined') return;
 
     if (this.config.enableAdvancedPerformance) {
@@ -674,7 +693,7 @@ class ComprehensiveEnhancements {
       document.body.classList.add('high-contrast');
     }
 
-    if ('reduceMotion' in preferences && (preferences as { reduceMotion?: boolean }).reduceMotion) {
+    if (preferences.reduceMotion) {
       document.body.classList.add('reduce-motion');
     }
   }
@@ -836,41 +855,50 @@ class ComprehensiveEnhancements {
     
     return `
 Comprehensive Enhancement Report:
-================================
-Performance:
-- FCP: ${metrics.performance.fcp?.toFixed(2) || 'N/A'}ms
-- LCP: ${metrics.performance.lcp?.toFixed(2) || 'N/A'}ms
-- FID: ${metrics.performance.fid?.toFixed(2) || 'N/A'}ms
-- CLS: ${metrics.performance.cls?.toFixed(4) || 'N/A'}
-- Memory: ${metrics.performance.memoryUsage ? (metrics.performance.memoryUsage / 1024 / 1024).toFixed(2) + 'MB' : 'N/A'}
+Generated: ${new Date().toISOString()}
 
-Security:
-- XSS Attempts Blocked: ${metrics.security.xssAttempts || 0}
-- Threats Blocked: ${metrics.security.threatsBlocked || 0}
+Performance Metrics:
+- FCP: ${metrics.performance.fcp || 'N/A'}ms
+- LCP: ${metrics.performance.lcp || 'N/A'}ms
+- FID: ${metrics.performance.fid || 'N/A'}ms
+- CLS: ${metrics.performance.cls || 'N/A'}
+- TTFB: ${metrics.performance.ttfb || 'N/A'}ms
+- Memory Usage: ${metrics.performance.memoryUsage || 'N/A'}MB
+- Bundle Size: ${metrics.performance.bundleSize || 'N/A'}KB
 
-Accessibility:
+Security Metrics:
+- Threats Blocked: ${metrics.security.threatsBlocked || 'N/A'}
+- Vulnerabilities Fixed: ${metrics.security.vulnerabilitiesFixed || 'N/A'}
+- CSP Violations: ${metrics.security.cspViolations || 'N/A'}
+- XSS Attempts: ${metrics.security.xssAttempts || 'N/A'}
+
+Accessibility Metrics:
 - WCAG Compliance: ${metrics.accessibility.wcagCompliance || 'N/A'}%
-- Keyboard Navigation: ${metrics.accessibility.keyboardNavigationScore || 'N/A'}%
+- Keyboard Navigation Score: ${metrics.accessibility.keyboardNavigationScore || 'N/A'}%
+- Screen Reader Score: ${metrics.accessibility.screenReaderScore || 'N/A'}%
+- Color Contrast Score: ${metrics.accessibility.colorContrastScore || 'N/A'}%
 
-UX:
-- Engagement Score: ${metrics.ux.engagementScore?.toFixed(1) || 'N/A'}%
-- User Satisfaction: ${metrics.ux.userSatisfactionScore || 'N/A'}%
-    `.trim();
+SEO Metrics:
+- Meta Tags Score: ${metrics.seo.metaTagsScore || 'N/A'}%
+- Structured Data Score: ${metrics.seo.structuredDataScore || 'N/A'}%
+- Page Speed Score: ${metrics.seo.pageSpeedScore || 'N/A'}%
+- Mobile Friendliness Score: ${metrics.seo.mobileFriendlinessScore || 'N/A'}%
+
+UX Metrics:
+- Engagement Score: ${metrics.ux.engagementScore || 'N/A'}%
+- Bounce Rate: ${metrics.ux.bounceRate || 'N/A'}%
+- Task Completion Rate: ${metrics.ux.taskCompletionRate || 'N/A'}%
+- User Satisfaction Score: ${metrics.ux.userSatisfactionScore || 'N/A'}/10
+
+This report provides a comprehensive overview of the current state of enhancements.
+`;
   }
 }
 
-// Singleton instance
-let enhancements: ComprehensiveEnhancements | null = null;
+// Export a singleton instance
+export const comprehensiveEnhancer = new ComprehensiveEnhancements();
 
-export function getComprehensiveEnhancements(config?: Partial<EnhancementConfig>): ComprehensiveEnhancements {
-  if (!enhancements) {
-    enhancements = new ComprehensiveEnhancements(config);
-  }
-  return enhancements;
+// Export function to get comprehensive enhancements
+export function getComprehensiveEnhancements() {
+  return comprehensiveEnhancer;
 }
-
-export function initializeEnhancements(config?: Partial<EnhancementConfig>): ComprehensiveEnhancements {
-  return getComprehensiveEnhancements(config);
-}
-
-export default ComprehensiveEnhancements;

@@ -23,6 +23,11 @@ declare global {
     value?: number;
   }
 
+  interface LayoutShift extends PerformanceEntry {
+    hadRecentInput: boolean;
+    value: number;
+  }
+
   interface SpeechRecognitionEvent extends Event {
     results: SpeechRecognitionResultList;
   }

@@ -1,255 +1,132 @@
-/**
- * Performance Dashboard Component
- * Real-time performance monitoring and metrics display
- */
-
-import React, { useEffect, useState, useCallback } from 'react';
-import { Activity, Zap, Clock, Database, Wifi, Cpu, Monitor } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Activity, Zap, Clock, Database, Wifi, Shield } from 'lucide-react';
 
 interface PerformanceMetrics {
-  fcp: number;
-  lcp: number;
-  fid: number;
-  cls: number;
-  ttfb: number;
+  loadTime: number;
+  firstContentfulPaint: number;
+  largestContentfulPaint: number;
+  firstInputDelay: number;
+  cumulativeLayoutShift: number;
   memoryUsage: number;
-  bundleSize: number;
   networkSpeed: string;
-  cpuUsage: number;
-  storageUsed: number;
+  securityScore: number;
 }
 
-interface PerformanceDashboardProps {
-  isVisible?: boolean;
-  onClose?: () => void;
-}
-
-const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({ 
-  isVisible = false, 
-  onClose 
-}) => {
+export const PerformanceDashboard: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    fcp: 0,
-    lcp: 0,
-    fid: 0,
-    cls: 0,
-    ttfb: 0,
+    loadTime: 0,
+    firstContentfulPaint: 0,
+    largestContentfulPaint: 0,
+    firstInputDelay: 0,
+    cumulativeLayoutShift: 0,
     memoryUsage: 0,
-    bundleSize: 0,
     networkSpeed: 'Unknown',
-    cpuUsage: 0,
-    storageUsed: 0
+    securityScore: 0
   });
 
-  const [isMonitoring, setIsMonitoring] = useState(false);
+  useEffect(() => {
+    const collectMetrics = () => {
+      // Collect Web Vitals
+      if ('web-vitals' in window) {
+        import('web-vitals').then((webVitals) => {
+          webVitals.onCLS((metric: any) => setMetrics(prev => ({ ...prev, cumulativeLayoutShift: metric.value })));
+          webVitals.onFCP((metric: any) => setMetrics(prev => ({ ...prev, firstContentfulPaint: metric.value })));
+          webVitals.onLCP((metric: any) => setMetrics(prev => ({ ...prev, largestContentfulPaint: metric.value })));
+          webVitals.onTTFB((metric: any) => setMetrics(prev => ({ ...prev, loadTime: metric.value })));
+          // Note: FID is deprecated, using INP instead
+          webVitals.onINP((metric: any) => setMetrics(prev => ({ ...prev, firstInputDelay: metric.value })));
+        });
+      }
 
-  const updateMetrics = useCallback(() => {
-    if (typeof window === 'undefined' || !performance || !performance.getEntriesByType) return;
-
-    // Web Vitals
-    try {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      if (navigation) {
-        setMetrics(prev => ({
-          ...prev,
-          ttfb: navigation.responseStart - navigation.requestStart
+      // Memory usage
+      if ('memory' in performance) {
+        const memory = (performance as any).memory;
+        setMetrics(prev => ({ 
+          ...prev, 
+          memoryUsage: memory.usedJSHeapSize / memory.jsHeapSizeLimit * 100 
         }));
       }
 
-      // First Contentful Paint
-      if (performance.getEntriesByName) {
-        const fcpEntry = performance.getEntriesByName('first-contentful-paint')[0];
-        if (fcpEntry) {
-          setMetrics(prev => ({
-            ...prev,
-            fcp: fcpEntry.startTime
-          }));
-        }
+      // Network speed
+      if ('connection' in navigator) {
+        const connection = (navigator as any).connection;
+        setMetrics(prev => ({ ...prev, networkSpeed: connection.effectiveType || 'Unknown' }));
       }
-    } catch (error) {
-      console.warn('Performance metrics unavailable:', error);
-    }
 
-    // Largest Contentful Paint
-    try {
-      const lcpEntries = performance.getEntriesByType('largest-contentful-paint');
-      if (lcpEntries.length > 0) {
-        const lcp = lcpEntries[lcpEntries.length - 1];
-        setMetrics(prev => ({
-          ...prev,
-          lcp: lcp.startTime
-        }));
-      }
-    } catch (error) {
-      console.warn('LCP metrics unavailable:', error);
-    }
+      // Security score
+      let securityScore = 100;
+      if (!location.protocol.includes('https')) securityScore -= 20;
+      if (!('serviceWorker' in navigator)) securityScore -= 10;
+      setMetrics(prev => ({ ...prev, securityScore }));
+    };
 
-    // Memory usage
-    if ('memory' in performance) {
-      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory;
-      if (memory) {
-        setMetrics(prev => ({
-          ...prev,
-          memoryUsage: memory.usedJSHeapSize / 1024 / 1024 // Convert to MB
-        }));
-      }
-    }
-
-    // Network information
-    if ('connection' in navigator) {
-      const connection = (navigator as Navigator & { connection?: { effectiveType?: string } }).connection;
-      if (connection) {
-        setMetrics(prev => ({
-          ...prev,
-          networkSpeed: connection.effectiveType || 'Unknown'
-        }));
-      }
-    }
+    collectMetrics();
+    const interval = setInterval(collectMetrics, 5000);
+    return () => clearInterval(interval);
   }, []);
 
-  useEffect(() => {
-    if (isVisible && !isMonitoring) {
-      setIsMonitoring(true);
-      updateMetrics();
-      
-      const interval = setInterval(updateMetrics, 2000);
-      return () => clearInterval(interval);
-    }
-  }, [isVisible, isMonitoring, updateMetrics]);
-
-  const getPerformanceGrade = (metric: number, thresholds: { good: number; poor: number }): string => {
-    if (metric <= thresholds.good) return 'text-green-500';
-    if (metric <= thresholds.poor) return 'text-yellow-500';
-    return 'text-red-500';
+  const getPerformanceColor = (value: number, thresholds: { good: number; poor: number }) => {
+    if (value <= thresholds.good) return 'text-green-600';
+    if (value <= thresholds.poor) return 'text-yellow-600';
+    return 'text-red-600';
   };
-
-  const formatMetric = (value: number, unit: string): string => {
-    return `${value.toFixed(1)}${unit}`;
-  };
-
-  if (!isVisible) return null;
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-      <div className="bg-white dark:bg-gray-800 rounded-lg shadow-2xl w-full max-w-4xl max-h-[90vh] overflow-y-auto">
-        <div className="flex items-center justify-between p-6 border-b border-gray-200 dark:border-gray-700">
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-white flex items-center">
-            <Monitor className="w-6 h-6 mr-2 text-blue-500" />
-            Performance Dashboard
-          </h2>
-          {onClose && (
-            <button
-              onClick={onClose}
-              className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
-            >
-              <span className="sr-only">Close</span>
-              ✕
-            </button>
-          )}
+    <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
+      <h2 className="text-2xl font-bold mb-6 flex items-center">
+        <Activity className="mr-2" />
+        Performance Dashboard
+      </h2>
+      
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
+          <div className="flex items-center justify-between mb-2">
+            <h3 className="font-semibold">Load Time</h3>
+            <Clock className="w-5 h-5 text-blue-600" />
+          </div>
+          <p className={`text-2xl font-bold ${getPerformanceColor(metrics.loadTime, { good: 1000, poor: 3000 })}`}>
+            {metrics.loadTime.toFixed(0)}ms
+          </p>
         </div>
 
-        <div className="p-6">
-          {/* Web Vitals Section */}
-          <div className="mb-8">
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
-              <Activity className="w-5 h-5 mr-2 text-green-500" />
-              Web Vitals
-            </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-              <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
-                <div className="flex items-center justify-between mb-2">
-                  <span className="text-sm font-medium text-gray-600 dark:text-gray-300">FCP</span>
-                  <span className={getPerformanceGrade(metrics.fcp, { good: 1800, poor: 3000 })}>
-                    {formatMetric(metrics.fcp, 'ms')}
-                  </span>
-                </div>
-                <p className="text-xs text-gray-500 dark:text-gray-400">First Contentful Paint</p>
-              </div>
-
-              <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
-                <div className="flex items-center justify-between mb-2">
-                  <span className="text-sm font-medium text-gray-600 dark:text-gray-300">LCP</span>
-                  <span className={getPerformanceGrade(metrics.lcp, { good: 2500, poor: 4000 })}>
-                    {formatMetric(metrics.lcp, 'ms')}
-                  </span>
-                </div>
-                <p className="text-xs text-gray-500 dark:text-gray-400">Largest Contentful Paint</p>
-              </div>
-
-              <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
-                <div className="flex items-center justify-between mb-2">
-                  <span className="text-sm font-medium text-gray-600 dark:text-gray-300">FID</span>
-                  <span className={getPerformanceGrade(metrics.fid, { good: 100, poor: 300 })}>
-                    {formatMetric(metrics.fid, 'ms')}
-                  </span>
-                </div>
-                <p className="text-xs text-gray-500 dark:text-gray-400">First Input Delay</p>
-              </div>
-
-              <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
-                <div className="flex items-center justify-between mb-2">
-                  <span className="text-sm font-medium text-gray-600 dark:text-gray-300">CLS</span>
-                  <span className={getPerformanceGrade(metrics.cls, { good: 0.1, poor: 0.25 })}>
-                    {formatMetric(metrics.cls, '')}
-                  </span>
-                </div>
-                <p className="text-xs text-gray-500 dark:text-gray-400">Cumulative Layout Shift</p>
-              </div>
-            </div>
+        <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
+          <div className="flex items-center justify-between mb-2">
+            <h3 className="font-semibold">First Contentful Paint</h3>
+            <Zap className="w-5 h-5 text-yellow-600" />
           </div>
+          <p className={`text-2xl font-bold ${getPerformanceColor(metrics.firstContentfulPaint, { good: 1800, poor: 3000 })}`}>
+            {metrics.firstContentfulPaint.toFixed(0)}ms
+          </p>
+        </div>
 
-          {/* System Resources Section */}
-          <div className="mb-8">
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
-              <Cpu className="w-5 h-5 mr-2 text-blue-500" />
-              System Resources
-            </h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
-                <div className="flex items-center justify-between mb-2">
-                  <span className="text-sm font-medium text-gray-600 dark:text-gray-300">Memory</span>
-                  <Database className="w-4 h-4 text-blue-500" />
-                </div>
-                <p className="text-lg font-semibold text-gray-900 dark:text-white">
-                  {formatMetric(metrics.memoryUsage, ' MB')}
-                </p>
-              </div>
-
-              <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
-                <div className="flex items-center justify-between mb-2">
-                  <span className="text-sm font-medium text-gray-600 dark:text-gray-300">Network</span>
-                  <Wifi className="w-4 h-4 text-green-500" />
-                </div>
-                <p className="text-lg font-semibold text-gray-900 dark:text-white">
-                  {metrics.networkSpeed}
-                </p>
-              </div>
-
-              <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
-                <div className="flex items-center justify-between mb-2">
-                  <span className="text-sm font-medium text-gray-600 dark:text-gray-300">TTFB</span>
-                  <Clock className="w-4 h-4 text-purple-500" />
-                </div>
-                <p className="text-lg font-semibold text-gray-900 dark:text-white">
-                  {formatMetric(metrics.ttfb, ' ms')}
-                </p>
-              </div>
-            </div>
+        <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
+          <div className="flex items-center justify-between mb-2">
+            <h3 className="font-semibold">Memory Usage</h3>
+            <Database className="w-5 h-5 text-green-600" />
           </div>
+          <p className={`text-2xl font-bold ${getPerformanceColor(metrics.memoryUsage, { good: 50, poor: 80 })}`}>
+            {metrics.memoryUsage.toFixed(1)}%
+          </p>
+        </div>
 
-          {/* Performance Tips */}
-          <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-4">
-            <h4 className="text-sm font-semibold text-blue-900 dark:text-blue-100 mb-2 flex items-center">
-              <Zap className="w-4 h-4 mr-2" />
-              Performance Tips
-            </h4>
-            <ul className="text-sm text-blue-800 dark:text-blue-200 space-y-1">
-              <li>• Optimize images and use modern formats (WebP, AVIF)</li>
-              <li>• Minimize JavaScript bundles and use code splitting</li>
-              <li>• Enable compression and caching headers</li>
-              <li>• Use a Content Delivery Network (CDN)</li>
-            </ul>
+        <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
+          <div className="flex items-center justify-between mb-2">
+            <h3 className="font-semibold">Network Speed</h3>
+            <Wifi className="w-5 h-5 text-blue-600" />
           </div>
+          <p className="text-2xl font-bold text-gray-800 dark:text-gray-200">
+            {metrics.networkSpeed}
+          </p>
+        </div>
+
+        <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
+          <div className="flex items-center justify-between mb-2">
+            <h3 className="font-semibold">Security Score</h3>
+            <Shield className="w-5 h-5 text-green-600" />
+          </div>
+          <p className={`text-2xl font-bold ${getPerformanceColor(100 - metrics.securityScore, { good: 20, poor: 50 })}`}>
+            {metrics.securityScore}/100
+          </p>
         </div>
       </div>
     </div>

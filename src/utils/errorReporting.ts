@@ -1,201 +1,129 @@
 /**
- * Enhanced error reporting and monitoring utilities
+ * Comprehensive Error Reporting System
  */
-
-interface PerformanceMemory {
-  usedJSHeapSize: number;
-  totalJSHeapSize: number;
-  jsHeapSizeLimit: number;
-}
-
-interface PerformanceWithMemory extends Performance {
-  memory?: PerformanceMemory;
-}
-
-export interface ErrorContext {
-  userId?: string;
-  sessionId: string;
-  timestamp: string;
-  userAgent: string;
-  url: string;
-  referrer: string;
-  viewport: {
-    width: number;
-    height: number;
-  };
-  performance?: {
-    memory?: PerformanceMemory;
-    timing?: PerformanceNavigationTiming;
-  };
-  customData?: Record<string, unknown>;
-}
 
 export interface ErrorReport {
   id: string;
-  error: {
-    name: string;
-    message: string;
-    stack?: string;
-    cause?: Error | unknown;
-  };
-  context: ErrorContext;
+  timestamp: number;
+  type: 'javascript' | 'network' | 'performance' | 'security' | 'user' | 'system';
   severity: 'low' | 'medium' | 'high' | 'critical';
-  category: 'javascript' | 'network' | 'security' | 'performance' | 'user';
-  tags: string[];
+  message: string;
+  stack?: string;
+  url: string;
+  userAgent: string;
+  userId?: string;
+  sessionId: string;
+  context: Record<string, unknown>;
+  resolved: boolean;
 }
 
-class ErrorReporter {
-  private static instance: ErrorReporter;
-  private reports: ErrorReport[] = [];
-  private maxReports = 100;
-  private sessionId: string;
-  private isInitialized = false;
-  private isReporting = false;
+export function initializeErrorReporting(config?: Record<string, unknown>): void {
+  console.log('Error reporting initialized', config);
+}
 
-  private constructor() {
-    this.sessionId = this.generateSessionId();
+export interface ErrorMetrics {
+  totalErrors: number;
+  errorsByType: Record<string, number>;
+  errorsBySeverity: Record<string, number>;
+  errorRate: number;
+  lastErrorTime: number;
+}
+
+class ErrorReportingSystem {
+  private errors: Map<string, ErrorReport> = new Map();
+  private metrics: ErrorMetrics = {
+    totalErrors: 0,
+    errorsByType: {},
+    errorsBySeverity: {},
+    errorRate: 0,
+    lastErrorTime: 0
+  };
+  private maxErrors = 1000;
+  private reportEndpoint = '/api/error-reporting';
+
+  constructor() {
+    this.initializeErrorHandling();
   }
 
-  public static getInstance(): ErrorReporter {
-    if (!ErrorReporter.instance) {
-      ErrorReporter.instance = new ErrorReporter();
-    }
-    return ErrorReporter.instance;
-  }
-
-  public initialize() {
-    if (this.isInitialized) return;
-
-    // Global error handler
-    window.addEventListener('error', this.handleGlobalError.bind(this));
-    
-    // Unhandled promise rejection handler
-    window.addEventListener('unhandledrejection', this.handleUnhandledRejection.bind(this));
-
-    // Network error monitoring
-    this.setupNetworkErrorMonitoring();
-
-    // Performance monitoring
-    this.setupPerformanceMonitoring();
-
-    this.isInitialized = true;
-  }
-
-  private generateSessionId(): string {
-    return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-  }
-
-  private generateErrorId(): string {
-    return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-  }
-
-  private getErrorContext(customData?: Record<string, unknown>): ErrorContext {
-    const context: ErrorContext = {
-      sessionId: this.sessionId,
-      timestamp: new Date().toISOString(),
-      userAgent: navigator.userAgent,
-      url: window.location.href,
-      referrer: document.referrer,
-      viewport: {
-        width: window.innerWidth,
-        height: window.innerHeight
-      }
-    };
-
-    // Add performance data if available
-    if (window.performance) {
-      context.performance = {};
-      
-      if ((window.performance as PerformanceWithMemory).memory) {
-        context.performance.memory = (window.performance as PerformanceWithMemory).memory;
-      }
-
-      const navigation = typeof performance.getEntriesByType === 'function' 
-        ? performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
-        : null;
-      if (navigation) {
-        context.performance.timing = navigation;
-      }
-    }
-
-    // Add custom data
-    if (customData) {
-      context.customData = customData;
-    }
-
-    // Add user ID from localStorage if available
-    try {
-      const userId = localStorage.getItem('userId');
-      if (userId) {
-        context.userId = userId;
-      }
-    } catch {
-      // Ignore localStorage errors
-    }
-
-    return context;
-  }
-
-  private handleGlobalError(event: ErrorEvent) {
-    this.reportError(
-      event.error || new Error(event.message),
-      {
-        category: 'javascript',
+  private initializeErrorHandling(): void {
+    // Global error handlers
+    window.addEventListener('error', (event) => {
+      this.reportError({
+        type: 'javascript',
         severity: 'high',
-        tags: ['global-error'],
-        customData: {
+        message: event.message,
+        stack: event.error?.stack,
+        context: {
           filename: event.filename,
           lineno: event.lineno,
           colno: event.colno
         }
-      }
-    );
-  }
-
-  private handleUnhandledRejection(event: PromiseRejectionEvent) {
-    const error = event.reason instanceof Error 
-      ? event.reason 
-      : new Error(`Unhandled Promise Rejection: ${event.reason}`);
-
-    this.reportError(error, {
-      category: 'javascript',
-      severity: 'high',
-      tags: ['promise-rejection'],
-      customData: {
-        reason: event.reason
-      }
+      });
     });
+
+    window.addEventListener('unhandledrejection', (event) => {
+      this.reportError({
+        type: 'javascript',
+        severity: 'medium',
+        message: `Unhandled Promise Rejection: ${event.reason}`,
+        stack: event.reason?.stack,
+        context: {
+          reason: event.reason
+        }
+      });
+    });
+
+    // Performance error monitoring
+    if ('PerformanceObserver' in window) {
+      const observer = new PerformanceObserver((list) => {
+        list.getEntries().forEach((entry) => {
+          if (entry.entryType === 'navigation' && entry.duration > 10000) {
+            this.reportError({
+              type: 'performance',
+              severity: 'medium',
+              message: `Slow page load: ${entry.duration}ms`,
+              context: {
+                duration: entry.duration,
+                loadTime: (entry as PerformanceNavigationTiming).loadEventEnd - (entry as PerformanceNavigationTiming).fetchStart
+              }
+            });
+          }
+        });
+      });
+
+      observer.observe({ entryTypes: ['navigation'] });
+    }
+
+    // Network error monitoring
+    this.monitorNetworkErrors();
   }
 
-  private setupNetworkErrorMonitoring() {
-    // Monitor fetch failures
+  private monitorNetworkErrors(): void {
     const originalFetch = window.fetch;
     window.fetch = async (...args) => {
       try {
         const response = await originalFetch(...args);
-        if (!response.ok) {
-          this.reportError(
-            new Error(`Network Error: ${response.status} ${response.statusText}`),
-            {
-              category: 'network',
-              severity: response.status >= 500 ? 'high' : 'medium',
-              tags: ['fetch-error'],
-              customData: {
-                url: args[0],
-                status: response.status,
-                statusText: response.statusText
-              }
+        if (!response.ok && response.status >= 400) {
+          this.reportError({
+            type: 'network',
+            severity: response.status >= 500 ? 'high' : 'medium',
+            message: `HTTP ${response.status}: ${response.statusText}`,
+            context: {
+              url: args[0],
+              status: response.status,
+              statusText: response.statusText
             }
-          );
+          });
         }
         return response;
       } catch (error) {
-        this.reportError(error as Error, {
-          category: 'network',
+        this.reportError({
+          type: 'network',
           severity: 'high',
-          tags: ['fetch-failure'],
-          customData: {
-            url: args[0]
+          message: `Network request failed: ${error instanceof Error ? error.message : 'Unknown error'}`,
+          context: {
+            url: args[0],
+            error: error instanceof Error ? error.message : String(error)
           }
         });
         throw error;
@@ -203,180 +131,198 @@ class ErrorReporter {
     };
   }
 
-  private setupPerformanceMonitoring() {
-    // Monitor long tasks
-    if ('PerformanceObserver' in window) {
-      try {
-        const observer = new PerformanceObserver((list) => {
-          list.getEntries().forEach((entry) => {
-            if (entry.duration > 50) { // Tasks longer than 50ms
-              this.reportError(
-                new Error(`Long Task: ${entry.duration}ms`),
-                {
-                  category: 'performance',
-                  severity: entry.duration > 100 ? 'medium' : 'low',
-                  tags: ['long-task'],
-                  customData: {
-                    duration: entry.duration,
-                    startTime: entry.startTime
-                  }
-                }
-              );
-            }
-          });
-        });
-
-        observer.observe({ entryTypes: ['longtask'] });
-      } catch {
-        // PerformanceObserver not supported
-      }
-    }
-  }
-
-  public reportError(
-    error: Error,
-    options: {
-      category?: ErrorReport['category'];
-      severity?: ErrorReport['severity'];
-      tags?: string[];
-      customData?: Record<string, unknown>;
-    } = {}
-  ) {
-    // Prevent recursive error reporting
-    if (this.isReporting) {
-      return;
-    }
-
-    this.isReporting = true;
-
-    try {
-      const report: ErrorReport = {
-        id: this.generateErrorId(),
-        error: {
-          name: error.name,
-          message: error.message,
-          stack: error.stack,
-          cause: (error as Error & { cause?: unknown }).cause
-        },
-        context: this.getErrorContext(options.customData),
-        category: options.category || 'javascript',
-        severity: options.severity || 'medium',
-        tags: options.tags || []
-      };
-
-      // Add to reports array
-      this.reports.push(report);
-
-      // Keep only the most recent reports
-      if (this.reports.length > this.maxReports) {
-        this.reports = this.reports.slice(-this.maxReports);
-      }
-
-      // Send to monitoring service
-      this.sendToMonitoringService(report);
-
-      // Log to console in development
-      if (process.env.NODE_ENV === 'development') {
-        console.group(`🚨 Error Report [${report.severity}]`);
-        console.error('Error:', error);
-        console.log('Report:', report);
-        console.groupEnd();
-      }
-    } finally {
-      this.isReporting = false;
-    }
-  }
-
-  private async sendToMonitoringService(report: ErrorReport) {
-    // Prevent recursion by checking if we're already in an error reporting cycle
-    if (this.isReporting) {
-      return;
-    }
-    
-    this.isReporting = true;
-    
-    try {
-      // Prevent infinite recursion by checking if this is an error reporting error
-      if (report.error.message.includes('Failed to send error report') || 
-          report.error.message.includes('error-reporting') ||
-          report.error.message.includes('Maximum call stack size exceeded')) {
-        return;
-      }
-
-      // Only send to monitoring service if we're not in a test environment
-      if (typeof window !== 'undefined' && process.env.NODE_ENV !== 'test') {
-        await fetch('/api/error-reporting', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(report),
-        });
-      }
-    } catch {
-      // Fallback: store in localStorage for later retry
-      try {
-        if (typeof localStorage !== 'undefined') {
-          const storedReports = JSON.parse(localStorage.getItem('errorReports') || '[]');
-          storedReports.push(report);
-          localStorage.setItem('errorReports', JSON.stringify(storedReports.slice(-10)));
-        }
-      } catch {
-        // If localStorage fails, just log to console silently
-        if (process.env.NODE_ENV === 'development') {
-          console.warn('Failed to store error report:', report);
-        }
-      }
-    } finally {
-      this.isReporting = false;
-    }
-  }
-
-  public getReports(): ErrorReport[] {
-    return [...this.reports];
-  }
-
-  public clearReports(): void {
-    this.reports = [];
-  }
-
-  public getStats() {
-    const stats = {
-      total: this.reports.length,
-      bySeverity: {} as Record<string, number>,
-      byCategory: {} as Record<string, number>,
-      byTag: {} as Record<string, number>
+  public reportError(errorInfo: {
+    type: ErrorReport['type'];
+    severity: ErrorReport['severity'];
+    message: string;
+    stack?: string;
+    context?: Record<string, unknown>;
+  }): void {
+    const errorReport: ErrorReport = {
+      id: this.generateErrorId(),
+      timestamp: Date.now(),
+      type: errorInfo.type,
+      severity: errorInfo.severity,
+      message: errorInfo.message,
+      stack: errorInfo.stack,
+      url: window.location.href,
+      userAgent: navigator.userAgent,
+      userId: this.getUserId(),
+      sessionId: this.getSessionId(),
+      context: errorInfo.context || {},
+      resolved: false
     };
 
-    this.reports.forEach(report => {
-      // Count by severity
-      stats.bySeverity[report.severity] = (stats.bySeverity[report.severity] || 0) + 1;
-      
-      // Count by category
-      stats.byCategory[report.category] = (stats.byCategory[report.category] || 0) + 1;
-      
-      // Count by tags
-      report.tags.forEach(tag => {
-        stats.byTag[tag] = (stats.byTag[tag] || 0) + 1;
-      });
-    });
+    this.errors.set(errorReport.id, errorReport);
+    this.updateMetrics(errorReport);
 
-    return stats;
+    // Clean up old errors if we exceed the limit
+    if (this.errors.size > this.maxErrors) {
+      const oldestError = Array.from(this.errors.entries())
+        .sort(([, a], [, b]) => a.timestamp - b.timestamp)[0];
+      this.errors.delete(oldestError[0]);
+    }
+
+    // Log to console for development
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Error Report:', errorReport);
+    }
+
+    // Send to server in production
+    if (process.env.NODE_ENV === 'production') {
+      this.sendErrorReport(errorReport);
+    }
+
+    // Trigger error recovery if available
+    this.triggerErrorRecovery(errorReport);
+  }
+
+  private generateErrorId(): string {
+    return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+  }
+
+  private getUserId(): string | undefined {
+    // This would integrate with your authentication system
+    return localStorage.getItem('userId') || undefined;
+  }
+
+  private getSessionId(): string {
+    let sessionId = sessionStorage.getItem('sessionId');
+    if (!sessionId) {
+      sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+      sessionStorage.setItem('sessionId', sessionId);
+    }
+    return sessionId;
+  }
+
+  private updateMetrics(errorReport: ErrorReport): void {
+    this.metrics.totalErrors++;
+    this.metrics.errorsByType[errorReport.type] = (this.metrics.errorsByType[errorReport.type] || 0) + 1;
+    this.metrics.errorsBySeverity[errorReport.severity] = (this.metrics.errorsBySeverity[errorReport.severity] || 0) + 1;
+    this.metrics.lastErrorTime = errorReport.timestamp;
+
+    // Calculate error rate (errors per minute)
+    const now = Date.now();
+    const oneMinuteAgo = now - 60000;
+    const recentErrors = Array.from(this.errors.values()).filter(
+      error => error.timestamp > oneMinuteAgo
+    ).length;
+    this.metrics.errorRate = recentErrors;
+  }
+
+  private async sendErrorReport(errorReport: ErrorReport): Promise<void> {
+    try {
+      await fetch(this.reportEndpoint, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(errorReport),
+      });
+    } catch (error) {
+      console.error('Failed to send error report:', error);
+    }
+  }
+
+  private triggerErrorRecovery(errorReport: ErrorReport): void {
+    // Implement error recovery strategies based on error type and severity
+    switch (errorReport.type) {
+      case 'network':
+        if (errorReport.severity === 'high') {
+          this.attemptNetworkRecovery();
+        }
+        break;
+      case 'performance':
+        if (errorReport.severity === 'high' || errorReport.severity === 'critical') {
+          this.attemptPerformanceRecovery();
+        }
+        break;
+      case 'javascript':
+        if (errorReport.severity === 'critical') {
+          this.attemptJavaScriptRecovery();
+        }
+        break;
+    }
+  }
+
+  private attemptNetworkRecovery(): void {
+    // Implement network recovery strategies
+    console.log('Attempting network recovery...');
+    // Could include retry logic, offline mode, etc.
+  }
+
+  private attemptPerformanceRecovery(): void {
+    // Implement performance recovery strategies
+    console.log('Attempting performance recovery...');
+    // Could include reducing animations, disabling heavy features, etc.
+  }
+
+  private attemptJavaScriptRecovery(): void {
+    // Implement JavaScript recovery strategies
+    console.log('Attempting JavaScript recovery...');
+    // Could include reloading the page, clearing caches, etc.
+  }
+
+  public getErrorMetrics(): ErrorMetrics {
+    return { ...this.metrics };
+  }
+
+  public getErrorsByType(type: ErrorReport['type']): ErrorReport[] {
+    return Array.from(this.errors.values()).filter(error => error.type === type);
+  }
+
+  public getErrorsBySeverity(severity: ErrorReport['severity']): ErrorReport[] {
+    return Array.from(this.errors.values()).filter(error => error.severity === severity);
+  }
+
+  public getAllErrors(): ErrorReport[] {
+    return Array.from(this.errors.values()).sort((a, b) => b.timestamp - a.timestamp);
+  }
+
+  public markErrorAsResolved(errorId: string): void {
+    const error = this.errors.get(errorId);
+    if (error) {
+      error.resolved = true;
+      this.errors.set(errorId, error);
+    }
+  }
+
+  public clearErrors(): void {
+    this.errors.clear();
+    this.metrics = {
+      totalErrors: 0,
+      errorsByType: {},
+      errorsBySeverity: {},
+      errorRate: 0,
+      lastErrorTime: 0
+    };
+  }
+
+  public exportErrorReport(): string {
+    return JSON.stringify({
+      timestamp: Date.now(),
+      metrics: this.metrics,
+      errors: this.getAllErrors()
+    }, null, 2);
   }
 }
 
-// Export singleton instance
-export const errorReporter = ErrorReporter.getInstance();
+// Singleton instance
+export const errorReportingSystem = new ErrorReportingSystem();
 
 // Convenience functions
-export const reportError = (error: Error, options?: Parameters<typeof errorReporter.reportError>[1]) => {
-  errorReporter.reportError(error, options);
+export const reportError = (errorInfo: Parameters<ErrorReportingSystem['reportError']>[0]) => {
+  errorReportingSystem.reportError(errorInfo);
 };
 
-export const initializeErrorReporting = () => {
-  errorReporter.initialize();
+export const getErrorMetrics = () => errorReportingSystem.getErrorMetrics();
+
+export const getAllErrors = () => errorReportingSystem.getAllErrors();
+
+export const markErrorAsResolved = (errorId: string) => {
+  errorReportingSystem.markErrorAsResolved(errorId);
 };
 
-export const getErrorStats = () => {
-  return errorReporter.getStats();
-};
+export const clearErrors = () => errorReportingSystem.clearErrors();
+
+export const exportErrorReport = () => errorReportingSystem.exportErrorReport();

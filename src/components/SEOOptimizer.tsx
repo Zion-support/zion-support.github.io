@@ -1,195 +1,227 @@
 import React, { useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
 
 interface SEOData {
   title: string;
   description: string;
-  keywords: string[];
+  keywords?: string;
+  ogTitle?: string;
+  ogDescription?: string;
   ogImage?: string;
-  ogUrl?: string;
-  ogType?: 'website' | 'article' | 'product';
-  twitterCard?: 'summary' | 'summary_large_image';
-  canonicalUrl?: string;
+  ogType?: string;
+  canonical?: string;
+  twitterCard?: string;
+  twitterSite?: string;
   structuredData?: Record<string, unknown>;
-  author?: string;
-  publishedTime?: string;
-  modifiedTime?: string;
-  siteName?: string;
 }
 
 interface SEOOptimizerProps {
   seoData: SEOData;
+  children?: React.ReactNode;
 }
 
-export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ 
-  seoData
-}) => {
-  const {
-    title,
-    description,
-    keywords,
-    ogImage,
-    ogType = 'website',
-    twitterCard = 'summary_large_image',
-    canonicalUrl,
-    structuredData,
-    author,
-    publishedTime,
-    modifiedTime,
-    siteName = 'Zion Tech Group'
-  } = seoData;
+export const useSEOData = (pathname: string): SEOData => {
+  const baseUrl = 'https://ziontechgroup.com';
+  
+  const defaultSEO: SEOData = {
+    title: 'Zion Tech Group - Advanced AI and IT Solutions',
+    description: 'Leading provider of AI-powered technology solutions, cloud services, and digital transformation consulting for modern enterprises.',
+    keywords: 'AI, artificial intelligence, technology solutions, cloud services, digital transformation, quantum computing, enterprise software',
+    ogTitle: 'Zion Tech Group - Advanced AI and IT Solutions',
+    ogDescription: 'Leading provider of AI-powered technology solutions, cloud services, and digital transformation consulting for modern enterprises.',
+    ogImage: '/og-image.png',
+    ogType: 'website',
+    canonical: `${baseUrl}${pathname}`,
+    twitterCard: 'summary_large_image',
+    twitterSite: '@ziontechgroup'
+  };
 
-  const fullUrl = canonicalUrl || (typeof window !== 'undefined' ? window.location.href : '');
-  const fullOgImage = ogImage || (typeof window !== 'undefined' ? `${window.location.origin}/og-image.png` : '');
-
-  useEffect(() => {
-    // Update document title and meta description
-    if (typeof document !== 'undefined') {
-      document.title = title;
-      
-      // Update meta description
-      let metaDescription = document.querySelector('meta[name="description"]');
-      if (!metaDescription) {
-        metaDescription = document.createElement('meta');
-        metaDescription.setAttribute('name', 'description');
-        document.head.appendChild(metaDescription);
-      }
-      metaDescription.setAttribute('content', description);
-
-      // Update meta keywords
-      let metaKeywords = document.querySelector('meta[name="keywords"]');
-      if (!metaKeywords) {
-        metaKeywords = document.createElement('meta');
-        metaKeywords.setAttribute('name', 'keywords');
-        document.head.appendChild(metaKeywords);
-      }
-      metaKeywords.setAttribute('content', keywords.join(', '));
-    }
-  }, [title, description, keywords]);
-
-  return (
-    <Helmet>
-      {/* Basic Meta Tags */}
-      <title>{title}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords.join(', ')} />
-      <meta name="author" content={author || 'Zion Tech Group'} />
-      
-      {/* Canonical URL */}
-      <link rel="canonical" href={fullUrl} />
-      
-      {/* Open Graph Meta Tags */}
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={fullOgImage} />
-      <meta property="og:url" content={fullUrl} />
-      <meta property="og:type" content={ogType} />
-      <meta property="og:site_name" content={siteName} />
-      <meta property="og:locale" content="en_US" />
-      
-      {/* Twitter Card Meta Tags */}
-      <meta name="twitter:card" content={twitterCard} />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={fullOgImage} />
-      
-      {/* Additional Meta Tags */}
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta name="robots" content="index, follow" />
-      <meta name="theme-color" content="#1e293b" />
-      
-      {/* Time-based Meta Tags */}
-      {publishedTime && <meta property="article:published_time" content={publishedTime} />}
-      {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
-      
-      {/* Structured Data */}
-      {structuredData && (
-        <script type="application/ld+json">
-          {JSON.stringify(structuredData)}
-        </script>
-      )}
-      
-      {/* Default Structured Data */}
-      <script type="application/ld+json">
-        {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "Organization",
-          "name": "Zion Tech Group",
-          "description": "Leading AI & Technology Solutions for modern enterprises",
-          "url": typeof window !== 'undefined' ? window.location.origin : '',
-          "logo": fullOgImage,
-          "sameAs": [
-            "https://linkedin.com/company/zion-tech-group",
-            "https://twitter.com/ziontechgroup"
-          ],
-          "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+1-555-ZION-TECH",
-            "contactType": "customer service"
+  // Customize SEO data based on pathname
+  switch (pathname) {
+    case '/about':
+      return {
+        ...defaultSEO,
+        title: 'About Us - Zion Tech Group',
+        description: 'Learn about Zion Tech Group\'s mission, values, and commitment to delivering cutting-edge AI and technology solutions that transform businesses.',
+        ogTitle: 'About Us - Zion Tech Group',
+        ogDescription: 'Learn about Zion Tech Group\'s mission, values, and commitment to delivering cutting-edge AI and technology solutions.',
+        structuredData: {
+          '@context': 'https://schema.org',
+          '@type': 'Organization',
+          name: 'Zion Tech Group',
+          url: baseUrl,
+          logo: `${baseUrl}/logo.png`,
+          description: 'Leading provider of AI-powered technology solutions',
+          foundingDate: '2020',
+          numberOfEmployees: '50-100',
+          industry: 'Technology',
+          sameAs: [
+            'https://linkedin.com/company/zion-tech-group',
+            'https://twitter.com/ziontechgroup'
+          ]
+        }
+      };
+    case '/services':
+      return {
+        ...defaultSEO,
+        title: 'Our Services - Zion Tech Group',
+        description: 'Explore our comprehensive range of AI, cloud, and technology services designed to transform your business and accelerate digital innovation.',
+        ogTitle: 'Our Services - Zion Tech Group',
+        ogDescription: 'Explore our comprehensive range of AI, cloud, and technology services designed to transform your business.',
+        structuredData: {
+          '@context': 'https://schema.org',
+          '@type': 'Service',
+          name: 'Technology Consulting Services',
+          provider: {
+            '@type': 'Organization',
+            name: 'Zion Tech Group'
+          },
+          description: 'AI, cloud, and technology services for digital transformation',
+          serviceType: 'Technology Consulting'
+        }
+      };
+    case '/contact':
+      return {
+        ...defaultSEO,
+        title: 'Contact Us - Zion Tech Group',
+        description: 'Get in touch with our team of experts to discuss your technology needs, project requirements, and how we can help transform your business.',
+        ogTitle: 'Contact Us - Zion Tech Group',
+        ogDescription: 'Get in touch with our team of experts to discuss your technology needs and project requirements.',
+        structuredData: {
+          '@context': 'https://schema.org',
+          '@type': 'ContactPage',
+          name: 'Contact Zion Tech Group',
+          description: 'Contact information for Zion Tech Group',
+          mainEntity: {
+            '@type': 'Organization',
+            name: 'Zion Tech Group',
+            contactPoint: {
+              '@type': 'ContactPoint',
+              telephone: '+1-555-0123',
+              contactType: 'customer service',
+              email: 'contact@ziontechgroup.com'
+            }
           }
-        })}
-      </script>
-    </Helmet>
-  );
+        }
+      };
+    case '/portfolio':
+      return {
+        ...defaultSEO,
+        title: 'Our Portfolio - Zion Tech Group',
+        description: 'Explore our successful projects and case studies showcasing our expertise in AI implementation, cloud migration, and digital transformation.',
+        ogTitle: 'Our Portfolio - Zion Tech Group',
+        ogDescription: 'Explore our successful projects and case studies showcasing our expertise in AI and digital transformation.'
+      };
+    default:
+      return {
+        ...defaultSEO,
+        structuredData: {
+          '@context': 'https://schema.org',
+          '@type': 'WebSite',
+          name: 'Zion Tech Group',
+          url: baseUrl,
+          description: defaultSEO.description,
+          publisher: {
+            '@type': 'Organization',
+            name: 'Zion Tech Group'
+          }
+        }
+      };
+  }
 };
 
-/**
- * Hook for generating SEO data based on route
- */
-export function useSEOData(pathname: string): SEOData {
-  const baseUrl = typeof window !== 'undefined' ? window.location.origin : '';
-  
-  // Default SEO data
-  const defaultSEO: SEOData = {
-    title: 'Zion Tech Group - Leading AI & Technology Solutions',
-    description: 'Cutting-edge AI, quantum computing, and digital transformation solutions for modern enterprises. Expert consulting, cloud services, and innovative technology implementations.',
-    keywords: ['AI solutions', 'quantum computing', 'digital transformation', 'cloud services', 'enterprise technology', 'machine learning', 'automation', 'blockchain'],
-    ogImage: `${baseUrl}/og-image.png`,
-    ogUrl: `${baseUrl}${pathname}`,
-    ogType: 'website',
-    twitterCard: 'summary_large_image',
-    canonicalUrl: `${baseUrl}${pathname}`,
-    author: 'Zion Tech Group',
-    siteName: 'Zion Tech Group'
-  };
+const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ seoData, children }) => {
+  useEffect(() => {
+    if (typeof document === 'undefined') return;
 
-  // Route-specific SEO data
-  const routeSEO: Record<string, Partial<SEOData>> = {
-    '/': {
-      title: 'Zion Tech Group - Leading AI & Technology Solutions',
-      description: 'Transform your business with cutting-edge AI, quantum computing, and digital transformation solutions. Expert consulting and innovative technology implementations.',
-      keywords: ['AI solutions', 'digital transformation', 'quantum computing', 'enterprise technology', 'machine learning', 'automation']
-    },
-    '/services': {
-      title: 'AI & Technology Services - Zion Tech Group',
-      description: 'Comprehensive AI and technology services including machine learning, quantum computing, cloud migration, and digital transformation solutions.',
-      keywords: ['AI services', 'machine learning', 'quantum computing', 'cloud migration', 'digital transformation', 'enterprise solutions']
-    },
-    '/about': {
-      title: 'About Zion Tech Group - AI & Technology Experts',
-      description: 'Learn about Zion Tech Group\'s mission to revolutionize business through cutting-edge AI and technology solutions. Meet our expert team.',
-      keywords: ['about zion tech', 'AI experts', 'technology team', 'company mission', 'leadership']
-    },
-    '/contact': {
-      title: 'Contact Zion Tech Group - Get Started Today',
-      description: 'Ready to transform your business? Contact Zion Tech Group for AI and technology solutions. Free consultation available.',
-      keywords: ['contact zion tech', 'AI consultation', 'technology solutions', 'get started', 'free consultation']
-    },
-    '/blog': {
-      title: 'AI & Technology Blog - Zion Tech Group Insights',
-      description: 'Stay updated with the latest AI and technology insights, trends, and innovations from Zion Tech Group experts.',
-      keywords: ['AI blog', 'technology insights', 'industry trends', 'innovation', 'tech news']
+    // Update title
+    document.title = seoData.title;
+
+    // Update meta description
+    updateMetaTag('description', 'name', seoData.description);
+
+    // Update keywords
+    if (seoData.keywords) {
+      updateMetaTag('keywords', 'name', seoData.keywords);
     }
+
+    // Update Open Graph tags
+    const ogTags = [
+      { property: 'og:title', content: seoData.ogTitle || seoData.title },
+      { property: 'og:description', content: seoData.ogDescription || seoData.description },
+      { property: 'og:image', content: seoData.ogImage || '/og-image.png' },
+      { property: 'og:url', content: seoData.canonical || window.location.href },
+      { property: 'og:type', content: seoData.ogType || 'website' }
+    ];
+
+    ogTags.forEach(({ property, content }) => {
+      updateMetaTag(property, 'property', content);
+    });
+
+    // Update Twitter Card tags
+    if (seoData.twitterCard) {
+      updateMetaTag('twitter:card', 'name', seoData.twitterCard);
+    }
+    if (seoData.twitterSite) {
+      updateMetaTag('twitter:site', 'name', seoData.twitterSite);
+    }
+    updateMetaTag('twitter:title', 'name', seoData.ogTitle || seoData.title);
+    updateMetaTag('twitter:description', 'name', seoData.ogDescription || seoData.description);
+    updateMetaTag('twitter:image', 'name', seoData.ogImage || '/og-image.png');
+
+    // Update canonical URL
+    if (seoData.canonical) {
+      updateCanonicalLink(seoData.canonical);
+    }
+
+    // Add structured data
+    if (seoData.structuredData) {
+      updateStructuredData(seoData.structuredData);
+    }
+
+    // Add viewport meta tag if not present
+    if (!document.querySelector('meta[name="viewport"]')) {
+      const viewport = document.createElement('meta');
+      viewport.setAttribute('name', 'viewport');
+      viewport.setAttribute('content', 'width=device-width, initial-scale=1.0');
+      document.head.appendChild(viewport);
+    }
+
+    // Add theme color
+    updateMetaTag('theme-color', 'name', '#1e1b4b');
+
+  }, [seoData]);
+
+  const updateMetaTag = (name: string, attribute: string, content: string) => {
+    let meta = document.querySelector(`meta[${attribute}="${name}"]`);
+    if (!meta) {
+      meta = document.createElement('meta');
+      meta.setAttribute(attribute, name);
+      document.head.appendChild(meta);
+    }
+    meta.setAttribute('content', content);
   };
 
-  const currentRouteSEO = routeSEO[pathname] || {};
-  
-  return {
-    ...defaultSEO,
-    ...currentRouteSEO,
-    ogUrl: `${baseUrl}${pathname}`,
-    canonicalUrl: `${baseUrl}${pathname}`
+  const updateCanonicalLink = (href: string) => {
+    let canonical = document.querySelector('link[rel="canonical"]');
+    if (!canonical) {
+      canonical = document.createElement('link');
+      canonical.setAttribute('rel', 'canonical');
+      document.head.appendChild(canonical);
+    }
+    canonical.setAttribute('href', href);
   };
-}
+
+  const updateStructuredData = (data: Record<string, unknown>) => {
+    let script = document.querySelector('script[type="application/ld+json"]');
+    if (!script) {
+      script = document.createElement('script');
+      script.setAttribute('type', 'application/ld+json');
+      document.head.appendChild(script);
+    }
+    script.textContent = JSON.stringify(data);
+  };
+
+  return <>{children}</>;
+};
 
 export default SEOOptimizer;
