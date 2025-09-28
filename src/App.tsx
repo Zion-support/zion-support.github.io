@@ -67,11 +67,50 @@ export default function App(): React.JSX.Element {
 
   // Command palette commands
   const commandPaletteCommands = useMemo(() => [
-    { id: 'dashboard', label: 'Open System Dashboard', action: () => setShowSystemDashboard(true) },
-    { id: 'health', label: 'Open System Health', action: () => setShowSystemHealth(true) },
-    { id: 'keyboard', label: 'Show Keyboard Shortcuts', action: () => setShowKeyboardHelp(true) },
-    { id: 'performance', label: 'Open Performance Widget', action: () => setShowPerformanceWidget(true) },
-    { id: 'theme', label: 'Toggle Theme', action: () => setIsDarkMode(!isDarkMode) },
+    { 
+      id: 'dashboard', 
+      title: 'Open System Dashboard', 
+      description: 'Open the system dashboard to view performance metrics',
+      category: 'System',
+      action: () => setShowSystemDashboard(true),
+      keywords: ['dashboard', 'system', 'metrics'],
+      shortcut: 'Ctrl+Shift+D'
+    },
+    { 
+      id: 'health', 
+      title: 'Open System Health', 
+      description: 'View system health and diagnostics',
+      category: 'System',
+      action: () => setShowSystemHealth(true),
+      keywords: ['health', 'system', 'diagnostics'],
+      shortcut: 'Ctrl+Shift+H'
+    },
+    { 
+      id: 'keyboard', 
+      title: 'Show Keyboard Shortcuts', 
+      description: 'Display available keyboard shortcuts',
+      category: 'Help',
+      action: () => setShowKeyboardHelp(true),
+      keywords: ['keyboard', 'shortcuts', 'help'],
+      shortcut: 'Ctrl+Shift+K'
+    },
+    { 
+      id: 'performance', 
+      title: 'Open Performance Widget', 
+      description: 'View real-time performance metrics',
+      category: 'System',
+      action: () => setShowPerformanceWidget(true),
+      keywords: ['performance', 'metrics', 'widget'],
+      shortcut: 'Ctrl+Shift+P'
+    },
+    { 
+      id: 'theme', 
+      title: 'Toggle Theme', 
+      description: 'Switch between light and dark themes',
+      category: 'Appearance',
+      action: () => setIsDarkMode(!isDarkMode),
+      keywords: ['theme', 'dark', 'light', 'appearance']
+    },
   ], [isDarkMode]);
 
   // Initialize comprehensive enhancements
@@ -91,17 +130,9 @@ export default function App(): React.JSX.Element {
       
       // Initialize performance optimizations
       performanceOptimizer.preloadCriticalResources();
-      performanceOptimizer.addResourceHints();
-      performanceOptimizer.optimizeServiceWorker();
       
       // Start memory optimization
-      const cleanupMemoryOptimization = performanceOptimizer.optimizeMemoryUsage();
-      
-      return () => {
-        if (cleanupMemoryOptimization) {
-          cleanupMemoryOptimization();
-        }
-      };
+      performanceOptimizer.optimizeMemory();
     } catch (error) {
       console.error('Error initializing enhancements:', error);
     }
