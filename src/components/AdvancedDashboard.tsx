@@ -84,9 +84,9 @@ const AdvancedDashboard: React.FC = () => {
       id: `session_${Date.now()}`,
       startTime: Date.now() - 300000, // 5 minutes ago
       lastActivity: Date.now(),
-      pageViews: events.filter((e) => e.name === 'page_view').length,
+      pageViews: events.filter((e) => e.type === 'page_view').length,
       events: events.map((e) => ({
-        event: e.name,
+        event: e.type,
         timestamp: e.timestamp || Date.now(),
         properties: (e as any).properties || {}
       })),
