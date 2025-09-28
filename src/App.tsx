@@ -360,7 +360,7 @@ export default function App(): React.JSX.Element {
   }, [seoData.title, seoData.description, seoData.keywords, seoData.canonicalUrl, seoData.ogImage, seoData.ogType, seoData.twitterCard]);
 
   // Optimized keyboard handler for system dashboard toggle
-  // const handleKeyDown = useCallback((event: KeyboardEvent) => {
+  const handleKeyDown = useCallback((event: KeyboardEvent) => {
     if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'D') {
       event.preventDefault();
       setShowSystemDashboard((prev: boolean) => !prev);
