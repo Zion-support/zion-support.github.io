@@ -627,14 +627,15 @@ class AdvancedAccessibilityEnhancer {
     
     return `
 Accessibility Report:
-- Overall Score: ${metrics.overallScore}%
-- Color Contrast Ratio: ${metrics.colorContrastRatio}
-- Focusable Elements: ${metrics.focusableElements}
-- ARIA Labels: ${metrics.ariaLabels}
-- Heading Structure: ${metrics.headingStructure}
-- Alt Texts: ${metrics.altTexts}
-- Keyboard Traps: ${metrics.keyboardTraps}
-- Screen Reader Compatibility: ${metrics.screenReaderCompatibility}
+- Total Issues: ${metrics.totalIssues}
+- Critical Issues: ${metrics.criticalIssues}
+- Warning Issues: ${metrics.warningIssues}
+- Passed Checks: ${metrics.passedChecks}
 `;
   }
 }
+
+// Export singleton instance
+export const accessibilityEnhancer = new AdvancedAccessibilityEnhancer();
+export { AdvancedAccessibilityEnhancer };
+export type { AccessibilityConfig, AccessibilityMetrics };

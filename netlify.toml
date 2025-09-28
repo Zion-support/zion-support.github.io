@@ -51,24 +51,15 @@
   # Optimize build performance
   CI = "true"
 
-# Explicitly disable Next.js plugin to prevent auto-detection
+# Explicitly disable Netlify post-processing to avoid transform issues
 [build.processing]
-  skip_processing = false
+  skip_processing = true
 
-[build.processing.css]
-  bundle = true
-  minify = true
-
-[build.processing.js]
-  bundle = true
-  minify = true
-
-[build.processing.html]
-  pretty_urls = true
-
-[[plugins]]
-  package = "netlify-plugin-cloudinary"
-  [plugins.inputs]
+# Remove custom plugins that may cause build failures
+# (Cloudinary plugin disabled)
+# [[plugins]]
+#   package = "netlify-plugin-cloudinary"
+#   [plugins.inputs]
 
 [context.production.environment]
   NODE_ENV = "production"

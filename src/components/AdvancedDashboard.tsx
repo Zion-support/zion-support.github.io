@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { advancedAnalytics as analytics } from '../utils/advancedAnalytics';
-import AdvancedCacheManager from '../utils/advancedCache';
+// import { advancedAnalytics as analytics } from '../utils/advancedAnalytics';
+// import AdvancedCacheManager from '../utils/advancedCache';
 import AdvancedAccessibilityManager from '../utils/advancedAccessibilityManager';
 import AdvancedSecurityManager from '../utils/advancedSecurityManager';
 import EnhancedUXManager from '../utils/enhancedUXManager';
@@ -69,8 +69,12 @@ const AdvancedDashboard: React.FC = () => {
   }, [isOpen]);
 
   const updateData = () => {
+<<<<<<< HEAD
     const analyticsInstance = analytics;
     const events = analyticsInstance.getEvents();
+=======
+    const events = analytics.getEvents();
+>>>>>>> 61be861214b50a66fa9f716d0213bc509edae316
     const cacheStats = AdvancedCacheManager.getInstance().getStats();
     
     // Convert analytics events to analytics data format

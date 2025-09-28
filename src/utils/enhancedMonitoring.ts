@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 // Global types are available through tsconfig.json
+=======
+// Enhanced monitoring types are defined in global.d.ts
+>>>>>>> 61be861214b50a66fa9f716d0213bc509edae316
 /**
  * Enhanced Monitoring and Analytics System
  * Provides comprehensive monitoring, error tracking, and performance analytics
@@ -18,10 +22,7 @@ interface MonitoringConfig {
   endpoint: string;
 }
 
-interface LayoutShift extends PerformanceEntry {
-  hadRecentInput: boolean;
-  value: number;
-}
+// LayoutShift interface is already defined above, removing duplicate
 
 interface ErrorData {
   message: string;

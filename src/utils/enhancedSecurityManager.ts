@@ -4,7 +4,7 @@
  */
 
 interface SecurityEvent {
-  type: 'authentication' | 'authorization' | 'data_access' | 'api_call' | 'error';
+  type: 'authentication' | 'authorization' | 'data_access' | 'api_call' | 'error' | 'security_alert';
   severity: 'low' | 'medium' | 'high' | 'critical';
   message: string;
   timestamp: Date;
@@ -12,6 +12,7 @@ interface SecurityEvent {
   ipAddress?: string;
   userAgent?: string;
   metadata?: Record<string, any>;
+  originalEvent?: SecurityEvent;
 }
 
 interface SecurityPolicy {
@@ -294,7 +295,7 @@ class EnhancedSecurityManager {
     
     // In a real application, you would send this to a security monitoring service
     // For now, we'll just log it
-    this.logSecurityEvent(alert);
+    this.logSecurityEvent(alert as unknown as SecurityEvent);
   }
 
   public addEventListener(eventType: string, listener: (event: SecurityEvent) => void): void {
