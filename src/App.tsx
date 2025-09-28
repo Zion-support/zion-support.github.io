@@ -81,24 +81,10 @@ export default function App(): React.JSX.Element {
     twitterCard: 'summary_large_image' as const
   }), []);
 
-  // Initialize comprehensive enhancements
+  // Initialize basic systems
   useEffect(() => {
-    const enhancements = getComprehensiveEnhancements();
-    enhancements.initialize();
-    
-    // Initialize individual enhancement systems
-    enhancedPerformanceMonitor.initialize();
-    enhancedAnalytics.initialize();
-    advancedCacheSystem.initialize();
-    new AdvancedAutomationSystem().initialize();
-    new AccessibilityEnhancer().initialize();
-    new SecurityEnhancer().initialize();
-    
     // Initialize analytics
     analytics.initialize();
-    seoAnalytics.initialize();
-    performanceSEO.initialize();
-    seoManager.initialize();
     
     // Initialize SEO analytics
     seoAnalytics.trackPageView(window.location.pathname);
