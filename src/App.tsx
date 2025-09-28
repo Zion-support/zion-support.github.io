@@ -1,4 +1,4 @@
-import React, { useMemo, useEffect, useState, useCallback } from 'react';
+import React, { useMemo, useEffect, useCallback } from 'react';
 import { AppRouter } from './router';
 import { useAppInitialization } from './hooks/useAppInitialization';
 import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
@@ -11,13 +11,6 @@ import { apiClient } from './utils/apiClient';
 import { notificationManager } from './utils/notificationManager';
 import { userFeedback } from './utils/userFeedbackManager';
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
-import PerformanceDashboard from './components/PerformanceDashboard';
-import RealTimeMonitor from './components/RealTimeMonitor';
-import SystemMetricsDashboard from './components/SystemMetricsDashboard';
-import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
-import EnhancedNotificationSystem from './components/EnhancedNotificationSystem';
-import PerformanceOptimizer from './components/PerformanceOptimizer';
-import EnhancedAnalytics from './components/EnhancedAnalytics';
 import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
 import './index.css';
 export default function App(): React.JSX.Element {
@@ -52,7 +45,7 @@ export default function App(): React.JSX.Element {
     });
 
     // Store enhancements globally for debugging
-    (window as any).enhancements = enhancements;
+    (window as Record<string, unknown>).enhancements = enhancements;
   }, []);
 
   // Optimized keyboard handler for system dashboard toggle
@@ -164,7 +157,7 @@ export default function App(): React.JSX.Element {
     // Use passive listeners for better performance
     window.addEventListener('scroll', handleScroll, { passive: true });
     document.addEventListener('click', handleClick, { passive: true });
-  }, [seoData, handleScroll, handleClick]);
+  }, [seoData, handleScroll, handleClick, preloadResource]);
 
   // Add keyboard event listener
   React.useEffect(() => {
