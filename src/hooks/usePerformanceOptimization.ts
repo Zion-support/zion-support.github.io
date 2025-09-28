@@ -16,9 +16,13 @@ interface PerformanceOptimizationReturn {
   preloadResource: (url: string, type?: string) => Promise<void>;
   recordMetric: (name: string, value: number) => void;
   measurePerformance: (name: string, fn: () => void) => void;
-  getPerformanceMetrics: () => any;
+  getPerformanceMetrics: () => PerformanceMetrics;
   optimizeImage: (src: string, options?: ImageOptimizationOptions) => string;
   addResourceHint: (href: string, as: string, type?: string) => void;
+}
+
+interface PerformanceMetrics {
+  [key: string]: number;
 }
 
 interface ImageOptimizationOptions {
@@ -122,8 +126,8 @@ export const usePerformanceOptimization = (
     if (!configRef.current.enableImageOptimization) return src;
 
     const {
-      width,
-      height,
+      width = 800,
+      height = 600,
       quality = 80,
       format = 'webp'
     } = options;
@@ -135,6 +139,8 @@ export const usePerformanceOptimization = (
 
     // For now, return the original src
     // In a real implementation, this would integrate with an image optimization service
+    // Using the parameters for future implementation
+    console.log(`Image optimization requested: ${width}x${height}, quality: ${quality}, format: ${format}, supportsWebP: ${supportsWebP}`);
     return src;
   }, []);
 
@@ -264,7 +270,7 @@ export const usePerformanceOptimization = (
   useEffect(() => {
     if (!('connection' in navigator)) return;
 
-    const connection = (navigator as any).connection;
+    const connection = (navigator as Navigator & { connection?: { effectiveType: string } }).connection;
     
     const handleConnectionChange = () => {
       const effectiveType = connection.effectiveType;
