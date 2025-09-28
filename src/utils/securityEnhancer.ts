@@ -39,11 +39,19 @@ interface SecurityEvent {
 }
 
 class SecurityEnhancer {
+  private static instance: SecurityEnhancer;
   private config: SecurityConfig;
   private metrics: SecurityMetrics;
   private securityEvents: SecurityEvent[] = [];
   private blockedDomains: Set<string> = new Set();
   private suspiciousPatterns: RegExp[] = [];
+
+  public static getInstance(): SecurityEnhancer {
+    if (!SecurityEnhancer.instance) {
+      SecurityEnhancer.instance = new SecurityEnhancer();
+    }
+    return SecurityEnhancer.instance;
+  }
 
   constructor(config: Partial<SecurityConfig> = {}) {
     this.config = {

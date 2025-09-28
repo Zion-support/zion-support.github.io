@@ -127,7 +127,7 @@ class PerformanceOptimizer {
       };
     }
 
-    (this.metrics as unknown as Record<string, number | string>)[key] = value;
+    (this.metrics as unknown as Record<string, unknown>)[key] = value;
     this.generateRecommendations();
   }
 

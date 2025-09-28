@@ -184,7 +184,7 @@ export const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'navigation') {
             const navEntry = entry as PerformanceNavigationTiming;
-            trackPerformance('load_time', navEntry.loadEventEnd - (navEntry.activationStart || 0));
+            trackPerformance('load_time', navEntry.loadEventEnd - (navEntry.fetchStart || 0));
           } else if (entry.entryType === 'paint') {
             trackPerformance(entry.name, entry.startTime);
           }

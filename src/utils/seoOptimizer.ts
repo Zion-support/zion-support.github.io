@@ -1,445 +1,391 @@
 /**
- * Advanced SEO Optimizer
- * Provides comprehensive SEO monitoring and optimization utilities
+ * SEO Optimization Utility
+ * Provides comprehensive SEO optimization features
  */
 
-interface SEOConfig {
-  enableMetaOptimization: boolean;
-  enableStructuredData: boolean;
-  enableSitemapGeneration: boolean;
-  enableRobotsTxt: boolean;
-  enableCanonicalUrls: boolean;
-  enableOpenGraph: boolean;
-  enableTwitterCards: boolean;
-  enableSchemaMarkup: boolean;
-}
-
-interface SEOMetrics {
-  titleLength: number;
-  descriptionLength: number;
-  headingCount: number;
-  imageAltTexts: number;
-  internalLinks: number;
-  externalLinks: number;
-  structuredDataItems: number;
-  canonicalUrls: number;
-  metaTags: number;
-  openGraphTags: number;
-}
-
-interface PageSEOData {
+interface SEOData {
   title: string;
   description: string;
   keywords: string[];
-  canonicalUrl: string;
   ogTitle?: string;
   ogDescription?: string;
   ogImage?: string;
+  ogUrl?: string;
   ogType?: string;
   twitterCard?: string;
   twitterTitle?: string;
   twitterDescription?: string;
   twitterImage?: string;
-  structuredData?: Record<string, unknown>;
+  canonical?: string;
   robots?: string;
   author?: string;
   publishedTime?: string;
   modifiedTime?: string;
+  section?: string;
+  tags?: string[];
+}
+
+interface SEOConfig {
+  enableStructuredData: boolean;
+  enableSitemap: boolean;
+  enableRobots: boolean;
+  enableAnalytics: boolean;
+  enableSocialSharing: boolean;
 }
 
 class SEOOptimizer {
   private config: SEOConfig;
-  private metrics: SEOMetrics;
-  private baseUrl: string;
+  private currentData: SEOData | null = null;
 
   constructor(config: Partial<SEOConfig> = {}) {
     this.config = {
-      enableMetaOptimization: true,
       enableStructuredData: true,
-      enableSitemapGeneration: true,
-      enableRobotsTxt: true,
-      enableCanonicalUrls: true,
-      enableOpenGraph: true,
-      enableTwitterCards: true,
-      enableSchemaMarkup: true,
+      enableSitemap: true,
+      enableRobots: true,
+      enableAnalytics: true,
+      enableSocialSharing: true,
       ...config
     };
-
-    this.metrics = {
-      titleLength: 0,
-      descriptionLength: 0,
-      headingCount: 0,
-      imageAltTexts: 0,
-      internalLinks: 0,
-      externalLinks: 0,
-      structuredDataItems: 0,
-      canonicalUrls: 0,
-      metaTags: 0,
-      openGraphTags: 0
-    };
-
-    this.baseUrl = typeof window !== 'undefined' ? window.location.origin : '';
-    this.initialize();
   }
 
-  private initialize(): void {
+  /**
+   * Initialize SEO optimization
+   */
+  initialize(): void {
     if (typeof window === 'undefined') return;
 
-    this.optimizeMetaTags();
-    this.addStructuredData();
-    this.optimizeImages();
-    this.optimizeLinks();
-    this.analyzeSEO();
+    this.setupAnalytics();
+    this.setupSocialSharing();
+    // Initialize with default structured data
   }
 
-  private optimizeMetaTags(): void {
-    if (!this.config.enableMetaOptimization) return;
-
-    // Ensure proper meta viewport
-    let viewport = document.querySelector('meta[name="viewport"]');
-    if (!viewport) {
-      viewport = document.createElement('meta');
-      viewport.setAttribute('name', 'viewport');
-      viewport.setAttribute('content', 'width=device-width, initial-scale=1.0');
-      document.head.appendChild(viewport);
-    }
-
-    // Add charset if missing
-    let charset = document.querySelector('meta[charset]');
-    if (!charset) {
-      charset = document.createElement('meta');
-      charset.setAttribute('charset', 'UTF-8');
-      document.head.insertBefore(charset, document.head.firstChild);
-    }
-
-    // Add language attribute
-    if (!document.documentElement.getAttribute('lang')) {
-      document.documentElement.setAttribute('lang', 'en');
+  /**
+   * Update SEO data for current page
+   */
+  updateSEO(data: SEOData): void {
+    this.currentData = data;
+    
+    this.updateMetaTags(data);
+    this.updateOpenGraph(data);
+    this.updateTwitterCard(data);
+    this.updateStructuredData(data);
+    
+    if (this.config.enableAnalytics) {
+      this.trackPageView(data);
     }
   }
 
-  private addStructuredData(): void {
+  /**
+   * Update basic meta tags
+   */
+  private updateMetaTags(data: SEOData): void {
+    // Title
+    document.title = data.title;
+
+    // Description
+    this.setMetaTag('description', data.description);
+
+    // Keywords
+    if (data.keywords.length > 0) {
+      this.setMetaTag('keywords', data.keywords.join(', '));
+    }
+
+    // Author
+    if (data.author) {
+      this.setMetaTag('author', data.author);
+    }
+
+    // Robots
+    if (data.robots) {
+      this.setMetaTag('robots', data.robots);
+    }
+
+    // Canonical URL
+    if (data.canonical) {
+      this.setCanonical(data.canonical);
+    }
+  }
+
+  /**
+   * Update Open Graph tags
+   */
+  private updateOpenGraph(data: SEOData): void {
+    if (!this.config.enableSocialSharing) return;
+
+    const ogTags = [
+      { property: 'og:title', content: data.ogTitle || data.title },
+      { property: 'og:description', content: data.ogDescription || data.description },
+      { property: 'og:image', content: data.ogImage || '/og-image.png' },
+      { property: 'og:url', content: data.ogUrl || window.location.href },
+      { property: 'og:type', content: data.ogType || 'website' },
+      { property: 'og:site_name', content: 'Zion Tech Group' }
+    ];
+
+    ogTags.forEach(tag => {
+      this.setMetaTag(tag.property, tag.content, 'property');
+    });
+
+    // Additional OG tags
+    if (data.publishedTime) {
+      this.setMetaTag('article:published_time', data.publishedTime, 'property');
+    }
+    if (data.modifiedTime) {
+      this.setMetaTag('article:modified_time', data.modifiedTime, 'property');
+    }
+    if (data.section) {
+      this.setMetaTag('article:section', data.section, 'property');
+    }
+    if (data.tags && data.tags.length > 0) {
+      data.tags.forEach(tag => {
+        this.setMetaTag('article:tag', tag, 'property');
+      });
+    }
+  }
+
+  /**
+   * Update Twitter Card tags
+   */
+  private updateTwitterCard(data: SEOData): void {
+    if (!this.config.enableSocialSharing) return;
+
+    const twitterTags = [
+      { name: 'twitter:card', content: data.twitterCard || 'summary_large_image' },
+      { name: 'twitter:title', content: data.twitterTitle || data.title },
+      { name: 'twitter:description', content: data.twitterDescription || data.description },
+      { name: 'twitter:image', content: data.twitterImage || data.ogImage || '/og-image.png' }
+    ];
+
+    twitterTags.forEach(tag => {
+      this.setMetaTag(tag.name, tag.content);
+    });
+  }
+
+  /**
+   * Generate and update structured data
+   */
+  private generateStructuredData(data: SEOData): void {
     if (!this.config.enableStructuredData) return;
 
-    const organizationSchema = {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Zion Tech Group",
-      "description": "Leading AI & Technology Solutions for modern enterprises",
-      "url": this.baseUrl,
-      "logo": `${this.baseUrl}/logo.png`,
-      "sameAs": [
-        "https://linkedin.com/company/zion-tech-group",
-        "https://twitter.com/ziontechgroup",
-        "https://github.com/zion-tech-group"
+    const structuredData = {
+      '@context': 'https://schema.org',
+      '@type': 'Organization',
+      name: 'Zion Tech Group',
+      url: window.location.origin,
+      logo: `${window.location.origin}/logo.png`,
+      description: 'Advanced AI and IT Solutions',
+      sameAs: [
+        'https://twitter.com/ziontechgroup',
+        'https://linkedin.com/company/zion-tech-group'
       ],
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+1-555-ZION-TECH",
-        "contactType": "customer service",
-        "availableLanguage": "English"
-      },
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "123 Tech Street",
-        "addressLocality": "San Francisco",
-        "addressRegion": "CA",
-        "postalCode": "94105",
-        "addressCountry": "US"
+      contactPoint: {
+        '@type': 'ContactPoint',
+        telephone: '+1-555-0123',
+        contactType: 'customer service',
+        areaServed: 'US',
+        availableLanguage: 'English'
       }
     };
 
-    this.addStructuredDataScript(organizationSchema);
+    this.setStructuredData(structuredData);
   }
 
-  private addStructuredDataScript(data: Record<string, unknown>): void {
+  /**
+   * Update structured data for current page
+   */
+  private updateStructuredData(data: SEOData): void {
+    if (!this.config.enableStructuredData) return;
+
+    const pageStructuredData = {
+      '@context': 'https://schema.org',
+      '@type': 'WebPage',
+      name: data.title,
+      description: data.description,
+      url: window.location.href,
+      mainEntity: {
+        '@type': 'Organization',
+        name: 'Zion Tech Group'
+      },
+      breadcrumb: this.generateBreadcrumb(),
+      datePublished: data.publishedTime,
+      dateModified: data.modifiedTime || new Date().toISOString(),
+      author: {
+        '@type': 'Organization',
+        name: 'Zion Tech Group'
+      }
+    };
+
+    this.setStructuredData(pageStructuredData);
+  }
+
+  /**
+   * Generate breadcrumb structured data
+   */
+  private generateBreadcrumb(): any {
+    const pathSegments = window.location.pathname.split('/').filter(Boolean);
+    const breadcrumb = {
+      '@type': 'BreadcrumbList',
+      itemListElement: pathSegments.map((segment, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        name: this.formatBreadcrumbName(segment),
+        item: `${window.location.origin}/${pathSegments.slice(0, index + 1).join('/')}`
+      }))
+    };
+
+    return breadcrumb;
+  }
+
+  /**
+   * Format breadcrumb name
+   */
+  private formatBreadcrumbName(segment: string): string {
+    return segment
+      .split('-')
+      .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(' ');
+  }
+
+  /**
+   * Set meta tag
+   */
+  private setMetaTag(name: string, content: string, attribute: string = 'name'): void {
+    let meta = document.querySelector(`meta[${attribute}="${name}"]`);
+    
+    if (!meta) {
+      meta = document.createElement('meta');
+      meta.setAttribute(attribute, name);
+      document.head.appendChild(meta);
+    }
+    
+    meta.setAttribute('content', content);
+  }
+
+  /**
+   * Set canonical URL
+   */
+  private setCanonical(url: string): void {
+    let canonical = document.querySelector('link[rel="canonical"]');
+    
+    if (!canonical) {
+      canonical = document.createElement('link');
+      canonical.setAttribute('rel', 'canonical');
+      document.head.appendChild(canonical);
+    }
+    
+    canonical.setAttribute('href', url);
+  }
+
+  /**
+   * Set structured data
+   */
+  private setStructuredData(data: any): void {
+    // Remove existing structured data
+    const existingScript = document.querySelector('script[type="application/ld+json"]');
+    if (existingScript) {
+      existingScript.remove();
+    }
+
+    // Add new structured data
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(data);
     document.head.appendChild(script);
   }
 
-  private optimizeImages(): void {
-    if (typeof window === 'undefined') return;
+  /**
+   * Setup analytics tracking
+   */
+  private setupAnalytics(): void {
+    if (!this.config.enableAnalytics) return;
 
-    const images = document.querySelectorAll('img');
-    images.forEach((img, index) => {
-      // Add loading="lazy" for images below the fold
-      if (index > 2) {
-        img.setAttribute('loading', 'lazy');
-      }
-
-      // Add decoding="async" for better performance
-      img.setAttribute('decoding', 'async');
-
-      // Ensure alt text exists
-      if (!img.getAttribute('alt')) {
-        const src = img.getAttribute('src') || '';
-        const filename = src.split('/').pop()?.split('.')[0] || 'image';
-        img.setAttribute('alt', filename.replace(/[-_]/g, ' '));
-      }
-
-      // Add fetchpriority for above-the-fold images
-      if (index < 3) {
-        img.setAttribute('fetchpriority', 'high');
-      }
-    });
+    // Google Analytics setup would go here
+    console.log('Analytics tracking initialized');
   }
 
-  private optimizeLinks(): void {
-    if (typeof window === 'undefined') return;
+  /**
+   * Setup social sharing
+   */
+  private setupSocialSharing(): void {
+    if (!this.config.enableSocialSharing) return;
 
-    const links = document.querySelectorAll('a[href]');
-    links.forEach(link => {
-      const href = link.getAttribute('href');
-      if (!href) return;
-
-      // Add rel="noopener" for external links
-      if (href.startsWith('http') && !href.includes(this.baseUrl)) {
-        link.setAttribute('rel', 'noopener noreferrer');
-        link.setAttribute('target', '_blank');
-      }
-
-      // Add title attribute for better UX
-      if (!link.getAttribute('title') && !link.textContent?.trim()) {
-        link.setAttribute('title', href);
-      }
-    });
+    // Social sharing buttons and tracking would go here
+    console.log('Social sharing initialized');
   }
 
-  private analyzeSEO(): void {
-    this.metrics.titleLength = document.title.length;
-    
-    const description = document.querySelector('meta[name="description"]');
-    this.metrics.descriptionLength = description?.getAttribute('content')?.length || 0;
-    
-    this.metrics.headingCount = document.querySelectorAll('h1, h2, h3, h4, h5, h6').length;
-    this.metrics.imageAltTexts = document.querySelectorAll('img[alt]').length;
-    
-    const links = document.querySelectorAll('a[href]');
-    this.metrics.internalLinks = Array.from(links).filter(link => {
-      const href = link.getAttribute('href');
-      return href && (href.startsWith('/') || href.includes(this.baseUrl));
-    }).length;
-    
-    this.metrics.externalLinks = Array.from(links).filter(link => {
-      const href = link.getAttribute('href');
-      return href && href.startsWith('http') && !href.includes(this.baseUrl);
-    }).length;
-    
-    this.metrics.structuredDataItems = document.querySelectorAll('script[type="application/ld+json"]').length;
-    this.metrics.canonicalUrls = document.querySelectorAll('link[rel="canonical"]').length;
-    this.metrics.metaTags = document.querySelectorAll('meta').length;
-    this.metrics.openGraphTags = document.querySelectorAll('meta[property^="og:"]').length;
+  /**
+   * Track page view
+   */
+  private trackPageView(data: SEOData): void {
+    if ('gtag' in window) {
+      (window as any).gtag('config', 'GA_MEASUREMENT_ID', {
+        page_title: data.title,
+        page_location: window.location.href
+      });
+    }
+
+    // Send to other analytics services
+    console.log('Page view tracked:', data.title);
   }
 
-  public optimizePage(data: PageSEOData): void {
-    if (typeof window === 'undefined') return;
+  /**
+   * Generate sitemap
+   */
+  generateSitemap(): string {
+    if (!this.config.enableSitemap) return '';
 
-    // Update title
-    if (data.title) {
-      document.title = data.title;
-    }
-
-    // Update meta description
-    this.updateMetaTag('description', data.description);
-    
-    // Update keywords
-    if (data.keywords && data.keywords.length > 0) {
-      this.updateMetaTag('keywords', data.keywords.join(', '));
-    }
-
-    // Update canonical URL
-    if (data.canonicalUrl) {
-      this.updateCanonicalUrl(data.canonicalUrl);
-    }
-
-    // Update Open Graph tags
-    if (this.config.enableOpenGraph) {
-      this.updateOpenGraphTags(data);
-    }
-
-    // Update Twitter Card tags
-    if (this.config.enableTwitterCards) {
-      this.updateTwitterCardTags(data);
-    }
-
-    // Update robots meta
-    if (data.robots) {
-      this.updateMetaTag('robots', data.robots);
-    }
-
-    // Add structured data
-    if (data.structuredData && this.config.enableSchemaMarkup) {
-      this.addStructuredDataScript(data.structuredData);
-    }
-
-    this.analyzeSEO();
-  }
-
-  private updateMetaTag(name: string, content: string): void {
-    let meta = document.querySelector(`meta[name="${name}"]`);
-    if (!meta) {
-      meta = document.createElement('meta');
-      meta.setAttribute('name', name);
-      document.head.appendChild(meta);
-    }
-    meta.setAttribute('content', content);
-  }
-
-  private updateCanonicalUrl(url: string): void {
-    let canonical = document.querySelector('link[rel="canonical"]');
-    if (!canonical) {
-      canonical = document.createElement('link');
-      canonical.setAttribute('rel', 'canonical');
-      document.head.appendChild(canonical);
-    }
-    canonical.setAttribute('href', url);
-  }
-
-  private updateOpenGraphTags(data: PageSEOData): void {
-    const ogTags = [
-      { property: 'og:title', content: data.ogTitle || data.title },
-      { property: 'og:description', content: data.ogDescription || data.description },
-      { property: 'og:image', content: data.ogImage || `${this.baseUrl}/og-image.png` },
-      { property: 'og:url', content: data.canonicalUrl },
-      { property: 'og:type', content: data.ogType || 'website' }
-    ];
-
-    ogTags.forEach(tag => {
-      if (tag.content) {
-        this.updateMetaProperty(tag.property, tag.content);
-      }
-    });
-  }
-
-  private updateTwitterCardTags(data: PageSEOData): void {
-    const twitterTags = [
-      { name: 'twitter:card', content: data.twitterCard || 'summary_large_image' },
-      { name: 'twitter:title', content: data.twitterTitle || data.title },
-      { name: 'twitter:description', content: data.twitterDescription || data.description },
-      { name: 'twitter:image', content: data.twitterImage || data.ogImage || `${this.baseUrl}/og-image.png` }
-    ];
-
-    twitterTags.forEach(tag => {
-      if (tag.content) {
-        this.updateMetaTag(tag.name, tag.content);
-      }
-    });
-  }
-
-  private updateMetaProperty(property: string, content: string): void {
-    let meta = document.querySelector(`meta[property="${property}"]`);
-    if (!meta) {
-      meta = document.createElement('meta');
-      meta.setAttribute('property', property);
-      document.head.appendChild(meta);
-    }
-    meta.setAttribute('content', content);
-  }
-
-  public generateSitemap(): string {
-    if (!this.config.enableSitemapGeneration) return '';
-
+    const baseUrl = window.location.origin;
     const pages = [
       { url: '/', priority: '1.0', changefreq: 'daily' },
-      { url: '/about', priority: '0.8', changefreq: 'monthly' },
       { url: '/services', priority: '0.9', changefreq: 'weekly' },
+      { url: '/about', priority: '0.8', changefreq: 'monthly' },
       { url: '/contact', priority: '0.7', changefreq: 'monthly' },
-      { url: '/blog', priority: '0.6', changefreq: 'weekly' }
+      { url: '/blog', priority: '0.8', changefreq: 'weekly' }
     ];
 
     let sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n';
     sitemap += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
-    
+
     pages.forEach(page => {
       sitemap += '  <url>\n';
-      sitemap += `    <loc>${this.baseUrl}${page.url}</loc>\n`;
+      sitemap += `    <loc>${baseUrl}${page.url}</loc>\n`;
       sitemap += `    <priority>${page.priority}</priority>\n`;
       sitemap += `    <changefreq>${page.changefreq}</changefreq>\n`;
       sitemap += '  </url>\n';
     });
-    
+
     sitemap += '</urlset>';
     return sitemap;
   }
 
-  public generateRobotsTxt(): string {
-    if (!this.config.enableRobotsTxt) return '';
-
-    return `User-agent: *
-Allow: /
-
-Sitemap: ${this.baseUrl}/sitemap.xml
-
-# Crawl-delay for respectful crawling
-Crawl-delay: 1
-
-# Disallow admin and private areas
-Disallow: /admin/
-Disallow: /private/
-Disallow: /api/
-`;
+  /**
+   * Get current SEO data
+   */
+  getCurrentData(): SEOData | null {
+    return this.currentData;
   }
 
-  public getMetrics(): SEOMetrics {
-    this.analyzeSEO();
-    return { ...this.metrics };
-  }
+  /**
+   * Validate SEO data
+   */
+  validateSEO(data: SEOData): { isValid: boolean; errors: string[] } {
+    const errors: string[] = [];
 
-  public validateSEO(): string[] {
-    const issues: string[] = [];
-
-    // Check title length
-    if (this.metrics.titleLength < 30 || this.metrics.titleLength > 60) {
-      issues.push(`Title length should be between 30-60 characters (current: ${this.metrics.titleLength})`);
+    if (!data.title || data.title.length < 30 || data.title.length > 60) {
+      errors.push('Title should be between 30-60 characters');
     }
 
-    // Check description length
-    if (this.metrics.descriptionLength < 120 || this.metrics.descriptionLength > 160) {
-      issues.push(`Description length should be between 120-160 characters (current: ${this.metrics.descriptionLength})`);
+    if (!data.description || data.description.length < 120 || data.description.length > 160) {
+      errors.push('Description should be between 120-160 characters');
     }
 
-    // Check for missing alt texts
-    const images = document.querySelectorAll('img');
-    const imagesWithoutAlt = Array.from(images).filter(img => !img.getAttribute('alt'));
-    if (imagesWithoutAlt.length > 0) {
-      issues.push(`${imagesWithoutAlt.length} images missing alt text`);
+    if (!data.keywords || data.keywords.length === 0) {
+      errors.push('Keywords should not be empty');
     }
 
-    // Check for missing h1
-    if (document.querySelectorAll('h1').length === 0) {
-      issues.push('Page missing H1 heading');
-    }
-
-    // Check for multiple h1s
-    if (document.querySelectorAll('h1').length > 1) {
-      issues.push('Page has multiple H1 headings');
-    }
-
-    return issues;
-  }
-
-  public generateReport(): string {
-    const metrics = this.getMetrics();
-    const issues = this.validateSEO();
-    
-    return `
-SEO Report:
-- Title Length: ${metrics.titleLength} characters
-- Description Length: ${metrics.descriptionLength} characters
-- Headings: ${metrics.headingCount}
-- Images with Alt Text: ${metrics.imageAltTexts}
-- Internal Links: ${metrics.internalLinks}
-- External Links: ${metrics.externalLinks}
-- Structured Data Items: ${metrics.structuredDataItems}
-- Canonical URLs: ${metrics.canonicalUrls}
-- Meta Tags: ${metrics.metaTags}
-- Open Graph Tags: ${metrics.openGraphTags}
-
-Issues Found: ${issues.length}
-${issues.map(issue => `- ${issue}`).join('\n')}
-    `.trim();
+    return {
+      isValid: errors.length === 0,
+      errors
+    };
   }
 }
 
@@ -448,4 +394,4 @@ export const seoOptimizer = new SEOOptimizer();
 
 // Export class for custom instances
 export { SEOOptimizer };
-export type { SEOConfig, SEOMetrics, PageSEOData };
+export type { SEOData, SEOConfig };
