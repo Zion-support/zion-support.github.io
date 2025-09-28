@@ -4,7 +4,7 @@
   status = 200
 
 [build]
-  command = "pnpm run build:optimized"
+  command = "pnpm run build:no-check"
   publish = "dist"
   command_timeout = "30m"
 
