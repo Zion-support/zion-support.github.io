@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import AdvancedPerformanceMonitor from '../utils/advancedPerformanceMonitor';
-import AccessibilityEnhancer from '../utils/accessibilityEnhancer';
+import { AccessibilityEnhancer } from '../utils/accessibilityEnhancer';
 import SecurityEnhancer from '../utils/securityEnhancer';
 
 interface SystemMetricsDashboardProps {
@@ -21,7 +21,7 @@ export const SystemMetricsDashboard: React.FC<SystemMetricsDashboardProps> = ({
     if (isVisible) {
       const updateMetrics = () => {
         const perfMonitor = AdvancedPerformanceMonitor.getInstance();
-        const accEnhancer = AccessibilityEnhancer.getInstance();
+        const accEnhancer = new AccessibilityEnhancer();
         const secEnhancer = SecurityEnhancer.getInstance();
 
         const perfMetrics = perfMonitor.getLatestMetrics();

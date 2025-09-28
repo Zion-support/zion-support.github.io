@@ -162,11 +162,11 @@ export default function App(): React.JSX.Element {
     enhancements.initialize();
     
     // Initialize individual enhancement systems
-    enhancedPerformanceMonitor.initialize();
+    enhancedPerformanceMonitor.startMonitoring();
     enhancedAnalytics.initialize();
     advancedCacheSystem.initialize();
     new AdvancedAutomationSystem().initialize();
-    new AccessibilityEnhancer().initialize();
+    new AccessibilityEnhancer();
     new SecurityEnhancer().initialize();
     
     // Initialize SEO analytics
