@@ -12,21 +12,54 @@ const About = (): JSX.Element => {
       role: 'CEO & Founder',
       expertise: 'Strategic Leadership, AI Innovation',
       image: '👩‍💼',
-      description: '15+ years in technology leadership, former VP at major tech companies.'
+      description: '15+ years in technology leadership, former VP at major tech companies. Passionate about driving digital transformation and AI adoption.',
+      linkedin: '#',
+      twitter: '#'
     },
     {
       name: 'Michael Chen',
       role: 'CTO',
       expertise: 'Cloud Architecture, DevOps',
       image: '👨‍💻',
-      description: 'Expert in scalable cloud solutions and modern development practices.'
+      description: 'Expert in scalable cloud solutions and modern development practices. Led infrastructure teams at Fortune 500 companies.',
+      linkedin: '#',
+      twitter: '#'
     },
     {
       name: 'Emily Rodriguez',
       role: 'Lead Designer',
       expertise: 'UX/UI Design, Product Strategy',
       image: '👩‍🎨',
-      description: 'Award-winning designer with expertise in user-centered design principles.'
+      description: 'Award-winning designer with expertise in user-centered design principles. Former design lead at leading tech startups.',
+      linkedin: '#',
+      twitter: '#'
+    },
+    {
+      name: 'David Park',
+      role: 'Head of AI Research',
+      expertise: 'Machine Learning, Deep Learning',
+      image: '👨‍🔬',
+      description: 'PhD in Computer Science with 10+ years in AI research. Published author and speaker at major AI conferences.',
+      linkedin: '#',
+      twitter: '#'
+    },
+    {
+      name: 'Lisa Wang',
+      role: 'Head of Security',
+      expertise: 'Cybersecurity, Compliance',
+      image: '👩‍🔒',
+      description: 'Certified cybersecurity expert with extensive experience in enterprise security and compliance frameworks.',
+      linkedin: '#',
+      twitter: '#'
+    },
+    {
+      name: 'Alex Thompson',
+      role: 'Head of Data Science',
+      expertise: 'Data Analytics, Business Intelligence',
+      image: '👨‍📊',
+      description: 'Data science leader with expertise in building scalable analytics platforms and machine learning pipelines.',
+      linkedin: '#',
+      twitter: '#'
     },
     {
       name: 'David Kim',
