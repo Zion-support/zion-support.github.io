@@ -477,7 +477,7 @@ class EnhancedErrorHandler {
     const errorTrends = Array.from(categoryTrends.entries()).map(([category, counts]) => {
       const recentAvg = counts.slice(-3).reduce((a, b) => a + b, 0) / 3;
       const olderAvg = counts.slice(0, 4).reduce((a, b) => a + b, 0) / 4;
-      const trend = recentAvg > olderAvg * 1.2 ? 'increasing' : 
+      const trend: 'increasing' | 'decreasing' | 'stable' = recentAvg > olderAvg * 1.2 ? 'increasing' : 
                    recentAvg < olderAvg * 0.8 ? 'decreasing' : 'stable';
       return { category, trend };
     });

@@ -105,34 +105,41 @@ export default function App(): React.JSX.Element {
 
   // Initialize comprehensive enhancements
   useEffect(() => {
-    const enhancements = getComprehensiveEnhancements();
-    enhancements.initialize();
-    
-    // Initialize individual enhancement systems
-    enhancedPerformanceMonitor.initialize();
-    enhancedAnalytics.initialize();
-    advancedCacheSystem.initialize();
-    new AdvancedAutomationSystem().initialize();
-    new AccessibilityEnhancer().initialize();
-    new SecurityEnhancer().initialize();
-    
-    // Initialize analytics
-    analytics.initialize();
-    seoAnalytics.initialize();
-    performanceSEO.initialize();
-    
-    // Add event listeners
-    window.addEventListener('beforeunload', enhancedTrackEngagement);
-    window.addEventListener('scroll', handleScroll);
-    document.addEventListener('click', handleClick);
-    document.addEventListener('keydown', handleKeyDown);
-    
-    return () => {
-      window.removeEventListener('beforeunload', enhancedTrackEngagement);
-      window.removeEventListener('scroll', handleScroll);
-      document.removeEventListener('click', handleClick);
-      document.removeEventListener('keydown', handleKeyDown);
-    };
+    try {
+      const enhancements = getComprehensiveEnhancements();
+      // Initialize enhancement systems safely
+      if (enhancedAnalytics && typeof enhancedAnalytics.initialize === 'function') {
+        enhancedAnalytics.initialize();
+      }
+      if (advancedCacheSystem && typeof advancedCacheSystem.initialize === 'function') {
+        advancedCacheSystem.initialize();
+      }
+      
+      // Initialize automation systems
+      new AdvancedAutomationSystem().initialize();
+      new AccessibilityEnhancer().initialize();
+      new SecurityEnhancer().initialize();
+      
+      // Initialize analytics safely
+      if (analytics && typeof analytics.initialize === 'function') {
+        analytics.initialize();
+      }
+      
+      // Add event listeners
+      window.addEventListener('beforeunload', enhancedTrackEngagement);
+      window.addEventListener('scroll', handleScroll);
+      document.addEventListener('click', handleClick);
+      document.addEventListener('keydown', handleKeyDown);
+      
+      return () => {
+        window.removeEventListener('beforeunload', enhancedTrackEngagement);
+        window.removeEventListener('scroll', handleScroll);
+        document.removeEventListener('click', handleClick);
+        document.removeEventListener('keydown', handleKeyDown);
+      };
+    } catch (error) {
+      console.error('Error initializing enhancements:', error);
+    }
   }, [trackEngagement, handleKeyDown, handleScroll, handleClick, enhancedTrackEngagement]);
 
   if (isLoading) {
@@ -205,20 +212,10 @@ export default function App(): React.JSX.Element {
 
         {/* AI Performance Dashboard */}
         {showAIDashboard && (
-          <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
-            <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
-              <div className="flex justify-between items-center mb-4">
-                <h2 className="text-2xl font-bold text-gray-900">AI Performance Dashboard</h2>
-                <button
-                  onClick={() => setShowAIDashboard(false)}
-                  className="text-gray-500 hover:text-gray-700"
-                >
-                  ✕
-                </button>
-              </div>
-              <AIPerformanceDashboard />
-            </div>
-          </div>
+          <AIPerformanceDashboard 
+            isVisible={showAIDashboard}
+            onClose={() => setShowAIDashboard(false)}
+          />
         )}
 
         {/* SEO Optimizer */}
