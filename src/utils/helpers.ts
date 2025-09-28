@@ -57,11 +57,21 @@ export const formatCurrency = (amount: number, currency = 'USD'): string => {
 
 // Date formatting
 export const formatDate = (date: Date, format: 'short' | 'long' | 'medium' = 'medium'): string => {
-  const options: Intl.DateTimeFormatOptions = {
-    short: { month: 'numeric', day: 'numeric', year: 'numeric' },
-    medium: { year: 'numeric', month: 'long', day: 'numeric' },
-    long: { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' },
-  }[format];
+  let options: Intl.DateTimeFormatOptions;
+  
+  switch (format) {
+    case 'short':
+      options = { month: 'numeric', day: 'numeric', year: 'numeric' };
+      break;
+    case 'medium':
+      options = { year: 'numeric', month: 'long', day: 'numeric' };
+      break;
+    case 'long':
+      options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+      break;
+    default:
+      options = { year: 'numeric', month: 'long', day: 'numeric' };
+  }
 
   return new Intl.DateTimeFormat('en-US', options).format(date);
 };
