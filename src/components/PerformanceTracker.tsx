@@ -76,7 +76,6 @@ export const PerformanceTracker: React.FC<PerformanceTrackerProps> = ({
         const clsObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           entries.forEach((entry) => {
-<<<<<<< HEAD
             if (entry.entryType === 'layout-shift' && 'hadRecentInput' in entry && 'value' in entry) {
               if (!(entry as any).hadRecentInput) {
                 clsValue += (entry as any).value;
