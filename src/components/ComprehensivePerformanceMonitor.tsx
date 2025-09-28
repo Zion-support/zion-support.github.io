@@ -44,7 +44,7 @@ const ComprehensivePerformanceMonitor: React.FC<ComprehensivePerformanceMonitorP
 
   const [alerts, setAlerts] = useState<PerformanceAlert[]>([]);
   const [isMonitoring, setIsMonitoring] = useState(false);
-  const [history, setHistory] = useState<PerformanceMetrics[]>([]);
+  const [, setHistory] = useState<PerformanceMetrics[]>([]);
 
   const measurePerformance = useCallback(() => {
     if (typeof window === 'undefined') return;
@@ -77,8 +77,9 @@ const ComprehensivePerformanceMonitor: React.FC<ComprehensivePerformanceMonitorP
         let clsValue = 0;
         const observer = new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
-            if (!(entry as any).hadRecentInput) {
-              clsValue += (entry as any).value;
+            const layoutShiftEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
+            if (!layoutShiftEntry.hadRecentInput) {
+              clsValue += layoutShiftEntry.value || 0;
             }
           }
           resolve(clsValue);
@@ -102,12 +103,12 @@ const ComprehensivePerformanceMonitor: React.FC<ComprehensivePerformanceMonitorP
 
     const measureLoadTime = () => {
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      return navigation ? navigation.loadEventEnd - navigation.navigationStart : 0;
+      return navigation ? navigation.loadEventEnd - navigation.fetchStart : 0;
     };
 
     const measureMemoryUsage = () => {
       if ('memory' in performance) {
-        const memory = (performance as any).memory;
+        const memory = (performance as unknown as { memory: { usedJSHeapSize: number } }).memory;
         return memory.usedJSHeapSize / 1024 / 1024; // Convert to MB
       }
       return 0;
