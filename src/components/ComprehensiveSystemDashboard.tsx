@@ -4,6 +4,8 @@ import { advancedPerformanceOptimizer } from '../utils/advancedPerformanceOptimi
 import { enhancedSecurityManager } from '../utils/enhancedSecurityManager';
 import { enhancedPerformanceMonitor } from '../utils/enhancedPerformanceMonitor';
 import { enhancedAnalytics } from '../utils/enhancedAnalytics';
+import { advancedAnalytics } from '../utils/advancedAnalytics';
+import { smartCache } from '../utils/smartCache';
 
 interface SystemMetrics {
   performance: {
@@ -45,321 +47,218 @@ const ComprehensiveSystemDashboard: React.FC<SystemDashboardProps> = ({
 
   useEffect(() => {
     if (isVisible) {
-      initializeDashboard();
-      startRealTimeMonitoring();
+      loadSystemMetrics();
+      const interval = setInterval(loadSystemMetrics, 5000);
+      return () => clearInterval(interval);
     }
   }, [isVisible]);
 
-  const initializeDashboard = async () => {
-    setIsLoading(true);
+  const loadSystemMetrics = async () => {
     try {
-      await Promise.all([
-        advancedPerformanceOptimizer.initialize(),
-        enhancedSecurityManager.initialize(),
-        enhancedPerformanceMonitor.initialize(),
-        enhancedAnalytics.initialize()
-      ]);
+      setIsLoading(true);
+      
+      // Load performance metrics
+      const performanceData = await enhancedPerformanceMonitor.getMetrics();
+      const performanceScore = await advancedPerformanceOptimizer.calculatePerformanceScore();
+      
+      // Load security metrics
+      const securityData = await enhancedSecurityManager.getSecurityMetrics();
+      
+      // Load analytics data
+      const analyticsData = await enhancedAnalytics.getMetrics();
+      const advancedAnalyticsData = await advancedAnalytics.getMetrics();
+      
+      // Load system metrics
+      const systemData = {
+        memoryUsage: (performance as any).memory?.usedJSHeapSize / 1024 / 1024 || 0,
+        cpuUsage: Math.random() * 100, // Placeholder
+        networkLatency: Math.random() * 100 // Placeholder
+      };
 
-      const systemMetrics = await collectSystemMetrics();
-      setMetrics(systemMetrics);
+      setMetrics({
+        performance: {
+          score: performanceScore,
+          lcp: performanceData.lcp || 0,
+          fcp: performanceData.fcp || 0,
+          ttfb: performanceData.ttfb || 0
+        },
+        security: {
+          score: securityData.score || 0,
+          totalEvents: securityData.totalEvents || 0,
+          criticalEvents: securityData.criticalEvents || 0
+        },
+        analytics: {
+          pageViews: analyticsData.pageViews || advancedAnalyticsData.pageViews || 0,
+          uniqueVisitors: analyticsData.uniqueVisitors || advancedAnalyticsData.uniqueVisitors || 0,
+          bounceRate: analyticsData.bounceRate || advancedAnalyticsData.bounceRate || 0
+        },
+        system: systemData
+      });
+
+      // Generate real-time data
+      const realTime = Array.from({ length: 20 }, (_, i) => ({
+        time: new Date(Date.now() - (19 - i) * 1000).toLocaleTimeString(),
+        performance: Math.random() * 100,
+        security: Math.random() * 100,
+        memory: Math.random() * 100,
+        network: Math.random() * 100
+      }));
+      setRealTimeData(realTime);
     } catch (error) {
-      console.error('Failed to initialize dashboard:', error);
+      console.error('Failed to load system metrics:', error);
     } finally {
       setIsLoading(false);
     }
   };
 
-  const collectSystemMetrics = async (): Promise<SystemMetrics> => {
-    const perfScore = advancedPerformanceOptimizer.getPerformanceScore();
-    const perfReport = advancedPerformanceOptimizer.getOptimizationReport();
-    
-    const securityReport = enhancedSecurityManager.getSecurityReport();
-    const securityScore = enhancedSecurityManager.getSecurityScore();
-
-    // Mock analytics data (in real app, this would come from analytics service)
-    const analyticsData = {
-      pageViews: Math.floor(Math.random() * 1000) + 500,
-      uniqueVisitors: Math.floor(Math.random() * 300) + 200,
-      bounceRate: Math.random() * 0.3 + 0.1
-    };
-
-    // Mock system data (in real app, this would come from system monitoring)
-    const systemData = {
-      memoryUsage: Math.random() * 80 + 10,
-      cpuUsage: Math.random() * 60 + 20,
-      networkLatency: Math.random() * 100 + 50
-    };
-
-    return {
-      performance: {
-        score: perfScore,
-        lcp: perfReport.metrics?.lcp || 0,
-        fcp: perfReport.metrics?.fcp || 0,
-        ttfb: perfReport.metrics?.ttfb || 0
-      },
-      security: {
-        score: securityScore,
-        totalEvents: securityReport.totalEvents,
-        criticalEvents: securityReport.eventsBySeverity.critical || 0
-      },
-      analytics: analyticsData,
-      system: systemData
-    };
-  };
-
-  const startRealTimeMonitoring = () => {
-    const interval = setInterval(async () => {
-      const newMetrics = await collectSystemMetrics();
-      setMetrics(newMetrics);
-      
-      const newData = {
-        time: new Date().toLocaleTimeString(),
-        performance: newMetrics.performance.score,
-        security: newMetrics.security.score,
-        memory: newMetrics.system.memoryUsage,
-        cpu: newMetrics.system.cpuUsage,
-        latency: newMetrics.system.networkLatency
-      };
-      
-      setRealTimeData(prev => [...prev.slice(-19), newData]);
-    }, 5000);
-
-    return () => clearInterval(interval);
-  };
-
   const getScoreColor = (score: number) => {
-    if (score >= 90) return '#10b981';
-    if (score >= 70) return '#f59e0b';
-    return '#ef4444';
-  };
-
-  const getStatusColor = (score: number) => {
-    if (score >= 90) return 'text-green-600';
-    if (score >= 70) return 'text-yellow-600';
-    return 'text-red-600';
+    if (score >= 90) return '#10B981';
+    if (score >= 70) return '#F59E0B';
+    return '#EF4444';
   };
 
   if (!isVisible) return null;
 
   const tabs = [
-    { id: 'overview', name: 'Overview', icon: '📊' },
-    { id: 'performance', name: 'Performance', icon: '⚡' },
-    { id: 'security', name: 'Security', icon: '🔒' },
-    { id: 'analytics', name: 'Analytics', icon: '📈' },
-    { id: 'system', name: 'System', icon: '🖥️' }
+    { id: 'overview', label: 'Overview', icon: '📊' },
+    { id: 'performance', label: 'Performance', icon: '⚡' },
+    { id: 'security', label: 'Security', icon: '🔒' },
+    { id: 'analytics', label: 'Analytics', icon: '📈' },
+    { id: 'system', label: 'System', icon: '🖥️' }
   ];
-
-  const performanceData = metrics ? [
-    { name: 'LCP', value: metrics.performance.lcp, threshold: 2500 },
-    { name: 'FCP', value: metrics.performance.fcp, threshold: 1800 },
-    { name: 'TTFB', value: metrics.performance.ttfb, threshold: 800 }
-  ] : [];
-
-  const securityData = metrics ? [
-    { name: 'Total Events', value: metrics.security.totalEvents },
-    { name: 'Critical Events', value: metrics.security.criticalEvents }
-  ] : [];
 
   return (
     <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center p-4">
-      <div className="bg-white dark:bg-gray-900 rounded-lg shadow-xl max-w-7xl w-full max-h-[90vh] overflow-y-auto">
-        <div className="p-6 border-b border-gray-200 dark:border-gray-700">
-          <div className="flex justify-between items-center">
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
-              Comprehensive System Dashboard
-            </h2>
+      <div className="bg-white rounded-lg shadow-xl max-w-7xl w-full max-h-[90vh] overflow-hidden">
+        <div className="p-6">
+          <div className="flex justify-between items-center mb-6">
+            <h2 className="text-2xl font-bold text-gray-900">Comprehensive System Dashboard</h2>
             <button
               onClick={onClose}
-              className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
+              className="text-gray-500 hover:text-gray-700 text-2xl"
             >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              </svg>
+              ✕
             </button>
           </div>
-        </div>
 
-        {/* Tab Navigation */}
-        <div className="border-b border-gray-200 dark:border-gray-700">
-          <nav className="flex space-x-8 px-6">
-            {tabs.map(tab => (
+          {/* Tab Navigation */}
+          <div className="flex space-x-1 mb-6 bg-gray-100 p-1 rounded-lg">
+            {tabs.map((tab) => (
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id as any)}
-                className={`py-4 px-1 border-b-2 font-medium text-sm ${
+                className={`flex items-center space-x-2 px-4 py-2 rounded-md transition-colors ${
                   activeTab === tab.id
-                    ? 'border-blue-500 text-blue-600 dark:text-blue-400'
-                    : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 dark:text-gray-400 dark:hover:text-gray-300'
+                    ? 'bg-white text-blue-600 shadow-sm'
+                    : 'text-gray-600 hover:text-gray-900'
                 }`}
               >
-                <span className="mr-2">{tab.icon}</span>
-                {tab.name}
+                <span>{tab.icon}</span>
+                <span>{tab.label}</span>
               </button>
             ))}
-          </nav>
-        </div>
+          </div>
 
-        <div className="p-6">
           {isLoading ? (
             <div className="flex items-center justify-center h-64">
-              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500"></div>
+              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
             </div>
           ) : (
-            <>
+            <div className="space-y-6">
               {/* Overview Tab */}
               {activeTab === 'overview' && metrics && (
                 <div className="space-y-6">
                   {/* Key Metrics Cards */}
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <div className="bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg p-6 text-white">
-                      <div className="flex items-center justify-between">
-                        <div>
-                          <p className="text-blue-100">Performance Score</p>
-                          <p className="text-3xl font-bold">{metrics.performance.score}</p>
-                        </div>
-                        <div className="text-blue-200">⚡</div>
-                      </div>
+                    <div className="bg-gradient-to-r from-blue-500 to-blue-600 text-white p-6 rounded-lg">
+                      <h3 className="text-lg font-semibold mb-2">Performance Score</h3>
+                      <div className="text-3xl font-bold">{metrics.performance.score}</div>
+                      <div className="text-blue-100">Core Web Vitals</div>
                     </div>
-
-                    <div className="bg-gradient-to-r from-green-500 to-green-600 rounded-lg p-6 text-white">
-                      <div className="flex items-center justify-between">
-                        <div>
-                          <p className="text-green-100">Security Score</p>
-                          <p className="text-3xl font-bold">{metrics.security.score}</p>
-                        </div>
-                        <div className="text-green-200">🔒</div>
-                      </div>
+                    <div className="bg-gradient-to-r from-green-500 to-green-600 text-white p-6 rounded-lg">
+                      <h3 className="text-lg font-semibold mb-2">Security Score</h3>
+                      <div className="text-3xl font-bold">{metrics.security.score}</div>
+                      <div className="text-green-100">Security Events</div>
                     </div>
-
-                    <div className="bg-gradient-to-r from-purple-500 to-purple-600 rounded-lg p-6 text-white">
-                      <div className="flex items-center justify-between">
-                        <div>
-                          <p className="text-purple-100">Page Views</p>
-                          <p className="text-3xl font-bold">{metrics.analytics.pageViews}</p>
-                        </div>
-                        <div className="text-purple-200">📈</div>
-                      </div>
+                    <div className="bg-gradient-to-r from-purple-500 to-purple-600 text-white p-6 rounded-lg">
+                      <h3 className="text-lg font-semibold mb-2">Page Views</h3>
+                      <div className="text-3xl font-bold">{metrics.analytics.pageViews.toLocaleString()}</div>
+                      <div className="text-purple-100">Total Views</div>
                     </div>
-
-                    <div className="bg-gradient-to-r from-orange-500 to-orange-600 rounded-lg p-6 text-white">
-                      <div className="flex items-center justify-between">
-                        <div>
-                          <p className="text-orange-100">Memory Usage</p>
-                          <p className="text-3xl font-bold">{metrics.system.memoryUsage.toFixed(1)}%</p>
-                        </div>
-                        <div className="text-orange-200">🖥️</div>
-                      </div>
+                    <div className="bg-gradient-to-r from-orange-500 to-orange-600 text-white p-6 rounded-lg">
+                      <h3 className="text-lg font-semibold mb-2">Memory Usage</h3>
+                      <div className="text-3xl font-bold">{metrics.system.memoryUsage.toFixed(1)}MB</div>
+                      <div className="text-orange-100">System Memory</div>
                     </div>
                   </div>
 
-                  {/* Real-time Monitoring Chart */}
-                  {realTimeData.length > 0 && (
-                    <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-4">
-                      <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
-                        Real-time System Metrics
-                      </h3>
-                      <ResponsiveContainer width="100%" height={400}>
-                        <AreaChart data={realTimeData}>
+                  {/* Real-time Performance Chart */}
+                  <div>
+                    <h3 className="text-xl font-semibold mb-4">Real-time System Performance</h3>
+                    <div className="h-64">
+                      <ResponsiveContainer width="100%" height="100%">
+                        <LineChart data={realTimeData}>
                           <CartesianGrid strokeDasharray="3 3" />
                           <XAxis dataKey="time" />
                           <YAxis />
                           <Tooltip />
-                          <Area type="monotone" dataKey="performance" stackId="1" stroke="#3b82f6" fill="#3b82f6" fillOpacity={0.6} />
-                          <Area type="monotone" dataKey="security" stackId="1" stroke="#10b981" fill="#10b981" fillOpacity={0.6} />
-                          <Area type="monotone" dataKey="memory" stackId="1" stroke="#f59e0b" fill="#f59e0b" fillOpacity={0.6} />
-                        </AreaChart>
+                          <Line type="monotone" dataKey="performance" stroke="#3B82F6" strokeWidth={2} />
+                          <Line type="monotone" dataKey="security" stroke="#10B981" strokeWidth={2} />
+                          <Line type="monotone" dataKey="memory" stroke="#F59E0B" strokeWidth={2} />
+                          <Line type="monotone" dataKey="network" stroke="#EF4444" strokeWidth={2} />
+                        </LineChart>
                       </ResponsiveContainer>
-                    </div>
-                  )}
-
-                  {/* System Status */}
-                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                    <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-4">
-                      <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
-                        System Status
-                      </h3>
-                      <div className="space-y-3">
-                        <div className="flex justify-between items-center">
-                          <span className="text-gray-600 dark:text-gray-300">Performance</span>
-                          <span className={`font-medium ${getStatusColor(metrics.performance.score)}`}>
-                            {metrics.performance.score >= 90 ? 'Excellent' : 
-                             metrics.performance.score >= 70 ? 'Good' : 'Needs Improvement'}
-                          </span>
-                        </div>
-                        <div className="flex justify-between items-center">
-                          <span className="text-gray-600 dark:text-gray-300">Security</span>
-                          <span className={`font-medium ${getStatusColor(metrics.security.score)}`}>
-                            {metrics.security.score >= 90 ? 'Secure' : 
-                             metrics.security.score >= 70 ? 'Moderate' : 'At Risk'}
-                          </span>
-                        </div>
-                        <div className="flex justify-between items-center">
-                          <span className="text-gray-600 dark:text-gray-300">System Health</span>
-                          <span className="font-medium text-green-600">Healthy</span>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-4">
-                      <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
-                        Quick Actions
-                      </h3>
-                      <div className="space-y-2">
-                        <button className="w-full text-left px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors">
-                          Run Performance Optimization
-                        </button>
-                        <button className="w-full text-left px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600 transition-colors">
-                          Generate Security Report
-                        </button>
-                        <button className="w-full text-left px-4 py-2 bg-purple-500 text-white rounded hover:bg-purple-600 transition-colors">
-                          Export Analytics Data
-                        </button>
-                        <button className="w-full text-left px-4 py-2 bg-orange-500 text-white rounded hover:bg-orange-600 transition-colors">
-                          System Health Check
-                        </button>
-                      </div>
                     </div>
                   </div>
                 </div>
               )}
 
               {/* Performance Tab */}
-              {activeTab === 'performance' && (
+              {activeTab === 'performance' && metrics && (
                 <div className="space-y-6">
-                  <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-4">
-                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
-                      Core Web Vitals
-                    </h3>
-                    <ResponsiveContainer width="100%" height={300}>
-                      <BarChart data={performanceData}>
-                        <CartesianGrid strokeDasharray="3 3" />
-                        <XAxis dataKey="name" />
-                        <YAxis />
-                        <Tooltip />
-                        <Bar dataKey="value" fill="#3b82f6" />
-                        <Bar dataKey="threshold" fill="#ef4444" opacity={0.3} />
-                      </BarChart>
-                    </ResponsiveContainer>
+                  <h3 className="text-xl font-semibold">Performance Metrics</h3>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div className="bg-gray-50 p-6 rounded-lg">
+                      <h4 className="font-semibold mb-2">Largest Contentful Paint</h4>
+                      <div className="text-3xl font-bold" style={{ color: getScoreColor(100 - (metrics.performance.lcp / 2.5) * 100) }}>
+                        {metrics.performance.lcp.toFixed(0)}ms
+                      </div>
+                    </div>
+                    <div className="bg-gray-50 p-6 rounded-lg">
+                      <h4 className="font-semibold mb-2">First Contentful Paint</h4>
+                      <div className="text-3xl font-bold" style={{ color: getScoreColor(100 - (metrics.performance.fcp / 1.8) * 100) }}>
+                        {metrics.performance.fcp.toFixed(0)}ms
+                      </div>
+                    </div>
+                    <div className="bg-gray-50 p-6 rounded-lg">
+                      <h4 className="font-semibold mb-2">Time to First Byte</h4>
+                      <div className="text-3xl font-bold" style={{ color: getScoreColor(100 - (metrics.performance.ttfb / 600) * 100) }}>
+                        {metrics.performance.ttfb.toFixed(0)}ms
+                      </div>
+                    </div>
                   </div>
                 </div>
               )}
 
               {/* Security Tab */}
-              {activeTab === 'security' && (
+              {activeTab === 'security' && metrics && (
                 <div className="space-y-6">
-                  <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-4">
-                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
-                      Security Events
-                    </h3>
-                    <ResponsiveContainer width="100%" height={300}>
-                      <BarChart data={securityData}>
-                        <CartesianGrid strokeDasharray="3 3" />
-                        <XAxis dataKey="name" />
-                        <YAxis />
-                        <Tooltip />
-                        <Bar dataKey="value" fill="#ef4444" />
-                      </BarChart>
-                    </ResponsiveContainer>
+                  <h3 className="text-xl font-semibold">Security Metrics</h3>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div className="bg-gray-50 p-6 rounded-lg">
+                      <h4 className="font-semibold mb-2">Security Score</h4>
+                      <div className="text-3xl font-bold" style={{ color: getScoreColor(metrics.security.score) }}>
+                        {metrics.security.score}
+                      </div>
+                    </div>
+                    <div className="bg-gray-50 p-6 rounded-lg">
+                      <h4 className="font-semibold mb-2">Total Events</h4>
+                      <div className="text-3xl font-bold">{metrics.security.totalEvents}</div>
+                    </div>
+                    <div className="bg-gray-50 p-6 rounded-lg">
+                      <h4 className="font-semibold mb-2">Critical Events</h4>
+                      <div className="text-3xl font-bold text-red-600">{metrics.security.criticalEvents}</div>
+                    </div>
                   </div>
                 </div>
               )}
@@ -367,18 +266,19 @@ const ComprehensiveSystemDashboard: React.FC<SystemDashboardProps> = ({
               {/* Analytics Tab */}
               {activeTab === 'analytics' && metrics && (
                 <div className="space-y-6">
+                  <h3 className="text-xl font-semibold">Analytics Metrics</h3>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-4">
-                      <h4 className="font-semibold text-blue-900 dark:text-blue-100">Page Views</h4>
-                      <p className="text-2xl font-bold text-blue-600 dark:text-blue-400">{metrics.analytics.pageViews}</p>
+                    <div className="bg-gray-50 p-6 rounded-lg">
+                      <h4 className="font-semibold mb-2">Page Views</h4>
+                      <div className="text-3xl font-bold">{metrics.analytics.pageViews.toLocaleString()}</div>
                     </div>
-                    <div className="bg-green-50 dark:bg-green-900/20 rounded-lg p-4">
-                      <h4 className="font-semibold text-green-900 dark:text-green-100">Unique Visitors</h4>
-                      <p className="text-2xl font-bold text-green-600 dark:text-green-400">{metrics.analytics.uniqueVisitors}</p>
+                    <div className="bg-gray-50 p-6 rounded-lg">
+                      <h4 className="font-semibold mb-2">Unique Visitors</h4>
+                      <div className="text-3xl font-bold">{metrics.analytics.uniqueVisitors.toLocaleString()}</div>
                     </div>
-                    <div className="bg-yellow-50 dark:bg-yellow-900/20 rounded-lg p-4">
-                      <h4 className="font-semibold text-yellow-900 dark:text-yellow-100">Bounce Rate</h4>
-                      <p className="text-2xl font-bold text-yellow-600 dark:text-yellow-400">{(metrics.analytics.bounceRate * 100).toFixed(1)}%</p>
+                    <div className="bg-gray-50 p-6 rounded-lg">
+                      <h4 className="font-semibold mb-2">Bounce Rate</h4>
+                      <div className="text-3xl font-bold">{metrics.analytics.bounceRate.toFixed(1)}%</div>
                     </div>
                   </div>
                 </div>
@@ -387,35 +287,24 @@ const ComprehensiveSystemDashboard: React.FC<SystemDashboardProps> = ({
               {/* System Tab */}
               {activeTab === 'system' && metrics && (
                 <div className="space-y-6">
+                  <h3 className="text-xl font-semibold">System Metrics</h3>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-4">
-                      <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Memory Usage</h4>
-                      <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-                        <div 
-                          className="bg-blue-600 h-2 rounded-full" 
-                          style={{ width: `${metrics.system.memoryUsage}%` }}
-                        ></div>
-                      </div>
-                      <p className="text-sm text-gray-600 dark:text-gray-300 mt-1">{metrics.system.memoryUsage.toFixed(1)}%</p>
+                    <div className="bg-gray-50 p-6 rounded-lg">
+                      <h4 className="font-semibold mb-2">Memory Usage</h4>
+                      <div className="text-3xl font-bold">{metrics.system.memoryUsage.toFixed(1)}MB</div>
                     </div>
-                    <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-4">
-                      <h4 className="font-semibold text-gray-900 dark:text-white mb-2">CPU Usage</h4>
-                      <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-                        <div 
-                          className="bg-green-600 h-2 rounded-full" 
-                          style={{ width: `${metrics.system.cpuUsage}%` }}
-                        ></div>
-                      </div>
-                      <p className="text-sm text-gray-600 dark:text-gray-300 mt-1">{metrics.system.cpuUsage.toFixed(1)}%</p>
+                    <div className="bg-gray-50 p-6 rounded-lg">
+                      <h4 className="font-semibold mb-2">CPU Usage</h4>
+                      <div className="text-3xl font-bold">{metrics.system.cpuUsage.toFixed(1)}%</div>
                     </div>
-                    <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-4">
-                      <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Network Latency</h4>
-                      <p className="text-2xl font-bold text-orange-600">{metrics.system.networkLatency.toFixed(0)}ms</p>
+                    <div className="bg-gray-50 p-6 rounded-lg">
+                      <h4 className="font-semibold mb-2">Network Latency</h4>
+                      <div className="text-3xl font-bold">{metrics.system.networkLatency.toFixed(1)}ms</div>
                     </div>
                   </div>
                 </div>
               )}
-            </>
+            </div>
           )}
         </div>
       </div>
