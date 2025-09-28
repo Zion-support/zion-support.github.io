@@ -1,7 +1,26 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import { clsx } from 'clsx';
 import {performanceOptimizer} from '../utils/performanceOptimizer';
-import { EnhancedPerformanceMetrics as PerformanceMetrics, OptimizationSuggestion } from '../types/comprehensive';
+import { OptimizationSuggestion } from '../types/comprehensive';
+
+// Define EnhancedPerformanceMetrics locally for now
+interface EnhancedPerformanceMetrics {
+  fcp: number;
+  lcp: number;
+  fid: number;
+  cls: number;
+  ttfb: number;
+  loadTime: number;
+  renderTime: number;
+  memory: {
+    used: number;
+    total: number;
+    limit: number;
+  };
+  domContentLoaded: number;
+  domInteractive: number;
+  violations: string[];
+}
 
 interface EnhancedPerformanceMonitorProps {
   className?: string;

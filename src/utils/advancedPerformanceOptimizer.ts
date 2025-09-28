@@ -31,6 +31,7 @@ class AdvancedPerformanceOptimizer {
   private metrics: PerformanceMetrics | null = null;
   private observers: PerformanceObserver[] = [];
   private isInitialized = false;
+  private strategies: any[] = [];
 
   constructor() {
     this.config = {
@@ -288,6 +289,7 @@ class AdvancedPerformanceOptimizer {
       appliedOptimizations: this.strategies.map(s => s.name)
     };
   }
+
 
 
   /**
