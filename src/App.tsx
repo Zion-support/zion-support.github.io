@@ -22,12 +22,24 @@ export default function App(): React.JSX.Element {
   const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
   const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
   const [showAIDashboard, setShowAIDashboard] = useState(false);
-
   // Engagement tracking data
   const engagementData = useMemo(() => ({
     startTime: Date.now(),
     scrollDepth: 0,
     clicks: 0
+  }), []);
+
+  // Simple SEO manager
+  const seoManager = useMemo(() => ({
+    updateMetaTags: (data: typeof seoData) => {
+      if (typeof document !== 'undefined') {
+        document.title = data.title;
+        const metaDescription = document.querySelector('meta[name="description"]');
+        if (metaDescription) {
+          metaDescription.setAttribute('content', data.description);
+        }
+      }
+    }
   }), []);
   // Initialize app with custom configuration
   const { isLoading, loadingProgress, handleScroll, handleClick, trackEngagement } = useAppInitialization({
@@ -39,10 +51,6 @@ export default function App(): React.JSX.Element {
     enableCaching: true,
   });
 
-  // Get current pathname for SEO
-  const currentPathname = typeof window !== 'undefined' ? window.location.pathname : '/';
-  const seoData = useSEOData(currentPathname);
-
   // Performance optimization hook
   const { preloadResource } = usePerformanceOptimization({
     enablePreloading: true,
@@ -51,7 +59,7 @@ export default function App(): React.JSX.Element {
     enableImageOptimization: true,
   });
 
-  // Optimized keyboard handler for system dashboard toggle
+  // Optimized keyboard handler (simplified - removed dashboard toggles)
   const handleKeyDown = useCallback((event: KeyboardEvent) => {
     if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'D') {
       event.preventDefault();
@@ -83,7 +91,6 @@ export default function App(): React.JSX.Element {
     // Also call the original trackEngagement from useAppInitialization
     trackEngagement();
   }, [engagementData.clicks, engagementData.scrollDepth, engagementData.startTime, trackEngagement]);
-
   // Update meta tags function
   const updateMetaTags = useCallback((data: {
     title: string;
@@ -139,13 +146,24 @@ export default function App(): React.JSX.Element {
     // Set default SEO data using the correct method
     seoManager.updateMetaTags(seoData);
 
-    // Update meta tags
-    updateMetaTags(seoData);
+    // Use passive listeners for better performance
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    document.addEventListener('click', handleClick, { passive: true });
+  }, [handleClick, handleKeyDown, handleScroll, seoData, preloadResource, seoManager]);
 
-    // Basic performance monitoring
-    if (typeof window !== 'undefined') {
-      console.log('🚀 Zion Tech Group App initialized');
-    }
+  // Add keyboard event listener
+  React.useEffect(() => {
+    document.addEventListener("keydown", handleKeyDown);
+    
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [handleKeyDown]);
+
+  // Main initialization and cleanup effect
+  React.useEffect(() => {
+    // Track engagement on page unload
+    window.addEventListener('beforeunload', enhancedTrackEngagement);
 
     // Mark app as fully initialized
     if (typeof window !== 'undefined' && window.performance && 
@@ -200,7 +218,6 @@ export default function App(): React.JSX.Element {
 
   return (
     <EnhancedErrorBoundary>
-      <SEOOptimizer seoData={seoData} />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <AppRouter />
         
