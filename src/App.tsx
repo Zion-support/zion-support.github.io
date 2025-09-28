@@ -27,12 +27,16 @@ import { securityUtils } from './utils/securityUtils';
 import { enhancedSecurityManager } from './utils/enhancedSecurityManager';
 import { AdvancedAutomationSystem } from './utils/advancedAutomationSystem';
 import { securityEnhancer } from './utils/securityEnhancer';
+import { performanceEnhancer } from './utils/performanceEnhancements';
+import { bundleOptimizer } from './utils/bundleOptimizer';
+import { loadingOptimizer } from './utils/loadingOptimizer';
 import AdvancedAnalytics from './components/AdvancedAnalytics';
 import NotificationSystem, { Notification } from './components/NotificationSystem';
 import KeyboardShortcutsHelp from './components/KeyboardShortcutsHelp';
 import CommandPalette from './components/CommandPalette';
 import RealTimePerformanceMonitor from './components/RealTimePerformanceMonitor';
 import SystemHealthDashboard from './components/SystemHealthDashboard';
+import EnhancedPerformanceDashboard from './components/EnhancedPerformanceDashboard';
 // import { getNotificationManager, notify } from './utils/advancedNotifications';
 // import { getThemeManager } from './utils/themeManager';
 // import { getKeyboardShortcuts, shortcuts } from './utils/advancedKeyboardShortcuts';
@@ -266,10 +270,16 @@ export default function App(): React.JSX.Element {
     performanceSEO.optimizeFonts();
     performanceSEO.optimizeCSS();
 
-    // Initialize new utility systems
-    performanceAlerts.checkMetric('loadTime', performance.now(), 3000);
-    accessibilityUtils.announce('Application initialized');
-    securityUtils.getSecurityScore();
+      // Initialize new utility systems
+      performanceAlerts.checkMetric('loadTime', performance.now(), 3000);
+      accessibilityUtils.announce('Application initialized');
+      securityUtils.getSecurityScore();
+      
+      // Initialize performance optimization systems
+      performanceEnhancer.applyAutomatedOptimizations();
+      loadingOptimizer.applyStrategy('Critical Resource Preloading');
+      loadingOptimizer.applyStrategy('Font Optimization');
+      loadingOptimizer.applyStrategy('Resource Hints');
 
     // Set default SEO data using the correct method
     seoManager.updateMetaTags(memoizedSeoData);
@@ -590,6 +600,12 @@ export default function App(): React.JSX.Element {
 
         {/* Advanced Performance Dashboard */}
         <AIPerformanceDashboard
+          isVisible={showAdvancedDashboard}
+          onClose={() => setShowAdvancedDashboard(false)}
+        />
+
+        {/* Enhanced Performance Dashboard */}
+        <EnhancedPerformanceDashboard
           isVisible={showAdvancedDashboard}
           onClose={() => setShowAdvancedDashboard(false)}
         />
