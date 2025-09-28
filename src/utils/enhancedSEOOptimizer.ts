@@ -17,7 +17,7 @@ export interface SEOData {
   twitterTitle?: string;
   twitterDescription?: string;
   twitterImage?: string;
-  structuredData?: Record<string, any>;
+  structuredData?: Record<string, unknown>;
   robots?: string;
   language?: string;
   author?: string;
@@ -193,7 +193,7 @@ class EnhancedSEOOptimizer {
   /**
    * Update structured data
    */
-  private updateStructuredData(data: Record<string, any>): void {
+  private updateStructuredData(data: Record<string, unknown>): void {
     // Remove existing structured data
     const existingScripts = document.querySelectorAll('script[type="application/ld+json"]');
     existingScripts.forEach(script => script.remove());
@@ -364,7 +364,7 @@ class EnhancedSEOOptimizer {
       this.performanceMetrics = {} as PagePerformanceMetrics;
     }
 
-    this.performanceMetrics.cumulativeLayoutShift = (entry as any).value || 0;
+    this.performanceMetrics.cumulativeLayoutShift = (entry as PerformanceEntry & { value?: number }).value || 0;
   }
 
   /**

@@ -63,7 +63,8 @@ class AdvancedErrorRecovery {
         error.message.includes('fetch') || 
         error.message.includes('network') ||
         error.message.includes('timeout'),
-      execute: async (error: Error, context: ErrorContext) => {
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
+      execute: async (_error: Error, _context: ErrorContext) => {
         console.log('Attempting network error recovery...');
         await this.delay(1000);
         return true; // Signal retry
@@ -76,7 +77,8 @@ class AdvancedErrorRecovery {
       canHandle: (error: Error) => 
         error.message.includes('Loading chunk') ||
         error.message.includes('Loading CSS chunk'),
-      execute: async (error: Error, context: ErrorContext) => {
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
+      execute: async (_error: Error, _context: ErrorContext) => {
         console.log('Attempting chunk loading recovery...');
         window.location.reload();
         return true;
@@ -89,7 +91,8 @@ class AdvancedErrorRecovery {
       canHandle: (error: Error) => 
         error.message.includes('out of memory') ||
         error.message.includes('memory'),
-      execute: async (error: Error, context: ErrorContext) => {
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
+      execute: async (_error: Error, _context: ErrorContext) => {
         console.log('Attempting memory cleanup...');
         this.performMemoryCleanup();
         return true;
@@ -103,7 +106,8 @@ class AdvancedErrorRecovery {
         error.message.includes('DOM') ||
         error.message.includes('element') ||
         error.message.includes('querySelector'),
-      execute: async (error: Error, context: ErrorContext) => {
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
+      execute: async (_error: Error, _context: ErrorContext) => {
         console.log('Attempting DOM recovery...');
         await this.delay(500);
         return true;
@@ -324,8 +328,8 @@ class AdvancedErrorRecovery {
     }
 
     // Force garbage collection if available
-    if ('gc' in window && typeof (window as any).gc === 'function') {
-      (window as any).gc();
+    if ('gc' in window && typeof (window as Record<string, unknown>).gc === 'function') {
+      ((window as Record<string, unknown>).gc as () => void)();
     }
 
     console.log('Memory cleanup performed');
@@ -406,7 +410,7 @@ class AdvancedErrorRecovery {
   /**
    * Create a retry wrapper for functions
    */
-  createRetryWrapper<T extends (...args: any[]) => Promise<any>>(
+  createRetryWrapper<T extends (...args: unknown[]) => Promise<unknown>>(
     fn: T,
     options?: Partial<ErrorRecoveryOptions>
   ): T {
@@ -424,13 +428,14 @@ class AdvancedErrorRecovery {
         try {
           return await fn(...args);
         } catch (error) {
-          const context: ErrorContext = {
-            component: fn.name || 'Unknown',
-            action: 'Function Execution',
-            timestamp: Date.now(),
-            userAgent: navigator.userAgent,
-            url: window.location.href
-          };
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+        const _context: ErrorContext = {
+          component: fn.name || 'Unknown',
+          action: 'Function Execution',
+          timestamp: Date.now(),
+          userAgent: navigator.userAgent,
+          url: window.location.href
+        };
 
           if (attempt === finalOptions.maxRetries) {
             throw error;
