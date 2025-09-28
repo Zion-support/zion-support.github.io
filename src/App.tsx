@@ -17,31 +17,10 @@ import './styles/system-metrics.css';
 import './styles/modern-utilities.css';
 
 // Import utility modules
-import { seoAnalytics, performanceSEO } from './utils/seoEnhanced';
-import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
-import { enhancedAnalytics } from './utils/enhancedAnalytics';
-import { enhancedSEO } from './utils/enhancedSEO';
-import { enhancedPerformanceOptimizer } from './utils/enhancedPerformance';
-import { enhancedSecurityManager } from './utils/enhancedSecurity';
-import { enhancedAccessibilityManager } from './utils/enhancedAccessibility';
-import { accessibilityManager } from './utils/accessibility';
-import performanceEnhancer from './utils/performanceEnhancements';
-import { PerformanceMonitor } from './utils/performanceMonitor';
-import { advancedCacheSystem } from './utils/advancedCacheSystem';
-import { advancedErrorRecovery } from './utils/advancedErrorRecovery';
-import { advancedAutomationSystem } from './utils/advancedAutomationSystem';
-import { advancedPerformanceOptimizer } from './utils/performanceOptimizer';
-import { AccessibilityEnhancer } from './utils/accessibilityEnhancer';
-import { SecurityEnhancer } from './utils/securityEnhancer';
-import AdvancedPerformanceMonitor from './utils/advancedPerformanceMonitor';
-import AdvancedAccessibilityManager from './utils/advancedAccessibilityManager';
-import AdvancedSecurityManager from './utils/advancedSecurityManager';
-import EnhancedUXManager from './utils/enhancedUXManager';
-import { analytics } from './utils/analytics';
-import { seoOptimizer } from './utils/seoOptimization';
-import { cacheManager } from './utils/cacheManager';
-import { apiClient } from './utils/apiClient';
-import { notificationManager } from './utils/notificationManager';
+import { seoAnalytics, performanceSEO, seoManager } from './utils/seoEnhanced';
+import { initializeErrorReporting } from './utils/errorReporting';
+import { enhancedErrorHandler } from './utils/enhancedErrorHandling';
+import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
 
 // Simple utility functions
 const preloadResource = (href: string, as: string) => {
@@ -167,7 +146,7 @@ export default function App(): React.JSX.Element {
     document.addEventListener('keydown', handleKeyDown);
 
     // Initialize basic systems
-    analytics.initialize();
+    // analytics.initialize(); // Removed - analytics not imported
     
     // Initialize SEO analytics
     seoAnalytics.trackPageView(window.location.pathname);
@@ -175,10 +154,10 @@ export default function App(): React.JSX.Element {
     // Initialize performance SEO optimizations
     performanceSEO.optimizeImages();
     performanceSEO.optimizeFonts();
-    performanceSEO.optimizeCSS();
+    // Note: optimizeCSS method doesn't exist, removing this call
 
     // Set default SEO data using the correct method
-    seoManager.updateMetaTags(seoData);
+    seoManager.updateSEO(seoData);
 
     // Basic performance monitoring
     if (typeof window !== 'undefined') {

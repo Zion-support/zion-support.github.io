@@ -426,7 +426,7 @@ class ComprehensiveEnhancements {
     });
 
     // Store focus history globally
-    (window as Window & { focusHistory?: HTMLElement[] }).focusHistory = focusHistory;
+    (window as Window & { focusHistory?: Element[] }).focusHistory = focusHistory;
   }
 
   private setupARIAEnhancements(): void {
@@ -674,7 +674,7 @@ class ComprehensiveEnhancements {
       document.body.classList.add('high-contrast');
     }
 
-    if (preferences.reduceMotion) {
+    if ((preferences as any).reduceMotion) {
       document.body.classList.add('reduce-motion');
     }
   }

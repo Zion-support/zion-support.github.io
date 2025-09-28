@@ -88,7 +88,7 @@ export const router = createBrowserRouter([
 
 // Router component for backward compatibility
 export const AppRouter: React.FC = () => (
-  <EnhancedErrorBoundary showDetails={process.env.NODE_ENV === 'development'}>
+  <EnhancedErrorBoundary>
     <ErrorBoundary fallback={<ErrorFallback />}>
       <RouterProvider router={router} />
     </ErrorBoundary>
