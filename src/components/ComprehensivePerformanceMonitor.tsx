@@ -19,10 +19,6 @@ interface PerformanceAlert {
   message: string;
   timestamp: Date;
   resolved: boolean;
-  metric?: string;
-  value?: number;
-  threshold?: number;
-  suggestion?: string;
 }
 
 interface ComprehensivePerformanceMonitorProps {
@@ -57,27 +53,19 @@ const ComprehensivePerformanceMonitor: React.FC<ComprehensivePerformanceMonitorP
       newAlerts.push({
         id: `fcp-${Date.now()}`,
         type: 'warning',
-        message: 'First Contentful Paint is slow',
+        message: `First Contentful Paint is ${currentMetrics.fcp.toFixed(0)}ms (should be < 1800ms)`,
         timestamp: new Date(),
-        resolved: false,
-        metric: 'FCP',
-        value: currentMetrics.fcp,
-        threshold: 1800,
-        suggestion: 'Optimize critical rendering path'
+        resolved: false
       });
     }
 
     if (currentMetrics.lcp > 2500) {
       newAlerts.push({
         id: `lcp-${Date.now()}`,
-        type: 'error',
-        message: 'Largest Contentful Paint is too slow',
+        type: 'warning',
+        message: `Largest Contentful Paint is ${currentMetrics.lcp.toFixed(0)}ms (should be < 2500ms)`,
         timestamp: new Date(),
-        resolved: false,
-        metric: 'LCP',
-        value: currentMetrics.lcp,
-        threshold: 2500,
-        suggestion: 'Optimize images and fonts'
+        resolved: false
       });
     }
 
@@ -85,18 +73,34 @@ const ComprehensivePerformanceMonitor: React.FC<ComprehensivePerformanceMonitorP
       newAlerts.push({
         id: `cls-${Date.now()}`,
         type: 'warning',
-        message: 'Cumulative Layout Shift detected',
+        message: `Cumulative Layout Shift is ${currentMetrics.cls.toFixed(3)} (should be < 0.1)`,
         timestamp: new Date(),
-        resolved: false,
-        metric: 'CLS',
-        value: currentMetrics.cls,
-        threshold: 0.1,
-        suggestion: 'Set explicit dimensions for images'
+        resolved: false
+      });
+    }
+
+    if (currentMetrics.ttfb > 800) {
+      newAlerts.push({
+        id: `ttfb-${Date.now()}`,
+        type: 'warning',
+        message: `Time to First Byte is ${currentMetrics.ttfb.toFixed(0)}ms (should be < 800ms)`,
+        timestamp: new Date(),
+        resolved: false
+      });
+    }
+
+    if (currentMetrics.bundleSize > 500) {
+      newAlerts.push({
+        id: `bundle-${Date.now()}`,
+        type: 'info',
+        message: `Bundle size is ${currentMetrics.bundleSize.toFixed(1)}KB (consider optimization)`,
+        timestamp: new Date(),
+        resolved: false
       });
     }
 
     if (newAlerts.length > 0) {
-      setAlerts(prev => [...prev, ...newAlerts].slice(-10)); // Keep only last 10 alerts
+      setAlerts(prev => [...prev, ...newAlerts]);
     }
   }, []);
 
@@ -198,7 +202,6 @@ const ComprehensivePerformanceMonitor: React.FC<ComprehensivePerformanceMonitorP
       checkPerformanceIssues(newMetrics);
     });
   }, [checkPerformanceIssues]);
-
 
   const startMonitoring = useCallback(() => {
     setIsMonitoring(true);
