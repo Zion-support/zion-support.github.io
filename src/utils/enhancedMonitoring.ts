@@ -5,7 +5,7 @@
  */
 
 // Layout Shift interface for CLS monitoring
-interface LayoutShift extends PerformanceEntry {
+interface LayoutShiftEntry extends PerformanceEntry {
   value: number;
   hadRecentInput: boolean;
   lastInputTime: number;
@@ -30,10 +30,7 @@ interface MonitoringConfig {
   endpoint: string;
 }
 
-interface LayoutShift extends PerformanceEntry {
-  hadRecentInput: boolean;
-  value: number;
-}
+// Removed duplicate LayoutShift interface - using LayoutShiftEntry above
 
 interface ErrorData {
   message: string;

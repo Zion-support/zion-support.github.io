@@ -348,3 +348,11 @@ ${pages.map(page => `  <url>
 
     return `
 SEO Report:
+- Title length: ${data.title.length} characters
+- Meta description length: ${data.description.length} characters
+- Keywords count: ${data.keywords.length}
+- Issues found: ${issues.length}
+- Recommendations: ${recommendations.length}
+`;
+  }
+}
