@@ -54,25 +54,17 @@ export default function App(): React.JSX.Element {
     }
   }, []);
 
-  // Handle scroll events
-  const handleScroll = useCallback(() => {
-    // Scroll handling logic can be added here
-  }, []);
-
-  // Handle click events
-  const handleClick = useCallback(() => {
-    // Click handling logic can be added here
-  }, []);
-
-  // Track engagement function
-  const trackEngagement = useCallback(() => {
+  // Enhanced track engagement function
+  const enhancedTrackEngagement = useCallback(() => {
     const timeOnPage = Date.now() - engagementData.startTime;
     seoAnalytics.trackUserEngagement(window.location.pathname, {
       timeOnPage,
       scrollDepth: engagementData.scrollDepth,
       clicks: engagementData.clicks,
     });
-  }, [engagementData]);
+    // Also call the original trackEngagement from useAppInitialization
+    trackEngagement();
+  }, [engagementData.clicks, engagementData.scrollDepth, engagementData.startTime, trackEngagement]);
 
   // Memoize the SEO data to prevent unnecessary re-renders
   const seoData = useMemo(() => ({
@@ -168,16 +160,16 @@ export default function App(): React.JSX.Element {
   // Main initialization and cleanup effect
   React.useEffect(() => {
     // Track engagement on page unload
-    window.addEventListener('beforeunload', trackEngagement);
+    window.addEventListener('beforeunload', enhancedTrackEngagement);
 
     // Cleanup function
     return () => {
-      window.removeEventListener('beforeunload', trackEngagement);
+      window.removeEventListener('beforeunload', enhancedTrackEngagement);
       
       // Final engagement tracking
-      trackEngagement();
+      enhancedTrackEngagement();
     };
-  }, [trackEngagement]);
+  }, [enhancedTrackEngagement]);
 
   // Show loading screen while initializing
   if (isLoading) {
