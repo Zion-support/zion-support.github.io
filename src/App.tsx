@@ -1,4 +1,4 @@
-import React, { useEffect, useCallback, useMemo, useState, Suspense } from 'react';
+import React, { useEffect, useCallback, useMemo, useState } from 'react';
 import { AppRouter } from './router';
 import { useAppInitialization } from './hooks/useAppInitialization';
 import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
@@ -6,9 +6,9 @@ import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
 import { seoAnalytics, performanceSEO, seoManager } from './utils/seoEnhanced';
 import { analytics } from './utils/analytics';
-import { performanceOptimizer } from './utils/performanceOptimizations';
-import { accessibilityEnhancer } from './utils/accessibilityEnhancements';
-import { seoOptimizer } from './utils/seoOptimizations';
+// import { performanceOptimizer } from './utils/performanceOptimizations';
+// import { accessibilityEnhancer } from './utils/accessibilityEnhancements';
+// import { seoOptimizer } from './utils/seoOptimizations';
 import PerformanceDashboard from './components/PerformanceDashboard';
 import RealTimeMonitor from './components/RealTimeMonitor';
 import SystemMetricsDashboard from './components/SystemMetricsDashboard';
@@ -41,13 +41,13 @@ export default function App(): React.JSX.Element {
   const [showRealTimeMetrics, setShowRealTimeMetrics] = useState(false);
   const [showSEOOptimizer, setShowSEOOptimizer] = useState(false);
   
-  // Performance metrics state
-  const [performanceMetrics, setPerformanceMetrics] = useState({
-    memoryUsage: 0,
-    renderTime: 0,
-    networkLatency: 0,
-    errorCount: 0
-  });
+  // Performance metrics state (for future use)
+  // const [performanceMetrics, setPerformanceMetrics] = useState({
+  //   memoryUsage: 0,
+  //   renderTime: 0,
+  //   networkLatency: 0,
+  //   errorCount: 0
+  // });
 
   // Engagement tracking data
   const engagementData = useMemo(() => ({
