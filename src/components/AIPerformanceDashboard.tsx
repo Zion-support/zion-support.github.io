@@ -65,7 +65,7 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
           setErrors(errorReports.map(error => ({
             ...error,
             occurrenceCount: 1,
-            lastOccurrence: new Date(error.lastOccurrence)
+            lastOccurrence: new Date(error.lastOccurrence).getTime()
           })));
         } catch (error) {
           console.error('Failed to fetch dashboard data:', error);
